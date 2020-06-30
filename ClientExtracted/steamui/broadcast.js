@@ -46,20 +46,20 @@
     },
     A5MU: function(e, t, i) {
       "use strict";
-      var r, s, n, a;
+      var r, s, n;
       i.d(t, "a", function() {
-        return n;
+        return s;
       }),
         i.d(t, "b", function() {
-          return o;
+          return a;
         }),
-        ((s = r = r || {})[(s.Hover = 0)] = "Hover"),
-        (s[(s.ClickPopup = 1)] = "ClickPopup"),
-        (s[(s.ClickSurroundingRegion = 2)] = "ClickSurroundingRegion"),
-        ((a = n = n || {})[(a.Chat = 0)] = "Chat"),
-        (a[(a.Notification = 1)] = "Notification"),
-        (a[(a.Error = 2)] = "Error");
-      var o = (function() {
+        ((r = {})[(r.Hover = 0)] = "Hover"),
+        (r[(r.ClickPopup = 1)] = "ClickPopup"),
+        (r[(r.ClickSurroundingRegion = 2)] = "ClickSurroundingRegion"),
+        ((n = s = s || {})[(n.Chat = 0)] = "Chat"),
+        (n[(n.Notification = 1)] = "Notification"),
+        (n[(n.Error = 2)] = "Error");
+      var a = (function() {
         return function() {};
       })();
     },
@@ -209,9 +209,8 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              void 0 !== (i = c.Message.getField(e, 1)) &&
-                t.writeFixed64String(1, i),
+              var i = c.Message.getField(e, 1);
+              void 0 !== i && t.writeFixed64String(1, i),
                 void 0 !== (i = c.Message.getField(e, 2)) &&
                   t.writeString(2, i),
                 void 0 !== (i = c.Message.getField(e, 3)) &&
@@ -366,8 +365,8 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              void 0 !== (i = c.Message.getField(e, 1)) && t.writeString(1, i),
+              var i = c.Message.getField(e, 1);
+              void 0 !== i && t.writeString(1, i),
                 void 0 !== (i = c.Message.getField(e, 2)) &&
                   t.writeString(2, i),
                 void 0 !== (i = c.Message.getField(e, 3)) &&
@@ -500,9 +499,8 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              void 0 !== (i = c.Message.getField(e, 1)) &&
-                t.writeFixed64String(1, i),
+              var i = c.Message.getField(e, 1);
+              void 0 !== i && t.writeFixed64String(1, i),
                 void 0 !== (i = c.Message.getField(e, 2)) &&
                   t.writeString(2, i),
                 void 0 !== (i = c.Message.getField(e, 3)) &&
@@ -717,9 +715,8 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              void 0 !== (i = c.Message.getField(e, 1)) &&
-                t.writeUint64String(1, i),
+              var i = c.Message.getField(e, 1);
+              void 0 !== i && t.writeUint64String(1, i),
                 void 0 !== (i = c.Message.getField(e, 2)) &&
                   t.writeString(2, i),
                 void 0 !== (i = c.Message.getField(e, 3)) &&
@@ -834,8 +831,8 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              void 0 !== (i = c.Message.getField(e, 1)) && t.writeString(1, i),
+              var i = c.Message.getField(e, 1);
+              void 0 !== i && t.writeString(1, i),
                 void 0 !== (i = c.Message.getField(e, 2)) && t.writeInt32(2, i),
                 void 0 !== (i = c.Message.getField(e, 3)) && t.writeInt32(3, i),
                 void 0 !== (i = c.Message.getField(e, 4)) && t.writeInt32(4, i);
@@ -1097,8 +1094,8 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              void 0 !== (i = c.Message.getField(e, 1)) && t.writeEnum(1, i),
+              var i = c.Message.getField(e, 1);
+              void 0 !== i && t.writeEnum(1, i),
                 void 0 !== (i = c.Message.getField(e, 2)) &&
                   t.writeString(2, i),
                 void 0 !== (i = c.Message.getField(e, 3)) &&
@@ -1187,8 +1184,8 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              void 0 !== (i = c.Message.getField(e, 1)) && t.writeBool(1, i);
+              var i = c.Message.getField(e, 1);
+              void 0 !== i && t.writeBool(1, i);
             }),
             (r.prototype.getClassName = function() {
               return "CBroadcast_InviteToBroadcast_Response";
@@ -1297,9 +1294,8 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              void 0 !== (i = c.Message.getField(e, 1)) &&
-                t.writeFixed64String(1, i),
+              var i = c.Message.getField(e, 1);
+              void 0 !== i && t.writeFixed64String(1, i),
                 void 0 !== (i = c.Message.getField(e, 2)) && t.writeEnum(2, i);
             }),
             (r.prototype.getClassName = function() {
@@ -1311,8 +1307,7 @@
       var S,
         F,
         B,
-        w,
-        O = (function(i) {
+        w = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -1359,9 +1354,8 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              void 0 !== (i = c.Message.getField(e, 1)) &&
-                t.writeFixed64String(1, i);
+              var i = c.Message.getField(e, 1);
+              void 0 !== i && t.writeFixed64String(1, i);
             }),
             (r.prototype.getClassName = function() {
               return "CBroadcast_WaitingBroadcastViewer_Notification";
@@ -1369,7 +1363,7 @@
             r
           );
         })(c.Message),
-        C = (function(i) {
+        O = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -1454,9 +1448,8 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              void 0 !== (i = c.Message.getField(e, 1)) &&
-                t.writeFixed64String(1, i),
+              var i = c.Message.getField(e, 1);
+              void 0 !== i && t.writeFixed64String(1, i),
                 void 0 !== (i = c.Message.getField(e, 2)) &&
                   t.writeFixed64String(2, i),
                 void 0 !== (i = c.Message.getField(e, 3)) &&
@@ -1469,7 +1462,7 @@
             r
           );
         })(c.Message),
-        R = (function(i) {
+        C = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -1516,9 +1509,8 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              void 0 !== (i = c.Message.getField(e, 1)) &&
-                t.writeFixed64String(1, i);
+              var i = c.Message.getField(e, 1);
+              void 0 !== i && t.writeFixed64String(1, i);
             }),
             (r.prototype.getClassName = function() {
               return "CBroadcast_SessionClosed_Notification";
@@ -1526,7 +1518,7 @@
             r
           );
         })(c.Message),
-        T = (function(i) {
+        R = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -1589,9 +1581,8 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              void 0 !== (i = c.Message.getField(e, 1)) &&
-                t.writeFixed64String(1, i),
+              var i = c.Message.getField(e, 1);
+              void 0 !== i && t.writeFixed64String(1, i),
                 void 0 !== (i = c.Message.getField(e, 2)) && t.writeInt32(2, i);
             }),
             (r.prototype.getClassName = function() {
@@ -1600,7 +1591,7 @@
             r
           );
         })(c.Message),
-        j = (function(i) {
+        T = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -1674,9 +1665,8 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              void 0 !== (i = c.Message.getField(e, 1)) &&
-                t.writeFixed64String(1, i),
+              var i = c.Message.getField(e, 1);
+              void 0 !== i && t.writeFixed64String(1, i),
                 void 0 !== (i = c.Message.getField(e, 2)) &&
                   t.writeString(2, i),
                 void 0 !== (i = c.Message.getField(e, 3)) &&
@@ -1688,7 +1678,7 @@
             r
           );
         })(c.Message),
-        k = (function(i) {
+        j = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -1786,8 +1776,8 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              void 0 !== (i = c.Message.getField(e, 1)) && t.writeString(1, i),
+              var i = c.Message.getField(e, 1);
+              void 0 !== i && t.writeString(1, i),
                 void 0 !== (i = c.Message.getField(e, 2)) &&
                   t.writeFixed64String(2, i),
                 void 0 !== (i = c.Message.getField(e, 3)) && t.writeBytes(3, i),
@@ -1802,7 +1792,7 @@
             r
           );
         })(c.Message),
-        D = (c.Message,
+        k = (c.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -1850,9 +1840,8 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              void 0 !== (i = c.Message.getField(e, 1)) &&
-                t.writeFixed64String(1, i);
+              var i = c.Message.getField(e, 1);
+              void 0 !== i && t.writeFixed64String(1, i);
             }),
             (r.prototype.getClassName = function() {
               return "CBroadcast_ViewerBroadcastInvite_Notification";
@@ -1860,7 +1849,7 @@
             r
           );
         })(c.Message)),
-        E = (c.Message,
+        D = (c.Message,
         c.Message,
         (function(i) {
           function r(e) {
@@ -1939,9 +1928,8 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              void 0 !== (i = c.Message.getField(e, 1)) &&
-                t.writeFixed64String(1, i),
+              var i = c.Message.getField(e, 1);
+              void 0 !== i && t.writeFixed64String(1, i),
                 void 0 !== (i = c.Message.getField(e, 3)) &&
                   t.writeString(3, i),
                 void 0 !== (i = c.Message.getField(e, 4)) &&
@@ -1953,7 +1941,7 @@
             r
           );
         })(c.Message)),
-        I = (function(i) {
+        E = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -2049,9 +2037,8 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              void 0 !== (i = c.Message.getField(e, 1)) &&
-                t.writeFixed64String(1, i),
+              var i = c.Message.getField(e, 1);
+              void 0 !== i && t.writeFixed64String(1, i),
                 void 0 !== (i = c.Message.getField(e, 2)) &&
                   t.writeString(2, i),
                 void 0 !== (i = c.Message.getField(e, 3)) &&
@@ -2067,7 +2054,7 @@
             r
           );
         })(c.Message),
-        P = (function(i) {
+        I = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -2152,8 +2139,8 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              void 0 !== (i = c.Message.getField(e, 1)) && t.writeString(1, i),
+              var i = c.Message.getField(e, 1);
+              void 0 !== i && t.writeString(1, i),
                 void 0 !== (i = c.Message.getField(e, 2)) && t.writeBool(2, i),
                 void 0 !== (i = c.Message.getField(e, 3)) && t.writeInt32(3, i),
                 void 0 !== (i = c.Message.getField(e, 4)) && t.writeInt32(4, i);
@@ -2164,7 +2151,7 @@
             r
           );
         })(c.Message),
-        z = (function(i) {
+        P = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -2223,9 +2210,8 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              void 0 !== (i = c.Message.getField(e, 1)) &&
-                t.writeFixed64String(1, i),
+              var i = c.Message.getField(e, 1);
+              void 0 !== i && t.writeFixed64String(1, i),
                 void 0 !== (i = c.Message.getField(e, 2)) &&
                   t.writeString(2, i);
             }),
@@ -2235,7 +2221,7 @@
             r
           );
         })(c.Message),
-        G = (function(i) {
+        z = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -2309,8 +2295,8 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              void 0 !== (i = c.Message.getField(e, 1)) && t.writeInt32(1, i),
+              var i = c.Message.getField(e, 1);
+              void 0 !== i && t.writeInt32(1, i),
                 void 0 !== (i = c.Message.getField(e, 2)) &&
                   t.writeFixed64String(2, i),
                 void 0 !== (i = c.Message.getField(e, 3)) &&
@@ -2322,7 +2308,7 @@
             r
           );
         })(c.Message),
-        V = (function(i) {
+        G = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -2396,9 +2382,8 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              void 0 !== (i = c.Message.getField(e, 1)) &&
-                t.writeFixed64String(1, i),
+              var i = c.Message.getField(e, 1);
+              void 0 !== i && t.writeFixed64String(1, i),
                 void 0 !== (i = c.Message.getField(e, 2)) &&
                   t.writeFixed64String(2, i),
                 void 0 !== (i = c.Message.getField(e, 3)) && t.writeBool(3, i);
@@ -2409,7 +2394,7 @@
             r
           );
         })(c.Message),
-        N = (function(i) {
+        V = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -2450,7 +2435,7 @@
             r
           );
         })(c.Message),
-        A = (function(i) {
+        N = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -2511,9 +2496,8 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              void 0 !== (i = c.Message.getField(e, 1)) &&
-                t.writeFixed64String(1, i),
+              var i = c.Message.getField(e, 1);
+              void 0 !== i && t.writeFixed64String(1, i),
                 void 0 !== (i = c.Message.getField(e, 2)) &&
                   t.writeFixed64String(2, i);
             }),
@@ -2523,7 +2507,7 @@
             r
           );
         })(c.Message),
-        L = (function(i) {
+        A = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -2564,7 +2548,7 @@
             r
           );
         })(c.Message),
-        W = (c.Message,
+        L = (c.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -2574,13 +2558,13 @@
           return (
             Object(p.d)(r, i),
             (r.prototype.persona_names = function() {
-              return c.Message.getRepeatedWrapperField(this, x, 1);
+              return c.Message.getRepeatedWrapperField(this, W, 1);
             }),
             (r.prototype.set_persona_names = function(e) {
               c.Message.setRepeatedWrapperField(this, 1, e);
             }),
             (r.prototype.add_persona_names = function(e, t) {
-              return c.Message.addToRepeatedWrapperField(this, 1, e, x, t);
+              return c.Message.addToRepeatedWrapperField(this, 1, e, W, t);
             }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
@@ -2589,7 +2573,7 @@
               var i = {
                 persona_names: c.Message.toObjectList(
                   t.persona_names(),
-                  x.toObject,
+                  W.toObject,
                   e
                 )
               };
@@ -2601,7 +2585,7 @@
                 t.set_persona_names(
                   (Array.isArray(e.persona_names) ? e.persona_names : []).map(
                     function(e) {
-                      return x.fromObject(e);
+                      return W.fromObject(e);
                     }
                   )
                 ),
@@ -2617,8 +2601,8 @@
               for (; t.nextField() && !t.isEndGroup(); ) {
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var i = new x();
-                    t.readMessage(i, x.deserializeBinaryFromReader),
+                    var i = new W();
+                    t.readMessage(i, W.deserializeBinaryFromReader),
                       e.add_persona_names(i);
                     break;
                   default:
@@ -2632,9 +2616,9 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              0 < (i = e.persona_names()).length &&
-                t.writeRepeatedMessage(1, i, x.serializeBinaryToWriter);
+              var i = e.persona_names();
+              0 < i.length &&
+                t.writeRepeatedMessage(1, i, W.serializeBinaryToWriter);
             }),
             (r.prototype.getClassName = function() {
               return "CBroadcast_GetBroadcastChatUserNames_Response";
@@ -2642,7 +2626,7 @@
             r
           );
         })(c.Message)),
-        x = (function(i) {
+        W = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -2701,9 +2685,8 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              void 0 !== (i = c.Message.getField(e, 1)) &&
-                t.writeFixed64String(1, i),
+              var i = c.Message.getField(e, 1);
+              void 0 !== i && t.writeFixed64String(1, i),
                 void 0 !== (i = c.Message.getField(e, 2)) &&
                   t.writeString(2, i);
             }),
@@ -2713,7 +2696,7 @@
             r
           );
         })(c.Message),
-        U = (c.Message,
+        x = (c.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -2761,9 +2744,8 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              void 0 !== (i = c.Message.getField(e, 1)) &&
-                t.writeFixed64String(1, i);
+              var i = c.Message.getField(e, 1);
+              void 0 !== i && t.writeFixed64String(1, i);
             }),
             (r.prototype.getClassName = function() {
               return "CBroadcast_StartBuildClip_Response";
@@ -2771,7 +2753,7 @@
             r
           );
         })(c.Message)),
-        H = (c.Message,
+        U = (c.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -2813,7 +2795,7 @@
             r
           );
         })(c.Message)),
-        q = (c.Message,
+        H = (c.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -2855,7 +2837,7 @@
             r
           );
         })(c.Message)),
-        $ = (c.Message,
+        q = (c.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -3007,9 +2989,8 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              void 0 !== (i = c.Message.getField(e, 1)) &&
-                t.writeUint64String(1, i),
+              var i = c.Message.getField(e, 1);
+              void 0 !== i && t.writeUint64String(1, i),
                 void 0 !== (i = c.Message.getField(e, 2)) &&
                   t.writeUint64String(2, i),
                 void 0 !== (i = c.Message.getField(e, 3)) &&
@@ -3035,7 +3016,7 @@
             r
           );
         })(c.Message)),
-        J = (c.Message,
+        $ = (c.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -3077,7 +3058,7 @@
             r
           );
         })(c.Message)),
-        X = (c.Message,
+        J = (c.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -3240,8 +3221,8 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              void 0 !== (i = c.Message.getField(e, 1)) && t.writeInt32(1, i),
+              var i = c.Message.getField(e, 1);
+              void 0 !== i && t.writeInt32(1, i),
                 void 0 !== (i = c.Message.getField(e, 2)) &&
                   t.writeString(2, i),
                 void 0 !== (i = c.Message.getField(e, 3)) &&
@@ -3266,7 +3247,7 @@
             r
           );
         })(c.Message)),
-        Y = (c.Message,
+        X = (c.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -3276,13 +3257,13 @@
           return (
             Object(p.d)(r, i),
             (r.prototype.upload_stats = function() {
-              return c.Message.getRepeatedWrapperField(this, K, 1);
+              return c.Message.getRepeatedWrapperField(this, Y, 1);
             }),
             (r.prototype.set_upload_stats = function(e) {
               c.Message.setRepeatedWrapperField(this, 1, e);
             }),
             (r.prototype.add_upload_stats = function(e, t) {
-              return c.Message.addToRepeatedWrapperField(this, 1, e, K, t);
+              return c.Message.addToRepeatedWrapperField(this, 1, e, Y, t);
             }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
@@ -3291,7 +3272,7 @@
               var i = {
                 upload_stats: c.Message.toObjectList(
                   t.upload_stats(),
-                  K.toObject,
+                  Y.toObject,
                   e
                 )
               };
@@ -3303,7 +3284,7 @@
                 t.set_upload_stats(
                   (Array.isArray(e.upload_stats) ? e.upload_stats : []).map(
                     function(e) {
-                      return K.fromObject(e);
+                      return Y.fromObject(e);
                     }
                   )
                 ),
@@ -3319,8 +3300,8 @@
               for (; t.nextField() && !t.isEndGroup(); ) {
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var i = new K();
-                    t.readMessage(i, K.deserializeBinaryFromReader),
+                    var i = new Y();
+                    t.readMessage(i, Y.deserializeBinaryFromReader),
                       e.add_upload_stats(i);
                     break;
                   default:
@@ -3334,9 +3315,9 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              0 < (i = e.upload_stats()).length &&
-                t.writeRepeatedMessage(1, i, K.serializeBinaryToWriter);
+              var i = e.upload_stats();
+              0 < i.length &&
+                t.writeRepeatedMessage(1, i, Y.serializeBinaryToWriter);
             }),
             (r.prototype.getClassName = function() {
               return "CBroadcast_GetBroadcastUploadStats_Response";
@@ -3344,7 +3325,7 @@
             r
           );
         })(c.Message)),
-        K = (function(i) {
+        Y = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -3605,8 +3586,8 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              void 0 !== (i = c.Message.getField(e, 1)) && t.writeUint32(1, i),
+              var i = c.Message.getField(e, 1);
+              void 0 !== i && t.writeUint32(1, i),
                 void 0 !== (i = c.Message.getField(e, 2)) &&
                   t.writeUint32(2, i),
                 void 0 !== (i = c.Message.getField(e, 3)) &&
@@ -3652,7 +3633,7 @@
             r
           );
         })(c.Message),
-        Q = (c.Message,
+        K = (c.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -3662,22 +3643,22 @@
           return (
             Object(p.d)(r, i),
             (r.prototype.viewer_stats = function() {
-              return c.Message.getRepeatedWrapperField(this, Z, 1);
+              return c.Message.getRepeatedWrapperField(this, Q, 1);
             }),
             (r.prototype.set_viewer_stats = function(e) {
               c.Message.setRepeatedWrapperField(this, 1, e);
             }),
             (r.prototype.add_viewer_stats = function(e, t) {
-              return c.Message.addToRepeatedWrapperField(this, 1, e, Z, t);
+              return c.Message.addToRepeatedWrapperField(this, 1, e, Q, t);
             }),
             (r.prototype.country_stats = function() {
-              return c.Message.getRepeatedWrapperField(this, ee, 2);
+              return c.Message.getRepeatedWrapperField(this, Z, 2);
             }),
             (r.prototype.set_country_stats = function(e) {
               c.Message.setRepeatedWrapperField(this, 2, e);
             }),
             (r.prototype.add_country_stats = function(e, t) {
-              return c.Message.addToRepeatedWrapperField(this, 2, e, ee, t);
+              return c.Message.addToRepeatedWrapperField(this, 2, e, Z, t);
             }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
@@ -3686,12 +3667,12 @@
               var i = {
                 viewer_stats: c.Message.toObjectList(
                   t.viewer_stats(),
-                  Z.toObject,
+                  Q.toObject,
                   e
                 ),
                 country_stats: c.Message.toObjectList(
                   t.country_stats(),
-                  ee.toObject,
+                  Z.toObject,
                   e
                 )
               };
@@ -3703,14 +3684,14 @@
                 t.set_viewer_stats(
                   (Array.isArray(e.viewer_stats) ? e.viewer_stats : []).map(
                     function(e) {
-                      return Z.fromObject(e);
+                      return Q.fromObject(e);
                     }
                   )
                 ),
                 t.set_country_stats(
                   (Array.isArray(e.country_stats) ? e.country_stats : []).map(
                     function(e) {
-                      return ee.fromObject(e);
+                      return Z.fromObject(e);
                     }
                   )
                 ),
@@ -3726,13 +3707,13 @@
               for (; t.nextField() && !t.isEndGroup(); ) {
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var i = new Z();
-                    t.readMessage(i, Z.deserializeBinaryFromReader),
+                    var i = new Q();
+                    t.readMessage(i, Q.deserializeBinaryFromReader),
                       e.add_viewer_stats(i);
                     break;
                   case 2:
-                    i = new ee();
-                    t.readMessage(i, ee.deserializeBinaryFromReader),
+                    i = new Z();
+                    t.readMessage(i, Z.deserializeBinaryFromReader),
                       e.add_country_stats(i);
                     break;
                   default:
@@ -3746,11 +3727,11 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              0 < (i = e.viewer_stats()).length &&
-                t.writeRepeatedMessage(1, i, Z.serializeBinaryToWriter),
+              var i = e.viewer_stats();
+              0 < i.length &&
+                t.writeRepeatedMessage(1, i, Q.serializeBinaryToWriter),
                 0 < (i = e.country_stats()).length &&
-                  t.writeRepeatedMessage(2, i, ee.serializeBinaryToWriter);
+                  t.writeRepeatedMessage(2, i, Z.serializeBinaryToWriter);
             }),
             (r.prototype.getClassName = function() {
               return "CBroadcast_GetBroadcastViewerStats_Response";
@@ -3758,7 +3739,7 @@
             r
           );
         })(c.Message)),
-        Z = (function(i) {
+        Q = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -3817,8 +3798,8 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              void 0 !== (i = c.Message.getField(e, 1)) && t.writeUint32(1, i),
+              var i = c.Message.getField(e, 1);
+              void 0 !== i && t.writeUint32(1, i),
                 void 0 !== (i = c.Message.getField(e, 2)) &&
                   t.writeUint32(2, i);
             }),
@@ -3828,7 +3809,7 @@
             r
           );
         })(c.Message),
-        ee = (function(i) {
+        Z = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -3891,8 +3872,8 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              void 0 !== (i = c.Message.getField(e, 1)) && t.writeString(1, i),
+              var i = c.Message.getField(e, 1);
+              void 0 !== i && t.writeString(1, i),
                 void 0 !== (i = c.Message.getField(e, 2)) &&
                   t.writeUint32(2, i);
             }),
@@ -3902,7 +3883,7 @@
             r
           );
         })(c.Message),
-        te = (c.Message,
+        ee = (c.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -3944,7 +3925,7 @@
             r
           );
         })(c.Message)),
-        ie = (c.Message,
+        te = (c.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -3986,7 +3967,7 @@
             r
           );
         })(c.Message)),
-        re = (c.Message,
+        ie = (c.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -4028,7 +4009,7 @@
             r
           );
         })(c.Message)),
-        se = (function(i) {
+        re = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -4102,8 +4083,8 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              void 0 !== (i = c.Message.getField(e, 1)) && t.writeString(1, i),
+              var i = c.Message.getField(e, 1);
+              void 0 !== i && t.writeString(1, i),
                 void 0 !== (i = c.Message.getField(e, 2)) && t.writeInt32(2, i),
                 void 0 !== (i = c.Message.getField(e, 3)) &&
                   t.writeString(3, i);
@@ -4114,7 +4095,7 @@
             r
           );
         })(c.Message),
-        ne = (c.Message,
+        se = (c.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -4156,7 +4137,7 @@
             r
           );
         })(c.Message)),
-        ae = (c.Message,
+        ne = (c.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -4198,7 +4179,7 @@
             r
           );
         })(c.Message)),
-        oe = (c.Message,
+        ae = (c.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -4214,13 +4195,13 @@
               c.Message.setField(this, 1, e);
             }),
             (r.prototype.candidates = function() {
-              return c.Message.getRepeatedWrapperField(this, se, 2);
+              return c.Message.getRepeatedWrapperField(this, re, 2);
             }),
             (r.prototype.set_candidates = function(e) {
               c.Message.setRepeatedWrapperField(this, 2, e);
             }),
             (r.prototype.add_candidates = function(e, t) {
-              return c.Message.addToRepeatedWrapperField(this, 2, e, se, t);
+              return c.Message.addToRepeatedWrapperField(this, 2, e, re, t);
             }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
@@ -4230,7 +4211,7 @@
                 candidate_generation: c.Message.getField(t, 1),
                 candidates: c.Message.toObjectList(
                   t.candidates(),
-                  se.toObject,
+                  re.toObject,
                   e
                 )
               };
@@ -4243,7 +4224,7 @@
                 t.set_candidates(
                   (Array.isArray(e.candidates) ? e.candidates : []).map(
                     function(e) {
-                      return se.fromObject(e);
+                      return re.fromObject(e);
                     }
                   )
                 ),
@@ -4262,8 +4243,8 @@
                     e.set_candidate_generation(t.readUint32());
                     break;
                   case 2:
-                    var i = new se();
-                    t.readMessage(i, se.deserializeBinaryFromReader),
+                    var i = new re();
+                    t.readMessage(i, re.deserializeBinaryFromReader),
                       e.add_candidates(i);
                     break;
                   default:
@@ -4277,10 +4258,10 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              void 0 !== (i = c.Message.getField(e, 1)) && t.writeUint32(1, i),
+              var i = c.Message.getField(e, 1);
+              void 0 !== i && t.writeUint32(1, i),
                 0 < (i = e.candidates()).length &&
-                  t.writeRepeatedMessage(2, i, se.serializeBinaryToWriter);
+                  t.writeRepeatedMessage(2, i, re.serializeBinaryToWriter);
             }),
             (r.prototype.getClassName = function() {
               return "CBroadcast_WebRTCGetHostCandidates_Response";
@@ -4288,7 +4269,7 @@
             r
           );
         })(c.Message)),
-        de = (function(i) {
+        oe = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -4335,9 +4316,8 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              void 0 !== (i = c.Message.getField(e, 1)) &&
-                t.writeFixed64String(1, i);
+              var i = c.Message.getField(e, 1);
+              void 0 !== i && t.writeFixed64String(1, i);
             }),
             (r.prototype.getClassName = function() {
               return "CBroadcast_WebRTCNeedTURNServer_Notification";
@@ -4345,7 +4325,7 @@
             r
           );
         })(c.Message),
-        le = (c.Message,
+        de = (c.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -4393,8 +4373,8 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              void 0 !== (i = c.Message.getField(e, 1)) && t.writeString(1, i);
+              var i = c.Message.getField(e, 1);
+              void 0 !== i && t.writeString(1, i);
             }),
             (r.prototype.getClassName = function() {
               return "CBroadcast_WebRTCLookupTURNServer_Response";
@@ -4402,7 +4382,7 @@
             r
           );
         })(c.Message)),
-        ce = (c.Message,
+        le = (c.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -4488,9 +4468,8 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              void 0 !== (i = c.Message.getField(e, 1)) &&
-                t.writeFixed64String(1, i),
+              var i = c.Message.getField(e, 1);
+              void 0 !== i && t.writeFixed64String(1, i),
                 void 0 !== (i = c.Message.getField(e, 2)) &&
                   t.writeFixed64String(2, i),
                 void 0 !== (i = c.Message.getField(e, 3)) &&
@@ -4504,7 +4483,7 @@
             r
           );
         })(c.Message)),
-        ue = (function(i) {
+        ce = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -4578,9 +4557,8 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              void 0 !== (i = c.Message.getField(e, 1)) &&
-                t.writeFixed64String(1, i),
+              var i = c.Message.getField(e, 1);
+              void 0 !== i && t.writeFixed64String(1, i),
                 void 0 !== (i = c.Message.getField(e, 2)) &&
                   t.writeFixed64String(2, i),
                 void 0 !== (i = c.Message.getField(e, 3)) &&
@@ -4592,7 +4570,7 @@
             r
           );
         })(c.Message),
-        pe = (function(i) {
+        ue = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -4615,7 +4593,7 @@
             (r.prototype.candidate = function(e) {
               return (
                 void 0 === e && (e = !0),
-                c.Message.getWrapperField(this, se, 3, e ? 1 : 0)
+                c.Message.getWrapperField(this, re, 3, e ? 1 : 0)
               );
             }),
             (r.prototype.set_candidate = function(e) {
@@ -4629,7 +4607,7 @@
                 r = {
                   broadcast_session_id: c.Message.getField(t, 1),
                   webrtc_session_id: c.Message.getField(t, 2),
-                  candidate: (i = t.candidate(!1)) && se.toObject(e, i)
+                  candidate: (i = t.candidate(!1)) && re.toObject(e, i)
                 };
               return e && (r.$jspbMessageInstance = t), r;
             }),
@@ -4638,7 +4616,7 @@
               return (
                 t.set_broadcast_session_id(e.broadcast_session_id),
                 t.set_webrtc_session_id(e.webrtc_session_id),
-                t.set_candidate(se.fromObject(e.candidate)),
+                t.set_candidate(re.fromObject(e.candidate)),
                 t
               );
             }),
@@ -4657,8 +4635,8 @@
                     e.set_webrtc_session_id(t.readFixed64String());
                     break;
                   case 3:
-                    var i = new se();
-                    t.readMessage(i, se.deserializeBinaryFromReader),
+                    var i = new re();
+                    t.readMessage(i, re.deserializeBinaryFromReader),
                       e.set_candidate(i);
                     break;
                   default:
@@ -4672,13 +4650,12 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              void 0 !== (i = c.Message.getField(e, 1)) &&
-                t.writeFixed64String(1, i),
+              var i = c.Message.getField(e, 1);
+              void 0 !== i && t.writeFixed64String(1, i),
                 void 0 !== (i = c.Message.getField(e, 2)) &&
                   t.writeFixed64String(2, i),
                 null != (i = e.candidate(!1)) &&
-                  t.writeMessage(3, i, se.serializeBinaryToWriter);
+                  t.writeMessage(3, i, re.serializeBinaryToWriter);
             }),
             (r.prototype.getClassName = function() {
               return "CBroadcast_WebRTCAddViewerCandidate_Notification";
@@ -4726,44 +4703,44 @@
           );
         }),
         (F.GetBroadcastChatInfo = function(e, t) {
-          return e.SendMsg("Broadcast.GetBroadcastChatInfo#1", t, E, {});
+          return e.SendMsg("Broadcast.GetBroadcastChatInfo#1", t, D, {});
         }),
         (F.PostChatMessage = function(e, t) {
-          return e.SendMsg("Broadcast.PostChatMessage#1", t, P, {});
+          return e.SendMsg("Broadcast.PostChatMessage#1", t, I, {});
         }),
         (F.UpdateChatMessageFlair = function(e, t) {
-          return e.SendMsg("Broadcast.UpdateChatMessageFlair#1", t, G, {});
+          return e.SendMsg("Broadcast.UpdateChatMessageFlair#1", t, z, {});
         }),
         (F.MuteBroadcastChatUser = function(e, t) {
-          return e.SendMsg("Broadcast.MuteBroadcastChatUser#1", t, N, {});
+          return e.SendMsg("Broadcast.MuteBroadcastChatUser#1", t, V, {});
         }),
         (F.RemoveUserChatText = function(e, t) {
-          return e.SendMsg("Broadcast.RemoveUserChatText#1", t, L, {});
+          return e.SendMsg("Broadcast.RemoveUserChatText#1", t, A, {});
         }),
         (F.GetBroadcastChatUserNames = function(e, t) {
-          return e.SendMsg("Broadcast.GetBroadcastChatUserNames#1", t, W, {});
+          return e.SendMsg("Broadcast.GetBroadcastChatUserNames#1", t, L, {});
         }),
         (F.StartBuildClip = function(e, t) {
-          return e.SendMsg("Broadcast.StartBuildClip#1", t, U, {});
+          return e.SendMsg("Broadcast.StartBuildClip#1", t, x, {});
         }),
         (F.GetBuildClipStatus = function(e, t) {
-          return e.SendMsg("Broadcast.GetBuildClipStatus#1", t, H, {
+          return e.SendMsg("Broadcast.GetBuildClipStatus#1", t, U, {
             bConstMethod: !0
           });
         }),
         (F.SetClipDetails = function(e, t) {
-          return e.SendMsg("Broadcast.SetClipDetails#1", t, q, {});
+          return e.SendMsg("Broadcast.SetClipDetails#1", t, H, {});
         }),
         (F.GetClipDetails = function(e, t) {
-          return e.SendMsg("Broadcast.GetClipDetails#1", t, $, {
+          return e.SendMsg("Broadcast.GetClipDetails#1", t, q, {
             bConstMethod: !0
           });
         }),
         (F.SetRTMPInfo = function(e, t) {
-          return e.SendMsg("Broadcast.SetRTMPInfo#1", t, J, {});
+          return e.SendMsg("Broadcast.SetRTMPInfo#1", t, $, {});
         }),
         (F.GetRTMPInfo = function(e, t) {
-          return e.SendMsg("Broadcast.GetRTMPInfo#1", t, X, {
+          return e.SendMsg("Broadcast.GetRTMPInfo#1", t, J, {
             bConstMethod: !0
           });
         }),
@@ -4774,97 +4751,97 @@
           );
         }),
         (F.WebRTCStartResult = function(e, t) {
-          return e.SendMsg("Broadcast.WebRTCStartResult#1", t, te, {});
+          return e.SendMsg("Broadcast.WebRTCStartResult#1", t, ee, {});
         }),
         (F.WebRTCStopped = function(e, t) {
-          return e.SendMsg("Broadcast.WebRTCStopped#1", t, ie, {});
+          return e.SendMsg("Broadcast.WebRTCStopped#1", t, te, {});
         }),
         (F.WebRTCSetAnswer = function(e, t) {
-          return e.SendMsg("Broadcast.WebRTCSetAnswer#1", t, re, {});
+          return e.SendMsg("Broadcast.WebRTCSetAnswer#1", t, ie, {});
         }),
         (F.WebRTCLookupTURNServer = function(e, t) {
-          return e.SendMsg("Broadcast.WebRTCLookupTURNServer#1", t, le, {});
+          return e.SendMsg("Broadcast.WebRTCLookupTURNServer#1", t, de, {});
         }),
         (F.WebRTCAddHostCandidate = function(e, t) {
-          return e.SendMsg("Broadcast.WebRTCAddHostCandidate#1", t, ne, {});
+          return e.SendMsg("Broadcast.WebRTCAddHostCandidate#1", t, se, {});
         }),
         (F.WebRTCAddViewerCandidate = function(e, t) {
-          return e.SendMsg("Broadcast.WebRTCAddViewerCandidate#1", t, ae, {});
+          return e.SendMsg("Broadcast.WebRTCAddViewerCandidate#1", t, ne, {});
         }),
         (F.WebRTCGetHostCandidates = function(e, t) {
-          return e.SendMsg("Broadcast.WebRTCGetHostCandidates#1", t, oe, {});
+          return e.SendMsg("Broadcast.WebRTCGetHostCandidates#1", t, ae, {});
         }),
         (F.GetBroadcastUploadStats = function(e, t) {
-          return e.SendMsg("Broadcast.GetBroadcastUploadStats#1", t, Y, {
+          return e.SendMsg("Broadcast.GetBroadcastUploadStats#1", t, X, {
             bConstMethod: !0
           });
         }),
         (F.GetBroadcastViewerStats = function(e, t) {
-          return e.SendMsg("Broadcast.GetBroadcastViewerStats#1", t, Q, {
+          return e.SendMsg("Broadcast.GetBroadcastViewerStats#1", t, K, {
             bConstMethod: !0
           });
         }),
-        ((w = B = B || {}).NotifyBroadcastViewerStateHandler = {
+        ((B = {}).NotifyBroadcastViewerStateHandler = {
           name: "BroadcastClient.NotifyBroadcastViewerState#1",
           request: M
         }),
-        (w.NotifyWaitingBroadcastViewerHandler = {
+        (B.NotifyWaitingBroadcastViewerHandler = {
           name: "BroadcastClient.NotifyWaitingBroadcastViewer#1",
-          request: O
+          request: w
         }),
-        (w.NotifyBroadcastUploadStartedHandler = {
+        (B.NotifyBroadcastUploadStartedHandler = {
           name: "BroadcastClient.NotifyBroadcastUploadStarted#1",
           request: _
         }),
-        (w.NotifyStopBroadcastUploadHandler = {
+        (B.NotifyStopBroadcastUploadHandler = {
           name: "BroadcastClient.NotifyStopBroadcastUpload#1",
+          request: O
+        }),
+        (B.NotifySessionClosedHandler = {
+          name: "BroadcastClient.NotifySessionClosed#1",
           request: C
         }),
-        (w.NotifySessionClosedHandler = {
-          name: "BroadcastClient.NotifySessionClosed#1",
-          request: R
-        }),
-        (w.NotifyViewerBroadcastInviteHandler = {
+        (B.NotifyViewerBroadcastInviteHandler = {
           name: "BroadcastClient.NotifyViewerBroadcastInvite#1",
-          request: D
-        }),
-        (w.NotifyBroadcastStatusHandler = {
-          name: "BroadcastClient.NotifyBroadcastStatus#1",
-          request: T
-        }),
-        (w.NotifyBroadcastChannelLiveHandler = {
-          name: "BroadcastClient.NotifyBroadcastChannelLive#1",
-          request: j
-        }),
-        (w.SendThumbnailToRelayHandler = {
-          name: "BroadcastClient.SendThumbnailToRelay#1",
           request: k
         }),
-        (w.NotifyWebRTCNeedTURNServerHandler = {
-          name: "BroadcastClient.NotifyWebRTCNeedTURNServer#1",
-          request: de
+        (B.NotifyBroadcastStatusHandler = {
+          name: "BroadcastClient.NotifyBroadcastStatus#1",
+          request: R
         }),
-        (w.NotifyWebRTCStartHandler = {
+        (B.NotifyBroadcastChannelLiveHandler = {
+          name: "BroadcastClient.NotifyBroadcastChannelLive#1",
+          request: T
+        }),
+        (B.SendThumbnailToRelayHandler = {
+          name: "BroadcastClient.SendThumbnailToRelay#1",
+          request: j
+        }),
+        (B.NotifyWebRTCNeedTURNServerHandler = {
+          name: "BroadcastClient.NotifyWebRTCNeedTURNServer#1",
+          request: oe
+        }),
+        (B.NotifyWebRTCStartHandler = {
           name: "BroadcastClient.NotifyWebRTCStart#1",
+          request: le
+        }),
+        (B.NotifyWebRTCSetAnswerHandler = {
+          name: "BroadcastClient.NotifyWebRTCSetAnswer#1",
           request: ce
         }),
-        (w.NotifyWebRTCSetAnswerHandler = {
-          name: "BroadcastClient.NotifyWebRTCSetAnswer#1",
-          request: ue
-        }),
-        (w.NotifyWebRTCAddViewerCandidateHandler = {
+        (B.NotifyWebRTCAddViewerCandidateHandler = {
           name: "BroadcastClient.NotifyWebRTCAddViewerCandidate#1",
-          request: pe
+          request: ue
         });
-      var me = i("qiKp"),
-        he = i("TLQK"),
-        _e = i("lkRc"),
-        ge = i("A5MU"),
-        fe = i("bxBv");
+      var pe = i("qiKp"),
+        me = i("TLQK"),
+        he = i("lkRc"),
+        _e = i("A5MU"),
+        ge = i("bxBv");
       c.Message;
-      var be,
-        ye,
-        ve = (function(i) {
+      var fe,
+        be,
+        ye = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -4911,9 +4888,8 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              void 0 !== (i = c.Message.getField(e, 1)) &&
-                t.writeFixed64String(1, i);
+              var i = c.Message.getField(e, 1);
+              void 0 !== i && t.writeFixed64String(1, i);
             }),
             (r.prototype.getClassName = function() {
               return "CSteamTV_CreateBroadcastChannel_Response";
@@ -4921,7 +4897,7 @@
             r
           );
         })(c.Message),
-        Me = (c.Message,
+        ve = (c.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -4996,9 +4972,8 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              void 0 !== (i = c.Message.getField(e, 1)) &&
-                t.writeFixed64String(1, i),
+              var i = c.Message.getField(e, 1);
+              void 0 !== i && t.writeFixed64String(1, i),
                 void 0 !== (i = c.Message.getField(e, 2)) &&
                   t.writeString(2, i),
                 void 0 !== (i = c.Message.getField(e, 3)) &&
@@ -5010,7 +4985,7 @@
             r
           );
         })(c.Message)),
-        Se = (c.Message,
+        Me = (c.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -5052,7 +5027,7 @@
             r
           );
         })(c.Message)),
-        Fe = (c.Message,
+        Se = (c.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -5204,8 +5179,8 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              void 0 !== (i = c.Message.getField(e, 1)) && t.writeString(1, i),
+              var i = c.Message.getField(e, 1);
+              void 0 !== i && t.writeString(1, i),
                 void 0 !== (i = c.Message.getField(e, 2)) &&
                   t.writeFixed64String(2, i),
                 void 0 !== (i = c.Message.getField(e, 3)) &&
@@ -5231,7 +5206,7 @@
             r
           );
         })(c.Message)),
-        Be = (c.Message,
+        Fe = (c.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -5279,8 +5254,8 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              void 0 !== (i = c.Message.getField(e, 1)) && t.writeString(1, i);
+              var i = c.Message.getField(e, 1);
+              void 0 !== i && t.writeString(1, i);
             }),
             (r.prototype.getClassName = function() {
               return "CSteamTV_SetBroadcastChannelImage_Response";
@@ -5288,7 +5263,7 @@
             r
           );
         })(c.Message)),
-        we = (c.Message,
+        Be = (c.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -5298,20 +5273,20 @@
           return (
             Object(p.d)(r, i),
             (r.prototype.images = function() {
-              return c.Message.getRepeatedWrapperField(this, Oe, 1);
+              return c.Message.getRepeatedWrapperField(this, we, 1);
             }),
             (r.prototype.set_images = function(e) {
               c.Message.setRepeatedWrapperField(this, 1, e);
             }),
             (r.prototype.add_images = function(e, t) {
-              return c.Message.addToRepeatedWrapperField(this, 1, e, Oe, t);
+              return c.Message.addToRepeatedWrapperField(this, 1, e, we, t);
             }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
             (r.toObject = function(e, t) {
               var i = {
-                images: c.Message.toObjectList(t.images(), Oe.toObject, e)
+                images: c.Message.toObjectList(t.images(), we.toObject, e)
               };
               return e && (i.$jspbMessageInstance = t), i;
             }),
@@ -5320,7 +5295,7 @@
               return (
                 t.set_images(
                   (Array.isArray(e.images) ? e.images : []).map(function(e) {
-                    return Oe.fromObject(e);
+                    return we.fromObject(e);
                   })
                 ),
                 t
@@ -5335,8 +5310,8 @@
               for (; t.nextField() && !t.isEndGroup(); ) {
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var i = new Oe();
-                    t.readMessage(i, Oe.deserializeBinaryFromReader),
+                    var i = new we();
+                    t.readMessage(i, we.deserializeBinaryFromReader),
                       e.add_images(i);
                     break;
                   default:
@@ -5350,9 +5325,9 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              0 < (i = e.images()).length &&
-                t.writeRepeatedMessage(1, i, Oe.serializeBinaryToWriter);
+              var i = e.images();
+              0 < i.length &&
+                t.writeRepeatedMessage(1, i, we.serializeBinaryToWriter);
             }),
             (r.prototype.getClassName = function() {
               return "CSteamTV_GetBroadcastChannelImages_Response";
@@ -5360,7 +5335,7 @@
             r
           );
         })(c.Message)),
-        Oe = (function(i) {
+        we = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -5434,8 +5409,8 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              void 0 !== (i = c.Message.getField(e, 1)) && t.writeEnum(1, i),
+              var i = c.Message.getField(e, 1);
+              void 0 !== i && t.writeEnum(1, i),
                 void 0 !== (i = c.Message.getField(e, 2)) &&
                   t.writeString(2, i),
                 void 0 !== (i = c.Message.getField(e, 3)) &&
@@ -5447,7 +5422,7 @@
             r
           );
         })(c.Message),
-        Ce = (c.Message,
+        Oe = (c.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -5457,20 +5432,20 @@
           return (
             Object(p.d)(r, i),
             (r.prototype.links = function() {
-              return c.Message.getRepeatedWrapperField(this, Re, 1);
+              return c.Message.getRepeatedWrapperField(this, Ce, 1);
             }),
             (r.prototype.set_links = function(e) {
               c.Message.setRepeatedWrapperField(this, 1, e);
             }),
             (r.prototype.add_links = function(e, t) {
-              return c.Message.addToRepeatedWrapperField(this, 1, e, Re, t);
+              return c.Message.addToRepeatedWrapperField(this, 1, e, Ce, t);
             }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
             (r.toObject = function(e, t) {
               var i = {
-                links: c.Message.toObjectList(t.links(), Re.toObject, e)
+                links: c.Message.toObjectList(t.links(), Ce.toObject, e)
               };
               return e && (i.$jspbMessageInstance = t), i;
             }),
@@ -5479,7 +5454,7 @@
               return (
                 t.set_links(
                   (Array.isArray(e.links) ? e.links : []).map(function(e) {
-                    return Re.fromObject(e);
+                    return Ce.fromObject(e);
                   })
                 ),
                 t
@@ -5494,8 +5469,8 @@
               for (; t.nextField() && !t.isEndGroup(); ) {
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var i = new Re();
-                    t.readMessage(i, Re.deserializeBinaryFromReader),
+                    var i = new Ce();
+                    t.readMessage(i, Ce.deserializeBinaryFromReader),
                       e.add_links(i);
                     break;
                   default:
@@ -5509,9 +5484,9 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              0 < (i = e.links()).length &&
-                t.writeRepeatedMessage(1, i, Re.serializeBinaryToWriter);
+              var i = e.links();
+              0 < i.length &&
+                t.writeRepeatedMessage(1, i, Ce.serializeBinaryToWriter);
             }),
             (r.prototype.getClassName = function() {
               return "CSteamTV_GetBroadcastChannelLinks_Response";
@@ -5519,7 +5494,7 @@
             r
           );
         })(c.Message)),
-        Re = (function(i) {
+        Ce = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -5637,8 +5612,8 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              void 0 !== (i = c.Message.getField(e, 1)) && t.writeUint32(1, i),
+              var i = c.Message.getField(e, 1);
+              void 0 !== i && t.writeUint32(1, i),
                 void 0 !== (i = c.Message.getField(e, 2)) &&
                   t.writeString(2, i),
                 void 0 !== (i = c.Message.getField(e, 3)) &&
@@ -5658,7 +5633,7 @@
             r
           );
         })(c.Message),
-        Te = (c.Message,
+        Re = (c.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -5777,8 +5752,8 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              void 0 !== (i = c.Message.getField(e, 1)) && t.writeUint32(1, i),
+              var i = c.Message.getField(e, 1);
+              void 0 !== i && t.writeUint32(1, i),
                 void 0 !== (i = c.Message.getField(e, 2)) &&
                   t.writeString(2, i),
                 void 0 !== (i = c.Message.getField(e, 3)) &&
@@ -5798,7 +5773,7 @@
             r
           );
         })(c.Message)),
-        je = (function(i) {
+        Te = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -5839,7 +5814,7 @@
             r
           );
         })(c.Message),
-        ke = (c.Message,
+        je = (c.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -6002,8 +5977,8 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              void 0 !== (i = c.Message.getField(e, 1)) && t.writeBool(1, i),
+              var i = c.Message.getField(e, 1);
+              void 0 !== i && t.writeBool(1, i),
                 void 0 !== (i = c.Message.getField(e, 2)) && t.writeBool(2, i),
                 void 0 !== (i = c.Message.getField(e, 3)) &&
                   t.writeUint32(3, i),
@@ -6030,7 +6005,7 @@
             r
           );
         })(c.Message)),
-        De = (function(i) {
+        ke = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -6280,9 +6255,8 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              void 0 !== (i = c.Message.getField(e, 1)) &&
-                t.writeFixed64String(1, i),
+              var i = c.Message.getField(e, 1);
+              void 0 !== i && t.writeFixed64String(1, i),
                 void 0 !== (i = c.Message.getField(e, 2)) &&
                   t.writeString(2, i),
                 void 0 !== (i = c.Message.getField(e, 3)) &&
@@ -6326,6 +6300,78 @@
             r
           );
         })(c.Message),
+        De = (c.Message,
+        (function(i) {
+          function r(e) {
+            void 0 === e && (e = null);
+            var t = i.call(this) || this;
+            return c.Message.initialize(t, e, 0, -1, [1], null), t;
+          }
+          return (
+            Object(p.d)(r, i),
+            (r.prototype.results = function() {
+              return c.Message.getRepeatedWrapperField(this, ke, 1);
+            }),
+            (r.prototype.set_results = function(e) {
+              c.Message.setRepeatedWrapperField(this, 1, e);
+            }),
+            (r.prototype.add_results = function(e, t) {
+              return c.Message.addToRepeatedWrapperField(this, 1, e, ke, t);
+            }),
+            (r.prototype.toObject = function(e) {
+              return void 0 === e && (e = !1), r.toObject(e, this);
+            }),
+            (r.toObject = function(e, t) {
+              var i = {
+                results: c.Message.toObjectList(t.results(), ke.toObject, e)
+              };
+              return e && (i.$jspbMessageInstance = t), i;
+            }),
+            (r.fromObject = function(e) {
+              var t = new r();
+              return (
+                t.set_results(
+                  (Array.isArray(e.results) ? e.results : []).map(function(e) {
+                    return ke.fromObject(e);
+                  })
+                ),
+                t
+              );
+            }),
+            (r.deserializeBinary = function(e) {
+              var t = new c.BinaryReader(e),
+                i = new r();
+              return r.deserializeBinaryFromReader(i, t);
+            }),
+            (r.deserializeBinaryFromReader = function(e, t) {
+              for (; t.nextField() && !t.isEndGroup(); ) {
+                switch (t.getFieldNumber()) {
+                  case 1:
+                    var i = new ke();
+                    t.readMessage(i, ke.deserializeBinaryFromReader),
+                      e.add_results(i);
+                    break;
+                  default:
+                    t.skipField();
+                }
+              }
+              return e;
+            }),
+            (r.prototype.serializeBinary = function() {
+              var e = new c.BinaryWriter();
+              return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            }),
+            (r.serializeBinaryToWriter = function(e, t) {
+              var i = e.results();
+              0 < i.length &&
+                t.writeRepeatedMessage(1, i, ke.serializeBinaryToWriter);
+            }),
+            (r.prototype.getClassName = function() {
+              return "CSteamTV_GetFollowedChannels_Response";
+            }),
+            r
+          );
+        })(c.Message)),
         Ee = (c.Message,
         (function(i) {
           function r(e) {
@@ -6336,20 +6382,20 @@
           return (
             Object(p.d)(r, i),
             (r.prototype.results = function() {
-              return c.Message.getRepeatedWrapperField(this, De, 1);
+              return c.Message.getRepeatedWrapperField(this, ke, 1);
             }),
             (r.prototype.set_results = function(e) {
               c.Message.setRepeatedWrapperField(this, 1, e);
             }),
             (r.prototype.add_results = function(e, t) {
-              return c.Message.addToRepeatedWrapperField(this, 1, e, De, t);
+              return c.Message.addToRepeatedWrapperField(this, 1, e, ke, t);
             }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
             (r.toObject = function(e, t) {
               var i = {
-                results: c.Message.toObjectList(t.results(), De.toObject, e)
+                results: c.Message.toObjectList(t.results(), ke.toObject, e)
               };
               return e && (i.$jspbMessageInstance = t), i;
             }),
@@ -6358,7 +6404,7 @@
               return (
                 t.set_results(
                   (Array.isArray(e.results) ? e.results : []).map(function(e) {
-                    return De.fromObject(e);
+                    return ke.fromObject(e);
                   })
                 ),
                 t
@@ -6373,8 +6419,8 @@
               for (; t.nextField() && !t.isEndGroup(); ) {
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var i = new De();
-                    t.readMessage(i, De.deserializeBinaryFromReader),
+                    var i = new ke();
+                    t.readMessage(i, ke.deserializeBinaryFromReader),
                       e.add_results(i);
                     break;
                   default:
@@ -6388,81 +6434,9 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              0 < (i = e.results()).length &&
-                t.writeRepeatedMessage(1, i, De.serializeBinaryToWriter);
-            }),
-            (r.prototype.getClassName = function() {
-              return "CSteamTV_GetFollowedChannels_Response";
-            }),
-            r
-          );
-        })(c.Message)),
-        Ie = (c.Message,
-        (function(i) {
-          function r(e) {
-            void 0 === e && (e = null);
-            var t = i.call(this) || this;
-            return c.Message.initialize(t, e, 0, -1, [1], null), t;
-          }
-          return (
-            Object(p.d)(r, i),
-            (r.prototype.results = function() {
-              return c.Message.getRepeatedWrapperField(this, De, 1);
-            }),
-            (r.prototype.set_results = function(e) {
-              c.Message.setRepeatedWrapperField(this, 1, e);
-            }),
-            (r.prototype.add_results = function(e, t) {
-              return c.Message.addToRepeatedWrapperField(this, 1, e, De, t);
-            }),
-            (r.prototype.toObject = function(e) {
-              return void 0 === e && (e = !1), r.toObject(e, this);
-            }),
-            (r.toObject = function(e, t) {
-              var i = {
-                results: c.Message.toObjectList(t.results(), De.toObject, e)
-              };
-              return e && (i.$jspbMessageInstance = t), i;
-            }),
-            (r.fromObject = function(e) {
-              var t = new r();
-              return (
-                t.set_results(
-                  (Array.isArray(e.results) ? e.results : []).map(function(e) {
-                    return De.fromObject(e);
-                  })
-                ),
-                t
-              );
-            }),
-            (r.deserializeBinary = function(e) {
-              var t = new c.BinaryReader(e),
-                i = new r();
-              return r.deserializeBinaryFromReader(i, t);
-            }),
-            (r.deserializeBinaryFromReader = function(e, t) {
-              for (; t.nextField() && !t.isEndGroup(); ) {
-                switch (t.getFieldNumber()) {
-                  case 1:
-                    var i = new De();
-                    t.readMessage(i, De.deserializeBinaryFromReader),
-                      e.add_results(i);
-                    break;
-                  default:
-                    t.skipField();
-                }
-              }
-              return e;
-            }),
-            (r.prototype.serializeBinary = function() {
-              var e = new c.BinaryWriter();
-              return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
-            }),
-            (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              0 < (i = e.results()).length &&
-                t.writeRepeatedMessage(1, i, De.serializeBinaryToWriter);
+              var i = e.results();
+              0 < i.length &&
+                t.writeRepeatedMessage(1, i, ke.serializeBinaryToWriter);
             }),
             (r.prototype.getClassName = function() {
               return "CSteamTV_GetSubscribedChannels_Response";
@@ -6470,7 +6444,7 @@
             r
           );
         })(c.Message)),
-        Pe = (c.Message,
+        Ie = (c.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -6518,8 +6492,8 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              void 0 !== (i = c.Message.getField(e, 1)) && t.writeBool(1, i);
+              var i = c.Message.getField(e, 1);
+              void 0 !== i && t.writeBool(1, i);
             }),
             (r.prototype.getClassName = function() {
               return "CSteamTV_FollowBroadcastChannel_Response";
@@ -6527,7 +6501,7 @@
             r
           );
         })(c.Message)),
-        ze = (c.Message,
+        Pe = (c.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -6575,8 +6549,8 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              void 0 !== (i = c.Message.getField(e, 1)) && t.writeBool(1, i);
+              var i = c.Message.getField(e, 1);
+              void 0 !== i && t.writeBool(1, i);
             }),
             (r.prototype.getClassName = function() {
               return "CSteamTV_SubscribeBroadcastChannel_Response";
@@ -6584,7 +6558,7 @@
             r
           );
         })(c.Message)),
-        Ge = (c.Message,
+        ze = (c.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -6626,7 +6600,7 @@
             r
           );
         })(c.Message)),
-        Ve = (c.Message,
+        Ge = (c.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -6690,8 +6664,8 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              void 0 !== (i = c.Message.getField(e, 1)) && t.writeBool(1, i),
+              var i = c.Message.getField(e, 1);
+              void 0 !== i && t.writeBool(1, i),
                 void 0 !== (i = c.Message.getField(e, 2)) && t.writeBool(2, i);
             }),
             (r.prototype.getClassName = function() {
@@ -6700,7 +6674,7 @@
             r
           );
         })(c.Message)),
-        Ne = (function(i) {
+        Ve = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -6733,13 +6707,13 @@
               c.Message.setField(this, 4, e);
             }),
             (r.prototype.channels = function() {
-              return c.Message.getRepeatedWrapperField(this, De, 5);
+              return c.Message.getRepeatedWrapperField(this, ke, 5);
             }),
             (r.prototype.set_channels = function(e) {
               c.Message.setRepeatedWrapperField(this, 5, e);
             }),
             (r.prototype.add_channels = function(e, t) {
-              return c.Message.addToRepeatedWrapperField(this, 5, e, De, t);
+              return c.Message.addToRepeatedWrapperField(this, 5, e, ke, t);
             }),
             (r.prototype.release_date = function() {
               return c.Message.getField(this, 6);
@@ -6768,7 +6742,7 @@
                 name: c.Message.getField(t, 2),
                 image: c.Message.getField(t, 3),
                 viewers: c.Message.getField(t, 4),
-                channels: c.Message.toObjectList(t.channels(), De.toObject, e),
+                channels: c.Message.toObjectList(t.channels(), ke.toObject, e),
                 release_date: c.Message.getField(t, 6),
                 developer: c.Message.getField(t, 7),
                 publisher: c.Message.getField(t, 8)
@@ -6786,7 +6760,7 @@
                   (Array.isArray(e.channels) ? e.channels : []).map(function(
                     e
                   ) {
-                    return De.fromObject(e);
+                    return ke.fromObject(e);
                   })
                 ),
                 t.set_release_date(e.release_date),
@@ -6816,8 +6790,8 @@
                     e.set_viewers(t.readUint64String());
                     break;
                   case 5:
-                    var i = new De();
-                    t.readMessage(i, De.deserializeBinaryFromReader),
+                    var i = new ke();
+                    t.readMessage(i, ke.deserializeBinaryFromReader),
                       e.add_channels(i);
                     break;
                   case 6:
@@ -6840,8 +6814,8 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              void 0 !== (i = c.Message.getField(e, 1)) && t.writeUint32(1, i),
+              var i = c.Message.getField(e, 1);
+              void 0 !== i && t.writeUint32(1, i),
                 void 0 !== (i = c.Message.getField(e, 2)) &&
                   t.writeString(2, i),
                 void 0 !== (i = c.Message.getField(e, 3)) &&
@@ -6849,7 +6823,7 @@
                 void 0 !== (i = c.Message.getField(e, 4)) &&
                   t.writeUint64String(4, i),
                 0 < (i = e.channels()).length &&
-                  t.writeRepeatedMessage(5, i, De.serializeBinaryToWriter),
+                  t.writeRepeatedMessage(5, i, ke.serializeBinaryToWriter),
                 void 0 !== (i = c.Message.getField(e, 6)) &&
                   t.writeString(6, i),
                 void 0 !== (i = c.Message.getField(e, 7)) &&
@@ -6863,7 +6837,7 @@
             r
           );
         })(c.Message),
-        Ae = (c.Message,
+        Ne = (c.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -6873,20 +6847,20 @@
           return (
             Object(p.d)(r, i),
             (r.prototype.results = function() {
-              return c.Message.getRepeatedWrapperField(this, Ne, 1);
+              return c.Message.getRepeatedWrapperField(this, Ve, 1);
             }),
             (r.prototype.set_results = function(e) {
               c.Message.setRepeatedWrapperField(this, 1, e);
             }),
             (r.prototype.add_results = function(e, t) {
-              return c.Message.addToRepeatedWrapperField(this, 1, e, Ne, t);
+              return c.Message.addToRepeatedWrapperField(this, 1, e, Ve, t);
             }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
             (r.toObject = function(e, t) {
               var i = {
-                results: c.Message.toObjectList(t.results(), Ne.toObject, e)
+                results: c.Message.toObjectList(t.results(), Ve.toObject, e)
               };
               return e && (i.$jspbMessageInstance = t), i;
             }),
@@ -6895,7 +6869,7 @@
               return (
                 t.set_results(
                   (Array.isArray(e.results) ? e.results : []).map(function(e) {
-                    return Ne.fromObject(e);
+                    return Ve.fromObject(e);
                   })
                 ),
                 t
@@ -6910,8 +6884,8 @@
               for (; t.nextField() && !t.isEndGroup(); ) {
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var i = new Ne();
-                    t.readMessage(i, Ne.deserializeBinaryFromReader),
+                    var i = new Ve();
+                    t.readMessage(i, Ve.deserializeBinaryFromReader),
                       e.add_results(i);
                     break;
                   default:
@@ -6925,12 +6899,84 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              0 < (i = e.results()).length &&
-                t.writeRepeatedMessage(1, i, Ne.serializeBinaryToWriter);
+              var i = e.results();
+              0 < i.length &&
+                t.writeRepeatedMessage(1, i, Ve.serializeBinaryToWriter);
             }),
             (r.prototype.getClassName = function() {
               return "CSteamTV_GetGames_Response";
+            }),
+            r
+          );
+        })(c.Message)),
+        Ae = (c.Message,
+        (function(i) {
+          function r(e) {
+            void 0 === e && (e = null);
+            var t = i.call(this) || this;
+            return c.Message.initialize(t, e, 0, -1, [1], null), t;
+          }
+          return (
+            Object(p.d)(r, i),
+            (r.prototype.results = function() {
+              return c.Message.getRepeatedWrapperField(this, ke, 1);
+            }),
+            (r.prototype.set_results = function(e) {
+              c.Message.setRepeatedWrapperField(this, 1, e);
+            }),
+            (r.prototype.add_results = function(e, t) {
+              return c.Message.addToRepeatedWrapperField(this, 1, e, ke, t);
+            }),
+            (r.prototype.toObject = function(e) {
+              return void 0 === e && (e = !1), r.toObject(e, this);
+            }),
+            (r.toObject = function(e, t) {
+              var i = {
+                results: c.Message.toObjectList(t.results(), ke.toObject, e)
+              };
+              return e && (i.$jspbMessageInstance = t), i;
+            }),
+            (r.fromObject = function(e) {
+              var t = new r();
+              return (
+                t.set_results(
+                  (Array.isArray(e.results) ? e.results : []).map(function(e) {
+                    return ke.fromObject(e);
+                  })
+                ),
+                t
+              );
+            }),
+            (r.deserializeBinary = function(e) {
+              var t = new c.BinaryReader(e),
+                i = new r();
+              return r.deserializeBinaryFromReader(i, t);
+            }),
+            (r.deserializeBinaryFromReader = function(e, t) {
+              for (; t.nextField() && !t.isEndGroup(); ) {
+                switch (t.getFieldNumber()) {
+                  case 1:
+                    var i = new ke();
+                    t.readMessage(i, ke.deserializeBinaryFromReader),
+                      e.add_results(i);
+                    break;
+                  default:
+                    t.skipField();
+                }
+              }
+              return e;
+            }),
+            (r.prototype.serializeBinary = function() {
+              var e = new c.BinaryWriter();
+              return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            }),
+            (r.serializeBinaryToWriter = function(e, t) {
+              var i = e.results();
+              0 < i.length &&
+                t.writeRepeatedMessage(1, i, ke.serializeBinaryToWriter);
+            }),
+            (r.prototype.getClassName = function() {
+              return "CSteamTV_GetChannels_Response";
             }),
             r
           );
@@ -6944,86 +6990,14 @@
           }
           return (
             Object(p.d)(r, i),
-            (r.prototype.results = function() {
-              return c.Message.getRepeatedWrapperField(this, De, 1);
-            }),
-            (r.prototype.set_results = function(e) {
-              c.Message.setRepeatedWrapperField(this, 1, e);
-            }),
-            (r.prototype.add_results = function(e, t) {
-              return c.Message.addToRepeatedWrapperField(this, 1, e, De, t);
-            }),
-            (r.prototype.toObject = function(e) {
-              return void 0 === e && (e = !1), r.toObject(e, this);
-            }),
-            (r.toObject = function(e, t) {
-              var i = {
-                results: c.Message.toObjectList(t.results(), De.toObject, e)
-              };
-              return e && (i.$jspbMessageInstance = t), i;
-            }),
-            (r.fromObject = function(e) {
-              var t = new r();
-              return (
-                t.set_results(
-                  (Array.isArray(e.results) ? e.results : []).map(function(e) {
-                    return De.fromObject(e);
-                  })
-                ),
-                t
-              );
-            }),
-            (r.deserializeBinary = function(e) {
-              var t = new c.BinaryReader(e),
-                i = new r();
-              return r.deserializeBinaryFromReader(i, t);
-            }),
-            (r.deserializeBinaryFromReader = function(e, t) {
-              for (; t.nextField() && !t.isEndGroup(); ) {
-                switch (t.getFieldNumber()) {
-                  case 1:
-                    var i = new De();
-                    t.readMessage(i, De.deserializeBinaryFromReader),
-                      e.add_results(i);
-                    break;
-                  default:
-                    t.skipField();
-                }
-              }
-              return e;
-            }),
-            (r.prototype.serializeBinary = function() {
-              var e = new c.BinaryWriter();
-              return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
-            }),
-            (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              0 < (i = e.results()).length &&
-                t.writeRepeatedMessage(1, i, De.serializeBinaryToWriter);
-            }),
-            (r.prototype.getClassName = function() {
-              return "CSteamTV_GetChannels_Response";
-            }),
-            r
-          );
-        })(c.Message)),
-        We = (c.Message,
-        (function(i) {
-          function r(e) {
-            void 0 === e && (e = null);
-            var t = i.call(this) || this;
-            return c.Message.initialize(t, e, 0, -1, [1], null), t;
-          }
-          return (
-            Object(p.d)(r, i),
             (r.prototype.broadcasters = function() {
-              return c.Message.getRepeatedWrapperField(this, xe, 1);
+              return c.Message.getRepeatedWrapperField(this, We, 1);
             }),
             (r.prototype.set_broadcasters = function(e) {
               c.Message.setRepeatedWrapperField(this, 1, e);
             }),
             (r.prototype.add_broadcasters = function(e, t) {
-              return c.Message.addToRepeatedWrapperField(this, 1, e, xe, t);
+              return c.Message.addToRepeatedWrapperField(this, 1, e, We, t);
             }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
@@ -7032,7 +7006,7 @@
               var i = {
                 broadcasters: c.Message.toObjectList(
                   t.broadcasters(),
-                  xe.toObject,
+                  We.toObject,
                   e
                 )
               };
@@ -7044,7 +7018,7 @@
                 t.set_broadcasters(
                   (Array.isArray(e.broadcasters) ? e.broadcasters : []).map(
                     function(e) {
-                      return xe.fromObject(e);
+                      return We.fromObject(e);
                     }
                   )
                 ),
@@ -7060,8 +7034,8 @@
               for (; t.nextField() && !t.isEndGroup(); ) {
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var i = new xe();
-                    t.readMessage(i, xe.deserializeBinaryFromReader),
+                    var i = new We();
+                    t.readMessage(i, We.deserializeBinaryFromReader),
                       e.add_broadcasters(i);
                     break;
                   default:
@@ -7075,9 +7049,9 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              0 < (i = e.broadcasters()).length &&
-                t.writeRepeatedMessage(1, i, xe.serializeBinaryToWriter);
+              var i = e.broadcasters();
+              0 < i.length &&
+                t.writeRepeatedMessage(1, i, We.serializeBinaryToWriter);
             }),
             (r.prototype.getClassName = function() {
               return "CSteamTV_GetBroadcastChannelBroadcasters_Response";
@@ -7085,7 +7059,7 @@
             r
           );
         })(c.Message)),
-        xe = (function(i) {
+        We = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -7159,9 +7133,8 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              void 0 !== (i = c.Message.getField(e, 1)) &&
-                t.writeFixed64String(1, i),
+              var i = c.Message.getField(e, 1);
+              void 0 !== i && t.writeFixed64String(1, i),
                 void 0 !== (i = c.Message.getField(e, 2)) &&
                   t.writeString(2, i),
                 void 0 !== (i = c.Message.getField(e, 3)) &&
@@ -7173,7 +7146,7 @@
             r
           );
         })(c.Message),
-        Ue = (function(i) {
+        xe = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -7269,9 +7242,8 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              void 0 !== (i = c.Message.getField(e, 1)) &&
-                t.writeFixed64String(1, i),
+              var i = c.Message.getField(e, 1);
+              void 0 !== i && t.writeFixed64String(1, i),
                 void 0 !== (i = c.Message.getField(e, 2)) &&
                   t.writeFixed64String(2, i),
                 void 0 !== (i = c.Message.getField(e, 3)) &&
@@ -7286,7 +7258,7 @@
             r
           );
         })(c.Message),
-        He = (function(i) {
+        Ue = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -7382,9 +7354,8 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              void 0 !== (i = c.Message.getField(e, 1)) &&
-                t.writeFixed64String(1, i),
+              var i = c.Message.getField(e, 1);
+              void 0 !== i && t.writeFixed64String(1, i),
                 void 0 !== (i = c.Message.getField(e, 2)) &&
                   t.writeFixed64String(2, i),
                 void 0 !== (i = c.Message.getField(e, 3)) &&
@@ -7398,7 +7369,7 @@
             r
           );
         })(c.Message),
-        qe = (function(i) {
+        He = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -7439,7 +7410,7 @@
             r
           );
         })(c.Message),
-        $e = (c.Message,
+        qe = (c.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -7449,20 +7420,20 @@
           return (
             Object(p.d)(r, i),
             (r.prototype.results = function() {
-              return c.Message.getRepeatedWrapperField(this, Ue, 1);
+              return c.Message.getRepeatedWrapperField(this, xe, 1);
             }),
             (r.prototype.set_results = function(e) {
               c.Message.setRepeatedWrapperField(this, 1, e);
             }),
             (r.prototype.add_results = function(e, t) {
-              return c.Message.addToRepeatedWrapperField(this, 1, e, Ue, t);
+              return c.Message.addToRepeatedWrapperField(this, 1, e, xe, t);
             }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
             (r.toObject = function(e, t) {
               var i = {
-                results: c.Message.toObjectList(t.results(), Ue.toObject, e)
+                results: c.Message.toObjectList(t.results(), xe.toObject, e)
               };
               return e && (i.$jspbMessageInstance = t), i;
             }),
@@ -7471,7 +7442,7 @@
               return (
                 t.set_results(
                   (Array.isArray(e.results) ? e.results : []).map(function(e) {
-                    return Ue.fromObject(e);
+                    return xe.fromObject(e);
                   })
                 ),
                 t
@@ -7486,8 +7457,8 @@
               for (; t.nextField() && !t.isEndGroup(); ) {
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var i = new Ue();
-                    t.readMessage(i, Ue.deserializeBinaryFromReader),
+                    var i = new xe();
+                    t.readMessage(i, xe.deserializeBinaryFromReader),
                       e.add_results(i);
                     break;
                   default:
@@ -7501,9 +7472,9 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              0 < (i = e.results()).length &&
-                t.writeRepeatedMessage(1, i, Ue.serializeBinaryToWriter);
+              var i = e.results();
+              0 < i.length &&
+                t.writeRepeatedMessage(1, i, xe.serializeBinaryToWriter);
             }),
             (r.prototype.getClassName = function() {
               return "CSteamTV_GetChatBans_Response";
@@ -7511,7 +7482,7 @@
             r
           );
         })(c.Message)),
-        Je = (function(i) {
+        $e = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -7585,9 +7556,8 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              void 0 !== (i = c.Message.getField(e, 1)) &&
-                t.writeFixed64String(1, i),
+              var i = c.Message.getField(e, 1);
+              void 0 !== i && t.writeFixed64String(1, i),
                 void 0 !== (i = c.Message.getField(e, 2)) &&
                   t.writeFixed64String(2, i),
                 void 0 !== (i = c.Message.getField(e, 3)) && t.writeBool(3, i);
@@ -7598,7 +7568,7 @@
             r
           );
         })(c.Message),
-        Xe = (function(i) {
+        Je = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -7639,7 +7609,7 @@
             r
           );
         })(c.Message),
-        Ye = (function(i) {
+        Xe = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -7686,9 +7656,8 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              void 0 !== (i = c.Message.getField(e, 1)) &&
-                t.writeFixed64String(1, i);
+              var i = c.Message.getField(e, 1);
+              void 0 !== i && t.writeFixed64String(1, i);
             }),
             (r.prototype.getClassName = function() {
               return "CSteamTV_GetChatModerators_Request";
@@ -7696,7 +7665,7 @@
             r
           );
         })(c.Message),
-        Ke = (function(i) {
+        Ye = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -7755,9 +7724,8 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              void 0 !== (i = c.Message.getField(e, 1)) &&
-                t.writeFixed64String(1, i),
+              var i = c.Message.getField(e, 1);
+              void 0 !== i && t.writeFixed64String(1, i),
                 void 0 !== (i = c.Message.getField(e, 2)) &&
                   t.writeString(2, i);
             }),
@@ -7767,7 +7735,7 @@
             r
           );
         })(c.Message),
-        Qe = (function(i) {
+        Ke = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -7776,20 +7744,20 @@
           return (
             Object(p.d)(r, i),
             (r.prototype.results = function() {
-              return c.Message.getRepeatedWrapperField(this, Ke, 1);
+              return c.Message.getRepeatedWrapperField(this, Ye, 1);
             }),
             (r.prototype.set_results = function(e) {
               c.Message.setRepeatedWrapperField(this, 1, e);
             }),
             (r.prototype.add_results = function(e, t) {
-              return c.Message.addToRepeatedWrapperField(this, 1, e, Ke, t);
+              return c.Message.addToRepeatedWrapperField(this, 1, e, Ye, t);
             }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
             (r.toObject = function(e, t) {
               var i = {
-                results: c.Message.toObjectList(t.results(), Ke.toObject, e)
+                results: c.Message.toObjectList(t.results(), Ye.toObject, e)
               };
               return e && (i.$jspbMessageInstance = t), i;
             }),
@@ -7798,7 +7766,7 @@
               return (
                 t.set_results(
                   (Array.isArray(e.results) ? e.results : []).map(function(e) {
-                    return Ke.fromObject(e);
+                    return Ye.fromObject(e);
                   })
                 ),
                 t
@@ -7813,8 +7781,8 @@
               for (; t.nextField() && !t.isEndGroup(); ) {
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var i = new Ke();
-                    t.readMessage(i, Ke.deserializeBinaryFromReader),
+                    var i = new Ye();
+                    t.readMessage(i, Ye.deserializeBinaryFromReader),
                       e.add_results(i);
                     break;
                   default:
@@ -7828,9 +7796,9 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              0 < (i = e.results()).length &&
-                t.writeRepeatedMessage(1, i, Ke.serializeBinaryToWriter);
+              var i = e.results();
+              0 < i.length &&
+                t.writeRepeatedMessage(1, i, Ye.serializeBinaryToWriter);
             }),
             (r.prototype.getClassName = function() {
               return "CSteamTV_GetChatModerators_Response";
@@ -7838,7 +7806,7 @@
             r
           );
         })(c.Message),
-        Ze = (c.Message,
+        Qe = (c.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -7880,7 +7848,7 @@
             r
           );
         })(c.Message)),
-        et = (c.Message,
+        Ze = (c.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -7931,9 +7899,8 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              void 0 !== (i = c.Message.getField(e, 1)) &&
-                t.writeRepeatedString(1, i);
+              var i = c.Message.getField(e, 1);
+              void 0 !== i && t.writeRepeatedString(1, i);
             }),
             (r.prototype.getClassName = function() {
               return "CSteamTV_GetWordBans_Response";
@@ -7941,7 +7908,7 @@
             r
           );
         })(c.Message)),
-        tt = (function(i) {
+        et = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -7988,9 +7955,8 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              void 0 !== (i = c.Message.getField(e, 1)) &&
-                t.writeFixed64String(1, i);
+              var i = c.Message.getField(e, 1);
+              void 0 !== i && t.writeFixed64String(1, i);
             }),
             (r.prototype.getClassName = function() {
               return "CSteamTV_JoinChat_Request";
@@ -7998,7 +7964,7 @@
             r
           );
         })(c.Message),
-        it = (function(i) {
+        tt = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -8075,9 +8041,8 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              void 0 !== (i = c.Message.getField(e, 1)) &&
-                t.writeFixed64String(1, i),
+              var i = c.Message.getField(e, 1);
+              void 0 !== i && t.writeFixed64String(1, i),
                 void 0 !== (i = c.Message.getField(e, 2)) &&
                   t.writeString(2, i),
                 void 0 !== (i = c.Message.getField(e, 3)) &&
@@ -8089,7 +8054,7 @@
             r
           );
         })(c.Message),
-        rt = (c.Message,
+        it = (c.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -8099,20 +8064,20 @@
           return (
             Object(p.d)(r, i),
             (r.prototype.results = function() {
-              return c.Message.getRepeatedWrapperField(this, De, 1);
+              return c.Message.getRepeatedWrapperField(this, ke, 1);
             }),
             (r.prototype.set_results = function(e) {
               c.Message.setRepeatedWrapperField(this, 1, e);
             }),
             (r.prototype.add_results = function(e, t) {
-              return c.Message.addToRepeatedWrapperField(this, 1, e, De, t);
+              return c.Message.addToRepeatedWrapperField(this, 1, e, ke, t);
             }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
             (r.toObject = function(e, t) {
               var i = {
-                results: c.Message.toObjectList(t.results(), De.toObject, e)
+                results: c.Message.toObjectList(t.results(), ke.toObject, e)
               };
               return e && (i.$jspbMessageInstance = t), i;
             }),
@@ -8121,7 +8086,7 @@
               return (
                 t.set_results(
                   (Array.isArray(e.results) ? e.results : []).map(function(e) {
-                    return De.fromObject(e);
+                    return ke.fromObject(e);
                   })
                 ),
                 t
@@ -8136,8 +8101,8 @@
               for (; t.nextField() && !t.isEndGroup(); ) {
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var i = new De();
-                    t.readMessage(i, De.deserializeBinaryFromReader),
+                    var i = new ke();
+                    t.readMessage(i, ke.deserializeBinaryFromReader),
                       e.add_results(i);
                     break;
                   default:
@@ -8151,9 +8116,9 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              0 < (i = e.results()).length &&
-                t.writeRepeatedMessage(1, i, De.serializeBinaryToWriter);
+              var i = e.results();
+              0 < i.length &&
+                t.writeRepeatedMessage(1, i, ke.serializeBinaryToWriter);
             }),
             (r.prototype.getClassName = function() {
               return "CSteamTV_Search_Response";
@@ -8161,7 +8126,7 @@
             r
           );
         })(c.Message)),
-        st = (c.Message,
+        rt = (c.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -8225,8 +8190,8 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              void 0 !== (i = c.Message.getField(e, 1)) && t.writeBool(1, i),
+              var i = c.Message.getField(e, 1);
+              void 0 !== i && t.writeBool(1, i),
                 void 0 !== (i = c.Message.getField(e, 2)) && t.writeBool(2, i);
             }),
             (r.prototype.getClassName = function() {
@@ -8235,7 +8200,7 @@
             r
           );
         })(c.Message)),
-        nt = (c.Message,
+        st = (c.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -8277,7 +8242,7 @@
             r
           );
         })(c.Message)),
-        at = (c.Message,
+        nt = (c.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -8287,20 +8252,20 @@
           return (
             Object(p.d)(r, i),
             (r.prototype.results = function() {
-              return c.Message.getRepeatedWrapperField(this, De, 1);
+              return c.Message.getRepeatedWrapperField(this, ke, 1);
             }),
             (r.prototype.set_results = function(e) {
               c.Message.setRepeatedWrapperField(this, 1, e);
             }),
             (r.prototype.add_results = function(e, t) {
-              return c.Message.addToRepeatedWrapperField(this, 1, e, De, t);
+              return c.Message.addToRepeatedWrapperField(this, 1, e, ke, t);
             }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
             (r.toObject = function(e, t) {
               var i = {
-                results: c.Message.toObjectList(t.results(), De.toObject, e)
+                results: c.Message.toObjectList(t.results(), ke.toObject, e)
               };
               return e && (i.$jspbMessageInstance = t), i;
             }),
@@ -8309,7 +8274,7 @@
               return (
                 t.set_results(
                   (Array.isArray(e.results) ? e.results : []).map(function(e) {
-                    return De.fromObject(e);
+                    return ke.fromObject(e);
                   })
                 ),
                 t
@@ -8324,8 +8289,8 @@
               for (; t.nextField() && !t.isEndGroup(); ) {
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var i = new De();
-                    t.readMessage(i, De.deserializeBinaryFromReader),
+                    var i = new ke();
+                    t.readMessage(i, ke.deserializeBinaryFromReader),
                       e.add_results(i);
                     break;
                   default:
@@ -8339,9 +8304,9 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              0 < (i = e.results()).length &&
-                t.writeRepeatedMessage(1, i, De.serializeBinaryToWriter);
+              var i = e.results();
+              0 < i.length &&
+                t.writeRepeatedMessage(1, i, ke.serializeBinaryToWriter);
             }),
             (r.prototype.getClassName = function() {
               return "CSteamTV_GetMyBroadcastChannels_Response";
@@ -8349,7 +8314,7 @@
             r
           );
         })(c.Message)),
-        ot = (function(i) {
+        at = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -8358,13 +8323,13 @@
           return (
             Object(p.d)(r, i),
             (r.prototype.broadcasts = function() {
-              return c.Message.getRepeatedWrapperField(this, De, 1);
+              return c.Message.getRepeatedWrapperField(this, ke, 1);
             }),
             (r.prototype.set_broadcasts = function(e) {
               c.Message.setRepeatedWrapperField(this, 1, e);
             }),
             (r.prototype.add_broadcasts = function(e, t) {
-              return c.Message.addToRepeatedWrapperField(this, 1, e, De, t);
+              return c.Message.addToRepeatedWrapperField(this, 1, e, ke, t);
             }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
@@ -8373,7 +8338,7 @@
               var i = {
                 broadcasts: c.Message.toObjectList(
                   t.broadcasts(),
-                  De.toObject,
+                  ke.toObject,
                   e
                 )
               };
@@ -8385,7 +8350,7 @@
                 t.set_broadcasts(
                   (Array.isArray(e.broadcasts) ? e.broadcasts : []).map(
                     function(e) {
-                      return De.fromObject(e);
+                      return ke.fromObject(e);
                     }
                   )
                 ),
@@ -8401,8 +8366,8 @@
               for (; t.nextField() && !t.isEndGroup(); ) {
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var i = new De();
-                    t.readMessage(i, De.deserializeBinaryFromReader),
+                    var i = new ke();
+                    t.readMessage(i, ke.deserializeBinaryFromReader),
                       e.add_broadcasts(i);
                     break;
                   default:
@@ -8416,9 +8381,9 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              0 < (i = e.broadcasts()).length &&
-                t.writeRepeatedMessage(1, i, De.serializeBinaryToWriter);
+              var i = e.broadcasts();
+              0 < i.length &&
+                t.writeRepeatedMessage(1, i, ke.serializeBinaryToWriter);
             }),
             (r.prototype.getClassName = function() {
               return "CSteamTV_HomePageTemplate_Takeover";
@@ -8426,7 +8391,7 @@
             r
           );
         })(c.Message),
-        dt = (function(i) {
+        ot = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -8435,13 +8400,13 @@
           return (
             Object(p.d)(r, i),
             (r.prototype.broadcasts = function() {
-              return c.Message.getRepeatedWrapperField(this, De, 1);
+              return c.Message.getRepeatedWrapperField(this, ke, 1);
             }),
             (r.prototype.set_broadcasts = function(e) {
               c.Message.setRepeatedWrapperField(this, 1, e);
             }),
             (r.prototype.add_broadcasts = function(e, t) {
-              return c.Message.addToRepeatedWrapperField(this, 1, e, De, t);
+              return c.Message.addToRepeatedWrapperField(this, 1, e, ke, t);
             }),
             (r.prototype.appid = function() {
               return c.Message.getField(this, 2);
@@ -8462,7 +8427,7 @@
               var i = {
                 broadcasts: c.Message.toObjectList(
                   t.broadcasts(),
-                  De.toObject,
+                  ke.toObject,
                   e
                 ),
                 appid: c.Message.getField(t, 2),
@@ -8476,7 +8441,7 @@
                 t.set_broadcasts(
                   (Array.isArray(e.broadcasts) ? e.broadcasts : []).map(
                     function(e) {
-                      return De.fromObject(e);
+                      return ke.fromObject(e);
                     }
                   )
                 ),
@@ -8494,8 +8459,8 @@
               for (; t.nextField() && !t.isEndGroup(); ) {
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var i = new De();
-                    t.readMessage(i, De.deserializeBinaryFromReader),
+                    var i = new ke();
+                    t.readMessage(i, ke.deserializeBinaryFromReader),
                       e.add_broadcasts(i);
                     break;
                   case 2:
@@ -8515,9 +8480,9 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              0 < (i = e.broadcasts()).length &&
-                t.writeRepeatedMessage(1, i, De.serializeBinaryToWriter),
+              var i = e.broadcasts();
+              0 < i.length &&
+                t.writeRepeatedMessage(1, i, ke.serializeBinaryToWriter),
                 void 0 !== (i = c.Message.getField(e, 2)) &&
                   t.writeUint32(2, i),
                 void 0 !== (i = c.Message.getField(e, 3)) &&
@@ -8529,7 +8494,7 @@
             r
           );
         })(c.Message),
-        lt = (function(i) {
+        dt = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -8552,7 +8517,7 @@
             (r.prototype.broadcast = function(e) {
               return (
                 void 0 === e && (e = !0),
-                c.Message.getWrapperField(this, De, 3, e ? 1 : 0)
+                c.Message.getWrapperField(this, ke, 3, e ? 1 : 0)
               );
             }),
             (r.prototype.set_broadcast = function(e) {
@@ -8566,7 +8531,7 @@
                 r = {
                   appid: c.Message.getField(t, 1),
                   game_name: c.Message.getField(t, 2),
-                  broadcast: (i = t.broadcast(!1)) && De.toObject(e, i)
+                  broadcast: (i = t.broadcast(!1)) && ke.toObject(e, i)
                 };
               return e && (r.$jspbMessageInstance = t), r;
             }),
@@ -8575,7 +8540,7 @@
               return (
                 t.set_appid(e.appid),
                 t.set_game_name(e.game_name),
-                t.set_broadcast(De.fromObject(e.broadcast)),
+                t.set_broadcast(ke.fromObject(e.broadcast)),
                 t
               );
             }),
@@ -8594,8 +8559,8 @@
                     e.set_game_name(t.readString());
                     break;
                   case 3:
-                    var i = new De();
-                    t.readMessage(i, De.deserializeBinaryFromReader),
+                    var i = new ke();
+                    t.readMessage(i, ke.deserializeBinaryFromReader),
                       e.set_broadcast(i);
                     break;
                   default:
@@ -8609,12 +8574,12 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              void 0 !== (i = c.Message.getField(e, 1)) && t.writeUint32(1, i),
+              var i = c.Message.getField(e, 1);
+              void 0 !== i && t.writeUint32(1, i),
                 void 0 !== (i = c.Message.getField(e, 2)) &&
                   t.writeString(2, i),
                 null != (i = e.broadcast(!1)) &&
-                  t.writeMessage(3, i, De.serializeBinaryToWriter);
+                  t.writeMessage(3, i, ke.serializeBinaryToWriter);
             }),
             (r.prototype.getClassName = function() {
               return "GameListEntry";
@@ -8622,7 +8587,7 @@
             r
           );
         })(c.Message),
-        ct = (function(i) {
+        lt = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -8631,13 +8596,13 @@
           return (
             Object(p.d)(r, i),
             (r.prototype.entries = function() {
-              return c.Message.getRepeatedWrapperField(this, lt, 1);
+              return c.Message.getRepeatedWrapperField(this, dt, 1);
             }),
             (r.prototype.set_entries = function(e) {
               c.Message.setRepeatedWrapperField(this, 1, e);
             }),
             (r.prototype.add_entries = function(e, t) {
-              return c.Message.addToRepeatedWrapperField(this, 1, e, lt, t);
+              return c.Message.addToRepeatedWrapperField(this, 1, e, dt, t);
             }),
             (r.prototype.title = function() {
               return c.Message.getField(this, 2);
@@ -8650,7 +8615,7 @@
             }),
             (r.toObject = function(e, t) {
               var i = {
-                entries: c.Message.toObjectList(t.entries(), lt.toObject, e),
+                entries: c.Message.toObjectList(t.entries(), dt.toObject, e),
                 title: c.Message.getField(t, 2)
               };
               return e && (i.$jspbMessageInstance = t), i;
@@ -8660,7 +8625,7 @@
               return (
                 t.set_entries(
                   (Array.isArray(e.entries) ? e.entries : []).map(function(e) {
-                    return lt.fromObject(e);
+                    return dt.fromObject(e);
                   })
                 ),
                 t.set_title(e.title),
@@ -8676,8 +8641,8 @@
               for (; t.nextField() && !t.isEndGroup(); ) {
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var i = new lt();
-                    t.readMessage(i, lt.deserializeBinaryFromReader),
+                    var i = new dt();
+                    t.readMessage(i, dt.deserializeBinaryFromReader),
                       e.add_entries(i);
                     break;
                   case 2:
@@ -8694,14 +8659,104 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              0 < (i = e.entries()).length &&
-                t.writeRepeatedMessage(1, i, lt.serializeBinaryToWriter),
+              var i = e.entries();
+              0 < i.length &&
+                t.writeRepeatedMessage(1, i, dt.serializeBinaryToWriter),
                 void 0 !== (i = c.Message.getField(e, 2)) &&
                   t.writeString(2, i);
             }),
             (r.prototype.getClassName = function() {
               return "CSteamTV_HomePageTemplate_GameList";
+            }),
+            r
+          );
+        })(c.Message),
+        ct = (function(i) {
+          function r(e) {
+            void 0 === e && (e = null);
+            var t = i.call(this) || this;
+            return c.Message.initialize(t, e, 0, -1, [1], null), t;
+          }
+          return (
+            Object(p.d)(r, i),
+            (r.prototype.broadcasts = function() {
+              return c.Message.getRepeatedWrapperField(this, ke, 1);
+            }),
+            (r.prototype.set_broadcasts = function(e) {
+              c.Message.setRepeatedWrapperField(this, 1, e);
+            }),
+            (r.prototype.add_broadcasts = function(e, t) {
+              return c.Message.addToRepeatedWrapperField(this, 1, e, ke, t);
+            }),
+            (r.prototype.title = function() {
+              return c.Message.getField(this, 2);
+            }),
+            (r.prototype.set_title = function(e) {
+              c.Message.setField(this, 2, e);
+            }),
+            (r.prototype.toObject = function(e) {
+              return void 0 === e && (e = !1), r.toObject(e, this);
+            }),
+            (r.toObject = function(e, t) {
+              var i = {
+                broadcasts: c.Message.toObjectList(
+                  t.broadcasts(),
+                  ke.toObject,
+                  e
+                ),
+                title: c.Message.getField(t, 2)
+              };
+              return e && (i.$jspbMessageInstance = t), i;
+            }),
+            (r.fromObject = function(e) {
+              var t = new r();
+              return (
+                t.set_broadcasts(
+                  (Array.isArray(e.broadcasts) ? e.broadcasts : []).map(
+                    function(e) {
+                      return ke.fromObject(e);
+                    }
+                  )
+                ),
+                t.set_title(e.title),
+                t
+              );
+            }),
+            (r.deserializeBinary = function(e) {
+              var t = new c.BinaryReader(e),
+                i = new r();
+              return r.deserializeBinaryFromReader(i, t);
+            }),
+            (r.deserializeBinaryFromReader = function(e, t) {
+              for (; t.nextField() && !t.isEndGroup(); ) {
+                switch (t.getFieldNumber()) {
+                  case 1:
+                    var i = new ke();
+                    t.readMessage(i, ke.deserializeBinaryFromReader),
+                      e.add_broadcasts(i);
+                    break;
+                  case 2:
+                    e.set_title(t.readString());
+                    break;
+                  default:
+                    t.skipField();
+                }
+              }
+              return e;
+            }),
+            (r.prototype.serializeBinary = function() {
+              var e = new c.BinaryWriter();
+              return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            }),
+            (r.serializeBinaryToWriter = function(e, t) {
+              var i = e.broadcasts();
+              0 < i.length &&
+                t.writeRepeatedMessage(1, i, ke.serializeBinaryToWriter),
+                void 0 !== (i = c.Message.getField(e, 2)) &&
+                  t.writeString(2, i);
+            }),
+            (r.prototype.getClassName = function() {
+              return "CSteamTV_HomePageTemplate_QuickExplore";
             }),
             r
           );
@@ -8715,13 +8770,13 @@
           return (
             Object(p.d)(r, i),
             (r.prototype.broadcasts = function() {
-              return c.Message.getRepeatedWrapperField(this, De, 1);
+              return c.Message.getRepeatedWrapperField(this, ke, 1);
             }),
             (r.prototype.set_broadcasts = function(e) {
               c.Message.setRepeatedWrapperField(this, 1, e);
             }),
             (r.prototype.add_broadcasts = function(e, t) {
-              return c.Message.addToRepeatedWrapperField(this, 1, e, De, t);
+              return c.Message.addToRepeatedWrapperField(this, 1, e, ke, t);
             }),
             (r.prototype.title = function() {
               return c.Message.getField(this, 2);
@@ -8736,7 +8791,7 @@
               var i = {
                 broadcasts: c.Message.toObjectList(
                   t.broadcasts(),
-                  De.toObject,
+                  ke.toObject,
                   e
                 ),
                 title: c.Message.getField(t, 2)
@@ -8749,7 +8804,7 @@
                 t.set_broadcasts(
                   (Array.isArray(e.broadcasts) ? e.broadcasts : []).map(
                     function(e) {
-                      return De.fromObject(e);
+                      return ke.fromObject(e);
                     }
                   )
                 ),
@@ -8766,8 +8821,8 @@
               for (; t.nextField() && !t.isEndGroup(); ) {
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var i = new De();
-                    t.readMessage(i, De.deserializeBinaryFromReader),
+                    var i = new ke();
+                    t.readMessage(i, ke.deserializeBinaryFromReader),
                       e.add_broadcasts(i);
                     break;
                   case 2:
@@ -8784,99 +8839,9 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              0 < (i = e.broadcasts()).length &&
-                t.writeRepeatedMessage(1, i, De.serializeBinaryToWriter),
-                void 0 !== (i = c.Message.getField(e, 2)) &&
-                  t.writeString(2, i);
-            }),
-            (r.prototype.getClassName = function() {
-              return "CSteamTV_HomePageTemplate_QuickExplore";
-            }),
-            r
-          );
-        })(c.Message),
-        pt = (function(i) {
-          function r(e) {
-            void 0 === e && (e = null);
-            var t = i.call(this) || this;
-            return c.Message.initialize(t, e, 0, -1, [1], null), t;
-          }
-          return (
-            Object(p.d)(r, i),
-            (r.prototype.broadcasts = function() {
-              return c.Message.getRepeatedWrapperField(this, De, 1);
-            }),
-            (r.prototype.set_broadcasts = function(e) {
-              c.Message.setRepeatedWrapperField(this, 1, e);
-            }),
-            (r.prototype.add_broadcasts = function(e, t) {
-              return c.Message.addToRepeatedWrapperField(this, 1, e, De, t);
-            }),
-            (r.prototype.title = function() {
-              return c.Message.getField(this, 2);
-            }),
-            (r.prototype.set_title = function(e) {
-              c.Message.setField(this, 2, e);
-            }),
-            (r.prototype.toObject = function(e) {
-              return void 0 === e && (e = !1), r.toObject(e, this);
-            }),
-            (r.toObject = function(e, t) {
-              var i = {
-                broadcasts: c.Message.toObjectList(
-                  t.broadcasts(),
-                  De.toObject,
-                  e
-                ),
-                title: c.Message.getField(t, 2)
-              };
-              return e && (i.$jspbMessageInstance = t), i;
-            }),
-            (r.fromObject = function(e) {
-              var t = new r();
-              return (
-                t.set_broadcasts(
-                  (Array.isArray(e.broadcasts) ? e.broadcasts : []).map(
-                    function(e) {
-                      return De.fromObject(e);
-                    }
-                  )
-                ),
-                t.set_title(e.title),
-                t
-              );
-            }),
-            (r.deserializeBinary = function(e) {
-              var t = new c.BinaryReader(e),
-                i = new r();
-              return r.deserializeBinaryFromReader(i, t);
-            }),
-            (r.deserializeBinaryFromReader = function(e, t) {
-              for (; t.nextField() && !t.isEndGroup(); ) {
-                switch (t.getFieldNumber()) {
-                  case 1:
-                    var i = new De();
-                    t.readMessage(i, De.deserializeBinaryFromReader),
-                      e.add_broadcasts(i);
-                    break;
-                  case 2:
-                    e.set_title(t.readString());
-                    break;
-                  default:
-                    t.skipField();
-                }
-              }
-              return e;
-            }),
-            (r.prototype.serializeBinary = function() {
-              var e = new c.BinaryWriter();
-              return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
-            }),
-            (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              0 < (i = e.broadcasts()).length &&
-                t.writeRepeatedMessage(1, i, De.serializeBinaryToWriter),
+              var i = e.broadcasts();
+              0 < i.length &&
+                t.writeRepeatedMessage(1, i, ke.serializeBinaryToWriter),
                 void 0 !== (i = c.Message.getField(e, 2)) &&
                   t.writeString(2, i);
             }),
@@ -8886,7 +8851,7 @@
             r
           );
         })(c.Message),
-        mt = (function(i) {
+        pt = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -8897,7 +8862,7 @@
             (r.prototype.broadcast = function(e) {
               return (
                 void 0 === e && (e = !0),
-                c.Message.getWrapperField(this, De, 1, e ? 1 : 0)
+                c.Message.getWrapperField(this, ke, 1, e ? 1 : 0)
               );
             }),
             (r.prototype.set_broadcast = function(e) {
@@ -8921,7 +8886,7 @@
             (r.toObject = function(e, t) {
               var i,
                 r = {
-                  broadcast: (i = t.broadcast(!1)) && De.toObject(e, i),
+                  broadcast: (i = t.broadcast(!1)) && ke.toObject(e, i),
                   title: c.Message.getField(t, 2),
                   chat_group_id: c.Message.getField(t, 3)
                 };
@@ -8930,7 +8895,7 @@
             (r.fromObject = function(e) {
               var t = new r();
               return (
-                t.set_broadcast(De.fromObject(e.broadcast)),
+                t.set_broadcast(ke.fromObject(e.broadcast)),
                 t.set_title(e.title),
                 t.set_chat_group_id(e.chat_group_id),
                 t
@@ -8945,8 +8910,8 @@
               for (; t.nextField() && !t.isEndGroup(); ) {
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var i = new De();
-                    t.readMessage(i, De.deserializeBinaryFromReader),
+                    var i = new ke();
+                    t.readMessage(i, ke.deserializeBinaryFromReader),
                       e.set_broadcast(i);
                     break;
                   case 2:
@@ -8966,9 +8931,8 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              null != (i = e.broadcast(!1)) &&
-                t.writeMessage(1, i, De.serializeBinaryToWriter),
+              var i = e.broadcast(!1);
+              null != i && t.writeMessage(1, i, ke.serializeBinaryToWriter),
                 void 0 !== (i = c.Message.getField(e, 2)) &&
                   t.writeString(2, i),
                 void 0 !== (i = c.Message.getField(e, 3)) &&
@@ -8980,7 +8944,7 @@
             r
           );
         })(c.Message),
-        ht = (function(i) {
+        mt = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -8991,7 +8955,7 @@
             (r.prototype.broadcast = function(e) {
               return (
                 void 0 === e && (e = !0),
-                c.Message.getWrapperField(this, De, 1, e ? 1 : 0)
+                c.Message.getWrapperField(this, ke, 1, e ? 1 : 0)
               );
             }),
             (r.prototype.set_broadcast = function(e) {
@@ -9009,7 +8973,7 @@
             (r.toObject = function(e, t) {
               var i,
                 r = {
-                  broadcast: (i = t.broadcast(!1)) && De.toObject(e, i),
+                  broadcast: (i = t.broadcast(!1)) && ke.toObject(e, i),
                   title: c.Message.getField(t, 2)
                 };
               return e && (r.$jspbMessageInstance = t), r;
@@ -9017,7 +8981,7 @@
             (r.fromObject = function(e) {
               var t = new r();
               return (
-                t.set_broadcast(De.fromObject(e.broadcast)),
+                t.set_broadcast(ke.fromObject(e.broadcast)),
                 t.set_title(e.title),
                 t
               );
@@ -9031,8 +8995,8 @@
               for (; t.nextField() && !t.isEndGroup(); ) {
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var i = new De();
-                    t.readMessage(i, De.deserializeBinaryFromReader),
+                    var i = new ke();
+                    t.readMessage(i, ke.deserializeBinaryFromReader),
                       e.set_broadcast(i);
                     break;
                   case 2:
@@ -9049,9 +9013,8 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              null != (i = e.broadcast(!1)) &&
-                t.writeMessage(1, i, De.serializeBinaryToWriter),
+              var i = e.broadcast(!1);
+              null != i && t.writeMessage(1, i, ke.serializeBinaryToWriter),
                 void 0 !== (i = c.Message.getField(e, 2)) &&
                   t.writeString(2, i);
             }),
@@ -9061,7 +9024,7 @@
             r
           );
         })(c.Message),
-        _t = (function(i) {
+        ht = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -9108,8 +9071,8 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              void 0 !== (i = c.Message.getField(e, 1)) && t.writeString(1, i);
+              var i = c.Message.getField(e, 1);
+              void 0 !== i && t.writeString(1, i);
             }),
             (r.prototype.getClassName = function() {
               return "CSteamTV_HomePageTemplate_Event";
@@ -9117,7 +9080,7 @@
             r
           );
         })(c.Message),
-        gt = (function(i) {
+        _t = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -9134,7 +9097,7 @@
             (r.prototype.takeover = function(e) {
               return (
                 void 0 === e && (e = !0),
-                c.Message.getWrapperField(this, ot, 2, e ? 1 : 0)
+                c.Message.getWrapperField(this, at, 2, e ? 1 : 0)
               );
             }),
             (r.prototype.set_takeover = function(e) {
@@ -9143,7 +9106,7 @@
             (r.prototype.single_game = function(e) {
               return (
                 void 0 === e && (e = !0),
-                c.Message.getWrapperField(this, dt, 3, e ? 1 : 0)
+                c.Message.getWrapperField(this, ot, 3, e ? 1 : 0)
               );
             }),
             (r.prototype.set_single_game = function(e) {
@@ -9152,7 +9115,7 @@
             (r.prototype.game_list = function(e) {
               return (
                 void 0 === e && (e = !0),
-                c.Message.getWrapperField(this, ct, 4, e ? 1 : 0)
+                c.Message.getWrapperField(this, lt, 4, e ? 1 : 0)
               );
             }),
             (r.prototype.set_game_list = function(e) {
@@ -9161,7 +9124,7 @@
             (r.prototype.quick_explore = function(e) {
               return (
                 void 0 === e && (e = !0),
-                c.Message.getWrapperField(this, ut, 5, e ? 1 : 0)
+                c.Message.getWrapperField(this, ct, 5, e ? 1 : 0)
               );
             }),
             (r.prototype.set_quick_explore = function(e) {
@@ -9170,7 +9133,7 @@
             (r.prototype.conveyor_belt = function(e) {
               return (
                 void 0 === e && (e = !0),
-                c.Message.getWrapperField(this, pt, 6, e ? 1 : 0)
+                c.Message.getWrapperField(this, ut, 6, e ? 1 : 0)
               );
             }),
             (r.prototype.set_conveyor_belt = function(e) {
@@ -9179,7 +9142,7 @@
             (r.prototype.watch_party = function(e) {
               return (
                 void 0 === e && (e = !0),
-                c.Message.getWrapperField(this, mt, 7, e ? 1 : 0)
+                c.Message.getWrapperField(this, pt, 7, e ? 1 : 0)
               );
             }),
             (r.prototype.set_watch_party = function(e) {
@@ -9188,7 +9151,7 @@
             (r.prototype.developer = function(e) {
               return (
                 void 0 === e && (e = !0),
-                c.Message.getWrapperField(this, ht, 8, e ? 1 : 0)
+                c.Message.getWrapperField(this, mt, 8, e ? 1 : 0)
               );
             }),
             (r.prototype.set_developer = function(e) {
@@ -9197,7 +9160,7 @@
             (r.prototype.event = function(e) {
               return (
                 void 0 === e && (e = !0),
-                c.Message.getWrapperField(this, _t, 9, e ? 1 : 0)
+                c.Message.getWrapperField(this, ht, 9, e ? 1 : 0)
               );
             }),
             (r.prototype.set_event = function(e) {
@@ -9210,14 +9173,14 @@
               var i,
                 r = {
                   template_type: c.Message.getField(t, 1),
-                  takeover: (i = t.takeover(!1)) && ot.toObject(e, i),
-                  single_game: (i = t.single_game(!1)) && dt.toObject(e, i),
-                  game_list: (i = t.game_list(!1)) && ct.toObject(e, i),
-                  quick_explore: (i = t.quick_explore(!1)) && ut.toObject(e, i),
-                  conveyor_belt: (i = t.conveyor_belt(!1)) && pt.toObject(e, i),
-                  watch_party: (i = t.watch_party(!1)) && mt.toObject(e, i),
-                  developer: (i = t.developer(!1)) && ht.toObject(e, i),
-                  event: (i = t.event(!1)) && _t.toObject(e, i)
+                  takeover: (i = t.takeover(!1)) && at.toObject(e, i),
+                  single_game: (i = t.single_game(!1)) && ot.toObject(e, i),
+                  game_list: (i = t.game_list(!1)) && lt.toObject(e, i),
+                  quick_explore: (i = t.quick_explore(!1)) && ct.toObject(e, i),
+                  conveyor_belt: (i = t.conveyor_belt(!1)) && ut.toObject(e, i),
+                  watch_party: (i = t.watch_party(!1)) && pt.toObject(e, i),
+                  developer: (i = t.developer(!1)) && mt.toObject(e, i),
+                  event: (i = t.event(!1)) && ht.toObject(e, i)
                 };
               return e && (r.$jspbMessageInstance = t), r;
             }),
@@ -9225,14 +9188,14 @@
               var t = new r();
               return (
                 t.set_template_type(e.template_type),
-                t.set_takeover(ot.fromObject(e.takeover)),
-                t.set_single_game(dt.fromObject(e.single_game)),
-                t.set_game_list(ct.fromObject(e.game_list)),
-                t.set_quick_explore(ut.fromObject(e.quick_explore)),
-                t.set_conveyor_belt(pt.fromObject(e.conveyor_belt)),
-                t.set_watch_party(mt.fromObject(e.watch_party)),
-                t.set_developer(ht.fromObject(e.developer)),
-                t.set_event(_t.fromObject(e.event)),
+                t.set_takeover(at.fromObject(e.takeover)),
+                t.set_single_game(ot.fromObject(e.single_game)),
+                t.set_game_list(lt.fromObject(e.game_list)),
+                t.set_quick_explore(ct.fromObject(e.quick_explore)),
+                t.set_conveyor_belt(ut.fromObject(e.conveyor_belt)),
+                t.set_watch_party(pt.fromObject(e.watch_party)),
+                t.set_developer(mt.fromObject(e.developer)),
+                t.set_event(ht.fromObject(e.event)),
                 t
               );
             }),
@@ -9248,43 +9211,43 @@
                     e.set_template_type(t.readEnum());
                     break;
                   case 2:
-                    var i = new ot();
-                    t.readMessage(i, ot.deserializeBinaryFromReader),
+                    var i = new at();
+                    t.readMessage(i, at.deserializeBinaryFromReader),
                       e.set_takeover(i);
                     break;
                   case 3:
-                    i = new dt();
-                    t.readMessage(i, dt.deserializeBinaryFromReader),
+                    i = new ot();
+                    t.readMessage(i, ot.deserializeBinaryFromReader),
                       e.set_single_game(i);
                     break;
                   case 4:
-                    i = new ct();
-                    t.readMessage(i, ct.deserializeBinaryFromReader),
+                    i = new lt();
+                    t.readMessage(i, lt.deserializeBinaryFromReader),
                       e.set_game_list(i);
                     break;
                   case 5:
-                    i = new ut();
-                    t.readMessage(i, ut.deserializeBinaryFromReader),
+                    i = new ct();
+                    t.readMessage(i, ct.deserializeBinaryFromReader),
                       e.set_quick_explore(i);
                     break;
                   case 6:
-                    i = new pt();
-                    t.readMessage(i, pt.deserializeBinaryFromReader),
+                    i = new ut();
+                    t.readMessage(i, ut.deserializeBinaryFromReader),
                       e.set_conveyor_belt(i);
                     break;
                   case 7:
-                    i = new mt();
-                    t.readMessage(i, mt.deserializeBinaryFromReader),
+                    i = new pt();
+                    t.readMessage(i, pt.deserializeBinaryFromReader),
                       e.set_watch_party(i);
                     break;
                   case 8:
-                    i = new ht();
-                    t.readMessage(i, ht.deserializeBinaryFromReader),
+                    i = new mt();
+                    t.readMessage(i, mt.deserializeBinaryFromReader),
                       e.set_developer(i);
                     break;
                   case 9:
-                    i = new _t();
-                    t.readMessage(i, _t.deserializeBinaryFromReader),
+                    i = new ht();
+                    t.readMessage(i, ht.deserializeBinaryFromReader),
                       e.set_event(i);
                     break;
                   default:
@@ -9298,24 +9261,24 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              void 0 !== (i = c.Message.getField(e, 1)) && t.writeEnum(1, i),
+              var i = c.Message.getField(e, 1);
+              void 0 !== i && t.writeEnum(1, i),
                 null != (i = e.takeover(!1)) &&
-                  t.writeMessage(2, i, ot.serializeBinaryToWriter),
+                  t.writeMessage(2, i, at.serializeBinaryToWriter),
                 null != (i = e.single_game(!1)) &&
-                  t.writeMessage(3, i, dt.serializeBinaryToWriter),
+                  t.writeMessage(3, i, ot.serializeBinaryToWriter),
                 null != (i = e.game_list(!1)) &&
-                  t.writeMessage(4, i, ct.serializeBinaryToWriter),
+                  t.writeMessage(4, i, lt.serializeBinaryToWriter),
                 null != (i = e.quick_explore(!1)) &&
-                  t.writeMessage(5, i, ut.serializeBinaryToWriter),
+                  t.writeMessage(5, i, ct.serializeBinaryToWriter),
                 null != (i = e.conveyor_belt(!1)) &&
-                  t.writeMessage(6, i, pt.serializeBinaryToWriter),
+                  t.writeMessage(6, i, ut.serializeBinaryToWriter),
                 null != (i = e.watch_party(!1)) &&
-                  t.writeMessage(7, i, mt.serializeBinaryToWriter),
+                  t.writeMessage(7, i, pt.serializeBinaryToWriter),
                 null != (i = e.developer(!1)) &&
-                  t.writeMessage(8, i, ht.serializeBinaryToWriter),
+                  t.writeMessage(8, i, mt.serializeBinaryToWriter),
                 null != (i = e.event(!1)) &&
-                  t.writeMessage(9, i, _t.serializeBinaryToWriter);
+                  t.writeMessage(9, i, ht.serializeBinaryToWriter);
             }),
             (r.prototype.getClassName = function() {
               return "CSteamTV_HomePageContentRow";
@@ -9323,7 +9286,7 @@
             r
           );
         })(c.Message),
-        ft = (c.Message,
+        gt = (c.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -9333,20 +9296,20 @@
           return (
             Object(p.d)(r, i),
             (r.prototype.rows = function() {
-              return c.Message.getRepeatedWrapperField(this, gt, 1);
+              return c.Message.getRepeatedWrapperField(this, _t, 1);
             }),
             (r.prototype.set_rows = function(e) {
               c.Message.setRepeatedWrapperField(this, 1, e);
             }),
             (r.prototype.add_rows = function(e, t) {
-              return c.Message.addToRepeatedWrapperField(this, 1, e, gt, t);
+              return c.Message.addToRepeatedWrapperField(this, 1, e, _t, t);
             }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
             (r.toObject = function(e, t) {
               var i = {
-                rows: c.Message.toObjectList(t.rows(), gt.toObject, e)
+                rows: c.Message.toObjectList(t.rows(), _t.toObject, e)
               };
               return e && (i.$jspbMessageInstance = t), i;
             }),
@@ -9355,7 +9318,7 @@
               return (
                 t.set_rows(
                   (Array.isArray(e.rows) ? e.rows : []).map(function(e) {
-                    return gt.fromObject(e);
+                    return _t.fromObject(e);
                   })
                 ),
                 t
@@ -9370,8 +9333,8 @@
               for (; t.nextField() && !t.isEndGroup(); ) {
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var i = new gt();
-                    t.readMessage(i, gt.deserializeBinaryFromReader),
+                    var i = new _t();
+                    t.readMessage(i, _t.deserializeBinaryFromReader),
                       e.add_rows(i);
                     break;
                   default:
@@ -9385,9 +9348,9 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              0 < (i = e.rows()).length &&
-                t.writeRepeatedMessage(1, i, gt.serializeBinaryToWriter);
+              var i = e.rows();
+              0 < i.length &&
+                t.writeRepeatedMessage(1, i, _t.serializeBinaryToWriter);
             }),
             (r.prototype.getClassName = function() {
               return "CSteamTV_GetHomePageContents_Response";
@@ -9395,7 +9358,7 @@
             r
           );
         })(c.Message)),
-        bt = (c.Message,
+        ft = (c.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -9536,9 +9499,8 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              void 0 !== (i = c.Message.getField(e, 1)) &&
-                t.writeUint64String(1, i),
+              var i = c.Message.getField(e, 1);
+              void 0 !== i && t.writeUint64String(1, i),
                 void 0 !== (i = c.Message.getField(e, 2)) &&
                   t.writeUint64String(2, i),
                 void 0 !== (i = c.Message.getField(e, 3)) &&
@@ -9562,7 +9524,7 @@
             r
           );
         })(c.Message)),
-        yt = (function(i) {
+        bt = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -9571,13 +9533,13 @@
           return (
             Object(p.d)(r, i),
             (r.prototype.clips = function() {
-              return c.Message.getRepeatedWrapperField(this, bt, 1);
+              return c.Message.getRepeatedWrapperField(this, ft, 1);
             }),
             (r.prototype.set_clips = function(e) {
               c.Message.setRepeatedWrapperField(this, 1, e);
             }),
             (r.prototype.add_clips = function(e, t) {
-              return c.Message.addToRepeatedWrapperField(this, 1, e, bt, t);
+              return c.Message.addToRepeatedWrapperField(this, 1, e, ft, t);
             }),
             (r.prototype.thumbnail_host = function() {
               return c.Message.getField(this, 2);
@@ -9590,7 +9552,7 @@
             }),
             (r.toObject = function(e, t) {
               var i = {
-                clips: c.Message.toObjectList(t.clips(), bt.toObject, e),
+                clips: c.Message.toObjectList(t.clips(), ft.toObject, e),
                 thumbnail_host: c.Message.getField(t, 2)
               };
               return e && (i.$jspbMessageInstance = t), i;
@@ -9600,7 +9562,7 @@
               return (
                 t.set_clips(
                   (Array.isArray(e.clips) ? e.clips : []).map(function(e) {
-                    return bt.fromObject(e);
+                    return ft.fromObject(e);
                   })
                 ),
                 t.set_thumbnail_host(e.thumbnail_host),
@@ -9616,8 +9578,8 @@
               for (; t.nextField() && !t.isEndGroup(); ) {
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var i = new bt();
-                    t.readMessage(i, bt.deserializeBinaryFromReader),
+                    var i = new ft();
+                    t.readMessage(i, ft.deserializeBinaryFromReader),
                       e.add_clips(i);
                     break;
                   case 2:
@@ -9634,9 +9596,9 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var i;
-              0 < (i = e.clips()).length &&
-                t.writeRepeatedMessage(1, i, bt.serializeBinaryToWriter),
+              var i = e.clips();
+              0 < i.length &&
+                t.writeRepeatedMessage(1, i, ft.serializeBinaryToWriter),
                 void 0 !== (i = c.Message.getField(e, 2)) &&
                   t.writeString(2, i);
             }),
@@ -9646,161 +9608,161 @@
             r
           );
         })(c.Message);
-      ((ye = be = be || {}).CreateBroadcastChannel = function(e, t) {
-        return e.SendMsg("SteamTV.CreateBroadcastChannel#1", t, ve, {});
+      ((be = fe = fe || {}).CreateBroadcastChannel = function(e, t) {
+        return e.SendMsg("SteamTV.CreateBroadcastChannel#1", t, ye, {});
       }),
-        (ye.GetBroadcastChannelID = function(e, t) {
-          return e.SendMsg("SteamTV.GetBroadcastChannelID#1", t, Me, {
+        (be.GetBroadcastChannelID = function(e, t) {
+          return e.SendMsg("SteamTV.GetBroadcastChannelID#1", t, ve, {
             bConstMethod: !0
           });
         }),
-        (ye.SetBroadcastChannelProfile = function(e, t) {
-          return e.SendMsg("SteamTV.SetBroadcastChannelProfile#1", t, Se, {});
+        (be.SetBroadcastChannelProfile = function(e, t) {
+          return e.SendMsg("SteamTV.SetBroadcastChannelProfile#1", t, Me, {});
         }),
-        (ye.GetBroadcastChannelProfile = function(e, t) {
-          return e.SendMsg("SteamTV.GetBroadcastChannelProfile#1", t, Fe, {
+        (be.GetBroadcastChannelProfile = function(e, t) {
+          return e.SendMsg("SteamTV.GetBroadcastChannelProfile#1", t, Se, {
             bConstMethod: !0
           });
         }),
-        (ye.SetBroadcastChannelImage = function(e, t) {
-          return e.SendMsg("SteamTV.SetBroadcastChannelImage#1", t, Be, {});
+        (be.SetBroadcastChannelImage = function(e, t) {
+          return e.SendMsg("SteamTV.SetBroadcastChannelImage#1", t, Fe, {});
         }),
-        (ye.GetBroadcastChannelImages = function(e, t) {
-          return e.SendMsg("SteamTV.GetBroadcastChannelImages#1", t, we, {
+        (be.GetBroadcastChannelImages = function(e, t) {
+          return e.SendMsg("SteamTV.GetBroadcastChannelImages#1", t, Be, {
             bConstMethod: !0
           });
         }),
-        (ye.SetBroadcastChannelLinkRegions = function(e, t) {
+        (be.SetBroadcastChannelLinkRegions = function(e, t) {
           return e.SendMsg(
             "SteamTV.SetBroadcastChannelLinkRegions#1",
             t,
-            je,
+            Te,
             {}
           );
         }),
-        (ye.GetBroadcastChannelLinks = function(e, t) {
-          return e.SendMsg("SteamTV.GetBroadcastChannelLinks#1", t, Ce, {
+        (be.GetBroadcastChannelLinks = function(e, t) {
+          return e.SendMsg("SteamTV.GetBroadcastChannelLinks#1", t, Oe, {
             bConstMethod: !0
           });
         }),
-        (ye.GetBroadcastChannelBroadcasters = function(e, t) {
-          return e.SendMsg("SteamTV.GetBroadcastChannelBroadcasters#1", t, We, {
+        (be.GetBroadcastChannelBroadcasters = function(e, t) {
+          return e.SendMsg("SteamTV.GetBroadcastChannelBroadcasters#1", t, Le, {
             bConstMethod: !0
           });
         }),
-        (ye.GetFollowedChannels = function(e, t) {
-          return e.SendMsg("SteamTV.GetFollowedChannels#1", t, Ee, {
+        (be.GetFollowedChannels = function(e, t) {
+          return e.SendMsg("SteamTV.GetFollowedChannels#1", t, De, {
             bConstMethod: !0
           });
         }),
-        (ye.GetSubscribedChannels = function(e, t) {
-          return e.SendMsg("SteamTV.GetSubscribedChannels#1", t, Ie, {
+        (be.GetSubscribedChannels = function(e, t) {
+          return e.SendMsg("SteamTV.GetSubscribedChannels#1", t, Ee, {
             bConstMethod: !0
           });
         }),
-        (ye.GetBroadcastChannelStatus = function(e, t) {
-          return e.SendMsg("SteamTV.GetBroadcastChannelStatus#1", t, ke, {
+        (be.GetBroadcastChannelStatus = function(e, t) {
+          return e.SendMsg("SteamTV.GetBroadcastChannelStatus#1", t, je, {
             bConstMethod: !0
           });
         }),
-        (ye.FollowBroadcastChannel = function(e, t) {
-          return e.SendMsg("SteamTV.FollowBroadcastChannel#1", t, Pe, {});
+        (be.FollowBroadcastChannel = function(e, t) {
+          return e.SendMsg("SteamTV.FollowBroadcastChannel#1", t, Ie, {});
         }),
-        (ye.SubscribeBroadcastChannel = function(e, t) {
-          return e.SendMsg("SteamTV.SubscribeBroadcastChannel#1", t, ze, {});
+        (be.SubscribeBroadcastChannel = function(e, t) {
+          return e.SendMsg("SteamTV.SubscribeBroadcastChannel#1", t, Pe, {});
         }),
-        (ye.GetBroadcastChannelClips = function(e, t) {
-          return e.SendMsg("SteamTV.GetBroadcastChannelClips#1", t, yt, {
+        (be.GetBroadcastChannelClips = function(e, t) {
+          return e.SendMsg("SteamTV.GetBroadcastChannelClips#1", t, bt, {
             bConstMethod: !0
           });
         }),
-        (ye.ReportBroadcastChannel = function(e, t) {
-          return e.SendMsg("SteamTV.ReportBroadcastChannel#1", t, Ge, {});
+        (be.ReportBroadcastChannel = function(e, t) {
+          return e.SendMsg("SteamTV.ReportBroadcastChannel#1", t, ze, {});
         }),
-        (ye.GetBroadcastChannelInteraction = function(e, t) {
-          return e.SendMsg("SteamTV.GetBroadcastChannelInteraction#1", t, Ve, {
+        (be.GetBroadcastChannelInteraction = function(e, t) {
+          return e.SendMsg("SteamTV.GetBroadcastChannelInteraction#1", t, Ge, {
             bConstMethod: !0
           });
         }),
-        (ye.GetGames = function(e, t) {
-          return e.SendMsg("SteamTV.GetGames#1", t, Ae, { bConstMethod: !0 });
+        (be.GetGames = function(e, t) {
+          return e.SendMsg("SteamTV.GetGames#1", t, Ne, { bConstMethod: !0 });
         }),
-        (ye.GetChannels = function(e, t) {
-          return e.SendMsg("SteamTV.GetChannels#1", t, Le, {
+        (be.GetChannels = function(e, t) {
+          return e.SendMsg("SteamTV.GetChannels#1", t, Ae, {
             bConstMethod: !0
           });
         }),
-        (ye.AddChatBan = function(e, t) {
-          return e.SendMsg("SteamTV.AddChatBan#1", t, qe, {});
+        (be.AddChatBan = function(e, t) {
+          return e.SendMsg("SteamTV.AddChatBan#1", t, He, {});
         }),
-        (ye.GetChatBans = function(e, t) {
-          return e.SendMsg("SteamTV.GetChatBans#1", t, $e, {
+        (be.GetChatBans = function(e, t) {
+          return e.SendMsg("SteamTV.GetChatBans#1", t, qe, {
             bConstMethod: !0
           });
         }),
-        (ye.AddChatModerator = function(e, t) {
-          return e.SendMsg("SteamTV.AddChatModerator#1", t, Xe, {});
+        (be.AddChatModerator = function(e, t) {
+          return e.SendMsg("SteamTV.AddChatModerator#1", t, Je, {});
         }),
-        (ye.GetChatModerators = function(e, t) {
-          return e.SendMsg("SteamTV.GetChatModerators#1", t, Qe, {
+        (be.GetChatModerators = function(e, t) {
+          return e.SendMsg("SteamTV.GetChatModerators#1", t, Ke, {
             bConstMethod: !0
           });
         }),
-        (ye.AddWordBan = function(e, t) {
-          return e.SendMsg("SteamTV.AddWordBan#1", t, Ze, {});
+        (be.AddWordBan = function(e, t) {
+          return e.SendMsg("SteamTV.AddWordBan#1", t, Qe, {});
         }),
-        (ye.GetWordBans = function(e, t) {
-          return e.SendMsg("SteamTV.GetWordBans#1", t, et, {
+        (be.GetWordBans = function(e, t) {
+          return e.SendMsg("SteamTV.GetWordBans#1", t, Ze, {
             bConstMethod: !0
           });
         }),
-        (ye.JoinChat = function(e, t) {
-          return e.SendMsg("SteamTV.JoinChat#1", t, it, {});
+        (be.JoinChat = function(e, t) {
+          return e.SendMsg("SteamTV.JoinChat#1", t, tt, {});
         }),
-        (ye.Search = function(e, t) {
-          return e.SendMsg("SteamTV.Search#1", t, rt, { bConstMethod: !0 });
+        (be.Search = function(e, t) {
+          return e.SendMsg("SteamTV.Search#1", t, it, { bConstMethod: !0 });
         }),
-        (ye.GetSteamTVUserSettings = function(e, t) {
-          return e.SendMsg("SteamTV.GetSteamTVUserSettings#1", t, st, {
+        (be.GetSteamTVUserSettings = function(e, t) {
+          return e.SendMsg("SteamTV.GetSteamTVUserSettings#1", t, rt, {
             bConstMethod: !0
           });
         }),
-        (ye.SetSteamTVUserSettings = function(e, t) {
-          return e.SendMsg("SteamTV.SetSteamTVUserSettings#1", t, nt, {});
+        (be.SetSteamTVUserSettings = function(e, t) {
+          return e.SendMsg("SteamTV.SetSteamTVUserSettings#1", t, st, {});
         }),
-        (ye.GetMyBroadcastChannels = function(e, t) {
-          return e.SendMsg("SteamTV.GetMyBroadcastChannels#1", t, at, {
+        (be.GetMyBroadcastChannels = function(e, t) {
+          return e.SendMsg("SteamTV.GetMyBroadcastChannels#1", t, nt, {
             bConstMethod: !0
           });
         }),
-        (ye.GetHomePageContents = function(e, t) {
-          return e.SendMsg("SteamTV.GetHomePageContents#1", t, ft, {
+        (be.GetHomePageContents = function(e, t) {
+          return e.SendMsg("SteamTV.GetHomePageContents#1", t, gt, {
             bConstMethod: !0
           });
         });
+      function yt() {
+        return n.a.createElement(
+          "div",
+          { className: At.a.FriendsListInsetShadowCtn },
+          n.a.createElement("div", { className: At.a.FriendListInsetShadowTop })
+        );
+      }
       function vt() {
         return n.a.createElement(
           "div",
-          { className: Lt.a.FriendsListInsetShadowCtn },
-          n.a.createElement("div", { className: Lt.a.FriendListInsetShadowTop })
-        );
-      }
-      function Mt() {
-        return n.a.createElement(
-          "div",
-          { className: Lt.a.FriendsListInsetShadowCtn },
+          { className: At.a.FriendsListInsetShadowCtn },
           n.a.createElement("div", {
-            className: Lt.a.FriendListInsetShadowBottom
+            className: At.a.FriendListInsetShadowBottom
           })
         );
       }
-      function St(t) {
+      function Mt(t) {
         return l.createElement(
-          oi.a,
+          ai.a,
           Object(p.a)({}, t, {
             onPositionChange: function(e) {
               return void 0 === e.previousPosition &&
-                e.currentPosition === oi.a.above &&
+                e.currentPosition === ai.a.above &&
                 t.onLeave
                 ? t.onLeave(e)
                 : t.onPositionChange && t.onPositionChange(e);
@@ -9808,10 +9770,10 @@
           })
         );
       }
-      var Ft = i("H7XF"),
-        Bt = i("mC9v"),
-        wt = i("kLLr"),
-        Ot = (function() {
+      var St = i("H7XF"),
+        Ft = i("mC9v"),
+        Bt = i("kLLr"),
+        wt = (function() {
           function e(e, t, i) {
             void 0 === i && (i = !1),
               (this.m_webApiAccessToken = ""),
@@ -9830,9 +9792,9 @@
             }),
             Object.defineProperty(e.prototype, "steamid", {
               get: function() {
-                return new wt.a();
+                return new Bt.a();
               },
-              enumerable: !0,
+              enumerable: !1,
               configurable: !0
             }),
             (e.prototype.RTime32ToDate = function(e) {
@@ -9860,7 +9822,7 @@
                       if (200 != (i = e.sent()).status || !i.data)
                         throw new Error("Request Error");
                       return (
-                        (t = fe.b.Init(o, 147)),
+                        (t = ge.b.Init(o, 147)),
                         i.headers &&
                           (i.headers["x-eresult"] &&
                             t
@@ -9872,7 +9834,7 @@
                               .set_error_message(i.headers["x-error_message"])),
                         this.m_bJsonMode
                           ? t.SetBodyJSON(i.data.response)
-                          : ((r = new Bt.b(i.data)),
+                          : ((r = new Ft.b(i.data)),
                             (s = new c.BinaryReader(
                               r.GetPacket(),
                               r.TellGet(),
@@ -9899,7 +9861,7 @@
             (e.prototype.Send = function(e, t, i) {
               var r = this.CreateWebAPIURL(e),
                 s = t.SerializeBody(),
-                n = Ft.fromByteArray(s),
+                n = St.fromByteArray(s),
                 a = {
                   responseType: this.m_bJsonMode ? "json" : "arraybuffer",
                   params: {}
@@ -9940,7 +9902,7 @@
                 : null;
             }),
             (e.prototype.CreateFailedMsgProtobuf = function(e, t, i) {
-              var r = fe.b.Init(e);
+              var r = ge.b.Init(e);
               return (
                 r.Hdr().set_eresult(2),
                 r.Hdr().set_transport_error(t),
@@ -9954,20 +9916,20 @@
             e
           );
         })(),
-        Ct = (function() {
+        Ot = (function() {
           function e() {
             this.m_mapChats = new Map();
           }
           return (
             (e.prototype.GetOrCreateChat = function(e, t) {
               var i = this.m_mapChats.get(e) || this.m_mapChats.get(t);
-              return i || ((i = new Rt()), this.m_mapChats.set(e || t, i)), i;
+              return i || ((i = new Ct()), this.m_mapChats.set(e || t, i)), i;
             }),
             Object(p.c)([a.observable], e.prototype, "m_mapChats", void 0),
             e
           );
         })(),
-        Rt = (function() {
+        Ct = (function() {
           function e() {
             (this.m_ulBroadcastChannelID = ""),
               (this.m_ulChatID = ""),
@@ -9992,9 +9954,9 @@
               (this.m_nRateLimitSeconds = 0),
               (this.m_bRateLimited = !1),
               (this.m_rgChatMessages = []),
-              (this.m_webAPIInterface = new Ot(
-                _e.b.WEBAPI_BASE_URL,
-                _e.f.webapi_token
+              (this.m_webAPIInterface = new wt(
+                he.b.WEBAPI_BASE_URL,
+                he.f.webapi_token
               ));
           }
           return (
@@ -10005,21 +9967,21 @@
               return this.m_strUserSteamID;
             }),
             (e.prototype.StartForSteamID = function(e, t) {
-              (this.m_webAPIInterface = new Ot(
-                _e.b.WEBAPI_BASE_URL,
-                _e.f.webapi_token
+              (this.m_webAPIInterface = new wt(
+                he.b.WEBAPI_BASE_URL,
+                he.f.webapi_token
               )),
                 (this.m_ulBroadcastSteamID = e),
                 (this.m_ulBroadcastID = t),
                 this.RequestChatInfo();
             }),
             (e.prototype.StartForChannel = function(e) {
-              (this.m_webAPIInterface = new Ot(
-                _e.b.WEBAPI_BASE_URL,
-                _e.f.webapi_token
+              (this.m_webAPIInterface = new wt(
+                he.b.WEBAPI_BASE_URL,
+                he.f.webapi_token
               )),
                 (this.m_ulBroadcastChannelID = e),
-                (this.m_strUserSteamID = _e.f.steamid),
+                (this.m_strUserSteamID = he.f.steamid),
                 this.JoinChannelChat();
             }),
             (e.prototype.Stop = function() {
@@ -10041,37 +10003,35 @@
                       if (0 == (t = l.trim()).length) return [2];
                       e.label = 1;
                     case 1:
-                      return (
-                        e.trys.push([1, 6, , 7]),
-                        (s = r = i = void 0),
-                        this.m_webApiToken
-                          ? ((n = new FormData()).append(
-                              "chat_id",
-                              this.m_ulChatID
-                            ),
-                            n.append("message", t),
-                            n.append(
-                              "instance_id",
-                              this.m_unInstanceID.toString()
-                            ),
-                            [
-                              4,
-                              m.a.post(
-                                _e.b.WEBAPI_BASE_URL +
-                                  "IBroadcastService/PostChatMessage/v0001?access_token=" +
-                                  this.m_webApiToken,
-                                n
-                              )
-                            ])
-                          : [3, 3]
-                      );
+                      return (e.trys.push([1, 6, , 7]),
+                      (s = r = i = void 0),
+                      this.m_webApiToken)
+                        ? ((n = new FormData()).append(
+                            "chat_id",
+                            this.m_ulChatID
+                          ),
+                          n.append("message", t),
+                          n.append(
+                            "instance_id",
+                            this.m_unInstanceID.toString()
+                          ),
+                          [
+                            4,
+                            m.a.post(
+                              he.b.WEBAPI_BASE_URL +
+                                "IBroadcastService/PostChatMessage/v0001?access_token=" +
+                                this.m_webApiToken,
+                              n
+                            )
+                          ])
+                        : [3, 3];
                     case 2:
                       return (
                         (r = e.sent()), (s = r.data && r.data.response), [3, 5]
                       );
                     case 3:
                       return (
-                        (a = fe.b.Init(I)).SetBodyFields({
+                        (a = ge.b.Init(E)).SetBodyFields({
                           chat_id: this.m_ulChatID,
                           message: t,
                           instance_id: this.m_unInstanceID.toString()
@@ -10100,18 +10060,18 @@
                         ? ((o = ""),
                           (o =
                             17 == s.result
-                              ? Object(he.d)("#BroadcastChat_YouMuted")
+                              ? Object(me.d)("#BroadcastChat_YouMuted")
                               : 84 == s.result
-                              ? Object(he.d)(
+                              ? Object(me.d)(
                                   "#BroadcastChat_Cooldown",
                                   s.cooldown_time_seconds
                                 )
-                              : Object(he.d)(
+                              : Object(me.d)(
                                   "#BroadcastChat_FailedToSendMsg",
                                   t
                                 )),
                           this.m_rgChatMessages.push({
-                            type: ge.a.Error,
+                            type: _e.a.Error,
                             msg: o,
                             client_ts: Number(new Date()),
                             instance_id: this.m_unInstanceID,
@@ -10133,8 +10093,8 @@
                       return (
                         e.sent(),
                         this.m_rgChatMessages.push({
-                          type: ge.a.Error,
-                          msg: Object(he.d)(
+                          type: _e.a.Error,
+                          msg: Object(me.d)(
                             "#BroadcastChat_FailedToSendMsg",
                             t
                           ),
@@ -10167,12 +10127,12 @@
                         [
                           4,
                           m.a.get(
-                            _e.b.CHAT_BASE_URL + "broadcast/getchatinfo",
+                            he.b.CHAT_BASE_URL + "broadcast/getchatinfo",
                             {
                               params: {
                                 steamid: this.m_ulBroadcastSteamID,
                                 broadcastid: this.m_ulBroadcastID,
-                                sessionid: _e.b.SESSIONID
+                                sessionid: he.b.SESSIONID
                               },
                               withCredentials: !0
                             }
@@ -10192,15 +10152,15 @@
                         i.token && (this.m_webApiToken = i.token),
                         i.emoticons && this.SetOwnedEmoticons(i.emoticons),
                         this.m_rgChatMessages.push({
-                          type: ge.a.Notification,
-                          msg: Object(he.d)("#BroadcastChat_DefaultMessage"),
+                          type: _e.a.Notification,
+                          msg: Object(me.d)("#BroadcastChat_DefaultMessage"),
                           client_ts: Number(new Date()),
                           instance_id: this.m_unInstanceID,
                           in_game: !1,
                           persona_name: "",
                           steamid: ""
                         }),
-                        (this.m_chatScheduledFunc = new me.b()),
+                        (this.m_chatScheduledFunc = new pe.b()),
                         this.m_chatScheduledFunc.Schedule(0, this.RequestLoop),
                         [3, 4]
                       );
@@ -10225,12 +10185,12 @@
                     case 0:
                       return (
                         e.trys.push([0, 2, , 3]),
-                        (t = fe.b.Init(tt)).SetBodyFields({
+                        (t = ge.b.Init(et)).SetBodyFields({
                           broadcast_channel_id: this.m_ulBroadcastChannelID
                         }),
                         [
                           4,
-                          be.JoinChat(
+                          fe.JoinChat(
                             this.m_webAPIInterface.GetServiceTransport(),
                             t
                           )
@@ -10247,15 +10207,15 @@
                           this.FetchChatModerators(),
                           (this.m_rgChatMessages = []),
                           this.m_rgChatMessages.push({
-                            type: ge.a.Notification,
-                            msg: Object(he.d)("#BroadcastChat_DefaultMessage"),
+                            type: _e.a.Notification,
+                            msg: Object(me.d)("#BroadcastChat_DefaultMessage"),
                             client_ts: Number(new Date()),
                             instance_id: this.m_unInstanceID,
                             in_game: !1,
                             persona_name: "",
                             steamid: ""
                           }),
-                          (this.m_chatScheduledFunc = new me.b()),
+                          (this.m_chatScheduledFunc = new pe.b()),
                           this.m_chatScheduledFunc.Schedule(
                             0,
                             this.RequestLoop
@@ -10282,12 +10242,12 @@
                   switch (e.label) {
                     case 0:
                       return (
-                        (t = fe.b.Init(Ye)).SetBodyFields({
+                        (t = ge.b.Init(Xe)).SetBodyFields({
                           broadcast_channel_id: this.m_ulBroadcastChannelID
                         }),
                         [
                           4,
-                          be.GetChatModerators(
+                          fe.GetChatModerators(
                             this.m_webAPIInterface.GetServiceTransport(),
                             t
                           )
@@ -10345,7 +10305,7 @@
                           .map(function(e) {
                             return Object(
                               p.a
-                            )(Object(p.a)({}, e), { type: ge.a.Chat, client_ts: Number(new Date()) });
+                            )(Object(p.a)({}, e), { type: _e.a.Chat, client_ts: Number(new Date()) });
                           })
                           .filter(function(e) {
                             return !u.IsUserMutedLocally(e.steamid);
@@ -10362,16 +10322,16 @@
                         for (d = 0; d < s.muted.length; d++)
                           (o =
                             s.muted[d].muted == this.m_strUserSteamID
-                              ? Object(he.d)(
+                              ? Object(me.d)(
                                   "#BroadcastChat_YouMuted",
                                   s.muted[d].persona_name
                                 )
-                              : Object(he.d)(
+                              : Object(me.d)(
                                   "#BroadcastChat_UserMuted",
                                   s.muted[d].persona_name
                                 )),
                             this.m_rgChatMessages.push({
-                              type: ge.a.Notification,
+                              type: _e.a.Notification,
                               msg: o,
                               client_ts: Number(new Date()),
                               instance_id: this.m_unInstanceID,
@@ -10440,8 +10400,8 @@
                         if (null == this.m_tsFirstRequest)
                           return (
                             this.m_rgChatMessages.push({
-                              type: ge.a.Error,
-                              msg: Object(he.d)(
+                              type: _e.a.Error,
+                              msg: Object(me.d)(
                                 "#BroadcastChat_UnableToJoinChat"
                               ),
                               client_ts: Number(new Date()),
@@ -10493,14 +10453,14 @@
                     case 1:
                       return (
                         e.trys.push([1, 4, , 5]),
-                        (t = fe.b.Init(Je)).SetBodyFields({
+                        (t = ge.b.Init($e)).SetBodyFields({
                           broadcast_channel_id: this.m_ulBroadcastChannelID,
                           moderator_steamid: r,
                           undo: !s
                         }),
                         [
                           4,
-                          be.AddChatModerator(
+                          fe.AddChatModerator(
                             this.m_webAPIInterface.GetServiceTransport(),
                             t
                           )
@@ -10510,7 +10470,7 @@
                       return (
                         e.sent(),
                         this.m_rgChatMessages.push({
-                          type: ge.a.Notification,
+                          type: _e.a.Notification,
                           msg:
                             "Moderator '" +
                             n +
@@ -10525,7 +10485,7 @@
                       return (
                         e.sent(),
                         this.m_rgChatMessages.push({
-                          type: ge.a.Error,
+                          type: _e.a.Error,
                           msg:
                             "Failed to " +
                             (s ? "assign" : "remove") +
@@ -10544,7 +10504,7 @@
                       ),
                         i.append("moderatorsteamid", r),
                         i.append("bAdd", s ? "1" : "0"),
-                        i.append("sessionid", _e.b.SESSIONID),
+                        i.append("sessionid", he.b.SESSIONID),
                         (e.label = 7);
                     case 7:
                       return (
@@ -10552,7 +10512,7 @@
                         [
                           4,
                           m.a.post(
-                            _e.b.CHAT_BASE_URL +
+                            he.b.CHAT_BASE_URL +
                               "broadcast/ajaxupdatechannelmod",
                             i
                           )
@@ -10563,7 +10523,7 @@
                         e.sent(),
                         this.m_mapChannelModeratorUsers.set(r, s),
                         this.m_rgChatMessages.push({
-                          type: ge.a.Notification,
+                          type: _e.a.Notification,
                           msg:
                             "Moderator '" +
                             n +
@@ -10576,7 +10536,7 @@
                       return (
                         e.sent(),
                         this.m_rgChatMessages.push({
-                          type: ge.a.Error,
+                          type: _e.a.Error,
                           msg:
                             "Failed to " +
                             (s ? "assign" : "remove") +
@@ -10598,26 +10558,24 @@
                 return Object(p.e)(this, function(e) {
                   switch (e.label) {
                     case 0:
-                      return (
-                        (t = this.m_ulBroadcastSteamID),
-                        (i = this.m_strUserSteamID),
-                        this.m_ulBroadcastChannelID
-                          ? ((r = fe.b.Init(He)).SetBodyFields({
-                              broadcast_channel_id: this.m_ulBroadcastChannelID,
-                              chatter_steamid: n,
-                              duration: 3600 * o,
-                              permanent: d,
-                              undo: c
-                            }),
-                            [
-                              4,
-                              be.AddChatBan(
-                                this.m_webAPIInterface.GetServiceTransport(),
-                                r
-                              )
-                            ])
-                          : [3, 2]
-                      );
+                      return ((t = this.m_ulBroadcastSteamID),
+                      (i = this.m_strUserSteamID),
+                      this.m_ulBroadcastChannelID)
+                        ? ((r = ge.b.Init(Ue)).SetBodyFields({
+                            broadcast_channel_id: this.m_ulBroadcastChannelID,
+                            chatter_steamid: n,
+                            duration: 3600 * o,
+                            permanent: d,
+                            undo: c
+                          }),
+                          [
+                            4,
+                            fe.AddChatBan(
+                              this.m_webAPIInterface.GetServiceTransport(),
+                              r
+                            )
+                          ])
+                        : [3, 2];
                     case 1:
                       return e.sent(), [3, 6];
                     case 2:
@@ -10627,7 +10585,7 @@
                         s.append("bantype", a),
                         s.append("duration", o.toString()),
                         s.append("perm", d ? "1" : "0"),
-                        s.append("sessionid", _e.b.SESSIONID),
+                        s.append("sessionid", he.b.SESSIONID),
                         (e.label = 3);
                     case 3:
                       return (
@@ -10635,7 +10593,7 @@
                         [
                           4,
                           m.a.post(
-                            _e.b.CHAT_BASE_URL + "broadcast/ajaxupdateusermute",
+                            he.b.CHAT_BASE_URL + "broadcast/ajaxupdateusermute",
                             s
                           )
                         ]
@@ -10676,31 +10634,28 @@
                         return [3, 7];
                       (this.m_mapMutedUsers[s] = n), (e.label = 1);
                     case 1:
-                      return (
-                        e.trys.push([1, 6, , 7]),
-                        this.m_webApiToken
-                          ? ((i = new FormData()).append(
-                              "chat_id",
-                              this.m_ulChatID
-                            ),
-                            i.append("user_steamid", s),
-                            i.append("muted", "1"),
-                            [
-                              4,
-                              m.a.post(
-                                _e.b.WEBAPI_BASE_URL +
-                                  "IBroadcastService/MuteBroadcastChatUser/v0001/?access_token=" +
-                                  this.m_webApiToken,
-                                i
-                              )
-                            ])
-                          : [3, 3]
-                      );
+                      return (e.trys.push([1, 6, , 7]), this.m_webApiToken)
+                        ? ((i = new FormData()).append(
+                            "chat_id",
+                            this.m_ulChatID
+                          ),
+                          i.append("user_steamid", s),
+                          i.append("muted", "1"),
+                          [
+                            4,
+                            m.a.post(
+                              he.b.WEBAPI_BASE_URL +
+                                "IBroadcastService/MuteBroadcastChatUser/v0001/?access_token=" +
+                                this.m_webApiToken,
+                              i
+                            )
+                          ])
+                        : [3, 3];
                     case 2:
                       return e.sent(), [3, 5];
                     case 3:
                       return (
-                        (r = fe.b.Init(V)).SetBodyFields({
+                        (r = ge.b.Init(G)).SetBodyFields({
                           chat_id: this.m_ulChatID,
                           user_steamid: s,
                           muted: !0
@@ -10722,8 +10677,8 @@
                         e.sent(),
                         t &&
                           (this.m_rgChatMessages.push({
-                            type: ge.a.Error,
-                            msg: Object(he.d)(
+                            type: _e.a.Error,
+                            msg: Object(me.d)(
                               "#BroadcastChat_UserMuteFailed",
                               n
                             ),
@@ -10740,8 +10695,8 @@
                       return (
                         t ||
                           this.m_rgChatMessages.push({
-                            type: ge.a.Notification,
-                            msg: Object(he.d)(
+                            type: _e.a.Notification,
+                            msg: Object(me.d)(
                               "#BroadcastChat_UserMutedLocal",
                               n
                             ),
@@ -10772,31 +10727,28 @@
                         return [3, 8];
                       e.label = 1;
                     case 1:
-                      return (
-                        e.trys.push([1, 6, , 7]),
-                        this.m_webApiToken
-                          ? ((t = new FormData()).append(
-                              "chat_id",
-                              this.m_ulChatID
-                            ),
-                            t.append("user_steamid", r),
-                            t.append("muted", "0"),
-                            [
-                              4,
-                              m.a.post(
-                                _e.b.WEBAPI_BASE_URL +
-                                  "IBroadcastService/MuteBroadcastChatUser/v0001/?access_token=" +
-                                  this.m_webApiToken,
-                                t
-                              )
-                            ])
-                          : [3, 3]
-                      );
+                      return (e.trys.push([1, 6, , 7]), this.m_webApiToken)
+                        ? ((t = new FormData()).append(
+                            "chat_id",
+                            this.m_ulChatID
+                          ),
+                          t.append("user_steamid", r),
+                          t.append("muted", "0"),
+                          [
+                            4,
+                            m.a.post(
+                              he.b.WEBAPI_BASE_URL +
+                                "IBroadcastService/MuteBroadcastChatUser/v0001/?access_token=" +
+                                this.m_webApiToken,
+                              t
+                            )
+                          ])
+                        : [3, 3];
                     case 2:
                       return e.sent(), [3, 5];
                     case 3:
                       return (
-                        (i = fe.b.Init(V)).SetBodyFields({
+                        (i = ge.b.Init(G)).SetBodyFields({
                           chat_id: this.m_ulChatID,
                           user_steamid: r,
                           muted: !1
@@ -10814,8 +10766,8 @@
                     case 5:
                       return (
                         this.m_rgChatMessages.push({
-                          type: ge.a.Notification,
-                          msg: Object(he.d)(
+                          type: _e.a.Notification,
+                          msg: Object(me.d)(
                             "#BroadcastChat_UserUnmutedLocal",
                             s
                           ),
@@ -10831,8 +10783,8 @@
                       return (
                         e.sent(),
                         this.m_rgChatMessages.push({
-                          type: ge.a.Error,
-                          msg: Object(he.d)(
+                          type: _e.a.Error,
+                          msg: Object(me.d)(
                             "#BroadcastChat_UserUnmuteFailed",
                             s
                           ),
@@ -10848,8 +10800,8 @@
                       return [3, 9];
                     case 8:
                       this.m_rgChatMessages.push({
-                        type: ge.a.Notification,
-                        msg: Object(he.d)("#BroadcastChat_UserUnmutedLocal", s),
+                        type: _e.a.Notification,
+                        msg: Object(me.d)("#BroadcastChat_UserUnmutedLocal", s),
                         client_ts: Number(new Date()),
                         instance_id: this.m_unInstanceID,
                         in_game: !1,
@@ -10877,30 +10829,27 @@
                       if (r == this.m_strUserSteamID) return [2];
                       e.label = 1;
                     case 1:
-                      return (
-                        e.trys.push([1, 6, , 7]),
-                        this.m_webApiToken
-                          ? ((t = new FormData()).append(
-                              "chat_id",
-                              this.m_ulChatID
-                            ),
-                            t.append("user_steamid", r),
-                            [
-                              4,
-                              m.a.post(
-                                _e.b.WEBAPI_BASE_URL +
-                                  "IBroadcastService/RemoveUserChatText/v0001/?access_token=" +
-                                  this.m_webApiToken,
-                                t
-                              )
-                            ])
-                          : [3, 3]
-                      );
+                      return (e.trys.push([1, 6, , 7]), this.m_webApiToken)
+                        ? ((t = new FormData()).append(
+                            "chat_id",
+                            this.m_ulChatID
+                          ),
+                          t.append("user_steamid", r),
+                          [
+                            4,
+                            m.a.post(
+                              he.b.WEBAPI_BASE_URL +
+                                "IBroadcastService/RemoveUserChatText/v0001/?access_token=" +
+                                this.m_webApiToken,
+                              t
+                            )
+                          ])
+                        : [3, 3];
                     case 2:
                       return e.sent(), [3, 5];
                     case 3:
                       return (
-                        (i = fe.b.Init(A)).SetBodyFields({
+                        (i = ge.b.Init(N)).SetBodyFields({
                           chat_id: this.m_ulChatID,
                           user_steamid: r
                         }),
@@ -10920,8 +10869,8 @@
                       return (
                         e.sent(),
                         this.m_rgChatMessages.push({
-                          type: ge.a.Error,
-                          msg: Object(he.d)(
+                          type: _e.a.Error,
+                          msg: Object(me.d)(
                             "#BroadcastChat_RemoveMessagesFailed",
                             s
                           ),
@@ -10957,7 +10906,7 @@
                           [
                             4,
                             m.a.post(
-                              _e.b.WEBAPI_BASE_URL +
+                              he.b.WEBAPI_BASE_URL +
                                 "IBroadcastService/UpdateChatMessageFlair/v0001/?access_token=" +
                                 this.m_webApiToken,
                               t
@@ -10968,7 +10917,7 @@
                       return e.sent(), [3, 4];
                     case 2:
                       return (
-                        (i = fe.b.Init(z)).SetBodyFields({
+                        (i = ge.b.Init(P)).SetBodyFields({
                           chat_id: this.m_ulChatID,
                           flair: "^" + this.m_strFlairGroupID + "^:" + r + ":"
                         }),
@@ -11028,26 +10977,26 @@
             e
           );
         })(),
-        Tt = new Ct(),
-        jt = i("TtDX"),
-        kt = i("y+6m"),
-        Dt = i("3sYe"),
-        Et = i.n(Dt),
-        It = i("Z9dU"),
-        Pt = i.n(It),
-        zt = i("0QoN"),
-        Gt = i("6Y59"),
-        Vt = i("Gorr"),
-        Nt = i("a5LV"),
-        At = i("5znp"),
-        Lt = i.n(At),
-        Wt = new RegExp("ː([^ː]*)ː", "g"),
-        xt = (new RegExp("(https?://[^ '\"<>]*)", "gi"),
+        Rt = new Ot(),
+        Tt = i("TtDX"),
+        jt = i("y+6m"),
+        kt = i("3sYe"),
+        Dt = i.n(kt),
+        Et = i("Z9dU"),
+        It = i.n(Et),
+        Pt = i("0QoN"),
+        zt = i("6Y59"),
+        Gt = i("Gorr"),
+        Vt = i("a5LV"),
+        Nt = i("5znp"),
+        At = i.n(Nt),
+        Lt = new RegExp("ː([^ː]*)ː", "g"),
+        Wt = (new RegExp("(https?://[^ '\"<>]*)", "gi"),
         new RegExp(
           "^https?://(?:[^/?#]+?\\.)?(?:valvesoftware|steamcommunity|steampowered)\\.com(?:/?#|$)",
           "i"
         )),
-        Ut = (function(i) {
+        xt = (function(i) {
           function e(e) {
             var t = i.call(this, e) || this;
             return (
@@ -11075,7 +11024,7 @@
             }),
             (e.prototype.StartChat = function() {
               this.m_chat && this.m_chat.Stop(),
-                (this.m_chat = Tt.GetOrCreateChat(
+                (this.m_chat = Rt.GetOrCreateChat(
                   this.props.broadcastChannelID,
                   this.props.steamID
                 )),
@@ -11105,15 +11054,15 @@
                 e && e.preventDefault());
             }),
             (e.prototype.IsTrustedDomain = function(e) {
-              return !!e.match(xt);
+              return !!e.match(Wt);
             }),
             (e.prototype.AddLinksEmoticons = function(e, t) {
               t && this.m_chat.GetUserEmoticons();
-              for (var i = e.split(Wt), r = [], s = 0; s < i.length; s += 1)
+              for (var i = e.split(Lt), r = [], s = 0; s < i.length; s += 1)
                 s % 2 == 1
                   ? r.push(
-                      l.createElement(Vt.a, {
-                        emoticonHoverStore: Nt.b,
+                      l.createElement(Gt.a, {
+                        emoticonHoverStore: Vt.b,
                         key: s,
                         emoticon: i[s],
                         large: !0
@@ -11135,15 +11084,15 @@
             }),
             (e.prototype.OnContextMenu = function(e, t) {
               var i = this;
-              if (t.type !== ge.a.Chat) return null;
+              if (t.type !== _e.a.Chat) return null;
               var r = [];
               return (
-                (_e.f && _e.f.is_support) ||
+                (he.f && he.f.is_support) ||
                 this.m_chat.IsUserBroadcaster(this.m_chat.GetUserSteamID()) ||
                 this.m_chat.IsUserChannelModerator(this.m_chat.GetUserSteamID())
                   ? r.push(
                       l.createElement(
-                        kt.d,
+                        jt.d,
                         {
                           key: "remove",
                           onSelected: function() {
@@ -11153,10 +11102,10 @@
                             );
                           }
                         },
-                        Object(he.d)("#BroadcastChat_RemoveMessages")
+                        Object(me.d)("#BroadcastChat_RemoveMessages")
                       ),
                       l.createElement(
-                        kt.d,
+                        jt.d,
                         {
                           key: "updatebanh",
                           onSelected: function() {
@@ -11169,10 +11118,10 @@
                             );
                           }
                         },
-                        Object(he.d)("#BroadcastChat_half_Mute")
+                        Object(me.d)("#BroadcastChat_half_Mute")
                       ),
                       l.createElement(
-                        kt.d,
+                        jt.d,
                         {
                           key: "updateband",
                           onSelected: function() {
@@ -11185,10 +11134,10 @@
                             );
                           }
                         },
-                        Object(he.d)("#BroadcastChat_day_Mute")
+                        Object(me.d)("#BroadcastChat_day_Mute")
                       ),
                       l.createElement(
-                        kt.d,
+                        jt.d,
                         {
                           key: "updatebanw",
                           onSelected: function() {
@@ -11201,10 +11150,10 @@
                             );
                           }
                         },
-                        Object(he.d)("#BroadcastChat_week_Mute")
+                        Object(me.d)("#BroadcastChat_week_Mute")
                       ),
                       l.createElement(
-                        kt.d,
+                        jt.d,
                         {
                           key: "updatebanp",
                           onSelected: function() {
@@ -11217,10 +11166,10 @@
                             );
                           }
                         },
-                        Object(he.d)("#BroadcastChat_perm_Mute")
+                        Object(me.d)("#BroadcastChat_perm_Mute")
                       ),
                       l.createElement(
-                        kt.d,
+                        jt.d,
                         {
                           key: "removeban",
                           onSelected: function() {
@@ -11234,13 +11183,13 @@
                             );
                           }
                         },
-                        Object(he.d)("#BroadcastChat_Unmute")
+                        Object(me.d)("#BroadcastChat_Unmute")
                       )
                     )
                   : this.m_chat.IsUserMutedLocally(t.steamid)
                   ? r.push(
                       l.createElement(
-                        kt.d,
+                        jt.d,
                         {
                           key: "unmuteuser",
                           onSelected: function() {
@@ -11250,12 +11199,12 @@
                             );
                           }
                         },
-                        Object(he.d)("#BroadcastChat_UnmuteLocal")
+                        Object(me.d)("#BroadcastChat_UnmuteLocal")
                       )
                     )
                   : r.push(
                       l.createElement(
-                        kt.d,
+                        jt.d,
                         {
                           key: "muteuser",
                           onSelected: function() {
@@ -11265,16 +11214,16 @@
                             );
                           }
                         },
-                        Object(he.d)("#BroadcastChat_MuteLocal")
+                        Object(me.d)("#BroadcastChat_MuteLocal")
                       )
                     ),
-                ((_e.f && _e.f.is_support) ||
+                ((he.f && he.f.is_support) ||
                   this.m_chat.IsUserBroadcaster(
                     this.m_chat.GetUserSteamID()
                   )) &&
                   r.push(
                     l.createElement(
-                      kt.d,
+                      jt.d,
                       {
                         key: "addmod",
                         onSelected: function() {
@@ -11285,10 +11234,10 @@
                           );
                         }
                       },
-                      Object(he.d)("#BroadcastChat_Add_Moderator")
+                      Object(me.d)("#BroadcastChat_Add_Moderator")
                     ),
                     l.createElement(
-                      kt.d,
+                      jt.d,
                       {
                         key: "removemod",
                         onSelected: function() {
@@ -11299,11 +11248,11 @@
                           );
                         }
                       },
-                      Object(he.d)("#BroadcastChat_Remove_Moderator")
+                      Object(me.d)("#BroadcastChat_Remove_Moderator")
                     )
                   ),
                 r.length
-                  ? Object(jt.a)(l.createElement(kt.c, null, r), e)
+                  ? Object(Tt.a)(l.createElement(jt.c, null, r), e)
                   : null
               );
             }),
@@ -11321,11 +11270,11 @@
                   this.textInput.current.focus();
             }),
             (e.prototype.GetTypeClassName = function(e) {
-              return e.type === ge.a.Notification
-                ? Et.a.MessageNotification
-                : e.type === ge.a.Error
-                ? Et.a.MessageError
-                : Et.a.MessageChat;
+              return e.type === _e.a.Notification
+                ? Dt.a.MessageNotification
+                : e.type === _e.a.Error
+                ? Dt.a.MessageError
+                : Dt.a.MessageChat;
             }),
             (e.prototype.render = function() {
               var i = this,
@@ -11333,14 +11282,14 @@
               return l.createElement(
                 "div",
                 {
-                  className: Et.a.ChatPanel,
+                  className: Dt.a.ChatPanel,
                   style: this.props.hidden ? { display: "none" } : void 0
                 },
-                l.createElement(vt, null),
+                l.createElement(yt, null),
                 l.createElement(
                   "div",
                   {
-                    className: Et.a.ChatMessages + " " + Pt.a.minHeightZero,
+                    className: Dt.a.ChatMessages + " " + It.a.minHeightZero,
                     onScroll: this.HandleScroll,
                     ref: this.messagesContainer
                   },
@@ -11357,20 +11306,20 @@
                       t.flair &&
                         l.createElement(
                           "span",
-                          { className: Et.a.FlairContainer },
+                          { className: Dt.a.FlairContainer },
                           " ",
                           i.AddLinksEmoticons(t.flair, !1)
                         ),
-                      t.type === ge.a.Chat &&
+                      t.type === _e.a.Chat &&
                         l.createElement(
                           "span",
                           null,
                           l.createElement(
                             "a",
                             {
-                              className: Et.a.MessageName,
+                              className: Dt.a.MessageName,
                               href:
-                                _e.b.COMMUNITY_BASE_URL +
+                                he.b.COMMUNITY_BASE_URL +
                                 "profiles/" +
                                 t.steamid,
                               target: "_blank",
@@ -11379,66 +11328,66 @@
                             t.persona_name
                           )
                         ),
-                      t.type === ge.a.Chat &&
+                      t.type === _e.a.Chat &&
                         i.m_chat.GetBroadcastSteamID() === t.steamid &&
                         l.createElement(
                           "span",
                           {
                             className:
-                              Et.a.MessageNotification +
+                              Dt.a.MessageNotification +
                               " " +
-                              Et.a.MessageContents
+                              Dt.a.MessageContents
                           },
                           " (" +
-                            Object(he.d)("#BroadcastChat_Broadcaster") +
+                            Object(me.d)("#BroadcastChat_Broadcaster") +
                             ")"
                         ),
-                      t.type === ge.a.Chat &&
+                      t.type === _e.a.Chat &&
                         i.m_chat.m_mapChannelModeratorUsers.get(t.steamid) &&
                         l.createElement(
                           "span",
                           {
                             className:
-                              Et.a.MessageNotification +
+                              Dt.a.MessageNotification +
                               " " +
-                              Et.a.MessageContents
+                              Dt.a.MessageContents
                           },
-                          " (" + Object(he.d)("#BroadcastChat_Moderator") + ")"
+                          " (" + Object(me.d)("#BroadcastChat_Moderator") + ")"
                         ),
                       l.createElement(
                         "span",
                         {
                           className:
-                            Et.a.MessageContents +
+                            Dt.a.MessageContents +
                             " " +
                             (i.AddLinksEmoticons(t.msg, !1).filter(function(e) {
                               return e && "string" == typeof e;
                             }).length
                               ? ""
-                              : Et.a.EmoticonsOnly)
+                              : Dt.a.EmoticonsOnly)
                         },
-                        t.type === ge.a.Chat ? " : " : "",
-                        t.type === ge.a.Chat
+                        t.type === _e.a.Chat ? " : " : "",
+                        t.type === _e.a.Chat
                           ? i.AddLinksEmoticons(t.msg, !1)
                           : t.msg
                       )
                     );
                   })
                 ),
-                l.createElement(Mt, null),
-                _e.f && _e.f.logged_in && this.m_chat
+                l.createElement(vt, null),
+                he.f && he.f.logged_in && this.m_chat
                   ? l.createElement(
                       "div",
                       null,
                       l.createElement(
                         "div",
-                        { className: Et.a.ChatEntry },
+                        { className: Dt.a.ChatEntry },
                         l.createElement(
                           "form",
-                          { className: "" + Pt.a.chatEntryControls },
+                          { className: "" + It.a.chatEntryControls },
                           l.createElement("textarea", {
-                            className: Pt.a.chatTextarea,
-                            placeholder: Object(he.d)(
+                            className: It.a.chatTextarea,
+                            placeholder: Object(me.d)(
                               "#BroadcastChat_EnterResponse"
                             ),
                             onKeyPress: this.ChatBoxKeypress,
@@ -11447,7 +11396,7 @@
                             ref: this.textInput
                           }),
                           this.m_chat.m_bRateLimited &&
-                            l.createElement(Ht, {
+                            l.createElement(Ut, {
                               nSeconds: this.m_chat.m_nRateLimitSeconds,
                               bRateLimited: this.m_chat.m_bRateLimited
                             }),
@@ -11455,46 +11404,46 @@
                             "button",
                             {
                               className:
-                                Pt.a.chatSubmitButton +
+                                It.a.chatSubmitButton +
                                 " " +
-                                (this.state.message ? "" : Pt.a.disabled),
-                              title: Object(he.d)("#ChatEntryButton_Submit"),
+                                (this.state.message ? "" : It.a.disabled),
+                              title: Object(me.d)("#ChatEntryButton_Submit"),
                               onClick: this.SendMessage
                             },
-                            l.createElement(Gt.eb, null)
+                            l.createElement(zt.eb, null)
                           )
                         ),
                         l.createElement(
                           "div",
                           {
                             style: { height: "50px" },
-                            className: "" + Pt.a.chatEntryActionsContainer
+                            className: "" + It.a.chatEntryActionsContainer
                           },
                           l.createElement(
                             "div",
-                            { className: Pt.a.chatEntryActionsGroup },
-                            l.createElement(zt.a, {
+                            { className: It.a.chatEntryActionsGroup },
+                            l.createElement(Pt.a, {
                               disabled: !1,
                               OnEmoticonSelected: this.OnEmoticonSelected,
                               rtLastAckedNewEmoticons: Number.MAX_VALUE,
                               emoticonStore: this.props.emoticonStore,
-                              emoticonHoverStore: Nt.b
+                              emoticonHoverStore: Vt.b
                             }),
                             this.m_chat.m_strFlairGroupID &&
                               this.props.emoticonStore.flair_list &&
                               this.props.emoticonStore.GetFlairListByGroupID(
                                 this.m_chat.m_strFlairGroupID
                               ).length
-                              ? l.createElement(zt.a, {
+                              ? l.createElement(Pt.a, {
                                   disabled: !1,
                                   OnEmoticonSelected: this.OnFlairSelected,
                                   rtLastAckedNewEmoticons: Number.MAX_VALUE,
                                   emoticonStore: this.props.emoticonStore,
-                                  emoticonHoverStore: Nt.b,
+                                  emoticonHoverStore: Vt.b,
                                   strFlairGroupID: this.m_chat
                                     .m_strFlairGroupID,
-                                  title: Object(he.d)("#ChatEntryButton_Flair"),
-                                  buttonIcon: l.createElement(Gt.g, null)
+                                  title: Object(me.d)("#ChatEntryButton_Flair"),
+                                  buttonIcon: l.createElement(zt.g, null)
                                 })
                               : null
                           )
@@ -11513,10 +11462,10 @@
             Object(p.c)([o.a], e.prototype, "OnContextMenu", null),
             Object(p.c)([o.a], e.prototype, "OnEmoticonSelected", null),
             Object(p.c)([o.a], e.prototype, "OnFlairSelected", null),
-            (e = Object(p.c)([s.observer], e))
+            Object(p.c)([s.observer], e)
           );
         })(l.Component),
-        Ht = (function(e) {
+        Ut = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -11525,24 +11474,24 @@
             (t.prototype.render = function() {
               return l.createElement(
                 "div",
-                { className: Et.a.TimedProgressBarContainer },
+                { className: Dt.a.TimedProgressBarContainer },
                 l.createElement(
                   "div",
-                  { className: Et.a.wrapper },
+                  { className: Dt.a.wrapper },
                   l.createElement("div", {
-                    className: Et.a.spinner + " " + Et.a.pie,
+                    className: Dt.a.spinner + " " + Dt.a.pie,
                     style: {
                       animationDuration: (this.props.nSeconds || 0) + "s"
                     }
                   }),
                   l.createElement("div", {
-                    className: Et.a.filler + " " + Et.a.pie,
+                    className: Dt.a.filler + " " + Dt.a.pie,
                     style: {
                       animationDuration: (this.props.nSeconds || 0) + "s"
                     }
                   }),
                   l.createElement("div", {
-                    className: Et.a.mask,
+                    className: Dt.a.mask,
                     style: {
                       animationDuration: (this.props.nSeconds || 0) + "s"
                     }
@@ -11553,44 +11502,44 @@
             t
           );
         })(l.Component),
-        qt = i("trWU"),
-        $t = i("ZeAL"),
-        Jt = i("ir+G"),
-        Xt = i("5L1o"),
-        Yt = i("bS9Q"),
-        Kt = i("IzPI"),
-        Qt = i("NKJh"),
-        Zt = i("dLk7"),
-        ei = i.n(Zt),
-        ti = (function(e) {
+        Ht = i("trWU"),
+        qt = i("ZeAL"),
+        $t = i("ir+G"),
+        Jt = i("5L1o"),
+        Xt = i("bS9Q"),
+        Yt = i("IzPI"),
+        Kt = i("NKJh"),
+        Qt = i("dLk7"),
+        Zt = i.n(Qt),
+        ei = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
           return (
             Object(p.d)(t, e),
             (t.prototype.componentDidMount = function() {
-              Jt.a.EnsureStoreCapsuleInfoLoaded(this.props.appid);
+              $t.a.EnsureStoreCapsuleInfoLoaded(this.props.appid);
             }),
             (t.prototype.render = function() {
-              var e = Jt.a
+              var e = $t.a
                   .GetStoreCapsuleInfo(this.props.appid)
                   .GetAppStoreData(),
-                t = ei.a.StoreSaleWidgetContainer_mini,
-                i = ei.a.StoreSaleWidgetImage_mini,
-                r = ei.a.StoreSaleImage_mini,
-                s = ei.a.StoreSaleWidgetShortDesc_mini;
+                t = Zt.a.StoreSaleWidgetContainer_mini,
+                i = Zt.a.StoreSaleWidgetImage_mini,
+                r = Zt.a.StoreSaleImage_mini,
+                s = Zt.a.StoreSaleWidgetShortDesc_mini;
               return e && e.title
                 ? l.createElement(
                     "div",
                     { className: t },
                     l.createElement(
                       "div",
-                      { className: Qt.Actions },
+                      { className: Kt.Actions },
                       l.createElement(
                         "a",
                         {
-                          href: Object(Kt.c)(e.capsule_link),
-                          target: _e.b.IN_CLIENT ? void 0 : "_blank"
+                          href: Object(Yt.c)(e.capsule_link),
+                          target: he.b.IN_CLIENT ? void 0 : "_blank"
                         },
                         l.createElement(
                           "div",
@@ -11604,55 +11553,55 @@
                     ),
                     l.createElement(
                       "div",
-                      { className: Qt.StoreSaleWidgetRight },
+                      { className: Kt.StoreSaleWidgetRight },
                       l.createElement(
                         "div",
-                        { className: Qt.Actions },
+                        { className: Kt.Actions },
                         l.createElement(
                           "a",
                           {
-                            href: Object(Kt.c)(e.capsule_link),
-                            target: _e.b.IN_CLIENT ? void 0 : "_blank"
+                            href: Object(Yt.c)(e.capsule_link),
+                            target: he.b.IN_CLIENT ? void 0 : "_blank"
                           },
                           l.createElement(
                             "div",
-                            { className: Qt.StoreSaleWidgetTitle },
+                            { className: Kt.StoreSaleWidgetTitle },
                             e.title
                           )
                         )
                       ),
                       l.createElement(
                         "div",
-                        { className: Qt.StoreSaleWidgetRelease },
+                        { className: Kt.StoreSaleWidgetRelease },
                         e.release
                       ),
                       l.createElement(
                         "div",
                         { className: s },
-                        Object($t.c)(Object(Yt.a)(e.short_desc))
+                        Object(qt.c)(Object(Xt.a)(e.short_desc))
                       ),
-                      l.createElement(Xt.c, { appInfo: e })
+                      l.createElement(Jt.c, { appInfo: e })
                     )
                   )
                 : l.createElement("div", {
-                    className: Qt.StoreSaleWidgetEmptyContainer
+                    className: Kt.StoreSaleWidgetEmptyContainer
                   });
             }),
-            (t = Object(p.c)([s.observer], t))
+            Object(p.c)([s.observer], t)
           );
         })(l.Component),
-        ii = i("kyHq"),
-        ri = i("boaH"),
-        si = i("nWbB"),
-        ni = i("uIWk"),
-        ai = i("5E+2"),
-        oi = i("uuth"),
-        di = i("exH9"),
-        li = i("HWOl"),
-        ci = i.n(li),
-        ui = i("rKv1"),
-        pi = i.n(ui),
-        mi = {
+        ti = i("kyHq"),
+        ii = i("boaH"),
+        ri = i("nWbB"),
+        si = i("uIWk"),
+        ni = i("5E+2"),
+        ai = i("uuth"),
+        oi = i("exH9"),
+        di = i("HWOl"),
+        li = i.n(di),
+        ci = i("rKv1"),
+        ui = i.n(ci),
+        pi = {
           list: [
             { appid: 444090, url: "https://steam.tv/paladins" },
             { appid: 386360, url: "https://steam.tv/smite" },
@@ -11679,7 +11628,7 @@
             }
           ]
         },
-        hi = (function(t) {
+        mi = (function(t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (
@@ -11714,7 +11663,7 @@
                     case 0:
                       return [
                         4,
-                        si.b.LoadBIsEmbeddedBroadcastHidden(this.m_cancelSignal)
+                        ri.b.LoadBIsEmbeddedBroadcastHidden(this.m_cancelSignal)
                       ];
                     case 1:
                       return (
@@ -11722,33 +11671,33 @@
                         this.m_cancelSignal.token.reason ||
                           this.setState({
                             bLoadingPreference: !1,
-                            bExpanded: !si.b.BIsEmbeddedBroadcastHidden(),
+                            bExpanded: !ri.b.BIsEmbeddedBroadcastHidden(),
                             innerStyle: Object(p.a)(
                               Object(p.a)({}, this.state.innerStyle),
                               {
-                                maxHeight: si.b.BIsEmbeddedBroadcastHidden()
+                                maxHeight: ri.b.BIsEmbeddedBroadcastHidden()
                                   ? "0vh"
                                   : "100vh"
                               }
                             )
                           }),
                         (this.m_bIsCreatorHomeNeeded = Boolean(
-                          _e.a.IS_CREATOR_HOME &&
+                          he.a.IS_CREATOR_HOME &&
                             this.props.event &&
                             this.props.event.jsondata &&
                             this.props.event.jsondata
                               .broadcast_item_drops_enabled
                         )),
                         this.m_bIsCreatorHomeNeeded &&
-                          ni.a.LoadCreatorHome(
+                          si.a.LoadCreatorHome(
                             this.props.event.clanSteamID,
                             this.m_cancelSignal
                           ),
                         [
                           4,
                           this.props.bIsPreview && this.props.accountIDs
-                            ? si.b.HintLoadEmbeddablePreviewStreams(this.props)
-                            : si.b.HintLoadEmbeddableStreams(this.props)
+                            ? ri.b.HintLoadEmbeddablePreviewStreams(this.props)
+                            : ri.b.HintLoadEmbeddableStreams(this.props)
                         ]
                       );
                     case 2:
@@ -11774,8 +11723,8 @@
             }),
             (e.prototype.ToggleBroadcastExpandShrink = function() {
               var e = this,
-                t = si.b.GetPlayReadyStream();
-              Object(si.a)(t.appid, this.state.bExpanded ? 2 : 3, t.snr);
+                t = ri.b.GetPlayReadyStream();
+              Object(ri.a)(t.appid, this.state.bExpanded ? 2 : 3, t.snr);
               var i = this.state.bExpanded;
               window.setTimeout(function() {
                 return e.setState({
@@ -11797,9 +11746,9 @@
                     case 0:
                       return (
                         this.setState({ bStartMuted: !1 }),
-                        si.b.GetPlayReadyStream().accountid == t.accountid
+                        ri.b.GetPlayReadyStream().accountid == t.accountid
                           ? [3, 2]
-                          : [4, si.b.AttemptToPlayStream(t)]
+                          : [4, ri.b.AttemptToPlayStream(t)]
                       );
                     case 1:
                       e.sent(), (e.label = 2);
@@ -11811,12 +11760,12 @@
             }),
             (e.prototype.ConstructSidePanels = function(e, t) {
               var i = { leftPanel: null, rightPanel: null },
-                r = 1 < si.b.GetConcurrentStreams(),
-                s = l.createElement(fi, {
+                r = 1 < ri.b.GetConcurrentStreams(),
+                s = l.createElement(gi, {
                   key: "right" + e.appid,
                   ImgUrl: e.right_panel
                 }),
-                n = l.createElement(fi, {
+                n = l.createElement(gi, {
                   key: "left" + e.appid,
                   ImgUrl: e.left_panel
                 });
@@ -11830,12 +11779,12 @@
                 ) ||
                   (this.props.event &&
                     this.props.event.jsondata.broadcast_force_banner) ||
-                  (s = l.createElement(ti, {
+                  (s = l.createElement(ei, {
                     key: "mini" + e.accountid,
                     appid: e.appid
                   })),
                 r && !t
-                  ? ((i.leftPanel = l.createElement(yi, {
+                  ? ((i.leftPanel = l.createElement(bi, {
                       key: "selector" + e.appid,
                       curStream: e,
                       onStreamSelect: this.onStreamSelect
@@ -11843,7 +11792,7 @@
                     (i.rightPanel = s))
                   : t
                   ? ((i.leftPanel = l.createElement("div", null)),
-                    (i.rightPanel = l.createElement(Mi, {
+                    (i.rightPanel = l.createElement(vi, {
                       stream: e,
                       orientation: "rightside"
                     })))
@@ -11853,9 +11802,9 @@
             }),
             (e.prototype.render = function() {
               if (this.state.bLoadingPreference) return null;
-              var e = si.b.GetPlayReadyStream();
+              var e = ri.b.GetPlayReadyStream();
               if (e) {
-                var t = "show" === si.b.GetChatVisibility(),
+                var t = "show" === ri.b.GetChatVisibility(),
                   i = this.props,
                   r = i.event,
                   s = i.language;
@@ -11864,20 +11813,20 @@
                   (e = Object(p.a)(Object(p.a)({}, e), {
                     left_panel: r.GetImageURL(
                       "broadcast_left",
-                      s || Object(ii.m)(_e.b.LANGUAGE)
+                      s || Object(ti.m)(he.b.LANGUAGE)
                     ),
                     right_panel: r.GetImageURL(
                       "broadcast_right",
-                      s || Object(ii.m)(_e.b.LANGUAGE)
+                      s || Object(ti.m)(he.b.LANGUAGE)
                     ),
                     store_title: r.GetBroadcastTitle(
-                      s || Object(ii.m)(_e.b.LANGUAGE)
+                      s || Object(ti.m)(he.b.LANGUAGE)
                     ),
                     chat_visibility: r.GetBroadcastChatVisibility()
                   }));
                 var n = null;
                 this.m_bIsCreatorHomeNeeded &&
-                  (n = ni.a.GetCreatorHome(r.clanSteamID));
+                  (n = si.a.GetCreatorHome(r.clanSteamID));
                 var a = this.ConstructSidePanels(e, t),
                   o = e.store_title ? e.store_title : e.title,
                   d =
@@ -11903,34 +11852,34 @@
                       {
                         style: { background: d },
                         className:
-                          pi.a.bordered_container + " " + (r ? pi.a.Event : "")
+                          ui.a.bordered_container + " " + (r ? ui.a.Event : "")
                       },
                       l.createElement(
                         "div",
-                        { className: pi.a.bordered_title },
-                        l.createElement(Xt.a, null),
+                        { className: ui.a.bordered_title },
+                        l.createElement(Jt.a, null),
                         o,
                         l.createElement(
                           "div",
-                          { className: pi.a.bordered_corner_container },
+                          { className: ui.a.bordered_corner_container },
                           !this.state.bExpanded &&
                             l.createElement("div", {
-                              className: pi.a.broadcast_settings_icon,
-                              "data-tooltip-text": Object(he.d)(
+                              className: ui.a.broadcast_settings_icon,
+                              "data-tooltip-text": Object(me.d)(
                                 "#StoreBroadcast_Change_store_Broadcast_settings"
                               ),
                               onClick: function() {
                                 return window.open(
-                                  _e.b.STORE_BASE_URL +
+                                  he.b.STORE_BASE_URL +
                                     "account/preferences/#store_broadcast_settings"
                                 );
                               }
                             }),
                           l.createElement("div", {
                             className: this.state.bExpanded
-                              ? pi.a.bordered_corner_expanded
-                              : pi.a.bordered_corner_shrinked,
-                            "data-tooltip-text": Object(he.d)(
+                              ? ui.a.bordered_corner_expanded
+                              : ui.a.bordered_corner_shrinked,
+                            "data-tooltip-text": Object(me.d)(
                               "#StoreBroadcast_Hide_Tooltip"
                             ),
                             onClick: this.ToggleBroadcastExpandShrink
@@ -11939,7 +11888,7 @@
                         Boolean(e.gamedata_subtitle) &&
                           l.createElement(
                             "div",
-                            { className: pi.a.bordered_subtitle },
+                            { className: ui.a.bordered_subtitle },
                             e.gamedata_subtitle
                           )
                       ),
@@ -11947,12 +11896,12 @@
                         l.createElement(
                           "div",
                           {
-                            className: pi.a.container,
+                            className: ui.a.container,
                             style: Object(p.a)({}, this.state.innerStyle),
                             onTransitionEnd: this.OnShrinkTransitionEnd
                           },
                           a.leftPanel,
-                          l.createElement(_i, {
+                          l.createElement(hi, {
                             stream: e,
                             bStartMuted: this.state.bStartMuted,
                             fnRenderBroadcastContext: this.props
@@ -11966,11 +11915,11 @@
                     ) &&
                       l.createElement(
                         "div",
-                        { className: pi.a.item_drop_ctn },
+                        { className: ui.a.item_drop_ctn },
                         l.createElement(
                           "div",
                           null,
-                          Object(he.d)(
+                          Object(me.d)(
                             n && n.BIsLoaded() && 0 < n.GetName().length
                               ? r.jsondata
                                   .broadcast_item_drops_min_watch_time_minutes %
@@ -12003,22 +11952,22 @@
                               "a",
                               {
                                 href:
-                                  (_e.b.IN_CLIENT ? "steam://openurl/" : "") +
-                                  _e.b.COMMUNITY_BASE_URL +
+                                  (he.b.IN_CLIENT ? "steam://openurl/" : "") +
+                                  he.b.COMMUNITY_BASE_URL +
                                   "gid/" +
                                   r.jsondata
                                     .broadcast_item_drops_details_clan_accountid +
                                   "/partnerevents/view/" +
                                   r.jsondata
                                     .broadcast_item_drops_details_event_gid,
-                                target: _e.b.IN_CLIENT ? "" : "_blank"
+                                target: he.b.IN_CLIENT ? "" : "_blank"
                               },
-                              Object(he.d)("#SalePage_WatchForDrop_LearnMore")
+                              Object(me.d)("#SalePage_WatchForDrop_LearnMore")
                             )
                         )
                       ),
-                    this.state.bExpanded && l.createElement(gi, { stream: e }),
-                    l.createElement("div", { className: pi.a.clear_div })
+                    this.state.bExpanded && l.createElement(_i, { stream: e }),
+                    l.createElement("div", { className: ui.a.clear_div })
                   )
                 );
               }
@@ -12034,10 +11983,10 @@
             ),
             Object(p.c)([o.a], e.prototype, "OnShrinkTransitionEnd", null),
             Object(p.c)([o.a], e.prototype, "onStreamSelect", null),
-            (e = Object(p.c)([s.observer], e))
+            Object(p.c)([s.observer], e)
           );
         })(l.Component),
-        _i = ((t.default = hi),
+        hi = ((t.default = mi),
         (function(i) {
           function e(e) {
             var t = i.call(this, e) || this;
@@ -12053,8 +12002,8 @@
           return (
             Object(p.d)(e, i),
             (e.prototype.CloseBroadcastPopup = function() {
-              var e = si.b.GetPlayReadyStream();
-              Object(si.a)(e.appid, 7, e.snr),
+              var e = ri.b.GetPlayReadyStream();
+              Object(ri.a)(e.appid, 7, e.snr),
                 this.setState({ bPopout: !1, bPreventPopup: !0 });
             }),
             (e.prototype.OnEnter = function() {
@@ -12070,32 +12019,32 @@
             (e.prototype.render = function() {
               return l.createElement(
                 "div",
-                { className: pi.a.wrapper },
+                { className: ui.a.wrapper },
                 l.createElement(
-                  St,
+                  Mt,
                   { onEnter: this.OnEnter, onLeave: this.OnLeave },
                   l.createElement(
                     "div",
                     {
-                      className: pi.a.video_placeholder,
+                      className: ui.a.video_placeholder,
                       ref: this.m_iVideoContainerRef
                     },
                     l.createElement(
                       "div",
                       {
                         className: this.state.bPopout
-                          ? pi.a.broadcast_floating
-                          : pi.a.video_container
+                          ? ui.a.broadcast_floating
+                          : ui.a.video_container
                       },
                       this.state.bPopout &&
-                        l.createElement(bi, {
+                        l.createElement(fi, {
                           stream: this.props.stream,
                           OnPreventPopup: this.CloseBroadcastPopup
                         }),
                       l.createElement(
                         "div",
-                        { className: pi.a.BroadcastPlayerContainer },
-                        l.createElement(qt.a, {
+                        { className: ui.a.BroadcastPlayerContainer },
+                        l.createElement(Ht.a, {
                           steamIDBroadcast: this.props.stream.steamid,
                           watchLocation: 6,
                           bStartMuted: this.props.bStartMuted,
@@ -12114,7 +12063,7 @@
             e
           );
         })(l.Component)),
-        gi = (function(t) {
+        _i = (function(t) {
           function e(e) {
             return t.call(this, e) || this;
           }
@@ -12122,7 +12071,7 @@
             Object(p.d)(e, t),
             (e.prototype.ConstructBroadcastLink = function() {
               var t = this.props.stream,
-                e = mi.list.find(function(e) {
+                e = pi.list.find(function(e) {
                   return (
                     e.appid == t.appid &&
                     (!e.broadcasterAccountID ||
@@ -12132,7 +12081,7 @@
               if (e) {
                 var i = e.url;
                 return (
-                  (_e.b.IN_CLIENT ||
+                  (he.b.IN_CLIENT ||
                     0 <= navigator.userAgent.indexOf("Valve Steam Client") ||
                     0 <=
                       navigator.userAgent.indexOf("Valve Steam GameOverlay") ||
@@ -12145,61 +12094,61 @@
                   l.createElement(
                     "a",
                     { href: i },
-                    Object(he.d)("#Broadcast_Embed_Watch_With_Frieds_SteamTV")
+                    Object(me.d)("#Broadcast_Embed_Watch_With_Frieds_SteamTV")
                   )
                 );
               }
               var r = this.props.stream.steamid,
-                s = _e.b.COMMUNITY_BASE_URL + "broadcast/watch/" + r;
+                s = he.b.COMMUNITY_BASE_URL + "broadcast/watch/" + r;
               return l.createElement(
                 "a",
                 { href: s },
-                Object(he.d)("#BroadcastWatch_View_Broadcast_Page")
+                Object(me.d)("#BroadcastWatch_View_Broadcast_Page")
               );
             }),
             (e.prototype.OnToggleChat = function(e) {
               e.preventDefault();
-              var t = si.b.GetPlayReadyStream();
-              Object(si.a)(
+              var t = ri.b.GetPlayReadyStream();
+              Object(ri.a)(
                 t.appid,
-                "show" === si.b.GetChatVisibility() ? 5 : 4,
+                "show" === ri.b.GetChatVisibility() ? 5 : 4,
                 t.snr
               ),
-                si.b.ToggleChatVisibility();
+                ri.b.ToggleChatVisibility();
             }),
             (e.prototype.onWatchBroadcastPage = function() {
-              var e = si.b.GetPlayReadyStream();
-              Object(si.a)(e.appid, 9, e.snr);
+              var e = ri.b.GetPlayReadyStream();
+              Object(ri.a)(e.appid, 9, e.snr);
             }),
             (e.prototype.render = function() {
               var e = this.ConstructBroadcastLink(),
-                t = "remove" != si.b.GetChatVisibility(),
+                t = "remove" != ri.b.GetChatVisibility(),
                 i = Number.parseInt(
                   "" +
-                    ri.a.GetOrCreateBroadcastInfo(this.props.stream.steamid)
+                    ii.a.GetOrCreateBroadcastInfo(this.props.stream.steamid)
                       .m_nViewerCount
                 );
               return l.createElement(
                 "div",
-                { className: pi.a.viewer_bar },
+                { className: ui.a.viewer_bar },
                 l.createElement(
                   "div",
-                  { className: pi.a.viewer_count },
-                  i.toLocaleString(he.c.GetPreferredLocales())
+                  { className: ui.a.viewer_count },
+                  i.toLocaleString(me.c.GetPreferredLocales())
                 ),
                 l.createElement(
                   "div",
-                  { className: pi.a.viewer_links },
+                  { className: ui.a.viewer_links },
                   t &&
                     l.createElement(
                       "a",
                       {
                         href: "#",
-                        className: pi.a.ChatToggle,
+                        className: ui.a.ChatToggle,
                         onClick: this.OnToggleChat
                       },
-                      Object(he.d)(
-                        "hide" === si.b.GetChatVisibility()
+                      Object(me.d)(
+                        "hide" === ri.b.GetChatVisibility()
                           ? "#sale_three_section_show_chat"
                           : "#sale_three_section_hide_chat"
                       )
@@ -12207,19 +12156,19 @@
                   t &&
                     l.createElement(
                       "span",
-                      { className: pi.a.ChatToggle },
+                      { className: ui.a.ChatToggle },
                       " | "
                     ),
                   l.createElement(
                     "a",
                     {
                       href:
-                        (_e.b.IN_CLIENT ? "steam://openurl/" : "") +
-                        _e.b.STORE_BASE_URL +
+                        (he.b.IN_CLIENT ? "steam://openurl/" : "") +
+                        he.b.STORE_BASE_URL +
                         "account/preferences/#store_broadcast_settings",
-                      target: _e.b.IN_CLIENT ? void 0 : "_blank"
+                      target: he.b.IN_CLIENT ? void 0 : "_blank"
                     },
-                    Object(he.d)(
+                    Object(me.d)(
                       "#StoreBroadcast_Change_store_Broadcast_settings"
                     )
                   ),
@@ -12230,10 +12179,10 @@
             }),
             Object(p.c)([o.a], e.prototype, "OnToggleChat", null),
             Object(p.c)([o.a], e.prototype, "onWatchBroadcastPage", null),
-            (e = Object(p.c)([s.observer], e))
+            Object(p.c)([s.observer], e)
           );
         })(l.Component),
-        fi = (function(e) {
+        gi = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -12246,16 +12195,16 @@
                 null,
                 e &&
                   l.createElement("img", {
-                    className: pi.a.side_panels,
+                    className: ui.a.side_panels,
                     src: this.props.ImgUrl
                   }),
-                !e && l.createElement("div", { className: pi.a.side_panels })
+                !e && l.createElement("div", { className: ui.a.side_panels })
               );
             }),
             t
           );
         })(l.Component),
-        bi = (function(i) {
+        fi = (function(i) {
           function e(e) {
             var t = i.call(this, e) || this;
             return (t.state = {}), t;
@@ -12266,35 +12215,35 @@
               return l.createElement(
                 "div",
                 {
-                  className: [pi.a.PopOutVideoTitleBar, pi.a.NoSeslect].join(
+                  className: [ui.a.PopOutVideoTitleBar, ui.a.NoSeslect].join(
                     " "
                   )
                 },
                 l.createElement(
                   "div",
-                  { className: pi.a.PopOutVideoTitleText },
-                  Object(he.d)("#StoreBroadcast_Detault_popout_Title")
+                  { className: ui.a.PopOutVideoTitleText },
+                  Object(me.d)("#StoreBroadcast_Detault_popout_Title")
                 ),
                 l.createElement(
                   "button",
                   {
                     className: [
-                      pi.a.PopOutVideoCloseButton,
+                      ui.a.PopOutVideoCloseButton,
                       "btnv6_blue_hoverfade"
                     ].join(" "),
-                    "data-tooltip-text": Object(he.d)(
+                    "data-tooltip-text": Object(me.d)(
                       "#StoreBroadcast_close_broadcast_popup"
                     ),
                     onClick: this.props.OnPreventPopup
                   },
-                  l.createElement("img", { src: ci.a, alt: "x" })
+                  l.createElement("img", { src: li.a, alt: "x" })
                 )
               );
             }),
-            (e = Object(p.c)([s.observer], e))
+            Object(p.c)([s.observer], e)
           );
         })(l.Component),
-        yi = (function(t) {
+        bi = (function(t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (e.itemRef = l.createRef()), e;
@@ -12303,7 +12252,7 @@
             Object(p.d)(e, t),
             (e.prototype.componentDidMount = function() {
               var t = this,
-                e = si.b.GetStreams().findIndex(function(e) {
+                e = ri.b.GetStreams().findIndex(function(e) {
                   return t.props.curStream.accountid == e.accountid;
                 });
               this.itemRef &&
@@ -12312,19 +12261,19 @@
             }),
             (e.prototype.render = function() {
               var t = this,
-                e = si.b.GetStreams();
+                e = ri.b.GetStreams();
               return l.createElement(
                 "div",
                 {
                   ref: this.itemRef,
-                  className: Object(di.a)(
-                    pi.a.side_panels,
-                    pi.a.multistream,
-                    3 < e.length ? pi.a.scrollingstreams : ""
+                  className: Object(oi.a)(
+                    ui.a.side_panels,
+                    ui.a.multistream,
+                    3 < e.length ? ui.a.scrollingstreams : ""
                   )
                 },
                 e.map(function(e) {
-                  return l.createElement(vi, {
+                  return l.createElement(yi, {
                     key: e.accountid,
                     stream: e,
                     bSelected: t.props.curStream.accountid == e.accountid,
@@ -12336,7 +12285,7 @@
             e
           );
         })(l.Component),
-        vi = (function(e) {
+        yi = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -12351,38 +12300,38 @@
                 t = Number.parseInt("" + e.viewer_count);
               return l.createElement(
                 "div",
-                { className: pi.a.stream_icon_and_viewer_container },
+                { className: ui.a.stream_icon_and_viewer_container },
                 l.createElement(
-                  ai.d,
+                  ni.d,
                   { toolTipContent: e.app_name },
                   l.createElement(
                     "div",
-                    { className: pi.a.stream_icon_container },
+                    { className: ui.a.stream_icon_container },
                     l.createElement("img", {
                       className: this.props.bSelected
-                        ? pi.a.stream_icon_selected
-                        : pi.a.stream_icon,
+                        ? ui.a.stream_icon_selected
+                        : ui.a.stream_icon,
                       src: e.thumbnail_http_address,
                       onClick: this.onClick
                     }),
                     this.props.bSelected &&
                       l.createElement("div", {
-                        className: pi.a.stream_icon_arrow
+                        className: ui.a.stream_icon_arrow
                       })
                   )
                 ),
                 l.createElement(
                   "div",
-                  { className: pi.a.viewer_count },
-                  t.toLocaleString(he.c.GetPreferredLocales())
+                  { className: ui.a.viewer_count },
+                  t.toLocaleString(me.c.GetPreferredLocales())
                 )
               );
             }),
             Object(p.c)([o.a], t.prototype, "onClick", null),
-            (t = Object(p.c)([s.observer], t))
+            Object(p.c)([s.observer], t)
           );
         })(l.Component),
-        Mi = (function(e) {
+        vi = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -12390,20 +12339,20 @@
             Object(p.d)(t, e),
             (t.prototype.render = function() {
               var e = "below" == this.props.orientation,
-                t = ri.a.GetBroadcast(this.props.stream.steamid);
+                t = ii.a.GetBroadcast(this.props.stream.steamid);
               return t
                 ? l.createElement(
                     "div",
                     {
                       className: e
-                        ? pi.a.chat_below_container
-                        : pi.a.chat_rightside_container
+                        ? ui.a.chat_below_container
+                        : ui.a.chat_rightside_container
                     },
                     l.createElement(
                       "div",
-                      { className: pi.a.ChatContainer },
-                      l.createElement(Ut, {
-                        emoticonStore: si.c,
+                      { className: ui.a.ChatContainer },
+                      l.createElement(xt, {
+                        emoticonStore: ri.c,
                         watchLocation: 6,
                         steamID: this.props.stream.steamid,
                         broadcastID: t.m_ulBroadcastID
@@ -12412,7 +12361,7 @@
                   )
                 : null;
             }),
-            (t = Object(p.c)([s.observer], t))
+            Object(p.c)([s.observer], t)
           );
         })(l.Component);
     },
@@ -12547,7 +12496,7 @@
             Object(r.c)([u.a], e.prototype, "onGameActionStart", null),
             Object(r.c)([u.a], e.prototype, "GetBroadcastURL", null),
             Object(r.c)([u.a], e.prototype, "OnClickPlay", null),
-            (e = Object(r.c)([a.observer], e))
+            Object(r.c)([a.observer], e)
           );
         })(s.Component);
       function b(e) {
@@ -12575,6 +12524,15 @@
     },
     boaH: function(e, t, i) {
       "use strict";
+      i.d(t, "b", function() {
+        return $;
+      }),
+        i.d(t, "c", function() {
+          return K;
+        }),
+        i.d(t, "a", function() {
+          return se;
+        });
       var v = i("mrSG"),
         r = i("vDqi"),
         M = i.n(r),
@@ -12771,25 +12729,25 @@
             e
           );
         })(l.b),
-        V = i("qhbg");
-      function N(e) {
+        G = i("qhbg");
+      function V(e) {
         var t = e.getElementsByTagName("MPD");
         return t && 1 == t.length ? t[0] : null;
       }
-      function A(e, t) {
+      function N(e, t) {
         for (var i = 0; i < e.children.length; i++) {
           var r = e.children[i];
           if (r.tagName == t) return r;
         }
         return null;
       }
-      function L(e, t) {
+      function A(e, t) {
         var i = e.getAttribute(t);
         if (!i) return null;
         var r = new Date(i);
         return "[object Date]" === Object.prototype.toString.call(r) ? r : null;
       }
-      function W(e, t) {
+      function L(e, t) {
         var i = e.getAttribute(t);
         if (!i) return null;
         var r = 0,
@@ -12801,15 +12759,15 @@
           r
         );
       }
-      function x(e, t) {
+      function W(e, t) {
         var i = e.getAttribute(t);
         return i ? parseInt(i) : null;
       }
-      function U(e, t) {
+      function x(e, t) {
         var i = e.getAttribute(t);
         return i || "";
       }
-      function H(e, t, i) {
+      function U(e, t, i) {
         return (e = (e = e.replace("$RepresentationID$", t)).replace(
           "$Number$",
           i.toString()
@@ -12942,26 +12900,26 @@
             (e.prototype.ParseRepresentation = function(e, t) {
               var i = t,
                 r = {
-                  strID: U(e, "id"),
-                  strMimeType: U(e, "mimeType"),
-                  strCodecs: U(e, "codecs"),
-                  nBandwidth: x(e, "bandwidth")
+                  strID: x(e, "id"),
+                  strMimeType: x(e, "mimeType"),
+                  strCodecs: x(e, "codecs"),
+                  nBandwidth: W(e, "bandwidth")
                 };
               if (i.bContainsVideo) {
                 if (
-                  ((r.nWidth = x(e, "width")),
-                  (r.nHeight = x(e, "height")),
-                  (r.nFrameRate = x(e, "frameRate")),
+                  ((r.nWidth = W(e, "width")),
+                  (r.nHeight = W(e, "height")),
+                  (r.nFrameRate = W(e, "frameRate")),
                   !(r.strID && r.strMimeType && r.strCodecs && r.nBandwidth))
                 )
                   return (
-                    Object(V.c)("MPD - Representation Video Data Missing"), null
+                    Object(G.c)("MPD - Representation Video Data Missing"), null
                   );
               } else if (i.bContainsAudio) {
-                r.nAudioSamplingRate = x(e, "audioSamplingRate");
-                var s = A(e, "AudioChannelConfiguration");
+                r.nAudioSamplingRate = W(e, "audioSamplingRate");
+                var s = N(e, "AudioChannelConfiguration");
                 if (
-                  (s && (r.nAudioChannels = x(s, "value")),
+                  (s && (r.nAudioChannels = W(s, "value")),
                   r.nAudioChannels || (r.nAudioChannels = 2),
                   !(
                     r.strID &&
@@ -12972,29 +12930,29 @@
                   ))
                 )
                   return (
-                    Object(V.c)("MPD - Representation Audio Data Missing"), null
+                    Object(G.c)("MPD - Representation Audio Data Missing"), null
                   );
               }
               return r;
             }),
             (e.prototype.BParse = function(e) {
               var t = new DOMParser().parseFromString(e, "application/xml"),
-                i = N(t);
+                i = V(t);
               if (!i) return !1;
               var r = i.getAttribute("type");
               if (
-                ((this.m_nMinBufferTime = W(i, "minBufferTime")),
+                ((this.m_nMinBufferTime = L(i, "minBufferTime")),
                 "dynamic" == r)
               ) {
                 if (
                   ((this.m_strType = "dynamic"),
-                  (this.m_dtAvailabilityStartTime = L(
+                  (this.m_dtAvailabilityStartTime = A(
                     i,
                     "availabilityStartTime"
                   )),
-                  (this.m_dtPublishTime = L(i, "publishTime")),
-                  (this.m_nMinimumUpdatePeriod = W(i, "minimumUpdatePeriod")),
-                  (this.m_nTimeShiftBufferDepth = W(i, "timeShiftBufferDepth")),
+                  (this.m_dtPublishTime = A(i, "publishTime")),
+                  (this.m_nMinimumUpdatePeriod = L(i, "minimumUpdatePeriod")),
+                  (this.m_nTimeShiftBufferDepth = L(i, "timeShiftBufferDepth")),
                   !(
                     this.m_dtAvailabilityStartTime &&
                     this.m_dtPublishTime &&
@@ -13005,167 +12963,171 @@
                 )
                   return !1;
               } else {
-                if ("static" != r) return Object(V.c)("MPD - Unknown type"), !1;
+                if ("static" != r) return Object(G.c)("MPD - Unknown type"), !1;
                 if (
                   ((this.m_strType = "static"),
-                  (this.m_dtMediaPresentationDuration = L(
+                  (this.m_dtMediaPresentationDuration = A(
                     i,
                     "mediaPresentationDuration"
                   )),
                   !this.m_nMinBufferTime || !this.m_dtMediaPresentationDuration)
                 )
                   return (
-                    Object(V.c)(
+                    Object(G.c)(
                       "MPD - Missing Buffer Time or Presentation Duration"
                     ),
                     !1
                   );
               }
-              var s = A(i, "BASEURL");
+              var s = N(i, "BASEURL");
               s && (this.m_strBaseURL = s.textContent);
-              var n = A(i, "Analytics");
+              var n = N(i, "Analytics");
               n &&
-                ((this.m_strStatsLink = U(n, "statslink")),
-                (this.m_strStalledLink = U(n, "stalledlink")),
-                (this.m_strEventLogLink = U(n, "eventlink")));
+                ((this.m_strStatsLink = x(n, "statslink")),
+                (this.m_strStalledLink = x(n, "stalledlink")),
+                (this.m_strEventLogLink = x(n, "eventlink")));
               var a = t.getElementsByTagName("Period");
               if (0 == a.length) return !1;
               var o = a[0],
                 d = {
-                  strID: U(o, "id"),
-                  nStart: W(o, "start"),
-                  nDuration: W(o, "duration"),
+                  strID: x(o, "id"),
+                  nStart: L(o, "start"),
+                  nDuration: L(o, "duration"),
                   rgAdaptationSets: []
                 };
               if (!d.strID || null === d.nStart)
-                return Object(V.c)("MPD - Missing Period Information."), !1;
+                return Object(G.c)("MPD - Missing Period Information."), !1;
               (this.m_rgPeriods = []), this.m_rgPeriods.push(d);
               for (
-                var l, c, u, p = o.getElementsByTagName("AdaptationSet"), m = 0;
-                m < p.length;
-                m++
+                var l, c, u = o.getElementsByTagName("AdaptationSet"), p = 0;
+                p < u.length;
+                p++
               ) {
-                var h = p[m],
-                  _ = U(h, "description"),
-                  g = U(h, "lang"),
-                  f = {
-                    bSegmentAlignment: ((l = h),
-                    (c = "segmentAlignment"),
-                    (u = void 0),
-                    (u = l.getAttribute(c)),
-                    u
-                      ? "true" == (u = u.toLowerCase()) ||
-                        ("false" != u && null)
+                var m = u[p],
+                  h = x(m, "description"),
+                  _ = x(m, "lang"),
+                  g = {
+                    bSegmentAlignment: ((l = "segmentAlignment"),
+                    (c = void 0),
+                    (c = m.getAttribute(l))
+                      ? "true" == (c = c.toLowerCase()) ||
+                        ("false" != c && null)
                       : null),
-                    bIsClosedCaption: "text/vtt" == U(h, "mimeType"),
-                    strLanguage: U(h, "lang"),
+                    bIsClosedCaption: "text/vtt" == x(m, "mimeType"),
+                    strLanguage: x(m, "lang"),
                     bContainsVideo: !1,
                     bContainsAudio: !1,
                     bContainsGame: !1,
-                    strDescription: _ || g,
-                    strForceSub: U(h, "forceSub"),
-                    strID: U(h, "id"),
+                    strDescription: h || _,
+                    strForceSub: x(m, "forceSub"),
+                    strID: x(m, "id"),
                     rgRoles: [],
                     rgRepresentations: [],
                     thumbnails: null,
                     segmentTemplate: null
                   };
-                if ((d.rgAdaptationSets.push(f), f.bIsClosedCaption)) {
-                  f.rgRoles.push("subtitle");
+                if ((d.rgAdaptationSets.push(g), g.bIsClosedCaption)) {
+                  g.rgRoles.push("subtitle");
                   for (
-                    var b = h.getElementsByTagName("Role"), y = 0;
-                    y < b.length;
-                    y++
+                    var f = m.getElementsByTagName("Role"), b = 0;
+                    b < f.length;
+                    b++
                   ) {
-                    (D = U(b[y], "value")) && f.rgRoles.push(D);
+                    (j = x(f[b], "value")) && g.rgRoles.push(j);
                   }
                   for (
-                    var v = h.getElementsByTagName("Representation"), M = 0;
-                    M < v.length;
-                    M++
+                    var y = m.getElementsByTagName("Representation"), v = 0;
+                    v < y.length;
+                    v++
                   ) {
-                    var S = {
-                        strID: U((G = v[M]), "id"),
-                        nBandwidth: x(G, "bandwidth"),
+                    var M = {
+                        strID: x((z = y[v]), "id"),
+                        nBandwidth: W(z, "bandwidth"),
                         strClosedCaptionFile: ""
                       },
-                      F = A(G, "BaseURL"),
-                      B = F ? F.textContent : "";
-                    if (!B)
+                      S = N(z, "BaseURL"),
+                      F = S ? S.textContent : "";
+                    if (!F)
                       return (
-                        Object(V.c)(
+                        Object(G.c)(
                           "Closed Caption File has no BaseURL for (id): " +
-                            S.strID
+                            M.strID
                         ),
                         !1
                       );
-                    (S.strClosedCaptionFile =
-                      this.m_strBaseURL + H(B, S.strID, 0)),
-                      f.rgRepresentations.push(S);
+                    (M.strClosedCaptionFile =
+                      this.m_strBaseURL + U(F, M.strID, 0)),
+                      g.rgRepresentations.push(M);
                   }
                 } else {
-                  if (!f.bSegmentAlignment)
-                    return Object(V.c)("MPD - Segment Alignment Missing"), !1;
+                  if (!g.bSegmentAlignment)
+                    return Object(G.c)("MPD - Segment Alignment Missing"), !1;
                   for (
-                    var w = h.getElementsByTagName("ContentComponent"), O = 0;
-                    O < w.length;
-                    O++
+                    var B,
+                      w,
+                      O,
+                      C = m.getElementsByTagName("ContentComponent"),
+                      R = 0;
+                    R < C.length;
+                    R++
                   ) {
-                    var C = U(w[O], "contentType");
-                    "video" == C && (f.bContainsVideo = !0),
-                      "audio" == C && (f.bContainsAudio = !0),
-                      "game" == C && (f.bContainsGame = !0);
+                    var T = x(C[R], "contentType");
+                    "video" == T && (g.bContainsVideo = !0),
+                      "audio" == T && (g.bContainsAudio = !0),
+                      "game" == T && (g.bContainsGame = !0);
                   }
-                  if (f.bContainsVideo) {
-                    var R = A(h, "Thumbnails");
-                    if (R) {
-                      var T = x(R, "sheet"),
-                        j = x(R, "period");
-                      f.thumbnails = {
-                        nPeriod: j,
-                        strTemplate: U(R, "template"),
-                        nSheet: T,
-                        nSheetSeconds: T * j
-                      };
-                    }
+                  !g.bContainsVideo ||
+                    ((B = N(m, "Thumbnails")) &&
+                      ((w = W(B, "sheet")),
+                      (O = W(B, "period")),
+                      (g.thumbnails = {
+                        nPeriod: O,
+                        strTemplate: x(B, "template"),
+                        nSheet: w,
+                        nSheetSeconds: w * O
+                      })));
+                  for (
+                    var j, k = m.getElementsByTagName("Role"), R = 0;
+                    R < k.length;
+                    R++
+                  ) {
+                    (j = x(k[R], "value")) && g.rgRoles.push(j);
                   }
-                  var k = h.getElementsByTagName("Role");
-                  for (O = 0; O < k.length; O++) {
-                    var D;
-                    (D = U(k[O], "value")) && f.rgRoles.push(D);
-                  }
-                  var E = h.getElementsByTagName("SegmentTemplate");
-                  if (0 == E.length)
-                    return Object(V.c)("MPD - Segment Template Missing"), !1;
-                  var I = E[0];
-                  f.segmentTemplate = {
-                    nTimeScale: x(I, "timescale"),
-                    nDuration: x(I, "duration"),
-                    nStartNumber: x(I, "startNumber"),
-                    strMedia: U(I, "media"),
+                  var D = m.getElementsByTagName("SegmentTemplate");
+                  if (0 == D.length)
+                    return Object(G.c)("MPD - Segment Template Missing"), !1;
+                  var E = D[0];
+                  g.segmentTemplate = {
+                    nTimeScale: W(E, "timescale"),
+                    nDuration: W(E, "duration"),
+                    nStartNumber: W(E, "startNumber"),
+                    strMedia: x(E, "media"),
                     strInitialization: ""
                   };
-                  var P = f.segmentTemplate;
+                  var I = g.segmentTemplate;
                   if (
-                    (f.bContainsGame
-                      ? (P.strInitialization = P.strMedia)
-                      : (P.strInitialization = U(I, "initialization")),
+                    (g.bContainsGame
+                      ? (I.strInitialization = I.strMedia)
+                      : (I.strInitialization = x(E, "initialization")),
                     !(
-                      P.nTimeScale &&
-                      P.nDuration &&
-                      P.nStartNumber &&
-                      P.strMedia &&
-                      P.strInitialization
+                      I.nTimeScale &&
+                      I.nDuration &&
+                      I.nStartNumber &&
+                      I.strMedia &&
+                      I.strInitialization
                     ))
                   )
                     return (
-                      Object(V.c)("MPD - Segment Template Data Missing"), !1
+                      Object(G.c)("MPD - Segment Template Data Missing"), !1
                     );
-                  var z = h.getElementsByTagName("Representation");
-                  for (O = 0; O < z.length; O++) {
-                    var G = z[O];
-                    if (!(S = this.ParseRepresentation(G, f))) return !1;
-                    f.rgRepresentations.push(S);
+                  for (
+                    var P = m.getElementsByTagName("Representation"), R = 0;
+                    R < P.length;
+                    R++
+                  ) {
+                    var z = P[R];
+                    if (!(M = this.ParseRepresentation(z, g))) return !1;
+                    g.rgRepresentations.push(M);
                   }
                 }
               }
@@ -13173,7 +13135,7 @@
             }),
             (e.prototype.BUpdate = function(e) {
               var t = new DOMParser().parseFromString(e, "application/xml"),
-                i = N(t);
+                i = V(t);
               if (!i) return !1;
               if (this.IsLiveContent()) {
                 var r = t.getElementsByTagName("Period");
@@ -13184,14 +13146,14 @@
                   n++
                 ) {
                   var a = s[n],
-                    o = U(a, "id"),
+                    o = x(a, "id"),
                     d = this.GetAdaptationByTrackID(o);
                   if (d) {
                     var l = a.getElementsByTagName("SegmentTemplate");
                     if (0 == l.length)
-                      return Object(V.c)("MPD - Segment Template Missing"), !1;
+                      return Object(G.c)("MPD - Segment Template Missing"), !1;
                     var c = l[0];
-                    d.segmentTemplate.strMedia = U(c, "media");
+                    d.segmentTemplate.strMedia = x(c, "media");
                     var u = a.getElementsByTagName("Representation");
                     if (1 < u.length)
                       for (var p = 0; p < u.length; p++) {
@@ -13216,12 +13178,12 @@
                   }
                 }
               }
-              var y = A(i, "Analytics");
+              var y = N(i, "Analytics");
               return (
                 y &&
-                  ((this.m_strStatsLink = U(y, "statslink")),
-                  (this.m_strStalledLink = U(y, "stalledlink")),
-                  (this.m_strEventLogLink = U(y, "eventlink"))),
+                  ((this.m_strStatsLink = x(y, "statslink")),
+                  (this.m_strStalledLink = x(y, "stalledlink")),
+                  (this.m_strEventLogLink = x(y, "eventlink"))),
                 !0
               );
             }),
@@ -13232,8 +13194,7 @@
         (B[(B.Append = 1)] = "Append"),
         (B[(B.Remove = 2)] = "Remove");
       var O,
-        C,
-        R = (function() {
+        C = (function() {
           function e(e, t, i, r) {
             (this.m_callbacks = null),
               (this.m_mpd = null),
@@ -13350,47 +13311,46 @@
               return t;
             }),
             (e.prototype.ChangeRepresentation = function(e) {
-              if (this.m_adaptation.rgRepresentations.indexOf(e) < 0)
-                return null;
-              if (this.m_representation == e) return null;
-              if (
-                (this.ContainsVideo() &&
-                  Object(V.c)(
-                    this.GetDebugName() +
-                      " changing representation to " +
-                      (e.nHeight || 0) +
-                      "p at " +
-                      Math.ceil(e.nBandwidth / 1e3) +
-                      "KB for segment " +
-                      this.m_nNextSegment
-                  ),
-                (this.m_representation = e),
-                (this.m_bNeedInitSegment = !this.ContainsGame()),
-                this.m_stats.SetRepresentation(e),
-                this.ContainsGame())
-              )
-                return e;
-              if (!this.m_sourceBuffer) {
-                var t = e.strMimeType + ";codecs=" + e.strCodecs;
-                (this.m_sourceBuffer = this.m_mediaSource.addSourceBuffer(t)),
-                  Object(V.c)(t),
-                  this.m_listeners.AddEventListener(
-                    this.m_sourceBuffer,
-                    "updateend",
-                    this.OnSourceBufferUpdateEnd
-                  ),
-                  this.m_listeners.AddEventListener(
-                    this.m_sourceBuffer,
-                    "error",
-                    this.OnSourceBufferError
-                  ),
-                  this.m_listeners.AddEventListener(
-                    this.m_sourceBuffer,
-                    "abort",
-                    this.OnSourceBufferAbort
-                  );
-              }
-              return e;
+              return this.m_adaptation.rgRepresentations.indexOf(e) < 0 ||
+                this.m_representation == e
+                ? null
+                : (this.ContainsVideo() &&
+                    Object(G.c)(
+                      this.GetDebugName() +
+                        " changing representation to " +
+                        (e.nHeight || 0) +
+                        "p at " +
+                        Math.ceil(e.nBandwidth / 1e3) +
+                        "KB for segment " +
+                        this.m_nNextSegment
+                    ),
+                  (this.m_representation = e),
+                  (this.m_bNeedInitSegment = !this.ContainsGame()),
+                  this.m_stats.SetRepresentation(e),
+                  this.ContainsGame() ||
+                    this.m_sourceBuffer ||
+                    ((t = e.strMimeType + ";codecs=" + e.strCodecs),
+                    (this.m_sourceBuffer = this.m_mediaSource.addSourceBuffer(
+                      t
+                    )),
+                    Object(G.c)(t),
+                    this.m_listeners.AddEventListener(
+                      this.m_sourceBuffer,
+                      "updateend",
+                      this.OnSourceBufferUpdateEnd
+                    ),
+                    this.m_listeners.AddEventListener(
+                      this.m_sourceBuffer,
+                      "error",
+                      this.OnSourceBufferError
+                    ),
+                    this.m_listeners.AddEventListener(
+                      this.m_sourceBuffer,
+                      "abort",
+                      this.OnSourceBufferAbort
+                    )),
+                  e);
+              var t;
             }),
             (e.prototype.Close = function() {
               this.m_listeners.Unregister(),
@@ -13425,7 +13385,7 @@
             (e.prototype.OnSourceBufferUpdateEnd = function(e) {
               var t = this.m_callbacks.GetCurrentPlayTime(),
                 i = this.GetAmountBufferedInPlayerMS(t);
-              Object(V.c)(
+              Object(G.c)(
                 this.GetDebugName() +
                   " OnSourceBufferUpdateEnd: [playback=" +
                   t +
@@ -13455,16 +13415,16 @@
             (e.prototype.ScheduleNextDownload = function() {
               if (this.m_bNeedInitSegment) this.DownloadNextSegment();
               else if ((this.m_schNextDownload.Cancel(), this.m_xhrDownload))
-                Object(V.c)(
+                Object(G.c)(
                   this.GetDebugName() +
                     " ScheduleNextDownload - download already going"
                 );
               else if (this.m_bSeekInProgress)
-                Object(V.c)(
+                Object(G.c)(
                   this.GetDebugName() + " ScheduleNextDownload - seeking"
                 );
               else if (this.m_nNextSegment > this.GetMaxSegment())
-                Object(V.c)(
+                Object(G.c)(
                   this.GetDebugName() +
                     " ScheduleNextDownload - reached max segment"
                 );
@@ -13481,7 +13441,7 @@
                   })(this.m_mpd, this.m_adaptation, this.m_nNextSegment);
                 if (0 < i)
                   return (
-                    Object(V.c)(
+                    Object(G.c)(
                       this.GetDebugName() +
                         " ScheduleNextDownload - segment in future"
                     ),
@@ -13493,7 +13453,7 @@
                 var r = this.GetAmountBufferedMS(e);
                 if ((1 < t && (r /= t), r < 4e4))
                   return (
-                    Object(V.c)(
+                    Object(G.c)(
                       this.GetDebugName() +
                         " ScheduleNextDownload - download now"
                     ),
@@ -13503,7 +13463,7 @@
                   n = this.GetAmountBufferedInPlayerMS(
                     this.m_callbacks.GetCurrentPlayTime()
                   );
-                Object(V.c)(
+                Object(G.c)(
                   this.GetDebugName() +
                     " ScheduleNextDownload - buffered, schedule later [sleep=" +
                     s +
@@ -13516,40 +13476,37 @@
             }),
             (e.prototype.DownloadNextSegment = function() {
               this.m_schNextDownload.Cancel();
-              var e = "",
-                t = 0;
+              var e,
+                t,
+                i,
+                r,
+                s,
+                n,
+                a,
+                o = "",
+                d = 0;
               if (this.m_bNeedInitSegment)
                 (this.m_bNeedInitSegment = !1),
-                  (e = (function(e, t, i) {
-                    return H(
-                      e + t.segmentTemplate.strInitialization,
-                      i.strID,
-                      0
-                    );
-                  })(
-                    this.m_mpd.GetBaseURL(),
-                    this.m_adaptation,
-                    this.m_representation
-                  )),
-                  (t = 0);
+                  (s = this.m_mpd.GetBaseURL()),
+                  (n = this.m_adaptation),
+                  (a = this.m_representation),
+                  (o = U(s + n.segmentTemplate.strInitialization, a.strID, 0)),
+                  (d = 0);
               else {
                 if (this.m_nNextSegment < 0)
                   return void console.error(
                     "Attempting to download negative segment:",
                     this.m_nNextSegment
                   );
-                (e = (function(e, t, i, r) {
-                  return H(e + t.segmentTemplate.strMedia, i.strID, r);
-                })(
-                  this.m_mpd.GetBaseURL(),
-                  this.m_adaptation,
-                  this.m_representation,
-                  this.m_nNextSegment
-                )),
-                  (t = b(this.m_adaptation)),
+                (e = this.m_mpd.GetBaseURL()),
+                  (t = this.m_adaptation),
+                  (i = this.m_representation),
+                  (r = this.m_nNextSegment),
+                  (o = U(e + t.segmentTemplate.strMedia, i.strID, r)),
+                  (d = b(this.m_adaptation)),
                   this.m_nNextSegment++;
               }
-              this.DownloadSegment(this.m_representation.strID, e, t);
+              this.DownloadSegment(this.m_representation.strID, o, d);
             }),
             (e.prototype.DownloadSegment = function(g, f, b, y) {
               return (
@@ -13578,7 +13535,7 @@
                           "Trying to download another segment while a download is already in flight"
                         ),
                           this.m_schNextDownload.Cancel(),
-                          Object(V.c)("Downloading: " + f),
+                          Object(G.c)("Downloading: " + f),
                           (t = null),
                           (i = performance.now()),
                           (r = M.a.CancelToken.source()),
@@ -13607,7 +13564,7 @@
                       case 3:
                         return (
                           (n = e.sent()),
-                          Object(V.c)("Failed to download segment: " + n),
+                          Object(G.c)("Failed to download segment: " + n),
                           (t = n.response),
                           [3, 4]
                         );
@@ -13637,10 +13594,10 @@
                                     (h = u.frame) &&
                                       (h.pts && h.gamedata && h.gdi
                                         ? h.pts <= p
-                                          ? Object(V.c)("Invalid game pts")
+                                          ? Object(G.c)("Invalid game pts")
                                           : h.gdi != m &&
                                             this.m_rgGameDataFrames.push(h)
-                                        : Object(V.c)("Invalid game data")),
+                                        : Object(G.c)("Invalid game data")),
                                     this.TrimGameDataIfNecessary(),
                                     (this.m_statsGameData = {
                                       nAppID: u.appid,
@@ -13656,7 +13613,7 @@
                                     this.LogDownload(i, l.length),
                                     this.UpdateBuffer(),
                                     (c = l.length / 1e3),
-                                    Object(V.c)(
+                                    Object(G.c)(
                                       "HTTP " +
                                         d +
                                         " (" +
@@ -13675,7 +13632,7 @@
                                   t ? t.status : 444
                                 ),
                                 9e3 < a - y
-                                  ? (Object(V.c)(
+                                  ? (Object(G.c)(
                                       this.GetDebugName() +
                                         " HTTP download failed.. stopping loader: " +
                                         (a - y) +
@@ -13684,7 +13641,7 @@
                                     this.DownloadFailed())
                                   : 410 == d
                                   ? ((this.m_nNumConsecutiveDownloadGones += 1),
-                                    Object(V.c)(
+                                    Object(G.c)(
                                       this.GetDebugName() +
                                         " HTTP download gone.. informing the player: " +
                                         (a - y) +
@@ -13724,10 +13681,10 @@
                     } catch (e) {
                       "QuotaExceededError" === e.name
                         ? ((this.m_eBufferUpdate = F.None),
-                          Object(V.c)(
+                          Object(G.c)(
                             this.GetDebugName() + " Buffer - QuotaExceededError"
                           ))
-                        : Object(V.c)(
+                        : Object(G.c)(
                             this.GetDebugName() + " Buffer - Exception",
                             e
                           );
@@ -13751,7 +13708,7 @@
                       }
                     }
                   }
-                else Object(V.c)("No source buffer?");
+                else Object(G.c)("No source buffer?");
             }),
             (e.prototype.RemoveAllBuffers = function() {
               this.m_rgBufferedSegments = [];
@@ -13794,10 +13751,9 @@
             (e.prototype.Seek = function(e) {
               var t = this.GetBufferedStart(),
                 i = this.GetBufferedEnd(),
-                r = e < t || i < e;
+                r = 0 == t && 0 == i ? !0 : e < t || i < e;
               if (
-                (0 == t && 0 == i && (r = !0),
-                Object(V.c)(
+                (Object(G.c)(
                   this.GetDebugName() +
                     " making an " +
                     (r ? "unbuffered" : "buffered") +
@@ -13810,11 +13766,11 @@
                 var s = y(this.m_adaptation, 1e3 * e);
                 if (
                   ((this.m_nNextSegment = Math.min(s, this.GetMaxSegment())),
-                  Object(V.c)(
+                  Object(G.c)(
                     "Seek To Next Segment: " +
                       this.m_nNextSegment +
                       " at approx. " +
-                      Object(V.d)(
+                      Object(G.d)(
                         ((this.m_nNextSegment - 1) * b(this.m_adaptation)) / 1e3
                       ) +
                       " seconds."
@@ -13887,26 +13843,26 @@
             e
           );
         })(),
-        T = i("kLLr"),
-        j = i("o+8i"),
-        k = (function() {
+        R = i("kLLr"),
+        T = i("o+8i"),
+        j = (function() {
           return function() {
             this.playback_speed = 1;
           };
         })(),
+        k = (function(e) {
+          function t() {
+            return (null !== e && e.apply(this, arguments)) || this;
+          }
+          return Object(v.d)(t, e), t;
+        })(j),
         D = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
           return Object(v.d)(t, e), t;
-        })(k),
-        E = (function(e) {
-          function t() {
-            return (null !== e && e.apply(this, arguments)) || this;
-          }
-          return Object(v.d)(t, e), t;
-        })(k),
-        I = (function() {
+        })(j),
+        E = (function() {
           function e() {
             (this.m_steamIDBroadcast = ""),
               (this.m_steamIDViewer = ""),
@@ -13917,8 +13873,8 @@
               (this.m_strStatsLink = ""),
               (this.m_strStalledLink = ""),
               (this.m_strEventLogLink = ""),
-              (this.m_allTimeSnapshot = new P(0)),
-              (this.m_rgSnapShots = new Array(new P(0))),
+              (this.m_allTimeSnapshot = new I(0)),
+              (this.m_rgSnapShots = new Array(new I(0))),
               (this.m_videoResolution = 0),
               (this.m_audioRate = 0),
               (this.m_audioChannel = 0),
@@ -13941,11 +13897,11 @@
               (this.m_nSegmentDurationMS = 0),
               (this.m_nPlaybackRate = 0),
               (this.m_nTimeToFirstFrameMS = -1),
-              (this.m_fpsMonitor = new G());
+              (this.m_fpsMonitor = new z());
           }
           return (
             (e.prototype.GetBytesReceivedToDisplay = function() {
-              return Object(j.a)(this.m_allTimeSnapshot.m_nBytesReceived, 1);
+              return Object(T.a)(this.m_allTimeSnapshot.m_nBytesReceived, 1);
             }),
             (e.prototype.GetBufferingResolutionToDisplay = function() {
               return this.m_strBufferingVideoResolution;
@@ -13982,17 +13938,17 @@
             (e.prototype.GetBufferedVideoSegmentForDisplay = function(e) {
               return this.m_videoBufferedRanges &&
                 e < this.m_videoBufferedRanges.length
-                ? Object(V.d)(this.m_videoBufferedRanges.start(e)) +
+                ? Object(G.d)(this.m_videoBufferedRanges.start(e)) +
                     " - " +
-                    Object(V.d)(this.m_videoBufferedRanges.end(e))
+                    Object(G.d)(this.m_videoBufferedRanges.end(e))
                 : Object(p.d)("#DASHPlayerStats_VideoNoRangeInformation");
             }),
             (e.prototype.GetBufferedAudioSegmentForDisplay = function(e) {
               return this.m_audioBufferedRanges &&
                 e < this.m_audioBufferedRanges.length
-                ? Object(V.d)(this.m_audioBufferedRanges.start(e)) +
+                ? Object(G.d)(this.m_audioBufferedRanges.start(e)) +
                     " - " +
-                    Object(V.d)(this.m_audioBufferedRanges.end(e))
+                    Object(G.d)(this.m_audioBufferedRanges.end(e))
                 : Object(p.d)("#DASHPlayerStats_AudioNoRangeInformation");
             }),
             (e.prototype.GetBandwidthStatsToDisplay = function() {
@@ -14206,7 +14162,7 @@
                     (this.m_rgSnapShots[
                       this.m_rgSnapShots.length - 1
                     ].m_nStallEvents += 1);
-                  var r = new E();
+                  var r = new D();
                   this.GatherCommonStats(
                     r,
                     t,
@@ -14230,7 +14186,7 @@
                         Math.round(s[a].nDownloadMS) / 1e3);
                   this.SendReportToServer(r, this.m_strStalledLink);
                 } else
-                  Object(V.c)(
+                  Object(G.c)(
                     "DASHStats: Did not find any audio or video loaders"
                   );
               }
@@ -14247,12 +14203,11 @@
                 o < d.length;
                 o++
               ) {
-                var l = d[o];
-                (a = l.ContainsAudio() ? l : a),
-                  (n = l.ContainsVideo() ? l : a),
-                  l.BHasEnoughBuffered(s) &&
-                    ((r = r || l.ContainsAudio()),
-                    (i = i || l.ContainsVideo()));
+                var l = d[o],
+                  a = l.ContainsAudio() ? l : a,
+                  n = l.ContainsVideo() ? l : a;
+                l.BHasEnoughBuffered(s) &&
+                  ((r = r || l.ContainsAudio()), (i = i || l.ContainsVideo()));
               }
               return (r = r || null == a), !i || (i && r) ? n : a;
             }),
@@ -14261,10 +14216,11 @@
                 i = 0;
               if (e.getVideoPlaybackQuality)
                 try {
-                  var r = e.getVideoPlaybackQuality();
-                  (i = r.totalVideoFrames), (t = r.droppedVideoFrames);
+                  var r = e.getVideoPlaybackQuality(),
+                    i = r.totalVideoFrames,
+                    t = r.droppedVideoFrames;
                 } catch (e) {
-                  Object(V.c)(
+                  Object(G.c)(
                     "Browser does not support HTMLVideoElement.getVideoPlaybackQuality()",
                     e.message
                   );
@@ -14280,15 +14236,14 @@
             (e.prototype.LogFrameInfo = function(e) {
               (this.m_allTimeSnapshot.m_nFramesDecoded = e.framesDecoded),
                 (this.m_allTimeSnapshot.m_nFramesDropped = e.framesDropped);
-              var t = this.m_rgSnapShots[this.m_rgSnapShots.length - 1];
-              if (1 == this.m_rgSnapShots.length)
-                (t.m_nFramesDecoded = e.framesDecoded),
-                  (t.m_nFramesDropped = e.framesDropped);
-              else {
-                var i = this.m_rgSnapShots[this.m_rgSnapShots.length - 2];
-                (t.m_nFramesDecoded = e.framesDecoded - i.m_nFramesDecoded),
-                  (t.m_nFramesDropped = e.framesDropped - i.m_nFramesDropped);
-              }
+              var t,
+                i = this.m_rgSnapShots[this.m_rgSnapShots.length - 1];
+              1 == this.m_rgSnapShots.length
+                ? ((i.m_nFramesDecoded = e.framesDecoded),
+                  (i.m_nFramesDropped = e.framesDropped))
+                : ((t = this.m_rgSnapShots[this.m_rgSnapShots.length - 2]),
+                  (i.m_nFramesDecoded = e.framesDecoded - t.m_nFramesDecoded),
+                  (i.m_nFramesDropped = e.framesDropped - t.m_nFramesDropped));
             }),
             (e.prototype.LogBufferDuration = function(e, t) {
               for (
@@ -14326,18 +14281,18 @@
               }
             }),
             (e.prototype.ReportPlayerStats = function(e, t) {
-              if (0 != this.m_strStatsLink.length) {
-                var i = this.ExtractFrameInfo(t);
-                if (
-                  i.framesDecoded != this.m_allTimeSnapshot.m_nFramesDecoded ||
-                  0 !=
-                    this.m_rgSnapShots[this.m_rgSnapShots.length - 1]
-                      .m_nBytesReceived
-                ) {
-                  this.LogFrameInfo(i), this.LogBufferDuration(e, t);
-                  var r = new D(),
-                    s = this.m_rgSnapShots[this.m_rgSnapShots.length - 1];
-                  (r.frames_decoded = s.m_nFramesDecoded),
+              var i, r, s;
+              0 != this.m_strStatsLink.length &&
+                ((i = this.ExtractFrameInfo(t)).framesDecoded !=
+                  this.m_allTimeSnapshot.m_nFramesDecoded ||
+                0 !=
+                  this.m_rgSnapShots[this.m_rgSnapShots.length - 1]
+                    .m_nBytesReceived
+                  ? (this.LogFrameInfo(i),
+                    this.LogBufferDuration(e, t),
+                    (r = new k()),
+                    (s = this.m_rgSnapShots[this.m_rgSnapShots.length - 1]),
+                    (r.frames_decoded = s.m_nFramesDecoded),
                     (r.frames_dropped = s.m_nFramesDropped),
                     (r.bytes_received = s.m_nBytesReceived),
                     (r.seconds_delta = Math.round(
@@ -14368,9 +14323,8 @@
                       s.GetAverageBandwidth()
                     ),
                     this.CreateNewEmptySnapshot(t.videoHeight),
-                    this.SendReportToServer(r, this.m_strStatsLink);
-                } else this.CreateNewEmptySnapshot(t.videoHeight);
-              }
+                    this.SendReportToServer(r, this.m_strStatsLink))
+                  : this.CreateNewEmptySnapshot(t.videoHeight));
             }),
             (e.prototype.SendReportToServer = function(a, o) {
               return Object(v.b)(this, void 0, void 0, function() {
@@ -14389,9 +14343,9 @@
                     i.append("l", t.searchParams.get("l")),
                     i.append("e", t.searchParams.get("e")),
                     i.append("h", t.searchParams.get("h")),
-                    Object(V.c)("CDASHStats Sending Report to Server", a),
+                    Object(G.c)("CDASHStats Sending Report to Server", a),
                     M.a.post(o, i).catch(function(e) {
-                      Object(V.c)("Failed to upload stats: ", e);
+                      Object(G.c)("Failed to upload stats: ", e);
                     }),
                     [2]
                   );
@@ -14400,7 +14354,7 @@
             }),
             (e.prototype.CreateNewEmptySnapshot = function(e) {
               5 <= this.m_rgSnapShots.length && this.m_rgSnapShots.shift(),
-                this.m_rgSnapShots.push(new P(e));
+                this.m_rgSnapShots.push(new I(e));
             }),
             (e.prototype.GatherCommonStats = function(e, t, i, r) {
               (e.steamid = this.m_steamIDViewer),
@@ -14412,7 +14366,7 @@
                 (e.bw_required = i),
                 (e.bw_avg = Math.round(r)),
                 (e.broadcast_accountid = this.m_steamIDBroadcast
-                  ? new T.a(this.m_steamIDBroadcast).GetAccountID()
+                  ? new R.a(this.m_steamIDBroadcast).GetAccountID()
                   : 0),
                 (e.useragent = window.navigator.userAgent),
                 (e.sessionid = m.b.SESSIONID),
@@ -14522,7 +14476,7 @@
             e
           );
         })(),
-        P = (function() {
+        I = (function() {
           function e(e) {
             (this.m_timeMS = Date.now()),
               (this.m_nBytesReceived = 0),
@@ -14565,16 +14519,21 @@
               );
             }),
             (e.prototype.SegmentReceived = function(e, t) {
-              if (((this.m_nBytesReceived += e), !(e < 1024))) {
-                var i = Math.round((8 * e * 1e3) / Math.max(t, 1));
-                0 == this.m_nEntries
-                  ? ((this.m_nSegmentDownloadTimeMinMS = t),
-                    (this.m_nBandwidthMin = i))
-                  : ((this.m_nSegmentDownloadTimeMinMS = Math.min(
-                      t,
-                      this.m_nSegmentDownloadTimeMinMS
-                    )),
-                    (this.m_nBandwidthMin = Math.min(i, this.m_nBandwidthMin))),
+              var i;
+              (this.m_nBytesReceived += e),
+                e < 1024 ||
+                  ((i = Math.round((8 * e * 1e3) / Math.max(t, 1))),
+                  0 == this.m_nEntries
+                    ? ((this.m_nSegmentDownloadTimeMinMS = t),
+                      (this.m_nBandwidthMin = i))
+                    : ((this.m_nSegmentDownloadTimeMinMS = Math.min(
+                        t,
+                        this.m_nSegmentDownloadTimeMinMS
+                      )),
+                      (this.m_nBandwidthMin = Math.min(
+                        i,
+                        this.m_nBandwidthMin
+                      ))),
                   (this.m_nBandwidthMax = Math.max(i, this.m_nBandwidthMax)),
                   (this.m_nSegmentDownloadTimeMaxMS = Math.max(
                     t,
@@ -14582,8 +14541,7 @@
                   )),
                   (this.m_nBandwidthTotal += i),
                   (this.m_nSegmentDownloadTimeTotalMS += t),
-                  (this.m_nEntries += 1);
-              }
+                  (this.m_nEntries += 1));
             }),
             Object(v.c)(
               [s.observable],
@@ -14628,7 +14586,7 @@
             e
           );
         })(),
-        z = (function() {
+        P = (function() {
           function e() {}
           return (
             (e.prototype.reset = function(e, t) {
@@ -14637,7 +14595,7 @@
             e
           );
         })(),
-        G = (function() {
+        z = (function() {
           function e() {
             (this.k_nTestFrequencyMS = 1e3),
               (this.k_nSlidingWindow = 6),
@@ -14716,12 +14674,11 @@
               );
             }),
             (e.prototype.AppendReading = function(e, t) {
-              var i;
-              (i =
+              var i =
                 this.m_rgResultsWindow.length >= this.k_nSlidingWindow
                   ? this.m_rgResultsWindow.shift()
-                  : new z()).reset(e, t),
-                this.m_rgResultsWindow.push(i);
+                  : new P();
+              i.reset(e, t), this.m_rgResultsWindow.push(i);
             }),
             Object(v.c)(
               [s.observable],
@@ -14734,13 +14691,13 @@
             e
           );
         })(),
-        q = i("CdLH");
-      ((C = O = O || {})[(C.HAVE_NOTHING = 0)] = "HAVE_NOTHING"),
-        (C[(C.HAVE_METADATA = 1)] = "HAVE_METADATA"),
-        (C[(C.HAVE_CURRENT_DATA = 2)] = "HAVE_CURRENT_DATA"),
-        (C[(C.HAVE_FUTURE_DATA = 3)] = "HAVE_FUTURE_DATA"),
-        (C[(C.HAVE_ENOUGH_DATA = 4)] = "HAVE_ENOUGH_DATA");
-      var $ = (function() {
+        H = i("CdLH");
+      ((O = {})[(O.HAVE_NOTHING = 0)] = "HAVE_NOTHING"),
+        (O[(O.HAVE_METADATA = 1)] = "HAVE_METADATA"),
+        (O[(O.HAVE_CURRENT_DATA = 2)] = "HAVE_CURRENT_DATA"),
+        (O[(O.HAVE_FUTURE_DATA = 3)] = "HAVE_FUTURE_DATA"),
+        (O[(O.HAVE_ENOUGH_DATA = 4)] = "HAVE_ENOUGH_DATA");
+      var q = (function() {
         function e(e, t) {
           void 0 === t && (t = !1),
             (this.m_elVideo = null),
@@ -14766,7 +14723,7 @@
             (this.m_schCaptureDisplayStatsTrigger = new a.b()),
             (this.m_videoRepSelected = null),
             (this.m_nAudioRepresentationIndex = 0),
-            (this.m_stats = new I()),
+            (this.m_stats = new E()),
             (this.m_bClosing = !1),
             (this.m_hlsTimeOffset = 0),
             (this.m_bUserPlayChoice = !0),
@@ -14781,7 +14738,7 @@
             var t =
               (e ? new Date(e).getTime() : Date.now()) -
               this.m_mpd.GetAvailabilityStartTime().getTime();
-            this.m_mpd.StartLiveContentNow(t), Object(V.c)("server time: " + e);
+            this.m_mpd.StartLiveContentNow(t), Object(G.c)("server time: " + e);
           }),
           (e.prototype.PlayMPD = function(r, s) {
             return Object(v.b)(this, void 0, void 0, function() {
@@ -14946,28 +14903,25 @@
                   case 4:
                     return e.sent(), [3, 5];
                   case 5:
-                    return (
-                      (this.m_xhrUpdateMPD = null),
-                      this.m_bClosing
-                        ? [2, null]
-                        : i && 200 == i.status
-                        ? [2, i]
-                        : i && 410 == i.status
-                        ? (this.CloseWithError(
-                            "playbackerror",
-                            "Failed to download MPD: 410 Gone"
-                          ),
-                          [2, null])
-                        : (Object(V.c)(
-                            "Failed to download, will retry: " + this.m_strMPD
-                          ),
-                          [4, Object(q.f)(200)])
-                    );
+                    return ((this.m_xhrUpdateMPD = null), this.m_bClosing)
+                      ? [2, null]
+                      : i && 200 == i.status
+                      ? [2, i]
+                      : i && 410 == i.status
+                      ? (this.CloseWithError(
+                          "playbackerror",
+                          "Failed to download MPD: 410 Gone"
+                        ),
+                        [2, null])
+                      : (Object(G.c)(
+                          "Failed to download, will retry: " + this.m_strMPD
+                        ),
+                        [4, Object(H.f)(200)]);
                   case 6:
                     return e.sent(), [3, 1];
                   case 7:
                     return (
-                      Object(V.c)("Failed to download: " + this.m_strMPD),
+                      Object(G.c)("Failed to download: " + this.m_strMPD),
                       [2, null]
                     );
                 }
@@ -14982,9 +14936,8 @@
                   case 0:
                     return [4, this.DownloadMPD()];
                   case 1:
-                    return (
-                      (t = e.sent()) &&
-                        (this.m_mpd.BUpdate(t.data)
+                    return (t = e.sent())
+                      ? (this.m_mpd.BUpdate(t.data)
                           ? (this.CalcVideoStartRelativeToSystemClock(
                               t.headers.date
                             ),
@@ -15001,9 +14954,9 @@
                           : this.CloseWithError(
                               "playbackerror",
                               "Failed to parse on Update the MPD file"
-                            )),
-                      [2]
-                    );
+                            ),
+                        [2])
+                      : [2];
                 }
               });
             });
@@ -15011,7 +14964,7 @@
           (e.prototype.CloseWithError = function(e) {
             for (var t = [], i = 1; i < arguments.length; i++)
               t[i - 1] = arguments[i];
-            this.Close(), V.c.apply(void 0, t);
+            this.Close(), G.c.apply(void 0, t);
           }),
           (e.prototype.BCreateLoaders = function() {
             var e = this.m_mpd.GetPeriods();
@@ -15021,25 +14974,23 @@
               (this.m_strAudioAdaptationID = ""),
               (this.m_strGameAdaptationID = "");
             for (var i = 0, r = t.rgAdaptationSets; i < r.length; i++) {
-              var s = r[i],
-                n = null;
-              if (
-                (!this.m_strVideoAdaptationID &&
-                  s.bContainsVideo &&
-                  f(s) &&
-                  ((n = s), (this.m_strVideoAdaptationID = s.strID)),
+              var s,
+                n = r[i],
+                a = null;
+              !this.m_strVideoAdaptationID &&
+                n.bContainsVideo &&
+                f(n) &&
+                ((a = n), (this.m_strVideoAdaptationID = n.strID)),
                 !this.m_strAudioAdaptationID &&
-                  s.bContainsAudio &&
-                  f(s) &&
-                  ((n = s), (this.m_strAudioAdaptationID = s.strID)),
+                  n.bContainsAudio &&
+                  f(n) &&
+                  ((a = n), (this.m_strAudioAdaptationID = n.strID)),
                 !this.m_strGameAdaptationID &&
-                  s.bContainsGame &&
-                  ((n = s), (this.m_strGameAdaptationID = s.strID)),
-                n)
-              ) {
-                var a = new R(this, this.m_mpd, n, this.m_stats);
-                this.m_rgLoaders.push(a);
-              }
+                  n.bContainsGame &&
+                  ((a = n), (this.m_strGameAdaptationID = n.strID)),
+                a &&
+                  ((s = new C(this, this.m_mpd, a, this.m_stats)),
+                  this.m_rgLoaders.push(s));
             }
             return 0 < this.m_strVideoAdaptationID.length;
           }),
@@ -15102,17 +15053,17 @@
               );
           }),
           (e.prototype.OnMediaSourceOpen = function(e) {
-            Object(V.c)("OnMediaSourceOpen");
+            Object(G.c)("OnMediaSourceOpen");
             for (var t = 0, i = this.m_rgLoaders; t < i.length; t++) {
               i[t].SetMediaSource(this.m_mediaSource);
             }
             this.BeginPlayback();
           }),
           (e.prototype.OnMediaSourceEnded = function(e) {
-            Object(V.c)("OnMediaSourceEnded");
+            Object(G.c)("OnMediaSourceEnded");
           }),
           (e.prototype.OnMediaSourceClose = function(e) {
-            Object(V.c)("OnMediaSourceClose");
+            Object(G.c)("OnMediaSourceClose");
           }),
           (e.prototype.OnVideoWaiting = function(e) {
             if (
@@ -15136,7 +15087,7 @@
                   ++r
                 )
                   if (
-                    (Object(V.c)(
+                    (Object(G.c)(
                       "OnVideoWaiting buffer " +
                         r +
                         " start:" +
@@ -15149,54 +15100,46 @@
                     i.start(r) <= t && t <= i.end(r))
                   )
                     return (
-                      Object(V.c)(
+                      Object(G.c)(
                         "OnVideoWaiting - time splitting, jumping to buffer " +
                           r
                       ),
                       void this.Seek(i.start(r))
                     );
-              if (
-                (this.m_stats.ReportVideoStalled(
-                  this.m_rgLoaders,
-                  this.m_elVideo
-                ),
-                null === this.m_videoRepSelected)
-              ) {
-                var s = !0,
-                  n = this.GetVideoLoader();
-                if (n) {
-                  var a = this.m_mpd.GetLowestRepresentation(
-                    this.GetCurrentVideoAdaptation().strID
-                  );
-                  a &&
-                    !n.BIsCurrentRepresentation(a) &&
-                    (n.ChangeRepresentation(a),
-                    Object(V.c)(
-                      "OnVideoWaiting - Stalled, forced restart download at resolution: " +
-                        a.nWidth +
+              var s, n, a;
+              this.m_stats.ReportVideoStalled(this.m_rgLoaders, this.m_elVideo),
+                null === this.m_videoRepSelected
+                  ? ((s = !0),
+                    (n = this.GetVideoLoader()) &&
+                      ((a = this.m_mpd.GetLowestRepresentation(
+                        this.GetCurrentVideoAdaptation().strID
+                      )) &&
+                        !n.BIsCurrentRepresentation(a) &&
+                        (n.ChangeRepresentation(a),
+                        Object(G.c)(
+                          "OnVideoWaiting - Stalled, forced restart download at resolution: " +
+                            a.nWidth +
+                            "x" +
+                            a.nHeight +
+                            "@" +
+                            a.nFrameRate +
+                            " instead"
+                        ),
+                        (s = !1)),
+                      this.Seek(this.m_elVideo.currentTime)),
+                    s &&
+                      Object(G.c)(
+                        "OnVideoWaiting - Stalled, already at lowest resolution. No action taken. BHasLoader: " +
+                          (null != n)
+                      ))
+                  : Object(G.c)(
+                      "OnVideoWaiting - Stalled, user explicitly chose a resolution: " +
+                        this.m_videoRepSelected.nWidth +
                         "x" +
-                        a.nHeight +
+                        this.m_videoRepSelected.nHeight +
                         "@" +
-                        a.nFrameRate +
-                        " instead"
-                    ),
-                    (s = !1)),
-                    this.Seek(this.m_elVideo.currentTime);
-                }
-                s &&
-                  Object(V.c)(
-                    "OnVideoWaiting - Stalled, already at lowest resolution. No action taken. BHasLoader: " +
-                      (null != n)
-                  );
-              } else
-                Object(V.c)(
-                  "OnVideoWaiting - Stalled, user explicitly chose a resolution: " +
-                    this.m_videoRepSelected.nWidth +
-                    "x" +
-                    this.m_videoRepSelected.nHeight +
-                    "@" +
-                    this.m_videoRepSelected.nFrameRate
-                );
+                        this.m_videoRepSelected.nFrameRate
+                    );
             }
           }),
           (e.prototype.OnVideoPause = function(e) {
@@ -15211,12 +15154,12 @@
             this.m_elVideo &&
               i &&
               (t = i.GetAmountBufferedInPlayerMS(this.m_elVideo.currentTime)),
-              Object(V.c)(
+              Object(G.c)(
                 "DebugMessage - Stats: " + e.type + " BufferedMS: " + t
               );
           }),
           (e.prototype.OnVideoError = function(e) {
-            Object(V.c)("OnVideoError");
+            Object(G.c)("OnVideoError");
           }),
           (e.prototype.OnVideoCanPlay = function(e) {
             this.m_bIsBuffering ||
@@ -15236,28 +15179,26 @@
               : this.m_elVideo.currentTime;
           }),
           (e.prototype.OnVideoTimeUpdate = function() {
-            if (this.m_bUserLiveEdgeChoice && this.IsLiveContent()) {
-              var e = this.GetBufferedLiveEdgeTime();
-              if (
-                1 == this.m_elVideo.playbackRate &&
-                this.m_elVideo.currentTime <= e - 4.5 &&
-                this.BIsPlayerBufferedBetween(this.m_elVideo.currentTime, e)
-              ) {
-                var t = e - this.m_elVideo.currentTime;
-                (this.m_elVideo.playbackRate = 1.1),
-                  Object(V.c)(
+            var e, t;
+            this.m_bUserLiveEdgeChoice &&
+              this.IsLiveContent() &&
+              ((e = this.GetBufferedLiveEdgeTime()),
+              1 == this.m_elVideo.playbackRate &&
+              this.m_elVideo.currentTime <= e - 4.5 &&
+              this.BIsPlayerBufferedBetween(this.m_elVideo.currentTime, e)
+                ? ((t = e - this.m_elVideo.currentTime),
+                  (this.m_elVideo.playbackRate = 1.1),
+                  Object(G.c)(
                     "User is behind by " +
                       t.toFixed(2) +
                       " seconds, increasing playback speed to catch-up to live edge."
-                  );
-              } else
-                1.1 == this.m_elVideo.playbackRate &&
+                  ))
+                : 1.1 == this.m_elVideo.playbackRate &&
                   this.m_elVideo.currentTime >= e - 1 &&
                   ((this.m_elVideo.playbackRate = 1),
-                  Object(V.c)(
+                  Object(G.c)(
                     "User is caught up, returning to normal playrate"
-                  ));
-            }
+                  )));
           }),
           (e.prototype.BIsPlayerBufferedBetween = function(e, t) {
             return (
@@ -15271,14 +15212,13 @@
           }),
           (e.prototype.GetAvailableVideoStartTime = function() {
             if (!this.m_mpd) return 0;
-            var e = 0;
-            if (this.IsLiveContent()) {
-              var t = Math.floor(this.m_mpd.GetDurationSinceStarted() / 1e3),
-                i = this.GetBufferedLiveEdgeTime(),
-                r = this.m_mpd.GetTimeShiftBufferDepth();
-              e = o.a(t - r + 10, 0, i);
-            } else e = this.m_mpd.GetStartTime();
-            return e;
+            var e, t, i;
+            return this.IsLiveContent()
+              ? ((e = Math.floor(this.m_mpd.GetDurationSinceStarted() / 1e3)),
+                (t = this.GetBufferedLiveEdgeTime()),
+                (i = this.m_mpd.GetTimeShiftBufferDepth()),
+                o.a(e - i + 10, 0, t))
+              : this.m_mpd.GetStartTime();
           }),
           (e.prototype.GetBufferedLiveEdgeTime = function() {
             if (!this.m_mpd) return 0;
@@ -15312,7 +15252,7 @@
             return this.m_elVideo.paused ? 0 : this.m_elVideo.playbackRate;
           }),
           (e.prototype.OnSegmentDownloaded = function(e) {
-            Object(V.c)(e.GetDebugName() + " OnSegmentDownloaded"),
+            Object(G.c)(e.GetDebugName() + " OnSegmentDownloaded"),
               this.UpdateVideoRepresentation(this.m_videoRepSelected),
               this.OnVideoBufferProgress(),
               e == this.GetVideoLoader() &&
@@ -15374,7 +15314,7 @@
                   this.GetCurrentPlayTime() +
                     b(this.GetCurrentVideoAdaptation()) / 1e3
                 )
-              : (Object(V.c)(
+              : (Object(G.c)(
                   "OnSegmentDownloadGone: too many consecutive 'gone', erroring the download: " +
                     e.GetNumConsecutiveDownloadGones()
                 ),
@@ -15418,58 +15358,60 @@
             }
           }),
           (e.prototype.BeginPlayback = function() {
-            var e = 0;
-            if (this.IsLiveContent()) {
-              var t = b(this.GetCurrentVideoAdaptation()),
-                i = 1e3 * this.m_mpd.GetMinBufferTime(),
-                r = Math.max(t, i);
-              this.SetTrackBufferMS(r),
-                (e = this.GetBufferedLiveEdgeTime()),
-                Object(V.c)(
-                  "Begin playback of live content [this.buffer=" +
-                    this.m_nTrackBufferMS +
-                    "][nStartTime=" +
-                    e +
-                    "]"
-                );
-            } else
-              this.SetTrackBufferMS(8e3),
-                (e = 0),
-                Object(V.c)(
-                  "Begin playback of non-live content [this.buffer=" +
-                    this.m_nTrackBufferMS +
-                    "][nStartTime=" +
-                    e +
-                    "]"
-                );
+            var e,
+              t,
+              i = 0;
             if (
-              (Object(V.c)("Starting playback at " + e),
+              (this.IsLiveContent()
+                ? ((a = b(this.GetCurrentVideoAdaptation())),
+                  (e = 1e3 * this.m_mpd.GetMinBufferTime()),
+                  (t = Math.max(a, e)),
+                  this.SetTrackBufferMS(t),
+                  (i = this.GetBufferedLiveEdgeTime()),
+                  Object(G.c)(
+                    "Begin playback of live content [this.buffer=" +
+                      this.m_nTrackBufferMS +
+                      "][nStartTime=" +
+                      i +
+                      "]"
+                  ))
+                : (this.SetTrackBufferMS(8e3),
+                  (i = 0),
+                  Object(G.c)(
+                    "Begin playback of non-live content [this.buffer=" +
+                      this.m_nTrackBufferMS +
+                      "][nStartTime=" +
+                      i +
+                      "]"
+                  )),
+              Object(G.c)("Starting playback at " + i),
               !this.m_bUseHLSManifest)
             )
               for (
-                var s = this.PickStartingVideoRepresentation(),
-                  n = 0,
-                  a = this.m_rgLoaders;
-                n < a.length;
-                n++
+                var r = this.PickStartingVideoRepresentation(),
+                  s = 0,
+                  n = this.m_rgLoaders;
+                s < n.length;
+                s++
               ) {
-                var o = a[n];
-                if (o.ContainsVideo()) {
-                  o.ChangeRepresentation(s);
-                  t = b(o.GetAdaptation());
-                  this.m_schFirstFrameThrottler.Schedule(
-                    t / 2,
-                    this.VerifyFirstSegementDownloadProgress
-                  );
-                } else if (o.ContainsAudio() || o.ContainsGame()) {
-                  var d =
-                    0 < o.GetAdaptation().rgRepresentations.length
-                      ? o.GetAdaptation().rgRepresentations[0]
-                      : null;
-                  o.ChangeRepresentation(d);
-                }
+                var a,
+                  o,
+                  d = n[s];
+                d.ContainsVideo()
+                  ? (d.ChangeRepresentation(r),
+                    (a = b(d.GetAdaptation())),
+                    this.m_schFirstFrameThrottler.Schedule(
+                      a / 2,
+                      this.VerifyFirstSegementDownloadProgress
+                    ))
+                  : (d.ContainsAudio() || d.ContainsGame()) &&
+                    ((o =
+                      0 < d.GetAdaptation().rgRepresentations.length
+                        ? d.GetAdaptation().rgRepresentations[0]
+                        : null),
+                    d.ChangeRepresentation(o));
               }
-            this.Seek(e),
+            this.Seek(i),
               this.GetGameLoader() &&
                 this.m_schGameDataEventTrigger.Schedule(
                   500,
@@ -15477,29 +15419,26 @@
                 );
           }),
           (e.prototype.VerifyFirstSegementDownloadProgress = function() {
-            var e = this.GetVideoLoader();
-            if (
-              null === this.m_videoRepSelected &&
-              e &&
-              e.GetDownloadHistory().length <= 1 &&
-              0 < e.GetActiveDownloads() &&
-              e.GetActiveDownloadProgress() < 0.55
-            ) {
-              var t = this.DetermineBestVideoRepresentation();
+            var e,
+              t = this.GetVideoLoader();
+            null === this.m_videoRepSelected &&
               t &&
-                !e.BIsCurrentRepresentation(t) &&
-                (e.ChangeRepresentation(t),
-                e.ForceRestartDownload(),
-                Object(V.c)(
+              t.GetDownloadHistory().length <= 1 &&
+              0 < t.GetActiveDownloads() &&
+              t.GetActiveDownloadProgress() < 0.55 &&
+              ((e = this.DetermineBestVideoRepresentation()) &&
+                !t.BIsCurrentRepresentation(e) &&
+                (t.ChangeRepresentation(e),
+                t.ForceRestartDownload(),
+                Object(G.c)(
                   "Video download progressing too slowly, choosing " +
-                    t.nWidth +
+                    e.nWidth +
                     "x" +
-                    t.nHeight +
+                    e.nHeight +
                     "@" +
-                    t.nFrameRate +
+                    e.nFrameRate +
                     " instead"
-                ));
-            }
+                )));
           }),
           (e.prototype.PickStartingVideoRepresentation = function() {
             var e = this.GetVideoLoader();
@@ -15523,60 +15462,62 @@
           }),
           (e.prototype.DetermineBestVideoRepresentation = function() {
             for (
-              var e = this.GetVideoLoader(),
-                t = this.GetAudioLoader(),
-                i = t && t != e ? t.GetEstimatedAudioRate() : 0,
-                r = this.GetAvgLoaderDownloadRate(),
-                s = e.GetRepresentationsCount() - 1,
-                n = e.GetAdaptation().rgRepresentations[s],
-                a = s - 1;
-              0 <= a;
-              a--
+              var e,
+                t = this.GetVideoLoader(),
+                i = this.GetAudioLoader(),
+                r = i && i != t ? i.GetEstimatedAudioRate() : 0,
+                s = this.GetAvgLoaderDownloadRate(),
+                n = t.GetRepresentationsCount() - 1,
+                a = t.GetAdaptation().rgRepresentations[n],
+                o = n - 1;
+              0 <= o;
+              o--
             ) {
-              var o = e.GetAdaptation().rgRepresentations[a],
-                d = (o.nBandwidth + i) * this.m_elVideo.playbackRate * 1.15;
-              if (r < d)
-                Object(V.c)(
+              var d = t.GetAdaptation().rgRepresentations[o],
+                l = (d.nBandwidth + r) * this.m_elVideo.playbackRate * 1.15;
+              if (s < l)
+                Object(G.c)(
                   "Video select: Skipping " +
-                    a +
+                    o +
                     " due to rate: [avg=" +
-                    r +
+                    s +
                     "][required=" +
-                    d +
+                    l +
                     "]"
                 );
               else {
-                var l = o.nFrameRate || 0;
-                if (this.IsLiveContent() && 30 < l) {
-                  var c = this.m_stats.GetFPSMonitor();
+                var c = d.nFrameRate || 0;
+                if (this.IsLiveContent() && 30 < c) {
+                  var u = this.m_stats.GetFPSMonitor();
                   if (
-                    c.BIsDroppingFrames() ||
-                    (c.BHasCurrentFPS() && Math.ceil(c.GetCurrentFPS()) < 29)
+                    u.BIsDroppingFrames() ||
+                    (u.BHasCurrentFPS() && Math.ceil(u.GetCurrentFPS()) < 29)
                   ) {
-                    Object(V.c)(
+                    Object(G.c)(
                       "Video select: Skipping " +
-                        a +
+                        o +
                         " due to dropping frames and high FPS representation: [fps:" +
-                        l +
+                        c +
                         "]"
                     );
                     continue;
                   }
                 }
-                if (0 < this.m_nLimitFPS && l > this.m_nLimitFPS)
-                  Object(V.c)(
-                    "Video select: Skipping " + a + " due to frame rate limit"
+                if (0 < this.m_nLimitFPS && c > this.m_nLimitFPS)
+                  Object(G.c)(
+                    "Video select: Skipping " + o + " due to frame rate limit"
                   );
                 else {
-                  var u = n.nHeight || 0,
-                    p = o.nHeight || 0,
-                    m = this.GetVideoPlayerHeight();
-                  if (0 < m && 0 < u) if (J(m) < p) break;
-                  n = o;
+                  var p = a.nHeight || 0,
+                    m = d.nHeight || 0,
+                    h = this.GetVideoPlayerHeight();
+                  if (0 < h && 0 < p)
+                    if (((e = h) < 360 ? 480 : e < 480 ? 720 : 4320) < m) break;
+                  a = d;
                 }
               }
             }
-            return n;
+            return a;
           }),
           (e.prototype.UpdateVideoRepresentation = function(e) {
             if (e && this.m_videoRepSelected == e) return null;
@@ -15631,22 +15572,21 @@
             return 0 == t ? 0 : e / t;
           }),
           (e.prototype.GameDataEventTrigger = function() {
-            var e = this.GetGameLoader();
-            if (e) {
-              var t = e.GetGameDataFrames(),
-                i = -1;
-              if (0 <= (i = t.length - 1)) {
-                var r = t[i];
-                r.pts != this.m_nGameDataLastFramePTS &&
-                  ((this.m_nGameDataLastFramePTS = r.pts),
-                  (r.gamedata.appid = e.GetLatestGameDataFrameAppID()),
-                  this.DispatchEvent("valve-gamedataupdate", r));
-              }
+            var e,
+              t,
+              i,
+              r = this.GetGameLoader();
+            r &&
+              ((t = -1),
+              0 <= (t = (e = r.GetGameDataFrames()).length - 1) &&
+                ((i = e[t]).pts != this.m_nGameDataLastFramePTS &&
+                  ((this.m_nGameDataLastFramePTS = i.pts),
+                  (i.gamedata.appid = r.GetLatestGameDataFrameAppID()),
+                  this.DispatchEvent("valve-gamedataupdate", i))),
               this.m_schGameDataEventTrigger.Schedule(
                 500,
                 this.GameDataEventTrigger
-              );
-            }
+              ));
           }),
           (e.prototype.DispatchEvent = function(e, t) {
             void 0 === t && (t = null);
@@ -15746,19 +15686,19 @@
             );
           }),
           (e.prototype.SetVideoRepresentation = function(e) {
-            var t = !0,
-              i = this.GetVideoLoader();
-            if (e && "auto" != e.id) {
-              var r = i.GetRepresentationByID(e.id);
-              r &&
-                ((t = !1),
+            var t,
+              i = !0,
+              r = this.GetVideoLoader();
+            !e ||
+              "auto" == e.id ||
+              ((t = r.GetRepresentationByID(e.id)) &&
+                ((i = !1),
                 (null !== this.m_videoRepSelected &&
-                  this.m_videoRepSelected.strID == r.strID) ||
-                  ((this.m_videoRepSelected = r),
-                  i.ChangeRepresentation(r),
-                  this.Seek(this.GetCurrentPlayTime())));
-            }
-            t && (this.m_videoRepSelected = null);
+                  this.m_videoRepSelected.strID == t.strID) ||
+                  ((this.m_videoRepSelected = t),
+                  r.ChangeRepresentation(t),
+                  this.Seek(this.GetCurrentPlayTime())))),
+              i && (this.m_videoRepSelected = null);
           }),
           (e.prototype.GetThumbnailForTimestamp = function(e) {
             try {
@@ -15820,10 +15760,9 @@
           e
         );
       })();
-      function J(e) {
-        return e < 360 ? 480 : e < 480 ? 720 : 4320;
-      }
-      var X = (function() {
+      var $,
+        J,
+        X = (function() {
           function e(e) {
             (this.m_elVideo = null),
               (this.m_peerConnection = null),
@@ -15832,7 +15771,7 @@
               (this.m_bFirstPlay = !0),
               (this.m_bStatsViewVisible = !1),
               (this.m_schCaptureDisplayStatsTrigger = new a.b()),
-              (this.m_stats = new I()),
+              (this.m_stats = new E()),
               (this.m_elVideo = e);
           }
           return (
@@ -15879,37 +15818,38 @@
                             i.OnWebRTCConnectionRetry());
                     }.bind(this)),
                     (this.m_peerConnection.onicecandidate = function(e) {
-                      if (e.candidate) {
-                        var t = new FormData();
-                        t.append("broadcaststeamid", i.m_strBroadcastSteamID),
-                          t.append("webrtc_session_id", i.m_ulWebRTCSessionID),
-                          t.append("sdp_mid", e.candidate.sdpMid),
-                          t.append(
-                            "sdp_mline_index",
-                            String(e.candidate.sdpMLineIndex)
-                          ),
-                          t.append("candidate", e.candidate.candidate),
-                          M.a
-                            .post(
-                              m.b.CHAT_BASE_URL +
-                                "broadcast/addbroadcastwebrtccandidate",
-                              t
-                            )
-                            .then(function(e) {
-                              var t = e.data;
-                              (t.success && 1 == t.success) ||
-                                console.log(
-                                  "Failed to add a WebRTC session ICE candidate: " +
-                                    String(t.success)
-                                );
-                            })
-                            .catch(function(e) {
-                              return console.log(
-                                "Failed to add a WebRTC session ICE candidate" +
-                                  e
+                      var t;
+                      e.candidate &&
+                        ((t = new FormData()).append(
+                          "broadcaststeamid",
+                          i.m_strBroadcastSteamID
+                        ),
+                        t.append("webrtc_session_id", i.m_ulWebRTCSessionID),
+                        t.append("sdp_mid", e.candidate.sdpMid),
+                        t.append(
+                          "sdp_mline_index",
+                          String(e.candidate.sdpMLineIndex)
+                        ),
+                        t.append("candidate", e.candidate.candidate),
+                        M.a
+                          .post(
+                            m.b.CHAT_BASE_URL +
+                              "broadcast/addbroadcastwebrtccandidate",
+                            t
+                          )
+                          .then(function(e) {
+                            var t = e.data;
+                            (t.success && 1 == t.success) ||
+                              console.log(
+                                "Failed to add a WebRTC session ICE candidate: " +
+                                  String(t.success)
                               );
-                            });
-                      }
+                          })
+                          .catch(function(e) {
+                            return console.log(
+                              "Failed to add a WebRTC session ICE candidate" + e
+                            );
+                          }));
                     }.bind(this)),
                     (this.m_peerConnection.ontrack = function(e) {
                       "video" === e.track.kind &&
@@ -16232,29 +16172,19 @@
           );
         })(),
         Y = i("Wjsq");
-      i.d(t, "b", function() {
-        return K;
-      }),
-        i.d(t, "c", function() {
-          return Z;
-        }),
-        i.d(t, "a", function() {
-          return ae;
-        });
-      var K, Q;
-      ((Q = K = K || {})[(Q.None = 0)] = "None"),
-        (Q[(Q.Loading = 1)] = "Loading"),
-        (Q[(Q.Ready = 2)] = "Ready"),
-        (Q[(Q.Error = 3)] = "Error");
-      var Z,
-        ee,
-        te = (function() {
+      ((J = $ = $ || {})[(J.None = 0)] = "None"),
+        (J[(J.Loading = 1)] = "Loading"),
+        (J[(J.Ready = 2)] = "Ready"),
+        (J[(J.Error = 3)] = "Error");
+      var K,
+        Q,
+        Z = (function() {
           function e() {
             (this.m_steamIDBroadcast = ""),
               (this.m_ulBroadcastID = ""),
               (this.m_ulViewerToken = ""),
               (this.m_bWebRTC = !1),
-              (this.m_eWatchState = K.None),
+              (this.m_eWatchState = $.None),
               (this.m_strStateDescription = ""),
               (this.m_rgVideos = []),
               (this.m_schManifestTimeout = new a.b()),
@@ -16265,7 +16195,7 @@
               void 0 === t && (t = ""),
                 (this.m_eWatchState = e),
                 (this.m_strStateDescription = t),
-                e == K.Error && console.log(this.m_strStateDescription);
+                e == $.Error && console.log(this.m_strStateDescription);
             }),
             Object(v.c)([s.observable], e.prototype, "m_ulBroadcastID", void 0),
             Object(v.c)([s.observable], e.prototype, "m_eWatchState", void 0),
@@ -16279,7 +16209,7 @@
             e
           );
         })(),
-        ie = (function() {
+        ee = (function() {
           function e(e) {
             (this.m_steamIDBroadcast = ""),
               (this.m_strTitle = ""),
@@ -16307,9 +16237,9 @@
             e
           );
         })(),
-        re = (function() {
+        te = (function() {
           function e() {
-            (this.m_eWatchState = K.None),
+            (this.m_eWatchState = $.None),
               (this.m_strStateDescription = ""),
               (this.m_rgVideos = []);
           }
@@ -16318,7 +16248,7 @@
               void 0 === t && (t = ""),
                 (this.m_eWatchState = e),
                 (this.m_strStateDescription = t),
-                e == K.Error && console.log(this.m_strStateDescription);
+                e == $.Error && console.log(this.m_strStateDescription);
             }),
             Object(v.c)([s.observable], e.prototype, "m_eWatchState", void 0),
             Object(v.c)(
@@ -16331,7 +16261,7 @@
             e
           );
         })(),
-        se = (function() {
+        ie = (function() {
           function e() {
             (this.m_mapBroadcasts = new Map()),
               (this.m_mapClips = new Map()),
@@ -16349,10 +16279,10 @@
             (e.prototype.GetBroadcastState = function(e) {
               if (e.IsBroadcastClip()) {
                 var t = this.m_mapClips.get(e.GetBroadcastClipID());
-                return t ? t.m_eWatchState : K.None;
+                return t ? t.m_eWatchState : $.None;
               }
               var i = this.m_mapBroadcasts.get(e.GetBroadcastSteamID());
-              return i ? i.m_eWatchState : K.None;
+              return i ? i.m_eWatchState : $.None;
             }),
             (e.prototype.GetBroadcastStateDescription = function(e) {
               if (e.IsBroadcastClip()) {
@@ -16367,15 +16297,15 @@
                 n = this.m_broadcastSettings,
                 a = n.nVolume,
                 o = n.bMuted,
-                d = new ne(e, a, o, i);
+                d = new re(e, a, o, i);
               return (
                 d.SetBroadcastSteamID(t),
                 s.m_rgVideos.push(d),
                 (s.m_bWebRTC = r),
-                Object(V.a)() ||
-                  Object(V.b)() ||
+                Object(G.a)() ||
+                  Object(G.b)() ||
                   s.SetState(
-                    K.Error,
+                    $.Error,
                     Object(p.d)("#BroadcastWatch_MinBrowser")
                   ),
                 d
@@ -16386,14 +16316,14 @@
                 s = this.m_broadcastSettings,
                 n = s.nVolume,
                 a = s.bMuted,
-                o = new ne(e, n, a, i);
+                o = new re(e, n, a, i);
               return (
                 o.SetBroadcastClipID(t),
                 r.m_rgVideos.push(o),
-                Object(V.a)() ||
-                  Object(V.b)() ||
+                Object(G.a)() ||
+                  Object(G.b)() ||
                   r.SetState(
-                    K.Error,
+                    $.Error,
                     Object(p.d)("#BroadcastWatch_MinBrowser")
                   ),
                 o
@@ -16405,9 +16335,9 @@
                 var t = this.m_mapClips.get(e.GetBroadcastClipID());
                 if (!t) return;
                 this.SetActiveVideo(e),
-                  t.m_eWatchState == K.None
+                  t.m_eWatchState == $.None
                     ? this.GetClipManifest(t, e.GetWatchLocation())
-                    : t.m_eWatchState == K.Ready && e.StartClip(t);
+                    : t.m_eWatchState == $.Ready && e.StartClip(t);
               } else {
                 console.log(
                   "Starting broadcast for " + e.GetBroadcastSteamID()
@@ -16415,9 +16345,9 @@
                 var i = this.m_mapBroadcasts.get(e.GetBroadcastSteamID());
                 if (!i) return;
                 this.SetActiveVideo(e),
-                  i.m_eWatchState == K.None
+                  i.m_eWatchState == $.None
                     ? this.GetBroadcastManifest(i, e.GetWatchLocation())
-                    : i.m_eWatchState == K.Ready && e.StartBroadcast(i);
+                    : i.m_eWatchState == $.Ready && e.StartBroadcast(i);
               }
             }),
             (e.prototype.SetActiveVideo = function(s) {
@@ -16513,18 +16443,19 @@
                   delete this.m_broadcastInfos[e.m_steamIDBroadcast]);
             }),
             (e.prototype.GetOrCreateBroadcastInfo = function(e) {
-              if (!this.m_broadcastInfos[e]) {
-                var t = new ie(e);
-                this.m_broadcastInfos[e] = t;
-              }
-              return this.m_broadcastInfos[e];
+              var t;
+              return (
+                this.m_broadcastInfos[e] ||
+                  ((t = new ee(e)), (this.m_broadcastInfos[e] = t)),
+                this.m_broadcastInfos[e]
+              );
             }),
             (e.prototype.GetOrCreateBroadcast = function(e) {
               var t = this.m_mapBroadcasts.get(e);
               return (
                 t ||
-                (((t = new te()).m_steamIDBroadcast = e),
-                (t.m_eWatchState = K.None),
+                (((t = new Z()).m_steamIDBroadcast = e),
+                (t.m_eWatchState = $.None),
                 this.m_mapBroadcasts.set(e, t),
                 t)
               );
@@ -16545,8 +16476,8 @@
               var t = this.m_mapClips.get(e);
               return (
                 t ||
-                (((t = new re()).m_clipID = e),
-                (t.m_eWatchState = K.None),
+                (((t = new te()).m_clipID = e),
+                (t.m_eWatchState = $.None),
                 this.m_mapClips.set(e, t),
                 t)
               );
@@ -16631,7 +16562,7 @@
                   return Object(v.e)(this, function(e) {
                     switch (e.label) {
                       case 0:
-                        l.SetState(K.Loading, ""),
+                        l.SetState($.Loading, ""),
                           (t = {
                             steamid: l.m_steamIDBroadcast,
                             broadcastid: 0,
@@ -16666,7 +16597,7 @@
                         if (!i || 200 != i.status)
                           return (
                             l.SetState(
-                              K.Error,
+                              $.Error,
                               Object(p.d)("#BroadcastWatch_RequestFailed")
                             ),
                             [2]
@@ -16676,7 +16607,7 @@
                             this.SetViewerToken(s.viewertoken),
                           "ready" == (n = s.success))
                         )
-                          l.SetState(K.Ready),
+                          l.SetState($.Ready),
                             (l.m_ulBroadcastID = s.broadcastid),
                             (l.m_ulViewerToken = this.m_broadcastSettings.ulViewerToken),
                             (l.m_bWebRTC = s.is_webrtc),
@@ -16693,14 +16624,14 @@
                         else if ("waiting" == n) {
                           if (
                             (l.SetState(
-                              K.Loading,
+                              $.Loading,
                               Object(p.d)("#BroadcastWatch_WaitingForResponse")
                             ),
                             6e4 < (a = Date.now() - u))
                           )
                             return (
                               l.SetState(
-                                K.Error,
+                                $.Error,
                                 Object(p.d)("#BroadcastWatch_NotAvailable")
                               ),
                               [2]
@@ -16712,7 +16643,7 @@
                         } else
                           "waiting_for_start" == n
                             ? (l.SetState(
-                                K.Loading,
+                                $.Loading,
                                 Object(p.d)("#BroadcastWatch_WaitingForStart")
                               ),
                               l.m_schManifestTimeout.Schedule(
@@ -16723,7 +16654,7 @@
                               ))
                             : "waiting_for_reconnect" == n
                             ? (l.SetState(
-                                K.Loading,
+                                $.Loading,
                                 Object(p.d)(
                                   "#BroadcastWatch_WaitingForReconnect"
                                 )
@@ -16736,38 +16667,38 @@
                               ))
                             : "end" == n
                             ? l.SetState(
-                                K.Error,
+                                $.Error,
                                 Object(p.d)("#BroadcastWatch_NotAvailable")
                               )
                             : "noservers" == n
                             ? l.SetState(
-                                K.Error,
+                                $.Error,
                                 Object(p.d)("#BroadcastWatch_ServerLoad")
                               )
                             : "system_not_supported" == n
                             ? l.SetState(
-                                K.Error,
+                                $.Error,
                                 Object(p.d)(
                                   "#BroadcastWatch_SystemNotSupported"
                                 )
                               )
                             : "user_restricted" == n
                             ? l.SetState(
-                                K.Error,
+                                $.Error,
                                 Object(p.d)("#BroadcastWatch_UserRestricted")
                               )
                             : "poor_upload_quality" == n
                             ? l.SetState(
-                                K.Error,
+                                $.Error,
                                 Object(p.d)("#BroadcastWatch_PoorUploadQuality")
                               )
                             : "request_failed" == n
                             ? l.SetState(
-                                K.Error,
+                                $.Error,
                                 Object(p.d)("#BroadcastWatch_RequestFailed")
                               )
                             : l.SetState(
-                                K.Error,
+                                $.Error,
                                 Object(p.d)("#BroadcastWatch_NotAvailable")
                               );
                         return [2];
@@ -16782,7 +16713,7 @@
                 return Object(v.e)(this, function(e) {
                   switch (e.label) {
                     case 0:
-                      n.SetState(K.Loading, ""),
+                      n.SetState($.Loading, ""),
                         (t = {
                           clipid: n.m_clipID,
                           watchlocation: a,
@@ -16811,22 +16742,21 @@
                         [3, 4]
                       );
                     case 4:
-                      return (
-                        i && 200 == i.status
-                          ? 1 == (s = i.data).success
-                            ? (n.SetState(K.Ready),
+                      return i && 200 == i.status
+                        ? (1 == (s = i.data).success
+                            ? (n.SetState($.Ready),
                               (n.m_data = s),
                               this.LoadClip(n))
                             : n.SetState(
-                                K.Error,
+                                $.Error,
                                 Object(p.d)("#BroadcastWatch_RequestFailed")
-                              )
-                          : n.SetState(
-                              K.Error,
-                              Object(p.d)("#BroadcastWatch_RequestFailed")
-                            ),
-                        [2]
-                      );
+                              ),
+                          [2])
+                        : (n.SetState(
+                            $.Error,
+                            Object(p.d)("#BroadcastWatch_RequestFailed")
+                          ),
+                          [2]);
                   }
                 });
               });
@@ -16876,7 +16806,7 @@
               void 0 === t && (t = !0), e.Stop();
               var i = this.m_mapBroadcasts.get(e.GetBroadcastSteamID());
               i &&
-                i.m_eWatchState != K.Loading &&
+                i.m_eWatchState != $.Loading &&
                 (i.m_bWebRTC && t && (i.m_bWebRTC = !1),
                 this.GetBroadcastManifest(i, e.GetWatchLocation()));
             }),
@@ -16892,20 +16822,15 @@
               e.UserInputClick();
             }),
             (e.prototype.LoadBroadcastSettings = function() {
-              if (window.localStorage) {
-                var e = window.localStorage.getItem("broadcastSettings");
-                if (e) {
-                  var t = JSON.parse(e);
-                  if (t) {
-                    Object.assign(this.m_broadcastSettings, t);
-                    var i = this.m_broadcastSettings;
-                    (i.bMuted = !!i.bMuted),
-                      (i.nVolume = o.a(i.nVolume, 0, 1)),
-                      "string" != typeof i.ulViewerToken &&
-                        (i.ulViewerToken = "0");
-                  }
-                }
-              }
+              var e, t, i;
+              window.localStorage &&
+                (!(e = window.localStorage.getItem("broadcastSettings")) ||
+                  ((t = JSON.parse(e)) &&
+                    (Object.assign(this.m_broadcastSettings, t),
+                    ((i = this.m_broadcastSettings).bMuted = !!i.bMuted),
+                    (i.nVolume = o.a(i.nVolume, 0, 1)),
+                    "string" != typeof i.ulViewerToken &&
+                      (i.ulViewerToken = "0"))));
             }),
             (e.prototype.SaveBroadcastSettings = function() {
               var e = this;
@@ -16935,9 +16860,9 @@
             e
           );
         })();
-      ((ee = Z = Z || {})[(ee.Timeline = 1)] = "Timeline"),
-        (ee[(ee.Minimap = 2)] = "Minimap");
-      var ne = (function() {
+      ((Q = K = K || {})[(Q.Timeline = 1)] = "Timeline"),
+        (Q[(Q.Minimap = 2)] = "Minimap");
+      var re = (function() {
           function e(e, t, i, r) {
             (this.m_elVideo = null),
               (this.m_player = null),
@@ -17055,10 +16980,10 @@
               }
             }),
             (e.prototype.GetBroadcastState = function() {
-              return ae.GetBroadcastState(this);
+              return se.GetBroadcastState(this);
             }),
             (e.prototype.GetBroadcastStateDescription = function() {
-              return ae.GetBroadcastStateDescription(this);
+              return se.GetBroadcastStateDescription(this);
             }),
             (e.prototype.InitPlayer = function() {
               Object(S.a)(!this.m_player, "Initialized twice?"),
@@ -17121,9 +17046,9 @@
             (e.prototype.StartBroadcast = function(e) {
               this.InitPlayer(),
                 e.m_data.url
-                  ? ((this.m_player = new $(
+                  ? ((this.m_player = new q(
                       this.m_elVideo,
-                      !Object(V.a)() && Object(V.b)()
+                      !Object(G.a)() && Object(G.b)()
                     )),
                     this.m_player.PlayMPD(e.m_data.url, e.m_data.hls_url))
                   : ((this.m_player = new X(this.m_elVideo)),
@@ -17144,12 +17069,12 @@
                   e.m_ulBroadcastID,
                   e.m_ulViewerToken
                 ),
-                Object(V.c)("DASH Stat Object", t)),
-                (this.m_BroadcastInfo = ae.StartInfo(this.m_steamIDBroadcast));
+                Object(G.c)("DASH Stat Object", t)),
+                (this.m_BroadcastInfo = se.StartInfo(this.m_steamIDBroadcast));
             }),
             (e.prototype.StartClip = function(e) {
               this.InitPlayer(),
-                (this.m_player = new $(this.m_elVideo)),
+                (this.m_player = new q(this.m_elVideo)),
                 this.m_player.PlayMPD(e.m_data.clip_url),
                 this.SetVolume(this.m_nVolume),
                 this.m_player.SetMuted(this.m_bMuted);
@@ -17205,7 +17130,7 @@
             (e.prototype.Stop = function() {
               this.m_listeners.Unregister(),
                 this.m_BroadcastInfo &&
-                  (ae.StopInfo(this.m_BroadcastInfo),
+                  (se.StopInfo(this.m_BroadcastInfo),
                   (this.m_BroadcastInfo = null)),
                 (this.m_gameDataParser = null),
                 this.m_player &&
@@ -17219,14 +17144,14 @@
             (e.prototype.Play = function() {
               console.log("Play ", this.m_steamIDBroadcast);
               var e = this.GetBroadcastState();
-              e == K.None || this.IsBroadcastClip()
-                ? ae.StartVideo(this)
-                : e == K.Ready &&
-                  (ae.SetActiveVideo(this),
+              e == $.None || this.IsBroadcastClip()
+                ? se.StartVideo(this)
+                : e == $.Ready &&
+                  (se.SetActiveVideo(this),
                   this.m_player
                     ? this.m_player.Play()
                     : this.StartBroadcast(
-                        ae.GetBroadcast(this.m_steamIDBroadcast)
+                        se.GetBroadcast(this.m_steamIDBroadcast)
                       ));
             }),
             (e.prototype.Pause = function() {
@@ -17250,12 +17175,12 @@
             (e.prototype.SetVolume = function(e) {
               this.m_player && this.m_player.SetVolume(e),
                 (this.m_nVolume = this.m_player.GetVolume()),
-                ae.SaveVolumeChange(e, this.m_bMuted);
+                se.SaveVolumeChange(e, this.m_bMuted);
             }),
             (e.prototype.SetMute = function(e) {
               this.m_player && this.m_player.SetMuted(e),
                 (this.m_bMuted = e),
-                ae.SaveVolumeChange(this.m_nVolume, e);
+                se.SaveVolumeChange(this.m_nVolume, e);
             }),
             (e.prototype.IsMuted = function() {
               return this.m_bMuted;
@@ -17293,40 +17218,40 @@
                   this.m_player.IsPaused() && (this.m_bOnLiveEdge = !1));
             }),
             (e.prototype.OnGameDataUpdate = function(e) {
-              var t = e.detail;
-              if (t && "object" == typeof t.gamedata) {
-                (this.m_gameDataParser &&
-                  this.m_gameDataParser.GetAppID() == t.gamedata.__appid) ||
-                  (this.m_gameDataParser = new g(t.gamedata.__appid));
-                var i = this.m_player.GetLiveContentStartTime().getTime();
-                if ("timelinemarkers" in t.gamedata) {
-                  var r = this.m_gameDataParser.UpdateMarkers(
-                    t.gamedata.__timelinemarkers,
-                    i
-                  );
-                  r &&
-                    (this.m_rgMarkers.replace(r.rgMarkers || []),
-                    this.m_rgSegments.replace(r.rgSegments || []));
-                  var s = this.m_gameDataParser.UpdateRegions(
-                    t.gamedata.__regions
-                  );
-                  s && this.m_rgRegions.replace(s);
-                } else
-                  "soundtrack" in t.gamedata &&
+              var t,
+                i,
+                r,
+                s = e.detail;
+              s &&
+                "object" == typeof s.gamedata &&
+                ((this.m_gameDataParser &&
+                  this.m_gameDataParser.GetAppID() == s.gamedata.__appid) ||
+                  (this.m_gameDataParser = new g(s.gamedata.__appid)),
+                (t = this.m_player.GetLiveContentStartTime().getTime()),
+                "timelinemarkers" in s.gamedata
+                  ? ((i = this.m_gameDataParser.UpdateMarkers(
+                      s.gamedata.__timelinemarkers,
+                      t
+                    )) &&
+                      (this.m_rgMarkers.replace(i.rgMarkers || []),
+                      this.m_rgSegments.replace(i.rgSegments || [])),
+                    (r = this.m_gameDataParser.UpdateRegions(
+                      s.gamedata.__regions
+                    )) && this.m_rgRegions.replace(r))
+                  : "soundtrack" in s.gamedata &&
                     this.m_gameDataParser.UpdateSoundtrack(
                       this.m_steamIDBroadcast,
-                      t.gamedata.soundtrack
-                    );
-              }
+                      s.gamedata.soundtrack
+                    ));
             }),
             (e.prototype.OnDownloadFailed = function() {
-              ae.BroadcastDownloadFailed(this);
+              se.BroadcastDownloadFailed(this);
             }),
             (e.prototype.OnWebRTCRetry = function() {
-              ae.BroadcastDownloadFailed(this, !1);
+              se.BroadcastDownloadFailed(this, !1);
             }),
             (e.prototype.OnWebRTCFailed = function() {
-              ae.BroadcastDownloadFailed(this, !0);
+              se.BroadcastDownloadFailed(this, !0);
             }),
             (e.prototype.OnUserInputNeeded = function() {
               this.m_bUserInputNeeded = !0;
@@ -17352,7 +17277,7 @@
               var i = 0,
                 r = 0;
               return (
-                t == Z.Timeline
+                t == K.Timeline
                   ? (i = (r = this.m_nVideoEndPos) - this.m_nTimelineDuration)
                   : (r = i = 0),
                 o.c(e, i, r, 0, 100)
@@ -17377,14 +17302,14 @@
               get: function() {
                 return 0 < this.m_rgMarkers.length;
               },
-              enumerable: !0,
+              enumerable: !1,
               configurable: !0
             }),
             Object.defineProperty(e.prototype, "has_segments", {
               get: function() {
                 return 0 < this.m_rgSegments.length;
               },
-              enumerable: !0,
+              enumerable: !1,
               configurable: !0
             }),
             Object(v.c)([s.observable], e.prototype, "m_bPaused", void 0),
@@ -17443,8 +17368,8 @@
             e
           );
         })(),
-        ae = new se();
-      window.uiBroadcastWatchStore = ae;
+        se = new ie();
+      window.uiBroadcastWatchStore = se;
     },
     dLk7: function(e, t, i) {
       e.exports = {
@@ -17693,7 +17618,7 @@
               );
             }),
             Object(s.c)([a.a], e.prototype, "HideStats", null),
-            (e = Object(s.c)([n.observer], e))
+            Object(s.c)([n.observer], e)
           );
         })(S.Component),
         l = (function(t) {
@@ -17888,13 +17813,13 @@
                 )
               );
             }),
-            (e = Object(s.c)([n.observer], e))
+            Object(s.c)([n.observer], e)
           );
         })(S.Component),
         c = i("X3Ds"),
-        h = i("y+6m"),
+        m = i("y+6m"),
         u = i("TtDX"),
-        m = i("Wjsq"),
+        h = i("Wjsq"),
         _ = i("c7cM"),
         g = i("5L1o"),
         f = i("NgKn"),
@@ -17915,18 +17840,21 @@
           return (
             Object(s.d)(t, e),
             (t.prototype.render = function() {
-              var e = this.props.video,
-                t = w.b.Loading,
-                i = "";
-              if (e) {
-                (t = e.GetBroadcastState()),
-                  (i = e.GetBroadcastStateDescription());
-                var r = e.IsBuffering();
-                t == w.b.Ready && r && ((t = w.b.Loading), (i = ""));
-              }
-              if (e && t != w.b.Error && e.GetUserInputNeeded()) return null;
-              if (t == w.b.Ready) return null;
-              var s = t == w.b.Loading;
+              var e,
+                t = this.props.video,
+                i = w.b.Loading,
+                r = "";
+              if (
+                (t &&
+                  ((i = t.GetBroadcastState()),
+                  (r = t.GetBroadcastStateDescription()),
+                  (e = t.IsBuffering()),
+                  i == w.b.Ready && e && ((i = w.b.Loading), (r = ""))),
+                t && i != w.b.Error && t.GetUserInputNeeded())
+              )
+                return null;
+              if (i == w.b.Ready) return null;
+              var s = i == w.b.Loading;
               return S.createElement(
                 "div",
                 {
@@ -17938,11 +17866,11 @@
                   S.createElement(
                     "div",
                     { className: "BroadcastVideoWatchState_Text" },
-                    i
+                    r
                   )
               );
             }),
-            (t = Object(s.c)([n.observer], t))
+            Object(s.c)([n.observer], t)
           );
         })(S.Component),
         T = (function(e) {
@@ -18471,7 +18399,7 @@
             Object(s.c)([a.a], e.prototype, "OnSetLinkDescriptionChange", null),
             Object(s.c)([a.a], e.prototype, "OnSaveLink", null),
             Object(s.c)([a.a], e.prototype, "OnEditLink", null),
-            (e = Object(s.c)([n.observer], e))
+            Object(s.c)([n.observer], e)
           );
         })(S.Component),
         P = i("q+NH"),
@@ -18632,7 +18560,7 @@
             (e.prototype.OnContextMenu = function(e) {
               this.state.bFullscreen ||
                 (Object(u.a)(
-                  S.createElement(h.c, null, this.GetContextMenuItems()),
+                  S.createElement(m.c, null, this.GetContextMenuItems()),
                   e
                 ),
                 e.preventDefault());
@@ -18644,14 +18572,15 @@
               i && i.SetStatsViewIsVisible(t);
             }),
             (e.prototype.ShowStorePage = function(e) {
-              var t = this.state.video;
-              if (t && this.props.onOpenLinkInNewWindow) {
-                var i = t.GetBroadcastInfo();
-                if (i) {
-                  var r = o.b.STORE_BASE_URL + "app/" + i.m_strAppId;
-                  this.props.onOpenLinkInNewWindow(e, r), e.stopPropagation();
-                }
-              }
+              var t,
+                i,
+                r = this.state.video;
+              r &&
+                this.props.onOpenLinkInNewWindow &&
+                ((t = r.GetBroadcastInfo()) &&
+                  ((i = o.b.STORE_BASE_URL + "app/" + t.m_strAppId),
+                  this.props.onOpenLinkInNewWindow(e, i),
+                  e.stopPropagation()));
             }),
             (e.prototype.GetContextMenuItems = function() {
               var t = this,
@@ -18662,7 +18591,7 @@
               return (
                 e.push(
                   S.createElement(
-                    h.b,
+                    m.b,
                     {
                       key: "togglestats",
                       bChecked: this.state.bShowStats,
@@ -18678,7 +18607,7 @@
                   "7" != r.m_strAppId &&
                   e.push(
                     S.createElement(
-                      h.d,
+                      m.d,
                       {
                         key: "visitstore",
                         onSelected: function(e) {
@@ -18705,10 +18634,10 @@
                   : Object(c.o)(this.m_elBroadcastPlayer, this.m_elVideo));
             }),
             (e.prototype.OnFullscreenChange = function(e) {
-              if (this.m_elBroadcastPlayer) {
-                var t = Object(c.a)(this.m_elBroadcastPlayer);
-                this.setState({ bFullscreen: t });
-              }
+              var t;
+              this.m_elBroadcastPlayer &&
+                ((t = Object(c.a)(this.m_elBroadcastPlayer)),
+                this.setState({ bFullscreen: t }));
             }),
             (e.prototype.BHideVideoControls = function() {
               var e = this.state.video;
@@ -18835,7 +18764,7 @@
             Object(s.c)([a.a], e.prototype, "CloseStats", null),
             Object(s.c)([a.a], e.prototype, "OnToggleFullscreen", null),
             Object(s.c)([a.a], e.prototype, "OnFullscreenChange", null),
-            (e = Object(s.c)([n.observer], e))
+            Object(s.c)([n.observer], e)
           );
         })(S.Component),
         V = ((t.a = G),
@@ -18884,7 +18813,7 @@
                 )
               );
             }),
-            (t = Object(s.c)([n.observer], t))
+            Object(s.c)([n.observer], t)
           );
         })(S.Component)),
         N = (function(e) {
@@ -19005,7 +18934,7 @@
               );
             }),
             Object(s.c)([a.a], t.prototype, "OnGoLiveClicked", null),
-            (t = Object(s.c)([n.observer], t))
+            Object(s.c)([n.observer], t)
           );
         })(S.Component),
         W = (function(e) {
@@ -19029,7 +18958,7 @@
               );
             }),
             Object(s.c)([a.a], t.prototype, "OnTogglePlayPause", null),
-            (t = Object(s.c)([n.observer], t))
+            Object(s.c)([n.observer], t)
           );
         })(S.Component),
         x = (function(e) {
@@ -19042,7 +18971,7 @@
               get: function() {
                 return void 0 !== this.GetPreviousMarkerTime();
               },
-              enumerable: !0,
+              enumerable: !1,
               configurable: !0
             }),
             (t.prototype.GetPreviousMarkerTime = function() {
@@ -19084,7 +19013,7 @@
               "OnJumpToPreviousMarkerClicked",
               null
             ),
-            (t = Object(s.c)([n.observer], t))
+            Object(s.c)([n.observer], t)
           );
         })(S.Component),
         U = (function(e) {
@@ -19097,7 +19026,7 @@
               get: function() {
                 return void 0 !== this.GetNextMarkerTime();
               },
-              enumerable: !0,
+              enumerable: !1,
               configurable: !0
             }),
             (t.prototype.GetNextMarkerTime = function() {
@@ -19134,7 +19063,7 @@
             }),
             Object(s.c)([r.computed], t.prototype, "has_next_marker", null),
             Object(s.c)([a.a], t.prototype, "OnJumpToNextMarkerClicked", null),
-            (t = Object(s.c)([n.observer], t))
+            Object(s.c)([n.observer], t)
           );
         })(S.Component),
         H = (function(i) {
@@ -19218,7 +19147,7 @@
                   (e = this.props.video.GetVideoRepresentations()),
                   (i = e.map(function(e) {
                     return S.createElement(
-                      h.b,
+                      m.b,
                       {
                         key: e.id,
                         onSelected: function() {
@@ -19234,7 +19163,7 @@
                   })).push(l),
                   i.push(
                     S.createElement(
-                      h.d,
+                      m.d,
                       { key: "statsToggle", onSelected: this.OnShowStats },
                       Object(C.d)("#Broadcast_VideoContext_ToggleStats"),
                       "\t"
@@ -19246,7 +19175,7 @@
                 (s = !0),
                   (i = []).push(
                     S.createElement(
-                      h.b,
+                      m.b,
                       {
                         key: "none",
                         onSelected: function() {
@@ -19262,34 +19191,32 @@
                     )
                   );
                 for (
-                  var c = function(e) {
-                      var t = u.props.video.ListSubtitles()[e];
-                      i.push(
-                        S.createElement(
-                          h.b,
-                          {
-                            key: t.language,
-                            onSelected: function() {
-                              r.props.video.SetSubtitles(t.language),
-                                r.setState({
-                                  bSubtitlesOpen: !r.state.bSubtitlesOpen
-                                });
-                            },
-                            bChecked: "showing" === t.mode
-                          },
-                          t.label
-                        )
-                      );
-                    },
-                    u = this,
-                    p = 0;
-                  p < this.props.video.ListSubtitles().length;
-                  p++
+                  var c = this, u = 0;
+                  u < this.props.video.ListSubtitles().length;
+                  u++
                 )
-                  c(p);
+                  !(function(e) {
+                    var t = c.props.video.ListSubtitles()[e];
+                    i.push(
+                      S.createElement(
+                        m.b,
+                        {
+                          key: t.language,
+                          onSelected: function() {
+                            r.props.video.SetSubtitles(t.language),
+                              r.setState({
+                                bSubtitlesOpen: !r.state.bSubtitlesOpen
+                              });
+                          },
+                          bChecked: "showing" === t.mode
+                        },
+                        t.label
+                      )
+                    );
+                  })(u);
                 d = -352;
               }
-              var m = this.props.video.GetSubtitles() || !1;
+              var p = this.props.video.GetSubtitles() || !1;
               return S.createElement(
                 "div",
                 { className: "STV_BroadcastSettings" },
@@ -19299,7 +19226,7 @@
                       {
                         className:
                           "videoControlButton" +
-                          (m ? " ClosedCaptionsActive" : ""),
+                          (p ? " ClosedCaptionsActive" : ""),
                         onClick: this.OnSubtitlesClick,
                         ref: this.m_elSubtitlesButton
                       },
@@ -19462,7 +19389,7 @@
             Object(s.c)([a.a], e.prototype, "OnMouseEnter", null),
             Object(s.c)([a.a], e.prototype, "OnMouseLeave", null),
             Object(s.c)([a.a], e.prototype, "OnChildDrag", null),
-            (e = Object(s.c)([n.observer], e))
+            Object(s.c)([n.observer], e)
           );
         })(S.Component),
         $ = (function(t) {
@@ -19492,22 +19419,22 @@
                 this.SetVolumeWithCoord(this.m_elSlider, e.clientX);
             }),
             (e.prototype.OnMouseUp = function(e) {
-              if (this.m_elSlider) {
-                this.SetVolumeWithCoord(this.m_elSlider, e.clientX);
-                var t = this.props.video;
-                t.IsMuted() && t.SetVolume(this.m_nVolumeStartOfDrag),
-                  this.m_elSlider.ownerDocument.defaultView.removeEventListener(
-                    "mousemove",
-                    this.OnMouseMove
-                  ),
-                  this.m_elSlider.ownerDocument.defaultView.removeEventListener(
-                    "mouseup",
-                    this.OnMouseUp
-                  ),
-                  (this.m_nVolumeStartOfDrag = 0),
-                  (this.m_elSlider = null),
-                  this.props.onDrag(!1);
-              }
+              var t;
+              this.m_elSlider &&
+                (this.SetVolumeWithCoord(this.m_elSlider, e.clientX),
+                (t = this.props.video).IsMuted() &&
+                  t.SetVolume(this.m_nVolumeStartOfDrag),
+                this.m_elSlider.ownerDocument.defaultView.removeEventListener(
+                  "mousemove",
+                  this.OnMouseMove
+                ),
+                this.m_elSlider.ownerDocument.defaultView.removeEventListener(
+                  "mouseup",
+                  this.OnMouseUp
+                ),
+                (this.m_nVolumeStartOfDrag = 0),
+                (this.m_elSlider = null),
+                this.props.onDrag(!1));
             }),
             (e.prototype.SetVolumeWithCoord = function(e, t) {
               var i = e.getBoundingClientRect(),
@@ -19545,7 +19472,7 @@
             Object(s.c)([a.a], e.prototype, "OnMouseMove", null),
             Object(s.c)([a.a], e.prototype, "OnMouseUp", null),
             Object(s.c)([r.action], e.prototype, "SetVolumeWithCoord", null),
-            (e = Object(s.c)([n.observer], e))
+            Object(s.c)([n.observer], e)
           );
         })(S.Component);
       function J(e) {
@@ -19601,30 +19528,30 @@
           return (
             Object(s.d)(e, i),
             (e.prototype.OnMouseDown = function(e, t) {
-              var i = this;
-              if (this.m_elSlider) {
-                e.persist(),
-                  (this.m_rectSlider =
-                    this.m_elSlider.current &&
-                    this.m_elSlider.current.getBoundingClientRect());
-                var r = {};
+              var i,
+                r = this;
+              this.m_elSlider &&
+                (e.persist(),
+                (this.m_rectSlider =
+                  this.m_elSlider.current &&
+                  this.m_elSlider.current.getBoundingClientRect()),
+                (i = {}),
                 "start" === t
-                  ? ((r = { bStartMouseDown: !0 }), e.stopPropagation())
+                  ? ((i = { bStartMouseDown: !0 }), e.stopPropagation())
                   : "end" === t
-                  ? ((r = { bEndMouseDown: !0 }), e.stopPropagation())
-                  : (r = { bGrabberMouseDown: !0 }),
-                  this.setState(r, function() {
-                    return i.AdjustSliderForClientX(e.clientX);
-                  }),
-                  this.m_elSlider.current.ownerDocument.defaultView.addEventListener(
-                    "mousemove",
-                    this.OnMouseMove
-                  ),
-                  this.m_elSlider.current.ownerDocument.defaultView.addEventListener(
-                    "mouseup",
-                    this.OnMouseUp
-                  );
-              }
+                  ? ((i = { bEndMouseDown: !0 }), e.stopPropagation())
+                  : (i = { bGrabberMouseDown: !0 }),
+                this.setState(i, function() {
+                  return r.AdjustSliderForClientX(e.clientX);
+                }),
+                this.m_elSlider.current.ownerDocument.defaultView.addEventListener(
+                  "mousemove",
+                  this.OnMouseMove
+                ),
+                this.m_elSlider.current.ownerDocument.defaultView.addEventListener(
+                  "mouseup",
+                  this.OnMouseUp
+                ));
             }),
             (e.prototype.OnMouseMove = function(e) {
               this.AdjustSliderForClientX(e.clientX);
@@ -19656,19 +19583,20 @@
                   (this.props.video.JumpTime(15), e.preventDefault());
             }),
             (e.prototype.AdjustSliderForClientX = function(e) {
-              var t = this.props.video,
-                i = t.GetTimelineStartPos(),
-                r = t.GetTimelineStartPos() + t.GetTimelineDuration(),
-                s = t.GetTimeAtMousePosition(e, this.m_rectSlider, i, r);
-              if (this.state.bStartMouseDown) {
-                var n = B.a(s, i, t.m_editorEndTime - 5);
-                t.m_editorStartTime = n;
-              } else if (this.state.bEndMouseDown) {
-                var a = B.a(s, t.m_editorStartTime + 5, r);
-                t.m_editorEndTime = a;
-              } else
-                s != this.state.nGrabberMouseDownTime &&
-                  this.setState({ nGrabberMouseDownTime: s });
+              var t,
+                i,
+                r = this.props.video,
+                s = r.GetTimelineStartPos(),
+                n = r.GetTimelineStartPos() + r.GetTimelineDuration(),
+                a = r.GetTimeAtMousePosition(e, this.m_rectSlider, s, n);
+              this.state.bStartMouseDown
+                ? ((t = B.a(a, s, r.m_editorEndTime - 5)),
+                  (r.m_editorStartTime = t))
+                : this.state.bEndMouseDown
+                ? ((i = B.a(a, r.m_editorStartTime + 5, n)),
+                  (r.m_editorEndTime = i))
+                : a != this.state.nGrabberMouseDownTime &&
+                  this.setState({ nGrabberMouseDownTime: a });
             }),
             (e.prototype.OnMouseHoverMove = function(e) {
               this.AdjustHoverForClientX(e.clientX);
@@ -19747,23 +19675,23 @@
               });
               var b = [];
               n.GetTimelineSegments().forEach(function(t, e) {
-                var i = n.GetPercentOffsetFromTime(t.nTimeStart, w.c.Timeline);
-                if (!(100 < i)) {
-                  var r = n.GetPercentOffsetFromTime(t.nTimeEnd, w.c.Timeline);
-                  r < 0 ||
+                var i,
+                  r = n.GetPercentOffsetFromTime(t.nTimeStart, w.c.Timeline);
+                100 < r ||
+                  ((i = n.GetPercentOffsetFromTime(t.nTimeEnd, w.c.Timeline)) <
+                    0 ||
                     b.push(
                       S.createElement(J, {
                         key: e,
-                        startPos: i,
-                        endPos: r,
+                        startPos: r,
+                        endPos: i,
                         label: t.strTemplateName,
                         color: t.color,
                         onClick: function(e) {
                           return s.OnSegmentClick(t.nTimeStart);
                         }
                       })
-                    );
-                }
+                    ));
               });
               var y = n.GetPercentOffsetFromTime(
                   n.m_editorStartTime,
@@ -19898,7 +19826,7 @@
             Object(s.c)([a.a], e.prototype, "OnSegmentClick", null),
             Object(s.c)([a.a], e.prototype, "OnMarkerMouseEnter", null),
             Object(s.c)([a.a], e.prototype, "OnMarkerMouseLeave", null),
-            (e = Object(s.c)([n.observer], e))
+            Object(s.c)([n.observer], e)
           );
         })(S.Component),
         Y = (function(t) {
@@ -19921,10 +19849,10 @@
             }),
             (e.prototype.RenderStreamSwitcher = function() {
               var e = this.props.steamID;
-              return m.a.stream[e]
+              return h.a.stream[e]
                 ? S.createElement(K, {
                     value: e,
-                    options: m.a.stream,
+                    options: h.a.stream,
                     onChange: this.props.onLocalStreamChange
                   })
                 : null;
@@ -19939,7 +19867,7 @@
                   C.c.GetPreferredLocales()
                 ));
               var r =
-                  m.a.bValid && m.a.stream && m.a.stream[e.m_steamIDBroadcast],
+                  h.a.bValid && h.a.stream && h.a.stream[e.m_steamIDBroadcast],
                 s =
                   !this.props.bHideThumbnail &&
                   this.props.bVerticalBroadcastChat &&
@@ -19997,26 +19925,26 @@
                         "div",
                         {
                           onClick: function(e) {
-                            return t.props.onOpenLinkInNewWindow(e, m.a.link);
+                            return t.props.onOpenLinkInNewWindow(e, h.a.link);
                           },
                           className: "BroadcastLink"
                         },
-                        m.a.linkName
+                        h.a.linkName
                       )
                     )
                 ),
                 s &&
                   S.createElement(g.b, {
                     appid:
-                      m.a.bValid &&
-                      m.a.stream &&
-                      m.a.stream[e.m_steamIDBroadcast]
-                        ? m.a.appID
+                      h.a.bValid &&
+                      h.a.stream &&
+                      h.a.stream[e.m_steamIDBroadcast]
+                        ? h.a.appID
                         : parseInt(e.m_strAppId)
                   })
               );
             }),
-            (e = Object(s.c)([n.observer], e))
+            Object(s.c)([n.observer], e)
           );
         })(S.Component),
         K = (function(e) {
@@ -20032,7 +19960,7 @@
                 s = t.onChange,
                 n = Object.keys(i).map(function(e) {
                   return S.createElement(
-                    h.b,
+                    m.b,
                     {
                       key: e,
                       onSelected: function() {
@@ -20043,7 +19971,7 @@
                     Object(C.d)(i[e])
                   );
                 });
-              Object(u.a)(S.createElement(h.c, null, n), e);
+              Object(u.a)(S.createElement(m.c, null, n), e);
             }),
             (t.prototype.render = function() {
               var e = this.props,
@@ -20135,11 +20063,12 @@
               });
             }),
             (e.prototype.OnSaveRegions = function() {
-              var e;
-              e = { links: [] };
-              for (var t = 0; t < this.state.sizableRegion.length; t++) {
-                var i;
-                (i = {
+              for (
+                var e = { links: [] }, t = 0;
+                t < this.state.sizableRegion.length;
+                t++
+              ) {
+                var i = {
                   left: Math.floor(100 * this.state.sizableRegion[t].xPosPct),
                   top: Math.floor(100 * this.state.sizableRegion[t].yPosPct),
                   width: Math.floor(100 * this.state.sizableRegion[t].widthPct),
@@ -20150,8 +20079,8 @@
                   link_description: this.state.sizableRegion[t]
                     .link_description,
                   link_index: t
-                }),
-                  e.links.push(i);
+                };
+                e.links.push(i);
               }
               this.props.onSaveLinkRegions(e);
             }),
@@ -20270,7 +20199,7 @@
             Object(s.c)([a.a], e.prototype, "OnSaveRegions", null),
             Object(s.c)([a.a], e.prototype, "DeleteRegion", null),
             Object(s.c)([a.a], e.prototype, "UpdatePanel", null),
-            (e = Object(s.c)([n.observer], e))
+            Object(s.c)([n.observer], e)
           );
         })(S.Component);
     }

@@ -5,7 +5,6 @@ option cc_generic_services = true;
 message CCloudGaming_CreateNonce_Request {
 	optional string platform = 1;
 	optional uint32 appid = 2;
-	optional bool request_trial = 3;
 }
 
 message CCloudGaming_CreateNonce_Response {

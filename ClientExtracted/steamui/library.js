@@ -1,5 +1,5 @@
 /* Third-party software licenses can be found at licenses.txt */
-var CLSTAMP = "5906602";
+var CLSTAMP = "5957113";
 !(function(a) {
   function e(e) {
     for (
@@ -57,13 +57,15 @@ var CLSTAMP = "5906602";
               o++
             ) {
               var i =
-                (a = r[o]).getAttribute("data-href") || a.getAttribute("href");
-              if ("stylesheet" === a.rel && (i === t || i === c)) return e();
+                (l = r[o]).getAttribute("data-href") || l.getAttribute("href");
+              if ("stylesheet" === l.rel && (i === t || i === c)) return e();
             }
-            var l = document.getElementsByTagName("style");
-            for (o = 0; o < l.length; o++) {
-              var a;
-              if ((i = (a = l[o]).getAttribute("data-href")) === t || i === c)
+            for (
+              var l, a = document.getElementsByTagName("style"), o = 0;
+              o < a.length;
+              o++
+            ) {
+              if ((i = (l = a[o]).getAttribute("data-href")) === t || i === c)
                 return e();
             }
             var s = document.createElement("link");
@@ -87,55 +89,58 @@ var CLSTAMP = "5906602";
             h[u] = 0;
           }))
         );
-    var r = f[u];
-    if (0 !== r)
-      if (r) e.push(r[2]);
-      else {
-        var t = new Promise(function(e, t) {
-          r = f[u] = [e, t];
-        });
-        e.push((r[2] = t));
-        var n,
-          c = document.createElement("script");
-        (c.charset = "utf-8"),
-          (c.timeout = 120),
-          m.nc && c.setAttribute("nonce", m.nc),
-          (c.src = (function(e) {
-            return (
+    var t,
+      c,
+      o,
+      r,
+      i,
+      n,
+      l = f[u];
+    return (
+      0 !== l &&
+        (l
+          ? e.push(l[2])
+          : ((t = new Promise(function(e, t) {
+              l = f[u] = [e, t];
+            })),
+            e.push((l[2] = t)),
+            ((c = document.createElement("script")).charset = "utf-8"),
+            (c.timeout = 120),
+            m.nc && c.setAttribute("nonce", m.nc),
+            (c.src =
               m.p +
               "" +
               ({
                 1: "broadcast",
                 2: "libraries/libraries_cm",
                 4: "libraryroot"
-              }[e] || e) +
-              ".js"
-            );
-          })(u));
-        var o = new Error();
-        n = function(e) {
-          (c.onerror = c.onload = null), clearTimeout(i);
-          var t = f[u];
-          if (0 !== t) {
-            if (t) {
-              var r = e && ("load" === e.type ? "missing" : e.type),
-                n = e && e.target && e.target.src;
-              (o.message =
-                "Loading chunk " + u + " failed.\n(" + r + ": " + n + ")"),
-                (o.name = "ChunkLoadError"),
-                (o.type = r),
-                (o.request = n),
-                t[1](o);
-            }
-            f[u] = void 0;
-          }
-        };
-        var i = setTimeout(function() {
-          n({ type: "timeout", target: c });
-        }, 12e4);
-        (c.onerror = c.onload = n), document.head.appendChild(c);
-      }
-    return Promise.all(e);
+              }[(n = u)] || n) +
+              ".js"),
+            (o = new Error()),
+            (r = function(e) {
+              (c.onerror = c.onload = null), clearTimeout(i);
+              var t,
+                r,
+                n = f[u];
+              0 !== n &&
+                (n &&
+                  ((t = e && ("load" === e.type ? "missing" : e.type)),
+                  (r = e && e.target && e.target.src),
+                  (o.message =
+                    "Loading chunk " + u + " failed.\n(" + t + ": " + r + ")"),
+                  (o.name = "ChunkLoadError"),
+                  (o.type = t),
+                  (o.request = r),
+                  n[1](o)),
+                (f[u] = void 0));
+            }),
+            (i = setTimeout(function() {
+              r({ type: "timeout", target: c });
+            }, 12e4)),
+            (c.onerror = c.onload = r),
+            document.head.appendChild(c))),
+      Promise.all(e)
+    );
   }),
     (m.m = a),
     (m.c = r),
@@ -3152,6 +3157,15 @@ var CLSTAMP = "5906602";
   },
   BNtT: function(e, t, r) {
     "use strict";
+    r.d(t, "c", function() {
+      return i;
+    }),
+      r.d(t, "b", function() {
+        return f;
+      }),
+      r.d(t, "a", function() {
+        return m;
+      });
     var l = r("mrSG"),
       a = r("TLQK"),
       s = r("mgoM");
@@ -3189,12 +3203,6 @@ var CLSTAMP = "5906602";
     }
     var n = r("vDqi"),
       c = r.n(n);
-    function p(e, t) {
-      var r = document.createElement("link");
-      (r.href = e), (r.type = "text/css"), (r.rel = "stylesheet");
-      var n = t.parentElement;
-      n.insertBefore(r, t), n.removeChild(t);
-    }
     function i() {
       SteamClient._internal.RegisterForStyleChanges(function(e) {
         for (
@@ -3221,7 +3229,12 @@ var CLSTAMP = "5906602";
         }
         for (var f = 0, m = r; f < m.length; f++) {
           var d = m[f];
-          p(d.newRelative, d.sheet);
+          !(function(e, t) {
+            var r = document.createElement("link");
+            (r.href = e), (r.type = "text/css"), (r.rel = "stylesheet");
+            var n = t.parentElement;
+            n.insertBefore(r, t), n.removeChild(t);
+          })(d.newRelative, d.sheet);
         }
       });
     }
@@ -3310,15 +3323,6 @@ var CLSTAMP = "5906602";
         });
       });
     }
-    r.d(t, "c", function() {
-      return i;
-    }),
-      r.d(t, "b", function() {
-        return f;
-      }),
-      r.d(t, "a", function() {
-        return m;
-      });
   },
   CdLH: function(e, t, r) {
     "use strict";
@@ -3378,6 +3382,48 @@ var CLSTAMP = "5906602";
   },
   TLQK: function(e, t, r) {
     "use strict";
+    r.d(t, "e", function() {
+      return g;
+    }),
+      r.d(t, "f", function() {
+        return x;
+      }),
+      r.d(t, "g", function() {
+        return E;
+      }),
+      r.d(t, "h", function() {
+        return l;
+      }),
+      r.d(t, "j", function() {
+        return f;
+      }),
+      r.d(t, "l", function() {
+        return h;
+      }),
+      r.d(t, "m", function() {
+        return p;
+      }),
+      r.d(t, "n", function() {
+        return o;
+      }),
+      r.d(t, "d", function() {
+        return y;
+      }),
+      r.d(t, "k", function() {
+        return M;
+      }),
+      r.d(t, "i", function() {
+        return L;
+      }),
+      r.d(t, "b", function() {
+        return S;
+      }),
+      r.d(t, "a", function() {
+        return N;
+      }),
+      r.d(t, "c", function() {
+        return T;
+      });
     var s = r("mrSG"),
       u = r("q1tI"),
       n = r("mgoM"),
@@ -3428,18 +3474,14 @@ var CLSTAMP = "5906602";
     }
     function h(e) {
       var t = new Date(1e3 * e),
-        r = t.setHours(0, 0, 0, 0),
-        n = m.get(r);
-      if (n) return n;
-      return (
-        (n = t.toLocaleDateString(T.GetPreferredLocales(), {
-          year: "numeric",
-          month: "short",
-          day: "numeric"
-        })),
-        m.set(r, n),
-        n
-      );
+        r = t.setHours(0, 0, 0, 0);
+      if ((n = m.get(r))) return n;
+      var n = t.toLocaleDateString(T.GetPreferredLocales(), {
+        year: "numeric",
+        month: "short",
+        day: "numeric"
+      });
+      return m.set(r, n), n;
     }
     function f(e) {
       return new Date(1e3 * e).toLocaleTimeString(T.GetPreferredLocales(), {
@@ -3474,7 +3516,7 @@ var CLSTAMP = "5906602";
       if (r < t)
         return (
           a.b(t.getTime() - r.getTime()),
-          t.getFullYear() == r.getFullYear() ? _(t) : k(t)
+          (t.getFullYear() == r.getFullYear() ? _ : k)(t)
         );
       a.b(new Date().setHours(24, 0, 0, 0) - r.getTime());
       var n = new Date();
@@ -3491,7 +3533,7 @@ var CLSTAMP = "5906602";
           Math.floor((c.valueOf() - t.valueOf()) / (1e3 * i.e.PerWeek)) + 1;
         return 1 == o ? y("#TimeSince_1Week") : y("#TimeSince_XWeeks", o);
       }
-      return t.getFullYear() == r.getFullYear() ? _(t) : k(t);
+      return (t.getFullYear() == r.getFullYear() ? _ : k)(t);
     }
     function x(e) {
       var t = new Date(1e3 * e),
@@ -3502,11 +3544,11 @@ var CLSTAMP = "5906602";
         n.getDate() < 15 && n.setMonth(n.getMonth() - 1),
         (n = Object(i.d)(n)) <= t
           ? y("#Time_Recent")
-          : t.getFullYear() == r.getFullYear()
-          ? _(t)
-          : r.getMonth() < 6 && t.getFullYear() == r.getFullYear() - 1
-          ? k(t)
-          : E(t)
+          : (t.getFullYear() == r.getFullYear()
+              ? _
+              : r.getMonth() < 6 && t.getFullYear() == r.getFullYear() - 1
+              ? k
+              : E)(t)
       );
     }
     new Map();
@@ -3587,48 +3629,6 @@ var CLSTAMP = "5906602";
           : Object(s.g)([e + "_Plural", t], r)
       );
     }
-    r.d(t, "d", function() {
-      return y;
-    }),
-      r.d(t, "k", function() {
-        return M;
-      }),
-      r.d(t, "i", function() {
-        return L;
-      }),
-      r.d(t, "b", function() {
-        return S;
-      }),
-      r.d(t, "a", function() {
-        return N;
-      }),
-      r.d(t, "c", function() {
-        return T;
-      }),
-      r.d(t, "e", function() {
-        return g;
-      }),
-      r.d(t, "f", function() {
-        return x;
-      }),
-      r.d(t, "g", function() {
-        return E;
-      }),
-      r.d(t, "h", function() {
-        return l;
-      }),
-      r.d(t, "j", function() {
-        return f;
-      }),
-      r.d(t, "l", function() {
-        return h;
-      }),
-      r.d(t, "m", function() {
-        return p;
-      }),
-      r.d(t, "n", function() {
-        return o;
-      });
     var S = {
       english: "en",
       german: "de",
@@ -3712,7 +3712,7 @@ var CLSTAMP = "5906602";
           this.m_rgLocalesToUse = e;
         }),
         (e.prototype.LocalizeString = function(e) {
-          if (!e || 0 == e.length || "#" != e.charAt(0)) return "";
+          if ((0, !e || 0 == e.length || "#" != e.charAt(0))) return "";
           var t = this.m_mapTokens.get(e.substring(1));
           return void 0 === t ? "" : t;
         }),
@@ -3784,19 +3784,14 @@ var CLSTAMP = "5906602";
   },
   lkRc: function(e, t, r) {
     "use strict";
-    r("mrSG");
-    var n = r("YyVH");
-    function i() {
-      return !!window.document;
-    }
     r.d(t, "b", function() {
-      return o;
+      return c;
     }),
       r.d(t, "f", function() {
-        return l;
+        return o;
       }),
       r.d(t, "a", function() {
-        return a;
+        return i;
       }),
       r.d(t, "e", function() {
         return h;
@@ -3807,8 +3802,13 @@ var CLSTAMP = "5906602";
       r.d(t, "d", function() {
         return m;
       });
-    var c,
-      o = {
+    r("mrSG");
+    var l = r("YyVH");
+    function a() {
+      return window.document;
+    }
+    var n,
+      c = {
         EUNIVERSE: 0,
         WEB_UNIVERSE: "",
         LANGUAGE: "english",
@@ -3843,9 +3843,9 @@ var CLSTAMP = "5906602";
         PAGE_TIMESTAMP: 0,
         get SESSIONID() {
           return (function() {
-            if (!i()) return (c = c || u());
+            if (!a()) return (n = n || u());
             var e = (function(e) {
-              if (!i() || !window.document.cookie) return null;
+              if (!a() || !window.document.cookie) return null;
               var t = document.cookie.match("(^|; )" + e + "=([^;]*)");
               return t && t[2] ? decodeURIComponent(t[2]) : null;
             })("sessionid");
@@ -3858,7 +3858,7 @@ var CLSTAMP = "5906602";
         DEV_MODE: !1,
         OFFLINE_MODE: !1
       },
-      l = {
+      o = {
         logged_in: !1,
         steamid: "",
         accountid: 0,
@@ -3872,7 +3872,7 @@ var CLSTAMP = "5906602";
         short_url: "",
         country_code: ""
       },
-      a = {
+      i = {
         CLANSTEAMID: "",
         CLANACCOUNTID: 0,
         ANNOUNCEMENT_GID: "",
@@ -3891,31 +3891,36 @@ var CLSTAMP = "5906602";
       },
       s = "webui_config";
     function u() {
-      var e = (function() {
-        for (var e = "", t = 0; t < 24; t++)
-          e += Object(n.b)(0, 35).toString(36);
-        return e;
-      })();
+      var e,
+        t,
+        r,
+        n,
+        c,
+        o,
+        i = (function() {
+          for (var e = "", t = 0; t < 24; t++)
+            e += Object(l.b)(0, 35).toString(36);
+          return e;
+        })();
       return (
-        (function(e, t, r, n) {
-          if (i()) {
-            n = n || "/";
-            var c = "";
-            if (void 0 !== r && r) {
-              var o = new Date();
-              o.setTime(o.getTime() + 864e5 * r),
-                (c = "; expires=" + o.toUTCString());
-            }
-            document.cookie =
-              encodeURIComponent(e) +
-              "=" +
-              encodeURIComponent(t) +
-              c +
-              ";path=" +
-              n;
-          }
-        })("sessionid", e, 0),
-        e
+        (e = "sessionid"),
+        (t = i),
+        (r = 0),
+        a() &&
+          ((n = n || "/"),
+          (c = ""),
+          void 0 !== r &&
+            r &&
+            ((o = new Date()).setTime(o.getTime() + 864e5 * r),
+            (c = "; expires=" + o.toUTCString())),
+          (document.cookie =
+            encodeURIComponent(e) +
+            "=" +
+            encodeURIComponent(t) +
+            c +
+            ";path=" +
+            n)),
+        i
       );
     }
     function h(e, t) {
@@ -3935,29 +3940,29 @@ var CLSTAMP = "5906602";
     }
     function f() {
       var e = window.location.href;
-      return e.startsWith(o.STORE_BASE_URL)
-        ? o.STORE_BASE_URL
-        : e.startsWith(o.COMMUNITY_BASE_URL)
-        ? o.COMMUNITY_BASE_URL
-        : e.startsWith(o.PARTNER_BASE_URL)
-        ? o.PARTNER_BASE_URL
-        : e.startsWith(o.HELP_BASE_URL)
-        ? o.HELP_BASE_URL
-        : e.startsWith(o.STEAMTV_BASE_URL)
-        ? o.STEAMTV_BASE_URL
+      return e.startsWith(c.STORE_BASE_URL)
+        ? c.STORE_BASE_URL
+        : e.startsWith(c.COMMUNITY_BASE_URL)
+        ? c.COMMUNITY_BASE_URL
+        : e.startsWith(c.PARTNER_BASE_URL)
+        ? c.PARTNER_BASE_URL
+        : e.startsWith(c.HELP_BASE_URL)
+        ? c.HELP_BASE_URL
+        : e.startsWith(c.STEAMTV_BASE_URL)
+        ? c.STEAMTV_BASE_URL
         : "";
     }
     function m() {
       var e = window.location.href;
-      return e.startsWith(o.STORE_BASE_URL)
+      return e.startsWith(c.STORE_BASE_URL)
         ? "store"
-        : e.startsWith(o.COMMUNITY_BASE_URL)
+        : e.startsWith(c.COMMUNITY_BASE_URL)
         ? "community"
-        : e.startsWith(o.PARTNER_BASE_URL)
+        : e.startsWith(c.PARTNER_BASE_URL)
         ? "partnerweb"
-        : e.startsWith(o.HELP_BASE_URL)
+        : e.startsWith(c.HELP_BASE_URL)
         ? "help"
-        : e.startsWith(o.STEAMTV_BASE_URL)
+        : e.startsWith(c.STEAMTV_BASE_URL)
         ? "steamtv"
         : "";
     }
@@ -4164,8 +4169,6 @@ var CLSTAMP = "5906602";
     }
     function v(e) {
       switch (e) {
-        default:
-          break;
         case 4:
         case 1:
         case 8:
