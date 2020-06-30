@@ -872,7 +872,7 @@ a.queue_area:hover .voting_queue_link {
 	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/icon_show_state.png');
 	background-repeat: no-repeat;
 	display: inline-block;
-	margin-right: 2px;
+	margin-left: 2px;
 }
 .user_action_history_icon.subscribed
 {

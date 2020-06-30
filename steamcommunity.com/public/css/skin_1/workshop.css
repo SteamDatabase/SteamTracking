@@ -1821,6 +1821,7 @@ textarea {
 	overflow: hidden;
 	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/icon_show_state.png?v=1');
 	background-repeat: no-repeat;
+	margin-left: 2px;
 	float: right;
 }
 
