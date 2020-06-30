@@ -1929,7 +1929,7 @@ a#store_search_link img {
 	margin-right: auto;
 	position: relative;
 	justify-content: center;
-	padding: 10px;
+	padding: 5px;
 	flex-wrap: wrap;
 	text-align: center;
 }
@@ -1941,7 +1941,7 @@ a#store_search_link img {
 	font-family: "Yellowtail", sans-serif;
 	font-style: normal;
 	font-weight: normal;
-	font-size: 42px;
+	font-size: 38px;
 	line-height: 130.2%;
 	color: #FBF6F0;
 	text-shadow: 2px 3px 0px #D35110;
@@ -1963,7 +1963,7 @@ a#store_search_link img {
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: normal; /* normal */
 
-			font-size: 20px;
+			font-size: 18px;
 	font-style: italic;
 	line-height: 130.2%;
 	color: #F8F7F2;
@@ -1982,6 +1982,19 @@ a#store_search_link img {
 	text-align: right;
 }
 
+@media screen and ( max-width: 910px )
+{
+	html.responsive .summersale2020_supersavings_label .highlight{
+		font-size: 14px;
+	}
+	html.responsive .summersale2020_supersavings_label .subtitle {
+		font-size: 10px;
+		text-align: center;
+	}
+	html.responsive .summersale2020_supersavings_title {
+		font-size: 24px;
+	}
+}
 
 .cart_promo_banner_ctn {
 	padding-bottom: 26px;
@@ -2027,6 +2040,7 @@ a#store_search_link img {
 	text-shadow: 1px 1px 0px #681A15;
 	align-self: center;
 }
+
 
 .cart_promo_banner_content .desc {
 			font-family: "Motiva Sans", Sans-serif;
