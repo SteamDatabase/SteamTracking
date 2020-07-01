@@ -102,7 +102,7 @@ function PerformPayPalAuthorization()
 
 function OnCreateQiwiInvoiceFailure( eResult, resultDetail )
 {
-	var sErrorMessage = 'An unexpected error has occurred. Your purchase has not been completed.<br>Please contact <a href="http://support.steampowered.com">Steam Support</a>.';
+	var sErrorMessage = 'An unexpected error has occurred. Your purchase has not been completed.<br>Please wait a few minutes and try again.<br>If you encounter this error repeatedly, please contact <a href="http://support.steampowered.com">Steam Support</a>.';
 	
 		switch ( resultDetail )
 	{
@@ -118,7 +118,7 @@ function OnCreateQiwiInvoiceFailure( eResult, resultDetail )
 		case 4:
 		case 5:
 		case 6:
-						sErrorMessage = 'An unexpected error has occurred. Your purchase has not been completed.<br>Please contact <a href="http://support.steampowered.com">Steam Support</a>.';
+						sErrorMessage = 'An unexpected error has occurred. Your purchase has not been completed.<br>Please wait a few minutes and try again.<br>If you encounter this error repeatedly, please contact <a href="http://support.steampowered.com">Steam Support</a>.';
 			break;		
 			
 		case 7:
@@ -126,7 +126,7 @@ function OnCreateQiwiInvoiceFailure( eResult, resultDetail )
 			break;
 			
 		default:
-			sErrorMessage = 'An unexpected error has occurred. Your purchase has not been completed.<br>Please contact <a href="http://support.steampowered.com">Steam Support</a>.';
+			sErrorMessage = 'An unexpected error has occurred. Your purchase has not been completed.<br>Please wait a few minutes and try again.<br>If you encounter this error repeatedly, please contact <a href="http://support.steampowered.com">Steam Support</a>.';
 			break;
 	}
 	DisplayErrorMessage( sErrorMessage );
@@ -2543,11 +2543,11 @@ function OnGetFinalPriceFailure( eErrorDetail )
 	try 
 	{
 		SetTabEnabled( 'payment_info' );
-		var error_text = 'An unexpected error has occurred. Your purchase has not been completed.<br>Please contact <a href="http://support.steampowered.com">Steam Support</a>.';
+		var error_text = 'An unexpected error has occurred. Your purchase has not been completed.<br>Please wait a few minutes and try again.<br>If you encounter this error repeatedly, please contact <a href="http://support.steampowered.com">Steam Support</a>.';
 		switch ( eErrorDetail )
 		{
 			default:
-				error_text = 'An unexpected error has occurred. Your purchase has not been completed.<br>Please contact <a href="http://support.steampowered.com">Steam Support</a>.';
+				error_text = 'An unexpected error has occurred. Your purchase has not been completed.<br>Please wait a few minutes and try again.<br>If you encounter this error repeatedly, please contact <a href="http://support.steampowered.com">Steam Support</a>.';
 				break;
 			case 23:
 				error_text = 'Your billing address doesn’t look like it matches up with your current country.  Please contact support for assistance or use a payment method registered to your current address.';
@@ -4870,7 +4870,7 @@ function HandleFinalizeTransactionFailure( ePaymentType, eErrorDetail, bShowBRSp
 							case 7:
 							case 11:
 							case 57:
-								error_text = 'An unexpected error has occurred. Your purchase has not been completed.<br>Please contact <a href="http://support.steampowered.com">Steam Support</a>.';
+								error_text = 'An unexpected error has occurred. Your purchase has not been completed.<br>Please wait a few minutes and try again.<br>If you encounter this error repeatedly, please contact <a href="http://support.steampowered.com">Steam Support</a>.';
 								break;
 							case 1:
 								error_text = 'Your purchase has not been completed. Your credit card information has been declined by your credit card company due to an incorrect address being entered.<br><br>Note that in some cases, your credit card company may put a \'hold\' on funds in your account, but you will not be charged. After correcting any errors in the information displayed below, please try your purchase again.';
@@ -4919,7 +4919,7 @@ function HandleFinalizeTransactionFailure( ePaymentType, eErrorDetail, bShowBRSp
 						case 7:
 						case 11:
 						case 57:
-							error_text = 'An unexpected error has occurred. Your purchase has not been completed.<br>Please contact <a href="http://support.steampowered.com">Steam Support</a>.';
+							error_text = 'An unexpected error has occurred. Your purchase has not been completed.<br>Please wait a few minutes and try again.<br>If you encounter this error repeatedly, please contact <a href="http://support.steampowered.com">Steam Support</a>.';
 							break;
 						case 13:
 							error_text = 'Sorry, but one of the items you tried to purchase is not available for purchase in this country. Your purchase has been cancelled.';

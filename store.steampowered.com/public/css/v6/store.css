@@ -1942,7 +1942,6 @@ a#store_search_link img {
 	font-style: normal;
 	font-weight: normal;
 	font-size: 38px;
-	line-height: 130.2%;
 	color: #FBF6F0;
 	text-shadow: 2px 3px 0px #D35110;
 	text-align: center;
@@ -1965,7 +1964,6 @@ a#store_search_link img {
 
 			font-size: 18px;
 	font-style: italic;
-	line-height: 130.2%;
 	color: #F8F7F2;
 	text-shadow: 2px 3px 0px #D35110;
 }
@@ -1976,7 +1974,6 @@ a#store_search_link img {
 		font-weight: normal; /* normal */
 
 			font-size: 14px;
-	line-height: 130.2%;
 	color: #F8F7F2;
 	text-shadow: 2px 3px 0px #D35110;
 	text-align: right;
