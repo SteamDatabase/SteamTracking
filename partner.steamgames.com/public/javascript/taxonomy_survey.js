@@ -1240,7 +1240,7 @@ function getQText(id)
 {
 	switch(id){
 		case "start_text":
-			return 'The tags associated with your title help users discover it on Steam.<br><br>In this wizard, you will select Steam tags to associate with your title. Then you will prioritize this list. The top twenty tags will help Steam determine where to surface your game to customers across browse veiws, search results, and recommendations.<br><br>Let\'s begin!<br><br>' + getBanTagsText();
+			return 'The tags associated with your title help users discover it on Steam.<br><br>In this wizard, you will select up to 20 Steam tags to associate with your title. Then you will prioritize this list. These 20 tags will help Steam determine where to surface your game to customers across browse veiws, search results, and recommendations.<br><br>Let\'s begin!<br><br>' + getBanTagsText();
 			break;
 		case "end_text":
 			return 'As a last step, please prioritize your tags using Drag & Drop.<BR><BR>\nThe top 20 tags are used to determine where your title is displayed throughout Steam. Tags at the top of your list are weighted most heavily when displaying or recommending your title. <BR><BR>\nWe suggest prioritization which places sub-genres and other tags which are both meaningful and specific near the top. <BR><BR>\nWhen you\'re happy with your work, click Publish. Please note that any unfinished changes will be lost.' 
@@ -1257,7 +1257,7 @@ function getQText(id)
 		case "q_features":       return 'Select any relevant feature tags to describe your title.<BR><BR>The <strong>brighter ones</strong> in this list are common among titles with tags similar to yours, and may be more relevant than others.';      break;
 		case "q_players":        return 'Select any relevant player tags to describe your title.<BR><BR>The <strong>brighter ones</strong> in this list are common among titles with tags similar to yours, and may be more relevant than others.';       break;
 		case "q_other":          return 'Any other tags.';         break;
-		case "q_tags_from_desc": return 'The tags in this list were found in your title\'s store description.<br><br>Select the ones you feel are additive in describing your title to customers, or simply skip to the next step.';  break;
+		case "q_tags_from_desc": return 'The tags in this list were found in your title\'s store description, or have been manually added on this screen.<br><br>Select the ones you feel are additive in describing your title to customers, or simply skip to the next step.<BR><BR>You may also search the hundreds of tags in our system, to add any others which may be helpful in describing the essence of your game.<BR><BR>';  break;
 		case "q_tags_from_users":
 			return 'These additional tags have been applied to your title by the Steam community of users.<br><br>We suggest keeping these in place unless any are explicitly inaccurate.<br><br>' + getBanTagsText();
 		break;
