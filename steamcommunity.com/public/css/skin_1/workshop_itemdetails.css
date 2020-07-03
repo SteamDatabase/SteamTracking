@@ -2075,6 +2075,14 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	color: #AAAAAA;
 }
 
+.general_btn.panel_btn > label {
+	cursor: pointer;
+}
+.general_btn.panel_btn > label > input[type=checkbox] {
+	margin-right: 14px;
+	margin-left: 0px;
+}
+
 .workshopItemPreviewImageEnlargeableContainer {
 
 }
