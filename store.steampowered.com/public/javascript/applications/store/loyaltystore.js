@@ -10464,6 +10464,8 @@
                   return Object(k.d)("#Redeem_Error_InsufficientFunds");
                 case 29:
                   return Object(k.d)("#Redeem_Error_DuplicateRequest");
+                case 26:
+                  return Object(k.d)("#Redeem_Error_Revoked");
               }
               return "";
             }),
