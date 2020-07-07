@@ -188,10 +188,7 @@ function HomeSaleFilterHeroes( $Parent )
 
 function HomeRenderFeaturedItems( rgDisplayLists, rgTagData, rgFranchiseData )
 {
-	// process heroes
-	if ( !g_bIsEncore )
-		HomeSaleFilterHeroes( $J('.hero_parent_ctn') );
-
+	HomeSaleFilterHeroes( $J('.hero_parent_ctn') );
 
 	var k_nTier1ItemsMin = 14;
 	var k_nTier1ItemsMax = 14;
