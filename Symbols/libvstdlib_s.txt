@@ -1,4 +1,5 @@
 
+ .objc_class_name_NSProcessInfo
  AssertMsgImplementation
  B CMemoryPool::g_ReportFunc
  B CUtlSymbol::s_pSymbolTable
@@ -58,6 +59,7 @@
  Gestalt
  Is64BitOS
  Msg
+ OBJC_CLASS_$_NSProcessInfo
  Plat_GetProcessArgv
  Plat_OutputDebugString
  Plat_RelativeTicks
@@ -588,6 +590,7 @@
  T V_isnumeric
  T V_isstrlower
  T V_isvalidhex
+ T V_iswalpha32
  T V_memcpy_nocache
  T V_pretifymem
  T V_pretifynum
@@ -765,6 +768,8 @@
  memcpy
  memmove
  memset
+ objc_msgSend
+ objc_msgSend_stret
  open
  open$UNIX2003
  operator delete(void*)
@@ -785,6 +790,7 @@
  r V_MakeFileSafeName::k_rgchBadChars
  r V_Windows1252CharsToUTF8::s_table
  r V_binarytohex::k_rgchHexToASCII
+ r V_iswalpha32::s_arrRanges
  r V_towlower32::s_SimpleToLower_1
  r V_towlower32::s_SimpleToLower_2
  r V_towlower32::s_SimpleToLower_3

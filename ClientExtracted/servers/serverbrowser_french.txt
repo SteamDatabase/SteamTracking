@@ -227,7 +227,7 @@
 "[english]ServerBrowser_RemoveServerFromHistory"	"Remove server from history"
 "ServerBrowser_LastPlayed"	"Dernière utilisation"
 "[english]ServerBrowser_LastPlayed"	"Last played"
-"ServerBrowser_OfflineMode"	"Steam est actuellement en mode hors-ligne. Seuls les jeux ne nécessitant pas de connexion à Internet seront disponibles."
+"ServerBrowser_OfflineMode"	"Steam est actuellement en mode hors ligne. Seuls les jeux ne nécessitant pas de connexion à Internet seront disponibles."
 "[english]ServerBrowser_OfflineMode"	"Steam is currently in Offline Mode. Internet games will not be available until you restart\nsteam while connected to the Internet."
 "ServerBrowser_ConnectToServer"	"Se connecter au serveur"
 "[english]ServerBrowser_ConnectToServer"	"Connect to server"

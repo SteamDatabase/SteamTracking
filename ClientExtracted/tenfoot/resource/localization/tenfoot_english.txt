@@ -7233,4 +7233,8 @@
 	"ControllerBinding_SoftPress_HoldRepeats_Off_Description" "When Off, holding will just hold the button, not repeat it."
 	"ControllerBinding_SoftPress_RepeatRate" "Repeat Rate"
 	"ControllerBinding_SoftPress_RepeatRate_Description" "The speed of Turbo will be set by this slider."
+	"ControllerBinding_SoftPress_Binding" "Binding"
+	"ControllerBinding_SoftPress_Binding_Description" "You can bind one or more actions to this activator, such as keyboard, mouse, and gamepad buttons or native actions."
+	"ControllerBinding_SoftPress_SoftPressStyle" "Soft Press Style"
+	"ControllerBinding_SoftPress_SoftPressStyle_Description" "You can change the style of soft press activation. For one dimensional inputs like triggers hair trigger can work well, otherwise simple threshold is recommended"
 }

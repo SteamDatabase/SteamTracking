@@ -3959,10 +3959,19 @@
  R _pcre_OP_lengths
  R _pcre_default_tables
  R _pcre_hspace_list
+ R _pcre_ucd_caseless_sets
+ R _pcre_ucd_records
+ R _pcre_ucd_stage1
+ R _pcre_ucd_stage2
+ R _pcre_ucp_gbtable
+ R _pcre_ucp_gentype
  R _pcre_utf8_table1
  R _pcre_utf8_table1_size
  R _pcre_utf8_table2
  R _pcre_utf8_table4
+ R _pcre_utt
+ R _pcre_utt_names
+ R _pcre_utt_size
  R _pcre_vspace_list
  R jpeg_aritab
  R jpeg_natural_order
@@ -15493,6 +15502,7 @@
  d intconverter
  d p_floatconverter
  d p_intconverter
+ d posix_substitutes
  d s_DebugDumpPtr
  d s_EAppReleaseState
  d s_EControllerType
@@ -15507,6 +15517,7 @@
  d s_rgchWGAuthedURLs
  d selectBuf
  d stringconverter
+ d substitutes
  d textureidconverter
  d typeinfo for (anonymous namespace)::ScrollBarButton
  d typeinfo for CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_1
@@ -15641,6 +15652,7 @@
  r autoposstab
  r base_dither_matrix
  r bmask
+ r catposstab
  r digitab
  r error_texts
  r escapes
@@ -15672,8 +15684,9 @@
  r png_read_start_row.png_pass_inc
  r png_read_start_row.png_pass_start
  r posix_class_maps
- r posix_name_lengths
  r posix_names
+ r posspropstab
+ r propposstab
  r protobuf_AssignDesc_htmlmessages_2eproto()::CCookie_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CHTMLHeader_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CHTMLPageSecurityInfo_offsets_
@@ -15832,6 +15845,24 @@
  r start_pass.aanscales
  r state_transition_table
  r std::__1::piecewise_construct
+ r string_H
+ r string_PL
+ r string_PLl
+ r string_PLu
+ r string_PNd
+ r string_PXan
+ r string_PXps
+ r string_PXsp
+ r string_PXwd
+ r string_h
+ r string_pL
+ r string_pLl
+ r string_pLu
+ r string_pNd
+ r string_pXan
+ r string_pXps
+ r string_pXsp
+ r string_pXwd
  r sub_end_of_word
  r sub_start_of_word
  r twobppswaptable
@@ -16211,6 +16242,7 @@
  t get_chr_property_list
  t get_interesting_appn
  t get_sof
+ t get_ucp
  t gray_rgb_convert
  t grayscale_convert
  t h2v1_merged_upsample
@@ -16224,6 +16256,7 @@
  t jpeg_huff_decode
  t jpeg_make_d_derived_tbl
  t match
+ t match_ref
  t merged_1v_upsample
  t merged_2v_upsample
  t new_color_map_1_quant

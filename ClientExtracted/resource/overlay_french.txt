@@ -203,7 +203,7 @@
 "[english]Overlay_Chars_Left"	"%screenshot_caption_charsleft% chars left"
 "Overlay_Add_Caption"	"Ajouter une légende"
 "[english]Overlay_Add_Caption"	"Add a caption"
-"Overlay_Publish_Offline"	"Impossible de publier des captures d'écran en mode hors-ligne"
+"Overlay_Publish_Offline"	"Impossible de publier des captures d'écran en mode hors ligne"
 "[english]Overlay_Publish_Offline"	"Cannot publish screenshots in offline mode"
 "Overlay_Screenshots_Press_Hotkey"	"Appuyez sur %screenshot_hotkey% tout en étant dans un jeu pour\nprendre des captures d'écran."
 "[english]Overlay_Screenshots_Press_Hotkey"	"Press %screenshot_hotkey% while in-game to take screenshots."

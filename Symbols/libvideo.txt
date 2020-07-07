@@ -1,4 +1,5 @@
 
+ .objc_class_name_NSProcessInfo
  B CBilling_Address::default_instance_
  B CCDDBAppDetailCommon::default_instance_
  B CClanEventData::default_instance_
@@ -765,6 +766,7 @@
  D x509_file_lookup
  D x509_name_ff
  Gestalt
+ OBJC_CLASS_$_NSProcessInfo
  OSAtomicCompareAndSwap32Barrier
  OSAtomicCompareAndSwap64Barrier
  OSMemoryBarrier
@@ -7521,6 +7523,8 @@
  mktime$UNIX2003
  nanosleep
  nanosleep$UNIX2003
+ objc_msgSend
+ objc_msgSend_stret
  open
  open$UNIX2003
  operator delete(void*)

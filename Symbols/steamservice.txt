@@ -472,6 +472,7 @@
  NSUnLinkModule
  NXFindBestFatArch
  NXGetLocalArchInfo
+ OBJC_CLASS_$_NSProcessInfo
  OSAtomicCompareAndSwap64Barrier
  OSMemoryBarrier
  R CMetrics::UNSET_TIMESTAMP
@@ -4569,6 +4570,8 @@
  mktemp
  mktime
  nanosleep
+ objc_msgSend
+ objc_msgSend_stret
  open
  operator delete(void*)
  operator delete[](void*)

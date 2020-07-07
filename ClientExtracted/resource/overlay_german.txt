@@ -377,7 +377,7 @@
 "[english]Steam_Settings_Ingame_ShowFPS_HightContrast"	"High contrast color"
 "Overlay_MicroTxnAuth_RefundPeriod"	"Rückerstattung bis 48 Std. nach Kauf, wenn Artikel nicht verbraucht, verändert oder übertragen wurden. <a href=http://store.steampowered.com/steam_refunds>Mehr erfahren</a>"
 "[english]Overlay_MicroTxnAuth_RefundPeriod"	"Steam offers refunds for these items within 48 hours of purchase if they have not been consumed, modified, or transferred. <a href=http://store.steampowered.com/steam_refunds>Learn More</a>"
-"Overlay_MicroTxnAuth_NotRefundable"	"Diese Artikel sind von einer Rückerstattung ausgeschlossen. <a href=http://store.steampowered.com/steam_refunds>Mehr erfahren</a>"
+"Overlay_MicroTxnAuth_NotRefundable"	"Diese Artikel sind von der Rückerstattung ausgeschlossen. <a href=http://store.steampowered.com/steam_refunds>Mehr erfahren</a>"
 "[english]Overlay_MicroTxnAuth_NotRefundable"	"These items are not eligible for a refund. <a href=http://store.steampowered.com/steam_refunds>Learn More</a>"
 "Overlay_SettingsSCTenfootEnable"	"Das Big-Picture-Overlay verwenden, wenn eine Steam-Eingabe am Desktop benutzt wird"
 "[english]Overlay_SettingsSCTenfootEnable"	"Use the Big Picture Overlay when using a Steam Input enabled controller from the desktop"

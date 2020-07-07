@@ -1,6 +1,7 @@
 
  .objc_class_name_NSAutoreleasePool
  .objc_class_name_NSBundle
+ .objc_class_name_NSProcessInfo
  .objc_class_name_NSString
  B CBreakpadFactory::sm_HandlerMutex
  B CSafeSet::g_bInitialized
@@ -60,6 +61,7 @@
  Gestalt
  OBJC_CLASS_$_NSAutoreleasePool
  OBJC_CLASS_$_NSBundle
+ OBJC_CLASS_$_NSProcessInfo
  OBJC_CLASS_$_NSString
  R typeinfo name for CBreakpadFactory
  R typeinfo name for CCrashHandler
@@ -576,6 +578,7 @@
  nanosleep
  nanosleep$UNIX2003
  objc_msgSend
+ objc_msgSend_stret
  operator delete(void*)
  operator delete[](void*)
  operator new(unsigned long)

@@ -966,7 +966,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/audio/
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/audio/clientaudio.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/audio/clientaudio.h
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/bannedwords.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/bannedwords.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/chunkdatastore.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/chunkdatastore.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/chunkfinder.cpp
@@ -1688,6 +1688,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libpcre.a(libpcre_la-pcre_newline.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libpcre.a(libpcre_la-pcre_ord2utf8.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libpcre.a(libpcre_la-pcre_tables.o)
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libpcre.a(libpcre_la-pcre_ucd.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libpcre.a(libpcre_la-pcre_valid_utf8.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libpcre.a(libpcre_la-pcre_xclass.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libpcrecpp.a(libpcrecpp_la-pcrecpp.o)
