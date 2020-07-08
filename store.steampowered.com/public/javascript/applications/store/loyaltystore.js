@@ -18350,7 +18350,8 @@
                   I.a.createElement(
                     go,
                     { header: i, descriptor: e },
-                    I.a.createElement(Li, null, I.a.createElement($a, null))
+                    Qt.Get().BIsSummerSaleActive() &&
+                      I.a.createElement(Li, null, I.a.createElement($a, null))
                   )
               );
             }),
