@@ -1219,7 +1219,7 @@
 "[english]Steam_Settings_Broadcast_RequiresRestart"	"* Requires game restart before applying"
 "Steam_Settings_Broadcast_ConfigMic"	"Конфигуриране на микрофона"
 "[english]Steam_Settings_Broadcast_ConfigMic"	"Configure microphone"
-"Steam_Settings_Broadcast_Disabled"	"Предаването е изключено"
+"Steam_Settings_Broadcast_Disabled"	"Предаването е преустановено"
 "[english]Steam_Settings_Broadcast_Disabled"	"Broadcasting disabled"
 "Broadcast_Notification_Title"	"Предаване"
 "[english]Broadcast_Notification_Title"	"Broadcast"

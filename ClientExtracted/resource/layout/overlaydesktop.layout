@@ -32,6 +32,7 @@
 		SessionText { controlname=label style=TimeStrings labeltext="#Overlay_Playtime_Session" }
 		TwoWeeksText { controlname=label style=TimeStrings }
 		ForeverText { controlname=label style=TimeStrings }
+		TimedTrialText { controlname=label style=TimeStrings }
 	}
 	
 	styles
@@ -89,7 +90,7 @@
 		place { controls="ScreenshotsDetailPanel,CommunityHubDetailPanel,CommunityDiscussionsDetailPanel" region=detailpanelsBottom width=330 height=240 spacing=10 }
 		
 		place { control="Clock,ClockSuffix" region=topbar }
-		place { control="SessionText,TwoWeeksText,ForeverText" dir=down region=overlay y=35 }
+		place { control="SessionText,TwoWeeksText,ForeverText,TimedTrialText" dir=down region=overlay y=35 }
 		
 	}
 	

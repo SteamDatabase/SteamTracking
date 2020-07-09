@@ -88,6 +88,7 @@
 "Overlay_Playtime_ForeverHours"		"%hours_forever% hours - total"
 "Overlay_Playtime_ForeverMinutes"		"%minutes_forever% minutes - total"
 "Overlay_Playtime_Session"			"%minutes_session% minutes - current session"
+"Overlay_Playtime_TimedTrial"		"%hours_trial% hours and %minutes_trial% minutes - trial remaining"
 
 "Overlay_Friends_ThisManyOnline"	"You have %numfriends% Friends online"
 "Overlay_Friends_ThisManyInThisGame"	"You have %numfriends% Friends on this game server"

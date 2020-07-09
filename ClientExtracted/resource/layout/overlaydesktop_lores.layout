@@ -31,6 +31,7 @@
 		SessionText { controlname=label style=TimeStrings labeltext="#Overlay_Playtime_Session" }
 		TwoWeeksText { controlname=label style=TimeStrings }
 		ForeverText { controlname=label style=TimeStrings }
+		TimedTrialText { controlname=label style=TimeStrings }
 	}
 	
 	styles
@@ -83,6 +84,6 @@
 		place { controls="GameHubButton,GameGroupsButton,ChatRoomButton,DLCButton,GuideButton,GuidesButton,LegacyCDKeyButton,WebSiteButton,ForumsButton,RecommendButton,WorkshopButton,FriendsButton,PlayersButton,AchievementsButton,ScreenshotsButton,EditControllerConfig,ForceQuitButton" y=50 align=right region=overlay dir=down spacing=10 }
 		
 		place { control="Clock,ClockSuffix" region=topbar }
-		place { control="SessionText,TwoWeeksText,ForeverText,CloseButton" dir=down region=overlay y=35 }
+		place { control="SessionText,TwoWeeksText,ForeverText,TimedTrialText" dir=down region=overlay y=35 }
 	}	
 }
