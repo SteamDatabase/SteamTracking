@@ -901,49 +901,6 @@ CGameGooExchangeDialog = {
 		}
 	}
 
-	function EnableProfileModifier( appid, itemid, enabled )
-	{
-		var rgAJAXParams = {
-			sessionid: g_sessionID,
-			appid: appid,
-			assetid: itemid,
-			enabled: enabled
-		};
-		var strActionURL = g_strProfileURL + "/ajaxenableprofilemodifier/";
-
-		$J.post( strActionURL, rgAJAXParams).done( function( data ) {
-				if ( enabled )
-					ShowAlertDialog( 'Enable Profile Modifier', 'ProfileModifier_Enabled' );
-				else
-					ShowAlertDialog( 'ProfileModifier_DisabledTitle', 'ProfileModifier_Disabled' );
-
-				ReloadCommunityInventory();
-			}).fail( function() {
-				ShowAlertDialog( 'Action Failed', 'There was an error communicating with the network. Please try again later.' );
-			});
-	}
-
-	function EnableMiniProfileBackground( itemid, enabled )
-	{
-		var rgAJAXParams = {
-			sessionid: g_sessionID,
-			assetid: itemid,
-			enabled: enabled
-		};
-		var strActionURL = g_strProfileURL + "/ajaxenableminiprofilebackground/";
-
-		$J.post( strActionURL, rgAJAXParams).done( function( data ) {
-			if ( enabled )
-				ShowAlertDialog( 'MiniProfileBackground_EnabledTitle', 'MiniProfileBackground_Enabled' );
-			else
-				ShowAlertDialog( 'MiniProfileBackground_DisabledTitle', 'MiniProfileBackground_Disabled' );
-
-			ReloadCommunityInventory();
-		}).fail( function() {
-			ShowAlertDialog( 'Action Failed', 'There was an error communicating with the network. Please try again later.' );
-		});
-	}
-
 	function EquipOnSteamProfile()
 	{
 		top.location.href = g_strProfileURL + "/edit/";

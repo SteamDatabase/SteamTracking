@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "5957554";
+var CLSTAMP = "5981780";
 !(function(t) {
   var e = {};
   function n(r) {
@@ -160,7 +160,8 @@ var CLSTAMP = "5957554";
         FRIENDSUI_BETA: !1,
         STEAM_TV: !1,
         DEV_MODE: !1,
-        OFFLINE_MODE: !1
+        OFFLINE_MODE: !1,
+        IN_LIBRARY: !1
       },
       u = {
         logged_in: !1,
@@ -784,14 +785,11 @@ PERFORMANCE OF THIS SOFTWARE.
     n.d(e, "a", function() {
       return r.c;
     }),
-      n.d(e, "d", function() {
+      n.d(e, "c", function() {
         return r.i;
       }),
-      n.d(e, "c", function() {
-        return r.h;
-      }),
       n.d(e, "b", function() {
-        return r.g;
+        return r.h;
       });
   },
   x0hG: function(t, e, n) {
@@ -800,7 +798,7 @@ PERFORMANCE OF THIS SOFTWARE.
     var r = n("tkkQ"),
       o = n("Ezvv");
     document.addEventListener("DOMContentLoaded", function() {
-      Object(r.c)(), (window.ClientConnectionAPI = o.b);
+      Object(r.b)(), (window.ClientConnectionAPI = o.b);
     });
   }
 });

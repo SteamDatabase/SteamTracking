@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "5978985";
+var CLSTAMP = "5981776";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [38],
   {
@@ -275,34 +275,6 @@ var CLSTAMP = "5978985";
               (this.nOverrideDateNow = void 0);
           }
           return (
-            Object.defineProperty(e.prototype, "bEnableSteamGameFestival", {
-              get: function() {
-                return !0;
-              },
-              enumerable: !1,
-              configurable: !0
-            }),
-            Object.defineProperty(e.prototype, "bEnableNewsHubMayUpdate", {
-              get: function() {
-                return !0;
-              },
-              enumerable: !1,
-              configurable: !0
-            }),
-            Object.defineProperty(e.prototype, "bEnableNewsHubJulyUpdate", {
-              get: function() {
-                return "dev" == a.c.WEB_UNIVERSE || "beta" == a.c.WEB_UNIVERSE;
-              },
-              enumerable: !1,
-              configurable: !0
-            }),
-            Object.defineProperty(e.prototype, "bForceReadArtistStateents", {
-              get: function() {
-                return "dev" == a.c.WEB_UNIVERSE || "beta" == a.c.WEB_UNIVERSE;
-              },
-              enumerable: !1,
-              configurable: !0
-            }),
             (e.prototype.GetTimeNowWithOverride = function() {
               return this.nOverrideDateNow
                 ? this.nOverrideDateNow
@@ -344,152 +316,161 @@ var CLSTAMP = "5978985";
     },
     "6Y59": function(e, t, n) {
       "use strict";
-      n.d(t, "K", function() {
+      n.d(t, "N", function() {
         return c;
       }),
-        n.d(t, "q", function() {
+        n.d(t, "s", function() {
           return l;
         }),
-        n.d(t, "j", function() {
+        n.d(t, "A", function() {
           return u;
         }),
-        n.d(t, "r", function() {
+        n.d(t, "l", function() {
           return p;
         }),
-        n.d(t, "N", function() {
+        n.d(t, "t", function() {
           return d;
         }),
-        n.d(t, "W", function() {
+        n.d(t, "Q", function() {
           return m;
         }),
-        n.d(t, "U", function() {
+        n.d(t, "Z", function() {
           return h;
         }),
-        n.d(t, "C", function() {
+        n.d(t, "X", function() {
           return f;
         }),
-        n.d(t, "V", function() {
+        n.d(t, "F", function() {
           return g;
         }),
-        n.d(t, "S", function() {
+        n.d(t, "Y", function() {
           return _;
         }),
-        n.d(t, "F", function() {
+        n.d(t, "V", function() {
           return v;
         }),
-        n.d(t, "E", function() {
+        n.d(t, "I", function() {
           return b;
         }),
-        n.d(t, "i", function() {
+        n.d(t, "H", function() {
           return y;
         }),
-        n.d(t, "n", function() {
+        n.d(t, "k", function() {
           return M;
         }),
-        n.d(t, "w", function() {
+        n.d(t, "p", function() {
           return w;
         }),
-        n.d(t, "O", function() {
+        n.d(t, "y", function() {
           return C;
         }),
-        n.d(t, "m", function() {
+        n.d(t, "R", function() {
           return O;
         }),
-        n.d(t, "p", function() {
+        n.d(t, "d", function() {
           return E;
         }),
-        n.d(t, "y", function() {
+        n.d(t, "o", function() {
           return F;
         }),
-        n.d(t, "A", function() {
+        n.d(t, "r", function() {
           return S;
         }),
-        n.d(t, "G", function() {
+        n.d(t, "B", function() {
           return k;
         }),
-        n.d(t, "t", function() {
+        n.d(t, "D", function() {
           return j;
         }),
-        n.d(t, "o", function() {
+        n.d(t, "J", function() {
           return D;
         }),
-        n.d(t, "z", function() {
+        n.d(t, "v", function() {
           return B;
         }),
-        n.d(t, "M", function() {
+        n.d(t, "q", function() {
           return x;
         }),
-        n.d(t, "T", function() {
+        n.d(t, "C", function() {
           return L;
         }),
-        n.d(t, "L", function() {
+        n.d(t, "P", function() {
           return R;
         }),
-        n.d(t, "I", function() {
+        n.d(t, "W", function() {
           return I;
         }),
-        n.d(t, "J", function() {
+        n.d(t, "g", function() {
           return A;
         }),
-        n.d(t, "d", function() {
+        n.d(t, "O", function() {
           return N;
         }),
-        n.d(t, "B", function() {
+        n.d(t, "L", function() {
           return T;
         }),
-        n.d(t, "R", function() {
+        n.d(t, "M", function() {
           return P;
         }),
-        n.d(t, "v", function() {
+        n.d(t, "e", function() {
           return z;
         }),
-        n.d(t, "s", function() {
+        n.d(t, "E", function() {
           return G;
         }),
-        n.d(t, "e", function() {
+        n.d(t, "U", function() {
           return U;
         }),
-        n.d(t, "k", function() {
+        n.d(t, "x", function() {
           return W;
         }),
         n.d(t, "u", function() {
           return H;
         }),
-        n.d(t, "D", function() {
+        n.d(t, "f", function() {
           return V;
         }),
-        n.d(t, "a", function() {
+        n.d(t, "m", function() {
           return Y;
         }),
-        n.d(t, "l", function() {
+        n.d(t, "w", function() {
           return K;
         }),
-        n.d(t, "P", function() {
+        n.d(t, "G", function() {
           return q;
         }),
-        n.d(t, "h", function() {
+        n.d(t, "a", function() {
           return X;
         }),
-        n.d(t, "g", function() {
+        n.d(t, "n", function() {
           return Z;
         }),
-        n.d(t, "f", function() {
+        n.d(t, "S", function() {
           return J;
         }),
-        n.d(t, "b", function() {
+        n.d(t, "j", function() {
           return Q;
         }),
-        n.d(t, "c", function() {
+        n.d(t, "i", function() {
           return $;
         }),
-        n.d(t, "Q", function() {
+        n.d(t, "h", function() {
           return ee;
         }),
-        n.d(t, "H", function() {
+        n.d(t, "b", function() {
           return te;
         }),
-        n.d(t, "x", function() {
+        n.d(t, "c", function() {
           return ne;
+        }),
+        n.d(t, "T", function() {
+          return re;
+        }),
+        n.d(t, "K", function() {
+          return ie;
+        }),
+        n.d(t, "z", function() {
+          return oe;
         });
       var r = n("mrSG"),
         i = n("q1tI"),
@@ -535,7 +516,39 @@ var CLSTAMP = "5978985";
           })
         );
       }
-      function u() {
+      function u(e) {
+        var t = "SVGIcon_Button SVGIcon_MagnifyingGlass";
+        return (
+          e.className && (t += " " + e.className),
+          i.createElement(
+            "svg",
+            {
+              xmlns: "http://www.w3.org/2000/svg",
+              className: t,
+              version: "1.1",
+              x: "0px",
+              y: "0px",
+              viewBox: "0 0 100 100"
+            },
+            i.createElement(
+              "g",
+              { transform: "translate(0,-952.36218)" },
+              i.createElement("path", {
+                className: "ColorSelector",
+                d:
+                  "m 40.99855,964.36216 c -15.9798,0 -28.9986,13.01864 -28.9986,28.99862 0,15.97992 13.0188,28.99862 28.9986,28.99862 6.9189,0 13.2881,-2.4349 18.2803,-6.4997 l 23.5927,23.6239 c 1.1714,1.1714 3.0784,1.1715 4.2498,0 1.1716,-1.1715 1.1716,-3.0783 0,-4.2498 l -23.6239,-23.5926 c 4.0649,-4.9923 6.4997,-11.3615 6.4997,-18.28042 0,-15.97998 -13.0187,-28.99862 -28.9986,-28.99862 z m 0,5.99972 c 12.7374,0 22.9989,10.26145 22.9989,22.9989 0,12.73732 -10.2615,22.99892 -22.9989,22.99892 -12.7374,0 -22.9989,-10.2616 -22.9989,-22.99892 0,-12.73745 10.2615,-22.9989 22.9989,-22.9989 z",
+                fill: "#ffffff",
+                fillOpacity: "1",
+                stroke: "none",
+                visibility: "visible",
+                display: "inline",
+                overflow: "visible"
+              })
+            )
+          )
+        );
+      }
+      function p() {
         return i.createElement(
           "svg",
           {
@@ -553,7 +566,7 @@ var CLSTAMP = "5978985";
           })
         );
       }
-      function p() {
+      function d() {
         return i.createElement(
           "svg",
           {
@@ -609,7 +622,7 @@ var CLSTAMP = "5978985";
           })
         );
       }
-      function d() {
+      function m() {
         return i.createElement(
           "svg",
           {
@@ -638,7 +651,7 @@ var CLSTAMP = "5978985";
           )
         );
       }
-      function m() {
+      function h() {
         return i.createElement(
           "svg",
           {
@@ -674,7 +687,7 @@ var CLSTAMP = "5978985";
           })
         );
       }
-      function h(e) {
+      function f(e) {
         return i.createElement(
           "svg",
           {
@@ -766,7 +779,7 @@ var CLSTAMP = "5978985";
             )
         );
       }
-      function f() {
+      function g() {
         return i.createElement(
           "svg",
           {
@@ -790,7 +803,7 @@ var CLSTAMP = "5978985";
           })
         );
       }
-      function g(e) {
+      function _(e) {
         return i.createElement(
           "svg",
           {
@@ -862,7 +875,7 @@ var CLSTAMP = "5978985";
           )
         );
       }
-      function _() {
+      function v() {
         return i.createElement(
           "svg",
           { width: "50px", height: "25px", viewBox: "0 0 50 25" },
@@ -872,7 +885,7 @@ var CLSTAMP = "5978985";
           })
         );
       }
-      function v() {
+      function b() {
         return i.createElement(
           "svg",
           {
@@ -893,7 +906,7 @@ var CLSTAMP = "5978985";
           })
         );
       }
-      function b() {
+      function y() {
         return i.createElement(
           "svg",
           {
@@ -917,7 +930,7 @@ var CLSTAMP = "5978985";
           })
         );
       }
-      function y() {
+      function M() {
         return i.createElement(
           "svg",
           {
@@ -942,7 +955,7 @@ var CLSTAMP = "5978985";
           })
         );
       }
-      function M(e) {
+      function w(e) {
         var t = e.highlightColor || "#00ccff",
           n = e.color || "#2d73ff";
         return i.createElement(
@@ -1022,7 +1035,7 @@ var CLSTAMP = "5978985";
           })
         );
       }
-      function w() {
+      function C() {
         return i.createElement(
           "svg",
           {
@@ -1052,7 +1065,7 @@ var CLSTAMP = "5978985";
           })
         );
       }
-      function C(e) {
+      function O(e) {
         var t = "SVGIcon_Button SVGIcon_Throbber ";
         return (
           e.className && (t += e.className),
@@ -1296,7 +1309,27 @@ var CLSTAMP = "5978985";
           )
         );
       }
-      function O() {
+      function E() {
+        return i.createElement(
+          "svg",
+          {
+            version: "1.1",
+            id: "base",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_Bell",
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256"
+          },
+          i.createElement("path", {
+            d:
+              "M107.785,33.965c-34.875,8.972-60.644,40.618-60.644,78.308v53.903c0,4.965-4.035,8.99-8.975,8.99 c-9.929,0-17.978,8.066-17.978,17.971c0,9.924,8.059,17.969,18.013,17.969h179.598c9.948,0,18.014-8.066,18.014-17.969 c0-9.926-8.087-17.971-17.979-17.971c-4.956,0-8.975-3.993-8.975-8.99v-53.903c0-37.676-25.763-69.333-60.644-78.308v-9.281 c0-11.193-9.052-20.219-20.215-20.219c-11.143,0-20.215,9.052-20.215,20.219V33.965L107.785,33.965z M96.554,220.09h62.891 c0,17.366-14.079,31.445-31.445,31.445C110.633,251.535,96.554,237.458,96.554,220.09z"
+          })
+        );
+      }
+      function F() {
         return i.createElement(
           "svg",
           {
@@ -1316,7 +1349,7 @@ var CLSTAMP = "5978985";
           })
         );
       }
-      function E(e) {
+      function S(e) {
         return i.createElement(
           "svg",
           {
@@ -1352,7 +1385,7 @@ var CLSTAMP = "5978985";
             })
         );
       }
-      function F() {
+      function k() {
         return i.createElement(
           "svg",
           {
@@ -1388,7 +1421,7 @@ var CLSTAMP = "5978985";
           })
         );
       }
-      function S() {
+      function j() {
         return i.createElement(
           "svg",
           {
@@ -1414,7 +1447,7 @@ var CLSTAMP = "5978985";
           })
         );
       }
-      function k() {
+      function D() {
         return i.createElement(
           "svg",
           {
@@ -1447,7 +1480,7 @@ var CLSTAMP = "5978985";
           })
         );
       }
-      function j(e) {
+      function B(e) {
         return i.createElement(
           "svg",
           {
@@ -1468,7 +1501,7 @@ var CLSTAMP = "5978985";
           })
         );
       }
-      function D() {
+      function x() {
         return i.createElement(
           "svg",
           {
@@ -1503,7 +1536,7 @@ var CLSTAMP = "5978985";
           })
         );
       }
-      function B(e) {
+      function L(e) {
         return i.createElement(
           "svg",
           {
@@ -1543,7 +1576,7 @@ var CLSTAMP = "5978985";
           })
         );
       }
-      function x(e) {
+      function R(e) {
         var t = Object(a.a)(
           "SVGIcon_Button",
           "SVGIcon_SteamLogo",
@@ -1577,7 +1610,7 @@ var CLSTAMP = "5978985";
           })
         );
       }
-      function L() {
+      function I() {
         return i.createElement(
           "svg",
           {
@@ -1605,7 +1638,29 @@ var CLSTAMP = "5978985";
           })
         );
       }
-      function R() {
+      function A() {
+        return i.createElement(
+          "svg",
+          {
+            version: "1.1",
+            id: "Layer_5",
+            className: "SVGIcon_Button SVGIcon_ChatBubble",
+            xmlns: "http://www.w3.org/2000/svg",
+            x: "0px",
+            y: "0px",
+            viewBox: "0 0 64 64"
+          },
+          i.createElement(
+            "g",
+            null,
+            i.createElement("path", {
+              d:
+                "M33,5C18.7,5,7.1,16.6,7.1,30.9c0,5.2,1.5,10.1,4.2,14.1c-0.6,3.7-4.5,10.5-6.2,13.5c-1.3,2.2,11.4-3.8,16.3-4.5c3.5,1.8,7.5,2.8,11.7,2.8c14.3,0,25.9-11.6,25.9-25.9S47.3,5,33,5z"
+            })
+          )
+        );
+      }
+      function N() {
         return i.createElement(
           "svg",
           {
@@ -1626,7 +1681,7 @@ var CLSTAMP = "5978985";
           )
         );
       }
-      function I() {
+      function T() {
         return i.createElement(
           "svg",
           {
@@ -1663,7 +1718,7 @@ var CLSTAMP = "5978985";
           )
         );
       }
-      function A() {
+      function P() {
         return i.createElement(
           "svg",
           {
@@ -1691,7 +1746,7 @@ var CLSTAMP = "5978985";
           })
         );
       }
-      function N() {
+      function z() {
         return i.createElement(
           "svg",
           {
@@ -1712,7 +1767,7 @@ var CLSTAMP = "5978985";
           })
         );
       }
-      function T() {
+      function G() {
         return i.createElement(
           "svg",
           {
@@ -1732,7 +1787,7 @@ var CLSTAMP = "5978985";
           })
         );
       }
-      function P() {
+      function U() {
         return i.createElement(
           "svg",
           {
@@ -1756,7 +1811,7 @@ var CLSTAMP = "5978985";
           })
         );
       }
-      function z() {
+      function W() {
         return i.createElement(
           "svg",
           {
@@ -1806,7 +1861,7 @@ var CLSTAMP = "5978985";
           })
         );
       }
-      function G() {
+      function H() {
         return i.createElement(
           "svg",
           {
@@ -1839,7 +1894,7 @@ var CLSTAMP = "5978985";
           })
         );
       }
-      function U() {
+      function V() {
         return i.createElement(
           "svg",
           {
@@ -1861,7 +1916,7 @@ var CLSTAMP = "5978985";
           })
         );
       }
-      function W() {
+      function Y() {
         return i.createElement(
           "svg",
           {
@@ -1895,7 +1950,7 @@ var CLSTAMP = "5978985";
           })
         );
       }
-      function H() {
+      function K() {
         return i.createElement(
           "svg",
           {
@@ -1965,7 +2020,7 @@ var CLSTAMP = "5978985";
           })
         );
       }
-      function V() {
+      function q() {
         return i.createElement(
           "svg",
           {
@@ -1993,7 +2048,7 @@ var CLSTAMP = "5978985";
           })
         );
       }
-      function Y() {
+      function X() {
         return i.createElement(
           "svg",
           {
@@ -2023,7 +2078,7 @@ var CLSTAMP = "5978985";
           )
         );
       }
-      function K(e) {
+      function Z(e) {
         return i.createElement(
           "svg",
           {
@@ -2043,7 +2098,7 @@ var CLSTAMP = "5978985";
           })
         );
       }
-      function q(e) {
+      function J(e) {
         return i.createElement(
           "svg",
           {
@@ -2063,7 +2118,7 @@ var CLSTAMP = "5978985";
           })
         );
       }
-      function X(e) {
+      function Q(e) {
         var t = e.className;
         Object(r.f)(e, ["className"]);
         return i.createElement(
@@ -2085,7 +2140,7 @@ var CLSTAMP = "5978985";
           })
         );
       }
-      function Z(e) {
+      function $(e) {
         var t = e.className;
         Object(r.f)(e, ["className"]);
         return i.createElement(
@@ -2107,7 +2162,7 @@ var CLSTAMP = "5978985";
           })
         );
       }
-      function J(e) {
+      function ee(e) {
         var t = e.className;
         Object(r.f)(e, ["className"]);
         return i.createElement(
@@ -2129,7 +2184,7 @@ var CLSTAMP = "5978985";
           })
         );
       }
-      function Q(e) {
+      function te(e) {
         var t = e.className;
         Object(r.f)(e, ["className"]);
         return i.createElement(
@@ -2151,7 +2206,7 @@ var CLSTAMP = "5978985";
           })
         );
       }
-      function $(e) {
+      function ne(e) {
         var t = e.className;
         Object(r.f)(e, ["className"]);
         return i.createElement(
@@ -2172,7 +2227,7 @@ var CLSTAMP = "5978985";
           })
         );
       }
-      function ee(e) {
+      function re(e) {
         return i.createElement(
           "svg",
           Object(r.a)(
@@ -2197,7 +2252,7 @@ var CLSTAMP = "5978985";
           })
         );
       }
-      function te(e) {
+      function ie(e) {
         var t = e.className,
           n = Object(r.f)(e, ["className"]);
         return i.createElement(
@@ -2415,7 +2470,7 @@ var CLSTAMP = "5978985";
           )
         );
       }
-      function ne(e) {
+      function oe(e) {
         var t = e.className;
         Object(r.f)(e, ["className"]);
         return i.createElement(
@@ -2915,7 +2970,7 @@ var CLSTAMP = "5978985";
                 });
               });
             }),
-            Object(y.c)([o.x], e.prototype, "rgModelNames", void 0),
+            Object(y.c)([o.y], e.prototype, "rgModelNames", void 0),
             Object(y.c)([s.a], e.prototype, "GetNeighbors", null),
             Object(y.c)([s.a], e.prototype, "EstimateCosts", null),
             e
@@ -3538,10 +3593,10 @@ var CLSTAMP = "5978985";
                 g.a.createElement("div", { className: _.SimilarApps }, e)
               );
             }),
-            Object(y.c)([o.x], e.prototype, "selected_app", void 0),
-            Object(y.c)([o.x], e.prototype, "similar_apps", void 0),
-            Object(y.c)([o.x], e.prototype, "similarity_scores", void 0),
-            Object(y.c)([o.x], e.prototype, "similarity_model", void 0),
+            Object(y.c)([o.y], e.prototype, "selected_app", void 0),
+            Object(y.c)([o.y], e.prototype, "similar_apps", void 0),
+            Object(y.c)([o.y], e.prototype, "similarity_scores", void 0),
+            Object(y.c)([o.y], e.prototype, "similarity_model", void 0),
             Object(y.c)([s.a], e.prototype, "OnSelectedApp", null),
             Object(y.c)([s.a], e.prototype, "SetSelectedApp", null),
             Object(y.c)([s.a], e.prototype, "OnModelChanged", null),
@@ -3593,8 +3648,8 @@ var CLSTAMP = "5978985";
                 g.a.createElement(C, { fnOnSelection: this.OnSelectedApp })
               );
             }),
-            Object(y.c)([o.x], e.prototype, "selected_app", void 0),
-            Object(y.c)([o.x], e.prototype, "selected_operator", void 0),
+            Object(y.c)([o.y], e.prototype, "selected_app", void 0),
+            Object(y.c)([o.y], e.prototype, "selected_operator", void 0),
             Object(y.c)([s.a], e.prototype, "OnSelectedApp", null),
             Object(y.c)([s.a], e.prototype, "OnSelectedOperator", null),
             (e = Object(y.c)([h.a], e))
@@ -3776,10 +3831,10 @@ var CLSTAMP = "5978985";
                 g.a.createElement("div", { className: _.SimilarApps }, p)
               );
             }),
-            Object(y.c)([o.x], e.prototype, "operands", void 0),
-            Object(y.c)([o.x], e.prototype, "similarity_model", void 0),
-            Object(y.c)([o.x], e.prototype, "similar_apps", void 0),
-            Object(y.c)([o.x], e.prototype, "similarity_scores", void 0),
+            Object(y.c)([o.y], e.prototype, "operands", void 0),
+            Object(y.c)([o.y], e.prototype, "similarity_model", void 0),
+            Object(y.c)([o.y], e.prototype, "similar_apps", void 0),
+            Object(y.c)([o.y], e.prototype, "similarity_scores", void 0),
             Object(y.c)([s.a], e.prototype, "OnModelChanged", null),
             Object(y.c)([s.a], e.prototype, "OnAddOperand", null),
             Object(y.c)([s.a], e.prototype, "OnOperandChanged", null),
@@ -3914,11 +3969,11 @@ var CLSTAMP = "5978985";
                 g.a.createElement("div", { className: _.Path }, r)
               );
             }),
-            Object(y.c)([o.x], e.prototype, "app_start", void 0),
-            Object(y.c)([o.x], e.prototype, "app_end", void 0),
-            Object(y.c)([o.x], e.prototype, "in_progress", void 0),
-            Object(y.c)([o.x], e.prototype, "progress_iteration", void 0),
-            Object(y.c)([o.x], e.prototype, "found_path", void 0),
+            Object(y.c)([o.y], e.prototype, "app_start", void 0),
+            Object(y.c)([o.y], e.prototype, "app_end", void 0),
+            Object(y.c)([o.y], e.prototype, "in_progress", void 0),
+            Object(y.c)([o.y], e.prototype, "progress_iteration", void 0),
+            Object(y.c)([o.y], e.prototype, "found_path", void 0),
             Object(y.c)([s.a], e.prototype, "IterationCallback", null),
             Object(y.c)([s.a], e.prototype, "Pathfind", null),
             Object(y.c)([s.a], e.prototype, "OnSelectedStartApp", null),
@@ -4399,7 +4454,7 @@ var CLSTAMP = "5978985";
             (e.prototype.OnBeforeUnload = function() {}),
             (e.prototype.OnFocus = function() {}),
             (e.prototype.OnBlur = function() {}),
-            Object(i.c)([o.x], e.prototype, "m_bFocused", void 0),
+            Object(i.c)([o.y], e.prototype, "m_bFocused", void 0),
             Object(i.c)([u.a], e.prototype, "OnMessage", null),
             Object(i.c)([u.a], e.prototype, "OnResizeEvent", null),
             Object(i.c)([u.a], e.prototype, "OnBeforeUnloadEvent", null),
@@ -4797,7 +4852,7 @@ var CLSTAMP = "5978985";
                   u.createElement(
                     "div",
                     { className: "closeButton", onClick: t.onEscKeypress },
-                    u.createElement(s.W, null)
+                    u.createElement(s.Z, null)
                   )
                 ),
               u.createElement(o.a, null, t.children)
@@ -7968,75 +8023,98 @@ var CLSTAMP = "5978985";
           );
         })(o.Message);
       ((a = r = r || {}).GetApps = function(e, t) {
-        return e.SendMsg("Community.GetApps#1", t, l, { bConstMethod: !0 });
+        return e.SendMsg("Community.GetApps#1", t, l, {
+          bConstMethod: !0,
+          ePrivilege: 2,
+          eWebAPIKeyRequirement: 1
+        });
       }),
         (a.GetAppRichPresenceLocalization = function(e, t) {
-          return e.SendMsg(
-            "Community.GetAppRichPresenceLocalization#1",
-            t,
-            p,
-            {}
-          );
+          return e.SendMsg("Community.GetAppRichPresenceLocalization#1", t, p, {
+            ePrivilege: 1
+          });
         }),
         (a.GetCommentThread = function(e, t) {
-          return e.SendMsg("Community.GetCommentThread#1", t, f, {});
+          return e.SendMsg("Community.GetCommentThread#1", t, f, {
+            ePrivilege: 1
+          });
         }),
         (a.PostCommentToThread = function(e, t) {
-          return e.SendMsg("Community.PostCommentToThread#1", t, g, {});
+          return e.SendMsg("Community.PostCommentToThread#1", t, g, {
+            ePrivilege: 3
+          });
         }),
         (a.DeleteCommentFromThread = function(e, t) {
-          return e.SendMsg("Community.DeleteCommentFromThread#1", t, _, {});
+          return e.SendMsg("Community.DeleteCommentFromThread#1", t, _, {
+            ePrivilege: 1
+          });
         }),
         (a.RateCommentThread = function(e, t) {
-          return e.SendMsg("Community.RateCommentThread#1", t, v, {});
+          return e.SendMsg("Community.RateCommentThread#1", t, v, {
+            ePrivilege: 3
+          });
         }),
         (a.GetCommentThreadRatings = function(e, t) {
-          return e.SendMsg("Community.GetCommentThreadRatings#1", t, b, {});
+          return e.SendMsg("Community.GetCommentThreadRatings#1", t, b, {
+            ePrivilege: 2
+          });
         }),
         (a.RateClanAnnouncement = function(e, t) {
-          return e.SendMsg("Community.RateClanAnnouncement#1", t, M, {});
+          return e.SendMsg("Community.RateClanAnnouncement#1", t, M, {
+            ePrivilege: 3
+          });
         }),
         (a.GetClanAnnouncementVoteForUser = function(e, t) {
-          return e.SendMsg(
-            "Community.GetClanAnnouncementVoteForUser#1",
-            t,
-            C,
-            {}
-          );
+          return e.SendMsg("Community.GetClanAnnouncementVoteForUser#1", t, C, {
+            ePrivilege: 1
+          });
         }),
         (a.GetAvatarHistory = function(e, t) {
-          return e.SendMsg("Community.GetAvatarHistory#1", t, O, {});
+          return e.SendMsg("Community.GetAvatarHistory#1", t, O, {
+            ePrivilege: 1
+          });
         }),
         (a.GetUserPartnerEventNews = function(e, t) {
           return e.SendMsg("Community.GetUserPartnerEventNews#1", t, S, {
-            bConstMethod: !0
+            bConstMethod: !0,
+            ePrivilege: 1,
+            eWebAPIKeyRequirement: 2
           });
         }),
         (a.GetBestEventsForUser = function(e, t) {
           return e.SendMsg("Community.GetBestEventsForUser#1", t, j, {
-            bConstMethod: !0
+            bConstMethod: !0,
+            ePrivilege: 1,
+            eWebAPIKeyRequirement: 2
           });
         }),
         (a.MarkPartnerEventsForUser = function(e, t) {
-          return e.SendMsg("Community.MarkPartnerEventsForUser#1", t, T, {});
+          return e.SendMsg("Community.MarkPartnerEventsForUser#1", t, T, {
+            ePrivilege: 1
+          });
         }),
         (a.GetUserPartnerEventViewStatus = function(e, t) {
           return e.SendMsg("Community.GetUserPartnerEventViewStatus#1", t, P, {
-            bConstMethod: !0
+            bConstMethod: !0,
+            ePrivilege: 1
           });
         }),
         (a.PartnerEventsShowMoreForApp = function(e, t) {
-          return e.SendMsg("Community.PartnerEventsShowMoreForApp#1", t, R, {});
+          return e.SendMsg("Community.PartnerEventsShowMoreForApp#1", t, R, {
+            ePrivilege: 1
+          });
         }),
         (a.PartnerEventsShowLessForApp = function(e, t) {
-          return e.SendMsg("Community.PartnerEventsShowLessForApp#1", t, I, {});
+          return e.SendMsg("Community.PartnerEventsShowLessForApp#1", t, I, {
+            ePrivilege: 1
+          });
         }),
         (a.ClearUserPartnerEventsAppPriorities = function(e, t) {
           return e.SendMsg(
             "Community.ClearUserPartnerEventsAppPriorities#1",
             t,
             D,
-            {}
+            { ePrivilege: 1 }
           );
         }),
         (a.GetUserPartnerEventsAppPriorities = function(e, t) {
@@ -8044,7 +8122,7 @@ var CLSTAMP = "5978985";
             "Community.GetUserPartnerEventsAppPriorities#1",
             t,
             x,
-            {}
+            { ePrivilege: 1 }
           );
         }),
         (a.ClearSinglePartnerEventsAppPriority = function(e, t) {
@@ -8052,7 +8130,7 @@ var CLSTAMP = "5978985";
             "Community.ClearSinglePartnerEventsAppPriority#1",
             t,
             L,
-            {}
+            { ePrivilege: 1 }
           );
         });
     },
@@ -8349,7 +8427,7 @@ var CLSTAMP = "5978985";
                       f.createElement(
                         "div",
                         { className: e },
-                        f.createElement(g.n, {
+                        f.createElement(g.p, {
                           color: this.props.color,
                           highlightColor: this.props.highlightColor
                         })
@@ -8376,7 +8454,7 @@ var CLSTAMP = "5978985";
                   : f.createElement(
                       "div",
                       Object(h.a)({ className: e }, this.GetElementProps()),
-                      f.createElement(g.n, null)
+                      f.createElement(g.p, null)
                     )
               );
             }),
@@ -8690,7 +8768,7 @@ var CLSTAMP = "5978985";
                         className: "DialogInput_ClearAction",
                         onClick: this.OnClearClick
                       },
-                      f.createElement(g.W, null)
+                      f.createElement(g.Z, null)
                     )
                 ),
                 d
@@ -11345,7 +11423,7 @@ var CLSTAMP = "5978985";
             (e.prototype.BIsSubMenuVisible = function() {
               return !!this.m_submenu;
             }),
-            Object(r.c)([a.x], e.prototype, "m_bVisible", void 0),
+            Object(r.c)([a.y], e.prototype, "m_bVisible", void 0),
             e
           );
         })(c),
@@ -12215,7 +12293,8 @@ var CLSTAMP = "5978985";
                         t.props.onGoBack(),
                         e.stopPropagation(),
                         e.preventDefault())
-                      : "`" === e.key &&
+                      : "1" === e.key &&
+                        e.ctrlKey &&
                         t.props.onHome &&
                         (m("KFNA Home Key id='" + n.id + "'"),
                         t.props.onHome(),
@@ -12451,14 +12530,14 @@ var CLSTAMP = "5978985";
       n.d(t, "a", function() {
         return s;
       });
-      var u = n("mrSG"),
-        l = n("H7XF"),
-        p = n("hRO2"),
-        d = n("bxBv"),
+      var p = n("mrSG"),
+        d = n("H7XF"),
+        u = n("hRO2"),
+        m = n("bxBv"),
         r = n("bxiW"),
         i = n("vDqi"),
-        m = n.n(i),
-        h = n("mC9v"),
+        h = n.n(i),
+        f = n("mC9v"),
         o = n("kLLr"),
         s = (function() {
           function e(e, t, n) {
@@ -12512,9 +12591,9 @@ var CLSTAMP = "5978985";
                 });
             }),
             (e.prototype.SendMsgAndAwaitResponse = function(o, s, a, c, l) {
-              return Object(u.b)(this, void 0, void 0, function() {
+              return Object(p.b)(this, void 0, void 0, function() {
                 var t, n, r, i;
-                return Object(u.e)(this, function(e) {
+                return Object(p.e)(this, function(e) {
                   switch (e.label) {
                     case 0:
                       (t = null), (e.label = 1);
@@ -12526,7 +12605,7 @@ var CLSTAMP = "5978985";
                       if (200 != (n = e.sent()).status || !n.data)
                         throw new Error("Request Error");
                       return (
-                        (t = d.a.Init(c, 147)),
+                        (t = m.a.Init(c, 147)),
                         n.headers &&
                           (n.headers["x-eresult"] &&
                             t
@@ -12538,8 +12617,8 @@ var CLSTAMP = "5978985";
                               .set_error_message(n.headers["x-error_message"])),
                         this.m_bJsonMode
                           ? t.SetBodyJSON(n.data.response)
-                          : ((r = new h.a(n.data)),
-                            (i = new p.BinaryReader(
+                          : ((r = new f.a(n.data)),
+                            (i = new u.BinaryReader(
                               r.GetPacket(),
                               r.TellGet(),
                               r.GetCountBytesRemaining()
@@ -12559,39 +12638,49 @@ var CLSTAMP = "5978985";
                 });
               });
             }),
-            (e.prototype.SendNotification = function(e, t, n) {
-              return this.Send(e, t, n), !0;
+            (e.prototype.SendNotification = function(e, t, n, r) {
+              return this.Send(e, t, n, r), !0;
             }),
             (e.prototype.Send = function(e, t, n, r) {
               var i = this.CreateWebAPIURL(t),
                 o = n.SerializeBody(),
-                s = l.fromByteArray(o),
-                a = {
+                s = d.fromByteArray(o),
+                a = r.eWebAPIKeyRequirement,
+                c = 0 == r.ePrivilege && 1 == a,
+                l = {
                   responseType: this.m_bJsonMode ? "json" : "arraybuffer",
                   params: {}
                 };
               if (
-                (this.m_webApiAccessToken &&
+                (e.bSendAuth ||
+                  1 == a ||
+                  console.error(
+                    "Attempting to invoke service " +
+                      t +
+                      " without auth, but auth is required."
+                  ),
+                this.m_webApiAccessToken &&
                   e.bSendAuth &&
-                  (a.params.access_token = this.m_webApiAccessToken),
-                r && r.bConstMethod)
+                  !c &&
+                  (l.params.access_token = this.m_webApiAccessToken),
+                r.bConstMethod)
               )
                 return (
                   this.m_bJsonMode
-                    ? (a.params = Object(u.a)(Object(u.a)({}, a.params), {
+                    ? (l.params = Object(p.a)(Object(p.a)({}, l.params), {
                         input_json: JSON.stringify(n.Body().toObject())
                       }))
-                    : (a.params = Object(u.a)(Object(u.a)({}, a.params), {
+                    : (l.params = Object(p.a)(Object(p.a)({}, l.params), {
                         input_protobuf_encoded: s
                       })),
-                  m.a.get(i, a)
+                  h.a.get(i, l)
                 );
-              var c = new FormData();
+              var u = new FormData();
               return (
                 this.m_bJsonMode
-                  ? c.append("input_json", JSON.stringify(n.Body().toObject()))
-                  : c.append("input_protobuf_encoded", s),
-                m.a.post(i, c, a)
+                  ? u.append("input_json", JSON.stringify(n.Body().toObject()))
+                  : u.append("input_protobuf_encoded", s),
+                h.a.post(i, u, l)
               );
             }),
             (e.prototype.CreateWebAPIURL = function(e) {
@@ -12607,7 +12696,7 @@ var CLSTAMP = "5978985";
                 : null;
             }),
             (e.prototype.CreateFailedMsgProtobuf = function(e, t, n) {
-              var r = d.a.Init(e);
+              var r = m.a.Init(e);
               return (
                 r.Hdr().set_eresult(2),
                 r.Hdr().set_transport_error(t),
@@ -12615,9 +12704,9 @@ var CLSTAMP = "5978985";
                 r
               );
             }),
-            Object(u.c)([r.a], e.prototype, "SendMsgAndAwaitResponse", null),
-            Object(u.c)([r.a], e.prototype, "SendNotification", null),
-            Object(u.c)([r.a], e.prototype, "Send", null),
+            Object(p.c)([r.a], e.prototype, "SendMsgAndAwaitResponse", null),
+            Object(p.c)([r.a], e.prototype, "SendNotification", null),
+            Object(p.c)([r.a], e.prototype, "Send", null),
             e
           );
         })();
@@ -13327,7 +13416,7 @@ var CLSTAMP = "5978985";
                   o.createElement(
                     "div",
                     { className: "DialogDropDown_Arrow" },
-                    o.createElement(s.q, null)
+                    o.createElement(s.s, null)
                   ),
                 this.props.postOptionElement,
                 o.createElement(
@@ -15486,7 +15575,7 @@ var CLSTAMP = "5978985";
         o = (function() {
           function e(e) {
             (this.m_nLastUpdated = 0),
-              (this.m_mapLanguages = r.x.map()),
+              (this.m_mapLanguages = r.y.map()),
               (this.m_fetching = null),
               (this.m_appid = e);
           }
@@ -15578,8 +15667,8 @@ var CLSTAMP = "5978985";
         s = n("qiKp"),
         _ = new ((function() {
           function e() {
-            (this.m_mapAppInfo = r.x.map()),
-              (this.m_mapRichPresenceLoc = r.x.map()),
+            (this.m_mapAppInfo = r.y.map()),
+              (this.m_mapRichPresenceLoc = r.y.map()),
               (this.m_cAppInfoRequestsInFlight = 0),
               (this.m_setPendingAppInfo = new Set()),
               (this.m_CacheStorage = null),

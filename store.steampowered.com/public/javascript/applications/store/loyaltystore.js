@@ -702,13 +702,13 @@
           return (
             Object(R.d)(r, i),
             (r.prototype.item_definitions = function() {
-              return h.Message.getRepeatedWrapperField(this, x, 1);
+              return h.Message.getRepeatedWrapperField(this, A, 1);
             }),
             (r.prototype.set_item_definitions = function(e) {
               h.Message.setRepeatedWrapperField(this, 1, e);
             }),
             (r.prototype.add_item_definitions = function(e, t) {
-              return h.Message.addToRepeatedWrapperField(this, 1, e, x, t);
+              return h.Message.addToRepeatedWrapperField(this, 1, e, A, t);
             }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
@@ -717,7 +717,7 @@
               var i = {
                 item_definitions: h.Message.toObjectList(
                   t.item_definitions(),
-                  x.toObject,
+                  A.toObject,
                   e
                 )
               };
@@ -731,7 +731,7 @@
                     ? e.item_definitions
                     : []
                   ).map(function(e) {
-                    return x.fromObject(e);
+                    return A.fromObject(e);
                   })
                 ),
                 t
@@ -746,8 +746,8 @@
               for (; t.nextField() && !t.isEndGroup(); ) {
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var i = new x();
-                    t.readMessage(i, x.deserializeBinaryFromReader),
+                    var i = new A();
+                    t.readMessage(i, A.deserializeBinaryFromReader),
                       e.add_item_definitions(i);
                     break;
                   default:
@@ -763,7 +763,7 @@
             (r.serializeBinaryToWriter = function(e, t) {
               var i = e.item_definitions();
               0 < i.length &&
-                t.writeRepeatedMessage(1, i, x.serializeBinaryToWriter);
+                t.writeRepeatedMessage(1, i, A.serializeBinaryToWriter);
             }),
             (r.prototype.getClassName = function() {
               return "CQuest_GetCommunityItemDefinitions_Response";
@@ -771,7 +771,7 @@
             r
           );
         })(h.Message)),
-        x = (function(i) {
+        A = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -1092,7 +1092,7 @@
             r
           );
         })(h.Message),
-        A = (function(i) {
+        x = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -1592,23 +1592,31 @@
         })(h.Message);
       ((M = F = F || {}).GetCommunityInventory = function(e, t) {
         return e.SendMsg("Quest.GetCommunityInventory#1", t, P, {
-          bConstMethod: !0
+          bConstMethod: !0,
+          ePrivilege: 1
         });
       }),
         (M.GetCommunityItemDefinitions = function(e, t) {
           return e.SendMsg("Quest.GetCommunityItemDefinitions#1", t, N, {
-            bConstMethod: !0
+            bConstMethod: !0,
+            ePrivilege: 2,
+            eWebAPIKeyRequirement: 4
           });
         }),
         (M.ActivateProfileModifierItem = function(e, t) {
-          return e.SendMsg("Quest.ActivateProfileModifierItem#1", t, z, {});
+          return e.SendMsg("Quest.ActivateProfileModifierItem#1", t, z, {
+            ePrivilege: 1
+          });
         }),
         ((B = C = C || {}).ClaimItem = function(e, t) {
-          return e.SendMsg("SummerSale2020.ClaimItem#1", t, G, {});
+          return e.SendMsg("SummerSale2020.ClaimItem#1", t, G, {
+            ePrivilege: 1
+          });
         }),
         (B.CanClaimItem = function(e, t) {
           return e.SendMsg("SummerSale2020.CanClaimItem#1", t, W, {
-            bConstMethod: !0
+            bConstMethod: !0,
+            ePrivilege: 1
           });
         });
       var H,
@@ -5471,7 +5479,7 @@
             r
           );
         })(h.Message)),
-        xe = (h.Message,
+        Ae = (h.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -5490,49 +5498,49 @@
               h.Message.setWrapperField(this, 1, e);
             }),
             (r.prototype.in_game = function() {
-              return h.Message.getRepeatedWrapperField(this, Ae, 2);
+              return h.Message.getRepeatedWrapperField(this, xe, 2);
             }),
             (r.prototype.set_in_game = function(e) {
               h.Message.setRepeatedWrapperField(this, 2, e);
             }),
             (r.prototype.add_in_game = function(e, t) {
-              return h.Message.addToRepeatedWrapperField(this, 2, e, Ae, t);
+              return h.Message.addToRepeatedWrapperField(this, 2, e, xe, t);
             }),
             (r.prototype.played_recently = function() {
-              return h.Message.getRepeatedWrapperField(this, Ae, 3);
+              return h.Message.getRepeatedWrapperField(this, xe, 3);
             }),
             (r.prototype.set_played_recently = function(e) {
               h.Message.setRepeatedWrapperField(this, 3, e);
             }),
             (r.prototype.add_played_recently = function(e, t) {
-              return h.Message.addToRepeatedWrapperField(this, 3, e, Ae, t);
+              return h.Message.addToRepeatedWrapperField(this, 3, e, xe, t);
             }),
             (r.prototype.played_ever = function() {
-              return h.Message.getRepeatedWrapperField(this, Ae, 4);
+              return h.Message.getRepeatedWrapperField(this, xe, 4);
             }),
             (r.prototype.set_played_ever = function(e) {
               h.Message.setRepeatedWrapperField(this, 4, e);
             }),
             (r.prototype.add_played_ever = function(e, t) {
-              return h.Message.addToRepeatedWrapperField(this, 4, e, Ae, t);
+              return h.Message.addToRepeatedWrapperField(this, 4, e, xe, t);
             }),
             (r.prototype.owns = function() {
-              return h.Message.getRepeatedWrapperField(this, Ae, 5);
+              return h.Message.getRepeatedWrapperField(this, xe, 5);
             }),
             (r.prototype.set_owns = function(e) {
               h.Message.setRepeatedWrapperField(this, 5, e);
             }),
             (r.prototype.add_owns = function(e, t) {
-              return h.Message.addToRepeatedWrapperField(this, 5, e, Ae, t);
+              return h.Message.addToRepeatedWrapperField(this, 5, e, xe, t);
             }),
             (r.prototype.in_wishlist = function() {
-              return h.Message.getRepeatedWrapperField(this, Ae, 6);
+              return h.Message.getRepeatedWrapperField(this, xe, 6);
             }),
             (r.prototype.set_in_wishlist = function(e) {
               h.Message.setRepeatedWrapperField(this, 6, e);
             }),
             (r.prototype.add_in_wishlist = function(e, t) {
-              return h.Message.addToRepeatedWrapperField(this, 6, e, Ae, t);
+              return h.Message.addToRepeatedWrapperField(this, 6, e, xe, t);
             }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
@@ -5541,21 +5549,21 @@
               var i,
                 r = {
                   your_info: (i = t.your_info(!1)) && ze.toObject(e, i),
-                  in_game: h.Message.toObjectList(t.in_game(), Ae.toObject, e),
+                  in_game: h.Message.toObjectList(t.in_game(), xe.toObject, e),
                   played_recently: h.Message.toObjectList(
                     t.played_recently(),
-                    Ae.toObject,
+                    xe.toObject,
                     e
                   ),
                   played_ever: h.Message.toObjectList(
                     t.played_ever(),
-                    Ae.toObject,
+                    xe.toObject,
                     e
                   ),
-                  owns: h.Message.toObjectList(t.owns(), Ae.toObject, e),
+                  owns: h.Message.toObjectList(t.owns(), xe.toObject, e),
                   in_wishlist: h.Message.toObjectList(
                     t.in_wishlist(),
-                    Ae.toObject,
+                    xe.toObject,
                     e
                   )
                 };
@@ -5567,7 +5575,7 @@
                 t.set_your_info(ze.fromObject(e.your_info)),
                 t.set_in_game(
                   (Array.isArray(e.in_game) ? e.in_game : []).map(function(e) {
-                    return Ae.fromObject(e);
+                    return xe.fromObject(e);
                   })
                 ),
                 t.set_played_recently(
@@ -5575,25 +5583,25 @@
                     ? e.played_recently
                     : []
                   ).map(function(e) {
-                    return Ae.fromObject(e);
+                    return xe.fromObject(e);
                   })
                 ),
                 t.set_played_ever(
                   (Array.isArray(e.played_ever) ? e.played_ever : []).map(
                     function(e) {
-                      return Ae.fromObject(e);
+                      return xe.fromObject(e);
                     }
                   )
                 ),
                 t.set_owns(
                   (Array.isArray(e.owns) ? e.owns : []).map(function(e) {
-                    return Ae.fromObject(e);
+                    return xe.fromObject(e);
                   })
                 ),
                 t.set_in_wishlist(
                   (Array.isArray(e.in_wishlist) ? e.in_wishlist : []).map(
                     function(e) {
-                      return Ae.fromObject(e);
+                      return xe.fromObject(e);
                     }
                   )
                 ),
@@ -5614,28 +5622,28 @@
                       e.set_your_info(i);
                     break;
                   case 2:
-                    i = new Ae();
-                    t.readMessage(i, Ae.deserializeBinaryFromReader),
+                    i = new xe();
+                    t.readMessage(i, xe.deserializeBinaryFromReader),
                       e.add_in_game(i);
                     break;
                   case 3:
-                    i = new Ae();
-                    t.readMessage(i, Ae.deserializeBinaryFromReader),
+                    i = new xe();
+                    t.readMessage(i, xe.deserializeBinaryFromReader),
                       e.add_played_recently(i);
                     break;
                   case 4:
-                    i = new Ae();
-                    t.readMessage(i, Ae.deserializeBinaryFromReader),
+                    i = new xe();
+                    t.readMessage(i, xe.deserializeBinaryFromReader),
                       e.add_played_ever(i);
                     break;
                   case 5:
-                    i = new Ae();
-                    t.readMessage(i, Ae.deserializeBinaryFromReader),
+                    i = new xe();
+                    t.readMessage(i, xe.deserializeBinaryFromReader),
                       e.add_owns(i);
                     break;
                   case 6:
-                    i = new Ae();
-                    t.readMessage(i, Ae.deserializeBinaryFromReader),
+                    i = new xe();
+                    t.readMessage(i, xe.deserializeBinaryFromReader),
                       e.add_in_wishlist(i);
                     break;
                   default:
@@ -5652,15 +5660,15 @@
               var i = e.your_info(!1);
               null != i && t.writeMessage(1, i, ze.serializeBinaryToWriter),
                 0 < (i = e.in_game()).length &&
-                  t.writeRepeatedMessage(2, i, Ae.serializeBinaryToWriter),
+                  t.writeRepeatedMessage(2, i, xe.serializeBinaryToWriter),
                 0 < (i = e.played_recently()).length &&
-                  t.writeRepeatedMessage(3, i, Ae.serializeBinaryToWriter),
+                  t.writeRepeatedMessage(3, i, xe.serializeBinaryToWriter),
                 0 < (i = e.played_ever()).length &&
-                  t.writeRepeatedMessage(4, i, Ae.serializeBinaryToWriter),
+                  t.writeRepeatedMessage(4, i, xe.serializeBinaryToWriter),
                 0 < (i = e.owns()).length &&
-                  t.writeRepeatedMessage(5, i, Ae.serializeBinaryToWriter),
+                  t.writeRepeatedMessage(5, i, xe.serializeBinaryToWriter),
                 0 < (i = e.in_wishlist()).length &&
-                  t.writeRepeatedMessage(6, i, Ae.serializeBinaryToWriter);
+                  t.writeRepeatedMessage(6, i, xe.serializeBinaryToWriter);
             }),
             (r.prototype.getClassName = function() {
               return "CPlayer_GetFriendsGameplayInfo_Response";
@@ -5668,7 +5676,7 @@
             r
           );
         })(h.Message)),
-        Ae = (function(i) {
+        xe = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -8237,171 +8245,228 @@
         })(h.Message);
       ((D = H = H || {}).GetMutualFriendsForIncomingInvites = function(e, t) {
         return e.SendMsg("Player.GetMutualFriendsForIncomingInvites#1", t, $, {
-          bConstMethod: !0
+          bConstMethod: !0,
+          ePrivilege: 1
         });
       }),
         (D.GetOwnedGames = function(e, t) {
           return e.SendMsg("Player.GetOwnedGames#1", t, X, {
-            bConstMethod: !0
+            bConstMethod: !0,
+            ePrivilege: 2,
+            eWebAPIKeyRequirement: 2
           });
         }),
         (D.GetPlayNext = function(e, t) {
-          return e.SendMsg("Player.GetPlayNext#1", t, ee, { bConstMethod: !0 });
+          return e.SendMsg("Player.GetPlayNext#1", t, ee, {
+            bConstMethod: !0,
+            ePrivilege: 1
+          });
         }),
         (D.GetFriendsGameplayInfo = function(e, t) {
-          return e.SendMsg("Player.GetFriendsGameplayInfo#1", t, xe, {
-            bConstMethod: !0
+          return e.SendMsg("Player.GetFriendsGameplayInfo#1", t, Ae, {
+            bConstMethod: !0,
+            ePrivilege: 1
           });
         }),
         (D.GetFriendsAppsActivity = function(e, t) {
           return e.SendMsg("Player.GetFriendsAppsActivity#1", t, Le, {
-            bConstMethod: !0
+            bConstMethod: !0,
+            ePrivilege: 1
           });
         }),
         (D.GetGameBadgeLevels = function(e, t) {
           return e.SendMsg("Player.GetGameBadgeLevels#1", t, te, {
-            bConstMethod: !0
+            bConstMethod: !0,
+            ePrivilege: 1
           });
         }),
         (D.GetProfileBackground = function(e, t) {
           return e.SendMsg("Player.GetProfileBackground#1", t, ne, {
-            bConstMethod: !0
+            bConstMethod: !0,
+            ePrivilege: 2,
+            eWebAPIKeyRequirement: 1
           });
         }),
         (D.SetProfileBackground = function(e, t) {
-          return e.SendMsg("Player.SetProfileBackground#1", t, oe, {});
+          return e.SendMsg("Player.SetProfileBackground#1", t, oe, {
+            ePrivilege: 1
+          });
         }),
         (D.GetMiniProfileBackground = function(e, t) {
           return e.SendMsg("Player.GetMiniProfileBackground#1", t, se, {
-            bConstMethod: !0
+            bConstMethod: !0,
+            ePrivilege: 2,
+            eWebAPIKeyRequirement: 1
           });
         }),
         (D.SetMiniProfileBackground = function(e, t) {
-          return e.SendMsg("Player.SetMiniProfileBackground#1", t, ce, {});
+          return e.SendMsg("Player.SetMiniProfileBackground#1", t, ce, {
+            ePrivilege: 1
+          });
         }),
         (D.GetAvatarFrame = function(e, t) {
           return e.SendMsg("Player.GetAvatarFrame#1", t, de, {
-            bConstMethod: !0
+            bConstMethod: !0,
+            ePrivilege: 2,
+            eWebAPIKeyRequirement: 1
           });
         }),
         (D.SetAvatarFrame = function(e, t) {
-          return e.SendMsg("Player.SetAvatarFrame#1", t, pe, {});
+          return e.SendMsg("Player.SetAvatarFrame#1", t, pe, { ePrivilege: 1 });
         }),
         (D.GetAnimatedAvatar = function(e, t) {
           return e.SendMsg("Player.GetAnimatedAvatar#1", t, me, {
-            bConstMethod: !0
+            bConstMethod: !0,
+            ePrivilege: 2,
+            eWebAPIKeyRequirement: 1
           });
         }),
         (D.SetAnimatedAvatar = function(e, t) {
-          return e.SendMsg("Player.SetAnimatedAvatar#1", t, fe, {});
+          return e.SendMsg("Player.SetAnimatedAvatar#1", t, fe, {
+            ePrivilege: 1
+          });
         }),
         (D.GetProfileItemsOwned = function(e, t) {
           return e.SendMsg("Player.GetProfileItemsOwned#1", t, ge, {
-            bConstMethod: !0
+            bConstMethod: !0,
+            ePrivilege: 1
           });
         }),
         (D.GetProfileItemsEquipped = function(e, t) {
           return e.SendMsg("Player.GetProfileItemsEquipped#1", t, he, {
-            bConstMethod: !0
+            bConstMethod: !0,
+            ePrivilege: 2,
+            eWebAPIKeyRequirement: 1
           });
         }),
         (D.SetEquippedProfileItemFlags = function(e, t) {
-          return e.SendMsg("Player.SetEquippedProfileItemFlags#1", t, be, {});
+          return e.SendMsg("Player.SetEquippedProfileItemFlags#1", t, be, {
+            ePrivilege: 1
+          });
         }),
         (D.GetEmoticonList = function(e, t) {
           return e.SendMsg("Player.GetEmoticonList#1", t, ve, {
-            bConstMethod: !0
+            bConstMethod: !0,
+            ePrivilege: 1
           });
         }),
         (D.GetAchievementsProgress = function(e, t) {
-          return e.SendMsg("Player.GetAchievementsProgress#1", t, Be, {});
+          return e.SendMsg("Player.GetAchievementsProgress#1", t, Be, {
+            ePrivilege: 1
+          });
         }),
         (D.GetFavoriteBadge = function(e, t) {
           return e.SendMsg("Player.GetFavoriteBadge#1", t, je, {
-            bConstMethod: !0
+            bConstMethod: !0,
+            ePrivilege: 2,
+            eWebAPIKeyRequirement: 1
           });
         }),
         (D.SetFavoriteBadge = function(e, t) {
-          return e.SendMsg("Player.SetFavoriteBadge#1", t, Se, {});
+          return e.SendMsg("Player.SetFavoriteBadge#1", t, Se, {
+            ePrivilege: 1
+          });
         }),
         (D.GetProfileCustomization = function(e, t) {
           return e.SendMsg("Player.GetProfileCustomization#1", t, ke, {
-            bConstMethod: !0
+            bConstMethod: !0,
+            ePrivilege: 2,
+            eWebAPIKeyRequirement: 1
           });
         }),
         (D.GetProfileThemesAvailable = function(e, t) {
           return e.SendMsg("Player.GetProfileThemesAvailable#1", t, Pe, {
-            bConstMethod: !0
+            bConstMethod: !0,
+            ePrivilege: 1
           });
         }),
         (D.SetProfileTheme = function(e, t) {
-          return e.SendMsg("Player.SetProfileTheme#1", t, Ne, {});
+          return e.SendMsg("Player.SetProfileTheme#1", t, Ne, {
+            ePrivilege: 1
+          });
         }),
         (D.PostStatusToFriends = function(e, t) {
-          return e.SendMsg("Player.PostStatusToFriends#1", t, Fe, {});
+          return e.SendMsg("Player.PostStatusToFriends#1", t, Fe, {
+            ePrivilege: 3
+          });
         }),
         (D.GetPostedStatus = function(e, t) {
           return e.SendMsg("Player.GetPostedStatus#1", t, Me, {
-            bConstMethod: !0
+            bConstMethod: !0,
+            ePrivilege: 1
           });
         }),
         (D.DeletePostedStatus = function(e, t) {
-          return e.SendMsg("Player.DeletePostedStatus#1", t, Ce, {});
+          return e.SendMsg("Player.DeletePostedStatus#1", t, Ce, {
+            ePrivilege: 1
+          });
         }),
         (D.ClientGetLastPlayedTimes = function(e, t) {
           return e.SendMsg("Player.ClientGetLastPlayedTimes#1", t, Z, {
-            bConstMethod: !0
+            bConstMethod: !0,
+            ePrivilege: 2,
+            eWebAPIKeyRequirement: 1
           });
         }),
         (D.AcceptSSA = function(e, t) {
-          return e.SendMsg("Player.AcceptSSA#1", t, We, {});
+          return e.SendMsg("Player.AcceptSSA#1", t, We, { ePrivilege: 1 });
         }),
         (D.GetNicknameList = function(e, t) {
           return e.SendMsg("Player.GetNicknameList#1", t, He, {
-            bConstMethod: !0
+            bConstMethod: !0,
+            ePrivilege: 1
           });
         }),
         (D.GetPerFriendPreferences = function(e, t) {
           return e.SendMsg("Player.GetPerFriendPreferences#1", t, qe, {
-            bConstMethod: !0
+            bConstMethod: !0,
+            ePrivilege: 1
           });
         }),
         (D.SetPerFriendPreferences = function(e, t) {
-          return e.SendMsg("Player.SetPerFriendPreferences#1", t, Ve, {});
+          return e.SendMsg("Player.SetPerFriendPreferences#1", t, Ve, {
+            ePrivilege: 1
+          });
         }),
         (D.AddFriend = function(e, t) {
-          return e.SendMsg("Player.AddFriend#1", t, Ze, {});
+          return e.SendMsg("Player.AddFriend#1", t, Ze, { ePrivilege: 1 });
         }),
         (D.RemoveFriend = function(e, t) {
-          return e.SendMsg("Player.RemoveFriend#1", t, Ye, {});
+          return e.SendMsg("Player.RemoveFriend#1", t, Ye, { ePrivilege: 1 });
         }),
         (D.IgnoreFriend = function(e, t) {
-          return e.SendMsg("Player.IgnoreFriend#1", t, Qe, {});
+          return e.SendMsg("Player.IgnoreFriend#1", t, Qe, { ePrivilege: 1 });
         }),
         (D.GetCommunityPreferences = function(e, t) {
-          return e.SendMsg("Player.GetCommunityPreferences#1", t, Je, {});
+          return e.SendMsg("Player.GetCommunityPreferences#1", t, Je, {
+            ePrivilege: 1
+          });
         }),
         (D.SetCommunityPreferences = function(e, t) {
-          return e.SendMsg("Player.SetCommunityPreferences#1", t, Xe, {});
+          return e.SendMsg("Player.SetCommunityPreferences#1", t, Xe, {
+            ePrivilege: 1
+          });
         }),
         (D.GetNewSteamAnnouncementState = function(e, t) {
           return e.SendMsg("Player.GetNewSteamAnnouncementState#1", t, Ke, {
-            bConstMethod: !0
+            bConstMethod: !0,
+            ePrivilege: 1
           });
         }),
         (D.UpdateSteamAnnouncementLastRead = function(e, t) {
-          return e.SendMsg(
-            "Player.UpdateSteamAnnouncementLastRead#1",
-            t,
-            et,
-            {}
-          );
+          return e.SendMsg("Player.UpdateSteamAnnouncementLastRead#1", t, et, {
+            ePrivilege: 1
+          });
         }),
         (D.GetPrivacySettings = function(e, t) {
-          return e.SendMsg("Player.GetPrivacySettings#1", t, it, {});
+          return e.SendMsg("Player.GetPrivacySettings#1", t, it, {
+            ePrivilege: 1
+          });
         }),
         (D.GetDurationControl = function(e, t) {
-          return e.SendMsg("Player.GetDurationControl#1", t, rt, {});
+          return e.SendMsg("Player.GetDurationControl#1", t, rt, {
+            ePrivilege: 1
+          });
         }),
         ((q = U = U || {}).NotifyLastPlayedTimesHandler = {
           name: "PlayerClient.NotifyLastPlayedTimes#1",
@@ -9688,45 +9753,60 @@
           "UserAccount.GetAvailableValveDiscountPromotions#1",
           t,
           gt,
-          { bConstMethod: !0 }
+          { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 }
         );
       }),
         (pt.GetAccountLinkStatus = function(e, t) {
-          return e.SendMsg("UserAccount.GetAccountLinkStatus#1", t, ht, {});
+          return e.SendMsg("UserAccount.GetAccountLinkStatus#1", t, ht, {
+            ePrivilege: 1
+          });
         }),
         (pt.CancelLicenseForApp = function(e, t) {
-          return e.SendMsg("UserAccount.CancelLicenseForApp#1", t, bt, {});
+          return e.SendMsg("UserAccount.CancelLicenseForApp#1", t, bt, {
+            ePrivilege: 1
+          });
         }),
         (pt.CreateFriendInviteToken = function(e, t) {
-          return e.SendMsg("UserAccount.CreateFriendInviteToken#1", t, vt, {});
+          return e.SendMsg("UserAccount.CreateFriendInviteToken#1", t, vt, {
+            ePrivilege: 3
+          });
         }),
         (pt.GetFriendInviteTokens = function(e, t) {
-          return e.SendMsg("UserAccount.GetFriendInviteTokens#1", t, wt, {});
+          return e.SendMsg("UserAccount.GetFriendInviteTokens#1", t, wt, {
+            ePrivilege: 1
+          });
         }),
         (pt.ViewFriendInviteToken = function(e, t) {
-          return e.SendMsg("UserAccount.ViewFriendInviteToken#1", t, Ft, {});
+          return e.SendMsg("UserAccount.ViewFriendInviteToken#1", t, Ft, {
+            ePrivilege: 1
+          });
         }),
         (pt.RedeemFriendInviteToken = function(e, t) {
-          return e.SendMsg("UserAccount.RedeemFriendInviteToken#1", t, Mt, {});
+          return e.SendMsg("UserAccount.RedeemFriendInviteToken#1", t, Mt, {
+            ePrivilege: 1
+          });
         }),
         (pt.RevokeFriendInviteToken = function(e, t) {
-          return e.SendMsg("UserAccount.RevokeFriendInviteToken#1", t, Ct, {});
+          return e.SendMsg("UserAccount.RevokeFriendInviteToken#1", t, Ct, {
+            ePrivilege: 1
+          });
         }),
         (pt.RegisterCompatTool = function(e, t) {
-          return e.SendMsg("UserAccount.RegisterCompatTool#1", t, Bt, {});
+          return e.SendMsg("UserAccount.RegisterCompatTool#1", t, Bt, {
+            ePrivilege: 1
+          });
         }),
         ((mt || (mt = {})).GetLinkedAccountInfo = function(e, t) {
           return e.SendMsg("AccountLinking.GetLinkedAccountInfo#1", t, Ot, {
-            bConstMethod: !0
+            bConstMethod: !0,
+            ePrivilege: 0,
+            eWebAPIKeyRequirement: 1
           });
         }),
         ((_t || (_t = {})).AuthorizeCurrentDevice = function(e, t) {
-          return e.SendMsg(
-            "EmbeddedClient.AuthorizeCurrentDevice#1",
-            t,
-            Et,
-            {}
-          );
+          return e.SendMsg("EmbeddedClient.AuthorizeCurrentDevice#1", t, Et, {
+            ePrivilege: 1
+          });
         });
       var Rt = n("BFsE"),
         It = n("Gp1o"),
@@ -9745,7 +9825,7 @@
           t
         );
       }
-      var xt = (function() {
+      var At = (function() {
           function e(e) {
             (this.m_bInitialized = !1),
               (this.m_ePersonaState = 0),
@@ -9760,7 +9840,7 @@
               (this.m_unGameServerPort = 0),
               (this.m_game_lobby_id = ""),
               (this.m_bPlayerNamePending = !1),
-              (this.m_mapRichPresence = b.x.map()),
+              (this.m_mapRichPresence = b.y.map()),
               (this.m_bNameInitialized = !1),
               (this.m_bStatusInitialized = !1),
               (this.m_steamid = e);
@@ -10047,28 +10127,28 @@
                 } else if (i.is_awayOrSnooze) return -1;
               return 0;
             }),
-            Object(R.c)([b.x], e.prototype, "m_bInitialized", void 0),
-            Object(R.c)([b.x], e.prototype, "m_ePersonaState", void 0),
-            Object(R.c)([b.x], e.prototype, "m_unGamePlayedAppID", void 0),
-            Object(R.c)([b.x], e.prototype, "m_gameid", void 0),
-            Object(R.c)([b.x], e.prototype, "m_unPersonaStateFlags", void 0),
-            Object(R.c)([b.x], e.prototype, "m_strPlayerName", void 0),
-            Object(R.c)([b.x], e.prototype, "m_strAvatarHash", void 0),
-            Object(R.c)([b.x], e.prototype, "m_rtLastSeenOnline", void 0),
-            Object(R.c)([b.x], e.prototype, "m_strGameExtraInfo", void 0),
-            Object(R.c)([b.x], e.prototype, "m_unGameServerIP", void 0),
-            Object(R.c)([b.x], e.prototype, "m_unGameServerPort", void 0),
-            Object(R.c)([b.x], e.prototype, "m_game_lobby_id", void 0),
-            Object(R.c)([b.x], e.prototype, "m_bPlayerNamePending", void 0),
-            Object(R.c)([b.x], e.prototype, "m_broadcastId", void 0),
-            Object(R.c)([b.x], e.prototype, "m_broadcastAccountId", void 0),
-            Object(R.c)([b.x], e.prototype, "m_broadcastAppId", void 0),
-            Object(R.c)([b.x], e.prototype, "m_broadcastViewerCount", void 0),
-            Object(R.c)([b.x], e.prototype, "m_strBroadcastTitle", void 0),
+            Object(R.c)([b.y], e.prototype, "m_bInitialized", void 0),
+            Object(R.c)([b.y], e.prototype, "m_ePersonaState", void 0),
+            Object(R.c)([b.y], e.prototype, "m_unGamePlayedAppID", void 0),
+            Object(R.c)([b.y], e.prototype, "m_gameid", void 0),
+            Object(R.c)([b.y], e.prototype, "m_unPersonaStateFlags", void 0),
+            Object(R.c)([b.y], e.prototype, "m_strPlayerName", void 0),
+            Object(R.c)([b.y], e.prototype, "m_strAvatarHash", void 0),
+            Object(R.c)([b.y], e.prototype, "m_rtLastSeenOnline", void 0),
+            Object(R.c)([b.y], e.prototype, "m_strGameExtraInfo", void 0),
+            Object(R.c)([b.y], e.prototype, "m_unGameServerIP", void 0),
+            Object(R.c)([b.y], e.prototype, "m_unGameServerPort", void 0),
+            Object(R.c)([b.y], e.prototype, "m_game_lobby_id", void 0),
+            Object(R.c)([b.y], e.prototype, "m_bPlayerNamePending", void 0),
+            Object(R.c)([b.y], e.prototype, "m_broadcastId", void 0),
+            Object(R.c)([b.y], e.prototype, "m_broadcastAccountId", void 0),
+            Object(R.c)([b.y], e.prototype, "m_broadcastAppId", void 0),
+            Object(R.c)([b.y], e.prototype, "m_broadcastViewerCount", void 0),
+            Object(R.c)([b.y], e.prototype, "m_strBroadcastTitle", void 0),
             e
           );
         })(),
-        At = n("kLLr"),
+        xt = n("kLLr"),
         zt = n("Lvue"),
         Lt = n("RhBb"),
         Gt = n("1yjj"),
@@ -10123,15 +10203,15 @@
               (this.m_mapOwnedCommunityItems = new Map()),
               (this.m_inflightInventoryRequests = {}),
               (this.m_bLoadedActiveBonuses = !1),
-              (this.m_rgActiveBonuses = b.x.array([], { deep: !1 })),
+              (this.m_rgActiveBonuses = b.y.array([], { deep: !1 })),
               (this.m_mapAppRewards = new Map()),
               (this.m_inflightRewardItemRequests = {}),
               (this.m_bLoadedRecentlyPlayed = !1),
               (this.m_rgRecentlyPlayed = []),
               (this.m_bSortedGamesWithRewards = !1),
-              (this.m_rgSortedAppsWithRewards = b.x.array([], { deep: !1 })),
+              (this.m_rgSortedAppsWithRewards = b.y.array([], { deep: !1 })),
               (this.m_bLoadedOwnedGames = !1),
-              (this.m_rgOwnedGames = b.x.array([], { deep: !1 })),
+              (this.m_rgOwnedGames = b.y.array([], { deep: !1 })),
               (this.m_bLoadedEligibleApps = !1),
               (this.m_rgEligibleApps = []),
               (this.m_mapEligibleApps = new Map()),
@@ -10194,8 +10274,8 @@
                   );
                 }
               )),
-              (this.m_mapPages = b.x.map({}, { deep: !1 })),
-              (this.m_mapClusters = b.x.map({}, { deep: !1 }));
+              (this.m_mapPages = b.y.map({}, { deep: !1 })),
+              (this.m_mapClusters = b.y.map({}, { deep: !1 }));
           }
           return (
             (h.prototype.Init = function(e, t) {
@@ -10204,8 +10284,8 @@
                 (this.m_anonymousTransport = e.GetAnonymousServiceTransport()),
                 (this.m_config = t),
                 this.BIsLoggedIn() &&
-                  ((i = new At.a(p.i.steamid)),
-                  (this.m_persona = new xt(i)),
+                  ((i = new xt.a(p.i.steamid)),
+                  (this.m_persona = new At(i)),
                   this.RetrievePersonaState()),
                 t.can_claim_item
                   ? ((this.m_bCanClaimSummerItem = t.can_claim_item.can_claim),
@@ -10521,7 +10601,7 @@
                   this.LoadLoyaltyRewardDefinitions(a, p, m, r).then(function(
                     a
                   ) {
-                    Object(b.z)(function() {
+                    Object(b.A)(function() {
                       var e = a.definitions,
                         t = a.next_cursor,
                         i = a.total_count,
@@ -11050,7 +11130,7 @@
                     case 0:
                       return ((t = { eResult: 2, strMessage: "" }),
                       this.BIsLoggedIn())
-                        ? ((i = v.a.Init(A))
+                        ? ((i = v.a.Init(x))
                             .Body()
                             .set_communityitemid(
                               this.GetOwnedCommunityItemID(n)
@@ -11831,7 +11911,7 @@
                   )
                 ),
                 this.BIsLoggedIn() &&
-                  Object(b.D)(function() {
+                  Object(b.E)(function() {
                     return !!h.Get().GetSortedGamesWithRewards().length;
                   }).then(function() {
                     var e = new ei(
@@ -11858,52 +11938,52 @@
                       );
                   });
             }),
-            Object(R.c)([b.x.ref], h.prototype, "m_ulPointsAvailable", void 0),
-            Object(R.c)([b.x], h.prototype, "m_mapCouponPromos", void 0),
+            Object(R.c)([b.y.ref], h.prototype, "m_ulPointsAvailable", void 0),
+            Object(R.c)([b.y], h.prototype, "m_mapCouponPromos", void 0),
             Object(R.c)(
-              [b.x],
+              [b.y],
               h.prototype,
               "m_nAppIDFiltersInUseCount",
               void 0
             ),
-            Object(R.c)([b.x], h.prototype, "m_mapAppIDFilters", void 0),
-            Object(R.c)([b.x], h.prototype, "m_strAppFilterText", void 0),
-            Object(R.c)([b.x], h.prototype, "m_mapCouponDefinitons", void 0),
-            Object(R.c)([b.x], h.prototype, "m_mapLoyaltyRewardDefs", void 0),
-            Object(R.c)([b.x], h.prototype, "m_mapOwnedCommunityItems", void 0),
-            Object(R.c)([b.x], h.prototype, "m_mapAppRewards", void 0),
+            Object(R.c)([b.y], h.prototype, "m_mapAppIDFilters", void 0),
+            Object(R.c)([b.y], h.prototype, "m_strAppFilterText", void 0),
+            Object(R.c)([b.y], h.prototype, "m_mapCouponDefinitons", void 0),
+            Object(R.c)([b.y], h.prototype, "m_mapLoyaltyRewardDefs", void 0),
+            Object(R.c)([b.y], h.prototype, "m_mapOwnedCommunityItems", void 0),
+            Object(R.c)([b.y], h.prototype, "m_mapAppRewards", void 0),
             Object(R.c)(
-              [b.x],
+              [b.y],
               h.prototype,
               "m_seasonalBadgeDefinition",
               void 0
             ),
             Object(R.c)(
-              [b.x],
+              [b.y],
               h.prototype,
               "m_goldenProfileDefinition",
               void 0
             ),
             Object(R.c)(
-              [b.x],
+              [b.y],
               h.prototype,
               "m_rgSortedAppsWithRewards",
               void 0
             ),
-            Object(R.c)([b.x], h.prototype, "m_rgOwnedGames", void 0),
-            Object(R.c)([b.x], h.prototype, "m_rgEligibleApps", void 0),
-            Object(R.c)([b.x], h.prototype, "m_mapEligibleApps", void 0),
-            Object(R.c)([b.x], h.prototype, "m_persona", void 0),
-            Object(R.c)([b.x], h.prototype, "m_equippedItems", void 0),
-            Object(R.c)([b.x], h.prototype, "m_unAwardCost", void 0),
+            Object(R.c)([b.y], h.prototype, "m_rgOwnedGames", void 0),
+            Object(R.c)([b.y], h.prototype, "m_rgEligibleApps", void 0),
+            Object(R.c)([b.y], h.prototype, "m_mapEligibleApps", void 0),
+            Object(R.c)([b.y], h.prototype, "m_persona", void 0),
+            Object(R.c)([b.y], h.prototype, "m_equippedItems", void 0),
+            Object(R.c)([b.y], h.prototype, "m_unAwardCost", void 0),
             Object(R.c)(
-              [b.x],
+              [b.y],
               h.prototype,
               "m_unAwardPointsTransferred",
               void 0
             ),
-            Object(R.c)([b.x], h.prototype, "m_bCanClaimSummerItem", void 0),
-            Object(R.c)([b.x], h.prototype, "m_claimedItemData", void 0),
+            Object(R.c)([b.y], h.prototype, "m_bCanClaimSummerItem", void 0),
+            Object(R.c)([b.y], h.prototype, "m_claimedItemData", void 0),
             Object(R.c)([y.a], h.prototype, "ShowLoginDialog", null),
             h
           );
@@ -12615,11 +12695,11 @@
         return I.a.createElement(
           I.a.Fragment,
           null,
-          I.a.createElement(Ai, {
+          I.a.createElement(xi, {
             className: Object(li.a)(Ci.LeftArrow, !i && Ci.Disabled),
             onClick: n
           }),
-          I.a.createElement(xi, {
+          I.a.createElement(Ai, {
             className: Object(li.a)(Ci.RightArrow, !t && Ci.Disabled),
             onClick: r
           })
@@ -12697,7 +12777,7 @@
             [o, t]
           );
         },
-        xi = function(e) {
+        Ai = function(e) {
           return I.a.createElement(
             "svg",
             Object(R.a)({}, e, { viewBox: "0 0 23 36" }),
@@ -12713,11 +12793,11 @@
             )
           );
         },
-        Ai = function(e) {
+        xi = function(e) {
           var t = e.style,
             i = Object(R.f)(e, ["style"]),
             r = Object(R.a)({ transform: "scaleX(-1)" }, t || {});
-          return I.a.createElement(xi, Object(R.a)({ style: r }, i));
+          return I.a.createElement(Ai, Object(R.a)({ style: r }, i));
         };
       function zi(e) {
         var t = e.items,
@@ -12793,7 +12873,7 @@
         return I.a.createElement(
           "div",
           Object(R.a)({ className: Object(li.a)(Vi.Container, i) }, n),
-          I.a.createElement(Zi.x, { className: Vi.Icon }),
+          I.a.createElement(Zi.z, { className: Vi.Icon }),
           I.a.createElement(
             "div",
             {
@@ -13784,7 +13864,7 @@
                 Hi,
                 { className: Yi.Body, style: f },
                 I.a.createElement("div", { className: Yi.Attributes }, r),
-                I.a.createElement(xr, { src: i, title: t }),
+                I.a.createElement(Ar, { src: i, title: t }),
                 n
               ),
               I.a.createElement(
@@ -13832,7 +13912,7 @@
         Pr = (((mr = {})[11] = function(l) {
           return I.a.createElement(
             Ir,
-            Object(R.a)({}, gr(l), { iconComponent: Zi.h }),
+            Object(R.a)({}, gr(l), { iconComponent: Zi.j }),
             function(e) {
               var t = l.definition,
                 i = t.appid,
@@ -13851,7 +13931,7 @@
         (mr[4] = function(e) {
           return I.a.createElement(
             kr,
-            Object(R.a)({}, gr(e), { iconComponent: Zi.g }),
+            Object(R.a)({}, gr(e), { iconComponent: Zi.i }),
             I.a.createElement("img", {
               className: Yi.ImageSmall,
               src:
@@ -13866,7 +13946,7 @@
         (mr[12] = function(e) {
           return I.a.createElement(
             kr,
-            Object(R.a)({}, gr(e), { iconComponent: Zi.f })
+            Object(R.a)({}, gr(e), { iconComponent: Zi.h })
           );
         }),
         (mr[3] = function(e) {
@@ -13986,7 +14066,7 @@
                 )
               );
         }),
-        xr = (function(t) {
+        Ar = (function(t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (e.state = { bLoadComplete: !1 }), e;
@@ -14019,7 +14099,7 @@
             e
           );
         })(I.a.Component),
-        Ar = Object(a.a)(function(e) {
+        xr = Object(a.a)(function(e) {
           var t = e.getItems,
             i = e.renderItem,
             r = (e.children, e.style, e.cItemsPerPage),
@@ -15131,8 +15211,8 @@
       function Nn(e, t, i) {
         return Pn(e, "winter2019", t, i);
       }
-      var xn,
-        An = {
+      var An,
+        xn = {
           lny2020_lanterns: Pn("lny2020_lanterns", "lny2020", Rn, function(e) {
             return E.createElement(jn, { effect: e, sale: "lny2020" });
           }),
@@ -15307,7 +15387,7 @@
               confetti_snow: 3,
               festive: 10
             }),
-            Object(R.c)([b.x], e.prototype, "m_rgRunningEffects", void 0),
+            Object(R.c)([b.y], e.prototype, "m_rgRunningEffects", void 0),
             e
           );
         })(),
@@ -15834,7 +15914,7 @@
                           E.createElement(
                             "div",
                             { className: Lr.PointsContainer },
-                            E.createElement(Zi.x, { className: Lr.Icon }),
+                            E.createElement(Zi.z, { className: Lr.Icon }),
                             E.createElement(
                               "div",
                               { className: Lr.BalanceColumn },
@@ -16239,7 +16319,7 @@
         na = (function(t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
-            return (e.m_manager = new Gn(An)), e;
+            return (e.m_manager = new Gn(xn)), e;
           }
           return (
             Object(R.d)(e, t),
@@ -16247,7 +16327,7 @@
               return this.props.definition.internal_description;
             }),
             (e.prototype.GetEffectConfig = function() {
-              return An[this.GetEffectTypeForDefinition()];
+              return xn[this.GetEffectTypeForDefinition()];
             }),
             (e.prototype.componentDidMount = function() {
               var e = this,
@@ -16886,16 +16966,16 @@
             t
           );
         })(E.Component),
-        ua = (((xn = {})[11] = ta),
-        (xn[3] = ia),
-        (xn[4] = ra),
-        (xn[13] = aa),
-        (xn[14] = oa),
-        (xn[15] = sa),
-        (xn[1] = la),
-        (xn[12] = na),
-        (xn[8] = da),
-        xn),
+        ua = (((An = {})[11] = ta),
+        (An[3] = ia),
+        (An[4] = ra),
+        (An[13] = aa),
+        (An[14] = oa),
+        (An[15] = sa),
+        (An[1] = la),
+        (An[12] = na),
+        (An[8] = da),
+        An),
         pa = Object(a.a)(function(e) {
           var t = ua[e.definition.community_item_class];
           return t
@@ -16913,7 +16993,7 @@
               { className: Object(li.a)(Lr.WarningTextContainer, e.className) },
               t
             ),
-            E.createElement(Zi.Q, { className: Lr.TimeWarning }),
+            E.createElement(Zi.T, { className: Lr.TimeWarning }),
             e.children
           );
         },
@@ -17349,7 +17429,7 @@
           return I.a.createElement(
             Li,
             { title: i || o, subtitle: r || s },
-            I.a.createElement(Ar, {
+            I.a.createElement(xr, {
               style: { width: "100%" },
               itemClassName: Ca.ItemHover,
               getItems: function(e, t) {
@@ -17482,8 +17562,8 @@
         ka = n("Matr"),
         Pa = n("kqfX"),
         Na = n("mgoM"),
-        xa = n("WonJ"),
-        Aa = n.n(xa),
+        Aa = n("WonJ"),
+        xa = n.n(Aa),
         za = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
@@ -17492,7 +17572,7 @@
             Object(R.d)(t, e),
             Object.defineProperty(t, "hoverClass", {
               get: function() {
-                return Aa.a.hoverParent;
+                return xa.a.hoverParent;
               },
               enumerable: !1,
               configurable: !0
@@ -17514,19 +17594,19 @@
                 s = "";
               return (
                 "medium" == n
-                  ? (s = Aa.a.Medium)
-                  : "large" == n && (s = Aa.a.Large),
+                  ? (s = xa.a.Medium)
+                  : "large" == n && (s = xa.a.Large),
                 E.createElement(
                   "div",
                   Object(R.a)(
                     {
                       className: Object(li.a)(
-                        Aa.a.SnoozeContainer,
+                        xa.a.SnoozeContainer,
                         t.online_state,
                         r,
-                        i && Aa.a.animating,
+                        i && xa.a.animating,
                         s,
-                        a && Aa.a.Dim
+                        a && xa.a.Dim
                       )
                     },
                     o
@@ -17535,7 +17615,7 @@
                     "div",
                     {
                       "data-text": "Z",
-                      className: Object(li.a)(Aa.a.SnoozeZ, Aa.a.Z1)
+                      className: Object(li.a)(xa.a.SnoozeZ, xa.a.Z1)
                     },
                     "Z"
                   ),
@@ -17543,7 +17623,7 @@
                     "div",
                     {
                       "data-text": "Z",
-                      className: Object(li.a)(Aa.a.SnoozeZ, Aa.a.Z2)
+                      className: Object(li.a)(xa.a.SnoozeZ, xa.a.Z2)
                     },
                     "Z"
                   ),
@@ -17551,7 +17631,7 @@
                     "div",
                     {
                       "data-text": "Z",
-                      className: Object(li.a)(Aa.a.SnoozeZ, Aa.a.Z3)
+                      className: Object(li.a)(xa.a.SnoozeZ, xa.a.Z3)
                     },
                     "Z"
                   )
@@ -17590,7 +17670,7 @@
                   },
                   r
                 ),
-                E.createElement(Zi.B, null)
+                E.createElement(Zi.E, null)
               ),
             a &&
               E.createElement(
@@ -17607,7 +17687,7 @@
                   },
                   r
                 ),
-                E.createElement(Zi.R, null)
+                E.createElement(Zi.U, null)
               ),
             o &&
               E.createElement(
@@ -17624,7 +17704,7 @@
                   },
                   r
                 ),
-                E.createElement(Zi.d, null)
+                E.createElement(Zi.e, null)
               )
           );
         }),
@@ -17728,7 +17808,7 @@
                 ? (B = E.createElement(
                     "div",
                     { className: "ContextMenuButton", onClick: i },
-                    E.createElement(Zi.q, null)
+                    E.createElement(Zi.s, null)
                   ))
                 : M.push(Ha.a.noContextMenu),
                 _ && M.push(Ha.a.hidePersona),
@@ -17772,7 +17852,7 @@
                         className: Ha.a.DNDContainer,
                         title: Object(k.d)("#User_ToggleDoNotDisturb")
                       },
-                      E.createElement(Zi.o, null)
+                      E.createElement(Zi.q, null)
                     ),
                   O &&
                     E.createElement(
@@ -17792,7 +17872,7 @@
                         className: Ha.a.PendingPersona,
                         title: Object(k.d)("#SteamChina_PendingPersonaName")
                       },
-                      E.createElement(Zi.j, null)
+                      E.createElement(Zi.l, null)
                     ),
                   B
                 ),
@@ -17817,7 +17897,7 @@
                               className: Ha.a.gameIsPrivateIcon,
                               title: Object(k.d)("#User_GameInfoHidden")
                             },
-                            E.createElement(Zi.u, null)
+                            E.createElement(Zi.w, null)
                           ),
                         w
                       ),
@@ -18075,7 +18155,7 @@
                 t.item_image_small)));
           var d = p.c.LANGUAGE;
           return (
-            ("greek" != d && "bulgarian" != d) || (d = "english"),
+            "bulgarian" == d && (d = "english"),
             I.a.createElement(
               ci,
               {
@@ -18100,7 +18180,7 @@
                         p.c.BASE_URL_STORE_CDN_ASSETS +
                         "promo/summer2020/points_sale_text/points_shop_header_text_" +
                         d +
-                        ".png?v=2"
+                        ".png?v=3"
                     })
                   ),
                   I.a.createElement(
@@ -18141,7 +18221,7 @@
                           key: "animated"
                         })
                       ],
-                      iconComponent: Zi.h,
+                      iconComponent: Zi.j,
                       styleOverride: n,
                       desc: Object(k.d)("#CommunityItemClass_Sticker"),
                       strPriceOverride: a,
@@ -18731,7 +18811,7 @@
                   alignItems: "center",
                   className: Fo.Header
                 },
-                I.a.createElement(Zi.H, { className: Fo.Icon }),
+                I.a.createElement(Zi.K, { className: Fo.Icon }),
                 I.a.createElement(
                   "div",
                   { className: Fo.Title },
@@ -18809,7 +18889,7 @@
             I.a.createElement(
               "div",
               null,
-              I.a.createElement(Zi.H, { className: Fo.Icon }),
+              I.a.createElement(Zi.K, { className: Fo.Icon }),
               I.a.createElement("div", null, "+", a)
             )
           );
@@ -18937,13 +19017,13 @@
             I.a.createElement(Ki, {
               className: Object(li.a)(as.UsePointsSvg, as.UsePointsAnim4)
             }),
-            I.a.createElement(Zi.h, {
+            I.a.createElement(Zi.j, {
               className: Object(li.a)(as.UsePointsSvg, as.UsePointsAnim5)
             }),
-            I.a.createElement(Zi.f, {
+            I.a.createElement(Zi.h, {
               className: Object(li.a)(as.UsePointsSvg, as.UsePointsAnim6)
             }),
-            I.a.createElement(Zi.g, {
+            I.a.createElement(Zi.i, {
               className: Object(li.a)(as.UsePointsSvg, as.UsePointsAnim7)
             }),
             I.a.createElement(ir, {
@@ -18961,13 +19041,13 @@
             I.a.createElement(Ki, {
               className: Object(li.a)(as.UsePointsSvg, as.UsePointsAnim4)
             }),
-            I.a.createElement(Zi.h, {
+            I.a.createElement(Zi.j, {
               className: Object(li.a)(as.UsePointsSvg, as.UsePointsAnim5)
             }),
-            I.a.createElement(Zi.f, {
+            I.a.createElement(Zi.h, {
               className: Object(li.a)(as.UsePointsSvg, as.UsePointsAnim6)
             }),
-            I.a.createElement(Zi.g, {
+            I.a.createElement(Zi.i, {
               className: Object(li.a)(as.UsePointsSvg, as.UsePointsAnim7)
             }),
             I.a.createElement(ir, {
@@ -18985,13 +19065,13 @@
             I.a.createElement(Ki, {
               className: Object(li.a)(as.UsePointsSvg, as.UsePointsAnim4)
             }),
-            I.a.createElement(Zi.h, {
+            I.a.createElement(Zi.j, {
               className: Object(li.a)(as.UsePointsSvg, as.UsePointsAnim5)
             }),
-            I.a.createElement(Zi.f, {
+            I.a.createElement(Zi.h, {
               className: Object(li.a)(as.UsePointsSvg, as.UsePointsAnim6)
             }),
-            I.a.createElement(Zi.g, {
+            I.a.createElement(Zi.i, {
               className: Object(li.a)(as.UsePointsSvg, as.UsePointsAnim7)
             }),
             I.a.createElement(ir, {
@@ -19512,7 +19592,7 @@
           )
         );
       }
-      function xo(e) {
+      function Ao(e) {
         var t = e.children,
           i = e.className,
           r = Object(R.f)(e, ["children", "className"]),
@@ -19607,7 +19687,7 @@
           )
         );
       }
-      function Ao(e) {
+      function xo(e) {
         var t = e.children,
           i = e.active,
           r = e.className,
@@ -20147,21 +20227,21 @@
             items: [
               {
                 props: {
-                  iconComponent: Zi.h,
+                  iconComponent: Zi.j,
                   children: Object(k.d)("#ShopNav_StickersLink"),
                   to: u.b.LoyaltyStickers()
                 }
               },
               {
                 props: {
-                  iconComponent: Zi.f,
+                  iconComponent: Zi.h,
                   children: Object(k.d)("#ShopNav_ChatEffectsLink"),
                   to: u.b.LoyaltyChatEffects()
                 }
               },
               {
                 props: {
-                  iconComponent: Zi.g,
+                  iconComponent: Zi.i,
                   children: Object(k.d)("#ShopNav_EmoticonsLink"),
                   to: u.b.LoyaltyEmoticons()
                 }
@@ -20233,7 +20313,7 @@
                       "a",
                       Object(R.a)({}, r, { key: e.props.href }),
                       I.a.createElement(
-                        Ao,
+                        xo,
                         { className: ds.ScrollableTabItem },
                         e.props.children
                       )
@@ -20247,7 +20327,7 @@
                       m.c,
                       Object(R.a)({}, r, { key: i.to }),
                       I.a.createElement(
-                        Ao,
+                        xo,
                         {
                           active: !!n && (!i.exact || n.isExact),
                           className: ds.ScrollableTabItem
@@ -20258,7 +20338,7 @@
                   ));
             });
           }),
-          I.a.createElement(xo, { className: ds.ScrollableTabs }, a)
+          I.a.createElement(Ao, { className: ds.ScrollableTabs }, a)
         );
       }
       var ys = "#CommunityAwards",
@@ -20493,7 +20573,7 @@
               alignItems: "center",
               className: vs.PointsContainer
             },
-            I.a.createElement(Zi.x, { className: vs.Icon }),
+            I.a.createElement(Zi.z, { className: vs.Icon }),
             I.a.createElement(
               ci,
               {

@@ -137,13 +137,16 @@ LocalizationReady("shared", "english", {
   EventCalendar_DisabledFilter_LoginPrompt:
     "Sign in to enable these categories",
   EventCalendar_MainLoginPrompt: "Sign in to see your personal News Hub",
-  EventCalendar_NoMoreFutureEvents: "No later posts found",
-  EventCalendar_NoMorePastEvents: "No older posts found",
+  EventCalendar_NoFutureEvents: "No upcoming events found",
+  EventCalendar_NoPastEvents: "No older posts found",
+  EventCalendar_NoMoreFutureEvents: "No more upcoming events found",
+  EventCalendar_NoMorePastEvents: "No more older posts found",
   EventCalendar_GameSearch: "Games Search",
   EventCalendar_GameSearch_NoneFound: "No Matches Found",
   EventCalendar_GlobalCalendar_Action: "Return to News Hub",
   EventCalendar_SpecificCalendar: "%1$s %2$s News Hub",
   EventCalendar_Goto_SpecificCalendar: "Go to %1$s News Hub",
+  EventCalendar_Goto_RSSFeed: "Open %1$s RSS Feed",
   EventCalendar_SingleAppIsMuted:
     "Note: This game is muted and will not show up in your personalized news hub.",
   EventCalendar_WatchYouTubeVideo: "Watch YouTube Video",
@@ -158,8 +161,8 @@ LocalizationReady("shared", "english", {
   EventCalendar_FutureEventsHeader: "Coming soon",
   EventCalendar_PastEventsLink: "See earlier posts",
   EventCalendar_LiveAndRecentEventsHeader: "Live and recent",
-  EventCalendar_LiveNow: "live now",
-  EventCalendar_TimeLeft: "ends in %1$s",
+  EventCalendar_LiveNow: "Live now",
+  EventCalendar_TimeLeft: "Ends in %1$s",
   EventCalendar_PostedAtTime: "Posted %1$s",
   EventCalendar_StartedAtTime: "Started %1$s",
   EventCalendar_Upcoming: "upcoming",
@@ -270,11 +273,34 @@ LocalizationReady("shared", "english", {
   EventCalendar_GameSource_ttip_featured:
     "Include featured posts, such as those from top selling games",
 
+  EventCalendar_EditFilters: "Options and Filters",
+  EventCalendar_CloseFilters: "News Hub",
+  EventCalendar_FiltersTitle: "Filters",
+  EventCalendar_FiltersDescription:
+    "Manage the types and sources of news that you see in your News Hub",
+  EventCalendar_FiltersDescription_NonPersonalized:
+    "Manage event types that you see on this page",
+  EventCalendar_NewsChannels: "Your News Channels",
+  EventCalendar_NewsChannel_YourNews: "Your News",
+  EventCalendar_NewsChannel_Upcoming: "Your Upcoming Events",
+  EventCalendar_NewsChannel_UpcomingShort: "Upcoming",
+  EventCalendar_NewsChannel_Featured: "Featured",
+  EventCalendar_NewsChannel_Personalized: "Personalized",
+  EventCalendar_NewsChannel_Filtered: "Filtered",
+  EventCalendar_NewsChannel_AllGames: "From all games",
+  EventCalendar_NewsChannel_TopSellers: "From Top Sellers",
+
   EventDisplay_Admin_Title: "Admin tools:",
   EventDisplay_ViewInLibrary: "View in Library",
   EventDisplay_ViewStorePage: "View Store Page",
   EventDisplay_ViewCommunityPage: "View Community Page",
   EventDisplay_ViewRssFeed: "View RSS Feed",
+  EventDisplay_ViewInLibrary_ExtraShort: "Library",
+  EventDisplay_ViewStorePage_ExtraShort: "Store",
+  EventDisplay_ViewCommunityPage_ExtraShort: "Community",
+  EventDisplay_ViewRssFeed_ExtraShort: "RSS",
+
+  EventDisplay_NewsHubSubtitle: "News Hub",
 
   EventDisplay_CallToAction_LearnMore: "Learn More",
   EventDisplay_CallToAction_InLibrary: "In Library",
@@ -926,12 +952,15 @@ LocalizationReady("shared", "english", {
   PartnerEvent_28_editor: "Announcement / News",
   PartnerEvent_29: "Beta Release",
   PartnerEvent_29_editor: "Beta Invitation / News",
-  PartnerEvent_30: "In-Game Content Updated",
+  PartnerEvent_30: "In-Game Update",
+  PartnerEvent_30_editor: "In-Game Content Updated",
   PartnerEvent_31: "Free Trial",
-  PartnerEvent_32: "Season or Battle Pass Release",
+  PartnerEvent_32: "Season/Pass",
+  PartnerEvent_32_editor: "Season or Battle Pass Release",
   PartnerEvent_33: "Season Update",
   PartnerEvent_34: "Cross Promotion",
-  PartnerEvent_35: "General In-Game Event",
+  PartnerEvent_35: "In-Game Event",
+  PartnerEvent_35_editor: "General In-Game Event",
   PartnerEvent_Other: "Other Event",
   PartnerEvent_SteamAwardNominations: "Steam Award Nomination Request",
   PartnerEvent_SteamAwardVoteRequest: "Steam Award Vote Request",
@@ -1530,6 +1559,9 @@ LocalizationReady("shared", "english", {
   AppType_event: "event",
   AppType_tag: "tag",
   AppType_music: "music",
+
+  GameHover_Tags: "Tags",
+  GameHover_UserReviewsHeader: "User Reviews",
 
   shared_dummy: "dont translate"
 });

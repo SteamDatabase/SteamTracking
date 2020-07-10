@@ -742,6 +742,92 @@ function OnMovieDrop( evt )
 	AddMovieForUpload( evt.target, files[0] );
 }
 
+function UploadToS3( itemid, movieContainer, rgParams )
+{
+    var uploadName = movieContainer.data( 'upload_name' );
+    var progress = movieContainer.find( '.movie_upload_progress' )[0];
+    var status = movieContainer.find( '.movie_upload_status' )[0];
+
+    var queueSize = 4;
+    var partSize = 5 * 1024 * 1024;
+
+    var percentage = 0;
+
+    var fileKey = rgParams.target_file_path;
+    if ( fileKey.indexOf( '/' ) == 0 )
+    	fileKey = fileKey.substr( 1 );
+
+    AWS.config.region = rgParams.target_aws_region;
+    AWS.config.credentials = new AWS.Credentials( rgParams.access_key_id, rgParams.secret_access_key, rgParams.session_token );
+    var uploader = new AWS.S3.ManagedUpload( {
+        params: {
+            Bucket: rgParams.target_s3_bucket,
+            Key: fileKey,
+            ServerSideEncryption: 'AES256',
+            Body: movieContainer.data( 'file' )
+        },
+        queueSize: queueSize,
+        partSize: partSize,
+        service: new AWS.S3( { maxRetries: 10, httpOptions: { timeout: 240000 } } )
+    } );
+    uploader.on( 'httpUploadProgress', function ( aws_progress )
+    {
+        if ( aws_progress.hasOwnProperty( 'total' ) )
+        {
+            percentage = ( aws_progress.loaded / aws_progress.total ) * 100;
+
+            if ( percentage > 100 )
+                percentage = 100;
+
+            $J( progress ).css( { 'width': percentage + '%' } );
+        }
+        else
+        {
+            $J( status ).text( 'Uploading...' )
+        }
+    } );
+    uploader.send( function ( err, data )
+    {
+        if ( err )
+        {
+            $J( status ).text( 'S3 Upload failed: ' + err )
+        }
+        else
+        {
+            var fd = new FormData();
+            fd.append( 'uploadID', rgParams.upload_id );
+            fd.append( 'itemID', itemid );
+            fd.append( 'appID', g_AppId );
+            fd.append( 'sessionid', g_sessionID );
+
+            jQuery.ajax( {
+                url: 'https://partner.steamgames.com/admin/game/movieuploadcompletecloud/' + itemid,
+                type: 'POST',
+                cache: false,
+                data: fd,
+                contentType: false,
+                processData: false
+            } )
+                .done( function( data ) {
+                    if ( data.success )
+                    {
+                        //alert( 'movieuploadbegincloud -success! ' + JSON.stringify(data) );
+                        // uncomment this when this is the only upload path
+                        //MovieUploadComplete( itemid, movieContainer );
+                    }
+                    else
+                    {
+                        //alert( 'movieuploadcompletecloud - error ' );
+                    }
+                } )
+                .fail( function( jqXHR, textStatus ) {
+                    //alert( 'movieuploadcompletecloud - failed' );
+                } );
+
+        }
+    } );
+}
+
 function AddMovieForUpload( target, file )
 {
 	// associate this file with the movie group so we can get it back later
@@ -750,6 +836,7 @@ function AddMovieForUpload( target, file )
 	var status = group.find( '.movie_upload_status' )[0];
 
 	var itemid = group.attr( 'itemid' );
+	var appid = g_AppId;
 
 	// hide drag & drop, show uploading
 	var uploading = group.find( '.movie_uploading' )[0];
@@ -776,6 +863,37 @@ function AddMovieForUpload( target, file )
 
 	fd.append( 'size', file.size );
 	fd.append( 'sessionid', g_sessionID );
+
+
+	var bUploadToCloud = false;
+	if ( bUploadToCloud )
+	{
+		 var cloudData = new FormData();
+		cloudData.append('appID', appid);
+		cloudData.append('itemID', itemid);
+        cloudData.append('sessionid', g_sessionID);
+
+        jQuery.ajax({
+            url: 'https://partner.steamgames.com/admin/game/movieuploadbegincloud/' + itemid,
+            type: 'POST',
+            cache: false,
+            data: cloudData,
+            contentType: false,
+            processData: false
+        })
+            .done(function (data) {
+                if (data.success) {
+                    //alert( 'movieuploadbegincloud -success! ' + JSON.stringify(data) );
+                    UploadToS3(itemid, group, data);
+                }
+                else {
+                    //alert( 'movieuploadbegincloud - error ' );
+                }
+            })
+            .fail(function (jqXHR, textStatus) {
+                //alert( 'movieuploadbegincloud - failed' );
+            });
+	}
 
 	jQuery.ajax( {
 		url: 'https://partner.steamgames.com/admin/game/movieuploadbegin/' + itemid,

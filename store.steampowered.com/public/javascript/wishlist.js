@@ -312,7 +312,7 @@ CWishlistController.prototype.BuildElements = function()
 				strPurchaseArea += "<a class=\"btn_green_steamui btn_medium\" href=\"%4$s\"><span>%3$s<\/span><\/a><\/div>"					.replace ( /%4\$s/g, strURL  )
 					.replace ( /%1\$s/g, wishlist.appid  )
 					.replace ( /%2\$s/g, V_EscapeHTML( JSON.stringify( rgAppInfo.name ) ) )
-					.replace ( /%3\$s/g, rgAppInfo['type'] == 'Game' ? "Play now" : "Watch Now" )
+					.replace ( /%3\$s/g, rgAppInfo['type'] == 'Video' ? "Watch Now" : "Play now" )
 			}
 			else
 				strPurchaseArea += '<a class="btn_blue_steamui btn_medium noicon" href="'+GStoreItemData.GetAppURL(  wishlist.appid , 'wishlist_details')+'"><span>'+"View Details"+'</span></a><a class="btn_blue_steamui btn_medium icon" href="'+GStoreItemData.GetAppURL(  wishlist.appid , 'wishlist_details')+'"><span><img class="ico_cart" src="https://steamstore-a.akamaihd.net/public/images/v6/ico/wishlist/ico_info.png"></span></a></div>';
@@ -344,7 +344,7 @@ CWishlistController.prototype.BuildElements = function()
 					.replace(/%16\$s/g, rgAppInfo.priority )
 
 			);
-		
+
 			$J('.hover_handle',$el)[0].addEventListener('mousedown', fnDragStart);
 			$J('.hover_handle img',$el)[0].addEventListener('touchstart', fnDragStart);
 

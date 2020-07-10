@@ -197,6 +197,16 @@ p a {
 }
 
 
+.survey_content_section .choices.short_choices {
+	height: 250px;
+}
+
+.survey_content_section .choices.input_choices {
+	position: absolute;
+	top: 420px;
+	right: 405px;
+}
+
 .survey_content_section .bookend_page	.choices {
 	height: 470px;
 }
@@ -204,6 +214,16 @@ p a {
 .survey_content_section	.ui-sortable {
 	-webkit-mask-image: linear-gradient(to bottom, black 475px, rgba(0,0,0,25%)  100%);
 	mask-image: linear-gradient(to bottom, black 475px, rgba(0,0,0,25%)  100%);
+}
+
+.survey_content_section .input_title {
+	font-family: Motiva Sans;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 13px;
+	color: #FFFFFF;
+	text-transform: uppercase;
+	position: relative;
 }
 
 .survey_content_section .top_tags {
@@ -360,6 +380,14 @@ li.ui-sortable-helper {
 	color: #FBAD16;
 }
 
+.survey_content_section .summary .none_defined.other_search{
+	cursor:pointer;
+}
+
+.survey_content_section .summary .none_defined.other_search:hover{
+	text-decoration:underline;
+}
+
 .survey_content_section .choice {
 	color:0xa0a0a0;
 	margin:2px 0px;
@@ -417,6 +445,9 @@ li.ui-sortable-helper {
 	border-radius: 3px;
 	background-image:url('https://partner.steamgames.com/public/images/magnifyingglass.png');
 	background-repeat: no-repeat;
+	background-size: 20px;
+	background-position-x: 202px;
+	background-position-y: 2px;
 }
 
 .survey_content_section .choice label span {

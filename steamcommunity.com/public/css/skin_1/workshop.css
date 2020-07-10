@@ -2629,12 +2629,19 @@ a.buynowbtn, a.buynowbtn:hover, a.buynowbtn.middle, a.buynowbtn.middle:hover
 	height:1px;
 }
 
+.splitRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
 .workshopItemSplit {
 	position: relative;
 	line-height: 50px;
 	height: 50px;
 	vertical-align: baseline;
-	margin-bottom: 10px;
+    margin-bottom: 5px;
+    margin-top: 5px;
 }
 
 .workshopItemSplit .iconHolder_default {
@@ -2650,7 +2657,7 @@ a.buynowbtn, a.buynowbtn:hover, a.buynowbtn.middle, a.buynowbtn.middle:hover
 .workshopItemSplitName {
 	color:#413C2F;
 	width:150px;
-	font-size:11;
+	font-size: 12px;
 	font-weight: bold;
 	margin-right:0px;
 	margin-left:50px;
@@ -2662,12 +2669,14 @@ a.buynowbtn, a.buynowbtn:hover, a.buynowbtn.middle, a.buynowbtn.middle:hover
 	float: left;
 	margin-left: 10px;
 	color: #413c2f;
+    line-height: 16px;
 }
 
 .workshopSplitAcceptedDate {
 	float: left;
 	margin-left: 25px;
 	color: #413c2f;
+    line-height: 16px;
 }
 
 .workshopSplitControls {

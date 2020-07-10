@@ -24,7 +24,7 @@
           return m;
         }),
         i.d(t, "e", function() {
-          return M;
+          return v;
         }),
         i.d(t, "d", function() {
           return h;
@@ -800,7 +800,7 @@
             r
           );
         })(s.Message),
-        M = (function(i) {
+        v = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -841,7 +841,7 @@
             r
           );
         })(s.Message),
-        v = (function(i) {
+        M = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -2480,64 +2480,76 @@
         })(s.Message);
       ((a = r = r || {}).GetPointsForSpend = function(e, t) {
         return e.SendMsg("LoyaltyRewards.GetPointsForSpend#1", t, u, {
-          bConstMethod: !0
+          bConstMethod: !0,
+          ePrivilege: 0,
+          eWebAPIKeyRequirement: 1
         });
       }),
         (a.GetSummary = function(e, t) {
           return e.SendMsg("LoyaltyRewards.GetSummary#1", t, d, {
-            bConstMethod: !0
+            bConstMethod: !0,
+            ePrivilege: 1
           });
         }),
         (a.RedeemPoints = function(e, t) {
-          return e.SendMsg("LoyaltyRewards.RedeemPoints#1", t, g, {});
+          return e.SendMsg("LoyaltyRewards.RedeemPoints#1", t, g, {
+            ePrivilege: 1
+          });
         }),
         (a.RedeemPointsForBadgeLevel = function(e, t) {
-          return e.SendMsg(
-            "LoyaltyRewards.RedeemPointsForBadgeLevel#1",
-            t,
-            g,
-            {}
-          );
+          return e.SendMsg("LoyaltyRewards.RedeemPointsForBadgeLevel#1", t, g, {
+            ePrivilege: 1
+          });
         }),
         (a.RedeemPointsToUpgradeItem = function(e, t) {
-          return e.SendMsg(
-            "LoyaltyRewards.RedeemPointsToUpgradeItem#1",
-            t,
-            g,
-            {}
-          );
+          return e.SendMsg("LoyaltyRewards.RedeemPointsToUpgradeItem#1", t, g, {
+            ePrivilege: 1
+          });
         }),
         (a.AddReaction = function(e, t) {
-          return e.SendMsg("LoyaltyRewards.AddReaction#1", t, y, {});
+          return e.SendMsg("LoyaltyRewards.AddReaction#1", t, y, {
+            ePrivilege: 1
+          });
         }),
         (a.GetReactions = function(e, t) {
           return e.SendMsg("LoyaltyRewards.GetReactions#1", t, _, {
-            bConstMethod: !0
+            bConstMethod: !0,
+            ePrivilege: 1
           });
         }),
         (a.GetReactionConfig = function(e, t) {
-          return e.SendMsg("LoyaltyRewards.GetReactionConfig#1", t, v, {
-            bConstMethod: !0
+          return e.SendMsg("LoyaltyRewards.GetReactionConfig#1", t, M, {
+            bConstMethod: !0,
+            ePrivilege: 0,
+            eWebAPIKeyRequirement: 1
           });
         }),
         (a.GetEligibleApps = function(e, t) {
           return e.SendMsg("LoyaltyRewards.GetEligibleApps#1", t, F, {
-            bConstMethod: !0
+            bConstMethod: !0,
+            ePrivilege: 0,
+            eWebAPIKeyRequirement: 1
           });
         }),
         (a.GetActivePurchaseBonuses = function(e, t) {
           return e.SendMsg("LoyaltyRewards.GetActivePurchaseBonuses#1", t, C, {
-            bConstMethod: !0
+            bConstMethod: !0,
+            ePrivilege: 2,
+            eWebAPIKeyRequirement: 1
           });
         }),
         (a.QueryRewardItems = function(e, t) {
           return e.SendMsg("LoyaltyRewards.QueryRewardItems#1", t, k, {
-            bConstMethod: !0
+            bConstMethod: !0,
+            ePrivilege: 2,
+            eWebAPIKeyRequirement: 1
           });
         }),
         (a.BatchedQueryRewardItems = function(e, t) {
           return e.SendMsg("LoyaltyRewards.BatchedQueryRewardItems#1", t, L, {
-            bConstMethod: !0
+            bConstMethod: !0,
+            ePrivilege: 2,
+            eWebAPIKeyRequirement: 1
           });
         });
     },
@@ -2547,18 +2559,18 @@
         return a;
       }),
         i.d(t, "b", function() {
-          return M;
+          return v;
         }),
         i.d(t, "a", function() {
           return u;
         });
-      var M,
+      var v,
         r,
         n = i("mrSG"),
         p = i("q1tI"),
         g = i.n(p),
         s = i("ZO3Q"),
-        v = i("YyVH"),
+        M = i("YyVH"),
         a = 8e3;
       function o(e, t) {
         var i = [];
@@ -2570,22 +2582,22 @@
             l = 4 * (Math.random() - 0.5) * Math.PI * 20,
             u = Math.random() + 0.5,
             c = [Math.random() * n - n - 20, n + 20 + Math.random() * n * u],
-            p = u * (r <= 1e3 ? 1 : r / 1e3) * (t == M.Gold ? 2 : 1),
+            p = u * (r <= 1e3 ? 1 : r / 1e3) * (t == v.Gold ? 2 : 1),
             g = (Math.random() - 0.5) * r,
             f = (Math.random() - 0.5) * r,
             y = [f, g + f],
             m = (function(e) {
               switch (e) {
-                case M.Gold:
-                case M.LNY2020:
+                case v.Gold:
+                case v.LNY2020:
                   return "hsl(" + (51 + -16 * Math.random()) + ", 93%, 54%)";
                 default:
                   return "hsl(" + 360 * Math.random() + ", 100%, 40%)";
               }
             })(t),
             _ =
-              t == M.LNY2020
-                ? "hue-rotate(" + (360 + Object(v.b)(-30, 10)) + "deg)"
+              t == v.LNY2020
+                ? "hue-rotate(" + (360 + Object(M.b)(-30, 10)) + "deg)"
                 : "";
           i.push({
             rotationCoefficient: l,
@@ -2601,7 +2613,7 @@
         }
         return i;
       }
-      ((r = M = M || {})[(r.Default = 0)] = "Default"),
+      ((r = v = v || {})[(r.Default = 0)] = "Default"),
         (r[(r.Gold = 1)] = "Gold"),
         (r[(r.LNY2020 = 2)] = "LNY2020");
       function f(t, i) {
@@ -2616,7 +2628,7 @@
             return {
               rgParticleStyles: e.map(function(e) {
                 return (function(e, t) {
-                  M.Default;
+                  v.Default;
                   var s = e.rotationCoefficient,
                     a = e.rotationRatioY,
                     o = e.rotationRatioX,
@@ -2708,8 +2720,8 @@
             n,
             s,
             a = e.eType,
-            o = (M.Gold,
-            M.LNY2020,
+            o = (v.Gold,
+            v.LNY2020,
             (t = Object(p.useState)(null)),
             (i = t[0]),
             (r = t[1]),
@@ -2724,19 +2736,19 @@
             u = l.rgParticleStyles,
             c = l.rgStreamerStyles;
           switch (a) {
-            case M.Gold:
+            case v.Gold:
               s = u.map(function(e, t) {
                 return g.a.createElement(m, { key: t, style: e });
               });
               break;
-            case M.LNY2020:
+            case v.LNY2020:
               s = u.map(function(e, t) {
                 return t % 2
                   ? g.a.createElement(y, { key: t, style: e })
                   : g.a.createElement(_, { key: t, style: e });
               });
               break;
-            case M.Default:
+            case v.Default:
               s = u.map(function(e, t) {
                 return g.a.createElement(y, { key: t, style: e });
               });

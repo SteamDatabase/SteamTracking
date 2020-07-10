@@ -61,7 +61,7 @@ body.DarkModeTheme {
 	--gradient-showcase-header-left: rgba(0, 0, 0, 0.5);
 	--btn-background:rgba(0, 0, 0, 0.5);
 	--btn-background-hover:rgba(40, 40, 40, 1);
-	--btn-outline:rgb(20, 20, 20);
+	--btn-outline:rgb(80, 80, 80);
 
 }
 
@@ -356,9 +356,11 @@ body.profile_page.flat_page #footer_spacer {
 	}
 
 	html.responsive .profile_header_actions {
-		clear: both;
-		padding-top: 8px;
-		text-align: center;
+		display: grid;
+ 		grid-auto-flow: row;
+    	row-gap: .5em;
+    	padding-top: 8px;
+    	text-align: center;
 	}
 
 	html.responsive .profile_header .playerAvatar.profile_header_size {
@@ -2409,14 +2411,14 @@ body.migrated_profile_page #BG_bottom.maincontent {
 
 .profile_customization.customization_edit.none_selected {
 
-	background: #2F4459;
-	border: 1px dashed #5491CF;
+	border: 1px dotted var(--btn-background-hover);
 }
 .profile_customization_area .profile_customization.customization_edit.none_selected {
 	cursor: pointer;
 }
 .profile_customization_area .profile_customization.customization_edit.none_selected:hover {
-	border-color: #ffffff;
+	
+	border-color: var(--btn-outline);
 }
 
 .showcase_notes {

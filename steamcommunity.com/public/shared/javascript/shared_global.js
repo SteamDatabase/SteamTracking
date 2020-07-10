@@ -520,7 +520,7 @@ function _BuildDialogButton( strText, bActive, rgOptions )
 	if ( !rgOptions )
 		rgOptions = {};
 
-	var strClassName = bActive ? 'btn_green_white_innerfade btn_medium' : 'btn_grey_white_innerfade btn_medium';
+	var strClassName = bActive ? 'btn_green_steamui btn_medium' : 'btn_grey_steamui btn_medium';
 	if ( rgOptions.strClassName )
 		strClassName = rgOptions.strClassName;
 

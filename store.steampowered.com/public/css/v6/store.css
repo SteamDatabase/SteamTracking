@@ -517,7 +517,7 @@ a#store_search_link img {
 .searchbox input {
 	border: none;
 	background-color: transparent;
-	color: #000000;
+	color: #eeeeee;
 	margin-top: 2px;
 	margin-left: 8px;
 	width: 180px;
@@ -4468,19 +4468,33 @@ body.v6 .store_nav .popup_menu_subheader, body.v6 #footer_nav .popup_menu_subhea
 	color: #4f94bc;
 }
 
-.popup_menu_twocol {
+.popup_menu_twocol,
+.popup_menu_twocol_new {
 	display: flex;
 	flex-direction: row;
-}
+} 
 
-.popup_menu_twocol > .popup_menu:not(:first-child):not(:nth-child(3)):not(:nth-child(4))
+.popup_menu_twocol > .popup_menu:not(:first-child):not(:nth-child(4))
 {
 	margin-left: 5px;
 	border-left: 1px solid #ffffff;
 	padding-left: 5px;
 }
 
+
+.popup_menu_twocol_new > .popup_menu:not(:first-child):not(:nth-child(3)):not(:nth-child(4))
+{
+	margin-left: 5px;
+	border-left: 1px solid #333333;
+	padding-left: 5px;
+}
+
 .popup_menu_twocol > .popup_menu
+{
+	min-width: 0;
+}
+
+.popup_menu_twocol_new > .popup_menu
 {
 	min-width: 0;
 }

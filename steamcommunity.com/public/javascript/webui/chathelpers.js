@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "5957554";
+var CLSTAMP = "5981780";
 !(function(e) {
   function t(t) {
     for (
@@ -151,10 +151,10 @@ var CLSTAMP = "5957554";
         return h;
       }),
       n.d(t, "m", function() {
-        return f;
+        return p;
       }),
       n.d(t, "f", function() {
-        return p;
+        return f;
       }),
       n.d(t, "h", function() {
         return m;
@@ -179,8 +179,8 @@ var CLSTAMP = "5957554";
       l = 250820,
       d = 330050,
       h = 358510,
-      f = 366490,
-      p = "18446744073709551615",
+      p = 366490,
+      f = "18446744073709551615",
       m = 0,
       _ = 2147483647;
     function v(e, t) {
@@ -425,10 +425,10 @@ var CLSTAMP = "5957554";
         return h;
       }),
       n.d(t, "d", function() {
-        return f;
+        return p;
       }),
       n.d(t, "e", function() {
-        return p;
+        return f;
       });
     n("mrSG");
     var r,
@@ -479,7 +479,8 @@ var CLSTAMP = "5957554";
         FRIENDSUI_BETA: !1,
         STEAM_TV: !1,
         DEV_MODE: !1,
-        OFFLINE_MODE: !1
+        OFFLINE_MODE: !1,
+        IN_LIBRARY: !1
       },
       a = {
         logged_in: !1,
@@ -548,7 +549,7 @@ var CLSTAMP = "5957554";
         }
       else console.error("Missing config element #", t);
     }
-    function f() {
+    function p() {
       var e = window.location.href;
       return e.startsWith(c.STORE_BASE_URL)
         ? c.STORE_BASE_URL
@@ -562,7 +563,7 @@ var CLSTAMP = "5957554";
         ? c.STEAMTV_BASE_URL
         : "";
     }
-    function p() {
+    function f() {
       var e = window.location.href;
       return e.startsWith(c.STORE_BASE_URL)
         ? "store"
@@ -902,7 +903,7 @@ var CLSTAMP = "5957554";
               (this.m_bValid = !0),
               (this.m_bReady = !0);
           }),
-          Object(r.c)([i.z], e.prototype, "m_bReady", void 0),
+          Object(r.c)([i.A], e.prototype, "m_bReady", void 0),
           Object(r.c)([i.i], e.prototype, "InitInvalid", null),
           Object(r.c)([i.i], e.prototype, "InitDirectInvite", null),
           e
@@ -929,10 +930,10 @@ var CLSTAMP = "5957554";
         return l;
       }),
       n.d(t, "g", function() {
-        return f;
+        return p;
       }),
       n.d(t, "a", function() {
-        return p;
+        return f;
       }),
       n.d(t, "c", function() {
         return b;
@@ -1017,7 +1018,7 @@ var CLSTAMP = "5957554";
     }
     var d = new Map(),
       h = new Map();
-    function f(e, t) {
+    function p(e, t) {
       var n = new Date(),
         i = new Date(1e3 * e);
       if (i.getFullYear() != n.getFullYear())
@@ -1055,7 +1056,7 @@ var CLSTAMP = "5957554";
         s)
       );
     }
-    function p(e) {
+    function f(e) {
       var t = new Date(1e3 * e),
         n = new Date();
       if (t > n)
@@ -1445,7 +1446,7 @@ PERFORMANCE OF THIS SOFTWARE.
         return h;
       }),
       n.d(t, "c", function() {
-        return f;
+        return p;
       });
     var r = n("mrSG"),
       i = n("q1tI"),
@@ -1455,7 +1456,7 @@ PERFORMANCE OF THIS SOFTWARE.
     function u(e) {
       for (var t = [], n = 1; n < arguments.length; n++)
         t[n - 1] = arguments[n];
-      var r = f.LocalizeString(e);
+      var r = p.LocalizeString(e);
       return r
         ? (t.length > 0 &&
             (r = r.replace(/%(?:(\d+)\$)?s/g, function(e, n) {
@@ -1471,7 +1472,7 @@ PERFORMANCE OF THIS SOFTWARE.
     function s(e) {
       for (var t = [], n = 1; n < arguments.length; n++)
         t[n - 1] = arguments[n];
-      var o = f.LocalizeString(e);
+      var o = p.LocalizeString(e);
       if (!o) return e;
       for (var c, a = [], u = /(.*?)%(\d+)\$s/g, s = 0; (c = u.exec(o)); ) {
         (s += c[0].length), a.push(c[1]);
@@ -1546,7 +1547,7 @@ PERFORMANCE OF THIS SOFTWARE.
       var e = "koreana" == c.c.LANGUAGE ? "korean" : c.c.LANGUAGE;
       return d[e] || null;
     }
-    var f = new ((function() {
+    var p = new ((function() {
       function e() {
         (this.m_mapTokens = new Map()), (this.m_mapFallbackTokens = new Map());
       }
@@ -1606,7 +1607,7 @@ PERFORMANCE OF THIS SOFTWARE.
         e
       );
     })())();
-    window.LocalizationManager = f;
+    window.LocalizationManager = p;
   },
   "qM/t": function(e, t, n) {
     "use strict";
@@ -1621,8 +1622,8 @@ PERFORMANCE OF THIS SOFTWARE.
       l = n("2vnA"),
       d = n("okNM"),
       h = n("J0bI"),
-      f = n("s+DT");
-    var p = n("1VtQ"),
+      p = n("s+DT");
+    var f = n("1VtQ"),
       m = n("K4CH"),
       _ = (function(e) {
         function t() {
@@ -1635,7 +1636,7 @@ PERFORMANCE OF THIS SOFTWARE.
           }),
           (t.prototype.InitFromPHPInviteLinkInfo = function(e) {
             this.m_ulChatID = e.chat_id;
-            var t = new f.a(e.steamid_sender);
+            var t = new p.a(e.steamid_sender);
             t.BIsIndividualAccount() &&
               (this.m_unAccountIDInviter = t.GetAccountID()),
               (this.m_rtTimeExpires = e.time_expires),
@@ -1726,15 +1727,15 @@ PERFORMANCE OF THIS SOFTWARE.
               c.b
                 .ShowChatRoomGroupInvite(this.m_invite.GetInviteCode())
                 .then(function(t) {
-                  Object(l.D)(function() {
+                  Object(l.E)(function() {
                     (e.m_bConnectingToClient = !1),
                       (e.m_connectResult = t),
                       console.log(t);
                   });
                 }));
           }),
-          Object(s.c)([l.z], e.prototype, "m_bConnectingToClient", void 0),
-          Object(s.c)([l.z], e.prototype, "m_connectResult", void 0),
+          Object(s.c)([l.A], e.prototype, "m_bConnectingToClient", void 0),
+          Object(s.c)([l.A], e.prototype, "m_connectResult", void 0),
           e
         );
       })(),
@@ -1923,10 +1924,10 @@ PERFORMANCE OF THIS SOFTWARE.
                   )
             );
           }),
-          Object(s.c)([l.z], t.prototype, "m_bTriedToLaunchSteam", void 0),
-          Object(s.c)([p.a], t.prototype, "LaunchWebChat", null),
-          Object(s.c)([p.a], t.prototype, "OpenInSteamIgnoreAccount", null),
-          Object(s.c)([p.a], t.prototype, "LaunchSteamClient", null),
+          Object(s.c)([l.A], t.prototype, "m_bTriedToLaunchSteam", void 0),
+          Object(s.c)([f.a], t.prototype, "LaunchWebChat", null),
+          Object(s.c)([f.a], t.prototype, "OpenInSteamIgnoreAccount", null),
+          Object(s.c)([f.a], t.prototype, "LaunchSteamClient", null),
           (t = Object(s.c)([d.a], t))
         );
       })(r.Component),
@@ -1998,7 +1999,7 @@ PERFORMANCE OF THIS SOFTWARE.
     }
     (window.ClientConnectionAPI = O),
       document.addEventListener("DOMContentLoaded", function() {
-        Object(o.c)(),
+        Object(o.b)(),
           (function() {
             for (
               var e = document.querySelectorAll(".ChatReactRoot"), t = 0;
@@ -2191,14 +2192,11 @@ PERFORMANCE OF THIS SOFTWARE.
     n.d(t, "a", function() {
       return r.c;
     }),
-      n.d(t, "d", function() {
+      n.d(t, "c", function() {
         return r.i;
       }),
-      n.d(t, "c", function() {
-        return r.h;
-      }),
       n.d(t, "b", function() {
-        return r.g;
+        return r.h;
       });
   },
   ujHl: function(e, t, n) {

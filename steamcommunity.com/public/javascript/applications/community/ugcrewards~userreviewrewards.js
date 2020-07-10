@@ -43,8 +43,8 @@
                 n.a.createElement(
                   "div",
                   { className: d.a.Throbber },
-                  n.a.createElement(s.D, { className: d.a.base }),
-                  n.a.createElement(s.D, { className: d.a.blur })
+                  n.a.createElement(s.E, { className: d.a.base }),
+                  n.a.createElement(s.E, { className: d.a.blur })
                 )
               );
               return n.a.createElement(
@@ -1126,7 +1126,7 @@
             (r.prototype.community_item_data = function(e) {
               return (
                 void 0 === e && (e = !0),
-                u.Message.getWrapperField(this, T, 13, e ? 1 : 0)
+                u.Message.getWrapperField(this, A, 13, e ? 1 : 0)
               );
             }),
             (r.prototype.set_community_item_data = function(e) {
@@ -1167,7 +1167,7 @@
                   internal_description: u.Message.getField(t, 11),
                   active: u.Message.getField(t, 12),
                   community_item_data:
-                    (i = t.community_item_data(!1)) && T.toObject(e, i),
+                    (i = t.community_item_data(!1)) && A.toObject(e, i),
                   bundle_defids: u.Message.getField(t, 15),
                   usable_duration: u.Message.getField(t, 16)
                 };
@@ -1189,7 +1189,7 @@
                 t.set_quantity(e.quantity),
                 t.set_internal_description(e.internal_description),
                 t.set_active(e.active),
-                t.set_community_item_data(T.fromObject(e.community_item_data)),
+                t.set_community_item_data(A.fromObject(e.community_item_data)),
                 t.set_bundle_defids(e.bundle_defids),
                 t.set_usable_duration(e.usable_duration),
                 t
@@ -1243,8 +1243,8 @@
                     e.set_active(t.readBool());
                     break;
                   case 13:
-                    var i = new T();
-                    t.readMessage(i, T.deserializeBinaryFromReader),
+                    var i = new A();
+                    t.readMessage(i, A.deserializeBinaryFromReader),
                       e.set_community_item_data(i);
                     break;
                   case 15:
@@ -1289,7 +1289,7 @@
                 void 0 !== (i = u.Message.getField(e, 12)) &&
                   t.writeBool(12, i),
                 null != (i = e.community_item_data(!1)) &&
-                  t.writeMessage(13, i, T.serializeBinaryToWriter),
+                  t.writeMessage(13, i, A.serializeBinaryToWriter),
                 void 0 !== (i = u.Message.getField(e, 15)) &&
                   t.writeRepeatedUint32(15, i),
                 void 0 !== (i = u.Message.getField(e, 16)) &&
@@ -1301,7 +1301,7 @@
             r
           );
         })(u.Message),
-        T = (function(i) {
+        A = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -1370,13 +1370,13 @@
               u.Message.setField(this, 8, e);
             }),
             (r.prototype.badge_data = function() {
-              return u.Message.getRepeatedWrapperField(this, A, 9);
+              return u.Message.getRepeatedWrapperField(this, T, 9);
             }),
             (r.prototype.set_badge_data = function(e) {
               u.Message.setRepeatedWrapperField(this, 9, e);
             }),
             (r.prototype.add_badge_data = function(e, t) {
-              return u.Message.addToRepeatedWrapperField(this, 9, e, A, t);
+              return u.Message.addToRepeatedWrapperField(this, 9, e, T, t);
             }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
@@ -1395,7 +1395,7 @@
                 animated: u.Message.getField(t, 8),
                 badge_data: u.Message.toObjectList(
                   t.badge_data(),
-                  A.toObject,
+                  T.toObject,
                   e
                 )
               };
@@ -1417,7 +1417,7 @@
                 t.set_badge_data(
                   (Array.isArray(e.badge_data) ? e.badge_data : []).map(
                     function(e) {
-                      return A.fromObject(e);
+                      return T.fromObject(e);
                     }
                   )
                 ),
@@ -1463,8 +1463,8 @@
                     e.set_animated(t.readBool());
                     break;
                   case 9:
-                    var i = new A();
-                    t.readMessage(i, A.deserializeBinaryFromReader),
+                    var i = new T();
+                    t.readMessage(i, T.deserializeBinaryFromReader),
                       e.add_badge_data(i);
                     break;
                   default:
@@ -1498,7 +1498,7 @@
                   t.writeString(11, i),
                 void 0 !== (i = u.Message.getField(e, 8)) && t.writeBool(8, i),
                 0 < (i = e.badge_data()).length &&
-                  t.writeRepeatedMessage(9, i, A.serializeBinaryToWriter);
+                  t.writeRepeatedMessage(9, i, T.serializeBinaryToWriter);
             }),
             (r.prototype.getClassName = function() {
               return "LoyaltyRewardDefinition_CommunityItemData";
@@ -1506,7 +1506,7 @@
             r
           );
         })(u.Message),
-        A = (function(i) {
+        T = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -2132,20 +2132,20 @@
           return (
             Object(s.d)(r, i),
             (r.prototype.responses = function() {
-              return u.Message.getRepeatedWrapperField(this, U, 1);
+              return u.Message.getRepeatedWrapperField(this, P, 1);
             }),
             (r.prototype.set_responses = function(e) {
               u.Message.setRepeatedWrapperField(this, 1, e);
             }),
             (r.prototype.add_responses = function(e, t) {
-              return u.Message.addToRepeatedWrapperField(this, 1, e, U, t);
+              return u.Message.addToRepeatedWrapperField(this, 1, e, P, t);
             }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
             (r.toObject = function(e, t) {
               var i = {
-                responses: u.Message.toObjectList(t.responses(), U.toObject, e)
+                responses: u.Message.toObjectList(t.responses(), P.toObject, e)
               };
               return e && (i.$jspbMessageInstance = t), i;
             }),
@@ -2156,7 +2156,7 @@
                   (Array.isArray(e.responses) ? e.responses : []).map(function(
                     e
                   ) {
-                    return U.fromObject(e);
+                    return P.fromObject(e);
                   })
                 ),
                 t
@@ -2171,8 +2171,8 @@
               for (; t.nextField() && !t.isEndGroup(); ) {
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var i = new U();
-                    t.readMessage(i, U.deserializeBinaryFromReader),
+                    var i = new P();
+                    t.readMessage(i, P.deserializeBinaryFromReader),
                       e.add_responses(i);
                     break;
                   default:
@@ -2188,7 +2188,7 @@
             (r.serializeBinaryToWriter = function(e, t) {
               var i = e.responses();
               0 < i.length &&
-                t.writeRepeatedMessage(1, i, U.serializeBinaryToWriter);
+                t.writeRepeatedMessage(1, i, P.serializeBinaryToWriter);
             }),
             (r.prototype.getClassName = function() {
               return "CLoyaltyRewards_BatchedQueryRewardItems_Response";
@@ -2196,7 +2196,7 @@
             r
           );
         })(u.Message)),
-        U = (function(i) {
+        P = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -2278,67 +2278,79 @@
         })(u.Message);
       ((m = g = g || {}).GetPointsForSpend = function(e, t) {
         return e.SendMsg("LoyaltyRewards.GetPointsForSpend#1", t, h, {
-          bConstMethod: !0
+          bConstMethod: !0,
+          ePrivilege: 0,
+          eWebAPIKeyRequirement: 1
         });
       }),
         (m.GetSummary = function(e, t) {
           return e.SendMsg("LoyaltyRewards.GetSummary#1", t, f, {
-            bConstMethod: !0
+            bConstMethod: !0,
+            ePrivilege: 1
           });
         }),
         (m.RedeemPoints = function(e, t) {
-          return e.SendMsg("LoyaltyRewards.RedeemPoints#1", t, b, {});
+          return e.SendMsg("LoyaltyRewards.RedeemPoints#1", t, b, {
+            ePrivilege: 1
+          });
         }),
         (m.RedeemPointsForBadgeLevel = function(e, t) {
-          return e.SendMsg(
-            "LoyaltyRewards.RedeemPointsForBadgeLevel#1",
-            t,
-            b,
-            {}
-          );
+          return e.SendMsg("LoyaltyRewards.RedeemPointsForBadgeLevel#1", t, b, {
+            ePrivilege: 1
+          });
         }),
         (m.RedeemPointsToUpgradeItem = function(e, t) {
-          return e.SendMsg(
-            "LoyaltyRewards.RedeemPointsToUpgradeItem#1",
-            t,
-            b,
-            {}
-          );
+          return e.SendMsg("LoyaltyRewards.RedeemPointsToUpgradeItem#1", t, b, {
+            ePrivilege: 1
+          });
         }),
         (m.AddReaction = function(e, t) {
-          return e.SendMsg("LoyaltyRewards.AddReaction#1", t, M, {});
+          return e.SendMsg("LoyaltyRewards.AddReaction#1", t, M, {
+            ePrivilege: 1
+          });
         }),
         (m.GetReactions = function(e, t) {
           return e.SendMsg("LoyaltyRewards.GetReactions#1", t, j, {
-            bConstMethod: !0
+            bConstMethod: !0,
+            ePrivilege: 1
           });
         }),
         (m.GetReactionConfig = function(e, t) {
           return e.SendMsg("LoyaltyRewards.GetReactionConfig#1", t, z, {
-            bConstMethod: !0
+            bConstMethod: !0,
+            ePrivilege: 0,
+            eWebAPIKeyRequirement: 1
           });
         }),
         (m.GetEligibleApps = function(e, t) {
           return e.SendMsg("LoyaltyRewards.GetEligibleApps#1", t, L, {
-            bConstMethod: !0
+            bConstMethod: !0,
+            ePrivilege: 0,
+            eWebAPIKeyRequirement: 1
           });
         }),
         (m.GetActivePurchaseBonuses = function(e, t) {
           return e.SendMsg("LoyaltyRewards.GetActivePurchaseBonuses#1", t, I, {
-            bConstMethod: !0
+            bConstMethod: !0,
+            ePrivilege: 2,
+            eWebAPIKeyRequirement: 1
           });
         }),
         (m.QueryRewardItems = function(e, t) {
           return e.SendMsg("LoyaltyRewards.QueryRewardItems#1", t, x, {
-            bConstMethod: !0
+            bConstMethod: !0,
+            ePrivilege: 2,
+            eWebAPIKeyRequirement: 1
           });
         }),
         (m.BatchedQueryRewardItems = function(e, t) {
           return e.SendMsg("LoyaltyRewards.BatchedQueryRewardItems#1", t, W, {
-            bConstMethod: !0
+            bConstMethod: !0,
+            ePrivilege: 2,
+            eWebAPIKeyRequirement: 1
           });
         });
-      function P(e) {
+      function U(e) {
         var t = e.className,
           i = Object(s.f)(e, ["className"]);
         return p.a.createElement(
@@ -2511,16 +2523,16 @@
                 });
               });
             }),
-            Object(s.c)([l.w.ref], e.prototype, "m_ulPointsAvailable", void 0),
-            Object(s.c)([l.w], e.prototype, "m_unAwardCost", void 0),
+            Object(s.c)([l.x.ref], e.prototype, "m_ulPointsAvailable", void 0),
+            Object(s.c)([l.x], e.prototype, "m_unAwardCost", void 0),
             Object(s.c)(
-              [l.w],
+              [l.x],
               e.prototype,
               "m_unAwardPointsTransferred",
               void 0
             ),
             Object(s.c)(
-              [l.w.deep],
+              [l.x.deep],
               e.prototype,
               "m_mapExistingReactions",
               void 0
@@ -2530,15 +2542,15 @@
         })(),
         Z = i("exH9"),
         H = i("Dsqm"),
-        $ = i("0OaU"),
-        q = i("6Y59");
+        q = i("0OaU"),
+        $ = i("6Y59");
       function Q(e) {
         return Object(B.d)("#RewardsReaction_" + e);
       }
       var Y,
         V,
-        J = i("ZO3Q"),
-        K = i("YyVH");
+        K = i("ZO3Q"),
+        J = i("YyVH");
       function X(e, t) {
         var i = [];
         if (!e) return i;
@@ -2564,7 +2576,7 @@
             })(t),
             y =
               t == Y.LNY2020
-                ? "hue-rotate(" + (360 + Object(K.b)(-30, 10)) + "deg)"
+                ? "hue-rotate(" + (360 + Object(J.b)(-30, 10)) + "deg)"
                 : "";
           i.push({
             rotationCoefficient: l,
@@ -2584,7 +2596,7 @@
         (V[(V.Gold = 1)] = "Gold"),
         (V[(V.LNY2020 = 2)] = "LNY2020");
       function ee(t, i) {
-        var r = Object(J.useSpring)({
+        var r = Object(K.useSpring)({
           anim: 1,
           from: { anim: 0 },
           config: { duration: 8e3 }
@@ -2743,7 +2755,7 @@
         }),
         ae = function(e) {
           var t = e.style;
-          return p.a.createElement(J.animated.div, {
+          return p.a.createElement(K.animated.div, {
             style: Object(s.a)(Object(s.a)({}, re), t)
           });
         },
@@ -2770,7 +2782,7 @@
         oe = function(e) {
           var t = e.style;
           return p.a.createElement(
-            J.animated.svg,
+            K.animated.svg,
             {
               viewBox: "0 0 80 620",
               fill: "none",
@@ -2789,7 +2801,7 @@
         de = function(e) {
           var t = e.style;
           return p.a.createElement(
-            J.animated.svg,
+            K.animated.svg,
             {
               viewBox: "0 0 203 295",
               fill: "none",
@@ -2809,7 +2821,7 @@
           function(e) {
             var t = e.style;
             return p.a.createElement(
-              J.animated.svg,
+              K.animated.svg,
               {
                 viewBox: "0 0 48 102",
                 fill: "none",
@@ -2828,7 +2840,7 @@
           function(e) {
             var t = e.style;
             return p.a.createElement(
-              J.animated.svg,
+              K.animated.svg,
               {
                 viewBox: "0 0 50 39",
                 fill: "none",
@@ -2850,7 +2862,7 @@
           function(e) {
             var t = e.style;
             return p.a.createElement(
-              J.animated.svg,
+              K.animated.svg,
               {
                 viewBox: "0 0 68 69",
                 fill: "none",
@@ -2869,7 +2881,7 @@
           function(e) {
             var t = e.style;
             return p.a.createElement(
-              J.animated.svg,
+              K.animated.svg,
               {
                 viewBox: "0 0 48 48",
                 fill: "none",
@@ -2888,7 +2900,7 @@
           function(e) {
             var t = e.style;
             return p.a.createElement(
-              J.animated.svg,
+              K.animated.svg,
               {
                 viewBox: "0 0 48 30",
                 fill: "none",
@@ -2907,7 +2919,7 @@
           function(e) {
             var t = e.style;
             return p.a.createElement(
-              J.animated.svg,
+              K.animated.svg,
               {
                 viewBox: "0 0 48 30",
                 fill: "none",
@@ -2926,7 +2938,7 @@
           function(e) {
             var t = e.style;
             return p.a.createElement(
-              J.animated.svg,
+              K.animated.svg,
               {
                 viewBox: "0 0 48 30",
                 fill: "none",
@@ -2945,7 +2957,7 @@
           function(e) {
             var t = e.style;
             return p.a.createElement(
-              J.animated.svg,
+              K.animated.svg,
               {
                 viewBox: "0 0 48 39",
                 fill: "none",
@@ -2962,7 +2974,7 @@
           function(e) {
             var t = e.style;
             return p.a.createElement(
-              J.animated.svg,
+              K.animated.svg,
               {
                 width: "48",
                 height: "35",
@@ -2982,7 +2994,7 @@
           function(e) {
             var t = e.style;
             return p.a.createElement(
-              J.animated.svg,
+              K.animated.svg,
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 viewBox: "0 0 54 47.18",
@@ -3007,7 +3019,7 @@
           function(e) {
             var t = e.style;
             return p.a.createElement(
-              J.animated.svg,
+              K.animated.svg,
               {
                 version: "1.1",
                 xmlns: "http://www.w3.org/2000/svg",
@@ -3532,7 +3544,7 @@
             w.createElement(
               "div",
               { className: R.Left },
-              w.createElement(q.o, { className: R.BalanceIcon }),
+              w.createElement($.p, { className: R.BalanceIcon }),
               w.createElement(
                 "div",
                 { className: R.BalanceDetails },
@@ -3569,7 +3581,7 @@
           var t = e.className,
             i = Object(s.f)(e, ["className"]);
           return w.createElement(
-            P,
+            U,
             Object(s.a)({}, i, { className: Object(Z.a)(t, R.SubmitButton) })
           );
         },
@@ -3577,7 +3589,7 @@
           var t = e.className,
             i = Object(s.f)(e, ["className"]);
           return w.createElement(
-            P,
+            U,
             Object(s.a)({}, i, { className: Object(Z.a)(t, R.BackButton) })
           );
         },
@@ -3610,7 +3622,7 @@
                   "cost"
                 ]);
               return w.createElement(
-                P,
+                U,
                 Object(s.a)(
                   {
                     type: "button",
@@ -3648,7 +3660,7 @@
           );
         })(w.PureComponent),
         ze = function() {
-          return w.createElement($.a, { size: "large", className: R.Loading });
+          return w.createElement(q.a, { size: "large", className: R.Loading });
         },
         Le = function(e) {
           var t = e.children,
@@ -3657,7 +3669,7 @@
           return w.createElement(
             "span",
             Object(s.a)({}, r, { className: Object(Z.a)(i, R.PointsAmount) }),
-            w.createElement(q.o, { className: R.PointsAmountIcon }),
+            w.createElement($.p, { className: R.PointsAmountIcon }),
             t
           );
         };

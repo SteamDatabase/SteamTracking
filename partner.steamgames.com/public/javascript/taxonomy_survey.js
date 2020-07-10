@@ -143,6 +143,12 @@ var appid = 0;
 var tagsInDesc = [];
 
 /**
+ * A list of tags that were manually searched for
+ * @type Array.<Tag>
+ */
+var tagsManuallySearched = [];
+
+/**
  * A list of all the tags derived from the store's genre checkboxes
  * @type Array.<number>
  */
@@ -173,6 +179,11 @@ var categorySubWeights = {};
  * A map of tagids to localized tag names
  */
 var tagNames = {};
+
+/**
+ * A map of tagids to localized tag names (lowercase, stripped)
+ */ 
+var simpleTagNames = {};
 
 /**
  * Watches the end page for changes
@@ -255,6 +266,12 @@ function initSurvey(data)
 	
 	tagsFromMetaGenres = data.tagsFromMetaGenres;
 	tagsFromStoreCategories = data.tagsFromStoreCategories;
+	
+	simpleTagNames = {};
+	for(key in tagNames)
+	{
+		simpleTagNames[key] = simplify(tagNames[key]);
+	}
 	
 	window.onbeforeunload = checkDirtyWarning;
 	
@@ -472,6 +489,40 @@ function onChange()
 	}
 }
  
+function addTagManuallySearched(tagid, bAdd=true)
+{
+	var found = false;
+	var index = 0;
+	for(var i = 0; i < tagsManuallySearched.length; i++)
+	{
+		var tag = tagsManuallySearched[i];
+		index = i;
+		if(tag.tagid == tagid)
+		{
+			found = true;
+			break;
+		}
+	}
+	
+	if(bAdd)
+	{
+		if(!found)
+		{
+			tagsManuallySearched.push({
+				tagid:tagid,
+				name:getTagName(tagid),
+				count:1
+			});
+		}
+		storeResponse(currentQuestion,getTagName(tagid),tagid);
+	}
+	else
+	{
+		tagsManuallySearched.splice(index,1);
+		storeResponse(currentQuestion,getTagName(tagid),tagid,false);
+	}
+}
+
 /**
  * Called when a user clicks a choice, drives checkbox behavior
  * @param {number} i the desired choice
@@ -479,8 +530,15 @@ function onChange()
 function onClickChoice(i, isRadio)
 {
 	var choices = document.getElementsByClassName("input_choice");
+	var theChoice = null;
+	
 	for(var j = 0; j < choices.length; j++)
 	{
+		if(choices[j].id == "input_choice_"+i)
+		{
+			theChoice = choices[j];
+		}
+		
 		if(isRadio && choices[j].id != "input_choice_"+i)
 		{
 			choices[j].checked = false;
@@ -495,6 +553,24 @@ function onClickChoice(i, isRadio)
 		}
 	}
 	hilightAssociations();
+	
+	var changedSearchThing = false;
+	if(theChoice != null)
+	{
+		var parentElement = theChoice.parentElement;
+		var parentClass = parentElement.getAttribute("class");
+		if(parentClass.indexOf("search_choice") != -1)
+		{
+			var value = parseInt(theChoice.getAttribute("value"));
+			addTagManuallySearched(value, theChoice.checked);
+			changedSearchThing = true;
+		}
+	}
+	
+	if(changedSearchThing)
+	{
+		displayCurrentQuestion();
+	}
 }
 
 function removeResponse(tagid)
@@ -692,7 +768,6 @@ function updateSortButtons()
 {
 	var tagProfile = getManuallySortedTagListFromHTML();
 	
-	
 	var optDiv = document.getElementsByClassName("nav_button_optimize")[0];
 	var optBtn = optDiv.childNodes[0];
 	var revDiv = document.getElementsByClassName("nav_button_revert")[0];
@@ -759,12 +834,45 @@ function onClickConfirmApplyTags()
 	}
 	tagStr += "</ol>";
 	strBody += "<br><br>"+tagStr;
+	
+	var commTagsToRemove = [];
+	for(var i = 0; i < communityTags.length; i++)
+	{
+		var commTag = communityTags[i];
+		var found = false;
+		for(var j = 0; j < tags.length; j++)
+		{
+			var tag = tags[j];
+			if(tag.tagid == commTag.tagid)
+			{
+				found = true;
+				break;
+			}
+		}
+		if(!found)
+		{
+			commTagsToRemove.push(commTag);
+		}
+	}
+	
+	if(commTagsToRemove.length > 0)
+	{
+		strBody += 'These community-applied tags will be removed:';
+		var tagStr = "<ol>";
+		for(var i = 0; i < commTagsToRemove.length; i++)
+		{
+			tagStr += "<li style='list-style:square;'>"+commTagsToRemove[i].name+"</li>";
+		}
+		tagStr += "</ol>";
+		strBody += tagStr;
+	}
+	
 	strBody += 'If this is what you want, click \'Publish.\'';
 	
 	ShowConfirmDialog(strTitle,strBody,strYes,strNo).done( function( strButton ) {
 		if(strButton == "OK")
 		{
-			ApplyTags();
+			ApplyTags(commTagsToRemove);
 		}
 	} );
 }
@@ -774,7 +882,7 @@ function onClickConfirmApplyTags()
  * them to the game
  */
 
-function ApplyTags()
+function ApplyTags(tagsToRemove=[])
 {
 	//Get all the elements in the drag and drop list
 	var tags = getManuallySortedTagListFromHTML();
@@ -795,6 +903,7 @@ function ApplyTags()
 		appid: appid,
 		sessionid: g_sessionID,
 		rankedtagids: rgRankedTagids,
+		negatedtagids: tagsToRemove,
 	};
 	
 	if(bDiagnostics)
@@ -880,7 +989,7 @@ function onClickSomething(direction)
 	}
 	else
 	{
-		hideClasses(["question_title","question_text","choices"]);
+		hideClasses(["question_title","question_text","choices","input_choices","neighborhood","nav_button_optimize","nav_button_revert"]);
 		saveResponse(function(){
 			nextQuestion(direction);
 		});
@@ -968,7 +1077,7 @@ function gotoQuestion(direction)
 	}
 }
 
-function storeResponse(index,name,value)
+function storeResponse(index,name,value,bAdd=true)
 {
 	if(rgResponses[index] == null)
 	{
@@ -976,18 +1085,27 @@ function storeResponse(index,name,value)
 	}
 	var theResponses = rgResponses[index];
 	var found = false;
+	var index = -1;
 	for(var i = 0; i < theResponses.length; i++)
 	{
 		var theResponse = theResponses[i];
 		if(theResponse.value == value)
 		{
 			found = true;
+			index = i;
 			break;
 		}
 	}
 	if(!found)
 	{
-		theResponses.push({name:name,value:value});
+		if(bAdd)
+		{
+			theResponses.push({name:name,value:value});
+		}
+		else
+		{
+			theResponses.splice(index,1);
+		}
 	}
 }
 
@@ -1138,11 +1256,26 @@ function resolveFillChoices(fill)
 			if(tagsInDesc != null)
 			{
 				var results = [];
+				var ids = [];
 				for(var i = 0; i < tagsInDesc.length; i++)
 				{
 					var entry = {
 						label:tagsInDesc[i].name,
 						value:tagsInDesc[i].tagid
+					};
+					results.push(entry);
+					ids.push(tagsInDesc[i].tagid);
+				}
+				for(var i = 0; i < tagsManuallySearched.length; i++)
+				{
+					var tagid = tagsManuallySearched[i].tagid;
+					if(valueIsInArray(tagid, ids))
+					{
+						continue;
+					}
+					var entry = {
+						label:tagsManuallySearched[i].name,
+						value:tagsManuallySearched[i].tagid
 					};
 					results.push(entry);
 				}
@@ -1263,7 +1396,9 @@ function getQText(id)
 		break;
 		case "q_summary":        return '#App_Taxonomy_Survey_QSummaryText';
 		case "none_defined"    : return 'None defined';       
+		case "define_your_own" : return 'None defined, search to add here';       
 		case "top_tags"        : return 'Top 20 Tags, by weight—Drag & Drop to reorder';
+		case "search_for_tags" : return 'Search to add others:';
 		break;
 	}
 	return "";
@@ -1410,6 +1545,10 @@ function tagMatchesCategory(tagid, category)
  */
 function getTagNames(ids)
 {
+	if(ids == null || ids.length == 0)
+	{
+		return [];
+	}
 	var names = [];
 	for(var i = 0; i < ids.length; i++)
 	{
@@ -1462,10 +1601,16 @@ function getRelevantTagIdList()
 	return tagids;
 }
 
-function getTopAndBottomTagIdNames(includeCategories=null, excludeCategories=null)
+function getTopAndBottomTagIdNames(includeCategories=null, excludeCategories=null, enforceCutoff=false)
 {
 	var topTags = getTagIdListRanked(includeCategories, excludeCategories, true);
-	var bottomTags = getTagIdListRanked(includeCategories, excludeCategories, false);
+	var bottomTags = [];
+	
+	if(!enforceCutoff)
+	{
+		bottomTags = getTagIdListRanked(includeCategories, excludeCategories, false);
+	}
+
 	var topNames = getTagNames(topTags);
 	var bottomNames = getTagNames(bottomTags);
 	
@@ -1501,25 +1646,40 @@ function getTopAndBottomTagIdNames(includeCategories=null, excludeCategories=nul
 function getTagIdListRanked(includeCategories=null, excludeCategories=null, bTopTags=true)
 {
 	var tagids = getTagIdList(includeCategories, excludeCategories);
-	if(rgRankedTagProfile != null)
+	
+	var theRankedTagids = [];
+	if(rgManualTagidRanking != null && rgManualTagidRanking.length > 0)
+	{
+		theRankedTagids = rgManualTagidRanking;
+	}
+	else if(rgRankedTagProfile != null)
+	{
+		for(var i = 0; i < rgRankedTagProfile.length; i++)
+		{
+			theRankedTagids[i] = rgRankedTagProfile[i].tagid;
+		}
+	}
+	
+	if(theRankedTagids != null)
 	{
 		//If we have a ranked tag profile we compare against it
 		var rgTopTags = [];
 		var rgBottomTags = [];
-		for(var i = 0; i < rgRankedTagProfile.length; i++)
+		
+		for(var i = 0; i < theRankedTagids.length; i++)
 		{
 			if(i < maxTags)
 			{
-				var entry = rgRankedTagProfile[i];
-				if(valueIsInArray(entry.tagid, tagids))
+				var rankId = theRankedTagids[i];
+				if(valueIsInArray(rankId, tagids))
 				{
-					rgTopTags.push(entry.tagid);
+					rgTopTags.push(rankId);
 				}
 			}
 		}
 		if(bTopTags)
 		{
-			//return top 15 tags matching ranked profile
+			//return top 20 tags matching ranked profile
 			return rgTopTags;
 		}
 		else
@@ -2156,8 +2316,6 @@ function calculateTagGenreParentsGivenCurrentResponses(candidateTagid)
 		{
 			var parents = genresToParents[candidateTagid];
 			if(parents == null) continue;
-			console.log(getTagName(candidateTagid));
-			console.log(getTagNames(parents));
 			for(var j = 0; j < parents.length; j++)
 			{
 				var key = parents[j];
@@ -2514,7 +2672,13 @@ function displayEndPage(bForceOptimized)
 			addClass(summaryItems[i], className);
 			updateSortButtons();
 			
+			var oldRanking = rgManualTagidRanking.join(",");
 			recordManualTagRanking();
+			
+			if(oldRanking != rgManualTagidRanking.join(","))
+			{
+				displayCurrentQuestionSummary(true);
+			}
 		}
 	});
 	
@@ -2553,11 +2717,10 @@ function displayEndPage(bForceOptimized)
 /**
  * Render and display the current question
  */
-function displayCurrentQuestionSummary()
+function displayCurrentQuestionSummary(bEnforceCutoff=false)
 {
 	//Get the current question and render it to the DOM
-	var question = questions[currentQuestion];
-	var html = renderSummary(question);
+	var html = renderSummary(bEnforceCutoff);
 	var content = document.getElementById("summary");
 	content.innerHTML = html;
 }
@@ -2678,18 +2841,19 @@ function tagsToTagids(rgTags)
  * Renders the summary sidebar
  * @return {string} html for the summary sidebar
  */
-function renderSummary()
+function renderSummary(enforceCutoff=false)
 {
-	var superGenreStuff = getTopAndBottomTagIdNames(["supergenre"]);
-	var genreStuff = getTopAndBottomTagIdNames(["genre"]);
-	var subGenreStuff = getTopAndBottomTagIdNames(["subgenre"]);
-	var visualStuff = getTopAndBottomTagIdNames(["visuals"]);
-	var featureStuff = getTopAndBottomTagIdNames(["feature"]);
-	var themeMoodStuff = getTopAndBottomTagIdNames(["theme","mood"]);
-	var playerStuff = getTopAndBottomTagIdNames(["players"]);
-	var otherStuff = getTopAndBottomTagIdNames([],["supergenre","genre","subgenre","visuals","feature","theme","mood","players"]);
+	var superGenreStuff = getTopAndBottomTagIdNames(["supergenre"], [], enforceCutoff);
+	var genreStuff = getTopAndBottomTagIdNames(["genre"], [], enforceCutoff);
+	var subGenreStuff = getTopAndBottomTagIdNames(["subgenre"], [], enforceCutoff);
+	var visualStuff = getTopAndBottomTagIdNames(["visuals"], [], enforceCutoff);
+	var featureStuff = getTopAndBottomTagIdNames(["feature"], [], enforceCutoff);
+	var themeMoodStuff = getTopAndBottomTagIdNames(["theme","mood"], [], enforceCutoff);
+	var playerStuff = getTopAndBottomTagIdNames(["players"], [], enforceCutoff);
+	var otherStuff = getTopAndBottomTagIdNames([],["supergenre","genre","subgenre","visuals","feature","theme","mood","players"], enforceCutoff);
 	
-	var otherTagids = getTagIdList([],["supergenre","genre","subgenre","visuals","feature","theme","mood","players"]);
+	var otherTagids = getTagIdListRanked([],["supergenre","genre","subgenre","visuals","feature","theme","mood","players"],enforceCutoff);
+	
 	var other = getTagNames(otherTagids);
 	
 	tagProfile = getFinalTagProfile();
@@ -2721,10 +2885,8 @@ function renderSummary()
 		{id:"q_features"   , html:featureStuff},
 		{id:"q_players"    , html:playerStuff}
 	];
-	if(other.length != 0)
-	{
-		stuff.push({id:"q_other"      , html:otherStuff});
-	}
+	
+	stuff.push({id:"q_other"      , html:otherStuff});
 	stuff.push({id:"q_summary"    , html:""});
 	
 	var html = "";
@@ -2737,7 +2899,14 @@ function renderSummary()
 		}
 		else
 		{
-			html += sectionLine(thing.id, "<span class='none_defined'>"+getQText("none_defined")+"</span>");
+			if(thing.id == "q_other")
+			{
+				html += sectionLine(thing.id, "<span class='none_defined other_search' onclick='onClickSection(\"q_other\")'>"+getQText("define_your_own")+"</span>");
+			}
+			else
+			{
+				html += sectionLine(thing.id, "<span class='none_defined'>"+getQText("none_defined")+"</span>");
+			}
 		}
 	}
 	return html;
@@ -2824,7 +2993,7 @@ function renderEndpage(bForceOptimized=false)
 	}
 	
 	var choiceHTML = renderSummaryItems(rgRankedTagProfile);
-	var summaryHTML = renderSummary();
+	var summaryHTML = renderSummary(true);
 	
 	rgRankedTagProfile = finalizeTagProfileCounts(rgRankedTagProfile);
 	
@@ -2967,8 +3136,24 @@ function renderQuestion(q)
 	var title = replaceVariables(qTitle);
 	var text = replaceVariables(qText);
 	
-	var choiceHTML = renderChoices(q);
+	var choices = renderChoices(q);
+	var choiceHTML = choices.html;
+	var choiceCount = choices.length;
 	var summaryHTML = renderSummary();
+	var searchHTML = "";
+	
+	var choicesClass = "choices";
+	
+	if(q.id == "q_tags_from_desc")
+	{
+		var inputTitle = getQText("search_for_tags");
+		searchHTML = 
+		'<div id="choices_2" class="choices short_choices input_choices">\
+			<span id="input_title" class="input_title">'+inputTitle+'</span>'+
+			renderSearch(choiceCount) +
+		'</div>';
+		choicesClass = "choices short_choices";
+	}
 	
 	return '\
 	<div id="'+q.id+'" class="question">\
@@ -2976,10 +3161,10 @@ function renderQuestion(q)
 		<h3 id="question_title" class="question_title">'+title+'</h3>\
 		<div>\
 			<p id="question_text" class="question_text">'+text+'</p>\
-			<div id="choices" class="choices" onscroll="onScroll();">'+
-			renderSearch()+
+			<div id="choices" class="'+choicesClass+'" onscroll="onScroll();">'+
 			choiceHTML+
 			'</div>'+
+			searchHTML+
 			'<div id="summary" class="summary">'+
 			summaryHTML+
 			'</div>\
@@ -3042,9 +3227,10 @@ function renderNeighbors(neighborData)
 /**
  * Render the HTML for the choices associated with the given question
  * @param {SurveyQuestion} q
- * @return {string}
+ * @param {int} startIndex
+ * @return {html:string,length:int}
  */
-function renderChoices(q)
+function renderChoices(q, startIndex=0, extraClass="")
 {
 	var html = "";
 	var type = "radio";
@@ -3071,12 +3257,16 @@ function renderChoices(q)
 				var subChoice = choices[k];
 				if(ids.indexOf(subChoice.value) == -1)
 				{
+					if(tagMatchesAnyCategory(subChoice.value,["assessment"]))
+					{
+						continue;
+					}
 					var count = subChoice.count;
 					if(count == null)
 					{
 						count = 0;
 					}
-					var bit = renderChoice(k,type,subChoice.label,subChoice.value);
+					var bit = renderChoice(k+startIndex,type,subChoice.label,subChoice.value,extraClass);
 					htmlBits.push({id:subChoice.value,html:bit,count:count,label:subChoice.label});
 					ids.push(subChoice.value);
 					j++;
@@ -3087,10 +3277,31 @@ function renderChoices(q)
 		{
 			if(ids.indexOf(choice.value) == -1)
 			{
-				var bit = renderChoice(j,type,choice.label,choice.value);
+				if(tagMatchesAnyCategory(choice.value,["assessment"]))
+				{
+					continue;
+				}
+				var bit = renderChoice(j+startIndex,type,choice.label,choice.value,extraClass);
 				htmlBits.push({id:choice.value,html:bit,count:0,label:choice.label});
 				ids.push(choice.value);
 				j++;
+			}
+		}
+	}
+	
+	var el = document.getElementById("choice_search_results");
+	if(el != null)
+	{
+		var choices = el.getElementsByClassName("input_choice");
+		for(var j = 0; j < choices.length; j++)
+		{
+			if(choices[j].checked)
+			{
+				var value = choices[j].value;
+				var id = choices[j].getAttribute("id");
+				id = id.replace("input_choice_","");
+				htmlBits.push({id:value,html:"",count:id,label:getTagName(value)});
+				ids.push(value);
 			}
 		}
 	}
@@ -3114,7 +3325,7 @@ function renderChoices(q)
 	{
 		html += htmlBits[i].html;
 	}
-	return html;
+	return {html:html,length:htmlBits.length};
 }
 
 /**
@@ -3161,7 +3372,7 @@ function renderSummaryItems(choices)
  * @param {string} value
  * @return {string}
  */
-function renderChoice(i,type,label,value)
+function renderChoice(i,type,label,value,extraClass="")
 {
 	var onClick = "";
 	var onChange = "onChange()";
@@ -3180,21 +3391,77 @@ function renderChoice(i,type,label,value)
 		divClass += " suggested";
 	}
 	return '\
-	<div id="choice_'+i+'" class="'+divClass+'" name=_choice_'+i+'" value="'+value+'">\
+	<div id="choice_'+i+'" class="'+divClass+' '+extraClass+'" name=_choice_'+i+'" value="'+value+'">\
 		<input onchange="'+onChange+'" onclick="'+onClick+'" type="'+type+'" class="input_choice" id="input_choice_'+i+'" name="input_choice_'+i+'" value="'+value+'">\
 		<label for="input_choice_'+i+'"><span>'+label+'</span></label>\
 	</div>';
 }
 
-function renderSearch()
+function renderSearch(startIndex)
 {
-	return "";
-	/*
 	return '\
 	<div id="choice_search" class="choice_search">\
-		<input></input>\
+		<input oninput="onSearchInput(this.value);"></input>\
+	</div>\
+	<div id="choice_search_results" data-startindex="'+startIndex+'">\
 	</div>';
-	*/
+}
+
+function simplify(txt)
+{
+	txt = txt.toLowerCase();
+	txt = txt.replace(/[\ \_\-]/g," ");
+	txt = txt.replace(/[~`!@#\$%\^&\*\(\)\+\={}\|\\;'"<>\/\.,]/g,"");
+	return txt;
+}
+
+function onSearchInput(txt)
+{
+	txt = simplify(txt);
+	var rgTags = [];
+	
+	if(txt.length > 1)
+	{
+		for(key in simpleTagNames)
+		{
+			var name = simpleTagNames[key];
+			if(name.includes(txt))
+			{
+				rgTags.push({tagid:key,simpleName:name,name:tagNames[key]});
+			}
+		}
+	}
+	
+	rgTags.sort(function(aTag,bTag){
+		var a = aTag.simpleName;
+		var b = bTag.simpleName;
+		var ai = a.indexOf(txt);
+		var bi = b.indexOf(txt);
+		if(ai < bi) return -1;
+		if(ai > bi) return  1;
+		if(ai.length < bi.length) return -1;
+		if(ai.length > bi.length) return  1;
+		return 0;
+	});
+	
+	var el = document.getElementById("choice_search_results");
+	
+	var rgChoices = [];
+	for(var i = 0; i < rgTags.length; i++)
+	{
+		var tag = rgTags[i];
+		rgChoices.push({value:tag.tagid,label:tag.name});
+	}
+	var q = {
+		type:"multiple_choice",
+		multi_select:true,
+		choices:rgChoices
+	};
+	
+	var startIndex = parseInt(el.dataset.startindex);
+	
+	var choices = renderChoices(q, startIndex, "search_choice");
+	el.innerHTML = choices.html;
 }
 
 /**

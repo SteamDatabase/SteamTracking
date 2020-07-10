@@ -2418,7 +2418,7 @@ background: -webkit-linear-gradient( left, #223b4f 5%,#25435b 95%);
  */
  
 .labs_cluster {
-	background: linear-gradient(86deg, rgba(30, 46, 82, 0) 6.04%, #253968 39.34%, rgba(30, 46, 82, 0) 100.06%);
+	background: linear-gradient(86deg, rgba(30, 46, 82, 0) 6.04%, #2e4e6b 39.34%, rgba(30, 46, 82, 0) 100.06%);	
 	margin-top: 20px;
 	padding-top: 20px;
 }
@@ -2554,7 +2554,7 @@ body.v6 .recommended_by_deep_dive_method {
 
 body.v6 .recommended_by_steam_labs_ctn h2 {
   margin-bottom: 10px;
-  color: #7392D899;
+  color: #ffffff99;
 }
 
 .recommended_by_steam_labs_ctn .detail_text {
@@ -2571,7 +2571,7 @@ body.v6 .recommended_by_steam_labs_ctn h2 {
 
 .recommended_by_steam_labs_ctn h1 {
   text-transform: uppercase;
-  color: #7392d8;
+  color: #ffffff;
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: normal; /* normal */
 
@@ -2637,7 +2637,7 @@ body.v6 .recommended_by_steam_labs_ctn h2 {
 
 .community_recommendations_by_steam_labs_ctn h1 {
 	text-transform: uppercase;
-	color: #7392d8;
+	color: #ffffff;
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: normal; /* normal */
 
@@ -2661,7 +2661,7 @@ body.v6 .recommended_by_steam_labs_ctn h2 {
 .community_recommendation_app {
 	display: none;
 	margin-bottom: 5px;
-	background-color: rgba(0,0,0,0.25);
+	background-color: none;
 	overflow: hidden;
 }
 .focus > .community_recommendation_app {
@@ -2709,14 +2709,11 @@ body.v6 .recommended_by_steam_labs_ctn h2 {
 }
 
 .community_recommendation_app > .right_col {
-	background: -webkit-linear-gradient( top, #506c86 5%, #101431 66%);
-	background: linear-gradient( to bottom, #506c86 5%, #101431 66%);
+	background: -webkit-linear-gradient( top, #506c86 5%, #10143100 96%);
+	background: linear-gradient( to bottom, #506c86 5%, #10143100 96%);
 	border-radius: 3px;
 }
-.community_recommendation_app:hover > .right_col {
-	background: -webkit-linear-gradient( top, #506c86 5%, #101431 76%);
-	background: linear-gradient( to bottom, #506c86 5%, #101431 76%);
-}
+
 .community_recommendation_app > .right_col > .community_recommendations_block {
 	position: relative;
 	width: 319px;
