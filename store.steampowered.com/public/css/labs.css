@@ -612,6 +612,29 @@ a.ultracast_now_playing_link:hover .ds_options {
 	box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.35);
 }
 
+.shelved
+{
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center#;
+    padding-left: 45px;
+    padding-right: 45px;
+    margin-top: -26px;
+    padding-top: 0px;
+    width: inherit;
+    font-size: 17px;
+    font-kerning: 0.23em;
+    width: 300px;
+    height: 26px;
+    color: black;
+    transform: rotate(-45deg) translateX(-147px) translateY(-45px);
+    z-index:1;
+    background-color: #919aa3;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.35);
+}
+
 .internal_header
 {
 	color: red;
