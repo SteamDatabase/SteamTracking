@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "5981776";
+var CLSTAMP = "5987544";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [38],
   {
@@ -350,10 +350,10 @@ var CLSTAMP = "5981776";
           return v;
         }),
         n.d(t, "I", function() {
-          return b;
+          return y;
         }),
         n.d(t, "H", function() {
-          return y;
+          return b;
         }),
         n.d(t, "k", function() {
           return M;
@@ -362,16 +362,16 @@ var CLSTAMP = "5981776";
           return w;
         }),
         n.d(t, "y", function() {
-          return C;
+          return F;
         }),
         n.d(t, "R", function() {
-          return O;
+          return C;
         }),
         n.d(t, "d", function() {
-          return E;
+          return O;
         }),
         n.d(t, "o", function() {
-          return F;
+          return E;
         }),
         n.d(t, "r", function() {
           return S;
@@ -380,25 +380,25 @@ var CLSTAMP = "5981776";
           return k;
         }),
         n.d(t, "D", function() {
-          return j;
-        }),
-        n.d(t, "J", function() {
-          return D;
-        }),
-        n.d(t, "v", function() {
           return B;
         }),
-        n.d(t, "q", function() {
-          return x;
+        n.d(t, "J", function() {
+          return j;
         }),
-        n.d(t, "C", function() {
-          return L;
-        }),
-        n.d(t, "P", function() {
+        n.d(t, "v", function() {
           return R;
         }),
-        n.d(t, "W", function() {
+        n.d(t, "q", function() {
+          return D;
+        }),
+        n.d(t, "C", function() {
+          return x;
+        }),
+        n.d(t, "P", function() {
           return I;
+        }),
+        n.d(t, "W", function() {
+          return L;
         }),
         n.d(t, "g", function() {
           return A;
@@ -416,10 +416,10 @@ var CLSTAMP = "5981776";
           return z;
         }),
         n.d(t, "E", function() {
-          return G;
+          return U;
         }),
         n.d(t, "U", function() {
-          return U;
+          return G;
         }),
         n.d(t, "x", function() {
           return W;
@@ -431,13 +431,13 @@ var CLSTAMP = "5981776";
           return V;
         }),
         n.d(t, "m", function() {
-          return Y;
+          return q;
         }),
         n.d(t, "w", function() {
-          return K;
+          return Y;
         }),
         n.d(t, "G", function() {
-          return q;
+          return K;
         }),
         n.d(t, "a", function() {
           return X;
@@ -885,7 +885,7 @@ var CLSTAMP = "5981776";
           })
         );
       }
-      function b() {
+      function y() {
         return i.createElement(
           "svg",
           {
@@ -906,7 +906,7 @@ var CLSTAMP = "5981776";
           })
         );
       }
-      function y() {
+      function b() {
         return i.createElement(
           "svg",
           {
@@ -1035,7 +1035,7 @@ var CLSTAMP = "5981776";
           })
         );
       }
-      function C() {
+      function F() {
         return i.createElement(
           "svg",
           {
@@ -1065,7 +1065,7 @@ var CLSTAMP = "5981776";
           })
         );
       }
-      function O(e) {
+      function C(e) {
         var t = "SVGIcon_Button SVGIcon_Throbber ";
         return (
           e.className && (t += e.className),
@@ -1309,7 +1309,7 @@ var CLSTAMP = "5981776";
           )
         );
       }
-      function E() {
+      function O() {
         return i.createElement(
           "svg",
           {
@@ -1329,7 +1329,7 @@ var CLSTAMP = "5981776";
           })
         );
       }
-      function F() {
+      function E() {
         return i.createElement(
           "svg",
           {
@@ -1421,7 +1421,7 @@ var CLSTAMP = "5981776";
           })
         );
       }
-      function j() {
+      function B() {
         return i.createElement(
           "svg",
           {
@@ -1447,7 +1447,7 @@ var CLSTAMP = "5981776";
           })
         );
       }
-      function D() {
+      function j() {
         return i.createElement(
           "svg",
           {
@@ -1480,7 +1480,7 @@ var CLSTAMP = "5981776";
           })
         );
       }
-      function B(e) {
+      function R(e) {
         return i.createElement(
           "svg",
           {
@@ -1501,7 +1501,7 @@ var CLSTAMP = "5981776";
           })
         );
       }
-      function x() {
+      function D() {
         return i.createElement(
           "svg",
           {
@@ -1536,7 +1536,7 @@ var CLSTAMP = "5981776";
           })
         );
       }
-      function L(e) {
+      function x(e) {
         return i.createElement(
           "svg",
           {
@@ -1576,7 +1576,7 @@ var CLSTAMP = "5981776";
           })
         );
       }
-      function R(e) {
+      function I(e) {
         var t = Object(a.a)(
           "SVGIcon_Button",
           "SVGIcon_SteamLogo",
@@ -1610,7 +1610,7 @@ var CLSTAMP = "5981776";
           })
         );
       }
-      function I() {
+      function L() {
         return i.createElement(
           "svg",
           {
@@ -1767,7 +1767,7 @@ var CLSTAMP = "5981776";
           })
         );
       }
-      function G() {
+      function U() {
         return i.createElement(
           "svg",
           {
@@ -1787,7 +1787,7 @@ var CLSTAMP = "5981776";
           })
         );
       }
-      function U() {
+      function G() {
         return i.createElement(
           "svg",
           {
@@ -1916,7 +1916,7 @@ var CLSTAMP = "5981776";
           })
         );
       }
-      function Y() {
+      function q() {
         return i.createElement(
           "svg",
           {
@@ -1950,7 +1950,7 @@ var CLSTAMP = "5981776";
           })
         );
       }
-      function K() {
+      function Y() {
         return i.createElement(
           "svg",
           {
@@ -2020,7 +2020,7 @@ var CLSTAMP = "5981776";
           })
         );
       }
-      function q() {
+      function K() {
         return i.createElement(
           "svg",
           {
@@ -2804,7 +2804,7 @@ var CLSTAMP = "5981776";
     "Hny+": function(e, t, n) {
       "use strict";
       n.r(t);
-      var y = n("mrSG"),
+      var b = n("mrSG"),
         r = n("q1tI"),
         g = n.n(r),
         _ = n("NcpY"),
@@ -2833,7 +2833,7 @@ var CLSTAMP = "5981776";
                     "default" != i && t.push(i);
                   }
                   t.sort(),
-                    (t = Object(y.g)(["default"], t)),
+                    (t = Object(b.g)(["default"], t)),
                     (o.rgModelNames = t);
                 }
               });
@@ -2847,7 +2847,7 @@ var CLSTAMP = "5981776";
               h,
               f
             ) {
-              return Object(y.b)(this, void 0, void 0, function() {
+              return Object(b.b)(this, void 0, void 0, function() {
                 var s,
                   t,
                   n,
@@ -2856,7 +2856,7 @@ var CLSTAMP = "5981776";
                   o,
                   a,
                   c = this;
-                return Object(y.e)(this, function(e) {
+                return Object(b.e)(this, function(e) {
                   switch (e.label) {
                     case 0:
                       return (
@@ -2865,9 +2865,9 @@ var CLSTAMP = "5981776";
                           4,
                           new v(
                             function(o) {
-                              return Object(y.b)(c, void 0, void 0, function() {
+                              return Object(b.b)(c, void 0, void 0, function() {
                                 var t, n, r, i;
-                                return Object(y.e)(this, function(e) {
+                                return Object(b.e)(this, function(e) {
                                   switch (e.label) {
                                     case 0:
                                       return [4, this.GetNeighbors(o)];
@@ -2912,9 +2912,9 @@ var CLSTAMP = "5981776";
               });
             }),
             (e.prototype.GetNeighbors = function(o) {
-              return Object(y.b)(this, void 0, void 0, function() {
+              return Object(b.b)(this, void 0, void 0, function() {
                 var t, n, r, i;
-                return Object(y.e)(this, function(e) {
+                return Object(b.e)(this, function(e) {
                   switch (e.label) {
                     case 0:
                       return (
@@ -2939,9 +2939,9 @@ var CLSTAMP = "5981776";
               });
             }),
             (e.prototype.EstimateCosts = function(r, i) {
-              return Object(y.b)(this, void 0, void 0, function() {
+              return Object(b.b)(this, void 0, void 0, function() {
                 var t, n;
-                return Object(y.e)(this, function(e) {
+                return Object(b.e)(this, function(e) {
                   switch (e.label) {
                     case 0:
                       return (
@@ -2970,9 +2970,9 @@ var CLSTAMP = "5981776";
                 });
               });
             }),
-            Object(y.c)([o.y], e.prototype, "rgModelNames", void 0),
-            Object(y.c)([s.a], e.prototype, "GetNeighbors", null),
-            Object(y.c)([s.a], e.prototype, "EstimateCosts", null),
+            Object(b.c)([o.y], e.prototype, "rgModelNames", void 0),
+            Object(b.c)([s.a], e.prototype, "GetNeighbors", null),
+            Object(b.c)([s.a], e.prototype, "EstimateCosts", null),
             e
           );
         })(),
@@ -3064,10 +3064,10 @@ var CLSTAMP = "5981776";
               (this.m_fnIterationCallback = r);
           }
           return (
-            (e.prototype.FindPath = function(_, v, b) {
-              return Object(y.b)(this, void 0, void 0, function() {
+            (e.prototype.FindPath = function(_, v, y) {
+              return Object(b.b)(this, void 0, void 0, function() {
                 var o, s, a, c, l, t, n, u, r, i, p, d, m, h, f, g;
-                return Object(y.e)(this, function(e) {
+                return Object(b.e)(this, function(e) {
                   switch (e.label) {
                     case 0:
                       return (
@@ -3088,7 +3088,7 @@ var CLSTAMP = "5981776";
                         (n = 0),
                         (e.label = 2);
                     case 2:
-                      if (!(0 < o.length && n < b)) return [3, 6];
+                      if (!(0 < o.length && n < y)) return [3, 6];
                       if (((u = o.Pop()), this.m_fnEquality(u.node, v))) {
                         for (r = [], i = u.node; l.has(i); )
                           r.push(i), (i = l.get(i));
@@ -3162,12 +3162,12 @@ var CLSTAMP = "5981776";
             e
           );
         })(),
-        b = new m();
-      window.g_LabsSandbox = b;
+        y = new m();
+      window.g_LabsSandbox = y;
       var h = n("TyAF"),
         w = n("ZApo"),
         f = n("exH9"),
-        C = (function(n) {
+        F = (function(n) {
           function e(e) {
             var t = n.call(this, e) || this;
             return (
@@ -3194,28 +3194,28 @@ var CLSTAMP = "5981776";
             );
           }
           return (
-            Object(y.d)(e, n),
+            Object(b.d)(e, n),
             (e.prototype.OnDisplayClicked = function() {
               this.setState({ mode: "select" });
             }),
             (e.prototype.UpdateAppSuggestions = function(n) {
-              return Object(y.b)(this, void 0, void 0, function() {
+              return Object(b.b)(this, void 0, void 0, function() {
                 var a,
                   t = this;
-                return Object(y.e)(this, function(e) {
+                return Object(b.e)(this, function(e) {
                   return (
                     null != (a = n.target.value && n.target.value.trim()) &&
                     a.length
                       ? (window.clearTimeout(this.m_currentRequest),
                         (this.m_currentRequest = window.setTimeout(function() {
-                          return Object(y.b)(t, void 0, void 0, function() {
+                          return Object(b.b)(t, void 0, void 0, function() {
                             var t,
                               n,
                               r,
                               i,
                               o,
                               s = this;
-                            return Object(y.e)(this, function(e) {
+                            return Object(b.e)(this, function(e) {
                               switch (e.label) {
                                 case 0:
                                   return (
@@ -3364,18 +3364,18 @@ var CLSTAMP = "5981776";
                 )
               );
             }),
-            Object(y.c)([s.a], e.prototype, "OnDisplayClicked", null),
-            Object(y.c)([s.a], e.prototype, "UpdateAppSuggestions", null),
-            Object(y.c)([s.a], e.prototype, "OnKeyUp", null),
+            Object(b.c)([s.a], e.prototype, "OnDisplayClicked", null),
+            Object(b.c)([s.a], e.prototype, "UpdateAppSuggestions", null),
+            Object(b.c)([s.a], e.prototype, "OnKeyUp", null),
             e
           );
         })(g.a.Component),
-        O = (function(e) {
+        C = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
           return (
-            Object(y.d)(t, e),
+            Object(b.d)(t, e),
             (t.prototype.render = function() {
               var e = this;
               if (0 == this.props.appid)
@@ -3423,7 +3423,7 @@ var CLSTAMP = "5981776";
             t
           );
         })(g.a.Component),
-        E = (function(t) {
+        O = (function(t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (
@@ -3434,7 +3434,7 @@ var CLSTAMP = "5981776";
             );
           }
           return (
-            Object(y.d)(e, t),
+            Object(b.d)(e, t),
             (e.prototype.componentDidMount = function() {
               this.OnAppSelected();
             }),
@@ -3468,7 +3468,7 @@ var CLSTAMP = "5981776";
               return g.a.createElement(
                 "div",
                 { className: _.LabsSimilarity },
-                g.a.createElement(C, {
+                g.a.createElement(F, {
                   fnOnSelection: this.OnAppSelected,
                   ref: this.ref_app_a,
                   showAppIds: !0,
@@ -3478,7 +3478,7 @@ var CLSTAMP = "5981776";
                 g.a.createElement("div", { className: _.HorizontalSpacer }),
                 g.a.createElement("div", { className: _.Score }, e),
                 g.a.createElement("div", { className: _.HorizontalSpacer }),
-                g.a.createElement(C, {
+                g.a.createElement(F, {
                   fnOnSelection: this.OnAppSelected,
                   ref: this.ref_app_b,
                   showAppIds: !0,
@@ -3487,11 +3487,11 @@ var CLSTAMP = "5981776";
                 })
               );
             }),
-            Object(y.c)([s.a], e.prototype, "OnAppSelected", null),
+            Object(b.c)([s.a], e.prototype, "OnAppSelected", null),
             e
           );
         })(g.a.Component),
-        F = (function(n) {
+        E = (function(n) {
           function e(e) {
             var t = n.call(this, e) || this;
             return (
@@ -3505,7 +3505,7 @@ var CLSTAMP = "5981776";
             );
           }
           return (
-            Object(y.d)(e, n),
+            Object(b.d)(e, n),
             (e.prototype.componentDidMount = function() {
               this.app_selector_ref.current &&
                 this.SetSelectedApp(this.app_selector_ref.current.state.appid);
@@ -3559,7 +3559,7 @@ var CLSTAMP = "5981776";
                 var r = this.similar_apps[n],
                   i = this.similarity_scores[n];
                 e.push(
-                  g.a.createElement(O, {
+                  g.a.createElement(C, {
                     appid: r,
                     score: i,
                     key: r,
@@ -3567,7 +3567,7 @@ var CLSTAMP = "5981776";
                   })
                 );
               }
-              for (var o = [], s = 0, a = b.rgModelNames; s < a.length; s++) {
+              for (var o = [], s = 0, a = y.rgModelNames; s < a.length; s++) {
                 var c = a[s],
                   l = {
                     label: g.a.createElement("div", { key: c }, c),
@@ -3584,7 +3584,7 @@ var CLSTAMP = "5981776";
                   selectedOption: "default"
                 }),
                 g.a.createElement("h1", null, "Games similar to:"),
-                g.a.createElement(C, {
+                g.a.createElement(F, {
                   fnOnSelection: this.OnSelectedApp,
                   ref: this.app_selector_ref,
                   appidInitial: 268500,
@@ -3593,14 +3593,14 @@ var CLSTAMP = "5981776";
                 g.a.createElement("div", { className: _.SimilarApps }, e)
               );
             }),
-            Object(y.c)([o.y], e.prototype, "selected_app", void 0),
-            Object(y.c)([o.y], e.prototype, "similar_apps", void 0),
-            Object(y.c)([o.y], e.prototype, "similarity_scores", void 0),
-            Object(y.c)([o.y], e.prototype, "similarity_model", void 0),
-            Object(y.c)([s.a], e.prototype, "OnSelectedApp", null),
-            Object(y.c)([s.a], e.prototype, "SetSelectedApp", null),
-            Object(y.c)([s.a], e.prototype, "OnModelChanged", null),
-            (e = Object(y.c)([h.a], e))
+            Object(b.c)([o.y], e.prototype, "selected_app", void 0),
+            Object(b.c)([o.y], e.prototype, "similar_apps", void 0),
+            Object(b.c)([o.y], e.prototype, "similarity_scores", void 0),
+            Object(b.c)([o.y], e.prototype, "similarity_model", void 0),
+            Object(b.c)([s.a], e.prototype, "OnSelectedApp", null),
+            Object(b.c)([s.a], e.prototype, "SetSelectedApp", null),
+            Object(b.c)([s.a], e.prototype, "OnModelChanged", null),
+            (e = Object(b.c)([h.a], e))
           );
         })(g.a.Component),
         S = (function(n) {
@@ -3611,7 +3611,7 @@ var CLSTAMP = "5981776";
             );
           }
           return (
-            Object(y.d)(e, n),
+            Object(b.d)(e, n),
             (e.prototype.OnSelectedApp = function(e) {
               e &&
                 e != this.selected_app &&
@@ -3645,14 +3645,14 @@ var CLSTAMP = "5981776";
                     selectedOption: "Plus"
                   })
                 ),
-                g.a.createElement(C, { fnOnSelection: this.OnSelectedApp })
+                g.a.createElement(F, { fnOnSelection: this.OnSelectedApp })
               );
             }),
-            Object(y.c)([o.y], e.prototype, "selected_app", void 0),
-            Object(y.c)([o.y], e.prototype, "selected_operator", void 0),
-            Object(y.c)([s.a], e.prototype, "OnSelectedApp", null),
-            Object(y.c)([s.a], e.prototype, "OnSelectedOperator", null),
-            (e = Object(y.c)([h.a], e))
+            Object(b.c)([o.y], e.prototype, "selected_app", void 0),
+            Object(b.c)([o.y], e.prototype, "selected_operator", void 0),
+            Object(b.c)([s.a], e.prototype, "OnSelectedApp", null),
+            Object(b.c)([s.a], e.prototype, "OnSelectedOperator", null),
+            (e = Object(b.c)([h.a], e))
           );
         })(g.a.Component),
         k = (function(r) {
@@ -3668,7 +3668,7 @@ var CLSTAMP = "5981776";
             return t;
           }
           return (
-            Object(y.d)(e, r),
+            Object(b.d)(e, r),
             (e.prototype.OnModelChanged = function(e, t) {
               (this.similarity_model = e.data), this.RecomputeExpression();
             }),
@@ -3769,7 +3769,7 @@ var CLSTAMP = "5981776";
                 }));
             }),
             (e.prototype.render = function() {
-              for (var e = [], t = 0, n = b.rgModelNames; t < n.length; t++) {
+              for (var e = [], t = 0, n = y.rgModelNames; t < n.length; t++) {
                 var r = n[t],
                   i = {
                     label: g.a.createElement("div", { key: r }, r),
@@ -3814,7 +3814,7 @@ var CLSTAMP = "5981776";
               ) {
                 var h = this.similar_apps[m],
                   f = this.similarity_scores[m];
-                p.push(g.a.createElement(O, { appid: h, score: f, key: h }));
+                p.push(g.a.createElement(C, { appid: h, score: f, key: h }));
               }
               return g.a.createElement(
                 "div",
@@ -3831,17 +3831,17 @@ var CLSTAMP = "5981776";
                 g.a.createElement("div", { className: _.SimilarApps }, p)
               );
             }),
-            Object(y.c)([o.y], e.prototype, "operands", void 0),
-            Object(y.c)([o.y], e.prototype, "similarity_model", void 0),
-            Object(y.c)([o.y], e.prototype, "similar_apps", void 0),
-            Object(y.c)([o.y], e.prototype, "similarity_scores", void 0),
-            Object(y.c)([s.a], e.prototype, "OnModelChanged", null),
-            Object(y.c)([s.a], e.prototype, "OnAddOperand", null),
-            Object(y.c)([s.a], e.prototype, "OnOperandChanged", null),
-            (e = Object(y.c)([h.a], e))
+            Object(b.c)([o.y], e.prototype, "operands", void 0),
+            Object(b.c)([o.y], e.prototype, "similarity_model", void 0),
+            Object(b.c)([o.y], e.prototype, "similar_apps", void 0),
+            Object(b.c)([o.y], e.prototype, "similarity_scores", void 0),
+            Object(b.c)([s.a], e.prototype, "OnModelChanged", null),
+            Object(b.c)([s.a], e.prototype, "OnAddOperand", null),
+            Object(b.c)([s.a], e.prototype, "OnOperandChanged", null),
+            (e = Object(b.c)([h.a], e))
           );
         })(g.a.Component),
-        j = (function(t) {
+        B = (function(t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (
@@ -3854,7 +3854,7 @@ var CLSTAMP = "5981776";
             );
           }
           return (
-            Object(y.d)(e, t),
+            Object(b.d)(e, t),
             (e.prototype.IterationCallback = function() {
               this.progress_iteration++;
             }),
@@ -3864,7 +3864,7 @@ var CLSTAMP = "5981776";
                 ((this.in_progress = !0),
                 (this.progress_iteration = 0),
                 (this.found_path = void 0),
-                b
+                y
                   .ComputePathBetweenApps(
                     this.app_start,
                     this.app_end,
@@ -3938,7 +3938,7 @@ var CLSTAMP = "5981776";
                 for (var i = 0; i < this.found_path.length; i++) {
                   var o = this.found_path[i];
                   r.push(
-                    g.a.createElement(O, {
+                    g.a.createElement(C, {
                       appid: o.appid,
                       score: o.similarity,
                       key: "pathstep" + i
@@ -3951,11 +3951,11 @@ var CLSTAMP = "5981776";
                 g.a.createElement(
                   "div",
                   { className: _.SelectEndpoints },
-                  g.a.createElement(C, {
+                  g.a.createElement(F, {
                     fnOnSelection: this.OnSelectedStartApp,
                     strPrompt: "Select start game"
                   }),
-                  g.a.createElement(C, {
+                  g.a.createElement(F, {
                     fnOnSelection: this.OnSelectedEndApp,
                     strPrompt: "Select end game"
                   })
@@ -3969,27 +3969,27 @@ var CLSTAMP = "5981776";
                 g.a.createElement("div", { className: _.Path }, r)
               );
             }),
-            Object(y.c)([o.y], e.prototype, "app_start", void 0),
-            Object(y.c)([o.y], e.prototype, "app_end", void 0),
-            Object(y.c)([o.y], e.prototype, "in_progress", void 0),
-            Object(y.c)([o.y], e.prototype, "progress_iteration", void 0),
-            Object(y.c)([o.y], e.prototype, "found_path", void 0),
-            Object(y.c)([s.a], e.prototype, "IterationCallback", null),
-            Object(y.c)([s.a], e.prototype, "Pathfind", null),
-            Object(y.c)([s.a], e.prototype, "OnSelectedStartApp", null),
-            Object(y.c)([s.a], e.prototype, "OnSelectedEndApp", null),
-            (e = Object(y.c)([h.a], e))
+            Object(b.c)([o.y], e.prototype, "app_start", void 0),
+            Object(b.c)([o.y], e.prototype, "app_end", void 0),
+            Object(b.c)([o.y], e.prototype, "in_progress", void 0),
+            Object(b.c)([o.y], e.prototype, "progress_iteration", void 0),
+            Object(b.c)([o.y], e.prototype, "found_path", void 0),
+            Object(b.c)([s.a], e.prototype, "IterationCallback", null),
+            Object(b.c)([s.a], e.prototype, "Pathfind", null),
+            Object(b.c)([s.a], e.prototype, "OnSelectedStartApp", null),
+            Object(b.c)([s.a], e.prototype, "OnSelectedEndApp", null),
+            (e = Object(b.c)([h.a], e))
           );
         })(g.a.Component),
-        D = (function(t) {
+        j = (function(t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (e.state = { ready_to_run: !1 }), e;
           }
           return (
-            Object(y.d)(e, t),
+            Object(b.d)(e, t),
             (e.prototype.componentDidMount = function() {
-              b.Init(), this.setState({ ready_to_run: !0 });
+              y.Init(), this.setState({ ready_to_run: !0 });
             }),
             (e.prototype.render = function() {
               return this.state.ready_to_run
@@ -4017,10 +4017,10 @@ var CLSTAMP = "5981776";
                         "div",
                         { className: _.SandboxSection },
                         g.a.createElement("h1", null, "Similar Games"),
-                        g.a.createElement(F, { max_similar: 10 }),
+                        g.a.createElement(E, { max_similar: 10 }),
                         g.a.createElement("div", { className: _.Spacer }),
                         g.a.createElement("h1", null, "Similarity"),
-                        g.a.createElement(E, null),
+                        g.a.createElement(O, null),
                         g.a.createElement("div", { className: _.Spacer }),
                         g.a.createElement("h1", null, "Mixer"),
                         g.a.createElement(k, {
@@ -4029,7 +4029,7 @@ var CLSTAMP = "5981776";
                         }),
                         g.a.createElement("div", { className: _.Spacer }),
                         g.a.createElement("h1", null, "Pathfinder"),
-                        g.a.createElement(j, null)
+                        g.a.createElement(B, null)
                       )
                     )
                   )
@@ -4038,7 +4038,7 @@ var CLSTAMP = "5981776";
             e
           );
         })(g.a.Component);
-      t.default = D;
+      t.default = j;
     },
     "IjL/": function(e, t, n) {
       "use strict";
@@ -4595,8 +4595,8 @@ var CLSTAMP = "5981776";
                     v < g.attributes.length;
                     v++
                   ) {
-                    var b = g.attributes.item(v);
-                    _.setAttribute(b.name, b.value);
+                    var y = g.attributes.item(v);
+                    _.setAttribute(y.name, y.value);
                   }
                   m.appendChild(_);
                 }
@@ -4741,10 +4741,10 @@ var CLSTAMP = "5981776";
           return v;
         }),
         n.d(t, "h", function() {
-          return b;
+          return y;
         }),
         n.d(t, "c", function() {
-          return y;
+          return b;
         }),
         n.d(t, "d", function() {
           return M;
@@ -4753,10 +4753,10 @@ var CLSTAMP = "5981776";
           return w;
         }),
         n.d(t, "b", function() {
-          return C;
+          return F;
         }),
         n.d(t, "f", function() {
-          return E;
+          return O;
         });
       var l = n("mrSG"),
         u = n("q1tI"),
@@ -4792,7 +4792,7 @@ var CLSTAMP = "5981776";
                 t
                   ? this.m_ModalHandle
                     ? this.m_ModalHandle.Update(n)
-                    : (this.m_ModalHandle = E(window).ShowModal(n))
+                    : (this.m_ModalHandle = O(window).ShowModal(n))
                   : this.HideModal(),
                 null
               );
@@ -4860,7 +4860,7 @@ var CLSTAMP = "5981776";
           )
         );
       }
-      var b = (function(t) {
+      var y = (function(t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (
@@ -4895,7 +4895,7 @@ var CLSTAMP = "5981776";
             e
           );
         })(u.Component),
-        y = (function(e) {
+        b = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -5014,12 +5014,12 @@ var CLSTAMP = "5981776";
                 },
                 this.props
               );
-              return u.createElement(y, Object(l.a)({}, e));
+              return u.createElement(b, Object(l.a)({}, e));
             }),
             (t = Object(l.c)([a.a], t))
           );
         })(u.Component),
-        C = (function(e) {
+        F = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -5072,7 +5072,7 @@ var CLSTAMP = "5981776";
             t
           );
         })(u.Component),
-        O = (function() {
+        C = (function() {
           function e() {
             (this.m_bUsePopups = !0),
               (this.m_rgModals = []),
@@ -5140,11 +5140,11 @@ var CLSTAMP = "5981776";
             e
           );
         })();
-      function E(e) {
-        var t = F.get(e);
-        return t || ((t = new O()), F.set(e, t)), t;
+      function O(e) {
+        var t = E.get(e);
+        return t || ((t = new C()), E.set(e, t)), t;
       }
-      var F = new WeakMap();
+      var E = new WeakMap();
     },
     Kw0F: function(e, t, n) {
       "use strict";
@@ -5232,7 +5232,7 @@ var CLSTAMP = "5981776";
           return u;
         }),
         n.d(t, "f", function() {
-          return y;
+          return b;
         }),
         n.d(t, "c", function() {
           return w;
@@ -6425,7 +6425,7 @@ var CLSTAMP = "5981776";
             r
           );
         })(o.Message)),
-        b = (o.Message,
+        y = (o.Message,
         (function(n) {
           function r(e) {
             void 0 === e && (e = null);
@@ -6541,7 +6541,7 @@ var CLSTAMP = "5981776";
             r
           );
         })(o.Message)),
-        y = (function(n) {
+        b = (function(n) {
           function r(e) {
             void 0 === e && (e = null);
             var t = n.call(this) || this;
@@ -6724,7 +6724,7 @@ var CLSTAMP = "5981776";
             r
           );
         })(o.Message),
-        C = (function(n) {
+        F = (function(n) {
           function r(e) {
             void 0 === e && (e = null);
             var t = n.call(this) || this;
@@ -6795,7 +6795,7 @@ var CLSTAMP = "5981776";
             r
           );
         })(o.Message),
-        O = (o.Message,
+        C = (o.Message,
         (function(n) {
           function r(e) {
             void 0 === e && (e = null);
@@ -6805,20 +6805,20 @@ var CLSTAMP = "5981776";
           return (
             Object(i.d)(r, n),
             (r.prototype.avatars = function() {
-              return o.Message.getRepeatedWrapperField(this, E, 1);
+              return o.Message.getRepeatedWrapperField(this, O, 1);
             }),
             (r.prototype.set_avatars = function(e) {
               o.Message.setRepeatedWrapperField(this, 1, e);
             }),
             (r.prototype.add_avatars = function(e, t) {
-              return o.Message.addToRepeatedWrapperField(this, 1, e, E, t);
+              return o.Message.addToRepeatedWrapperField(this, 1, e, O, t);
             }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
             (r.toObject = function(e, t) {
               var n = {
-                avatars: o.Message.toObjectList(t.avatars(), E.toObject, e)
+                avatars: o.Message.toObjectList(t.avatars(), O.toObject, e)
               };
               return e && (n.$jspbMessageInstance = t), n;
             }),
@@ -6827,7 +6827,7 @@ var CLSTAMP = "5981776";
               return (
                 t.set_avatars(
                   (Array.isArray(e.avatars) ? e.avatars : []).map(function(e) {
-                    return E.fromObject(e);
+                    return O.fromObject(e);
                   })
                 ),
                 t
@@ -6842,8 +6842,8 @@ var CLSTAMP = "5981776";
               for (; t.nextField() && !t.isEndGroup(); ) {
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var n = new E();
-                    t.readMessage(n, E.deserializeBinaryFromReader),
+                    var n = new O();
+                    t.readMessage(n, O.deserializeBinaryFromReader),
                       e.add_avatars(n);
                     break;
                   default:
@@ -6859,7 +6859,7 @@ var CLSTAMP = "5981776";
             (r.serializeBinaryToWriter = function(e, t) {
               var n = e.avatars();
               0 < n.length &&
-                t.writeRepeatedMessage(1, n, E.serializeBinaryToWriter);
+                t.writeRepeatedMessage(1, n, O.serializeBinaryToWriter);
             }),
             (r.prototype.getClassName = function() {
               return "CCommunity_GetAvatarHistory_Response";
@@ -6867,7 +6867,7 @@ var CLSTAMP = "5981776";
             r
           );
         })(o.Message)),
-        E = (function(n) {
+        O = (function(n) {
           function r(e) {
             void 0 === e && (e = null);
             var t = n.call(this) || this;
@@ -6953,7 +6953,7 @@ var CLSTAMP = "5981776";
             r
           );
         })(o.Message),
-        F = (function(n) {
+        E = (function(n) {
           function r(e) {
             void 0 === e && (e = null);
             var t = n.call(this) || this;
@@ -7236,7 +7236,7 @@ var CLSTAMP = "5981776";
             r
           );
         })(o.Message)),
-        j = (function(n) {
+        B = (function(n) {
           function r(e) {
             void 0 === e && (e = null);
             var t = n.call(this) || this;
@@ -7307,7 +7307,7 @@ var CLSTAMP = "5981776";
             r
           );
         })(o.Message),
-        D = (o.Message,
+        j = (o.Message,
         (function(n) {
           function r(e) {
             void 0 === e && (e = null);
@@ -7349,7 +7349,7 @@ var CLSTAMP = "5981776";
             r
           );
         })(o.Message)),
-        B = (function(n) {
+        R = (function(n) {
           function r(e) {
             void 0 === e && (e = null);
             var t = n.call(this) || this;
@@ -7422,7 +7422,7 @@ var CLSTAMP = "5981776";
             r
           );
         })(o.Message),
-        x = (o.Message,
+        D = (o.Message,
         (function(n) {
           function r(e) {
             void 0 === e && (e = null);
@@ -7432,13 +7432,13 @@ var CLSTAMP = "5981776";
           return (
             Object(i.d)(r, n),
             (r.prototype.priorities = function() {
-              return o.Message.getRepeatedWrapperField(this, B, 1);
+              return o.Message.getRepeatedWrapperField(this, R, 1);
             }),
             (r.prototype.set_priorities = function(e) {
               o.Message.setRepeatedWrapperField(this, 1, e);
             }),
             (r.prototype.add_priorities = function(e, t) {
-              return o.Message.addToRepeatedWrapperField(this, 1, e, B, t);
+              return o.Message.addToRepeatedWrapperField(this, 1, e, R, t);
             }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
@@ -7447,7 +7447,7 @@ var CLSTAMP = "5981776";
               var n = {
                 priorities: o.Message.toObjectList(
                   t.priorities(),
-                  B.toObject,
+                  R.toObject,
                   e
                 )
               };
@@ -7459,7 +7459,7 @@ var CLSTAMP = "5981776";
                 t.set_priorities(
                   (Array.isArray(e.priorities) ? e.priorities : []).map(
                     function(e) {
-                      return B.fromObject(e);
+                      return R.fromObject(e);
                     }
                   )
                 ),
@@ -7475,8 +7475,8 @@ var CLSTAMP = "5981776";
               for (; t.nextField() && !t.isEndGroup(); ) {
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var n = new B();
-                    t.readMessage(n, B.deserializeBinaryFromReader),
+                    var n = new R();
+                    t.readMessage(n, R.deserializeBinaryFromReader),
                       e.add_priorities(n);
                     break;
                   default:
@@ -7492,7 +7492,7 @@ var CLSTAMP = "5981776";
             (r.serializeBinaryToWriter = function(e, t) {
               var n = e.priorities();
               0 < n.length &&
-                t.writeRepeatedMessage(1, n, B.serializeBinaryToWriter);
+                t.writeRepeatedMessage(1, n, R.serializeBinaryToWriter);
             }),
             (r.prototype.getClassName = function() {
               return "CCommunity_GetUserPartnerEventsAppPriorities_Response";
@@ -7500,7 +7500,7 @@ var CLSTAMP = "5981776";
             r
           );
         })(o.Message)),
-        L = (o.Message,
+        x = (o.Message,
         (function(n) {
           function r(e) {
             void 0 === e && (e = null);
@@ -7542,7 +7542,7 @@ var CLSTAMP = "5981776";
             r
           );
         })(o.Message)),
-        R = (o.Message,
+        I = (o.Message,
         (function(n) {
           function r(e) {
             void 0 === e && (e = null);
@@ -7584,7 +7584,7 @@ var CLSTAMP = "5981776";
             r
           );
         })(o.Message)),
-        I = (o.Message,
+        L = (o.Message,
         (function(n) {
           function r(e) {
             void 0 === e && (e = null);
@@ -8055,7 +8055,7 @@ var CLSTAMP = "5981776";
           });
         }),
         (a.GetCommentThreadRatings = function(e, t) {
-          return e.SendMsg("Community.GetCommentThreadRatings#1", t, b, {
+          return e.SendMsg("Community.GetCommentThreadRatings#1", t, y, {
             ePrivilege: 2
           });
         }),
@@ -8065,12 +8065,12 @@ var CLSTAMP = "5981776";
           });
         }),
         (a.GetClanAnnouncementVoteForUser = function(e, t) {
-          return e.SendMsg("Community.GetClanAnnouncementVoteForUser#1", t, C, {
+          return e.SendMsg("Community.GetClanAnnouncementVoteForUser#1", t, F, {
             ePrivilege: 1
           });
         }),
         (a.GetAvatarHistory = function(e, t) {
-          return e.SendMsg("Community.GetAvatarHistory#1", t, O, {
+          return e.SendMsg("Community.GetAvatarHistory#1", t, C, {
             ePrivilege: 1
           });
         }),
@@ -8082,7 +8082,7 @@ var CLSTAMP = "5981776";
           });
         }),
         (a.GetBestEventsForUser = function(e, t) {
-          return e.SendMsg("Community.GetBestEventsForUser#1", t, j, {
+          return e.SendMsg("Community.GetBestEventsForUser#1", t, B, {
             bConstMethod: !0,
             ePrivilege: 1,
             eWebAPIKeyRequirement: 2
@@ -8100,12 +8100,12 @@ var CLSTAMP = "5981776";
           });
         }),
         (a.PartnerEventsShowMoreForApp = function(e, t) {
-          return e.SendMsg("Community.PartnerEventsShowMoreForApp#1", t, R, {
+          return e.SendMsg("Community.PartnerEventsShowMoreForApp#1", t, I, {
             ePrivilege: 1
           });
         }),
         (a.PartnerEventsShowLessForApp = function(e, t) {
-          return e.SendMsg("Community.PartnerEventsShowLessForApp#1", t, I, {
+          return e.SendMsg("Community.PartnerEventsShowLessForApp#1", t, L, {
             ePrivilege: 1
           });
         }),
@@ -8113,7 +8113,7 @@ var CLSTAMP = "5981776";
           return e.SendMsg(
             "Community.ClearUserPartnerEventsAppPriorities#1",
             t,
-            D,
+            j,
             { ePrivilege: 1 }
           );
         }),
@@ -8121,7 +8121,7 @@ var CLSTAMP = "5981776";
           return e.SendMsg(
             "Community.GetUserPartnerEventsAppPriorities#1",
             t,
-            x,
+            D,
             { ePrivilege: 1 }
           );
         }),
@@ -8129,7 +8129,7 @@ var CLSTAMP = "5981776";
           return e.SendMsg(
             "Community.ClearSinglePartnerEventsAppPriority#1",
             t,
-            L,
+            x,
             { ePrivilege: 1 }
           );
         });
@@ -8155,31 +8155,31 @@ var CLSTAMP = "5981776";
           return M;
         }),
         n.d(t, "f", function() {
-          return C;
+          return F;
         }),
         n.d(t, "o", function() {
-          return O;
+          return C;
         }),
         n.d(t, "c", function() {
-          return E;
+          return O;
         }),
         n.d(t, "l", function() {
-          return F;
+          return E;
         }),
         n.d(t, "m", function() {
           return S;
         }),
         n.d(t, "d", function() {
-          return j;
+          return B;
         }),
         n.d(t, "n", function() {
-          return D;
+          return j;
         }),
         n.d(t, "j", function() {
-          return R;
+          return I;
         }),
         n.d(t, "g", function() {
-          return I.a;
+          return L.a;
         });
       function r(e) {
         var t = e.value,
@@ -8215,16 +8215,16 @@ var CLSTAMP = "5981776";
         c = n("exH9"),
         s = n("umRa"),
         a = n.n(s),
-        l = B("DialogHeader"),
-        u = (B("DialogSubHeader"), B("DialogFooter")),
-        p = B("DialogLabel _DialogLayout"),
-        d = B("DialogBodyText"),
-        m = B("DialogBody"),
-        v = (B("DialogInnerBody"), B("DialogBodyNotificationBar")),
-        b = B("DialogTwoColLayout _DialogColLayout"),
-        y = B("DialogThreeColLayout _DialogColLayout");
-      B("DialogTwoThirdColLayout _DialogColLayout"),
-        B("DialogColumn _DialogLayout");
+        l = R("DialogHeader"),
+        u = (R("DialogSubHeader"), R("DialogFooter")),
+        p = R("DialogLabel _DialogLayout"),
+        d = R("DialogBodyText"),
+        m = R("DialogBody"),
+        v = (R("DialogInnerBody"), R("DialogBodyNotificationBar")),
+        y = R("DialogTwoColLayout _DialogColLayout"),
+        b = R("DialogThreeColLayout _DialogColLayout");
+      R("DialogTwoThirdColLayout _DialogColLayout"),
+        R("DialogColumn _DialogLayout");
       function M(e) {
         var t = e.children,
           n = e.bCenterVertically,
@@ -8260,7 +8260,7 @@ var CLSTAMP = "5981776";
           t
         );
       })(f.Component);
-      function C(e) {
+      function F(e) {
         var t = e.classNameContent,
           n = e.bCenterVertically,
           r = Object(h.f)(e, ["classNameContent", "bCenterVertically"]);
@@ -8270,7 +8270,7 @@ var CLSTAMP = "5981776";
           f.createElement(w, Object(h.a)({}, r))
         );
       }
-      function O(e) {
+      function C(e) {
         e.svgicon;
         var t,
           n = Object(h.f)(e, ["svgicon"]),
@@ -8290,7 +8290,7 @@ var CLSTAMP = "5981776";
           )
         );
       }
-      function E(e) {
+      function O(e) {
         e.svgicon;
         var t,
           n = Object(h.f)(e, ["svgicon"]),
@@ -8308,18 +8308,18 @@ var CLSTAMP = "5981776";
           )
         );
       }
-      function F(e) {
+      function E(e) {
         return f.createElement(
-          b,
+          y,
           null,
           f.createElement(
-            O,
+            C,
             { onClick: e.onOK, disabled: e.bOKDisabled },
             e.strOKText || Object(_.d)("#Button_Confirm"),
             " "
           ),
           f.createElement(
-            E,
+            O,
             { onClick: e.onCancel },
             e.strCancelText || Object(_.d)("#Button_Cancel")
           )
@@ -8327,22 +8327,22 @@ var CLSTAMP = "5981776";
       }
       function S(e) {
         return f.createElement(
-          y,
+          b,
           null,
           f.createElement(
-            O,
+            C,
             { onClick: e.onOK, disabled: e.bOKDisabled },
             e.strOKText || Object(_.d)("#Button_Confirm"),
             " "
           ),
           f.createElement(
-            O,
+            C,
             { onClick: e.onUpdate, disabled: e.bUpdateDisabled },
             e.strUpdateText || Object(_.d)("#Button_Update"),
             " "
           ),
           f.createElement(
-            E,
+            O,
             { onClick: e.onCancel },
             e.strCancelText || Object(_.d)("#Button_Cancel")
           )
@@ -8403,7 +8403,7 @@ var CLSTAMP = "5981776";
             e
           );
         })(f.Component),
-        j = (function(e) {
+        B = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -8461,7 +8461,7 @@ var CLSTAMP = "5981776";
             t
           );
         })(k),
-        D = (function(e) {
+        j = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -8553,15 +8553,15 @@ var CLSTAMP = "5981776";
             t
           );
         })(k);
-      function B(n) {
+      function R(n) {
         return function(e) {
           var t = n + (e.className ? " " + e.className : "");
           return f.createElement("div", Object(h.a)({}, e, { className: t }));
         };
       }
-      var x = n("hJxo"),
-        L = n("r64O"),
-        R = (function(n) {
+      var D = n("hJxo"),
+        x = n("r64O"),
+        I = (function(n) {
           function e(e) {
             var t = n.call(this, e) || this;
             return (
@@ -8651,7 +8651,7 @@ var CLSTAMP = "5981776";
                   this.m_CopiedAnimation && this.m_CopiedAnimation.Cancel(),
                   this.setState({ m_bCompletedCopiedAnimation: !1 }),
                   this.setState({ m_CopiedYPos: -4 }, function() {
-                    (n.m_CopiedAnimation = new x.b(
+                    (n.m_CopiedAnimation = new D.b(
                       n,
                       { m_CopiedYPos: -24 },
                       {
@@ -8675,7 +8675,7 @@ var CLSTAMP = "5981776";
                 ));
             }),
             (e.prototype.CheckProps = function(e) {
-              Object(L.a)(
+              Object(x.a)(
                 !(e.bShowClearAction || e.bAlwaysShowClearAction) || e.onChange,
                 "In order for bShowClearAction to work correctly, you should be handling onChange and passing value to the Dialog.Input."
               );
@@ -8748,7 +8748,7 @@ var CLSTAMP = "5981776";
                       "div",
                       { className: "displayRow" },
                       f.createElement(
-                        E,
+                        O,
                         {
                           className: "DialogInput_CopyAction Primary",
                           onClick: this.OnCopyClick
@@ -8855,19 +8855,19 @@ var CLSTAMP = "5981776";
             e
           );
         })(f.PureComponent),
-        I = (f.Component, n("ZApo")),
+        L = (f.Component, n("ZApo")),
         A = n("2vnA"),
         N = n("sUmc"),
         T = n("Kw0F"),
         P = n("YyVH"),
         z = n("UPxs");
       f.Component;
-      function G(e, t, n, r) {
+      function U(e, t, n, r) {
         return r
           ? n && e > n.left && e < n.right && t > n.top && t < n.bottom
           : n && e >= n.left && e <= n.right && t >= n.top && t <= n.bottom;
       }
-      var U = (function() {
+      var G = (function() {
           function e() {
             (this.m_embeddedElement = new N.a("DragGhosts")),
               (this.m_rgDropRegions = []),
@@ -9005,12 +9005,12 @@ var CLSTAMP = "5981776";
                     (l || u) &&
                     ((r = t + l),
                     (i = n + u),
-                    G(
+                    U(
                       t,
                       n,
                       (o = e.GetDragDocument().body.getBoundingClientRect())
                     ) &&
-                      !G(r, i, o, !0) &&
+                      !U(r, i, o, !0) &&
                       ((s = P.c(
                         r,
                         o.left,
@@ -9371,7 +9371,7 @@ var CLSTAMP = "5981776";
             e
           );
         })(f.Component),
-        Y = (function(e) {
+        q = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -9428,7 +9428,7 @@ var CLSTAMP = "5981776";
                 );
               }),
               (e.prototype.BDraggableInRegion = function(e, t, n) {
-                return G(e, t, this.GetClientRect());
+                return U(e, t, this.GetClientRect());
               }),
               (e.prototype.GetElement = function() {
                 return this.m_divRef.current;
@@ -9481,7 +9481,7 @@ var CLSTAMP = "5981776";
             );
           })(f.Component)
         ),
-        K = (function(e) {
+        Y = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -11517,16 +11517,16 @@ var CLSTAMP = "5981776";
       function V() {
         return { x: 0, y: 0 };
       }
-      function R(e, t) {
+      function I(e, t) {
         return e.x * t.x + e.y * t.y;
       }
-      function Y(e, t) {
+      function q(e, t) {
         return { x: t.x - e.x, y: t.y - e.y };
       }
-      function K(e, t) {
+      function Y(e, t) {
         return { x: e.x + t.x, y: e.y + t.y };
       }
-      function q(e, t) {
+      function K(e, t) {
         return { x: e.x * t, y: e.y * t };
       }
       function o(e) {
@@ -11535,7 +11535,7 @@ var CLSTAMP = "5981776";
       function X(e, t) {
         return !(e.max < t.min || t.max < e.min);
       }
-      var I = n("Kw0F"),
+      var L = n("Kw0F"),
         Z = n("X3Ds"),
         s = "Focusable",
         a = "FocusGroup",
@@ -11583,7 +11583,7 @@ var CLSTAMP = "5981776";
       function Q(e) {
         return null != e && void 0 !== e.focus;
       }
-      function b(e) {
+      function y(e) {
         for (
           var t = 1, n = e.ownerDocument.defaultView, r = e;
           null != r;
@@ -11596,7 +11596,7 @@ var CLSTAMP = "5981776";
       }
       function $(e) {
         if (v.IsDocumentUsingZoom) {
-          var t = b(e),
+          var t = y(e),
             n = e.getBoundingClientRect();
           return {
             x: { min: n.left * t, max: n.right * t },
@@ -11613,7 +11613,7 @@ var CLSTAMP = "5981776";
         return { x: o((t = $(e)).x), y: o(t.y) };
         var t;
       }
-      function y(e, t) {
+      function b(e, t) {
         e && ("function" == typeof e ? e(t) : (e.current = t));
       }
       function M(e, t, n) {
@@ -11651,8 +11651,8 @@ var CLSTAMP = "5981776";
         (_.Click = "click");
       var te,
         w,
-        C = u.createContext(null),
-        O = (function() {
+        F = u.createContext(null),
+        C = (function() {
           function e() {
             this.m_listeners = new Map();
           }
@@ -11702,7 +11702,7 @@ var CLSTAMP = "5981776";
             e
           );
         })(),
-        E = (function() {
+        O = (function() {
           function e() {}
           return (
             (e.Attributes = function(e, t) {
@@ -11732,14 +11732,14 @@ var CLSTAMP = "5981776";
             e
           );
         })(),
-        F = (function(e) {
+        E = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
           return (
             Object(l.d)(t, e),
             (t.prototype.SetRef = function(e) {
-              (this.m_htmlElement = e), y(this.props.htmlElementRef, e);
+              (this.m_htmlElement = e), b(this.props.htmlElementRef, e);
             }),
             (t.prototype.assembleAttributes = function() {
               var e = this.props,
@@ -11768,9 +11768,9 @@ var CLSTAMP = "5981776";
               return null != this.context && v.IsNavEnabled
                 ? Object(l.a)(
                     Object(l.a)(
-                      Object(l.a)({}, E.Attributes(this.props, this.context)),
+                      Object(l.a)({}, O.Attributes(this.props, this.context)),
                       {
-                        className: Object(p.a)(E.navStopClass, r),
+                        className: Object(p.a)(O.navStopClass, r),
                         ref: t ? this.SetRef : n
                       }
                     ),
@@ -11791,7 +11791,7 @@ var CLSTAMP = "5981776";
                 this.props.children
               );
             }),
-            (t.contextType = C),
+            (t.contextType = F),
             (t.defaultProps = { navStop: !1, tabStop: !1 }),
             Object(l.c)([i.a], t.prototype, "SetRef", null),
             t
@@ -11803,7 +11803,7 @@ var CLSTAMP = "5981776";
             return (e.m_elementType = "div"), e;
           }
           return Object(l.d)(e, t), (e = Object(l.c)([r.a], e));
-        })(F);
+        })(E);
       ((w = te = te || {}).Geometry = "Geometry"),
         (w.DomOrder = "DomOrder"),
         (w.ReverseDomOrder = "ReverseDomOrder");
@@ -11818,31 +11818,31 @@ var CLSTAMP = "5981776";
             (t.m_focusPos = null),
             (t.m_focusPosOffsetFromAnchorElement = null),
             (t.m_focusPosPointerRef = u.createRef()),
-            void 0 !== e && (t.m_htmlDomFocusController = new O()),
+            void 0 !== e && (t.m_htmlDomFocusController = new C()),
             t
           );
         }
-        var L;
+        var x;
         return (
           Object(l.d)(e, n),
-          ((L = e).GetActiveNavArea = function() {
-            var e = L.sm_navAreaStack;
+          ((x = e).GetActiveNavArea = function() {
+            var e = x.sm_navAreaStack;
             return 0 === e.length ? null : e[e.length - 1];
           }),
           (e.GetActiveNavAreaElement = function() {
-            var e = L.GetActiveNavArea();
+            var e = x.GetActiveNavArea();
             return (e && e.m_navAreaDivRef.current) || null;
           }),
           (e.FocusWithin = function(e) {
             var t, n, r, i;
             m("KFNA.FocusWithin", e),
               !v.IsNavEnabled ||
-                ((t = L.GetActiveNavAreaElement()) &&
+                ((t = x.GetActiveNavAreaElement()) &&
                   (((n = Object(Z.k)(e, function(e) {
                     return e.getAttribute("data-nav") === J.Area;
                   })) !== t &&
                     "true" !== n.getAttribute("data-nav-area-awfw")) ||
-                    (void 0 !== (r = L.sm_inactiveNavAreaMap.get(n)) &&
+                    (void 0 !== (r = x.sm_inactiveNavAreaMap.get(n)) &&
                       (n !== t &&
                         (m(
                           "KFNA.FocusWithin: KFNA '" +
@@ -11909,10 +11909,10 @@ var CLSTAMP = "5981776";
               e
             );
             var n,
-              r = L.FindAnchorElement(e);
+              r = x.FindAnchorElement(e);
             r
               ? ((n = ee(r)),
-                (this.m_focusPosOffsetFromAnchorElement = Y(n, t)))
+                (this.m_focusPosOffsetFromAnchorElement = q(n, t)))
               : (this.m_focusPosOffsetFromAnchorElement = null),
               (this.m_focusPos = t),
               (this.m_lastFocusedHtmlElement = e),
@@ -11926,7 +11926,7 @@ var CLSTAMP = "5981776";
             t &&
               n &&
               r &&
-              ((e = b(n)),
+              ((e = y(n)),
               (n.style.left = t.x / e + "px"),
               (n.style.top = t.y / e + "px"));
           }),
@@ -11935,8 +11935,8 @@ var CLSTAMP = "5981776";
               t = this.m_lastFocusedHtmlElement,
               n = this.m_focusPosOffsetFromAnchorElement;
             if (e && t && e.contains(t) && n) {
-              var r = L.FindAnchorElement(t);
-              if (r) return K(ee(r), n);
+              var r = x.FindAnchorElement(t);
+              if (r) return Y(ee(r), n);
             }
             return this.m_focusPos;
           }),
@@ -11975,7 +11975,7 @@ var CLSTAMP = "5981776";
               )
             ).filter(Q);
             if (!u || 0 === u.length) return null;
-            var p = L.GetActiveNavArea();
+            var p = x.GetActiveNavArea();
             if (null == p) return null;
             if (null == p.m_navAreaDivRef.current) return null;
             if (p.props.initFromBoundary && void 0 !== t && void 0 !== n) {
@@ -11998,39 +11998,39 @@ var CLSTAMP = "5981776";
                   g = null,
                   _ = 1 / 0,
                   v = 0,
-                  b = u;
-                v < b.length;
+                  y = u;
+                v < y.length;
                 v++
               ) {
-                var y = n * $((j = b[v]))[t][f];
-                y < _ && ((_ = y), (g = j));
+                var b = n * $((B = y[v]))[t][f];
+                b < _ && ((_ = b), (g = B));
               }
               if (null !== g) return { htmlElement: g, pos: ee(g) };
             }
             var M,
-              w = L.sm_navAreaStack,
-              C = Object(I.d)(w, function(e) {
+              w = x.sm_navAreaStack,
+              F = Object(L.d)(w, function(e) {
                 return null !== e.m_focusPos;
               });
-            if (C) {
+            if (F) {
               for (
-                var O = C.m_focusPos,
-                  E = Number.POSITIVE_INFINITY,
-                  F = null,
+                var C = F.m_focusPos,
+                  O = Number.POSITIVE_INFINITY,
+                  E = null,
                   S = 0,
                   k = u;
                 S < k.length;
                 S++
               ) {
-                var j,
-                  D = ee((j = k[S])),
-                  B = ((M = Y(O, D)), Math.sqrt(R(M, M)));
-                B < E && ((E = B), (F = j));
+                var B,
+                  j = ee((B = k[S])),
+                  R = ((M = q(C, j)), Math.sqrt(I(M, M)));
+                R < O && ((O = R), (E = B));
               }
-              if (F) return { htmlElement: F, pos: ee(F) };
+              if (E) return { htmlElement: E, pos: ee(E) };
             }
-            var x = u[0];
-            return x ? { htmlElement: x, pos: ee(x) } : null;
+            var D = u[0];
+            return D ? { htmlElement: D, pos: ee(D) } : null;
           }),
           (e.prototype.GetScrollOffset = function(e, t, n) {
             var r = e,
@@ -12066,60 +12066,60 @@ var CLSTAMP = "5981776";
               a = s === te.Geometry || null == s,
               m = s === te.ReverseDomOrder,
               h = n ? this.GetScrollOffset(c, u, p) : null,
-              f = h ? q(h, -1) : null,
-              g = f ? K(l, f) : l,
+              f = h ? K(h, -1) : null,
+              g = f ? Y(l, f) : l,
               _ = H[u],
               v = -1 === (V()[u] = p) ? "max" : "min",
-              b = { min: g[_], max: g[_] },
-              y =
+              y = { min: g[_], max: g[_] },
+              b =
                 t && Q(e)
-                  ? ((r = b),
+                  ? ((r = y),
                     (i = $(e)[_]),
                     {
                       min: r.min < i.min ? r.min : i.min,
                       max: r.max > i.max ? r.max : i.max
                     })
-                  : b,
+                  : y,
               M = null,
               w = null,
-              C = 1 / 0,
-              O = Object(Z.l)(c, "data-nav");
-            m != (-1 === p) && O.reverse();
+              F = 1 / 0,
+              C = Object(Z.l)(c, "data-nav");
+            m != (-1 === p) && C.reverse();
             for (
-              var E = [], F = null == e ? 0 : null, S = 0, k = O;
+              var O = [], E = null == e ? 0 : null, S = 0, k = C;
               S < k.length;
               S++
             ) {
-              if ((G = k[S]) !== e) {
+              if ((U = k[S]) !== e) {
                 if (
-                  (null !== F && ++F, G.getAttribute("data-nav") !== J.Area)
+                  (null !== E && ++E, U.getAttribute("data-nav") !== J.Area)
                 ) {
                   n &&
                     null === M &&
-                    "true" === G.getAttribute("data-nav-preferred") &&
-                    (M = G);
-                  var j = 0;
+                    "true" === U.getAttribute("data-nav-preferred") &&
+                    (M = U);
+                  var B = 0;
                   if (a) {
-                    var D = $(G),
-                      B = g[u],
-                      x = p * (D[u][v] - B);
-                    if (x < 0) continue;
-                    var L = g[_],
-                      R = D[_].min,
-                      I = D[_].max,
-                      A = L < R ? L - R : I < L ? L - I : 0;
-                    if (t) if (!X(y, { min: R, max: I })) continue;
+                    var j = $(U),
+                      R = g[u],
+                      D = p * (j[u][v] - R);
+                    if (D < 0) continue;
+                    var x = g[_],
+                      I = j[_].min,
+                      L = j[_].max,
+                      A = x < I ? x - I : L < x ? x - L : 0;
+                    if (t) if (!X(b, { min: I, max: L })) continue;
                     var N = { x: 0, y: 0 };
-                    (N[u] = D[u][v]), (N[_] = L + A);
-                    var T = Y(g, N),
-                      j = (x * x + A * A) / Math.abs(T[u]);
+                    (N[u] = j[u][v]), (N[_] = x + A);
+                    var T = q(g, N),
+                      B = (D * D + A * A) / Math.abs(T[u]);
                   } else {
-                    if (null == F) continue;
-                    j = F;
+                    if (null == E) continue;
+                    B = E;
                   }
-                  j < C && ((C = j), (w = G)), E.push({ score: j, element: G });
+                  B < F && ((F = B), (w = U)), O.push({ score: B, element: U });
                 }
-              } else F = 0;
+              } else E = 0;
             }
             function P(e, t) {
               void 0 === t && (t = !1);
@@ -12145,12 +12145,12 @@ var CLSTAMP = "5981776";
             if (M && (z = P(M, !0))) return z;
             if (w) {
               if ((z = P(w))) return z;
-              E.sort(function(e, t) {
+              O.sort(function(e, t) {
                 return e.score - t.score;
               });
-              for (var G, U = 0; U < E.length; ++U) {
-                if ((G = E[U].element) !== w) {
-                  var W = P(G);
+              for (var U, G = 0; G < O.length; ++G) {
+                if ((U = O[G].element) !== w) {
+                  var W = P(U);
                   if (W) return W;
                 }
               }
@@ -12237,9 +12237,9 @@ var CLSTAMP = "5981776";
             if (v.IsNavEnabled) {
               var t = this.m_navAreaDivRef.current;
               if (t) {
-                var n = L.GetActiveNavAreaElement();
+                var n = x.GetActiveNavAreaElement();
                 if (null != n && n === t) {
-                  var r = L.k_KeyNavigationDirections[e.key];
+                  var r = x.k_KeyNavigationDirections[e.key];
                   if (r) {
                     var i = r[0],
                       o = r[1],
@@ -12265,11 +12265,11 @@ var CLSTAMP = "5981776";
           }),
           (e.HandleDocumentKeyDown = function(e) {
             if (v.IsNavEnabled) {
-              var t = L.GetActiveNavArea();
+              var t = x.GetActiveNavArea();
               if (null != t) {
                 var n = t.m_navAreaDivRef.current;
                 if (n) {
-                  var r = L.k_KeyNavigationDirections[e.key];
+                  var r = x.k_KeyNavigationDirections[e.key];
                   if (r) {
                     var i = n.ownerDocument;
                     if (i && i === t.m_document) {
@@ -12342,7 +12342,7 @@ var CLSTAMP = "5981776";
               e
             ),
               "focus" !== this.m_inFocusCallType &&
-                (null == (t = L.GetActiveNavArea()) ||
+                (null == (t = x.GetActiveNavArea()) ||
                   t !== this ||
                   ((n = t.m_navAreaDivRef.current) &&
                     "true" === n.getAttribute("data-nav-area-awfw") &&
@@ -12387,20 +12387,20 @@ var CLSTAMP = "5981776";
                 ((this.m_document = e),
                 this.m_htmlDomFocusController &&
                   this.m_htmlDomFocusController.Initialize(e)),
-                0 === L.sm_navAreaStack.length &&
+                0 === x.sm_navAreaStack.length &&
                   (e.addEventListener("scroll", this.HandleScrollCapture, !0),
                   this.props.focusController ||
-                    e.addEventListener("keydown", L.HandleDocumentKeyDown, !1)),
+                    e.addEventListener("keydown", x.HandleDocumentKeyDown, !1)),
                 this.GetFocusController().AddBlurListener(
                   this.HandleFocusControllerOnBlur
                 );
             }
-            (L.sm_navAreaStack = Object(I.a)(L.sm_navAreaStack, this)),
+            (x.sm_navAreaStack = Object(L.a)(x.sm_navAreaStack, this)),
               this.m_navAreaDivRef.current.setAttribute(
                 "data-nav-area-active",
                 "true"
               ),
-              L.sm_navAreaStack.push(this);
+              x.sm_navAreaStack.push(this);
           }),
           (e.prototype.Deactivate = function() {
             if (
@@ -12414,14 +12414,14 @@ var CLSTAMP = "5981776";
                 "data-nav-area-active",
                 "false"
               ),
-              (L.sm_navAreaStack = Object(I.a)(L.sm_navAreaStack, this)),
-              0 === L.sm_navAreaStack.length)
+              (x.sm_navAreaStack = Object(L.a)(x.sm_navAreaStack, this)),
+              0 === x.sm_navAreaStack.length)
             ) {
               if (!this.m_navAreaDivRef.current) return;
               var e = this.m_document;
               if (!e) return;
               e.removeEventListener("scroll", this.HandleScrollCapture, !0),
-                e.removeEventListener("keydown", L.HandleDocumentKeyDown, !1);
+                e.removeEventListener("keydown", x.HandleDocumentKeyDown, !1);
             }
             this.GetFocusController().RemoveBlurListener(
               this.HandleFocusControllerOnBlur
@@ -12429,12 +12429,12 @@ var CLSTAMP = "5981776";
           }),
           (e.prototype.componentDidMount = function() {
             this.props.activeWhenFocusWithin
-              ? L.sm_inactiveNavAreaMap.set(this.m_navAreaDivRef.current, this)
+              ? x.sm_inactiveNavAreaMap.set(this.m_navAreaDivRef.current, this)
               : this.Activate();
           }),
           (e.prototype.componentWillUnmount = function() {
             this.Deactivate(),
-              L.sm_inactiveNavAreaMap.delete(this.m_navAreaDivRef.current);
+              x.sm_inactiveNavAreaMap.delete(this.m_navAreaDivRef.current);
           }),
           (e.prototype.render = function() {
             var e = this.props,
@@ -12466,7 +12466,7 @@ var CLSTAMP = "5981776";
                 (c.onClickCapture = this.HandleClickCapture)),
               s
                 ? u.createElement(
-                    C.Provider,
+                    F.Provider,
                     { value: r || this.m_htmlDomFocusController || null },
                     u.createElement(
                       "div",
@@ -12521,7 +12521,7 @@ var CLSTAMP = "5981776";
           Object(l.c)([i.a], e.prototype, "HandleClickCapture", null),
           Object(l.c)([i.a], e.prototype, "HandleFocusControllerOnBlur", null),
           Object(l.c)([i.a], e, "HandleDocumentKeyDown", null),
-          (e = L = Object(l.c)([r.a], e))
+          (e = x = Object(l.c)([r.a], e))
         );
       })(u.Component);
     },
@@ -12759,10 +12759,10 @@ var CLSTAMP = "5981776";
           return v;
         }),
         n.d(t, "m", function() {
-          return b;
+          return y;
         }),
         n.d(t, "k", function() {
-          return y;
+          return b;
         });
       var r = n("Kw0F");
       n("r64O");
@@ -12961,7 +12961,7 @@ var CLSTAMP = "5981776";
         }
         return n;
       }
-      function b(e) {
+      function y(e) {
         for (var t = e.parentElement; t; ) {
           var n = window.getComputedStyle(t).overflowY;
           if ("scroll" == n || "auto" == n) break;
@@ -12969,7 +12969,7 @@ var CLSTAMP = "5981776";
         }
         return t;
       }
-      function y(e, t) {
+      function b(e, t) {
         for (; e; ) {
           if (t(e)) return e;
           e = e.parentElement;
@@ -13031,7 +13031,7 @@ var CLSTAMP = "5981776";
           return w;
         }),
         n.d(t, "d", function() {
-          return O;
+          return C;
         });
       var c = n("TLQK"),
         s = n("CdLH"),
@@ -13149,7 +13149,7 @@ var CLSTAMP = "5981776";
         if (n < t)
           return (
             l.b(t.getTime() - n.getTime()),
-            (t.getFullYear() == n.getFullYear() ? C : E)(t)
+            (t.getFullYear() == n.getFullYear() ? F : O)(t)
           );
         l.b(new Date().setHours(24, 0, 0, 0) - n.getTime());
         var r = new Date();
@@ -13171,17 +13171,17 @@ var CLSTAMP = "5981776";
             ? Object(c.d)("#TimeSince_1Week")
             : Object(c.d)("#TimeSince_XWeeks", o);
         }
-        return (t.getFullYear() == n.getFullYear() ? C : E)(t);
+        return (t.getFullYear() == n.getFullYear() ? F : O)(t);
       }
       var g = new Map(),
         _ = new Map(),
         v = new Map(),
-        b = new Map(),
-        y = new Map();
+        y = new Map(),
+        b = new Map();
       function M(e, t) {
         void 0 === t && (t = !1);
         var n = e.getDate() + 31 * (e.getMonth() + 12 * e.getFullYear()),
-          r = y.get(n);
+          r = b.get(n);
         return (
           r ||
           ((r = e.toLocaleDateString(c.c.GetPreferredLocales(), {
@@ -13189,7 +13189,7 @@ var CLSTAMP = "5981776";
             day: "numeric",
             month: t ? "long" : "short"
           })),
-          y.set(n, r),
+          b.set(n, r),
           r)
         );
       }
@@ -13204,7 +13204,7 @@ var CLSTAMP = "5981776";
           t)
         );
       }
-      function C(e) {
+      function F(e) {
         var t = _.get(e.getMonth());
         return (
           t ||
@@ -13215,7 +13215,7 @@ var CLSTAMP = "5981776";
           t)
         );
       }
-      function O(e) {
+      function C(e) {
         var t = v.get(e.getFullYear());
         return (
           t ||
@@ -13226,16 +13226,16 @@ var CLSTAMP = "5981776";
           t)
         );
       }
-      function E(e) {
+      function O(e) {
         var t = e.getMonth() + 12 * e.getFullYear(),
-          n = b.get(t);
+          n = y.get(t);
         return (
           n ||
           ((n = e.toLocaleDateString(c.c.GetPreferredLocales(), {
             month: "long",
             year: "numeric"
           })),
-          b.set(t, n),
+          y.set(t, n),
           n)
         );
       }
@@ -13776,8 +13776,8 @@ var CLSTAMP = "5981776";
         g = c("wd/R"),
         _ = c("55Ip"),
         v = c("Ty5D"),
-        b = c("kyHq"),
-        y = (function(e) {
+        y = c("kyHq"),
+        b = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -13826,9 +13826,9 @@ var CLSTAMP = "5981776";
           );
         })(s.Component),
         w = c("Jqb/");
-      var C = c("r64O"),
-        O = c("kLLr");
-      function E(i) {
+      var F = c("r64O"),
+        C = c("kLLr");
+      function O(i) {
         return function(t) {
           var e = Object(s.useState)(null),
             n = e[0],
@@ -13844,7 +13844,7 @@ var CLSTAMP = "5981776";
           );
         };
       }
-      function F() {
+      function E() {
         return a.a.createElement(
           v.d,
           null,
@@ -13857,7 +13857,7 @@ var CLSTAMP = "5981776";
             ),
             render: function(e) {
               return a.a.createElement(
-                x,
+                D,
                 Object(l.a)(
                   { key: "detailview_" + e.match.params.event_gid },
                   e,
@@ -13879,12 +13879,12 @@ var CLSTAMP = "5981776";
             ),
             render: function(e) {
               return a.a.createElement(
-                x,
+                D,
                 Object(l.a)(
                   { key: "detailview_" + e.match.params.event_gid },
                   e,
                   {
-                    clansteamid: new O.a(e.match.params.groupid),
+                    clansteamid: new C.a(e.match.params.groupid),
                     event_gid: e.match.params.event_gid,
                     bInfiniteScroll: "inline" == e.match.params.viewtype
                   }
@@ -13901,7 +13901,7 @@ var CLSTAMP = "5981776";
             ),
             render: function(e) {
               return a.a.createElement(
-                x,
+                D,
                 Object(l.a)(
                   { key: "detailoldview_" + e.match.params.announcement_gid },
                   e,
@@ -13923,12 +13923,12 @@ var CLSTAMP = "5981776";
             ),
             render: function(e) {
               return a.a.createElement(
-                x,
+                D,
                 Object(l.a)(
                   { key: "detailoldview_" + e.match.params.announcement_gid },
                   e,
                   {
-                    clansteamid: new O.a(e.match.params.groupid),
+                    clansteamid: new C.a(e.match.params.groupid),
                     announcement_gid: e.match.params.announcement_gid,
                     bInfiniteScroll: "old_inline" == e.match.params.viewtype
                   }
@@ -13941,7 +13941,7 @@ var CLSTAMP = "5981776";
             path: m.b.NewsHubApp(":appid(\\d+)", ":vanity?"),
             render: function(e) {
               return a.a.createElement(
-                B,
+                R,
                 Object(l.a)({ key: e.match.params.appid }, e, {
                   filter_to_appids: [Number(e.match.params.appid)]
                 })
@@ -13953,7 +13953,7 @@ var CLSTAMP = "5981776";
             path: m.b.NewsHubGroup(":groupid(\\d+)", ":vanity?"),
             render: function(e) {
               return a.a.createElement(
-                B,
+                R,
                 Object(l.a)({ key: e.match.params.groupid }, e, {
                   filter_to_clanids: [Number(e.match.params.groupid)]
                 })
@@ -13965,7 +13965,7 @@ var CLSTAMP = "5981776";
             path: m.b.NewsHubCollection(":collectionid", ":vanity?"),
             render: function(e) {
               return a.a.createElement(
-                B,
+                R,
                 Object(l.a)({ key: e.match.params.collectionid }, e, {
                   filter_to_collection: e.match.params.collectionid
                 })
@@ -13976,7 +13976,7 @@ var CLSTAMP = "5981776";
             exact: !0,
             path: m.b.NewsHub(),
             render: function(e) {
-              return a.a.createElement(B, Object(l.a)({ key: "global" }, e));
+              return a.a.createElement(R, Object(l.a)({ key: "global" }, e));
             }
           })
         );
@@ -13989,7 +13989,7 @@ var CLSTAMP = "5981776";
             path: m.b.EventGameFestivalDebug(),
             render: function(e) {
               return a.a.createElement(
-                R,
+                I,
                 Object(l.a)({}, e, {
                   clanAccountID: e.match.params.clanacountid,
                   clanEventGID: e.match.params.claneventgid
@@ -14001,7 +14001,7 @@ var CLSTAMP = "5981776";
             exact: !0,
             path: m.b.EventBackfill(),
             render: function(e) {
-              return a.a.createElement(j, Object(l.a)({}, e));
+              return a.a.createElement(B, Object(l.a)({}, e));
             }
           }),
           a.a.createElement(v.b, {
@@ -14015,14 +14015,14 @@ var CLSTAMP = "5981776";
           })
         );
       }
-      var k = E("EventModerationLanding"),
-        j = E("EventBackfillLanding"),
-        D = E("EventSaleDisplay"),
-        B = E("EventCalendar"),
-        x = E("EventDetailView"),
-        L = E("Events"),
-        R = E("EventSteamGameFestivalDebug"),
-        I = c("Hny+"),
+      var k = O("EventModerationLanding"),
+        B = O("EventBackfillLanding"),
+        j = O("EventSaleDisplay"),
+        R = O("EventCalendar"),
+        D = O("EventDetailView"),
+        x = O("Events"),
+        I = O("EventSteamGameFestivalDebug"),
+        L = c("Hny+"),
         A = (a.a.lazy(function() {
           return c.e(96).then(c.bind(null, "jHcm"));
         }),
@@ -14051,7 +14051,7 @@ var CLSTAMP = "5981776";
             c.bind(null, "3rT3")
           );
         }),
-        G = (a.a.lazy(function() {
+        U = (a.a.lazy(function() {
           return Promise.resolve().then(c.bind(null, "Hny+"));
         }),
         (function(e) {
@@ -14069,7 +14069,7 @@ var CLSTAMP = "5981776";
             }),
             (t.prototype.render = function() {
               return (
-                Object(C.a)(
+                Object(F.a)(
                   null == window.Prototype,
                   "Should not include prototypejs."
                 ),
@@ -14090,7 +14090,7 @@ var CLSTAMP = "5981776";
                           path: m.b.DiagData(),
                           render: function(e) {
                             return a.a.createElement(
-                              y,
+                              b,
                               Object(l.a)({}, e, {
                                 key: "diab_data_" + e.match.params.gid,
                                 strConfigID: "application_config"
@@ -14106,7 +14106,7 @@ var CLSTAMP = "5981776";
                             return a.a.createElement(d, {
                               config: {
                                 "events-row": function() {
-                                  return a.a.createElement(L, {
+                                  return a.a.createElement(x, {
                                     key: "appeventrow" + t,
                                     appid: t
                                   });
@@ -14138,10 +14138,10 @@ var CLSTAMP = "5981776";
                             return a.a.createElement(d, {
                               config: {
                                 "sale-display": function() {
-                                  return a.a.createElement(D, {
+                                  return a.a.createElement(j, {
                                     key: "sale_" + t,
                                     promotionName: "sale_" + t,
-                                    language: Object(b.e)(u.c.LANGUAGE)
+                                    language: Object(y.e)(u.c.LANGUAGE)
                                   });
                                 },
                                 "broadcast-embed": function() {
@@ -14170,7 +14170,7 @@ var CLSTAMP = "5981776";
                             return a.a.createElement(d, {
                               config: {
                                 "sale-display": function() {
-                                  return a.a.createElement(D, {
+                                  return a.a.createElement(j, {
                                     key:
                                       "salecreator_" +
                                       e.match.params.creatorPageName +
@@ -14178,7 +14178,7 @@ var CLSTAMP = "5981776";
                                       e.match.params.salePageName,
                                     promotionName:
                                       "sale_" + e.match.params.salePageName,
-                                    language: Object(b.e)(u.c.LANGUAGE)
+                                    language: Object(y.e)(u.c.LANGUAGE)
                                   });
                                 }
                               }
@@ -14191,10 +14191,10 @@ var CLSTAMP = "5981776";
                             return a.a.createElement(d, {
                               config: {
                                 "sale-display": function() {
-                                  return a.a.createElement(D, {
+                                  return a.a.createElement(j, {
                                     key: "sale_remoteplaylanding",
                                     promotionName: "remoteplaylanding",
-                                    language: Object(b.e)(u.c.LANGUAGE)
+                                    language: Object(y.e)(u.c.LANGUAGE)
                                   });
                                 }
                               }
@@ -14207,10 +14207,10 @@ var CLSTAMP = "5981776";
                             return a.a.createElement(d, {
                               config: {
                                 "sale-display": function() {
-                                  return a.a.createElement(D, {
+                                  return a.a.createElement(j, {
                                     key: "sale_together",
                                     promotionName: "sale_together",
-                                    language: Object(b.e)(u.c.LANGUAGE)
+                                    language: Object(y.e)(u.c.LANGUAGE)
                                   });
                                 }
                               }
@@ -14280,7 +14280,7 @@ var CLSTAMP = "5981776";
                         a.a.createElement(v.b, {
                           path: m.b.NewsHub(),
                           render: function(e) {
-                            return a.a.createElement(F, null);
+                            return a.a.createElement(E, null);
                           }
                         }),
                         a.a.createElement(v.b, {
@@ -14300,7 +14300,7 @@ var CLSTAMP = "5981776";
                           exact: !0,
                           path: m.b.LabsSandbox(),
                           render: function(e) {
-                            return a.a.createElement(I.default, null);
+                            return a.a.createElement(L.default, null);
                           }
                         }),
                         a.a.createElement(v.b, {
@@ -14329,9 +14329,1141 @@ var CLSTAMP = "5981776";
             t
           );
         })(a.a.Component)),
-        U = c("X3Ds");
+        G = c("WBba"),
+        W = c("bxBv"),
+        H = c("hRO2"),
+        V = (function(n) {
+          function r(e) {
+            void 0 === e && (e = null);
+            var t = n.call(this) || this;
+            return H.Message.initialize(t, e, 0, -1, void 0, null), t;
+          }
+          return (
+            Object(l.d)(r, n),
+            (r.prototype.original_hostname = function() {
+              return H.Message.getField(this, 1);
+            }),
+            (r.prototype.set_original_hostname = function(e) {
+              H.Message.setField(this, 1, e);
+            }),
+            (r.prototype.actual_hostname = function() {
+              return H.Message.getField(this, 2);
+            }),
+            (r.prototype.set_actual_hostname = function(e) {
+              H.Message.setField(this, 2, e);
+            }),
+            (r.prototype.path = function() {
+              return H.Message.getField(this, 3);
+            }),
+            (r.prototype.set_path = function(e) {
+              H.Message.setField(this, 3, e);
+            }),
+            (r.prototype.base_name = function() {
+              return H.Message.getField(this, 4);
+            }),
+            (r.prototype.set_base_name = function(e) {
+              H.Message.setField(this, 4, e);
+            }),
+            (r.prototype.success = function() {
+              return H.Message.getField(this, 5);
+            }),
+            (r.prototype.set_success = function(e) {
+              H.Message.setField(this, 5, e);
+            }),
+            (r.prototype.status_code = function() {
+              return H.Message.getField(this, 6);
+            }),
+            (r.prototype.set_status_code = function(e) {
+              H.Message.setField(this, 6, e);
+            }),
+            (r.prototype.address_of_request_url = function() {
+              return H.Message.getField(this, 7);
+            }),
+            (r.prototype.set_address_of_request_url = function(e) {
+              H.Message.setField(this, 7, e);
+            }),
+            (r.prototype.response_time_ms = function() {
+              return H.Message.getField(this, 8);
+            }),
+            (r.prototype.set_response_time_ms = function(e) {
+              H.Message.setField(this, 8, e);
+            }),
+            (r.prototype.bytes_received = function() {
+              return H.Message.getField(this, 9);
+            }),
+            (r.prototype.set_bytes_received = function(e) {
+              H.Message.setField(this, 9, e);
+            }),
+            (r.prototype.num_retries = function() {
+              return H.Message.getField(this, 10);
+            }),
+            (r.prototype.set_num_retries = function(e) {
+              H.Message.setField(this, 10, e);
+            }),
+            (r.prototype.toObject = function(e) {
+              return void 0 === e && (e = !1), r.toObject(e, this);
+            }),
+            (r.toObject = function(e, t) {
+              var n = {
+                original_hostname: H.Message.getField(t, 1),
+                actual_hostname: H.Message.getField(t, 2),
+                path: H.Message.getField(t, 3),
+                base_name: H.Message.getField(t, 4),
+                success: H.Message.getField(t, 5),
+                status_code: H.Message.getField(t, 6),
+                address_of_request_url: H.Message.getField(t, 7),
+                response_time_ms: H.Message.getField(t, 8),
+                bytes_received: H.Message.getField(t, 9),
+                num_retries: H.Message.getField(t, 10)
+              };
+              return e && (n.$jspbMessageInstance = t), n;
+            }),
+            (r.fromObject = function(e) {
+              var t = new r();
+              return (
+                t.set_original_hostname(e.original_hostname),
+                t.set_actual_hostname(e.actual_hostname),
+                t.set_path(e.path),
+                t.set_base_name(e.base_name),
+                t.set_success(e.success),
+                t.set_status_code(e.status_code),
+                t.set_address_of_request_url(e.address_of_request_url),
+                t.set_response_time_ms(e.response_time_ms),
+                t.set_bytes_received(e.bytes_received),
+                t.set_num_retries(e.num_retries),
+                t
+              );
+            }),
+            (r.deserializeBinary = function(e) {
+              var t = new H.BinaryReader(e),
+                n = new r();
+              return r.deserializeBinaryFromReader(n, t);
+            }),
+            (r.deserializeBinaryFromReader = function(e, t) {
+              for (; t.nextField() && !t.isEndGroup(); ) {
+                switch (t.getFieldNumber()) {
+                  case 1:
+                    e.set_original_hostname(t.readString());
+                    break;
+                  case 2:
+                    e.set_actual_hostname(t.readString());
+                    break;
+                  case 3:
+                    e.set_path(t.readString());
+                    break;
+                  case 4:
+                    e.set_base_name(t.readString());
+                    break;
+                  case 5:
+                    e.set_success(t.readBool());
+                    break;
+                  case 6:
+                    e.set_status_code(t.readUint32());
+                    break;
+                  case 7:
+                    e.set_address_of_request_url(t.readString());
+                    break;
+                  case 8:
+                    e.set_response_time_ms(t.readUint32());
+                    break;
+                  case 9:
+                    e.set_bytes_received(t.readUint64String());
+                    break;
+                  case 10:
+                    e.set_num_retries(t.readUint32());
+                    break;
+                  default:
+                    t.skipField();
+                }
+              }
+              return e;
+            }),
+            (r.prototype.serializeBinary = function() {
+              var e = new H.BinaryWriter();
+              return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            }),
+            (r.serializeBinaryToWriter = function(e, t) {
+              var n = H.Message.getField(e, 1);
+              void 0 !== n && t.writeString(1, n),
+                void 0 !== (n = H.Message.getField(e, 2)) &&
+                  t.writeString(2, n),
+                void 0 !== (n = H.Message.getField(e, 3)) &&
+                  t.writeString(3, n),
+                void 0 !== (n = H.Message.getField(e, 4)) &&
+                  t.writeString(4, n),
+                void 0 !== (n = H.Message.getField(e, 5)) && t.writeBool(5, n),
+                void 0 !== (n = H.Message.getField(e, 6)) &&
+                  t.writeUint32(6, n),
+                void 0 !== (n = H.Message.getField(e, 7)) &&
+                  t.writeString(7, n),
+                void 0 !== (n = H.Message.getField(e, 8)) &&
+                  t.writeUint32(8, n),
+                void 0 !== (n = H.Message.getField(e, 9)) &&
+                  t.writeUint64String(9, n),
+                void 0 !== (n = H.Message.getField(e, 10)) &&
+                  t.writeUint32(10, n);
+            }),
+            (r.prototype.getClassName = function() {
+              return "CClientMetrics_ClientBootstrap_RequestInfo";
+            }),
+            r
+          );
+        })(H.Message),
+        q = (function(n) {
+          function r(e) {
+            void 0 === e && (e = null);
+            var t = n.call(this) || this;
+            return H.Message.initialize(t, e, 0, -1, [7, 8], null), t;
+          }
+          return (
+            Object(l.d)(r, n),
+            (r.prototype.launcher_type = function() {
+              return H.Message.getField(this, 1);
+            }),
+            (r.prototype.set_launcher_type = function(e) {
+              H.Message.setField(this, 1, e);
+            }),
+            (r.prototype.steam_realm = function() {
+              return H.Message.getField(this, 2);
+            }),
+            (r.prototype.set_steam_realm = function(e) {
+              H.Message.setField(this, 2, e);
+            }),
+            (r.prototype.beta_name = function() {
+              return H.Message.getField(this, 3);
+            }),
+            (r.prototype.set_beta_name = function(e) {
+              H.Message.setField(this, 3, e);
+            }),
+            (r.prototype.download_completed = function() {
+              return H.Message.getField(this, 4);
+            }),
+            (r.prototype.set_download_completed = function(e) {
+              H.Message.setField(this, 4, e);
+            }),
+            (r.prototype.total_time_ms = function() {
+              return H.Message.getField(this, 6);
+            }),
+            (r.prototype.set_total_time_ms = function(e) {
+              H.Message.setField(this, 6, e);
+            }),
+            (r.prototype.manifest_requests = function() {
+              return H.Message.getRepeatedWrapperField(this, V, 7);
+            }),
+            (r.prototype.set_manifest_requests = function(e) {
+              H.Message.setRepeatedWrapperField(this, 7, e);
+            }),
+            (r.prototype.add_manifest_requests = function(e, t) {
+              return H.Message.addToRepeatedWrapperField(this, 7, e, V, t);
+            }),
+            (r.prototype.package_requests = function() {
+              return H.Message.getRepeatedWrapperField(this, V, 8);
+            }),
+            (r.prototype.set_package_requests = function(e) {
+              H.Message.setRepeatedWrapperField(this, 8, e);
+            }),
+            (r.prototype.add_package_requests = function(e, t) {
+              return H.Message.addToRepeatedWrapperField(this, 8, e, V, t);
+            }),
+            (r.prototype.toObject = function(e) {
+              return void 0 === e && (e = !1), r.toObject(e, this);
+            }),
+            (r.toObject = function(e, t) {
+              var n = {
+                launcher_type: H.Message.getField(t, 1),
+                steam_realm: H.Message.getField(t, 2),
+                beta_name: H.Message.getField(t, 3),
+                download_completed: H.Message.getField(t, 4),
+                total_time_ms: H.Message.getField(t, 6),
+                manifest_requests: H.Message.toObjectList(
+                  t.manifest_requests(),
+                  V.toObject,
+                  e
+                ),
+                package_requests: H.Message.toObjectList(
+                  t.package_requests(),
+                  V.toObject,
+                  e
+                )
+              };
+              return e && (n.$jspbMessageInstance = t), n;
+            }),
+            (r.fromObject = function(e) {
+              var t = new r();
+              return (
+                t.set_launcher_type(e.launcher_type),
+                t.set_steam_realm(e.steam_realm),
+                t.set_beta_name(e.beta_name),
+                t.set_download_completed(e.download_completed),
+                t.set_total_time_ms(e.total_time_ms),
+                t.set_manifest_requests(
+                  (Array.isArray(e.manifest_requests)
+                    ? e.manifest_requests
+                    : []
+                  ).map(function(e) {
+                    return V.fromObject(e);
+                  })
+                ),
+                t.set_package_requests(
+                  (Array.isArray(e.package_requests)
+                    ? e.package_requests
+                    : []
+                  ).map(function(e) {
+                    return V.fromObject(e);
+                  })
+                ),
+                t
+              );
+            }),
+            (r.deserializeBinary = function(e) {
+              var t = new H.BinaryReader(e),
+                n = new r();
+              return r.deserializeBinaryFromReader(n, t);
+            }),
+            (r.deserializeBinaryFromReader = function(e, t) {
+              for (; t.nextField() && !t.isEndGroup(); ) {
+                switch (t.getFieldNumber()) {
+                  case 1:
+                    e.set_launcher_type(t.readUint32());
+                    break;
+                  case 2:
+                    e.set_steam_realm(t.readUint32());
+                    break;
+                  case 3:
+                    e.set_beta_name(t.readString());
+                    break;
+                  case 4:
+                    e.set_download_completed(t.readBool());
+                    break;
+                  case 6:
+                    e.set_total_time_ms(t.readUint32());
+                    break;
+                  case 7:
+                    var n = new V();
+                    t.readMessage(n, V.deserializeBinaryFromReader),
+                      e.add_manifest_requests(n);
+                    break;
+                  case 8:
+                    n = new V();
+                    t.readMessage(n, V.deserializeBinaryFromReader),
+                      e.add_package_requests(n);
+                    break;
+                  default:
+                    t.skipField();
+                }
+              }
+              return e;
+            }),
+            (r.prototype.serializeBinary = function() {
+              var e = new H.BinaryWriter();
+              return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            }),
+            (r.serializeBinaryToWriter = function(e, t) {
+              var n = H.Message.getField(e, 1);
+              void 0 !== n && t.writeUint32(1, n),
+                void 0 !== (n = H.Message.getField(e, 2)) &&
+                  t.writeUint32(2, n),
+                void 0 !== (n = H.Message.getField(e, 3)) &&
+                  t.writeString(3, n),
+                void 0 !== (n = H.Message.getField(e, 4)) && t.writeBool(4, n),
+                void 0 !== (n = H.Message.getField(e, 6)) &&
+                  t.writeUint32(6, n),
+                0 < (n = e.manifest_requests()).length &&
+                  t.writeRepeatedMessage(7, n, V.serializeBinaryToWriter),
+                0 < (n = e.package_requests()).length &&
+                  t.writeRepeatedMessage(8, n, V.serializeBinaryToWriter);
+            }),
+            (r.prototype.getClassName = function() {
+              return "CClientMetrics_ClientBootstrap_Summary";
+            }),
+            r
+          );
+        })(H.Message);
+      var Y,
+        K,
+        X = (function(n) {
+          function r(e) {
+            void 0 === e && (e = null);
+            var t = n.call(this) || this;
+            return H.Message.initialize(t, e, 0, -1, void 0, null), t;
+          }
+          return (
+            Object(l.d)(r, n),
+            (r.prototype.raw_version = function() {
+              return H.Message.getField(this, 1);
+            }),
+            (r.prototype.set_raw_version = function(e) {
+              H.Message.setField(this, 1, e);
+            }),
+            (r.prototype.requested_interface_type = function() {
+              return H.Message.getField(this, 2);
+            }),
+            (r.prototype.set_requested_interface_type = function(e) {
+              H.Message.setField(this, 2, e);
+            }),
+            (r.prototype.toObject = function(e) {
+              return void 0 === e && (e = !1), r.toObject(e, this);
+            }),
+            (r.toObject = function(e, t) {
+              var n = {
+                raw_version: H.Message.getField(t, 1),
+                requested_interface_type: H.Message.getField(t, 2)
+              };
+              return e && (n.$jspbMessageInstance = t), n;
+            }),
+            (r.fromObject = function(e) {
+              var t = new r();
+              return (
+                t.set_raw_version(e.raw_version),
+                t.set_requested_interface_type(e.requested_interface_type),
+                t
+              );
+            }),
+            (r.deserializeBinary = function(e) {
+              var t = new H.BinaryReader(e),
+                n = new r();
+              return r.deserializeBinaryFromReader(n, t);
+            }),
+            (r.deserializeBinaryFromReader = function(e, t) {
+              for (; t.nextField() && !t.isEndGroup(); ) {
+                switch (t.getFieldNumber()) {
+                  case 1:
+                    e.set_raw_version(t.readString());
+                    break;
+                  case 2:
+                    e.set_requested_interface_type(t.readString());
+                    break;
+                  default:
+                    t.skipField();
+                }
+              }
+              return e;
+            }),
+            (r.prototype.serializeBinary = function() {
+              var e = new H.BinaryWriter();
+              return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            }),
+            (r.serializeBinaryToWriter = function(e, t) {
+              var n = H.Message.getField(e, 1);
+              void 0 !== n && t.writeString(1, n),
+                void 0 !== (n = H.Message.getField(e, 2)) &&
+                  t.writeString(2, n);
+            }),
+            (r.prototype.getClassName = function() {
+              return "CClientMetrics_AppInterfaceCreation";
+            }),
+            r
+          );
+        })(H.Message),
+        Z = (function(n) {
+          function r(e) {
+            void 0 === e && (e = null);
+            var t = n.call(this) || this;
+            return H.Message.initialize(t, e, 0, -1, void 0, null), t;
+          }
+          return (
+            Object(l.d)(r, n),
+            (r.prototype.interface_name = function() {
+              return H.Message.getField(this, 1);
+            }),
+            (r.prototype.set_interface_name = function(e) {
+              H.Message.setField(this, 1, e);
+            }),
+            (r.prototype.method_name = function() {
+              return H.Message.getField(this, 2);
+            }),
+            (r.prototype.set_method_name = function(e) {
+              H.Message.setField(this, 2, e);
+            }),
+            (r.prototype.call_count = function() {
+              return H.Message.getField(this, 3);
+            }),
+            (r.prototype.set_call_count = function(e) {
+              H.Message.setField(this, 3, e);
+            }),
+            (r.prototype.toObject = function(e) {
+              return void 0 === e && (e = !1), r.toObject(e, this);
+            }),
+            (r.toObject = function(e, t) {
+              var n = {
+                interface_name: H.Message.getField(t, 1),
+                method_name: H.Message.getField(t, 2),
+                call_count: H.Message.getField(t, 3)
+              };
+              return e && (n.$jspbMessageInstance = t), n;
+            }),
+            (r.fromObject = function(e) {
+              var t = new r();
+              return (
+                t.set_interface_name(e.interface_name),
+                t.set_method_name(e.method_name),
+                t.set_call_count(e.call_count),
+                t
+              );
+            }),
+            (r.deserializeBinary = function(e) {
+              var t = new H.BinaryReader(e),
+                n = new r();
+              return r.deserializeBinaryFromReader(n, t);
+            }),
+            (r.deserializeBinaryFromReader = function(e, t) {
+              for (; t.nextField() && !t.isEndGroup(); ) {
+                switch (t.getFieldNumber()) {
+                  case 1:
+                    e.set_interface_name(t.readString());
+                    break;
+                  case 2:
+                    e.set_method_name(t.readString());
+                    break;
+                  case 3:
+                    e.set_call_count(t.readUint32());
+                    break;
+                  default:
+                    t.skipField();
+                }
+              }
+              return e;
+            }),
+            (r.prototype.serializeBinary = function() {
+              var e = new H.BinaryWriter();
+              return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            }),
+            (r.serializeBinaryToWriter = function(e, t) {
+              var n = H.Message.getField(e, 1);
+              void 0 !== n && t.writeString(1, n),
+                void 0 !== (n = H.Message.getField(e, 2)) &&
+                  t.writeString(2, n),
+                void 0 !== (n = H.Message.getField(e, 3)) &&
+                  t.writeUint32(3, n);
+            }),
+            (r.prototype.getClassName = function() {
+              return "CClientMetrics_AppInterfaceMethodCounts";
+            }),
+            r
+          );
+        })(H.Message),
+        J = (H.Message,
+        (function(n) {
+          function r(e) {
+            void 0 === e && (e = null);
+            var t = n.call(this) || this;
+            return H.Message.initialize(t, e, 0, -1, void 0, null), t;
+          }
+          return (
+            Object(l.d)(r, n),
+            (r.prototype.protocol_tested = function() {
+              return H.Message.getField(this, 1);
+            }),
+            (r.prototype.set_protocol_tested = function(e) {
+              H.Message.setField(this, 1, e);
+            }),
+            (r.prototype.connectivity_state = function() {
+              return H.Message.getField(this, 2);
+            }),
+            (r.prototype.set_connectivity_state = function(e) {
+              H.Message.setField(this, 2, e);
+            }),
+            (r.prototype.toObject = function(e) {
+              return void 0 === e && (e = !1), r.toObject(e, this);
+            }),
+            (r.toObject = function(e, t) {
+              var n = {
+                protocol_tested: H.Message.getField(t, 1),
+                connectivity_state: H.Message.getField(t, 2)
+              };
+              return e && (n.$jspbMessageInstance = t), n;
+            }),
+            (r.fromObject = function(e) {
+              var t = new r();
+              return (
+                t.set_protocol_tested(e.protocol_tested),
+                t.set_connectivity_state(e.connectivity_state),
+                t
+              );
+            }),
+            (r.deserializeBinary = function(e) {
+              var t = new H.BinaryReader(e),
+                n = new r();
+              return r.deserializeBinaryFromReader(n, t);
+            }),
+            (r.deserializeBinaryFromReader = function(e, t) {
+              for (; t.nextField() && !t.isEndGroup(); ) {
+                switch (t.getFieldNumber()) {
+                  case 1:
+                    e.set_protocol_tested(t.readUint32());
+                    break;
+                  case 2:
+                    e.set_connectivity_state(t.readUint32());
+                    break;
+                  default:
+                    t.skipField();
+                }
+              }
+              return e;
+            }),
+            (r.prototype.serializeBinary = function() {
+              var e = new H.BinaryWriter();
+              return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            }),
+            (r.serializeBinaryToWriter = function(e, t) {
+              var n = H.Message.getField(e, 1);
+              void 0 !== n && t.writeUint32(1, n),
+                void 0 !== (n = H.Message.getField(e, 2)) &&
+                  t.writeUint32(2, n);
+            }),
+            (r.prototype.getClassName = function() {
+              return "CClientMetrics_IPv6Connectivity_Result";
+            }),
+            r
+          );
+        })(H.Message)),
+        Q = (H.Message,
+        (function(n) {
+          function r(e) {
+            void 0 === e && (e = null);
+            var t = n.call(this) || this;
+            return H.Message.initialize(t, e, 0, -1, [3], null), t;
+          }
+          return (
+            Object(l.d)(r, n),
+            (r.prototype.product = function() {
+              return H.Message.getField(this, 1);
+            }),
+            (r.prototype.set_product = function(e) {
+              H.Message.setField(this, 1, e);
+            }),
+            (r.prototype.version = function() {
+              return H.Message.getField(this, 2);
+            }),
+            (r.prototype.set_version = function(e) {
+              H.Message.setField(this, 2, e);
+            }),
+            (r.prototype.errors = function() {
+              return H.Message.getRepeatedWrapperField(this, $, 3);
+            }),
+            (r.prototype.set_errors = function(e) {
+              H.Message.setRepeatedWrapperField(this, 3, e);
+            }),
+            (r.prototype.add_errors = function(e, t) {
+              return H.Message.addToRepeatedWrapperField(this, 3, e, $, t);
+            }),
+            (r.prototype.toObject = function(e) {
+              return void 0 === e && (e = !1), r.toObject(e, this);
+            }),
+            (r.toObject = function(e, t) {
+              var n = {
+                product: H.Message.getField(t, 1),
+                version: H.Message.getField(t, 2),
+                errors: H.Message.toObjectList(t.errors(), $.toObject, e)
+              };
+              return e && (n.$jspbMessageInstance = t), n;
+            }),
+            (r.fromObject = function(e) {
+              var t = new r();
+              return (
+                t.set_product(e.product),
+                t.set_version(e.version),
+                t.set_errors(
+                  (Array.isArray(e.errors) ? e.errors : []).map(function(e) {
+                    return $.fromObject(e);
+                  })
+                ),
+                t
+              );
+            }),
+            (r.deserializeBinary = function(e) {
+              var t = new H.BinaryReader(e),
+                n = new r();
+              return r.deserializeBinaryFromReader(n, t);
+            }),
+            (r.deserializeBinaryFromReader = function(e, t) {
+              for (; t.nextField() && !t.isEndGroup(); ) {
+                switch (t.getFieldNumber()) {
+                  case 1:
+                    e.set_product(t.readString());
+                    break;
+                  case 2:
+                    e.set_version(t.readString());
+                    break;
+                  case 3:
+                    var n = new $();
+                    t.readMessage(n, $.deserializeBinaryFromReader),
+                      e.add_errors(n);
+                    break;
+                  default:
+                    t.skipField();
+                }
+              }
+              return e;
+            }),
+            (r.prototype.serializeBinary = function() {
+              var e = new H.BinaryWriter();
+              return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            }),
+            (r.serializeBinaryToWriter = function(e, t) {
+              var n = H.Message.getField(e, 1);
+              void 0 !== n && t.writeString(1, n),
+                void 0 !== (n = H.Message.getField(e, 2)) &&
+                  t.writeString(2, n),
+                0 < (n = e.errors()).length &&
+                  t.writeRepeatedMessage(3, n, $.serializeBinaryToWriter);
+            }),
+            (r.prototype.getClassName = function() {
+              return "CClientMetrics_ReportClientError_Notification";
+            }),
+            r
+          );
+        })(H.Message)),
+        $ = (function(n) {
+          function r(e) {
+            void 0 === e && (e = null);
+            var t = n.call(this) || this;
+            return H.Message.initialize(t, e, 0, -1, void 0, null), t;
+          }
+          return (
+            Object(l.d)(r, n),
+            (r.prototype.identifier = function() {
+              return H.Message.getField(this, 1);
+            }),
+            (r.prototype.set_identifier = function(e) {
+              H.Message.setField(this, 1, e);
+            }),
+            (r.prototype.message = function() {
+              return H.Message.getField(this, 2);
+            }),
+            (r.prototype.set_message = function(e) {
+              H.Message.setField(this, 2, e);
+            }),
+            (r.prototype.count = function() {
+              return H.Message.getField(this, 3);
+            }),
+            (r.prototype.set_count = function(e) {
+              H.Message.setField(this, 3, e);
+            }),
+            (r.prototype.toObject = function(e) {
+              return void 0 === e && (e = !1), r.toObject(e, this);
+            }),
+            (r.toObject = function(e, t) {
+              var n = {
+                identifier: H.Message.getField(t, 1),
+                message: H.Message.getField(t, 2),
+                count: H.Message.getField(t, 3)
+              };
+              return e && (n.$jspbMessageInstance = t), n;
+            }),
+            (r.fromObject = function(e) {
+              var t = new r();
+              return (
+                t.set_identifier(e.identifier),
+                t.set_message(e.message),
+                t.set_count(e.count),
+                t
+              );
+            }),
+            (r.deserializeBinary = function(e) {
+              var t = new H.BinaryReader(e),
+                n = new r();
+              return r.deserializeBinaryFromReader(n, t);
+            }),
+            (r.deserializeBinaryFromReader = function(e, t) {
+              for (; t.nextField() && !t.isEndGroup(); ) {
+                switch (t.getFieldNumber()) {
+                  case 1:
+                    e.set_identifier(t.readString());
+                    break;
+                  case 2:
+                    e.set_message(t.readString());
+                    break;
+                  case 3:
+                    e.set_count(t.readUint32());
+                    break;
+                  default:
+                    t.skipField();
+                }
+              }
+              return e;
+            }),
+            (r.prototype.serializeBinary = function() {
+              var e = new H.BinaryWriter();
+              return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            }),
+            (r.serializeBinaryToWriter = function(e, t) {
+              var n = H.Message.getField(e, 1);
+              void 0 !== n && t.writeString(1, n),
+                void 0 !== (n = H.Message.getField(e, 2)) &&
+                  t.writeString(2, n),
+                void 0 !== (n = H.Message.getField(e, 3)) &&
+                  t.writeUint32(3, n);
+            }),
+            (r.prototype.getClassName = function() {
+              return "CClientMetrics_ReportClientError_Notification_Error";
+            }),
+            r
+          );
+        })(H.Message),
+        ee = (function(n) {
+          function r(e) {
+            void 0 === e && (e = null);
+            var t = n.call(this) || this;
+            return H.Message.initialize(t, e, 0, -1, void 0, null), t;
+          }
+          return (
+            Object(l.d)(r, n),
+            (r.prototype.type = function() {
+              return H.Message.getField(this, 1);
+            }),
+            (r.prototype.set_type = function(e) {
+              H.Message.setField(this, 1, e);
+            }),
+            (r.prototype.num_ops = function() {
+              return H.Message.getField(this, 2);
+            }),
+            (r.prototype.set_num_ops = function(e) {
+              H.Message.setField(this, 2, e);
+            }),
+            (r.prototype.num_bytes = function() {
+              return H.Message.getField(this, 3);
+            }),
+            (r.prototype.set_num_bytes = function(e) {
+              H.Message.setField(this, 3, e);
+            }),
+            (r.prototype.busy_time_ms = function() {
+              return H.Message.getField(this, 4);
+            }),
+            (r.prototype.set_busy_time_ms = function(e) {
+              H.Message.setField(this, 4, e);
+            }),
+            (r.prototype.idle_time_ms = function() {
+              return H.Message.getField(this, 5);
+            }),
+            (r.prototype.set_idle_time_ms = function(e) {
+              H.Message.setField(this, 5, e);
+            }),
+            (r.prototype.sum_run_time_ms = function() {
+              return H.Message.getField(this, 6);
+            }),
+            (r.prototype.set_sum_run_time_ms = function(e) {
+              H.Message.setField(this, 6, e);
+            }),
+            (r.prototype.sum_wait_time_ms = function() {
+              return H.Message.getField(this, 7);
+            }),
+            (r.prototype.set_sum_wait_time_ms = function(e) {
+              H.Message.setField(this, 7, e);
+            }),
+            (r.prototype.toObject = function(e) {
+              return void 0 === e && (e = !1), r.toObject(e, this);
+            }),
+            (r.toObject = function(e, t) {
+              var n = {
+                type: H.Message.getField(t, 1),
+                num_ops: H.Message.getField(t, 2),
+                num_bytes: H.Message.getField(t, 3),
+                busy_time_ms: H.Message.getField(t, 4),
+                idle_time_ms: H.Message.getField(t, 5),
+                sum_run_time_ms: H.Message.getField(t, 6),
+                sum_wait_time_ms: H.Message.getField(t, 7)
+              };
+              return e && (n.$jspbMessageInstance = t), n;
+            }),
+            (r.fromObject = function(e) {
+              var t = new r();
+              return (
+                t.set_type(e.type),
+                t.set_num_ops(e.num_ops),
+                t.set_num_bytes(e.num_bytes),
+                t.set_busy_time_ms(e.busy_time_ms),
+                t.set_idle_time_ms(e.idle_time_ms),
+                t.set_sum_run_time_ms(e.sum_run_time_ms),
+                t.set_sum_wait_time_ms(e.sum_wait_time_ms),
+                t
+              );
+            }),
+            (r.deserializeBinary = function(e) {
+              var t = new H.BinaryReader(e),
+                n = new r();
+              return r.deserializeBinaryFromReader(n, t);
+            }),
+            (r.deserializeBinaryFromReader = function(e, t) {
+              for (; t.nextField() && !t.isEndGroup(); ) {
+                switch (t.getFieldNumber()) {
+                  case 1:
+                    e.set_type(t.readEnum());
+                    break;
+                  case 2:
+                    e.set_num_ops(t.readUint32());
+                    break;
+                  case 3:
+                    e.set_num_bytes(t.readUint64String());
+                    break;
+                  case 4:
+                    e.set_busy_time_ms(t.readUint64String());
+                    break;
+                  case 5:
+                    e.set_idle_time_ms(t.readUint64String());
+                    break;
+                  case 6:
+                    e.set_sum_run_time_ms(t.readUint64String());
+                    break;
+                  case 7:
+                    e.set_sum_wait_time_ms(t.readUint64String());
+                    break;
+                  default:
+                    t.skipField();
+                }
+              }
+              return e;
+            }),
+            (r.prototype.serializeBinary = function() {
+              var e = new H.BinaryWriter();
+              return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            }),
+            (r.serializeBinaryToWriter = function(e, t) {
+              var n = H.Message.getField(e, 1);
+              void 0 !== n && t.writeEnum(1, n),
+                void 0 !== (n = H.Message.getField(e, 2)) &&
+                  t.writeUint32(2, n),
+                void 0 !== (n = H.Message.getField(e, 3)) &&
+                  t.writeUint64String(3, n),
+                void 0 !== (n = H.Message.getField(e, 4)) &&
+                  t.writeUint64String(4, n),
+                void 0 !== (n = H.Message.getField(e, 5)) &&
+                  t.writeUint64String(5, n),
+                void 0 !== (n = H.Message.getField(e, 6)) &&
+                  t.writeUint64String(6, n),
+                void 0 !== (n = H.Message.getField(e, 7)) &&
+                  t.writeUint64String(7, n);
+            }),
+            (r.prototype.getClassName = function() {
+              return "CClientMetrics_SteamPipeWorkStats_Operation";
+            }),
+            r
+          );
+        })(H.Message);
+      H.Message, H.Message;
+      ((K = Y = Y || {}).ClientAppInterfaceStatsReport = function(e, t) {
+        return e.SendNotification(
+          "ClientMetrics.ClientAppInterfaceStatsReport#1",
+          t,
+          { ePrivilege: 1 }
+        );
+      }),
+        (K.ClientIPv6ConnectivityReport = function(e, t) {
+          return e.SendNotification(
+            "ClientMetrics.ClientIPv6ConnectivityReport#1",
+            t,
+            { ePrivilege: 1 }
+          );
+        }),
+        (K.SteamPipeWorkStatsReport = function(e, t) {
+          return e.SendNotification(
+            "ClientMetrics.SteamPipeWorkStatsReport#1",
+            t,
+            { ePrivilege: 1 }
+          );
+        }),
+        (K.ReportClientError = function(e, t) {
+          return e.SendNotification("ClientMetrics.ReportClientError#1", t, {
+            ePrivilege: 2,
+            eWebAPIKeyRequirement: 1
+          });
+        }),
+        (K.ClientBootstrapReport = function(e, t) {
+          return e.SendNotification(
+            "ClientMetrics.ClientBootstrapReport#1",
+            t,
+            { ePrivilege: 1 }
+          );
+        });
+      var te,
+        ne = c("IjL/"),
+        re = [],
+        ie = function(e, t) {
+          return re.push({ error: e, cCallsitesToIgnore: t });
+        },
+        oe = console.assert;
+      console.assert = function(e, t) {
+        for (var n = [], r = 2; r < arguments.length; r++)
+          n[r - 2] = arguments[r];
+        e || ie(new Error(ce.apply(void 0, Object(l.g)([t], n))), 2),
+          oe.apply(console, Object(l.g)([e, t], n));
+      };
+      var se = console.error;
+      (console.error = function(e) {
+        for (var t = [], n = 1; n < arguments.length; n++)
+          t[n - 1] = arguments[n];
+        ie(new Error(ce.apply(void 0, Object(l.g)([e], t))), 1),
+          se.apply(console, Object(l.g)([e], t));
+      }),
+        window.addEventListener("error", function(e) {
+          ie(e.error, 0);
+        }),
+        (te = window.setTimeout(function() {
+          (re = []), (ie = function() {});
+        }, 3e4));
+      var ae = (function() {
+        function e(e) {
+          var r = this;
+          void 0 === e && (e = !0),
+            (this.m_transport = null),
+            (this.m_rgErrorQueue = []),
+            (this.m_bEnabled = !0),
+            (this.m_bInitialized = !1),
+            (ie = e
+              ? (re.forEach(function(e) {
+                  var t = e.error,
+                    n = e.cCallsitesToIgnore;
+                  return r.ReportError(t, n);
+                }),
+                function(e, t) {
+                  return r.ReportError(e, t);
+                })
+              : function() {}),
+            (re = []),
+            clearTimeout(te),
+            window.setTimeout(function() {
+              r.m_bInitialized ||
+                ((r.m_bEnabled = !1), (r.m_rgErrorQueue = []));
+            }, 3e4);
+        }
+        return (
+          (e.prototype.Init = function(e, t, n) {
+            (this.m_bInitialized = !0),
+              (this.m_strProduct = e),
+              (this.m_strVersion = t),
+              (this.m_transport = n),
+              this.m_bEnabled ||
+                (console.error(
+                  "Error reporting was initialized after being disabled, possibly dropping errors."
+                ),
+                (this.m_bEnabled = !0)),
+              this.m_rgErrorQueue.length &&
+                (this.SendErrorReports(this.m_rgErrorQueue),
+                (this.m_rgErrorQueue = []));
+          }),
+          (e.prototype.ReportError = function(e, t) {
+            void 0 === t && (t = 0);
+            try {
+              if (!this.m_bEnabled) return;
+              0;
+              var n = (function(e, t) {
+                void 0 === t && (t = 0);
+                try {
+                  return e.stack && e.stack.match(ue)
+                    ? (function(e, t) {
+                        void 0 === t && (t = 0);
+                        var n = e.stack.split("\n"),
+                          r = (function(e) {
+                            var t = e.lastIndexOf("?");
+                            if (-1 === t) return e;
+                            var n = e.indexOf(":", t);
+                            return -1 === n ? e : e.slice(0, t) + e.slice(n);
+                          })(
+                            n.filter(function(e) {
+                              return !!e.match(ue);
+                            })[t]
+                          ),
+                          i = n
+                            .map(function(e) {
+                              var t = e.match(/(.*)\((.*):(\d+):(\d+)\)/);
+                              if (!t) return e;
+                              if (5 === t.length) {
+                                t[0];
+                                var n = t[1],
+                                  r = t[2],
+                                  i = t[3],
+                                  o = t[4],
+                                  s = parseInt(i),
+                                  a = parseInt(o);
+                                if (!isNaN(s) && !isNaN(a)) return [n, r, s, a];
+                              }
+                              return e;
+                            })
+                            .filter(function(e) {
+                              return !!e;
+                            });
+                        return { identifier: r, message: i };
+                      })(e, t)
+                    : e.stack && e.stack.match(pe)
+                    ? (function(e) {
+                        void 0 === e && (e = 0);
+                        return null;
+                      })(t)
+                    : null;
+                } catch (e) {
+                  return (
+                    console.warn("Failed to normalize error stack: " + e), null
+                  );
+                }
+              })(e, t);
+              if (!n) return;
+              this.SendErrorReport(n);
+            } catch (e) {
+              console.log("Failed to report error: " + e);
+            }
+          }),
+          (e.prototype.SendErrorReport = function(e) {
+            this.m_transport
+              ? this.SendErrorReports([e])
+              : this.m_rgErrorQueue.push(e);
+          }),
+          (e.prototype.SendErrorReports = function(e) {
+            var t, o, n;
+            e &&
+              e.length &&
+              ((t = W.a.Init(Q)),
+              (o = e.reduce(function(e, t) {
+                return (
+                  e[t.identifier]
+                    ? e[t.identifier].count++
+                    : (e[t.identifier] = { report: t, count: 1 }),
+                  e
+                );
+              }, {})),
+              (n = Object.keys(o).map(function(e) {
+                var t = o[e],
+                  n = t.report,
+                  r = t.count,
+                  i = new $();
+                return (
+                  i.set_count(r),
+                  i.set_identifier(n.identifier),
+                  i.set_message(JSON.stringify(n.message)),
+                  i
+                );
+              })),
+              t.Body().set_product(this.m_strProduct),
+              t.Body().set_version(this.m_strVersion),
+              t.Body().set_errors(n),
+              Y.ReportClientError(this.m_transport, t));
+          }),
+          e
+        );
+      })();
+      function ce(e) {
+        for (var t = [], n = 1; n < arguments.length; n++)
+          t[n - 1] = arguments[n];
+        return "string" == typeof e && 0 === t.length
+          ? e
+          : Object(l.g)([e], t)
+              .map(function(e) {
+                try {
+                  return String(e);
+                } catch (e) {
+                  return "[Stringify Error]";
+                }
+              })
+              .join(", ");
+      }
+      var le,
+        ue = /^\s*at .*(\S+:\d+|\(native\))/m,
+        pe = /(^|@)\S+:\d+/;
+      var de = function(e) {
+          (le = e), ne.a.InstallErrorReportingStore(le);
+        },
+        me = c("X3Ds");
       c("xnZ7"), c("idvb"), c("M1X1");
-      U.q(function() {
+      me.q(function() {
         return Object(l.b)(this, void 0, void 0, function() {
           return Object(l.e)(this, function(e) {
             switch (e.label) {
@@ -14351,6 +15483,12 @@ var CLSTAMP = "5981776";
                   (c.p =
                     u.c.STORE_CDN_URL +
                     "public/javascript/applications/store/"),
+                  le || de(new ae()),
+                  le.Init(
+                    "Store",
+                    CLSTAMP,
+                    new G.a(u.c.WEBAPI_BASE_URL).GetServiceTransport()
+                  ),
                   [
                     4,
                     (function(a) {
@@ -14403,7 +15541,7 @@ var CLSTAMP = "5981776";
                   e.sent(),
                   document.getElementById("application_root")
                     ? n.a.render(
-                        a.a.createElement(G),
+                        a.a.createElement(U),
                         document.getElementById("application_root")
                       )
                     : console.error(
@@ -14848,10 +15986,10 @@ var CLSTAMP = "5981776";
         "k_ESteamRealmUnknown"),
         (v[(v.k_ESteamRealmGlobal = 1)] = "k_ESteamRealmGlobal"),
         (v[(v.k_ESteamRealmChina = 2)] = "k_ESteamRealmChina");
-      var b, y, M, w, C, O;
-      ((y = b = b || {})[(y.Unknown = 0)] = "Unknown"),
-        (y[(y.Wired = 1)] = "Wired"),
-        (y[(y.Wireless = 2)] = "Wireless"),
+      var y, b, M, w, F, C;
+      ((b = y = y || {})[(b.Unknown = 0)] = "Unknown"),
+        (b[(b.Wired = 1)] = "Wired"),
+        (b[(b.Wireless = 2)] = "Wireless"),
         ((w = M = M || {})[(w.NotPresent = 0)] = "NotPresent"),
         (w[(w.Failed = 1)] = "Failed"),
         (w[(w.Disconnected = 2)] = "Disconnected"),
@@ -14859,14 +15997,14 @@ var CLSTAMP = "5981776";
         (w[(w.Connecting = 4)] = "Connecting"),
         (w[(w.Connected = 5)] = "Connected"),
         (w[(w.Retrying = 6)] = "Retrying"),
-        ((O = C = C || {})[(O.None = 0)] = "None"),
-        (O[(O.StaticWep = 1)] = "StaticWep"),
-        (O[(O.DynamicWep = 2)] = "DynamicWep"),
-        (O[(O.Wpa = 4)] = "Wpa"),
-        (O[(O.WpaEnterprise = 8)] = "WpaEnterprise"),
-        (O[(O.Wpa2 = 16)] = "Wpa2"),
-        (O[(O.Wpa2Enterprise = 32)] = "Wpa2Enterprise"),
-        (O[(O.Unsupported = 32768)] = "Unsupported");
+        ((C = F = F || {})[(C.None = 0)] = "None"),
+        (C[(C.StaticWep = 1)] = "StaticWep"),
+        (C[(C.DynamicWep = 2)] = "DynamicWep"),
+        (C[(C.Wpa = 4)] = "Wpa"),
+        (C[(C.WpaEnterprise = 8)] = "WpaEnterprise"),
+        (C[(C.Wpa2 = 16)] = "Wpa2"),
+        (C[(C.Wpa2Enterprise = 32)] = "Wpa2Enterprise"),
+        (C[(C.Unsupported = 32768)] = "Unsupported");
     },
     lkRc: function(e, t, n) {
       "use strict";
@@ -16394,10 +17532,10 @@ var CLSTAMP = "5981776";
           return v;
         }),
         n.d(t, "b", function() {
-          return b;
+          return y;
         }),
         n.d(t, "f", function() {
-          return y;
+          return b;
         }),
         n.d(t, "a", function() {
           return M;
@@ -16406,7 +17544,7 @@ var CLSTAMP = "5981776";
           return w;
         }),
         n.d(t, "g", function() {
-          return C;
+          return F;
         });
       var a = n("mrSG"),
         r = n("TyAF"),
@@ -16414,7 +17552,7 @@ var CLSTAMP = "5981776";
         s = n("i8i4"),
         l = n("TtDX"),
         u = n("JMS6"),
-        x = n("X3Ds"),
+        D = n("X3Ds"),
         i = n("bxiW"),
         o = n("6Y59"),
         p = n("D4wO"),
@@ -16514,7 +17652,7 @@ var CLSTAMP = "5981776";
             t
           );
         })(c.PureComponent),
-        b = (function(e) {
+        y = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -16538,7 +17676,7 @@ var CLSTAMP = "5981776";
             t
           );
         })(c.PureComponent),
-        y = (c.PureComponent,
+        b = (c.PureComponent,
         (function(n) {
           function e(e) {
             var t = n.call(this, e) || this;
@@ -16594,7 +17732,7 @@ var CLSTAMP = "5981776";
               this.PositionMenu();
             }),
             (e.prototype.OnBlur = function(e) {
-              (e.relatedTarget && x.c(e.currentTarget, e.relatedTarget)) ||
+              (e.relatedTarget && D.c(e.currentTarget, e.relatedTarget)) ||
                 (e.relatedTarget &&
                   this.props.instance.BIsElementInMenuHierarchy(
                     e.relatedTarget
@@ -16625,7 +17763,7 @@ var CLSTAMP = "5981776";
                 this.state.ready &&
                 this.props.instance.visible &&
                 ((!this.props.popup &&
-                  x.c(
+                  D.c(
                     this.m_elMenu,
                     this.m_elMenu.ownerDocument.activeElement
                   )) ||
@@ -16654,27 +17792,27 @@ var CLSTAMP = "5981776";
                 g,
                 _,
                 v,
-                b,
                 y,
+                b,
                 M,
                 w,
+                F,
                 C,
                 O,
                 E,
-                F,
                 S,
                 k,
-                j,
-                D = this.m_elMenu,
-                B = this.props.element;
-              D &&
-                B &&
-                ((e = B.ownerDocument.defaultView),
-                (D.ownerDocument.defaultView.CtxUpdate = this.PositionMenu.bind(
+                B,
+                j = this.m_elMenu,
+                R = this.props.element;
+              j &&
+                R &&
+                ((e = R.ownerDocument.defaultView),
+                (j.ownerDocument.defaultView.CtxUpdate = this.PositionMenu.bind(
                   this
                 )),
-                (t = B.getBoundingClientRect()),
-                (n = D.getBoundingClientRect()),
+                (t = R.getBoundingClientRect()),
+                (n = j.getBoundingClientRect()),
                 (r = null != this.props.popup),
                 (i = this.props.options),
                 (o = {
@@ -16692,7 +17830,7 @@ var CLSTAMP = "5981776";
                 r &&
                   (this.props.options.bScreenCoordinates ||
                     ((s += e.screenLeft), (a += e.screenTop)),
-                  (t = x.g(e, t)),
+                  (t = D.g(e, t)),
                   (d = p = 0),
                   (u = e.screen).availLeft && (p = u.availLeft),
                   u.availTop && (d = u.availTop),
@@ -16705,37 +17843,37 @@ var CLSTAMP = "5981776";
                 (f = n.width),
                 i.bMatchWidth && ((f = h - m), (o.menuWidth = f)),
                 (_ = 0 < (g = (i.bOverlapHorizontal ? h : m) - f)),
-                (b = 0 < (v = c - (i.bOverlapHorizontal ? m : h) - f)),
-                (y = (i.bPreferPopLeft || !b) && _),
+                (y = 0 < (v = c - (i.bOverlapHorizontal ? m : h) - f)),
+                (b = (i.bPreferPopLeft || !y) && _),
                 _ ||
-                  b ||
-                  ((y = b < _),
+                  y ||
+                  ((b = y < _),
                   i.bFitToWindow &&
-                    ((f += (y ? g : v) - 8), (o.menuWidth = f))),
-                (!i.bPreferPopLeft && b) || !_
+                    ((f += (b ? g : v) - 8), (o.menuWidth = f))),
+                (!i.bPreferPopLeft && y) || !_
                   ? (o.menuLeft = i.bOverlapHorizontal ? m : h)
                   : (o.menuRight = c - (i.bOverlapHorizontal ? h : m)),
                 (M = a || t.top),
                 (w = a || t.bottom),
-                (C = D.scrollHeight),
-                i.bMatchHeight && ((C = w - M), (o.menuHeight = C)),
-                (E = 0 < (O = (i.bOverlapVertical ? w : M) - C)),
-                (S = 0 < (F = l - (i.bOverlapVertical ? M : w) - C)),
-                (j = (i.bPreferPopTop || !S) && E && !i.bDisablePopTop),
-                E ||
+                (F = j.scrollHeight),
+                i.bMatchHeight && ((F = w - M), (o.menuHeight = F)),
+                (O = 0 < (C = (i.bOverlapVertical ? w : M) - F)),
+                (S = 0 < (E = l - (i.bOverlapVertical ? M : w) - F)),
+                (B = (i.bPreferPopTop || !S) && O && !i.bDisablePopTop),
+                O ||
                   S ||
                   ((k =
                     void 0 !== i.bShiftToFitWindow
                       ? i.bShiftToFitWindow
                       : i.bFitToWindow && !i.bOverlapHorizontal),
-                  (j = F < O && !i.bDisablePopTop),
-                  k && (j ? (o.menuTop = 4) : (o.menuBottom = 4)),
+                  (B = E < C && !i.bDisablePopTop),
+                  k && (B ? (o.menuTop = 4) : (o.menuBottom = 4)),
                   i.bFitToWindow &&
-                    (k ? (C = Math.min(C, l - 8)) : (C += j ? O : F),
-                    (o.menuHeight = C - 8))),
+                    (k ? (F = Math.min(F, l - 8)) : (F += B ? C : E),
+                    (o.menuHeight = F - 8))),
                 void 0 === o.menuBottom &&
                   void 0 === o.menuTop &&
-                  (j
+                  (B
                     ? (o.menuBottom = l - (i.bOverlapVertical ? w : M))
                     : (o.menuTop = i.bOverlapVertical ? M : w)),
                 r
@@ -16877,7 +18015,7 @@ var CLSTAMP = "5981776";
                       width: 350,
                       height: 1
                     })
-                  : ((t = x.g(
+                  : ((t = D.g(
                       this.m_menuProps.element.ownerDocument.defaultView,
                       this.m_menuProps.element.getBoundingClientRect()
                     )),
@@ -16895,7 +18033,7 @@ var CLSTAMP = "5981776";
             (o.prototype.Render = function(e, t) {
               s.render(
                 c.createElement(
-                  y,
+                  b,
                   Object(a.a)({}, this.m_menuProps, { popup: this }),
                   this.m_children
                 ),
@@ -16916,9 +18054,9 @@ var CLSTAMP = "5981776";
           className: f.a.ContextMenuMouseOverlay
         });
       }
-      function C(e) {
+      function F(e) {
         var t = [],
-          n = x.o(e),
+          n = D.o(e),
           r = n.getSelection(),
           i = r && 0 < r.rangeCount && 0 < r.toString().length,
           o = e.target,
