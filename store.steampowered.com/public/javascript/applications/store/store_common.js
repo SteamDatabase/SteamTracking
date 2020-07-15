@@ -5554,7 +5554,8 @@
           return (
             Object(C.d)(t, e),
             (t.prototype.OnOpenContextMenu = function(e) {
-              var t = this.props.appInfo;
+              var t = this.props.appInfo,
+                n = t && D.a.BIsGameWishlisted(t.appid);
               Object(f.a)(
                 N.createElement(
                   y.c,
@@ -5564,13 +5565,15 @@
                       y.d,
                       {
                         onSelected: function() {
-                          return D.a.UpdateGameWishlist(t.appid, !0);
+                          return D.a.UpdateGameWishlist(t.appid, !n);
                         }
                       },
                       N.createElement(
                         "div",
                         { style: { color: "white" } },
-                        Object(U.d)("#Sale_AddToWishlist")
+                        Object(U.d)(
+                          n ? "#Sale_RemoveFromWishlist" : "#Sale_AddToWishlist"
+                        )
                       )
                     ),
                   N.createElement(
@@ -10034,15 +10037,16 @@
     Dhs6: function(e, t, n) {
       "use strict";
       n.d(t, "a", function() {
-        return a;
+        return r;
       });
       var c = n("mrSG"),
         o = n("vDqi"),
         s = n.n(o),
+        a = n("2vnA"),
         p = n("r64O"),
         l = n("bDQf"),
         d = n("lkRc"),
-        a = new ((function() {
+        r = new ((function() {
           function e() {
             (this.m_mapBlockedAppIds = new Map()),
               (this.m_mapBlockedClanIds = new Map()),
@@ -10160,10 +10164,12 @@
                 });
               });
             }),
+            Object(c.c)([a.y], e.prototype, "m_mapBlockedAppIds", void 0),
+            Object(c.c)([a.y], e.prototype, "m_mapBlockedClanIds", void 0),
             e
           );
         })())();
-      window.g_MutedCommunicationStore = a;
+      window.g_MutedCommunicationStore = r;
     },
     Dq3P: function(e, t, n) {
       e.exports = {
@@ -15876,11 +15882,11 @@
       var u = n("mrSG"),
         o = n("vDqi"),
         m = n.n(o),
-        i = n("2vnA"),
+        c = n("2vnA"),
         E = n("wd/R"),
         r = n("5bld"),
-        c = n("5eAM"),
-        s = n("9w6b"),
+        s = n("5eAM"),
+        i = n("9w6b"),
         a = n("6oCP"),
         p = n("gyoR"),
         l = n("r64O"),
@@ -15912,7 +15918,7 @@
               (this.m_mapCalendarEventsByGid = new Map()),
               (this.m_rgSortedCalendarEvents = new Array()),
               (this.m_visibilityStore = new _.a()),
-              (this.m_currentView = i.y.box(null)),
+              (this.m_currentView = c.y.box(null)),
               (this.m_bFinishedSearchingForward = !1),
               (this.m_bFinishedSearchingBackward = !1),
               (this.m_rgCalendarSections = []),
@@ -15970,16 +15976,18 @@
               var n = this,
                 o = this.m_currentView.get();
               o && o.dispose();
-              var a = new O(
-                function() {
-                  return n.m_rgSortedCalendarEvents;
-                },
-                this.LoadAdditionalEvents,
-                this.BHitEventHorizon,
-                e,
-                t
-              );
-              this.m_currentView.set(a);
+              var a = this.BIsSingleAppCalendar(),
+                r = new O(
+                  function() {
+                    return n.m_rgSortedCalendarEvents;
+                  },
+                  this.LoadAdditionalEvents,
+                  this.BHitEventHorizon,
+                  e,
+                  t,
+                  a
+                );
+              this.m_currentView.set(r);
             }),
             (e.prototype.BIsFilteredViewEmpty = function() {
               var e;
@@ -16195,7 +16203,7 @@
                     case 1:
                       return (
                         e.sent(),
-                        Object(i.A)(function() {
+                        Object(c.A)(function() {
                           t.RegisterCalendarApps(n.apps),
                             t.RegisterCalendarClans(n.clans),
                             t.RegisterCalendarEvents(n.documents),
@@ -16242,14 +16250,14 @@
             }),
             (e.prototype.RegisterReadEvents = function(e) {
               if (e)
-                for (var t = s.a.Get(), n = 0, o = e; n < o.length; n++) {
+                for (var t = i.a.Get(), n = 0, o = e; n < o.length; n++) {
                   var a = o[n];
                   t.SetEventAsRead(a);
                 }
             }),
             (e.prototype.RegisterEventVotes = function(e) {
               if (e)
-                for (var t = s.a.Get(), n = 0, o = e; n < o.length; n++) {
+                for (var t = i.a.Get(), n = 0, o = e; n < o.length; n++) {
                   var a = o[n],
                     r = void 0 === a.vote ? void 0 : Boolean(a.vote);
                   t.SetVote(a.id, r);
@@ -16259,11 +16267,7 @@
               if (e) {
                 for (var t = !1, n = 0, o = e; n < o.length; n++) {
                   var a = o[n];
-                  (a.appid &&
-                    !this.BIsSingleAppCalendar() &&
-                    (v.a.BIsMutedAppID(a.appid) ||
-                      M.a.BIsGameIgnored(a.appid))) ||
-                    (this.InternalInsertCalendarEventItem(a) && (t = !0));
+                  this.BInternalInsertCalendarEventItem(a) && (t = !0);
                 }
                 t && this.RebuildSortedCalendarEventList();
               }
@@ -16431,7 +16435,7 @@
                 });
               });
             }),
-            (e.prototype.InternalInsertCalendarEventItem = function(e) {
+            (e.prototype.BInternalInsertCalendarEventItem = function(e) {
               if (!e.unique_id)
                 return (
                   Object(l.a)(
@@ -16466,7 +16470,7 @@
                 return t.start_time - e.start_time;
               });
             }),
-            (e.prototype.UpdateEventBlockFromCalenderEvent = function(o, a) {
+            (e.prototype.UpdateEventBlockFromCalendarEvent = function(o, a) {
               return Object(u.b)(this, void 0, void 0, function() {
                 var t, n;
                 return Object(u.e)(this, function(e) {
@@ -16485,114 +16489,67 @@
                       );
                     case 1:
                       return (
-                        e.sent() &&
-                          !a &&
-                          this.BIsGlobalCalendar() &&
-                          (t || n) &&
-                          this.FilterOutCalendarEntryBy(t, n),
+                        e.sent(),
+                        f.b.RecordAppInteractionEvent(t, f.a.k_eMuted),
                         [2]
                       );
                   }
                 });
               });
             }),
-            (e.prototype.FilterOutCalendarEntryBy = function(e, t) {
-              var n = new Array();
-              if (e) {
-                for (
-                  var o = 0, a = this.m_rgSortedCalendarEvents;
-                  o < a.length;
-                  o++
-                ) {
-                  (r = a[o]).appid != e && n.push(r);
-                }
-                f.b.RecordAppInteractionEvent(e, f.a.k_eMuted);
-              } else if (t)
-                for (
-                  var r, i = 0, c = this.m_rgSortedCalendarEvents;
-                  i < c.length;
-                  i++
-                ) {
-                  (r = c[i]).clanid != t && n.push(r);
-                }
-              this.m_rgSortedCalendarEvents = n;
-            }),
-            (e.prototype.IgnoreAppAndFilterCalendar = function(n) {
-              return Object(u.b)(this, void 0, void 0, function() {
-                var t;
-                return Object(u.e)(this, function(e) {
-                  switch (e.label) {
-                    case 0:
-                      return [4, M.a.UpdateAppIgnore(n.appInfo.appid, !0)];
-                    case 1:
-                      return (
-                        (t = e.sent()),
-                        this.BIsGlobalCalendar() &&
-                          1 == t.success &&
-                          this.FilterOutCalendarEntryBy(
-                            n.appInfo.appid,
-                            void 0
-                          ),
-                        [2]
-                      );
-                  }
-                });
-              });
-            }),
-            Object(u.c)([i.y], e.prototype, "m_mapCalendarEventsByGid", void 0),
-            Object(u.c)([i.y], e.prototype, "m_rgSortedCalendarEvents", void 0),
+            Object(u.c)([c.y], e.prototype, "m_mapCalendarEventsByGid", void 0),
+            Object(u.c)([c.y], e.prototype, "m_rgSortedCalendarEvents", void 0),
             Object(u.c)(
-              [i.y],
+              [c.y],
               e.prototype,
               "m_bFinishedSearchingForward",
               void 0
             ),
             Object(u.c)(
-              [i.y],
+              [c.y],
               e.prototype,
               "m_bFinishedSearchingBackward",
               void 0
             ),
-            Object(u.c)([i.y], e.prototype, "m_rgCalendarSections", void 0),
-            Object(u.c)([i.y], e.prototype, "m_rgFutureSections", void 0),
-            Object(u.c)([i.h], e.prototype, "InitCalendarSections", null),
-            Object(u.c)([i.h], e.prototype, "InitFutureCalendarSections", null),
+            Object(u.c)([c.y], e.prototype, "m_rgCalendarSections", void 0),
+            Object(u.c)([c.y], e.prototype, "m_rgFutureSections", void 0),
+            Object(u.c)([c.h], e.prototype, "InitCalendarSections", null),
+            Object(u.c)([c.h], e.prototype, "InitFutureCalendarSections", null),
             Object(u.c)(
-              [i.h],
+              [c.h],
               e.prototype,
               "RegisterCalendarEventsAndModels",
               null
             ),
-            Object(u.c)([i.h], e.prototype, "RegisterCalendarApps", null),
-            Object(u.c)([i.h], e.prototype, "RegisterCalendarClans", null),
-            Object(u.c)([i.h], e.prototype, "RegisterReadEvents", null),
-            Object(u.c)([i.h], e.prototype, "RegisterEventVotes", null),
-            Object(u.c)([i.h], e.prototype, "RegisterCalendarEvents", null),
+            Object(u.c)([c.h], e.prototype, "RegisterCalendarApps", null),
+            Object(u.c)([c.h], e.prototype, "RegisterCalendarClans", null),
+            Object(u.c)([c.h], e.prototype, "RegisterReadEvents", null),
+            Object(u.c)([c.h], e.prototype, "RegisterEventVotes", null),
+            Object(u.c)([c.h], e.prototype, "RegisterCalendarEvents", null),
             Object(u.c)([d.a], e.prototype, "BHitEventHorizon", null),
-            Object(u.c)([i.h.bound], e.prototype, "LoadAdditionalEvents", null),
+            Object(u.c)([c.h.bound], e.prototype, "LoadAdditionalEvents", null),
             Object(u.c)(
-              [i.h],
+              [c.h],
               e.prototype,
-              "UpdateEventBlockFromCalenderEvent",
+              "UpdateEventBlockFromCalendarEvent",
               null
             ),
-            Object(u.c)([i.h], e.prototype, "FilterOutCalendarEntryBy", null),
-            Object(u.c)([i.h], e.prototype, "IgnoreAppAndFilterCalendar", null),
             e
           );
         })(),
         O = (function() {
-          function e(e, t, n, o, a) {
-            var r = this;
-            (this.m_rgLoadedEventsBox = i.y.box([])),
+          function e(e, t, n, o, a, r) {
+            var i = this;
+            (this.m_rgLoadedEventsBox = c.y.box([])),
               (this.m_lastLoadLatch = null),
               (this.m_fnGetUnfilteredEvents = e),
               (this.m_fnLoadAdditionalEvents = t),
               (this.m_fnBHitEventHorizon = n),
               (this.m_fnBIsEventInView = o),
               (this.m_bSkipStorePreferenceCheck = a),
-              (this.m_rgAutorunDisposer = Object(i.i)(function() {
-                return Object(u.b)(r, void 0, void 0, function() {
+              (this.m_bAllowMutedAndIgnoredApps = r),
+              (this.m_rgAutorunDisposer = Object(c.i)(function() {
+                return Object(u.b)(i, void 0, void 0, function() {
                   var t, n;
                   return Object(u.e)(this, function(e) {
                     switch (e.label) {
@@ -16610,7 +16567,7 @@
                               )
                             ).sort()),
                             (this.m_lastLoadLatch = t),
-                            [4, c.a.LoadAppLinkInfo(n)]);
+                            [4, s.a.LoadAppLinkInfo(n)]);
                       case 1:
                         if ((e.sent(), this.m_lastLoadLatch != t)) return [2];
                         (this.m_lastLoadLatch = null), (e.label = 2);
@@ -16637,14 +16594,21 @@
             }),
             Object.defineProperty(e.prototype, "filteredAndCheckedEvents", {
               get: function() {
-                var e = this.m_rgLoadedEventsBox.get();
-                return this.m_bSkipStorePreferenceCheck
-                  ? e
-                  : e.filter(function(e) {
-                      if (!e.appid) return !0;
-                      var t = c.a.GetAppLinkInfo(e.appid);
-                      return t && !Object(p.b)(t);
-                    });
+                var t = this;
+                return this.m_rgLoadedEventsBox.get().filter(function(e) {
+                  return (
+                    !e.appid ||
+                    (!(
+                      !t.m_bAllowMutedAndIgnoredApps &&
+                      (v.a.BIsMutedAppID(e.appid) ||
+                        M.a.BIsGameIgnored(e.appid))
+                    ) &&
+                      !(
+                        !t.m_bSkipStorePreferenceCheck &&
+                        Object(p.b)(s.a.GetAppLinkInfo(e.appid))
+                      ))
+                  );
+                });
               },
               enumerable: !1,
               configurable: !0
@@ -16683,9 +16647,9 @@
             (e.prototype.BIsViewEmpty = function() {
               return 0 < this.filteredAndCheckedEvents.length;
             }),
-            Object(u.c)([i.k.struct], e.prototype, "viewFilteredEvents", null),
+            Object(u.c)([c.k.struct], e.prototype, "viewFilteredEvents", null),
             Object(u.c)(
-              [i.k.struct],
+              [c.k.struct],
               e.prototype,
               "filteredAndCheckedEvents",
               null
@@ -16693,7 +16657,7 @@
             e
           );
         })(),
-        z = i.y.box(null),
+        z = c.y.box(null),
         S = new Map();
       function C(e) {
         var t = "";

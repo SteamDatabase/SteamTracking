@@ -276,7 +276,7 @@ p {
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: 300; /* light */
 
-			background: #30353b;
+			background: rgba(0, 0, 0, 0.2);
 	box-shadow: inset 0px 0px 4px #0006;
 	border: 0.5px solid rgba(139, 153, 170, 0.4);
 	border-style: inset;

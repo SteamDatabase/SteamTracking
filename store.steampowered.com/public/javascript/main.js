@@ -1914,7 +1914,7 @@ function ShowGamePurchaseDropdown( elemLink, elemPopup )
 	var nWidth = $Link.outerWidth();
 	$Popup.css( 'min-width', nWidth );
 
-	ShowMenu( elemLink, elemPopup, 'left', 'bottom' );
+	ShowMenu( elemLink, elemPopup, 'right', 'bottom' );
 }
 
 function AgeGateClear()

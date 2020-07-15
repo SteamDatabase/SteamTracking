@@ -1577,11 +1577,12 @@ a.headlineLink:hover {
 }
 
 .curation_warning_box {
-	background-color: #918c6c;
+	background-color: rgba(145, 140, 108, 0.2);
 	border: solid 1px #ddd598;
 	color: #f0e8aa;
 	padding: 8px;
 	margin: 0 8px 16px 8px;
+    line-height: 26px;
 }
 
 .curation_tagline {

@@ -765,7 +765,7 @@ LocalizationReady("shared", "english", {
     "confirm that the contents of this rss feed that are redistributed through Steam will comply with the Steam Online Conduct Rules.",
   RSSManager_CreateFeed_Conduct_Link: "Read Steam Online Conduct Rules here.",
   RSSManager_Status_Automation_Desc:
-    "Automatically create news announcements from RSS Feed",
+    "Automatically post news announcements from RSS Feed",
   RSSManager_Status_Automation_Activate: "Activate RSS Feed",
   RSSManager_Status_Automation_DisableFailed:
     "Failed to deactivate feed. Please try again later.",

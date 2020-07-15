@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "5987544";
+var CLSTAMP = "5992315";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [38],
   {
@@ -105,11 +105,14 @@ var CLSTAMP = "5987544";
                     CreatorSaleLandingPage: function() {
                       return "/(curator|publisher|pub|dev|developer|franchise)/:creatorPageName/sale/:salePageName?";
                     },
+                    SubscriptionPlanLandingPage: function() {
+                      return "/subscriptions/:salePageName";
+                    },
                     CuratorPage: function() {
                       return "/curator/:curatorPageName/(list)?/:listid?";
                     },
                     CreatorPage: function() {
-                      return "/(publisher|pub|dev|developer|franchise)/:creatorPageName/(list)?/:listid?";
+                      return "/(publisher|pub|dev|developer|franchise|subscriptions)/:creatorPageName/(list)?/:listid?";
                     }
                   },
                   {
@@ -395,10 +398,10 @@ var CLSTAMP = "5987544";
           return x;
         }),
         n.d(t, "P", function() {
-          return I;
+          return L;
         }),
         n.d(t, "W", function() {
-          return L;
+          return I;
         }),
         n.d(t, "g", function() {
           return A;
@@ -1576,7 +1579,7 @@ var CLSTAMP = "5987544";
           })
         );
       }
-      function I(e) {
+      function L(e) {
         var t = Object(a.a)(
           "SVGIcon_Button",
           "SVGIcon_SteamLogo",
@@ -1610,7 +1613,7 @@ var CLSTAMP = "5987544";
           })
         );
       }
-      function L() {
+      function I() {
         return i.createElement(
           "svg",
           {
@@ -7542,7 +7545,7 @@ var CLSTAMP = "5987544";
             r
           );
         })(o.Message)),
-        I = (o.Message,
+        L = (o.Message,
         (function(n) {
           function r(e) {
             void 0 === e && (e = null);
@@ -7584,7 +7587,7 @@ var CLSTAMP = "5987544";
             r
           );
         })(o.Message)),
-        L = (o.Message,
+        I = (o.Message,
         (function(n) {
           function r(e) {
             void 0 === e && (e = null);
@@ -8100,12 +8103,12 @@ var CLSTAMP = "5987544";
           });
         }),
         (a.PartnerEventsShowMoreForApp = function(e, t) {
-          return e.SendMsg("Community.PartnerEventsShowMoreForApp#1", t, I, {
+          return e.SendMsg("Community.PartnerEventsShowMoreForApp#1", t, L, {
             ePrivilege: 1
           });
         }),
         (a.PartnerEventsShowLessForApp = function(e, t) {
-          return e.SendMsg("Community.PartnerEventsShowLessForApp#1", t, L, {
+          return e.SendMsg("Community.PartnerEventsShowLessForApp#1", t, I, {
             ePrivilege: 1
           });
         }),
@@ -8176,10 +8179,10 @@ var CLSTAMP = "5987544";
           return j;
         }),
         n.d(t, "j", function() {
-          return I;
+          return L;
         }),
         n.d(t, "g", function() {
-          return L.a;
+          return I.a;
         });
       function r(e) {
         var t = e.value,
@@ -8561,7 +8564,7 @@ var CLSTAMP = "5987544";
       }
       var D = n("hJxo"),
         x = n("r64O"),
-        I = (function(n) {
+        L = (function(n) {
           function e(e) {
             var t = n.call(this, e) || this;
             return (
@@ -8855,7 +8858,7 @@ var CLSTAMP = "5987544";
             e
           );
         })(f.PureComponent),
-        L = (f.Component, n("ZApo")),
+        I = (f.Component, n("ZApo")),
         A = n("2vnA"),
         N = n("sUmc"),
         T = n("Kw0F"),
@@ -11517,7 +11520,7 @@ var CLSTAMP = "5987544";
       function V() {
         return { x: 0, y: 0 };
       }
-      function I(e, t) {
+      function L(e, t) {
         return e.x * t.x + e.y * t.y;
       }
       function q(e, t) {
@@ -11535,7 +11538,7 @@ var CLSTAMP = "5987544";
       function X(e, t) {
         return !(e.max < t.min || t.max < e.min);
       }
-      var L = n("Kw0F"),
+      var I = n("Kw0F"),
         Z = n("X3Ds"),
         s = "Focusable",
         a = "FocusGroup",
@@ -12009,7 +12012,7 @@ var CLSTAMP = "5987544";
             }
             var M,
               w = x.sm_navAreaStack,
-              F = Object(L.d)(w, function(e) {
+              F = Object(I.d)(w, function(e) {
                 return null !== e.m_focusPos;
               });
             if (F) {
@@ -12024,7 +12027,7 @@ var CLSTAMP = "5987544";
               ) {
                 var B,
                   j = ee((B = k[S])),
-                  R = ((M = q(C, j)), Math.sqrt(I(M, M)));
+                  R = ((M = q(C, j)), Math.sqrt(L(M, M)));
                 R < O && ((O = R), (E = B));
               }
               if (E) return { htmlElement: E, pos: ee(E) };
@@ -12105,10 +12108,10 @@ var CLSTAMP = "5987544";
                       D = p * (j[u][v] - R);
                     if (D < 0) continue;
                     var x = g[_],
-                      I = j[_].min,
-                      L = j[_].max,
-                      A = x < I ? x - I : L < x ? x - L : 0;
-                    if (t) if (!X(b, { min: I, max: L })) continue;
+                      L = j[_].min,
+                      I = j[_].max,
+                      A = x < L ? x - L : I < x ? x - I : 0;
+                    if (t) if (!X(b, { min: L, max: I })) continue;
                     var N = { x: 0, y: 0 };
                     (N[u] = j[u][v]), (N[_] = x + A);
                     var T = q(g, N),
@@ -12395,7 +12398,7 @@ var CLSTAMP = "5987544";
                   this.HandleFocusControllerOnBlur
                 );
             }
-            (x.sm_navAreaStack = Object(L.a)(x.sm_navAreaStack, this)),
+            (x.sm_navAreaStack = Object(I.a)(x.sm_navAreaStack, this)),
               this.m_navAreaDivRef.current.setAttribute(
                 "data-nav-area-active",
                 "true"
@@ -12414,7 +12417,7 @@ var CLSTAMP = "5987544";
                 "data-nav-area-active",
                 "false"
               ),
-              (x.sm_navAreaStack = Object(L.a)(x.sm_navAreaStack, this)),
+              (x.sm_navAreaStack = Object(I.a)(x.sm_navAreaStack, this)),
               0 === x.sm_navAreaStack.length)
             ) {
               if (!this.m_navAreaDivRef.current) return;
@@ -13989,7 +13992,7 @@ var CLSTAMP = "5987544";
             path: m.b.EventGameFestivalDebug(),
             render: function(e) {
               return a.a.createElement(
-                I,
+                L,
                 Object(l.a)({}, e, {
                   clanAccountID: e.match.params.clanacountid,
                   clanEventGID: e.match.params.claneventgid
@@ -14021,8 +14024,8 @@ var CLSTAMP = "5987544";
         R = O("EventCalendar"),
         D = O("EventDetailView"),
         x = O("Events"),
-        I = O("EventSteamGameFestivalDebug"),
-        L = c("Hny+"),
+        L = O("EventSteamGameFestivalDebug"),
+        I = c("Hny+"),
         A = (a.a.lazy(function() {
           return c.e(96).then(c.bind(null, "jHcm"));
         }),
@@ -14186,6 +14189,26 @@ var CLSTAMP = "5987544";
                           }
                         }),
                         a.a.createElement(v.b, {
+                          exact: !0,
+                          path: m.b.SubscriptionPlanLandingPage(),
+                          render: function(e) {
+                            return a.a.createElement(d, {
+                              config: {
+                                "sale-display": function() {
+                                  return a.a.createElement(j, {
+                                    key:
+                                      "subscription_plan_" +
+                                      e.match.params.salePageName,
+                                    promotionName:
+                                      "sale_" + e.match.params.salePageName,
+                                    language: Object(y.e)(u.c.LANGUAGE)
+                                  });
+                                }
+                              }
+                            });
+                          }
+                        }),
+                        a.a.createElement(v.b, {
                           path: m.b.RemotePlay(),
                           render: function(e) {
                             return a.a.createElement(d, {
@@ -14300,7 +14323,7 @@ var CLSTAMP = "5987544";
                           exact: !0,
                           path: m.b.LabsSandbox(),
                           render: function(e) {
-                            return a.a.createElement(L.default, null);
+                            return a.a.createElement(I.default, null);
                           }
                         }),
                         a.a.createElement(v.b, {

@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "5981780";
+var CLSTAMP = "5992313";
 !(function(e) {
   function t(t) {
     for (
@@ -33636,6 +33636,8 @@ var CLSTAMP = "5981780";
             });
           });
         }),
+        Object(o.c)([w.A], e.prototype, "m_mapBlockedAppIds", void 0),
+        Object(o.c)([w.A], e.prototype, "m_mapBlockedClanIds", void 0),
         e
       );
     })())();
@@ -33714,16 +33716,18 @@ var CLSTAMP = "5981780";
             var n = this,
               o = this.m_currentView.get();
             o && o.dispose();
-            var r = new Ii(
-              function() {
-                return n.m_rgSortedCalendarEvents;
-              },
-              this.LoadAdditionalEvents,
-              this.BHitEventHorizon,
-              e,
-              t
-            );
-            this.m_currentView.set(r);
+            var r = this.BIsSingleAppCalendar(),
+              i = new Ii(
+                function() {
+                  return n.m_rgSortedCalendarEvents;
+                },
+                this.LoadAdditionalEvents,
+                this.BHitEventHorizon,
+                e,
+                t,
+                r
+              );
+            this.m_currentView.set(i);
           }),
           (e.prototype.BIsFilteredViewEmpty = function() {
             var e;
@@ -33991,10 +33995,7 @@ var CLSTAMP = "5981780";
             if (e) {
               for (var t = !1, n = 0, o = e; n < o.length; n++) {
                 var r = o[n];
-                (r.appid &&
-                  !this.BIsSingleAppCalendar() &&
-                  (Si.BIsMutedAppID(r.appid) || ut.BIsGameIgnored(r.appid))) ||
-                  (this.InternalInsertCalendarEventItem(r) && (t = !0));
+                this.BInternalInsertCalendarEventItem(r) && (t = !0);
               }
               t && this.RebuildSortedCalendarEventList();
             }
@@ -34161,7 +34162,7 @@ var CLSTAMP = "5981780";
               });
             });
           }),
-          (e.prototype.InternalInsertCalendarEventItem = function(e) {
+          (e.prototype.BInternalInsertCalendarEventItem = function(e) {
             if (!e.unique_id)
               return (
                 Object(X.a)(
@@ -34196,7 +34197,7 @@ var CLSTAMP = "5981780";
               return t.start_time - e.start_time;
             });
           }),
-          (e.prototype.UpdateEventBlockFromCalenderEvent = function(e, t) {
+          (e.prototype.UpdateEventBlockFromCalendarEvent = function(e, t) {
             return Object(o.b)(this, void 0, void 0, function() {
               var n, r;
               return Object(o.e)(this, function(o) {
@@ -34215,52 +34216,8 @@ var CLSTAMP = "5981780";
                     );
                   case 1:
                     return (
-                      o.sent() &&
-                        !t &&
-                        this.BIsGlobalCalendar() &&
-                        (n || r) &&
-                        this.FilterOutCalendarEntryBy(n, r),
-                      [2]
-                    );
-                }
-              });
-            });
-          }),
-          (e.prototype.FilterOutCalendarEntryBy = function(e, t) {
-            var n = new Array();
-            if (e) {
-              for (
-                var o = 0, r = this.m_rgSortedCalendarEvents;
-                o < r.length;
-                o++
-              ) {
-                (s = r[o]).appid != e && n.push(s);
-              }
-              Tn.RecordAppInteractionEvent(e, An.k_eMuted);
-            } else if (t)
-              for (
-                var i = 0, a = this.m_rgSortedCalendarEvents;
-                i < a.length;
-                i++
-              ) {
-                var s;
-                (s = a[i]).clanid != t && n.push(s);
-              }
-            this.m_rgSortedCalendarEvents = n;
-          }),
-          (e.prototype.IgnoreAppAndFilterCalendar = function(e) {
-            return Object(o.b)(this, void 0, void 0, function() {
-              var t;
-              return Object(o.e)(this, function(n) {
-                switch (n.label) {
-                  case 0:
-                    return [4, ut.UpdateAppIgnore(e.appInfo.appid, !0)];
-                  case 1:
-                    return (
-                      (t = n.sent()),
-                      this.BIsGlobalCalendar() &&
-                        1 == t.success &&
-                        this.FilterOutCalendarEntryBy(e.appInfo.appid, void 0),
+                      o.sent(),
+                      Tn.RecordAppInteractionEvent(n, An.k_eMuted),
                       [2]
                     );
                 }
@@ -34301,17 +34258,15 @@ var CLSTAMP = "5981780";
           Object(o.c)(
             [w.i],
             e.prototype,
-            "UpdateEventBlockFromCalenderEvent",
+            "UpdateEventBlockFromCalendarEvent",
             null
           ),
-          Object(o.c)([w.i], e.prototype, "FilterOutCalendarEntryBy", null),
-          Object(o.c)([w.i], e.prototype, "IgnoreAppAndFilterCalendar", null),
           e
         );
       })(),
       Ii = (function() {
-        function e(e, t, n, r, i) {
-          var a = this;
+        function e(e, t, n, r, i, a) {
+          var s = this;
           (this.m_rgLoadedEventsBox = w.A.box([])),
             (this.m_lastLoadLatch = null),
             (this.m_fnGetUnfilteredEvents = e),
@@ -34319,8 +34274,9 @@ var CLSTAMP = "5981780";
             (this.m_fnBHitEventHorizon = n),
             (this.m_fnBIsEventInView = r),
             (this.m_bSkipStorePreferenceCheck = i),
+            (this.m_bAllowMutedAndIgnoredApps = a),
             (this.m_rgAutorunDisposer = Object(w.j)(function() {
-              return Object(o.b)(a, void 0, void 0, function() {
+              return Object(o.b)(s, void 0, void 0, function() {
                 var e, t;
                 return Object(o.e)(this, function(n) {
                   switch (n.label) {
@@ -34367,14 +34323,20 @@ var CLSTAMP = "5981780";
           }),
           Object.defineProperty(e.prototype, "filteredAndCheckedEvents", {
             get: function() {
-              var e = this.m_rgLoadedEventsBox.get();
-              return this.m_bSkipStorePreferenceCheck
-                ? e
-                : e.filter(function(e) {
-                    if (!e.appid) return !0;
-                    var t = O.a.GetAppLinkInfo(e.appid);
-                    return t && !yi(t);
-                  });
+              var e = this;
+              return this.m_rgLoadedEventsBox.get().filter(function(t) {
+                return (
+                  !t.appid ||
+                  (!(
+                    !e.m_bAllowMutedAndIgnoredApps &&
+                    (Si.BIsMutedAppID(t.appid) || ut.BIsGameIgnored(t.appid))
+                  ) &&
+                    !(
+                      !e.m_bSkipStorePreferenceCheck &&
+                      yi(O.a.GetAppLinkInfo(t.appid))
+                    ))
+                );
+              });
             },
             enumerable: !1,
             configurable: !0
@@ -37549,7 +37511,8 @@ var CLSTAMP = "5981780";
         return (
           Object(o.d)(t, e),
           (t.prototype.OnOpenContextMenu = function(e) {
-            var t = this.props.appInfo;
+            var t = this.props.appInfo,
+              n = t && ut.BIsGameWishlisted(t.appid);
             Object(C.a)(
               i.createElement(
                 mt.c,
@@ -37559,13 +37522,15 @@ var CLSTAMP = "5981780";
                     mt.d,
                     {
                       onSelected: function() {
-                        return ut.UpdateGameWishlist(t.appid, !0);
+                        return ut.UpdateGameWishlist(t.appid, !n);
                       }
                     },
                     i.createElement(
                       "div",
                       { style: { color: "white" } },
-                      Object(k.d)("#Sale_AddToWishlist")
+                      Object(k.d)(
+                        n ? "#Sale_RemoveFromWishlist" : "#Sale_AddToWishlist"
+                      )
                     )
                   ),
                 i.createElement(

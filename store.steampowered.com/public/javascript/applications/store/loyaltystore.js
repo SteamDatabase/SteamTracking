@@ -10149,7 +10149,7 @@
           );
         })(),
         xt = n("kLLr"),
-        zt = n("Lvue"),
+        zt = n("nB5N"),
         Lt = n("RhBb"),
         Gt = n("1yjj"),
         Tt = n("1ErW"),
@@ -11807,7 +11807,7 @@
                 ),
                 m = [
                   { cluster: r, type: 1, linkedPage: null },
-                  t(730, zt, Object(k.d)("#HeroCluster_csgo_subtitile")),
+                  t(620980, zt, Object(k.d)("")),
                   {
                     cluster: c,
                     type: 1,
@@ -19724,7 +19724,7 @@
       var zo = n("F8+w"),
         Lo = n("gxgZ"),
         Go = (n("8j8b"), n("okIP")),
-        To = n("6bk4"),
+        To = (n("Lvue"), n("6bk4")),
         Wo = n("++az"),
         Ho = (n("kJAG"), n("y8q+")),
         Do = (n("sf1Z"), n("Cw7J")),
@@ -21540,6 +21540,11 @@
       e.exports =
         i.p +
         "../../../images/applications/store/contributor_badge.png?v=valveisgoodatcaching";
+    },
+    nB5N: function(e, t, i) {
+      e.exports =
+        i.p +
+        "../../../images/applications/store/beat_saber_tile_background.png?v=valveisgoodatcaching";
     },
     nBpf: function(e, t, i) {
       e.exports =
