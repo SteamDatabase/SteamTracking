@@ -744,88 +744,142 @@ function OnMovieDrop( evt )
 
 function UploadToS3( itemid, movieContainer, rgParams )
 {
-    var uploadName = movieContainer.data( 'upload_name' );
-    var progress = movieContainer.find( '.movie_upload_progress' )[0];
-    var status = movieContainer.find( '.movie_upload_status' )[0];
+	var uploadName = movieContainer.data( 'upload_name' );
+	var progress = movieContainer.find( '.movie_upload_progress' )[0];
+	var status = movieContainer.find( '.movie_upload_status' )[0];
 
-    var queueSize = 4;
-    var partSize = 5 * 1024 * 1024;
+	var queueSize = 4;
+	var partSize = 5 * 1024 * 1024;
 
-    var percentage = 0;
+	var percentage = 0;
 
-    var fileKey = rgParams.target_file_path;
-    if ( fileKey.indexOf( '/' ) == 0 )
-    	fileKey = fileKey.substr( 1 );
+	var fileKey = rgParams.target_file_path;
+	if ( fileKey.indexOf( '/' ) == 0 )
+		fileKey = fileKey.substr( 1 );
 
-    AWS.config.region = rgParams.target_aws_region;
-    AWS.config.credentials = new AWS.Credentials( rgParams.access_key_id, rgParams.secret_access_key, rgParams.session_token );
-    var uploader = new AWS.S3.ManagedUpload( {
-        params: {
-            Bucket: rgParams.target_s3_bucket,
-            Key: fileKey,
-            ServerSideEncryption: 'AES256',
-            Body: movieContainer.data( 'file' )
-        },
-        queueSize: queueSize,
-        partSize: partSize,
-        service: new AWS.S3( { maxRetries: 10, httpOptions: { timeout: 240000 } } )
-    } );
-    uploader.on( 'httpUploadProgress', function ( aws_progress )
-    {
-        if ( aws_progress.hasOwnProperty( 'total' ) )
-        {
-            percentage = ( aws_progress.loaded / aws_progress.total ) * 100;
+	AWS.config.region = rgParams.target_aws_region;
+	AWS.config.credentials = new AWS.Credentials( rgParams.access_key_id, rgParams.secret_access_key, rgParams.session_token );
+	var uploader = new AWS.S3.ManagedUpload( {
+		params: {
+			Bucket: rgParams.target_s3_bucket,
+			Key: fileKey,
+			ServerSideEncryption: 'AES256',
+			Body: movieContainer.data( 'file' )
+		},
+		queueSize: queueSize,
+		partSize: partSize,
+		service: new AWS.S3( { maxRetries: 10, httpOptions: { timeout: 240000 } } )
+	} );
+	uploader.on( 'httpUploadProgress', function ( aws_progress )
+	{
+		if ( aws_progress.hasOwnProperty( 'total' ) )
+		{
+			percentage = ( aws_progress.loaded / aws_progress.total ) * 100;
 
-            if ( percentage > 100 )
-                percentage = 100;
+			if ( percentage > 100 )
+				percentage = 100;
 
-            $J( progress ).css( { 'width': percentage + '%' } );
-        }
-        else
-        {
-            $J( status ).text( 'Uploading...' )
-        }
-    } );
-    uploader.send( function ( err, data )
-    {
-        if ( err )
-        {
-            $J( status ).text( 'S3 Upload failed: ' + err )
-        }
-        else
-        {
-            var fd = new FormData();
-            fd.append( 'uploadID', rgParams.upload_id );
-            fd.append( 'itemID', itemid );
-            fd.append( 'appID', g_AppId );
-            fd.append( 'sessionid', g_sessionID );
+			$J( progress ).css( { 'width': percentage + '%' } );
+		}
+		else
+		{
+			$J( status ).text( 'Uploading...' )
+		}
+	} );
+	uploader.send( function ( err, data )
+	{
+		if ( err )
+		{
+			$J( status ).text( 'S3 Upload failed: ' + err )
+		}
+		else
+		{
+			var fd = new FormData();
+			fd.append( 'uploadID', rgParams.upload_id );
+			fd.append( 'itemID', itemid );
+			fd.append( 'appID', g_AppId );
+			fd.append( 'sessionid', g_sessionID );
 
-            jQuery.ajax( {
-                url: 'https://partner.steamgames.com/admin/game/movieuploadcompletecloud/' + itemid,
-                type: 'POST',
-                cache: false,
-                data: fd,
-                contentType: false,
-                processData: false
-            } )
-                .done( function( data ) {
-                    if ( data.success )
-                    {
-                        //alert( 'movieuploadbegincloud -success! ' + JSON.stringify(data) );
-                        // uncomment this when this is the only upload path
-                        //MovieUploadComplete( itemid, movieContainer );
-                    }
-                    else
-                    {
-                        //alert( 'movieuploadcompletecloud - error ' );
-                    }
-                } )
-                .fail( function( jqXHR, textStatus ) {
-                    //alert( 'movieuploadcompletecloud - failed' );
-                } );
+			jQuery.ajax( {
+				url: 'https://partner.steamgames.com/admin/game/movieuploadcompletecloud/' + itemid,
+				type: 'POST',
+				cache: false,
+				data: fd,
+				contentType: false,
+				processData: false
+			} )
+				.done( function( data ) {
+					if ( data.success )
+					{
+						//alert( 'movieuploadbegincloud -success! ' + rgParams.upload_id );
 
-        }
-    } );
+						movieContainer.data( 'cloud_upload_id', rgParams.upload_id );
+
+						// For now, upload to TrailerPark as well, so start that now
+						BeginMovieUploadTrailerPark( itemid, movieContainer );
+
+						// uncomment this when this is the only upload path
+						//MovieUploadComplete( itemid, movieContainer );
+					}
+					else
+					{
+						//alert( 'movieuploadcompletecloud - error ' );
+					}
+				} )
+				.fail( function( jqXHR, textStatus ) {
+					//alert( 'movieuploadcompletecloud - failed' );
+				} );
+
+		}
+	} );
+}
+
+function BeginMovieUploadTrailerPark( itemid, group )
+{
+    var status = group.find( '.movie_upload_status' )[0];
+
+	// make begin upload call
+    var fd = new FormData();
+    var file = group.data( 'file' );
+    fd.append( 'file', file.name );
+
+    // lastModifiedData is being removed and already doesn't work on Safari
+    // as a stopgap, if it's not available to use, use the current time
+    // While this gets Safari working, resuming a broken download on Safari won't work.
+    if ( typeof file.lastModifiedDate !== 'undefined' )
+        fd.append( 'lastmodified', file.lastModifiedDate.getTime() );
+    else
+        fd.append( 'lastmodified', new Date().getTime() );
+
+    fd.append( 'size', file.size );
+    fd.append( 'sessionid', g_sessionID );
+
+    jQuery.ajax( {
+        url: 'https://partner.steamgames.com/admin/game/movieuploadbegin/' + itemid,
+        type: 'POST',
+        cache: false,
+        data: fd,
+        contentType: false,
+        processData: false
+    } )
+	.done( function( data ) {
+		if ( data.name )
+		{
+			var offset = parseInt( data.offset );
+			group.data( 'upload_name', data.name );
+
+			UploadMovieChunk( itemid, group, offset );
+		}
+		else
+		{
+			$J( status ).text( 'Failed Upload' );
+			SetMovieError( group, 'An error occurred while uploading this movie.', true );
+		}
+	} )
+	.fail( function( jqXHR, textStatus ) {
+		$J( status ).text( 'Failed Upload' );
+		SetMovieError( group, 'An error occurred while uploading this movie', true );
+	} );
 }
 
 function AddMovieForUpload( target, file )
@@ -833,7 +887,7 @@ function AddMovieForUpload( target, file )
 	// associate this file with the movie group so we can get it back later
 	var group = $J( target ).closest( '.movie_group' );
 	group.data( 'file', file );
-	var status = group.find( '.movie_upload_status' )[0];
+
 
 	var itemid = group.attr( 'itemid' );
 	var appid = g_AppId;
@@ -849,23 +903,7 @@ function AddMovieForUpload( target, file )
 	var name = group.find( '.movie_upload_name' )[0];
 	$J( name ).text( file.name + ' (' + strSizeFormatted + 'MB)' );
 
-	// make begin upload call
-	var fd = new FormData();
-	fd.append( 'file', file.name );
-
-	// lastModifiedData is being removed and already doesn't work on Safari
-	// as a stopgap, if it's not available to use, use the current time
-	// While this gets Safari working, resuming a broken download on Safari won't work.
-	if ( typeof file.lastModifiedDate !== 'undefined' )
-		fd.append( 'lastmodified', file.lastModifiedDate.getTime() );
-	else
-		fd.append( 'lastmodified', new Date().getTime() );
-
-	fd.append( 'size', file.size );
-	fd.append( 'sessionid', g_sessionID );
-
-
-	var bUploadToCloud = false;
+	var bUploadToCloud = true;
 	if ( bUploadToCloud )
 	{
 		 var cloudData = new FormData();
@@ -881,7 +919,7 @@ function AddMovieForUpload( target, file )
             contentType: false,
             processData: false
         })
-            .done(function (data) {
+        .done(function (data) {
                 if (data.success) {
                     //alert( 'movieuploadbegincloud -success! ' + JSON.stringify(data) );
                     UploadToS3(itemid, group, data);
@@ -892,34 +930,14 @@ function AddMovieForUpload( target, file )
             })
             .fail(function (jqXHR, textStatus) {
                 //alert( 'movieuploadbegincloud - failed' );
-            });
+            }
+		);
+	}
+	else
+	{
+		BeginMovieUploadTrailerPark( itemid, group );
 	}
 
-	jQuery.ajax( {
-		url: 'https://partner.steamgames.com/admin/game/movieuploadbegin/' + itemid,
-		type: 'POST',
-		cache: false,
-		data: fd,
-		contentType: false,
-		processData: false
-	} )
-	.done( function( data ) {
-		if ( data.name )
-		{
-			var offset = parseInt( data.offset );
-			group.data( 'upload_name', data.name );
-			UploadMovieChunk( itemid, group, offset );
-		}
-		else
-		{
-			$J( status ).text( 'Failed Upload' );
-			SetMovieError( group, 'An error occurred while uploading this movie.', true );
-		}
-	} )
-	.fail( function( jqXHR, textStatus ) {
-		$J( status ).text( 'Failed Upload' );
-		SetMovieError( group, 'An error occurred while uploading this movie', true );
-	} );
 }
 
 function UploadMovieChunk( itemid, movieContainer, offset )
@@ -996,6 +1014,7 @@ function MovieUploadComplete( itemid, movieContainer )
 {
 	var group = $J( movieContainer );
 	var uploadName = movieContainer.data( 'upload_name' );
+	var cloud_upload_id = movieContainer.data( 'cloud_upload_id' );
 	var status = movieContainer.find( '.movie_upload_status' )[0];
 	$J( status ).text( 'Processing' );
 
@@ -1003,6 +1022,11 @@ function MovieUploadComplete( itemid, movieContainer )
 	var fd = new FormData();
 	fd.append( 'file', uploadName );
 	fd.append( 'sessionid', g_sessionID );
+
+	if ( cloud_upload_id === undefined )
+		cloud_upload_id = 0;
+
+	fd.append( 'cloud_upload_id', cloud_upload_id );
 
 	jQuery.ajax( {
 		url: 'https://partner.steamgames.com/admin/game/converttrailer/' + itemid,
