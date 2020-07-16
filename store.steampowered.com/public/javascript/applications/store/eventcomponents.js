@@ -14435,7 +14435,7 @@
                   var f = this.GetRowsToShow(this.state.nShowAdditionalRows),
                     C = !0;
                   if (h.show_as_carousel) (f = y), (C = S);
-                  else if (0 == this.state.nShowAdditionalRows) {
+                  else if (0 == this.state.nShowAdditionalRows && 0 < f) {
                     for (var O = 0, w = 0; O < f; O++) {
                       if ((w += L = Math.min(v[O % v.length], u)) > _.length)
                         break;

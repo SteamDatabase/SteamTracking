@@ -2478,9 +2478,9 @@ function UpdateStoreBannerForPromotionalDiscount( nDiscount, nMinCartAmount, nAv
 	var strAmount = GStoreItemData.fnFormatCurrency( nDiscount, true );
 	var strMinAmount = GStoreItemData.fnFormatCurrency( nMinCartAmount, true );
 
-	var strTitle = '#Summer2020_DiscountBannerTitle';
-	var strHeader = '#Summer2020_DiscountBannerDetails'.replace( '%amount%', strAmount ).replace( '%min_amount%', strMinAmount );
-	var strDiscount = '#Summer2020_DiscountAppliedCheckout';
+	var strTitle = 'Road Trip Special';
+	var strHeader = 'Save an additional %amount% on a purchase of %min_amount%'.replace( '%amount%', strAmount ).replace( '%min_amount%', strMinAmount );
+	var strDiscount = 'Discount applied at checkout';
 	strTemplate = strTemplate.replace( '%title%', strTitle );
 	strTemplate = strTemplate.replace( '%header%', strHeader );
 	strTemplate = strTemplate.replace( '%discount%', strDiscount );
