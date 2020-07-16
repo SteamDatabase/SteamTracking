@@ -744,7 +744,6 @@ function OnMovieDrop( evt )
 
 function UploadToS3( itemid, movieContainer, rgParams )
 {
-	var uploadName = movieContainer.data( 'upload_name' );
 	var progress = movieContainer.find( '.movie_upload_progress' )[0];
 	var status = movieContainer.find( '.movie_upload_status' )[0];
 
@@ -813,13 +812,13 @@ function UploadToS3( itemid, movieContainer, rgParams )
 					{
 						//alert( 'movieuploadbegincloud -success! ' + rgParams.upload_id );
 
+						movieContainer.data( 'upload_name', itemid );
 						movieContainer.data( 'cloud_upload_id', rgParams.upload_id );
 
-						// For now, upload to TrailerPark as well, so start that now
-						BeginMovieUploadTrailerPark( itemid, movieContainer );
-
-						// uncomment this when this is the only upload path
-						//MovieUploadComplete( itemid, movieContainer );
+						// Would have called this to begin upload to TrailerPark, but not needed anymore
+						//BeginMovieUploadTrailerPark( itemid, movieContainer );
+						$J( progress ).css( { 'width': '100%' } );
+						MovieUploadComplete( itemid, movieContainer );
 					}
 					else
 					{
