@@ -1253,7 +1253,7 @@ GHomepage = {
 		var appTags = GHomepage.rgRecommendedByDeepDiveAppTags;
 		
 		//TODO: Make double-plus sure to check this for XSS vulns
-		focusedAppTitle = 'Because You Played <strong>%s</strong>'.replace( "%s", focusedAppTitle);
+		focusedAppTitle = '#header_recommended_by_deep_dive'.replace( "%s", focusedAppTitle);
 		
 		$RecommendedByDeepDiveTitle.html(focusedAppTitle);
 		
