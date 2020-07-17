@@ -1644,8 +1644,12 @@ body.modals_BodyNoScrollDialog_105OB {
   border: 2px solid transparent;
   z-index: 0; }
   .allcollections_Collection_3IWn-.Focusable:focus {
-    outline: none;
-    box-shadow: 0px 0px 3px 3px #99d4ff, 0px 0px 0px 3px #e4e8f1; }
+    outline: 2px solid #e4e8f1;
+    outline-offset: 2px;
+    box-shadow: 0 0 0.5em rgba(179, 223, 255, 0.5);
+    border: 2px solid transparent;
+    border-radius: 0;
+    transition: all 0.5s cubic-bezier(0.16, 0.86, 0.43, 0.99); }
   .allcollections_Collection_3IWn-.allcollections_ShowcaseView_2TPav .allcollections_CollectionImage_2ERAQ .allcollections_DisplayCaseContainer_3vMgn {
     transform-origin: 50% 15%; }
   .allcollections_Collection_3IWn- svg {
@@ -2637,6 +2641,13 @@ button.appdetailsheader_ExitEditModeButton_i7jBC.appdetailsheader_ExitEditModeBu
   background-size: 330% 100%;
   transition: all 0.2s ease-out;
   cursor: pointer; }
+  .appactionbutton_ButtonChild_2AzIX.Focusable:focus {
+    outline: 4px solid #e4e8f1;
+    outline-offset: 4px;
+    box-shadow: 0 0 0.5em rgba(179, 223, 255, 0.5);
+    border: 4px solid transparent;
+    border-radius: 0;
+    transition: all 0.5s cubic-bezier(0.16, 0.86, 0.43, 0.99); }
   .appactionbutton_ButtonChild_2AzIX.appactionbutton_StreamingSelector_2q-gZ {
     background: linear-gradient(to right, #235ecf 0%, #235ecf 60%);
     background-position: 0%;
@@ -2698,9 +2709,6 @@ button.appdetailsheader_ExitEditModeButton_i7jBC.appdetailsheader_ExitEditModeBu
   justify-content: center; }
   .appactionbutton_ShowingStreaming_1hhB2 .appactionbutton_PlayButton_3ydig {
     border-radius: 2px 0px 0px 2px; }
-  .appactionbutton_PlayButton_3ydig.Focusable:focus {
-    outline: none;
-    box-shadow: 0px 0px 5px 5px #99d4ff, 0px 0px 0px 5px #e4e8f1; }
   .appactionbutton_PlayButton_3ydig.appactionbutton_NoAction_5lnmC {
     padding: 0px; }
   .appactionbutton_PlayButton_3ydig .appactionbutton_ThrobberContainer_yYVX6 {
@@ -2748,6 +2756,17 @@ button.appdetailsheader_ExitEditModeButton_i7jBC.appdetailsheader_ExitEditModeBu
   box-sizing: border-box;
   padding: 0px 5px;
   border-radius: 0px 2px 2px 0px; }
+
+.appactionbutton_StreamingContextMenuItem_9zjx5.Focusable:focus {
+  color: #ffffff;
+  outline: 2px solid #e4e8f1;
+  outline-offset: 2px;
+  box-shadow: 0 0 0.5em rgba(179, 223, 255, 0.5);
+  border: 2px solid transparent;
+  border-radius: 0;
+  transition: all 0.5s cubic-bezier(0.16, 0.86, 0.43, 0.99);
+  background-color: #3d8bff;
+  color: #ffffff; }
 
 .personanameandstatus_statusAndName_4ZTzG {
   display: flex; }
@@ -3517,8 +3536,12 @@ button.TextButton.appdetailsfriendssection_ShowMore_34gmV {
   .appdetailsplaysection_MenuButton_3qDWQ.appdetailsplaysection_MenuActive_fyJia {
     background-color: rgba(205, 213, 226, 0.26); }
   .appdetailsplaysection_MenuButton_3qDWQ.Focusable:focus {
-    outline: none;
-    box-shadow: 0px 0px 3px 3px #99d4ff, 0px 0px 0px 3px #e4e8f1; }
+    outline: 2px solid #e4e8f1;
+    outline-offset: 2px;
+    box-shadow: 0 0 0.5em rgba(179, 223, 255, 0.5);
+    border: 2px solid transparent;
+    border-radius: 0;
+    transition: all 0.5s cubic-bezier(0.16, 0.86, 0.43, 0.99); }
   .appdetailsplaysection_MenuButton_3qDWQ.appdetailsplaysection_FavoriteButton_21hXW svg path {
     stroke: rgba(255, 255, 255, 0.5);
     stroke-width: 16px; }
@@ -3798,8 +3821,8 @@ div.UltraNarrowRightPanel .appdetailsplaysection_MiniAchievements_UAhWi {
   border: none; }
 
 .appdetailsbroadcastsection_BroadcastThumbnail_2l1gE img {
-  max-width: 100%;
-  max-height: 100%;
+  width: 100%;
+  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
@@ -5121,24 +5144,6 @@ img.emoticon_emoticon_AB86v {
   margin: 4px;
   margin-top: 5px; }
 
-.emoticon_CountBadge_3lf1T {
-  background: linear-gradient(to bottom, #fe6363, red);
-  box-shadow: 0 5px 7px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  color: #ffffff;
-  text-shadow: -1px -1px 1px rgba(255, 255, 255, 0.1), 1px 1px 1px rgba(0, 0, 0, 0.5);
-  position: absolute;
-  font-size: 12px;
-  font-weight: bold;
-  border-radius: 50%;
-  padding: 2.5px;
-  right: -4px;
-  top: -4px;
-  width: 18px;
-  height: 18px;
-  display: flex;
-  align-items: center;
-  justify-content: center; }
-
 .emoticon_StickerButton_3Wc3j {
   width: 40px;
   height: 40px;
@@ -5302,7 +5307,8 @@ img.emoticon_emoticon_AB86v {
   max-width: 46px;
   max-height: 50px;
   display: inline-flex;
-  justify-content: center; }
+  justify-content: center;
+  align-items: center; }
 
 .chatentry_chatSubmitButton_RVIs8.chatentry_EmbedButton_3zOBe {
   max-width: 46px;
@@ -5950,6 +5956,8 @@ img.emoticon_emoticon_AB86v {
   font-size: 13px;
   width: 100%;
   opacity: 0; }
+  .comment_thread_RatingBar_1yWgP > :first-child {
+    margin-left: auto; }
   .comment_thread_RatingBar_1yWgP.comment_thread_IsVisible_1XYMA {
     opacity: 1; }
   .comment_thread_RatingBar_1yWgP .comment_thread_RatingDetails_2lY7z {
@@ -5961,17 +5969,20 @@ img.emoticon_emoticon_AB86v {
     max-width: 90%;
     word-wrap: break-word; }
   .comment_thread_RatingBar_1yWgP .comment_thread_CommentButton_3i62H {
-    margin-left: auto;
+    border-radius: 2px; }
+  .comment_thread_RatingBar_1yWgP .comment_thread_Reactions_35yrb {
     border-radius: 2px; }
   .comment_thread_RatingBar_1yWgP .comment_thread_LikeCount_3grvn,
-  .comment_thread_RatingBar_1yWgP .comment_thread_CommentCount_2RkIc {
+  .comment_thread_RatingBar_1yWgP .comment_thread_CommentCount_2RkIc,
+  .comment_thread_RatingBar_1yWgP .comment_thread_ReactionCount_1S3Q9 {
     color: #707070;
     user-select: none;
     font-size: 14px; }
   .comment_thread_RatingBar_1yWgP .comment_thread_ButtonSpacer_21jcw {
     width: 10px; }
   .comment_thread_RatingBar_1yWgP .comment_thread_LikeButton_161IK,
-  .comment_thread_RatingBar_1yWgP .comment_thread_CommentButton_3i62H {
+  .comment_thread_RatingBar_1yWgP .comment_thread_CommentButton_3i62H,
+  .comment_thread_RatingBar_1yWgP .comment_thread_Reactions_35yrb {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -5981,36 +5992,60 @@ img.emoticon_emoticon_AB86v {
     position: relative;
     transition: all 0.2s ease-out; }
     .comment_thread_RatingBar_1yWgP .comment_thread_LikeButton_161IK.comment_thread_CanClick_3Mds9:hover,
-    .comment_thread_RatingBar_1yWgP .comment_thread_CommentButton_3i62H.comment_thread_CanClick_3Mds9:hover {
+    .comment_thread_RatingBar_1yWgP .comment_thread_CommentButton_3i62H.comment_thread_CanClick_3Mds9:hover,
+    .comment_thread_RatingBar_1yWgP .comment_thread_Reactions_35yrb.comment_thread_CanClick_3Mds9:hover {
       cursor: pointer;
       background-color: #323941; }
-      .comment_thread_RatingBar_1yWgP .comment_thread_LikeButton_161IK.comment_thread_CanClick_3Mds9:hover .comment_thread_LikeCount_3grvn, .comment_thread_RatingBar_1yWgP .comment_thread_LikeButton_161IK.comment_thread_CanClick_3Mds9:hover .comment_thread_CommentCount_2RkIc,
+      .comment_thread_RatingBar_1yWgP .comment_thread_LikeButton_161IK.comment_thread_CanClick_3Mds9:hover .comment_thread_LikeCount_3grvn, .comment_thread_RatingBar_1yWgP .comment_thread_LikeButton_161IK.comment_thread_CanClick_3Mds9:hover .comment_thread_CommentCount_2RkIc, .comment_thread_RatingBar_1yWgP .comment_thread_LikeButton_161IK.comment_thread_CanClick_3Mds9:hover .comment_thread_ReactionCount_1S3Q9,
       .comment_thread_RatingBar_1yWgP .comment_thread_CommentButton_3i62H.comment_thread_CanClick_3Mds9:hover .comment_thread_LikeCount_3grvn,
-      .comment_thread_RatingBar_1yWgP .comment_thread_CommentButton_3i62H.comment_thread_CanClick_3Mds9:hover .comment_thread_CommentCount_2RkIc {
+      .comment_thread_RatingBar_1yWgP .comment_thread_CommentButton_3i62H.comment_thread_CanClick_3Mds9:hover .comment_thread_CommentCount_2RkIc,
+      .comment_thread_RatingBar_1yWgP .comment_thread_CommentButton_3i62H.comment_thread_CanClick_3Mds9:hover .comment_thread_ReactionCount_1S3Q9,
+      .comment_thread_RatingBar_1yWgP .comment_thread_Reactions_35yrb.comment_thread_CanClick_3Mds9:hover .comment_thread_LikeCount_3grvn,
+      .comment_thread_RatingBar_1yWgP .comment_thread_Reactions_35yrb.comment_thread_CanClick_3Mds9:hover .comment_thread_CommentCount_2RkIc,
+      .comment_thread_RatingBar_1yWgP .comment_thread_Reactions_35yrb.comment_thread_CanClick_3Mds9:hover .comment_thread_ReactionCount_1S3Q9 {
         color: #cccccc; }
       .comment_thread_RatingBar_1yWgP .comment_thread_LikeButton_161IK.comment_thread_CanClick_3Mds9:hover .comment_thread_RatingIcon_2AVfX,
-      .comment_thread_RatingBar_1yWgP .comment_thread_CommentButton_3i62H.comment_thread_CanClick_3Mds9:hover .comment_thread_RatingIcon_2AVfX {
+      .comment_thread_RatingBar_1yWgP .comment_thread_CommentButton_3i62H.comment_thread_CanClick_3Mds9:hover .comment_thread_RatingIcon_2AVfX,
+      .comment_thread_RatingBar_1yWgP .comment_thread_Reactions_35yrb.comment_thread_CanClick_3Mds9:hover .comment_thread_RatingIcon_2AVfX {
         width: auto;
         height: inherit;
         fill: #cccccc;
         stroke: #cccccc; }
+      .comment_thread_RatingBar_1yWgP .comment_thread_LikeButton_161IK.comment_thread_CanClick_3Mds9:hover .comment_thread_ReactionSvg_1Wl4V path,
+      .comment_thread_RatingBar_1yWgP .comment_thread_CommentButton_3i62H.comment_thread_CanClick_3Mds9:hover .comment_thread_ReactionSvg_1Wl4V path,
+      .comment_thread_RatingBar_1yWgP .comment_thread_Reactions_35yrb.comment_thread_CanClick_3Mds9:hover .comment_thread_ReactionSvg_1Wl4V path {
+        fill: #cccccc; }
   .comment_thread_RatingBar_1yWgP .comment_thread_LikeIcon_1OhPt {
     margin-bottom: 1px;
     margin-top: -1px; }
   .comment_thread_RatingBar_1yWgP .comment_thread_LikeIcon_1OhPt,
-  .comment_thread_RatingBar_1yWgP .comment_thread_CommentIcon_1R6Ou {
+  .comment_thread_RatingBar_1yWgP .comment_thread_CommentIcon_1R6Ou,
+  .comment_thread_RatingBar_1yWgP .comment_thread_ReactionIcon_QL3Aa {
     width: 28px;
     height: 28px;
     overflow: hidden;
     position: relative; }
+    .comment_thread_RatingBar_1yWgP .comment_thread_LikeIcon_1OhPt .comment_thread_ReactionSvg_1Wl4V,
+    .comment_thread_RatingBar_1yWgP .comment_thread_CommentIcon_1R6Ou .comment_thread_ReactionSvg_1Wl4V,
+    .comment_thread_RatingBar_1yWgP .comment_thread_ReactionIcon_QL3Aa .comment_thread_ReactionSvg_1Wl4V {
+      width: 24;
+      height: 28;
+      margin-left: 8px;
+      margin-top: 4px; }
+      .comment_thread_RatingBar_1yWgP .comment_thread_LikeIcon_1OhPt .comment_thread_ReactionSvg_1Wl4V path,
+      .comment_thread_RatingBar_1yWgP .comment_thread_CommentIcon_1R6Ou .comment_thread_ReactionSvg_1Wl4V path,
+      .comment_thread_RatingBar_1yWgP .comment_thread_ReactionIcon_QL3Aa .comment_thread_ReactionSvg_1Wl4V path {
+        fill: #707070; }
     .comment_thread_RatingBar_1yWgP .comment_thread_LikeIcon_1OhPt .comment_thread_RatingIcon_2AVfX,
-    .comment_thread_RatingBar_1yWgP .comment_thread_CommentIcon_1R6Ou .comment_thread_RatingIcon_2AVfX {
+    .comment_thread_RatingBar_1yWgP .comment_thread_CommentIcon_1R6Ou .comment_thread_RatingIcon_2AVfX,
+    .comment_thread_RatingBar_1yWgP .comment_thread_ReactionIcon_QL3Aa .comment_thread_RatingIcon_2AVfX {
       width: auto;
       height: inherit;
       fill: #707070;
       stroke: #707070; }
       .comment_thread_RatingBar_1yWgP .comment_thread_LikeIcon_1OhPt .comment_thread_RatingIcon_2AVfX.comment_thread_UserRated_2gr2M,
-      .comment_thread_RatingBar_1yWgP .comment_thread_CommentIcon_1R6Ou .comment_thread_RatingIcon_2AVfX.comment_thread_UserRated_2gr2M {
+      .comment_thread_RatingBar_1yWgP .comment_thread_CommentIcon_1R6Ou .comment_thread_RatingIcon_2AVfX.comment_thread_UserRated_2gr2M,
+      .comment_thread_RatingBar_1yWgP .comment_thread_ReactionIcon_QL3Aa .comment_thread_RatingIcon_2AVfX.comment_thread_UserRated_2gr2M {
         fill: #2a80ad;
         stroke: #2a80ad;
         position: relative;
@@ -6899,6 +6934,10 @@ b {
   background-color: #461F28;
   padding: 4px; }
 
+.partnereventshared_ValveOnlyAdminBackground_3HVu1 {
+  background-color: #761F28;
+  padding: 4px; }
+
 .partnereventshared_Columns_1oVIR {
   display: flex;
   flex-direction: row;
@@ -6976,6 +7015,14 @@ span.partnereventshared_tooltip_Ctn_3nqxI {
 
 button.Primary.partnereventshared_AddSectionButton_2_djj {
   margin-top: 12px; }
+
+.partnereventshared_EventElementRequired_12rm6 {
+  color: orange;
+  font-size: 14px; }
+
+.partnereventshared_EventElementOptional_1mpG6 {
+  color: #06beff;
+  font-size: 14px; }
 
 .suggestdialog_mentionDialogPosition_3isL0 {
   position: absolute;
@@ -7463,6 +7510,8 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
       background-position: -80px -16px; }
     .appdetailscommunityfeed_Controls_3lh8a .appdetailscommunityfeed_Icon16_3AoQ6.appdetailscommunityfeed_ThumbsDown_3BEgJ.appdetailscommunityfeed_Selected_3CH2x {
       background-position: -96px -16px; }
+    .appdetailscommunityfeed_Controls_3lh8a .appdetailscommunityfeed_Icon16_3AoQ6.appdetailscommunityfeed_Reactions_1TNqq {
+      background: unset; }
   .appdetailscommunityfeed_Controls_3lh8a .appdetailscommunityfeed_Control_1GfHt {
     font-size: 14px;
     margin-right: 10px;
@@ -9210,8 +9259,12 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
         outline: none; }
     .FocusGroup .appdetailsprimarylinkssection_LinkInner_7k4qm .appdetailsprimarylinkssection_Link_1b6LY:focus-within {
       color: #ffffff;
-      outline: none;
-      box-shadow: 0px 0px 2px 2px #99d4ff, 0px 0px 0px 2px #e4e8f1;
+      outline: 2px solid #e4e8f1;
+      outline-offset: 2px;
+      box-shadow: 0 0 0.5em rgba(179, 223, 255, 0.5);
+      border: 2px solid transparent;
+      border-radius: 0;
+      transition: all 0.5s cubic-bezier(0.16, 0.86, 0.43, 0.99);
       background-color: #3d8bff;
       color: #ffffff; }
       .FocusGroup .appdetailsprimarylinkssection_LinkInner_7k4qm .appdetailsprimarylinkssection_Link_1b6LY:focus-within .appdetailsprimarylinkssection_Text_2sNDj {
@@ -9262,9 +9315,30 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
   cursor: pointer;
   display: flex;
   align-items: center; }
+  .appdetailsprimarylinkssection_MenuButton_1bIMO.Focusable:focus {
+    color: #ffffff;
+    outline: 2px solid #e4e8f1;
+    outline-offset: 2px;
+    box-shadow: 0 0 0.5em rgba(179, 223, 255, 0.5);
+    border: 2px solid transparent;
+    border-radius: 0;
+    transition: all 0.5s cubic-bezier(0.16, 0.86, 0.43, 0.99);
+    background-color: #3d8bff;
+    color: #ffffff; }
   .appdetailsprimarylinkssection_MenuButton_1bIMO svg {
     height: 100%;
     width: 100%; }
+
+.appdetailsprimarylinkssection_ContextMenuItem_322wB.Focusable:focus {
+  color: #ffffff;
+  outline: 2px solid #e4e8f1;
+  outline-offset: 2px;
+  box-shadow: 0 0 0.5em rgba(179, 223, 255, 0.5);
+  border: 2px solid transparent;
+  border-radius: 0;
+  transition: all 0.5s cubic-bezier(0.16, 0.86, 0.43, 0.99);
+  background-color: #3d8bff;
+  color: #ffffff; }
 
 .appdetailsworkshophover_AppDetailsWorkshopHover_2fORf {
   width: 220px;
@@ -10416,6 +10490,58 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
 /* stylelint-disable */
 
 /* stylelint-enable */
+.appdetailstimedtrialbanner_TimedTrialBanner_5wiyz {
+  padding: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: radial-gradient(100% 80% at 64% 95%, rgba(153, 174, 204, 0.3) 0%, rgba(125, 150, 184, 0.13) 40%, rgba(83, 104, 104, 0.1) 100%); }
+  .appdetailstimedtrialbanner_TimedTrialBanner_5wiyz .appdetailstimedtrialbanner_LeftColumn_FFW6K {
+    width: 300px;
+    max-width: 50%;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    bottom: inherit;
+    flex: 0 0 auto; }
+  .appdetailstimedtrialbanner_TimedTrialBanner_5wiyz .appdetailstimedtrialbanner_HeaderArt_32qYX {
+    width: 100%; }
+  .appdetailstimedtrialbanner_TimedTrialBanner_5wiyz .appdetailstimedtrialbanner_RightColumn_iLdNr {
+    font-size: 14px;
+    overflow: hidden;
+    padding: 0px 10px; }
+    .appdetailstimedtrialbanner_TimedTrialBanner_5wiyz .appdetailstimedtrialbanner_RightColumn_iLdNr .appdetailstimedtrialbanner_Header_3pfdM {
+      color: white;
+      font-size: 24px; }
+      div.NarrowRightPanel .appdetailstimedtrialbanner_TimedTrialBanner_5wiyz .appdetailstimedtrialbanner_RightColumn_iLdNr .appdetailstimedtrialbanner_Header_3pfdM {
+        font-size: 18px; }
+    .appdetailstimedtrialbanner_TimedTrialBanner_5wiyz .appdetailstimedtrialbanner_RightColumn_iLdNr .appdetailstimedtrialbanner_Description_MDtiK {
+      max-width: 600px; }
+      div.NarrowRightPanel .appdetailstimedtrialbanner_TimedTrialBanner_5wiyz .appdetailstimedtrialbanner_RightColumn_iLdNr .appdetailstimedtrialbanner_Description_MDtiK {
+        font-size: 13px; }
+    .appdetailstimedtrialbanner_TimedTrialBanner_5wiyz .appdetailstimedtrialbanner_RightColumn_iLdNr .appdetailstimedtrialbanner_MasterSubLink_2jIpX {
+      color: #bebebe;
+      text-decoration: underline; }
+    .appdetailstimedtrialbanner_TimedTrialBanner_5wiyz .appdetailstimedtrialbanner_RightColumn_iLdNr .appdetailstimedtrialbanner_StoreButton_AHLW3 {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 2px 12px 4px 12px;
+      border-radius: 2px;
+      background-color: rgba(101, 113, 128, 0.3); }
+      .appdetailstimedtrialbanner_TimedTrialBanner_5wiyz .appdetailstimedtrialbanner_RightColumn_iLdNr .appdetailstimedtrialbanner_StoreButton_AHLW3 a {
+        color: rgba(255, 255, 255, 0.32);
+        text-decoration: none;
+        white-space: nowrap; }
+      .appdetailstimedtrialbanner_TimedTrialBanner_5wiyz .appdetailstimedtrialbanner_RightColumn_iLdNr .appdetailstimedtrialbanner_StoreButton_AHLW3:hover {
+        background-color: rgba(101, 113, 128, 0.5);
+        cursor: pointer; }
+        .appdetailstimedtrialbanner_TimedTrialBanner_5wiyz .appdetailstimedtrialbanner_RightColumn_iLdNr .appdetailstimedtrialbanner_StoreButton_AHLW3:hover a {
+          color: white; }
+
+/* stylelint-disable */
+
+/* stylelint-enable */
 .appfilterpane_Container_170Np {
   flex: auto;
   box-sizing: border-box;
@@ -10895,8 +11021,12 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
     transition-timing-function: cubic-bezier(0, 0.73, 0.48, 1);
     padding: 4px; }
   .appportrait_LibraryItemBox_WYgDg.Focusable:focus {
-    outline: none;
-    box-shadow: 0px 0px 3px 3px #99d4ff, 0px 0px 0px 3px #e4e8f1;
+    outline: 2px solid #e4e8f1;
+    outline-offset: 2px;
+    box-shadow: 0 0 0.5em rgba(179, 223, 255, 0.5);
+    border: 2px solid transparent;
+    border-radius: 0;
+    transition: all 0.5s cubic-bezier(0.16, 0.86, 0.43, 0.99);
     transform: scale(1.05);
     backface-visibility: hidden; }
   .appportrait_HoversEnabled_54PuC .appportrait_LibraryItemBox_WYgDg:hover .appportrait_UninstalledIcon_8YrRm {
@@ -11457,8 +11587,12 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
     justify-content: flex-end;
     color: #ccc; }
     .appgrid_SortingDropDown_1tBzy ._DialogInputContainer.Focusable:focus {
-      outline: none;
-      box-shadow: 0px 0px 3px 3px #99d4ff, 0px 0px 0px 3px #e4e8f1; }
+      outline: 2px solid #e4e8f1;
+      outline-offset: 2px;
+      box-shadow: 0 0 0.5em rgba(179, 223, 255, 0.5);
+      border: 2px solid transparent;
+      border-radius: 0;
+      transition: all 0.5s cubic-bezier(0.16, 0.86, 0.43, 0.99); }
     .appgrid_SortingDropDown_1tBzy ._DialogInputContainer.DialogDropDown:hover {
       box-shadow: none;
       color: #fff; }
@@ -11507,8 +11641,12 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
     margin-left: 1px; }
     .appgrid_SortingDropDownContainer_1ZpBQ .appgrid_SortingDropDownItems_1ZtpS.Focusable:focus {
       color: #ffffff;
-      outline: none;
-      box-shadow: 0px 0px 3px 3px #99d4ff, 0px 0px 0px 3px #e4e8f1;
+      outline: 2px solid #e4e8f1;
+      outline-offset: 2px;
+      box-shadow: 0 0 0.5em rgba(179, 223, 255, 0.5);
+      border: 2px solid transparent;
+      border-radius: 0;
+      transition: all 0.5s cubic-bezier(0.16, 0.86, 0.43, 0.99);
       background-color: #3d8bff;
       color: #ffffff; }
     .appgrid_SortingDropDownContainer_1ZpBQ .appgrid_SortingDropDownItems_1ZtpS:hover {
@@ -12794,9 +12932,11 @@ div.appgrid_CoverSizeSlider_U4J9B {
   display: flex;
   white-space: nowrap;
   margin: 5px; }
-  @media screen and (max-width: 550px) {
-    .discussionwidget_DiscussionButton_rHz7G .discussionwidget_DiscussionButtonText_3P2Xe {
-      display: none; } }
+  .discussionwidget_DiscussionButton_rHz7G .discussionwidget_DiscussionButtonText_3P2Xe {
+    line-height: 22px; }
+    @media screen and (max-width: 550px) {
+      .discussionwidget_DiscussionButton_rHz7G .discussionwidget_DiscussionButtonText_3P2Xe {
+        display: none; } }
   .discussionwidget_DiscussionButton_rHz7G .discussionwidget_DiscussIcon_1HBhp {
     display: none; }
     @media screen and (max-width: 910px) {
@@ -13072,7 +13212,8 @@ iframe.eventbbcodeyoutubeembed_PreviewYouTubeVideo_2sJoC.eventbbcodeyoutubeembed
   border: none;
   height: 1px;
   color: #6e7577;
-  background-color: #6e7577; }
+  background-color: #6e7577;
+  margin: 12px 0px; }
 
 .eventbbcodeparser_Link_29bMZ {
   color: #969696;
@@ -13705,34 +13846,66 @@ textarea:-webkit-autofill:focus,
   z-index: 2000; }
 
 .eventreminder_ReminderCheckBox_vPo2j {
-  background-image: radial-gradient(circle at top left, #399aec 10%, #225dce 80%);
   display: flex;
-  flex-direction: row;
   font-size: 14px;
-  border-radius: 3px; }
-  .eventreminder_ReminderCheckBox_vPo2j:hover {
-    cursor: pointer;
-    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5); }
-    .eventreminder_ReminderCheckBox_vPo2j:hover .eventreminder_ReminderDefault_19p2Q, .eventreminder_ReminderCheckBox_vPo2j:hover .eventreminder_ReminderOptions_1Tp8K, .eventreminder_ReminderCheckBox_vPo2j:hover .eventreminder_ReminderCheck_3fMhC, .eventreminder_ReminderCheckBox_vPo2j:hover .eventreminder_ReminderOpennedOptions_vBuhk {
-      background-color: rgba(57, 154, 236, 0.5); }
-
-.eventreminder_ReminderDefault_19p2Q {
-  padding: 6px 12px;
-  color: #ffffff;
-  flex: 1;
-  flex-grow: 100;
-  border-right: 1px solid rgba(0, 0, 0, 0.5); }
-
-.eventreminder_ReminderCheckBox_vPo2j
-.eventreminder_ReminderOptions_1Tp8K,
-.eventreminder_ReminderOpennedOptions_vBuhk {
-  flex: 1;
-  flex-basis: 32px;
-  background-repeat: no-repeat;
-  background-position: 9px 10px;
-  width: 35px;
-  height: 32px;
-  border-left: 1px solid rgba(255, 255, 255, 0.15); }
+  overflow: hidden; }
+  .eventreminder_ReminderCheckBox_vPo2j.eventreminder_IconMode_1YjsR {
+    position: relative; }
+    .eventreminder_ReminderCheckBox_vPo2j.eventreminder_IconMode_1YjsR .eventreminder_RemindBell_3-_M2 {
+      width: 26px;
+      height: 32px;
+      padding-left: 4px; }
+    .eventreminder_ReminderCheckBox_vPo2j.eventreminder_IconMode_1YjsR svg {
+      fill: #399aec; }
+    .eventreminder_ReminderCheckBox_vPo2j.eventreminder_IconMode_1YjsR .eventreminder_RemindCheck_2qaPr {
+      position: absolute;
+      padding-top: 0;
+      height: 32px; }
+    .eventreminder_ReminderCheckBox_vPo2j.eventreminder_IconMode_1YjsR .eventreminder_ReminderOptions_1Tp8K {
+      display: none; }
+    .eventreminder_ReminderCheckBox_vPo2j.eventreminder_IconMode_1YjsR .eventreminder_ReminderDefault_19p2Q {
+      width: 0;
+      padding: 0;
+      height: 0;
+      border: 0; }
+      html:not(.touch) .eventreminder_ReminderCheckBox_vPo2j.eventreminder_IconMode_1YjsR .eventreminder_ReminderDefault_19p2Q {
+        /* stylelint-disable-line selector-class-pattern */
+        transition: padding-left 0.2s ease-out; }
+    .eventreminder_ReminderCheckBox_vPo2j.eventreminder_IconMode_1YjsR:hover .eventreminder_ReminderOptions_1Tp8K, .eventreminder_ReminderDialog_3YUEY .eventreminder_ReminderCheckBox_vPo2j.eventreminder_IconMode_1YjsR .eventreminder_ReminderOptions_1Tp8K {
+      display: block; }
+    .eventreminder_ReminderCheckBox_vPo2j.eventreminder_IconMode_1YjsR:hover .eventreminder_ReminderDefault_19p2Q, .eventreminder_ReminderDialog_3YUEY .eventreminder_ReminderCheckBox_vPo2j.eventreminder_IconMode_1YjsR .eventreminder_ReminderDefault_19p2Q {
+      width: auto;
+      padding: 6px 12px; }
+    .eventreminder_ReminderCheckBox_vPo2j.eventreminder_IconMode_1YjsR:hover .eventreminder_RemindBell_3-_M2, .eventreminder_ReminderDialog_3YUEY .eventreminder_ReminderCheckBox_vPo2j.eventreminder_IconMode_1YjsR .eventreminder_RemindBell_3-_M2 {
+      display: none; }
+    .eventreminder_ReminderCheckBox_vPo2j.eventreminder_IconMode_1YjsR:hover .eventreminder_RemindCheck_2qaPr, .eventreminder_ReminderDialog_3YUEY .eventreminder_ReminderCheckBox_vPo2j.eventreminder_IconMode_1YjsR .eventreminder_RemindCheck_2qaPr {
+      position: relative; }
+  .eventreminder_ReminderCheckBox_vPo2j.eventreminder_TextMode_553rC, .eventreminder_ReminderCheckBox_vPo2j.eventreminder_IconMode_1YjsR:hover, .eventreminder_ReminderDialog_3YUEY .eventreminder_ReminderCheckBox_vPo2j {
+    background-image: radial-gradient(circle at top left, #399aec 10%, #225dce 80%);
+    border-radius: 3px; }
+    .eventreminder_ReminderCheckBox_vPo2j.eventreminder_TextMode_553rC:hover, .eventreminder_ReminderCheckBox_vPo2j.eventreminder_IconMode_1YjsR:hover:hover, .eventreminder_ReminderDialog_3YUEY .eventreminder_ReminderCheckBox_vPo2j:hover {
+      cursor: pointer;
+      box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5); }
+      .eventreminder_ReminderCheckBox_vPo2j.eventreminder_TextMode_553rC:hover .eventreminder_ReminderDefault_19p2Q, .eventreminder_ReminderCheckBox_vPo2j.eventreminder_TextMode_553rC:hover .eventreminder_ReminderOptions_1Tp8K, .eventreminder_ReminderCheckBox_vPo2j.eventreminder_TextMode_553rC:hover .eventreminder_ReminderCheck_3fMhC, .eventreminder_ReminderCheckBox_vPo2j.eventreminder_TextMode_553rC:hover .eventreminder_ReminderOpennedOptions_vBuhk, .eventreminder_ReminderCheckBox_vPo2j.eventreminder_IconMode_1YjsR:hover:hover .eventreminder_ReminderDefault_19p2Q, .eventreminder_ReminderCheckBox_vPo2j.eventreminder_IconMode_1YjsR:hover:hover .eventreminder_ReminderOptions_1Tp8K, .eventreminder_ReminderCheckBox_vPo2j.eventreminder_IconMode_1YjsR:hover:hover .eventreminder_ReminderCheck_3fMhC, .eventreminder_ReminderCheckBox_vPo2j.eventreminder_IconMode_1YjsR:hover:hover .eventreminder_ReminderOpennedOptions_vBuhk, .eventreminder_ReminderDialog_3YUEY .eventreminder_ReminderCheckBox_vPo2j:hover .eventreminder_ReminderDefault_19p2Q, .eventreminder_ReminderDialog_3YUEY .eventreminder_ReminderCheckBox_vPo2j:hover .eventreminder_ReminderOptions_1Tp8K, .eventreminder_ReminderDialog_3YUEY .eventreminder_ReminderCheckBox_vPo2j:hover .eventreminder_ReminderCheck_3fMhC, .eventreminder_ReminderDialog_3YUEY .eventreminder_ReminderCheckBox_vPo2j:hover .eventreminder_ReminderOpennedOptions_vBuhk {
+        background-color: rgba(57, 154, 236, 0.5); }
+    .eventreminder_ReminderCheckBox_vPo2j.eventreminder_TextMode_553rC .eventreminder_ReminderDefault_19p2Q, .eventreminder_ReminderCheckBox_vPo2j.eventreminder_IconMode_1YjsR:hover .eventreminder_ReminderDefault_19p2Q, .eventreminder_ReminderDialog_3YUEY .eventreminder_ReminderCheckBox_vPo2j .eventreminder_ReminderDefault_19p2Q {
+      padding: 6px 12px;
+      color: #ffffff;
+      flex: 1;
+      flex-grow: 100;
+      border-right: 1px solid rgba(0, 0, 0, 0.5);
+      line-height: 20px;
+      height: 32px;
+      white-space: nowrap;
+      box-sizing: border-box; }
+    .eventreminder_ReminderCheckBox_vPo2j.eventreminder_TextMode_553rC .eventreminder_ReminderOptions_1Tp8K, .eventreminder_ReminderCheckBox_vPo2j.eventreminder_TextMode_553rC .eventreminder_ReminderOpennedOptions_vBuhk, .eventreminder_ReminderCheckBox_vPo2j.eventreminder_IconMode_1YjsR:hover .eventreminder_ReminderOptions_1Tp8K, .eventreminder_ReminderCheckBox_vPo2j.eventreminder_IconMode_1YjsR:hover .eventreminder_ReminderOpennedOptions_vBuhk, .eventreminder_ReminderDialog_3YUEY .eventreminder_ReminderCheckBox_vPo2j .eventreminder_ReminderOptions_1Tp8K, .eventreminder_ReminderDialog_3YUEY .eventreminder_ReminderCheckBox_vPo2j .eventreminder_ReminderOpennedOptions_vBuhk {
+      flex: 1;
+      flex-basis: 32px;
+      background-repeat: no-repeat;
+      background-position: 9px 9px;
+      width: 35px;
+      height: 32px;
+      border-left: 1px solid rgba(255, 255, 255, 0.15); }
 
 .eventreminder_ReminderOptions_1Tp8K {
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAFo9M/3AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6Q0M1MEE4RDkxREYwMTFFOUJGNjhDQjk4QzYxOUI2RUEiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6Q0M1MEE4REExREYwMTFFOUJGNjhDQjk4QzYxOUI2RUEiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpDQzUwQThENzFERjAxMUU5QkY2OENCOThDNjE5QjZFQSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpDQzUwQThEODFERjAxMUU5QkY2OENCOThDNjE5QjZFQSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PkFcBtEAAADkSURBVHjaYvz//z8DCDCBiHfv3v0HCCBGmAgIiIAIgAACizAyMgpABf8wICsBAYAAYsQQAGIeIGaB8j+Aybdv3/6HGYoBAAIIwwx0ADYL6AwRoDGvkSWEhYVFgdQbdGeJoNtF0AqAACKogImBAGCEOpQHi9wXoOl/wAqAPviNLgv0BStIAciKPyAOuiQ45NHDBBqksHBmIOQBsAIWQqoAAoxgOBACTAwUAlhkcwA9+J1YTcBQ4gRSP8DpFZpoYYYJoKcaLCnoAyyI0Q1AdhWKQegaUaIBTyCCDOJAjjds0TTwsQAAEO5yLEGNvDIAAAAASUVORK5CYII=); }
@@ -13774,6 +13947,8 @@ textarea:-webkit-autofill:focus,
   height: 26px;
   padding-top: 5px;
   padding-left: 4px; }
+  .eventreminder_RemindCheck_2qaPr svg polyline {
+    stroke-width: 32; }
 
 .eventreminder_RpcThrobber_3F3aB {
   position: absolute;
@@ -13919,6 +14094,1394 @@ textarea:-webkit-autofill:focus,
     height: 32px;
     margin-right: 8px; }
 
+.basicpartnereventrender_Main_1Zn_5 {
+  height: 100vh;
+  overflow-y: scroll; }
+
+.demoappcapsule_DemoCapsuleCtn_1ksI0 {
+  box-sizing: border-box;
+  background: linear-gradient(-210deg, rgba(0, 0, 0, 0.6) 5%, rgba(0, 0, 0, 0.4) 95%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  min-width: 0;
+  outline: none; }
+  .demoappcapsule_DemoCapsuleCtn_1ksI0 .demoappcapsule_DemoCapsuleImageCtn_313SJ {
+    position: relative;
+    width: 100%;
+    padding: 56.25% 0 0 0;
+    margin: 0 auto auto; }
+    .demoappcapsule_DemoCapsuleCtn_1ksI0 .demoappcapsule_DemoCapsuleImageCtn_313SJ .demoappcapsule_DemoCapsuleImage_3VoY_ {
+      width: 100%;
+      height: auto; }
+  .demoappcapsule_DemoCapsuleCtn_1ksI0 .demoappcapsule_DemoThrobber_2kwXN {
+    height: 100%;
+    vertical-align: center;
+    margin: 20px auto; }
+  .demoappcapsule_DemoCapsuleCtn_1ksI0 .demoappcapsule_DemoCapsuleEventReference_2gIpe {
+    padding: 4px 6px;
+    box-sizing: border-box; }
+  .demoappcapsule_DemoCapsuleCtn_1ksI0 .demoappcapsule_DemoCapsuleReleaseAndPlatform_20lpw {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 4px;
+    align-items: center; }
+  .demoappcapsule_DemoCapsuleCtn_1ksI0 .demoappcapsule_DemoCapsuleRelease_3oE75 {
+    padding: 4px 8px;
+    display: flex;
+    min-width: 0;
+    overflow: hidden;
+    font-size: 11px; }
+    .demoappcapsule_DemoCapsuleCtn_1ksI0 .demoappcapsule_DemoCapsuleRelease_3oE75 .demoappcapsule_DemoCapsuleReleasePrefix_1-dne {
+      margin-right: 4px;
+      flex: 1;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis; }
+  .demoappcapsule_DemoCapsuleCtn_1ksI0 .demoappcapsule_DemoCapsuleActionCtn_2FQWe {
+    display: flex;
+    padding: 0px 3px 6px; }
+
+.demoappcapsule_DemoButton_Pohdr {
+  position: relative;
+  background-color: #3d4450;
+  flex-grow: 1;
+  flex-basis: 50%;
+  line-height: 32px;
+  color: #dfe3e6;
+  text-align: center;
+  border-radius: 2px;
+  cursor: pointer;
+  white-space: nowrap;
+  margin: 0 3px;
+  padding: 0 10px; }
+  .demoappcapsule_DemoButton_Pohdr.demoappcapsule_DisabledButton_3SqOM, .demoappcapsule_DemoButton_Pohdr.demoappcapsule_DisabledButton_3SqOM:hover {
+    color: #a6b4bf; }
+  .demoappcapsule_DemoButton_Pohdr:not(.demoappcapsule_DisabledButton_3SqOM):hover, .demoappcapsule_DemoButton_Pohdr.demoappcapsule_MenuOpened_AXZ6_ {
+    background: linear-gradient(to right, #8ed629 5%, #6aa621 95%);
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); }
+  .demoappcapsule_DemoButton_Pohdr .demoappcapsule_DownArrow_tUU0_ {
+    position: absolute;
+    top: 0;
+    right: 6px;
+    transform: scaleX(0.4);
+    width: 26px;
+    height: 26px; }
+
+.demoappcapsule_MoreActionsMenu_WRTAQ.demoappcapsule_MoreActionsMenu_WRTAQ {
+  color: white;
+  background: #787878;
+  box-sizing: border-box; }
+  .demoappcapsule_MoreActionsMenu_WRTAQ.demoappcapsule_MoreActionsMenu_WRTAQ .demoappcapsule_MoreActionsMenuItem_3hU37 {
+    display: block;
+    padding: 4px;
+    width: 100%;
+    box-sizing: border-box; }
+    .demoappcapsule_MoreActionsMenu_WRTAQ.demoappcapsule_MoreActionsMenu_WRTAQ .demoappcapsule_MoreActionsMenuItem_3hU37:hover {
+      background: #969696; }
+
+.salepreviewwidgets_StoreSaleWidgetContainer_2hhNO {
+  display: flex;
+  flex-direction: row;
+  z-index: 1; }
+  @media screen and (max-width: 620px) {
+    .salepreviewwidgets_StoreSaleWidgetContainer_2hhNO {
+      flex-direction: column; } }
+
+.salepreviewwidgets_StoreSaleWidgetImage_yvqq8 {
+  margin-right: 16px;
+  cursor: pointer;
+  position: relative; }
+  @media screen and (max-width: 620px) {
+    .salepreviewwidgets_StoreSaleWidgetImage_yvqq8 {
+      margin-right: 0px; } }
+
+.salepreviewwidgets_CapsuleMicroTrailer_1M7n5 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: block;
+  pointer-events: none;
+  background: black; }
+
+.salepreviewwidgets_StoreSaleWidgetTitle_2ekpT {
+  cursor: pointer;
+  font-size: 24px;
+  line-height: 28px;
+  width: fit-content;
+  color: #e5e5e5;
+  flex-shrink: 0;
+  margin-top: 2px;
+  text-align: left; }
+
+.salepreviewwidgets_StoreSaleWidgetTitle_2ekpT:hover {
+  color: #ffffff;
+  text-decoration: underline; }
+
+.salepreviewwidgets_StoreSaleWidgetReleaseAndTags_3wryh {
+  display: flex;
+  flex-direction: row; }
+
+.salepreviewwidgets_StoreSaleWidgetRelease_1qvTF {
+  font-size: 12px;
+  line-height: 15px;
+  color: #a5b0b6;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+  margin-right: 10px;
+  flex-shrink: 0; }
+  @media screen and (max-width: 620px) {
+    .salepreviewwidgets_StoreSaleWidgetRelease_1qvTF {
+      display: none; } }
+
+.salepreviewwidgets_StoreSaleWidgetTags_2bkP- {
+  height: 25px;
+  overflow: hidden;
+  margin-top: 4px;
+  text-align: left; }
+
+.salepreviewwidgets_AppTag_3FJnZ {
+  display: inline-block;
+  line-height: 19px;
+  padding: 0 7px;
+  color: #a5b0b6;
+  background-color: rgba(112, 129, 137, 0.15);
+  box-shadow: none;
+  margin-right: 2px;
+  border-radius: 2px;
+  margin-bottom: 3px;
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 10px; }
+  .salepreviewwidgets_AppTag_3FJnZ:hover {
+    text-decoration: none;
+    cursor: default;
+    background-color: rgba(112, 129, 137, 0.15); }
+  .salepreviewwidgets_AppTag_3FJnZ:nth-child(n+6) {
+    display: none; }
+
+.salepreviewwidgets_StoreSaleWidgetShortDesc_3AsE5 {
+  font-size: 12px;
+  line-height: 15px;
+  max-height: 93px;
+  padding: 6px 0px;
+  overflow: hidden;
+  text-align: left;
+  flex: 1; }
+
+.salepreviewwidgets_StoreSaleWidgetLeft_3DkfN {
+  padding: 0px;
+  flex-basis: 40%;
+  min-width: 200px; }
+
+.salepreviewwidgets_StoreSaleWidgetRight_v9uRg {
+  padding: 0px 4px 4px 4px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column; }
+  .salepreviewwidgets_StoreSaleWidgetRight_v9uRg .salepreviewwidgets_TitleCtn_3rrH9 {
+    display: flex;
+    justify-content: space-between; }
+
+.salepreviewwidgets_StoreSaleBroadcastWidgetRight_9VjYX {
+  padding: 0px 4px 4px 4px;
+  overflow: hidden;
+  flex: 1;
+  display: flex;
+  flex-direction: column; }
+  .salepreviewwidgets_StoreSaleBroadcastWidgetRight_9VjYX .salepreviewwidgets_StoreActionWidgetContainer_kW6m4 {
+    width: 100%;
+    justify-self: end;
+    align-items: stretch;
+    flex-direction: column; }
+    .salepreviewwidgets_StoreSaleBroadcastWidgetRight_9VjYX .salepreviewwidgets_StoreActionWidgetContainer_kW6m4 .salepreviewwidgets_StoreSalePriceActionWidgetContainer_1JuIp {
+      width: 100%; }
+    .salepreviewwidgets_StoreSaleBroadcastWidgetRight_9VjYX .salepreviewwidgets_StoreActionWidgetContainer_kW6m4 .salepreviewwidgets_StoreSaleDiscountBox_cnkoF {
+      font-size: 18px; }
+  .salepreviewwidgets_StoreSaleBroadcastWidgetRight_9VjYX .salepreviewwidgets_WishList_1djkd,
+  .salepreviewwidgets_StoreSaleBroadcastWidgetRight_9VjYX .salepreviewwidgets_QuickPitch_Xq5-0,
+  .salepreviewwidgets_StoreSaleBroadcastWidgetRight_9VjYX .salepreviewwidgets_Action_2zssE {
+    padding: 4px 8px;
+    text-overflow: wrap;
+    height: auto;
+    width: 100%;
+    white-space: pre-wrap;
+    line-height: normal; }
+
+.salepreviewwidgets_StoreActionWidgetContainer_kW6m4 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end; }
+  .salepreviewwidgets_StoreActionWidgetContainer_kW6m4 .salepreviewwidgets_StoreSalePriceActionWidgetContainer_1JuIp {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    padding: 0; }
+    .salepreviewwidgets_StoreActionWidgetContainer_kW6m4 .salepreviewwidgets_StoreSalePriceActionWidgetContainer_1JuIp .salepreviewwidgets_StoreSalePriceWidgetContainer_2s-O5 {
+      display: flex;
+      padding: 0px;
+      margin-top: 6px;
+      min-height: 38px; }
+
+.salepreviewwidgets_InGameHover_axjdi .salepreviewwidgets_StoreSalePriceWidgetContainer_2s-O5, .salepreviewwidgets_InGameHover_axjdi .salepreviewwidgets_StoreSalePriceBox_3j4dI {
+  background-color: #31506c; }
+
+.salepreviewwidgets_StoreSaleDiscountedPriceCtn_3NhLu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-right: 5px;
+  padding-left: 5px; }
+  .salepreviewwidgets_StoreSaleDiscountedPriceCtn_3NhLu .salepreviewwidgets_StoreSalePriceBox_3j4dI {
+    padding: 0px;
+    line-height: 16px; }
+
+.salepreviewwidgets_StoreSaleDiscountBox_cnkoF {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 3px 8px;
+  background-color: #4C6B22;
+  color: #A4D007;
+  display: flex;
+  align-items: center; }
+
+.salepreviewwidgets_StoreOrignalPrice_18ANC {
+  color: #626366;
+  font-size: 11px;
+  line-height: 11px;
+  margin-top: 2px;
+  position: relative; }
+  .salepreviewwidgets_StoreOrignalPrice_18ANC::before {
+    content: '';
+    left: 0px;
+    right: 0px;
+    position: absolute;
+    top: 40%;
+    border-bottom: 1px solid darkred;
+    transform: skewY(-15deg); }
+
+.salepreviewwidgets_StoreSalePriceBox_3j4dI {
+  background: black;
+  font-size: 14px;
+  padding: 5px 8px;
+  background-color: black;
+  align-items: center;
+  display: flex;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px; }
+
+.salepreviewwidgets_Discounted_1g0B- {
+  margin: 0 0 0 4px;
+  display: flex;
+  align-items: center;
+  background-color: black; }
+  .salepreviewwidgets_Discounted_1g0B- .salepreviewwidgets_BaseDiscount_3mInD {
+    padding: 6px;
+    font-size: 18px;
+    position: relative; }
+    .salepreviewwidgets_Discounted_1g0B- .salepreviewwidgets_BaseDiscount_3mInD::before {
+      content: '';
+      left: 6px;
+      right: 6px;
+      position: absolute;
+      top: 50%;
+      border-bottom: 1.5px solid darkred;
+      transform: skewY(-25deg); }
+  .salepreviewwidgets_Discounted_1g0B- .salepreviewwidgets_StoreSalePriceBox_3j4dI {
+    border-radius: unset; }
+
+.salepreviewwidgets_StoreSaleWidgetContainer_2hhNO .salepreviewwidgets_StoreSaleDiscountBox_cnkoF {
+  font-size: 25px;
+  padding: 1px 5px; }
+
+.salepreviewwidgets_StoreSalePriceButton_1BejQ {
+  border-radius: 2px;
+  border: none;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none !important;
+  color: #D2E885 !important;
+  background: #799905;
+  background: -webkit-linear-gradient(top, #799905 5%, #536904 95%);
+  background: linear-gradient(to bottom, #799905 5%, #536904 95%);
+  padding: 0 15px;
+  font-size: 15px;
+  line-height: 30px; }
+
+.salepreviewwidgets_StoreSalePriceButton_1BejQ:hover {
+  text-decoration: none !important;
+  color: #ffffff !important;
+  background: #a4d007;
+  background: -webkit-linear-gradient(top, #a4d007 5%, #6b8705 95%);
+  background: linear-gradient(to bottom, #a4d007 5%, #6b8705 95%); }
+
+.salepreviewwidgets_OuterCapsuleContainer_1dKR2 {
+  position: relative; }
+
+.salepreviewwidgets_CapsuleContainer_22Acx {
+  display: flex;
+  flex-direction: column;
+  border-radius: 3px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  transition: all 0.2s ease-out; }
+  .salepreviewwidgets_CapsuleContainer_22Acx:hover {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); }
+
+.SaleSectionCarouselPadding .salepreviewwidgets_CapsuleContainer_22Acx {
+  margin: 0px 9px 0px 9px; }
+
+.salepreviewwidgets_EventRow_1UMFn {
+  padding: 4px; }
+
+.salepreviewwidgets_Muted_1HVwz {
+  opacity: 0.3; }
+
+.salepreviewwidgets_CapsuleBottomBar_3lmdE {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  color: white;
+  height: 30px;
+  box-sizing: border-box;
+  z-index: 2; }
+  .salepreviewwidgets_CapsuleBottomBar_3lmdE .salepreviewwidgets_BottomBarPriceInfo_1X3j2 {
+    margin-left: auto;
+    display: flex; }
+  .salepreviewwidgets_CapsuleBottomBar_3lmdE.salepreviewwidgets_PlayNowButton_38ePa, .salepreviewwidgets_CapsuleBottomBar_3lmdE.salepreviewwidgets_AddToLibraryButton_1DrDh {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4px;
+    border-radius: 2px; }
+  .salepreviewwidgets_CapsuleBottomBar_3lmdE.salepreviewwidgets_PlayNowButton_38ePa {
+    background-color: #85a805; }
+  .salepreviewwidgets_CapsuleBottomBar_3lmdE.salepreviewwidgets_AddToLibraryButton_1DrDh {
+    background-color: gray; }
+
+.salepreviewwidgets_CapsulePlatform_2bCf9 {
+  padding: 4px;
+  height: 20px;
+  display: flex;
+  flex-direction: row;
+  flex: none; }
+  .salepreviewwidgets_CapsulePlatform_2bCf9 img {
+    max-width: 20px; }
+  .salepreviewwidgets_CapsulePlatform_2bCf9 .SVGIcon_VR {
+    max-width: 26px; }
+
+.salepreviewwidgets_HeaderCapsuleImageContainer_2oW_y {
+  width: 100%;
+  padding: 46.73913% 0 0 0;
+  position: relative; }
+
+.salepreviewwidgets_MainCapsuleImageContainer_1vpxH {
+  width: 100%;
+  padding: 57.30519% 0 0 0;
+  position: relative; }
+
+.salepreviewwidgets_CapsuleImage_2eQ4m {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%; }
+
+.salepreviewwidgets_LinkCapsuleImage_2xO8H {
+  width: 100%;
+  display: block; }
+
+.salepreviewwidgets_CapsuleParentInfo_2erfW {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.salepreviewwidgets_Action_2zssE, .salepreviewwidgets_QuickPitch_Xq5-0 {
+  background-image: radial-gradient(circle at top left, #85a805 10%, #6a8704 80%); }
+  .salepreviewwidgets_Action_2zssE:hover, .salepreviewwidgets_QuickPitch_Xq5-0:hover {
+    background-image: radial-gradient(circle at top left, #a3cf06 0%, #6a8704 120%); }
+
+.salepreviewwidgets_WishList_1djkd {
+  background-image: radial-gradient(circle at top left, #0675cf 10%, #046287 80%); }
+  .salepreviewwidgets_WishList_1djkd:hover {
+    background-image: radial-gradient(circle at top left, #0675cf 0%, #046287 120%); }
+
+.salepreviewwidgets_WishList_1djkd,
+.salepreviewwidgets_QuickPitch_Xq5-0,
+.salepreviewwidgets_Action_2zssE {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 6px 0 0 0;
+  width: auto;
+  min-width: unset;
+  padding: 9px 20px;
+  transition: all 0.2s ease-out;
+  height: 38px;
+  box-sizing: border-box;
+  color: #dfe3e6;
+  text-align: center;
+  border-radius: 2px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  align-self: center; }
+  .salepreviewwidgets_WishList_1djkd:hover,
+  .salepreviewwidgets_QuickPitch_Xq5-0:hover,
+  .salepreviewwidgets_Action_2zssE:hover {
+    color: white;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+    cursor: pointer; }
+
+.salepreviewwidgets_Banner_2gxv9 {
+  font-size: 11px;
+  color: #111111;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+  box-sizing: border-box;
+  padding: 3px 14px 3px 10px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  z-index: 5;
+  text-transform: uppercase;
+  background-color: #d3deea; }
+  .salepreviewwidgets_Banner_2gxv9.salepreviewwidgets_Blue_2o-5t {
+    background-color: #66c0f4; }
+  .salepreviewwidgets_Banner_2gxv9 .salepreviewwidgets_LinesImg_3LecB {
+    height: 10px;
+    margin-right: 4px; }
+
+.salepreviewwidgets_CapsuleDecorators_1xNQc {
+  position: absolute;
+  left: 0px;
+  top: 14px;
+  display: grid;
+  row-gap: 5px; }
+
+.salepreviewwidgets_CapsuleMenuButton_niVR8 {
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  height: 16px;
+  width: 16px;
+  border-radius: 4px;
+  padding: 3px;
+  box-sizing: border-box;
+  background: white;
+  display: flex;
+  border: 1px solid black;
+  z-index: 3;
+  visibility: hidden; }
+  .salepreviewwidgets_CapsuleContainer_22Acx:hover .salepreviewwidgets_CapsuleMenuButton_niVR8, .salepreviewwidgets_StoreSaleWidgetImage_yvqq8:hover .salepreviewwidgets_CapsuleMenuButton_niVR8, .salepreviewwidgets_PreviewItem_2yhQb:hover .salepreviewwidgets_CapsuleMenuButton_niVR8,
+  html.touch .salepreviewwidgets_CapsuleMenuButton_niVR8 {
+    /* stylelint-disable-line */
+    visibility: visible; }
+  .salepreviewwidgets_CapsuleMenuButton_niVR8:hover {
+    background: #67c1f5; }
+  .salepreviewwidgets_CapsuleMenuButton_niVR8 polyline {
+    stroke: #67c1f5; }
+
+.salepreviewwidgets_BundleContentsCtnTransition_24KNc {
+  background: -webkit-linear-gradient(180deg, rgba(0, 0, 0, 0.2) 5%, rgba(0, 0, 0, 0) 95%);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 5%, rgba(0, 0, 0, 0) 95%);
+  margin-top: 16px;
+  margin-left: -16px;
+  margin-right: -16px;
+  margin-bottom: -16px;
+  overflow: hidden;
+  padding-top: 0px;
+  height: 0; }
+  .salepreviewwidgets_BundleContentsCtnTransition_24KNc.salepreviewwidgets_Expanding_38KIq, .salepreviewwidgets_BundleContentsCtnTransition_24KNc.salepreviewwidgets_Expanded_hPc1l {
+    padding-top: 16px;
+    height: auto; }
+  .salepreviewwidgets_BundleContentsCtnTransition_24KNc.salepreviewwidgets_Expanding_38KIq {
+    transition: padding-top 0.2s ease-out; }
+  .salepreviewwidgets_BundleContentsCtnTransition_24KNc.salepreviewwidgets_Collapsing_2NmI1 {
+    padding-top: 0px;
+    height: 0;
+    transition: padding-top 0.2s ease-in-out; }
+
+.salepreviewwidgets_BundleContentsCtn_34acu {
+  padding: 0px 20px 16px; }
+  .salepreviewwidgets_BundleContentsCtn_34acu .salepreviewwidgets_BundleContentsTitle_hhdk8 {
+    font-size: 13px;
+    margin-bottom: 4px; }
+
+.salepreviewwidgets_BundleShowButton_2Vu78 {
+  padding: 12px 0 0 0;
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid black;
+  margin-top: 12px; }
+  .salepreviewwidgets_BundleContentsCtnTransition_24KNc .salepreviewwidgets_BundleShowButton_2Vu78 {
+    margin-top: 0px;
+    margin-bottom: 16px; }
+  .salepreviewwidgets_BundleShowButton_2Vu78 .salepreviewwidgets_ShowContentsButton_-VlK4 {
+    border-radius: 2px;
+    border: none;
+    padding: 4px 20px;
+    display: inline-block;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.5);
+    background: -webkit-linear-gradient(150deg, rgba(255, 255, 255, 0.2) 5%, rgba(255, 255, 255, 0.3) 95%);
+    background: linear-gradient(-60deg, rgba(255, 255, 255, 0.2) 5%, rgba(255, 255, 255, 0.3) 95%); }
+    .salepreviewwidgets_BundleShowButton_2Vu78 .salepreviewwidgets_ShowContentsButton_-VlK4:hover {
+      color: #fff;
+      background: #417a9b;
+      background: -webkit-linear-gradient(150deg, #417a9b 5%, #67c1f5 95%);
+      background: linear-gradient(-60deg, #417a9b 5%, #67c1f5 95%);
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); }
+
+.SaleSectionCarousel .salepreviewwidgets_ShowContentsSection_fsPeL, .salepreviewwidgets_BundleContentsCtn_34acu .salepreviewwidgets_ShowContentsSection_fsPeL {
+  display: none; }
+
+.salepreviewwidgets_BundleContentItem_2sdNO {
+  margin-bottom: 4px; }
+  .salepreviewwidgets_BundleContentItem_2sdNO .salepreviewwidgets_StoreSaleWidgetContainer_2hhNO {
+    border-radius: 3px;
+    background: -webkit-linear-gradient(-210deg, rgba(255, 255, 255, 0.1) 5%, rgba(255, 255, 255, 0.02) 95%);
+    background: linear-gradient(-210deg, rgba(255, 255, 255, 0.1) 5%, rgba(255, 255, 255, 0.02) 95%); }
+    .salepreviewwidgets_BundleContentItem_2sdNO .salepreviewwidgets_StoreSaleWidgetContainer_2hhNO .salepreviewwidgets_Action_2zssE, .salepreviewwidgets_BundleContentItem_2sdNO .salepreviewwidgets_StoreSaleWidgetContainer_2hhNO .salepreviewwidgets_WishList_1djkd {
+      display: none;
+      order: -1; }
+    html.touch .salepreviewwidgets_BundleContentItem_2sdNO .salepreviewwidgets_StoreSaleWidgetContainer_2hhNO, .salepreviewwidgets_BundleContentItem_2sdNO .salepreviewwidgets_StoreSaleWidgetContainer_2hhNO:hover {
+      /* stylelint-disable-line */
+      background: -webkit-linear-gradient(-210deg, rgba(255, 255, 255, 0.22) 5%, rgba(255, 255, 255, 0.02) 95%);
+      background: linear-gradient(-210deg, rgba(255, 255, 255, 0.22) 5%, rgba(255, 255, 255, 0.02) 95%); }
+      html.touch .salepreviewwidgets_BundleContentItem_2sdNO .salepreviewwidgets_StoreSaleWidgetContainer_2hhNO .salepreviewwidgets_Action_2zssE, html.touch .salepreviewwidgets_BundleContentItem_2sdNO .salepreviewwidgets_StoreSaleWidgetContainer_2hhNO .salepreviewwidgets_WishList_1djkd, .salepreviewwidgets_BundleContentItem_2sdNO .salepreviewwidgets_StoreSaleWidgetContainer_2hhNO:hover .salepreviewwidgets_Action_2zssE, .salepreviewwidgets_BundleContentItem_2sdNO .salepreviewwidgets_StoreSaleWidgetContainer_2hhNO:hover .salepreviewwidgets_WishList_1djkd {
+        display: flex; }
+    .salepreviewwidgets_BundleContentItem_2sdNO .salepreviewwidgets_StoreSaleWidgetContainer_2hhNO .salepreviewwidgets_StoreSaleWidgetLeft_3DkfN {
+      flex-basis: 23%; }
+      .salepreviewwidgets_BundleContentItem_2sdNO .salepreviewwidgets_StoreSaleWidgetContainer_2hhNO .salepreviewwidgets_StoreSaleWidgetLeft_3DkfN .salepreviewwidgets_StoreSaleWidgetImage_yvqq8 {
+        margin: 8px 12px 8px 8px; }
+    .salepreviewwidgets_BundleContentItem_2sdNO .salepreviewwidgets_StoreSaleWidgetContainer_2hhNO .salepreviewwidgets_StoreSaleWidgetRight_v9uRg {
+      flex-basis: 77%;
+      padding-right: 0px; }
+      .salepreviewwidgets_BundleContentItem_2sdNO .salepreviewwidgets_StoreSaleWidgetContainer_2hhNO .salepreviewwidgets_StoreSaleWidgetRight_v9uRg .salepreviewwidgets_TitleCtn_3rrH9 {
+        margin-top: 10px; }
+      .salepreviewwidgets_BundleContentItem_2sdNO .salepreviewwidgets_StoreSaleWidgetContainer_2hhNO .salepreviewwidgets_StoreSaleWidgetRight_v9uRg .salepreviewwidgets_StoreSaleWidgetTags_2bkP-,
+      .salepreviewwidgets_BundleContentItem_2sdNO .salepreviewwidgets_StoreSaleWidgetContainer_2hhNO .salepreviewwidgets_StoreSaleWidgetRight_v9uRg .salepreviewwidgets_StoreSaleWidgetShortDesc_3AsE5 {
+        display: none; }
+      .salepreviewwidgets_BundleContentItem_2sdNO .salepreviewwidgets_StoreSaleWidgetContainer_2hhNO .salepreviewwidgets_StoreSaleWidgetRight_v9uRg .salepreviewwidgets_BundleContentPreview_jQ5Ga {
+        margin: 6px 0px; }
+      .salepreviewwidgets_BundleContentItem_2sdNO .salepreviewwidgets_StoreSaleWidgetContainer_2hhNO .salepreviewwidgets_StoreSaleWidgetRight_v9uRg .salepreviewwidgets_StoreActionWidgetContainer_kW6m4 {
+        align-self: flex-end;
+        margin-right: 6px; }
+
+.salepreviewwidgets_SaleItemBrowserRow_gASJ2 {
+  margin-bottom: 4px; }
+  .salepreviewwidgets_SaleItemBrowserRow_gASJ2 .salepreviewwidgets_StoreSaleWidgetContainer_2hhNO {
+    border-radius: 3px;
+    background: -webkit-linear-gradient(-210deg, rgba(255, 255, 255, 0.1) 5%, rgba(255, 255, 255, 0.02) 95%);
+    background: linear-gradient(-210deg, rgba(255, 255, 255, 0.1) 5%, rgba(255, 255, 255, 0.02) 95%); }
+    .salepreviewwidgets_SaleItemBrowserRow_gASJ2 .salepreviewwidgets_StoreSaleWidgetContainer_2hhNO .salepreviewwidgets_Action_2zssE, .salepreviewwidgets_SaleItemBrowserRow_gASJ2 .salepreviewwidgets_StoreSaleWidgetContainer_2hhNO .salepreviewwidgets_WishList_1djkd, .salepreviewwidgets_SaleItemBrowserRow_gASJ2 .salepreviewwidgets_StoreSaleWidgetContainer_2hhNO .salepreviewwidgets_QuickPitch_Xq5-0 {
+      display: none;
+      order: -1;
+      margin-left: 4px;
+      background: -webkit-linear-gradient(150deg, rgba(255, 255, 255, 0.2) 5%, rgba(255, 255, 255, 0.25) 95%);
+      background: linear-gradient(-60deg, rgba(255, 255, 255, 0.2) 5%, rgba(255, 255, 255, 0.25) 95%); }
+    html.touch .salepreviewwidgets_SaleItemBrowserRow_gASJ2 .salepreviewwidgets_StoreSaleWidgetContainer_2hhNO, .salepreviewwidgets_SaleItemBrowserRow_gASJ2 .salepreviewwidgets_StoreSaleWidgetContainer_2hhNO:hover {
+      /* stylelint-disable-line */
+      background: -webkit-linear-gradient(-210deg, rgba(255, 255, 255, 0.22) 5%, rgba(255, 255, 255, 0.02) 95%);
+      background: linear-gradient(-210deg, rgba(255, 255, 255, 0.22) 5%, rgba(255, 255, 255, 0.02) 95%); }
+      html.touch .salepreviewwidgets_SaleItemBrowserRow_gASJ2 .salepreviewwidgets_StoreSaleWidgetContainer_2hhNO .salepreviewwidgets_Action_2zssE, html.touch .salepreviewwidgets_SaleItemBrowserRow_gASJ2 .salepreviewwidgets_StoreSaleWidgetContainer_2hhNO .salepreviewwidgets_WishList_1djkd, html.touch .salepreviewwidgets_SaleItemBrowserRow_gASJ2 .salepreviewwidgets_StoreSaleWidgetContainer_2hhNO .salepreviewwidgets_QuickPitch_Xq5-0, .salepreviewwidgets_SaleItemBrowserRow_gASJ2 .salepreviewwidgets_StoreSaleWidgetContainer_2hhNO:hover .salepreviewwidgets_Action_2zssE, .salepreviewwidgets_SaleItemBrowserRow_gASJ2 .salepreviewwidgets_StoreSaleWidgetContainer_2hhNO:hover .salepreviewwidgets_WishList_1djkd, .salepreviewwidgets_SaleItemBrowserRow_gASJ2 .salepreviewwidgets_StoreSaleWidgetContainer_2hhNO:hover .salepreviewwidgets_QuickPitch_Xq5-0 {
+        display: flex; }
+    .salepreviewwidgets_SaleItemBrowserRow_gASJ2 .salepreviewwidgets_StoreSaleWidgetContainer_2hhNO .salepreviewwidgets_StoreSaleWidgetLeft_3DkfN {
+      flex-basis: 23%; }
+      .salepreviewwidgets_SaleItemBrowserRow_gASJ2 .salepreviewwidgets_StoreSaleWidgetContainer_2hhNO .salepreviewwidgets_StoreSaleWidgetLeft_3DkfN .salepreviewwidgets_StoreSaleWidgetImage_yvqq8 {
+        margin: 8px 12px 8px 8px; }
+    .salepreviewwidgets_SaleItemBrowserRow_gASJ2 .salepreviewwidgets_StoreSaleWidgetContainer_2hhNO .salepreviewwidgets_StoreSaleWidgetRight_v9uRg {
+      flex-basis: 77%;
+      padding-right: 0px; }
+      .salepreviewwidgets_SaleItemBrowserRow_gASJ2 .salepreviewwidgets_StoreSaleWidgetContainer_2hhNO .salepreviewwidgets_StoreSaleWidgetRight_v9uRg .salepreviewwidgets_TitleCtn_3rrH9 {
+        margin-top: 10px; }
+      .salepreviewwidgets_SaleItemBrowserRow_gASJ2 .salepreviewwidgets_StoreSaleWidgetContainer_2hhNO .salepreviewwidgets_StoreSaleWidgetRight_v9uRg .salepreviewwidgets_StoreSaleWidgetShortDesc_3AsE5 {
+        display: none; }
+      .salepreviewwidgets_SaleItemBrowserRow_gASJ2 .salepreviewwidgets_StoreSaleWidgetContainer_2hhNO .salepreviewwidgets_StoreSaleWidgetRight_v9uRg .salepreviewwidgets_BundleContentPreview_jQ5Ga {
+        margin: 6px 0px; }
+      .salepreviewwidgets_SaleItemBrowserRow_gASJ2 .salepreviewwidgets_StoreSaleWidgetContainer_2hhNO .salepreviewwidgets_StoreSaleWidgetRight_v9uRg .salepreviewwidgets_StoreActionWidgetContainer_kW6m4 {
+        margin-right: 6px; }
+
+.salepreviewwidgets_BundleContentPreview_jQ5Ga {
+  padding: 6px;
+  background: rgba(0, 0, 0, 0.5);
+  width: fit-content;
+  max-width: 550px;
+  margin-bottom: 4px; }
+  .salepreviewwidgets_BundleContentPreview_jQ5Ga .salepreviewwidgets_PreviewCtn_1NM53 {
+    position: relative;
+    height: 45px;
+    overflow: hidden;
+    white-space: nowrap;
+    display: flex; }
+    .salepreviewwidgets_BundleContentPreview_jQ5Ga .salepreviewwidgets_PreviewCtn_1NM53 .salepreviewwidgets_PreviewItem_2yhQb {
+      position: relative;
+      display: inline-block;
+      box-shadow: 2px 0 5px 0px #000000;
+      margin-left: -30px; }
+      .salepreviewwidgets_BundleContentPreview_jQ5Ga .salepreviewwidgets_PreviewCtn_1NM53 .salepreviewwidgets_PreviewItem_2yhQb:first-child {
+        margin-left: 0px;
+        z-index: 30; }
+      .salepreviewwidgets_BundleContentPreview_jQ5Ga .salepreviewwidgets_PreviewCtn_1NM53 .salepreviewwidgets_PreviewItem_2yhQb:nth-child(0) {
+        z-index: 30; }
+      .salepreviewwidgets_BundleContentPreview_jQ5Ga .salepreviewwidgets_PreviewCtn_1NM53 .salepreviewwidgets_PreviewItem_2yhQb:nth-child(1) {
+        z-index: 29; }
+      .salepreviewwidgets_BundleContentPreview_jQ5Ga .salepreviewwidgets_PreviewCtn_1NM53 .salepreviewwidgets_PreviewItem_2yhQb:nth-child(2) {
+        z-index: 28; }
+      .salepreviewwidgets_BundleContentPreview_jQ5Ga .salepreviewwidgets_PreviewCtn_1NM53 .salepreviewwidgets_PreviewItem_2yhQb:nth-child(3) {
+        z-index: 27; }
+      .salepreviewwidgets_BundleContentPreview_jQ5Ga .salepreviewwidgets_PreviewCtn_1NM53 .salepreviewwidgets_PreviewItem_2yhQb:nth-child(4) {
+        z-index: 26; }
+      .salepreviewwidgets_BundleContentPreview_jQ5Ga .salepreviewwidgets_PreviewCtn_1NM53 .salepreviewwidgets_PreviewItem_2yhQb:nth-child(5) {
+        z-index: 25; }
+      .salepreviewwidgets_BundleContentPreview_jQ5Ga .salepreviewwidgets_PreviewCtn_1NM53 .salepreviewwidgets_PreviewItem_2yhQb:nth-child(6) {
+        z-index: 24; }
+      .salepreviewwidgets_BundleContentPreview_jQ5Ga .salepreviewwidgets_PreviewCtn_1NM53 .salepreviewwidgets_PreviewItem_2yhQb:nth-child(7) {
+        z-index: 23; }
+      .salepreviewwidgets_BundleContentPreview_jQ5Ga .salepreviewwidgets_PreviewCtn_1NM53 .salepreviewwidgets_PreviewItem_2yhQb:nth-child(8) {
+        z-index: 22; }
+      .salepreviewwidgets_BundleContentPreview_jQ5Ga .salepreviewwidgets_PreviewCtn_1NM53 .salepreviewwidgets_PreviewItem_2yhQb:nth-child(9) {
+        z-index: 21; }
+      .salepreviewwidgets_BundleContentPreview_jQ5Ga .salepreviewwidgets_PreviewCtn_1NM53 .salepreviewwidgets_PreviewItem_2yhQb:nth-child(10) {
+        z-index: 20; }
+      .salepreviewwidgets_BundleContentPreview_jQ5Ga .salepreviewwidgets_PreviewCtn_1NM53 .salepreviewwidgets_PreviewItem_2yhQb:nth-child(11) {
+        z-index: 19; }
+      .salepreviewwidgets_BundleContentPreview_jQ5Ga .salepreviewwidgets_PreviewCtn_1NM53 .salepreviewwidgets_PreviewItem_2yhQb:nth-child(12) {
+        z-index: 18; }
+      .salepreviewwidgets_BundleContentPreview_jQ5Ga .salepreviewwidgets_PreviewCtn_1NM53 .salepreviewwidgets_PreviewItem_2yhQb:nth-child(13) {
+        z-index: 17; }
+      .salepreviewwidgets_BundleContentPreview_jQ5Ga .salepreviewwidgets_PreviewCtn_1NM53 .salepreviewwidgets_PreviewItem_2yhQb:nth-child(14) {
+        z-index: 16; }
+      .salepreviewwidgets_BundleContentPreview_jQ5Ga .salepreviewwidgets_PreviewCtn_1NM53 .salepreviewwidgets_PreviewItem_2yhQb:nth-child(15) {
+        z-index: 15; }
+      .salepreviewwidgets_BundleContentPreview_jQ5Ga .salepreviewwidgets_PreviewCtn_1NM53 .salepreviewwidgets_PreviewItem_2yhQb:nth-child(16) {
+        z-index: 14; }
+      .salepreviewwidgets_BundleContentPreview_jQ5Ga .salepreviewwidgets_PreviewCtn_1NM53 .salepreviewwidgets_PreviewItem_2yhQb:nth-child(17) {
+        z-index: 13; }
+      .salepreviewwidgets_BundleContentPreview_jQ5Ga .salepreviewwidgets_PreviewCtn_1NM53 .salepreviewwidgets_PreviewItem_2yhQb:nth-child(18) {
+        z-index: 12; }
+      .salepreviewwidgets_BundleContentPreview_jQ5Ga .salepreviewwidgets_PreviewCtn_1NM53 .salepreviewwidgets_PreviewItem_2yhQb:nth-child(19) {
+        z-index: 11; }
+      .salepreviewwidgets_BundleContentPreview_jQ5Ga .salepreviewwidgets_PreviewCtn_1NM53 .salepreviewwidgets_PreviewItem_2yhQb:nth-child(20) {
+        z-index: 10; }
+      .salepreviewwidgets_BundleContentPreview_jQ5Ga .salepreviewwidgets_PreviewCtn_1NM53 .salepreviewwidgets_PreviewItem_2yhQb .salepreviewwidgets_PreviewImg_1jx70 {
+        width: 120px;
+        height: 45px; }
+
+.salepreviewwidgets_bordered_live_stream_icon_2E28o {
+  /* stylelint-disable-line */
+  position: relative;
+  display: inline-block;
+  top: auto;
+  left: auto;
+  line-height: 14px;
+  vertical-align: bottom;
+  width: max-content;
+  height: 13px;
+  margin-right: 15px;
+  overflow: hidden;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAFMN540AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MkQ4QTE5MTc3M0M4MTFFODkzODlBNzdDNUZEOUI2RUMiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MkQ4QTE5MTg3M0M4MTFFODkzODlBNzdDNUZEOUI2RUMiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDoyRDhBMTkxNTczQzgxMUU4OTM4OUE3N0M1RkQ5QjZFQyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDoyRDhBMTkxNjczQzgxMUU4OTM4OUE3N0M1RkQ5QjZFQyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqixHngAAAK7SURBVHjaYvz//z8DMmABEZuio2CiX8ACf378gCngAQv8/fHjM5DiDd26jREggBjRzWDcGBUpB6Qfgjh+S5cxsgD1P0RWwRS0dh0j0AyQOWABgACCm7ElLhauFQiW+yxaHAVXsDE8DNUmKPBfuYoR7Kzf37+vAFIR2BRhOBMdAAQQXgUsMAbQgX+AFDOIDXQcI1wnUqDBAdjzIMb/P38wjAT6ZgckMLFIAoEOWPLf798YMiGbNsswQRmM///+ZUDC0QS9AhBABAMCH2BB5myOjckHUhPwqP/vu3gJE4bNm6Ii/4KSAZGWKvgtW/4QbjMwRJhIcPEtIGaHa8YR1rhAHUaArfH1+QcSI6AxMmTzlhU4Q3uVlycolc8GYkcgfgXEU8K2be9AVwcQQBRFFRMDBYAFXQCY7peB/IUmDAoLRWA+eITT2cBEQiiui4CJpB8zkURHgcoYHiJcKw/MaI8QxVdUpDyRGkHgPiw7Q3Lq378zyQlkiOZ//xzIDu1///69AVLSZMUz0ObJQMxALEbRHLx+QydaMYIPr8BMYf//RzKAog0//g8sryKxJpLV3l5+oCIRhxe/AOsZXoIZA5irKoBUDhCLAfF+IM4E5qp7VM1VAAFGkWaq5khcYEt8HKhwiYIWLlpALAqqG4H4CbRqPQDEK30WLrpPsY83x8WCIm4JqDFAooe+AHGa76LFy0myeHNMdDioYUBEGUwIgAyP9F2ydCVBi4FF0VJokFITrAAWW5E4Ld4YEV4OpDpolJ4q/Fes7MRaVwDLh1xSyhIScS7OVA2UFKFhDhLFZ/FBIOVGI4v347M4HUjdpbS6xgJAZXwG3lQNbMqACoqrJNSVxORpbWDT5xFRBchqH29Q+7GPAt+DDC4N3bK1l6yyejWkHQbKBmFEOAIUpKuAuDx02/ZHg7KSYGIYIAAAG8jIJ8edBjIAAAAASUVORK5CYII=) #000;
+  background-repeat: no-repeat;
+  background-position: 4px center;
+  background-size: 12px 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 12px;
+  padding: 3px 6px 3px 20px;
+  box-shadow: 0 0 7px #a94847;
+  border-radius: 9px;
+  z-index: 2; }
+
+.salepreviewwidgets_DemoLayoutPopup_2tmp2 {
+  width: 340px;
+  background-image: radial-gradient(101.49% 168.36% at 1.01% 0%, #4c5767 0%, #2f3742 100%);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7); }
+
+/** Applies the provided style block at mobile widths _and_ if the .touch override style is applied */
+.partnersaledisplay_SaleHeaderContainer_W4mvn {
+  display: flex;
+  margin: 0 auto;
+  max-width: 100vw;
+  align-items: center; }
+  @media screen and (max-width: 1200px) {
+    .partnersaledisplay_SaleHeaderContainer_W4mvn {
+      flex-direction: column-reverse; } }
+
+.partnersaledisplay_SaleSection_1cOoC {
+  padding: 16px;
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 2; }
+  .partnersaledisplay_SaleSection_1cOoC.partnersaledisplay_CarouselDisplay_mntHD {
+    max-width: 940px; }
+  .partnersaledisplay_SaleSection_1cOoC .partnersaledisplay_SaleViewAll_1bsBz {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 5px; }
+
+.partnersaledisplay_SaleSectionLoginPrompt_2-dSB {
+  padding: 36px 64px;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; }
+  .partnersaledisplay_SaleSectionLoginPrompt_2-dSB .partnersaledisplay_LoginButton_3h6sH {
+    border-radius: 2px;
+    border: none;
+    padding: 10px 30px;
+    margin: 16px;
+    display: inline-block;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #285b9a;
+    background: rgba(103, 193, 245, 0.9); }
+    .partnersaledisplay_SaleSectionLoginPrompt_2-dSB .partnersaledisplay_LoginButton_3h6sH:hover {
+      color: #fff;
+      background: #417a9b;
+      background: -webkit-linear-gradient(150deg, #417a9b 5%, #67c1f5 95%);
+      background: linear-gradient(-60deg, #417a9b 5%, #67c1f5 95%); }
+
+.partnersaledisplay_SaleOverlayCtn_3GTIc {
+  width: 100vw;
+  max-width: 1300px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  justify-content: flex-start; }
+  @media screen and (max-width: 920px) {
+    .partnersaledisplay_SaleOverlayCtn_3GTIc {
+      justify-content: center; } }
+
+.partnersaledisplay_SaleOverlay_1sZo8 {
+  margin-top: 20px;
+  max-width: 100vw; }
+  @media screen and (max-width: 920px) {
+    .partnersaledisplay_SaleOverlay_1sZo8 {
+      margin-top: 12vw; } }
+
+.partnersaledisplay_AppSummaryWidgetCtn_2H8Bm {
+  flex-grow: 2;
+  flex-basis: 0;
+  padding: 16px;
+  background-image: radial-gradient(ellipse at top left, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9));
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+  border-radius: 4px; }
+
+.carousel .partnersaledisplay_AppSummaryWidgetCtn_2H8Bm {
+  height: 100%; }
+
+.partnersaledisplay_SaleBroadcastCtn_1SFMh {
+  z-index: 3;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 940px; }
+
+.partnersaledisplay_SaleOuterContainer_150kd {
+  display: flex;
+  flex-direction: column; }
+  @media screen and (max-width: 1110px) {
+    .partnersaledisplay_SaleOuterContainer_150kd.partnersaledisplay_CustomStyle_together_1lAyg {
+      margin-top: 36vw !important; } }
+  @media screen and (max-width: 940px) {
+    .partnersaledisplay_SaleOuterContainer_150kd {
+      margin-top: 60vw !important;
+      padding: 0px 10px; } }
+
+.partnersaledisplay_SaleBackground_2N8Se {
+  background-position: center top;
+  background-repeat: no-repeat;
+  padding-bottom: 20px; }
+  @media screen and (max-width: 1110px) {
+    .partnersaledisplay_SaleBackground_2N8Se.partnersaledisplay_CustomStyle_together_1lAyg {
+      background-size: 230vw; } }
+  @media screen and (max-width: 768px) {
+    .partnersaledisplay_SaleBackground_2N8Se.partnersaledisplay_CustomStyle_together_1lAyg {
+      background-size: 230vw; } }
+  @media screen and (max-width: 940px) {
+    .partnersaledisplay_SaleBackground_2N8Se {
+      background-size: var(--background-scale, 166%); } }
+
+.partnersaledisplay_SaleSectionTitleCtn_bE2EA {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+  .partnersaledisplay_SaleSectionTitleCtn_bE2EA .partnersaledisplay_SaleSectionSubtext_17Fnl {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    margin-bottom: 10px;
+    opacity: 0.7;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 2px 6px;
+    border-radius: 2px;
+    font-size: 11px; }
+    .partnersaledisplay_SaleSectionTitleCtn_bE2EA .partnersaledisplay_SaleSectionSubtext_17Fnl a {
+      text-decoration: none; }
+
+.partnersaledisplay_SaleSectionContainer_W9_WA {
+  display: grid;
+  grid-gap: 16px;
+  padding-bottom: 14px; }
+
+.partnersaledisplay_ShowContentsContainer_CBMVC {
+  display: flex;
+  justify-content: center;
+  margin-top: 14px; }
+  .partnersaledisplay_ShowContentsContainer_CBMVC .partnersaledisplay_ShowContentsButton_2EjTW {
+    border-radius: 2px;
+    border: none;
+    padding: 10px;
+    display: inline-block;
+    cursor: pointer;
+    color: #222;
+    background: rgba(255, 255, 255, 0.7); }
+    .partnersaledisplay_ShowContentsContainer_CBMVC .partnersaledisplay_ShowContentsButton_2EjTW:hover {
+      color: #222;
+      background: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.7); }
+
+span.partnersaledisplay_vr_supported_1BDSJ,
+span.partnersaledisplay_vr_required_1P__h {
+  vertical-align: top;
+  line-height: 21px;
+  margin-left: 4px;
+  font-size: 11px; }
+
+.partnersaledisplay_preview_placeholder_section_3QLsj {
+  font-weight: bold;
+  font-size: 24px; }
+
+.SaleSectionCarousel .partnersaledisplay_LinkCapsule_2zVSa {
+  padding: 10px;
+  display: block; }
+
+.partnersaledisplay_fullscreen_bg_j2ykT {
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  overflow: hidden; }
+
+.partnersaledisplay_fullscreen_bg__video_FXgrB {
+  margin-left: 50%;
+  transform: translateX(-50%); }
+
+.partnersaledisplay_SalePageBroadcastContextHover_hbVdl {
+  display: flex;
+  align-items: center;
+  padding: 12px; }
+  .partnersaledisplay_SalePageBroadcastContextHover_hbVdl .partnersaledisplay_AlbumCoverImage_2JfUA {
+    height: 100px;
+    cursor: pointer; }
+    .partnersaledisplay_SalePageBroadcastContextHover_hbVdl .partnersaledisplay_AlbumCoverImage_2JfUA:hover {
+      box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.5); }
+  .partnersaledisplay_SalePageBroadcastContextHover_hbVdl .partnersaledisplay_AlbumTitle_keaMw {
+    font-size: 20px;
+    padding: 12px;
+    cursor: pointer; }
+    .partnersaledisplay_SalePageBroadcastContextHover_hbVdl .partnersaledisplay_AlbumTitle_keaMw:hover {
+      text-decoration: underline; }
+
+.partnersaledisplay_PreviewSalesPageContainer_16oMm .partnersaledisplay_SaleSectionTabs_1FPIV {
+  top: 90px; }
+
+.partnersaledisplay_SaleSectionTabs_1FPIV {
+  top: 0px;
+  position: sticky;
+  z-index: 150;
+  left: 0px;
+  right: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  width: 100%;
+  max-width: 100%;
+  padding: 8px 0px 8px 0px;
+  height: 56px; }
+  html.responsive.touch .partnersaledisplay_SaleSectionTabs_1FPIV {
+    /* stylelint-disable-line selector-class-pattern */
+    top: 62px; }
+  @media screen and (max-width: 910px) {
+    html:not(.force_desktop) .partnersaledisplay_SaleSectionTabs_1FPIV {
+      /* stylelint-disable-line selector-class-pattern */
+      top: 62px; } }
+  .partnersaledisplay_SaleSectionTabs_1FPIV .partnersaledisplay_SaleSectionTabsTab_3BgHm {
+    background-color: black;
+    padding: 0px 12px;
+    color: #888;
+    font-size: 16px;
+    min-width: max-content;
+    width: auto;
+    padding: auto 0px auto 0px;
+    cursor: pointer;
+    user-select: none; }
+  .partnersaledisplay_SaleSectionTabs_1FPIV .partnersaledisplay_SaleSectionTabContainer_1Svj0 {
+    display: flex;
+    width: 100%;
+    overflow-y: hidden;
+    overflow-x: scroll; }
+  .partnersaledisplay_SaleSectionTabs_1FPIV .partnersaledisplay_SaleSectionTabsRow_30oGT {
+    margin: 0px auto;
+    display: flex;
+    flex-direction: row; }
+  .partnersaledisplay_SaleSectionTabs_1FPIV .partnersaledisplay_SaleTab_gc-rq {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px; }
+    .partnersaledisplay_SaleSectionTabs_1FPIV .partnersaledisplay_SaleTab_gc-rq:hover .partnersaledisplay_SaleTabLabel_2mYMQ {
+      text-decoration: underline; }
+  .partnersaledisplay_SaleSectionTabs_1FPIV .partnersaledisplay_SaleTabLabel_2mYMQ {
+    text-align: center; }
+
+.partnersaledisplay_SaleSectionTabListContainer_2VZtq {
+  position: relative; }
+
+.partnersaledisplay_TabContentsContainer_2xJbu {
+  display: flex;
+  flex-flow: column; }
+
+.partnersaledisplay_HorizontalScrollInDragForceCursor_nemO6 {
+  cursor: grabbing !important; }
+
+.partnersaledisplay_SaleBroadcastSection_1u0IZ {
+  width: 100%;
+  margin: 0px auto;
+  max-width: 940px; }
+
+/* stylelint-disable */
+
+.salesectioneventschedule_SaleSchedCtn_2g7il {
+  height: 480px;
+  background-image: radial-gradient(101.49% 168.36% at 1.01% 0%, #4c5767 0%, #2f3742 100%);
+  box-sizing: border-box;
+  padding: 16px 0px 0px 16px;
+  display: flex;
+  flex-direction: column; }
+  @media screen and (max-width: 600px) {
+    .salesectioneventschedule_SaleSchedCtn_2g7il {
+      height: 340px; } }
+  .salesectioneventschedule_SaleSchedCtn_2g7il .salesectioneventschedule_ScheduleSectionHeader_2EXgw {
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    font-size: 18px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3); }
+  .salesectioneventschedule_SaleSchedCtn_2g7il .salesectioneventschedule_SectionCtn_2wwgk {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    overflow: hidden;
+    min-width: 0;
+    font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+    font-weight: 300; }
+
+.salesectioneventschedule_SaleSchedListCtn_1THwn {
+  margin-bottom: 12px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+  .salesectioneventschedule_SaleSchedListCtn_1THwn .salesectioneventschedule_SaleSchedList_2BWbK {
+    position: relative;
+    flex-grow: 1;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin-bottom: 12px;
+    margin-right: 12px;
+    -webkit-mask-image: -webkit-gradient(linear, left 94%, left bottom, from(black), to(rgba(0, 0, 0, 0))); }
+  .salesectioneventschedule_SaleSchedListCtn_1THwn .salesectioneventschedule_NoEventsYet_1ZTMP {
+    min-height: 100px;
+    width: 100%;
+    text-align: center;
+    padding-top: 100px; }
+  @media screen and (max-width: 600px) {
+    .salesectioneventschedule_SaleSchedListCtn_1THwn, .salesectioneventschedule_SaleSchedListCtn_1THwn .salesectioneventschedule_SaleSchedRow_3l83c, .salesectioneventschedule_SaleSchedListCtn_1THwn .salesectioneventschedule_NewsHubLink_TafBI {
+      width: 100%; }
+    .salesectioneventschedule_SaleSchedListCtn_1THwn .salesectioneventschedule_SaleSchedList_2BWbK {
+      margin-right: 0; } }
+
+.salesectioneventschedule_SaleSchedGridCtn_50nbv {
+  margin: 10px 16px 10px 0;
+  flex: 1;
+  overflow: initial;
+  min-width: 0;
+  display: grid;
+  grid-auto-flow: row;
+  grid-template: 1fr 1fr / 48% 48%;
+  grid-gap: 20px 4%; }
+  @media screen and (max-width: 800px) {
+    .salesectioneventschedule_SaleSchedGridCtn_50nbv {
+      max-width: 300px;
+      grid-auto-flow: column;
+      grid-template: 1fr 1fr / 1fr 0px; } }
+  @media screen and (max-width: 600px) {
+    .salesectioneventschedule_SaleSchedGridCtn_50nbv {
+      display: none; } }
+
+.salesectioneventschedule_SchedSectionLabel_2UAed {
+  text-transform: uppercase;
+  color: white;
+  font-weight: 500;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  padding: 4px 8px;
+  background: #2d343e;
+  margin-bottom: 3px; }
+
+.salesectioneventschedule_SaleSchedDetailCtn_31c5z {
+  width: 100%;
+  max-width: 612px;
+  background-color: #292D32;
+  padding: 12px;
+  display: flex;
+  flex-direction: column; }
+  .salesectioneventschedule_SaleSchedDetailCtn_31c5z .salesectioneventschedule_SaleTagAndOS_2rcuH {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 12px; }
+  .salesectioneventschedule_SaleSchedDetailCtn_31c5z .salesectioneventschedule_StatementAndHighlights_28vOL {
+    display: flex; }
+    .salesectioneventschedule_SaleSchedDetailCtn_31c5z .salesectioneventschedule_StatementAndHighlights_28vOL .salesectioneventschedule_StatementCtn_2p5xO {
+      flex: 1;
+      height: 189px;
+      overflow: hidden;
+      padding-right: 12px;
+      word-break: break-word;
+      -webkit-mask-image: -webkit-gradient(linear, left 94%, left bottom, from(black), to(rgba(0, 0, 0, 0)));
+      mask-image: linear-gradient(left 90%, left bottom, from(black), to(rgba(0, 0, 0, 0))); }
+      .salesectioneventschedule_SaleSchedDetailCtn_31c5z .salesectioneventschedule_StatementAndHighlights_28vOL .salesectioneventschedule_StatementCtn_2p5xO .salesectioneventschedule_Statement_GwN4S {
+        position: relative; }
+    .salesectioneventschedule_SaleSchedDetailCtn_31c5z .salesectioneventschedule_StatementAndHighlights_28vOL .salesectioneventschedule_MediaContainer_u2Bv0 {
+      flex: 1;
+      min-width: 284px; }
+      @media screen and (max-width: 800px) {
+        .salesectioneventschedule_SaleSchedDetailCtn_31c5z .salesectioneventschedule_StatementAndHighlights_28vOL .salesectioneventschedule_MediaContainer_u2Bv0 {
+          display: none; } }
+  @media screen and (max-width: 600px) {
+    .salesectioneventschedule_SaleSchedDetailCtn_31c5z {
+      display: none; } }
+
+.salesectioneventschedule_SaleSchedRowProxy_2HMsx, .salesectioneventschedule_SaleSchedRow_3l83c {
+  height: 50px;
+  width: 286px;
+  box-sizing: border-box;
+  margin-bottom: 3px;
+  padding: 8px; }
+
+.salesectioneventschedule_SaleSchedRow_3l83c {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  cursor: pointer;
+  user-select: none;
+  background-image: radial-gradient(101.49% 168.36% at 1.01% 0%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.1) 100%);
+  border-radius: 3px;
+  color: #dfe3e6; }
+  .salesectioneventschedule_SaleSchedRow_3l83c:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); }
+  .salesectioneventschedule_SaleSchedRow_3l83c.salesectioneventschedule_MiniMode__L0SI {
+    width: 100%; }
+    .salesectioneventschedule_SaleSchedRow_3l83c.salesectioneventschedule_MiniMode__L0SI .salesectioneventschedule_AppTitle_3q715 {
+      display: none; }
+    .salesectioneventschedule_SaleSchedRow_3l83c.salesectioneventschedule_MiniMode__L0SI .salesectioneventschedule_Icon_26VBx {
+      height: 20px;
+      margin: -6px 0 0 6px; }
+    .salesectioneventschedule_SaleSchedRow_3l83c.salesectioneventschedule_MiniMode__L0SI .salesectioneventschedule_DetailsCtn_3deMj .salesectioneventschedule_EventTitle_109s- {
+      white-space: unset; }
+  .salesectioneventschedule_SaleSchedRow_3l83c .salesectioneventschedule_Time_3qoMb {
+    min-width: 55px;
+    margin-right: 4px;
+    word-break: keep-all; }
+  .salesectioneventschedule_SaleSchedRow_3l83c .salesectioneventschedule_DetailsCtn_3deMj {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 4;
+    overflow: hidden;
+    font-size: 12px;
+    font-weight: 400; }
+    .salesectioneventschedule_SaleSchedRow_3l83c .salesectioneventschedule_DetailsCtn_3deMj .salesectioneventschedule_AppTitle_3q715 {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      font-weight: 600; }
+    .salesectioneventschedule_SaleSchedRow_3l83c .salesectioneventschedule_DetailsCtn_3deMj .salesectioneventschedule_EventTitle_109s- {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis; }
+  .salesectioneventschedule_SaleSchedRow_3l83c .salesectioneventschedule_Icon_26VBx {
+    width: 26px;
+    opacity: 0.4; }
+
+.salesectioneventschedule_SchedRowSelected_3GxYn {
+  background-color: white;
+  color: black; }
+  .salesectioneventschedule_SchedRowSelected_3GxYn:hover {
+    background-color: white;
+    color: black; }
+
+.salesectioneventschedule_SaleAppWideCtn_3QOgi {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-image: radial-gradient(101.49% 168.36% at 1.01% 0%, #4c5767 0%, rgba(47, 55, 66, 0) 100%); }
+  @media screen and (max-width: 800px) {
+    .salesectioneventschedule_SaleAppWideCtn_3QOgi {
+      flex-wrap: wrap; } }
+  .salesectioneventschedule_SaleAppWideCtn_3QOgi .salesectioneventschedule_SaleAppCapsule_2mp1u {
+    flex-basis: 196px;
+    flex-shrink: 1; }
+  .salesectioneventschedule_SaleAppWideCtn_3QOgi .salesectioneventschedule_WideHeader_wI_4v {
+    height: auto;
+    width: 100%;
+    max-width: 196px;
+    display: block; }
+  .salesectioneventschedule_SaleAppWideCtn_3QOgi .salesectioneventschedule_WideDetailCtn_2UUN8 {
+    display: flex;
+    flex-direction: column;
+    white-space: nowrap;
+    overflow: hidden;
+    justify-content: center;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 200px;
+    padding-left: 12px;
+    padding-right: 12px;
+    box-sizing: border-box;
+    white-space: normal; }
+    .salesectioneventschedule_SaleAppWideCtn_3QOgi .salesectioneventschedule_WideDetailCtn_2UUN8 .salesectioneventschedule_AppTitle_3q715 {
+      font-size: 18px;
+      line-height: 20px;
+      font-weight: 500;
+      min-width: 120px;
+      color: white;
+      white-space: pre-wrap; }
+    .salesectioneventschedule_SaleAppWideCtn_3QOgi .salesectioneventschedule_WideDetailCtn_2UUN8 .salesectioneventschedule_ReleaseDate_3pYbY {
+      font-size: 11px;
+      color: #CECECE; }
+  .salesectioneventschedule_SaleAppWideCtn_3QOgi .salesectioneventschedule_GameButtons_nZS28 {
+    flex: 1;
+    min-width: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 14px;
+    padding: 6px 0; }
+    .salesectioneventschedule_SaleAppWideCtn_3QOgi .salesectioneventschedule_GameButtons_nZS28 .DialogButton {
+      margin: 2px 3px;
+      padding: 0 10px;
+      white-space: nowrap;
+      width: auto;
+      flex-basis: 50%; }
+      .salesectioneventschedule_SaleAppWideCtn_3QOgi .salesectioneventschedule_GameButtons_nZS28 .DialogButton:hover {
+        background: linear-gradient(to right, #8ed629 5%, #6aa621 95%);
+        color: white;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); }
+  .salesectioneventschedule_SaleAppWideCtn_3QOgi .salesectioneventschedule_WideActionCtn_mZEz5 {
+    display: flex;
+    flex-direction: column; }
+
+.salesectioneventschedule_MainMediaCtn_64yk2 {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px; }
+  .salesectioneventschedule_MainMediaCtn_64yk2 > img {
+    border-radius: 2px;
+    width: 100%;
+    object-fit: cover;
+    max-height: 128px;
+    background-color: black;
+    margin-bottom: -4px; }
+  .salesectioneventschedule_MainMediaCtn_64yk2 .salesectioneventschedule_VideoThumbnail_TxIKn > img {
+    border-radius: 8px;
+    width: 100%;
+    object-fit: cover;
+    max-height: 123px;
+    min-height: 123px;
+    background-color: black; }
+
+.salesectioneventschedule_ThumbnailsContainer_1QVAW {
+  display: flex;
+  margin-top: 6px;
+  flex-direction: row;
+  margin-right: 10px;
+  flex: 1; }
+
+.salesectioneventschedule_Screenshot_jxi-O {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 51px;
+  margin: 0; }
+
+.salesectioneventschedule_ScreenshotThumbnail_1_VV- {
+  height: 100%;
+  width: 91px;
+  object-fit: cover;
+  cursor: pointer; }
+
+.salesectioneventschedule_VideoThumbnail_TxIKn {
+  width: 100%;
+  height: auto;
+  position: relative;
+  cursor: pointer;
+  transition: all .21s ease-in-out;
+  margin-bottom: 0; }
+  .salesectioneventschedule_VideoThumbnail_TxIKn.salesectioneventschedule_videoPlaying_3_Mmg {
+    opacity: 0;
+    transform: translateX(-198px) scale(1.7) translateY(5px); }
+
+.salesectioneventschedule_VideoPlayButton_3D5uj {
+  position: absolute;
+  top: calc(50% - 32px);
+  left: calc(50% - 32px);
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: #0006;
+  border: 1px solid #aaa3;
+  opacity: .75;
+  transition: all .16s ease-in-out; }
+  .salesectioneventschedule_VideoThumbnail_TxIKn:hover .salesectioneventschedule_VideoPlayButton_3D5uj {
+    opacity: 1; }
+    .salesectioneventschedule_VideoThumbnail_TxIKn:hover .salesectioneventschedule_VideoPlayButton_3D5uj .SVGIcon_Play {
+      fill: #fff; }
+  .salesectioneventschedule_VideoPlayButton_3D5uj .SVGIcon_Play {
+    fill: #ccc;
+    width: 50%;
+    height: 50%;
+    margin-left: 18px;
+    margin-top: 15px;
+    transition: all .16s ease-in-out; }
+
+.salesectioneventschedule_VideoLargeContainer_3WfQM {
+  position: absolute;
+  width: calc(100% - 16px);
+  height: calc(100% - 16px);
+  top: 8px;
+  left: 8px;
+  border-radius: 4px;
+  z-index: 3;
+  background-color: #000d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: all .26s ease-in-out; }
+  .salesectioneventschedule_VideoLargeContainer_3WfQM.salesectioneventschedule_videoPlaying_3_Mmg {
+    opacity: 1;
+    pointer-events: initial; }
+  .salesectioneventschedule_VideoLargeContainer_3WfQM .SVGIcon_X_Line {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    right: 8px;
+    top: 8px;
+    cursor: pointer; }
+    .salesectioneventschedule_VideoLargeContainer_3WfQM .SVGIcon_X_Line line {
+      stroke-width: 30px;
+      stroke: #aaa; }
+    .salesectioneventschedule_VideoLargeContainer_3WfQM .SVGIcon_X_Line:hover line {
+      stroke: #fff; }
+
+.salesectioneventschedule_VideoLarge_k_PYH {
+  height: calc(100% - 16px);
+  object-fit: contain;
+  align-self: center;
+  flex: 1; }
+
+.salesectioneventschedule_EventWideCtn_3ebd7 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  color: #dfe3e6; }
+  .salesectioneventschedule_EventWideCtn_3ebd7 .salesectioneventschedule_Title_J6ivk {
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: #AAAAAA; }
+  .salesectioneventschedule_EventWideCtn_3ebd7 hr {
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: linear-gradient(to right, #565F70, #252930); }
+  .salesectioneventschedule_EventWideCtn_3ebd7 .salesectioneventschedule_EventWideDetailCtn_jM8go {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 8px; }
+  .salesectioneventschedule_EventWideCtn_3ebd7 .salesectioneventschedule_EventDetails_1B7Oi {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 2;
+    align-items: center; }
+    .salesectioneventschedule_EventWideCtn_3ebd7 .salesectioneventschedule_EventDetails_1B7Oi .salesectioneventschedule_EventTitle_109s- {
+      font-size: 14px;
+      color: #ffffff;
+      font-weight: 300;
+      padding-right: 20px; }
+    .salesectioneventschedule_EventWideCtn_3ebd7 .salesectioneventschedule_EventDetails_1B7Oi .salesectioneventschedule_EventTime_2-ep9 {
+      font-size: 12px;
+      color: white;
+      font-weight: 600; }
+  .salesectioneventschedule_EventWideCtn_3ebd7 .salesectioneventschedule_EventOptionsCtn_3O1DS {
+    flex: none; }
+  .salesectioneventschedule_EventWideCtn_3ebd7 .salesectioneventschedule_EventDetailsBtn_1yVMk {
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-right: 10px; }
+  .salesectioneventschedule_EventWideCtn_3ebd7 .salesectioneventschedule_EventIcon_1qfgw {
+    width: 50px; }
+
+.salesectioneventschedule_NewsHubLink_TafBI {
+  margin-right: 24px;
+  font: menu;
+  display: inline-block;
+  box-sizing: border-box;
+  text-align: center;
+  background-image: radial-gradient(circle at top left, #399aec 10%, #225dce 80%); }
+  .salesectioneventschedule_NewsHubLink_TafBI:hover {
+    background: linear-gradient(to right, #8ed629 5%, #6aa621 95%);
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); }
+
+.salesectioneventschedule_PopupScreenshotContainer_2p5I9 {
+  width: 80vw;
+  height: auto;
+  margin: 5px; }
+
+.salesectioneventschedule_PopupScreenshot_Qo4B7 {
+  width: 100%;
+  height: 100%; }
+
 /* Other events, shown at the bottom of event page */
 .eventrow_OtherEventsCtn_9H6b5 {
   margin-top: 8vw; }
@@ -13951,6 +15514,9 @@ textarea:-webkit-autofill:focus,
     margin-right: 8px; }
   .eventrow_OtherEvents_EventCtn_1MwNf:hover .eventrow_OtherEvents_MainImage_3_wKb {
     transform: scale(1.1); }
+
+.SaleSectionCarouselPadding .eventrow_OtherEvents_EventCtn_1MwNf {
+  margin: 0px 9px 0px 9px; }
 
 .eventrow_OtherEvents_BGImage_2pPj9 {
   width: 100%;
@@ -14121,811 +15687,94 @@ textarea:-webkit-autofill:focus,
   .eventrow_AppCapsulePrice_2-l2M span {
     font-size: 12px; }
 
-.partnersaledisplay_SaleHeaderContainer_W4mvn {
-  display: flex;
-  margin: 0 auto;
-  max-width: 100vw;
-  align-items: center; }
-  @media screen and (max-width: 1200px) {
-    .partnersaledisplay_SaleHeaderContainer_W4mvn {
-      flex-direction: column-reverse; } }
+/* stylelint-disable */
 
-.partnersaledisplay_SaleSection_1cOoC {
-  padding: 16px;
-  max-width: 940px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 20px;
+.gamehover_GameHoverTransition_We-Ng {
+  transition: transform 0.15s ease-out;
+  transform: scale(0.95); }
+  .gamehover_GameHoverTransition_We-Ng.gamehover_Opening_3A24v, .gamehover_GameHoverTransition_We-Ng.gamehover_Open_1rWYa {
+    transform: scale(1); }
+
+.gamehover_GameHoverCapsuleCtn_2jsr3 {
   box-sizing: border-box;
-  position: relative;
-  z-index: 2; }
-  .partnersaledisplay_SaleSection_1cOoC.partnersaledisplay_CarouselDisplay_mntHD {
-    max-width: 940px; }
-  .partnersaledisplay_SaleSection_1cOoC .partnersaledisplay_SaleViewAll_1bsBz {
-    display: flex;
-    justify-content: flex-end;
-    padding-top: 5px; }
-
-.partnersaledisplay_SaleSectionLoginPrompt_2-dSB {
-  padding: 36px 64px;
-  font-size: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center; }
-  .partnersaledisplay_SaleSectionLoginPrompt_2-dSB .partnersaledisplay_LoginButton_3h6sH {
-    border-radius: 2px;
-    border: none;
-    padding: 10px 30px;
-    margin: 16px;
-    display: inline-block;
-    text-transform: uppercase;
-    cursor: pointer;
-    color: #285b9a;
-    background: rgba(103, 193, 245, 0.9); }
-    .partnersaledisplay_SaleSectionLoginPrompt_2-dSB .partnersaledisplay_LoginButton_3h6sH:hover {
-      color: #fff;
-      background: #417a9b;
-      background: -webkit-linear-gradient(150deg, #417a9b 5%, #67c1f5 95%);
-      background: linear-gradient(-60deg, #417a9b 5%, #67c1f5 95%); }
-
-.partnersaledisplay_SaleOverlayCtn_3GTIc {
-  width: 100vw;
-  max-width: 1300px;
-  margin: 0 auto;
-  position: relative;
-  display: flex;
-  justify-content: flex-start; }
-  @media screen and (max-width: 920px) {
-    .partnersaledisplay_SaleOverlayCtn_3GTIc {
-      justify-content: center; } }
-
-.partnersaledisplay_SaleOverlay_1sZo8 {
-  margin-top: 20px;
-  max-width: 100vw; }
-  @media screen and (max-width: 920px) {
-    .partnersaledisplay_SaleOverlay_1sZo8 {
-      margin-top: 12vw; } }
-
-.partnersaledisplay_AppSummaryWidgetCtn_2H8Bm {
-  flex-grow: 2;
-  flex-basis: 0;
-  padding: 16px;
-  background-image: radial-gradient(ellipse at top left, #42454c, #25282e);
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
-  border-radius: 4px; }
-
-.carousel .partnersaledisplay_AppSummaryWidgetCtn_2H8Bm {
-  height: 100%; }
-
-.partnersaledisplay_SaleBroadcastCtn_1SFMh {
-  z-index: 3;
-  position: relative;
-  width: 100%;
-  margin: 0 auto;
-  max-width: 940px; }
-
-.partnersaledisplay_SaleOuterContainer_150kd {
-  display: flex;
-  flex-direction: column; }
-  @media screen and (max-width: 1110px) {
-    .partnersaledisplay_SaleOuterContainer_150kd.partnersaledisplay_CustomStyle_together_1lAyg {
-      margin-top: 36vw !important; } }
-  @media screen and (max-width: 940px) {
-    .partnersaledisplay_SaleOuterContainer_150kd {
-      margin-top: 60vw !important; } }
-
-.partnersaledisplay_SaleBackground_2N8Se {
-  background-position: center top;
-  background-repeat: no-repeat;
-  padding-bottom: 20px; }
-  @media screen and (max-width: 1110px) {
-    .partnersaledisplay_SaleBackground_2N8Se.partnersaledisplay_CustomStyle_together_1lAyg {
-      background-size: 230vw; } }
-  @media screen and (max-width: 768px) {
-    .partnersaledisplay_SaleBackground_2N8Se.partnersaledisplay_CustomStyle_together_1lAyg {
-      background-size: 230vw; } }
-  @media screen and (max-width: 940px) {
-    .partnersaledisplay_SaleBackground_2N8Se {
-      background-size: var(--background-scale, 166%); } }
-
-.partnersaledisplay_SaleSectionSubtext_17Fnl {
-  margin-bottom: 10px; }
-
-.partnersaledisplay_SaleSectionContainer_W9_WA {
-  display: grid;
-  grid-gap: 16px; }
-
-.partnersaledisplay_ShowContentsContainer_CBMVC {
-  display: flex;
-  justify-content: center;
-  margin-top: 14px; }
-  .partnersaledisplay_ShowContentsContainer_CBMVC .partnersaledisplay_ShowContentsButton_2EjTW {
-    border-radius: 2px;
-    border: none;
-    padding: 10px;
-    display: inline-block;
-    cursor: pointer;
-    color: #285b9a;
-    background: rgba(103, 193, 245, 0.9); }
-    .partnersaledisplay_ShowContentsContainer_CBMVC .partnersaledisplay_ShowContentsButton_2EjTW:hover {
-      color: #fff;
-      background: #417a9b;
-      background: -webkit-linear-gradient(150deg, #417a9b 5%, #67c1f5 95%);
-      background: linear-gradient(-60deg, #417a9b 5%, #67c1f5 95%); }
-
-span.partnersaledisplay_vr_supported_1BDSJ,
-span.partnersaledisplay_vr_required_1P__h {
-  vertical-align: top;
-  line-height: 21px;
-  margin-left: 4px;
-  font-size: 11px; }
-
-.partnersaledisplay_preview_placeholder_section_3QLsj {
-  font-weight: bold;
-  font-size: 24px; }
-
-.partnersaledisplay_in_carousel_JfB2A {
-  padding: 10px;
-  display: block; }
-
-.partnersaledisplay_fullscreen_bg_j2ykT {
-  position: absolute;
-  z-index: 0;
-  width: 100%;
-  overflow: hidden; }
-
-.partnersaledisplay_fullscreen_bg__video_FXgrB {
-  margin-left: 50%;
-  transform: translateX(-50%); }
-
-.partnersaledisplay_SalePageBroadcastContextHover_hbVdl {
-  display: flex;
-  align-items: center;
-  padding: 12px; }
-  .partnersaledisplay_SalePageBroadcastContextHover_hbVdl .partnersaledisplay_AlbumCoverImage_2JfUA {
-    height: 100px;
-    cursor: pointer; }
-    .partnersaledisplay_SalePageBroadcastContextHover_hbVdl .partnersaledisplay_AlbumCoverImage_2JfUA:hover {
-      box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.5); }
-  .partnersaledisplay_SalePageBroadcastContextHover_hbVdl .partnersaledisplay_AlbumTitle_keaMw {
-    font-size: 20px;
-    padding: 12px;
-    cursor: pointer; }
-    .partnersaledisplay_SalePageBroadcastContextHover_hbVdl .partnersaledisplay_AlbumTitle_keaMw:hover {
-      text-decoration: underline; }
-
-.partnersaledisplay_PreviewSalesPageContainer_16oMm .partnersaledisplay_SaleSectionTabs_1FPIV {
-  top: 90px; }
-
-.partnersaledisplay_SaleSectionTabs_1FPIV {
-  top: 0px;
-  position: sticky;
-  z-index: 10;
-  left: 0px;
-  right: 0px;
-  margin-left: 0px;
-  margin-right: 0px;
-  width: 100%;
-  max-width: 100%; }
-  .partnersaledisplay_SaleSectionTabs_1FPIV .partnersaledisplay_SaleSectionTabsTab_3BgHm {
-    background-color: black;
-    padding: 8px;
-    color: #888;
-    font-size: 18px;
-    margin: 4px;
-    min-width: 200px;
-    padding: auto 0px auto 0px;
-    cursor: pointer; }
-  .partnersaledisplay_SaleSectionTabs_1FPIV .partnersaledisplay_SaleSectionTabsCarousel_1XZy7 {
-    margin-left: 40px;
-    margin-right: 40px; }
-  .partnersaledisplay_SaleSectionTabs_1FPIV .partnersaledisplay_SaleSectionTabsList_4IDJX {
-    display: flex;
-    flex-direction: row;
-    margin-left: auto;
-    margin-right: auto;
-    overflow-x: scroll; }
-  .partnersaledisplay_SaleSectionTabs_1FPIV .partnersaledisplay_SaleTab_gc-rq {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 70px; }
-  .partnersaledisplay_SaleSectionTabs_1FPIV .partnersaledisplay_SaleTabLabel_2mYMQ {
-    text-align: center; }
-
-.partnersaledisplay_SaleSectionTabListContainer_2VZtq {
-  position: relative; }
-
-.partnersaledisplay_TabContentsContainer_2xJbu {
-  display: flex;
-  flex-flow: column; }
-
-.salepreviewwidgets_StoreSaleWidgetContainer_2hhNO {
-  display: flex;
-  flex-direction: row;
-  max-width: 880px;
-  z-index: 1; }
-  .salepreviewwidgets_StoreSaleWidgetContainer_2hhNO.salepreviewwidgets_Bundle_2GbhL {
-    max-height: initial; }
-  @media screen and (max-width: 620px) {
-    .salepreviewwidgets_StoreSaleWidgetContainer_2hhNO {
-      flex-direction: column; } }
-  .salepreviewwidgets_StoreSaleWidgetContainer_2hhNO .salepreviewwidgets_WishList_1djkd,
-  .salepreviewwidgets_StoreSaleWidgetContainer_2hhNO .salepreviewwidgets_Action_2zssE {
-    margin-right: 5px;
-    margin-top: 6px;
-    width: auto;
-    min-width: unset;
-    padding: 9px 20px; }
-
-.salepreviewwidgets_StoreSaleWidgetImage_yvqq8 {
-  padding-right: 16px;
-  cursor: pointer; }
-  .salepreviewwidgets_StoreSaleWidgetImage_yvqq8.salepreviewwidgets_StoreSaleWidgetImageCtn_1NnBn {
-    display: block; }
-
-.salepreviewwidgets_StoreSaleImage_17bKG {
-  width: 100%;
-  cursor: pointer;
-  display: block; }
-
-.salepreviewwidgets_StoreSaleVideo_1gjSJ {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  opacity: 1;
-  transition: opacity 0.6s;
-  /* Firefox default behavior is to restart the video on click */
-  pointer-events: none;
-  background: black; }
-
-/* Override the EventDetailsBody img style in partnereventdisplay.scss */
-.salepreviewwidgets_StoreSaleImage_17bKG.salepreviewwidgets_StoreSaleImage_17bKG {
-  max-width: initial;
-  height: auto; }
-
-.salepreviewwidgets_StoreSaleWidgetTitle_2ekpT {
-  cursor: pointer;
-  font-size: 18px;
-  line-height: 21px;
-  width: fit-content;
-  color: #e5e5e5;
-  flex-shrink: 0;
-  margin-top: 2px;
-  text-align: left; }
-
-.salepreviewwidgets_StoreSaleWidgetTitle_2ekpT:hover {
-  color: #AAA; }
-
-.salepreviewwidgets_StoreSaleWidgetRelease_1qvTF {
-  font-size: 10px;
-  color: #919fb1;
-  margin-bottom: 8px;
-  margin-top: 0px;
-  text-align: left; }
-  @media screen and (max-width: 620px) {
-    .salepreviewwidgets_StoreSaleWidgetRelease_1qvTF {
-      display: none; } }
-
-.salepreviewwidgets_StoreSaleWidgetTags_2bkP- {
-  height: 25px;
-  overflow: hidden;
-  margin-top: 4px;
-  text-align: left; }
-
-.salepreviewwidgets_StoreSaleWidgetScreenshots_1lWbL {
-  margin-top: 4px;
-  display: none; }
-
-.salepreviewwidgets_AppTag_3FJnZ {
-  display: inline-block;
-  line-height: 19px;
-  padding: 0 7px;
-  color: #a5b0b6;
-  background-color: rgba(112, 129, 137, 0.15);
-  box-shadow: none;
-  margin-right: 2px;
-  border-radius: 2px;
-  margin-bottom: 3px;
-  max-width: 200px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  font-size: 10px; }
-  .salepreviewwidgets_AppTag_3FJnZ:hover {
-    text-decoration: none;
-    cursor: default;
-    background-color: rgba(112, 129, 137, 0.15); }
-  .salepreviewwidgets_AppTag_3FJnZ:nth-child(n+6) {
-    display: none; }
-
-.salepreviewwidgets_StoreSaleWidgetShortDesc_3AsE5 {
-  font-size: 12px;
-  line-height: 15px;
-  max-height: 93px;
-  overflow: hidden;
-  text-align: left; }
-
-.salepreviewwidgets_StoreSaleWidgetLeft_3DkfN {
-  padding: 0px;
-  flex-basis: 30%; }
-
-.salepreviewwidgets_StoreSaleWidgetRight_v9uRg {
-  padding: 0px 4px 4px 4px;
-  flex-basis: 70%; }
-  .salepreviewwidgets_StoreSaleWidgetRight_v9uRg .salepreviewwidgets_TitleCtn_3rrH9 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between; }
-
-.carousel .salepreviewwidgets_TitleCtn_3rrH9 {
-  flex-direction: column; }
-  .carousel .salepreviewwidgets_TitleCtn_3rrH9 .salepreviewwidgets_CapsulePlatform_2bCf9 {
-    padding-left: 0px; }
-
-.carousel .salepreviewwidgets_StoreSaleWidgetShortDesc_3AsE5 {
-  max-height: unset;
-  padding-bottom: 8px; }
-
-.salepreviewwidgets_StoreActionWidgetContainer_kW6m4 {
-  display: flex;
-  flex-wrap: wrap; }
-  .salepreviewwidgets_StoreActionWidgetContainer_kW6m4 .salepreviewwidgets_StoreSalePriceActionWidgetContainer_1JuIp {
-    display: flex;
-    flex-direction: row;
-    padding: 0px;
-    margin-top: 6px; }
-
-.salepreviewwidgets_StoreSaleDiscountedPriceCtn_3NhLu {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  padding-right: 5px; }
-  .salepreviewwidgets_StoreSaleDiscountedPriceCtn_3NhLu .salepreviewwidgets_StoreSalePriceBox_3j4dI {
-    padding: 0px;
-    line-height: 16px; }
-
-.salepreviewwidgets_StoreSaleDiscountBox_cnkoF {
-  font-size: 16px;
-  font-weight: 500;
-  padding: 3px 5px;
-  background-color: #4C6B22;
-  color: #A4D007;
-  display: flex;
-  align-items: center;
-  margin-right: 3px; }
-
-.salepreviewwidgets_StoreOrignalPrice_18ANC {
-  text-decoration: line-through;
-  color: #626366;
-  font-size: 11px;
-  line-height: 11px;
-  margin-top: 2px; }
-
-.salepreviewwidgets_StoreSalePriceBox_3j4dI {
-  background: black;
-  padding: 3px 5px;
-  font-size: 14px;
-  padding: 5px 8px;
-  background-color: black;
-  align-items: center;
-  display: flex;
-  border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px; }
-
-.salepreviewwidgets_Discounted_1g0B- .salepreviewwidgets_StoreSalePriceBox_3j4dI {
-  border-radius: unset;
-  padding-left: 5px; }
-
-.salepreviewwidgets_StoreSalePriceButton_1BejQ {
-  border-radius: 2px;
-  border: none;
-  padding: 1px;
-  display: inline-block;
-  cursor: pointer;
-  text-decoration: none !important;
-  color: #D2E885 !important;
-  background: #799905;
-  background: -webkit-linear-gradient(top, #799905 5%, #536904 95%);
-  background: linear-gradient(to bottom, #799905 5%, #536904 95%);
-  padding: 0 15px;
-  font-size: 15px;
-  line-height: 30px; }
-
-.salepreviewwidgets_StoreSalePriceButton_1BejQ:hover {
-  text-decoration: none !important;
-  color: #ffffff !important;
-  background: #a4d007;
-  background: -webkit-linear-gradient(top, #a4d007 5%, #6b8705 95%);
-  background: linear-gradient(to bottom, #a4d007 5%, #6b8705 95%); }
-
-.salepreviewwidgets_CapsuleContainer_22Acx {
-  display: flex;
-  flex-direction: column;
-  border-radius: 3px;
-  overflow: hidden;
-  position: relative;
+  background: radial-gradient(ellipse at top right, #5577bb, #333355);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-  transition: all 0.2s ease-out; }
-  .salepreviewwidgets_CapsuleContainer_22Acx .salepreviewwidgets_CapsuleImageContainer_t0lY6 {
-    display: relative; }
-  .salepreviewwidgets_CapsuleContainer_22Acx .salepreviewwidgets_CapsuleImage_2eQ4m {
-    display: block; }
-  .salepreviewwidgets_CapsuleContainer_22Acx .salepreviewwidgets_CapsuleMicroTrailer_1M7n5 {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1;
-    display: block;
-    pointer-events: none; }
-  .salepreviewwidgets_CapsuleContainer_22Acx:hover {
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); }
-  .salepreviewwidgets_CapsuleContainer_22Acx.salepreviewwidgets_InCarouselWidget_z5kQ3 {
-    margin: 9px; }
-
-.salepreviewwidgets_Muted_1HVwz {
-  opacity: 0.3; }
-
-.salepreviewwidgets_CapsuleBottomBar_3lmdE {
-  background-color: black;
-  display: flex;
-  align-items: center;
-  color: white;
-  height: 30px;
-  box-sizing: border-box;
-  z-index: 2; }
-  .salepreviewwidgets_CapsuleBottomBar_3lmdE .salepreviewwidgets_BottomBarPriceInfo_1X3j2 {
-    margin-left: auto;
-    display: flex; }
-  .salepreviewwidgets_CapsuleBottomBar_3lmdE.salepreviewwidgets_PlayNowButton_38ePa, .salepreviewwidgets_CapsuleBottomBar_3lmdE.salepreviewwidgets_AddToLibraryButton_1DrDh {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 4px;
-    border-radius: 2px; }
-  .salepreviewwidgets_CapsuleBottomBar_3lmdE.salepreviewwidgets_PlayNowButton_38ePa {
-    background-color: #85a805; }
-  .salepreviewwidgets_CapsuleBottomBar_3lmdE.salepreviewwidgets_AddToLibraryButton_1DrDh {
-    background-color: gray; }
-
-.salepreviewwidgets_CapsulePlatform_2bCf9 {
-  padding: 0px 4px;
-  height: 20px;
-  display: flex;
-  flex-direction: row; }
-
-.salepreviewwidgets_CapsuleImage_2eQ4m {
-  width: 100%;
-  display: block; }
-
-.salepreviewwidgets_CapsuleTitle_E_751 {
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  line-height: 20px;
-  font-size: 13px;
-  margin-left: 3px;
-  margin-right: 5px;
-  max-width: 60vw; }
-
-.salepreviewwidgets_CapsuleParentInfo_2erfW {
   display: flex;
   flex-direction: column;
-  align-items: center; }
-
-.salepreviewwidgets_Action_2zssE {
-  min-width: 50%;
-  flex-direction: row;
-  background-image: radial-gradient(circle at top left, #85a805 10%, #6a8704 80%);
-  transition: all 0.2s ease-out;
-  padding: 9px;
-  height: 38px;
-  box-sizing: border-box;
-  color: #dfe3e6;
-  text-align: center;
-  border-radius: 2px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  align-self: center;
-  /*
-	// TODO these are the styles for the older add to cart button style
-	border-radius: 2px;
-    border: none;
-    padding: 1px;
-    display: inline-block;
-    cursor: pointer;
-    text-decoration: none !important;
-    color: #D2E885 !important;
-    background: #799905;
-    background: -webkit-linear-gradient(top, #799905 5%, #536904 95%);
-    background: linear-gradient(to bottom, #799905 5%, #536904 95%);
-    padding: 0 15px;
-    font-size: 15px;
-	line-height: 30px;
-	
-	&:hover {
-		text-decoration: none !important;
-		color: #ffffff !important;
-		background: #a4d007;
-		background: -webkit-linear-gradient(top, #a4d007 5%, #6b8705 95%);
-		background: linear-gradient(to bottom, #a4d007 5%, #6b8705 95%);
-	}
-	*/ }
-  .salepreviewwidgets_Action_2zssE:hover {
-    color: white;
-    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
-    background-image: radial-gradient(circle at top left, #a3cf06 0%, #6a8704 120%);
-    cursor: pointer; }
-
-.salepreviewwidgets_WishList_1djkd {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  background-image: radial-gradient(circle at top left, #0675cf 10%, #046287 80%);
-  transition: all 0.2s ease-out;
-  padding: 9px;
-  height: 38px;
-  box-sizing: border-box;
-  color: #dfe3e6;
-  text-align: center;
-  border-radius: 2px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); }
-  .salepreviewwidgets_WishList_1djkd:hover {
-    color: white;
-    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
-    background-image: radial-gradient(circle at top left, #0675cf 0%, #046287 120%);
-    cursor: pointer; }
-
-.salepreviewwidgets_Banner_2gxv9 {
-  position: absolute;
-  left: 0;
-  top: 14px;
-  font-size: 11px;
-  color: #111111;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
-  box-sizing: border-box;
-  padding: 3px 14px 3px 10px;
-  height: 18px;
-  display: flex;
-  align-items: center;
-  white-space: nowrap;
-  z-index: 5;
-  text-transform: uppercase;
-  background-color: #d3deea; }
-  .salepreviewwidgets_Banner_2gxv9.salepreviewwidgets_Blue_2o-5t {
-    background-color: #66c0f4; }
-  .salepreviewwidgets_Banner_2gxv9 .salepreviewwidgets_LinesImg_3LecB {
-    height: 10px;
-    margin-right: 4px; }
-
-.salepreviewwidgets_LiveIcon_1ZIpI {
-  position: absolute;
-  left: 0;
-  top: 36px; }
-
-.salepreviewwidgets_CapsuleMenuButton_niVR8 {
-  position: absolute;
-  right: 4px;
-  top: 4px;
-  height: 16px;
-  width: 16px;
-  border-radius: 4px;
-  padding: 3px;
-  box-sizing: border-box;
-  background: white;
-  display: flex;
-  border: 1px solid black;
-  z-index: 3;
-  visibility: hidden; }
-  .salepreviewwidgets_CapsuleContainer_22Acx:hover .salepreviewwidgets_CapsuleMenuButton_niVR8 {
-    visibility: visible; }
-  html.touch .salepreviewwidgets_CapsuleMenuButton_niVR8 {
-    /* stylelint-disable-line */
-    visibility: visible; }
-  .salepreviewwidgets_CapsuleMenuButton_niVR8:hover {
-    background: #67c1f5; }
-  .salepreviewwidgets_CapsuleMenuButton_niVR8 polyline {
-    stroke: #67c1f5; }
-
-.salepreviewwidgets_BundleContentsCtn_34acu {
-  background: rgba(0, 0, 0, 0.2);
-  margin-left: -16px;
-  margin-right: -16px;
-  margin-bottom: -16px;
-  padding: 16px 16px 16px 16px;
-  margin-top: 12px; }
-
-.salepreviewwidgets_BundleContentItem_2sdNO {
-  margin-bottom: 4px; }
-  .salepreviewwidgets_BundleContentItem_2sdNO .salepreviewwidgets_StoreSaleWidgetContainer_2hhNO {
-    background: -webkit-linear-gradient(-10deg, rgba(255, 255, 255, 0.2) 5%, rgba(255, 255, 255, 0) 95%);
-    background: linear-gradient(-10deg, rgba(255, 255, 255, 0.2) 5%, rgba(255, 255, 255, 0) 95%);
-    border-radius: 3px; }
-  .salepreviewwidgets_BundleContentItem_2sdNO .salepreviewwidgets_StoreSaleWidgetTags_2bkP-,
-  .salepreviewwidgets_BundleContentItem_2sdNO .salepreviewwidgets_StoreSaleWidgetShortDesc_3AsE5 {
-    display: none; }
-  .salepreviewwidgets_BundleContentItem_2sdNO .salepreviewwidgets_StoreSaleWidgetLeft_3DkfN {
-    flex-basis: 23%; }
-  .salepreviewwidgets_BundleContentItem_2sdNO .salepreviewwidgets_StoreSaleWidgetRight_v9uRg {
-    flex-basis: 77%;
-    padding-right: 0px; }
-  .salepreviewwidgets_BundleContentItem_2sdNO .salepreviewwidgets_TitleCtn_3rrH9 {
-    margin-top: 10px; }
-  .salepreviewwidgets_BundleContentItem_2sdNO .packageItem .salepreviewwidgets_StoreSaleWidgetRight_v9uRg {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; }
-    .salepreviewwidgets_BundleContentItem_2sdNO .packageItem .salepreviewwidgets_StoreSaleWidgetRight_v9uRg .salepreviewwidgets_ExpandPackageButtonCtn_2quyD {
-      position: relative;
-      margin-top: 5px; }
-
-.salepreviewwidgets_ExpandedPackageItems_3WUOP {
-  padding-left: 20px;
-  margin-top: 8px; }
-  .salepreviewwidgets_ExpandedPackageItems_3WUOP .salepreviewwidgets_BundleContentItem_2sdNO:last-child {
-    margin-bottom: 40px; }
-  .salepreviewwidgets_ExpandedPackageItems_3WUOP .salepreviewwidgets_BundleContentItem_2sdNO:hover .salepreviewwidgets_Action_2zssE,
-  .salepreviewwidgets_ExpandedPackageItems_3WUOP .salepreviewwidgets_BundleContentItem_2sdNO:hover .salepreviewwidgets_WishList_1djkd {
-    display: inline-block; }
-  .salepreviewwidgets_ExpandedPackageItems_3WUOP .salepreviewwidgets_StoreActionWidgetContainer_kW6m4 .salepreviewwidgets_Action_2zssE {
-    display: none; }
-  .salepreviewwidgets_ExpandedPackageItems_3WUOP .salepreviewwidgets_StoreActionWidgetContainer_kW6m4 .salepreviewwidgets_WishList_1djkd {
-    display: none; }
-
-.salepreviewwidgets_BundleLargeCtn_1Wbr3 {
-  justify-content: space-between; }
-  .salepreviewwidgets_BundleLargeCtn_1Wbr3 .salepreviewwidgets_BundleImage_3D54h {
-    width: 60%;
-    box-sizing: border-box; }
-    @media screen and (max-width: 620px) {
-      .salepreviewwidgets_BundleLargeCtn_1Wbr3 .salepreviewwidgets_BundleImage_3D54h {
-        max-width: unset;
-        width: 100%; }
-        .salepreviewwidgets_BundleLargeCtn_1Wbr3 .salepreviewwidgets_BundleImage_3D54h .salepreviewwidgets_StoreSaleWidgetImage_yvqq8 {
-          padding: 0; } }
-  .salepreviewwidgets_BundleLargeCtn_1Wbr3 .salepreviewwidgets_StoreSaleWidgetRight_v9uRg {
-    padding: 0px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; }
-    .salepreviewwidgets_BundleLargeCtn_1Wbr3 .salepreviewwidgets_StoreSaleWidgetRight_v9uRg .salepreviewwidgets_StoreSaleWidgetTitle_2ekpT {
-      font-size: 24px;
-      line-height: 28px;
-      margin: 0; }
-    .salepreviewwidgets_BundleLargeCtn_1Wbr3 .salepreviewwidgets_StoreSaleWidgetRight_v9uRg .salepreviewwidgets_BundleContentPreview_jQ5Ga {
-      margin: 0; }
-    @media screen and (max-width: 620px) {
-      .salepreviewwidgets_BundleLargeCtn_1Wbr3 .salepreviewwidgets_StoreSaleWidgetRight_v9uRg {
-        max-width: unset;
-        width: 100%; }
-        .salepreviewwidgets_BundleLargeCtn_1Wbr3 .salepreviewwidgets_StoreSaleWidgetRight_v9uRg .salepreviewwidgets_StoreSaleWidgetTitle_2ekpT {
-          margin-top: 6px; } }
-  .salepreviewwidgets_BundleLargeCtn_1Wbr3 .salepreviewwidgets_StoreSaleWidgetShortDesc_3AsE5 {
-    padding-top: 5px; }
-  .salepreviewwidgets_BundleLargeCtn_1Wbr3 .salepreviewwidgets_CapsulePlatform_2bCf9 {
-    margin-right: auto;
-    align-self: center; }
-
-.salepreviewwidgets_BundleBuyButtons_2puKN {
-  margin-top: 8px;
-  display: flex;
-  justify-content: flex-end;
-  flex-wrap: wrap; }
-  .salepreviewwidgets_BundleBuyButtons_2puKN .salepreviewwidgets_BundleBuyButton_1Q0r5 {
-    width: 150px;
-    height: 42px;
-    box-sizing: border-box;
-    border: 2px solid black;
-    background-color: black;
-    font-size: 15px; }
-    .salepreviewwidgets_BundleBuyButtons_2puKN .salepreviewwidgets_BundleBuyButton_1Q0r5 a {
-      min-width: 150px;
+  justify-content: space-between;
+  outline: none;
+  min-width: 300px; }
+  .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_TrailerCtn_1I27K {
+    position: relative;
+    width: 100%;
+    padding: 56.25% 0 0 0; }
+    .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_TrailerCtn_1I27K .gamehover_FullDivImage_2jpCs {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
       height: 100%;
-      padding: 4px 0;
-      box-sizing: border-box; }
-    .salepreviewwidgets_BundleBuyButtons_2puKN .salepreviewwidgets_BundleBuyButton_1Q0r5 .salepreviewwidgets_Action_2zssE {
-      margin-top: 0px;
-      margin-right: 0px; }
-  .salepreviewwidgets_BundleBuyButtons_2puKN .salepreviewwidgets_BundleDiscounts_1JRvn {
-    margin: 0 0 0 4px;
-    display: flex;
-    align-items: center;
-    background-color: black; }
-    .salepreviewwidgets_BundleBuyButtons_2puKN .salepreviewwidgets_BundleDiscounts_1JRvn .salepreviewwidgets_BaseDiscount_3mInD {
-      padding: 6px;
-      font-size: 18px;
-      text-decoration: line-through; }
-    .salepreviewwidgets_BundleBuyButtons_2puKN .salepreviewwidgets_BundleDiscounts_1JRvn .salepreviewwidgets_StoreSaleDiscountBox_cnkoF {
-      font-size: 25px;
-      padding: 2px 5px 4px; }
-    .salepreviewwidgets_BundleBuyButtons_2puKN .salepreviewwidgets_BundleDiscounts_1JRvn .salepreviewwidgets_StoreSaleDiscountedPriceCtn_3NhLu {
-      padding: 4px; }
-
-.salepreviewwidgets_BundleContentPreview_jQ5Ga {
-  padding: 6px;
-  margin: 8px -6px 0 -6px;
-  background: rgba(0, 0, 0, 0.5);
-  max-width: 550px;
-  margin-bottom: 10px; }
-  .salepreviewwidgets_BundleContentPreview_jQ5Ga .salepreviewwidgets_PreviewCtn_1NM53 {
+      width: 100%;
+      display: block;
+      pointer-events: none;
+      background: black;
+      opacity: 1;
+      transition: opacity 0.5s; }
+      .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_TrailerCtn_1I27K .gamehover_FullDivImage_2jpCs.gamehover_Transparent_AZ9GL {
+        opacity: 0; }
+  .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_CapsuleImageAnchorPoint_1OMas {
     position: relative;
-    height: 45px;
-    overflow: hidden;
-    white-space: nowrap;
-    display: flex; }
-  .salepreviewwidgets_BundleContentPreview_jQ5Ga .salepreviewwidgets_PreviewItem_2yhQb {
-    display: inline-block;
-    box-shadow: 2px 0 5px 0px #000000;
-    margin-left: -30px; }
-  .salepreviewwidgets_BundleContentPreview_jQ5Ga .salepreviewwidgets_PreviewItem_2yhQb:first-child {
-    position: relative;
-    margin-left: 0px; }
-  .salepreviewwidgets_BundleContentPreview_jQ5Ga .salepreviewwidgets_PreviewImg_1jx70 {
-    display: block;
-    max-width: 120px; }
-
-.salepreviewwidgets_BundleShowButton_2Vu78 {
-  padding: 12px 0 0 0;
-  display: flex;
-  justify-content: center;
-  border-top: 1px solid black;
-  margin-top: 12px; }
-
-.salepreviewwidgets_ShowContentsButton_-VlK4 {
-  border-radius: 2px;
-  border: none;
-  padding: 4px 20px;
-  display: inline-block;
-  cursor: pointer;
-  color: rgba(255, 255, 255, 0.5);
-  background: -webkit-linear-gradient(150deg, rgba(255, 255, 255, 0.2) 5%, rgba(255, 255, 255, 0.3) 95%);
-  background: linear-gradient(-60deg, rgba(255, 255, 255, 0.2) 5%, rgba(255, 255, 255, 0.3) 95%); }
-  .salepreviewwidgets_ShowContentsButton_-VlK4:hover {
-    color: #fff;
-    background: #417a9b;
-    background: -webkit-linear-gradient(150deg, #417a9b 5%, #67c1f5 95%);
-    background: linear-gradient(-60deg, #417a9b 5%, #67c1f5 95%);
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); }
-
-.salepreviewwidgets_bordered_live_stream_icon_2E28o {
-  position: relative;
-  display: inline-block;
-  top: auto;
-  left: auto;
-  line-height: 14px;
-  vertical-align: bottom;
-  height: 13px;
-  margin-right: 15px;
-  overflow: hidden;
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAFMN540AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MkQ4QTE5MTc3M0M4MTFFODkzODlBNzdDNUZEOUI2RUMiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MkQ4QTE5MTg3M0M4MTFFODkzODlBNzdDNUZEOUI2RUMiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDoyRDhBMTkxNTczQzgxMUU4OTM4OUE3N0M1RkQ5QjZFQyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDoyRDhBMTkxNjczQzgxMUU4OTM4OUE3N0M1RkQ5QjZFQyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqixHngAAAK7SURBVHjaYvz//z8DMmABEZuio2CiX8ACf378gCngAQv8/fHjM5DiDd26jREggBjRzWDcGBUpB6Qfgjh+S5cxsgD1P0RWwRS0dh0j0AyQOWABgACCm7ElLhauFQiW+yxaHAVXsDE8DNUmKPBfuYoR7Kzf37+vAFIR2BRhOBMdAAQQXgUsMAbQgX+AFDOIDXQcI1wnUqDBAdjzIMb/P38wjAT6ZgckMLFIAoEOWPLf798YMiGbNsswQRmM///+ZUDC0QS9AhBABAMCH2BB5myOjckHUhPwqP/vu3gJE4bNm6Ii/4KSAZGWKvgtW/4QbjMwRJhIcPEtIGaHa8YR1rhAHUaArfH1+QcSI6AxMmTzlhU4Q3uVlycolc8GYkcgfgXEU8K2be9AVwcQQBRFFRMDBYAFXQCY7peB/IUmDAoLRWA+eITT2cBEQiiui4CJpB8zkURHgcoYHiJcKw/MaI8QxVdUpDyRGkHgPiw7Q3Lq378zyQlkiOZ//xzIDu1///69AVLSZMUz0ObJQMxALEbRHLx+QydaMYIPr8BMYf//RzKAog0//g8sryKxJpLV3l5+oCIRhxe/AOsZXoIZA5irKoBUDhCLAfF+IM4E5qp7VM1VAAFGkWaq5khcYEt8HKhwiYIWLlpALAqqG4H4CbRqPQDEK30WLrpPsY83x8WCIm4JqDFAooe+AHGa76LFy0myeHNMdDioYUBEGUwIgAyP9F2ydCVBi4FF0VJokFITrAAWW5E4Ld4YEV4OpDpolJ4q/Fes7MRaVwDLh1xSyhIScS7OVA2UFKFhDhLFZ/FBIOVGI4v347M4HUjdpbS6xgJAZXwG3lQNbMqACoqrJNSVxORpbWDT5xFRBchqH29Q+7GPAt+DDC4N3bK1l6yyejWkHQbKBmFEOAIUpKuAuDx02/ZHg7KSYGIYIAAAG8jIJ8edBjIAAAAASUVORK5CYII=) #000;
-  background-position-x: 0%;
-  background-position-y: 0%;
-  background-repeat: repeat;
-  background-size: auto auto;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-position-x: center;
-  background-size: 12px 12px;
-  background-position-x: 4px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 12px;
-  padding: 3px 6px 3px 20px;
-  box-shadow: 0 0 7px #a94847;
-  border-radius: 9px;
-  z-index: 2; }
+    height: 0; }
+    .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_CapsuleImageAnchorPoint_1OMas .gamehover_CapsuleImageCtn_wm-2T {
+      position: absolute;
+      width: 230px;
+      height: 107px;
+      z-index: 1;
+      top: -53.5px;
+      left: -16px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.7); }
+  .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN {
+    color: white; }
+    .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_Price_2Eh6G {
+      width: max-content;
+      margin-left: auto; }
+    .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL {
+      padding: 25px 8px 12px; }
+      .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_GameTitle_405wj {
+        font-size: 24px; }
+      .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_Tags_fTGVi {
+        color: #88aacc;
+        font-size: 16px;
+        display: flex;
+        flex-wrap: wrap; }
+        .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_Tags_fTGVi .gamehover_Tag_1wO-t {
+          margin-left: 6px;
+          color: gray; }
+      .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_ReviewScore_3qvpp {
+        font-size: 16px;
+        display: flex; }
+        .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreHeader_2t-0j {
+          color: #88aacc;
+          margin-right: 4px; }
+        .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreValue_3ZWs0 {
+          display: flex; }
+          .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreValue_3ZWs0.gamehover_ReviewScoreLow_3nU5I {
+            color: gray; }
+          .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreValue_3ZWs0.gamehover_ReviewScoreMixed_11Q2_ {
+            color: #d8d81e; }
+          .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreValue_3ZWs0.gamehover_ReviewScoreHigh_3wXHC {
+            color: #32ad32; }
+          .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreValue_3ZWs0 .gamehover_ReviewScorePercentage_38dPa {
+            margin-right: 4px; }
+      .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_ReviewsAndRelease_1HFUC {
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px; }
+        .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_ReviewsAndRelease_1HFUC .gamehover_ReleaseDate_35Bya {
+          padding: 4px; }
+          .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_ReviewsAndRelease_1HFUC .gamehover_ReleaseDate_35Bya .gamehover_ReleasePrefix_2ZKEX {
+            margin-right: 4px; }
 
 .partnereventdisplay_EventDetailsPageContainer_2Ptra {
   display: flex;
@@ -14983,8 +15832,6 @@ span.partnersaledisplay_vr_required_1P__h {
   @media screen and (min-width: 1920px) {
     .partnereventdisplay_EventBody_3aht- {
       margin-top: -113px; } }
-  .partnereventdisplay_NoTitleArtwork_3Y40J .partnereventdisplay_EventBody_3aht- {
-    margin-top: -12vw; }
   .partnereventdisplay_EventBody_3aht- .partnereventdisplay_EventBackgroundBlur_stsss {
     position: absolute;
     z-index: 0;
@@ -15010,6 +15857,8 @@ span.partnersaledisplay_vr_required_1P__h {
   max-height: 510px;
   width: 100%;
   position: relative; }
+  .partnereventdisplay_NoTitleArtwork_3Y40J .partnereventdisplay_EventCoverImageCtn_FZiaq {
+    height: 12vw; }
 
 .partnereventdisplay_EventCoverImage_17G2y,
 .partnereventdisplay_EventCoverImageBackground_2-Iyg {
@@ -15148,9 +15997,13 @@ span.partnersaledisplay_vr_required_1P__h {
 .partnereventdisplay_GameActions_bGROT {
   display: flex;
   flex-direction: row;
-  max-height: 34px;
+  max-height: 38px;
   background: rgba(0, 0, 0, 0.5);
+  margin-top: 10px;
   margin-bottom: 24px; }
+  .partnereventdisplay_GameActions_bGROT .partnereventdisplay_ActionButton_26-KZ {
+    flex: 1;
+    margin-top: 0; }
 
 .partnereventdisplay_GameActions_bGROT .partnereventdisplay_Ownership_2VkXp {
   width: 50%;
@@ -15276,6 +16129,34 @@ span.partnersaledisplay_vr_required_1P__h {
     padding: 16px 24px 12px 24px;
     /* background-color: hsla(229, 5%, 47%, 0.2); */
     background: radial-gradient(ellipse at bottom center, rgba(255, 255, 255, 0.1) 10%, rgba(255, 255, 255, 0) 80%); }
+
+.partnereventdisplay_EventDetailTimeInfo_2KsEb .partnereventdisplay_StartDate_1Maw_,
+.partnereventdisplay_EventDetailTimeInfo_2KsEb .partnereventdisplay_EndDate_vjGzC {
+  display: flex;
+  flex-direction: column; }
+
+@media screen and (max-width: 910px) {
+  .partnereventdisplay_EventDetailTimeInfo_2KsEb {
+    display: flex;
+    flex-direction: row;
+    margin-top: 8px; }
+    .partnereventdisplay_EventDetailTimeInfo_2KsEb .partnereventdisplay_StartDate_1Maw_,
+    .partnereventdisplay_EventDetailTimeInfo_2KsEb .partnereventdisplay_EndDate_vjGzC {
+      display: flex;
+      flex-direction: row; }
+    .partnereventdisplay_EventDetailTimeInfo_2KsEb .partnereventdisplay_MultiDateAndTime_hrpa5 {
+      display: flex;
+      flex-direction: row; }
+      .partnereventdisplay_EventDetailTimeInfo_2KsEb .partnereventdisplay_MultiDateAndTime_hrpa5 .partnereventdisplay_RightSideTitles_efy3k, .partnereventdisplay_EventDetailTimeInfo_2KsEb .partnereventdisplay_MultiDateAndTime_hrpa5 .partnereventdisplay_DisplayAdminPanel_Title_1lmj3 {
+        font-size: 12px;
+        margin-right: 4px; }
+      .partnereventdisplay_EventDetailTimeInfo_2KsEb .partnereventdisplay_MultiDateAndTime_hrpa5 .partnereventdisplay_DateAndTime_3Sy57 {
+        margin-right: 10px; } }
+
+@media screen and (max-width: 700px) {
+  .partnereventdisplay_EventDetailTimeInfo_2KsEb .partnereventdisplay_MultiDateAndTime_hrpa5 {
+    display: flex;
+    flex-direction: column; } }
 
 .partnereventdisplay_RightSideTitles_efy3k, .partnereventdisplay_DisplayAdminPanel_Title_1lmj3 {
   font-size: 11px;
@@ -15796,12 +16677,112 @@ html:not(.client) .partner_events .apppartnereventspage_AppPartnerEventsBody_1XL
   outline: none;
   display: flex;
   flex-flow: column; }
+  @media screen and (max-width: 884px) {
+    .apppartnereventspage_AppPartnerEventsPage_3CJsg .apppartnereventspage_AppBannerGroup_qexk- {
+      padding-left: 7px; } }
 
 .apppartnereventspage_AppPartnerEventsBody_1XLRr {
   overflow-y: scroll;
   overflow-x: hidden;
   flex: 1;
   outline: none; }
+
+.apppartnereventspage_AppBannerCtn_wavRt {
+  position: relative;
+  overflow: hidden;
+  width: 100%; }
+  .apppartnereventspage_AppBannerCtn_wavRt .apppartnereventspage_AppBannerBackground_3RHFo {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    filter: blur(60px) brightness(40%);
+    opacity: 0.6;
+    background: center/cover no-repeat;
+    z-index: 1; }
+
+.apppartnereventspage_AppBannerGroup_qexk- {
+  position: relative;
+  z-index: 2;
+  max-width: 866px;
+  margin: 0px auto;
+  width: 100%;
+  height: 100%;
+  padding: 7px 7px;
+  box-sizing: border-box;
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: 134px 1fr;
+  grid-template-rows: 42px 24px;
+  grid-column-gap: 15px; }
+  .apppartnereventspage_AppBannerGroup_qexk-.apppartnereventspage_ClanBanner_161DW {
+    grid-template-columns: 66px 1fr; }
+  .apppartnereventspage_TallBanner_KBixg .apppartnereventspage_AppBannerGroup_qexk- {
+    grid-template-columns: 284px 1fr;
+    grid-template-rows: 100px 36px; }
+    .apppartnereventspage_TallBanner_KBixg .apppartnereventspage_AppBannerGroup_qexk-.apppartnereventspage_ClanBanner_161DW {
+      grid-template-columns: 136px 1fr; }
+  .apppartnereventspage_WideBanner_1hl09 .apppartnereventspage_AppBannerGroup_qexk- {
+    max-width: 1012px;
+    padding: 7px 16px; }
+    @media screen and (max-width: 700px) {
+      .apppartnereventspage_WideBanner_1hl09 .apppartnereventspage_AppBannerGroup_qexk- {
+        padding: 7px 7px; } }
+  .apppartnereventspage_AppBannerGroup_qexk- .apppartnereventspage_AppBannerTitle_1iqjH {
+    font-size: 39px;
+    line-height: 41px;
+    font-weight: 100;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
+    color: white;
+    margin: auto 0;
+    word-break: break-word; }
+    @media screen and (max-width: 700px) {
+      .apppartnereventspage_AppBannerGroup_qexk- .apppartnereventspage_AppBannerTitle_1iqjH {
+        font-size: 24px;
+        line-height: 24px; } }
+    @media screen and (max-width: 500px) {
+      .apppartnereventspage_AppBannerGroup_qexk- .apppartnereventspage_AppBannerTitle_1iqjH {
+        font-size: 20px;
+        line-height: 22px; } }
+    .apppartnereventspage_AppBannerGroup_qexk- .apppartnereventspage_AppBannerTitle_1iqjH .apppartnereventspage_NewsHubSubTitle_3tf3b {
+      font-size: 20px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      line-height: 25px;
+      display: none; }
+      .apppartnereventspage_TallBanner_KBixg .apppartnereventspage_AppBannerGroup_qexk- .apppartnereventspage_AppBannerTitle_1iqjH .apppartnereventspage_NewsHubSubTitle_3tf3b {
+        display: block; }
+        @media screen and (max-width: 700px) {
+          .apppartnereventspage_TallBanner_KBixg .apppartnereventspage_AppBannerGroup_qexk- .apppartnereventspage_AppBannerTitle_1iqjH .apppartnereventspage_NewsHubSubTitle_3tf3b {
+            display: none; } }
+  .apppartnereventspage_AppBannerGroup_qexk- .apppartnereventspage_AppBannerLogoCtn_2EV_W {
+    padding: 3px;
+    border-radius: 3px;
+    background: rgba(0, 0, 0, 0.2);
+    height: 100%;
+    box-sizing: border-box;
+    display: block;
+    grid-row-end: span 2; }
+  .apppartnereventspage_AppBannerGroup_qexk- .apppartnereventspage_AppBannerLogo_dGGTg {
+    height: 100%;
+    margin: 0px;
+    display: block; }
+  .apppartnereventspage_AppBannerGroup_qexk- .apppartnereventspage_AppBannerLinks_D1bMm {
+    display: flex;
+    align-self: end;
+    grid-column-start: 2; }
+  .apppartnereventspage_AppBannerGroup_qexk- .apppartnereventspage_AppBannerLink_3Yoms {
+    padding: 2px 12px 2px 0;
+    color: #c5cedf; }
+    .apppartnereventspage_AppBannerGroup_qexk- .apppartnereventspage_AppBannerLink_3Yoms:hover {
+      color: white; }
+    .apppartnereventspage_AppBannerGroup_qexk- .apppartnereventspage_AppBannerLink_3Yoms .apppartnereventspage_ShortString_2Aw2p {
+      display: none; }
+    @media screen and (max-width: 500px) {
+      .apppartnereventspage_AppBannerGroup_qexk- .apppartnereventspage_AppBannerLink_3Yoms .apppartnereventspage_ShortString_2Aw2p {
+        display: inline; }
+      .apppartnereventspage_AppBannerGroup_qexk- .apppartnereventspage_AppBannerLink_3Yoms .apppartnereventspage_LongString_2HPON {
+        display: none; } }
 
 .apppartnereventspage_AppPartnerEventsBanner_1HRiM {
   width: 100%;
@@ -15810,63 +16791,6 @@ html:not(.client) .partner_events .apppartnereventspage_AppPartnerEventsBody_1XL
   display: flex;
   box-shadow: 0 0 10px black;
   z-index: 3; }
-  .apppartnereventspage_AppPartnerEventsBanner_1HRiM .apppartnereventspage_AppBannerTitle_1iqjH {
-    font-size: 30px;
-    font-weight: 100;
-    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
-    color: white; }
-    @media screen and (max-width: 700px) {
-      .apppartnereventspage_AppPartnerEventsBanner_1HRiM .apppartnereventspage_AppBannerTitle_1iqjH {
-        font-size: 24px; } }
-    @media screen and (max-width: 500px) {
-      .apppartnereventspage_AppPartnerEventsBanner_1HRiM .apppartnereventspage_AppBannerTitle_1iqjH {
-        font-size: 20px; } }
-  .apppartnereventspage_AppPartnerEventsBanner_1HRiM .apppartnereventspage_AppBannerLogoCtn_2EV_W {
-    padding: 3px;
-    border-radius: 3px;
-    background: rgba(0, 0, 0, 0.2);
-    height: 66px;
-    box-sizing: border-box;
-    display: block;
-    grid-row-end: span 2; }
-  .apppartnereventspage_AppPartnerEventsBanner_1HRiM .apppartnereventspage_AppBannerLogo_dGGTg {
-    height: 60px;
-    margin: 0px;
-    display: block; }
-  .apppartnereventspage_AppPartnerEventsBanner_1HRiM .apppartnereventspage_AppBannerGroup_qexk- {
-    max-width: 866px;
-    margin: 0px auto;
-    width: 100%;
-    height: 100%;
-    padding: 7px;
-    box-sizing: border-box;
-    display: grid;
-    grid-auto-flow: row;
-    grid-template-columns: 134px 1fr;
-    grid-template-rows: 42px 24px;
-    grid-column-gap: 15px; }
-    .apppartnereventspage_AppPartnerEventsBanner_1HRiM .apppartnereventspage_AppBannerGroup_qexk-.apppartnereventspage_ClanBanner_161DW {
-      grid-template-columns: 66px 1fr; }
-  .apppartnereventspage_AppPartnerEventsBanner_1HRiM .apppartnereventspage_AppTitleGroup_2ttnb {
-    align-self: center; }
-  .apppartnereventspage_AppPartnerEventsBanner_1HRiM .apppartnereventspage_AppBannerLinks_D1bMm {
-    display: flex;
-    align-self: end;
-    grid-column-start: 2; }
-  .apppartnereventspage_AppPartnerEventsBanner_1HRiM .apppartnereventspage_AppBannerLink_3Yoms {
-    padding: 2px 12px 2px 0;
-    color: #c5cedf; }
-    .apppartnereventspage_AppPartnerEventsBanner_1HRiM .apppartnereventspage_AppBannerLink_3Yoms:hover {
-      color: white; }
-  @media screen and (max-width: 500px) {
-    .apppartnereventspage_AppPartnerEventsBanner_1HRiM .apppartnereventspage_AppBannerGroup_qexk- {
-      grid-template-rows: 66px 24px; }
-    .apppartnereventspage_AppPartnerEventsBanner_1HRiM .apppartnereventspage_AppBannerLogoCtn_2EV_W {
-      grid-row-end: span 1; }
-    .apppartnereventspage_AppPartnerEventsBanner_1HRiM .apppartnereventspage_AppBannerLinks_D1bMm {
-      margin: auto;
-      grid-column-start: 1;
-      grid-column-end: span 2; } }
 
 .apppartnereventspage_AppPartnerEventsContainer_3GCEy {
   padding: 0px 20px;
@@ -15894,6 +16818,9 @@ html:not(.client) .partner_events .apppartnereventspage_AppPartnerEventsBody_1XL
   .apppartnereventspage_PartnerEvent_1KsYS .apppartnereventspage_LibraryViewSubtitle_1rbgK {
     font-size: 17px;
     padding-bottom: 10px; }
+  .ModalPosition_Content .apppartnereventspage_PartnerEvent_1KsYS {
+    margin: 0;
+    overflow-y: auto; }
 
 /* type extra value needed for css specificity to override default */
 div.apppartnereventspage_EventDetailsBody_3NW5v {
@@ -15911,10 +16838,12 @@ div.apppartnereventspage_EventDetailsBody_3NW5v {
   z-index: 1000; }
   .apppartnereventspage_ControlSection_2pA5C.apppartnereventspage_NoGameLink_2GfPe {
     margin-bottom: -138px; }
+  .apppartnereventspage_ControlSection_2pA5C.apppartnereventspage_NoScrollArrows_39hJ8 {
+    top: 136px; }
   .apppartnereventspage_ControlSection_2pA5C .apppartnereventspage_ControlSectionWidth_3yfs7 {
     margin-left: auto;
     margin-right: auto;
-    width: 880px;
+    width: 890px;
     display: flex; }
     .apppartnereventspage_ControlSection_2pA5C .apppartnereventspage_ControlSectionWidth_3yfs7 .apppartnereventspage_ControlSectionRightSide_2tSyr {
       display: flex;
@@ -16035,7 +16964,8 @@ div.apppartnereventspage_EventDetailsBody_3NW5v {
       font-weight: 500;
       color: #289cff; }
     .apppartnereventspage_EventTypeAndTimeRow_3bWTO .apppartnereventspage_TimeandPostedBy_2WwG2 .apppartnereventspage_PostedBy_2VqeQ {
-      margin: 0px 6px; }
+      margin: 0px 6px;
+      color: #868f98; }
   .apppartnereventspage_EventTypeAndTimeRow_3bWTO .apppartnereventspage_ReminderContainer_3Vf2M {
     margin-left: auto;
     flex: none; }
@@ -17704,6 +18634,45 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
     transform: scale(0.75);
     filter: saturate(0); }
 
+.eaaccessdialog_DialogContainer_24vXJ {
+  width: 680px;
+  height: 240px;
+  box-sizing: border-box;
+  padding: 16px 32px 0 32px;
+  background: radial-gradient(circle at top left, rgba(74, 81, 92, 0.4) 0%, rgba(75, 81, 92, 0) 60%), #25282e;
+  user-select: none;
+  display: flex;
+  flex-direction: column; }
+  .eaaccessdialog_DialogContainer_24vXJ .eaaccessdialog_DialogBody_1IQVr {
+    flex: 1;
+    display: flex;
+    flex-direction: column; }
+    .eaaccessdialog_DialogContainer_24vXJ .eaaccessdialog_DialogBody_1IQVr .eaaccessdialog_Description_NRmf9 {
+      margin: 12px 0px 24px; }
+    .eaaccessdialog_DialogContainer_24vXJ .eaaccessdialog_DialogBody_1IQVr .eaaccessdialog_Button_3F9ki {
+      background-color: #3d4450;
+      line-height: 32px;
+      color: #dfe3e6;
+      text-align: center;
+      border-radius: 2px;
+      cursor: pointer;
+      white-space: nowrap;
+      margin: auto auto 0;
+      padding: 0 10px;
+      min-width: 150px; }
+      .eaaccessdialog_DialogContainer_24vXJ .eaaccessdialog_DialogBody_1IQVr .eaaccessdialog_Button_3F9ki:hover {
+        filter: brightness(1.3);
+        color: white;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); }
+      .eaaccessdialog_DialogContainer_24vXJ .eaaccessdialog_DialogBody_1IQVr .eaaccessdialog_Button_3F9ki.eaaccessdialog_PrimaryButton_239Xo {
+        background: linear-gradient(to right, #6aa621 5%, #53811b 95%); }
+  .eaaccessdialog_DialogContainer_24vXJ .eaaccessdialog_ButtonRow_8Bd3f {
+    display: flex;
+    padding: 0 24px;
+    margin: auto auto 0; }
+    .eaaccessdialog_DialogContainer_24vXJ .eaaccessdialog_ButtonRow_8Bd3f .eaaccessdialog_Button_3F9ki {
+      margin: 0 4px; }
+
 .librarywhatsnew_Item_3Lept {
   margin: 12px 0px;
   font-size: 14px;
@@ -17725,7 +18694,8 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
     width: 100%;
     overflow: hidden; }
 
-body {
+body,
+body.shared_common_v6_2Lxgd {
   color: #969696;
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif; }
 
@@ -17927,6 +18897,10 @@ button.DialogButton::-moz-focus-inner {
   width: initial;
   max-width: 88vw;
   max-height: 90vh; }
+
+@media screen and (max-height: 640px) {
+  .FullModalOverlay .ModalPosition_Content {
+    max-height: 95vh; } }
 
 .ModalOverlayContent {
   position: fixed;
@@ -18962,13 +19936,21 @@ button.TextButton:focus {
   justify-content: center;
   transition: background-color .08s ease-in-out; }
 
-.DialogRoundCheckbox_Control:focus {
+.DialogRoundCheckbox_Container {
+  cursor: pointer; }
+
+.DialogRoundCheckbox_Container:focus {
   outline: none; }
 
-.DialogRoundCheckbox_OuterCircle:hover {
-  outline: none;
-  background-color: #1e1f23;
-  cursor: pointer; }
+.DialogRoundCheckbox_Container:hover .DialogRoundCheckbox_OuterCircle {
+  background-color: #1e1f23; }
+
+.DialogRoundCheckbox_Container.WithLabel .DialogRoundCheckbox {
+  float: left;
+  margin-right: 6px; }
+
+.DialogRoundCheckbox_Container .DialogToggle_Label {
+  overflow: hidden; }
 
 .DialogRoundCheckbox_Control .DialogRoundCheckbox_InnerCircle {
   width: 50%;

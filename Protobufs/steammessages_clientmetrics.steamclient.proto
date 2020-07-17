@@ -1,4 +1,5 @@
 import "steammessages_unified_base.steamclient.proto";
+import "clientmetrics.proto";
 
 option cc_generic_services = true;
 
@@ -72,6 +73,10 @@ message CClientMetrics_ReportClientError_Notification {
 	repeated .CClientMetrics_ReportClientError_Notification.Error errors = 3;
 }
 
+message CClientMetrics_ClientBootstrap_Notification {
+	optional .CClientMetrics_ClientBootstrap_Summary summary = 1;
+}
+
 service ClientMetrics {
 	option (service_description) = "A service for client-reported metrics";
 
@@ -79,4 +84,5 @@ service ClientMetrics {
 	rpc ClientIPv6ConnectivityReport (.CClientMetrics_IPv6Connectivity_Notification) returns (.NoResponse);
 	rpc SteamPipeWorkStatsReport (.CClientMetrics_SteamPipeWorkStats_Notification) returns (.NoResponse);
 	rpc ReportClientError (.CClientMetrics_ReportClientError_Notification) returns (.NoResponse);
+	rpc ClientBootstrapReport (.CClientMetrics_ClientBootstrap_Notification) returns (.NoResponse);
 }

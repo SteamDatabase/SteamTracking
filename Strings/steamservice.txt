@@ -3,8 +3,8 @@ __TEXT
 0%
 __text
 __TEXT
-D
-D
+A
+A
 __stubs
 __TEXT
 __stub_helper
@@ -22,8 +22,6 @@ __TEXT
 dm
 __eh_frame
 __TEXT
-0R!
-0R!
 __DATA
 0%
 0%
@@ -104,9 +102,9 @@ h
 Xk'
 )
 Hi
+&
 H=
-&
-&
+$
 10CUtlString
 N10CIPCServer13CThreadClientE
 10CIPCServer
@@ -5917,6 +5915,7 @@ Assertion Failed: pName
 Assertion Failed: m_vecCallbacks.Count() == 0 || !callback
 Assertion Failed: m_pParent == this
 ConVar::InternalSetValue: called with NULL
+Hey, you just set %s's number values to be 0.  Is that what you wanted?If you do `%s = 123`, you will set the convar to `= 123` which becomes `0` for numeric uses.Did you mean to do `%s %s` instead?
 Assertion Failed: !( m_nFlags & FCVAR_NEVER_AS_STRING )
 Assertion Failed: m_vecCallbacks.Count() == 0
 %lf
@@ -6136,8 +6135,8 @@ crashhandler002
 crashhandler.dylib
 CreateInterface
 1.0
-Jul  8 2020
-16:10:54
+Jul 16 2020
+15:56:00
 Jan
 Feb
 Mar
@@ -6526,6 +6525,7 @@ Assertion Failed: *m_pNRefs > 0
 3
 @nSpewThrottleUnconditionalTriggerCount
 @nSpewThrottleUnconditionalResumeMs
+5000
 @nSpewThrottleNagFrequencyMs
 @nTCPLargeSendBufSizeMB
 16
@@ -6631,7 +6631,7 @@ steammessages_clientserver_login.proto
 @net_backlog_bytes_allowed
 12000000
 @MaxOutstandingSendThreadItem
-5000
+10000
 client/TCPConnection/SentBytes
 client/TCPConnection/RecvBytes
 WSASend
@@ -6673,12 +6673,12 @@ Work Item (%s) for Work Pool %s completed but job no longer existed to notify
 UNKNOWN
 Work Item (%s) for Work Pool %s completed but job no longer existed to notify
 CWorkThreadPool::BTryDeleteExitedWorkerThreads
-Work thread is marked exited, but we could not immediately join prior to deleting -- proceeding without join
+Work thread '%s' is marked exited, but we could not immediately join prior to deleting -- proceeding without join
 CWorkItem::DispatchCompletedWorkItem: got a work item with no job ID
 Hi
+&
 H=
-&
-&
+$
 @
 @
 =
@@ -6688,13 +6688,9 @@ H=
 ?
 A
 Hc
+Q"
 =
 N
-V!
-L95}~"
-K
-"
-"
 Hc
 ?
 ?
@@ -6711,7 +6707,6 @@ Hc
 ?
 ?
 ?
-%
 .
 0
 @
@@ -7021,12 +7016,14 @@ AES-NI GCM module for x86_64, CRYPTOGAMS by <appro@openssl.org>
 =
 Montgomery Multiplication with scatter/gather for x86_64, CRYPTOGAMS by <appro@openssl.org>
 =
+6
+
+
 3
 3
-Z
+#
+-
 IcE
-
-
 I;E
 ,
 H

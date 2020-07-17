@@ -1,4 +1,5 @@
 import "steammessages_unified_base.steamclient.proto";
+import "enums.proto";
 
 option cc_generic_services = true;
 
@@ -211,6 +212,7 @@ message PublishedFileDetails {
 	optional .EPublishedFileRevision revision = 68 [default = k_EPublishedFileRevision_Default, (description) = "The revision of the data returned, usually k_EPublishedFileRevision_Latest, but can be another revision/snapshot depending on the caller."];
 	repeated .EPublishedFileRevision available_revisions = 69 [(description) = "Available revisions"];
 	repeated .PublishedFileDetails.Reaction reactions = 70 [(description) = "Reactions to this item"];
+	optional .EBanContentCheckResult ban_text_check_result = 71 [default = k_EBanContentCheckResult_NotScanned];
 }
 
 message CPublishedFile_GetDetails_Response {

@@ -17,4 +17,5 @@ typedef enum EControllerSourceMode
     k_EControllerSourceModeRadial_menu, // radial_menu
     k_EControllerSourceModeSingle_button, // single_button
     k_EControllerSourceModeSwitches, // switches
+    k_EControllerSourceModeFlickstick, // flickstick
 } EControllerSourceMode;

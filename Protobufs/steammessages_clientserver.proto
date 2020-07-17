@@ -302,16 +302,6 @@ message CMsgClientLBSGetLBEntriesResponse {
 	repeated .CMsgClientLBSGetLBEntriesResponse.Entry entries = 3;
 }
 
-message CMsgClientAppMinutesPlayedData {
-	message AppMinutesPlayedData {
-		optional uint32 app_id = 1;
-		optional int32 forever = 2;
-		optional int32 last_two_weeks = 3;
-	}
-
-	repeated .CMsgClientAppMinutesPlayedData.AppMinutesPlayedData minutes_played = 1;
-}
-
 message CMsgClientIsLimitedAccount {
 	optional bool bis_limited_account = 1;
 	optional bool bis_community_banned = 2;

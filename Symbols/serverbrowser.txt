@@ -10031,6 +10031,7 @@
  t FindConverter(char const*)
  t FreeTree(ExprNode*&)
  t GetNetAdrResolveCacheMutex()
+ t GetRootPopup(unsigned long long)
  t ListBaseInteger64SortFunc(vgui::ListPanelItem const&, vgui::ListPanelItem const&, char const*)
  t ListBaseStringSortFunc(vgui::ListPanelItem const&, vgui::ListPanelItem const&, char const*)
  t ListFileAttributesSortFunc(vgui::ListPanelItem const&, vgui::ListPanelItem const&)

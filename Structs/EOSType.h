@@ -66,4 +66,5 @@ typedef enum EOSType
     k_EOSTypeWin2012R2, // win2012R2
     k_EOSTypeWin10, // win10
     k_EOSTypeWin2016, // win2016
+    k_EOSTypeWin2019, // win2019
 } EOSType;

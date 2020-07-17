@@ -940,6 +940,7 @@
  R typeinfo name for CUtlMap<CUtlString, CHTTPRequestCache::CachedFileMapData_t, int, CDefLess<CUtlString> >
  R typeinfo name for CUtlMap<CUtlString, CUtlVector<CCookieContainer::CCookieInfo, CUtlMemory<CCookieContainer::CCookieInfo> >*, int, CDefCaselessStringLess>
  R typeinfo name for CUtlMap<CUtlString, bool, int, CDefLess<CUtlString> >
+ R typeinfo name for CUtlMap<CUtlString, unsigned int, int, CDefLess<CUtlString> >
  R typeinfo name for CUtlMap<CVideoPlayer::InitSegmentKey_t, CVideoFileStream*, int, CDefLess<CVideoPlayer::InitSegmentKey_t> >
  R typeinfo name for CUtlMap<unsigned long long, bool, int, CDefLess<unsigned long long> >
  R typeinfo name for CUtlMemoryBase
@@ -955,6 +956,7 @@
  R typeinfo name for CUtlRBTree<CUtlMap<CUtlString, CHTTPRequestCache::CachedFileMapData_t, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, CHTTPRequestCache::CachedFileMapData_t, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int>, StringView>
  R typeinfo name for CUtlRBTree<CUtlMap<CUtlString, CUtlVector<CCookieContainer::CCookieInfo, CUtlMemory<CCookieContainer::CCookieInfo> >*, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<CUtlString, CUtlVector<CCookieContainer::CCookieInfo, CUtlMemory<CCookieContainer::CCookieInfo> >*, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, StringView>
  R typeinfo name for CUtlRBTree<CUtlMap<CUtlString, bool, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, bool, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int>, StringView>
+ R typeinfo name for CUtlRBTree<CUtlMap<CUtlString, unsigned int, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, unsigned int, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int>, StringView>
  R typeinfo name for CUtlRBTree<CUtlMap<CVideoPlayer::InitSegmentKey_t, CVideoFileStream*, int, CDefLess<CVideoPlayer::InitSegmentKey_t> >::Node_t, int, CUtlMap<CVideoPlayer::InitSegmentKey_t, CVideoFileStream*, int, CDefLess<CVideoPlayer::InitSegmentKey_t> >::CKeyLess, CDefRBTreeBalanceListener<int>, CVideoPlayer::InitSegmentKey_t>
  R typeinfo name for CUtlRBTree<CUtlMap<unsigned long long, bool, int, CDefLess<unsigned long long> >::Node_t, int, CUtlMap<unsigned long long, bool, int, CDefLess<unsigned long long> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned long long>
  R typeinfo name for CUtlRBTree<unsigned int, unsigned short, CDefLess<unsigned int>, CDefRBTreeBalanceListener<unsigned short>, unsigned int>
@@ -1769,11 +1771,11 @@
  T CHTTPClient::AddClientConnectionBackToPool(CHTTPClientConnection*)
  T CHTTPClient::AddrConnectionInfo_t::Validate(CValidator&, char const*)
  T CHTTPClient::BFrameFuncHandleCompletedWorkItems(CReliableTimer&)
- T CHTTPClient::BUseIPv6ForRequest(CHTTPClientRequest*) const
  T CHTTPClient::CHTTPClient(CHTTPClientMgr*, char const*, unsigned int, char const*, unsigned int, unsigned int, COpenSSLContext*, CWorkThreadPool*, unsigned int)
  T CHTTPClient::CancelRequest(CHTTPRequestHandle*)
  T CHTTPClient::ClearDisconnectingConnection(CHTTPClientConnection*)
  T CHTTPClient::CreateWorkerThread(CWorkThreadPool*)
+ T CHTTPClient::EIPFamilyForRequest(CHTTPClientRequest*) const
  T CHTTPClient::EnablePlatformCertificateVerification()
  T CHTTPClient::GetDesiredBodyBufferGrowSize()
  T CHTTPClient::GetDesiredBodyBufferSize()
@@ -1931,6 +1933,7 @@
  T CIPRangeList::~CIPRangeList()
  T CJob::BYieldingWaitForWorkItem(char const*, char const*, unsigned long long)
  T CJob::BYieldingWaitForWorkItemAcks(char const*, int, char const*, unsigned long long)
+ T CJob::BookkeepRuntime()
  T CJob::Continue()
  T CJob::Pause(EJobPauseReason)
  T CJob::SetYieldInfo(char const*, char const*)
@@ -3524,6 +3527,8 @@
  T CUtlMap<CUtlString, CUtlVector<CCookieContainer::CCookieInfo, CUtlMemory<CCookieContainer::CCookieInfo> >*, int, CDefCaselessStringLess>::Validate(CValidator&, char const*)
  T CUtlMap<CUtlString, bool, int, CDefLess<CUtlString> >::Node_t::~Node_t()
  T CUtlMap<CUtlString, bool, int, CDefLess<CUtlString> >::RecursiveValidate(CValidator&, char const*)
+ T CUtlMap<CUtlString, unsigned int, int, CDefLess<CUtlString> >::Node_t::~Node_t()
+ T CUtlMap<CUtlString, unsigned int, int, CDefLess<CUtlString> >::RecursiveValidate(CValidator&, char const*)
  T CUtlMap<CVideoPlayer::InitSegmentKey_t, CVideoFileStream*, int, CDefLess<CVideoPlayer::InitSegmentKey_t> >::Validate(CValidator&, char const*)
  T CUtlMap<unsigned long long, bool, int, CDefLess<unsigned long long> >::RecursiveValidate(CValidator&, char const*)
  T CUtlMemoryBase::CUtlMemoryBase(int, int, int)
@@ -3618,6 +3623,9 @@
  T CUtlRBTree<CUtlMap<CUtlString, CUtlVector<CCookieContainer::CCookieInfo, CUtlMemory<CCookieContainer::CCookieInfo> >*, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<CUtlString, CUtlVector<CCookieContainer::CCookieInfo, CUtlMemory<CCookieContainer::CCookieInfo> >*, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, StringView>::Validate(CValidator&, char const*)
  T CUtlRBTree<CUtlMap<CUtlString, bool, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, bool, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int>, StringView>::RecursiveValidate(CValidator&, char const*)
  T CUtlRBTree<CUtlMap<CUtlString, bool, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, bool, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int>, StringView>::RemoveAll()
+ T CUtlRBTree<CUtlMap<CUtlString, unsigned int, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, unsigned int, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int>, StringView>::Find(StringView const&) const
+ T CUtlRBTree<CUtlMap<CUtlString, unsigned int, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, unsigned int, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int>, StringView>::RecursiveValidate(CValidator&, char const*)
+ T CUtlRBTree<CUtlMap<CUtlString, unsigned int, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, unsigned int, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int>, StringView>::RemoveAll()
  T CUtlRBTree<CUtlMap<CVideoPlayer::InitSegmentKey_t, CVideoFileStream*, int, CDefLess<CVideoPlayer::InitSegmentKey_t> >::Node_t, int, CUtlMap<CVideoPlayer::InitSegmentKey_t, CVideoFileStream*, int, CDefLess<CVideoPlayer::InitSegmentKey_t> >::CKeyLess, CDefRBTreeBalanceListener<int>, CVideoPlayer::InitSegmentKey_t>::Find(CVideoPlayer::InitSegmentKey_t const&) const
  T CUtlRBTree<CUtlMap<CVideoPlayer::InitSegmentKey_t, CVideoFileStream*, int, CDefLess<CVideoPlayer::InitSegmentKey_t> >::Node_t, int, CUtlMap<CVideoPlayer::InitSegmentKey_t, CVideoFileStream*, int, CDefLess<CVideoPlayer::InitSegmentKey_t> >::CKeyLess, CDefRBTreeBalanceListener<int>, CVideoPlayer::InitSegmentKey_t>::NewNode(bool)
  T CUtlRBTree<CUtlMap<CVideoPlayer::InitSegmentKey_t, CVideoFileStream*, int, CDefLess<CVideoPlayer::InitSegmentKey_t> >::Node_t, int, CUtlMap<CVideoPlayer::InitSegmentKey_t, CVideoFileStream*, int, CDefLess<CVideoPlayer::InitSegmentKey_t> >::CKeyLess, CDefRBTreeBalanceListener<int>, CVideoPlayer::InitSegmentKey_t>::Remove(CVideoPlayer::InitSegmentKey_t const&)
@@ -5422,6 +5430,7 @@
  T VideoSegment_t::Validate(CValidator&, char const*)
  T VideoValidate
  T VideoValidateStatics
+ T Warning
  T WeakRandomInt
  T WeakRandomUint32
  T WriteMiniDump

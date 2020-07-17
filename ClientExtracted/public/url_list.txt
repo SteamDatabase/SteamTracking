@@ -662,6 +662,13 @@ NewsHomePage
 	filter		"news"
 }
 
+PointsShop
+{
+	url			"%store%/points/shop"
+	method		"internal"
+	filter	"store"
+}
+
 LegalInformation
 {
 	url			"https://store.steampowered.com/legal"

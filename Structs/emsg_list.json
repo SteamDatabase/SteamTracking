@@ -1220,11 +1220,6 @@
         "server_type": -1
     },
     {
-        "emsg": 5507,
-        "flags": 2,
-        "server_type": -1
-    },
-    {
         "emsg": 5508,
         "flags": 2,
         "server_type": -1

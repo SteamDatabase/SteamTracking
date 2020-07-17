@@ -14794,4 +14794,10 @@ XInput ボタンは XInput ゲームパッド対応のゲームでしか使う�
 "[english]SteamPlay_Warning_Title"	"Steam Play"
 "SteamPlay_Warning_Text"	"プラットフォーム互換ツールを使用して、このゲームをSteam Playで起動します。"
 "[english]SteamPlay_Warning_Text"	"This game will launch with Steam Play, using a platform compatibility tool."
+"ControllerBinding_SoftPress_Threshold"	"ソフトプレスしきい値"
+"[english]ControllerBinding_SoftPress_Threshold"	"Soft Press Threshold"
+"ControllerBinding_SoftPress_Threshold_Description"	"このアクティベーターは、このバインド設定に関連付けられているアナログソースがしきい値を超えると起動します"
+"[english]ControllerBinding_SoftPress_Threshold_Description"	"This activator will fire when the analog source associated with this binding is above the threshold"
+"ControllerBinding_AcitvatorDropDown_SoftPress"	"ソフトプレスしきい値"
+"[english]ControllerBinding_AcitvatorDropDown_SoftPress"	"Soft Press Threshold"
 }

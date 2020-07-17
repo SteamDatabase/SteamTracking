@@ -139,6 +139,8 @@
 	"FilterElement_Tooltip_SteamCloud": "Include games that save to Steam Cloud.",
 	"FilterElement_RemotePlayTogether": "Remote Play Together",
 	"FilterElement_Tooltip_RemotePlayTogether": "Include games that support Remote Play Together.",
+	"FilterElement_EAAccess": "EA Access",
+	"FilterElement_Tooltip_EAAccess": "Include games that are part of your EA Access subscription.",
 
 	"CollectionViewHeader_Tooltip_ManuallyAddedApp": "This game was added to the collection manually.",
 	"CollectionViewHeader_Tooltip_ManuallyRemovedApp": "This game was removed from this collection.",
@@ -172,6 +174,7 @@
 	"GameList_Category_Hidden_Tooltip": "Hidden games will not show in your library unless searched for. You can view all hidden games from the top 'View' menu.",
 	"GameList_Category_YourCollections": "Your Collections",
 	"GameList_Category_SharedLibraries": "Shared Libraries",
+	"GameList_Category_EAAccess_Trademark": "EA Access",
 	"GameList_SectionHeader_SearchResults": "Results from Search and Filter",
 	"GameList_SectionHeader_AddedManually": "Manually Added",
 	"GameList_SectionHeader_RemovedManually": "Manually Removed",
@@ -362,7 +365,7 @@
 	"AppDetails_SectionTitle_LastPlayed": "Last Played",
 	"AppDetails_SectionTitle_LastLaunched": "Last Launched",
 	"AppDetails_SectionTitle_PlayTime": "Play Time",
-	"AppDetails_SectionTitle_PlayTimeLeft": "Play Time Left",
+	"AppDetails_SectionTitle_PlayTimeLeft": "Remaining",
 	"AppDetails_SectionTitle_UsageTime": "Usage Time",
 	"AppDetails_SectionTitle_Workshop": "Steam Workshop",
 	"AppDetails_SectionTitle_Community": "Community Content",
@@ -382,6 +385,7 @@
 
 	"AppDetails_Links_Store": "Store Page",
 	"AppDetails_Links_Community": "Community Hub",
+	"AppDetails_Links_PointsShop": "Points Shop",
 
 	"Bbcode_Originally_Posted_By": "Originally posted by",
 
@@ -439,6 +443,9 @@
 	"GameAction_BrowseLocalFiles": "Browse local files",
 	"GameAction_ViewDetails_Collapse": "Show less details",
 	"GameAction_ViewDetails_ScrollUp": "Scroll to top",
+	"GameAction_DismissPlayNext": "Dismiss from Play Next suggestions",
+	"PlayNext_ClearIgnoredApps": "Unhide all Play Next suggestions",
+	"PlayNext_UnhideSuggestion": "Unhide %1$s",
 
 	"GameActionPlural_Install": "Install selected",
 	"GameActionPlural_Uninstall": "Uninstall selected",
@@ -1038,11 +1045,24 @@
 	"Demo_SpotlightIntro": "Check out the full game",
 	"Demo_VisitStorePage": "Visit Store Page",
 
+	"TimedTrial_SpotlightExp_Desc": "You have run out of time in your timed trial for %1$s. You can continue playing by purchasing the full version of this game from the Steam Store.",
+	"TimedTrial_SpotlightExp_DescMasterSub": "You have run out of time in your timed trial for %1$s, included with your %2$s subscription. You can continue playing by purchasing the full version of this game from the Steam Store.",
+	"TimedTrial_ContinuePlaying": "Continue Playing!",
+
 	"WhatsNew_Title": "What's New?",
 	"WhatsNew_ReadMore": "Read More",
 
 	"WhatsNew_PlayNext_Title": "Play Next",
 	"WhatsNew_PlayNext_Description": "Now available on your library home screen, the new Play Next shelf uses technology developed in Steam Labs to recommend unplayed games from your library to try next.",
+
+	"WhatsNew_EAAccessCollection_Title": "Welcome to EA Access",
+	"WhatsNew_EAAccessCollection_Description_1": "Would you like to add the EA Access dynamic collection to your library?",
+	"WhatsNew_EAAccessCollection_AddCollection_Button": "Add collection",
+	"WhatsNew_EAAccessCollection_Cancel_Button": "No, thanks",
+	"WhatsNew_EAAccessCollection_Description_2": "Would you like to add a shelf to your library home screen for the EA Access collection?",
+	"WhatsNew_EAAccessCollection_AddShelf_Button": "Add shelf",
+	"WhatsNew_EAAccessCollection_Description_3": "Enjoy the new EA Access collection and shelf! You can remove them at any time.",
+	"WhatsNew_EAAccessCollection_Description_Declined": "Got it. Enjoy EA Access!",
 
 	"SteamReviewScore_9": "Overwhelmingly Positive",
 	"SteamReviewScore_8": "Very Positive",

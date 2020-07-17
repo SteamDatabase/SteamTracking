@@ -1,0 +1,39 @@
+.awardicon_IconContainer__6f_B {
+  display: flex;
+  flex-flow: row nowrap;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 0 2px;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: background-color;
+  transition-duration: 0.13s; }
+
+.awardicon_ButtonContainer_1ShXa {
+  cursor: pointer; }
+  .awardicon_ButtonContainer_1ShXa:hover {
+    background-color: rgba(255, 255, 255, 0.2); }
+
+.awardicon_InfoContainer_20mER {
+  cursor: unset; }
+  .awardicon_InfoContainer_20mER:hover {
+    background-color: rgba(0, 0, 0, 0.1); }
+
+.awardicon_IconImg_RP1Up {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle; }
+
+.awardicon_ReactionCount_18GX_ {
+  color: #66c0f4;
+  font-size: 13px;
+  vertical-align: middle;
+  font-weight: bold;
+  padding: 3px; }
+
+.awardicon_IconList_2cI0L {
+  display: flex;
+  flex-flow: row nowrap;
+  padding-top: 5px; }
+
+
+/*# sourceMappingURL=awardicon.css.map*/

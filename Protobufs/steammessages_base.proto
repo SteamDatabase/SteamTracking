@@ -246,6 +246,7 @@ message CClanEventData {
 	optional uint32 rtime32_last_modified = 24;
 	optional fixed64 news_post_gid = 25;
 	optional uint32 rtime_mod_reviewed = 26;
+	optional uint32 featured_app_tagid = 27;
 }
 
 message CBilling_Address {

@@ -14898,4 +14898,12 @@ Mit dem mausähnlichen Analogstick können Sie mit dem Gamepad spielen und dabei
 "[english]ControllerBinding_SoftPress_RepeatRate"	"Repeat Rate"
 "ControllerBinding_SoftPress_RepeatRate_Description"	"Dieser Regler legt die Geschwindigkeit des Turbo fest."
 "[english]ControllerBinding_SoftPress_RepeatRate_Description"	"The speed of Turbo will be set by this slider."
+"ControllerBinding_SoftPress_Binding"	"Tastenbelegung"
+"[english]ControllerBinding_SoftPress_Binding"	"Binding"
+"ControllerBinding_SoftPress_Binding_Description"	"Sie können diesem Auslöser eine oder mehrere Aktionen zuweisen, wie zum Beispiel Aktionen der Maus, der Tastatur, der Gamepad-Tasten oder native Aktionen."
+"[english]ControllerBinding_SoftPress_Binding_Description"	"You can bind one or more actions to this activator, such as keyboard, mouse, and gamepad buttons or native actions."
+"ControllerBinding_SoftPress_SoftPressStyle"	"Stil für sanften Tastendruck"
+"[english]ControllerBinding_SoftPress_SoftPressStyle"	"Soft Press Style"
+"ControllerBinding_SoftPress_SoftPressStyle_Description"	"Sie können den Aktivierungsstil für den sanften Tastendruck ändern. Für eindimensionale Eingaben wie Trigger kann sogar ein Mindestdruck mit adaptivem Trigger gut funktionieren, andernfalls wird ein einfacher Schwellenwert empfohlen."
+"[english]ControllerBinding_SoftPress_SoftPressStyle_Description"	"You can change the style of soft press activation. For one dimensional inputs like triggers hair trigger can work well, otherwise simple threshold is recommended"
 }

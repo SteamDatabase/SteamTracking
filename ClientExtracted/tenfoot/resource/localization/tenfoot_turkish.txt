@@ -14895,4 +14895,12 @@ Fare Benzeri Kumanda Kolu ile oyun kumandası girdisi ile oynayarak fare hassasi
 "[english]ControllerBinding_SoftPress_RepeatRate"	"Repeat Rate"
 "ControllerBinding_SoftPress_RepeatRate_Description"	"Turbonun hızı bu kaydırıcı aracılığıyla ayarlanmaktadır."
 "[english]ControllerBinding_SoftPress_RepeatRate_Description"	"The speed of Turbo will be set by this slider."
+"ControllerBinding_SoftPress_Binding"	"Atama"
+"[english]ControllerBinding_SoftPress_Binding"	"Binding"
+"ControllerBinding_SoftPress_Binding_Description"	"Bu etkinleştiriciye, klavye, fare ve oyun kumandası butonları veya yerel eylemler gibi bir veya daha fazla eylem atayabilirsiniz."
+"[english]ControllerBinding_SoftPress_Binding_Description"	"You can bind one or more actions to this activator, such as keyboard, mouse, and gamepad buttons or native actions."
+"ControllerBinding_SoftPress_SoftPressStyle"	"Hafif Basış Türü"
+"[english]ControllerBinding_SoftPress_SoftPressStyle"	"Soft Press Style"
+"ControllerBinding_SoftPress_SoftPressStyle_Description"	"Hafif basış etkileşme türünü değiştirebilirsiniz. Tetikler gibi tek boyutlu girdiler için hassas tetik kullanılabilir ancak bunların haricinde basit eşik tavsiye ediyoruz."
+"[english]ControllerBinding_SoftPress_SoftPressStyle_Description"	"You can change the style of soft press activation. For one dimensional inputs like triggers hair trigger can work well, otherwise simple threshold is recommended"
 }

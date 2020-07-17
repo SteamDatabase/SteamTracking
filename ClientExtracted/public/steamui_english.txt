@@ -4136,8 +4136,8 @@ Set a category for these games to help you find them quickly and organize your L
 "steam_subnav_featured"		"Featured"
 "steam_subnav_news"			"News"
 "steam_subnav_recommended"	"Recommended"
-"steam_subnav_explore"		"Explore"
-"steam_subnav_curators"		"Curators"
+"steam_subnav_discovery_queue"		"Discovery Queue"
+"steam_subnav_points_shop"		"Points Shop"
 "steam_subnav_wishlist"		"Wishlist"
 "steam_subnav_stats"		"Stats"
 

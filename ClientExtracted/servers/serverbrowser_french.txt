@@ -129,7 +129,7 @@
 "[english]ServerBrowser_SpectateTab"	"Spectate"
 "ServerBrowser_LanTab"	"Lan"
 "[english]ServerBrowser_LanTab"	"Lan"
-"ServerBrowser_FriendsTab"	"Amis"
+"ServerBrowser_FriendsTab"	"Contacts"
 "[english]ServerBrowser_FriendsTab"	"Friends"
 "ServerBrowser_HistoryTab"	"Historique"
 "[english]ServerBrowser_HistoryTab"	"History"

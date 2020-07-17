@@ -272,6 +272,19 @@
           <DropDown id="EdgeBindingInvertMouseRegion" />
         </Panel>
 
+        <Panel class="FieldWrapper" modes="flickstick" advanced="off" sources="joystick">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_FlickStickClick" />
+          <ControllerBindingButton class="BindingButtonPropertiesMode" id="FlickStickClick" />
+        </Panel>
+        <Panel class="FieldWrapper" modes="flickstick" sources= "joystick" advanced="off">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_EdgeRadiusFlickStick" />
+          <Slider id="EdgeBindingRadiusFlickStick" direction="horizontal" />
+        </Panel>
+        <Panel class="FieldWrapper" modes="flickstick" advanced="off" visualization="off">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_MouseSensitivity" />
+          <Slider id="FlickStickSensitivity" direction="horizontal" />
+        </Panel>
+
         <!-- Joystick Camera Mode -->
 				<Panel class="FieldWrapper" modes="joystickcamera" advanced="off" sources="joystick trackpad bumper" >
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_JoystickClick" />
@@ -731,8 +744,17 @@
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_SensitivityVertScale" />
 					<Slider id="VerticalSensitivity_joystick_mouse" direction="horizontal" />
 				</Panel>
+        <!-- FlickStick Mode -->
+        <Panel class="FieldWrapper" modes="flickstick" advanced="off" visualization="off">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_Smoothing"/>
+          <Slider id="FlickStickSmoothing" direction="horizontal" />
+        </Panel>
+        <Panel class="FieldWrapper" modes="flickstick" advanced="off" visualization="off">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_FrameTime"/>
+          <Slider id="FlickStickFrameTime" direction="horizontal" />
+        </Panel>
 
-				<!-- Mouse Region Mode -->
+        <!-- Mouse Region Mode -->
         <Panel class="FieldWrapper" modes="mouseregion" gameactions="off" advanced="off">
           <Label class="FieldLabel" text="#Library_Details_FieldLabel_MouseRegion_PositionX" />
           <Slider id="PositionXMouse" direction="horizontal" />

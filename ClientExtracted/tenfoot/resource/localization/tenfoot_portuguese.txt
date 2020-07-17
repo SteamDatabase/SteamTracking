@@ -14899,4 +14899,12 @@ Com o modo joystick estilo rato, podes jogar com um comando mas com a precisão 
 "[english]ControllerBinding_SoftPress_RepeatRate"	"Repeat Rate"
 "ControllerBinding_SoftPress_RepeatRate_Description"	"Esta barra define a velocidade do modo Turbo."
 "[english]ControllerBinding_SoftPress_RepeatRate_Description"	"The speed of Turbo will be set by this slider."
+"ControllerBinding_SoftPress_Binding"	"Designação"
+"[english]ControllerBinding_SoftPress_Binding"	"Binding"
+"ControllerBinding_SoftPress_Binding_Description"	"Podes designar uma ou mais ações a este ativador, como teclas, botões de comando e rato ou ações nativas."
+"[english]ControllerBinding_SoftPress_Binding_Description"	"You can bind one or more actions to this activator, such as keyboard, mouse, and gamepad buttons or native actions."
+"ControllerBinding_SoftPress_SoftPressStyle"	"Estilo do pressionar leve"
+"[english]ControllerBinding_SoftPress_SoftPressStyle"	"Soft Press Style"
+"ControllerBinding_SoftPress_SoftPressStyle_Description"	"Podes alterar o estilo da ativação do pressionar leve. Para inputs unidimensionais como gatilhos, gatilhos sensíveis também podem funcionar, mas se não for o caso, recomendamos o limiar simples."
+"[english]ControllerBinding_SoftPress_SoftPressStyle_Description"	"You can change the style of soft press activation. For one dimensional inputs like triggers hair trigger can work well, otherwise simple threshold is recommended"
 }

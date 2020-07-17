@@ -14901,4 +14901,8 @@ Playing now will send {s:user} a notice that it's time to quit."
 "[english]ControllerBinding_SoftPress_Binding"	"Binding"
 "ControllerBinding_SoftPress_Binding_Description"	"Egy vagy több műveletet rendelhetsz ehhez az aktiválóhoz, például billentyűt, egér- vagy gamepad-gombot, vagy natív műveleteket."
 "[english]ControllerBinding_SoftPress_Binding_Description"	"You can bind one or more actions to this activator, such as keyboard, mouse, and gamepad buttons or native actions."
+"ControllerBinding_SoftPress_SoftPressStyle"	"Lágy lenyomás stílus"
+"[english]ControllerBinding_SoftPress_SoftPressStyle"	"Soft Press Style"
+"ControllerBinding_SoftPress_SoftPressStyle_Description"	"Megváltoztathatod a lágy lenyomás aktiválási stílusát. Egydimenziós bemenetnél, mint a ravaszok, a gyors ravasz jól működhet, egyéb esetben az egyszerű küszöb javasolt."
+"[english]ControllerBinding_SoftPress_SoftPressStyle_Description"	"You can change the style of soft press activation. For one dimensional inputs like triggers hair trigger can work well, otherwise simple threshold is recommended"
 }

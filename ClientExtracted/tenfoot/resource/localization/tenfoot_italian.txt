@@ -14899,4 +14899,12 @@ La modalità \"Joystick simile a mouse\" ti permetterà di giocare con un gamepa
 "[english]ControllerBinding_SoftPress_RepeatRate"	"Repeat Rate"
 "ControllerBinding_SoftPress_RepeatRate_Description"	"La velocità di Turbo è regolata attraverso questa barra di scorrimento."
 "[english]ControllerBinding_SoftPress_RepeatRate_Description"	"The speed of Turbo will be set by this slider."
+"ControllerBinding_SoftPress_Binding"	"Assegnazione"
+"[english]ControllerBinding_SoftPress_Binding"	"Binding"
+"ControllerBinding_SoftPress_Binding_Description"	"Puoi assegnare una o più azioni a questo attivatore, ad esempio pulsanti di controller, mouse e tastiera o azioni native."
+"[english]ControllerBinding_SoftPress_Binding_Description"	"You can bind one or more actions to this activator, such as keyboard, mouse, and gamepad buttons or native actions."
+"ControllerBinding_SoftPress_SoftPressStyle"	"Stile della pressione leggera"
+"[english]ControllerBinding_SoftPress_SoftPressStyle"	"Soft Press Style"
+"ControllerBinding_SoftPress_SoftPressStyle_Description"	"Puoi modificare lo stile dell'attivazione con la pressione leggera. Per input dimensionali come i grilletti, anche una pressione minima con grilletto adattivo potrebbe funzionare bene, altrimenti è consigliato usare una soglia."
+"[english]ControllerBinding_SoftPress_SoftPressStyle_Description"	"You can change the style of soft press activation. For one dimensional inputs like triggers hair trigger can work well, otherwise simple threshold is recommended"
 }

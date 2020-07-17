@@ -8056,6 +8056,8 @@
  T CIPAddress::IsLoopback() const
  T CIPAddress::IsMappedIPv4() const
  T CIPAddress::SetFromString(StringView, unsigned short*)
+ T CIPAddress::operator!=(CIPAddress const&) const
+ T CIPAddress::operator==(CIPAddress const&) const
  T CIPAndPort::IsValid() const
  T CIPCToolMachClient::DoKillCommand(char const*)
  T CIPCToolMachClient::GetSteamPath(char*, unsigned long, int*)
@@ -19579,6 +19581,7 @@
  t FindSignaturePeer(KeyValues*, char const*, bool)
  t FreeTree(ExprNode*&)
  t GetNetAdrResolveCacheMutex()
+ t GetRootPopup(unsigned long long)
  t K256
  t K256_shaext
  t K512

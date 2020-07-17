@@ -33,6 +33,12 @@ public:
     virtual unknown_ret GetAnalogActionOrigins(unsigned int, unsigned long long, unsigned long long, unsigned long long, EInputActionOrigin*) = 0;
     virtual unknown_ret GetDigitalActionOrigins_Legacy(unsigned int, unsigned long long, unsigned long long, unsigned long long, EControllerActionOrigin*) = 0;
     virtual unknown_ret GetAnalogActionOrigins_Legacy(unsigned int, unsigned long long, unsigned long long, unsigned long long, EControllerActionOrigin*) = 0;
+    virtual unknown_ret GetCachedDigitalActionHandle(char const*) = 0;
+    virtual unknown_ret CacheDigitalActionHandle(char const*, unsigned long long) = 0;
+    virtual unknown_ret GetCachedAnalogActionHandle(char const*) = 0;
+    virtual unknown_ret CacheAnalogActionHandle(char const*, unsigned long long) = 0;
+    virtual unknown_ret GetCachedActionSetHandle(char const*) = 0;
+    virtual unknown_ret CacheActionSetHandle(char const*, unsigned long long) = 0;
     virtual unknown_ret TriggerHapticPulseOnHandle(unsigned long long, ESteamControllerPad, unsigned short) = 0;
     virtual unknown_ret TriggerRepeatedHapticPulseOnHandle(unsigned long long, ESteamControllerPad, unsigned short, unsigned short, unsigned short, unsigned int) = 0;
     virtual unknown_ret TriggerVibrationOnHandle(unsigned long long, unsigned short, unsigned short) = 0;

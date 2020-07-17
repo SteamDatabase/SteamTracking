@@ -4,7 +4,7 @@
 	{
 		// These are multipliers, to make an edge cost 50% more than
 		// usual, set the multiplier to 1.5
-		"CostForCrossingAtlantic"				2
+		"CostForCrossingAtlantic"				3
 		"CostForCrossingPacific"				6
 		"EuropeAndAfrica"			4
 		"NorthAndSouthAmerica"		4
@@ -53,8 +53,31 @@
 		"Sparkle"	"6762"
 		"ER-Telecom"	"9049"
 		"HKBN"		"9269"
-		"MEO"		"8657"
+		"MEO"		"8657, 3243"
 		"TEO"		"8764"
+		"Vimpelcom"	"3216"
+		"NetGlobal"	"50316"
+		"Hargray"	"22646"
+		"Exatel"	"20804, 31608, 25106, 31143, 35378, 197400, 51101, 41676, 35463, 30851, 50685, 21412, 52110, 199980, 34999, 196776, 197405, 60468, 43769, 35198, 31412, 34937, 59861, 198023, 56945, 31423, 50467, 38987"
+		"DTAG"		"3320"
+		"WOW"		"12083"
+		"Orange-Spain"		"12479"
+		"Volkhov"	"196879"
+		"Bite.lt"	"13194"
+		"Eletronet"	"267613"
+		"SparkNZ"	"4771"
+		"QTNet"		"7679"
+		"Bahnhof"	"8473"
+		"OTEGlobe"	"12713, 6799"
+		"Transtelco"	"32098, 13999, 28554, 17072, 28548, 6503, 28509, 28555, 27672, 11888, 16960, 28545, 28469"
+		"MTS"		"8359"
+		"Beltelcom"	"6697"
+		"Rascom"	"20764, 34456, 49342, 44507, 31514, 50477, 24955, 44270, 197275, 48293, 35807, 60098, 47119, 60095, 198137, 20764, 52193"
+		"TOT"		"23969"
+		"HLKomm"    "16097, 16202, 20880, 35244"
+        	"A1Telekom"    "8447, 1901, 12793, 15994, 31012, 43612, 12810, 8591, 21283, 25255, 29580, 44143, 41549"
+        	"TalkTalk"    "13285, 9105"
+		"Inetcom"	"35598, 51077, 19588"
 	}
 	"cells"
 	{
@@ -102,7 +125,7 @@
 			{
 				"shaw" { "cost_reduction"	"1" }
 
-				"videotron" { "cost_reduction"	"1" }
+				"videotron" { "cost_reduction"	"4" }
 
 				"verizon" { "cost_reduction"	"0.5" }
 
@@ -122,7 +145,7 @@
 			"longitude"	"-73.990949"
 			"edges"
 			{
-				63 { "dest"	63	"cost"	InwardCost }
+				63 { "dest"	63	"cost"	ZeroCost}
 			}
 		}
 
@@ -168,6 +191,17 @@
 				// back to aggregators
 				24 { "cost" OneWayCellEdge }				
 			}
+			"affinities"
+			{
+				"DTAG" { "cost_reduction"	"-5" }
+				"Bahnhof" { "cost_reduction"	"-2" }
+				"Exatel" { "cost_reduction"	"-5" }
+				"OTEGlobe"  { "cost_reduction" "-4" }
+				"Beltelcom" { "cost_reduction"	"-5" }
+				"MEO" { "cost_reduction"	"-4" }
+				"TalkTalk" { "cost_reduction"	"4" }
+			}
+
 		}
 
 		// #5 DE
@@ -224,9 +258,21 @@
 				"TDC" { "cost_reduction" 0.5 }
 				"Parkland" { "cost_reduction" 4 }
 				"Fiberby" { "cost_reduction" 4 }
+				"Volkhov" { "cost_reduction" 4 }
 				"Melita"  { "cost_reduction" 1 }
-				"MEO"  { "cost_reduction" -1 }
-			}
+				"OTEGlobe"  { "cost_reduction" 4 }
+				"MTS"  { "cost_reduction" 4 }
+				"MEO"  { "cost_reduction" -4 }
+				"TEO"  { "cost_reduction" -1 }
+				"Vimpelcom"  { "cost_reduction" -1 }
+				"Orange-Spain"  { "cost_reduction" -5 }
+				"Bahnhof" { "cost_reduction"	"-2" }
+				"Beltelcom" { "cost_reduction"	"5" }
+				"Exatel" { "cost_reduction"	"-5" }
+				"A1Telekom" { "cost_reduction"	"-4" }
+				"Inetcom" { "cost_reduction"	"-4" }
+                                "HLKomm" { "cost_reduction" "4"}
+ 			}
 		}
 
 		// W. Canada to US
@@ -273,7 +319,7 @@
 			"edges"
 			{
 				17 { "dest"	17 "cost"	AggregatorCost }
-				32 { "dest"	32 	"cost"	3 }
+				32 { "dest"	32 	"cost"	OneWayCellEdge }
 				182 { "cost"	OutwardCost } // Busan
 			}
 		}
@@ -305,7 +351,7 @@
 			"longitude"	"-122.218863"
 			"edges"
 			{
-				64 { "dest"	64 	"cost"	InwardCost }			
+				64 { "dest"	64 	"cost"	ZeroCost}			
 			}
 		}
 
@@ -319,8 +365,8 @@
 			"longitude"	"-112.068850"
 			"edges"
 			{
-				64 { "dest"	64 	"cost"	InwardCost}
-				65 { "dest"	65 	"cost"	InwardCost}
+				64 { "dest"	64 	"cost"	ZeroCost}
+				65 { "dest"	65 	"cost"	ZeroCost}
 			}
 		}
 
@@ -334,7 +380,7 @@
 			"longitude"	"-80.186072"
 			"edges"
 			{
-				50 { "dest"	50  	"cost"	InwardCost }											
+				50 { "dest"	50  	"cost"	ZeroCost}											
 			}
 		}
 
@@ -366,6 +412,16 @@
 				15 { "cost"	OutwardCost }
 				129 { "dest"	129  	"cost"	1}
 			}
+			"affinities"
+			{
+				"DTAG" { "cost_reduction"	"-5" }
+				"Orange-Spain" { "cost_reduction"	"-5" }
+				"Beltelcom" { "cost_reduction"	"-5" }
+				"OTEGlobe"  { "cost_reduction" "-4" }
+				"Exatel" { "cost_reduction"	"-5" }
+				"MEO" { "cost_reduction"	"-4" }
+			}
+
 		}
 
 		// #15 Netherlands
@@ -395,7 +451,15 @@
 				"Comhem" { "cost_reduction" 1 }
 				"Parkland" { "cost_reduction" 2.5 }
 				"Fiberby" { "cost_reduction" 2.5 }
+				"NetGlobal" { "cost_reduction" 2.5 }
 				"TDC" { "cost_reduction" -0.5 }
+				"DTAG" { "cost_reduction" -8 }
+				"Exatel" { "cost_reduction"	"-5" }
+				"Beltelcom" { "cost_reduction"	"-5" }
+				"OTEGlobe"  { "cost_reduction" "-4" }
+				"Bahnhof" { "cost_reduction"	"-2" }
+				"MEO" { "cost_reduction"	"-4" }
+				"TalkTalk" { "cost_reduction"	"-4" }
 			}
 		}
 
@@ -507,7 +571,7 @@
 			"edges"
 			{
 				17 { "dest"	17 "cost"	AggregatorCost }
-				52 {  "dest"	52  "cost"	AustraliaAndNewZealand  }
+				52 {  "dest"	52  "cost"	AustraliaAndNewZealand }
 			}
 		}
 
@@ -562,6 +626,10 @@
 				// Backbones
 				50	{ "dest"	50	"cost"	GlobalBackbone }
 				117	{ "dest"	117	"cost"	GlobalBackbone }
+			}
+			"affinities"
+			{
+				"Eletronet" { "cost_reduction" 2 }
 			}
 		}
 
@@ -680,6 +748,8 @@
 				"shaw" { "cost_reduction"	"1" }
 				"telus" { "cost_reduction"	"1" }
 				"skyfiber" { "cost_reduction"	"0.5" }
+				"WOW" { "cost_reduction"	"-2" }
+				"videotron" { "cost_reduction"	"-4" }
 			}
 		}
 
@@ -712,6 +782,8 @@
 			"affinities"
 			{
 				"HKBN" { "cost_reduction"	-2 }
+				"TOT" { "cost_reduction"	-4 }
+				"QTNet" { "cost_reduction"	2 }
 			}
 		}
 
@@ -737,6 +809,8 @@
 			"affinities"
 			{
 				"HKBN" { "cost_reduction"	2 }
+				"QTNet" { "cost_reduction"	-2 }
+				"TOT" { "cost_reduction"	-4 }
 			}
 		}
 
@@ -782,7 +856,9 @@
 			"affinities"
 			{
 				"FPT" { "cost_reduction"	"1" }
+				"TOT" { "cost_reduction"	"4" }
 				"HKBN"	{ "cost_reduction"	-2 }
+				"QTNet" { "cost_reduction"	-2 }
 			}
 		}
 
@@ -840,17 +916,20 @@
 			{
 				// Spokes
 				165 { "cost"	OutwardCost } // Belarus
-				183 { "cost"	OutwardCost } // Katowice
+				183 { "cost"	1 } // Katowice
+				196 { "cost"	1 } // Lithuania
 				// Backbone
-				5 { "dest"	5 	"cost"	RegionalBackbone }
-				66 { "dest"	66 	"cost"	RegionalBackbone }
+				5 { "dest"	5 	"cost"	1 }
+				66 { "dest"	66 	"cost"	1 }
 				92 { "dest"	92 	"cost"	RegionalBackbone }
 				// High-cost
 				27 { "dest" 27	"cost"	OneWayCellEdge }
 			}
 			"affinities"
 			{
-				"TEO" { "cost_reduction"	"1" }
+				"TEO" { "cost_reduction"	"3" }
+				"Exatel" { "cost_reduction"	"5" }
+				"Beltelcom" { "cost_reduction"	"-5" }
 			}
 		}
 
@@ -892,7 +971,8 @@
 			"affinities"
 			{
 				"Procono" { "cost_reduction"	"1" }
-				"MEO" { "cost_reduction"	"1" }
+				"MEO" { "cost_reduction"	"5" }
+				"Orange-Spain" { "cost_reduction"	"4" }
 			}
 
 		}
@@ -1046,8 +1126,8 @@
 			"longitude"	"-104.996910"
 			"edges"
 			{
-				1 { "dest"	1 	"cost"	InwardCost }
-				64 { "dest"	64 	"cost"	InwardCost }
+				1 { "dest"	1 	"cost"	ZeroCost}
+				64 { "dest"	64 	"cost"	ZeroCost}
 				31 { "dest"	31 	"cost"	InwardCost }
 				65 { "dest"	65 	"cost"	InwardCost }
 			}
@@ -1081,6 +1161,8 @@
 			{
 				"charter" { "cost_reduction"	"0.5" }
 				"verizon" { "cost_reduction"	"1" }
+				"Hargray" { "cost_reduction"	"2" }
+				"videotron" { "cost_reduction"	"-4" }
 			}
 		}
 		// #51 AUS Queensland
@@ -1113,6 +1195,10 @@
 				54  {  "dest"	54 }
 				51  { "dest"	51 }
 				55 {  "dest"	55 }				
+			}
+			"affinities"
+			{
+				"SparkNZ" { "cost_reduction"	"2" }
 			}
 		}
 		// #53 AUS VIC
@@ -1268,8 +1354,8 @@
 			"affinities"
 			{
 				"shaw" { "cost_reduction"	"0.4" }
-
-				"videotron" { "cost_reduction"	"0.8" }
+				"DTAG" { "cost_reduction"	"-5" }
+				"videotron" { "cost_reduction"	"4" }
 				"ACCL" { "cost_reduction"	-1 }
 			}
 		}
@@ -1304,6 +1390,13 @@
 				}					
 				174 { "cost" 	OneWayCellEdge }
 			}
+			"affinities"
+			{
+				"WOW" { "cost_reduction"	"-2" }
+				"Transtelco" { "cost_reduction"	"2" }
+				"videotron" { "cost_reduction"	"-4" }
+			}
+
 		}
 		// #65 US - Dallas
 		65
@@ -1327,6 +1420,7 @@
 			"affinities"
 			{
 				"skyfiber" { "cost_reduction"	"0.5" }
+				"videotron" { "cost_reduction"	"-4" }
 			}
 		}
 		// #66 Stockholm
@@ -1358,17 +1452,28 @@
 				"fiord" { "cost_reduction" 1 }
 				"TK-Telecom" { "cost_reduction" 1 }
 				"ER-Telecom" { "cost_reduction" 1 }
+				"Vimpelcom" { "cost_reduction" 1 }
+				"Volkhov" { "cost_reduction" -2 }
+				"MTS" { "cost_reduction" 2 }
+				"Rascom" { "cost_reduction" 2 }
+				"Bite.lt" { "cost_reduction" 4 }
 				"TDC" { "cost_reduction" 0.5 }
 				"Parkland" { "cost_reduction" -4 }
 				"Fiberby" { "cost_reduction" -4 }
-
+				"DTAG" { "cost_reduction" -5 }
+				"Exatel" { "cost_reduction"	"-5" }
+				"Beltelcom" { "cost_reduction"	"-5" }
+				"OTEGlobe"  { "cost_reduction" "-4" }
+				"MEO"  { "cost_reduction" "-4" }
+				"Bahnhof" { "cost_reduction"	"2" }
+				"Inetcom" { "cost_reduction"	"4" }
 			}
 		}
 		// #67 Norway
 		67
 		{
 			"name" "Norway"
-			"region"	"west europe"
+			"region"	"norway"
 			"countrycode"	"NO"
 			"latitude"	"59.910609"
 			"longitude"	"10.754294"
@@ -1447,7 +1552,7 @@
 		73
 		{
 			"name" "Ukraine - Kiev"
-			"region"	"east europe"
+			"region"	"ukraine"
 			"countrycode"	"UA"
 			"latitude"	"50.455690"
 			"longitude"	"30.521386"
@@ -1455,7 +1560,7 @@
 			{
 				7 { "dest"	7 }
 				5 { "dest"	5 }
-				38 { "cost"	1 }
+				38 { "cost"	3 }
 				191 { "cost"	OutwardCost }
 				192 { "cost"	OutwardCost }
 				193 { "cost"	OutwardCost }
@@ -1471,7 +1576,7 @@
 			"longitude"	"-117.117219"
 			"edges"
 			{
-				64 { "dest"	64	"cost"	InwardCost }
+				64 { "dest"	64	"cost"	ZeroCost}
 			}
 		}			
 		// #75 Sacramento
@@ -1484,7 +1589,7 @@
 			"longitude"	"-121.510506"
 			"edges"
 			{
-				64 { "dest"	64	"cost"	InwardCost }
+				64 { "dest"	64	"cost"	ZeroCost}
 			}
 		}			
 		// #76 Minneapolis
@@ -1497,7 +1602,7 @@
 			"longitude"	"-93.267274"
 			"edges"
 			{
-				1 { "dest"	1	"cost"	InwardCost }
+				1 { "dest"	1	"cost"	ZeroCost}
 			}
 		}			
 		// #77 US - St. Lous
@@ -1510,7 +1615,7 @@
 			"longitude"	"-90.181704"
 			"edges"
 			{
-				1 { "dest"	1	"cost"	InwardCost }
+				1 { "dest"	1	"cost"	ZeroCost}
 			}
 		}			
 		// #78 Houston
@@ -1523,8 +1628,8 @@
 			"longitude"	"-95.367036"
 			"edges"
 			{
-				65 { "dest"	65	"cost"	InwardCost }
-				50 { "dest"	50	"cost"	InwardCost }				
+				65 { "dest"	65	"cost"	ZeroCost}
+				50 { "dest"	50	"cost"	ZeroCost}				
 			}
 		}			
 		// #79 Detroit
@@ -1537,7 +1642,7 @@
 			"longitude"	"-83.04883"
 			"edges"
 			{
-				1 { "dest"	1	"cost"	InwardCost }
+				1 { "dest"	1	"cost"	ZeroCost}
 			}
 		}			
 		// #80 Pittsburgh
@@ -1550,8 +1655,8 @@
 			"longitude"	"-80.005617"
 			"edges"
 			{
-				63 { "dest"	63	"cost"	InwardCost }
-				1 { "dest"	1	"cost"	InwardCost }
+				63 { "dest"	63	"cost"	ZeroCost}
+				1 { "dest"	1	"cost"	ZeroCost}
 			}
 		}			
 		// #81 Montreal
@@ -1578,7 +1683,7 @@
 			"longitude"	"-71.039314"
 			"edges"
 			{
-				63 { "dest"	63	"cost"	InwardCost }
+				63 { "dest"	63	"cost"	ZeroCost}
 			}
 		}			
 		// #83 Philly
@@ -1591,7 +1696,7 @@
 			"longitude"	"-75.1579"
 			"edges"
 			{
-				63 { "dest"	63	"cost"	InwardCost }
+				63 { "dest"	63	"cost"	ZeroCost}
 			}
 		}			
 		// #84 Charlotte, VA
@@ -1604,8 +1709,8 @@
 			"longitude"	"-80.848818"
 			"edges"
 			{
-				63 { "dest"	63	"cost"	InwardCost }
-				50 { "dest"	50	"cost"	InwardCost }
+				63 { "dest"	63	"cost"	ZeroCost}
+				50 { "dest"	50	"cost"	ZeroCost}
 			}
 		}			
 		// #85 Manchester
@@ -1644,8 +1749,8 @@
 			"longitude"	"6.794386"
 			"edges"
 			{
-				5 { "dest"	5	"cost"	InwardCost }
-				15 { "dest"	15	"cost"	InwardCost }
+				5 { "dest"	5	"cost"	ZeroCost}
+				15 { "dest"	15	"cost"	ZeroCost}
 			}
 		}			
 		// #88 Zurich
@@ -1671,7 +1776,7 @@
 			"longitude"	"9.991207"
 			"edges"
 			{
-				5 { "dest"	5	"cost"	InwardCost }
+				5 { "dest"	5	"cost"	ZeroCost}
 			}
 		}			
 		// #90 Berlin
@@ -1684,7 +1789,7 @@
 			"longitude"	"13.377734"
 			"edges"
 			{
-				5 { "dest"	5	"cost"	InwardCost }
+				5 { "dest"	5	"cost"	ZeroCost}
 			}
 		}			
 		// #91 Munich
@@ -1697,7 +1802,7 @@
 			"longitude"	"11.577873"
 			"edges"
 			{
-				5 { "dest"	5	"cost"	InwardCost }
+				5 { "dest"	5	"cost"	ZeroCost}
 			}
 		}			
 		// #92 Vienna
@@ -1726,6 +1831,10 @@
 			"affinities"
 			{
 				"Sparkle" { "cost_reduction"	"2" }
+				"DTAG" { "cost_reduction"	"-15" }
+				"OTEGlobe" { "cost_reduction"	"-5" }
+				"Exatel" { "cost_reduction"	"-5" }
+				"A1Telekom" { "cost_reduction"	"4" }
 			}
 		}			
 		// #93 Budapest
@@ -1766,7 +1875,7 @@
 			"longitude"	"-83.018618"
 			"edges"
 			{
-				1 { "dest"	1	"cost"	InwardCost }
+				1 { "dest"	1	"cost"	ZeroCost}
 			}
 		}
 		// #96 Marseille
@@ -1794,7 +1903,7 @@
 			"longitude"	"18.428065"
 			"edges"
 			{
-				26 { "dest"	26 "cost"	InwardCost }
+				26 { "dest"	26 "cost"	ZeroCost}
 			}
 		}						
 		// #98 ZA CPT MWEB
@@ -1987,8 +2096,8 @@
 			"region"	"global"
 			"edges"
 			{
-				64  				{  					"dest"	64 					"cost"	"NorthAndSouthAmerica" 				}
-				115  				{  					"dest"	115 					"cost"	"OneWayCellEdge" 				}
+				64 { "cost"	"2"	}
+				115 { "cost"	"OneWayCellEdge"	}
 			}
 		}
 		// #115 mexico
@@ -2123,7 +2232,7 @@
 		124
 		{
 			"name" "Turkey - Istanbul"
-			"region"	"middle east"
+			"region"	"east europe"
 			"countrycode"	"TR"
 			"latitude"	"41.022696"
 			"longitude"	"28.997054"
@@ -2151,7 +2260,7 @@
 		126
 		{
 			"name" "Saudi Arabia"
-			"region"	"middle east"
+			"region"	"persian gulf"
 			"countrycode"	"SA"
 			"latitude"	"24.691566"
 			"longitude"	"46.672031"
@@ -2164,7 +2273,7 @@
 		127
 		{
 			"name" "United Arab Emirates"
-			"region"	"middle east"
+			"region"	"persian gulf"
 			"countrycode"	"UA"
 			"latitude"	"25.194631"
 			"longitude"	"55.274589"
@@ -2181,7 +2290,7 @@
 		128
 		{
 			"name" "Pakistan"
-			"region"	"south asia"
+			"region"	"persian gulf"
 			"countrycode"	"PK"
 			"latitude"	"24.845544"
 			"longitude"	"66.992161"
@@ -2763,7 +2872,7 @@
 		173
 		{
 			"name" "Central Asia"
-			"region"	"asia"
+			"region"	"central asia"
 			"countrycode"	"UZ"
 			"latitude"	"41.303812"
 			"longitude"	"69.241240"
@@ -2817,7 +2926,7 @@
 			"longitude"	"141.3523908"
 			"edges"
 			{
-				32 { "cost"	InwardCost }
+				32 { "cost"	ZeroCost}
 			}		
 		}
 		178
@@ -2829,7 +2938,7 @@
 			"longitude"	"140.8712998"
 			"edges"
 			{
-				32 { "cost"	InwardCost }
+				32 { "cost"	ZeroCost}
 			}		
 		}
 		179
@@ -2841,7 +2950,7 @@
 			"longitude"	"136.9164507"
 			"edges"
 			{
-				32 { "cost"	InwardCost }
+				32 { "cost"	ZeroCost}
 			}		
 		}
 		180
@@ -2853,7 +2962,7 @@
 			"longitude"	"135.4947667"
 			"edges"
 			{
-				32 { "cost"	InwardCost }
+				32 { "cost"	ZeroCost}
 			}		
 		}
 		181
@@ -2865,7 +2974,7 @@
 			"longitude"	"130.4212494"
 			"edges"
 			{
-				32 { "cost"	InwardCost }
+				32 { "cost"	ZeroCost}
 			}		
 		}
 		182
@@ -2877,7 +2986,7 @@
 			"longitude"	"129.0463444"
 			"edges"
 			{
-				32 { "cost"	InwardCost }
+				8 { "cost"	ZeroCost}
 			}		
 		}
 		183
@@ -2889,7 +2998,7 @@
 			"longitude"	"19.0247792"
 			"edges"
 			{
-				38 { "cost"	InwardCost }
+				38 { "cost"	ZeroCost}
 			}
 		}
 		184
@@ -2927,7 +3036,7 @@
 			"longitude"	"2.1853934"
 			"edges"
 			{
-				40 { "cost"	InwardCost }
+				40 { "cost"	ZeroCost}
 			}
 		}
 		187
@@ -2939,7 +3048,7 @@
 			"longitude"	"-0.3771582"
 			"edges"
 			{
-				40 { "cost"	InwardCost }
+				40 { "cost"	ZeroCost}
 			}
 		}
 		188
@@ -2951,67 +3060,67 @@
 			"longitude"	"-4.4246812"
 			"edges"
 			{
-				40 { "cost"	InwardCost }
+				40 { "cost"	ZeroCost}
 			}
 		}
 		189
 		{
 			"name" "Turkey - Ankara"
-			"region"	"middle east"
+			"region"	"east europe"
 			"countrycode"	"TR"
 			"latitude"	"39.927713"
 			"longitude"	"32.8557008"
 			"edges"
 			{
-				124 { "cost"	InwardCost  }
+				124 { "cost"	ZeroCost}
 			}
 		}
 		190
 		{
 			"name" "Turkey - Izmir"
-			"region"	"middle east"
+			"region"	"east europe"
 			"countrycode"	"TR"
 			"latitude"	"38.4279917"
 			"longitude"	"27.1425603"
 			"edges"
 			{
-				124 { "cost"	InwardCost  }
+				124 { "cost"	ZeroCost}
 			}
 		}
 		191
 		{
 			"name" "Ukraine - Odessa"
-			"region"	"east europe"
+			"region"	"ukraine"
 			"countrycode"	"UA"
 			"latitude"	"46.4688376"
 			"longitude"	"30.7392194"
 			"edges"
 			{
-				73 { "cost" 	InwardCost }
+				73 { "cost" 	ZeroCost}
 			}
 		}
 		192
 		{
 			"name" "Ukraine - Lviv"
-			"region"	"east europe"
+			"region"	"ukraine"
 			"countrycode"	"UA"
 			"latitude"	"49.8400205"
 			"longitude"	"24.0281634"
 			"edges"
 			{
-				73 { "cost" 	InwardCost }
+				73 { "cost" 	ZeroCost}
 			}
 		}
 		193
 		{
 			"name" "Ukraine - Kharkiv"
-			"region"	"east europe"
+			"region"	"ukraine"
 			"countrycode"	"UA"
 			"latitude"	"49.9905255"
 			"longitude"	"36.2293353"
 			"edges"
 			{
-				73 { "cost" 	InwardCost }
+				73 { "cost" 	ZeroCost}
 			}
 		}
 		194
@@ -3039,6 +3148,138 @@
 				92 { "cost"	InwardCost}
 				5 { "cost"	InwardCost}
 			}
+		}
+		196
+		{
+			"name" "Lithuania"
+			"region"	"east europe"
+			"countrycode"	"LT"
+			"latitude"	"54.678753"
+			"longitude"	"25.287341"
+			"edges"
+			{
+				38 { "cost"	0 }
+			}
+		}
+		197
+		{
+			"name" "China - Suzhou"
+			"region"	"china"
+			"countrycode"	"CN"
+			"latitude"	"31.293638"
+			"longitude"	"120.575299"
+			"edges"
+			{
+				47 { "dest"	47	"cost"	InwardCost }
+			}		
+		}
+		198
+		{
+			"name" "China - Hangzhou"
+			"region"	"china"
+			"countrycode"	"CN"
+			"latitude"	"30.274921"
+			"longitude"	"120.162224"
+			"edges"
+			{
+				47 { "dest"	47	"cost"	InwardCost }
+			}		
+		}
+		199
+		{
+			"name" "China - Ningbo"
+			"region"	"china"
+			"countrycode"	"CN"
+			"latitude"	"29.872564"
+			"longitude"	"121.560226"
+			"edges"
+			{
+				47 { "dest"	47	"cost"	InwardCost }
+			}		
+		}
+		200
+		{
+			"name" "China - Nanjing"
+			"region"	"china"
+			"countrycode"	"CN"
+			"latitude"	"32.069854"
+			"longitude"	"118.799455"
+			"edges"
+			{
+				47 { "dest"	47	"cost"	InwardCost }
+			}		
+		}
+		201
+		{
+			"name" "China - Shenzhen"
+			"region"	"china"
+			"countrycode"	"CN"
+			"latitude"	"22.532146"
+			"longitude"	"113.997626"
+			"edges"
+			{
+				47 { "dest"	47	"cost"	InwardCost }
+			}		
+		}
+		202
+		{
+			"name" "China - Dongguan"
+			"region"	"china"
+			"countrycode"	"CN"
+			"latitude"	"23.041631"
+			"longitude"	"113.738451"
+			"edges"
+			{
+				47 { "dest"	47	"cost"	InwardCost }
+			}		
+		}
+		203
+		{
+			"name" "China - Tianjin"
+			"region"	"china"
+			"countrycode"	"CN"
+			"latitude"	"39.085787"
+			"longitude"	"117.209123"
+			"edges"
+			{
+				47 { "dest"	47	"cost"	InwardCost }
+			}		
+		}
+		204
+		{
+			"name" "China - Chongqing"
+			"region"	"china"
+			"countrycode"	"CN"
+			"latitude"	"29.520374"
+			"longitude"	"106.532466"
+			"edges"
+			{
+				47 { "dest"	47	"cost"	InwardCost }
+			}		
+		}
+		205
+		{
+			"name" "China - Shenyang"
+			"region"	"china"
+			"countrycode"	"CN"
+			"latitude"	"41.783013"
+			"longitude"	"123.434066"
+			"edges"
+			{
+				47 { "dest"	47	"cost"	InwardCost }
+			}		
+		}
+		206
+		{
+			"name" "China - Dalian"
+			"region"	"china"
+			"countrycode"	"CN"
+			"latitude"	"38.911861"
+			"longitude"	"121.615360"
+			"edges"
+			{
+				47 { "dest"	47	"cost"	InwardCost }
+			}		
 		}
 	}
 	"countries"
@@ -3422,7 +3663,7 @@
 		"LI"	88
 		
 		//"Lithuania"						
-		"LT"	38
+		"LT"	196
 		
 		//"Luxembourg"					
 		"LU"	129

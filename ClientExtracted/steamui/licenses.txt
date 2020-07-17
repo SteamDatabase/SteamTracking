@@ -1053,6 +1053,9 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 
+react-spring
+../../../web_src/shared/licenses/react-spring.license
+
 react-transition-group
 BSD-3-Clause
 BSD 3-Clause License

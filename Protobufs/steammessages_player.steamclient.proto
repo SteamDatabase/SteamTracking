@@ -2,6 +2,39 @@ import "steammessages_unified_base.steamclient.proto";
 
 option cc_generic_services = true;
 
+enum EProfileCustomizationType {
+	k_EProfileCustomizationTypeInvalid = 0;
+	k_EProfileCustomizationTypeRareAchievementShowcase = 1;
+	k_EProfileCustomizationTypeGameCollector = 2;
+	k_EProfileCustomizationTypeItemShowcase = 3;
+	k_EProfileCustomizationTypeTradeShowcase = 4;
+	k_EProfileCustomizationTypeBadges = 5;
+	k_EProfileCustomizationTypeFavoriteGame = 6;
+	k_EProfileCustomizationTypeScreenshotShowcase = 7;
+	k_EProfileCustomizationTypeCustomText = 8;
+	k_EProfileCustomizationTypeFavoriteGroup = 9;
+	k_EProfileCustomizationTypeRecommendation = 10;
+	k_EProfileCustomizationTypeWorkshopItem = 11;
+	k_EProfileCustomizationTypeMyWorkshop = 12;
+	k_EProfileCustomizationTypeArtworkShowcase = 13;
+	k_EProfileCustomizationTypeVideoShowcase = 14;
+	k_EProfileCustomizationTypeGuides = 15;
+	k_EProfileCustomizationTypeMyGuides = 16;
+	k_EProfileCustomizationTypeAchievements = 17;
+	k_EProfileCustomizationTypeGreenlight = 18;
+	k_EProfileCustomizationTypeMyGreenlight = 19;
+	k_EProfileCustomizationTypeSalien = 20;
+}
+
+enum EProfileCustomizationStyle {
+	k_EProfileCustomizationStyleDefault = 0;
+	k_EProfileCustomizationStyleSelected = 1;
+	k_EProfileCustomizationStyleRarest = 2;
+	k_EProfileCustomizationStyleMostRecent = 3;
+	k_EProfileCustomizationStyleRandom = 4;
+	k_EProfileCustomizationStyleHighestRated = 5;
+}
+
 enum ENotificationSetting {
 	k_ENotificationSettingNotifyUseDefault = 0;
 	k_ENotificationSettingAlways = 1;
@@ -146,6 +179,8 @@ message ProfileItem {
 	optional uint32 item_class = 9;
 	optional string movie_webm = 10 [(description) = "URL to webm, if any"];
 	optional string movie_mp4 = 11 [(description) = "URL to mp4, if any"];
+	optional string movie_webm_small = 13 [(description) = "URL to small webm, if any"];
+	optional string movie_mp4_small = 14 [(description) = "URL to small mp4, if any"];
 	optional uint32 equipped_flags = 12 [(description) = "Special flags set when equipped (EProfileItemEquippedFlag)"];
 }
 
@@ -273,6 +308,81 @@ message CPlayer_GetAchievementsProgress_Response {
 	}
 
 	repeated .CPlayer_GetAchievementsProgress_Response.AchievementProgress achievement_progress = 1;
+}
+
+message CPlayer_GetFavoriteBadge_Request {
+	optional uint64 steamid = 1;
+}
+
+message CPlayer_GetFavoriteBadge_Response {
+	optional bool has_favorite_badge = 1;
+	optional uint32 badgeid = 2;
+	optional uint64 communityitemid = 3;
+	optional uint32 item_type = 4;
+	optional uint32 border_color = 5;
+	optional uint32 appid = 6;
+	optional uint32 level = 7;
+}
+
+message CPlayer_SetFavoriteBadge_Request {
+	optional uint64 communityitemid = 1;
+	optional uint32 badgeid = 2;
+}
+
+message CPlayer_SetFavoriteBadge_Response {
+}
+
+message CPlayer_GetProfileCustomization_Request {
+	optional fixed64 steamid = 1;
+	optional bool include_inactive_customizations = 2;
+}
+
+message ProfileCustomizationSlot {
+	optional uint32 slot = 1;
+	optional uint32 appid = 2;
+	optional uint64 publishedfileid = 3;
+	optional uint64 item_assetid = 4;
+	optional uint64 item_contextid = 5;
+	optional string notes = 6;
+	optional string title = 7;
+	optional uint32 accountid = 8;
+	optional uint32 badgeid = 9;
+	optional uint32 border_color = 10;
+	optional uint64 item_classid = 11;
+	optional uint64 item_instanceid = 12;
+}
+
+message ProfileCustomization {
+	optional .EProfileCustomizationType customization_type = 1 [default = k_EProfileCustomizationTypeInvalid];
+	optional bool large = 2;
+	repeated .ProfileCustomizationSlot slots = 3;
+	optional bool active = 4;
+	optional .EProfileCustomizationStyle customization_style = 5 [default = k_EProfileCustomizationStyleDefault];
+}
+
+message ProfileTheme {
+	optional string theme_id = 1;
+	optional string title = 2;
+}
+
+message CPlayer_GetProfileCustomization_Response {
+	repeated .ProfileCustomization customizations = 1;
+	optional uint32 slots_available = 2;
+	optional .ProfileTheme profile_theme = 3;
+}
+
+message CPlayer_GetProfileThemesAvailable_Request {
+}
+
+message CPlayer_GetProfileThemesAvailable_Response {
+	repeated .ProfileTheme profile_themes = 1;
+}
+
+message CPlayer_SetProfileTheme_Request {
+	optional string theme_id = 1;
+}
+
+message CPlayer_SetProfileTheme_Response {
 }
 
 message CPlayer_PostStatusToFriends_Request {
@@ -581,6 +691,26 @@ service Player {
 
 	rpc GetAchievementsProgress (.CPlayer_GetAchievementsProgress_Request) returns (.CPlayer_GetAchievementsProgress_Response) {
 		option (method_description) = "Gets the achievement completion stats for the specified list of apps.";
+	}
+
+	rpc GetFavoriteBadge (.CPlayer_GetFavoriteBadge_Request) returns (.CPlayer_GetFavoriteBadge_Response) {
+		option (method_description) = "Gets the badge the user has set as their favorite";
+	}
+
+	rpc SetFavoriteBadge (.CPlayer_SetFavoriteBadge_Request) returns (.CPlayer_SetFavoriteBadge_Response) {
+		option (method_description) = "Sets the badge  as the users favorite";
+	}
+
+	rpc GetProfileCustomization (.CPlayer_GetProfileCustomization_Request) returns (.CPlayer_GetProfileCustomization_Response) {
+		option (method_description) = "Returns the customizations (if any) for a profile";
+	}
+
+	rpc GetProfileThemesAvailable (.CPlayer_GetProfileThemesAvailable_Request) returns (.CPlayer_GetProfileThemesAvailable_Response) {
+		option (method_description) = "Gets themes available for the user.";
+	}
+
+	rpc SetProfileTheme (.CPlayer_SetProfileTheme_Request) returns (.CPlayer_SetProfileTheme_Response) {
+		option (method_description) = "Selects a theme for the profile";
 	}
 
 	rpc PostStatusToFriends (.CPlayer_PostStatusToFriends_Request) returns (.CPlayer_PostStatusToFriends_Response) {

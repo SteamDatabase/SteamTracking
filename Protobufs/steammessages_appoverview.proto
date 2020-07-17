@@ -133,6 +133,9 @@ message CAppOverview {
 	optional uint32 review_score_without_bombs = 55;
 	optional uint32 review_percentage_without_bombs = 56;
 	optional string library_id = 57;
+	optional bool vr_only = 58;
+	optional uint32 mastersub_appid = 59;
+	optional string mastersub_includedwith_logo = 60;
 }
 
 message CAppOverview_Change {

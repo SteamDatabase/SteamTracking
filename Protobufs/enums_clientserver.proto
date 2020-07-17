@@ -548,6 +548,8 @@ enum EMsg {
 	k_EMsgGCHAccountPhoneNumberChange = 2236;
 	k_EMsgGCHAccountTwoFactorChange = 2237;
 	k_EMsgGCHInviteUserToLobby = 2238;
+	k_EMsgGCHUpdateMultipleSessions = 2239;
+	k_EMsgGCHMarkAppSessionsAuthoritative = 2240;
 	k_EMsgBaseP2P = 2500;
 	k_EMsgP2PIntroducerMessage = 2502;
 	k_EMsgBaseSM = 2900;
@@ -1028,7 +1030,6 @@ enum EMsg {
 	k_EMsgClientMicroTxnAuthRequest = 5504;
 	k_EMsgClientMicroTxnAuthorize = 5505;
 	k_EMsgClientMicroTxnAuthorizeResponse = 5506;
-	k_EMsgClientAppMinutesPlayedData = 5507;
 	k_EMsgClientGetMicroTxnInfo = 5508;
 	k_EMsgClientGetMicroTxnInfoResponse = 5509;
 	k_EMsgClientMarketingMessageUpdate2 = 5510;

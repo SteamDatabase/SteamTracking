@@ -55,6 +55,7 @@ message CMsgSteamDatagramRouterPingReply {
 	optional fixed32 client_cookie = 8;
 	optional uint32 scoring_penalty_relay_cluster = 9;
 	repeated .CMsgSteamDatagramRouterPingReply.RouteException route_exceptions = 10;
+	optional uint32 network_next_port = 64;
 }
 
 message CMsgSteamDatagramGameserverPingRequest {
@@ -498,4 +499,13 @@ message CMsgSteamDatagramConnectionStatsP2PRouterToRouter {
 	optional uint32 seq_num_e2e = 27;
 	optional fixed32 from_relay_session_id = 22;
 	optional fixed32 to_relay_session_id = 25;
+}
+
+message CMsgSteamDatagramNetworkNextRouterPingRequestExtraData {
+	optional string client_id = 3;
+	optional uint32 app_id = 4;
+	optional uint32 protocol_ver = 5;
+}
+
+message CMsgSteamDatagramNetworkNextRouterPingReplyExtraData {
 }

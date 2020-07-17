@@ -14895,4 +14895,12 @@ Com a alavanca similar a mouse, você poderá combinar a configuração padrão 
 "[english]ControllerBinding_SoftPress_RepeatRate"	"Repeat Rate"
 "ControllerBinding_SoftPress_RepeatRate_Description"	"A velocidade do modo turbo é definida por este ajuste."
 "[english]ControllerBinding_SoftPress_RepeatRate_Description"	"The speed of Turbo will be set by this slider."
+"ControllerBinding_SoftPress_Binding"	"Vínculo"
+"[english]ControllerBinding_SoftPress_Binding"	"Binding"
+"ControllerBinding_SoftPress_Binding_Description"	"É possível vincular uma ou mais ações neste ativador, como botões do teclado, mouse e controle, ou ações nativas."
+"[english]ControllerBinding_SoftPress_Binding_Description"	"You can bind one or more actions to this activator, such as keyboard, mouse, and gamepad buttons or native actions."
+"ControllerBinding_SoftPress_SoftPressStyle"	"Estilo do pressionar leve"
+"[english]ControllerBinding_SoftPress_SoftPressStyle"	"Soft Press Style"
+"ControllerBinding_SoftPress_SoftPressStyle_Description"	"Você pode alterar a ativação do estilo do pressionar leve. O limiar sensível do gatilho pode funcionar bem em entradas unidimensionais. Caso contrário, o limiar simples é recomendado."
+"[english]ControllerBinding_SoftPress_SoftPressStyle_Description"	"You can change the style of soft press activation. For one dimensional inputs like triggers hair trigger can work well, otherwise simple threshold is recommended"
 }

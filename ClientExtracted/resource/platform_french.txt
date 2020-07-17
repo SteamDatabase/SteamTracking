@@ -5,7 +5,7 @@
 {
 "App_Store"	"Magasin"
 "[english]App_Store"	"Store"
-"App_Friends"	"Amis"
+"App_Friends"	"Contacts"
 "[english]App_Friends"	"Friends"
 "App_Games"	"Bibliothèque"
 "[english]App_Games"	"Library"
@@ -27,7 +27,7 @@
 "[english]app_task_games"	"Library"
 "app_task_store"	"Magasin"
 "[english]app_task_store"	"Store"
-"app_task_friends"	"Amis"
+"app_task_friends"	"Contacts"
 "[english]app_task_friends"	"Friends"
 "app_task_community"	"Communauté"
 "[english]app_task_community"	"Community"

@@ -139,7 +139,8 @@ message CMsgSteamNetworkingP2PRendezvous {
 	message ConnectRequest {
 		optional .CMsgSteamDatagramSessionCryptInfoSigned crypt = 6;
 		optional .CMsgSteamDatagramCertificateSigned cert = 7;
-		optional uint32 virtual_port = 9;
+		optional uint32 to_virtual_port = 9;
+		optional uint32 from_virtual_port = 10;
 	}
 
 	message ConnectOK {

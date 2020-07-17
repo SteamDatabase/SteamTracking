@@ -16031,6 +16031,7 @@
  t FindConverter(char const*)
  t FreeTree(ExprNode*&)
  t GetNetAdrResolveCacheMutex()
+ t GetRootPopup(unsigned long long)
  t IPC::crc32(unsigned int, void const*, unsigned long)
  t InitStreamLocale(std::__1::basic_ostringstream<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >&, ELanguage, long long, ECurrencyCode)
  t K256

@@ -802,7 +802,7 @@
     {
         "id": 946,
         "size": 4,
-        "posted_in": "CClientJobAppMinutesPlayed::BYieldingRunClientJob(IMsgNetPacket*)"
+        "posted_in": "CUser::InternalRemoveClientGame(int, AppLifetimeNotice_t*)"
     },
     {
         "id": 947,

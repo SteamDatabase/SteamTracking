@@ -1,8 +1,6 @@
 __TEXT
 __text
 __TEXT
-0O
-0O
 __stubs
 __TEXT
 __stub_helper
@@ -54,9 +52,9 @@ pf,
 @
 @
 P
-i;
-i;
-k;
+j;
+j;
+l;
 
 8
 @loader_path/libtier0_s.dylib
@@ -3252,8 +3250,6 @@ Assertion Failed: !pszString || pszString[nChars] == '\0'
 Assertion Failed: s_bAllowStaticSymbolTable
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlsymbol.cpp
 s_pSymbolTable
-(
-(
 0
 p
 0
@@ -3270,15 +3266,12 @@ p
 p
 0
 p
-Hc5
+|'
+a'
+0
+p
 "
 "
-"
-"
-"
-"
-0
-p
 $
 @
 @
@@ -3288,10 +3281,14 @@ $
 ?
 ?
 A
+N)
 Hc
 =
-L95`I'
+L95&X'
+L95
+K'
 Hc
+6%
 ?
 ?
 ?
@@ -3307,9 +3304,11 @@ Hc
 ?
 ?
 ?
+a$
+/$
 "
-=$
 3
+8$
 D
 $
 $
@@ -3324,24 +3323,15 @@ $
 $
 $
 $
-$
-$
-$
 @
-O#
+E#
+I#
+D#
 +
-b"
-
-
-
-
-
+1"
+"
+"
 e
-!
-!
-C
-6
-n
 
 
 
@@ -3355,12 +3345,12 @@ V
 
 &
 &
-p
 t=
 =
 =
-@
 
+
+@
 
 
 
