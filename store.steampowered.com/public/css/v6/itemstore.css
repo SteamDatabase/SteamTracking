@@ -313,8 +313,8 @@ a#store_search_link img:hover {
 .item_def_rows.grid
 {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
-	grid-column-gap: 10px;
+	grid-template-columns: repeat( 4, max-content );
+	justify-content: space-between;
 	grid-row-gap: 20px;
 }
 
