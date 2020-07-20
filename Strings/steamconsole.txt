@@ -2,6 +2,8 @@ h
 __TEXT
 __text
 __TEXT
+B
+B
 __stubs
 __TEXT
 __stub_helper
@@ -69,6 +71,7 @@ h
 /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
 &
 )
+-
 public
 local
 anonymous
@@ -697,6 +700,7 @@ Assertion Failed: m_fnCompletionCallback
 Assertion Failed: m_vecCallbacks.Count() == 0 || !callback
 Assertion Failed: m_pParent == this
 ConVar::InternalSetValue: called with NULL
+Hey, you just set %s's number values to be 0.  Is that what you wanted?If you do `%s = 123`, you will set the convar to `= 123` which becomes `0` for numeric uses.Did you mean to do `%s %s` instead?
 %f
 Assertion Failed: !( m_nFlags & FCVAR_NEVER_AS_STRING )
 Assertion Failed: m_vecCallbacks.Count() == 0
