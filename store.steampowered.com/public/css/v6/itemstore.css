@@ -313,8 +313,8 @@ a#store_search_link img:hover {
 .item_def_rows.grid
 {
 	display: grid;
-	grid-template-columns: repeat( 4, max-content );
-	justify-content: space-between;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-column-gap: 10px;
 	grid-row-gap: 20px;
 }
 
@@ -352,11 +352,11 @@ a#store_search_link img:hover {
 
 .item_def_icon
 {
-	width: 222px;
-	height: 222px;
+	width: calc( 100% - 2px );
+	height: auto;
 	padding: 0px;
 	border: 1px solid rgba(0,0,0,0);
-    display: block;
+	display: block;
 }
 .item_def_grid_item .item_def_icon:hover
 {
@@ -460,7 +460,6 @@ a#store_search_link img:hover {
 	max-height: 512px;
 	max-width: 512px;
 	width: 100%;
-	min-height: 336px;
 	margin-bottom: 10px;
 }
 .item_def_image_helper {
