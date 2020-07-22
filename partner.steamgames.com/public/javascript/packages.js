@@ -593,7 +593,7 @@ function CreateDiscount( target, id, discount, packageid )
 	var discountBlock = templ_DiscountDiv.evaluate( { DiscountId: id, SessionId: g_sessionID, PackageId: packageid, Name: name, DiscountNumber: discount_number, Description: description, DiscountPercentage: discount_percent, DiscountQuantity: discount_quantity, DiscountPrices: strDiscountPrices, Group: group } );
 	target.insert( discountBlock );
 
-	if ( master_discountid )
+	if ( master_discountid && master_discountid != 0 )
 	{
 		$J( '#packageDiscount'+ discount_number +'Form :input' ).prop('disabled',true);
 		$J( '#discountName' + discount_number ).append( ' - Managed by <a href="https://partner.steamgames.com/admin/masterdiscount/' + master_discountid + '">Master Discount ( ' + master_discountid + ' )</a>' );
