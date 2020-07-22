@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6007218";
+var CLSTAMP = "6008935";
 !(function(e) {
   function t(t) {
     for (
@@ -96462,14 +96462,19 @@ var CLSTAMP = "6007218";
             return !1;
           }),
           (t.prototype.componentDidUpdate = function(e) {
-            e.selectedOption !== this.props.selectedOption &&
-              this.FindAndSetActiveOption(this.props.selectedOption),
-              this.DoOptionsDiffer(e.rgOptions) &&
-                this.state.bOpened &&
+            if (this.DoOptionsDiffer(e.rgOptions)) {
+              if (void 0 !== this.state.iSelectedOption) {
+                var t = e.rgOptions[this.state.iSelectedOption];
+                t && this.FindAndSetActiveOption(t.data);
+              }
+              this.state.bOpened &&
                 (this.m_iMenuInstance.SetOnHideCallback(null),
                 this.m_iMenuInstance.Hide(),
                 (this.m_iMenuInstance = void 0),
                 this.BuildMenu());
+            } else
+              e.selectedOption !== this.props.selectedOption &&
+                this.FindAndSetActiveOption(this.props.selectedOption);
           }),
           (t.prototype.OnInputRef = function(e) {
             this.m_elInput = e;

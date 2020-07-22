@@ -10522,28 +10522,27 @@
                       return (t = this.m_StateCur)
                         ? void 0 !== t.cities
                           ? [2, t.cities]
-                          : t.cityloader
-                          ? [2, t.cityloader]
-                          : ((t.cityloader = l.a
-                              .get(
-                                p.b.COMMUNITY_BASE_URL +
-                                  ("/actions/QueryLocations/" +
-                                    t.countrycode +
-                                    "/" +
-                                    t.statecode)
-                              )
-                              .then(function(e) {
-                                return e.data;
-                              })),
-                            t.cityloader.then(
-                              function(e) {
-                                (t.cities = e || []), delete t.cityloader;
-                              },
-                              function() {
-                                delete t.cityloader;
-                              }
-                            ),
-                            [2, t.cities])
+                          : (t.cityloader ||
+                              ((t.cityloader = l.a
+                                .get(
+                                  p.b.COMMUNITY_BASE_URL +
+                                    ("/actions/QueryLocations/" +
+                                      t.countrycode +
+                                      "/" +
+                                      t.statecode)
+                                )
+                                .then(function(e) {
+                                  return e.data;
+                                })),
+                              t.cityloader.then(
+                                function(e) {
+                                  (t.cities = e || []), delete t.cityloader;
+                                },
+                                function() {
+                                  delete t.cityloader;
+                                }
+                              )),
+                            [2, t.cityloader])
                         : [2, []];
                   }
                 });
@@ -11630,6 +11629,11 @@
             (e.prototype.SetCustomURL = function(e) {
               this.m_strCustomURL = e;
             }),
+            (e.prototype.GetConstructedURL = function() {
+              return this.m_strCustomURL
+                ? p.b.COMMUNITY_BASE_URL + "id/" + this.m_strCustomURL + "/"
+                : p.b.COMMUNITY_BASE_URL + "profiles/" + p.g.steamid + "/";
+            }),
             (e.prototype.GetAvatarHash = function() {
               return this.m_strAvatarHash;
             }),
@@ -12338,9 +12342,8 @@
                       a.map(function(e) {
                         return b.createElement(
                           b.Fragment,
-                          null,
+                          { key: e.communityitemid },
                           b.createElement(Pi, {
-                            key: e.communityitemid,
                             frame: e,
                             onSelected: t.SelectFrame,
                             large: !0
@@ -13217,26 +13220,40 @@
             Object(h.d)(t, e),
             (t.prototype.GetCountryList = function() {
               return Object(h.b)(this, void 0, void 0, function() {
+                var t;
                 return Object(h.e)(this, function(e) {
                   switch (e.label) {
                     case 0:
                       return [4, this.props.Location.GetCountryList()];
                     case 1:
-                      return [
-                        2,
-                        e.sent().map(function(e) {
-                          return { label: e.countryname, data: e };
-                        })
-                      ];
+                      return (
+                        (t = e.sent()),
+                        [
+                          2,
+                          Object(h.g)(
+                            [
+                              {
+                                label: Object(F.d)(
+                                  "#Profile_LocationDoNotDisplay"
+                                ),
+                                data: null
+                              }
+                            ],
+                            t.map(function(e) {
+                              return {
+                                label: e.countryname,
+                                data: e.countrycode
+                              };
+                            })
+                          )
+                        ]
+                      );
                   }
                 });
               });
             }),
             (t.prototype.OnCountrySelected = function(e) {
-              this.props.Location.SetCountry(
-                e.data.countrycode,
-                e.data.countryname
-              );
+              this.props.Location.SetCountry(e.data, e.data && e.label);
             }),
             (t.prototype.render = function() {
               var e = this.props.Location,
@@ -13248,7 +13265,7 @@
                 b.createElement("input", {
                   type: "hidden",
                   name: "country",
-                  value: i
+                  value: i || ""
                 }),
                 b.createElement(
                   ci.i,
@@ -13256,6 +13273,7 @@
                     label: Object(F.d)("#Profile_FieldCountry"),
                     fnLoadOptions: this.GetCountryList,
                     onChange: this.OnCountrySelected,
+                    initialValue: i,
                     strInitialDisplay: t,
                     strDefaultLabel: Object(F.d)(
                       "#Profile_LocationDoNotDisplay"
@@ -13278,23 +13296,37 @@
             Object(h.d)(t, e),
             (t.prototype.GetStateList = function() {
               return Object(h.b)(this, void 0, void 0, function() {
+                var t;
                 return Object(h.e)(this, function(e) {
                   switch (e.label) {
                     case 0:
                       return [4, this.props.Location.GetStateList()];
                     case 1:
-                      return [
-                        2,
-                        e.sent().map(function(e) {
-                          return { label: e.statename, data: e };
-                        })
-                      ];
+                      return (
+                        (t = e.sent() || []),
+                        [
+                          2,
+                          Object(h.g)(
+                            [
+                              {
+                                label: Object(F.d)(
+                                  "#Profile_LocationDoNotDisplay"
+                                ),
+                                data: null
+                              }
+                            ],
+                            t.map(function(e) {
+                              return { label: e.statename, data: e.statecode };
+                            })
+                          )
+                        ]
+                      );
                   }
                 });
               });
             }),
             (t.prototype.OnStateSelected = function(e) {
-              this.props.Location.SetState(e.data.statecode, e.data.statename);
+              this.props.Location.SetState(e.data, e.data && e.label);
             }),
             (t.prototype.render = function() {
               var e = this.props.Location,
@@ -13307,7 +13339,7 @@
                 b.createElement("input", {
                   type: "hidden",
                   name: "state",
-                  value: r
+                  value: r || ""
                 }),
                 e.BIsStateSelectionAvailable() &&
                   b.createElement(
@@ -13316,6 +13348,7 @@
                       label: Object(F.d)("#Profile_FieldState"),
                       fnLoadOptions: this.GetStateList,
                       onChange: this.OnStateSelected,
+                      initialValue: r,
                       strInitialDisplay: i,
                       strDefaultLabel: Object(F.d)(
                         "#Profile_LocationDoNotDisplay"
@@ -13337,23 +13370,37 @@
             Object(h.d)(t, e),
             (t.prototype.GetCityList = function() {
               return Object(h.b)(this, void 0, void 0, function() {
+                var t;
                 return Object(h.e)(this, function(e) {
                   switch (e.label) {
                     case 0:
                       return [4, this.props.Location.GetCityList()];
                     case 1:
-                      return [
-                        2,
-                        e.sent().map(function(e) {
-                          return { label: e.cityname, data: e };
-                        })
-                      ];
+                      return (
+                        (t = e.sent() || []),
+                        [
+                          2,
+                          Object(h.g)(
+                            [
+                              {
+                                label: Object(F.d)(
+                                  "#Profile_LocationDoNotDisplay"
+                                ),
+                                data: null
+                              }
+                            ],
+                            t.map(function(e) {
+                              return { label: e.cityname, data: "" + e.cityid };
+                            })
+                          )
+                        ]
+                      );
                   }
                 });
               });
             }),
             (t.prototype.OnStateSelected = function(e) {
-              this.props.Location.SetCity("" + e.data.cityid, e.data.cityname);
+              this.props.Location.SetCity(e.data, e.data && e.label);
             }),
             (t.prototype.render = function() {
               var e = this.props.Location,
@@ -13366,7 +13413,7 @@
                 b.createElement("input", {
                   type: "hidden",
                   name: "city",
-                  value: r
+                  value: r || ""
                 }),
                 e.BIsCitySelectionAvailable() &&
                   b.createElement(
@@ -13375,6 +13422,7 @@
                       label: Object(F.d)("#Profile_FieldCity"),
                       fnLoadOptions: this.GetCityList,
                       onChange: this.OnStateSelected,
+                      initialValue: "" + r,
                       strInitialDisplay: i,
                       strDefaultLabel: Object(F.d)(
                         "#Profile_LocationDoNotDisplay"
@@ -13554,13 +13602,13 @@
                   name: "weblink_3_url",
                   value: ""
                 }),
-                b.createElement(Ri, { strHTMLError: s }),
                 b.createElement(ci.k, null, Object(F.d)("#Profile_About")),
                 b.createElement(
                   ci.c,
                   null,
                   Object(F.d)("#Profile_Edit_About_Instructions")
                 ),
+                b.createElement(Ri, { strHTMLError: s }),
                 b.createElement(
                   ii,
                   { title: Object(F.d)("#Profile_Edit_BasicInfo") },
@@ -13671,7 +13719,11 @@
                   tooltip: Si("#Profile_DescriptionCustomURL"),
                   name: "customURL",
                   value: e.GetCustomURL(),
-                  onChange: this.OnProfileURLChange
+                  onChange: this.OnProfileURLChange,
+                  explainer: Object(F.d)(
+                    "#Profile_ProfileAvailableAtURL",
+                    e.GetConstructedURL()
+                  )
                 })
               );
             }),
