@@ -8243,4 +8243,8 @@ upgrade to Mac OS X version 10.7 or higher."
 "[english]Steam_TimedTrial_Minutes"	"%minutes% minutes playtime remaining"
 "Steam_TimedTrial_Hours"	"%hours% óra és %minutes% perc játékidő maradt"
 "[english]Steam_TimedTrial_Hours"	"%hours% hours and %minutes% minutes playtime remaining"
+"steam_subnav_discovery_queue"	"Felfedezési várólista"
+"[english]steam_subnav_discovery_queue"	"Discovery Queue"
+"steam_subnav_points_shop"	"Pontbolt"
+"[english]steam_subnav_points_shop"	"Points Shop"
 }

@@ -455,5 +455,7 @@
 "[english]Overlay_MicroTxnAuth_Insufficient_Funds"	"Insufficient Funds"
 "Overlay_MicroTxnAuth_Insufficient_Funds_Info"	"Steam-lompakossa ei ole riittävästi varoja tähän ostokseen. Haluatko lisätä varoja jatkaaksesi?"
 "[english]Overlay_MicroTxnAuth_Insufficient_Funds_Info"	"You do not have enough funds in your Steam Wallet to complete your purchase.  Would you like to add more funds to continue?"
+"Overlay_Playtime_TimedTrial"	"Kokeiluaikaa jäljellä %hours_trial% tuntia ja %minutes_trial% minuuttia"
+"[english]Overlay_Playtime_TimedTrial"	"%hours_trial% hours and %minutes_trial% minutes - trial remaining"
 }
 }

@@ -455,5 +455,7 @@
 "[english]Overlay_MicroTxnAuth_Insufficient_Funds"	"Insufficient Funds"
 "Overlay_MicroTxnAuth_Insufficient_Funds_Info"	"คุณมีเงินในวอลเล็ต Steam ไม่เพียงพอที่จะดำเนินการสั่งซื้อให้เสร็จสมบูรณ์ คุณต้องการเพิ่มเงินเพื่อดำเนินการต่อหรือไม่?"
 "[english]Overlay_MicroTxnAuth_Insufficient_Funds_Info"	"You do not have enough funds in your Steam Wallet to complete your purchase.  Would you like to add more funds to continue?"
+"Overlay_Playtime_TimedTrial"	"เวลาทดลองคงเหลือ - %hours_trial% ชั่วโมง %minutes_trial% นาที"
+"[english]Overlay_Playtime_TimedTrial"	"%hours_trial% hours and %minutes_trial% minutes - trial remaining"
 }
 }

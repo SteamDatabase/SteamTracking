@@ -8266,4 +8266,8 @@ upgrade to Mac OS X version 10.7 or higher."
 "[english]Steam_TimedTrial_Minutes"	"%minutes% minutes playtime remaining"
 "Steam_TimedTrial_Hours"	"Залишилося %hours% год %minutes% хв ігрового часу"
 "[english]Steam_TimedTrial_Hours"	"%hours% hours and %minutes% minutes playtime remaining"
+"steam_subnav_discovery_queue"	"Черга знахідок"
+"[english]steam_subnav_discovery_queue"	"Discovery Queue"
+"steam_subnav_points_shop"	"Крамниця жетонів"
+"[english]steam_subnav_points_shop"	"Points Shop"
 }

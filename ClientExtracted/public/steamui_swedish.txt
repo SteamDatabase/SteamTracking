@@ -8277,4 +8277,8 @@ upgrade to Mac OS X version 10.7 or higher."
 "[english]Steam_TimedTrial_Minutes"	"%minutes% minutes playtime remaining"
 "Steam_TimedTrial_Hours"	"%hours% timmar och %minutes% minuter speltid kvar"
 "[english]Steam_TimedTrial_Hours"	"%hours% hours and %minutes% minutes playtime remaining"
+"steam_subnav_discovery_queue"	"Discovery-kö"
+"[english]steam_subnav_discovery_queue"	"Discovery Queue"
+"steam_subnav_points_shop"	"Poängbutiken"
+"[english]steam_subnav_points_shop"	"Points Shop"
 }

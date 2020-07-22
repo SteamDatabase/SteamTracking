@@ -32,8 +32,7 @@ public:
     virtual unknown_ret IsVRHeadsetStreamingEnabled() = 0;
     virtual unknown_ret SetVRHeadsetStreamingEnabled(bool) = 0;
     virtual unknown_ret IsSteamChinaLauncher() = 0;
-    virtual unknown_ret InitFilterText() = 0;
-    virtual unknown_ret FilterText(ETextFilteringContext, CSteamID, ETextFilteringRelationship, char const*, char*, unsigned int) = 0;
-    virtual unknown_ret FilterTextLegallyRequired(char const*, char*, unsigned int) = 0;
+    virtual unknown_ret InitFilterText(unsigned int) = 0;
+    virtual unknown_ret FilterText(ETextFilteringContext, CSteamID, char const*, char*, unsigned int) = 0;
     virtual unknown_ret GetIPv6ConnectivityState(ESteamIPv6ConnectivityProtocol) = 0;
 };

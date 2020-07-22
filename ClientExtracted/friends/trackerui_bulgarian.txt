@@ -841,7 +841,7 @@
 "[english]Friends_ScreenshotNotification_Info"	"Screenshot saved"
 "Friends_Chat_DeniedChat_UserLocked"	"Не може да влезете в чата на %chat%, защото чат привилегиите Ви са временно преустановени."
 "[english]Friends_Chat_DeniedChat_UserLocked"	"You may not enter the %chat% chat, because your chat privileges have been temporarily suspended."
-"Friends_Chat_DeniedChat_ClanLocked"	"Не може да влезете в чата на %chat%, защото е изключен от администратора."
+"Friends_Chat_DeniedChat_ClanLocked"	"Не може да влезете в чата на %chat%, защото е административно преустановен."
 "[english]Friends_Chat_DeniedChat_ClanLocked"	"You may not enter the %chat% chat, because it has been administratively disabled."
 "Friends_ScreenshotNotification_Info_Multiple"	"%screenshots% запазени снимки"
 "[english]Friends_ScreenshotNotification_Info_Multiple"	"%screenshots% screenshots saved"

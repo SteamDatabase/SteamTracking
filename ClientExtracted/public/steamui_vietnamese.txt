@@ -8269,4 +8269,8 @@ upgrade to Mac OS X version 10.7 or higher."
 "[english]Steam_TimedTrial_Minutes"	"%minutes% minutes playtime remaining"
 "Steam_TimedTrial_Hours"	"Thời gian chơi còn lại: %hours% giờ %minutes% phút"
 "[english]Steam_TimedTrial_Hours"	"%hours% hours and %minutes% minutes playtime remaining"
+"steam_subnav_discovery_queue"	"Hàng chờ khám phá"
+"[english]steam_subnav_discovery_queue"	"Discovery Queue"
+"steam_subnav_points_shop"	"Cửa hàng điểm"
+"[english]steam_subnav_points_shop"	"Points Shop"
 }

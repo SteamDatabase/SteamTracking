@@ -78,9 +78,8 @@ public:
     virtual unknown_ret DispatchClientPostMessage(char const*, char const*, char const*) = 0;
     virtual unknown_ret IsSteamChinaLauncher() = 0;
     virtual unknown_ret NeedsSteamChinaWorkshop() = 0;
-    virtual unknown_ret InitFilterText(unsigned int) = 0;
-    virtual unknown_ret FilterText(unsigned int, ETextFilteringContext, CSteamID, ETextFilteringRelationship, char const*, char*, unsigned int) = 0;
-    virtual unknown_ret FilterTextLegallyRequired(unsigned int, char const*, char*, unsigned int) = 0;
+    virtual unknown_ret InitFilterText(unsigned int, unsigned int) = 0;
+    virtual unknown_ret FilterText(unsigned int, ETextFilteringContext, CSteamID, char const*, char*, unsigned int) = 0;
     virtual unknown_ret GetIPv6ConnectivityState(ESteamIPv6ConnectivityProtocol) = 0;
     virtual unknown_ret RecordSteamInterfaceCreation(char const*, char const*) = 0;
     virtual unknown_ret StartRuntimeInformationGathering() = 0;
