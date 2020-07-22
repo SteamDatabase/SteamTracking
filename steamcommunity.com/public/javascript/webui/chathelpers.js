@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "5997277";
+var CLSTAMP = "6007218";
 !(function(e) {
   function t(t) {
     for (
@@ -126,50 +126,53 @@ var CLSTAMP = "5997277";
       n.d(t, "a", function() {
         return i;
       }),
-      n.d(t, "p", function() {
+      n.d(t, "q", function() {
         return o;
       }),
-      n.d(t, "q", function() {
+      n.d(t, "r", function() {
         return c;
       }),
-      n.d(t, "i", function() {
+      n.d(t, "j", function() {
         return a;
       }),
-      n.d(t, "j", function() {
+      n.d(t, "k", function() {
         return u;
       }),
-      n.d(t, "o", function() {
+      n.d(t, "p", function() {
         return s;
       }),
-      n.d(t, "k", function() {
+      n.d(t, "l", function() {
         return l;
       }),
-      n.d(t, "l", function() {
+      n.d(t, "m", function() {
         return d;
       }),
-      n.d(t, "n", function() {
+      n.d(t, "o", function() {
         return h;
       }),
-      n.d(t, "m", function() {
-        return p;
-      }),
-      n.d(t, "f", function() {
+      n.d(t, "n", function() {
         return f;
       }),
-      n.d(t, "h", function() {
+      n.d(t, "g", function() {
+        return p;
+      }),
+      n.d(t, "i", function() {
         return m;
       }),
-      n.d(t, "g", function() {
+      n.d(t, "h", function() {
         return _;
       }),
-      n.d(t, "d", function() {
+      n.d(t, "f", function() {
         return v;
       }),
-      n.d(t, "c", function() {
+      n.d(t, "d", function() {
         return g;
       }),
-      n.d(t, "e", function() {
+      n.d(t, "c", function() {
         return b;
+      }),
+      n.d(t, "e", function() {
+        return I;
       });
     var o = 1,
       c = 4,
@@ -179,11 +182,42 @@ var CLSTAMP = "5997277";
       l = 250820,
       d = 330050,
       h = 358510,
-      p = 366490,
-      f = "18446744073709551615",
+      f = 366490,
+      p = "18446744073709551615",
       m = 0,
-      _ = 2147483647;
-    function v(e, t) {
+      _ = 2147483647,
+      v = [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28
+      ];
+    function g(e, t) {
       switch ((void 0 === t && (t = "en"), e)) {
         case 0:
           return "en";
@@ -247,7 +281,7 @@ var CLSTAMP = "5997277";
           return t;
       }
     }
-    function g(e, t) {
+    function b(e, t) {
       switch ((void 0 === t && (t = ""), e)) {
         case 0:
           return "english";
@@ -311,7 +345,7 @@ var CLSTAMP = "5997277";
           return t;
       }
     }
-    function b(e, t) {
+    function I(e, t) {
       switch ((void 0 === t && (t = 0), e)) {
         case "english":
           return 0;
@@ -425,10 +459,10 @@ var CLSTAMP = "5997277";
         return h;
       }),
       n.d(t, "d", function() {
-        return p;
+        return f;
       }),
       n.d(t, "e", function() {
-        return f;
+        return p;
       });
     n("mrSG");
     var r,
@@ -549,7 +583,7 @@ var CLSTAMP = "5997277";
         }
       else console.error("Missing config element #", t);
     }
-    function p() {
+    function f() {
       var e = window.location.href;
       return e.startsWith(c.STORE_BASE_URL)
         ? c.STORE_BASE_URL
@@ -563,7 +597,7 @@ var CLSTAMP = "5997277";
         ? c.STEAMTV_BASE_URL
         : "";
     }
-    function f() {
+    function p() {
       var e = window.location.href;
       return e.startsWith(c.STORE_BASE_URL)
         ? "store"
@@ -862,7 +896,7 @@ var CLSTAMP = "5997277";
             return this.m_strInviteCode;
           }),
           (e.prototype.BNeverExpires = function() {
-            return this.m_rtTimeExpires == o.g;
+            return this.m_rtTimeExpires == o.h;
           }),
           (e.prototype.GetChatRoomGroupID = function() {
             return this.m_ulChatRoomGroupID;
@@ -899,7 +933,7 @@ var CLSTAMP = "5997277";
               (this.m_ulChatID = t),
               (this.m_bIsBanned = n),
               (this.m_rtKickExpires = r),
-              (this.m_rtTimeExpires = o.g),
+              (this.m_rtTimeExpires = o.h),
               (this.m_bValid = !0),
               (this.m_bReady = !0);
           }),
@@ -930,10 +964,10 @@ var CLSTAMP = "5997277";
         return l;
       }),
       n.d(t, "g", function() {
-        return p;
+        return f;
       }),
       n.d(t, "a", function() {
-        return f;
+        return p;
       }),
       n.d(t, "c", function() {
         return b;
@@ -1018,7 +1052,7 @@ var CLSTAMP = "5997277";
     }
     var d = new Map(),
       h = new Map();
-    function p(e, t) {
+    function f(e, t) {
       var n = new Date(),
         i = new Date(1e3 * e);
       if (i.getFullYear() != n.getFullYear())
@@ -1056,7 +1090,7 @@ var CLSTAMP = "5997277";
         s)
       );
     }
-    function f(e) {
+    function p(e) {
       var t = new Date(1e3 * e),
         n = new Date();
       if (t > n)
@@ -1446,7 +1480,7 @@ PERFORMANCE OF THIS SOFTWARE.
         return h;
       }),
       n.d(t, "c", function() {
-        return p;
+        return f;
       });
     var r = n("mrSG"),
       i = n("q1tI"),
@@ -1456,9 +1490,10 @@ PERFORMANCE OF THIS SOFTWARE.
     function u(e) {
       for (var t = [], n = 1; n < arguments.length; n++)
         t[n - 1] = arguments[n];
-      var r = p.LocalizeString(e);
-      return r
-        ? (t.length > 0 &&
+      var r = f.LocalizeString(e);
+      return void 0 === r
+        ? e
+        : (t.length > 0 &&
             (r = r.replace(/%(?:(\d+)\$)?s/g, function(e, n) {
               if (n <= t.length && n >= 1) {
                 var r = t[n - 1];
@@ -1466,14 +1501,13 @@ PERFORMANCE OF THIS SOFTWARE.
               }
               return e;
             })),
-          r)
-        : e;
+          r);
     }
     function s(e) {
       for (var t = [], n = 1; n < arguments.length; n++)
         t[n - 1] = arguments[n];
-      var o = p.LocalizeString(e);
-      if (!o) return e;
+      var o = f.LocalizeString(e);
+      if (void 0 === o) return e;
       for (var c, a = [], u = /(.*?)%(\d+)\$s/g, s = 0; (c = u.exec(o)); ) {
         (s += c[0].length), a.push(c[1]);
         var l = parseInt(c[2]);
@@ -1547,7 +1581,7 @@ PERFORMANCE OF THIS SOFTWARE.
       var e = "koreana" == c.c.LANGUAGE ? "korean" : c.c.LANGUAGE;
       return d[e] || null;
     }
-    var p = new ((function() {
+    var f = new ((function() {
       function e() {
         (this.m_mapTokens = new Map()), (this.m_mapFallbackTokens = new Map());
       }
@@ -1581,33 +1615,40 @@ PERFORMANCE OF THIS SOFTWARE.
             ? navigator.languages
             : ["en-US"];
         }),
-        (e.prototype.GetELanguageFallbackOrder = function() {
-          var e = new Array();
+        (e.prototype.GetELanguageFallbackOrder = function(e) {
+          void 0 === e && (e = !1);
+          var t = new Array();
           return (
-            e.push(Object(o.e)(c.c.LANGUAGE)),
-            (c.c.SUPPORTED_LANGUAGES || []).forEach(function(t) {
-              t.value != c.c.LANGUAGE && e.push(Object(o.e)(t.value));
+            t.push(Object(o.e)(c.c.LANGUAGE)),
+            (c.c.SUPPORTED_LANGUAGES || []).forEach(function(e) {
+              e.value != c.c.LANGUAGE && t.push(Object(o.e)(e.value));
             }),
-            e
+            e &&
+              o.f.forEach(function(e) {
+                -1 == t.indexOf(e) && t.push(e);
+              }),
+            t
           );
         }),
         (e.prototype.SetPreferredLocales = function(e) {
           this.m_rgLocalesToUse = e;
         }),
         (e.prototype.LocalizeString = function(e) {
-          if (!e || 0 == e.length || "#" != e.charAt(0)) return "";
-          var t = this.m_mapTokens.get(e.substring(1));
-          return void 0 === t ? "" : t;
+          if (e && 0 != e.length && "#" == e.charAt(0)) {
+            var t = this.m_mapTokens.get(e.substring(1));
+            if (void 0 !== t) return t;
+          }
         }),
         (e.prototype.LocalizeStringFromFallback = function(e) {
-          if (!e || 0 == e.length || "#" != e.charAt(0)) return "";
-          var t = this.m_mapFallbackTokens.get(e.substring(1));
-          return void 0 === t ? "" : t;
+          if (e && 0 != e.length && "#" == e.charAt(0)) {
+            var t = this.m_mapFallbackTokens.get(e.substring(1));
+            if (void 0 !== t) return t;
+          }
         }),
         e
       );
     })())();
-    window.LocalizationManager = p;
+    window.LocalizationManager = f;
   },
   "qM/t": function(e, t, n) {
     "use strict";
@@ -1622,8 +1663,8 @@ PERFORMANCE OF THIS SOFTWARE.
       l = n("2vnA"),
       d = n("okNM"),
       h = n("J0bI"),
-      p = n("s+DT");
-    var f = n("1VtQ"),
+      f = n("s+DT");
+    var p = n("1VtQ"),
       m = n("K4CH"),
       _ = (function(e) {
         function t() {
@@ -1636,7 +1677,7 @@ PERFORMANCE OF THIS SOFTWARE.
           }),
           (t.prototype.InitFromPHPInviteLinkInfo = function(e) {
             this.m_ulChatID = e.chat_id;
-            var t = new p.a(e.steamid_sender);
+            var t = new f.a(e.steamid_sender);
             t.BIsIndividualAccount() &&
               (this.m_unAccountIDInviter = t.GetAccountID()),
               (this.m_rtTimeExpires = e.time_expires),
@@ -1925,9 +1966,9 @@ PERFORMANCE OF THIS SOFTWARE.
             );
           }),
           Object(s.c)([l.A], t.prototype, "m_bTriedToLaunchSteam", void 0),
-          Object(s.c)([f.a], t.prototype, "LaunchWebChat", null),
-          Object(s.c)([f.a], t.prototype, "OpenInSteamIgnoreAccount", null),
-          Object(s.c)([f.a], t.prototype, "LaunchSteamClient", null),
+          Object(s.c)([p.a], t.prototype, "LaunchWebChat", null),
+          Object(s.c)([p.a], t.prototype, "OpenInSteamIgnoreAccount", null),
+          Object(s.c)([p.a], t.prototype, "LaunchSteamClient", null),
           (t = Object(s.c)([d.a], t))
         );
       })(r.Component),
@@ -2058,7 +2099,7 @@ PERFORMANCE OF THIS SOFTWARE.
         }
         return (
           (e.InitFromAccountID = function(t) {
-            return new e(Number(t), c.c.EUNIVERSE, 1, o.p);
+            return new e(Number(t), c.c.EUNIVERSE, 1, o.q);
           }),
           (e.InitFromClanID = function(t) {
             return new e(Number(t), c.c.EUNIVERSE, 7, 0);
@@ -2132,7 +2173,7 @@ PERFORMANCE OF THIS SOFTWARE.
             var t = this.GetUniverse();
             if (t <= 0 || t >= 5) return !1;
             if (1 == e) {
-              if (0 == this.GetAccountID() || this.GetInstance() > o.q)
+              if (0 == this.GetAccountID() || this.GetInstance() > o.r)
                 return !1;
             } else if (7 == e) {
               if (0 == this.GetAccountID() || 0 != this.GetInstance())

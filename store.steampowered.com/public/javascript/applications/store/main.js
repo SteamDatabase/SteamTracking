@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6003115";
+var CLSTAMP = "6007217";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [38],
   {
@@ -117,20 +117,20 @@ var CLSTAMP = "6003115";
                   },
                   {
                     NewsHub: function() {
-                      return "/(newshub|events)";
+                      return "/(news|newshub|events)";
                     },
                     NewsHubApp: function(e, t) {
-                      return "/(newshub|events)/app/" + e + "/" + t;
+                      return "/(news|newshub|events)/app/" + e + "/" + t;
                     },
                     NewsHubGroup: function(e, t) {
-                      return "/(newshub|events)/group/" + e + "/" + t;
+                      return "/(news|newshub|events)/group/" + e + "/" + t;
                     },
                     NewsHubCollection: function(e, t) {
-                      return "/(newshub|events)/collection/" + e + "/" + t;
+                      return "/(news|newshub|events)/collection/" + e + "/" + t;
                     },
                     EventViewByApp: function(e, t, n) {
                       return (
-                        "/(newshub|events)/app/" +
+                        "/(news|newshub|events)/app/" +
                         e +
                         "/:viewtype(view|inline)/" +
                         t +
@@ -140,7 +140,7 @@ var CLSTAMP = "6003115";
                     },
                     EventViewByGroup: function(e, t, n) {
                       return (
-                        "/(newshub|events)/group/" +
+                        "/(news|newshub|events)/group/" +
                         e +
                         "/:viewtype(view|inline)/" +
                         t +
@@ -150,7 +150,7 @@ var CLSTAMP = "6003115";
                     },
                     OldAnnouncementViewByApp: function(e, t, n) {
                       return (
-                        "/(newshub|events)/app/" +
+                        "/(news|newshub|events)/app/" +
                         e +
                         "/:viewtype(old_view|old_inline)/" +
                         t +
@@ -160,7 +160,7 @@ var CLSTAMP = "6003115";
                     },
                     OldAnnouncementViewByGroup: function(e, t, n) {
                       return (
-                        "/(newshub|events)/group/" +
+                        "/(news|newshub|events)/group/" +
                         e +
                         "/:viewtype(old_view|old_inline)/" +
                         t +
@@ -264,20 +264,46 @@ var CLSTAMP = "6003115";
     "5izx": function(e, t, n) {
       "use strict";
       n.d(t, "a", function() {
-        return c;
+        return l;
       });
       var r = n("wd/R"),
         i = n.n(r),
         o = n("s4NR"),
         s = n.n(o),
-        a = n("lkRc"),
-        c = new ((function() {
+        a = n("Jnrd"),
+        c = n("lkRc"),
+        l = new ((function() {
           function e() {
             (this.bOpenEventLandingPage = !1),
               (this.bIncludeFeaturedAsGameSource = !0),
               (this.nOverrideDateNow = void 0);
           }
           return (
+            Object.defineProperty(e.prototype, "bAllowGroupingBySource", {
+              get: function() {
+                return "dev" == c.c.WEB_UNIVERSE || "beta" == c.c.WEB_UNIVERSE;
+              },
+              enumerable: !1,
+              configurable: !0
+            }),
+            Object.defineProperty(e.prototype, "bUseSlashNews", {
+              get: function() {
+                return (
+                  "dev" == c.c.WEB_UNIVERSE ||
+                  "beta" == c.c.WEB_UNIVERSE ||
+                  "true" == Object(a.b)("preferNewsHub")
+                );
+              },
+              enumerable: !1,
+              configurable: !0
+            }),
+            Object.defineProperty(e.prototype, "bIncludeCurators", {
+              get: function() {
+                return this.bUseSlashNews;
+              },
+              enumerable: !1,
+              configurable: !0
+            }),
             (e.prototype.GetTimeNowWithOverride = function() {
               return this.nOverrideDateNow
                 ? this.nOverrideDateNow
@@ -297,7 +323,7 @@ var CLSTAMP = "6003115";
                 0 != e.length &&
                 ("string" !=
                   typeof (t = s.a.parse("?" == e[0] ? e.substring(1) : e)).t ||
-                  ("dev" != a.c.WEB_UNIVERSE && "beta" != a.c.WEB_UNIVERSE) ||
+                  ("dev" != c.c.WEB_UNIVERSE && "beta" != c.c.WEB_UNIVERSE) ||
                   ((n = /^\d+$/.test(t.t)
                     ? i.a.unix(Number.parseInt(t.t))
                     : i()(t.t)),
@@ -312,14 +338,14 @@ var CLSTAMP = "6003115";
             e
           );
         })())();
-      window.g_EventCalendarDevFeatures = c;
+      window.g_EventCalendarDevFeatures = l;
     },
     "6TF7": function(e, t, n) {
       e.exports = { App: "app_App_2uHYt" };
     },
     "6Y59": function(e, t, n) {
       "use strict";
-      n.d(t, "N", function() {
+      n.d(t, "O", function() {
         return c;
       }),
         n.d(t, "s", function() {
@@ -334,22 +360,22 @@ var CLSTAMP = "6003115";
         n.d(t, "t", function() {
           return d;
         }),
-        n.d(t, "Q", function() {
+        n.d(t, "R", function() {
           return m;
         }),
-        n.d(t, "Z", function() {
+        n.d(t, "ab", function() {
           return h;
         }),
-        n.d(t, "X", function() {
+        n.d(t, "Y", function() {
           return f;
         }),
         n.d(t, "F", function() {
           return g;
         }),
-        n.d(t, "Y", function() {
+        n.d(t, "Z", function() {
           return _;
         }),
-        n.d(t, "V", function() {
+        n.d(t, "W", function() {
           return v;
         }),
         n.d(t, "I", function() {
@@ -367,7 +393,7 @@ var CLSTAMP = "6003115";
         n.d(t, "y", function() {
           return F;
         }),
-        n.d(t, "R", function() {
+        n.d(t, "S", function() {
           return C;
         }),
         n.d(t, "d", function() {
@@ -385,7 +411,7 @@ var CLSTAMP = "6003115";
         n.d(t, "D", function() {
           return B;
         }),
-        n.d(t, "J", function() {
+        n.d(t, "K", function() {
           return j;
         }),
         n.d(t, "v", function() {
@@ -397,22 +423,22 @@ var CLSTAMP = "6003115";
         n.d(t, "C", function() {
           return x;
         }),
-        n.d(t, "P", function() {
-          return L;
-        }),
-        n.d(t, "W", function() {
+        n.d(t, "Q", function() {
           return I;
+        }),
+        n.d(t, "X", function() {
+          return L;
         }),
         n.d(t, "g", function() {
           return A;
         }),
-        n.d(t, "O", function() {
+        n.d(t, "P", function() {
           return N;
         }),
-        n.d(t, "L", function() {
+        n.d(t, "M", function() {
           return T;
         }),
-        n.d(t, "M", function() {
+        n.d(t, "N", function() {
           return P;
         }),
         n.d(t, "e", function() {
@@ -421,7 +447,7 @@ var CLSTAMP = "6003115";
         n.d(t, "E", function() {
           return U;
         }),
-        n.d(t, "U", function() {
+        n.d(t, "V", function() {
           return G;
         }),
         n.d(t, "x", function() {
@@ -448,7 +474,7 @@ var CLSTAMP = "6003115";
         n.d(t, "n", function() {
           return Z;
         }),
-        n.d(t, "S", function() {
+        n.d(t, "T", function() {
           return J;
         }),
         n.d(t, "j", function() {
@@ -466,14 +492,17 @@ var CLSTAMP = "6003115";
         n.d(t, "c", function() {
           return ne;
         }),
-        n.d(t, "T", function() {
+        n.d(t, "U", function() {
           return re;
         }),
-        n.d(t, "K", function() {
+        n.d(t, "L", function() {
           return ie;
         }),
         n.d(t, "z", function() {
           return oe;
+        }),
+        n.d(t, "J", function() {
+          return se;
         });
       var r = n("mrSG"),
         i = n("q1tI"),
@@ -1579,7 +1608,7 @@ var CLSTAMP = "6003115";
           })
         );
       }
-      function L(e) {
+      function I(e) {
         var t = Object(a.a)(
           "SVGIcon_Button",
           "SVGIcon_SteamLogo",
@@ -1613,7 +1642,7 @@ var CLSTAMP = "6003115";
           })
         );
       }
-      function I() {
+      function L() {
         return i.createElement(
           "svg",
           {
@@ -2650,6 +2679,39 @@ var CLSTAMP = "6003115";
                 stopOpacity: "0"
               })
             )
+          )
+        );
+      }
+      function se() {
+        return i.createElement(
+          "svg",
+          {
+            height: "100px",
+            width: "100px",
+            fill: "#000000",
+            x: "0px",
+            y: "0px",
+            viewBox: "0 0 101 101",
+            enableBackground: "new 0 0 101 101",
+            xmlns: "http://www.w3.org/2000/svg",
+            version: "1.1"
+          },
+          i.createElement(
+            "g",
+            null,
+            i.createElement("path", {
+              d:
+                "M16.929,30.115 M84.446,84.262c0-37.271-30.323-67.613-67.587-67.613l0,0l0.069,13.467   c29.777,0.039,53.995,24.256,54.051,54.042L84.446,84.262z"
+            }),
+            i.createElement("path", {
+              d:
+                "M16.843,53.089 M61.472,84.262c0-24.616-20.026-44.639-44.628-44.639l0,0v13.466c17.182,0,31.161,13.984,31.161,31.173   H61.472z"
+            }),
+            i.createElement("circle", {
+              cx: "26.695",
+              cy: "74.305",
+              r: "9.812"
+            })
           )
         );
       }
@@ -4855,7 +4917,7 @@ var CLSTAMP = "6003115";
                   u.createElement(
                     "div",
                     { className: "closeButton", onClick: t.onEscKeypress },
-                    u.createElement(s.Z, null)
+                    u.createElement(s.ab, null)
                   )
                 ),
               u.createElement(o.a, null, t.children)
@@ -6011,6 +6073,24 @@ var CLSTAMP = "6003115";
             (r.prototype.set_can_post = function(e) {
               o.Message.setField(this, 15, e);
             }),
+            (r.prototype.comment_thread_type = function() {
+              return o.Message.getField(this, 16);
+            }),
+            (r.prototype.set_comment_thread_type = function(e) {
+              o.Message.setField(this, 16, e);
+            }),
+            (r.prototype.gidfeature = function() {
+              return o.Message.getField(this, 17);
+            }),
+            (r.prototype.set_gidfeature = function(e) {
+              o.Message.setField(this, 17, e);
+            }),
+            (r.prototype.gidfeature2 = function() {
+              return o.Message.getField(this, 18);
+            }),
+            (r.prototype.set_gidfeature2 = function(e) {
+              o.Message.setField(this, 18, e);
+            }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -6034,7 +6114,10 @@ var CLSTAMP = "6003115";
                 answer_commentid: o.Message.getField(t, 12),
                 answer_actor: o.Message.getField(t, 13),
                 answer_actor_rank: o.Message.getField(t, 14),
-                can_post: o.Message.getField(t, 15)
+                can_post: o.Message.getField(t, 15),
+                comment_thread_type: o.Message.getField(t, 16),
+                gidfeature: o.Message.getField(t, 17),
+                gidfeature2: o.Message.getField(t, 18)
               };
               return e && (n.$jspbMessageInstance = t), n;
             }),
@@ -6069,6 +6152,9 @@ var CLSTAMP = "6003115";
                 t.set_answer_actor(e.answer_actor),
                 t.set_answer_actor_rank(e.answer_actor_rank),
                 t.set_can_post(e.can_post),
+                t.set_comment_thread_type(e.comment_thread_type),
+                t.set_gidfeature(e.gidfeature),
+                t.set_gidfeature2(e.gidfeature2),
                 t
               );
             }),
@@ -6129,6 +6215,15 @@ var CLSTAMP = "6003115";
                   case 15:
                     e.set_can_post(t.readBool());
                     break;
+                  case 16:
+                    e.set_comment_thread_type(t.readUint32());
+                    break;
+                  case 17:
+                    e.set_gidfeature(t.readFixed64String());
+                    break;
+                  case 18:
+                    e.set_gidfeature2(t.readFixed64String());
+                    break;
                   default:
                     t.skipField();
                 }
@@ -6166,7 +6261,13 @@ var CLSTAMP = "6003115";
                 void 0 !== (n = o.Message.getField(e, 14)) &&
                   t.writeInt32(14, n),
                 void 0 !== (n = o.Message.getField(e, 15)) &&
-                  t.writeBool(15, n);
+                  t.writeBool(15, n),
+                void 0 !== (n = o.Message.getField(e, 16)) &&
+                  t.writeUint32(16, n),
+                void 0 !== (n = o.Message.getField(e, 17)) &&
+                  t.writeFixed64String(17, n),
+                void 0 !== (n = o.Message.getField(e, 18)) &&
+                  t.writeFixed64String(18, n);
             }),
             (r.prototype.getClassName = function() {
               return "CCommunity_GetCommentThread_Response";
@@ -7545,7 +7646,7 @@ var CLSTAMP = "6003115";
             r
           );
         })(o.Message)),
-        L = (o.Message,
+        I = (o.Message,
         (function(n) {
           function r(e) {
             void 0 === e && (e = null);
@@ -7587,7 +7688,7 @@ var CLSTAMP = "6003115";
             r
           );
         })(o.Message)),
-        I = (o.Message,
+        L = (o.Message,
         (function(n) {
           function r(e) {
             void 0 === e && (e = null);
@@ -8103,12 +8204,12 @@ var CLSTAMP = "6003115";
           });
         }),
         (a.PartnerEventsShowMoreForApp = function(e, t) {
-          return e.SendMsg("Community.PartnerEventsShowMoreForApp#1", t, L, {
+          return e.SendMsg("Community.PartnerEventsShowMoreForApp#1", t, I, {
             ePrivilege: 1
           });
         }),
         (a.PartnerEventsShowLessForApp = function(e, t) {
-          return e.SendMsg("Community.PartnerEventsShowLessForApp#1", t, I, {
+          return e.SendMsg("Community.PartnerEventsShowLessForApp#1", t, L, {
             ePrivilege: 1
           });
         }),
@@ -8179,10 +8280,10 @@ var CLSTAMP = "6003115";
           return j;
         }),
         n.d(t, "j", function() {
-          return L;
+          return I;
         }),
         n.d(t, "g", function() {
-          return I.a;
+          return L.a;
         });
       function r(e) {
         var t = e.value,
@@ -8564,7 +8665,7 @@ var CLSTAMP = "6003115";
       }
       var D = n("hJxo"),
         x = n("r64O"),
-        L = (function(n) {
+        I = (function(n) {
           function e(e) {
             var t = n.call(this, e) || this;
             return (
@@ -8771,7 +8872,7 @@ var CLSTAMP = "6003115";
                         className: "DialogInput_ClearAction",
                         onClick: this.OnClearClick
                       },
-                      f.createElement(g.Z, null)
+                      f.createElement(g.ab, null)
                     )
                 ),
                 d
@@ -8858,7 +8959,7 @@ var CLSTAMP = "6003115";
             e
           );
         })(f.PureComponent),
-        I = (f.Component, n("ZApo")),
+        L = (f.Component, n("ZApo")),
         A = n("2vnA"),
         N = n("sUmc"),
         T = n("Kw0F"),
@@ -11061,17 +11162,20 @@ var CLSTAMP = "6003115";
       n.d(t, "d", function() {
         return s;
       }),
-        n.d(t, "k", function() {
+        n.d(t, "l", function() {
           return a;
         }),
-        n.d(t, "b", function() {
+        n.d(t, "j", function() {
           return c;
         }),
-        n.d(t, "a", function() {
+        n.d(t, "b", function() {
           return p;
         }),
-        n.d(t, "c", function() {
+        n.d(t, "a", function() {
           return d;
+        }),
+        n.d(t, "c", function() {
+          return m;
         });
       var l = n("mrSG"),
         u = n("q1tI"),
@@ -11081,9 +11185,10 @@ var CLSTAMP = "6003115";
       function s(e) {
         for (var r = [], t = 1; t < arguments.length; t++)
           r[t - 1] = arguments[t];
-        var n = d.LocalizeString(e);
-        return n
-          ? (0 < r.length &&
+        var n = m.LocalizeString(e);
+        return void 0 === n
+          ? e
+          : (0 < r.length &&
               (n = n.replace(/%(?:(\d+)\$)?s/g, function(e, t) {
                 if (t <= r.length && 1 <= t) {
                   var n = r[t - 1];
@@ -11091,14 +11196,13 @@ var CLSTAMP = "6003115";
                 }
                 return e;
               })),
-            n)
-          : e;
+            n);
       }
       function a(e) {
         for (var t = [], n = 1; n < arguments.length; n++)
           t[n - 1] = arguments[n];
-        var r = d.LocalizeString(e);
-        if (!r) return e;
+        var r = m.LocalizeString(e);
+        if (void 0 === r) return e;
         for (var i, o = [], s = /(.*?)%(\d+)\$s/g, a = 0; (i = s.exec(r)); ) {
           (a += i[0].length), o.push(i[1]);
           var c = parseInt(i[2]);
@@ -11107,6 +11211,16 @@ var CLSTAMP = "6003115";
         return (
           o.push(r.substr(a)),
           u.createElement.apply(u, Object(l.g)([u.Fragment, null], o))
+        );
+      }
+      function c(e, t) {
+        for (var n = [], r = 2; r < arguments.length; r++)
+          n[r - 2] = arguments[r];
+        return s.apply(
+          void 0,
+          1 === t || "1" === t
+            ? Object(l.g)([e, t], n)
+            : Object(l.g)([e + "_Plural", t], n)
         );
       }
       n.d(t, "e", function() {
@@ -11121,22 +11235,22 @@ var CLSTAMP = "6003115";
         n.d(t, "i", function() {
           return o.e;
         }),
-        n.d(t, "j", function() {
+        n.d(t, "k", function() {
           return o.f;
         }),
-        n.d(t, "l", function() {
+        n.d(t, "m", function() {
           return o.h;
         }),
-        n.d(t, "m", function() {
+        n.d(t, "n", function() {
           return o.i;
         }),
-        n.d(t, "n", function() {
+        n.d(t, "o", function() {
           return o.j;
         }),
         n.d(t, "g", function() {
           return o.c;
         });
-      var c = {
+      var p = {
         english: "en",
         german: "de",
         french: "fr",
@@ -11167,11 +11281,11 @@ var CLSTAMP = "6003115";
         ukrainian: "uk",
         vietnamese: "vn"
       };
-      function p() {
+      function d() {
         var e = "koreana" == i.c.LANGUAGE ? "korean" : i.c.LANGUAGE;
-        return c[e] || null;
+        return p[e] || null;
       }
-      var d = new ((function() {
+      var m = new ((function() {
         function e() {
           (this.m_mapTokens = new Map()),
             (this.m_mapFallbackTokens = new Map());
@@ -11206,13 +11320,18 @@ var CLSTAMP = "6003115";
               ? navigator.languages
               : ["en-US"];
           }),
-          (e.prototype.GetELanguageFallbackOrder = function() {
+          (e.prototype.GetELanguageFallbackOrder = function(e) {
+            void 0 === e && (e = !1);
             var t = new Array();
             return (
               t.push(Object(r.f)(i.c.LANGUAGE)),
               (i.c.SUPPORTED_LANGUAGES || []).forEach(function(e) {
                 e.value != i.c.LANGUAGE && t.push(Object(r.f)(e.value));
               }),
+              e &&
+                r.g.forEach(function(e) {
+                  -1 == t.indexOf(e) && t.push(e);
+                }),
               t
             );
           }),
@@ -11220,19 +11339,21 @@ var CLSTAMP = "6003115";
             this.m_rgLocalesToUse = e;
           }),
           (e.prototype.LocalizeString = function(e) {
-            if ((0, !e || 0 == e.length || "#" != e.charAt(0))) return "";
-            var t = this.m_mapTokens.get(e.substring(1));
-            return void 0 === t ? "" : t;
+            if ((0, e && 0 != e.length && "#" == e.charAt(0))) {
+              var t = this.m_mapTokens.get(e.substring(1));
+              if (void 0 !== t) return t;
+            }
           }),
           (e.prototype.LocalizeStringFromFallback = function(e) {
-            if (!e || 0 == e.length || "#" != e.charAt(0)) return "";
-            var t = this.m_mapFallbackTokens.get(e.substring(1));
-            return void 0 === t ? "" : t;
+            if (e && 0 != e.length && "#" == e.charAt(0)) {
+              var t = this.m_mapFallbackTokens.get(e.substring(1));
+              if (void 0 !== t) return t;
+            }
           }),
           e
         );
       })())();
-      window.LocalizationManager = d;
+      window.LocalizationManager = m;
     },
     TtDX: function(e, t, n) {
       "use strict";
@@ -11520,7 +11641,7 @@ var CLSTAMP = "6003115";
       function V() {
         return { x: 0, y: 0 };
       }
-      function L(e, t) {
+      function I(e, t) {
         return e.x * t.x + e.y * t.y;
       }
       function q(e, t) {
@@ -11538,7 +11659,7 @@ var CLSTAMP = "6003115";
       function X(e, t) {
         return !(e.max < t.min || t.max < e.min);
       }
-      var I = n("Kw0F"),
+      var L = n("Kw0F"),
         Z = n("X3Ds"),
         s = "Focusable",
         a = "FocusGroup",
@@ -12012,7 +12133,7 @@ var CLSTAMP = "6003115";
             }
             var M,
               w = x.sm_navAreaStack,
-              F = Object(I.d)(w, function(e) {
+              F = Object(L.d)(w, function(e) {
                 return null !== e.m_focusPos;
               });
             if (F) {
@@ -12027,7 +12148,7 @@ var CLSTAMP = "6003115";
               ) {
                 var B,
                   j = ee((B = k[S])),
-                  R = ((M = q(C, j)), Math.sqrt(L(M, M)));
+                  R = ((M = q(C, j)), Math.sqrt(I(M, M)));
                 R < O && ((O = R), (E = B));
               }
               if (E) return { htmlElement: E, pos: ee(E) };
@@ -12108,10 +12229,10 @@ var CLSTAMP = "6003115";
                       D = p * (j[u][v] - R);
                     if (D < 0) continue;
                     var x = g[_],
-                      L = j[_].min,
-                      I = j[_].max,
-                      A = x < L ? x - L : I < x ? x - I : 0;
-                    if (t) if (!X(b, { min: L, max: I })) continue;
+                      I = j[_].min,
+                      L = j[_].max,
+                      A = x < I ? x - I : L < x ? x - L : 0;
+                    if (t) if (!X(b, { min: I, max: L })) continue;
                     var N = { x: 0, y: 0 };
                     (N[u] = j[u][v]), (N[_] = x + A);
                     var T = q(g, N),
@@ -12398,7 +12519,7 @@ var CLSTAMP = "6003115";
                   this.HandleFocusControllerOnBlur
                 );
             }
-            (x.sm_navAreaStack = Object(I.a)(x.sm_navAreaStack, this)),
+            (x.sm_navAreaStack = Object(L.a)(x.sm_navAreaStack, this)),
               this.m_navAreaDivRef.current.setAttribute(
                 "data-nav-area-active",
                 "true"
@@ -12417,7 +12538,7 @@ var CLSTAMP = "6003115";
                 "data-nav-area-active",
                 "false"
               ),
-              (x.sm_navAreaStack = Object(I.a)(x.sm_navAreaStack, this)),
+              (x.sm_navAreaStack = Object(L.a)(x.sm_navAreaStack, this)),
               0 === x.sm_navAreaStack.length)
             ) {
               if (!this.m_navAreaDivRef.current) return;
@@ -13992,7 +14113,7 @@ var CLSTAMP = "6003115";
             path: m.b.EventGameFestivalDebug(),
             render: function(e) {
               return a.a.createElement(
-                L,
+                I,
                 Object(l.a)({}, e, {
                   clanAccountID: e.match.params.clanacountid,
                   clanEventGID: e.match.params.claneventgid
@@ -14024,8 +14145,8 @@ var CLSTAMP = "6003115";
         R = O("EventCalendar"),
         D = O("EventDetailView"),
         x = O("Events"),
-        L = O("EventSteamGameFestivalDebug"),
-        I = c("Hny+"),
+        I = O("EventSteamGameFestivalDebug"),
+        L = c("Hny+"),
         A = (a.a.lazy(function() {
           return c.e(96).then(c.bind(null, "jHcm"));
         }),
@@ -14323,7 +14444,7 @@ var CLSTAMP = "6003115";
                           exact: !0,
                           path: m.b.LabsSandbox(),
                           render: function(e) {
-                            return a.a.createElement(I.default, null);
+                            return a.a.createElement(L.default, null);
                           }
                         }),
                         a.a.createElement(v.b, {
@@ -15745,7 +15866,7 @@ var CLSTAMP = "6003115";
           }
           return (
             (i.InitFromAccountID = function(e) {
-              return new i(Number(e), a.c.EUNIVERSE, 1, o.h);
+              return new i(Number(e), a.c.EUNIVERSE, 1, o.i);
             }),
             (i.InitFromClanID = function(e) {
               return new i(Number(e), a.c.EUNIVERSE, 7, 0);
@@ -15819,7 +15940,7 @@ var CLSTAMP = "6003115";
               var t = this.GetUniverse();
               if (t <= 0 || 5 <= t) return !1;
               if (1 == e) {
-                if (0 == this.GetAccountID() || this.GetInstance() > o.i)
+                if (0 == this.GetAccountID() || this.GetInstance() > o.j)
                   return !1;
               } else if (7 == e) {
                 if (0 == this.GetAccountID() || 0 != this.GetInstance())
@@ -16341,31 +16462,65 @@ var CLSTAMP = "6003115";
         n.d(t, "a", function() {
           return i;
         }),
-        n.d(t, "h", function() {
+        n.d(t, "i", function() {
           return o;
         }),
-        n.d(t, "i", function() {
+        n.d(t, "j", function() {
           return s;
         }),
-        n.d(t, "g", function() {
+        n.d(t, "h", function() {
           return a;
         }),
-        n.d(t, "e", function() {
+        n.d(t, "g", function() {
           return c;
         }),
-        n.d(t, "d", function() {
+        n.d(t, "e", function() {
           return l;
         }),
-        n.d(t, "f", function() {
+        n.d(t, "d", function() {
           return u;
         }),
-        n.d(t, "c", function() {
+        n.d(t, "f", function() {
           return p;
+        }),
+        n.d(t, "c", function() {
+          return d;
         });
       var o = 1,
         s = 4,
-        a = "18446744073709551615";
-      function c(e, t) {
+        a = "18446744073709551615",
+        c = [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28
+        ];
+      function l(e, t) {
         switch ((void 0 === t && (t = "en"), e)) {
           case 0:
             return "en";
@@ -16429,7 +16584,7 @@ var CLSTAMP = "6003115";
             return t;
         }
       }
-      function l(e, t) {
+      function u(e, t) {
         switch ((void 0 === t && (t = ""), e)) {
           case 0:
             return "english";
@@ -16493,7 +16648,7 @@ var CLSTAMP = "6003115";
             return t;
         }
       }
-      function u(e, t) {
+      function p(e, t) {
         switch ((void 0 === t && (t = 0), e)) {
           case "english":
             return 0;
@@ -16558,7 +16713,7 @@ var CLSTAMP = "6003115";
             return t;
         }
       }
-      var p = [
+      var d = [
         1,
         2,
         3,

@@ -1694,6 +1694,24 @@
             (r.prototype.set_can_post = function(e) {
               o.Message.setField(this, 15, e);
             }),
+            (r.prototype.comment_thread_type = function() {
+              return o.Message.getField(this, 16);
+            }),
+            (r.prototype.set_comment_thread_type = function(e) {
+              o.Message.setField(this, 16, e);
+            }),
+            (r.prototype.gidfeature = function() {
+              return o.Message.getField(this, 17);
+            }),
+            (r.prototype.set_gidfeature = function(e) {
+              o.Message.setField(this, 17, e);
+            }),
+            (r.prototype.gidfeature2 = function() {
+              return o.Message.getField(this, 18);
+            }),
+            (r.prototype.set_gidfeature2 = function(e) {
+              o.Message.setField(this, 18, e);
+            }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -1717,7 +1735,10 @@
                 answer_commentid: o.Message.getField(t, 12),
                 answer_actor: o.Message.getField(t, 13),
                 answer_actor_rank: o.Message.getField(t, 14),
-                can_post: o.Message.getField(t, 15)
+                can_post: o.Message.getField(t, 15),
+                comment_thread_type: o.Message.getField(t, 16),
+                gidfeature: o.Message.getField(t, 17),
+                gidfeature2: o.Message.getField(t, 18)
               };
               return e && (i.$jspbMessageInstance = t), i;
             }),
@@ -1752,6 +1773,9 @@
                 t.set_answer_actor(e.answer_actor),
                 t.set_answer_actor_rank(e.answer_actor_rank),
                 t.set_can_post(e.can_post),
+                t.set_comment_thread_type(e.comment_thread_type),
+                t.set_gidfeature(e.gidfeature),
+                t.set_gidfeature2(e.gidfeature2),
                 t
               );
             }),
@@ -1812,6 +1836,15 @@
                   case 15:
                     e.set_can_post(t.readBool());
                     break;
+                  case 16:
+                    e.set_comment_thread_type(t.readUint32());
+                    break;
+                  case 17:
+                    e.set_gidfeature(t.readFixed64String());
+                    break;
+                  case 18:
+                    e.set_gidfeature2(t.readFixed64String());
+                    break;
                   default:
                     t.skipField();
                 }
@@ -1849,7 +1882,13 @@
                 void 0 !== (i = o.Message.getField(e, 14)) &&
                   t.writeInt32(14, i),
                 void 0 !== (i = o.Message.getField(e, 15)) &&
-                  t.writeBool(15, i);
+                  t.writeBool(15, i),
+                void 0 !== (i = o.Message.getField(e, 16)) &&
+                  t.writeUint32(16, i),
+                void 0 !== (i = o.Message.getField(e, 17)) &&
+                  t.writeFixed64String(17, i),
+                void 0 !== (i = o.Message.getField(e, 18)) &&
+                  t.writeFixed64String(18, i);
             }),
             (r.prototype.getClassName = function() {
               return "CCommunity_GetCommentThread_Response";
@@ -4443,7 +4482,7 @@
                       e.sent(),
                         (i = d.a.Init(h.b))
                           .Body()
-                          .set_language(Object(u.c)(p.b.LANGUAGE)),
+                          .set_language(Object(u.d)(p.b.LANGUAGE)),
                         (r = 50),
                         (e.label = 3);
                     case 3:

@@ -43,8 +43,8 @@
                 n.a.createElement(
                   "div",
                   { className: d.a.Throbber },
-                  n.a.createElement(s.E, { className: d.a.base }),
-                  n.a.createElement(s.E, { className: d.a.blur })
+                  n.a.createElement(s.F, { className: d.a.base }),
+                  n.a.createElement(s.F, { className: d.a.blur })
                 )
               );
               return n.a.createElement(

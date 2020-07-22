@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "5997277";
+var CLSTAMP = "6007218";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [91],
   {
@@ -70,20 +70,46 @@ var CLSTAMP = "5997277";
     "5izx": function(e, t, n) {
       "use strict";
       n.d(t, "a", function() {
-        return c;
+        return l;
       });
       var r = n("wd/R"),
         i = n.n(r),
         o = n("s4NR"),
         s = n.n(o),
-        a = n("lkRc"),
-        c = new ((function() {
+        a = n("Jnrd"),
+        c = n("lkRc"),
+        l = new ((function() {
           function e() {
             (this.bOpenEventLandingPage = !1),
               (this.bIncludeFeaturedAsGameSource = !0),
               (this.nOverrideDateNow = void 0);
           }
           return (
+            Object.defineProperty(e.prototype, "bAllowGroupingBySource", {
+              get: function() {
+                return "dev" == c.b.WEB_UNIVERSE || "beta" == c.b.WEB_UNIVERSE;
+              },
+              enumerable: !1,
+              configurable: !0
+            }),
+            Object.defineProperty(e.prototype, "bUseSlashNews", {
+              get: function() {
+                return (
+                  "dev" == c.b.WEB_UNIVERSE ||
+                  "beta" == c.b.WEB_UNIVERSE ||
+                  "true" == Object(a.b)("preferNewsHub")
+                );
+              },
+              enumerable: !1,
+              configurable: !0
+            }),
+            Object.defineProperty(e.prototype, "bIncludeCurators", {
+              get: function() {
+                return this.bUseSlashNews;
+              },
+              enumerable: !1,
+              configurable: !0
+            }),
             (e.prototype.GetTimeNowWithOverride = function() {
               return this.nOverrideDateNow
                 ? this.nOverrideDateNow
@@ -103,7 +129,7 @@ var CLSTAMP = "5997277";
                 0 != e.length &&
                 ("string" !=
                   typeof (t = s.a.parse("?" == e[0] ? e.substring(1) : e)).t ||
-                  ("dev" != a.b.WEB_UNIVERSE && "beta" != a.b.WEB_UNIVERSE) ||
+                  ("dev" != c.b.WEB_UNIVERSE && "beta" != c.b.WEB_UNIVERSE) ||
                   ((n = /^\d+$/.test(t.t)
                     ? i.a.unix(Number.parseInt(t.t))
                     : i()(t.t)),
@@ -118,11 +144,11 @@ var CLSTAMP = "5997277";
             e
           );
         })())();
-      window.g_EventCalendarDevFeatures = c;
+      window.g_EventCalendarDevFeatures = l;
     },
     "6Y59": function(e, t, n) {
       "use strict";
-      n.d(t, "B", function() {
+      n.d(t, "C", function() {
         return c;
       }),
         n.d(t, "j", function() {
@@ -134,19 +160,19 @@ var CLSTAMP = "5997277";
         n.d(t, "k", function() {
           return p;
         }),
-        n.d(t, "D", function() {
+        n.d(t, "E", function() {
           return d;
         }),
-        n.d(t, "J", function() {
+        n.d(t, "K", function() {
           return m;
         }),
-        n.d(t, "H", function() {
+        n.d(t, "I", function() {
           return h;
         }),
         n.d(t, "v", function() {
           return f;
         }),
-        n.d(t, "I", function() {
+        n.d(t, "J", function() {
           return g;
         }),
         n.d(t, "x", function() {
@@ -164,7 +190,7 @@ var CLSTAMP = "5997277";
         n.d(t, "o", function() {
           return w;
         }),
-        n.d(t, "E", function() {
+        n.d(t, "F", function() {
           return M;
         }),
         n.d(t, "b", function() {
@@ -185,7 +211,7 @@ var CLSTAMP = "5997277";
         n.d(t, "t", function() {
           return F;
         }),
-        n.d(t, "y", function() {
+        n.d(t, "z", function() {
           return k;
         }),
         n.d(t, "m", function() {
@@ -194,16 +220,16 @@ var CLSTAMP = "5997277";
         n.d(t, "s", function() {
           return I;
         }),
-        n.d(t, "C", function() {
+        n.d(t, "D", function() {
           return j;
         }),
-        n.d(t, "G", function() {
+        n.d(t, "H", function() {
           return R;
         }),
-        n.d(t, "z", function() {
+        n.d(t, "A", function() {
           return B;
         }),
-        n.d(t, "A", function() {
+        n.d(t, "B", function() {
           return T;
         }),
         n.d(t, "c", function() {
@@ -212,7 +238,7 @@ var CLSTAMP = "5997277";
         n.d(t, "u", function() {
           return L;
         }),
-        n.d(t, "F", function() {
+        n.d(t, "G", function() {
           return A;
         }),
         n.d(t, "n", function() {
@@ -229,6 +255,9 @@ var CLSTAMP = "5997277";
         }),
         n.d(t, "p", function() {
           return H;
+        }),
+        n.d(t, "y", function() {
+          return z;
         });
       var r = n("mrSG"),
         i = n("q1tI"),
@@ -1817,6 +1846,39 @@ var CLSTAMP = "5997277";
           )
         );
       }
+      function z() {
+        return i.createElement(
+          "svg",
+          {
+            height: "100px",
+            width: "100px",
+            fill: "#000000",
+            x: "0px",
+            y: "0px",
+            viewBox: "0 0 101 101",
+            enableBackground: "new 0 0 101 101",
+            xmlns: "http://www.w3.org/2000/svg",
+            version: "1.1"
+          },
+          i.createElement(
+            "g",
+            null,
+            i.createElement("path", {
+              d:
+                "M16.929,30.115 M84.446,84.262c0-37.271-30.323-67.613-67.587-67.613l0,0l0.069,13.467   c29.777,0.039,53.995,24.256,54.051,54.042L84.446,84.262z"
+            }),
+            i.createElement("path", {
+              d:
+                "M16.843,53.089 M61.472,84.262c0-24.616-20.026-44.639-44.628-44.639l0,0v13.466c17.182,0,31.161,13.984,31.161,31.173   H61.472z"
+            }),
+            i.createElement("circle", {
+              cx: "26.695",
+              cy: "74.305",
+              r: "9.812"
+            })
+          )
+        );
+      }
     },
     AvbV: function(e, t, r) {
       var i = {
@@ -2758,7 +2820,7 @@ var CLSTAMP = "5997277";
                   u.createElement(
                     "div",
                     { className: "closeButton", onClick: t.onEscKeypress },
-                    u.createElement(s.J, null)
+                    u.createElement(s.K, null)
                   )
                 ),
               u.createElement(o.a, null, t.children)
@@ -3796,7 +3858,7 @@ var CLSTAMP = "5997277";
                         className: "DialogInput_ClearAction",
                         onClick: this.OnClearClick
                       },
-                      f.createElement(g.J, null)
+                      f.createElement(g.K, null)
                     )
                 ),
                 d
@@ -6763,8 +6825,9 @@ var CLSTAMP = "5997277";
         for (var r = [], t = 1; t < arguments.length; t++)
           r[t - 1] = arguments[t];
         var n = m.LocalizeString(e);
-        return n
-          ? (0 < r.length &&
+        return void 0 === n
+          ? e
+          : (0 < r.length &&
               (n = n.replace(/%(?:(\d+)\$)?s/g, function(e, t) {
                 if (t <= r.length && 1 <= t) {
                   var n = r[t - 1];
@@ -6772,14 +6835,13 @@ var CLSTAMP = "5997277";
                 }
                 return e;
               })),
-            n)
-          : e;
+            n);
       }
       function a(e) {
         for (var t = [], n = 1; n < arguments.length; n++)
           t[n - 1] = arguments[n];
         var r = m.LocalizeString(e);
-        if (!r) return e;
+        if (void 0 === r) return e;
         for (var i, o = [], s = /(.*?)%(\d+)\$s/g, a = 0; (i = s.exec(r)); ) {
           (a += i[0].length), o.push(i[1]);
           var c = parseInt(i[2]);
@@ -6894,13 +6956,18 @@ var CLSTAMP = "5997277";
               ? navigator.languages
               : ["en-US"];
           }),
-          (e.prototype.GetELanguageFallbackOrder = function() {
+          (e.prototype.GetELanguageFallbackOrder = function(e) {
+            void 0 === e && (e = !1);
             var t = new Array();
             return (
               t.push(Object(r.c)(i.b.LANGUAGE)),
               (i.b.SUPPORTED_LANGUAGES || []).forEach(function(e) {
                 e.value != i.b.LANGUAGE && t.push(Object(r.c)(e.value));
               }),
+              e &&
+                r.d.forEach(function(e) {
+                  -1 == t.indexOf(e) && t.push(e);
+                }),
               t
             );
           }),
@@ -6908,14 +6975,16 @@ var CLSTAMP = "5997277";
             this.m_rgLocalesToUse = e;
           }),
           (e.prototype.LocalizeString = function(e) {
-            if ((0, !e || 0 == e.length || "#" != e.charAt(0))) return "";
-            var t = this.m_mapTokens.get(e.substring(1));
-            return void 0 === t ? "" : t;
+            if ((0, e && 0 != e.length && "#" == e.charAt(0))) {
+              var t = this.m_mapTokens.get(e.substring(1));
+              if (void 0 !== t) return t;
+            }
           }),
           (e.prototype.LocalizeStringFromFallback = function(e) {
-            if (!e || 0 == e.length || "#" != e.charAt(0)) return "";
-            var t = this.m_mapFallbackTokens.get(e.substring(1));
-            return void 0 === t ? "" : t;
+            if (e && 0 != e.length && "#" == e.charAt(0)) {
+              var t = this.m_mapFallbackTokens.get(e.substring(1));
+              if (void 0 !== t) return t;
+            }
           }),
           e
         );
@@ -10832,7 +10901,7 @@ var CLSTAMP = "5997277";
           }
           return (
             (i.InitFromAccountID = function(e) {
-              return new i(Number(e), a.b.EUNIVERSE, 1, o.e);
+              return new i(Number(e), a.b.EUNIVERSE, 1, o.f);
             }),
             (i.InitFromClanID = function(e) {
               return new i(Number(e), a.b.EUNIVERSE, 7, 0);
@@ -10906,7 +10975,7 @@ var CLSTAMP = "5997277";
               var t = this.GetUniverse();
               if (t <= 0 || 5 <= t) return !1;
               if (1 == e) {
-                if (0 == this.GetAccountID() || this.GetInstance() > o.f)
+                if (0 == this.GetAccountID() || this.GetInstance() > o.g)
                   return !1;
               } else if (7 == e) {
                 if (0 == this.GetAccountID() || 0 != this.GetInstance())
@@ -10967,10 +11036,13 @@ var CLSTAMP = "5997277";
       }),
         n.d(t, "a", function() {
           return d;
+        }),
+        n.d(t, "c", function() {
+          return _;
         });
       n("mrSG");
       var r = n("mgoM");
-      n.d(t, "c", function() {
+      n.d(t, "d", function() {
         return r.c;
       });
       n("2vnA");
@@ -11367,28 +11439,62 @@ var CLSTAMP = "5997277";
     },
     mgoM: function(e, t, n) {
       "use strict";
-      n.d(t, "e", function() {
+      n.d(t, "f", function() {
         return r;
       }),
-        n.d(t, "f", function() {
+        n.d(t, "g", function() {
           return i;
         }),
-        n.d(t, "d", function() {
+        n.d(t, "e", function() {
           return o;
         }),
-        n.d(t, "b", function() {
+        n.d(t, "d", function() {
           return s;
         }),
-        n.d(t, "a", function() {
+        n.d(t, "b", function() {
           return a;
         }),
-        n.d(t, "c", function() {
+        n.d(t, "a", function() {
           return c;
+        }),
+        n.d(t, "c", function() {
+          return l;
         });
       var r = 1,
         i = 4,
-        o = "18446744073709551615";
-      function s(e, t) {
+        o = "18446744073709551615",
+        s = [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28
+        ];
+      function a(e, t) {
         switch ((void 0 === t && (t = "en"), e)) {
           case 0:
             return "en";
@@ -11452,7 +11558,7 @@ var CLSTAMP = "5997277";
             return t;
         }
       }
-      function a(e, t) {
+      function c(e, t) {
         switch ((void 0 === t && (t = ""), e)) {
           case 0:
             return "english";
@@ -11516,7 +11622,7 @@ var CLSTAMP = "5997277";
             return t;
         }
       }
-      function c(e, t) {
+      function l(e, t) {
         switch ((void 0 === t && (t = 0), e)) {
           case "english":
             return 0;

@@ -435,10 +435,10 @@ function CreateDateControl( target, id, initValue )
 }
 
 var templ_DiscountDiv = new Template( ''
-		+ '	<form id="packageDiscount#{DiscountId}Form" onsubmit="return false;">'
+		+ '	<form id="packageDiscount#{DiscountNumber}Form" onsubmit="return false;">'
 		+ '	<div class="boxlist_item" id="#{DiscountId}_discountDiv">'
 		+ '		<input type="hidden" id="#{DiscountId}_group" name="#{DiscountId}[group]" value="#{Group}">'
-		+ '		<div class="boxlist_title"><span>#{Name} (#{DiscountNumber})</span>'
+		+ '		<div class="boxlist_title"><span id="discountName#{DiscountNumber}">#{Name} (#{DiscountNumber})</span>'
 		+ '			<div class="boxlist_controls visible">'
 		+ '				<input style="float: right;" value="Delete Discount" type="submit" onclick="OnClickDeleteDiscount( #{PackageId}, \'#{DiscountId}\' ); return false;">'
 		+ '				<input style="float: right;" value="Hide Discount" type="submit" onclick="OnClickHideDiscount( \'#{DiscountId}\' ); return false;">'
@@ -585,13 +585,20 @@ function CreateDiscount( target, id, discount, packageid )
 	var discount_percent = (discount['discount_percent'] == null ) ? 0 : discount['discount_percent'];
 	var discount_quantity = (discount['quantity'] == null ) ? 1 : discount['quantity'];
 	var discount_number = (discount['discount_id'] == null) ? '' : discount['discount_id']; // the actual discountID used by the rack, not the HTML elementID
+	var master_discountid = (discount['master_discountid'] == null) ? 0 : discount['master_discountid'];
 
 	// Base Discounts
 	var strDiscountPrices = GetRequiredCurrencyBlock( id + '[discount]', g_RequiredCurrencies, amt['base'], true, false );
 
 	var discountBlock = templ_DiscountDiv.evaluate( { DiscountId: id, SessionId: g_sessionID, PackageId: packageid, Name: name, DiscountNumber: discount_number, Description: description, DiscountPercentage: discount_percent, DiscountQuantity: discount_quantity, DiscountPrices: strDiscountPrices, Group: group } );
 	target.insert( discountBlock );
-	
+
+	if ( master_discountid )
+	{
+		$J( '#packageDiscount'+ discount_number +'Form :input' ).prop('disabled',true);
+		$J( '#discountName' + discount_number ).append( ' - Managed by <a href="https://partner.steamgames.com/admin/masterdiscount/' + master_discountid + '">Master Discount ( ' + master_discountid + ' )</a>' );
+	}
+
 	// set up start & end dates
 	$startdateDiv = $( id + '_startdateDiv' );
 	$enddateDiv = $( id + '_enddateDiv' );

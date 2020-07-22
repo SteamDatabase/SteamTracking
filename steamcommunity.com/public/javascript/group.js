@@ -35,7 +35,9 @@ function InitGroupPage( strGroupBaseURL, strActiveTab, rgAJAXSupportedMethods )
 			else
 				group_url = this.href.substr( g_strGroupURL.length + 1 /* skip the # or / */ );
 
-			if ( !group_url || regexpSupported.match( group_url ) || group_url.match( /announcements\/?$/ ) )
+			// Tombstone: I remove the explicit inclusion of announcements from the if-statement, as we need to allow
+			// announcements to reload for those groups that use partner events.
+			if ( !group_url || regexpSupported.match( group_url ) )
 			{;
 				event.preventDefault();
 				OnGroupHashChange( group_url );

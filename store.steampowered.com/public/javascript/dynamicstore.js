@@ -159,7 +159,7 @@ GDynamicStore = {
 
 			var url = 'https://store.steampowered.com/dynamicstore/userdata/?id=' + accountid + '&cc=' + strCC;
 
-			var unUserdataVersion = WebStorage.GetLocal( 'unUserdataVersion', true );
+			var unUserdataVersion = WebStorage.GetLocal( 'unUserdataVersion' );
 			if ( unUserdataVersion )
 				url += '&v=' + parseInt( unUserdataVersion );
 
@@ -1159,7 +1159,7 @@ GDynamicStore = {
 
 	InvalidateCache: function()
 	{
-		WebStorage.SetLocal( 'unUserdataVersion', parseInt( WebStorage.GetLocal( 'unUserdataVersion', true ) || 0 ) + 1, true );
+		WebStorage.SetLocal( 'unUserdataVersion', parseInt( WebStorage.GetLocal( 'unUserdataVersion' ) || 0 ) + 1 );
 	},
 
 	BIsAppOwned: function( appid, bExcludeIfAutoGrant )
@@ -1328,11 +1328,6 @@ GDynamicStore = {
 		}
 
 		return false;
-	},
-
-	BIsPlaytesting: function( testid )
-	{
-		return GDynamicStore.s_rgPlaytestData.current_test == testid ? true: false;
 	},
 
 	DisplayBundleSimulator: function( unBundleID )

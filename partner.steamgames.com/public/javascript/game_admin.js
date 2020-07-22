@@ -188,7 +188,6 @@ function InitImageTypes( type )
 	[
 		{ name: 'Header Image', width: 460, height: 215, path: strHeaderPath + '|header|assets|' + strHeaderPath, localized: true, overrideable: true },
 		{ name: 'Small Capsule', width: 231, height: 87, path: 'small_capsule|capsule|assets|small_capsule|image', localized: true, overrideable: true },
-		{ name: 'Large Capsule', width: 467, height: 181, path: 'large_capsule|capsule_467x181|assets|large_capsule|image', localized: true, overrideable: true },
 		{ name: 'Main Capsule', width: 616, height: 353, path: 'main_capsule|capsule_616x353|assets|main_capsule|image', localized: true, overrideable: true },
 		{ name: 'Promo Capsule', width: 220, height: 180, path: 'promo_capsule|capsule_220x180|assets|promo_capsule|image', localized: true },
 		{ name: 'Hi Res Capsule', width: 940, height: 400, path: 'hi_res_capsule|capsule_940x400|assets|hi_res_capsule|image', localized: true },
@@ -908,6 +907,7 @@ function AddMovieForUpload( target, file )
 		 var cloudData = new FormData();
 		cloudData.append('appID', appid);
 		cloudData.append('itemID', itemid);
+		cloudData.append('file_size', file.size );
         cloudData.append('sessionid', g_sessionID);
 
         jQuery.ajax({

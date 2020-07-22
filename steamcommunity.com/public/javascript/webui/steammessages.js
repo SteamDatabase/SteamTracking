@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "5997277";
+var CLSTAMP = "6007218";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [2],
   {
@@ -792,6 +792,24 @@ var CLSTAMP = "5997277";
             (t.prototype.set_can_post = function(e) {
               s.Message.setField(this, 15, e);
             }),
+            (t.prototype.comment_thread_type = function() {
+              return s.Message.getField(this, 16);
+            }),
+            (t.prototype.set_comment_thread_type = function(e) {
+              s.Message.setField(this, 16, e);
+            }),
+            (t.prototype.gidfeature = function() {
+              return s.Message.getField(this, 17);
+            }),
+            (t.prototype.set_gidfeature = function(e) {
+              s.Message.setField(this, 17, e);
+            }),
+            (t.prototype.gidfeature2 = function() {
+              return s.Message.getField(this, 18);
+            }),
+            (t.prototype.set_gidfeature2 = function(e) {
+              s.Message.setField(this, 18, e);
+            }),
             (t.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
@@ -815,7 +833,10 @@ var CLSTAMP = "5997277";
                 answer_commentid: s.Message.getField(t, 12),
                 answer_actor: s.Message.getField(t, 13),
                 answer_actor_rank: s.Message.getField(t, 14),
-                can_post: s.Message.getField(t, 15)
+                can_post: s.Message.getField(t, 15),
+                comment_thread_type: s.Message.getField(t, 16),
+                gidfeature: s.Message.getField(t, 17),
+                gidfeature2: s.Message.getField(t, 18)
               };
               return e && (i.$jspbMessageInstance = t), i;
             }),
@@ -850,6 +871,9 @@ var CLSTAMP = "5997277";
                 i.set_answer_actor(e.answer_actor),
                 i.set_answer_actor_rank(e.answer_actor_rank),
                 i.set_can_post(e.can_post),
+                i.set_comment_thread_type(e.comment_thread_type),
+                i.set_gidfeature(e.gidfeature),
+                i.set_gidfeature2(e.gidfeature2),
                 i
               );
             }),
@@ -910,6 +934,15 @@ var CLSTAMP = "5997277";
                   case 15:
                     e.set_can_post(t.readBool());
                     break;
+                  case 16:
+                    e.set_comment_thread_type(t.readUint32());
+                    break;
+                  case 17:
+                    e.set_gidfeature(t.readFixed64String());
+                    break;
+                  case 18:
+                    e.set_gidfeature2(t.readFixed64String());
+                    break;
                   default:
                     t.skipField();
                 }
@@ -947,7 +980,13 @@ var CLSTAMP = "5997277";
                 void 0 !== (i = s.Message.getField(e, 14)) &&
                   t.writeInt32(14, i),
                 void 0 !== (i = s.Message.getField(e, 15)) &&
-                  t.writeBool(15, i);
+                  t.writeBool(15, i),
+                void 0 !== (i = s.Message.getField(e, 16)) &&
+                  t.writeUint32(16, i),
+                void 0 !== (i = s.Message.getField(e, 17)) &&
+                  t.writeFixed64String(17, i),
+                void 0 !== (i = s.Message.getField(e, 18)) &&
+                  t.writeFixed64String(18, i);
             }),
             (t.prototype.getClassName = function() {
               return "CCommunity_GetCommentThread_Response";

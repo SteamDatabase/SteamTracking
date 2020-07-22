@@ -36,6 +36,12 @@
                     "type": "string",
                     "optional": false,
                     "description": "The list of strings to be filtered."
+                },
+                {
+                    "name": "is_name",
+                    "type": "bool",
+                    "optional": false,
+                    "description": "True if the strings are names instead of chat text"
                 }
             ]
         }

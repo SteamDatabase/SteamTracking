@@ -598,7 +598,7 @@
                         v.createElement(
                           "div",
                           { className: O.ConfirmText },
-                          Object(R.k)(
+                          Object(R.l)(
                             "#GrantAward_Confirm",
                             v.createElement(Q, null, _.toLocaleString()),
                             v.createElement(
@@ -611,7 +611,7 @@
                         v.createElement(
                           "div",
                           { className: O.ConfirmText },
-                          Object(R.k)(
+                          Object(R.l)(
                             "#GrantAward_Confirm_Details",
                             v.createElement(Q, null, p.toLocaleString()),
                             v.createElement(

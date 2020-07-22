@@ -35,6 +35,7 @@ LocalizationReady("shared", "english", {
   Button_Ignored: "Ignored",
   Button_NotifyMe: "Notify Me",
   Button_NotInterested: "Not Interested",
+  Button_Preview: "Preview",
   Button_RateUp: "Rate Up",
   Button_ViewPage: "View Page",
   Button_Accept: "Accept",
@@ -126,12 +127,24 @@ LocalizationReady("shared", "english", {
   EventBrowse_RecentUpdates: "Recent Updates",
   EventBrowse_RecentEvents: "Recent Events & Announcements",
 
+  EventCurator_BrowseDialog_Title: "News from Steam curators",
+  EventCurator_BrowseDialog_Desc:
+    "Follow your favorite news sources to get gaming news right in your Steam News hub!",
+  EventCurator_BrowseDialog_LangCurator: "%1$s Steam curators",
+  EventCurator_NoEventsFound_Title: "No Postings Found",
+  EventCurator_NoEventsFound_Body: "No postings were found for this curator",
+  EventCurator_BrowseMore: "Show More",
+  EventCurator_FeedCaption_Long:
+    "Follow more news sources to get news right in your Steam News Hub!",
+
   EventCalendar_Title: "Steam%1$sNews Hub",
   EventCalendar_TabTitle_Global: "Steam News Hub",
   EventCalendar_TabTitle_GroupHub: "%1$s - Steam News Hub",
   EventCalendar_TabTitle_GroupNameAndEventDetail: "%1$s - %2$s - Steam News",
   EventCalendar_FilterSubSection_EventTypeGroups: "Show these types of posts",
   EventCalendar_FilterSubSection_GameSources: "Show posts from these sources",
+  EventCalendar_FilterSubSection_CuratorSources: "Show posts from curators",
+  EventCalendar_BrowseCurators: "Browse Curators",
   EventCalendar_EmptyCalendar:
     "No posts found. Try selecting different search criteria in the sidebar.",
   EventCalendar_DisabledFilter_LoginPrompt:
@@ -142,7 +155,13 @@ LocalizationReady("shared", "english", {
   EventCalendar_NoMoreFutureEvents: "No more upcoming events found",
   EventCalendar_NoMorePastEvents: "No more older posts found",
   EventCalendar_GameSearch: "Games Search",
+  EventCalendar_UniversalSearch: "Search",
   EventCalendar_GameSearch_NoneFound: "No Matches Found",
+  EventCalendar_SearchResultsHeader_GameSection: "Games",
+  EventCalendar_SearchResultsHeader_GameAndDLCSection: "Games and DLC",
+  EventCalendar_SearchResultsHeader_CuratorSection: "Curators",
+  EventCalendar_FollowingCurator: "following",
+
   EventCalendar_GlobalCalendar_Action: "Return to News Hub",
   EventCalendar_SpecificCalendar: "%1$s %2$s News Hub",
   EventCalendar_Goto_SpecificCalendar: "Go to %1$s News Hub",
@@ -181,6 +200,12 @@ LocalizationReady("shared", "english", {
     "Ignored titles will not be recommended to you and will not appear in featured areas.",
   EventCalendar_IgnoreApp_newhub:
     "The News Hub will apply your ignore settings and prevent games ignored on the store from appearing your news hub. You can manage ignored games here:",
+  EventCalendar_FollowCurator: "Follow Steam Curator: %1$s",
+  EventCalendar_FollowCurator_ttip:
+    "By following this curator, their articles will appear in your personalized News hub and their game recommendations will appear on your Steam store.",
+  EventCalendar_UnFollowCurator: "Follow Steam Curator: %1$s",
+  EventCalendar_UnFollowCurator_ttip:
+    "You currently follow this curator. By unfollowing, their articles will no longer appear on your personalized News hub and their recommendations will not appear on your Steam store.",
   EventCalendar_UnignoreApp: "Unignore %1$s",
   EventCalendar_UnMuteApp_Title: "Unmute %1$s",
   EventCalendar_MuteApp_ttip:
@@ -188,7 +213,7 @@ LocalizationReady("shared", "english", {
   EventCalendar_UnMuteApp_ttip:
     "Restore this game to your News Hub and unblock future communications.",
   EventCalendar_MuteApp_details:
-    "Remove '%1$s' from appearing in your News Hub and block all future communications. Muted content decisions are always reversible by visiting this page:",
+    "Remove this content from appearing in your News Hub and block all future communications. Muted content decisions are always reversible by visiting this page: ",
   EventCalendar_ManageMutedApps: "Manage Muted Apps",
   EventCalendar_ManageMutedSources: "Manage Muted Sources",
   EventCalendar_ManageStorePref: "Manage Store Preferences",
@@ -272,6 +297,9 @@ LocalizationReady("shared", "english", {
   EventCalendar_GameSource_featured: "Featured",
   EventCalendar_GameSource_ttip_featured:
     "Include featured posts, such as those from top selling games",
+  EventCalendar_GameSource_curator: "Curators You Follow",
+  EventCalendar_GameSource_ttip_curator:
+    "Includes posts from curators you follow on Steam",
 
   EventCalendar_EditFilters: "Options and Filters",
   EventCalendar_CloseFilters: "News Hub",
@@ -293,12 +321,16 @@ LocalizationReady("shared", "english", {
   EventDisplay_Admin_Title: "Admin tools:",
   EventDisplay_ViewInLibrary: "View in Library",
   EventDisplay_ViewStorePage: "View Store Page",
+  EventDisplay_RSSFeed: "RSS Feed",
+  EventDisplay_RSSFeed_ExtraShort: "RSS",
   EventDisplay_ViewCommunityPage: "View Community Page",
   EventDisplay_ViewRssFeed: "View RSS Feed",
   EventDisplay_ViewInLibrary_ExtraShort: "Library",
   EventDisplay_ViewStorePage_ExtraShort: "Store",
   EventDisplay_ViewCommunityPage_ExtraShort: "Community",
   EventDisplay_ViewRssFeed_ExtraShort: "RSS",
+  EventDisplay_Admin: "Admin Dashboard",
+  EventDisplay_Admin_ExtraShort: "Admin",
 
   EventDisplay_NewsHubSubtitle: "News Hub",
 
@@ -485,6 +517,10 @@ LocalizationReady("shared", "english", {
   EventDashBoard_Location_CommunityDetail: "Community App Hub",
   EventDashBoard_Location_PopUpViews: "Views of event pop-up",
   EventDashBoard_Location_NewsHubDetail: "News Hub",
+
+  EventDisplay_ReferencedApps_Joiner: ", ",
+  EventDisplay_ReferencedApps: "Referenced app: %2$s.",
+  EventDisplay_ReferencedApps_Plural: "Referenced apps: %2$s.",
 
   AddToWishlist: "Add to your Wishlist",
   Wishlisted: "On your Wishlist",
@@ -928,7 +964,8 @@ LocalizationReady("shared", "english", {
   PartnerEvent_10: "Game Release",
   PartnerEvent_10_editor: "Game is Releasing Now!",
   PartnerEvent_11: "Live-Stream / Broadcast",
-  PartnerEvent_12: "Small Update (Patch Notes)",
+  PartnerEvent_12: "Small Update",
+  PartnerEvent_12_editor: "Small Update (Patch Notes)",
   PartnerEvent_13: "Regular Update",
   PartnerEvent_14: "Major Update",
   PartnerEvent_15: "DLC Release",
