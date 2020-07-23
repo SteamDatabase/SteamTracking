@@ -19877,9 +19877,9 @@ ShowLegalInformation
 SettingsPanel_About
 file://{resources}/layout/settings/settings_about.xml
 build_date
-Jul 21 2020
+Jul 23 2020
 build_time
-18:33:39
+04:07:49
 package_version
 local
 SteamClient020
@@ -27754,7 +27754,7 @@ ChatInvitationNotification
 GameInviteNotification
 TradeInviteNotification
 steam/cached/aboutdialog.res
-18:35:40
+04:09:33
 CAboutDialog
 ValveSurveySummarizeData
 #steam_systeminfo_title
