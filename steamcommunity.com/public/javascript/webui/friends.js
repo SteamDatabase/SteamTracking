@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6008935";
+var CLSTAMP = "6011668";
 !(function(e) {
   function t(t) {
     for (
@@ -54447,6 +54447,53 @@ var CLSTAMP = "6008935";
                       (o.label = 2);
                   case 2:
                     return [2, this.m_mapAppToCreatorIDList.get(e)];
+                }
+              });
+            });
+          }),
+          (e.prototype.SearchCreatorHomeStore = function(e, t) {
+            return Object(o.b)(this, void 0, void 0, function() {
+              var n,
+                r,
+                p,
+                u,
+                m = this;
+              return Object(o.e)(this, function(o) {
+                switch (o.label) {
+                  case 0:
+                    return (
+                      (n = s.c.STORE_BASE_URL + "curator/0/ajaxsearchcurators"),
+                      (r = {
+                        term: e.replace(" ", "+"),
+                        cc: s.c.COUNTRY,
+                        l: s.c.LANGUAGE
+                      }),
+                      (p = new Array()),
+                      [4, i.a.get(n, { params: r, cancelToken: t.token })]
+                    );
+                  case 1:
+                    return (
+                      (u = o.sent()).data.curators &&
+                        Object(a.E)(function() {
+                          u.data.curators.forEach(function(e) {
+                            if (
+                              !m.m_mapClanToCreatorHome.has(e.creator_clan_id)
+                            ) {
+                              var t = l.a.InitFromClanID(e.creator_clan_id),
+                                n = new c(t);
+                              n.Initialize(e),
+                                m.m_mapClanToCreatorHome.set(
+                                  e.creator_clan_id,
+                                  n
+                                );
+                            }
+                            p.push(
+                              m.m_mapClanToCreatorHome.get(e.creator_clan_id)
+                            );
+                          });
+                        }),
+                      [2, p]
+                    );
                 }
               });
             });
