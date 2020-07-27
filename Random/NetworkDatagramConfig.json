@@ -1657,7 +1657,7 @@
     }
   },
   "relay_public_key": "5AC884C1045BA0FF44142AC8DCA51B8A98C8F1CB4FEE36284AFBE92FCF594932",
-  "revision": 280,
+  "revision": 281,
   "revoked_keys": [
     "123456789"
   ]
