@@ -616,6 +616,10 @@ a.commentthread_allcommentslink:hover {
 	/* The descendant comment text element has overflow set, but a chrome bug allows some unicode characters to spill out of that.  overflow at this level seems to stop it */
 	overflow: hidden;
 }
+.commentthread_comment.highlighted {
+	border: 3px solid red;
+	background-color: rgba( 255, 255, 255, 0.1 );
+}
 
 .detailBox .commentthread_comment:not(.hidden_post):hover,
 .group_comments .commentthread_comment:not(.hidden_post):hover,

@@ -1533,6 +1533,18 @@ var CCommentThread = Class.create( {
 		});
 
 		this.UpdatePagingDisplay();
+		this.HighlightComment();
+	},
+
+	HighlightComment: function()
+	{
+		var urlParams = new URLSearchParams( window.location.search );
+		var gidComment = urlParams.get( 'gidcommenthighlight' );
+		if ( gidComment )
+		{
+			$J( "#comment_" + gidComment ).addClass( 'highlighted' );
+			$J( "#comment_" + gidComment ).scrollIntoView();
+		}
 	},
 
 	BMatches: function( strType, steamidOwner, gidFeature, gidFeature2 )
