@@ -6235,7 +6235,7 @@ To enable access to the in-game overlay, open the Security and Privacy > Privacy
 "[english]Steam_DownloadRestrictionsLabel"	"Download Restrictions"
 "Steam_SettingsInGameScreenshotFolder"	"Skärmdumpsmapp"
 "[english]Steam_SettingsInGameScreenshotFolder"	"Screenshot folder"
-"Steam_SettingsInGameTitle"	"Steams övertoning"
+"Steam_SettingsInGameTitle"	"Steams överlägg"
 "[english]Steam_SettingsInGameTitle"	"The Steam Overlay"
 "steam_library_filter_mygames"	"Mina spel"
 "[english]steam_library_filter_mygames"	"My Games"

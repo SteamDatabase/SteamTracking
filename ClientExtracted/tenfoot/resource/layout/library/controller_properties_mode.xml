@@ -272,13 +272,9 @@
           <DropDown id="EdgeBindingInvertMouseRegion" />
         </Panel>
 
-        <Panel class="FieldWrapper" modes="flickstick" advanced="off" sources="joystick">
+        <Panel class="FieldWrapper" modes="flickstick" advanced="off">
           <Label class="FieldLabel" text="#Library_Details_FieldLabel_FlickStickClick" />
           <ControllerBindingButton class="BindingButtonPropertiesMode" id="FlickStickClick" />
-        </Panel>
-        <Panel class="FieldWrapper" modes="flickstick" sources= "joystick" advanced="off">
-          <Label class="FieldLabel" text="#Library_Details_FieldLabel_EdgeRadiusFlickStick" />
-          <Slider id="EdgeBindingRadiusFlickStick" direction="horizontal" />
         </Panel>
         <Panel class="FieldWrapper" modes="flickstick" advanced="off" visualization="off">
           <Label class="FieldLabel" text="#Library_Details_FieldLabel_MouseSensitivity" />
@@ -337,9 +333,9 @@
 				<Panel class="FieldWrapper" modes="absmouse" sources="trackpad joystick ABXY gyro" advanced="off">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_Rotation" />
 					<Slider id="RotationAbsMouse" direction="horizontal" />
-				</Panel>				
+				</Panel>
 
-				<!-- Mouse Mode Advanced -->	
+        <!-- Mouse Mode Advanced -->	
 				<Panel class="FieldWrapper" modes="absmouse" advanced="on">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_SensitivityVertScale" />
 					<Slider id="VerticalSensitivity" direction="horizontal" />
@@ -749,11 +745,10 @@
           <Label class="FieldLabel" text="#Library_Details_FieldLabel_Smoothing"/>
           <Slider id="FlickStickSmoothing" direction="horizontal" />
         </Panel>
-        <Panel class="FieldWrapper" modes="flickstick" advanced="off" visualization="off">
-          <Label class="FieldLabel" text="#Library_Details_FieldLabel_FrameTime"/>
-          <Slider id="FlickStickFrameTime" direction="horizontal" />
+	    	<Panel class="FieldWrapper" modes="flickstick" advanced="off" visualization="off">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_TransitionTime"/>
+          <Slider id="Int_FlickStickTransitionTime" direction="horizontal" />
         </Panel>
-
         <!-- Mouse Region Mode -->
         <Panel class="FieldWrapper" modes="mouseregion" gameactions="off" advanced="off">
           <Label class="FieldLabel" text="#Library_Details_FieldLabel_MouseRegion_PositionX" />
@@ -1150,7 +1145,20 @@
 						<DropDown id="ModeShiftDropDown" />
 					</Panel>
 
-					<!-- Dpad Mode -->
+          <Panel class="FieldWrapper" modes="flickstick" advanced="off">
+            <Label class="FieldLabel" text="#Library_Details_FieldLabel_FlickStickOuterRing" />
+            <ControllerBindingButton class="BindingButtonPropertiesMode" id="FlickStickOuterRing" />
+          </Panel>
+          <Panel class="FieldWrapper" modes="flickstick" advanced="off">
+            <Label class="FieldLabel" text="#Library_Details_FieldLabel_EdgeRadiusFlickStick" />
+            <Slider id="EdgeBindingRadiusFlickStick" direction="horizontal" />
+          </Panel>
+          <Panel class="FieldWrapper" modes="flickstick" sources="trackpad joystick" advanced="off">
+            <Label class="FieldLabel" text="#Library_Details_FieldLabel_Rotation" />
+            <Slider id="RotationFlickStick" direction="horizontal" />
+          </Panel>
+          
+          <!-- Dpad Mode -->
 					<Panel class="FieldWrapper" modes="dpad" advanced ="off">
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_HapticIntensity" />
 						<DropDown id="HapticIntensityDpad" />

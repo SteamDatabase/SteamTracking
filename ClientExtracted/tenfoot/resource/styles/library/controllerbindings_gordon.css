@@ -2365,15 +2365,17 @@ ControllerSourceModeDpad.ControllerMode ControllerBindingButton
 	margin-bottom: 6px;
 }
 
-#ModeContainer #EdgeBindingJoystick
+#ModeContainer #EdgeBindingJoystick,
+#ModeContainer #FlickStickOuterRing
 {
-	background-image: url("file://{images}/library/controller/api/pad_r_outer_ring.png");
+    background-image: url("file://{images}/library/controller/api/pad_r_outer_ring.png");
 }
 
 
-#ModeContainer #JoystickClick
+#ModeContainer #JoystickClick,
+#ModeContainer #FlickStickClick
 {
-	background-image: url("file://{images}/library/controller/api/stick_click.png");
+    background-image: url("file://{images}/library/controller/api/stick_click.png");
 }
 
 

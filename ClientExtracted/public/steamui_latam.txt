@@ -8253,4 +8253,8 @@ upgrade to Mac OS X version 10.7 or higher."
 "[english]SteamUI_JoinDialog_NoName_Title"	"Steam"
 "Steam_ClientUpdateSuppressed"	"Las actualizaciones del cliente de Steam han sido desactivadas por un modificador de la línea de comandos o un archivo de configuración. Elimina el bloqueo, reinicia el cliente e inténtalo de nuevo."
 "[english]Steam_ClientUpdateSuppressed"	"Steam client updates have been disabled by a command line switch or config file. Please remove the block, restart the client, and try again."
+"steam_subnav_discovery_queue"	"Lista de descubrimientos"
+"[english]steam_subnav_discovery_queue"	"Discovery Queue"
+"steam_subnav_points_shop"	"Tienda de puntos"
+"[english]steam_subnav_points_shop"	"Points Shop"
 }

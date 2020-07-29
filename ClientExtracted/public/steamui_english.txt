@@ -231,7 +231,8 @@ This should take less than a minute."
 "SteamUI_JoinDialog_OpenVRStartupFailure" "Failed to start %game% in VR. (Error: %error%)"
 "SteamUI_JoinDialog_OpenVRWaitingForQuit" "Waiting for %quitting_game% to exit..."
 
-"SteamUI_JoinDialog_ProcessingShaderCache" "Processing Vulkan shaders..."
+"SteamUI_JoinDialog_UpdatingAppInfo" "Updating configuration ..."
+"SteamUI_JoinDialog_UpdatingAppTicket" "Updating ticket ..."
 
 "SteamUI_JoinDialog_TimedTrial_Error" "Failed to start %game% as limited trial. (Error: %error%)"
 

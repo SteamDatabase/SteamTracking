@@ -55,6 +55,7 @@ public:
     virtual unknown_ret GetGroupSetting(unsigned int, GroupId, EControllerSetting, int*) = 0;
     virtual unknown_ret SetGroupSetting(unsigned int, GroupId, EControllerSetting, int) = 0;
     virtual unknown_ret GetGroupSettingDefault(unsigned int, GroupId, EControllerSetting, int*) = 0;
+    virtual unknown_ret GetGroupSettingUIRange(unsigned int, GroupId, EControllerSetting, int*, int*) = 0;
     virtual unknown_ret GetActivatorSetting(unsigned int, GroupId, EControllerModeInput, ActivatorId, EControllerSetting, int*) = 0;
     virtual unknown_ret SetActivatorSetting(unsigned int, GroupId, EControllerModeInput, ActivatorId, EControllerSetting, int) = 0;
     virtual unknown_ret GetActivatorSettingDefault(unsigned int, GroupId, EControllerModeInput, ActivatorId, EControllerSetting, int*) = 0;

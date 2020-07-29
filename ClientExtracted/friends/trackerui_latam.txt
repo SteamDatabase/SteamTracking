@@ -1343,7 +1343,7 @@
 "[english]Friends_SteamInputControllerPlayerNumberChanged"	"is Now Player %player_number%"
 "RemotePlayTogether_Notification_AvailableToInvite_Title"	"Remote Play Together"
 "[english]RemotePlayTogether_Notification_AvailableToInvite_Title"	"Remote Play Together"
-"RemotePlayTogether_Notification_AvailableToInvite"	"En tu lista de amigos, haz clic derecho en ellos para invitarlos a jugar."
+"RemotePlayTogether_Notification_AvailableToInvite"	"Haz clic derecho sobre cualquiera en tu lista de amigos para invitarlo jugar."
 "[english]RemotePlayTogether_Notification_AvailableToInvite"	"Right-click anyone in your Friends list to invite them to play."
 }
 }

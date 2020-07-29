@@ -510,7 +510,7 @@
 "[english]Store_FriendRecommended"	"Recommended by Friends ({i:friend_recommend_count})"
 "Store_FriendCommunityGroups"	"Trouver des groupes de la communauté"
 "[english]Store_FriendCommunityGroups"	"Find Community Groups"
-"Store_FriendVisitForums"	"Voir les discussions de la communauté"
+"Store_FriendVisitForums"	"Consulter les discussions de la communauté"
 "[english]Store_FriendVisitForums"	"View Community Discussions"
 "Store_FriendsOfficialWebsite"	"Site officiel"
 "[english]Store_FriendsOfficialWebsite"	"Visit Official Website"

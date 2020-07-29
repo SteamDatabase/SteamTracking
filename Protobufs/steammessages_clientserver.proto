@@ -1023,7 +1023,7 @@ message CMsgClientPICSProductInfoRequest {
 	message AppInfo {
 		optional uint32 appid = 1;
 		optional uint64 access_token = 2;
-		optional bool only_public = 3;
+		optional bool only_public_obsolete = 3;
 	}
 
 	message PackageInfo {

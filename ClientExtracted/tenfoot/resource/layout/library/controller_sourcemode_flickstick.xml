@@ -10,6 +10,7 @@
 		<Panel id="BindingSlotContainer">	
 			<Label class="ModeTitle" id="Title" text="#Library_Details_SourceMode_FlickStick_Title" />		
 			<ControllerBindingButton id="FlickStickClick" acceptsfocus="false" />
+			<ControllerBindingButton id="FlickStickOuterRing" acceptsfocus="false" />
     </Panel>
   </ControllerSourceModeFlickStick>
 </root>

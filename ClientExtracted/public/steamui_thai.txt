@@ -8267,4 +8267,8 @@ upgrade to Mac OS X version 10.7 or higher."
 "[english]Steam_TimedTrial_Minutes"	"%minutes% minutes playtime remaining"
 "Steam_TimedTrial_Hours"	"เวลาเล่นคงเหลือ %hours% ชั่วโมง %minutes% นาที"
 "[english]Steam_TimedTrial_Hours"	"%hours% hours and %minutes% minutes playtime remaining"
+"steam_subnav_discovery_queue"	"คิวค้นพบ"
+"[english]steam_subnav_discovery_queue"	"Discovery Queue"
+"steam_subnav_points_shop"	"ร้านค้าแต้ม"
+"[english]steam_subnav_points_shop"	"Points Shop"
 }
