@@ -1543,7 +1543,7 @@ var CCommentThread = Class.create( {
 		if ( gidComment )
 		{
 			$J( "#comment_" + gidComment ).addClass( 'highlighted' );
-			$J( "#comment_" + gidComment ).scrollIntoView();
+			setTimeout( function() { $J( "#comment_" + gidComment )[0].scrollIntoView(); },500 );
 		}
 	},
 
