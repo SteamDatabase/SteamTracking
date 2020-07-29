@@ -31,8 +31,8 @@ var CStickerManager = function( elContainer, bEditMode ){
 	for( var i=0; i<this.rgSceneToIdMap.length; i++ )
 	{
 
-		CStickerManager.prototype.rgStickerTextures[this.rgSceneToIdMap[i]] = 'https://steamcommunity-a.akamaihd.net/public/images/promo/summer2017/stickers/'+this.rgSceneToIdMap[i]+'_sprites.png?v=22';
-		CStickerManager.prototype.rgBackgroundTextures[this.rgSceneToIdMap[i]] = 'https://steamcommunity-a.akamaihd.net/public/images/promo/summer2017/stickers/'+this.rgSceneToIdMap[i]+'.jpg?v=22';
+		CStickerManager.prototype.rgStickerTextures[this.rgSceneToIdMap[i]] = 'https://community.cloudflare.steamstatic.com/public/images/promo/summer2017/stickers/'+this.rgSceneToIdMap[i]+'_sprites.png?v=22';
+		CStickerManager.prototype.rgBackgroundTextures[this.rgSceneToIdMap[i]] = 'https://community.cloudflare.steamstatic.com/public/images/promo/summer2017/stickers/'+this.rgSceneToIdMap[i]+'.jpg?v=22';
 	}
 
 
@@ -176,7 +176,7 @@ CStickerManager.prototype.PopulateStickerList = function()
 		var elPack = document.createElement('div');
 		elPack.classList.add('sticker_item');
 		var elImage = document.createElement('img');
-		elImage.src = "https://steamcommunity-a.akamaihd.net/public/images/promo/summer2017/stickers_group.png";
+		elImage.src = "https://community.cloudflare.steamstatic.com/public/images/promo/summer2017/stickers_group.png";
 
 		elPack.addEventListener('click', this.OpenPack.bind(this));
 

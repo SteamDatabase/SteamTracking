@@ -15,7 +15,7 @@ function _sortScreenshotsByMap( map ) {
 		var div = new Element('div');
 		div.setStyle({ clear: "left" });
 		if ( key.length > 0 ) {
-			div.insert( '<div class="hr_ss"><div class="hr_title">' + key + '</div><img src="https://steamcommunity-a.akamaihd.net/public/images/skin_1/hr_ss.png" width="895" height="11" border="0" /></div>' );
+			div.insert( '<div class="hr_ss"><div class="hr_title">' + key + '</div><img src="https://community.cloudflare.steamstatic.com/public/images/skin_1/hr_ss.png" width="895" height="11" border="0" /></div>' );
 		}
 
 		var list = map[key];

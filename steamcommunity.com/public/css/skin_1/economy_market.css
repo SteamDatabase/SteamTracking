@@ -73,7 +73,7 @@ h1, h2, h3, h4, h5, h6 {
 	position: relative;
 	margin: 0 auto;
 	display: block;
-	background-image: url('https://steamcommunity-a.akamaihd.net/public/images/economy/market/header/market_banner.jpg');
+	background-image: url('https://community.cloudflare.steamstatic.com/public/images/economy/market/header/market_banner.jpg');
 	background-repeat: no-repeat;
 	height: 121px;
 	width: 949px;
@@ -1066,7 +1066,7 @@ input.filter_search_box:focus {
 	right: 2px;
 	border: none;
 	color: transparent;
-	background: url('https://steamcommunity-a.akamaihd.net/public/images/economy/market/search_icon.png') no-repeat center;
+	background: url('https://community.cloudflare.steamstatic.com/public/images/economy/market/search_icon.png') no-repeat center;
 
 	width: 26px;
 	height: 25px;
@@ -1148,7 +1148,7 @@ input.filter_search_box:focus {
 	padding-bottom: 30px;
 	color: #6fa9d1;
 	font-size: 16px;
-	background: url('https://steamcommunity-a.akamaihd.net/public/images/economy/market/header/auth_banner.jpg') no-repeat center;
+	background: url('https://community.cloudflare.steamstatic.com/public/images/economy/market/header/auth_banner.jpg') no-repeat center;
 }
 
 .market_sale_msg a
@@ -1724,7 +1724,7 @@ input.filter_search_box:focus {
 	width: 16px;
 	height: 16px;
 
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/skin_1/info_btn.png' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/skin_1/info_btn.png' );
 	background-position: left top;
 	background-repeat: no-repeat;
 }
@@ -1882,7 +1882,7 @@ input.filter_search_box:focus {
 	width: 20px;
 	height: 12px;
 
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images//sharedfiles/deleteSearchTerm.png' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images//sharedfiles/deleteSearchTerm.png' );
 	background-repeat: no-repeat;
 	background-position: center;
 }
@@ -1936,7 +1936,7 @@ input.filter_search_box:focus {
 	width: 28px;
 	top: 0;
 	right: 0;
-	background: url('https://steamcommunity-a.akamaihd.net/public/images/header/ico_search.gif') no-repeat left center;
+	background: url('https://community.cloudflare.steamstatic.com/public/images/header/ico_search.gif') no-repeat left center;
 	opacity: 0.6;
 }
 
@@ -1964,7 +1964,7 @@ input.filter_search_box:focus {
 
 #market_advancedsearch_appselect {
 		background-color: #33383f;
-	background-image: url('https://steamcommunity-a.akamaihd.net/public/images/economy/filter_dropdown.png');
+	background-image: url('https://community.cloudflare.steamstatic.com/public/images/economy/filter_dropdown.png');
 	background-repeat: no-repeat;
 	background-position: right top;
 		border: 1px solid #4D4D4D;
@@ -2263,7 +2263,7 @@ input.filter_search_box:focus {
 	top: 0;
 	bottom: 0;
 	width: 20px;
-	background: url('https://steamcommunity-a.akamaihd.net/public/images/economy/market/ico_arrow_dn_for_select.png') no-repeat left center;
+	background: url('https://community.cloudflare.steamstatic.com/public/images/economy/market/ico_arrow_dn_for_select.png') no-repeat left center;
 	content: '';
 }
 

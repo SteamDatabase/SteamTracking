@@ -4,7 +4,7 @@
 	padding-left: 16px;
 	padding-right: 16px;
 	min-height: 300px;
-	background: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/v6/colored_body_top.png?v=2' ) center top no-repeat #1b2838;
+	background: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/v6/colored_body_top.png?v=2' ) center top no-repeat #1b2838;
 	background-size: contain;
 	font-size: 12px;
 }
@@ -26,7 +26,7 @@
 	padding: 20px;
 	margin: 20px auto;
 
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/parental/keybg.png' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/parental/keybg.png' );
 	background-repeat: no-repeat;
 	background-position: 80% 50%;
 	background-color: rgba(0, 0, 0, 0.3);

@@ -341,7 +341,7 @@ div#global_actions_pageoverlay .globaloverlayactionval {
 
 .tableViewCell {
 	display: block;
-	background-image:  url( https://steamcommunity-a.akamaihd.net/public/shared/images/mobile/grid-pattern.png );
+	background-image:  url( https://community.cloudflare.steamstatic.com/public/shared/images/mobile/grid-pattern.png );
 	background-color: #151515;
 	transition: background-color .15s;
 	-webkit-transition: background-color .15s;
@@ -543,7 +543,7 @@ div.avatarIcon img {
 
 .segmentedControlInactive, .segmentedControlActive {
 	display: block;
-	background-image: url( https://steamcommunity-a.akamaihd.net/public/shared/images/mobile/segmented-control-background.png );
+	background-image: url( https://community.cloudflare.steamstatic.com/public/shared/images/mobile/segmented-control-background.png );
 	background-repeat: repeat-x;
 	background-size: 30px 30px;
 	height: 30px;
@@ -551,7 +551,7 @@ div.avatarIcon img {
 }
 
 .segmentedControlActive {
-	background-image: url( https://steamcommunity-a.akamaihd.net/public/shared/images/mobile/segmented-control-background-active.png );
+	background-image: url( https://community.cloudflare.steamstatic.com/public/shared/images/mobile/segmented-control-background-active.png );
 	color: #FFFFFF;
 }
 
@@ -601,7 +601,7 @@ div.avatarIcon img {
 }
 
 .bodyGridPattern, .gridPattern {
-	background-image:  url( https://steamcommunity-a.akamaihd.net/public/shared/images/mobile/grid-pattern.png );
+	background-image:  url( https://community.cloudflare.steamstatic.com/public/shared/images/mobile/grid-pattern.png );
 	background-size: 30px 30px;
 	width: 100%;
 	height: 100%;
@@ -651,12 +651,12 @@ input.searchBox.default {
 	top: -2px;
 	width: 36px;
 	height: 36px;
-	background-image: url( https://steamcommunity-a.akamaihd.net/public/shared/images/mobile/close_icon.png );
+	background-image: url( https://community.cloudflare.steamstatic.com/public/shared/images/mobile/close_icon.png );
 	background-size: 36px 36px;
 }
 
 .searchBoxCloseButton.active {
-	background-image: url( https://steamcommunity-a.akamaihd.net/public/shared/images/mobile/close_icon_gray.png );
+	background-image: url( https://community.cloudflare.steamstatic.com/public/shared/images/mobile/close_icon_gray.png );
 }
 
 
@@ -678,7 +678,7 @@ input.searchBox.default {
 	border-radius: 1px;
 	border: 1px solid #3C3C3C;
 
-	background-image:  url( https://steamcommunity-a.akamaihd.net/public/shared/images/mobile/dropdown_arrow.png );
+	background-image:  url( https://community.cloudflare.steamstatic.com/public/shared/images/mobile/dropdown_arrow.png );
 	background-repeat: no-repeat;
 	background-position: right center;
 	background-origin: content-box;

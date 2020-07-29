@@ -2399,7 +2399,7 @@
               var t = this.props,
                 n = t.newsData,
                 r = t.clanSteamID,
-                s = new A.o();
+                s = new A.p();
               (s.GID = "PreviewPartnerEventRow_0"),
                 (s.clanSteamID = r),
                 (s.postTime = Date.now() / 1e3),
@@ -2491,16 +2491,13 @@
               );
             }),
             (e.prototype.OnShowRawRSS = function(e) {
-              if (-1 != (o = this.props.newsData.rss_message).indexOf("<entry"))
-                try {
-                  var t = o.indexOf("<content"),
-                    n = o.indexOf("</content>"),
-                    r = o.substr(t, n).indexOf(">"),
-                    s = o.substr(0, t + r),
-                    a = o.substr(t + r, n - t + r),
-                    i = o.substr(n),
-                    o = s + Object(X.b)(a) + i;
-                } catch (e) {}
+              var n = this.props.newsData.rss_message,
+                t = (function() {
+                  var e = n.match(/<entry[^>]*>(.*)<\/entry>/ms);
+                  if (!e) return n;
+                  var t = e[1].match(/<content[^>]*>.*<\/content>/ms);
+                  return t ? Object(X.b)(t[0]) : e[0];
+                })();
               Object(W.d)(
                 c.a.createElement(
                   z.c,
@@ -2510,7 +2507,7 @@
                   },
                   c.a.createElement("textarea", {
                     className: Q.RawRSS,
-                    value: o,
+                    value: t,
                     disabled: !0
                   })
                 ),

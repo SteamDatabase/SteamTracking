@@ -191,7 +191,7 @@ a.profile_media_item.auto_height .imgWallHoverBottom {
 {
 	background-color: black;
 	height: 30px;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/skin_1/comment_quoteicon.png' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/skin_1/comment_quoteicon.png' );
 	background-repeat: no-repeat;
 	background-position: 5px 7px;
 	padding-left: 24px;
@@ -306,14 +306,14 @@ a.profile_media_item.auto_height .imgWallHoverBottom {
 
 .imgWall_BackToTopButton
 {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/btn_back_top_active.png' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/sharedfiles/btn_back_top_active.png' );
 	height: 33px;
 	line-height: 33px;
 }
 
 .imgWall_BackToTop:hover .imgWall_BackToTopButton
 {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/btn_back_top_hover.png' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/sharedfiles/btn_back_top_hover.png' );
 }
 
 .imgWall_BackToTopButton.middle

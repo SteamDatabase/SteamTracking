@@ -138,7 +138,7 @@ function LoadPlayerGroupList( fnCallback )
 
 function ShowRepresentGroupDialog( callback )
 {
-	var Modal = ShowDialog( 'Select a group to represent', '<div class="group_invite_throbber"><img src="https://steamcommunity-a.akamaihd.net/public/images/login/throbber.gif"></div>' );
+	var Modal = ShowDialog( 'Select a group to represent', '<div class="group_invite_throbber"><img src="https://community.cloudflare.steamstatic.com/public/images/login/throbber.gif"></div>' );
 	var $ListElement = $J('<div/>', {'class': 'newmodal_content_innerbg'} );
 
 	LoadPlayerGroupList( function( html ) {

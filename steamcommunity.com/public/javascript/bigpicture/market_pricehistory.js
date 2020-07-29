@@ -24,10 +24,10 @@ function ShowPriceHistory()
 			'<styles>' +
 			'<include src="file://{resources}/styles/steamstyles.css" />' +
 			'<include src="file://{resources}/styles/msgbox.css" />' +
-			'<include src="https://steamcommunity-a.akamaihd.net/public/css/bigpicture/market_pricehistory.css?v=valveisgoodatcaching" />' +
+			'<include src="https://community.cloudflare.steamstatic.com/public/css/bigpicture/market_pricehistory.css?v=valveisgoodatcaching" />' +
 			'</styles>' +
 			'<scripts>' +
-				'<include src="https://steamcommunity-a.akamaihd.net/public/shared/javascript/bigpicture/base.js?v=valveisgoodatcaching&amp;l=english" />' +
+				'<include src="https://community.cloudflare.steamstatic.com/public/shared/javascript/bigpicture/base.js?v=valveisgoodatcaching&amp;l=english" />' +
 			'</scripts>' +
 			'<script>' +
 				ClosePopup.toString() +

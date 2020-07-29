@@ -1,7 +1,7 @@
 
 #BG_top {
 	position:relative;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/bg_top.gif');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/skin_1/bg_top.gif');
 	background-repeat:no-repeat;
 	width:958px;
 	height:98px;
@@ -9,7 +9,7 @@
 	margin: 0 auto;
 }
 #BG_bottom {
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/bg_bottom.gif');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/skin_1/bg_bottom.gif');
 	background-repeat:repeat-y;
 	width:958px;
 	text-align:left;
@@ -114,7 +114,7 @@ a.games_list_tab:hover {
 }
 
 .games_list_tab_content {
-	background-image: url( https://steamcommunity-a.akamaihd.net/public/images/skin_1/gameList_tab_fade.png );
+	background-image: url( https://community.cloudflare.steamstatic.com/public/images/skin_1/gameList_tab_fade.png );
 	background-position: top;
 	background-repeat: no-repeat;
 	width: 924px;
@@ -174,12 +174,12 @@ a.games_list_tab:hover {
 }
 
 .gameListItemActive {
-    /* background-image: url( https://steamcommunity-a.akamaihd.net/public/images/remote/Desk_ActiveBG.png ); */
+    /* background-image: url( https://community.cloudflare.steamstatic.com/public/images/remote/Desk_ActiveBG.png ); */
 	background: #1f3748;
 }
 
 .gameListItemInstalled {
-	/* background-image: url( https://steamcommunity-a.akamaihd.net/public/images/remote/Desk_InstalledBG.png ); */
+	/* background-image: url( https://community.cloudflare.steamstatic.com/public/images/remote/Desk_InstalledBG.png ); */
 }
 
 .recentAchievements
@@ -339,7 +339,7 @@ color: #EBEBEB;
 	height: 34px;
 	top: 0px;
 	
-	background-image: url( https://steamcommunity-a.akamaihd.net/public/images/storeImages/btn_storepage_corners.png );
+	background-image: url( https://community.cloudflare.steamstatic.com/public/images/storeImages/btn_storepage_corners.png );
 }
 
 .btn_storepage .btn_storepage_left {
@@ -363,7 +363,7 @@ color: #EBEBEB;
 	padding: 0px 11px;
 	line-height: 34px;
 	
-	background-image: url( https://steamcommunity-a.akamaihd.net/public/images/storeImages/btn_storepage_repeat.png );
+	background-image: url( https://community.cloudflare.steamstatic.com/public/images/storeImages/btn_storepage_repeat.png );
 	background-repeat: repeat-x;
 	
 	text-transform: uppercase;
@@ -414,7 +414,7 @@ div.hover {
 #global_hover .hover_arrow {
 	width: 26px;
 	height: 13px;
-	background-image: url( https://steamcommunity-a.akamaihd.net/public/images/skin_1/hover_arrow_up.gif );
+	background-image: url( https://community.cloudflare.steamstatic.com/public/images/skin_1/hover_arrow_up.gif );
 	background-repeat: no-repeat;
 	position: absolute;
 	top: 1px;
@@ -741,7 +741,7 @@ a.btn_visit_store:hover
 .btn_save
 {
 	display: inline-block;
-	background-image: url( https://steamcommunity-a.akamaihd.net/public/images/skin_1/btn_gradient.png );
+	background-image: url( https://community.cloudflare.steamstatic.com/public/images/skin_1/btn_gradient.png );
 	background-repeat: repeat-x;
 	background-align: top;
 	background-color: #262626;

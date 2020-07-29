@@ -6,7 +6,7 @@ body {
 /* header */
 
 #header {
-	background: url(https://steamcommunity-a.akamaihd.net/public/images/broadcast/announce/top_title_bg.jpg) top center no-repeat;
+	background: url(https://community.cloudflare.steamstatic.com/public/images/broadcast/announce/top_title_bg.jpg) top center no-repeat;
 	text-align: center;
 	height: 276px;
 }
@@ -46,7 +46,7 @@ body {
 /* header image section */
 
 #header_hero {
-	background: url(https://steamcommunity-a.akamaihd.net/public/images/broadcast/announce/top_hero_img.jpg) top center no-repeat;
+	background: url(https://community.cloudflare.steamstatic.com/public/images/broadcast/announce/top_hero_img.jpg) top center no-repeat;
 	text-align: center;
 	height: 650px;
 }
@@ -64,7 +64,7 @@ body {
 }
 
 #mid {
-	background: url(https://steamcommunity-a.akamaihd.net/public/images/broadcast/announce/mid_bg.jpg) top center no-repeat;
+	background: url(https://community.cloudflare.steamstatic.com/public/images/broadcast/announce/mid_bg.jpg) top center no-repeat;
 	text-align: center;
 	height: 795px;
 }
@@ -123,7 +123,7 @@ body {
 }
 
 #lower {
-	background: url(https://steamcommunity-a.akamaihd.net/public/images/broadcast/announce/lower_bg.jpg) top center no-repeat;
+	background: url(https://community.cloudflare.steamstatic.com/public/images/broadcast/announce/lower_bg.jpg) top center no-repeat;
 	text-align: center;
 	/* height: 600px; */
 	padding-bottom: 50px;
@@ -234,7 +234,7 @@ body {
 }
 
 #bottom {
-	background: url(https://steamcommunity-a.akamaihd.net/public/images/broadcast/announce/bottom_bg.jpg) top center no-repeat;
+	background: url(https://community.cloudflare.steamstatic.com/public/images/broadcast/announce/bottom_bg.jpg) top center no-repeat;
 	overflow: auto; /* Prevent CSS margin collapse */
 }
 

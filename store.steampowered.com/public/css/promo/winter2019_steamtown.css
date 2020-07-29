@@ -20,7 +20,7 @@ a#store_search_link img {
 
 #logo_holder {
 display: inline-block; width: 176px; height: 44px; 
-background-image: url( 'https://steamcdn-a.akamaihd.net/store/promo/winter2019/globalheader_logo.png' );
+background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/promo/winter2019/globalheader_logo.png' );
 background-size: 176px, 44px;
 }
 
@@ -81,7 +81,7 @@ body.v6.steamtown .search_suggest {
 body.v6.steamtown .page_container {
 	max-width: 1538px;
 	margin: 0 auto;
-	background-image: url( 'https://steamcdn-a.akamaihd.net/store/promo/winter2019/snow_bg.png?v=2' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/promo/winter2019/snow_bg.png?v=2' );
     background-position-x: center;
 	padding-bottom: 150px;
 }
@@ -89,7 +89,7 @@ body.v6.steamtown .page_container {
 .steamtown_header_ctn {
 	height: 1000px;
 	position: relative;
-	background-image: url( 'https://steamcdn-a.akamaihd.net/store/promo/winter2019/header_layer_1.png?v=2' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/promo/winter2019/header_layer_1.png?v=2' );
 	background-position: center;
 	background-repeat: no-repeat;
 	z-index: 0;
@@ -127,42 +127,42 @@ body.v6.steamtown .page_container {
 }
 
 .layer_1 {
-	background-image: url( 'https://steamcdn-a.akamaihd.net/store/promo/winter2019/header_layer_1.png?v=2' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/promo/winter2019/header_layer_1.png?v=2' );
 	z-index: 1;
 }
 
 .layer_2 {
-	background-image: url( 'https://steamcdn-a.akamaihd.net/store/promo/winter2019/header_layer_2.png?v=2' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/promo/winter2019/header_layer_2.png?v=2' );
 	z-index: 2;
 }
 
 .layer_3 {
-	background-image: url( 'https://steamcdn-a.akamaihd.net/store/promo/winter2019/header_layer_3.png?v=2' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/promo/winter2019/header_layer_3.png?v=2' );
 	z-index: 3;
 }
 
 .layer_4 {
-	background-image: url( 'https://steamcdn-a.akamaihd.net/store/promo/winter2019/header_layer_4.png?v=2' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/promo/winter2019/header_layer_4.png?v=2' );
 	z-index: 4;
 }
 
 .layer_5 {
-	background-image: url( 'https://steamcdn-a.akamaihd.net/store/promo/winter2019/header_layer_5.png?v=2' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/promo/winter2019/header_layer_5.png?v=2' );
 	z-index: 5;
 }
 
 .layer_6 {
-	background-image: url( 'https://steamcdn-a.akamaihd.net/store/promo/winter2019/header_layer_6.png?v=2' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/promo/winter2019/header_layer_6.png?v=2' );
 	z-index: 6;
 }
 
 .layer_7 {
-	background-image: url( 'https://steamcdn-a.akamaihd.net/store/promo/winter2019/header_layer_7.png?v=2' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/promo/winter2019/header_layer_7.png?v=2' );
 	z-index: 7;
 }
 
 .layer_8 {
-	background-image: url( 'https://steamcdn-a.akamaihd.net/store/promo/winter2019/header_layer_8.png?v=2' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/promo/winter2019/header_layer_8.png?v=2' );
 	z-index: 8;
 }
 
@@ -296,7 +296,7 @@ body.v6.steamtown .page_container {
 .steamtown_bulb_img {
 	background-position: center;
 	background-repeat: no-repeat;
-	background-image: url('https://steamcdn-a.akamaihd.net/store/promo/winter2019/bulb.png?v=2');
+	background-image: url('https://cdn.cloudflare.steamstatic.com/store/promo/winter2019/bulb.png?v=2');
 	width: 150px;
 	height: 153px;
 	margin: 50px 0 0 100px;
@@ -305,14 +305,14 @@ body.v6.steamtown .page_container {
 }
 
 .steamtown_bulb_img:hover {
-	background-image: url('https://steamcdn-a.akamaihd.net/store/promo/winter2019/bulb_dance.png?v=2');
+	background-image: url('https://cdn.cloudflare.steamstatic.com/store/promo/winter2019/bulb_dance.png?v=2');
 	background-repeat: repeat;
 }
 
 .steamtown_fire_img {
 	background-position: center;
 	background-repeat: no-repeat;
-	background-image: url('https://steamcdn-a.akamaihd.net/store/promo/winter2019/fire.png?v=2');
+	background-image: url('https://cdn.cloudflare.steamstatic.com/store/promo/winter2019/fire.png?v=2');
 	width: 150px;
 	height: 150px;
 	margin: 50px 0 0 0;
@@ -321,14 +321,14 @@ body.v6.steamtown .page_container {
 }
 
 .steamtown_fire_img:hover {
-	background-image: url('https://steamcdn-a.akamaihd.net/store/promo/winter2019/fire_dance.png?v=2');
+	background-image: url('https://cdn.cloudflare.steamstatic.com/store/promo/winter2019/fire_dance.png?v=2');
 	background-repeat: repeat;
 }
 
 .steamtown_snowperson_img {
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url('https://steamcdn-a.akamaihd.net/store/promo/winter2019/snowmelt.png?v=2');
+    background-image: url('https://cdn.cloudflare.steamstatic.com/store/promo/winter2019/snowmelt.png?v=2');
     width: 150px;
     height: 150px;
     margin: 50px 0 0 100px;
@@ -337,14 +337,14 @@ body.v6.steamtown .page_container {
 }
 
 .steamtown_snowperson_img:hover {
-    background-image: url('https://steamcdn-a.akamaihd.net/store/promo/winter2019/snowmelt_dance.png?v=2');
+    background-image: url('https://cdn.cloudflare.steamstatic.com/store/promo/winter2019/snowmelt_dance.png?v=2');
     background-repeat: repeat;
 }
 
 .steamtown_tinsel_img {
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url('https://steamcdn-a.akamaihd.net/store/promo/winter2019/tinsel.png?v=2');
+    background-image: url('https://cdn.cloudflare.steamstatic.com/store/promo/winter2019/tinsel.png?v=2');
     width: 150px;
     height: 150px;
     margin: 50px 0 0 0;
@@ -353,7 +353,7 @@ body.v6.steamtown .page_container {
 }
 
 .steamtown_tinsel_img:hover {
-    background-image: url('https://steamcdn-a.akamaihd.net/store/promo/winter2019/tinsel_dancing.png?v=2');
+    background-image: url('https://cdn.cloudflare.steamstatic.com/store/promo/winter2019/tinsel_dancing.png?v=2');
     background-repeat: repeat;
 }
 
@@ -395,10 +395,10 @@ body.v6.steamtown .page_container {
 	z-index: 20;
 }
 .page_container_market .rewards_happymayor_img {
-    background-image: url('https://steamcdn-a.akamaihd.net/store/promo/winter2019/mayor_market.png?v=1');
+    background-image: url('https://cdn.cloudflare.steamstatic.com/store/promo/winter2019/mayor_market.png?v=1');
 }
 .page_container_quests .rewards_happymayor_img {
-    background-image: url('https://steamcdn-a.akamaihd.net/store/promo/winter2019/mayor_quest.png?v=1');
+    background-image: url('https://cdn.cloudflare.steamstatic.com/store/promo/winter2019/mayor_quest.png?v=1');
 }
 
 .rewards_mayor_ctn .steamtown_bubble_ctn:hover .rewards_happymayor_img, .rewards_happymayor_img:hover {
@@ -474,7 +474,7 @@ body.v6.steamtown .page_container {
 .rewards_green_banner {
 	background-position: center;
 	background-repeat: no-repeat;
-	background-image: url('https://steamcdn-a.akamaihd.net/store/promo/winter2019/green_banner_snowflakes.png?v=2');
+	background-image: url('https://cdn.cloudflare.steamstatic.com/store/promo/winter2019/green_banner_snowflakes.png?v=2');
 	width: 120%;
 	min-height: 260px;
 	position: absolute;
@@ -546,7 +546,7 @@ body.v6.steamtown .page_container {
 	height: 128px;
 	background-position: center;
 	background-repeat: no-repeat;
-	background-image: url( 'https://steamcdn-a.akamaihd.net/store/promo/winter2019/home_coin_button.png?v=2' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/promo/winter2019/home_coin_button.png?v=2' );
 }
 .page_container_market .rewards_tokens_ctn {
     bottom: -90px;
@@ -636,7 +636,7 @@ body.v6.steamtown .page_container {
 	padding-bottom: 40px;
 	background-position: center bottom;
 	background-repeat: no-repeat;
-	background-image: url( 'https://steamcdn-a.akamaihd.net/store/promo/winter2019/coupon_bg.png?v=2' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/promo/winter2019/coupon_bg.png?v=2' );
 	margin: 50px 0 100px 0;
 	border-radius: 5px;
 	-webkit-filter: drop-shadow(0 2px 2px #33333350);
@@ -674,7 +674,7 @@ body.v6.steamtown .page_container {
 .reward_discount_img {
 	background-position: center;
 	background-repeat: no-repeat;
-	background-image: url( 'https://steamcdn-a.akamaihd.net/store/promo/winter2019/w19_coupon.png?v=2' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/promo/winter2019/w19_coupon.png?v=2' );
 	max-width: 645px;
 	height: 260px;
 	margin:0 auto;
@@ -728,7 +728,7 @@ body.v6.steamtown .page_container {
 	color: #FFFFFF;
 	background-position: center right;
 	background-repeat: no-repeat;
-	background-image: url( 'https://steamcdn-a.akamaihd.net/store/promo/winter2019/coin.png?v=2' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/promo/winter2019/coin.png?v=2' );
 	padding: 7px 40px 7px 0;
 	max-width: 100px;
 	text-align: right;
@@ -993,23 +993,23 @@ transform: translateY(-10px);
 }
 
 .reward_bg_1 {
-	background-image: url( 'https://steamcdn-a.akamaihd.net/store/promo/winter2019/textures/tile_1.png?v=2' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/promo/winter2019/textures/tile_1.png?v=2' );
 }
 
 .reward_bg_2 {
-	 background-image: url( 'https://steamcdn-a.akamaihd.net/store/promo/winter2019/textures/tile_2.png?v=2' );
+	 background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/promo/winter2019/textures/tile_2.png?v=2' );
 }
 
 .reward_bg_3 {
-	background-image: url( 'https://steamcdn-a.akamaihd.net/store/promo/winter2019/textures/tile_3.png?v=2' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/promo/winter2019/textures/tile_3.png?v=2' );
 }
 
 .reward_bg_4 {
-	background-image: url( 'https://steamcdn-a.akamaihd.net/store/promo/winter2019/textures/tile_4.png?v=2' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/promo/winter2019/textures/tile_4.png?v=2' );
 }
 
 .reward_bg_5 {
-	background-image: url( 'https://steamcdn-a.akamaihd.net/store/promo/winter2019/textures/tile_4.png?v=2' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/promo/winter2019/textures/tile_4.png?v=2' );
 }
 
 
@@ -1059,7 +1059,7 @@ transform: translateY(-10px);
 .reward_item_quantity_ctn.checked {
 	background-position: center;
 	background-repeat: no-repeat;
-	background-image: url( 'https://steamcdn-a.akamaihd.net/store/promo/winter2019/owned_check.png?v=2' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/promo/winter2019/owned_check.png?v=2' );
 	padding: 15px;
 }
 
@@ -1118,7 +1118,7 @@ transform: translateY(-10px);
 .rewards_profile_tier .rewards_profile_img {
 	background-position: center;
 	background-repeat: no-repeat;
-	background-image: url( 'https://steamcdn-a.akamaihd.net/store/promo/winter2019/golden_profile.png?v=2' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/promo/winter2019/golden_profile.png?v=2' );
 	width: 527px;
 	height: 281px;
 	margin: 10px 0;
@@ -1312,7 +1312,7 @@ transform: translateY(-10px);
     z-index: 10;
     -webkit-filter: drop-shadow(37px 20px 24px #00000066);
     filter: drop-shadow(37px 20px 24px #00000066);
-	background-image: url('https://steamcdn-a.akamaihd.net/store/promo/winter2019/big_red_banner.png');
+	background-image: url('https://cdn.cloudflare.steamstatic.com/store/promo/winter2019/big_red_banner.png');
 	background-repeat: no-repeat;
 	background-position: center;
     background-size: cover;
@@ -1403,7 +1403,7 @@ transform: translateY(-10px);
 .winter2019_quest_checked {
 	width: 100%;
 	height: 100%;
-	background-image: url('https://steamcdn-a.akamaihd.net/store/promo/winter2019/quest_checked.png');
+	background-image: url('https://cdn.cloudflare.steamstatic.com/store/promo/winter2019/quest_checked.png');
 	background-size: 50px 50px;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -1472,7 +1472,7 @@ transform: translateY(-10px);
 	display: inline-block;
 	height: 202px;
 	width: 796px;
-	background-image: url('https://steamcdn-a.akamaihd.net/store/promo/winter2019/sm_red_wdecor.png');
+	background-image: url('https://cdn.cloudflare.steamstatic.com/store/promo/winter2019/sm_red_wdecor.png');
 	background-repeat: no-repeat;
 	background-position: center;
 	margin-bottom: 30px;
@@ -1549,7 +1549,7 @@ transform: translateY(-10px);
     top: 36%;
     left: 0;
     width: 26%;
-    background-image: url('https://steamcdn-a.akamaihd.net/store/promo/winter2019/clipboard_check.png');
+    background-image: url('https://cdn.cloudflare.steamstatic.com/store/promo/winter2019/clipboard_check.png');
 }
 
 .winter2019_mayor_clipboard_check:hover {
@@ -1560,7 +1560,7 @@ transform: translateY(-10px);
     top: 64%;
     right: 0;
     width: 18%;
-    background-image: url('https://steamcdn-a.akamaihd.net/store/promo/winter2019/clipboard.png');
+    background-image: url('https://cdn.cloudflare.steamstatic.com/store/promo/winter2019/clipboard.png');
 }
 
 .winter2019_mayor_clipboard:hover {
@@ -1571,7 +1571,7 @@ transform: translateY(-10px);
     top: 90%;
     right: 0%;
     width: 18%;
-    background-image: url('https://steamcdn-a.akamaihd.net/store/promo/winter2019/quest_star_eyes.png');
+    background-image: url('https://cdn.cloudflare.steamstatic.com/store/promo/winter2019/quest_star_eyes.png');
 }
 
 .winter2019_mayor_quest_star_eyes:hover {

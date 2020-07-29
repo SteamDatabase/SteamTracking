@@ -107,7 +107,7 @@
                         disabled: t,
                         "data-tooltip-text": r
                       },
-                      this.props.buttonIcon || a.a.createElement(d.k, null),
+                      this.props.buttonIcon || a.a.createElement(d.l, null),
                       s && a.a.createElement(u.c, null)
                     ))
               );
@@ -3992,8 +3992,7 @@
                     case 3:
                       return (
                         (u = e.sent()),
-                        console.error("error loading emoticon list"),
-                        console.error(u),
+                        console.error("error loading emoticon list", u),
                         [3, 4]
                       );
                     case 4:

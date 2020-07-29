@@ -2,14 +2,14 @@
 
 #BG_top {
 	position:relative;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/bg_top.gif');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/skin_1/bg_top.gif');
 	background-repeat:no-repeat;
 	width:958px;
 	height:98px;
 	text-align: left;
 }
 #BG_bottom {
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/bg_bottom.gif');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/skin_1/bg_bottom.gif');
 	background-repeat:repeat-y;
 	width:958px;
 	text-align:left;
@@ -107,7 +107,7 @@
 	border: 1px solid #364050;
 	height: 122px;
 	width: 764px;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/apphubs/bg_search_hubs.png');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/apphubs/bg_search_hubs.png');
 }
 
 .gameHubContentCount
@@ -116,7 +116,7 @@
 	width: 166px;
 	height: 45px;
 	padding-left: 10px;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/apphubs/btn_search_hub.png');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/apphubs/btn_search_hub.png');
 	float: left;
 	left: -11px;
 	top: 7px;
@@ -218,23 +218,23 @@
 	padding-top:4px;
 	padding-bottom:4px;
 	margin-bottom:4px;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/playerBlockBG.gif');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/skin_1/playerBlockBG.gif');
 	font-size:10px;
 	margin-right:8px;
 }
 
 .friendBlock_offline:hover,.friendBlock_online:hover,.friendBlock_in-game:hover {
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/playerBlockBG_over.gif');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/skin_1/playerBlockBG_over.gif');
 	cursor:pointer;
 }
 
 .officerBlock	{
 	position:relative;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/officerBlockBG.gif');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/skin_1/officerBlockBG.gif');
 }
 
 .officerBlock:hover {
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/officerBlockBG_over.gif');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/skin_1/officerBlockBG_over.gif');
 	cursor:pointer;
 }
 
@@ -284,7 +284,7 @@
 #searchArea,#searchArea2 {
 	width:775px;
 	margin-left:72px;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/bg_grey_diag.gif');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/skin_1/bg_grey_diag.gif');
 	height:72px;
 	position:relative;
 }

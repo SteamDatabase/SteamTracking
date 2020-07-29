@@ -6,7 +6,7 @@
 }
 
 body.v6.labs {
-  background: url( 'https://steamcdn-a.akamaihd.net/store/labs/diving_bell/background.jpg?t=1' ) no-repeat center center fixed; 
+  background: url( 'https://cdn.cloudflare.steamstatic.com/store/labs/diving_bell/background.jpg?t=1' ) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -15,7 +15,7 @@ body.v6.labs {
 }
 
 body .responsive_page_content {
-  background: url( 'https://steamcdn-a.akamaihd.net/store/labs/diving_bell/background.jpg?t=1' ) no-repeat center center fixed; 
+  background: url( 'https://cdn.cloudflare.steamstatic.com/store/labs/diving_bell/background.jpg?t=1' ) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

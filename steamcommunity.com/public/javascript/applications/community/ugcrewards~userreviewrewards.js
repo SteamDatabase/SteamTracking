@@ -43,8 +43,8 @@
                 n.a.createElement(
                   "div",
                   { className: d.a.Throbber },
-                  n.a.createElement(s.F, { className: d.a.base }),
-                  n.a.createElement(s.F, { className: d.a.blur })
+                  n.a.createElement(s.G, { className: d.a.base }),
+                  n.a.createElement(s.G, { className: d.a.blur })
                 )
               );
               return n.a.createElement(
@@ -3544,7 +3544,7 @@
             w.createElement(
               "div",
               { className: R.Left },
-              w.createElement($.p, { className: R.BalanceIcon }),
+              w.createElement($.q, { className: R.BalanceIcon }),
               w.createElement(
                 "div",
                 { className: R.BalanceDetails },
@@ -3669,7 +3669,7 @@
           return w.createElement(
             "span",
             Object(s.a)({}, r, { className: Object(Z.a)(i, R.PointsAmount) }),
-            w.createElement($.p, { className: R.PointsAmountIcon }),
+            w.createElement($.q, { className: R.PointsAmountIcon }),
             t
           );
         };

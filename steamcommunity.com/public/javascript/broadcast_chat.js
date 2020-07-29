@@ -375,7 +375,7 @@ CBroadcastChat.prototype.AddEmoticons = function( strHTML, steamID, bLocal )
 	if( bLocal )
 		regexEmoticons = this.m_regexUserEmoticons;
 
-	return strHTML.replace( regexEmoticons, '<img class="emoticon" src="https://steamcommunity-a.akamaihd.net/economy/emoticon/$1">' );
+	return strHTML.replace( regexEmoticons, '<img class="emoticon" src="https://community.cloudflare.steamstatic.com/economy/emoticon/$1">' );
 };
 
 

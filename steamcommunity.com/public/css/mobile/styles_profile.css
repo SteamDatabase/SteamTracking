@@ -39,7 +39,7 @@ a {
 */
 
 .profileSnippet {
-	background-image: url( https://steamcommunity-a.akamaihd.net/public/images/mobile/profile-header-background.png );
+	background-image: url( https://community.cloudflare.steamstatic.com/public/images/mobile/profile-header-background.png );
 	background-size: cover;
 	background-repeat: no-repeat;
 	height: 145px;
@@ -47,7 +47,7 @@ a {
 }
 
 .groupSnippet {
-	background-image: url( https://steamcommunity-a.akamaihd.net/public/images/mobile/profile-header-background.png );
+	background-image: url( https://community.cloudflare.steamstatic.com/public/images/mobile/profile-header-background.png );
 	background-size: cover;
 	background-repeat:no-repeat;
 	height: 105px;
@@ -55,14 +55,14 @@ a {
 }
 
 .profileBadgeSnippet {
-	background-image: url( https://steamcommunity-a.akamaihd.net/public/images/mobile/profile-badge-background.png );
+	background-image: url( https://community.cloudflare.steamstatic.com/public/images/mobile/profile-badge-background.png );
 	background-size: cover;
 	background-repeat:no-repeat;
 	height: 62px;
 }
 
 .profileBadgeSnippetFrameLeft {
-	background-image: url( https://steamcommunity-a.akamaihd.net/public/images/mobile/badge-frame-left.png );
+	background-image: url( https://community.cloudflare.steamstatic.com/public/images/mobile/badge-frame-left.png );
 	background-size: 8px 62px;
 	background-repeat: no-repeat;
 	float: left;
@@ -71,7 +71,7 @@ a {
 }
 
 .profileBadgeSnippetFrameRight {
-	background-image: url( https://steamcommunity-a.akamaihd.net/public/images/mobile/badge-frame-right.png );
+	background-image: url( https://community.cloudflare.steamstatic.com/public/images/mobile/badge-frame-right.png );
 	background-size: 8px 62px;
 	background-repeat: no-repeat;
 	float: right;
@@ -80,7 +80,7 @@ a {
 }
 
 .profileBadgeSnippetFrameMiddleStretch {
-	background-image: url( https://steamcommunity-a.akamaihd.net/public/images/mobile/badge-middle-stretch.png );
+	background-image: url( https://community.cloudflare.steamstatic.com/public/images/mobile/badge-middle-stretch.png );
 	background-size: 2px 62px;
 	background-repeat: repeat-x;
 	height: 62px;
@@ -145,7 +145,7 @@ a {
 }
 
 .friendActions {
-	background-image: url( https://steamcommunity-a.akamaihd.net/public/images/mobile/profile-about-background.png );
+	background-image: url( https://community.cloudflare.steamstatic.com/public/images/mobile/profile-about-background.png );
 	background-repeat: repeat;
 	background-size: 25px 25px;
 }
@@ -291,7 +291,7 @@ a {
 }
 
 .groupInfoContainer {
-	background-image: url( https://steamcommunity-a.akamaihd.net/public/images/mobile/profile-about-background.png );
+	background-image: url( https://community.cloudflare.steamstatic.com/public/images/mobile/profile-about-background.png );
 	background-repeat: repeat;
 	background-size: 25px 25px;
 	padding-top: 10px;
@@ -416,61 +416,61 @@ span.membersOnline {
 }
 
 .friendPlayerLevel.lvl_100 {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_hexagons.png' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/community/levels_hexagons.png' );
 	text-shadow: 1px 1px #1a1a1a;
 }
 
 .friendPlayerLevel.lvl_200 {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_shields.png' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/community/levels_shields.png' );
 	text-shadow: 1px 1px #1a1a1a;
 }
 
 .friendPlayerLevel.lvl_300 {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_books.png' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/community/levels_books.png' );
 	text-shadow: 1px 1px #1a1a1a;
 }
 
 .friendPlayerLevel.lvl_400 {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_chevrons.png' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/community/levels_chevrons.png' );
 }
 
 .friendPlayerLevel.lvl_500 {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_circle2.png' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/community/levels_circle2.png' );
 }
 
 .friendPlayerLevel.lvl_600 {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_angle.png' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/community/levels_angle.png' );
 }
 
 .friendPlayerLevel.lvl_700 {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_flag.png' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/community/levels_flag.png' );
 }
 
 .friendPlayerLevel.lvl_800 {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_wings.png' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/community/levels_wings.png' );
 }
 
 .friendPlayerLevel.lvl_900 {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_arrows.png' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/community/levels_arrows.png' );
 }
 
 .friendPlayerLevel.lvl_1000 {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_crystals.png' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/community/levels_crystals.png' );
 	text-shadow: 1px 1px #1a1a1a;
 }
 
 .friendPlayerLevel.lvl_1100 {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_space.png' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/community/levels_space.png' );
 	text-shadow: 1px 1px #1a1a1a;
 }
 
 .friendPlayerLevel.lvl_1200 {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_waterelement.png' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/community/levels_waterelement.png' );
 	text-shadow: 1px 1px #1a1a1a;
 }
 
 .friendPlayerLevel.lvl_1300 {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_fireelement.png' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/community/levels_fireelement.png' );
 	text-shadow: 1px 1px #1a1a1a;
 }
 
@@ -511,7 +511,7 @@ span.membersOnline {
 */
 
 .remoteDownloadFrame {
-	background-image: url( https://steamcommunity-a.akamaihd.net/public/images/remote/downloads-background-middle.png );
+	background-image: url( https://community.cloudflare.steamstatic.com/public/images/remote/downloads-background-middle.png );
 	/* background-size: cover; */
 	height: 88px;
 	width:100%
@@ -564,7 +564,7 @@ span.membersOnline {
 }
 
 .remoteDownloadChevron {
-	background-image: url( https://steamcommunity-a.akamaihd.net/public/images/remote/downloads-chevron-down.png );
+	background-image: url( https://community.cloudflare.steamstatic.com/public/images/remote/downloads-chevron-down.png );
 	background-repeat: no-repeat;
 	float: right;
 	padding-right: 8px;
@@ -574,7 +574,7 @@ span.membersOnline {
 }
 
 .remoteDownloadChevronHide {
-	background-image: url( https://steamcommunity-a.akamaihd.net/public/images/remote/downloads-chevron-up.png );
+	background-image: url( https://community.cloudflare.steamstatic.com/public/images/remote/downloads-chevron-up.png );
 	background-repeat: no-repeat;
 	float: right;
 	padding-right: 8px;
@@ -585,7 +585,7 @@ span.membersOnline {
 
 .remoteDownloadGameListFooter {
 	display: block;
-	background-image: url( https://steamcommunity-a.akamaihd.net/public/images/remote/downloads-game-list-footer.png );
+	background-image: url( https://community.cloudflare.steamstatic.com/public/images/remote/downloads-game-list-footer.png );
 	height: 23px;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -892,7 +892,7 @@ span.statsItem {
 
 .removeIcon {
 	display: inline-block;
-	background-image: url( https://steamcommunity-a.akamaihd.net/public/images/mobile/Icon_Delete.png );
+	background-image: url( https://community.cloudflare.steamstatic.com/public/images/mobile/Icon_Delete.png );
 	background-size: 40px 32px;
 	float: right;
 	margin: 5px;
@@ -1460,7 +1460,7 @@ html.responsive .singleInventoryItemView {
 }
 
 .singleInventoryItemDismiss {
-	background-image: url( https://steamcommunity-a.akamaihd.net/public/shared/images/mobile/close_icon.png );
+	background-image: url( https://community.cloudflare.steamstatic.com/public/shared/images/mobile/close_icon.png );
 	position: absolute;
 	width: 36px;
 	height: 36px;
@@ -1471,7 +1471,7 @@ html.responsive .singleInventoryItemView {
 }
 
 .singleInventoryItemDismiss.active {
-	background-image: url( https://steamcommunity-a.akamaihd.net/public/shared/images/mobile/close_icon_gray.png );
+	background-image: url( https://community.cloudflare.steamstatic.com/public/shared/images/mobile/close_icon_gray.png );
 }
 
 .singleInventoryItemImage {

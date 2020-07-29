@@ -515,7 +515,7 @@ div.autocomplete ul li.selected {
 }
 
 .newspage_labsbanner {
-    background: url( 'https://steamcdn-a.akamaihd.net/store/labs/main/images/banner_news_page.jpg' ) center top no-repeat;
+    background: url( 'https://cdn.cloudflare.steamstatic.com/store/labs/main/images/banner_news_page.jpg' ) center top no-repeat;
     background-size: cover;
     width: 100%;
     height: 84px;

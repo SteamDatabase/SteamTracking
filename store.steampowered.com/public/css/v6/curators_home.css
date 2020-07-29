@@ -200,7 +200,7 @@ background: -webkit-linear-gradient( top, rgba(40,43,49,0) 60%, rgba(0,0,0,0.9) 
 .page_header_ctn.creator_home {
 	height: 440px;
 	position: relative;
-	background: url(https://steamcdn-a.akamaihd.net/store/about_devs/announcement_page_header.jpg) #4e4d55;
+	background: url(https://cdn.cloudflare.steamstatic.com/store/about_devs/announcement_page_header.jpg) #4e4d55;
 	background-repeat:no-repeat;
 	/* background-position-x: calc(50% + 300px); */
 	background-position-x: center;

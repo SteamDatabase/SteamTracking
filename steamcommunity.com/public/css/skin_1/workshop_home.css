@@ -1,7 +1,7 @@
 
 .mainContentsBG
 {
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/bg_highlight_blue.jpg');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/sharedfiles/bg_highlight_blue.jpg');
 }
 
 .title
@@ -68,7 +68,7 @@
 	position: relative;
 	width:279px;
 	height:30px;
-	background-image: url(https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/ig/searchbox_workshop_bg_wide.png);
+	background-image: url(https://community.cloudflare.steamstatic.com/public/images/sharedfiles/ig/searchbox_workshop_bg_wide.png);
 	background-repeat:no-repeat;
 	padding: 0;
 	margin: 0;
@@ -229,7 +229,7 @@ input.searchAppsInput
 	height: 172px;
 	margin: 0 5px 10px 5px;
 	cursor: pointer;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/Workshop_FeatureStack.png');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/sharedfiles/Workshop_FeatureStack.png');
 	background-repeat: no-repeat;
 }
 
@@ -238,7 +238,7 @@ input.searchAppsInput
 	position: absolute;
 	width: 175px;
 	height: 172px;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/Workshop_FeatureCover.png');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/sharedfiles/Workshop_FeatureCover.png');
 	background-repeat: no-repeat;
 	left: 0px;
 	bottom: -9px;
@@ -250,7 +250,7 @@ input.searchAppsInput
 	width: 175px;
 	height: 172px;
 	visibility: hidden;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/Workshop_FeatureCover_Hover.png');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/sharedfiles/Workshop_FeatureCover_Hover.png');
 	background-repeat: no-repeat;
 	left: 0px;
 	bottom: -9px
@@ -384,13 +384,13 @@ input.searchAppsInput
 	width: 275px;
 	height: 85px;
 	background-repeat: no-repeat;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/Workshop_JoinGroup.png');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/sharedfiles/Workshop_JoinGroup.png');
 	cursor: pointer;
 }
 
 .joinGroup.greenlight
 {
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/Greenlight_JoinGroup.png');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/sharedfiles/Greenlight_JoinGroup.png');
 }
 
 .joinGroupTitle

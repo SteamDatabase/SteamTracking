@@ -103,9 +103,9 @@ function CLoginPromptManager( strBaseURL, rgOptions )
 
 	// include some additional scripts we may need
 	if ( typeof BigNumber == 'undefined' )
-		$J.ajax( { url: 'https://steamcommunity-a.akamaihd.net/public/shared/javascript/crypto/jsbn.js', type: 'get', dataType: 'script', cache: true } );
+		$J.ajax( { url: 'https://community.cloudflare.steamstatic.com/public/shared/javascript/crypto/jsbn.js', type: 'get', dataType: 'script', cache: true } );
 	if ( typeof RSA == 'undefined' )
-		$J.ajax( { url: 'https://steamcommunity-a.akamaihd.net/public/shared/javascript/crypto/rsa.js', type: 'get', dataType: 'script', cache: true } );
+		$J.ajax( { url: 'https://community.cloudflare.steamstatic.com/public/shared/javascript/crypto/rsa.js', type: 'get', dataType: 'script', cache: true } );
 }
 
 CLoginPromptManager.prototype.BIsIos = function() { return this.m_strMobileClientType == 'ios'; };

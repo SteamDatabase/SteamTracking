@@ -70,7 +70,7 @@ div.hover {
 	background-repeat: no-repeat;
 	width: 13px;
 	height: 26px;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/hover_arrow_both.gif?v=1' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/sharedfiles/hover_arrow_both.gif?v=1' );
 }
 
 .hover_arrow_left .hover_arrow_inner {
@@ -117,7 +117,7 @@ div.hover {
 {
 	height: 20px;
 	overflow: hidden;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/icon_show_state_blue.png');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/sharedfiles/icon_show_state_blue.png');
 	background-repeat: no-repeat;
 	padding-left: 30px;
 }

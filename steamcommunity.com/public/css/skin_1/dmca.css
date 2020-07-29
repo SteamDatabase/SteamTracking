@@ -19,9 +19,9 @@ body {
 
 	position: relative;
 	padding-bottom: 20px;
-	background: url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/content_header_rule.png' ) 0px 0px no-repeat;
-	background:	url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/group_content_topbackground.png' ) 0px 8px no-repeat,
-				url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/content_header_rule.png' ) -4px 0px no-repeat;
+	background: url( 'https://community.cloudflare.steamstatic.com/public/images/groups/content_header_rule.png' ) 0px 0px no-repeat;
+	background:	url( 'https://community.cloudflare.steamstatic.com/public/images/groups/group_content_topbackground.png' ) 0px 8px no-repeat,
+				url( 'https://community.cloudflare.steamstatic.com/public/images/groups/content_header_rule.png' ) -4px 0px no-repeat;
 }
 
 /* left column */

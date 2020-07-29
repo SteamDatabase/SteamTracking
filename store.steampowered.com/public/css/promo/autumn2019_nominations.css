@@ -621,7 +621,7 @@ background: -webkit-linear-gradient( 326deg, rgba(97,100,101,0.3) 0%,rgba(226,24
 }
 
 .steamaward_nominate_award .award_icon {
-	background: url('https://steamcdn-a.akamaihd.net/store/promo/autumn2019/steamaward_icon.png') no-repeat center center;
+	background: url('https://cdn.cloudflare.steamstatic.com/store/promo/autumn2019/steamaward_icon.png') no-repeat center center;
 	width: 178px;
 	height: 227px;
 	position: absolute;
@@ -635,7 +635,7 @@ background: -webkit-linear-gradient( 326deg, rgba(97,100,101,0.3) 0%,rgba(226,24
 screen and ( min-resolution: 2dppx)
 {
 	.steamaward_nominate_award .award_icon {
-		background-image: url('https://steamcdn-a.akamaihd.net/store/promo/autumn2016/steamaward_icon2x.png');
+		background-image: url('https://cdn.cloudflare.steamstatic.com/store/promo/autumn2016/steamaward_icon2x.png');
 		background-size: 100% 100%;
 	}
 }
@@ -709,7 +709,7 @@ background: -webkit-linear-gradient( 326deg, rgba(97,100,101,0.3) 0%,rgba(226,24
 	top: -5px;
 	width: 30px;
 	height: 30px;
-	background: url( 'https://steamcdn-a.akamaihd.net/store/promo/autumn2019/check2019.png' ) no-repeat center;
+	background: url( 'https://cdn.cloudflare.steamstatic.com/store/promo/autumn2019/check2019.png' ) no-repeat center;
 }
 
 .mslight {
@@ -935,7 +935,7 @@ a.steamaward_nominate_gamepage_ctn.gamewinner:hover{
 
 .faq_background {
 	background-color: #081d22;
-	background-image: url( 'https://steamcdn-a.akamaihd.net/store/promo/autumn2019/Steam_Awards_Header_2019.jpg' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/promo/autumn2019/Steam_Awards_Header_2019.jpg' );
 	background-position: center;
 	background-repeat: no-repeat;
 	height: 687px;
@@ -981,7 +981,7 @@ iframe {
 }
 
 .gallery_ctn {
-	background: url( 'https://steamcdn-a.akamaihd.net/store/promo/autumn2017/gallery_bg.jpg' ) no-repeat;
+	background: url( 'https://cdn.cloudflare.steamstatic.com/store/promo/autumn2017/gallery_bg.jpg' ) no-repeat;
 	margin-left: -121px;
 	margin-right: -123px;
 	height: 1031px;
@@ -1386,7 +1386,7 @@ body.v6.steamaward_nominations_faq #footer_spacer {
 }
 
 .autumn2016_home .hardware_ctn.double .hardware_content .right:hover {
-	background: url( 'https://steamcdn-a.akamaihd.net/store/promo/autumn2016/banner_hardware_2_bg_hover.jpg' ); ?>' ) no-repeat;
+	background: url( 'https://cdn.cloudflare.steamstatic.com/store/promo/autumn2016/banner_hardware_2_bg_hover.jpg' ); ?>' ) no-repeat;
 	background-size: 100% 100%;
 }
 
@@ -1810,7 +1810,7 @@ body.v6.steamawards #footer_spacer {
 
 .award_lineup_ctn {
 	text-align: center;
-	background: url( 'https://steamcdn-a.akamaihd.net/store/promo/winter2017/Voting_collection.jpg' ) center center no-repeat;
+	background: url( 'https://cdn.cloudflare.steamstatic.com/store/promo/winter2017/Voting_collection.jpg' ) center center no-repeat;
 	min-height: 415px;
 }
 
@@ -1916,7 +1916,7 @@ body.v6.steamawards #footer_spacer {
 	position: absolute;
 	left: 0;
 	top: -5px;
-	background: url( 'https://steamcdn-a.akamaihd.net/store/promo/winter2017/yourvote_check.png' ) top left no-repeat;
+	background: url( 'https://cdn.cloudflare.steamstatic.com/store/promo/winter2017/yourvote_check.png' ) top left no-repeat;
 	width: 52px;
 	height: 24px;
 }
@@ -2083,7 +2083,7 @@ a.votenow_btn:hover {
 }
 
 .writeins {
-	background: url( 'https://steamcdn-a.akamaihd.net/store/promo/winter2017/Finalist_Community.jpg') center top;
+	background: url( 'https://cdn.cloudflare.steamstatic.com/store/promo/winter2017/Finalist_Community.jpg') center top;
 	width: 980px;
 	min-height: 380px;
 	margin: 0 auto;

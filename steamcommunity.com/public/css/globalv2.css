@@ -483,7 +483,7 @@ body.flat_page > .perf_timing_area .perf_timing_link, body.headerless_page > .pe
 
 .commentthread_subscribe_ctn.waiting .commentthread_subscribe_check {
 	display: block;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/login/throbber.gif' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/login/throbber.gif' );
 	background-size: contain;
 }
 
@@ -741,7 +741,7 @@ a.commentthread_allcommentslink:hover {
 	position: absolute;
 	left: 33px;
 	top: 24px;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/skin_1/comment_friendindicator_small.png' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/skin_1/comment_friendindicator_small.png' );
 	width: 20px;
 	height: 20px;
 	z-index: 2;
@@ -924,7 +924,7 @@ a.gray_square_button:hover {
 }
 
 .gray_square_button .left, .gray_square_button .right, .gray_square_button .button_label {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/economy/gray_square_button.png' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/economy/gray_square_button.png' );
 }
 
 .gray_square_button .left, .gray_square_button .right {
@@ -1106,12 +1106,12 @@ select.gray_bevel {
 	text-align: center;
 	line-height: 50px;
 	text-decoration: none;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images//sharedfiles/share_status_off.jpg' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images//sharedfiles/share_status_off.jpg' );
 }
 
 .share_controls_steam:hover, .share_controls_steam:hover a
 {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images//sharedfiles/share_status_on.jpg' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images//sharedfiles/share_status_on.jpg' );
 	text-decoration: none;
 }
 
@@ -1383,7 +1383,7 @@ img.emoticon {
 	html.responsive .responsive_tab_ctn.sharedfiles_responsive_tab .responsive_tab_control select {
 		width: 98%;
 		-webkit-appearance: none;
-		background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/mobile/dropdown_30.png' );
+		background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/mobile/dropdown_30.png' );
 		background-repeat: no-repeat;
 		background-position: right 5px;
 		background-size: 15px;
@@ -1452,7 +1452,7 @@ img.emoticon {
 	html.responsive .responsive_tab_ctn.sharedfiles_responsive_tab .responsive_tab_control select {
 		width: 98%;
 		-webkit-appearance: none;
-		background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/mobile/dropdown_30.png' );
+		background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/mobile/dropdown_30.png' );
 		background-repeat: no-repeat;
 		background-position: right 5px;
 		background-size: 15px;

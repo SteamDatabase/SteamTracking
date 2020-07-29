@@ -53,7 +53,7 @@
 
 
 .gamenotifications_top_content {
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/profile/profile_gamenotifications_turnicon.png');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/profile/profile_gamenotifications_turnicon.png');
 	background-repeat:no-repeat;
 	background-position: 13px 20px;
 	width: 940px;
@@ -105,7 +105,7 @@
 }
 
 #gamenotifications_right_content {
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images//sharedfiles/icons/icon_edit.png');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images//sharedfiles/icons/icon_edit.png');
 	background-repeat: no-repeat;
 	background-position: 13px 21px;
 	width: 249px;
@@ -232,7 +232,7 @@ gamenotifications_app_session_message {
 }
 
 .gamenotifications_show_sessions {
-	background-image: url('https://steamcommunity-a.akamaihd.net/public/images/profile/icon_doubledownarrow_grey.png');
+	background-image: url('https://community.cloudflare.steamstatic.com/public/images/profile/icon_doubledownarrow_grey.png');
 	background-position: 10px 7px;
 	background-repeat: no-repeat;
 	font-family: Arial, Tahoma;
@@ -245,7 +245,7 @@ gamenotifications_app_session_message {
 }
 
 .gamenotifications_hide_sessions {
-	background-image: url('https://steamcommunity-a.akamaihd.net/public/images/profile/icon_doubleuparrow_grey.png');
+	background-image: url('https://community.cloudflare.steamstatic.com/public/images/profile/icon_doubleuparrow_grey.png');
 	background-position: 10px 7px;
 	background-repeat: no-repeat;
 	font-family: Arial, Tahoma;

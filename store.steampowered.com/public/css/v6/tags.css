@@ -294,7 +294,7 @@ body.tag_page h3 {
 }
 
 .tag_announce_cloud_bg {
-	background: url( 'https://steamcdn-a.akamaihd.net/store/tagging/tag_cloud.jpg') center top no-repeat;
+	background: url( 'https://cdn.cloudflare.steamstatic.com/store/tagging/tag_cloud.jpg') center top no-repeat;
 	min-height: 487px;
 }
 

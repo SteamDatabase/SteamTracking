@@ -16,7 +16,7 @@ select {
 	width: 100%;
 }
 .bluefade {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images//page_bg_blue.png');
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images//page_bg_blue.png');
 	margin-top: -21px;
 	padding-top: 20px;
 	background-position: 0px -1px;
@@ -326,7 +326,7 @@ select {
 	height: 21px;
 	padding: 0px;
 	padding-left: 32px;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images//buttons/report_ico_tiled.png');
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images//buttons/report_ico_tiled.png');
 	background-position: 8px -4px;
 	background-repeat: no-repeat;
 	display: inline-block;

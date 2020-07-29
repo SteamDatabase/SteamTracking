@@ -58,7 +58,7 @@ function JoinTeam()
 			$J( '#welcome_joined_team' ).html( strWelcome );
 			$J( '.prix_jointeam_select_ctn' ).hide();
 			$J( '.prix_jointeam_joined_ctn' ).show();
-			$J( '.prix_jointeam_joined_ctn' ).css( 'background-image', 'url( "https://steamcdn-a.akamaihd.net/store/promo/summer2019/helmet_' + strRawName + '.png?v2" )' );
+			$J( '.prix_jointeam_joined_ctn' ).css( 'background-image', 'url( "https://cdn.cloudflare.steamstatic.com/store/promo/summer2019/helmet_' + strRawName + '.png?v2" )' );
 		}
 	}).fail( function()
 	{
@@ -226,7 +226,7 @@ function BoostTeam()
 		}
 		else
 		{
-			var strImageSrc = 'https://steamcdn-a.akamaihd.net/store/promo/summer2019/button_boost_default.png';
+			var strImageSrc = 'https://cdn.cloudflare.steamstatic.com/store/promo/summer2019/button_boost_default.png';
 			var strDialog = '<div class="prix_dialog_ctn">';
 			var strDialogDesc = '<div class="prix_dialog_content">';
 			strDialogDesc += '<div class="prix_consumable_drop" >' + 'Nice work, ace. You\'ve boosted your team\'s distance and speed in the race.' + '</div>';
@@ -234,7 +234,7 @@ function BoostTeam()
 			{
 				if ( data.granted_consumables.length == 2 )
 				{
-					strImageSrc = "https://steamcdn-a.akamaihd.net/store/promo/summer2019/button_attack_both_granted.png";
+					strImageSrc = "https://cdn.cloudflare.steamstatic.com/store/promo/summer2019/button_attack_both_granted.png";
 					strDialogDesc += '<div class="prix_consumable_drop" >' + 'You\'ve also been randomly awarded a Steal Progress Attack! You can use this to steal boost progress from another team and apply it to your team' + '</div>';
 					strDialogDesc += '<div class="prix_consumable_drop" >' + 'You\'ve also been randomly awarded a Slow Down Attack! You can use this to slow down another team of your choice.' + '</div>';
 				}
@@ -244,13 +244,13 @@ function BoostTeam()
 					{
 						if (data.granted_consumables[i].type == 4 )
 						{
-							strImageSrc = 'https://steamcdn-a.akamaihd.net/store/promo/summer2019/button_setback_attack.png';
+							strImageSrc = 'https://cdn.cloudflare.steamstatic.com/store/promo/summer2019/button_setback_attack.png';
 							strDialogDesc += '<div class="prix_consumable_drop" >' + 'You\'ve also been randomly awarded a Steal Progress Attack! You can use this to steal boost progress from another team and apply it to your team' + '</div>';
 
 						}
 						else if (data.granted_consumables[i].type == 1 )
 						{
-							strImageSrc = 'https://steamcdn-a.akamaihd.net/store/promo/summer2019/random_drop_attack.png';
+							strImageSrc = 'https://cdn.cloudflare.steamstatic.com/store/promo/summer2019/random_drop_attack.png';
 							strDialogDesc += '<div class="prix_consumable_drop" >' + 'You\'ve also been randomly awarded a Slow Down Attack! You can use this to slow down another team of your choice.' + '</div>';
 						}
 					}

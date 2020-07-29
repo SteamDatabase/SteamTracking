@@ -288,7 +288,7 @@ background: -webkit-linear-gradient( 30deg, rgba(97,100,101,0.3) 5%,rgba(226,244
 }
 
 a.trigger, a.activetrigger {
-	background: url(https://steamcommunity-a.akamaihd.net/public/images/skin_1/arrowDn9x5.gif) no-repeat scroll right center;
+	background: url(https://community.cloudflare.steamstatic.com/public/images/skin_1/arrowDn9x5.gif) no-repeat scroll right center;
 	border-right: 7px solid #000; /* HAAAAAX! */
 	display:inline-block;
 	vertical-align: middle;

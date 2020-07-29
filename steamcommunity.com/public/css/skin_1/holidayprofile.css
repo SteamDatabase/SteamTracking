@@ -1,7 +1,7 @@
 
 
 .holidayprofile .profile_header_bg {
-	background: url('https://steamcommunity-a.akamaihd.net/public/images/profile/holidayprofile/header_bg.png') no-repeat center top;
+	background: url('https://community.cloudflare.steamstatic.com/public/images/profile/holidayprofile/header_bg.png') no-repeat center top;
 	height: 280px;
 	z-index: 2;
 	max-width: 1057px;
@@ -19,7 +19,7 @@
 	bottom: 0;
 	left: 0;
 
-	background: url( 'https://steamcommunity-a.akamaihd.net/public/images/profile/holidayprofile/header_front.png' ) no-repeat center top;
+	background: url( 'https://community.cloudflare.steamstatic.com/public/images/profile/holidayprofile/header_front.png' ) no-repeat center top;
 	pointer-events: none;
 }
 
@@ -57,7 +57,7 @@
 
 
 .holidayprofile .profile_customization:not(.none_selected) {
-	background: url( 'https://steamcommunity-a.akamaihd.net/public/images/profile/holidayprofile/showcase_repeat.png' ) repeat-y center -6px;
+	background: url( 'https://community.cloudflare.steamstatic.com/public/images/profile/holidayprofile/showcase_repeat.png' ) repeat-y center -6px;
 	overflow: visible;
 	margin-top: 50px;
 	margin-bottom: 100px;
@@ -65,7 +65,7 @@
 
 .holidayprofile .profile_customization:not(.none_selected)::before {
 	content: '';
-	background: url( 'https://steamcommunity-a.akamaihd.net/public/images/profile/holidayprofile/showcase_top.png' ) no-repeat center top;
+	background: url( 'https://community.cloudflare.steamstatic.com/public/images/profile/holidayprofile/showcase_top.png' ) no-repeat center top;
 	width: 664px;
 	height: 85px;
 	position: absolute;
@@ -77,7 +77,7 @@
 
 .holidayprofile .profile_customization:not(.none_selected)::after {
 	content: '';
-	background: url( 'https://steamcommunity-a.akamaihd.net/public/images/profile/holidayprofile/showcase_bottom.png' ) no-repeat center bottom;
+	background: url( 'https://community.cloudflare.steamstatic.com/public/images/profile/holidayprofile/showcase_bottom.png' ) no-repeat center bottom;
 	width: 664px;
 	height: 85px;
 	position: absolute;

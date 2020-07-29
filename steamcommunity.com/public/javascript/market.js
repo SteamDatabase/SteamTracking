@@ -1724,7 +1724,7 @@ $J(function() {
 		{
 			elFilters.empty();
 
-			var elThrobber = $J('<img src="https://steamcommunity-a.akamaihd.net/public/images/login/throbber.gif" alt="Loading" style="margin-top: 139px">');
+			var elThrobber = $J('<img src="https://community.cloudflare.steamstatic.com/public/images/login/throbber.gif" alt="Loading" style="margin-top: 139px">');
 			elFilters.append( elThrobber );
 			elFilters.css( 'text-align', 'center' );
 

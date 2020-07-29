@@ -94,7 +94,7 @@ function showAliasPopup(e)
 	aliasContainer = $( 'NamePopupAliases' );
 
 	throbber = document.createElement( 'img' );
-	throbber.src = 'https://steamcommunity-a.akamaihd.net/public/images/login/throbber.gif';
+	throbber.src = 'https://community.cloudflare.steamstatic.com/public/images/login/throbber.gif';
 	aliasContainer.appendChild( throbber );
 
 	new Ajax.Request( ajaxAliasUrl, {
@@ -163,7 +163,7 @@ function ajaxInviteGroup(e)
 	pickEl.style.left = popTL[1] + 'px';
 
 	throbber = document.createElement('img');
-	throbber.src = 'https://steamcommunity-a.akamaihd.net/public/images/login/throbber.gif';
+	throbber.src = 'https://community.cloudflare.steamstatic.com/public/images/login/throbber.gif';
 	pickEl.appendChild(throbber);
 
 	document.getElementsByTagName('body')[0].appendChild(pickEl);
@@ -365,7 +365,7 @@ var Slideshow = Class.create( {
 			var id = entry.key;
 			var data = entry.value;
 			
-			var elemImg = new Element( 'img', { src: 'https://steamcommunity-a.akamaihd.net/public/images/trans.gif', width: data.width, height: data.height } );
+			var elemImg = new Element( 'img', { src: 'https://community.cloudflare.steamstatic.com/public/images/trans.gif', width: data.width, height: data.height } );
 			elemImg.className = 'slideshowSlideImg';
 			var elemLink = new Element( 'a', { href: data.url, id: 'img_' + id } );
 			elemLink.className = 'slideshowSlideItem';

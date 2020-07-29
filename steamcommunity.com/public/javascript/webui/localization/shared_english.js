@@ -136,6 +136,9 @@ LocalizationReady("shared", "english", {
   EventCurator_BrowseMore: "Show More",
   EventCurator_FeedCaption_Long:
     "Follow more news sources to get news right in your Steam News Hub!",
+  EventCurator_DismissTitle: "Hide news suggestions",
+  EventCurator_DismissBody:
+    "This will hide news suggestions for this device. You can still find news by going to the Steam Curators tab in the news hub",
 
   EventCalendar_Title: "Steam%1$sNews Hub",
   EventCalendar_TabTitle_Global: "Steam News Hub",
@@ -228,6 +231,7 @@ LocalizationReady("shared", "english", {
   EventCalender_Reason_steam: "This post is from the Steam Platform",
   EventCalender_Reason_topx: "Game is in the Top Sellers",
   EventCalender_Reason_featured: "This is a featured post",
+  EventCalender_Reason_curator: "You are following this curator",
   EventCalender_Hide_Reason_recent: "Hide posts from recently played games",
   EventCalender_Hide_Reason_library: "Hide posts from games in your library",
   EventCalender_Hide_Reason_following:
@@ -238,6 +242,7 @@ LocalizationReady("shared", "english", {
   EventCalender_Hide_Reason_steam: "Hide posts from the Steam Platform",
   EventCalender_Hide_Reason_topx: "Hide posts from the Top Sellers",
   EventCalender_Hide_Reason_featured: "Hide featured posts",
+  EventCalender_Hide_Reason_curator: "Hide curator posts",
 
   EventCalendar_ForceDesktopView: "Request desktop view",
   EventCalendar_ShowResponsiveView: "Request responsive view",
@@ -308,7 +313,9 @@ LocalizationReady("shared", "english", {
     "Manage the types and sources of news that you see in your News Hub",
   EventCalendar_FiltersDescription_NonPersonalized:
     "Manage event types that you see on this page",
-  EventCalendar_NewsChannels: "Your News Channels",
+  EventCalendar_NewsChannels: "Your News & Events",
+  EventCalendar_NewsChannels_Global: "Global News & Events",
+  EventCalendar_NewsChannels_Discover: "Discover",
   EventCalendar_NewsChannel_YourNews: "Your News",
   EventCalendar_NewsChannel_Upcoming: "Your Upcoming Events",
   EventCalendar_NewsChannel_UpcomingShort: "Upcoming",
@@ -316,7 +323,11 @@ LocalizationReady("shared", "english", {
   EventCalendar_NewsChannel_Personalized: "Personalized",
   EventCalendar_NewsChannel_Filtered: "Filtered",
   EventCalendar_NewsChannel_AllGames: "From all games",
-  EventCalendar_NewsChannel_TopSellers: "From Top Sellers",
+  EventCalendar_NewsChannel_TopSellers: "From Top sources",
+  EventCalendar_NewsChannel_Press: "News Curators",
+  EventCalendar_NewsChannel_Steam: "Steam Official",
+  EventCalendar_NewsChannel_SteamSubtitle: "Steam Blog and News",
+  EventCalendar_NewsChannel_All: "All News",
 
   EventDisplay_Admin_Title: "Admin tools:",
   EventDisplay_ViewInLibrary: "View in Library",
@@ -519,8 +530,8 @@ LocalizationReady("shared", "english", {
   EventDashBoard_Location_NewsHubDetail: "News Hub",
 
   EventDisplay_ReferencedApps_Joiner: ", ",
-  EventDisplay_ReferencedApps: "Referenced app: %2$s.",
-  EventDisplay_ReferencedApps_Plural: "Referenced apps: %2$s.",
+  EventDisplay_ReferencedApps: "Referenced content: %2$s.",
+  EventDisplay_ReferencedApps_Plural: "Referenced content: %2$s.",
 
   AddToWishlist: "Add to your Wishlist",
   Wishlisted: "On your Wishlist",
@@ -569,8 +580,14 @@ LocalizationReady("shared", "english", {
   TimeInterval_1HourXMinutes: "1 hour and %1$s minutes",
   TimeInterval_LessThanAnHour: "less than an hour",
   TimeInterval_XMinutes: "%1$s minutes",
+  TimeInterval_XMinutesXSeconds: "%1$s minutes, %2$s seconds",
+  TimeInterval_XMinutes1Second: "%1$s minutes, 1 second",
   TimeInterval_1Minute: "1 minute",
+  TimeInterval_1MinuteXSeconds: "1 minute, %1$s seconds",
+  TimeInterval_1Minute1Second: "1 minute, 1 second",
   TimeInterval_LessThanAMinute: "less than a minute",
+  TimeInterval_XSeconds: "%1$s seconds",
+  TimeInterval_1Second: "1 second",
 
   TimeSince_XYears: "%1$s years ago",
   TimeSince_1YearXMonths: "1 year and %1$s months ago",
@@ -588,8 +605,14 @@ LocalizationReady("shared", "english", {
   TimeSince_1HourXMinutes: "1 hour and %1$s minutes ago",
   TimeSince_LessThanAnHour: "less than an hour ago",
   TimeSince_XMinutes: "%1$s minutes ago",
+  TimeSince_XMinutesXSeconds: "%1$s minutes, %2$s seconds ago",
+  TimeSince_XMinutes1Second: "%1$s minutes, 1 second ago",
   TimeSince_1Minute: "1 minute ago",
+  TimeSince_1MinuteXSeconds: "1 minute, %1$s seconds ago",
+  TimeSince_1Minute1Second: "1 minute, 1 second ago",
   TimeSince_LessThanAMinute: "less than a minute ago",
+  TimeSince_XSeconds: "%1$s seconds ago",
+  TimeSince_1Second: "1 second ago",
   TimeSince_ThisWeek: "This week",
 
   Time_Now: "Live Now",
@@ -791,17 +814,17 @@ LocalizationReady("shared", "english", {
     "This event already exists in Steam. Would you like to update its content from the RSS item? Useful if RSS item content has changed. This will remove any customization done using the editor.",
   RSSManager_PostEvent_InFlight:
     "Please wait for Steam server to complete action.",
-  RSSManager_PostEvent_Success_feed: "RSS Feed has been successfully updated",
+  RSSManager_PostEvent_Success_feed: "RSS feed has been successfully updated",
   RSSManager_PostEvent_Success:
     "Your announcement has been successfully created. To edit further go here: ",
   RSSManager_PostEvent_EventLink: "Edit Event Here",
   RSSManager_CreateFeed_Permissions_v1:
-    "I agree that I am authorized to provide this rss feed to be stored and redistributed via Steam.",
+    "I agree that I am authorized to provide this RSS feed to be stored and redistributed via Steam.",
   RSSManager_CreateFeed_Conduct_v1:
-    "confirm that the contents of this rss feed that are redistributed through Steam will comply with the Steam Online Conduct Rules.",
+    "I confirm that the contents of this RSS feed that are redistributed through Steam will comply with the Steam Online Conduct Rules.",
   RSSManager_CreateFeed_Conduct_Link: "Read Steam Online Conduct Rules here.",
   RSSManager_Status_Automation_Desc:
-    "Automatically post news announcements from RSS Feed",
+    "Automatically post news announcements from RSS feed",
   RSSManager_Status_Automation_Activate: "Activate RSS Feed",
   RSSManager_Status_Automation_DisableFailed:
     "Failed to deactivate feed. Please try again later.",
@@ -1386,6 +1409,11 @@ LocalizationReady("shared", "english", {
   Sale_BrowserSortOption_PlayedNowDemo: "Playing Now",
   Sale_BrowserSortOption_PlayedNowDemo_ttip:
     "Games sorted by current online user count",
+  Sale_BrowserSortOption_RecentlyReleased: "Recently Released",
+  Sale_BrowserSortOption_RecentlyReleased_ttip: "Recently released games",
+  Sale_BrowserSortOption_PopularPurchased: "Popular",
+  Sale_BrowserSortOption_PopularPurchased_ttip:
+    "The most popular games right now",
   SalePage_WatchForDrop_Minutes_Developer:
     "Watch the stream for %1$s minutes and get item drops from the developer when the event is over!",
   SalePage_WatchForDrop_Minutes_CreatorNamed:
@@ -1599,6 +1627,27 @@ LocalizationReady("shared", "english", {
 
   GameHover_Tags: "Tags",
   GameHover_UserReviewsHeader: "User Reviews",
+
+  bytes: "%1$s B",
+  bytes_PerSecond: "%1$s B/s",
+  bits: "%1$s b",
+  bits_PerSecond: "%1$s b/s",
+  Kilobytes: "%1$s KB",
+  Kilobytes_PerSecond: "%1$s KB/s",
+  Kilobits: "%1$s Kb",
+  Kilobits_PerSecond: "%1$s Kb/s",
+  Megabytes: "%1$s MB",
+  Megabytes_PerSecond: "%1$s MB/s",
+  Megabits: "%1$s Mb",
+  Megabits_PerSecond: "%1$s Mb/s",
+  Gigabytes: "%1$s GB",
+  Gigabytes_PerSecond: "%1$s Gb/s",
+  Gigabits: "%1$s Gb",
+  Gigabits_PerSecond: "%1$s Gb/s",
+  Terabytes: "%1$s TB",
+  Terabytes_PerSecond: "%1$s TB/s",
+  Terabits: "%1$s Tb",
+  Terabits_PerSecond: "%1$s Tb/s",
 
   shared_dummy: "dont translate"
 });

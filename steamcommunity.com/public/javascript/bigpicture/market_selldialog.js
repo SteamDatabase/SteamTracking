@@ -6,12 +6,12 @@ SellOrderPopup = {
 						<include src="file://{resources}/styles/steamstyles.css" /> \
 						<include src="file://{resources}/styles/msgbox.css" /> \
 						<include src="file://{resources}/styles/community/community.css" /> \
-						<include src="https://steamcommunity-a.akamaihd.net/public/css/bigpicture/market.css?v=valveisgoodatcaching" /> \
-						<include src="https://steamcommunity-a.akamaihd.net/public/css/bigpicture/market_selldialog.css?v=valveisgoodatcaching" /> \
+						<include src="https://community.cloudflare.steamstatic.com/public/css/bigpicture/market.css?v=valveisgoodatcaching" /> \
+						<include src="https://community.cloudflare.steamstatic.com/public/css/bigpicture/market_selldialog.css?v=valveisgoodatcaching" /> \
 					</styles> \
 					<scripts> \
-						<include src="https://steamcommunity-a.akamaihd.net/public/shared/javascript/bigpicture/base.js?v=valveisgoodatcaching&amp;l=english" /> \
-						<include src="https://steamcommunity-a.akamaihd.net/public/javascript/bigpicture/market_buyorderdialog.js?v=valveisgoodatcaching&amp;l=english" /> \
+						<include src="https://community.cloudflare.steamstatic.com/public/shared/javascript/bigpicture/base.js?v=valveisgoodatcaching&amp;l=english" /> \
+						<include src="https://community.cloudflare.steamstatic.com/public/javascript/bigpicture/market_buyorderdialog.js?v=valveisgoodatcaching&amp;l=english" /> \
 					</scripts> \
 					<Panel class="MarketPopupWrapper Complete"> \
 						<Panel class="MarketPopup MarketSellOrderDialog" oncancel="ClosePollPanel();" defaultfocus="Loading" > \

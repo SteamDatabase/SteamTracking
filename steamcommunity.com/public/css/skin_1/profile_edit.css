@@ -2,12 +2,12 @@
 	width:958px;
 	margin:0;
 	padding:0;
-	background-image: url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/contentBG_fill.gif');
+	background-image: url('https://community.cloudflare.steamstatic.com/public/images/skin_1/contentBG_fill.gif');
 	background-repeat:repeat-y;
 }
 
 #mainContents {
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/controlPanelTop.gif');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/skin_1/controlPanelTop.gif');
 	background-repeat:no-repeat;
 	width:936px;
 	min-width:936px;

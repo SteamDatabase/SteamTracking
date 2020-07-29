@@ -371,7 +371,7 @@ function GetCurrencyCode( currencyId )
 
 function GetAvatarURLFromHash( hash, size )
 {
-	var strURL = 'https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/' + hash.substring( 0, 2 ) + '/' + hash;
+	var strURL = 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/' + hash.substring( 0, 2 ) + '/' + hash;
 
 	if ( size == 'full' )
 		strURL += '_full.jpg';
@@ -438,7 +438,7 @@ function StandardCommunityBan( steamid, elemLink )
 
 function ReportProfile( steamID )
 {
-	var $Content = $J('<div class="group_invite_throbber"><img src="https://steamcommunity-a.akamaihd.net/public/images/login/throbber.gif"></div>');
+	var $Content = $J('<div class="group_invite_throbber"><img src="https://community.cloudflare.steamstatic.com/public/images/login/throbber.gif"></div>');
 	var $Modal = ShowDialog( 'Report Profile', $Content );
 	var sURL = 'https://steamcommunity.com/actions/ReportProfile/' + steamID;
 	$J.ajax( {
@@ -538,7 +538,7 @@ CEmoticonPopup.prototype.BuildPopup = function()
 	for( var i = 0; i < CEmoticonPopup.sm_rgEmoticons.length; i++ )
 	{
 		var strEmoticonName = CEmoticonPopup.sm_rgEmoticons[i].replace( /:/g, '' );
-		var strEmoticonURL = 'https://steamcommunity-a.akamaihd.net/economy/emoticon/' + strEmoticonName;
+		var strEmoticonURL = 'https://community.cloudflare.steamstatic.com/economy/emoticon/' + strEmoticonName;
 
 		var $Emoticon = $J('<div/>', {'class': 'emoticon_option', 'data-emoticon': strEmoticonName } );
 		var $Img = $J('<img/>', {'src': strEmoticonURL, 'class': 'emoticon' } );
@@ -2680,7 +2680,7 @@ CGameSelectorOwnedGames = Class.create( CGameSelector, {
 		{
 			if ( !this.m_bOwnedGamesReady )
 			{
-				this.elSuggestions.update( '<div style="text-align: center; width: 200px; padding: 5px 0;"><img src="https://steamcommunity-a.akamaihd.net/public/images/login/throbber.gif"></div>' );
+				this.elSuggestions.update( '<div style="text-align: center; width: 200px; padding: 5px 0;"><img src="https://community.cloudflare.steamstatic.com/public/images/login/throbber.gif"></div>' );
 				this.bHaveSuggestions = true;
 				this.ShowSuggestions();
 			}
@@ -3024,7 +3024,7 @@ function iSwapFullURL( imgID, newImg )
 
 function iSwap( imgID, newImg )
 {
-	var newImgPath = "https://steamcommunity-a.akamaihd.net/public/images/" + newImg;
+	var newImgPath = "https://community.cloudflare.steamstatic.com/public/images/" + newImg;
 	setImage( imgID, newImgPath );
 }
 

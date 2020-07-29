@@ -11,19 +11,19 @@ CBossState.prototype = Object.create(CBattleState.prototype);
 
 CBossState.prototype.Load = function()
 {
-	LoadAsset( 'boss-sprites0', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/boss-sprites0.json' );
-	LoadAsset( 'boss-sprites1', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/boss-sprites1.json' );
-	LoadAsset( 'boss-sprites2', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/boss-sprites2.json' );
-	LoadAsset( 'boss-sprites3', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/boss-sprites3.json' );
-	LoadAsset( 'boss-death-0', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/boss-death-0.json' );
-	LoadAsset( 'boss-death-1', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/boss-death-1.json' );
-	LoadAsset( 'boss_laser', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/boss_laser.json' );
-	LoadAsset( 'boss_music', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/sfx/SS2018_Saliens_Boss2.{ogg,mp3}' );
-	LoadAsset( 'boss_roar', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/sfx/boss_roar.{ogg,mp3}' );
-	LoadAsset( 'boss_death', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/sfx/boss_vox_death.{ogg,mp3}' );
-	LoadAsset( 'boss_attack', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/sfx/boss_vox_attack_01.{ogg,mp3}' );
-	LoadAsset( 'boss_lasershoot', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/sfx/boss_laser_shoot.{ogg,mp3}' );
-	LoadAsset( 'boss_laserhit', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/sfx/boss_laser_impact.{ogg,mp3}' );
+	LoadAsset( 'boss-sprites0', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/boss-sprites0.json' );
+	LoadAsset( 'boss-sprites1', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/boss-sprites1.json' );
+	LoadAsset( 'boss-sprites2', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/boss-sprites2.json' );
+	LoadAsset( 'boss-sprites3', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/boss-sprites3.json' );
+	LoadAsset( 'boss-death-0', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/boss-death-0.json' );
+	LoadAsset( 'boss-death-1', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/boss-death-1.json' );
+	LoadAsset( 'boss_laser', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/boss_laser.json' );
+	LoadAsset( 'boss_music', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/sfx/SS2018_Saliens_Boss2.{ogg,mp3}' );
+	LoadAsset( 'boss_roar', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/sfx/boss_roar.{ogg,mp3}' );
+	LoadAsset( 'boss_death', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/sfx/boss_vox_death.{ogg,mp3}' );
+	LoadAsset( 'boss_attack', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/sfx/boss_vox_attack_01.{ogg,mp3}' );
+	LoadAsset( 'boss_lasershoot', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/sfx/boss_laser_shoot.{ogg,mp3}' );
+	LoadAsset( 'boss_laserhit', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/sfx/boss_laser_impact.{ogg,mp3}' );
 	CBattleState.prototype.Load.call( this );
 };
 
@@ -370,9 +370,9 @@ CBossState.prototype.GenerateSalienAlly = function( playerData )
 	salienData.arms = playerData.salien.arms - 1;
 	salienData.legs = playerData.salien.legs - 1;
 	salienData.hat_itemid = playerData.salien.hat_itemid;
-	salienData.hat_image = 'https://steamcdn-a.akamaihd.net/steamcommunity/public/images/' + playerData.salien.hat_image;
+	salienData.hat_image = 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/' + playerData.salien.hat_image;
 	salienData.shirt_itemid = playerData.salien.shirt_itemid;
-	salienData.shirt_image = 'https://steamcdn-a.akamaihd.net/steamcommunity/public/images/' + playerData.salien.shirt_image ;
+	salienData.shirt_image = 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/' + playerData.salien.shirt_image ;
 
 	var allySalien = new CSalien(PIXI.loader.resources, salienData);
 	allySalien.position.set(positionObj.x, positionObj.y);

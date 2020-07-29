@@ -265,7 +265,7 @@ html.responsive .responsive_page_menu .FixedElementOnScrollWrapper_padding
 	float: left;
 	width: 4px;
 	height: 8px;
-	background-image: url( https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/workshop_collection_processArrow.png);
+	background-image: url( https://community.cloudflare.steamstatic.com/public/images/sharedfiles/workshop_collection_processArrow.png);
 	background-repeat: no-repeat;
 	padding-right: 10px;
 }
@@ -290,7 +290,7 @@ html.responsive .responsive_page_menu .FixedElementOnScrollWrapper_padding
 	bottom: -8px;
 	left: 50%;
 	margin-left: -7.5px;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/guides/selection_bubble_arrow.png');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/sharedfiles/guides/selection_bubble_arrow.png');
 	background-repeat:no-repeat;
 	width: 15px;
 	height: 8px;
@@ -566,7 +566,7 @@ html.responsive .responsive_page_menu .FixedElementOnScrollWrapper_padding
 	display: inline-block;
 	width: 15px;
 	height: 16px;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/icons/icon_double_arrows.png');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/sharedfiles/icons/icon_double_arrows.png');
 	float: right;
 	background-position: 15px 0px;
 }
@@ -824,7 +824,7 @@ input[type=text].editGuideSubSectionTitleField
 
 .editGuideInsertOptionControls .popupArrowTop
 {
-	background-image: url( https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/guides/popup_arrow_up.png);
+	background-image: url( https://community.cloudflare.steamstatic.com/public/images/sharedfiles/guides/popup_arrow_up.png);
 	background-repeat: no-repeat;
 	width: 11px;
 	height: 6px;
@@ -835,7 +835,7 @@ input[type=text].editGuideSubSectionTitleField
 
 .editGuideInsertOptionControls .popupArrowRight
 {
-	background-image: url( https://steamcommunity-a.akamaihd.net/public/images/skin_1/arrow_rt.gif);
+	background-image: url( https://community.cloudflare.steamstatic.com/public/images/skin_1/arrow_rt.gif);
 	background-repeat: no-repeat;
 	width: 5px;
 	height: 9px;

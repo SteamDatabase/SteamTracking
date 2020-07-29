@@ -16,7 +16,7 @@
 	height: 64px;
 	padding: 4px;
 
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/admin_avatar_dropshadow.png' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/groups/admin_avatar_dropshadow.png' );
 }
 
 .group_admin_header .admin_avatar_dropshadow img {
@@ -464,7 +464,7 @@ html.responsive .formRowFields .gray_bevel {
 }
 
 .forum_dragdrop_titlebar .forum_grabber {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/forum_manage_grabber.png?v=1');
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/groups/forum_manage_grabber.png?v=1');
 	background-repeat: repeat-x;
 	background-position: center;
 	height: 27px;

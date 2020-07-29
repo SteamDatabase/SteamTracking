@@ -94,7 +94,7 @@ body.v6.winter2019_sale_home .page_background_holder {
     border-radius: 3px;
 }
 .token_ctn {
-    background: url( 'https://steamcdn-a.akamaihd.net/store/promo/winter2019/home_coin_button.png' );
+    background: url( 'https://cdn.cloudflare.steamstatic.com/store/promo/winter2019/home_coin_button.png' );
     position: absolute;
     background-position-x: right;
     background-repeat: no-repeat;
@@ -151,7 +151,7 @@ a#store_search_link img {
 
 #logo_holder {
 display: inline-block; width: 176px; height: 44px; 
-background-image: url( 'https://steamcdn-a.akamaihd.net/store/promo/winter2019/globalheader_logo.png' );
+background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/promo/winter2019/globalheader_logo.png' );
 background-size: 176px, 44px;
 }
 
@@ -381,7 +381,7 @@ body.v6 .sale_capsule {
 
 /* Top Games of 2019 Banner */
 .bestof_banner {
-    background: url('https://steamcdn-a.akamaihd.net/store/promo/winter2019/bestof_banner_background.jpg') no-repeat top center #1f2126;
+    background: url('https://cdn.cloudflare.steamstatic.com/store/promo/winter2019/bestof_banner_background.jpg') no-repeat top center #1f2126;
     padding-top: 72px;
     margin-top: 20px;
     border-top: 1px solid #353841;
@@ -2051,7 +2051,7 @@ img.tag_square_img
 }
 
 .steamaward_winners_trophy {
-	background: url( 'https://steamcdn-a.akamaihd.net/store/promo/steamawards2019/SteamAward_noshadow.png?v=1' ) no-repeat top center;
+	background: url( 'https://cdn.cloudflare.steamstatic.com/store/promo/steamawards2019/SteamAward_noshadow.png?v=1' ) no-repeat top center;
 	width: 505px;
 	background-size: contain;
 	height: 65%;

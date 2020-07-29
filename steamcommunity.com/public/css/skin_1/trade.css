@@ -28,7 +28,7 @@ body.tutorial_mode .pagecontent {
 }
 
 .trade_box.trade_box_withbg > .trade_box_contents {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/economy/trade_tradebox_headerbg.png' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/economy/trade_tradebox_headerbg.png' );
 	background-position: -1px 0;
 	background-repeat: no-repeat;
 	/*border-top: 1px solid #000000;*/
@@ -235,7 +235,7 @@ body.tutorial_mode .pagecontent {
 	right: 0;
 	top: 0;
 	bottom: 0;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/economy/transparentbg.png' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/economy/transparentbg.png' );
 	z-index: 10;
 }
 
@@ -285,7 +285,7 @@ body.tutorial_mode .pagecontent {
 
 .trade_area .item.hover {
 	background-position: -1px -197px;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/economy/trade_itemholder.png' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/economy/trade_itemholder.png' );
 	background-repeat: no-repeat;
 }
 
@@ -357,7 +357,7 @@ h2 {
 	width: 16px;
 	height: 16px;
 
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/skin_1/info_btn.png' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/skin_1/info_btn.png' );
 	background-position: left top;
 	background-repeat: no-repeat;
 }
@@ -379,7 +379,7 @@ h2 {
 }
 
 .readystate {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/economy/trade_readystates.png' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/economy/trade_readystates.png' );
 	background-repeat: no-repeat;
 	width: 424px;
 	height: 28px;
@@ -520,7 +520,7 @@ div.appselect #appselect_arrow {
 	top: 0;
 	width: 17px;
 	height: 40px;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/economy/trade_appselect_arrow.png' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/economy/trade_appselect_arrow.png' );
 	background-repeat: no-repeat;
 	background-position: top center;
 }
@@ -700,7 +700,7 @@ div.included_trade_offer_note_ctn {
 	width: 17px;
 	height: 18px;
 	background-repeat: no-repeat;
-	background-image: url( https://steamcommunity-a.akamaihd.net/public/images/skin_1/quotearrow_graybg_flipped.png);
+	background-image: url( https://community.cloudflare.steamstatic.com/public/images/skin_1/quotearrow_graybg_flipped.png);
 }
 
 .included_trade_offer_note_ctn .included_trade_offer_note_sender
@@ -745,7 +745,7 @@ div#chat_send_btn.active {
 	background-repeat: repeat-x;
 
 	background-color: #4c4a48;
-	background-image: url('https://steamcommunity-a.akamaihd.net/public/images/economy/item_action_btn.png');
+	background-image: url('https://community.cloudflare.steamstatic.com/public/images/economy/item_action_btn.png');
 	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAClJREFUeNpiyExLZvr//z8G/vcPRP8D0/+A9H8o/e8fMhuhBk0/QIABALdaQAnvsp4ZAAAAAElFTkSuQmCC');
 }
 
@@ -761,7 +761,7 @@ div#chat_send_btn.active {
 }
 
 .trade_confirmbtn .cap, .trade_confirmbtn {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/economy/trade_bigbutton.png' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/economy/trade_bigbutton.png' );
 	height: 50px;
 }
 
@@ -963,7 +963,7 @@ div#chat_send_btn.active {
 
 
 .tutorial_arrow .leftcap, .tutorial_arrow .rightcap, .tutorial_arrow .content {
-	background-image: url('https://steamcommunity-a.akamaihd.net/public/images/economy/trade_tutorial_arrow.png');
+	background-image: url('https://community.cloudflare.steamstatic.com/public/images/economy/trade_tutorial_arrow.png');
 }
 
 #tutorial_arrow_step1 {
@@ -1034,7 +1034,7 @@ div#chat_send_btn.active {
 
 #trade_currency_dialog_conversion {
 	position: absolute;
-	background: #383635 bottom no-repeat url( 'https://steamcommunity-a.akamaihd.net/public/images/economy/trade_currency_dialog.png?v=3' );
+	background: #383635 bottom no-repeat url( 'https://community.cloudflare.steamstatic.com/public/images/economy/trade_currency_dialog.png?v=3' );
 	border: 1px solid black;
 	width: 436px;
 	height: 418px;
@@ -1050,7 +1050,7 @@ div#chat_send_btn.active {
 	position: absolute;
 	right: -1px;
 	bottom: -1px;
-	background: right bottom no-repeat url( 'https://steamcommunity-a.akamaihd.net/public/images/economy/trade_currency_dialog_corner.png?v=1' );
+	background: right bottom no-repeat url( 'https://community.cloudflare.steamstatic.com/public/images/economy/trade_currency_dialog_corner.png?v=1' );
 	width: 174px;
 	height: 153px;
 }
@@ -1083,7 +1083,7 @@ div#chat_send_btn.active {
 }
 
 .currency_dialog_input_area {
-	background: no-repeat url( 'https://steamcommunity-a.akamaihd.net/public/images/economy/trade_currency_entry_background.png?v=1' );
+	background: no-repeat url( 'https://community.cloudflare.steamstatic.com/public/images/economy/trade_currency_entry_background.png?v=1' );
 	width: 136px;
 	height: 54px;
 	padding-left: 54px;
@@ -1092,7 +1092,7 @@ div#chat_send_btn.active {
 }
 
 .currency_dialog_input_area_short {
-	background: no-repeat url( 'https://steamcommunity-a.akamaihd.net/public/images/economy/trade_currency_entry_short_background.png?v=1' );
+	background: no-repeat url( 'https://community.cloudflare.steamstatic.com/public/images/economy/trade_currency_entry_short_background.png?v=1' );
 	padding-left: 6px;
 }
 
@@ -1310,7 +1310,7 @@ div#chat_send_btn.active {
 
 .trade_currency_slider_ctn .slider .handle {
 	position: absolute;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/economy/slider_handle.png' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/economy/slider_handle.png' );
 	background-position: left top;
 	background-repeat: no-repeat;
 	width: 24px;
@@ -1324,7 +1324,7 @@ div#chat_send_btn.active {
 
 #trade_currency_dialog_warning {
 	position: absolute;
-	background: #383635 bottom no-repeat url( 'https://steamcommunity-a.akamaihd.net/public/images/economy/trade_currency_dialog.png?v=3' );
+	background: #383635 bottom no-repeat url( 'https://community.cloudflare.steamstatic.com/public/images/economy/trade_currency_dialog.png?v=3' );
 	border: 1px solid black;
 	width: 436px;
 	height: 164px;
@@ -1600,7 +1600,7 @@ html.responsive .responsive_fixonscroll_ctn div.appselect {
 	}
 
 	html.responsive .trade_offer:not(.ready) .trade_slot:not(.has_item) .slot_inner {
-		background: url( 'https://steamcommunity-a.akamaihd.net/public/images/economy/trade_slot_additem.png' ) no-repeat;
+		background: url( 'https://community.cloudflare.steamstatic.com/public/images/economy/trade_slot_additem.png' ) no-repeat;
 		background-size: 100% 100%;
 	}
 }

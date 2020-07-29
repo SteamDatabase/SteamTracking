@@ -49,7 +49,7 @@ GSteamBroadcasts = {
 		$ImgCtn.append( $J('<img/>', rgImageProperties ) );
 		$CapCtn.append( $ImgCtn );
 
-		var rgPlayIconProperties = { src: 'https://steamstore-a.akamaihd.net/public/shared/images/apphubs/play_icon80.png', class: "live_stream_play_icon" };
+		var rgPlayIconProperties = { src: 'https://store.cloudflare.steamstatic.com/public/shared/images/apphubs/play_icon80.png', class: "live_stream_play_icon" };
 		$ImgCtn.append( $J('<img/>', rgPlayIconProperties ) );
 
 		if( bAddTitleBar )
@@ -236,7 +236,7 @@ function BuildCreatorCapsuleToAppend( oItem )
 	$FollowLink.bind('updateFollowState', function () {
 		if ( $FollowLink.data('ds-following') )
 		{
-			$FollowLink.html( '<span><img src="https://steamstore-a.akamaihd.net/public/images/v6/ico/ico_selected_green.png">Following</span>' );
+			$FollowLink.html( '<span><img src="https://store.cloudflare.steamstatic.com/public/images/v6/ico/ico_selected_green.png">Following</span>' );
 			$FollowLink.addClass( "following_button" );
 			$FollowLink.removeClass( "follow_button" );
 		}

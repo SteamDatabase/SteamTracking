@@ -1,6 +1,6 @@
 
  body.v6.summer2020_sale_home {
-	background: url('https://steamcdn-a.akamaihd.net/store/promo/summer2020/clouds.png?v=3') no-repeat center top, #052842;
+	background: url('https://cdn.cloudflare.steamstatic.com/store/promo/summer2020/clouds.png?v=3') no-repeat center top, #052842;
 	background-size: cover;
 }
 
@@ -154,7 +154,7 @@ body.v6.summer2020_sale_home .home_ctn.discovery_queue_ctn, body.v6.summer2020_s
 		font-weight: bold; /* bold */
 
 			font-style: italic;
-	background: url('https://steamcdn-a.akamaihd.net/store/promo/summer2020/encore_bg.png?v=1') no-repeat center;
+	background: url('https://cdn.cloudflare.steamstatic.com/store/promo/summer2020/encore_bg.png?v=1') no-repeat center;
 	background-size: cover;
 	background-blend-mode: darken;
 }
@@ -167,7 +167,7 @@ body.v6.summer2020_sale_home .home_ctn.discovery_queue_ctn, body.v6.summer2020_s
 }
 
 .home_sticker_ctn {
-	background: url('https://steamcdn-a.akamaihd.net/store/promo/summer2020/sticker_banner.png?v=2') no-repeat center top;
+	background: url('https://cdn.cloudflare.steamstatic.com/store/promo/summer2020/sticker_banner.png?v=2') no-repeat center top;
 
 }
 
@@ -179,7 +179,7 @@ body.v6.summer2020_sale_home .home_ctn.discovery_queue_ctn, body.v6.summer2020_s
 }
 
 .home_giftcard_ctn {
-	background: url('https://steamcdn-a.akamaihd.net/store/promo/summer2020/coupon_bg_games.png?v=2') no-repeat center top;
+	background: url('https://cdn.cloudflare.steamstatic.com/store/promo/summer2020/coupon_bg_games.png?v=2') no-repeat center top;
 	overflow: hidden;
 	min-height: 200px;
 	position: relative;
@@ -245,7 +245,7 @@ a#store_search_link img {
 
 #logo_holder {
 	display: inline-block; width: 176px; height: 44px;
-	background-image: url( 'https://steamcdn-a.akamaihd.net/store/promo/winter2019/globalheader_logo.png' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/promo/winter2019/globalheader_logo.png' );
 	background-size: 176px, 44px;
 }
 
@@ -476,7 +476,7 @@ body.v6 .sale_capsule {
 
 /* Top Games of 2019 Banner */
 .bestof_banner {
-	background: url('https://steamcdn-a.akamaihd.net/store/promo/winter2019/bestof_banner_background.jpg') no-repeat top center #1f2126;
+	background: url('https://cdn.cloudflare.steamstatic.com/store/promo/winter2019/bestof_banner_background.jpg') no-repeat top center #1f2126;
 	padding-top: 72px;
 	margin-top: 20px;
 	border-top: 1px solid #353841;
@@ -563,7 +563,7 @@ body.v6 .sale_capsule {
 
 .home_category_ctn .home_category_title_ctn::after {
 	content: "";
-	background: url('https://steamcdn-a.akamaihd.net/store/promo/summer2020/wave_tile.png') repeat center/30%, linear-gradient( to top left, #234055 15.74%, #4085BB 100% ), #175886;
+	background: url('https://cdn.cloudflare.steamstatic.com/store/promo/summer2020/wave_tile.png') repeat center/30%, linear-gradient( to top left, #234055 15.74%, #4085BB 100% ), #175886;
 	opacity: 0.3;
 	top: 0;
 	left: 0;
@@ -902,7 +902,7 @@ body.v6 .sale_capsule {
 	}
 
 	html.responsive .home_sticker_ctn {
-		background: url('https://steamcdn-a.akamaihd.net/store/promo/summer2020/sticker_banner_mobile.png?v=1') no-repeat center top;
+		background: url('https://cdn.cloudflare.steamstatic.com/store/promo/summer2020/sticker_banner_mobile.png?v=1') no-repeat center top;
 	}
 
 	html.responsive .summer_banner_ctn {

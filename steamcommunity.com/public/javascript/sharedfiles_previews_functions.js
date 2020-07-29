@@ -222,7 +222,7 @@ function DoneFileUpload( success, uploadDetailsArray )
 		var divControls = new Element( 'div', { 'class' : 'manageSortablePreviewControls' } );
 		var javascriptLink = "javascript:RemovePreviewForPublishedFile( '" + htmlID + "', publishedfileid, '" + uploadDetails['previewid'] + "' );";
 		var removeLink = new Element( 'a', { 'class' : 'btn_grey_black btn_small_thin', 'href' : javascriptLink } );
-		var removeImage = new Element( 'img', { 'src' : "https://steamcommunity-a.akamaihd.net/public/images//sharedfiles/icons/icon_delete.png" } );
+		var removeImage = new Element( 'img', { 'src' : "https://community.cloudflare.steamstatic.com/public/images//sharedfiles/icons/icon_delete.png" } );
 		removeLink.appendChild( removeImage );
 		divControls.appendChild( removeLink );
 		newPreview.appendChild( divControls );

@@ -86,7 +86,7 @@ body.chat_body
 
 	width: 47px;
 	height: 27px;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/chat/beta_tag.png');
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/chat/beta_tag.png');
 }
 
 .chat_page_settings_area 
@@ -185,7 +185,7 @@ body.chat_body
 {
 	height: 20px;
 	line-height: 20px;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/chat/friendgroup_bg.png' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/chat/friendgroup_bg.png' );
 	background-repeat: repeat-y;
 	background-position: left;
 
@@ -389,7 +389,7 @@ body.chat_body
 
 	padding: 5px;
 
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/chat/icon_settings.png' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/chat/icon_settings.png' );
 	background-repeat: no-repeat;
 	background-position: center;
 

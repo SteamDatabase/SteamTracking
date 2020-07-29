@@ -2,12 +2,12 @@
 	width:958px;
 	margin:0;
 	padding:0;
-	background-image: url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/contentBG_fill.gif');
+	background-image: url('https://community.cloudflare.steamstatic.com/public/images/skin_1/contentBG_fill.gif');
 	background-repeat:repeat-y;
 }
 
 #mainContents {
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/contentBG_top.gif');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/skin_1/contentBG_top.gif');
 	background-repeat:no-repeat;
 	width:936px;
 	min-width:936px;
@@ -242,7 +242,7 @@ p.sectionText {
 	width:246px;
 	height:18px;
 	padding:5px 0px 0px 8px;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/rightColHeadRibbon.gif');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/skin_1/rightColHeadRibbon.gif');
 }
 
 .rightSectionHolder {
@@ -265,7 +265,7 @@ p.sectionText {
 	height:8px;
 	margin:0;
 	padding:0;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/rightStatsBlockHeader.gif');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/skin_1/rightStatsBlockHeader.gif');
 }
 #rightStatsBlockFooter {
 	width:254px;
@@ -273,14 +273,14 @@ p.sectionText {
 	margin:0;
 	margin-bottom:24px;
 	padding:0;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/rightStatsBlockFooter.gif');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/skin_1/rightStatsBlockFooter.gif');
 }
 .rightStatsBlock {
 	width:253px;
 	border-left:solid #4a4a4a 1px;
 	margin:0;
 	padding:4px 0px 4px 0px;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/rightStatsBlockBG.gif');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/skin_1/rightStatsBlockBG.gif');
 	background-repeat:repeat-y;
 	line-height: 14px;
 }
@@ -290,7 +290,7 @@ p.sectionText {
 	height:9px;
 	margin:0;
 	padding:0;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/rightActionBlockHeader.gif');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/skin_1/rightActionBlockHeader.gif');
 }
 #rightActionBlockFooter {
 	width:254px;
@@ -299,13 +299,13 @@ p.sectionText {
 	margin-bottom:16px;
 	margin-top:-4px;
 	padding:0;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/rightActionBlockFooter.gif');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/skin_1/rightActionBlockFooter.gif');
 }
 #rightActionBlock {
 	width:254px;
 	margin:0;
 	padding:8px 0px 0px 0px;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/rightActionBlockBG.gif');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/skin_1/rightActionBlockBG.gif');
 	background-repeat:repeat-y;
 }
 
@@ -1094,7 +1094,7 @@ a.popup_menu_item:hover h4 {
 	border: 1px solid #706d69;
 	border-radius: 2px;
 	cursor: pointer;
-	background-image: url( https://steamcommunity-a.akamaihd.net/public/images/header/btn_header_installsteam_gray.png?v=1 );
+	background-image: url( https://community.cloudflare.steamstatic.com/public/images/header/btn_header_installsteam_gray.png?v=1 );
 	background-position: 0 -21px;
 }
 
@@ -1139,14 +1139,14 @@ a.popup_menu_item:hover h4 {
 
 #BG_top {
 	position:relative;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/bg_top.gif');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/skin_1/bg_top.gif');
 	background-repeat:no-repeat;
 	width:958px;
 	height:98px;
 	text-align: left;
 }
 #BG_bottom {
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/bg_bottom.gif');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/skin_1/bg_bottom.gif');
 	background-repeat:repeat-y;
 	width:958px;
 	text-align:left;
@@ -1248,7 +1248,7 @@ a.popup_menu_item:hover h4 {
 	position: absolute;
 	top: -4px;
 	left: -1px;
-	background-image: url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/badge_quest_transition.png' );
+	background-image: url('https://community.cloudflare.steamstatic.com/public/images/skin_1/badge_quest_transition.png' );
 	width: 851px;
 	height: 19px;
 }

@@ -49,7 +49,7 @@
 
 .Broadcast_Card .apphub_CardContentMain
 {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/broadcast/apphub_default_thumbnail.jpg?v=2' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/broadcast/apphub_default_thumbnail.jpg?v=2' );
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }

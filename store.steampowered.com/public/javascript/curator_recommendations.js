@@ -493,7 +493,7 @@ function ShowEditHandles( bIsCreatorHome, bIsDLCPage )
 
 		var elOverlay = $J('<div class="edit_overlay"></div>');
 
-		var elButton = $J('<div class="edit_button"><img src="https://steamstore-a.akamaihd.net/public/images/v6/curator_edit_section.png"></div>');
+		var elButton = $J('<div class="edit_button"><img src="https://store.cloudflare.steamstatic.com/public/images/v6/curator_edit_section.png"></div>');
 
 		var rgNodeData = $container.data('sectionConfig');
 		if( !rgNodeData )
@@ -588,13 +588,13 @@ function ShowEditHandles( bIsCreatorHome, bIsDLCPage )
 		elListSelect.val( rgNodeData.listid );
 
 		var elListName = $J('<span class="fieldvalue"></span>').text( rgNodeData.listid_label ? rgNodeData.listid_label : "Select..." );
-		var elListEditButton = $J('<img src="https://steamstore-a.akamaihd.net/public/images/v6/curator_edit_section.png">');
+		var elListEditButton = $J('<img src="https://store.cloudflare.steamstatic.com/public/images/v6/curator_edit_section.png">');
 
 		var elTagName = $J('<span class="fieldvalue"></span>').text( rgNodeData.tagid_label ? rgNodeData.tagid_label : "Select..." );
-		var elTagEditButton = $J('<img src="https://steamstore-a.akamaihd.net/public/images/v6/curator_edit_section.png">');
+		var elTagEditButton = $J('<img src="https://store.cloudflare.steamstatic.com/public/images/v6/curator_edit_section.png">');
 
 		var elAppName = $J('<span class="fieldvalue"></span>').text( rgNodeData.app_name ? rgNodeData.app_name : "Select..." );
-		var elTagAppButton = $J('<img src="https://steamstore-a.akamaihd.net/public/images/v6/curator_edit_section.png">');
+		var elTagAppButton = $J('<img src="https://store.cloudflare.steamstatic.com/public/images/v6/curator_edit_section.png">');
 
 		var elListId = $J('<input type="hidden" name="listid">').val( rgNodeData.listid );
 		var elTagId = $J('<input type="hidden" name="tagid">').val( rgNodeData.tagid );
@@ -703,7 +703,7 @@ function ShowEditHandles( bIsCreatorHome, bIsDLCPage )
 				appid: elAppID.val()
 			};
 
-			var elUpdating = $J("\r\n\t\t\t\t<div class=\"visible edit_overlay updating_section\">\r\n\t\t\t\t\t<h2 style=\"color:white;\">Saving...<\/h2>\r\n\t\t\t\t\t<img src=\"https:\/\/steamstore-a.akamaihd.net\/public\/images\/login\/throbber.gif\">\r\n\t\t\t\t<\/div>" );
+			var elUpdating = $J("\r\n\t\t\t\t<div class=\"visible edit_overlay updating_section\">\r\n\t\t\t\t\t<h2 style=\"color:white;\">Saving...<\/h2>\r\n\t\t\t\t\t<img src=\"https:\/\/store.cloudflare.steamstatic.com\/public\/images\/login\/throbber.gif\">\r\n\t\t\t\t<\/div>" );
 			elOverlay.replaceWith( elUpdating );
 			elOptions.hide();
 
@@ -1048,7 +1048,7 @@ function ShowAvatarHandle()
 
 	var elOverlay = $J('<div class="edit_overlay"></div>');
 
-	var elButton = $J('<div class="edit_button"><img src="https://steamstore-a.akamaihd.net/public/images/v6/curator_edit_section.png"></div>');
+	var elButton = $J('<div class="edit_button"><img src="https://store.cloudflare.steamstatic.com/public/images/v6/curator_edit_section.png"></div>');
 
 	elButton.click( function(){
 		elOptions.show();
@@ -1101,7 +1101,7 @@ function ShowHeaderImageHandle( )
 
 	var elOverlay = $J('<div class="edit_overlay"></div>');
 
-	var elButton = $J('<div class="edit_button"><img src="https://steamstore-a.akamaihd.net/public/images/v6/curator_edit_section.png"></div>');
+	var elButton = $J('<div class="edit_button"><img src="https://store.cloudflare.steamstatic.com/public/images/v6/curator_edit_section.png"></div>');
 
 	elButton.click( function(){
 		elOptions.show();

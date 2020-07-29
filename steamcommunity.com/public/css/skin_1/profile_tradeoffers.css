@@ -220,7 +220,7 @@
 }
 
 .tradeoffer_items_rule {
-	background: url( 'https://steamcommunity-a.akamaihd.net/public/images/economy/tradeoffer_rule.png' ) no-repeat top center;
+	background: url( 'https://community.cloudflare.steamstatic.com/public/images/economy/tradeoffer_rule.png' ) no-repeat top center;
 	height: 25px;
 	margin-bottom: -3px;
 }
@@ -270,7 +270,7 @@ a.right_controls_large_block {
 
 .right_controls_large_block_active_bg {
 	position: absolute;
-	background: url( 'https://steamcommunity-a.akamaihd.net/public/images/economy/tradeoffer_rightcol_selected.png' ) no-repeat;
+	background: url( 'https://community.cloudflare.steamstatic.com/public/images/economy/tradeoffer_rightcol_selected.png' ) no-repeat;
 	width: 265px;
 	height: 50px;
 
@@ -288,7 +288,7 @@ a.right_controls_large_block {
 
 .right_controls_secondary_active_bg {
 	position: absolute;
-	background: url( 'https://steamcommunity-a.akamaihd.net/public/images/economy/tradeoffer_rightcol_selected_small.png' ) no-repeat;
+	background: url( 'https://community.cloudflare.steamstatic.com/public/images/economy/tradeoffer_rightcol_selected_small.png' ) no-repeat;
 	width: 265px;
 	height: 31px;
 
@@ -416,7 +416,7 @@ div.gray_bevel.newurl_updated {
 	width: 17px;
 	height: 18px;
 	background-repeat: no-repeat;
-	background-image: url( https://steamcommunity-a.akamaihd.net/public/images/skin_1/quotearrow_graybg_flipped.png);
+	background-image: url( https://community.cloudflare.steamstatic.com/public/images/skin_1/quotearrow_graybg_flipped.png);
 }
 
 

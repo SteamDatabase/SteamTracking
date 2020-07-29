@@ -460,15 +460,15 @@ body.v6 .responsive_page_template_content h3 {
 }
 
 .about_install.win:not(.mobile) .about_install_steam_link:after {
-	background-image: url('https://steamcdn-a.akamaihd.net/store/about/icon-windows.svg');
+	background-image: url('https://cdn.cloudflare.steamstatic.com/store/about/icon-windows.svg');
 }
 
 .about_install.mac:not(.mobile) .about_install_steam_link:after {
-	background-image: url('https://steamcdn-a.akamaihd.net/store/about/icon-macos.svg');
+	background-image: url('https://cdn.cloudflare.steamstatic.com/store/about/icon-macos.svg');
 }
 
 .about_install.linux:not(.mobile) .about_install_steam_link:after {
-	background-image: url('https://steamcdn-a.akamaihd.net/store/about/icon-steamos.svg');
+	background-image: url('https://cdn.cloudflare.steamstatic.com/store/about/icon-steamos.svg');
 }
 
 a.about_install_steam_link:hover {

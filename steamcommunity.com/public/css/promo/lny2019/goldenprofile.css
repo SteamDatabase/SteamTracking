@@ -20,14 +20,14 @@ div.profile_page.golden_profile
 .golden_profile_header
 {
 	height: 62px;
-	background: url( 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/lny2019/goldenprofile/top_gold_desktop.png') center top no-repeat;
+	background: url( 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/lny2019/goldenprofile/top_gold_desktop.png') center top no-repeat;
 }
 
 .lny_pig_center
 {
 	display: none;
 	margin: auto;
-	background: url( 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/lny2019/goldenprofile/middle_top_pig.png' ) center center no-repeat;
+	background: url( 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/lny2019/goldenprofile/middle_top_pig.png' ) center center no-repeat;
 	width: 78px;
 	height: 62px;
 }
@@ -74,7 +74,7 @@ html.client .lny_sides_position
 	right: 0;
 	top: 0;
 	bottom: 0;
-	background: url( 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/lny2019/goldenprofile/side_gold.jpg' ) center top repeat-y;
+	background: url( 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/lny2019/goldenprofile/side_gold.jpg' ) center top repeat-y;
 }
 
 .lny_side.right .lny_side_background {
@@ -100,7 +100,7 @@ html.client .lny_sides_position
 .golden_profile .profile_content.has_profile_background,
 .golden_profile .profile_content
 {
-	background: url( 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/lny2019/goldenprofile/LNY_bg_pattern.jpg' );
+	background: url( 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/lny2019/goldenprofile/LNY_bg_pattern.jpg' );
 	background-size: 100px 100px;
 }
 
@@ -134,7 +134,7 @@ html.client .lny_sides_position
 	top: 0;
 	width: 51px;
 	height: 148px;
-	background: url( 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/lny2019/goldenprofile/corner_gold.png' ) no-repeat top center;
+	background: url( 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/lny2019/goldenprofile/corner_gold.png' ) no-repeat top center;
 }
 
 .lny_side.left .lny_top
@@ -150,7 +150,7 @@ html.client .lny_sides_position
 .lny_pig
 {
 	position: absolute;
-	background: url( 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/lny2019/goldenprofile/side_pig.png' ) no-repeat top right;
+	background: url( 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/lny2019/goldenprofile/side_pig.png' ) no-repeat top right;
 	width: 91px;
 	height: 94px;
 	top: -10px;
@@ -206,7 +206,7 @@ html.client .lny_sides_position
 
 .lny_strings
 {
-	background: url( 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/lny2019/goldenprofile/strings.png' ) no-repeat top right;
+	background: url( 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/lny2019/goldenprofile/strings.png' ) no-repeat top right;
 	height: 60px;
 	width: 13px;
 	margin: 0 auto;
@@ -228,13 +228,13 @@ html.client .lny_sides_position
 
 .golden_profile .profile_header_bg_texture
 {
-	background-image: url( 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/lny2019/goldenprofile/profile_header_bg_texture_gold.jpg' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/lny2019/goldenprofile/profile_header_bg_texture_gold.jpg' );
 	background-position: bottom;
 }
 
 .golden_profile .profile_customization
 {
-	background-image: url( 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/lny2019/goldenprofile/showcase_bg_gold.png' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/lny2019/goldenprofile/showcase_bg_gold.png' );
 	background-color: #0b0c0e;
 }
 
@@ -261,7 +261,7 @@ html.client .lny_sides_position
 	}
 
 	html.responsive .golden_profile_header {
-		background: url( 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/lny2019/goldenprofile/top_gold_mobile.png') center top no-repeat;
+		background: url( 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/lny2019/goldenprofile/top_gold_mobile.png') center top no-repeat;
 		background-size: contain;
 
 		height: 0;

@@ -23,7 +23,7 @@
 
 .browseOption.pending, .browseOption.accepted, .browseOption.rated, .browseOption.votelater, .browseOption.myfollowedfiles, .browseOption.myfavorites, .browseOption.favoritedbyfriends
 {
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/ig/nav_greenlit.png');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/sharedfiles/ig/nav_greenlit.png');
 	background-repeat:no-repeat;
 	background-position: 10px 8px;
 	padding-left: 35px;
@@ -31,37 +31,37 @@
 
 .browseOption.pending
 {
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/ig/nav_greenlit.png');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/sharedfiles/ig/nav_greenlit.png');
 }
 
 .browseOption.accepted
 {
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/ig/nav_available.png');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/sharedfiles/ig/nav_available.png');
 }
 
 .browseOption.rated
 {
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/ig/nav_vote_yes.png');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/sharedfiles/ig/nav_vote_yes.png');
 }
 
 .browseOption.votelater
 {
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/ig/nav_remind_later.png');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/sharedfiles/ig/nav_remind_later.png');
 }
 
 .browseOption.myfollowedfiles
 {
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/ig/nav_following.png');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/sharedfiles/ig/nav_following.png');
 }
 
 .browseOption.myfavorites
 {
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/ig/nav_favorites.png');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/sharedfiles/ig/nav_favorites.png');
 }
 
 .browseOption.favoritedbyfriends
 {
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/ig/nav_friendfav.png');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/sharedfiles/ig/nav_friendfav.png');
 }
 
 .greenlight_notice {

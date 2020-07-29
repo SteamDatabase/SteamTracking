@@ -196,7 +196,7 @@ a.general_btn:hover {
 	left: 8px;
 	height: 16px;
 	width: 16px;
-	background-image: url( https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/ico_follow_tiled.png);
+	background-image: url( https://community.cloudflare.steamstatic.com/public/images/sharedfiles/ico_follow_tiled.png);
 	background-position: 0px 0px;
 	background-repeat: no-repeat;
 }
@@ -336,7 +336,7 @@ div.sharedfiles_filterselect_options div.option{
 }
 
 div.sharedfiles_filterselect div.sharedfiles_filterselect_activeoption {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/workshop_dateselect_arrow.png' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/sharedfiles/workshop_dateselect_arrow.png' );
 	background-repeat: no-repeat;
 	background-position: top right;
 	padding-right: 17px;
@@ -458,7 +458,7 @@ div.sharedfiles_filterselect div.option img, div.sharedfiles_filterselect_option
 }
 
 #ScreenshotManagementToggle {
-	background-image: url(https://steamcommunity-a.akamaihd.net/public/images//skin_1/screenshot_manage_downarrow.png);
+	background-image: url(https://community.cloudflare.steamstatic.com/public/images//skin_1/screenshot_manage_downarrow.png);
 	background-position: right;
 	background-repeat: no-repeat;
 	border-radius: 4px;
@@ -482,7 +482,7 @@ div.sharedfiles_filterselect div.option img, div.sharedfiles_filterselect_option
 }
 
 #ScreenshotManagementToggle.screenshotManagementToggleUp {
-	background-image: url(https://steamcommunity-a.akamaihd.net/public/images//skin_1/screenshot_manage_uparrow.png);
+	background-image: url(https://community.cloudflare.steamstatic.com/public/images//skin_1/screenshot_manage_uparrow.png);
 }
 
 
@@ -524,7 +524,7 @@ div.sharedfiles_filterselect div.option img, div.sharedfiles_filterselect_option
 	padding-right: 12px;
 	margin-right: 5px;
 	margin-bottom: 5px;
-	background-image: url( https://steamcommunity-a.akamaihd.net/public/images/groups/tab_blue_active.png);
+	background-image: url( https://community.cloudflare.steamstatic.com/public/images/groups/tab_blue_active.png);
 	background-repeat: repeat-x;
 	border-radius: 3px;
 	-moz-border-radius: 3px;

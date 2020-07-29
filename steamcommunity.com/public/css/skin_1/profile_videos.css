@@ -1,14 +1,14 @@
 
 #BG_top {
 	position:relative;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/bg_top.gif');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/skin_1/bg_top.gif');
 	background-repeat:no-repeat;
 	width:958px;
 	height:98px;
 	text-align: left;
 }
 #BG_bottom {
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/bg_bottom.gif');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/skin_1/bg_bottom.gif');
 	background-repeat:repeat-y;
 	width:958px;
 	text-align:left;
@@ -320,7 +320,7 @@
 	height:9px;
 	margin:0;
 	padding:0;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/rightActionBlockHeader.gif');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/skin_1/rightActionBlockHeader.gif');
 	clear:right;
 }
 #rightActionBlockFooter {
@@ -330,7 +330,7 @@
 	margin:0;
 	margin-bottom:16px;
 	padding:0;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/rightActionBlockFooter.gif');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/skin_1/rightActionBlockFooter.gif');
 	clear:right;
 }
 #rightActionBlock {
@@ -338,7 +338,7 @@
 	width:246px;
 	margin:0;
 	padding:0px 0px 0px 8px;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/rightActionBlockBG.gif');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/skin_1/rightActionBlockBG.gif');
 	background-repeat:repeat-y;
 	clear:right;
 }

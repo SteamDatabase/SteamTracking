@@ -105,7 +105,7 @@ body.v6 #footer {
 }
 
 .cottage_door_interior {
-    background: url('https://steamcdn-a.akamaihd.net/store/promo/winter2018/cardboard-paper-background.jpg');
+    background: url('https://cdn.cloudflare.steamstatic.com/store/promo/winter2018/cardboard-paper-background.jpg');
     transform: rotateY(.5turn);
 }
 
@@ -161,7 +161,7 @@ body.v6 #footer {
 
 .sale_page_background {
     background-color: #283647;
-    background-image: url('https://steamcdn-a.akamaihd.net/store/promo/winter2018/bg-pattern.jpg');
+    background-image: url('https://cdn.cloudflare.steamstatic.com/store/promo/winter2018/bg-pattern.jpg');
     background-size: 100% 100%;
 }
 
@@ -355,7 +355,7 @@ body.v6 #footer {
 
 .faq_background {
     background-color: #000a1a;
-    background-image: url( 'https://steamcdn-a.akamaihd.net/store/promo/autumn2017/faqbg.jpg' );
+    background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/promo/autumn2017/faqbg.jpg' );
     height: 750px;
 }
 .faq_section {
@@ -379,7 +379,7 @@ body.v6 #footer {
         margin: 0 auto;
         height: 400px;
         background-position: center;
-        background: url('https://steamcdn-a.akamaihd.net/store/promo/winter2018/header/title_mobile.png');
+        background: url('https://cdn.cloudflare.steamstatic.com/store/promo/winter2018/header/title_mobile.png');
         background-repeat: no-repeat;
         background-position-y: 50px;
         background-position-x: 50%;

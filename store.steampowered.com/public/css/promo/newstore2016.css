@@ -17,7 +17,7 @@ body.v6.promoannounce .page_content_container {
     height: 400px;
     width: 100%;
     background-color: #66c0f4;
-	background-image: url( 'https://steamcdn-a.akamaihd.net/store/promo/newstore2016/header_background.jpg' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/promo/newstore2016/header_background.jpg' );
 	background-repeat: repeat-x;
 }
 
@@ -44,7 +44,7 @@ body.v6.promoannounce .page_content_container {
     position: relative;
     height: 3723px;
 
-    background: url(https://steamcdn-a.akamaihd.net/store/promo/newstore2016/homepage_long_01.jpg?v=1);
+    background: url(https://cdn.cloudflare.steamstatic.com/store/promo/newstore2016/homepage_long_01.jpg?v=1);
     background-repeat: no-repeat;
     background-position: center;
     background-position-y: 365px;

@@ -28,7 +28,7 @@ body.v6.library {
 	z-index: -1;
 	width: 100%;
 	height: 100%;
-	background-image: url( 'https://steamcdn-a.akamaihd.net/store/library_update/bkg_top_wide.jpg' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/library_update/bkg_top_wide.jpg' );
 	background-position: top center;
 	background-repeat: no-repeat;
 }
@@ -247,7 +247,7 @@ body.v6.library {
 
 .home_carousel_image {
 	height: 1400px;
-	background-image: url( 'https://steamcdn-a.akamaihd.net/store/library_update/library_vertical_carousel_sm.png?v=1' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/library_update/library_vertical_carousel_sm.png?v=1' );
 	background-repeat: no-repeat;
 	background-position: top left;
 	width: 100%;
@@ -334,23 +334,23 @@ body.v6.library {
 }
 
 .game_pages_image.oneplace {
-	background-image: url( 'https://steamcdn-a.akamaihd.net/store/library_update/horizontal_carousel_1.png?v=1' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/library_update/horizontal_carousel_1.png?v=1' );
 }
 
 .game_pages_image.gamesummary {
-	background-image: url( 'https://steamcdn-a.akamaihd.net/store/library_update/horizontal_carousel_2.png?v=1' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/library_update/horizontal_carousel_2.png?v=1' );
 }
 
 .game_pages_image.friendswhoplay {
-	background-image: url( 'https://steamcdn-a.akamaihd.net/store/library_update/horizontal_carousel_3.png?v=1' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/library_update/horizontal_carousel_3.png?v=1' );
 }
 
 .game_pages_image.friendsposts {
-	background-image: url( 'https://steamcdn-a.akamaihd.net/store/library_update/horizontal_carousel_4.png?v=1' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/library_update/horizontal_carousel_4.png?v=1' );
 }
 
 .game_pages_image.communitycontent {
-	background-image: url( 'https://steamcdn-a.akamaihd.net/store/library_update/horizontal_carousel_5.png?v=1' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/library_update/horizontal_carousel_5.png?v=1' );
 }
 
 .game_pages_right {
@@ -474,11 +474,11 @@ body.v6.library {
 }
 
 .organize_videos_arrow.left {
-	background: url( 'https://steamcdn-a.akamaihd.net/store/library_update/arrow_left.svg' ) no-repeat center center rgba(0, 0, 0, 0.3);
+	background: url( 'https://cdn.cloudflare.steamstatic.com/store/library_update/arrow_left.svg' ) no-repeat center center rgba(0, 0, 0, 0.3);
 }
 
 .organize_videos_arrow.right {
-	background: url( 'https://steamcdn-a.akamaihd.net/store/library_update/arrow_right.svg' ) no-repeat center center rgba(0, 0, 0, 0.3);
+	background: url( 'https://cdn.cloudflare.steamstatic.com/store/library_update/arrow_right.svg' ) no-repeat center center rgba(0, 0, 0, 0.3);
 }
 
 .organize_videos_arrow {
@@ -597,11 +597,11 @@ body.v6.library {
 	}
 
 	html.responsive .library_home_carousel_arrow.left {
-		background: url( 'https://steamcdn-a.akamaihd.net/store/library_update/arrow_left.svg' ) no-repeat center center rgba(0, 0, 0, 0.3);
+		background: url( 'https://cdn.cloudflare.steamstatic.com/store/library_update/arrow_left.svg' ) no-repeat center center rgba(0, 0, 0, 0.3);
 	}
 
 	html.responsive .library_home_carousel_arrow.right {
-		background: url( 'https://steamcdn-a.akamaihd.net/store/library_update/arrow_right.svg' ) no-repeat center center rgba(0, 0, 0, 0.3);
+		background: url( 'https://cdn.cloudflare.steamstatic.com/store/library_update/arrow_right.svg' ) no-repeat center center rgba(0, 0, 0, 0.3);
 	}
 
 	html.responsive .library_home_carousel_item {
@@ -741,23 +741,23 @@ body.v6.library {
 {
 
 	body.v6.library .game_pages_image.oneplace {
-		background-image: url( 'https://steamcdn-a.akamaihd.net/store/library_update/horizontal_carousel_1@2x.png?v=1' );
+		background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/library_update/horizontal_carousel_1@2x.png?v=1' );
 	}
 
 	body.v6.library .game_pages_image.gamesummary {
-		background-image: url( 'https://steamcdn-a.akamaihd.net/store/library_update/horizontal_carousel_2@2x.png?v=1' );
+		background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/library_update/horizontal_carousel_2@2x.png?v=1' );
 	}
 
 	body.v6.library .game_pages_image.friendswhoplay {
-		background-image: url( 'https://steamcdn-a.akamaihd.net/store/library_update/horizontal_carousel_3@2x.png?v=1' );
+		background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/library_update/horizontal_carousel_3@2x.png?v=1' );
 	}
 
 	body.v6.library .game_pages_image.friendsposts {
-		background-image: url( 'https://steamcdn-a.akamaihd.net/store/library_update/horizontal_carousel_4@2x.png?v=1' );
+		background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/library_update/horizontal_carousel_4@2x.png?v=1' );
 	}
 
 	body.v6.library .game_pages_image.communitycontent {
-		background-image: url( 'https://steamcdn-a.akamaihd.net/store/library_update/horizontal_carousel_5@2x.png?v=1' );
+		background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/library_update/horizontal_carousel_5@2x.png?v=1' );
 	}
 
 }

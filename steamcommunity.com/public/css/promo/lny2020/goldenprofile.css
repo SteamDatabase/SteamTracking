@@ -142,7 +142,7 @@ html.client .w19_sides_position
 	right: 0;
 	top: 167px;
 	bottom: 0;
-	background: url( 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/lny2020/goldenprofile/lny2020_side.png' ) center top repeat-y;
+	background: url( 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/lny2020/goldenprofile/lny2020_side.png' ) center top repeat-y;
 	filter: drop-shadow (0px 0px 5px 2px #2b2b2b)
 }
 
@@ -413,7 +413,7 @@ html.responsive .responsive_status_info {
     height: 19px;
     display: inline-block;
     margin-right: 4px;
-    background-image: url( 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/winter2019/goldenprofile/icons_content.png' );
+    background-image: url( 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/winter2019/goldenprofile/icons_content.png' );
     background-position: center;
     background-repeat: no-repeat;
     vertical-align: middle;
@@ -456,7 +456,7 @@ html.responsive .responsive_status_info {
 }
 
 .golden_profile .goldenAvatarOverlay {
-	background-image: url( 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/lny2020/goldenprofile/lny_2020_avatar_frame.png' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/lny2020/goldenprofile/lny_2020_avatar_frame.png' );
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
@@ -495,7 +495,7 @@ html.responsive .responsive_status_info {
 }
 
 .profile_header_bg:before {
-	background-image: url( 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/lny2020/goldenprofile/lny2020_header.png' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/lny2020/goldenprofile/lny2020_header.png' );
 	background-repeat: no-repeat;
 	background-size: contain;
 	width: 100%;
@@ -523,7 +523,7 @@ html.responsive .responsive_status_info {
 {	
 	border-top: 20px solid goldenrod;
 	background-color: rgba(0, 0, 0, .4 );
-	border-image-source: url('https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/lny2020/goldenprofile/lny2020_border_tile.png');
+	border-image-source: url('https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/lny2020/goldenprofile/lny2020_border_tile.png');
 	border-image-slice: 20 22;
 	border-image-repeat: round;
 	backdrop-filter: blur(6px);

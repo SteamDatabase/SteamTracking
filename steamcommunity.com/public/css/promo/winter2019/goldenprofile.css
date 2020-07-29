@@ -25,7 +25,7 @@ div.profile_page.golden_profile
 	width: 100%;
 	height: 192px;
 	z-index: 99;
-	background: url('https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/winter2019/goldenprofile/w19_gp_tinsel_top.png' ) center top no-repeat;
+	background: url('https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/winter2019/goldenprofile/w19_gp_tinsel_top.png' ) center top no-repeat;
 }
 
 .profile_header_bg_texture:after
@@ -34,7 +34,7 @@ div.profile_page.golden_profile
 	position: absolute;
 	width: 100%;
 	height: 65px;
-	background: url('https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/winter2019/goldenprofile/snow_floor.png' ) center top no-repeat;
+	background: url('https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/winter2019/goldenprofile/snow_floor.png' ) center top no-repeat;
 	left: 0;
 	bottom: 0px;
 	z-index: 1;
@@ -45,7 +45,7 @@ div.profile_page.golden_profile
 {
 	width: 100%;
 	height: 41px;
-	background: url('https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/winter2019/goldenprofile/snow_floor_2.png' ) center top no-repeat;
+	background: url('https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/winter2019/goldenprofile/snow_floor_2.png' ) center top no-repeat;
 }
 
 #snow_floor3
@@ -53,7 +53,7 @@ div.profile_page.golden_profile
 	position: absolute;
 	width: 674px;
 	height: 42px;
-	background: url( 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/winter2019/goldenprofile/snow_floor_3.png') center top no-repeat;
+	background: url( 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/winter2019/goldenprofile/snow_floor_3.png') center top no-repeat;
 	top: 895px;
 	left: -158px;
 	z-index:1;
@@ -102,7 +102,7 @@ html.client .w19_sides_position
 	right: 0;
 	top: 55px;
 	bottom: 0;
-	background: url( 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/winter2019/goldenprofile/w19_gp_cane_side.png' ) center top repeat-y;
+	background: url( 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/winter2019/goldenprofile/w19_gp_cane_side.png' ) center top repeat-y;
 	filter: drop-shadow (0px 0px 5px 2px #2b2b2b);
 }
 
@@ -130,7 +130,7 @@ html.client .w19_sides_position
 .golden_profile .profile_content.has_profile_background,
 .golden_profile .profile_content
 {
-	background: url( 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/winter2019/goldenprofile/snowbg.png' );
+	background: url( 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/winter2019/goldenprofile/snowbg.png' );
 	background-size: 50px 50px;
 	margin-top: 0;
 	clear: both;
@@ -170,7 +170,7 @@ html.client .w19_sides_position
 	top: 0;
 	width: 203px;
 	height: 123px;
-	background: url( 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/w192019/goldenprofile/w19_gp_cane_top.png' ) no-repeat top center;
+	background: url( 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/w192019/goldenprofile/w19_gp_cane_top.png' ) no-repeat top center;
 }
 
 .w19_side.left .w19_top
@@ -187,7 +187,7 @@ html.client .w19_sides_position
 .w19_pig
 {
 	position: absolute;
-	background: url( 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/winter2019/goldenprofile/w19_gp_cane_top.png' ) no-repeat top right;
+	background: url( 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/winter2019/goldenprofile/w19_gp_cane_top.png' ) no-repeat top right;
 	width: 203px;
 	height: 123px;
 	top: -10px;
@@ -243,7 +243,7 @@ html.client .w19_sides_position
 
 .w19_strings
 {
-	background: url( 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/winter2019/goldenprofile/dangle_flake_string.png' ) no-repeat top right;
+	background: url( 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/winter2019/goldenprofile/dangle_flake_string.png' ) no-repeat top right;
 	height: 117px;
 	width: 8px;
 	margin: 0 auto;
@@ -266,7 +266,7 @@ html.client .w19_sides_position
     height: 19px;
     display: inline-block;
     margin-right: 4px;
-    background-image: url( 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/winter2019/goldenprofile/icons_content.png' );
+    background-image: url( 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/winter2019/goldenprofile/icons_content.png' );
     background-position: center;
     background-repeat: no-repeat;
     vertical-align: middle;
@@ -287,7 +287,7 @@ html.client .w19_sides_position
 }
 
 .profile_header_bg:before {
-	background-image: url( 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/winter2019/goldenprofile/string_lights_header.png' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/winter2019/goldenprofile/string_lights_header.png' );
 	background-repeat: no-repeat;
 	width: 100%;
 	height: 136px;
@@ -297,7 +297,7 @@ html.client .w19_sides_position
 
 .golden_profile .profile_header_bg_texture
 {
-	background-image: url( 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/winter2019/goldenprofile/snowbg_2.png' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/winter2019/goldenprofile/snowbg_2.png' );
 	background-repeat: repeat;
 	background-size: 50px 50px;
 	background-color: #384c54;
@@ -307,7 +307,7 @@ html.client .w19_sides_position
 
 .golden_profile .profile_customization
 {
-	background-image: url( 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/winter2019/goldenprofile/showcase_bg_tile.png' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/winter2019/goldenprofile/showcase_bg_tile.png' );
 	background-repeat: repeat;
 	background-color: #384c54;
 	margin-bottom: 40px;

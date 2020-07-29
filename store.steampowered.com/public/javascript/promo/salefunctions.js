@@ -402,7 +402,7 @@ function SaleCap( item, strFeatureContext, strDiscountClass, bUseSmallCap )
 	}
 	else
 	{
-		$Img = $J( '<img/>', {'class': 'sale_capsule_image autosize', 'src': 'https://steamstore-a.akamaihd.net/public/images/v6/home/maincap_placeholder_616x353.gif' } );
+		$Img = $J( '<img/>', {'class': 'sale_capsule_image autosize', 'src': 'https://store.cloudflare.steamstatic.com/public/images/v6/home/maincap_placeholder_616x353.gif' } );
 		$Img.data('src-maincap', rgItemData['main_capsule'] );
 		$Img.data('src-smallcap', rgItemData['small_capsule'] );
 	}
@@ -471,13 +471,13 @@ function AddMicrotrailersToStaticCaps( $Parent )
 
 function TagBoxTopDecoration()
 {
-	var imgStr = '<div class="home_category_top_decoration"><img src="https://steamcdn-a.akamaihd.net/store/promo/winter2019/snow_ceiling.png"/></div>';
+	var imgStr = '<div class="home_category_top_decoration"><img src="https://cdn.cloudflare.steamstatic.com/store/promo/winter2019/snow_ceiling.png"/></div>';
 	return '';
 }
 
 function SaleTagTexture( suffix )
 {
-	var strStyle = 'background-image: url("https://steamcdn-a.akamaihd.net/store/promo/summer2020/wave_tile.png"); background-repeat: repeat;';
+	var strStyle = 'background-image: url("https://cdn.cloudflare.steamstatic.com/store/promo/summer2020/wave_tile.png"); background-repeat: repeat;';
 	return '';
 }
 
@@ -764,7 +764,7 @@ function BuildFranchiseCap( FranchiseData, bAlternate )
 
 		$Cap.append( $J('<a/>', {'class': 'hero_click_overlay', 'href': url } ) );
 		$Cap.append( $J('<img/>', {'class': 'franchise_background', 'src': FranchiseData.strBackgroundImageURL } ) );
-        $Cap.append( $J('<img/>', {'class': 'franchise_placeholder', 'src': 'https://steamcdn-a.akamaihd.net/store/promo/winter2019/franchise_placeholder.gif' } ) );
+        $Cap.append( $J('<img/>', {'class': 'franchise_placeholder', 'src': 'https://cdn.cloudflare.steamstatic.com/store/promo/winter2019/franchise_placeholder.gif' } ) );
 		$Cap.append( $J( '<div/>', {'class': 'franchise_logo_ctn'} ).append( $J('<img/>', {'class': 'franchise_logo', 'src': FranchiseData.strLogoImageURL } ) ) );
 
 		$Cap.append( $J('<div/>', {'class': 'franchise_discount_tag' } ).text( 'Up to {PCT}% Off'.replace( /\{PCT\}/, FranchiseData.nDiscountMax ) ) );

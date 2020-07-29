@@ -1,6 +1,6 @@
 
 body.v6 {
-   background: url( 'https://steamcommunity-a.akamaihd.net/public/images/friends/colored_body_top2.png?v=2' ) center top no-repeat #1b2838;
+   background: url( 'https://community.cloudflare.steamstatic.com/public/images/friends/colored_body_top2.png?v=2' ) center top no-repeat #1b2838;
     		font-family: "Motiva Sans", Sans-serif;
 		font-weight: 300; /* light */
 
@@ -20,7 +20,7 @@ body.v6 {
 .friends_header_bg {
     height: 127px;
     margin: 0 auto;
-    background: url( 'https://steamcommunity-a.akamaihd.net/public/images/bg_highlight.png' ) center bottom no-repeat;
+    background: url( 'https://community.cloudflare.steamstatic.com/public/images/bg_highlight.png' ) center bottom no-repeat;
 }
 
 .friends_header_container {
@@ -132,7 +132,7 @@ body.v6 {
     display: inline-block;
     line-height: 16px;
     padding-left: 35px;
-    background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/iconsheet_friends.png?v=5' );
+    background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/iconsheet_friends.png?v=5' );
 }
 
 .invite_row .actions .ico_approve {
@@ -536,7 +536,7 @@ body.v6 {
     margin: 5px;
     float: left;
 
-	background: #274e68 url(https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/searchbox_workshop_submit.gif) no-repeat 1px;
+	background: #274e68 url(https://community.cloudflare.steamstatic.com/public/images/sharedfiles/searchbox_workshop_submit.gif) no-repeat 1px;
     border-radius: 3px;
     border: 1px solid rgba( 0, 0, 0, 0.3);
     box-shadow: 1px 1px 0px rgba( 255, 255, 255, 0.2);
@@ -676,7 +676,7 @@ body.v6 {
 }
 
 .invite_section_ctn .quickinvite_img_ctn {
-    background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/friends/icn-quickinvite.svg' );
+    background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/friends/icn-quickinvite.svg' );
     background-position: center;
     background-repeat: no-repeat;
 	background-size: 30%;
@@ -800,7 +800,7 @@ body.v6 {
 }
 
 .facebook_link {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/friends/icn-fb.svg' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/friends/icn-fb.svg' );
 	background-position: left;
 	background-repeat: no-repeat;
 	padding-left: 30px;
@@ -1072,7 +1072,7 @@ span.invite_action_txt {
 	background-repeat: no-repeat;
 	background-size: 16px 192px;
 	padding-left: 24px;
-	background-image: url('https://steamcommunity-a.akamaihd.net/public/images/iconsheet_friends.png?v=5');
+	background-image: url('https://community.cloudflare.steamstatic.com/public/images/iconsheet_friends.png?v=5');
 	background-position: 0 -176px;
 }
 

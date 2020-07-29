@@ -578,7 +578,7 @@ background: -webkit-linear-gradient( top, #000000 0px,#000000 50px,#1e2025 60px,
 	right: 2px;
 	top: 2px;
 
-	background-image: url(' https://steamcommunity-a.akamaihd.net/public/shared/images/broadcast/maximize_icon.png' );
+	background-image: url(' https://community.cloudflare.steamstatic.com/public/shared/images/broadcast/maximize_icon.png' );
 	background-repeat: no-repeat;
 	background-position: top center;
 	background-size: 17px 20px;
@@ -613,7 +613,7 @@ body.iframe .ChatBoxViewers
 {
 	width: 22px;
 	height: 20px;
-	background-image: url(' https://steamcommunity-a.akamaihd.net/public/shared/images/broadcast/icon_viewers.png' );
+	background-image: url(' https://community.cloudflare.steamstatic.com/public/shared/images/broadcast/icon_viewers.png' );
 	background-repeat: no-repeat;
 	background-position: center center;
 
@@ -630,7 +630,7 @@ body.iframe .ChatBoxViewers
 {
 	width: 17px;
 	height: 20px;
-	background-image: url(' https://steamcommunity-a.akamaihd.net/public/shared/images/broadcast/minimize_icon.png' );
+	background-image: url(' https://community.cloudflare.steamstatic.com/public/shared/images/broadcast/minimize_icon.png' );
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: 17px 20px;
@@ -643,7 +643,7 @@ body.iframe .ChatBoxViewers
 {
 	width: 17px;
 	height: 20px;
-	background-image: url(' https://steamcommunity-a.akamaihd.net/public/shared/images/broadcast/icon_exp.png' );
+	background-image: url(' https://community.cloudflare.steamstatic.com/public/shared/images/broadcast/icon_exp.png' );
 	background-repeat: no-repeat;
 	background-position: center center;
 
@@ -752,7 +752,7 @@ body.iframe #ChatDragHandle
 	height: 12px;
 	border-radius: 2px;
 	background-color: #2b4a63;
-	background-image: url(' https://steamcommunity-a.akamaihd.net/public/shared/images/broadcast/chat_tab.png' );
+	background-image: url(' https://community.cloudflare.steamstatic.com/public/shared/images/broadcast/chat_tab.png' );
 	background-repeat: no-repeat;
 	background-position: center center;
 }
@@ -840,7 +840,7 @@ body.iframe #ChatDragHandle
 
 .ChatMessage.Broadcaster
 {
-	background-image: url('https://steamcommunity-a.akamaihd.net/public/shared/images/broadcast/live_chat.png' );
+	background-image: url('https://community.cloudflare.steamstatic.com/public/shared/images/broadcast/live_chat.png' );
 	background-repeat: no-repeat;
 	background-position: left 6px;
 }
@@ -957,13 +957,13 @@ body.iframe #ChatDragHandle
 }
 
 .EmoticonContainer .emoticon_button.small {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/broadcast/icon_emoticon.png' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/broadcast/icon_emoticon.png' );
 }
 
 
 .EmoticonContainer:hover .emoticon_button.small {
 	cursor: pointer;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/broadcast/icon_emoticon_hover.png' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/broadcast/icon_emoticon_hover.png' );
 }
 
 .emoticon_popup_ctn
@@ -1030,7 +1030,7 @@ body:not(.iframe) .BroadcastRowShadow
 	padding-left: 28px;
 
 	pointer-events: none;
-	background-image: url('https://steamcommunity-a.akamaihd.net/public/shared/images/broadcast/icon_viewers.png' );
+	background-image: url('https://community.cloudflare.steamstatic.com/public/shared/images/broadcast/icon_viewers.png' );
 	background-repeat: no-repeat;
 	background-position: left center;
 	line-height: 22px;
@@ -1094,7 +1094,7 @@ body:not(.iframe) .BroadcastRowShadow
 
 .ReportBroadcast
 {
-	background-image: url(' https://steamcommunity-a.akamaihd.net/public/shared/images/broadcast/icon_report.png' );
+	background-image: url(' https://community.cloudflare.steamstatic.com/public/shared/images/broadcast/icon_report.png' );
 	background-position: 6px center;
 	background-repeat: no-repeat;
 	padding-left: 28px;
@@ -1102,7 +1102,7 @@ body:not(.iframe) .BroadcastRowShadow
 
 .ReportBroadcast:hover
 {
-	background-image: url(' https://steamcommunity-a.akamaihd.net/public/shared/images/broadcast/icon_report_white.png' );
+	background-image: url(' https://community.cloudflare.steamstatic.com/public/shared/images/broadcast/icon_report_white.png' );
 }
 
 .ReportBroadcast.Reported,
@@ -1201,7 +1201,7 @@ body:not(.iframe) .BroadcastRowShadow
 {
 	padding-left: 28px;
 
-	background-image: url(' https://steamcommunity-a.akamaihd.net/public/shared/images/broadcast/icon_viewers.png' );
+	background-image: url(' https://community.cloudflare.steamstatic.com/public/shared/images/broadcast/icon_viewers.png' );
 	background-repeat: no-repeat;
 	background-position: left center;
 }
@@ -1219,7 +1219,7 @@ body:not(.iframe) .BroadcastRowShadow
 #ViewerModalUsers .Muted
 {
 	border-radius: 2px;
-	background-image: url(' https://steamcommunity-a.akamaihd.net/public/shared/images/broadcast/icon_muted.png' );
+	background-image: url(' https://community.cloudflare.steamstatic.com/public/shared/images/broadcast/icon_muted.png' );
 	background-repeat: no-repeat;
 	background-position: center center;
 	position: absolute;
@@ -1237,7 +1237,7 @@ body:not(.iframe) .BroadcastRowShadow
 
 #ViewerModalUsers .Muted.CanUnmute:hover
 {
-	background-image: url(' https://steamcommunity-a.akamaihd.net/public/shared/images/broadcast/icon_unmute.png' );
+	background-image: url(' https://community.cloudflare.steamstatic.com/public/shared/images/broadcast/icon_unmute.png' );
 }
 
 #ViewerModalUsers a
@@ -1590,7 +1590,7 @@ body.v6 .store_broadcast_title .broadcast_live_stream_icon {
 	padding: 4px;
 	border-radius: 3px;
 
-	background-image: url('https://steamcommunity-a.akamaihd.net/public/shared/images/v6/icon_expand_large.png');
+	background-image: url('https://community.cloudflare.steamstatic.com/public/shared/images/v6/icon_expand_large.png');
 	background-repeat: no-repeat;
 	background-size: 13px;
 	background-position: center;
@@ -1608,7 +1608,7 @@ body.v6 .store_broadcast_title .broadcast_live_stream_icon {
 	padding: 4px;
 	border-radius: 3px;
 
-	background-image: url('https://steamcommunity-a.akamaihd.net/public/shared/images/v6/icon_collapse_large.png');
+	background-image: url('https://community.cloudflare.steamstatic.com/public/shared/images/v6/icon_collapse_large.png');
 	background-repeat: no-repeat;
 	background-size: 13px;
 	background-position: center;

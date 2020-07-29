@@ -167,7 +167,7 @@
 	position: absolute;
 	left: 26px;
 	top: 23px;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/friendindicator_small.png' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/friendindicator_small.png' );
 	width: 20px;
 	height: 20px;
 	z-index: 2;
@@ -458,7 +458,7 @@
 .pulldown {
 	padding-left: 5px;
 	padding-right: 18px;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/popups/btn_arrow_down_padded.png' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/popups/btn_arrow_down_padded.png' );
 	background-position: right center;
 	background-repeat: no-repeat;
 
@@ -469,7 +469,7 @@ body.v6 .pulldown {
 }
 span.popup_menu_pulldown_indicator {
 	display: inline-block;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/popups/btn_arrow_down.png' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/popups/btn_arrow_down.png' );
 	vertical-align: middle;
 	width: 9px;
 	height: 4px;
@@ -722,58 +722,58 @@ body.v6 .popup_block_new .popup_body.popup_menu {
 	text-shadow: 1px 1px #1a1a1a;
 }
 
-.friendPlayerLevel.lvl_100 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_hexagons.png' ); }
-.friendPlayerLevel.lvl_200 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_shields.png' ); }
-.friendPlayerLevel.lvl_300 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_books.png' );  }
-.friendPlayerLevel.lvl_400 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_chevrons.png' );  }
-.friendPlayerLevel.lvl_500 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_circle2.png' );  }
-.friendPlayerLevel.lvl_600 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_angle.png' );  }
-.friendPlayerLevel.lvl_700 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_flag.png' );  }
-.friendPlayerLevel.lvl_800 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_wings.png' );  }
-.friendPlayerLevel.lvl_900 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_arrows.png' );  }
-.friendPlayerLevel.lvl_1000 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_crystals.png' );  }
-.friendPlayerLevel.lvl_1100 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_space.png' );  }
-.friendPlayerLevel.lvl_1200 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_waterelement.png' );  }
-.friendPlayerLevel.lvl_1300 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_fireelement.png' );  }
-.friendPlayerLevel.lvl_1400 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_earthelement.png' );  }
-.friendPlayerLevel.lvl_1500 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_airelement_1-2.png' );  }
-.friendPlayerLevel.lvl_1600 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_airelement_3-4.png' );  }
-.friendPlayerLevel.lvl_1700 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_airelement_5-6.png' );  }
-.friendPlayerLevel.lvl_1800 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_airelement_7-8.png' );  }
-.friendPlayerLevel.lvl_1900 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_airelement_9-10.png' );  }
-.friendPlayerLevel.lvl_2000 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_geo_1-2.png?v=2' );  }
-.friendPlayerLevel.lvl_2100 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_geo_3-4.png?v=2' );  }
-.friendPlayerLevel.lvl_2200 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_geo_5-6.png?v=2' );  }
-.friendPlayerLevel.lvl_2300 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_geo_7-8.png?v=2' );  }
-.friendPlayerLevel.lvl_2400 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_geo_9-10.png?v=2' );  }
-.friendPlayerLevel.lvl_2500 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_mandala_1-2.png?v=2' );  }
-.friendPlayerLevel.lvl_2600 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_mandala_3-4.png?v=2' );  }
-.friendPlayerLevel.lvl_2700 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_mandala_5-6.png?v=2' );  }
-.friendPlayerLevel.lvl_2800 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_mandala_7-8.png?v=2' );  }
-.friendPlayerLevel.lvl_2900 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_mandala_9-10.png?v=2' );  }
-.friendPlayerLevel.lvl_3000 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_spiro_1-2.png?v=2' );  }
-.friendPlayerLevel.lvl_3100 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_spiro_3-4.png?v=2' );  }
-.friendPlayerLevel.lvl_3200 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_spiro_5-6.png?v=2' );  }
-.friendPlayerLevel.lvl_3300 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_spiro_7-8.png?v=2' );  }
-.friendPlayerLevel.lvl_3400 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_spiro_9-10.png?v=2' );  }
-.friendPlayerLevel.lvl_3500 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_patterns_1-2.png?v=2' );  }
-.friendPlayerLevel.lvl_3600 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_patterns_3-4.png?v=2' );  }
-.friendPlayerLevel.lvl_3700 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_patterns_5-6.png?v=2' );  }
-.friendPlayerLevel.lvl_3800 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_patterns_7-8.png?v=2' );  }
-.friendPlayerLevel.lvl_3900 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_patterns_9-10.png?v=2' );  }
-.friendPlayerLevel.lvl_4000 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_shapes_1.png?v=2' );  }
-.friendPlayerLevel.lvl_4100 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_shapes_2.png?v=2' );  }
-.friendPlayerLevel.lvl_4200 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_shapes_3.png?v=2' );  }
-.friendPlayerLevel.lvl_4300 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_shapes_4.png?v=2' );  }
-.friendPlayerLevel.lvl_4400 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_shapes_5.png?v=2' );  }
-.friendPlayerLevel.lvl_4500 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_grunge_1.png?v=2' );  }
-.friendPlayerLevel.lvl_4600 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_grunge_2.png?v=2' );  }
-.friendPlayerLevel.lvl_4700 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_grunge_3.png?v=2' );  }
-.friendPlayerLevel.lvl_4800 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_grunge_4.png?v=2' );  }
-.friendPlayerLevel.lvl_4900 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_grunge_5.png?v=2' );  }
-.friendPlayerLevel.lvl_5000 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_halftone_1.png?v=2' );  }
-.friendPlayerLevel.lvl_5100 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_halftone_2.png?v=2' );  }
-.friendPlayerLevel.lvl_5200 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_halftone_3.png?v=2' );  }
+.friendPlayerLevel.lvl_100 { background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/community/levels_hexagons.png' ); }
+.friendPlayerLevel.lvl_200 { background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/community/levels_shields.png' ); }
+.friendPlayerLevel.lvl_300 { background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/community/levels_books.png' );  }
+.friendPlayerLevel.lvl_400 { background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/community/levels_chevrons.png' );  }
+.friendPlayerLevel.lvl_500 { background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/community/levels_circle2.png' );  }
+.friendPlayerLevel.lvl_600 { background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/community/levels_angle.png' );  }
+.friendPlayerLevel.lvl_700 { background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/community/levels_flag.png' );  }
+.friendPlayerLevel.lvl_800 { background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/community/levels_wings.png' );  }
+.friendPlayerLevel.lvl_900 { background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/community/levels_arrows.png' );  }
+.friendPlayerLevel.lvl_1000 { background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/community/levels_crystals.png' );  }
+.friendPlayerLevel.lvl_1100 { background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/community/levels_space.png' );  }
+.friendPlayerLevel.lvl_1200 { background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/community/levels_waterelement.png' );  }
+.friendPlayerLevel.lvl_1300 { background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/community/levels_fireelement.png' );  }
+.friendPlayerLevel.lvl_1400 { background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/community/levels_earthelement.png' );  }
+.friendPlayerLevel.lvl_1500 { background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/community/levels_airelement_1-2.png' );  }
+.friendPlayerLevel.lvl_1600 { background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/community/levels_airelement_3-4.png' );  }
+.friendPlayerLevel.lvl_1700 { background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/community/levels_airelement_5-6.png' );  }
+.friendPlayerLevel.lvl_1800 { background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/community/levels_airelement_7-8.png' );  }
+.friendPlayerLevel.lvl_1900 { background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/community/levels_airelement_9-10.png' );  }
+.friendPlayerLevel.lvl_2000 { background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/community/levels_geo_1-2.png?v=2' );  }
+.friendPlayerLevel.lvl_2100 { background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/community/levels_geo_3-4.png?v=2' );  }
+.friendPlayerLevel.lvl_2200 { background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/community/levels_geo_5-6.png?v=2' );  }
+.friendPlayerLevel.lvl_2300 { background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/community/levels_geo_7-8.png?v=2' );  }
+.friendPlayerLevel.lvl_2400 { background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/community/levels_geo_9-10.png?v=2' );  }
+.friendPlayerLevel.lvl_2500 { background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/community/levels_mandala_1-2.png?v=2' );  }
+.friendPlayerLevel.lvl_2600 { background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/community/levels_mandala_3-4.png?v=2' );  }
+.friendPlayerLevel.lvl_2700 { background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/community/levels_mandala_5-6.png?v=2' );  }
+.friendPlayerLevel.lvl_2800 { background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/community/levels_mandala_7-8.png?v=2' );  }
+.friendPlayerLevel.lvl_2900 { background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/community/levels_mandala_9-10.png?v=2' );  }
+.friendPlayerLevel.lvl_3000 { background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/community/levels_spiro_1-2.png?v=2' );  }
+.friendPlayerLevel.lvl_3100 { background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/community/levels_spiro_3-4.png?v=2' );  }
+.friendPlayerLevel.lvl_3200 { background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/community/levels_spiro_5-6.png?v=2' );  }
+.friendPlayerLevel.lvl_3300 { background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/community/levels_spiro_7-8.png?v=2' );  }
+.friendPlayerLevel.lvl_3400 { background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/community/levels_spiro_9-10.png?v=2' );  }
+.friendPlayerLevel.lvl_3500 { background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/community/levels_patterns_1-2.png?v=2' );  }
+.friendPlayerLevel.lvl_3600 { background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/community/levels_patterns_3-4.png?v=2' );  }
+.friendPlayerLevel.lvl_3700 { background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/community/levels_patterns_5-6.png?v=2' );  }
+.friendPlayerLevel.lvl_3800 { background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/community/levels_patterns_7-8.png?v=2' );  }
+.friendPlayerLevel.lvl_3900 { background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/community/levels_patterns_9-10.png?v=2' );  }
+.friendPlayerLevel.lvl_4000 { background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/community/levels_shapes_1.png?v=2' );  }
+.friendPlayerLevel.lvl_4100 { background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/community/levels_shapes_2.png?v=2' );  }
+.friendPlayerLevel.lvl_4200 { background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/community/levels_shapes_3.png?v=2' );  }
+.friendPlayerLevel.lvl_4300 { background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/community/levels_shapes_4.png?v=2' );  }
+.friendPlayerLevel.lvl_4400 { background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/community/levels_shapes_5.png?v=2' );  }
+.friendPlayerLevel.lvl_4500 { background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/community/levels_grunge_1.png?v=2' );  }
+.friendPlayerLevel.lvl_4600 { background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/community/levels_grunge_2.png?v=2' );  }
+.friendPlayerLevel.lvl_4700 { background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/community/levels_grunge_3.png?v=2' );  }
+.friendPlayerLevel.lvl_4800 { background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/community/levels_grunge_4.png?v=2' );  }
+.friendPlayerLevel.lvl_4900 { background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/community/levels_grunge_5.png?v=2' );  }
+.friendPlayerLevel.lvl_5000 { background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/community/levels_halftone_1.png?v=2' );  }
+.friendPlayerLevel.lvl_5100 { background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/community/levels_halftone_2.png?v=2' );  }
+.friendPlayerLevel.lvl_5200 { background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/community/levels_halftone_3.png?v=2' );  }
 
 .friendPlayerLevel.lvl_plus_10 {
 	background-position: 0 -32px;
@@ -1035,7 +1035,7 @@ select.blueish {
 {
 	width: 32px;
 	height: 32px;
-	background: url( 'https://steamcommunity-a.akamaihd.net/public/images/login/throbber.gif' ) center center no-repeat;
+	background: url( 'https://community.cloudflare.steamstatic.com/public/images/login/throbber.gif' ) center center no-repeat;
 	margin-right: 5px;
 	float: left;
 }
@@ -1088,7 +1088,7 @@ select.blueish {
 .emoticon_hover_arrow {
 	width: 13px;
 	height: 26px;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/popups/hover_arrow_both.gif' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/popups/hover_arrow_both.gif' );
 	background-repeat: no-repeat;
 
 	position: absolute;
@@ -1228,7 +1228,7 @@ div#global_header .menuitem.active, div#global_header .menuitem:hover {
 }
 
 div#global_header .menuitem.active {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/header/globalheader_highlight.png' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/header/globalheader_highlight.png' );
 	background-repeat: repeat-x;
 }
 
@@ -1282,7 +1282,7 @@ div#global_header .activebg {
 	padding-right: 9px;
 	background-position: 10px 5px;
 
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/header/btn_header_installsteam_download.png?v=1' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/header/btn_header_installsteam_download.png?v=1' );
 	background-repeat:	no-repeat;
 	text-decoration: none;
 	color: #e5e4dc;
@@ -1415,7 +1415,7 @@ div#global_header .submenuitem.active.moderator, div#global_header .submenuitem.
 
 .supernav_content {
 	max-width: 132px;
-	background: #000 url(https://steamcommunity-a.akamaihd.net/public/shared/images/dd_web.jpg) top left no-repeat;
+	background: #000 url(https://community.cloudflare.steamstatic.com/public/shared/images/dd_web.jpg) top left no-repeat;
 	padding: 5px 15px 10px 15px;
 	box-shadow: 3px 3px 5px -3px #000;
 	text-align: left;
@@ -1529,7 +1529,7 @@ a.pagelink:hover {
 	position: relative;
 	top: -2px;
 
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/header/inbox_icons_sprite.png' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/header/inbox_icons_sprite.png' );
 }
 
 .header_notification_comments .notification_icon {
@@ -1554,21 +1554,21 @@ a.pagelink:hover {
 
 /* these are shown conditionally so not a big deal that they aren't in the sprite */
 .header_notification_tradeoffers .notification_icon {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/header/inbox_tradeoffers.png' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/header/inbox_tradeoffers.png' );
 }
 
 .header_notification_asyncgame .notification_icon {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/header/inbox_async_game.png' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/header/inbox_async_game.png' );
 }
 
 .header_notification_asyncgameinvite .notification_icon {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/header/inbox_async_game_invite.png' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/header/inbox_async_game_invite.png' );
 }
 
 /* re-uses comment icon */
 .header_notification_moderatormessage .notification_icon,
 .header_notification_helprequestreply .notification_icon {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/header/inbox_moderator_message.png' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/header/inbox_moderator_message.png' );
 }
 
 .header_parental_btn {
@@ -1803,7 +1803,7 @@ img.dynamiclink_sketchfab_play_overlay_image
 .ugc.has_adult_content.ugc_show_warning_image::after
 {
 	content: "";
-	background: url( https://steamcommunity-a.akamaihd.net/public/shared/images/ico/icon_content_warning.png ) center center no-repeat;
+	background: url( https://community.cloudflare.steamstatic.com/public/shared/images/ico/icon_content_warning.png ) center center no-repeat;
 	width: 100%;
 	height: 100%;
 	position: absolute;
@@ -1857,7 +1857,7 @@ img.dynamiclink_sketchfab_play_overlay_image
 .ugc.has_adult_content .ugc_warning .ugc_warning_image
 {
 	margin-top: 5px;
-	background: url( https://steamcommunity-a.akamaihd.net/public/shared/images/ico/icon_content_warning.png ) center center no-repeat;
+	background: url( https://community.cloudflare.steamstatic.com/public/shared/images/ico/icon_content_warning.png ) center center no-repeat;
 	width: 100%;
 	height: 36px;
 	pointer-events: none;
@@ -1882,7 +1882,7 @@ img.dynamiclink_sketchfab_play_overlay_image
 	height: 15px;
 
 	background-color: rgba(54,97,125,1);
-	background-image: url('https://steamcommunity-a.akamaihd.net/public/shared/images/v6/icon_expand.png');
+	background-image: url('https://community.cloudflare.steamstatic.com/public/shared/images/v6/icon_expand.png');
 	background-position: 4px 4px;
 	border-radius: 3px;
 	background-repeat: no-repeat;
@@ -1892,7 +1892,7 @@ img.dynamiclink_sketchfab_play_overlay_image
 .ugc_options:hover > div {
 	background-color: #67c1f5;
 	color: #fff;
-	background-image: url('https://steamcommunity-a.akamaihd.net/public/shared/images/v6/icon_expand_white.png');
+	background-image: url('https://community.cloudflare.steamstatic.com/public/shared/images/v6/icon_expand_white.png');
 }
 
 *:hover > .ugc_options, .ugc_hover.ugc_options {

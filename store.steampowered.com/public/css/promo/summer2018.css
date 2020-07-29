@@ -293,7 +293,7 @@ body.v6.summer2018_home h4 .btn_small span {
 /* Saliens ============================================= */
 
 .home_ctn.summer_salien_universe, .home_ctn.conquered_summer_salien_universe {
-	background: url('https://steamcdn-a.akamaihd.net/store/promo/summer2018/saliens_background.jpg') #153e56;
+	background: url('https://cdn.cloudflare.steamstatic.com/store/promo/summer2018/saliens_background.jpg') #153e56;
 	height: 410px;
 	padding-top: 90px;
 	margin-top: -53px;
@@ -303,7 +303,7 @@ body.v6.summer2018_home h4 .btn_small span {
 		font-weight: 300; /* light */
 
 			box-shadow: 0 0 10px #000;
-	background: url('https://steamcdn-a.akamaihd.net/store/promo/summer2018/saliens_background.jpg') #153e56;
+	background: url('https://cdn.cloudflare.steamstatic.com/store/promo/summer2018/saliens_background.jpg') #153e56;
 }
 .conquered_ctn .conquered_planet {
 	padding-bottom: 20px;
@@ -1023,7 +1023,7 @@ body.v6.steamaward_nominations_faq #footer_spacer {
 }
 
 .summer2018_home .hardware_ctn.double .hardware_content .right:hover {
-	background: url( 'https://steamcdn-a.akamaihd.net/store/promo/summer2018/banner_hardware_2_bg_hover.jpg' ); ?>' ) no-repeat;
+	background: url( 'https://cdn.cloudflare.steamstatic.com/store/promo/summer2018/banner_hardware_2_bg_hover.jpg' ); ?>' ) no-repeat;
 	background-size: 100% 100%;
 }
 
@@ -1344,7 +1344,7 @@ background: -webkit-linear-gradient( 290deg, rgba(102, 192, 244, 1.0) 5%,rgba( 2
 
 /* planet giveaway listing */
 body.v6.salien_summer_2018 {
-	background: url('https://steamcdn-a.akamaihd.net/store/promo/summer2018/sale_page_banner.jpg') #000;
+	background: url('https://cdn.cloudflare.steamstatic.com/store/promo/summer2018/sale_page_banner.jpg') #000;
 	background-repeat: no-repeat;
 	background-position-x: 50%;
 }

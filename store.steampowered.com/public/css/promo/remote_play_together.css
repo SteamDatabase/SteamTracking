@@ -89,11 +89,11 @@ body.v6.remote_play_together .page_content {
 }
 
 .preamble_box_image.together {
-	background-image: url( 'https://steamcdn-a.akamaihd.net/store/remote_play_together/rpt_icon.svg?v=2' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/remote_play_together/rpt_icon.svg?v=2' );
 }
 
 .preamble_box_image.remote {
-	background-image: url( 'https://steamcdn-a.akamaihd.net/store/remote_play_together/rpa_icon.svg?v=2' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/remote_play_together/rpa_icon.svg?v=2' );
 }
 
 .preamble_box_header {
@@ -217,7 +217,7 @@ body.v6.remote_play_together .page_content {
 }
 
 .overcooked_logo_ctn {
-	background-image: url( 'https://steamcdn-a.akamaihd.net/store/remote_play_together/overcooked.jpg?v=2' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/remote_play_together/overcooked.jpg?v=2' );
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
@@ -236,7 +236,7 @@ body.v6.remote_play_together .page_content {
 
 .remoteplay_howto_section {
 	position: relative;
-	background-image: url( 'https://steamcdn-a.akamaihd.net/store/remote_play_together/rpt_towerfall_bg.png?v=2' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/remote_play_together/rpt_towerfall_bg.png?v=2' );
 	background-position: top right;
 	background-repeat: no-repeat;
 	padding: 150px 0;
@@ -245,7 +245,7 @@ body.v6.remote_play_together .page_content {
 }
 
 .remoteplay_howto_overlay {
-	background-image: url( 'https://steamcdn-a.akamaihd.net/store/remote_play_together/rpt_controllers.png?v=2' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/remote_play_together/rpt_controllers.png?v=2' );
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
@@ -335,7 +335,7 @@ body.v6.remote_play_together .page_content {
 }
 
 .rpt_towerfall_capsule {
-	background-image: url( 'https://steamcdn-a.akamaihd.net/store/remote_play_together/towerfall.png?v=2' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/remote_play_together/towerfall.png?v=2' );
 	background-position: right;
 	background-repeat: no-repeat;
 	background-size: contain;
@@ -351,7 +351,7 @@ body.v6.remote_play_together .page_content {
 	margin-top: 50px;
 	max-width: 1100px;
 	min-height: 480px;
-	background-image: url( 'https://steamcdn-a.akamaihd.net/store/remote_play_together/rpt_overcooked.png?v=2' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/remote_play_together/rpt_overcooked.png?v=2' );
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
@@ -360,7 +360,7 @@ body.v6.remote_play_together .page_content {
 }
 
 .rpt_overcooked_capsule {
-	background-image: url( 'https://steamcdn-a.akamaihd.net/store/remote_play_together/overcooked.jpg?v=2' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/remote_play_together/overcooked.jpg?v=2' );
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
@@ -396,7 +396,7 @@ body.v6.remote_play_together .page_content {
 }
 
 .towerfall_logo_ctn {
-	background-image: url( 'https://steamcdn-a.akamaihd.net/store/remote_play_together/towerfall.png?v=2' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/remote_play_together/towerfall.png?v=2' );
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
@@ -405,7 +405,7 @@ body.v6.remote_play_together .page_content {
 }
 
 .towerfall_gif {
-	background-image: url( 'https://steamcdn-a.akamaihd.net/store/remote_play_together/towerfall_invite2.gif?v=2' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/remote_play_together/towerfall_invite2.gif?v=2' );
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
@@ -417,7 +417,7 @@ body.v6.remote_play_together .page_content {
 
 
 .session_ui_image {
-	background-image: url( 'https://steamcdn-a.akamaihd.net/store/remote_play_together/remote_play_session_ui.png?v=2' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/remote_play_together/remote_play_session_ui.png?v=2' );
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
@@ -537,7 +537,7 @@ body.v6.remote_play_together .page_content {
 }
 
 .rpt_downhill_capsule {
-	background-image: url( 'https://steamcdn-a.akamaihd.net/store/remote_play_together/downhill.jpg?v=2' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/remote_play_together/downhill.jpg?v=2' );
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
@@ -548,7 +548,7 @@ body.v6.remote_play_together .page_content {
 
 .rpt_anywhere_header_left {
 	position: relative;
-	background-image: url( 'https://steamcdn-a.akamaihd.net/store/remote_play_together/rpa_cyclist.png?v=2' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/remote_play_together/rpa_cyclist.png?v=2' );
 	background-position: top left;
 	background-repeat: no-repeat;
 	background-size: contain;
@@ -560,7 +560,7 @@ body.v6.remote_play_together .page_content {
 
 .rpt_hands {
 	position: absolute;
-	background-image: url( 'https://steamcdn-a.akamaihd.net/store/remote_play_together/Remote_mobile_hands.png?v=2' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/remote_play_together/Remote_mobile_hands.png?v=2' );
 	background-position: top;
 	background-repeat: no-repeat;
 	background-size: contain;
@@ -596,7 +596,7 @@ body.v6.remote_play_together .page_content {
 /* ANYWHERE HOW TO */
 
 .rpt_anywhere_how_ctn {
-	background-image: url( 'https://steamcdn-a.akamaihd.net/store/remote_play_together/rpa_lifeisstrange.png?v=2' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/remote_play_together/rpa_lifeisstrange.png?v=2' );
 	background-position: center right;
 	background-repeat: no-repeat;
 	display: flex;
@@ -625,7 +625,7 @@ body.v6.remote_play_together .page_content {
 }
 
 .rpt_anywhere_apps_header.steamlink {
-	background-image: url( 'https://steamcdn-a.akamaihd.net/store/remote_play_together/steamlink.png?v=2' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/remote_play_together/steamlink.png?v=2' );
 	background-position: left center;
 	background-repeat: no-repeat;
 	padding-left: 100px;
@@ -651,15 +651,15 @@ body.v6.remote_play_together .page_content {
 }
 
 .rpt_appstore_logo.google {
-	background-image: url( 'https://steamcdn-a.akamaihd.net/store/remote_play_together/google.png?v=2' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/remote_play_together/google.png?v=2' );
 }
 
 .rpt_appstore_logo.pi {
-	background-image: url( 'https://steamcdn-a.akamaihd.net/store/remote_play_together/pi.png?v=2' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/remote_play_together/pi.png?v=2' );
 }
 
 .rpt_appstore_logo.apple {
-	background-image: url( 'https://steamcdn-a.akamaihd.net/store/remote_play_together/apple.png?v=2' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/remote_play_together/apple.png?v=2' );
 }
 
 /* LIFE IS STRANGE */
@@ -671,7 +671,7 @@ body.v6.remote_play_together .page_content {
 }
 
 .rpt_lifeisstrange_capsule {
-	background-image: url( 'https://steamcdn-a.akamaihd.net/store/remote_play_together/lifeisstrange.jpg?v=2' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/remote_play_together/lifeisstrange.jpg?v=2' );
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
@@ -686,7 +686,7 @@ body.v6.remote_play_together .page_content {
 }
 
 .rpt_tablet_img {
-	background-image: url( 'https://steamcdn-a.akamaihd.net/store/remote_play_together/rpa_tablet.png?v=2' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/remote_play_together/rpa_tablet.png?v=2' );
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
@@ -705,14 +705,14 @@ body.v6.remote_play_together .page_content {
 
 .rpt_monsterhunter_ctn {
 	display: flex;
-	background-image: url( 'https://steamcdn-a.akamaihd.net/store/remote_play_together/rpa_monsterhunter.png?v=2' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/remote_play_together/rpa_monsterhunter.png?v=2' );
 	background-position: bottom left;
 	background-repeat: no-repeat;
 	padding-top: 50px;
 }
 
 .rpt_monsterhunter_capsule {
-	background-image: url( 'https://steamcdn-a.akamaihd.net/store/remote_play_together/monsterhunter.jpg?v=2' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/remote_play_together/monsterhunter.jpg?v=2' );
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
@@ -750,7 +750,7 @@ body.v6.remote_play_together .page_content {
 }
 
 .rpt_steamchat_img {
-	background-image: url( 'https://steamcdn-a.akamaihd.net/store/remote_play_together/steamchat.png?v=2' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/remote_play_together/steamchat.png?v=2' );
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
@@ -775,7 +775,7 @@ body.v6.remote_play_together .page_content {
 }
 
 .rpt_circles_img {
-	background-image: url( 'https://steamcdn-a.akamaihd.net/store/remote_play_together/rpt_and_a_circles2.png?v=2' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/remote_play_together/rpt_and_a_circles2.png?v=2' );
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
@@ -831,7 +831,7 @@ body.v6.remote_play_together .page_content {
 }
 
 .rpt_tech_anywhere_footer {
-	background-image: url( 'https://steamcdn-a.akamaihd.net/store/remote_play_together/rpt_and_a_icon.svg?v=2' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/remote_play_together/rpt_and_a_icon.svg?v=2' );
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;

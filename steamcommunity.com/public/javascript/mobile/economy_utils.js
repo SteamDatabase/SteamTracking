@@ -374,7 +374,7 @@ function relayoutInventory()
 			currentItemColumnContainer = $J( '<div class="inventoryItemColumn"></div>' );
 			inventoryItems.append( currentItemColumnContainer );
 		}
-		var strImageHTML = '<img class="lazyInventory" src="https://steamcommunity-a.akamaihd.net/public/shared/images/mobile/trans.png" data-original="' + inventoryImageURL( item.icon_url, '128f', '128f' ) + '">';
+		var strImageHTML = '<img class="lazyInventory" src="https://community.cloudflare.steamstatic.com/public/shared/images/mobile/trans.png" data-original="' + inventoryImageURL( item.icon_url, '128f', '128f' ) + '">';
 		var strOnClick = 'onclick=onInventoryItemClicked("' + itemIndex + '");'
 		currentItemColumnContainer.append( $J( '<div class="inventoryItem activatableControl" ' + strOnClick + '>' + strImageHTML + '</div>' ) );
 		++ itemCount;
@@ -454,7 +454,7 @@ function bInventoryItemMatchesFilter( rgItem )
 
 function showLoadingUI( elemParent )
 {
-	$J( '.inventoryItems' ).append( $J( '<img class="inventoryThrobber" src="https://steamcommunity-a.akamaihd.net/public/images/login/throbber.gif">' ) );
+	$J( '.inventoryItems' ).append( $J( '<img class="inventoryThrobber" src="https://community.cloudflare.steamstatic.com/public/images/login/throbber.gif">' ) );
 	$J( '.inventoryResults' ).hide();
 }
 
@@ -512,10 +512,10 @@ function inventoryImageURL( imageName, x, y )
 		var strSize = '';
 		if ( x != 0 || y != 0 )
 			strSize = '/' + x + 'x' + y;
-		return 'https://steamcommunity-a.akamaihd.net/economy/image/' + imageName.trim() + strSize;
+		return 'https://community.cloudflare.steamstatic.com/economy/image/' + imageName.trim() + strSize;
 	}
 	else
-		return 'https://steamcommunity-a.akamaihd.net/public/images/trans.gif';
+		return 'https://community.cloudflare.steamstatic.com/public/images/trans.gif';
 }
 
 function mergeInventoryWithDescriptions( rgInventory, rgCurrency, rgDescriptions )

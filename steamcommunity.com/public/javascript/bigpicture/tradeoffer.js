@@ -19,11 +19,11 @@ var CCountSelectorSlider = (function()
 				'<styles>' +
 					'<include src="file://{resources}/styles/steamstyles.css" />' +
 					'<include src="file://{resources}/styles/msgbox.css" />' +
-					'<include src="https://steamcommunity-a.akamaihd.net/public/css/bigpicture/profile.css?v=valveisgoodatcaching&amp;l=english" />' +
-					'<include src="https://steamcommunity-a.akamaihd.net/public/css/bigpicture/tradeoffer.css?v=valveisgoodatcaching" />' +
+					'<include src="https://community.cloudflare.steamstatic.com/public/css/bigpicture/profile.css?v=valveisgoodatcaching&amp;l=english" />' +
+					'<include src="https://community.cloudflare.steamstatic.com/public/css/bigpicture/tradeoffer.css?v=valveisgoodatcaching" />' +
 				'</styles>' +
 				'<scripts>' +
-					'<include src="https://steamcommunity-a.akamaihd.net/public/shared/javascript/bigpicture/base.js?v=valveisgoodatcaching&amp;l=english" />' +
+					'<include src="https://community.cloudflare.steamstatic.com/public/shared/javascript/bigpicture/base.js?v=valveisgoodatcaching&amp;l=english" />' +
 				'</scripts>' +
 				'<Panel defaultfocus="Count" >' +
 					'<Panel id="InnerContent">' +
@@ -760,11 +760,11 @@ function DisplayReceipt( tradeid )
 			'<styles>' +
 				'<include src="file://{resources}/styles/steamstyles.css" />' +
 				'<include src="file://{resources}/styles/msgbox.css" />' +
-				'<include src="https://steamcommunity-a.akamaihd.net/public/css/bigpicture/profile.css?v=valveisgoodatcaching&amp;l=english" />' +
-				'<include src="https://steamcommunity-a.akamaihd.net/public/css/bigpicture/tradeoffer.css?v=valveisgoodatcaching" />' +
+				'<include src="https://community.cloudflare.steamstatic.com/public/css/bigpicture/profile.css?v=valveisgoodatcaching&amp;l=english" />' +
+				'<include src="https://community.cloudflare.steamstatic.com/public/css/bigpicture/tradeoffer.css?v=valveisgoodatcaching" />' +
 			'</styles>' +
 			'<scripts>' +
-				'<include src="https://steamcommunity-a.akamaihd.net/public/shared/javascript/bigpicture/base.js?v=valveisgoodatcaching&amp;l=english" />' +
+				'<include src="https://community.cloudflare.steamstatic.com/public/shared/javascript/bigpicture/base.js?v=valveisgoodatcaching&amp;l=english" />' +
 			'</scripts>' +
 			'<script>' +
 				ClosePopupAndExit.toString() +

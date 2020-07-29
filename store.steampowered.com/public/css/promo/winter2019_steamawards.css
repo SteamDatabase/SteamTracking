@@ -82,7 +82,7 @@
 	rgba(0,0,0,1) 0%,
 	rgba(0,0,0,0.2) 50%,
 	rgba(0,0,0,0) 100%),
-	url("https://steamcdn-a.akamaihd.net/store/promo/steamawards2019/award-goty.jpg");
+	url("https://cdn.cloudflare.steamstatic.com/store/promo/steamawards2019/award-goty.jpg");
 }
 
 #award_card_2 {
@@ -90,7 +90,7 @@
 	rgba(0,0,0,1) 0%,
 	rgba(0,0,0,0.7) 50%,
 	rgba(0,0,0,0.2) 100%),
-	url("https://steamcdn-a.akamaihd.net/store/promo/steamawards2019/award-bvr.jpg");
+	url("https://cdn.cloudflare.steamstatic.com/store/promo/steamawards2019/award-bvr.jpg");
 }
 
 #award_card_3 {
@@ -98,7 +98,7 @@
 	rgba(0,0,0,1) 0%,
 	rgba(0,0,0,0.7) 50%,
 	rgba(0,0,0,0.2) 100%),
-	url("https://steamcdn-a.akamaihd.net/store/promo/steamawards2019/award-lol.jpg");
+	url("https://cdn.cloudflare.steamstatic.com/store/promo/steamawards2019/award-lol.jpg");
 }
 /*rgba(0,0,0,0.98) 25%,*/
 #award_card_4 {
@@ -106,7 +106,7 @@
 	rgba(0,0,0,1) 0%,
 	rgba(0,0,0,0.7) 50%,
 	rgba(0,0,0,0.2) 100%),
-	url("https://steamcdn-a.akamaihd.net/store/promo/steamawards2019/award-bwf.jpg");
+	url("https://cdn.cloudflare.steamstatic.com/store/promo/steamawards2019/award-bwf.jpg");
 }
 
 #award_card_5 {
@@ -114,7 +114,7 @@
 	rgba(0,0,0,1) 0%,
 	rgba(0,0,0,0.7) 50%,
 	rgba(0,0,0,0.2) 100%),
-	url("https://steamcdn-a.akamaihd.net/store/promo/steamawards2019/award-innovative.jpg");
+	url("https://cdn.cloudflare.steamstatic.com/store/promo/steamawards2019/award-innovative.jpg");
 }
 
 #award_card_6 {
@@ -122,7 +122,7 @@
 	rgba(0,0,0,1) 0%,
 	rgba(0,0,0,0.7) 50%,
 	rgba(0,0,0,0.2) 100%),
-	url("https://steamcdn-a.akamaihd.net/store/promo/steamawards2019/award-story.jpg");
+	url("https://cdn.cloudflare.steamstatic.com/store/promo/steamawards2019/award-story.jpg");
 }
 
 #award_card_7 {
@@ -130,7 +130,7 @@
 	rgba(0,0,0,1) 0%,
 	rgba(0,0,0,0.7) 50%,
 	rgba(0,0,0,0.2) 100%),
-	url("https://steamcdn-a.akamaihd.net/store/promo/steamawards2019/award-suck.jpg");
+	url("https://cdn.cloudflare.steamstatic.com/store/promo/steamawards2019/award-suck.jpg");
 }
 
 #award_card_8 {
@@ -138,7 +138,7 @@
 	rgba(0,0,0,1) 0%,
 	rgba(0,0,0,0.7) 50%,
 	rgba(0,0,0,0.2) 100%),
-	url("https://steamcdn-a.akamaihd.net/store/promo/steamawards2019/award-visual.jpg");
+	url("https://cdn.cloudflare.steamstatic.com/store/promo/steamawards2019/award-visual.jpg");
 }
 
 .award_title {
@@ -268,7 +268,7 @@
 }
 
 .steamawards_header_bg {
-	background-image: url('https://steamcdn-a.akamaihd.net/store/promo/steamawards2019/bg-shine.png');
+	background-image: url('https://cdn.cloudflare.steamstatic.com/store/promo/steamawards2019/bg-shine.png');
 	background-position: center;
 	background-repeat: no-repeat;
 }
@@ -574,7 +574,7 @@
 	rgba(11,11,12,1) 0%,
 	rgba(11,11,12,0.9) 70%,
 	rgba(11,11,12,0 ) 100%),
-	url('https://steamcdn-a.akamaihd.net/store/promo/steamawards2019/bg/bg-goty.jpg');
+	url('https://cdn.cloudflare.steamstatic.com/store/promo/steamawards2019/bg/bg-goty.jpg');
 	background-position: center;
 }
 
@@ -583,7 +583,7 @@
 	rgba(11,11,12,1) 0%,
 	rgba(11,11,12,0.9) 70%,
 	rgba(11,11,12,0.2) 100%),
-	url('https://steamcdn-a.akamaihd.net/store/promo/steamawards2019/bg/bg-bvr.jpg');
+	url('https://cdn.cloudflare.steamstatic.com/store/promo/steamawards2019/bg/bg-bvr.jpg');
 	background-position: center;
 }
 #vote_category_3 {
@@ -591,7 +591,7 @@
 	rgba(11,11,12,1) 0%,
 	rgba(11,11,12,0.9) 50%,
 	rgba(11,11,12,0.2) 100%),
-	url('https://steamcdn-a.akamaihd.net/store/promo/steamawards2019/bg/bg-lol.jpg');
+	url('https://cdn.cloudflare.steamstatic.com/store/promo/steamawards2019/bg/bg-lol.jpg');
 	background-position: center;
 }
 
@@ -600,7 +600,7 @@
 	rgba(11,11,12,1) 0%,
 	rgba(11,11,12,0.9) 50%,
 	rgba(11,11,12,0.2) 100%),
-	url('https://steamcdn-a.akamaihd.net/store/promo/steamawards2019/bg/bg-bwf.jpg');
+	url('https://cdn.cloudflare.steamstatic.com/store/promo/steamawards2019/bg/bg-bwf.jpg');
 	background-position: center;
 }
 
@@ -609,7 +609,7 @@
 	rgba(11,11,12,1) 0%,
 	rgba(11,11,12,0.9) 50%,
 	rgba(11,11,12,0.2) 100%),
-	url('https://steamcdn-a.akamaihd.net/store/promo/steamawards2019/bg/bg-innovative.jpg') no-repeat;
+	url('https://cdn.cloudflare.steamstatic.com/store/promo/steamawards2019/bg/bg-innovative.jpg') no-repeat;
 	background-position: center;
 	background-size: cover;
 }
@@ -619,7 +619,7 @@
 	rgba(11,11,12,1) 0%,
 	rgba(11,11,12,0.9) 50%,
 	rgba(11,11,12,0.2) 100%),
-	url('https://steamcdn-a.akamaihd.net/store/promo/steamawards2019/bg/bg-story.jpg') no-repeat;
+	url('https://cdn.cloudflare.steamstatic.com/store/promo/steamawards2019/bg/bg-story.jpg') no-repeat;
 	background-position: center;
 	background-size: cover;
 }
@@ -629,7 +629,7 @@
 	rgba(11,11,12,1) 0%,
 	rgba(11,11,12,0.9) 50%,
 	rgba(11,11,12,0.2) 100%),
-	url('https://steamcdn-a.akamaihd.net/store/promo/steamawards2019/bg/bg-suck.jpg') no-repeat;
+	url('https://cdn.cloudflare.steamstatic.com/store/promo/steamawards2019/bg/bg-suck.jpg') no-repeat;
 	background-position: center;
 	background-size: cover;
 }
@@ -639,13 +639,13 @@
 	rgba(11,11,12,1) 0%,
 	rgba(11,11,12,0.9) 50%,
 	rgba(11,11,12,0.2) 100%),
-	url('https://steamcdn-a.akamaihd.net/store/promo/steamawards2019/bg/bg-visual.jpg') no-repeat;
+	url('https://cdn.cloudflare.steamstatic.com/store/promo/steamawards2019/bg/bg-visual.jpg') no-repeat;
 	background-position: center;
 	background-size: cover;
 }
 
 .steamawards_app_banner_ctn {
-	background: url('https://steamcdn-a.akamaihd.net/store/promo/steamawards2019/StoreBanner-plain.jpg');
+	background: url('https://cdn.cloudflare.steamstatic.com/store/promo/steamawards2019/StoreBanner-plain.jpg');
 	border: 2px solid #3c3c4f;
 	display: flex;
 	flex-direction: column;
@@ -718,7 +718,7 @@ APP PAGE BANNER SECTION
 }
 
 .steamawards2019_app_banner_ctn {
-	background: url('https://steamcdn-a.akamaihd.net/store/promo/steamawards2019/StoreBanner-plain2019.jpg') center no-repeat;
+	background: url('https://cdn.cloudflare.steamstatic.com/store/promo/steamawards2019/StoreBanner-plain2019.jpg') center no-repeat;
 	border: 2px solid rgba( 95,120,117, 0.5);
 	display: flex;
 	padding: 20px;
@@ -731,7 +731,7 @@ APP PAGE BANNER SECTION
 		}
 
 #AwardsDefault .steamawards2019_app_square_ctn {
-	background: url('https://steamcdn-a.akamaihd.net/store/promo/steamawards2019/StoreBanner-plain2019.jpg') center no-repeat;
+	background: url('https://cdn.cloudflare.steamstatic.com/store/promo/steamawards2019/StoreBanner-plain2019.jpg') center no-repeat;
 	border: 2px solid rgba( 95,120,117, 0.5);
 	padding: 20px;
 	margin-bottom: 20px;
@@ -910,7 +910,7 @@ FAQ SECTION
 
 .faq_background {
 	background-color: #000a1a;
-	background-image: url( 'https://steamcdn-a.akamaihd.net/store/promo/autumn2017/faqbg.jpg' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/promo/autumn2017/faqbg.jpg' );
 	height: 750px;
 }
 
@@ -943,7 +943,7 @@ body.steamaward_nominations_faq {
 }
 
 .gallery_ctn {
-	background: url( 'https://steamcdn-a.akamaihd.net/store/promo/autumn2017/gallery_bg.jpg' ) no-repeat;
+	background: url( 'https://cdn.cloudflare.steamstatic.com/store/promo/autumn2017/gallery_bg.jpg' ) no-repeat;
 	margin-left: -121px;
 	margin-right: -123px;
 	height: 1031px;

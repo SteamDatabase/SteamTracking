@@ -272,15 +272,15 @@ function CBootState()
 CBootState.prototype = Object.create(CGameState.prototype);
 CBootState.prototype.Load = function()
 {
-	LoadAsset('intro_music', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/sfx/SS2018_Saliens_Intro2.{ogg,mp3}');
-	LoadAsset('boot_bg', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/saliens_play_screen.png');
-	LoadAsset('logo_bg', 'https://steamcommunity-a.akamaihd.net/public/images/saliengame/saliens_logo_bg.png');
-	LoadAsset('logo', 'https://steamcommunity-a.akamaihd.net/public/images/saliengame/saliens_logo.png');	
-	LoadAsset('saliens_rig_atlas', 'https://steamcommunity-a.akamaihd.net/public/images/saliengame/saliens_rig.atlas');
-	LoadAsset('saliens_rig', 'https://steamcommunity-a.akamaihd.net/public/images/saliengame/saliens_rig.png');
-	LoadAsset('saliens_rig_anim', 'https://steamcommunity-a.akamaihd.net/public/images/saliengame/saliens_rig.json');
-	LoadAsset( 'ui_select', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/sfx/ui_item_select.{ogg,mp3}' );
-	LoadAsset('sound_toggle', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/sound_toggle.png');
+	LoadAsset('intro_music', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/sfx/SS2018_Saliens_Intro2.{ogg,mp3}');
+	LoadAsset('boot_bg', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/saliens_play_screen.png');
+	LoadAsset('logo_bg', 'https://community.cloudflare.steamstatic.com/public/images/saliengame/saliens_logo_bg.png');
+	LoadAsset('logo', 'https://community.cloudflare.steamstatic.com/public/images/saliengame/saliens_logo.png');	
+	LoadAsset('saliens_rig_atlas', 'https://community.cloudflare.steamstatic.com/public/images/saliengame/saliens_rig.atlas');
+	LoadAsset('saliens_rig', 'https://community.cloudflare.steamstatic.com/public/images/saliengame/saliens_rig.png');
+	LoadAsset('saliens_rig_anim', 'https://community.cloudflare.steamstatic.com/public/images/saliengame/saliens_rig.json');
+	LoadAsset( 'ui_select', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/sfx/ui_item_select.{ogg,mp3}' );
+	LoadAsset('sound_toggle', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/sound_toggle.png');
 	gLoader.load();
 };
 CBootState.prototype.OnLoadComplete = function(loader, resources)
@@ -364,17 +364,17 @@ CPlanetSelectionState.prototype.Load = function()
 
 			CheckGameVersion( results.response.game_version );
 
-			LoadAsset( 'planet_select_bg', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/planet_select_bg.jpg' );
-			LoadAsset( 'galaxy_music', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/sfx/SS2018_Saliens_Planet.{ogg,mp3}' );
-			LoadAsset( 'ship', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/ship.png');
-			LoadAsset( 'ship_flag', 'https://steamcommunity-a.akamaihd.net/public/images/saliengame/ship_flag.png');			
-			LoadAsset( 'grid_tile_boss', 'https://steamcommunity-a.akamaihd.net/public/images/saliengame/grid_tile_boss.png' );
-			LoadAsset( 'grid_tile_complete', 'https://steamcommunity-a.akamaihd.net/public/images/saliengame/grid_tile_complete.png' );
-			LoadAsset( 'ui_select_forward', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/sfx/ui_select_forward_confirm.{ogg,mp3}' );
+			LoadAsset( 'planet_select_bg', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/planet_select_bg.jpg' );
+			LoadAsset( 'galaxy_music', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/sfx/SS2018_Saliens_Planet.{ogg,mp3}' );
+			LoadAsset( 'ship', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/ship.png');
+			LoadAsset( 'ship_flag', 'https://community.cloudflare.steamstatic.com/public/images/saliengame/ship_flag.png');			
+			LoadAsset( 'grid_tile_boss', 'https://community.cloudflare.steamstatic.com/public/images/saliengame/grid_tile_boss.png' );
+			LoadAsset( 'grid_tile_complete', 'https://community.cloudflare.steamstatic.com/public/images/saliengame/grid_tile_complete.png' );
+			LoadAsset( 'ui_select_forward', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/sfx/ui_select_forward_confirm.{ogg,mp3}' );
 
 			if ( gPlayerInfo.clan_info !== undefined )
 			{
-				LoadAsset( 'clanavatar_' + gPlayerInfo.clan_info.accountid, 'https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/' + '/' + gPlayerInfo.clan_info.avatar.substr( 0, 2 ) + '/' + gPlayerInfo.clan_info.avatar + '.jpg' );
+				LoadAsset( 'clanavatar_' + gPlayerInfo.clan_info.accountid, 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/' + '/' + gPlayerInfo.clan_info.avatar.substr( 0, 2 ) + '/' + gPlayerInfo.clan_info.avatar + '.jpg' );
 			}
 
 			instance.m_rgPlanets = [];
@@ -407,12 +407,12 @@ CPlanetSelectionState.prototype.Load = function()
 			}
 			instance.m_rgPlanets.forEach( function( planet ) {
 				var strPlanetName = 'Planet_' + planet.id;
-				LoadAsset( strPlanetName, 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets//saliengame/planets/' + planet.state.image_filename );
+				LoadAsset( strPlanetName, 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets//saliengame/planets/' + planet.state.image_filename );
 
 				if ( planet.giveaway_apps !== undefined )
 				{
 					planet.giveaway_apps.forEach( function( appid ) {
-						LoadAsset( 'app_' + appid, 'https://steamcdn-a.akamaihd.net/steam/apps/' + appid + '/capsule_sm_120.jpg' );
+						LoadAsset( 'app_' + appid, 'https://cdn.cloudflare.steamstatic.com/steam/apps/' + appid + '/capsule_sm_120.jpg' );
 					});
 				}
 			});
@@ -420,7 +420,7 @@ CPlanetSelectionState.prototype.Load = function()
 
 			instance.m_rgConqueredPlanets.forEach( function( planet ) {
 				var strPlanetName = 'Planet_' + planet.id;
-				LoadAsset( strPlanetName, 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets//saliengame/planets/' + planet.state.image_filename );
+				LoadAsset( strPlanetName, 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets//saliengame/planets/' + planet.state.image_filename );
 			});
 
 			gLoader.load();
@@ -985,41 +985,41 @@ CBattleSelectionState.prototype.Load = function()
 			CheckGameVersion( results.response.game_version );
 
 			instance.m_PlanetData = results.response.planets[0];
-			LoadAsset( 'planet_select_bg', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/planet_select_bg.jpg' );
-			LoadAsset( 'galaxy_music', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/sfx/SS2018_Saliens_Planet.{ogg,mp3}' );
-			LoadAsset( 'ship', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/ship.png');
-			LoadAsset( 'ship_flag', 'https://steamcommunity-a.akamaihd.net/public/images/saliengame/ship_flag.png');						
-			LoadAsset( 'grid_tile_boss', 'https://steamcommunity-a.akamaihd.net/public/images/saliengame/grid_tile_boss.png' );
-			LoadAsset( 'grid_tile_complete', 'https://steamcommunity-a.akamaihd.net/public/images/saliengame/grid_tile_complete.png' );
-			LoadAsset( 'map_bg_' + instance.m_PlanetData.id, 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/maps/' + instance.m_PlanetData.state.map_filename );
-			LoadAsset( 'galaxy_music', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/sfx/SS2018_Saliens_Planet.{ogg,mp3}' );
-			LoadAsset( 'ui_select_backwards', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/sfx/ui_select_backwards_deny.{ogg,mp3}' );
-			LoadAsset( 'easy_difficulty', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/low.png' );
-			LoadAsset( 'medium_difficulty', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/medium.png' );
-			LoadAsset( 'hard_difficulty', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/high.png' );
-			LoadAsset( 'boss_difficulty', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/boss.png' );
+			LoadAsset( 'planet_select_bg', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/planet_select_bg.jpg' );
+			LoadAsset( 'galaxy_music', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/sfx/SS2018_Saliens_Planet.{ogg,mp3}' );
+			LoadAsset( 'ship', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/ship.png');
+			LoadAsset( 'ship_flag', 'https://community.cloudflare.steamstatic.com/public/images/saliengame/ship_flag.png');						
+			LoadAsset( 'grid_tile_boss', 'https://community.cloudflare.steamstatic.com/public/images/saliengame/grid_tile_boss.png' );
+			LoadAsset( 'grid_tile_complete', 'https://community.cloudflare.steamstatic.com/public/images/saliengame/grid_tile_complete.png' );
+			LoadAsset( 'map_bg_' + instance.m_PlanetData.id, 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/maps/' + instance.m_PlanetData.state.map_filename );
+			LoadAsset( 'galaxy_music', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/sfx/SS2018_Saliens_Planet.{ogg,mp3}' );
+			LoadAsset( 'ui_select_backwards', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/sfx/ui_select_backwards_deny.{ogg,mp3}' );
+			LoadAsset( 'easy_difficulty', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/low.png' );
+			LoadAsset( 'medium_difficulty', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/medium.png' );
+			LoadAsset( 'hard_difficulty', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/high.png' );
+			LoadAsset( 'boss_difficulty', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/boss.png' );
 
 			if ( gPlayerInfo.clan_info !== undefined )
 			{
-				LoadAsset( 'clanavatar_' + gPlayerInfo.clan_info.accountid, 'https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/' + '/' + gPlayerInfo.clan_info.avatar.substr( 0, 2 ) + '/' + gPlayerInfo.clan_info.avatar + '.jpg' );
+				LoadAsset( 'clanavatar_' + gPlayerInfo.clan_info.accountid, 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/' + '/' + gPlayerInfo.clan_info.avatar.substr( 0, 2 ) + '/' + gPlayerInfo.clan_info.avatar + '.jpg' );
 			}
 
 			instance.m_PlanetData.zones.forEach( function ( zone ) {
 				if ( zone.leader !== undefined )
 				{
-					LoadAsset( 'clanavatar_' + zone.leader.accountid, 'https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/' + '/' + zone.leader.avatar.substr( 0, 2 ) + '/' + zone.leader.avatar + '.jpg' );
+					LoadAsset( 'clanavatar_' + zone.leader.accountid, 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/' + '/' + zone.leader.avatar.substr( 0, 2 ) + '/' + zone.leader.avatar + '.jpg' );
 				}
 
 				if ( zone.top_clans !== undefined )
 				{
 					zone.top_clans.forEach( function( clan ) {
-						LoadAsset( 'clanavatar_' + clan.accountid, 'https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/' + '/' + clan.avatar.substr( 0, 2 ) + '/' + clan.avatar + '.jpg' );
+						LoadAsset( 'clanavatar_' + clan.accountid, 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/' + '/' + clan.avatar.substr( 0, 2 ) + '/' + clan.avatar + '.jpg' );
 					} );
 				}
 			});
 
 			instance.m_PlanetData.giveaway_apps.forEach( function( appid ) {
-				LoadAsset( 'app_' + appid, 'https://steamcdn-a.akamaihd.net/steam/apps/' + appid + '/capsule_sm_120.jpg' );
+				LoadAsset( 'app_' + appid, 'https://cdn.cloudflare.steamstatic.com/steam/apps/' + appid + '/capsule_sm_120.jpg' );
 			});
 
 			gLoader.load();
@@ -1501,63 +1501,63 @@ CBattleState.prototype = Object.create(CGameState.prototype);
 CBattleState.prototype.Load = function()
 {
 	var instance = this;
-	LoadAsset( 'attack_config', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets//saliengame/attacks.json', '8' );
-	LoadAsset( 'enemy_config', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets//saliengame/enemies.json', '11' );
-	LoadAsset( 'level_config', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets//saliengame/levels.json', '10' );
-	LoadAsset( 'enemy-spritesheet-0', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/enemy-spritesheet-0.json' );
-	LoadAsset( 'enemy-spritesheet-1', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/enemy-spritesheet-1.json' );
-	LoadAsset( 'enemy-spritesheet-2', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/enemy-spritesheet-2.json' );
-	LoadAsset( 'explosion-sprite', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/explosion.json' );
-	LoadAsset( 'laser-sprite', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/laser-sprite.json' );
-	LoadAsset( 'enemy-death', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/enemy-death.json' );
-	LoadAsset( 'slime-attack', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/slime-attack.json' );
-	LoadAsset( 'beast-attack', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/beast-attack.json' );
-	LoadAsset( 'psychic-attack', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/psychic-attack.json' );
-	LoadAsset( 'battle_music', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/sfx/SS2018_Saliens_Battle5.{ogg,mp3}' );
-	LoadAsset( 'boulder', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/boulder.png' );
-	LoadAsset( 'blackhole', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/blackhole.png' );
-	LoadAsset( 'bomb', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/space-bomb2.png' );
-	LoadAsset( 'healing', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/healing.json' );
-	LoadAsset( 'flash_freeze', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/iced_enemy.png' );
-	LoadAsset( 'stinger_win', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/sfx/stinger_win.{ogg,mp3}' );
-	LoadAsset( 'stinger_lose', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/sfx/stinger_lose.{ogg,mp3}' );
-	LoadAsset( 'boulder_land', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/sfx/boulder_land.{ogg,mp3}' );
-	LoadAsset( 'boulder_roll', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/sfx/boulder_roll.{ogg,mp3}' );
-	LoadAsset( 'bomb_explode', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/sfx/bomb_explode.{ogg,mp3}' );
-	LoadAsset( 'slime_sound', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/sfx/attack_green.{ogg,mp3}' );
-	LoadAsset( 'beast_sound', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/sfx/attack_red.{ogg,mp3}' );
-	LoadAsset( 'psychic_sound', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/sfx/attack_purple.{ogg,mp3}' );
-	LoadAsset( 'blackhole_sound', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/sfx/blackhole.{ogg,mp3}' );
-	LoadAsset( 'freeze_sound', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/sfx/freeze_start.{ogg,mp3}' );
-	LoadAsset( 'ship_sound', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/sfx/ship_entry.{ogg,mp3}' );
-	LoadAsset( 'beam_down', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/sfx/beam_down.{ogg,mp3}' );
-	LoadAsset( 'ship_full', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/salien_ship_full2.png' );
-	LoadAsset( 'keyboard1', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/keyboard1.png' );
-	LoadAsset( 'keyboard2', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/keyboard2.png' );
-	LoadAsset( 'keyboard3', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/keyboard3.png' );
-	LoadAsset( 'keyboard4', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/keyboard4.png' );
-	LoadAsset( 'keyboard5', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/keyboard5.png' );
-	LoadAsset( 'keyboard6', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/keyboard6.png' );
-	LoadAsset( 'slime_ability', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/slime_ability.png' );
-	LoadAsset( 'beast_ability', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/beast_ability.png' );
-	LoadAsset( 'psychic_ability', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/psychic_ability.png' );
-	LoadAsset( 'impact_sound', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/sfx/box_metal_impact.{ogg,mp3}' );
-	LoadAsset( 'laser_shoot', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/sfx/weapon_laser_shoot.{ogg,mp3}' );
-	LoadAsset( 'laser_impact', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/sfx/weapon_laser_impact.{ogg,mp3}' );
-	LoadAsset( 'lvlonedeath', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/sfx/lvlonedeath.{ogg,mp3}' );
-	LoadAsset( 'lvltwodeath', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/sfx/lvltwodeath.{ogg,mp3}' );
-	LoadAsset( 'lvlthreedeath', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/sfx/lvlthreedeath.{ogg,mp3}' );
-	LoadAsset( 'cables', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/cables.png' );
-	LoadAsset( 'satellite', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/satellite.png' );
-	LoadAsset( 'station', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/station.png' );
-	LoadAsset( 'turret', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/turret.png' );
-	LoadAsset( 'turret_obscuring', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/turret_obscuring.png' );
-	LoadAsset( 'barrel', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/barrel_small.png' );
-	LoadAsset( 'battle_background_' + this.m_PlanetData.id, 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/backgrounds/' + this.m_PlanetData.state.land_filename );
-	LoadAsset( 'beam', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/beam.json' );
-	LoadAsset( 'lock', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/lock.png' );
+	LoadAsset( 'attack_config', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets//saliengame/attacks.json', '8' );
+	LoadAsset( 'enemy_config', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets//saliengame/enemies.json', '11' );
+	LoadAsset( 'level_config', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets//saliengame/levels.json', '10' );
+	LoadAsset( 'enemy-spritesheet-0', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/enemy-spritesheet-0.json' );
+	LoadAsset( 'enemy-spritesheet-1', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/enemy-spritesheet-1.json' );
+	LoadAsset( 'enemy-spritesheet-2', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/enemy-spritesheet-2.json' );
+	LoadAsset( 'explosion-sprite', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/explosion.json' );
+	LoadAsset( 'laser-sprite', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/laser-sprite.json' );
+	LoadAsset( 'enemy-death', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/enemy-death.json' );
+	LoadAsset( 'slime-attack', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/slime-attack.json' );
+	LoadAsset( 'beast-attack', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/beast-attack.json' );
+	LoadAsset( 'psychic-attack', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/psychic-attack.json' );
+	LoadAsset( 'battle_music', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/sfx/SS2018_Saliens_Battle5.{ogg,mp3}' );
+	LoadAsset( 'boulder', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/boulder.png' );
+	LoadAsset( 'blackhole', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/blackhole.png' );
+	LoadAsset( 'bomb', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/space-bomb2.png' );
+	LoadAsset( 'healing', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/healing.json' );
+	LoadAsset( 'flash_freeze', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/iced_enemy.png' );
+	LoadAsset( 'stinger_win', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/sfx/stinger_win.{ogg,mp3}' );
+	LoadAsset( 'stinger_lose', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/sfx/stinger_lose.{ogg,mp3}' );
+	LoadAsset( 'boulder_land', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/sfx/boulder_land.{ogg,mp3}' );
+	LoadAsset( 'boulder_roll', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/sfx/boulder_roll.{ogg,mp3}' );
+	LoadAsset( 'bomb_explode', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/sfx/bomb_explode.{ogg,mp3}' );
+	LoadAsset( 'slime_sound', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/sfx/attack_green.{ogg,mp3}' );
+	LoadAsset( 'beast_sound', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/sfx/attack_red.{ogg,mp3}' );
+	LoadAsset( 'psychic_sound', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/sfx/attack_purple.{ogg,mp3}' );
+	LoadAsset( 'blackhole_sound', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/sfx/blackhole.{ogg,mp3}' );
+	LoadAsset( 'freeze_sound', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/sfx/freeze_start.{ogg,mp3}' );
+	LoadAsset( 'ship_sound', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/sfx/ship_entry.{ogg,mp3}' );
+	LoadAsset( 'beam_down', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/sfx/beam_down.{ogg,mp3}' );
+	LoadAsset( 'ship_full', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/salien_ship_full2.png' );
+	LoadAsset( 'keyboard1', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/keyboard1.png' );
+	LoadAsset( 'keyboard2', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/keyboard2.png' );
+	LoadAsset( 'keyboard3', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/keyboard3.png' );
+	LoadAsset( 'keyboard4', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/keyboard4.png' );
+	LoadAsset( 'keyboard5', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/keyboard5.png' );
+	LoadAsset( 'keyboard6', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/keyboard6.png' );
+	LoadAsset( 'slime_ability', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/slime_ability.png' );
+	LoadAsset( 'beast_ability', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/beast_ability.png' );
+	LoadAsset( 'psychic_ability', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/psychic_ability.png' );
+	LoadAsset( 'impact_sound', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/sfx/box_metal_impact.{ogg,mp3}' );
+	LoadAsset( 'laser_shoot', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/sfx/weapon_laser_shoot.{ogg,mp3}' );
+	LoadAsset( 'laser_impact', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/sfx/weapon_laser_impact.{ogg,mp3}' );
+	LoadAsset( 'lvlonedeath', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/sfx/lvlonedeath.{ogg,mp3}' );
+	LoadAsset( 'lvltwodeath', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/sfx/lvltwodeath.{ogg,mp3}' );
+	LoadAsset( 'lvlthreedeath', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/sfx/lvlthreedeath.{ogg,mp3}' );
+	LoadAsset( 'cables', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/cables.png' );
+	LoadAsset( 'satellite', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/satellite.png' );
+	LoadAsset( 'station', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/station.png' );
+	LoadAsset( 'turret', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/turret.png' );
+	LoadAsset( 'turret_obscuring', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/turret_obscuring.png' );
+	LoadAsset( 'barrel', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/barrel_small.png' );
+	LoadAsset( 'battle_background_' + this.m_PlanetData.id, 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/backgrounds/' + this.m_PlanetData.state.land_filename );
+	LoadAsset( 'beam', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/beam.json' );
+	LoadAsset( 'lock', 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/lock.png' );
 	this.m_PlanetData.giveaway_apps.forEach( function( appid ) {
-		LoadAsset( 'app_' + appid, 'https://steamcdn-a.akamaihd.net/steam/apps/' + appid + '/capsule_sm_120.jpg' );
+		LoadAsset( 'app_' + appid, 'https://cdn.cloudflare.steamstatic.com/steam/apps/' + appid + '/capsule_sm_120.jpg' );
 	});
 	gLoader.load();
 };
@@ -1672,8 +1672,8 @@ CBattleState.prototype.OnLoadComplete = function(loader, resources)
 	// build UI
 
 	//Css style for icons
-	var defaultIcon = "url('https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/reticle_blue.png') 16 16, auto";
-	var hoverIcon = "url('https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/reticle.png') 16 16, auto";
+	var defaultIcon = "url('https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/reticle_blue.png') 16 16, auto";
+	var hoverIcon = "url('https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/reticle.png') 16 16, auto";
 	gApp.renderer.plugins.interaction.cursorStyles.default = defaultIcon;
 	gApp.renderer.plugins.interaction.cursorStyles.pointer = hoverIcon;
 	gApp.renderer.plugins.interaction.update(0.01);

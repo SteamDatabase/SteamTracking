@@ -25,15 +25,15 @@
 }
 
 .friend_status_offline .friend_block_avatar_92 {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/skin_1/iconholder_92_offline.gif' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/skin_1/iconholder_92_offline.gif' );
 }
 
 .friend_status_online .friend_block_avatar_92 {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/skin_1/iconholder_92_online.gif' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/skin_1/iconholder_92_online.gif' );
 }
 
 .friend_status_in-game .friend_block_avatar_92 {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/skin_1/iconholder_92_ingame.gif' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/skin_1/iconholder_92_ingame.gif' );
 }
 
 .friend_block_avatar_92 img {
@@ -121,7 +121,7 @@
 	width: 17px;
 	height: 18px;
 	background-repeat: no-repeat;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/skin_1/quotearrow_graybg.png' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/skin_1/quotearrow_graybg.png' );
 }
 
 .recommendation_detail .quote_arrow
@@ -183,7 +183,7 @@
 }
 
 a.trigger, a.activetrigger {
-	background: url(https://steamcommunity-a.akamaihd.net/public/images/skin_1/arrowDn9x5.gif) no-repeat scroll right center;
+	background: url(https://community.cloudflare.steamstatic.com/public/images/skin_1/arrowDn9x5.gif) no-repeat scroll right center;
 	border-right: 7px solid #8f98a0; /* HAAAAAX! */
 	display:block;
 

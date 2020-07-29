@@ -58,7 +58,7 @@ body {
 	width: 67px;
 	height: 48px;
 
-	background-image: url( https://steamcommunity-a.akamaihd.net/public/images/login/emailauth_icons.png );
+	background-image: url( https://community.cloudflare.steamstatic.com/public/images/login/emailauth_icons.png );
 	background-repeat: no-repeat;
 }
 
@@ -83,7 +83,7 @@ body {
 }
 
 .auth_icon.ipt_icon {
-	background-image: url( https://steamcommunity-a.akamaihd.net/public/images/login/ipt_lockout_icon.png );
+	background-image: url( https://community.cloudflare.steamstatic.com/public/images/login/ipt_lockout_icon.png );
 	height: 62px;
 	width: 53px;
 
@@ -107,7 +107,7 @@ body {
 }
 
 .authcode_entry_box, .twofactorauthcode_entry_box {
-	background-image: url( https://steamcommunity-a.akamaihd.net/public/images/login/code_box.png?v=1 );
+	background-image: url( https://community.cloudflare.steamstatic.com/public/images/login/code_box.png?v=1 );
 	background-repeat: no-repeat;
 	background-color: rgba( 0, 0, 0, 0.2 );
 	border-radius: 3px;
@@ -120,7 +120,7 @@ body {
 
 .friendly_name_box
 {
-	background-image: url( https://steamcommunity-a.akamaihd.net/public/images/login/friendlyname_box.png?v=1 );
+	background-image: url( https://community.cloudflare.steamstatic.com/public/images/login/friendlyname_box.png?v=1 );
 	background-repeat: no-repeat;
 	background-color: rgba( 0, 0, 0, 0.2 );
 	border-radius: 3px;
@@ -171,13 +171,13 @@ input.textField {
 #auth_buttonset_waiting, #login_twofactorauth_buttonset_waiting {
 	height: 66px;
 	
-	background-image: url( https://steamcommunity-a.akamaihd.net/public/images/login/throbber.gif );
+	background-image: url( https://community.cloudflare.steamstatic.com/public/images/login/throbber.gif );
 	background-repeat: no-repeat;
 	background-position: center center;
 }
 
 .auth_button, .twofactorauth_button {
-	background-image: url( https://steamcommunity-a.akamaihd.net/public/images/login/emailauth_button.png );
+	background-image: url( https://community.cloudflare.steamstatic.com/public/images/login/emailauth_button.png );
 	background-repeat: no-repeat;
 	width: 219px;
 	height: 58px;
@@ -238,7 +238,7 @@ a.auth_button, a.auth_button:hover, a.twofactorauth_button, a.twofactorauth_butt
 }
 
 #loginIPTModal .modal_box {
-	background-image: url( https://steamcommunity-a.akamaihd.net/public/images/login/ipt_lockout_bg.png );
+	background-image: url( https://community.cloudflare.steamstatic.com/public/images/login/ipt_lockout_bg.png );
 	width: 466px;
 	height: 231px;
 }

@@ -98,14 +98,14 @@ div.profile_page {
 
 body.profile_page,
 div.profile_page {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/profile/2020/bg_dots.png' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/profile/2020/bg_dots.png' );
 	background-position: center top;
 	background-repeat: no-repeat;
 	background-color: #000000;
 }
 
 body.profile_page.private_profile {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/profile/2020/bg_dots.png' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/profile/2020/bg_dots.png' );
 	background-position: center top;
 	background-repeat: no-repeat;
 	background-color: #000000;
@@ -830,7 +830,7 @@ a.showcase_stat:hover .label {
 	line-height: 64px;
 	float: left;
 
-	margin-left: 20px;
+	margin-left: 4.5%;
 }
 
 .showcase_achievement img {
@@ -1351,7 +1351,7 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:first
 	height: 38px;
 	padding: 10px;
 	line-height: 38px;
-	/*background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/profile/profile_showcase_myworkshop.png' );*/
+	/*background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/profile/profile_showcase_myworkshop.png' );*/
 
 	margin: 10px;
 }
@@ -1387,7 +1387,7 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:first
 	right: 0;
 
 	padding-top: 10px;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/profile/showcase_content_fade.png' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/profile/showcase_content_fade.png' );
 	background-position: center top;
 	background-repeat: repeat-x;
 
@@ -1595,7 +1595,7 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:first
 
 .screenshot_showcase_staticon.favorite {
 	display: inline-block;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/ico_fav_tiled.png' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/sharedfiles/ico_fav_tiled.png' );
 	background-repeat: no-repeat;
 	background-position: 0 -65px;
 	width: 17px;
@@ -1916,7 +1916,7 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:first
 	height: 19px;
 	display: inline-block;
 	margin-right: 4px;
-	background-image: url('https://steamcommunity-a.akamaihd.net/public/images/profile/icons_content.png?v=2');
+	background-image: url('https://community.cloudflare.steamstatic.com/public/images/profile/icons_content.png?v=2');
 	background-position: center;
 	background-repeat: no-repeat;
 	vertical-align: middle;
@@ -2112,7 +2112,7 @@ html.responsive .localmenu_content .profile_badges_badge img {
 }
 
 .profile_small_header_bg {
-	/*background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/profile/profile_header_small_bg.png' );*/
+	/*background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/profile/profile_header_small_bg.png' );*/
 	max-width: 1010px;
 	height: 215px;
 	margin: 0 auto -98px auto;
@@ -2120,7 +2120,7 @@ html.responsive .localmenu_content .profile_badges_badge img {
 }
 
 .profile_small_header_texture {
-	/*background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/profile/profile_header_small_bg_texture.jpg' );*/
+	/*background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/profile/profile_header_small_bg_texture.jpg' );*/
 	background: rgba(58, 62, 71, 0.5);
 	max-width: 978px;
 	height: 102px;
@@ -2173,13 +2173,13 @@ body .pagecontent.profile_subpage_column {
 }
 
 .profile_subpage_column .profile_small_header_bg {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/profile/profile_header_small_bg_column.png?v=1' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/profile/profile_header_small_bg_column.png?v=1' );
 	height: 111px;
 	margin-bottom: 0;
 }
 
 .profile_subpage_general .profile_small_header_bg {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/profile/profile_header_small_bg_none.png' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/profile/profile_header_small_bg_none.png' );
 	height: 111px;
 	margin-bottom: 0;
 }
@@ -2189,7 +2189,7 @@ body .pagecontent.profile_subpage_column {
 }
 
 .profile_subpage_column .maincontent, body.migrated_profile_page .profile_subpage_column #BG_bottom.maincontent {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/profile/profile_subpage_column_bottom.png?v=1' ), url( 'https://steamcommunity-a.akamaihd.net/public/images/profile/profile_subpage_column.png?v=1' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/profile/profile_subpage_column_bottom.png?v=1' ), url( 'https://community.cloudflare.steamstatic.com/public/images/profile/profile_subpage_column.png?v=1' );
 	background-repeat: no-repeat, repeat-y;
 	background-position: bottom center, center;
 	width: 926px;

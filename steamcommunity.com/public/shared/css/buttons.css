@@ -913,7 +913,7 @@ button::-moz-focus-inner
 	width: 18px;
 	height: 18px;
 	margin: 0 0px;
-	background: url(https://steamcommunity-a.akamaihd.net/public/shared/images/buttons/icons_18.png?v=3);
+	background: url(https://community.cloudflare.steamstatic.com/public/shared/images/buttons/icons_18.png?v=3);
 	vertical-align: text-top;
 }
 
@@ -946,7 +946,7 @@ button::-moz-focus-inner
 	display: inline-block;
 	width: 16px;
 	height: 16px;
-	background: url(https://steamcommunity-a.akamaihd.net/public/shared/images/buttons/icons_16.png?v=5);
+	background: url(https://community.cloudflare.steamstatic.com/public/shared/images/buttons/icons_16.png?v=5);
 	vertical-align: text-top;
 }
 
@@ -1079,7 +1079,7 @@ button::-moz-focus-inner
 	display: inline-block;
 	width: 15px;
 	height: 16px;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/shared/images/buttons/icon_double_arrows.png');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/shared/images/buttons/icon_double_arrows.png');
 	vertical-align: middle;
 }
 
@@ -1117,7 +1117,7 @@ button::-moz-focus-inner
      display: inline-block;
      width: 15px;
      height: 16px;
-     background-image:url('https://steamcommunity-a.akamaihd.net/public/shared/images/buttons/icon_double_arrows.png');
+     background-image:url('https://community.cloudflare.steamstatic.com/public/shared/images/buttons/icon_double_arrows.png');
 }
 
 .packageTagsArrow.Expand

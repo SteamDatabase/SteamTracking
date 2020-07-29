@@ -147,7 +147,7 @@
 	margin-right: 6px;
 	display: inline-block;
 
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/skin_1/discussions_links_icons.png' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/skin_1/discussions_links_icons.png' );
 	background-repeat: no-repeat;
 
 	vertical-align: middle;
@@ -292,7 +292,7 @@ div.quicklistselect #quicklistselect_arrow {
 	top: 5px;
 	width: 17px;
 	height: 20px;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/workshop_dateselect_arrow.png' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/sharedfiles/workshop_dateselect_arrow.png' );
 	background-repeat: no-repeat;
 	background-position: top center;
 }

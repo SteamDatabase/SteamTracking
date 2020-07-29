@@ -10,7 +10,7 @@ function ToggleManageFriends()
 		$J( '#manage_friends' ).addClass( 'manage' );
 		$J( '#manage_friends_control' ).addClass( 'btn_active' );
 		$J( '#search_results>.selectable' ).addClass( 'manage' );
-		$J( '#button_manage_image' ).html( '<img src="https://steamcommunity-a.akamaihd.net/public/images/skin_1/icon_manage_on.png" >' );
+		$J( '#button_manage_image' ).html( '<img src="https://community.cloudflare.steamstatic.com/public/images/skin_1/icon_manage_on.png" >' );
 		$J( '.selectable_overlay' ).on( 'click.manage_friends', function( event ) {
 			if ( !event.which || event.which == 1 )
 			{
@@ -23,7 +23,7 @@ function ToggleManageFriends()
 	}
 	else
 	{
-		$J( '#button_manage_image' ).html(  '<img src="https://steamcommunity-a.akamaihd.net/public/images/skin_1/icon_manage_off.png" >' );
+		$J( '#button_manage_image' ).html(  '<img src="https://community.cloudflare.steamstatic.com/public/images/skin_1/icon_manage_off.png" >' );
 		$J( '#manage_friends' ).removeClass( 'manage' );
 		$J( '#manage_friends_control' ).removeClass( 'btn_active' );
 		$J( '#search_results>.selectable.manage' ).removeClass( 'manage' );
@@ -43,13 +43,13 @@ function ToggleSearchBar()
 	{
 		$J( '#manage_search_control' ).addClass( 'active' );
 		$J( '#search_text_box.search_your_friends' ).addClass( 'btn_active active' );
-		$J( '#button_search_image' ).html( '<img src="https://steamcommunity-a.akamaihd.net/public/images/skin_1/icon_search_on.png" >' );
+		$J( '#button_search_image' ).html( '<img src="https://community.cloudflare.steamstatic.com/public/images/skin_1/icon_search_on.png" >' );
 	}
 	else
 	{
 		$J( '#manage_search_control' ).removeClass( 'active' );
 		$J( '#search_text_box.search_your_friends' ).removeClass( 'btn_active active' );
-		$J( '#button_search_image' ).html( '<img src="https://steamcommunity-a.akamaihd.net/public/images/skin_1/icon_search_off.png" >' );
+		$J( '#button_search_image' ).html( '<img src="https://community.cloudflare.steamstatic.com/public/images/skin_1/icon_search_off.png" >' );
 	}
 }
 

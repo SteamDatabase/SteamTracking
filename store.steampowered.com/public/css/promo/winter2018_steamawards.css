@@ -842,7 +842,7 @@ FAQ SECTION
 
 .faq_background {
 	background-color: #000a1a;
-	background-image: url( 'https://steamcdn-a.akamaihd.net/store/promo/autumn2017/faqbg.jpg' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/promo/autumn2017/faqbg.jpg' );
 	height: 750px;
 }
 
@@ -875,7 +875,7 @@ body.steamaward_nominations_faq {
 }
 
 .gallery_ctn {
-	background: url( 'https://steamcdn-a.akamaihd.net/store/promo/autumn2017/gallery_bg.jpg' ) no-repeat;
+	background: url( 'https://cdn.cloudflare.steamstatic.com/store/promo/autumn2017/gallery_bg.jpg' ) no-repeat;
 	margin-left: -121px;
 	margin-right: -123px;
 	height: 1031px;

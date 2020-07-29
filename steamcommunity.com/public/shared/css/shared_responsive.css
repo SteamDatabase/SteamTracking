@@ -290,7 +290,7 @@ html.responsive body {
 	height: 50px;
 	z-index: 12; /* behind overlay, on top of page content */
 
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/responsive/local_menu_hamburger.png' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/responsive/local_menu_hamburger.png' );
 	background-repeat: no-repeat;
 	background-position: 2px center;
 	background-size: 110%;

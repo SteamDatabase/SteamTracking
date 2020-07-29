@@ -85,7 +85,7 @@
 	z-index:2;
 	top: -2%;
 	right: 4%;
-	background: transparent url('https://steamcommunity-a.akamaihd.net/public/images//promo/summer2017/rocket_sprite.png') 0 0 no-repeat;
+	background: transparent url('https://community.cloudflare.steamstatic.com/public/images//promo/summer2017/rocket_sprite.png') 0 0 no-repeat;
 	animation: rocket 1s steps(31) infinite;
 	transform-origin: top right;
 
@@ -134,7 +134,7 @@
 }
 
 body.stickers .responsive_page_template_content {
-	background-image: url(https://steamcommunity-a.akamaihd.net/public/images//promo/summer2017/cloudtile.png);
+	background-image: url(https://community.cloudflare.steamstatic.com/public/images//promo/summer2017/cloudtile.png);
 
 	background-repeat: repeat-x;
 	background-position: top left;	
@@ -154,7 +154,7 @@ body.stickers .responsive_page_template_content {
 		overflow: hidden;
 
 	position: relative;
-	background: url( https://steamcommunity-a.akamaihd.net/public/images//promo/summer2017/canvas_strip.png ) top center no-repeat;
+	background: url( https://community.cloudflare.steamstatic.com/public/images//promo/summer2017/canvas_strip.png ) top center no-repeat;
 	background-size: contain;
 
 }
@@ -231,7 +231,7 @@ body.stickers .responsive_page_template_content {
 	margin: 37px 0 15px 0;
 	overflow: hidden;
 
-	background: url( https://steamcommunity-a.akamaihd.net/public/images//promo/summer2017/canvas.png ) top center no-repeat;
+	background: url( https://community.cloudflare.steamstatic.com/public/images//promo/summer2017/canvas.png ) top center no-repeat;
 	background-size: 100% auto;
 	border-radius: 6px;
 }
@@ -520,7 +520,7 @@ body.stickers .responsive_page_template_content {
 }
 .sticker_credits
 {
-	background: url( https://steamcommunity-a.akamaihd.net/public/images//promo/summer2017/canvas.png ) top center no-repeat;
+	background: url( https://community.cloudflare.steamstatic.com/public/images//promo/summer2017/canvas.png ) top center no-repeat;
 	background-size: 100% auto;
 	border-radius: 6px;
 	background-size: cover;

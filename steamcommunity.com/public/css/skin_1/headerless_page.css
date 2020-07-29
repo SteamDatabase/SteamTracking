@@ -2,7 +2,7 @@
 
 
 body {
-	background-image: url( https://steamcommunity-a.akamaihd.net/public/images/economy/noheader_content.png );
+	background-image: url( https://community.cloudflare.steamstatic.com/public/images/economy/noheader_content.png );
 	background-repeat: repeat-x;
 	background-color: #000000;
 	text-align: left;
@@ -33,7 +33,7 @@ body.headerless_page {
 }
 
 .black_square_btn, .black_square_btn .cap.left, .black_square_btn .cap.right {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/economy/tradereceipt_button.png' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/economy/tradereceipt_button.png' );
 	height: 26px;
 }
 
@@ -69,7 +69,7 @@ body.headerless_page {
 }
 
 #error_page_bg {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/skin_1/headerless_error_bg.png' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/skin_1/headerless_error_bg.png' );
 	width: 940px;
 	height: 482px;
 	margin: 0px auto 24px auto;

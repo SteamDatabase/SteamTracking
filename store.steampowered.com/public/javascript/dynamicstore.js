@@ -49,7 +49,6 @@ GDynamicStore = {
 	s_rgExcludedDescIDs: {},
 
 	s_rgPersonalizedBundleData: {},
-	s_rgPlaytestData: {},
 
 	s_rgfnOnReadyCallbacks: [],
 
@@ -189,13 +188,6 @@ GDynamicStore = {
 				GDynamicStore.s_rgCurations = data.rgCurations || {};
 				GDynamicStore.s_rgCreatorsFollowed = fnConvertToMap( data.rgCreatorsFollowed );
 				GDynamicStore.s_rgCreatorsIgnored = fnConvertToMap( data.rgCreatorsIgnored );
-				if( data.rgPlaytestData )
-				{
-					GDynamicStore.s_rgPlaytestData = data.rgPlaytestData;
-
-					GDynamicStore.s_rgPlaytestData.available_tests = GDynamicStore.s_rgPlaytestData.available_tests;
-					GDynamicStore.s_rgPlaytestData.previous_active_tests = fnConvertToMap( GDynamicStore.s_rgPlaytestData.previous_active_tests );
-				}
 
 				if ( data.rgExcludedTags && data.rgExcludedTags.length > 0 )
 				{
@@ -1316,20 +1308,6 @@ GDynamicStore = {
 		return true;
 	},
 
-	GetAvailablePlaytestForApp: function( appid )
-	{
-		if( !GDynamicStore.s_rgPlaytestData || !GDynamicStore.s_rgPlaytestData.available_tests )
-			return false;
-
-		for( var i=0; i<GDynamicStore.s_rgPlaytestData.available_tests.length; i++)
-		{
-			if( GDynamicStore.s_rgPlaytestData.available_tests[i].appid == appid )
-				return GDynamicStore.s_rgPlaytestData.available_tests[i].testid;
-		}
-
-		return false;
-	},
-
 	DisplayBundleSimulator: function( unBundleID )
 	{
 		if ( !GDynamicStore.m_bLoadComplete )
@@ -2346,15 +2324,15 @@ function ShowHowDoDiscoveryQueuesWorkDialog()
 
 function GetAvatarURL( strHash, strSize )
 {
-	return "https:\/\/steamcdn-a.akamaihd.net\/steamcommunity\/public\/images\/avatars\/" + strHash.substring( 0, 2 ) + '/' + strHash + strSize + '.jpg';
+	return "https:\/\/cdn.cloudflare.steamstatic.com\/steamcommunity\/public\/images\/avatars\/" + strHash.substring( 0, 2 ) + '/' + strHash + strSize + '.jpg';
 }
 
 function GetScreenshotURL( appid, filename, sizeStr )
 {
 	if( sizeStr )
-		return 'https://steamcdn-a.akamaihd.net/steam/' + 'apps/' + appid + '/' + filename.replace('.jpg', sizeStr + '.jpg');
+		return 'https://cdn.cloudflare.steamstatic.com/steam/' + 'apps/' + appid + '/' + filename.replace('.jpg', sizeStr + '.jpg');
 
-	return 'https://steamcdn-a.akamaihd.net/steam/' + 'apps/' + appid + '/' + filename;
+	return 'https://cdn.cloudflare.steamstatic.com/steam/' + 'apps/' + appid + '/' + filename;
 }
 
 
@@ -2415,7 +2393,7 @@ function UpdateStoreBannerForAdditionalCartDiscount( nCartDiscount )
 			<div class="sparkleStar star3"></div> \
 		</div> \
 		</div> \
-		<div class="lunar_sale_title"><img src="https://steamstore-a.akamaihd.net/public/images/promo/lunar2019/lny2019_title_en.png"/></div> \
+		<div class="lunar_sale_title"><img src="https://store.cloudflare.steamstatic.com/public/images/promo/lunar2019/lny2019_title_en.png"/></div> \
 		<div class="lunar_sale_spacer lunar_leftspacer"></div> \
 		<div class="lunar_sale_supersavings_label"><div class="highlight">%header%</div><div class="subtitle">%discount%</div></div> \
 		<div class="lunar_sale_spacer lunar_rightspacer">\

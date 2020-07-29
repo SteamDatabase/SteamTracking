@@ -951,7 +951,7 @@ var CInventory = Class.create( {
 		var elLink = new Element( 'a', { href: url, 'class': 'inventory_item_link' } );
 		if ( Prototype.Browser.IE )
 		{
-			elLink.appendChild( new Element( 'img', {src: 'https://steamcommunity-a.akamaihd.net/public/images/trans.gif', width: 96, height: 96 } ) );
+			elLink.appendChild( new Element( 'img', {src: 'https://community.cloudflare.steamstatic.com/public/images/trans.gif', width: 96, height: 96 } ) );
 		}
 		elItem.appendChild( elLink );
 		this.BindMouseEvents( elLink, elItem );
@@ -969,7 +969,7 @@ var CInventory = Class.create( {
 	{
 		var elItem = new Element( 'div', {'class': 'item unknownItem' } );
 		elItem.identify();
-		elItem.update( '<img src="https://steamcommunity-a.akamaihd.net/public/images/' + ( g_bIsTrading ? 'login/throbber.gif' : 'trans.gif' ) + '" class="item_throbber">' );
+		elItem.update( '<img src="https://community.cloudflare.steamstatic.com/public/images/' + ( g_bIsTrading ? 'login/throbber.gif' : 'trans.gif' ) + '" class="item_throbber">' );
 		elItem.rgItem = { unknown: true, id: itemid, appid: this.appid, contextid: this.contextid, element: elItem, name: 'Unknown Item ' + itemid, descriptions: [], fraudwarnings: [ 'Could not retrieve information about this item.' ] };
 
 		if ( g_bIsTrading )
@@ -982,7 +982,7 @@ var CInventory = Class.create( {
 		var elLink = new Element( 'a', { href: url, 'class': 'inventory_item_link' } );
 		if ( Prototype.Browser.IE )
 		{
-			elLink.appendChild( new Element( 'img', {src: 'https://steamcommunity-a.akamaihd.net/public/images/trans.gif', width: 96, height: 96 } ) );
+			elLink.appendChild( new Element( 'img', {src: 'https://community.cloudflare.steamstatic.com/public/images/trans.gif', width: 96, height: 96 } ) );
 		}
 		elItem.appendChild( elLink );
 		this.BindMouseEvents( elLink, elItem );
@@ -1320,7 +1320,7 @@ var CInventory = Class.create( {
 		if ( g_ActiveInventory && g_ActiveInventory != this && g_ActiveInventory.contextid == APPWIDE_CONTEXT )
 			g_ActiveInventory.selectedItem = rgItem;
 
-		elOldInfo.blankTimeout = window.setTimeout( function() { $(sOldInfo+'_item_icon').src = 'https://steamcommunity-a.akamaihd.net/public/images/trans.gif'; }, 200 );
+		elOldInfo.blankTimeout = window.setTimeout( function() { $(sOldInfo+'_item_icon').src = 'https://community.cloudflare.steamstatic.com/public/images/trans.gif'; }, 200 );
 
 		iActiveSelectView = iNewSelect;
 	},
@@ -2203,7 +2203,7 @@ function ShowItemInventory( appid, contextid, assetid, bLoadCompleted )
 				if ( !bAlreadyInitialized )
 				{
 					// explicitly blank logo to prevent it from showing as the old logo until load is complete
-					$('inventory_applogo').src = 'https://steamcommunity-a.akamaihd.net/public/images/trans.gif';
+					$('inventory_applogo').src = 'https://community.cloudflare.steamstatic.com/public/images/trans.gif';
 					var fnUpdate= function() {$('inventory_applogo').src = oEconomyDisplay.inventory_logo };
 					fnUpdate.defer();
 				}
@@ -2385,7 +2385,7 @@ function SelectInventory( appid, contextid, bForceSelect )
 }
 
 /* special display rules for economy apps, logos, special messages, etc */
-var g_rgEconomyDisplay = {"440":{"howtoget":"You can get them from free in-game item drops, the in-game Mann Co. Store, or trade for them with friends."},"620":{"howtoget":"You can get them from the Portal 2 in-game store or trade for them with friends."},"753":{"1":{"howtoget":"You can get extra copies of games during special promotions, or by purchasing a game from the Steam Store and selecting \"Purchase as a Gift\" at checkout time."}},"99900":{"logo":"https:\/\/steamcommunity-a.akamaihd.net\/public\/images\/economy\/applogos\/99900.png"},"99920":{"logo":"https:\/\/steamcommunity-a.akamaihd.net\/public\/images\/economy\/applogos\/99900.png"}};
+var g_rgEconomyDisplay = {"440":{"howtoget":"You can get them from free in-game item drops, the in-game Mann Co. Store, or trade for them with friends."},"620":{"howtoget":"You can get them from the Portal 2 in-game store or trade for them with friends."},"753":{"1":{"howtoget":"You can get extra copies of games during special promotions, or by purchasing a game from the Steam Store and selecting \"Purchase as a Gift\" at checkout time."}},"99900":{"logo":"https:\/\/community.cloudflare.steamstatic.com\/public\/images\/economy\/applogos\/99900.png"},"99920":{"logo":"https:\/\/community.cloudflare.steamstatic.com\/public\/images\/economy\/applogos\/99900.png"}};
 function GetEconomyDisplay( appid, contextid )
 {
 	var oDisplay = {};
@@ -2423,10 +2423,10 @@ function ImageURL( imageName, x, y, bEnableHighDPI )
 			if ( bEnableHighDPI && window.devicePixelRatio >= 2 && g_bAllowHighDPIItemImages )
 				strSize += 'dpx2x';
 		}
-		return 'https://steamcommunity-a.akamaihd.net/economy/image/' + v_trim(imageName) + strSize;
+		return 'https://community.cloudflare.steamstatic.com/economy/image/' + v_trim(imageName) + strSize;
 	}
 	else
-		return 'https://steamcommunity-a.akamaihd.net/public/images/trans.gif';
+		return 'https://community.cloudflare.steamstatic.com/public/images/trans.gif';
 }
 
 
@@ -2574,7 +2574,7 @@ function BuildHover( prefix, item, owner )
 				for ( var i=0; i < item.fraudwarnings.length; i++ )
 				{
 					var warning = $J( '<div/>', { class: 'fraud_warning_box' } );
-					var warningImage = $J( '<img>', { class: 'fraud_warning_image', src: 'https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/icons/icon_warning.png' } );
+					var warningImage = $J( '<img>', { class: 'fraud_warning_image', src: 'https://community.cloudflare.steamstatic.com/public/images/sharedfiles/icons/icon_warning.png' } );
 					warning.append( warningImage );
 					var warningText = $J( '<span/>' );
 					warningText.text( item.fraudwarnings[i] );
@@ -2915,7 +2915,7 @@ function PopulateMarketActions( elActions, item )
 		elPriceInfo.appendChild( elPriceInfoHeader );
 
 		var elPriceInfoContent = new Element( 'div', { 'style': 'min-height: 3em; margin-left: 1em;' } );
-		elPriceInfoContent.update( '<img src="https://steamcommunity-a.akamaihd.net/public/images/login/throbber.gif" alt="Working...">' );
+		elPriceInfoContent.update( '<img src="https://community.cloudflare.steamstatic.com/public/images/login/throbber.gif" alt="Working...">' );
 		elPriceInfo.appendChild( elPriceInfoContent );
 
 		new Ajax.Request( 'https://steamcommunity.com/market/priceoverview/', {
@@ -4154,7 +4154,7 @@ function AddItemHoverToElement( element, rgItem )
 			ShowItemHoverAsPopup( $Content, function() {
 				bInTouch = false;
 				$J('#hover').append( $Content );
-				$J('#hover_item_icon' ).attr('src', 'https://steamcommunity-a.akamaihd.net/public/images/trans.gif');
+				$J('#hover_item_icon' ).attr('src', 'https://community.cloudflare.steamstatic.com/public/images/trans.gif');
 			} );
 		}
 	});

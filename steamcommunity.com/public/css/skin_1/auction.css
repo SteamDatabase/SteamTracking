@@ -95,7 +95,7 @@ a.auction_nav_header_readcomic {
 
 .howitworks_image {
 	position: relative;
-	background: url( 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/auction/home_howitworks.jpg' ) center top no-repeat;
+	background: url( 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/auction/home_howitworks.jpg' ) center top no-repeat;
 	height: 265px;
 }
 
@@ -256,14 +256,14 @@ a.home_active_bid.win:hover {
 .top_video_ctn {
 	position: relative;
 	text-align: center;
-	background: url( 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/auction/video/auction_top_background.png') center top no-repeat;
+	background: url( 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/auction/video/auction_top_background.png') center top no-repeat;
 	padding-top: 6px;
 	z-index: 5;
 }
 
 .footer_video_ctn {
 	text-align: center;
-	background: url( 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/auction/video/auction_bottom_background.png') center top no-repeat;
+	background: url( 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/auction/video/auction_bottom_background.png') center top no-repeat;
 	padding-top: 1px;
 	height: 302px;
 
@@ -330,23 +330,23 @@ a.home_active_bid.win:hover {
 }
 
 .pipe.tall.left {
-	background-image: url( 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/auction/pipe_tall_left.png' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/auction/pipe_tall_left.png' );
 }
 
 .pipe.large.left {
-	background-image: url( 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/auction/pipe_large_left.png' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/auction/pipe_large_left.png' );
 }
 
 .pipe.large.right {
-	background-image: url( 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/auction/pipe_large_right.png' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/auction/pipe_large_right.png' );
 }
 
 .pipe.small.left {
-	background-image: url( 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/auction/pipe_small_left.png' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/auction/pipe_small_left.png' );
 }
 
 .pipe.small.right {
-	background-image: url( 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/auction/pipe_small_right.png' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/auction/pipe_small_right.png' );
 }
 
 .pipe.mid {
@@ -370,7 +370,7 @@ a.home_active_bid.win:hover {
 }
 
 .booster_creator_banner {
-	background: url( 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/auction/auction_home_boostercreator.png') no-repeat top left;
+	background: url( 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/auction/auction_home_boostercreator.png') no-repeat top left;
 	height: 213px;
 	margin-top: 24px;
 }
@@ -464,7 +464,7 @@ a.home_active_bid.win:hover {
 .auction_block_separator .sep_text {
 	position: relative;
 	padding: 0 15px;
-	background:  url( 'https://steamcommunity-a.akamaihd.net/public/images/apphubs/blue_body_darker_repeat.jpg?v=1' ) center center repeat-y #000000;
+	background:  url( 'https://community.cloudflare.steamstatic.com/public/images/apphubs/blue_body_darker_repeat.jpg?v=1' ) center center repeat-y #000000;
 	z-index: 2;
 }
 

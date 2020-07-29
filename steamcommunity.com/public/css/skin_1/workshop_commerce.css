@@ -81,7 +81,7 @@
 	width: 13px;
 	height: 13px;
 	margin-right: 4px;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/checkboxes_minimal.png');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/sharedfiles/checkboxes_minimal.png');
 }
 .workshop_commerce_checklist_step_status.complete
 {
@@ -176,7 +176,7 @@
 	font-size: 15px;
 	color: #dae9f2;
 	font-weight: normal;
-	background: url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/icons/icon_arrow_down.png?v=2') no-repeat right transparent;
+	background: url('https://community.cloudflare.steamstatic.com/public/images/sharedfiles/icons/icon_arrow_down.png?v=2') no-repeat right transparent;
 	-webkit-appearance: none;
 }
 .priceCategory.purchaseOption option {

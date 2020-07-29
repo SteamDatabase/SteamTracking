@@ -2,14 +2,14 @@
 
 #BG_top {
 	position:relative;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/bg_top.gif');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/skin_1/bg_top.gif');
 	background-repeat:no-repeat;
 	width:958px;
 	height:98px;
 	text-align: left;
 }
 #BG_bottom {
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/bg_bottom.gif');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/skin_1/bg_bottom.gif');
 	background-repeat:repeat-y;
 	width:958px;
 	text-align:left;
@@ -117,7 +117,7 @@ h2 {
 }
 	
 .friendBlock_offline,.friendBlock_online,.friendBlock_in-game {
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/memberManageBlock1opt.gif');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/skin_1/memberManageBlock1opt.gif');
 	width:286px;
 	height:40px;
 	padding:0;
@@ -191,7 +191,7 @@ body input {
 }
 
 .friendBlock_offline:hover,.friendBlock_online:hover,.friendBlock_in-game:hover {
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/memberManageBlock1opt_over.gif');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/skin_1/memberManageBlock1opt_over.gif');
 	cursor:pointer;
 }
 

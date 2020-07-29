@@ -2,7 +2,7 @@
 
 
 #BG_bottom {
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/bg_bottom2.gif');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/skin_1/bg_bottom2.gif');
 	background-repeat:repeat-y;
 	width:958px;
 	text-align:left;
@@ -188,7 +188,7 @@
 }
 #subtabs {
 	height:43px;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/statsSubtabsBG.gif?v=1');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/skin_1/statsSubtabsBG.gif?v=1');
 	padding-left:14px;
 	clear:left;
 }

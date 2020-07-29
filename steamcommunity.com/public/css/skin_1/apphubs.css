@@ -9,7 +9,7 @@ body
 
 .appHubsHeaderBG
 {
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/apphubs/home_banner_top.jpg');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/apphubs/home_banner_top.jpg');
 	background-repeat: no-repeat;
 	background-position: center top;
 	min-width: 948px;
@@ -197,11 +197,11 @@ body
 
 .btn_login_green
 {
-	background-image: url('https://steamcommunity-a.akamaihd.net/public/images/apphubs/btn_login_bg.png');
+	background-image: url('https://community.cloudflare.steamstatic.com/public/images/apphubs/btn_login_bg.png');
 }
 .btn_login_green .leftcap, .btn_login_green .rightcap
 {
-	background-image: url('https://steamcommunity-a.akamaihd.net/public/images/apphubs/btn_login_corners.png');
+	background-image: url('https://community.cloudflare.steamstatic.com/public/images/apphubs/btn_login_corners.png');
 }
 
 .appHubsSteamDesc
@@ -327,7 +327,7 @@ a.appHubContainerLink:hover
 	position: absolute;
 	width: 2px;
 	height: 7px;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/apphubs/tab_hubheader.png');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/apphubs/tab_hubheader.png');
 	background-repeat: no-repeat;
 }
 
@@ -401,7 +401,7 @@ a.appHubContainerLink:hover
 	height: 103px;
 	padding-left: 10px;
 	padding-right: 20px;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/apphubs/btn_hub_center.png' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/apphubs/btn_hub_center.png' );
 	background-repeat: repeat-x;
 }
 
@@ -410,17 +410,17 @@ a.appHubContainerLink:hover
 	float: left;
 	width: 6px;
 	height: 103px;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/apphubs/btn_hub_right.png' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/apphubs/btn_hub_right.png' );
 }
 
 .appHub:hover .appHubStatContainer
 {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/apphubs/btn_hub_center_hover.png' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/apphubs/btn_hub_center_hover.png' );
 }
 
 .appHub:hover .appHubStatBarEndCap
 {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/apphubs/btn_hub_right_hover.png' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/apphubs/btn_hub_right_hover.png' );
 }
 
 .appHubStat
@@ -471,7 +471,7 @@ a.appHubContainerLink:hover
 	top: 56px;
 	width: 644px;
 	height: 300px;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/apphubs/overlay_hub.png' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/apphubs/overlay_hub.png' );
 }
 
 /* quick list filter */
@@ -515,7 +515,7 @@ div.quicklistselect #quicklistselect_arrow {
 	top: 2px;
 	width: 17px;
 	height: 20px;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/workshop_dateselect_arrow.png' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/sharedfiles/workshop_dateselect_arrow.png' );
 	background-repeat: no-repeat;
 	background-position: top center;
 }
@@ -665,7 +665,7 @@ a.general_btn:hover {
 	color: #ffffff;
 	padding-left: 24px;
 	padding-right: 24px;
-	background-image: url( https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/btn_green.png);
+	background-image: url( https://community.cloudflare.steamstatic.com/public/images/sharedfiles/btn_green.png);
 }
 
 .notLoggedInButtons a.general_btn.green:hover

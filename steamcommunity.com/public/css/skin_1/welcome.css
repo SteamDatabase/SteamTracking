@@ -11,7 +11,7 @@
 .footer {
 	height: 7px;
 	min-height: 7px;
-	background-image: url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/contentBG_bottom.gif');
+	background-image: url('https://community.cloudflare.steamstatic.com/public/images/skin_1/contentBG_bottom.gif');
 	background-repeat: no-repeat;
 }
 
@@ -59,7 +59,7 @@ ul {
 	color: #9099a1;
 	text-indent: 0px;
 	list-style-position: outside;
-	list-style-image: url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/arrow.gif');
+	list-style-image: url('https://community.cloudflare.steamstatic.com/public/images/skin_1/arrow.gif');
 	list-style-type: square;
 	padding-left: 12px;
 	margin: 2px;
@@ -94,7 +94,7 @@ ul {
 	color: #cccccc;
 }
 .Info_break {
-	background-image: url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/1px_welcome.gif');
+	background-image: url('https://community.cloudflare.steamstatic.com/public/images/skin_1/1px_welcome.gif');
 	background-repeat:repeat-x;
 	height: 1px;
 	margin-top: 0px;
@@ -174,7 +174,7 @@ a.Underline:hover {
 }
 
 .welcome_header_ctn {
-	background: url('https://steamcommunity-a.akamaihd.net/public/images//bg_highlight.png');
+	background: url('https://community.cloudflare.steamstatic.com/public/images//bg_highlight.png');
 	background-position: bottom;
 	background-repeat: no-repeat;
 	position: relative;

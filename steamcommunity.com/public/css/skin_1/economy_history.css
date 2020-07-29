@@ -239,7 +239,7 @@ a.history_item:hover .history_item_name {
 	height: 12px;
 	margin-left: 5px;
 
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images//sharedfiles/deleteSearchTerm.png' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images//sharedfiles/deleteSearchTerm.png' );
 	background-repeat: no-repeat;
 	background-position: center;
 }
@@ -289,7 +289,7 @@ a.history_item:hover .history_item_name {
 	width: 12px;
 	height: 12px;
 	margin-left: 10px;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/x9x9.gif' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/x9x9.gif' );
 	background-repeat: no-repeat;
 	background-position: center;
 }

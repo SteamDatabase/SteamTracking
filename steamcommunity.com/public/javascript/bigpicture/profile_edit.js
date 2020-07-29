@@ -27,7 +27,7 @@ function SelectBackground()
 		rgOptions.push({ content_xml: strXML, onactivate: onActivate, css_classes: [ 'Button', 'ImageSelectionButton' ] });
 	}
 
-	ShowPopupMenu(rgOptions, { additional_css_includes: [ '<include src="https://steamcommunity-a.akamaihd.net/public/css/bigpicture/profile.css" />' ] });
+	ShowPopupMenu(rgOptions, { additional_css_includes: [ '<include src="https://community.cloudflare.steamstatic.com/public/css/bigpicture/profile.css" />' ] });
 }
 
 function ShowAvatarPicker()
@@ -196,13 +196,13 @@ function SelectPrimaryGroup()
 		rgOptions.push({ content_xml: strXML , onactivate: onActivate, css_classes: [ 'Button', 'ImageSelectionButton' ] });
 	}
 
-	ShowPopupMenu(rgOptions, { additional_css_includes: [ '<include src="https://steamcommunity-a.akamaihd.net/public/css/bigpicture/profile.css" />' ] });
+	ShowPopupMenu(rgOptions, { additional_css_includes: [ '<include src="https://community.cloudflare.steamstatic.com/public/css/bigpicture/profile.css" />' ] });
 }
 
 
 function GetBackgroundURL( strBackgroundImage, strSize )
 {
-	return 'https://steamcommunity-a.akamaihd.net/economy/profilebackground/' + strBackgroundImage + '?size=' + strSize + '&v=2';
+	return 'https://community.cloudflare.steamstatic.com/economy/profilebackground/' + strBackgroundImage + '?size=' + strSize + '&v=2';
 }
 
 

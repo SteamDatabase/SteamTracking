@@ -20,7 +20,7 @@ body.v6.labs {
 }
 body .responsive_page_content {
     /* background: #292a2e; */
-    background: url( 'https://steamcdn-a.akamaihd.net/store/labs/background.jpg' );
+    background: url( 'https://cdn.cloudflare.steamstatic.com/store/labs/background.jpg' );
     background-size: 1920px 1080px;
 }
 

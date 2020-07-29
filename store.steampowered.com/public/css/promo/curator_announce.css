@@ -32,18 +32,18 @@ body.v6.curatorsannounce .page_content_container.background_solid {
 	background: #1b2838;
 }
 body.v6.curatorsannounce .page_content_container.background_img {
-	background: url(https://steamcdn-a.akamaihd.net/store/about_curators/colored_body_top2.jpg?v=1) top center;
+	background: url(https://cdn.cloudflare.steamstatic.com/store/about_curators/colored_body_top2.jpg?v=1) top center;
 	background-repeat: no-repeat;
 	padding: 0px;
 }
 
 .page_content_container.curator_home {
-	background: url(https://steamcdn-a.akamaihd.net/store/about_curators/feature_shot_home.jpg?v=1) top center;
+	background: url(https://cdn.cloudflare.steamstatic.com/store/about_curators/feature_shot_home.jpg?v=1) top center;
 	background-position-y: 123px;
 	background-repeat: no-repeat;
 }
 .page_content_container.curator_detail {
-	background: url(https://steamcdn-a.akamaihd.net/store/about_curators/feature_shot_curator_home.jpg?v=1) top center;
+	background: url(https://cdn.cloudflare.steamstatic.com/store/about_curators/feature_shot_curator_home.jpg?v=1) top center;
 	background-position-y: 123px;
 	background-repeat: no-repeat;
 }

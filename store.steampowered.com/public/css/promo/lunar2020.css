@@ -20,7 +20,7 @@ a#store_search_link img {
 
 #logo_holder {
 display: inline-block; width: 176px; height: 44px; 
-background-image: url( 'https://steamcdn-a.akamaihd.net/store/promo/lunar2020/globalheader_logo.png' );
+background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/promo/lunar2020/globalheader_logo.png' );
 background-size: 176px, 44px;
 }
 
@@ -69,7 +69,7 @@ div#global_header .submenuitem:hover,
 }
 
 .market_header {
-	background-image:  url( 'https://steamcdn-a.akamaihd.net/store/promo/lunar2020/store_home_animated.png?v=2' );
+	background-image:  url( 'https://cdn.cloudflare.steamstatic.com/store/promo/lunar2020/store_home_animated.png?v=2' );
     background-position-x: center;
 	background-repeat: no-repeat;
     background-size: cover;
@@ -156,7 +156,7 @@ div#global_header .submenuitem:hover,
 }
 @media screen and ( max-width: 500px ) {
     html.responsive .market_header {
-        background-image:  url( 'https://steamcdn-a.akamaihd.net/store/promo/lunar2020/mobile_main_header.jpg?v=2' );
+        background-image:  url( 'https://cdn.cloudflare.steamstatic.com/store/promo/lunar2020/mobile_main_header.jpg?v=2' );
         background-position-x: unset;
         height: 70vw;
     }
@@ -288,7 +288,7 @@ body.v6.steamtown .page_container {
 	background: linear-gradient(180deg, #2F3F4F 0%, #342525 100%);
 	margin: 50px 0 100px 0;
 	padding-top: 50px;
-	background-image: url( 'https://steamcdn-a.akamaihd.net/store/promo/lunar2020/coupon_bg.png?v=2' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/promo/lunar2020/coupon_bg.png?v=2' );
 	background-size: 100%;
 	background-blend-mode: overlay;
 	background-color: #465059dd;
@@ -328,7 +328,7 @@ body.v6.steamtown .page_container {
 .reward_discount_img {
 	background-position: center;
 	background-repeat: no-repeat;
-	background-image: url( 'https://steamcdn-a.akamaihd.net/store/promo/lunar2020/lny2020_coupon.png?v=2' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/promo/lunar2020/lny2020_coupon.png?v=2' );
 	max-width: 627px;
 	height: 242px;
 	border-radius: 4px;
@@ -410,7 +410,7 @@ body.v6.steamtown .page_container {
 	margin: 15px 10px;
 	background-blend-mode: overlay;
 
-	background-image: url( 'https://steamcdn-a.akamaihd.net/store/promo/lunar2020/coupon_bg.png?v=2' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/promo/lunar2020/coupon_bg.png?v=2' );
 }
 
 
@@ -713,7 +713,7 @@ filter: grayscale(0.8);
 .reward_item_quantity_ctn.checked {
 	background-position: center;
 	background-repeat: no-repeat;
-	background-image: url( 'https://steamcdn-a.akamaihd.net/store/promo/winter2019/owned_check.png?v=2' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/promo/winter2019/owned_check.png?v=2' );
 	padding: 15px;
 }
 
@@ -787,7 +787,7 @@ filter: grayscale(0.8);
 .rewards_profile_tier .rewards_profile_img {
 	background-position: center;
 	background-repeat: no-repeat;
-	background-image: url( 'https://steamcdn-a.akamaihd.net/store/promo/lunar2020/golden_profile.png?v=2' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/promo/lunar2020/golden_profile.png?v=2' );
 	max-width: 527px;
 	width: 100%;
 	height: 281px;

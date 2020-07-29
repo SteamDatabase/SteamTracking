@@ -10,10 +10,10 @@ function ImageURL( imageName, x, y )
 		var strSize = '';
 		if ( x != 0 || y != 0 )
 			strSize = '/' + x + 'x' + y;
-		return 'https://steamcommunity-a.akamaihd.net/economy/image/' + (imageName) + strSize;
+		return 'https://community.cloudflare.steamstatic.com/economy/image/' + (imageName) + strSize;
 	}
 	else
-		return ''; //https://steamcommunity-a.akamaihd.net/public/images/trans.gif';
+		return ''; //https://community.cloudflare.steamstatic.com/public/images/trans.gif';
 }
 
 function AddActionButton( item, action, container )

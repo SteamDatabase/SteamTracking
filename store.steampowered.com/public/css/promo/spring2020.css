@@ -47,7 +47,7 @@
 	height: 699px;
 	background-repeat: no-repeat;
 	background-position: bottom;
-	background-image: url( 'https://steamcdn-a.akamaihd.net/store/promo/spring2020/spring_cleaning_library_above_ground_background.png?v=2' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/promo/spring2020/spring_cleaning_library_above_ground_background.png?v=2' );
 	display: flex;
 	justify-content: flex-end;
 	flex-direction: column;
@@ -58,13 +58,13 @@
 .spring_cleaning_house {
 	background-position: bottom;
 	background-repeat: no-repeat;
-	background-image: url( 'https://steamcdn-a.akamaihd.net/store/promo/spring2020/spring_cleaning_library_main_house_off.png?v=2' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/promo/spring2020/spring_cleaning_library_main_house_off.png?v=2' );
 	height: 475px;
 	position: relative;
 }
 
 .spring_cleaning_house.on {
-	background-image: url( 'https://steamcdn-a.akamaihd.net/store/promo/spring2020/spring_cleaning_library_main_house_on.png?v=2' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/promo/spring2020/spring_cleaning_library_main_house_on.png?v=2' );
 	cursor: default;
 }
 
@@ -93,7 +93,7 @@
 	max-width: 1920px;
 	width: 100%;
 	background-position: center;
-	background: url( 'https://steamcdn-a.akamaihd.net/store/promo/spring2020/spring_cleaning_library_underground_background.png?v=2' ) rgb( 53,25,18 ) repeat-y;
+	background: url( 'https://cdn.cloudflare.steamstatic.com/store/promo/spring2020/spring_cleaning_library_underground_background.png?v=2' ) rgb( 53,25,18 ) repeat-y;
 }
 
 .spring_cleaning_task_ctn {
@@ -182,10 +182,10 @@
 	line-height: 1.4;
 	font-size: 12px;
 	font-family: 'Press Start 2P', cursive;
-	-moz-border-image: url( 'https://steamcdn-a.akamaihd.net/store/promo/spring2020/modal_border.png' ) 28 repeat;
-	-webkit-border-image:  url( 'https://steamcdn-a.akamaihd.net/store/promo/spring2020/modal_border.png' ) 28 repeat;
-	-o-border-image:  url( 'https://steamcdn-a.akamaihd.net/store/promo/spring2020/modal_border.png' ) 28 repeat;
-	border-image:  url( 'https://steamcdn-a.akamaihd.net/store/promo/spring2020/modal_border.png' ) 28 fill repeat;
+	-moz-border-image: url( 'https://cdn.cloudflare.steamstatic.com/store/promo/spring2020/modal_border.png' ) 28 repeat;
+	-webkit-border-image:  url( 'https://cdn.cloudflare.steamstatic.com/store/promo/spring2020/modal_border.png' ) 28 repeat;
+	-o-border-image:  url( 'https://cdn.cloudflare.steamstatic.com/store/promo/spring2020/modal_border.png' ) 28 repeat;
+	border-image:  url( 'https://cdn.cloudflare.steamstatic.com/store/promo/spring2020/modal_border.png' ) 28 fill repeat;
 }
 
 .welcome_dialog_ctn {
@@ -270,7 +270,7 @@
 	background-size: contain;
 	width: 140px;
 	position: relative;
-	background-image: url( 'https://steamcdn-a.akamaihd.net/store/promo/spring2020/defaultappimage.png?v=2' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/promo/spring2020/defaultappimage.png?v=2' );
 }
 
 .task_app_image {
@@ -298,7 +298,7 @@
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
-	background-image: url( 'https://steamcdn-a.akamaihd.net/store/promo/spring2020/select_game_overlay.png?v=2' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/promo/spring2020/select_game_overlay.png?v=2' );
 	width: 160px;
 	display: flex;
 	height: 225px;

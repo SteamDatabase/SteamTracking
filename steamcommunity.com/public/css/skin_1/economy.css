@@ -31,7 +31,7 @@ h2 {
 	width: 98px;
 	height: 98px;
 	background-color: #333333;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/economy/trade_itemholder.png' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/economy/trade_itemholder.png' );
 	background-repeat: no-repeat;
 	background-position: center top;
 	float: left;
@@ -182,7 +182,7 @@ a.item_action {
 	background-repeat: repeat-x;
 
 	background-color: #5c5957;
-	background-image: url('https://steamcommunity-a.akamaihd.net/public/images/economy/item_action_btn.png');
+	background-image: url('https://community.cloudflare.steamstatic.com/public/images/economy/item_action_btn.png');
 	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAClJREFUeNpiyExLZvr//z8G/vcPRP8D0/+A9H8o/e8fMhuhBk0/QIABALdaQAnvsp4ZAAAAAElFTkSuQmCC');
 }
 
@@ -232,7 +232,7 @@ a.item_action:hover {
 	width: 18px;
 	height: 16px;
 
-	background-image: url('https://steamcommunity-a.akamaihd.net/public/images/economy/economy_welcome_dismiss.png');
+	background-image: url('https://community.cloudflare.steamstatic.com/public/images/economy/economy_welcome_dismiss.png');
 
 	cursor: pointer;
 }
@@ -270,7 +270,7 @@ a.item_action:hover {
 	min-height: 192px;
 
 	background-color: #1d1d1d;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/economy/trade_hover_background.png' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/economy/trade_hover_background.png' );
 	background-repeat: no-repeat;
 	background-position: center top;
 
@@ -524,7 +524,7 @@ input.filter_search_box:-moz-placeholder {
 
 .inventory_iteminfo .item_desc_content {
 	padding: 238px 11px 11px 11px;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/economy/inventory_hover_background.png')
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/economy/inventory_hover_background.png')
 }
 
 /* Overrides for launcher specific trade UI */
@@ -598,7 +598,7 @@ body.compact_trading_ui .appselect {
 	background-repeat: no-repeat;
 	width: 13px;
 	height: 25px;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/economy/item_hover_arrow.png' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/economy/item_hover_arrow.png' );
 }
 
 .hover_arrow_left .hover_arrow_inner {
@@ -975,23 +975,23 @@ a.item_market_action_button {
 }
 
 .item_market_action_button_blue > span {
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/economy/btn_blue_small.png');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/economy/btn_blue_small.png');
 }
 
 .item_market_action_button_blue:hover > span, .item_market_action_button_blue .item_market_action_button_preload {
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/economy/btn_blue_small_hover.png');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/economy/btn_blue_small_hover.png');
 }
 
 .item_market_action_button_green > span {
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/economy/btn_green_small.png');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/economy/btn_green_small.png');
 }
 
 .item_market_action_button_green:hover > span, .item_market_action_button_green .item_market_action_button_preload {
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/economy/btn_green_small_hover.png');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/economy/btn_green_small_hover.png');
 }
 
 .item_market_action_button_edit > span {
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/economy/transparentpixel.png');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/economy/transparentpixel.png');
 }
 
 .item_market_action_button_edit:hover > span, .item_market_action_button_edit .item_market_action_button_preload {
@@ -1220,7 +1220,7 @@ a.game_button {
 	width: 16px;
 	height: 16px;
 	
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/icons/icon_warning.png');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/sharedfiles/icons/icon_warning.png');
 	background-position: 0px 0px;
 	background-repeat: no-repeat;
 }
@@ -1238,7 +1238,7 @@ a.game_button {
 
 #goo_exchange_dialog {
 	position: absolute;
-	background: #383635 bottom no-repeat url( 'https://steamcommunity-a.akamaihd.net/public/images/economy/trade_currency_dialog.png?v=3' );
+	background: #383635 bottom no-repeat url( 'https://community.cloudflare.steamstatic.com/public/images/economy/trade_currency_dialog.png?v=3' );
 	border: 1px solid black;
 	width: 436px;
 	height: 318px;
@@ -1254,7 +1254,7 @@ a.game_button {
 	position: absolute;
 	right: -1px;
 	bottom: -1px;
-	background: right bottom no-repeat url( 'https://steamcommunity-a.akamaihd.net/public/images/economy/trade_currency_dialog_corner.png?v=1' );
+	background: right bottom no-repeat url( 'https://community.cloudflare.steamstatic.com/public/images/economy/trade_currency_dialog_corner.png?v=1' );
 	width: 174px;
 	height: 153px;
 }
@@ -1279,7 +1279,7 @@ a.game_button {
 }
 
 .goo_exchange_dialog_input_area {
-	background: no-repeat url( 'https://steamcommunity-a.akamaihd.net/public/images/economy/trade_currency_entry_background.png?v=1' );
+	background: no-repeat url( 'https://community.cloudflare.steamstatic.com/public/images/economy/trade_currency_entry_background.png?v=1' );
 	width: 136px;
 	height: 54px;
 	padding-left: 54px;
@@ -1392,7 +1392,7 @@ a.game_button {
 }
 
 .goo_exchange_slider_ctn .slider_background, .goo_exchange_slider_ctn .slider_progress {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/economy/slider_background.png' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/economy/slider_background.png' );
 	background-position: left top;
 	background-repeat: no-repeat;
 	position: absolute;
@@ -1409,7 +1409,7 @@ a.game_button {
 
 .goo_exchange_slider_ctn .slider .handle {
 	position: absolute;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/economy/slider_handle.png' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/economy/slider_handle.png' );
 	background-position: left top;
 	background-repeat: no-repeat;
 	width: 24px;

@@ -185,7 +185,7 @@ body.flat_page {
 	position: absolute;
 	width: 56px;
 	height: 39px;
-	background-image: url(https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/faq/faq_arrow.png)
+	background-image: url(https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/faq/faq_arrow.png)
 }
 
 .arrow_right {
@@ -381,12 +381,12 @@ body.flat_page {
 /* Body styles */
 .flat_page .responsive_page_template_content {
 
-	background: url(https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/faq/bg.jpg) top center no-repeat;
+	background: url(https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/faq/bg.jpg) top center no-repeat;
 	background-size: cover;
 }
 
 .flat_page.game_over .responsive_page_template_content {
-	background: url(https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/faq/bg2.jpg) top center no-repeat;
+	background: url(https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/faq/bg2.jpg) top center no-repeat;
 	background-size: cover;
 }
 
@@ -403,7 +403,7 @@ body.flat_page {
 	height: 497px;
 	top: 0;
 	margin-right: -50px;
-	margin-bottom: -90px;	background: url(https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/faq/DuldrumzOw.png) center center no-repeat;
+	margin-bottom: -90px;	background: url(https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/saliengame/faq/DuldrumzOw.png) center center no-repeat;
 }
 
 .stats_section h1 {

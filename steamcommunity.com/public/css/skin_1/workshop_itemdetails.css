@@ -134,7 +134,7 @@
 	top: 0px;
 	height: 27px;
 	width: 2px;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/divider_vert_orange.png');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/sharedfiles/divider_vert_orange.png');
 	background-repeat: no-repeat;
 }
 
@@ -270,7 +270,7 @@
 	width: 32px;
 	height: 32px;
 
-	background-image: url( https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/ico_game_highlight_video.png );
+	background-image: url( https://community.cloudflare.steamstatic.com/public/images/sharedfiles/ico_game_highlight_video.png );
 }
 
 .workshop_sketchfab_preview {
@@ -320,7 +320,7 @@ img.workshop_sketchfab_play_overlay_image
 
 .highlight_selector {
 	position: absolute;
-	background-image: url( https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/game_highlight_activethumb_blue.png );
+	background-image: url( https://community.cloudflare.steamstatic.com/public/images/sharedfiles/game_highlight_activethumb_blue.png );
 	width: 116px;
 	height: 65px;
 	z-index: 50;
@@ -342,7 +342,7 @@ div.slider div.handle {
 	height: 13px;
 	cursor: pointer;
 
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/control_slider.png' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/sharedfiles/control_slider.png' );
 	background-repeat: no-repeat;
 	background-position: left;
 }
@@ -395,7 +395,7 @@ div.visibilityselect #visibilityselect_arrow {
 	top: 4px;
 	width: 16px;
 	height: 16px;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/icons/icon_arrow_down.png' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/sharedfiles/icons/icon_arrow_down.png' );
 	background-repeat: no-repeat;
 	background-position: top center;
 }
@@ -619,7 +619,7 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	height: 30px;
 	padding: 0px;
 	padding-left: 32px;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/rate_ico_up_tiled.png?v=1');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/sharedfiles/rate_ico_up_tiled.png?v=1');
 	background-position: 8px 0px;
 	background-repeat: no-repeat;
 	display: inline-block;
@@ -644,7 +644,7 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	height: 30px;
 	width: 32px;
 	padding: 0px;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/rate_ico_dn_tiled.png?v=1');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/sharedfiles/rate_ico_dn_tiled.png?v=1');
 	background-position: 8px 0px;
 	background-repeat: no-repeat;
 	display: inline-block;
@@ -669,7 +669,7 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	height: 30px;
 	padding: 0;
 	padding-left: 32px;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/report_ico_tiled.png?v=1');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/sharedfiles/report_ico_tiled.png?v=1');
 	background-position: 8px 0px;
 	background-repeat: no-repeat;
 	line-height: 30px;
@@ -694,7 +694,7 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	padding: 0px;
 	padding-left: 32px;
 	padding-right: 12px;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/ico_fav_tiled.png?v=1');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/sharedfiles/ico_fav_tiled.png?v=1');
 	background-position: 8px 0px;
 	background-repeat: no-repeat;
 	display: inline-block;
@@ -797,7 +797,7 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	display: inline-block;
 	width: 15px;
 	height: 16px;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/icons/icon_double_arrows.png');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/sharedfiles/icons/icon_double_arrows.png');
 	margin-left: 5px;
 	margin-top: 1px;
 	float: right;
@@ -878,7 +878,7 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	left: 8px;
 	height: 30px;
 	width: 16px;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/ico_subscribe_tiled.png');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/sharedfiles/ico_subscribe_tiled.png');
 	background-position: 0px 0px;
 	background-repeat: no-repeat;
 }
@@ -890,7 +890,7 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	left: 8px;
 	height: 30px;
 	width: 16px;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/ico_subscribe_tiled.png');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/sharedfiles/ico_subscribe_tiled.png');
 	background-position: 0px -90px;
 	background-repeat: no-repeat;
 }
@@ -924,7 +924,7 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	left: 7px;
 	height: 30px;
 	width: 17px;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/ico_follow_tiled_lrg.png');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/sharedfiles/ico_follow_tiled_lrg.png');
 	background-repeat: no-repeat;
 }
 
@@ -1002,7 +1002,7 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	color: #ffffff;
 	padding-left: 24px;
 	padding-right: 24px;
-	background-image: url( https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/btn_green.png);
+	background-image: url( https://community.cloudflare.steamstatic.com/public/images/sharedfiles/btn_green.png);
 }
 
 .notLoggedInButtons a.general_btn.green:hover
@@ -1048,7 +1048,7 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	width: 17px;
 	height: 30px;
 	padding-right: 10px;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/ico_subscribe_tiled.png');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/sharedfiles/ico_subscribe_tiled.png');
 	background-position: 0px -60px;
 	background-repeat: no-repeat;
 }
@@ -1059,7 +1059,7 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	width: 17px;
 	height: 30px;
 	padding-right: 10px;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/ico_fav_tiled.png');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/sharedfiles/ico_fav_tiled.png');
 	background-position: 0px -60px;
 	background-repeat: no-repeat;
 }
@@ -1104,7 +1104,7 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 .collectionBackgroundOverlay
 {
 	position: absolute;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/workshop_overlay_edgeShadows.png');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/sharedfiles/workshop_overlay_edgeShadows.png');
 	background-repeat: repeat-y;
 	width: 948px;
 	height: 470px;
@@ -1534,7 +1534,7 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	padding: 0px;
 	padding-left: 28px;
 	padding-right: 4px;
-	background-image: url( https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/btn_green.png);
+	background-image: url( https://community.cloudflare.steamstatic.com/public/images/sharedfiles/btn_green.png);
 	background-repeat: no-repeat;
 	display: inline-block;
 	line-height: 30px;
@@ -1551,7 +1551,7 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 
 .collectionItem .general_btn.subscribe.toggled:hover
 {
-	background-image: url( https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/btn_grey.png);
+	background-image: url( https://community.cloudflare.steamstatic.com/public/images/sharedfiles/btn_grey.png);
 	border-color: #7e7e7e;
 }
 
@@ -1567,7 +1567,7 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	left: 8px;
 	height: 30px;
 	width: 16px;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/ico_subscribe_tiled.png');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/sharedfiles/ico_subscribe_tiled.png');
 	background-position: 0px 0px;
 	background-repeat: no-repeat;
 }
@@ -1733,7 +1733,7 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	right: 0px;
 	bottom: 0px;
 	height: 20px;
-	background: url( 'https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/ig/footer_blend.png' ) bottom repeat-x;
+	background: url( 'https://community.cloudflare.steamstatic.com/public/images/sharedfiles/ig/footer_blend.png' ) bottom repeat-x;
 }
 
 .modalDetailsBar
@@ -1784,7 +1784,7 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 
 .modalDetails .commentthread_entry_quotebox_quote
 {
-	background-image: url( https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/media_modal_comment_quote.png );
+	background-image: url( https://community.cloudflare.steamstatic.com/public/images/sharedfiles/media_modal_comment_quote.png );
 	background-image: url( data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAASCAIAAAAym6IDAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkM3NTYxNUEyRDgyODExRTE4OTM1RTUxRUU1Rjc5MDI3IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkM3NTYxNUEzRDgyODExRTE4OTM1RTUxRUU1Rjc5MDI3Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6Qzc1NjE1QTBEODI4MTFFMTg5MzVFNTFFRTVGNzkwMjciIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6Qzc1NjE1QTFEODI4MTFFMTg5MzVFNTFFRTVGNzkwMjciLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6qOqDSAAABYklEQVR42oySW2+CQBCFhSyJqRhUMOqLtWq9BNsf0Cb9/29NbLRRwTax3ioEsKggGnusZouKxnnY7C7nmzOzA5PNZkO+YBgmcL+Lcuk+Lghs6OoAICUS9UbjWiaTTgN4b7Uta0quKQxAPnerqN3ReIzjgc9mszl1iPI8AKh7/f4uF3vOhwJytQIAVVHBpX44QgAsFk5H7foLYS8AD7IM4LVeX61W/k9n+wHAceSt2TwCjhnaT6VcAgAHx3GOAOQN8AGAUcDBtmeBZbNnZtcyDPNUTQhJp1LkEMgU7nIdVR2Oxv77cDicFEVJEmOCsCX/RxGNFvM5qHtf+9nxfCS5VYrYrNdrw7LailoqFggFatUKAFQVj8WgS0oi0rvu0jDNwWg40fSdcs9wHAeA/MXL8xPW2XxuTqffivpj2wFdUQCHSOSmPxhOdJ0+8enftGUea7K7XCofn5qmeZ53QUrjV4ABAEPQm+idCk6tAAAAAElFTkSuQmCC );
 }
 
@@ -1972,7 +1972,7 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 
 .demo_button {
 	display: inline-block;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/ig/demobutton.png');
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/sharedfiles/ig/demobutton.png');
 	width:144px;
 	height: 28px;
 	line-height: 28px;
@@ -2032,7 +2032,7 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 
 .yellow_bubble > .arrow {
 	position: absolute;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/ig/yellowbubblearrow.png');
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/sharedfiles/ig/yellowbubblearrow.png');
 	width: 19px;
 	height: 10px;
 	bottom: -10px;
@@ -2090,14 +2090,14 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 .ico_thumbs_up {
 	width: 16px;
 	height: 16px;
-	background: url(https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/rate_ico_up_tiled.png) 0px -7px;
+	background: url(https://community.cloudflare.steamstatic.com/public/images/sharedfiles/rate_ico_up_tiled.png) 0px -7px;
 	display: inline-block;
 }
 
 .ico_thumbs_down {
 	width: 16px;
 	height: 16px;
-	background: url(https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/rate_ico_dn_tiled.png) 0px -7px;
+	background: url(https://community.cloudflare.steamstatic.com/public/images/sharedfiles/rate_ico_dn_tiled.png) 0px -7px;
 	display: inline-block;
 }
 
@@ -2186,7 +2186,7 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 		text-decoration: none;
 	}
 		#ig_top_workshop.blue {
-			background-image: url(https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/ig/gl_item_blue.jpg);
+			background-image: url(https://community.cloudflare.steamstatic.com/public/images/sharedfiles/ig/gl_item_blue.jpg);
 			color: #7cb0f1;
 		}
 
@@ -2200,7 +2200,7 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 			}
 
 		#ig_top_workshop.green {
-			background-image: url(https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/ig/gl_item_green.jpg);
+			background-image: url(https://community.cloudflare.steamstatic.com/public/images/sharedfiles/ig/gl_item_green.jpg);
 			color: #9bc607;
 		}
 
@@ -2226,7 +2226,7 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 			}
 
 		#ig_top_workshop.greenFlash {
-			background-image: url(https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/ig/gl_item_green_shiny.jpg);
+			background-image: url(https://community.cloudflare.steamstatic.com/public/images/sharedfiles/ig/gl_item_green_shiny.jpg);
 			color: #9bc607;
 		}
 
@@ -2340,7 +2340,7 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 
 	#rated_blurb .arrow {
 		position: absolute;
-		background: url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/ig/greenlight_rated_arrow.png');
+		background: url('https://community.cloudflare.steamstatic.com/public/images/sharedfiles/ig/greenlight_rated_arrow.png');
 		width: 15px;
 		height: 9px;
 		top: -9px;
@@ -2487,11 +2487,11 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	height: 18px;
 	padding-right: 5px;
 	display: inline-block;
-	background: url(https://steamcommunity-a.akamaihd.net/public/images//sharedfiles/rate_ico_up_bright.png) no-repeat;
+	background: url(https://community.cloudflare.steamstatic.com/public/images//sharedfiles/rate_ico_up_bright.png) no-repeat;
 }
 
 .gl_btn_ico_up.toggled div.ico {
-	background-image: url(https://steamcommunity-a.akamaihd.net/public/images//sharedfiles/ig/blue_thumb_up.png);
+	background-image: url(https://community.cloudflare.steamstatic.com/public/images//sharedfiles/ig/blue_thumb_up.png);
 }
 
 .gl_btn_ico_dn > span {
@@ -2508,11 +2508,11 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	padding-right: 5px;
 	float: left;
 	margin-top: 11px;
-	background: url(https://steamcommunity-a.akamaihd.net/public/images//sharedfiles/rate_ico_dn_bright.png) no-repeat;
+	background: url(https://community.cloudflare.steamstatic.com/public/images//sharedfiles/rate_ico_dn_bright.png) no-repeat;
 }
 
 .gl_btn_ico_dn.toggled div.ico {
-	background-image: url(https://steamcommunity-a.akamaihd.net/public/images//sharedfiles/rate_ico_dn_bright_checked.png);
+	background-image: url(https://community.cloudflare.steamstatic.com/public/images//sharedfiles/rate_ico_dn_bright_checked.png);
 }
 
 .gl_btn_ico_dn {
@@ -2532,7 +2532,7 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	height: 20px;
 	float: right;
 	margin-top: 6px;
-	background: url(https://steamcommunity-a.akamaihd.net/public/images//sharedfiles/rate_next_arrow_right.png) no-repeat;
+	background: url(https://community.cloudflare.steamstatic.com/public/images//sharedfiles/rate_next_arrow_right.png) no-repeat;
 }
 
 /**/
@@ -2591,7 +2591,7 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 }
 
 .general_btn.settings {
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/ico_settings_tiled.png?v=1');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/sharedfiles/ico_settings_tiled.png?v=1');
 	background-position: 7px 2px;
 	background-repeat: no-repeat;
 	width: 15px;
@@ -2621,7 +2621,7 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	left: 8px;
 	height: 30px;
 	width: 16px;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/ico_subscribe_tiled.png');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/sharedfiles/ico_subscribe_tiled.png');
 	background-position: 0px 0px;
 	background-repeat: no-repeat;
 }
@@ -3195,7 +3195,7 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	float: left;
 	width: 23px;
 	height: 13px;
-	background-image: url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/workshop_collection_creationBullet.png');
+	background-image: url('https://community.cloudflare.steamstatic.com/public/images/sharedfiles/workshop_collection_creationBullet.png');
 	background-repeat: no-repeat;
 	padding-right: 10px;
 }
@@ -3525,11 +3525,11 @@ iframe.sharedFilePreviewYouTubeVideo.floatLeft, iframe.sharedFilePreviewYouTubeV
 #ig_bottom.item.voting {
 	width: 950px;
 	padding: 0 75px;
-	background-image: url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/ig/greenlight_new_bg.png');
+	background-image: url('https://community.cloudflare.steamstatic.com/public/images/sharedfiles/ig/greenlight_new_bg.png');
 }
 
 .workshopItemPreviewArea.accent {
-	background: url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/ig/GreenlightActionGlow.png') bottom center no-repeat;
+	background: url('https://community.cloudflare.steamstatic.com/public/images/sharedfiles/ig/GreenlightActionGlow.png') bottom center no-repeat;
 	width: 100%;
 	padding: 0 75px;
 	margin-left: -75px;
@@ -3696,7 +3696,7 @@ h2.stats {
 	width: 48px;
 	height: 48px;
 	margin-right: 10px;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/official_content_csgo.png');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/sharedfiles/official_content_csgo.png');
 	background-repeat: no-repeat;
 }
 

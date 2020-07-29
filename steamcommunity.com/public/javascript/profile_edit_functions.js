@@ -341,7 +341,7 @@ function FavoriteGameShowcaseOnGameChange( elSlot, eShowcase, iSlot, game )
 
 function ShowcaseRecommendationPicker( elSlot, eShowcase, iSlot )
 {
-	var Modal = ShowDialog( 'Select a Game You\'ve Publicly Reviewed', '<div class="group_invite_throbber"><img src="https://steamcommunity-a.akamaihd.net/public/images/login/throbber.gif"></div>' );
+	var Modal = ShowDialog( 'Select a Game You\'ve Publicly Reviewed', '<div class="group_invite_throbber"><img src="https://community.cloudflare.steamstatic.com/public/images/login/throbber.gif"></div>' );
 	var $ListElement = $J('<div/>', {'class': 'newmodal_content_innerbg'} );
 
 	$J.get( g_rgProfileData['url'] + 'ajaxgetrecommendedgames?public_only=1', function(html) {
@@ -357,7 +357,7 @@ function ShowcaseRecommendationPicker( elSlot, eShowcase, iSlot )
 			{
 				$J(this).click( function() {
 					Modal.Dismiss();
-					$J( elSlot ).find( '.showcase_openslot_placeholder').html('<img src="https://steamcommunity-a.akamaihd.net/public/images/login/throbber.gif">');
+					$J( elSlot ).find( '.showcase_openslot_placeholder').html('<img src="https://community.cloudflare.steamstatic.com/public/images/login/throbber.gif">');
 					PreviewShowcaseConfigWithSlotChange( eShowcase, iSlot, { appid: appid } );
 				} );
 			}
@@ -387,7 +387,7 @@ function ShowcaseItemPicker( elSlot, eShowcase, iSlot, bTradableOnly )
 			var description = item.description || item;
 
 			// we successfully set the item, so update the display
-			var strImageURL = ( description.icon_url ? 'https://steamcommunity-a.akamaihd.net/economy/image/' + v_trim( description.icon_url ) + '/96fx96f' : 'https://steamcommunity-a.akamaihd.net/public/images/trans.gif' );
+			var strImageURL = ( description.icon_url ? 'https://community.cloudflare.steamstatic.com/economy/image/' + v_trim( description.icon_url ) + '/96fx96f' : 'https://community.cloudflare.steamstatic.com/public/images/trans.gif' );
 			var strBorderColor = '#' + ( description.name_color ? description.name_color : '3a3a3a' );
 			var strBackgroundColor = '#' + ( description.background_color ? description.background_color : '292929' );
 
@@ -408,7 +408,7 @@ function ShowcaseItemPicker( elSlot, eShowcase, iSlot, bTradableOnly )
 function ShowcaseClearItem( elSlot, eShowcase, iSlot )
 {
 	SetShowcaseConfig( eShowcase, iSlot, {appid: 0, item_contextid: 0, item_assetid: 0} );
-	$J(elSlot).find('img.item_image').attr( 'src', 'https://steamcommunity-a.akamaihd.net/public/images/trans.gif' ).attr( 'srcset', '' );
+	$J(elSlot).find('img.item_image').attr( 'src', 'https://community.cloudflare.steamstatic.com/public/images/trans.gif' ).attr( 'srcset', '' );
 	$J(elSlot).css( 'border-color', '' );
 	$J(elSlot).css( 'background-color', '' );
 	$J(elSlot).addClass( 'openslot' );
@@ -534,7 +534,7 @@ function LoadPlayerGroupList( fnCallback )
 
 function ShowcaseGroupPicker( elSlot, eShowcase, iSlot, fnOnChange )
 {
-	var Modal = ShowDialog( 'Select a Group to Feature', '<div class="group_invite_throbber"><img src="https://steamcommunity-a.akamaihd.net/public/images/login/throbber.gif"></div>' );
+	var Modal = ShowDialog( 'Select a Group to Feature', '<div class="group_invite_throbber"><img src="https://community.cloudflare.steamstatic.com/public/images/login/throbber.gif"></div>' );
 	var $ListElement = $J('<div/>', {'class': 'newmodal_content_innerbg'} );
 
 	LoadPlayerGroupList( function( html ) {
@@ -550,7 +550,7 @@ function ShowcaseGroupPicker( elSlot, eShowcase, iSlot, fnOnChange )
 			{
 				$J(this).click( function() {
 					Modal.Dismiss();
-					$J( elSlot ).find( '.showcase_openslot_placeholder').html('<img src="https://steamcommunity-a.akamaihd.net/public/images/login/throbber.gif">');
+					$J( elSlot ).find( '.showcase_openslot_placeholder').html('<img src="https://community.cloudflare.steamstatic.com/public/images/login/throbber.gif">');
 					PreviewShowcaseConfigWithSlotChange( eShowcase, iSlot, { steamid: groupid } );
 				} );
 			}
@@ -561,7 +561,7 @@ function ShowcaseGroupPicker( elSlot, eShowcase, iSlot, fnOnChange )
 
 function PresentPrimaryClanDialog()
 {
-	var Modal = ShowDialog( 'Change primary group', '<div class="group_invite_throbber"><img src="https://steamcommunity-a.akamaihd.net/public/images/login/throbber.gif"></div>' );
+	var Modal = ShowDialog( 'Change primary group', '<div class="group_invite_throbber"><img src="https://community.cloudflare.steamstatic.com/public/images/login/throbber.gif"></div>' );
 	var $ListElement = $J('<div/>', {'class': 'newmodal_content_innerbg'} );
 
 	LoadPlayerGroupList( function( html ) {
@@ -591,7 +591,7 @@ function SelectPrimaryGroup( Modal, groupid, strAvatarHash, strGroupName )
 
 function GetBackgroundURL( strBackgroundImage, strSize )
 {
-	return 'https://steamcommunity-a.akamaihd.net/economy/profilebackground/' + strBackgroundImage + '?size=' + strSize + '&v=2';
+	return 'https://community.cloudflare.steamstatic.com/economy/profilebackground/' + strBackgroundImage + '?size=' + strSize + '&v=2';
 }
 
 var g_rgBackgroundData;
@@ -731,7 +731,7 @@ function InitBadges( rgBadges )
 		badgeid: '',
 		communityitemid: '',
 		name: '<No Featured Badge>',
-		icon: 'https://steamcommunity-a.akamaihd.net/public/images/trans.gif',
+		icon: 'https://community.cloudflare.steamstatic.com/public/images/trans.gif',
 		xp: '',
 		is_blank_badge: true
 	} );

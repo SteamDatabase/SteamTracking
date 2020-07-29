@@ -1,6 +1,6 @@
 #BG_top {
 	position:relative;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/bg_top_user.gif');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/sharedfiles/bg_top_user.gif');
 	background-repeat:no-repeat;
 	width:958px;
 	height:70px;
@@ -9,7 +9,7 @@
 }
 #BG_top_workshop {
 	position:relative;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/bg_top_workshop_home.jpg');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/sharedfiles/bg_top_workshop_home.jpg');
 	background-repeat:no-repeat;
 	width:958px;
 	height:96px;
@@ -21,7 +21,7 @@
 }
 #BG_top_workshop_small {
 	position:relative;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/bg_top_workshop_small.jpg');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/sharedfiles/bg_top_workshop_small.jpg');
 	background-repeat:no-repeat;
 	width:958px;
 	height:56px;
@@ -32,7 +32,7 @@
 	color: #727477;
 }
 #BG_bottom {
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/bg_bottom.gif');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/skin_1/bg_bottom.gif');
 	background-repeat:repeat-y;
 	width:958px;
 	text-align:left;
@@ -235,7 +235,7 @@ a.general_btn:hover {
 	width: 948px;
 	height: 400px;
 	position: absolute;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/bg_highlight.jpg');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/sharedfiles/bg_highlight.jpg');
 	background-repeat: no-repeat;
 	z-index: inherit;
 }
@@ -271,24 +271,24 @@ a.general_btn:hover {
 
 .toolsRightSectionHeader {
 	height: 9px;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/rightWorkshopToolsHeader.png');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/sharedfiles/rightWorkshopToolsHeader.png');
 }
 
 .toolsRightSectionHolder {
 	font-size: 14px;
 	position: relative;
 	padding-left:13px;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/rightWorkshopToolsBG.png');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/sharedfiles/rightWorkshopToolsBG.png');
 }
 
 .toolsRightSectionFooter {
 	height: 9px;
 	margin-bottom: 16px;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/rightWorkshopToolsFooter.png');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/sharedfiles/rightWorkshopToolsFooter.png');
 }
 
 .rightSectionHeader {
-	background: no-repeat url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/rightcol_box_topbtm.png' );
+	background: no-repeat url( 'https://community.cloudflare.steamstatic.com/public/images/groups/rightcol_box_topbtm.png' );
 	width: 295px;
 	height: 4px;
 }
@@ -341,7 +341,7 @@ a.general_btn:hover {
 }
 .primary_panel
 {
-	background: url('https://steamcommunity-a.akamaihd.net/public/images/workshop/primary_panel_background.jpg') no-repeat 0px 0px #040508;
+	background: url('https://community.cloudflare.steamstatic.com/public/images/workshop/primary_panel_background.jpg') no-repeat 0px 0px #040508;
 }
 .primary_panel .playerAvatar img,
 .primary_panel .playerAvatar
@@ -361,7 +361,7 @@ a.general_btn:hover {
 	float: left;
 }
 .avatar_workshop_overlay {
-	background: url('https://steamcommunity-a.akamaihd.net/public/images/workshop/avatar_overlay.png') no-repeat 0px 0px;
+	background: url('https://community.cloudflare.steamstatic.com/public/images/workshop/avatar_overlay.png') no-repeat 0px 0px;
 	height: 84px;
 	width: 84px;
 	position: absolute;
@@ -400,7 +400,7 @@ a.general_btn:hover {
 .rightSectionFooter {
 	height: 4px;
 	margin-bottom: 16px;
-	background: no-repeat url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/rightcol_box_topbtm.png' );
+	background: no-repeat url( 'https://community.cloudflare.steamstatic.com/public/images/groups/rightcol_box_topbtm.png' );
 	width: 295px;
 	background-position: bottom;
 }
@@ -435,7 +435,7 @@ a.general_btn:hover {
 {
 	font-size: 14px;
 	position: relative;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/rightWorkshopBlockBG.gif');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/sharedfiles/rightWorkshopBlockBG.gif');
 	cursor: pointer;
 	padding-left: 2px;
 	padding-bottom: 5px;
@@ -460,7 +460,7 @@ a.general_btn:hover {
 	float: right;
 	height: 20px;
 	width: 17px;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/workshop_section_arrow.png');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/sharedfiles/workshop_section_arrow.png');
 	background-repeat: no-repeat;
 	background-position: 0px 0px;
 }
@@ -497,7 +497,7 @@ h3 {
 	text-align: left;
 	margin: 0px auto;
 	padding: 10px;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/notification_green.png');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/sharedfiles/notification_green.png');
 	background-repeat: repeat-x;
 	background-color: #546b04;
 	color: #D2E885;
@@ -573,7 +573,7 @@ h3 {
 	text-align: left;
 	margin: 0px auto;
 	padding: 18px;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/notification_green.png');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/sharedfiles/notification_green.png');
 	background-repeat: repeat-x;
 	background-color: #6b9731;
 	color: #ffffff;
@@ -590,7 +590,7 @@ h3 {
 	text-align: left;
 	margin: 0px auto;
 	padding: 8px;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/notification_green.png');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/sharedfiles/notification_green.png');
 	background-repeat: repeat-x;
 	background-color: #6b9731;
 	color: #ffffff;
@@ -620,7 +620,7 @@ h3 {
 	width: 78px;
 	left: -87px;
 	top: -10px;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/hint_arrows_notext.png');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/sharedfiles/hint_arrows_notext.png');
 	background-position: 0px 0px;
 	z-index: 1;
 }
@@ -852,7 +852,7 @@ div.appselect
 	font-size: 12px;
 	cursor: pointer;
 
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/workshop_appselect_background.png' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/sharedfiles/workshop_appselect_background.png' );
 	background-repeat: no-repeat;
 
 	border: 3px solid white;
@@ -874,7 +874,7 @@ div.appselect #appselect_arrow {
 	top: 0px;
 	width: 29px;
 	height: 23px;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/workshop_appselect_arrow_wide.png' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/sharedfiles/workshop_appselect_arrow_wide.png' );
 	background-repeat: no-repeat;
 }
 
@@ -962,7 +962,7 @@ div.dayselect #dayselect_arrow {
 	top: 0px;
 	width: 17px;
 	height: 20px;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/workshop_dateselect_arrow.png' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/sharedfiles/workshop_dateselect_arrow.png' );
 	background-repeat: no-repeat;
 	background-position: top center;
 }
@@ -1033,7 +1033,7 @@ div.sortselect #sortselect_arrow {
 	top: 0px;
 	width: 17px;
 	height: 20px;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/workshop_dateselect_arrow.png' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/sharedfiles/workshop_dateselect_arrow.png' );
 	background-repeat: no-repeat;
 	background-position: top center;
 }
@@ -1273,7 +1273,7 @@ textarea {
 	text-align: left;
 	margin: 0px auto;
 	padding: 18px;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/notification_green.png');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/sharedfiles/notification_green.png');
 	background-repeat: repeat-x;
 	background-color: #6b9731;
 	color: #ffffff;
@@ -1290,7 +1290,7 @@ textarea {
 	text-align: left;
 	margin: 0px auto;
 	padding: 18px;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/notification_green.png');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/sharedfiles/notification_green.png');
 	background-repeat: repeat-x;
 	background-color: #6b9731;
 	color: #ebebeb;
@@ -1356,7 +1356,7 @@ textarea {
 	width: 19px;
 	height: 18px;
 	padding-right: 5px;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/icons/guides_integrated.png');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/sharedfiles/icons/guides_integrated.png');
 	background-repeat:no-repeat;
 }
 
@@ -1404,7 +1404,7 @@ textarea {
 	height: 20px;
 	width: 20px;
 	overflow: hidden;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/icon_show_state.png');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/sharedfiles/icon_show_state.png');
 	background-repeat: no-repeat;
 	float: right;
 	margin-right: 2px;
@@ -1468,7 +1468,7 @@ textarea {
 	position: absolute;
 	height: 25px;
 	width: 25px;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/btn_subscribe_states.png');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/sharedfiles/btn_subscribe_states.png');
 	background-position: 0px 0px;
 	background-repeat: no-repeat;
 }
@@ -1646,7 +1646,7 @@ textarea {
 	height: 354px;
 	position: absolute;
 	background-repeat: no-repeat;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/MainImageBackground.png');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/sharedfiles/MainImageBackground.png');
 }
 
 .workshopItemPreviewAreaPreviewBG
@@ -1657,7 +1657,7 @@ textarea {
 	height: 94px;
 	position: absolute;
 	background-repeat: no-repeat;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/MainThumbnailsBackground.png');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/sharedfiles/MainThumbnailsBackground.png');
 }
 
 .workshopItemPreviewAreaFooterBG
@@ -1667,7 +1667,7 @@ textarea {
 	height: 17px;
 	position: absolute;
 	background-repeat: no-repeat;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/MainImageFooter.png');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/sharedfiles/MainImageFooter.png');
 }
 
 .workshopItemPreviewImageEnlargeable
@@ -1859,7 +1859,7 @@ textarea {
 	padding: 5px 8px 5px 8px;
 	margin-right: 5px;
 	cursor: pointer;
-	background-image: url( https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/btn_green.png);
+	background-image: url( https://community.cloudflare.steamstatic.com/public/images/sharedfiles/btn_green.png);
 	cursor: pointer;
 }
 
@@ -1887,7 +1887,7 @@ a.submit_btn:hover
 	height: 24px;
 	line-height: 24px;
 	text-decoration: none;
-	background-image: url( https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/btn_buynow_mid.png );
+	background-image: url( https://community.cloudflare.steamstatic.com/public/images/sharedfiles/btn_buynow_mid.png );
 	background-repeat: repeat-x;
 	float: right;
 	font-size: 11px;
@@ -1909,14 +1909,14 @@ a.buynowbtn, a.buynowbtn:hover, a.buynowbtn.middle, a.buynowbtn.middle:hover
 
 .buynowbtn .leftcap
 {
-	background-image: url( https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/btn_buynow_left.png );
+	background-image: url( https://community.cloudflare.steamstatic.com/public/images/sharedfiles/btn_buynow_left.png );
 	left: 0px;
 	width: 24px;
 }
 
 .buynowbtn .rightcap
 {
-	background-image: url( https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/btn_buynow_right.png );
+	background-image: url( https://community.cloudflare.steamstatic.com/public/images/sharedfiles/btn_buynow_right.png );
 	right: 0px;
 	width: 4px;
 }
@@ -2045,7 +2045,7 @@ a.buynowbtn, a.buynowbtn:hover, a.buynowbtn.middle, a.buynowbtn.middle:hover
 	height: 16px;
 	width: 16px;
 	padding: 0px;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/expand_ico.png');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/sharedfiles/expand_ico.png');
 	background-position: 0px 0px;
 	background-repeat: no-repeat;
 	display: inline-block;
@@ -2329,7 +2329,7 @@ input[type='checkbox'] {
 	position:relative;
 	width:263px;
 	height:32px;
-	background-image: url(https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/searchbox_workshop_bg.gif);
+	background-image: url(https://community.cloudflare.steamstatic.com/public/images/sharedfiles/searchbox_workshop_bg.gif);
 	background-repeat:no-repeat;
 	padding:0;
 	margin:0;
@@ -2440,7 +2440,7 @@ input[type='checkbox'] {
 	/* -----[ /item stuff ] ----------- */
 
 .modal_top_band {
-	background-image:url( 'https://steamcommunity-a.akamaihd.net/public/images/got_steam_top.jpg' );
+	background-image:url( 'https://community.cloudflare.steamstatic.com/public/images/got_steam_top.jpg' );
 	background-repeat:no-repeat;
 	width:508px;
 	height:25px;
@@ -2786,7 +2786,7 @@ div.hover {
 {
 	height: 20px;
 	overflow: hidden;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/icon_show_state_blue.png');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/sharedfiles/icon_show_state_blue.png');
 	background-repeat: no-repeat;
 	padding-left: 30px;
 }
@@ -2886,7 +2886,7 @@ div.hover {
 	padding: 0px;
 	padding-left: 28px;
 	padding-right: 12px;
-	background-image: url( https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/btn_green_borderless.png);
+	background-image: url( https://community.cloudflare.steamstatic.com/public/images/sharedfiles/btn_green_borderless.png);
 	background-repeat: repeat-x;
 	display: inline-block;
 	line-height: 30px;
@@ -2906,7 +2906,7 @@ div.hover {
 
 .general_btn.follow.toggled:hover
 {
-	background-image: url( https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/btn_grey_borderless.png);;
+	background-image: url( https://community.cloudflare.steamstatic.com/public/images/sharedfiles/btn_grey_borderless.png);;
 	border-color: #7e7e7e;
 }
 
@@ -2922,7 +2922,7 @@ div.hover {
 	left: 8px;
 	height: 30px;
 	width: 16px;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/ico_subscribe_tiled.png');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/sharedfiles/ico_subscribe_tiled.png');
 	background-position: 0px 0px;
 	background-repeat: no-repeat;
 }
@@ -3080,7 +3080,7 @@ div.hover {
 
 .sectionTabActive .sectionTabActive_leftcap, .sectionTabActive .sectionTabActive_rightcap, .sectionTabActive .sectionTabActive_content
 {
-	background-image: url( https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/tab_active.png );
+	background-image: url( https://community.cloudflare.steamstatic.com/public/images/sharedfiles/tab_active.png );
 }
 
 .sectionTabActive_leftcap
@@ -3150,7 +3150,7 @@ div.hover {
 	padding: 0px;
 	padding-left: 12px;
 	padding-right: 12px;
-	background-image: url( https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/btn_green_borderless.png);
+	background-image: url( https://community.cloudflare.steamstatic.com/public/images/sharedfiles/btn_green_borderless.png);
 	background-repeat: repeat-x;
 	display: inline-block;
 	line-height: 30px;
@@ -3169,7 +3169,7 @@ div.hover {
 	text-align: left;
 	background-color: #4fabcf;
 	color: white;
-	background-image: url( https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/workshop_collection_progressBarGradient.png);
+	background-image: url( https://community.cloudflare.steamstatic.com/public/images/sharedfiles/workshop_collection_progressBarGradient.png);
 	background-repeat: repeat-x;
 }
 
@@ -3205,7 +3205,7 @@ div.hover {
 	float: left;
 	width: 4px;
 	height: 8px;
-	background-image: url( https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/workshop_collection_processArrow.png);
+	background-image: url( https://community.cloudflare.steamstatic.com/public/images/sharedfiles/workshop_collection_processArrow.png);
 	background-repeat: no-repeat;
 	padding-right: 10px;
 }
@@ -3269,7 +3269,7 @@ div.hover {
 	color: #ffffff;
 	padding-left: 24px;
 	padding-right: 24px;
-	background-image: url( https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/btn_green.png);
+	background-image: url( https://community.cloudflare.steamstatic.com/public/images/sharedfiles/btn_green.png);
 }
 
 .promptButtons a.general_btn.green:hover

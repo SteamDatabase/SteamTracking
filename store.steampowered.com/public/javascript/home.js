@@ -41,6 +41,10 @@ GHomepage = {
 	rgUserNewsFriendsPurchased: {},
 	rgTopSteamCurators: [],
 
+    rgShuffleModules: [],
+    nModuleShuffleCohort: 0,
+    bDisplayShuffleCohort: false,
+
 	rgfnCustomRenders: [],
 
 	bUserDataReady: false,
@@ -202,6 +206,9 @@ GHomepage = {
 			GHomepage.nLastIRSettingsUpdate = rgParams.nLastIRSettingsUpdate || 0;
 			GHomepage.rgIRIncludedTags = rgParams.rgIRIncludedTags || [];
 			GHomepage.rgIRExcludedTags = rgParams.rgIRExcludedTags || [];
+			GHomepage.rgShuffleModules = rgParams.rgShuffleModules || [];
+			GHomepage.nModuleShuffleCohort = rgParams.nModuleShuffleCohort || 0;
+			GHomepage.bDisplayShuffleCohort = rgParams.bDisplayShuffleCohort || false;
 	} catch( e ) { OnHomepageException(e); }
 
 		GHomepage.bUserDataReady = true;
@@ -332,7 +339,6 @@ GHomepage = {
 			GHomepage.RenderMainClusterV2()
 		} catch( e ) { OnHomepageException(e); }
 
-
 		// Spotlight/specials section
 		try {
 			GHomepage.RenderSpotlightSection();
@@ -429,7 +435,12 @@ GHomepage = {
 			} catch (e) { OnHomepageException(e); }
 		}
 
-		// this is the only time we'll execute rgfnCustomRenders, future requests will be called directly
+        // Shuffle module order
+        try {
+            GHomepage.ShuffleModuleOrder()
+        } catch ( e ) { OnHomepageException(e); }
+
+        // this is the only time we'll execute rgfnCustomRenders, future requests will be called directly
 		GHomepage.bInitialRenderComplete = true;
 		for( var i = 0; i < GHomepage.rgfnCustomRenders.length; i++ )
 		{
@@ -455,6 +466,40 @@ GHomepage = {
 			$J('#content_login').show();
 		}
 	},
+
+    ShuffleModuleOrder: function()
+    {
+        const nModules = GHomepage.rgShuffleModules.length;
+        if ( GHomepage.nModuleShuffleCohort == 0 || nModules == 0 )
+            return;
+
+        if ( GHomepage.bDisplayShuffleCohort && GHomepage.nModuleShuffleCohort >= 0 ) {
+            $J('#module_shuffle_cohort_display').text("(VO): Module shuffleorder=" + GHomepage.nModuleShuffleCohort);
+        }
+        else {
+            $J('#module_shuffle_cohort_display').hide();
+        }
+
+        var rgShuffled = GHomepage.rgShuffleModules.slice();
+        var nShuffleIndex = Math.abs(GHomepage.nModuleShuffleCohort) - 1;
+        for ( var i = 0; i < nModules; i++ )
+        {
+            var divisor = nModules - i;
+            var j = nShuffleIndex % divisor;
+            nShuffleIndex = Math.floor( nShuffleIndex / divisor );
+            var temp = rgShuffled[ i ];
+            rgShuffled[ i ] = rgShuffled[ i + j ];
+            rgShuffled[ i + j ] = temp;
+        }
+
+        var position = 0;
+        for ( const module in rgShuffled )
+        {
+            var module_name = rgShuffled[module]
+            $J( '#module_shuffle_target' ).append( $J( module_name ) );
+            position++;
+        }
+     },
 
 	ItemKey: function( rgItem )
 	{
@@ -703,9 +748,9 @@ GHomepage = {
 			{
 				$ImgCtn.append( $J('<div/>', {'class': 'cluster_maincap_fill ' + (rgItemData.package_header ? 'package' : '') } )
 					.append(
-						$J('<img/>', {'class': 'cluster_maincap_fill_placeholder', src: 'https://steamstore-a.akamaihd.net/public/images/v6/home/maincap_placeholder_616x353.gif' } ),
-						$J('<img/>', {'class': 'cluster_capsule_image cluster_maincap_fill_bg', src: 'https://steamstore-a.akamaihd.net/public/images/blank.gif', 'data-image-url': strImageURL } ),
-						$J('<img/>', {'class': 'cluster_maincap_fill_header', src: 'https://steamstore-a.akamaihd.net/public/images/blank.gif', 'data-image-url': strImageURL } )
+						$J('<img/>', {'class': 'cluster_maincap_fill_placeholder', src: 'https://store.cloudflare.steamstatic.com/public/images/v6/home/maincap_placeholder_616x353.gif' } ),
+						$J('<img/>', {'class': 'cluster_capsule_image cluster_maincap_fill_bg', src: 'https://store.cloudflare.steamstatic.com/public/images/blank.gif', 'data-image-url': strImageURL } ),
+						$J('<img/>', {'class': 'cluster_maincap_fill_header', src: 'https://store.cloudflare.steamstatic.com/public/images/blank.gif', 'data-image-url': strImageURL } )
 					)
 				);
 			}
@@ -2173,7 +2218,7 @@ GHomepage = {
 
 		var strHeaderURL = rgItemData.header;
 		if ( !strHeaderURL )	// wishlist items may not have a header loaded
-			strHeaderURL = 'https://steamcdn-a.akamaihd.net/steam/apps/' + unAppID + '/header.jpg';
+			strHeaderURL = 'https://cdn.cloudflare.steamstatic.com/steam/apps/' + unAppID + '/header.jpg';
 
 		var $Spotlight = $J('<a/>', params );
 		GStoreItemData.BindHoverEvents( $Spotlight, unAppID );
@@ -2477,15 +2522,15 @@ CHomeSettings.prototype.DismissPopup = function()
 
 function GetAvatarURL( strAvatarHash, sizeStr )
 {
-	return 'https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/' + strAvatarHash.substr( 0 , 2 ) + '/' + strAvatarHash + ( sizeStr || '' ) + '.jpg';
+	return 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/' + strAvatarHash.substr( 0 , 2 ) + '/' + strAvatarHash + ( sizeStr || '' ) + '.jpg';
 }
 
 function GetScreenshotURL( appid, filename, sizeStr )
 {
 	if( sizeStr )
-		return 'https://steamcdn-a.akamaihd.net/steam/' + 'apps/' + appid + '/' + filename.replace('.jpg', sizeStr + '.jpg');
+		return 'https://cdn.cloudflare.steamstatic.com/steam/' + 'apps/' + appid + '/' + filename.replace('.jpg', sizeStr + '.jpg');
 
-	return 'https://steamcdn-a.akamaihd.net/steam/' + 'apps/' + appid + '/' + filename;
+	return 'https://cdn.cloudflare.steamstatic.com/steam/' + 'apps/' + appid + '/' + filename;
 }
 
 GSteamCurators = {

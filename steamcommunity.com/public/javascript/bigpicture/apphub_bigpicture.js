@@ -712,11 +712,11 @@ function DisplayScreenshot( panelid )
 						<include src="file://{resources}/styles/community/community.css" /> \
 						<include src="file://{resources}/styles/contentframe.css" /> \
 						<include src="file://{resources}/styles/movie.css" /> \
-						<include src="https://steamcommunity-a.akamaihd.net/public/css/bigpicture/apphub.css?v=valveisgoodatcaching" /> \
+						<include src="https://community.cloudflare.steamstatic.com/public/css/bigpicture/apphub.css?v=valveisgoodatcaching" /> \
 					</styles> \
 					<scripts> \
-						<include src="https://steamcommunity-a.akamaihd.net/public/shared/javascript/bigpicture/base.js?v=valveisgoodatcaching&amp;l=english" /> \
-						<include src="https://steamcommunity-a.akamaihd.net/public/javascript/bigpicture/apphub_bigpicture.js?v=valveisgoodatcaching&amp;l=english" /> \
+						<include src="https://community.cloudflare.steamstatic.com/public/shared/javascript/bigpicture/base.js?v=valveisgoodatcaching&amp;l=english" /> \
+						<include src="https://community.cloudflare.steamstatic.com/public/javascript/bigpicture/apphub_bigpicture.js?v=valveisgoodatcaching&amp;l=english" /> \
 					</scripts> \
 					<Panel oncancel="CloseBigPicturePopup();" class="CommunityAppHubPopup CommunityAppHubScreenshotPopup"> \
 						<Button id="CommunityAppHubPopupButton" > \
@@ -733,11 +733,11 @@ function DisplayScreenshot( panelid )
 									<Panel class="CommunityAppHubPopupRatings" > \
 										<Label id="AppName" class="AppName" /> \
 										<Panel id="VotePanel" > \
-											<Image class="AppHubCardThumb" src="https://steamcommunity-a.akamaihd.net/public/images/apphubs/bigpicture/thumbs_up.png" /> \
-											<Image class="AppHubCardThumb AppHubCardThumbSelected" src="https://steamcommunity-a.akamaihd.net/public/images/apphubs/bigpicture/thumbs_upselected.png" /> \
+											<Image class="AppHubCardThumb" src="https://community.cloudflare.steamstatic.com/public/images/apphubs/bigpicture/thumbs_up.png" /> \
+											<Image class="AppHubCardThumb AppHubCardThumbSelected" src="https://community.cloudflare.steamstatic.com/public/images/apphubs/bigpicture/thumbs_upselected.png" /> \
 										</Panel> \
 										<Label id="UpVotes" class="UpVotes" /> \
-										<Image class="CommentIcon" src="https://steamcommunity-a.akamaihd.net/public/images/apphubs/bigpicture/comments.png" /> \
+										<Image class="CommentIcon" src="https://community.cloudflare.steamstatic.com/public/images/apphubs/bigpicture/comments.png" /> \
 										<Label id="Comments" class="Comments" /> \
 									</Panel> \
 								</Panel> \
@@ -761,11 +761,11 @@ function DisplayVideo( panelid )
 						<include src="file://{resources}/styles/community/community.css" /> \
 						<include src="file://{resources}/styles/contentframe.css" /> \
 						<include src="file://{resources}/styles/movie.css" /> \
-						<include src="https://steamcommunity-a.akamaihd.net/public/css/bigpicture/apphub.css?v=valveisgoodatcaching" /> \
+						<include src="https://community.cloudflare.steamstatic.com/public/css/bigpicture/apphub.css?v=valveisgoodatcaching" /> \
 					</styles> \
 					<scripts> \
-						<include src="https://steamcommunity-a.akamaihd.net/public/shared/javascript/bigpicture/base.js?v=valveisgoodatcaching&amp;l=english" /> \
-						<include src="https://steamcommunity-a.akamaihd.net/public/javascript/bigpicture/apphub_bigpicture.js?v=valveisgoodatcaching&amp;l=english" /> \
+						<include src="https://community.cloudflare.steamstatic.com/public/shared/javascript/bigpicture/base.js?v=valveisgoodatcaching&amp;l=english" /> \
+						<include src="https://community.cloudflare.steamstatic.com/public/javascript/bigpicture/apphub_bigpicture.js?v=valveisgoodatcaching&amp;l=english" /> \
 					</scripts> \
 					<Panel oncancel="CloseBigPicturePopup();" class="CommunityAppHubPopup CommunityAppHubScreenshotPopup"> \
 						<Button id="CommunityAppHubPopupButton" > \
@@ -781,11 +781,11 @@ function DisplayVideo( panelid )
 									<Panel class="CommunityAppHubPopupRatings" > \
 										<Label id="AppName" class="AppName" /> \
 										<Panel id="VotePanel" > \
-											<Image class="AppHubCardThumb" src="https://steamcommunity-a.akamaihd.net/public/images/apphubs/bigpicture/thumbs_up.png" /> \
-											<Image class="AppHubCardThumb AppHubCardThumbSelected" src="https://steamcommunity-a.akamaihd.net/public/images/apphubs/bigpicture/thumbs_upselected.png" /> \
+											<Image class="AppHubCardThumb" src="https://community.cloudflare.steamstatic.com/public/images/apphubs/bigpicture/thumbs_up.png" /> \
+											<Image class="AppHubCardThumb AppHubCardThumbSelected" src="https://community.cloudflare.steamstatic.com/public/images/apphubs/bigpicture/thumbs_upselected.png" /> \
 										</Panel> \
 										<Label id="UpVotes" class="UpVotes" /> \
-										<Image class="CommentIcon" src="https://steamcommunity-a.akamaihd.net/public/images/apphubs/bigpicture/comments.png" /> \
+										<Image class="CommentIcon" src="https://community.cloudflare.steamstatic.com/public/images/apphubs/bigpicture/comments.png" /> \
 										<Label id="Comments" class="Comments" /> \
 									</Panel> \
 								</Panel> \
@@ -1115,11 +1115,11 @@ function DisplaySearchPanel( src )
 						<include src="file://{resources}/styles/msgbox.css" /> \
 						<include src="file://{resources}/styles/search.css" /> \
 						<include src="file://{resources}/styles/community/community.css" /> \
-						<include src="https://steamcommunity-a.akamaihd.net/public/css/bigpicture/apphub.css?v=valveisgoodatcaching" /> \
+						<include src="https://community.cloudflare.steamstatic.com/public/css/bigpicture/apphub.css?v=valveisgoodatcaching" /> \
 					</styles> \
 					<scripts> \
-						<include src="https://steamcommunity-a.akamaihd.net/public/shared/javascript/bigpicture/base.js?v=valveisgoodatcaching&amp;l=english" /> \
-						<include src="https://steamcommunity-a.akamaihd.net/public/javascript/bigpicture/apphub_bigpicture.js?v=valveisgoodatcaching&amp;l=english" /> \
+						<include src="https://community.cloudflare.steamstatic.com/public/shared/javascript/bigpicture/base.js?v=valveisgoodatcaching&amp;l=english" /> \
+						<include src="https://community.cloudflare.steamstatic.com/public/javascript/bigpicture/apphub_bigpicture.js?v=valveisgoodatcaching&amp;l=english" /> \
 					</scripts> \
 					<Panel class="CommunityAppHubPopup" oncancel="CloseSearchPanel();" baseurl="https://steamcommunity.com"> \
 						<Panel id="AppHubSearchPopout" class="DialogRegion ShowSearchDivider"> \

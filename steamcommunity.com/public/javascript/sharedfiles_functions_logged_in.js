@@ -301,7 +301,7 @@ function PublishedFileAward( id, fileType, currentSelection )
 			if ( !bFoundExisting )
 			{
 				var reward = $J( "<span>", { class: "review_award" } );
-				var img = $J( "<img>", { class: "review_award_icon tooltip", src: "https://steamstore-a.akamaihd.net/public/images/loyalty/reactions/still/" + award + ".png" } );
+				var img = $J( "<img>", { class: "review_award_icon tooltip", src: "https://store.cloudflare.steamstatic.com/public/images/loyalty/reactions/still/" + award + ".png" } );
 				reward.append( img );
 
 				var countElem = $J( "<span>", { class: "review_award_count hidden", text: "1" } );

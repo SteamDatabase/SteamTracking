@@ -333,7 +333,7 @@ function TradePageSelectNoInventory( user )
 	$('filter_tag_show').hide();
 	$('filter_tag_hide').hide();
 	$('inventories').childElements().invoke( 'hide' );
-	$('appselect_activeapp').update( templActiveApp.evaluate( {icon:'https://steamcommunity-a.akamaihd.net/public/images/economy/blank_gameicon.gif', name: 'Select an inventory to view items you can trade.' } ) );
+	$('appselect_activeapp').update( templActiveApp.evaluate( {icon:'https://community.cloudflare.steamstatic.com/public/images/economy/blank_gameicon.gif', name: 'Select an inventory to view items you can trade.' } ) );
 }
 
 function TradePageSelectInventory( user, appid, contextid, bLoadCompleted )
@@ -400,7 +400,7 @@ function TradePageSelectInventory( user, appid, contextid, bLoadCompleted )
 		var nFixedCtnHeight = $ResponsiveInventorySelect.parents('.responsive_trade_fixedcontents' ).height();
 		$ResponsiveInventorySelect.parents('.trade_nonresponsive_hidden' ).children('.responsive_trade_fixedcontents_spacer' ).css('height', nFixedCtnHeight ? nFixedCtnHeight + 'px' : '' );
 
-		$('appselect_activeapp').update( templActiveApp.evaluate( { icon: rgAppData ? rgAppData.icon : 'https://steamcommunity-a.akamaihd.net/public/images/economy/blank_gameicon.gif', name: displayName.escapeHTML() /* prototype! */ } ) );
+		$('appselect_activeapp').update( templActiveApp.evaluate( { icon: rgAppData ? rgAppData.icon : 'https://community.cloudflare.steamstatic.com/public/images/economy/blank_gameicon.gif', name: displayName.escapeHTML() /* prototype! */ } ) );
 
 		if ( user == UserYou )
 		{

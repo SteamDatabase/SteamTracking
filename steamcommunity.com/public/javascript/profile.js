@@ -6,7 +6,7 @@ function PresentGroupInviteOptions( rgFriendsToInvite )
 	// this deferred will succeed if an invite is succesfully sent, fail if the user dismisses the modal or the invite AJAX fails
 	var deferred = new jQuery.Deferred();
 
-	var Modal = ShowDialog( 'Invite to Join Your Group', '<div class="group_invite_throbber"><img src="https://steamcommunity-a.akamaihd.net/public/images/login/throbber.gif"></div>' );
+	var Modal = ShowDialog( 'Invite to Join Your Group', '<div class="group_invite_throbber"><img src="https://community.cloudflare.steamstatic.com/public/images/login/throbber.gif"></div>' );
 	var $ListElement = $J('<div/>', {'class': 'newmodal_content_innerbg'} );
 
 	var bBulkFriendInvite = false;
@@ -361,7 +361,7 @@ function ShowFriendsInGroup( unClanIDTarget )
 
 function ShowPlayerList( title, type, unAccountIDTarget, rgAccountIDs )
 {
-	var Modal = ShowAlertDialog( title, '<div class="group_invite_throbber"><img src="https://steamcommunity-a.akamaihd.net/public/images/login/throbber.gif"></div>' );
+	var Modal = ShowAlertDialog( title, '<div class="group_invite_throbber"><img src="https://community.cloudflare.steamstatic.com/public/images/login/throbber.gif"></div>' );
 	var $ListElement = $J('<div/>', {'class': 'player_list_ctn'} );
 	var $Buttons = Modal.GetContent().find('.newmodal_buttons').detach();
 
@@ -515,7 +515,7 @@ function ShowAliasPopup(e)
 	var aliasContainer = $( 'NamePopupAliases' );
 
 	var throbber = document.createElement( 'img' );
-	throbber.src = 'https://steamcommunity-a.akamaihd.net/public/images/login/throbber.gif';
+	throbber.src = 'https://community.cloudflare.steamstatic.com/public/images/login/throbber.gif';
 	aliasContainer.appendChild( throbber );
 
 	new Ajax.Request( g_rgProfileData['url'] + 'ajaxaliases/', {
@@ -629,7 +629,7 @@ function SetFollowing( bFollowing, fnOnSuccess )
 
 function ShowFriendSelect( title, fnOnSelect )
 {
-	var Modal = ShowAlertDialog( title, '<div class="group_invite_throbber"><img src="https://steamcommunity-a.akamaihd.net/public/images/login/throbber.gif"></div>', 'Cancel' );
+	var Modal = ShowAlertDialog( title, '<div class="group_invite_throbber"><img src="https://community.cloudflare.steamstatic.com/public/images/login/throbber.gif"></div>', 'Cancel' );
 	var $ListElement = $J('<div/>', {'class': 'player_list_ctn'} );
 	var $Buttons = Modal.GetContent().find('.newmodal_buttons').detach();
 

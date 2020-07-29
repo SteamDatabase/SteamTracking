@@ -81,7 +81,7 @@ html.responsive.touch .friends_update .responsive_page_frame.with_header div.res
 }
 
 .hero div.page_content {
-	background: url(https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/friends_announce/bg_hero.jpg) top right no-repeat;
+	background: url(https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/friends_announce/bg_hero.jpg) top right no-repeat;
 	background-size: 610px 585px;
 	min-height: 455px;
 	color: #505050;
@@ -236,7 +236,7 @@ a.button:hover {
 }
 
 .friends_list_bg {
-	/*background: url(https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/friends_announce/bg_friends.jpg) top center no-repeat;*/
+	/*background: url(https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/friends_announce/bg_friends.jpg) top center no-repeat;*/
 	padding-bottom: 40px;
 }
 
@@ -419,7 +419,7 @@ a.button:hover {
 }
 
 .chat_content_bg{
-	/*background: url(https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/friends_announce/page_bg_generated_v6b.jpg) top center no-repeat;*/
+	/*background: url(https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/friends_announce/page_bg_generated_v6b.jpg) top center no-repeat;*/
 	padding: 80px 0;
 	background-color: #1c202a;
 }
@@ -501,7 +501,7 @@ a.button:hover {
 }
 
 .tryit .page_content {
-	//background: url(https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/friends_announce/asset01_tophero.PNG) top right no-repeat;
+	//background: url(https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets/friends_announce/asset01_tophero.PNG) top right no-repeat;
 	background-size: contain;
 	min-height: 455px;
 	color: #505050;

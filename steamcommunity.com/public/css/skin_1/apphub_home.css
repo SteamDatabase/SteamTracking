@@ -49,7 +49,7 @@ body.apphub_blue
 	margin: 0 auto;
 	height: 229px;
 	color: #c4c4c4;
-	background: url( 'https://steamcommunity-a.akamaihd.net/public/images/apphubs/bg_hubbottom.png' ) no-repeat center top;
+	background: url( 'https://community.cloudflare.steamstatic.com/public/images/apphubs/bg_hubbottom.png' ) no-repeat center top;
 	text-align: center;
 }
 
@@ -114,7 +114,7 @@ body.apphub_blue
 
 .apphub_BackTopTopShadow
 {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/apphubs/btn_back_top_shadow.png' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/apphubs/btn_back_top_shadow.png' );
 	margin-left: 5px;
 	width: 949px;
 	height: 20px;
@@ -122,7 +122,7 @@ body.apphub_blue
 
 .apphub_BackToTopButton
 {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/apphubs/btn_back_top_active.png' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/apphubs/btn_back_top_active.png' );
 	width: 3px;
 	height: 33px;
 	line-height: 33px;
@@ -132,7 +132,7 @@ body.apphub_blue
 
 .apphub_BackToTop:hover .apphub_BackToTopButton
 {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/apphubs/btn_back_top_hover.png' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/apphubs/btn_back_top_hover.png' );
 }
 
 .apphub_BackToTopButton.middle
@@ -232,7 +232,7 @@ body.apphub_blue
 
 .apphub_HubDivider
 {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/apphubs/hub_divider.png?v=1' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/apphubs/hub_divider.png?v=1' );
 	height: 4px;
 }
 
@@ -337,7 +337,7 @@ div.filterselect .filterselect_arrow, div.filterselect #filterselect_arrow {
 	top: 2px;
 	width: 17px;
 	height: 20px;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/workshop_dateselect_arrow.png' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/sharedfiles/workshop_dateselect_arrow.png' );
 	background-repeat: no-repeat;
 	background-position: top center;
 }
@@ -427,7 +427,7 @@ div.statsselect #statsselect_arrow {
 	top: -2px;
 	width: 17px;
 	height: 20px;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/workshop_dateselect_arrow.png' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/sharedfiles/workshop_dateselect_arrow.png' );
 	background-repeat: no-repeat;
 	background-position: top center;
 }
@@ -505,7 +505,7 @@ div.statsselect div.option img, div.statsselect_options div.option img {
 
 .apphub_StoreInfoHeader
 {
-	/*background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/apphubs/bg_gameinfo.png' );*/
+	/*background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/apphubs/bg_gameinfo.png' );*/
     border-top: 1px solid #272f38;
     background-color: rgba( 0, 0, 0, 0.8 );
 	max-width: 904px;
@@ -606,7 +606,7 @@ div.statsselect div.option img, div.statsselect_options div.option img {
 
 .apphub_EarlyAccess
 {
-	background: no-repeat url( 'https://steamcommunity-a.akamaihd.net/public/images/apphubs/early_access_banner.jpg' );
+	background: no-repeat url( 'https://community.cloudflare.steamstatic.com/public/images/apphubs/early_access_banner.jpg' );
 	max-width: 948px;
 	height: 38px;
 	line-height: 38px;
@@ -649,7 +649,7 @@ div.statsselect div.option img, div.statsselect_options div.option img {
 }
 
 .rightbox_header, .rightbox_footer {
-	/*background: no-repeat url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/rightcol_box_topbtm.png' );*/
+	/*background: no-repeat url( 'https://community.cloudflare.steamstatic.com/public/images/groups/rightcol_box_topbtm.png' );*/
 	width: 295px;
 	height: 4px;
 }
@@ -663,7 +663,7 @@ div.statsselect div.option img, div.statsselect_options div.option img {
 	margin-bottom: 18px;
 }
 .rightbox {
-	background: repeat-y url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/rightcol_box_repeat.png' );
+	background: repeat-y url( 'https://community.cloudflare.steamstatic.com/public/images/groups/rightcol_box_repeat.png' );
 }
 .rightbox .content {
 	padding: 16px 14px;
@@ -705,7 +705,7 @@ div.statsselect div.option img, div.statsselect_options div.option img {
 	display: none;
 	left: -27px;
 	top: 0px;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/rightcol_option_selected.png' );
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/groups/rightcol_option_selected.png' );
 	width: 306px;
 	height: 37px;
 }

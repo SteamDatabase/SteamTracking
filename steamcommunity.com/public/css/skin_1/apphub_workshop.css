@@ -73,7 +73,7 @@
 }
 .primary_panel
 {
-	background: url('https://steamcommunity-a.akamaihd.net/public/images/workshop/primary_panel_background.jpg') no-repeat 0px 0px #040508;
+	background: url('https://community.cloudflare.steamstatic.com/public/images/workshop/primary_panel_background.jpg') no-repeat 0px 0px #040508;
 }
 .primary_panel .playerAvatar img,
 .primary_panel .playerAvatar
@@ -93,7 +93,7 @@
 	float: left;
 }
 .avatar_workshop_overlay {
-	background: url('https://steamcommunity-a.akamaihd.net/public/images/workshop/avatar_overlay.png') no-repeat 0px 0px;
+	background: url('https://community.cloudflare.steamstatic.com/public/images/workshop/avatar_overlay.png') no-repeat 0px 0px;
 	height: 84px;
 	width: 84px;
 	position: absolute;
@@ -215,9 +215,9 @@
 
 	position: relative;
 	padding-bottom: 20px;
-	background: url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/content_header_rule.png?v=1' ) 0px 0px no-repeat;
-	background: url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/group_content_topbackground.png?v=1' ) 0px 8px no-repeat,
-	url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/content_header_rule.png?v=1' ) -4px 0px no-repeat;
+	background: url( 'https://community.cloudflare.steamstatic.com/public/images/groups/content_header_rule.png?v=1' ) 0px 0px no-repeat;
+	background: url( 'https://community.cloudflare.steamstatic.com/public/images/groups/group_content_topbackground.png?v=1' ) 0px 8px no-repeat,
+	url( 'https://community.cloudflare.steamstatic.com/public/images/groups/content_header_rule.png?v=1' ) -4px 0px no-repeat;
 }
 
 .detailBox.altFooter {
@@ -225,9 +225,9 @@
 
 	position: relative;
 	padding-bottom: 7px;
-	background: url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/content_footer_fade.png?v=1' ) bottom right no-repeat,
-	url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/group_content_topbackground.png?v=1' ) 0px 8px no-repeat,
-	url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/content_header_rule.png?v=1' ) -4px 0px no-repeat;
+	background: url( 'https://community.cloudflare.steamstatic.com/public/images/groups/content_footer_fade.png?v=1' ) bottom right no-repeat,
+	url( 'https://community.cloudflare.steamstatic.com/public/images/groups/group_content_topbackground.png?v=1' ) 0px 8px no-repeat,
+	url( 'https://community.cloudflare.steamstatic.com/public/images/groups/content_header_rule.png?v=1' ) -4px 0px no-repeat;
 	margin-bottom: 16px;
 }
 
@@ -579,7 +579,7 @@
 	padding: 0px;
 	z-index: 20;
 	font-size: 20px;
-	background: url( https://steamcommunity-a.akamaihd.net/public/images/workshop/vote_queue_arrow.png );
+	background: url( https://community.cloudflare.steamstatic.com/public/images/workshop/vote_queue_arrow.png );
 	background-repeat: no-repeat;
 }
 .voting_queue_link div {
@@ -589,7 +589,7 @@ a.queue_area:hover .voting_queue_border {
 	background: #66c0f4;
 }
 a.queue_area:hover .voting_queue_link {
-	background: url( https://steamcommunity-a.akamaihd.net/public/images/workshop/vote_queue_arrow.png );
+	background: url( https://community.cloudflare.steamstatic.com/public/images/workshop/vote_queue_arrow.png );
 	background-position: 0px 67px;
 	color: #ffffff;
 }
@@ -707,7 +707,7 @@ a.queue_area:hover .voting_queue_link {
 /* tabs */
 
 .home_tab_bg {
-	background: url( 'https://steamcommunity-a.akamaihd.net/public/images/workshop/tab_bg.png') no-repeat;
+	background: url( 'https://community.cloudflare.steamstatic.com/public/images/workshop/tab_bg.png') no-repeat;
 	position: absolute;
 	width: 664px;
 	height: 127px;
@@ -869,7 +869,7 @@ a.queue_area:hover .voting_queue_link {
 	height: 20px;
 	width: 20px;
 	overflow: hidden;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/icon_show_state.png');
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/sharedfiles/icon_show_state.png');
 	background-repeat: no-repeat;
 	display: inline-block;
 	margin-left: 2px;
@@ -947,8 +947,8 @@ a.queue_area:hover .voting_queue_link {
 	right: 0;
 	bottom: 0;
 	height: 36px;
-	/*background: url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/group_overview_announcement_fade.png' ) bottom left repeat-x;*/
-	background: url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/overview_announcement_fade_wide.png' ) bottom right repeat-x;
+	/*background: url( 'https://community.cloudflare.steamstatic.com/public/images/groups/group_overview_announcement_fade.png' ) bottom left repeat-x;*/
+	background: url( 'https://community.cloudflare.steamstatic.com/public/images/groups/overview_announcement_fade_wide.png' ) bottom right repeat-x;
 }
 
 .group_overview_announcement.first .group_overview_announcement_fade {
@@ -1132,7 +1132,7 @@ a.readmore_link
 	display: inline-block;
 	background-position: -9px 0px;
 	background-repeat: no-repeat;
-	background-image: url('https://steamcommunity-a.akamaihd.net/public/images//workshop/icon_cluster_controls.png');
+	background-image: url('https://community.cloudflare.steamstatic.com/public/images//workshop/icon_cluster_controls.png');
 	width: 9px;
 	height: 7px;
 	margin-left: 15px;
@@ -1142,7 +1142,7 @@ a.readmore_link
 	display: inline-block;
 	background-position: -18px 0px;
 	background-repeat: no-repeat;
-	background-image: url('https://steamcommunity-a.akamaihd.net/public/images//workshop/icon_cluster_controls.png');
+	background-image: url('https://community.cloudflare.steamstatic.com/public/images//workshop/icon_cluster_controls.png');
 	width: 9px;
 	height: 7px;
 	margin-left: 13px;
