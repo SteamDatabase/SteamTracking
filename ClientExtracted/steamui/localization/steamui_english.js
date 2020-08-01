@@ -376,6 +376,8 @@
 	"AppDetails_SectionTitle_OfflineMode": "Offline Mode",
 	"AppDetails_SectionTitle_IncludedWith": "Included With",
 
+	"AppDetails_AdditionalContent_GameManual": "Manual",
+
 	"AppDetails_Broadcast_ViewOnWeb": "View in web browser",
 
 	"AppDetails_Community_Tooltip1":	"This section contains screenshots, artwork, videos, guides, and more, submitted by the community.",

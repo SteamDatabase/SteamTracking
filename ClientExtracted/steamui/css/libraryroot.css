@@ -8242,25 +8242,32 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
 /* stylelint-disable */
 
 /* stylelint-enable */
+.appdetailsadditionalcontentsection_AdditionalItem_11iUU {
+  cursor: pointer;
+  padding: 2px 0px;
+  margin-bottom: 5px; }
+  .appdetailsadditionalcontentsection_AdditionalItem_11iUU:hover {
+    background-color: #fff1; }
+    .appdetailsadditionalcontentsection_AdditionalItem_11iUU:hover .appdetailsadditionalcontentsection_Title_QDrH3 {
+      color: #fff; }
+    .appdetailsadditionalcontentsection_AdditionalItem_11iUU:hover .appdetailsadditionalcontentsection_Image_3ikOg {
+      filter: brightness(1.2); }
+  .appdetailsadditionalcontentsection_AdditionalItem_11iUU .appdetailsadditionalcontentsection_Title_QDrH3 {
+    color: #ffffffe0;
+    font-weight: 300;
+    font-size: 14px;
+    margin-top: 4px; }
+  .appdetailsadditionalcontentsection_AdditionalItem_11iUU:last-child {
+    margin-bottom: 0px; }
+
 .appdetailsadditionalcontentsection_Soundtracks_LO26Z {
   display: flex;
   flex-direction: row;
   cursor: pointer; }
-  .appdetailsadditionalcontentsection_Soundtracks_LO26Z:hover {
-    background-color: #fff1; }
-    .appdetailsadditionalcontentsection_Soundtracks_LO26Z:hover .appdetailsadditionalcontentsection_SoundtrackDetails_krdL6 .appdetailsadditionalcontentsection_Title_QDrH3 {
-      color: #fff; }
-    .appdetailsadditionalcontentsection_Soundtracks_LO26Z:hover .appdetailsadditionalcontentsection_SoundtracksImage_294mJ {
-      filter: brightness(1.2); }
   .appdetailsadditionalcontentsection_Soundtracks_LO26Z .appdetailsadditionalcontentsection_SoundtrackDetails_krdL6 {
     display: flex;
     flex-direction: column;
     margin-left: 16px; }
-    .appdetailsadditionalcontentsection_Soundtracks_LO26Z .appdetailsadditionalcontentsection_SoundtrackDetails_krdL6 .appdetailsadditionalcontentsection_Title_QDrH3 {
-      color: #ffffffe0;
-      font-weight: 300;
-      font-size: 14px;
-      margin-top: 4px; }
     .appdetailsadditionalcontentsection_Soundtracks_LO26Z .appdetailsadditionalcontentsection_SoundtrackDetails_krdL6 .appdetailsadditionalcontentsection_Artist_3NeZL {
       font-weight: 300;
       color: #ffffff80;
@@ -8269,17 +8276,31 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
       font-weight: 300;
       color: #ffffff80;
       font-size: 13px; }
+  .appdetailsadditionalcontentsection_Soundtracks_LO26Z .appdetailsadditionalcontentsection_Image_3ikOg {
+    width: 72px;
+    height: 72px;
+    background-size: cover;
+    padding: 0 !important;
+    border-radius: 2px;
+    flex-shrink: 0; }
+    .appdetailsadditionalcontentsection_Soundtracks_LO26Z .appdetailsadditionalcontentsection_Image_3ikOg img {
+      height: 100%;
+      border-radius: 4px;
+      box-shadow: 1px 1px 8px #0009; }
 
-.appdetailsadditionalcontentsection_SoundtracksImage_294mJ {
-  width: 72px;
-  height: 72px;
-  background-size: cover;
-  padding: 0 !important;
-  border-radius: 2px; }
-  .appdetailsadditionalcontentsection_SoundtracksImage_294mJ img {
-    height: 100%;
-    border-radius: 4px;
-    box-shadow: 1px 1px 8px #0009; }
+.appdetailsadditionalcontentsection_Manual_3LAiz {
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+  .appdetailsadditionalcontentsection_Manual_3LAiz .appdetailsadditionalcontentsection_Image_3ikOg {
+    width: 72px;
+    flex-shrink: 0; }
+  .appdetailsadditionalcontentsection_Manual_3LAiz .appdetailsadditionalcontentsection_AssetImage_7zwZ- {
+    width: 100%; }
+  .appdetailsadditionalcontentsection_Manual_3LAiz .appdetailsadditionalcontentsection_Title_QDrH3 {
+    flex-grow: 1;
+    margin-top: 0px;
+    margin-left: 16px; }
 
 .managedlcdialog_Container_1Gc2g {
   width: 1100px; }
