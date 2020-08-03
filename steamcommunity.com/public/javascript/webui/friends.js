@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6018531";
+var CLSTAMP = "6025491";
 !(function(e) {
   function t(t) {
     for (
@@ -37607,75 +37607,76 @@ var CLSTAMP = "6018531";
                 b &&
                 b.full_game_appid &&
                 O.a.GetAppLinkInfo(b.full_game_appid),
-              L =
-                r && b
-                  ? i.createElement(Da, { appid: b.appid, bIsMuted: _ })
-                  : s
-                  ? i.createElement(
-                      "div",
-                      { className: yi.a.EventRow },
-                      i.createElement(Qi, { item: s, bMiniMode: !0 })
-                    )
-                  : i.createElement(
-                      "div",
-                      {
-                        className: Object(R.a)(
-                          yi.a.CapsuleBottomBar,
-                          M && yi.a.Muted
-                        )
-                      },
-                      i.createElement(ja, { item: h }),
-                      !p &&
-                        i.createElement(
-                          "span",
-                          { className: yi.a.BottomBarPriceInfo },
-                          i.createElement(Ca, { info: b, bShowInLibrary: w })
-                        )
-                    ),
-              N = i.createElement(
-                i.Fragment,
-                null,
-                i.createElement(
-                  "div",
-                  { className: yi.a.CapsuleDecorators },
-                  A &&
-                    i.createElement(
-                      "span",
-                      { className: Object(R.a)(yi.a.Banner, yi.a.Blue) },
-                      i.createElement("img", {
-                        src: u.a,
-                        className: yi.a.LinesImg
-                      }),
-                      Object(k.d)("#Sale_InLibrary")
-                    ),
-                  T &&
-                    i.createElement(
-                      "span",
-                      { className: yi.a.Banner },
-                      i.createElement("img", {
-                        src: d.a,
-                        className: yi.a.LinesImg
-                      }),
-                      Object(k.d)("#Sale_OnWishlist")
-                    ),
-                  I && i.createElement(Na, null)
-                ),
-                D.i.logged_in && !a && i.createElement(Aa, { appInfo: b }),
-                i.createElement(
-                  "div",
-                  { className: yi.a.HeaderCapsuleImageContainer },
-                  i.createElement("img", {
-                    loading: "lazy",
-                    width: yi.a.headerCapsuleImgWidth,
-                    height: yi.a.headerCapsuleImgHeight,
-                    className: Object(R.a)(yi.a.CapsuleImage, M && yi.a.Muted),
-                    src: S,
-                    alt: y
-                  })
-                ),
-                _ && !a && !ma() && i.createElement(La, { appInfo: b }),
-                L
-              );
+              L = null;
+            L =
+              r && b
+                ? i.createElement(Da, { appid: b.appid, bIsMuted: _ })
+                : s
+                ? i.createElement(
+                    "div",
+                    { className: yi.a.EventRow },
+                    i.createElement(Qi, { item: s, bMiniMode: !0 })
+                  )
+                : i.createElement(
+                    "div",
+                    {
+                      className: Object(R.a)(
+                        yi.a.CapsuleBottomBar,
+                        M && yi.a.Muted
+                      )
+                    },
+                    i.createElement(ja, { item: h }),
+                    !p &&
+                      i.createElement(
+                        "span",
+                        { className: yi.a.BottomBarPriceInfo },
+                        i.createElement(Ca, { info: b || h, bShowInLibrary: w })
+                      )
+                  );
+            var N = i.createElement(
+              i.Fragment,
+              null,
+              i.createElement(
+                "div",
+                { className: yi.a.CapsuleDecorators },
+                A &&
+                  i.createElement(
+                    "span",
+                    { className: Object(R.a)(yi.a.Banner, yi.a.Blue) },
+                    i.createElement("img", {
+                      src: u.a,
+                      className: yi.a.LinesImg
+                    }),
+                    Object(k.d)("#Sale_InLibrary")
+                  ),
+                T &&
+                  i.createElement(
+                    "span",
+                    { className: yi.a.Banner },
+                    i.createElement("img", {
+                      src: d.a,
+                      className: yi.a.LinesImg
+                    }),
+                    Object(k.d)("#Sale_OnWishlist")
+                  ),
+                I && i.createElement(Na, null)
+              ),
+              D.i.logged_in && !a && i.createElement(Aa, { appInfo: b }),
+              i.createElement(
+                "div",
+                { className: yi.a.HeaderCapsuleImageContainer },
+                i.createElement("img", {
+                  loading: "lazy",
+                  width: yi.a.headerCapsuleImgWidth,
+                  height: yi.a.headerCapsuleImgHeight,
+                  className: Object(R.a)(yi.a.CapsuleImage, M && yi.a.Muted),
+                  src: S,
+                  alt: y
+                })
+              ),
+              _ && !a && !ma() && i.createElement(La, { appInfo: b }),
+              L
+            );
             return i.createElement(
               "div",
               { className: yi.a.OuterCapsuleContainer },
@@ -100029,7 +100030,7 @@ PERFORMANCE OF THIS SOFTWARE.
                       (e &&
                         e.data &&
                         e.data.filtered &&
-                        e.data.filtered.length) ||
+                        e.data.filtered.length > 0) ||
                         !this.m_settings.bIsPreview ||
                         ((e.data = {
                           filtered: [{}],
@@ -100066,20 +100067,24 @@ PERFORMANCE OF THIS SOFTWARE.
                   if (this.m_bHasStartedVideo) return [2, null];
                   (n = new Set()), (o.label = 1);
                 case 1:
+                  return this.m_bUseFakeData
+                    ? (this.m_playReadyStream ||
+                        (this.m_playReadyStream = {
+                          accountid: 0,
+                          appid: 7,
+                          thumbnail_http_address: ""
+                        }),
+                      [2, this.m_playReadyStream])
+                    : [3, 2];
+                case 2:
                   return (
                     (r = t.filter(function(e) {
                       return !n.has(e);
                     })),
                     (i = e.GetAutoStartStream(r))
-                      ? this.m_bUseFakeData
-                        ? (this.m_playReadyStream ||
-                            (this.m_playReadyStream = i),
-                          [2, this.m_playReadyStream])
-                        : [3, 2]
+                      ? [4, this.AttemptToPlayStream(i)]
                       : [2, null]
                   );
-                case 2:
-                  return [4, this.AttemptToPlayStream(i)];
                 case 3:
                   if (o.sent()) return [2, i];
                   n.add(i), (o.label = 4);

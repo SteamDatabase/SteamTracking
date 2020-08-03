@@ -7072,6 +7072,7 @@
                   h &&
                   h.full_game_appid &&
                   N.a.GetAppLinkInfo(h.full_game_appid),
+                I = null,
                 I =
                   a && h
                     ? j.createElement(we, { appid: h.appid, bIsMuted: u })
@@ -7094,7 +7095,10 @@
                           j.createElement(
                             "span",
                             { className: se.a.BottomBarPriceInfo },
-                            j.createElement(Se, { info: h, bShowInLibrary: y })
+                            j.createElement(Se, {
+                              info: h || p,
+                              bShowInLibrary: y
+                            })
                           )
                       ),
                 T = j.createElement(
@@ -24595,26 +24599,23 @@
               ja(this.props.history, "tab", String(t.unique_id));
             }),
             (t.prototype.render = function() {
-              var i = this,
+              var s = this,
                 e = this.props,
-                s = e.event,
-                l = e.language,
-                c = e.promotionName,
-                p = e.bIsPreview,
-                d = (e.nSaleDayIndex, this.GetTabSelectionsFromURL()),
-                u = !1,
+                l = e.event,
+                c = e.language,
+                p = e.promotionName,
+                d = e.bIsPreview,
+                u = (e.nSaleDayIndex, this.GetTabSelectionsFromURL()),
                 m = !1,
-                h = [
-                  {
-                    elements: [],
-                    activeTab: new nr(null, this.props.nSaleDayIndex)
-                  }
-                ];
-              s.GetSaleSections().forEach(function(e, t) {
-                var n = h[h.length - 1].activeTab;
+                h = !1,
+                _ = new nr(null, this.props.nSaleDayIndex),
+                g = [{ elements: [], activeTab: _ }];
+              l.GetSaleSections().forEach(function(e, t) {
+                var n = g[g.length - 1].activeTab;
                 if (n.ShouldShowSection(e)) {
                   var a,
-                    r = null;
+                    r = e.diable_tab_id_filtering ? _ : n,
+                    o = null;
                   if (
                     "items" == (a = e).section_type &&
                     a.smart_section &&
@@ -24631,67 +24632,67 @@
                         !pa.GetHideIRList())) &&
                     !B.g.logged_in
                   )
-                    u ||
-                      ((r = fe.createElement(ir, {
+                    m ||
+                      ((o = fe.createElement(ir, {
                         section: e,
-                        event: s,
-                        language: l
+                        event: l,
+                        language: c
                       })),
-                      (u = !0));
+                      (m = !0));
                   else
                     switch (e.section_type) {
                       case "items":
                       case "events":
                       case "links":
-                        r = fe.createElement(
+                        o = fe.createElement(
                           pr,
-                          Object(M.a)({ section: e, activeTab: n }, i.props)
+                          Object(M.a)({ section: e, activeTab: r }, s.props)
                         );
                         break;
                       case "broadcast":
-                        s.BHasBroadcastEnabled() &&
-                          !m &&
-                          ((r = fe.createElement(Ar, {
-                            promotionName: c,
-                            eventModel: s,
-                            bIsPreview: p,
-                            language: l,
-                            activeTab: n,
+                        l.BHasBroadcastEnabled() &&
+                          !h &&
+                          ((o = fe.createElement(Ar, {
+                            promotionName: p,
+                            eventModel: l,
+                            bIsPreview: d,
+                            language: c,
+                            activeTab: r,
                             bShowDemoOptions: e.show_as_demos
                           })),
-                          (m = !0));
+                          (h = !0));
                         break;
                       case "event_description":
-                        r = fe.createElement(
+                        o = fe.createElement(
                           sr,
-                          Object(M.a)({ section: e }, i.props)
+                          Object(M.a)({ section: e }, s.props)
                         );
                         break;
                       case "doors":
-                        r = fe.createElement(Bn, {
-                          strFontFamily: Sr(s.jsondata.sale_font, l)
+                        o = fe.createElement(Bn, {
+                          strFontFamily: Sr(l.jsondata.sale_font, c)
                         });
                         break;
                       case "text_section":
-                        r = fe.createElement(
+                        o = fe.createElement(
                           lr,
-                          Object(M.a)({ section: e }, i.props)
+                          Object(M.a)({ section: e }, s.props)
                         );
                         break;
                       case "tabs":
-                        var o = d.get(e);
-                        h.push({ activeTab: o, elements: [] }),
-                          (r = fe.createElement(
+                        var i = u.get(e);
+                        g.push({ activeTab: i, elements: [] }),
+                          (o = fe.createElement(
                             Ka,
-                            Object(M.a)({ section: e }, i.props, {
-                              activeTab: o.GetTab(),
-                              onTabSelected: i.OnTabSelected
+                            Object(M.a)({ section: e }, s.props, {
+                              activeTab: i.GetTab(),
+                              onTabSelected: s.OnTabSelected
                             })
                           ));
                         break;
                       case "curator":
                         e.curator_clan_id &&
-                          (r = fe.createElement(
+                          (o = fe.createElement(
                             "div",
                             {
                               style: {
@@ -24715,32 +24716,32 @@
                         if (e.internal_section_data)
                           switch (e.internal_section_data.internal_type) {
                             case "subscription_pricing":
-                              r = fe.createElement(
+                              o = fe.createElement(
                                 Wa,
-                                Object(M.a)({ section: e }, i.props)
+                                Object(M.a)({ section: e }, s.props)
                               );
                               break;
                             case "event_schedule":
-                              r = fe.createElement(
+                              o = fe.createElement(
                                 xa.b,
-                                Object(M.a)({ section: e }, i.props, {
-                                  activeTab: n
+                                Object(M.a)({ section: e }, s.props, {
+                                  activeTab: r
                                 })
                               );
                               break;
                             case "tab_contents":
-                              r = fe.createElement(
+                              o = fe.createElement(
                                 qa,
-                                Object(M.a)({ section: e }, i.props, {
+                                Object(M.a)({ section: e }, s.props, {
                                   tab: n.GetTab(),
                                   showReferences: !1
                                 })
                               );
                               break;
                             case "tab_references":
-                              r = fe.createElement(
+                              o = fe.createElement(
                                 qa,
-                                Object(M.a)({ section: e }, i.props, {
+                                Object(M.a)({ section: e }, s.props, {
                                   tab: n.GetTab(),
                                   showReferences: !0
                                 })
@@ -24748,21 +24749,21 @@
                           }
                         break;
                       case "sale_item_browser":
-                        r = fe.createElement(
+                        o = fe.createElement(
                           cr,
-                          Object(M.a)({ section: e }, i.props, { activeTab: n })
+                          Object(M.a)({ section: e }, s.props, { activeTab: r })
                         );
                     }
-                  h[h.length - 1].elements.push(
+                  g[g.length - 1].elements.push(
                     fe.createElement(
                       ft.a,
                       { key: "SaleSectionIndex_" + e.unique_id + "_" + t },
-                      r
+                      o
                     )
                   );
                 }
               });
-              var t = h.map(function(e, t) {
+              var t = g.map(function(e, t) {
                 return fe.createElement(
                   "div",
                   {
@@ -25575,7 +25576,9 @@
                               fe.createElement(ea, {
                                 event: t,
                                 openNewWindow: !0,
-                                appInfo: oa.a.GetAppLinkInfo(t.appid),
+                                appInfo: r.hide_prices
+                                  ? void 0
+                                  : oa.a.GetAppLinkInfo(t.appid),
                                 onClick: function(e) {
                                   me.a.Get().RecordEventRead(t, 8),
                                     Object(Ca.a)(t, ot.o(e)),
@@ -25831,6 +25834,14 @@
             case "tag_recommender":
               return "#Sale_default_label_RecommendedForYou";
           }
+        else if ("curator" === e.section_type) {
+          if (e.curator_clan_id) {
+            var t = N.a.InitFromClanID(e.curator_clan_id),
+              n = We.a.GetCreatorHome(t);
+            if (n) return Object(R.d)("#Sale_CuratorSection_Name", n.GetName());
+          }
+          return "#Sale_CuratorSection";
+        }
         return null;
       }
       function ur(e) {
@@ -25887,7 +25898,7 @@
       }
       function br(e, t, n, a) {
         var r = dr(e);
-        if (r) return Object(R.d)(r);
+        if (r) return r.startsWith("#") ? Object(R.d)(r) : r;
         var o =
             e.localized_label[t] ||
             e.localized_label[0] ||
@@ -38376,26 +38387,39 @@
                     ),
                     !this.props.getMinimized() &&
                       fe.createElement(
-                        "div",
-                        { style: { display: "flex" } },
+                        fe.Fragment,
+                        null,
+                        fe.createElement(Cs, {
+                          varName: "diable_tab_id_filtering",
+                          editModel: this.props.editModel,
+                          section: this.props.saleSection,
+                          textToken:
+                            "#Sale_Section_TabSettings_DisableIDFiltering",
+                          ttipToken:
+                            "#Sale_Section_TabSettings_DisableIDFiltering_ttip"
+                        }),
                         fe.createElement(
                           "div",
-                          {
-                            className: Object(De.a)(
-                              Le.EventEditorTextTitle,
-                              Ce.ShowOnTabsLabel
-                            )
-                          },
-                          Object(R.d)("#Sale_Section_ShowOnTabs"),
-                          this.GetShowOnTabsList(e)
-                        ),
-                        fe.createElement(
-                          "div",
-                          { className: Ce.ShowOnTabsButton },
+                          { style: { display: "flex" } },
                           fe.createElement(
-                            dt.q,
-                            { onClick: this.OnEditTabSections },
-                            Object(R.d)("#Sale_Section_ShowOnTabs_Edit")
+                            "div",
+                            {
+                              className: Object(De.a)(
+                                Le.EventEditorTextTitle,
+                                Ce.ShowOnTabsLabel
+                              )
+                            },
+                            Object(R.d)("#Sale_Section_ShowOnTabs"),
+                            this.GetShowOnTabsList(e)
+                          ),
+                          fe.createElement(
+                            "div",
+                            { className: Ce.ShowOnTabsButton },
+                            fe.createElement(
+                              dt.q,
+                              { onClick: this.OnEditTabSections },
+                              Object(R.d)("#Sale_Section_ShowOnTabs_Edit")
+                            )
                           )
                         )
                       )
@@ -39850,7 +39874,7 @@
                   ("tag" === n.smart_section_type ||
                     "category" === n.smart_section_type),
                 i = "items" === n.section_type && !vr(n),
-                s = "items" === n.section_type;
+                s = "items" === n.section_type || "events" === n.section_type;
               return fe.createElement(
                 fe.Fragment,
                 null,
@@ -56915,7 +56939,7 @@
                         (t &&
                           t.data &&
                           t.data.filtered &&
-                          t.data.filtered.length) ||
+                          0 < t.data.filtered.length) ||
                           !this.m_settings.bIsPreview ||
                           ((t.data = {
                             filtered: [{}],
@@ -56952,18 +56976,24 @@
                     if (this.m_bHasStartedVideo) return [2, null];
                     (t = new Set()), (e.label = 1);
                   case 1:
-                    return ((n = r.filter(function(e) {
-                      return !t.has(e);
-                    })),
-                    (a = o.GetAutoStartStream(n)))
-                      ? this.m_bUseFakeData
-                        ? (this.m_playReadyStream ||
-                            (this.m_playReadyStream = a),
-                          [2, this.m_playReadyStream])
-                        : [3, 2]
-                      : [2, null];
+                    return this.m_bUseFakeData
+                      ? (this.m_playReadyStream ||
+                          (this.m_playReadyStream = {
+                            accountid: 0,
+                            appid: 7,
+                            thumbnail_http_address: ""
+                          }),
+                        [2, this.m_playReadyStream])
+                      : [3, 2];
                   case 2:
-                    return [4, this.AttemptToPlayStream(a)];
+                    return (
+                      (n = r.filter(function(e) {
+                        return !t.has(e);
+                      })),
+                      (a = o.GetAutoStartStream(n))
+                        ? [4, this.AttemptToPlayStream(a)]
+                        : [2, null]
+                    );
                   case 3:
                     if (e.sent()) return [2, a];
                     t.add(a), (e.label = 4);

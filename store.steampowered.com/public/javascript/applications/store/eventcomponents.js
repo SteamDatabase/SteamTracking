@@ -14729,26 +14729,23 @@
               Ut(this.props.history, "tab", String(t.unique_id));
             }),
             (t.prototype.render = function() {
-              var i = this,
+              var l = this,
                 e = this.props,
-                l = e.event,
-                s = e.language,
-                c = e.promotionName,
-                d = e.bIsPreview,
-                u = (e.nSaleDayIndex, this.GetTabSelectionsFromURL()),
-                p = !1,
+                s = e.event,
+                c = e.language,
+                d = e.promotionName,
+                u = e.bIsPreview,
+                p = (e.nSaleDayIndex, this.GetTabSelectionsFromURL()),
                 m = !1,
-                h = [
-                  {
-                    elements: [],
-                    activeTab: new ur(null, this.props.nSaleDayIndex)
-                  }
-                ];
-              l.GetSaleSections().forEach(function(e, t) {
-                var a = h[h.length - 1].activeTab;
+                h = !1,
+                v = new ur(null, this.props.nSaleDayIndex),
+                _ = [{ elements: [], activeTab: v }];
+              s.GetSaleSections().forEach(function(e, t) {
+                var a = _[_.length - 1].activeTab;
                 if (a.ShouldShowSection(e)) {
                   var n,
-                    r = null;
+                    r = e.diable_tab_id_filtering ? v : a,
+                    o = null;
                   if (
                     "items" == (n = e).section_type &&
                     n.smart_section &&
@@ -14765,67 +14762,67 @@
                         !Xa.GetHideIRList())) &&
                     !z.i.logged_in
                   )
-                    p ||
-                      ((r = B.createElement(vr, {
+                    m ||
+                      ((o = B.createElement(vr, {
                         section: e,
-                        event: l,
-                        language: s
+                        event: s,
+                        language: c
                       })),
-                      (p = !0));
+                      (m = !0));
                   else
                     switch (e.section_type) {
                       case "items":
                       case "events":
                       case "links":
-                        r = B.createElement(
+                        o = B.createElement(
                           yr,
-                          Object(M.a)({ section: e, activeTab: a }, i.props)
+                          Object(M.a)({ section: e, activeTab: r }, l.props)
                         );
                         break;
                       case "broadcast":
-                        l.BHasBroadcastEnabled() &&
-                          !m &&
-                          ((r = B.createElement(kr, {
-                            promotionName: c,
-                            eventModel: l,
-                            bIsPreview: d,
-                            language: s,
-                            activeTab: a,
+                        s.BHasBroadcastEnabled() &&
+                          !h &&
+                          ((o = B.createElement(kr, {
+                            promotionName: d,
+                            eventModel: s,
+                            bIsPreview: u,
+                            language: c,
+                            activeTab: r,
                             bShowDemoOptions: e.show_as_demos
                           })),
-                          (m = !0));
+                          (h = !0));
                         break;
                       case "event_description":
-                        r = B.createElement(
+                        o = B.createElement(
                           _r,
-                          Object(M.a)({ section: e }, i.props)
+                          Object(M.a)({ section: e }, l.props)
                         );
                         break;
                       case "doors":
-                        r = B.createElement(Mn, {
-                          strFontFamily: Ir(l.jsondata.sale_font, s)
+                        o = B.createElement(Mn, {
+                          strFontFamily: Ir(s.jsondata.sale_font, c)
                         });
                         break;
                       case "text_section":
-                        r = B.createElement(
+                        o = B.createElement(
                           br,
-                          Object(M.a)({ section: e }, i.props)
+                          Object(M.a)({ section: e }, l.props)
                         );
                         break;
                       case "tabs":
-                        var o = u.get(e);
-                        h.push({ activeTab: o, elements: [] }),
-                          (r = B.createElement(
+                        var i = p.get(e);
+                        _.push({ activeTab: i, elements: [] }),
+                          (o = B.createElement(
                             ir,
-                            Object(M.a)({ section: e }, i.props, {
-                              activeTab: o.GetTab(),
-                              onTabSelected: i.OnTabSelected
+                            Object(M.a)({ section: e }, l.props, {
+                              activeTab: i.GetTab(),
+                              onTabSelected: l.OnTabSelected
                             })
                           ));
                         break;
                       case "curator":
                         e.curator_clan_id &&
-                          (r = B.createElement(
+                          (o = B.createElement(
                             "div",
                             {
                               style: {
@@ -14849,32 +14846,32 @@
                         if (e.internal_section_data)
                           switch (e.internal_section_data.internal_type) {
                             case "subscription_pricing":
-                              r = B.createElement(
+                              o = B.createElement(
                                 tr,
-                                Object(M.a)({ section: e }, i.props)
+                                Object(M.a)({ section: e }, l.props)
                               );
                               break;
                             case "event_schedule":
-                              r = B.createElement(
+                              o = B.createElement(
                                 qn.b,
-                                Object(M.a)({ section: e }, i.props, {
-                                  activeTab: a
+                                Object(M.a)({ section: e }, l.props, {
+                                  activeTab: r
                                 })
                               );
                               break;
                             case "tab_contents":
-                              r = B.createElement(
+                              o = B.createElement(
                                 or,
-                                Object(M.a)({ section: e }, i.props, {
+                                Object(M.a)({ section: e }, l.props, {
                                   tab: a.GetTab(),
                                   showReferences: !1
                                 })
                               );
                               break;
                             case "tab_references":
-                              r = B.createElement(
+                              o = B.createElement(
                                 or,
-                                Object(M.a)({ section: e }, i.props, {
+                                Object(M.a)({ section: e }, l.props, {
                                   tab: a.GetTab(),
                                   showReferences: !0
                                 })
@@ -14882,21 +14879,21 @@
                           }
                         break;
                       case "sale_item_browser":
-                        r = B.createElement(
+                        o = B.createElement(
                           gr,
-                          Object(M.a)({ section: e }, i.props, { activeTab: a })
+                          Object(M.a)({ section: e }, l.props, { activeTab: r })
                         );
                     }
-                  h[h.length - 1].elements.push(
+                  _[_.length - 1].elements.push(
                     B.createElement(
                       b.a,
                       { key: "SaleSectionIndex_" + e.unique_id + "_" + t },
-                      r
+                      o
                     )
                   );
                 }
               });
-              var t = h.map(function(e, t) {
+              var t = _.map(function(e, t) {
                 return B.createElement(
                   "div",
                   {
@@ -15724,7 +15721,9 @@
                               B.createElement(bn, {
                                 event: t,
                                 openNewWindow: !0,
-                                appInfo: Xe.a.GetAppLinkInfo(t.appid),
+                                appInfo: r.hide_prices
+                                  ? void 0
+                                  : Xe.a.GetAppLinkInfo(t.appid),
                                 onClick: function(e) {
                                   x.a.Get().RecordEventRead(t, 8),
                                     Object(Oa.a)(t, P.o(e)),
@@ -16026,9 +16025,18 @@
               case "tag_recommender":
                 return "#Sale_default_label_RecommendedForYou";
             }
+          else if ("curator" === e.section_type) {
+            if (e.curator_clan_id) {
+              var t = L.a.InitFromClanID(e.curator_clan_id),
+                a = X.a.GetCreatorHome(t);
+              if (a)
+                return Object(H.d)("#Sale_CuratorSection_Name", a.GetName());
+            }
+            return "#Sale_CuratorSection";
+          }
           return null;
         })(e);
-        if (r) return Object(H.d)(r);
+        if (r) return r.startsWith("#") ? Object(H.d)(r) : r;
         var o =
             e.localized_label[t] ||
             e.localized_label[0] ||

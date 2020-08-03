@@ -5029,6 +5029,7 @@
                   h &&
                   h.full_game_appid &&
                   w.a.GetAppLinkInfo(h.full_game_appid),
+                S = null,
                 S =
                   o && h
                     ? T.createElement(me, { appid: h.appid, bIsMuted: u })
@@ -5051,7 +5052,10 @@
                           T.createElement(
                             "span",
                             { className: te.a.BottomBarPriceInfo },
-                            T.createElement(ce, { info: h, bShowInLibrary: g })
+                            T.createElement(ce, {
+                              info: h || l,
+                              bShowInLibrary: g
+                            })
                           )
                       ),
                 z = T.createElement(
@@ -21508,7 +21512,7 @@
                         (t &&
                           t.data &&
                           t.data.filtered &&
-                          t.data.filtered.length) ||
+                          0 < t.data.filtered.length) ||
                           !this.m_settings.bIsPreview ||
                           ((t.data = {
                             filtered: [{}],
@@ -21545,18 +21549,24 @@
                     if (this.m_bHasStartedVideo) return [2, null];
                     (t = new Set()), (e.label = 1);
                   case 1:
-                    return ((n = a.filter(function(e) {
-                      return !t.has(e);
-                    })),
-                    (o = r.GetAutoStartStream(n)))
-                      ? this.m_bUseFakeData
-                        ? (this.m_playReadyStream ||
-                            (this.m_playReadyStream = o),
-                          [2, this.m_playReadyStream])
-                        : [3, 2]
-                      : [2, null];
+                    return this.m_bUseFakeData
+                      ? (this.m_playReadyStream ||
+                          (this.m_playReadyStream = {
+                            accountid: 0,
+                            appid: 7,
+                            thumbnail_http_address: ""
+                          }),
+                        [2, this.m_playReadyStream])
+                      : [3, 2];
                   case 2:
-                    return [4, this.AttemptToPlayStream(o)];
+                    return (
+                      (n = a.filter(function(e) {
+                        return !t.has(e);
+                      })),
+                      (o = r.GetAutoStartStream(n))
+                        ? [4, this.AttemptToPlayStream(o)]
+                        : [2, null]
+                    );
                   case 3:
                     if (e.sent()) return [2, o];
                     t.add(o), (e.label = 4);
