@@ -368,21 +368,15 @@ function MapTypeToText( type )
 	}
 }
 
-admin.CreateDiv = function CreateDiv( parent, template, id, value, bText = false ) {
+admin.CreateDiv = function CreateDiv( parent, template, id, value )
+{
 	var divElement = document.createElement( 'div' );
 	divElement.id = id;
 	divElement.style.styleFloat = 'left';							// Another cross-browser compatibility issue
 	divElement.style.cssFloat = 'left';
 	divElement.style.width = $( template ).style.width;				// Copy from the header for the moment
-	if ( bText )
-	{
-		divElement.innerText = value;
-	}
-	else
-	{
-		divElement.innerHTML = value;									// Let's avoid innerText, and use innerHTML instead,
+	divElement.innerHTML = value;									// Let's avoid innerText, and use innerHTML instead,
 																	// it works cross-browser and will keep the <br/> tags
-	}
 	divElement.position = 'relative';
 	parent.appendChild( divElement );
 	return divElement;
@@ -608,7 +602,7 @@ function DisplayAllApps( response, resultsElement )
 		var appIdDiv = admin.CreateDiv( applicationElement, 'appIdHeader', 'appId', appIdText );
 		appIdDiv.style.color = color;
 
-		var appIdNameDiv = admin.CreateDiv( applicationElement, 'appNameHeader', 'appName', thisApp.name, true );
+		var appIdNameDiv = admin.CreateDiv( applicationElement, 'appNameHeader', 'appName', thisApp.name );
 		appIdNameDiv.style.color = color;
 
 		var partnerNameDiv = admin.CreateDiv( applicationElement, 'partnerNameHeader', 'partnerName', GetPartnerNameText( thisApp ) );

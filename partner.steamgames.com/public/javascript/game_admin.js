@@ -201,10 +201,6 @@ function InitImageTypes( type )
 		{ name: 'Background', width: 1438, height: 0, path: 'asset|page_bg.jpg|assets|page_background', localized: false },
 		{ name: 'Screenshot', width: 0, height: 0, path: 'screenshot|assets|screenshots|', localized: false },
 		{ name: 'ScreenshotLocalized', width: 0, height: 0, path: 'screenshot_localized|assets|screenshots|', localized: true, hidden: true },
-
-		{ name: 'Library Hero', width: 1920, height: 620, path: 'library_hero|library_hero|assets|library_hero|image', localized: true, overrideable: false, supports2x: true },
-		{ name: 'Library Capsule', width: 600, height: 900, path: 'library_capsule|library_600x900|assets|library_capsule|image', localized: true, overrideable: false, supports2x: true },
-		{ name: 'Library Logo', width: 0, height: 0, path: 'library_logo|logo|assets|library_logo|image', localized: true, overrideable: false, supports2x: true },
 	];
 }
 
