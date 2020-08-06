@@ -11602,20 +11602,18 @@
         return o;
       }),
         n.d(t, "b", function() {
-          return r;
+          return l;
         }),
         n.d(t, "a", function() {
-          return h;
+          return f;
         });
       var o,
         a,
-        r,
-        i,
-        c = n("mrSG"),
-        s = n("2vnA"),
-        p = n("O0NR"),
-        l = n("5bld"),
-        u = n("5izx");
+        r = n("mrSG"),
+        i = n("2vnA"),
+        c = n("O0NR"),
+        s = n("5bld"),
+        p = n("5izx");
       ((a = o = o || {}).k_ERecent = "recent"),
         (a.k_ELibrary = "library"),
         (a.k_EWishist = "wishlist"),
@@ -11623,29 +11621,48 @@
         (a.k_ERecommended = "recommended"),
         (a.k_ESteam = "steam"),
         (a.k_EFeatured = "featured"),
-        (a.k_ECurator = "curator"),
-        ((i = r = r || {}).k_ENews = "news"),
-        (i.k_EEvents = "events"),
-        (i.k_EStreaming = "streaming"),
-        (i.k_EUpdates = "updates"),
-        (i.k_EReleases = "releases"),
-        (i.k_ESales = "sales");
-      var d = new Map([
-        [r.k_ENews, [28]],
-        [r.k_EEvents, [9, 27, 22, 23, 24, 35, 25, 26]],
-        [r.k_EStreaming, [11]],
-        [r.k_EUpdates, [12, 13, 14]],
-        [r.k_EReleases, [10, 29, 16, 15, 32]],
-        [r.k_ESales, [20, 21, 31, 34]]
-      ]);
-      function m(e) {
+        (a.k_ECurator = "curator");
+      var l,
+        u,
+        d = [
+          o.k_ELibrary,
+          o.k_EWishist,
+          o.k_EFollowing,
+          o.k_ERecommended,
+          o.k_ESteam,
+          o.k_ECurator
+        ],
+        m = [o.k_EFeatured];
+      ((u = l = l || {}).k_ENews = "news"),
+        (u.k_EEvents = "events"),
+        (u.k_EStreaming = "streaming"),
+        (u.k_EUpdates = "updates"),
+        (u.k_EReleases = "releases"),
+        (u.k_ESales = "sales");
+      var h = [
+          l.k_ENews,
+          l.k_EEvents,
+          l.k_EStreaming,
+          l.k_EUpdates,
+          l.k_EReleases,
+          l.k_ESales
+        ],
+        b = new Map([
+          [l.k_ENews, [28]],
+          [l.k_EEvents, [9, 27, 22, 23, 24, 35, 25, 26]],
+          [l.k_EStreaming, [11]],
+          [l.k_EUpdates, [12, 13, 14]],
+          [l.k_EReleases, [10, 29, 16, 15, 32]],
+          [l.k_ESales, [20, 21, 31, 34]]
+        ]);
+      function M(e) {
         return new Map(
           e.map(function(e) {
             return [e, !0];
           })
         );
       }
-      var h = (function() {
+      var f = (function() {
         function e() {
           (this.m_mapEventTypeGroupsAllowed = new Map()),
             (this.m_mapGameSources = new Map()),
@@ -11675,7 +11692,7 @@
                 e++
               ) {
                 var o = n[e];
-                d.get(o).forEach(function(e) {
+                b.get(o).forEach(function(e) {
                   return t.add(e);
                 });
               }
@@ -11687,50 +11704,32 @@
           (e.prototype.MapClanEventTypeToGroup = function(n) {
             var o = null;
             return (
-              d.forEach(function(e, t) {
+              b.forEach(function(e, t) {
                 -1 !== e.indexOf(n) && (o = t);
               }),
-              o || r.k_EEvents
+              o || l.k_EEvents
             );
           }),
-          (e.prototype.InitDefaultCheckboxes = function(e) {
-            (this.m_mapEventTypeGroupsAllowed = m([
-              r.k_ENews,
-              r.k_EEvents,
-              r.k_EStreaming,
-              r.k_EUpdates,
-              r.k_EReleases,
-              r.k_ESales
-            ])),
-              (this.m_mapGameSources = m(
-                e
-                  ? [
-                      o.k_ELibrary,
-                      o.k_EWishist,
-                      o.k_EFollowing,
-                      o.k_ERecommended,
-                      o.k_ESteam,
-                      o.k_ECurator
-                    ]
-                  : [o.k_EFeatured]
-              ));
+          (e.prototype.InitDefaultCheckboxes = function(e, t) {
+            (this.m_mapEventTypeGroupsAllowed = M(t ? [l.k_EUpdates] : h)),
+              (this.m_mapGameSources = M(e ? d : m));
           }),
-          (e.prototype.Init = function(e, t, n) {
-            (this.m_eStorageType = n), (this.m_strStorageKey = t);
-            var o = this.GetStorageObject(),
-              a = o ? o.getItem(this.GetPreferencesStorageKey()) : null;
-            if (a) {
-              var r = JSON.parse(a);
-              if (r.rgEventTypeGroupsAllowed && r.rgGameSources) {
-                var i = r.rgEventTypeGroupsAllowed,
-                  c = r.rgGameSources;
+          (e.prototype.Init = function(e, t, n, o) {
+            (this.m_eStorageType = o), (this.m_strStorageKey = n);
+            var a = this.GetStorageObject(),
+              r = a ? a.getItem(this.GetPreferencesStorageKey()) : null;
+            if (r) {
+              var i = JSON.parse(r);
+              if (i.rgEventTypeGroupsAllowed && i.rgGameSources) {
+                var c = i.rgEventTypeGroupsAllowed,
+                  s = i.rgGameSources;
                 return (
-                  (this.m_mapEventTypeGroupsAllowed = m(i)),
-                  void (this.m_mapGameSources = m(c))
+                  (this.m_mapEventTypeGroupsAllowed = M(c)),
+                  void (this.m_mapGameSources = M(s))
                 );
               }
             }
-            this.InitDefaultCheckboxes(e);
+            this.InitDefaultCheckboxes(e, t);
           }),
           (e.prototype.SaveFilterPreferences = function() {
             var e,
@@ -11755,7 +11754,7 @@
               ? this.m_mapEventTypeGroupsAllowed.set(e, !0)
               : this.m_mapEventTypeGroupsAllowed.delete(e),
               this.SaveFilterPreferences(),
-              p.b.RecordFilterChangeEvent(this);
+              c.b.RecordFilterChangeEvent(this);
           }),
           (e.prototype.EnforceMutuallyExclusiveSources = function(e, t, n) {
             this.BIsGameSourceAllowed(e) &&
@@ -11772,7 +11771,7 @@
                 ))
               : this.m_mapGameSources.delete(e),
               this.SaveFilterPreferences(),
-              p.b.RecordFilterChangeEvent(this);
+              c.b.RecordFilterChangeEvent(this);
           }),
           (e.prototype.BShouldDisplayEvent = function(e) {
             var t = e.GetSource(),
@@ -11780,27 +11779,27 @@
                 e.appInfo &&
                   e.appInfo.last_played &&
                   e.appInfo.last_played + 15552e3 >=
-                    u.a.GetTimeNowWithOverride()
+                    p.a.GetTimeNowWithOverride()
               );
             return (
               !!this.enabledEventTypeSet.has(e.event_type) &&
-              (!!(t & l.a.k_eRequired) ||
+              (!!(t & s.a.k_eRequired) ||
                 Boolean(
                   (this.m_mapGameSources.has(o.k_ERecent) && n) ||
                     (this.m_mapGameSources.has(o.k_ELibrary) &&
-                      t & l.a.k_eLibrary) ||
+                      t & s.a.k_eLibrary) ||
                     (this.m_mapGameSources.has(o.k_EWishist) &&
-                      t & l.a.k_eWishlist) ||
+                      t & s.a.k_eWishlist) ||
                     (this.m_mapGameSources.has(o.k_EFollowing) &&
-                      t & l.a.k_eFollowing) ||
+                      t & s.a.k_eFollowing) ||
                     (this.m_mapGameSources.has(o.k_ERecommended) &&
-                      t & l.a.k_eRecommended) ||
+                      t & s.a.k_eRecommended) ||
                     (this.m_mapGameSources.has(o.k_ESteam) &&
-                      t & l.a.k_eSteam) ||
+                      t & s.a.k_eSteam) ||
                     (this.m_mapGameSources.has(o.k_EFeatured) &&
-                      t & l.a.k_eFeatured) ||
+                      t & s.a.k_eFeatured) ||
                     (this.m_mapGameSources.has(o.k_ECurator) &&
-                      t & l.a.k_eCurator)
+                      t & s.a.k_eCurator)
                 ))
             );
           }),
@@ -11810,21 +11809,32 @@
               0 == this.m_mapGameSources.size
             );
           }),
-          Object(c.c)(
-            [s.y],
+          (e.prototype.BAreAnyEventsFiltered = function(e) {
+            var t = this;
+            return (
+              (e ? d : m).some(function(e) {
+                return !t.BIsGameSourceAllowed(e);
+              }) ||
+              h.some(function(e) {
+                return !t.BIsEventTypeGroupAllowed(e);
+              })
+            );
+          }),
+          Object(r.c)(
+            [i.y],
             e.prototype,
             "m_mapEventTypeGroupsAllowed",
             void 0
           ),
-          Object(c.c)([s.y], e.prototype, "m_mapGameSources", void 0),
-          Object(c.c)(
-            [Object(s.k)({ keepAlive: !0, equals: s.j.structural })],
+          Object(r.c)([i.y], e.prototype, "m_mapGameSources", void 0),
+          Object(r.c)(
+            [Object(i.k)({ keepAlive: !0, equals: i.j.structural })],
             e.prototype,
             "enabledEventTypeSet",
             null
           ),
-          Object(c.c)([s.h], e.prototype, "SetEventTypeGroupAllowed", null),
-          Object(c.c)([s.h], e.prototype, "SetGameSourceAllowed", null),
+          Object(r.c)([i.h], e.prototype, "SetEventTypeGroupAllowed", null),
+          Object(r.c)([i.h], e.prototype, "SetGameSourceAllowed", null),
           e
         );
       })();
