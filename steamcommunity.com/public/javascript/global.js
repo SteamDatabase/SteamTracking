@@ -439,7 +439,7 @@ function StandardCommunityBan( steamid, elemLink )
 function ReportProfile( steamID )
 {
 	var $Content = $J('<div class="group_invite_throbber"><img src="https://community.cloudflare.steamstatic.com/public/images/login/throbber.gif"></div>');
-	var $Modal = ShowDialog( 'Report Profile', $Content );
+	var $Modal = ShowDialog( null, $Content );
 	var sURL = 'https://steamcommunity.com/actions/ReportProfile/' + steamID;
 	$J.ajax( {
 		url: sURL,
@@ -984,7 +984,7 @@ function UGCAdultContentPreferencesMenu( elSource )
 
 function ApplyAdultContentPreferencesHelper( e, bGlobalHideAdultContentSex, bGlobalHideAdultContentViolence, bForce )
 {
-	if ( !bForce && ( e.data( 'processed_adult_content') || e.width() == 0 ) )
+	if ( !bForce && e.data( 'processed_adult_content') )
 	{
 		return;
 	}

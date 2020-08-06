@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6025491";
+var CLSTAMP = "6030071";
 !(function(e) {
   function t(t) {
     for (
@@ -1120,34 +1120,49 @@ var CLSTAMP = "6025491";
         s)
       );
     }
-    function m(e) {
-      var t = new Date(1e3 * e),
-        n = new Date();
-      if (t > n)
+    function m(e, t) {
+      var n = new Date(1e3 * e),
+        a = new Date(),
+        u = Object(r.a)({ bGranularFutureTime: !1 }, t);
+      if (n > a) {
+        if (!u.bGranularFutureTime)
+          return (
+            c.b(n.getTime() - a.getTime()),
+            n.getFullYear() == a.getFullYear() ? S(n) : O(n)
+          );
+        c.b(new Date().setHours(24, 0, 0, 0) - a.getTime());
+        var s = new Date();
         return (
-          c.b(t.getTime() - n.getTime()),
-          t.getFullYear() == n.getFullYear() ? S(t) : C(t)
+          s.setHours(0, 0, 0, 0),
+          s.setDate(s.getDate() + 1),
+          n < s
+            ? Object(i.d)("#Time_Today")
+            : (s.setDate(s.getDate() + 1),
+              n < s
+                ? Object(i.d)("#Time_Tomorrow")
+                : (s.setDate(s.getDate() + 5), n < s ? y(n) : I(n, !0)))
         );
-      c.b(new Date().setHours(24, 0, 0, 0) - n.getTime());
-      var r = new Date();
-      if ((r.setHours(0, 0, 0, 0), t >= r)) return Object(i.d)("#Time_Today");
-      if ((r.setDate(r.getDate() - 1), t >= r))
-        return Object(i.d)("#Time_Yesterday");
-      if ((r.setDate(r.getDate() - 5), t >= r))
-        return Object(i.d)("#TimeSince_ThisWeek");
-      var a = new Date(r);
-      if (
-        (r.setDate(r.getDate() - 21),
-        t >= r ||
-          (t.getMonth() == n.getMonth() && t.getFullYear() == n.getFullYear()))
-      ) {
-        var u =
-          Math.floor((a.valueOf() - t.valueOf()) / (1e3 * o.d.PerWeek)) + 1;
-        return 1 == u
-          ? Object(i.d)("#TimeSince_1Week")
-          : Object(i.d)("#TimeSince_XWeeks", u);
       }
-      return t.getFullYear() == n.getFullYear() ? S(t) : C(t);
+      c.b(new Date().setHours(24, 0, 0, 0) - a.getTime());
+      var l = new Date();
+      if ((l.setHours(0, 0, 0, 0), n >= l)) return Object(i.d)("#Time_Today");
+      if ((l.setDate(l.getDate() - 1), n >= l))
+        return Object(i.d)("#Time_Yesterday");
+      if ((l.setDate(l.getDate() - 5), n >= l))
+        return Object(i.d)("#TimeSince_ThisWeek");
+      var d = new Date(l);
+      if (
+        (l.setDate(l.getDate() - 21),
+        n >= l ||
+          (n.getMonth() == a.getMonth() && n.getFullYear() == a.getFullYear()))
+      ) {
+        var h =
+          Math.floor((d.valueOf() - n.valueOf()) / (1e3 * o.d.PerWeek)) + 1;
+        return 1 == h
+          ? Object(i.d)("#TimeSince_1Week")
+          : Object(i.d)("#TimeSince_XWeeks", h);
+      }
+      return n.getFullYear() == a.getFullYear() ? S(n) : O(n);
     }
     var _ = new Map(),
       v = new Map(),
@@ -1190,7 +1205,7 @@ var CLSTAMP = "6025491";
         t)
       );
     }
-    function C(e) {
+    function O(e) {
       var t = e.getMonth() + 12 * e.getFullYear(),
         n = b.get(t);
       return (
@@ -2056,8 +2071,8 @@ PERFORMANCE OF THIS SOFTWARE.
     }
     window.AssertMsg = u.a;
     var S,
-      C,
       O,
+      C,
       E = new c.a();
     function A(e) {
       var t;
@@ -2091,19 +2106,19 @@ PERFORMANCE OF THIS SOFTWARE.
       }),
       (window.LocalizationReady = function(e, t, n) {
         if ("english" !== t)
-          "friendsui" == e ? (S = n) : "shared" == e && (C = n);
-        else if ("shared" == e) O = n;
+          "friendsui" == e ? (S = n) : "shared" == e && (O = n);
+        else if ("shared" == e) C = n;
         else {
           var r = void 0,
             i = null,
             o = void 0,
             c = null;
           void 0 !== S ? ((r = S), (i = n)) : (r = n),
-            void 0 !== C ? ((o = C), (c = O)) : (o = O),
+            void 0 !== O ? ((o = O), (c = C)) : (o = C),
             a.c.InitFromObjects(r, i, o, c),
             (S = void 0),
-            (C = void 0),
-            (O = void 0);
+            (O = void 0),
+            (C = void 0);
         }
       });
   },

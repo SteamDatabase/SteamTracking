@@ -129,13 +129,13 @@ LocalizationReady("shared", "english", {
 
   EventCurator_BrowseDialog_Title: "News from Steam curators",
   EventCurator_BrowseDialog_Desc:
-    "Follow your favorite news sources to get gaming news right in your Steam News hub!",
+    "Follow your favorite Steam Curators to get gaming news right in your Steam News Hub!",
   EventCurator_BrowseDialog_LangCurator: "%1$s Steam curators",
   EventCurator_NoEventsFound_Title: "No Postings Found",
   EventCurator_NoEventsFound_Body: "No postings were found for this curator",
-  EventCurator_BrowseMore: "Show More",
+  EventCurator_BrowseMore: "Browse More Sources",
   EventCurator_FeedCaption_Long:
-    "Follow more news sources to get news right in your Steam News Hub!",
+    "Follow some of these Steam Curators to get gaming news right in your Steam News Hub!",
   EventCurator_DismissTitle: "Hide news suggestions",
   EventCurator_DismissBody:
     "This will hide news suggestions for this device. You can still find news by going to the Steam Curators tab in the news hub",
@@ -174,12 +174,19 @@ LocalizationReady("shared", "english", {
   EventCalendar_WatchYouTubeVideo: "Watch YouTube Video",
   EventCalendar_WatchLiveBroadcast: "Watch Live Broadcast",
 
+  EventCalendar_Collection_News_Title: "Discover News Sources",
+  EventCalendar_Collection_News_Subtitle:
+    "Browse the recent posts from Steam Curators below. Follow a curator to add their news and game recommendations to your Steam",
+
   SteamLabs: "Steam Labs",
   SteamLabs_ExperimentNumber: "Experiment %1$s",
   SteamLabs_DiscussionLink: "Discuss this experiment",
 
   EventCalendar_FutureEventsHint: "Scroll up to see what's coming next",
   EventCalendar_FutureEventsLink: "See all upcoming",
+  EventCalendar_LoadEventsProgress: "Loaded %1$s events through %2$s",
+  EventCalendar_LoadEventsFilters:
+    "You can adjust your options and filters to see more events on this page",
   EventCalendar_FutureEventsHeader: "Coming soon",
   EventCalendar_PastEventsLink: "See earlier posts",
   EventCalendar_LiveAndRecentEventsHeader: "Live and recent",
@@ -328,6 +335,7 @@ LocalizationReady("shared", "english", {
   EventCalendar_NewsChannel_Steam: "Steam Official",
   EventCalendar_NewsChannel_SteamSubtitle: "Steam Blog and News",
   EventCalendar_NewsChannel_All: "All News",
+  EventCalendar_NewsChannel_AllSales: "All Sales Events",
 
   EventDisplay_Admin_Title: "Admin tools:",
   EventDisplay_ViewInLibrary: "View in Library",
@@ -487,6 +495,7 @@ LocalizationReady("shared", "english", {
   Email_Wishlist_NewReleaseEA_Subject:
     "%1$s is now available in Early Access on Steam!",
   EventEmail_Button_ClickForMoreDetails: "Read More",
+  Event_Button_VisitSalePage: "Visit the Sales page",
   EventEmail_Button_PrepurchaseNow: "Prepurchase now!",
   EventEmail_Button_BuyNow: "Buy now!",
   EventEmail_Button_PlayNow: "Play Now!",
@@ -1083,6 +1092,21 @@ LocalizationReady("shared", "english", {
   Login_SignOut: "Sign out",
 
   Emoticon_Search: "Search Emoticons",
+  AddonPicker_RecentlyUsed: "Recently Used",
+  AddonPicker_RecentEmoticons: "Recent Emoticons",
+  AddonPicker_RecentStickers: "Recent Stickers",
+  AddonPicker_Emoticons: "Emoticons",
+  AddonPicker_AllEmoticons: "All Emoticons",
+  AddonPicker_Stickers: "Stickers",
+  AddonPicker_RoomEffects: "Room Effects",
+  AddonPicker_NoResults: "No Results",
+  AddonPicker_NoRecent: "You don't have any recently used %1$s",
+  AddonPicker_NoneOwned: "You don't have any %1$s",
+  AddonPicker_AcquireAtPointsShop: "You can acquire some in the %1$s",
+  AddonPicker_AcquireAtPointsShop_Link: "Points Shop",
+  AddonPicker_AcquireAtPointsShopOrMarket:
+    "You can acquire some in the %1$s or the on the %2$s",
+  AddonPicker_AcquireAtPointsShopOrMarket_Link: "Community Market",
   Chat_Settings_Error_ChatFileTooLarge: "%1$s is too large (10MB maximum).",
   Chat_Settings_Error_ChatFileTypeNotSupported:
     "Cannot upload %1$s.  Only jpg, png, gif, webm, mpg, and ogv file types are supported.",
