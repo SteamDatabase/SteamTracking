@@ -16026,7 +16026,7 @@
                   events: d,
                   language: n,
                   bCanShowSingleRowCapsules:
-                    v ||
+                    (v && 1 < p) ||
                     Lr(h).every(function(e) {
                       return 1 === e;
                     }),
