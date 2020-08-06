@@ -8275,4 +8275,8 @@ upgrade to Mac OS X version 10.7 or higher."
 "[english]steam_subnav_discovery_queue"	"Discovery Queue"
 "steam_subnav_points_shop"	"Věrnostní obchod"
 "[english]steam_subnav_points_shop"	"Points Shop"
+"SteamUI_JoinDialog_UpdatingAppInfo"	"Probíhá aktualizace konfigurace..."
+"[english]SteamUI_JoinDialog_UpdatingAppInfo"	"Updating configuration ..."
+"SteamUI_JoinDialog_UpdatingAppTicket"	"Probíhá aktualizace tiketu..."
+"[english]SteamUI_JoinDialog_UpdatingAppTicket"	"Updating ticket ..."
 }

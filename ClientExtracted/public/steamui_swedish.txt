@@ -4458,9 +4458,9 @@ Make a new Friend on Steam by emailing a gift to someone you know."
 "[english]SteamUI_GameRequires_NTFS_Detail"	"The game you are installing requires a drive with the NTFS file system and\ncannot be installed on a FAT32 filesystem. For more information see the\nsupport article linked below."
 "SteamUI_NTFS_Required_SupportArticle"	"Supportartikel om filsystem"
 "[english]SteamUI_NTFS_Required_SupportArticle"	"Filesystem Support Article"
-"SteamUI_OSXAccessibilityTitle"	"Steam – Åtkomst till spelövertoningen"
+"SteamUI_OSXAccessibilityTitle"	"Steam – Åtkomst till spelöverlägget"
 "[english]SteamUI_OSXAccessibilityTitle"	"Steam - Game Overlay Access"
-"SteamUI_OSXAccessibilityText"	"För att du ska kunna visa Steams spelövertoning måste du markera \"Aktivera åtkomst för assisterande enheter”
+"SteamUI_OSXAccessibilityText"	"För att du ska kunna visa Steams spelöverlägg måste du markera \"Aktivera åtkomst för assisterande enheter”
 i inställningspanelen Hjälpmedel."
 "[english]SteamUI_OSXAccessibilityText"	"The in-game Steam overlay requires access for assistive devices to be enabled.
 
@@ -4625,7 +4625,7 @@ To enable access to the in-game overlay, open the Universal Access preference pa
 "[english]steam_newscontinued"	"Read More"
 "steam_NonSteam"	"Icke-Steam-modd eller -genväg"
 "[english]steam_NonSteam"	"Non-Steam Mod or Shortcut"
-"steam_NonSteamMessage"	"Vissa detaljer om %gamename% är inte tillgängliga eftersom det är en modd eller genväg som inte är från Steam. Steam kan ändå starta spelet, och i de flesta fall är även spelövertoningen tillgänglig."
+"steam_NonSteamMessage"	"Vissa detaljer om %gamename% är inte tillgängliga eftersom det är en modd eller genväg som inte är från Steam. Steam kan ändå starta spelet, och i de flesta fall är även spelöverlägget tillgängligt."
 "[english]steam_NonSteamMessage"	"Some detailed information on %gamename% is unavailable because it is a non-Steam mod or shortcut.  Steam will still manage launching the game for you and in most cases the in-game overlay will be available."
 "steam_welcomemessage_basic"	"%welcome_action%"
 "[english]steam_welcomemessage_basic"	"%welcome_action%"
@@ -6109,9 +6109,9 @@ Set a category for this game to help you find it quickly and organize your Libra
 "[english]Steam_GamesDialog_RightClick_AddToUnblockedGames"	"Add to Family Games"
 "Steam_GamesDialog_RightClick_RemoveFromUnblockedGames"	"Ta bort från Familjespel"
 "[english]Steam_GamesDialog_RightClick_RemoveFromUnblockedGames"	"Remove from Family Games"
-"SteamUI_OSXAccessibilityText109"	"Steams spelövertoning kräver tillgång för assisterande enheter är aktiverat.
+"SteamUI_OSXAccessibilityText109"	"Steams spelöverlägg kräver att tillgång för assisterande enheter är aktiverat.
 
-För att aktivera spelövertoningen öppnar du Säkerhet och integritet > Integritetspanelen, väljer Tillgänglighet i vänstra listan och väljer att tillåta tillgång för Steam."
+För att aktivera spelöverlägget öppnar du Säkerhet och integritet > Integritetspanelen, väljer Tillgänglighet i vänstra listan och väljer att tillåta tillgång för Steam."
 "[english]SteamUI_OSXAccessibilityText109"	"The in-game Steam overlay requires access for assistive devices to be enabled.
 
 To enable access to the in-game overlay, open the Security and Privacy > Privacy preference pane, select Accessibility from the left list and allow access for Steam."
@@ -7549,7 +7549,7 @@ upgrade to Mac OS X version 10.7 or higher."
 "[english]SteamUI_ActivateProduct_ViewSupportMessage"	"View active alerts from Steam Support"
 "Steam_LaunchOption_othervr"	"Starta %game% i Oculus VR-läge"
 "[english]Steam_LaunchOption_othervr"	"Launch %game% in Oculus VR Mode"
-"Steam_LaunchOption_openvroverlay"	"Starta %game% som Steam VR-övertoning"
+"Steam_LaunchOption_openvroverlay"	"Starta %game% som Steam VR-överlägg"
 "[english]Steam_LaunchOption_openvroverlay"	"Launch %game% as Steam VR Overlay"
 "SteamUI_UpdateControllerFirmware_Required_Title"	"Ny kontrollprogramvara tillgänglig"
 "[english]SteamUI_UpdateControllerFirmware_Required_Title"	"New Controller Firmware Available"
@@ -8281,4 +8281,8 @@ upgrade to Mac OS X version 10.7 or higher."
 "[english]steam_subnav_discovery_queue"	"Discovery Queue"
 "steam_subnav_points_shop"	"Poängbutiken"
 "[english]steam_subnav_points_shop"	"Points Shop"
+"SteamUI_JoinDialog_UpdatingAppInfo"	"Uppdaterar konfigurationen ..."
+"[english]SteamUI_JoinDialog_UpdatingAppInfo"	"Updating configuration ..."
+"SteamUI_JoinDialog_UpdatingAppTicket"	"Uppdaterar app ticket ..."
+"[english]SteamUI_JoinDialog_UpdatingAppTicket"	"Updating ticket ..."
 }

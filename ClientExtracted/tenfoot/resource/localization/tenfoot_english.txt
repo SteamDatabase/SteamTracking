@@ -2077,6 +2077,8 @@
 	"Library_Details_SourceMode_RadialMenu_Title"		"RADIAL MENU"
 	"Library_Details_SourceMode_SingleButton_Title"		"SINGLE BUTTON"
 	"Library_Details_SourceMode_FlickStick_Title"		"FLICK STICK"
+	"Library_Details_SourceMode_FlickStick_Acton_Title"	"FS: {s:action}"
+	"Library_Details_SourceMode_Mouse_Joystick_Acton_Title"	"JM: {s:action}"
 
 	"Library_Details_Source_Title_none"			"UNASSIGNED"
 	"Library_Details_Source_Title_left_trackpad"		"L Pad"
