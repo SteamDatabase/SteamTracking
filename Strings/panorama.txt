@@ -5047,8 +5047,8 @@ linux
 Linux;tenfoot
 X-ValveUserAgent
 panorama %s %s
-Aug  5 2020
-18:03:16
+Aug  6 2020
+15:08:14
 X-SteamClientVersion
 Assertion Failed: hostName
 Assertion Failed: pchRemoteHost
