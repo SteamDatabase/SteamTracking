@@ -1477,7 +1477,7 @@
                       name: "link_url",
                       id: "link_url",
                       value: this.state.strRssURL,
-                      label: Object(Q.d)("#CuratorAdmin_RSSFeed_english"),
+                      label: Object(Q.d)("#CuratorAdmin_RSSFeed"),
                       placeholder: Object(Q.d)(
                         "#CuratorAdmin_RSSFeed_placeholder"
                       ),

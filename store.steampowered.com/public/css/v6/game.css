@@ -1037,6 +1037,21 @@ background: -webkit-linear-gradient( 30deg, rgba(117, 176, 34, 0.7) 5%,rgba(88, 
 	color: #7cb8e4;
 }
 
+.game_purchase_masterdiscount_description {
+	color: #8f98a0;
+}
+
+.game_purchase_masterdiscount_description b {
+	font-weight: normal;
+	color: #8bc53f;
+}
+
+.game_purchase_masterdiscount_description a {
+	text-decoration: underline;
+	font-weight: normal;
+	color: #acb5be;
+}
+
 .game_area_purchase_not_refundable,
 .game_area_purchase_custom_cart_credit  {
 	height: 26px;

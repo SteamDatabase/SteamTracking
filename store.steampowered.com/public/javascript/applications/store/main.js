@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6031488";
+var CLSTAMP = "6037452";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [38],
   {
@@ -129,11 +129,11 @@ var CLSTAMP = "6031488";
                       },
                       NewsHubCollection: function(e, t) {
                         return (
-                          "/(news|newshub|events)/(collection|sale)/" +
-                          e +
-                          "/" +
-                          t
+                          "/(news|newshub|events)/collection/" + e + "/" + t
                         );
+                      },
+                      NewsHubSale: function(e, t) {
+                        return "/(news|newshub|events)/sale/" + e + "/" + t;
                       },
                       EventViewByApp: function(e, t, n) {
                         return (
@@ -423,10 +423,10 @@ var CLSTAMP = "6031488";
           return I;
         }),
         n.d(t, "S", function() {
-          return R;
+          return k;
         }),
         n.d(t, "Z", function() {
-          return k;
+          return R;
         }),
         n.d(t, "g", function() {
           return N;
@@ -1613,7 +1613,7 @@ var CLSTAMP = "6031488";
           })
         );
       }
-      function R(e) {
+      function k(e) {
         var t = Object(s.a)(
           "SVGIcon_Button",
           "SVGIcon_SteamLogo",
@@ -1647,7 +1647,7 @@ var CLSTAMP = "6031488";
           })
         );
       }
-      function k() {
+      function R() {
         return i.createElement(
           "svg",
           {
@@ -2832,23 +2832,20 @@ var CLSTAMP = "6031488";
     },
     CdLH: function(e, t, n) {
       "use strict";
-      n.d(t, "e", function() {
+      n.d(t, "d", function() {
         return r;
       }),
-        n.d(t, "b", function() {
+        n.d(t, "a", function() {
           return i;
         }),
-        n.d(t, "c", function() {
+        n.d(t, "b", function() {
           return o;
         }),
-        n.d(t, "d", function() {
+        n.d(t, "c", function() {
           return a;
         }),
-        n.d(t, "f", function() {
+        n.d(t, "e", function() {
           return s;
-        }),
-        n.d(t, "a", function() {
-          return c;
         });
       var r = {
         PerYear: 31536e3,
@@ -2875,9 +2872,6 @@ var CLSTAMP = "6031488";
         return new Promise(function(e) {
           return setTimeout(e, t);
         });
-      }
-      function c() {
-        return Math.floor(Date.now() / 1e3);
       }
     },
     D4wO: function(e, t, n) {
@@ -6934,7 +6928,7 @@ var CLSTAMP = "6031488";
             r
           );
         })(c),
-        R = (function(n) {
+        k = (function(n) {
           function r(e) {
             void 0 === e && (e = null);
             var t = n.call(this) || this;
@@ -6970,7 +6964,7 @@ var CLSTAMP = "6031488";
             r
           );
         })(c),
-        k = (function(n) {
+        R = (function(n) {
           function r(e) {
             void 0 === e && (e = null);
             var t = n.call(this) || this;
@@ -7411,7 +7405,7 @@ var CLSTAMP = "6031488";
           });
         }),
         (l.PartnerEventsShowMoreForApp = function(e, t) {
-          return e.SendMsg("Community.PartnerEventsShowMoreForApp#1", t, k, {
+          return e.SendMsg("Community.PartnerEventsShowMoreForApp#1", t, R, {
             ePrivilege: 1
           });
         }),
@@ -7440,7 +7434,7 @@ var CLSTAMP = "6031488";
           return e.SendMsg(
             "Community.ClearSinglePartnerEventsAppPriority#1",
             t,
-            R,
+            k,
             { ePrivilege: 1 }
           );
         });
@@ -7487,10 +7481,10 @@ var CLSTAMP = "6031488";
           return x;
         }),
         n.d(t, "j", function() {
-          return R;
+          return k;
         }),
         n.d(t, "g", function() {
-          return k.a;
+          return R.a;
         });
       function r(e) {
         var t = e.value,
@@ -7872,7 +7866,7 @@ var CLSTAMP = "6031488";
       }
       var L = n("hJxo"),
         I = n("r64O"),
-        R = (function(n) {
+        k = (function(n) {
           function e(e) {
             var t = n.call(this, e) || this;
             return (
@@ -8166,7 +8160,7 @@ var CLSTAMP = "6031488";
             e
           );
         })(f.PureComponent),
-        k = (f.Component, n("ZApo")),
+        R = (f.Component, n("ZApo")),
         N = n("2vnA"),
         F = n("sUmc"),
         T = n("Kw0F"),
@@ -10565,7 +10559,11 @@ var CLSTAMP = "6031488";
       var S,
         M,
         j = l.createContext(null);
-      ((M = S = S || {}).Lazy = "lazy"), (M.Strict = "strict");
+      ((M = S = S || {}).Lazy = "lazy"),
+        (M.Start = "start"),
+        (M.Center = "center"),
+        (M.End = "end"),
+        (M.Nearest = "nearest");
       var B = (function(t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
@@ -10773,7 +10771,7 @@ var CLSTAMP = "6031488";
       }
       var ie,
         I,
-        R = (function() {
+        k = (function() {
           function e() {}
           return (
             (e.Attributes = function(e, t) {
@@ -10802,7 +10800,7 @@ var CLSTAMP = "6031488";
             e
           );
         })(),
-        k = (function(e) {
+        R = (function(e) {
           function n() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -10822,14 +10820,13 @@ var CLSTAMP = "6031488";
                 C(this.props.htmlElementRef, e);
             }),
             (n.prototype.assembleAttributes = function(e) {
-              e.navStop,
-                e.preferredNavStop,
-                e.tabStop,
-                e.navClick,
-                e.navScrollX,
-                e.navScrollY;
+              e.navStop, e.preferredNavStop, e.tabStop, e.navClick;
               var t = e.startFocused,
-                n = e.htmlElementRef,
+                n = (e.navScrollX,
+                e.navScrollY,
+                e.navScrollMarginX,
+                e.navScrollMarginY,
+                e.htmlElementRef),
                 r = e.className,
                 i = (e.children,
                 Object(c.f)(e, [
@@ -10837,9 +10834,11 @@ var CLSTAMP = "6031488";
                   "preferredNavStop",
                   "tabStop",
                   "navClick",
+                  "startFocused",
                   "navScrollX",
                   "navScrollY",
-                  "startFocused",
+                  "navScrollMarginX",
+                  "navScrollMarginY",
                   "htmlElementRef",
                   "className",
                   "children"
@@ -10849,13 +10848,13 @@ var CLSTAMP = "6031488";
                     Object(c.a)(
                       Object(c.a)(
                         {},
-                        R.Attributes(
+                        k.Attributes(
                           e,
                           this.context.GetFocusControllerDomIntegrator()
                         )
                       ),
                       {
-                        className: Object(u.a)(R.navStopClass, r),
+                        className: Object(u.a)(k.navStopClass, r),
                         ref:
                           t || this.NeedsComponentFromElement ? this.SetRef : n
                       }
@@ -10896,14 +10895,14 @@ var CLSTAMP = "6031488";
           return (
             Object(c.d)(e, r),
             ((i = e).GetEnterKeyLabel = function(e) {
-              var t = k.GetComponentFromElement(e);
+              var t = R.GetComponentFromElement(e);
               if (t && t instanceof i) {
                 var n = t.props.enterKeyLabel;
                 return "function" == typeof n ? n({}) : n;
               }
             }),
             (e.GetEnterKeyAction = function(e) {
-              var t = k.GetComponentFromElement(e);
+              var t = R.GetComponentFromElement(e);
               if (t && t instanceof i) return t.props.enterKeyAction;
             }),
             (e.prototype.NeedsComponentFromElement = function() {
@@ -10963,14 +10962,14 @@ var CLSTAMP = "6031488";
             Object(c.c)([w], e, "GetEnterKeyAction", null),
             (e = i = Object(c.c)([o.a], e))
           );
-        })(k),
+        })(R),
         P = (function(t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (e.m_elementType = "div"), e;
           }
           return Object(c.d)(e, t), (e = Object(c.c)([o.a], e));
-        })(k);
+        })(R);
       ((I = ie = ie || {}).Geometry = "Geometry"),
         (I.DomOrder = "DomOrder"),
         (I.ReverseDomOrder = "ReverseDomOrder");
@@ -11349,13 +11348,13 @@ var CLSTAMP = "6031488";
                       if (A < 0) continue;
                       var L = f[b],
                         I = D[b].min,
-                        R = D[b].max,
-                        k = L < I ? L - I : R < L ? L - R : 0;
-                      if (t) if (!X(_, { min: I, max: R })) continue;
+                        k = D[b].max,
+                        R = L < I ? L - I : k < L ? L - k : 0;
+                      if (t) if (!X(_, { min: I, max: k })) continue;
                       var N = { x: 0, y: 0 };
-                      (N[u] = D[u][v]), (N[b] = L + k);
+                      (N[u] = D[u][v]), (N[b] = L + R);
                       var F = K(f, N),
-                        B = (A * A + k * k) / Math.abs(F[u]);
+                        B = (A * A + R * R) / Math.abs(F[u]);
                     } else {
                       if (null == S) continue;
                       B = S;
@@ -11724,7 +11723,7 @@ var CLSTAMP = "6031488";
                 : { thisElement: n, doc: r, dn: i };
             }),
             (e.prototype.SetFocus = function(r, e) {
-              var t, n, i, o, a, s, c, l, u, p, m, f, d;
+              var t, n, i, o, a, s, c, l, u, p, m, v, d;
               r.ownerDocument.contains(r)
                 ? ((t = this.GetFocusController()),
                   r.getAttribute("data-nav") !== J.Click
@@ -11766,52 +11765,59 @@ var CLSTAMP = "6031488";
                       (m = l[2]),
                       s || p
                         ? (t.Focus(r, { preventScroll: !0 }),
-                          (f = r.ownerDocument.defaultView),
+                          (v = r.ownerDocument.defaultView),
                           (d = function(e, t, n, r) {
                             if (null != t)
                               for (
                                 var i = ne(t),
-                                  o = i[e].min - r,
-                                  a = i[e].max + r,
-                                  s = t.parentElement;
-                                null != s;
-                                s = s.parentElement
+                                  o = O(t),
+                                  a = i[e].min - r * o,
+                                  s = i[e].max + r * o,
+                                  c = t.parentElement;
+                                null != c;
+                                c = c.parentElement
                               ) {
-                                var c =
+                                var l =
                                   "x" === e
                                     ? [
-                                        s.scrollLeft,
-                                        s.scrollWidth,
-                                        s.clientWidth
+                                        c.scrollLeft,
+                                        c.scrollWidth,
+                                        c.clientWidth
                                       ]
                                     : [
-                                        s.scrollTop,
-                                        s.scrollHeight,
-                                        s.clientHeight
+                                        c.scrollTop,
+                                        c.scrollHeight,
+                                        c.clientHeight
                                       ];
-                                if (!(c[1] <= c[2])) {
-                                  var l = f.getComputedStyle(s),
-                                    u = "x" === e ? l.overflowX : l.overflowY;
-                                  if ("auto" === u || "scroll" === u) {
-                                    var p = ne(s);
+                                if (!(l[1] <= l[2])) {
+                                  var u = v.getComputedStyle(c),
+                                    p = "x" === e ? u.overflowX : u.overflowY;
+                                  if ("auto" === p || "scroll" === p) {
+                                    var m = ne(c);
                                     if (
                                       n === S.Lazy &&
-                                      p[e].min <= o &&
-                                      p[e].max >= a
+                                      m[e].min <= a &&
+                                      m[e].max >= s
                                     )
                                       return;
-                                    var m = {
-                                        min: o - p[e].min,
-                                        max: a - p[e].max
+                                    var d = {
+                                        min: a - m[e].min,
+                                        max: s - m[e].max
                                       },
-                                      d =
-                                        Math.abs(m.min) <= Math.abs(m.max)
-                                          ? "min"
-                                          : "max",
-                                      h = O(s);
+                                      h =
+                                        n === S.Start
+                                          ? 0
+                                          : n === S.Center
+                                          ? 0.5
+                                          : n !== S.End &&
+                                            Math.abs(d.min) <= Math.abs(d.max)
+                                          ? 0
+                                          : 1,
+                                      f = O(c),
+                                      b = ((1 - h) * d.min + h * d.max) / f;
                                     return void ("x" === e
-                                      ? (s.scrollLeft += m[d] / h)
-                                      : (s.scrollTop += m[d] / h));
+                                      ? (c.scrollLeft += b)
+                                      : (c.scrollTop += b));
                                   }
                                 }
                               }
@@ -11974,9 +11980,9 @@ var CLSTAMP = "6031488";
                   A++
                 ) {
                   var I,
-                    R = re((I = L[A])),
-                    k = ((S = K(B, R)), Math.sqrt(F(S, S)));
-                  k < D && ((D = k), (x = I));
+                    k = re((I = L[A])),
+                    R = ((S = K(B, k)), Math.sqrt(F(S, S)));
+                  R < D && ((D = R), (x = I));
                 }
                 if (x) return { htmlElement: x, pos: re(x) };
               }
@@ -12703,41 +12709,41 @@ var CLSTAMP = "6031488";
                   t
                 ),
           i = r.bExcludeAgo ? "#TimeInterval_" : "#TimeSince_";
-        if (e >= 2 * p.e.PerYear)
-          return Object(u.d)(i + "XYears", Math.floor(e / p.e.PerYear));
-        if (e >= p.e.PerYear)
-          return (e -= p.e.PerYear) >= 2 * p.e.PerMonth && !r.bForceSingleUnits
-            ? Object(u.d)(i + "1YearXMonths", Math.floor(e / p.e.PerMonth))
+        if (e >= 2 * p.d.PerYear)
+          return Object(u.d)(i + "XYears", Math.floor(e / p.d.PerYear));
+        if (e >= p.d.PerYear)
+          return (e -= p.d.PerYear) >= 2 * p.d.PerMonth && !r.bForceSingleUnits
+            ? Object(u.d)(i + "1YearXMonths", Math.floor(e / p.d.PerMonth))
             : Object(u.d)(i + "1Year");
-        if (e >= 2 * p.e.PerMonth)
-          return Object(u.d)(i + "XMonths", Math.floor(e / p.e.PerMonth));
-        if (e >= 2 * p.e.PerWeek)
-          return Object(u.d)(i + "XWeeks", Math.floor(e / p.e.PerWeek));
-        if (e >= p.e.PerWeek)
-          return Object(u.d)(i + "1Week", Math.floor(e / p.e.PerWeek));
-        if (e >= 2 * p.e.PerDay)
-          return Object(u.d)(i + "XDays", Math.floor(e / p.e.PerDay));
-        if (e >= p.e.PerDay)
-          return (e -= p.e.PerDay) >= 2 * p.e.PerHour && !r.bForceSingleUnits
-            ? Object(u.d)(i + "1DayXHours", Math.floor(e / p.e.PerHour))
+        if (e >= 2 * p.d.PerMonth)
+          return Object(u.d)(i + "XMonths", Math.floor(e / p.d.PerMonth));
+        if (e >= 2 * p.d.PerWeek)
+          return Object(u.d)(i + "XWeeks", Math.floor(e / p.d.PerWeek));
+        if (e >= p.d.PerWeek)
+          return Object(u.d)(i + "1Week", Math.floor(e / p.d.PerWeek));
+        if (e >= 2 * p.d.PerDay)
+          return Object(u.d)(i + "XDays", Math.floor(e / p.d.PerDay));
+        if (e >= p.d.PerDay)
+          return (e -= p.d.PerDay) >= 2 * p.d.PerHour && !r.bForceSingleUnits
+            ? Object(u.d)(i + "1DayXHours", Math.floor(e / p.d.PerHour))
             : Object(u.d)(i + "1Day");
-        if (e >= 2 * p.e.PerHour)
-          return Object(u.d)(i + "XHours", Math.floor(e / p.e.PerHour));
-        if (e >= p.e.PerHour)
-          return (e -= p.e.PerHour) >= 2 * p.e.PerMinute && !r.bForceSingleUnits
-            ? Object(u.d)(i + "1HourXMinutes", Math.floor(e / p.e.PerMinute))
+        if (e >= 2 * p.d.PerHour)
+          return Object(u.d)(i + "XHours", Math.floor(e / p.d.PerHour));
+        if (e >= p.d.PerHour)
+          return (e -= p.d.PerHour) >= 2 * p.d.PerMinute && !r.bForceSingleUnits
+            ? Object(u.d)(i + "1HourXMinutes", Math.floor(e / p.d.PerMinute))
             : Object(u.d)(i + "1Hour");
-        if (e >= 2 * p.e.PerMinute) {
-          var o = Math.floor(e / p.e.PerMinute),
-            a = e % p.e.PerMinute;
+        if (e >= 2 * p.d.PerMinute) {
+          var o = Math.floor(e / p.d.PerMinute),
+            a = e % p.d.PerMinute;
           return r.bHighGranularity && 0 != a
             ? 1 == a
               ? Object(u.d)(i + "XMinutes1Second", o)
               : Object(u.d)(i + "XMinutesXSeconds", o, a)
             : Object(u.d)(i + "XMinutes", o);
         }
-        if (e >= p.e.PerMinute) {
-          a = e % p.e.PerMinute;
+        if (e >= p.d.PerMinute) {
+          a = e % p.d.PerMinute;
           return r.bHighGranularity && 0 != a
             ? 1 == a
               ? Object(u.d)(i + "1Minute1Second")
@@ -12858,7 +12864,7 @@ var CLSTAMP = "6031488";
               n.getFullYear() == r.getFullYear()))
         ) {
           var c =
-            Math.floor((s.valueOf() - n.valueOf()) / (1e3 * p.e.PerWeek)) + 1;
+            Math.floor((s.valueOf() - n.valueOf()) / (1e3 * p.d.PerWeek)) + 1;
           return 1 == c
             ? Object(u.d)("#TimeSince_1Week")
             : Object(u.d)("#TimeSince_XWeeks", c);
@@ -13033,11 +13039,14 @@ var CLSTAMP = "6031488";
                 ? (void 0 === this.state.iSelectedOption ||
                     ((t = e.rgOptions[this.state.iSelectedOption]) &&
                       this.FindAndSetActiveOption(t.data)),
-                  this.state.bOpened &&
-                    (this.m_iMenuInstance.SetOnHideCallback(null),
-                    this.m_iMenuInstance.Hide(),
-                    (this.m_iMenuInstance = void 0),
-                    this.BuildMenu()))
+                  this.state.bOpened
+                    ? (this.m_iMenuInstance.SetOnHideCallback(null),
+                      this.m_iMenuInstance.Hide(),
+                      (this.m_iMenuInstance = void 0),
+                      this.BuildMenu())
+                    : this.m_iMenuInstance &&
+                      (this.m_iMenuInstance.SetOnHideCallback(null),
+                      (this.m_iMenuInstance = void 0)))
                 : e.selectedOption !== this.props.selectedOption &&
                   this.FindAndSetActiveOption(this.props.selectedOption);
             }),
@@ -13670,6 +13679,18 @@ var CLSTAMP = "6031488";
           }),
           s.a.createElement(g.b, {
             exact: !0,
+            path: d.b.NewsHubSale(":saleid", ":vanity?"),
+            render: function(e) {
+              return s.a.createElement(
+                A,
+                Object(l.a)({ key: e.match.params.saleid }, e, {
+                  filter_to_saleid: e.match.params.saleid
+                })
+              );
+            }
+          }),
+          s.a.createElement(g.b, {
+            exact: !0,
             path: d.b.NewsHub(),
             render: function(e) {
               return s.a.createElement(A, Object(l.a)({ key: "global" }, e));
@@ -13685,7 +13706,7 @@ var CLSTAMP = "6031488";
             path: d.b.EventGameFestivalDebug(),
             render: function(e) {
               return s.a.createElement(
-                R,
+                k,
                 Object(l.a)({}, e, {
                   clanAccountID: e.match.params.clanacountid,
                   clanEventGID: e.match.params.claneventgid
@@ -13717,8 +13738,8 @@ var CLSTAMP = "6031488";
         A = S("EventCalendar"),
         L = S("EventDetailView"),
         I = S("Events"),
-        R = S("EventSteamGameFestivalDebug"),
-        k = c("Hny+"),
+        k = S("EventSteamGameFestivalDebug"),
+        R = c("Hny+"),
         N = s.a.lazy(function() {
           return Promise.all([c.e(0), c.e(1), c.e(9)]).then(
             c.bind(null, "3WEt")
@@ -14013,7 +14034,7 @@ var CLSTAMP = "6031488";
                           exact: !0,
                           path: d.b.LabsSandbox(),
                           render: function(e) {
-                            return s.a.createElement(k.default, null);
+                            return s.a.createElement(R.default, null);
                           }
                         }),
                         !1,

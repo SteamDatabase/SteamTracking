@@ -43,8 +43,8 @@
                 a.a.createElement(
                   "div",
                   { className: c.a.Throbber },
-                  a.a.createElement(o.J, { className: c.a.base }),
-                  a.a.createElement(o.J, { className: c.a.blur })
+                  a.a.createElement(o.K, { className: c.a.base }),
+                  a.a.createElement(o.K, { className: c.a.blur })
                 )
               );
               return a.a.createElement(
@@ -1781,10 +1781,10 @@
         q = r("Dsqm"),
         Q = r("0OaU"),
         Y = r("6Y59");
-      function V(e) {
+      function K(e) {
         return Object(M.d)("#RewardsReaction_" + e);
       }
-      var K,
+      var V,
         J,
         $ = r("ZO3Q"),
         X = r("YyVH");
@@ -1798,21 +1798,21 @@
             l = 4 * (Math.random() - 0.5) * Math.PI * 20,
             u = Math.random() + 0.5,
             d = [Math.random() * i - i - 20, i + 20 + Math.random() * i * u],
-            m = u * (n <= 1e3 ? 1 : n / 1e3) * (t == K.Gold ? 2 : 1),
+            m = u * (n <= 1e3 ? 1 : n / 1e3) * (t == V.Gold ? 2 : 1),
             f = (Math.random() - 0.5) * n,
             b = (Math.random() - 0.5) * n,
             p = [b, f + b],
             y = (function(e) {
               switch (e) {
-                case K.Gold:
-                case K.LNY2020:
+                case V.Gold:
+                case V.LNY2020:
                   return "hsl(" + (51 + -16 * Math.random()) + ", 93%, 54%)";
                 default:
                   return "hsl(" + 360 * Math.random() + ", 100%, 40%)";
               }
             })(t),
             h =
-              t == K.LNY2020
+              t == V.LNY2020
                 ? "hue-rotate(" + (360 + Object(X.b)(-30, 10)) + "deg)"
                 : "";
           r.push({
@@ -1829,7 +1829,7 @@
         }
         return r;
       }
-      ((J = K = K || {})[(J.Default = 0)] = "Default"),
+      ((J = V = V || {})[(J.Default = 0)] = "Default"),
         (J[(J.Gold = 1)] = "Gold"),
         (J[(J.LNY2020 = 2)] = "LNY2020");
       function te(t, r) {
@@ -1844,7 +1844,7 @@
             return {
               rgParticleStyles: e.map(function(e) {
                 return (function(e, t) {
-                  K.Default;
+                  V.Default;
                   var a = e.rotationCoefficient,
                     o = e.rotationRatioY,
                     s = e.rotationRatioX,
@@ -1929,8 +1929,8 @@
           i,
           a,
           o = e.eType,
-          s = (K.Gold,
-          K.LNY2020,
+          s = (V.Gold,
+          V.LNY2020,
           (t = Object(B.useState)(null)),
           (r = t[0]),
           (n = t[1]),
@@ -1945,19 +1945,19 @@
           u = l.rgParticleStyles,
           d = l.rgStreamerStyles;
         switch (o) {
-          case K.Gold:
+          case V.Gold:
             a = u.map(function(e, t) {
               return m.a.createElement(oe, { key: t, style: e });
             });
             break;
-          case K.LNY2020:
+          case V.LNY2020:
             a = u.map(function(e, t) {
               return t % 2
                 ? m.a.createElement(ae, { key: t, style: e })
                 : m.a.createElement(se, { key: t, style: e });
             });
             break;
-          case K.Default:
+          case V.Default:
             a = u.map(function(e, t) {
               return m.a.createElement(ae, { key: t, style: e });
             });
@@ -2593,7 +2593,7 @@
                             B.createElement(
                               "span",
                               { className: C.AwardName },
-                              V(c)
+                              K(c)
                             )
                           )
                         ),
@@ -2725,7 +2725,7 @@
               return B.createElement(
                 R.a,
                 { className: C.GrantAwardModal, active: r, onDismiss: o },
-                u && B.createElement(re, { eType: K.Default }),
+                u && B.createElement(re, { eType: V.Default }),
                 g
               );
             }),
@@ -2782,7 +2782,7 @@
             B.createElement(
               "div",
               { className: C.Left },
-              B.createElement(Y.t, { className: C.BalanceIcon }),
+              B.createElement(Y.u, { className: C.BalanceIcon }),
               B.createElement(
                 "div",
                 { className: C.BalanceDetails },
@@ -2883,7 +2883,7 @@
                     bDisableAnimation: n
                   })
                 ),
-                B.createElement("div", { className: C.Label }, V(t)),
+                B.createElement("div", { className: C.Label }, K(t)),
                 B.createElement(
                   Ae,
                   { className: C.Points },
@@ -2907,7 +2907,7 @@
           return B.createElement(
             "span",
             Object(o.a)({}, n, { className: Object(H.a)(r, C.PointsAmount) }),
-            B.createElement(Y.t, { className: C.PointsAmountIcon }),
+            B.createElement(Y.u, { className: C.PointsAmountIcon }),
             t
           );
         };

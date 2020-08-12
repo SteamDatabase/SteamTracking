@@ -4597,7 +4597,7 @@
               this.m_vecCallbacks.push(e);
               return {
                 Unregister: function() {
-                  r.b(t.m_vecCallbacks, e);
+                  r.c(t.m_vecCallbacks, e);
                 }
               };
             }),

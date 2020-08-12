@@ -2210,12 +2210,6 @@ textarea {
 	border-color: #97c0e3;
 }
 
-.china_blacklisted	/* used on workshopItem's and workshopItemPreviewImageEnlargeableContainer's */
-{
-	border-color: #ffa500;
-	border-style: solid;
-}
-
 .fileRating
 {
 	margin-top: 5px;

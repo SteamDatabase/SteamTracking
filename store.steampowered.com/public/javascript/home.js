@@ -427,7 +427,7 @@ GHomepage = {
 
 
 		// Broadcast section goes on the end, as it decorates the storeitems with the live icon after the fact.
-		if( window.hasOwnProperty('GSteamBroadcasts')) {
+		if( window.hasOwnProperty('GSteamBroadcasts') && $J('#home_broadcast_scroll_target').length ) {
 			try {
 				new CScrollOffsetWatcher( '#home_broadcast_scroll_target', function() {
 					GSteamBroadcasts.Init( GHomepage.FilterItemsForDisplay, 0, 0, 0, GHomepage.nMaxBroadcasts, GHomepage.bAutoPlayingFeaturedBroadcast );

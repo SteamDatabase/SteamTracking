@@ -2978,6 +2978,11 @@ div .cdkey_request_details_row
 	padding: 5px 0px 0px 12px;
 }
 
+.publish_warning
+{
+	color: #fbb963;
+}
+
 #login_btn_signin {
 	white-space: nowrap;
 }
