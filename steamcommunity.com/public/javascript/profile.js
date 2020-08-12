@@ -727,3 +727,14 @@ function AddTradeOfferBanner( tradeOfferID, strCompletedBanner, bAccepted )
 	$TradeOffer.find( '.tradeoffer_items_rule').replaceWith( $Banner );
 }
 
+function UpdateProfileTextContentCheckResult( steamID, ban )
+{
+	var dialog = ShowConfirmDialog( 'Update Automated Text Content Check Result?', !ban ? 'Are you sure you want to reset the automated text content check result for this user\'s profile text?  This cannot be undone.' : 'Are you sure you want to mark this user\'s profile text containing harmful content? This cannot be undone.' );
+	dialog.done( function() {
+		$J.post( 'https://steamcommunity.com/moderation/ajaxupdateprofiletextcontentcheckresult/', { sessionid: g_sessionID, steamid: steamID, ban: ban ? 1 : 0 } )
+		.done( function( data ) {
+			top.location.reload();
+		} );
+	});
+}
+

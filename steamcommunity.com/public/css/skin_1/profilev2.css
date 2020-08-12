@@ -288,6 +288,29 @@ body.profile_page.flat_page #footer_spacer {
 	width: 268px;
 }
 
+.profile_text_content_check {
+	margin-bottom: 12px;
+	padding: 14px 11px;
+	margin-top: 4px;
+	background-color: rgba( 0, 0, 0, 0.2 );
+}
+.profile_text_content_check > .profile_text_content_check_controls {
+	margin-left: 20px;
+	float: right;
+}
+.profile_text_content_check > .profile_text_content_check_controls > span {
+	cursor: pointer;
+}
+.profile_text_content_check > img {
+	width: 12px;
+}
+.profile_text_content_check .hidden_content_title {
+	padding-top: 10px;
+}
+.profile_text_content_check .hidden_content {
+	font-style: italic;
+}
+
 @media screen and ( max-width: 700px )
 {
 	html.responsive .profile_header_summary {
