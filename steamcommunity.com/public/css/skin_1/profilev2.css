@@ -653,7 +653,7 @@ background-color: transparent;
 	background-color: rgba( 0, 0, 0, 0.3 );
 	backdrop-filter: blur(20px);
 	padding: 10px;
-	border-radius: 0px;
+	border-radius: 3px;
 	width: 268px;
 	float: right;
 }
@@ -676,7 +676,7 @@ background-color: transparent;
 	background-repeat: no-repeat;
 	background-color: rgba(0, 0, 0, 0.3);
 	backdrop-filter: blur(20px);
-	border-radius: 0px;
+	border-radius: 3px;
 	padding: 0px 0px 0px 0px;
 	margin-bottom: 12px;
 	font-size: 13px;
@@ -1640,7 +1640,7 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:first
 .recent_game {
 	backdrop-filter: blur(20px);
 	background-color: rgba( 0, 0, 0, 0.3 );
-	border-radius: 0px;
+	border-radius: 3px;
 	margin-bottom: 21px;
 }
 
@@ -2291,7 +2291,7 @@ body.migrated_profile_page #BG_bottom.maincontent {
 	border-bottom: none;
 	padding: 6px 10px;
 	line-height: 26px;
-	border-radius: 0px;
+	border-radius: 3px;
 	backdrop-filter: blur(20px);
 	background-color: rgba( 0, 0, 0, 0.3 );
 }
