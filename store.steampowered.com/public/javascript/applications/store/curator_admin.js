@@ -1352,7 +1352,7 @@
               e.preventDefault(),
                 Object(H.d)(
                   d.a.createElement(se, { strRSSUrl: this.state.strRssURL }),
-                  Object(K.n)(e)
+                  Object(K.m)(e)
                 );
             }),
             (e.prototype.OnRevert = function(e) {
@@ -1840,12 +1840,12 @@
                       .then(function() {
                         return Object(
                           H.d
-                        )(d.a.createElement(x.c, { strTitle: Object(Q.d)("#CuratorAdmin_RSSFeed_scannow"), strDescription: Object(Q.d)("#CuratorAdmin_RSSFeed_queued") }), Object(K.n)(n));
+                        )(d.a.createElement(x.c, { strTitle: Object(Q.d)("#CuratorAdmin_RSSFeed_scannow"), strDescription: Object(Q.d)("#CuratorAdmin_RSSFeed_queued") }), Object(K.m)(n));
                       })
                       .catch(function(e) {
                         return Object(
                           H.d
-                        )(d.a.createElement(x.e, { strTitle: Object(Q.d)("#CuratorAdmin_RSSFeed_scannow"), strDescription: Object(J.a)(e) }), Object(K.n)(n));
+                        )(d.a.createElement(x.e, { strTitle: Object(Q.d)("#CuratorAdmin_RSSFeed_scannow"), strDescription: Object(J.a)(e) }), Object(K.m)(n));
                       })
                       .finally(function() {
                         return t.setState({ strReasonWaiting: void 0 });
@@ -2027,7 +2027,7 @@
                   strRSSUrl: r(),
                   fnClanEventGID: this.OnClanEventCreateSuccess
                 }),
-                Object(K.n)(e)
+                Object(K.m)(e)
               );
             }),
             (e.prototype.OnUpdateNewsEvent = function(e) {
@@ -2041,7 +2041,7 @@
                   fnClanEventGID: this.OnClanEventCreateSuccess,
                   bUpdatePost: !0
                 }),
-                Object(K.n)(e)
+                Object(K.m)(e)
               );
             }),
             (e.prototype.HideModalEvent = function() {
@@ -2074,7 +2074,7 @@
                     disabled: !0
                   })
                 ),
-                Object(K.n)(e)
+                Object(K.m)(e)
               );
             }),
             (e.prototype.render = function() {

@@ -765,7 +765,7 @@
                   },
                   i
                 ),
-                g.createElement(M.z, null)
+                g.createElement(M.x, null)
               ),
             a &&
               g.createElement(
@@ -782,7 +782,7 @@
                   },
                   i
                 ),
-                g.createElement(M.L, null)
+                g.createElement(M.J, null)
               ),
             o &&
               g.createElement(
@@ -1422,8 +1422,8 @@
         V = r("bxBv"),
         Y = r("hRO2"),
         Z = r("OS8t"),
-        Q = Y.Message;
-      var J,
+        J = Y.Message;
+      var Q,
         X,
         $,
         ee,
@@ -1433,7 +1433,7 @@
             var t = r.call(this) || this;
             return (
               i.prototype.games || Z.a(i.M()),
-              Q.initialize(t, e, 0, -1, [1], null),
+              J.initialize(t, e, 0, -1, [1], null),
               t
             );
           }
@@ -1481,14 +1481,14 @@
             }),
             i
           );
-        })(Q),
+        })(J),
         re = (function(r) {
           function i(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
             return (
               i.prototype.appid || Z.a(i.M()),
-              Q.initialize(t, e, 0, -1, void 0, null),
+              J.initialize(t, e, 0, -1, void 0, null),
               t
             );
           }
@@ -1603,14 +1603,14 @@
             }),
             i
           );
-        })(Q),
+        })(J),
         ie = (function(r) {
           function i(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
             return (
               i.prototype.steamid || Z.a(i.M()),
-              Q.initialize(t, e, 0, -1, [2], null),
+              J.initialize(t, e, 0, -1, [2], null),
               t
             );
           }
@@ -1671,14 +1671,14 @@
             }),
             i
           );
-        })(Q),
+        })(J),
         ne = (function(r) {
           function i(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
             return (
               i.prototype.incoming_invite_mutual_friends_lists || Z.a(i.M()),
-              Q.initialize(t, e, 0, -1, [1], null),
+              J.initialize(t, e, 0, -1, [1], null),
               t
             );
           }
@@ -1733,14 +1733,14 @@
             }),
             i
           );
-        })(Q),
+        })(J),
         ae = (function(r) {
           function i(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
             return (
               i.prototype.game_count || Z.a(i.M()),
-              Q.initialize(t, e, 0, -1, [2], null),
+              J.initialize(t, e, 0, -1, [2], null),
               t
             );
           }
@@ -1795,14 +1795,14 @@
             }),
             i
           );
-        })(Q),
+        })(J),
         oe = (function(r) {
           function i(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
             return (
               i.prototype.appid || Z.a(i.M()),
-              Q.initialize(t, e, 0, -1, void 0, null),
+              J.initialize(t, e, 0, -1, void 0, null),
               t
             );
           }
@@ -1893,14 +1893,14 @@
             }),
             i
           );
-        })(Q),
+        })(J),
         se = (function(r) {
           function i(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
             return (
               i.prototype.last_update_time || Z.a(i.M()),
-              Q.initialize(t, e, 0, -1, [2], null),
+              J.initialize(t, e, 0, -1, [2], null),
               t
             );
           }
@@ -1961,14 +1961,14 @@
             }),
             i
           );
-        })(Q),
+        })(J),
         ce = (function(r) {
           function i(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
             return (
               i.prototype.player_level || Z.a(i.M()),
-              Q.initialize(t, e, 0, -1, [2], null),
+              J.initialize(t, e, 0, -1, [2], null),
               t
             );
           }
@@ -2023,14 +2023,14 @@
             }),
             i
           );
-        })(Q),
+        })(J),
         le = (function(r) {
           function i(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
             return (
               i.prototype.level || Z.a(i.M()),
-              Q.initialize(t, e, 0, -1, void 0, null),
+              J.initialize(t, e, 0, -1, void 0, null),
               t
             );
           }
@@ -2086,14 +2086,14 @@
             }),
             i
           );
-        })(Q),
+        })(J),
         ue = (function(r) {
           function i(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
             return (
               i.prototype.communityitemid || Z.a(i.M()),
-              Q.initialize(t, e, 0, -1, void 0, null),
+              J.initialize(t, e, 0, -1, void 0, null),
               t
             );
           }
@@ -2204,14 +2204,14 @@
             }),
             i
           );
-        })(Q),
+        })(J),
         me = (function(r) {
           function i(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
             return (
               i.prototype.profile_background || Z.a(i.M()),
-              Q.initialize(t, e, 0, -1, void 0, null),
+              J.initialize(t, e, 0, -1, void 0, null),
               t
             );
           }
@@ -2259,14 +2259,14 @@
             }),
             i
           );
-        })(Q),
+        })(J),
         de = (function(r) {
           function i(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
             return (
               i.prototype.communityitemid || Z.a(i.M()),
-              Q.initialize(t, e, 0, -1, void 0, null),
+              J.initialize(t, e, 0, -1, void 0, null),
               t
             );
           }
@@ -2320,12 +2320,12 @@
             }),
             i
           );
-        })(Q),
+        })(J),
         fe = (function(r) {
           function i(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
-            return Q.initialize(t, e, 0, -1, void 0, null), t;
+            return J.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
             Object(_.d)(i, r),
@@ -2356,14 +2356,14 @@
             }),
             i
           );
-        })(Q),
+        })(J),
         pe = (function(r) {
           function i(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
             return (
               i.prototype.profile_background || Z.a(i.M()),
-              Q.initialize(t, e, 0, -1, void 0, null),
+              J.initialize(t, e, 0, -1, void 0, null),
               t
             );
           }
@@ -2411,14 +2411,14 @@
             }),
             i
           );
-        })(Q),
+        })(J),
         he = (function(r) {
           function i(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
             return (
               i.prototype.communityitemid || Z.a(i.M()),
-              Q.initialize(t, e, 0, -1, void 0, null),
+              J.initialize(t, e, 0, -1, void 0, null),
               t
             );
           }
@@ -2472,12 +2472,12 @@
             }),
             i
           );
-        })(Q),
+        })(J),
         ve = (function(r) {
           function i(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
-            return Q.initialize(t, e, 0, -1, void 0, null), t;
+            return J.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
             Object(_.d)(i, r),
@@ -2508,14 +2508,14 @@
             }),
             i
           );
-        })(Q),
+        })(J),
         be = (function(r) {
           function i(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
             return (
               i.prototype.avatar_frame || Z.a(i.M()),
-              Q.initialize(t, e, 0, -1, void 0, null),
+              J.initialize(t, e, 0, -1, void 0, null),
               t
             );
           }
@@ -2563,14 +2563,14 @@
             }),
             i
           );
-        })(Q),
+        })(J),
         ye = (function(r) {
           function i(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
             return (
               i.prototype.communityitemid || Z.a(i.M()),
-              Q.initialize(t, e, 0, -1, void 0, null),
+              J.initialize(t, e, 0, -1, void 0, null),
               t
             );
           }
@@ -2624,12 +2624,12 @@
             }),
             i
           );
-        })(Q),
+        })(J),
         _e = (function(r) {
           function i(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
-            return Q.initialize(t, e, 0, -1, void 0, null), t;
+            return J.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
             Object(_.d)(i, r),
@@ -2660,14 +2660,14 @@
             }),
             i
           );
-        })(Q),
+        })(J),
         ge = (function(r) {
           function i(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
             return (
               i.prototype.avatar || Z.a(i.M()),
-              Q.initialize(t, e, 0, -1, void 0, null),
+              J.initialize(t, e, 0, -1, void 0, null),
               t
             );
           }
@@ -2712,14 +2712,14 @@
             }),
             i
           );
-        })(Q),
+        })(J),
         Pe = (function(r) {
           function i(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
             return (
               i.prototype.communityitemid || Z.a(i.M()),
-              Q.initialize(t, e, 0, -1, void 0, null),
+              J.initialize(t, e, 0, -1, void 0, null),
               t
             );
           }
@@ -2773,12 +2773,12 @@
             }),
             i
           );
-        })(Q),
+        })(J),
         Be = (function(r) {
           function i(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
-            return Q.initialize(t, e, 0, -1, void 0, null), t;
+            return J.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
             Object(_.d)(i, r),
@@ -2809,14 +2809,14 @@
             }),
             i
           );
-        })(Q),
+        })(J),
         Oe = (function(r) {
           function i(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
             return (
               i.prototype.language || Z.a(i.M()),
-              Q.initialize(t, e, 0, -1, void 0, null),
+              J.initialize(t, e, 0, -1, void 0, null),
               t
             );
           }
@@ -2870,14 +2870,14 @@
             }),
             i
           );
-        })(Q),
+        })(J),
         we = (function(r) {
           function i(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
             return (
               i.prototype.profile_backgrounds || Z.a(i.M()),
-              Q.initialize(t, e, 0, -1, [1, 2, 3, 4, 5], null),
+              J.initialize(t, e, 0, -1, [1, 2, 3, 4, 5], null),
               t
             );
           }
@@ -2931,14 +2931,14 @@
             }),
             i
           );
-        })(Q),
+        })(J),
         Se = (function(r) {
           function i(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
             return (
               i.prototype.steamid || Z.a(i.M()),
-              Q.initialize(t, e, 0, -1, void 0, null),
+              J.initialize(t, e, 0, -1, void 0, null),
               t
             );
           }
@@ -2997,14 +2997,14 @@
             }),
             i
           );
-        })(Q),
+        })(J),
         Ce = (function(r) {
           function i(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
             return (
               i.prototype.profile_background || Z.a(i.M()),
-              Q.initialize(t, e, 0, -1, void 0, null),
+              J.initialize(t, e, 0, -1, void 0, null),
               t
             );
           }
@@ -3058,14 +3058,14 @@
             }),
             i
           );
-        })(Q),
+        })(J),
         je = (function(r) {
           function i(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
             return (
               i.prototype.communityitemid || Z.a(i.M()),
-              Q.initialize(t, e, 0, -1, void 0, null),
+              J.initialize(t, e, 0, -1, void 0, null),
               t
             );
           }
@@ -3120,12 +3120,12 @@
             }),
             i
           );
-        })(Q),
+        })(J),
         Ee = (function(r) {
           function i(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
-            return Q.initialize(t, e, 0, -1, void 0, null), t;
+            return J.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
             Object(_.d)(i, r),
@@ -3156,14 +3156,14 @@
             }),
             i
           );
-        })(Q),
+        })(J),
         Me = (function(r) {
           function i(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
             return (
               i.prototype.emoticons || Z.a(i.M()),
-              Q.initialize(t, e, 0, -1, [1], null),
+              J.initialize(t, e, 0, -1, [1], null),
               t
             );
           }
@@ -3211,14 +3211,14 @@
             }),
             i
           );
-        })(Q),
+        })(J),
         Re = (function(r) {
           function i(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
             return (
               i.prototype.name || Z.a(i.M()),
-              Q.initialize(t, e, 0, -1, void 0, null),
+              J.initialize(t, e, 0, -1, void 0, null),
               t
             );
           }
@@ -3285,12 +3285,12 @@
             }),
             i
           );
-        })(Q),
+        })(J),
         Ae = (function(r) {
           function i(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
-            return Q.initialize(t, e, 0, -1, void 0, null), t;
+            return J.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
             Object(_.d)(i, r),
@@ -3321,14 +3321,14 @@
             }),
             i
           );
-        })(Q),
+        })(J),
         Fe = (function(r) {
           function i(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
             return (
               i.prototype.accountid || Z.a(i.M()),
-              Q.initialize(t, e, 0, -1, void 0, null),
+              J.initialize(t, e, 0, -1, void 0, null),
               t
             );
           }
@@ -3394,12 +3394,12 @@
             }),
             i
           );
-        })(Q),
+        })(J),
         Ie = (function(r) {
           function i(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
-            return Q.initialize(t, e, 0, -1, void 0, null), t;
+            return J.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
             Object(_.d)(i, r),
@@ -3430,14 +3430,14 @@
             }),
             i
           );
-        })(Q),
+        })(J),
         ze = (function(r) {
           function i(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
             return (
               i.prototype.achievement_progress || Z.a(i.M()),
-              Q.initialize(t, e, 0, -1, [1], null),
+              J.initialize(t, e, 0, -1, [1], null),
               t
             );
           }
@@ -3487,14 +3487,14 @@
             }),
             i
           );
-        })(Q),
+        })(J),
         Ge = (function(r) {
           function i(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
             return (
               i.prototype.appid || Z.a(i.M()),
-              Q.initialize(t, e, 0, -1, void 0, null),
+              J.initialize(t, e, 0, -1, void 0, null),
               t
             );
           }
@@ -3565,14 +3565,14 @@
             }),
             i
           );
-        })(Q),
+        })(J),
         Ne = (function(r) {
           function i(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
             return (
               i.prototype.has_favorite_badge || Z.a(i.M()),
-              Q.initialize(t, e, 0, -1, void 0, null),
+              J.initialize(t, e, 0, -1, void 0, null),
               t
             );
           }
@@ -3648,14 +3648,14 @@
             }),
             i
           );
-        })(Q),
+        })(J),
         Te = (function(r) {
           function i(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
             return (
               i.prototype.communityitemid || Z.a(i.M()),
-              Q.initialize(t, e, 0, -1, void 0, null),
+              J.initialize(t, e, 0, -1, void 0, null),
               t
             );
           }
@@ -3710,12 +3710,12 @@
             }),
             i
           );
-        })(Q),
+        })(J),
         Le = (function(r) {
           function i(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
-            return Q.initialize(t, e, 0, -1, void 0, null), t;
+            return J.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
             Object(_.d)(i, r),
@@ -3746,14 +3746,14 @@
             }),
             i
           );
-        })(Q),
+        })(J),
         ke = (function(r) {
           function i(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
             return (
               i.prototype.slot || Z.a(i.M()),
-              Q.initialize(t, e, 0, -1, void 0, null),
+              J.initialize(t, e, 0, -1, void 0, null),
               t
             );
           }
@@ -3846,14 +3846,14 @@
             }),
             i
           );
-        })(Q),
+        })(J),
         Ue = (function(r) {
           function i(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
             return (
               i.prototype.customization_type || Z.a(i.M()),
-              Q.initialize(t, e, 0, -1, [3], null),
+              J.initialize(t, e, 0, -1, [3], null),
               t
             );
           }
@@ -3915,14 +3915,14 @@
             }),
             i
           );
-        })(Q),
+        })(J),
         De = (function(r) {
           function i(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
             return (
               i.prototype.theme_id || Z.a(i.M()),
-              Q.initialize(t, e, 0, -1, void 0, null),
+              J.initialize(t, e, 0, -1, void 0, null),
               t
             );
           }
@@ -3977,14 +3977,14 @@
             }),
             i
           );
-        })(Q),
+        })(J),
         We = (function(r) {
           function i(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
             return (
               i.prototype.customizations || Z.a(i.M()),
-              Q.initialize(t, e, 0, -1, [1], null),
+              J.initialize(t, e, 0, -1, [1], null),
               t
             );
           }
@@ -4040,14 +4040,14 @@
             }),
             i
           );
-        })(Q),
+        })(J),
         xe = (function(r) {
           function i(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
             return (
               i.prototype.profile_themes || Z.a(i.M()),
-              Q.initialize(t, e, 0, -1, [1], null),
+              J.initialize(t, e, 0, -1, [1], null),
               t
             );
           }
@@ -4095,14 +4095,14 @@
             }),
             i
           );
-        })(Q),
+        })(J),
         qe = (function(r) {
           function i(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
             return (
               i.prototype.theme_id || Z.a(i.M()),
-              Q.initialize(t, e, 0, -1, void 0, null),
+              J.initialize(t, e, 0, -1, void 0, null),
               t
             );
           }
@@ -4156,12 +4156,12 @@
             }),
             i
           );
-        })(Q),
+        })(J),
         He = (function(r) {
           function i(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
-            return Q.initialize(t, e, 0, -1, void 0, null), t;
+            return J.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
             Object(_.d)(i, r),
@@ -4192,14 +4192,14 @@
             }),
             i
           );
-        })(Q),
+        })(J),
         Ke = (function(r) {
           function i(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
             return (
               i.prototype.your_info || Z.a(i.M()),
-              Q.initialize(t, e, 0, -1, [2, 3, 4, 5, 6], null),
+              J.initialize(t, e, 0, -1, [2, 3, 4, 5, 6], null),
               t
             );
           }
@@ -4254,14 +4254,14 @@
             }),
             i
           );
-        })(Q),
+        })(J),
         Ve = (function(r) {
           function i(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
             return (
               i.prototype.steamid || Z.a(i.M()),
-              Q.initialize(t, e, 0, -1, void 0, null),
+              J.initialize(t, e, 0, -1, void 0, null),
               t
             );
           }
@@ -4325,14 +4325,14 @@
             }),
             i
           );
-        })(Q),
+        })(J),
         Ye = (function(r) {
           function i(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
             return (
               i.prototype.steamid || Z.a(i.M()),
-              Q.initialize(t, e, 0, -1, void 0, null),
+              J.initialize(t, e, 0, -1, void 0, null),
               t
             );
           }
@@ -4402,14 +4402,14 @@
             }),
             i
           );
-        })(Q),
+        })(J),
         Ze = (function(r) {
           function i(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
             return (
               i.prototype.trending || Z.a(i.M()),
-              Q.initialize(t, e, 0, -1, [1, 2, 3, 4, 5, 6, 7, 8], null),
+              J.initialize(t, e, 0, -1, [1, 2, 3, 4, 5, 6, 7, 8], null),
               t
             );
           }
@@ -4421,14 +4421,14 @@
                   (i.sm_m = {
                     proto: i,
                     fields: {
-                      trending: { n: 1, c: Je, r: !0, q: !0 },
-                      recent_purchases: { n: 2, c: Je, r: !0, q: !0 },
-                      unowned: { n: 3, c: Je, r: !0, q: !0 },
-                      popular: { n: 4, c: Je, r: !0, q: !0 },
-                      dont_forget: { n: 5, c: Je, r: !0, q: !0 },
-                      being_discussed: { n: 6, c: Je, r: !0, q: !0 },
-                      new_to_group: { n: 7, c: Je, r: !0, q: !0 },
-                      returned_to_group: { n: 8, c: Je, r: !0, q: !0 },
+                      trending: { n: 1, c: Qe, r: !0, q: !0 },
+                      recent_purchases: { n: 2, c: Qe, r: !0, q: !0 },
+                      unowned: { n: 3, c: Qe, r: !0, q: !0 },
+                      popular: { n: 4, c: Qe, r: !0, q: !0 },
+                      dont_forget: { n: 5, c: Qe, r: !0, q: !0 },
+                      being_discussed: { n: 6, c: Qe, r: !0, q: !0 },
+                      new_to_group: { n: 7, c: Qe, r: !0, q: !0 },
+                      returned_to_group: { n: 8, c: Qe, r: !0, q: !0 },
                       active_friend_count: {
                         n: 9,
                         d: 0,
@@ -4472,14 +4472,14 @@
             }),
             i
           );
-        })(Q),
-        Qe = (function(r) {
+        })(J),
+        Je = (function(r) {
           function i(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
             return (
               i.prototype.steamid || Z.a(i.M()),
-              Q.initialize(t, e, 0, -1, void 0, null),
+              J.initialize(t, e, 0, -1, void 0, null),
               t
             );
           }
@@ -4553,14 +4553,14 @@
             }),
             i
           );
-        })(Q),
-        Je = (function(r) {
+        })(J),
+        Qe = (function(r) {
           function i(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
             return (
               i.prototype.appid || Z.a(i.M()),
-              Q.initialize(t, e, 0, -1, [2], null),
+              J.initialize(t, e, 0, -1, [2], null),
               t
             );
           }
@@ -4573,7 +4573,7 @@
                     proto: i,
                     fields: {
                       appid: { n: 1, br: Z.d.readUint32, bw: Z.h.writeUint32 },
-                      friends: { n: 2, c: Qe, r: !0, q: !0 },
+                      friends: { n: 2, c: Je, r: !0, q: !0 },
                       display_order: {
                         n: 3,
                         br: Z.d.readUint32,
@@ -4616,12 +4616,12 @@
             }),
             i
           );
-        })(Q),
+        })(J),
         Xe = (function(r) {
           function i(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
-            return Q.initialize(t, e, 0, -1, void 0, null), t;
+            return J.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
             Object(_.d)(i, r),
@@ -4652,14 +4652,14 @@
             }),
             i
           );
-        })(Q),
+        })(J),
         $e = (function(r) {
           function i(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
             return (
               i.prototype.nicknames || Z.a(i.M()),
-              Q.initialize(t, e, 0, -1, [1], null),
+              J.initialize(t, e, 0, -1, [1], null),
               t
             );
           }
@@ -4707,14 +4707,14 @@
             }),
             i
           );
-        })(Q),
+        })(J),
         et = (function(r) {
           function i(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
             return (
               i.prototype.accountid || Z.a(i.M()),
-              Q.initialize(t, e, 0, -1, void 0, null),
+              J.initialize(t, e, 0, -1, void 0, null),
               t
             );
           }
@@ -4773,14 +4773,14 @@
             }),
             i
           );
-        })(Q),
+        })(J),
         tt = (function(r) {
           function i(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
             return (
               i.prototype.accountid || Z.a(i.M()),
-              Q.initialize(t, e, 0, -1, void 0, null),
+              J.initialize(t, e, 0, -1, void 0, null),
               t
             );
           }
@@ -4874,14 +4874,14 @@
             }),
             i
           );
-        })(Q),
+        })(J),
         rt = (function(r) {
           function i(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
             return (
               i.prototype.preferences || Z.a(i.M()),
-              Q.initialize(t, e, 0, -1, [1], null),
+              J.initialize(t, e, 0, -1, [1], null),
               t
             );
           }
@@ -4929,12 +4929,12 @@
             }),
             i
           );
-        })(Q),
+        })(J),
         it = (function(r) {
           function i(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
-            return Q.initialize(t, e, 0, -1, void 0, null), t;
+            return J.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
             Object(_.d)(i, r),
@@ -4965,14 +4965,14 @@
             }),
             i
           );
-        })(Q),
+        })(J),
         nt = (function(r) {
           function i(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
             return (
               i.prototype.invite_sent || Z.a(i.M()),
-              Q.initialize(t, e, 0, -1, void 0, null),
+              J.initialize(t, e, 0, -1, void 0, null),
               t
             );
           }
@@ -5032,14 +5032,14 @@
             }),
             i
           );
-        })(Q),
+        })(J),
         at = (function(r) {
           function i(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
             return (
               i.prototype.friend_relationship || Z.a(i.M()),
-              Q.initialize(t, e, 0, -1, void 0, null),
+              J.initialize(t, e, 0, -1, void 0, null),
               t
             );
           }
@@ -5093,14 +5093,14 @@
             }),
             i
           );
-        })(Q),
+        })(J),
         ot = (function(r) {
           function i(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
             return (
               i.prototype.friend_relationship || Z.a(i.M()),
-              Q.initialize(t, e, 0, -1, void 0, null),
+              J.initialize(t, e, 0, -1, void 0, null),
               t
             );
           }
@@ -5154,14 +5154,14 @@
             }),
             i
           );
-        })(Q),
+        })(J),
         st = (function(r) {
           function i(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
             return (
               i.prototype.hide_adult_content_violence || Z.a(i.M()),
-              Q.initialize(t, e, 0, -1, void 0, null),
+              J.initialize(t, e, 0, -1, void 0, null),
               t
             );
           }
@@ -5233,14 +5233,14 @@
             }),
             i
           );
-        })(Q),
+        })(J),
         ct = (function(r) {
           function i(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
             return (
               i.prototype.preferences || Z.a(i.M()),
-              Q.initialize(t, e, 0, -1, void 0, null),
+              J.initialize(t, e, 0, -1, void 0, null),
               t
             );
           }
@@ -5288,12 +5288,12 @@
             }),
             i
           );
-        })(Q),
+        })(J),
         lt = (function(r) {
           function i(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
-            return Q.initialize(t, e, 0, -1, void 0, null), t;
+            return J.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
             Object(_.d)(i, r),
@@ -5324,14 +5324,14 @@
             }),
             i
           );
-        })(Q),
+        })(J),
         ut = (function(r) {
           function i(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
             return (
               i.prototype.state || Z.a(i.M()),
-              Q.initialize(t, e, 0, -1, void 0, null),
+              J.initialize(t, e, 0, -1, void 0, null),
               t
             );
           }
@@ -5401,12 +5401,12 @@
             }),
             i
           );
-        })(Q),
+        })(J),
         mt = (function(r) {
           function i(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
-            return Q.initialize(t, e, 0, -1, void 0, null), t;
+            return J.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
             Object(_.d)(i, r),
@@ -5437,14 +5437,14 @@
             }),
             i
           );
-        })(Q),
+        })(J),
         dt = (function(r) {
           function i(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
             return (
               i.prototype.privacy_state || Z.a(i.M()),
-              Q.initialize(t, e, 0, -1, void 0, null),
+              J.initialize(t, e, 0, -1, void 0, null),
               t
             );
           }
@@ -5523,14 +5523,14 @@
             }),
             i
           );
-        })(Q),
+        })(J),
         ft = (function(r) {
           function i(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
             return (
               i.prototype.privacy_settings || Z.a(i.M()),
-              Q.initialize(t, e, 0, -1, void 0, null),
+              J.initialize(t, e, 0, -1, void 0, null),
               t
             );
           }
@@ -5578,14 +5578,14 @@
             }),
             i
           );
-        })(Q),
+        })(J),
         pt = (function(r) {
           function i(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
             return (
               i.prototype.is_enabled || Z.a(i.M()),
-              Q.initialize(t, e, 0, -1, void 0, null),
+              J.initialize(t, e, 0, -1, void 0, null),
               t
             );
           }
@@ -5656,14 +5656,14 @@
             }),
             i
           );
-        })(Q),
+        })(J),
         ht = (function(r) {
           function i(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
             return (
               i.prototype.games || Z.a(i.M()),
-              Q.initialize(t, e, 0, -1, [1], null),
+              J.initialize(t, e, 0, -1, [1], null),
               t
             );
           }
@@ -5711,14 +5711,14 @@
             }),
             i
           );
-        })(Q),
+        })(J),
         vt = (function(r) {
           function i(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
             return (
               i.prototype.accountid || Z.a(i.M()),
-              Q.initialize(t, e, 0, -1, void 0, null),
+              J.initialize(t, e, 0, -1, void 0, null),
               t
             );
           }
@@ -5782,14 +5782,14 @@
             }),
             i
           );
-        })(Q),
+        })(J),
         bt = (function(r) {
           function i(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
             return (
               i.prototype.accountid || Z.a(i.M()),
-              Q.initialize(t, e, 0, -1, void 0, null),
+              J.initialize(t, e, 0, -1, void 0, null),
               t
             );
           }
@@ -5843,14 +5843,14 @@
             }),
             i
           );
-        })(Q),
+        })(J),
         yt = (function(r) {
           function i(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
             return (
               i.prototype.state || Z.a(i.M()),
-              Q.initialize(t, e, 0, -1, void 0, null),
+              J.initialize(t, e, 0, -1, void 0, null),
               t
             );
           }
@@ -5920,14 +5920,14 @@
             }),
             i
           );
-        })(Q),
+        })(J),
         _t = (function(r) {
           function i(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
             return (
               i.prototype.preferences || Z.a(i.M()),
-              Q.initialize(t, e, 0, -1, void 0, null),
+              J.initialize(t, e, 0, -1, void 0, null),
               t
             );
           }
@@ -5975,14 +5975,14 @@
             }),
             i
           );
-        })(Q),
+        })(J),
         gt = (function(r) {
           function i(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
             return (
               i.prototype.accountid || Z.a(i.M()),
-              Q.initialize(t, e, 0, -1, void 0, null),
+              J.initialize(t, e, 0, -1, void 0, null),
               t
             );
           }
@@ -6037,14 +6037,14 @@
             }),
             i
           );
-        })(Q),
+        })(J),
         Pt = (function(r) {
           function i(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
             return (
               i.prototype.privacy_settings || Z.a(i.M()),
-              Q.initialize(t, e, 0, -1, void 0, null),
+              J.initialize(t, e, 0, -1, void 0, null),
               t
             );
           }
@@ -6092,8 +6092,8 @@
             }),
             i
           );
-        })(Q);
-      ((X = J = J || {}).GetMutualFriendsForIncomingInvites = function(e, t) {
+        })(J);
+      ((X = Q = Q || {}).GetMutualFriendsForIncomingInvites = function(e, t) {
         return e.SendMsg("Player.GetMutualFriendsForIncomingInvites#1", t, ne, {
           bConstMethod: !0,
           ePrivilege: 1
@@ -7213,7 +7213,7 @@
                             ),
                           [
                             4,
-                            J.SetProfileBackground(
+                            Q.SetProfileBackground(
                               this.m_SteamInterface.GetServiceTransport(),
                               t
                             )
@@ -7232,7 +7232,7 @@
                           t.Body().set_flags(this.m_Backgrounds.m_EquipFlags),
                           [
                             4,
-                            J.SetEquippedProfileItemFlags(
+                            Q.SetEquippedProfileItemFlags(
                               this.m_SteamInterface.GetServiceTransport(),
                               t
                             )
@@ -7334,7 +7334,7 @@
                             ),
                           [
                             4,
-                            J.SetMiniProfileBackground(
+                            Q.SetMiniProfileBackground(
                               this.m_SteamInterface.GetServiceTransport(),
                               t
                             )
@@ -7377,7 +7377,7 @@
                               this.m_Avatars.m_EquippedItem &&
                                 this.m_Avatars.m_EquippedItem.communityitemid
                             ),
-                          (t = J.SetAnimatedAvatar(
+                          (t = Q.SetAnimatedAvatar(
                             this.m_SteamInterface.GetServiceTransport(),
                             i
                           ))),
@@ -7389,7 +7389,7 @@
                                 this.m_AvatarFrames.m_EquippedItem
                                   .communityitemid
                             ),
-                          (r = J.SetAvatarFrame(
+                          (r = Q.SetAvatarFrame(
                             this.m_SteamInterface.GetServiceTransport(),
                             i
                           ))),
@@ -7774,13 +7774,13 @@
                 return Object(_.e)(this, function(e) {
                   return (
                     (t = V.a.Init(Oe)).Body().set_language(d.b.LANGUAGE),
-                    (this.m_promiseOwned = J.GetProfileItemsOwned(
+                    (this.m_promiseOwned = Q.GetProfileItemsOwned(
                       this.m_SteamInterface.GetServiceTransport(),
                       t
                     )),
                     (r = V.a.Init(Se)).Body().set_steamid(d.g.steamid),
                     r.Body().set_language(d.b.LANGUAGE),
-                    (this.m_promiseEquipped = J.GetProfileItemsEquipped(
+                    (this.m_promiseEquipped = Q.GetProfileItemsEquipped(
                       this.m_SteamInterface.GetServiceTransport(),
                       r
                     )),
@@ -8233,7 +8233,7 @@
                           ),
                         [
                           4,
-                          J.SetProfileTheme(
+                          Q.SetProfileTheme(
                             this.m_CMInterface.GetServiceTransport(),
                             t
                           )
@@ -8267,7 +8267,7 @@
                   s = void 0,
                   s =
                     "communityitemid" in o
-                      ? new Qt(o, this.m_AppInfoStore)
+                      ? new Jt(o, this.m_AppInfoStore)
                       : new Zt(o);
                 this.m_rgBadges.push(s),
                   n &&
@@ -8325,7 +8325,7 @@
                               r.Body().set_communityitemid(t.communityitemid),
                           [
                             4,
-                            J.SetFavoriteBadge(
+                            Q.SetFavoriteBadge(
                               this.m_CMInterface.GetServiceTransport(),
                               r
                             )
@@ -8398,7 +8398,7 @@
             e
           );
         })(Yt),
-        Qt = (function(i) {
+        Jt = (function(i) {
           function e(e, t) {
             var r = i.call(this, e) || this;
             return (
@@ -8430,7 +8430,7 @@
             e
           );
         })(Yt),
-        Jt = (function() {
+        Qt = (function() {
           function e() {}
           return (
             (e.prototype.GetRecentGameAvatars = function() {
@@ -9045,7 +9045,7 @@
         cr = (function() {
           function e(e, t) {
             var r = this;
-            (this.m_OGGAvatars = new Jt()),
+            (this.m_OGGAvatars = new Qt()),
               (this.m_EmoticonStore = new K.a()),
               (this.m_EmoticonHoverStore = new H.a()),
               (this.m_Profile = new lr(e)),
@@ -10648,7 +10648,7 @@
                       g.createElement(
                         g.Suspense,
                         { fallback: null },
-                        g.createElement(Nr, { file: o, ref: this.cropRef })
+                        g.createElement(Nr, { imageData: o, ref: this.cropRef })
                       ),
                     !o &&
                       !c &&
@@ -10889,7 +10889,7 @@
               return g.createElement(
                 g.Fragment,
                 null,
-                g.createElement(Jr, { Location: e }),
+                g.createElement(Qr, { Location: e }),
                 g.createElement(Xr, { Location: e }),
                 g.createElement($r, { Location: e })
               );
@@ -10897,8 +10897,8 @@
             t
           );
         })(g.Component),
-        Qr = { contextMenuPositionOptions: { bDisablePopTop: !0 } },
-        Jr = (function(e) {
+        Jr = { contextMenuPositionOptions: { bDisablePopTop: !0 } },
+        Qr = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -10955,7 +10955,7 @@
                 }),
                 g.createElement(
                   dr.i,
-                  Object(_.a)({}, Qr, {
+                  Object(_.a)({}, Jr, {
                     label: Object(P.d)("#Profile_FieldCountry"),
                     fnLoadOptions: this.GetCountryList,
                     onChange: this.OnCountrySelected,
@@ -11030,7 +11030,7 @@
                 e.BIsStateSelectionAvailable() &&
                   g.createElement(
                     dr.i,
-                    Object(_.a)({ key: t }, Qr, {
+                    Object(_.a)({ key: t }, Jr, {
                       label: Object(P.d)("#Profile_FieldState"),
                       fnLoadOptions: this.GetStateList,
                       onChange: this.OnStateSelected,
@@ -11104,7 +11104,7 @@
                 e.BIsCitySelectionAvailable() &&
                   g.createElement(
                     dr.i,
-                    Object(_.a)({ key: t }, Qr, {
+                    Object(_.a)({ key: t }, Jr, {
                       label: Object(P.d)("#Profile_FieldCity"),
                       fnLoadOptions: this.GetCityList,
                       onChange: this.OnStateSelected,
@@ -12855,7 +12855,7 @@
             (e.prototype.render = function() {
               var e = this.props.ProfileItems;
               return e.BHasAnyProfileModifiers()
-                ? g.createElement(Ji, {
+                ? g.createElement(Qi, {
                     active: this.state.bDialogActive,
                     ProfileItems: e,
                     onDismiss: this.HideDialog
@@ -12867,7 +12867,7 @@
             (e = Object(_.c)([l.a], e))
           );
         })(g.Component),
-        Qi = Object(l.a)(function(e) {
+        Ji = Object(l.a)(function(e) {
           var t = e.ProfileItems.GetProfileModifierCSSURL();
           return t
             ? g.createElement("link", {
@@ -12877,7 +12877,7 @@
               })
             : null;
         }),
-        Ji = (function(t) {
+        Qi = (function(t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (e.state = { AvailableModifier: null, bSaving: !1 }), e;
@@ -13820,7 +13820,7 @@
             return g.createElement(
               g.Fragment,
               null,
-              g.createElement(Qi, { ProfileItems: i }),
+              g.createElement(Ji, { ProfileItems: i }),
               g.createElement(li, { Profile: r }),
               g.createElement(kr, { Profile: r, ProfileItems: i }),
               g.createElement(

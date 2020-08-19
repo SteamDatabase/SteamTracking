@@ -237,8 +237,40 @@ img.payment_method_logo {
 
 	box-shadow: 0px 0px 3px 0px rgba(20,20,20,0.75);
 }
+
 .checkout_install_area.mtxn #install_button {
 	margin-bottom: 10px;
+}
+
+.checkout_subscription_row {
+	margin: 10px 0px;
+	display: flex;
+}
+
+.checkout_subscription_row img {
+	width: 276px;
+}
+
+.checkout_subscription_row_right {
+	margin: 15px;
+}
+
+.checkout_subscription_row_header {
+	color: white;
+	font-size: 16px;
+}
+
+.checkout_subscription_row_desc {
+	color: #c6d4df;
+	font-size: 13px;
+	font-family: "Motiva Sans", Sans-serif;
+}
+
+.checkout_subscription_row_right a {
+	display: block;
+	margin-top: 10px;
+	color: #5fcbff;
+	font-size: 14px;
 }
 
 .btn_checkout_working {

@@ -122,13 +122,14 @@ CWishlistController.prototype.LoadAdditionalPages = function()
 	this.nPagesToLoad = g_nAdditionalPages;
 	this.nPagesLoaded = 0;
 	var _this = this;
+	var unUserdataVersion = WebStorage.GetLocal( 'unUserdataVersion' );
 
 	for( var i=0; i < this.nPagesToLoad; i++ )
 	{
 		$J.ajax ( {
 			type: "GET",
 			url: g_strWishlistBaseURL + 'wishlistdata/',
-			data: { 'p': i },
+			data: { 'p': i, 'v': unUserdataVersion },
 			dataType: 'json'
 		}).done(function(data){
 			_this.OnPageLoaded( data )
@@ -181,18 +182,19 @@ CWishlistController.prototype.BuildElements = function()
 
 		ShowConfirmDialog("Remove this item from your wishlist?", "Are you sure you want to remove '%1$s' from your wishlist?<br><br>It can be re-added via the store page at any time.".replace(/%1\$s/,V_EscapeHTML(strName))).done(function(){
 
-		$J.ajax({
-			type: "POST",
-			url: g_strWishlistBaseURL + 'remove/',
-			data: {'appid':nAppId, sessionid: g_sessionID}
+			$J.ajax({
+				type: "POST",
+				url: g_strWishlistBaseURL + 'remove/',
+				data: {'appid':nAppId, sessionid: g_sessionID}
+			});
+			GDynamicStore.InvalidateCache();
+
+			$J( '#wishlist_ctn' ).removeClass ( 'sorting' );
+
+			delete g_rgAppInfo[ nAppId ];
+			_this.rgAllApps = Object.keys(g_rgAppInfo);
+			_this.Update ( true );
 		});
-
-		$J( '#wishlist_ctn' ).removeClass ( 'sorting' );
-
-		delete g_rgAppInfo[ nAppId ];
-		_this.rgAllApps = Object.keys(g_rgAppInfo);
-		_this.Update ( true );
-	});
 
 		event.preventDefault();
 		return false;
@@ -604,6 +606,9 @@ CWishlistController.prototype.SaveOrder = function(e)
 		url: g_strWishlistBaseURL + 'reorder/',
 		data: {'appids':this.rgAllApps, sessionid: g_sessionID}
 	});
+
+	// technically dynamic store doesn't care about order, but this will force a refresh of the wishlist data load.
+	GDynamicStore.InvalidateCache();
 }
 
 CWishlistController.prototype.LoadElement = function( nIndex )

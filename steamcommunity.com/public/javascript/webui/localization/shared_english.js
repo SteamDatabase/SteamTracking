@@ -940,7 +940,7 @@ LocalizationReady("shared", "english", {
   Played_Hours: "%1$s hours",
 
   WriteReview_Dialog_PostReview: "Post review",
-  WriteReview_Dialog_ReviseReview: "Revise review",
+  WriteReview_Dialog_ReviseReview: "Edit review",
   WriteReview_Dialog_Title: "Review",
   WriteReview_Dialog_Playtime: "You've played for %1$s",
   WriteReview_Dialog_Playtime_Software: "You've used this title for %1$s",

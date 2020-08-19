@@ -3514,7 +3514,11 @@ function setTimezoneCookies()
 	expire.setTime( now.getTime() + 3600000*24*365 );
 	var tzOffset = now.getTimezoneOffset() * -1 * 60;
 	var isDST = 0;
-	document.cookie = "timezoneOffset=" + tzOffset + "," + isDST + ";expires="+expire.toGMTString() + ";path=/";
+
+	var sameSite = '';
+	if ( window.location.protocol == 'https' )
+		sameSite = '; Secure; SameSite=None;'
+	document.cookie = "timezoneOffset=" + tzOffset + "," + isDST + ";expires="+expire.toGMTString() + ";path=/" + sameSite;
 }
 
 function FlushStyleChanges( element )

@@ -56,9 +56,9 @@
           return f;
         });
       var s = a("mrSG"),
-        A = a("q1tI"),
+        v = a("q1tI"),
         r = a("TyAF"),
-        v = a("Jqb/"),
+        A = a("Jqb/"),
         O = a("ARGL"),
         R = a("TLQK"),
         n = a("bxiW"),
@@ -274,7 +274,7 @@
         (h[(h.DONE = 3)] = "DONE"),
         (h[(h.ERROR = 4)] = "ERROR");
       var b = function(e) {
-          return A.createElement(
+          return v.createElement(
             "svg",
             Object(s.a)(
               {
@@ -284,7 +284,7 @@
               },
               e
             ),
-            A.createElement("path", {
+            v.createElement("path", {
               fill: "currentColor",
               fillRule: "evenodd",
               clipRule: "evenodd",
@@ -319,7 +319,7 @@
                   "/" +
                   e +
                   ".png");
-              return A.createElement("img", {
+              return v.createElement("img", {
                 className: this.props.className,
                 src: a,
                 onMouseEnter: this.handleMouseOver,
@@ -330,7 +330,7 @@
             Object(s.c)([n.a], e.prototype, "handleMouseOut", null),
             e
           );
-        })(A.PureComponent);
+        })(v.PureComponent);
       var E = (function(t) {
           function e(e) {
             var n = t.call(this, e) || this;
@@ -376,7 +376,7 @@
                 c = l.s_LoyaltyAwardModalStore;
               if (!r) return null;
               c.GetAwardPointsTransferred();
-              return A.createElement(y, {
+              return v.createElement(y, {
                 key: o,
                 targetid: o,
                 active: r,
@@ -393,7 +393,7 @@
             (e.defaultProps = { targetType: 1 }),
             (e = l = Object(s.c)([r.a], e))
           );
-        })(A.Component),
+        })(v.Component),
         f = ((t.default = E),
         (function(t) {
           function e(e) {
@@ -420,7 +420,7 @@
               if (null === i)
                 return console.log("Store not initialized yet."), null;
               i.GetAwardPointsTransferred();
-              return A.createElement(y, {
+              return v.createElement(y, {
                 key: a,
                 targetid: a,
                 active: r,
@@ -435,7 +435,7 @@
             (e.s_LoyaltyAwardModalStore = null),
             (e = c = Object(s.c)([r.a], e))
           );
-        })(A.Component)),
+        })(v.Component)),
         y = (function(a) {
           function e(e) {
             var t = a.call(this, e) || this;
@@ -496,7 +496,7 @@
                 case T.SELECTING:
                   var b = 0 === c || m.get(c),
                     E = !w || w.greaterThanOrEqual(_),
-                    f = A.createElement(
+                    f = v.createElement(
                       U,
                       {
                         onClick: function() {
@@ -513,16 +513,16 @@
                         b ? "#GrantAward_SelectAward" : "#GrantAward_Next"
                       )
                     ),
-                    y = A.createElement(
-                      A.Fragment,
+                    y = v.createElement(
+                      v.Fragment,
                       null,
-                      A.createElement(F, { description: h }),
-                      A.createElement(V, null),
-                      A.createElement(
+                      v.createElement(F, { description: h }),
+                      v.createElement(V, null),
+                      v.createElement(
                         "div",
                         { className: O.ButtonContainer },
                         u.map(function(e) {
-                          return A.createElement(q, {
+                          return v.createElement(q, {
                             key: e,
                             reaction: e,
                             selected: e === c && !m.get(e),
@@ -537,14 +537,14 @@
                           });
                         })
                       ),
-                      A.createElement(V, null),
-                      A.createElement(
+                      v.createElement(V, null),
+                      v.createElement(
                         x,
                         { store: o },
                         b || E
                           ? f
                           : [
-                              A.createElement(
+                              v.createElement(
                                 "div",
                                 { key: "msg", className: O.NotEnoughPoints },
                                 Object(R.d)(
@@ -556,13 +556,13 @@
                                     .toLocaleString()
                                 )
                               ),
-                              A.createElement(
+                              v.createElement(
                                 "a",
                                 {
                                   key: "button",
                                   href: S.c.STORE_BASE_URL + "points/howitworks"
                                 },
-                                A.createElement(
+                                v.createElement(
                                   H,
                                   { key: "button" },
                                   Object(R.d)("#GrantAward_HowToGetPoints")
@@ -575,15 +575,15 @@
                 case T.CONFIRM:
                 case T.SUBMITTING:
                 case T.DONE:
-                  y = A.createElement(
-                    A.Fragment,
+                  y = v.createElement(
+                    v.Fragment,
                     null,
-                    A.createElement(F, { description: h }),
-                    A.createElement(V, null),
-                    A.createElement(
+                    v.createElement(F, { description: h }),
+                    v.createElement(V, null),
+                    v.createElement(
                       "div",
                       { style: { position: "relative" } },
-                      A.createElement(
+                      v.createElement(
                         "div",
                         {
                           className: Object(C.a)(
@@ -591,30 +591,30 @@
                             l === T.CONFIRM && O.Visible
                           )
                         },
-                        A.createElement(D, {
+                        v.createElement(D, {
                           className: O.ConfirmAwardImage,
                           reactionType: c
                         }),
-                        A.createElement(
+                        v.createElement(
                           "div",
                           { className: O.ConfirmText },
                           Object(R.l)(
                             "#GrantAward_Confirm",
-                            A.createElement(W, null, _.toLocaleString()),
-                            A.createElement(
+                            v.createElement(Q, null, _.toLocaleString()),
+                            v.createElement(
                               "span",
                               { className: O.AwardName },
                               N(c)
                             )
                           )
                         ),
-                        A.createElement(
+                        v.createElement(
                           "div",
                           { className: O.ConfirmText },
                           Object(R.l)(
                             "#GrantAward_Confirm_Details",
-                            A.createElement(W, null, p.toLocaleString()),
-                            A.createElement(
+                            v.createElement(Q, null, p.toLocaleString()),
+                            v.createElement(
                               "span",
                               { className: O.TimePeriod },
                               Object(R.d)(
@@ -624,7 +624,7 @@
                           )
                         )
                       ),
-                      A.createElement(
+                      v.createElement(
                         "div",
                         {
                           className: Object(C.a)(
@@ -632,9 +632,9 @@
                             l === T.SUBMITTING && O.Visible
                           )
                         },
-                        A.createElement(Q, null)
+                        v.createElement(z, null)
                       ),
-                      A.createElement(
+                      v.createElement(
                         "div",
                         {
                           className: Object(C.a)(
@@ -642,22 +642,22 @@
                             l === T.DONE && O.Visible
                           )
                         },
-                        A.createElement(D, {
+                        v.createElement(D, {
                           className: O.ConfirmAwardImage,
                           reactionType: c
                         }),
-                        A.createElement(
+                        v.createElement(
                           "div",
                           { className: O.SuccessText },
                           Object(R.d)("#GrantAward_Success")
                         )
                       )
                     ),
-                    A.createElement(V, null),
-                    A.createElement(
+                    v.createElement(V, null),
+                    v.createElement(
                       x,
                       { store: o },
-                      A.createElement(
+                      v.createElement(
                         H,
                         {
                           onClick: function() {
@@ -667,7 +667,7 @@
                         },
                         Object(R.d)("#GrantAward_Back")
                       ),
-                      A.createElement(
+                      v.createElement(
                         U,
                         {
                           onClick: this.GrantAward,
@@ -703,25 +703,25 @@
                     default:
                       g = Object(R.d)("#GrantAwardError_Fail");
                   }
-                  y = A.createElement(
-                    A.Fragment,
+                  y = v.createElement(
+                    v.Fragment,
                     null,
-                    A.createElement(F, { description: h }),
-                    A.createElement(V, null),
-                    A.createElement(
+                    v.createElement(F, { description: h }),
+                    v.createElement(V, null),
+                    v.createElement(
                       "div",
                       { style: { position: "relative" } },
-                      A.createElement(
+                      v.createElement(
                         "div",
                         { className: O.ErrorContainer },
-                        A.createElement("div", { className: O.ErrorText }, g)
+                        v.createElement("div", { className: O.ErrorText }, g)
                       )
                     ),
-                    A.createElement(V, null),
-                    A.createElement(
+                    v.createElement(V, null),
+                    v.createElement(
                       x,
                       { store: o },
-                      A.createElement(
+                      v.createElement(
                         H,
                         {
                           onClick: function() {
@@ -733,10 +733,10 @@
                     )
                   );
               }
-              return A.createElement(
-                v.a,
+              return v.createElement(
+                A.a,
                 { className: O.GrantAwardModal, active: a, onDismiss: s },
-                d && A.createElement(L.a, { eType: L.b.Default }),
+                d && v.createElement(L.a, { eType: L.b.Default }),
                 y
               );
             }),
@@ -765,18 +765,18 @@
             Object(s.c)([n.a], e.prototype, "GrantAward", null),
             (e = Object(s.c)([r.a], e))
           );
-        })(A.Component),
+        })(v.Component),
         F = function(e) {
           var t = e.description;
-          return A.createElement(
+          return v.createElement(
             "div",
             { className: O.Header },
-            A.createElement(
+            v.createElement(
               "div",
               { className: O.Title },
               Object(R.d)("#GrantAwardTitle")
             ),
-            A.createElement("div", { className: O.Description }, t)
+            v.createElement("div", { className: O.Description }, t)
           );
         },
         x = Object(r.a)(function(e) {
@@ -784,35 +784,35 @@
             a = e.children,
             r = t.GetUserPointBalance(),
             n = r && r.toNumber().toLocaleString();
-          return A.createElement(
+          return v.createElement(
             "div",
             { className: O.Footer },
-            A.createElement(
+            v.createElement(
               "div",
               { className: O.Left },
-              A.createElement(w.A, { className: O.BalanceIcon }),
-              A.createElement(
+              v.createElement(w.z, { className: O.BalanceIcon }),
+              v.createElement(
                 "div",
                 { className: O.BalanceDetails },
-                A.createElement(
+                v.createElement(
                   "div",
                   { className: O.BalanceLabel },
                   Object(R.d)("#YourBalance")
                 ),
-                A.createElement("div", { className: O.BalanceAmount }, n)
+                v.createElement("div", { className: O.BalanceAmount }, n)
               )
             ),
-            A.createElement(
+            v.createElement(
               "div",
               { className: O.Right },
-              A.createElement(
+              v.createElement(
                 "div",
                 { className: O.Actions },
-                A.Children.map(a, function(e) {
-                  return A.createElement("div", { className: O.Action }, e);
+                v.Children.map(a, function(e) {
+                  return v.createElement("div", { className: O.Action }, e);
                 })
               ),
-              A.createElement(
+              v.createElement(
                 "a",
                 {
                   className: O.FooterLink,
@@ -826,7 +826,7 @@
         U = function(e) {
           var t = e.className,
             a = Object(s.f)(e, ["className"]);
-          return A.createElement(
+          return v.createElement(
             _.a,
             Object(s.a)({}, a, { className: Object(C.a)(t, O.SubmitButton) })
           );
@@ -834,13 +834,13 @@
         H = function(e) {
           var t = e.className,
             a = Object(s.f)(e, ["className"]);
-          return A.createElement(
+          return v.createElement(
             _.a,
             Object(s.a)({}, a, { className: Object(C.a)(t, O.BackButton) })
           );
         },
         V = function() {
-          return A.createElement("div", { className: O.Divider });
+          return v.createElement("div", { className: O.Divider });
         },
         q = (function(a) {
           function e(e) {
@@ -867,7 +867,7 @@
                   "alreadyAwarded",
                   "cost"
                 ]);
-              return A.createElement(
+              return v.createElement(
                 _.a,
                 Object(s.a)(
                   {
@@ -882,36 +882,36 @@
                   },
                   o
                 ),
-                A.createElement(
+                v.createElement(
                   "div",
                   { className: O.IconCtn },
-                  A.createElement(D, {
+                  v.createElement(D, {
                     reactionType: t,
                     bForceAnimated: this.state.bHovered,
                     bDisableAnimation: r
                   })
                 ),
-                A.createElement("div", { className: O.Label }, N(t)),
-                A.createElement(W, { className: O.Points }, n.toLocaleString()),
-                r && A.createElement(b, { className: O.IconCheckMark })
+                v.createElement("div", { className: O.Label }, N(t)),
+                v.createElement(Q, { className: O.Points }, n.toLocaleString()),
+                r && v.createElement(b, { className: O.IconCheckMark })
               );
             }),
             Object(s.c)([n.a], e.prototype, "handleMouseOver", null),
             Object(s.c)([n.a], e.prototype, "handleMouseOut", null),
             e
           );
-        })(A.PureComponent),
-        Q = function() {
-          return A.createElement(p.a, { size: "large", className: O.Loading });
+        })(v.PureComponent),
+        z = function() {
+          return v.createElement(p.a, { size: "large", className: O.Loading });
         },
-        W = function(e) {
+        Q = function(e) {
           var t = e.children,
             a = e.className,
             r = Object(s.f)(e, ["children", "className"]);
-          return A.createElement(
+          return v.createElement(
             "span",
             Object(s.a)({}, r, { className: Object(C.a)(a, O.PointsAmount) }),
-            A.createElement(w.A, { className: O.PointsAmountIcon }),
+            v.createElement(w.z, { className: O.PointsAmountIcon }),
             t
           );
         };

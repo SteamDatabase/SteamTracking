@@ -808,9 +808,9 @@ function UpdateCaptcha(data)
 			$J( '#captcha_entry_recaptcha' ).show();
 			$J( '#captcha_entry_text' ).hide();
 			if ( g_recaptchaInstance !== null ) {
-				grecaptcha.reset( g_recaptchaInstance );
+				grecaptcha.enterprise.reset( g_recaptchaInstance );
 			} else {
-				g_recaptchaInstance = grecaptcha.render( 'captcha_entry_recaptcha', {
+				g_recaptchaInstance = grecaptcha.enterprise.render( 'captcha_entry_recaptcha', {
 					'sitekey': data.sitekey,
 					'theme': 'dark'
 				});

@@ -1526,9 +1526,9 @@ HelpWizard = {
 				$J( '#captcha_entry_text' ).hide();
 				$J( '#captcha_entry_recaptcha' ).show();
 				if ( this.m_reCaptchaInstance !== null ) {
-					grecaptcha.reset( this.m_reCaptchaInstance );
+					grecaptcha.enterprise.reset( this.m_reCaptchaInstance );
 				} else {
-					this.m_reCaptchaInstance = grecaptcha.render( 'captcha_entry_recaptcha', {
+					this.m_reCaptchaInstance = grecaptcha.enterprise.render( 'captcha_entry_recaptcha', {
 						'sitekey': data.sitekey,
 						'theme': 'dark'
 					});

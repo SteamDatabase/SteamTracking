@@ -298,6 +298,44 @@ p.currency_change_confirm_dialog_footer {
 }
 
 
+.content_two_column {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.content_two_column.left {
+	width: 300px;
+}
+
+.content_two_column.right {
+	vertical-align: top;
+	margin-left: 20px;
+	width: 300px;
+}
+
+@media screen and (max-width: 910px)
+{
+	html.responsive .content_two_column.left,
+	html.responsive .content_two_column.right {
+		width: auto;
+		display: block;
+		margin-left: 0;
+		margin-bottom: 8px;
+	}
+
+	.content_two_column.left {
+		width: auto;
+		margin-bottom: 25px;
+
+	}
+
+	.content_two_column.right {
+		width: auto;
+		margin-left: 0;
+	}
+}
+
+
 .account_settings_container {
 	background-color: rgba(0,0,0,0.2);
 	margin-bottom: 15px;
@@ -312,7 +350,18 @@ body.v6 .account_settings_container h2 {
 	margin: 5px 0 0px;
 	font-size: 17px;
 	letter-spacing: 2px;
+}
 
+body.v6 .account_settings_container h3 {
+	text-transform: uppercase;
+	color: #adc2cd;
+	margin: 15px 0 0px;
+	font-size: 15px;
+	letter-spacing: 1px;
+}
+
+body.v6 .account_settings_container .h3_content {
+	margin: 2px 4px 0px;
 }
 
 .account_settings_container p {
@@ -339,18 +388,24 @@ body.v6 .account_settings_container h2 {
 	line-height: 23px;
 }
 
-.account_settings_container blockquote.tag_form {
+.account_settings_container blockquote.tag_form,
+.account_settings_container div.word_form {
 	margin-top: 12px;
 }
-.tag_form > form#app_tag_form {
+.tag_form > form#app_tag_form,
+.word_form > form#text_filter_custom_banned_words_form,
+.word_form > form#text_filter_custom_clean_words_form {
 	width: 300px;
 	margin-bottom: 0px;
 }
-.tag_form .sub_text {
+.tag_form .sub_text,
+.word_form .sub_text {
 	font-size: 12px;
 }
 
-.app_tag_form_ctn button {
+.app_tag_form_ctn button,
+.text_filter_custom_banned_words_form_ctn button,
+.text_filter_custom_clean_words_form_ctn button {
 	float: right;
 	margin-left: 12px;
 }
@@ -359,16 +414,28 @@ body.v6 .account_settings_container h2 {
 	margin-right: 25px;
 }
 
-.app_tag_form_ctn .gray_bevel.for_text_input {
+.app_tag_form_ctn .gray_bevel.for_text_input,
+.text_filter_custom_banned_words_form_ctn .gray_bevel.for_text_input,
+.text_filter_custom_clean_words_form_ctn .gray_bevel.for_text_input {
 	height: 27px;
 	overflow: hidden;
 }
 
-.app_tag_form_ctn .gray_bevel.for_text_input input {
+.app_tag_form_ctn .gray_bevel.for_text_input input,
+.text_filter_custom_banned_words_form_ctn .gray_bevel.for_text_input input,
+.text_filter_custom_clean_words_form_ctn .gray_bevel.for_text_input input {
 	margin-top: 2px;
 	height: 25px;
 	line-height: 25px;
 
+}
+
+.account_settings_container hr {
+	border: 0;
+	height: 0;
+	border-top: 0px solid rgba(0, 0, 0, 0.1);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+	margin-top: 4px;
 }
 
 .account_preferences input.gray_bevel,
@@ -437,6 +504,23 @@ body.v6 .account_settings_container h2 {
 	vertical-align: top;
 	background-image: url( '/public/images/v6/delete_search_term.png' );
 	margin-left: 5px;
+}
+
+#text_filter_custom_banned_words_ctn .tag_downvoted,
+#text_filter_custom_clean_words_ctn .tag_downvoted {
+	display: inline-block;
+	white-space: nowrap;
+	margin: 4px 4px 4px 0;
+}
+
+#text_filter_custom_banned_words_ctn .tag_downvoted > div {
+	background-color: #6e4c4a;
+	color: #cedbe9;
+}
+
+#text_filter_custom_clean_words_ctn .tag_downvoted > div {
+	background-color: #1d423b;
+	color: #cedbe9;
 }
 
 .queue_customize,

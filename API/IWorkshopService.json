@@ -43,6 +43,11 @@
                     "name": "make_workshop_files_subscribable",
                     "type": "bool",
                     "optional": false
+                },
+                {
+                    "name": "associated_workshop_file_for_direct_payments",
+                    "type": "{message}",
+                    "optional": false
                 }
             ]
         },

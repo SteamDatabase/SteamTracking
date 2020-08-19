@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6037453";
+var CLSTAMP = "6047761";
 !(function(e) {
   function t(t) {
     for (
@@ -489,6 +489,7 @@ var CLSTAMP = "6037453";
         STEAMTV_BASE_URL: "",
         HELP_BASE_URL: "",
         PARTNER_BASE_URL: "",
+        STATS_BASE_URL: "",
         BASE_URL_STORE_CDN_ASSETS: "",
         IN_CLIENT: !1,
         USE_POPUPS: !1,
@@ -595,6 +596,8 @@ var CLSTAMP = "6037453";
         ? c.HELP_BASE_URL
         : e.startsWith(c.STEAMTV_BASE_URL)
         ? c.STEAMTV_BASE_URL
+        : e.startsWith(c.STATS_BASE_URL)
+        ? c.STATS_BASE_URL
         : "";
     }
     function p() {
@@ -609,6 +612,8 @@ var CLSTAMP = "6037453";
         ? "help"
         : e.startsWith(c.STEAMTV_BASE_URL)
         ? "steamtv"
+        : e.startsWith(c.STATS_BASE_URL)
+        ? "stats"
         : "";
     }
   },
@@ -973,7 +978,7 @@ var CLSTAMP = "6037453";
         return I;
       }),
       n.d(t, "b", function() {
-        return y;
+        return S;
       });
     var r = n("mrSG"),
       i = n("oh5H"),
@@ -1128,7 +1133,7 @@ var CLSTAMP = "6037453";
         if (!u.bGranularFutureTime)
           return (
             c.b(n.getTime() - a.getTime()),
-            n.getFullYear() == a.getFullYear() ? S(n) : O(n)
+            n.getFullYear() == a.getFullYear() ? y(n) : O(n)
           );
         c.b(new Date().setHours(24, 0, 0, 0) - a.getTime());
         var s = new Date();
@@ -1140,7 +1145,7 @@ var CLSTAMP = "6037453";
             : (s.setDate(s.getDate() + 1),
               n < s
                 ? Object(i.d)("#Time_Tomorrow")
-                : (s.setDate(s.getDate() + 5), n < s ? y(n) : I(n, !0)))
+                : (s.setDate(s.getDate() + 5), n < s ? S(n) : I(n, !0)))
         );
       }
       c.b(new Date().setHours(24, 0, 0, 0) - a.getTime());
@@ -1162,7 +1167,7 @@ var CLSTAMP = "6037453";
           ? Object(i.d)("#TimeSince_1Week")
           : Object(i.d)("#TimeSince_XWeeks", h);
       }
-      return n.getFullYear() == a.getFullYear() ? S(n) : O(n);
+      return n.getFullYear() == a.getFullYear() ? y(n) : O(n);
     }
     var _ = new Map(),
       v = new Map(),
@@ -1183,7 +1188,7 @@ var CLSTAMP = "6037453";
         r)
       );
     }
-    function y(e) {
+    function S(e) {
       var t = _.get(e.getDay());
       return (
         t ||
@@ -1194,7 +1199,7 @@ var CLSTAMP = "6037453";
         t)
       );
     }
-    function S(e) {
+    function y(e) {
       var t = v.get(e.getMonth());
       return (
         t ||
@@ -1918,7 +1923,7 @@ PERFORMANCE OF THIS SOFTWARE.
                   )
                 : e.account_mismatch
                 ? r.createElement(
-                    y,
+                    S,
                     { render: this.props.controller.GetPreRenderedHTML() },
                     r.createElement(
                       "div",
@@ -1976,7 +1981,7 @@ PERFORMANCE OF THIS SOFTWARE.
                     )
                   )
                 : r.createElement(
-                    y,
+                    S,
                     { render: this.props.controller.GetPreRenderedHTML() },
                     r.createElement(
                       "div",
@@ -2037,7 +2042,7 @@ PERFORMANCE OF THIS SOFTWARE.
           t
         );
       })(r.Component);
-    function y(e) {
+    function S(e) {
       return r.createElement(
         "div",
         { className: "ChatMessageInvite" },
@@ -2070,10 +2075,10 @@ PERFORMANCE OF THIS SOFTWARE.
       );
     }
     window.AssertMsg = u.a;
-    var S,
+    var y,
       O,
-      C,
-      E = new c.a();
+      E,
+      C = new c.a();
     function A(e) {
       var t;
       try {
@@ -2083,7 +2088,7 @@ PERFORMANCE OF THIS SOFTWARE.
       var n = new v(t);
       i.render(r.createElement(b, { controller: n }), e);
     }
-    (window.ClientConnectionAPI = E),
+    (window.ClientConnectionAPI = C),
       document.addEventListener("DOMContentLoaded", function() {
         Object(o.b)(),
           (function() {
@@ -2106,19 +2111,19 @@ PERFORMANCE OF THIS SOFTWARE.
       }),
       (window.LocalizationReady = function(e, t, n) {
         if ("english" !== t)
-          "friendsui" == e ? (S = n) : "shared" == e && (O = n);
-        else if ("shared" == e) C = n;
+          "friendsui" == e ? (y = n) : "shared" == e && (O = n);
+        else if ("shared" == e) E = n;
         else {
           var r = void 0,
             i = null,
             o = void 0,
             c = null;
-          void 0 !== S ? ((r = S), (i = n)) : (r = n),
-            void 0 !== O ? ((o = O), (c = C)) : (o = C),
+          void 0 !== y ? ((r = y), (i = n)) : (r = n),
+            void 0 !== O ? ((o = O), (c = E)) : (o = E),
             a.c.InitFromObjects(r, i, o, c),
-            (S = void 0),
+            (y = void 0),
             (O = void 0),
-            (C = void 0);
+            (E = void 0);
         }
       });
   },

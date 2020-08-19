@@ -33,6 +33,18 @@
             ]
         },
         {
+            "name": "GetClientUpdateHosts",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "cached_signature",
+                    "type": "string",
+                    "optional": false
+                }
+            ]
+        },
+        {
             "name": "GetDepotPatchInfo",
             "version": 1,
             "httpmethod": "GET",

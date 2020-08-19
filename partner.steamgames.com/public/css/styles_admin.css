@@ -3707,3 +3707,8 @@ img.category_icon {
 {
 	white-space: pre-line;
 }
+
+.formCtn {
+    background: #2C2E35;
+    padding: 12px;
+}

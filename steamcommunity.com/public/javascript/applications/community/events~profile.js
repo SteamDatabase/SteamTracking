@@ -224,7 +224,7 @@
                         disabled: t,
                         "data-tooltip-text": r
                       },
-                      this.props.buttonIcon || c.a.createElement(l.o, null),
+                      this.props.buttonIcon || c.a.createElement(l.m, null),
                       a && c.a.createElement(u.d, null)
                     ))
               );
@@ -916,11 +916,11 @@
                           title: Object(f.d)("#AddonPicker_RecentlyUsed"),
                           className: Object(b.a)(h.a.PickerTab, h.a.Clock)
                         },
-                        m.createElement(I.g, null)
+                        m.createElement(I.f, null)
                       );
                     },
                     renderContent: function() {
-                      return m.createElement(G, {
+                      return m.createElement(x, {
                         store: n,
                         hoverStore: r,
                         onEmoticonSelect: function(e) {
@@ -946,11 +946,11 @@
                               title: Object(f.d)("#AddonPicker_Emoticons"),
                               className: h.a.PickerTab
                             },
-                            m.createElement(I.o, null)
+                            m.createElement(ee, null)
                           );
                         },
                         renderContent: function() {
-                          return m.createElement(x, {
+                          return m.createElement(G, {
                             store: n,
                             hoverStore: r,
                             onItemSelect: function(e) {
@@ -968,7 +968,7 @@
                               title: Object(f.d)("#AddonPicker_Stickers"),
                               className: h.a.PickerTab
                             },
-                            m.createElement(I.e, null)
+                            m.createElement(X, null)
                           );
                         },
                         renderContent: function() {
@@ -988,7 +988,7 @@
                               title: Object(f.d)("#AddonPicker_RoomEffects"),
                               className: h.a.PickerTab
                             },
-                            m.createElement(I.n, null)
+                            m.createElement(te, null)
                           );
                         },
                         renderContent: function() {
@@ -1048,11 +1048,11 @@
                             title: Object(f.d)("#AddonPicker_Emoticons"),
                             className: h.a.PickerTab
                           },
-                          m.createElement(I.o, null)
+                          m.createElement(ee, null)
                         );
                       },
                       renderContent: function() {
-                        return m.createElement(K, {
+                        return m.createElement(V, {
                           store: t.props.emoticonStore,
                           hoverStore: t.props.emoticonHoverStore,
                           onItemSelect: function(e) {
@@ -1069,7 +1069,7 @@
             e
           );
         })(m.Component),
-        G = (function(t) {
+        x = (function(t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (e.state = { filter: "" }), e;
@@ -1092,7 +1092,7 @@
                     items: u.a.FilterEmoticons(T(n), a),
                     onItemSelect: i,
                     renderItem: function(e) {
-                      return m.createElement(V, {
+                      return m.createElement(K, {
                         emoticon: e,
                         emoticonHoverStore: r
                       });
@@ -1149,7 +1149,7 @@
             e
           );
         })(m.Component),
-        x = (function(t) {
+        G = (function(t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (e.state = { filter: "" }), e;
@@ -1171,7 +1171,7 @@
                 items: s,
                 onItemSelect: i,
                 renderItem: function(e) {
-                  return m.createElement(V, {
+                  return m.createElement(K, {
                     emoticon: e,
                     emoticonHoverStore: r
                   });
@@ -1384,7 +1384,7 @@
             e
           );
         })(m.Component),
-        K = (function(t) {
+        V = (function(t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (e.state = { filter: "" }), e;
@@ -1406,7 +1406,7 @@
                     items: u.a.FilterEmoticons(T(n), o),
                     onItemSelect: i,
                     renderItem: function(e) {
-                      return m.createElement(V, {
+                      return m.createElement(K, {
                         emoticon: e,
                         emoticonHoverStore: r
                       });
@@ -1440,7 +1440,7 @@
                         .slice(0, 1e3),
                       onItemSelect: i,
                       renderItem: function(e) {
-                        return m.createElement(V, {
+                        return m.createElement(K, {
                           emoticon: e,
                           emoticonHoverStore: r
                         });
@@ -1465,7 +1465,7 @@
             (e = Object(l.c)([i.a], e))
           );
         })(m.Component),
-        V = function(e) {
+        K = function(e) {
           var t = e.emoticon,
             n = e.emoticonHoverStore,
             r = !t.last_used && t.time_received;
@@ -1611,6 +1611,53 @@
         );
       }
       m.Component;
+      function X(e) {
+        return m.createElement(
+          "svg",
+          Object(l.a)({ viewBox: "0 0 59 59", width: "32" }, e),
+          m.createElement(
+            "switch",
+            null,
+            m.createElement(
+              "g",
+              null,
+              m.createElement("path", {
+                d:
+                  "M58 30.2v-.1L23.4 58.5l-.2-.3-.1.1C9.9 55.4 0 43.6 0 29.5 0 13.2 13.2 0 29.5 0S59 13.2 59 29.4l-1 .8zm0-1.5c-5-2.2-16.1-4-26 4.6-9.8 8.4-10.3 18.8-9.2 23.9C10.3 54.2 1 42.9 1 29.5 1 13.8 13.8 1 29.5 1 45 1 57.6 13.3 58 28.7zm-.8.8L23.7 56.9c-1-4.8-.5-14.8 8.9-22.9 9.4-8 19.7-6.6 24.6-4.5z",
+                fillRule: "evenodd",
+                clipRule: "evenodd",
+                fill: "#fff"
+              })
+            )
+          )
+        );
+      }
+      function ee(e) {
+        return m.createElement(
+          "svg",
+          Object(l.a)({ viewBox: "0 0 60 52", width: "32" }, e),
+          m.createElement("path", {
+            d:
+              "M.5 5.5C.5 2.5 3 0 6 0h48c3 0 5.5 2.5 5.5 5.5V35c0 3-2.5 5.5-5.5 5.5h-1.5c-.8 0-1.5.7-1.5 1.5v8.1c0 1.3-1.6 2-2.6 1.1L37.8 40.5H6C3 40.5.5 38 .5 35V5.5zM6 1C3.5 1 1.5 3 1.5 5.5V35c0 2.5 2 4.5 4.5 4.5h32.2l.1.1 10.8 10.8c.3.3.9.1.9-.4v-8c0-1.4 1.1-2.5 2.5-2.5H54c2.5 0 4.5-2 4.5-4.5V5.5C58.5 3 56.5 1 54 1H6zm24 31c6.6 0 12-5.4 12-12S36.6 8 30 8s-12 5.4-12 12 5.4 12 12 12zm0 1c7.2 0 13-5.8 13-13S37.2 7 30 7s-13 5.8-13 13 5.8 13 13 13zm-3.5-15c.8 0 1.5-.7 1.5-1.5s-.7-1.5-1.5-1.5-1.5.7-1.5 1.5.7 1.5 1.5 1.5zm8.5-1.5c0 .8-.7 1.5-1.5 1.5s-1.5-.7-1.5-1.5.7-1.5 1.5-1.5 1.5.7 1.5 1.5zM24.5 22c0 2.5 2 4.5 4.5 4.5h2c2.5 0 4.5-2 4.5-4.5h-1c0 1.9-1.6 3.5-3.5 3.5h-2c-1.9 0-3.5-1.6-3.5-3.5h-1z",
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            fill: "#fff"
+          })
+        );
+      }
+      function te(e) {
+        return m.createElement(
+          "svg",
+          Object(l.a)({ viewBox: "0 0 60 52", width: "32" }, e),
+          m.createElement("path", {
+            d:
+              "M16 8.9l1.9 5.1c.2.5.6 1 1.2 1.2l5.1 1.9-5.1 1.9c-.5.2-1 .6-1.2 1.2L16 25.1 14.1 20c-.2-.5-.6-1-1.2-1.2l-5-1.8 5.1-1.9c.5-.2 1-.6 1.2-1.2l1.8-5zm-.9-.4c.3-.9 1.6-.9 1.9 0l1.9 5.1c.1.3.3.5.6.6l5.1 1.9c.9.3.9 1.6 0 1.9l-5.1 1.9c-.3.1-.5.3-.6.6L17 25.6c-.3.9-1.6.9-1.9 0l-1.9-5.1c-.1-.3-.3-.5-.6-.6L7.5 18c-.9-.3-.9-1.6 0-1.9l5.1-1.9c.3-.1.5-.3.6-.6l1.9-5.1zm17.8 15.4l-1.9-5-1.9 5.1c-.2.5-.6 1-1.2 1.2l-5 1.8 5.1 1.9c.5.2 1 .6 1.2 1.2l1.9 5.1 1.9-5.1c.2-.5.6-1 1.2-1.2l5.1-1.9-5.1-1.9c-.7-.2-1.1-.6-1.3-1.2zm-1-5.4c-.3-.9-1.6-.9-1.9 0l-1.9 5.1c-.1.3-.3.5-.6.6l-5.1 1.9c-.9.3-.9 1.6 0 1.9l5.1 1.9c.3.1.5.3.6.6l1.9 5.1c.3.9 1.6.9 1.9 0l1.9-5.1c.1-.3.3-.5.6-.6l5.1-1.9c.9-.3.9-1.6 0-1.9l-5.1-1.9c-.3-.1-.5-.3-.6-.6l-1.9-5.1zM43 4.9l1.9 5.1c.2.5.6 1 1.2 1.2l5.1 1.9-5.1 1.9c-.5.2-1 .6-1.2 1.2L43 21.1 41.1 16c-.2-.5-.6-1-1.2-1.2l-5-1.8 5.1-1.9c.5-.2 1-.6 1.2-1.2l1.8-5zm-.9-.4c.3-.9 1.6-.9 1.9 0l1.9 5.1c.1.3.3.5.6.6l5.1 1.9c.9.3.9 1.6 0 1.9l-5.1 1.9c-.3.1-.5.3-.6.6L44 21.6c-.3.9-1.6.9-1.9 0l-1.9-5.1c-.1-.3-.3-.5-.6-.6L34.5 14c-.9-.3-.9-1.6 0-1.9l5.1-1.9c.3-.1.5-.3.6-.6l1.9-5.1z",
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            fill: "#fff"
+          })
+        );
+      }
     },
     KZds: function(e, t, n) {
       e.exports = {
@@ -3528,7 +3575,7 @@
             r
           );
         })(s),
-        G = (function(n) {
+        x = (function(n) {
           function r(e) {
             void 0 === e && (e = null);
             var t = n.call(this) || this;
@@ -3545,7 +3592,7 @@
                 r.sm_m ||
                   (r.sm_m = {
                     proto: r,
-                    fields: { events: { n: 1, c: x, r: !0, q: !0 } }
+                    fields: { events: { n: 1, c: G, r: !0, q: !0 } }
                   }),
                 r.sm_m
               );
@@ -3583,7 +3630,7 @@
             r
           );
         })(s),
-        x = (function(n) {
+        G = (function(n) {
           function r(e) {
             void 0 === e && (e = null);
             var t = n.call(this) || this;
@@ -3731,7 +3778,7 @@
           });
         }),
         (u.GetUserPartnerEventViewStatus = function(e, t) {
-          return e.SendMsg("Community.GetUserPartnerEventViewStatus#1", t, G, {
+          return e.SendMsg("Community.GetUserPartnerEventViewStatus#1", t, x, {
             bConstMethod: !0,
             ePrivilege: 1
           });
