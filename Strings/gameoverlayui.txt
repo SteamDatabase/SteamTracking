@@ -2,14 +2,16 @@
 __TEXT
 __text
 __TEXT
+@s
+@s
 __stubs
 __TEXT
 __stub_helper
 __TEXT
+p>%
+p>%
 __cstring
 __TEXT
-O%
-O%
 __gcc_except_tab__TEXT
 __const
 __TEXT
@@ -48,7 +50,6 @@ __DATA
 q=
 __common
 __DATA
-pH
 H
 __LINKEDIT
 L
@@ -9498,8 +9499,8 @@ developer
 Steam pid that launched us
 VGUI_Application_001
 OK
-Aug  6 2020
-15:05:36
+Aug 17 2020
+13:31:32
 crashhandler003
 gameoverlayui
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/overlay/gameoverlayui/main.cpp
@@ -13045,6 +13046,7 @@ streaming
 controller
 controller_ui
 metrics
+china
 Invalid spew group
 @bEnableSpewThrottle
 @bEnableLogTearOff
@@ -13148,27 +13150,25 @@ Nov
 Dec
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
-UK
 0
 p
 p
 0
-D$
 ?#
+($
+$
+2$
+-$
 $
 $
-$
-oA
-#
-wI
-2#
+5A
+C#
 0
 p
 #
-C#
+#
 #
 m!
-"#
 #
 #
 #
@@ -13182,25 +13182,25 @@ m!
 #
 #
 #
+X@
+Q"
 "
-B"
+@"
 @
 @
 @
 @
-@
-@
+"
 "
 "
 d
-\?
+H?
 
 
 
 
 
 
-.!
 p
 0
 0
@@ -13233,32 +13233,30 @@ p
 p
 p
 0
-!
 !
 @
 =
+,
+'
 B
+T%
 0
-z
-5
-5
-?
 n
++@
 ?
-3?
-3@
+8?
+g@
 Hi
 E
 E
 E
 E
-0
-'4
-[@
+@
 0
 p
 I
 I
+4D
 5
 $
 @
@@ -13268,12 +13266,12 @@ $
 @
 ?
 ?
+"
 A
 Hc
-C-
 =
-@,
-J
+w,
+:A
 Hc
 ?
 ?
@@ -13327,6 +13325,8 @@ c
 P
 (
 =
+H;=
+Z&
 U
 @
 @
@@ -13372,7 +13372,6 @@ B
 @
 p
 >
-p:
 E
 0
 0
@@ -13422,6 +13421,7 @@ Hc
 Hc
 >
 0
+9
 9
 9
 p
@@ -13509,46 +13509,57 @@ P
 "
 3
 D
-N7
-I7
-D7
-l7
-f7
+M7
+H7
+t7
+n7
+/7
 @
 +
+_'
+@'
 e
-]%
 4
 4
-v
+%
+c%
 4
 4
-4
-L95Li3
+'%
+n3
 3
 3
-Z2
-m2
+3
+k$
 d
 ~
 /
-X-
+f-
 !
+`
+C
 
 
 
 
-8-
 
-G-
+g
+
+
+)-
+f-
 &
 &
+3-
 t=
 =
 =
 @
+<,
+(,
 
-"
+',
+,
 ,
 ,
 ,
@@ -13559,8 +13570,8 @@ G-
 uV%
 
 
-h+
 E
+m+
 
 
 
@@ -13612,8 +13623,8 @@ E
 d
 d
 d
-](
 =
+Hc+K(
 
 =
 @
@@ -13628,11 +13639,12 @@ d
 @
 @
 @
-E'
 0
-a'
 E
-d'
+Hc5@`'
+U'
+I'
+Hc5QI'
 b
 _
 O

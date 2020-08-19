@@ -411,5 +411,9 @@
 "[english]vgui_HTMLOpenDevTools"	"Open Developer Tools"
 "vgui_continue"	"계속"
 "[english]vgui_continue"	"Continue"
+"vgui_ShuttingDown"	"종료 중..."
+"[english]vgui_ShuttingDown"	"Shutting down..."
+"vgui_HTMLInspectElement"	"요소 검사"
+"[english]vgui_HTMLInspectElement"	"Inspect Element"
 }
 }

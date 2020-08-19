@@ -67,7 +67,7 @@
 "[english]Steam_Login_Cancel"	"Cancel"
 "Steam_AccountName"	"Tilin nimi"
 "[english]Steam_AccountName"	"Account name"
-"app_task_screenshots"	"Kuvankaappaukset"
+"app_task_screenshots"	"Kuvakaappaukset"
 "[english]app_task_screenshots"	"Screenshots"
 "Steam_NeverConnectedNoConnection"	"Tälle tilille '%account%' ei ole koskaan kirjauduttu tällä koneella ja yhteyttä Steamin palvelimiin ei saada. \nJotkin palvelut eivät ole saatavilla. Steam yrittää luoda yhteyttä uudelleen ja palvelut tulevat saataville yhteyden luomisen onnistuttua."
 "[english]Steam_NeverConnectedNoConnection"	"This account '%account%' has never been accessed on this machine before and a connection to steam servers cannot be made.\nSome services will not be available. Steam will continue to attempt the connection and services will be available upon success."

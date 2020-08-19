@@ -204,6 +204,8 @@ This should take less than a minute."
 "SteamUI_JoinDialog_Cancel_Btn"		"Cancel"
 "SteamUI_JoinDialog_OverrideThrottle"	"Override current bandwidth limit"
 "SteamUI_JoinDialog_SkipUpdateInfo" "Skip the update and play now"
+
+"SteamUI_JoinDialog_ProcessingShaderCache" "Processing Vulkan shaders..."
 "SteamUI_JoinDialog_SkipShaderProcessing" "Skip"
 
 "SteamUI_JoinDialog_UpdateAvailable_Title"				"Update Available"

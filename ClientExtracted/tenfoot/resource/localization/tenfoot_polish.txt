@@ -14955,4 +14955,8 @@ Playing now will send {s:user} a notice that it's time to quit."
 "[english]Library_Details_FieldLabel_FlickStickOuterRing"	"Outer Ring Binding"
 "Library_Details_FieldLabel_TransitionTime"	"Długość szybkiego ruchu"
 "[english]Library_Details_FieldLabel_TransitionTime"	"Flick Duration"
+"Library_Details_SourceMode_FlickStick_Acton_Title"	"SRD: {s:action}"
+"[english]Library_Details_SourceMode_FlickStick_Acton_Title"	"FS: {s:action}"
+"Library_Details_SourceMode_Mouse_Joystick_Acton_Title"	"JJM: {s:action}"
+"[english]Library_Details_SourceMode_Mouse_Joystick_Acton_Title"	"JM: {s:action}"
 }

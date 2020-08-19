@@ -1127,7 +1127,7 @@
 "[english]Steam_Settings_Broadcast_ShowChat"	"Show viewer's chat in game:"
 "Steam_Settings_Broadcast_PermissionsHeader"	"Налаштування конфіденційності:"
 "[english]Steam_Settings_Broadcast_PermissionsHeader"	"Privacy setting:"
-"Steam_Settings_Broadcast_BitrateHeader"	"Макс. швидкість потоку:"
+"Steam_Settings_Broadcast_BitrateHeader"	"Максимальна швидкість потоку:"
 "[english]Steam_Settings_Broadcast_BitrateHeader"	"Maximum Bitrate:"
 "Steam_Settings_Broadcast_DimensionsHeader"	"Роздільність відео:"
 "[english]Steam_Settings_Broadcast_DimensionsHeader"	"Video Dimensions:"

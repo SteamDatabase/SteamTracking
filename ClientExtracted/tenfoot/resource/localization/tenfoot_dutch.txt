@@ -14956,4 +14956,8 @@ Zie de UI in het spel voor details in verband met controllerbindings."
 "[english]Library_Details_FieldLabel_FlickStickOuterRing"	"Outer Ring Binding"
 "Library_Details_FieldLabel_TransitionTime"	"Duur flick"
 "[english]Library_Details_FieldLabel_TransitionTime"	"Flick Duration"
+"Library_Details_SourceMode_FlickStick_Acton_Title"	"FS: {s:action}"
+"[english]Library_Details_SourceMode_FlickStick_Acton_Title"	"FS: {s:action}"
+"Library_Details_SourceMode_Mouse_Joystick_Acton_Title"	"JM: {s:action}"
+"[english]Library_Details_SourceMode_Mouse_Joystick_Acton_Title"	"JM: {s:action}"
 }

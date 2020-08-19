@@ -5224,7 +5224,7 @@ Set a category for this game to help you find it quickly and organize your Libra
 "[english]SteamUI_SpecialSurvey_Error_Title"	"Survey Error"
 "SteamUI_SpecialSurvey_Error_InvalidID"	"Identifiant d'enquête non valide"
 "[english]SteamUI_SpecialSurvey_Error_InvalidID"	"Invalid survey ID"
-"SteamUI_SpecialSurvey_Error_TryAgain"	"Un problème de communication avec les serveurs Steam a été rencontré. Veuillez réessayer plus tard."
+"SteamUI_SpecialSurvey_Error_TryAgain"	"Un problème de communication avec les serveurs Steam s'est produit. Veuillez réessayer plus tard."
 "[english]SteamUI_SpecialSurvey_Error_TryAgain"	"There was a problem communicating with the Steam servers. Please try again later."
 "SteamUI_SpecialSurvey_Error_NotOnline"	"Vous devez être connecté pour participer à cette enquête."
 "[english]SteamUI_SpecialSurvey_Error_NotOnline"	"You must be online to take this survey."

@@ -1106,7 +1106,7 @@
 "[english]SteamUI_JoinDialog_KeyRequestFailed_Text"	"Failed to contact key server"
 "SteamUI_JoinDialog_KeyRequestPending_Title"	"Erro"
 "[english]SteamUI_JoinDialog_KeyRequestPending_Title"	"Error"
-"SteamUI_JoinDialog_KeyRequestPending_Text"	"Pedido de chave pendente"
+"SteamUI_JoinDialog_KeyRequestPending_Text"	"Solicitação de código pendente"
 "[english]SteamUI_JoinDialog_KeyRequestPending_Text"	"Key request pending"
 "Steam_NoLongerOwnsGame_Title"	"Erro"
 "[english]Steam_NoLongerOwnsGame_Title"	"Error"
@@ -14959,4 +14959,8 @@ Com o modo joystick estilo rato, podes jogar com um comando mas com a precisão 
 "[english]Library_Details_FieldLabel_FlickStickOuterRing"	"Outer Ring Binding"
 "Library_Details_FieldLabel_TransitionTime"	"Duração do Flick Stick"
 "[english]Library_Details_FieldLabel_TransitionTime"	"Flick Duration"
+"Library_Details_SourceMode_FlickStick_Acton_Title"	"FS: {s:action}"
+"[english]Library_Details_SourceMode_FlickStick_Acton_Title"	"FS: {s:action}"
+"Library_Details_SourceMode_Mouse_Joystick_Acton_Title"	"RJ: {s:action}"
+"[english]Library_Details_SourceMode_Mouse_Joystick_Acton_Title"	"JM: {s:action}"
 }

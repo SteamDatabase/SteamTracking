@@ -528,6 +528,7 @@ message CMsgDownloadRateStatistics {
 	optional uint32 cell_id = 1;
 	repeated .CMsgDownloadRateStatistics.StatsInfo stats = 2;
 	optional uint32 throttling_kbps = 3;
+	optional uint32 steam_realm = 4;
 }
 
 message CMsgClientRequestAccountData {
