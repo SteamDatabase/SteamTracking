@@ -15757,8 +15757,8 @@
           type: 20,
           tags: ["curator", "curator_public", "audience_followers"]
         },
-        rt = k()("2020-06-16T10:00:00-07:00").unix(),
-        ot = k()("2020-06-22T10:00:00-07:00").unix(),
+        rt = k()("2020-10-07T10:00:00-07:00").unix(),
+        ot = k()("2020-10-13T10:00:00-07:00").unix(),
         it = {
           artist_statement: {
             name: "#EventCategory_SteamGameFestival_ArtistStatement",
@@ -15893,7 +15893,8 @@
               ? (("dev" != H.b.WEB_UNIVERSE && "beta" != H.b.WEB_UNIVERSE) ||
                   console.log(
                     "DEV_DEBUG: COptInPartnerAppStore loading optin payload: " +
-                      e.length
+                      e.length,
+                    e
                   ),
                 e.forEach(function(e) {
                   e.opt_in = Boolean(e.opt_in);
@@ -16568,7 +16569,7 @@
                     .Get()
                     .GetOptInForApp(
                       this.state.clanInfo.appid,
-                      "steamgamefestival_fall2020"
+                      "sale_game_festival_autumn2020"
                     )) && i.opt_in);
               var d = Ge.createElement(
                   "div",
@@ -16606,10 +16607,6 @@
                   Ge.createElement(
                     bt,
                     Object(U.a)({}, it.broadcast, { onCategoryChosen: o })
-                  ),
-                  Ge.createElement(
-                    bt,
-                    Object(U.a)({}, it.office_hours, { onCategoryChosen: o })
                   )
                 ),
                 u = Ge.createElement(
