@@ -447,6 +447,12 @@ GDynamicStore = {
 			{
 				GDynamicStore.s_rgDisplayedApps.push( rgAppIDs[i] );
 
+				// if this appid is a demo, also mark the parent app as displayed
+				var rgAppData = GStoreItemData.rgAppData[ rgAppIDs[i] ];
+				if ( rgAppData && rgAppData.demo_for_app )
+					GDynamicStore.s_rgDisplayedApps.push( rgAppData.demo_for_app );
+
+
 				if ( cItemsToMark !== undefined && --cItemsToMark == 0 )
 					break;
 			}
@@ -1890,6 +1896,16 @@ GStoreItemData = {
 		        return false;
 		    }
         }
+
+        if ( rgAppData.demo_for_app )
+		{
+			// skip demos for games that are already owned
+			if ( ApplicableSettings.games_already_in_library && !Settings.games_already_in_library && GDynamicStore.BIsAppOwned( rgAppData.demo_for_app ) )
+				return false;
+
+			if ( bStrict && ApplicableSettings.displayed_elsewhere && !Settings.displayed_elsewhere && GDynamicStore.s_rgDisplayedApps.indexOf( rgAppData.demo_for_app ) !== -1 )
+				return false;
+		}
 
 		if ( rgAppData.tagids && rgAppData.tagids.length != 0 )
 		{

@@ -221,7 +221,6 @@ GHomepage = {
 		try {
 			GHomepage.oDisplayListsRaw = rgParams.rgDisplayLists;
 			GHomepage.bShuffleInMainLegacy = rgParams.bShuffleInMainLegacy;
-			GHomepage.bAutumnSaleMainCap = rgParams.bAutumnSaleMainCap;
 			GHomepage.rgMarketingMessages = rgParams.rgMarketingMessages;
 			GHomepage.nMaxBroadcasts = rgParams.nMaxBroadcasts;
 			GHomepage.bAutoPlayingFeaturedBroadcast = rgParams.bAutoPlayingFeaturedBroadcast || false;
@@ -240,9 +239,6 @@ GHomepage = {
 			return;
 
 		this.bLoadedActiveData = true;
-
-		if ( GHomepage.bAutumnSaleMainCap )
-			return;
 
 		try {
 			if ( g_AccountID != 0 )
@@ -286,12 +282,9 @@ GHomepage = {
 		try {
 			if ( g_AccountID != 0 )
 			{
-				if ( !GHomepage.bAutumnSaleMainCap || ( GHomepage.bAutumnSaleMainCap && !GHomepage.bIsLimitedUser ) )
-				{
-					$J('#discovery_queue').append($J('#static_discovery_queue_elements').children());
-					$J('#static_discovery_queeue_elements').remove();
-					$J('.discovery_queue_ctn').show();
-				}
+				$J('#discovery_queue').append($J('#static_discovery_queue_elements').children());
+				$J('#static_discovery_queeue_elements').remove();
+				$J('.discovery_queue_ctn').show();
 			}
 
 		} catch(e) { OnHomepageException(e); }
@@ -503,7 +496,19 @@ GHomepage = {
 
 	ItemKey: function( rgItem )
 	{
-		return rgItem.appid ? 'a' + rgItem.appid : 'p' + rgItem.packageid;
+		if ( rgItem.appid )
+		{
+			// if this is a demo, use the parent appid
+			var unAppIDParent = GStoreItemData.rgAppData[ rgItem.appid ] && GStoreItemData.rgAppData[ rgItem.appid ].demo_for_app;
+
+			return 'a' + ( unAppIDParent || rgItem.appid );
+		}
+		else if ( rgItem.packageid )
+			return 'p' + rgItem.packageid;
+		else if ( rgItem.bundleid )
+			return 'b' + rgItem.bundleid;
+
+		return 'unknown';
 	},
 
 	RenderRecentApps: function()
@@ -549,12 +554,6 @@ GHomepage = {
 
 		var rgDisplayListCombined = false;
 
-		if ( GHomepage.bAutumnSaleMainCap && GHomepage.bMergeRecommendationsToHighlights )
-		{
-			$J('.home_cluster_ctn').hide();
-			return;
-		}
-
 		var oMainCapFilterOpts = { games_already_in_library: false, localized: true, displayed_elsewhere: false, only_current_platform: true };
 		var fnPreFilterList = function( list, shuffle ) {
 			if ( shuffle )
@@ -571,7 +570,6 @@ GHomepage = {
 			if ( rgFeatured.length >= 4 )
 				itemPrimary = rgFeatured.shift(); // set one aside; there are a lot of force-featured items so we'll try to put two up front
 
-			var rgRecommended = GHomepage.rgRecommendedGames;
 			var rgOtherRecs = fnPreFilterList( GHomepage.ZipLists(
 				GHomepage.rgRecentAppsByCreator, true,
 				GHomepage.rgCuratedAppsData.apps, true,
@@ -601,39 +599,23 @@ GHomepage = {
 		}
 		else
 		{
-			if ( GHomepage.bAutumnSaleMainCap )
-			{
-				rgDisplayListCombined = GHomepage.ZipLists(
-					GHomepage.rgRecommendedGames, true
-				);
-			}
-			else
-			{
+			var rgFeatured = GHomepage.MergeLists( GHomepage.oDisplayLists.main_cluster, false, GHomepage.oDisplayLists.top_sellers, true );
 
-				var rgFeatured = GHomepage.MergeLists( GHomepage.oDisplayLists.main_cluster, false, GHomepage.oDisplayLists.top_sellers, true );
-
-				rgDisplayListCombined = GHomepage.ZipLists(
-					GHomepage.oDisplayLists.main_cluster_legacy, false, // legacy
-					rgFeatured, false,
-					GHomepage.rgRecentAppsByCreator, true,
-					GHomepage.rgRecommendedGames, true,
-					GHomepage.rgCuratedAppsData.apps, true,
-					GHomepage.rgFriendRecommendations, true
-				);
-			}
+			rgDisplayListCombined = GHomepage.ZipLists(
+				GHomepage.oDisplayLists.main_cluster_legacy, false, // legacy
+				rgFeatured, false,
+				GHomepage.rgRecentAppsByCreator, true,
+				GHomepage.rgRecommendedGames, true,
+				GHomepage.rgCuratedAppsData.apps, true,
+				GHomepage.rgFriendRecommendations, true
+			);
 		}
 
 		rgDisplayListCombined = GHomepage.FilterItemsForDisplay(
 			rgDisplayListCombined, 'home', 6, 15, oMainCapFilterOpts
 		);
 
-		var rgMainCaps = rgDisplayListCombined.slice( 0, GHomepage.bAutumnSaleMainCap ? 8 : 12 );
-
-		if ( GHomepage.bAutumnSaleMainCap && rgMainCaps.length < 4 )
-		{
-			$J('.home_cluster_ctn').hide();
-			return;
-		}
+		var rgMainCaps = rgDisplayListCombined.slice( 0, 12 );
 
 		GDynamicStore.MarkAppDisplayed( rgMainCaps, 3 );	
 		if ( GHomepage.bShuffleInMainLegacy )
@@ -648,55 +630,19 @@ GHomepage = {
 			var oItem = rgMainCaps[i];
 			GHomepage.oFeaturedMainCapItems[ GHomepage.ItemKey( oItem ) ] = true;
 
+			var $MainCap =  GHomepage.BuildMainCapsuleItem( oItem, 'main_cluster', i + 1 );
+			if( !$MainCap )
+				continue;
 
-			if ( GHomepage.bAutumnSaleMainCap )
-			{
-				var $MainCap =  GHomepage.BuildMainCapsuleItem( oItem, 'main_cluster_recommended' );
-				if( !$MainCap )
-					continue;
+			$CapTarget.append( $MainCap );
 
-				$CapTarget.append( $MainCap );
-
-				var $SmallCap = GHomepage.BuildHomePageGenericCap( GHomepage.bNewRecommendations ? 'summer2018_standardview_recommend_neural' : 'main_cluster_recommended', oItem.appid, oItem.packageid, oItem.bundleid, {capsule_size: 'header', no_hover: true} );
-				$SmallCap.on('mouseenter', (function(index) { return function() {
-					GHomepage.MainCapCarousel.Advance( index );
-				}; })(i));
-
-				if ( i < 4 )
-				{
-					$J('.maincap_list .carousel_items_top').append(
-						$SmallCap
-					);
-				}
-				else if ( nMainCaps >= 8 )
-				{
-					$J('.maincap_list .carousel_items_bottom').append(
-						$SmallCap
-					);
-				}
-			}
-			else
-			{
-
-				var $MainCap =  GHomepage.BuildMainCapsuleItem( oItem, 'main_cluster', i + 1 );
-				if( !$MainCap )
-					continue;
-
-				$CapTarget.append( $MainCap );
-
-				var $Thumb = $J('<div />');
-				$CapThumbs.append( $Thumb );
-			}
+			var $Thumb = $J('<div />');
+			$CapThumbs.append( $Thumb );
 		}
 
 		GDynamicStore.DecorateDynamicItems( $CapTarget );
-		if ( GHomepage.bAutumnSaleMainCap )
-		{
-			GDynamicStore.DecorateDynamicItems($J('.maincap_list .carousel_items_top'));
-			GDynamicStore.DecorateDynamicItems( $J('.maincap_list .carousel_items_bottom' ));
-		}
 
-		GHomepage.MainCapCarousel = CreateFadingCarousel( $J('#home_maincap_v7'), GHomepage.bAutumnSaleMainCap ? 0 : 5 );
+		GHomepage.MainCapCarousel = CreateFadingCarousel( $J('#home_maincap_v7'), 5 );
 	},
 
 	GetRecommendationReasons: function( oItem )
