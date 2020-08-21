@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6049077";
+var CLSTAMP = "6052991";
 !(function(e) {
   function t(t) {
     for (
@@ -34402,7 +34402,8 @@ var CLSTAMP = "6049077";
                         : ((u.maxTime = Math.floor(p - s)), (u.ascending = !1)),
                       (m = I.a.get(r, {
                         params: u,
-                        cancelToken: t ? t.token : void 0
+                        cancelToken: t ? t.token : void 0,
+                        withCredentials: !0
                       })),
                       (n = m
                         .then(function(n) {
@@ -34441,12 +34442,16 @@ var CLSTAMP = "6049077";
                           });
                         })
                         .catch(function(t) {
+                          d.SetRequestInFlight(e, null);
+                          var n = Object(te.a)(t);
                           return (
-                            d.SetRequestInFlight(e, null),
                             console.error(
-                              "LoadAdditionalEvents hit error " +
-                                Object(te.a)(t)
+                              "LoadAdditionalEvents hit error " + n.strErrorMsg,
+                              n
                             ),
+                            "forward" == e
+                              ? (d.m_bFinishedSearchingForward = !0)
+                              : (d.m_bFinishedSearchingBackward = !0),
                             2
                           );
                         })),
@@ -35101,7 +35106,13 @@ var CLSTAMP = "6049077";
                             "sale_schedule_calendar",
                             "application_config"
                           ))
-                          ? [4, e.RegisterCalendarEventsAndModels(t)]
+                          ? ("dev" == D.c.WEB_UNIVERSE &&
+                              console.log(
+                                "SaleSectionEventScheduleInner loading initial events: " +
+                                  t.length,
+                                t
+                              ),
+                            [4, e.RegisterCalendarEventsAndModels(t)])
                           : [3, 2]
                         : [3, 4]
                     );

@@ -54424,7 +54424,8 @@
                             (c.ascending = !1)),
                         (p = _.a.get(n, {
                           params: c,
-                          cancelToken: m ? m.token : void 0
+                          cancelToken: m ? m.token : void 0,
+                          withCredentials: !0
                         })),
                         (t = p
                           .then(function(t) {
@@ -54463,12 +54464,17 @@
                             });
                           })
                           .catch(function(e) {
+                            d.SetRequestInFlight(u, null);
+                            var t = Object(g.a)(e);
                             return (
-                              d.SetRequestInFlight(u, null),
                               console.error(
                                 "LoadAdditionalEvents hit error " +
-                                  Object(g.a)(e)
+                                  t.strErrorMsg,
+                                t
                               ),
+                              "forward" == u
+                                ? (d.m_bFinishedSearchingForward = !0)
+                                : (d.m_bFinishedSearchingBackward = !0),
                               2
                             );
                           })),
@@ -60589,7 +60595,13 @@
                             "sale_schedule_calendar",
                             "application_config"
                           ))
-                          ? [4, t.RegisterCalendarEventsAndModels(n)]
+                          ? ("dev" == S.b.WEB_UNIVERSE &&
+                              console.log(
+                                "SaleSectionEventScheduleInner loading initial events: " +
+                                  n.length,
+                                n
+                              ),
+                            [4, t.RegisterCalendarEventsAndModels(n)])
                           : [3, 2]
                         : [3, 4];
                     case 1:
