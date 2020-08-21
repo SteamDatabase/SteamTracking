@@ -41,6 +41,12 @@ enum ENotificationSetting {
 	k_ENotificationSettingNever = 2;
 }
 
+enum ETextFilterSetting {
+	k_ETextFilterSettingEnabled = 0;
+	k_ETextFilterSettingEnabledAllowProfanity = 1;
+	k_ETextFilterSettingDisabled = 2;
+}
+
 message CPlayer_GetMutualFriendsForIncomingInvites_Request {
 }
 
@@ -516,6 +522,8 @@ message CPlayer_CommunityPreferences {
 	optional bool hide_adult_content_violence = 1 [default = true];
 	optional bool hide_adult_content_sex = 2 [default = true];
 	optional bool parenthesize_nicknames = 4 [default = false];
+	optional .ETextFilterSetting text_filter_setting = 5 [default = k_ETextFilterSettingEnabled];
+	optional bool text_filter_ignore_friends = 6;
 	optional uint32 timestamp_updated = 3;
 }
 
@@ -528,6 +536,18 @@ message CPlayer_SetCommunityPreferences_Request {
 }
 
 message CPlayer_SetCommunityPreferences_Response {
+}
+
+message CPlayer_GetTextFilterWords_Request {
+}
+
+message CPlayer_TextFilterWords {
+	repeated string text_filter_custom_banned_words = 1;
+	repeated string text_filter_custom_clean_words = 2;
+}
+
+message CPlayer_GetTextFilterWords_Response {
+	optional .CPlayer_TextFilterWords words = 1;
 }
 
 message CPlayer_GetNewSteamAnnouncementState_Request {
@@ -603,6 +623,10 @@ message CPlayer_NewSteamAnnouncementState_Notification {
 
 message CPlayer_CommunityPreferencesChanged_Notification {
 	optional .CPlayer_CommunityPreferences preferences = 1;
+}
+
+message CPlayer_TextFilterWordsChanged_Notification {
+	optional .CPlayer_TextFilterWords words = 1;
 }
 
 message CPlayer_PerFriendPreferencesChanged_Notification {
@@ -765,6 +789,10 @@ service Player {
 		option (method_description) = "Sets the player's community preferences";
 	}
 
+	rpc GetTextFilterWords (.CPlayer_GetTextFilterWords_Request) returns (.CPlayer_GetTextFilterWords_Response) {
+		option (method_description) = "Get the custom text filtering dictionary for this user";
+	}
+
 	rpc GetNewSteamAnnouncementState (.CPlayer_GetNewSteamAnnouncementState_Request) returns (.CPlayer_GetNewSteamAnnouncementState_Response) {
 		option (method_description) = "Calculates and returns what to display for UI that renders new steam announcement available";
 	}
@@ -804,6 +832,10 @@ service PlayerClient {
 
 	rpc NotifyCommunityPreferencesChanged (.CPlayer_CommunityPreferencesChanged_Notification) returns (.NoResponse) {
 		option (method_description) = "Notification from server to client that their community preferences have changed";
+	}
+
+	rpc NotifyTextFilterWordsChanged (.CPlayer_TextFilterWordsChanged_Notification) returns (.NoResponse) {
+		option (method_description) = "Notification from server to client that their text filtering dictionary has changed";
 	}
 
 	rpc NotifyPerFriendPreferencesChanged (.CPlayer_PerFriendPreferencesChanged_Notification) returns (.NoResponse) {

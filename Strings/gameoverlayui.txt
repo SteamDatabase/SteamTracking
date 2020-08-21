@@ -2,8 +2,6 @@
 __TEXT
 __text
 __TEXT
-@s
-@s
 __stubs
 __TEXT
 __stub_helper
@@ -9245,6 +9243,7 @@ completetxn
 broadcast
 watch
 SteamIDBroadcastPage
+run
 TradeDialog
 SteamIDAchievementsPage/%u
 AppNewsPage/%u
@@ -9499,8 +9498,8 @@ developer
 Steam pid that launched us
 VGUI_Application_001
 OK
-Aug 17 2020
-13:31:32
+Aug 20 2020
+15:49:56
 crashhandler003
 gameoverlayui
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/overlay/gameoverlayui/main.cpp
@@ -13154,21 +13153,24 @@ Dec
 p
 p
 0
-?#
-($
+'$
 $
 2$
--$
 $
-$
-5A
-C#
+@6
+R6
 0
 p
 #
 #
 #
-m!
+#
+#
+#
+#
+:#
+a6
+c!
 #
 #
 #
@@ -13182,25 +13184,33 @@ m!
 #
 #
 #
-X@
-Q"
+#
+!
+T"
+.@
+'@
+@
+@
+@
 "
-@"
-@
-@
-@
-@
+"
+"
+q"
+"
 "
 "
 "
 d
-H?
+VG
+VG
 
 
 
 
 
 
+
+t
 p
 0
 0
@@ -13233,31 +13243,25 @@ p
 p
 p
 0
-!
 @
 =
-,
-'
+A
 B
-T%
 0
+~
+==
+@1
 n
-+@
 ?
-8?
-g@
+?
+M@
 Hi
 E
 E
-E
-E
-@
 0
 p
 I
 I
-4D
-5
 $
 @
 @
@@ -13270,9 +13274,9 @@ $
 A
 Hc
 =
-w,
-:A
+'A
 Hc
+m>
 ?
 ?
 ?
@@ -13532,6 +13536,7 @@ n3
 3
 k$
 d
+'
 ~
 /
 f-
@@ -13551,6 +13556,7 @@ f-
 &
 &
 3-
+{
 t=
 =
 =

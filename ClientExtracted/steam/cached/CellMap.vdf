@@ -78,6 +78,8 @@
         	"A1Telekom"    "8447, 1901, 12793, 15994, 31012, 43612, 12810, 8591, 21283, 25255, 29580, 44143, 41549"
         	"TalkTalk"    "13285, 9105"
 		"Inetcom"	"35598, 51077, 19588"
+        	"rogers"    "812"
+		"KPN"		"1136"
 	}
 	"cells"
 	{
@@ -124,6 +126,8 @@
 			"affinities"
 			{
 				"shaw" { "cost_reduction"	"1" }
+
+				"rogers" { "cost_reduction"	"0.4" }
 
 				"videotron" { "cost_reduction"	"4" }
 
@@ -272,6 +276,7 @@
 				"A1Telekom" { "cost_reduction"	"-4" }
 				"Inetcom" { "cost_reduction"	"-4" }
                                 "HLKomm" { "cost_reduction" "4"}
+				"KPN"	{ "cost_reduction" "1"}
  			}
 		}
 
@@ -808,6 +813,7 @@
 			}
 			"affinities"
 			{
+				"FPT" { "cost_reduction"	1 }
 				"HKBN" { "cost_reduction"	2 }
 				"QTNet" { "cost_reduction"	-2 }
 				"TOT" { "cost_reduction"	-4 }
@@ -855,8 +861,7 @@
 			}
 			"affinities"
 			{
-				"FPT" { "cost_reduction"	"1" }
-				"TOT" { "cost_reduction"	"4" }
+				"TOT" { "cost_reduction"	 4 }
 				"HKBN"	{ "cost_reduction"	-2 }
 				"QTNet" { "cost_reduction"	-2 }
 			}
@@ -1027,7 +1032,7 @@
 		44
 		{
 			"name" "Indonesia"
-			"region"	"southeast asia"
+			"region"	"indonesia"
 			"countrycode"	"ID"
 			"latitude"	"-6.227934"
 			"longitude"	"106.827621"
@@ -1060,7 +1065,7 @@
 		{
 			"name" "China - Beijing"
 			"countrycode"	"CN"
-			"region"	"china"
+			"region"	"china north"
 			"latitude"	"39.904586"
 			"longitude"	"116.397689"
 			"edges"
@@ -1073,7 +1078,7 @@
 		47
 		{
 			"name" "China - Shanghai"
-			"region"	"china"
+			"region"	"china east"
 			"countrycode"	"CN"
 			"latitude"	"31.231592"
 			"longitude"	"121.474113"
@@ -1090,6 +1095,16 @@
 				169 {  }
 				170 {  }
 				171 {  }
+				197 {  }
+				198 {  }
+				199 {  }
+				200 {  }
+				201 {  }
+				202 {  }
+				203 {  }
+				204 {  }
+				205 {  }
+				206 {  }
 				48 { "dest"	48 }
 				// Backbone-ish
 				33 { "cost"	CostToLeaveChina }
@@ -1106,7 +1121,7 @@
 		48
 		{
 			"name" "China - Chengdu"
-			"region"	"china"
+			"region"	"china southwest"
 			"countrycode"	"CN"
 			"latitude"	"30.571721"
 			"longitude"	"104.049797"
@@ -1416,6 +1431,7 @@
 				78 { "cost"	OutwardCost }
 				49 { "cost"	OutwardCost }
 				11 { "cost"	OutwardCost }
+				207 { "cost"	OutwardCost }
 			}
 			"affinities"
 			{
@@ -2411,7 +2427,7 @@
 		137
 		{
 			"name" "China (Perfect World Unicom)"
-			"region"	"china-unicom"
+			"region"	"china"
 			"countrycode"	"CN"
 			"deprecated" 1
 			"latitude"	"31.231592"
@@ -2424,7 +2440,7 @@
 		138
 		{
 			"name" "China (Perfect World Telecom)"
-			"region"	"china-telecom"
+			"region"	"china"
 			"countrycode"	"CN"
 			"deprecated" 1
 			"latitude"	"31.231592"
@@ -2556,7 +2572,7 @@
 		148
 		{
 			"name" "China - Guangzhou"
-			"region"	"china"
+			"region"	"china south"
 			"countrycode"	"CN"
 			"latitude"	"23.125205"
 			"longitude"	"113.257198"
@@ -2700,7 +2716,7 @@
 		159
 		{
 			"name" "China - Wuhan"
-			"region"	"china"
+			"region"	"china south"
 			"countrycode"	"CN"
 			"latitude"	"30.531663"
 			"longitude"	"114.282076"
@@ -2712,7 +2728,7 @@
 		160
 		{
 			"name" "China - Xi'an"
-			"region"	"china"
+			"region"	"china northwest"
 			"countrycode"	"CN"
 			"latitude"	"34.296195"
 			"longitude"	"108.964354"
@@ -2788,7 +2804,7 @@
 		166
 		{
 			"name" "China - Harbin"
-			"region"	"china"
+			"region"	"china northeast"
 			"countrycode"	"CN"
 			"latitude"	"45.777438"
 			"longitude"	"126.577405"
@@ -2800,7 +2816,7 @@
 		167
 		{
 			"name" "China - Kunming"
-			"region"	"china"
+			"region"	"china southwest"
 			"countrycode"	"CN"
 			"latitude"	"24.946498"
 			"longitude"	"102.706997"
@@ -2812,7 +2828,7 @@
 		168
 		{
 			"name" "China - Qingdao"
-			"region"	"china"
+			"region"	"china east"
 			"countrycode"	"CN"
 			"latitude"	"36.061225"
 			"longitude"	"120.380089"
@@ -2824,7 +2840,7 @@
 		169
 		{
 			"name" "China - Urumqi"
-			"region"	"china"
+			"region"	"china northwest"
 			"countrycode"	"CN"
 			"latitude"	"43.814962"
 			"longitude"	"87.597942"
@@ -2836,7 +2852,7 @@
 		170
 		{
 			"name" "China - Zhengzhou"
-			"region"	"china"
+			"region"	"china south"
 			"countrycode"	"CN"
 			"latitude"	"34.745894"
 			"longitude"	"113.661751"
@@ -2848,7 +2864,7 @@
 		171
 		{
 			"name" "China - Changsha"
-			"region"	"china"
+			"region"	"china south"
 			"countrycode"	"CN"
 			"latitude"	"28.200774"
 			"longitude"	"112.963677"
@@ -3164,7 +3180,7 @@
 		197
 		{
 			"name" "China - Suzhou"
-			"region"	"china"
+			"region"	"china east"
 			"countrycode"	"CN"
 			"latitude"	"31.293638"
 			"longitude"	"120.575299"
@@ -3176,7 +3192,7 @@
 		198
 		{
 			"name" "China - Hangzhou"
-			"region"	"china"
+			"region"	"china east"
 			"countrycode"	"CN"
 			"latitude"	"30.274921"
 			"longitude"	"120.162224"
@@ -3188,7 +3204,7 @@
 		199
 		{
 			"name" "China - Ningbo"
-			"region"	"china"
+			"region"	"china east"
 			"countrycode"	"CN"
 			"latitude"	"29.872564"
 			"longitude"	"121.560226"
@@ -3200,7 +3216,7 @@
 		200
 		{
 			"name" "China - Nanjing"
-			"region"	"china"
+			"region"	"china east"
 			"countrycode"	"CN"
 			"latitude"	"32.069854"
 			"longitude"	"118.799455"
@@ -3212,7 +3228,7 @@
 		201
 		{
 			"name" "China - Shenzhen"
-			"region"	"china"
+			"region"	"china south"
 			"countrycode"	"CN"
 			"latitude"	"22.532146"
 			"longitude"	"113.997626"
@@ -3224,7 +3240,7 @@
 		202
 		{
 			"name" "China - Dongguan"
-			"region"	"china"
+			"region"	"china south"
 			"countrycode"	"CN"
 			"latitude"	"23.041631"
 			"longitude"	"113.738451"
@@ -3236,7 +3252,7 @@
 		203
 		{
 			"name" "China - Tianjin"
-			"region"	"china"
+			"region"	"china north"
 			"countrycode"	"CN"
 			"latitude"	"39.085787"
 			"longitude"	"117.209123"
@@ -3248,7 +3264,7 @@
 		204
 		{
 			"name" "China - Chongqing"
-			"region"	"china"
+			"region"	"china southwest"
 			"countrycode"	"CN"
 			"latitude"	"29.520374"
 			"longitude"	"106.532466"
@@ -3260,7 +3276,7 @@
 		205
 		{
 			"name" "China - Shenyang"
-			"region"	"china"
+			"region"	"china northeast"
 			"countrycode"	"CN"
 			"latitude"	"41.783013"
 			"longitude"	"123.434066"
@@ -3272,7 +3288,7 @@
 		206
 		{
 			"name" "China - Dalian"
-			"region"	"china"
+			"region"	"china northeast"
 			"countrycode"	"CN"
 			"latitude"	"38.911861"
 			"longitude"	"121.615360"
@@ -3280,6 +3296,19 @@
 			{
 				47 { "dest"	47	"cost"	InwardCost }
 			}		
+		}
+		207
+		{
+			"name" "US - Austin"
+			"region"	"usa"
+			"countrycode"	"US"
+			"latitude"	"30.266666"
+			"longitude"	"-97.733330"
+			"edges"
+			{
+				65 { "dest"	65	"cost"	ZeroCost }
+
+			}
 		}
 	}
 	"countries"

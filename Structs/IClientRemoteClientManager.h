@@ -50,7 +50,7 @@ public:
     virtual unknown_ret LaunchAppResult(unsigned int, ERemoteClientLaunchResult) = 0;
     virtual unknown_ret BIsStreamStartInProgress(unsigned long long, unsigned int) = 0;
     virtual unknown_ret LaunchAppResultRequestLaunchOption(unsigned int, int const*, int) = 0;
-    virtual unknown_ret AcceptEULA(unsigned long long, unsigned int) = 0;
+    virtual unknown_ret AcceptEULA(unsigned long long, unsigned int, char const*, unsigned int) = 0;
     virtual unknown_ret GetRemoteClientPlatformName(unsigned long long, bool*) = 0;
     virtual unknown_ret BIsStreamClientRunning() = 0;
     virtual unknown_ret BIsStreamClientRunning(CGameID) = 0;
