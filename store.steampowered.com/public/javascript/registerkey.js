@@ -140,7 +140,7 @@ function OnRegisterProductKeyFailure( ePurchaseResult, receipt )
 	switch ( ePurchaseResult )
 	{
 		case 14:
-			sErrorMessage = 'The product code you\'ve entered is not valid. Please double check to see if you\'ve mistyped your key. I, L, and 1 can look alike, as can V and Y, and 0 and O.';
+			sErrorMessage = 'The product code you\'ve entered is not valid or is not a product code. Please double check to see if you\'ve mistyped your key. I, L, and 1 can look alike, as can V and Y, and 0 and O.  If you are redeeming a gift card please click <a href="%1$s">here</a> to redeem it.';
 			break;
 
 		case 15:
@@ -182,7 +182,7 @@ function OnRegisterProductKeyFailure( ePurchaseResult, receipt )
 			break;
 
 		case 50: // User entered wallet code
-			sErrorMessage = 'The code you have entered is from a Steam Gift Card or Steam Wallet Code.  Click <a href="https://store.steampowered.com/account/redeemwalletcode">here</a> to redeem it.';
+			sErrorMessage = '#youraccount_registerkey_walletkey_error';
 			break;
 
 		case 4:

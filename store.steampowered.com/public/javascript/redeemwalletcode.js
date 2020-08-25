@@ -178,12 +178,12 @@ function OnValidateWalletCodeFailure( detail )
 {
 	try 
 	{
-		var sErrorMessage = 'An unexpected error has occurred.  Your Steam Wallet code has not been redeemed.  Please wait 30 minutes and try redeeming the code again.  If the problem persists, please contact <a href="https://help.steampowered.com/wizard/HelpWithWalletCode">Steam Support</a> for further assistance.';
+		var sErrorMessage = '#youraccount_wallet_code_generic_error';
 			
 		switch ( detail )
 		{
 			case 14:
-				sErrorMessage = 'The Steam Wallet code you have entered is invalid.  Please carefully verify the characters as you re-enter the code.';
+				sErrorMessage = '#youraccount_wallet_code_invalid_code';
 				break;
 				
 			case 15:
@@ -191,7 +191,7 @@ function OnValidateWalletCodeFailure( detail )
 				break;
 
 			case 58:
-				sErrorMessage = 'The Steam Wallet code you have entered does not appear to be activated.  Please note that it may take several hours after time of purchase before activation is completed by your retailer.  If the problem persists, please return to where the code was purchased for further assistance.';
+				sErrorMessage = '#youraccount_wallet_code_not_activated';
 				break;
 
 			case 9:
@@ -199,7 +199,7 @@ function OnValidateWalletCodeFailure( detail )
 				break;
 
 			default:
-				sErrorMessage = 'An unexpected error has occurred.  Your Steam Wallet code has not been redeemed.  Please wait 30 minutes and try redeeming the code again.  If the problem persists, please contact <a href="https://help.steampowered.com/wizard/HelpWithWalletCode">Steam Support</a> for further assistance.';
+				sErrorMessage = '#youraccount_wallet_code_generic_error';
 				break;
 		}
 		
@@ -510,35 +510,35 @@ function OnRedeemWalletCodeFailure( success, detail )
 {
 	try 
 	{
-		var sErrorMessage = 'An unexpected error has occurred.  Your Steam Wallet code has not been redeemed.  Please wait 30 minutes and try redeeming the code again.  If the problem persists, please contact <a href="https://help.steampowered.com/wizard/HelpWithWalletCode">Steam Support</a> for further assistance.';
+		var sErrorMessage = '#youraccount_wallet_code_generic_error';
 
 		switch ( success )
 		{
 			case 16:
-				sErrorMessage = 'An unexpected error has occurred.  Your Steam Wallet code has not been redeemed.  Please wait 30 minutes and try redeeming the code again.  If the problem persists, please contact <a href="https://help.steampowered.com/wizard/HelpWithWalletCode">Steam Support</a> for further assistance.';
+				sErrorMessage = '#youraccount_wallet_code_generic_error';
 				break;
 
 			default:
 				switch ( detail )
 				{
 					case 48:
-						sErrorMessage = 'The Steam Wallet code you have entered is invalid.  Please carefully verify the characters as you re-enter the code.';
+						sErrorMessage = '#youraccount_wallet_code_invalid_code';
 						break;
 			
 					case 14:
-						sErrorMessage = 'The Steam Wallet code you have entered is invalid.  Please carefully verify the characters as you re-enter the code.';
+						sErrorMessage = '#youraccount_wallet_code_invalid_code';
 						break;
 
 					case 44:
-						sErrorMessage = 'The Steam Wallet code you have entered appears to be valid; However, your Steam account is currently restricted from activating Steam Wallet codes. Please contact <a href="https://support.steampowered.com/newticket.php?category=15">Steam Support</a> for further assistance.';
+						sErrorMessage = 'Your Steam account is currently restricted from activating Steam Wallet codes. Please contact <a href="https://support.steampowered.com/newticket.php?category=15">Steam Support</a> for further assistance.';
 						break;
 
 					case 68:
-						sErrorMessage = 'The Steam Wallet code you have entered appears to be valid, however, U.S. government regulations limit Steam Wallet activity to $2000 on any day. Please try again after 24 hours.';
+						sErrorMessage = 'youraccount_wallet_code_blocked_by_gov';
 						break;
 				
 					default:
-						sErrorMessage = 'An unexpected error has occurred.  Your Steam Wallet code has not been redeemed.  Please wait 30 minutes and try redeeming the code again.  If the problem persists, please contact <a href="https://help.steampowered.com/wizard/HelpWithWalletCode">Steam Support</a> for further assistance.';
+						sErrorMessage = '#youraccount_wallet_code_generic_error';
 						break;
 				}
 				break;
