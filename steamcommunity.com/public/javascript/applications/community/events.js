@@ -64658,10 +64658,6 @@
                     "editor" == d ? M.a.InEditor : ""
                   )
                 },
-                y.createElement($, {
-                  appId: t.appid,
-                  clanId: t.clanSteamID.GetAccountID()
-                }),
                 12 != g &&
                   !v &&
                   y.createElement(H.a, {
