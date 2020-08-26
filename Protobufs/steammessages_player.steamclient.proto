@@ -42,9 +42,10 @@ enum ENotificationSetting {
 }
 
 enum ETextFilterSetting {
-	k_ETextFilterSettingEnabled = 0;
-	k_ETextFilterSettingEnabledAllowProfanity = 1;
-	k_ETextFilterSettingDisabled = 2;
+	k_ETextFilterSettingSteamLabOptedOut = 0;
+	k_ETextFilterSettingEnabled = 1;
+	k_ETextFilterSettingEnabledAllowProfanity = 2;
+	k_ETextFilterSettingDisabled = 3;
 }
 
 message CPlayer_GetMutualFriendsForIncomingInvites_Request {
@@ -522,7 +523,7 @@ message CPlayer_CommunityPreferences {
 	optional bool hide_adult_content_violence = 1 [default = true];
 	optional bool hide_adult_content_sex = 2 [default = true];
 	optional bool parenthesize_nicknames = 4 [default = false];
-	optional .ETextFilterSetting text_filter_setting = 5 [default = k_ETextFilterSettingEnabled];
+	optional .ETextFilterSetting text_filter_setting = 5 [default = k_ETextFilterSettingSteamLabOptedOut];
 	optional bool text_filter_ignore_friends = 6;
 	optional uint32 timestamp_updated = 3;
 }

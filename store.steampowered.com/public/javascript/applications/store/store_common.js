@@ -26643,10 +26643,6 @@
                     "editor" == u ? D.a.InEditor : ""
                   )
                 },
-                g.createElement($, {
-                  appId: t.appid,
-                  clanId: t.clanSteamID.GetAccountID()
-                }),
                 12 != M &&
                   !f &&
                   g.createElement(X.a, {

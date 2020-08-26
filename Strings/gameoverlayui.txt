@@ -9498,8 +9498,8 @@ developer
 Steam pid that launched us
 VGUI_Application_001
 OK
-Aug 20 2020
-15:49:56
+Aug 25 2020
+20:19:25
 crashhandler003
 gameoverlayui
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/overlay/gameoverlayui/main.cpp
@@ -9867,6 +9867,7 @@ store.steampowered.com
 graphics/loop_
 graphics/rampDown_
 %s%d
+steam://close/
 http
 https
 chrome
@@ -13149,28 +13150,30 @@ Nov
 Dec
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
+VK
+B
 0
 p
 p
 0
-'$
 $
-2$
+$$
+@#
+pA
 $
-@6
-R6
+a#
+xI
 0
 p
 #
 #
 #
+B#
 #
 #
 #
 #
-:#
-a6
-c!
+#
 #
 #
 #
@@ -13186,31 +13189,31 @@ c!
 #
 #
 !
-T"
-.@
-'@
+r"
+M"
+:"
+@
 @
 @
 @
 "
 "
 "
-q"
+"
+"
+"
 "
 "
 "
 "
 d
-VG
-VG
+]?
 
 
 
 
 
 
-
-t
 p
 0
 0
@@ -13245,23 +13248,22 @@ p
 0
 @
 =
-A
-B
+w1
 0
-~
-==
-@1
 n
 ?
 ?
-M@
+?
+?
 Hi
-E
-E
+ZE
+ZE
 0
 p
 I
 I
+!/
+5
 $
 @
 @
@@ -13274,9 +13276,9 @@ $
 A
 Hc
 =
-'A
+:A
+T1
 Hc
-m>
 ?
 ?
 ?
