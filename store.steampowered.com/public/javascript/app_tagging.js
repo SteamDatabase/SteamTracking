@@ -1088,7 +1088,7 @@ var g_bLoadingPopularTags = false;
 var g_rgGlobalPopularTags = [];
 
 // A modular tag auto-complete widget.
-var CTagAutoComplete = function( $elContainer, fnOnTagSelected )
+var CTagAutoComplete = function( $elContainer, fnOnTagSelected, bNoFocus )
 {
 	var $AppTagForm = $elContainer;
 	var $AppTagInput = $AppTagForm.find('input[name=tag]');
@@ -1106,7 +1106,8 @@ var CTagAutoComplete = function( $elContainer, fnOnTagSelected )
 				return;
 
 			fnOnTagSelected( $AppTagInput.val() );
-			$AppTagInput.val('').change().focus();
+			if ( !bNoFocus )
+				$AppTagInput.val('').change().focus();
 		};
 
 		var fnUpdateTagButtonState = function() {
@@ -1120,7 +1121,8 @@ var CTagAutoComplete = function( $elContainer, fnOnTagSelected )
 		$AppTagInput.change( fnUpdateTagButtonState );
 		$AppTagInput.keyup( fnUpdateTagButtonState );
 		fnUpdateTagButtonState();
-		$AppTagInput.focus();
+		if ( !bNoFocus )
+			$AppTagInput.focus();
 
 		$AppTagForm.submit( fnOnSubmit );
 		$AppTagForm.keyup( function( event ) { if ( event.which == 13 ) event.stopPropagation() } );

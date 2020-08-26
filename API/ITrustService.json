@@ -1,0 +1,29 @@
+{
+    "name": "ITrustService",
+    "methods": [
+        {
+            "name": "GetTrustScore",
+            "version": 1,
+            "httpmethod": "GET",
+            "description": "Returns the Trust Score for the provided account in the specified appid.",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Access key"
+                },
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false
+                }
+            ]
+        }
+    ]
+}

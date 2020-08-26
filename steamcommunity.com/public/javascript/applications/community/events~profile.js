@@ -14,11 +14,11 @@
         n.d(t, "b", function() {
           return f;
         });
-      var a = n("mrSG"),
-        c = n("q1tI"),
+      var o = n("mrSG"),
+        a = n("q1tI"),
         r = n("y+6m"),
         i = n("TLQK"),
-        o = n("X3Ds"),
+        c = n("X3Ds"),
         s = n("TtDX");
       function u(e, t) {
         var n =
@@ -32,23 +32,19 @@
             );
       }
       function l(e) {
-        var t =
-            "undefined" != typeof SteamClient &&
-            void 0 !== SteamClient.SharedConnection,
-          n = e.bDisableContextMenu,
-          r = e.onContextMenu,
-          i = e.href,
-          o = Object(a.f)(e, ["bDisableContextMenu", "onContextMenu", "href"]);
+        var t = e.bDisableContextMenu,
+          n = e.onContextMenu,
+          r = e.href,
+          i = Object(o.f)(e, ["bDisableContextMenu", "onContextMenu", "href"]);
         return (
-          t && !i.startsWith("steam://") && (i = "steam://openurl/" + i),
-          n || r || (r = d),
-          c.createElement(
+          t || n || (n = d),
+          a.createElement(
             "a",
-            Object(a.a)({}, o, {
-              href: i,
+            Object(o.a)({}, i, {
+              href: r,
               target: "_blank",
               rel: "noopener noreferrer",
-              onContextMenu: r
+              onContextMenu: n
             }),
             e.children
           )
@@ -57,19 +53,19 @@
       function m(e) {
         var t = e.strURL,
           n = e.unPID;
-        return c.createElement(
-          c.Fragment,
+        return a.createElement(
+          a.Fragment,
           null,
-          c.createElement(
+          a.createElement(
             r.d,
             {
               onSelected: function() {
-                o.h(t);
+                c.h(t);
               }
             },
             Object(i.d)("#ContextMenu_CopyLinkURL")
           ),
-          c.createElement(
+          a.createElement(
             r.d,
             {
               onSelected: function(e) {
@@ -83,10 +79,10 @@
       function d(e, t) {
         var n = e.currentTarget;
         return Object(s.a)(
-          c.createElement(
+          a.createElement(
             r.c,
             null,
-            c.createElement(m, { strURL: n.href, unPID: t })
+            a.createElement(m, { strURL: n.href, unPID: t })
           ),
           e
         );
@@ -116,7 +112,7 @@
       var r = n("mrSG"),
         i = n("q1tI"),
         c = n.n(i),
-        o = n("okNM"),
+        o = n("TyAF"),
         a = n("bxiW"),
         s = n("TtDX"),
         u = n("Gorr"),
@@ -224,7 +220,7 @@
                         disabled: t,
                         "data-tooltip-text": r
                       },
-                      this.props.buttonIcon || c.a.createElement(l.m, null),
+                      this.props.buttonIcon || c.a.createElement(l.l, null),
                       a && c.a.createElement(u.d, null)
                     ))
               );
@@ -273,7 +269,7 @@
       var u = n("mrSG"),
         l = n("q1tI"),
         r = n("bxiW"),
-        i = n("okNM"),
+        i = n("TyAF"),
         o = n("qiKp"),
         m = n("exH9"),
         a = n("6+2x"),
@@ -531,7 +527,7 @@
       "use strict";
       var l = n("mrSG"),
         u = n("wUwH"),
-        i = n("okNM"),
+        i = n("TyAF"),
         m = n("q1tI"),
         r = n("i8i4"),
         o = n("DWPT"),
@@ -642,7 +638,11 @@
         return m.createElement(
           "div",
           { className: Object(b.a)(v.Tab, t && v.Active), onClick: r },
-          n
+          m.createElement(
+            "div",
+            { className: Object(b.a)(v.TabContent, t && v.Active) },
+            n
+          )
         );
       }
       function R(e) {
@@ -750,22 +750,21 @@
           Object(l.a)({ className: Object(b.a)(t, v.AddonPickerMessage) }, n)
         );
       }
-      var I = n("6Y59"),
-        A = n("qD+2"),
-        F = n("+d9t");
+      var I = n("qD+2"),
+        A = n("+d9t");
       n.d(t, "b", function() {
-        return P;
+        return F;
       }),
         n.d(t, "a", function() {
-          return N;
+          return U;
         }),
         n.d(t, "c", function() {
-          return W;
+          return N;
         }),
         n.d(t, "d", function() {
-          return $;
+          return J;
         });
-      var P = (function(t) {
+      var F = (function(t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (e.state = { showHover: !1 }), (e.m_ref = m.createRef()), e;
@@ -793,7 +792,6 @@
                   { text: i, style: "merge-adjacent" },
                   m.createElement("img", {
                     src: o,
-                    alt: i,
                     className: Object(b.a)(
                       h.a.emoticon,
                       n ? h.a.large : void 0
@@ -823,20 +821,20 @@
             r = e.emoticon,
             i = n.Get(r);
           return m.createElement(
-            L,
+            P,
             {
               target: t,
               title: ":" + r + ":",
               subtitle: i && i.app_name ? i.app_name : void 0
             },
-            m.createElement(P, {
+            m.createElement(F, {
               emoticon: r,
               emoticonHoverStore: n,
               large: !0
             })
           );
         }),
-        L = function(e) {
+        P = function(e) {
           var t = e.target,
             n = e.title,
             r = e.subtitle,
@@ -865,13 +863,13 @@
             )
           );
         };
-      function T(e) {
+      function L(e) {
         return e.recent_emoticons;
       }
-      function U(e) {
+      function T(e) {
         return e.recent_stickers;
       }
-      var N = (function(r) {
+      var U = (function(r) {
           function e(e) {
             var t = r.call(this, e) || this;
             t.state = { strSearchText: "" };
@@ -879,7 +877,7 @@
             return (
               n.is_initialized ||
                 (n.UpdateEmoticonList(),
-                (t.m_disposeEmoticonStore = Object(c.E)(
+                (t.m_disposeEmoticonStore = Object(c.L)(
                   function() {
                     return n.is_initialized;
                   },
@@ -907,20 +905,24 @@
                 s = t.strFlairGroupID,
                 u = [];
               return (
-                0 < T((e = n)).length + U(e).length &&
+                0 < L((e = n)).length + T(e).length &&
                   u.push({
-                    renderTab: function() {
+                    renderTab: function(e) {
                       return m.createElement(
                         "span",
                         {
                           title: Object(f.d)("#AddonPicker_RecentlyUsed"),
-                          className: Object(b.a)(h.a.PickerTab, h.a.Clock)
+                          className: Object(b.a)(
+                            h.a.PickerTab,
+                            h.a.Clock,
+                            e && h.a.ActiveTab
+                          )
                         },
-                        m.createElement(I.f, null)
+                        m.createElement(te, null)
                       );
                     },
                     renderContent: function() {
-                      return m.createElement(x, {
+                      return m.createElement(G, {
                         store: n,
                         hoverStore: r,
                         onEmoticonSelect: function(e) {
@@ -939,18 +941,21 @@
                   m.createElement(B, {
                     config: Object(l.g)(u, [
                       {
-                        renderTab: function() {
+                        renderTab: function(e) {
                           return m.createElement(
                             "span",
                             {
                               title: Object(f.d)("#AddonPicker_Emoticons"),
-                              className: h.a.PickerTab
+                              className: Object(b.a)(
+                                h.a.PickerTab,
+                                e && h.a.ActiveTab
+                              )
                             },
-                            m.createElement(ee, null)
+                            m.createElement(X, null)
                           );
                         },
                         renderContent: function() {
-                          return m.createElement(G, {
+                          return m.createElement(W, {
                             store: n,
                             hoverStore: r,
                             onItemSelect: function(e) {
@@ -961,18 +966,21 @@
                         }
                       },
                       {
-                        renderTab: function() {
+                        renderTab: function(e) {
                           return m.createElement(
                             "span",
                             {
                               title: Object(f.d)("#AddonPicker_Stickers"),
-                              className: h.a.PickerTab
+                              className: Object(b.a)(
+                                h.a.PickerTab,
+                                e && h.a.ActiveTab
+                              )
                             },
-                            m.createElement(X, null)
+                            m.createElement($, null)
                           );
                         },
                         renderContent: function() {
-                          return m.createElement(H, {
+                          return m.createElement(D, {
                             store: n,
                             onItemSelect: function(e) {
                               return a(e.name);
@@ -981,18 +989,21 @@
                         }
                       },
                       {
-                        renderTab: function() {
+                        renderTab: function(e) {
                           return m.createElement(
                             "span",
                             {
                               title: Object(f.d)("#AddonPicker_RoomEffects"),
-                              className: h.a.PickerTab
+                              className: Object(b.a)(
+                                h.a.PickerTab,
+                                e && h.a.ActiveTab
+                              )
                             },
-                            m.createElement(te, null)
+                            m.createElement(ee, null)
                           );
                         },
                         renderContent: function() {
-                          return m.createElement(q, {
+                          return m.createElement(H, {
                             store: n,
                             effectSettings: i,
                             onItemSelect: function(e) {
@@ -1009,7 +1020,7 @@
             (e = Object(l.c)([i.a], e))
           );
         })(m.Component),
-        W = (function(r) {
+        N = (function(r) {
           function e(e) {
             var t = r.call(this, e) || this;
             t.state = { strSearchText: "" };
@@ -1017,7 +1028,7 @@
             return (
               n.is_initialized ||
                 (n.UpdateEmoticonList(),
-                (t.m_disposeEmoticonStore = Object(c.E)(
+                (t.m_disposeEmoticonStore = Object(c.L)(
                   function() {
                     return n.is_initialized;
                   },
@@ -1048,11 +1059,11 @@
                             title: Object(f.d)("#AddonPicker_Emoticons"),
                             className: h.a.PickerTab
                           },
-                          m.createElement(ee, null)
+                          m.createElement(X, null)
                         );
                       },
                       renderContent: function() {
-                        return m.createElement(V, {
+                        return m.createElement(q, {
                           store: t.props.emoticonStore,
                           hoverStore: t.props.emoticonHoverStore,
                           onItemSelect: function(e) {
@@ -1069,7 +1080,7 @@
             e
           );
         })(m.Component),
-        x = (function(t) {
+        G = (function(t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (e.state = { filter: "" }), e;
@@ -1086,13 +1097,13 @@
                 a = this.state.filter,
                 c = [];
               return (
-                T(n) &&
+                L(n) &&
                   c.push({
                     title: Object(f.d)("#AddonPicker_RecentEmoticons"),
-                    items: u.a.FilterEmoticons(T(n), a),
+                    items: u.a.FilterEmoticons(L(n), a),
                     onItemSelect: i,
                     renderItem: function(e) {
-                      return m.createElement(K, {
+                      return m.createElement(V, {
                         emoticon: e,
                         emoticonHoverStore: r
                       });
@@ -1113,13 +1124,13 @@
                       );
                     }
                   }),
-                U(n).length &&
+                T(n).length &&
                   c.push({
                     title: Object(f.d)("#AddonPicker_RecentStickers"),
-                    items: u.a.FilterStickers(U(n), a),
+                    items: u.a.FilterStickers(T(n), a),
                     onItemSelect: o,
                     renderItem: function(e) {
-                      return m.createElement(Q, { sticker: e });
+                      return m.createElement(K, { sticker: e });
                     },
                     keyExtractor: function(e) {
                       return e.name;
@@ -1149,7 +1160,7 @@
             e
           );
         })(m.Component),
-        G = (function(t) {
+        W = (function(t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (e.state = { filter: "" }), e;
@@ -1171,7 +1182,7 @@
                 items: s,
                 onItemSelect: i,
                 renderItem: function(e) {
-                  return m.createElement(K, {
+                  return m.createElement(V, {
                     emoticon: e,
                     emoticonHoverStore: r
                   });
@@ -1193,14 +1204,14 @@
                         null,
                         Object(f.d)("#AddonPicker_NoResults")
                       )
-                    : m.createElement(D, null);
+                    : m.createElement(x, null);
                 }
               });
             }),
             e
           );
         })(m.Component);
-      function D() {
+      function x() {
         return m.createElement(
           m.Fragment,
           null,
@@ -1218,12 +1229,12 @@
             Object(f.k)(
               "#AddonPicker_AcquireAtPointsShopOrMarket",
               m.createElement(
-                F.a,
+                A.a,
                 { href: y.b.STORE_BASE_URL + "points/shop/c/emoticons" },
                 Object(f.d)("#AddonPicker_AcquireAtPointsShop_Link")
               ),
               m.createElement(
-                F.a,
+                A.a,
                 { href: y.b.COMMUNITY_BASE_URL + "market" },
                 Object(f.d)("#AddonPicker_AcquireAtPointsShopOrMarket_Link")
               )
@@ -1231,7 +1242,7 @@
           )
         );
       }
-      var H = (function(t) {
+      var D = (function(t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (e.state = { filter: "" }), e;
@@ -1250,7 +1261,7 @@
                 items: o,
                 onItemSelect: r,
                 renderItem: function(e) {
-                  return m.createElement(Q, { sticker: e });
+                  return m.createElement(K, { sticker: e });
                 },
                 keyExtractor: function(e) {
                   return e.name;
@@ -1286,7 +1297,7 @@
                           Object(f.k)(
                             "#AddonPicker_AcquireAtPointsShop",
                             m.createElement(
-                              F.a,
+                              A.a,
                               {
                                 href:
                                   y.b.STORE_BASE_URL + "points/shop/c/stickers"
@@ -1304,7 +1315,7 @@
             e
           );
         })(m.Component),
-        q = (function(t) {
+        H = (function(t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (e.state = { filter: "" }), e;
@@ -1326,7 +1337,7 @@
                 items: a,
                 onItemSelect: i,
                 renderItem: function(e) {
-                  return m.createElement(Z, {
+                  return m.createElement(Y, {
                     effect: e,
                     roomEffectSettings: r
                   });
@@ -1365,7 +1376,7 @@
                           Object(f.k)(
                             "#AddonPicker_AcquireAtPointsShop",
                             m.createElement(
-                              F.a,
+                              A.a,
                               {
                                 href:
                                   y.b.STORE_BASE_URL +
@@ -1384,7 +1395,7 @@
             e
           );
         })(m.Component),
-        V = (function(t) {
+        q = (function(t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (e.state = { filter: "" }), e;
@@ -1400,13 +1411,13 @@
                 o = (e.flairGroupID, this.state.filter),
                 a = [];
               return (
-                T(n).length &&
+                L(n).length &&
                   a.push({
                     title: Object(f.d)("#AddonPicker_RecentEmoticons"),
-                    items: u.a.FilterEmoticons(T(n), o),
+                    items: u.a.FilterEmoticons(L(n), o),
                     onItemSelect: i,
                     renderItem: function(e) {
-                      return m.createElement(K, {
+                      return m.createElement(V, {
                         emoticon: e,
                         emoticonHoverStore: r
                       });
@@ -1440,7 +1451,7 @@
                         .slice(0, 1e3),
                       onItemSelect: i,
                       renderItem: function(e) {
-                        return m.createElement(K, {
+                        return m.createElement(V, {
                           emoticon: e,
                           emoticonHoverStore: r
                         });
@@ -1455,7 +1466,7 @@
                               null,
                               Object(f.d)("#AddonPicker_NoResults")
                             )
-                          : m.createElement(D, null);
+                          : m.createElement(x, null);
                       }
                     }
                   ])
@@ -1465,18 +1476,18 @@
             (e = Object(l.c)([i.a], e))
           );
         })(m.Component),
-        K = function(e) {
+        V = function(e) {
           var t = e.emoticon,
             n = e.emoticonHoverStore,
             r = !t.last_used && t.time_received;
           return m.createElement(
             "div",
             { className: h.a.EmoticonItem },
-            m.createElement(P, { emoticon: t.name, emoticonHoverStore: n }),
-            r && m.createElement($, null)
+            m.createElement(F, { emoticon: t.name, emoticonHoverStore: n }),
+            r && m.createElement(J, null)
           );
         },
-        Q = (function(t) {
+        K = (function(t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (e.state = { showHover: !1 }), (e.m_ref = m.createRef()), e;
@@ -1513,20 +1524,20 @@
                 ),
                 m.createElement("img", { style: { width: "100%" }, src: o }),
                 this.state.showHover &&
-                  m.createElement(Y, { target: this.m_ref.current, sticker: n })
+                  m.createElement(Q, { target: this.m_ref.current, sticker: n })
               );
             }),
             e
           );
         })(m.Component),
-        Y = Object(i.a)(function(e) {
+        Q = Object(i.a)(function(e) {
           var t = e.target,
             n = e.sticker,
             r = n.name,
             i = n.appid,
-            o = A.a.GetAppInfo(i);
+            o = I.a.GetAppInfo(i);
           return m.createElement(
-            L,
+            P,
             { target: t, title: r, subtitle: o.name },
             m.createElement("img", {
               src: _(y.b.COMMUNITY_CDN_URL, r),
@@ -1534,7 +1545,7 @@
             })
           );
         }),
-        Z = (function(t) {
+        Y = (function(t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (e.state = { showHover: !1 }), (e.m_ref = m.createRef()), e;
@@ -1576,7 +1587,7 @@
                 ),
                 a.renderEffectIcon(),
                 this.state.showHover &&
-                  m.createElement(J, {
+                  m.createElement(Z, {
                     target: this.m_ref.current,
                     effect: n,
                     roomEffectSettings: r
@@ -1586,15 +1597,15 @@
             e
           );
         })(m.Component),
-        J = Object(i.a)(function(e) {
+        Z = Object(i.a)(function(e) {
           var t = e.target,
             n = e.effect,
             r = n.name,
             i = n.appid,
             o = e.roomEffectSettings[r],
-            a = A.a.GetAppInfo(i);
+            a = I.a.GetAppInfo(i);
           return m.createElement(
-            L,
+            P,
             { target: t, title: r, subtitle: a.name },
             m.createElement(
               "div",
@@ -1603,7 +1614,7 @@
             )
           );
         });
-      function $() {
+      function J() {
         return m.createElement(
           "div",
           { className: h.a.NewEmoticonIndicator },
@@ -1611,7 +1622,7 @@
         );
       }
       m.Component;
-      function X(e) {
+      function $(e) {
         return m.createElement(
           "svg",
           Object(l.a)({ viewBox: "0 0 59 59", width: "32" }, e),
@@ -1632,10 +1643,10 @@
           )
         );
       }
-      function ee(e) {
+      function X(e) {
         return m.createElement(
           "svg",
-          Object(l.a)({ viewBox: "0 0 60 52", width: "32" }, e),
+          Object(l.a)({ viewBox: "0 -8 60 60", width: "32" }, e),
           m.createElement("path", {
             d:
               "M.5 5.5C.5 2.5 3 0 6 0h48c3 0 5.5 2.5 5.5 5.5V35c0 3-2.5 5.5-5.5 5.5h-1.5c-.8 0-1.5.7-1.5 1.5v8.1c0 1.3-1.6 2-2.6 1.1L37.8 40.5H6C3 40.5.5 38 .5 35V5.5zM6 1C3.5 1 1.5 3 1.5 5.5V35c0 2.5 2 4.5 4.5 4.5h32.2l.1.1 10.8 10.8c.3.3.9.1.9-.4v-8c0-1.4 1.1-2.5 2.5-2.5H54c2.5 0 4.5-2 4.5-4.5V5.5C58.5 3 56.5 1 54 1H6zm24 31c6.6 0 12-5.4 12-12S36.6 8 30 8s-12 5.4-12 12 5.4 12 12 12zm0 1c7.2 0 13-5.8 13-13S37.2 7 30 7s-13 5.8-13 13 5.8 13 13 13zm-3.5-15c.8 0 1.5-.7 1.5-1.5s-.7-1.5-1.5-1.5-1.5.7-1.5 1.5.7 1.5 1.5 1.5zm8.5-1.5c0 .8-.7 1.5-1.5 1.5s-1.5-.7-1.5-1.5.7-1.5 1.5-1.5 1.5.7 1.5 1.5zM24.5 22c0 2.5 2 4.5 4.5 4.5h2c2.5 0 4.5-2 4.5-4.5h-1c0 1.9-1.6 3.5-3.5 3.5h-2c-1.9 0-3.5-1.6-3.5-3.5h-1z",
@@ -1645,16 +1656,39 @@
           })
         );
       }
-      function te(e) {
+      function ee(e) {
         return m.createElement(
           "svg",
-          Object(l.a)({ viewBox: "0 0 60 52", width: "32" }, e),
+          Object(l.a)({ viewBox: "0 0 60 38", width: "32" }, e),
           m.createElement("path", {
             d:
               "M16 8.9l1.9 5.1c.2.5.6 1 1.2 1.2l5.1 1.9-5.1 1.9c-.5.2-1 .6-1.2 1.2L16 25.1 14.1 20c-.2-.5-.6-1-1.2-1.2l-5-1.8 5.1-1.9c.5-.2 1-.6 1.2-1.2l1.8-5zm-.9-.4c.3-.9 1.6-.9 1.9 0l1.9 5.1c.1.3.3.5.6.6l5.1 1.9c.9.3.9 1.6 0 1.9l-5.1 1.9c-.3.1-.5.3-.6.6L17 25.6c-.3.9-1.6.9-1.9 0l-1.9-5.1c-.1-.3-.3-.5-.6-.6L7.5 18c-.9-.3-.9-1.6 0-1.9l5.1-1.9c.3-.1.5-.3.6-.6l1.9-5.1zm17.8 15.4l-1.9-5-1.9 5.1c-.2.5-.6 1-1.2 1.2l-5 1.8 5.1 1.9c.5.2 1 .6 1.2 1.2l1.9 5.1 1.9-5.1c.2-.5.6-1 1.2-1.2l5.1-1.9-5.1-1.9c-.7-.2-1.1-.6-1.3-1.2zm-1-5.4c-.3-.9-1.6-.9-1.9 0l-1.9 5.1c-.1.3-.3.5-.6.6l-5.1 1.9c-.9.3-.9 1.6 0 1.9l5.1 1.9c.3.1.5.3.6.6l1.9 5.1c.3.9 1.6.9 1.9 0l1.9-5.1c.1-.3.3-.5.6-.6l5.1-1.9c.9-.3.9-1.6 0-1.9l-5.1-1.9c-.3-.1-.5-.3-.6-.6l-1.9-5.1zM43 4.9l1.9 5.1c.2.5.6 1 1.2 1.2l5.1 1.9-5.1 1.9c-.5.2-1 .6-1.2 1.2L43 21.1 41.1 16c-.2-.5-.6-1-1.2-1.2l-5-1.8 5.1-1.9c.5-.2 1-.6 1.2-1.2l1.8-5zm-.9-.4c.3-.9 1.6-.9 1.9 0l1.9 5.1c.1.3.3.5.6.6l5.1 1.9c.9.3.9 1.6 0 1.9l-5.1 1.9c-.3.1-.5.3-.6.6L44 21.6c-.3.9-1.6.9-1.9 0l-1.9-5.1c-.1-.3-.3-.5-.6-.6L34.5 14c-.9-.3-.9-1.6 0-1.9l5.1-1.9c.3-.1.5-.3.6-.6l1.9-5.1z",
             fillRule: "evenodd",
             clipRule: "evenodd",
             fill: "#fff"
+          })
+        );
+      }
+      function te(e) {
+        var t = e.className,
+          n = Object(l.f)(e, ["className"]);
+        return m.createElement(
+          "svg",
+          Object(l.a)(
+            {
+              className: Object(b.a)("SVGIcon_Button SVGIcon_Clock", t),
+              version: "1.1",
+              x: "0px",
+              y: "0px",
+              width: "20px",
+              height: "20px",
+              viewBox: "0 0 24 24"
+            },
+            n
+          ),
+          m.createElement("path", {
+            d:
+              "M15.999 15c-.15 0-.303-.034-.446-.105l-4-2A1.001 1.001 0 0111 12V5a1 1 0 012 0v6.382l3.447 1.724A1 1 0 0115.999 15zM12 24C5.383 24 0 18.617 0 12S5.383 0 12 0s12 5.383 12 12-5.383 12-12 12zm0-22C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2z"
           })
         );
       }
@@ -1665,6 +1699,7 @@
         Tabs: "addonpicker_Tabs_1yVkT",
         Tab: "addonpicker_Tab_2CJ0L",
         Active: "addonpicker_Active_1ddEQ",
+        TabContent: "addonpicker_TabContent_1mROo",
         Content: "addonpicker_Content_dUQIH",
         ItemList: "addonpicker_ItemList_2OWGR",
         Item: "addonpicker_Item_1SFqy",
@@ -3252,7 +3287,7 @@
             r
           );
         })(s),
-        P = (function(n) {
+        k = (function(n) {
           function r(e) {
             void 0 === e && (e = null);
             var t = n.call(this) || this;
@@ -3307,7 +3342,7 @@
             r
           );
         })(s),
-        k = (function(n) {
+        P = (function(n) {
           function r(e) {
             void 0 === e && (e = null);
             var t = n.call(this) || this;
@@ -3539,7 +3574,7 @@
             r
           );
         })(s),
-        W = (function(n) {
+        G = (function(n) {
           function r(e) {
             void 0 === e && (e = null);
             var t = n.call(this) || this;
@@ -3575,7 +3610,7 @@
             r
           );
         })(s),
-        x = (function(n) {
+        W = (function(n) {
           function r(e) {
             void 0 === e && (e = null);
             var t = n.call(this) || this;
@@ -3592,7 +3627,7 @@
                 r.sm_m ||
                   (r.sm_m = {
                     proto: r,
-                    fields: { events: { n: 1, c: G, r: !0, q: !0 } }
+                    fields: { events: { n: 1, c: x, r: !0, q: !0 } }
                   }),
                 r.sm_m
               );
@@ -3630,7 +3665,7 @@
             r
           );
         })(s),
-        G = (function(n) {
+        x = (function(n) {
           function r(e) {
             void 0 === e && (e = null);
             var t = n.call(this) || this;
@@ -3773,12 +3808,12 @@
           });
         }),
         (u.MarkPartnerEventsForUser = function(e, t) {
-          return e.SendMsg("Community.MarkPartnerEventsForUser#1", t, W, {
+          return e.SendMsg("Community.MarkPartnerEventsForUser#1", t, G, {
             ePrivilege: 1
           });
         }),
         (u.GetUserPartnerEventViewStatus = function(e, t) {
-          return e.SendMsg("Community.GetUserPartnerEventViewStatus#1", t, x, {
+          return e.SendMsg("Community.GetUserPartnerEventViewStatus#1", t, W, {
             bConstMethod: !0,
             ePrivilege: 1
           });
@@ -3805,7 +3840,7 @@
           return e.SendMsg(
             "Community.GetUserPartnerEventsAppPriorities#1",
             t,
-            P,
+            k,
             { ePrivilege: 1 }
           );
         }),
@@ -3813,7 +3848,7 @@
           return e.SendMsg(
             "Community.ClearSinglePartnerEventsAppPriority#1",
             t,
-            k,
+            P,
             { ePrivilege: 1 }
           );
         });
@@ -3925,7 +3960,7 @@
         c = n.n(i),
         s = (function() {
           function e() {
-            (this.m_mapEmoticonHovers = r.x.map()),
+            (this.m_mapEmoticonHovers = r.C.map()),
               (this.m_inflightRequests = {});
           }
           return (
@@ -4124,7 +4159,7 @@
         o = (function() {
           function e(e) {
             (this.m_nLastUpdated = 0),
-              (this.m_mapLanguages = r.x.map()),
+              (this.m_mapLanguages = r.C.map()),
               (this.m_fetching = null),
               (this.m_appid = e);
           }
@@ -4222,8 +4257,8 @@
         });
       var _ = (function() {
           function e() {
-            (this.m_mapAppInfo = r.x.map()),
-              (this.m_mapRichPresenceLoc = r.x.map()),
+            (this.m_mapAppInfo = r.C.map()),
+              (this.m_mapRichPresenceLoc = r.C.map()),
               (this.m_cAppInfoRequestsInFlight = 0),
               (this.m_setPendingAppInfo = new Set()),
               (this.m_CacheStorage = null),
@@ -4331,7 +4366,7 @@
                       e.sent(),
                         (n = l.a.Init(b.b))
                           .Body()
-                          .set_language(Object(u.d)(m.b.LANGUAGE)),
+                          .set_language(Object(u.e)(m.b.LANGUAGE)),
                         (r = 50),
                         (e.label = 3);
                     case 3:
@@ -4610,8 +4645,8 @@
                 t.m_fetching
               );
             }),
-            Object(s.c)([r.f], e.prototype, "OnGetAppsResponse", null),
-            Object(s.c)([r.f], e.prototype, "OnRichPresenceLocUpdate", null),
+            Object(s.c)([r.k], e.prototype, "OnGetAppsResponse", null),
+            Object(s.c)([r.k], e.prototype, "OnRichPresenceLocUpdate", null),
             e
           );
         })(),
@@ -5056,10 +5091,10 @@
               (this.m_bInitialized = !0), (this.m_bEmoticonListRequested = !1);
             }),
             (n.sm_EmoticonRegex = new RegExp("ː([a-zA-Z0-9_\\-]+)ː", "g")),
-            Object(r.c)([o.x], n.prototype, "m_bInitialized", void 0),
-            Object(r.c)([o.x], n.prototype, "m_rtMostRecentEmoticon", void 0),
-            Object(r.c)([o.x], n.prototype, "m_rtLastStickerOrEffect", void 0),
-            Object(r.c)([o.f], n.prototype, "TrackEmoticonUsage", null),
+            Object(r.c)([o.C], n.prototype, "m_bInitialized", void 0),
+            Object(r.c)([o.C], n.prototype, "m_rtMostRecentEmoticon", void 0),
+            Object(r.c)([o.C], n.prototype, "m_rtLastStickerOrEffect", void 0),
+            Object(r.c)([o.k], n.prototype, "TrackEmoticonUsage", null),
             n
           );
         })();

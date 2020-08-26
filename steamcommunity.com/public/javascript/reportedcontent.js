@@ -299,3 +299,41 @@ function ResetProfileAndGroupContent( steamID )
 		}
 	} );
 }
+
+function ConfirmAppUGCBan( accountid, appid )
+{
+	var dialog = ShowPromptWithTextAreaDialog( "Update App UGC Ban", '', null, null, 1000 );
+	var text_area = $J( dialog.m_$Content ).find( "textarea" );
+
+	var select = $J( '<select>' );
+	select.append( $J( '<option>', { value: 7, text: '7 Days' } ) );
+	select.append( $J( '<option>', { value: 30, text: '30 Days' } ) );
+	select.append( $J( '<option>', { value: 365, text: '365 Days' } ) );
+	select.append( $J( '<option>', { value: -1, text: 'Permanent' } ) );
+	var container = $J( '<div>', { text: 'Ban Duration: ', style: 'margin-bottom: 10px; border: 1px solid red; padding: 5px;'} );
+	container.append( select );
+	container.append( $J( '<div>', { text: "Please enter a user-facing reason why this user is receiving a ban from uploading new content: " } ) );
+
+	text_area.before( container );
+
+	dialog.done( function( reason ) {
+		reason = v_trim( reason )
+		var ban_days = select.val();
+		UpdateAppUGCBan( accountid, appid, ban_days, reason )
+	} );
+}
+
+function UpdateAppUGCBan( accountid, appid, ban_days, reason )
+{
+	$J.post( 'https://steamcommunity.com/sharedfiles/updateappugcban/', { 'sessionid': g_sessionID, 'accountid': accountid, 'appid': appid, 'ban_days': ban_days, 'reason' : reason } )
+	.done( function( data ) {
+		if ( data.success == 1 )
+		{
+			top.location.reload();
+		}
+		else
+		{
+			ShowAlertDialog( "Error", "Update App UGC Ban Failed: " + data.success );
+		}
+	} );
+}

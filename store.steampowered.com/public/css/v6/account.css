@@ -1377,3 +1377,9 @@ span.disown_button {
 	background-repeat: no-repeat;
 	background-origin: content-box;
 }
+.wallet_redeem_error {
+	margin-left: 20px;
+}
+.wallet_redeem_error > li {
+	margin-top: 5px;
+}

@@ -3870,6 +3870,7 @@ a.cluster_capsule:hover {
 
 .store_capsule .capsule {
 	vertical-align: top;
+	position: relative;
 }
 
 .store_capsule .capsule > img {
@@ -3957,6 +3958,7 @@ a.cluster_capsule:hover {
 /* Aspect ratios */
 .store_capsule > .capsule.header, .store_capsule > .capsule.headerv5, .store_capsule > .capsule.headerratio, .store_capsule > .capsule.smallcapsule {
 	padding-top: 46.57534246575342%;
+	overflow: hidden;
 }
 .store_capsule > .capsule.main_capsule {
 	padding-top: 57.3051948051948%;
@@ -4413,6 +4415,37 @@ body.v6 .broadcast_live_stream_icon {
 
     transition: opacity 0.6s;
 }
+
+.cluster_maincap_grantingapp {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+
+.spotlight_content .grantedbymastersub {
+	position: absolute;
+	top: -33px;
+	right: 0;
+}
+
+.capsule .grantedbymastersub {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.grantedbymastersub {
+	background: linear-gradient(148deg, rgba(1, 1, 1, 0) 80%, #000000 100%);
+}
+
+.grantedbymastersub_app {
+	position: absolute;
+	bottom: 4%;
+	right: 1%;
+}
+
 body.v6 .sale_capsule:hover .broadcast_live_stream_icon {
     opacity: 0;
 }

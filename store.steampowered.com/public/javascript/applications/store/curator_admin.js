@@ -390,7 +390,7 @@
             r
           );
         })(v),
-        y = (function(n) {
+        O = (function(n) {
           function r(e) {
             void 0 === e && (e = null);
             var t = n.call(this) || this;
@@ -452,7 +452,7 @@
             r
           );
         })(v),
-        O = (function(n) {
+        y = (function(n) {
           function r(e) {
             void 0 === e && (e = null);
             var t = n.call(this) || this;
@@ -866,7 +866,7 @@
         });
       }),
         (S.PreviewPartnerEvents = function(e, t) {
-          return e.SendMsg("News.PreviewPartnerEvents#1", t, O, {
+          return e.SendMsg("News.PreviewPartnerEvents#1", t, y, {
             bConstMethod: !0,
             ePrivilege: 1
           });
@@ -916,7 +916,7 @@
                   (this.m_clanSteamID = M.a.InitFromClanID(
                     this.m_clanAccountID
                   )),
-                  Object(s.A)(function() {
+                  Object(s.G)(function() {
                     (e.m_strRSSFeedURL = t.rss_feed_url),
                       (e.m_strRSSGID = t.rss_feed_gid),
                       (e.m_eRSSFeedLanguage = t.rss_feed_language),
@@ -976,7 +976,7 @@
                   switch (e.label) {
                     case 0:
                       return this.BIsLoggedIn()
-                        ? ((t = p.a.Init(y)).Body().set_rss_url(r),
+                        ? ((t = p.a.Init(O)).Body().set_rss_url(r),
                           t.Body().set_lang(this.GetFeedLanguageHandleUnset()),
                           [4, h.PreviewPartnerEvents(this.m_transport, t)])
                         : (console.error(
@@ -1040,7 +1040,7 @@
                                   " msg:" +
                                   n.Hdr().error_message()
                               )
-                            : Object(s.A)(function() {
+                            : Object(s.G)(function() {
                                 for (
                                   var e = 0;
                                   e < n.Body().clan_event_gid().length;
@@ -1100,7 +1100,7 @@
                       case 1:
                         return (
                           1 == (r = e.sent()).data.success &&
-                            Object(s.A)(function() {
+                            Object(s.G)(function() {
                               (a.m_strRSSGID = r.data.gid),
                                 (a.m_strRSSFeedURL = i),
                                 (a.m_nPollIntervalSeconds = o);
@@ -1202,7 +1202,7 @@
                                 " " +
                                 r.GetEResult()
                             )
-                          : (Object(s.A)(function() {
+                          : (Object(s.G)(function() {
                               var e = {
                                 url: i.post.url,
                                 clan_event_gid: r.Body().clan_event_gid(),
@@ -1221,13 +1221,13 @@
                 });
               });
             }),
-            Object(c.c)([s.y], e.prototype, "m_strRSSFeedURL", void 0),
-            Object(c.c)([s.y], e.prototype, "m_strRSSGID", void 0),
-            Object(c.c)([s.y], e.prototype, "m_rtimeRSSLastChecked", void 0),
-            Object(c.c)([s.y], e.prototype, "m_nPollIntervalSeconds", void 0),
-            Object(c.c)([s.y], e.prototype, "m_eRSSFeedLanguage", void 0),
-            Object(c.c)([s.y], e.prototype, "m_eCuratorLanguage", void 0),
-            Object(c.c)([s.y], e.prototype, "m_mapURLToPosted", void 0),
+            Object(c.c)([s.C], e.prototype, "m_strRSSFeedURL", void 0),
+            Object(c.c)([s.C], e.prototype, "m_strRSSGID", void 0),
+            Object(c.c)([s.C], e.prototype, "m_rtimeRSSLastChecked", void 0),
+            Object(c.c)([s.C], e.prototype, "m_nPollIntervalSeconds", void 0),
+            Object(c.c)([s.C], e.prototype, "m_eRSSFeedLanguage", void 0),
+            Object(c.c)([s.C], e.prototype, "m_eCuratorLanguage", void 0),
+            Object(c.c)([s.C], e.prototype, "m_mapURLToPosted", void 0),
             e
           );
         })(),
@@ -1312,8 +1312,8 @@
             e
           );
         })(),
-        A = n("TyAF"),
-        G = n("mgoM"),
+        G = n("TyAF"),
+        A = n("mgoM"),
         I = n("3+zv"),
         T = n("Mgs7"),
         N = n("T27q"),
@@ -1365,7 +1365,7 @@
               );
               if (void 0 !== window.Prototype)
                 return window.location.reload(), null;
-              var t = Object(G.d)(this.m_Admin.GetFeedLanguageHandleUnset());
+              var t = Object(A.e)(this.m_Admin.GetFeedLanguageHandleUnset());
               return d.a.createElement(
                 "div",
                 { className: Object(Y.a)(Z.Ctn) },
@@ -1458,7 +1458,7 @@
                         { className: Z.LanguageTitle },
                         Object(Q.d)(
                           "#CuratorAdmin_Curator_lang_only",
-                          Object(G.d)(this.m_Admin.GetCuratorLanguage()),
+                          Object(A.e)(this.m_Admin.GetCuratorLanguage()),
                           t
                         )
                       )
@@ -1515,7 +1515,7 @@
             Object(c.c)([X.a], e.prototype, "OnChangeActualRSSURL", null),
             Object(c.c)([X.a], e.prototype, "OnCreateOrSaveFeed", null),
             Object(c.c)([X.a], e.prototype, "OnRevert", null),
-            (e = Object(c.c)([A.a], e))
+            (e = Object(c.c)([G.a], e))
           );
         })(d.a.Component),
         ae = (function(t) {
@@ -1775,7 +1775,7 @@
             }),
             Object(c.c)([X.a], e.prototype, "GetRSSPreviewURL", null),
             Object(c.c)([X.a], e.prototype, "OnLoadPreview", null),
-            (e = Object(c.c)([A.a], e))
+            (e = Object(c.c)([G.a], e))
           );
         })(d.a.Component),
         ie = (function(t) {
@@ -1902,7 +1902,7 @@
             }),
             Object(c.c)([X.a], e.prototype, "OnToggleChannelAutomation", null),
             Object(c.c)([X.a], e.prototype, "OnQueueScan", null),
-            (e = Object(c.c)([A.a], e))
+            (e = Object(c.c)([G.a], e))
           );
         })(d.a.Component),
         oe = (function(t) {
@@ -2256,7 +2256,7 @@
             Object(c.c)([X.a], e.prototype, "HideModalEvent", null),
             Object(c.c)([X.a], e.prototype, "OnClanEventCreateSuccess", null),
             Object(c.c)([X.a], e.prototype, "OnShowRawRSS", null),
-            (e = Object(c.c)([A.a], e))
+            (e = Object(c.c)([G.a], e))
           );
         })(d.a.Component),
         se = (function(t) {

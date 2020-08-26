@@ -812,7 +812,9 @@ function UpdateCaptcha(data)
 			} else {
 				g_recaptchaInstance = grecaptcha.enterprise.render( 'captcha_entry_recaptcha', {
 					'sitekey': data.sitekey,
-					'theme': 'dark'
+					'theme': 'dark',
+					'callback': function(n){},
+					's': data.s
 				});
 			}
 		}

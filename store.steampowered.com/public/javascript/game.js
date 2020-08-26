@@ -1463,6 +1463,12 @@ function UpdateActiveFilters()
 		$J( "#reviews_filter_language" ).show();
 		$J( "#reviews_filter_language" ).text( 'Your Languages' );
 	}
+	else if ( false )
+	{
+		bAnyActiveFilters = true;
+		$J( "#reviews_filter_language" ).show();
+		$J( "#reviews_filter_language" ).text( 'Simplified Chinese' );
+	}
 	else
 	{
 		$J( "#reviews_filter_language" ).hide();

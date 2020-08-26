@@ -54,6 +54,8 @@ GHomepage = {
 
 	bUseNewMainCapZip: false,
 
+	bShowAllRecentlyUpdated: false,
+
 	MainCapCluster: null,
 	usabilityTracker: null,
 
@@ -224,6 +226,7 @@ GHomepage = {
 			GHomepage.rgMarketingMessages = rgParams.rgMarketingMessages;
 			GHomepage.nMaxBroadcasts = rgParams.nMaxBroadcasts;
 			GHomepage.bAutoPlayingFeaturedBroadcast = rgParams.bAutoPlayingFeaturedBroadcast || false;
+			GHomepage.bShowAllRecentlyUpdated = rgParams.bShowAllRecentlyUpdated || false;
 		} catch( e ) { OnHomepageException(e); }
 
 		GHomepage.bStaticDataReady = true;
@@ -241,7 +244,7 @@ GHomepage = {
 		this.bLoadedActiveData = true;
 
 		try {
-			if ( g_AccountID != 0 )
+			if ( g_AccountID != 0 || GHomepage.bShowAllRecentlyUpdated )
 			{
 				$J.ajax( {
 					url: "https:\/\/store.steampowered.com\/default\/home_additional\/",
@@ -710,7 +713,7 @@ GHomepage = {
 		var rgAppInfo = {};
 		if ( unAppID )
 		{
-			rgAppInfo =  GStoreItemData.rgAppData[ unAppID ];
+			rgAppInfo = GStoreItemData.rgAppData[ unAppID ];
 		}
 
 		if ( rgAppInfo && rgAppInfo.has_live_broadcast )
@@ -718,6 +721,14 @@ GHomepage = {
 			$ImgCtn.append( $J('<div/>', {'class': 'broadcast_live_stream_icon' } ).append( 'Live') );
 		}
 
+		if ( rgAppInfo && rgAppInfo.mastersub_granting_app )
+		{
+			$divMasterSub = $J('<div/>', {'class': 'cluster_maincap_grantingapp grantedbymastersub'} );
+			$imgMasterSub = $J('<img/>', {'class': 'grantedbymastersub_app', 'src': rgAppInfo.mastersub_granting_app} );
+			$divMasterSub.append( $imgMasterSub );
+
+			$ImgCtn.append( $divMasterSub );
+		}
 
 		//var $ImgCap = $J('<img/>', { src: rgItemData.main_capsule } );
 		//$ImgCtn.append( $ImgCap );
@@ -1517,7 +1528,6 @@ GHomepage = {
 			GHomepage.oAdditionalData.recent_updates, 'home', 4, 8
 		);
 
-
 		GHomepage.FillPagedCapsuleCarousel( rgCapsules, $RecentlyUpdated,
 			function( oItem, strFeature, rgOptions, nDepth )
 			{
@@ -1781,7 +1791,7 @@ GHomepage = {
 
 		var rgImageProperties = { src: rgItemData[rgOptions.capsule_size] };
 		if( rgOptions.lazy )
-			rgImageProperties = { 'data-image-url': rgItemData[rgOptions.capsule_size] }
+			rgImageProperties = { 'data-image-url': rgItemData[rgOptions.capsule_size] };
 
 		$ImgCtn.append( $J('<img/>', rgImageProperties ) );
 		$CapCtn.append( $ImgCtn );
@@ -1804,7 +1814,15 @@ GHomepage = {
 			$CapCtn.append( 
 					$J('<div/>', {'class': 'broadcast_live_stream_icon' } ).append( 'Live')
 			);
-		
+		}
+
+		if ( rgAppInfo && rgAppInfo.mastersub_granting_app )
+		{
+			$divMasterSub = $J('<div/>', {'class': 'cluster_maincap_grantingapp grantedbymastersub'} );
+			$imgMasterSub = $J('<img/>', {'class': 'grantedbymastersub_app', 'src': rgAppInfo.mastersub_granting_app} );
+			$divMasterSub.append( $imgMasterSub );
+
+			$ImgCtn.append( $divMasterSub );
 		}
 
 		return $CapCtn;
@@ -1853,6 +1871,16 @@ GHomepage = {
 		});
 		$ImageCapsule.append( $Image );
 		$ImageCapsule.append( $J('<div/>').html( rgItemData.discount_block ? $J(rgItemData.discount_block).addClass('discount_block_large main_cap_discount') : '&nbsp;' ) );
+
+		var rgAppInfo = GStoreItemData.rgAppData[ unAppID ];
+		if ( rgAppInfo && rgAppInfo.mastersub_granting_app )
+		{
+			$divMasterSub = $J('<div/>', {'class': 'cluster_maincap_grantingapp grantedbymastersub'} );
+			$imgMasterSub = $J('<img/>', {'class': 'grantedbymastersub_app', 'src': rgAppInfo.mastersub_granting_app} );
+			$divMasterSub.append( $imgMasterSub );
+
+			$ImageCapsule.append( $divMasterSub );
+		}
 
 		$ItemLink.append( $ImageCapsule );
 

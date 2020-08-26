@@ -234,16 +234,16 @@
                 });
               });
             }),
-            Object(s.c)([l.y.ref], e.prototype, "m_ulPointsAvailable", void 0),
-            Object(s.c)([l.y], e.prototype, "m_unAwardCost", void 0),
+            Object(s.c)([l.C.ref], e.prototype, "m_ulPointsAvailable", void 0),
+            Object(s.c)([l.C], e.prototype, "m_unAwardCost", void 0),
             Object(s.c)(
-              [l.y],
+              [l.C],
               e.prototype,
               "m_unAwardPointsTransferred",
               void 0
             ),
             Object(s.c)(
-              [l.y.deep],
+              [l.C.deep],
               e.prototype,
               "m_mapExistingReactions",
               void 0
@@ -376,7 +376,7 @@
                 c = l.s_LoyaltyAwardModalStore;
               if (!r) return null;
               c.GetAwardPointsTransferred();
-              return v.createElement(y, {
+              return v.createElement(g, {
                 key: o,
                 targetid: o,
                 active: r,
@@ -420,7 +420,7 @@
               if (null === i)
                 return console.log("Store not initialized yet."), null;
               i.GetAwardPointsTransferred();
-              return v.createElement(y, {
+              return v.createElement(g, {
                 key: a,
                 targetid: a,
                 active: r,
@@ -436,7 +436,7 @@
             (e = c = Object(s.c)([r.a], e))
           );
         })(v.Component)),
-        y = (function(a) {
+        g = (function(a) {
           function e(e) {
             var t = a.call(this, e) || this;
             return (
@@ -513,7 +513,7 @@
                         b ? "#GrantAward_SelectAward" : "#GrantAward_Next"
                       )
                     ),
-                    y = v.createElement(
+                    g = v.createElement(
                       v.Fragment,
                       null,
                       v.createElement(F, { description: h }),
@@ -575,7 +575,7 @@
                 case T.CONFIRM:
                 case T.SUBMITTING:
                 case T.DONE:
-                  y = v.createElement(
+                  g = v.createElement(
                     v.Fragment,
                     null,
                     v.createElement(F, { description: h }),
@@ -680,30 +680,30 @@
                   );
                   break;
                 case T.ERROR:
-                  var g = "";
+                  var y = "";
                   switch (this.state.eResult) {
                     case 10:
-                      g = Object(R.d)("#GrantAwardError_Busy");
+                      y = Object(R.d)("#GrantAwardError_Busy");
                       break;
                     case 32:
-                      g = Object(R.d)("#GrantAwardError_PersistFailed");
+                      y = Object(R.d)("#GrantAwardError_PersistFailed");
                       break;
                     case 8:
-                      g = Object(R.d)("#GrantAwardError_InvalidParam");
+                      y = Object(R.d)("#GrantAwardError_InvalidParam");
                       break;
                     case 42:
-                      g = Object(R.d)("#GrantAwardError_NoMatch");
+                      y = Object(R.d)("#GrantAwardError_NoMatch");
                       break;
                     case 107:
-                      g = Object(R.d)("#GrantAwardError_InsufficientFunds");
+                      y = Object(R.d)("#GrantAwardError_InsufficientFunds");
                       break;
                     case 15:
-                      g = Object(R.d)("#GrantAwardError_AccessDenied");
+                      y = Object(R.d)("#GrantAwardError_AccessDenied");
                       break;
                     default:
-                      g = Object(R.d)("#GrantAwardError_Fail");
+                      y = Object(R.d)("#GrantAwardError_Fail");
                   }
-                  y = v.createElement(
+                  g = v.createElement(
                     v.Fragment,
                     null,
                     v.createElement(F, { description: h }),
@@ -714,7 +714,7 @@
                       v.createElement(
                         "div",
                         { className: O.ErrorContainer },
-                        v.createElement("div", { className: O.ErrorText }, g)
+                        v.createElement("div", { className: O.ErrorText }, y)
                       )
                     ),
                     v.createElement(V, null),
@@ -737,7 +737,7 @@
                 A.a,
                 { className: O.GrantAwardModal, active: a, onDismiss: s },
                 d && v.createElement(L.a, { eType: L.b.Default }),
-                y
+                g
               );
             }),
             (e.prototype.GrantAward = function() {

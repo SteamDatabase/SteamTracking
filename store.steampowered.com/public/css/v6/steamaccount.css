@@ -506,6 +506,25 @@ body.v6 .account_settings_container .h3_content {
 	margin-left: 5px;
 }
 
+#text_filter_lab_ctn {
+	background-color: #063e6f;
+	margin: -4px -8px 0 -8px;
+	padding: 4px 8px 8px 8px;
+}
+#text_filter_lab_experiment {
+	background: linear-gradient(180deg, #063E6F 0%, #16202D 100%);
+	margin: -16px -8px 0 -8px;
+	padding: 0 8px 0 8px;
+}
+.text_filter_lab_action_link,
+.text_filter_lab_action_link a {
+	color: #c0f3ff;
+	font-size: 14px;
+}
+.text_filter_lab_action_link:hover,
+.text_filter_lab_action_link:hover a {
+	color: #ffffff;
+}
 #text_filter_custom_banned_words_ctn .tag_downvoted,
 #text_filter_custom_clean_words_ctn .tag_downvoted {
 	display: inline-block;

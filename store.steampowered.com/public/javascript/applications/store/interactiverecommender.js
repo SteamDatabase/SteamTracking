@@ -77,8 +77,8 @@
             (e.prototype.rerequestDataIfPending = function() {
               this.eState == o.Pending && (this.eState = o.Rerequest);
             }),
-            Object(u.c)([s.y], e.prototype, "data", void 0),
-            Object(u.c)([s.y], e.prototype, "nExpirationTime", void 0),
+            Object(u.c)([s.C], e.prototype, "data", void 0),
+            Object(u.c)([s.C], e.prototype, "nExpirationTime", void 0),
             e
           );
         })(),
@@ -664,16 +664,16 @@
           (e.prototype.shouldUseMicrotrailers = function() {
             return this.m_bUseMicrotrailers;
           }),
-          Object(u.c)([s.y], e.prototype, "m_fPopularityValue", void 0),
-          Object(u.c)([s.y], e.prototype, "m_fRecencyValue", void 0),
-          Object(u.c)([s.y], e.prototype, "m_rgFilterTags", void 0),
-          Object(u.c)([s.y], e.prototype, "m_rgExcludeTags", void 0),
-          Object(u.c)([s.y], e.prototype, "m_fQueuedPopularityValue", void 0),
-          Object(u.c)([s.y], e.prototype, "m_fQueuedRecencyValue", void 0),
-          Object(u.c)([s.y], e.prototype, "m_bExcludeWishlisted", void 0),
-          Object(u.c)([s.y], e.prototype, "m_bShouldMute", void 0),
-          Object(u.c)([s.y], e.prototype, "m_bUseMicrotrailers", void 0),
-          Object(u.c)([s.y], e.prototype, "m_bIgnoredEdited", void 0),
+          Object(u.c)([s.C], e.prototype, "m_fPopularityValue", void 0),
+          Object(u.c)([s.C], e.prototype, "m_fRecencyValue", void 0),
+          Object(u.c)([s.C], e.prototype, "m_rgFilterTags", void 0),
+          Object(u.c)([s.C], e.prototype, "m_rgExcludeTags", void 0),
+          Object(u.c)([s.C], e.prototype, "m_fQueuedPopularityValue", void 0),
+          Object(u.c)([s.C], e.prototype, "m_fQueuedRecencyValue", void 0),
+          Object(u.c)([s.C], e.prototype, "m_bExcludeWishlisted", void 0),
+          Object(u.c)([s.C], e.prototype, "m_bShouldMute", void 0),
+          Object(u.c)([s.C], e.prototype, "m_bUseMicrotrailers", void 0),
+          Object(u.c)([s.C], e.prototype, "m_bIgnoredEdited", void 0),
           Object(u.c)([l.a], e.prototype, "getTagHeight", null),
           Object(u.c)([l.a], e.prototype, "onPopularityChanged", null),
           Object(u.c)([l.a], e.prototype, "onRecencyChanged", null),
@@ -741,7 +741,7 @@
           )
         );
       }
-      function y(e) {
+      function S(e) {
         var t = e.appID,
           a = e.name,
           i = e.hours,
@@ -787,7 +787,7 @@
           )
         );
       }
-      function S(e) {
+      function y(e) {
         var t = e.titleLabel,
           a = e.minLabel,
           i = e.maxLabel,
@@ -865,7 +865,7 @@
                 Object.keys(i).map(function(e) {
                   var t = i[e];
                   a.push(
-                    P.a.createElement(y, {
+                    P.a.createElement(S, {
                       key: "PlayedGame_" + t.a,
                       appID: t.a,
                       name: t.t,
@@ -1026,7 +1026,7 @@
                 i
               );
             }),
-            Object(u.c)([s.y], e.prototype, "selectedtags", void 0),
+            Object(u.c)([s.C], e.prototype, "selectedtags", void 0),
             Object(u.c)([l.a], e.prototype, "onFetchRequested", null),
             Object(u.c)([l.a], e.prototype, "onClearRequested", null),
             Object(u.c)([l.a], e.prototype, "onChange", null),
@@ -1061,7 +1061,7 @@
             P.a.createElement(
               "div",
               { className: Object(M.a)(F.Row, F.FirstRow) },
-              P.a.createElement(S, {
+              P.a.createElement(y, {
                 minLabel: Object(x.d)("#Popularity_Popular"),
                 titleLabel: Object(x.d)("#Popularity_Title"),
                 maxLabel: Object(x.d)("#Popularity_Niche"),
@@ -1070,7 +1070,7 @@
                 value: V.m_fQueuedPopularityValue,
                 onChange: V.onPopularityChanged
               }),
-              P.a.createElement(S, {
+              P.a.createElement(y, {
                 minLabel: Object(x.d)("#Recency_Older"),
                 titleLabel: Object(x.d)("#Recency_Title"),
                 maxLabel: Object(x.d)("#Recency_Newer"),
@@ -1225,20 +1225,20 @@
               r < h ? (E = !(v = 66)) : r < g && (E = !(v = 87));
               var f,
                 b = E && this.state.hovered,
-                y = Math.min(Number(i) / 10, 1e3),
-                S = (Math.max(1, i), !1),
+                S = Math.min(Number(i) / 10, 1e3),
+                y = (Math.max(1, i), !1),
                 T = !1,
                 O = !0,
                 R = "",
                 N = "",
+                C = "",
                 L = "",
                 I = "",
-                A = "",
-                C = !1,
+                A = !1,
                 j = !0;
               !b ||
                 ((f = V.getDetails(this.props.appID)) &&
-                  ((S = !0),
+                  ((y = !0),
                   (T = 0 < f.discount_pct),
                   (O = "0" == f.discount_price),
                   "probably" ==
@@ -1246,16 +1246,16 @@
                     .createElement("video")
                     .canPlayType('video/webm; codecs="vp8, vorbis"')
                     ? V.shouldUseMicrotrailers() && f.microtrailer_webm
-                      ? ((A = f.microtrailer_webm), (j = !(C = !0)))
-                      : (A = f.video_webm)
+                      ? ((I = f.microtrailer_webm), (j = !(A = !0)))
+                      : (I = f.video_webm)
                     : V.shouldUseMicrotrailers() && f.microtrailer_mp4
-                    ? ((A = f.microtrailer_mp4), (j = !(C = !0)))
-                    : (A = f.video_mp4),
+                    ? ((I = f.microtrailer_mp4), (j = !(A = !0)))
+                    : (I = f.video_mp4),
                   (R = "-" + f.discount_pct + "%"),
                   (N = f.base_price),
-                  (L = O ? Object(x.d)("#FreeToPlay") : f.discount_price),
-                  (I = f.description)));
-              var D = A && 0 < A.length;
+                  (C = O ? Object(x.d)("#FreeToPlay") : f.discount_price),
+                  (L = f.description)));
+              var D = I && 0 < I.length;
               return P.a.createElement(
                 U.a,
                 { appID: a, snr: k.LINK_PARAM },
@@ -1301,8 +1301,8 @@
                         playsInline: !0,
                         autoPlay: !0,
                         muted: j && V.shouldMute(),
-                        src: A,
-                        loop: C
+                        src: I,
+                        loop: A
                       }),
                       j &&
                         P.a.createElement(
@@ -1354,7 +1354,7 @@
                             { className: F.BarContainer },
                             P.a.createElement("div", {
                               className: F.Bar,
-                              style: { width: y + "%" }
+                              style: { width: S + "%" }
                             })
                           ),
                           P.a.createElement("div", { className: F.Tags }, d)
@@ -1368,10 +1368,10 @@
                               !b && F.Hidden
                             )
                           },
-                          I
+                          L
                         )
                       ),
-                      S &&
+                      y &&
                         P.a.createElement(
                           "div",
                           { className: F.BottomEntrySection },
@@ -1414,7 +1414,7 @@
                                     P.a.createElement(
                                       "div",
                                       { className: "discount_final_price" },
-                                      L
+                                      C
                                     )
                                   )
                                 ),
@@ -1428,7 +1428,7 @@
                                       F.Price
                                     )
                                   },
-                                  L
+                                  C
                                 ),
                               !O &&
                                 P.a.createElement(
@@ -1555,17 +1555,17 @@
                     u = Math.max(u, f.score_scale);
                   if (f)
                     for (var b = 0; b < f.app_ids.length; b++) {
-                      var y,
-                        S = f.app_ids[b];
-                      !_[S] ||
-                        _[S].o ||
-                        _[S].i ||
-                        _[S].ti ||
-                        (_[S].w && V.m_bExcludeWishlisted) ||
-                        ((y =
-                          (m.get(S) || 0) +
+                      var S,
+                        y = f.app_ids[b];
+                      !_[y] ||
+                        _[y].o ||
+                        _[y].i ||
+                        _[y].ti ||
+                        (_[y].w && V.m_bExcludeWishlisted) ||
+                        ((S =
+                          (m.get(y) || 0) +
                           f.scores[b] * E.weight * f.score_scale),
-                        m.set(S, y));
+                        m.set(y, S));
                     }
                 }
                 m.forEach(function(e, t) {
@@ -1586,20 +1586,20 @@
                 });
                 if (0 < O.length) {
                   for (
-                    var R = 0, N = 0, L = (O = O.slice(0, 30));
-                    N < L.length;
+                    var R = 0, N = 0, C = (O = O.slice(0, 30));
+                    N < C.length;
                     N++
                   ) {
-                    (L[N].rank = R), R++;
+                    (C[N].rank = R), R++;
                   }
-                  for (var I = 0, A = O; I < A.length; I++) {
-                    var C = A[I];
+                  for (var L = 0, I = O; L < I.length; L++) {
+                    var A = I[L];
                     h.push(
                       P.a.createElement(D, {
-                        key: C.appid,
-                        appID: C.appid,
-                        score: C.score,
-                        rank: C.rank,
+                        key: A.appid,
+                        appID: A.appid,
+                        score: A.score,
+                        rank: A.rank,
                         width: this.props.width
                       })
                     );
@@ -1646,7 +1646,7 @@
             (e = Object(u.c)([n.a], e))
           );
         })(P.a.Component),
-        L = (function(t) {
+        C = (function(t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (e.state = { width: window.innerWidth }), e;
@@ -1730,7 +1730,7 @@
             (e = Object(u.c)([n.a], e))
           );
         })(P.a.Component);
-      t.default = L;
+      t.default = C;
     },
     Asqs: function(e, t, a) {
       e.exports = {

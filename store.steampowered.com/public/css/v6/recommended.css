@@ -2591,6 +2591,11 @@ body.recommendgame #review_create h1  {
 	background-position: right 5px center;
 	display: inline-block;
 }
+.user_reviews_active_filters .active_filter.no_dismiss {
+	padding-right: 5px;
+	background-image: none;
+	cursor: unset;
+}
 
 /* review events */
 

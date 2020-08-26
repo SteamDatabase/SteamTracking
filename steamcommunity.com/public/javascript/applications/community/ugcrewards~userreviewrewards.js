@@ -43,8 +43,8 @@
                 a.a.createElement(
                   "div",
                   { className: c.a.Throbber },
-                  a.a.createElement(o.I, { className: c.a.base }),
-                  a.a.createElement(o.I, { className: c.a.blur })
+                  a.a.createElement(o.H, { className: c.a.base }),
+                  a.a.createElement(o.H, { className: c.a.blur })
                 )
               );
               return a.a.createElement(
@@ -119,7 +119,7 @@
       var o = r("mrSG"),
         B = r("q1tI"),
         m = r.n(B),
-        n = r("okNM"),
+        n = r("TyAF"),
         R = r("Jqb/"),
         C = r("ARGL"),
         M = r("TLQK"),
@@ -1597,10 +1597,10 @@
           r = Object(o.f)(e, ["className"]);
         return m.a.createElement(
           "button",
-          Object(o.a)({ className: Object(H.a)(t, q.UnstyledButton) }, r)
+          Object(o.a)({ className: Object(Z.a)(t, q.UnstyledButton) }, r)
         );
       }
-      var Z = (function() {
+      var H = (function() {
           function e(e) {
             (this.m_ulPointsAvailable = null),
               (this.m_bPointsBalanceLoadedOrInFlight = !1),
@@ -1765,16 +1765,16 @@
                 });
               });
             }),
-            Object(o.c)([l.x.ref], e.prototype, "m_ulPointsAvailable", void 0),
-            Object(o.c)([l.x], e.prototype, "m_unAwardCost", void 0),
+            Object(o.c)([l.C.ref], e.prototype, "m_ulPointsAvailable", void 0),
+            Object(o.c)([l.C], e.prototype, "m_unAwardCost", void 0),
             Object(o.c)(
-              [l.x],
+              [l.C],
               e.prototype,
               "m_unAwardPointsTransferred",
               void 0
             ),
             Object(o.c)(
-              [l.x.deep],
+              [l.C.deep],
               e.prototype,
               "m_mapExistingReactions",
               void 0
@@ -1782,7 +1782,7 @@
             e
           );
         })(),
-        H = r("exH9"),
+        Z = r("exH9"),
         q = r("Dsqm"),
         Q = r("0OaU"),
         Y = r("6Y59");
@@ -2391,10 +2391,10 @@
               var t, r;
               l.s_LoyaltyAwardModalStore ||
                 (e
-                  ? (l.s_LoyaltyAwardModalStore = new Z(e))
+                  ? (l.s_LoyaltyAwardModalStore = new H(e))
                   : ((t = Object(O.e)("loyaltystore", "application_config")),
                     (r = new a.a(O.b.WEBAPI_BASE_URL, t.webapi_token)),
-                    (l.s_LoyaltyAwardModalStore = new Z(
+                    (l.s_LoyaltyAwardModalStore = new H(
                       r.GetServiceTransport()
                     ))));
             }),
@@ -2580,7 +2580,7 @@
                       B.createElement(
                         "div",
                         {
-                          className: Object(H.a)(
+                          className: Object(Z.a)(
                             C.ConfirmContainer,
                             l === me.CONFIRM && C.Visible
                           )
@@ -2621,7 +2621,7 @@
                       B.createElement(
                         "div",
                         {
-                          className: Object(H.a)(
+                          className: Object(Z.a)(
                             C.LoadingContainer,
                             l === me.SUBMITTING && C.Visible
                           )
@@ -2631,7 +2631,7 @@
                       B.createElement(
                         "div",
                         {
-                          className: Object(H.a)(
+                          className: Object(Z.a)(
                             C.SuccessContainer,
                             l === me.DONE && C.Visible
                           )
@@ -2787,7 +2787,7 @@
             B.createElement(
               "div",
               { className: C.Left },
-              B.createElement(Y.s, { className: C.BalanceIcon }),
+              B.createElement(Y.r, { className: C.BalanceIcon }),
               B.createElement(
                 "div",
                 { className: C.BalanceDetails },
@@ -2825,7 +2825,7 @@
             r = Object(o.f)(e, ["className"]);
           return B.createElement(
             D,
-            Object(o.a)({}, r, { className: Object(H.a)(t, C.SubmitButton) })
+            Object(o.a)({}, r, { className: Object(Z.a)(t, C.SubmitButton) })
           );
         },
         je = function(e) {
@@ -2833,7 +2833,7 @@
             r = Object(o.f)(e, ["className"]);
           return B.createElement(
             D,
-            Object(o.a)({}, r, { className: Object(H.a)(t, C.BackButton) })
+            Object(o.a)({}, r, { className: Object(Z.a)(t, C.BackButton) })
           );
         },
         Se = function() {
@@ -2871,7 +2871,7 @@
                     type: "button",
                     onMouseEnter: this.handleMouseOver,
                     onMouseLeave: this.handleMouseOut,
-                    className: Object(H.a)(
+                    className: Object(Z.a)(
                       C.Button,
                       r && C.Selected,
                       n && C.Disabled
@@ -2911,8 +2911,8 @@
             n = Object(o.f)(e, ["children", "className"]);
           return B.createElement(
             "span",
-            Object(o.a)({}, n, { className: Object(H.a)(r, C.PointsAmount) }),
-            B.createElement(Y.s, { className: C.PointsAmountIcon }),
+            Object(o.a)({}, n, { className: Object(Z.a)(r, C.PointsAmount) }),
+            B.createElement(Y.r, { className: C.PointsAmountIcon }),
             t
           );
         };

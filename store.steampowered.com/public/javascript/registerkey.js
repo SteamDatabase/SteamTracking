@@ -140,7 +140,7 @@ function OnRegisterProductKeyFailure( ePurchaseResult, receipt )
 	switch ( ePurchaseResult )
 	{
 		case 14:
-			sErrorMessage = 'The product code you\'ve entered is not valid or is not a product code. Please double check to see if you\'ve mistyped your key. I, L, and 1 can look alike, as can V and Y, and 0 and O.  If you are redeeming a gift card please click <a href="%1$s">here</a> to redeem it.';
+			sErrorMessage = 'The product code you\'ve entered is not valid or is not a product code. Please double check to see if you\'ve mistyped your key. I, L, and 1 can look alike, as can V and Y, and 0 and O.  If you are redeeming a gift card please click <a href="https://store.steampowered.com/account/redeemwalletcode">here</a> to redeem it.';
 			break;
 
 		case 15:
@@ -154,7 +154,7 @@ function OnRegisterProductKeyFailure( ePurchaseResult, receipt )
 		case 13:
 			if ( strGameName )
 			{
-				sErrorMessage = 'Sorry, but %1$s is not available for purchase in this country. Your product key has not been redeemed.'.replace( /\%1\$s/, strGameName );
+				sErrorMessage = V_EscapeHTML( 'Sorry, but %1$s is not available for purchase in this country. Your product key has not been redeemed.'.replace( /\%1\$s/, strGameName ) );
 			}
 			else
 			{
@@ -173,16 +173,12 @@ function OnRegisterProductKeyFailure( ePurchaseResult, receipt )
 		case 36:
 			if ( strGameName )
 			{
-				sErrorMessage = 'The product code you have entered requires that you first play %1$s on the PlayStation®3 system before it can be registered.\n\nPlease:\n\n- Start %1$s on your PlayStation®3 system\n\n- Link your Steam account to your PlayStation®3 Network account\n\n- Connect to Steam while playing %1$s on the PlayStation®3 system\n\n- Register this product code through Steam.'.replace( /\%1\$s/g, strGameName );
+				sErrorMessage = V_EscapeHTML( 'The product code you have entered requires that you first play %1$s on the PlayStation®3 system before it can be registered.\n\nPlease:\n\n- Start %1$s on your PlayStation®3 system\n\n- Link your Steam account to your PlayStation®3 Network account\n\n- Connect to Steam while playing %1$s on the PlayStation®3 system\n\n- Register this product code through Steam.'.replace( /\%1\$s/g, strGameName ) );
 			}
 			else
 			{
 				sErrorMessage = 'The product code you have entered requires that you first play this game on the PlayStation®3 system before it can be registered.\n\nPlease:\n\n- Start this game on your PlayStation®3 system\n\n- Link your Steam account to your PlayStation®3 Network account\n\n- Connect to Steam while playing this game on the PlayStation®3 system\n\n- Register this product code through Steam.';
 			}
-			break;
-
-		case 50: // User entered wallet code
-			sErrorMessage = '#youraccount_registerkey_walletkey_error';
 			break;
 
 		case 4:
@@ -210,7 +206,7 @@ function UpdateReceiptForm( result )
 
 function DisplayErrorMessage( strMessage )
 {
-	$('error_display').innerHTML = V_EscapeHTML( strMessage ).replace( /\n/g, '<br/>');
+	$('error_display').innerHTML = strMessage.replace( /\n/g, '<br/>');
 	$('error_display').style.display = 'block';
 	Effect.ScrollTo( 'error_display' );
 	

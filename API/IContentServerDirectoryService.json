@@ -29,6 +29,12 @@
                     "type": "int32",
                     "optional": true,
                     "description": "launcher type"
+                },
+                {
+                    "name": "ipv6_public",
+                    "type": "string",
+                    "optional": true,
+                    "description": "client public ipv6 address if it knows it"
                 }
             ]
         },

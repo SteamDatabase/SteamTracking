@@ -1751,6 +1751,26 @@ a.communitylink_achievement.communitylink_achivement_plusmore:hover {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#67c1f5', endColorstr='#417a9b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
+.communitylink_points_shop_images {
+	display: flex;
+	padding: 4px 0px 4px 0px;
+	overflow: hidden;
+	margin-bottom: 5px;
+}
+
+.communitylink_points_shop_item {
+	width: 64px;
+	height: 64px;
+	background-color: #000;
+	margin-right: 4px;
+}
+.communitylink_points_shop_item > a > img {
+	width: 64px;
+}
+.communitylink_points_shop_item > a > img.profile_background {
+	padding-top: 12px;
+}
+
 .friend_blocks_twoxtwo .friend_block_holder {
 	float: left;
 	display: block;

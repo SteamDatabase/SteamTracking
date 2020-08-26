@@ -14,7 +14,7 @@ function DisplayPage( page )
 				$('redeem_amount_form').style.display = 'none';
 				$('validate_btn').style.display = '';
 				$('validate_btn_in_progress').style.display = 'none';		
-				$('wallet_code').value = '';		
+				$('wallet_code').value = '';
 			break;
 			
 			case 'address':
@@ -25,16 +25,6 @@ function DisplayPage( page )
 				$('main_content').style.backgroundImage = "url('')";
 				$('address_form').style.display = '';
 				$('redeem_amount_form').style.display = 'none';
-			break;
-			
-			case 'redeem_amount':
-				$('redeem_btn').style.display = '';
-				$('redeem_btn_in_progress').style.display = 'none';			
-				$('wallet_code_form').style.display = 'none';
-				$('redeem_wallet_code_upsell_text').style.display = 'none';
-				$('main_content').style.backgroundImage = "url('')";
-				$('address_form').style.display = 'none';
-				$('redeem_amount_form').style.display = '';
 			break;
 		}
 }
@@ -73,10 +63,10 @@ function ReportRedeemJSError( message, e )
 			}
 }
 
-var g_bValidateWalletCodeCallRunning = false;
-function ValidateWalletCode()
+var g_bRedeemWalletCodeCallRunning = false;
+function RedeemWalletCode()
 {
-		if( g_bValidateWalletCodeCallRunning )
+		if( g_bRedeemWalletCodeCallRunning )
 		return;
 		
 	if ( $('wallet_code').value == '' )
@@ -87,12 +77,12 @@ function ValidateWalletCode()
 	{
 		try 
 		{
-						g_bValidateWalletCodeCallRunning = true;
+						g_bRedeemWalletCodeCallRunning = true;
 			
 			$('validate_btn').style.display = 'none';
 			$('validate_btn_in_progress').style.display = '';
 			
-			new Ajax.Request('https://store.steampowered.com/account/validatewalletcode/',
+			new Ajax.Request('https://store.steampowered.com/account/ajaxredeemwalletcode/',
 			{
 			    method:'post',
 			    parameters: { 
@@ -100,117 +90,45 @@ function ValidateWalletCode()
 				    'sessionid' : g_sessionID
 				},
 			    onSuccess: function(transport){
-			    	g_bValidateWalletCodeCallRunning = false;
+					g_bRedeemWalletCodeCallRunning = false;
 					if ( transport.responseText ){
 						try {
 							var result = transport.responseText.evalJSON(true);
 			      		} catch ( e ) {
 			      			// Failure
-			      			OnValidateWalletCodeFailure( 2 );
+							OnRedeemWalletCodeFailure( 0, 0  );
 			      		}
 			      	   	// Success...
-			      	   	if ( result.success == 1 && result.detail == 0 )
+						if ( result.success == 11 && result.detail == 48 )
+						{
+							DisplayPage( 'address' );
+							UpdateStateSelection();
+							return;
+						}
+			      	   	else if ( result.success == 1 && result.detail == 0 )
 			      	   	{
-			      	   		OnValidateWalletCodeSuccess( result );
+							OnRedeemWalletCodeSuccess( result );
 			      	   		return;
 			      	   	}
 			      	   	else
 			      	   	{
-			      	   		OnValidateWalletCodeFailure( result.detail );
+							OnRedeemWalletCodeFailure( result.success, result.detail );
 			      	   		return;
 			      	   	}
 				  	}
 				  	
-										OnValidateWalletCodeFailure( 0  );
+										OnRedeemWalletCodeFailure( 0, 0  );
 			    },
 			    onFailure: function(){
-										g_bValidateWalletCodeCallRunning = false;
-					OnValidateWalletCodeFailure( 0  );
+										g_bRedeemWalletCodeCallRunning = false;
+					OnRedeemWalletCodeFailure( 0, 0  );
 				}
 			});
 		} 
 		catch(e) 
 		{
-			ReportRedeemJSError( 'Failed gathering form data and calling ValidateWalletCode', e );
+			ReportRedeemJSError( 'Failed gathering form data and calling RedeemWalletCode', e );
 		}
-	}
-}
-
-var g_sWalletCodeAmount;
-var g_sExchangedWalletCodeAmount;
-
-function OnValidateWalletCodeSuccess( result )
-{
-	try 
-	{
-				$('error_display').innerHTML = '';
-		$('error_display').style.display = 'none';
-
-				g_sWalletCodeAmount = result.formattedcodeamount;
-		g_sExchangedWalletCodeAmount = g_sWalletCodeAmount;
-
-		UpdateRedeemForm( result );
-		
-				if ( result.haswallet )
-		{
-			if ( result.currency == result.wallet.currencycode )
-			{
-								RedeemWalletCode();	
-			}
-			else
-			{
-								CreateWalletAndCheckFunds( false );
-			}
-		}
-		else
-		{
-						DisplayPage( 'address' );
-			UpdateStateSelection();
-		}
-	} 
-	catch( e ) 
-	{
-		ReportRedeemJSError( 'Failed handling ValidateWalletCode success', e );
-	}
-}
-
-function OnValidateWalletCodeFailure( detail )
-{
-	try 
-	{
-		var sErrorMessage = '#youraccount_wallet_code_generic_error';
-			
-		switch ( detail )
-		{
-			case 14:
-				sErrorMessage = '#youraccount_wallet_code_invalid_code';
-				break;
-				
-			case 15:
-				sErrorMessage = 'The Steam Wallet code you have entered has already been redeemed. Steam Support is unable to issue you a new code.';
-				break;
-
-			case 58:
-				sErrorMessage = '#youraccount_wallet_code_not_activated';
-				break;
-
-			case 9:
-				sErrorMessage = 'The Steam Wallet code you have entered has already been previously redeemed on your account.';
-				break;
-
-			default:
-				sErrorMessage = '#youraccount_wallet_code_generic_error';
-				break;
-		}
-		
-		DisplayErrorMessage( sErrorMessage );
-		$('validate_btn').style.display = '';
-		$('validate_btn_in_progress').style.display = 'none';
-		
-	} 
-	catch (e) 
-	{
-		ReportRedeemJSError( 'Failed handling ValidateWalletCode failure', e );
 	}
 }
 
@@ -320,7 +238,7 @@ function CreateWalletAndCheckFunds( bCreateFromAddress )
 		$('address_btn').style.display = 'none';
 		$('address_btn_in_progress').style.display = '';
 		
-		new Ajax.Request('https://store.steampowered.com/account/createwalletandcheckfunds/',
+		new Ajax.Request('https://store.steampowered.com/account/ajaxcreatewalletandcheckfunds/',
 		{
 		    method:'post',
 		    parameters: { 
@@ -394,23 +312,7 @@ function OnCreateWalletAndCheckFundsSuccess( result )
 {
 	try 
 	{
-		$('error_display').innerHTML = '';
-		$('error_display').style.display = 'none';
-		
-		g_sExchangedWalletCodeAmount = result.formattedcodeexchangeamount;
-		UpdateRedeemForm( result );
-		
-		if ( result.currency != result.grant_currency )
-		{
-			$('code_amount').innerHTML = g_sWalletCodeAmount;
-			$('code_exchange_amount').innerHTML = g_sExchangedWalletCodeAmount;
-
-			DisplayPage( 'redeem_amount' );
-		}
-		else
-		{
-						RedeemWalletCode();						
-		}
+		RedeemWalletCode();
 	} 
 	catch( e ) 
 	{
@@ -435,63 +337,6 @@ function OnCreateWalletAndCheckFundsFailure( detail )
 }
 
 
-var g_bRedeemWalletCodeRunning = false;
-function RedeemWalletCode()
-{
-		if( g_bRedeemWalletCodeRunning )
-		return;
-		
-	try 
-	{
-				g_bRedeemWalletCodeRunning = true;
-
-		$('redeem_btn').style.display = 'none';
-		$('redeem_btn_in_progress').style.display = '';
-		
-		new Ajax.Request('https://store.steampowered.com/account/confirmredeemwalletcode/',
-		{
-		    method:'post',
-		    parameters: { 
-				'wallet_code' : $('wallet_code').value,
-			    'sessionid' : g_sessionID
-			},
-		    onSuccess: function(transport){
-		    	g_bRedeemWalletCodeRunning = false;
-				if ( transport.responseText ){
-					try {
-						var result = transport.responseText.evalJSON(true);
-		      		} catch ( e ) {
-		      			// Failure
-		      			OnRedeemWalletCodeFailure( 2 );
-		      		}
-		      	   	// Success...
-		      	   	if ( result.success == 1 )
-		      	   	{
-		      	   		OnRedeemWalletCodeSuccess( result );
-		      	   		return;
-		      	   	}
-		      	   	else
-		      	   	{
-		      	   		OnRedeemWalletCodeFailure( result.success, result.detail );
-		      	   		return;
-		      	   	}
-			  	}
-			  	
-								OnRedeemWalletCodeFailure( 2, 0  );
-		    },
-		    onFailure: function(){
-								g_bRedeemWalletCodeRunning = false;
-				OnRedeemWalletCodeFailure( 2, 0  );
-			}
-		});
-	} 
-	catch(e) 
-	{
-		ReportRedeemJSError( 'Failed gathering form data and calling RedeemWalletCode', e );
-	}
-}
-
-
 function OnRedeemWalletCodeSuccess( result )
 {
 	try 
@@ -504,53 +349,54 @@ function OnRedeemWalletCodeSuccess( result )
 	{
 		ReportRedeemJSError( 'Failed handling RedeemWalletCode success', e );
 	}
+
+	$('validate_btn').style.display = '';
+	$('validate_btn_in_progress').style.display = 'none';
 }
 
 function OnRedeemWalletCodeFailure( success, detail )
 {
 	try 
 	{
-		var sErrorMessage = '#youraccount_wallet_code_generic_error';
+		var sErrorMessage = 'There was an error redeeming the entered code.';
 
 		switch ( success )
 		{
 			case 16:
-				sErrorMessage = '#youraccount_wallet_code_generic_error';
+				sErrorMessage = '#youraccount_wallet_code_generic_not_redeemed';
 				break;
 
 			default:
 				switch ( detail )
 				{
-					case 48:
-						sErrorMessage = '#youraccount_wallet_code_invalid_code';
-						break;
-			
-					case 14:
-						sErrorMessage = '#youraccount_wallet_code_invalid_code';
-						break;
-
 					case 44:
 						sErrorMessage = 'Your Steam account is currently restricted from activating Steam Wallet codes. Please contact <a href="https://support.steampowered.com/newticket.php?category=15">Steam Support</a> for further assistance.';
 						break;
 
-					case 68:
-						sErrorMessage = 'youraccount_wallet_code_blocked_by_gov';
+					case 15:
+						sErrorMessage = 'The Steam Wallet code you have entered has already been redeemed. Steam Support is unable to issue you a new code.';
+						break;
+
+					case 9:
+						sErrorMessage = 'The Steam Wallet code you have entered has already been previously redeemed on your account.';
 						break;
 				
 					default:
-						sErrorMessage = '#youraccount_wallet_code_generic_error';
+						sErrorMessage = 'There was an error redeeming the entered code.'
+											+ '<ul class="wallet_redeem_error"><li>The code may be invalid. Please carefully verify the characters as you re-enter the code and double check to see if you\'ve mistyped your key. I, L, and 1 can look alike, as can V and Y, and 0 and O.</li>'
+											+ '<li>The code may not yet have been activated.  It may take several hours after time of purchase before activation is completed by your retailer, please wait and try redeeming the code again in a little while.</li>'
+											+ '<li>If the currency of the code you are attempting to redeem is different than the region in which you are located, you may not be able to redeem this gift card to your account.  If this is the case please return this code to the retailer where it was purchased.</li>'
+											+ '<li>If the problem persists, please contact <a href="https://help.steampowered.com/wizard/HelpWithWalletCode">Steam Support</a> for further assistance.</li></ul>';
 						break;
 				}
 				break;
 		}
 		
 		DisplayErrorMessage( sErrorMessage );
-		
-		$('redeem_btn').style.display = '';
-		$('redeem_btn_in_progress').style.display = 'none';
+
 		$('validate_btn').style.display = '';
 		$('validate_btn_in_progress').style.display = 'none';
-		
+
 	} 
 	catch (e) 
 	{
@@ -562,7 +408,6 @@ function DisplayErrorMessage( strMessage )
 {
 	$('error_display').innerHTML = strMessage;
 	$('error_display').style.display = 'block';
-	Effect.ScrollTo( 'error_display' );
 	
 	new Effect.Highlight( 'error_display', { endcolor : '#000000', startcolor : '#ff9900' } );
 }

@@ -1530,7 +1530,9 @@ HelpWizard = {
 				} else {
 					this.m_reCaptchaInstance = grecaptcha.enterprise.render( 'captcha_entry_recaptcha', {
 						'sitekey': data.sitekey,
-						'theme': 'dark'
+						'theme': 'dark',
+						'callback': function(n){},
+						's': data.s
 					});
 				}
 			}
