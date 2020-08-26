@@ -22985,7 +22985,7 @@
                 });
               });
             }),
-            (e.prototype.GetTagRecommendorForThisSale = function(r, o) {
+            (e.prototype.GetTagRecommendorForThisSale = function(r, o, i) {
               return Object(U.b)(this, void 0, void 0, function() {
                 var t, n, a;
                 return Object(U.e)(this, function(e) {
@@ -23007,11 +23007,12 @@
                                 l: H.b.LANGUAGE,
                                 clanAccountID: r.clanSteamID.GetAccountID(),
                                 clanAnnouncementGID: r.AnnouncementGID,
-                                count: o
+                                count: o,
+                                nocache: i
                               }),
                               [
                                 4,
-                                j.a.get(t, { params: n, withCredentials: !1 })
+                                j.a.get(t, { params: n, withCredentials: !0 })
                               ]));
                     case 1:
                       200 == (a = e.sent()).status &&
@@ -25667,7 +25668,8 @@
                                               4,
                                               wa.GetTagRecommendorForThisSale(
                                                 h,
-                                                i
+                                                i,
+                                                u
                                               )
                                             ]
                                           );
