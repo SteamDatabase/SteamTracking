@@ -11643,13 +11643,13 @@
     },
     G24H: function(e, t, n) {
       e.exports = {
+        AppPartnerEventsPage: "apppartnereventspage_AppPartnerEventsPage_3CJsg",
         AppPartnerEventsBanner:
           "apppartnereventspage_AppPartnerEventsBanner_1HRiM",
         AppBannerLinks: "apppartnereventspage_AppBannerLinks_D1bMm",
         ControlSection: "apppartnereventspage_ControlSection_2pA5C",
         NoGameLink: "apppartnereventspage_NoGameLink_2GfPe",
         AppPartnerEventsBody: "apppartnereventspage_AppPartnerEventsBody_1XLRr",
-        AppPartnerEventsPage: "apppartnereventspage_AppPartnerEventsPage_3CJsg",
         AppBannerGroup: "apppartnereventspage_AppBannerGroup_qexk-",
         AppBannerCtn: "apppartnereventspage_AppBannerCtn_wavRt",
         AppBannerBackground: "apppartnereventspage_AppBannerBackground_3RHFo",
@@ -25377,22 +25377,65 @@
                 });
               });
             }),
+            (e.prototype.GetItemListCacheName = function(e, t) {
+              var n = this.props,
+                a = n.section,
+                r = n.event,
+                o = n.bIsPreview,
+                i =
+                  "section_" +
+                  e +
+                  "_" +
+                  r.GID +
+                  (t || 0) +
+                  Object(Va.a)(
+                    a.unique_id ? a.unique_id.toString() : JSON.stringify(a)
+                  ).toString();
+              return (
+                o &&
+                  r.rtime32_last_local_modification &&
+                  (i += "_" + r.rtime32_last_local_modification),
+                i
+              );
+            }),
+            (e.prototype.GetCachedRandomizedOrder = function(e, t) {
+              var n,
+                a = this.props,
+                r = a.section,
+                o = a.event,
+                i = a.activeTab;
+              if (r.use_random_order) {
+                var s = this.GetItemListCacheName(
+                  e,
+                  null === (n = null == i ? void 0 : i.GetTab()) || void 0 === n
+                    ? void 0
+                    : n.unique_id
+                );
+                if (window.sessionStorage) {
+                  var l = window.sessionStorage.getItem(s);
+                  if (l) {
+                    var c = JSON.parse(l);
+                    if (c.rtime32_last_modified == o.rtime32_last_modified)
+                      return c.randomized;
+                  }
+                  var p = Array.from(t);
+                  Object(ae.h)(p);
+                  var d = {
+                    randomized: p,
+                    rtime32_last_modified: o.rtime32_last_modified
+                  };
+                  return window.sessionStorage.setItem(s, JSON.stringify(d)), p;
+                }
+              }
+              return t;
+            }),
             (e.prototype.GetSectionForSession = function() {
               var e = this.props,
                 t = e.section,
                 n = e.event;
               if (t.use_random_order) {
-                var a =
-                  "section_" +
-                  Object(Va.a)(
-                    t.unique_id ? t.unique_id.toString() : JSON.stringify(t)
-                  ).toString();
-                if (
-                  (this.props.bIsPreview &&
-                    n.rtime32_last_local_modification &&
-                    (a += "_" + n.rtime32_last_local_modification),
-                  window.sessionStorage)
-                ) {
+                var a = this.GetItemListCacheName("section");
+                if (window.sessionStorage) {
                   var r = window.sessionStorage.getItem(a);
                   if (r) {
                     var o = JSON.parse(r);
@@ -25748,7 +25791,11 @@
                             ])
                           : [3, 3];
                       case 2:
-                        return (d = e.sent()), [3, 4];
+                        return (
+                          (d = e.sent()),
+                          (d = this.GetCachedRandomizedOrder("capsules", d)),
+                          [3, 4]
+                        );
                       case 3:
                         (d = r.capsules), (e.label = 4);
                       case 4:
@@ -25837,7 +25884,11 @@
                           [4, Promise.all(T)]
                         );
                       case 12:
-                        return (A = e.sent()), [3, 15];
+                        return (
+                          (A = e.sent()),
+                          (A = this.GetCachedRandomizedOrder("events", A)),
+                          [3, 15]
+                        );
                       case 13:
                         return [
                           4,
@@ -25883,6 +25934,7 @@
                               materialized_link_capsule: e.square
                             };
                           })),
+                          (j = this.GetCachedRandomizedOrder("links", j)),
                           (e.label = 18);
                       case 18:
                         this.setState({ links: j, bInitialLoadComplete: !0 }),

@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6064856";
+var CLSTAMP = "6065387";
 !(function(e) {
   function t(t) {
     for (
@@ -65802,13 +65802,13 @@ var CLSTAMP = "6064856";
   },
   "ap/q": function(e, t, n) {
     e.exports = {
+      AppPartnerEventsPage: "apppartnereventspage_AppPartnerEventsPage_3KNt3",
       AppPartnerEventsBanner:
         "apppartnereventspage_AppPartnerEventsBanner_1YdOr",
       AppBannerLinks: "apppartnereventspage_AppBannerLinks_RNay9",
       ControlSection: "apppartnereventspage_ControlSection_3_2LP",
       NoGameLink: "apppartnereventspage_NoGameLink_2dHpA",
       AppPartnerEventsBody: "apppartnereventspage_AppPartnerEventsBody_3TObJ",
-      AppPartnerEventsPage: "apppartnereventspage_AppPartnerEventsPage_3KNt3",
       AppBannerGroup: "apppartnereventspage_AppBannerGroup_2Ihoc",
       AppBannerCtn: "apppartnereventspage_AppBannerCtn_3Im6R",
       AppBannerBackground: "apppartnereventspage_AppBannerBackground_2fkz2",

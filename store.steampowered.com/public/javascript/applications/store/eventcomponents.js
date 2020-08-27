@@ -1849,10 +1849,10 @@
           return Qr;
         }),
         a.d(t, "EventBackfillLanding", function() {
-          return Kr;
+          return Jr;
         }),
         a.d(t, "EventSaleDisplay", function() {
-          return Jr;
+          return Kr;
         }),
         a.d(t, "EventCalendar", function() {
           return Xr;
@@ -2348,8 +2348,8 @@
         F = a("Jqb/"),
         Q = a("0OaU"),
         P = a("bDQf"),
-        K = a("Lql7"),
-        J = a("uIWk"),
+        J = a("Lql7"),
+        K = a("uIWk"),
         X = a("7u3m"),
         $ = a.n(X),
         ee = a("D4G2"),
@@ -2367,7 +2367,7 @@
             return (
               (e.state = {
                 bLoading:
-                  !J.a.BHasCreatorHomeLoaded(
+                  !K.a.BHasCreatorHomeLoaded(
                     L.a.InitFromClanID(e.props.creatorID.clan_account_id)
                   ) || !x.a.BIsLoaded()
               }),
@@ -2389,7 +2389,7 @@
                   "CreatorHomeEmbed clan account id missing"
                 ),
                 (t = L.a.InitFromClanID(e.clan_account_id)),
-                J.a
+                K.a
                   .LoadCreatorHome(t, this.m_cancelSignal)
                   .then(function(e) {
                     x.a
@@ -2438,14 +2438,14 @@
               if (this.state.bLoading)
                 return H.createElement(
                   "div",
-                  { className: K.DevSummaryWidgetCtn },
+                  { className: J.DevSummaryWidgetCtn },
                   H.createElement(Q.a, null)
                 );
               if (this.state.strErrorMsg) return H.createElement("div", null);
               var e = this.props,
                 t = e.creatorID,
                 a = e.bShowTagline,
-                n = J.a.GetCreatorHomeByID(t),
+                n = K.a.GetCreatorHomeByID(t),
                 r = t.type,
                 o =
                   "developer" == t.type
@@ -2463,17 +2463,17 @@
                   "div",
                   {
                     className: Object(W.a)(
-                      K.DevSummaryCtn,
-                      this.props.bSmallFormat ? K.SmallFormat : K.LargeFormat
+                      J.DevSummaryCtn,
+                      this.props.bSmallFormat ? J.SmallFormat : J.LargeFormat
                     )
                   },
                   !this.props.bHideCreatorType &&
-                    H.createElement("span", { className: K.Title }, o),
+                    H.createElement("span", { className: J.Title }, o),
                   H.createElement(
                     "div",
-                    { className: K.DevSummaryWidgetCtn },
+                    { className: J.DevSummaryWidgetCtn },
                     H.createElement("div", {
-                      className: K.DevSummaryBackground,
+                      className: J.DevSummaryBackground,
                       style: {
                         backgroundImage:
                           "url(" + n.GetAvatarURLFullSize() + " )"
@@ -2483,7 +2483,7 @@
                       "div",
                       {
                         className: Object(W.a)(
-                          K.DevSummaryContent,
+                          J.DevSummaryContent,
                           R.FlexColumnContainer,
                           R.FlexContainSpaceBetween
                         )
@@ -2493,9 +2493,9 @@
                         { className: R.FlexRowContainer },
                         H.createElement(
                           "a",
-                          { href: i, className: K.AvatarLink },
+                          { href: i, className: J.AvatarLink },
                           H.createElement("img", {
-                            className: K.Avatar,
+                            className: J.Avatar,
                             src: n.GetAvatarURLFullSize()
                           })
                         ),
@@ -2504,20 +2504,20 @@
                           {
                             className: Object(W.a)(
                               R.FlexColumnContainer,
-                              K.CreatorDescCtn
+                              J.CreatorDescCtn
                             )
                           },
                           H.createElement(
                             "div",
                             {
                               className: Object(W.a)(
-                                K.CreatorTitleCtn,
+                                J.CreatorTitleCtn,
                                 R.FlexColumnContainer
                               )
                             },
                             H.createElement(
                               "a",
-                              { href: i, className: K.CreatorNameName },
+                              { href: i, className: J.CreatorNameName },
                               n.GetName()
                             ),
                             a &&
@@ -2526,7 +2526,7 @@
                                 {
                                   className: Object(W.a)(
                                     R.FlexColumnContainer,
-                                    K.CreatorTagline
+                                    J.CreatorTagline
                                   )
                                 },
                                 n.GetTagLine()
@@ -2539,12 +2539,12 @@
                                 this.props.bSmallFormat
                                   ? R.FlexColumnContainer
                                   : R.FlexRowContainer,
-                                K.SocialFollowersCtn
+                                J.SocialFollowersCtn
                               )
                             },
                             H.createElement(
                               "div",
-                              { className: K.FollowBtnCtn },
+                              { className: J.FollowBtnCtn },
                               !this.props.bHideFollowButton &&
                                 H.createElement(me, {
                                   clanAccountID: t.clan_account_id,
@@ -2552,7 +2552,7 @@
                                 }),
                               H.createElement(
                                 "div",
-                                { className: K.Followers },
+                                { className: J.Followers },
                                 H.createElement(
                                   "span",
                                   null,
@@ -2567,7 +2567,7 @@
                                 "div",
                                 {
                                   className: Object(W.a)(
-                                    K.SocialContainer,
+                                    J.SocialContainer,
                                     R.FlexColumnContainer
                                   )
                                 },
@@ -2634,7 +2634,7 @@
                 .then(function(e) {
                   var t;
                   n &&
-                    ((t = J.a.GetCreatorHomeByID(n)),
+                    ((t = K.a.GetCreatorHomeByID(n)),
                     i || t.AdjustFollower(o ? -1 : 1)),
                     a.setState({ bApplyingFollowing: !1 });
                 })
@@ -2663,7 +2663,7 @@
                 {
                   className: Object(W.a)(
                     R.Button,
-                    K.FollowButton,
+                    J.FollowButton,
                     a,
                     r ? "Followed" : ""
                   ),
@@ -2680,7 +2680,7 @@
                   }),
                 H.createElement(
                   "div",
-                  { className: K.FollowBtnText },
+                  { className: J.FollowBtnText },
                   !this.state.bApplyingFollowing &&
                     (r
                       ? Object(Z.d)("#Button_Followed")
@@ -2724,7 +2724,7 @@
               if (this.state.bLoading)
                 return H.createElement(
                   "div",
-                  { className: K.DevSummaryWidgetCtn },
+                  { className: J.DevSummaryWidgetCtn },
                   H.createElement(Q.a, null)
                 );
               var e = this.props.appid,
@@ -2797,10 +2797,10 @@
                   "data-tooltip-text": e.external_user_name
                     ? e.external_user_name
                     : e.external_url,
-                  className: Object(W.a)(K.SocialLink)
+                  className: Object(W.a)(J.SocialLink)
                 },
                 H.createElement("img", {
-                  className: Object(W.a)(K.SocialImg),
+                  className: Object(W.a)(J.SocialImg),
                   src: t
                 }),
                 H.createElement(
@@ -2862,7 +2862,7 @@
                 return H.createElement(
                   "div",
                   {
-                    className: K.CuratorHoverCtn,
+                    className: J.CuratorHoverCtn,
                     onKeyDown: this.OnKeyDown,
                     ref: this.m_refContainer,
                     onBlur: this.OnBlurInternal,
@@ -3601,8 +3601,8 @@
         })(H.Component),
         qe = Object(i.h)(Ye),
         Qe = a("XmAN"),
-        Ke = a("cGQe"),
-        Je = a("Fmfl"),
+        Je = a("cGQe"),
+        Ke = a("Fmfl"),
         Xe = a("RQmk"),
         $e = (function(t) {
           function e() {
@@ -3791,7 +3791,7 @@
                         j && Ve.a.OnlyIcon
                       )
                     },
-                    H.createElement(Ke.a, {
+                    H.createElement(Je.a, {
                       eventModel: t,
                       eventGID: t.GID,
                       lang: l,
@@ -3957,7 +3957,7 @@
               var t = this.props.calendarEvent;
               if (t.appid) {
                 var a = je.a.GetAppLinkInfo(t.appid);
-                if (a) return H.createElement(Je.b, { info: a, fnClose: e });
+                if (a) return H.createElement(Ke.b, { info: a, fnClose: e });
               } else if (t.clanid) {
                 var n = S.a.GetClanInfoByClanAccountID(t.clanid);
                 if (n) return H.createElement(_e, { clanInfo: n, fnClose: e });
@@ -3966,7 +3966,7 @@
             }),
             (t.prototype.render = function() {
               return H.createElement(
-                Je.d,
+                Ke.d,
                 {
                   hoverProps: {
                     direction: "overlay",
@@ -3992,7 +3992,7 @@
               var e = this.props,
                 t = e.calendarEvent,
                 a = e.eventModel;
-              t.appid && Object(Je.a)()
+              t.appid && Object(Ke.a)()
                 ? je.a.LoadAppLinkInfo([t.appid])
                 : t.clanid && S.a.LoadClanInfoForClanSteamID(a.clanSteamID);
             }),
@@ -4029,7 +4029,7 @@
                   : H.createElement(
                       "div",
                       { onClick: this.OnTitleClick },
-                      Object(Je.a)() || !t.appInfo
+                      Object(Ke.a)() || !t.appInfo
                         ? H.createElement(
                             tt,
                             {
@@ -5829,8 +5829,8 @@
         Yt = a("mZMQ"),
         qt = (a("hmtA"), a("dgee")),
         Qt = a.n(qt),
-        Kt = a("SS32"),
-        Jt = a("MnIK"),
+        Jt = a("SS32"),
+        Kt = a("MnIK"),
         Xt = a("lypr"),
         $t = (function(e) {
           function t() {
@@ -5850,39 +5850,39 @@
                 l = 100 - i;
               return H.createElement(
                 "div",
-                { className: Kt.pipScrollerContainer },
+                { className: Jt.pipScrollerContainer },
                 e &&
                   H.createElement(
                     Yt.a,
                     {
                       className: Object(W.a)(
-                        Kt.pipScrollButton,
-                        Kt.left,
-                        Kt.carouselNavButton
+                        Jt.pipScrollButton,
+                        Jt.left,
+                        Jt.carouselNavButton
                       )
                     },
                     H.createElement(D.o, null)
                   ),
                 H.createElement(
                   "div",
-                  { className: Kt.pipScroller },
-                  H.createElement("div", { className: Kt.scrollBackground }),
+                  { className: Jt.pipScroller },
+                  H.createElement("div", { className: Jt.scrollBackground }),
                   H.createElement("div", {
-                    className: Kt.scrollForeground,
+                    className: Jt.scrollForeground,
                     style: { left: r + "%", right: o + "%" }
                   }),
                   H.createElement(
                     "div",
                     {
-                      className: Kt.scrollNavDiv,
+                      className: Jt.scrollNavDiv,
                       style: { left: "0%", width: i + "%" }
                     },
                     H.createElement(
                       Yt.a,
                       {
                         className: Object(W.a)(
-                          Kt.carouselNavButton,
-                          Kt.scrollNavButton
+                          Jt.carouselNavButton,
+                          Jt.scrollNavButton
                         )
                       },
                       H.createElement("div", null)
@@ -5891,15 +5891,15 @@
                   H.createElement(
                     "div",
                     {
-                      className: Kt.scrollNavDiv,
+                      className: Jt.scrollNavDiv,
                       style: { right: "0%", width: l + "%" }
                     },
                     H.createElement(
                       Yt.b,
                       {
                         className: Object(W.a)(
-                          Kt.carouselNavButton,
-                          Kt.scrollNavButton
+                          Jt.carouselNavButton,
+                          Jt.scrollNavButton
                         )
                       },
                       H.createElement("div", null)
@@ -5911,9 +5911,9 @@
                     Yt.b,
                     {
                       className: Object(W.a)(
-                        Kt.pipScrollButton,
-                        Kt.right,
-                        Kt.carouselNavButton
+                        Jt.pipScrollButton,
+                        Jt.right,
+                        Jt.carouselNavButton
                       )
                     },
                     H.createElement(D.o, null)
@@ -5953,7 +5953,7 @@
               return H.Children.map(this.props.children, function(e, t) {
                 var a = n.props.bLazyRenderChildren
                   ? H.createElement(
-                      Jt.a,
+                      Kt.a,
                       { rootMargin: "0px 100% 0px 100%", bHorizontal: !0 },
                       e
                     )
@@ -5971,7 +5971,7 @@
                   ? null
                   : H.createElement(
                       Yt.d,
-                      { slide: t, className: Kt.pip },
+                      { slide: t, className: Jt.pip },
                       H.createElement("img", { src: Qt.a })
                     );
               });
@@ -5992,7 +5992,7 @@
                   "div",
                   {
                     className: Object(W.a)(
-                      Kt.carouselBody,
+                      Jt.carouselBody,
                       this.props.className,
                       Xt.a.GetScrollableClassname()
                     )
@@ -6010,15 +6010,15 @@
                     },
                     H.createElement(
                       "div",
-                      { className: Kt.sliderBody },
+                      { className: Jt.sliderBody },
                       !n &&
                         H.createElement(
                           Yt.a,
                           {
                             className: Object(W.a)(
-                              Kt.carouselBtnCtn,
-                              Kt.left,
-                              Kt.carouselNavButton
+                              Jt.carouselBtnCtn,
+                              Jt.left,
+                              Jt.carouselNavButton
                             )
                           },
                           H.createElement(D.o, null)
@@ -6029,9 +6029,9 @@
                           Yt.b,
                           {
                             className: Object(W.a)(
-                              Kt.carouselBtnCtn,
-                              Kt.right,
-                              Kt.carouselNavButton
+                              Jt.carouselBtnCtn,
+                              Jt.right,
+                              Jt.carouselNavButton
                             )
                           },
                           H.createElement(D.o, null)
@@ -6042,7 +6042,7 @@
                         ? H.createElement(ea, { showArrows: n })
                         : H.createElement(
                             "div",
-                            { className: Kt.breadcrumbContainer },
+                            { className: Jt.breadcrumbContainer },
                             this.RenderBreadcrumbs(t)
                           ))
                   )
@@ -8233,7 +8233,7 @@
               var t = this.props.solrData,
                 a = B.c.GetClanEventModel(t.unique_id);
               Object(l.d)(
-                H.createElement(Ka, { eventModel: a }),
+                H.createElement(Ja, { eventModel: a }),
                 Object(V.m)(e)
               );
             }),
@@ -9184,7 +9184,7 @@
             e
           );
         })(H.Component),
-        Ka = (function(t) {
+        Ja = (function(t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (
@@ -9350,7 +9350,7 @@
             e
           );
         })(H.Component),
-        Ja = a("gOcu"),
+        Ka = a("gOcu"),
         Xa = (function(t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
@@ -9431,7 +9431,7 @@
                       return (
                         e.sent(),
                         this.setState({ bLoadingAssociatedDemoInfo: !1 }),
-                        Ja.a
+                        Ka.a
                           .Get()
                           .SetCollectionInfo(
                             "gamefestival2020",
@@ -9439,14 +9439,14 @@
                           ),
                         [
                           4,
-                          Ja.a.Get().LoadAppIDsBatch(i, !1, this.m_cancelSignal)
+                          Ka.a.Get().LoadAppIDsBatch(i, !1, this.m_cancelSignal)
                         ]
                       );
                     case 4:
                       return (
                         e.sent(),
                         (c = new Array()),
-                        Ja.a
+                        Ka.a
                           .Get()
                           .GetAllDemoInfo()
                           .forEach(function(e) {
@@ -9526,7 +9526,7 @@
               je.a.GetAllLoadedAppLinks().forEach(function(e, t) {
                 var a;
                 n.has(t) ||
-                  Ja.a.Get().BHasDemoAppID(t) ||
+                  Ka.a.Get().BHasDemoAppID(t) ||
                   ((a = je.a.GetAppLinkInfo(t)),
                   o.push(
                     H.createElement(
@@ -9573,14 +9573,14 @@
                 var a,
                   n = !1;
                 e.BIsLoaded() &&
-                  Ja.a.Get().BHasDemoAppID(t) &&
-                  ((a = Ja.a.Get().GetDemoEventInfo(t)),
+                  Ka.a.Get().BHasDemoAppID(t) &&
+                  ((a = Ka.a.Get().GetDemoEventInfo(t)),
                   je.a.GetAppLinkInfo(a.demo_appid).coming_soon
                     ? ((c += 1), (n = !0))
                     : (d += 1)),
                   e.BIsLoaded() && e.GetAppStoreData().BHasDemoAppID()
                     ? ((i += 1), n && (u += 1))
-                    : e.BIsLoaded() && Ja.a.Get().BHasDemoAppID(t)
+                    : e.BIsLoaded() && Ka.a.Get().BHasDemoAppID(t)
                     ? ((l += 1), n || (p += 1))
                     : -1 ==
                         r.findIndex(function(e) {
@@ -9609,7 +9609,7 @@
                 );
               });
               var m = 0;
-              Ja.a
+              Ka.a
                 .Get()
                 .GetAllDemoInfo()
                 .forEach(function(e) {
@@ -9669,7 +9669,7 @@
                     null,
                     H.createElement("b", null, "Demo via DemoStore:"),
                     " ",
-                    Ja.a.Get().GetNumDemos()
+                    Ka.a.Get().GetNumDemos()
                   ),
                   H.createElement(
                     "div",
@@ -13229,7 +13229,7 @@
                     H.createElement(
                       "div",
                       { className: vn.a.EventDetailTimeInfo },
-                      H.createElement(Ke.a, {
+                      H.createElement(Je.a, {
                         eventModel: t,
                         eventGID: t.GID,
                         lang: a
@@ -13784,8 +13784,8 @@
             )
           );
         },
-        Kn = a("ZlHF"),
-        Jn = a.n(Kn),
+        Jn = a("ZlHF"),
+        Kn = a.n(Jn),
         Xn = a("gyoR"),
         $n = (a("bUNj"), a("U9Ih")),
         er = a.n($n),
@@ -14372,7 +14372,7 @@
         return H.createElement(
           "div",
           {
-            className: Object(W.a)(Jn.a.SaleTab, i),
+            className: Object(W.a)(Kn.a.SaleTab, i),
             onClick: function() {
               return o(n);
             },
@@ -14380,7 +14380,7 @@
           },
           H.createElement(
             "div",
-            { className: Object(W.a)(Jn.a.SaleTabLabel) },
+            { className: Object(W.a)(Kn.a.SaleTabLabel) },
             c
           )
         );
@@ -14426,7 +14426,7 @@
               if (!e || !e.capsules || !e.capsules.length)
                 return H.createElement(
                   "div",
-                  { className: Jn.a.TabContentsElement },
+                  { className: Kn.a.TabContentsElement },
                   Object(Z.d)("#SalePage_Tabs_AllContents")
                 );
               for (
@@ -14478,7 +14478,7 @@
                   t.map(function(e) {
                     return H.createElement(
                       "div",
-                      { key: e.sKey, className: Jn.a.TabContentsElement },
+                      { key: e.sKey, className: Kn.a.TabContentsElement },
                       e.sDisplay
                     );
                   })
@@ -14491,11 +14491,11 @@
                 a = e.event;
               return H.createElement(
                 "div",
-                { className: Object(W.a)(Jn.a.SaleSection), style: Gr(t, a) },
+                { className: Object(W.a)(Kn.a.SaleSection), style: Gr(t, a) },
                 H.createElement(fr, Object(z.a)({}, this.props)),
                 H.createElement(
                   "div",
-                  { className: Jn.a.TabContentsContainer },
+                  { className: Kn.a.TabContentsContainer },
                   this.RenderTabCapsules()
                 )
               );
@@ -14538,7 +14538,7 @@
                 r = e.language,
                 o = e.activeTab;
               if (n.tabs.length < 2) return null;
-              var i = Object(W.a)(Jn.a.SaleSectionTabsTab),
+              var i = Object(W.a)(Kn.a.SaleSectionTabsTab),
                 l = n.tabs.map(function(e) {
                   var t = "Tab_" + e.unique_id;
                   return H.createElement(pr, {
@@ -14549,7 +14549,7 @@
                     language: r,
                     classNames: Object(W.a)(
                       i,
-                      e === o && Jn.a.SaleSectionTabsSelected
+                      e === o && Kn.a.SaleSectionTabsSelected
                     ),
                     onTabSelected: function(e) {
                       return a.OnTabSelected(n, e);
@@ -14564,20 +14564,20 @@
                   "div",
                   {
                     className: Object(W.a)(
-                      Jn.a.SaleSection,
-                      Jn.a.SaleSectionTabs
+                      Kn.a.SaleSection,
+                      Kn.a.SaleSectionTabs
                     ),
                     style: Gr(n, t)
                   },
                   H.createElement(
                     Et,
-                    { className: Jn.a.SaleSectionTabContainer },
+                    { className: Kn.a.SaleSectionTabContainer },
                     H.createElement(
                       "div",
                       {
                         className: Object(W.a)(
                           q.a.SaleSectionContainer,
-                          Jn.a.SaleSectionTabsRow
+                          Kn.a.SaleSectionTabsRow
                         )
                       },
                       l
@@ -14638,7 +14638,7 @@
                         (e.label = 2);
                     case 2:
                       return (
-                        Ja.a
+                        Ka.a
                           .Get()
                           .SetCollectionInfo(
                             "gamefestival2020",
@@ -14708,14 +14708,14 @@
                     br,
                     {
                       className:
-                        Jn.a["CustomStyle_" + e.jsondata.sale_vanity_id],
+                        Kn.a["CustomStyle_" + e.jsondata.sale_vanity_id],
                       backgroundImage: a,
                       backgroundColor: e.jsondata.sale_background_color
                     },
                     Boolean(r || n) &&
                       H.createElement(
                         "div",
-                        { className: Jn.a.fullscreen_bg },
+                        { className: Kn.a.fullscreen_bg },
                         H.createElement(
                           "video",
                           {
@@ -14727,10 +14727,10 @@
                               e && (e.playbackRate = 0.9);
                             },
                             className: Object(W.a)(
-                              Jn.a.SaleBackground,
-                              Jn.a["CustomStyle_" + e.jsondata.sale_vanity_id],
+                              Kn.a.SaleBackground,
+                              Kn.a["CustomStyle_" + e.jsondata.sale_vanity_id],
                               "SaleBackground",
-                              Jn.a.fullscreen_bg__video
+                              Kn.a.fullscreen_bg__video
                             ),
                             style: {
                               display: "flex",
@@ -14754,7 +14754,7 @@
                       ),
                     H.createElement(
                       "div",
-                      { className: Jn.a.SaleHeaderContainer },
+                      { className: Kn.a.SaleHeaderContainer },
                       e.jsondata.sale_header_overlay &&
                         H.createElement(gr, null),
                       e.jsondata.sale_title_overlay &&
@@ -14801,9 +14801,9 @@
                       "div",
                       {
                         className:
-                          Jn.a.SaleOuterContainer +
+                          Kn.a.SaleOuterContainer +
                           " " +
-                          Jn.a["CustomStyle_" + e.jsondata.sale_vanity_id] +
+                          Kn.a["CustomStyle_" + e.jsondata.sale_vanity_id] +
                           " SaleOuterContainer",
                         style: {
                           marginTop: e.jsondata.sale_header_offset + "px"
@@ -14818,7 +14818,7 @@
                           null,
                           H.createElement(
                             "div",
-                            { className: Jn.a.SaleBroadcastCtn },
+                            { className: Kn.a.SaleBroadcastCtn },
                             H.createElement(
                               H.Suspense,
                               { fallback: H.createElement("div", null) },
@@ -14943,7 +14943,7 @@
                 {
                   className: Object(W.a)(
                     this.props.className,
-                    Jn.a.SaleBackground,
+                    Kn.a.SaleBackground,
                     "SaleBackground"
                   ),
                   style: {
@@ -15238,14 +15238,14 @@
                   "div",
                   {
                     key: "TabSection_" + t,
-                    className: Jn.a.SaleSectionTabListContainer
+                    className: Kn.a.SaleSectionTabListContainer
                   },
                   e.elements
                 );
               });
               return H.createElement(
                 "div",
-                { className: Jn.a.SaleSectionListContainer },
+                { className: Kn.a.SaleSectionListContainer },
                 t
               );
             }),
@@ -15299,15 +15299,15 @@
           e.language;
           return H.createElement(
             "div",
-            { className: Jn.a.SaleSection, style: Gr(t, a) },
+            { className: Kn.a.SaleSection, style: Gr(t, a) },
             H.createElement(fr, Object(z.a)({}, e)),
             H.createElement(
               "div",
-              { className: Jn.a.SaleSectionLoginPrompt },
+              { className: Kn.a.SaleSectionLoginPrompt },
               Object(Z.d)("#SalePage_LoginPrompt"),
               H.createElement(
                 "button",
-                { onClick: le.a, className: Jn.a.LoginButton },
+                { onClick: le.a, className: Kn.a.LoginButton },
                 Object(Z.d)("#Login_SignIn")
               )
             )
@@ -15321,7 +15321,7 @@
           return H.createElement(
             "div",
             {
-              className: Object(W.a)(Jn.a.SaleSection, gn.a.SaleSectionCtn),
+              className: Object(W.a)(Kn.a.SaleSection, gn.a.SaleSectionCtn),
               style: Gr(t, a)
             },
             H.createElement(fr, Object(z.a)({}, e)),
@@ -15352,7 +15352,7 @@
             H.createElement(
               "div",
               {
-                className: Object(W.a)(Jn.a.SaleSection, gn.a.SaleSectionCtn),
+                className: Object(W.a)(Kn.a.SaleSection, gn.a.SaleSectionCtn),
                 style: Gr(t, a)
               },
               H.createElement(fr, Object(z.a)({}, e)),
@@ -15385,12 +15385,12 @@
                 t = e.section,
                 a = e.event;
               return H.createElement(
-                Jt.a,
+                Kt.a,
                 {
                   placeholderHeight: "100vh",
                   rootMargin: "0px 0px 100% 0px",
                   mode: "LoadAndUnload",
-                  className: Object(W.a)(Jn.a.SaleSection, gn.a.SaleSectionCtn),
+                  className: Object(W.a)(Kn.a.SaleSection, gn.a.SaleSectionCtn),
                   style: Gr(t, a)
                 },
                 H.createElement(fr, Object(z.a)({}, this.props)),
@@ -15484,22 +15484,65 @@
                 });
               });
             }),
+            (e.prototype.GetItemListCacheName = function(e, t) {
+              var a = this.props,
+                n = a.section,
+                r = a.event,
+                o = a.bIsPreview,
+                i =
+                  "section_" +
+                  e +
+                  "_" +
+                  r.GID +
+                  (t || 0) +
+                  Object(O.a)(
+                    n.unique_id ? n.unique_id.toString() : JSON.stringify(n)
+                  ).toString();
+              return (
+                o &&
+                  r.rtime32_last_local_modification &&
+                  (i += "_" + r.rtime32_last_local_modification),
+                i
+              );
+            }),
+            (e.prototype.GetCachedRandomizedOrder = function(e, t) {
+              var a,
+                n = this.props,
+                r = n.section,
+                o = n.event,
+                i = n.activeTab;
+              if (r.use_random_order) {
+                var l = this.GetItemListCacheName(
+                  e,
+                  null === (a = null == i ? void 0 : i.GetTab()) || void 0 === a
+                    ? void 0
+                    : a.unique_id
+                );
+                if (window.sessionStorage) {
+                  var s = window.sessionStorage.getItem(l);
+                  if (s) {
+                    var c = JSON.parse(s);
+                    if (c.rtime32_last_modified == o.rtime32_last_modified)
+                      return c.randomized;
+                  }
+                  var d = Array.from(t);
+                  Object(Ne.f)(d);
+                  var u = {
+                    randomized: d,
+                    rtime32_last_modified: o.rtime32_last_modified
+                  };
+                  return window.sessionStorage.setItem(l, JSON.stringify(u)), d;
+                }
+              }
+              return t;
+            }),
             (e.prototype.GetSectionForSession = function() {
               var e = this.props,
                 t = e.section,
                 a = e.event;
               if (t.use_random_order) {
-                var n =
-                  "section_" +
-                  Object(O.a)(
-                    t.unique_id ? t.unique_id.toString() : JSON.stringify(t)
-                  ).toString();
-                if (
-                  (this.props.bIsPreview &&
-                    a.rtime32_last_local_modification &&
-                    (n += "_" + a.rtime32_last_local_modification),
-                  window.sessionStorage)
-                ) {
+                var n = this.GetItemListCacheName("section");
+                if (window.sessionStorage) {
                   var r = window.sessionStorage.getItem(n);
                   if (r) {
                     var o = JSON.parse(r);
@@ -15855,7 +15898,11 @@
                             ])
                           : [3, 3];
                       case 2:
-                        return (u = e.sent()), [3, 4];
+                        return (
+                          (u = e.sent()),
+                          (u = this.GetCachedRandomizedOrder("capsules", u)),
+                          [3, 4]
+                        );
                       case 3:
                         (u = r.capsules), (e.label = 4);
                       case 4:
@@ -15946,7 +15993,11 @@
                           [4, Promise.all(I)]
                         );
                       case 12:
-                        return (w = e.sent()), [3, 15];
+                        return (
+                          (w = e.sent()),
+                          (w = this.GetCachedRandomizedOrder("events", w)),
+                          [3, 15]
+                        );
                       case 13:
                         return [
                           4,
@@ -15992,6 +16043,7 @@
                               materialized_link_capsule: e.square
                             };
                           })),
+                          (k = this.GetCachedRandomizedOrder("links", k)),
                           (e.label = 18);
                       case 18:
                         this.setState({ links: k, bInitialLoadComplete: !0 }),
@@ -16099,7 +16151,7 @@
                               link: e,
                               language: i,
                               clanAccountID: c,
-                              strClassName: Jn.a.LinkCapsule
+                              strClassName: Kn.a.LinkCapsule
                             });
                           })
                         : [];
@@ -16128,7 +16180,7 @@
                                   "div",
                                   {
                                     key: n,
-                                    className: Jn.a.AppSummaryWidgetCtn
+                                    className: Kn.a.AppSummaryWidgetCtn
                                   },
                                   H.createElement(Gn.g, {
                                     id: e.id,
@@ -16226,7 +16278,7 @@
                             key: "Row_" + A,
                             className: Object(W.a)(
                               q.a.SaleSectionContainer,
-                              Jn.a.SaleSectionContainer
+                              Kn.a.SaleSectionContainer
                             ),
                             style: { gridTemplateColumns: 1 < L ? B : null }
                           },
@@ -16251,14 +16303,14 @@
                           T &&
                             H.createElement(
                               "div",
-                              { className: Jn.a.ShowContentsContainer },
+                              { className: Kn.a.ShowContentsContainer },
                               m
                                 ? H.createElement(Q.a, { size: "small" })
                                 : H.createElement(
                                     "button",
                                     {
                                       onClick: this.ShowMoreContents,
-                                      className: Jn.a.ShowContentsButton
+                                      className: Kn.a.ShowContentsButton
                                     },
                                     Object(Z.d)("#Sale_ShowMore")
                                   )
@@ -16281,7 +16333,7 @@
                 if (!a) return null;
                 g = H.createElement(
                   "div",
-                  { className: Jn.a.preview_placeholder_section },
+                  { className: Kn.a.preview_placeholder_section },
                   Object(Z.d)(
                     h.smart_section
                       ? "#Sale_SmartPlaceHolder"
@@ -16291,26 +16343,26 @@
               }
               var P = h.label_link ? Ar(h.label_link) : void 0;
               return H.createElement(
-                Jt.a,
+                Kt.a,
                 {
                   placeholderHeight: this.EstimateComponentHeight(h),
                   rootMargin: "0px 0px 100% 0px",
                   className: Object(W.a)(
-                    Jn.a.SaleSection,
-                    h.show_as_carousel && Jn.a.CarouselDisplay,
+                    Kn.a.SaleSection,
+                    h.show_as_carousel && Kn.a.CarouselDisplay,
                     gn.a.SaleSectionCtn
                   ),
                   style: Gr(h, t)
                 },
                 H.createElement(
                   "div",
-                  { className: Jn.a.SaleSectionTitleCtn },
+                  { className: Kn.a.SaleSectionTitleCtn },
                   H.createElement(fr, Object(z.a)({}, this.props)),
                   0 < l &&
                     H.createElement(
                       "div",
                       {
-                        className: Jn.a.SaleSectionSubtext,
+                        className: Kn.a.SaleSectionSubtext,
                         "data-tooltip-text": Object(Z.d)(
                           "#Sale_HiddenItem_Tooltip"
                         )
@@ -16331,7 +16383,7 @@
                 Boolean(P) &&
                   H.createElement(
                     "div",
-                    { className: Jn.a.SaleViewAll },
+                    { className: Kn.a.SaleViewAll },
                     H.createElement(
                       "a",
                       { href: P, target: Y.c.IN_CLIENT ? void 0 : "_blank" },
@@ -16406,7 +16458,7 @@
               : null;
           if (e.curator_clan_id) {
             var t = L.a.InitFromClanID(e.curator_clan_id),
-              a = J.a.GetCreatorHome(t);
+              a = K.a.GetCreatorHome(t);
             if (a) return Object(Z.d)("#Sale_CuratorSection_Name", a.GetName());
           }
           return "#Sale_CuratorSection";
@@ -16501,7 +16553,7 @@
                     { onEnter: this.OnEnter },
                     H.createElement(
                       "div",
-                      { className: Jn.a.SaleBroadcastSection },
+                      { className: Kn.a.SaleBroadcastSection },
                       Boolean(this.state.bOnceVisible) &&
                         H.createElement(vr, {
                           promotionName: i,
@@ -16550,15 +16602,15 @@
               : "images/apps/1195650/246e7e2a24c0aa965e505ac510d4e8e952f9a88a.jpg");
           return H.createElement(
             "div",
-            { className: Jn.a.SalePageBroadcastContextHover },
+            { className: Kn.a.SalePageBroadcastContextHover },
             H.createElement("img", {
               src: l,
-              className: Jn.a.AlbumCoverImage,
+              className: Kn.a.AlbumCoverImage,
               onClick: i
             }),
             H.createElement(
               "div",
-              { className: Jn.a.AlbumTitle, onClick: i },
+              { className: Kn.a.AlbumTitle, onClick: i },
               " ",
               o,
               " "
@@ -17006,8 +17058,8 @@
         };
       }
       var Qr = qr(Ha),
-        Kr = qr(tn),
-        Jr = qr(_r),
+        Jr = qr(tn),
+        Kr = qr(_r),
         Xr = qr(ya),
         $r = qr(Hr),
         eo = qr(Zr),

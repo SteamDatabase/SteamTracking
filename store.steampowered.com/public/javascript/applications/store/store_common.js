@@ -4872,7 +4872,7 @@
                     "div",
                     { className: te.a.StoreSalePriceActionWidgetContainer },
                     N.createElement(ce, { info: t }),
-                    Boolean(r && Object(M.c)(a))
+                    Boolean(r && r.demo_appid && Object(M.c)(a))
                       ? N.createElement(K.b, {
                           appLinkInfo: t,
                           className: te.a.Action
