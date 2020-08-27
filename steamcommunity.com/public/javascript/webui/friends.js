@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6064400";
+var CLSTAMP = "6064682";
 !(function(e) {
   function t(t) {
     for (
@@ -5479,6 +5479,8 @@ var CLSTAMP = "6064400";
         ? a.STORE_BASE_URL
         : e.startsWith(a.COMMUNITY_BASE_URL)
         ? a.COMMUNITY_BASE_URL
+        : e.startsWith(a.CHAT_BASE_URL)
+        ? a.CHAT_BASE_URL
         : e.startsWith(a.PARTNER_BASE_URL)
         ? a.PARTNER_BASE_URL
         : e.startsWith(a.HELP_BASE_URL)
@@ -8757,7 +8759,7 @@ var CLSTAMP = "6064400";
                   switch (o.label) {
                     case 0:
                       (e =
-                        U.c.COMMUNITY_BASE_URL +
+                        U.c.COMMUNITY_CDN_URL +
                         "textfilter/gettextfilterdictionary?type=banned&language=" +
                         encodeURIComponent(U.c.LANGUAGE) +
                         "&origin=" +
@@ -8782,7 +8784,7 @@ var CLSTAMP = "6064400";
                       );
                     case 4:
                       (e =
-                        U.c.COMMUNITY_BASE_URL +
+                        U.c.COMMUNITY_CDN_URL +
                         "textfilter/gettextfilterdictionary?type=profanity&language=" +
                         encodeURIComponent(U.c.LANGUAGE) +
                         "&origin=" +

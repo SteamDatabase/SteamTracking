@@ -11,7 +11,6 @@ function DisplayPage( page )
 				$('wallet_code_form').style.display = '';
 				$('redeem_wallet_code_upsell_text').style.display = '';
 				$('address_form').style.display = 'none';
-				$('redeem_amount_form').style.display = 'none';
 				$('validate_btn').style.display = '';
 				$('validate_btn_in_progress').style.display = 'none';		
 				$('wallet_code').value = '';
@@ -24,7 +23,6 @@ function DisplayPage( page )
 				$('redeem_wallet_code_upsell_text').style.display = 'none';
 				$('main_content').style.backgroundImage = "url('')";
 				$('address_form').style.display = '';
-				$('redeem_amount_form').style.display = 'none';
 			break;
 		}
 }
