@@ -365,7 +365,7 @@ body.v6 .account_settings_container .h3_content {
 }
 
 .account_settings_container p {
-	padding: 5px 0;
+	padding: 10px 0;
 }
 
 .account_settings_container .hspacer {
@@ -507,22 +507,23 @@ body.v6 .account_settings_container .h3_content {
 }
 
 #text_filter_lab_ctn {
-	background-color: #063e6f;
+	background-color: #0a3963;
 	margin: -4px -8px 0 -8px;
 	padding: 4px 8px 8px 8px;
 }
 #text_filter_lab_experiment {
-	background: linear-gradient(180deg, #063E6F 0%, #16202D 100%);
+	background: linear-gradient(180deg, #0a3963 0%, #16202D 100%);
 	margin: -16px -8px 0 -8px;
 	padding: 0 8px 0 8px;
 }
-.text_filter_lab_action_link,
-.text_filter_lab_action_link a {
+.text_filter_action_link,
+.text_filter_action_link a {
 	color: #c0f3ff;
 	font-size: 14px;
+	cursor: pointer;
 }
-.text_filter_lab_action_link:hover,
-.text_filter_lab_action_link:hover a {
+.text_filter_action_link:hover,
+.text_filter_action_link:hover a {
 	color: #ffffff;
 }
 #text_filter_custom_banned_words_ctn .tag_downvoted,
@@ -540,6 +541,23 @@ body.v6 .account_settings_container .h3_content {
 #text_filter_custom_clean_words_ctn .tag_downvoted > div {
 	background-color: #1d423b;
 	color: #cedbe9;
+}
+
+.text_filter_toggle_icon {
+	width: 11px;
+	height: 11px;
+	margin-right: 7px;
+	margin-top: 16px;
+	background: url('/public/images/v6/app/review_graph_expander.png');
+	background-repeat: no-repeat;
+	background-size: 11px 20px;
+	display: inline-block;
+}
+.text_filter_toggle_icon.up {
+	background-position: 0px 1px;
+}
+.text_filter_toggle_icon.down {
+	background-position: 0px -10px;
 }
 
 .queue_customize,
