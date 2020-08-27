@@ -15488,7 +15488,7 @@
               var e = this.props,
                 t = e.section,
                 a = e.event;
-              if (t.use_random_order && !t.smart_section) {
+              if (t.use_random_order) {
                 var n =
                   "section_" +
                   Object(O.a)(

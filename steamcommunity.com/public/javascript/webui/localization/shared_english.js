@@ -1443,6 +1443,14 @@ LocalizationReady("shared", "english", {
   Sale_BrowserSortOption_PopularPurchased: "Popular",
   Sale_BrowserSortOption_PopularPurchased_ttip:
     "The most popular games right now",
+  Sale_BrowserSortOption_PopularPurchasedDiscounted: "Discounted",
+  Sale_BrowserSortOption_PopularPurchasedDiscounted_ttip:
+    "The most popular games that have a discount right now",
+  Sale_BrowserSortOption_Discounted: "Discount Amount",
+  Sale_BrowserSortOption_Discounted_ttip:
+    "The most deeply discounted items right now",
+  Sale_BrowserSortOption_Price: "Price",
+  Sale_BrowserSortOption_Price_ttip: "The lowest price games right now",
   SalePage_WatchForDrop_Minutes_Developer:
     "Watch the stream for %1$s minutes and get item drops from the developer when the event is over!",
   SalePage_WatchForDrop_Minutes_CreatorNamed:

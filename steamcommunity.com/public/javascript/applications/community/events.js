@@ -1997,7 +1997,10 @@
         "dailyactiveuserdemo",
         "playednowdemo",
         "recentlyreleased",
-        "popularpurchased"
+        "popularpurchased",
+        "popularpurchaseddiscounted",
+        "discounted",
+        "price"
       ];
       function R(e) {
         return 0 <= B.indexOf(e);
@@ -2042,6 +2045,21 @@
           label: "#Sale_BrowserSortOption_PopularPurchased",
           flavor: "popularpurchased",
           tooltip: "#Sale_BrowserSortOption_PopularPurchased_ttip"
+        },
+        {
+          label: "#Sale_BrowserSortOption_PopularPurchasedDiscounted",
+          flavor: "popularpurchaseddiscounted",
+          tooltip: "#Sale_BrowserSortOption_PopularPurchasedDiscounted_ttip"
+        },
+        {
+          label: "#Sale_BrowserSortOption_Discounted",
+          flavor: "discounted",
+          tooltip: "#Sale_BrowserSortOption_Discounted_ttip"
+        },
+        {
+          label: "#Sale_BrowserSortOption_Price",
+          flavor: "price",
+          tooltip: "#Sale_BrowserSortOption_Price_ttip"
         }
       ];
       function P(e) {
@@ -25363,7 +25381,7 @@
               var e = this.props,
                 t = e.section,
                 n = e.event;
-              if (t.use_random_order && !t.smart_section) {
+              if (t.use_random_order) {
                 var a =
                   "section_" +
                   Object(Va.a)(
@@ -44490,7 +44508,11 @@
                     data: "interactive_recommender"
                   },
                   { label: Object(z.d)("#Sale_Tag"), data: "tag" },
-                  { label: Object(z.d)("#Sale_Category"), data: "category" }
+                  { label: Object(z.d)("#Sale_Category"), data: "category" },
+                  {
+                    label: Object(z.d)("#Sale_BrowserSortOption_Discounted"),
+                    data: "discounted"
+                  }
                 ];
               gl(n) &&
                 (r.push({
