@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6064682";
+var CLSTAMP = "6064856";
 !(function(e) {
   function t(t) {
     for (
@@ -8754,56 +8754,61 @@ var CLSTAMP = "6064682";
             }),
             (e.prototype.LoadLanguage = function(e) {
               return Object(o.b)(this, void 0, void 0, function() {
-                var e, t, n, r;
+                var e, t, n, r, i;
                 return Object(o.e)(this, function(o) {
                   switch (o.label) {
                     case 0:
-                      (e =
-                        U.c.COMMUNITY_CDN_URL +
-                        "textfilter/gettextfilterdictionary?type=banned&language=" +
-                        encodeURIComponent(U.c.LANGUAGE) +
-                        "&origin=" +
-                        Object(U.d)()),
+                      (e = "1"),
+                        (t =
+                          U.c.COMMUNITY_CDN_URL +
+                          "textfilter/gettextfilterdictionary?type=banned&language=" +
+                          encodeURIComponent(U.c.LANGUAGE) +
+                          "&v=" +
+                          e +
+                          "&origin=" +
+                          Object(U.d)()),
                         (o.label = 1);
                     case 1:
-                      return o.trys.push([1, 3, , 4]), [4, F.a.get(e)];
+                      return o.trys.push([1, 3, , 4]), [4, F.a.get(t)];
                     case 2:
                       return (
-                        (n = o.sent()),
-                        (this.m_strBannedWords += n.data),
+                        (r = o.sent()),
+                        (this.m_strBannedWords += r.data),
                         [3, 4]
                       );
                     case 3:
                       return (
-                        (t = o.sent()),
+                        (n = o.sent()),
                         console.error(
-                          "Failed to load filter dictionary" + e,
-                          t
+                          "Failed to load filter dictionary " + t,
+                          n
                         ),
                         [3, 4]
                       );
                     case 4:
-                      (e =
+                      (t =
                         U.c.COMMUNITY_CDN_URL +
                         "textfilter/gettextfilterdictionary?type=profanity&language=" +
                         encodeURIComponent(U.c.LANGUAGE) +
+                        "&v=" +
+                        e +
                         "&origin=" +
                         Object(U.d)()),
                         (o.label = 5);
                     case 5:
-                      return o.trys.push([5, 7, , 8]), [4, F.a.get(e)];
+                      return o.trys.push([5, 7, , 8]), [4, F.a.get(t)];
                     case 6:
                       return (
-                        (n = o.sent()),
-                        (this.m_strProfanityWords += n.data),
+                        (r = o.sent()),
+                        (this.m_strProfanityWords += r.data),
                         [3, 8]
                       );
                     case 7:
                       return (
-                        (r = o.sent()),
+                        (i = o.sent()),
                         console.error(
-                          "Failed to load filter dictionary" + e,
-                          r
+                          "Failed to load filter dictionary " + t,
+                          i
                         ),
                         [3, 8]
                       );
