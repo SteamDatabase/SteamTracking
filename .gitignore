@@ -3,6 +3,7 @@ Protobufs/google/
 .support/
 yarn.lock
 
+*.gz
 *.asi
 *.flt
 *.mix
