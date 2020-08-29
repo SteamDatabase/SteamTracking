@@ -139,8 +139,8 @@
 	"FilterElement_Tooltip_SteamCloud": "Include games that save to Steam Cloud.",
 	"FilterElement_RemotePlayTogether": "Remote Play Together",
 	"FilterElement_Tooltip_RemotePlayTogether": "Include games that support Remote Play Together.",
-	"FilterElement_EAAccess": "EA Access",
-	"FilterElement_Tooltip_EAAccess": "Include games that are part of your EA Access subscription.",
+	"FilterElement_EAAccess": "EA Play",
+	"FilterElement_Tooltip_EAAccess": "Include games that are part of your EA Play subscription.",
 
 	"CollectionViewHeader_Tooltip_ManuallyAddedApp": "This game was added to the collection manually.",
 	"CollectionViewHeader_Tooltip_ManuallyRemovedApp": "This game was removed from this collection.",
@@ -174,7 +174,7 @@
 	"GameList_Category_Hidden_Tooltip": "Hidden games will not show in your library unless searched for. You can view all hidden games from the top 'View' menu.",
 	"GameList_Category_YourCollections": "Your Collections",
 	"GameList_Category_SharedLibraries": "Shared Libraries",
-	"GameList_Category_EAAccess_Trademark": "EA Access",
+	"GameList_Category_EAAccess_Trademark": "EA Play",
 	"GameList_SectionHeader_SearchResults": "Results from Search and Filter",
 	"GameList_SectionHeader_AddedManually": "Manually Added",
 	"GameList_SectionHeader_RemovedManually": "Manually Removed",
@@ -914,6 +914,7 @@
 
 	"RemoveFreeApp_Title": "Remove from your account",
 	"RemoveFreeApp_Description": "%1$s was added to your account with a free license. You can remove it from your account so it is no longer included in your Steam Library and the list of games you own.",
+	"RemoveFreeApp_Description_MasterSub": "%1$s was added to your account through your %2$s subscription. You can remove it from your account so it is no longer included in your Steam Library and the list of games you own.",
 	"RemoveFreeApp_Question": "Would you like to remove %1$s from your account?",
 	"RemoveFreeApp_Remove": "Remove",
 	"RemoveFreeApp_Removing": "Removing %1$s",
@@ -1047,8 +1048,8 @@
 	"Demo_SpotlightIntro": "Check out the full game",
 	"Demo_VisitStorePage": "Visit Store Page",
 
-	"TimedTrial_SpotlightExp_Desc": "You have run out of time in your timed trial for %1$s. You can continue playing by purchasing the full version of this game from the Steam Store.",
-	"TimedTrial_SpotlightExp_DescMasterSub": "You have run out of time in your timed trial for %1$s, included with your %2$s subscription. You can continue playing by purchasing the full version of this game from the Steam Store.",
+	"TimedTrial_SpotlightExp_Desc": "Your %1$s trial is complete. You can continue playing by purchasing the full version of this game from the Steam Store.",
+	"TimedTrial_SpotlightExp_DescMasterSub": "Your %1$s trial is complete. You can continue playing by purchasing the full version of the game from the Steam store using your %2$s discount.",
 	"TimedTrial_ContinuePlaying": "Continue Playing!",
 
 	"WhatsNew_Title": "What's New?",
@@ -1057,14 +1058,17 @@
 	"WhatsNew_PlayNext_Title": "Play Next",
 	"WhatsNew_PlayNext_Description": "Now available on your library home screen, the new Play Next shelf uses technology developed in Steam Labs to recommend unplayed games from your library to try next.",
 
-	"WhatsNew_EAAccessCollection_Title": "Welcome to EA Access",
-	"WhatsNew_EAAccessCollection_Description_1": "Would you like to add the EA Access dynamic collection to your library?",
+	"WhatsNew_EAAccessCollection_Title": "Welcome to EA Play",
+	"WhatsNew_EAAccessCollection_Description_1": "Would you like to add the EA Play dynamic collection to your library?",
 	"WhatsNew_EAAccessCollection_AddCollection_Button": "Add collection",
 	"WhatsNew_EAAccessCollection_Cancel_Button": "No, thanks",
-	"WhatsNew_EAAccessCollection_Description_2": "Would you like to add a shelf to your library home screen for the EA Access collection?",
+	"WhatsNew_EAAccessCollection_Description_2": "Would you like to add a shelf to your library home screen for the EA Play collection?",
 	"WhatsNew_EAAccessCollection_AddShelf_Button": "Add shelf",
-	"WhatsNew_EAAccessCollection_Description_3": "Enjoy the new EA Access collection and shelf! You can remove them at any time.",
-	"WhatsNew_EAAccessCollection_Description_Declined": "Got it. Enjoy EA Access!",
+	"WhatsNew_EAAccessCollection_Description_3": "Enjoy the new EA Play collection and shelf! You can remove them at any time.",
+	"WhatsNew_EAAccessCollection_Description_Declined": "Got it. Enjoy EA Play!",
+
+	"EAAccessCollection_LinkToLandingPage": "Browse EA Play",
+	"EAAccessCollection_NewCollection_Button": "Add EA Play Collection",
 
 	"SteamReviewScore_9": "Overwhelmingly Positive",
 	"SteamReviewScore_8": "Very Positive",
