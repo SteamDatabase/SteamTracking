@@ -11643,9 +11643,9 @@
     },
     G24H: function(e, t, n) {
       e.exports = {
-        AppPartnerEventsPage: "apppartnereventspage_AppPartnerEventsPage_3CJsg",
         AppPartnerEventsBanner:
           "apppartnereventspage_AppPartnerEventsBanner_1HRiM",
+        AppPartnerEventsPage: "apppartnereventspage_AppPartnerEventsPage_3CJsg",
         AppBannerLinks: "apppartnereventspage_AppBannerLinks_D1bMm",
         ControlSection: "apppartnereventspage_ControlSection_2pA5C",
         NoGameLink: "apppartnereventspage_NoGameLink_2GfPe",

@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6065387";
+var CLSTAMP = "6069076";
 !(function(l) {
   function a(a) {
     for (
@@ -148,7 +148,7 @@ var CLSTAMP = "6065387";
                     6: "9e59b3bbc059c5405066",
                     7: "809fe643725703fdacbf",
                     8: "6aef4bdfd24024f24a37",
-                    9: "1cf9f5a3c1182a4231b3",
+                    9: "cd84085ca4a0de2e49cb",
                     10: "31d6cfe0d16ae931b73c",
                     11: "31d6cfe0d16ae931b73c",
                     12: "31d6cfe0d16ae931b73c",
@@ -400,7 +400,7 @@ var CLSTAMP = "6065387";
                 6: "a888d780553cb315156b",
                 7: "cd14d95dfc8a342b7b51",
                 8: "b1f4023dcdfee5dcf4ff",
-                9: "46cb3c5481ff5285059a",
+                9: "f9ed838f14eaed7b17e3",
                 10: "0012bd1866671a71811f",
                 11: "386d3f47871377fdd8d9",
                 12: "e0e288e6250a7c9103c2",
