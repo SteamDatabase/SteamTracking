@@ -19901,7 +19901,7 @@ file://{resources}/layout/settings/settings_about.xml
 build_date
 Aug 30 2020
 build_time
-12:37:19
+14:03:35
 package_version
 local
 SteamClient020
@@ -27782,7 +27782,7 @@ ChatInvitationNotification
 GameInviteNotification
 TradeInviteNotification
 steam/cached/aboutdialog.res
-12:39:06
+14:05:14
 CAboutDialog
 ValveSurveySummarizeData
 #steam_systeminfo_title
@@ -39245,7 +39245,6 @@ H=
 
 
 `
-"9
 9
 @
 @
