@@ -2,8 +2,6 @@ h
 __TEXT
 __text
 __TEXT
-B
-B
 __stubs
 __TEXT
 __stub_helper
@@ -196,6 +194,7 @@ streaming
 controller
 controller_ui
 metrics
+china
 Invalid spew group
 [S_API FAIL] SteamAPI_Init() failed; steam path (%s) missing directory separator
 [S_API FAIL] SteamAPI_Init() failed; steam found, but process is dead.
