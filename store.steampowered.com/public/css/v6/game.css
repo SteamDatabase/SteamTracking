@@ -2778,9 +2778,20 @@ body.v6 .game_area_already_owned.page_content {
 	width: 925px;
 }
 
-body.v6 .game_area_already_owned.page_content.master_sub {
+body.v6 .game_area_already_owned.master_sub {
 	background: rgb( 56, 112, 150 );
 	color: white;
+
+	height: 40px;
+	padding: 0px 15px 0px 0px;
+	position: relative;
+
+	font-size: 18px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			line-height: 40px;
+	margin-bottom: 1px;
 }
 
 .game_area_already_owned .ds_flag {
@@ -2825,6 +2836,14 @@ body.v6 .game_area_already_owned.page_content.master_sub {
 
 .already_in_library_master_sub {
 	display: flex;
+}
+
+.game_purchase_sub_dropdown .already_in_library_master_sub {
+	justify-content: flex-end;
+}
+
+.game_purchase_sub_dropdown .game_area_purchase_game {
+	border-radius: 0px 0px 4px 4px;
 }
 
 .already_in_library_master_sub .already_in_library {
