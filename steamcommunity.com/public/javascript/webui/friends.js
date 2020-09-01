@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6069076";
+var CLSTAMP = "6072552";
 !(function(e) {
   function t(t) {
     for (
@@ -25738,7 +25738,8 @@ var CLSTAMP = "6069076";
                       (t = {
                         v: "0" == e ? void 0 : e,
                         id: "" + D.i.accountid,
-                        cc: "" + D.c.COUNTRY
+                        cc: "" + D.c.COUNTRY,
+                        origin: self.origin
                       }),
                       (n = D.c.STORE_BASE_URL + "dynamicstore/userdata/"),
                       [4, I.a.get(n, { params: t, withCredentials: !0 })]

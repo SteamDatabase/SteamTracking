@@ -58361,7 +58361,8 @@
                         (n = {
                           v: "0" == t ? void 0 : t,
                           id: "" + d.g.accountid,
-                          cc: "" + d.b.COUNTRY
+                          cc: "" + d.b.COUNTRY,
+                          origin: self.origin
                         }),
                         (a = d.b.STORE_BASE_URL + "dynamicstore/userdata/"),
                         [4, u.a.get(a, { params: n, withCredentials: !0 })]
