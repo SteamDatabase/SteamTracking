@@ -2846,6 +2846,24 @@ body.v6 .game_area_already_owned.master_sub {
 	border-radius: 0px 0px 4px 4px;
 }
 
+.master_sub_trial_header_row {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.master_sub_trial_header_row h1 {
+	flex: 1;
+}
+
+.master_sub_trial_header_row img {
+	vertical-align: middle;
+}
+
+.master_sub_trial p a {
+	text-decoration: underline;
+}
+
 .already_in_library_master_sub .already_in_library {
 	flex: 1;
 }
