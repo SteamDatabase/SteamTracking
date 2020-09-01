@@ -20405,7 +20405,9 @@
                         [4, d.a.post(n, t, { withCredentials: !0 })]
                       );
                     case 2:
-                      return (o = e.sent()).data.success && 1 === o.data.success
+                      return ((o = e.sent()),
+                      this.InvalidateCache(),
+                      o.data.success && 1 === o.data.success)
                         ? (this.m_mapOwnedApps.set(Number(r), !0), [3, 4])
                         : [2, o.data.success ? o.data.success : 2];
                     case 3:
