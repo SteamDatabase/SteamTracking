@@ -278,7 +278,6 @@ var CForum = Class.create( {
 	OnAJAXComplete: function()
 	{
 		this.m_bLoading = false;
-		UpdateFilteredText();
 	},
 
 	OnLocationChange: function( hash )

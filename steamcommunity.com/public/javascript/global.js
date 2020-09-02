@@ -1919,7 +1919,6 @@ var CCommentThread = Class.create( {
 	OnAJAXComplete: function()
 	{
 		this.m_bLoading = false;
-		UpdateFilteredText();
 	},
 
 	OnPagingButtonClick: function( event, fnToExecute )
