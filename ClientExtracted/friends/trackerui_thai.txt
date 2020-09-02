@@ -775,7 +775,7 @@
 "[english]Limited_OpenChat"	"Open Chat"
 "Friends_SteamCommunity"	"ชุมชน Steam"
 "[english]Friends_SteamCommunity"	"Steam Community"
-"Limited_Explanation"	"บัญชีของคุณไม่ผ่านความต้องการขั้นต่ำที่จะใช้คุณสมบัตินี้"
+"Limited_Explanation"	"บัญชีของคุณมีคุณสมบัติไม่ตรงกับข้อกำหนดที่จะใช้คุณสมบัตินี้"
 "[english]Limited_Explanation"	"Your account does not meet the requirements to use this feature."
 "Limited_ForDetails"	"เยี่ยมชมฝ่ายสนับสนุน Steam สำหรับข้อมูลเพิ่มเติม"
 "[english]Limited_ForDetails"	"Visit Steam Support for more information."

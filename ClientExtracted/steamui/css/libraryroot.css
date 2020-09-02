@@ -2513,7 +2513,7 @@ button.appdetailsheader_ExitEditModeButton_i7jBC.appdetailsheader_ExitEditModeBu
   flex-direction: row;
   min-width: 256px;
   width: 272px;
-  max-width: calc( min( $left-list-max-percentage, 100% - $right-panel-min-width ));
+  max-width: calc( min( 50%, 100% - 400px ));
   position: relative; }
   .library_LeftListSizableContainer_9sPoV:not(:hover) ::-webkit-scrollbar-thumb {
     background-color: transparent; }

@@ -647,7 +647,7 @@
 "[english]Friends_WhenThisFriendComesOnline"	"When %FriendName% comes online"
 "Friends_WhenReceiveMessageFromThisFriend"	"Kun saan viestin henkilöltä %FriendName%"
 "[english]Friends_WhenReceiveMessageFromThisFriend"	"When I receive a message from %FriendName%"
-"Friends_InviteInfo_HasAdded"	"on lisännyt sinut"
+"Friends_InviteInfo_HasAdded"	"on lisännyt sinut kohteeseen:"
 "[english]Friends_InviteInfo_HasAdded"	"has added you to his or her"
 "Friends_InviteInfo_FriendsList"	"kaverilista"
 "[english]Friends_InviteInfo_FriendsList"	"Friends List"

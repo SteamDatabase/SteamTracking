@@ -4687,7 +4687,7 @@ Set a category for this game to help you find it quickly and organize your Libra
 "[english]steam_menu_friends_settings"	"View Settings"
 "steam_menu_friends_players"	"Spelare"
 "[english]steam_menu_friends_players"	"Players"
-"friends_searchOnline"	"Sök efter medlemmar av Steams gemenskap"
+"friends_searchOnline"	"Sök efter medlemmar i Steams gemenskap"
 "[english]friends_searchOnline"	"Search members of the Steam Community"
 "steam_send_guestpass"	"Skicka gästpass"
 "[english]steam_send_guestpass"	"Send Guest Pass"

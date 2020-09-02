@@ -4780,7 +4780,7 @@ Set a category for this game to help you find it quickly and organize your Libra
 "[english]Steam_InternetSpeedLabel"	"Internet Connection"
 "Steam_CloudLabel"	"Steam Cloud"
 "[english]Steam_CloudLabel"	"Steam Cloud"
-"Steam_CloudInfo"	"A Steam Cloud armazena informações para que os dados do teu jogo seja consistentes entre diversos computadores."
+"Steam_CloudInfo"	"A Steam Cloud armazena informações para que a tua experiência seja consistente entre computadores diferentes."
 "[english]Steam_CloudInfo"	"The Steam Cloud stores information so your product experience is consistent across computers."
 "Steam_EnableCloud"	"Ativar a sincronização com a Steam Cloud nas aplicações que a suportam"
 "[english]Steam_EnableCloud"	"Enable Steam Cloud synchronization for applications which support it"

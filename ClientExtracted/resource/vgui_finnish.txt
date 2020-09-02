@@ -373,7 +373,7 @@
 "[english]vgui_Webkit_badurl"	"Unable to load URL, bad hostname or format"
 "vgui_Webkit_connectionproblem"	"Yhteys palvelimeen ei onnistu. Palvelin saattaa olla offline-tilassa tai Internet-yhteyttä ei ole muodostettu."
 "[english]vgui_Webkit_connectionproblem"	"Unable to connect to server. Server may be offline or you may not be connected to the internet."
-"vgui_Webkit_unknown"	"Verkkosivun lataaminen ei onnistu (tuntematon virhe)."
+"vgui_Webkit_unknown"	"Verkkosivun lataus epäonnistui (tuntematon virhe)."
 "[english]vgui_Webkit_unknown"	"Failed to load web page (unknown error)."
 "vgui_HTMLBack"	"Edellinen"
 "[english]vgui_HTMLBack"	"Back"

@@ -2306,7 +2306,7 @@
 "[english]Activate_SubscriptionSuccess_Promo"	"Your {s:subscription} promotion code has successfully been activated. This content will become available to you once you've activated the full game on Steam. This content is now permanently associated with your Steam account. You must login to this account to have access to the items you've just activated on Steam."
 "Activate_InvalidCode_Headline"	"Neplatný kód produktu"
 "[english]Activate_InvalidCode_Headline"	"Invalid Product Code"
-"Activate_InvalidCode"	"Zadaný kód produktu je neplatný.\n\nDůkladně zkontrolujte, zda jste klíč zadali správně. Znaky I, L a 1 lze snadno zaměnit, stejně tak znaky V a Y a 0 a O."
+"Activate_InvalidCode"	"Zadaný kód produktu je neplatný.\n\nDůkladně zkontrolujte, zdali jste kód zadali správně. Zaměřte se především na snadno zaměnitelné znaky jako „I“, „L“ a „1“, „V“ a „Y“ nebo „0“ a „O“."
 "[english]Activate_InvalidCode"	"The product code you've entered is not valid. \n\nPlease double check to see if you've mistyped your key. I, L, and 1 can look alike, as can V and Y, and 0 and O."
 "Activate_ServiceUnavailable_Headline"	"Server služby Steam je nedostupný"
 "[english]Activate_ServiceUnavailable_Headline"	"Steam Server Is Unavailable"

@@ -1246,7 +1246,7 @@
 "[english]Friends_AddFriend"	"ADD FRIEND"
 "Friends_AddFriendTitle"	"Adicionar um amigo"
 "[english]Friends_AddFriendTitle"	"Add a Friend"
-"Friends_AddFriendDesc"	"Insira o nome de jogador, nome de usuário, nome real, endereço de e-mail ou URL do perfil da pessoa que deseja buscar."
+"Friends_AddFriendDesc"	"Informe o nome de jogador, nome de usuário, nome verdadeiro, endereço de e-mail ou URL do perfil da pessoa que deseja buscar."
 "[english]Friends_AddFriendDesc"	"Enter the player name, account name, real name, email address or profile URL name of the person you're looking for."
 "Friends_AddFriend_OK"	"OK"
 "[english]Friends_AddFriend_OK"	"OK"

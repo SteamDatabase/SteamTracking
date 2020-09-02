@@ -107,7 +107,7 @@
 "[english]Steam_ErrorLoginBadTwoFactor"	"That two-factor code was invalid.\nPlease enter your current Steam Guard Authenticator code."
 "app_task_musicplayer"	"Lettore musicale"
 "[english]app_task_musicplayer"	"Music Player"
-"Steam_Login_IncorrectPassword"	"La password o l'account inseriti non sono corretti. Ricontrolla password e account, e riprova."
+"Steam_Login_IncorrectPassword"	"La password o il nome dell'account inseriti non sono corretti. Ricontrollali e riprova."
 "[english]Steam_Login_IncorrectPassword"	"You have entered your password or account name incorrectly. Please check your password and account name and try again."
 "Steam_RefreshLogin_RateLimited"	"Ci sono stati troppi tentativi di accesso falliti dalla tua rete in un breve periodo di tempo. Attendi e riprova più tardi."
 "[english]Steam_RefreshLogin_RateLimited"	"There have been too many login failures from your network in a short time period.  Please wait and try again later."

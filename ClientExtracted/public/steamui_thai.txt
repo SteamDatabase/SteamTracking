@@ -6590,7 +6590,7 @@ To enable access to the in-game overlay, open the Security and Privacy > Privacy
 "[english]Steam_Settings_Streaming_AdvancedClientOptions"	"Advanced Client Options"
 "Steam_Settings_Streaming_AdvancedClientOptions_Title"	"ตัวเลือกไคลเอนต์ขั้นสูง"
 "[english]Steam_Settings_Streaming_AdvancedClientOptions_Title"	"Advanced Client Options"
-"Steam_Settings_Streaming_AdvancedClientOptions_Description"	"เพื่อเพิ่มประสิทธิภาพการสตรีมไปยังคอมพิวเตอร์นี้ ลองลดความละเอียดหน้าจอของเกม หรือลองปรับการตั้งค่าต่อไปนี้"
+"Steam_Settings_Streaming_AdvancedClientOptions_Description"	"เพื่อเพิ่มประสิทธิภาพการสตรีมไปยังคอมพิวเตอร์นี้ ลองลดความละเอียดหน้าจอของเกมของคุณ หรือปรับการตั้งค่าต่อไปนี้"
 "[english]Steam_Settings_Streaming_AdvancedClientOptions_Description"	"To improve performance streaming to this computer, try reducing your game's resolution or adjusting the following settings."
 "Steam_Settings_Streaming_EnableHardwareEncoding"	"เปิดใช้งานการเข้ารหัสด้วยฮาร์ดแวร์"
 "[english]Steam_Settings_Streaming_EnableHardwareEncoding"	"Enable hardware encoding"

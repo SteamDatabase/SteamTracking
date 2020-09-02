@@ -243,7 +243,7 @@
 "[english]Overlay_Taskbar_GameHub"	"Community Hub"
 "Overlay_SettingsTabTitleApp"	"ในแอปพลิเคชัน"
 "[english]Overlay_SettingsTabTitleApp"	"In-application"
-"Overlay_SettingsDescriptionApp"	"Steam สามารถคงการทำงานไว้อยู่ และแสดงการแจ้งเตือนข้อความชุมชน Steam ในแอปพลิเคชันได้ รวมถึงอินเตอร์เฟสเพื่อนแบบเต็มภายในแอปพลิเคชันของคุณด้วย"
+"Overlay_SettingsDescriptionApp"	"Steam สามารถคงการทำงานไว้อยู่ และแสดงการแจ้งเตือนข้อความชุมชน Steam ในแอปพลิเคชันได้ รวมถึงอินเตอร์เฟซเพื่อนแบบเต็มภายในแอปพลิเคชันของคุณด้วย"
 "[english]Overlay_SettingsDescriptionApp"	"Steam can remain active and present you with in-application Steam Community message notifications as well as with a full friends interface inside your application."
 "Overlay_SettingsEnableApp"	"เปิดการใช้งานชุมชน Steam ในแอปพลิเคชัน"
 "[english]Overlay_SettingsEnableApp"	"Enable Steam Community In-Application"

@@ -2306,7 +2306,7 @@
 "[english]Activate_SubscriptionSuccess_Promo"	"Your {s:subscription} promotion code has successfully been activated. This content will become available to you once you've activated the full game on Steam. This content is now permanently associated with your Steam account. You must login to this account to have access to the items you've just activated on Steam."
 "Activate_InvalidCode_Headline"	"Niepoprawny klucz produktu"
 "[english]Activate_InvalidCode_Headline"	"Invalid Product Code"
-"Activate_InvalidCode"	"Podany klucz produktu jest niepoprawny.\n\nSprawdź, czy wszystkie znaki zostały poprawnie wpisane. I, L, i 1 mogą wyglądać podobnie, tak samo jak V i Y oraz 0 i O."
+"Activate_InvalidCode"	"Wprowadzony przez ciebie klucz produktu jest niepoprawny.\n\nUpewnij się, że wszystkie znaki zostały wpisane prawidłowo. I, L, i 1 mogą wyglądać podobnie, tak samo jak V i Y oraz 0 i O."
 "[english]Activate_InvalidCode"	"The product code you've entered is not valid. \n\nPlease double check to see if you've mistyped your key. I, L, and 1 can look alike, as can V and Y, and 0 and O."
 "Activate_ServiceUnavailable_Headline"	"Serwery Steam są niedostępne"
 "[english]Activate_ServiceUnavailable_Headline"	"Steam Server Is Unavailable"
