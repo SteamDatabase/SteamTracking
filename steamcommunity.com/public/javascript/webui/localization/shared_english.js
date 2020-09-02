@@ -169,6 +169,7 @@ LocalizationReady("shared", "english", {
   EventCalendar_SearchResultsHeader_GameAndDLCSection: "Games and DLC",
   EventCalendar_SearchResultsHeader_CuratorSection: "Curators",
   EventCalendar_FollowingCurator: "following",
+  EventCalendar_GroupTitle_Curators: "From Curators You Follow",
 
   EventCalendar_GlobalCalendar_Action: "Return to News Hub",
   EventCalendar_SpecificCalendar: "%1$s %2$s News Hub",
@@ -218,7 +219,7 @@ LocalizationReady("shared", "english", {
   EventCalendar_FollowCurator: "Follow Steam Curator: %1$s",
   EventCalendar_FollowCurator_ttip:
     "By following this curator, their articles will appear in your personalized News hub and their game recommendations will appear on your Steam store.",
-  EventCalendar_UnFollowCurator: "Follow Steam Curator: %1$s",
+  EventCalendar_UnFollowCurator: "Unfollow Steam Curator: %1$s",
   EventCalendar_UnFollowCurator_ttip:
     "You currently follow this curator. By unfollowing, their articles will no longer appear on your personalized News hub and their recommendations will not appear on your Steam store.",
   EventCalendar_UnignoreApp: "Unignore %1$s",
@@ -1609,9 +1610,9 @@ LocalizationReady("shared", "english", {
 
   GrantAwardTitle: "Give an Award",
   GrantAwardDescription_Review:
-    "Use your Steam Points to emphasize this review and grant the reviewer %1$s bonus points!",
+    "Use your Steam Points to emphasize this review and grant the reviewer bonus points!",
   GrantAwardDescription_UGC:
-    "Use your Steam Points to grant this item a special award and grant the author %1$s bonus points!",
+    "Use your Steam Points to grant this item a special award and grant the author bonus points!",
   GrantAwardNowButton: "Give Award",
   GrantAward_PointsLink: "What are Steam Points?",
   GrantAward_PromptTooltip: "Please select an award",

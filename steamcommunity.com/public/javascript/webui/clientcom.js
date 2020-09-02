@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6072552";
+var CLSTAMP = "6073675";
 !(function(t) {
   var e = {};
   function n(r) {
@@ -100,10 +100,10 @@ var CLSTAMP = "6072552";
         return f;
       }),
       n.d(e, "h", function() {
-        return l;
+        return _;
       }),
       n.d(e, "g", function() {
-        return _;
+        return l;
       }),
       n.d(e, "d", function() {
         return p;
@@ -121,7 +121,6 @@ var CLSTAMP = "6072552";
         LANGUAGE: "english",
         SUPPORTED_LANGUAGES: [],
         COUNTRY: "",
-        CDN_URL: "",
         MEDIA_CDN_COMMUNITY_URL: "",
         MEDIA_CDN_URL: "",
         COMMUNITY_CDN_URL: "",
@@ -137,6 +136,7 @@ var CLSTAMP = "6072552";
         HELP_BASE_URL: "",
         PARTNER_BASE_URL: "",
         STATS_BASE_URL: "",
+        INTERNAL_STATS_BASE_URL: "",
         BASE_URL_STORE_CDN_ASSETS: "",
         IN_CLIENT: !1,
         USE_POPUPS: !1,
@@ -205,19 +205,19 @@ var CLSTAMP = "6072552";
       })();
       return Object(i.c)("sessionid", t, 0), t;
     }
-    function l(t) {
+    function _(t) {
       void 0 === t && (t = "webui_config");
       var e = {},
-        n = _("config", t);
+        n = l("config", t);
       n && (delete n.SESSIONID, Object.assign(c, n), (e.config = !0));
-      var r = _("userinfo", t);
+      var r = l("userinfo", t);
       r && (Object.assign(u, r), (e.userConfig = !0));
-      var o = _("broadcast", t);
+      var o = l("broadcast", t);
       o && (Object.assign(s, o), (e.broadcastConfig = !0));
-      var i = _("community", t);
+      var i = l("community", t);
       return i && (Object.assign(a, i), (e.communityConfig = !0)), e;
     }
-    function _(t, e) {
+    function l(t, e) {
       var n;
       if (
         (void 0 === e && (e = "webui_config"),
@@ -248,6 +248,8 @@ var CLSTAMP = "6072552";
         ? c.STEAMTV_BASE_URL
         : t.startsWith(c.STATS_BASE_URL)
         ? c.STATS_BASE_URL
+        : t.startsWith(c.INTERNAL_STATS_BASE_URL)
+        ? c.INTERNAL_STATS_BASE_URL
         : "";
     }
     function d() {
@@ -262,7 +264,8 @@ var CLSTAMP = "6072552";
         ? "help"
         : t.startsWith(c.STEAMTV_BASE_URL)
         ? "steamtv"
-        : t.startsWith(c.STATS_BASE_URL)
+        : t.startsWith(c.STATS_BASE_URL) ||
+          t.startsWith(c.INTERNAL_STATS_BASE_URL)
         ? "stats"
         : "";
     }
@@ -484,7 +487,7 @@ var CLSTAMP = "6072552";
                 n();
               }),
                 (t.m_socket.onmessage = t.OnSocketMessage.bind(t)),
-                (t.m_socket.onopen = function(r) {
+                (t.m_socket.onopen = function() {
                   t.SendMsgAndAwaitResponse({ message: "GetClientInfo" })
                     .then(function(r) {
                       1 == r.success
