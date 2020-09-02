@@ -1030,6 +1030,13 @@ button.DialogButton::-moz-focus-inner {
   flex: 1;
   overflow: auto; }
 
+.DialogBody a {
+  color: #6dcff6;
+  text-decoration: none; }
+
+.DialogBody a:hover {
+  color: #b0e9ff; }
+
 .ModalDialogPopup .DialogContentTransition .DialogBody {
   overflow-y: scroll; }
 

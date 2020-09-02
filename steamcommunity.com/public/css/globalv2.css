@@ -1483,3 +1483,11 @@ img.badge_icon.small {
 	font-size: 18px;
 	line-height: 16px;
 }
+
+.filtered_text {
+	visibility: hidden;
+}
+.filtered_text.filtered {
+	visibility: visible;
+}
+

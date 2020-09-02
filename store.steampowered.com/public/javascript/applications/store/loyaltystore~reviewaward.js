@@ -27,16 +27,16 @@
           return g;
         }),
         r.d(t, "d", function() {
-          return _;
+          return M;
         }),
         r.d(t, "c", function() {
-          return F;
+          return L;
         }),
         r.d(t, "h", function() {
-          return S;
+          return W;
         }),
         r.d(t, "b", function() {
-          return U;
+          return E;
         }),
         r.d(t, "k", function() {
           return n;
@@ -767,13 +767,13 @@
             n
           );
         })(u),
-        v = (function(r) {
+        _ = (function(r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
             return (
               n.prototype.points_cost || o.a(n.M()),
-              u.initialize(t, e, 0, -1, void 0, null),
+              u.initialize(t, e, 0, -1, [3], null),
               t
             );
           }
@@ -794,7 +794,8 @@
                         n: 2,
                         br: o.d.readUint32,
                         bw: o.h.writeUint32
-                      }
+                      },
+                      reactions: { n: 3, c: v, r: !0, q: !0 }
                     }
                   }),
                 n.sm_m
@@ -833,7 +834,88 @@
             n
           );
         })(u),
-        _ = (function(r) {
+        v = (function(r) {
+          function n(e) {
+            void 0 === e && (e = null);
+            var t = r.call(this) || this;
+            return (
+              n.prototype.reactionid || o.a(n.M()),
+              u.initialize(t, e, 0, -1, [4, 5], null),
+              t
+            );
+          }
+          return (
+            Object(i.d)(n, r),
+            (n.M = function() {
+              return (
+                n.sm_m ||
+                  (n.sm_m = {
+                    proto: n,
+                    fields: {
+                      reactionid: { n: 1, br: o.d.readEnum, bw: o.h.writeEnum },
+                      points_cost: {
+                        n: 2,
+                        br: o.d.readUint32,
+                        bw: o.h.writeUint32
+                      },
+                      points_transferred: {
+                        n: 3,
+                        br: o.d.readUint32,
+                        bw: o.h.writeUint32
+                      },
+                      valid_target_types: {
+                        n: 4,
+                        r: !0,
+                        q: !0,
+                        br: o.d.readEnum,
+                        bw: o.h.writeRepeatedEnum
+                      },
+                      valid_ugc_types: {
+                        n: 5,
+                        r: !0,
+                        q: !0,
+                        br: o.d.readUint32,
+                        bw: o.h.writeRepeatedUint32
+                      }
+                    }
+                  }),
+                n.sm_m
+              );
+            }),
+            (n.MBF = function() {
+              return n.sm_mbf || (n.sm_mbf = o.e(n.M())), n.sm_mbf;
+            }),
+            (n.prototype.toObject = function(e) {
+              return void 0 === e && (e = !1), n.toObject(e, this);
+            }),
+            (n.toObject = function(e, t) {
+              return o.g(n.M(), e, t);
+            }),
+            (n.fromObject = function(e) {
+              return o.c(n.M(), e);
+            }),
+            (n.deserializeBinary = function(e) {
+              var t = new a.BinaryReader(e),
+                r = new n();
+              return n.deserializeBinaryFromReader(r, t);
+            }),
+            (n.deserializeBinaryFromReader = function(e, t) {
+              return o.b(n.MBF(), e, t);
+            }),
+            (n.prototype.serializeBinary = function() {
+              var e = new a.BinaryWriter();
+              return n.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            }),
+            (n.serializeBinaryToWriter = function(e, t) {
+              o.f(n.M(), e, t);
+            }),
+            (n.prototype.getClassName = function() {
+              return "CLoyaltyRewards_GetReactionConfig_Response_ReactionConfig";
+            }),
+            n
+          );
+        })(u),
+        M = (function(r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -894,7 +976,7 @@
             n
           );
         })(u),
-        M = (function(r) {
+        R = (function(r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -911,7 +993,7 @@
                 n.sm_m ||
                   (n.sm_m = {
                     proto: n,
-                    fields: { apps: { n: 1, c: R, r: !0, q: !0 } }
+                    fields: { apps: { n: 1, c: z, r: !0, q: !0 } }
                   }),
                 n.sm_m
               );
@@ -949,7 +1031,7 @@
             n
           );
         })(u),
-        R = (function(r) {
+        z = (function(r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -1084,7 +1166,7 @@
                         bw: o.h.writeString
                       },
                       active: { n: 12, br: o.d.readBool, bw: o.h.writeBool },
-                      community_item_data: { n: 13, c: z },
+                      community_item_data: { n: 13, c: j },
                       bundle_defids: {
                         n: 15,
                         r: !0,
@@ -1135,7 +1217,7 @@
             n
           );
         })(u),
-        z = (function(r) {
+        j = (function(r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -1199,7 +1281,7 @@
                         bw: o.h.writeString
                       },
                       animated: { n: 8, br: o.d.readBool, bw: o.h.writeBool },
-                      badge_data: { n: 9, c: j, r: !0, q: !0 }
+                      badge_data: { n: 9, c: O, r: !0, q: !0 }
                     }
                   }),
                 n.sm_m
@@ -1238,7 +1320,7 @@
             n
           );
         })(u),
-        j = (function(r) {
+        O = (function(r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -1296,7 +1378,7 @@
             n
           );
         })(u),
-        O = (function(r) {
+        F = (function(r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -1375,7 +1457,7 @@
             n
           );
         })(u),
-        F = (function(r) {
+        L = (function(r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -1411,7 +1493,7 @@
             n
           );
         })(u),
-        L = (function(r) {
+        S = (function(r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -1428,7 +1510,7 @@
                 n.sm_m ||
                   (n.sm_m = {
                     proto: n,
-                    fields: { bonuses: { n: 1, c: O, r: !0, q: !0 } }
+                    fields: { bonuses: { n: 1, c: F, r: !0, q: !0 } }
                   }),
                 n.sm_m
               );
@@ -1466,7 +1548,7 @@
             n
           );
         })(u),
-        S = (function(r) {
+        W = (function(r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -1597,7 +1679,7 @@
             n
           );
         })(u),
-        W = (function(r) {
+        U = (function(r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -1665,7 +1747,7 @@
             n
           );
         })(u),
-        U = (function(r) {
+        E = (function(r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -1682,7 +1764,7 @@
                 n.sm_m ||
                   (n.sm_m = {
                     proto: n,
-                    fields: { requests: { n: 1, c: S, r: !0, q: !0 } }
+                    fields: { requests: { n: 1, c: W, r: !0, q: !0 } }
                   }),
                 n.sm_m
               );
@@ -1720,7 +1802,7 @@
             n
           );
         })(u),
-        E = (function(r) {
+        T = (function(r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -1737,7 +1819,7 @@
                 n.sm_m ||
                   (n.sm_m = {
                     proto: n,
-                    fields: { responses: { n: 1, c: T, r: !0, q: !0 } }
+                    fields: { responses: { n: 1, c: I, r: !0, q: !0 } }
                   }),
                 n.sm_m
               );
@@ -1775,7 +1857,7 @@
             n
           );
         })(u),
-        T = (function(r) {
+        I = (function(r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -1794,7 +1876,7 @@
                     proto: n,
                     fields: {
                       eresult: { n: 1, br: o.d.readInt32, bw: o.h.writeInt32 },
-                      response: { n: 2, c: W }
+                      response: { n: 2, c: U }
                     }
                   }),
                 n.sm_m
@@ -1873,35 +1955,35 @@
           });
         }),
         (c.GetReactionConfig = function(e, t) {
-          return e.SendMsg("LoyaltyRewards.GetReactionConfig#1", t, v, {
+          return e.SendMsg("LoyaltyRewards.GetReactionConfig#1", t, _, {
             bConstMethod: !0,
             ePrivilege: 0,
             eWebAPIKeyRequirement: 1
           });
         }),
         (c.GetEligibleApps = function(e, t) {
-          return e.SendMsg("LoyaltyRewards.GetEligibleApps#1", t, M, {
+          return e.SendMsg("LoyaltyRewards.GetEligibleApps#1", t, R, {
             bConstMethod: !0,
             ePrivilege: 0,
             eWebAPIKeyRequirement: 1
           });
         }),
         (c.GetActivePurchaseBonuses = function(e, t) {
-          return e.SendMsg("LoyaltyRewards.GetActivePurchaseBonuses#1", t, L, {
+          return e.SendMsg("LoyaltyRewards.GetActivePurchaseBonuses#1", t, S, {
             bConstMethod: !0,
             ePrivilege: 2,
             eWebAPIKeyRequirement: 1
           });
         }),
         (c.QueryRewardItems = function(e, t) {
-          return e.SendMsg("LoyaltyRewards.QueryRewardItems#1", t, W, {
+          return e.SendMsg("LoyaltyRewards.QueryRewardItems#1", t, U, {
             bConstMethod: !0,
             ePrivilege: 2,
             eWebAPIKeyRequirement: 1
           });
         }),
         (c.BatchedQueryRewardItems = function(e, t) {
-          return e.SendMsg("LoyaltyRewards.BatchedQueryRewardItems#1", t, E, {
+          return e.SendMsg("LoyaltyRewards.BatchedQueryRewardItems#1", t, T, {
             bConstMethod: !0,
             ePrivilege: 2,
             eWebAPIKeyRequirement: 1
@@ -2124,7 +2206,7 @@
             a,
             d.map(function(e, t) {
               return 0.5 < e.flRandom
-                ? m.a.createElement(v, { key: t, style: e })
+                ? m.a.createElement(_, { key: t, style: e })
                 : m.a.createElement(g, { key: t, style: e });
             })
           );
@@ -2147,8 +2229,8 @@
         },
         w = function(e) {
           var t = e.style,
-            r = Object(f.useState)(Math.floor(Math.random() * _.length))[0],
-            n = _[r];
+            r = Object(f.useState)(Math.floor(Math.random() * v.length))[0],
+            n = v[r];
           return m.a.createElement(n, {
             style: Object(i.a)(Object(i.a)(Object(i.a)({}, c), t), {
               backgroundColor: void 0
@@ -2174,7 +2256,7 @@
             })
           );
         },
-        v = function(e) {
+        _ = function(e) {
           var t = e.style;
           return m.a.createElement(
             a.animated.svg,
@@ -2366,7 +2448,7 @@
             );
           }
         ],
-        _ = [
+        v = [
           function(e) {
             var t = e.style;
             return m.a.createElement(

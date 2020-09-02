@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [94],
+  [93],
   {
     "042x": function(e, t, r) {
       e.exports = {
@@ -10550,7 +10550,7 @@
           );
         })(g.Component),
         Lr = g.lazy(function() {
-          return Promise.all([r.e(0), r.e(7)]).then(r.bind(null, "AxZo"));
+          return Promise.all([r.e(0), r.e(6)]).then(r.bind(null, "AxZo"));
         }),
         Ur = !0,
         Dr = (function(e) {
@@ -14214,6 +14214,82 @@
         ErrorMessage: "profileedit_ErrorMessage_3j9lm",
         DisabledInputCtn: "profileedit_DisabledInputCtn_ZePu4"
       };
+    },
+    UWWC: function(e, t, r) {
+      "use strict";
+      r.d(t, "a", function() {
+        return a;
+      }),
+        r.d(t, "b", function() {
+          return o;
+        });
+      var u = r("mrSG"),
+        i = r("wUwH"),
+        m = r("lkRc"),
+        n = r("vDqi"),
+        d = r.n(n),
+        a = (function(e) {
+          function t() {
+            return e.call(this) || this;
+          }
+          return (
+            Object(u.d)(t, e),
+            (t.prototype.BInitialized = function() {
+              return !0;
+            }),
+            (t.prototype.GetServerTime = function() {
+              return m.b.PAGE_TIMESTAMP + Math.floor(performance.now() / 1e3);
+            }),
+            (t.prototype.RequestEmoticonListInternal = function() {
+              return Object(u.b)(this, void 0, void 0, function() {
+                var t, r, i, n, a, o, s, c, l;
+                return Object(u.e)(this, function(e) {
+                  switch (e.label) {
+                    case 0:
+                      (t = []), (e.label = 1);
+                    case 1:
+                      return (
+                        e.trys.push([1, 3, , 4]),
+                        [
+                          4,
+                          d.a.get(m.b.CHAT_BASE_URL + "actions/EmoticonData", {
+                            withCredentials: !0
+                          })
+                        ]
+                      );
+                    case 2:
+                      if ((r = e.sent()).data.emoticons)
+                        for (i = 0, n = r.data.emoticons; i < n.length; i++)
+                          (a = n[i]),
+                            (o = a.name).startsWith("^")
+                              ? t.push({ name: o })
+                              : ((s = { name: o.substr(1, o.length - 2) }),
+                                (c = s.name.toLowerCase()) != s.name &&
+                                  (s.name_normalized = c),
+                                a.time_last_used &&
+                                  (s.last_used = a.time_last_used),
+                                a.use_count && (s.use_count = a.use_count),
+                                a.time_received &&
+                                  (s.time_received = a.time_received),
+                                a.appid && (s.appid = a.appid),
+                                t.push(s));
+                      return [3, 4];
+                    case 3:
+                      return (
+                        (l = e.sent()),
+                        console.error("error loading emoticon list", l),
+                        [3, 4]
+                      );
+                    case 4:
+                      return this.OnEmoticonListReceived(t), [2];
+                  }
+                });
+              });
+            }),
+            t
+          );
+        })(i.a),
+        o = new a();
     },
     WeG9: function(e, t, r) {
       e.exports = {

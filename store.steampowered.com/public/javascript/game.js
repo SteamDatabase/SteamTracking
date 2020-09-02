@@ -356,6 +356,7 @@ function RenderMoreLikeThisBlock( rgRecommendedAppIDs, bUseShuffle )
 
 function RenderFranchiseAppBlock( rgFranchiseAppIDs )
 {
+		rgFranchiseAppIDs = rgFranchiseAppIDs.filter( function( appid ) { return !!GStoreItemData.rgAppData[appid]; } )
 	if( !rgFranchiseAppIDs || !rgFranchiseAppIDs.length > 0 || !$J('#franchise_app_block_content').length )
 	{
 		$J('#franchise_block').hide();
