@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6073681";
+var CLSTAMP = "6078110";
 !(function(t) {
   function e(e) {
     for (
@@ -13,35 +13,35 @@ var CLSTAMP = "6073681";
         (l[n] = 0);
     for (a in c) Object.prototype.hasOwnProperty.call(c, a) && (t[a] = c[a]);
     for (_ && _(e); r.length; ) r.shift()();
-    return b.push.apply(b, s || []), i();
+    return f.push.apply(f, s || []), i();
   }
   function i() {
-    for (var e, a = 0; a < b.length; a++) {
-      for (var n = b[a], d = !0, c = 1; c < n.length; c++) {
+    for (var e, a = 0; a < f.length; a++) {
+      for (var n = f[a], d = !0, c = 1; c < n.length; c++) {
         var s = n[c];
         0 !== l[s] && (d = !1);
       }
-      d && (b.splice(a--, 1), (e = j((j.s = n[0]))));
+      d && (f.splice(a--, 1), (e = j((j.s = n[0]))));
     }
     return e;
   }
   var n = {},
-    f = { 66: 0 },
+    b = { 66: 0 },
     l = { 66: 0 },
-    b = [];
+    f = [];
   function j(e) {
     if (n[e]) return n[e].exports;
     var a = (n[e] = { i: e, l: !1, exports: {} });
     return t[e].call(a.exports, a, a.exports, j), (a.l = !0), a.exports;
   }
-  (j.e = function(b) {
+  (j.e = function(f) {
     var e = [];
-    f[b]
-      ? e.push(f[b])
-      : 0 !== f[b] &&
-        { 1: 1, 3: 1, 6: 1, 7: 1, 8: 1, 9: 1, 37: 1, 67: 1 }[b] &&
+    b[f]
+      ? e.push(b[f])
+      : 0 !== b[f] &&
+        { 1: 1, 3: 1, 6: 1, 7: 1, 8: 1, 9: 1, 37: 1, 67: 1 }[f] &&
         e.push(
-          (f[b] = new Promise(function(e, d) {
+          (b[f] = new Promise(function(e, d) {
             for (
               var a =
                   "..\\..\\..\\css\\applications\\store\\" +
@@ -139,7 +139,7 @@ var CLSTAMP = "6073681";
                     93: "shared_turkish-json",
                     94: "shared_ukrainian-json",
                     95: "shared_vietnamese-json"
-                  }[b] || b) +
+                  }[f] || f) +
                   ".css?contenthash=" +
                   {
                     1: "1bd6a4d269fa651ca4db",
@@ -178,7 +178,7 @@ var CLSTAMP = "6073681";
                     34: "31d6cfe0d16ae931b73c",
                     35: "31d6cfe0d16ae931b73c",
                     36: "31d6cfe0d16ae931b73c",
-                    37: "40274be8b7bcf54b0fcb",
+                    37: "7fc39f1dd52f519977d2",
                     39: "31d6cfe0d16ae931b73c",
                     40: "31d6cfe0d16ae931b73c",
                     41: "31d6cfe0d16ae931b73c",
@@ -235,7 +235,7 @@ var CLSTAMP = "6073681";
                     93: "31d6cfe0d16ae931b73c",
                     94: "31d6cfe0d16ae931b73c",
                     95: "31d6cfe0d16ae931b73c"
-                  }[b],
+                  }[f],
                 c = j.p + a,
                 n = document.getElementsByTagName("link"),
                 s = 0;
@@ -261,18 +261,18 @@ var CLSTAMP = "6073681";
               (i.onerror = function(e) {
                 var a = (e && e.target && e.target.src) || c,
                   n = new Error(
-                    "Loading CSS chunk " + b + " failed.\n(" + a + ")"
+                    "Loading CSS chunk " + f + " failed.\n(" + a + ")"
                   );
                 (n.code = "CSS_CHUNK_LOAD_FAILED"),
                   (n.request = a),
-                  delete f[b],
+                  delete b[f],
                   i.parentNode.removeChild(i),
                   d(n);
               }),
               (i.href = c),
               document.getElementsByTagName("head")[0].appendChild(i);
           }).then(function() {
-            f[b] = 0;
+            b[f] = 0;
           }))
         );
     var a,
@@ -281,13 +281,13 @@ var CLSTAMP = "6073681";
       n,
       o,
       d,
-      r = l[b];
+      r = l[f];
     return (
       0 !== r &&
         (r
           ? e.push(r[2])
           : ((a = new Promise(function(e, a) {
-              r = l[b] = [e, a];
+              r = l[f] = [e, a];
             })),
             e.push((r[2] = a)),
             ((c = document.createElement("script")).charset = "utf-8"),
@@ -390,17 +390,17 @@ var CLSTAMP = "6073681";
                 93: "shared_turkish-json",
                 94: "shared_ukrainian-json",
                 95: "shared_vietnamese-json"
-              }[(d = b)] || d) +
+              }[(d = f)] || d) +
               ".js?contenthash=" +
               {
-                1: "9b33ba5d58429dfbb8b6",
+                1: "a1fcb1632d67140c8aa5",
                 2: "0842b0ad259c5491cb5e",
                 3: "f58fa5e54414c5b75db9",
-                4: "ddc52a0d9a415359b4a9",
+                4: "117c55f168b43da8f274",
                 5: "ff7511f8cb0ed091214c",
                 6: "b49670dccbd5d2138990",
                 7: "dda3e24ca7506cec995b",
-                8: "51183e446f8716488f62",
+                8: "bc98c785e19f551c47f9",
                 9: "acf7e6383197f3d7f84b",
                 10: "662d626e948f6f44fa51",
                 11: "880a3710ea2ab1b8e47b",
@@ -429,7 +429,7 @@ var CLSTAMP = "6073681";
                 34: "05a6fecabeeb3fc37e97",
                 35: "9f6b77820cfd397d7ba2",
                 36: "1cc6613ff81a571697d7",
-                37: "2daae04e53dc6b1fb2d2",
+                37: "0a504da24ca9b03e1a70",
                 39: "628fc6c6edd45d0ebb94",
                 40: "73e3a99271e4db1174ab",
                 41: "0cc207d673d2ecd9a6c7",
@@ -492,18 +492,18 @@ var CLSTAMP = "6073681";
               (c.onerror = c.onload = null), clearTimeout(o);
               var a,
                 n,
-                d = l[b];
+                d = l[f];
               0 !== d &&
                 (d &&
                   ((a = e && ("load" === e.type ? "missing" : e.type)),
                   (n = e && e.target && e.target.src),
                   (s.message =
-                    "Loading chunk " + b + " failed.\n(" + a + ": " + n + ")"),
+                    "Loading chunk " + f + " failed.\n(" + a + ": " + n + ")"),
                   (s.name = "ChunkLoadError"),
                   (s.type = a),
                   (s.request = n),
                   d[1](s)),
-                (l[b] = void 0));
+                (l[f] = void 0));
             }),
             (o = setTimeout(function() {
               n({ type: "timeout", target: c });

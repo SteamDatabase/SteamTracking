@@ -843,7 +843,8 @@
           "curator_group_members",
           "curator_public",
           "mod_require_rereview",
-          "auto_rssfeed"
+          "auto_rssfeed",
+          "auto_migrated"
         ],
         H = [
           "patchnotes",
@@ -17153,7 +17154,7 @@
                 var f = new Date(m);
                 f.setMonth(e.getMonth() - b, 1);
                 var M = f.getTime() / 1e3;
-                n.push(E(o, Object(S.e)(h - 1), M, h)),
+                n.push(E(o, Object(S.e)(M), M, h)),
                   c && c.start_time > M && (s = !0),
                   (h = M);
               }
