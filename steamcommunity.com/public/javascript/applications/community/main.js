@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6073675";
+var CLSTAMP = "6077348";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [91],
   {
@@ -21590,11 +21590,7 @@ var CLSTAMP = "6073675";
                       case 2:
                         return (r = e.sent()).data && 1 == r.data.success
                           ? (this.InitializeFrom(r.data), [3, 4])
-                          : (console.log(
-                              "AMS - failed to load store info about appid: " +
-                                this.m_appid
-                            ),
-                            (this.m_appStoreData.success = r.data
+                          : ((this.m_appStoreData.success = r.data
                               ? r.data.success
                               : 2),
                             [2, this]);

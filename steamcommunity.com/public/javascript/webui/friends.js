@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6073675";
+var CLSTAMP = "6077348";
 !(function(e) {
   function t(t) {
     for (
@@ -11834,11 +11834,7 @@ var CLSTAMP = "6073675";
                     case 2:
                       return (r = o.sent()).data && 1 == r.data.success
                         ? (this.InitializeFrom(r.data), [3, 4])
-                        : (console.log(
-                            "AMS - failed to load store info about appid: " +
-                              this.m_appid
-                          ),
-                          (this.m_appStoreData.success = r.data
+                        : ((this.m_appStoreData.success = r.data
                             ? r.data.success
                             : 2),
                           [2, this]);
@@ -25773,14 +25769,14 @@ var CLSTAMP = "6073675";
                 t,
                 n,
                 r,
-                i = this;
+                i,
+                a,
+                s = this;
               return Object(o.e)(this, function(o) {
                 switch (o.label) {
                   case 0:
-                    return (
-                      (e =
-                        window.localStorage.getItem("unUserdataVersion") ||
-                        "0"),
+                    (e =
+                      window.localStorage.getItem("unUserdataVersion") || "0"),
                       (t = {
                         v: "0" == e ? void 0 : e,
                         id: "" + A.i.accountid,
@@ -25788,44 +25784,48 @@ var CLSTAMP = "6073675";
                         origin: self.origin
                       }),
                       (n = A.c.STORE_BASE_URL + "dynamicstore/userdata/"),
+                      (o.label = 1);
+                  case 1:
+                    return (
+                      o.trys.push([1, 3, , 4]),
                       [4, I.a.get(n, { params: t, withCredentials: !0 })]
                     );
-                  case 1:
+                  case 2:
                     return (
                       (r = o.sent()) &&
                         200 == r.status &&
                         Object(w.F)(function() {
-                          if (((i.m_bIsLoaded = !0), r.data.rgCurators))
-                            for (var e in (i.m_mapCuratorsFollowed.clear(),
+                          if (((s.m_bIsLoaded = !0), r.data.rgCurators))
+                            for (var e in (s.m_mapCuratorsFollowed.clear(),
                             r.data.rgCurators))
-                              i.m_mapCuratorsFollowed.set(Number(e), !0);
+                              s.m_mapCuratorsFollowed.set(Number(e), !0);
                           if (
                             (r.data.rgCuratorsIgnored &&
-                              (i.m_mapCuratorsIgnored = new Map(
+                              (s.m_mapCuratorsIgnored = new Map(
                                 r.data.rgCuratorsIgnored.map(function(e) {
                                   return [Number(e), !0];
                                 })
                               )),
                             r.data.rgWishlist &&
-                              (i.m_mapWishList = new Map(
+                              (s.m_mapWishList = new Map(
                                 r.data.rgWishlist.map(function(e) {
                                   return [Number(e), !0];
                                 })
                               )),
                             r.data.rgFollowedApps &&
-                              (i.m_mapFollowedApps = new Map(
+                              (s.m_mapFollowedApps = new Map(
                                 r.data.rgFollowedApps.map(function(e) {
                                   return [Number(e), !0];
                                 })
                               )),
                             r.data.rgOwnedApps &&
-                              (i.m_mapOwnedApps = new Map(
+                              (s.m_mapOwnedApps = new Map(
                                 r.data.rgOwnedApps.map(function(e) {
                                   return [Number(e), !0];
                                 })
                               )),
                             r.data.rgOwnedPackages &&
-                              (i.m_mapOwnedPackages = new Map(
+                              (s.m_mapOwnedPackages = new Map(
                                 r.data.rgOwnedPackages.map(function(e) {
                                   return [Number(e), !0];
                                 })
@@ -25834,16 +25834,16 @@ var CLSTAMP = "6073675";
                           ) {
                             var t = r.data.rgIgnoredApps;
                             for (var n in t)
-                              i.m_mapIgnoredApps.set(Number(n), Number(t[n]));
+                              s.m_mapIgnoredApps.set(Number(n), Number(t[n]));
                           }
                           r.data.rgExcludedTags &&
-                            (i.m_mapExcludedTagsIds = new Map(
+                            (s.m_mapExcludedTagsIds = new Map(
                               r.data.rgExcludedTags.map(function(e) {
                                 return [Number(e.tagid), !0];
                               })
                             )),
                             r.data.rgExcludedContentDescriptorIDs &&
-                              (i.m_mapExcludedContentDescriptors = new Map(
+                              (s.m_mapExcludedContentDescriptors = new Map(
                                 r.data.rgExcludedContentDescriptorIDs.map(
                                   function(e) {
                                     return [e, !0];
@@ -25851,16 +25851,29 @@ var CLSTAMP = "6073675";
                                 )
                               )),
                             r.data.rgRecommendedApps &&
-                              (i.m_mapRecommendedApps = new Map(
+                              (s.m_mapRecommendedApps = new Map(
                                 r.data.rgRecommendedApps.map(function(e) {
                                   return [Number(e), !0];
                                 })
                               )),
-                            (i.m_bShowFilteredUserReviewScores = !!r.data
+                            (s.m_bShowFilteredUserReviewScores = !!r.data
                               .bShowFilteredUserReviewScores);
                         }),
-                      [2, this]
+                      [3, 4]
                     );
+                  case 3:
+                    return (
+                      (i = o.sent()),
+                      (a = Object(te.a)(i)),
+                      console.error(
+                        "CDynamicStore.InternalLoad",
+                        a.strErrorMsg,
+                        a
+                      ),
+                      [3, 4]
+                    );
+                  case 4:
+                    return [2, this];
                 }
               });
             });
@@ -25909,7 +25922,8 @@ var CLSTAMP = "6073675";
                   i,
                   a,
                   s,
-                  c = this;
+                  c,
+                  l = this;
                 return Object(o.e)(this, function(o) {
                   switch (o.label) {
                     case 0:
@@ -25932,17 +25946,18 @@ var CLSTAMP = "6073675";
                         (a = o.sent()) &&
                           200 == a.status &&
                           Object(w.F)(function() {
-                            c.InvalidateCache(),
+                            l.InvalidateCache(),
                               t
-                                ? c.m_mapIgnoredApps.set(e, n)
-                                : c.m_mapIgnoredApps.delete(e);
+                                ? l.m_mapIgnoredApps.set(e, n)
+                                : l.m_mapIgnoredApps.delete(e);
                           }),
                         [2, a.data]
                       );
                     case 3:
                       return (
                         (s = o.sent()),
-                        console.error("UpdateAppIgnore", Object(te.a)(s)),
+                        (c = Object(te.a)(s)),
+                        console.error("UpdateAppIgnore", c.strErrorMsg, c),
                         [3, 4]
                       );
                     case 4:
@@ -26026,7 +26041,7 @@ var CLSTAMP = "6073675";
           }),
           (e.prototype.AddLicenseForFreeGame = function(e) {
             return Object(o.b)(this, void 0, void 0, function() {
-              var t, n, r, i;
+              var t, n, r, i, a;
               return Object(o.e)(this, function(o) {
                 switch (o.label) {
                   case 0:
@@ -26055,9 +26070,11 @@ var CLSTAMP = "6073675";
                   case 3:
                     return (
                       (i = o.sent()),
+                      (a = Object(te.a)(i)),
                       console.log(
                         "AddLicense request failed:",
-                        Object(te.a)(i)
+                        a.strErrorMsg,
+                        a
                       ),
                       [2, 2]
                     );

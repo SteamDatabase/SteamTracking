@@ -52121,13 +52121,13 @@
         return r;
       });
       var d = n("mrSG"),
-        c = n("2vnA"),
-        p = n("lkRc"),
+        p = n("2vnA"),
+        u = n("lkRc"),
         a = n("vDqi"),
-        u = n.n(a),
-        m = n("+d9t"),
-        h = n("bDQf"),
-        i = "unUserdataVersion",
+        m = n.n(a),
+        h = n("+d9t"),
+        _ = n("bDQf"),
+        l = "unUserdataVersion",
         r = new ((function() {
           function e() {
             (this.m_mapWishList = new Map()),
@@ -52216,57 +52216,62 @@
                   n,
                   a,
                   r,
-                  o = this;
+                  o,
+                  i,
+                  s = this;
                 return Object(d.e)(this, function(e) {
                   switch (e.label) {
                     case 0:
-                      return (
-                        (t = window.localStorage.getItem(i) || "0"),
+                      (t = window.localStorage.getItem(l) || "0"),
                         (n = {
                           v: "0" == t ? void 0 : t,
-                          id: "" + p.g.accountid,
-                          cc: "" + p.b.COUNTRY,
+                          id: "" + u.g.accountid,
+                          cc: "" + u.b.COUNTRY,
                           origin: self.origin
                         }),
-                        (a = p.b.STORE_BASE_URL + "dynamicstore/userdata/"),
-                        [4, u.a.get(a, { params: n, withCredentials: !0 })]
-                      );
+                        (a = u.b.STORE_BASE_URL + "dynamicstore/userdata/"),
+                        (e.label = 1);
                     case 1:
+                      return (
+                        e.trys.push([1, 3, , 4]),
+                        [4, m.a.get(a, { params: n, withCredentials: !0 })]
+                      );
+                    case 2:
                       return (
                         (r = e.sent()) &&
                           200 == r.status &&
-                          Object(c.G)(function() {
-                            if (((o.m_bIsLoaded = !0), r.data.rgCurators))
-                              for (var e in (o.m_mapCuratorsFollowed.clear(),
+                          Object(p.G)(function() {
+                            if (((s.m_bIsLoaded = !0), r.data.rgCurators))
+                              for (var e in (s.m_mapCuratorsFollowed.clear(),
                               r.data.rgCurators))
-                                o.m_mapCuratorsFollowed.set(Number(e), !0);
+                                s.m_mapCuratorsFollowed.set(Number(e), !0);
                             if (
                               (r.data.rgCuratorsIgnored &&
-                                (o.m_mapCuratorsIgnored = new Map(
+                                (s.m_mapCuratorsIgnored = new Map(
                                   r.data.rgCuratorsIgnored.map(function(e) {
                                     return [Number(e), !0];
                                   })
                                 )),
                               r.data.rgWishlist &&
-                                (o.m_mapWishList = new Map(
+                                (s.m_mapWishList = new Map(
                                   r.data.rgWishlist.map(function(e) {
                                     return [Number(e), !0];
                                   })
                                 )),
                               r.data.rgFollowedApps &&
-                                (o.m_mapFollowedApps = new Map(
+                                (s.m_mapFollowedApps = new Map(
                                   r.data.rgFollowedApps.map(function(e) {
                                     return [Number(e), !0];
                                   })
                                 )),
                               r.data.rgOwnedApps &&
-                                (o.m_mapOwnedApps = new Map(
+                                (s.m_mapOwnedApps = new Map(
                                   r.data.rgOwnedApps.map(function(e) {
                                     return [Number(e), !0];
                                   })
                                 )),
                               r.data.rgOwnedPackages &&
-                                (o.m_mapOwnedPackages = new Map(
+                                (s.m_mapOwnedPackages = new Map(
                                   r.data.rgOwnedPackages.map(function(e) {
                                     return [Number(e), !0];
                                   })
@@ -52275,16 +52280,16 @@
                             ) {
                               var t = r.data.rgIgnoredApps;
                               for (var n in t)
-                                o.m_mapIgnoredApps.set(Number(n), Number(t[n]));
+                                s.m_mapIgnoredApps.set(Number(n), Number(t[n]));
                             }
                             r.data.rgExcludedTags &&
-                              (o.m_mapExcludedTagsIds = new Map(
+                              (s.m_mapExcludedTagsIds = new Map(
                                 r.data.rgExcludedTags.map(function(e) {
                                   return [Number(e.tagid), !0];
                                 })
                               )),
                               r.data.rgExcludedContentDescriptorIDs &&
-                                (o.m_mapExcludedContentDescriptors = new Map(
+                                (s.m_mapExcludedContentDescriptors = new Map(
                                   r.data.rgExcludedContentDescriptorIDs.map(
                                     function(e) {
                                       return [e, !0];
@@ -52292,16 +52297,29 @@
                                   )
                                 )),
                               r.data.rgRecommendedApps &&
-                                (o.m_mapRecommendedApps = new Map(
+                                (s.m_mapRecommendedApps = new Map(
                                   r.data.rgRecommendedApps.map(function(e) {
                                     return [Number(e), !0];
                                   })
                                 )),
-                              (o.m_bShowFilteredUserReviewScores = !!r.data
+                              (s.m_bShowFilteredUserReviewScores = !!r.data
                                 .bShowFilteredUserReviewScores);
                           }),
-                        [2, this]
+                        [3, 4]
                       );
+                    case 3:
+                      return (
+                        (o = e.sent()),
+                        (i = Object(_.a)(o)),
+                        console.error(
+                          "CDynamicStore.InternalLoad",
+                          i.strErrorMsg,
+                          i
+                        ),
+                        [3, 4]
+                      );
+                    case 4:
+                      return [2, this];
                   }
                 });
               });
@@ -52314,18 +52332,18 @@
                     case 0:
                       return (
                         (t =
-                          p.b.STORE_BASE_URL +
+                          u.b.STORE_BASE_URL +
                           "curators/" +
                           (s ? "ajaxfollow/" : "ajaxignore/")),
                         (n = i.GetAccountID()),
                         (a = new FormData()).append(
                           "authwgtoken",
-                          p.g.authwgtoken
+                          u.g.authwgtoken
                         ),
                         a.append("clanid", "" + n),
-                        a.append("sessionid", p.b.SESSIONID),
+                        a.append("sessionid", u.b.SESSIONID),
                         a.append(s ? "follow" : "ignore", l ? "1" : "0"),
-                        [4, u.a.post(t, a, { withCredentials: !0 })]
+                        [4, m.a.post(t, a, { withCredentials: !0 })]
                       );
                     case 1:
                       return (
@@ -52342,51 +52360,53 @@
                 });
               });
             }),
-            (e.prototype.UpdateAppIgnore = function(i, s, l) {
+            (e.prototype.UpdateAppIgnore = function(s, l, c) {
               return (
-                void 0 === l && (l = 0),
+                void 0 === c && (c = 0),
                 Object(d.b)(this, void 0, void 0, function() {
                   var t,
                     n,
                     a,
                     r,
-                    o = this;
+                    o,
+                    i = this;
                   return Object(d.e)(this, function(e) {
                     switch (e.label) {
                       case 0:
                         (t =
-                          p.b.STORE_BASE_URL +
+                          u.b.STORE_BASE_URL +
                           "recommended/ignorerecommendation"),
                           (n = new FormData()).append(
                             "sessionid",
-                            p.b.SESSIONID
+                            u.b.SESSIONID
                           ),
-                          n.append("appid", "" + i),
-                          n.append("remove", s ? "0" : "1"),
-                          n.append("snr", p.b.SNR),
-                          n.append("ignore_reason", "" + l),
+                          n.append("appid", "" + s),
+                          n.append("remove", l ? "0" : "1"),
+                          n.append("snr", u.b.SNR),
+                          n.append("ignore_reason", "" + c),
                           (e.label = 1);
                       case 1:
                         return (
                           e.trys.push([1, 3, , 4]),
-                          [4, u.a.post(t, n, { withCredentials: !0 })]
+                          [4, m.a.post(t, n, { withCredentials: !0 })]
                         );
                       case 2:
                         return (
                           (a = e.sent()) &&
                             200 == a.status &&
-                            Object(c.G)(function() {
-                              o.InvalidateCache(),
-                                s
-                                  ? o.m_mapIgnoredApps.set(i, l)
-                                  : o.m_mapIgnoredApps.delete(i);
+                            Object(p.G)(function() {
+                              i.InvalidateCache(),
+                                l
+                                  ? i.m_mapIgnoredApps.set(s, c)
+                                  : i.m_mapIgnoredApps.delete(s);
                             }),
                           [2, a.data]
                         );
                       case 3:
                         return (
                           (r = e.sent()),
-                          console.error("UpdateAppIgnore", Object(h.a)(r)),
+                          (o = Object(_.a)(r)),
+                          console.error("UpdateAppIgnore", o.strErrorMsg, o),
                           [3, 4]
                         );
                       case 4:
@@ -52404,12 +52424,12 @@
                     case 0:
                       return (
                         (t =
-                          p.b.STORE_BASE_URL +
+                          u.b.STORE_BASE_URL +
                           "api/" +
                           (o ? "addtowishlist" : "removefromwishlist")),
                         (n = new FormData()).append("appid", "" + r),
-                        n.append("sessionid", p.b.SESSIONID),
-                        [4, u.a.post(t, n, { withCredentials: !0 })]
+                        n.append("sessionid", u.b.SESSIONID),
+                        [4, m.a.post(t, n, { withCredentials: !0 })]
                       );
                     case 1:
                       return (
@@ -52436,23 +52456,23 @@
                         c
                           ? t.append("bundleid", c.toString())
                           : t.append("subid", "" + i),
-                        (n = p.g.authwgtoken)
+                        (n = u.g.authwgtoken)
                           ? t.append("authwgtoken", n)
-                          : t.append("sessionid", p.b.SESSIONID),
+                          : t.append("sessionid", u.b.SESSIONID),
                         t.append("quantity", "1"),
                         (e.label = 1);
                     case 1:
                       return (
                         e.trys.push([1, 3, , 4]),
-                        [4, u.a.post(s, t, { withCredentials: !0 })]
+                        [4, m.a.post(s, t, { withCredentials: !0 })]
                       );
                     case 2:
                       return (
                         e.sent(),
-                        (a = p.b.IN_CLIENT ? "steam://url/StoreCart" : l),
+                        (a = u.b.IN_CLIENT ? "steam://url/StoreCart" : l),
                         o.preventDefault(),
                         this.InvalidateCache(),
-                        Object(m.b)(window, a),
+                        Object(h.b)(window, a),
                         [3, 4]
                       );
                     case 3:
@@ -52468,38 +52488,40 @@
                 });
               });
             }),
-            (e.prototype.AddLicenseForFreeGame = function(o) {
+            (e.prototype.AddLicenseForFreeGame = function(i) {
               return Object(d.b)(this, void 0, void 0, function() {
-                var t, n, a, r;
+                var t, n, a, r, o;
                 return Object(d.e)(this, function(e) {
                   switch (e.label) {
                     case 0:
-                      if (this.BOwnsApp(o)) return [2, 1];
+                      if (this.BOwnsApp(i)) return [2, 1];
                       e.label = 1;
                     case 1:
                       return (
                         e.trys.push([1, 3, , 4]),
-                        (t = new FormData()).append("sessionid", p.b.SESSIONID),
-                        t.append("authwgtoken", p.g.authwgtoken),
-                        t.append("appid", "" + o),
-                        t.append("cc", p.b.COUNTRY),
+                        (t = new FormData()).append("sessionid", u.b.SESSIONID),
+                        t.append("authwgtoken", u.g.authwgtoken),
+                        t.append("appid", "" + i),
+                        t.append("cc", u.b.COUNTRY),
                         (n =
-                          p.b.STORE_BASE_URL +
+                          u.b.STORE_BASE_URL +
                           "actions/addappformastersubscription"),
-                        [4, u.a.post(n, t, { withCredentials: !0 })]
+                        [4, m.a.post(n, t, { withCredentials: !0 })]
                       );
                     case 2:
                       return ((a = e.sent()),
                       this.InvalidateCache(),
                       a.data.success && 1 === a.data.success)
-                        ? (this.m_mapOwnedApps.set(Number(o), !0), [3, 4])
+                        ? (this.m_mapOwnedApps.set(Number(i), !0), [3, 4])
                         : [2, a.data.success ? a.data.success : 2];
                     case 3:
                       return (
                         (r = e.sent()),
+                        (o = Object(_.a)(r)),
                         console.log(
                           "AddLicense request failed:",
-                          Object(h.a)(r)
+                          o.strErrorMsg,
+                          o
                         ),
                         [2, 2]
                       );
@@ -52517,11 +52539,11 @@
                     case 0:
                       return (
                         e.trys.push([0, 2, , 3]),
-                        (t = p.b.STORE_BASE_URL + "explore/followgame"),
+                        (t = u.b.STORE_BASE_URL + "explore/followgame"),
                         (n = new FormData()).append("appid", "" + r),
-                        n.append("sessionid", p.b.SESSIONID),
+                        n.append("sessionid", u.b.SESSIONID),
                         o || n.append("unfollow", "1"),
-                        [4, u.a.post(t, n, { withCredentials: !0 })]
+                        [4, m.a.post(t, n, { withCredentials: !0 })]
                       );
                     case 1:
                       return ((a = e.sent()), a.data)
@@ -52545,34 +52567,34 @@
             }),
             (e.prototype.InvalidateCache = function() {
               window.localStorage.setItem(
-                i,
+                l,
                 (
-                  Number.parseInt(window.localStorage.getItem(i) || "0") + 1
+                  Number.parseInt(window.localStorage.getItem(l) || "0") + 1
                 ).toString()
               );
             }),
-            Object(d.c)([c.C], e.prototype, "m_mapWishList", void 0),
-            Object(d.c)([c.C], e.prototype, "m_mapOwnedPackages", void 0),
-            Object(d.c)([c.C], e.prototype, "m_mapOwnedApps", void 0),
-            Object(d.c)([c.C], e.prototype, "m_mapFollowedApps", void 0),
-            Object(d.c)([c.C], e.prototype, "m_mapExcludedTagsIds", void 0),
+            Object(d.c)([p.C], e.prototype, "m_mapWishList", void 0),
+            Object(d.c)([p.C], e.prototype, "m_mapOwnedPackages", void 0),
+            Object(d.c)([p.C], e.prototype, "m_mapOwnedApps", void 0),
+            Object(d.c)([p.C], e.prototype, "m_mapFollowedApps", void 0),
+            Object(d.c)([p.C], e.prototype, "m_mapExcludedTagsIds", void 0),
             Object(d.c)(
-              [c.C],
+              [p.C],
               e.prototype,
               "m_mapExcludedContentDescriptors",
               void 0
             ),
-            Object(d.c)([c.C], e.prototype, "m_mapRecommendedApps", void 0),
-            Object(d.c)([c.C], e.prototype, "m_mapIgnoredApps", void 0),
-            Object(d.c)([c.C], e.prototype, "m_mapCuratorsFollowed", void 0),
-            Object(d.c)([c.C], e.prototype, "m_mapCuratorsIgnored", void 0),
+            Object(d.c)([p.C], e.prototype, "m_mapRecommendedApps", void 0),
+            Object(d.c)([p.C], e.prototype, "m_mapIgnoredApps", void 0),
+            Object(d.c)([p.C], e.prototype, "m_mapCuratorsFollowed", void 0),
+            Object(d.c)([p.C], e.prototype, "m_mapCuratorsIgnored", void 0),
             Object(d.c)(
-              [c.C],
+              [p.C],
               e.prototype,
               "m_bShowFilteredUserReviewScores",
               void 0
             ),
-            Object(d.c)([c.k], e.prototype, "UpdateAppIgnore", null),
+            Object(d.c)([p.k], e.prototype, "UpdateAppIgnore", null),
             e
           );
         })())();
