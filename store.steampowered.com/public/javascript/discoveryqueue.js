@@ -359,7 +359,7 @@ CDiscoveryQueue.ShowCustomizeDialog = function( fnOnSettingsChanged )
 					{
 						$Tag = $J('<div/>', {'class': 'app_tag_control', 'data-tagid': globalTag.tagid } );
 						$Tag.append( $J('<div/>', {'class': 'app_tag_checkbox checked'} ).click( function() { $Tag.remove(); Modal.AdjustSizing(); } ) );
-						$Tag.append( $J('<a/>', {'class': 'app_tag filtered_text', 'href': TagLink( globalTag.name ) } ).text( globalTag.name ) );
+						$Tag.append( $J('<a/>', {'class': 'app_tag ', 'href': TagLink( globalTag.name ) } ).text( globalTag.name ) );
 						$TagsCtn.append( $Tag );
 						Modal.AdjustSizing();
 					}
