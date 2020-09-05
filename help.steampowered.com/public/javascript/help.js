@@ -1351,7 +1351,7 @@ HelpWizard = {
 					elError.text( data.errorMsg ).slideDown();
 
 				if ( data.needCaptcha )
-					HelpWizard.RefreshCaptcha( 1 );
+					HelpWizard.RefreshCaptcha( 3 );
 				else
 					HelpWizard.UpdateCaptcha( { 'gid': -1 } );
 			}
