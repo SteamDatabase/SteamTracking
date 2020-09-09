@@ -467,7 +467,7 @@ td.wordfilter_word:before {
   display: block; 
   width: 200px;
 }
-td.wordfilter_word_client_filtered {
+td.wordfilter_word_already_filtered {
 	color: #ffa500;
 }
 .wordfilter_hidden {
