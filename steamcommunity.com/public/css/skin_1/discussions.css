@@ -470,6 +470,9 @@ td.wordfilter_word:before {
 td.wordfilter_word_client_filtered {
 	color: #ffa500;
 }
+.wordfilter_hidden {
+	display: none;
+}
 
 td.wordfilter_action > a {
 	visibility: hidden;
