@@ -222,6 +222,11 @@ span.motd {
 		margin-top: 5px;
 		color: #ca5029;
 	}
+
+	.appNameUnlocalized {
+		color: #acacac;
+		font-size: 14px;
+	}
 	
 		#landingWelcome .appName .adminSection {
 			color: #67c1f5;

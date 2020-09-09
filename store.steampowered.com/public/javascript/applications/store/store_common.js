@@ -14,11 +14,11 @@
         n.d(t, "b", function() {
           return m;
         });
-      var i = n("mrSG"),
-        r = n("q1tI"),
+      var r = n("mrSG"),
+        c = n("q1tI"),
         o = n("y+6m"),
         a = n("TLQK"),
-        c = n("X3Ds"),
+        i = n("X3Ds"),
         s = n("TtDX");
       function p(e, t) {
         var n =
@@ -34,16 +34,23 @@
       function l(e) {
         var t = e.bDisableContextMenu,
           n = e.onContextMenu,
-          o = e.href,
-          a = Object(i.f)(e, ["bDisableContextMenu", "onContextMenu", "href"]);
+          o = e.bForceExternal,
+          a = e.href,
+          i = Object(r.f)(e, [
+            "bDisableContextMenu",
+            "onContextMenu",
+            "bForceExternal",
+            "href"
+          ]);
         return (
           t || n || (n = u),
-          r.createElement(
+          c.createElement(
             "a",
-            Object(i.a)({}, a, {
-              href: o,
-              target: "_blank",
-              rel: "noopener noreferrer",
+            Object(r.a)({}, i, {
+              href: "#",
+              onClick: function() {
+                return m(window, a, { bForceExternal: !!o });
+              },
               onContextMenu: n
             }),
             e.children
@@ -53,19 +60,19 @@
       function d(e) {
         var t = e.strURL,
           n = e.unPID;
-        return r.createElement(
-          r.Fragment,
+        return c.createElement(
+          c.Fragment,
           null,
-          r.createElement(
+          c.createElement(
             o.d,
             {
               onSelected: function() {
-                c.h(t);
+                i.h(t);
               }
             },
             Object(a.d)("#ContextMenu_CopyLinkURL")
           ),
-          r.createElement(
+          c.createElement(
             o.d,
             {
               onSelected: function(e) {
@@ -79,10 +86,10 @@
       function u(e, t) {
         var n = e.currentTarget;
         return Object(s.a)(
-          r.createElement(
+          c.createElement(
             o.c,
             null,
-            r.createElement(d, { strURL: n.href, unPID: t })
+            c.createElement(d, { strURL: n.href, unPID: t })
           ),
           e
         );
@@ -11819,7 +11826,7 @@
         p = n("5izx");
       ((a = o = o || {}).k_ERecent = "recent"),
         (a.k_ELibrary = "library"),
-        (a.k_EWishist = "wishlist"),
+        (a.k_EWishlist = "wishlist"),
         (a.k_EFollowing = "following"),
         (a.k_ERecommended = "recommended"),
         (a.k_ESteam = "steam"),
@@ -11829,7 +11836,7 @@
         d,
         u = [
           o.k_ELibrary,
-          o.k_EWishist,
+          o.k_EWishlist,
           o.k_EFollowing,
           o.k_ERecommended,
           o.k_ESteam,
@@ -11914,7 +11921,8 @@
             );
           }),
           (e.prototype.InitDefaultCheckboxes = function(e, t) {
-            (this.m_mapEventTypeGroupsAllowed = f(t ? [l.k_EUpdates] : h)),
+            (this.m_bInitializedForUpdatesOnly = t),
+              (this.m_mapEventTypeGroupsAllowed = f(t ? [l.k_EUpdates] : h)),
               (this.m_mapGameSources = f(e ? u : m));
           }),
           (e.prototype.Init = function(e, t, n, o) {
@@ -11985,13 +11993,19 @@
                     p.a.GetTimeNowWithOverride()
               );
             return (
-              !!this.enabledEventTypeSet.has(e.event_type) &&
+              !!(
+                this.enabledEventTypeSet.has(e.event_type) ||
+                (this.m_bInitializedForUpdatesOnly &&
+                  this.BIsEventTypeGroupAllowed(l.k_EUpdates) &&
+                  28 == e.event_type &&
+                  e.start_time < 1599202800)
+              ) &&
               (!!(t & s.a.k_eRequired) ||
                 Boolean(
                   (this.m_mapGameSources.has(o.k_ERecent) && n) ||
                     (this.m_mapGameSources.has(o.k_ELibrary) &&
                       t & s.a.k_eLibrary) ||
-                    (this.m_mapGameSources.has(o.k_EWishist) &&
+                    (this.m_mapGameSources.has(o.k_EWishlist) &&
                       t & s.a.k_eWishlist) ||
                     (this.m_mapGameSources.has(o.k_EFollowing) &&
                       t & s.a.k_eFollowing) ||
@@ -12415,7 +12429,7 @@
             this.m_scheduledFilterChange.Schedule(1e3, function() {
               var e = 0;
               t.BIsGameSourceAllowed(p.c.k_ELibrary) && (e |= 1),
-                t.BIsGameSourceAllowed(p.c.k_EWishist) && (e |= 2),
+                t.BIsGameSourceAllowed(p.c.k_EWishlist) && (e |= 2),
                 t.BIsGameSourceAllowed(p.c.k_EFollowing) && (e |= 4),
                 t.BIsGameSourceAllowed(p.c.k_ERecommended) && (e |= 8),
                 t.BIsGameSourceAllowed(p.c.k_ESteam) && (e |= 16),
@@ -14525,12 +14539,9 @@
               k.a,
               {
                 className: _e(o),
-                href:
-                  (b.c.IN_CLIENT ? "steam://openurl_external/" : "") +
-                  b.c.COMMUNITY_BASE_URL +
-                  "linkfilter/?url=" +
-                  n,
-                bDisableContextMenu: !0
+                href: b.c.COMMUNITY_BASE_URL + "linkfilter/?url=" + n,
+                bDisableContextMenu: !0,
+                bForceExternal: !0
               },
               h.createElement("span", { "data-tooltip-text": a }, e.children)
             );
@@ -14783,14 +14794,11 @@
           o = Object(m.c)(b.c.STORE_BASE_URL),
           a =
             t !== n && t !== o
-              ? (b.c.IN_CLIENT ? "steam://openurl_external/" : "") +
-                b.c.COMMUNITY_BASE_URL +
-                "linkfilter/?url=" +
-                e
+              ? b.c.COMMUNITY_BASE_URL + "linkfilter/?url=" + e
               : e;
         return (
           a.toLocaleLowerCase().startsWith("http") || (a = "http://" + a),
-          h.createElement(k.a, { href: a }, e)
+          h.createElement(k.a, { href: a, bForceExternal: !0 }, e)
         );
       }
       function qe(e) {
@@ -16938,7 +16946,7 @@
         o = n("vDqi"),
         b = n.n(o),
         c = n("2vnA"),
-        y = n("wd/R"),
+        O = n("wd/R"),
         i = n("5bld"),
         s = n("5eAM"),
         a = n("kLLr"),
@@ -16946,7 +16954,7 @@
         p = n("6oCP"),
         l = n("gyoR"),
         d = n("r64O"),
-        S = n("TLQK"),
+        y = n("TLQK"),
         f = n("bDQf"),
         u = n("bxiW"),
         M = n("lkRc"),
@@ -16955,7 +16963,7 @@
         v = n("KEpR"),
         g = n("5izx"),
         A = n("Dhs6");
-      function E(e, t, n, o) {
+      function S(e, t, n, o) {
         return {
           strId: "section-" + t,
           strSectionLabel: t,
@@ -16966,7 +16974,7 @@
           nTopOffset: 0
         };
       }
-      var O = (function() {
+      var E = (function() {
           function e(e) {
             (this.m_nForwardStuckCount = 0),
               (this.m_nBackwardStuckCount = 0),
@@ -17114,49 +17122,46 @@
                 e = this.GetStoreInitializationTimestamp(),
                 n = [],
                 o = e.getTime() / 1e3;
-              n.push(E(o, Object(S.d)("#EventCalendar_FutureEventsHeader"), o));
+              n.push(S(o, Object(y.d)("#EventCalendar_FutureEventsHeader"), o));
               var a = new Date(e);
               a.setHours(0, 0, 0, 1);
               var i = a.getTime() / 1e3;
-              n.push(E(o, Object(S.d)("#Time_Today"), i, o)),
+              n.push(S(o, Object(y.d)("#Time_Today"), i, o)),
                 a.setDate(a.getDate() - 1);
               var r = i,
                 i = a.getTime() / 1e3;
-              n.push(E(o, Object(S.d)("#Time_Yesterday"), i, r));
+              n.push(S(o, Object(y.d)("#Time_Yesterday"), i, r));
               for (
                 var c = this.m_rgSortedCalendarEvents[
                     this.m_rgSortedCalendarEvents.length - 1
                   ],
-                  s = !1,
-                  p = 0;
-                p < 5 && !s;
-                p++
+                  s = c ? c.start_time : o,
+                  p = i < s,
+                  l = 0;
+                l < 5 && !p;
+                l++
               )
                 a.setDate(a.getDate() - 1),
                   (r = i),
                   (i = a.getTime() / 1e3),
-                  n.push(E(o, Object(S.f)(a), i, r)),
-                  c && c.start_time > i && (s = !0);
+                  n.push(S(o, Object(y.f)(a), i, r)),
+                  (p = i < s);
               for (
-                var l = new Date(a), d = i;
-                l.getMonth() == e.getMonth() && 1 != l.getDate() && !s;
+                var d = new Date(a), u = i;
+                d.getMonth() == e.getMonth() && 1 != d.getDate() && !p;
 
               ) {
-                l.setDate(l.getDate() - 7);
-                var u = l.getTime() / 1e3;
-                n.push(E(o, Object(S.e)(d - 1), u, d)),
-                  c && c.start_time > u && (s = !0),
-                  (d = u);
+                d.setDate(d.getDate() - 7);
+                var m = d.getTime() / 1e3;
+                n.push(S(o, Object(y.e)(u - 1), m, u)), (p = m < s), (u = m);
               }
-              var m = new Date(e);
-              m.setHours(0, 0, 0, 1), m.setDate(1);
-              for (var h = d, b = 1; b <= 48 && !s; b++) {
-                var f = new Date(m);
-                f.setMonth(e.getMonth() - b, 1);
-                var M = f.getTime() / 1e3;
-                n.push(E(o, Object(S.e)(M), M, h)),
-                  c && c.start_time > M && (s = !0),
-                  (h = M);
+              var h = new Date(e);
+              h.setHours(0, 0, 0, 1), h.setDate(1);
+              for (var b = u, f = 1; !p; f++) {
+                var M = new Date(h);
+                M.setMonth(e.getMonth() - f, 1);
+                var _ = M.getTime() / 1e3;
+                n.push(S(o, Object(y.e)(_), _, b)), (p = _ < s), (b = _);
               }
               this.m_rgCalendarSections.length > n.length
                 ? this.m_rgCalendarSections.splice(
@@ -17170,106 +17175,102 @@
                     });
             }),
             (e.prototype.InitFutureCalendarSections = function() {
-              var t = this,
-                e = this.GetStoreInitializationTimestamp(),
-                n = [],
-                o = new Date(e);
-              o.setMonth(o.getMonth() + 48);
-              var a = o.getTime() / 1e3;
-              this.m_key.rtCalendarEnd &&
-                this.m_key.rtCalendarEnd < a &&
-                (a = this.m_key.rtCalendarEnd);
-              var i =
+              var e,
+                t = this,
+                n = this.GetStoreInitializationTimestamp(),
+                o = [];
+              this.m_key.rtCalendarEnd && (e = this.m_key.rtCalendarEnd);
+              var a =
                 0 < this.m_rgSortedCalendarEvents.length &&
                 this.m_rgSortedCalendarEvents[0];
-              i && i.start_time < a && (a = i.start_time);
-              var r = e.getTime() / 1e3,
-                c = new Date(e);
-              c.setHours(24, 0, 0, 0);
-              var s = c.getTime() / 1e3;
-              n.push(
-                E(
-                  r,
-                  Object(S.d)(
+              a && (e = a.start_time), (e = e || n.getTime() / 1e3);
+              var i = n.getTime() / 1e3,
+                r = new Date(n);
+              r.setHours(24, 0, 0, 0);
+              var c = r.getTime() / 1e3;
+              o.push(
+                S(
+                  i,
+                  Object(y.d)(
                     this.m_key.bSectionByDay ? "#Time_UpNext" : "#Time_Today"
                   ),
-                  r,
-                  s
+                  i,
+                  c
                 )
               );
-              var p = a <= s,
-                l = s;
-              c.setDate(c.getDate() + 1),
-                (s = c.getTime() / 1e3),
-                p || n.push(E(r, Object(S.d)("#Time_Tomorrow"), l, s)),
-                (p = a <= s);
-              for (var d = 6 - y(e).weekday(), u = 2; u <= d && !p; u++) {
-                l = s;
-                var m = Object(S.f)(c);
-                c.setDate(c.getDate() + 1),
-                  (s = c.getTime() / 1e3),
-                  n.push(E(r, m, l, s)),
-                  (p = a <= s);
+              var s = e <= c,
+                p = c;
+              r.setDate(r.getDate() + 1),
+                (c = r.getTime() / 1e3),
+                s || o.push(S(i, Object(y.d)("#Time_Tomorrow"), p, c)),
+                (s = e <= c);
+              for (var l = 6 - O(n).weekday(), d = 2; d <= l && !s; d++) {
+                p = c;
+                var u = Object(y.f)(r);
+                r.setDate(r.getDate() + 1),
+                  (c = r.getTime() / 1e3),
+                  o.push(S(i, u, p, c)),
+                  (s = e <= c);
               }
               if (this.m_key.bSectionByDay)
-                for (; !p; ) {
-                  l = s;
-                  m = Object(S.g)(c);
-                  c.setDate(c.getDate() + 1),
-                    (s = c.getTime() / 1e3),
-                    n.push(E(r, m, l, s)),
-                    (p = a <= s);
+                for (; !s; ) {
+                  p = c;
+                  u = Object(y.g)(r);
+                  r.setDate(r.getDate() + 1),
+                    (c = r.getTime() / 1e3),
+                    o.push(S(i, u, p, c)),
+                    (s = e <= c);
                 }
               else {
-                var h,
-                  b = new Date(c),
-                  f = s,
-                  M = y(e).daysInMonth();
-                b.getMonth() != e.getMonth() ||
-                  b.getDate() == M ||
-                  p ||
-                  (b.setDate(b.getDate() + 7),
-                  (h = b.getTime() / 1e3),
-                  n.push(E(r, Object(S.d)("#EventCalendar_NextWeek"), f, h)),
-                  (p = a <= h),
-                  (f = h));
-                var _ = new Date(e);
-                _.setMonth(_.getMonth() + 1),
-                  _.setDate(1),
-                  _.setHours(0, 0, 0, 0);
+                var m,
+                  h = new Date(r),
+                  b = c,
+                  f = O(n).daysInMonth();
+                h.getMonth() != n.getMonth() ||
+                  h.getDate() == f ||
+                  s ||
+                  (h.setDate(h.getDate() + 7),
+                  (m = h.getTime() / 1e3),
+                  o.push(S(i, Object(y.d)("#EventCalendar_NextWeek"), b, m)),
+                  (s = e <= m),
+                  (b = m));
+                var M = new Date(n);
+                M.setMonth(M.getMonth() + 1),
+                  M.setDate(1),
+                  M.setHours(0, 0, 0, 0);
                 for (
-                  var v = void 0,
-                    v =
-                      b < _ && !p
-                        ? ((O = _.getTime() / 1e3),
-                          n.push(
-                            E(
-                              r,
-                              Object(S.d)("#EventCalendar_LaterThisMonth"),
-                              f,
-                              O
+                  var _ = void 0,
+                    _ =
+                      h < M && !s
+                        ? ((A = M.getTime() / 1e3),
+                          o.push(
+                            S(
+                              i,
+                              Object(y.d)("#EventCalendar_LaterThisMonth"),
+                              b,
+                              A
                             )
                           ),
-                          (p = a <= O),
-                          O)
-                        : f,
-                    g = 2;
-                  g <= 48 && !p;
-                  g++
+                          (s = e <= A),
+                          A)
+                        : b,
+                    v = 2;
+                  !s;
+                  v++
                 ) {
-                  var A = new Date(_);
-                  A.setMonth(e.getMonth() + g);
-                  var O = A.getTime() / 1e3;
-                  n.push(E(r, Object(S.e)(v), v, O)), (p = a <= O), (v = O);
+                  var g = new Date(M);
+                  g.setMonth(n.getMonth() + v);
+                  var A = g.getTime() / 1e3;
+                  o.push(S(i, Object(y.e)(_), _, A)), (s = e <= A), (_ = A);
                 }
               }
-              this.m_rgFutureSections.length > n.length
+              this.m_rgFutureSections.length > o.length
                 ? this.m_rgFutureSections.splice(
-                    n.length,
+                    o.length,
                     this.m_rgFutureSections.length
                   )
-                : n
-                    .splice(this.m_rgFutureSections.length, n.length)
+                : o
+                    .splice(this.m_rgFutureSections.length, o.length)
                     .forEach(function(e) {
                       return t.m_rgFutureSections.push(e);
                     });
@@ -17795,7 +17796,7 @@
           e.saleid && (t += "sale:" + e.saleid),
           e.bSectionByDay && (t += "_sectionbyday"),
           e.rtCalendarEnd && (t += "_end:" + e.rtCalendarEnd),
-          L.get() !== t && (L.set(t), T.has(t) || T.set(t, new O(e))),
+          L.get() !== t && (L.set(t), T.has(t) || T.set(t, new E(e))),
           t
         );
       }
@@ -18215,11 +18216,7 @@
                       case 2:
                         return (o = e.sent()).data && 1 == o.data.success
                           ? (this.InitializeFrom(o.data), [3, 4])
-                          : (console.log(
-                              "AMS - failed to load store info about appid: " +
-                                this.m_appid
-                            ),
-                            (this.m_appStoreData.success = o.data
+                          : ((this.m_appStoreData.success = o.data
                               ? o.data.success
                               : 2),
                             [2, this]);
@@ -18352,20 +18349,23 @@
     },
     YLyR: function(e, t, n) {
       "use strict";
-      n.d(t, "d", function() {
-        return O;
+      n.d(t, "e", function() {
+        return c;
       }),
+        n.d(t, "d", function() {
+          return O;
+        }),
         n.d(t, "a", function() {
           return p;
         }),
-        n.d(t, "e", function() {
+        n.d(t, "f", function() {
           return y;
         }),
         n.d(t, "b", function() {
-          return c;
+          return l;
         }),
         n.d(t, "c", function() {
-          return l;
+          return d;
         });
       var f = n("mrSG"),
         M = n("q1tI"),
@@ -18378,6 +18378,12 @@
         g = n.n(i),
         A = n("5izx"),
         r = n("f0Wu");
+      function c(e) {
+        var t = r.tz.guess(),
+          n = r.unix(e).tz(t),
+          o = Object(_.a)();
+        return o && n.locale(o), n.format("LT");
+      }
       function O(e, t) {
         var n = r.tz.guess(),
           o = r.unix(e).tz(n),
@@ -18469,7 +18475,7 @@
             e.children
           );
         },
-        c = (function(e) {
+        l = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -18578,7 +18584,7 @@
             (t = Object(f.c)([a.a], t))
           );
         })(M.Component),
-        l = (function(e) {
+        d = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -24924,13 +24930,13 @@
         return a;
       });
       var l = n("mrSG"),
-        p = n("2vnA"),
-        d = n("lkRc"),
+        d = n("2vnA"),
+        u = n("lkRc"),
         o = n("vDqi"),
-        u = n.n(o),
-        m = n("+d9t"),
-        h = n("bDQf"),
-        r = "unUserdataVersion",
+        m = n.n(o),
+        h = n("+d9t"),
+        b = n("bDQf"),
+        s = "unUserdataVersion",
         a = new ((function() {
           function e() {
             (this.m_mapWishList = new Map()),
@@ -25019,57 +25025,62 @@
                   n,
                   o,
                   a,
-                  i = this;
+                  i,
+                  r,
+                  c = this;
                 return Object(l.e)(this, function(e) {
                   switch (e.label) {
                     case 0:
-                      return (
-                        (t = window.localStorage.getItem(r) || "0"),
+                      (t = window.localStorage.getItem(s) || "0"),
                         (n = {
                           v: "0" == t ? void 0 : t,
-                          id: "" + d.i.accountid,
-                          cc: "" + d.c.COUNTRY,
+                          id: "" + u.i.accountid,
+                          cc: "" + u.c.COUNTRY,
                           origin: self.origin
                         }),
-                        (o = d.c.STORE_BASE_URL + "dynamicstore/userdata/"),
-                        [4, u.a.get(o, { params: n, withCredentials: !0 })]
-                      );
+                        (o = u.c.STORE_BASE_URL + "dynamicstore/userdata/"),
+                        (e.label = 1);
                     case 1:
+                      return (
+                        e.trys.push([1, 3, , 4]),
+                        [4, m.a.get(o, { params: n, withCredentials: !0 })]
+                      );
+                    case 2:
                       return (
                         (a = e.sent()) &&
                           200 == a.status &&
-                          Object(p.G)(function() {
-                            if (((i.m_bIsLoaded = !0), a.data.rgCurators))
-                              for (var e in (i.m_mapCuratorsFollowed.clear(),
+                          Object(d.G)(function() {
+                            if (((c.m_bIsLoaded = !0), a.data.rgCurators))
+                              for (var e in (c.m_mapCuratorsFollowed.clear(),
                               a.data.rgCurators))
-                                i.m_mapCuratorsFollowed.set(Number(e), !0);
+                                c.m_mapCuratorsFollowed.set(Number(e), !0);
                             if (
                               (a.data.rgCuratorsIgnored &&
-                                (i.m_mapCuratorsIgnored = new Map(
+                                (c.m_mapCuratorsIgnored = new Map(
                                   a.data.rgCuratorsIgnored.map(function(e) {
                                     return [Number(e), !0];
                                   })
                                 )),
                               a.data.rgWishlist &&
-                                (i.m_mapWishList = new Map(
+                                (c.m_mapWishList = new Map(
                                   a.data.rgWishlist.map(function(e) {
                                     return [Number(e), !0];
                                   })
                                 )),
                               a.data.rgFollowedApps &&
-                                (i.m_mapFollowedApps = new Map(
+                                (c.m_mapFollowedApps = new Map(
                                   a.data.rgFollowedApps.map(function(e) {
                                     return [Number(e), !0];
                                   })
                                 )),
                               a.data.rgOwnedApps &&
-                                (i.m_mapOwnedApps = new Map(
+                                (c.m_mapOwnedApps = new Map(
                                   a.data.rgOwnedApps.map(function(e) {
                                     return [Number(e), !0];
                                   })
                                 )),
                               a.data.rgOwnedPackages &&
-                                (i.m_mapOwnedPackages = new Map(
+                                (c.m_mapOwnedPackages = new Map(
                                   a.data.rgOwnedPackages.map(function(e) {
                                     return [Number(e), !0];
                                   })
@@ -25078,16 +25089,16 @@
                             ) {
                               var t = a.data.rgIgnoredApps;
                               for (var n in t)
-                                i.m_mapIgnoredApps.set(Number(n), Number(t[n]));
+                                c.m_mapIgnoredApps.set(Number(n), Number(t[n]));
                             }
                             a.data.rgExcludedTags &&
-                              (i.m_mapExcludedTagsIds = new Map(
+                              (c.m_mapExcludedTagsIds = new Map(
                                 a.data.rgExcludedTags.map(function(e) {
                                   return [Number(e.tagid), !0];
                                 })
                               )),
                               a.data.rgExcludedContentDescriptorIDs &&
-                                (i.m_mapExcludedContentDescriptors = new Map(
+                                (c.m_mapExcludedContentDescriptors = new Map(
                                   a.data.rgExcludedContentDescriptorIDs.map(
                                     function(e) {
                                       return [e, !0];
@@ -25095,16 +25106,29 @@
                                   )
                                 )),
                               a.data.rgRecommendedApps &&
-                                (i.m_mapRecommendedApps = new Map(
+                                (c.m_mapRecommendedApps = new Map(
                                   a.data.rgRecommendedApps.map(function(e) {
                                     return [Number(e), !0];
                                   })
                                 )),
-                              (i.m_bShowFilteredUserReviewScores = !!a.data
+                              (c.m_bShowFilteredUserReviewScores = !!a.data
                                 .bShowFilteredUserReviewScores);
                           }),
-                        [2, this]
+                        [3, 4]
                       );
+                    case 3:
+                      return (
+                        (i = e.sent()),
+                        (r = Object(b.a)(i)),
+                        console.error(
+                          "CDynamicStore.InternalLoad",
+                          r.strErrorMsg,
+                          r
+                        ),
+                        [3, 4]
+                      );
+                    case 4:
+                      return [2, this];
                   }
                 });
               });
@@ -25117,18 +25141,18 @@
                     case 0:
                       return (
                         (t =
-                          d.c.STORE_BASE_URL +
+                          u.c.STORE_BASE_URL +
                           "curators/" +
                           (c ? "ajaxfollow/" : "ajaxignore/")),
                         (n = r.GetAccountID()),
                         (o = new FormData()).append(
                           "authwgtoken",
-                          d.i.authwgtoken
+                          u.i.authwgtoken
                         ),
                         o.append("clanid", "" + n),
-                        o.append("sessionid", d.c.SESSIONID),
+                        o.append("sessionid", u.c.SESSIONID),
                         o.append(c ? "follow" : "ignore", s ? "1" : "0"),
-                        [4, u.a.post(t, o, { withCredentials: !0 })]
+                        [4, m.a.post(t, o, { withCredentials: !0 })]
                       );
                     case 1:
                       return (
@@ -25145,51 +25169,53 @@
                 });
               });
             }),
-            (e.prototype.UpdateAppIgnore = function(r, c, s) {
+            (e.prototype.UpdateAppIgnore = function(c, s, p) {
               return (
-                void 0 === s && (s = 0),
+                void 0 === p && (p = 0),
                 Object(l.b)(this, void 0, void 0, function() {
                   var t,
                     n,
                     o,
                     a,
-                    i = this;
+                    i,
+                    r = this;
                   return Object(l.e)(this, function(e) {
                     switch (e.label) {
                       case 0:
                         (t =
-                          d.c.STORE_BASE_URL +
+                          u.c.STORE_BASE_URL +
                           "recommended/ignorerecommendation"),
                           (n = new FormData()).append(
                             "sessionid",
-                            d.c.SESSIONID
+                            u.c.SESSIONID
                           ),
-                          n.append("appid", "" + r),
-                          n.append("remove", c ? "0" : "1"),
-                          n.append("snr", d.c.SNR),
-                          n.append("ignore_reason", "" + s),
+                          n.append("appid", "" + c),
+                          n.append("remove", s ? "0" : "1"),
+                          n.append("snr", u.c.SNR),
+                          n.append("ignore_reason", "" + p),
                           (e.label = 1);
                       case 1:
                         return (
                           e.trys.push([1, 3, , 4]),
-                          [4, u.a.post(t, n, { withCredentials: !0 })]
+                          [4, m.a.post(t, n, { withCredentials: !0 })]
                         );
                       case 2:
                         return (
                           (o = e.sent()) &&
                             200 == o.status &&
-                            Object(p.G)(function() {
-                              i.InvalidateCache(),
-                                c
-                                  ? i.m_mapIgnoredApps.set(r, s)
-                                  : i.m_mapIgnoredApps.delete(r);
+                            Object(d.G)(function() {
+                              r.InvalidateCache(),
+                                s
+                                  ? r.m_mapIgnoredApps.set(c, p)
+                                  : r.m_mapIgnoredApps.delete(c);
                             }),
                           [2, o.data]
                         );
                       case 3:
                         return (
                           (a = e.sent()),
-                          console.error("UpdateAppIgnore", Object(h.a)(a)),
+                          (i = Object(b.a)(a)),
+                          console.error("UpdateAppIgnore", i.strErrorMsg, i),
                           [3, 4]
                         );
                       case 4:
@@ -25207,12 +25233,12 @@
                     case 0:
                       return (
                         (t =
-                          d.c.STORE_BASE_URL +
+                          u.c.STORE_BASE_URL +
                           "api/" +
                           (i ? "addtowishlist" : "removefromwishlist")),
                         (n = new FormData()).append("appid", "" + a),
-                        n.append("sessionid", d.c.SESSIONID),
-                        [4, u.a.post(t, n, { withCredentials: !0 })]
+                        n.append("sessionid", u.c.SESSIONID),
+                        [4, m.a.post(t, n, { withCredentials: !0 })]
                       );
                     case 1:
                       return (
@@ -25239,23 +25265,23 @@
                         p
                           ? t.append("bundleid", p.toString())
                           : t.append("subid", "" + r),
-                        (n = d.i.authwgtoken)
+                        (n = u.i.authwgtoken)
                           ? t.append("authwgtoken", n)
-                          : t.append("sessionid", d.c.SESSIONID),
+                          : t.append("sessionid", u.c.SESSIONID),
                         t.append("quantity", "1"),
                         (e.label = 1);
                     case 1:
                       return (
                         e.trys.push([1, 3, , 4]),
-                        [4, u.a.post(c, t, { withCredentials: !0 })]
+                        [4, m.a.post(c, t, { withCredentials: !0 })]
                       );
                     case 2:
                       return (
                         e.sent(),
-                        (o = d.c.IN_CLIENT ? "steam://url/StoreCart" : s),
+                        (o = u.c.IN_CLIENT ? "steam://url/StoreCart" : s),
                         i.preventDefault(),
                         this.InvalidateCache(),
-                        Object(m.b)(window, o),
+                        Object(h.b)(window, o),
                         [3, 4]
                       );
                     case 3:
@@ -25271,38 +25297,40 @@
                 });
               });
             }),
-            (e.prototype.AddLicenseForFreeGame = function(i) {
+            (e.prototype.AddLicenseForFreeGame = function(r) {
               return Object(l.b)(this, void 0, void 0, function() {
-                var t, n, o, a;
+                var t, n, o, a, i;
                 return Object(l.e)(this, function(e) {
                   switch (e.label) {
                     case 0:
-                      if (this.BOwnsApp(i)) return [2, 1];
+                      if (this.BOwnsApp(r)) return [2, 1];
                       e.label = 1;
                     case 1:
                       return (
                         e.trys.push([1, 3, , 4]),
-                        (t = new FormData()).append("sessionid", d.c.SESSIONID),
-                        t.append("authwgtoken", d.i.authwgtoken),
-                        t.append("appid", "" + i),
-                        t.append("cc", d.c.COUNTRY),
+                        (t = new FormData()).append("sessionid", u.c.SESSIONID),
+                        t.append("authwgtoken", u.i.authwgtoken),
+                        t.append("appid", "" + r),
+                        t.append("cc", u.c.COUNTRY),
                         (n =
-                          d.c.STORE_BASE_URL +
+                          u.c.STORE_BASE_URL +
                           "actions/addappformastersubscription"),
-                        [4, u.a.post(n, t, { withCredentials: !0 })]
+                        [4, m.a.post(n, t, { withCredentials: !0 })]
                       );
                     case 2:
                       return ((o = e.sent()),
                       this.InvalidateCache(),
                       o.data.success && 1 === o.data.success)
-                        ? (this.m_mapOwnedApps.set(Number(i), !0), [3, 4])
+                        ? (this.m_mapOwnedApps.set(Number(r), !0), [3, 4])
                         : [2, o.data.success ? o.data.success : 2];
                     case 3:
                       return (
                         (a = e.sent()),
+                        (i = Object(b.a)(a)),
                         console.log(
                           "AddLicense request failed:",
-                          Object(h.a)(a)
+                          i.strErrorMsg,
+                          i
                         ),
                         [2, 2]
                       );
@@ -25320,11 +25348,11 @@
                     case 0:
                       return (
                         e.trys.push([0, 2, , 3]),
-                        (t = d.c.STORE_BASE_URL + "explore/followgame"),
+                        (t = u.c.STORE_BASE_URL + "explore/followgame"),
                         (n = new FormData()).append("appid", "" + a),
-                        n.append("sessionid", d.c.SESSIONID),
+                        n.append("sessionid", u.c.SESSIONID),
                         i || n.append("unfollow", "1"),
-                        [4, u.a.post(t, n, { withCredentials: !0 })]
+                        [4, m.a.post(t, n, { withCredentials: !0 })]
                       );
                     case 1:
                       return ((o = e.sent()), o.data)
@@ -25348,34 +25376,34 @@
             }),
             (e.prototype.InvalidateCache = function() {
               window.localStorage.setItem(
-                r,
+                s,
                 (
-                  Number.parseInt(window.localStorage.getItem(r) || "0") + 1
+                  Number.parseInt(window.localStorage.getItem(s) || "0") + 1
                 ).toString()
               );
             }),
-            Object(l.c)([p.C], e.prototype, "m_mapWishList", void 0),
-            Object(l.c)([p.C], e.prototype, "m_mapOwnedPackages", void 0),
-            Object(l.c)([p.C], e.prototype, "m_mapOwnedApps", void 0),
-            Object(l.c)([p.C], e.prototype, "m_mapFollowedApps", void 0),
-            Object(l.c)([p.C], e.prototype, "m_mapExcludedTagsIds", void 0),
+            Object(l.c)([d.C], e.prototype, "m_mapWishList", void 0),
+            Object(l.c)([d.C], e.prototype, "m_mapOwnedPackages", void 0),
+            Object(l.c)([d.C], e.prototype, "m_mapOwnedApps", void 0),
+            Object(l.c)([d.C], e.prototype, "m_mapFollowedApps", void 0),
+            Object(l.c)([d.C], e.prototype, "m_mapExcludedTagsIds", void 0),
             Object(l.c)(
-              [p.C],
+              [d.C],
               e.prototype,
               "m_mapExcludedContentDescriptors",
               void 0
             ),
-            Object(l.c)([p.C], e.prototype, "m_mapRecommendedApps", void 0),
-            Object(l.c)([p.C], e.prototype, "m_mapIgnoredApps", void 0),
-            Object(l.c)([p.C], e.prototype, "m_mapCuratorsFollowed", void 0),
-            Object(l.c)([p.C], e.prototype, "m_mapCuratorsIgnored", void 0),
+            Object(l.c)([d.C], e.prototype, "m_mapRecommendedApps", void 0),
+            Object(l.c)([d.C], e.prototype, "m_mapIgnoredApps", void 0),
+            Object(l.c)([d.C], e.prototype, "m_mapCuratorsFollowed", void 0),
+            Object(l.c)([d.C], e.prototype, "m_mapCuratorsIgnored", void 0),
             Object(l.c)(
-              [p.C],
+              [d.C],
               e.prototype,
               "m_bShowFilteredUserReviewScores",
               void 0
             ),
-            Object(l.c)([p.k], e.prototype, "UpdateAppIgnore", null),
+            Object(l.c)([d.k], e.prototype, "UpdateAppIgnore", null),
             e
           );
         })())();

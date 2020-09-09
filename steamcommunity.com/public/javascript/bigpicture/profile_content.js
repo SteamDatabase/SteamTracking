@@ -108,12 +108,12 @@ function ShowScreenshot( oSource )
 		'<include src="file://{resources}/styles/steamstyles.css" />' +
 		'<include src="file://{resources}/styles/msgbox.css" />' +
 		'<include src="file://{resources}/styles/movie.css" />' +
-		'<include src="https://community.cloudflare.steamstatic.com/public/css/bigpicture/profile.css?v=valveisgoodatcaching&amp;l=english" />' +
-		'<include src="https://community.cloudflare.steamstatic.com/public/css/bigpicture/remote.css?v=valveisgoodatcaching" />' +
+		'<include src="https://community.cloudflare.steamstatic.com/public/css/bigpicture/profile.css?v=valveisgoodatcaching&amp;l=english&amp;_cdn=cloudflare" />' +
+		'<include src="https://community.cloudflare.steamstatic.com/public/css/bigpicture/remote.css?v=valveisgoodatcaching&amp;_cdn=cloudflare" />' +
 		'</styles>' +
 		'<scripts>' +
-		'<include src="https://community.cloudflare.steamstatic.com/public/shared/javascript/bigpicture/base.js?v=valveisgoodatcaching&amp;l=english" />' +
-		'<include src="https://community.cloudflare.steamstatic.com/public/javascript/bigpicture/profile.js?v=valveisgoodatcaching&amp;l=english" />' +
+		'<include src="https://community.cloudflare.steamstatic.com/public/shared/javascript/bigpicture/base.js?v=valveisgoodatcaching&amp;l=english&amp;_cdn=cloudflare" />' +
+		'<include src="https://community.cloudflare.steamstatic.com/public/javascript/bigpicture/profile.js?v=valveisgoodatcaching&amp;l=english&amp;_cdn=cloudflare" />' +
 		'</scripts>' +
 		'<Button oncancel="CloseBigPicturePopup();" class="CommunityAppHubPopup CommunityAppHubScreenshotPopup"> ' +
 		'<Panel id="CommunityAppHubPopupButton" class="FullscreenImagePopup">' +

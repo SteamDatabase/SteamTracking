@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6077348";
+var CLSTAMP = "6084371";
 !(function(t) {
   var e = {};
   function n(r) {
@@ -97,13 +97,13 @@ var CLSTAMP = "6077348";
         return a;
       }),
       n.d(e, "f", function() {
-        return f;
+        return l;
       }),
       n.d(e, "h", function() {
-        return _;
+        return f;
       }),
       n.d(e, "g", function() {
-        return l;
+        return _;
       }),
       n.d(e, "d", function() {
         return p;
@@ -153,9 +153,9 @@ var CLSTAMP = "6077348";
         PAGE_TIMESTAMP: 0,
         get SESSIONID() {
           return (function() {
-            if (!Object(i.a)()) return r || (r = f()), r;
+            if (!Object(i.a)()) return r || (r = l()), r;
             var t = Object(i.b)("sessionid");
-            t || (t = f());
+            t || (t = l());
             return t;
           })();
         },
@@ -197,7 +197,7 @@ var CLSTAMP = "6077348";
         HAS_ADULT_CONTENT_SEX: !1,
         HAS_ADULT_CONTENT_VIOLENCE: !1
       };
-    function f() {
+    function l() {
       var t = (function() {
         for (var t = "", e = 0; e < 24; e++)
           t += Object(o.b)(0, 35).toString(36);
@@ -205,19 +205,19 @@ var CLSTAMP = "6077348";
       })();
       return Object(i.c)("sessionid", t, 0), t;
     }
-    function _(t) {
+    function f(t) {
       void 0 === t && (t = "webui_config");
       var e = {},
-        n = l("config", t);
+        n = _("config", t);
       n && (delete n.SESSIONID, Object.assign(c, n), (e.config = !0));
-      var r = l("userinfo", t);
+      var r = _("userinfo", t);
       r && (Object.assign(u, r), (e.userConfig = !0));
-      var o = l("broadcast", t);
+      var o = _("broadcast", t);
       o && (Object.assign(s, o), (e.broadcastConfig = !0));
-      var i = l("community", t);
+      var i = _("community", t);
       return i && (Object.assign(a, i), (e.communityConfig = !0)), e;
     }
-    function l(t, e) {
+    function _(t, e) {
       var n;
       if (
         (void 0 === e && (e = "webui_config"),
@@ -233,6 +233,8 @@ var CLSTAMP = "6077348";
       else console.error("Missing config element #", e);
     }
     function p() {
+      if (!window || !window.location || !window.location.href)
+        return console.warn("Unable to determine base url!"), "unknown";
       var t = window.location.href;
       return t.startsWith(c.STORE_BASE_URL)
         ? c.STORE_BASE_URL
@@ -581,7 +583,7 @@ var CLSTAMP = "6077348";
         return a;
       }),
       n.d(e, "g", function() {
-        return f;
+        return l;
       });
     /*! *****************************************************************************
 Copyright (c) Microsoft Corporation.
@@ -779,7 +781,7 @@ PERFORMANCE OF THIS SOFTWARE.
         };
       }
     }
-    function f() {
+    function l() {
       for (var t = 0, e = 0, n = arguments.length; e < n; e++)
         t += arguments[e].length;
       var r = Array(t),

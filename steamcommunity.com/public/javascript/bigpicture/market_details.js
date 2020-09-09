@@ -406,13 +406,13 @@ function ShowSearchPopup( src, name )
 						<include src="file://{resources}/styles/msgbox.css" /> \
 						<include src="file://{resources}/styles/search.css" /> \
 						<include src="file://{resources}/styles/community/community.css" /> \
-						<include src="https://community.cloudflare.steamstatic.com/public/css/bigpicture/market.css?v=valveisgoodatcaching" /> \
-						<include src="https://community.cloudflare.steamstatic.com/public/css/bigpicture/market_details.css?v=valveisgoodatcaching" /> \
-						<include src="https://community.cloudflare.steamstatic.com/public/css/bigpicture/economy.css?v=valveisgoodatcaching&amp;l=english" /> \
+						<include src="https://community.cloudflare.steamstatic.com/public/css/bigpicture/market.css?v=valveisgoodatcaching&amp;_cdn=cloudflare" /> \
+						<include src="https://community.cloudflare.steamstatic.com/public/css/bigpicture/market_details.css?v=valveisgoodatcaching&amp;_cdn=cloudflare" /> \
+						<include src="https://community.cloudflare.steamstatic.com/public/css/bigpicture/economy.css?v=valveisgoodatcaching&amp;l=english&amp;_cdn=cloudflare" /> \
 					</styles> \
 					<scripts> \
-						<include src="https://community.cloudflare.steamstatic.com/public/shared/javascript/bigpicture/base.js?v=valveisgoodatcaching&amp;l=english" /> \
-						<include src="https://community.cloudflare.steamstatic.com/public/javascript/bigpicture/market_details.js?v=valveisgoodatcaching&amp;l=english" /> \
+						<include src="https://community.cloudflare.steamstatic.com/public/shared/javascript/bigpicture/base.js?v=valveisgoodatcaching&amp;l=english&amp;_cdn=cloudflare" /> \
+						<include src="https://community.cloudflare.steamstatic.com/public/javascript/bigpicture/market_details.js?v=valveisgoodatcaching&amp;l=english&amp;_cdn=cloudflare" /> \
 					</scripts> \
 					<Panel oncancel="CloseSearchPanel();" baseurl="https://steamcommunity.com" appid="' + g_unAppId + '" item="' + name + '"> \
 						<Panel id="MarketDetailsSearchPopout" class="DialogRegion" > \

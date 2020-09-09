@@ -2475,19 +2475,13 @@
                 (m = i),
                 (f = []),
                 y.forEach(function(e) {
-                  if (
-                    e.valid_target_types.find(function(e) {
-                      return e == d;
-                    })
-                  )
+                  if (e.valid_target_types.includes(d))
                     switch (d) {
                       case 1:
                         f.push(e.reactionid);
                         break;
                       case 2:
-                        e.valid_ugc_types.find(function(e) {
-                          return e == m;
-                        }) && f.push(e.reactionid);
+                        e.valid_ugc_types.includes(m) && f.push(e.reactionid);
                     }
                 }),
                 f),

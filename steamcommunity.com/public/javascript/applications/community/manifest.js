@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6077348";
+var CLSTAMP = "6084371";
 !(function(l) {
   function a(a) {
     for (
@@ -37,7 +37,7 @@ var CLSTAMP = "6077348";
     f[r]
       ? a.push(f[r])
       : 0 !== f[r] &&
-        { 5: 1, 6: 1, 7: 1, 8: 1, 93: 1, 96: 1 }[r] &&
+        { 5: 1, 6: 1, 7: 1, 8: 1, 93: 1 }[r] &&
         a.push(
           (f[r] = new Promise(function(a, i) {
             for (
@@ -135,8 +135,7 @@ var CLSTAMP = "6077348";
                     90: "localization/shared_vietnamese-json",
                     93: "profile",
                     94: "ugcrewards",
-                    95: "userreviewrewards",
-                    96: "vendors~events"
+                    95: "userreviewrewards"
                   }[r] || r) +
                   ".css?contenthash=" +
                   {
@@ -146,7 +145,7 @@ var CLSTAMP = "6077348";
                     5: "9e59b3bbc059c5405066",
                     6: "809fe643725703fdacbf",
                     7: "6aef4bdfd24024f24a37",
-                    8: "7085da37932143d3d0b8",
+                    8: "be2d4c17c46a117c6e72",
                     9: "31d6cfe0d16ae931b73c",
                     10: "31d6cfe0d16ae931b73c",
                     11: "31d6cfe0d16ae931b73c",
@@ -231,8 +230,7 @@ var CLSTAMP = "6077348";
                     90: "31d6cfe0d16ae931b73c",
                     93: "98c85b43e3e21e0c9024",
                     94: "31d6cfe0d16ae931b73c",
-                    95: "31d6cfe0d16ae931b73c",
-                    96: "8447d69ae3584c50ebee"
+                    95: "31d6cfe0d16ae931b73c"
                   }[r],
                 o = j.p + n,
                 e = document.getElementsByTagName("link"),
@@ -385,45 +383,44 @@ var CLSTAMP = "6077348";
                 90: "localization/shared_vietnamese-json",
                 93: "profile",
                 94: "ugcrewards",
-                95: "userreviewrewards",
-                96: "vendors~events"
+                95: "userreviewrewards"
               }[(i = r)] || i) +
               ".js?contenthash=" +
               {
-                1: "f8e5de6dfd7dba89ae9d",
-                2: "0816c218a14206e4a621",
+                1: "bdc76c071f71ef154573",
+                2: "154c520e87b398aebc5e",
                 3: "dfbcf23fdd66b96b777b",
-                5: "1b21f1dcf460fac0b094",
-                6: "9d892fe01ff02a567088",
-                7: "d2510f9052d3f6dff600",
-                8: "23c86ee1fce349a05a53",
-                9: "1549e8802fe89110c064",
-                10: "48a454f4a3250f806bf4",
-                11: "65fd63c49a0ebaad8232",
-                12: "ca4de5331cca8b85f3c2",
-                13: "8858e741dad82d16f2b0",
-                14: "e4c901c73cb743766ed8",
-                15: "18e7e3b009b6fb2235e9",
-                16: "468d6e03c9fd708566f0",
-                17: "22c49890ec51ca6fa684",
-                18: "63c90b2e7b779413dc84",
-                19: "a81ca6b385158aeff8dd",
-                20: "dacd7dfe4ca191e371ec",
-                21: "00a7ad932206c0101a6b",
-                22: "f87c8b9477b287cd5fe3",
-                23: "856d9831f989c70283be",
-                24: "5d6846648fa9074c0449",
-                25: "0613bd6c5ffd775b15c7",
-                26: "873d35a61095df1873ff",
-                27: "1063c3e0a9a7bfa0a838",
-                28: "218655d7450550c36b1b",
-                29: "8720cc09551df8274256",
-                30: "1880a34833ffaea7e159",
-                31: "ac50147c919c09337d60",
-                32: "f9f7dd5cd5860ace0de4",
-                33: "44c949641c4d144e2f62",
-                34: "ab845d0ef6dbb6ea43ea",
-                35: "6366631599b87698f018",
+                5: "3ff6a1830ae2d4e10958",
+                6: "1de60e7199b26b037371",
+                7: "1e9253ae563b9aa3ce5b",
+                8: "1178a6896ab7334945ee",
+                9: "7b5dd8376289ea92ccad",
+                10: "837d88982a3502b540ba",
+                11: "60e6717d3394d5c73b2c",
+                12: "28e47ae4dfcc78771096",
+                13: "ace6b9507a6b8a516c27",
+                14: "0351267fcfbeefeb318f",
+                15: "68bba1750ca6e1bffdfd",
+                16: "936758e39eda99c90c27",
+                17: "0fd3def22b5e7258a0ee",
+                18: "c6da75cffc8f51e43ed4",
+                19: "bf3c30a15dce327d4824",
+                20: "b38ca6f23c250558f5ef",
+                21: "c7221a135560b6b067da",
+                22: "1f5058d4cd4ff35d0c46",
+                23: "5cad65da776d9dc7e41c",
+                24: "c9b4faaf2210a14da534",
+                25: "702ea92878c769f9b5bb",
+                26: "0cd217601fe9a59fd172",
+                27: "60e3c1aabac8599f60c4",
+                28: "fc33d1aff6b9f7a6b224",
+                29: "98550f9fd4ad88de3f0d",
+                30: "4986c1e9f42b322237a1",
+                31: "004879fe4c8bebedb837",
+                32: "c7fee9e21d1a5c0a09a2",
+                33: "3199eb6afd0b49a53b13",
+                34: "89665df7bdf7c04d8a30",
+                35: "674aef8dd29af70ed2bf",
                 36: "830812d731a124a392eb",
                 37: "f87f4fd1bff04ff234c0",
                 38: "994985026c9524b95814",
@@ -452,37 +449,36 @@ var CLSTAMP = "6077348";
                 61: "26f94951433a2929f635",
                 62: "0d4d6dc85d468039c40f",
                 63: "47aabbf9168e6b44c651",
-                64: "f316bfab48bf6ff39e2f",
-                65: "4de662a0a95cb00ba84e",
-                66: "a83bc820a10c98ea232e",
-                67: "ffcb2c7c83d2112f276f",
-                68: "5b1ab3cf38639090d512",
-                69: "cd9e9b082a5d915f7792",
-                70: "439fa06301d1a8cf0d25",
-                71: "b50f4de5031e205be88e",
-                72: "6eaa6250309f68970b11",
-                73: "7effdb1cb1cf377a1807",
-                74: "71643baa96abff6c8f14",
-                75: "f75e009b2099a6ebb3fd",
-                76: "0c7e6e1303b476c0f6ad",
-                77: "2e484d9dcbcd02c97e19",
-                78: "11d41e625a7e015277cf",
-                79: "168481a515af854e3a95",
-                80: "09a378b037fea9c27a93",
-                81: "f9f03b5673fa1418259f",
-                82: "551526618ee21a46a3c2",
-                83: "600065eb2e144021e811",
-                84: "b7d915b3c4b47c7f177e",
-                85: "f8828904f46b6e1052f7",
-                86: "0bc7a968ff55e5014d19",
-                87: "66071ca758ddef15cade",
-                88: "aa48855787d6d5916140",
-                89: "1e9b5280d2054036059a",
-                90: "741cc0655171a732c1a2",
-                93: "777c0ac48cbfbb1348fa",
-                94: "b9b4d0a18f4d2344ca96",
-                95: "d4ea59e8edf9106b28c1",
-                96: "73c5d7ae63c5af0ed6fb"
+                64: "a79693db779ca1ebcce6",
+                65: "fa286b170a983b5d0375",
+                66: "f16082790235d9a8d5dc",
+                67: "e9909e87f53f0012986c",
+                68: "903055dc8c3e4ec148e9",
+                69: "20c6d5cb7fae5046c9fa",
+                70: "1422cceb39bceaece985",
+                71: "50c7d60913224f0f90ee",
+                72: "db3274e73241162535d9",
+                73: "da45ededc50b44afff90",
+                74: "19f522007254f6e7eb81",
+                75: "f7a568c660e9d604a7f9",
+                76: "240b72bef3180657c2a8",
+                77: "84ec7ff52faa60e1100a",
+                78: "1a8bed652b3d25576a8b",
+                79: "0e54a2cb917412155c0c",
+                80: "dc123c8894a5647f6829",
+                81: "0c721768a45dcd1b3c56",
+                82: "5b6fc84619f71ed1476c",
+                83: "b494268cc74574687443",
+                84: "6b9140c7153716a7bc3a",
+                85: "981d8310b9cd66f9c04e",
+                86: "d7498c9241fa4bee81ce",
+                87: "25dc2f5b5a5fe1d192cc",
+                88: "cd6aa410b8265238cf68",
+                89: "6504813dc18f98153a7a",
+                90: "c6add694a1ddc7eb7238",
+                93: "87b679d7b036007ac844",
+                94: "54beb31cf0a127f96340",
+                95: "b63008d6d0d8bdec47cd"
               }[i]),
             (e = function(a) {
               (c.onerror = c.onload = null), clearTimeout(d);

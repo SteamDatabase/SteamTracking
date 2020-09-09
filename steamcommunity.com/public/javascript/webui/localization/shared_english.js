@@ -158,8 +158,8 @@ LocalizationReady("shared", "english", {
   EventCalendar_NoMoreFutureEvents: "No more upcoming events found",
   EventCalendar_NoMorePastEvents: "No more older posts found",
   EventCalendar_UpdatesViewHeader: "Recent Updates",
-  EventCalendar_NoPastUpdates: "No updates posted in the last year",
-  EventCalendar_NoMorePastUpdates: "No more updates posted in the last year",
+  EventCalendar_NoPastUpdates: "No updates found",
+  EventCalendar_NoMorePastUpdates: "No more updates found",
   EventCalendar_ResetFiltersButton: "See all posts",
   EventCalendar_ResetFilters_ttip: "Resets your filters to the default values",
   EventCalendar_GameSearch: "Games Search",
@@ -203,6 +203,7 @@ LocalizationReady("shared", "english", {
   EventCalendar_Upcoming: "upcoming",
   EventCalendar_WillStartAtTime: "Starting %1$s",
   EventCalendar_WillStartAfterDuration: "Starting in %1$s",
+  EventCalendar_WillStartAtDateTime: "%1$s at %2$s",
   EventCalendar_LaterToday: "later today",
   EventCalendar_Tomorrow: "tomorrow",
   EventCalendar_NextWeek: "next week",
@@ -285,16 +286,19 @@ LocalizationReady("shared", "english", {
   EventCalendar_GameSource_EventExplanation_ttip_recent:
     "You have played this game in the past six months",
   EventCalendar_GameSource_library: "Library",
+  EventCalendar_GameSource_inLibrary: "In Library",
   EventCalendar_GameSource_ttip_library:
     "Include posts about games in your library",
   EventCalendar_GameSource_EventExplanation_ttip_library:
     "This game is in your library",
   EventCalendar_GameSource_wishlist: "wishlist",
+  EventCalendar_GameSource_onWishlist: "On Wishlist",
   EventCalendar_GameSource_ttip_wishlist:
     "Include posts about games on your wishlist",
   EventCalendar_GameSource_EventExplanation_ttip_wishlist:
     "This game is on your wishlist",
   EventCalendar_GameSource_following: "following",
+  EventCalendar_GameSource_followed: "Followed",
   EventCalendar_GameSource_ttip_following:
     "Include posts about games that you follow",
   EventCalendar_GameSource_EventExplanation_ttip_following:
@@ -1650,6 +1654,10 @@ LocalizationReady("shared", "english", {
   RewardsReaction_6: "Extra Helpful",
   RewardsReaction_7: "Gotta Have It",
   RewardsReaction_8: "Michelangelo",
+  RewardsReaction_9: "Treasure",
+  RewardsReaction_10: "Mind Blown",
+  RewardsReaction_11: "Golden Unicorn",
+  RewardsReaction_12: "Mad Scientist",
   RewardsReaction_Tooltip: "%1$s person marked this item as '%2$s'",
   RewardsReaction_Tooltip_Plural: "%1$s people marked this item as '%2$s'",
 
@@ -1665,6 +1673,11 @@ LocalizationReady("shared", "english", {
 
   GameHover_Tags: "Tags",
   GameHover_UserReviewsHeader: "User Reviews",
+
+  Localization_Export_Btn_RowLanguages: "Language per row",
+  Localization_Export_Btn_ColumnLanguages: "Language per Column",
+  Localization_Export_Btn_TokenLanguages: "Token, Language list",
+  Localization_Export_Btn_XML: "Export XML",
 
   bytes: "%1$s B",
   bytes_PerSecond: "%1$s B/s",

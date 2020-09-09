@@ -834,7 +834,7 @@ function GetParamsHistory()
 
 function DisplayPopup( id, url )
 {
-	var strStartingLayout =  "<root>\r\n\t\t\t\t\t<styles>\r\n\t\t\t\t\t\t<include src=\"file:\/\/{resources}\/styles\/steamstyles.css\" \/>\n\t\t<include src=\"https:\/\/community.cloudflare.steamstatic.com\/public\/shared\/css\/bigpicture\/basestyles.css?v=valveisgoodatcaching\" \/>\n\r\n\t\t\t\t\t\t<include src=\"https:\/\/community.cloudflare.steamstatic.com\/public\/css\/bigpicture\/market.css?v=valveisgoodatcaching\" \/>\r\n\t\t\t\t\t<\/styles>\r\n\t\t\t\t\t<Button class=\"MarketPopupWrapper\" tabindex=\"auto\" selectionpos=\"auto\" onfocus=\"None();\">\r\n\t\t\t\t\t\t<LoadingThrobber \/>\r\n\t\t\t\t\t<\/Button>\r\n\t\t\t\t<\/root>";
+	var strStartingLayout =  "<root>\r\n\t\t\t\t\t<styles>\r\n\t\t\t\t\t\t<include src=\"file:\/\/{resources}\/styles\/steamstyles.css\" \/>\n\t\t<include src=\"https:\/\/community.cloudflare.steamstatic.com\/public\/shared\/css\/bigpicture\/basestyles.css?v=valveisgoodatcaching&amp;_cdn=cloudflare\" \/>\n\r\n\t\t\t\t\t\t<include src=\"https:\/\/community.cloudflare.steamstatic.com\/public\/css\/bigpicture\/market.css?v=valveisgoodatcaching&amp;_cdn=cloudflare\" \/>\r\n\t\t\t\t\t<\/styles>\r\n\t\t\t\t\t<Button class=\"MarketPopupWrapper\" tabindex=\"auto\" selectionpos=\"auto\" onfocus=\"None();\">\r\n\t\t\t\t\t\t<LoadingThrobber \/>\r\n\t\t\t\t\t<\/Button>\r\n\t\t\t\t<\/root>";
 	var popup = $.CreatePanel( 'Panel', $.TenfootController( $.GetContextPanel() ).AccessMainMenu(), id );
 	popup.BLoadLayoutFromString( strStartingLayout, true, false );
 	$.TenfootController( $.GetContextPanel() ).ShowModalDialog( popup, '' );
