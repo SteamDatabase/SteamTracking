@@ -4480,7 +4480,7 @@ To enable access to the in-game overlay, open the Universal Access preference pa
 "[english]Steam_CannotInstallInOfflineMode"	"Games cannot be installed when Steam is in Offline Mode.\nExit and restart Steam, and choose 'Go Online'.\n"
 "steam_community"	"ΚΟΙΝΟΤΗΤΑ"
 "[english]steam_community"	"Community"
-"steam_library"	"ΣΥΛΛΟΓΗ"
+"steam_library"	"Συλλογη"
 "[english]steam_library"	"Library"
 "steam_library_games"	"ΠΑΙΧΝΙΔΙΑ"
 "[english]steam_library_games"	"Games"

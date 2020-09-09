@@ -1598,7 +1598,7 @@
 "[english]UI_No"	"NO"
 "SettingsDisplay_RestartNow"	"Перезапустити Steam зараз, аби застосувати обрану вами нову роздільність?"
 "[english]SettingsDisplay_RestartNow"	"Restart Steam now to apply your new display resolution?"
-"SettingsDisplay_Intro"	"Steam запускається в безрамковому вікні, що має розміри робочого столу. Обрана вами нижче роздільна здатність керує максимальною внутрішньою роздільною здатністю рендерінгу, до того як інтерфейс буде висвітлено у вікні.\n\nЗадля покращення продуктивності зменшіть бажану роздільну здатність до 720p нижче."
+"SettingsDisplay_Intro"	"Steam запускається в безрамковому вікні на весь робочий стіл. Обрана вами нижче роздільність управляє максимальною внутрішньою роздільністю візуалізації до появи у вікні інтерфейсу.\n\nЗадля покращення продуктивності зменште бажану роздільність до 720p чи нижче."
 "[english]SettingsDisplay_Intro"	"Steam runs in a borderless window which matches your desktop resolution. The resolution you set below will control the maximum internal rendering resolution before the UI is presented to the window.\n\nTo improve performance, lower the target resolution to 720p or below."
 "SettingsDisplay_WindowSize"	"Розмір вікна"
 "[english]SettingsDisplay_WindowSize"	"Window size"

@@ -668,7 +668,7 @@
 "[english]Checkout_Sentiment_XOXO"	"XOXOXO"
 "Checkout_GiftNote_Title"	"Nota en el regalo"
 "[english]Checkout_GiftNote_Title"	"Gift Note"
-"Checkout_GiftNote_Instructions"	"Personaliza tu regalo con una pequeña nota"
+"Checkout_GiftNote_Instructions"	"Personaliza tu regalo con una notita"
 "[english]Checkout_GiftNote_Instructions"	"Personalize your gift with a little note"
 "Checkout_GiftNote_RecipientName"	"Nombre del destinatario"
 "[english]Checkout_GiftNote_RecipientName"	"Recipient's first name"

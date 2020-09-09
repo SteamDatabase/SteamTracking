@@ -2328,7 +2328,7 @@
 "[english]Activate_RateLimited_Headline"	"Too Many Activation Attempts"
 "Activate_RateLimited"	"Odnotowaliśmy zbyt wiele prób aktywacji z tego konta lub adresu internetowego w ostatnim czasie. Spróbuj użyć swojego klucza produktu później."
 "[english]Activate_RateLimited"	"There have been too many recent unsuccessful activation attempts from this account. Please wait and try your product code again later."
-"Activate_RestrictedCountry_Headline"	"Niedostępna"
+"Activate_RestrictedCountry_Headline"	"Niedostępne"
 "[english]Activate_RestrictedCountry_Headline"	"Not Available"
 "Activate_RestrictedCountry"	"Przepraszamy, ale {s:subscription} jest niedostępne w tym kraju. Twoje zamówienie zostało anulowane."
 "[english]Activate_RestrictedCountry"	"Sorry, but {s:subscription} is not available for purchase in this country. Your purchase has been cancelled."

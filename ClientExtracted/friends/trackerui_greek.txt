@@ -1341,7 +1341,7 @@
 "[english]Friends_SteamInputControllerPlayerNumberChanged"	"is Now Player %player_number%"
 "RemotePlayTogether_Notification_AvailableToInvite_Title"	"Remote Play Together"
 "[english]RemotePlayTogether_Notification_AvailableToInvite_Title"	"Remote Play Together"
-"RemotePlayTogether_Notification_AvailableToInvite"	"Κάντε δεξί κλικ σε φίλους σας για πρόσκληση παιχνιδιού."
+"RemotePlayTogether_Notification_AvailableToInvite"	"Δεξί κλικ σε φίλους για πρόσκληση στο παιχνίδι."
 "[english]RemotePlayTogether_Notification_AvailableToInvite"	"Right-click anyone in your Friends list to invite them to play."
 }
 }
