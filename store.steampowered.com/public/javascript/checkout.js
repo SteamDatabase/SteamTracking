@@ -3582,7 +3582,7 @@ function OnVerifyShippingAddressSuccess( result )
 					break;
 					
 				case 7:
-					error_text = 'Due to the Coronavirus, carriers currently will not deliver shipments to your location.  As a result, we are unable to process your order.';
+					error_text = 'We cannot ship to the address you\'ve provided because it appears that your postal code is in a special region that we cannot ship to.';
 					ValidationMarkFieldBad( $('shipping_postal_code') );
 					break;					
 
