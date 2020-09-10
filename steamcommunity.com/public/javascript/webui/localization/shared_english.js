@@ -1678,6 +1678,19 @@ LocalizationReady("shared", "english", {
   Localization_Export_Btn_ColumnLanguages: "Language per Column",
   Localization_Export_Btn_TokenLanguages: "Token, Language list",
   Localization_Export_Btn_XML: "Export XML",
+  Localization_Import_Btn: "Import Localization File(s)...",
+  Localization_Error_Input:
+    "We were not able to parse or recognize the input file",
+  Localization_Error_FileExtention:
+    "File does not have the '.xml' or '.csv' extension, failed to parse filename: %1$s",
+  Localization_Error_FileLangauage:
+    "File name does not specify the API Language Code. Expect file in the format <user name>_<language>.xml: %1$s",
+  Localization_Error_XMLParseError:
+    "Error occurred when parsing and applying the XML data: %1$s",
+  Localization_Success_ImportComplete:
+    "Localization Import Completed. The following languages updated: %1$s",
+  Localization_Success_ImportComplete_NoChange:
+    "Localization Import Completed. No changes were made.",
 
   bytes: "%1$s B",
   bytes_PerSecond: "%1$s B/s",

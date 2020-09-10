@@ -464,13 +464,19 @@
                 (m = r),
                 (p = []),
                 b.forEach(function(e) {
-                  if (e.valid_target_types.includes(u))
+                  if (
+                    e.valid_target_types.find(function(e) {
+                      return e == u;
+                    })
+                  )
                     switch (u) {
                       case 1:
                         p.push(e.reactionid);
                         break;
                       case 2:
-                        e.valid_ugc_types.includes(m) && p.push(e.reactionid);
+                        e.valid_ugc_types.find(function(e) {
+                          return e == m;
+                        }) && p.push(e.reactionid);
                     }
                 }),
                 p),

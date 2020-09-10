@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6084371";
+var CLSTAMP = "6087038";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [91],
   {
@@ -23726,6 +23726,9 @@ var CLSTAMP = "6084371";
         AddonPickerMessage: "addonpicker_AddonPickerMessage_2wUk7"
       };
     },
+    KmXr: function(e, t, n) {
+      e.exports = { Label: "importexportdialog_Label_1LhIt" };
+    },
     Kw0F: function(e, t, n) {
       "use strict";
       n.d(t, "h", function() {
@@ -29084,7 +29087,7 @@ var CLSTAMP = "6084371";
             r = l.strFileNamePrefix,
             o = l.lang,
             i = n(),
-            s = new D.a(),
+            s = new w.a(),
             c = r ? r + "_localization" : "localization";
           switch (t) {
             case "csv_row":
@@ -29103,107 +29106,300 @@ var CLSTAMP = "6084371";
               s.WriteLocalizationData_XML_SingleLanguage(
                 i,
                 o,
-                c + "_" + Object(h.b)(o)
+                c + "_" + Object(L.b)(o) + ".xml"
               );
           }
           a && a();
         }
-        return m.createElement(
-          m.Fragment,
+        return _.a.createElement(
+          _.a.Fragment,
           null,
           Boolean(l.bShowCSV) &&
-            m.createElement(
-              m.Fragment,
+            _.a.createElement(
+              _.a.Fragment,
               null,
-              m.createElement(
-                v.q,
+              _.a.createElement(
+                g.q,
                 {
                   onClick: function(e) {
                     return t(e, "csv_row");
                   }
                 },
-                Object(C.d)("#Localization_Export_Btn_RowLanguages")
+                Object(M.d)("#Localization_Export_Btn_RowLanguages")
               ),
-              m.createElement(
-                v.q,
+              _.a.createElement(
+                g.q,
                 {
                   onClick: function(e) {
                     return t(e, "csv_column");
                   }
                 },
-                Object(C.d)("#Localization_Export_Btn_ColumnLanguages")
+                Object(M.d)("#Localization_Export_Btn_ColumnLanguages")
               ),
-              m.createElement(
-                v.q,
+              _.a.createElement(
+                g.q,
                 {
                   onClick: function(e) {
                     return t(e, "csv_token");
                   }
                 },
-                Object(C.d)("#Localization_Export_Btn_TokenLanguages")
+                Object(M.d)("#Localization_Export_Btn_TokenLanguages")
               )
             ),
           Boolean(l.bShowXML) &&
-            m.createElement(
-              v.q,
+            _.a.createElement(
+              g.q,
               {
                 onClick: function(e) {
                   return t(e, "xml");
                 }
               },
-              Object(C.d)("#Localization_Export_Btn_XML")
+              Object(M.d)("#Localization_Export_Btn_XML")
             )
         );
       }
-      var l = n("mrSG"),
-        a = n("vDqi"),
-        r = n.n(a),
+      function a(p) {
+        function d(e, t) {
+          m(!1),
+            console.log(
+              "ImportLocalizationAction: On Handle Parse error: " + e.message,
+              e
+            ),
+            Object(E.d)(
+              _.a.createElement(
+                v.e,
+                null,
+                _.a.createElement(
+                  "div",
+                  null,
+                  _.a.createElement(
+                    "p",
+                    null,
+                    Object(M.d)("#Localization_Error_Input")
+                  ),
+                  _.a.createElement("p", null, e.message)
+                )
+              ),
+              window
+            );
+        }
+        function u(e) {
+          m(!1);
+          var t = "";
+          e.forEach(function(e) {
+            0 < t.length && (t += ", "), (t += Object(L.b)(e));
+          }),
+            Object(E.d)(
+              _.a.createElement(
+                v.c,
+                {
+                  strTitle: Object(M.d)("#EventDisplay_Share_Success"),
+                  bAlertDialog: !0
+                },
+                _.a.createElement(
+                  "div",
+                  null,
+                  0 == t.length
+                    ? Object(M.d)(
+                        "#Localization_Success_ImportComplete_NoChange"
+                      )
+                    : Object(M.d)("#Localization_Success_ImportComplete", t)
+                )
+              ),
+              window
+            );
+        }
+        function e(l) {
+          return Object(h.b)(void 0, void 0, void 0, function() {
+            var t, n, a, r, o, i, s, c;
+            return Object(h.e)(this, function(e) {
+              switch (e.label) {
+                case 0:
+                  if (!((t = l.target.files) && 0 < t.length)) return [3, 10];
+                  m(!0),
+                    (n = new Array()),
+                    (a = new w.a()),
+                    (r = 0),
+                    (e.label = 1);
+                case 1:
+                  return r < t.length
+                    ? t[r]
+                      ? t[r].name.toLocaleLowerCase().endsWith(".csv")
+                        ? (D.a.parse(t[0], {
+                            header: !0,
+                            complete: function(e) {
+                              var t,
+                                n = new w.a().DetectAndFormatCSV(e);
+                              n
+                                ? ((t = p.fnOnImportLocData(n, Object(w.b)())),
+                                  u(t))
+                                : d({
+                                    code: "",
+                                    message: "",
+                                    row: 0,
+                                    type: "filenameerror"
+                                  });
+                            },
+                            error: d
+                          }),
+                          [2])
+                        : [3, 2]
+                      : [3, 8]
+                    : [3, 9];
+                case 2:
+                  if (!t[r].name.toLocaleLowerCase().endsWith(".xml"))
+                    return [3, 7];
+                  if (
+                    null == (o = j.d.DetectLanguageFromFilename(t[r].name)) ||
+                    -1 == o
+                  )
+                    return (
+                      d({
+                        code: "",
+                        message: Object(M.d)(
+                          "#Localization_Error_FileLangauage",
+                          t[r].name
+                        ),
+                        row: 0,
+                        type: "filenameerror"
+                      }),
+                      [2]
+                    );
+                  e.label = 3;
+                case 3:
+                  return (
+                    e.trys.push([3, 5, , 6]),
+                    [4, a.ReadLocalizationData_XML_SingleLanguage(t[r], o)]
+                  );
+                case 4:
+                  return (
+                    (i = e.sent()),
+                    p.fnOnImportLocData(i, [o]).map(function(e) {
+                      -1 == n.indexOf(e) && n.push(e);
+                    }),
+                    [3, 6]
+                  );
+                case 5:
+                  return (
+                    (s = e.sent()),
+                    (c = Object(A.a)(s)),
+                    d({
+                      code: "",
+                      message: Object(M.d)(
+                        "#Localization_Error_XMLParseError",
+                        c.strErrorMsg
+                      ),
+                      row: 0,
+                      type: "parseerror"
+                    }),
+                    [2]
+                  );
+                case 6:
+                  return [3, 8];
+                case 7:
+                  d({
+                    code: "",
+                    message: Object(M.d)(
+                      "#Localization_Error_FileExtention",
+                      t[r].name
+                    ),
+                    row: 0,
+                    type: "filenameerror"
+                  }),
+                    (e.label = 8);
+                case 8:
+                  return ++r, [3, 1];
+                case 9:
+                  u(n), (e.label = 10);
+                case 10:
+                  return [2];
+              }
+            });
+          });
+        }
+        var t = Object(b.useState)(!1),
+          n = t[0],
+          m = t[1];
+        return _.a.createElement(
+          B.a,
+          {
+            className: Object(S.a)(
+              p.className ? p.className : f.EditPreviewButton
+            ),
+            toolTipContent: p.strToolTip
+          },
+          _.a.createElement(
+            "label",
+            { htmlFor: "importlocaliztion" },
+            n && _.a.createElement(y.a, { size: "small" }),
+            _.a.createElement(
+              "span",
+              { className: N.Label },
+              Object(M.d)(p.strLabel ? p.strLabel : "#Localization_Import_Btn")
+            ),
+            _.a.createElement("input", {
+              id: "importlocaliztion",
+              style: { display: "none" },
+              type: "file",
+              onSubmit: e,
+              onChange: e,
+              multiple: !0
+            })
+          )
+        );
+      }
+      var h = n("mrSG"),
+        r = n("vDqi"),
+        i = n.n(r),
         p = n("Q47U"),
-        i = n("t0uJ"),
-        s = n("2vnA"),
-        c = n("TyAF"),
-        d = n("NpuA"),
-        u = n.n(d),
-        m = n("q1tI"),
-        h = n("mgoM"),
-        b = n("dZOt"),
-        _ = n("3+zv"),
-        g = n("U+Q5"),
-        f = n("9w6b"),
-        v = n("Mgs7"),
-        E = n("fpVW"),
-        y = n("Jqb/"),
-        S = n("ka0M"),
-        O = n("0OaU"),
-        M = n("exH9"),
-        A = n("X3Ds"),
-        C = n("TLQK"),
-        T = n("bDQf"),
-        w = n("bxiW"),
-        I = n("z2jL"),
-        D = n("P2lf");
+        s = n("t0uJ"),
+        c = n("2vnA"),
+        l = n("TyAF"),
+        b = n("q1tI"),
+        _ = n.n(b),
+        d = n("dZOt"),
+        u = n("3+zv"),
+        m = n("9w6b"),
+        g = n("Mgs7"),
+        f = n("fpVW"),
+        v = n("Jqb/"),
+        E = n("ka0M"),
+        y = n("0OaU"),
+        S = n("exH9"),
+        O = n("X3Ds"),
+        M = n("TLQK"),
+        A = n("bDQf"),
+        C = n("bxiW"),
+        T = n("z2jL"),
+        w = n("P2lf"),
+        I = n("NpuA"),
+        D = n.n(I),
+        L = n("mgoM"),
+        j = n("U+Q5"),
+        B = n("5E+2"),
+        N = n("KmXr");
       n.d(t, "a", function() {
-        return U;
+        return V;
       }),
         n.d(t, "b", function() {
-          return W;
+          return X;
         }),
         n.d(t, "c", function() {
-          return H;
+          return Y;
         });
-      var L = "title",
-        j = "subtitle",
-        B = "summary",
-        N = "body",
-        k = "email_headline_",
-        R = "email_body_",
-        G = "sale_section_label_",
-        z = "sale_section_label_id_",
-        x = "sale_section_text_id_",
-        P = "email_subject",
-        F = "sale_tab_name_";
-      function U(i, e, t, n) {
-        var s = new D.c();
+      var k = "title",
+        R = "subtitle",
+        G = "summary",
+        z = "body",
+        x = "email_headline_",
+        P = "email_body_",
+        F = "sale_section_label_",
+        U = "sale_section_label_id_",
+        W = "sale_section_text_id_",
+        H = "email_subject",
+        q = "sale_tab_name_";
+      function V(i, e, t, n) {
+        var s = new w.c();
         if (e)
           for (var a = 0; a < 29; ++a) {
             var r = i.GetEventModel();
@@ -29218,16 +29414,16 @@ var CLSTAMP = "6084371";
           }
         if (t && i.BHasEmailEnabled()) {
           var o = i.GetEmailSettings();
-          if (Object(_.i)(i.GetClanSteamID().GetAccountID()))
-            for (var c = new b.b(i.GetEmailSettings()), a = 0; a < 29; ++a)
+          if (Object(u.i)(i.GetClanSteamID().GetAccountID()))
+            for (var c = new d.b(i.GetEmailSettings()), a = 0; a < 29; ++a)
               c.BHasLocalizedSubject(a) &&
-                s.SetLocalization(P, a, c.GetLocalizedSubject(a));
+                s.SetLocalization(H, a, c.GetLocalizedSubject(a));
           o.sections.forEach(function(e, t) {
-            for (var n = new b.a(e), a = 0; a < 29; ++a)
+            for (var n = new d.a(e), a = 0; a < 29; ++a)
               n.BHasHeadlineInLanguage(a) &&
-                s.SetLocalization(k + t, a, n.GetHeadline(a)),
+                s.SetLocalization(x + t, a, n.GetHeadline(a)),
                 n.BHasBodyInLanguage(a) &&
-                  s.SetLocalization(R + t, a, n.GetBody(a));
+                  s.SetLocalization(P + t, a, n.GetBody(a));
           });
         }
         return (
@@ -29237,10 +29433,10 @@ var CLSTAMP = "6084371";
               for (var n = 0; n < 29; ++n)
                 if (
                   (i.BHasSaleSectionLabelLocalization(n, t) &&
-                    s.SetLocalization(z + e.unique_id, n, e.localized_label[n]),
+                    s.SetLocalization(U + e.unique_id, n, e.localized_label[n]),
                   i.BHasSaleSectionTextLocalization(n, t) &&
                     s.SetLocalization(
-                      x + e.unique_id,
+                      W + e.unique_id,
                       n,
                       e.text_section_contents[n]
                     ),
@@ -29250,7 +29446,7 @@ var CLSTAMP = "6084371";
                     var o = r[a];
                     i.BHasSaleSectionTabName(n, o) &&
                       s.SetLocalization(
-                        F + e.unique_id + "_" + o.unique_id,
+                        q + e.unique_id + "_" + o.unique_id,
                         n,
                         o.localized_label[n]
                       );
@@ -29259,37 +29455,37 @@ var CLSTAMP = "6084371";
           s
         );
       }
-      function W(l, n, e) {
+      function X(l, n, e) {
         var t = new Array(),
           a = n.GetSortedTokenList();
         return (
-          Object(s.G)(function() {
+          Object(c.G)(function() {
             e.forEach(function(s) {
               var c = !1;
               a.forEach(function(o) {
                 var e,
                   t,
                   i = n.GetLocalization(o, s) || "";
-                o === L &&
+                o === k &&
                   (i || l.BHasLanguageTitle(s)) &&
                   l.SetName(s, i) &&
                   (c = !0),
-                  o === N &&
+                  o === z &&
                     (i || l.BHasLanguageDescription(s)) &&
                     l.SetDescription(s, i) &&
                     (c = !0),
-                  o === j &&
+                  o === R &&
                     (i || l.BHasLanguageSubTitle(s)) &&
                     l.SetSubTitle(s, i) &&
                     (c = !0),
-                  o === B &&
+                  o === G &&
                     (i || l.BHasLanguageSummary(s)) &&
                     l.SetSummary(s, i) &&
                     (c = !0),
                   l.BHasEmailEnabled() &&
                     ((e = l.GetEmailSettings()),
-                    Object(_.i)(l.GetClanSteamID().GetAccountID()) &&
-                      o === P &&
+                    Object(u.i)(l.GetClanSteamID().GetAccountID()) &&
+                      o === H &&
                       ((t = new p.b(l)),
                       (i || t.BHasLocalizedSubject(s)) &&
                         t.SetLocalizedSubject(s, i) &&
@@ -29297,12 +29493,12 @@ var CLSTAMP = "6084371";
                     e.sections.forEach(function(e, t) {
                       var n = new p.a(e, l);
                       n.BHasHeadline() &&
-                        o === k + t &&
+                        o === x + t &&
                         (i || n.BHasHeadlineInLanguage(s)) &&
                         n.SetHeadline(i, s) &&
                         (c = !0),
                         n.BHasBody() &&
-                          o === R + t &&
+                          o === P + t &&
                           (i || n.BHasBodyInLanguage(s)) &&
                           n.SetBody(i, s) &&
                           (c = !0);
@@ -29310,7 +29506,7 @@ var CLSTAMP = "6084371";
                   l.BHasSaleEnabled() &&
                     l.GetSaleSections().forEach(function(e, t) {
                       if (
-                        ((o !== G + t && o !== z + e.unique_id) ||
+                        ((o !== F + t && o !== U + e.unique_id) ||
                           ((i || l.BHasSaleSectionLabelLocalization(s, t)) &&
                             l.SetSaleSectionLabelLocalization(s, t, i) &&
                             (c = !0)),
@@ -29318,13 +29514,13 @@ var CLSTAMP = "6084371";
                       )
                         for (var n = 0, a = e.tabs; n < a.length; n++) {
                           var r = a[n];
-                          o === F + e.unique_id + "_" + r.unique_id &&
+                          o === q + e.unique_id + "_" + r.unique_id &&
                             (i || l.BHasSaleSectionTabName(s, r)) &&
                             l.SetSaleSectionTabName(s, r, i) &&
                             (c = !0);
                         }
                       "text_section" === e.section_type &&
-                        o === x + e.unique_id &&
+                        o === W + e.unique_id &&
                         (i || l.BHasSaleSectionTextLocalization(s, t)) &&
                         l.SetSaleSectionTextLocalization(s, t, i) &&
                         (c = !0);
@@ -29336,7 +29532,7 @@ var CLSTAMP = "6084371";
           t
         );
       }
-      var H = (function(t) {
+      var Y = (function(t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (
@@ -29345,221 +29541,22 @@ var CLSTAMP = "6084371";
                 translating: !1,
                 langUpdated: new Array()
               }),
-              (e.m_cancelSignal = r.a.CancelToken.source()),
+              (e.m_cancelSignal = i.a.CancelToken.source()),
               e
             );
           }
           return (
-            Object(l.d)(e, t),
+            Object(h.d)(e, t),
             (e.prototype.componentWillUnmount = function() {
               this.m_cancelSignal.cancel(
                 "Unmounting LocalizationToolPartnerEvents"
               );
             }),
-            (e.prototype.HandleParsedResults = function(e) {
-              var t = new D.a().DetectAndFormatCSV(e);
-              if (!t)
-                return (
-                  Object(S.d)(
-                    m.createElement(
-                      y.e,
-                      null,
-                      m.createElement(
-                        "div",
-                        null,
-                        m.createElement(
-                          "p",
-                          null,
-                          Object(C.d)("#EventEditor_Loc_ImportError")
-                        )
-                      )
-                    ),
-                    window
-                  ),
-                  void this.setState({ importing: !1 })
-                );
-              var n = W(this.props.editModel, t, Object(D.b)());
-              this.setState(
-                { importing: !1, langUpdated: n },
-                this.OnImportComplete
-              );
-            }),
-            (e.prototype.HandleParseError = function(e, t) {
-              this.setState({ importing: !1 }),
-                console.log(
-                  "LocalizationToolPartnerEvents: On Handle Parse error: " +
-                    e.message,
-                  e
-                ),
-                Object(S.d)(
-                  m.createElement(
-                    y.e,
-                    null,
-                    m.createElement(
-                      "div",
-                      null,
-                      m.createElement(
-                        "p",
-                        null,
-                        Object(C.d)("#EventEditor_Loc_ImportError")
-                      ),
-                      m.createElement("p", null, e.message)
-                    )
-                  ),
-                  window
-                );
-            }),
-            (e.prototype.OnImportCSV = function(e) {
-              var t = this,
-                n = e.target.files;
-              n &&
-                0 < n.length &&
-                this.setState({ importing: !0 }, function() {
-                  return t.ProcessImportFiles(n);
-                });
-            }),
-            (e.prototype.ProcessImportFiles = function(o) {
-              return Object(l.b)(this, void 0, void 0, function() {
-                var t, n, a, r;
-                return Object(l.e)(this, function(e) {
-                  switch (e.label) {
-                    case 0:
-                      (t = new Array()), (n = !0), (a = 0), (e.label = 1);
-                    case 1:
-                      return a < o.length
-                        ? o[a]
-                          ? o[a].name.toLocaleLowerCase().endsWith(".csv")
-                            ? ((n = !1),
-                              u.a.parse(o[0], {
-                                header: !0,
-                                complete: this.HandleParsedResults,
-                                error: this.HandleParseError
-                              }),
-                              [3, 5])
-                            : [3, 2]
-                          : [3, 5]
-                        : [3, 6];
-                    case 2:
-                      return o[a].name.toLocaleLowerCase().endsWith(".xml")
-                        ? null ==
-                            (r = g.d.DetectLanguageFromFilename(o[a].name)) ||
-                          -1 == r
-                          ? (this.HandleParseError({
-                              code: "",
-                              message: Object(C.d)(
-                                "#EventEditor_Loc_FileLangauage",
-                                o[a].name
-                              ),
-                              row: 0,
-                              type: "filenameerror"
-                            }),
-                            [2])
-                          : [4, this.ImportXMLLocalization(o[a], r)]
-                        : [3, 4];
-                    case 3:
-                      return e.sent() && t.push(r), [3, 5];
-                    case 4:
-                      this.HandleParseError({
-                        code: "",
-                        message: Object(C.d)(
-                          "#EventEditor_Loc_FileExtention",
-                          o[a].name
-                        ),
-                        row: 0,
-                        type: "filenameerror"
-                      }),
-                        (e.label = 5);
-                    case 5:
-                      return ++a, [3, 1];
-                    case 6:
-                      return (
-                        n &&
-                          this.setState(
-                            { importing: !1, langUpdated: t },
-                            this.OnImportComplete
-                          ),
-                        [2]
-                      );
-                  }
-                });
-              });
-            }),
-            (e.prototype.ImportXMLLocalization = function(s, c) {
-              return Object(l.b)(this, void 0, void 0, function() {
-                var t, n, a, r, o, i;
-                return Object(l.e)(this, function(e) {
-                  switch (e.label) {
-                    case 0:
-                      (t = !1), (n = new D.a()), (e.label = 1);
-                    case 1:
-                      return (
-                        e.trys.push([1, 3, , 4]),
-                        [4, n.ReadLocalizationData_XML_SingleLanguage(s, c)]
-                      );
-                    case 2:
-                      return (
-                        (a = e.sent()),
-                        (r = W(this.props.editModel, a, [c])),
-                        (t = Boolean(r && r.length)),
-                        [3, 4]
-                      );
-                    case 3:
-                      return (
-                        (o = e.sent()),
-                        (i = Object(T.a)(o)),
-                        this.HandleParseError({
-                          code: "",
-                          message: Object(C.d)(
-                            "#EventEditor_Loc_XMLParseError",
-                            i.strErrorMsg
-                          ),
-                          row: 0,
-                          type: "parseerror"
-                        }),
-                        console.error(
-                          "LocalizationToolPartnerEvents: XML localization import failed:",
-                          o
-                        ),
-                        [3, 4]
-                      );
-                    case 4:
-                      return [2, t];
-                  }
-                });
-              });
-            }),
-            (e.prototype.OnImportComplete = function() {
-              var t = "";
-              this.state.langUpdated.forEach(function(e) {
-                0 < t.length && (t += ", "), (t += Object(h.b)(e));
-              }),
-                Object(S.d)(
-                  m.createElement(
-                    y.c,
-                    {
-                      strTitle: Object(C.d)("#EventDisplay_Share_Success"),
-                      onOK: function() {},
-                      onCancel: function() {},
-                      bAlertDialog: !0
-                    },
-                    m.createElement(
-                      "div",
-                      null,
-                      0 == t.length
-                        ? Object(C.d)(
-                            "#EventEditor_Loc_ImportComplete_NoChange"
-                          )
-                        : Object(C.d)("#EventEditor_Loc_ImportComplete", t)
-                    )
-                  ),
-                  window
-                );
-            }),
             (e.prototype.OnExportCSVRequest = function(e) {
               e.preventDefault(),
-                Object(S.d)(
-                  m.createElement(q, { editModel: this.props.editModel }),
-                  Object(A.m)(e)
+                Object(E.d)(
+                  b.createElement(Q, { editModel: this.props.editModel }),
+                  Object(O.m)(e)
                 );
             }),
             (e.prototype.OnRequestTranslations = function(e) {
@@ -29570,20 +29567,20 @@ var CLSTAMP = "6084371";
                 ? (console.log(
                     "LocalizationToolPartnerEvents: OnRequestTranslations error"
                   ),
-                  Object(S.d)(
-                    m.createElement(
-                      y.e,
+                  Object(E.d)(
+                    b.createElement(
+                      v.e,
                       null,
-                      m.createElement(
+                      b.createElement(
                         "p",
                         null,
                         "We cannot initiate translation if the event has unsaved changes. Please save first."
                       )
                     ),
-                    Object(A.m)(e)
+                    Object(O.m)(e)
                   ))
-                : Object(S.d)(
-                    m.createElement(y.c, {
+                : Object(E.d)(
+                    b.createElement(v.c, {
                       strTitle: "(VO) Localization Request",
                       strDescription:
                         "Create or update an English translate for this event and email. Best to be issued once editing is completed.",
@@ -29594,21 +29591,21 @@ var CLSTAMP = "6084371";
                         );
                       }
                     }),
-                    Object(A.m)(e)
+                    Object(O.m)(e)
                   );
             }),
             (e.prototype.RequestTranslation = function() {
               var t = this,
                 e = this.props.editModel;
-              i.c
+              s.c
                 .RequestLocalizationOfEvent(
                   e.GetClanSteamID(),
                   e.GetGID(),
                   this.m_cancelSignal
                 )
                 .then(function() {
-                  Object(S.d)(
-                    m.createElement(y.c, {
+                  Object(E.d)(
+                    b.createElement(v.c, {
                       strTitle: "(VO) Localization Request",
                       strDescription:
                         "Success! Translation request pushed to CrowdIn",
@@ -29624,23 +29621,23 @@ var CLSTAMP = "6084371";
                   console.log(
                     "LocalizationToolPartnerEvents: RequestTranslation error"
                   ),
-                    Object(S.d)(
-                      m.createElement(
-                        y.e,
+                    Object(E.d)(
+                      b.createElement(
+                        v.e,
                         {
                           closeModal: function() {
                             return t.setState({ translating: !1 });
                           }
                         },
-                        m.createElement(
+                        b.createElement(
                           "div",
                           null,
-                          m.createElement(
+                          b.createElement(
                             "p",
                             null,
                             "Encountered the following error attempting to send the event information to CrowdIn:"
                           ),
-                          m.createElement("p", null, Object(T.a)(e).strErrorMsg)
+                          b.createElement("p", null, Object(A.a)(e).strErrorMsg)
                         )
                       ),
                       window
@@ -29648,78 +29645,57 @@ var CLSTAMP = "6084371";
                 });
             }),
             (e.prototype.render = function() {
-              var e = this.props.editModel,
-                t = f.a.Get().GetPartnerEventPermissions(e.GetClanSteamID());
-              return m.createElement(
+              var n = this,
+                e = this.props.editModel,
+                t = m.a.Get().GetPartnerEventPermissions(e.GetClanSteamID());
+              return b.createElement(
                 "div",
-                { className: Object(M.a)(E.FlexRowContainer) },
-                m.createElement(
+                { className: Object(S.a)(f.FlexRowContainer) },
+                b.createElement(
                   "a",
                   {
-                    className: E.EditPreviewButton,
-                    "data-tooltip-text": Object(C.d)(
+                    className: f.EditPreviewButton,
+                    "data-tooltip-text": Object(M.d)(
                       "#EventEditor_Loc_Export_Desc0"
                     ),
                     onClick: this.OnExportCSVRequest
                   },
-                  Object(C.d)("#EventEditor_Loc_Export")
+                  Object(M.d)("#EventEditor_Loc_Export")
                 ),
-                m.createElement(
-                  "label",
-                  {
-                    className: E.EditPreviewButton,
-                    "data-tooltip-text": Object(C.d)(
-                      "#EventEditor_Loc_Import_ttip"
-                    ),
-                    htmlFor: "event_importlocaliztion"
-                  },
-                  this.state.importing && m.createElement(O.a, null),
-                  m.createElement(
-                    "span",
-                    { className: I.Label },
-                    Object(C.d)("#EventEditor_Loc_Import")
-                  ),
-                  m.createElement("input", {
-                    id: "event_importlocaliztion",
-                    style: { display: "none" },
-                    type: "file",
-                    onSubmit: this.OnImportCSV,
-                    onChange: this.OnImportCSV,
-                    multiple: !0
-                  })
-                ),
+                b.createElement(a, {
+                  strToolTip: Object(M.d)("#EventEditor_Loc_Import_ttip"),
+                  strLabel: Object(M.d)("#EventEditor_Loc_Import"),
+                  fnOnImportLocData: function(e, t) {
+                    return X(n.props.editModel, e, t);
+                  }
+                }),
                 t.support_user &&
-                  m.createElement(
+                  b.createElement(
                     "div",
                     {
-                      className: Object(M.a)(
-                        E.EditPreviewButton,
-                        E.ValveOnlyBackground
+                      className: Object(S.a)(
+                        f.EditPreviewButton,
+                        f.ValveOnlyBackground
                       ),
                       onClick: this.OnRequestTranslations
                     },
                     this.state.translating &&
-                      m.createElement(O.a, { size: "small" }),
-                    m.createElement(
+                      b.createElement(y.a, { size: "small" }),
+                    b.createElement(
                       "span",
-                      { className: I.Label },
+                      { className: T.Label },
                       "(VO) Request Translations"
                     )
                   )
               );
             }),
-            Object(l.c)([w.a], e.prototype, "HandleParsedResults", null),
-            Object(l.c)([w.a], e.prototype, "HandleParseError", null),
-            Object(l.c)([w.a], e.prototype, "OnImportCSV", null),
-            Object(l.c)([w.a], e.prototype, "ProcessImportFiles", null),
-            Object(l.c)([w.a], e.prototype, "OnImportComplete", null),
-            Object(l.c)([w.a], e.prototype, "OnExportCSVRequest", null),
-            Object(l.c)([w.a], e.prototype, "OnRequestTranslations", null),
-            Object(l.c)([w.a], e.prototype, "RequestTranslation", null),
-            (e = Object(l.c)([c.a], e))
+            Object(h.c)([C.a], e.prototype, "OnExportCSVRequest", null),
+            Object(h.c)([C.a], e.prototype, "OnRequestTranslations", null),
+            Object(h.c)([C.a], e.prototype, "RequestTranslation", null),
+            (e = Object(h.c)([l.a], e))
           );
-        })(m.Component),
-        q = (function(t) {
+        })(b.Component),
+        Q = (function(t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (
@@ -29733,13 +29709,13 @@ var CLSTAMP = "6084371";
             );
           }
           return (
-            Object(l.d)(e, t),
+            Object(h.d)(e, t),
             (e.prototype.GetLocalizationFilePrefix = function() {
               var e = this.props.editModel.GetName(0);
               return (e && "" != e.trim()) || (e = "event"), e;
             }),
             (e.prototype.GetLocalizationModel = function() {
-              return U(
+              return V(
                 this.props.editModel,
                 this.state.bExportEventBody,
                 this.state.bExportEmail,
@@ -29754,38 +29730,38 @@ var CLSTAMP = "6084371";
                 e = this.props,
                 n = e.closeModal,
                 a = e.editModel,
-                r = f.a.Get().GetPartnerEventPermissions(a.GetClanSteamID());
-              return m.createElement(
-                y.d,
+                r = m.a.Get().GetPartnerEventPermissions(a.GetClanSteamID());
+              return b.createElement(
+                v.d,
                 { onCancel: n, closeModal: n },
-                m.createElement(
-                  v.k,
+                b.createElement(
+                  g.k,
                   null,
-                  Object(C.d)("#EventEditor_Loc_Export")
+                  Object(M.d)("#EventEditor_Loc_Export")
                 ),
-                m.createElement(
-                  v.b,
+                b.createElement(
+                  g.b,
                   null,
-                  m.createElement(
-                    v.c,
+                  b.createElement(
+                    g.c,
                     null,
-                    m.createElement(
+                    b.createElement(
                       "div",
-                      { className: Object(M.a)(E.FlexColumnContainer) },
-                      m.createElement(
+                      { className: Object(S.a)(f.FlexColumnContainer) },
+                      b.createElement(
                         "p",
                         null,
-                        Object(C.d)("#EventEditor_Loc_Export_Desc0")
+                        Object(M.d)("#EventEditor_Loc_Export_Desc0")
                       ),
-                      m.createElement(
+                      b.createElement(
                         "div",
                         {
-                          className: Object(M.a)(
-                            E.FlexRowContainer,
-                            E.RadioOption
+                          className: Object(S.a)(
+                            f.FlexRowContainer,
+                            f.RadioOption
                           )
                         },
-                        m.createElement("input", {
+                        b.createElement("input", {
                           type: "radio",
                           name: "ExportOption",
                           id: "EventEditor_ExportCSVOption",
@@ -29795,25 +29771,25 @@ var CLSTAMP = "6084371";
                             return t.OnExportTypeChange("csv");
                           }
                         }),
-                        m.createElement(
+                        b.createElement(
                           "label",
                           { htmlFor: "EventEditor_ExportCSVOption" },
-                          m.createElement(
+                          b.createElement(
                             "span",
                             null,
-                            Object(C.d)("#EventEditor_Loc_Export_CSV")
+                            Object(M.d)("#EventEditor_Loc_Export_CSV")
                           )
                         )
                       ),
-                      m.createElement(
+                      b.createElement(
                         "div",
                         {
-                          className: Object(M.a)(
-                            E.FlexRowContainer,
-                            E.RadioOption
+                          className: Object(S.a)(
+                            f.FlexRowContainer,
+                            f.RadioOption
                           )
                         },
-                        m.createElement("input", {
+                        b.createElement("input", {
                           type: "radio",
                           name: "ExportOption",
                           id: "EventEditor_ExportXMLOption",
@@ -29823,13 +29799,13 @@ var CLSTAMP = "6084371";
                             return t.OnExportTypeChange("xml");
                           }
                         }),
-                        m.createElement(
+                        b.createElement(
                           "label",
                           { htmlFor: "EventEditor_ExportXMLOption" },
-                          m.createElement(
+                          b.createElement(
                             "span",
                             null,
-                            Object(C.d)("#EventEditor_Loc_Export_XML")
+                            Object(M.d)("#EventEditor_Loc_Export_XML")
                           )
                         )
                       ),
@@ -29837,22 +29813,22 @@ var CLSTAMP = "6084371";
                         r.support_user &&
                           (a.BHasSaleEnabled() || a.BHasEmailEnabled)
                       ) &&
-                        m.createElement(
+                        b.createElement(
                           "div",
-                          { className: E.ValveOnlyBackground },
-                          m.createElement(
+                          { className: f.ValveOnlyBackground },
+                          b.createElement(
                             "p",
                             null,
                             "(VO) Identify which sections to export"
                           ),
-                          m.createElement(v.e, {
+                          b.createElement(g.e, {
                             label: "Export Event Body",
                             onChange: function(e) {
                               return t.setState({ bExportEventBody: e });
                             },
                             checked: this.state.bExportEventBody
                           }),
-                          m.createElement(v.e, {
+                          b.createElement(g.e, {
                             disabled: !a.BHasEmailEnabled(),
                             label: "Export Email",
                             onChange: function(e) {
@@ -29860,7 +29836,7 @@ var CLSTAMP = "6084371";
                             },
                             checked: this.state.bExportEmail
                           }),
-                          m.createElement(v.e, {
+                          b.createElement(g.e, {
                             disabled: !a.BHasSaleEnabled(),
                             label: "Export Sales",
                             onChange: function(e) {
@@ -29870,45 +29846,45 @@ var CLSTAMP = "6084371";
                           })
                         ),
                       this.state.bShowCSV
-                        ? m.createElement(
-                            m.Fragment,
+                        ? b.createElement(
+                            b.Fragment,
                             null,
-                            m.createElement(
+                            b.createElement(
                               "p",
                               null,
-                              Object(C.d)("#EventEditor_Loc_Export_Desc")
+                              Object(M.d)("#EventEditor_Loc_Export_Desc")
                             ),
-                            m.createElement(
+                            b.createElement(
                               "p",
                               null,
-                              Object(C.d)("#EventEditor_Loc_Export_Desc2")
+                              Object(M.d)("#EventEditor_Loc_Export_Desc2")
                             ),
-                            m.createElement(
+                            b.createElement(
                               "p",
                               null,
-                              Object(C.d)("#EventEditor_Loc_Export_Desc3")
+                              Object(M.d)("#EventEditor_Loc_Export_Desc3")
                             )
                           )
-                        : m.createElement(
-                            m.Fragment,
+                        : b.createElement(
+                            b.Fragment,
                             null,
-                            m.createElement(
+                            b.createElement(
                               "p",
                               null,
-                              Object(C.d)("#EventEditor_Loc_Export_XMLDesc")
+                              Object(M.d)("#EventEditor_Loc_Export_XMLDesc")
                             ),
-                            m.createElement(
+                            b.createElement(
                               "p",
                               null,
-                              Object(C.d)("#EventEditor_Loc_Export_XMLDesc2")
+                              Object(M.d)("#EventEditor_Loc_Export_XMLDesc2")
                             )
                           )
                     )
                   ),
-                  m.createElement(
-                    v.j,
+                  b.createElement(
+                    g.j,
                     null,
-                    m.createElement(o, {
+                    b.createElement(o, {
                       fnGetLocData: this.GetLocalizationModel,
                       bShowCSV: this.state.bShowCSV,
                       bShowXML: !this.state.bShowCSV,
@@ -29916,20 +29892,20 @@ var CLSTAMP = "6084371";
                       lang: this.props.editModel.GetCurEditLanguage(),
                       closeModal: this.props.closeModal
                     }),
-                    m.createElement(
-                      v.d,
+                    b.createElement(
+                      g.d,
                       { onClick: n },
-                      Object(C.d)("#Button_Cancel")
+                      Object(M.d)("#Button_Cancel")
                     )
                   )
                 )
               );
             }),
-            Object(l.c)([w.a], e.prototype, "GetLocalizationModel", null),
-            Object(l.c)([w.a], e.prototype, "OnExportTypeChange", null),
-            (e = Object(l.c)([c.a], e))
+            Object(h.c)([C.a], e.prototype, "GetLocalizationModel", null),
+            Object(h.c)([C.a], e.prototype, "OnExportTypeChange", null),
+            (e = Object(h.c)([l.a], e))
           );
-        })(m.Component);
+        })(b.Component);
     },
     N0Ye: function(e, t, n) {
       "use strict";
@@ -51509,8 +51485,10 @@ var CLSTAMP = "6084371";
               ? navigator.msSaveBlob(e, t)
               : ((n = window.URL.createObjectURL(e)), (a.href = n)),
               a.setAttribute("download", t),
-              a.click(),
+              a.click();
+            try {
               document.removeChild(a);
+            } catch (e) {}
           }),
           (e.prototype.ReadFile = function(a) {
             return new Promise(function(t, e) {
