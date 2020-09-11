@@ -121,6 +121,7 @@ message CBroadcast_WatchBroadcast_Response {
 	optional string webrtc_turn_server = 17;
 	optional bool is_replay = 18;
 	optional int32 duration = 19;
+	optional string cdn_auth_url_parameters = 20;
 }
 
 message CBroadcast_HeartbeatBroadcast_Notification {

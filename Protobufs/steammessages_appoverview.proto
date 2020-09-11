@@ -33,6 +33,7 @@ enum EDisplayStatus {
 	k_EDisplayStatusAvailToBorrow = 29;
 	k_EDisplayStatusAvailGuestPass = 30;
 	k_EDisplayStatusPurchase = 31;
+	k_EDisplayStatusUnavailable = 32;
 }
 
 enum EProtoAppType {
@@ -136,6 +137,7 @@ message CAppOverview {
 	optional bool vr_only = 58;
 	optional uint32 mastersub_appid = 59;
 	optional string mastersub_includedwith_logo = 60;
+	optional uint32 compat_allowlist_setting = 61 [default = 0];
 }
 
 message CAppOverview_Change {

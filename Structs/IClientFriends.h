@@ -194,6 +194,7 @@ public:
     virtual unknown_ret ActivateGameOverlayToStore(unsigned int, EOverlayToStoreFlag) = 0;
     virtual unknown_ret ActivateGameOverlayInviteDialog(CSteamID) = 0;
     virtual unknown_ret ActivateGameOverlayRemotePlayTogetherInviteDialog(CSteamID) = 0;
+    virtual unknown_ret ActivateGameOverlayInviteDialogConnectString(char const*) = 0;
     virtual unknown_ret ProcessActivateGameOverlayInMainUI(char const*, CSteamID, unsigned int, bool, int) = 0;
     virtual unknown_ret NotifyGameOverlayStateChanged(bool) = 0;
     virtual unknown_ret NotifyGameServerChangeRequested(char const*, char const*) = 0;

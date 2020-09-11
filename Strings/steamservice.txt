@@ -1,10 +1,10 @@
 __TEXT
-0%
-0%
+P%
+P%
 __text
 __TEXT
-A
-A
+;
+;
 __stubs
 __TEXT
 __stub_helper
@@ -19,17 +19,16 @@ __TEXT
 7
 __unwind_info
 __TEXT
-dm
 __eh_frame
 __TEXT
 __DATA
-0%
-0%
+P%
+P%
 
 __nl_symbol_ptr
 __DATA
-0%
-0%
+P%
+P%
 __got
 __DATA
 __la_symbol_ptr
@@ -38,24 +37,16 @@ __mod_init_func
 __DATA
 __const
 __DATA
-;%
-;%
 __objc_imageinfo__DATA
-8z&
-8z&
 __objc_selrefs
 __DATA
-@z&
-@z&
 __objc_classrefs__DATA
-Xz&
-Xz&
 __data
 __DATA
-`z&
-`z&
 __thread_vars
 __DATA
+xK'
+xK'
 __thread_bss
 __DATA
 __common
@@ -64,17 +55,18 @@ __bss
 __DATA
 H
 __LINKEDIT
-P)
-0'
+p)
+P'
 
 8
 @loader_path/steamservice.dylib
 "
-0'
-`K'
-hb'
-x"
+P'
+Hj'
+k'
 P
+C!
+C!
 g
 
 `
@@ -99,12 +91,12 @@ h
 8
 /usr/lib/libobjc.A.dylib
 &
-Xk'
 )
+P+0
+"
 Hi
-&
 H=
-$
+O$
 10CUtlString
 N10CIPCServer13CThreadClientE
 10CIPCServer
@@ -908,6 +900,11 @@ H
 P
 `
 X
+$
+(
+0
+4
+8
 13CMsgIPAddress
 19CMsgIPAddressBucket
 18CMsgProtoBufHeader
@@ -923,6 +920,7 @@ X
 31CCommunity_ClanAnnouncementInfo
 14CClanEventData
 16CBilling_Address
+25CPackageReservationStatus
 0
 (
 $
@@ -1472,7 +1470,6 @@ Value must be quoted string for string option "
 CHECK failed: dynamic.get() != NULL:
 Could not create an instance of
 Error while parsing option value for "
-":
 CHECK failed: (option_field->type()) == (FieldDescriptor::TYPE_GROUP):
 Invalid wire type for CPPTYPE_INT32:
 Invalid wire type for CPPTYPE_INT64:
@@ -6082,7 +6079,6 @@ Assertion Failed: len > 0 || HasError()
 Error State on string being set.
 CUtlStringBuilder::Data::MoveToHeap
 %s %i %s
--noassert
 -nocrashdialog
 -debugbreak
 %s
@@ -6096,6 +6092,7 @@ Exiting on SPEW_ABORT
 IsSpewActive
 Assertion Failed: %s
 Fatal Assertion Failed: %s
+-noassert
 DONT_BREAK_ON_ASSERT
 No room for new profile in vprof thread profile list, grow MAX_THREADS_TO_VPROF_AT_ONCE
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/vprof.h
@@ -6136,7 +6133,7 @@ crashhandler.dylib
 CreateInterface
 1.0
 Sep  9 2020
-15:05:51
+22:49:35
 Jan
 Feb
 Mar
@@ -6398,6 +6395,7 @@ accept-encoding
 accept-charset
 user-agent
 Transfer-Encoding
+Range
 Set-Cookie
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlsymbol.h
 Assertion Failed: pPool->m_SpaceUsed < 0xFFFF
@@ -6496,6 +6494,7 @@ m_intDimensions
 m_doubleMeasurements
 m_intMeasurements
 double
+":
 @bMetricsEnabled
 Enabling allows jobs to collect and report metrics through IMetricsReporters.
 @metricsEnabledCatalogs
@@ -6628,9 +6627,9 @@ steammessages_clientserver_login.proto
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/string_misc.cpp
 @net_loopback
 @net_backlog_time_allowed_sec
-5
+8
 @net_backlog_bytes_allowed
-12000000
+18000000
 @MaxOutstandingSendThreadItem
 10000
 client/TCPConnection/SentBytes
@@ -6642,7 +6641,6 @@ DisconnectPlatformSocket
 ClosePlatformSocket
 @EnableUDPHistory
 @cUDPSendRetries
-8
 @nClientCMUDPPingTimeGoodEnoughThresholdMS
 50
 @nClientCMUDPPingTimeoutUseGoodEnoughMS
@@ -6676,10 +6674,10 @@ Work Item (%s) for Work Pool %s completed but job no longer existed to notify
 CWorkThreadPool::BTryDeleteExitedWorkerThreads
 Work thread '%s' is marked exited, but we could not immediately join prior to deleting -- proceeding without join
 CWorkItem::DispatchCompletedWorkItem: got a work item with no job ID
+"
 Hi
-&
 H=
-$
+O$
 @
 @
 =
@@ -6689,9 +6687,10 @@ $
 ?
 A
 Hc
-Q"
 =
 N
+L95X#
+#
 Hc
 ?
 ?
@@ -6708,7 +6707,6 @@ Hc
 ?
 ?
 ?
-@
 .
 0
 @
@@ -7018,11 +7016,10 @@ AES-NI GCM module for x86_64, CRYPTOGAMS by <appro@openssl.org>
 =
 Montgomery Multiplication with scatter/gather for x86_64, CRYPTOGAMS by <appro@openssl.org>
 =
-
-
+A
+%
 3
 3
-\
 IcE
 I;E
 ,
@@ -7086,7 +7083,6 @@ i
 @
 @
 @
-b
 @
 @
 @
@@ -7097,4 +7093,5 @@ b
 @
 @
 @
+
 Hi

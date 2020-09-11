@@ -231,6 +231,7 @@ message CMsgClientEmoticonList {
 		optional uint32 time_last_used = 3;
 		optional uint32 use_count = 4;
 		optional uint32 time_received = 5;
+		optional uint32 appid = 6;
 	}
 
 	message Sticker {
@@ -238,6 +239,8 @@ message CMsgClientEmoticonList {
 		optional int32 count = 2;
 		optional uint32 time_received = 3;
 		optional uint32 appid = 4;
+		optional uint32 time_last_used = 5;
+		optional uint32 use_count = 6;
 	}
 
 	message Effect {

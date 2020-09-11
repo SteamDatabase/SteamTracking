@@ -187,6 +187,7 @@
  B CRTime::sm_rgchLocalTimeCur
  B CReliableTimer::sm_nPerformanceFrequency
  B CSTime::sm_lTimeCur
+ B CURLHelper::s_eDefaultRealm
  B CUtlSymbol::s_pSymbolTable
  B ConCommandBase::s_pAccessor
  B ConCommandBase::s_pConCommandBases
@@ -318,6 +319,7 @@
  B vgui::g_ButtonSoundNames
  B vgui::g_pIVgui
  B vgui::g_pVGUIApplication
+ BGetLocalFQDN
  CDbgFmtSafeImplT<false>::CDbgFmtSafeImplT(DbgFmtFatalMsgTag_t*, char const*, ...)
  CDbgFmtSafeImplT<false>::CDbgFmtSafeImplT(char const*, ...)
  CDbgFmtSafeImplT<true>::CDbgFmtSafeImplT(DbgFmtFatalMsgTag_t*, StringView)
@@ -2099,7 +2101,7 @@
  D typeinfo for CCallbackImpl<4>
  D typeinfo for CCallbackImpl<520>
  D typeinfo for CCallbackImpl<608>
- D typeinfo for CCallbackImpl<8216>
+ D typeinfo for CCallbackImpl<8472>
  D typeinfo for CCallbackImpl<8>
  D typeinfo for CCallbackManual<CCallbackMgr, SteamAPICallCompleted_t, false>
  D typeinfo for CCallbackManual<CCallbackMgr, SteamAPICallCompleted_t, true>
@@ -3402,7 +3404,7 @@
  D vtable for CCallbackImpl<4>
  D vtable for CCallbackImpl<520>
  D vtable for CCallbackImpl<608>
- D vtable for CCallbackImpl<8216>
+ D vtable for CCallbackImpl<8472>
  D vtable for CCallbackImpl<8>
  D vtable for CCallbackManual<CCallbackMgr, SteamAPICallCompleted_t, false>
  D vtable for CCallbackManual<CCallbackMgr, SteamAPICallCompleted_t, true>
@@ -4141,7 +4143,7 @@
  R typeinfo name for CCallbackImpl<4>
  R typeinfo name for CCallbackImpl<520>
  R typeinfo name for CCallbackImpl<608>
- R typeinfo name for CCallbackImpl<8216>
+ R typeinfo name for CCallbackImpl<8472>
  R typeinfo name for CCallbackImpl<8>
  R typeinfo name for CCallbackManual<CCallbackMgr, SteamAPICallCompleted_t, false>
  R typeinfo name for CCallbackManual<CCallbackMgr, SteamAPICallCompleted_t, true>
@@ -4823,7 +4825,6 @@
  T AppModalQueryBox::~AppModalQueryBox()
  T BConvertRGBAToRGB(CUtlBuffer&, int, int, Color)
  T BConvertRGBToRGBA(CUtlBuffer&, int, int)
- T BConvertToValidWebURL(char*, int)
  T BCreateDirectory(StringView)
  T BFileExists(StringView)
  T BGetLocalFormattedDateAndTime(long, char*, int, char*, int, bool, bool)
@@ -5636,9 +5637,9 @@
  T CCallbackImpl<608>::GetCallbackSizeBytes()
  T CCallbackImpl<608>::Run(void*, bool, unsigned long long)
  T CCallbackImpl<608>::~CCallbackImpl()
- T CCallbackImpl<8216>::GetCallbackSizeBytes()
- T CCallbackImpl<8216>::Run(void*, bool, unsigned long long)
- T CCallbackImpl<8216>::~CCallbackImpl()
+ T CCallbackImpl<8472>::GetCallbackSizeBytes()
+ T CCallbackImpl<8472>::Run(void*, bool, unsigned long long)
+ T CCallbackImpl<8472>::~CCallbackImpl()
  T CCallbackImpl<8>::GetCallbackSizeBytes()
  T CCallbackImpl<8>::Run(void*, bool, unsigned long long)
  T CCallbackImpl<8>::~CCallbackImpl()
@@ -5729,7 +5730,7 @@
  T CDirIterator::CDirIterator(StringView, StringView)
  T CDirIterator::CurrentFileCreateTime() const
  T CDirIterator::CurrentFileLength() const
- T CDirIterator::CurrentFileName()
+ T CDirIterator::CurrentFileName() const
  T CDirIterator::CurrentFileWriteTime() const
  T CDirIterator::Init(StringView)
  T CDirIterator::IsValid() const
@@ -9298,7 +9299,7 @@
  T CSettingsSubBroadcast::OnResetData()
  T CSettingsSubBroadcast::PanelMessageFunc_OnComboBoxChanged::InitVar()
  T CSettingsSubBroadcast::~CSettingsSubBroadcast()
- T CSettingsSubBrowser::CSettingsSubBrowser(vgui::Panel*)
+ T CSettingsSubBrowser::CSettingsSubBrowser(vgui::Panel*, StringView)
  T CSettingsSubBrowser::ChainToAnimationMap()
  T CSettingsSubBrowser::ChainToMap()
  T CSettingsSubBrowser::GetAnimMap()
@@ -9579,6 +9580,15 @@
  T CTradeDialog::PanelMessageFunc_OnCustomURL::InitVar()
  T CTradeDialog::PanelMessageFunc_OnSetHTMLTitle::InitVar()
  T CTradeDialog::~CTradeDialog()
+ T CURLHelper::BConvertToValidWebURL(char*, int)
+ T CURLHelper::GetChatBaseURLForUniverse(EUniverse, CUtlString&, ELauncherType, ESteamRealm)
+ T CURLHelper::GetCommunityBaseURLForUniverse(EUniverse, CUtlString&, ELauncherType, ESteamRealm)
+ T CURLHelper::GetCommunityCDNURLForUniverse(EUniverse, CUtlString&, ESteamRealm)
+ T CURLHelper::GetCommunityImagesURLForUniverse(EUniverse, ESteamRealm)
+ T CURLHelper::GetHelpBaseURLForUniverse(EUniverse, CUtlString&, ELanguage, ESteamRealm)
+ T CURLHelper::GetStoreBaseURLForUniverse(EUniverse, CUtlString&, ESteamRealm)
+ T CURLHelper::GetStoreCDNURLForUniverse(EUniverse, CUtlString&, ESteamRealm)
+ T CURLHelper::SetDefaultRealm(ESteamRealm)
  T CURLManager::BMatchingFullURL(int, char const*, int*)
  T CURLManager::CURLManager()
  T CURLManager::ConstructFullURL(char const*, CUtlString*, char const*, char const*, char const*)
@@ -10448,12 +10458,13 @@
  T ConCommandBase::GetTargetType() const
  T ConCommandBase::IsBitSet(unsigned int) const
  T ConVar::AddOnChangeCallback(void (*)(void*, ConVar*, char const*), void*, bool)
- T ConVar::ApplyReplicatedValue(char const*, bool)
+ T ConVar::ApplyReplicatedValue(char const*, bool, bool)
  T ConVar::BLocalOverride()
  T ConVar::BReplicated()
  T ConVar::BSendDiscardLocalOverride()
  T ConVar::ChangeStringValue(char const*)
  T ConVar::ClampValue(float&)
+ T ConVar::ClearReplicated()
  T ConVar::ClearSendDiscardLocalOverride()
  T ConVar::ConVar(char const*, char const*, unsigned long long)
  T ConVar::Create(char const*, char const*, unsigned long long, char const*, bool, float, bool, float, void (*)(ConVar*, char const*))
@@ -10543,14 +10554,9 @@
  T GetAvailableDrives(char*, int)
  T GetCStringCharConversion()
  T GetCchTempTextBuffer_Harmful()
- T GetChatBaseURLForUniverse(EUniverse, CUtlString&, ELauncherType)
- T GetCommunityBaseURLForUniverse(EUniverse, CUtlString&, ELauncherType)
- T GetCommunityCDNURLForUniverse(EUniverse, CUtlString&)
- T GetCommunityImagesURLForUniverse(EUniverse)
  T GetFileSHA(char const*, unsigned char (&) [20])
  T GetFileTimestampString(long long)
  T GetGameOverlayUIBasePanel()
- T GetHelpBaseURLForUniverse(EUniverse, CUtlString&, ELanguage)
  T GetJpegDimensions(unsigned char const*, int, unsigned int&, unsigned int&)
  T GetLanguageCLocaleName(ELanguage)
  T GetLanguageICUName(ELanguage)
@@ -10563,7 +10569,6 @@
  T GetPchTempTextBuffer_Harmful()
  T GetServerBrowserPingRate(int)
  T GetShowFPSCornerOption(int)
- T GetStoreCDNURLForUniverse(EUniverse, CUtlString&)
  T GetTGADimensions(int, char*, int*, int*)
  T GridMenu::PerformLayout()
  T GridMenu::~GridMenu()

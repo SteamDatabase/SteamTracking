@@ -293,6 +293,7 @@ message CPlayer_GetEmoticonList_Response {
 		optional uint32 time_last_used = 3;
 		optional uint32 use_count = 4;
 		optional uint32 time_received = 5;
+		optional uint32 appid = 6;
 	}
 
 	repeated .CPlayer_GetEmoticonList_Response.Emoticon emoticons = 1;

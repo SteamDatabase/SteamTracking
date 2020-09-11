@@ -67,6 +67,7 @@ enum EMsg {
 	k_EMsgUpdateScheduledTaskEnableState_TEST = 244;
 	k_EMsgUpdateScheduledTaskEnableStateResponse_TEST = 245;
 	k_EMsgContentDescriptionDeltaUpdate = 246;
+	k_EMsgGMShellAndServerAddressUpdates = 247;
 	k_EMsgBaseGM = 300;
 	k_EMsgHeartbeat = 300;
 	k_EMsgShellFailed = 301;
@@ -93,6 +94,7 @@ enum EMsg {
 	k_EMsgGMTestNextBuildSchemaConversionResponse = 335;
 	k_EMsgExpectShellRestart = 336;
 	k_EMsgHotFixProgress = 337;
+	k_EMsgGMStatsForwardToAdminConnections = 338;
 	k_EMsgBaseAIS = 400;
 	k_EMsgAISRequestContentDescription = 402;
 	k_EMsgAISUpdateAppInfo = 403;

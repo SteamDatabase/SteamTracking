@@ -245,6 +245,7 @@
  B CTransportSignalMsg::default_instance_
  B CTransportSignalMsg_WebRTCMessage::default_instance_
  B CTransportSignalMsg_WebRTCMessage_Candidate::default_instance_
+ B CURLHelper::s_eDefaultRealm
  B CUtlSymbol::s_pSymbolTable
  B CVideoDecoderInfoMsg::default_instance_
  B CVideoEncoderInfoMsg::default_instance_
@@ -6553,7 +6554,7 @@
  T CDirIterator::CDirIterator(StringView, StringView)
  T CDirIterator::CurrentFileCreateTime() const
  T CDirIterator::CurrentFileLength() const
- T CDirIterator::CurrentFileName()
+ T CDirIterator::CurrentFileName() const
  T CDirIterator::CurrentFileWriteTime() const
  T CDirIterator::Init(StringView)
  T CDirIterator::~CDirIterator()
@@ -6774,7 +6775,7 @@
  T CFriendGameInviteDialog::BShowInviteButton(CSteamID const&)
  T CFriendGameInviteDialog::BShowSelf()
  T CFriendGameInviteDialog::BShowSelfPanel()
- T CFriendGameInviteDialog::CFriendGameInviteDialog(unsigned long long, char const*, CSteamID)
+ T CFriendGameInviteDialog::CFriendGameInviteDialog(unsigned long long, char const*)
  T CFriendGameInviteDialog::ChainToAnimationMap()
  T CFriendGameInviteDialog::ChainToMap()
  T CFriendGameInviteDialog::GetAnimMap()
@@ -6790,6 +6791,8 @@
  T CFriendGameInviteDialog::OnClose()
  T CFriendGameInviteDialog::PanelMessageFunc_ReturnToGame::InitVar()
  T CFriendGameInviteDialog::ReturnToGame()
+ T CFriendGameInviteDialog::SetInviteToSteamID(CSteamID, EInviteDialogType)
+ T CFriendGameInviteDialog::SetInviteWithConnectString(unsigned int, char const*)
  T CFriendGameInviteDialog::ShowMultiUserChatStatus()
  T CFriendGameInviteDialog::ShowOfflineFriends()
  T CFriendGameInviteDialog::ShowSteamIDs()
@@ -7434,6 +7437,7 @@
  T CFriendsUIModule::Activate()
  T CFriendsUIModule::ActivateAndFocus(bool)
  T CFriendsUIModule::ActivateFriendInviteDialog(CSteamID, EInviteDialogType)
+ T CFriendsUIModule::ActivateFriendInviteDialogConnectString(unsigned int, char const*)
  T CFriendsUIModule::ActivateFriendsDialog(bool)
  T CFriendsUIModule::ActivatePlayersDialog()
  T CFriendsUIModule::BHideOfflineFriendsInFriendsList()
@@ -11465,6 +11469,12 @@
  T CTransportSignalMsg_WebRTCMessage_Candidate::set_sdp_mid(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CTransportSignalMsg_WebRTCMessage_Candidate::~CTransportSignalMsg_WebRTCMessage_Candidate()
  T CURLHelper::BIsTrustedURL(char const*)
+ T CURLHelper::GetCommunityBaseURLForUniverse(EUniverse, CUtlString&, ELauncherType, ESteamRealm)
+ T CURLHelper::GetCommunityCDNURLForUniverse(EUniverse, CUtlString&, ESteamRealm)
+ T CURLHelper::GetCommunityImagesURLForUniverse(EUniverse, ESteamRealm)
+ T CURLHelper::GetLocalSteamClientURL()
+ T CURLHelper::GetSecureCommunityBaseURLForUniverse(EUniverse, CUtlString&, ESteamRealm)
+ T CURLHelper::SetDefaultRealm(ESteamRealm)
  T CUtlBuffer::AddNullTermination()
  T CUtlBuffer::CUtlBuffer(int, int, int)
  T CUtlBuffer::CUtlBuffer(void const*, int, int)
@@ -12507,12 +12517,13 @@
  T ConCommandBase::ValidateConCommands(CValidator&)
  T ConCommandBaseMgr::OneTimeInit(IConCommandBaseAccessor*)
  T ConVar::AddOnChangeCallback(void (*)(void*, ConVar*, char const*), void*, bool)
- T ConVar::ApplyReplicatedValue(char const*, bool)
+ T ConVar::ApplyReplicatedValue(char const*, bool, bool)
  T ConVar::BLocalOverride()
  T ConVar::BReplicated()
  T ConVar::BSendDiscardLocalOverride()
  T ConVar::ChangeStringValue(char const*)
  T ConVar::ClampValue(float&)
+ T ConVar::ClearReplicated()
  T ConVar::ClearSendDiscardLocalOverride()
  T ConVar::ConVar(char const*, char const*, unsigned long long)
  T ConVar::ConVar(char const*, char const*, unsigned long long, char const*)
@@ -12924,17 +12935,12 @@
  T GCallbackMgr()
  T GetAttributesAsString(CDirIterator const&)
  T GetCStringCharConversion()
- T GetCommunityBaseURLForUniverse(EUniverse, CUtlString&, ELauncherType)
- T GetCommunityCDNURLForUniverse(EUniverse, CUtlString&)
- T GetCommunityImagesURLForUniverse(EUniverse)
  T GetFileSHA(char const*, unsigned char (&) [20])
  T GetFileTimestampString(long long)
- T GetLocalSteamClientURL()
  T GetNoEscCharConversion()
  T GetPanelAnimationDictionary()
  T GetPanelKeyBindingMapDictionary()
  T GetPanelMessageMapDictionary()
- T GetSecureCommunityBaseURLForUniverse(EUniverse, CUtlString&)
  T GridMenu::PerformLayout()
  T GridMenu::~GridMenu()
  T HMAC_CTX_cleanup
@@ -13704,6 +13710,7 @@
  T non-virtual thunk to CFriendsListSectionHeader::OnOpened()
  T non-virtual thunk to CFriendsListSectionHeader::SetColor(Color)
  T non-virtual thunk to CFriendsUIModule::ActivateFriendInviteDialog(CSteamID, EInviteDialogType)
+ T non-virtual thunk to CFriendsUIModule::ActivateFriendInviteDialogConnectString(unsigned int, char const*)
  T non-virtual thunk to CFriendsUIModule::ActivateFriendsDialog(bool)
  T non-virtual thunk to CFriendsUIModule::ActivatePlayersDialog()
  T non-virtual thunk to CFriendsUIModule::BHideOfflineFriendsInFriendsList()

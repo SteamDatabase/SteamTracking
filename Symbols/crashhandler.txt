@@ -113,7 +113,7 @@
  T CDbgFmtSafeImplT<true>::CDbgFmtSafeImplT(StringView)
  T CDirIterator::BNextFile()
  T CDirIterator::CDirIterator(StringView, StringView)
- T CDirIterator::CurrentFileName()
+ T CDirIterator::CurrentFileName() const
  T CDirIterator::Init(StringView)
  T CDirIterator::~CDirIterator()
  T CFilenamesCache::FindOrCreateFilename(char const*)

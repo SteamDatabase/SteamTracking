@@ -352,6 +352,7 @@
  B CNetConnection::sm_cSSLConnections
  B COpenSSLConnection::s_cSSLHandshakesPending
  B COpenSSLWrapper::s_uOpenSSLMemoryUsage
+ B CPackageReservationStatus::default_instance_
  B CRTime::sm_nTimeCur
  B CRTime::sm_nTimeLastSystemTimeUpdate
  B CRTime::sm_rgchLocalDateCur
@@ -386,6 +387,7 @@
  B CUIFontFilePB::default_instance_
  B CUIFontFilePackagePB::default_instance_
  B CUIFontFilePackagePB_CUIEncryptedFontFilePB::default_instance_
+ B CURLHelper::s_eDefaultRealm
  B CUtlSymbol::s_pSymbolTable
  B CWebSocketConnection::sm_THashPWebSocketConnection
  B ConCommandBase::s_pAccessor
@@ -967,7 +969,6 @@
  D g_pszUnknown
  D guard variable for VMatrix::GetIdentityMatrix()::identityMatrix
  D guard variable for panorama::CStylePropertyAnimationProperties::BSetFromString(panorama::CStyleSymbol, char const*)::k_symNone
- D guard variable for picojson::last_error_t<bool>::s
  D jpeg_std_message_table
  D k_pszSteamAudioModuleName
  D k_pszSteamClientModuleName
@@ -1236,7 +1237,6 @@
  D panorama::WindowOffScreen::pchEvent
  D panorama::WindowOnScreen::pchEvent
  D panorama::WindowShown::pchEvent
- D picojson::last_error_t<bool>::s
  D s_LogWatchesAllWithType
  D typeinfo for CBilling_Address
  D typeinfo for CBorderData
@@ -1542,6 +1542,7 @@
  D typeinfo for CMultipleCallResults<panorama::CReloadStyleFile, HTTPRequestCompleted_t>
  D typeinfo for CMultipleCallResults<panorama::CUIEngine, HTTPRequestCompleted_t>
  D typeinfo for CNullMetricsFactory
+ D typeinfo for CPackageReservationStatus
  D typeinfo for CPathString
  D typeinfo for CRadialClipData
  D typeinfo for CRadiusData
@@ -2258,6 +2259,7 @@
  D vtable for CMultipleCallResults<panorama::CReloadStyleFile, HTTPRequestCompleted_t>
  D vtable for CMultipleCallResults<panorama::CUIEngine, HTTPRequestCompleted_t>
  D vtable for CNullMetricsFactory
+ D vtable for CPackageReservationStatus
  D vtable for CPathString
  D vtable for CRadialClipData
  D vtable for CRadiusData
@@ -2974,6 +2976,7 @@
  R typeinfo name for CMultipleCallResults<panorama::CReloadStyleFile, HTTPRequestCompleted_t>
  R typeinfo name for CMultipleCallResults<panorama::CUIEngine, HTTPRequestCompleted_t>
  R typeinfo name for CNullMetricsFactory
+ R typeinfo name for CPackageReservationStatus
  R typeinfo name for CPathString
  R typeinfo name for CRadialClipData
  R typeinfo name for CRadiusData
@@ -4195,7 +4198,7 @@
  T CDirIterator::BNextFile()
  T CDirIterator::CDirIterator(StringView)
  T CDirIterator::CDirIterator(StringView, StringView)
- T CDirIterator::CurrentFileName()
+ T CDirIterator::CurrentFileName() const
  T CDirIterator::Init(StringView)
  T CDirIterator::IsValid() const
  T CDirIterator::~CDirIterator()
@@ -7989,6 +7992,21 @@
  T CNullMetricsFactory::Validate(CValidator&, char const*)
  T CNullMetricsFactory::~CNullMetricsFactory()
  T CNumStr::CNumStr(double)
+ T CPackageReservationStatus::ByteSize() const
+ T CPackageReservationStatus::CPackageReservationStatus()
+ T CPackageReservationStatus::Clear()
+ T CPackageReservationStatus::GetCachedSize() const
+ T CPackageReservationStatus::GetMetadata() const
+ T CPackageReservationStatus::IsInitialized() const
+ T CPackageReservationStatus::MergeFrom(CPackageReservationStatus const&)
+ T CPackageReservationStatus::New() const
+ T CPackageReservationStatus::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CPackageReservationStatus::SetCachedSize(int) const
+ T CPackageReservationStatus::SharedCtor()
+ T CPackageReservationStatus::SharedDtor()
+ T CPackageReservationStatus::mutable_reservation_country_code()
+ T CPackageReservationStatus::set_reservation_country_code(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CPackageReservationStatus::~CPackageReservationStatus()
  T CPathString::CPathString(StringView, StringView)
  T CPathString::Clear()
  T CPathString::GetUTF8Path() const
@@ -8000,6 +8018,7 @@
  T CPoolReference<CMetrics>::CPoolReference(CMetrics&, std::__1::function<void (CMetrics&)> const&)
  T CPoolReference<CMetrics>::CPoolReference(CPoolReference<CMetrics> const&)
  T CPoolReference<CMetrics>::DoNothing(CPoolReference<CMetrics>)
+ T CPoolReference<CMetrics>::Release()
  T CPoolReference<CMetrics>::~CPoolReference()
  T CRC32_ProcessSingleBuffer(void const*, int)
  T CRTime::CRTime()
@@ -8450,6 +8469,7 @@
  T CUIFontPackage::GetNextFileIndex()
  T CUIFontPackage::Validate(CValidator&, char const*)
  T CUIFontPackage::~CUIFontPackage()
+ T CURLHelper::SetDefaultRealm(ESteamRealm)
  T CUtlBuffer::AddNullTermination()
  T CUtlBuffer::CUtlBuffer(int, int, int)
  T CUtlBuffer::CUtlBuffer(void const*, int, int)
@@ -10182,12 +10202,13 @@
  T ConCommandBase::IsRegistered() const
  T ConCommandBaseMgr::OneTimeInit(IConCommandBaseAccessor*)
  T ConVar::AddOnChangeCallback(void (*)(void*, ConVar*, char const*), void*, bool)
- T ConVar::ApplyReplicatedValue(char const*, bool)
+ T ConVar::ApplyReplicatedValue(char const*, bool, bool)
  T ConVar::BLocalOverride()
  T ConVar::BReplicated()
  T ConVar::BSendDiscardLocalOverride()
  T ConVar::ChangeStringValue(char const*)
  T ConVar::ClampValue(float&)
+ T ConVar::ClearReplicated()
  T ConVar::ClearSendDiscardLocalOverride()
  T ConVar::ConVar(char const*, char const*, unsigned long long)
  T ConVar::ConVar(char const*, char const*, unsigned long long, char const*)
@@ -17287,6 +17308,8 @@
  b (anonymous namespace)::CMsgZoomToElementAtPosition_reflection_
  b (anonymous namespace)::CMsgZoomToFocusedElement_descriptor_
  b (anonymous namespace)::CMsgZoomToFocusedElement_reflection_
+ b (anonymous namespace)::CPackageReservationStatus_descriptor_
+ b (anonymous namespace)::CPackageReservationStatus_reflection_
  b (anonymous namespace)::CRadialClipData_descriptor_
  b (anonymous namespace)::CRadialClipData_reflection_
  b (anonymous namespace)::CRadiusData_CCornerRadius_descriptor_
@@ -17354,6 +17377,7 @@
  b g_BreakSet
  b g_BreakSetIncludingColons
  b g_CleanupSymbolTable
+ b g_CommunityURLParam
  b g_ConVarMaxOutstandingSendThreadItem
  b g_ConVarNetBacklogBytesAllowed
  b g_ConVarNetBacklogTimeAllowedSec
@@ -17566,6 +17590,7 @@
  b hksHost
  b hksKVNameRequestHeaders
  b hksPragma
+ b hksRange
  b hksSetCookie
  b hksTransferEncoding
  b hksUserAgent
@@ -18532,6 +18557,7 @@
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgIPAddressBucket_offsets_
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgMulti_offsets_
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgProtobufWrapped_offsets_
+ r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CPackageReservationStatus_offsets_
  r protobuf_AssignDesc_steammessages_5fclientserver_5flogin_2eproto()::CMsgClientAccountInfo_offsets_
  r protobuf_AssignDesc_steammessages_5fclientserver_5flogin_2eproto()::CMsgClientChallengeRequest_offsets_
  r protobuf_AssignDesc_steammessages_5fclientserver_5flogin_2eproto()::CMsgClientChallengeResponse_offsets_
@@ -18872,6 +18898,7 @@
  t _GLOBAL__sub_I_uitoplevelwindowoverlay.cpp
  t _GLOBAL__sub_I_uitoplevelwindowsdl.cpp
  t _GLOBAL__sub_I_uiwebapiclient.cpp
+ t _GLOBAL__sub_I_urlhelper.cpp
  t _GLOBAL__sub_I_utlbuffer.cpp
  t _GLOBAL__sub_I_utlsymbol.cpp
  t _GLOBAL__sub_I_vmatrix.cpp
@@ -18881,7 +18908,6 @@
  t _GLOBAL__sub_I_workthreadpool.cpp
  t _GLOBAL__sub_I_zip_helpers.cpp
  t __cxx_global_array_dtor
- t __cxx_global_var_init27
  t access_virt_barray
  t access_virt_sarray
  t alloc_barray

@@ -1,6 +1,8 @@
 __TEXT
 __text
 __TEXT
+H
+H
 __stubs
 __TEXT
 __stub_helper
@@ -32,14 +34,17 @@ __data
 __DATA
 __thread_vars
 __DATA
+)D,
+)D,
 __thread_bss
 __DATA
-@D,
+PD,
 __bss
 __DATA
-@H,
+PH,
 __common
 __DATA
+.
 H
 __LINKEDIT
 P,
@@ -49,12 +54,12 @@ P,
 "
 P,
 pf,
-@
+P
 @
 P
-j;
-j;
-l;
+p;
+p;
+r;
 
 8
 @loader_path/libtier0_s.dylib
@@ -728,7 +733,6 @@ N4vgui9CIMEPanelE
 N4vgui11InputDialogE
 N4vgui5LabelE
 10CUtlVectorIN4vgui5Label10TImageInfoE10CUtlMemoryIS2_EE
-N4vgui17ListPanelCheckBoxE
 N4vgui18CTypingJumpHandler17ITypingJumpClientE
 N4vgui17ListPanelInteriorE
 27ListPanelColumnSelectButton
@@ -1896,9 +1900,14 @@ Tokenizer::ParseStringAppend() passed text that could not have been tokenized as
 \U%08x
 -community
 Set the community URL
+http://
+https://
+://
+steam://
 steamchina://
 steambeta://
 steamchinabeta://
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlstring.h
 htmlmessages.proto
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/html/htmlmessages.pb.cc
 CHECK failed: file != NULL:
@@ -2016,7 +2025,6 @@ m_ReplacedKVs
 (KeyValues*)m_ReplacedKVs.Element(idx)
 CUtlHandleTable
 url
-://
 open
 CanBeDefaultButton
 result
@@ -2631,7 +2639,6 @@ checkable
 checked
 autocheck
 MenuBarLoaded
-steam://
 m_vecMenuButtons
 m_sMenuFile
 vgui::MenuBar
@@ -2916,7 +2923,6 @@ RichText::ParseTextStringForURL
 href=
 </a>
 www.
-http://
 URLClicked
 tooltip
 vgui::RichText
@@ -2928,7 +2934,6 @@ ClickPanel
 RichTextInterior
 Assertion Failed: bitNum >= 0 && bitNum < this->Size()
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/bitstring.h
-https://
 ftp://
 mailto:
 m_mapCharToWidth
@@ -3102,8 +3107,8 @@ Bad expression token: %c %c
 V_RemoveDotSlashes failed for "%s".
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/fileio.cpp
 %s%c%s
-..
 %s/%s
+..
 Assertion Failed: !"Failed to CFStringCreateWithCString watcher path"
 m_listChangedFiles
 File change notification for %s but no file contents changed based on hash
@@ -3234,6 +3239,7 @@ Assertion Failed: num > 0
 Assertion Failed: num >= 0
 CUtlString::SetValue
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlstring.cpp
+CUtlString::VFormat
 CUtlString::ReplaceInternal
 Assertion Failed: pstrNew + nNewLength == pstrDestination + 1
 Assertion Failed: cActualReplacements == cReplacements
@@ -3245,7 +3251,6 @@ Assertion Failed: nMinCapacity >= nChars
 Assertion Failed: nMinCapacity <= k_nMaxStringSize
 Error State on string being set.
 CUtlStringBuilder::Data::MoveToHeap
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlstring.h
 Assertion Failed: !pszString || pszString[nChars] == '\0'
 Assertion Failed: s_bAllowStaticSymbolTable
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlsymbol.cpp
@@ -3266,12 +3271,11 @@ p
 p
 0
 p
-|'
-a'
 0
 p
-"
-"
+'
+'
+'
 $
 @
 @
@@ -3281,14 +3285,11 @@ $
 ?
 ?
 A
-N)
 Hc
 =
-L95&X'
-L95
-K'
+L95*l'
+L95pP'
 Hc
-6%
 ?
 ?
 ?
@@ -3304,11 +3305,9 @@ Hc
 ?
 ?
 ?
-a$
 /$
 "
 3
-8$
 D
 $
 $
@@ -3319,25 +3318,20 @@ $
 $
 $
 $
-$
-$
-$
-$
 @
-E#
-I#
-D#
 +
-1"
-"
-"
+L957"
 e
+
+!
+!
+!
+_
 
 
 
 d
 :
-
 !
 V
 
@@ -3348,12 +3342,7 @@ V
 t=
 =
 =
-
-
 @
-
-
-
 uV%
 
 
@@ -3371,6 +3360,7 @@ E
 @
 @
 @
+k
 @
 @
 @
@@ -3406,13 +3396,13 @@ E
 .
 d
 =
+=
 @
 =
 @
-r
 @
 @
-N
+A
 @
 @
 @

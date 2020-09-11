@@ -2,7 +2,7 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [1],
   {
-    Jbdm: function(n, t, e) {
+    Jbdm: function(n, t, o) {
       n.exports = {
         IconContainer: "awardicon_IconContainer__6f_B",
         ButtonContainer: "awardicon_ButtonContainer_1ShXa",
@@ -12,32 +12,32 @@
         IconList: "awardicon_IconList_2cI0L"
       };
     },
-    RsgW: function(n, t, e) {
+    RsgW: function(n, t, o) {
       "use strict";
-      e.r(t),
-        e.d(t, "AwardIcon", function() {
-          return l;
+      o.r(t),
+        o.d(t, "AwardIcon", function() {
+          return m;
         }),
-        e.d(t, "AwardIconList", function() {
-          return _;
+        o.d(t, "AwardIconList", function() {
+          return I;
         });
-      var o = e("mrSG"),
-        a = e("q1tI"),
-        r = e.n(a),
-        c = e("ascj"),
-        i = e("5E+2"),
-        s = e("Jbdm"),
-        u = e.n(s),
-        p = e("TLQK"),
-        d = e("exH9"),
-        l = (function(n) {
+      var e = o("mrSG"),
+        a = o("q1tI"),
+        r = o.n(a),
+        c = o("ascj"),
+        i = o("5E+2"),
+        s = o("Jbdm"),
+        p = o.n(s),
+        u = o("TLQK"),
+        d = o("exH9"),
+        m = (function(n) {
           function t() {
             return (null !== n && n.apply(this, arguments)) || this;
           }
           return (
-            Object(o.d)(t, n),
+            Object(e.d)(t, n),
             (t.prototype.render = function() {
-              var n = Object(p.k)(
+              var n = Object(u.k)(
                 "#RewardsReaction_Tooltip",
                 this.props.reaction.count || 0,
                 Object(c.a)(this.props.reaction.reaction_type)
@@ -45,17 +45,17 @@
               return r.a.createElement(
                 i.d,
                 {
-                  className: Object(d.a)(u.a.InfoContainer, u.a.IconContainer),
+                  className: Object(d.a)(p.a.InfoContainer, p.a.IconContainer),
                   toolTipContent: n
                 },
                 r.a.createElement("img", {
-                  className: u.a.IconImg,
+                  className: p.a.IconImg,
                   src: Object(c.b)(this.props.reaction.reaction_type, !1)
                 }),
                 this.props.reaction.count &&
                   r.a.createElement(
                     "div",
-                    { className: u.a.ReactionCount },
+                    { className: p.a.ReactionCount },
                     this.props.reaction.count
                   )
               );
@@ -63,52 +63,28 @@
             t
           );
         })(r.a.PureComponent),
-        _ = (function(n) {
+        I = (function(n) {
           function t() {
             return (null !== n && n.apply(this, arguments)) || this;
           }
           return (
-            Object(o.d)(t, n),
+            Object(e.d)(t, n),
             (t.prototype.render = function() {
               for (
-                var n = [], t = 0, e = this.props.reactions;
-                t < e.length;
+                var n = [], t = 0, o = this.props.reactions;
+                t < o.length;
                 t++
               ) {
-                var o = e[t];
+                var e = o[t];
                 n.push(
-                  r.a.createElement(l, { key: o.reaction_type, reaction: o })
+                  r.a.createElement(m, { key: e.reaction_type, reaction: e })
                 );
               }
-              return r.a.createElement("div", { className: u.a.IconList }, n);
+              return r.a.createElement("div", { className: p.a.IconList }, n);
             }),
             t
           );
         })(r.a.PureComponent);
-    },
-    ascj: function(n, t, e) {
-      "use strict";
-      e.d(t, "b", function() {
-        return r;
-      }),
-        e.d(t, "a", function() {
-          return c;
-        });
-      var o = e("TLQK"),
-        a = e("lkRc");
-      function r(n, t) {
-        return (
-          a.b.STORE_CDN_URL +
-          "public/images/loyalty/reactions/" +
-          (t ? "animated" : "still") +
-          "/" +
-          n +
-          ".png"
-        );
-      }
-      function c(n) {
-        return Object(o.d)("#RewardsReaction_" + n);
-      }
     }
   }
 ]);

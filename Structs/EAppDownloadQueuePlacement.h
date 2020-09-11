@@ -7,4 +7,5 @@ typedef enum EAppDownloadQueuePlacement
     k_EAppDownloadQueuePlacementPriorityDown, // Priority Down
     k_EAppDownloadQueuePlacementPriorityLast, // Priority Last
     k_EAppDownloadQueuePlacementPriorityPaused, // Priority Paused
+    k_EAppDownloadQueuePlacementPriorityManual, // Priority Manual
 } EAppDownloadQueuePlacement;

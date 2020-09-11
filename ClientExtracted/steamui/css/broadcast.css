@@ -2250,8 +2250,9 @@ iframe.steamTVLogin {
   flex-direction: column;
   max-width: 155px;
   /* Give each stream a fixed height so that the auto-scrolling logic can scroll the container correctly down when changing streams */
-  height: 104px;
-  padding-bottom: 12px; }
+  height: 78px;
+  padding-bottom: 12px;
+  position: relative; }
 
 .broadcast_embeddable_stream_icon_and_viewer_container_2sbrG .broadcast_embeddable_viewer_count_1MrTW {
   background-color: rgba(0, 0, 0, 0.4);
@@ -2305,7 +2306,11 @@ iframe.steamTVLogin {
   mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, black 16px); }
   .broadcast_embeddable_scrollingstreams_3aYWl .broadcast_embeddable_viewer_count_1MrTW {
     max-width: 105px;
-    margin-bottom: 5px; }
+    margin-bottom: 5px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: -1; }
   .broadcast_embeddable_scrollingstreams_3aYWl .broadcast_embeddable_stream_icon_1LBYs,
   .broadcast_embeddable_scrollingstreams_3aYWl .broadcast_embeddable_stream_icon_selected_mSpze {
     max-width: 136px; }

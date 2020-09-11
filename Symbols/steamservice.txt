@@ -74,6 +74,7 @@
  B COpenSSLWrapper::s_nContextDataIndex
  B COpenSSLWrapper::s_pMutexArray
  B COpenSSLWrapper::s_uOpenSSLMemoryUsage
+ B CPackageReservationStatus::default_instance_
  B CRTime::sm_nTimeCur
  B CRTime::sm_nTimeLastSystemTimeUpdate
  B CRTime::sm_rgchLocalDateCur
@@ -253,12 +254,10 @@
  D g_ClockSpeedSecondsMultiplier
  D g_DebugSpewProc
  D g_pszUnknown
- D guard variable for picojson::last_error_t<bool>::s
  D hmac_asn1_meth
  D hmac_pkey_meth
  D k_rgchCodeSignaturePublicKeys
  D pModuleExtension
- D picojson::last_error_t<bool>::s
  D rand_ssleay_meth
  D rsa_asn1_meths
  D rsa_pkey_meth
@@ -315,6 +314,7 @@
  D typeinfo for CMsgProtoBufHeader
  D typeinfo for CMsgProtobufWrapped
  D typeinfo for CNullMetricsFactory
+ D typeinfo for CPackageReservationStatus
  D typeinfo for CPathString
  D typeinfo for CPipeEvent
  D typeinfo for CPipeEventCallbackHelper
@@ -428,6 +428,7 @@
  D vtable for CMsgProtoBufHeader
  D vtable for CMsgProtobufWrapped
  D vtable for CNullMetricsFactory
+ D vtable for CPackageReservationStatus
  D vtable for CPathString
  D vtable for CPipeEventCallbackHelper
  D vtable for CPipeWaiter
@@ -531,6 +532,7 @@
  R typeinfo name for CMsgProtoBufHeader
  R typeinfo name for CMsgProtobufWrapped
  R typeinfo name for CNullMetricsFactory
+ R typeinfo name for CPackageReservationStatus
  R typeinfo name for CPathString
  R typeinfo name for CPipeEvent
  R typeinfo name for CPipeEventCallbackHelper
@@ -1083,7 +1085,7 @@
  T CDebugStatsValue::~CDebugStatsValue()
  T CDirIterator::BNextFile()
  T CDirIterator::CDirIterator(StringView)
- T CDirIterator::CurrentFileName()
+ T CDirIterator::CurrentFileName() const
  T CDirIterator::Init(StringView)
  T CDirIterator::IsValid() const
  T CDirIterator::~CDirIterator()
@@ -1124,6 +1126,7 @@
  T CIPCLogCounts::SpewIPCLogCount()
  T CIPCLogCounts::~CIPCLogCounts()
  T CIPCServer::ActivateThread()
+ T CIPCServer::BGetCallbackForLocalClient(int, CallbackMsg_t*)
  T CIPCServer::BMainLoop(CCycleCount*, CCycleCount*)
  T CIPCServer::BMainLoopActive()
  T CIPCServer::BThreadedMainLoop()
@@ -1142,6 +1145,7 @@
  T CIPCServer::GetName()
  T CIPCServer::GetServerPipe(int) const
  T CIPCServer::InitIPC(char const*, bool, bool, bool)
+ T CIPCServer::IsCurrentThreadSingleThreadMainLoop()
  T CIPCServer::ReleaseLocalServerPipe(int)
  T CIPCServer::Run()
  T CIPCServer::SetThreaded(bool)
@@ -1632,6 +1636,21 @@
  T COpenSSLWrapper::OpenSSLLockingCallback(int, int, char const*, int)
  T COpenSSLWrapper::OpenSSLThreadIDCallback()
  T COpenSSLWrapper::Shutdown()
+ T CPackageReservationStatus::ByteSize() const
+ T CPackageReservationStatus::CPackageReservationStatus()
+ T CPackageReservationStatus::Clear()
+ T CPackageReservationStatus::GetCachedSize() const
+ T CPackageReservationStatus::GetMetadata() const
+ T CPackageReservationStatus::IsInitialized() const
+ T CPackageReservationStatus::MergeFrom(CPackageReservationStatus const&)
+ T CPackageReservationStatus::New() const
+ T CPackageReservationStatus::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CPackageReservationStatus::SetCachedSize(int) const
+ T CPackageReservationStatus::SharedCtor()
+ T CPackageReservationStatus::SharedDtor()
+ T CPackageReservationStatus::mutable_reservation_country_code()
+ T CPackageReservationStatus::set_reservation_country_code(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CPackageReservationStatus::~CPackageReservationStatus()
  T CPathString::CPathString(StringView, StringView)
  T CPathString::Clear()
  T CPathString::Validate(CValidator&, char const*)
@@ -1657,6 +1676,7 @@
  T CPoolReference<CMetrics>::CPoolReference(CMetrics&, std::__1::function<void (CMetrics&)> const&)
  T CPoolReference<CMetrics>::CPoolReference(CPoolReference<CMetrics> const&)
  T CPoolReference<CMetrics>::DoNothing(CPoolReference<CMetrics>)
+ T CPoolReference<CMetrics>::Release()
  T CPoolReference<CMetrics>::~CPoolReference()
  T CRC32_ProcessSingleBuffer(void const*, int)
  T CRSAKeyBase::LoadFromAndWipeBuffer(void*, unsigned long)
@@ -1758,6 +1778,7 @@
  T CScheduler::CScheduler(unsigned long long)
  T CScheduler::~CScheduler()
  T CServerPipe::BAcceptConnection()
+ T CServerPipe::BGetCallbackForLocalClient(CallbackMsg_t*)
  T CServerPipe::CServerPipe(IIPCServer*, int)
  T CServerPipe::FreeLastCallback()
  T CServerPipe::HangupPipe(bool)
@@ -2519,12 +2540,13 @@
  T ConCommandBase::GetTargetType() const
  T ConCommandBase::IsBitSet(unsigned int) const
  T ConVar::AddOnChangeCallback(void (*)(void*, ConVar*, char const*), void*, bool)
- T ConVar::ApplyReplicatedValue(char const*, bool)
+ T ConVar::ApplyReplicatedValue(char const*, bool, bool)
  T ConVar::BLocalOverride()
  T ConVar::BReplicated()
  T ConVar::BSendDiscardLocalOverride()
  T ConVar::ChangeStringValue(char const*)
  T ConVar::ClampValue(float&)
+ T ConVar::ClearReplicated()
  T ConVar::ClearSendDiscardLocalOverride()
  T ConVar::ConVar(char const*, char const*, unsigned long long)
  T ConVar::ConVar(char const*, char const*, unsigned long long, char const*)
@@ -4003,6 +4025,8 @@
  b (anonymous namespace)::CMsgProtoBufHeader_reflection_
  b (anonymous namespace)::CMsgProtobufWrapped_descriptor_
  b (anonymous namespace)::CMsgProtobufWrapped_reflection_
+ b (anonymous namespace)::CPackageReservationStatus_descriptor_
+ b (anonymous namespace)::CPackageReservationStatus_reflection_
  b (anonymous namespace)::EClientPersonaStateFlag_descriptor_
  b (anonymous namespace)::EMsgClanAccountFlags_descriptor_
  b (anonymous namespace)::EMsg_descriptor_
@@ -4167,6 +4191,7 @@
  b hksHost
  b hksKVNameRequestHeaders
  b hksPragma
+ b hksRange
  b hksSetCookie
  b hksTransferEncoding
  b hksUserAgent
@@ -4732,6 +4757,7 @@
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgIPAddressBucket_offsets_
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgMulti_offsets_
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgProtobufWrapped_offsets_
+ r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CPackageReservationStatus_offsets_
  r protobuf_AssignDesc_steammessages_5fclientserver_5flogin_2eproto()::CMsgClientAccountInfo_offsets_
  r protobuf_AssignDesc_steammessages_5fclientserver_5flogin_2eproto()::CMsgClientChallengeRequest_offsets_
  r protobuf_AssignDesc_steammessages_5fclientserver_5flogin_2eproto()::CMsgClientChallengeResponse_offsets_
@@ -4989,7 +5015,6 @@
  t _GLOBAL__sub_I_workthreadpool.cpp
  t _GLOBAL__sub_I_zip_helpers.cpp
  t __cxx_global_array_dtor
- t __cxx_global_var_init27
  t _aesni_set_encrypt_key
  t _bn_post4x_internal
  t _bn_postx4x_internal

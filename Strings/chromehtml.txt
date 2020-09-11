@@ -1,8 +1,6 @@
 __TEXT
 __text
 __TEXT
-p=
-p=
 __stubs
 __TEXT
 __stub_helper
@@ -1761,18 +1759,18 @@ vi
 
 
 
-n
 "
 3
+U
 D
-<
-5
+?
+8
+1
 
 @
 +
 A
 e
-
 
 H
 D
@@ -1781,7 +1779,7 @@ D
 
 !
 "
-8
+A
 Hi
 `
 $
@@ -1795,7 +1793,6 @@ $
 A
 Hc
 =
-g
 
 
 

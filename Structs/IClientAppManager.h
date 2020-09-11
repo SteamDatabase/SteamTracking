@@ -57,6 +57,7 @@ public:
     virtual unknown_ret SetAllowDownloadsWhileAnyAppRunning(bool) = 0;
     virtual unknown_ret BAllowDownloadsWhileAnyAppRunning() = 0;
     virtual unknown_ret ChangeAppDownloadQueuePlacement(unsigned int, EAppDownloadQueuePlacement) = 0;
+    virtual unknown_ret SetAppDownloadQueueIndex(unsigned int, int) = 0;
     virtual unknown_ret GetAppDownloadQueueIndex(unsigned int) = 0;
     virtual unknown_ret GetAppAutoUpdateDelayedUntilTime(unsigned int) = 0;
     virtual unknown_ret GetNumAppsInDownloadQueue() = 0;

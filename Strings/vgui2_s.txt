@@ -1,8 +1,8 @@
 __TEXT
 __text
 __TEXT
-r
-r
+`r
+`r
 __stubs
 __TEXT
 __stub_helper
@@ -115,6 +115,7 @@ h
 &
 )
 H
+n
 P5
 10CUtlString
 10CUtlVectorIN12CFontAmalgam10TFontRangeE10CUtlMemoryIS1_EE

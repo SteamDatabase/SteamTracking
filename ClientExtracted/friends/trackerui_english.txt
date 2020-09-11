@@ -438,7 +438,7 @@
 "Friends_WhenThisFriendJoinsGame"				"When %FriendName% joins a game"
 "Friends_WhenThisFriendComesOnline"			"When %FriendName% comes online"
 "Friends_WhenReceiveMessageFromThisFriend"	"When I receive a message from %FriendName%"
-"Friends_InviteInfo_HasAdded"					"has added you to his or her"
+"Friends_InviteInfo_HasAdded"					"has added you to their"
 "Friends_InviteInfo_FriendsList"				"Friends List"
 "Friends_InviteInfo_BeenInvited"				"You have been invited"
 "Friends_InviteInfo_JoinGroup"				"to join Steam group"

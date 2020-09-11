@@ -151,6 +151,7 @@
  B CMsgZoomToElementAtPosition::default_instance_
  B CMsgZoomToElementAtPositionResponse::default_instance_
  B CMsgZoomToFocusedElement::default_instance_
+ B CURLHelper::s_eDefaultRealm
  B CUtlSymbol::s_pSymbolTable
  B InterfaceReg::s_pInterfaceRegs
  B KeyValues::sm_pchKeyNameBase
@@ -2824,7 +2825,7 @@
  T CDirIterator::CDirIterator(StringView, StringView)
  T CDirIterator::CurrentFileCreateTime() const
  T CDirIterator::CurrentFileLength() const
- T CDirIterator::CurrentFileName()
+ T CDirIterator::CurrentFileName() const
  T CDirIterator::CurrentFileWriteTime() const
  T CDirIterator::Init(StringView)
  T CDirIterator::~CDirIterator()
@@ -5171,6 +5172,7 @@
  T CTextureIdProperty::GetData(vgui::Panel*, KeyValues*, PanelAnimationMapEntry*)
  T CTextureIdProperty::InitFromDefault(vgui::Panel*, PanelAnimationMapEntry*)
  T CTextureIdProperty::SetData(vgui::Panel*, KeyValues*, PanelAnimationMapEntry*)
+ T CURLHelper::SetDefaultRealm(ESteamRealm)
  T CUtlBuffer::AddNullTermination()
  T CUtlBuffer::CUtlBuffer(int, int, int)
  T CUtlBuffer::CheckArbitraryPeekGet(int, int&)
@@ -5435,9 +5437,11 @@
  T CUtlRBTreeBase<unsigned short, CDefRBTreeBalanceListener<unsigned short> >::_RotateRight(unsigned short, unsigned long, void*)
  T CUtlSortVector<vgui::EditablePanel::LayoutPanel_t>::Insert(vgui::EditablePanel::LayoutPanel_t const&)
  T CUtlString::AssertStringTooLong()
+ T CUtlString::Format(char const*, ...)
  T CUtlString::Replace(char const*, char const*)
  T CUtlString::ReplaceInternal(char const*, char const*, char const* (*)(char const*, char const*))
  T CUtlString::SetValue(char const*)
+ T CUtlString::VFormat(char const*, __va_list_tag*)
  T CUtlStringBuilder::Data::MoveToHeap()
  T CUtlStringBuilder::Data::SetError(bool)
  T CUtlStringBuilder::Data::SetLength(unsigned long)
@@ -10132,6 +10136,7 @@
  typeinfo for std::exception
  typeinfo for std::length_error
  usleep
+ vasprintf
  vsnprintf
  vstdlib_wcsicmp
  vstdlib_wcsnicmp

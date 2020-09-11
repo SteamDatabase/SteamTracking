@@ -94,6 +94,7 @@
  B g_pVGUIPaintEvent
  B g_szExecutablePath
  B g_szWindowBlacklist
+ B s_pfnglFlushRenderAPPLE
  CFAllocatorAllocate
  CFAllocatorDeallocate
  CFRelease
@@ -535,6 +536,7 @@
  T SteamCGGetLastMouseDelta(int*, int*)
  T SteamCGLChoosePixelFormat(_CGLPixelFormatAttribute const*, _CGLPixelFormatObject**, int*)
  T SteamCGLFlushDrawable(_CGLContextObject*)
+ T SteamCGLSetCurrentContext(_CGLContextObject*)
  T SteamCGWarpMouseCursorPosition(CGPoint)
  T SteamHideCursor()
  T SteamInitCursor()
@@ -547,6 +549,7 @@
  T SteamThreadTools::CThreadLocalPtr<SteamThreadTools::CThread>::~CThreadLocalPtr()
  T SteamThreadTools::CThreadMutex::~CThreadMutex()
  T SteamThreadTools::InitMainThread()
+ T SteamglFlushRenderAPPLE(__GLIContextRec*)
  T StopMovieRecording()
  T TakeScreenshotNextFrame(bool)
  T ThreadInterlockedAssignIf64
@@ -779,29 +782,29 @@
  close$UNIX2003
  d CBaseOverlayRenderer::UpdateNotificationToastPosition()::iLastPosition
  d __block_descriptor_tmp
- d __block_descriptor_tmp165
  d __block_descriptor_tmp167
- d __block_descriptor_tmp267
- d __block_descriptor_tmp276
- d __block_descriptor_tmp362
- d __block_descriptor_tmp375
+ d __block_descriptor_tmp169
+ d __block_descriptor_tmp269
+ d __block_descriptor_tmp278
+ d __block_descriptor_tmp364
+ d __block_descriptor_tmp377
  d __block_descriptor_tmp58
- d __block_descriptor_tmp60
  d __block_descriptor_tmp61
- d __block_descriptor_tmp63
+ d __block_descriptor_tmp62
  d __block_descriptor_tmp65
- d __block_descriptor_tmp68
+ d __block_descriptor_tmp67
+ d __block_descriptor_tmp70
  d __block_literal_global
- d __block_literal_global166
  d __block_literal_global168
- d __block_literal_global268
- d __block_literal_global277
+ d __block_literal_global170
+ d __block_literal_global270
+ d __block_literal_global279
  d __block_literal_global59
- d __block_literal_global61
  d __block_literal_global62
- d __block_literal_global64
+ d __block_literal_global63
  d __block_literal_global66
- d __block_literal_global69
+ d __block_literal_global68
+ d __block_literal_global71
  d _interpose_CFRunLoopRun
  d _interpose_CFRunLoopRunInMode
  d _interpose_CGAssociateMouseAndMouseCursorPosition
@@ -813,6 +816,7 @@
  d _interpose_CGGetLastMouseDelta
  d _interpose_CGLChoosePixelFormat
  d _interpose_CGLFlushDrawable
+ d _interpose_CGLSetCurrentContext
  d _interpose_CGWarpMouseCursorPosition
  d _interpose_HideCursor
  d _interpose_InitCursor

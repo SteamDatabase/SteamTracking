@@ -13,6 +13,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(clientkeymgr.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(clientmetrics.pb.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(clientmodules.o)
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(clientupdatehostscache.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(commonkeycode.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(completionportmanager.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(completionportmanager_posix.o)
@@ -430,6 +431,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/voiceclient.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/voiceencoder_opus.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/voiceencoder_silk.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/vrcommon.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/vrmanager.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/vrpathregistry.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/vthumbstick.o
@@ -981,6 +983,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/clientmetrics.pb.cc
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/clientmetrics.pb.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/clientsubscriptions.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/clientupdatehostscache.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/commonkeycode.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/completionportmanager.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/completionportmanager.h
@@ -1067,6 +1070,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/jpegloader_common.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/keypair.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/keypair.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/keyvaluesignature.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/language.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/logfile.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/logfile.h

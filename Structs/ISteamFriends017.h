@@ -76,4 +76,5 @@ public:
     virtual unknown_ret GetNumChatsWithUnreadPriorityMessages() = 0;
     virtual unknown_ret ActivateGameOverlayRemotePlayTogetherInviteDialog(CSteamID) = 0;
     virtual unknown_ret RegisterProtocolInOverlayBrowser(char const*) = 0;
+    virtual unknown_ret ActivateGameOverlayInviteDialogConnectString(char const*) = 0;
 };

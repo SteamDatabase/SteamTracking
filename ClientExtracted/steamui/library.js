@@ -1,5 +1,5 @@
 /* Third-party software licenses can be found at licenses.txt */
-var CLSTAMP = "6072947";
+var CLSTAMP = "6086525";
 !(function(a) {
   function e(e) {
     for (
@@ -25,8 +25,8 @@ var CLSTAMP = "6072947";
     return e;
   }
   var r = {},
-    f = { 5: 0 },
-    h = { 5: 0 },
+    f = { 4: 0 },
+    h = { 4: 0 },
     u = [];
   function d(e) {
     if (r[e]) return r[e].exports;
@@ -38,7 +38,7 @@ var CLSTAMP = "6072947";
     f[u]
       ? e.push(f[u])
       : 0 !== f[u] &&
-        { 1: 1, 2: 1, 3: 1, 6: 1 }[u] &&
+        { 1: 1, 2: 1, 5: 1 }[u] &&
         e.push(
           (f[u] = new Promise(function(e, n) {
             for (
@@ -46,10 +46,9 @@ var CLSTAMP = "6072947";
                   "css\\" +
                   ({
                     1: "awardicon",
-                    2: "awardmodal",
-                    3: "broadcast",
-                    4: "libraries/libraries_cm",
-                    6: "libraryroot"
+                    2: "broadcast",
+                    3: "libraries/libraries_cm",
+                    5: "libraryroot"
                   }[u] || u) +
                   ".css",
                 c = d.p + t,
@@ -114,10 +113,9 @@ var CLSTAMP = "6072947";
               "" +
               ({
                 1: "awardicon",
-                2: "awardmodal",
-                3: "broadcast",
-                4: "libraries/libraries_cm",
-                6: "libraryroot"
+                2: "broadcast",
+                3: "libraries/libraries_cm",
+                5: "libraryroot"
               }[(n = u)] || n) +
               ".js"),
             (o = new Error()),
@@ -241,8 +239,8 @@ var CLSTAMP = "6072947";
               o.a.createElement(
                 "div",
                 { className: a.a.Throbber },
-                o.a.createElement(i.ib, { className: a.a.base }),
-                o.a.createElement(i.ib, { className: a.a.blur })
+                o.a.createElement(i.jb, { className: a.a.base }),
+                o.a.createElement(i.jb, { className: a.a.blur })
               )
             );
             return o.a.createElement(
@@ -311,7 +309,7 @@ var CLSTAMP = "6072947";
   },
   "6Y59": function(e, t, r) {
     "use strict";
-    r.d(t, "bb", function() {
+    r.d(t, "cb", function() {
       return s;
     }),
       r.d(t, "r", function() {
@@ -326,16 +324,16 @@ var CLSTAMP = "6072947";
       r.d(t, "v", function() {
         return d;
       }),
-      r.d(t, "hb", function() {
+      r.d(t, "ib", function() {
         return m;
       }),
-      r.d(t, "tb", function() {
+      r.d(t, "vb", function() {
         return p;
       }),
-      r.d(t, "ub", function() {
+      r.d(t, "wb", function() {
         return g;
       }),
-      r.d(t, "qb", function() {
+      r.d(t, "sb", function() {
         return x;
       }),
       r.d(t, "T", function() {
@@ -344,7 +342,7 @@ var CLSTAMP = "6072947";
       r.d(t, "O", function() {
         return v;
       }),
-      r.d(t, "rb", function() {
+      r.d(t, "tb", function() {
         return b;
       }),
       r.d(t, "R", function() {
@@ -353,7 +351,7 @@ var CLSTAMP = "6072947";
       r.d(t, "Q", function() {
         return _;
       }),
-      r.d(t, "db", function() {
+      r.d(t, "eb", function() {
         return k;
       }),
       r.d(t, "j", function() {
@@ -365,7 +363,7 @@ var CLSTAMP = "6072947";
       r.d(t, "G", function() {
         return L;
       }),
-      r.d(t, "ib", function() {
+      r.d(t, "jb", function() {
         return S;
       }),
       r.d(t, "f", function() {
@@ -375,61 +373,61 @@ var CLSTAMP = "6072947";
         return N;
       }),
       r.d(t, "q", function() {
-        return B;
-      }),
-      r.d(t, "J", function() {
         return T;
       }),
-      r.d(t, "M", function() {
-        return V;
+      r.d(t, "J", function() {
+        return B;
       }),
-      r.d(t, "X", function() {
+      r.d(t, "M", function() {
         return I;
       }),
-      r.d(t, "W", function() {
+      r.d(t, "Y", function() {
         return G;
       }),
-      r.d(t, "lb", function() {
+      r.d(t, "X", function() {
+        return V;
+      }),
+      r.d(t, "nb", function() {
         return O;
       }),
       r.d(t, "y", function() {
-        return z;
+        return A;
       }),
       r.d(t, "z", function() {
-        return A;
+        return z;
       }),
       r.d(t, "p", function() {
         return j;
       }),
       r.d(t, "K", function() {
-        return D;
-      }),
-      r.d(t, "fb", function() {
         return W;
       }),
-      r.d(t, "pb", function() {
+      r.d(t, "gb", function() {
+        return D;
+      }),
+      r.d(t, "rb", function() {
         return F;
       }),
       r.d(t, "A", function() {
         return P;
       }),
-      r.d(t, "Z", function() {
+      r.d(t, "ab", function() {
         return R;
       }),
-      r.d(t, "ab", function() {
-        return H;
+      r.d(t, "bb", function() {
+        return U;
       }),
       r.d(t, "g", function() {
-        return U;
+        return H;
       }),
       r.d(t, "N", function() {
         return Y;
       }),
-      r.d(t, "ob", function() {
-        return Z;
+      r.d(t, "qb", function() {
+        return X;
       }),
       r.d(t, "E", function() {
-        return X;
+        return Z;
       }),
       r.d(t, "w", function() {
         return q;
@@ -437,13 +435,13 @@ var CLSTAMP = "6072947";
       r.d(t, "x", function() {
         return K;
       }),
-      r.d(t, "nb", function() {
+      r.d(t, "pb", function() {
         return J;
       }),
-      r.d(t, "vb", function() {
+      r.d(t, "xb", function() {
         return Q;
       }),
-      r.d(t, "mb", function() {
+      r.d(t, "ob", function() {
         return $;
       }),
       r.d(t, "i", function() {
@@ -455,7 +453,7 @@ var CLSTAMP = "6072947";
       r.d(t, "B", function() {
         return re;
       }),
-      r.d(t, "eb", function() {
+      r.d(t, "fb", function() {
         return ne;
       }),
       r.d(t, "s", function() {
@@ -470,7 +468,7 @@ var CLSTAMP = "6072947";
       r.d(t, "U", function() {
         return le;
       }),
-      r.d(t, "V", function() {
+      r.d(t, "W", function() {
         return ae;
       }),
       r.d(t, "u", function() {
@@ -482,7 +480,7 @@ var CLSTAMP = "6072947";
       r.d(t, "t", function() {
         return fe;
       }),
-      r.d(t, "cb", function() {
+      r.d(t, "db", function() {
         return he;
       }),
       r.d(t, "P", function() {
@@ -497,7 +495,7 @@ var CLSTAMP = "6072947";
       r.d(t, "b", function() {
         return ge;
       }),
-      r.d(t, "gb", function() {
+      r.d(t, "hb", function() {
         return xe;
       }),
       r.d(t, "L", function() {
@@ -512,26 +510,32 @@ var CLSTAMP = "6072947";
       r.d(t, "n", function() {
         return Ee;
       }),
-      r.d(t, "kb", function() {
+      r.d(t, "lb", function() {
         return _e;
       }),
-      r.d(t, "jb", function() {
+      r.d(t, "kb", function() {
         return ke;
       }),
-      r.d(t, "Y", function() {
+      r.d(t, "Z", function() {
         return ye;
       }),
-      r.d(t, "sb", function() {
+      r.d(t, "ub", function() {
         return Me;
       }),
       r.d(t, "h", function() {
         return Le;
       }),
-      r.d(t, "e", function() {
+      r.d(t, "mb", function() {
         return Se;
       }),
-      r.d(t, "H", function() {
+      r.d(t, "e", function() {
         return Ce;
+      }),
+      r.d(t, "H", function() {
+        return Ne;
+      }),
+      r.d(t, "V", function() {
+        return Te;
       });
     var n = r("mrSG"),
       o = r("q1tI"),
@@ -1576,7 +1580,7 @@ var CLSTAMP = "6072947";
         })
       );
     }
-    function B(e) {
+    function T(e) {
       return o.createElement(
         "svg",
         {
@@ -1612,7 +1616,7 @@ var CLSTAMP = "6072947";
           })
       );
     }
-    function T() {
+    function B() {
       return o.createElement(
         "svg",
         {
@@ -1648,7 +1652,7 @@ var CLSTAMP = "6072947";
         })
       );
     }
-    function V() {
+    function I() {
       return o.createElement(
         "svg",
         {
@@ -1674,7 +1678,7 @@ var CLSTAMP = "6072947";
         })
       );
     }
-    function I() {
+    function G() {
       return o.createElement(
         "svg",
         {
@@ -1707,7 +1711,7 @@ var CLSTAMP = "6072947";
         })
       );
     }
-    function G() {
+    function V() {
       return o.createElement(
         "svg",
         {
@@ -1814,7 +1818,7 @@ var CLSTAMP = "6072947";
         )
       );
     }
-    function z(e) {
+    function A(e) {
       return o.createElement(
         "svg",
         {
@@ -1835,7 +1839,7 @@ var CLSTAMP = "6072947";
         })
       );
     }
-    function A(e) {
+    function z(e) {
       return o.createElement(
         "svg",
         {
@@ -1934,7 +1938,7 @@ var CLSTAMP = "6072947";
         })
       );
     }
-    function D(e) {
+    function W(e) {
       return o.createElement(
         "svg",
         {
@@ -1972,7 +1976,7 @@ var CLSTAMP = "6072947";
         })
       );
     }
-    function W(e) {
+    function D(e) {
       var t = Object(l.a)(
         "SVGIcon_Button",
         "SVGIcon_SteamLogo",
@@ -2093,7 +2097,7 @@ var CLSTAMP = "6072947";
         )
       );
     }
-    function H() {
+    function U() {
       return o.createElement(
         "svg",
         {
@@ -2121,7 +2125,7 @@ var CLSTAMP = "6072947";
         })
       );
     }
-    function U() {
+    function H() {
       return o.createElement(
         "svg",
         {
@@ -2162,7 +2166,7 @@ var CLSTAMP = "6072947";
         })
       );
     }
-    function Z() {
+    function X() {
       return o.createElement(
         "svg",
         {
@@ -2186,7 +2190,7 @@ var CLSTAMP = "6072947";
         })
       );
     }
-    function X() {
+    function Z() {
       return o.createElement(
         "svg",
         {
@@ -3188,6 +3192,61 @@ var CLSTAMP = "6072947";
       );
     }
     function Se(e) {
+      return o.createElement(
+        "svg",
+        Object(n.a)(
+          {
+            version: "1.1",
+            xmlns: "http://www.w3.org/2000/svg",
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256"
+          },
+          e
+        ),
+        o.createElement(
+          "g",
+          { className: "arrow" },
+          o.createElement("line", {
+            fill: "none",
+            stroke: "#ffffff",
+            strokeWidth: "12",
+            strokeLinecap: "round",
+            strokeMiterlimit: "10",
+            x1: "129",
+            y1: "232",
+            x2: "129",
+            y2: "74"
+          }),
+          o.createElement("polyline", {
+            fill: "none",
+            stroke: "#ffffff",
+            strokeWidth: "12",
+            strokeLinecap: "round",
+            strokeMiterlimit: "10",
+            points: "83.75,116.375 129,74 174.25,116.375 "
+          })
+        ),
+        o.createElement(
+          "g",
+          { className: "top" },
+          o.createElement("line", {
+            fill: "none",
+            stroke: "#ffffff",
+            strokeWidth: "12",
+            strokeLinecap: "round",
+            strokeMiterlimit: "10",
+            x1: "40",
+            y1: "44",
+            x2: "216",
+            y2: "44"
+          })
+        )
+      );
+    }
+    function Ce(e) {
       var t = e.className,
         r = e.color;
       return o.createElement(
@@ -3216,7 +3275,7 @@ var CLSTAMP = "6072947";
         })
       );
     }
-    function Ce(e) {
+    function Ne(e) {
       var t = e.className;
       Object(n.f)(e, ["className"]);
       return o.createElement(
@@ -3396,6 +3455,35 @@ var CLSTAMP = "6072947";
         )
       );
     }
+    function Te() {
+      return o.createElement(
+        "svg",
+        {
+          height: "100px",
+          width: "100px",
+          fill: "#000000",
+          x: "0px",
+          y: "0px",
+          viewBox: "0 0 101 101",
+          enableBackground: "new 0 0 101 101",
+          xmlns: "http://www.w3.org/2000/svg",
+          version: "1.1"
+        },
+        o.createElement(
+          "g",
+          null,
+          o.createElement("path", {
+            d:
+              "M16.929,30.115 M84.446,84.262c0-37.271-30.323-67.613-67.587-67.613l0,0l0.069,13.467   c29.777,0.039,53.995,24.256,54.051,54.042L84.446,84.262z"
+          }),
+          o.createElement("path", {
+            d:
+              "M16.843,53.089 M61.472,84.262c0-24.616-20.026-44.639-44.628-44.639l0,0v13.466c17.182,0,31.161,13.984,31.161,31.173   H61.472z"
+          }),
+          o.createElement("circle", { cx: "26.695", cy: "74.305", r: "9.812" })
+        )
+      );
+    }
   },
   BNtT: function(e, t, r) {
     "use strict";
@@ -3433,7 +3521,7 @@ var CLSTAMP = "6072947";
           switch (e.label) {
             case 0:
               for (t = [], r = 0; r < 29; r++)
-                (n = Object(s.d)(r)),
+                (n = Object(s.e)(r)),
                   (c = "korean" == n ? "koreana" : n),
                   t.push(i(c));
               return (o = u), [4, Promise.all(t)];
@@ -3694,8 +3782,9 @@ var CLSTAMP = "6072947";
       for (var n = [], t = 1; t < arguments.length; t++)
         n[t - 1] = arguments[t];
       var r = d.LocalizeString(e);
-      return r
-        ? (0 < n.length &&
+      return void 0 === r
+        ? e
+        : (0 < n.length &&
             (r = r.replace(/%(?:(\d+)\$)?s/g, function(e, t) {
               if (t <= n.length && 1 <= t) {
                 var r = n[t - 1];
@@ -3703,14 +3792,13 @@ var CLSTAMP = "6072947";
               }
               return e;
             })),
-          r)
-        : e;
+          r);
     }
     function l(e) {
       for (var t = [], r = 1; r < arguments.length; r++)
         t[r - 1] = arguments[r];
       var n = d.LocalizeString(e);
-      if (!n) return e;
+      if (void 0 === n) return e;
       for (var c, o = [], i = /(.*?)%(\d+)\$s/g, l = 0; (c = i.exec(n)); ) {
         (l += c[0].length), o.push(c[1]);
         var a = parseInt(c[2]);
@@ -3830,13 +3918,18 @@ var CLSTAMP = "6072947";
             ? navigator.languages
             : ["en-US"];
         }),
-        (e.prototype.GetELanguageFallbackOrder = function() {
+        (e.prototype.GetELanguageFallbackOrder = function(e) {
+          void 0 === e && (e = !1);
           var t = new Array();
           return (
-            t.push(Object(n.f)(c.b.LANGUAGE)),
+            t.push(Object(n.g)(c.b.LANGUAGE)),
             (c.b.SUPPORTED_LANGUAGES || []).forEach(function(e) {
-              e.value != c.b.LANGUAGE && t.push(Object(n.f)(e.value));
+              e.value != c.b.LANGUAGE && t.push(Object(n.g)(e.value));
             }),
+            e &&
+              n.h.forEach(function(e) {
+                -1 == t.indexOf(e) && t.push(e);
+              }),
             t
           );
         }),
@@ -3844,14 +3937,16 @@ var CLSTAMP = "6072947";
           this.m_rgLocalesToUse = e;
         }),
         (e.prototype.LocalizeString = function(e) {
-          if ((0, !e || 0 == e.length || "#" != e.charAt(0))) return "";
-          var t = this.m_mapTokens.get(e.substring(1));
-          return void 0 === t ? "" : t;
+          if ((0, e && 0 != e.length && "#" == e.charAt(0))) {
+            var t = this.m_mapTokens.get(e.substring(1));
+            if (void 0 !== t) return t;
+          }
         }),
         (e.prototype.LocalizeStringFromFallback = function(e) {
-          if (!e || 0 == e.length || "#" != e.charAt(0)) return "";
-          var t = this.m_mapFallbackTokens.get(e.substring(1));
-          return void 0 === t ? "" : t;
+          if (e && 0 != e.length && "#" == e.charAt(0)) {
+            var t = this.m_mapFallbackTokens.get(e.substring(1));
+            if (void 0 !== t) return t;
+          }
         }),
         e
       );
@@ -3892,67 +3987,95 @@ var CLSTAMP = "6072947";
         return c;
       }),
       r.d(t, "i", function() {
-        return u;
+        return a;
       }),
       r.d(t, "g", function() {
         return o;
       }),
       r.d(t, "h", function() {
-        return f;
+        return l;
       }),
       r.d(t, "j", function() {
-        return m;
-      }),
-      r.d(t, "a", function() {
         return p;
       }),
-      r.d(t, "b", function() {
+      r.d(t, "a", function() {
         return g;
       }),
-      r.d(t, "d", function() {
-        return _;
+      r.d(t, "b", function() {
+        return x;
       }),
-      r.d(t, "c", function() {
+      r.d(t, "d", function() {
         return k;
       }),
+      r.d(t, "c", function() {
+        return y;
+      }),
       r.d(t, "e", function() {
-        return M;
+        return L;
       });
-    var a = r("TLQK"),
-      i = r("CdLH"),
-      s = r("Gp1o");
-    function n(e, t) {
-      void 0 === t && (t = !1);
-      var r = t ? "#TimeInterval_" : "#TimeSince_";
-      return e >= 2 * i.f.PerYear
-        ? Object(a.d)(r + "XYears", Math.floor(e / i.f.PerYear))
-        : e >= i.f.PerYear
-        ? (e -= i.f.PerYear) >= 2 * i.f.PerMonth
-          ? Object(a.d)(r + "1YearXMonths", Math.floor(e / i.f.PerMonth))
-          : Object(a.d)(r + "1Year")
-        : e >= 2 * i.f.PerMonth
-        ? Object(a.d)(r + "XMonths", Math.floor(e / i.f.PerMonth))
-        : e >= 2 * i.f.PerWeek
-        ? Object(a.d)(r + "XWeeks", Math.floor(e / i.f.PerWeek))
-        : e >= i.f.PerWeek
-        ? Object(a.d)(r + "1Week", Math.floor(e / i.f.PerWeek))
-        : e >= 2 * i.f.PerDay
-        ? Object(a.d)(r + "XDays", Math.floor(e / i.f.PerDay))
-        : e >= i.f.PerDay
-        ? (e -= i.f.PerDay) >= 2 * i.f.PerHour
-          ? Object(a.d)(r + "1DayXHours", Math.floor(e / i.f.PerHour))
-          : Object(a.d)(r + "1Day")
-        : e >= 2 * i.f.PerHour
-        ? Object(a.d)(r + "XHours", Math.floor(e / i.f.PerHour))
-        : e >= i.f.PerHour
-        ? (e -= i.f.PerHour) >= 2 * i.f.PerMinute
-          ? Object(a.d)(r + "1HourXMinutes", Math.floor(e / i.f.PerMinute))
-          : Object(a.d)(r + "1Hour")
-        : e >= 2 * i.f.PerMinute
-        ? Object(a.d)(r + "XMinutes", Math.floor(e / i.f.PerMinute))
-        : e >= i.f.PerMinute
-        ? Object(a.d)(r + "1Minute")
-        : Object(a.d)(r + "LessThanAMinute");
+    var s = r("mrSG"),
+      u = r("TLQK"),
+      f = r("CdLH"),
+      h = r("Gp1o");
+    function n(e, t, r) {
+      var n =
+          "boolean" == typeof t
+            ? { bExcludeAgo: t, bForceSingleUnits: r, bHighGranularity: !1 }
+            : Object(s.a)(
+                {
+                  bExcludeAgo: !1,
+                  bForceSingleUnits: !1,
+                  bHighGranularity: !1
+                },
+                t
+              ),
+        c = n.bExcludeAgo ? "#TimeInterval_" : "#TimeSince_";
+      if (e >= 2 * f.f.PerYear)
+        return Object(u.d)(c + "XYears", Math.floor(e / f.f.PerYear));
+      if (e >= f.f.PerYear)
+        return (e -= f.f.PerYear) >= 2 * f.f.PerMonth && !n.bForceSingleUnits
+          ? Object(u.d)(c + "1YearXMonths", Math.floor(e / f.f.PerMonth))
+          : Object(u.d)(c + "1Year");
+      if (e >= 2 * f.f.PerMonth)
+        return Object(u.d)(c + "XMonths", Math.floor(e / f.f.PerMonth));
+      if (e >= 2 * f.f.PerWeek)
+        return Object(u.d)(c + "XWeeks", Math.floor(e / f.f.PerWeek));
+      if (e >= f.f.PerWeek)
+        return Object(u.d)(c + "1Week", Math.floor(e / f.f.PerWeek));
+      if (e >= 2 * f.f.PerDay)
+        return Object(u.d)(c + "XDays", Math.floor(e / f.f.PerDay));
+      if (e >= f.f.PerDay)
+        return (e -= f.f.PerDay) >= 2 * f.f.PerHour && !n.bForceSingleUnits
+          ? Object(u.d)(c + "1DayXHours", Math.floor(e / f.f.PerHour))
+          : Object(u.d)(c + "1Day");
+      if (e >= 2 * f.f.PerHour)
+        return Object(u.d)(c + "XHours", Math.floor(e / f.f.PerHour));
+      if (e >= f.f.PerHour)
+        return (e -= f.f.PerHour) >= 2 * f.f.PerMinute && !n.bForceSingleUnits
+          ? Object(u.d)(c + "1HourXMinutes", Math.floor(e / f.f.PerMinute))
+          : Object(u.d)(c + "1Hour");
+      if (e >= 2 * f.f.PerMinute) {
+        var o = Math.floor(e / f.f.PerMinute),
+          i = e % f.f.PerMinute;
+        return n.bHighGranularity && 0 != i
+          ? 1 == i
+            ? Object(u.d)(c + "XMinutes1Second", o)
+            : Object(u.d)(c + "XMinutesXSeconds", o, i)
+          : Object(u.d)(c + "XMinutes", o);
+      }
+      if (e >= f.f.PerMinute) {
+        i = e % f.f.PerMinute;
+        return n.bHighGranularity && 0 != i
+          ? 1 == i
+            ? Object(u.d)(c + "1Minute1Second")
+            : Object(u.d)(c + "1MinuteXSeconds", i)
+          : Object(u.d)(c + "1Minute");
+      }
+      return n.bHighGranularity
+        ? 1 == e
+          ? Object(u.d)(c + "1Second")
+          : Object(u.d)(c + "XSeconds", e)
+        : Object(u.d)(c + "LessThanAMinute");
     }
     function c(e, t) {
       var r = {
@@ -3961,37 +4084,37 @@ var CLSTAMP = "6072947";
         day: "numeric",
         year: t ? void 0 : "numeric"
       };
-      return new Date(1e3 * e).toLocaleDateString(a.c.GetPreferredLocales(), r);
+      return new Date(1e3 * e).toLocaleDateString(u.c.GetPreferredLocales(), r);
     }
-    function u(e) {
+    function a(e) {
       var t = new Date(1e3 * e),
         r = t.setHours(0, 0, 0, 0);
-      if ((n = h.get(r))) return n;
-      var n = t.toLocaleDateString(a.c.GetPreferredLocales(), {
+      if ((n = d.get(r))) return n;
+      var n = t.toLocaleDateString(u.c.GetPreferredLocales(), {
         year: "numeric",
         month: "short",
         day: "numeric"
       });
-      return h.set(r, n), n;
+      return d.set(r, n), n;
     }
     function o(e) {
-      return new Date(1e3 * e).toLocaleTimeString(a.c.GetPreferredLocales(), {
+      return new Date(1e3 * e).toLocaleTimeString(u.c.GetPreferredLocales(), {
         hour: "numeric",
         minute: "numeric"
       });
     }
-    var l = new Map();
-    function f(e) {
+    var i = new Map();
+    function l(e) {
       var t = new Date(1e3 * e),
-        r = a.c.GetPreferredLocales(),
+        r = u.c.GetPreferredLocales(),
         n = (function(e) {
-          if (!0 === (r = l.get(e)) || !1 === r) return r;
+          if (!0 === (r = i.get(e)) || !1 === r) return r;
           var t = new Date();
           t.setHours(15);
           var r =
             t.toLocaleTimeString(e, { hour: "numeric" }) ==
             t.toLocaleTimeString(e, { hour: "numeric", hour12: !1 });
-          return l.set(e, r), r;
+          return i.set(e, r), r;
         })(r[0]);
       return t.toLocaleTimeString(
         r,
@@ -4000,139 +4123,150 @@ var CLSTAMP = "6072947";
           : { hour: "numeric", hour12: !0 }
       );
     }
-    var h = new Map(),
-      d = new Map();
-    function m(e, t) {
+    var d = new Map(),
+      m = new Map();
+    function p(e, t) {
       var r = new Date(),
         n = new Date(1e3 * e);
-      if (n.getFullYear() != r.getFullYear()) return u(e);
-      s.c(new Date().setHours(24, 0, 0, 0) - r.getTime());
+      if (n.getFullYear() != r.getFullYear()) return a(e);
+      h.c(new Date().setHours(24, 0, 0, 0) - r.getTime());
       var c = new Date();
       if ((c.setHours(0, 0, 0, 0), c <= n)) {
         if ((c.setDate(c.getDate() + 1), n < c))
-          return Object(a.d)("#Time_Today");
+          return Object(u.d)("#Time_Today");
         if ((c.setDate(c.getDate() + 1), n < c))
-          return Object(a.d)("#Time_Tomorrow");
+          return Object(u.d)("#Time_Tomorrow");
       } else if ((c.setDate(c.getDate() - 1), c <= n))
-        return Object(a.d)("#Time_Yesterday");
+        return Object(u.d)("#Time_Yesterday");
       var o = { month: t ? "long" : "short", day: "numeric" },
         i = n.setHours(0, 0, 0, 0) + o.month,
-        l = d.get(i);
+        l = m.get(i);
       return (
         l ||
-        ((l = n.toLocaleDateString(a.c.GetPreferredLocales(), o)),
-        d.set(i, l),
+        ((l = n.toLocaleDateString(u.c.GetPreferredLocales(), o)),
+        m.set(i, l),
         l)
       );
     }
-    function p(e) {
-      var t = new Date(1e3 * e),
-        r = new Date();
-      if (r < t)
-        return (
-          s.c(t.getTime() - r.getTime()),
-          (t.getFullYear() == r.getFullYear() ? y : L)(t)
-        );
-      s.c(new Date().setHours(24, 0, 0, 0) - r.getTime());
-      var n = new Date();
-      if ((n.setHours(0, 0, 0, 0), n <= t)) return Object(a.d)("#Time_Today");
-      if ((n.setDate(n.getDate() - 1), n <= t))
-        return Object(a.d)("#Time_Yesterday");
-      if ((n.setDate(n.getDate() - 5), n <= t))
-        return Object(a.d)("#TimeSince_ThisWeek");
-      var c = new Date(n);
-      if (
-        (n.setDate(n.getDate() - 21),
-        n <= t ||
-          (t.getMonth() == r.getMonth() && t.getFullYear() == r.getFullYear()))
-      ) {
-        var o =
-          Math.floor((c.valueOf() - t.valueOf()) / (1e3 * i.f.PerWeek)) + 1;
-        return 1 == o
-          ? Object(a.d)("#TimeSince_1Week")
-          : Object(a.d)("#TimeSince_XWeeks", o);
+    function g(e, t) {
+      var r = new Date(1e3 * e),
+        n = new Date(),
+        c = Object(s.a)({ bGranularFutureTime: !1 }, t);
+      if (n < r) {
+        if (!c.bGranularFutureTime)
+          return (
+            h.c(r.getTime() - n.getTime()),
+            (r.getFullYear() == n.getFullYear() ? M : S)(r)
+          );
+        h.c(new Date().setHours(24, 0, 0, 0) - n.getTime());
+        var o = new Date();
+        return (o.setHours(0, 0, 0, 0), o.setDate(o.getDate() + 1), r < o)
+          ? Object(u.d)("#Time_Today")
+          : (o.setDate(o.getDate() + 1),
+            r < o
+              ? Object(u.d)("#Time_Tomorrow")
+              : (o.setDate(o.getDate() + 5), r < o ? y(r) : k(r, !0)));
       }
-      return (t.getFullYear() == r.getFullYear() ? y : L)(t);
+      h.c(new Date().setHours(24, 0, 0, 0) - n.getTime());
+      var i = new Date();
+      if ((i.setHours(0, 0, 0, 0), i <= r)) return Object(u.d)("#Time_Today");
+      if ((i.setDate(i.getDate() - 1), i <= r))
+        return Object(u.d)("#Time_Yesterday");
+      if ((i.setDate(i.getDate() - 5), i <= r))
+        return Object(u.d)("#TimeSince_ThisWeek");
+      var l = new Date(i);
+      if (
+        (i.setDate(i.getDate() - 21),
+        i <= r ||
+          (r.getMonth() == n.getMonth() && r.getFullYear() == n.getFullYear()))
+      ) {
+        var a =
+          Math.floor((l.valueOf() - r.valueOf()) / (1e3 * f.f.PerWeek)) + 1;
+        return 1 == a
+          ? Object(u.d)("#TimeSince_1Week")
+          : Object(u.d)("#TimeSince_XWeeks", a);
+      }
+      return (r.getFullYear() == n.getFullYear() ? M : S)(r);
     }
-    function g(e) {
+    function x(e) {
       var t = new Date(1e3 * e),
         r = new Date();
-      s.c(new Date().setHours(24, 0, 0, 0) - r.getTime());
+      h.c(new Date().setHours(24, 0, 0, 0) - r.getTime());
       var n = new Date();
       return (
         n.getDate() < 15 && n.setMonth(n.getMonth() - 1),
-        (n = Object(i.e)(n)) <= t
-          ? Object(a.d)("#Time_Recent")
+        (n = Object(f.e)(n)) <= t
+          ? Object(u.d)("#Time_Recent")
           : (t.getFullYear() == r.getFullYear()
-              ? y
+              ? M
               : r.getMonth() < 6 && t.getFullYear() == r.getFullYear() - 1
-              ? L
-              : M)(t)
+              ? S
+              : L)(t)
       );
     }
-    var x = new Map(),
-      w = new Map(),
+    var w = new Map(),
       v = new Map(),
       b = new Map(),
-      E = new Map();
-    function _(e, t) {
+      E = new Map(),
+      _ = new Map();
+    function k(e, t) {
       void 0 === t && (t = !1);
       var r = e.getDate() + 31 * (e.getMonth() + 12 * e.getFullYear()),
-        n = E.get(r);
+        n = _.get(r);
       return (
         n ||
-        ((n = e.toLocaleDateString(a.c.GetPreferredLocales(), {
+        ((n = e.toLocaleDateString(u.c.GetPreferredLocales(), {
           weekday: "long",
           day: "numeric",
           month: t ? "long" : "short"
         })),
-        E.set(r, n),
+        _.set(r, n),
         n)
       );
     }
-    function k(e) {
-      var t = x.get(e.getDay());
+    function y(e) {
+      var t = w.get(e.getDay());
       return (
         t ||
-        ((t = e.toLocaleDateString(a.c.GetPreferredLocales(), {
+        ((t = e.toLocaleDateString(u.c.GetPreferredLocales(), {
           weekday: "long"
         })),
-        x.set(e.getDay(), t),
-        t)
-      );
-    }
-    function y(e) {
-      var t = w.get(e.getMonth());
-      return (
-        t ||
-        ((t = e.toLocaleDateString(a.c.GetPreferredLocales(), {
-          month: "long"
-        })),
-        w.set(e.getMonth(), t),
+        w.set(e.getDay(), t),
         t)
       );
     }
     function M(e) {
-      var t = v.get(e.getFullYear());
+      var t = v.get(e.getMonth());
       return (
         t ||
-        ((t = e.toLocaleDateString(a.c.GetPreferredLocales(), {
-          year: "numeric"
+        ((t = e.toLocaleDateString(u.c.GetPreferredLocales(), {
+          month: "long"
         })),
-        v.set(e.getFullYear(), t),
+        v.set(e.getMonth(), t),
         t)
       );
     }
     function L(e) {
+      var t = b.get(e.getFullYear());
+      return (
+        t ||
+        ((t = e.toLocaleDateString(u.c.GetPreferredLocales(), {
+          year: "numeric"
+        })),
+        b.set(e.getFullYear(), t),
+        t)
+      );
+    }
+    function S(e) {
       var t = e.getMonth() + 12 * e.getFullYear(),
-        r = b.get(t);
+        r = E.get(t);
       return (
         r ||
-        ((r = e.toLocaleDateString(a.c.GetPreferredLocales(), {
+        ((r = e.toLocaleDateString(u.c.GetPreferredLocales(), {
           month: "long",
           year: "numeric"
         })),
-        b.set(t, r),
+        E.set(t, r),
         r)
       );
     }
@@ -4198,7 +4332,6 @@ var CLSTAMP = "6072947";
         LANGUAGE: "english",
         SUPPORTED_LANGUAGES: [],
         COUNTRY: "",
-        CDN_URL: "",
         MEDIA_CDN_COMMUNITY_URL: "",
         MEDIA_CDN_URL: "",
         COMMUNITY_CDN_URL: "",
@@ -4213,6 +4346,8 @@ var CLSTAMP = "6072947";
         STEAMTV_BASE_URL: "",
         HELP_BASE_URL: "",
         PARTNER_BASE_URL: "",
+        STATS_BASE_URL: "",
+        INTERNAL_STATS_BASE_URL: "",
         BASE_URL_STORE_CDN_ASSETS: "",
         IN_CLIENT: !1,
         USE_POPUPS: !1,
@@ -4221,6 +4356,7 @@ var CLSTAMP = "6072947";
         PLATFORM: "",
         SNR: "",
         LAUNCHER_TYPE: 0,
+        EREALM: 0,
         LOCAL_HOSTNAME: "",
         WEBAPI_BASE_URL: "",
         TOKEN_URL: "",
@@ -4296,17 +4432,25 @@ var CLSTAMP = "6072947";
       else console.error("Missing config element #", t);
     }
     function h() {
+      if (!window || !window.location || !window.location.href)
+        return console.warn("Unable to determine base url!"), "unknown";
       var e = window.location.href;
       return e.startsWith(i.STORE_BASE_URL)
         ? i.STORE_BASE_URL
         : e.startsWith(i.COMMUNITY_BASE_URL)
         ? i.COMMUNITY_BASE_URL
+        : e.startsWith(i.CHAT_BASE_URL)
+        ? i.CHAT_BASE_URL
         : e.startsWith(i.PARTNER_BASE_URL)
         ? i.PARTNER_BASE_URL
         : e.startsWith(i.HELP_BASE_URL)
         ? i.HELP_BASE_URL
         : e.startsWith(i.STEAMTV_BASE_URL)
         ? i.STEAMTV_BASE_URL
+        : e.startsWith(i.STATS_BASE_URL)
+        ? i.STATS_BASE_URL
+        : e.startsWith(i.INTERNAL_STATS_BASE_URL)
+        ? i.INTERNAL_STATS_BASE_URL
         : "";
     }
     function d() {
@@ -4321,6 +4465,9 @@ var CLSTAMP = "6072947";
         ? "help"
         : e.startsWith(i.STEAMTV_BASE_URL)
         ? "steamtv"
+        : e.startsWith(i.STATS_BASE_URL) ||
+          e.startsWith(i.INTERNAL_STATS_BASE_URL)
+        ? "stats"
         : "";
     }
   },
@@ -4332,59 +4479,65 @@ var CLSTAMP = "6072947";
     function c(e) {
       return 5 == e || 6 == e;
     }
-    r.d(t, "b", function() {
+    r.d(t, "c", function() {
       return n;
     }),
-      r.d(t, "a", function() {
+      r.d(t, "b", function() {
         return c;
       }),
-      r.d(t, "q", function() {
+      r.d(t, "s", function() {
         return o;
       }),
-      r.d(t, "r", function() {
+      r.d(t, "t", function() {
         return i;
       }),
-      r.d(t, "i", function() {
+      r.d(t, "k", function() {
         return l;
       }),
-      r.d(t, "j", function() {
+      r.d(t, "l", function() {
         return a;
       }),
-      r.d(t, "p", function() {
+      r.d(t, "r", function() {
         return s;
       }),
-      r.d(t, "k", function() {
+      r.d(t, "m", function() {
         return u;
       }),
-      r.d(t, "l", function() {
+      r.d(t, "n", function() {
         return f;
       }),
-      r.d(t, "m", function() {
+      r.d(t, "o", function() {
         return h;
       }),
-      r.d(t, "o", function() {
+      r.d(t, "q", function() {
         return d;
       }),
-      r.d(t, "n", function() {
+      r.d(t, "p", function() {
         return m;
       }),
-      r.d(t, "g", function() {
+      r.d(t, "i", function() {
         return p;
       }),
-      r.d(t, "h", function() {
+      r.d(t, "j", function() {
         return g;
       }),
-      r.d(t, "e", function() {
+      r.d(t, "h", function() {
         return x;
       }),
-      r.d(t, "d", function() {
+      r.d(t, "f", function() {
         return w;
       }),
-      r.d(t, "f", function() {
+      r.d(t, "e", function() {
         return v;
       }),
-      r.d(t, "c", function() {
+      r.d(t, "g", function() {
         return b;
+      }),
+      r.d(t, "a", function() {
+        return E;
+      }),
+      r.d(t, "d", function() {
+        return _;
       });
     var o = 1,
       i = 4,
@@ -4397,8 +4550,39 @@ var CLSTAMP = "6072947";
       d = 358510,
       m = 366490,
       p = "18446744073709551615",
-      g = 0;
-    function x(e, t) {
+      g = 0,
+      x = [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28
+      ];
+    function w(e, t) {
       switch ((void 0 === t && (t = "en"), e)) {
         case 0:
           return "en";
@@ -4462,7 +4646,7 @@ var CLSTAMP = "6072947";
           return t;
       }
     }
-    function w(e, t) {
+    function v(e, t) {
       switch ((void 0 === t && (t = ""), e)) {
         case 0:
           return "english";
@@ -4526,7 +4710,7 @@ var CLSTAMP = "6072947";
           return t;
       }
     }
-    function v(e, t) {
+    function b(e, t) {
       switch ((void 0 === t && (t = 0), e)) {
         case "english":
           return 0;
@@ -4591,7 +4775,17 @@ var CLSTAMP = "6072947";
           return t;
       }
     }
-    function b(e) {
+    function E(e) {
+      switch (e) {
+        case 4:
+        case 1:
+        case 7:
+        case 8:
+          return !0;
+      }
+      return !1;
+    }
+    function _(e) {
       switch (e) {
         case 4:
         case 1:
@@ -4641,7 +4835,7 @@ var CLSTAMP = "6072947";
       s = r.n(a),
       u = r("0OaU"),
       f = c.lazy(function() {
-        return Promise.all([r.e(4), r.e(0), r.e(6)]).then(r.bind(null, "KKYZ"));
+        return Promise.all([r.e(3), r.e(0), r.e(5)]).then(r.bind(null, "KKYZ"));
       }),
       h = document.getElementById("root");
     Object(l.c)();

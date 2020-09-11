@@ -276,7 +276,7 @@
 				"A1Telekom" { "cost_reduction"	"-4" }
 				"Inetcom" { "cost_reduction"	"-4" }
                                 "HLKomm" { "cost_reduction" "4"}
-				"KPN"	{ "cost_reduction" "1"}
+				"KPN"	{ "cost_reduction" "4"}
  			}
 		}
 
@@ -652,7 +652,10 @@
 				123 { "dest"	123 }
 				24 { "dest"	24 }
 				// Backbones
-				4 { "cost"	GlobalBackbone }				
+				4 { "cost"	GlobalBackbone }	
+				// Other
+				213 { "cost"	OneWayCellCost } // Mauritius			
+				214 { "cost"	OneWayCellCost } // Reunion
 			}
 		}
 
@@ -890,6 +893,9 @@
 					 "dest"	127  
 					"cost"	IndiaToDubai
 				}
+				// Other
+				213 { "cost"	OneWayCellCost } // Mauritius
+				214 { "cost"	OneWayCellCost } // Reunion	
 			}
 		}
 
@@ -972,6 +978,7 @@
 				186 { "cost"	OutwardCost }
 				187 { "cost"	OutwardCost }
 				188 { "cost"	OutwardCost }
+				212 { "cost"	OutwardCost }
 			}
 			"affinities"
 			{
@@ -1045,7 +1052,7 @@
 		// #45 Philippines 
 		45
 		{
-			"name" "Philippines"
+			"name" "Philippines - Manila"
 			"region"	"philippines"
 			"countrycode"	"PH"
 			"latitude"	"14.595480"
@@ -1057,6 +1064,10 @@
 				33 { "dest"	33 	"cost"	1 }
 				// Other
 				17 { "dest"	17 "cost"	AggregatorCost }
+				// Spokes
+				208 { "cost" OutwardCost }
+				209 { "cost" OutwardCost }
+				210 { "cost" OutwardCost }
 			}
 		}
 
@@ -1105,6 +1116,7 @@
 				204 {  }
 				205 {  }
 				206 {  }
+				211 { }
 				48 { "dest"	48 }
 				// Backbone-ish
 				33 { "cost"	CostToLeaveChina }
@@ -1431,7 +1443,7 @@
 				78 { "cost"	OutwardCost }
 				49 { "cost"	OutwardCost }
 				11 { "cost"	OutwardCost }
-				207 { "cost"	OutwardCost }
+				207 { "cost"	ZeroCost }
 			}
 			"affinities"
 			{
@@ -2299,6 +2311,7 @@
 				36 { "dest"	36 }
 				125 { "dest"	125 }
 				126 { "dest"	126 }
+				215 { "cost"	OutwardCost }
 				123 { "dest"	123	"cost"	AggregatorCost }
 				// Backbones
 			}
@@ -2716,7 +2729,7 @@
 		159
 		{
 			"name" "China - Wuhan"
-			"region"	"china south"
+			"region"	"china central"
 			"countrycode"	"CN"
 			"latitude"	"30.531663"
 			"longitude"	"114.282076"
@@ -2852,7 +2865,7 @@
 		170
 		{
 			"name" "China - Zhengzhou"
-			"region"	"china south"
+			"region"	"china central"
 			"countrycode"	"CN"
 			"latitude"	"34.745894"
 			"longitude"	"113.661751"
@@ -2864,7 +2877,7 @@
 		171
 		{
 			"name" "China - Changsha"
-			"region"	"china south"
+			"region"	"china central"
 			"countrycode"	"CN"
 			"latitude"	"28.200774"
 			"longitude"	"112.963677"
@@ -3310,6 +3323,107 @@
 
 			}
 		}
+		208
+		{
+			"name" "Philippines - Cebu"
+			"region"	"philippines"
+			"countrycode"	"PH"
+			"latitude"	"10.299550"
+			"longitude"	"123.896804"
+			"edges"
+			{
+				45 { "cost"	ZeroCost }
+
+			}
+		}
+		209
+		{
+			"name" "Philippines - Davao"
+			"region"	"philippines"
+			"countrycode"	"PH"
+			"latitude"	"7.070674"
+			"longitude"	"125.608690"
+			"edges"
+			{
+				45 { "cost"	ZeroCost }
+
+			}
+		}
+		210
+		{
+			"name" "Philippines - Baguio"
+			"region"	"philippines"
+			"countrycode"	"PH"
+			"latitude"	"16.411576"
+			"longitude"	"120.593801"
+			"edges"
+			{
+				45 { "cost"	ZeroCost }
+
+			}
+		}
+		211
+		{
+			"name" "China - Nanning"
+			"region"	"china south"
+			"countrycode"	"CN"
+			"latitude"	"22.818501"
+			"longitude"	"108.355362"
+			"edges"
+			{
+				47 { "dest"	47	"cost"	InwardCost }
+			}		
+		}
+		212
+		{
+			"name" "Canary Islands"
+			"region"	"europe"
+			"countrycode"	"ES"
+			"latitude"	"27.971820"
+			"longitude"	"-15.612358"
+			"edges"
+			{
+				40 { "cost"	InwardCost }
+			}		
+		}
+		213
+		{
+			"name" "Mauritius"
+			"region"	"africa"
+			"countrycode"	"MU"
+			"latitude"	"-20.163051"
+			"longitude"	"57.503574"
+			"edges"
+			{
+				26 { "cost"	InwardCost }
+				36 { "cost"	InwardCost }
+			}		
+		}
+		214
+		{
+			"name" "Reunion"
+			"region"	"africa"
+			"countrycode"	"RE"
+			"latitude"	"-21.100356"
+			"longitude"	"55.478003"
+			"edges"
+			{
+				26 { "cost"	InwardCost }
+				36 { "cost"	InwardCost }
+			}		
+		}
+		215
+		{
+			"name" "Kuwait"
+			"region"	"persian gulf"
+			"countrycode"	"KW"
+			"latitude"	"29.378020"
+			"longitude"	"47.975033"
+			"edges"
+			{
+				127 { "cost"	InwardCost }
+			}		
+		}
 	}
 	"countries"
 	{
@@ -3620,10 +3734,10 @@
 		"ID"	44
 		
 		//"Iraq"							
-		"IQ"	127
+		"IQ"	215
 		
 		//"Iran"							
-		"IR"	127
+		"IR"	215
 		
 		//"Ireland"						
 		"IE"	69
@@ -3665,7 +3779,7 @@
 		"KP"	8
 		
 		//"Kuwait"						
-		"KW"	127
+		"KW"	215
 		
 		//"Kyrgyzstan"					
 		"KG"	173
@@ -3731,7 +3845,7 @@
 		"MR"	130
 		
 		//"Mauritius"						
-		"MU"	131
+		"MU"	213
 		
 		//"Mayotte"						
 		"YT"	131
@@ -3848,7 +3962,7 @@
 		"QA"	127
 		
 		//"Reunion"						
-		"RE"	131
+		"RE"	214
 		
 		//"Romania"						
 		"RO"	16

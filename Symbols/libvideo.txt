@@ -89,6 +89,7 @@
  B COpenSSLWrapper::s_nContextDataIndex
  B COpenSSLWrapper::s_pMutexArray
  B COpenSSLWrapper::s_uOpenSSLMemoryUsage
+ B CPackageReservationStatus::default_instance_
  B CRTime::sm_nTimeCur
  B CRTime::sm_nTimeLastSystemTimeUpdate
  B CRTime::sm_rgchLocalDateCur
@@ -394,7 +395,6 @@
  D guard variable for bio_method_st* CBIOCallbacksBase::GetDefinition<CBIOUtlBufferSinkCallbacks>(int, char const*)::def
  D guard variable for bio_method_st* CBIOCallbacksBase::GetDefinition<COpenSSLConnection::CBIOCallbacks>(int, char const*)::def
  D guard variable for bio_method_st* CBIOCallbacksBase::GetDefinition<COpenSSLConnection::CBIOSinkCallbacks>(int, char const*)::def
- D guard variable for picojson::last_error_t<bool>::s
  D hmac_asn1_meth
  D hmac_pkey_meth
  D kMadd01
@@ -419,7 +419,6 @@
  D kShuffleMaskARGBToRGB24
  D kYuvConstants
  D k_rgpchProxyExclusionDelims
- D picojson::last_error_t<bool>::s
  D rand_ssleay_meth
  D rsa_asn1_meths
  D rsa_pkey_meth
@@ -506,6 +505,7 @@
  D typeinfo for COpenSSLConnection
  D typeinfo for COpenSSLContext
  D typeinfo for COpenSSLTicketKeyMgr
+ D typeinfo for CPackageReservationStatus
  D typeinfo for CPathString
  D typeinfo for CProtoBufNetPacket
  D typeinfo for CRTMPStream
@@ -587,6 +587,9 @@
  D typeinfo for IWorkThreadFactory
  D typeinfo for OSXHelpers::CCompatThread
  D typeinfo for OSXHelpers::CIOPollingHelper::IHelperCallback
+ D typeinfo for RefCountPvWrapper<CClientStructNetPacket>
+ D typeinfo for RefCountPvWrapper<CProtoBufNetPacket>
+ D typeinfo for RefCountPvWrapper<CStructNetPacket>
  D typeinfo for SteamThreadTools::CThread
  D typeinfo for std::__1::__function::__base<IMetricsFactory& ()>
  D typeinfo for std::__1::__function::__base<void (CMetrics&)>
@@ -705,6 +708,7 @@
  D vtable for COpenSSLConnection
  D vtable for COpenSSLContext
  D vtable for COpenSSLTicketKeyMgr
+ D vtable for CPackageReservationStatus
  D vtable for CPathString
  D vtable for CProtoBufNetPacket
  D vtable for CRTMPStream
@@ -758,6 +762,9 @@
  D vtable for ConVar
  D vtable for IVideoYUVFrame
  D vtable for OSXHelpers::CCompatThread
+ D vtable for RefCountPvWrapper<CClientStructNetPacket>
+ D vtable for RefCountPvWrapper<CProtoBufNetPacket>
+ D vtable for RefCountPvWrapper<CStructNetPacket>
  D vtable for SteamThreadTools::CThread
  D vtable for std::__1::__function::__func<CNullMetricsFactory& (*)(), std::__1::allocator<CNullMetricsFactory& (*)()>, IMetricsFactory& ()>
  D vtable for std::__1::__function::__func<void (*)(CPoolReference<CMetrics>), std::__1::allocator<void (*)(CPoolReference<CMetrics>)>, void (CPoolReference<CMetrics>&)>
@@ -869,6 +876,7 @@
  R typeinfo name for COpenSSLConnection
  R typeinfo name for COpenSSLContext
  R typeinfo name for COpenSSLTicketKeyMgr
+ R typeinfo name for CPackageReservationStatus
  R typeinfo name for CPathString
  R typeinfo name for CPlainAutoPtr<CMetrics>
  R typeinfo name for CPlainAutoPtr<CUtlMap<CUtlString, bool, int, CDefLess<CUtlString> > >
@@ -994,6 +1002,7 @@
  R typeinfo name for CUtlVector<VideoRepresentation_t*, CUtlMemory<VideoRepresentation_t*> >
  R typeinfo name for CUtlVector<VideoSegmentTemplate_t::TimelineSegment_t, CUtlMemory<VideoSegmentTemplate_t::TimelineSegment_t> >
  R typeinfo name for CUtlVector<VideoSegment_t*, CUtlMemory<VideoSegment_t*> >
+ R typeinfo name for CUtlVector<unsigned int, CUtlMemory<unsigned int> >
  R typeinfo name for CVideoDecodedFrame
  R typeinfo name for CVideoDecoderLibav
  R typeinfo name for CVideoFileStream
@@ -1045,6 +1054,9 @@
  R typeinfo name for IWorkThreadFactory
  R typeinfo name for OSXHelpers::CCompatThread
  R typeinfo name for OSXHelpers::CIOPollingHelper::IHelperCallback
+ R typeinfo name for RefCountPvWrapper<CClientStructNetPacket>
+ R typeinfo name for RefCountPvWrapper<CProtoBufNetPacket>
+ R typeinfo name for RefCountPvWrapper<CStructNetPacket>
  R typeinfo name for SteamThreadTools::CThread
  R typeinfo name for VideoAdaptationSet_t
  R typeinfo name for VideoRepresentation_t
@@ -1579,6 +1591,7 @@
  T CClientStructNetPacket::GetHConnection() const
  T CClientStructNetPacket::GetHdrIP() const
  T CClientStructNetPacket::GetMsgTraceTag() const
+ T CClientStructNetPacket::GetRealm() const
  T CClientStructNetPacket::GetSessionID() const
  T CClientStructNetPacket::GetSourceJobID() const
  T CClientStructNetPacket::GetSteamID() const
@@ -1589,6 +1602,7 @@
  T CClientStructNetPacket::SetHConnection(unsigned int)
  T CClientStructNetPacket::SetHdrIP(CIPAddress const&)
  T CClientStructNetPacket::SetMsgTraceTag(unsigned long long)
+ T CClientStructNetPacket::SetRealm(ESteamRealm)
  T CClientStructNetPacket::SetSessionID(int)
  T CClientStructNetPacket::SetSourceJobID(unsigned long long)
  T CClientStructNetPacket::SetSteamID(CSteamID)
@@ -1700,7 +1714,7 @@
  T CDirIterator::CDirIterator(StringView)
  T CDirIterator::CDirIterator(StringView, StringView)
  T CDirIterator::CurrentFileLength() const
- T CDirIterator::CurrentFileName()
+ T CDirIterator::CurrentFileName() const
  T CDirIterator::CurrentFileWriteTime() const
  T CDirIterator::Init(StringView)
  T CDirIterator::IsValid() const
@@ -1905,6 +1919,8 @@
  T CHTTPResponse::Validate(CValidator&, char const*)
  T CHTTPResponse::~CHTTPResponse()
  T CHTTPUtil::BFindNextHeader(CHTTPRequestHandle*, CUtlBuffer*, unsigned int*, KeyValues*, bool*, CUtlBuffer*)
+ T CHTTPUtil::BParseRangeRequestHeader(unsigned long long*, unsigned long long*, char const*)
+ T CHTTPUtil::BParseRangeResponseHeader(unsigned long long*, unsigned long long*, char const*)
  T CHTTPUtil::BStatusCodeAllowsBody(EHTTPStatusCode)
  T CHTTPUtil::BStatusCodeIsRedirect(EHTTPStatusCode)
  T CHTTPUtil::FindNextNonSpaceOrTabStringSection(unsigned char*, int, int, int*, int*)
@@ -2651,6 +2667,21 @@
  T COpenSSLWrapper::OpenSSLThreadIDCallback()
  T COpenSSLWrapper::Shutdown()
  T COpenSSLWrapper::ValidateStatics(CValidator&, char const*)
+ T CPackageReservationStatus::ByteSize() const
+ T CPackageReservationStatus::CPackageReservationStatus()
+ T CPackageReservationStatus::Clear()
+ T CPackageReservationStatus::GetCachedSize() const
+ T CPackageReservationStatus::GetMetadata() const
+ T CPackageReservationStatus::IsInitialized() const
+ T CPackageReservationStatus::MergeFrom(CPackageReservationStatus const&)
+ T CPackageReservationStatus::New() const
+ T CPackageReservationStatus::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CPackageReservationStatus::SetCachedSize(int) const
+ T CPackageReservationStatus::SharedCtor()
+ T CPackageReservationStatus::SharedDtor()
+ T CPackageReservationStatus::mutable_reservation_country_code()
+ T CPackageReservationStatus::set_reservation_country_code(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CPackageReservationStatus::~CPackageReservationStatus()
  T CPathString::CPathString(StringView, StringView)
  T CPathString::Clear()
  T CPathString::Validate(CValidator&, char const*)
@@ -2671,6 +2702,7 @@
  T CPoolReference<CMetrics>::CPoolReference(CPoolReference<CMetrics> const&)
  T CPoolReference<CMetrics>::DoNothing(CPoolReference<CMetrics>)
  T CPoolReference<CMetrics>::RecursiveValidate(CValidator&, char const*)
+ T CPoolReference<CMetrics>::Release()
  T CPoolReference<CMetrics>::~CPoolReference()
  T CProtoBufNetPacket::BHasMsgTraceTag() const
  T CProtoBufNetPacket::BHasTargetJobName() const
@@ -2684,6 +2716,7 @@
  T CProtoBufNetPacket::GetHConnection() const
  T CProtoBufNetPacket::GetHdrIP() const
  T CProtoBufNetPacket::GetMsgTraceTag() const
+ T CProtoBufNetPacket::GetRealm() const
  T CProtoBufNetPacket::GetSessionID() const
  T CProtoBufNetPacket::GetSourceJobID() const
  T CProtoBufNetPacket::GetSteamID() const
@@ -2691,10 +2724,11 @@
  T CProtoBufNetPacket::GetTargetJobID() const
  T CProtoBufNetPacket::GetTargetJobName() const
  T CProtoBufNetPacket::PubData() const
- T CProtoBufNetPacket::RebuildPacket()
+ T CProtoBufNetPacket::RebuildPacketIfNeeded()
  T CProtoBufNetPacket::SetHConnection(unsigned int)
  T CProtoBufNetPacket::SetHdrIP(CIPAddress const&)
  T CProtoBufNetPacket::SetMsgTraceTag(unsigned long long)
+ T CProtoBufNetPacket::SetRealm(ESteamRealm)
  T CProtoBufNetPacket::SetSessionID(int)
  T CProtoBufNetPacket::SetSourceJobID(unsigned long long)
  T CProtoBufNetPacket::SetSteamID(CSteamID)
@@ -2957,6 +2991,7 @@
  T CStructNetPacket::GetHConnection() const
  T CStructNetPacket::GetHdrIP() const
  T CStructNetPacket::GetMsgTraceTag() const
+ T CStructNetPacket::GetRealm() const
  T CStructNetPacket::GetSessionID() const
  T CStructNetPacket::GetSourceJobID() const
  T CStructNetPacket::GetSteamID() const
@@ -2967,6 +3002,7 @@
  T CStructNetPacket::SetHConnection(unsigned int)
  T CStructNetPacket::SetHdrIP(CIPAddress const&)
  T CStructNetPacket::SetMsgTraceTag(unsigned long long)
+ T CStructNetPacket::SetRealm(ESteamRealm)
  T CStructNetPacket::SetSessionID(int)
  T CStructNetPacket::SetSourceJobID(unsigned long long)
  T CStructNetPacket::SetSteamID(CSteamID)
@@ -3925,8 +3961,10 @@
  T CUtlVector<int, CUtlMemory<int> >::~CUtlVector()
  T CUtlVector<std::__1::pair<unsigned long long, char const*>, CUtlMemory<std::__1::pair<unsigned long long, char const*> > >::Remove(int)
  T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::AddToTail(unsigned int const&)
+ T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::AddToTail(unsigned int&&)
  T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::GrowVector(int)
  T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::InsertBefore(int, unsigned int const&)
+ T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::RecursiveValidate(CValidator&, char const*)
  T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::~CUtlVector()
  T CValObject::ClaimMemoryBlock(void*, unsigned long)
  T CValObject::Init(char const*, void*, char const*, CValObject*, CValObject*)
@@ -4316,12 +4354,13 @@
  T ConCommandBase::IsBitSet(unsigned int) const
  T ConCommandBase::ValidateConCommands(CValidator&)
  T ConVar::AddOnChangeCallback(void (*)(void*, ConVar*, char const*), void*, bool)
- T ConVar::ApplyReplicatedValue(char const*, bool)
+ T ConVar::ApplyReplicatedValue(char const*, bool, bool)
  T ConVar::BLocalOverride()
  T ConVar::BReplicated()
  T ConVar::BSendDiscardLocalOverride()
  T ConVar::ChangeStringValue(char const*)
  T ConVar::ClampValue(float&)
+ T ConVar::ClearReplicated()
  T ConVar::ClearSendDiscardLocalOverride()
  T ConVar::ConVar(char const*, char const*, unsigned long long)
  T ConVar::ConVar(char const*, char const*, unsigned long long, char const*)
@@ -5094,6 +5133,12 @@
  T RawInflateToBuffer(void const*, unsigned int, CUtlBuffer&, unsigned int)
  T RealGetCallStack
  T RealPrintCallStack
+ T RefCountPvWrapper<CClientStructNetPacket>::OnFinalRelease()
+ T RefCountPvWrapper<CClientStructNetPacket>::~RefCountPvWrapper()
+ T RefCountPvWrapper<CProtoBufNetPacket>::OnFinalRelease()
+ T RefCountPvWrapper<CProtoBufNetPacket>::~RefCountPvWrapper()
+ T RefCountPvWrapper<CStructNetPacket>::OnFinalRelease()
+ T RefCountPvWrapper<CStructNetPacket>::~RefCountPvWrapper()
  T RescaleBase
  T SHA1
  T SHA1_Final
@@ -5395,6 +5440,7 @@
  T V_binarytohex
  T V_pretifymem(float, int, bool)
  T V_snprintf
+ T V_strcmp_prefix
  T V_stricmp(char const*, char const*)
  T V_stristr(char const*, char const*)
  T V_strlower_fast
@@ -6748,6 +6794,8 @@
  b (anonymous namespace)::CMsgProtoBufHeader_reflection_
  b (anonymous namespace)::CMsgProtobufWrapped_descriptor_
  b (anonymous namespace)::CMsgProtobufWrapped_reflection_
+ b (anonymous namespace)::CPackageReservationStatus_descriptor_
+ b (anonymous namespace)::CPackageReservationStatus_reflection_
  b (anonymous namespace)::EClientPersonaStateFlag_descriptor_
  b (anonymous namespace)::EMsgClanAccountFlags_descriptor_
  b (anonymous namespace)::EMsg_descriptor_
@@ -6949,6 +6997,7 @@
  b hksHost
  b hksKVNameRequestHeaders
  b hksPragma
+ b hksRange
  b hksSetCookie
  b hksTransferEncoding
  b hksUserAgent
@@ -7723,6 +7772,7 @@
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgIPAddressBucket_offsets_
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgMulti_offsets_
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgProtobufWrapped_offsets_
+ r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CPackageReservationStatus_offsets_
  r protobuf_AssignDesc_steammessages_5fclientserver_5flogin_2eproto()::CMsgClientAccountInfo_offsets_
  r protobuf_AssignDesc_steammessages_5fclientserver_5flogin_2eproto()::CMsgClientChallengeRequest_offsets_
  r protobuf_AssignDesc_steammessages_5fclientserver_5flogin_2eproto()::CMsgClientChallengeResponse_offsets_
@@ -8057,7 +8107,6 @@
  t _GLOBAL__sub_I_workthreadpool.cpp
  t _GLOBAL__sub_I_zip_helpers.cpp
  t __cxx_global_array_dtor
- t __cxx_global_var_init27
  t _aesni_decrypt2
  t _aesni_decrypt3
  t _aesni_decrypt4

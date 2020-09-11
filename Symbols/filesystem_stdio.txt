@@ -182,7 +182,7 @@
  T CDirIterator::BCurrentIsReadOnly() const
  T CDirIterator::BNextFile()
  T CDirIterator::CDirIterator(StringView)
- T CDirIterator::CurrentFileName()
+ T CDirIterator::CurrentFileName() const
  T CDirIterator::Init(StringView)
  T CDirIterator::IsValid() const
  T CDirIterator::~CDirIterator()
@@ -255,6 +255,10 @@
  T CUtlRBTreeBase<unsigned short, CDefRBTreeBalanceListener<unsigned short> >::_LinkToParent(unsigned short, unsigned short, bool, unsigned long, void*)
  T CUtlRBTreeBase<unsigned short, CDefRBTreeBalanceListener<unsigned short> >::_RotateLeft(unsigned short, unsigned long, void*)
  T CUtlRBTreeBase<unsigned short, CDefRBTreeBalanceListener<unsigned short> >::_RotateRight(unsigned short, unsigned long, void*)
+ T CUtlString::AssertStringTooLong()
+ T CUtlString::Format(char const*, ...)
+ T CUtlString::SetValue(char const*)
+ T CUtlString::VFormat(char const*, __va_list_tag*)
  T CUtlSymbol::CUtlSymbol(char const*)
  T CUtlSymbol::Initialize()
  T CUtlSymbol::String() const
@@ -453,6 +457,7 @@
  t _GLOBAL__sub_I_utlbuffer.cpp
  t _GLOBAL__sub_I_utlsymbol.cpp
  unlink
+ vasprintf
  vfprintf
  vtable for __cxxabiv1::__class_type_info
  vtable for __cxxabiv1::__si_class_type_info
