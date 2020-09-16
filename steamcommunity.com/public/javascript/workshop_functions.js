@@ -658,7 +658,7 @@ function SharedFileHover( elem, event, id, loggedIn, itemData )
 		{
 			description = itemData['short_description'] ? itemData['short_description'] : '';
 		}
-		hover.down('.content').update( '<div class="hoverWorkshopItemTitle ">' + itemData['title'] + '</div>' + '<div class="hoverWorkshopItemDesc ">' + description + '</div>' );
+		hover.down('.content').update( '<div class="hoverWorkshopItemTitle">' + itemData['title'] + '</div>' + '<div class="hoverWorkshopItemDesc">' + description + '</div>' );
 		if ( itemData['user_subscribed'] )
 		{
 			$( 'hover_subscribed' ).show();
