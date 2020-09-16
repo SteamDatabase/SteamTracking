@@ -31,6 +31,7 @@ GDynamicStore = {
 	s_rgWishlist: {},
 	s_rgOwnedPackages: {},
 	s_rgOwnedApps: {},
+	s_rgMasterSubApps: {},
 	s_rgAutoGrantApps: {},
 	s_rgPackagesInCart: {},
 	s_rgAppsInCart: {},
@@ -178,6 +179,7 @@ GDynamicStore = {
 				GDynamicStore.s_rgWishlist = fnConvertToMap( data.rgWishlist );
 				GDynamicStore.s_rgOwnedPackages = fnConvertToMap( data.rgOwnedPackages );
 				GDynamicStore.s_rgOwnedApps = fnConvertToMap( data.rgOwnedApps );
+				GDynamicStore.s_rgMasterSubApps = fnConvertToMap( data.rgMasterSubApps );
 				GDynamicStore.s_rgAutoGrantApps = fnConvertToMap( data.rgAutoGrantApps );
 				GDynamicStore.s_rgPackagesInCart = fnConvertToMap( data.rgPackagesInCart );
 				GDynamicStore.s_rgAppsInCart = fnConvertToMap( data.rgAppsInCart );
@@ -968,7 +970,7 @@ GDynamicStore = {
 
 				if ( BundleItem.m_rgIncludedAppIDs.length )
 				{
-					if ( GDynamicStore.BAreAllAppsOwned( BundleItem.m_rgIncludedAppIDs ) )
+					if ( GDynamicStore.BAreAllAppsOwned( BundleItem.m_rgIncludedAppIDs, { bExcludeMasterSub: true } ) )
 						continue;
 				}
 
@@ -1160,18 +1162,23 @@ GDynamicStore = {
 		WebStorage.SetLocal( 'unUserdataVersion', parseInt( WebStorage.GetLocal( 'unUserdataVersion' ) || 0 ) + 1 );
 	},
 
-	BIsAppOwned: function( appid, bExcludeIfAutoGrant )
+	BIsAppOwned: function( appid, optsIn )
 	{
-		if ( bExcludeIfAutoGrant === undefined )
-			bExcludeIfAutoGrant = true;
+		var opts = { bExcludeIfAutoGrant: true, bExcludeMasterSub: false };
+		if ( optsIn === false )
+			$J.extend( opts, { bExcludeIfAutoGrant: false } );
+		else if ( optsIn )
+			$J.extend( opts, optsIn );
 
 		if ( GDynamicStore.s_rgOwnedApps[appid] )
 		{
-			if ( !bExcludeIfAutoGrant )
-			{
-				return true;
-			}
-			return !this.BIsAutoGrantedApp( appid );
+			if ( opts.bExcludeIfAutoGrant && this.BIsAutoGrantedApp( appid ) )
+				return false;
+
+			if ( opts.bExcludeMasterSub && this.BIsMasterSubApp( appid ) )
+				return false;
+
+			return true;
 		}
 		return false;
 	},
@@ -1179,6 +1186,13 @@ GDynamicStore = {
 	BIsAutoGrantedApp: function( appid )
 	{
 		return GDynamicStore.s_rgAutoGrantApps[appid] ? true : false;
+	},
+
+	BIsMasterSubApp: function( appid )
+	{
+		// presence in s_rgMasterSubApps indicates the user owns the app via a subscription like EA Play
+		// in some places we allow user to repurchase
+		return GDynamicStore.s_rgMasterSubApps[appid] ? true : false;
 	},
 
 	BIsPackageOwned: function( packageid )
@@ -1303,11 +1317,11 @@ GDynamicStore = {
 		return null;
 	},
 
-	BAreAllAppsOwned: function( rgAppIds )
+	BAreAllAppsOwned: function( rgAppIds, opts )
 	{
 		for ( var i = 0; i < rgAppIds.length; i++ )
 		{
-			if ( !GDynamicStore.s_rgOwnedApps[rgAppIds[i]] )
+			if ( !GDynamicStore.BIsAppOwned( rgAppIds[i], opts ) )
 				return false;
 		}
 
