@@ -474,19 +474,13 @@ td.wordfilter_word_already_filtered {
 	display: none;
 }
 
-td.wordfilter_action > a {
-	visibility: hidden;
-}
-tr.wordfilter_row:hover td.wordfilter_action > a {
-	visibility: visible;
-}
-
 td.wordfilter_action a {
 	color: #828282;
 	text-decoration: underline;
 }
 td.wordfilter_action a:hover {
 	color: #ffffff;
+	text-decoration: underline;
 }
 
 .wordfilter_addword_container {

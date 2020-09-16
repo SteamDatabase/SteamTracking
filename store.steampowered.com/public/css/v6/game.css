@@ -704,6 +704,11 @@ background: -webkit-linear-gradient( 30deg, rgba(117, 176, 34, 0.7) 5%,rgba(88, 
 	padding-top: 5px;
 }
 
+.game_area_purchase_game_dropdown_description a
+{
+	text-decoration: underline;
+}
+
 .game_area_purchase_game_dropdown_left_panel
 {
 	height: 40px;
@@ -2840,10 +2845,6 @@ body.v6 .game_area_already_owned.master_sub {
 
 .game_purchase_sub_dropdown .already_in_library_master_sub {
 	justify-content: flex-end;
-}
-
-.game_purchase_sub_dropdown .game_area_purchase_game {
-	border-radius: 0px 0px 4px 4px;
 }
 
 .master_sub_trial_header_row {
