@@ -4886,12 +4886,11 @@
                 o = e.bHidePrice,
                 a = e.bStackedButtons,
                 r = t.type,
-                i = n ? O.a.Get().GetDemoEventInfo(n) : null,
-                c = i ? y.c.GetClanEventModel(i.info_clan_event_gid) : null;
+                i = n ? O.a.Get().GetDemoEventInfo(n) : null;
               return L.createElement(
                 "div",
                 { className: ne.a.StoreActionWidgetContainer },
-                Boolean(c) &&
+                Boolean(!1) &&
                   L.createElement(
                     "div",
                     {
@@ -19273,15 +19272,9 @@
               var e = this.props,
                 t = e.appid,
                 n = e.fnCloseMenu,
-                o = d.a.Get().GetDemoEventInfo(t),
-                a = !!(
-                  o &&
-                  o.info_clan_event_gid &&
-                  m.c.GetClanEventModel(o.info_clan_event_gid)
-                ),
-                r = u.a.BIsGameWishlisted(t),
-                i = u.a.BFollowsApp(t),
-                c =
+                o = (d.a.Get().GetDemoEventInfo(t), u.a.BIsGameWishlisted(t)),
+                a = u.a.BFollowsApp(t),
+                r =
                   O.c.STORE_BASE_URL +
                   Object(C.f)() +
                   "/app/" +
@@ -19290,21 +19283,13 @@
               return l.a.createElement(
                 "div",
                 null,
-                a &&
-                  l.a.createElement(
-                    "div",
-                    {
-                      className: E.a.MoreActionsMenuItem,
-                      onClick: this.ShowQuickPitch
-                    },
-                    Object(g.d)("#Sale_ReadDemoBlurb")
-                  ),
+                !1,
                 l.a.createElement(
                   "a",
                   {
                     className: E.a.MoreActionsMenuItem,
                     onClick: n,
-                    href: c,
+                    href: r,
                     target: O.c.IN_CLIENT ? void 0 : "_blank"
                   },
                   Object(g.d)("#Sale_SeeUpcomingEvents")
@@ -19316,7 +19301,7 @@
                     onClick: O.i.logged_in ? this.ToggleWishlist : L.a
                   },
                   Object(g.d)(
-                    r ? "#Sale_RemoveFromWishlist" : "#Sale_AddToWishlist"
+                    o ? "#Sale_RemoveFromWishlist" : "#Sale_AddToWishlist"
                   )
                 ),
                 l.a.createElement(
@@ -19326,7 +19311,7 @@
                     onClick: O.i.logged_in ? this.ToggleFollowed : L.a
                   },
                   Object(g.d)(
-                    i ? "#Sale_StopFollowingGame" : "#Sale_FollowGame"
+                    a ? "#Sale_StopFollowingGame" : "#Sale_FollowGame"
                   )
                 ),
                 l.a.createElement(
