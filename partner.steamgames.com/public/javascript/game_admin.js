@@ -42,6 +42,7 @@ function GetSupportedLanguages()
 				'ukrainian': 'Ukrainian',
 				'vietnamese': 'Vietnamese',
 				'latam': 'Spanish - Latin America',
+				'sc_schinese': 'SteamChina - Simplified Chinese',
 			};
 	return languages;
 }

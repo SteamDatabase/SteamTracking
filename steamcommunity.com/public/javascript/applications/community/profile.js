@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [93],
+  [94],
   {
     "042x": function(e, t, r) {
       e.exports = {
@@ -529,8 +529,8 @@
           );
         })(),
         O = r("exH9"),
-        y = r("WonJ"),
-        h = r.n(y),
+        h = r("WonJ"),
+        y = r.n(h),
         w = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
@@ -539,7 +539,7 @@
             Object(_.d)(t, e),
             Object.defineProperty(t, "hoverClass", {
               get: function() {
-                return h.a.hoverParent;
+                return y.a.hoverParent;
               },
               enumerable: !1,
               configurable: !0
@@ -561,19 +561,19 @@
                 s = "";
               return (
                 "medium" == n
-                  ? (s = h.a.Medium)
-                  : "large" == n && (s = h.a.Large),
+                  ? (s = y.a.Medium)
+                  : "large" == n && (s = y.a.Large),
                 g.createElement(
                   "div",
                   Object(_.a)(
                     {
                       className: Object(O.a)(
-                        h.a.SnoozeContainer,
+                        y.a.SnoozeContainer,
                         t.online_state,
                         i,
-                        r && h.a.animating,
+                        r && y.a.animating,
                         s,
-                        a && h.a.Dim
+                        a && y.a.Dim
                       )
                     },
                     o
@@ -582,7 +582,7 @@
                     "div",
                     {
                       "data-text": "Z",
-                      className: Object(O.a)(h.a.SnoozeZ, h.a.Z1)
+                      className: Object(O.a)(y.a.SnoozeZ, y.a.Z1)
                     },
                     "Z"
                   ),
@@ -590,7 +590,7 @@
                     "div",
                     {
                       "data-text": "Z",
-                      className: Object(O.a)(h.a.SnoozeZ, h.a.Z2)
+                      className: Object(O.a)(y.a.SnoozeZ, y.a.Z2)
                     },
                     "Z"
                   ),
@@ -598,7 +598,7 @@
                     "div",
                     {
                       "data-text": "Z",
-                      className: Object(O.a)(h.a.SnoozeZ, h.a.Z3)
+                      className: Object(O.a)(y.a.SnoozeZ, y.a.Z3)
                     },
                     "Z"
                   )
@@ -1156,10 +1156,10 @@
                 b = !1;
               a || ((d += " " + I.a.notFriends), (f = !1)),
                 o && ((d += " " + I.a.communicationBlocked), (b = !0));
-              var y = void 0 !== n,
-                h = t.is_awayOrSnooze,
+              var h = void 0 !== n,
+                y = t.is_awayOrSnooze,
                 v = void 0,
-                v = y
+                v = h
                   ? g.createElement(
                       "div",
                       null,
@@ -1251,7 +1251,7 @@
                             className: Object(O.a)(
                               I.a.miniProfilePlayer,
                               t.online_state,
-                              h && I.a.isAway,
+                              y && I.a.isAway,
                               P(t)
                             )
                           },
@@ -1259,7 +1259,7 @@
                             persona: this.props.persona,
                             community_data: l
                           }),
-                          h &&
+                          y &&
                             g.createElement(w, {
                               persona: t,
                               animating: !0,
@@ -1276,7 +1276,7 @@
                                 "div",
                                 { className: I.a.persona },
                                 v,
-                                h &&
+                                y &&
                                   g.createElement(
                                     "div",
                                     { className: I.a.awayStatusLabel },
@@ -1289,7 +1289,7 @@
                                     this.props.persona.GetLocalizedOnlineStatus()
                                   ),
                                 "online" == t.online_state &&
-                                  !h &&
+                                  !y &&
                                   g.createElement(
                                     "div",
                                     { className: I.a.awayStatusLabel },
@@ -2473,7 +2473,7 @@
             i
           );
         })(Q),
-        ye = (function(r) {
+        he = (function(r) {
           function i(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -2509,7 +2509,7 @@
             i
           );
         })(Q),
-        he = (function(r) {
+        ye = (function(r) {
           function i(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -5201,6 +5201,11 @@
                         br: Z.d.readBool,
                         bw: Z.h.writeBool
                       },
+                      text_filter_words_revision: {
+                        n: 7,
+                        br: Z.d.readUint32,
+                        bw: Z.h.writeUint32
+                      },
                       timestamp_updated: {
                         n: 3,
                         br: Z.d.readUint32,
@@ -5366,6 +5371,11 @@
                         q: !0,
                         br: Z.d.readString,
                         bw: Z.h.writeRepeatedString
+                      },
+                      text_filter_words_revision: {
+                        n: 3,
+                        br: Z.d.readUint32,
+                        bw: Z.h.writeUint32
                       }
                     }
                   }),
@@ -5711,7 +5721,7 @@
             i
           );
         })(Q),
-        yt = (function(r) {
+        ht = (function(r) {
           function i(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -5789,7 +5799,7 @@
             i
           );
         })(Q),
-        ht = (function(r) {
+        yt = (function(r) {
           function i(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -6334,12 +6344,12 @@
           });
         }),
         (X.SetMiniProfileBackground = function(e, t) {
-          return e.SendMsg("Player.SetMiniProfileBackground#1", t, ye, {
+          return e.SendMsg("Player.SetMiniProfileBackground#1", t, he, {
             ePrivilege: 1
           });
         }),
         (X.GetAvatarFrame = function(e, t) {
-          return e.SendMsg("Player.GetAvatarFrame#1", t, he, {
+          return e.SendMsg("Player.GetAvatarFrame#1", t, ye, {
             bConstMethod: !0,
             ePrivilege: 2,
             eWebAPIKeyRequirement: 1
@@ -6503,13 +6513,13 @@
           });
         }),
         (X.GetDurationControl = function(e, t) {
-          return e.SendMsg("Player.GetDurationControl#1", t, yt, {
+          return e.SendMsg("Player.GetDurationControl#1", t, ht, {
             ePrivilege: 1
           });
         }),
         ((ee = $ = $ || {}).NotifyLastPlayedTimesHandler = {
           name: "PlayerClient.NotifyLastPlayedTimes#1",
-          request: ht
+          request: yt
         }),
         (ee.NotifyFriendNicknameChangedHandler = {
           name: "PlayerClient.NotifyFriendNicknameChanged#1",
@@ -9638,7 +9648,7 @@
             e
           );
         })();
-      function yr(e) {
+      function hr(e) {
         switch (e) {
           case 1:
             return Object(B.d)("#Privacy_Private");
@@ -9650,7 +9660,7 @@
             return "";
         }
       }
-      function hr(e, t) {
+      function yr(e, t) {
         return e < t ? e : t;
       }
       function vr(e) {
@@ -9693,27 +9703,27 @@
           return (
             (e.prototype.GetPrivacySetting = function(e) {
               return "PrivacyOwnedGames" == e
-                ? hr(
+                ? yr(
                     this.m_PrivacySettings.PrivacyProfile,
                     this.m_PrivacySettings.PrivacyOwnedGames
                   )
                 : "PrivacyPlaytime" == e
-                ? hr(
+                ? yr(
                     this.GetPrivacySetting("PrivacyOwnedGames"),
                     this.m_PrivacySettings.PrivacyPlaytime
                   )
                 : "PrivacyInventory" == e
-                ? hr(
+                ? yr(
                     this.m_PrivacySettings.PrivacyProfile,
                     this.m_PrivacySettings.PrivacyInventory
                   )
                 : "PrivacyInventoryGifts" == e
-                ? hr(
+                ? yr(
                     this.GetPrivacySetting("PrivacyInventory"),
                     this.m_PrivacySettings.PrivacyInventoryGifts
                   )
                 : "PrivacyFriendsList" == e
-                ? hr(
+                ? yr(
                     this.m_PrivacySettings.PrivacyProfile,
                     this.m_PrivacySettings.PrivacyFriendsList
                   )
@@ -11128,7 +11138,7 @@
           );
         })(g.Component),
         Zr = g.lazy(function() {
-          return Promise.all([r.e(0), r.e(6)]).then(r.bind(null, "AxZo"));
+          return Promise.all([r.e(0), r.e(7)]).then(r.bind(null, "AxZo"));
         }),
         Qr = !0,
         Jr = (function(e) {
@@ -11937,7 +11947,7 @@
                 i = e.Profile,
                 n = this.state.strSummary;
               return g.createElement(
-                yi,
+                hi,
                 { Profile: i },
                 g.createElement(Sr.a, {
                   nMinHeight: 40,
@@ -11967,7 +11977,7 @@
             e
           );
         })(g.Component),
-        yi = function(e) {
+        hi = function(e) {
           var t = e.Profile,
             r = e.children;
           return t.BIsProfileSummaryChangeOnCooldown()
@@ -11987,7 +11997,7 @@
               )
             : g.createElement(g.Fragment, null, r);
         },
-        hi = (function(t) {
+        yi = (function(t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (e.state = { bSaving: !1, strHTMLError: "" }), e;
@@ -13826,7 +13836,7 @@
                   Object(B.d)("#Profile_Edit_Theme_Instructions")
                 ),
                 g.createElement(Kr, { strHTMLError: this.state.strHTMLError }),
-                n && g.createElement(hn, null),
+                n && g.createElement(yn, null),
                 g.createElement(xr, {
                   getSearchFields: null,
                   ActiveItem: r.ActiveTheme,
@@ -13843,7 +13853,7 @@
                     return g.createElement(pn, { Theme: e, ProfileItems: i });
                   },
                   fnIsSameItem: bn,
-                  ItemComponent: yn,
+                  ItemComponent: hn,
                   classNameItemPicker: dn.ProfileThemePicker,
                   className: Object(O.a)(n && dn.ThemePickerDisabled)
                 })
@@ -13866,7 +13876,7 @@
         bn = function(e, t) {
           return (e && e.theme_id) === (t && t.theme_id);
         },
-        yn = function(e) {
+        hn = function(e) {
           var t = e.Item,
             r = e.onSelected,
             i = e.active,
@@ -13975,7 +13985,7 @@
             )
           );
         },
-        hn = function(e) {
+        yn = function(e) {
           e.children;
           return g.createElement(
             "div",
@@ -14084,7 +14094,7 @@
                   {
                     PrivacyStore: e,
                     strLabel: Object(B.d)("#ProfilePrivacy_BasicDetails"),
-                    strReadOnlySetting: yr(3)
+                    strReadOnlySetting: hr(3)
                   },
                   Object(B.d)("#ProfilePrivacy_BasicDetails_Desc")
                 ),
@@ -14272,7 +14282,7 @@
               );
           }),
           (t.prototype.render = function() {
-            var e = yr(
+            var e = hr(
               this.props.PrivacyStore.GetPrivacySetting(this.props.PrivacyKey)
             );
             return g.createElement(
@@ -14607,7 +14617,7 @@
                   g.createElement(
                     m.c,
                     { path: "" + e + s.Info() },
-                    g.createElement(hi, {
+                    g.createElement(yi, {
                       Profile: r,
                       EmoticonStore: a,
                       EmoticonHoverStore: o

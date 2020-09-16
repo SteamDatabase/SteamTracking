@@ -5444,11 +5444,3 @@ background: -webkit-linear-gradient( 297deg, rgba( 255, 255, 255, 0.2) 5%,rgba( 
 
 .range_input:focus::-ms-fill-upper {
 	background: #7fcbf7; }
-
-.filtered_text {
-	visibility: hidden;
-}
-.filtered_text.filtered {
-	visibility: visible;
-}
-

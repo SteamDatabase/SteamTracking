@@ -200,13 +200,13 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 
 		if ( bBrowsable )
 		{
-			var $Link = $J('<a/>', {'class': 'app_tag ', 'href': TagLink(tag) + '?snr=' + strTagLinkSNR}).text(tag);
+			var $Link = $J('<a/>', {'class': 'app_tag', 'href': TagLink(tag) + '?snr=' + strTagLinkSNR}).text(tag);
 			$Link.InstrumentLinks();
 			$Tag.append($Link);
 		}
 		else
 		{
-			var $Link = $J('<div/>', {'class': 'app_tag  not_browseable' }).text(tag);
+			var $Link = $J('<div/>', {'class': 'app_tag not_browseable' }).text(tag);
 			$Link.data('tooltip-text', 'Not enough items tagged with "%s" yet'.replace( /%s/, $Link.html() ) );
 
 			$Tag.append( $Link );
@@ -217,7 +217,7 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 
 	var fnMakeFrequentTag = function( tagid, tag )
 	{
-		var $Tag = $J('<div/>', {'class': 'app_tag  previous_tag', 'data-tagid': tagid, 'data-tooltip-text': 'Click here to apply this tag.' }).text( tag ).click( function() { fnApplyTag( tag ) } );
+		var $Tag = $J('<div/>', {'class': 'app_tag previous_tag', 'data-tagid': tagid, 'data-tooltip-text': 'Click here to apply this tag.' }).text( tag ).click( function() { fnApplyTag( tag ) } );
 
 		return $Tag;
 	};
@@ -354,7 +354,7 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 			{
 				if ( !rgUserTags[i].is_reported && rgUserTags[i].browseable )
 				{
-					var $AppTag = $J('<a/>', { 'class': 'app_tag ', 'href': TagLink(rgUserTags[i].name) + '?snr=' + strYourTagSNR }).text(rgUserTags[i].name);
+					var $AppTag = $J('<a/>', { 'class': 'app_tag', 'href': TagLink(rgUserTags[i].name) + '?snr=' + strYourTagSNR }).text(rgUserTags[i].name);
 					$AppTag.InstrumentLinks();
 					$YourTagsOnPage.append($AppTag);
 				}
@@ -365,7 +365,7 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 			{
 				if ( !rgUserTags[i].is_reported &&  !rgUserTags[i].browseable )
 				{
-					var $AppTag = $J('<div/>', {'class': 'app_tag  not_browseable' }).text( rgUserTags[i].name );
+					var $AppTag = $J('<div/>', {'class': 'app_tag not_browseable' }).text( rgUserTags[i].name );
 					$AppTag.data('tooltip-text', 'Not enough items tagged with "%s" yet'.replace( /%s/, $AppTag.html() ) );
 
 					$YourTagsOnPage.append( $AppTag );

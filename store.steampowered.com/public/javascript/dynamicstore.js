@@ -60,10 +60,6 @@ GDynamicStore = {
 
 	s_rgRecommendedApps: [],
 
-	s_eTextFilterSetting: 0,
-	s_rgCustomBannedWords: [],
-	s_rgCustomCleanWords: [],
-
 
 	s_ImpressionTracker: false,
 
@@ -213,9 +209,6 @@ GDynamicStore = {
 				GDynamicStore.s_nRemainingCartDiscount = data.nRemainingCartDiscount ? data.nRemainingCartDiscount : 0;
 				GDynamicStore.s_nTotalCartDiscount = data.nTotalCartDiscount ? data.nTotalCartDiscount : 0;
 				GDynamicStore.s_rgRecommendedApps = data.rgRecommendedApps || [];
-				GDynamicStore.s_eTextFilterSetting = data.eTextFilterSetting ? data.eTextFilterSetting : 0;
-				GDynamicStore.s_rgCustomBannedWords = data.rgCustomBannedWords || [];
-				GDynamicStore.s_rgCustomCleanWords = data.rgCustomCleanWords || [];
 
 				GDynamicStore.s_nPromotionalDiscount = data.nPromotionalDiscount ? data.nPromotionalDiscount : 0;
 				GDynamicStore.s_nPromotionalDiscountMinCartAmount = data.nPromotionalDiscountMinCartAmount ? data.nPromotionalDiscountMinCartAmount : 0;

@@ -777,6 +777,10 @@ LocalizationReady("shared", "english", {
     "Failed Converting HTML to BBcode with the following error: '%1$s'",
   EventEditor_InsertLinkURL: "Insert URL",
   EventEditor_FormattingHelp_GetHelpLink: "Formatting help",
+  EventEditor_InsertTrailer: "Insert Game Trailer",
+  EventEditor_InsertTrailer_SearchApp: "Search by app name or ID",
+  EventEditor_FailedToLoadApp:
+    "Failed to load app details, try again later: %1$s",
   EventEditor_ImportHTML: "Import HTML",
   EventEditor_ImportFromHTML: "Import from HTML",
   EventEditor_ImportFromHTML_ttip:
@@ -1266,7 +1270,7 @@ LocalizationReady("shared", "english", {
   Sale_StopFollowingGame: "Stop following",
   Sale_VisitStorePage: "Visit Store page",
   Sale_Wishlisted: "Wishlisted",
-  Sale_RemoveFromWishlist: "Remove From Wishlist",
+  Sale_RemoveFromWishlist: "Remove from wishlist",
   Sale_AddToLibrary: "+ Add to Library",
   Sale_SeeEventDetails: "See Event Details",
   Sale_PlayNow: "Play Now",
@@ -1671,8 +1675,9 @@ LocalizationReady("shared", "english", {
   AppType_tag: "tag",
   AppType_music: "music",
 
-  GameHover_Tags: "Tags",
-  GameHover_UserReviewsHeader: "User Reviews",
+  GameHover_Tags: "Tags:",
+  GameHover_UserReviewsHeader: "User Reviews:",
+  GameHover_UserReviewCount: "(%1$s)",
 
   Localization_Export_Btn_RowLanguages: "Language per row",
   Localization_Export_Btn_ColumnLanguages: "Language per Column",
@@ -1691,6 +1696,13 @@ LocalizationReady("shared", "english", {
     "Localization Import Completed. The following languages updated: %1$s",
   Localization_Success_ImportComplete_NoChange:
     "Localization Import Completed. No changes were made.",
+
+  TrailerPlayer_ID_NotProvided:
+    "Cannot display trailer: The App ID and/or Trailer ID is not provided. The offical group event can automatically deetermine appid, however, both are required.",
+  TrailerPlayer_CouldNotLoad:
+    "Could not load appid %1$s and trailer %2$s. Double check they are published and visible on the store.",
+  TrailerPlayer_LoadingError:
+    "Please use a browser that supports HTML videos to watch this trailer.",
 
   bytes: "%1$s B",
   bytes_PerSecond: "%1$s B/s",

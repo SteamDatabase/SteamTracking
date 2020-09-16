@@ -14,11 +14,11 @@
         n.d(t, "b", function() {
           return f;
         });
-      var o = n("mrSG"),
-        a = n("q1tI"),
+      var a = n("mrSG"),
+        c = n("q1tI"),
         r = n("y+6m"),
         i = n("TLQK"),
-        c = n("X3Ds"),
+        o = n("X3Ds"),
         s = n("TtDX");
       function u(e, t) {
         var n =
@@ -34,16 +34,23 @@
       function l(e) {
         var t = e.bDisableContextMenu,
           n = e.onContextMenu,
-          r = e.href,
-          i = Object(o.f)(e, ["bDisableContextMenu", "onContextMenu", "href"]);
+          r = e.bForceExternal,
+          i = e.href,
+          o = Object(a.f)(e, [
+            "bDisableContextMenu",
+            "onContextMenu",
+            "bForceExternal",
+            "href"
+          ]);
         return (
           t || n || (n = d),
-          a.createElement(
+          c.createElement(
             "a",
-            Object(o.a)({}, i, {
-              href: r,
-              target: "_blank",
-              rel: "noopener noreferrer",
+            Object(a.a)({}, o, {
+              href: i,
+              onClick: function(e) {
+                e.preventDefault(), f(window, i, { bForceExternal: !!r });
+              },
               onContextMenu: n
             }),
             e.children
@@ -53,19 +60,19 @@
       function m(e) {
         var t = e.strURL,
           n = e.unPID;
-        return a.createElement(
-          a.Fragment,
+        return c.createElement(
+          c.Fragment,
           null,
-          a.createElement(
+          c.createElement(
             r.d,
             {
               onSelected: function() {
-                c.h(t);
+                o.h(t);
               }
             },
             Object(i.d)("#ContextMenu_CopyLinkURL")
           ),
-          a.createElement(
+          c.createElement(
             r.d,
             {
               onSelected: function(e) {
@@ -79,10 +86,10 @@
       function d(e, t) {
         var n = e.currentTarget;
         return Object(s.a)(
-          a.createElement(
+          c.createElement(
             r.c,
             null,
-            a.createElement(m, { strURL: n.href, unPID: t })
+            c.createElement(m, { strURL: n.href, unPID: t })
           ),
           e
         );
@@ -922,7 +929,7 @@
                       );
                     },
                     renderContent: function() {
-                      return m.createElement(G, {
+                      return m.createElement(x, {
                         store: n,
                         hoverStore: r,
                         onEmoticonSelect: function(e) {
@@ -955,7 +962,7 @@
                           );
                         },
                         renderContent: function() {
-                          return m.createElement(W, {
+                          return m.createElement(G, {
                             store: n,
                             hoverStore: r,
                             onItemSelect: function(e) {
@@ -1080,7 +1087,7 @@
             e
           );
         })(m.Component),
-        G = (function(t) {
+        x = (function(t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (e.state = { filter: "" }), e;
@@ -1160,7 +1167,7 @@
             e
           );
         })(m.Component),
-        W = (function(t) {
+        G = (function(t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (e.state = { filter: "" }), e;
@@ -1204,14 +1211,14 @@
                         null,
                         Object(f.d)("#AddonPicker_NoResults")
                       )
-                    : m.createElement(x, null);
+                    : m.createElement(W, null);
                 }
               });
             }),
             e
           );
         })(m.Component);
-      function x() {
+      function W() {
         return m.createElement(
           m.Fragment,
           null,
@@ -1466,7 +1473,7 @@
                               null,
                               Object(f.d)("#AddonPicker_NoResults")
                             )
-                          : m.createElement(x, null);
+                          : m.createElement(W, null);
                       }
                     }
                   ])
@@ -3574,7 +3581,7 @@
             r
           );
         })(s),
-        G = (function(n) {
+        x = (function(n) {
           function r(e) {
             void 0 === e && (e = null);
             var t = n.call(this) || this;
@@ -3610,7 +3617,7 @@
             r
           );
         })(s),
-        W = (function(n) {
+        G = (function(n) {
           function r(e) {
             void 0 === e && (e = null);
             var t = n.call(this) || this;
@@ -3627,7 +3634,7 @@
                 r.sm_m ||
                   (r.sm_m = {
                     proto: r,
-                    fields: { events: { n: 1, c: x, r: !0, q: !0 } }
+                    fields: { events: { n: 1, c: W, r: !0, q: !0 } }
                   }),
                 r.sm_m
               );
@@ -3665,7 +3672,7 @@
             r
           );
         })(s),
-        x = (function(n) {
+        W = (function(n) {
           function r(e) {
             void 0 === e && (e = null);
             var t = n.call(this) || this;
@@ -3808,12 +3815,12 @@
           });
         }),
         (u.MarkPartnerEventsForUser = function(e, t) {
-          return e.SendMsg("Community.MarkPartnerEventsForUser#1", t, G, {
+          return e.SendMsg("Community.MarkPartnerEventsForUser#1", t, x, {
             ePrivilege: 1
           });
         }),
         (u.GetUserPartnerEventViewStatus = function(e, t) {
-          return e.SendMsg("Community.GetUserPartnerEventViewStatus#1", t, W, {
+          return e.SendMsg("Community.GetUserPartnerEventViewStatus#1", t, G, {
             bConstMethod: !0,
             ePrivilege: 1
           });

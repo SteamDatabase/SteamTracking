@@ -5349,6 +5349,11 @@
                         br: g.d.readBool,
                         bw: g.h.writeBool
                       },
+                      text_filter_words_revision: {
+                        n: 7,
+                        br: g.d.readUint32,
+                        bw: g.h.writeUint32
+                      },
                       timestamp_updated: {
                         n: 3,
                         br: g.d.readUint32,
@@ -5514,6 +5519,11 @@
                         q: !0,
                         br: g.d.readString,
                         bw: g.h.writeRepeatedString
+                      },
+                      text_filter_words_revision: {
+                        n: 3,
+                        br: g.d.readUint32,
+                        bw: g.h.writeUint32
                       }
                     }
                   }),
@@ -8335,7 +8345,8 @@
                   itemclass: e.itemclass || [],
                   grouping: e.grouping,
                   maxToReturn: e.maxToReturn,
-                  queryFilter: e.queryFilter || []
+                  queryFilter: e.queryFilter || [],
+                  categoryTag: e.categoryTag || []
                 },
                 s = Object(R.g)(a.appid).sort(),
                 l = mr(a.grouping),
@@ -8350,7 +8361,9 @@
                   "__" +
                   (n || []).join("_") +
                   "__" +
-                  (a.queryFilter || []).join("_");
+                  (a.queryFilter || []).join("_") +
+                  "__" +
+                  (a.categoryTag || []).join("_");
               a.maxToReturn &&
                 t + r > a.maxToReturn &&
                 (r = Math.max(0, a.maxToReturn - t));
@@ -8409,38 +8422,40 @@
                 i
               );
             }),
-            (w.prototype.LoadLoyaltyRewardDefinitions = function(l, c, m, u) {
+            (w.prototype.LoadLoyaltyRewardDefinitions = function(c, m, u, d) {
               return Object(R.b)(this, void 0, void 0, function() {
-                var t, r, n, i, a, o, s;
+                var t, r, n, i, a, o, s, l;
                 return Object(R.e)(this, function(e) {
                   switch (e.label) {
                     case 0:
                       return (
-                        (t = l.appid),
-                        (r = l.grouping),
-                        (n = l.itemclass),
-                        (i = l.queryFilter),
-                        (a = mr(r)),
-                        (o = new h.h()),
+                        (t = c.appid),
+                        (r = c.grouping),
+                        (n = c.itemclass),
+                        (i = c.queryFilter),
+                        (a = c.categoryTag),
+                        (o = mr(r)),
+                        (s = new h.h()),
                         t.forEach(function(e) {
-                          return o.add_appids(e);
+                          return s.add_appids(e);
                         }),
-                        o.set_language(C.c.LANGUAGE),
-                        o.set_count(c),
-                        o.set_sort(a.sort),
-                        o.set_sort_descending(a.sort_descending),
-                        o.set_community_item_classes(n),
-                        o.set_filters(i),
-                        u && o.set_reward_types(u),
-                        m && o.set_cursor(m),
-                        [4, this.m_batchedRewardItemLoader.Load(o)]
+                        s.set_language(C.c.LANGUAGE),
+                        s.set_count(m),
+                        s.set_sort(o.sort),
+                        s.set_sort_descending(o.sort_descending),
+                        s.set_community_item_classes(n),
+                        s.set_filters(i),
+                        s.set_filter_match_any_category_tags(a),
+                        d && s.set_reward_types(d),
+                        u && s.set_cursor(u),
+                        [4, this.m_batchedRewardItemLoader.Load(s)]
                       );
                     case 1:
-                      return 1 == (s = e.sent()).eresult
-                        ? [2, s.response]
+                      return 1 == (l = e.sent()).eresult
+                        ? [2, l.response]
                         : (console.error(
                             "Error when loading reward definitions: EResult=" +
-                              s.eresult
+                              l.eresult
                           ),
                           [
                             2,
@@ -9441,17 +9456,15 @@
               return this.m_mapClusters.get(e);
             }),
             (w.prototype.HydrateCustomPages = function() {
-              function e(e, t, r, n, i, a) {
-                void 0 === n && (n = 2), void 0 === i && (i = 0);
-                var o = new ur(e, t, {
-                  itemclass: r,
-                  grouping: n,
-                  maxToReturn: i,
-                  queryFilter: a
-                });
+              function e(e, t, r) {
+                var n = new ur(
+                  e,
+                  t,
+                  Object(R.a)({ grouping: 2, maxToReturn: 0 }, r)
+                );
                 return (
-                  l.m_mapClusters.has(o.id) || l.m_mapClusters.set(o.id, o),
-                  o.id
+                  l.m_mapClusters.has(n.id) || l.m_mapClusters.set(n.id, n),
+                  n.id
                 );
               }
               function s(e, t, r, n) {
@@ -9491,27 +9504,22 @@
                     Object(F.d)("#RewardCluster_Popular_RewardItems")
                   ),
                   Object(F.d)("#RewardCluster_Popular_Subtitle"),
-                  void 0,
-                  2,
-                  120
+                  { maxToReturn: 120 }
                 ),
                 n = e(
                   ir(13, !0),
                   Object(F.d)("#RewardCluster_MiniProfileBackgrounds_Subtitle"),
-                  [13],
-                  2
+                  { itemclass: [13] }
                 ),
                 i = e(
                   Object(F.d)("#ShopPageTitle_Avatar"),
                   Object(F.d)("#RewardCluster_AvatarItems_Subtitle"),
-                  [15, 14],
-                  2
+                  { itemclass: [15, 14] }
                 ),
                 a = e(
                   ir(3, !0),
                   Object(F.d)("#RewardCluster_Backgrounds_Subtitle"),
-                  [3],
-                  2
+                  { itemclass: [3] }
                 ),
                 o = e(
                   Object(F.d)(
@@ -9519,8 +9527,7 @@
                     Object(F.d)("#ShopNav_ChatEffectsLink")
                   ),
                   Object(F.d)("#RewardCluster_ChatEffect_Subtitle"),
-                  [12],
-                  2
+                  { itemclass: [12] }
                 ),
                 c = e(
                   Object(F.d)(
@@ -9528,8 +9535,7 @@
                     Object(F.d)("#ShopNav_StickersLink")
                   ),
                   Object(F.d)("#RewardCluster_Popular_Subtitle"),
-                  [11],
-                  2
+                  { itemclass: [11] }
                 ),
                 m = e(
                   Object(F.d)(
@@ -9537,20 +9543,17 @@
                     Object(F.d)("#ShopNav_EmoticonsLink")
                   ),
                   Object(F.d)("#RewardCluster_Popular_Subtitle"),
-                  [4],
-                  2
+                  { itemclass: [4] }
                 ),
                 u = e(
                   Object(F.d)("#RewardCluster_All_Title", ir(15, !0)),
                   Object(F.d)("#RewardCluster_AnimatedAvatar_Subtitle"),
-                  [15],
-                  2
+                  { itemclass: [15] }
                 ),
                 d = e(
                   Object(F.d)("#RewardCluster_All_Title", ir(14, !0)),
                   Object(F.d)("#RewardCluster_AvatarFrames_Subtitle"),
-                  [14],
-                  2
+                  { itemclass: [14] }
                 ),
                 p = [
                   { cluster: r, type: 1, linkedPage: null },
@@ -9607,38 +9610,26 @@
                     "#RewardCluster_AnimatedProfileBackgrounds_Title"
                   ),
                   Object(F.d)("#RewardCluster_Backgrounds_Subtitle"),
-                  [3],
-                  2,
-                  120,
-                  [1]
+                  { itemclass: [3], maxToReturn: 120, queryFilter: [1] }
                 ),
                 y = e(
                   Object(F.d)(
                     "#RewardCluster_AnimatedMiniProfileBackgrounds_Title"
                   ),
                   Object(F.d)("#RewardCluster_MiniProfileBackgrounds_Subtitle"),
-                  [13],
-                  2,
-                  120,
-                  [1]
+                  { itemclass: [13], maxToReturn: 120, queryFilter: [1] }
                 ),
                 g = e(
                   Object(F.d)("#RewardCluster_StillProfileBackgrounds_Title"),
                   Object(F.d)("#RewardCluster_Backgrounds_Subtitle"),
-                  [3],
-                  2,
-                  120,
-                  [2]
+                  { itemclass: [3], maxToReturn: 120, queryFilter: [2] }
                 ),
                 v = e(
                   Object(F.d)(
                     "#RewardCluster_StillMiniProfileBackgrounds_Title"
                   ),
                   Object(F.d)("#RewardCluster_MiniProfileBackgrounds_Subtitle"),
-                  [13],
-                  2,
-                  120,
-                  [2]
+                  { itemclass: [13], maxToReturn: 120, queryFilter: [2] }
                 );
               t(
                 new fr(
@@ -9803,20 +9794,19 @@
             var t = e.appid,
               r = e.itemclass,
               n = e.grouping,
-              i = e.queryFilter;
-            return (
-              (t
+              i = e.queryFilter,
+              a = e.categoryTag;
+            return [
+              t
                 ? Object(R.g)(t)
                     .sort()
                     .join("_")
-                : "") +
-              "__" +
-              (r ? r.join("_") : "") +
-              "__" +
-              (n ? n.toString() : "") +
-              "__" +
-              (i ? i.join("_") : "")
-            );
+                : "",
+              r ? r.join("_") : "",
+              n ? n.toString() : "",
+              i ? i.join("_") : "",
+              a ? a.join("_") : ""
+            ].join("__");
           })(t)
         );
       }
@@ -10045,30 +10035,44 @@
           t[r - 1] = arguments[r];
         return t && t.length
           ? Object(R.g)([e], t).reduce(function(e, t) {
-              var r;
+              var r, n;
               if (!t) return e;
-              var n = Object(R.a)({}, e);
+              var i = Object(R.a)({}, e);
               return (
                 t.appid &&
-                  (n.appid && n.appid.length
-                    ? (n.appid = n.appid.filter(function(e) {
+                  (i.appid && i.appid.length
+                    ? (i.appid = i.appid.filter(function(e) {
                         return t.appid.includes(e);
                       }))
-                    : (n.appid = t.appid)),
+                    : (i.appid = t.appid)),
                 "number" == typeof t.grouping &&
                   "number" != typeof e.grouping &&
-                  (n.grouping = t.grouping),
+                  (i.grouping = t.grouping),
                 t.itemclass &&
-                  (n.itemclass && n.itemclass.length
-                    ? (n.itemclass = n.itemclass.filter(function(e) {
+                  (i.itemclass && i.itemclass.length
+                    ? (i.itemclass = i.itemclass.filter(function(e) {
                         return t.itemclass.includes(e);
                       }))
-                    : (n.itemclass = t.itemclass)),
+                    : (i.itemclass = t.itemclass)),
                 t.queryFilter &&
-                  (n.queryFilter
-                    ? (r = n.queryFilter).push.apply(r, t.queryFilter)
-                    : (n.queryFilter = t.queryFilter)),
-                n
+                  (i.queryFilter
+                    ? (r = i.queryFilter).push.apply(
+                        r,
+                        t.queryFilter.filter(function(e) {
+                          return i.queryFilter.includes(e);
+                        })
+                      )
+                    : (i.queryFilter = t.queryFilter)),
+                t.categoryTag &&
+                  (i.categoryTag
+                    ? (n = i.categoryTag).push.apply(
+                        n,
+                        t.categoryTag.filter(function(e) {
+                          return i.categoryTag.includes(e);
+                        })
+                      )
+                    : (i.categoryTag = t.categoryTag)),
+                i
               );
             })
           : e;

@@ -1678,7 +1678,7 @@ img.dynamiclink_preview {
 		text-decoration: underline;
 	}
 .dynamiclink_author {
-	height: 16px;
+	min-height: 16px;
 	font-size: 12px;
 	color: #95a6b2;
 	margin-bottom: 4px;

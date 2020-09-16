@@ -939,7 +939,9 @@ img {
     outline: none; }
 
 .shared_common_RemoveIcon_3NeLW {
-  cursor: pointer; }
+  cursor: pointer;
+  width: 16px;
+  height: 16px; }
 
 /* reset browser styles */
 button.DialogButton {

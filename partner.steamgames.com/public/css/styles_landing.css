@@ -2771,7 +2771,7 @@ ul.transfer_rights li {
 	width: 220px;
 	padding: 4px 0px 0px 8px;
 	display: inline-block;
-    overflow-wrap: break-word;
+	overflow-wrap: break-spaces;
 	hyphens: auto;
 }
 
@@ -2779,7 +2779,7 @@ ul.transfer_rights li {
 	width: 53px;
 	padding: 4px 0px 0px 0px;
 	display: inline-block;
-    overflow-wrap: break-word;
+	overflow-wrap: break-spaces;
 	hyphens: auto;
 }
 
@@ -2861,6 +2861,22 @@ ul.transfer_rights li {
 
 .cdkey_request.alt:hover {
 	background-color: #626262;
+}
+
+.cdkey_request.request_age_category_0 {
+	border-right: 3px solid rgba(1,164,109,0.8);
+}
+.cdkey_request.request_age_category_1 {
+	border-right: 3px solid rgba(55,127,199,0.8);
+}
+.cdkey_request.request_age_category_2 {
+	border-right: 3px solid rgba(245,216,0,0.8);
+}
+.cdkey_request.request_age_category_3 {
+	border-right: 3px solid rgba(255,155,43,0.8);
+}
+.cdkey_request.request_age_category_4 {
+	border-right: 3px solid rgba(236,62,64,0.8);
 }
 
 .cdkey_request_details {

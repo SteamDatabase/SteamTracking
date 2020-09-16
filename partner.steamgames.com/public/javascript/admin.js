@@ -1079,7 +1079,7 @@ function LocChangeLanguage( strLanguage )
 // global for registering all localized sections. Used to update all text area languages when one changes
 var g_LocSectionIDs = [];
 var g_bLocSetToEnglishOnLoad = false;
-function LocListenForEvents( id )
+function LocListenForEvents( id, lang )
 {
 	g_LocSectionIDs.push( id );
 
@@ -1088,7 +1088,7 @@ function LocListenForEvents( id )
 	if ( !g_bLocSetToEnglishOnLoad )
 	{
 		g_bLocSetToEnglishOnLoad = true;
-		setTimeout( function(){ LocChangeLanguage( 'english' ) }, 1 );
+		setTimeout( function(){ LocChangeLanguage( lang || 'english' ) }, 1 );
 	}
 }
 
@@ -1144,7 +1144,8 @@ function LocUpdateLangThatHaveText( id )
 			continue;
 
 		var idLanguage = hiddenInputs[i].id.slice( id.length );
-		idLanguage = idLanguage.slice( 0, idLanguage.indexOf( "_" ) );
+		//remove the __hidden suffix at the end of this component to get the language
+		idLanguage = idLanguage.slice( 0, idLanguage.indexOf( "__hidden" ) );
 		var option = document.getElementById( id + idLanguage + '__option' );
 
 		if ( hiddenInputs[i].value.length > 0 )
