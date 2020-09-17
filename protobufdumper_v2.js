@@ -107,7 +107,7 @@ function handleFile(file) {
 
 	// 1-st pass
 	modules.forEach((module, currentModuleName) => {
-		let protoConstructorMatch = module.match(/([_a-zA-Z\$]{1,2})(?==\(?(?:[_a-zA-Z\$]{1,2}\.Message,?)+\)?)/g);
+		let protoConstructorMatch = module.match(/([_a-zA-Z\$]{1,2})(?==\(?(?:[_a-zA-Z\$]\("[\w\+\/]{4}"\),)*(?:[_a-zA-Z\$]{1,2}\.Message,?)+\)?)/g);
 		if (!protoConstructorMatch)
 			return;
 
