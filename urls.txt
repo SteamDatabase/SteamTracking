@@ -116,9 +116,6 @@ https://steamcommunity.com/public/css/skin_1/workshop_managecollection.css?__TIM
 https://steamcommunity.com/public/css/skin_1/workshop_userfiles.css?__TIME__
 https://steamcommunity.com/public/css/webui/broadcast.css?__TIME__
 https://steamcommunity.com/public/css/webui/friends.css?__TIME__
-https://steamcommunity.com/public/css/webui/shared_application.css?__TIME__
-https://steamcommunity.com/public/css/webui/shared_clientuicontrols.css?__TIME__
-https://steamcommunity.com/public/css/webui/shared_dialog.css?__TIME__
 https://steamcommunity.com/public/shared/css/apphub.css?__TIME__
 https://steamcommunity.com/public/shared/css/apphub_images.css?__TIME__
 https://steamcommunity.com/public/shared/css/bigpicture/basestyles.css?__TIME__
@@ -143,7 +140,6 @@ https://store.steampowered.com/public/css/bigpicture/subscription.css?__TIME__
 https://store.steampowered.com/public/css/labs.css?__TIME__
 https://store.steampowered.com/public/css/labs/divingbell.css?__TIME__
 https://store.steampowered.com/public/css/labs/spring_cleaning.css?__TIME__
-https://store.steampowered.com/public/css/labs_trending_reviews.css?__TIME__
 https://store.steampowered.com/public/css/promo/autumn2016.css?__TIME__
 https://store.steampowered.com/public/css/promo/autumn2017.css?__TIME__
 https://store.steampowered.com/public/css/promo/autumn2018.css?__TIME__
@@ -375,9 +371,7 @@ https://steamcommunity.com/public/javascript/webui/chathelpers.js?__TIME__&l=eng
 https://steamcommunity.com/public/javascript/webui/clientcom.js?__TIME__&l=english
 https://steamcommunity.com/public/javascript/webui/friends.js?__TIME__&l=english
 https://steamcommunity.com/public/javascript/webui/localization/friendsui_english.js?__TIME__
-https://steamcommunity.com/public/javascript/webui/localization/profile_manifest.js?__TIME__&l=english
 https://steamcommunity.com/public/javascript/webui/localization/shared_english.js?__TIME__
-https://steamcommunity.com/public/javascript/webui/profile.js?__TIME__&l=english
 https://steamcommunity.com/public/javascript/webui/steammessages.js?__TIME__&l=english
 https://steamcommunity.com/public/javascript/workshop_commerce.js?__TIME__&l=english
 https://steamcommunity.com/public/javascript/workshop_functions.js?__TIME__&l=english
@@ -443,7 +437,6 @@ https://store.steampowered.com/public/javascript/main.js?__TIME__&l=english
 https://store.steampowered.com/public/javascript/modal.js?__TIME__&l=english
 https://store.steampowered.com/public/javascript/news.js?__TIME__&l=english
 https://store.steampowered.com/public/javascript/nothingtoseehere.js?__TIME__&l=english
-https://store.steampowered.com/public/javascript/playtesting.js?__TIME__&l=english
 https://store.steampowered.com/public/javascript/promo/salefunctions.js?__TIME__&l=english
 https://store.steampowered.com/public/javascript/promo/summer2019_grandprix.js?__TIME__&l=english
 https://store.steampowered.com/public/javascript/promo/winter2018_cottage.js?__TIME__&l=english
