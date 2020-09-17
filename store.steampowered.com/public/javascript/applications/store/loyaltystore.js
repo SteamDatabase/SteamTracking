@@ -299,7 +299,7 @@
         P = i.n(I),
         o = i("Ty5D"),
         n = i("1fPh"),
-        C = i("lkRc"),
+        B = i("lkRc"),
         a = i("WBba"),
         s = i("TyAF"),
         f = i("55Ip"),
@@ -307,11 +307,11 @@
         c = i("li8c"),
         r = i("2lpH"),
         m = i.n(r),
-        B = i("2vnA"),
+        O = i("2vnA"),
         F = i("TLQK"),
         u = i("vDqi"),
         d = i.n(u),
-        O = i("kyHq"),
+        j = i("kyHq"),
         p = i("bDQf"),
         _ = i("bxiW"),
         b = i("bxBv"),
@@ -319,8 +319,8 @@
         y = i("hRO2"),
         g = i("OS8t"),
         v = y.Message;
-      var j,
-        w,
+      var w,
+        C,
         S,
         M,
         E,
@@ -1611,20 +1611,20 @@
             n
           );
         })(v);
-      ((w = j = j || {}).GetCommunityInventory = function(e, t) {
+      ((C = w = w || {}).GetCommunityInventory = function(e, t) {
         return e.SendMsg("Quest.GetCommunityInventory#1", t, L, {
           bConstMethod: !0,
           ePrivilege: 1
         });
       }),
-        (w.GetCommunityItemDefinitions = function(e, t) {
+        (C.GetCommunityItemDefinitions = function(e, t) {
           return e.SendMsg("Quest.GetCommunityItemDefinitions#1", t, G, {
             bConstMethod: !0,
             ePrivilege: 2,
             eWebAPIKeyRequirement: 4
           });
         }),
-        (w.ActivateProfileModifierItem = function(e, t) {
+        (C.ActivateProfileModifierItem = function(e, t) {
           return e.SendMsg("Quest.ActivateProfileModifierItem#1", t, H, {
             ePrivilege: 1
           });
@@ -7706,7 +7706,7 @@
               (this.m_unGameServerPort = 0),
               (this.m_game_lobby_id = ""),
               (this.m_bPlayerNamePending = !1),
-              (this.m_mapRichPresence = B.C.map()),
+              (this.m_mapRichPresence = O.C.map()),
               (this.m_bNameInitialized = !1),
               (this.m_bStatusInitialized = !1),
               (this.m_steamid = e);
@@ -7879,7 +7879,7 @@
               if (0 == this.last_seen_online)
                 return Object(F.d)("#PersonaStateOffline");
               var e = this.GetOfflineStatusUpdateRate();
-              (!C.c.IN_MOBILE || e <= 60) && Object(Vt.b)(e);
+              (!B.c.IN_MOBILE || e <= 60) && Object(Vt.b)(e);
               var t =
                 Zt.a.CMInterface.GetServerRTime32() - this.last_seen_online;
               return t < 60
@@ -7993,24 +7993,24 @@
                 } else if (r.is_awayOrSnooze) return -1;
               return 0;
             }),
-            Object(R.c)([B.C], e.prototype, "m_bInitialized", void 0),
-            Object(R.c)([B.C], e.prototype, "m_ePersonaState", void 0),
-            Object(R.c)([B.C], e.prototype, "m_unGamePlayedAppID", void 0),
-            Object(R.c)([B.C], e.prototype, "m_gameid", void 0),
-            Object(R.c)([B.C], e.prototype, "m_unPersonaStateFlags", void 0),
-            Object(R.c)([B.C], e.prototype, "m_strPlayerName", void 0),
-            Object(R.c)([B.C], e.prototype, "m_strAvatarHash", void 0),
-            Object(R.c)([B.C], e.prototype, "m_rtLastSeenOnline", void 0),
-            Object(R.c)([B.C], e.prototype, "m_strGameExtraInfo", void 0),
-            Object(R.c)([B.C], e.prototype, "m_unGameServerIP", void 0),
-            Object(R.c)([B.C], e.prototype, "m_unGameServerPort", void 0),
-            Object(R.c)([B.C], e.prototype, "m_game_lobby_id", void 0),
-            Object(R.c)([B.C], e.prototype, "m_bPlayerNamePending", void 0),
-            Object(R.c)([B.C], e.prototype, "m_broadcastId", void 0),
-            Object(R.c)([B.C], e.prototype, "m_broadcastAccountId", void 0),
-            Object(R.c)([B.C], e.prototype, "m_broadcastAppId", void 0),
-            Object(R.c)([B.C], e.prototype, "m_broadcastViewerCount", void 0),
-            Object(R.c)([B.C], e.prototype, "m_strBroadcastTitle", void 0),
+            Object(R.c)([O.C], e.prototype, "m_bInitialized", void 0),
+            Object(R.c)([O.C], e.prototype, "m_ePersonaState", void 0),
+            Object(R.c)([O.C], e.prototype, "m_unGamePlayedAppID", void 0),
+            Object(R.c)([O.C], e.prototype, "m_gameid", void 0),
+            Object(R.c)([O.C], e.prototype, "m_unPersonaStateFlags", void 0),
+            Object(R.c)([O.C], e.prototype, "m_strPlayerName", void 0),
+            Object(R.c)([O.C], e.prototype, "m_strAvatarHash", void 0),
+            Object(R.c)([O.C], e.prototype, "m_rtLastSeenOnline", void 0),
+            Object(R.c)([O.C], e.prototype, "m_strGameExtraInfo", void 0),
+            Object(R.c)([O.C], e.prototype, "m_unGameServerIP", void 0),
+            Object(R.c)([O.C], e.prototype, "m_unGameServerPort", void 0),
+            Object(R.c)([O.C], e.prototype, "m_game_lobby_id", void 0),
+            Object(R.c)([O.C], e.prototype, "m_bPlayerNamePending", void 0),
+            Object(R.c)([O.C], e.prototype, "m_broadcastId", void 0),
+            Object(R.c)([O.C], e.prototype, "m_broadcastAccountId", void 0),
+            Object(R.c)([O.C], e.prototype, "m_broadcastAppId", void 0),
+            Object(R.c)([O.C], e.prototype, "m_broadcastViewerCount", void 0),
+            Object(R.c)([O.C], e.prototype, "m_strBroadcastTitle", void 0),
             e
           );
         })(),
@@ -8050,7 +8050,7 @@
       }
       var ar = "home",
         or = (function() {
-          function w() {
+          function C() {
             var t = this;
             (this.m_ulPointsAvailable = new m.a(0, 0)),
               (this.m_bLoadedCouponPromosForUser = !1),
@@ -8065,15 +8065,15 @@
               (this.m_mapOwnedCommunityItems = new Map()),
               (this.m_inflightInventoryRequests = {}),
               (this.m_bLoadedActiveBonuses = !1),
-              (this.m_rgActiveBonuses = B.C.array([], { deep: !1 })),
+              (this.m_rgActiveBonuses = O.C.array([], { deep: !1 })),
               (this.m_mapAppRewards = new Map()),
               (this.m_inflightRewardItemRequests = {}),
               (this.m_bLoadedRecentlyPlayed = !1),
               (this.m_rgRecentlyPlayed = []),
               (this.m_bSortedGamesWithRewards = !1),
-              (this.m_rgSortedAppsWithRewards = B.C.array([], { deep: !1 })),
+              (this.m_rgSortedAppsWithRewards = O.C.array([], { deep: !1 })),
               (this.m_bLoadedOwnedGames = !1),
-              (this.m_rgOwnedGames = B.C.array([], { deep: !1 })),
+              (this.m_rgOwnedGames = O.C.array([], { deep: !1 })),
               (this.m_bLoadedEligibleApps = !1),
               (this.m_rgEligibleApps = []),
               (this.m_mapEligibleApps = new Map()),
@@ -8084,7 +8084,7 @@
               (this.m_HeroImageFallbackLoader = new yr(
                 function(e) {
                   return fetch(
-                    C.c.STORE_BASE_URL + "points/heroimage?appid=" + e
+                    B.c.STORE_BASE_URL + "points/heroimage?appid=" + e
                   )
                     .then(function(e) {
                       return e.json();
@@ -8122,7 +8122,7 @@
               )),
               (this.m_batchedCommunityInventoryLoader = new _r(
                 function(e) {
-                  return j.GetCommunityInventory(t.m_transport, e);
+                  return w.GetCommunityInventory(t.m_transport, e);
                 },
                 function(e) {
                   var t = b.a.Init(x);
@@ -8151,17 +8151,17 @@
                   );
                 }
               )),
-              (this.m_mapPages = B.C.map({}, { deep: !1 })),
-              (this.m_mapClusters = B.C.map({}, { deep: !1 }));
+              (this.m_mapPages = O.C.map({}, { deep: !1 })),
+              (this.m_mapClusters = O.C.map({}, { deep: !1 }));
           }
           return (
-            (w.prototype.Init = function(e, t) {
+            (C.prototype.Init = function(e, t) {
               var r;
               (this.m_transport = e.GetServiceTransport()),
                 (this.m_anonymousTransport = e.GetAnonymousServiceTransport()),
                 (this.m_config = t),
                 this.BIsLoggedIn() &&
-                  ((r = new Kt.a(C.i.steamid)),
+                  ((r = new Kt.a(B.i.steamid)),
                   (this.m_persona = new Jt(r)),
                   this.RetrievePersonaState()),
                 t.eligible_apps
@@ -8189,19 +8189,19 @@
                   : this.GetLoyaltyRewardsSummary(),
                 this.HydrateCustomPages();
             }),
-            (w.Get = function() {
+            (C.Get = function() {
               return (
-                this.s_RewardsStore || (this.s_RewardsStore = new w()),
+                this.s_RewardsStore || (this.s_RewardsStore = new C()),
                 this.s_RewardsStore
               );
             }),
-            (w.prototype.GetConfig = function() {
+            (C.prototype.GetConfig = function() {
               return this.m_config;
             }),
-            (w.prototype.GetCurrentSeasonalAppID = function() {
+            (C.prototype.GetCurrentSeasonalAppID = function() {
               return nr;
             }),
-            (w.prototype.GetLoyaltyRewardsSummary = function() {
+            (C.prototype.GetLoyaltyRewardsSummary = function() {
               return Object(R.b)(this, void 0, void 0, function() {
                 var t, r;
                 return Object(R.e)(this, function(e) {
@@ -8209,7 +8209,7 @@
                     case 0:
                       return this.BIsLoggedIn()
                         ? ((t = b.a.Init(h.g)).SetBodyFields({
-                            steamid: C.i.steamid
+                            steamid: B.i.steamid
                           }),
                           [4, h.k.GetSummary(this.m_transport, t)])
                         : [2];
@@ -8233,19 +8233,19 @@
                 });
               });
             }),
-            (w.prototype.GetCommunityAwardCost = function() {
+            (C.prototype.GetCommunityAwardCost = function() {
               return (
                 this.m_bLoadedAwardCost || this.LoadAwardCost(),
                 this.m_unAwardCost
               );
             }),
-            (w.prototype.GetCommunityAwardPointsTransferred = function() {
+            (C.prototype.GetCommunityAwardPointsTransferred = function() {
               return (
                 this.m_bLoadedAwardCost || this.LoadAwardCost(),
                 this.m_unAwardPointsTransferred
               );
             }),
-            (w.prototype.LoadAwardCost = function() {
+            (C.prototype.LoadAwardCost = function() {
               return Object(R.b)(this, void 0, void 0, function() {
                 var t, r;
                 return Object(R.e)(this, function(e) {
@@ -8274,7 +8274,7 @@
                 });
               });
             }),
-            (w.prototype.ShowLoginDialog = function(e) {
+            (C.prototype.ShowLoginDialog = function(e) {
               var t,
                 r = window.location.href;
               void 0 !== e &&
@@ -8284,40 +8284,40 @@
                 (r += "/reward/" + e)),
                 Object(qt.b)(r);
             }),
-            (w.prototype.BIsLoggedIn = function() {
-              return C.i.logged_in;
+            (C.prototype.BIsLoggedIn = function() {
+              return B.i.logged_in;
             }),
-            (w.prototype.GetPointsAvailable = function() {
+            (C.prototype.GetPointsAvailable = function() {
               return this.m_ulPointsAvailable;
             }),
-            (w.prototype.GetIsUsingAppIDFilters = function() {
+            (C.prototype.GetIsUsingAppIDFilters = function() {
               return 0 != this.m_nAppIDFiltersInUseCount;
             }),
-            (w.prototype.SetIsUsingAppIDFilters = function(e) {
+            (C.prototype.SetIsUsingAppIDFilters = function(e) {
               this.m_nAppIDFiltersInUseCount += e ? 1 : -1;
             }),
-            (w.prototype.GetAppIDFilters = function() {
+            (C.prototype.GetAppIDFilters = function() {
               return this.m_mapAppIDFilters;
             }),
-            (w.prototype.AddAppIDFilter = function(e) {
+            (C.prototype.AddAppIDFilter = function(e) {
               this.m_mapAppIDFilters.set(e, !0);
             }),
-            (w.prototype.RemoveAppIDFilter = function(e) {
+            (C.prototype.RemoveAppIDFilter = function(e) {
               this.m_mapAppIDFilters.delete(e);
             }),
-            (w.prototype.GetCurrentAppFilterText = function() {
+            (C.prototype.GetCurrentAppFilterText = function() {
               return this.m_strAppFilterText;
             }),
-            (w.prototype.SetCurrentAppFilterText = function(e) {
+            (C.prototype.SetCurrentAppFilterText = function(e) {
               this.m_strAppFilterText = e;
             }),
-            (w.prototype.getLoyaltyRewardDefMap = function() {
+            (C.prototype.getLoyaltyRewardDefMap = function() {
               return this.m_mapLoyaltyRewardDefs;
             }),
-            (w.prototype.GetVirtualItemRewardDefinitions = function(e, t, r) {
+            (C.prototype.GetVirtualItemRewardDefinitions = function(e, t, r) {
               return this.GetLoyaltyRewardDefinitions(e, t, r, [1]);
             }),
-            (w.prototype.EResultToErrorMessage = function(e) {
+            (C.prototype.EResultToErrorMessage = function(e) {
               switch (e) {
                 case 15:
                   return Object(F.d)("#Redeem_Error_AccessDenied");
@@ -8332,7 +8332,7 @@
               }
               return "";
             }),
-            (w.prototype.GetLoyaltyRewardDefinitions = function(e, t, r, n) {
+            (C.prototype.GetLoyaltyRewardDefinitions = function(e, t, r, n) {
               var o = this,
                 i = { rewards: [], cTotalMatching: 0, cMaxToReturn: 0 };
               if (
@@ -8387,7 +8387,7 @@
                   this.LoadLoyaltyRewardDefinitions(a, d, p, n).then(function(
                     a
                   ) {
-                    Object(B.G)(function() {
+                    Object(O.G)(function() {
                       var e = a.definitions,
                         t = a.next_cursor,
                         r = a.total_count,
@@ -8422,7 +8422,7 @@
                 i
               );
             }),
-            (w.prototype.LoadLoyaltyRewardDefinitions = function(c, m, u, d) {
+            (C.prototype.LoadLoyaltyRewardDefinitions = function(c, m, u, d) {
               return Object(R.b)(this, void 0, void 0, function() {
                 var t, r, n, i, a, o, s, l;
                 return Object(R.e)(this, function(e) {
@@ -8439,7 +8439,7 @@
                         t.forEach(function(e) {
                           return s.add_appids(e);
                         }),
-                        s.set_language(C.c.LANGUAGE),
+                        s.set_language(B.c.LANGUAGE),
                         s.set_count(m),
                         s.set_sort(o.sort),
                         s.set_sort_descending(o.sort_descending),
@@ -8470,13 +8470,13 @@
                 });
               });
             }),
-            (w.prototype.GetCostToLevelSeasonalBadge = function(e) {
+            (C.prototype.GetCostToLevelSeasonalBadge = function(e) {
               var t = this.GetSeasonalBadgeDefinition();
               if (!t) return 0;
               var r = this.GetUserSeasonalBadgeLevel();
               return Math.max(parseInt(t.point_cost) * (e - r), 0);
             }),
-            (w.prototype.GetUserSeasonalBadgeLevel = function() {
+            (C.prototype.GetUserSeasonalBadgeLevel = function() {
               var e = this.GetSeasonalBadgeDefinition();
               if (!e) return 0;
               if (!this.BRewardOwnedByUser(e)) return 0;
@@ -8500,7 +8500,7 @@
                 ? (console.error("Seasonal badge level attribute is NaN"), 0)
                 : n;
             }),
-            (w.prototype.GetSeasonalBadgeDefinition = function() {
+            (C.prototype.GetSeasonalBadgeDefinition = function() {
               var t = this;
               return (
                 void 0 === this.m_seasonalBadgeDefinition &&
@@ -8510,7 +8510,7 @@
                 this.m_seasonalBadgeDefinition
               );
             }),
-            (w.prototype.LoadSeasonalBadgeDefinition = function() {
+            (C.prototype.LoadSeasonalBadgeDefinition = function() {
               return Object(R.b)(this, void 0, void 0, function() {
                 var t, r;
                 return Object(R.e)(this, function(e) {
@@ -8522,7 +8522,7 @@
                         ]),
                         t.set_community_item_classes([1]),
                         t.set_count(1),
-                        t.set_language(C.c.LANGUAGE),
+                        t.set_language(B.c.LANGUAGE),
                         [4, this.m_batchedRewardItemLoader.Load(t)]
                       );
                     case 1:
@@ -8537,7 +8537,7 @@
                 });
               });
             }),
-            (w.prototype.GetGoldenProfileDefinition = function() {
+            (C.prototype.GetGoldenProfileDefinition = function() {
               var t = this;
               return (
                 void 0 === this.m_goldenProfileDefinition &&
@@ -8547,7 +8547,7 @@
                 this.m_goldenProfileDefinition
               );
             }),
-            (w.prototype.LoadGoldenProfileDefinition = function() {
+            (C.prototype.LoadGoldenProfileDefinition = function() {
               return Object(R.b)(this, void 0, void 0, function() {
                 var t, r;
                 return Object(R.e)(this, function(e) {
@@ -8559,7 +8559,7 @@
                         ]),
                         t.set_community_item_classes([8]),
                         t.set_count(1),
-                        t.set_language(C.c.LANGUAGE),
+                        t.set_language(B.c.LANGUAGE),
                         [4, this.m_batchedRewardItemLoader.Load(t)]
                       );
                     case 1:
@@ -8574,7 +8574,7 @@
                 });
               });
             }),
-            (w.prototype.GetCouponDefinition = function(e) {
+            (C.prototype.GetCouponDefinition = function(e) {
               var t = this;
               return (
                 this.m_bLoadedCouponDefinitions ||
@@ -8587,7 +8587,7 @@
                 this.m_mapCouponDefinitons.get(e)
               );
             }),
-            (w.prototype.LoadCouponDefinitions = function() {
+            (C.prototype.LoadCouponDefinitions = function() {
               return Object(R.b)(this, void 0, void 0, function() {
                 var t, r;
                 return Object(R.e)(this, function(e) {
@@ -8599,7 +8599,7 @@
                         ]),
                         t.set_reward_types([4]),
                         t.set_count(10),
-                        t.set_language(C.c.LANGUAGE),
+                        t.set_language(B.c.LANGUAGE),
                         [4, this.m_batchedRewardItemLoader.Load(t)]
                       );
                     case 1:
@@ -8614,10 +8614,10 @@
                 });
               });
             }),
-            (w.prototype.GetOwnedItemCacheKey = function(e) {
+            (C.prototype.GetOwnedItemCacheKey = function(e) {
               return "" + e;
             }),
-            (w.prototype.BRewardOwnedByUser = function(e) {
+            (C.prototype.BRewardOwnedByUser = function(e) {
               var t = this.m_mapOwnedCommunityItems.get(
                 this.GetOwnedItemCacheKey(
                   this.m_bLoadedFullInventory ? void 0 : e.appid
@@ -8628,7 +8628,7 @@
                 t && t.has(e.community_item_type)
               );
             }),
-            (w.prototype.BRewardEquippedByUser = function(e) {
+            (C.prototype.BRewardEquippedByUser = function(e) {
               if (!this.BRewardOwnedByUser(e)) return !1;
               switch (e.community_item_class) {
                 case 15:
@@ -8665,7 +8665,7 @@
               }
               return !1;
             }),
-            (w.prototype.GetOwnedCommunityItem = function(e) {
+            (C.prototype.GetOwnedCommunityItem = function(e) {
               var t = this.m_mapOwnedCommunityItems.get(
                 this.GetOwnedItemCacheKey(
                   this.m_bLoadedFullInventory ? void 0 : e.appid
@@ -8680,11 +8680,11 @@
                 t.get(e.community_item_type)
               );
             }),
-            (w.prototype.GetOwnedCommunityItemID = function(e) {
+            (C.prototype.GetOwnedCommunityItemID = function(e) {
               var t = this.GetOwnedCommunityItem(e);
               return t ? t.communityitemid : null;
             }),
-            (w.prototype.EnsureCommunityItemInventoryLoaded = function(t) {
+            (C.prototype.EnsureCommunityItemInventoryLoaded = function(t) {
               return Object(R.b)(this, void 0, void 0, function() {
                 return Object(R.e)(this, function(e) {
                   switch (e.label) {
@@ -8702,7 +8702,7 @@
                 });
               });
             }),
-            (w.prototype.GetCommunityItemInventory = function(a) {
+            (C.prototype.GetCommunityItemInventory = function(a) {
               return Object(R.b)(this, void 0, void 0, function() {
                 var t, r, n, i;
                 return Object(R.e)(this, function(e) {
@@ -8732,7 +8732,7 @@
                 });
               });
             }),
-            Object.defineProperty(w.prototype, "active_bonuses", {
+            Object.defineProperty(C.prototype, "active_bonuses", {
               get: function() {
                 return (
                   this.m_bLoadedActiveBonuses || this.LoadActiveBonuses(),
@@ -8742,7 +8742,7 @@
               enumerable: !1,
               configurable: !0
             }),
-            (w.prototype.LoadActiveBonuses = function() {
+            (C.prototype.LoadActiveBonuses = function() {
               return Object(R.b)(this, void 0, void 0, function() {
                 var t, r, n;
                 return Object(R.e)(this, function(e) {
@@ -8775,7 +8775,7 @@
                 });
               });
             }),
-            (w.prototype.SetProfileBackground = function(i) {
+            (C.prototype.SetProfileBackground = function(i) {
               return Object(R.b)(this, void 0, void 0, function() {
                 var t, r, n;
                 return Object(R.e)(this, function(e) {
@@ -8808,7 +8808,7 @@
                 });
               });
             }),
-            (w.prototype.SetAvatarFrame = function(i) {
+            (C.prototype.SetAvatarFrame = function(i) {
               return Object(R.b)(this, void 0, void 0, function() {
                 var t, r, n;
                 return Object(R.e)(this, function(e) {
@@ -8842,7 +8842,7 @@
                 });
               });
             }),
-            (w.prototype.SetAnimatedAvatar = function(i) {
+            (C.prototype.SetAnimatedAvatar = function(i) {
               return Object(R.b)(this, void 0, void 0, function() {
                 var t, r, n;
                 return Object(R.e)(this, function(e) {
@@ -8876,7 +8876,7 @@
                 });
               });
             }),
-            (w.prototype.SetMiniProfileBackground = function(i) {
+            (C.prototype.SetMiniProfileBackground = function(i) {
               return Object(R.b)(this, void 0, void 0, function() {
                 var t, r, n;
                 return Object(R.e)(this, function(e) {
@@ -8910,7 +8910,7 @@
                 });
               });
             }),
-            (w.prototype.ActivateProfileModifier = function(i) {
+            (C.prototype.ActivateProfileModifier = function(i) {
               return Object(R.b)(this, void 0, void 0, function() {
                 var t, r, n;
                 return Object(R.e)(this, function(e) {
@@ -8927,7 +8927,7 @@
                           r.Body().set_activate(!0),
                           [
                             4,
-                            j.ActivateProfileModifierItem(this.m_transport, r)
+                            w.ActivateProfileModifierItem(this.m_transport, r)
                           ])
                         : [
                             2,
@@ -8949,7 +8949,7 @@
                 });
               });
             }),
-            (w.prototype.RedeemPointsForItem = function(i, a) {
+            (C.prototype.RedeemPointsForItem = function(i, a) {
               return Object(R.b)(this, void 0, void 0, function() {
                 var t, r, n;
                 return Object(R.e)(this, function(e) {
@@ -8983,7 +8983,7 @@
                 });
               });
             }),
-            (w.prototype.RedeemPointsForBadge = function(i, a) {
+            (C.prototype.RedeemPointsForBadge = function(i, a) {
               return Object(R.b)(this, void 0, void 0, function() {
                 var t, r, n;
                 return Object(R.e)(this, function(e) {
@@ -9021,7 +9021,7 @@
                 });
               });
             }),
-            (w.prototype.RedeemPointsForCoupon = function(a) {
+            (C.prototype.RedeemPointsForCoupon = function(a) {
               return Object(R.b)(this, void 0, void 0, function() {
                 var r, t, n, i;
                 return Object(R.e)(this, function(e) {
@@ -9035,7 +9035,7 @@
                           2,
                           (r = { eResult: 21, strMessage: "Not logged on" })
                         ];
-                      (t = new FormData()).append("sessionid", C.c.SESSIONID),
+                      (t = new FormData()).append("sessionid", B.c.SESSIONID),
                         t.append("itemid", a.toString()),
                         (e.label = 1);
                     case 1:
@@ -9045,7 +9045,7 @@
                           4,
                           d.a
                             .post(
-                              C.c.STORE_BASE_URL +
+                              B.c.STORE_BASE_URL +
                                 "cart/ajaxredeemtokensforcartdiscount",
                               t
                             )
@@ -9079,7 +9079,7 @@
                 });
               });
             }),
-            (w.prototype.GetCouponPromosForUser = function() {
+            (C.prototype.GetCouponPromosForUser = function() {
               var t = this;
               return (
                 this.m_bLoadedCouponPromosForUser ||
@@ -9100,7 +9100,7 @@
                 this.m_mapCouponPromos
               );
             }),
-            (w.prototype.LoadCouponPromosForUser = function() {
+            (C.prototype.LoadCouponPromosForUser = function() {
               return Object(R.b)(this, void 0, void 0, function() {
                 var t, r;
                 return Object(R.e)(this, function(e) {
@@ -9109,7 +9109,7 @@
                       return (
                         (t = b.a.Init(Rt))
                           .Body()
-                          .set_country_code(C.i.country_code),
+                          .set_country_code(B.i.country_code),
                         [
                           4,
                           St.GetAvailableValveDiscountPromotions(
@@ -9138,7 +9138,7 @@
                 });
               });
             }),
-            (w.prototype.BCanRedeemPointsForItem = function(e) {
+            (C.prototype.BCanRedeemPointsForItem = function(e) {
               if (1 == e.type)
                 switch (e.community_item_class) {
                   case 4:
@@ -9155,7 +9155,7 @@
                 }
               return !0;
             }),
-            (w.prototype.GetSortedGamesWithRewards = function() {
+            (C.prototype.GetSortedGamesWithRewards = function() {
               var s = this;
               return (
                 this.m_bSortedGamesWithRewards ||
@@ -9203,7 +9203,7 @@
                 this.m_rgSortedAppsWithRewards
               );
             }),
-            (w.prototype.LoadRecentlyPlayedApps = function() {
+            (C.prototype.LoadRecentlyPlayedApps = function() {
               return Object(R.b)(this, void 0, void 0, function() {
                 var t, r;
                 return Object(R.e)(this, function(e) {
@@ -9229,7 +9229,7 @@
                 });
               });
             }),
-            (w.prototype.ProcessRecentlyPlayedApps = function(e) {
+            (C.prototype.ProcessRecentlyPlayedApps = function(e) {
               return (
                 e.sort(function(e, t) {
                   return t.last_playtime != e.last_playtime
@@ -9243,7 +9243,7 @@
                 })
               );
             }),
-            (w.prototype.LoadOwnedGames = function() {
+            (C.prototype.LoadOwnedGames = function() {
               return Object(R.b)(this, void 0, void 0, function() {
                 var t, r;
                 return Object(R.e)(this, function(e) {
@@ -9252,7 +9252,7 @@
                       return ((this.m_bLoadedOwnedGames = !0),
                       this.BIsLoggedIn())
                         ? ((t = b.a.Init(le)).SetBodyFields({
-                            steamid: C.i.steamid,
+                            steamid: B.i.steamid,
                             include_played_free_games: !0,
                             include_free_sub: !0
                           }),
@@ -9278,7 +9278,7 @@
                 });
               });
             }),
-            (w.prototype.LoadEligibleApps = function() {
+            (C.prototype.LoadEligibleApps = function() {
               return Object(R.b)(this, void 0, void 0, function() {
                 var t, r;
                 return Object(R.e)(this, function(e) {
@@ -9303,7 +9303,7 @@
                 });
               });
             }),
-            (w.prototype.RefreshEquippedProfileItems = function() {
+            (C.prototype.RefreshEquippedProfileItems = function() {
               return Object(R.b)(this, void 0, void 0, function() {
                 var t, r;
                 return Object(R.e)(this, function(e) {
@@ -9311,7 +9311,7 @@
                     case 0:
                       return this.BIsLoggedIn()
                         ? ((t = b.a.Init(Ee)).SetBodyFields({
-                            steamid: C.i.steamid
+                            steamid: B.i.steamid
                           }),
                           [4, $.GetProfileItemsEquipped(this.m_transport, t)])
                         : [2];
@@ -9329,10 +9329,10 @@
                 });
               });
             }),
-            (w.prototype.GetPersonaState = function() {
+            (C.prototype.GetPersonaState = function() {
               return this.m_persona;
             }),
-            (w.prototype.RetrievePersonaState = function() {
+            (C.prototype.RetrievePersonaState = function() {
               return Object(R.b)(this, void 0, void 0, function() {
                 var t,
                   r = this;
@@ -9340,13 +9340,13 @@
                   return (
                     (t = {
                       access_token: this.m_config.webapi_token,
-                      steamids: C.i.steamid
+                      steamids: B.i.steamid
                     }),
                     [
                       2,
                       d.a
                         .get(
-                          C.c.WEBAPI_BASE_URL +
+                          B.c.WEBAPI_BASE_URL +
                             "ISteamUserOAuth/GetUserSummaries/v2/",
                           { params: t }
                         )
@@ -9366,10 +9366,10 @@
                 });
               });
             }),
-            (w.prototype.GetEquippedItems = function() {
+            (C.prototype.GetEquippedItems = function() {
               return this.m_equippedItems;
             }),
-            (w.prototype.GetRewardItem = function(t) {
+            (C.prototype.GetRewardItem = function(t) {
               var r = this;
               return (
                 this.m_mapLoyaltyRewardDefs.has(t) ||
@@ -9382,12 +9382,12 @@
                 this.m_mapLoyaltyRewardDefs.get(t)
               );
             }),
-            (w.prototype.GetAppHeroImage = function(e) {
+            (C.prototype.GetAppHeroImage = function(e) {
               var t = this.m_mapEligibleApps.get(e);
               return t && t.hero_carousel_image
                 ? {
                     img_url:
-                      C.c.MEDIA_CDN_COMMUNITY_URL +
+                      B.c.MEDIA_CDN_COMMUNITY_URL +
                       "images/items/" +
                       e +
                       "/" +
@@ -9399,14 +9399,14 @@
                     is_custom: !1
                   };
             }),
-            (w.prototype.LoadRewardItem = function(n) {
+            (C.prototype.LoadRewardItem = function(n) {
               return Object(R.b)(this, void 0, void 0, function() {
                 var t, r;
                 return Object(R.e)(this, function(e) {
                   switch (e.label) {
                     case 0:
                       return (
-                        (t = new h.h()).set_language(C.c.LANGUAGE),
+                        (t = new h.h()).set_language(B.c.LANGUAGE),
                         t.set_count(1),
                         t.set_definitionids([n]),
                         [4, this.m_batchedRewardItemLoader.Load(t)]
@@ -9428,14 +9428,14 @@
                 });
               });
             }),
-            (w.prototype.GetPageDescriptor = function(e) {
+            (C.prototype.GetPageDescriptor = function(e) {
               return (
                 this.m_mapPages.has(lr(e)) ||
                   this.m_mapPages.set(lr(e), this.BuildPage(e)),
                 this.m_mapPages.get(lr(e))
               );
             }),
-            (w.prototype.BuildPage = function(e) {
+            (C.prototype.BuildPage = function(e) {
               switch (e.type) {
                 case "app":
                   return new pr(
@@ -9452,10 +9452,10 @@
                   return console.error("Unknown page type " + e.type), null;
               }
             }),
-            (w.prototype.GetClusterDescriptor = function(e) {
+            (C.prototype.GetClusterDescriptor = function(e) {
               return this.m_mapClusters.get(e);
             }),
-            (w.prototype.HydrateCustomPages = function() {
+            (C.prototype.HydrateCustomPages = function() {
               function e(e, t, r) {
                 var n = new ur(
                   e,
@@ -9479,10 +9479,10 @@
                     return Object(F.d)("#HeroCluster_AppTitle", a.title);
                   },
                   get strImage() {
-                    return t || w.Get().GetAppHeroImage(e).img_url;
+                    return t || C.Get().GetAppHeroImage(e).img_url;
                   },
                   get bFullBleedImage() {
-                    return !(!t && !w.Get().GetAppHeroImage(e).is_custom);
+                    return !(!t && !C.Get().GetAppHeroImage(e).is_custom);
                   },
                   linkedPage: { type: "app", appid: e },
                   theme: {
@@ -9576,9 +9576,18 @@
                     linkedPage: { type: "custom", pageid: "emoticons" }
                   }
                 ],
-                f = [];
-              Object(O.b)(C.c.EREALM) ||
-                f.push(
+                f = e(
+                  Object(F.d)(
+                    "#RewardCluster_NewFeatured_Title",
+                    Object(F.d)("#RewardCluster_Popular_RewardItems")
+                  ),
+                  void 0,
+                  { categoryTag: ["first_points_shop_update"], grouping: 1 }
+                );
+              p.unshift({ cluster: f, type: 1 });
+              var _ = [];
+              Object(j.b)(B.c.EREALM) ||
+                _.push(
                   s(870780),
                   s(1190460, void 0, void 0, { itemclass: [3] }),
                   s(570, Xt, Object(F.d)("#HeroCluster_dota_subtitile")),
@@ -9587,9 +9596,9 @@
                   s(632360),
                   s(632470, er)
                 );
-              for (var _ = [], b = 0; b < Math.max(p.length, f.length); b++)
-                b < p.length && _.push(p[b]), b < f.length && _.push(f[b]);
-              t(new fr(ar, _)),
+              for (var b = [], h = 0; h < Math.max(p.length, _.length); h++)
+                h < p.length && b.push(p[h]), h < _.length && b.push(_[h]);
+              t(new fr(ar, b)),
                 t(
                   new fr(
                     "stickers",
@@ -9605,26 +9614,26 @@
                   )
                 ),
                 t(new fr("chateffects", [{ cluster: o, type: 0 }], ir(12, !0)));
-              var h = e(
+              var y = e(
                   Object(F.d)(
                     "#RewardCluster_AnimatedProfileBackgrounds_Title"
                   ),
                   Object(F.d)("#RewardCluster_Backgrounds_Subtitle"),
                   { itemclass: [3], maxToReturn: 120, queryFilter: [1] }
                 ),
-                y = e(
+                g = e(
                   Object(F.d)(
                     "#RewardCluster_AnimatedMiniProfileBackgrounds_Title"
                   ),
                   Object(F.d)("#RewardCluster_MiniProfileBackgrounds_Subtitle"),
                   { itemclass: [13], maxToReturn: 120, queryFilter: [1] }
                 ),
-                g = e(
+                v = e(
                   Object(F.d)("#RewardCluster_StillProfileBackgrounds_Title"),
                   Object(F.d)("#RewardCluster_Backgrounds_Subtitle"),
                   { itemclass: [3], maxToReturn: 120, queryFilter: [2] }
                 ),
-                v = e(
+                w = e(
                   Object(F.d)(
                     "#RewardCluster_StillMiniProfileBackgrounds_Title"
                   ),
@@ -9635,10 +9644,10 @@
                 new fr(
                   "backgrounds",
                   [
-                    { cluster: h, type: 1 },
                     { cluster: y, type: 1 },
                     { cluster: g, type: 1 },
-                    { cluster: v, type: 1 }
+                    { cluster: v, type: 1 },
+                    { cluster: w, type: 1 }
                   ],
                   Object(F.d)("#ShopPageTitle_Backgrounds")
                 )
@@ -9651,15 +9660,15 @@
                   )
                 ),
                 this.BIsLoggedIn() &&
-                  Object(B.L)(function() {
-                    return !!w.Get().GetSortedGamesWithRewards().length;
+                  Object(O.L)(function() {
+                    return !!C.Get().GetSortedGamesWithRewards().length;
                   }).then(function() {
                     var e = new ur(
                       Object(F.d)("#HeroCluster_YourGamesTitle"),
                       void 0,
                       {
                         get appid() {
-                          return w.Get().GetSortedGamesWithRewards();
+                          return C.Get().GetSortedGamesWithRewards();
                         },
                         grouping: 2
                       }
@@ -9672,14 +9681,14 @@
                       strImage: tr,
                       bFullBleedImage: !0
                     };
-                    _.push(t);
+                    b.push(t);
                     for (
-                      var r = w.Get().GetSortedGamesWithRewards(),
+                      var r = C.Get().GetSortedGamesWithRewards(),
                         i = 0,
                         n = function(n) {
                           if (
                             -1 !=
-                            _.findIndex(function(e) {
+                            b.findIndex(function(e) {
                               return (
                                 (t = e.cluster),
                                 ((r = l.m_mapClusters.get(t)) && r instanceof dr
@@ -9692,7 +9701,7 @@
                             return "continue";
                           var e = s(n);
                           return (
-                            _.splice(1 + 3 * i, 0, e),
+                            b.splice(1 + 3 * i, 0, e),
                             3 <= (i += 1) ? "break" : void 0
                           );
                         },
@@ -9705,56 +9714,56 @@
                     }
                     l.m_mapPages.set(
                       lr({ type: "custom", pageid: ar }),
-                      new fr(ar, _)
+                      new fr(ar, b)
                     );
                   });
             }),
-            Object(R.c)([B.C.ref], w.prototype, "m_ulPointsAvailable", void 0),
-            Object(R.c)([B.C], w.prototype, "m_mapCouponPromos", void 0),
+            Object(R.c)([O.C.ref], C.prototype, "m_ulPointsAvailable", void 0),
+            Object(R.c)([O.C], C.prototype, "m_mapCouponPromos", void 0),
             Object(R.c)(
-              [B.C],
-              w.prototype,
+              [O.C],
+              C.prototype,
               "m_nAppIDFiltersInUseCount",
               void 0
             ),
-            Object(R.c)([B.C], w.prototype, "m_mapAppIDFilters", void 0),
-            Object(R.c)([B.C], w.prototype, "m_strAppFilterText", void 0),
-            Object(R.c)([B.C], w.prototype, "m_mapCouponDefinitons", void 0),
-            Object(R.c)([B.C], w.prototype, "m_mapLoyaltyRewardDefs", void 0),
-            Object(R.c)([B.C], w.prototype, "m_mapOwnedCommunityItems", void 0),
-            Object(R.c)([B.C], w.prototype, "m_mapAppRewards", void 0),
+            Object(R.c)([O.C], C.prototype, "m_mapAppIDFilters", void 0),
+            Object(R.c)([O.C], C.prototype, "m_strAppFilterText", void 0),
+            Object(R.c)([O.C], C.prototype, "m_mapCouponDefinitons", void 0),
+            Object(R.c)([O.C], C.prototype, "m_mapLoyaltyRewardDefs", void 0),
+            Object(R.c)([O.C], C.prototype, "m_mapOwnedCommunityItems", void 0),
+            Object(R.c)([O.C], C.prototype, "m_mapAppRewards", void 0),
             Object(R.c)(
-              [B.C],
-              w.prototype,
+              [O.C],
+              C.prototype,
               "m_seasonalBadgeDefinition",
               void 0
             ),
             Object(R.c)(
-              [B.C],
-              w.prototype,
+              [O.C],
+              C.prototype,
               "m_goldenProfileDefinition",
               void 0
             ),
             Object(R.c)(
-              [B.C],
-              w.prototype,
+              [O.C],
+              C.prototype,
               "m_rgSortedAppsWithRewards",
               void 0
             ),
-            Object(R.c)([B.C], w.prototype, "m_rgOwnedGames", void 0),
-            Object(R.c)([B.C], w.prototype, "m_rgEligibleApps", void 0),
-            Object(R.c)([B.C], w.prototype, "m_mapEligibleApps", void 0),
-            Object(R.c)([B.C], w.prototype, "m_persona", void 0),
-            Object(R.c)([B.C], w.prototype, "m_equippedItems", void 0),
-            Object(R.c)([B.C], w.prototype, "m_unAwardCost", void 0),
+            Object(R.c)([O.C], C.prototype, "m_rgOwnedGames", void 0),
+            Object(R.c)([O.C], C.prototype, "m_rgEligibleApps", void 0),
+            Object(R.c)([O.C], C.prototype, "m_mapEligibleApps", void 0),
+            Object(R.c)([O.C], C.prototype, "m_persona", void 0),
+            Object(R.c)([O.C], C.prototype, "m_equippedItems", void 0),
+            Object(R.c)([O.C], C.prototype, "m_unAwardCost", void 0),
             Object(R.c)(
-              [B.C],
-              w.prototype,
+              [O.C],
+              C.prototype,
               "m_unAwardPointsTransferred",
               void 0
             ),
-            Object(R.c)([_.a], w.prototype, "ShowLoginDialog", null),
-            w
+            Object(R.c)([_.a], C.prototype, "ShowLoginDialog", null),
+            C
           );
         })();
       function sr(e) {
@@ -10136,8 +10145,8 @@
           }
           return (
             (e.prototype.Reset = function() {
-              (this.m_mapCache = B.C.map({}, { deep: !1 })),
-                (this.m_mapInflightRequests = B.C.map());
+              (this.m_mapCache = O.C.map({}, { deep: !1 })),
+                (this.m_mapInflightRequests = O.C.map());
             }),
             (e.prototype.Get = function() {
               for (var e = [], t = 0; t < arguments.length; t++)
@@ -11267,14 +11276,14 @@
           r = Object(R.f)(e, ["definition"]);
         t.community_item_data || console.log(t);
         var n =
-          C.c.MEDIA_CDN_COMMUNITY_URL +
+          B.c.MEDIA_CDN_COMMUNITY_URL +
           "images/items/" +
           t.appid +
           "/" +
           t.community_item_data.item_image_large;
         3 == t.community_item_class &&
           (n =
-            C.c.COMMUNITY_BASE_URL +
+            B.c.COMMUNITY_BASE_URL +
             "economy/profilebackground/items/" +
             t.appid +
             "/" +
@@ -11499,7 +11508,7 @@
               videoProps: {
                 className: sn.ImageBackground,
                 poster:
-                  C.c.COMMUNITY_BASE_URL +
+                  B.c.COMMUNITY_BASE_URL +
                   "economy/profilebackground/items/" +
                   e.definition.appid +
                   "/" +
@@ -11512,7 +11521,7 @@
               null,
               P.a.createElement("source", {
                 src:
-                  C.c.MEDIA_CDN_COMMUNITY_URL +
+                  B.c.MEDIA_CDN_COMMUNITY_URL +
                   "images/items/" +
                   e.definition.appid +
                   "/" +
@@ -11523,7 +11532,7 @@
               }),
               P.a.createElement("source", {
                 src:
-                  C.c.MEDIA_CDN_COMMUNITY_URL +
+                  B.c.MEDIA_CDN_COMMUNITY_URL +
                   "images/items/" +
                   e.definition.appid +
                   "/" +
@@ -11545,7 +11554,7 @@
             P.a.createElement("img", {
               className: sn.ImageBackground,
               src:
-                C.c.COMMUNITY_BASE_URL +
+                B.c.COMMUNITY_BASE_URL +
                 "economy/profilebackground/items/" +
                 e.definition.appid +
                 "/" +
@@ -11749,7 +11758,7 @@
                 i = n.item_image_large,
                 a = n.item_image_small,
                 o = e ? a : i,
-                s = C.c.MEDIA_CDN_COMMUNITY_URL + "images/items/" + r + "/" + o;
+                s = B.c.MEDIA_CDN_COMMUNITY_URL + "images/items/" + r + "/" + o;
               return P.a.createElement("img", {
                 className: sn.ImageMedium,
                 src: s
@@ -11764,7 +11773,7 @@
             P.a.createElement("img", {
               className: sn.ImageSmall,
               src:
-                C.c.MEDIA_CDN_COMMUNITY_URL +
+                B.c.MEDIA_CDN_COMMUNITY_URL +
                 "images/items/" +
                 e.definition.appid +
                 "/" +
@@ -11791,7 +11800,7 @@
               videoProps: {
                 className: sn.ImageMiniBackground,
                 poster:
-                  C.c.MEDIA_CDN_COMMUNITY_URL +
+                  B.c.MEDIA_CDN_COMMUNITY_URL +
                   "images/items/" +
                   e.definition.appid +
                   "/" +
@@ -11803,7 +11812,7 @@
               null,
               P.a.createElement("source", {
                 src:
-                  C.c.MEDIA_CDN_COMMUNITY_URL +
+                  B.c.MEDIA_CDN_COMMUNITY_URL +
                   "images/items/" +
                   e.definition.appid +
                   "/" +
@@ -11814,7 +11823,7 @@
               }),
               P.a.createElement("source", {
                 src:
-                  C.c.MEDIA_CDN_COMMUNITY_URL +
+                  B.c.MEDIA_CDN_COMMUNITY_URL +
                   "images/items/" +
                   e.definition.appid +
                   "/" +
@@ -11843,7 +11852,7 @@
                 i = n.item_image_large,
                 a = n.item_image_small,
                 o = e ? a : i,
-                s = C.c.MEDIA_CDN_COMMUNITY_URL + "images/items/" + r + "/" + o;
+                s = B.c.MEDIA_CDN_COMMUNITY_URL + "images/items/" + r + "/" + o;
               return P.a.createElement("img", {
                 className: sn.ImageFrames,
                 src: s
@@ -11862,7 +11871,7 @@
                 i = n.item_image_large,
                 a = n.item_image_small,
                 o = e ? a : i,
-                s = C.c.MEDIA_CDN_COMMUNITY_URL + "images/items/" + r + "/" + o;
+                s = B.c.MEDIA_CDN_COMMUNITY_URL + "images/items/" + r + "/" + o;
               return P.a.createElement("img", {
                 className: sn.ImageAnimatedAvatar,
                 src: s
@@ -12074,7 +12083,7 @@
         );
       }
       function pi(e, t) {
-        return C.c.MEDIA_CDN_COMMUNITY_URL + "/images/items/" + e + "/" + t;
+        return B.c.MEDIA_CDN_COMMUNITY_URL + "/images/items/" + e + "/" + t;
       }
       var fi = Object(s.a)(function() {
           var n = or.Get().GetSeasonalBadgeDefinition(),
@@ -12278,8 +12287,8 @@
             }),
             (e.prototype.BClientAccountMatches = function() {
               return (
-                !C.i.logged_in ||
-                C.i.accountid == this.m_connection.ClientInfo.unAccountID
+                !B.i.logged_in ||
+                B.i.accountid == this.m_connection.ClientInfo.unAccountID
               );
             }),
             (e.prototype.GenericEResultCall = function(e) {
@@ -12366,8 +12375,8 @@
               if (!this.m_socket || this.m_socket.readyState != WebSocket.OPEN)
                 return !1;
               var r = Object.assign({}, e, {
-                universe: C.c.EUNIVERSE,
-                accountid: C.i.accountid
+                universe: B.c.EUNIVERSE,
+                accountid: B.i.accountid
               });
               void 0 !== t && (r.sequenceid = t);
               try {
@@ -12448,7 +12457,7 @@
         Mi = i.n(Si),
         Ei = i("YyVH");
       function Ii(e, t, r) {
-        return C.c.COMMUNITY_CDN_ASSET_URL + e + "/roomeffects/" + t + "/" + r;
+        return B.c.COMMUNITY_CDN_ASSET_URL + e + "/roomeffects/" + t + "/" + r;
       }
       var Ri = (function(r) {
         function e(e) {
@@ -13029,7 +13038,7 @@
           },
           a = 1 + Math.floor(5 * t.next()),
           o =
-            C.c.COMMUNITY_CDN_ASSET_URL +
+            B.c.COMMUNITY_CDN_ASSET_URL +
             "winter2019/roomeffects/96px/flake_" +
             a +
             ".png";
@@ -13040,7 +13049,7 @@
       function Vi(t, r) {
         return function() {
           var e =
-            C.c.COMMUNITY_CDN_ASSET_URL + r + "/roomeffects/96px/" + t + ".png";
+            B.c.COMMUNITY_CDN_ASSET_URL + r + "/roomeffects/96px/" + t + ".png";
           return I.createElement("img", { style: { width: "100%" }, src: e });
         };
       }
@@ -13233,7 +13242,7 @@
               confetti_snow: 3,
               festive: 10
             }),
-            Object(R.c)([B.C], e.prototype, "m_rgRunningEffects", void 0),
+            Object(R.c)([O.C], e.prototype, "m_rgRunningEffects", void 0),
             e
           );
         })(),
@@ -13312,7 +13321,7 @@
               return (
                 n && n.image_small && 0 != n.image_small.length
                   ? (o =
-                      C.c.MEDIA_CDN_COMMUNITY_URL + "images/" + n.image_small)
+                      B.c.MEDIA_CDN_COMMUNITY_URL + "images/" + n.image_small)
                   : t
                   ? ((o = t.avatar_url_medium),
                     "Small" == r || "X-Small" == r
@@ -13320,15 +13329,15 @@
                       : ("Large" != r && "X-Large" != r && "FillArea" != r) ||
                         (o = t.avatar_url_full))
                   : ((o =
-                      C.c.MEDIA_CDN_COMMUNITY_URL +
+                      B.c.MEDIA_CDN_COMMUNITY_URL +
                       "images/avatars/fe/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_medium.jpg"),
                     "Small" == r || "X-Small" == r
                       ? (o =
-                          C.c.MEDIA_CDN_COMMUNITY_URL +
+                          B.c.MEDIA_CDN_COMMUNITY_URL +
                           "images/avatars/fe/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb.jpg")
                       : ("Large" != r && "X-Large" != r && "FillArea" != r) ||
                         (o =
-                          C.c.MEDIA_CDN_COMMUNITY_URL +
+                          B.c.MEDIA_CDN_COMMUNITY_URL +
                           "images/avatars/fe/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_full.jpg")),
                 I.createElement(
                   ra,
@@ -13354,7 +13363,7 @@
           var i = null,
             i = t.image_small.startsWith("https://")
               ? t.image_small
-              : C.c.MEDIA_CDN_COMMUNITY_URL + "images/" + t.image_small;
+              : B.c.MEDIA_CDN_COMMUNITY_URL + "images/" + t.image_small;
           return I.createElement(
             "div",
             Object(R.a)(
@@ -13886,7 +13895,7 @@
               var e = {
                   backgroundImage:
                     "url(" +
-                    C.c.MEDIA_CDN_COMMUNITY_URL +
+                    B.c.MEDIA_CDN_COMMUNITY_URL +
                     "images/items/" +
                     this.props.definition.appid +
                     "/" +
@@ -13894,7 +13903,7 @@
                     ")"
                 },
                 t =
-                  C.c.MEDIA_CDN_COMMUNITY_URL +
+                  B.c.MEDIA_CDN_COMMUNITY_URL +
                   "images/items/" +
                   this.props.definition.appid +
                   "/" +
@@ -13970,7 +13979,7 @@
                 r = {
                   backgroundImage:
                     "url(" +
-                    C.c.MEDIA_CDN_COMMUNITY_URL +
+                    B.c.MEDIA_CDN_COMMUNITY_URL +
                     "images/items/" +
                     this.props.definition.appid +
                     "/" +
@@ -13999,7 +14008,7 @@
                     },
                     I.createElement("source", {
                       src:
-                        C.c.MEDIA_CDN_COMMUNITY_URL +
+                        B.c.MEDIA_CDN_COMMUNITY_URL +
                         "images/items/" +
                         this.props.definition.appid +
                         "/" +
@@ -14008,7 +14017,7 @@
                     }),
                     I.createElement("source", {
                       src:
-                        C.c.MEDIA_CDN_COMMUNITY_URL +
+                        B.c.MEDIA_CDN_COMMUNITY_URL +
                         "images/items/" +
                         this.props.definition.appid +
                         "/" +
@@ -14076,7 +14085,7 @@
             }),
             (t.prototype.render = function() {
               var e =
-                  C.c.MEDIA_CDN_COMMUNITY_URL +
+                  B.c.MEDIA_CDN_COMMUNITY_URL +
                   "images/items/" +
                   this.props.definition.appid +
                   "/" +
@@ -14084,7 +14093,7 @@
                 t = {
                   backgroundImage:
                     "url(" +
-                    C.c.MEDIA_CDN_COMMUNITY_URL +
+                    B.c.MEDIA_CDN_COMMUNITY_URL +
                     "images/items/" +
                     this.props.definition.appid +
                     "/" +
@@ -14285,7 +14294,7 @@
                       },
                       I.createElement("source", {
                         src:
-                          C.c.MEDIA_CDN_COMMUNITY_URL +
+                          B.c.MEDIA_CDN_COMMUNITY_URL +
                           "images/items/" +
                           this.props.definition.appid +
                           "/" +
@@ -14295,7 +14304,7 @@
                       }),
                       I.createElement("source", {
                         src:
-                          C.c.MEDIA_CDN_COMMUNITY_URL +
+                          B.c.MEDIA_CDN_COMMUNITY_URL +
                           "images/items/" +
                           this.props.definition.appid +
                           "/" +
@@ -14827,7 +14836,7 @@
             (window.location.href = "steam://open/friends"), r();
           }
           var r = e.closeModal;
-          return C.c.IN_CLIENT
+          return B.c.IN_CLIENT
             ? I.createElement(
                 I.Fragment,
                 null,
@@ -14851,7 +14860,7 @@
                     className: Xn.GreenButton,
                     onClick: function() {
                       window.open(
-                        C.c.CHAT_BASE_URL + "chat",
+                        B.c.CHAT_BASE_URL + "chat",
                         "height=790,width=1015,resize=yes,scrollbars=yes"
                       ),
                         r();
@@ -14906,7 +14915,7 @@
               {
                 className: Xn.BlueButton,
                 onClick: function() {
-                  return (window.location.href = C.c.COMMUNITY_BASE_URL + "my");
+                  return (window.location.href = B.c.COMMUNITY_BASE_URL + "my");
                 }
               },
               Object(F.d)("#Button_Goto_Profile")
@@ -15902,11 +15911,11 @@
                   ref: e,
                   className: Va.ProfileFrame,
                   src:
-                    C.c.COMMUNITY_BASE_URL +
+                    B.c.COMMUNITY_BASE_URL +
                     "profiles/" +
                     (or.Get().BIsLoggedIn()
-                      ? C.i.steamid
-                      : 2 == C.c.EUNIVERSE
+                      ? B.i.steamid
+                      : 2 == B.c.EUNIVERSE
                       ? "148618792083695825"
                       : "76561197960266962") +
                     "?previewprofile=1",
@@ -16295,7 +16304,7 @@
                       header: P.a.createElement(Mo, {
                         title: P.a.createElement(
                           "a",
-                          { href: C.c.STORE_BASE_URL + "app/" + r.appid },
+                          { href: B.c.STORE_BASE_URL + "app/" + r.appid },
                           r.name
                         ),
                         subtitle: t.subtitle
@@ -17228,7 +17237,7 @@
               P.a.createElement(Go, null),
               P.a.createElement(ko, null),
               P.a.createElement(To, null),
-              !Object(O.b)(C.c.EREALM) && P.a.createElement(ds, null),
+              !Object(j.b)(B.c.EREALM) && P.a.createElement(ds, null),
               P.a.createElement(Ho, null)
             )
           )
@@ -17259,8 +17268,8 @@
         us = i("uOv9"),
         ds = Object(s.a)(function() {
           var e = or.Get().GetCommunityAwardPointsTransferred(),
-            t = C.c.STORE_BASE_URL + "labs/trendingreviews/",
-            r = C.c.COMMUNITY_BASE_URL + "?subsection=workshop";
+            t = B.c.STORE_BASE_URL + "labs/trendingreviews/",
+            r = B.c.COMMUNITY_BASE_URL + "?subsection=workshop";
           return P.a.createElement(
             wr,
             {
@@ -17644,7 +17653,7 @@
                         "#SummerSale_Rules_4_Desc",
                         P.a.createElement(
                           fs.a,
-                          { href: C.c.STORE_BASE_URL + "privacy_agreement" },
+                          { href: B.c.STORE_BASE_URL + "privacy_agreement" },
                           Object(F.d)("#SummerSale_Rules_ClickHere")
                         )
                       )
@@ -17943,7 +17952,7 @@
           }
         ];
         return (
-          Object(O.b)(C.c.EREALM) ||
+          Object(j.b)(B.c.EREALM) ||
             e[0].items.push({
               props: {
                 iconComponent: On,
@@ -17960,7 +17969,7 @@
                   props: {
                     iconComponent: wn,
                     children: Object(F.d)("#RewardsPointsHistoryLink"),
-                    href: C.c.STORE_BASE_URL + "pointssummary/"
+                    href: B.c.STORE_BASE_URL + "pointssummary/"
                   }
                 }
               ]
@@ -18291,7 +18300,7 @@
                 "a",
                 {
                   className: xs.YourBalanceLabel,
-                  href: C.c.STORE_BASE_URL + "pointssummary/"
+                  href: B.c.STORE_BASE_URL + "pointssummary/"
                 },
                 Object(F.d)("#YourBalance")
               ),
@@ -18434,8 +18443,8 @@
             switch (e.label) {
               case 0:
                 return (
-                  (t = Object(C.f)("loyaltystore", "application_config")),
-                  (r = new a.a(C.c.WEBAPI_BASE_URL, t.webapi_token)),
+                  (t = Object(B.f)("loyaltystore", "application_config")),
+                  (r = new a.a(B.c.WEBAPI_BASE_URL, t.webapi_token)),
                   Zt.a.Init(r),
                   [
                     4,
@@ -18449,9 +18458,9 @@
                                 4,
                                 Promise.all([
                                   i("Aqke")(
-                                    "./loyalty_" + C.c.LANGUAGE + ".json"
+                                    "./loyalty_" + B.c.LANGUAGE + ".json"
                                   ),
-                                  "english" === C.c.LANGUAGE
+                                  "english" === B.c.LANGUAGE
                                     ? void 0
                                     : i.e(2).then(i.t.bind(null, "nz6u", 3))
                                 ])
