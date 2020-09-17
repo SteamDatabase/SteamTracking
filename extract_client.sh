@@ -44,8 +44,8 @@ echo Dumping protobufs
 dotnet ~/ProtobufDumper/ProtobufDumper.dll bins/steamui.dylib "$DIR/Protobufs/" > /dev/null
 dotnet ~/ProtobufDumper/ProtobufDumper.dll bins/steamclient.dylib "$DIR/Protobufs/" > /dev/null
 
-node ../protobufdumper.js "$DIR/ClientExtracted/steamui/libraryroot.js" > ~/ValveProtobufs/webui/steamui_libraryroot.proto
-node ../protobufdumper.js "$DIR/ClientExtracted/steamui/broadcast.js" > ~/ValveProtobufs/webui/steamui_broadcast.proto
+node ../protobufdumper_v2.js "$DIR/ClientExtracted/steamui/libraryroot.js" > ~/ValveProtobufs/webui/steamui_libraryroot.proto
+node ../protobufdumper_v2.js "$DIR/ClientExtracted/steamui/broadcast.js" > ~/ValveProtobufs/webui/steamui_broadcast.proto
 node ../protobufdumper.js "$DIR/ClientExtracted/steamui/awardmodal.js" > ~/ValveProtobufs/webui/steamui_awardmodal.proto
 
 # https://github.com/m4dEngi/steamworks_dumper
