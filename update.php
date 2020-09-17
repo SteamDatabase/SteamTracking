@@ -338,8 +338,7 @@
 				{
 					$this->SyncProtobufs = true;
 
-					system( 'node protobufdumper_v2.js ' . escapeshellarg( $OriginalFile ) . ' > ' . escapeshellarg( '../ValveProtobufs/webui/' . $WebProtobufs[ $OriginalFile ] . '.proto' ) );
-					
+					system( 'node protobufdumper_v2.js ' . escapeshellarg( realpath( $OriginalFile ) ) . ' > ' . escapeshellarg( '../ValveProtobufs/webui/' . $WebProtobufs[ $OriginalFile ] . '.proto' ) );
 				}
 				else if( $OriginalFile === 'Scripts/WebUI/steammobile_android.js' )
 				{

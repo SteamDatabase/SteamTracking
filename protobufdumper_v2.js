@@ -3,7 +3,7 @@ const fs = require('fs');
 
 getKnownProtobufMessages("Protobufs", function(knownMessages, knownServices) {
 	global.window = {};
-	require('./' + process.argv[2]);
+	require(process.argv[2]);
 
 	const protos = handleFile(window.webpackJsonp[0][1]);
 	const imports = new Set();
