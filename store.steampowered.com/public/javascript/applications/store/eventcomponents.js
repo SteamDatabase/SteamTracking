@@ -13171,7 +13171,7 @@
                                 ? "sale/"
                                 : "curator/" +
                                   t.clanSteamID.GetAccountID() +
-                                  "/sale/ ") +
+                                  "/sale/") +
                               t.jsondata.sale_vanity_id
                           },
                           Object(Z.d)("#Event_Button_VisitSalePage")
