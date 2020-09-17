@@ -323,6 +323,7 @@
 				[
 					'steamcommunity.com/public/javascript/webui/steammessages.js' => 'friends',
 					'steamcommunity.com/public/javascript/applications/community/main.js' => 'community',
+					'steamcommunity.com/public/javascript/applications/community/events.js' => 'community_events',
 					'steamcommunity.com/public/javascript/applications/community/events~profile.js' => 'community_events_profile',
 					'steamcommunity.com/public/javascript/applications/community/profile.js' => 'community_profile',
 					'steamcommunity.com/public/javascript/applications/community/ugcrewards~userreviewrewards.js' => 'community_ugcrewards_userreviewrewards',
@@ -330,6 +331,7 @@
 					'store.steampowered.com/public/javascript/applications/store/curator_admin.js' => 'curator_admin',
 					'store.steampowered.com/public/javascript/applications/store/loyaltystore.js' => 'loyaltystore',
 					'store.steampowered.com/public/javascript/applications/store/loyaltystore~reviewaward.js' => 'loyaltystore_reviewaward',
+					'store.steampowered.com/public/javascript/applications/store/store_common.js' => 'store_common',
 				];
 
 				if( isset( $WebProtobufs[ $OriginalFile ] ) )
