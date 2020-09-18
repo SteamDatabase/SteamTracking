@@ -8081,7 +8081,7 @@
               (this.m_bLoadedAwardCost = !1),
               (this.m_unAwardCost = 0),
               (this.m_unAwardPointsTransferred = 0),
-              (this.m_HeroImageFallbackLoader = new yr(
+              (this.m_HeroImageFallbackLoader = new hr(
                 function(e) {
                   return fetch(
                     B.c.STORE_BASE_URL + "points/heroimage?appid=" + e
@@ -8392,7 +8392,53 @@
                         t = a.next_cursor,
                         r = a.total_count,
                         n = e.filter(function(e) {
-                          return !!e.community_item_data || 4 === e.type;
+                          return (
+                            !(function(e) {
+                              var t = e.community_item_data;
+                              if (!t) return !0;
+                              if (1 === e.type) {
+                                var r = !1;
+                                switch (e.community_item_class) {
+                                  case 11:
+                                  case 14:
+                                  case 15:
+                                    r = !t.item_image_small;
+                                    break;
+                                  case 4:
+                                    r = !t.item_image_large;
+                                    break;
+                                  case 3:
+                                    r = t.animated
+                                      ? !(
+                                          t.item_image_large ||
+                                          t.item_movie_mp4 ||
+                                          t.item_movie_mp4_small ||
+                                          t.item_movie_webm ||
+                                          t.item_movie_webm_small
+                                        )
+                                      : !t.item_image_large;
+                                    break;
+                                  case 13:
+                                    r = !(
+                                      t.item_image_large ||
+                                      t.item_movie_mp4 ||
+                                      t.item_movie_mp4_small ||
+                                      t.item_movie_webm ||
+                                      t.item_movie_webm_small
+                                    );
+                                }
+                                if (r)
+                                  return (
+                                    console.error(
+                                      "Missing expected assets for reward " +
+                                        e.defid
+                                    ),
+                                    !0
+                                  );
+                              }
+                              return !1;
+                            })(e) || 4 === e.type
+                          );
                         }),
                         i = o.m_mapAppRewards.get(c);
                       delete o.m_inflightRewardItemRequests[c],
@@ -10086,7 +10132,38 @@
             })
           : e;
       }
-      function hr(e) {
+      var hr = (function() {
+        function e(e, t) {
+          (this.m_fnRequest = e), (this.m_fnBuildRequestKey = t), this.Reset();
+        }
+        return (
+          (e.prototype.Reset = function() {
+            (this.m_mapCache = O.C.map({}, { deep: !1 })),
+              (this.m_mapInflightRequests = O.C.map());
+          }),
+          (e.prototype.Get = function() {
+            for (var e = [], t = 0; t < arguments.length; t++)
+              e[t] = arguments[t];
+            var r = this.m_fnBuildRequestKey.apply(this, e),
+              n = this.m_mapCache,
+              i = this.m_mapInflightRequests;
+            if (n.has(r)) return n.get(r);
+            i.get(r) ||
+              (i.set(r, !0),
+              this.m_fnRequest.apply(this, e).then(function(e) {
+                n.set(r, e), i.delete(r);
+              }));
+          }),
+          (e.prototype.BLoading = function() {
+            for (var e = [], t = 0; t < arguments.length; t++)
+              e[t] = arguments[t];
+            var r = this.m_fnBuildRequestKey.apply(this, e);
+            return !!this.m_mapInflightRequests.get(r);
+          }),
+          e
+        );
+      })();
+      function yr(e) {
         var t = e.config,
           r = e.children,
           n = t || jr,
@@ -10137,40 +10214,7 @@
           )
         );
       }
-      var yr = (function() {
-          function e(e, t) {
-            (this.m_fnRequest = e),
-              (this.m_fnBuildRequestKey = t),
-              this.Reset();
-          }
-          return (
-            (e.prototype.Reset = function() {
-              (this.m_mapCache = O.C.map({}, { deep: !1 })),
-                (this.m_mapInflightRequests = O.C.map());
-            }),
-            (e.prototype.Get = function() {
-              for (var e = [], t = 0; t < arguments.length; t++)
-                e[t] = arguments[t];
-              var r = this.m_fnBuildRequestKey.apply(this, e),
-                n = this.m_mapCache,
-                i = this.m_mapInflightRequests;
-              if (n.has(r)) return n.get(r);
-              i.get(r) ||
-                (i.set(r, !0),
-                this.m_fnRequest.apply(this, e).then(function(e) {
-                  n.set(r, e), i.delete(r);
-                }));
-            }),
-            (e.prototype.BLoading = function() {
-              for (var e = [], t = 0; t < arguments.length; t++)
-                e[t] = arguments[t];
-              var r = this.m_fnBuildRequestKey.apply(this, e);
-              return !!this.m_mapInflightRequests.get(r);
-            }),
-            e
-          );
-        })(),
-        gr = i("qY0t"),
+      var gr = i("qY0t"),
         vr = i("exH9"),
         wr = Object(I.forwardRef)(function(e, t) {
           var r = e.padding,
@@ -18256,7 +18300,7 @@
         var t = e.children,
           r = zr("(max-width: 965px)");
         return P.a.createElement(
-          hr,
+          yr,
           null,
           P.a.createElement(
             "div",
