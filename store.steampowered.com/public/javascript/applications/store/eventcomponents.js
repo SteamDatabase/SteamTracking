@@ -6171,7 +6171,7 @@
                       )
                     )
                   : null;
-              var o = 0 === r.appid && Y.i.accountid;
+              var o = Boolean(0 === r.appid && Y.i.accountid);
               return H.createElement(
                 "div",
                 { className: oa.a.EventTileCarouselTitleContainer },
