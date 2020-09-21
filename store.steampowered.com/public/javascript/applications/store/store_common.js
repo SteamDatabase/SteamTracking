@@ -31304,32 +31304,28 @@
               )
                 return l.createElement(G.a, null);
               var e = this.props.appCapsule.appid,
-                n = _.a.Get().GetDemoEventInfo(e),
-                o =
-                  n && n.BHasArtistStatement()
-                    ? A.c.GetClanEventModel(n.info_clan_event_gid)
-                    : void 0,
-                a = Object(d.g)(O.c.LANGUAGE),
-                r = b.a.Get().GetShortDesc(e);
+                n = (_.a.Get().GetDemoEventInfo(e), null),
+                o = Object(d.g)(O.c.LANGUAGE),
+                a = b.a.Get().GetShortDesc(e);
               return l.createElement(
                 "div",
                 { className: Z.a.StatementCtn },
-                Boolean(o)
+                Boolean(n)
                   ? l.createElement(
                       "div",
                       { className: Z.a.Statement },
-                      l.createElement("div", null, o.GetSummaryWithFallback(a)),
+                      l.createElement("div", null, n.GetSummaryWithFallback(o)),
                       l.createElement(
                         S.c,
                         {
                           onClick: function(e) {
-                            return t.ShowEventInModal(o, e);
+                            return t.ShowEventInModal(n, e);
                           }
                         },
                         Object(D.d)("#EventEmail_Button_ClickForMoreDetails")
                       )
                     )
-                  : l.createElement("div", null, r)
+                  : l.createElement("div", null, a)
               );
             }),
             Object(i.c)([R.a], e.prototype, "DoLoading", null),
