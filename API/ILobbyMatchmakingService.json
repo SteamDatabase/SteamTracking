@@ -5,7 +5,7 @@
             "name": "CreateLobby",
             "version": 1,
             "httpmethod": "POST",
-            "description": "CreateLobby",
+            "description": "Creates a lobby and sets its related lobby data",
             "parameters": [
                 {
                     "name": "key",
@@ -49,7 +49,7 @@
             "name": "RemoveUserFromLobby",
             "version": 1,
             "httpmethod": "POST",
-            "description": "RemoveUserFromLobby",
+            "description": "Removes a user from a lobby",
             "parameters": [
                 {
                     "name": "key",
@@ -69,6 +69,30 @@
                 },
                 {
                     "name": "steamid_to_remove",
+                    "type": "uint64",
+                    "optional": false
+                }
+            ]
+        },
+        {
+            "name": "GetLobbyData",
+            "version": 1,
+            "httpmethod": "GET",
+            "description": "Returns lobby data and member list",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Access key"
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false
+                },
+                {
+                    "name": "steamid_lobby",
                     "type": "uint64",
                     "optional": false
                 }
