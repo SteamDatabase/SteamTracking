@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [8],
+  [6],
   {
     "+ZmX": function(e, t, a) {
       "use strict";
@@ -2253,7 +2253,7 @@
                 h =
                   m &&
                   u &&
-                  Object(Z.d)(
+                  Object(Z.e)(
                     0 <= r.indexOf("dlc")
                       ? "#EventCalendar_SearchResultsHeader_GameAndDLCSection"
                       : "#EventCalendar_SearchResultsHeader_GameSection"
@@ -2299,7 +2299,7 @@
                           H.createElement(
                             "div",
                             { className: I.a.ResultSectionHeader },
-                            Object(Z.d)(
+                            Object(Z.e)(
                               "#EventCalendar_SearchResultsHeader_CuratorSection"
                             )
                           ),
@@ -2309,7 +2309,7 @@
                       H.createElement(
                         "div",
                         { className: I.a.EmptyResults, key: "empty-results" },
-                        Object(Z.d)("#EventCalendar_GameSearch_NoneFound")
+                        Object(Z.e)("#EventCalendar_GameSearch_NoneFound")
                       )
                   )
               );
@@ -2343,7 +2343,7 @@
               H.createElement(
                 "div",
                 { className: I.a.Label },
-                Object(Z.d)("#EventCalendar_FollowingCurator")
+                Object(Z.e)("#EventCalendar_FollowingCurator")
               )
           );
         },
@@ -2453,10 +2453,10 @@
                 r = t.type,
                 o =
                   "developer" == t.type
-                    ? Object(Z.d)("#CreatorHome_DevelopedBy")
+                    ? Object(Z.e)("#CreatorHome_DevelopedBy")
                     : "publisher" == t.type
-                    ? Object(Z.d)("#CreatorHome_PublishedBy")
-                    : Object(Z.d)("#CreatorHome_InFranchise"),
+                    ? Object(Z.e)("#CreatorHome_PublishedBy")
+                    : Object(Z.e)("#CreatorHome_InFranchise"),
                 i = n.GetURL(r),
                 l = this.GetSocialMediaElements(n),
                 s = n.GetNumFollowers();
@@ -2560,10 +2560,10 @@
                                 H.createElement(
                                   "span",
                                   null,
-                                  s.toLocaleString(Z.c.GetPreferredLocales())
+                                  s.toLocaleString(Z.d.GetPreferredLocales())
                                 ),
                                 H.createElement("br", null),
-                                Object(Z.d)("#CreatorHome_JustFollowers")
+                                Object(Z.e)("#CreatorHome_JustFollowers")
                               )
                             ),
                             0 < l.length &&
@@ -2597,11 +2597,11 @@
         } else
           Object(l.d)(
             H.createElement(P.c, {
-              strTitle: Object(Z.d)("#EventDisplay_Share_NotLoggedIn"),
-              strDescription: Object(Z.d)(
+              strTitle: Object(Z.e)("#EventDisplay_Share_NotLoggedIn"),
+              strDescription: Object(Z.e)(
                 "#EventDisplay_Share_NotLoggedIn_Description"
               ),
-              strOKButtonText: Object(Z.d)("#MobileLogin_SignIn"),
+              strOKButtonText: Object(Z.e)("#MobileLogin_SignIn"),
               onOK: function() {
                 return Object(se.a)();
               }
@@ -2687,10 +2687,10 @@
                   { className: J.FollowBtnText },
                   !this.state.bApplyingFollowing &&
                     (r
-                      ? Object(Z.d)("#Button_Followed")
+                      ? Object(Z.e)("#Button_Followed")
                       : o
-                      ? Object(Z.d)("#Button_Ignored")
-                      : Object(Z.d)("#Button_Follow"))
+                      ? Object(Z.e)("#Button_Ignored")
+                      : Object(Z.e)("#Button_Follow"))
                 )
               );
             }),
@@ -2810,7 +2810,7 @@
                 H.createElement(
                   "div",
                   null,
-                  e.external_follows.toLocaleString(Z.c.GetPreferredLocales())
+                  e.external_follows.toLocaleString(Z.d.GetPreferredLocales())
                 )
               );
             }),
@@ -3299,7 +3299,7 @@
                 H.createElement(
                   "div",
                   { className: "VideoHintText" },
-                  Object(Z.d)("#EventCalendar_WatchYouTubeVideo")
+                  Object(Z.e)("#EventCalendar_WatchYouTubeVideo")
                 )
               );
             }),
@@ -3324,8 +3324,8 @@
                 H.createElement(
                   P.c,
                   {
-                    strTitle: Object(Z.d)("#EventCalendar_MuteApp_Title", a),
-                    strDescription: Object(Z.d)(
+                    strTitle: Object(Z.e)("#EventCalendar_MuteApp_Title", a),
+                    strDescription: Object(Z.e)(
                       "#EventCalendar_MuteApp_details",
                       a
                     ),
@@ -3342,7 +3342,7 @@
                       href: Y.c.STORE_BASE_URL + "account/emailoptout/app",
                       target: Y.c.IN_CLIENT ? void 0 : "_blank"
                     },
-                    Object(Z.d)("#EventCalendar_ManageMutedSources")
+                    Object(Z.e)("#EventCalendar_ManageMutedSources")
                   )
                 ),
                 Object(V.m)(e)
@@ -3375,7 +3375,7 @@
                           disabled: !0,
                           onSelected: function() {}
                         },
-                        Object(Z.d)("#EventCalender_Reason_" + t)
+                        Object(Z.e)("#EventCalender_Reason_" + t)
                       )
                     ),
                   e.push(
@@ -3387,7 +3387,7 @@
                           r.GetVisibilityStore().SetGameSourceAllowed(t, !1);
                         }
                       },
-                      Object(Z.d)("#EventCalender_Hide_Reason_" + t)
+                      Object(Z.e)("#EventCalender_Hide_Reason_" + t)
                     )
                   ));
             }),
@@ -3446,9 +3446,9 @@
                             disabled: !0,
                             onSelected: function() {}
                           },
-                          Object(Z.d)(
+                          Object(Z.e)(
                             "#EventCalender_LastPlayed",
-                            Object(Z.o)(
+                            Object(Z.p)(
                               N.a.GetTimeNowWithOverride() -
                                 r.appInfo.last_played
                             )
@@ -3482,9 +3482,9 @@
                       key: n.GID + "hidetype",
                       onSelected: this.HideAllEventsOfMyType
                     },
-                    Object(Z.d)(
+                    Object(Z.e)(
                       "#EVentCalendar_Hide_EventType",
-                      Object(Z.d)(
+                      Object(Z.e)(
                         "#EventCalendar_EventTypeGroup_" +
                           this.GetVisibilityStore().MapClanEventTypeToGroup(
                             n.GetEventType()
@@ -3505,11 +3505,11 @@
                           H.createElement(
                             B.a,
                             {
-                              toolTipContent: Object(Z.d)(
+                              toolTipContent: Object(Z.e)(
                                 "#EventCalendar_UnMuteApp_ttip"
                               )
                             },
-                            Object(Z.d)(
+                            Object(Z.e)(
                               "#EventCalendar_UnMuteApp_Title",
                               this.props.calendarEvent.GetEntityName()
                             )
@@ -3526,11 +3526,11 @@
                           H.createElement(
                             B.a,
                             {
-                              toolTipContent: Object(Z.d)(
+                              toolTipContent: Object(Z.e)(
                                 "#EventCalendar_MuteApp_ttip"
                               )
                             },
-                            Object(Z.d)(
+                            Object(Z.e)(
                               "#EventCalendar_MuteApp_Title",
                               this.props.calendarEvent.GetEntityName()
                             )
@@ -3549,13 +3549,13 @@
                       H.createElement(
                         B.a,
                         {
-                          toolTipContent: Object(Z.d)(
+                          toolTipContent: Object(Z.e)(
                             t
                               ? "#EventCalendar_UnFollowCurator_ttip"
                               : "#EventCalendar_FollowCurator_ttip"
                           )
                         },
-                        Object(Z.d)(
+                        Object(Z.e)(
                           t
                             ? "#EventCalendar_UnFollowCurator"
                             : "#EventCalendar_FollowCurator",
@@ -3572,7 +3572,7 @@
                         key: n.GID + "goto",
                         onSelected: this.GotoGameOrClanHub
                       },
-                      Object(Z.d)(
+                      Object(Z.e)(
                         "#EventCalendar_Goto_SpecificCalendar",
                         r.GetEntityName()
                       )
@@ -3774,13 +3774,13 @@
                             H.createElement(
                               "div",
                               { className: Ve.a.TileCoverLiveIcon },
-                              Object(Z.d)("#home_page_live_broadcast")
+                              Object(Z.e)("#home_page_live_broadcast")
                             ),
                           s &&
                             H.createElement(
                               "div",
                               { className: "VideoHintText" },
-                              Object(Z.d)("#EventCalendar_WatchLiveBroadcast")
+                              Object(Z.e)("#EventCalendar_WatchLiveBroadcast")
                             )
                         )
                     )
@@ -4095,7 +4095,7 @@
             i = t && Object(ze.a)(t.type) && t.GetEndTimeAndDateUnixSeconds();
           if (i && o < r && r < i) {
             var l = i - r,
-              s = Object(Z.o)(l, !0);
+              s = Object(Z.p)(l, !0);
             return H.createElement(
               "div",
               { className: Object(W.a)(Ve.a.LiveText, n) },
@@ -4105,19 +4105,19 @@
                 H.createElement(
                   "div",
                   { className: Ve.a.LiveNow },
-                  Object(Z.d)("#EventCalendar_LiveNow")
+                  Object(Z.e)("#EventCalendar_LiveNow")
                 )
               ),
               H.createElement(
                 Le.f,
                 { rtFullDate: i, stylesmodule: Ve.a },
-                Object(Z.d)("#EventCalendar_TimeLeft", s)
+                Object(Z.e)("#EventCalendar_TimeLeft", s)
               )
             );
           }
           if (o < r) {
             var c = r - o,
-              d = c < 86400 ? Object(Z.o)(c, !1, !0) : Object(Z.n)(o);
+              d = c < 86400 ? Object(Z.p)(c, !1, !0) : Object(Z.o)(o);
             return H.createElement(
               Le.f,
               { className: n, rtFullDate: o, stylesmodule: Ve.a },
@@ -4129,7 +4129,7 @@
           var p = u.getTime() / 1e3,
             m = Math.floor((o - p) / 86400),
             h =
-              1 < m && m <= 5 ? Object(Z.f)(new Date(1e3 * o)) : Object(Z.n)(o),
+              1 < m && m <= 5 ? Object(Z.g)(new Date(1e3 * o)) : Object(Z.o)(o),
             v = Object(Le.e)(o);
           return H.createElement(
             Le.f,
@@ -4137,7 +4137,7 @@
             H.createElement(
               "div",
               { className: Ve.a.FutureDateText },
-              Object(Z.d)("#EventCalendar_WillStartAtDateTime", h, v)
+              Object(Z.e)("#EventCalendar_WillStartAtDateTime", h, v)
             )
           );
         }),
@@ -4215,9 +4215,9 @@
             {
               key: e,
               className: Object(W.a)(Ve.a.Source, n),
-              toolTipContent: Object(Z.d)(a)
+              toolTipContent: Object(Z.e)(a)
             },
-            Object(Z.d)(t) + (r ? ", " : "")
+            Object(Z.e)(t) + (r ? ", " : "")
           );
         };
       var it = (function(e) {
@@ -4269,7 +4269,7 @@
                   H.createElement(
                     "div",
                     { className: Ve.a.TileViewerCount },
-                    l.toLocaleString(Z.c.GetPreferredLocales())
+                    l.toLocaleString(Z.d.GetPreferredLocales())
                   ),
                 H.createElement(
                   "div",
@@ -4384,7 +4384,7 @@
               var t = new Array();
               return (
                 this.state.bLoaded &&
-                  Z.c.GetELanguageFallbackOrder(!0).forEach(function(e) {
+                  Z.d.GetELanguageFallbackOrder(!0).forEach(function(e) {
                     return t.push(
                       d.a.createElement(dt, { key: "curlang" + e, lang: e })
                     );
@@ -4401,7 +4401,7 @@
                       d.a.createElement(
                         y.i,
                         null,
-                        Object(Z.d)("#EventCurator_BrowseDialog_Title")
+                        Object(Z.e)("#EventCurator_BrowseDialog_Title")
                       ),
                       d.a.createElement(
                         y.a,
@@ -4409,14 +4409,14 @@
                         d.a.createElement(
                           "div",
                           null,
-                          Object(Z.d)("#EventCurator_BrowseDialog_Desc")
+                          Object(Z.e)("#EventCurator_BrowseDialog_Desc")
                         ),
                         this.state.bLoaded
                           ? d.a.createElement(d.a.Fragment, null, t)
                           : d.a.createElement(Q.a, {
                               size: "medium",
                               position: "center",
-                              string: Object(Z.d)("#Loading")
+                              string: Object(Z.e)("#Loading")
                             })
                       ),
                       d.a.createElement(
@@ -4425,7 +4425,7 @@
                         d.a.createElement(
                           y.o,
                           { onClick: this.props.closeModal },
-                          Object(Z.d)("#Button_Dismiss")
+                          Object(Z.e)("#Button_Dismiss")
                         )
                       )
                     )
@@ -4468,9 +4468,9 @@
                 d.a.createElement(
                   "div",
                   { className: ye.a.LanguageHeader },
-                  Object(Z.d)(
+                  Object(Z.e)(
                     "#EventCurator_BrowseDialog_LangCurator",
-                    Object(Z.d)("#Language_" + Object(x.e)(this.props.lang))
+                    Object(Z.e)("#Language_" + Object(x.e)(this.props.lang))
                   )
                 ),
                 t
@@ -4499,10 +4499,10 @@
             (e.prototype.OnEventNotFound = function() {
               Object(l.d)(
                 d.a.createElement(P.e, {
-                  strDescription: Object(Z.d)(
+                  strDescription: Object(Z.e)(
                     "#EventCurator_NoEventsFound_Body"
                   ),
-                  strTitle: Object(Z.d)("#EventCurator_NoEventsFound_Title")
+                  strTitle: Object(Z.e)("#EventCurator_NoEventsFound_Title")
                 }),
                 window
               ),
@@ -4589,7 +4589,7 @@
                       ),
                       onClick: this.OnPreview
                     },
-                    Object(Z.d)("#Button_Preview")
+                    Object(Z.e)("#Button_Preview")
                   )
                 )
               );
@@ -4625,7 +4625,7 @@
             (e.LocalizeDateString = function(e) {
               if (!e.startEvent) return null;
               var t = e.startEvent.toLocaleDateString(
-                Z.c.GetPreferredLocales(),
+                Z.d.GetPreferredLocales(),
                 { month: "long", day: "numeric" }
               );
               if (!e.endEvent) return t;
@@ -4639,7 +4639,7 @@
               return (
                 t +
                 " - " +
-                e.endEvent.toLocaleDateString(Z.c.GetPreferredLocales(), a)
+                e.endEvent.toLocaleDateString(Z.d.GetPreferredLocales(), a)
               );
             }),
             (e.prototype.GetVisibleSpecialEvents = function() {
@@ -4695,7 +4695,7 @@
                   H.createElement(
                     "div",
                     { className: mt.a.SpecialEventTitle },
-                    Object(Z.d)(e.sLocToken)
+                    Object(Z.e)(e.sLocToken)
                   ),
                   n &&
                     H.createElement(
@@ -4725,7 +4725,7 @@
                     H.createElement(
                       "div",
                       { className: mt.a.SpecialEventListTitle },
-                      Object(Z.d)("#Events_SpecialEvents")
+                      Object(Z.e)("#Events_SpecialEvents")
                     ),
                     H.createElement(
                       "div",
@@ -4849,7 +4849,7 @@
                 B.a,
                 {
                   key: "group-" + t,
-                  toolTipContent: Object(Z.d)(
+                  toolTipContent: Object(Z.e)(
                     "#EventCalendar_EventTypeGroup_ttip_" + t
                   ),
                   direction: "top"
@@ -4863,7 +4863,7 @@
                     )
                   },
                   H.createElement(y.d, {
-                    label: Object(Z.d)("#EventCalendar_EventTypeGroup_" + t),
+                    label: Object(Z.e)("#EventCalendar_EventTypeGroup_" + t),
                     checked: e,
                     onChange: function(e) {
                       return a.OnEventTypeChange(t, e);
@@ -4885,8 +4885,8 @@
                   key: "gs-" + t,
                   direction: "top",
                   toolTipContent: e
-                    ? Object(Z.d)("#EventCalendar_DisabledFilter_LoginPrompt")
-                    : Object(Z.d)("#EventCalendar_GameSource_ttip_" + t)
+                    ? Object(Z.e)("#EventCalendar_DisabledFilter_LoginPrompt")
+                    : Object(Z.e)("#EventCalendar_GameSource_ttip_" + t)
                 },
                 H.createElement(
                   "div",
@@ -4897,7 +4897,7 @@
                     )
                   },
                   H.createElement(y.d, {
-                    label: Object(Z.d)("#EventCalendar_GameSource_" + t),
+                    label: Object(Z.e)("#EventCalendar_GameSource_" + t),
                     checked: n,
                     disabled: e,
                     onChange: function(e) {
@@ -4926,12 +4926,12 @@
                 H.createElement(
                   "div",
                   { className: mt.a.FiltersTitle },
-                  Object(Z.d)("#EventCalendar_FiltersTitle")
+                  Object(Z.e)("#EventCalendar_FiltersTitle")
                 ),
                 H.createElement(
                   "div",
                   { className: mt.a.FiltersDescription },
-                  Object(Z.d)(
+                  Object(Z.e)(
                     a.BIsGlobalCalendar()
                       ? "#EventCalendar_FiltersDescription"
                       : "#EventCalendar_FiltersDescription_NonPersonalized"
@@ -4947,7 +4947,7 @@
                       H.createElement(
                         "div",
                         { className: mt.a.FilterSubSectionTitle },
-                        Object(Z.d)(
+                        Object(Z.e)(
                           "#EventCalendar_FilterSubSection_EventTypeGroups"
                         )
                       ),
@@ -4968,7 +4968,7 @@
                         H.createElement(
                           "div",
                           { className: mt.a.FilterSubSectionTitle },
-                          Object(Z.d)(
+                          Object(Z.e)(
                             "#EventCalendar_FilterSubSection_GameSources"
                           )
                         ),
@@ -4988,7 +4988,7 @@
                           H.createElement(
                             "div",
                             { className: mt.a.FilterSubSectionTitle },
-                            Object(Z.d)(
+                            Object(Z.e)(
                               "#EventCalendar_FilterSubSection_CuratorSources"
                             )
                           ),
@@ -4999,7 +4999,7 @@
                               className: mt.a.FilterLink,
                               onClick: this.OnBrowseCurator
                             },
-                            Object(Z.d)("#EventCalendar_BrowseCurators")
+                            Object(Z.e)("#EventCalendar_BrowseCurators")
                           )
                         )
                     ),
@@ -5007,7 +5007,7 @@
                     H.createElement(
                       "div",
                       null,
-                      Object(Z.d)("#EventCalendar_SingleAppIsMuted")
+                      Object(Z.e)("#EventCalendar_SingleAppIsMuted")
                     )
                 ),
                 H.createElement(
@@ -5026,7 +5026,7 @@
                         "div",
                         { className: mt.a.FilterLink },
                         H.createElement(G.ab, { muted: !0 }),
-                        Object(Z.d)("#EventCalendar_ManageMutedSources"),
+                        Object(Z.e)("#EventCalendar_ManageMutedSources"),
                         H.createElement(
                           "div",
                           { className: mt.a.NumberDisplay },
@@ -5044,7 +5044,7 @@
                       "div",
                       { className: mt.a.FilterLink },
                       H.createElement(G.a, null),
-                      Object(Z.d)("#EventCalendar_ManageStorePref")
+                      Object(Z.e)("#EventCalendar_ManageStorePref")
                     )
                   )
                 ),
@@ -5073,7 +5073,7 @@
           return (
             Object(z.d)(e, t),
             (e.prototype.GetCalendarTitle = function(e) {
-              return Object(Z.l)(
+              return Object(Z.m)(
                 "#EventCalendar_Title",
                 H.createElement("br", null)
               );
@@ -5190,7 +5190,7 @@
                                     "div",
                                     { className: mt.a.SidePanelGameSearch },
                                     H.createElement(Tt, {
-                                      label: Object(Z.d)(
+                                      label: Object(Z.e)(
                                         "#EventCalendar_UniversalSearch"
                                       )
                                     })
@@ -5211,7 +5211,7 @@
                                         }
                                       },
                                       H.createElement(G.P, null),
-                                      Object(Z.d)("#EventCalendar_EditFilters")
+                                      Object(Z.e)("#EventCalendar_EditFilters")
                                     )
                                   ),
                                   u &&
@@ -5224,7 +5224,7 @@
                                         ),
                                         onClick: u
                                       },
-                                      Object(Z.d)(
+                                      Object(Z.e)(
                                         "#EventCalendar_ShowResponsiveView"
                                       )
                                     ),
@@ -5260,7 +5260,7 @@
             H.createElement(
               "div",
               { className: mt.a.FooterLegal },
-              Object(Z.d)("#Legal_Footer_WithYear", Object(Z.h)(new Date()))
+              Object(Z.e)("#Legal_Footer_WithYear", Object(Z.i)(new Date()))
             )
           );
         },
@@ -5322,12 +5322,12 @@
                   href: It,
                   target: Y.c.IN_CLIENT ? void 0 : "_blank"
                 },
-                Object(Z.d)("#SteamLabs")
+                Object(Z.e)("#SteamLabs")
               ),
               H.createElement(
                 "div",
                 { className: mt.a.SteamLabsNumber },
-                Object(Z.d)("#SteamLabs_ExperimentNumber", "009")
+                Object(Z.e)("#SteamLabs_ExperimentNumber", "009")
               )
             ),
             H.createElement(
@@ -5347,16 +5347,16 @@
           n = new Array();
         return (
           n.push({
-            name: Object(Z.d)("#EventCalendar_NewsChannel_YourNews"),
-            subtitle: Object(Z.d)("#EventCalendar_NewsChannel_Personalized"),
+            name: Object(Z.e)("#EventCalendar_NewsChannel_YourNews"),
+            subtitle: Object(Z.e)("#EventCalendar_NewsChannel_Personalized"),
             key: "default",
             url: a + "/",
             onPage: t && !e
           }),
           n.push({
-            name: Object(Z.d)("#EventCalendar_NewsChannel_Upcoming"),
-            shortName: Object(Z.d)("#EventCalendar_NewsChannel_UpcomingShort"),
-            subtitle: Object(Z.d)("#EventCalendar_NewsChannel_Personalized"),
+            name: Object(Z.e)("#EventCalendar_NewsChannel_Upcoming"),
+            shortName: Object(Z.e)("#EventCalendar_NewsChannel_UpcomingShort"),
+            subtitle: Object(Z.e)("#EventCalendar_NewsChannel_Personalized"),
             key: "upcoming",
             url: a + "/?upcoming=1",
             onPage: t && e,
@@ -5384,15 +5384,15 @@
           a = new Array();
         return (
           a.push({
-            name: Object(Z.d)("#EventCalendar_NewsChannel_Featured"),
-            subtitle: Object(Z.d)("#EventCalendar_NewsChannel_TopSellers"),
+            name: Object(Z.e)("#EventCalendar_NewsChannel_Featured"),
+            subtitle: Object(Z.e)("#EventCalendar_NewsChannel_TopSellers"),
             key: "featured",
             url: t + "/collection/featured/",
             onPage: e && "featured" == Object(L.a)().GetCollectionID()
           }),
           a.push({
-            name: Object(Z.d)("#EventCalendar_NewsChannel_Steam"),
-            subtitle: Object(Z.d)("#EventCalendar_NewsChannel_SteamSubtitle"),
+            name: Object(Z.e)("#EventCalendar_NewsChannel_Steam"),
+            subtitle: Object(Z.e)("#EventCalendar_NewsChannel_SteamSubtitle"),
             key: "steam",
             url: t + "/collection/steam/",
             onPage: e && "steam" == Object(L.a)().GetCollectionID()
@@ -5502,13 +5502,13 @@
             H.createElement(
               "div",
               { className: Wt.a.Title },
-              t.startsWith("#") ? Object(Z.d)(t) : t
+              t.startsWith("#") ? Object(Z.e)(t) : t
             ),
             a &&
               H.createElement(
                 "div",
                 { className: Wt.a.Subtitle },
-                a.startsWith("#") ? Object(Z.d)(a) : a
+                a.startsWith("#") ? Object(Z.e)(a) : a
               )
           )
         );
@@ -5611,7 +5611,7 @@
                 H.createElement(
                   "div",
                   { className: mt.a.NewsChannelListTitle },
-                  Object(Z.d)("#EventCalendar_NewsChannels")
+                  Object(Z.e)("#EventCalendar_NewsChannels")
                 ),
                 H.createElement(
                   "div",
@@ -5623,7 +5623,7 @@
                 H.createElement(
                   "div",
                   { className: mt.a.NewsChannelListTitle },
-                  Object(Z.d)("#EventCalendar_NewsChannels_Global")
+                  Object(Z.e)("#EventCalendar_NewsChannels_Global")
                 ),
                 H.createElement(
                   "div",
@@ -5651,7 +5651,7 @@
                 if (
                   (N.a.bIncludeCurators &&
                     n.push({
-                      name: Object(Z.d)("#EventCalendar_NewsChannel_Press"),
+                      name: Object(Z.e)("#EventCalendar_NewsChannel_Press"),
                       key: "press",
                       url: a + "/collection/press/",
                       onPage: t && "press" == Object(L.a)().GetCollectionID()
@@ -5665,7 +5665,7 @@
                   ) {
                     var i = o[r];
                     n.push({
-                      name: Object(Z.d)(i.sLocToken),
+                      name: Object(Z.e)(i.sLocToken),
                       url: i.newshubUrl,
                       onPage: !1,
                       key: "event_" + i.sLocToken
@@ -5674,14 +5674,14 @@
                 return (
                   Y.i.is_support &&
                     (n.push({
-                      name: Object(Z.d)("#EventCalendar_NewsChannel_All"),
+                      name: Object(Z.e)("#EventCalendar_NewsChannel_All"),
                       key: "all",
                       url: a + "/collection/all/",
                       onPage: t && "all" == Object(L.a)().GetCollectionID(),
                       bValveOnly: !0
                     }),
                     n.push({
-                      name: Object(Z.d)("#EventCalendar_NewsChannel_AllSales"),
+                      name: Object(Z.e)("#EventCalendar_NewsChannel_AllSales"),
                       key: "sales",
                       url: a + "/collection/sales/",
                       onPage: t && "sales" == Object(L.a)().GetCollectionID(),
@@ -5711,7 +5711,7 @@
                     H.createElement(
                       "div",
                       { className: mt.a.NewsChannelListTitle },
-                      Object(Z.d)("#EventCalendar_NewsChannels_Discover")
+                      Object(Z.e)("#EventCalendar_NewsChannels_Discover")
                     ),
                     H.createElement(
                       "div",
@@ -5797,15 +5797,15 @@
             (a.prototype.OnDismissButton = function(e) {
               Object(l.d)(
                 d.a.createElement(P.c, {
-                  strTitle: Object(Z.d)("#EventCurator_DismissTitle"),
-                  strDescription: Object(Z.d)("#EventCurator_DismissBody"),
+                  strTitle: Object(Z.e)("#EventCurator_DismissTitle"),
+                  strDescription: Object(Z.e)("#EventCurator_DismissBody"),
                   onOK: this.OnCommitDismiss
                 }),
                 Object(V.m)(e)
               );
             }),
             (a.prototype.GenerateNewsCuratorList = function() {
-              var e = Z.c.GetELanguageFallbackOrder(!1);
+              var e = Z.d.GetELanguageFallbackOrder(!1);
               void 0 ===
                 e.find(function(e) {
                   return 0 === e;
@@ -5856,7 +5856,7 @@
                     d.a.createElement(
                       "div",
                       { className: Ht.a.FeedSuggestCaption },
-                      Object(Z.d)("#EventCurator_FeedCaption_Long")
+                      Object(Z.e)("#EventCurator_FeedCaption_Long")
                     ),
                     e &&
                       d.a.createElement(
@@ -5877,7 +5877,7 @@
                           className: Ht.a.BrowseMore,
                           onClick: this.OnBrowseCurator
                         },
-                        Object(Z.d)("#EventCurator_BrowseMore")
+                        Object(Z.e)("#EventCurator_BrowseMore")
                       )
                     )
                   )
@@ -6508,8 +6508,8 @@
                       S.a.GetClanInfoByClanAccountID(n)) && r.group_name)
                 : o.BIsCollectionCalendar();
               var i = a
-                ? Object(Z.d)("#EventCalendar_TabTitle_GroupHub", a)
-                : Object(Z.d)("#EventCalendar_TabTitle_Global");
+                ? Object(Z.e)("#EventCalendar_TabTitle_GroupHub", a)
+                : Object(Z.e)("#EventCalendar_TabTitle_Global");
               document.title != i && (document.title = i),
                 document.body.classList.contains("events_hub") ||
                   document.body.classList.add("events_hub");
@@ -6817,11 +6817,11 @@
                             H.createElement(
                               "div",
                               { className: mt.a.LoginPrompt },
-                              Object(Z.d)("#EventCalendar_MainLoginPrompt"),
+                              Object(Z.e)("#EventCalendar_MainLoginPrompt"),
                               H.createElement(
                                 "button",
                                 { onClick: se.a, className: mt.a.LoginButton },
-                                Object(Z.d)("#Login_SignIn")
+                                Object(Z.e)("#Login_SignIn")
                               )
                             )
                           )
@@ -7052,13 +7052,13 @@
                     B.a,
                     {
                       key: "link-back",
-                      toolTipContent: Object(Z.d)(
+                      toolTipContent: Object(Z.e)(
                         "#EventCalendar_ResetFilters_ttip"
                       ),
                       className: Object(W.a)(mt.a.BackToThePast, mt.a.NoCount),
                       onClick: n
                     },
-                    Object(Z.d)("#EventCalendar_ResetFiltersButton")
+                    Object(Z.e)("#EventCalendar_ResetFiltersButton")
                   );
               return (
                 E
@@ -7076,7 +7076,7 @@
                           className: mt.a.BackToThePast,
                           onClick: f
                         },
-                        Object(Z.d)("#EventCalendar_PastEventsLink"),
+                        Object(Z.e)("#EventCalendar_PastEventsLink"),
                         H.createElement(
                           "span",
                           { className: mt.a.SeeAllCount },
@@ -7104,7 +7104,7 @@
                       H.createElement(
                         "div",
                         { className: mt.a.UpdatePageBanner },
-                        Object(Z.d)("#EventCalendar_UpdatesViewHeader")
+                        Object(Z.e)("#EventCalendar_UpdatesViewHeader")
                       ),
                     d,
                     H.createElement(
@@ -7117,7 +7117,7 @@
                         "div",
                         { className: mt.a.NoMoreRows },
                         " ",
-                        Object(Z.d)(h),
+                        Object(Z.e)(h),
                         " "
                       )
                     ),
@@ -7158,7 +7158,7 @@
                       className: mt.a.MobileSeeAllink,
                       onClick: this.props.fnOnSeeFutureClick
                     },
-                    Object(Z.d)("#EventCalendar_FutureEventsLink"),
+                    Object(Z.e)("#EventCalendar_FutureEventsLink"),
                     H.createElement(
                       "span",
                       { className: mt.a.SeeAllCount },
@@ -7327,7 +7327,7 @@
                     : r[0] === t &&
                       ((e =
                         n === ya.eCurators
-                          ? Object(Z.d)("#EventCalendar_GroupTitle_Curators")
+                          ? Object(Z.e)("#EventCalendar_GroupTitle_Curators")
                           : ""),
                       (a = !r.find(function(e) {
                         return e.clanid != t.clanid;
@@ -7373,18 +7373,18 @@
                     H.createElement(
                       "div",
                       { className: mt.a.LoadingProgress },
-                      Object(Z.d)(
+                      Object(Z.e)(
                         "#EventCalendar_LoadEventsProgress",
                         Number(
                           Object(L.a)().GetNumEventsLoaded()
                         ).toLocaleString(),
-                        Object(Z.e)(e)
+                        Object(Z.f)(e)
                       )
                     ),
                     H.createElement(
                       "div",
                       { className: mt.a.AdjustFiltersText },
-                      Object(Z.d)("#EventCalendar_LoadEventsFilters")
+                      Object(Z.e)("#EventCalendar_LoadEventsFilters")
                     )
                   )
               );
@@ -7441,7 +7441,7 @@
                       H.createElement(
                         "div",
                         { className: mt.a.SeeAllLink, onClick: l },
-                        Object(Z.d)("#EventCalendar_FutureEventsLink"),
+                        Object(Z.e)("#EventCalendar_FutureEventsLink"),
                         H.createElement(
                           "span",
                           { className: mt.a.SeeAllCount },
@@ -8078,7 +8078,7 @@
                   H.createElement(
                     "h2",
                     null,
-                    Object(Z.d)("#EventModeration_Title")
+                    Object(Z.e)("#EventModeration_Title")
                   ),
                   H.createElement(
                     g.a,
@@ -8092,7 +8092,7 @@
                         H.createElement(
                           "span",
                           null,
-                          Object(Z.d)("#EventModeration_FilterByTag")
+                          Object(Z.e)("#EventModeration_FilterByTag")
                         ),
                         H.createElement(La.a, {
                           isSearchable: !0,
@@ -8109,7 +8109,7 @@
                         H.createElement(
                           "span",
                           null,
-                          Object(Z.d)("#EventModeration_FilterExcludeByTag")
+                          Object(Z.e)("#EventModeration_FilterExcludeByTag")
                         ),
                         H.createElement(La.a, {
                           isSearchable: !0,
@@ -8126,7 +8126,7 @@
                         H.createElement(
                           "span",
                           null,
-                          Object(Z.d)("#EventModeration_FilterToType")
+                          Object(Z.e)("#EventModeration_FilterToType")
                         ),
                         H.createElement(La.a, {
                           isSearchable: !0,
@@ -8143,7 +8143,7 @@
                         H.createElement(
                           "span",
                           null,
-                          Object(Z.d)("#EventModeration_FilterToDate")
+                          Object(Z.e)("#EventModeration_FilterToDate")
                         ),
                         H.createElement(Aa, {
                           onChange: this.OnDateChange,
@@ -8151,7 +8151,7 @@
                           value: this.state.filterDate,
                           isValidDate: this.IsValidDate,
                           inputProps: {
-                            placeholder: Object(Z.d)(
+                            placeholder: Object(Z.e)(
                               "#EventModeration_PickDatee"
                             ),
                             className: Ha.TimeWidth
@@ -8164,7 +8164,7 @@
                         H.createElement(
                           "label",
                           { htmlFor: "EventPerLoad" },
-                          Object(Z.d)("#EventModeration_PerPageLoad")
+                          Object(Z.e)("#EventModeration_PerPageLoad")
                         ),
                         H.createElement(
                           "div",
@@ -8191,7 +8191,7 @@
                         H.createElement(
                           "label",
                           { htmlFor: "VisibilityStart" },
-                          Object(Z.d)("#EventModeration_OrderByFirstVisible")
+                          Object(Z.e)("#EventModeration_OrderByFirstVisible")
                         )
                       )
                     )
@@ -8202,7 +8202,7 @@
                   H.createElement(Q.a, {
                     position: "center",
                     size: "medium",
-                    string: Object(Z.d)("#Loading")
+                    string: Object(Z.e)("#Loading")
                   })
               );
             }),
@@ -8416,20 +8416,20 @@
                             H.createElement(
                               "div",
                               { className: Ha.NoCapsule },
-                              Object(Z.d)("#EventModTile_FallbackImageText")
+                              Object(Z.e)("#EventModTile_FallbackImageText")
                             )
                         )
                       : H.createElement(
                           "div",
                           { className: Ha.NoCapsule },
-                          Object(Z.d)("#EventModTile_NoCapsule")
+                          Object(Z.e)("#EventModTile_NoCapsule")
                         );
-              } else l = Object(Z.d)("#Loading");
+              } else l = Object(Z.e)("#Loading");
               var s = e.hidden
                   ? e.published
-                    ? Object(Z.d)("#EVentModTile_State_Staged")
-                    : Object(Z.d)("#EVentModTile_State_Draft")
-                  : Object(Z.d)("#EVentModTile_State_Published"),
+                    ? Object(Z.e)("#EVentModTile_State_Staged")
+                    : Object(Z.e)("#EVentModTile_State_Draft")
+                  : Object(Z.e)("#EVentModTile_State_Published"),
                 c = r ? r.type : Number(e.event_type);
               return H.createElement(
                 g.a,
@@ -8475,7 +8475,7 @@
                       this.state.bLoadingEvent &&
                         H.createElement(Q.a, {
                           size: "small",
-                          string: Object(Z.d)("#Loading")
+                          string: Object(Z.e)("#Loading")
                         }),
                       H.createElement(Qa, {
                         accountID: Number(e.creator_accountid),
@@ -8520,13 +8520,13 @@
                               this.state.bSavingModeration &&
                                 H.createElement(Q.a, { size: "small" }),
                               Boolean(!r.BHasTag("mod_reviewed")) &&
-                                Object(Z.d)("#EventModTile_Moderated_Review"),
+                                Object(Z.e)("#EventModTile_Moderated_Review"),
                               Boolean(
                                 r.BHasTag("mod_reviewed") &&
                                   !r.BHasTag("mod_require_rereview")
-                              ) && Object(Z.d)("#EventModTile_Moderated"),
+                              ) && Object(Z.e)("#EventModTile_Moderated"),
                               Boolean(r.BHasTag("mod_require_rereview")) &&
-                                Object(Z.d)("#EventModTile_Moderated_ReReview")
+                                Object(Z.e)("#EventModTile_Moderated_ReReview")
                             )
                           ),
                           H.createElement(
@@ -8535,7 +8535,7 @@
                               className: Object(W.a)(q.a.Button, Ha.Button),
                               onClick: this.OnChangeCategory
                             },
-                            Object(Z.d)("#EventModTile_ChangeEventType")
+                            Object(Z.e)("#EventModTile_ChangeEventType")
                           ),
                           r.BHasTag("halloween2019candidate") &&
                             H.createElement(
@@ -8544,7 +8544,7 @@
                                 className: Object(W.a)(q.a.Button),
                                 onClick: this.OnUpdateSeasonalTag
                               },
-                              Object(Z.d)("#EventModTile_SeasonalTag")
+                              Object(Z.e)("#EventModTile_SeasonalTag")
                             ),
                           H.createElement(en, { eventModel: r })
                         ),
@@ -8641,7 +8641,7 @@
               return H.createElement(
                 "div",
                 null,
-                Object(Z.l)(
+                Object(Z.m)(
                   a,
                   H.createElement(
                     "a",
@@ -8729,68 +8729,68 @@
                 H.createElement(
                   "div",
                   { className: Ha.TileTitle },
-                  Object(Z.d)("#EventModTile_Analysis")
+                  Object(Z.e)("#EventModTile_Analysis")
                 ),
                 H.createElement(
                   "div",
                   null,
-                  Object(Z.d)("#EventModTile_Stats_Comments", e.nCommentCount)
+                  Object(Z.e)("#EventModTile_Stats_Comments", e.nCommentCount)
                 ),
                 H.createElement(
                   "div",
                   null,
-                  Object(Z.d)("#EventModTile_Stats_VoteUp", e.nVotesUp)
+                  Object(Z.e)("#EventModTile_Stats_VoteUp", e.nVotesUp)
                 ),
                 H.createElement(
                   "div",
                   null,
-                  Object(Z.d)("#EventModTile_Stats_VoteDown", e.nVotesDown)
+                  Object(Z.e)("#EventModTile_Stats_VoteDown", e.nVotesDown)
                 ),
                 Boolean(t) &&
                   H.createElement(
                     "div",
                     { className: Ha.ArtHeader },
-                    Object(Z.d)("#EventModTile_ImageAnalysis_Header", t),
+                    Object(Z.e)("#EventModTile_ImageAnalysis_Header", t),
                     " "
                   ),
                 Boolean(a) &&
                   H.createElement(
                     "div",
                     null,
-                    Object(Z.d)("#EventModTile_ImageAnalysis_Capsule", a),
+                    Object(Z.e)("#EventModTile_ImageAnalysis_Capsule", a),
                     " "
                   ),
                 Boolean(n) &&
                   H.createElement(
                     "div",
                     { className: Ha.ArtSpotlight },
-                    Object(Z.d)("#EventModTile_ImageAnalysis_Spotlight", n),
+                    Object(Z.e)("#EventModTile_ImageAnalysis_Spotlight", n),
                     " "
                   ),
                 Boolean(r) &&
                   H.createElement(
                     "div",
                     null,
-                    Object(Z.d)("#EventModTile_ImageAnalysis_Broadcast", r),
+                    Object(Z.e)("#EventModTile_ImageAnalysis_Broadcast", r),
                     " "
                   ),
                 0 == o &&
                   H.createElement(
                     "div",
                     { className: Ha.AnalysisMissing },
-                    Object(Z.d)("#EventModTile_ImageAnalysis_None"),
+                    Object(Z.e)("#EventModTile_ImageAnalysis_None"),
                     " "
                   ),
                 0 == this.state.nLocLanguages &&
                   H.createElement(Q.a, {
                     size: "small",
-                    string: Object(Z.d)("#EventModTile_LoadingLocs")
+                    string: Object(Z.e)("#EventModTile_LoadingLocs")
                   }),
                 0 < this.state.nLocLanguages &&
                   H.createElement(
                     "div",
                     null,
-                    Object(Z.d)(
+                    Object(Z.e)(
                       "#EventModTile_Languages",
                       this.state.nLocLanguages
                     )
@@ -8799,14 +8799,14 @@
                   H.createElement(
                     "div",
                     null,
-                    Object(Z.d)("#EventModTile_Languages_Summary", i),
+                    Object(Z.e)("#EventModTile_Languages_Summary", i),
                     " "
                   ),
                 Boolean(l) &&
                   H.createElement(
                     "div",
                     null,
-                    Object(Z.d)("#EventModTile_Languages_Subtitle", l),
+                    Object(Z.e)("#EventModTile_Languages_Subtitle", l),
                     " "
                   )
               );
@@ -8859,7 +8859,7 @@
               if (this.state.bLoadingAppInfo)
                 return H.createElement(Q.a, {
                   size: "small",
-                  string: Object(Z.d)("#EventModTile_AppInfoLoading")
+                  string: Object(Z.e)("#EventModTile_AppInfoLoading")
                 });
               var e = this.props,
                 t = e.appid,
@@ -8882,14 +8882,14 @@
                       H.createElement(
                         "div",
                         null,
-                        Object(Z.d)("#EventModTile_GameName", n.title)
+                        Object(Z.e)("#EventModTile_GameName", n.title)
                       )
                     )
                   ),
                   H.createElement(
                     "div",
                     null,
-                    Object(Z.d)("#EventModTile_ReleaseDate", n.release)
+                    Object(Z.e)("#EventModTile_ReleaseDate", n.release)
                   )
                 );
               }
@@ -8913,7 +8913,7 @@
                         H.createElement(
                           "div",
                           null,
-                          Object(Z.d)("#EventModTile_CuratorName", o.group_name)
+                          Object(Z.e)("#EventModTile_CuratorName", o.group_name)
                         )
                       )
                     )
@@ -8952,66 +8952,66 @@
                 H.createElement(
                   "div",
                   { className: Ha.TileTitle },
-                  Object(Z.d)("#EventModTile_Visibility")
+                  Object(Z.e)("#EventModTile_Visibility")
                 ),
                 H.createElement(
                   "div",
                   null,
-                  Object(Z.d)(
+                  Object(Z.e)(
                     "#EventModTile_Store_Visibility",
                     r
-                      ? Object(Z.d)("#WriteReview_Dialog_Yes")
-                      : Object(Z.d)("#WriteReview_Dialog_No"),
+                      ? Object(Z.e)("#WriteReview_Dialog_Yes")
+                      : Object(Z.e)("#WriteReview_Dialog_No"),
                     r
                       ? ""
                       : n
-                      ? Object(Z.d)(
+                      ? Object(Z.e)(
                           "#EventModTime_Hidden_EventType",
                           e.GetEventTypeAsString()
                         )
                       : e.BHasTag("hide_store")
-                      ? Object(Z.d)("#EventModTime_Hidden_OptOut")
-                      : Object(Z.d)("#EventModTime_Hidden_Moderator")
+                      ? Object(Z.e)("#EventModTime_Hidden_OptOut")
+                      : Object(Z.e)("#EventModTime_Hidden_Moderator")
                   )
                 ),
                 H.createElement(
                   "div",
                   null,
-                  Object(Z.d)(
+                  Object(Z.e)(
                     "#EventModTile_LibraryHome_Visibility",
                     o
-                      ? Object(Z.d)("#WriteReview_Dialog_Yes")
-                      : Object(Z.d)("#WriteReview_Dialog_No"),
+                      ? Object(Z.e)("#WriteReview_Dialog_Yes")
+                      : Object(Z.e)("#WriteReview_Dialog_No"),
                     o
                       ? ""
                       : n
-                      ? Object(Z.d)(
+                      ? Object(Z.e)(
                           "#EventModTime_Hidden_EventType",
                           e.GetEventTypeAsString()
                         )
                       : e.BHasTag("hide_library_overview")
-                      ? Object(Z.d)("#EventModTime_Hidden_OptOut")
-                      : Object(Z.d)("#EventModTime_Hidden_Moderator")
+                      ? Object(Z.e)("#EventModTime_Hidden_OptOut")
+                      : Object(Z.e)("#EventModTime_Hidden_Moderator")
                   )
                 ),
                 H.createElement(
                   "div",
                   null,
-                  Object(Z.d)(
+                  Object(Z.e)(
                     "#EventModTile_LibraryDetail_Visibility",
                     i
-                      ? Object(Z.d)("#WriteReview_Dialog_Yes")
-                      : Object(Z.d)("#WriteReview_Dialog_No"),
+                      ? Object(Z.e)("#WriteReview_Dialog_Yes")
+                      : Object(Z.e)("#WriteReview_Dialog_No"),
                     i
                       ? ""
                       : n
-                      ? Object(Z.d)(
+                      ? Object(Z.e)(
                           "#EventModTime_Hidden_EventType",
                           e.GetEventTypeAsString()
                         )
                       : e.BHasTag("hide_library_detail")
-                      ? Object(Z.d)("#EventModTime_Hidden_OptOut")
-                      : Object(Z.d)("#EventModTime_Hidden_Moderator")
+                      ? Object(Z.e)("#EventModTime_Hidden_OptOut")
+                      : Object(Z.e)("#EventModTime_Hidden_Moderator")
                   )
                 )
               );
@@ -9141,21 +9141,21 @@
                   });
               return (
                 r.push({
-                  label: Object(Z.d)("#PartnerEvent_Curator_Group_Members"),
+                  label: Object(Z.e)("#PartnerEvent_Curator_Group_Members"),
                   value: {
                     eventType: 28,
                     tags: ["curator", "curator_group_members"]
                   }
                 }),
                 r.push({
-                  label: Object(Z.d)("#PartnerEvent_Curator_Public"),
+                  label: Object(Z.e)("#PartnerEvent_Curator_Public"),
                   value: { eventType: 28, tags: ["curator", "curator_public"] }
                 }),
                 H.createElement(
                   P.c,
                   {
-                    strTitle: Object(Z.d)("#EventModTile_ChangeEventType"),
-                    strDescription: Object(Z.d)(
+                    strTitle: Object(Z.e)("#EventModTile_ChangeEventType"),
+                    strDescription: Object(Z.e)(
                       "#EventModTile_ChangeEventType_Desc",
                       a.GetEventTypeAsString()
                     ),
@@ -9180,7 +9180,7 @@
                         H.createElement(
                           "div",
                           null,
-                          Object(Z.d)("#Chat_Settings_Error_ServerError"),
+                          Object(Z.e)("#Chat_Settings_Error_ServerError"),
                           H.createElement("br", null),
                           this.state.strErrorMsg
                         ),
@@ -9208,7 +9208,7 @@
           return (
             Object(z.d)(e, t),
             (e.prototype.RenderModAction = function(e) {
-              var t = Object(Z.i)(e.m_rtWhen),
+              var t = Object(Z.j)(e.m_rtWhen),
                 a = H.createElement(Qa, {
                   locToken: "#EventModTile_Moderator",
                   accountID: e.m_moderator
@@ -9218,7 +9218,7 @@
                   return H.createElement(
                     "div",
                     { className: Ha.ModeratorAuditActionCtn },
-                    Object(Z.l)(
+                    Object(Z.m)(
                       "#EventModTile_Action_Reviewed",
                       H.createElement("span", null, t),
                       a
@@ -9228,7 +9228,7 @@
                   return H.createElement(
                     "div",
                     { className: Ha.ModeratorAuditActionCtn },
-                    Object(Z.l)(
+                    Object(Z.m)(
                       "#EventModTile_Action_UnReviewed",
                       H.createElement("span", null, t),
                       a
@@ -9238,7 +9238,7 @@
                   return H.createElement(
                     "div",
                     { className: Ha.ModeratorAuditActionCtn },
-                    Object(Z.l)(
+                    Object(Z.m)(
                       "#EventModTile_Action_NewEventType",
                       H.createElement("span", null, t),
                       a,
@@ -9249,7 +9249,7 @@
                   return H.createElement(
                     "div",
                     { className: Ha.ModeratorAuditActionCtn },
-                    Object(Z.l)(
+                    Object(Z.m)(
                       "#EventModTile_Action_SeasonTagUpdate",
                       H.createElement("span", null, t),
                       a,
@@ -9299,7 +9299,7 @@
                 H.createElement(
                   "h4",
                   null,
-                  Object(Z.d)("#EventModTile_Action_Title")
+                  Object(Z.e)("#EventModTile_Action_Title")
                 ),
                 r,
                 n &&
@@ -9310,7 +9310,7 @@
                         return e.setState({ bCollapsed: !1 });
                       }
                     },
-                    Object(Z.d)("#EventModTile_Action_More", a - 3)
+                    Object(Z.e)("#EventModTile_Action_More", a - 3)
                   ),
                 Boolean(!n && 3 < a) &&
                   H.createElement(
@@ -9320,7 +9320,7 @@
                         return e.setState({ bCollapsed: !0 });
                       }
                     },
-                    Object(Z.d)("#EventModTile_Action_Hide")
+                    Object(Z.e)("#EventModTile_Action_Hide")
                   )
               );
             }),
@@ -9426,7 +9426,7 @@
               return H.createElement(
                 P.c,
                 {
-                  strTitle: Object(Z.d)("#EventModTile_SeasonalTag"),
+                  strTitle: Object(Z.e)("#EventModTile_SeasonalTag"),
                   onCancel: a,
                   onOK: function() {
                     return e.setState({ bUpdating: !0 }, e.ApplyAction);
@@ -9447,12 +9447,12 @@
                     H.createElement(
                       "label",
                       { htmlFor: "Acceptance" },
-                      Object(Z.d)("#EventModTile_SeasonalTag_Desc")
+                      Object(Z.e)("#EventModTile_SeasonalTag_Desc")
                     ),
                     H.createElement(
                       "div",
                       null,
-                      Object(Z.d)("#EventModTile_SeasonalTag_Desc_Secondary")
+                      Object(Z.e)("#EventModTile_SeasonalTag_Desc_Secondary")
                     ),
                     H.createElement("input", {
                       id: "Horror",
@@ -9478,7 +9478,7 @@
                       H.createElement(
                         "div",
                         null,
-                        Object(Z.d)("#Chat_Settings_Error_ServerError"),
+                        Object(Z.e)("#Chat_Settings_Error_ServerError"),
                         H.createElement("br", null),
                         this.state.strErrorMsg
                       )
@@ -9625,7 +9625,7 @@
               )
                 return H.createElement(Q.a, {
                   string:
-                    Object(Z.d)("#Loading") +
+                    Object(Z.e)("#Loading") +
                     (this.state.bLoadingEvent
                       ? " Events"
                       : this.state.bLoadingApps
@@ -11572,7 +11572,7 @@
                     i = t.BIsVisibleEvent()
                       ? "#EventDisplay_AreYouSure_Visible"
                       : "#EventDisplay_AreYouSure",
-                    n = Object(Z.d)(i, o),
+                    n = Object(Z.e)(i, o),
                     a = this.OnDelete;
                   t.BHasForumTopicGID() &&
                     r.push(
@@ -11592,17 +11592,17 @@
                         H.createElement(
                           "label",
                           { htmlFor: "del_cmt_post" },
-                          Object(Z.d)("#EventDisplay_DeleteEvent_Comment")
+                          Object(Z.e)("#EventDisplay_DeleteEvent_Comment")
                         )
                       )
                     );
                   break;
                 case "waiting":
-                  (n = Object(Z.d)("#EventDisplay_DeleteEvent_InProgress")),
+                  (n = Object(Z.e)("#EventDisplay_DeleteEvent_InProgress")),
                     r.push(H.createElement(Q.a, { key: "throbber" }));
                   break;
                 case "error":
-                  (n = Object(Z.d)("#EventDisplay_DeleteEvent_Error")),
+                  (n = Object(Z.e)("#EventDisplay_DeleteEvent_Error")),
                     r.push(
                       H.createElement(
                         "div",
@@ -11615,7 +11615,7 @@
                     );
                   break;
                 case "failed_thread_delete":
-                  (n = Object(Z.d)(
+                  (n = Object(Z.e)(
                     "#EventDisplay_DeleteEvent_ForumTopicError"
                   )),
                     r.push(
@@ -11635,7 +11635,7 @@
                       });
                   break;
                 case "success":
-                  (n = Object(Z.d)("#EventDisplay_DeleteEvent_Success")),
+                  (n = Object(Z.e)("#EventDisplay_DeleteEvent_Success")),
                     this.props.onDeleteSuccessAndCloseDialog &&
                       (a = function() {
                         e.props.onDeleteSuccessAndCloseDialog(),
@@ -11645,7 +11645,7 @@
               return H.createElement(
                 P.c,
                 {
-                  strTitle: Object(Z.d)("#EventDisplay_DeleteEvent"),
+                  strTitle: Object(Z.e)("#EventDisplay_DeleteEvent"),
                   strDescription: n,
                   onCancel: this.props.closeModal,
                   onOK: a,
@@ -11755,7 +11755,7 @@
                 if (void 0 !== this.state.nMaxSaleDayIndex)
                   for (var d = 0; d <= this.state.nMaxSaleDayIndex; ++d)
                     c.push({
-                      label: Object(Z.d)("#SalePage_Admin_SaleEventDay", d + 1),
+                      label: Object(Z.e)("#SalePage_Admin_SaleEventDay", d + 1),
                       data: d
                     });
                 return H.createElement(
@@ -11767,7 +11767,7 @@
                     H.createElement(
                       "span",
                       { className: yn.DisplayAdminPanel_Title },
-                      Object(Z.d)("#EventDisplay_Admin_Title")
+                      Object(Z.e)("#EventDisplay_Admin_Title")
                     ),
                     H.createElement(
                       "div",
@@ -11787,7 +11787,7 @@
                           openNewWindow: o,
                           className: Object(W.a)(F.Button, yn.AdminButton)
                         },
-                        Object(Z.d)("#EventEditor_Edit")
+                        Object(Z.e)("#EventEditor_Edit")
                       ),
                       r &&
                         H.createElement(
@@ -11796,7 +11796,7 @@
                             className: F.Button + " " + yn.AdminButton,
                             onClick: this.OnDeleteVerifyRequest
                           },
-                          Object(Z.d)("#EventDisplay_DeleteEvent")
+                          Object(Z.e)("#EventDisplay_DeleteEvent")
                         ),
                       !l &&
                         H.createElement(
@@ -11810,7 +11810,7 @@
                               openNewWindow: o,
                               className: Object(W.a)(F.Button, yn.AdminButton)
                             },
-                            Object(Z.d)(
+                            Object(Z.e)(
                               s
                                 ? "#EventEditor_Publish_VisibleNow"
                                 : "#Button_Publish"
@@ -11825,7 +11825,7 @@
                           openNewWindow: o,
                           className: Object(W.a)(F.Button, yn.AdminButton)
                         },
-                        Object(Z.d)("#EventDisplay_Events")
+                        Object(Z.e)("#EventDisplay_Events")
                       ),
                       Boolean(
                         void 0 !== this.state.nMaxSaleDayIndex && 0 < c.length
@@ -11856,7 +11856,7 @@
                             openNewWindow: o,
                             className: Object(W.a)(F.Button, yn.AdminButton)
                           },
-                          Object(Z.d)("#EventDisplay_SalesPage")
+                          Object(Z.e)("#EventDisplay_SalesPage")
                         ),
                       Boolean(
                         n.jsondata.bSaleEnabled && Y.i.is_support && n.GID
@@ -11877,7 +11877,7 @@
                               F.ValveOnlyBackground
                             )
                           },
-                          Object(Z.d)("#EventDisplay_StatsPage")
+                          Object(Z.e)("#EventDisplay_StatsPage")
                         )
                     )
                   )
@@ -12089,7 +12089,7 @@
                   H.createElement(
                     "div",
                     { className: q.a.EventSectionTitle },
-                    Object(Z.l)(
+                    Object(Z.m)(
                       "#EventBrowse_MoreEventsTitle",
                       o.is_ogg ? r.title : o.group_name
                     ),
@@ -12107,7 +12107,7 @@
                           className: q.a.EventSectionMoreBtn,
                           onClick: this.OnViewAll
                         },
-                        Object(Z.d)("#EventBrowse_MoreEventsBtn")
+                        Object(Z.e)("#EventBrowse_MoreEventsBtn")
                       )
                     : H.createElement(
                         Ae.c,
@@ -12116,7 +12116,7 @@
                           route: Ae.a.k_eViewWebSiteHub,
                           className: q.a.EventSectionMoreBtn
                         },
-                        Object(Z.d)("#EventBrowse_MoreEventsBtn")
+                        Object(Z.e)("#EventBrowse_MoreEventsBtn")
                       )
                 ),
                 H.createElement("div", { className: wn.a.OtherEvents }, i)
@@ -12616,13 +12616,13 @@
                       H.createElement(
                         "h1",
                         null,
-                        Object(Z.d)("#EventDashBoard_SummaryStats_Title")
+                        Object(Z.e)("#EventDashBoard_SummaryStats_Title")
                       ),
                       Boolean(a) &&
                         H.createElement(
                           "p",
                           null,
-                          Object(Z.d)("#EventDashBoard_SummaryStats_Desc"),
+                          Object(Z.e)("#EventDashBoard_SummaryStats_Desc"),
                           " ",
                           H.createElement(
                             "a",
@@ -12631,7 +12631,7 @@
                                 "https://partner.steamgames.com/doc/marketing/event_tools/stats",
                               target: "_blank"
                             },
-                            Object(Z.d)("#EventDashBoard_SummaryStats_Link")
+                            Object(Z.e)("#EventDashBoard_SummaryStats_Link")
                           )
                         )
                     ),
@@ -12652,7 +12652,7 @@
                           H.createElement(
                             "span",
                             null,
-                            Object(Z.d)("#EventDashBoard_Location_LibraryHome")
+                            Object(Z.e)("#EventDashBoard_Location_LibraryHome")
                           )
                         ),
                         H.createElement(
@@ -12661,7 +12661,7 @@
                           H.createElement(
                             "span",
                             null,
-                            Object(Z.d)(
+                            Object(Z.e)(
                               "#EventDashBoard_Summary_LibraryHome_Shown"
                             )
                           ),
@@ -12669,7 +12669,7 @@
                             "span",
                             null,
                             t.library_overview_shown.toLocaleString(
-                              Z.c.GetPreferredLocales()
+                              Z.d.GetPreferredLocales()
                             )
                           )
                         ),
@@ -12679,7 +12679,7 @@
                           H.createElement(
                             "span",
                             null,
-                            Object(Z.d)(
+                            Object(Z.e)(
                               "#EventDashBoard_Summary_LibraryHome_Read"
                             )
                           ),
@@ -12687,7 +12687,7 @@
                             "span",
                             null,
                             t.library_overview_read.toLocaleString(
-                              Z.c.GetPreferredLocales()
+                              Z.d.GetPreferredLocales()
                             )
                           )
                         ),
@@ -12698,7 +12698,7 @@
                           H.createElement(
                             "span",
                             null,
-                            Object(Z.d)(
+                            Object(Z.e)(
                               "#EventDashBoard_Location_LibraryDetail"
                             )
                           )
@@ -12709,7 +12709,7 @@
                           H.createElement(
                             "span",
                             null,
-                            Object(Z.d)(
+                            Object(Z.e)(
                               "#EventDashBoard_Summary_AppDetailSpotlight_Shown"
                             )
                           ),
@@ -12717,7 +12717,7 @@
                             "span",
                             null,
                             t.app_details_spotlight_shown.toLocaleString(
-                              Z.c.GetPreferredLocales()
+                              Z.d.GetPreferredLocales()
                             )
                           )
                         ),
@@ -12727,7 +12727,7 @@
                           H.createElement(
                             "span",
                             null,
-                            Object(Z.d)(
+                            Object(Z.e)(
                               "#EventDashBoard_Summary_AppDetailSpotlight_Read"
                             )
                           ),
@@ -12735,7 +12735,7 @@
                             "span",
                             null,
                             t.app_details_spotlight_read.toLocaleString(
-                              Z.c.GetPreferredLocales()
+                              Z.d.GetPreferredLocales()
                             )
                           )
                         ),
@@ -12746,7 +12746,7 @@
                           H.createElement(
                             "span",
                             null,
-                            Object(Z.d)(
+                            Object(Z.e)(
                               "#EventDashBoard_Summary_AppDetailActivity_Shown"
                             )
                           ),
@@ -12754,7 +12754,7 @@
                             "span",
                             null,
                             t.app_details_activity_shown.toLocaleString(
-                              Z.c.GetPreferredLocales()
+                              Z.d.GetPreferredLocales()
                             )
                           )
                         ),
@@ -12764,7 +12764,7 @@
                           H.createElement(
                             "span",
                             null,
-                            Object(Z.d)(
+                            Object(Z.e)(
                               "#EventDashBoard_Summary_AppDetailActivity_Read"
                             )
                           ),
@@ -12772,7 +12772,7 @@
                             "span",
                             null,
                             t.app_details_activity_read.toLocaleString(
-                              Z.c.GetPreferredLocales()
+                              Z.d.GetPreferredLocales()
                             )
                           )
                         )
@@ -12786,7 +12786,7 @@
                           H.createElement(
                             "span",
                             null,
-                            Object(Z.d)("#EventDashBoard_Location_StoreDetail")
+                            Object(Z.e)("#EventDashBoard_Location_StoreDetail")
                           )
                         ),
                         H.createElement(
@@ -12795,7 +12795,7 @@
                           H.createElement(
                             "span",
                             null,
-                            Object(Z.d)(
+                            Object(Z.e)(
                               "#EventDashBoard_Summary_StoreAppPage_Shown"
                             )
                           ),
@@ -12803,7 +12803,7 @@
                             "span",
                             null,
                             t.store_app_page_shown.toLocaleString(
-                              Z.c.GetPreferredLocales()
+                              Z.d.GetPreferredLocales()
                             )
                           )
                         ),
@@ -12813,7 +12813,7 @@
                           H.createElement(
                             "span",
                             null,
-                            Object(Z.d)(
+                            Object(Z.e)(
                               "#EventDashBoard_Summary_StoreAppPage_Read"
                             )
                           ),
@@ -12821,7 +12821,7 @@
                             "span",
                             null,
                             t.store_app_page_read.toLocaleString(
-                              Z.c.GetPreferredLocales()
+                              Z.d.GetPreferredLocales()
                             )
                           )
                         ),
@@ -12832,7 +12832,7 @@
                           H.createElement(
                             "span",
                             null,
-                            Object(Z.d)(
+                            Object(Z.e)(
                               "#EventDashBoard_Location_CommunityDetail"
                             )
                           )
@@ -12843,7 +12843,7 @@
                           H.createElement(
                             "span",
                             null,
-                            Object(Z.d)(
+                            Object(Z.e)(
                               "#EventDashBoard_Summary_Community_Shown"
                             )
                           ),
@@ -12851,7 +12851,7 @@
                             "span",
                             null,
                             t.community_hub_shown.toLocaleString(
-                              Z.c.GetPreferredLocales()
+                              Z.d.GetPreferredLocales()
                             )
                           )
                         ),
@@ -12861,7 +12861,7 @@
                           H.createElement(
                             "span",
                             null,
-                            Object(Z.d)(
+                            Object(Z.e)(
                               "#EventDashBoard_Summary_Community_Read"
                             )
                           ),
@@ -12869,7 +12869,7 @@
                             "span",
                             null,
                             t.community_hub_read.toLocaleString(
-                              Z.c.GetPreferredLocales()
+                              Z.d.GetPreferredLocales()
                             )
                           )
                         ),
@@ -12879,7 +12879,7 @@
                           H.createElement(
                             "span",
                             null,
-                            Object(Z.d)(
+                            Object(Z.e)(
                               "#EventDashBoard_Location_NewsHubDetail"
                             )
                           )
@@ -12890,13 +12890,13 @@
                           H.createElement(
                             "span",
                             null,
-                            Object(Z.d)("#EventDashBoard_Summary_NewsHub_Shown")
+                            Object(Z.e)("#EventDashBoard_Summary_NewsHub_Shown")
                           ),
                           H.createElement(
                             "span",
                             null,
                             t.news_hub_shown.toLocaleString(
-                              Z.c.GetPreferredLocales()
+                              Z.d.GetPreferredLocales()
                             )
                           )
                         ),
@@ -12906,13 +12906,13 @@
                           H.createElement(
                             "span",
                             null,
-                            Object(Z.d)("#EventDashBoard_Summary_NewsHub_Read")
+                            Object(Z.e)("#EventDashBoard_Summary_NewsHub_Read")
                           ),
                           H.createElement(
                             "span",
                             null,
                             t.news_hub_read.toLocaleString(
-                              Z.c.GetPreferredLocales()
+                              Z.d.GetPreferredLocales()
                             )
                           )
                         )
@@ -12972,7 +12972,7 @@
         Fn = a("5L1o"),
         Pn = a("45m9"),
         Hn = H.lazy(function() {
-          return Promise.all([a.e(0), a.e(1), a.e(6)]).then(
+          return Promise.all([a.e(0), a.e(1), a.e(4)]).then(
             a.bind(null, "NIbt")
           );
         }),
@@ -13032,7 +13032,7 @@
                   { className: we.a.FlexCenter, style: { height: "400px" } },
                   H.createElement(Q.a, {
                     size: "medium",
-                    string: Object(Z.d)("#Loading")
+                    string: Object(Z.e)("#Loading")
                   })
                 );
               var u = t.GetDescriptionWithFallback(a),
@@ -13060,7 +13060,7 @@
                     H.createElement(xn, {
                       crumbs: [
                         {
-                          name: Object(Z.d)("#BreadCrumbs_AllEvents"),
+                          name: Object(Z.e)("#BreadCrumbs_AllEvents"),
                           url: Object(Ae.d)(
                             t,
                             Ae.a.k_eStoreUsersNewsHub,
@@ -13068,7 +13068,7 @@
                           )
                         },
                         {
-                          name: Object(Z.d)("#BreadCrumbs_GameEvents", p.title),
+                          name: Object(Z.e)("#BreadCrumbs_GameEvents", p.title),
                           url: v
                         }
                       ]
@@ -13155,7 +13155,7 @@
                             className: Object(W.a)(q.a.Button),
                             href: t.jsondata.read_more_link
                           },
-                          Object(Z.d)("#EventEmail_Button_ClickForMoreDetails")
+                          Object(Z.e)("#EventEmail_Button_ClickForMoreDetails")
                         ),
                       Boolean(
                         t.jsondata.bSaleEnabled && t.jsondata.sale_vanity_id
@@ -13174,7 +13174,7 @@
                                   "/sale/") +
                               t.jsondata.sale_vanity_id
                           },
-                          Object(Z.d)("#Event_Button_VisitSalePage")
+                          Object(Z.e)("#Event_Button_VisitSalePage")
                         ),
                       H.createElement("span", { className: q.a.Clear }),
                       H.createElement(
@@ -13219,7 +13219,7 @@
                           H.createElement(
                             "span",
                             { className: En.a.Title },
-                            Object(Z.d)("#CreatorHome_ThisGame")
+                            Object(Z.e)("#CreatorHome_ThisGame")
                           ),
                           H.createElement(
                             "div",
@@ -13384,7 +13384,7 @@
                     H.createElement(
                       "div",
                       { className: En.a.RightSideTitles },
-                      Object(Z.d)("#EventDisplay_RightColumnTitle_EventType")
+                      Object(Z.e)("#EventDisplay_RightColumnTitle_EventType")
                     ),
                     H.createElement(
                       "div",
@@ -13419,8 +13419,8 @@
                   Na.v.some(function(e) {
                     return t === e;
                   })
-                    ? Object(Z.d)("#EventDisplay_RightColumnTitle_Blog")
-                    : Object(Z.d)("#EventDisplay_RightColumnTitle_Game")
+                    ? Object(Z.e)("#EventDisplay_RightColumnTitle_Blog")
+                    : Object(Z.e)("#EventDisplay_RightColumnTitle_Game")
                 ),
                 H.createElement(Fn.f, {
                   capsule: { id: t, type: "game" },
@@ -13530,12 +13530,12 @@
                     H.createElement(
                       "span",
                       null,
-                      Object(Z.d)("#EventEditor_Comments")
+                      Object(Z.e)("#EventEditor_Comments")
                     ),
                     H.createElement(
                       "span",
                       null,
-                      e.nCommentCount.toLocaleString(Z.c.GetPreferredLocales())
+                      e.nCommentCount.toLocaleString(Z.d.GetPreferredLocales())
                     )
                   ),
                   H.createElement(
@@ -13544,13 +13544,13 @@
                     H.createElement(
                       "span",
                       null,
-                      Object(Z.d)("#EventEditor_UpVotes")
+                      Object(Z.e)("#EventEditor_UpVotes")
                     ),
                     H.createElement(
                       "span",
                       null,
                       e.nVotesUp
-                        ? e.nVotesUp.toLocaleString(Z.c.GetPreferredLocales())
+                        ? e.nVotesUp.toLocaleString(Z.d.GetPreferredLocales())
                         : 0
                     )
                   ),
@@ -13560,13 +13560,13 @@
                     H.createElement(
                       "span",
                       null,
-                      Object(Z.d)("#EventEditor_DownVotes")
+                      Object(Z.e)("#EventEditor_DownVotes")
                     ),
                     H.createElement(
                       "span",
                       null,
                       e.nVotesDown
-                        ? e.nVotesDown.toLocaleString(Z.c.GetPreferredLocales())
+                        ? e.nVotesDown.toLocaleString(Z.d.GetPreferredLocales())
                         : 0
                     )
                   )
@@ -13575,7 +13575,7 @@
                   H.createElement(
                     "div",
                     { className: En.a.EditorStatsCtn },
-                    Object(Z.d)("#EventDashBoard_SummaryStats_Admin_Title"),
+                    Object(Z.e)("#EventDashBoard_SummaryStats_Admin_Title"),
                     H.createElement(Bn, { summary: t.m_stats })
                   )
               );
@@ -13625,7 +13625,7 @@
                       H.createElement(
                         "div",
                         { className: En.a.TokenBalanceContainer },
-                        Object(Z.d)("#Lunar2020_YourBalancePrefix"),
+                        Object(Z.e)("#Lunar2020_YourBalancePrefix"),
                         H.createElement(
                           "a",
                           {
@@ -13633,7 +13633,7 @@
                             href: Y.c.STORE_BASE_URL + "lunarnewyearmarket"
                           },
                           " ",
-                          Object(Z.d)("#Lunar2020_BalanceNumberOfTokens", o),
+                          Object(Z.e)("#Lunar2020_BalanceNumberOfTokens", o),
                           " "
                         )
                       ),
@@ -13643,7 +13643,7 @@
                     H.createElement(
                       "div",
                       { className: En.a.BottomMessage },
-                      Object(Z.d)("#Lunar2020_CheckBackEachDay")
+                      Object(Z.e)("#Lunar2020_CheckBackEachDay")
                     )
                 )
               );
@@ -13704,12 +13704,12 @@
                 a = H.createElement(
                   "a",
                   { href: Y.c.HELP_BASE_URL },
-                  Object(Z.d)("#User_LimitedAccount_UrlInfo")
+                  Object(Z.e)("#User_LimitedAccount_UrlInfo")
                 );
               Object(l.b)(
                 H.createElement(P.c, {
-                  strTitle: Object(Z.d)("#Lunar2020_LimitedUserDialogTitle"),
-                  strDescription: Object(Z.l)("#User_LimitedAccount", a),
+                  strTitle: Object(Z.e)("#Lunar2020_LimitedUserDialogTitle"),
+                  strDescription: Object(Z.m)("#User_LimitedAccount", a),
                   bAlertDialog: !0
                 }),
                 t
@@ -13727,7 +13727,7 @@
                 "Day index #" + t + " not in valid range."
               );
               for (
-                var n = Object(Z.d)(Kn[t]),
+                var n = Object(Z.e)(Kn[t]),
                   r = !Y.i.logged_in,
                   o = un.BIsDoorOpened(t),
                   i = un.BCanUserOpenDoor(t),
@@ -13740,16 +13740,16 @@
               var c = !o && i && l,
                 d = new Date(1e3 * un.GetRawDoorData()[t].rtime_start),
                 u = r
-                  ? Object(Z.d)("#Login_SignIn")
+                  ? Object(Z.e)("#Login_SignIn")
                   : o
-                  ? Object(Z.d)("#Lunar2020_RereadStory")
+                  ? Object(Z.e)("#Lunar2020_RereadStory")
                   : c
-                  ? Object(Z.d)("#Lunar2020_GiftCanBeOpenedNow")
+                  ? Object(Z.e)("#Lunar2020_GiftCanBeOpenedNow")
                   : i
-                  ? Object(Z.d)("#Lunar2020_GiftCanBeOpenedAfterThePreviousOne")
-                  : Object(Z.d)(
+                  ? Object(Z.e)("#Lunar2020_GiftCanBeOpenedAfterThePreviousOne")
+                  : Object(Z.e)(
                       "#Lunar2020_GiftLockedUntilDate",
-                      d.toLocaleDateString(Z.c.GetPreferredLocales(), {
+                      d.toLocaleDateString(Z.d.GetPreferredLocales(), {
                         month: "numeric",
                         day: "numeric"
                       })
@@ -13849,22 +13849,22 @@
                 H.createElement(
                   "div",
                   { className: En.a.StoryHeader },
-                  Object(Z.d)("#Lunar2020_StoryTitle")
+                  Object(Z.e)("#Lunar2020_StoryTitle")
                 ),
                 H.createElement(
                   "div",
                   { className: En.a.StorySubHeader },
-                  Object(Z.d)("#Lunar2020_StorySubTitle")
+                  Object(Z.e)("#Lunar2020_StorySubTitle")
                 ),
                 H.createElement(
                   "div",
                   { className: En.a.StorySubHeader },
-                  Object(Z.d)(Xn[e.iDoorIndex])
+                  Object(Z.e)(Xn[e.iDoorIndex])
                 ),
                 H.createElement(
                   "div",
                   { className: En.a.StoryText },
-                  Object(Z.d)($n[e.iDoorIndex])
+                  Object(Z.e)($n[e.iDoorIndex])
                 ),
                 H.createElement(
                   "div",
@@ -13874,7 +13874,7 @@
                     {
                       className: Object(W.a)(En.a.CoinText, a && En.a.Visible)
                     },
-                    Object(Z.d)("#Lunar2020_ReceivedNumberOfTokens", 100)
+                    Object(Z.e)("#Lunar2020_ReceivedNumberOfTokens", 100)
                   ),
                   H.createElement(
                     "video",
@@ -13885,7 +13885,7 @@
                     },
                     H.createElement("source", { src: r, type: "video/mp4" }),
                     H.createElement("source", { src: o, type: "video/webm" }),
-                    Object(Z.d)("#Lunar2020_ErrorLoadingVideo")
+                    Object(Z.e)("#Lunar2020_ErrorLoadingVideo")
                   )
                 )
               ),
@@ -13903,7 +13903,7 @@
                   H.createElement(
                     "div",
                     { className: En.a.CheckBackText },
-                    Object(Z.d)("#Lunar2020_CheckBackEachDayForStory")
+                    Object(Z.e)("#Lunar2020_CheckBackEachDayForStory")
                   )
               )
             ),
@@ -13916,13 +13916,13 @@
                 H.createElement(
                   "a",
                   { href: Y.c.STORE_BASE_URL + "lunarnewyearmarket" },
-                  Object(Z.d)("#Lunar2020_LinkFromVideoToMarket")
+                  Object(Z.e)("#Lunar2020_LinkFromVideoToMarket")
                 )
               ),
               H.createElement(
                 "div",
                 { className: En.a.MarketLink, onClick: e.closeModal },
-                Object(Z.d)("#Lunar2020_LinkBackToSale")
+                Object(Z.e)("#Lunar2020_LinkBackToSale")
               )
             )
           );
@@ -14157,7 +14157,7 @@
                     B.a,
                     {
                       key: e.flavor,
-                      toolTipContent: Object(Z.d)(e.tooltip),
+                      toolTipContent: Object(Z.e)(e.tooltip),
                       onClick: function() {
                         return t.OnFlavorLabelClick(e.flavor);
                       },
@@ -14166,7 +14166,7 @@
                         o == e.flavor && or.a.SelectedFlavor
                       )
                     },
-                    Object(Z.d)(e.label)
+                    Object(Z.e)(e.label)
                   );
                 });
             }),
@@ -14249,7 +14249,7 @@
                       d.a.createElement(
                         "div",
                         { className: or.a.EmptyResults },
-                        Object(Z.d)("#Sale_EmptySearchResultsOrLoadFailure")
+                        Object(Z.e)("#Sale_EmptySearchResultsOrLoadFailure")
                       ),
                     (!t || r) &&
                       d.a.createElement(
@@ -14268,7 +14268,7 @@
                                 onClick: this.ShowMoreRows,
                                 className: or.a.ShowContentsButton
                               },
-                              Object(Z.d)("#Sale_ShowMore")
+                              Object(Z.e)("#Sale_ShowMore")
                             )
                       )
                   )
@@ -14329,9 +14329,9 @@
                 p = s.formatted_final_price,
                 m = Object(cr.a)(s, c),
                 h = [p, m || ""],
-                v = Z.d.apply(void 0, Object(z.g)([o], h)),
-                _ = Z.d.apply(void 0, Object(z.g)([i], h)),
-                b = Z.d.apply(
+                v = Z.e.apply(void 0, Object(z.g)([o], h)),
+                _ = Z.e.apply(void 0, Object(z.g)([i], h)),
+                b = Z.e.apply(
                   void 0,
                   Object(z.g)(["#Sale_Subscription_Save"], h)
                 ),
@@ -14360,7 +14360,7 @@
                           ur.a.AlreadyOwnedPackage
                         )
                       },
-                      Object(Z.d)("#Sale_Subscription_AlreadyOwnedPackage")
+                      Object(Z.e)("#Sale_Subscription_AlreadyOwnedPackage")
                     )
                   : y
                   ? H.createElement(
@@ -14371,7 +14371,7 @@
                           ur.a.AlreadyOwnedApp
                         )
                       },
-                      Object(Z.d)("#Sale_Subscription_AlreadyOwnedApp")
+                      Object(Z.e)("#Sale_Subscription_AlreadyOwnedApp")
                     )
                   : H.createElement(
                       "div",
@@ -14431,7 +14431,7 @@
                 H.createElement(
                   "span",
                   { className: ur.a.SelectAPlan },
-                  Object(Z.d)("#Sale_Subscription_SelectPlan")
+                  Object(Z.e)("#Sale_Subscription_SelectPlan")
                 ),
                 H.createElement(
                   "div",
@@ -14443,7 +14443,7 @@
                     compare_package_id: i,
                     price_loc_token: "#Sale_Subscription_Annual_Price",
                     body_loc_token: "#Sale_Subscription_Annual_Body",
-                    button_text: Object(Z.d)("#Sale_Subscription_Annual_Button")
+                    button_text: Object(Z.e)("#Sale_Subscription_Annual_Button")
                   }),
                   H.createElement(mr, {
                     sub_package_id: o,
@@ -14451,7 +14451,7 @@
                     language: n,
                     price_loc_token: "#Sale_Subscription_Quarterly_Price",
                     body_loc_token: "#Sale_Subscription_Quarterly_Body",
-                    button_text: Object(Z.d)(
+                    button_text: Object(Z.e)(
                       "#Sale_Subscription_Quarterly_Button"
                     )
                   }),
@@ -14461,7 +14461,7 @@
                     language: n,
                     price_loc_token: "#Sale_Subscription_Monthly_Price",
                     body_loc_token: "#Sale_Subscription_Monthly_Body",
-                    button_text: Object(Z.d)(
+                    button_text: Object(Z.e)(
                       "#Sale_Subscription_Monthly_Button"
                     )
                   })
@@ -14497,7 +14497,7 @@
             (t.localized_label[a] || t.localized_label[0])) ||
             ("#Sale_default_label" === t.default_label
               ? ""
-              : Object(Z.d)(t.default_label)));
+              : Object(Z.e)(t.default_label)));
         if (!c) return null;
         var d,
           u = ((d = l),
@@ -14570,7 +14570,7 @@
                 return H.createElement(
                   "div",
                   { className: ar.a.TabContentsElement },
-                  Object(Z.d)("#SalePage_Tabs_AllContents")
+                  Object(Z.e)("#SalePage_Tabs_AllContents")
                 );
               for (
                 var t = new Array(), a = new Set(), n = 0, r = e.capsules;
@@ -14582,7 +14582,7 @@
                   l,
                   s,
                   c = r[n],
-                  d = Object(Z.d)("#AppType_" + c.type) + "_" + c.id;
+                  d = Object(Z.e)("#AppType_" + c.type) + "_" + c.id;
                 a.has(d) ||
                   (a.add(d),
                   (o = null),
@@ -14606,7 +14606,7 @@
                       this.GetTabReferences(c)
                     : void 0 === c.visibility_index
                     ? i
-                    : Object(Z.d)("#Sale_TabDayIndex", c.visibility_index)),
+                    : Object(Z.e)("#Sale_TabDayIndex", c.visibility_index)),
                   t.push({ sName: i, sKey: d, sDisplay: s, nDaySortIndex: l }));
               }
               return (
@@ -14734,7 +14734,7 @@
           );
         })(H.Component),
         Er = H.lazy(function() {
-          return Promise.all([a.e(0), a.e(1), a.e(6)]).then(
+          return Promise.all([a.e(0), a.e(1), a.e(4)]).then(
             a.bind(null, "NIbt")
           );
         });
@@ -14987,7 +14987,7 @@
                             }
                           },
                           H.createElement(Br, {
-                            text: Object(Z.d)("#Sale_SeeAllSpecials"),
+                            text: Object(Z.e)("#Sale_SeeAllSpecials"),
                             url: e.jsondata.sale_browsemore_url,
                             color: e.jsondata.sale_browsemore_color,
                             bgcolor: e.jsondata.sale_browsemore_bgcolor
@@ -15009,7 +15009,7 @@
                 { className: we.a.FlexCenter, style: { height: "500px" } },
                 H.createElement(Q.a, {
                   size: "medium",
-                  string: Object(Z.d)("#Loading")
+                  string: Object(Z.e)("#Loading")
                 })
               );
             }),
@@ -15407,11 +15407,11 @@
             H.createElement(
               "div",
               { className: ar.a.SaleSectionLoginPrompt },
-              Object(Z.d)("#SalePage_LoginPrompt"),
+              Object(Z.e)("#SalePage_LoginPrompt"),
               H.createElement(
                 "button",
                 { onClick: se.a, className: ar.a.LoginButton },
-                Object(Z.d)("#Login_SignIn")
+                Object(Z.e)("#Login_SignIn")
               )
             )
           );
@@ -16398,7 +16398,7 @@
                                       onClick: this.ShowMoreContents,
                                       className: ar.a.ShowContentsButton
                                     },
-                                    Object(Z.d)("#Sale_ShowMore")
+                                    Object(Z.e)("#Sale_ShowMore")
                                   )
                             )
                         ))
@@ -16420,7 +16420,7 @@
                 g = H.createElement(
                   "div",
                   { className: ar.a.preview_placeholder_section },
-                  Object(Z.d)(
+                  Object(Z.e)(
                     h.smart_section
                       ? "#Sale_SmartPlaceHolder"
                       : "#Sale_PlaceHolder"
@@ -16449,14 +16449,14 @@
                       "div",
                       {
                         className: ar.a.SaleSectionSubtext,
-                        "data-tooltip-text": Object(Z.d)(
+                        "data-tooltip-text": Object(Z.e)(
                           "#Sale_HiddenItem_Tooltip"
                         )
                       },
                       H.createElement(
                         "a",
                         { href: Y.c.STORE_BASE_URL + "account/preferences" },
-                        Object(Z.l)(
+                        Object(Z.m)(
                           1 == l
                             ? "#Sale_HiddenItem_Single_Short"
                             : "#Sale_HiddenItems_Short",
@@ -16473,7 +16473,7 @@
                     H.createElement(
                       "a",
                       { href: P, target: Y.c.IN_CLIENT ? void 0 : "_blank" },
-                      Object(Z.d)("#btn_live_streams_all")
+                      Object(Z.e)("#btn_live_streams_all")
                     )
                   )
               );
@@ -16509,7 +16509,7 @@
             target: "_blank",
             style: { backgroundColor: r, color: n }
           },
-          t || Object(Z.d)("#Sale_BrowseMore_Text_Default")
+          t || Object(Z.e)("#Sale_BrowseMore_Text_Default")
         );
       };
       function Mr(t) {
@@ -16545,17 +16545,17 @@
           if (e.curator_clan_id) {
             var t = D.a.InitFromClanID(e.curator_clan_id),
               a = X.a.GetCreatorHome(t);
-            if (a) return Object(Z.d)("#Sale_CuratorSection_Name", a.GetName());
+            if (a) return Object(Z.e)("#Sale_CuratorSection_Name", a.GetName());
           }
           return "#Sale_CuratorSection";
         })(e);
-        if (null !== r) return r && r.startsWith("#") ? Object(Z.d)(r) : r;
+        if (null !== r) return r && r.startsWith("#") ? Object(Z.e)(r) : r;
         var o =
             e.localized_label[t] ||
             e.localized_label[0] ||
             ("#Sale_default_label" === e.default_label
               ? ""
-              : Object(Z.d)(e.default_label)),
+              : Object(Z.e)(e.default_label)),
           i =
             e.localized_label_image &&
             (e.localized_label_image[t] || e.localized_label_image[0]);
@@ -16658,7 +16658,7 @@
                           }
                         }),
                       Boolean(!this.state.bOnceVisible) &&
-                        H.createElement("span", null, Object(Z.d)("#Loading"))
+                        H.createElement("span", null, Object(Z.e)("#Loading"))
                     )
                   )
                 )
@@ -16831,7 +16831,7 @@
               n &&
                 t &&
                 o &&
-                ((r = Object(Z.d)(
+                ((r = Object(Z.e)(
                   "#EventCalendar_TabTitle_GroupNameAndEventDetail",
                   t,
                   o
@@ -17046,7 +17046,7 @@
                 d.a.createElement(
                   "h2",
                   null,
-                  Object(Z.d)("#EventBrowse_RecentEvents")
+                  Object(Z.e)("#EventBrowse_RecentEvents")
                 ),
                 d.a.createElement(
                   "div",
@@ -17060,7 +17060,7 @@
                             return a.ShowModal(n[0]);
                           }
                         },
-                        Object(Z.d)("#EventBrowse_MoreEventsBtn")
+                        Object(Z.e)("#EventBrowse_MoreEventsBtn")
                       )
                     : d.a.createElement(
                         Ae.c,
@@ -17070,7 +17070,7 @@
                           forceAnchor: !0,
                           className: qr.SectionButton
                         },
-                        Object(Z.d)("#EventBrowse_MoreEventsBtn")
+                        Object(Z.e)("#EventBrowse_MoreEventsBtn")
                       )
                 ),
                 d.a.createElement(

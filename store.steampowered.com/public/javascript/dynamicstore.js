@@ -1165,7 +1165,8 @@ GDynamicStore = {
 	BIsAppOwned: function( appid, optsIn )
 	{
 		var opts = { bExcludeIfAutoGrant: true, bExcludeMasterSub: false };
-		if ( optsIn === false )
+
+				if ( optsIn === false )
 			$J.extend( opts, { bExcludeIfAutoGrant: false } );
 		else if ( optsIn )
 			$J.extend( opts, optsIn );

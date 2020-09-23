@@ -47,7 +47,7 @@ function StartCreationSession()
 			}
 			else if ( data.success == 101 )
 			{
-				new Effect.Morph( 'captcha_text', {style: 'border: 1px solid #FF9900', duration: 0.5 } );
+				new Effect.Morph( 'captcha_text', {style: 'border: 1px solid #b44040', duration: 0.5 } );
 			}
 
 			ShowError( strError );
@@ -68,7 +68,7 @@ function StartCreationSessionParentalConsent()
 	if ( email == '' || !email_regex.test(email) )
 	{
 		strError = 'Please enter a valid email address.<br/>';
-		new Effect.Morph( 'parental_email', {style: 'border: 1px solid #FF9900', duration: 0.5 } );
+		new Effect.Morph( 'parental_email', {style: 'border: 1px solid #b44040', duration: 0.5 } );
 		ShowError( strError );
 		return;
 	}
@@ -92,7 +92,7 @@ function StartCreationSessionParentalConsent()
                 if ( data.success == 62 )
                 {
                     strError = 'This e-mail address must be different from your own.';
-                    new Effect.Morph( 'parental_email', {style: 'border: 1px solid #FF9900', duration: 0.5 } );
+                    new Effect.Morph( 'parental_email', {style: 'border: 1px solid #b44040', duration: 0.5 } );
                 }
                 else if ( data.success == 13 )
                 {
@@ -104,7 +104,8 @@ function StartCreationSessionParentalConsent()
                 }
                 else if ( data.success == 101 )
 				{
-					new Effect.Morph( 'captcha_text', {style: 'border: 1px solid #FF9900', duration: 0.5 } );
+										g_parentalConsentDialog.Dismiss();
+					g_parentalConsentDialog = null;
 				}
 
 				ShowError( strError );
@@ -145,30 +146,26 @@ function AjaxCheckEmailVerified()
 		url: g_sBaseURL + 'join/ajaxcheckemailverified',
 		data: { 'creationid' : g_creationSessionID }
 	})
-		.done( function( eResult ) {
-
-			switch( eResult )
+		.done( function( data ) {
+			switch( data.success )
 			{
 				case 1:
-					EmailConfirmedVerified();
+					EmailConfirmedVerified( data.has_existing_account );
 					break;
 				case 42:
 				case 29:
 									ChangeEmail();
 					ShowError( 'There was an error with your registration, please try again.' );
 					break;
-
 				case 27:
 					ChangeEmail();
 					ShowError( 'You\'ve waited too long to verify your email. Please try creating your account and verifying your email again.' );
 					break;
-
 				case 36:
 				case 10:
-													setTimeout( AjaxCheckEmailVerified, 3000 );
+															setTimeout( AjaxCheckEmailVerified, 3000);
 					break;
 			}
-
 		} )
 		.fail( function() {
 			setTimeout( AjaxCheckEmailVerified, 5000 );
@@ -186,14 +183,20 @@ function ChangeEmail()
 	RefreshCaptcha();
 }
 
-function EmailConfirmedVerified()
+function EmailConfirmedVerified( has_existing_account )
 {
 	if ( g_emailVerificationDialog )
-	{
 		g_emailVerificationDialog.Dismiss();
-	}
 
-	window.location = g_strRedirectURL + ( g_strRedirectURL.indexOf( '?' ) > 0 ? '&' : '?' ) + 'creationid=' + g_creationSessionID;
+	if ( has_existing_account )
+	{
+		$J( '.create_account_form_container' ).hide();
+		$J( '.joinsteam_existingaccount_ctn' ).show();
+	}
+	else
+	{
+		window.location = g_strRedirectURL + ( g_strRedirectURL.indexOf( '?' ) > 0 ? '&' : '?' ) + 'creationid=' + g_creationSessionID;
+	}
 }
 
 
@@ -279,7 +282,7 @@ function FinishFormVerification( bCaptchaIsValid )
 		for ( var key in rgBadFields )
 	{
 		if ( rgBadFields[key] )
-			$J( '#' + key ).css( 'border', '1px solid #FF9900' );
+			$J( '#' + key ).css( 'border', '1px solid #b44040' );
 		else
 			$(key).style.border = 'none';
 	}
@@ -456,7 +459,7 @@ function AccountPasswordFormVerification(  )
 		for ( var key in rgBadFields )
 	{
 		if ( rgBadFields[key] )
-			new Effect.Morph( key, {style: 'border: 1px solid #FF9900', duration: 0.5 } )
+			new Effect.Morph( key, {style: 'border: 1px solid #b44040', duration: 0.5 } )
 		else
 			$(key).style.borderColor = '#82807C';
 	}
@@ -593,31 +596,31 @@ function CheckAccountNameAvailability()
 
 	      	if ( result && result.bAvailable )
 	      	{
-	      	  span.innerHTML = 'Available';
-	      	  span.style.color = "#7ABF08";
-	      	  $('form_row_choose_suggested_name').style.display = 'none';
-	      	  g_bAccountNameAvailable = true;
+				span.innerHTML = '<img class="green_check" src="https://community.cloudflare.steamstatic.com/public/shared/images/joinsteam/check.png" > Available';
+				span.style.color = "#b8b6b4";
+				$('form_row_choose_suggested_name').style.display = 'none';
+				g_bAccountNameAvailable = true;
 	      	}
 	      	else
 	      	{
-	      	  span.innerHTML = 'Not Available';
-	      	  span.style.color = "#DE3F3F";
-	      	  g_bAccountNameAvailable = false;
-	      	  if ( result.rgSuggestions.length > 0 )
-	      	  {
-	      	  	$('form_row_choose_suggested_name').style.display = 'block';
-	      	  	for ( var i=0; i < Math.min( result.rgSuggestions.length, 3 ); ++i )
-	      	  	{
-	      	  		$('suggested_name_'+(i+1)).value = result.rgSuggestions[i];
-	      	  		$('suggested_name_'+(i+1)).innerHTML = result.rgSuggestions[i];
-	      	  	}
-	      	  }
-	      	  else
-	      	  {
-	      	  	$('form_row_choose_suggested_name').style.display = 'none';
-	      	  }
+	      		span.innerHTML = 'Not Available';
+				span.style.color = "#DE3F3F";
+				g_bAccountNameAvailable = false;
+				if ( result.rgSuggestions.length > 0 )
+				{
+					$('form_row_choose_suggested_name').style.display = 'block';
+					for ( var i=0; i < Math.min( result.rgSuggestions.length, 3 ); ++i )
+					{
+						$('suggested_name_'+(i+1)).value = result.rgSuggestions[i];
+						$('suggested_name_'+(i+1)).innerHTML = result.rgSuggestions[i];
+					}
+				}
+				else
+				{
+					$('form_row_choose_suggested_name').style.display = 'none';
+				}
 	      	}
-	      	Effect.Appear( 'accountname_availability', { from : 0.2, to : 1.0, duration : 0.5 } );
+	      	Effect.Appear( 'accountname_availability', { from : 0.2, to : 1.0, duration : 0.3 } );
 	      }
 	    },
 	    onFailure: function(){ alert('Something went wrong...') }
@@ -734,8 +737,7 @@ function CheckPasswordAvail()
 				SetPasswordTag( '#password_tag', '', '' );
 				DisplayPasswordStrength();
 			}
-		},
-		onFailure: function(){ alert('Something went wrong...') }
+		}
 	});
 
 }
@@ -752,7 +754,7 @@ function DisplayPasswordStrength()
 	else if ( nStrength >= 3 )
 		SetPasswordTag( '#password_tag', 'good', '' );
 	else
-		SetPasswordTag( '#password_tag', 'warning', 'Include a-z, A-Z, 0-9 or symbols for a stronger password' );
+		SetPasswordTag( '#password_tag', 'warning', 'Include lowercase and uppercase letters, numbers and symbols for a stronger password' );
 
 	CheckPasswordsMatch();
 }
@@ -847,6 +849,58 @@ function RefreshCaptcha()
 		  }
 	    }
 	  });
+}
+
+function ToggleEmailVerificationHelp()
+{
+	var elHelpCtn = $J( '.email_verification_troubleshooting' );
+	var bVisible = elHelpCtn.is(':visible');
+
+	if ( bVisible )
+	{
+		elHelpCtn.slideUp();
+		elHelpCtn.find( '.ico16' ).addClass( 'active' );
+	}
+	else
+	{
+		elHelpCtn.slideDown();
+		elHelpCtn.find( '.ico16' ).removeClass( 'active' );
+	}
+}
+
+function ValidateAccountLink( event ) {
+	console.log( event );
+	if (event.origin !== g_strVerificationOrigin )
+		return;
+
+	$J.ajax( {
+		type: 'POST',
+		url: 'https://steamcommunity.com/join/ajaxcheckidentityverification',
+		data: { 'linktoken' : g_strLinkToken }
+	})
+	.done( function( success ) {
+
+		if ( success == 1 )
+		{
+			window.location = 'https://steamcommunity.com/join/completesignup/?creationid=' + g_creationSessionID;
+		}
+
+	} )
+	.fail( function() {
+
+	} );
+}
+
+function GoToExistingAccount( bIsInClient )
+{
+	if ( bIsInClient )
+	{
+		window.close();
+	}
+	else
+	{
+		window.location = g_sBaseURL + 'login';s
+	}
 }
 
 

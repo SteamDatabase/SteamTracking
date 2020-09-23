@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [67],
+  [68],
   {
     ARGL: function(e, t, a) {
       e.exports = {
@@ -254,7 +254,7 @@
         _ = a("0OaU"),
         b = a("6Y59");
       function B(e) {
-        return Object(T.d)("#RewardsReaction_" + e);
+        return Object(T.e)("#RewardsReaction_" + e);
       }
       var I,
         h,
@@ -479,8 +479,8 @@
                 f = w ? w.points_transferred : 0,
                 y =
                   2 == n
-                    ? Object(T.d)("#GrantAwardDescription_UGC")
-                    : Object(T.d)("#GrantAwardDescription_Review");
+                    ? Object(T.e)("#GrantAwardDescription_UGC")
+                    : Object(T.e)("#GrantAwardDescription_Review");
               switch (l) {
                 case I.SELECTING:
                   var v = 0 === c || _.get(c),
@@ -492,13 +492,13 @@
                           return t.setState({ ePhase: I.CONFIRM });
                         },
                         disabled: v,
-                        title: Object(T.d)(
+                        title: Object(T.e)(
                           v
                             ? "#GrantAward_PromptTooltip"
                             : "#GrantAward_SubmitTooltip"
                         )
                       },
-                      Object(T.d)(
+                      Object(T.e)(
                         v ? "#GrantAward_SelectAward" : "#GrantAward_Next"
                       )
                     ),
@@ -536,7 +536,7 @@
                               C.createElement(
                                 "div",
                                 { key: "msg", className: L.NotEnoughPoints },
-                                Object(T.d)(
+                                Object(T.e)(
                                   "#GrantAward_CantAfford",
                                   h
                                     .negate()
@@ -554,7 +554,7 @@
                                 C.createElement(
                                   x,
                                   { key: "button" },
-                                  Object(T.d)("#GrantAward_HowToGetPoints")
+                                  Object(T.e)("#GrantAward_HowToGetPoints")
                                 )
                               )
                             ]
@@ -587,7 +587,7 @@
                         C.createElement(
                           "div",
                           { className: L.ConfirmText },
-                          Object(T.l)(
+                          Object(T.m)(
                             "#GrantAward_Confirm",
                             C.createElement(q, null, g.toLocaleString()),
                             C.createElement(
@@ -600,13 +600,13 @@
                         C.createElement(
                           "div",
                           { className: L.ConfirmText },
-                          Object(T.l)(
+                          Object(T.m)(
                             "#GrantAward_Confirm_Details",
                             C.createElement(q, null, f.toLocaleString()),
                             C.createElement(
                               "span",
                               { className: L.TimePeriod },
-                              Object(T.d)(
+                              Object(T.e)(
                                 "#GrantAward_Confirm_DetailsTimePeriod"
                               )
                             )
@@ -638,7 +638,7 @@
                         C.createElement(
                           "div",
                           { className: L.SuccessText },
-                          Object(T.d)("#GrantAward_Success")
+                          Object(T.e)("#GrantAward_Success")
                         )
                       )
                     ),
@@ -654,16 +654,16 @@
                           },
                           disabled: l !== I.CONFIRM
                         },
-                        Object(T.d)("#GrantAward_Back")
+                        Object(T.e)("#GrantAward_Back")
                       ),
                       C.createElement(
                         F,
                         {
                           onClick: this.GrantAward,
-                          title: Object(T.d)("#GrantAward_SubmitTooltip"),
+                          title: Object(T.e)("#GrantAward_SubmitTooltip"),
                           disabled: l !== I.CONFIRM
                         },
-                        Object(T.d)("#GrantAwardNowButton")
+                        Object(T.e)("#GrantAwardNowButton")
                       )
                     )
                   );
@@ -672,25 +672,25 @@
                   var S = "";
                   switch (this.state.eResult) {
                     case 10:
-                      S = Object(T.d)("#GrantAwardError_Busy");
+                      S = Object(T.e)("#GrantAwardError_Busy");
                       break;
                     case 32:
-                      S = Object(T.d)("#GrantAwardError_PersistFailed");
+                      S = Object(T.e)("#GrantAwardError_PersistFailed");
                       break;
                     case 8:
-                      S = Object(T.d)("#GrantAwardError_InvalidParam");
+                      S = Object(T.e)("#GrantAwardError_InvalidParam");
                       break;
                     case 42:
-                      S = Object(T.d)("#GrantAwardError_NoMatch");
+                      S = Object(T.e)("#GrantAwardError_NoMatch");
                       break;
                     case 107:
-                      S = Object(T.d)("#GrantAwardError_InsufficientFunds");
+                      S = Object(T.e)("#GrantAwardError_InsufficientFunds");
                       break;
                     case 15:
-                      S = Object(T.d)("#GrantAwardError_AccessDenied");
+                      S = Object(T.e)("#GrantAwardError_AccessDenied");
                       break;
                     default:
-                      S = Object(T.d)("#GrantAwardError_Fail");
+                      S = Object(T.e)("#GrantAwardError_Fail");
                   }
                   R = C.createElement(
                     C.Fragment,
@@ -717,7 +717,7 @@
                             return t.setState({ ePhase: I.SELECTING });
                           }
                         },
-                        Object(T.d)("#GrantAward_Back")
+                        Object(T.e)("#GrantAward_Back")
                       )
                     )
                   );
@@ -763,7 +763,7 @@
             C.createElement(
               "div",
               { className: L.Title },
-              Object(T.d)("#GrantAwardTitle")
+              Object(T.e)("#GrantAwardTitle")
             ),
             C.createElement("div", { className: L.Description }, t)
           );
@@ -786,7 +786,7 @@
                 C.createElement(
                   "div",
                   { className: L.BalanceLabel },
-                  Object(T.d)("#YourBalance")
+                  Object(T.e)("#YourBalance")
                 ),
                 C.createElement("div", { className: L.BalanceAmount }, r)
               )
@@ -807,7 +807,7 @@
                   className: L.FooterLink,
                   href: G.c.STORE_BASE_URL + "points/howitworks"
                 },
-                Object(T.d)("#GrantAward_PointsLink")
+                Object(T.e)("#GrantAward_PointsLink")
               )
             )
           );

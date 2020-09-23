@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [6],
+  [4],
   {
     "0OaU": function(e, t, r) {
       "use strict";
@@ -1867,7 +1867,7 @@
         Y = r("0OaU"),
         V = r("6Y59");
       function K(e) {
-        return Object(L.d)("#RewardsReaction_" + e);
+        return Object(L.e)("#RewardsReaction_" + e);
       }
       var J,
         $,
@@ -2555,8 +2555,8 @@
                 g = w ? w.points_transferred : 0,
                 v =
                   2 == n
-                    ? Object(L.d)("#GrantAwardDescription_UGC")
-                    : Object(L.d)("#GrantAwardDescription_Review");
+                    ? Object(L.e)("#GrantAwardDescription_UGC")
+                    : Object(L.e)("#GrantAwardDescription_Review");
               switch (l) {
                 case ie.SELECTING:
                   var B = 0 === c || b.get(c),
@@ -2568,13 +2568,13 @@
                           return t.setState({ ePhase: ie.CONFIRM });
                         },
                         disabled: B,
-                        title: Object(L.d)(
+                        title: Object(L.e)(
                           B
                             ? "#GrantAward_PromptTooltip"
                             : "#GrantAward_SubmitTooltip"
                         )
                       },
-                      Object(L.d)(
+                      Object(L.e)(
                         B ? "#GrantAward_SelectAward" : "#GrantAward_Next"
                       )
                     ),
@@ -2612,7 +2612,7 @@
                               E.createElement(
                                 "div",
                                 { key: "msg", className: S.NotEnoughPoints },
-                                Object(L.d)(
+                                Object(L.e)(
                                   "#GrantAward_CantAfford",
                                   y
                                     .negate()
@@ -2630,7 +2630,7 @@
                                 E.createElement(
                                   Be,
                                   { key: "button" },
-                                  Object(L.d)("#GrantAward_HowToGetPoints")
+                                  Object(L.e)("#GrantAward_HowToGetPoints")
                                 )
                               )
                             ]
@@ -2663,7 +2663,7 @@
                         E.createElement(
                           "div",
                           { className: S.ConfirmText },
-                          Object(L.k)(
+                          Object(L.l)(
                             "#GrantAward_Confirm",
                             E.createElement(Oe, null, _.toLocaleString()),
                             E.createElement(
@@ -2676,13 +2676,13 @@
                         E.createElement(
                           "div",
                           { className: S.ConfirmText },
-                          Object(L.k)(
+                          Object(L.l)(
                             "#GrantAward_Confirm_Details",
                             E.createElement(Oe, null, g.toLocaleString()),
                             E.createElement(
                               "span",
                               { className: S.TimePeriod },
-                              Object(L.d)(
+                              Object(L.e)(
                                 "#GrantAward_Confirm_DetailsTimePeriod"
                               )
                             )
@@ -2714,7 +2714,7 @@
                         E.createElement(
                           "div",
                           { className: S.SuccessText },
-                          Object(L.d)("#GrantAward_Success")
+                          Object(L.e)("#GrantAward_Success")
                         )
                       )
                     ),
@@ -2730,16 +2730,16 @@
                           },
                           disabled: l !== ie.CONFIRM
                         },
-                        Object(L.d)("#GrantAward_Back")
+                        Object(L.e)("#GrantAward_Back")
                       ),
                       E.createElement(
                         ve,
                         {
                           onClick: this.GrantAward,
-                          title: Object(L.d)("#GrantAward_SubmitTooltip"),
+                          title: Object(L.e)("#GrantAward_SubmitTooltip"),
                           disabled: l !== ie.CONFIRM
                         },
-                        Object(L.d)("#GrantAwardNowButton")
+                        Object(L.e)("#GrantAwardNowButton")
                       )
                     )
                   );
@@ -2748,25 +2748,25 @@
                   var O = "";
                   switch (this.state.eResult) {
                     case 10:
-                      O = Object(L.d)("#GrantAwardError_Busy");
+                      O = Object(L.e)("#GrantAwardError_Busy");
                       break;
                     case 32:
-                      O = Object(L.d)("#GrantAwardError_PersistFailed");
+                      O = Object(L.e)("#GrantAwardError_PersistFailed");
                       break;
                     case 8:
-                      O = Object(L.d)("#GrantAwardError_InvalidParam");
+                      O = Object(L.e)("#GrantAwardError_InvalidParam");
                       break;
                     case 42:
-                      O = Object(L.d)("#GrantAwardError_NoMatch");
+                      O = Object(L.e)("#GrantAwardError_NoMatch");
                       break;
                     case 107:
-                      O = Object(L.d)("#GrantAwardError_InsufficientFunds");
+                      O = Object(L.e)("#GrantAwardError_InsufficientFunds");
                       break;
                     case 15:
-                      O = Object(L.d)("#GrantAwardError_AccessDenied");
+                      O = Object(L.e)("#GrantAwardError_AccessDenied");
                       break;
                     default:
-                      O = Object(L.d)("#GrantAwardError_Fail");
+                      O = Object(L.e)("#GrantAwardError_Fail");
                   }
                   M = E.createElement(
                     E.Fragment,
@@ -2793,7 +2793,7 @@
                             return t.setState({ ePhase: ie.SELECTING });
                           }
                         },
-                        Object(L.d)("#GrantAward_Back")
+                        Object(L.e)("#GrantAward_Back")
                       )
                     )
                   );
@@ -2842,7 +2842,7 @@
             E.createElement(
               "div",
               { className: S.Title },
-              Object(L.d)("#GrantAwardTitle")
+              Object(L.e)("#GrantAwardTitle")
             ),
             E.createElement("div", { className: S.Description }, t)
           );
@@ -2865,7 +2865,7 @@
                 E.createElement(
                   "div",
                   { className: S.BalanceLabel },
-                  Object(L.d)("#YourBalance")
+                  Object(L.e)("#YourBalance")
                 ),
                 E.createElement("div", { className: S.BalanceAmount }, i)
               )
@@ -2886,7 +2886,7 @@
                   className: S.FooterLink,
                   href: z.b.STORE_BASE_URL + "points/howitworks"
                 },
-                Object(L.d)("#GrantAward_PointsLink")
+                Object(L.e)("#GrantAward_PointsLink")
               )
             )
           );

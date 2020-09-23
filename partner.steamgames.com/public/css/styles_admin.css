@@ -307,6 +307,10 @@ textarea.gray {
 	overflow: auto;
 }
 
+.screenshot_loc_languages {
+	min-width: 380px;
+}
+
 .imagerow {
 	background-color: #000000;
 	padding: 4px;
@@ -327,10 +331,10 @@ select.hourselect,  select.minuteselect {
 
 /* clearfix */
 .formrow_small:after, .msgrow:after, .formrow:after, .formrow_large:after {
-    content: "."; 
-    display: block; 
-    height: 0; 
-    clear: both; 
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
     visibility: hidden;
 }
 
@@ -632,7 +636,7 @@ pre.results {
 #screenshot_container .screenshot_actual {
 	width: 248px;
 	height: 140px;
-	
+
 
 	background-size: contain;
 	background-repeat: no-repeat;
@@ -682,10 +686,10 @@ pre.results {
 }
 
 .boxlist_title:after {
-    content: "."; 
-    display: block; 
-    height: 0; 
-    clear: both; 
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
     visibility: hidden;
 }
 
@@ -705,10 +709,10 @@ pre.results {
 }
 
 .boxlist_content:after {
-    content: "."; 
-    display: block; 
-    height: 0; 
-    clear: both; 
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
     visibility: hidden;
 }
 
@@ -834,11 +838,11 @@ textarea.fullwidth, select.fullwidth {
 }
 
 .lcols .manual_type {
-	width: 10em;	
+	width: 10em;
 }
 
 .lcols .manual_visibility {
-	width: 16em;	
+	width: 16em;
 }
 
 .lcols .manual_delete {
@@ -876,7 +880,7 @@ textarea.fullwidth, select.fullwidth {
 .toolbar img.toolbar_disabled, .boxlist_controls img.toolbar_disabled, input.disabled {
 	cursor: default;
 	opacity: 0.25;
-	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=25)"; 
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=25)";
 }
 
 .toolbar_mini {
@@ -907,8 +911,8 @@ textarea.fullwidth, select.fullwidth {
 /* autocomplete */
 
 div.autocomplete {
-	margin: 0px;  
-	padding: 0px;  
+	margin: 0px;
+	padding: 0px;
 	width: 250px;
 	background: #000000;
 	border: 1px solid #ACACAC;
@@ -944,7 +948,7 @@ div.autocomplete ul {
 
 div.autocomplete ul li.selected, option:checked, div.popup_block_new div.popup_menu_item.focus {
 	color: white;
-	
+
 	background-image:url('../images/bg_tab_inactive.png');
 	background-repeat:repeat-x;
 	background-color: #666666;
@@ -1232,7 +1236,7 @@ div.image_hover_preview {
 
 .appselect_list div:hover {
 	color: white;
-	
+
 	background-image:url('../images/bg_tab_inactive.png');
 	background-repeat:repeat-x;
 	background-color: #666666;
@@ -1253,10 +1257,10 @@ div.image_hover_preview {
 }
 
 .news_list_item {
-	
+
 	padding-left: 120px;
 	padding-right: 126px;
-	
+
 	position: relative;
 }
 
@@ -1414,7 +1418,7 @@ div.image_hover_preview {
 }
 
 .news_assoc_item.selected {
-	background-color: #333333;	
+	background-color: #333333;
 }
 
 #news_assoc_hint {
@@ -1786,7 +1790,7 @@ html, body { height:100%; }
 .LocTextArea textarea
 {
 	width: 100%;
-	
+
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
@@ -2335,6 +2339,14 @@ html, body { height:100%; }
 	padding-top: 40px;
 	min-height: 50px;
 }
+
+.drag_and_drop.screenshot_loc_drag_drop
+{
+	min-height: 30px;
+	margin: 10px;
+	padding-top: 20px;
+}
+
 
 .drag_and_drop.drag_over
 {
@@ -2993,7 +3005,7 @@ html, body { height:100%; }
 
 .page_list_archive
 {
-	font-style italic;
+	font-style: italic;
 }
 
 .page_list_inprogress

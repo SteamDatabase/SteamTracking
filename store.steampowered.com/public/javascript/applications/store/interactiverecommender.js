@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [9],
+  [7],
   {
     "3WEt": function(e, t, a) {
       "use strict";
@@ -730,12 +730,12 @@
               P.a.createElement(
                 "div",
                 { className: F.GameCount },
-                Object(x.d)("#PlaytimeList_RecentGames", a)
+                Object(x.e)("#PlaytimeList_RecentGames", a)
               ),
               P.a.createElement(
                 "div",
                 { className: F.TotalTime },
-                Object(x.d)("#PlaytimeList_HoursTotal", i)
+                Object(x.e)("#PlaytimeList_HoursTotal", i)
               )
             )
           )
@@ -753,9 +753,9 @@
           l = "",
           l =
             n <= 86400
-              ? Object(x.d)("#PlaytimeList_LastPlayedMax")
-              : ((c = 31449600 < s ? Object(x.m)(n) : Object(x.o)(s)),
-                Object(x.d)("#PlaytimeList_LastPlayed", c));
+              ? Object(x.e)("#PlaytimeList_LastPlayedMax")
+              : ((c = 31449600 < s ? Object(x.n)(n) : Object(x.p)(s)),
+                Object(x.e)("#PlaytimeList_LastPlayed", c));
         return P.a.createElement(
           "div",
           { className: Object(M.a)(F.PlayedGame, r && F.Ignored) },
@@ -770,7 +770,7 @@
             P.a.createElement(
               "div",
               { className: F.HoursPlayed },
-              Object(x.d)("#PlaytimeList_Hours", i)
+              Object(x.e)("#PlaytimeList_Hours", i)
             ),
             P.a.createElement("div", { className: F.Title }, a),
             P.a.createElement("div", { className: F.LastPlayed }, l),
@@ -782,7 +782,7 @@
                   return V.onToggleIgnore(t);
                 }
               },
-              Object(x.d)(r ? "#PlaytimeList_UnIgnore" : "#PlaytimeList_Ignore")
+              Object(x.e)(r ? "#PlaytimeList_UnIgnore" : "#PlaytimeList_Ignore")
             )
           )
         );
@@ -853,7 +853,7 @@
                   P.a.createElement(
                     "div",
                     { className: F.Header },
-                    Object(x.d)("#PlaytimeList_Header")
+                    Object(x.e)("#PlaytimeList_Header")
                   ),
                   P.a.createElement("div", { className: F.Loading })
                 );
@@ -881,7 +881,7 @@
                   P.a.createElement(
                     "div",
                     { className: F.Header },
-                    Object(x.d)("#PlaytimeList_Header")
+                    Object(x.e)("#PlaytimeList_Header")
                   ),
                   P.a.createElement(b, { accountID: this.props.accountID }),
                   P.a.createElement("div", { className: F.List }, a)
@@ -966,7 +966,7 @@
               for (
                 var a = this,
                   e = {
-                    placeholder: Object(x.d)("#TagSelect"),
+                    placeholder: Object(x.e)("#TagSelect"),
                     value: this.state.value,
                     onChange: this.onChange,
                     onKeyDown: this.onKeyDown
@@ -1046,12 +1046,12 @@
               t.push({ id: parseInt(n.tagid), name: n.name });
             }
           var r = [
-              Object(x.d)("#FilterAge_120"),
-              Object(x.d)("#FilterAge_60"),
-              Object(x.d)("#FilterAge_36"),
-              Object(x.d)("#FilterAge_24"),
-              Object(x.d)("#FilterAge_12"),
-              Object(x.d)("#FilterAge_6")
+              Object(x.e)("#FilterAge_120"),
+              Object(x.e)("#FilterAge_60"),
+              Object(x.e)("#FilterAge_36"),
+              Object(x.e)("#FilterAge_24"),
+              Object(x.e)("#FilterAge_12"),
+              Object(x.e)("#FilterAge_6")
             ],
             o = V.m_rgSavedExcludeTags,
             s = V.m_rgSavedFilterTags;
@@ -1062,18 +1062,18 @@
               "div",
               { className: Object(M.a)(F.Row, F.FirstRow) },
               P.a.createElement(y, {
-                minLabel: Object(x.d)("#Popularity_Popular"),
-                titleLabel: Object(x.d)("#Popularity_Title"),
-                maxLabel: Object(x.d)("#Popularity_Niche"),
+                minLabel: Object(x.e)("#Popularity_Popular"),
+                titleLabel: Object(x.e)("#Popularity_Title"),
+                maxLabel: Object(x.e)("#Popularity_Niche"),
                 minValue: 0,
                 maxValue: 1,
                 value: V.m_fQueuedPopularityValue,
                 onChange: V.onPopularityChanged
               }),
               P.a.createElement(y, {
-                minLabel: Object(x.d)("#Recency_Older"),
-                titleLabel: Object(x.d)("#Recency_Title"),
-                maxLabel: Object(x.d)("#Recency_Newer"),
+                minLabel: Object(x.e)("#Recency_Older"),
+                titleLabel: Object(x.e)("#Recency_Title"),
+                maxLabel: Object(x.e)("#Recency_Newer"),
                 minValue: 0,
                 maxValue: 1,
                 value: V.m_fQueuedRecencyValue,
@@ -1085,7 +1085,7 @@
               "div",
               { className: Object(M.a)(F.Row, F.SecondRow) },
               P.a.createElement(R, {
-                title: Object(x.d)("#TagFilterMultiple_Title"),
+                title: Object(x.e)("#TagFilterMultiple_Title"),
                 tagoptions: t,
                 selectedtags: s,
                 key: "Filter" + s.toString(),
@@ -1093,7 +1093,7 @@
                 onRemoveTag: V.onTagFilterRemove
               }),
               P.a.createElement(R, {
-                title: Object(x.d)("#TagExcludeMultiple_Title"),
+                title: Object(x.e)("#TagExcludeMultiple_Title"),
                 tagoptions: t,
                 selectedtags: o,
                 key: "Exclude" + o.toString(),
@@ -1102,7 +1102,7 @@
               }),
               P.a.createElement(T, {
                 className: F.WishlistCheckbox,
-                titleLabel: Object(x.d)("#ExcludeWishlisted"),
+                titleLabel: Object(x.e)("#ExcludeWishlisted"),
                 checked: V.m_bExcludeWishlisted,
                 onChange: V.onExcludeWishlistedToggled
               }),
@@ -1111,9 +1111,9 @@
                 {
                   className: F.SaveUserSettingsButton,
                   onClick: V.onSaveUserSettings,
-                  title: Object(x.d)("#SaveUserSettingsTooltip")
+                  title: Object(x.e)("#SaveUserSettingsTooltip")
                 },
-                Object(x.d)("#SaveUserSettings")
+                Object(x.e)("#SaveUserSettings")
               )
             )
           );
@@ -1197,9 +1197,9 @@
               var c = s.n,
                 l =
                   0 < s.r
-                    ? Object(x.d)(
+                    ? Object(x.e)(
                         "#Recommendation_ReleasedOn",
-                        Object(x.m)(s.r)
+                        Object(x.n)(s.r)
                       )
                     : "",
                 d = [];
@@ -1253,7 +1253,7 @@
                     : (I = f.video_mp4),
                   (R = "-" + f.discount_pct + "%"),
                   (N = f.base_price),
-                  (C = O ? Object(x.d)("#FreeToPlay") : f.discount_price),
+                  (C = O ? Object(x.e)("#FreeToPlay") : f.discount_price),
                   (L = f.description)));
               var D = I && 0 < I.length;
               return P.a.createElement(
@@ -1325,7 +1325,7 @@
                               F.WishlistFlag
                             )
                           },
-                          Object(x.d)("#Recommendation_OnWishlist") + "  "
+                          Object(x.e)("#Recommendation_OnWishlist") + "  "
                         )
                     ),
                     P.a.createElement(
@@ -1448,7 +1448,7 @@
                                     P.a.createElement(
                                       "span",
                                       null,
-                                      Object(x.d)("#btn_add_to_cart")
+                                      Object(x.e)("#btn_add_to_cart")
                                     )
                                   )
                                 )
@@ -1473,7 +1473,7 @@
                                 P.a.createElement(
                                   "span",
                                   null,
-                                  Object(x.d)("#wishlist_add_to_wishlist")
+                                  Object(x.e)("#wishlist_add_to_wishlist")
                                 )
                               )
                             ),
@@ -1488,7 +1488,7 @@
                                   F.Wishlisted,
                                   F.WishlistSection
                                 ),
-                                "data-tooltip-text": Object(x.d)(
+                                "data-tooltip-text": Object(x.e)(
                                   "#OnWishlistTooltip"
                                 ),
                                 onClick: function(e) {
@@ -1502,7 +1502,7 @@
                                   src:
                                     k.IMG_URL_BASE + "/v6/ico/ico_selected.png"
                                 }),
-                                "  " + Object(x.d)("#OnWishlist")
+                                "  " + Object(x.e)("#OnWishlist")
                               )
                             )
                         )
@@ -1612,7 +1612,7 @@
                         key: "no_recommedations_due_to_filter",
                         className: F.NoRecommendationsMessage
                       },
-                      Object(x.d)("#NoRecommendationsDueToFilter")
+                      Object(x.e)("#NoRecommendationsDueToFilter")
                     )
                   );
               } else
@@ -1628,7 +1628,7 @@
                 P.a.createElement(
                   "div",
                   { className: F.Header },
-                  Object(x.d)("#Recommendations_Header")
+                  Object(x.e)("#Recommendations_Header")
                 ),
                 P.a.createElement(j, null),
                 P.a.createElement(
@@ -1679,12 +1679,12 @@
                         P.a.createElement(
                           "div",
                           { className: F.Header },
-                          Object(x.d)("#HeaderTitle")
+                          Object(x.e)("#HeaderTitle")
                         ),
                         P.a.createElement(
                           "div",
                           { className: F.Body },
-                          Object(x.d)("#HeaderBody1")
+                          Object(x.e)("#HeaderBody1")
                         )
                       ),
                       P.a.createElement(
@@ -1705,7 +1705,7 @@
                       P.a.createElement(
                         "div",
                         { className: F.Text },
-                        Object(x.d)("#LoginText")
+                        Object(x.e)("#LoginText")
                       ),
                       P.a.createElement(
                         "div",
@@ -1719,7 +1719,7 @@
                         P.a.createElement(
                           "span",
                           null,
-                          Object(x.d)("#LoginButton")
+                          Object(x.e)("#LoginButton")
                         )
                       )
                     )

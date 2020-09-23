@@ -234,7 +234,7 @@ function OnImageDragLeave( evt )
 	if ( t && (t == this || jQuery.contains( this, t ) ) )
 		return;
 
-	// chrome doesn't set evt.relatedTarget.. wtf?	
+	// chrome doesn't set evt.relatedTarget.. wtf?
 	if ( $J( evt.target ).is(':hover') )
 		return;
 
@@ -275,7 +275,7 @@ function OnScreenshotDrop( evt )
 	$J( evt.target ).removeClass( 'drag_over' );
 
 	var parent = $J(evt.target).parent().parent();
-	var target = $J('.imagelanguagelist', parent );
+	var target = $J('.screenshot_loc_upload', parent );
 	$J('.imagelanguagebutton', parent ).show();
 	var strParentID = parent[0].id;
 	var rgBits = strParentID.split('_');
@@ -441,7 +441,7 @@ function IsImageTypeValid( image, ImageType )
 		ImageType.height != image.height &&
 		( !bSupports2X || ImageType.height * 2 != image.height ) )
 		return false;
-	
+
 	return true
 }
 
@@ -576,14 +576,14 @@ function SubmitImageUpload( itemID, type, altAssetIndex, altAssetFilenamePostfix
 		return false;
 
 	UploadImages( previews, itemID, type, altAssetIndex, altAssetFilenamePostfix );
-	
+
 	return false;
 }
 
 
 function SubmitScreenshotsUpload( ele, itemID, type )
 {
-	var previews = $J( '.screenshot_upload_preview', $J( ele ).parent().parent().parent() );
+	var previews = $J( '.screenshot_upload_preview', $J( ele ).parents( '.screenshot_thumb' ).first() );
 
 	if ( previews.length == 0 )
 		return false;
@@ -1521,9 +1521,9 @@ function VisibilityCheckboxChanged( id )
 
 function DeleteRelease( req )
 {
-	ShowConfirmDialog( 'Delete release?', 'Are you sure?  You should usually use "Hide this package as a purchase option" instead if this release was previously public.').done( function() 
+	ShowConfirmDialog( 'Delete release?', 'Are you sure?  You should usually use "Hide this package as a purchase option" instead if this release was previously public.').done( function()
 	{
-		SubmitQuickMessageUpdate( req ); 
+		SubmitQuickMessageUpdate( req );
 	} );
 }
 

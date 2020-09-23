@@ -1761,7 +1761,13 @@ img.dynamiclink_sketchfab_play_overlay_image
 	height: 50px;
 }
 
-
+/* blur capsule images for games with adult content if the user has opted out of seeing them*/
+.app_has_adult_content {
+	overflow: hidden;
+}
+.app_has_adult_content img.game_capsule {
+	filter: blur( 30px );
+}
 
 /* ugc with adult content */
 .ugc.has_adult_content

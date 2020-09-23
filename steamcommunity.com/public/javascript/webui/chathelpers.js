@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6096481";
+var CLSTAMP = "6104855";
 !(function(e) {
   function t(t) {
     for (
@@ -1659,6 +1659,9 @@ PERFORMANCE OF THIS SOFTWARE.
         (this.m_mapTokens = new Map()), (this.m_mapFallbackTokens = new Map());
       }
       return (
+        (e.GetLanguageFallback = function(e) {
+          return "sc_schinese" === e ? "schinese" : "english";
+        }),
         (e.prototype.InitFromObjects = function(e, t, n, i, o) {
           o || this.m_mapTokens.clear();
           var c = Object(r.a)(Object(r.a)({}, n || {}), e),
