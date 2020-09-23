@@ -1471,7 +1471,14 @@ function getCategory(cat)
 	{
 		var key = matches[i];
 		var tagName = tagNames[key];
-		results.push({label:tagName,value:key});
+		if ( tagName )
+		{
+			results.push({label:tagName,value:key});
+		}
+		else
+		{
+			console.warn( 'Unknown tag id: %s', key );
+		}
 	}
 	return results;
 }
