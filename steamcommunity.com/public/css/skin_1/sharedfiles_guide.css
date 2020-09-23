@@ -158,6 +158,14 @@ html.responsive .responsive_page_menu .FixedElementOnScrollWrapper_padding
 	display: none;
 }
 
+.guideSubSectionSelectionLink {
+	color: #ebebeb;
+	cursor: pointer;
+}
+.guideSubSectionSelectionLink:hover {
+	color: #66C0F4;
+}
+
 .guideSubSectionSelection
 {
 	position: relative;
