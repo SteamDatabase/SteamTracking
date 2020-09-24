@@ -470,6 +470,9 @@ td.wordfilter_word:before {
 td.wordfilter_word_already_filtered {
 	color: #ffa500;
 }
+td.wordfilter_word_broken a {
+	color: #bf4640;
+}
 .wordfilter_hidden {
 	display: none;
 }
