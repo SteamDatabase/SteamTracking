@@ -543,6 +543,18 @@ body.v6 .account_settings_container .h3_content {
 	color: #cedbe9;
 }
 
+#text_filter_custom_banned_words_ctn .broken > div,
+#text_filter_custom_clean_words_ctn .broken > div  {
+	background-color: #bf4640;
+}
+
+.tag_downvoted > div > span.fixit {
+	width: 16px;
+	height: 16px;
+	margin: 1px 0 2px 3px;
+	background-image: url( '/store/public/images/v6/icon_fixit.png' );
+}
+
 .text_filter_toggle_icon {
 	width: 11px;
 	height: 11px;
