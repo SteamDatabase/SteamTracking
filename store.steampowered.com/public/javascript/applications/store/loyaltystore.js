@@ -16329,7 +16329,6 @@
         );
       }
       function Ro(e) {
-        var t = n.b.LoyaltyProfile();
         return P.a.createElement(
           "div",
           {
@@ -16358,14 +16357,10 @@
               P.a.createElement("img", { className: ts.ItemAvatar, src: Ho })
             ),
             P.a.createElement(
-              f.b,
-              { to: t },
-              P.a.createElement(
-                "div",
-                { className: ts.SectionTitle, style: { paddingTop: "32px" } },
-                Object(F.e)("#HowItWorks_GoldenProfile"),
-                " "
-              )
+              "div",
+              { className: ts.SectionTitle, style: { paddingTop: "32px" } },
+              Object(F.e)("#HowItWorks_GoldenProfile"),
+              " "
             ),
             P.a.createElement(
               "div",
@@ -17374,13 +17369,6 @@
                   iconComponent: Qr.c,
                   children: Object(F.e)("#ShopNav_SeasonalBadgeLink"),
                   to: n.b.LoyaltySteamBadge()
-                }
-              },
-              {
-                props: {
-                  iconComponent: tn,
-                  children: Object(F.e)("#ShopNav_ProfileLink"),
-                  to: n.b.LoyaltyProfile()
                 }
               }
             ]
