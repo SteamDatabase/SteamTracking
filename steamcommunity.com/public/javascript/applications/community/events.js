@@ -31408,6 +31408,24 @@
                 }
               }),
               xe.a.createElement("h2", null, "Apps:"),
+              xe.a.createElement(
+                Ft.d,
+                {
+                  onClick: function() {
+                    return cs.Get().SelectAllApps(d.apps);
+                  }
+                },
+                "Select All Apps"
+              ),
+              xe.a.createElement(
+                Ft.d,
+                {
+                  onClick: function() {
+                    return cs.Get().ClearAllSelectedApps();
+                  }
+                },
+                "Clear all Selected Apps"
+              ),
               Boolean(d.apps)
                 ? d.apps.map(function(e) {
                     return xe.a.createElement(ds, {
@@ -31481,8 +31499,20 @@
             (e.prototype.GetTotalSelectedCount = function() {
               return this.m_nTotalSelected;
             }),
+            (e.prototype.SelectAllApps = function(e) {
+              var t = this;
+              e.forEach(function(e) {
+                return t.m_selectedApps.add(e);
+              }),
+                this.UpdateSelected();
+            }),
             (e.prototype.Reset = function() {
-              this.m_selectedApps.clear(), this.m_selectedSubs.clear();
+              this.m_selectedApps.clear(),
+                this.m_selectedSubs.clear(),
+                this.UpdateSelected();
+            }),
+            (e.prototype.ClearAllSelectedApps = function() {
+              this.m_selectedApps.clear(), this.UpdateSelected();
             }),
             (e.prototype.UpdateSelected = function() {
               var e = this.AppCount() + this.PackageCount();
@@ -31534,6 +31564,8 @@
             }),
             (e.prototype.Init = function() {}),
             Object(H.c)([D.C], e.prototype, "m_nTotalSelected", void 0),
+            Object(H.c)([D.k], e.prototype, "SelectAllApps", null),
+            Object(H.c)([D.k], e.prototype, "ClearAllSelectedApps", null),
             e
           );
         })(),
