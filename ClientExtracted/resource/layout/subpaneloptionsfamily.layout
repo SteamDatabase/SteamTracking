@@ -65,13 +65,13 @@
 		place { controls="Divider1" region=box start=ManageOptionsLabel dir=down margin-top=16 width=max }
 		place { controls="FamilySharingTitle" region=box start=Divider1 dir=down margin-top=15 }
 					
-		place { controls="FamilySharingInfoText" region=box start=FamilySharingTitle  margin-top=10 width=490 dir=down }
+		place { controls="FamilySharingInfoText" region=box start=FamilySharingTitle  margin-top=10 width=max dir=down }
 		place { controls="AuthorizedDeviceCheck" region=box margin-top=8 width=300 height=24 start=FamilySharingInfoText dir=down }
 		place { controls="ManageSharingLabel" region=box margin-top=8 width=235 height=24 margin-left=320 start=FamilySharingInfoText dir=down }
 				
-		place { controls="BorrowersLabel" region=box start=FamilySharingInfoText margin-top=44 width=490 dir=down }
+		place { controls="BorrowersLabel" region=box start=FamilySharingInfoText margin-top=44 width=max height=24 dir=down }
 		place { controls="BorrowersList" region=box start=BorrowersLabel width=max height=121 margin-top=6 dir=down }
-		place { controls="ShowNotificationsCheck" region=box start=BorrowersList margin-top=10 dir=down }
+		place { controls="ShowNotificationsCheck" region=box start=BorrowersList margin-top=10 dir=down width=max }
 								
 		
 			

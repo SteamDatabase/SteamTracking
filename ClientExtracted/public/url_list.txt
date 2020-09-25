@@ -1296,3 +1296,9 @@ LibraryAppDetails
 	method		"internal"
 	filter		"store"
 }
+TextFilterSettings
+{
+	url			"%store%/account/preferences#CommunityContentPreferences"
+	method		"internal"
+	filter		"store"
+}

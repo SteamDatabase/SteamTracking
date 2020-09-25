@@ -29,7 +29,11 @@
 		{
 			controlname=combobox
       			editable="0"
-		}		
+		}
+		
+		TextFilterLabel { controlname=label labeltext="#Steam_TextFilterSettingLabel" wrap=1 style=highlight }
+		TextFilterStatus { controlname=label wrap=1 }
+		TextFilterUpdateSettingURL { controlname=urllabel labeltext="#Steam_TextFilterSettingURL" URLText="steam://url/TextFilterSettings" wrap=1 style=highlight }
 	}
 	
 	colors
@@ -58,6 +62,8 @@
 		region { name=topright region=top x=263 width=235 y=131}
 		
 		region { name=bottom region=box y=320 }
+		region { name=bottomleft region=bottom width=255 margin-right=20 }
+		region { name=bottomright region=bottom x=263 width=255 }
 		
 		place { controls=TitleLabel region=top }
 		place { controls=DescriptionLabel height=40 width=max region=top start=TitleLabel dir=down margin-top=8 }
@@ -82,8 +88,13 @@
 			margin-top=6 margin-left=10 height=22 width=max region=topright }
 		
 		place { control=Divider1 region=bottom width=max }
-		place { controls="PingRateLabel" region=bottom start=Divider1 margin-top=10 width=max dir=down }
-		place { controls="PingRateCombo" region=bottom start=PingRateLabel margin-top=10 width=235 dir=down height=25 }
-		place { controls="PingRateInfo" region=bottom start=PingRateCombo margin-top=10 width=235 dir=down }				
+
+		place { controls="PingRateLabel" region=bottomright start=Divider1 margin-top=10 width=max dir=down }
+		place { controls="PingRateCombo" region=bottomright start=PingRateLabel margin-top=10 width=235 dir=down height=25 }
+		place { controls="PingRateInfo" region=bottomright start=PingRateCombo margin-top=10 width=235 dir=down }		
+
+		place { controls="TextFilterLabel" region=bottomleft start=Divider1 margin-top=10 width=max dir=down }
+		place { controls="TextFilterStatus" region=bottomleft start=TextFilterLabel margin-top=10 width=235 dir=down height=25 }
+		place { controls="TextFilterUpdateSettingURL" region=bottomleft start=TextFilterStatus margin-top=10 width=235 dir=down }			
 	}
 }

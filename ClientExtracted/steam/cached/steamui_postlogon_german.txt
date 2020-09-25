@@ -1,43 +1,41 @@
-﻿"lang"
-{
-"Language"	"german"
-"Tokens"
-{
+﻿"lang" {
+"Language" "german" 
+"Tokens" 
+{ 
 "Steam_TellTale_EmailPrompt"	"Telltale, der Publisher von %subscription%, möchte Ihnen weiterhin Informationen senden. Geben Sie einfach unten Ihre E-Mail-Adresse an und Sie erhalten den Newsletter von Telltale mit Ankündigungen zu neuen Spielen, exklusiven Einblicken in Entwicklungsprozesse, Comics sowie Tipps und Sonderangeboten. Das sollten Sie nicht verpassen!"
-"[english]Steam_TellTale_EmailPrompt"	"Telltale, the publisher of %subscription%, would like to stay in touch with you. Please enter your email address below to sign up for Telltale's newsletter, which includes new game announcements, behind-the-scenes peeks into the development process, comics, cooking and advice columns, and the occasional special offer. You'll be glad you did!"
+
 "Steam_Football2K9_EmailPrompt"	"Als Dankeschön für Ihren Einkauf möchte Ihnen SEGA, der Publisher von %subscription%, einen Sonderrabatt bei Subside Sports anbieten. Geben Sie einfach unten Ihre E-Mail-Adresse an und Sie erhalten einen Gutschein über 10&nbsp;% Rabatt auf ein beliebiges Produkt aus dem Onlinesortiment von Subside Sports."
-"[english]Steam_Football2K9_EmailPrompt"	"SEGA, the publisher of %subscription%, would like to offer you a special discount at Subside Sports as thanks for your purchase. Please enter your email address below to receive your 10% off voucher good towards any product available at Subside Sports' online store."
+
 "Steam_TwoTribes_EmailPrompt"	"Falls Sie mit Two Tribes in Verbindung bleiben wollen, können Sie sich für unseren Newsletter anmelden. Geben Sie einfach Ihre E-Mail-Adresse ein und wir werden Sie regelmäßig mit Neuigkeiten über all die coolen Spiele, die wir machen, versorgen!"
-"[english]Steam_TwoTribes_EmailPrompt"	"If you want to stay in touch with Two Tribes you can subscribe to our newsletter. Simply fill in your e-mail address and we'll provide you with regular updates about all the cool games that we make!"
-"charity_title"	"Sid Meier's Civilization V"
-"[english]charity_title"	"Sid Meier's Civilization V"
-"charity_imagetext"	"Helfen Sie mit"
-"[english]charity_imagetext"	"Giving back"
-"charity_header"	"2K Games verteilt 250.000 US-Dollar an vier bildungsorientierte Wohltätigkeitsorganisationen und Ihre Entscheidung wird bestimmen, wie diese Summe verteilt wird. Wir werden Ihre Stimmen zählen und nach Ihrer Gewichtung die Gelder verteilen. Wir freuen uns auch, dass die NVIDIA Foundation ebenfalls teilnimmt und dieser Aktion zusätzlich 20.000 US-Dollar zuführt."
-"[english]charity_header"	"2K Games is donating a total of $250,000 to four education-based charities, and users' choices will determine how the money is dispersed. We'll tally up customers' votes and disperse the funds as you have directed. We also welcome The NVIDIA Foundation, who are joining us in this initiative by donating an additional $20,000 to the program."
+
+
+"charity_title" "Sid Meier's Civilization V"
+
+"charity_imagetext" "Helfen Sie mit"
+
+"charity_header" "2K Games verteilt 250.000 US-Dollar an vier bildungsorientierte Wohltätigkeitsorganisationen und Ihre Entscheidung wird bestimmen, wie diese Summe verteilt wird. Wir werden Ihre Stimmen zählen und nach Ihrer Gewichtung die Gelder verteilen. Wir freuen uns auch, dass die NVIDIA Foundation ebenfalls teilnimmt und dieser Aktion zusätzlich 20.000 US-Dollar zuführt."
+
 "charity_choice"	"Welche Wohltätigkeitsorganisation möchten Sie unterstützen?"
-"[english]charity_choice"	"Which charity would you like to support?"
-"charity_asia"	"Central Asia Institute"
-"[english]charity_asia"	"Central Asia Institute"
+
+"charity_asia"		"Central Asia Institute"
 "charity_asia_details"	"Das Central Asia Institute fördert und unterstützt Bildungsprogramme, insbesondere für Mädchen, in Gemeinden in Pakistan und Afghanistan. Wir haben bei der Gründung von über 150 Schulen mitgeholfen und damit Bildungschancen für ca. 64.000 Schüler geschaffen. Weitere Informationen zum Central Asia Institute oder Pennies for Peace erhalten Sie unter www.ikat.org oder rufen Sie uns unter der Telefonnummer 001-406-585-7841 an. Die Namen Central Asia Institute und Pennies for Peace wurden mit deren Genehmigung verwendet, unterstellen aber keinerlei implizierte Unterstützung jeglicher Produkte, Dienstleitungen, Unternehmen oder Individuen."
-"[english]charity_asia_details"	"Central Asia Institute promotes and supports community-based education, especially for girls, in Pakistan and Afghanistan. We have helped establish over 150 schools and have provided education opportunities for 64,000 students. For more information about Central Asia Institute or Pennies for Peace, please call us at 406-585-7841 or visit www.ikat.org. The Central Asia Institute and Pennies for Peace names are used with its permission, which in no way constitutes an endorsement, expressed or implied, of any product, service, company or individual."
+
 "charity_schools"	"Building Schools for Africa"
-"[english]charity_schools"	"Building Schools for Africa"
-"charity_schools_details"	"'Building Schools for Africa' ist eine kleine humanitäre Organisation, die die Ansicht vertritt, dass Bildung Menschen am besten dabei helfen kann, Armut, Leid und Unterdrückung zu bewältigen. Wir gründen Schulen mit Frischwasserversorgung und Toiletten und Hilfswerkzeugen zum säen von Nahrung in ländlichen Gegenden von Kamerun, in denen das Durchschnittseinkommen ungefähr bei 1 US-$ pro Woche liegt. Wir können all dies für ca. 20.000 US-$ pro Schule bewerkstelligen und, da wir alle unsere eigenen Auslagen selbst tragen, wird jeder Spendenzugang direkt zur Errichtung weiterer Schulen verwendet, ohne jeglichen Kostenabschlag. Vielen Dank für Ihre Hilfe."
-"[english]charity_schools_details"	"Building Schools for Africa is a small humanitarian organization that believes that the best way to help people to become independent of poverty, disease and exploitation is through education. We build schools with clean water and toilet and tools and seed to grow food in rural Cameroon where farming families earn about $1 per week. We can provide all this for just $20,000 per school and because we pay all our own expenses, every penny that we raise is spent on building schools with absolutely no deductions. Thanks for your help."
-"charity_read"	"Room to Read®"
-"[english]charity_read"	"Room to Read®"
+"charity_schools_details" "'Building Schools for Africa' ist eine kleine humanitäre Organisation, die die Ansicht vertritt, dass Bildung Menschen am besten dabei helfen kann, Armut, Leid und Unterdrückung zu bewältigen. Wir gründen Schulen mit Frischwasserversorgung und Toiletten und Hilfswerkzeugen zum säen von Nahrung in ländlichen Gegenden von Kamerun, in denen das Durchschnittseinkommen ungefähr bei 1 US-$ pro Woche liegt. Wir können all dies für ca. 20.000 US-$ pro Schule bewerkstelligen und, da wir alle unsere eigenen Auslagen selbst tragen, wird jeder Spendenzugang direkt zur Errichtung weiterer Schulen verwendet, ohne jeglichen Kostenabschlag. Vielen Dank für Ihre Hilfe."
+
+"charity_read"		"Room to Read®"
 "charity_read_details"	"'Room to Read®' verändert das Leben von Millionen von Kindern in Entwicklungsländern, indem wir uns auf Lese- und Schreibfähigkeiten und geschlechtsunabhängige Bildungsgleichheit fokussieren. Wir arbeiten mit örtlichen Gemeinden, Partnerorganisationen und Behörden zusammen und entwickeln Lese- und Schreibfähigkeit für Kinder im Grundschulalter und gewährleisten dadurch, dass Mädchen alle Fähigkeiten und jegliche Unterstützung erhalten, um einen höheren Bildungsweg einschlagen zu können. Weitere Informationen erhalten Sie bei www.roomtoread.org."
-"[english]charity_read_details"	"Room to Read® seeks to transform the lives of millions of children in the developing world by focusing on literacy and gender equality in education. Working in collaboration with local communities, partner organizations and governments, we develop literacy skills and a habit of reading among primary school children and ensure girls have the skills and support needed to complete their secondary education. Learn more at www.roomtoread.org."
+
 "charity_scholarship"	"Scholarship America®"
-"[english]charity_scholarship"	"Scholarship America®"
 "charity_scholarship_details"	"Scholarship America® ist eine nationale Bildungsdienstleistungs-Organisation, die Studenten dabei unterstützt, einen höheren Bildungsweg einzuschlagen und einen Abschluss zu erreichen. Wir halten drei Kernprogramme bereit, um diesen Auftrag zu erfüllen: 'Dollars for Scholars®', 'Scholarship Management Services®' und 'Dreamkeepers'. Scholarship America hat mehr als 2 Milliarden Dollar über 1,7 Millionen Studenten seit 1958 zum Zweck des Studienabschlusses zugeführt. Weitere Informationen erhalten Sie bei www.scholarshipamerica.org."
-"[english]charity_scholarship_details"	"Scholarship America® is a national education service organization that mobilizes support for students getting into and graduating from college. We have three core programs that help us achieve our mission: Dollars for Scholars®, Scholarship Management Services®, and Dreamkeepers. Scholarship America has distributed more than $2 billion in scholarship assistance to more than 1.7 million students since 1958. More information is available at www.scholarshipamerica.org."
+
 "charity_footer"	"Diese Abstimmung endet am 31. Dezember 2010 um 23:59 EST. Nur eine Stimme pro Person. Nicht in allen Ländern verfügbar. Weitere Informationen erhalten Sie auf der Website der NVIDIA Foundation:"
-"[english]charity_footer"	"Voting closes at 11:59PM EST on December 31, 2010. One vote per user. Not valid in all territories. For more information on The NVIDIA Foundation visit "
 "charity_footer_link"	"http://www.nvidia.com/object/corporate_community.html"
-"[english]charity_footer_link"	"http://www.nvidia.com/object/corporate_community.html"
+
 "charity_launchgame"	"Spiel starten"
-"[english]charity_launchgame"	"Launch game"
+
+
+
+
 }
 }

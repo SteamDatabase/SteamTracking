@@ -2459,6 +2459,7 @@
  D typeinfo for CSettingsSubFriends
  D typeinfo for CSettingsSubFriends::CCallback_OnPersonaStateChange
  D typeinfo for CSettingsSubInGame
+ D typeinfo for CSettingsSubInGame::CCallbackInternal_OnCommunityPreferencesUpdated
  D typeinfo for CSettingsSubMusic
  D typeinfo for CSettingsSubMusic::CCallback_OnLocalLibraryCrawlingFinished
  D typeinfo for CSettingsSubMusic::CCallback_OnLocalLibraryCrawlingInterrupted
@@ -3759,6 +3760,7 @@
  D vtable for CSettingsSubFriends
  D vtable for CSettingsSubFriends::CCallback_OnPersonaStateChange
  D vtable for CSettingsSubInGame
+ D vtable for CSettingsSubInGame::CCallbackInternal_OnCommunityPreferencesUpdated
  D vtable for CSettingsSubMusic
  D vtable for CSettingsSubMusic::CCallback_OnLocalLibraryCrawlingFinished
  D vtable for CSettingsSubMusic::CCallback_OnLocalLibraryCrawlingInterrupted
@@ -4501,6 +4503,7 @@
  R typeinfo name for CSettingsSubFriends
  R typeinfo name for CSettingsSubFriends::CCallback_OnPersonaStateChange
  R typeinfo name for CSettingsSubInGame
+ R typeinfo name for CSettingsSubInGame::CCallbackInternal_OnCommunityPreferencesUpdated
  R typeinfo name for CSettingsSubMusic
  R typeinfo name for CSettingsSubMusic::CCallback_OnLocalLibraryCrawlingFinished
  R typeinfo name for CSettingsSubMusic::CCallback_OnLocalLibraryCrawlingInterrupted
@@ -9334,6 +9337,9 @@
  T CSettingsSubFriends::PerformLayout()
  T CSettingsSubFriends::Validate(CValidator&, char const*)
  T CSettingsSubFriends::~CSettingsSubFriends()
+ T CSettingsSubInGame::CCallbackInternal_OnCommunityPreferencesUpdated::CCallbackInternal_OnCommunityPreferencesUpdated()
+ T CSettingsSubInGame::CCallbackInternal_OnCommunityPreferencesUpdated::Run(void*)
+ T CSettingsSubInGame::CCallbackInternal_OnCommunityPreferencesUpdated::~CCallbackInternal_OnCommunityPreferencesUpdated()
  T CSettingsSubInGame::CSettingsSubInGame()
  T CSettingsSubInGame::CanApplyChanges()
  T CSettingsSubInGame::ChainToAnimationMap()
@@ -9350,6 +9356,7 @@
  T CSettingsSubInGame::OnDirectorySelected(char const*)
  T CSettingsSubInGame::OnResetData()
  T CSettingsSubInGame::PanelMessageFunc_OnDirectorySelected::InitVar()
+ T CSettingsSubInGame::UpdateTextFilterStatus()
  T CSettingsSubInGame::WriteDefaultPingRateText()
  T CSettingsSubInGame::~CSettingsSubInGame()
  T CSettingsSubMusic::CCallback_OnLocalLibraryCrawlingFinished::Run(void*)

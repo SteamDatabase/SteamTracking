@@ -220,6 +220,8 @@ public:
     virtual unknown_ret BGetParentalWebToken(CUtlBuffer*, CUtlBuffer*) = 0;
     virtual unknown_ret GetCommunityPreference(ECommunityPreference) = 0;
     virtual unknown_ret SetCommunityPreference(ECommunityPreference, bool) = 0;
+    virtual unknown_ret GetTextFilterSetting() = 0;
+    virtual unknown_ret BTextFilterIgnoresFriends() = 0;
     virtual unknown_ret BCanLogonOfflineMode() = 0;
     virtual unknown_ret LogOnOfflineMode() = 0;
     virtual unknown_ret ValidateOfflineLogonTicket(char const*) = 0;
