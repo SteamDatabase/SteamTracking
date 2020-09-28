@@ -5796,11 +5796,6 @@
             description: "#PartnerEvent_35_Desc",
             type: 35
           },
-          general_halloween: {
-            name: "#PartnerEvent_36",
-            description: "#PartnerEvent_36_Desc",
-            type: 36
-          },
           challenge: {
             name: "#PartnerEvent_25",
             description: "#PartnerEvent_25_Desc",
@@ -6061,7 +6056,8 @@
               t.SetEventStartTime(e.earliestAllowedStartTime)))
           : t.SetEarliestAllowedStartTime(void 0),
           t.SetLatestAllowedEndTime(e.latestAllowedEndTime),
-          t.SetActionEndTime(e.actionEndTime);
+          t.SetActionEndTime(e.actionEndTime),
+          console.log(e);
       }
       function St(e) {
         return Re.createElement(
@@ -6102,7 +6098,12 @@
                   t.GetCategoryAsType() == this.props.type &&
                   V.p.every(function(e) {
                     return t.BHasTag(e) == a.has(e);
-                  });
+                  }),
+                n =
+                  U.b.IMG_URL +
+                  "events/types/type_" +
+                  (this.props.icon ? this.props.icon : this.props.type) +
+                  ".png?v=2";
               return Re.createElement(
                 "div",
                 {
@@ -6113,11 +6114,7 @@
                 },
                 Re.createElement("img", {
                   className: Ue.a.CategoryTypeImage,
-                  src:
-                    U.b.IMG_URL +
-                    "events/types/type_" +
-                    this.props.type +
-                    ".png?v=2"
+                  src: n
                 }),
                 Re.createElement(
                   "div",
@@ -6186,14 +6183,10 @@
               return (
                 this.props.subCategories.forEach(function(e) {
                   t.push(
-                    Re.createElement(yt, {
-                      key: e.name,
-                      name: e.name,
-                      description: e.description,
-                      type: e.type,
-                      tags: e.tags,
-                      onCategoryChosen: a
-                    })
+                    Re.createElement(
+                      yt,
+                      Object(H.a)({ key: e.name }, e, { onCategoryChosen: a })
+                    )
                   );
                 }),
                 t
@@ -6222,7 +6215,12 @@
                 r = this.props.bIsValveOnly,
                 i =
                   void 0 === this.props.subCategories ||
-                  0 == this.props.subCategories.length;
+                  0 == this.props.subCategories.length,
+                o =
+                  U.b.IMG_URL +
+                  "events/types/type_" +
+                  (this.props.icon ? this.props.icon : this.props.type) +
+                  ".png?v=2";
               return Re.createElement(
                 "div",
                 {
@@ -6250,11 +6248,7 @@
                   { className: Ue.a.EventCategory_HeaderCtn },
                   Re.createElement("img", {
                     className: Ue.a.CategoryTypeImage,
-                    src:
-                      U.b.IMG_URL +
-                      "events/types/type_" +
-                      this.props.icon +
-                      ".png"
+                    src: o
                   }),
                   Re.createElement(
                     "div",
@@ -6586,72 +6580,73 @@
         })(Re.Component),
         Tt = a("PqGv"),
         jt = function(e) {
-          var t = B()("2020-10-01T10:00:00-08:00").unix(),
+          var t = B()("2020-09-27T10:00:00-08:00").unix(),
             a = (B()("2020-10-29T10:00:00-08:00").unix(),
             B()("2020-11-02T10:00:00-08:00").unix()),
             n = Le.GetEditModel(),
-            r = {
-              name: "dummy",
-              description: "dummy",
-              tags: ["halloween2019"],
-              earliestAllowedStartTime: t,
-              latestAllowedEndTime: a,
-              actionEndTime: a,
-              onCategoryChosen: e.fnOnCategoryChosen
-            },
-            i = re.a.GetTimeNowWithOverride();
-          return !n || !n.GetAppReleaseDate() || i < t || a < i
-            ? null
-            : Re.createElement(
-                "div",
-                { className: Object(Ze.a)(Tt.Halloween) },
+            r = re.a.GetTimeNowWithOverride();
+          if (!n || !n.GetAppReleaseDate() || r < t || a < r) return null;
+          var i = {
+            name: "dummy",
+            description: "dummy",
+            tags: ["halloween"],
+            earliestAllowedStartTime: t,
+            latestAllowedEndTime: a,
+            actionEndTime: a,
+            onCategoryChosen: e.fnOnCategoryChosen
+          };
+          return Re.createElement(
+            "div",
+            { className: Object(Ze.a)(Tt.Halloween) },
+            Re.createElement(
+              "div",
+              { className: Object(Ze.a)(Tt.EventTitle) },
+              Object(z.e)("#EventEditor_Category_Halloween")
+            ),
+            Re.createElement(
+              "div",
+              { className: Object(Ze.a)(Tt.EventDesc) },
+              Object(z.l)(
+                "#EventEditor_Category_Halloween_Desc",
                 Re.createElement(
-                  "div",
-                  { className: Object(Ze.a)(Tt.EventTitle) },
-                  Object(z.e)("#EventEditor_Category_Halloween")
-                ),
-                Re.createElement(
-                  "div",
-                  { className: Object(Ze.a)(Tt.EventDesc) },
-                  Object(z.l)(
-                    "#EventEditor_Category_Halloween_Desc",
-                    Re.createElement(
-                      "a",
-                      {
-                        href:
-                          "https://partner.steamgames.com/doc/marketing/event_tools/halloween",
-                        target: "_blank"
-                      },
-                      Object(z.e)("#EventEditor_Category_Halloween_Docs")
-                    )
-                  )
-                ),
-                Re.createElement(
-                  Ot,
-                  Object(H.a)({}, r, {
-                    name: "#EventEditor_Category_DLC_Halloween",
-                    description: "#EventEditor_Category_DLC_Halloween_Desc",
-                    icon: "promo_02",
-                    type: 15
-                  })
-                ),
-                Re.createElement(
-                  Ot,
-                  Object(H.a)({}, r, {
-                    name: "#EventCategory_InGame",
-                    description: "#EventCategory_InGame_Desc",
-                    subCategoryDesc:
-                      "#EventEditor_Category_InGame_Halloween_Desc",
-                    icon: "36",
-                    subCategories: [
-                      at.bonusxp,
-                      at.loot,
-                      at.perks,
-                      at.general_halloween
-                    ]
-                  })
+                  "a",
+                  {
+                    href:
+                      "https://partner.steamgames.com/doc/marketing/event_tools/halloween",
+                    target: "_blank"
+                  },
+                  Object(z.e)("#EventEditor_Category_Halloween_Docs")
                 )
-              );
+              )
+            ),
+            Re.createElement(
+              Ot,
+              Object(H.a)({}, i, {
+                name: "#EventEditor_Category_DLC_Halloween",
+                description: "#EventEditor_Category_DLC_Halloween_Desc",
+                icon: "promo_02",
+                type: 15
+              })
+            ),
+            Re.createElement(
+              Ot,
+              Object(H.a)({}, i, {
+                name: "#EventCategory_InGame",
+                description: "#EventCategory_InGame_Desc",
+                subCategoryDesc: "#EventEditor_Category_InGame_Halloween_Desc",
+                icon: "halloween_35",
+                subCategories: [
+                  Object(H.a)(Object(H.a)({}, i), at.bonusxp),
+                  Object(H.a)(Object(H.a)({}, i), at.loot),
+                  Object(H.a)(Object(H.a)({}, i), at.perks),
+                  Object(H.a)(Object(H.a)(Object(H.a)({}, i), at.general), {
+                    description: "#PartnerEvent_halloween_35_Desc",
+                    icon: "halloween_35"
+                  })
+                ]
+              })
+            )
+          );
         },
         It = function(e) {
           var t = Le.GetEditModel(),

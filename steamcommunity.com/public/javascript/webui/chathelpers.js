@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6110070";
+var CLSTAMP = "6112520";
 !(function(e) {
   function t(t) {
     for (
@@ -965,7 +965,7 @@ var CLSTAMP = "6110070";
               (this.m_bValid = !0),
               (this.m_bReady = !0);
           }),
-          Object(r.c)([i.C], e.prototype, "m_bReady", void 0),
+          Object(r.c)([i.B], e.prototype, "m_bReady", void 0),
           Object(r.c)([i.k], e.prototype, "InitInvalid", null),
           Object(r.c)([i.k], e.prototype, "InitDirectInvite", null),
           e
@@ -1844,15 +1844,15 @@ PERFORMANCE OF THIS SOFTWARE.
               c.b
                 .ShowChatRoomGroupInvite(this.m_invite.GetInviteCode())
                 .then(function(t) {
-                  Object(l.G)(function() {
+                  Object(l.F)(function() {
                     (e.m_bConnectingToClient = !1),
                       (e.m_connectResult = t),
                       console.log(t);
                   });
                 }));
           }),
-          Object(s.c)([l.C], e.prototype, "m_bConnectingToClient", void 0),
-          Object(s.c)([l.C], e.prototype, "m_connectResult", void 0),
+          Object(s.c)([l.B], e.prototype, "m_bConnectingToClient", void 0),
+          Object(s.c)([l.B], e.prototype, "m_connectResult", void 0),
           e
         );
       })(),
@@ -2041,7 +2041,7 @@ PERFORMANCE OF THIS SOFTWARE.
                   )
             );
           }),
-          Object(s.c)([l.C], t.prototype, "m_bTriedToLaunchSteam", void 0),
+          Object(s.c)([l.B], t.prototype, "m_bTriedToLaunchSteam", void 0),
           Object(s.c)([p.a], t.prototype, "LaunchWebChat", null),
           Object(s.c)([p.a], t.prototype, "OpenInSteamIgnoreAccount", null),
           Object(s.c)([p.a], t.prototype, "LaunchSteamClient", null),
@@ -2103,9 +2103,9 @@ PERFORMANCE OF THIS SOFTWARE.
     window.AssertMsg = u.a;
     var y,
       E,
-      C,
-      A = new c.a();
-    function O(e) {
+      A,
+      O = new c.a();
+    function C(e) {
       var t;
       try {
         t = JSON.parse(e.getAttribute("data-inviteinfo"));
@@ -2114,7 +2114,7 @@ PERFORMANCE OF THIS SOFTWARE.
       var n = new v(t);
       i.render(r.createElement(b, { controller: n }), e);
     }
-    (window.ClientConnectionAPI = A),
+    (window.ClientConnectionAPI = O),
       document.addEventListener("DOMContentLoaded", function() {
         Object(o.b)(),
           (function() {
@@ -2127,7 +2127,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 r = n.getAttribute("data-component");
               switch (r) {
                 case "ChatInvite":
-                  O(n);
+                  C(n);
                   break;
                 default:
                   Object(u.a)(!1, 'unknown component: "' + r + '"');
@@ -2138,18 +2138,18 @@ PERFORMANCE OF THIS SOFTWARE.
       (window.LocalizationReady = function(e, t, n) {
         if ("english" !== t)
           "friendsui" == e ? (y = n) : "shared" == e && (E = n);
-        else if ("shared" == e) C = n;
+        else if ("shared" == e) A = n;
         else {
           var r = void 0,
             i = null,
             o = void 0,
             c = null;
           void 0 !== y ? ((r = y), (i = n)) : (r = n),
-            void 0 !== E ? ((o = E), (c = C)) : (o = C),
+            void 0 !== E ? ((o = E), (c = A)) : (o = A),
             a.c.InitFromObjects(r, i, o, c),
             (y = void 0),
             (E = void 0),
-            (C = void 0);
+            (A = void 0);
         }
       });
   },
