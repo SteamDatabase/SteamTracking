@@ -3596,7 +3596,7 @@ function OnVerifyShippingAddressSuccess( result )
 					break;
 
 				case 9:
-					error_text = 'We cannot ship to the address you\'ve provided because your a state/province is missing.';
+					error_text = 'We cannot ship to the address you\'ve provided because your state/province is missing.';
 					break;					
 			}
 			DisplayErrorMessage( error_text );		
