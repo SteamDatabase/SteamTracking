@@ -19,7 +19,6 @@
 "SteamUI_ConvertExistingInfo" "Konvertera befintlig spelinstallation. Det här kommer att ta flera minuter."
 "SteamUI_ConversionCompleteInfo" "Förladdning av Steam slutförd."
 
-"SteamUI_ConversionCompleteInfoFailed" " "
 "SteamUI_ConvertExistingStatus1" "Förhämtar %s1 filer från disk."
 "SteamUI_ConvertExistingStatus2" "Förhämtar %s1 filer från disk.."
 "SteamUI_ConvertExistingStatus3" "Förhämtar %s1 filer från disk..."
@@ -1273,7 +1272,6 @@ Vänligen skriv in SMS-koden nedan."
 "Steam_PreallocateAppStatus"	"Allokerar hårddiskutrymme för %s1 ..."
 "Steam_ValidateAppStatus"	"Upptäcker befintliga filer för %s1 ..."
 
-"Steam_CDKeyAlreadyRegistered_Title"	"Steam - Product Code Error"
 "Steam_CDKeyCafe"			"Du kan inte registrera produktkoder på det här kontot."
 
 "Steam_BrowseGames"		"Bläddra bland spelen..."
@@ -1339,7 +1337,6 @@ Vänligen skriv in SMS-koden nedan."
 "Steam_PurchaseError_AllAppsInSubscriptionAlreadyOwned"	"Du har redan alla de här spelen.\nDu kan öppna dem från listan \"Mina spel\" i Steam."
 "SteamUI_ProductRegistrationWizard_Title"	"Produktaktiveringsguide"
 "Steam_Install_AutoLaunchGame"		"Spela %game% nu"
-"Steam_Install_AutoLaunchGamesList"	"Open Games Library"
 
 "Steam_UnableToPreload" "Steams servrar har inte möjlighet att hantera fler förladdningar av %game% just nu.\nFörsök igen om några timmar."
 "Steam_Error_Preload_Title" "Förladdning – Fel"
@@ -1656,9 +1653,6 @@ Du måste logga ut från OSX för att ändringen ska träda i kraft."
 "Steam_Store_TabTitle"		"Butik"
 "Steam_Tools_TabTitle"		"Verktyg"
 
-"Steam_Root_Title" 	"Steam"
-"Steam_Root_Title_Internal" 	"Steam"
-
 "Steam_Account_Name"	"%account%"
 
 "Steam_Universe_Internal" 	"[%universe%]"
@@ -1675,7 +1669,6 @@ Du måste logga ut från OSX för att ändringen ska träda i kraft."
 "Steam_Settings_Upper"	"INSTÄLLNINGAR"
 "Steam_Support_Upper"	"SUPPORT"
 
-"Steam_Properties"	"Properties"
 "Steam_Launch"		"Starta"
 "Steam_LaunchVR"	"Spela i VR"
 "Steam_Watch_Video"	"Titta"
@@ -2681,7 +2674,6 @@ Du måste logga ut från OSX för att ändringen ska träda i kraft."
 "Steam_Country_UA"		"Ukraina"
 "Steam_Country_AE"		"Förenade Arabemiraten"
 "Steam_Country_GB"		"Storbritannien"
-"Steam_Country_US"		"United States"
 "Steam_Country_UM"		"USA:s yttre öar"
 "Steam_Country_UY"		"Uruguay"
 "Steam_Country_UZ"		"Uzbekistan"
@@ -3121,11 +3113,6 @@ Betaprogrammet har avslutats - starta om Steam om du vill gå tillbaka till den 
 "Steam_ContentBetaOptOutOK"	"Gick ut ur betaversion."
 "Steam_ContentBetaOptOutProblem"	"Kunde inte gå ut ur betan."
 
-"Steam_SpokenLanguageTestTitle"	"Left 4 Dead – språk för tal"
-"Steam_SpokenLanguageTestExplanation"	"The spoken audio in Left 4 Dead can be played in <current language>, or in English with <current language> subtitles. Which would you prefer?/n(You can always change these settings later within the game.)"
-"Steam_SpokenLanguageTestRadioButtonCurrent"	"Spela med språk för tal på <current language>"
-"Steam_SpokenLanguageTestRadioButtonEnglish"	"Play spoken audio in the original English with optional <current language> subtitles/n(Requires a 1GB download)"
-
 "Steam_Settings_NotifyMeWithSteamInstantMessages"	"Meddela mig om tillägg eller ändringar i mina spel, nya spel och kommande spel."
 "Steam_Settings_DownloadsTitle"	"Nedladdningar"
 "Steam_Settings_CloudTitle"	"Cloud"
@@ -3142,10 +3129,6 @@ Betaprogrammet har avslutats - starta om Steam om du vill gå tillbaka till den 
 "Steam_RequestingLegacyKey" "Begär nyckel..."
 "Steam_LegacyCDKey_Title" "CD-nyckel för %game%"
 "Steam_CopyLegacyKey_ToClipboard" "Kopiera nyckel till Urklipp"
-
-"Steam_GuestPassAccept_LinkURLServiceUnavailable"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=550"
-"Steam_GuestPassRedeemed_LinkURLServiceUnavailable"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=550"
-"Steam_GuestPasses_LinkURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=549"
 
 "Steam_CityLifeDeluxe_LaunchBuildingEditor"	"Starta byggnadsredigeraren"
 
@@ -3386,6 +3369,7 @@ Skaffa dig en ny vän på Steam genom att skicka en gåva via e-post till någon
 "Steam_ServerBrowserPingRateInfo"	"Om du får problem med din anslutning när du letar bland spelservrar kan du testa att sänka det här värdet."
 "Steam_ServerBrowserPingRateDefault"	"Automatiskt (%PingsPerMin%)"
 
+
 "Steam_SettingsInGameScreenshotFolder"	"Skärmdumpsmapp"
 "Steam_SettingsInGameTitle"	"Steams överlägg"
 
@@ -3531,9 +3515,9 @@ Skaffa dig en ny vän på Steam genom att skicka en gåva via e-post till någon
 "Steam_GetTwoFactorCode_ResultFailure" "Kunde inte kontakta Steams servrar."
 "Steam_GetTwoFactorCode_ResultFailureDetails" "Steams servrar kunde inte kontaktas just nu. Försök igen senare."
 
-"Steam_SpokenLanguageTestTitle"	"Left 4 Dead - Spoken audio language"
+"Steam_SpokenLanguageTestTitle"	"Left 4 Dead – språk för tal"
 "Steam_SpokenLanguageTestExplanation"	"Det talade språket i Left 4 Dead kan spelas upp på <current language>, eller på engelska med undertexter på <current language>. Vilket vill du ha?\n(Du kan alltid ändra inställningarna senare från spelet.)"
-"Steam_SpokenLanguageTestRadioButtonCurrent"	"Play spoken audio in <current language>"
+"Steam_SpokenLanguageTestRadioButtonCurrent"	"Spela med språk för tal på <current language>"
 "Steam_SpokenLanguageTestRadioButtonEnglish"	"Spela med originalspråk för tal på engelska med undertexter på <current language> som tillval\n(Nedladdning på 1GB krävs)"
 
 "Steam_CannotInstallInOfflineMode"		"Det går inte att installera spel när Steam är i offlineläge.\nAvsluta och starta om Steam och välj \"Koppla upp\".\n"
@@ -3826,7 +3810,6 @@ Ange en kategori för det här spelet så kan du hitta det snabbare och sortera 
 "steam_links"			"Länkar"
 "steam_achievements"		"Prestationer"
 "steam_ogg"			"Relaterade grupper"
-"steam_stats"			"Stats"
 "steam_dlc"			"DLC"
 "steam_cdkeylink"		"CD-nyckel"
 "steam_guide"			"Guide"
@@ -3834,7 +3817,6 @@ Ange en kategori för det här spelet så kan du hitta det snabbare och sortera 
 "steam_editcontroller"	"Kontrollkonfiguration"
 "steam_menu_media" "Media"
 "steam_menu_tools" "Verktyg"
-"steam_menu_downloads" "Downloads"
 "steam_menu_friends" "Vänner"
 "steam_menu_servers" "Servrar"
 "steam_menu_settings" "Inställningar"
@@ -4380,7 +4362,6 @@ Ange en kategori för det här spelet så kan du hitta det snabbare och sortera 
 "Music_Track_Menu_ShowAlbumInUI" "Visa album"
 "Music_Menu_Play" "Spela"
 
-"Music_Transport_No_Tracks" " "
 "Music_Transport_X_Of_Y"	"%currentqueueentry% av %queuecount% - %queueduration%"
 "Music_Transport_X_Tracks" "%queuecount% låtar - %queueduration%"
 "Music_Transport_X_Track" "%queuecount% låt - %queueduration%"
@@ -4428,7 +4409,6 @@ Ange en kategori för det här spelet så kan du hitta det snabbare och sortera 
 "Music_Settings_EnableMediaKeys" "Aktivera mediatangenter"
 "Music_Settings_Notification_Header" "Visa ett meddelande"
 "Music_Settings_LoggingCrawling" "Spara logg med skanningsaktivitet"
-"Music_Settings_EnableMediaKeys" "Enable Media Keys"
 "Music_Settings__SelectDirectory_Title"	"Välj musikbibliotek"
 "Music_Settings_ResetDatabase_Title" "Återställ lokal musikdatabas"
 "Music_Settings_ResetDatabase_Text" "Är du säker på att du vill återställa musikdatabasen?"
@@ -4468,8 +4448,6 @@ Ange en kategori för det här spelet så kan du hitta det snabbare och sortera 
 "Music_TracksInfoLabel_NoTracks" "Inga låtar"
 "Music_TracksInfoLabel_OneTrack" "1 låt / %playlistduration%"
 "Music_TracksInfoLabel_MultipleTracks" "%playlisttrackcount% låtar / %playlistduration%"
-
-"Music_Library_WindowTitle" "Music Library"
 
 "Music_Queue_Menu_CreatePlaylist" "Skapa spellista"
 "Music_Queue_Menu_LoadPlaylist" "Byt ut kö med spellista"

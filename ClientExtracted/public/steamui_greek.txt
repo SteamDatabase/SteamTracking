@@ -19,7 +19,6 @@
 "SteamUI_ConvertExistingInfo" "Γίνεται μετατροπή της υπάρχουσας εγκατάστασης του παιχνιδιού. Αυτό μπορεί να διαρκέσει μερικά λεπτά."
 "SteamUI_ConversionCompleteInfo" "Η προφόρτωση του Steam ολοκληρώθηκε."
 
-"SteamUI_ConversionCompleteInfoFailed" " "
 "SteamUI_ConvertExistingStatus1" "Γίνεται προφόρτωση %s1 αρχείων από το δίσκο."
 "SteamUI_ConvertExistingStatus2" "Προφόρτωση %s1 αρχείων από το δίσκο.."
 "SteamUI_ConvertExistingStatus3" "Προφόρτωση %s1 αρχείων από το δίσκο..."
@@ -1262,7 +1261,6 @@
 "Steam_PreallocateAppStatus"	"Δέσμευση χώρου στο δίσκο για το %s1 ..."
 "Steam_ValidateAppStatus"	"Εύρεση υπαρχόντων αρχείων του %s1 ..."
 
-"Steam_CDKeyAlreadyRegistered_Title"	"Steam - Product Code Error"
 "Steam_CDKeyCafe"			"Δεν μπορείτε να καταχωρήσετε κωδικούς προϊόντων σε αυτό τον λογαριασμό."
 
 "Steam_BrowseGames"		"Περιήγηση στα παιχνίδια..."
@@ -1328,7 +1326,6 @@
 "Steam_PurchaseError_AllAppsInSubscriptionAlreadyOwned"	"Έχετε ήδη όλα αυτά τα παιχνίδια.\nΜπορείτε να αποκτήσετε πρόσβαση σε αυτά μέσω της συλλογής των παιχνιδιών του Steam."
 "SteamUI_ProductRegistrationWizard_Title"	"Ενεργοποίηση προϊόντος"
 "Steam_Install_AutoLaunchGame"		"Εκκίνηση του %game% τώρα"
-"Steam_Install_AutoLaunchGamesList"	"Open Games Library"
 
 "Steam_UnableToPreload" "Οι εξυπηρετητές του Steam είναι πολύ απασχολημένοι για να χειριστούνε περισσότερες προφορτώσεις του %game%.\nΠροσπαθήστε ξανά σε μερικές ώρες."
 "Steam_Error_Preload_Title" "Προφόρτωση - Σφάλμα"
@@ -1646,9 +1643,6 @@
 "Steam_Store_TabTitle"		"ΚΑΤΑΣΤΗΜΑ"
 "Steam_Tools_TabTitle"		"ΕΡΓΑΛΕΙΑ"
 
-"Steam_Root_Title" 	"Steam"
-"Steam_Root_Title_Internal" 	"Steam"
-
 "Steam_Account_Name"	"%account%"
 
 "Steam_Universe_Internal" 	"[%universe%]"
@@ -1665,7 +1659,6 @@
 "Steam_Settings_Upper"	"ΡΥΘΜΙΣΕΙΣ"
 "Steam_Support_Upper"	"ΥΠΟΣΤΗΡΙΞΗ"
 
-"Steam_Properties"	"Properties"
 "Steam_Launch"		"ΕΚΚΙΝΗΣΗ"
 "Steam_LaunchVR"	"Εκκίνηση σε VR"
 "Steam_Watch_Video"	"ΠΑΡΑΚΟΛΟΥΘΗΣΗ"
@@ -2671,7 +2664,6 @@
 "Steam_Country_UA"		"Ουκρανία"
 "Steam_Country_AE"		"Eνωμένα Αραβικά Εμιράτα"
 "Steam_Country_GB"		"Ηνωμένο Βασίλειο"
-"Steam_Country_US"		"United States"
 "Steam_Country_UM"		"Απομακρυσμένες Νησίδες των Ηνωμένων Πολιτειών"
 "Steam_Country_UY"		"Ουρουγουάη"
 "Steam_Country_UZ"		"Ουζμπεκιστάν"
@@ -3113,11 +3105,6 @@
 "Steam_ContentBetaOptOutOK"	"Αποχωρήσατε επιτυχώς από τη δοκιμαστική έκδοση."
 "Steam_ContentBetaOptOutProblem"	"Παρουσιάστηκε ένα πρόβλημα κατά την αποχώρηση από τη δοκιμαστική έκδοση."
 
-"Steam_SpokenLanguageTestTitle"	"Left 4 Dead - Γλώσσα ομιλίας"
-"Steam_SpokenLanguageTestExplanation"	"The spoken audio in Left 4 Dead can be played in <current language>, or in English with <current language> subtitles. Which would you prefer?/n(You can always change these settings later within the game.)"
-"Steam_SpokenLanguageTestRadioButtonCurrent"	"Γλώσσα ομιλίας στα <current language>"
-"Steam_SpokenLanguageTestRadioButtonEnglish"	"Play spoken audio in the original English with optional <current language> subtitles/n(Requires a 1GB download)"
-
 "Steam_Settings_NotifyMeWithSteamInstantMessages"	"Ειδοποίηση σχετικά με προσθήκες ή αλλαγές στα παιχνίδια μου, νέες ενημερώσεις και επερχόμενες κυκλοφορίες."
 "Steam_Settings_DownloadsTitle"	"Λήψεις"
 "Steam_Settings_CloudTitle"	"Cloud"
@@ -3134,10 +3121,6 @@
 "Steam_RequestingLegacyKey" "Απαιτείται κλειδί..."
 "Steam_LegacyCDKey_Title" "Κλειδί CD του %game%"
 "Steam_CopyLegacyKey_ToClipboard" "ΑΝΤΙΓΡΑΦΗ ΚΛΕΙΔΙΟΥ ΣΤΟ ΠΡΟΧΕΙΡΟ"
-
-"Steam_GuestPassAccept_LinkURLServiceUnavailable"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=550"
-"Steam_GuestPassRedeemed_LinkURLServiceUnavailable"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=550"
-"Steam_GuestPasses_LinkURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=549"
 
 "Steam_CityLifeDeluxe_LaunchBuildingEditor"	"Εκκίνηση Building Customization Editor"
 
@@ -3378,6 +3361,15 @@
 "Steam_ServerBrowserPingRateInfo"	"Αν παρατηρείτε προβλήματα στη σύνδεση ενώ ψάχνετε για διακομιστές παιχνιδιών, δοκιμάστε να μειώσετε αυτή τη τιμή."
 "Steam_ServerBrowserPingRateDefault"	"Αυτόματο (%PingsPerMin%)"
 
+"Steam_TextFilterSettingLabel"									"Φιλτράρισμα συνομιλίας"
+"Steam_TextFilterStatus_SteamLabOptedOut"						"Τώρα διαθέσιμο μέσω Ερευν. κέντρου Steam"
+"Steam_TextFilterStatus_Enabled"								"Έχει οριστεί να φιλτράρει βωμολοχίες και βρισιές"
+"Steam_TextFilterStatus_Enabled_IgnoreFriends"					"Έχει οριστεί να φιλτράρει βωμολοχίες και βρισιές από όλους εκτός από φίλους"
+"Steam_TextFilterStatus_EnabledAllowProfanity"					"Έχει οριστεί να επιτρέπει βωμολοχίες, αλλά να φιλτράρει βρισιές"
+"Steam_TextFilterStatus_EnabledAllowProfanity_IgnoreFriends"	"Έχει οριστεί να επιτρέπει βωμολοχίες, αλλά να φιλτράρει βρισιές από όλους εκτός από φίλους"
+"Steam_TextFilterStatus_Disabled"								"Έχει οριστεί να επιτρέπει βωμολοχίες και βρισιές"
+"Steam_TextFilterSettingURL"									"Αλλαγή προτιμήσεων φιλτραρίσματος συνομιλίας"
+
 "Steam_SettingsInGameScreenshotFolder"	"ΦΑΚΕΛΟΣ ΦΩΤΟΓΡΑΦΙΩΝ"
 "Steam_SettingsInGameTitle"	"Επικάλυψη Steam"
 
@@ -3523,9 +3515,9 @@
 "Steam_GetTwoFactorCode_ResultFailure" "Αδυναμία επικοινωνίας με τους διακομιστές Steam."
 "Steam_GetTwoFactorCode_ResultFailureDetails" "Ήταν αδύνατη η επικοινωνία με τους διακομιστές Steam αυτή τη στιγμή. Παρακαλούμε δοκιμάστε ξανά αργότερα."
 
-"Steam_SpokenLanguageTestTitle"	"Left 4 Dead - Spoken audio language"
+"Steam_SpokenLanguageTestTitle"	"Left 4 Dead - Γλώσσα ομιλίας"
 "Steam_SpokenLanguageTestExplanation"	"Η γλώσσα ομιλίας στο Left 4 Dead μπορεί να είναι στα <current language> ή στα Αγγλικά με <current language> υπότιτλους. Τι προτιμάτε;\n(Μπορείτε να αλλάξετε αυτές τις ρυθμίσεις αργότερα εντός παιχνιδιού.)"
-"Steam_SpokenLanguageTestRadioButtonCurrent"	"Play spoken audio in <current language>"
+"Steam_SpokenLanguageTestRadioButtonCurrent"	"Γλώσσα ομιλίας στα <current language>"
 "Steam_SpokenLanguageTestRadioButtonEnglish"	"Γλώσσα ομιλίας στα Αγγλικά με προαιρετικούς υπότιτλους στα <current language>\n(Απαιτείται λήψη 1GB)"
 
 "Steam_CannotInstallInOfflineMode"		"Τα παιχνίδια δεν μπορούν να εγκατασταθούν όσο το Steam είναι σε Λειτουργία εκτός σύνδεσης.\nΚλείστε και επανεκκινήστε το Steam και επιλέξτε «Συνδεθείτε».\n"
@@ -3817,7 +3809,6 @@
 "steam_links"			"ΣΥΝΔΕΣΜΟΙ"
 "steam_achievements"		"Επιτεύγματα"
 "steam_ogg"			"Σχετικές ομάδες"
-"steam_stats"			"Stats"
 "steam_dlc"			"DLC"
 "steam_cdkeylink"		"Κλειδί CD"
 "steam_guide"			"Οδηγός"
@@ -3825,7 +3816,6 @@
 "steam_editcontroller"	"Διαμόρφωση χειριστηρίου"
 "steam_menu_media" "Πολυμέσα"
 "steam_menu_tools" "Εργαλεία"
-"steam_menu_downloads" "Downloads"
 "steam_menu_friends" "Φίλοι"
 "steam_menu_servers" "Διακομιστές"
 "steam_menu_settings" "Ρυθμίσεις"
@@ -4370,7 +4360,6 @@
 "Music_Track_Menu_ShowAlbumInUI" "Προβολή άλμπουμ"
 "Music_Menu_Play" "Αναπαραγωγή"
 
-"Music_Transport_No_Tracks" " "
 "Music_Transport_X_Of_Y"	"%currentqueueentry% από %queuecount% - %queueduration%"
 "Music_Transport_X_Tracks" "%queuecount% κομμάτια - %queueduration%"
 "Music_Transport_X_Track" "%queuecount% κομμάτι - %queueduration%"
@@ -4418,7 +4407,6 @@
 "Music_Settings_EnableMediaKeys" "Ενεργοποίηση πλήκτρων πολυμέσων"
 "Music_Settings_Notification_Header" "Εμφάνιση μιας ειδοποίησης"
 "Music_Settings_LoggingCrawling" "Καταγραφή ιστορικού σάρωσης"
-"Music_Settings_EnableMediaKeys" "Enable Media Keys"
 "Music_Settings__SelectDirectory_Title"	"Επιλογή μουσικής συλλογής"
 "Music_Settings_ResetDatabase_Title" "Επαναφορά τοπικής βάσης δεδομένων μουσικής"
 "Music_Settings_ResetDatabase_Text" "Θέλετε σίγουρα να επαναφέρετε τη βάση δεδομένων μουσικής;"
@@ -4458,8 +4446,6 @@
 "Music_TracksInfoLabel_NoTracks" "Κανένα κομμάτι"
 "Music_TracksInfoLabel_OneTrack" "1 κομμάτι / %playlistduration%"
 "Music_TracksInfoLabel_MultipleTracks" "%playlisttrackcount% κομμάτια / %playlistduration%"
-
-"Music_Library_WindowTitle" "Music Library"
 
 "Music_Queue_Menu_CreatePlaylist" "Δημιουργία λίστας αναπαραγωγής"
 "Music_Queue_Menu_LoadPlaylist" "Αντικατάσταση σειράς με τη λίστα αναπαραγωγής"

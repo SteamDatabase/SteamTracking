@@ -19,7 +19,6 @@
 "SteamUI_ConvertExistingInfo" "Konverterer den eksisterende spillinstallasjonen. Dette kan ta noen minutter."
 "SteamUI_ConversionCompleteInfo" "Forhåndslastingen av Steam er fullført."
 
-"SteamUI_ConversionCompleteInfoFailed" " "
 "SteamUI_ConvertExistingStatus1" "Forhåndslaster %s1 filer fra disken."
 "SteamUI_ConvertExistingStatus2" "Forhåndslaster %s1 filer fra disken.."
 "SteamUI_ConvertExistingStatus3" "Forhåndslaster %s1 filer fra disken..."
@@ -1272,7 +1271,6 @@ nødvendig for å kontakte deg via e-post."
 "Steam_PreallocateAppStatus"	"Tildeler diskplass for %s1 ..."
 "Steam_ValidateAppStatus"	"Oppdager eksisterende filer for %s1 ..."
 
-"Steam_CDKeyAlreadyRegistered_Title"	"Steam - Product Code Error"
 "Steam_CDKeyCafe"			"Du kan ikke registrere produktnøkler på denne kontoen."
 
 "Steam_BrowseGames"		"Bla gjennom spill..."
@@ -1338,7 +1336,6 @@ nødvendig for å kontakte deg via e-post."
 "Steam_PurchaseError_AllAppsInSubscriptionAlreadyOwned"	"Du har allerede disse spillene.\nDu har tilgang til dem i Steam-biblioteket."
 "SteamUI_ProductRegistrationWizard_Title"	"Veiviser for aktivering av produkt"
 "Steam_Install_AutoLaunchGame"		"Spill %game% nå"
-"Steam_Install_AutoLaunchGamesList"	"Open Games Library"
 
 "Steam_UnableToPreload" "Steam-tjenerne er i øyeblikket for opptatt til å kunne behandle flere forhåndslastninger av %game%.\nPrøv på nytt om noen timer."
 "Steam_Error_Preload_Title" "Forhåndslasting – feil"
@@ -1651,9 +1648,6 @@ nødvendig for å kontakte deg via e-post."
 "Steam_Store_TabTitle"		"Butikk"
 "Steam_Tools_TabTitle"		"Verktøy"
 
-"Steam_Root_Title" 	"Steam"
-"Steam_Root_Title_Internal" 	"Steam"
-
 "Steam_Account_Name"	"%account%"
 
 "Steam_Universe_Internal" 	"[%universe%]"
@@ -1670,7 +1664,6 @@ nødvendig for å kontakte deg via e-post."
 "Steam_Settings_Upper"	"INNSTILLINGER"
 "Steam_Support_Upper"	"KUNDESTØTTE"
 
-"Steam_Properties"	"Properties"
 "Steam_Launch"		"Start"
 "Steam_LaunchVR"	"Spill i VR"
 "Steam_Watch_Video"	"Se"
@@ -2676,7 +2669,6 @@ nødvendig for å kontakte deg via e-post."
 "Steam_Country_UA"		"Ukraina"
 "Steam_Country_AE"		"De forente arabiske emirater"
 "Steam_Country_GB"		"Storbritannia"
-"Steam_Country_US"		"United States"
 "Steam_Country_UM"		"USA, mindre og avsidesliggende øyer"
 "Steam_Country_UY"		"Uruguay"
 "Steam_Country_UZ"		"Usbekistan"
@@ -3116,11 +3108,6 @@ Betatestingen er nå avsluttet. Start Steam på nytt for å gå tilbake til den 
 "Steam_ContentBetaOptOutOK"	"Utmeldt av innholdsbetaen."
 "Steam_ContentBetaOptOutProblem"	"Det oppstod et problem med utmelding av innholdsbetaene."
 
-"Steam_SpokenLanguageTestTitle"	"Left 4 Dead - talespråk"
-"Steam_SpokenLanguageTestExplanation"	"The spoken audio in Left 4 Dead can be played in <current language>, or in English with <current language> subtitles. Which would you prefer?/n(You can always change these settings later within the game.)"
-"Steam_SpokenLanguageTestRadioButtonCurrent"	"Spill med stemmene på <current language>"
-"Steam_SpokenLanguageTestRadioButtonEnglish"	"Play spoken audio in the original English with optional <current language> subtitles/n(Requires a 1GB download)"
-
 "Steam_Settings_NotifyMeWithSteamInstantMessages"	"Gi meg beskjed om tillegg eller endringer i mine spill, nye utgivelser og kommende utgivelser."
 "Steam_Settings_DownloadsTitle"	"Nedlasting"
 "Steam_Settings_CloudTitle"	"Cloud"
@@ -3137,10 +3124,6 @@ Betatestingen er nå avsluttet. Start Steam på nytt for å gå tilbake til den 
 "Steam_RequestingLegacyKey" "Ber om nøkkel..."
 "Steam_LegacyCDKey_Title" "CD-nøkkel for %game%"
 "Steam_CopyLegacyKey_ToClipboard" "Kopier nøkkel til utklippstavle"
-
-"Steam_GuestPassAccept_LinkURLServiceUnavailable"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=550"
-"Steam_GuestPassRedeemed_LinkURLServiceUnavailable"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=550"
-"Steam_GuestPasses_LinkURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=549"
 
 "Steam_CityLifeDeluxe_LaunchBuildingEditor"	"Start Building Customization Editor"
 
@@ -3381,6 +3364,7 @@ Skaff deg en ny venn på Steam ved å sende en gave til noen du kjenner."
 "Steam_ServerBrowserPingRateInfo"	"Hvis du opplever tilkoblingsproblemer mens du blar gjennom spilltjenere, prøv å senke denne verdien."
 "Steam_ServerBrowserPingRateDefault"	"Automatisk (%PingsPerMin%)"
 
+
 "Steam_SettingsInGameScreenshotFolder"	"Skjermbildemappe"
 "Steam_SettingsInGameTitle"	"Steam-overlegget"
 
@@ -3527,9 +3511,9 @@ Skaff deg en ny venn på Steam ved å sende en gave til noen du kjenner."
 "Steam_GetTwoFactorCode_ResultFailure" "Kunne ikke kontakte Steam-tjenerne."
 "Steam_GetTwoFactorCode_ResultFailureDetails" "Steam-tjenerne kunne ikke bli kontaktet på dette tidspunkt. Vennligst prøv igjen senere."
 
-"Steam_SpokenLanguageTestTitle"	"Left 4 Dead - Spoken audio language"
+"Steam_SpokenLanguageTestTitle"	"Left 4 Dead - talespråk"
 "Steam_SpokenLanguageTestExplanation"	"Språket til stemmene i Left 4 Dead kan bli endret til <current language>, eller engelsk med <current language> undertekster. Hva foretrekker du?\n(Du kan alltids endre disse innstillingene senere i spillet)"
-"Steam_SpokenLanguageTestRadioButtonCurrent"	"Play spoken audio in <current language>"
+"Steam_SpokenLanguageTestRadioButtonCurrent"	"Spill med stemmene på <current language>"
 "Steam_SpokenLanguageTestRadioButtonEnglish"	"Ha stemmene originalt på Engelsk med valgfri <current language> undertekster \n(Krever en nedlastning på 1GB)"
 
 "Steam_CannotInstallInOfflineMode"		"Spill kan ikke installeres når Steam er i frakoblet modus.\nAvslutt og start Steam på nytt, og velg «Koble til».\n"
@@ -3822,7 +3806,6 @@ Angi en kategori for dette spillet for å hjelpe deg med å finne det raskt og o
 "steam_links"			"Koblinger"
 "steam_achievements"		"Prestasjoner"
 "steam_ogg"			"Beslektede grupper"
-"steam_stats"			"Stats"
 "steam_dlc"			"Nedlastbart innhold"
 "steam_cdkeylink"		"CD-nøkkel"
 "steam_guide"			"Veiledning"
@@ -3830,7 +3813,6 @@ Angi en kategori for dette spillet for å hjelpe deg med å finne det raskt og o
 "steam_editcontroller"	"Kontrollerkonfigurasjon"
 "steam_menu_media" "Media"
 "steam_menu_tools" "Verktøy"
-"steam_menu_downloads" "Downloads"
 "steam_menu_friends" "Venner"
 "steam_menu_servers" "Tjenere"
 "steam_menu_settings" "Innstillinger"
@@ -4375,7 +4357,6 @@ Angi en kategori for dette spillet for å hjelpe deg med å finne det raskt og o
 "Music_Track_Menu_ShowAlbumInUI" "Vis album"
 "Music_Menu_Play" "Spill av"
 
-"Music_Transport_No_Tracks" " "
 "Music_Transport_X_Of_Y"	"%currentqueueentry% av %queuecount% - %queueduration%"
 "Music_Transport_X_Tracks" "%queuecount% spor - %queueduration%"
 "Music_Transport_X_Track" "%queuecount% spor - %queueduration%"
@@ -4423,7 +4404,6 @@ Angi en kategori for dette spillet for å hjelpe deg med å finne det raskt og o
 "Music_Settings_EnableMediaKeys" "Aktiver mediataster"
 "Music_Settings_Notification_Header" "Vis et varsel"
 "Music_Settings_LoggingCrawling" "Lagre skanningsaktivitetslogg"
-"Music_Settings_EnableMediaKeys" "Enable Media Keys"
 "Music_Settings__SelectDirectory_Title"	"Velg musikkbibliotek"
 "Music_Settings_ResetDatabase_Title" "Tilbakestill lokal musikkdatabase"
 "Music_Settings_ResetDatabase_Text" "Er du sikker på at du vil tilbakestille musikkdatabasen?"
@@ -4463,8 +4443,6 @@ Angi en kategori for dette spillet for å hjelpe deg med å finne det raskt og o
 "Music_TracksInfoLabel_NoTracks" "Ingen spor"
 "Music_TracksInfoLabel_OneTrack" "1 spor / %playlistduration%"
 "Music_TracksInfoLabel_MultipleTracks" "%playlisttrackcount% spor / %playlistduration%"
-
-"Music_Library_WindowTitle" "Music Library"
 
 "Music_Queue_Menu_CreatePlaylist" "Opprett spilleliste"
 "Music_Queue_Menu_LoadPlaylist" "Bytt ut kø med spilleliste"

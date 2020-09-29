@@ -19,7 +19,6 @@
 "SteamUI_ConvertExistingInfo" "Conversion de l'installation existante du jeu. Cette opération peut prendre quelques minutes."
 "SteamUI_ConversionCompleteInfo" "Préchargement Steam terminé."
 
-"SteamUI_ConversionCompleteInfoFailed" " "
 "SteamUI_ConvertExistingStatus1" "Préchargement des fichiers de %s1 depuis le disque."
 "SteamUI_ConvertExistingStatus2" "Préchargement des fichiers de %s1 depuis le disque.."
 "SteamUI_ConvertExistingStatus3" "Préchargement des fichiers de %s1 depuis le disque..."
@@ -1266,7 +1265,6 @@ Cela devrait prendre moins d'une minute."
 "Steam_PreallocateAppStatus"	"Attribution de l'espace disque pour %s1..."
 "Steam_ValidateAppStatus"	"Découverte des fichiers existants de %s1..."
 
-"Steam_CDKeyAlreadyRegistered_Title"	"Steam - Product Code Error"
 "Steam_CDKeyCafe"			"Impossible d'enregistrer des codes de produit sur ce compte."
 
 "Steam_BrowseGames"		"Parcourir les jeux..."
@@ -1332,7 +1330,6 @@ Cela devrait prendre moins d'une minute."
 "Steam_PurchaseError_AllAppsInSubscriptionAlreadyOwned"	"Vous possédez déjà tous ces jeux.\nIls sont accessibles depuis votre bibliothèque de jeux Steam."
 "SteamUI_ProductRegistrationWizard_Title"	"Activation de produit"
 "Steam_Install_AutoLaunchGame"		"Jouer à %game% maintenant"
-"Steam_Install_AutoLaunchGamesList"	"Open Games Library"
 
 "Steam_UnableToPreload" "Les serveurs Steam sont actuellement saturés et ne peuvent plus traiter de pré-téléchargements de %game% supplémentaires.\nVeuillez réessayer dans quelques heures."
 "Steam_Error_Preload_Title" "Préchargement - Erreur"
@@ -1649,9 +1646,6 @@ Vous devrez vous déconnecter de OSX pour que le changement prenne effet."
 "Steam_Store_TabTitle"		"Magasin"
 "Steam_Tools_TabTitle"		"Outils"
 
-"Steam_Root_Title" 	"Steam"
-"Steam_Root_Title_Internal" 	"Steam"
-
 "Steam_Account_Name"	"%account%"
 
 "Steam_Universe_Internal" 	"[%universe%]"
@@ -1668,7 +1662,6 @@ Vous devrez vous déconnecter de OSX pour que le changement prenne effet."
 "Steam_Settings_Upper"	"PARAMÈTRES"
 "Steam_Support_Upper"	"ASSISTANCE"
 
-"Steam_Properties"	"Properties"
 "Steam_Launch"		"Jouer"
 "Steam_LaunchVR"	"Jouer en VR"
 "Steam_Watch_Video"	"Regarder"
@@ -2674,7 +2667,6 @@ Vous devrez vous déconnecter de OSX pour que le changement prenne effet."
 "Steam_Country_UA"		"Ukraine"
 "Steam_Country_AE"		"Émirats arabes unis"
 "Steam_Country_GB"		"Royaume-Uni"
-"Steam_Country_US"		"United States"
 "Steam_Country_UM"		"États-Unis sans les îles excentrées"
 "Steam_Country_UY"		"Uruguay"
 "Steam_Country_UZ"		"Ouzbékistan"
@@ -3120,11 +3112,6 @@ Ce programme est maintenant terminé. Veuillez redémarrer Steam pour revenir à
 "Steam_ContentBetaOptOutOK"	"Vous ne participez plus à la bêta."
 "Steam_ContentBetaOptOutProblem"	"Un problème a été rencontré lors de l'annulation de la participation à la bêta."
 
-"Steam_SpokenLanguageTestTitle"	"Left 4 Dead - Langue des dialogues"
-"Steam_SpokenLanguageTestExplanation"	"The spoken audio in Left 4 Dead can be played in <current language>, or in English with <current language> subtitles. Which would you prefer?/n(You can always change these settings later within the game.)"
-"Steam_SpokenLanguageTestRadioButtonCurrent"	"Jouer les dialogues en <current language>"
-"Steam_SpokenLanguageTestRadioButtonEnglish"	"Play spoken audio in the original English with optional <current language> subtitles/n(Requires a 1GB download)"
-
 "Steam_Settings_NotifyMeWithSteamInstantMessages"	"M'informer des ajouts ou modifications apportées à mes jeux, des nouvelles sorties et des sorties à venir."
 "Steam_Settings_DownloadsTitle"	"Téléchargements"
 "Steam_Settings_CloudTitle"	"Cloud"
@@ -3141,10 +3128,6 @@ Ce programme est maintenant terminé. Veuillez redémarrer Steam pour revenir à
 "Steam_RequestingLegacyKey" "Recherche de la clé..."
 "Steam_LegacyCDKey_Title" "Clé CD %game%"
 "Steam_CopyLegacyKey_ToClipboard" "Copier dans le presse-papier"
-
-"Steam_GuestPassAccept_LinkURLServiceUnavailable"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=550"
-"Steam_GuestPassRedeemed_LinkURLServiceUnavailable"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=550"
-"Steam_GuestPasses_LinkURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=549"
 
 "Steam_CityLifeDeluxe_LaunchBuildingEditor"	"Lancer Éditeur de Personnalisation de Construction"
 
@@ -3385,6 +3368,7 @@ Faites-vous un nouvel ami Steam en envoyant un cadeau à une de vos connaissance
 "Steam_ServerBrowserPingRateInfo"	"Si vous rencontrez des problèmes de connexion dans le navigateur des serveurs de jeu, essayez de diminuer cette valeur."
 "Steam_ServerBrowserPingRateDefault"	"Automatique (%PingsPerMin%)"
 
+
 "Steam_SettingsInGameScreenshotFolder"	"Dossier des captures d'écran"
 "Steam_SettingsInGameTitle"	"Overlay Steam"
 
@@ -3530,9 +3514,9 @@ Faites-vous un nouvel ami Steam en envoyant un cadeau à une de vos connaissance
 "Steam_GetTwoFactorCode_ResultFailure" "Impossible de contacter les serveurs Steam."
 "Steam_GetTwoFactorCode_ResultFailureDetails" "Les serveurs Steam n'ont pas pu être contactés. Veuillez réessayer plus tard."
 
-"Steam_SpokenLanguageTestTitle"	"Left 4 Dead - Spoken audio language"
+"Steam_SpokenLanguageTestTitle"	"Left 4 Dead - Langue des dialogues"
 "Steam_SpokenLanguageTestExplanation"	"Les dialogues de Left 4 Dead peuvent être joués en <current language> ou en anglais avec sous-titres en <current language>. Quelle option préférez-vous ?\n(Vous pouvez modifier ce paramètre plus tard dans le jeu.)"
-"Steam_SpokenLanguageTestRadioButtonCurrent"	"Play spoken audio in <current language>"
+"Steam_SpokenLanguageTestRadioButtonCurrent"	"Jouer les dialogues en <current language>"
 "Steam_SpokenLanguageTestRadioButtonEnglish"	"Jouer les dialogues en anglais avec sous-titres en <current language>\n(en option, nécessite un téléchargement d'1 Go)"
 
 "Steam_CannotInstallInOfflineMode"		"Vous ne pouvez pas installer de jeux lorsque Steam est en mode hors ligne.\nQuittez et redémarrez Steam, puis sélectionnez « Passer en mode en ligne ».\n"
@@ -3824,7 +3808,6 @@ Faites-vous un nouvel ami Steam en envoyant un cadeau à une de vos connaissance
 "steam_links"			"Liens"
 "steam_achievements"		"Succès"
 "steam_ogg"			"Groupes liés"
-"steam_stats"			"Stats"
 "steam_dlc"			"Contenu téléchargeable"
 "steam_cdkeylink"		"Clé CD"
 "steam_guide"			"Guide"
@@ -3832,7 +3815,6 @@ Faites-vous un nouvel ami Steam en envoyant un cadeau à une de vos connaissance
 "steam_editcontroller"	"Config. du contrôleur"
 "steam_menu_media" "Média"
 "steam_menu_tools" "Outils"
-"steam_menu_downloads" "Downloads"
 "steam_menu_friends" "Contacts"
 "steam_menu_servers" "Serveurs"
 "steam_menu_settings" "Paramètres"
@@ -4377,7 +4359,6 @@ Faites-vous un nouvel ami Steam en envoyant un cadeau à une de vos connaissance
 "Music_Track_Menu_ShowAlbumInUI" "Montrer l'album"
 "Music_Menu_Play" "Écouter"
 
-"Music_Transport_No_Tracks" " "
 "Music_Transport_X_Of_Y"	"%currentqueueentry% sur %queuecount% - %queueduration%"
 "Music_Transport_X_Tracks" "%queuecount% morceaux - %queueduration%"
 "Music_Transport_X_Track" "%queuecount% morceau - %queueduration%"
@@ -4425,7 +4406,6 @@ Faites-vous un nouvel ami Steam en envoyant un cadeau à une de vos connaissance
 "Music_Settings_EnableMediaKeys" "Activer les touches multimédia"
 "Music_Settings_Notification_Header" "Afficher une notification"
 "Music_Settings_LoggingCrawling" "Enregistrer un journal d'activité"
-"Music_Settings_EnableMediaKeys" "Enable Media Keys"
 "Music_Settings__SelectDirectory_Title"	"Sélectionnez une Bibliothèque musicale"
 "Music_Settings_ResetDatabase_Title" "Réinitialiser la base de données musicale"
 "Music_Settings_ResetDatabase_Text" "Voulez-vous vraiment réinitialiser la base de données musicale ?"
@@ -4465,8 +4445,6 @@ Faites-vous un nouvel ami Steam en envoyant un cadeau à une de vos connaissance
 "Music_TracksInfoLabel_NoTracks" "Pas de morceau"
 "Music_TracksInfoLabel_OneTrack" "1 morceau / %playlistduration%"
 "Music_TracksInfoLabel_MultipleTracks" "%playlisttrackcount% morceaux / %playlistduration%"
-
-"Music_Library_WindowTitle" "Music Library"
 
 "Music_Queue_Menu_CreatePlaylist" "Créer une Playlist"
 "Music_Queue_Menu_LoadPlaylist" "Remplacer la liste par la Playlist"

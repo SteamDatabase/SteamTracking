@@ -19,7 +19,6 @@
 "SteamUI_ConvertExistingInfo" "Конвертация установленной копии игры. Это может занять несколько минут."
 "SteamUI_ConversionCompleteInfo" "Предварительная загрузка завершена."
 
-"SteamUI_ConversionCompleteInfoFailed" " "
 "SteamUI_ConvertExistingStatus1" "Предварительная загрузка файлов %s1 с диска."
 "SteamUI_ConvertExistingStatus2" "Предварительная загрузка файлов %s1 с диска.."
 "SteamUI_ConvertExistingStatus3" "Предварительная загрузка файлов %s1 с диска..."
@@ -1262,7 +1261,6 @@
 "Steam_PreallocateAppStatus"	"Выделение места на диске для %s1..."
 "Steam_ValidateAppStatus"	"Поиск существующих файлов для %s1 ..."
 
-"Steam_CDKeyAlreadyRegistered_Title"	"Steam - Product Code Error"
 "Steam_CDKeyCafe"			"На этом аккаунте нельзя регистрировать цифровые ключи."
 
 "Steam_BrowseGames"		"Обзор игр…"
@@ -1328,7 +1326,6 @@
 "Steam_PurchaseError_AllAppsInSubscriptionAlreadyOwned"	"У вас уже есть все эти игры.\nВы можете получить к ним доступ через вашу библиотеку игр Steam."
 "SteamUI_ProductRegistrationWizard_Title"	"Активация продукта"
 "Steam_Install_AutoLaunchGame"		"Играть в %game%"
-"Steam_Install_AutoLaunchGamesList"	"Open Games Library"
 
 "Steam_UnableToPreload" "Серверы Steam в данный момент слишком заняты и не могут осуществить предварительную\nзагрузку %game%.\nПовторите попытку через несколько часов."
 "Steam_Error_Preload_Title" "Предварительная загрузка - Ошибка"
@@ -1645,9 +1642,6 @@
 "Steam_Store_TabTitle"		"Магазин"
 "Steam_Tools_TabTitle"		"Инструменты"
 
-"Steam_Root_Title" 	"Steam"
-"Steam_Root_Title_Internal" 	"Steam"
-
 "Steam_Account_Name"	"%account%"
 
 "Steam_Universe_Internal" 	"[%universe%]"
@@ -1664,7 +1658,6 @@
 "Steam_Settings_Upper"	"ОПЦИИ"
 "Steam_Support_Upper"	"ПОДДЕРЖКА"
 
-"Steam_Properties"	"Properties"
 "Steam_Launch"		"Запустить"
 "Steam_LaunchVR"	"Играть в режиме VR"
 "Steam_Watch_Video"	"Смотреть"
@@ -2670,7 +2663,6 @@
 "Steam_Country_UA"		"Украина"
 "Steam_Country_AE"		"Объединенные Арабские Эмираты"
 "Steam_Country_GB"		"Великобритания"
-"Steam_Country_US"		"United States"
 "Steam_Country_UM"		"Внешние малые острова США"
 "Steam_Country_UY"		"Уругвай"
 "Steam_Country_UZ"		"Узбекистан"
@@ -3111,11 +3103,6 @@
 "Steam_ContentBetaOptOutOK"	"Вы вышли из программы бета-тестирования."
 "Steam_ContentBetaOptOutProblem"	"Произошла ошибка при попытке выхода из участия в бета-тестировании."
 
-"Steam_SpokenLanguageTestTitle"	"Left 4 Dead — Язык речи"
-"Steam_SpokenLanguageTestExplanation"	"The spoken audio in Left 4 Dead can be played in <current language>, or in English with <current language> subtitles. Which would you prefer?/n(You can always change these settings later within the game.)"
-"Steam_SpokenLanguageTestRadioButtonCurrent"	"Воспроизводить речь на русском языке"
-"Steam_SpokenLanguageTestRadioButtonEnglish"	"Play spoken audio in the original English with optional <current language> subtitles/n(Requires a 1GB download)"
-
 "Steam_Settings_NotifyMeWithSteamInstantMessages"	"Уведомлять меня об изменениях или дополнениях для моих игр, а также о новых и готовящихся к выходу играх."
 "Steam_Settings_DownloadsTitle"	"Загрузки"
 "Steam_Settings_CloudTitle"	"Cloud"
@@ -3132,10 +3119,6 @@
 "Steam_RequestingLegacyKey" "Требуется ключ..."
 "Steam_LegacyCDKey_Title" "Цифровой ключ %game%"
 "Steam_CopyLegacyKey_ToClipboard" "Скопировать в буфер обмена"
-
-"Steam_GuestPassAccept_LinkURLServiceUnavailable"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=550"
-"Steam_GuestPassRedeemed_LinkURLServiceUnavailable"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=550"
-"Steam_GuestPasses_LinkURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=549"
 
 "Steam_CityLifeDeluxe_LaunchBuildingEditor"	"Запустить редактор персональной подстройки"
 
@@ -3376,6 +3359,15 @@
 "Steam_ServerBrowserPingRateInfo"	"Если у вас возникают проблемы с соединением при просмотре игровых серверов, попробуйте уменьшить это значение."
 "Steam_ServerBrowserPingRateDefault"	"Автоматически (%PingsPerMin%)"
 
+"Steam_TextFilterSettingLabel"									"Фильтрация чата"
+"Steam_TextFilterStatus_SteamLabOptedOut"						"Новинка из лабораторий Steam уже доступна"
+"Steam_TextFilterStatus_Enabled"								"Текущая настройка: скрывать ругательства и оскорбления"
+"Steam_TextFilterStatus_Enabled_IgnoreFriends"					"Текущая настройка: скрывать ругательства и оскорбления ото всех, кроме друзей"
+"Steam_TextFilterStatus_EnabledAllowProfanity"					"Текущая настройка: показывать ругательства, но скрывать оскорбления"
+"Steam_TextFilterStatus_EnabledAllowProfanity_IgnoreFriends"	"Текущая настройка: показывать ругательства, но скрывать оскорбления ото всех, кроме друзей"
+"Steam_TextFilterStatus_Disabled"								"Текущая настройка: показывать ругательства и оскорбления"
+"Steam_TextFilterSettingURL"									"Изменить настройки фильтрации чата"
+
 "Steam_SettingsInGameScreenshotFolder"	"Папка скриншотов"
 "Steam_SettingsInGameTitle"	"Оверлей Steam"
 
@@ -3521,9 +3513,9 @@
 "Steam_GetTwoFactorCode_ResultFailure" "Не удалось подключиться к серверам Steam."
 "Steam_GetTwoFactorCode_ResultFailureDetails" "Не удалось подключиться к серверам Steam. Пожалуйста, попробуйте позже."
 
-"Steam_SpokenLanguageTestTitle"	"Left 4 Dead - Spoken audio language"
+"Steam_SpokenLanguageTestTitle"	"Left 4 Dead — Язык речи"
 "Steam_SpokenLanguageTestExplanation"	"Устная речь в Left 4 Dead может воспроизводиться на русском языке или на английском с русскими субтитрами. Какой вариант вам больше нравится?\n(Данную настройку всегда можно изменить, находясь в игре.)"
-"Steam_SpokenLanguageTestRadioButtonCurrent"	"Play spoken audio in <current language>"
+"Steam_SpokenLanguageTestRadioButtonCurrent"	"Воспроизводить речь на русском языке"
 "Steam_SpokenLanguageTestRadioButtonEnglish"	"Воспроизводить речь по-английски с русскими субтитрами \n(Потребуется загрузить 1 Гб данных)"
 
 "Steam_CannotInstallInOfflineMode"		"Установка игр в автономном режиме невозможна.\n\nЗакройте и перезапустите Steam, а затем выберите «Перейти в онлайн».\n"
@@ -3816,7 +3808,6 @@
 "steam_links"			"Ссылки"
 "steam_achievements"		"Достижения"
 "steam_ogg"			"Группы"
-"steam_stats"			"Stats"
 "steam_dlc"			"Доп. контент"
 "steam_cdkeylink"		"Цифровой ключ"
 "steam_guide"			"Руководство"
@@ -3824,7 +3815,6 @@
 "steam_editcontroller"	"Настройки контроллера"
 "steam_menu_media" "Трейлеры"
 "steam_menu_tools" "Инструменты"
-"steam_menu_downloads" "Downloads"
 "steam_menu_friends" "Друзья"
 "steam_menu_servers" "Серверы"
 "steam_menu_settings" "Настройки"
@@ -4369,7 +4359,6 @@
 "Music_Track_Menu_ShowAlbumInUI" "Показать альбом"
 "Music_Menu_Play" "Воспроизвести"
 
-"Music_Transport_No_Tracks" " "
 "Music_Transport_X_Of_Y"	"%currentqueueentry% из %queuecount% - %queueduration%"
 "Music_Transport_X_Tracks" "Композиций: %queuecount% - %queueduration%"
 "Music_Transport_X_Track" "Композиций: %queuecount% - %queueduration%"
@@ -4417,7 +4406,6 @@
 "Music_Settings_EnableMediaKeys" "Включить медиа-клавиши"
 "Music_Settings_Notification_Header" "Показывать уведомление"
 "Music_Settings_LoggingCrawling" "Вести журнал сканирования"
-"Music_Settings_EnableMediaKeys" "Enable Media Keys"
 "Music_Settings__SelectDirectory_Title"	"Выбрать музыкальную библиотеку"
 "Music_Settings_ResetDatabase_Title" "Сброс локальной базы музыки"
 "Music_Settings_ResetDatabase_Text" "Вы уверены, что хотите сбросить базу музыки?"
@@ -4457,8 +4445,6 @@
 "Music_TracksInfoLabel_NoTracks" "Нет композиций"
 "Music_TracksInfoLabel_OneTrack" "Композиций: 1 / %playlistduration%"
 "Music_TracksInfoLabel_MultipleTracks" "Композиций: %playlisttrackcount% / %playlistduration%"
-
-"Music_Library_WindowTitle" "Music Library"
 
 "Music_Queue_Menu_CreatePlaylist" "Создать плейлист"
 "Music_Queue_Menu_LoadPlaylist" "Заменить очередь плейлистом"

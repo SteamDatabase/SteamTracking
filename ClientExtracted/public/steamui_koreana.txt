@@ -21,7 +21,6 @@
 "SteamUI_ConvertExistingInfo" "설치된 기존 게임을 변환합니다. 약간의 시간이 걸릴 수 있습니다."
 "SteamUI_ConversionCompleteInfo" "Steam 미리받기가 완료되었습니다."
 
-"SteamUI_ConversionCompleteInfoFailed" " "
 "SteamUI_ConvertExistingStatus1" "%s1 개의 파일을 미리받는 중"
 "SteamUI_ConvertExistingStatus2" "%s1 개의 파일을 미리받는 중.."
 "SteamUI_ConvertExistingStatus3" "%s1 개의 파일을 미리받는 중..."
@@ -1268,7 +1267,6 @@
 "Steam_PreallocateAppStatus"	"%s1 설치를 위해 공간을 확보하는 중 ..."
 "Steam_ValidateAppStatus"	"이미 있는 %s1 파일을 찾는 중 ..."
 
-"Steam_CDKeyAlreadyRegistered_Title"	"Steam - Product Code Error"
 "Steam_CDKeyCafe"			"이 계정에서는 제품 코드를 등록할 수 없습니다."
 
 "Steam_BrowseGames"		"게임 검색..."
@@ -1334,7 +1332,6 @@
 "Steam_PurchaseError_AllAppsInSubscriptionAlreadyOwned"	"이미 목록 내의 모든 게임을 보유하고 계십니다.\nSteam 게임 라이브러리에서 해당 제품을 이용할 수 있습니다."
 "SteamUI_ProductRegistrationWizard_Title"	"제품 등록"
 "Steam_Install_AutoLaunchGame"		"지금 %game% 플레이하기"
-"Steam_Install_AutoLaunchGamesList"	"Open Games Library"
 
 "Steam_UnableToPreload" "Steam은 현재 이 이상의 %game% 미리받기 요청을 처리하기에는 너무 혼잡합니다.\n몇 시간 후에 다시 시도하십시오."
 "Steam_Error_Preload_Title" "미리받기 - 오류"
@@ -1652,9 +1649,6 @@
 "Steam_Store_TabTitle"		"상점"
 "Steam_Tools_TabTitle"		"도구"
 
-"Steam_Root_Title" 	"Steam"
-"Steam_Root_Title_Internal" 	"Steam"
-
 "Steam_Account_Name"	"%account%"
 
 "Steam_Universe_Internal" 	"[%universe%]"
@@ -1671,7 +1665,6 @@
 "Steam_Settings_Upper"	"설정"
 "Steam_Support_Upper"	"지원"
 
-"Steam_Properties"	"Properties"
 "Steam_Launch"		"플레이"
 "Steam_LaunchVR"	"VR로 플레이"
 "Steam_Watch_Video"	"보기"
@@ -2677,7 +2670,6 @@
 "Steam_Country_UA"		"우크라이나"
 "Steam_Country_AE"		"아랍 에미리트 연합"
 "Steam_Country_GB"		"영국"
-"Steam_Country_US"		"United States"
 "Steam_Country_UM"		"미국령 군소 제도"
 "Steam_Country_UY"		"우루과이"
 "Steam_Country_UZ"		"우즈베키스탄"
@@ -3120,11 +3112,6 @@ Windows에 관리자로 로그인해야 합니다.
 "Steam_ContentBetaOptOutOK"	"베타 콘텐츠 테스팅이 취소되었습니다."
 "Steam_ContentBetaOptOutProblem"	"베타 콘텐츠 테스팅을 취소하는 도중 오류가 발생하였습니다."
 
-"Steam_SpokenLanguageTestTitle"	"Left 4 Dead - 음성 오디오 언어"
-"Steam_SpokenLanguageTestExplanation"	"The spoken audio in Left 4 Dead can be played in <current language>, or in English with <current language> subtitles. Which would you prefer?/n(You can always change these settings later within the game.)"
-"Steam_SpokenLanguageTestRadioButtonCurrent"	"음성 오디오를 <현재 언어>로 재생"
-"Steam_SpokenLanguageTestRadioButtonEnglish"	"Play spoken audio in the original English with optional <current language> subtitles/n(Requires a 1GB download)"
-
 "Steam_Settings_NotifyMeWithSteamInstantMessages"	"내 게임, 신규 또는 출시 예정 제품에 대한 추가 또는 변경 사항이 있을 경우 알림을 받습니다."
 "Steam_Settings_DownloadsTitle"	"다운로드"
 "Steam_Settings_CloudTitle"	"클라우드"
@@ -3141,10 +3128,6 @@ Windows에 관리자로 로그인해야 합니다.
 "Steam_RequestingLegacyKey" "키 요청 중..."
 "Steam_LegacyCDKey_Title" "%game% CD 키"
 "Steam_CopyLegacyKey_ToClipboard" "키를 클립보드로 복사"
-
-"Steam_GuestPassAccept_LinkURLServiceUnavailable"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=550"
-"Steam_GuestPassRedeemed_LinkURLServiceUnavailable"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=550"
-"Steam_GuestPasses_LinkURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=549"
 
 "Steam_CityLifeDeluxe_LaunchBuildingEditor"	"사용자 정의 편집기 작성 시작"
 
@@ -3385,6 +3368,7 @@ Windows에 관리자로 로그인해야 합니다.
 "Steam_ServerBrowserPingRateInfo"	"게임 서버를 검색하는 도중 연결 관련 문제가 발생한다면 해당 값을 낮춘 후 다시 시도해 보십시오."
 "Steam_ServerBrowserPingRateDefault"	"자동(%PingsPerMin%)"
 
+
 "Steam_SettingsInGameScreenshotFolder"	"스크린샷 폴더"
 "Steam_SettingsInGameTitle"	"Steam 오버레이"
 
@@ -3530,9 +3514,9 @@ Windows에 관리자로 로그인해야 합니다.
 "Steam_GetTwoFactorCode_ResultFailure" "Steam 서버 접속에 실패했습니다."
 "Steam_GetTwoFactorCode_ResultFailureDetails" "Steam 서버 접속에 실패했습니다. 잠시 뒤 다시 시도해 주세요."
 
-"Steam_SpokenLanguageTestTitle"	"Left 4 Dead - Spoken audio language"
+"Steam_SpokenLanguageTestTitle"	"Left 4 Dead - 음성 오디오 언어"
 "Steam_SpokenLanguageTestExplanation"	"Left 4 Dead의 음성 오디오는 <현재 언어>로 또는 영어와 <현재 언어> 자막과 함께 재생될 수 있습니다. 원하는 언어를 선택하십시오.\n(나중에 게임 내에서 이러한 설정을 변경할 수 있습니다.)"
-"Steam_SpokenLanguageTestRadioButtonCurrent"	"Play spoken audio in <current language>"
+"Steam_SpokenLanguageTestRadioButtonCurrent"	"음성 오디오를 <현재 언어>로 재생"
 "Steam_SpokenLanguageTestRadioButtonEnglish"	"음성을 영어와 < 현재 언어 > (설정) 자막과 함께 재생\n(1GB 크기의 파일을 다운로드해야 합니다.)"
 
 "Steam_CannotInstallInOfflineMode"		"Steam이 오프라인 모드에 있는 경우 게임을 설치할 수 없습니다.\nSteam을 끝내고 다시 시작한 후 '온라인으로 전환'을 선택하세요."
@@ -3824,7 +3808,6 @@ Windows에 관리자로 로그인해야 합니다.
 "steam_links"			"링크"
 "steam_achievements"		"도전 과제"
 "steam_ogg"			"관련 그룹"
-"steam_stats"			"Stats"
 "steam_dlc"			"DLC"
 "steam_cdkeylink"		"CD 키"
 "steam_guide"			"가이드"
@@ -3832,7 +3815,6 @@ Windows에 관리자로 로그인해야 합니다.
 "steam_editcontroller"	"컨트롤러 설정"
 "steam_menu_media" "미디어"
 "steam_menu_tools" "도구"
-"steam_menu_downloads" "Downloads"
 "steam_menu_friends" "친구"
 "steam_menu_servers" "서버"
 "steam_menu_settings" "설정"
@@ -4377,7 +4359,6 @@ Windows에 관리자로 로그인해야 합니다.
 "Music_Track_Menu_ShowAlbumInUI" "앨범 보기"
 "Music_Menu_Play" "재생"
 
-"Music_Transport_No_Tracks" " "
 "Music_Transport_X_Of_Y"	"%queuecount% 중 %currentqueueentry% - %queueduration%"
 "Music_Transport_X_Tracks" "트랙 %queuecount% 개 - %queueduration%"
 "Music_Transport_X_Track" "%queuecount% 트랙 - %queueduration%"
@@ -4425,7 +4406,6 @@ Windows에 관리자로 로그인해야 합니다.
 "Music_Settings_EnableMediaKeys" "미디어 키 활성화"
 "Music_Settings_Notification_Header" "알림 표시"
 "Music_Settings_LoggingCrawling" "활동 로그 검색 저장"
-"Music_Settings_EnableMediaKeys" "Enable Media Keys"
 "Music_Settings__SelectDirectory_Title"	"음악 라이브러리 선택"
 "Music_Settings_ResetDatabase_Title" "로컬 음악 데이터베이스 초기화"
 "Music_Settings_ResetDatabase_Text" "음악 데이터베이스를 초기화 하시겠습니까?"
@@ -4465,8 +4445,6 @@ Windows에 관리자로 로그인해야 합니다.
 "Music_TracksInfoLabel_NoTracks" "트랙 없음"
 "Music_TracksInfoLabel_OneTrack" "1 트랙 / %playlistduration%"
 "Music_TracksInfoLabel_MultipleTracks" "%playlisttrackcount% 트랙 / %playlistduration%"
-
-"Music_Library_WindowTitle" "Music Library"
 
 "Music_Queue_Menu_CreatePlaylist" "재생 목록 만들기"
 "Music_Queue_Menu_LoadPlaylist" "대기열을 재생 목록으로 바꾸기"

@@ -19,7 +19,6 @@
 "SteamUI_ConvertExistingInfo" "Конвертиране на съществуваща инсталация на игра. Това може да отнеме няколко минути."
 "SteamUI_ConversionCompleteInfo" "Предварителното зареждане в Steam е готово."
 
-"SteamUI_ConversionCompleteInfoFailed" " "
 "SteamUI_ConvertExistingStatus1" "Предварително зареждане на файловете на %s1 от диск."
 "SteamUI_ConvertExistingStatus2" "Предварително зареждане на файловете на %s1 от диск.."
 "SteamUI_ConvertExistingStatus3" "Предварително зареждане на файловете на %s1 от диск..."
@@ -37,7 +36,10 @@
 наистина трудно за отгатване — използвайте поне 8 знака."
 "WelcomeToSteamPassword" "Парола"
 "WelcomeToSteamRetypePassword" "Пренапишете паролата"
-"WelcomeAccountCreateComplete" "Готови сте! Благодарим Ви, че използвате Steam. Програмата се намира в системната лента — обикновено най-долу вдясно на екрана Ви. За да отворите Steam, просто цъкнете с десния бутон върху иконата му."
+"WelcomeAccountCreateComplete" "Готови сте! Благодарим Ви, че използвате Steam. Програмата
+се намира в системната лента — обикновено най-долу вдясно
+на екрана Ви. С цел да имате достъп до Steam, кликнете с
+десния бутон на мишката върху иконата му."
 
 "SteamApp_Description"	"Приложение за ръководене и пускане на игри в Steam"
 
@@ -59,7 +61,10 @@
 "SteamRootBrowse" "Преглед на игри"
 "SteamRootLabel7" "Намиране на нови игри"
 
-"Steam_trayHint" "Steam е стартиран в системната лента. За да отворите Steam или за да излезете от него, просто кликнете с десен бутон върху иконата му."
+"Steam_trayHint" "Steam работи в системната лента. С цел да
+имате достъп до Steam или да излезе от
+него, кликнете с десния бутон на мишката
+върху иконата му."
 
 "Steam_SubscribeUserInfo" "Моля, въведете собственото и фамилното си име точно както са на кредитната Ви карта."
 "Steam_EmailAddress" "Е-поща"
@@ -1062,7 +1067,7 @@
 "SteamUI_ValveSurvey_Summary_UnknownMedia"	"Неопределен"
 
 "SteamUI_ValveSurvey_Summary_HDAvail"	"Общо налично дисково пространство: %s1 Mb"
-"SteamUI_ValveSurvey_Summary_FreeHDBlock"	"Най-голям сектор с празно пространство на твърдия диск: %s1 Mb"
+"SteamUI_ValveSurvey_Summary_FreeHDBlock"	"Най-голям блок с празно пространство на твърдия диск: %s1 Mb"
 
 "SteamUI_ValveSurvey_Summary_InstallDate"	"Дата на инсталиране на ОС: %s1"
 
@@ -1264,7 +1269,6 @@
 "Steam_PreallocateAppStatus"	"Разпределяне на дисковото пространство за %s1 …"
 "Steam_ValidateAppStatus"	"Откриване съществуващи файлове за %s1 …"
 
-"Steam_CDKeyAlreadyRegistered_Title"	"Steam - Product Code Error"
 "Steam_CDKeyCafe"			"Нямате възможност да регистрирате продуктови кодове към този акаунт."
 
 "Steam_BrowseGames"		"Преглед на игри…"
@@ -1330,7 +1334,6 @@
 "Steam_PurchaseError_AllAppsInSubscriptionAlreadyOwned"	"Вече имате всички тези игри.\nМожете да имате достъп до тях от библиотеката Ви със Steam игри."
 "SteamUI_ProductRegistrationWizard_Title"	"Активиране на продукт"
 "Steam_Install_AutoLaunchGame"		"Пускане на %game% сега"
-"Steam_Install_AutoLaunchGamesList"	"Open Games Library"
 
 "Steam_UnableToPreload" "Steam сървърите са прекалено натоварени, за да се справят с още предварителни сваляния на %game%.\nМоля, опитайте отново след няколко часа."
 "Steam_Error_Preload_Title" "Предварително сваляне — Грешка"
@@ -1613,7 +1616,7 @@
 "Steam_ShippingCountry"	"Държава"
 "Steam_ShippingPhone"	"Телефонен номер"
 
-"Steam_InvalidLoginTitle"	"Нужна е валидна информация за вход в Steam"
+"Steam_InvalidLoginTitle"	"Изисква се валидна инф. за вход в Steam"
 "Steam_InvalidLoginDetail"	"Steam не може да отчете валиден вход.\n\nМоля, влезте, за да продължите с ползването на Steam."
 "Steam_LoginElipsis"	"Вход…"
 "Steam_QuitButton"	"Изход"
@@ -1647,9 +1650,6 @@
 "Steam_Store_TabTitle"		"Магазин"
 "Steam_Tools_TabTitle"		"Инструменти"
 
-"Steam_Root_Title" 	"Steam"
-"Steam_Root_Title_Internal" 	"Steam"
-
 "Steam_Account_Name"	"%account%"
 
 "Steam_Universe_Internal" 	"[%universe%]"
@@ -1666,7 +1666,6 @@
 "Steam_Settings_Upper"	"НАСТРОЙКИ"
 "Steam_Support_Upper"	"ПОДДРЪЖКА"
 
-"Steam_Properties"	"Properties"
 "Steam_Launch"		"Пускане"
 "Steam_LaunchVR"	"Пускане във ВР"
 "Steam_Watch_Video"	"Гледане"
@@ -2673,7 +2672,6 @@
 "Steam_Country_UA"		"Украйна"
 "Steam_Country_AE"		"Обединени арабски емирства"
 "Steam_Country_GB"		"Обединено кралство"
-"Steam_Country_US"		"United States"
 "Steam_Country_UM"		"Малки далечни острови на САЩ"
 "Steam_Country_UY"		"Уругвай"
 "Steam_Country_UZ"		"Узбекистан"
@@ -2971,7 +2969,7 @@
 "SteamUI_P2P_PeerList_Col_BytesIn"	"MB получени"
 "SteamUI_P2P_PeerList_Col_BandwidthOut"	"Kbps изпратени"
 "SteamUI_P2P_PeerList_Col_BandwidthIn"	"Kbps получени"
-"SteamUI_P2P_PeerList_Col_Blocks"	"Части"
+"SteamUI_P2P_PeerList_Col_Blocks"	"Блокове"
 "SteamUI_P2P_PeerList_Col_State"	"Състояние"
 
 "SteamUI_P2P_PeerListTip_PeerId"	"Номер на пиъра\nSteam № на дистанционния пиър"
@@ -2982,7 +2980,7 @@
 "SteamUI_P2P_PeerListTip_BytesIn"	"MB получени"
 "SteamUI_P2P_PeerListTip_BandwidthOut"	"Kbps изпратени"
 "SteamUI_P2P_PeerListTip_BandwidthIn"	"Kbps получени"
-"SteamUI_P2P_PeerListTip_Blocks"	"Части\nВизуалното състояние на настройката на данни на дистанциран пиър"
+"SteamUI_P2P_PeerListTip_Blocks"	"Блокове\nВизуалeн статус на набора с данни за дистанционен пиър"
 "SteamUI_P2P_PeerListTip_State"		"Състояние на връзката"
 
 "SteamUI_P2P_FileList_Col_FileName"	"Име"
@@ -2992,7 +2990,7 @@
 "SteamUI_P2P_FileList_Col_ToGo"		"Готови"
 "SteamUI_P2P_FileList_Col_StartBlock"	"Стартиране"
 "SteamUI_P2P_FileList_Col_EndBlock"	"Край"
-"SteamUI_P2P_FileList_Col_NumBlocks"	"Части"
+"SteamUI_P2P_FileList_Col_NumBlocks"	"Блокове"
 "SteamUI_P2P_FileList_Col_Remaining"	"Оставащи"
 "SteamUI_P2P_FileList_Col_Progress"	"Напредък"
 
@@ -3001,10 +2999,10 @@
 "SteamUI_P2P_FileListTip_Status"	"Прогрес за този файл"
 "SteamUI_P2P_FileListTip_Downloaded"	"Размер на свалени файлове"
 "SteamUI_P2P_FileListTip_ToGo"		"Размер на файлове, оставащи за сваляне"
-"SteamUI_P2P_FileListTip_StartBlock"	"Първи сектор за файла"
-"SteamUI_P2P_FileListTip_EndBlock"	"Краен сектор за файл"
-"SteamUI_P2P_FileListTip_NumBlocks"	"Общо сектори за файла"
-"SteamUI_P2P_FileListTip_Remaining"	"Брой на части, оставащи да се свалят"
+"SteamUI_P2P_FileListTip_StartBlock"	"Стартов блок за файла"
+"SteamUI_P2P_FileListTip_EndBlock"	"Краен блок за файла"
+"SteamUI_P2P_FileListTip_NumBlocks"	"Общо блокове за файла"
+"SteamUI_P2P_FileListTip_Remaining"	"Брой на блоковете, оставащи да бъдат свалени"
 "SteamUI_P2P_FileListTip_Progress"	"Статус на завършването"
 
 "SteamUI_P2P_ClientState_Unknown"	"Не е налично"
@@ -3035,7 +3033,7 @@
 "SteamUI_P2P_Logging_Enable"		"Включване на хронология"
 "SteamUI_P2P_LogWarnings"		"Хронология с предупреждения"
 "SteamUI_P2P_LogProtocolBase"		"Базова хронология на p2p съобщенията"
-"SteamUI_P2P_LogProtocolPieces"		"Хронология за преноса на p2p частите"
+"SteamUI_P2P_LogProtocolPieces"		"Хронология на съобщенията за прехвърляне на p2p блокове"
 "SteamUI_P2P_LogProtocolTracker"	"Хронология на p2p съобщения от тракера"
 "SteamUI_P2P_LogProtocolIntroducer"	"Базова хронология за събития на връзките в p2p"
 "SteamUI_P2P_LogProtocolVerbose"	"Хронология на общи p2p събития"
@@ -3119,11 +3117,6 @@ Windows до Windows XP Service Pack 2 или по-нов."
 "Steam_ContentBetaOptOutOK"	"Успешно отказване от бета съдържанието."
 "Steam_ContentBetaOptOutProblem"	"Имаше проблем при отказването от бетата."
 
-"Steam_SpokenLanguageTestTitle"	"Left 4 Dead — Говорим език"
-"Steam_SpokenLanguageTestExplanation"	"The spoken audio in Left 4 Dead can be played in <current language>, or in English with <current language> subtitles. Which would you prefer?/n(You can always change these settings later within the game.)"
-"Steam_SpokenLanguageTestRadioButtonCurrent"	"Пусни аудиото на <current language>"
-"Steam_SpokenLanguageTestRadioButtonEnglish"	"Play spoken audio in the original English with optional <current language> subtitles/n(Requires a 1GB download)"
-
 "Steam_Settings_NotifyMeWithSteamInstantMessages"	"Известявайте ме за допълнения и изменения на моите игри, новоизлезли, както и предстоящите издания."
 "Steam_Settings_DownloadsTitle"	"Сваляния"
 "Steam_Settings_CloudTitle"	"Облак"
@@ -3140,10 +3133,6 @@ Windows до Windows XP Service Pack 2 или по-нов."
 "Steam_RequestingLegacyKey" "Заявяване на ключ…"
 "Steam_LegacyCDKey_Title" "%game% CD ключ"
 "Steam_CopyLegacyKey_ToClipboard" "Копиране на ключа в клипборда"
-
-"Steam_GuestPassAccept_LinkURLServiceUnavailable"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=550"
-"Steam_GuestPassRedeemed_LinkURLServiceUnavailable"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=550"
-"Steam_GuestPasses_LinkURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=549"
 
 "Steam_CityLifeDeluxe_LaunchBuildingEditor"	"Пускане на персонализиращ редактор на изграждане"
 
@@ -3384,6 +3373,15 @@ Windows до Windows XP Service Pack 2 или по-нов."
 "Steam_ServerBrowserPingRateInfo"	"Ако имате проблеми с връзката, докато търсите сървъри за игра, опитайте да намалите тази стойност."
 "Steam_ServerBrowserPingRateDefault"	"Автоматично (%PingsPerMin%)"
 
+"Steam_TextFilterSettingLabel"									"Филтриране в чата"
+"Steam_TextFilterStatus_SteamLabOptedOut"						"Вече достъпно посредством Steam лабораториите"
+"Steam_TextFilterStatus_Enabled"								"Понастоящем е зададено да се филтрират ругатни и клевети"
+"Steam_TextFilterStatus_Enabled_IgnoreFriends"					"Понастоящем е зададено да се филтрират ругатни и клевети от всички останали, освен приятелите"
+"Steam_TextFilterStatus_EnabledAllowProfanity"					"Понастоящем е зададено да се позволяват ругатни, но клеветите се филтрират"
+"Steam_TextFilterStatus_EnabledAllowProfanity_IgnoreFriends"	"Понастоящем е зададено да се позволяват ругатни, но клеветите се филтрират от всички останали, освен приятелите"
+"Steam_TextFilterStatus_Disabled"								"Понастоящем е зададено да се позволяват ругатни и клевети"
+"Steam_TextFilterSettingURL"									"Промяна на предпочитанията за филтриране в чата"
+
 "Steam_SettingsInGameScreenshotFolder"	"Папка за снимки"
 "Steam_SettingsInGameTitle"	"Steam слоят"
 
@@ -3529,9 +3527,9 @@ Windows до Windows XP Service Pack 2 или по-нов."
 "Steam_GetTwoFactorCode_ResultFailure" "Неуспешно свързване към сървърите на Steam."
 "Steam_GetTwoFactorCode_ResultFailureDetails" "В момента не може да се свържете със сървърите на Steam. Моля, опитайте отново по-късно."
 
-"Steam_SpokenLanguageTestTitle"	"Left 4 Dead - Spoken audio language"
+"Steam_SpokenLanguageTestTitle"	"Left 4 Dead — Говорим език"
 "Steam_SpokenLanguageTestExplanation"	"Говоримият език в Left 4 Dead може да бъде възпроизведен на <current language> или на английски с <current language> субтитри. Кое предпочитате?\n(Винаги можете да промените тези настройки по-късно в играта.)"
-"Steam_SpokenLanguageTestRadioButtonCurrent"	"Play spoken audio in <current language>"
+"Steam_SpokenLanguageTestRadioButtonCurrent"	"Пусни аудиото на <current language>"
 "Steam_SpokenLanguageTestRadioButtonEnglish"	"Пусни оригинално английско аудио с допълнителни <current language> субтитри\n(Изисква сваляне на 1GB)"
 
 "Steam_CannotInstallInOfflineMode"		"Игрите не могат да бъдат инсталирани, когато Steam е в режим „Извън линия”.\nИзлезте и рестартирайте Steam, след което изберете режим „На линия”.\n"
@@ -3823,7 +3821,6 @@ Windows до Windows XP Service Pack 2 или по-нов."
 "steam_links"			"Връзки"
 "steam_achievements"		"Постижения"
 "steam_ogg"			"Свързани групи"
-"steam_stats"			"Stats"
 "steam_dlc"			"Сваляемо съдържание"
 "steam_cdkeylink"		"CD ключ"
 "steam_guide"			"Ръководство"
@@ -3831,7 +3828,6 @@ Windows до Windows XP Service Pack 2 или по-нов."
 "steam_editcontroller"	"Конфигурация за контролер"
 "steam_menu_media" "Медия"
 "steam_menu_tools" "Инструменти"
-"steam_menu_downloads" "Downloads"
 "steam_menu_friends" "Приятели"
 "steam_menu_servers" "Сървъри"
 "steam_menu_settings" "Настройки"
@@ -4376,7 +4372,6 @@ Windows до Windows XP Service Pack 2 или по-нов."
 "Music_Track_Menu_ShowAlbumInUI" "Показване на албума"
 "Music_Menu_Play" "Пускане"
 
-"Music_Transport_No_Tracks" " "
 "Music_Transport_X_Of_Y"	"%currentqueueentry% от %queuecount% — %queueduration%"
 "Music_Transport_X_Tracks" "%queuecount% песни — %queueduration%"
 "Music_Transport_X_Track" "%queuecount% песен — %queueduration%"
@@ -4424,7 +4419,6 @@ Windows до Windows XP Service Pack 2 или по-нов."
 "Music_Settings_EnableMediaKeys" "Вкл. на медийни клавиши"
 "Music_Settings_Notification_Header" "показване на известие"
 "Music_Settings_LoggingCrawling" "Запазване на хронология при сканиране"
-"Music_Settings_EnableMediaKeys" "Enable Media Keys"
 "Music_Settings__SelectDirectory_Title"	"Избиране на музикална библиотека"
 "Music_Settings_ResetDatabase_Title" "Нулиране на локалната музикална база данни"
 "Music_Settings_ResetDatabase_Text" "Сигурни ли сте, че искате да нулирате музикалната база данни?"
@@ -4464,8 +4458,6 @@ Windows до Windows XP Service Pack 2 или по-нов."
 "Music_TracksInfoLabel_NoTracks" "Няма песни"
 "Music_TracksInfoLabel_OneTrack" "1 песен / %playlistduration%"
 "Music_TracksInfoLabel_MultipleTracks" "%playlisttrackcount% песни / %playlistduration%"
-
-"Music_Library_WindowTitle" "Music Library"
 
 "Music_Queue_Menu_CreatePlaylist" "Създаване на списък с песни"
 "Music_Queue_Menu_LoadPlaylist" "Заменяне на опашката със списък от песни"

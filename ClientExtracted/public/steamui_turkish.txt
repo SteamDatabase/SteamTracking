@@ -21,7 +21,6 @@
 "SteamUI_ConvertExistingInfo" "Eski yüklemeniz dönüştürülüyor. Bu birkaç dakika sürebilir."
 "SteamUI_ConversionCompleteInfo" "Steam önyüklemesi tamamlandı."
 
-"SteamUI_ConversionCompleteInfoFailed" " "
 "SteamUI_ConvertExistingStatus1" "%s1 dosyaları diskten önyükleme yapılıyor."
 "SteamUI_ConvertExistingStatus2" "%s1 dosyaları diskten önyükleme yapılıyor.."
 "SteamUI_ConvertExistingStatus3" "%s1 dosyaları diskten önyükleme yapılıyor..."
@@ -1268,7 +1267,6 @@ Oyunu açmak %borrower% adlı kullanıcıya oyunu bırakma zamanının geldiğin
 "Steam_PreallocateAppStatus"	"%s1 için depolama alanı ayrılıyor..."
 "Steam_ValidateAppStatus"	"%s1 için mevcut dosyalar aranıyor..."
 
-"Steam_CDKeyAlreadyRegistered_Title"	"Steam - Product Code Error"
 "Steam_CDKeyCafe"			"Ürün kodlarını bu hesaba kaydedemezsiniz."
 
 "Steam_BrowseGames"		"Oyunlara göz at..."
@@ -1334,7 +1332,6 @@ Oyunu açmak %borrower% adlı kullanıcıya oyunu bırakma zamanının geldiğin
 "Steam_PurchaseError_AllAppsInSubscriptionAlreadyOwned"	"Zaten bu oyunlara sahipsiniz.\nBunlara Steam Oyun Kütüphanesinden ulaşabilirsiniz."
 "SteamUI_ProductRegistrationWizard_Title"	"Ürün Etkinleştirme"
 "Steam_Install_AutoLaunchGame"		"Şimdi %game% oyna"
-"Steam_Install_AutoLaunchGamesList"	"Open Games Library"
 
 "Steam_UnableToPreload" "Steam sunucuları şu an %game% önyüklemeleriyle çok meşgul.\nLütfen birkaç saat sonra tekrar deneyin."
 "Steam_Error_Preload_Title" "Önyükleme - Hata"
@@ -1652,9 +1649,6 @@ Değişikliklerin etkili olması için OSX platformundan çıkış yapmalısın�
 "Steam_Store_TabTitle"		"Mağaza"
 "Steam_Tools_TabTitle"		"Araçlar"
 
-"Steam_Root_Title" 	"Steam"
-"Steam_Root_Title_Internal" 	"Steam"
-
 "Steam_Account_Name"	"%account%"
 
 "Steam_Universe_Internal" 	"[%universe%]"
@@ -1671,7 +1665,6 @@ Değişikliklerin etkili olması için OSX platformundan çıkış yapmalısın�
 "Steam_Settings_Upper"	"AYARLAR"
 "Steam_Support_Upper"	"DESTEK"
 
-"Steam_Properties"	"Properties"
 "Steam_Launch"		"Oyna"
 "Steam_LaunchVR"	"VR'da Oyna"
 "Steam_Watch_Video"	"İzle"
@@ -2677,7 +2670,6 @@ Değişikliklerin etkili olması için OSX platformundan çıkış yapmalısın�
 "Steam_Country_UA"		"Ukrayna"
 "Steam_Country_AE"		"Birleşik Arap Emirlikleri"
 "Steam_Country_GB"		"Birleşik Krallık"
-"Steam_Country_US"		"United States"
 "Steam_Country_UM"		"ABD Minör Outlying Adaları"
 "Steam_Country_UY"		"Uruguay"
 "Steam_Country_UZ"		"Özbekistan"
@@ -3120,11 +3112,6 @@ Beta şimdi sona erdi - lütfen Steam'i yeniden başlatarak geçerli yayınlanma
 "Steam_ContentBetaOptOutOK"	"İçerik betasından başarıyla ayrıldınız."
 "Steam_ContentBetaOptOutProblem"	"İçerik betasından ayrılırken bir sorun oluştu."
 
-"Steam_SpokenLanguageTestTitle"	"Left 4 Dead - Seslendirme dili"
-"Steam_SpokenLanguageTestExplanation"	"The spoken audio in Left 4 Dead can be played in <current language>, or in English with <current language> subtitles. Which would you prefer?/n(You can always change these settings later within the game.)"
-"Steam_SpokenLanguageTestRadioButtonCurrent"	"Seslendirme dilini <current language> olarak ayarla"
-"Steam_SpokenLanguageTestRadioButtonEnglish"	"Play spoken audio in the original English with optional <current language> subtitles/n(Requires a 1GB download)"
-
 "Steam_Settings_NotifyMeWithSteamInstantMessages"	"Oyunlarımla ilgili eklemeler veya değişiklikler; yeni oyunlar ve pek yakında çıkacak oyunlar hakkında bana haber ver."
 "Steam_Settings_DownloadsTitle"	"İndirmeler"
 "Steam_Settings_CloudTitle"	"Cloud"
@@ -3141,10 +3128,6 @@ Beta şimdi sona erdi - lütfen Steam'i yeniden başlatarak geçerli yayınlanma
 "Steam_RequestingLegacyKey" "Anahtar isteniyor..."
 "Steam_LegacyCDKey_Title" "%game% CD anahtarı"
 "Steam_CopyLegacyKey_ToClipboard" "ANAHTARI PANOYA KOPYALA"
-
-"Steam_GuestPassAccept_LinkURLServiceUnavailable"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=550"
-"Steam_GuestPassRedeemed_LinkURLServiceUnavailable"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=550"
-"Steam_GuestPasses_LinkURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=549"
 
 "Steam_CityLifeDeluxe_LaunchBuildingEditor"	"YAPI KİŞİSELLEŞTİRME EDİTÖRÜNÜ BAŞLAT"
 
@@ -3385,6 +3368,7 @@ Steam üzerinden yeni bir arkadaş edinmek istiyorsanız tanıdığınız birine
 "Steam_ServerBrowserPingRateInfo"	"Oyun sunucularını taratırken bağlantı sorunları yaşıyorsanız, bu değeri düşürmeyi deneyin."
 "Steam_ServerBrowserPingRateDefault"	"Otomatik (%PingsPerMin%)"
 
+
 "Steam_SettingsInGameScreenshotFolder"	"Ekran görüntüsü klasörü"
 "Steam_SettingsInGameTitle"	"Steam Arayüzü"
 
@@ -3530,9 +3514,9 @@ Steam üzerinden yeni bir arkadaş edinmek istiyorsanız tanıdığınız birine
 "Steam_GetTwoFactorCode_ResultFailure" "Steam sunucularıyla bağlantı kurulamadı."
 "Steam_GetTwoFactorCode_ResultFailureDetails" "Steam sunucularına şu anda bağlantı sağlanamıyor. Lütfen daha sonra tekrar deneyin."
 
-"Steam_SpokenLanguageTestTitle"	"Left 4 Dead - Spoken audio language"
+"Steam_SpokenLanguageTestTitle"	"Left 4 Dead - Seslendirme dili"
 "Steam_SpokenLanguageTestExplanation"	"Left 4 Dead seslendirme dili <current language> veya İngilizce ve <current language> altyazılar şeklinde ayarlanır. Hangisini tercih edersiniz?\n(Bu ayarları istediğiniz zaman değiştirebilirsiniz.)"
-"Steam_SpokenLanguageTestRadioButtonCurrent"	"Play spoken audio in <current language>"
+"Steam_SpokenLanguageTestRadioButtonCurrent"	"Seslendirme dilini <current language> olarak ayarla"
 "Steam_SpokenLanguageTestRadioButtonEnglish"	"Seslendirme dilini orijinal İngilizce <current language> altyazılarla oynat\n(1GB indirme gerekir)"
 
 "Steam_CannotInstallInOfflineMode"		"Steam, Çevrimdışı Moddayken oyunları yükleyemez.\nSteam'i kapatıp yeniden başlatın ve 'Çevrimiçi ol'u seçin.\n"
@@ -3825,7 +3809,6 @@ Bu oyun için bir kategori ayarlamanız, o oyunu çabuk bulmanıza ve Kütüphan
 "steam_links"			"BAĞLANTILAR"
 "steam_achievements"		"Başarımlar"
 "steam_ogg"			"İlgili Gruplar"
-"steam_stats"			"Stats"
 "steam_dlc"			"DLC"
 "steam_cdkeylink"		"CD Anahtarı"
 "steam_guide"			"Rehber"
@@ -3833,7 +3816,6 @@ Bu oyun için bir kategori ayarlamanız, o oyunu çabuk bulmanıza ve Kütüphan
 "steam_editcontroller"	"Kontrolcü Yapılandırması"
 "steam_menu_media" "Medya"
 "steam_menu_tools" "Araçlar"
-"steam_menu_downloads" "Downloads"
 "steam_menu_friends" "Arkadaşlar"
 "steam_menu_servers" "Sunucular"
 "steam_menu_settings" "Ayarlar"
@@ -4378,7 +4360,6 @@ Bu oyun için bir kategori ayarlamanız, o oyunu çabuk bulmanıza ve Kütüphan
 "Music_Track_Menu_ShowAlbumInUI" "Albümü Göster"
 "Music_Menu_Play" "Oynat"
 
-"Music_Transport_No_Tracks" " "
 "Music_Transport_X_Of_Y"	"%currentqueueentry% / %queuecount% - %queueduration%"
 "Music_Transport_X_Tracks" "%queuecount% parça - %queueduration%"
 "Music_Transport_X_Track" "%queuecount% parça - %queueduration%"
@@ -4426,7 +4407,6 @@ Bu oyun için bir kategori ayarlamanız, o oyunu çabuk bulmanıza ve Kütüphan
 "Music_Settings_EnableMediaKeys" "Medya Tuşlarını Etkinleştir"
 "Music_Settings_Notification_Header" "Bir bildirim görüntüle"
 "Music_Settings_LoggingCrawling" "Tarama aktivitesi günlüğünü kaydet"
-"Music_Settings_EnableMediaKeys" "Enable Media Keys"
 "Music_Settings__SelectDirectory_Title"	"Müzik Kütüphanesi Seç"
 "Music_Settings_ResetDatabase_Title" "Yerel Müzik Veritabanını Sıfırla"
 "Music_Settings_ResetDatabase_Text" "Müzik veritabanını sıfırlamak istediğinize emin misiniz?"
@@ -4466,8 +4446,6 @@ Bu oyun için bir kategori ayarlamanız, o oyunu çabuk bulmanıza ve Kütüphan
 "Music_TracksInfoLabel_NoTracks" "Parça yok"
 "Music_TracksInfoLabel_OneTrack" "1 parça / %playlistduration%"
 "Music_TracksInfoLabel_MultipleTracks" "%playlisttrackcount% parça / %playlistduration%"
-
-"Music_Library_WindowTitle" "Music Library"
 
 "Music_Queue_Menu_CreatePlaylist" "Çalma Listesi Oluştur"
 "Music_Queue_Menu_LoadPlaylist" "Kuyruğu Çalma Listesiyle Değiştir"

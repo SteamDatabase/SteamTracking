@@ -21,7 +21,6 @@
 "SteamUI_ConvertExistingInfo" "Převádění stávající instalace hry. Tato operace může trvat několik minut."
 "SteamUI_ConversionCompleteInfo" "Předběžné stahování ve službě Steam bylo dokončeno."
 
-"SteamUI_ConversionCompleteInfoFailed" " "
 "SteamUI_ConvertExistingStatus1" "Předběžné stahování %s1 souborů z disku."
 "SteamUI_ConvertExistingStatus2" "Předběžné stahování %s1 souborů z disku.."
 "SteamUI_ConvertExistingStatus3" "Předběžné stahování %s1 souborů z disku…"
@@ -1268,7 +1267,6 @@ Tato operace zabere jenom okamžik."
 "Steam_PreallocateAppStatus"	"Přiřazování místa na disku pro hru %s1 ..."
 "Steam_ValidateAppStatus"	"Hledání existujících souborů pro %s1 ..."
 
-"Steam_CDKeyAlreadyRegistered_Title"	"Steam - Product Code Error"
 "Steam_CDKeyCafe"			"Na tomto účtu nemůžete aktivovat kódy produktů."
 
 "Steam_BrowseGames"		"Procházet hry..."
@@ -1334,7 +1332,6 @@ Tato operace zabere jenom okamžik."
 "Steam_PurchaseError_AllAppsInSubscriptionAlreadyOwned"	"Již vlastníte všechny tyto hry.\nNaleznete je v Knihovně her služby Steam."
 "SteamUI_ProductRegistrationWizard_Title"	"Aktivace produktu"
 "Steam_Install_AutoLaunchGame"		"Hrát hru %game% nyní"
-"Steam_Install_AutoLaunchGamesList"	"Open Games Library"
 
 "Steam_UnableToPreload" "Servery služby Steam jsou momentálně příliš vytížené a nemohou předběžně stáhnout hru %game%.\nVyčkejte několik hodin a zkuste to znovu."
 "Steam_Error_Preload_Title" "Chyba předběžného zavedení"
@@ -1652,9 +1649,6 @@ Změna se projeví až po odhlášení z OSX."
 "Steam_Store_TabTitle"		"Obchod"
 "Steam_Tools_TabTitle"		"Nástroje"
 
-"Steam_Root_Title" 	"Steam"
-"Steam_Root_Title_Internal" 	"Steam"
-
 "Steam_Account_Name"	"%account%"
 
 "Steam_Universe_Internal" 	"[%universe%]"
@@ -1671,7 +1665,6 @@ Změna se projeví až po odhlášení z OSX."
 "Steam_Settings_Upper"	"NASTAVENÍ"
 "Steam_Support_Upper"	"PODPORA"
 
-"Steam_Properties"	"Properties"
 "Steam_Launch"		"Hrát"
 "Steam_LaunchVR"	"Hrát ve VR"
 "Steam_Watch_Video"	"Přehrát"
@@ -1719,7 +1712,7 @@ Změna se projeví až po odhlášení z OSX."
 "steam_store"		"Obchod"
 "steam_mygames"		"Hry"
 "steam_tools"		"Nástroje"
-"steam_about"		"O službě Steam"
+"steam_about"		"O klientu služby Steam"
 
 "steam_menu_minigameslist"	"Přepnout na malý seznam her"
 "steam_menu_fullgameslist"	"Přepnout na plné zobrazení"
@@ -1830,7 +1823,7 @@ Změna se projeví až po odhlášení z OSX."
 "Steam_PublishFile_Failed_AccessDenied"		"Pro publikaci souborů k tomuto programu jej nejdříve musíte vlastnit. Před dalšími pokusy o publikaci si prosím tento produkt nejdříve zakupte."
 "Steam_PublishFile_Failed_SyncError"	"Při synchronizaci souboru s funkcí Steam Cloud došlo k problému. Před pokračováním bude možná nutné nejdříve vyřešit konflikt mezi kopií souboru na tomto počítači a kopií na serverech funkce Steam Cloud."
 
-"Steam_About_Title"				"O službě Steam"
+"Steam_About_Title"				"O klientu služby Steam"
 "Steam_About_Info"				"Klient služby Steam"
 "Steam_About_Build"				"Datum vytvoření: %build_date%, %build_time%"
 "Steam_About_InterfaceVer"			"Rozhraní API služby Steam: v%build_interface%"
@@ -2677,7 +2670,6 @@ Změna se projeví až po odhlášení z OSX."
 "Steam_Country_UA"		"Ukrajina"
 "Steam_Country_AE"		"Spojené arabské emiráty"
 "Steam_Country_GB"		"Spojené království"
-"Steam_Country_US"		"United States"
 "Steam_Country_UM"		"Menší odlehlé ostrovy USA"
 "Steam_Country_UY"		"Uruguay"
 "Steam_Country_UZ"		"Uzbekistán"
@@ -3119,11 +3111,6 @@ Beta verze byla ukončena – restartujte Steam pro návrat na aktuální verzi.
 "Steam_ContentBetaOptOutOK"	"Odhlášení z beta verze proběhlo úspěšně."
 "Steam_ContentBetaOptOutProblem"	"Při pokusu o odhlášení z beta verze došlo k chybě."
 
-"Steam_SpokenLanguageTestTitle"	"Left 4 Dead – Jazyk mluveného slova"
-"Steam_SpokenLanguageTestExplanation"	"The spoken audio in Left 4 Dead can be played in <current language>, or in English with <current language> subtitles. Which would you prefer?/n(You can always change these settings later within the game.)"
-"Steam_SpokenLanguageTestRadioButtonCurrent"	"Přehrávat mluvené slovo v jazyce <current language>"
-"Steam_SpokenLanguageTestRadioButtonEnglish"	"Play spoken audio in the original English with optional <current language> subtitles/n(Requires a 1GB download)"
-
 "Steam_Settings_NotifyMeWithSteamInstantMessages"	"Upozorňovat na změny nebo rozšíření mých her a na nové a nadcházející tituly"
 "Steam_Settings_DownloadsTitle"	"Stahování"
 "Steam_Settings_CloudTitle"	"Cloud"
@@ -3140,10 +3127,6 @@ Beta verze byla ukončena – restartujte Steam pro návrat na aktuální verzi.
 "Steam_RequestingLegacyKey" "Aplikace požaduje kód..."
 "Steam_LegacyCDKey_Title" "CD klíč hry %game%"
 "Steam_CopyLegacyKey_ToClipboard" "Kopírovat klíč do schránky"
-
-"Steam_GuestPassAccept_LinkURLServiceUnavailable"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=550"
-"Steam_GuestPassRedeemed_LinkURLServiceUnavailable"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=550"
-"Steam_GuestPasses_LinkURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=549"
 
 "Steam_CityLifeDeluxe_LaunchBuildingEditor"	"Spustit editor pro vytváření úprav"
 
@@ -3384,6 +3367,7 @@ Odešlete dárek někomu z vašich známých a vytvořte tak nového přítele.
 "Steam_ServerBrowserPingRateInfo"	"Pokud budete mít při procházení herních serverů problémy s připojením, zkuste snížit tuto hodnotu."
 "Steam_ServerBrowserPingRateDefault"	"Automaticky (%PingsPerMin%)"
 
+
 "Steam_SettingsInGameScreenshotFolder"	"Složka se snímky obrazovky"
 "Steam_SettingsInGameTitle"	"Překrytí služby Steam ve hře"
 
@@ -3529,9 +3513,9 @@ Odešlete dárek někomu z vašich známých a vytvořte tak nového přítele.
 "Steam_GetTwoFactorCode_ResultFailure" "Nepodařilo se kontaktovat servery služby Steam."
 "Steam_GetTwoFactorCode_ResultFailureDetails" "Nepodařilo se navázat spojení se servery služby Steam. Zkuste to znovu později."
 
-"Steam_SpokenLanguageTestTitle"	"Left 4 Dead - Spoken audio language"
+"Steam_SpokenLanguageTestTitle"	"Left 4 Dead – Jazyk mluveného slova"
 "Steam_SpokenLanguageTestExplanation"	"Mluvené slovo ve hře Left 4 Dead lze přehrávat v jazyce <current language> nebo v angličtině s titulky v jazyce <current language>. Čemu dáváte přednost?\n(Toto nastavení lze ve hře kdykoli později změnit.)"
-"Steam_SpokenLanguageTestRadioButtonCurrent"	"Play spoken audio in <current language>"
+"Steam_SpokenLanguageTestRadioButtonCurrent"	"Přehrávat mluvené slovo v jazyce <current language>"
 "Steam_SpokenLanguageTestRadioButtonEnglish"	"Přehrávat mluvené slovo v anglickém originále s volitelnými titulky v jazyce <current language>\n(Vyžaduje stažení 1 GB dat.)"
 
 "Steam_CannotInstallInOfflineMode"		"Hry nelze instalovat, pokud je klient služby Steam v režimu Offline.\nRestartujte klienta a zvolte možnost „Přejít do režimu Online“.\n"
@@ -3823,7 +3807,6 @@ Odešlete dárek někomu z vašich známých a vytvořte tak nového přítele.
 "steam_links"			"Odkazy"
 "steam_achievements"		"Achievementy"
 "steam_ogg"			"Související skupiny"
-"steam_stats"			"Stats"
 "steam_dlc"			"DLC (stáhnutelný obsah)"
 "steam_cdkeylink"		"CD klíč"
 "steam_guide"			"Průvodce"
@@ -3831,7 +3814,6 @@ Odešlete dárek někomu z vašich známých a vytvořte tak nového přítele.
 "steam_editcontroller"	"Nastavení ovladače"
 "steam_menu_media" "Média"
 "steam_menu_tools" "Nástroje"
-"steam_menu_downloads" "Downloads"
 "steam_menu_friends" "Přátelé"
 "steam_menu_servers" "Servery"
 "steam_menu_settings" "Nastavení"
@@ -3918,7 +3900,7 @@ Odešlete dárek někomu z vašich známých a vytvořte tak nového přítele.
 "steam_voice_remote_no_answer"		"Druhá strana neodpovídá – probíhá zavěšování."
 
 "SteamUI_ValveSurvey_Summary_Software"	"Nainstalovaný software:"
-"steam_systeminfo_info"			"Služba Steam nalezla ve Vašem systému následující hardware a software:"
+"steam_systeminfo_info"			"Klient služby Steam detekoval následující hardware a software:"
 "SteamUI_ValveSurvey_OverviewTitle" 	"Najděte si prosím čas na vyplnění následujícího krátkého průzkumu. Každý měsíc služba Steam sbírá informace o tom, jaký hardware a software zákazníci používají. Tyto informace jsou pro nás velice užitečné a pomáhají nám v rozhodování, do jakých technologií investovat a jaké produkty nabízet.\nSesbíraná data jsou anonymní a nebudou žádným způsobem spojena s Vaším účtem."
 
 "steam_statuslabel"	"Stav"
@@ -4376,7 +4358,6 @@ Odešlete dárek někomu z vašich známých a vytvořte tak nového přítele.
 "Music_Track_Menu_ShowAlbumInUI" "Zobrazit album"
 "Music_Menu_Play" "Přehrát"
 
-"Music_Transport_No_Tracks" " "
 "Music_Transport_X_Of_Y"	"%currentqueueentry% z %queuecount% – %queueduration%"
 "Music_Transport_X_Tracks" "%queuecount% skladeb – %queueduration%"
 "Music_Transport_X_Track" "%queuecount% skladba – %queueduration%"
@@ -4424,7 +4405,6 @@ Odešlete dárek někomu z vašich známých a vytvořte tak nového přítele.
 "Music_Settings_EnableMediaKeys" "Používat klávesy pro ovládání médií"
 "Music_Settings_Notification_Header" "Zobrazit upozornění"
 "Music_Settings_LoggingCrawling" "Uložit záznam o prohledávání"
-"Music_Settings_EnableMediaKeys" "Enable Media Keys"
 "Music_Settings__SelectDirectory_Title"	"Vybrat hudební knihovnu"
 "Music_Settings_ResetDatabase_Title" "Resetovat místní databázi hudby"
 "Music_Settings_ResetDatabase_Text" "Opravdu chcete hudební databázi resetovat?"
@@ -4464,8 +4444,6 @@ Odešlete dárek někomu z vašich známých a vytvořte tak nového přítele.
 "Music_TracksInfoLabel_NoTracks" "Žádné skladby"
 "Music_TracksInfoLabel_OneTrack" "1 skladba / %playlistduration%"
 "Music_TracksInfoLabel_MultipleTracks" "%playlisttrackcount% skladeb / %playlistduration%"
-
-"Music_Library_WindowTitle" "Music Library"
 
 "Music_Queue_Menu_CreatePlaylist" "Vytvořit seznam skladeb"
 "Music_Queue_Menu_LoadPlaylist" "Nahradit frontu seznamem skladeb"

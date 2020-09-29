@@ -19,7 +19,6 @@
 "SteamUI_ConvertExistingInfo" "Muunnetaan pelin tämänhetkistä asennusta. Tämä voi kestää useita minuutteja."
 "SteamUI_ConversionCompleteInfo" "Steamin esilataus on valmis."
 
-"SteamUI_ConversionCompleteInfoFailed" " "
 "SteamUI_ConvertExistingStatus1" "Esiladataan pelin %s1 tiedostoja levyltä."
 "SteamUI_ConvertExistingStatus2" "Esiladataan pelin %s1 tiedostoja levyltä.."
 "SteamUI_ConvertExistingStatus3" "Esiladataan pelin %s1 tiedostoja levyltä..."
@@ -1266,7 +1265,6 @@ Tämä kestää alle minuutin."
 "Steam_PreallocateAppStatus"	"Varataan levytilaa kohteelle %s1 ..."
 "Steam_ValidateAppStatus"	"Etsitään olemassaolevia tiedostoja kohteelle %s1 ..."
 
-"Steam_CDKeyAlreadyRegistered_Title"	"Steam - Product Code Error"
 "Steam_CDKeyCafe"			"Et voi rekisteröidä tuotetunnuksia tällä tilillä."
 
 "Steam_BrowseGames"		"Selaa pelejä..."
@@ -1332,7 +1330,6 @@ Tämä kestää alle minuutin."
 "Steam_PurchaseError_AllAppsInSubscriptionAlreadyOwned"	"Sinulla on jo kaikki nämä pelit.\nNe ovat Steam-pelikirjastossasi."
 "SteamUI_ProductRegistrationWizard_Title"	"Tuotteen aktivointi"
 "Steam_Install_AutoLaunchGame"		"Pelaa peliä %game%"
-"Steam_Install_AutoLaunchGamesList"	"Open Games Library"
 
 "Steam_UnableToPreload" "Steam-palvelimet ovat tällä hetkellä liian kiireisiä pelin %game% uusien esilatausten käsittelemiseksi.\nYritä muutaman tunnin kuluttua uudelleen."
 "Steam_Error_Preload_Title" "Esiladataan - Virhe"
@@ -1649,9 +1646,6 @@ Sinun täytyy kirjautua ulos OS X:stä ottaaksesi asetukset käyttöön."
 "Steam_Store_TabTitle"		"Kauppa"
 "Steam_Tools_TabTitle"		"Työkalut"
 
-"Steam_Root_Title" 	"Steam"
-"Steam_Root_Title_Internal" 	"Steam"
-
 "Steam_Account_Name"	"%account%"
 
 "Steam_Universe_Internal" 	"[%universe%]"
@@ -1668,7 +1662,6 @@ Sinun täytyy kirjautua ulos OS X:stä ottaaksesi asetukset käyttöön."
 "Steam_Settings_Upper"	"ASETUKSET"
 "Steam_Support_Upper"	"TUKI"
 
-"Steam_Properties"	"Properties"
 "Steam_Launch"		"Pelaa"
 "Steam_LaunchVR"	"Pelaa VR-tilassa"
 "Steam_Watch_Video"	"Katso"
@@ -2674,7 +2667,6 @@ Sinun täytyy kirjautua ulos OS X:stä ottaaksesi asetukset käyttöön."
 "Steam_Country_UA"		"Ukraina"
 "Steam_Country_AE"		"Arabiemiirikunnat"
 "Steam_Country_GB"		"Iso-Britannia"
-"Steam_Country_US"		"United States"
 "Steam_Country_UM"		"Yhdysvaltain pienet erillissaaret"
 "Steam_Country_UY"		"Uruguay"
 "Steam_Country_UZ"		"Uzbekistan"
@@ -3116,11 +3108,6 @@ Betaversio on päättynyt - palaa nykyiseen versioon käynnistämällä Steam uu
 "Steam_ContentBetaOptOutOK"	"Betasisällöstä poistuminen onnistui."
 "Steam_ContentBetaOptOutProblem"	"Sisältöbetasta poistumisessa esiintyi ongelma."
 
-"Steam_SpokenLanguageTestTitle"	"Left 4 Dead - ääniraidan kieli"
-"Steam_SpokenLanguageTestExplanation"	"The spoken audio in Left 4 Dead can be played in <current language>, or in English with <current language> subtitles. Which would you prefer?/n(You can always change these settings later within the game.)"
-"Steam_SpokenLanguageTestRadioButtonCurrent"	"Ääniraidan kieli on <current language>"
-"Steam_SpokenLanguageTestRadioButtonEnglish"	"Play spoken audio in the original English with optional <current language> subtitles/n(Requires a 1GB download)"
-
 "Steam_Settings_NotifyMeWithSteamInstantMessages"	"Ilmoita lisäyksistä tai muutoksista omiin peleihin, uusiin julkaisuihin ja tuleviin julkaisuihin."
 "Steam_Settings_DownloadsTitle"	"Lataukset"
 "Steam_Settings_CloudTitle"	"Cloud"
@@ -3137,10 +3124,6 @@ Betaversio on päättynyt - palaa nykyiseen versioon käynnistämällä Steam uu
 "Steam_RequestingLegacyKey" "Pyydetään tunnusta..."
 "Steam_LegacyCDKey_Title" "Pelin %game% tuotetunnus"
 "Steam_CopyLegacyKey_ToClipboard" "Kopioi tunnus leikepöydälle"
-
-"Steam_GuestPassAccept_LinkURLServiceUnavailable"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=550"
-"Steam_GuestPassRedeemed_LinkURLServiceUnavailable"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=550"
-"Steam_GuestPasses_LinkURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=549"
 
 "Steam_CityLifeDeluxe_LaunchBuildingEditor"	"Käynnistä rakennustenmuokkauseditori"
 
@@ -3381,6 +3364,15 @@ Saat uuden Steam-kaverin lähettämällä sähköpostitse lahjan jollekin tutull
 "Steam_ServerBrowserPingRateInfo"	"Jos havaitset yhteysongelmia pelipalvelimia selatessasi, kokeile pienentää tätä arvoa."
 "Steam_ServerBrowserPingRateDefault"	"Automaattinen (%PingsPerMin%)"
 
+"Steam_TextFilterSettingLabel"									"Chat-suodatin"
+"Steam_TextFilterStatus_SteamLabOptedOut"						"Nyt saatavilla Steam-laboratoriossa"
+"Steam_TextFilterStatus_Enabled"								"Suodattaa kirosanat ja herjaukset"
+"Steam_TextFilterStatus_Enabled_IgnoreFriends"					"Suodattaa kirosanat ja herjaukset kaikilta muilta paitsi kavereilta"
+"Steam_TextFilterStatus_EnabledAllowProfanity"					"Sallii kirosanat, mutta suodattaa herjaukset"
+"Steam_TextFilterStatus_EnabledAllowProfanity_IgnoreFriends"	"Sallii kirosanat, mutta suodattaa herjaukset kaikilta muilta paitsi kavereilta"
+"Steam_TextFilterStatus_Disabled"								"Sallii kirosanat ja herjaukset"
+"Steam_TextFilterSettingURL"									"Muuta chatin suodatusasetuksia"
+
 "Steam_SettingsInGameScreenshotFolder"	"Kuvakaappauskansio"
 "Steam_SettingsInGameTitle"	"Steam-yhteisönäkymä"
 
@@ -3526,9 +3518,9 @@ Saat uuden Steam-kaverin lähettämällä sähköpostitse lahjan jollekin tutull
 "Steam_GetTwoFactorCode_ResultFailure" "Yhteyttä Steamin palvelimiin ei voitu muodostaa."
 "Steam_GetTwoFactorCode_ResultFailureDetails" "Steamin palvelimiin ei saatu yhteyttä tällä kertaa. Yritä myöhemmin uudelleen."
 
-"Steam_SpokenLanguageTestTitle"	"Left 4 Dead - Spoken audio language"
+"Steam_SpokenLanguageTestTitle"	"Left 4 Dead - ääniraidan kieli"
 "Steam_SpokenLanguageTestExplanation"	"Left 4 Deadin ääniraidan kieli voi olla <current language> tai englanti, jolloin tekstityksen kieli on <current language>. Valitse haluamasi asetus.\n(Näitä asetuksia voi muuttaa myöhemmin pelissä.)"
-"Steam_SpokenLanguageTestRadioButtonCurrent"	"Play spoken audio in <current language>"
+"Steam_SpokenLanguageTestRadioButtonCurrent"	"Ääniraidan kieli on <current language>"
 "Steam_SpokenLanguageTestRadioButtonEnglish"	"Ääniraita on englanninkielinen. Halutessasi voit valita tekstityksen, jonka kieli on <current language>\n(Vaatii 1 Gt:n latauksen)"
 
 "Steam_CannotInstallInOfflineMode"		"Pelejä ei voi asentaa, kun Steam on offline-tilassa.\nSulje ja käynnistä uudelleen Steam ja siirry online-tilaan.\n"
@@ -3822,7 +3814,6 @@ Luo ja valitse luokkia tälle pelille alla, minkä jälkeen voit kokoelman Näyt
 "steam_links"			"Linkit"
 "steam_achievements"		"Saavutukset"
 "steam_ogg"			"Liittyvät ryhmät"
-"steam_stats"			"Stats"
 "steam_dlc"			"Lisämateriaali"
 "steam_cdkeylink"		"Tuotetunnus"
 "steam_guide"			"Opas"
@@ -3830,7 +3821,6 @@ Luo ja valitse luokkia tälle pelille alla, minkä jälkeen voit kokoelman Näyt
 "steam_editcontroller"	"Ohjainmääritykset"
 "steam_menu_media" "Mediat"
 "steam_menu_tools" "Työkalut"
-"steam_menu_downloads" "Downloads"
 "steam_menu_friends" "Kaverit"
 "steam_menu_servers" "Palvelimet"
 "steam_menu_settings" "Asetukset"
@@ -4375,7 +4365,6 @@ Luo ja valitse luokkia tälle pelille alla, minkä jälkeen voit kokoelman Näyt
 "Music_Track_Menu_ShowAlbumInUI" "Näytä albumi"
 "Music_Menu_Play" "Toista"
 
-"Music_Transport_No_Tracks" " "
 "Music_Transport_X_Of_Y"	"%currentqueueentry% / %queuecount% - %queueduration%"
 "Music_Transport_X_Tracks" "%queuecount% kappaletta - %queueduration%"
 "Music_Transport_X_Track" "%queuecount% kappale - %queueduration%"
@@ -4423,7 +4412,6 @@ Luo ja valitse luokkia tälle pelille alla, minkä jälkeen voit kokoelman Näyt
 "Music_Settings_EnableMediaKeys" "Salli medianäppäimet"
 "Music_Settings_Notification_Header" "Näytä ilmoitus"
 "Music_Settings_LoggingCrawling" "Tallenna skannausloki"
-"Music_Settings_EnableMediaKeys" "Enable Media Keys"
 "Music_Settings__SelectDirectory_Title"	"Valitse musiikkikirjasto"
 "Music_Settings_ResetDatabase_Title" "Nollaa paikallinen musiikkitietokanta"
 "Music_Settings_ResetDatabase_Text" "Tahdotko varmasti nollata musiikkitetokannan?"
@@ -4463,8 +4451,6 @@ Luo ja valitse luokkia tälle pelille alla, minkä jälkeen voit kokoelman Näyt
 "Music_TracksInfoLabel_NoTracks" "Ei kappaleita"
 "Music_TracksInfoLabel_OneTrack" "1 kappale / %playlistduration%"
 "Music_TracksInfoLabel_MultipleTracks" "%playlisttrackcount% kappaletta / %playlistduration%"
-
-"Music_Library_WindowTitle" "Music Library"
 
 "Music_Queue_Menu_CreatePlaylist" "Luo soittolista"
 "Music_Queue_Menu_LoadPlaylist" "Korvaa jono soittolistalla"

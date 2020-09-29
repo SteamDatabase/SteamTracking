@@ -21,7 +21,6 @@
 "SteamUI_ConvertExistingInfo" "Bestaande installatie van het spel converteren. Dit kan een paar minuten duren."
 "SteamUI_ConversionCompleteInfo" "Voorladen van Steam voltooid."
 
-"SteamUI_ConversionCompleteInfoFailed" " "
 "SteamUI_ConvertExistingStatus1" "%s1 bestanden voorladen van schijf."
 "SteamUI_ConvertExistingStatus2" "%s1 bestanden voorladen van schijf.."
 "SteamUI_ConvertExistingStatus3" "%s1 bestanden voorladen van schijf..."
@@ -1268,7 +1267,6 @@ Dit duurt niet langer dan een minuut."
 "Steam_PreallocateAppStatus"	"Schijfruimte toewijzen voor %s1..."
 "Steam_ValidateAppStatus"	"Bestaande bestanden aan het vinden voor %s1 ..."
 
-"Steam_CDKeyAlreadyRegistered_Title"	"Steam - Product Code Error"
 "Steam_CDKeyCafe"			"Je kunt op dit account geen productcodes registreren."
 
 "Steam_BrowseGames"		"Bladeren in spellen..."
@@ -1334,7 +1332,6 @@ Dit duurt niet langer dan een minuut."
 "Steam_PurchaseError_AllAppsInSubscriptionAlreadyOwned"	"Je hebt al deze spellen al.\n\nJe kunt ze vinden in je bibliotheek van Steam."
 "SteamUI_ProductRegistrationWizard_Title"	"Productactivering"
 "Steam_Install_AutoLaunchGame"		"%game% nu spelen"
-"Steam_Install_AutoLaunchGamesList"	"Open Games Library"
 
 "Steam_UnableToPreload" "De Steam-servers kunnen vanwege de drukte op dit moment niet meer voorladingen van %game% uitvoeren.\nProbeer het over enkele uren opnieuw."
 "Steam_Error_Preload_Title" "Voorladen - fout"
@@ -1652,9 +1649,6 @@ Je moet uitloggen op OSX om de veranderingen door te voeren."
 "Steam_Store_TabTitle"		"Winkel"
 "Steam_Tools_TabTitle"		"Tools"
 
-"Steam_Root_Title" 	"Steam"
-"Steam_Root_Title_Internal" 	"Steam"
-
 "Steam_Account_Name"	"%account%"
 
 "Steam_Universe_Internal" 	"[%universe%]"
@@ -1671,7 +1665,6 @@ Je moet uitloggen op OSX om de veranderingen door te voeren."
 "Steam_Settings_Upper"	"INSTELLINGEN"
 "Steam_Support_Upper"	"ONDERSTEUNING"
 
-"Steam_Properties"	"Properties"
 "Steam_Launch"		"Spelen"
 "Steam_LaunchVR"	"Spelen in VR"
 "Steam_Watch_Video"	"Bekijken"
@@ -2677,7 +2670,6 @@ Je moet uitloggen op OSX om de veranderingen door te voeren."
 "Steam_Country_UA"		"Oekraïne"
 "Steam_Country_AE"		"Verenigde Arabische Emiraten"
 "Steam_Country_GB"		"Verenigd Koninkrijk"
-"Steam_Country_US"		"United States"
 "Steam_Country_UM"		"Kleine afgelegen eilanden van de Verenigde Staten"
 "Steam_Country_UY"		"Uruguay"
 "Steam_Country_UZ"		"Oezbekistan"
@@ -3120,11 +3112,6 @@ De bètaperiode is afgelopen. Start Steam opnieuw op om terug te gaan naar de hu
 "Steam_ContentBetaOptOutOK"	"Succesvol uitgeschreven van de inhoudsbèta."
 "Steam_ContentBetaOptOutProblem"	"Er is een probleem opgetreden bij het uitschrijven uit de inhoudsbèta."
 
-"Steam_SpokenLanguageTestTitle"	"Left 4 Dead - Taal gesproken audio"
-"Steam_SpokenLanguageTestExplanation"	"The spoken audio in Left 4 Dead can be played in <current language>, or in English with <current language> subtitles. Which would you prefer?/n(You can always change these settings later within the game.)"
-"Steam_SpokenLanguageTestRadioButtonCurrent"	"Audio gesproken in het <current language>"
-"Steam_SpokenLanguageTestRadioButtonEnglish"	"Play spoken audio in the original English with optional <current language> subtitles/n(Requires a 1GB download)"
-
 "Steam_Settings_NotifyMeWithSteamInstantMessages"	"Houd me op de hoogte van aanvullingen of wijzigingen in mijn spellen, nieuwe releases en verwachte releases."
 "Steam_Settings_DownloadsTitle"	"Downloads"
 "Steam_Settings_CloudTitle"	"Cloud"
@@ -3141,10 +3128,6 @@ De bètaperiode is afgelopen. Start Steam opnieuw op om terug te gaan naar de hu
 "Steam_RequestingLegacyKey" "Code wordt aangevraagd..."
 "Steam_LegacyCDKey_Title" "Cd-code %game%"
 "Steam_CopyLegacyKey_ToClipboard" "Code naar klembord kopiëren"
-
-"Steam_GuestPassAccept_LinkURLServiceUnavailable"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=550"
-"Steam_GuestPassRedeemed_LinkURLServiceUnavailable"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=550"
-"Steam_GuestPasses_LinkURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=549"
 
 "Steam_CityLifeDeluxe_LaunchBuildingEditor"	"Building Customization Editor starten"
 
@@ -3385,6 +3368,15 @@ Maak een nieuwe Steam-vriend door een geschenk naar een bekende te e-mailen."
 "Steam_ServerBrowserPingRateInfo"	"Probeer deze waarde te verlagen als je problemen met de verbinding ondervindt tijdens het zoeken naar gameservers."
 "Steam_ServerBrowserPingRateDefault"	"Automatisch (%PingsPerMin%)"
 
+"Steam_TextFilterSettingLabel"									"Chatfilters"
+"Steam_TextFilterStatus_SteamLabOptedOut"						"Nu beschikbaar via de Steam-laboratoria"
+"Steam_TextFilterStatus_Enabled"								"Momenteel ingesteld om krachttermen en beledigingen te filteren"
+"Steam_TextFilterStatus_Enabled_IgnoreFriends"					"Momenteel ingesteld om krachttermen en beledigingen te filteren van iedereen behalve van vrienden"
+"Steam_TextFilterStatus_EnabledAllowProfanity"					"Momenteel ingesteld om krachttermen toe te staan, maar beledigingen te filteren"
+"Steam_TextFilterStatus_EnabledAllowProfanity_IgnoreFriends"	"Momenteel ingesteld om krachttermen toe te staan, maar beledigingen te filteren van iedereen behalve van vrienden"
+"Steam_TextFilterStatus_Disabled"								"Momenteel ingesteld om krachttermen en beledigingen toe te staan"
+"Steam_TextFilterSettingURL"									"Chatfiltervoorkeuren wijzigen"
+
 "Steam_SettingsInGameScreenshotFolder"	"Screenshotmap"
 "Steam_SettingsInGameTitle"	"De Steam-overlay"
 
@@ -3532,9 +3524,9 @@ Maak een nieuwe Steam-vriend door een geschenk naar een bekende te e-mailen."
 "Steam_GetTwoFactorCode_ResultFailure" "Verbinding met Steam-servers mislukt."
 "Steam_GetTwoFactorCode_ResultFailureDetails" "De Steam-servers kunnen momenteel niet worden bereikt. Probeer het later opnieuw."
 
-"Steam_SpokenLanguageTestTitle"	"Left 4 Dead - Spoken audio language"
+"Steam_SpokenLanguageTestTitle"	"Left 4 Dead - Taal gesproken audio"
 "Steam_SpokenLanguageTestExplanation"	"De audio in Left 4 Dead kan worden gesproken in het <current language> of in het Engels met ondertitels in het <current language>. Waaraan geef je de voorkeur?\n(Je kunt deze instellingen later in de game wijzigen.)"
-"Steam_SpokenLanguageTestRadioButtonCurrent"	"Play spoken audio in <current language>"
+"Steam_SpokenLanguageTestRadioButtonCurrent"	"Audio gesproken in het <current language>"
 "Steam_SpokenLanguageTestRadioButtonEnglish"	"Audio gesproken in het Engels met optionele ondertitels in het <current language> \n(Hiervoor is een download van 1 GB vereist.)"
 
 "Steam_CannotInstallInOfflineMode"		"Je kunt geen spellen installeren wanneer Steam zich in de offlinemodus bevindt.\nSluit Steam af, start Steam opnieuw en selecteer 'Online gaan'.\n"
@@ -3827,7 +3819,6 @@ Stel een categorie in voor dit spel, zodat je het snel kunt vinden en je spellen
 "steam_links"			"Links"
 "steam_achievements"		"Prestaties"
 "steam_ogg"			"Gerelateerde groepen"
-"steam_stats"			"Stats"
 "steam_dlc"			"DLC"
 "steam_cdkeylink"		"Cd-code"
 "steam_guide"			"Instructies"
@@ -3835,7 +3826,6 @@ Stel een categorie in voor dit spel, zodat je het snel kunt vinden en je spellen
 "steam_editcontroller"	"Controllerconfiguratie"
 "steam_menu_media" "Media"
 "steam_menu_tools" "Tools"
-"steam_menu_downloads" "Downloads"
 "steam_menu_friends" "Vrienden"
 "steam_menu_servers" "Servers"
 "steam_menu_settings" "Instellingen"
@@ -4380,7 +4370,6 @@ Stel een categorie in voor dit spel, zodat je het snel kunt vinden en je spellen
 "Music_Track_Menu_ShowAlbumInUI" "Album weergeven"
 "Music_Menu_Play" "Afspelen"
 
-"Music_Transport_No_Tracks" " "
 "Music_Transport_X_Of_Y"	"%currentqueueentry% van de %queuecount% - %queueduration%"
 "Music_Transport_X_Tracks" "%queuecount% nummers - %queueduration%"
 "Music_Transport_X_Track" "%queuecount% nummer - %queueduration%"
@@ -4428,7 +4417,6 @@ Stel een categorie in voor dit spel, zodat je het snel kunt vinden en je spellen
 "Music_Settings_EnableMediaKeys" "Media-toetsen inschakelen"
 "Music_Settings_Notification_Header" "Een melding tonen"
 "Music_Settings_LoggingCrawling" "Doorzoekactiviteiten opslaan"
-"Music_Settings_EnableMediaKeys" "Enable Media Keys"
 "Music_Settings__SelectDirectory_Title"	"Muziekbibliotheek selecteren"
 "Music_Settings_ResetDatabase_Title" "Lokale muziekdatabase resetten"
 "Music_Settings_ResetDatabase_Text" "Weet je zeker dat je de muziekdatabase wilt resetten?"
@@ -4468,8 +4456,6 @@ Stel een categorie in voor dit spel, zodat je het snel kunt vinden en je spellen
 "Music_TracksInfoLabel_NoTracks" "Geen nummers"
 "Music_TracksInfoLabel_OneTrack" "1 nummer / %playlistduration%"
 "Music_TracksInfoLabel_MultipleTracks" "%playlisttrackcount% nummers / %playlistduration%"
-
-"Music_Library_WindowTitle" "Music Library"
 
 "Music_Queue_Menu_CreatePlaylist" "Afspeellijst maken"
 "Music_Queue_Menu_LoadPlaylist" "Wachtrij voor afspeellijst vervangen"

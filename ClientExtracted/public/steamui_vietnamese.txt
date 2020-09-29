@@ -21,7 +21,6 @@
 "SteamUI_ConvertExistingInfo" "Đang chuyển đổi bộ cài sẵn có của trò chơi. Quá trình này có thể mất vài phút."
 "SteamUI_ConversionCompleteInfo" "Việc nạp trước dữ liệu Steam hoàn thành."
 
-"SteamUI_ConversionCompleteInfoFailed" " "
 "SteamUI_ConvertExistingStatus1" "Đang nạp trước %s1 tệp dữ liệu từ ổ đĩa."
 "SteamUI_ConvertExistingStatus2" "Đang nạp trước %s1 tệp dữ liệu từ ổ đĩa.."
 "SteamUI_ConvertExistingStatus3" "Đang nạp trước %s1 tệp dữ liệu từ ổ đĩa..."
@@ -1264,7 +1263,6 @@ Công đoạn này nên hoàn thành dưới một phút."
 "Steam_PreallocateAppStatus"	"Đang xác định chỗ trống trên ổ cứng cho %s1 ..."
 "Steam_ValidateAppStatus"	"Đang khám phá các tệp đã tồn tại cho %s1 ..."
 
-"Steam_CDKeyAlreadyRegistered_Title"	"Steam - Product Code Error"
 "Steam_CDKeyCafe"			"Bạn không thể đăng ký mã sản phẩm trên tài khoản này."
 
 "Steam_BrowseGames"		"Duyệt trò chơi..."
@@ -1330,7 +1328,6 @@ Công đoạn này nên hoàn thành dưới một phút."
 "Steam_PurchaseError_AllAppsInSubscriptionAlreadyOwned"	"Bạn đã sỡ hữu tất cả trò chơi này.\nBạn có thể truy cập chúng trong thư viện trò chơi Steam của mình."
 "SteamUI_ProductRegistrationWizard_Title"	"Kích hoạt sản phẩm"
 "Steam_Install_AutoLaunchGame"		"Chơi %game% ngay bây giờ"
-"Steam_Install_AutoLaunchGamesList"	"Open Games Library"
 
 "Steam_UnableToPreload" "Các máy chủ Steam hiện đang quá bận để xử lý thêm các yêu cầu tải trước cho %game%.\nXin vui lòng thử lại sau vài giờ nữa."
 "Steam_Error_Preload_Title" "Tải trước - Lỗi"
@@ -1649,9 +1646,6 @@ Bạn cần phải đăng xuất khỏi OSX để thay đổi này có hiệu l�
 "Steam_Store_TabTitle"		"Cửa hàng"
 "Steam_Tools_TabTitle"		"Công cụ"
 
-"Steam_Root_Title" 	"Steam"
-"Steam_Root_Title_Internal" 	"Steam"
-
 "Steam_Account_Name"	"%account%"
 
 "Steam_Universe_Internal" 	"[%universe%]"
@@ -1668,7 +1662,6 @@ Bạn cần phải đăng xuất khỏi OSX để thay đổi này có hiệu l�
 "Steam_Settings_Upper"	"THIẾT LẬP"
 "Steam_Support_Upper"	"HỖ TRỢ"
 
-"Steam_Properties"	"Properties"
 "Steam_Launch"		"Chơi"
 "Steam_LaunchVR"	"Chơi trên VR"
 "Steam_Watch_Video"	"Xem"
@@ -2674,7 +2667,6 @@ Bạn cần phải đăng xuất khỏi OSX để thay đổi này có hiệu l�
 "Steam_Country_UA"		"Ukraine"
 "Steam_Country_AE"		"Các Tiểu vương quốc Ả Rập thống nhất"
 "Steam_Country_GB"		"Vương quốc Anh"
-"Steam_Country_US"		"United States"
 "Steam_Country_UM"		"Các tiểu đảo xa của Hoa Kỳ"
 "Steam_Country_UY"		"Uruguay"
 "Steam_Country_UZ"		"Uzbekistan"
@@ -3119,11 +3111,6 @@ Cuộc thử nghiệm beta đã kết thúc - xin vui lòng khởi động lại
 "Steam_ContentBetaOptOutOK"	"Hủy đăng ký nội dung beta thành công."
 "Steam_ContentBetaOptOutProblem"	"Đã có vấn đề phát sinh khi thoát ra khỏi nội dung beta."
 
-"Steam_SpokenLanguageTestTitle"	"Left 4 Dead - Ngôn ngữ lồng tiếng"
-"Steam_SpokenLanguageTestExplanation"	"The spoken audio in Left 4 Dead can be played in <current language>, or in English with <current language> subtitles. Which would you prefer?/n(You can always change these settings later within the game.)"
-"Steam_SpokenLanguageTestRadioButtonCurrent"	"Sử dụng ngôn ngữ lồng tiếng <current language>"
-"Steam_SpokenLanguageTestRadioButtonEnglish"	"Play spoken audio in the original English with optional <current language> subtitles/n(Requires a 1GB download)"
-
 "Steam_Settings_NotifyMeWithSteamInstantMessages"	"Thông báo cho tôi về các phụ mục hoặc thay đổi với trò chơi của tôi, các sản phẩm mới và sắp ra mắt."
 "Steam_Settings_DownloadsTitle"	"Tải xuống"
 "Steam_Settings_CloudTitle"	"Cloud"
@@ -3140,10 +3127,6 @@ Cuộc thử nghiệm beta đã kết thúc - xin vui lòng khởi động lại
 "Steam_RequestingLegacyKey" "Yêu cầu mã..."
 "Steam_LegacyCDKey_Title" "Mã CD của trò chơi %game%"
 "Steam_CopyLegacyKey_ToClipboard" "Chép mã vào khay nhớ tạm"
-
-"Steam_GuestPassAccept_LinkURLServiceUnavailable"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=550"
-"Steam_GuestPassRedeemed_LinkURLServiceUnavailable"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=550"
-"Steam_GuestPasses_LinkURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=549"
 
 "Steam_CityLifeDeluxe_LaunchBuildingEditor"	"Chạy Building Customization Editor"
 
@@ -3383,6 +3366,15 @@ Cuộc thử nghiệm beta đã kết thúc - xin vui lòng khởi động lại
 "Steam_ServerBrowserPingRateInfo"	"Nếu bạn gặp vấn đề kết nối khi đang dò tìm máy chủ cho trò chơi, hãy thử hạ thấp giá trị này."
 "Steam_ServerBrowserPingRateDefault"	"Tự động (%PingsPerMin%)"
 
+"Steam_TextFilterSettingLabel"									""
+"Steam_TextFilterStatus_SteamLabOptedOut"						"Đã có mặt trên Steam Labs"
+"Steam_TextFilterStatus_Enabled"								"Hiện đặt bộ lọc ẩn từ ngữ tục tĩu và miệt thị"
+"Steam_TextFilterStatus_Enabled_IgnoreFriends"					"Hiện đặt bộ lọc ẩn từ ngữ tục tĩu và miệt thị từ mọi người trừ bạn bè"
+"Steam_TextFilterStatus_EnabledAllowProfanity"					"Hiện đặt bộ lọc không ẩn từ ngữ tục tĩu, nhưng ẩn từ miệt thị"
+"Steam_TextFilterStatus_EnabledAllowProfanity_IgnoreFriends"	"Hiện đặt bộ lọc không ẩn từ ngữ tục tĩu, nhưng ẩn từ miệt thị từ mọi người trừ bạn bè"
+"Steam_TextFilterStatus_Disabled"								"Hiện đặt bộ lọc cho phép từ ngữ tục tĩu và miệt thị"
+"Steam_TextFilterSettingURL"									"Thay đổi thiết lập bộ lọc trò chuyện"
+
 "Steam_SettingsInGameScreenshotFolder"	"Thư mục ảnh chụp màn hình"
 "Steam_SettingsInGameTitle"	"Lớp phủ Steam"
 
@@ -3528,9 +3520,9 @@ Cuộc thử nghiệm beta đã kết thúc - xin vui lòng khởi động lại
 "Steam_GetTwoFactorCode_ResultFailure" "Không thể liên lạc tới máy chủ Steam."
 "Steam_GetTwoFactorCode_ResultFailureDetails" "Không thể liên lạc được máy chủ Steam lúc này. Xin vui lòng thử lại sau."
 
-"Steam_SpokenLanguageTestTitle"	"Left 4 Dead - Spoken audio language"
+"Steam_SpokenLanguageTestTitle"	"Left 4 Dead - Ngôn ngữ lồng tiếng"
 "Steam_SpokenLanguageTestExplanation"	"Bạn có thể chọn ngôn ngữ lồng tiếng <current language> cho Left 4 Dead, hoặc có thể chọn lồng tiếng bằng tiếng Anh nhưng với với phụ đề tiếng <current language>. Lựa chọn của bạn là gì?\n(Bạn luôn có thể thay đổi các thiết lập này lúc khi đang chơi.)"
-"Steam_SpokenLanguageTestRadioButtonCurrent"	"Play spoken audio in <current language>"
+"Steam_SpokenLanguageTestRadioButtonCurrent"	"Sử dụng ngôn ngữ lồng tiếng <current language>"
 "Steam_SpokenLanguageTestRadioButtonEnglish"	"Dùng ngôn ngữ lồng tiếng trong tiếng Anh với phụ đề tiếng <current language> \n(Cần tải 1GB)"
 
 "Steam_CannotInstallInOfflineMode"		"Không thể cài đặt trò chơi khi Steam đang trong chế độ ngắt mạng.\nHãy thoát và khởi động lại Steam, và chọn \"Nối mạng\".\n"
@@ -3822,7 +3814,6 @@ Cuộc thử nghiệm beta đã kết thúc - xin vui lòng khởi động lại
 "steam_links"			"Đường dẫn"
 "steam_achievements"		"Thành tựu"
 "steam_ogg"			"Nhóm liên quan"
-"steam_stats"			"Stats"
 "steam_dlc"			"DLC"
 "steam_cdkeylink"		"Mã CD"
 "steam_guide"			"Hướng dẫn"
@@ -3830,7 +3821,6 @@ Cuộc thử nghiệm beta đã kết thúc - xin vui lòng khởi động lại
 "steam_editcontroller"	"Thiết lập tay cầm"
 "steam_menu_media" "Media"
 "steam_menu_tools" "Công cụ"
-"steam_menu_downloads" "Downloads"
 "steam_menu_friends" "Bạn bè"
 "steam_menu_servers" "Máy chủ"
 "steam_menu_settings" "Thiết lập"
@@ -4376,7 +4366,6 @@ Cuộc thử nghiệm beta đã kết thúc - xin vui lòng khởi động lại
 "Music_Track_Menu_ShowAlbumInUI" "Hiển thị album"
 "Music_Menu_Play" "Phát"
 
-"Music_Transport_No_Tracks" " "
 "Music_Transport_X_Of_Y"	"%currentqueueentry% trên %queuecount% - %queueduration%"
 "Music_Transport_X_Tracks" "%queuecount% bài - %queueduration%"
 "Music_Transport_X_Track" "%queuecount% bài - %queueduration%"
@@ -4424,7 +4413,6 @@ Cuộc thử nghiệm beta đã kết thúc - xin vui lòng khởi động lại
 "Music_Settings_EnableMediaKeys" "Kích hoạt phím media"
 "Music_Settings_Notification_Header" "Hiển thị thông báo"
 "Music_Settings_LoggingCrawling" "Lưu nhật ký hoạt động quét"
-"Music_Settings_EnableMediaKeys" "Enable Media Keys"
 "Music_Settings__SelectDirectory_Title"	"Chọn thư viện nhạc"
 "Music_Settings_ResetDatabase_Title" "Khởi động lại dữ liệu nhạc của máy"
 "Music_Settings_ResetDatabase_Text" "Bạn có chắc muốn khởi động lại dữ liệu nhạc?"
@@ -4464,8 +4452,6 @@ Cuộc thử nghiệm beta đã kết thúc - xin vui lòng khởi động lại
 "Music_TracksInfoLabel_NoTracks" "Không có bài nhạc nào"
 "Music_TracksInfoLabel_OneTrack" "1 bài / %playlistduration%"
 "Music_TracksInfoLabel_MultipleTracks" "%playlisttrackcount% bài / %playlistduration%"
-
-"Music_Library_WindowTitle" "Music Library"
 
 "Music_Queue_Menu_CreatePlaylist" "Tạo danh sách phát"
 "Music_Queue_Menu_LoadPlaylist" "Thay hàng chờ với danh sách nhạc"

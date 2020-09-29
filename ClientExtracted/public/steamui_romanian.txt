@@ -19,7 +19,6 @@
 "SteamUI_ConvertExistingInfo" "Instalarea existentă este convertită. Acest proces va dura câteva minute."
 "SteamUI_ConversionCompleteInfo" "Pre-încărcarea Steam este finalizată."
 
-"SteamUI_ConversionCompleteInfoFailed" " "
 "SteamUI_ConvertExistingStatus1" "Pre-încărcare %s1 fișiere de pe disc."
 "SteamUI_ConvertExistingStatus2" "Pre-încărcare %s1 fișiere de pe disc.."
 "SteamUI_ConvertExistingStatus3" "Pre-încărcare %s1 fișiere de pe disc..."
@@ -1264,7 +1263,6 @@ Te rugăm să reintroduci parola dorită."
 "Steam_PreallocateAppStatus"	"Se alocă spațiu pe disc pentru %s1 ..."
 "Steam_ValidateAppStatus"	"Se descoperă fișiere existente pentru %s1 ..."
 
-"Steam_CDKeyAlreadyRegistered_Title"	"Steam - Product Code Error"
 "Steam_CDKeyCafe"			"Nu poți înregistra coduri de activare pentru produse pe acest cont."
 
 "Steam_BrowseGames"		"Răsfoieşte jocurile..."
@@ -1330,7 +1328,6 @@ Te rugăm să reintroduci parola dorită."
 "Steam_PurchaseError_AllAppsInSubscriptionAlreadyOwned"	"Ai deja toate aceste jocuri.\n\nLe poţi accesa din Colecţia de Jocuri Steam."
 "SteamUI_ProductRegistrationWizard_Title"	"Activarea produsului"
 "Steam_Install_AutoLaunchGame"		"Joacă-te acum %game%"
-"Steam_Install_AutoLaunchGamesList"	"Open Games Library"
 
 "Steam_UnableToPreload" "Serverele Steam sunt prea încărcate momentan pentru a se ocupa de pre-încărcarea jocului %game%.\nTe rugăm să încerci din nou în câteva ore."
 "Steam_Error_Preload_Title" "Pre-încărcare - Eroare"
@@ -1643,9 +1640,6 @@ Te rugăm să reintroduci parola dorită."
 "Steam_Store_TabTitle"		"Magazin"
 "Steam_Tools_TabTitle"		"Instrumente"
 
-"Steam_Root_Title" 	"Steam"
-"Steam_Root_Title_Internal" 	"Steam"
-
 "Steam_Account_Name"	"%account%"
 
 "Steam_Universe_Internal" 	"[%universe%]"
@@ -1662,7 +1656,6 @@ Te rugăm să reintroduci parola dorită."
 "Steam_Settings_Upper"	"SETĂRI"
 "Steam_Support_Upper"	"ASISTENȚĂ TEHNICĂ"
 
-"Steam_Properties"	"Properties"
 "Steam_Launch"		"Lansează"
 "Steam_LaunchVR"	"Joacă în VR"
 "Steam_Watch_Video"	"Urmărește"
@@ -2668,7 +2661,6 @@ Te rugăm să reintroduci parola dorită."
 "Steam_Country_UA"		"Ucraina"
 "Steam_Country_AE"		"Emiratele Arabe Unite"
 "Steam_Country_GB"		"Regatul Unit"
-"Steam_Country_US"		"United States"
 "Steam_Country_UM"		"Insulele Minore Îndepărtate ale Statelor Unite"
 "Steam_Country_UY"		"Uruguay"
 "Steam_Country_UZ"		"Uzbekistan"
@@ -3109,11 +3101,6 @@ Acum beta s-a încheiat - te rugăm restartează Steam pentru a te reîntoarce l
 "Steam_ContentBetaOptOutOK"	"Ai renunțat cu succes la conținutul beta."
 "Steam_ContentBetaOptOutProblem"	"A intervenit o problemă în renunțarea la conținutul beta."
 
-"Steam_SpokenLanguageTestTitle"	"Left 4 Dead - Alegere limbă pentru dialoguri"
-"Steam_SpokenLanguageTestExplanation"	"The spoken audio in Left 4 Dead can be played in <current language>, or in English with <current language> subtitles. Which would you prefer?/n(You can always change these settings later within the game.)"
-"Steam_SpokenLanguageTestRadioButtonCurrent"	"Dialoguri vorbite în <current language>"
-"Steam_SpokenLanguageTestRadioButtonEnglish"	"Play spoken audio in the original English with optional <current language> subtitles/n(Requires a 1GB download)"
-
 "Steam_Settings_NotifyMeWithSteamInstantMessages"	"Anunţă-mă despre noutăţi sau schimbări, noi lansări sau evenimente."
 "Steam_Settings_DownloadsTitle"	"Descărcări"
 "Steam_Settings_CloudTitle"	"Cloud"
@@ -3130,10 +3117,6 @@ Acum beta s-a încheiat - te rugăm restartează Steam pentru a te reîntoarce l
 "Steam_RequestingLegacyKey" "Se solicită codul..."
 "Steam_LegacyCDKey_Title" "Cod de activare %game%"
 "Steam_CopyLegacyKey_ToClipboard" "Copiază codul în clipboard"
-
-"Steam_GuestPassAccept_LinkURLServiceUnavailable"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=550"
-"Steam_GuestPassRedeemed_LinkURLServiceUnavailable"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=550"
-"Steam_GuestPasses_LinkURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=549"
 
 "Steam_CityLifeDeluxe_LaunchBuildingEditor"	"Porneşte Editorul de Modificare a Clădirilor"
 
@@ -3374,6 +3357,7 @@ Fă-ţi un prieten nou pe Steam, trimiţând un cadou prin e-mail către cineva 
 "Steam_ServerBrowserPingRateInfo"	"Dacă întâmpini probleme când accesezi lista cu serverele de joc, încearcă să micşorezi această valoare."
 "Steam_ServerBrowserPingRateDefault"	"Automat (%PingsPerMin%)"
 
+
 "Steam_SettingsInGameScreenshotFolder"	"Folder cu capturi de ecran"
 "Steam_SettingsInGameTitle"	"Interfața Steam"
 
@@ -3519,9 +3503,9 @@ Fă-ţi un prieten nou pe Steam, trimiţând un cadou prin e-mail către cineva 
 "Steam_GetTwoFactorCode_ResultFailure" "Serverele Steam nu au putut fi contactate."
 "Steam_GetTwoFactorCode_ResultFailureDetails" "Serverele Steam nu au putut fi contactate în acest moment. Te rugăm să încerci mai târziu."
 
-"Steam_SpokenLanguageTestTitle"	"Left 4 Dead - Spoken audio language"
+"Steam_SpokenLanguageTestTitle"	"Left 4 Dead - Alegere limbă pentru dialoguri"
 "Steam_SpokenLanguageTestExplanation"	"Dialogurile din Left 4 Dead pot fi vorbite în limba <current language> sau în engleză, cu subtitrări în limba <current language>. Ce preferi?\n(Poți schimba oricând aceste setări în joc.)"
-"Steam_SpokenLanguageTestRadioButtonCurrent"	"Play spoken audio in <current language>"
+"Steam_SpokenLanguageTestRadioButtonCurrent"	"Dialoguri vorbite în <current language>"
 "Steam_SpokenLanguageTestRadioButtonEnglish"	"Dialoguri vorbite în engleză, cu subtitrări opționale în limba <current language>\n(Necesită o descărcare de 1GB)"
 
 "Steam_CannotInstallInOfflineMode"		"Jocurile nu pot fi instalate când clientul Steam este în modul offline.\n\nRepornește clientul Steam și alege opțiunea 'Treci în modul online'.\n"
@@ -3813,7 +3797,6 @@ Fă-ţi un prieten nou pe Steam, trimiţând un cadou prin e-mail către cineva 
 "steam_links"			"Resurse"
 "steam_achievements"		"Realizări"
 "steam_ogg"			"Grupuri aferente"
-"steam_stats"			"Stats"
 "steam_dlc"			"Conținut suplimentar"
 "steam_cdkeylink"		"Cod de activare"
 "steam_guide"			"Ghid"
@@ -3821,7 +3804,6 @@ Fă-ţi un prieten nou pe Steam, trimiţând un cadou prin e-mail către cineva 
 "steam_editcontroller"	"Configurația controlerului"
 "steam_menu_media" "Media"
 "steam_menu_tools" "Instrumente"
-"steam_menu_downloads" "Downloads"
 "steam_menu_friends" "Prieteni"
 "steam_menu_servers" "Servere"
 "steam_menu_settings" "Setări"
@@ -4367,7 +4349,6 @@ Artiști"
 "Music_Track_Menu_ShowAlbumInUI" "Arată Album"
 "Music_Menu_Play" "Redare"
 
-"Music_Transport_No_Tracks" " "
 "Music_Transport_X_Of_Y"	"%currentqueueentry% din %queuecount% - %queueduration%"
 "Music_Transport_X_Tracks" "%queuecount% piese - %queueduration%"
 "Music_Transport_X_Track" "%queuecount% piesă - %queueduration%"
@@ -4415,7 +4396,6 @@ Artiști"
 "Music_Settings_EnableMediaKeys" "Activează Tastele Media"
 "Music_Settings_Notification_Header" "Afișează o notificare"
 "Music_Settings_LoggingCrawling" "Salvează informații de scanare a activității"
-"Music_Settings_EnableMediaKeys" "Enable Media Keys"
 "Music_Settings__SelectDirectory_Title"	"Selectează fonoteca"
 "Music_Settings_ResetDatabase_Title" "Resetare Bază de Date Locală de Muzică"
 "Music_Settings_ResetDatabase_Text" "Ești sigur că vrei să resetezi baza muzicală de date?"
@@ -4455,8 +4435,6 @@ Artiști"
 "Music_TracksInfoLabel_NoTracks" "Nicio piesă"
 "Music_TracksInfoLabel_OneTrack" "1 piesă / %playlistduration%"
 "Music_TracksInfoLabel_MultipleTracks" "%playlisttrackcount% piese / %playlistduration%"
-
-"Music_Library_WindowTitle" "Music Library"
 
 "Music_Queue_Menu_CreatePlaylist" "Crează listă de redare"
 "Music_Queue_Menu_LoadPlaylist" "Înlocuiește coada cu lista de redare"
