@@ -3594,6 +3594,10 @@ function OnVerifyShippingAddressSuccess( result )
 					error_text = 'Your postal code appears to be incorrect and should match this format \'%1$s\'.<br>Please verify and re-enter your postal code to complete the order.'.replace( /%1\$s/, result.verificationDetailExample );
 					ValidationMarkFieldBad( $('shipping_postal_code') );
 					break;
+
+				case 9:
+					error_text = 'We cannot ship to the address you\'ve provided because your a state/province is missing.';
+					break;					
 			}
 			DisplayErrorMessage( error_text );		
 		}
