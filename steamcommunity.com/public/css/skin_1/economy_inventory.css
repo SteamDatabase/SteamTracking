@@ -907,6 +907,7 @@ a.newitem {
 
 .newitem img {
 	vertical-align: middle;
+    height: 100%;
 }
 
 a.newitem:hover {

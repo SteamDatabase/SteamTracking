@@ -730,12 +730,12 @@
               P.a.createElement(
                 "div",
                 { className: F.GameCount },
-                Object(x.e)("#PlaytimeList_RecentGames", a)
+                Object(x.f)("#PlaytimeList_RecentGames", a)
               ),
               P.a.createElement(
                 "div",
                 { className: F.TotalTime },
-                Object(x.e)("#PlaytimeList_HoursTotal", i)
+                Object(x.f)("#PlaytimeList_HoursTotal", i)
               )
             )
           )
@@ -753,9 +753,9 @@
           l = "",
           l =
             n <= 86400
-              ? Object(x.e)("#PlaytimeList_LastPlayedMax")
-              : ((c = 31449600 < s ? Object(x.n)(n) : Object(x.p)(s)),
-                Object(x.e)("#PlaytimeList_LastPlayed", c));
+              ? Object(x.f)("#PlaytimeList_LastPlayedMax")
+              : ((c = 31449600 < s ? Object(x.o)(n) : Object(x.q)(s)),
+                Object(x.f)("#PlaytimeList_LastPlayed", c));
         return P.a.createElement(
           "div",
           { className: Object(M.a)(F.PlayedGame, r && F.Ignored) },
@@ -770,7 +770,7 @@
             P.a.createElement(
               "div",
               { className: F.HoursPlayed },
-              Object(x.e)("#PlaytimeList_Hours", i)
+              Object(x.f)("#PlaytimeList_Hours", i)
             ),
             P.a.createElement("div", { className: F.Title }, a),
             P.a.createElement("div", { className: F.LastPlayed }, l),
@@ -782,7 +782,7 @@
                   return V.onToggleIgnore(t);
                 }
               },
-              Object(x.e)(r ? "#PlaytimeList_UnIgnore" : "#PlaytimeList_Ignore")
+              Object(x.f)(r ? "#PlaytimeList_UnIgnore" : "#PlaytimeList_Ignore")
             )
           )
         );
@@ -853,7 +853,7 @@
                   P.a.createElement(
                     "div",
                     { className: F.Header },
-                    Object(x.e)("#PlaytimeList_Header")
+                    Object(x.f)("#PlaytimeList_Header")
                   ),
                   P.a.createElement("div", { className: F.Loading })
                 );
@@ -881,7 +881,7 @@
                   P.a.createElement(
                     "div",
                     { className: F.Header },
-                    Object(x.e)("#PlaytimeList_Header")
+                    Object(x.f)("#PlaytimeList_Header")
                   ),
                   P.a.createElement(b, { accountID: this.props.accountID }),
                   P.a.createElement("div", { className: F.List }, a)
@@ -966,7 +966,7 @@
               for (
                 var a = this,
                   e = {
-                    placeholder: Object(x.e)("#TagSelect"),
+                    placeholder: Object(x.f)("#TagSelect"),
                     value: this.state.value,
                     onChange: this.onChange,
                     onKeyDown: this.onKeyDown
@@ -1046,12 +1046,12 @@
               t.push({ id: parseInt(n.tagid), name: n.name });
             }
           var r = [
-              Object(x.e)("#FilterAge_120"),
-              Object(x.e)("#FilterAge_60"),
-              Object(x.e)("#FilterAge_36"),
-              Object(x.e)("#FilterAge_24"),
-              Object(x.e)("#FilterAge_12"),
-              Object(x.e)("#FilterAge_6")
+              Object(x.f)("#FilterAge_120"),
+              Object(x.f)("#FilterAge_60"),
+              Object(x.f)("#FilterAge_36"),
+              Object(x.f)("#FilterAge_24"),
+              Object(x.f)("#FilterAge_12"),
+              Object(x.f)("#FilterAge_6")
             ],
             o = V.m_rgSavedExcludeTags,
             s = V.m_rgSavedFilterTags;
@@ -1062,18 +1062,18 @@
               "div",
               { className: Object(M.a)(F.Row, F.FirstRow) },
               P.a.createElement(y, {
-                minLabel: Object(x.e)("#Popularity_Popular"),
-                titleLabel: Object(x.e)("#Popularity_Title"),
-                maxLabel: Object(x.e)("#Popularity_Niche"),
+                minLabel: Object(x.f)("#Popularity_Popular"),
+                titleLabel: Object(x.f)("#Popularity_Title"),
+                maxLabel: Object(x.f)("#Popularity_Niche"),
                 minValue: 0,
                 maxValue: 1,
                 value: V.m_fQueuedPopularityValue,
                 onChange: V.onPopularityChanged
               }),
               P.a.createElement(y, {
-                minLabel: Object(x.e)("#Recency_Older"),
-                titleLabel: Object(x.e)("#Recency_Title"),
-                maxLabel: Object(x.e)("#Recency_Newer"),
+                minLabel: Object(x.f)("#Recency_Older"),
+                titleLabel: Object(x.f)("#Recency_Title"),
+                maxLabel: Object(x.f)("#Recency_Newer"),
                 minValue: 0,
                 maxValue: 1,
                 value: V.m_fQueuedRecencyValue,
@@ -1085,7 +1085,7 @@
               "div",
               { className: Object(M.a)(F.Row, F.SecondRow) },
               P.a.createElement(R, {
-                title: Object(x.e)("#TagFilterMultiple_Title"),
+                title: Object(x.f)("#TagFilterMultiple_Title"),
                 tagoptions: t,
                 selectedtags: s,
                 key: "Filter" + s.toString(),
@@ -1093,7 +1093,7 @@
                 onRemoveTag: V.onTagFilterRemove
               }),
               P.a.createElement(R, {
-                title: Object(x.e)("#TagExcludeMultiple_Title"),
+                title: Object(x.f)("#TagExcludeMultiple_Title"),
                 tagoptions: t,
                 selectedtags: o,
                 key: "Exclude" + o.toString(),
@@ -1102,7 +1102,7 @@
               }),
               P.a.createElement(T, {
                 className: F.WishlistCheckbox,
-                titleLabel: Object(x.e)("#ExcludeWishlisted"),
+                titleLabel: Object(x.f)("#ExcludeWishlisted"),
                 checked: V.m_bExcludeWishlisted,
                 onChange: V.onExcludeWishlistedToggled
               }),
@@ -1111,9 +1111,9 @@
                 {
                   className: F.SaveUserSettingsButton,
                   onClick: V.onSaveUserSettings,
-                  title: Object(x.e)("#SaveUserSettingsTooltip")
+                  title: Object(x.f)("#SaveUserSettingsTooltip")
                 },
-                Object(x.e)("#SaveUserSettings")
+                Object(x.f)("#SaveUserSettings")
               )
             )
           );
@@ -1197,9 +1197,9 @@
               var c = s.n,
                 l =
                   0 < s.r
-                    ? Object(x.e)(
+                    ? Object(x.f)(
                         "#Recommendation_ReleasedOn",
-                        Object(x.n)(s.r)
+                        Object(x.o)(s.r)
                       )
                     : "",
                 d = [];
@@ -1253,7 +1253,7 @@
                     : (I = f.video_mp4),
                   (R = "-" + f.discount_pct + "%"),
                   (N = f.base_price),
-                  (C = O ? Object(x.e)("#FreeToPlay") : f.discount_price),
+                  (C = O ? Object(x.f)("#FreeToPlay") : f.discount_price),
                   (L = f.description)));
               var D = I && 0 < I.length;
               return P.a.createElement(
@@ -1325,7 +1325,7 @@
                               F.WishlistFlag
                             )
                           },
-                          Object(x.e)("#Recommendation_OnWishlist") + "  "
+                          Object(x.f)("#Recommendation_OnWishlist") + "  "
                         )
                     ),
                     P.a.createElement(
@@ -1448,7 +1448,7 @@
                                     P.a.createElement(
                                       "span",
                                       null,
-                                      Object(x.e)("#btn_add_to_cart")
+                                      Object(x.f)("#btn_add_to_cart")
                                     )
                                   )
                                 )
@@ -1473,7 +1473,7 @@
                                 P.a.createElement(
                                   "span",
                                   null,
-                                  Object(x.e)("#wishlist_add_to_wishlist")
+                                  Object(x.f)("#wishlist_add_to_wishlist")
                                 )
                               )
                             ),
@@ -1488,7 +1488,7 @@
                                   F.Wishlisted,
                                   F.WishlistSection
                                 ),
-                                "data-tooltip-text": Object(x.e)(
+                                "data-tooltip-text": Object(x.f)(
                                   "#OnWishlistTooltip"
                                 ),
                                 onClick: function(e) {
@@ -1502,7 +1502,7 @@
                                   src:
                                     k.IMG_URL_BASE + "/v6/ico/ico_selected.png"
                                 }),
-                                "  " + Object(x.e)("#OnWishlist")
+                                "  " + Object(x.f)("#OnWishlist")
                               )
                             )
                         )
@@ -1612,7 +1612,7 @@
                         key: "no_recommedations_due_to_filter",
                         className: F.NoRecommendationsMessage
                       },
-                      Object(x.e)("#NoRecommendationsDueToFilter")
+                      Object(x.f)("#NoRecommendationsDueToFilter")
                     )
                   );
               } else
@@ -1628,7 +1628,7 @@
                 P.a.createElement(
                   "div",
                   { className: F.Header },
-                  Object(x.e)("#Recommendations_Header")
+                  Object(x.f)("#Recommendations_Header")
                 ),
                 P.a.createElement(j, null),
                 P.a.createElement(
@@ -1679,12 +1679,12 @@
                         P.a.createElement(
                           "div",
                           { className: F.Header },
-                          Object(x.e)("#HeaderTitle")
+                          Object(x.f)("#HeaderTitle")
                         ),
                         P.a.createElement(
                           "div",
                           { className: F.Body },
-                          Object(x.e)("#HeaderBody1")
+                          Object(x.f)("#HeaderBody1")
                         )
                       ),
                       P.a.createElement(
@@ -1705,7 +1705,7 @@
                       P.a.createElement(
                         "div",
                         { className: F.Text },
-                        Object(x.e)("#LoginText")
+                        Object(x.f)("#LoginText")
                       ),
                       P.a.createElement(
                         "div",
@@ -1719,7 +1719,7 @@
                         P.a.createElement(
                           "span",
                           null,
-                          Object(x.e)("#LoginButton")
+                          Object(x.f)("#LoginButton")
                         )
                       )
                     )

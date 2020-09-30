@@ -517,7 +517,7 @@ html.contextmenu_ContextMenuPopup_14wqd .contextmenu_contextMenuItem_1n7Wl {
   position: relative;
   min-width: 120px;
   /* Separate menu sections with extra space and different header text style. */
-  /* Brighten the top border to separate out some menu items */ }
+  /* Visually separate from items above it */ }
   .contextmenu_contextMenuItem_1n7Wl:first-child {
     border-top: 0.5px solid rgba(80, 87, 94, 0); }
   .contextmenu_contextMenuItem_1n7Wl:hover, .contextmenu_contextMenuItem_1n7Wl.contextmenu_active_18z-3 {

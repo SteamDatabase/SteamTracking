@@ -4004,6 +4004,9 @@ CTextInputSuggest.prototype.Init = function( $InputElement, fnSuggestForTerm, fn
 	this.m_$Focus = $J();
 	this.m_strLastFocusVal = null;
 
+	this.m_nNextRequestID = 1;
+	this.m_nRequestIDRecvd = 0;
+
 
 	this.m_$SuggestionsCtn = $J('<div/>', {'class': strCssClass, style: 'display: none;' } );
 	this.m_$Suggestions = $J('<div/>', {'class': 'popup_body popup_menu' } );
@@ -4112,7 +4115,16 @@ CTextInputSuggest.prototype.OnTextChanged = function( event )
 	if ( value != this.m_strLastVal )
 	{
 		var _this = this;
-		this.m_fnSuggestForTerm( value, function( rgSuggestions ) { _this.SetSuggestions( rgSuggestions ); } );
+		var nRequestID = this.m_nNextRequestID++;
+		this.m_fnSuggestForTerm( value, function( rgSuggestions ) {
+			// we've already recieved a more recent response, this is out-of-order
+			if ( _this.m_nRequestIDRecvd > nRequestID )
+				return;
+
+			_this.m_nRequestIDRecvd = nRequestID;
+			_this.SetSuggestions( rgSuggestions );
+		} );
+
 		this.m_strLastVal = value;
 	}
 };

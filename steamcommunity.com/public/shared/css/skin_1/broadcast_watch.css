@@ -165,9 +165,7 @@ body.iframe .responsive_page_content
 
 body.flat_page:not(.iframe) .pagecontent
 {
-	padding: 20px 0 0 0;
-	background: -webkit-linear-gradient( left, #192533 5%,#213148 40%,#213148 60%,#192533 95%);
-	background: linear-gradient( to right, #192533 5%,#213148 40%,#213148 60%,#192533 95%);
+	padding: 0px 0 0 0;
 }
 
 body.flat_page.iframe .pagecontent
@@ -232,7 +230,8 @@ body.flat_page #footer
 
 body.flat_page
 {
-	background-color: black;
+    background: radial-gradient(ellipse farthest-corner at 20% 30%, #0A0B0D 0%, #262A31 0%, rgb(33, 36, 43) 100%); */
+    background: radial-gradient(ellipse farthest-corner at 50% 30%, #212329 0%, #1e2025 50%, #1c1d22 100%);
 }
 
 .HeaderRow
@@ -452,8 +451,6 @@ body.iframe #video_content
 	padding-left: 20px;
 	overflow: hidden;
 	min-height: 143px;
-	background: -webkit-linear-gradient( top, rgba( 25, 37, 51, 0.4 ) 10%, black 95%);
-	background: linear-gradient( to bottom, rgba( 25, 37, 51, 0.4 ) 10%, black 95%);
 }
 
 .BroadcastPlayer
@@ -1124,11 +1121,6 @@ body:not(.iframe) .BroadcastRowShadow
 	text-align: left;
 }
 
-#footer_spacer
-{
-	background-color: black;
-}
-
 #ModalBackground
 {
 	position: fixed;
@@ -1686,7 +1678,6 @@ body.v6 .store_broadcast_title .broadcast_live_stream_icon {
 
 html.responsive body.broadcast_watch_page .responsive_page_template_content {
 	padding-bottom: 0;
-    min-height: calc( 100vh );
 }
 
 @media screen and (max-aspect-ratio: 10/9),

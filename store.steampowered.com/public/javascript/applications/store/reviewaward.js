@@ -50,10 +50,10 @@
       "use strict";
       a.r(t),
         a.d(t, "CheckmarkCircle", function() {
-          return E;
+          return h;
         }),
         a.d(t, "LibraryLoyaltyAwardModal", function() {
-          return g;
+          return w;
         });
       var s = a("mrSG"),
         C = a("q1tI"),
@@ -252,19 +252,19 @@
         j = a("exH9"),
         p = a("qbgq"),
         _ = a("0OaU"),
-        b = a("6Y59");
+        f = a("6Y59");
       function B(e) {
-        return Object(T.e)("#RewardsReaction_" + e);
+        return Object(T.f)("#RewardsReaction_" + e);
       }
       var I,
-        h,
+        b,
         M = a("oet2");
-      ((h = I = I || {})[(h.SELECTING = 0)] = "SELECTING"),
-        (h[(h.CONFIRM = 1)] = "CONFIRM"),
-        (h[(h.SUBMITTING = 2)] = "SUBMITTING"),
-        (h[(h.DONE = 3)] = "DONE"),
-        (h[(h.ERROR = 4)] = "ERROR");
-      var E = function(e) {
+      ((b = I = I || {})[(b.SELECTING = 0)] = "SELECTING"),
+        (b[(b.CONFIRM = 1)] = "CONFIRM"),
+        (b[(b.SUBMITTING = 2)] = "SUBMITTING"),
+        (b[(b.DONE = 3)] = "DONE"),
+        (b[(b.ERROR = 4)] = "ERROR");
+      var h = function(e) {
           return C.createElement(
             "svg",
             Object(s.a)(
@@ -322,7 +322,7 @@
             e
           );
         })(C.PureComponent);
-      var w = (function(t) {
+      var E = (function(t) {
           function e(e) {
             var r = t.call(this, e) || this;
             return (
@@ -367,7 +367,7 @@
                 c = l.s_LoyaltyAwardModalStore;
               if (!n) return null;
               c.GetAwardConfigurations();
-              return C.createElement(f, {
+              return C.createElement(g, {
                 key: o,
                 targetid: o,
                 active: n,
@@ -385,7 +385,7 @@
             (e = l = Object(s.c)([n.a], e))
           );
         })(C.Component),
-        g = ((t.default = w),
+        w = ((t.default = E),
         (function(t) {
           function e(e) {
             return t.call(this, e) || this;
@@ -411,7 +411,7 @@
               if (null === s)
                 return console.log("Store not initialized yet."), null;
               s.GetAwardConfigurations();
-              return C.createElement(f, {
+              return C.createElement(g, {
                 key: a,
                 targetid: a,
                 active: n,
@@ -427,7 +427,7 @@
             (e = c = Object(s.c)([n.a], e))
           );
         })(C.Component)),
-        f = (function(a) {
+        g = (function(a) {
           function e(e) {
             var t = a.call(this, e) || this;
             return (
@@ -458,12 +458,12 @@
                 m,
                 p,
                 _ = o.GetExistingReactions(),
-                b = o.GetAwardConfigurations(),
-                h = o.GetUserPointBalance(),
-                E = ((u = n),
+                f = o.GetAwardConfigurations(),
+                b = o.GetUserPointBalance(),
+                h = ((u = n),
                 (m = r),
                 (p = []),
-                b.forEach(function(e) {
+                f.forEach(function(e) {
                   if (e.valid_target_types.includes(u))
                     switch (u) {
                       case 1:
@@ -474,17 +474,17 @@
                     }
                 }),
                 p),
-                w = 0 === c ? null : b.get(c),
-                g = w ? w.points_cost : 0,
-                f = w ? w.points_transferred : 0,
+                E = 0 === c ? null : f.get(c),
+                w = E ? E.points_cost : 0,
+                g = E ? E.points_transferred : 0,
                 y =
                   2 == n
-                    ? Object(T.e)("#GrantAwardDescription_UGC")
-                    : Object(T.e)("#GrantAwardDescription_Review");
+                    ? Object(T.f)("#GrantAwardDescription_UGC")
+                    : Object(T.f)("#GrantAwardDescription_Review");
               switch (l) {
                 case I.SELECTING:
                   var v = 0 === c || _.get(c),
-                    O = !h || h.greaterThanOrEqual(g),
+                    O = !b || b.greaterThanOrEqual(w),
                     A = C.createElement(
                       F,
                       {
@@ -492,13 +492,13 @@
                           return t.setState({ ePhase: I.CONFIRM });
                         },
                         disabled: v,
-                        title: Object(T.e)(
+                        title: Object(T.f)(
                           v
                             ? "#GrantAward_PromptTooltip"
                             : "#GrantAward_SubmitTooltip"
                         )
                       },
-                      Object(T.e)(
+                      Object(T.f)(
                         v ? "#GrantAward_SelectAward" : "#GrantAward_Next"
                       )
                     ),
@@ -510,12 +510,12 @@
                       C.createElement(
                         "div",
                         { className: L.ButtonContainer },
-                        E.map(function(e) {
+                        h.map(function(e) {
                           return C.createElement(H, {
                             key: e,
                             reaction: e,
                             selected: e === c && !_.get(e),
-                            cost: b.get(e).points_cost,
+                            cost: f.get(e).points_cost,
                             alreadyAwarded: _.get(e),
                             onClick: function() {
                               _.get(e) ||
@@ -536,11 +536,11 @@
                               C.createElement(
                                 "div",
                                 { key: "msg", className: L.NotEnoughPoints },
-                                Object(T.e)(
+                                Object(T.f)(
                                   "#GrantAward_CantAfford",
-                                  h
+                                  b
                                     .negate()
-                                    .add(g)
+                                    .add(w)
                                     .toNumber()
                                     .toLocaleString()
                                 )
@@ -554,7 +554,7 @@
                                 C.createElement(
                                   x,
                                   { key: "button" },
-                                  Object(T.e)("#GrantAward_HowToGetPoints")
+                                  Object(T.f)("#GrantAward_HowToGetPoints")
                                 )
                               )
                             ]
@@ -587,9 +587,9 @@
                         C.createElement(
                           "div",
                           { className: L.ConfirmText },
-                          Object(T.m)(
+                          Object(T.n)(
                             "#GrantAward_Confirm",
-                            C.createElement(q, null, g.toLocaleString()),
+                            C.createElement(q, null, w.toLocaleString()),
                             C.createElement(
                               "span",
                               { className: L.AwardName },
@@ -600,13 +600,13 @@
                         C.createElement(
                           "div",
                           { className: L.ConfirmText },
-                          Object(T.m)(
+                          Object(T.n)(
                             "#GrantAward_Confirm_Details",
-                            C.createElement(q, null, f.toLocaleString()),
+                            C.createElement(q, null, g.toLocaleString()),
                             C.createElement(
                               "span",
                               { className: L.TimePeriod },
-                              Object(T.e)(
+                              Object(T.f)(
                                 "#GrantAward_Confirm_DetailsTimePeriod"
                               )
                             )
@@ -638,7 +638,7 @@
                         C.createElement(
                           "div",
                           { className: L.SuccessText },
-                          Object(T.e)("#GrantAward_Success")
+                          Object(T.f)("#GrantAward_Success")
                         )
                       )
                     ),
@@ -654,16 +654,16 @@
                           },
                           disabled: l !== I.CONFIRM
                         },
-                        Object(T.e)("#GrantAward_Back")
+                        Object(T.f)("#GrantAward_Back")
                       ),
                       C.createElement(
                         F,
                         {
                           onClick: this.GrantAward,
-                          title: Object(T.e)("#GrantAward_SubmitTooltip"),
+                          title: Object(T.f)("#GrantAward_SubmitTooltip"),
                           disabled: l !== I.CONFIRM
                         },
-                        Object(T.e)("#GrantAwardNowButton")
+                        Object(T.f)("#GrantAwardNowButton")
                       )
                     )
                   );
@@ -672,25 +672,25 @@
                   var S = "";
                   switch (this.state.eResult) {
                     case 10:
-                      S = Object(T.e)("#GrantAwardError_Busy");
+                      S = Object(T.f)("#GrantAwardError_Busy");
                       break;
                     case 32:
-                      S = Object(T.e)("#GrantAwardError_PersistFailed");
+                      S = Object(T.f)("#GrantAwardError_PersistFailed");
                       break;
                     case 8:
-                      S = Object(T.e)("#GrantAwardError_InvalidParam");
+                      S = Object(T.f)("#GrantAwardError_InvalidParam");
                       break;
                     case 42:
-                      S = Object(T.e)("#GrantAwardError_NoMatch");
+                      S = Object(T.f)("#GrantAwardError_NoMatch");
                       break;
                     case 107:
-                      S = Object(T.e)("#GrantAwardError_InsufficientFunds");
+                      S = Object(T.f)("#GrantAwardError_InsufficientFunds");
                       break;
                     case 15:
-                      S = Object(T.e)("#GrantAwardError_AccessDenied");
+                      S = Object(T.f)("#GrantAwardError_AccessDenied");
                       break;
                     default:
-                      S = Object(T.e)("#GrantAwardError_Fail");
+                      S = Object(T.f)("#GrantAwardError_Fail");
                   }
                   R = C.createElement(
                     C.Fragment,
@@ -717,7 +717,7 @@
                             return t.setState({ ePhase: I.SELECTING });
                           }
                         },
-                        Object(T.e)("#GrantAward_Back")
+                        Object(T.f)("#GrantAward_Back")
                       )
                     )
                   );
@@ -763,7 +763,7 @@
             C.createElement(
               "div",
               { className: L.Title },
-              Object(T.e)("#GrantAwardTitle")
+              Object(T.f)("#GrantAwardTitle")
             ),
             C.createElement("div", { className: L.Description }, t)
           );
@@ -779,14 +779,14 @@
             C.createElement(
               "div",
               { className: L.Left },
-              C.createElement(b.z, { className: L.BalanceIcon }),
+              C.createElement(f.z, { className: L.BalanceIcon }),
               C.createElement(
                 "div",
                 { className: L.BalanceDetails },
                 C.createElement(
                   "div",
                   { className: L.BalanceLabel },
-                  Object(T.e)("#YourBalance")
+                  Object(T.f)("#YourBalance")
                 ),
                 C.createElement("div", { className: L.BalanceAmount }, r)
               )
@@ -807,7 +807,7 @@
                   className: L.FooterLink,
                   href: G.c.STORE_BASE_URL + "points/howitworks"
                 },
-                Object(T.e)("#GrantAward_PointsLink")
+                Object(T.f)("#GrantAward_PointsLink")
               )
             )
           );
@@ -882,7 +882,7 @@
                 ),
                 C.createElement("div", { className: L.Label }, B(t)),
                 C.createElement(q, { className: L.Points }, r.toLocaleString()),
-                n && C.createElement(E, { className: L.IconCheckMark })
+                n && C.createElement(h, { className: L.IconCheckMark })
               );
             }),
             Object(s.c)([r.a], e.prototype, "handleMouseOver", null),
@@ -900,7 +900,7 @@
           return C.createElement(
             "span",
             Object(s.a)({}, n, { className: Object(j.a)(a, L.PointsAmount) }),
-            C.createElement(b.z, { className: L.PointsAmountIcon }),
+            C.createElement(f.z, { className: L.PointsAmountIcon }),
             t
           );
         };

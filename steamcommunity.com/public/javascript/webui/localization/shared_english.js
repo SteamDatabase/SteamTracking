@@ -721,6 +721,7 @@ LocalizationReady("shared", "english", {
   Language_ukrainian: "Ukrainian",
   Language_latam: "Spanish - Latin America",
   Language_vietnamese: "Vietnamese",
+  Language_sc_schinese: "SteamChina - Simplified Chinese",
 
   Language_koreana: "Korean",
 
@@ -1127,10 +1128,12 @@ LocalizationReady("shared", "english", {
   ConnectionTrouble_FailedToConnect: "Failed to connect to Steam",
   Chat_Upload_ErrorCloud: "Failed to upload image data to cloud server.",
   Chat_Settings_Error_ServerError: "A server error occurred",
-  Broadcast_ViewerCount: "%1$s viewers",
+  Broadcast_ViewerCount: "%1$s viewer",
+  Broadcast_ViewerCount_Plural: "%1$s viewers",
   Broadcast_VideoContext_ToggleStats: "Toggle technical stats",
   Broadcast_VideoContext_OpenStore: "Visit Store",
   Broadcast_None: "None",
+  Broadcast_Playing: "Playing: ",
 
   BroadcastWatch_MinBrowser:
     "Your web browser does not support the minimum set of features required to watch this broadcast",
@@ -1210,6 +1213,8 @@ LocalizationReady("shared", "english", {
   Store_AddToCart: "Add to Cart",
 
   YouTubePlayer_Loading: "Loading YouTube...",
+  VODPlayer_Loading: "Loading VOD Content for AppID %1$s...",
+  VODPlayer_ErrorLoading: "Error: Failed to load VOD Content for AppID %1$s",
 
   home_page_live_broadcast: "Live",
   StoreBroadcast_Hide_Tooltip: "Show/hide the live broadcast",
@@ -1227,7 +1232,11 @@ LocalizationReady("shared", "english", {
   sale_three_section_show_chat: "Show Chat",
   btn_live_streams_all: "View all",
 
+  Broadcast_default_title_simple: "Now broadcasting",
   Broadcast_default_title_dev: "Now broadcasting: Watch the developer play",
+  Broadcast_default_title_dev_chat:
+    "Now broadcasting: Chat with the Developers",
+  Broadcast_default_title_ama: "Now broadcasting: Join the AMA",
   Broadcast_default_title_community:
     "Now broadcasting: Watch the community play",
   Broadcast_default_title_comp:
@@ -1674,6 +1683,7 @@ LocalizationReady("shared", "english", {
   AppType_event: "event",
   AppType_tag: "tag",
   AppType_music: "music",
+  AppType_hardware: "hardware",
 
   GameHover_Tags: "Tags:",
   GameHover_UserReviewsHeader: "User Reviews:",

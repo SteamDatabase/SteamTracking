@@ -2,61 +2,61 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6112520";
+var CLSTAMP = "6115388";
 !(function(e) {
   function t(t) {
     for (
-      var r, c, a = t[0], u = t[1], s = t[2], d = 0, h = [];
-      d < a.length;
-      d++
+      var r, a, c = t[0], u = t[1], s = t[2], f = 0, d = [];
+      f < c.length;
+      f++
     )
-      (c = a[d]),
-        Object.prototype.hasOwnProperty.call(i, c) && i[c] && h.push(i[c][0]),
-        (i[c] = 0);
+      (a = c[f]),
+        Object.prototype.hasOwnProperty.call(i, a) && i[a] && d.push(i[a][0]),
+        (i[a] = 0);
     for (r in u) Object.prototype.hasOwnProperty.call(u, r) && (e[r] = u[r]);
-    for (l && l(t); h.length; ) h.shift()();
+    for (l && l(t); d.length; ) d.shift()();
     return o.push.apply(o, s || []), n();
   }
   function n() {
     for (var e, t = 0; t < o.length; t++) {
-      for (var n = o[t], r = !0, a = 1; a < n.length; a++) {
-        var u = n[a];
+      for (var n = o[t], r = !0, c = 1; c < n.length; c++) {
+        var u = n[c];
         0 !== i[u] && (r = !1);
       }
-      r && (o.splice(t--, 1), (e = c((c.s = n[0]))));
+      r && (o.splice(t--, 1), (e = a((a.s = n[0]))));
     }
     return e;
   }
   var r = {},
     i = { 5: 0 },
     o = [];
-  function c(t) {
+  function a(t) {
     if (r[t]) return r[t].exports;
     var n = (r[t] = { i: t, l: !1, exports: {} });
-    return e[t].call(n.exports, n, n.exports, c), (n.l = !0), n.exports;
+    return e[t].call(n.exports, n, n.exports, a), (n.l = !0), n.exports;
   }
-  (c.m = e),
-    (c.c = r),
-    (c.d = function(e, t, n) {
-      c.o(e, t) || Object.defineProperty(e, t, { enumerable: !0, get: n });
+  (a.m = e),
+    (a.c = r),
+    (a.d = function(e, t, n) {
+      a.o(e, t) || Object.defineProperty(e, t, { enumerable: !0, get: n });
     }),
-    (c.r = function(e) {
+    (a.r = function(e) {
       "undefined" != typeof Symbol &&
         Symbol.toStringTag &&
         Object.defineProperty(e, Symbol.toStringTag, { value: "Module" }),
         Object.defineProperty(e, "__esModule", { value: !0 });
     }),
-    (c.t = function(e, t) {
-      if ((1 & t && (e = c(e)), 8 & t)) return e;
+    (a.t = function(e, t) {
+      if ((1 & t && (e = a(e)), 8 & t)) return e;
       if (4 & t && "object" == typeof e && e && e.__esModule) return e;
       var n = Object.create(null);
       if (
-        (c.r(n),
+        (a.r(n),
         Object.defineProperty(n, "default", { enumerable: !0, value: e }),
         2 & t && "string" != typeof e)
       )
         for (var r in e)
-          c.d(
+          a.d(
             n,
             r,
             function(t) {
@@ -65,7 +65,7 @@ var CLSTAMP = "6112520";
           );
       return n;
     }),
-    (c.n = function(e) {
+    (a.n = function(e) {
       var t =
         e && e.__esModule
           ? function() {
@@ -74,16 +74,16 @@ var CLSTAMP = "6112520";
           : function() {
               return e;
             };
-      return c.d(t, "a", t), t;
+      return a.d(t, "a", t), t;
     }),
-    (c.o = function(e, t) {
+    (a.o = function(e, t) {
       return Object.prototype.hasOwnProperty.call(e, t);
     }),
-    (c.p = "");
-  var a = (window.webpackJsonp = window.webpackJsonp || []),
-    u = a.push.bind(a);
-  (a.push = t), (a = a.slice());
-  for (var s = 0; s < a.length; s++) t(a[s]);
+    (a.p = "");
+  var c = (window.webpackJsonp = window.webpackJsonp || []),
+    u = c.push.bind(c);
+  (c.push = t), (c = c.slice());
+  for (var s = 0; s < c.length; s++) t(c[s]);
   var l = u;
   o.push(["qM/t", 0]), n();
 })({
@@ -126,100 +126,66 @@ var CLSTAMP = "6112520";
       n.d(t, "b", function() {
         return i;
       }),
-      n.d(t, "r", function() {
+      n.d(t, "q", function() {
         return o;
       }),
-      n.d(t, "s", function() {
+      n.d(t, "r", function() {
+        return a;
+      }),
+      n.d(t, "j", function() {
         return c;
       }),
       n.d(t, "k", function() {
-        return a;
-      }),
-      n.d(t, "l", function() {
         return u;
       }),
-      n.d(t, "q", function() {
+      n.d(t, "p", function() {
         return s;
       }),
-      n.d(t, "m", function() {
+      n.d(t, "l", function() {
         return l;
       }),
-      n.d(t, "n", function() {
-        return d;
-      }),
-      n.d(t, "p", function() {
-        return h;
-      }),
-      n.d(t, "o", function() {
+      n.d(t, "m", function() {
         return f;
       }),
-      n.d(t, "h", function() {
-        return p;
+      n.d(t, "o", function() {
+        return d;
       }),
-      n.d(t, "j", function() {
-        return m;
-      }),
-      n.d(t, "i", function() {
-        return _;
+      n.d(t, "n", function() {
+        return h;
       }),
       n.d(t, "g", function() {
-        return v;
+        return p;
+      }),
+      n.d(t, "i", function() {
+        return m;
+      }),
+      n.d(t, "h", function() {
+        return _;
       }),
       n.d(t, "e", function() {
         return b;
       }),
       n.d(t, "d", function() {
-        return g;
+        return v;
       }),
       n.d(t, "f", function() {
-        return S;
+        return g;
       }),
       n.d(t, "a", function() {
-        return I;
+        return E;
       });
     var o = 1,
-      c = 4,
-      a = 750,
+      a = 4,
+      c = 750,
       u = 799,
       s = 7,
       l = 250820,
-      d = 330050,
-      h = 358510,
-      f = 366490,
+      f = 330050,
+      d = 358510,
+      h = 366490,
       p = "18446744073709551615",
       m = 0,
-      _ = 2147483647,
-      v = [
-        0,
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        11,
-        12,
-        13,
-        14,
-        15,
-        16,
-        17,
-        18,
-        19,
-        20,
-        21,
-        22,
-        23,
-        24,
-        25,
-        26,
-        27,
-        28
-      ];
+      _ = 2147483647;
     function b(e, t) {
       switch ((void 0 === t && (t = "en"), e)) {
         case 0:
@@ -284,7 +250,7 @@ var CLSTAMP = "6112520";
           return t;
       }
     }
-    function g(e, t) {
+    function v(e, t) {
       switch ((void 0 === t && (t = ""), e)) {
         case 0:
           return "english";
@@ -348,7 +314,7 @@ var CLSTAMP = "6112520";
           return t;
       }
     }
-    function S(e, t) {
+    function g(e, t) {
       switch ((void 0 === t && (t = 0), e)) {
         case "english":
           return 0;
@@ -413,7 +379,7 @@ var CLSTAMP = "6112520";
           return t;
       }
     }
-    function I(e) {
+    function E(e) {
       switch (e) {
         default:
           break;
@@ -453,10 +419,10 @@ var CLSTAMP = "6112520";
   "1n9R": function(e, t, n) {
     "use strict";
     n.d(t, "c", function() {
-      return c;
+      return a;
     }),
       n.d(t, "i", function() {
-        return a;
+        return c;
       }),
       n.d(t, "a", function() {
         return u;
@@ -468,13 +434,13 @@ var CLSTAMP = "6112520";
         return l;
       }),
       n.d(t, "h", function() {
-        return d;
+        return f;
       }),
       n.d(t, "g", function() {
-        return h;
+        return d;
       }),
       n.d(t, "d", function() {
-        return f;
+        return h;
       }),
       n.d(t, "e", function() {
         return p;
@@ -483,7 +449,7 @@ var CLSTAMP = "6112520";
     var r,
       i = n("/7KC"),
       o = n("YlSc"),
-      c = {
+      a = {
         EUNIVERSE: 0,
         WEB_UNIVERSE: "",
         LANGUAGE: "english",
@@ -533,7 +499,7 @@ var CLSTAMP = "6112520";
         OFFLINE_MODE: !1,
         IN_LIBRARY: !1
       },
-      a = {
+      c = {
         logged_in: !1,
         steamid: "",
         accountid: 0,
@@ -573,19 +539,19 @@ var CLSTAMP = "6112520";
       })();
       return Object(o.c)("sessionid", e, 0), e;
     }
-    function d(e) {
+    function f(e) {
       void 0 === e && (e = "webui_config");
       var t = {},
-        n = h("config", e);
-      n && (delete n.SESSIONID, Object.assign(c, n), (t.config = !0));
-      var r = h("userinfo", e);
-      r && (Object.assign(a, r), (t.userConfig = !0));
-      var i = h("broadcast", e);
+        n = d("config", e);
+      n && (delete n.SESSIONID, Object.assign(a, n), (t.config = !0));
+      var r = d("userinfo", e);
+      r && (Object.assign(c, r), (t.userConfig = !0));
+      var i = d("broadcast", e);
       i && (Object.assign(u, i), (t.broadcastConfig = !0));
-      var o = h("community", e);
+      var o = d("community", e);
       return o && (Object.assign(s, o), (t.communityConfig = !0)), t;
     }
-    function h(e, t) {
+    function d(e, t) {
       var n;
       if (
         (void 0 === t && (t = "webui_config"),
@@ -600,42 +566,42 @@ var CLSTAMP = "6112520";
         }
       else console.error("Missing config element #", t);
     }
-    function f() {
+    function h() {
       if (!window || !window.location || !window.location.href)
         return console.warn("Unable to determine base url!"), "unknown";
       var e = window.location.href;
-      return e.startsWith(c.STORE_BASE_URL)
-        ? c.STORE_BASE_URL
-        : e.startsWith(c.COMMUNITY_BASE_URL)
-        ? c.COMMUNITY_BASE_URL
-        : e.startsWith(c.CHAT_BASE_URL)
-        ? c.CHAT_BASE_URL
-        : e.startsWith(c.PARTNER_BASE_URL)
-        ? c.PARTNER_BASE_URL
-        : e.startsWith(c.HELP_BASE_URL)
-        ? c.HELP_BASE_URL
-        : e.startsWith(c.STEAMTV_BASE_URL)
-        ? c.STEAMTV_BASE_URL
-        : e.startsWith(c.STATS_BASE_URL)
-        ? c.STATS_BASE_URL
-        : e.startsWith(c.INTERNAL_STATS_BASE_URL)
-        ? c.INTERNAL_STATS_BASE_URL
+      return e.startsWith(a.STORE_BASE_URL)
+        ? a.STORE_BASE_URL
+        : e.startsWith(a.COMMUNITY_BASE_URL)
+        ? a.COMMUNITY_BASE_URL
+        : e.startsWith(a.CHAT_BASE_URL)
+        ? a.CHAT_BASE_URL
+        : e.startsWith(a.PARTNER_BASE_URL)
+        ? a.PARTNER_BASE_URL
+        : e.startsWith(a.HELP_BASE_URL)
+        ? a.HELP_BASE_URL
+        : e.startsWith(a.STEAMTV_BASE_URL)
+        ? a.STEAMTV_BASE_URL
+        : e.startsWith(a.STATS_BASE_URL)
+        ? a.STATS_BASE_URL
+        : e.startsWith(a.INTERNAL_STATS_BASE_URL)
+        ? a.INTERNAL_STATS_BASE_URL
         : "";
     }
     function p() {
       var e = window.location.href;
-      return e.startsWith(c.STORE_BASE_URL)
+      return e.startsWith(a.STORE_BASE_URL)
         ? "store"
-        : e.startsWith(c.COMMUNITY_BASE_URL)
+        : e.startsWith(a.COMMUNITY_BASE_URL)
         ? "community"
-        : e.startsWith(c.PARTNER_BASE_URL)
+        : e.startsWith(a.PARTNER_BASE_URL)
         ? "partnerweb"
-        : e.startsWith(c.HELP_BASE_URL)
+        : e.startsWith(a.HELP_BASE_URL)
         ? "help"
-        : e.startsWith(c.STEAMTV_BASE_URL)
+        : e.startsWith(a.STEAMTV_BASE_URL)
         ? "steamtv"
-        : e.startsWith(c.STATS_BASE_URL) ||
-          e.startsWith(c.INTERNAL_STATS_BASE_URL)
+        : e.startsWith(a.STATS_BASE_URL) ||
+          e.startsWith(a.INTERNAL_STATS_BASE_URL)
         ? "stats"
         : "";
     }
@@ -646,13 +612,13 @@ var CLSTAMP = "6112520";
       return o;
     }),
       n.d(t, "b", function() {
-        return a;
+        return c;
       });
     var r = n("1n9R"),
       i = { success: !0, result: 1 },
       o = (function() {
         function e() {
-          (this.m_connection = new c()),
+          (this.m_connection = new a()),
             (this.m_bAllowAccountMismatch = !1),
             (this.m_mapCacheSubscribedApp = new Map());
         }
@@ -753,7 +719,7 @@ var CLSTAMP = "6112520";
           e
         );
       })(),
-      c = (function() {
+      a = (function() {
         function e() {
           (this.m_mapWaitingCallbacks = new Map()),
             (this.m_iCallSeq = 1),
@@ -889,13 +855,13 @@ var CLSTAMP = "6112520";
           e
         );
       })(),
-      a = new o();
-    window.ClientConnectionAPI = a;
+      c = new o();
+    window.ClientConnectionAPI = c;
   },
   J0bI: function(e, t, n) {
     "use strict";
     n.d(t, "b", function() {
-      return a;
+      return c;
     }),
       n.d(t, "a", function() {
         return u;
@@ -903,8 +869,8 @@ var CLSTAMP = "6112520";
     var r = n("mrSG"),
       i = n("2vnA"),
       o = n("0N1H"),
-      c = n("tkkQ"),
-      a = (function() {
+      a = n("tkkQ"),
+      c = (function() {
         function e(e) {
           (this.m_bReady = !1),
             (this.m_bValid = !1),
@@ -924,7 +890,7 @@ var CLSTAMP = "6112520";
             return this.m_strInviteCode;
           }),
           (e.prototype.BNeverExpires = function() {
-            return this.m_rtTimeExpires == o.i;
+            return this.m_rtTimeExpires == o.h;
           }),
           (e.prototype.GetChatRoomGroupID = function() {
             return this.m_ulChatRoomGroupID;
@@ -961,7 +927,7 @@ var CLSTAMP = "6112520";
               (this.m_ulChatID = t),
               (this.m_bIsBanned = n),
               (this.m_rtKickExpires = r),
-              (this.m_rtTimeExpires = o.i),
+              (this.m_rtTimeExpires = o.h),
               (this.m_bValid = !0),
               (this.m_bReady = !0);
           }),
@@ -972,15 +938,15 @@ var CLSTAMP = "6112520";
         );
       })();
     function u(e) {
-      return "public" == c.a.WEB_UNIVERSE
+      return "public" == a.a.WEB_UNIVERSE
         ? "https://s.team/chat/" + e
-        : c.a.COMMUNITY_BASE_URL + "chat/invite/" + e;
+        : a.a.COMMUNITY_BASE_URL + "chat/invite/" + e;
     }
   },
   Kcgk: function(e, t, n) {
     "use strict";
     n.d(t, "h", function() {
-      return a;
+      return c;
     }),
       n.d(t, "d", function() {
         return u;
@@ -989,7 +955,7 @@ var CLSTAMP = "6112520";
         return s;
       }),
       n.d(t, "f", function() {
-        return d;
+        return f;
       }),
       n.d(t, "g", function() {
         return p;
@@ -998,18 +964,18 @@ var CLSTAMP = "6112520";
         return m;
       }),
       n.d(t, "c", function() {
-        return S;
+        return E;
       }),
       n.d(t, "b", function() {
-        return I;
+        return S;
       });
     var r = n("mrSG"),
       i = n("oh5H"),
       o = n("ujHl"),
-      c = n("Gp1o");
-    function a(e, t, n) {
-      var c,
-        a = (c =
+      a = n("Gp1o");
+    function c(e, t, n) {
+      var a,
+        c = (a =
           "boolean" == typeof t
             ? { bExcludeAgo: t, bForceSingleUnits: n, bHighGranularity: !1 }
             : Object(r.a)(
@@ -1023,51 +989,51 @@ var CLSTAMP = "6112520";
           ? "#TimeInterval_"
           : "#TimeSince_";
       if (e >= 2 * o.d.PerYear)
-        return Object(i.d)(a + "XYears", Math.floor(e / o.d.PerYear));
+        return Object(i.f)(c + "XYears", Math.floor(e / o.d.PerYear));
       if (e >= o.d.PerYear)
-        return (e -= o.d.PerYear) >= 2 * o.d.PerMonth && !c.bForceSingleUnits
-          ? Object(i.d)(a + "1YearXMonths", Math.floor(e / o.d.PerMonth))
-          : Object(i.d)(a + "1Year");
+        return (e -= o.d.PerYear) >= 2 * o.d.PerMonth && !a.bForceSingleUnits
+          ? Object(i.f)(c + "1YearXMonths", Math.floor(e / o.d.PerMonth))
+          : Object(i.f)(c + "1Year");
       if (e >= 2 * o.d.PerMonth)
-        return Object(i.d)(a + "XMonths", Math.floor(e / o.d.PerMonth));
+        return Object(i.f)(c + "XMonths", Math.floor(e / o.d.PerMonth));
       if (e >= 2 * o.d.PerWeek)
-        return Object(i.d)(a + "XWeeks", Math.floor(e / o.d.PerWeek));
+        return Object(i.f)(c + "XWeeks", Math.floor(e / o.d.PerWeek));
       if (e >= o.d.PerWeek)
-        return Object(i.d)(a + "1Week", Math.floor(e / o.d.PerWeek));
+        return Object(i.f)(c + "1Week", Math.floor(e / o.d.PerWeek));
       if (e >= 2 * o.d.PerDay)
-        return Object(i.d)(a + "XDays", Math.floor(e / o.d.PerDay));
+        return Object(i.f)(c + "XDays", Math.floor(e / o.d.PerDay));
       if (e >= o.d.PerDay)
-        return (e -= o.d.PerDay) >= 2 * o.d.PerHour && !c.bForceSingleUnits
-          ? Object(i.d)(a + "1DayXHours", Math.floor(e / o.d.PerHour))
-          : Object(i.d)(a + "1Day");
+        return (e -= o.d.PerDay) >= 2 * o.d.PerHour && !a.bForceSingleUnits
+          ? Object(i.f)(c + "1DayXHours", Math.floor(e / o.d.PerHour))
+          : Object(i.f)(c + "1Day");
       if (e >= 2 * o.d.PerHour)
-        return Object(i.d)(a + "XHours", Math.floor(e / o.d.PerHour));
+        return Object(i.f)(c + "XHours", Math.floor(e / o.d.PerHour));
       if (e >= o.d.PerHour)
-        return (e -= o.d.PerHour) >= 2 * o.d.PerMinute && !c.bForceSingleUnits
-          ? Object(i.d)(a + "1HourXMinutes", Math.floor(e / o.d.PerMinute))
-          : Object(i.d)(a + "1Hour");
+        return (e -= o.d.PerHour) >= 2 * o.d.PerMinute && !a.bForceSingleUnits
+          ? Object(i.f)(c + "1HourXMinutes", Math.floor(e / o.d.PerMinute))
+          : Object(i.f)(c + "1Hour");
       if (e >= 2 * o.d.PerMinute) {
         var u = Math.floor(e / o.d.PerMinute),
           s = e % o.d.PerMinute;
-        return c.bHighGranularity && 0 != s
+        return a.bHighGranularity && 0 != s
           ? 1 == s
-            ? Object(i.d)(a + "XMinutes1Second", u)
-            : Object(i.d)(a + "XMinutesXSeconds", u, s)
-          : Object(i.d)(a + "XMinutes", u);
+            ? Object(i.f)(c + "XMinutes1Second", u)
+            : Object(i.f)(c + "XMinutesXSeconds", u, s)
+          : Object(i.f)(c + "XMinutes", u);
       }
       if (e >= o.d.PerMinute) {
         s = e % o.d.PerMinute;
-        return c.bHighGranularity && 0 != s
+        return a.bHighGranularity && 0 != s
           ? 1 == s
-            ? Object(i.d)(a + "1Minute1Second")
-            : Object(i.d)(a + "1MinuteXSeconds", s)
-          : Object(i.d)(a + "1Minute");
+            ? Object(i.f)(c + "1Minute1Second")
+            : Object(i.f)(c + "1MinuteXSeconds", s)
+          : Object(i.f)(c + "1Minute");
       }
-      return c.bHighGranularity
+      return a.bHighGranularity
         ? 1 == e
-          ? Object(i.d)(a + "1Second")
-          : Object(i.d)(a + "XSeconds", e)
-        : Object(i.d)(a + "LessThanAMinute");
+          ? Object(i.f)(c + "1Second")
+          : Object(i.f)(c + "XSeconds", e)
+        : Object(i.f)(c + "LessThanAMinute");
     }
     function u(e, t) {
       var n = {
@@ -1076,18 +1042,18 @@ var CLSTAMP = "6112520";
         day: "numeric",
         year: t ? void 0 : "numeric"
       };
-      return new Date(1e3 * e).toLocaleDateString(i.c.GetPreferredLocales(), n);
+      return new Date(1e3 * e).toLocaleDateString(i.e.GetPreferredLocales(), n);
     }
     function s(e) {
-      return new Date(1e3 * e).toLocaleTimeString(i.c.GetPreferredLocales(), {
+      return new Date(1e3 * e).toLocaleTimeString(i.e.GetPreferredLocales(), {
         hour: "numeric",
         minute: "numeric"
       });
     }
     var l = new Map();
-    function d(e) {
+    function f(e) {
       var t = new Date(1e3 * e),
-        n = i.c.GetPreferredLocales(),
+        n = i.e.GetPreferredLocales(),
         r = (function(e) {
           var t = l.get(e);
           if (!0 === t || !1 === t) return t;
@@ -1108,8 +1074,8 @@ var CLSTAMP = "6112520";
           : { hour: "numeric", hour12: !0 }
       );
     }
-    var h = new Map(),
-      f = new Map();
+    var d = new Map(),
+      h = new Map();
     function p(e, t) {
       var n = new Date(),
         r = new Date(1e3 * e);
@@ -1117,92 +1083,92 @@ var CLSTAMP = "6112520";
         return (function(e) {
           var t = new Date(1e3 * e),
             n = t.setHours(0, 0, 0, 0),
-            r = h.get(n);
+            r = d.get(n);
           return (
             r ||
-            ((r = t.toLocaleDateString(i.c.GetPreferredLocales(), {
+            ((r = t.toLocaleDateString(i.e.GetPreferredLocales(), {
               year: "numeric",
               month: "short",
               day: "numeric"
             })),
-            h.set(n, r),
+            d.set(n, r),
             r)
           );
         })(e);
-      c.b(new Date().setHours(24, 0, 0, 0) - n.getTime());
+      a.b(new Date().setHours(24, 0, 0, 0) - n.getTime());
       var o = new Date();
       if ((o.setHours(0, 0, 0, 0), r >= o)) {
         if ((o.setDate(o.getDate() + 1), r < o))
-          return Object(i.d)("#Time_Today");
+          return Object(i.f)("#Time_Today");
         if ((o.setDate(o.getDate() + 1), r < o))
-          return Object(i.d)("#Time_Tomorrow");
+          return Object(i.f)("#Time_Tomorrow");
       } else if ((o.setDate(o.getDate() - 1), r >= o))
-        return Object(i.d)("#Time_Yesterday");
-      var a = { month: t ? "long" : "short", day: "numeric" },
-        u = r.setHours(0, 0, 0, 0) + a.month,
-        s = f.get(u);
+        return Object(i.f)("#Time_Yesterday");
+      var c = { month: t ? "long" : "short", day: "numeric" },
+        u = r.setHours(0, 0, 0, 0) + c.month,
+        s = h.get(u);
       return (
         s ||
-        ((s = r.toLocaleDateString(i.c.GetPreferredLocales(), a)),
-        f.set(u, s),
+        ((s = r.toLocaleDateString(i.e.GetPreferredLocales(), c)),
+        h.set(u, s),
         s)
       );
     }
     function m(e, t) {
       var n = new Date(1e3 * e),
-        a = new Date(),
+        c = new Date(),
         u = Object(r.a)({ bGranularFutureTime: !1 }, t);
-      if (n > a) {
+      if (n > c) {
         if (!u.bGranularFutureTime)
           return (
-            c.b(n.getTime() - a.getTime()),
-            n.getFullYear() == a.getFullYear() ? y(n) : E(n)
+            a.b(n.getTime() - c.getTime()),
+            n.getFullYear() == c.getFullYear() ? y(n) : C(n)
           );
-        c.b(new Date().setHours(24, 0, 0, 0) - a.getTime());
+        a.b(new Date().setHours(24, 0, 0, 0) - c.getTime());
         var s = new Date();
         return (
           s.setHours(0, 0, 0, 0),
           s.setDate(s.getDate() + 1),
           n < s
-            ? Object(i.d)("#Time_Today")
+            ? Object(i.f)("#Time_Today")
             : (s.setDate(s.getDate() + 1),
               n < s
-                ? Object(i.d)("#Time_Tomorrow")
-                : (s.setDate(s.getDate() + 5), n < s ? I(n) : S(n, !0)))
+                ? Object(i.f)("#Time_Tomorrow")
+                : (s.setDate(s.getDate() + 5), n < s ? S(n) : E(n, !0)))
         );
       }
-      c.b(new Date().setHours(24, 0, 0, 0) - a.getTime());
+      a.b(new Date().setHours(24, 0, 0, 0) - c.getTime());
       var l = new Date();
-      if ((l.setHours(0, 0, 0, 0), n >= l)) return Object(i.d)("#Time_Today");
+      if ((l.setHours(0, 0, 0, 0), n >= l)) return Object(i.f)("#Time_Today");
       if ((l.setDate(l.getDate() - 1), n >= l))
-        return Object(i.d)("#Time_Yesterday");
+        return Object(i.f)("#Time_Yesterday");
       if ((l.setDate(l.getDate() - 5), n >= l))
-        return Object(i.d)("#TimeSince_ThisWeek");
-      var d = new Date(l);
+        return Object(i.f)("#TimeSince_ThisWeek");
+      var f = new Date(l);
       if (
         (l.setDate(l.getDate() - 21),
         n >= l ||
-          (n.getMonth() == a.getMonth() && n.getFullYear() == a.getFullYear()))
+          (n.getMonth() == c.getMonth() && n.getFullYear() == c.getFullYear()))
       ) {
-        var h =
-          Math.floor((d.valueOf() - n.valueOf()) / (1e3 * o.d.PerWeek)) + 1;
-        return 1 == h
-          ? Object(i.d)("#TimeSince_1Week")
-          : Object(i.d)("#TimeSince_XWeeks", h);
+        var d =
+          Math.floor((f.valueOf() - n.valueOf()) / (1e3 * o.d.PerWeek)) + 1;
+        return 1 == d
+          ? Object(i.f)("#TimeSince_1Week")
+          : Object(i.f)("#TimeSince_XWeeks", d);
       }
-      return n.getFullYear() == a.getFullYear() ? y(n) : E(n);
+      return n.getFullYear() == c.getFullYear() ? y(n) : C(n);
     }
     var _ = new Map(),
-      v = new Map(),
-      b = (new Map(), new Map()),
+      b = new Map(),
+      v = (new Map(), new Map()),
       g = new Map();
-    function S(e, t) {
+    function E(e, t) {
       void 0 === t && (t = !1);
       var n = e.getDate() + 31 * (e.getMonth() + 12 * e.getFullYear()),
         r = g.get(n);
       return (
         r ||
-        ((r = e.toLocaleDateString(i.c.GetPreferredLocales(), {
+        ((r = e.toLocaleDateString(i.e.GetPreferredLocales(), {
           weekday: "long",
           day: "numeric",
           month: t ? "long" : "short"
@@ -1211,11 +1177,11 @@ var CLSTAMP = "6112520";
         r)
       );
     }
-    function I(e) {
+    function S(e) {
       var t = _.get(e.getDay());
       return (
         t ||
-        ((t = e.toLocaleDateString(i.c.GetPreferredLocales(), {
+        ((t = e.toLocaleDateString(i.e.GetPreferredLocales(), {
           weekday: "long"
         })),
         _.set(e.getDay(), t),
@@ -1223,28 +1189,127 @@ var CLSTAMP = "6112520";
       );
     }
     function y(e) {
-      var t = v.get(e.getMonth());
+      var t = b.get(e.getMonth());
       return (
         t ||
-        ((t = e.toLocaleDateString(i.c.GetPreferredLocales(), {
+        ((t = e.toLocaleDateString(i.e.GetPreferredLocales(), {
           month: "long"
         })),
-        v.set(e.getMonth(), t),
+        b.set(e.getMonth(), t),
         t)
       );
     }
-    function E(e) {
+    function C(e) {
       var t = e.getMonth() + 12 * e.getFullYear(),
-        n = b.get(t);
+        n = v.get(t);
       return (
         n ||
-        ((n = e.toLocaleDateString(i.c.GetPreferredLocales(), {
+        ((n = e.toLocaleDateString(i.e.GetPreferredLocales(), {
           month: "long",
           year: "numeric"
         })),
-        b.set(t, n),
+        v.set(t, n),
         n)
       );
+    }
+  },
+  UqDm: function(e, t, n) {
+    "use strict";
+    n.d(t, "h", function() {
+      return r;
+    }),
+      n.d(t, "f", function() {
+        return i;
+      }),
+      n.d(t, "c", function() {
+        return o;
+      }),
+      n.d(t, "d", function() {
+        return a;
+      }),
+      n.d(t, "b", function() {
+        return c;
+      }),
+      n.d(t, "a", function() {
+        return u;
+      }),
+      n.d(t, "i", function() {
+        return s;
+      }),
+      n.d(t, "j", function() {
+        return l;
+      }),
+      n.d(t, "g", function() {
+        return f;
+      }),
+      n.d(t, "e", function() {
+        return d;
+      });
+    n("XaMz");
+    function r(e) {
+      for (var t = e.length; 0 !== t; ) {
+        var n = Math.floor(Math.random() * t),
+          r = e[(t -= 1)];
+        (e[t] = e[n]), (e[n] = r);
+      }
+    }
+    function i(e, t, n) {
+      t < 0 ||
+        n < 0 ||
+        (n >= e.length && (e[n] = void 0), e.splice(n, 0, e.splice(t, 1)[0]));
+    }
+    function o(e, t) {
+      return a(e, function(e) {
+        return t == e;
+      });
+    }
+    function a(e, t) {
+      var n = e.findIndex(t);
+      return n >= 0 && (e.splice(n, 1), !0);
+    }
+    function c(e, t) {
+      return e.reduce(function(e, n, r, i) {
+        return e + (t(n, r, i) ? 1 : 0);
+      }, 0);
+    }
+    function u(e, t) {
+      return e.filter(function(e) {
+        return t !== e;
+      });
+    }
+    function s(e, t, n) {
+      for (var r = 0, i = e.length - 1; r <= i; ) {
+        var o = Math.floor((r + i) / 2),
+          a = n(e[o], t);
+        if (a < 0) r = o + 1;
+        else if (a > 0) i = o - 1;
+        else {
+          if (i == o) return o;
+          if (o == r) return i > o && n(t, e[o + 1]) < 0 ? o : o + 1;
+          r = o;
+        }
+      }
+      return i;
+    }
+    function l(e, t, n) {
+      var r = s(e, t, n);
+      e.splice(r + 1, 0, t);
+    }
+    function f(e, t, n) {
+      return (
+        e ||
+          console.error(
+            "array should be defined for us to fill in the missing indexes"
+          ),
+        e.length < t ? e.concat(Array(t - e.length).fill(n)) : e
+      );
+    }
+    function d(e, t) {
+      if (t)
+        for (var n = e.length - 1; n >= 0; --n) {
+          var r = e[n];
+          if (t(r, n, e)) return r;
+        }
     }
   },
   XaMz: function(e, t, n) {
@@ -1279,9 +1344,9 @@ var CLSTAMP = "6112520";
         r || (r = "/");
         var i = "";
         if (void 0 !== n && n) {
-          var c = new Date();
-          c.setTime(c.getTime() + 864e5 * n),
-            (i = "; expires=" + c.toUTCString());
+          var a = new Date();
+          a.setTime(a.getTime() + 864e5 * n),
+            (i = "; expires=" + a.toUTCString());
         }
         document.cookie =
           encodeURIComponent(e) +
@@ -1305,6 +1370,288 @@ var CLSTAMP = "6112520";
         return o;
       });
   },
+  hEDq: function(e, t, n) {
+    "use strict";
+    n.d(t, "n", function() {
+      return a;
+    }),
+      n.d(t, "d", function() {
+        return c;
+      }),
+      n.d(t, "f", function() {
+        return u;
+      }),
+      n.d(t, "h", function() {
+        return s;
+      }),
+      n.d(t, "c", function() {
+        return l;
+      }),
+      n.d(t, "i", function() {
+        return f;
+      }),
+      n.d(t, "k", function() {
+        return d;
+      }),
+      n.d(t, "e", function() {
+        return p;
+      }),
+      n.d(t, "p", function() {
+        return m;
+      }),
+      n.d(t, "g", function() {
+        return h;
+      }),
+      n.d(t, "b", function() {
+        return _;
+      }),
+      n.d(t, "j", function() {
+        return b;
+      }),
+      n.d(t, "l", function() {
+        return v;
+      }),
+      n.d(t, "m", function() {
+        return g;
+      });
+    var r = n("mrSG"),
+      i = n("0N1H");
+    n.d(t, "a", function() {
+      return i.a;
+    }),
+      n.d(t, "o", function() {
+        return i.f;
+      });
+    var o = n("2vnA"),
+      a = (function() {
+        function e() {
+          (this.enabled = !1),
+            (this.locked = !1),
+            (this.features = 0),
+            (this.allowallapps = !1),
+            (this.baselist = void 0),
+            (this.customlist = void 0);
+        }
+        return (
+          Object(r.c)([o.B], e.prototype, "enabled", void 0),
+          Object(r.c)([o.B], e.prototype, "locked", void 0),
+          Object(r.c)([o.B], e.prototype, "features", void 0),
+          Object(r.c)([o.B], e.prototype, "allowallapps", void 0),
+          Object(r.c)([o.B], e.prototype, "baselist", void 0),
+          Object(r.c)([o.B], e.prototype, "customlist", void 0),
+          e
+        );
+      })(),
+      c = (function() {
+        return function() {
+          (this.broadcastid = "0"),
+            (this.nViewers = 0),
+            (this.nRequests = 0),
+            (this.bIsBroadcasting = !1),
+            (this.bIsRecordingDesktop = !1),
+            (this.bBroadcastCapable = !1);
+        };
+      })();
+    function u() {
+      return {
+        bNotifications_ShowIngame: !0,
+        bNotifications_ShowOnline: !1,
+        bNotifications_ShowMessage: !0,
+        bNotifications_EventsAndAnnouncements: !0,
+        bSounds_PlayIngame: !1,
+        bSounds_PlayOnline: !1,
+        bSounds_PlayMessage: !0,
+        bSounds_EventsAndAnnouncements: !1,
+        bAlwaysNewChatWindow: !1,
+        bForceAlphabeticFriendSorting: !1,
+        nChatFlashMode: 0,
+        bRememberOpenChats: !0,
+        bCompactQuickAccess: !1,
+        bCompactFriendsList: !1,
+        bNotifications_ShowChatRoomNotification: !0,
+        bSounds_PlayChatRoomNotification: !0,
+        bHideOfflineFriendsInTagGroups: !1,
+        bHideCategorizedFriends: !1,
+        bCategorizeInGameFriendsByGame: !0,
+        nChatFontSize: 2,
+        b24HourClock: !1,
+        bDoNotDisturbMode: !1,
+        bDisableEmbedInlining: !1,
+        bSignIntoFriends: !0,
+        bDisableSpellcheck: !1,
+        bDisableRoomEffects: !1,
+        bAnimatedAvatars: !0,
+        featuresEnabled: {}
+      };
+    }
+    var s;
+    function l(e) {
+      return (
+        e == s.EBrowserType_OpenVROverlay ||
+        e == s.EBrowserType_OpenVROverlay_Dashboard
+      );
+    }
+    !(function(e) {
+      (e[(e.EBrowserType_OffScreen = 0)] = "EBrowserType_OffScreen"),
+        (e[(e.EBrowserType_OpenVROverlay = 1)] = "EBrowserType_OpenVROverlay"),
+        (e[(e.EBrowserType_OpenVROverlay_Dashboard = 2)] =
+          "EBrowserType_OpenVROverlay_Dashboard"),
+        (e[(e.EBrowserType_DirectHWND = 3)] = "EBrowserType_DirectHWND"),
+        (e[(e.EBrowserType_DirectHWND_Borderless = 4)] =
+          "EBrowserType_DirectHWND_Borderless"),
+        (e[(e.EBrowserType_DirectHWND_Hidden = 5)] =
+          "EBrowserType_DirectHWND_Hidden"),
+        (e[(e.EBrowserType_ChildHWNDNative = 6)] =
+          "EBrowserType_ChildHWNDNative"),
+        (e[(e.EBrowserType_Transparent_Toplevel = 7)] =
+          "EBrowserType_Transparent_Toplevel"),
+        (e[(e.EBrowserType_OffScreen_SharedTexture = 8)] =
+          "EBrowserType_OffScreen_SharedTexture"),
+        (e[(e.EBrowserType_OffScreen_GameOverlay = 9)] =
+          "EBrowserType_OffScreen_GameOverlay"),
+        (e[(e.EBrowserType_OffScreen_GameOverlay_SharedTexture = 10)] =
+          "EBrowserType_OffScreen_GameOverlay_SharedTexture"),
+        (e[(e.EBrowserType_Offscreen_FriendsUI = 11)] =
+          "EBrowserType_Offscreen_FriendsUI"),
+        (e[(e.EBrowserType_MAX = 12)] = "EBrowserType_MAX");
+    })(s || (s = {}));
+    var f, d;
+    !(function(e) {
+      (e[(e.k_EClientUINotificationGroupChatMessage = 1)] =
+        "k_EClientUINotificationGroupChatMessage"),
+        (e[(e.k_EClientUINotificationFriendChatMessage = 2)] =
+          "k_EClientUINotificationFriendChatMessage"),
+        (e[(e.k_EClientUINotificationFriendPersonaState = 3)] =
+          "k_EClientUINotificationFriendPersonaState");
+    })(f || (f = {})),
+      (function(e) {
+        (e[(e.k_EComputerActiveStateInvalid = 0)] =
+          "k_EComputerActiveStateInvalid"),
+          (e[(e.k_EComputerActiveStateActive = 1)] =
+            "k_EComputerActiveStateActive"),
+          (e[(e.k_EComputerActiveStateIdle = 2)] =
+            "k_EComputerActiveStateIdle");
+      })(d || (d = {}));
+    var h,
+      p = (function() {
+        return function() {};
+      })(),
+      m = (function() {
+        return function() {};
+      })();
+    !(function(e) {
+      (e[(e.k_EPending = 0)] = "k_EPending"),
+        (e[(e.k_EAccepted = 1)] = "k_EAccepted"),
+        (e[(e.k_ERejected = 2)] = "k_ERejected");
+    })(h || (h = {}));
+    function _(e) {
+      return (
+        "game" === e ||
+        "dlc" === e ||
+        "software" === e ||
+        "music" === e ||
+        "application" === e ||
+        "demo" === e ||
+        "hardware" === e
+      );
+    }
+    var b, v;
+    !(function(e) {
+      (e[(e.k_EClientUsedInputTypeKeyboard = 0)] =
+        "k_EClientUsedInputTypeKeyboard"),
+        (e[(e.k_EClientUsedInputTypeMouse = 1)] =
+          "k_EClientUsedInputTypeMouse"),
+        (e[(e.k_EClientUsedInputTypeController = 2)] =
+          "k_EClientUsedInputTypeController"),
+        (e[(e.k_EClientUsedInputTypeMax = 3)] = "k_EClientUsedInputTypeMax");
+    })(b || (b = {})),
+      (function(e) {
+        (e[(e.k_ERemoteClientLaunchOK = 1)] = "k_ERemoteClientLaunchOK"),
+          (e[(e.k_ERemoteClientLaunchFail = 2)] = "k_ERemoteClientLaunchFail"),
+          (e[(e.k_ERemoteClientLaunchRequiresUI = 3)] =
+            "k_ERemoteClientLaunchRequiresUI"),
+          (e[(e.k_ERemoteClientLaunchRequiresLaunchOption = 4)] =
+            "k_ERemoteClientLaunchRequiresLaunchOption"),
+          (e[(e.k_ERemoteClientLaunchRequiresEULA = 5)] =
+            "k_ERemoteClientLaunchRequiresEULA"),
+          (e[(e.k_ERemoteClientLaunchTimeout = 6)] =
+            "k_ERemoteClientLaunchTimeout"),
+          (e[(e.k_ERemoteClientLaunchStreamTimeout = 7)] =
+            "k_ERemoteClientLaunchStreamTimeout"),
+          (e[(e.k_ERemoteClientLaunchStreamClientFail = 8)] =
+            "k_ERemoteClientLaunchStreamClientFail"),
+          (e[(e.k_ERemoteClientLaunchOtherGameRunning = 9)] =
+            "k_ERemoteClientLaunchOtherGameRunning"),
+          (e[(e.k_ERemoteClientLaunchDownloadStarted = 10)] =
+            "k_ERemoteClientLaunchDownloadStarted"),
+          (e[(e.k_ERemoteClientLaunchDownloadNoSpace = 11)] =
+            "k_ERemoteClientLaunchDownloadNoSpace"),
+          (e[(e.k_ERemoteClientLaunchDownloadFiltered = 12)] =
+            "k_ERemoteClientLaunchDownloadFiltered"),
+          (e[(e.k_ERemoteClientLaunchDownloadRequiresUI = 13)] =
+            "k_ERemoteClientLaunchDownloadRequiresUI"),
+          (e[(e.k_ERemoteClientLaunchAccessDenied = 14)] =
+            "k_ERemoteClientLaunchAccessDenied"),
+          (e[(e.k_ERemoteClientLaunchNetworkError = 15)] =
+            "k_ERemoteClientLaunchNetworkError"),
+          (e[(e.k_ERemoteClientLaunchProgress = 16)] =
+            "k_ERemoteClientLaunchProgress"),
+          (e[(e.k_ERemoteClientLaunchParentalUnlockFailed = 17)] =
+            "k_ERemoteClientLaunchParentalUnlockFailed"),
+          (e[(e.k_ERemoteClientLaunchScreenLocked = 18)] =
+            "k_ERemoteClientLaunchScreenLocked"),
+          (e[(e.k_ERemoteClientLaunchUnsupported = 19)] =
+            "k_ERemoteClientLaunchUnsupported"),
+          (e[(e.k_ERemoteClientLaunchDisabledLocal = 20)] =
+            "k_ERemoteClientLaunchDisabledLocal"),
+          (e[(e.k_ERemoteClientLaunchDisabledRemote = 21)] =
+            "k_ERemoteClientLaunchDisabledRemote"),
+          (e[(e.k_ERemoteClientLaunchBroadcasting = 22)] =
+            "k_ERemoteClientLaunchBroadcasting"),
+          (e[(e.k_ERemoteClientLaunchBusy = 23)] = "k_ERemoteClientLaunchBusy"),
+          (e[(e.k_ERemoteClientLaunchDriversNotInstalled = 24)] =
+            "k_ERemoteClientLaunchDriversNotInstalled"),
+          (e[(e.k_ERemoteClientLaunchTransportUnavailable = 25)] =
+            "k_ERemoteClientLaunchTransportUnavailable"),
+          (e[(e.k_ERemoteClientLaunchCanceled = 26)] =
+            "k_ERemoteClientLaunchCanceled"),
+          (e[(e.k_ERemoteClientLaunchInvisible = 27)] =
+            "k_ERemoteClientLaunchInvisible"),
+          (e[(e.k_ERemoteClientLaunchRestrictedCountry = 28)] =
+            "k_ERemoteClientLaunchRestrictedCountry");
+      })(v || (v = {}));
+    var g;
+    !(function(e) {
+      (e[(e.k_ESteamRealmUnknown = 0)] = "k_ESteamRealmUnknown"),
+        (e[(e.k_ESteamRealmGlobal = 1)] = "k_ESteamRealmGlobal"),
+        (e[(e.k_ESteamRealmChina = 2)] = "k_ESteamRealmChina");
+    })(g || (g = {}));
+    var E, S, y;
+    !(function(e) {
+      (e[(e.Unknown = 0)] = "Unknown"),
+        (e[(e.Wired = 1)] = "Wired"),
+        (e[(e.Wireless = 2)] = "Wireless");
+    })(E || (E = {})),
+      (function(e) {
+        (e[(e.NotPresent = 0)] = "NotPresent"),
+          (e[(e.Failed = 1)] = "Failed"),
+          (e[(e.Disconnected = 2)] = "Disconnected"),
+          (e[(e.Disconnecting = 3)] = "Disconnecting"),
+          (e[(e.Connecting = 4)] = "Connecting"),
+          (e[(e.Connected = 5)] = "Connected"),
+          (e[(e.Retrying = 6)] = "Retrying");
+      })(S || (S = {})),
+      (function(e) {
+        (e[(e.None = 0)] = "None"),
+          (e[(e.StaticWep = 1)] = "StaticWep"),
+          (e[(e.DynamicWep = 2)] = "DynamicWep"),
+          (e[(e.Wpa = 4)] = "Wpa"),
+          (e[(e.WpaEnterprise = 8)] = "WpaEnterprise"),
+          (e[(e.Wpa2 = 16)] = "Wpa2"),
+          (e[(e.Wpa2Enterprise = 32)] = "Wpa2Enterprise"),
+          (e[(e.Unsupported = 32768)] = "Unsupported");
+      })(y || (y = {}));
+  },
   mrSG: function(e, t, n) {
     "use strict";
     n.d(t, "d", function() {
@@ -1314,10 +1661,10 @@ var CLSTAMP = "6112520";
         return o;
       }),
       n.d(t, "f", function() {
-        return c;
+        return a;
       }),
       n.d(t, "c", function() {
-        return a;
+        return c;
       }),
       n.d(t, "b", function() {
         return u;
@@ -1373,7 +1720,7 @@ PERFORMANCE OF THIS SOFTWARE.
           return e;
         }).apply(this, arguments);
     };
-    function c(e, t) {
+    function a(e, t) {
       var n = {};
       for (var r in e)
         Object.prototype.hasOwnProperty.call(e, r) &&
@@ -1388,33 +1735,33 @@ PERFORMANCE OF THIS SOFTWARE.
       }
       return n;
     }
-    function a(e, t, n, r) {
+    function c(e, t, n, r) {
       var i,
         o = arguments.length,
-        c =
+        a =
           o < 3
             ? t
             : null === r
             ? (r = Object.getOwnPropertyDescriptor(t, n))
             : r;
       if ("object" == typeof Reflect && "function" == typeof Reflect.decorate)
-        c = Reflect.decorate(e, t, n, r);
+        a = Reflect.decorate(e, t, n, r);
       else
-        for (var a = e.length - 1; a >= 0; a--)
-          (i = e[a]) &&
-            (c = (o < 3 ? i(c) : o > 3 ? i(t, n, c) : i(t, n)) || c);
-      return o > 3 && c && Object.defineProperty(t, n, c), c;
+        for (var c = e.length - 1; c >= 0; c--)
+          (i = e[c]) &&
+            (a = (o < 3 ? i(a) : o > 3 ? i(t, n, a) : i(t, n)) || a);
+      return o > 3 && a && Object.defineProperty(t, n, a), a;
     }
     function u(e, t, n, r) {
       return new (n || (n = Promise))(function(i, o) {
-        function c(e) {
+        function a(e) {
           try {
             u(r.next(e));
           } catch (e) {
             o(e);
           }
         }
-        function a(e) {
+        function c(e) {
           try {
             u(r.throw(e));
           } catch (e) {
@@ -1430,7 +1777,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 ? t
                 : new n(function(e) {
                     e(t);
-                  })).then(c, a);
+                  })).then(a, c);
         }
         u((r = r.apply(e, t || [])).next());
       });
@@ -1440,7 +1787,7 @@ PERFORMANCE OF THIS SOFTWARE.
         r,
         i,
         o,
-        c = {
+        a = {
           label: 0,
           sent: function() {
             if (1 & i[0]) throw i[1];
@@ -1450,18 +1797,18 @@ PERFORMANCE OF THIS SOFTWARE.
           ops: []
         };
       return (
-        (o = { next: a(0), throw: a(1), return: a(2) }),
+        (o = { next: c(0), throw: c(1), return: c(2) }),
         "function" == typeof Symbol &&
           (o[Symbol.iterator] = function() {
             return this;
           }),
         o
       );
-      function a(o) {
-        return function(a) {
+      function c(o) {
+        return function(c) {
           return (function(o) {
             if (n) throw new TypeError("Generator is already executing.");
-            for (; c; )
+            for (; a; )
               try {
                 if (
                   ((n = 1),
@@ -1481,38 +1828,38 @@ PERFORMANCE OF THIS SOFTWARE.
                     i = o;
                     break;
                   case 4:
-                    return c.label++, { value: o[1], done: !1 };
+                    return a.label++, { value: o[1], done: !1 };
                   case 5:
-                    c.label++, (r = o[1]), (o = [0]);
+                    a.label++, (r = o[1]), (o = [0]);
                     continue;
                   case 7:
-                    (o = c.ops.pop()), c.trys.pop();
+                    (o = a.ops.pop()), a.trys.pop();
                     continue;
                   default:
                     if (
-                      !((i = c.trys),
+                      !((i = a.trys),
                       (i = i.length > 0 && i[i.length - 1]) ||
                         (6 !== o[0] && 2 !== o[0]))
                     ) {
-                      c = 0;
+                      a = 0;
                       continue;
                     }
                     if (3 === o[0] && (!i || (o[1] > i[0] && o[1] < i[3]))) {
-                      c.label = o[1];
+                      a.label = o[1];
                       break;
                     }
-                    if (6 === o[0] && c.label < i[1]) {
-                      (c.label = i[1]), (i = o);
+                    if (6 === o[0] && a.label < i[1]) {
+                      (a.label = i[1]), (i = o);
                       break;
                     }
-                    if (i && c.label < i[2]) {
-                      (c.label = i[2]), c.ops.push(o);
+                    if (i && a.label < i[2]) {
+                      (a.label = i[2]), a.ops.push(o);
                       break;
                     }
-                    i[2] && c.ops.pop(), c.trys.pop();
+                    i[2] && a.ops.pop(), a.trys.pop();
                     continue;
                 }
-                o = t.call(e, c);
+                o = t.call(e, a);
               } catch (e) {
                 (o = [6, e]), (r = 0);
               } finally {
@@ -1520,7 +1867,7 @@ PERFORMANCE OF THIS SOFTWARE.
               }
             if (5 & o[0]) throw o[1];
             return { value: o[0] ? o[1] : void 0, done: !0 };
-          })([o, a]);
+          })([o, c]);
         };
       }
     }
@@ -1530,131 +1877,66 @@ PERFORMANCE OF THIS SOFTWARE.
       var r = Array(e),
         i = 0;
       for (t = 0; t < n; t++)
-        for (var o = arguments[t], c = 0, a = o.length; c < a; c++, i++)
-          r[i] = o[c];
+        for (var o = arguments[t], a = 0, c = o.length; a < c; a++, i++)
+          r[i] = o[a];
       return r;
     }
   },
   oh5H: function(e, t, n) {
     "use strict";
-    n.d(t, "d", function() {
-      return u;
+    n.d(t, "b", function() {
+      return l;
     }),
-      n.d(t, "k", function() {
-        return s;
+      n.d(t, "f", function() {
+        return f;
       }),
-      n.d(t, "i", function() {
-        return l;
-      }),
-      n.d(t, "b", function() {
+      n.d(t, "m", function() {
         return d;
       }),
-      n.d(t, "a", function() {
+      n.d(t, "k", function() {
         return h;
       }),
+      n.d(t, "a", function() {
+        return p;
+      }),
+      n.d(t, "d", function() {
+        return m;
+      }),
       n.d(t, "c", function() {
-        return f;
+        return _;
+      }),
+      n.d(t, "e", function() {
+        return b;
       });
     var r = n("mrSG"),
       i = n("q1tI"),
       o = n("0N1H"),
+      a = n("hEDq"),
       c = n("1n9R"),
-      a = (n("XaMz"), n("Kcgk"));
-    function u(e) {
-      for (var t = [], n = 1; n < arguments.length; n++)
-        t[n - 1] = arguments[n];
-      var r = f.LocalizeString(e);
-      return void 0 === r
-        ? e
-        : (t.length > 0 &&
-            (r = r.replace(/%(?:(\d+)\$)?s/g, function(e, n) {
-              if (n <= t.length && n >= 1) {
-                var r = t[n - 1];
-                return String(null == r ? "" : r);
-              }
-              return e;
-            })),
-          r);
-    }
-    function s(e) {
-      for (var t = [], n = 1; n < arguments.length; n++)
-        t[n - 1] = arguments[n];
-      var o = f.LocalizeString(e);
-      if (void 0 === o) return e;
-      for (var c, a = [], u = /(.*?)%(\d+)\$s/g, s = 0; (c = u.exec(o)); ) {
-        (s += c[0].length), a.push(c[1]);
-        var l = parseInt(c[2]);
-        l >= 1 && l <= t.length && a.push(t[l - 1]);
-      }
-      return (
-        a.push(o.substr(s)),
-        i.createElement.apply(i, Object(r.g)([i.Fragment, null], a))
-      );
-    }
-    function l(e, t) {
-      for (var n = [], i = 2; i < arguments.length; i++)
-        n[i - 2] = arguments[i];
-      return 1 === t || "1" === t
-        ? u.apply(void 0, Object(r.g)([e, t], n))
-        : u.apply(void 0, Object(r.g)([e + "_Plural", t], n));
-    }
-    n.d(t, "e", function() {
-      return a.a;
+      u = n("UqDm"),
+      s = (n("XaMz"), n("Kcgk"));
+    n.d(t, "g", function() {
+      return s.a;
     }),
-      n.d(t, "f", function() {
-        return a.b;
-      }),
       n.d(t, "h", function() {
-        return a.d;
+        return s.b;
       }),
       n.d(t, "j", function() {
-        return a.e;
+        return s.d;
       }),
       n.d(t, "l", function() {
-        return a.g;
+        return s.e;
       }),
-      n.d(t, "m", function() {
-        return a.h;
+      n.d(t, "n", function() {
+        return s.g;
       }),
-      n.d(t, "g", function() {
-        return a.c;
+      n.d(t, "o", function() {
+        return s.h;
+      }),
+      n.d(t, "i", function() {
+        return s.c;
       });
-    var d = {
-      english: "en",
-      german: "de",
-      french: "fr",
-      italian: "it",
-      korean: "ko",
-      latam: "es-419",
-      spanish: "es",
-      schinese: "zh-cn",
-      tchinese: "zh-tw",
-      russian: "ru",
-      thai: "th",
-      japanese: "ja",
-      brazilian: "pt-br",
-      portuguese: "pt",
-      polish: "pl",
-      danish: "da",
-      dutch: "nl",
-      finnish: "fi",
-      norwegian: "no",
-      swedish: "sv",
-      hungarian: "hu",
-      czech: "cs",
-      romanian: "ro",
-      turkish: "tr",
-      arabic: "ar",
-      bulgarian: "bg",
-      greek: "el",
-      ukrainian: "uk",
-      vietnamese: "vn"
-    };
-    function h() {
-      var e = "koreana" == c.c.LANGUAGE ? "korean" : c.c.LANGUAGE;
-      return d[e] || null;
-    }
-    var f = new ((function() {
+    var l = (function() {
       function e() {
         (this.m_mapTokens = new Map()), (this.m_mapFallbackTokens = new Map());
       }
@@ -1662,11 +1944,28 @@ PERFORMANCE OF THIS SOFTWARE.
         (e.GetLanguageFallback = function(e) {
           return "sc_schinese" === e ? "schinese" : "english";
         }),
+        (e.GetELanguageFallback = function(e) {
+          return 0;
+        }),
+        (e.IsELanguageValidInRealm = function(e, t) {
+          return t === a.m.k_ESteamRealmGlobal;
+        }),
+        (e.GetLanguageListForRealms = function(e) {
+          for (var t = new Array(), n = 0; n < 29; n++)
+            for (var r = 0, i = e; r < i.length; r++) {
+              var o = i[r];
+              if (this.IsELanguageValidInRealm(n, o)) {
+                t.push(n);
+                break;
+              }
+            }
+          return t;
+        }),
         (e.prototype.InitFromObjects = function(e, t, n, i, o) {
           o || this.m_mapTokens.clear();
-          var c = Object(r.a)(Object(r.a)({}, n || {}), e),
-            a = Object(r.a)(Object(r.a)({}, i || {}), t || {});
-          this.AddTokens(c, a);
+          var a = Object(r.a)(Object(r.a)({}, n || {}), e),
+            c = Object(r.a)(Object(r.a)({}, i || {}), t || {});
+          this.AddTokens(a, c);
         }),
         (e.prototype.InitDirect = function(e, t) {
           this.m_mapTokens.clear(),
@@ -1691,20 +1990,18 @@ PERFORMANCE OF THIS SOFTWARE.
             ? navigator.languages
             : ["en-US"];
         }),
-        (e.prototype.GetELanguageFallbackOrder = function(e) {
-          void 0 === e && (e = !1);
-          var t = new Array();
-          return (
-            t.push(Object(o.f)(c.c.LANGUAGE)),
-            (c.c.SUPPORTED_LANGUAGES || []).forEach(function(e) {
-              e.value != c.c.LANGUAGE && t.push(Object(o.f)(e.value));
-            }),
-            e &&
-              o.g.forEach(function(e) {
-                -1 == t.indexOf(e) && t.push(e);
-              }),
-            t
-          );
+        (e.prototype.GetELanguageFallbackOrder = function(t) {
+          void 0 === t && (t = null);
+          var n = new Array();
+          (n.push(Object(o.f)(c.c.LANGUAGE)),
+          (c.c.SUPPORTED_LANGUAGES || []).forEach(function(e) {
+            e.value != c.c.LANGUAGE && n.push(Object(o.f)(e.value));
+          }),
+          t) &&
+            e.GetLanguageListForRealms(t).forEach(function(e) {
+              -1 == n.indexOf(e) && n.push(e);
+            });
+          return n;
         }),
         (e.prototype.SetPreferredLocales = function(e) {
           this.m_rgLocalesToUse = e;
@@ -1723,8 +2020,101 @@ PERFORMANCE OF THIS SOFTWARE.
         }),
         e
       );
-    })())();
-    window.LocalizationManager = f;
+    })();
+    function f(e) {
+      for (var t = [], n = 1; n < arguments.length; n++)
+        t[n - 1] = arguments[n];
+      var r = b.LocalizeString(e);
+      return void 0 === r
+        ? e
+        : (t.length > 0 &&
+            (r = r.replace(/%(?:(\d+)\$)?s/g, function(e, n) {
+              if (n <= t.length && n >= 1) {
+                var r = t[n - 1];
+                return String(null == r ? "" : r);
+              }
+              return e;
+            })),
+          r);
+    }
+    function d(e) {
+      for (var t = [], n = 1; n < arguments.length; n++)
+        t[n - 1] = arguments[n];
+      var o = b.LocalizeString(e);
+      if (void 0 === o) return e;
+      for (var a, c = [], u = /(.*?)%(\d+)\$s/g, s = 0; (a = u.exec(o)); ) {
+        (s += a[0].length), c.push(a[1]);
+        var l = parseInt(a[2]);
+        l >= 1 && l <= t.length && c.push(t[l - 1]);
+      }
+      return (
+        c.push(o.substr(s)),
+        i.createElement.apply(i, Object(r.g)([i.Fragment, null], c))
+      );
+    }
+    function h(e, t) {
+      for (var n = [], i = 2; i < arguments.length; i++)
+        n[i - 2] = arguments[i];
+      return 1 === t || "1" === t
+        ? f.apply(void 0, Object(r.g)([e, t], n))
+        : f.apply(void 0, Object(r.g)([e + "_Plural", t], n));
+    }
+    var p = (function() {
+        function e() {}
+        return (
+          (e.Set = function(e, t, n) {
+            if (e.length <= t) {
+              if (t >= 29) return e;
+              Object(u.g)(e, t + 1, null);
+            }
+            return (e[t] = n), e;
+          }),
+          (e.Get = function(e, t) {
+            return (e && e.length > t && e[t]) || "";
+          }),
+          (e.GetWithFallback = function(t, n) {
+            return e.Get(t, n) || e.Get(t, l.GetELanguageFallback(n));
+          }),
+          e
+        );
+      })(),
+      m = {
+        english: "en",
+        german: "de",
+        french: "fr",
+        italian: "it",
+        korean: "ko",
+        latam: "es-419",
+        spanish: "es",
+        schinese: "zh-cn",
+        tchinese: "zh-tw",
+        russian: "ru",
+        thai: "th",
+        japanese: "ja",
+        brazilian: "pt-br",
+        portuguese: "pt",
+        polish: "pl",
+        danish: "da",
+        dutch: "nl",
+        finnish: "fi",
+        norwegian: "no",
+        swedish: "sv",
+        hungarian: "hu",
+        czech: "cs",
+        romanian: "ro",
+        turkish: "tr",
+        arabic: "ar",
+        bulgarian: "bg",
+        greek: "el",
+        ukrainian: "uk",
+        vietnamese: "vn"
+      };
+    function _() {
+      var e = "koreana" == c.c.LANGUAGE ? "korean" : c.c.LANGUAGE;
+      return m[e] || null;
+    }
+    var b = new l();
+    window.LocalizationManager = b;
   },
   "qM/t": function(e, t, n) {
     "use strict";
@@ -1732,14 +2122,14 @@ PERFORMANCE OF THIS SOFTWARE.
     var r = n("q1tI"),
       i = n("i8i4"),
       o = n("tkkQ"),
-      c = n("Ezvv"),
-      a = (n("Y3TG"), n("oh5H")),
+      a = n("Ezvv"),
+      c = (n("Y3TG"), n("oh5H")),
       u = n("XaMz"),
       s = n("mrSG"),
       l = n("2vnA"),
-      d = n("TyAF"),
-      h = n("J0bI"),
-      f = n("s+DT");
+      f = n("TyAF"),
+      d = n("J0bI"),
+      h = n("s+DT");
     var p = n("1VtQ"),
       m = n("K4CH"),
       _ = (function(e) {
@@ -1749,11 +2139,11 @@ PERFORMANCE OF THIS SOFTWARE.
         return (
           Object(s.d)(t, e),
           (t.prototype.BIsExpired = function() {
-            return v.sm_rtTimeCur >= this.m_rtTimeExpires;
+            return b.sm_rtTimeCur >= this.m_rtTimeExpires;
           }),
           (t.prototype.InitFromPHPInviteLinkInfo = function(e) {
             this.m_ulChatID = e.chat_id;
-            var t = new f.a(e.steamid_sender);
+            var t = new h.a(e.steamid_sender);
             t.BIsIndividualAccount() &&
               (this.m_unAccountIDInviter = t.GetAccountID()),
               (this.m_rtTimeExpires = e.time_expires),
@@ -1767,8 +2157,8 @@ PERFORMANCE OF THIS SOFTWARE.
           Object(s.c)([l.k], t.prototype, "InitFromPHPInviteLinkInfo", null),
           t
         );
-      })(h.b),
-      v = (function() {
+      })(d.b),
+      b = (function() {
         function e(e) {
           (this.m_bConnectingToClient = !1),
             (this.m_invite = new _(e.strInviteCode)),
@@ -1829,7 +2219,7 @@ PERFORMANCE OF THIS SOFTWARE.
             });
           }),
           (e.prototype.LaunchSteamIgnoreAccount = function() {
-            c.b.SetAllowAccountMismatch(!0), this.SendInviteToClient();
+            a.b.SetAllowAccountMismatch(!0), this.SendInviteToClient();
           }),
           (e.prototype.ForceLaunchSteamClient = function() {
             window.location.href =
@@ -1841,7 +2231,7 @@ PERFORMANCE OF THIS SOFTWARE.
             this.m_invite.BIsValid() &&
               !this.m_invite.BIsExpired() &&
               ((this.m_bConnectingToClient = !0),
-              c.b
+              a.b
                 .ShowChatRoomGroupInvite(this.m_invite.GetInviteCode())
                 .then(function(t) {
                   Object(l.F)(function() {
@@ -1856,7 +2246,7 @@ PERFORMANCE OF THIS SOFTWARE.
           e
         );
       })(),
-      b = (function(e) {
+      v = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -1868,10 +2258,10 @@ PERFORMANCE OF THIS SOFTWARE.
               { className: "InviteLandingRoot" },
               this.props.controller.BIsInviteValid()
                 ? r.createElement(g, { controller: this.props.controller })
-                : r.createElement(S, { controller: this.props.controller })
+                : r.createElement(E, { controller: this.props.controller })
             );
           }),
-          (t = Object(s.c)([d.a], t))
+          (t = Object(s.c)([f.a], t))
         );
       })(r.Component),
       g = (function(e) {
@@ -1911,7 +2301,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 r.createElement(
                   "div",
                   { className: "postedExpiredInvite" },
-                  Object(a.d)("#bbcode_invite_requesting_info")
+                  Object(c.f)("#bbcode_invite_requesting_info")
                 )
               );
             var e = this.props.controller.GetConnectResults(),
@@ -1927,12 +2317,12 @@ PERFORMANCE OF THIS SOFTWARE.
                     r.createElement(
                       "div",
                       { className: "groupName" },
-                      Object(a.d)("#InviteLanding_SentToSteam")
+                      Object(c.f)("#InviteLanding_SentToSteam")
                     ),
                     r.createElement(
                       "div",
                       { className: "inviteLabel" },
-                      Object(a.k)(
+                      Object(c.m)(
                         "#InviteLanding_SentToSteam_Desc",
                         r.createElement(
                           "a",
@@ -1940,7 +2330,7 @@ PERFORMANCE OF THIS SOFTWARE.
                             href: "javascript:void(0);",
                             onClick: this.LaunchWebChat
                           },
-                          Object(a.d)(
+                          Object(c.f)(
                             "#InviteLanding_SentToSteam_Desc_LaunchWebChat"
                           )
                         )
@@ -1949,12 +2339,12 @@ PERFORMANCE OF THIS SOFTWARE.
                   )
                 : e.account_mismatch
                 ? r.createElement(
-                    I,
+                    S,
                     { render: this.props.controller.GetPreRenderedHTML() },
                     r.createElement(
                       "div",
                       { className: "inviteLabel" },
-                      Object(a.d)("#InviteLanding_AccountMismatch")
+                      Object(c.f)("#InviteLanding_AccountMismatch")
                     ),
                     r.createElement(
                       "div",
@@ -1966,7 +2356,7 @@ PERFORMANCE OF THIS SOFTWARE.
                           type: "button",
                           onClick: this.OpenInSteamIgnoreAccount
                         },
-                        Object(a.d)("#InviteLanding_OpenInSteam")
+                        Object(c.f)("#InviteLanding_OpenInSteam")
                       ),
                       r.createElement(
                         "button",
@@ -1975,7 +2365,7 @@ PERFORMANCE OF THIS SOFTWARE.
                           type: "button",
                           onClick: this.LaunchWebChat
                         },
-                        Object(a.d)("#InviteLanding_OpenInWebChat")
+                        Object(c.f)("#InviteLanding_OpenInWebChat")
                       )
                     )
                   )
@@ -1986,12 +2376,12 @@ PERFORMANCE OF THIS SOFTWARE.
                     r.createElement(
                       "div",
                       { className: "groupName" },
-                      Object(a.d)("#InviteLanding_SentToSteam")
+                      Object(c.f)("#InviteLanding_SentToSteam")
                     ),
                     r.createElement(
                       "div",
                       { className: "inviteLabel" },
-                      Object(a.k)(
+                      Object(c.m)(
                         "#InviteLanding_SentToSteam_Desc",
                         r.createElement(
                           "a",
@@ -1999,7 +2389,7 @@ PERFORMANCE OF THIS SOFTWARE.
                             href: "javascript:void(0);",
                             onClick: this.LaunchWebChat
                           },
-                          Object(a.d)(
+                          Object(c.f)(
                             "#InviteLanding_SentToSteam_Desc_LaunchWebChat"
                           )
                         )
@@ -2007,7 +2397,7 @@ PERFORMANCE OF THIS SOFTWARE.
                     )
                   )
                 : r.createElement(
-                    I,
+                    S,
                     { render: this.props.controller.GetPreRenderedHTML() },
                     r.createElement(
                       "div",
@@ -2020,7 +2410,7 @@ PERFORMANCE OF THIS SOFTWARE.
                             type: "button",
                             onClick: this.LaunchSteamClient
                           },
-                          Object(a.d)("#InviteLanding_OpenInSteam")
+                          Object(c.f)("#InviteLanding_OpenInSteam")
                         ),
                       r.createElement(
                         "button",
@@ -2029,14 +2419,14 @@ PERFORMANCE OF THIS SOFTWARE.
                           type: "button",
                           onClick: this.LaunchWebChat
                         },
-                        Object(a.d)("#InviteLanding_OpenInWebChat")
+                        Object(c.f)("#InviteLanding_OpenInWebChat")
                       )
                     ),
                     this.m_bTriedToLaunchSteam &&
                       r.createElement(
                         "div",
                         { className: "inviteLabel inviteLabelLaunchPrompt" },
-                        Object(a.d)("#InviteLanding_OpenInSteam_Help")
+                        Object(c.f)("#InviteLanding_OpenInSteam_Help")
                       )
                   )
             );
@@ -2045,10 +2435,10 @@ PERFORMANCE OF THIS SOFTWARE.
           Object(s.c)([p.a], t.prototype, "LaunchWebChat", null),
           Object(s.c)([p.a], t.prototype, "OpenInSteamIgnoreAccount", null),
           Object(s.c)([p.a], t.prototype, "LaunchSteamClient", null),
-          (t = Object(s.c)([d.a], t))
+          (t = Object(s.c)([f.a], t))
         );
       })(r.Component),
-      S = (function(e) {
+      E = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -2061,14 +2451,14 @@ PERFORMANCE OF THIS SOFTWARE.
               r.createElement(
                 "div",
                 { className: "postedExpiredInvite" },
-                Object(a.d)("#InviteLanding_ExpiredOrInvalid")
+                Object(c.f)("#InviteLanding_ExpiredOrInvalid")
               )
             );
           }),
           t
         );
       })(r.Component);
-    function I(e) {
+    function S(e) {
       return r.createElement(
         "div",
         { className: "ChatMessageInvite" },
@@ -2082,7 +2472,7 @@ PERFORMANCE OF THIS SOFTWARE.
           r.createElement(
             "div",
             { className: "inviteLabel" },
-            Object(a.k)(
+            Object(c.m)(
               "#bbcode_invite_description",
               r.createElement("span", {
                 dangerouslySetInnerHTML: {
@@ -2102,19 +2492,19 @@ PERFORMANCE OF THIS SOFTWARE.
     }
     window.AssertMsg = u.a;
     var y,
-      E,
-      A,
-      O = new c.a();
-    function C(e) {
+      C,
+      I,
+      R = new a.a();
+    function L(e) {
       var t;
       try {
         t = JSON.parse(e.getAttribute("data-inviteinfo"));
       } catch (e) {}
-      v.sm_rtTimeCur = t.rtTimeCur;
-      var n = new v(t);
-      i.render(r.createElement(b, { controller: n }), e);
+      b.sm_rtTimeCur = t.rtTimeCur;
+      var n = new b(t);
+      i.render(r.createElement(v, { controller: n }), e);
     }
-    (window.ClientConnectionAPI = O),
+    (window.ClientConnectionAPI = R),
       document.addEventListener("DOMContentLoaded", function() {
         Object(o.b)(),
           (function() {
@@ -2127,7 +2517,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 r = n.getAttribute("data-component");
               switch (r) {
                 case "ChatInvite":
-                  C(n);
+                  L(n);
                   break;
                 default:
                   Object(u.a)(!1, 'unknown component: "' + r + '"');
@@ -2137,32 +2527,32 @@ PERFORMANCE OF THIS SOFTWARE.
       }),
       (window.LocalizationReady = function(e, t, n) {
         if ("english" !== t)
-          "friendsui" == e ? (y = n) : "shared" == e && (E = n);
-        else if ("shared" == e) A = n;
+          "friendsui" == e ? (y = n) : "shared" == e && (C = n);
+        else if ("shared" == e) I = n;
         else {
           var r = void 0,
             i = null,
             o = void 0,
-            c = null;
+            a = null;
           void 0 !== y ? ((r = y), (i = n)) : (r = n),
-            void 0 !== E ? ((o = E), (c = A)) : (o = A),
-            a.c.InitFromObjects(r, i, o, c),
+            void 0 !== C ? ((o = C), (a = I)) : (o = I),
+            c.e.InitFromObjects(r, i, o, a),
             (y = void 0),
-            (E = void 0),
-            (A = void 0);
+            (C = void 0),
+            (I = void 0);
         }
       });
   },
   "s+DT": function(e, t, n) {
     "use strict";
     n.d(t, "a", function() {
-      return a;
+      return c;
     });
     var r = n("2lpH"),
       i = n.n(r),
       o = n("0N1H"),
-      c = n("1n9R"),
-      a = (function() {
+      a = n("1n9R"),
+      c = (function() {
         function e(t, n, r, o) {
           void 0 === t && (t = 0),
             t instanceof e
@@ -2175,10 +2565,10 @@ PERFORMANCE OF THIS SOFTWARE.
         }
         return (
           (e.InitFromAccountID = function(t) {
-            return new e(Number(t), c.c.EUNIVERSE, 1, o.r);
+            return new e(Number(t), a.c.EUNIVERSE, 1, o.q);
           }),
           (e.InitFromClanID = function(t) {
-            return new e(Number(t), c.c.EUNIVERSE, 7, 0);
+            return new e(Number(t), a.c.EUNIVERSE, 7, 0);
           }),
           (e.prototype.GetAccountID = function() {
             return this.m_ulSteamID.getLowBitsUnsigned();
@@ -2249,7 +2639,7 @@ PERFORMANCE OF THIS SOFTWARE.
             var t = this.GetUniverse();
             if (t <= 0 || t >= 5) return !1;
             if (1 == e) {
-              if (0 == this.GetAccountID() || this.GetInstance() > o.s)
+              if (0 == this.GetAccountID() || this.GetInstance() > o.r)
                 return !1;
             } else if (7 == e) {
               if (0 == this.GetAccountID() || 0 != this.GetInstance())
@@ -2296,8 +2686,8 @@ PERFORMANCE OF THIS SOFTWARE.
           }),
           (e.prototype.SetFromComponents = function(e, t, n, r) {
             var o = ((255 & r) << 24) + ((15 & n) << 20) + (1048575 & t),
-              c = 4294967295 & e;
-            this.m_ulSteamID = new i.a(c, o, !0);
+              a = 4294967295 & e;
+            this.m_ulSteamID = new i.a(a, o, !0);
           }),
           e
         );
@@ -2328,10 +2718,10 @@ PERFORMANCE OF THIS SOFTWARE.
         return o;
       }),
       n.d(t, "c", function() {
-        return c;
+        return a;
       }),
       n.d(t, "e", function() {
-        return a;
+        return c;
       });
     var r = {
       PerYear: 31536e3,
@@ -2351,10 +2741,10 @@ PERFORMANCE OF THIS SOFTWARE.
     function o(e, t) {
       return e.getFullYear() == t.getFullYear();
     }
-    function c(e) {
+    function a(e) {
       return new Date(e.getFullYear(), e.getMonth(), 1, 0, 0, 0, 0);
     }
-    function a(e) {
+    function c(e) {
       return new Promise(function(t) {
         return setTimeout(t, e);
       });

@@ -43,8 +43,8 @@
                 a.a.createElement(
                   "div",
                   { className: c.a.Throbber },
-                  a.a.createElement(o.H, { className: c.a.base }),
-                  a.a.createElement(o.H, { className: c.a.blur })
+                  a.a.createElement(o.J, { className: c.a.base }),
+                  a.a.createElement(o.J, { className: c.a.blur })
                 )
               );
               return a.a.createElement(
@@ -1674,15 +1674,15 @@
             eWebAPIKeyRequirement: 1
           });
         });
-      function H(e) {
+      function Z(e) {
         var t = e.className,
           r = Object(s.f)(e, ["className"]);
         return m.a.createElement(
           "button",
-          Object(s.a)({ className: Object(q.a)(t, Q.UnstyledButton) }, r)
+          Object(s.a)({ className: Object(H.a)(t, Q.UnstyledButton) }, r)
         );
       }
-      var Z = (function() {
+      var q = (function() {
           function e(e) {
             (this.m_ulPointsAvailable = null),
               (this.m_bPointsBalanceLoadedOrInFlight = !1),
@@ -1862,12 +1862,12 @@
             e
           );
         })(),
-        q = r("exH9"),
+        H = r("exH9"),
         Q = r("Dsqm"),
         Y = r("0OaU"),
         V = r("6Y59");
       function K(e) {
-        return Object(L.e)("#RewardsReaction_" + e);
+        return Object(L.f)("#RewardsReaction_" + e);
       }
       var J,
         $,
@@ -2464,10 +2464,10 @@
               var t, r;
               l.s_LoyaltyAwardModalStore ||
                 (e
-                  ? (l.s_LoyaltyAwardModalStore = new Z(e))
+                  ? (l.s_LoyaltyAwardModalStore = new q(e))
                   : ((t = Object(z.e)("loyaltystore", "application_config")),
                     (r = new a.a(z.b.WEBAPI_BASE_URL, t.webapi_token)),
-                    (l.s_LoyaltyAwardModalStore = new Z(
+                    (l.s_LoyaltyAwardModalStore = new q(
                       r.GetServiceTransport()
                     ))));
             }),
@@ -2555,8 +2555,8 @@
                 g = w ? w.points_transferred : 0,
                 v =
                   2 == n
-                    ? Object(L.e)("#GrantAwardDescription_UGC")
-                    : Object(L.e)("#GrantAwardDescription_Review");
+                    ? Object(L.f)("#GrantAwardDescription_UGC")
+                    : Object(L.f)("#GrantAwardDescription_Review");
               switch (l) {
                 case ie.SELECTING:
                   var B = 0 === c || b.get(c),
@@ -2568,13 +2568,13 @@
                           return t.setState({ ePhase: ie.CONFIRM });
                         },
                         disabled: B,
-                        title: Object(L.e)(
+                        title: Object(L.f)(
                           B
                             ? "#GrantAward_PromptTooltip"
                             : "#GrantAward_SubmitTooltip"
                         )
                       },
-                      Object(L.e)(
+                      Object(L.f)(
                         B ? "#GrantAward_SelectAward" : "#GrantAward_Next"
                       )
                     ),
@@ -2612,7 +2612,7 @@
                               E.createElement(
                                 "div",
                                 { key: "msg", className: S.NotEnoughPoints },
-                                Object(L.e)(
+                                Object(L.f)(
                                   "#GrantAward_CantAfford",
                                   y
                                     .negate()
@@ -2630,7 +2630,7 @@
                                 E.createElement(
                                   Be,
                                   { key: "button" },
-                                  Object(L.e)("#GrantAward_HowToGetPoints")
+                                  Object(L.f)("#GrantAward_HowToGetPoints")
                                 )
                               )
                             ]
@@ -2651,7 +2651,7 @@
                       E.createElement(
                         "div",
                         {
-                          className: Object(q.a)(
+                          className: Object(H.a)(
                             S.ConfirmContainer,
                             l === ie.CONFIRM && S.Visible
                           )
@@ -2663,7 +2663,7 @@
                         E.createElement(
                           "div",
                           { className: S.ConfirmText },
-                          Object(L.l)(
+                          Object(L.m)(
                             "#GrantAward_Confirm",
                             E.createElement(Oe, null, _.toLocaleString()),
                             E.createElement(
@@ -2676,13 +2676,13 @@
                         E.createElement(
                           "div",
                           { className: S.ConfirmText },
-                          Object(L.l)(
+                          Object(L.m)(
                             "#GrantAward_Confirm_Details",
                             E.createElement(Oe, null, g.toLocaleString()),
                             E.createElement(
                               "span",
                               { className: S.TimePeriod },
-                              Object(L.e)(
+                              Object(L.f)(
                                 "#GrantAward_Confirm_DetailsTimePeriod"
                               )
                             )
@@ -2692,7 +2692,7 @@
                       E.createElement(
                         "div",
                         {
-                          className: Object(q.a)(
+                          className: Object(H.a)(
                             S.LoadingContainer,
                             l === ie.SUBMITTING && S.Visible
                           )
@@ -2702,7 +2702,7 @@
                       E.createElement(
                         "div",
                         {
-                          className: Object(q.a)(
+                          className: Object(H.a)(
                             S.SuccessContainer,
                             l === ie.DONE && S.Visible
                           )
@@ -2714,7 +2714,7 @@
                         E.createElement(
                           "div",
                           { className: S.SuccessText },
-                          Object(L.e)("#GrantAward_Success")
+                          Object(L.f)("#GrantAward_Success")
                         )
                       )
                     ),
@@ -2730,16 +2730,16 @@
                           },
                           disabled: l !== ie.CONFIRM
                         },
-                        Object(L.e)("#GrantAward_Back")
+                        Object(L.f)("#GrantAward_Back")
                       ),
                       E.createElement(
                         ve,
                         {
                           onClick: this.GrantAward,
-                          title: Object(L.e)("#GrantAward_SubmitTooltip"),
+                          title: Object(L.f)("#GrantAward_SubmitTooltip"),
                           disabled: l !== ie.CONFIRM
                         },
-                        Object(L.e)("#GrantAwardNowButton")
+                        Object(L.f)("#GrantAwardNowButton")
                       )
                     )
                   );
@@ -2748,25 +2748,25 @@
                   var O = "";
                   switch (this.state.eResult) {
                     case 10:
-                      O = Object(L.e)("#GrantAwardError_Busy");
+                      O = Object(L.f)("#GrantAwardError_Busy");
                       break;
                     case 32:
-                      O = Object(L.e)("#GrantAwardError_PersistFailed");
+                      O = Object(L.f)("#GrantAwardError_PersistFailed");
                       break;
                     case 8:
-                      O = Object(L.e)("#GrantAwardError_InvalidParam");
+                      O = Object(L.f)("#GrantAwardError_InvalidParam");
                       break;
                     case 42:
-                      O = Object(L.e)("#GrantAwardError_NoMatch");
+                      O = Object(L.f)("#GrantAwardError_NoMatch");
                       break;
                     case 107:
-                      O = Object(L.e)("#GrantAwardError_InsufficientFunds");
+                      O = Object(L.f)("#GrantAwardError_InsufficientFunds");
                       break;
                     case 15:
-                      O = Object(L.e)("#GrantAwardError_AccessDenied");
+                      O = Object(L.f)("#GrantAwardError_AccessDenied");
                       break;
                     default:
-                      O = Object(L.e)("#GrantAwardError_Fail");
+                      O = Object(L.f)("#GrantAwardError_Fail");
                   }
                   M = E.createElement(
                     E.Fragment,
@@ -2793,7 +2793,7 @@
                             return t.setState({ ePhase: ie.SELECTING });
                           }
                         },
-                        Object(L.e)("#GrantAward_Back")
+                        Object(L.f)("#GrantAward_Back")
                       )
                     )
                   );
@@ -2842,7 +2842,7 @@
             E.createElement(
               "div",
               { className: S.Title },
-              Object(L.e)("#GrantAwardTitle")
+              Object(L.f)("#GrantAwardTitle")
             ),
             E.createElement("div", { className: S.Description }, t)
           );
@@ -2858,14 +2858,14 @@
             E.createElement(
               "div",
               { className: S.Left },
-              E.createElement(V.r, { className: S.BalanceIcon }),
+              E.createElement(V.t, { className: S.BalanceIcon }),
               E.createElement(
                 "div",
                 { className: S.BalanceDetails },
                 E.createElement(
                   "div",
                   { className: S.BalanceLabel },
-                  Object(L.e)("#YourBalance")
+                  Object(L.f)("#YourBalance")
                 ),
                 E.createElement("div", { className: S.BalanceAmount }, i)
               )
@@ -2886,7 +2886,7 @@
                   className: S.FooterLink,
                   href: z.b.STORE_BASE_URL + "points/howitworks"
                 },
-                Object(L.e)("#GrantAward_PointsLink")
+                Object(L.f)("#GrantAward_PointsLink")
               )
             )
           );
@@ -2895,16 +2895,16 @@
           var t = e.className,
             r = Object(s.f)(e, ["className"]);
           return E.createElement(
-            H,
-            Object(s.a)({}, r, { className: Object(q.a)(t, S.SubmitButton) })
+            Z,
+            Object(s.a)({}, r, { className: Object(H.a)(t, S.SubmitButton) })
           );
         },
         Be = function(e) {
           var t = e.className,
             r = Object(s.f)(e, ["className"]);
           return E.createElement(
-            H,
-            Object(s.a)({}, r, { className: Object(q.a)(t, S.BackButton) })
+            Z,
+            Object(s.a)({}, r, { className: Object(H.a)(t, S.BackButton) })
           );
         },
         Re = function() {
@@ -2936,13 +2936,13 @@
                   "cost"
                 ]);
               return E.createElement(
-                H,
+                Z,
                 Object(s.a)(
                   {
                     type: "button",
                     onMouseEnter: this.handleMouseOver,
                     onMouseLeave: this.handleMouseOut,
-                    className: Object(q.a)(
+                    className: Object(H.a)(
                       S.Button,
                       r && S.Selected,
                       n && S.Disabled
@@ -2982,8 +2982,8 @@
             n = Object(s.f)(e, ["children", "className"]);
           return E.createElement(
             "span",
-            Object(s.a)({}, n, { className: Object(q.a)(r, S.PointsAmount) }),
-            E.createElement(V.r, { className: S.PointsAmountIcon }),
+            Object(s.a)({}, n, { className: Object(H.a)(r, S.PointsAmount) }),
+            E.createElement(V.t, { className: S.PointsAmountIcon }),
             t
           );
         };
