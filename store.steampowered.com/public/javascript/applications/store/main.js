@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6115490";
+var CLSTAMP = "6116945";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [37],
   {
@@ -385,149 +385,152 @@ var CLSTAMP = "6115490";
         n.d(t, "cb", function() {
           return h;
         }),
-        n.d(t, "Z", function() {
+        n.d(t, "db", function() {
           return f;
         }),
-        n.d(t, "G", function() {
+        n.d(t, "Z", function() {
           return b;
         }),
-        n.d(t, "ab", function() {
+        n.d(t, "G", function() {
           return v;
         }),
-        n.d(t, "X", function() {
+        n.d(t, "ab", function() {
           return _;
         }),
-        n.d(t, "J", function() {
+        n.d(t, "X", function() {
           return g;
         }),
-        n.d(t, "I", function() {
+        n.d(t, "J", function() {
           return y;
         }),
-        n.d(t, "k", function() {
+        n.d(t, "I", function() {
           return w;
         }),
-        n.d(t, "p", function() {
+        n.d(t, "k", function() {
           return O;
         }),
-        n.d(t, "y", function() {
+        n.d(t, "p", function() {
           return E;
         }),
-        n.d(t, "T", function() {
+        n.d(t, "y", function() {
           return C;
         }),
-        n.d(t, "d", function() {
+        n.d(t, "T", function() {
           return S;
         }),
-        n.d(t, "o", function() {
+        n.d(t, "d", function() {
           return M;
         }),
-        n.d(t, "r", function() {
+        n.d(t, "o", function() {
           return j;
+        }),
+        n.d(t, "r", function() {
+          return B;
         }),
         n.d(t, "B", function() {
           return A;
         }),
         n.d(t, "E", function() {
-          return B;
-        }),
-        n.d(t, "L", function() {
           return D;
         }),
-        n.d(t, "v", function() {
+        n.d(t, "L", function() {
           return x;
         }),
-        n.d(t, "q", function() {
+        n.d(t, "v", function() {
           return L;
         }),
-        n.d(t, "C", function() {
+        n.d(t, "q", function() {
           return I;
         }),
-        n.d(t, "R", function() {
+        n.d(t, "C", function() {
           return R;
         }),
-        n.d(t, "Y", function() {
+        n.d(t, "R", function() {
           return k;
         }),
-        n.d(t, "g", function() {
+        n.d(t, "Y", function() {
           return N;
         }),
-        n.d(t, "Q", function() {
+        n.d(t, "g", function() {
           return F;
         }),
-        n.d(t, "N", function() {
+        n.d(t, "Q", function() {
           return T;
         }),
-        n.d(t, "O", function() {
+        n.d(t, "N", function() {
           return P;
         }),
-        n.d(t, "e", function() {
+        n.d(t, "O", function() {
           return G;
         }),
-        n.d(t, "F", function() {
+        n.d(t, "e", function() {
           return z;
         }),
-        n.d(t, "W", function() {
+        n.d(t, "F", function() {
           return U;
         }),
-        n.d(t, "x", function() {
+        n.d(t, "W", function() {
           return H;
         }),
-        n.d(t, "u", function() {
+        n.d(t, "x", function() {
           return W;
         }),
-        n.d(t, "f", function() {
+        n.d(t, "u", function() {
           return V;
         }),
-        n.d(t, "m", function() {
+        n.d(t, "f", function() {
           return Y;
         }),
-        n.d(t, "w", function() {
+        n.d(t, "m", function() {
           return K;
         }),
-        n.d(t, "H", function() {
+        n.d(t, "w", function() {
           return q;
         }),
-        n.d(t, "a", function() {
+        n.d(t, "H", function() {
           return X;
         }),
-        n.d(t, "D", function() {
+        n.d(t, "a", function() {
           return Z;
         }),
-        n.d(t, "n", function() {
+        n.d(t, "D", function() {
           return J;
         }),
-        n.d(t, "U", function() {
+        n.d(t, "n", function() {
           return Q;
         }),
-        n.d(t, "j", function() {
+        n.d(t, "U", function() {
           return $;
         }),
-        n.d(t, "i", function() {
+        n.d(t, "j", function() {
           return ee;
         }),
-        n.d(t, "h", function() {
+        n.d(t, "i", function() {
           return te;
         }),
-        n.d(t, "b", function() {
+        n.d(t, "h", function() {
           return ne;
         }),
-        n.d(t, "c", function() {
+        n.d(t, "b", function() {
           return re;
         }),
-        n.d(t, "V", function() {
+        n.d(t, "c", function() {
           return ie;
         }),
-        n.d(t, "M", function() {
+        n.d(t, "V", function() {
           return oe;
         }),
-        n.d(t, "z", function() {
+        n.d(t, "M", function() {
           return ae;
         }),
-        n.d(t, "K", function() {
+        n.d(t, "z", function() {
           return se;
         }),
-        n.d(t, "bb", function() {
+        n.d(t, "K", function() {
           return ce;
+        }),
+        n.d(t, "bb", function() {
+          return le;
         });
       var r = n("mrSG"),
         i = n("q1tI"),
@@ -708,7 +711,32 @@ var CLSTAMP = "6115490";
           )
         );
       }
-      function h() {
+      function h(e) {
+        return i.createElement(
+          "svg",
+          Object(r.a)(
+            {
+              fill: "#FFFFFF",
+              xmlns: "http://www.w3.org/2000/svg",
+              className: "SVGIcon_Button SVGIcon_X",
+              version: "1.1",
+              x: "0px",
+              y: "0px",
+              viewBox: "-165 95 100 100"
+            },
+            e
+          ),
+          i.createElement(
+            "g",
+            null,
+            i.createElement("polygon", {
+              points:
+                "-74.9,117.2 -102.2,145 -74.9,172.8 -89.1,186.8 -116.2,159.3 -143.2,186.8 -157.5,172.8 -130.2,145 -157.5,117.2 -143.2,103.2 -116.2,130.7 -89.1,103.2"
+            })
+          )
+        );
+      }
+      function f() {
         return i.createElement(
           "svg",
           {
@@ -744,7 +772,7 @@ var CLSTAMP = "6115490";
           })
         );
       }
-      function f(e) {
+      function b(e) {
         return i.createElement(
           "svg",
           {
@@ -836,7 +864,7 @@ var CLSTAMP = "6115490";
             )
         );
       }
-      function b() {
+      function v() {
         return i.createElement(
           "svg",
           {
@@ -860,7 +888,7 @@ var CLSTAMP = "6115490";
           })
         );
       }
-      function v(e) {
+      function _(e) {
         return i.createElement(
           "svg",
           {
@@ -932,7 +960,7 @@ var CLSTAMP = "6115490";
           )
         );
       }
-      function _() {
+      function g() {
         return i.createElement(
           "svg",
           { width: "50px", height: "25px", viewBox: "0 0 50 25" },
@@ -942,7 +970,7 @@ var CLSTAMP = "6115490";
           })
         );
       }
-      function g() {
+      function y() {
         return i.createElement(
           "svg",
           {
@@ -963,7 +991,7 @@ var CLSTAMP = "6115490";
           })
         );
       }
-      function y() {
+      function w() {
         return i.createElement(
           "svg",
           {
@@ -987,7 +1015,7 @@ var CLSTAMP = "6115490";
           })
         );
       }
-      function w() {
+      function O() {
         return i.createElement(
           "svg",
           {
@@ -1012,7 +1040,7 @@ var CLSTAMP = "6115490";
           })
         );
       }
-      function O(e) {
+      function E(e) {
         var t = e.highlightColor || "#00ccff",
           n = e.color || "#2d73ff";
         return i.createElement(
@@ -1092,7 +1120,7 @@ var CLSTAMP = "6115490";
           })
         );
       }
-      function E() {
+      function C() {
         return i.createElement(
           "svg",
           {
@@ -1122,7 +1150,7 @@ var CLSTAMP = "6115490";
           })
         );
       }
-      function C(e) {
+      function S(e) {
         var t = "SVGIcon_Button SVGIcon_Throbber ";
         return (
           e.className && (t += e.className),
@@ -1366,7 +1394,7 @@ var CLSTAMP = "6115490";
           )
         );
       }
-      function S() {
+      function M() {
         return i.createElement(
           "svg",
           {
@@ -1386,7 +1414,7 @@ var CLSTAMP = "6115490";
           })
         );
       }
-      function M() {
+      function j() {
         return i.createElement(
           "svg",
           {
@@ -1406,7 +1434,7 @@ var CLSTAMP = "6115490";
           })
         );
       }
-      function j(e) {
+      function B(e) {
         return i.createElement(
           "svg",
           {
@@ -1478,7 +1506,7 @@ var CLSTAMP = "6115490";
           })
         );
       }
-      function B() {
+      function D() {
         return i.createElement(
           "svg",
           {
@@ -1504,7 +1532,7 @@ var CLSTAMP = "6115490";
           })
         );
       }
-      function D() {
+      function x() {
         return i.createElement(
           "svg",
           {
@@ -1537,7 +1565,7 @@ var CLSTAMP = "6115490";
           })
         );
       }
-      function x(e) {
+      function L(e) {
         return i.createElement(
           "svg",
           {
@@ -1558,7 +1586,7 @@ var CLSTAMP = "6115490";
           })
         );
       }
-      function L() {
+      function I() {
         return i.createElement(
           "svg",
           {
@@ -1593,7 +1621,7 @@ var CLSTAMP = "6115490";
           })
         );
       }
-      function I(e) {
+      function R(e) {
         return i.createElement(
           "svg",
           {
@@ -1633,7 +1661,7 @@ var CLSTAMP = "6115490";
           })
         );
       }
-      function R(e) {
+      function k(e) {
         var t = Object(s.a)(
           "SVGIcon_Button",
           "SVGIcon_SteamLogo",
@@ -1667,7 +1695,7 @@ var CLSTAMP = "6115490";
           })
         );
       }
-      function k() {
+      function N() {
         return i.createElement(
           "svg",
           {
@@ -1695,7 +1723,7 @@ var CLSTAMP = "6115490";
           })
         );
       }
-      function N() {
+      function F() {
         return i.createElement(
           "svg",
           {
@@ -1717,7 +1745,7 @@ var CLSTAMP = "6115490";
           )
         );
       }
-      function F() {
+      function T() {
         return i.createElement(
           "svg",
           {
@@ -1738,7 +1766,7 @@ var CLSTAMP = "6115490";
           )
         );
       }
-      function T() {
+      function P() {
         return i.createElement(
           "svg",
           {
@@ -1775,7 +1803,7 @@ var CLSTAMP = "6115490";
           )
         );
       }
-      function P() {
+      function G() {
         return i.createElement(
           "svg",
           {
@@ -1803,7 +1831,7 @@ var CLSTAMP = "6115490";
           })
         );
       }
-      function G() {
+      function z() {
         return i.createElement(
           "svg",
           {
@@ -1824,7 +1852,7 @@ var CLSTAMP = "6115490";
           })
         );
       }
-      function z() {
+      function U() {
         return i.createElement(
           "svg",
           {
@@ -1844,7 +1872,7 @@ var CLSTAMP = "6115490";
           })
         );
       }
-      function U() {
+      function H() {
         return i.createElement(
           "svg",
           {
@@ -1868,7 +1896,7 @@ var CLSTAMP = "6115490";
           })
         );
       }
-      function H() {
+      function W() {
         return i.createElement(
           "svg",
           {
@@ -1918,7 +1946,7 @@ var CLSTAMP = "6115490";
           })
         );
       }
-      function W() {
+      function V() {
         return i.createElement(
           "svg",
           {
@@ -1951,7 +1979,7 @@ var CLSTAMP = "6115490";
           })
         );
       }
-      function V() {
+      function Y() {
         return i.createElement(
           "svg",
           {
@@ -1973,7 +2001,7 @@ var CLSTAMP = "6115490";
           })
         );
       }
-      function Y() {
+      function K() {
         return i.createElement(
           "svg",
           {
@@ -2007,7 +2035,7 @@ var CLSTAMP = "6115490";
           })
         );
       }
-      function K() {
+      function q() {
         return i.createElement(
           "svg",
           {
@@ -2077,7 +2105,7 @@ var CLSTAMP = "6115490";
           })
         );
       }
-      function q() {
+      function X() {
         return i.createElement(
           "svg",
           {
@@ -2105,7 +2133,7 @@ var CLSTAMP = "6115490";
           })
         );
       }
-      function X() {
+      function Z() {
         return i.createElement(
           "svg",
           {
@@ -2135,7 +2163,7 @@ var CLSTAMP = "6115490";
           )
         );
       }
-      function Z() {
+      function J() {
         return i.createElement(
           "svg",
           {
@@ -2151,7 +2179,7 @@ var CLSTAMP = "6115490";
           i.createElement("circle", { cx: "62.6", cy: "134", r: "20.6" })
         );
       }
-      function J(e) {
+      function Q(e) {
         return i.createElement(
           "svg",
           {
@@ -2171,7 +2199,7 @@ var CLSTAMP = "6115490";
           })
         );
       }
-      function Q(e) {
+      function $(e) {
         return i.createElement(
           "svg",
           {
@@ -2191,7 +2219,7 @@ var CLSTAMP = "6115490";
           })
         );
       }
-      function $(e) {
+      function ee(e) {
         var t = e.className;
         Object(r.f)(e, ["className"]);
         return i.createElement(
@@ -2213,7 +2241,7 @@ var CLSTAMP = "6115490";
           })
         );
       }
-      function ee(e) {
+      function te(e) {
         var t = e.className;
         Object(r.f)(e, ["className"]);
         return i.createElement(
@@ -2235,7 +2263,7 @@ var CLSTAMP = "6115490";
           })
         );
       }
-      function te(e) {
+      function ne(e) {
         var t = e.className;
         Object(r.f)(e, ["className"]);
         return i.createElement(
@@ -2257,7 +2285,7 @@ var CLSTAMP = "6115490";
           })
         );
       }
-      function ne(e) {
+      function re(e) {
         var t = e.className;
         Object(r.f)(e, ["className"]);
         return i.createElement(
@@ -2279,7 +2307,7 @@ var CLSTAMP = "6115490";
           })
         );
       }
-      function re(e) {
+      function ie(e) {
         var t = e.className;
         Object(r.f)(e, ["className"]);
         return i.createElement(
@@ -2300,7 +2328,7 @@ var CLSTAMP = "6115490";
           })
         );
       }
-      function ie(e) {
+      function oe(e) {
         return i.createElement(
           "svg",
           Object(r.a)(
@@ -2325,7 +2353,7 @@ var CLSTAMP = "6115490";
           })
         );
       }
-      function oe(e) {
+      function ae(e) {
         var t = e.className,
           n = Object(r.f)(e, ["className"]);
         return i.createElement(
@@ -2543,7 +2571,7 @@ var CLSTAMP = "6115490";
           )
         );
       }
-      function ae(e) {
+      function se(e) {
         var t = e.className;
         Object(r.f)(e, ["className"]);
         return i.createElement(
@@ -2723,7 +2751,7 @@ var CLSTAMP = "6115490";
           )
         );
       }
-      function se() {
+      function ce() {
         return i.createElement(
           "svg",
           {
@@ -2756,7 +2784,7 @@ var CLSTAMP = "6115490";
           )
         );
       }
-      function ce(e) {
+      function le(e) {
         return i.createElement(
           "svg",
           Object(r.a)({}, e, {
@@ -3773,7 +3801,7 @@ var CLSTAMP = "6115490";
             (e = Object(y.c)([h.a], e))
           );
         })(b.a.Component),
-        A = (function(r) {
+        B = (function(r) {
           function e(e) {
             var t = r.call(this, e) || this;
             (t.operands = []),
@@ -3959,7 +3987,7 @@ var CLSTAMP = "6115490";
             (e = Object(y.c)([h.a], e))
           );
         })(b.a.Component),
-        B = (function(t) {
+        A = (function(t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (
@@ -4141,13 +4169,13 @@ var CLSTAMP = "6115490";
                         b.a.createElement(S, null),
                         b.a.createElement("div", { className: v.Spacer }),
                         b.a.createElement("h1", null, "Mixer"),
-                        b.a.createElement(A, {
+                        b.a.createElement(B, {
                           max_similar: 10,
                           max_operands: 6
                         }),
                         b.a.createElement("div", { className: v.Spacer }),
                         b.a.createElement("h1", null, "Pathfinder"),
-                        b.a.createElement(B, null)
+                        b.a.createElement(A, null)
                       )
                     )
                   )
@@ -5035,7 +5063,7 @@ var CLSTAMP = "6115490";
                   u.createElement(
                     "div",
                     { className: "closeButton", onClick: t.onEscKeypress },
-                    u.createElement(a.cb, null)
+                    u.createElement(a.db, null)
                   )
                 ),
               u.createElement(o.a, null, t.children)
@@ -6622,7 +6650,7 @@ var CLSTAMP = "6115490";
             r
           );
         })(c),
-        A = (function(n) {
+        B = (function(n) {
           function r(e) {
             void 0 === e && (e = null);
             var t = n.call(this) || this;
@@ -6677,7 +6705,7 @@ var CLSTAMP = "6115490";
             r
           );
         })(c),
-        B = (function(n) {
+        A = (function(n) {
           function r(e) {
             void 0 === e && (e = null);
             var t = n.call(this) || this;
@@ -6778,7 +6806,7 @@ var CLSTAMP = "6115490";
                 r.sm_m ||
                   (r.sm_m = {
                     proto: r,
-                    fields: { results: { n: 1, c: B, r: !0, q: !0 } }
+                    fields: { results: { n: 1, c: A, r: !0, q: !0 } }
                   }),
                 r.sm_m
               );
@@ -7421,7 +7449,7 @@ var CLSTAMP = "6115490";
           });
         }),
         (l.GetUserPartnerEventNews = function(e, t) {
-          return e.SendMsg("Community.GetUserPartnerEventNews#1", t, A, {
+          return e.SendMsg("Community.GetUserPartnerEventNews#1", t, B, {
             bConstMethod: !0,
             ePrivilege: 1,
             eWebAPIKeyRequirement: 2
@@ -7516,7 +7544,7 @@ var CLSTAMP = "6115490";
           return j;
         }),
         n.d(t, "d", function() {
-          return B;
+          return A;
         }),
         n.d(t, "n", function() {
           return D;
@@ -7694,7 +7722,7 @@ var CLSTAMP = "6115490";
           )
         );
       }
-      var A = (function(n) {
+      var B = (function(n) {
           function e(e) {
             var t = n.call(this, e) || this;
             return (t.state = { checked: e.checked, disabled: e.disabled }), t;
@@ -7749,7 +7777,7 @@ var CLSTAMP = "6115490";
             e
           );
         })(f.Component),
-        B = (function(e) {
+        A = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -7806,7 +7834,7 @@ var CLSTAMP = "6115490";
             }),
             t
           );
-        })(A),
+        })(B),
         D = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
@@ -7898,7 +7926,7 @@ var CLSTAMP = "6115490";
             Object(h.c)([o.a], t.prototype, "OnNewUIToggle", null),
             t
           );
-        })(A);
+        })(B);
       function x(n) {
         return function(e) {
           var t = n + (e.className ? " " + e.className : "");
@@ -8114,7 +8142,7 @@ var CLSTAMP = "6115490";
                         className: "DialogInput_ClearAction",
                         onClick: this.OnClearClick
                       },
-                      f.createElement(b.cb, null)
+                      f.createElement(b.db, null)
                     )
                 ),
                 m
@@ -10702,8 +10730,8 @@ var CLSTAMP = "6115490";
         (_.Group = "group"),
         (_.Stop = "stop"),
         (_.Click = "click");
-      var A = l.createContext(null);
-      function B(e) {
+      var B = l.createContext(null);
+      function A(e) {
         for (var t = [], n = e; null != n; n = n.parent) t.push(n.key);
         return t.reverse(), JSON.stringify(t);
       }
@@ -11071,7 +11099,7 @@ var CLSTAMP = "6115490";
                 null != this.m_navAddress &&
                 this.m_htmlElement.setAttribute(
                   "data-nav-addr",
-                  B(this.m_navAddress)
+                  A(this.m_navAddress)
                 ),
                 null !=
                   (null === (e = this.m_currentNavEpoch) || void 0 === e
@@ -11118,7 +11146,7 @@ var CLSTAMP = "6115490";
                 );
               });
             }),
-            (t.contextType = A),
+            (t.contextType = B),
             (t.defaultProps = { navStop: !1, tabStop: !1 }),
             Object(c.c)([i.a], t.prototype, "SetRef", null),
             t
@@ -11187,7 +11215,7 @@ var CLSTAMP = "6115490";
               null != this.m_navAddress &&
               this.m_htmlElement.setAttribute(
                 "data-nav-addr",
-                B(this.m_navAddress)
+                A(this.m_navAddress)
               ),
               null == this.m_htmlElement ||
                 null == this.m_navAddress ||
@@ -11268,7 +11296,7 @@ var CLSTAMP = "6115490";
                   i
                 );
           }),
-          (a.contextType = A),
+          (a.contextType = B),
           Object(c.c)([i.a], a.prototype, "SetRef", null),
           Object(c.c)([C], a, "GetOnNavOut", null),
           a
@@ -11695,27 +11723,27 @@ var CLSTAMP = "6115490";
                       null === y &&
                       "true" === G.getAttribute("data-nav-preferred") &&
                       (y = G);
-                    var A = 0;
+                    var B = 0;
                     if (s) {
-                      var B = ne(G),
+                      var A = ne(G),
                         D = f[u],
-                        x = p * (B[u][v] - D);
+                        x = p * (A[u][v] - D);
                       if (x < 0) continue;
                       var L = f[b],
-                        I = B[b].min,
-                        R = B[b].max,
+                        I = A[b].min,
+                        R = A[b].max,
                         k = L < I ? L - I : R < L ? L - R : 0;
                       if (t) if (!X(g, { min: I, max: R })) continue;
                       var N = { x: 0, y: 0 };
-                      (N[u] = B[u][v]), (N[b] = L + k);
+                      (N[u] = A[u][v]), (N[b] = L + k);
                       var F = Y(f, N),
-                        A = (x * x + k * k) / Math.abs(F[u]);
+                        B = (x * x + k * k) / Math.abs(F[u]);
                     } else {
                       if (null == S) continue;
-                      A = S;
+                      B = S;
                     }
-                    A < O && ((O = A), (w = G)),
-                      C.push({ score: A, element: G });
+                    B < O && ((O = B), (w = G)),
+                      C.push({ score: B, element: G });
                   }
                 } else S = 0;
               }
@@ -12371,8 +12399,8 @@ var CLSTAMP = "6115490";
                 });
               if (j) {
                 for (
-                  var A = j.GetFocusPos(),
-                    B = Number.POSITIVE_INFINITY,
+                  var B = j.GetFocusPos(),
+                    A = Number.POSITIVE_INFINITY,
                     D = null,
                     x = 0,
                     L = m;
@@ -12381,8 +12409,8 @@ var CLSTAMP = "6115490";
                 ) {
                   var I,
                     R = re((I = L[x])),
-                    k = ((S = Y(A, R)), Math.sqrt(F(S, S)));
-                  k < B && ((B = k), (D = I));
+                    k = ((S = Y(B, R)), Math.sqrt(F(S, S)));
+                  k < A && ((A = k), (D = I));
                 }
                 if (D) return { htmlElement: D, pos: re(D) };
               }
@@ -12552,7 +12580,7 @@ var CLSTAMP = "6115490";
                 s = O.IsDefaultFocusMarkerVisible;
               return o
                 ? l.createElement(
-                    A.Provider,
+                    B.Provider,
                     { value: this },
                     l.createElement(
                       "div",
@@ -14112,22 +14140,22 @@ var CLSTAMP = "6115490";
             exact: !0,
             path: d.b.EventBackfill(),
             render: function(e) {
-              return s.a.createElement(B, Object(u.a)({}, e));
+              return s.a.createElement(A, Object(u.a)({}, e));
             }
           }),
           s.a.createElement(_.b, {
             path: d.b.EventModeration(),
             render: function(e) {
               return s.a.createElement(
-                A,
+                B,
                 Object(u.a)({}, e, { appid: e.match.params.appid })
               );
             }
           })
         );
       }
-      var A = S("EventModerationLanding"),
-        B = S("EventBackfillLanding"),
+      var B = S("EventModerationLanding"),
+        A = S("EventBackfillLanding"),
         D = S("EventSaleDisplay"),
         x = S("EventCalendar"),
         L = S("EventDetailView"),
@@ -17421,8 +17449,8 @@ var CLSTAMP = "6115490";
                 S,
                 M,
                 j,
-                A,
                 B,
+                A,
                 D = this.m_elMenu,
                 x = this.props.element;
               D &&
@@ -17479,21 +17507,21 @@ var CLSTAMP = "6115490";
                 i.bMatchHeight && ((E = O - w), (o.menuHeight = E)),
                 (S = 0 < (C = (i.bOverlapVertical ? O : w) - E)),
                 (j = 0 < (M = l - (i.bOverlapVertical ? w : O) - E)),
-                (B = (i.bPreferPopTop || !j) && S && !i.bDisablePopTop),
+                (A = (i.bPreferPopTop || !j) && S && !i.bDisablePopTop),
                 S ||
                   j ||
-                  ((A =
+                  ((B =
                     void 0 !== i.bShiftToFitWindow
                       ? i.bShiftToFitWindow
                       : i.bFitToWindow && !i.bOverlapHorizontal),
-                  (B = M < C && !i.bDisablePopTop),
-                  A && (B ? (o.menuTop = 4) : (o.menuBottom = 4)),
+                  (A = M < C && !i.bDisablePopTop),
+                  B && (A ? (o.menuTop = 4) : (o.menuBottom = 4)),
                   i.bFitToWindow &&
-                    (A ? (E = Math.min(E, l - 8)) : (E += B ? C : M),
+                    (B ? (E = Math.min(E, l - 8)) : (E += A ? C : M),
                     (o.menuHeight = E - 8))),
                 void 0 === o.menuBottom &&
                   void 0 === o.menuTop &&
-                  (B
+                  (A
                     ? (o.menuBottom = l - (i.bOverlapVertical ? O : w))
                     : (o.menuTop = i.bOverlapVertical ? w : O)),
                 r
