@@ -19961,7 +19961,7 @@
                       return a(r);
                     }
                   },
-                  Re.createElement(An.P, null)
+                  Re.createElement(An.Q, null)
                 ),
                 Re.createElement(
                   "div",
@@ -33180,7 +33180,7 @@
                           return t.RemoveSection(t.props.index);
                         }
                       },
-                      Re.createElement(An.P, null)
+                      Re.createElement(An.Q, null)
                     )
                   )
                 )

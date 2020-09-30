@@ -529,6 +529,10 @@ background: -webkit-linear-gradient( top, #000000 0px,#000000 50px,#1e2025 60px,
 	background: linear-gradient( 0, #000000 0px,#000000 50px,#1e2025 60px,#1e2025 100%);
 }
 
+body.iframe #ChatWindow.noVideo {
+    height: 100vh;
+}
+
 #ChatViewerModalBackdrop
 {
 	position: absolute;

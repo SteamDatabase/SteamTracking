@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6116047";
+var CLSTAMP = "6116962";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [97],
   {
@@ -173,113 +173,116 @@ var CLSTAMP = "6116047";
         n.d(t, "P", function() {
           return d;
         }),
-        n.d(t, "M", function() {
+        n.d(t, "Q", function() {
           return h;
         }),
-        n.d(t, "z", function() {
+        n.d(t, "M", function() {
           return f;
         }),
-        n.d(t, "N", function() {
+        n.d(t, "z", function() {
           return v;
         }),
-        n.d(t, "B", function() {
+        n.d(t, "N", function() {
           return b;
         }),
-        n.d(t, "A", function() {
+        n.d(t, "B", function() {
           return g;
         }),
-        n.d(t, "e", function() {
+        n.d(t, "A", function() {
           return _;
         }),
-        n.d(t, "h", function() {
+        n.d(t, "e", function() {
           return y;
         }),
-        n.d(t, "s", function() {
+        n.d(t, "h", function() {
           return E;
         }),
-        n.d(t, "J", function() {
+        n.d(t, "s", function() {
           return O;
         }),
-        n.d(t, "b", function() {
+        n.d(t, "J", function() {
           return w;
         }),
-        n.d(t, "a", function() {
+        n.d(t, "b", function() {
           return S;
         }),
-        n.d(t, "g", function() {
+        n.d(t, "a", function() {
           return C;
         }),
-        n.d(t, "i", function() {
+        n.d(t, "g", function() {
           return D;
         }),
-        n.d(t, "v", function() {
+        n.d(t, "i", function() {
           return M;
         }),
-        n.d(t, "x", function() {
+        n.d(t, "v", function() {
           return x;
         }),
-        n.d(t, "D", function() {
+        n.d(t, "x", function() {
           return k;
         }),
-        n.d(t, "o", function() {
+        n.d(t, "D", function() {
           return A;
         }),
-        n.d(t, "w", function() {
+        n.d(t, "o", function() {
           return j;
         }),
-        n.d(t, "H", function() {
+        n.d(t, "w", function() {
           return I;
         }),
-        n.d(t, "L", function() {
+        n.d(t, "H", function() {
           return N;
         }),
-        n.d(t, "E", function() {
+        n.d(t, "L", function() {
           return R;
         }),
-        n.d(t, "F", function() {
+        n.d(t, "E", function() {
           return T;
         }),
-        n.d(t, "c", function() {
+        n.d(t, "F", function() {
           return L;
         }),
-        n.d(t, "y", function() {
+        n.d(t, "c", function() {
           return B;
         }),
-        n.d(t, "K", function() {
+        n.d(t, "y", function() {
           return F;
         }),
-        n.d(t, "r", function() {
+        n.d(t, "K", function() {
           return P;
         }),
-        n.d(t, "m", function() {
+        n.d(t, "r", function() {
           return G;
         }),
-        n.d(t, "d", function() {
+        n.d(t, "m", function() {
           return U;
         }),
-        n.d(t, "f", function() {
+        n.d(t, "d", function() {
           return H;
         }),
-        n.d(t, "k", function() {
+        n.d(t, "f", function() {
           return W;
         }),
-        n.d(t, "q", function() {
+        n.d(t, "k", function() {
           return z;
         }),
-        n.d(t, "n", function() {
+        n.d(t, "q", function() {
           return V;
         }),
-        n.d(t, "p", function() {
+        n.d(t, "n", function() {
           return Y;
         }),
-        n.d(t, "t", function() {
+        n.d(t, "p", function() {
           return K;
         }),
-        n.d(t, "C", function() {
+        n.d(t, "t", function() {
           return X;
         }),
-        n.d(t, "O", function() {
+        n.d(t, "C", function() {
           return q;
+        }),
+        n.d(t, "O", function() {
+          return J;
         });
       var r = n("mrSG"),
         o = n("q1tI"),
@@ -442,7 +445,32 @@ var CLSTAMP = "6116047";
           )
         );
       }
-      function d() {
+      function d(e) {
+        return o.createElement(
+          "svg",
+          Object(r.a)(
+            {
+              fill: "#FFFFFF",
+              xmlns: "http://www.w3.org/2000/svg",
+              className: "SVGIcon_Button SVGIcon_X",
+              version: "1.1",
+              x: "0px",
+              y: "0px",
+              viewBox: "-165 95 100 100"
+            },
+            e
+          ),
+          o.createElement(
+            "g",
+            null,
+            o.createElement("polygon", {
+              points:
+                "-74.9,117.2 -102.2,145 -74.9,172.8 -89.1,186.8 -116.2,159.3 -143.2,186.8 -157.5,172.8 -130.2,145 -157.5,117.2 -143.2,103.2 -116.2,130.7 -89.1,103.2"
+            })
+          )
+        );
+      }
+      function h() {
         return o.createElement(
           "svg",
           {
@@ -478,7 +506,7 @@ var CLSTAMP = "6116047";
           })
         );
       }
-      function h(e) {
+      function f(e) {
         return o.createElement(
           "svg",
           {
@@ -570,7 +598,7 @@ var CLSTAMP = "6116047";
             )
         );
       }
-      function f() {
+      function v() {
         return o.createElement(
           "svg",
           {
@@ -594,7 +622,7 @@ var CLSTAMP = "6116047";
           })
         );
       }
-      function v(e) {
+      function b(e) {
         return o.createElement(
           "svg",
           {
@@ -666,7 +694,7 @@ var CLSTAMP = "6116047";
           )
         );
       }
-      function b() {
+      function g() {
         return o.createElement(
           "svg",
           {
@@ -687,7 +715,7 @@ var CLSTAMP = "6116047";
           })
         );
       }
-      function g() {
+      function _() {
         return o.createElement(
           "svg",
           {
@@ -711,7 +739,7 @@ var CLSTAMP = "6116047";
           })
         );
       }
-      function _() {
+      function y() {
         return o.createElement(
           "svg",
           {
@@ -736,7 +764,7 @@ var CLSTAMP = "6116047";
           })
         );
       }
-      function y(e) {
+      function E(e) {
         var t = e.highlightColor || "#00ccff",
           n = e.color || "#2d73ff";
         return o.createElement(
@@ -816,7 +844,7 @@ var CLSTAMP = "6116047";
           })
         );
       }
-      function E() {
+      function O() {
         return o.createElement(
           "svg",
           {
@@ -846,7 +874,7 @@ var CLSTAMP = "6116047";
           })
         );
       }
-      function O(e) {
+      function w(e) {
         var t = "SVGIcon_Button SVGIcon_Throbber ";
         return (
           e.className && (t += e.className),
@@ -1090,7 +1118,7 @@ var CLSTAMP = "6116047";
           )
         );
       }
-      function w() {
+      function S() {
         return o.createElement(
           "svg",
           {
@@ -1110,7 +1138,7 @@ var CLSTAMP = "6116047";
           })
         );
       }
-      function S(e) {
+      function C(e) {
         return o.createElement(
           "svg",
           {
@@ -1145,7 +1173,7 @@ var CLSTAMP = "6116047";
           })
         );
       }
-      function C() {
+      function D() {
         return o.createElement(
           "svg",
           {
@@ -1165,7 +1193,7 @@ var CLSTAMP = "6116047";
           })
         );
       }
-      function D(e) {
+      function M(e) {
         return o.createElement(
           "svg",
           {
@@ -1201,7 +1229,7 @@ var CLSTAMP = "6116047";
             })
         );
       }
-      function M() {
+      function x() {
         return o.createElement(
           "svg",
           {
@@ -1237,7 +1265,7 @@ var CLSTAMP = "6116047";
           })
         );
       }
-      function x() {
+      function k() {
         return o.createElement(
           "svg",
           {
@@ -1263,7 +1291,7 @@ var CLSTAMP = "6116047";
           })
         );
       }
-      function k() {
+      function A() {
         return o.createElement(
           "svg",
           {
@@ -1296,7 +1324,7 @@ var CLSTAMP = "6116047";
           })
         );
       }
-      function A(e) {
+      function j(e) {
         return o.createElement(
           "svg",
           {
@@ -1317,7 +1345,7 @@ var CLSTAMP = "6116047";
           })
         );
       }
-      function j(e) {
+      function I(e) {
         return o.createElement(
           "svg",
           {
@@ -1357,7 +1385,7 @@ var CLSTAMP = "6116047";
           })
         );
       }
-      function I(e) {
+      function N(e) {
         var t = Object(s.a)(
           "SVGIcon_Button",
           "SVGIcon_SteamLogo",
@@ -1391,7 +1419,7 @@ var CLSTAMP = "6116047";
           })
         );
       }
-      function N() {
+      function R() {
         return o.createElement(
           "svg",
           {
@@ -1419,7 +1447,7 @@ var CLSTAMP = "6116047";
           })
         );
       }
-      function R() {
+      function T() {
         return o.createElement(
           "svg",
           {
@@ -1456,7 +1484,7 @@ var CLSTAMP = "6116047";
           )
         );
       }
-      function T() {
+      function L() {
         return o.createElement(
           "svg",
           {
@@ -1484,7 +1512,7 @@ var CLSTAMP = "6116047";
           })
         );
       }
-      function L() {
+      function B() {
         return o.createElement(
           "svg",
           {
@@ -1505,7 +1533,7 @@ var CLSTAMP = "6116047";
           })
         );
       }
-      function B() {
+      function F() {
         return o.createElement(
           "svg",
           {
@@ -1525,7 +1553,7 @@ var CLSTAMP = "6116047";
           })
         );
       }
-      function F() {
+      function P() {
         return o.createElement(
           "svg",
           {
@@ -1549,7 +1577,7 @@ var CLSTAMP = "6116047";
           })
         );
       }
-      function P() {
+      function G() {
         return o.createElement(
           "svg",
           {
@@ -1599,7 +1627,7 @@ var CLSTAMP = "6116047";
           })
         );
       }
-      function G() {
+      function U() {
         return o.createElement(
           "svg",
           {
@@ -1632,7 +1660,7 @@ var CLSTAMP = "6116047";
           })
         );
       }
-      function U() {
+      function H() {
         return o.createElement(
           "svg",
           {
@@ -1654,7 +1682,7 @@ var CLSTAMP = "6116047";
           })
         );
       }
-      function H() {
+      function W() {
         return o.createElement(
           "svg",
           {
@@ -1688,7 +1716,7 @@ var CLSTAMP = "6116047";
           })
         );
       }
-      function W() {
+      function z() {
         return o.createElement(
           "svg",
           {
@@ -1728,7 +1756,7 @@ var CLSTAMP = "6116047";
           })
         );
       }
-      function z() {
+      function V() {
         return o.createElement(
           "svg",
           {
@@ -1764,7 +1792,7 @@ var CLSTAMP = "6116047";
           })
         );
       }
-      function V() {
+      function Y() {
         return o.createElement(
           "svg",
           {
@@ -1784,7 +1812,7 @@ var CLSTAMP = "6116047";
           })
         );
       }
-      function Y() {
+      function K() {
         return o.createElement(
           "svg",
           {
@@ -1808,7 +1836,7 @@ var CLSTAMP = "6116047";
           })
         );
       }
-      function K(e) {
+      function X(e) {
         var t = e.className;
         Object(r.f)(e, ["className"]);
         return o.createElement(
@@ -1988,7 +2016,7 @@ var CLSTAMP = "6116047";
           )
         );
       }
-      function X() {
+      function q() {
         return o.createElement(
           "svg",
           {
@@ -2021,7 +2049,7 @@ var CLSTAMP = "6116047";
           )
         );
       }
-      function q(e) {
+      function J(e) {
         return o.createElement(
           "svg",
           Object(r.a)({}, e, {
@@ -3045,7 +3073,7 @@ var CLSTAMP = "6116047";
                   u.createElement(
                     "div",
                     { className: "closeButton", onClick: t.onEscKeypress },
-                    u.createElement(a.P, null)
+                    u.createElement(a.Q, null)
                   )
                 ),
               u.createElement(i.a, null, t.children)
@@ -4093,7 +4121,7 @@ var CLSTAMP = "6116047";
                         className: "DialogInput_ClearAction",
                         onClick: this.OnClearClick
                       },
-                      f.createElement(v.P, null)
+                      f.createElement(v.Q, null)
                     )
                 ),
                 m
