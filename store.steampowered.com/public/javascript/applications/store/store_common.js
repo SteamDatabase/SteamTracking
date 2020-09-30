@@ -1393,23 +1393,35 @@
               : "";
           }),
           (o.prototype.GetSubTitleWithSummaryFallback = function(e) {
-            var t = null;
+            var t;
             return (
-              this.jsondata &&
-                this.jsondata.localized_subtitle &&
-                (t = u.a.GetWithFallback(this.jsondata.localized_subtitle, e)),
-              t || o.GenerateSummaryFromText(this.GetDescriptionWithFallback(e))
+              u.a.GetWithFallback(
+                null === (t = this.jsondata) || void 0 === t
+                  ? void 0
+                  : t.localized_subtitle,
+                e
+              ) || o.GenerateSummaryFromText(this.GetDescriptionWithFallback(e))
             );
           }),
           (o.prototype.GetSummaryWithFallback = function(e) {
-            return this.jsondata
-              ? u.a.GetWithFallback(this.jsondata.localized_summary, e)
-              : "";
+            var t;
+            return (
+              u.a.GetWithFallback(
+                null === (t = this.jsondata) || void 0 === t
+                  ? void 0
+                  : t.localized_summary,
+                e
+              ) || o.GenerateSummaryFromText(this.GetDescriptionWithFallback(e))
+            );
           }),
           (o.prototype.GetSummary = function(e) {
-            return this.jsondata
-              ? u.a.Get(this.jsondata.localized_summary, e)
-              : "";
+            var t;
+            return u.a.Get(
+              null === (t = this.jsondata) || void 0 === t
+                ? void 0
+                : t.localized_summary,
+              e
+            );
           }),
           (o.prototype.BHasSummary = function(e) {
             return Boolean(this.GetSummary(e));
