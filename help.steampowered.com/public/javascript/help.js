@@ -1496,8 +1496,6 @@ HelpWizard = {
 		});
 	},
 
-	m_reCaptchaInstance: null,
-
 	RefreshCaptcha: function( nUsage )
 	{
 		var _wizard = this;
@@ -1512,8 +1510,22 @@ HelpWizard = {
 		});
 	},
 
+		RenderRecaptcha: function( parent_sel, gid, sitekey, s )
+	{
+		var render_div_id = 'recaptcha_render_' + gid;
+		$J( parent_sel ).empty();
+		$J( parent_sel ).append('<div id="' + render_div_id + '"></div>');
+		grecaptcha.enterprise.render( render_div_id, {
+			'sitekey': sitekey,
+			'theme': 'dark',
+			'callback': function(n){},
+			's': s
+		});
+	},
+
 	UpdateCaptcha: function( data )
 	{
+		var _wizard = this;
 		if ( data.gid != -1 )
 		{
 			$J( '#captcha_entry' ).show();
@@ -1525,22 +1537,14 @@ HelpWizard = {
 			} else if ( data.type == 2 ) {
 				$J( '#captcha_entry_text' ).hide();
 				$J( '#captcha_entry_recaptcha' ).show();
-				if ( this.m_reCaptchaInstance !== null ) {
-					grecaptcha.enterprise.reset( this.m_reCaptchaInstance );
-				} else {
-					this.m_reCaptchaInstance = grecaptcha.enterprise.render( 'captcha_entry_recaptcha', {
-						'sitekey': data.sitekey,
-						'theme': 'dark',
-						'callback': function(n){},
-						's': data.s
-					});
-				}
+				_wizard.RenderRecaptcha( '#captcha_entry_recaptcha', data.gid, data.sitekey, data.s );	
 			}
 			$J( '#input_captcha_gid' ).val( data.gid );
 		}
 		else
 		{
 			$J( '#captcha_entry' ).hide();
+			$J( '#captcha_entry_recaptcha' ).empty();
 			$J( '#input_captcha' ).val( '' );
 			$J( '#input_captcha_gid' ).val( '' );
 		}

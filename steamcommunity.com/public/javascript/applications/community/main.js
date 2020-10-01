@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6116962";
+var CLSTAMP = "6119733";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [97],
   {
@@ -12419,17 +12419,19 @@ var CLSTAMP = "6116962";
           return (
             Object(a.d)(t, e),
             (t.prototype.componentDidMount = function() {
-              (this.context.m_refContextMenu = this).context.SetLabel(
-                this.props.label
-              );
+              this.context &&
+                (this.context.m_refContextMenu = this).context.SetLabel(
+                  this.props.label
+                );
             }),
             (t.prototype.componentDidUpdate = function(e) {
               e.label !== this.props.label &&
+                this.context &&
                 this.context.SetLabel(this.props.label);
             }),
             (t.prototype.OnNavOut = function(e) {
               return (
-                !(e.x < 0 && this.context.BIsSubMenu()) ||
+                !(e.x < 0 && this.context && this.context.BIsSubMenu()) ||
                 (this.context.HideSelf(), !1)
               );
             }),
@@ -12440,7 +12442,10 @@ var CLSTAMP = "6116962";
                 r = t.className,
                 o = (t.label,
                 Object(a.f)(t, ["children", "className", "label"])),
-                i = this.context.options && this.context.options.bUseWebStyles;
+                i =
+                  this.context &&
+                  this.context.options &&
+                  this.context.options.bUseWebStyles;
               return s.createElement(
                 "div",
                 Object(a.a)({}, o, {
@@ -12448,7 +12453,8 @@ var CLSTAMP = "6116962";
                     (((e = { popup_menu: i, popup_body: i })[
                       f.a.contextMenuContents
                     ] = !i),
-                    (e[f.a.hasSubMenu] = this.context.BIsSubMenuVisible()),
+                    (e[f.a.hasSubMenu] =
+                      this.context && this.context.BIsSubMenuVisible()),
                     e),
                     r
                   )
@@ -12476,8 +12482,8 @@ var CLSTAMP = "6116962";
                   this.context && this.context.Hide()));
             }),
             (e.prototype.OnMouseEnter = function(e) {
-              0 == this.context.presentation &&
-                this.context &&
+              this.context &&
+                0 == this.context.presentation &&
                 this.context.HideSubMenu();
             }),
             (e.prototype.Focus = function() {
@@ -12489,7 +12495,10 @@ var CLSTAMP = "6116962";
                 n = (t.onSelected,
                 t.bInteractableItem,
                 Object(a.f)(t, ["onSelected", "bInteractableItem"])),
-                r = this.context.options && this.context.options.bUseWebStyles;
+                r =
+                  this.context &&
+                  this.context.options &&
+                  this.context.options.bUseWebStyles;
               return s.createElement(
                 "div",
                 Object(a.a)(
