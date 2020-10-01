@@ -329,7 +329,6 @@
  B g_convarEnableTradeInviteBarInLaunchers
  B g_cvarDeveloper
  B g_cvarOverlayFPS
- B g_mutexTempTextBuffer
  B g_nYou_Must_Add_Public_Vgui_Controls_Vgui_ControlsCpp_To_Your_Project
  B g_pFioAsyncFinalize
  B g_pIServerBrowser
@@ -339,7 +338,6 @@
  B g_pfnSteam_BGetCallback
  B g_pfnSteam_FreeLastCallback
  B g_pfnSteam_GetAPICallResult
- B g_vecTempTextBuffer
  B obj_cleanup_defer
  B s_ClientNewVRChat
  B s_CmdLineParamDisableBrowser
@@ -12106,7 +12104,6 @@
  T CUtlVector<char const*, CUtlMemory<char const*> >::GrowVector(int)
  T CUtlVector<char const*, CUtlMemory<char const*> >::Remove(int)
  T CUtlVector<char const*, CUtlMemory<char const*> >::~CUtlVector()
- T CUtlVector<char*, CUtlMemory<char*> >::~CUtlVector()
  T CUtlVector<char, CUtlMemory<char> >::AddMultipleToTail(int, char const*)
  T CUtlVector<char, CUtlMemory<char> >::GrowVector(int)
  T CUtlVector<char, CUtlMemory<char> >::InsertMultipleBefore(int, int, char const*)
@@ -18362,7 +18359,6 @@
  b (anonymous namespace)::ScrollBarButton::GetKBMap()::s_pMap
  b (anonymous namespace)::ScrollBarButton::GetMessageMap()::s_pMap
  b (anonymous namespace)::ScrollBarButton::KB_ChainToMap()::chained
- b (anonymous namespace)::_CLEANUP
  b (anonymous namespace)::protobuf_AssignDescriptors_once_
  b BHasNoBrowserCommandLineParam()::s_CmdLineParamDisableBrowser
  b BUF_str_reasons
@@ -19526,7 +19522,6 @@
  strtoul
  strtoull
  swprintf
- t (anonymous namespace)::CLEANUP::~CLEANUP()
  t (anonymous namespace)::ScrollBarButton::GetAnimMap()
  t (anonymous namespace)::ScrollBarButton::GetClassSize() const
  t (anonymous namespace)::ScrollBarButton::GetKBMap()
@@ -19731,7 +19726,6 @@
  t _GLOBAL__sub_I_steamuimessagingcontroller.cpp
  t _GLOBAL__sub_I_steamuistoragecontroller.cpp
  t _GLOBAL__sub_I_stream.pb.cc
- t _GLOBAL__sub_I_string_misc.cpp
  t _GLOBAL__sub_I_typingjump.cpp
  t _GLOBAL__sub_I_urlhelper.cpp
  t _GLOBAL__sub_I_utlbuffer.cpp
