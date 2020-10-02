@@ -6846,16 +6846,17 @@
           var t = B()("2020-09-27T10:00:00-08:00").unix(),
             a = (B()("2020-10-29T10:00:00-08:00").unix(),
             B()("2020-11-02T10:00:00-08:00").unix()),
-            n = Le.GetEditModel(),
-            r = re.a.GetTimeNowWithOverride();
-          if (!n || !n.GetAppReleaseDate() || r < t || a < r) return null;
-          var i = {
+            n = B()("2020-11-22T10:00:00-08:00").unix(),
+            r = Le.GetEditModel(),
+            i = re.a.GetTimeNowWithOverride();
+          if (!r || !r.GetAppReleaseDate() || i < t || a < i) return null;
+          var o = {
             name: "dummy",
             description: "dummy",
             tags: ["halloween"],
             earliestAllowedStartTime: t,
-            latestAllowedEndTime: a,
-            actionEndTime: a,
+            latestAllowedEndTime: n,
+            actionEndTime: n,
             onCategoryChosen: e.fnOnCategoryChosen
           };
           return Re.createElement(
@@ -6884,7 +6885,7 @@
             ),
             Re.createElement(
               Tt,
-              Object(H.a)({}, i, {
+              Object(H.a)({}, o, {
                 name: "#EventEditor_Category_DLC_Halloween",
                 description: "#EventEditor_Category_DLC_Halloween_Desc",
                 icon: "promo_02",
@@ -6893,16 +6894,16 @@
             ),
             Re.createElement(
               Tt,
-              Object(H.a)({}, i, {
+              Object(H.a)({}, o, {
                 name: "#EventCategory_InGame",
                 description: "#EventCategory_InGame_Desc",
                 subCategoryDesc: "#EventEditor_Category_InGame_Halloween_Desc",
                 icon: "halloween_35",
                 subCategories: [
-                  Object(H.a)(Object(H.a)({}, i), nt.bonusxp),
-                  Object(H.a)(Object(H.a)({}, i), nt.loot),
-                  Object(H.a)(Object(H.a)({}, i), nt.perks),
-                  Object(H.a)(Object(H.a)(Object(H.a)({}, i), nt.general), {
+                  Object(H.a)(Object(H.a)({}, o), nt.bonusxp),
+                  Object(H.a)(Object(H.a)({}, o), nt.loot),
+                  Object(H.a)(Object(H.a)({}, o), nt.perks),
+                  Object(H.a)(Object(H.a)(Object(H.a)({}, o), nt.general), {
                     description: "#PartnerEvent_halloween_35_Desc",
                     icon: "halloween_35"
                   })
