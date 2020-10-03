@@ -750,7 +750,8 @@
         }
       ],
       "service_address_ranges": [
-        "208.78.167.0/24"
+        "208.78.167.0/24",
+        "100.67.2.0/24"
       ]
     },
     "par": {
@@ -1634,7 +1635,7 @@
     }
   },
   "relay_public_key": "5AC884C1045BA0FF44142AC8DCA51B8A98C8F1CB4FEE36284AFBE92FCF594932",
-  "revision": 281,
+  "revision": 282,
   "revoked_keys": [
     "123456789"
   ]
