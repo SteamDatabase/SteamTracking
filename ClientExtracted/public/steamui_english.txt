@@ -4228,6 +4228,7 @@ Set a category for these games to help you find them quickly and organize your L
 "Steam_TimedTrial_Over" "Your trial is over now"
 "Steam_TimedTrial_CloseNow" "The game will close now"
 "Steam_TimedTrial_Enjoy" "Enjoy your trial"
+"Steam_TimedTrial_Offline" "Game trial lost connection to Steam"
 "Steam_TimedTrial_Minutes" "%minutes% minutes playtime remaining"
 "Steam_TimedTrial_Hours" "%hours% hours and %minutes% minutes playtime remaining"
 
