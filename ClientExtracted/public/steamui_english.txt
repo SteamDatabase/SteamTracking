@@ -3375,7 +3375,6 @@ Make a new Friend on Steam by emailing a gift to someone you know."
 "Steam_ServerBrowserPingRateDefault"	"Automatic (%PingsPerMin%)"
 
 "Steam_TextFilterSettingLabel"									"Chat Filtering"
-"Steam_TextFilterStatus_SteamLabOptedOut"						"Now available through Steam Labs"
 "Steam_TextFilterStatus_Enabled"								"Currently set to filter strong profanity and slurs"
 "Steam_TextFilterStatus_Enabled_IgnoreFriends"					"Currently set to filter strong profanity and slurs from everyone except friends"
 "Steam_TextFilterStatus_EnabledAllowProfanity"					"Currently set to allow strong profanity, but filter slurs"
