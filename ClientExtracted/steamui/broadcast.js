@@ -7614,6 +7614,7 @@
                 t = [],
                 r = [];
               switch (this.m_TextFilterPreferences.eTextFilterSetting) {
+                case 0:
                 case 3:
                   break;
                 case 2:
