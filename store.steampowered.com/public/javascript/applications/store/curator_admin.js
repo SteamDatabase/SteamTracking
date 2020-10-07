@@ -1982,7 +1982,7 @@
                 n.post.event_summary &&
                 ((a.jsondata.localized_summary = Object($.e)(
                   a.jsondata.localized_summary,
-                  29,
+                  30,
                   null
                 )),
                 (a.jsondata.localized_summary[0] = n.post.event_summary),
@@ -1992,7 +1992,7 @@
                   n.post.event_subtitle &&
                   ((a.jsondata.localized_subtitle = Object($.e)(
                     a.jsondata.localized_subtitle,
-                    29,
+                    30,
                     null
                   )),
                   (a.jsondata.localized_subtitle[0] = n.post.event_subtitle),

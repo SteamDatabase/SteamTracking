@@ -45,6 +45,10 @@
 	font-weight: 700;
 	color: #E8AC25;
 }
+.rewards_token_summary > .cell.grant_from_package {
+	font-weight: 700;
+	color: #4e9a06;
+}
 
 .rewards_token_summary--2cols > .cell  { width: 50%; }
 .rewards_token_summary--3cols > .cell  { width: 33.33%; }
