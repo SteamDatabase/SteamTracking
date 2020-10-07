@@ -3,10 +3,11 @@ var iAjaxCalls = 0;
 var g_sBaseURL = "";
 var g_emailVerificationDialog = null;
 var g_parentalConsentDialog = null;
+var g_recaptchaInstance = null;
 
 function CaptchaText()
 {
-	return $J('#captcha_text').val() || $J('#g-recaptcha-response').val();
+	return $J('#captcha_text').val() || grecaptcha.enterprise.getResponse(g_recaptchaInstance);
 }
 
 function StartCreationSession()
@@ -795,7 +796,19 @@ function CheckPasswordStrength()
 	g_timerPasswordAvail = window.setTimeout( CheckPasswordAvail, 250 ); // milliseconds to wait
 }
 
-var g_recaptchaInstance = null;
+function RenderRecaptcha( parent_sel, gid, sitekey, s )
+{
+	var render_div_id = 'recaptcha_render_' + gid;
+	$J( parent_sel ).empty();
+	$J( parent_sel ).append('<div id="' + render_div_id + '"></div>');
+	g_recaptchaInstance = grecaptcha.enterprise.render( render_div_id, {
+		'sitekey': sitekey,
+		'theme': 'dark',
+		'callback': function(n){},
+		's': s
+	});
+}
+
 function UpdateCaptcha(data)
 {
 	$J( '#captcha_text' ).val('');
@@ -809,19 +822,11 @@ function UpdateCaptcha(data)
 		} else if ( data.type == 2 ) {
 			$J( '#captcha_entry_recaptcha' ).show();
 			$J( '#captcha_entry_text' ).hide();
-			if ( g_recaptchaInstance !== null ) {
-				grecaptcha.enterprise.reset( g_recaptchaInstance );
-			} else {
-				g_recaptchaInstance = grecaptcha.enterprise.render( 'captcha_entry_recaptcha', {
-					'sitekey': data.sitekey,
-					'theme': 'dark',
-					'callback': function(n){},
-					's': data.s
-				});
-			}
+			RenderRecaptcha( "#captcha_entry_recaptcha", data.gid, data.sitekey, data.s );
 		}
 	} else {
 		$J( '#captcha_entry' ).hide();
+		$J( '#captcha_entry_recaptcha' ).empty();
 		$J( '#captchagid' ).val('-1');
 	}
 }
@@ -866,29 +871,6 @@ function ToggleEmailVerificationHelp()
 		elHelpCtn.slideDown();
 		elHelpCtn.find( '.ico16' ).removeClass( 'active' );
 	}
-}
-
-function ValidateAccountLink( event ) {
-	console.log( event );
-	if (event.origin !== g_strVerificationOrigin )
-		return;
-
-	$J.ajax( {
-		type: 'POST',
-		url: 'https://steamcommunity.com/join/ajaxcheckidentityverification',
-		data: { 'linktoken' : g_strLinkToken }
-	})
-	.done( function( success ) {
-
-		if ( success == 1 )
-		{
-			window.location = 'https://steamcommunity.com/join/completesignup/?creationid=' + g_creationSessionID;
-		}
-
-	} )
-	.fail( function() {
-
-	} );
 }
 
 function GoToExistingAccount( bIsInClient )

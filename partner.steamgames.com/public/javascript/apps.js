@@ -3329,6 +3329,7 @@ function DisplayCreateCommunityItemForm( eItemClass, strDisplayName )
 function DisplayGrantCommunityItemForm( eItemClass, strDisplayName )
 {
 	document.forms['grant_items_form'].elements['item_class'].value = eItemClass;
+	document.forms['grant_items_form'].elements['item_type'].value = 0;
 	$('grant_items_form_submit').update( 'Grant ' + strDisplayName );
 	DisplayDivOnClick( 'grant_communityitems_actions', 'grant_items_form_ctn' );
 }

@@ -285,6 +285,10 @@ function ShowPromptDialog( strTitle, strDescription, strOKButton, strCancelButto
 
 	var $Body = $J('<form/>');
 	var $Input = $J('<input/>', {type: 'text', 'class': '' } ).val( defaultValue );
+	if ( rgModalParams && rgModalParams.inputMaxSize )
+	{
+		$Input.attr( 'maxlength', rgModalParams.inputMaxSize );
+	}
 	$Body.append( $J('<div/>', {'class': 'newmodal_prompt_description' } ).append( strDescription ) );
 	$Body.append( $J('<div/>', {'class': 'newmodal_prompt_input gray_bevel for_text_input fullwidth' } ).append( $Input ) );
 

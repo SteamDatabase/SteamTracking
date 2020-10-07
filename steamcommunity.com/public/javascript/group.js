@@ -894,7 +894,7 @@ function SwapLanguageFields( nNewLanguage )
 
 function UpdateHighlights()
 {
-	for( var i=0; i < 29; i++ )
+	for( var i=0; i < 30; i++ )
 	{
 		if( $J('#'+i+'_headline').val() &&  $J('#'+i+'_body').val() )
 			$J('#'+i+'_opt').addClass('has_localization');

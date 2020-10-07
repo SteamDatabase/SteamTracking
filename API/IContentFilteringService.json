@@ -42,6 +42,12 @@
                     "type": "bool",
                     "optional": false,
                     "description": "True if the strings are names instead of chat text"
+                },
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "The SteamID of the person viewing the text"
                 }
             ]
         }

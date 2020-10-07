@@ -511,6 +511,24 @@ td.wordfilter_action a:hover {
 	margin-right: 15px;
 }
 
+.wordfilter_import_succeeded {
+}
+
+.wordfilter_import_failed {
+	color: #bf4640
+}
+
+.wordfilter_sync_delete > div > span {
+	display: inline-block;
+	cursor: pointer;
+	width: 12px;
+	height: 12px;
+	margin: 3px 0 4px 5px;
+	vertical-align: top;
+	background-image: url( '/store/public/images/v6/delete_search_term.png' );
+	margin-left: 5px;
+}
+
 .discussion_tab_content_area h2 {
 	font-size: 18px;
 	line-height: 22px;

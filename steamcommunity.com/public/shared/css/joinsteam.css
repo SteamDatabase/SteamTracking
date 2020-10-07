@@ -46,6 +46,22 @@
 	html.responsive .joinsteam .password_tag {
 		max-width: 100%;
 	}
+
+	html.responsive .joinsteam .row_flex {
+		display: block;
+	}
+
+	html.responsive .joinsteam_content_container {
+		padding: 20px;
+	}
+}
+
+@media screen and ( max-width: 500px ) {
+
+	html.responsive body.v6.joinsteam {
+		background-image: none;
+	}
+
 }
 
 @media screen and ( min-width: 1500px ) {
@@ -409,13 +425,6 @@ p .csgoheadline{
 	padding: 50px;
 	min-height: 600px;
 	max-width: 600px;
-}
-
-.joinsteam_identity_iframe {
-	border: none;
-	width: 100%;
-	min-height: 600px;
-	height: auto;
 }
 
 .joinsteam .green_check {

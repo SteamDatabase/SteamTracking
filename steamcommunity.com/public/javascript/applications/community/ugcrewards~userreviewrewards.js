@@ -1684,7 +1684,7 @@
       }
       var q = (function() {
           function e(e) {
-            (this.m_ulPointsAvailable = null),
+            (this.m_lPointsAvailable = null),
               (this.m_bPointsBalanceLoadedOrInFlight = !1),
               (this.m_mapReactionConfiguration = new Map()),
               (this.m_bReactionConfigurationLoadedOrInFlight = !1),
@@ -1735,7 +1735,7 @@
               return this.BIsLoggedIn()
                 ? (this.m_bPointsBalanceLoadedOrInFlight ||
                     this.LoadUserPointBalance(),
-                  this.m_ulPointsAvailable)
+                  this.m_lPointsAvailable)
                 : null;
             }),
             (e.prototype.LoadUserPointBalance = function() {
@@ -1754,12 +1754,11 @@
                     case 1:
                       return (
                         1 == (r = e.sent()).GetEResult()
-                          ? (this.m_ulPointsAvailable = c.a.fromString(
+                          ? (this.m_lPointsAvailable = c.a.fromString(
                               r
                                 .Body()
                                 .summary()
-                                .points(),
-                              !0
+                                .points()
                             ))
                           : console.error(
                               "Error when calling LoyaltyRewardsService.GetSummary: EResult=${msgResponse.GetEResult()}"
@@ -1846,7 +1845,7 @@
                 });
               });
             }),
-            Object(s.c)([l.C.ref], e.prototype, "m_ulPointsAvailable", void 0),
+            Object(s.c)([l.C.ref], e.prototype, "m_lPointsAvailable", void 0),
             Object(s.c)(
               [l.C.deep],
               e.prototype,

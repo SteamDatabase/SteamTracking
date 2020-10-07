@@ -357,7 +357,7 @@ LocalizationReady("friendsui", "english", {
   Chat_Invite_ExpiresSetting: "Expires: %1$s",
 
   Chat_TextFilter_Active:
-    "Strong profanity and slurs are now obscured by default in Steam Chat. [url=%1$s]Review filtering settings[/url]",
+    "Strong profanity and slurs from people you don't know are now obscured by default in Steam Chat. [url=%1$s]Review filtering settings[/url]",
 
   Chat_Settings_Room_Name: "Chat Name",
 
@@ -1293,14 +1293,16 @@ LocalizationReady("friendsui", "english", {
 
   TextFilterStatus_ChangeSettings: "Change chat filtering preferences",
   TextFilterStatus_SteamLabOptedOut: "Now available through Steam Labs",
-  TextFilterStatus_Enabled: "Currently set to filter profanity and slurs",
+  TextFilterStatus_Enabled:
+    "Currently set to filter strong profanity and slurs",
   TextFilterStatus_Enabled_IgnoreFriends:
-    "Currently set to filter profanity and slurs from everyone except friends",
+    "Currently set to filter strong profanity and slurs from everyone except friends",
   TextFilterStatus_EnabledAllowProfanity:
-    "Currently set to allow profanity, but filter slurs",
+    "Currently set to allow strong profanity, but filter slurs",
   TextFilterStatus_EnabledAllowProfanity_IgnoreFriends:
-    "Currently set to allow profanity, but filter slurs from everyone except friends",
-  TextFilterStatus_Disabled: "Currently set to allow profanity and slurs",
+    "Currently set to allow strong profanity, but filter slurs from everyone except friends",
+  TextFilterStatus_Disabled:
+    "Currently set to allow strong profanity and slurs",
 
   Contacts_Search_Title: "Search",
   Contacts_Search_Placeholder: "Search Friends and Groups",
