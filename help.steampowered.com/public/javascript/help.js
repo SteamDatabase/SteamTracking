@@ -1348,7 +1348,7 @@ HelpWizard = {
 					elInput.val( elInput.val() + 1 );
 				}
 				else
-					elError.text( data.errorMsg ).slideDown();
+					elError.html( data.errorMsg ).slideDown();
 
 				if ( data.needCaptcha )
 					HelpWizard.RefreshCaptcha( 3 );
