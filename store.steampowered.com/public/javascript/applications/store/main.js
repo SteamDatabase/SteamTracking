@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6129678";
+var CLSTAMP = "6129980";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [37],
   {
@@ -6941,7 +6941,7 @@ var CLSTAMP = "6129678";
     "5iBV": function(e, t, n) {
       e.exports =
         n.p +
-        "../../../images/applications/store/discussion_thumbs_down.png?v=valveisgoodatcaching";
+        "images/applications/store/discussion_thumbs_down.png?v=valveisgoodatcaching";
     },
     "5izx": function(e, t, n) {
       "use strict";
@@ -18306,7 +18306,7 @@ var CLSTAMP = "6129678";
     Ltvz: function(e, t, n) {
       e.exports =
         n.p +
-        "../../../images/applications/store/discussion_thumbs_up_selected.png?v=valveisgoodatcaching";
+        "images/applications/store/discussion_thumbs_up_selected.png?v=valveisgoodatcaching";
     },
     M1X1: function(e, t, n) {},
     MUT6: function(e, t, n) {
@@ -23713,7 +23713,7 @@ var CLSTAMP = "6129678";
     "S+Ty": function(e, t, n) {
       e.exports =
         n.p +
-        "../../../images/applications/store/icon_platform_linux.png?v=valveisgoodatcaching";
+        "images/applications/store/icon_platform_linux.png?v=valveisgoodatcaching";
     },
     SG7E: function(e, t, n) {
       "use strict";
@@ -23875,6 +23875,14 @@ var CLSTAMP = "6129678";
           )
         );
       };
+    },
+    SQr7: function(e, t, n) {
+      "use strict";
+      "VALVE_PUBLIC_PATH" in window
+        ? (n.p = window.VALVE_PUBLIC_PATH)
+        : console.error(
+            "VALVE_PUBLIC_PATH not defined; check for a call to CHTMLHelpers::WebpackConfigScriptlet"
+          );
     },
     SxtR: function(e, t, n) {
       "use strict";
@@ -29095,7 +29103,7 @@ var CLSTAMP = "6129678";
     TgKA: function(e, t, n) {
       e.exports =
         n.p +
-        "../../../images/applications/store/discussion_comment_bubble_blue.png?v=valveisgoodatcaching";
+        "images/applications/store/discussion_comment_bubble_blue.png?v=valveisgoodatcaching";
     },
     TtDX: function(e, t, n) {
       "use strict";
@@ -34323,7 +34331,7 @@ var CLSTAMP = "6129678";
     Wwly: function(e, t, n) {
       e.exports =
         n.p +
-        "../../../images/applications/store/discussion_thumbs_up.png?v=valveisgoodatcaching";
+        "images/applications/store/discussion_thumbs_up.png?v=valveisgoodatcaching";
     },
     X3Ds: function(e, t, n) {
       "use strict";
@@ -42525,7 +42533,7 @@ var CLSTAMP = "6129678";
     ckHM: function(e, t, n) {
       e.exports =
         n.p +
-        "../../../images/applications/store/discussion_share.png?v=valveisgoodatcaching";
+        "images/applications/store/discussion_share.png?v=valveisgoodatcaching";
     },
     "d+Me": function(e, t, n) {
       "use strict";
@@ -43490,7 +43498,7 @@ var CLSTAMP = "6129678";
       "use strict";
       l.r(t);
       var h = l("mrSG"),
-        i = (l("Wr5T"), l("i8i4")),
+        i = (l("SQr7"), l("Wr5T"), l("i8i4")),
         n = l.n(i),
         f = l("q1tI"),
         b = l.n(f),
@@ -43600,7 +43608,8 @@ var CLSTAMP = "6129678";
         N = l("qD+2"),
         z = l("ka0M"),
         j = l("YLyR"),
-        R = Object(O.a)(function(l) {
+        R = l("5L1o"),
+        k = Object(O.a)(function(l) {
           var p = Object(f.useRef)(null),
             e = Object(f.useState)(null),
             t = e[0],
@@ -43641,7 +43650,8 @@ var CLSTAMP = "6129678";
                           (s = {
                             exclude_tags: [
                               "steam_game_festival_artist_statement"
-                            ]
+                            ],
+                            require_tags: ["steam_game_festival_broadcast"]
                           }),
                           [
                             4,
@@ -43692,7 +43702,8 @@ var CLSTAMP = "6129678";
                         "div",
                         { className: B.TileTitle },
                         Object(g.f)("#Sale_DownloadDemo", t.title)
-                      )
+                      ),
+                      b.a.createElement(R.d, { item: t })
                     ),
                     b.a.createElement(T.b, {
                       appLinkInfo: t,
@@ -43781,10 +43792,10 @@ var CLSTAMP = "6129678";
               )
             : null;
         }),
-        k = l("Jqb/");
-      var G = l("r64O"),
-        x = l("kLLr");
-      function P(o) {
+        G = l("Jqb/");
+      var x = l("r64O"),
+        P = l("kLLr");
+      function W(o) {
         return function(t) {
           var e = Object(f.useState)(null),
             n = e[0],
@@ -43800,7 +43811,7 @@ var CLSTAMP = "6129678";
           );
         };
       }
-      function W() {
+      function F() {
         return b.a.createElement(
           d.d,
           null,
@@ -43813,7 +43824,7 @@ var CLSTAMP = "6129678";
             ),
             render: function(e) {
               return b.a.createElement(
-                X,
+                Y,
                 Object(h.a)(
                   { key: "detailview_" + e.match.params.event_gid },
                   e,
@@ -43835,12 +43846,12 @@ var CLSTAMP = "6129678";
             ),
             render: function(e) {
               return b.a.createElement(
-                X,
+                Y,
                 Object(h.a)(
                   { key: "detailview_" + e.match.params.event_gid },
                   e,
                   {
-                    clansteamid: new x.a(e.match.params.groupid),
+                    clansteamid: new P.a(e.match.params.groupid),
                     event_gid: e.match.params.event_gid,
                     bInfiniteScroll: "inline" == e.match.params.viewtype
                   }
@@ -43857,7 +43868,7 @@ var CLSTAMP = "6129678";
             ),
             render: function(e) {
               return b.a.createElement(
-                X,
+                Y,
                 Object(h.a)(
                   { key: "detailoldview_" + e.match.params.announcement_gid },
                   e,
@@ -43879,12 +43890,12 @@ var CLSTAMP = "6129678";
             ),
             render: function(e) {
               return b.a.createElement(
-                X,
+                Y,
                 Object(h.a)(
                   { key: "detailoldview_" + e.match.params.announcement_gid },
                   e,
                   {
-                    clansteamid: new x.a(e.match.params.groupid),
+                    clansteamid: new P.a(e.match.params.groupid),
                     announcement_gid: e.match.params.announcement_gid,
                     bInfiniteScroll: "old_inline" == e.match.params.viewtype
                   }
@@ -43897,7 +43908,7 @@ var CLSTAMP = "6129678";
             path: a.b.NewsHubApp(":appid(\\d+)", ":vanity?"),
             render: function(e) {
               return b.a.createElement(
-                H,
+                X,
                 Object(h.a)({ key: e.match.params.appid }, e, {
                   filter_to_appids: [Number(e.match.params.appid)]
                 })
@@ -43909,7 +43920,7 @@ var CLSTAMP = "6129678";
             path: a.b.NewsHubGroup(":groupid(\\d+)", ":vanity?"),
             render: function(e) {
               return b.a.createElement(
-                H,
+                X,
                 Object(h.a)({ key: e.match.params.groupid }, e, {
                   filter_to_clanids: [Number(e.match.params.groupid)]
                 })
@@ -43921,7 +43932,7 @@ var CLSTAMP = "6129678";
             path: a.b.NewsHubCollection(":collectionid", ":vanity?"),
             render: function(e) {
               return b.a.createElement(
-                H,
+                X,
                 Object(h.a)({ key: e.match.params.collectionid }, e, {
                   filter_to_collection: e.match.params.collectionid
                 })
@@ -43933,7 +43944,7 @@ var CLSTAMP = "6129678";
             path: a.b.NewsHubSale(":saleid", ":vanity?"),
             render: function(e) {
               return b.a.createElement(
-                H,
+                X,
                 Object(h.a)({ key: e.match.params.saleid }, e, {
                   filter_to_saleid: e.match.params.saleid
                 })
@@ -43944,12 +43955,12 @@ var CLSTAMP = "6129678";
             exact: !0,
             path: a.b.NewsHub(),
             render: function(e) {
-              return b.a.createElement(H, Object(h.a)({ key: "global" }, e));
+              return b.a.createElement(X, Object(h.a)({ key: "global" }, e));
             }
           })
         );
       }
-      function F() {
+      function q() {
         return b.a.createElement(
           d.d,
           null,
@@ -43957,7 +43968,7 @@ var CLSTAMP = "6129678";
             path: a.b.EventGameFestivalDebug(),
             render: function(e) {
               return b.a.createElement(
-                Q,
+                K,
                 Object(h.a)({}, e, {
                   clanAccountID: e.match.params.clanacountid,
                   clanEventGID: e.match.params.claneventgid
@@ -43969,48 +43980,48 @@ var CLSTAMP = "6129678";
             exact: !0,
             path: a.b.EventBackfill(),
             render: function(e) {
-              return b.a.createElement(U, Object(h.a)({}, e));
+              return b.a.createElement(V, Object(h.a)({}, e));
             }
           }),
           b.a.createElement(d.b, {
             path: a.b.EventModeration(),
             render: function(e) {
               return b.a.createElement(
-                q,
+                U,
                 Object(h.a)({}, e, { appid: e.match.params.appid })
               );
             }
           })
         );
       }
-      var q = P("EventModerationLanding"),
-        U = P("EventBackfillLanding"),
-        V = P("EventSaleDisplay"),
-        H = P("EventCalendar"),
-        X = P("EventDetailView"),
-        Y = P("Events"),
-        Q = P("EventSteamGameFestivalDebug"),
-        K = l("Hny+"),
-        Z = b.a.lazy(function() {
+      var U = W("EventModerationLanding"),
+        V = W("EventBackfillLanding"),
+        H = W("EventSaleDisplay"),
+        X = W("EventCalendar"),
+        Y = W("EventDetailView"),
+        Q = W("Events"),
+        K = W("EventSteamGameFestivalDebug"),
+        Z = l("Hny+"),
+        J = b.a.lazy(function() {
           return Promise.all([l.e(0), l.e(7)]).then(l.bind(null, "3WEt"));
         }),
-        J = b.a.lazy(function() {
+        $ = b.a.lazy(function() {
           return Promise.all([l.e(0), l.e(1), l.e(3), l.e(36)]).then(
             l.bind(null, "CGeh")
           );
         }),
-        $ = b.a.lazy(function() {
+        ee = b.a.lazy(function() {
           return Promise.all([l.e(0), l.e(3), l.e(68)]).then(
             l.bind(null, "tPo2")
           );
         }),
-        ee = b.a.lazy(function() {
+        te = b.a.lazy(function() {
           return Promise.all([l.e(1), l.e(4)]).then(l.bind(null, "NIbt"));
         }),
-        te = b.a.lazy(function() {
+        ne = b.a.lazy(function() {
           return l.e(5).then(l.bind(null, "3rT3"));
         }),
-        ne = (b.a.lazy(function() {
+        re = (b.a.lazy(function() {
           return Promise.resolve().then(l.bind(null, "Hny+"));
         }),
         (function(e) {
@@ -44028,7 +44039,7 @@ var CLSTAMP = "6129678";
             }),
             (t.prototype.render = function() {
               return (
-                Object(G.a)(
+                Object(x.a)(
                   null == window.Prototype,
                   "Should not include prototypejs."
                 ),
@@ -44065,19 +44076,19 @@ var CLSTAMP = "6129678";
                             return b.a.createElement(o, {
                               config: {
                                 "events-row": function() {
-                                  return b.a.createElement(Y, {
+                                  return b.a.createElement(Q, {
                                     key: "appeventrow" + t,
                                     appid: t
                                   });
                                 },
                                 "review-award": function() {
-                                  return b.a.createElement($, {
+                                  return b.a.createElement(ee, {
                                     key: "appawardmodal" + t
                                   });
                                 },
                                 "broadcast-embed": function() {
                                   return b.a.createElement(
-                                    ee,
+                                    te,
                                     Object(h.a)(
                                       { key: "appbroadcastcast_" + t },
                                       e,
@@ -44086,7 +44097,7 @@ var CLSTAMP = "6129678";
                                   );
                                 },
                                 "demo-and-quick-pitch": function() {
-                                  return b.a.createElement(R, {
+                                  return b.a.createElement(k, {
                                     key: "appdemoquickpitch_" + t,
                                     appID: t
                                   });
@@ -44103,7 +44114,7 @@ var CLSTAMP = "6129678";
                             return b.a.createElement(o, {
                               config: {
                                 "sale-display": function() {
-                                  return b.a.createElement(V, {
+                                  return b.a.createElement(H, {
                                     key: "sale_" + t,
                                     promotionName: "sale_" + t,
                                     language: Object(m.g)(v.c.LANGUAGE)
@@ -44111,7 +44122,7 @@ var CLSTAMP = "6129678";
                                 },
                                 "broadcast-embed": function() {
                                   return b.a.createElement(
-                                    ee,
+                                    te,
                                     Object(h.a)(
                                       { key: "broadcastsale_" + t },
                                       e,
@@ -44126,7 +44137,7 @@ var CLSTAMP = "6129678";
                         b.a.createElement(d.b, {
                           path:
                             "/(curator|pub|publisher|dev|developer|franchise)/:curator_vanity/admin",
-                          component: te
+                          component: ne
                         }),
                         b.a.createElement(d.b, {
                           exact: !0,
@@ -44135,7 +44146,7 @@ var CLSTAMP = "6129678";
                             return b.a.createElement(o, {
                               config: {
                                 "sale-display": function() {
-                                  return b.a.createElement(V, {
+                                  return b.a.createElement(H, {
                                     key:
                                       "salecreator_" +
                                       e.match.params.creatorPageName +
@@ -44157,7 +44168,7 @@ var CLSTAMP = "6129678";
                             return b.a.createElement(o, {
                               config: {
                                 "sale-display": function() {
-                                  return b.a.createElement(V, {
+                                  return b.a.createElement(H, {
                                     key:
                                       "subscription_plan_" +
                                       e.match.params.salePageName,
@@ -44176,7 +44187,7 @@ var CLSTAMP = "6129678";
                             return b.a.createElement(o, {
                               config: {
                                 "sale-display": function() {
-                                  return b.a.createElement(V, {
+                                  return b.a.createElement(H, {
                                     key: "sale_remoteplaylanding",
                                     promotionName: "remoteplaylanding",
                                     language: Object(m.g)(v.c.LANGUAGE)
@@ -44192,7 +44203,7 @@ var CLSTAMP = "6129678";
                             return b.a.createElement(o, {
                               config: {
                                 "sale-display": function() {
-                                  return b.a.createElement(V, {
+                                  return b.a.createElement(H, {
                                     key: "sale_together",
                                     promotionName: "sale_together",
                                     language: Object(m.g)(v.c.LANGUAGE)
@@ -44208,7 +44219,7 @@ var CLSTAMP = "6129678";
                             return b.a.createElement(o, {
                               config: {
                                 "sale-display": function() {
-                                  return b.a.createElement(V, {
+                                  return b.a.createElement(H, {
                                     key: "sale_vrhardware",
                                     promotionName: "vrhardware",
                                     language: Object(m.g)(v.c.LANGUAGE)
@@ -44223,7 +44234,7 @@ var CLSTAMP = "6129678";
                           path: a.b.CuratorPage(),
                           render: function(e) {
                             return b.a.createElement(
-                              ee,
+                              te,
                               Object(h.a)(
                                 {
                                   key:
@@ -44243,7 +44254,7 @@ var CLSTAMP = "6129678";
                           path: a.b.CreatorPage(),
                           render: function(e) {
                             return b.a.createElement(
-                              ee,
+                              te,
                               Object(h.a)(
                                 {
                                   key:
@@ -44262,7 +44273,7 @@ var CLSTAMP = "6129678";
                           exact: !0,
                           path: a.b.PackageStorePage(),
                           render: function(e) {
-                            return b.a.createElement(ee, {
+                            return b.a.createElement(te, {
                               key: "packagebroadcast_" + e.match.params.subid,
                               subid: e.match.params.subid
                             });
@@ -44272,7 +44283,7 @@ var CLSTAMP = "6129678";
                           exact: !0,
                           path: a.b.BundleStorePage(),
                           render: function(e) {
-                            return b.a.createElement(ee, {
+                            return b.a.createElement(te, {
                               key: "bundlebroadcast_" + e.match.params.bundleid,
                               bundleid: e.match.params.bundleid
                             });
@@ -44281,41 +44292,41 @@ var CLSTAMP = "6129678";
                         b.a.createElement(d.b, {
                           path: a.b.NewsHub(),
                           render: function(e) {
-                            return b.a.createElement(W, null);
+                            return b.a.createElement(F, null);
                           }
                         }),
                         b.a.createElement(d.b, {
                           path: a.b.EventAdmin(),
                           render: function(e) {
-                            return b.a.createElement(F, null);
+                            return b.a.createElement(q, null);
                           }
                         }),
                         b.a.createElement(d.b, {
                           exact: !0,
                           path: a.b.InteractiveRecommender(),
                           render: function(e) {
-                            return b.a.createElement(Z, null);
+                            return b.a.createElement(J, null);
                           }
                         }),
                         b.a.createElement(d.b, {
                           exact: !0,
                           path: a.b.LabsSandbox(),
                           render: function(e) {
-                            return b.a.createElement(K.default, null);
+                            return b.a.createElement(Z.default, null);
                           }
                         }),
                         !1,
                         b.a.createElement(d.b, {
                           path: a.b.Loyalty(),
                           render: function() {
-                            return b.a.createElement(J, null);
+                            return b.a.createElement($, null);
                           }
                         }),
                         b.a.createElement(d.b, null, !1)
                       )
                     ),
-                    b.a.createElement(k.b, {
-                      ModalManager: Object(k.f)(window)
+                    b.a.createElement(G.b, {
+                      ModalManager: Object(G.f)(window)
                     })
                   )
                 )
@@ -44324,8 +44335,8 @@ var CLSTAMP = "6129678";
             t
           );
         })(b.a.Component)),
-        re = l("WBba"),
-        oe = l("uobO");
+        oe = l("WBba"),
+        ie = l("uobO");
       l("xnZ7"), l("idvb"), l("M1X1");
       S.o(function() {
         return Object(h.b)(this, void 0, void 0, function() {
@@ -44344,13 +44355,10 @@ var CLSTAMP = "6129678";
                 e.sent(), (e.label = 2);
               case 2:
                 return (
-                  (l.p =
-                    v.c.STORE_CDN_URL +
-                    "public/javascript/applications/store/"),
-                  Object(oe.a)().Init(
+                  Object(ie.a)().Init(
                     "Store",
                     CLSTAMP,
-                    new re.a(v.c.WEBAPI_BASE_URL).GetServiceTransport()
+                    new oe.a(v.c.WEBAPI_BASE_URL).GetServiceTransport()
                   ),
                   [
                     4,
@@ -44403,7 +44411,7 @@ var CLSTAMP = "6129678";
                   e.sent(),
                   document.getElementById("application_root")
                     ? n.a.render(
-                        b.a.createElement(ne),
+                        b.a.createElement(re),
                         document.getElementById("application_root")
                       )
                     : console.error(
@@ -55762,7 +55770,7 @@ var CLSTAMP = "6129678";
     y5Xn: function(e, t, n) {
       e.exports =
         n.p +
-        "../../../images/applications/store/discussion_thumbs_up_blue.png?v=valveisgoodatcaching";
+        "images/applications/store/discussion_thumbs_up_blue.png?v=valveisgoodatcaching";
     },
     yJqL: function(e, t, n) {
       "use strict";
@@ -56822,12 +56830,12 @@ var CLSTAMP = "6129678";
     yNwp: function(e, t, n) {
       e.exports =
         n.p +
-        "../../../images/applications/store/reddit_large.png?v=valveisgoodatcaching";
+        "images/applications/store/reddit_large.png?v=valveisgoodatcaching";
     },
     yP1N: function(e, t, n) {
       e.exports =
         n.p +
-        "../../../images/applications/store/discussion_thumbs_down_selected.png?v=valveisgoodatcaching";
+        "images/applications/store/discussion_thumbs_down_selected.png?v=valveisgoodatcaching";
     },
     ylkE: function(e, t, n) {
       "use strict";

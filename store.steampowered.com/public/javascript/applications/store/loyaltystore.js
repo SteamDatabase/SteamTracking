@@ -6,17 +6,17 @@
     "++az": function(e, t, n) {
       e.exports =
         n.p +
-        "../../../images/applications/store/Entering_vr.gif?v=valveisgoodatcaching";
+        "images/applications/store/Entering_vr.gif?v=valveisgoodatcaching";
     },
     "+m6q": function(e, t, n) {
       e.exports =
         n.p +
-        "../../../images/applications/store/csgoChat_128_hugs.png?v=valveisgoodatcaching";
+        "images/applications/store/csgoChat_128_hugs.png?v=valveisgoodatcaching";
     },
     "/SGo": function(e, t, n) {
       e.exports =
         n.p +
-        "../../../images/applications/store/coin_single.png?v=valveisgoodatcaching";
+        "images/applications/store/coin_single.png?v=valveisgoodatcaching";
     },
     "/maY": function(e, t, n) {
       e.exports = {
@@ -42,7 +42,7 @@
     "1ErW": function(e, t, n) {
       e.exports =
         n.p +
-        "../../../images/applications/store/witcher_tile_background.png?v=valveisgoodatcaching";
+        "images/applications/store/witcher_tile_background.png?v=valveisgoodatcaching";
     },
     "1Gs6": function(e, t, n) {
       e.exports = {
@@ -130,7 +130,7 @@
     "2y1i": function(e, t, n) {
       e.exports =
         n.p +
-        "../../../images/applications/store/dota_shocked_crystal_maiden.png?v=valveisgoodatcaching";
+        "images/applications/store/dota_shocked_crystal_maiden.png?v=valveisgoodatcaching";
     },
     "5pqL": function(e, t, n) {
       e.exports = {
@@ -165,13 +165,12 @@
     },
     "6bk4": function(e, t, n) {
       e.exports =
-        n.p +
-        "../../../images/applications/store/float.png?v=valveisgoodatcaching";
+        n.p + "images/applications/store/float.png?v=valveisgoodatcaching";
     },
     "7JP+": function(e, t, n) {
       e.exports =
         n.p +
-        "../../../images/applications/store/hilarious_anim000.png?v=valveisgoodatcaching";
+        "images/applications/store/hilarious_anim000.png?v=valveisgoodatcaching";
     },
     "7R2k": function(e, t, n) {
       e.exports = {
@@ -207,7 +206,7 @@
     "8j8b": function(e, t, n) {
       e.exports =
         n.p +
-        "../../../images/applications/store/avatarframes_preview.png?v=valveisgoodatcaching";
+        "images/applications/store/avatarframes_preview.png?v=valveisgoodatcaching";
     },
     "9Dmu": function(e, t, n) {
       e.exports = {
@@ -285,12 +284,12 @@
     BK9T: function(e, t, n) {
       e.exports =
         n.p +
-        "../../../images/applications/store/michelangelo_apng.png?v=valveisgoodatcaching";
+        "images/applications/store/michelangelo_apng.png?v=valveisgoodatcaching";
     },
     Bww3: function(e, t, n) {
       e.exports =
         n.p +
-        "../../../images/applications/store/heart_warming_anim0000.png?v=valveisgoodatcaching";
+        "images/applications/store/heart_warming_anim0000.png?v=valveisgoodatcaching";
     },
     CGeh: function(e, t, a) {
       "use strict";
@@ -13547,7 +13546,7 @@
     Cw7J: function(e, t, n) {
       e.exports =
         n.p +
-        "../../../images/applications/store/bonemetal_224px.png?v=valveisgoodatcaching";
+        "images/applications/store/bonemetal_224px.png?v=valveisgoodatcaching";
     },
     DPOp: function(e, t, n) {
       e.exports = {
@@ -13578,48 +13577,45 @@
     },
     DtjR: function(e, t, n) {
       e.exports =
-        n.p +
-        "../../../images/applications/store/boombox.png?v=valveisgoodatcaching";
+        n.p + "images/applications/store/boombox.png?v=valveisgoodatcaching";
     },
     "F8+w": function(e, t, n) {
       e.exports =
         n.p +
-        "../../../images/applications/store/lava_lamps_bg.png?v=valveisgoodatcaching";
+        "images/applications/store/lava_lamps_bg.png?v=valveisgoodatcaching";
     },
     FYLW: function(e, t, n) {
       e.exports =
         n.p +
-        "../../../images/applications/store/portal_effect_anim.png?v=valveisgoodatcaching";
+        "images/applications/store/portal_effect_anim.png?v=valveisgoodatcaching";
     },
     FfFA: function(e, t, n) {
       e.exports =
         n.p +
-        "../../../images/applications/store/extra_helpful_anim000.png?v=valveisgoodatcaching";
+        "images/applications/store/extra_helpful_anim000.png?v=valveisgoodatcaching";
     },
     HJR3: function(e, t, n) {
       e.exports =
-        n.p +
-        "../../../images/applications/store/happy.png?v=valveisgoodatcaching";
+        n.p + "images/applications/store/happy.png?v=valveisgoodatcaching";
     },
     IfXo: function(e, t, n) {
       e.exports =
-        n.p +
-        "../../../images/applications/store/dance.png?v=valveisgoodatcaching";
+        n.p + "images/applications/store/dance.png?v=valveisgoodatcaching";
     },
     J8Mo: function(e, t, n) {
       e.exports =
         n.p +
-        "../../../images/applications/store/dota_happy_ursa.png?v=valveisgoodatcaching";
+        "images/applications/store/dota_happy_ursa.png?v=valveisgoodatcaching";
     },
     Lvue: function(e, t, n) {
       e.exports =
         n.p +
-        "../../../images/applications/store/csgo_sas_bg.jpg?v=valveisgoodatcaching";
+        "images/applications/store/csgo_sas_bg.jpg?v=valveisgoodatcaching";
     },
     M2Z0: function(e, t, n) {
       e.exports =
         n.p +
-        "../../../images/applications/store/deep_thoughts_anim0000.png?v=valveisgoodatcaching";
+        "images/applications/store/deep_thoughts_anim0000.png?v=valveisgoodatcaching";
     },
     Matr: function(e, t, n) {
       e.exports = {
@@ -13969,27 +13965,27 @@
     RhBb: function(e, t, n) {
       e.exports =
         n.p +
-        "../../../images/applications/store/dota_tile_background.png?v=valveisgoodatcaching";
+        "images/applications/store/dota_tile_background.png?v=valveisgoodatcaching";
     },
     TBZS: function(e, t, n) {
       e.exports =
         n.p +
-        "../../../images/applications/store/csgoChat_128_chickendance.png?v=valveisgoodatcaching";
+        "images/applications/store/csgoChat_128_chickendance.png?v=valveisgoodatcaching";
     },
     TJrv: function(e, t, n) {
       e.exports =
         n.p +
-        "../../../images/applications/store/home_background.png?v=valveisgoodatcaching";
+        "images/applications/store/home_background.png?v=valveisgoodatcaching";
     },
     TL5o: function(e, t, n) {
       e.exports =
         n.p +
-        "../../../images/applications/store/csgoChat_128_hostage.png?v=valveisgoodatcaching";
+        "images/applications/store/csgoChat_128_hostage.png?v=valveisgoodatcaching";
     },
     ULJY: function(e, t, n) {
       e.exports =
         n.p +
-        "../../../images/applications/store/summer_confirm.png?v=valveisgoodatcaching";
+        "images/applications/store/summer_confirm.png?v=valveisgoodatcaching";
     },
     UpHR: function(e, t, n) {
       e.exports = {
@@ -14003,7 +13999,7 @@
     "V+CE": function(e, t, n) {
       e.exports =
         n.p +
-        "../../../images/applications/store/icons_floor.png?v=valveisgoodatcaching";
+        "images/applications/store/icons_floor.png?v=valveisgoodatcaching";
     },
     VFGZ: function(e, t, n) {
       e.exports = {
@@ -14111,7 +14107,7 @@
     Wl4Y: function(e, t, n) {
       e.exports =
         n.p +
-        "../../../images/applications/store/header_image.png?v=valveisgoodatcaching";
+        "images/applications/store/header_image.png?v=valveisgoodatcaching";
     },
     WonJ: function(e, t, n) {
       e.exports = {
@@ -14138,52 +14134,47 @@
     bEwK: function(e, t, n) {
       e.exports =
         n.p +
-        "../../../images/applications/store/RewardsSeason1Hero.png?v=valveisgoodatcaching";
+        "images/applications/store/RewardsSeason1Hero.png?v=valveisgoodatcaching";
     },
     bFVC: function(e, t, n) {
       e.exports =
-        n.p +
-        "../../../images/applications/store/awards_ui.png?v=valveisgoodatcaching";
+        n.p + "images/applications/store/awards_ui.png?v=valveisgoodatcaching";
     },
     bnhs: function(e, t, n) {
       e.exports =
-        n.p +
-        "../../../images/applications/store/star.png?v=valveisgoodatcaching";
+        n.p + "images/applications/store/star.png?v=valveisgoodatcaching";
     },
     cCsu: function(e, t, n) {
       e.exports =
         n.p +
-        "../../../images/applications/store/diamonds_tile.png?v=valveisgoodatcaching";
+        "images/applications/store/diamonds_tile.png?v=valveisgoodatcaching";
     },
     eOCM: function(e, t, n) {
       e.exports =
-        n.p +
-        "../../../images/applications/store/bored.png?v=valveisgoodatcaching";
+        n.p + "images/applications/store/bored.png?v=valveisgoodatcaching";
     },
     eRlu: function(e, t, n) {
       e.exports =
         n.p +
-        "../../../images/applications/store/golden_frame_anim.png?v=valveisgoodatcaching";
+        "images/applications/store/golden_frame_anim.png?v=valveisgoodatcaching";
     },
     eeci: function(e, t, n) {
       e.exports =
         n.p +
-        "../../../images/applications/store/hot_take_apng.png?v=valveisgoodatcaching";
+        "images/applications/store/hot_take_apng.png?v=valveisgoodatcaching";
     },
     gxgZ: function(e, t, n) {
       e.exports =
-        n.p +
-        "../../../images/applications/store/game_tiles.png?v=valveisgoodatcaching";
+        n.p + "images/applications/store/game_tiles.png?v=valveisgoodatcaching";
     },
     kJAG: function(e, t, n) {
       e.exports =
-        n.p +
-        "../../../images/applications/store/Sunglasses.gif?v=valveisgoodatcaching";
+        n.p + "images/applications/store/Sunglasses.gif?v=valveisgoodatcaching";
     },
     kqfX: function(e, t, n) {
       e.exports =
         n.p +
-        "../../../images/applications/store/golden_pagebg.png?v=valveisgoodatcaching";
+        "images/applications/store/golden_pagebg.png?v=valveisgoodatcaching";
     },
     ksWZ: function(e, t, n) {
       e.exports = {
@@ -14270,22 +14261,21 @@
     mpVu: function(e, t, n) {
       e.exports =
         n.p +
-        "../../../images/applications/store/contributor_badge.png?v=valveisgoodatcaching";
+        "images/applications/store/contributor_badge.png?v=valveisgoodatcaching";
     },
     nBpf: function(e, t, n) {
       e.exports =
         n.p +
-        "../../../images/applications/store/disco_tile_background.png?v=valveisgoodatcaching";
+        "images/applications/store/disco_tile_background.png?v=valveisgoodatcaching";
     },
     nu2M: function(e, t, n) {
       e.exports =
         n.p +
-        "../../../images/applications/store/hot_take_anim000.png?v=valveisgoodatcaching";
+        "images/applications/store/hot_take_anim000.png?v=valveisgoodatcaching";
     },
     okIP: function(e, t, n) {
       e.exports =
-        n.p +
-        "../../../images/applications/store/golden_bg.png?v=valveisgoodatcaching";
+        n.p + "images/applications/store/golden_bg.png?v=valveisgoodatcaching";
     },
     oydz: function(e, t, n) {
       e.exports = {
@@ -14398,7 +14388,7 @@
     px4M: function(e, t, n) {
       e.exports =
         n.p +
-        "../../../images/applications/store/patron_badge.png?v=valveisgoodatcaching";
+        "images/applications/store/patron_badge.png?v=valveisgoodatcaching";
     },
     qX6Y: function(e, t, n) {
       e.exports = {
@@ -14447,12 +14437,12 @@
     sf1Z: function(e, t, n) {
       e.exports =
         n.p +
-        "../../../images/applications/store/csgoChat_128_defuse.png?v=valveisgoodatcaching";
+        "images/applications/store/csgoChat_128_defuse.png?v=valveisgoodatcaching";
     },
     tHRV: function(e, t, n) {
       e.exports =
         n.p +
-        "../../../images/applications/store/friends_list_golden.png?v=valveisgoodatcaching";
+        "images/applications/store/friends_list_golden.png?v=valveisgoodatcaching";
     },
     uOv9: function(e, t, n) {
       e.exports = {
@@ -14549,7 +14539,7 @@
     "y8q+": function(e, t, n) {
       e.exports =
         n.p +
-        "../../../images/applications/store/collection_icon_64x64.png?v=valveisgoodatcaching";
+        "images/applications/store/collection_icon_64x64.png?v=valveisgoodatcaching";
     }
   }
 ]);

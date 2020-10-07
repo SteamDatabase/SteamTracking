@@ -5541,7 +5541,7 @@ span.partnersaledisplay_vr_required_1P__h {
   line-height: 20px;
   font-weight: bold;
   white-space: nowrap;
-  background-image: url(../../../images/applications/store/rebroadcast.png?v=valveisgoodatcaching);
+  background-image: url(images/applications/store/rebroadcast.png?v=valveisgoodatcaching);
   box-shadow: 0 0 10px black; }
 
 .videoContainer.fullscreenVideo .STV_ReplayBanner {
@@ -6515,15 +6515,15 @@ span.partnersaledisplay_vr_required_1P__h {
   background-repeat: no-repeat; }
 
 .BroadcastChatPositionToggle.bottom {
-  background-image: url(../../../images/applications/store/icon_view_chatbottom.png?v=valveisgoodatcaching);
+  background-image: url(images/applications/store/icon_view_chatbottom.png?v=valveisgoodatcaching);
   margin-right: 4px; }
 
 .BroadcastChatPositionToggle.right {
-  background-image: url(../../../images/applications/store/icon_view_chatright.png?v=valveisgoodatcaching);
+  background-image: url(images/applications/store/icon_view_chatright.png?v=valveisgoodatcaching);
   margin-right: 4px; }
 
 .BroadcastFullscreenToggle {
-  background-image: url(../../../images/applications/store/icon_view_fullscreen.png?v=valveisgoodatcaching);
+  background-image: url(images/applications/store/icon_view_fullscreen.png?v=valveisgoodatcaching);
   margin-left: 4px; }
 
 .BroadcastTheaterToggle {
@@ -6662,7 +6662,7 @@ iframe.steamTVLogin {
   width: 154px;
   height: 46px;
   display: inline-block;
-  background-image: url(../../../images/applications/store/logo_steamtv.png?v=valveisgoodatcaching); }
+  background-image: url(images/applications/store/logo_steamtv.png?v=valveisgoodatcaching); }
 
 .BroadcastContainerSectionVideoContainer {
   max-height: calc(100vh - 150px);
@@ -8327,14 +8327,16 @@ div.apppartnereventspage_EventDetailsBody_3NW5v {
     box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.4);
     border-radius: 4px; }
     .demoandquickpitch_TileContainer_3YSNl .demoandquickpitch_TileTitleContainer_huv5k .demoandquickpitch_TileTitleInnerContainer_3Semw {
-      flex: 2; }
+      flex: 2;
+      display: flex; }
       .demoandquickpitch_TileContainer_3YSNl .demoandquickpitch_TileTitleContainer_huv5k .demoandquickpitch_TileTitleInnerContainer_3Semw .demoandquickpitch_TileTitle_3VhTo {
         font-size: 21px;
         font-weight: normal;
         color: #ffffff;
         line-height: 26px;
         margin: 0;
-        margin-block-end: 0.2em; }
+        margin-block-end: 0.2em;
+        flex: 1; }
     .demoandquickpitch_TileContainer_3YSNl .demoandquickpitch_TileTitleContainer_huv5k .demoandquickpitch_TileActionButton_NxUN- {
       background: linear-gradient(to right, #75b022 5%, #588a1b 95%);
       color: #d2efa9 !important;
