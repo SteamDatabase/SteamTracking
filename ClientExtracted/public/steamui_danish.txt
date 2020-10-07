@@ -1249,8 +1249,6 @@ Dette burde vare mindre end et minut."
 "Steam_RegisterCDKey_Info"	"Indtast venligst den produktkode, du vil føje til dit Steam-bibliotek."
 "Steam_RegisterCDKey_Example"	"Nøgler ser ud som følger:\n             AAAAA-BBBBB-CCCCC\n             AAAAA-BBBBB-CCCCC-DDDDD-EEEEE\n             237ABCDGHJLPRST 23"
 
-"Steam_Rejected_Cdkey_Recover_Account" "Hvis du tidligere har registreret denne CD-nøgle til en Steam-konto og ikke kan huske kontonavnet, så tryk venligts på 'Genfind konto' for at modtage en e-mail med dit Steam-kontonavn."
-"Steam_Rejected_Cdkey_Recover_Button"  "Gendan konto"
 "Steam_Rejected_Cdkey_Recover_Feedback" "En e-mail er blevet sendt til ejeren af den produktkode, du indtastede."
 
 "Steam_Receipt_AlreadyPurchased" "Denne Steam-konto ejer allerede produktet/produkterne knyttet til denne aktiveringskode. Tryk på næste for at fortsætte til installationen."

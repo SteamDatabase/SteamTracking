@@ -1243,8 +1243,6 @@
 "Steam_RegisterCDKey_Info"	"Εισάγετε τον κωδικό προϊόντος που θέλετε να προσθέσετε στη συλλογή του Steam."
 "Steam_RegisterCDKey_Example"	"Τα κλειδιά έχουν τις ακόλουθες μορφές:\n       AAAAA-BBBBB-CCCCC\n       AAAAA-BBBBB-CCCCC-DDDDD-EEEEE\n       237ABCDGHJLPRST 23"
 
-"Steam_Rejected_Cdkey_Recover_Account" "Αν έχετε καταχωρήσει προηγουμένως αυτό το κλειδί CD σε ένα λογαριασμό Steam και δε θυμάστε το όνομα του λογαριασμού, πατήστε «Ανάκτηση λογαριασμού» για να λάβετε ένα μήνυμα ηλεκτρονικού ταχυδρομείου που θα περιέχει το όνομα του λογαριασμού Steam σας."
-"Steam_Rejected_Cdkey_Recover_Button"  "Ανάκτηση λογαριασμού"
 "Steam_Rejected_Cdkey_Recover_Feedback" "Ένα μήνυμα email στάλθηκε στον κάτοχο του κωδικού που εισαγάγατε."
 
 "Steam_Receipt_AlreadyPurchased" "Αυτός ο λογαριασμός Steam ήδη κατέχει τα προϊόντα αυτού του κωδικού ενεργοποίησης. Πατήστε επόμενο για να προχωρήσετε στην εγκατάσταση."

@@ -1243,8 +1243,6 @@
 "Steam_RegisterCDKey_Info"	"Введите цифровой ключ продукта, чтобы добавить его в вашу библиотеку Steam."
 "Steam_RegisterCDKey_Example"	"Ключи имеют следующий вид:\n AAAAA-BBBBB-CCCCC\n AAAAA-BBBBB-CCCCC-DDDDD-EEEEE\n 237ABCDGHJLPRST 23"
 
-"Steam_Rejected_Cdkey_Recover_Account" "Если ранее вы активировали этот цифровой ключ на своём аккаунте Steam, но не помните его данные, нажмите на кнопку «Восстановить аккаунт», чтобы получить на электронную почту письмо с именем вашего аккаунта Steam."
-"Steam_Rejected_Cdkey_Recover_Button"  "Восстан. аккаунт"
 "Steam_Rejected_Cdkey_Recover_Feedback" "Сообщение на адрес эл. почты было отправлено владельцу введенного вами цифрового ключа."
 
 "Steam_Receipt_AlreadyPurchased" "На этом аккаунте Steam уже есть продукты, связанные с данным цифровым ключом. Нажмите кнопку «Готово», чтобы установить их."

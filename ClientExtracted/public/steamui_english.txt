@@ -1251,8 +1251,6 @@ This should take less than a minute."
 "Steam_RegisterCDKey_Info"	"Please enter the product code you wish to add to your Steam library."
 "Steam_RegisterCDKey_Example"	"Keys look like the following:\n             AAAAA-BBBBB-CCCCC\n             AAAAA-BBBBB-CCCCC-DDDDD-EEEEE\n             237ABCDGHJLPRST 23"
 
-"Steam_Rejected_Cdkey_Recover_Account" "If you have previously registered this CD Key to a Steam account and do not remember the account name, please click 'Retrieve Account' to receive an email containing your Steam account name."
-"Steam_Rejected_Cdkey_Recover_Button"  "Retrieve Account"
 "Steam_Rejected_Cdkey_Recover_Feedback" "An email has been sent to the owner of the product code you entered."
 
 "Steam_Receipt_AlreadyPurchased" "This Steam account already owns the product(s) associated with this activation code. Click next to proceed to installation."

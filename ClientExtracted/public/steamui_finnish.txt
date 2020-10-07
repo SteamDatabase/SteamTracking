@@ -1247,8 +1247,6 @@ Tämä kestää alle minuutin."
 "Steam_RegisterCDKey_Info"	"Anna tuotetunnus, jonka haluat lisätä Steam-kirjastoosi."
 "Steam_RegisterCDKey_Example"	"Tunnukset ovat muotoa:\n             AAAAA-BBBBB-CCCCC\n             AAAAA-BBBBB-CCCCC-DDDDD-EEEEE\n             237ABCDGHJLPRST 23"
 
-"Steam_Rejected_Cdkey_Recover_Account" "Jos olet aikaisemmin rekisteröinyt tämän tuotetunnuksen Steam-tilille, etkä muista tilin nimeä, valitse Palauta käyttäjätili -vaihtoehto ja saat nimen sähköpostiisi."
-"Steam_Rejected_Cdkey_Recover_Button"  "Palauta käyttäjätili"
 "Steam_Rejected_Cdkey_Recover_Feedback" "Sähköposti on lähetetty syöttämäsi tuotetunnuksen omistajalle."
 
 "Steam_Receipt_AlreadyPurchased" "Tämä Steam-tili omistaa jo tämän aktivointikoodin tuotteet. Paina seuraavaa jatkaaksesi asennukseen."

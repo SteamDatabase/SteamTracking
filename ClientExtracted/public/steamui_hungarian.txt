@@ -1242,8 +1242,6 @@
 "Steam_RegisterCDKey_Info"	"Kérjük, add meg a termékkódot, melyet hozzá szeretnél adni a Steam Könyvtáradhoz."
 "Steam_RegisterCDKey_Example"	"A kódok elrendezése a következő:\n AAAAA-BBBBB-CCCCC\n AAAAA-BBBBB-CCCCC-DDDDD-EEEEE\n 237ABCDGHJLPRST 23"
 
-"Steam_Rejected_Cdkey_Recover_Account" "Ha korábban már regisztráltad ezt a CD-kulcsot egy Steam fiókhoz, és nem emlékszel a fiók nevére, kattints a „Fiók felderítése” gombra, és e-mailben elküldjük a Steam fiókod nevét."
-"Steam_Rejected_Cdkey_Recover_Button"  "Fiók felderítése"
 "Steam_Rejected_Cdkey_Recover_Feedback" "E-mail került kiküldésre az általad megadott termékkód tulajdonosának."
 
 "Steam_Receipt_AlreadyPurchased" "Ez a Steam fiók már rendelkezik az aktivációs kódhoz tartozó termék(ek)kel. A telepítéshez kattints a „Befejezés”, majd a „Következő” gombra."

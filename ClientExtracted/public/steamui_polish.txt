@@ -1246,8 +1246,6 @@ Potrwa to niecałą minutę."
 "Steam_RegisterCDKey_Info"	"Wpisz klucz produktu, który chcesz dodać do swojej biblioteki."
 "Steam_RegisterCDKey_Example"	"Klucze wyglądają następująco:\n             AAAAA-BBBBB-CCCCC\n             AAAAA-BBBBB-CCCCC-DDDDD-EEEEE\n             237ABCDGHJLPRST 23"
 
-"Steam_Rejected_Cdkey_Recover_Account" "Jeżeli ten klucz był już przez ciebie aktywowany, lecz nie pamiętasz nazwy konta, kliknij „Odzyskaj konto”, aby otrzymać e-mail zawierający jego nazwę."
-"Steam_Rejected_Cdkey_Recover_Button"  "Odzyskaj konto"
 "Steam_Rejected_Cdkey_Recover_Feedback" "Właściciel wprowadzonego klucza otrzyma wiadomość e-mail."
 
 "Steam_Receipt_AlreadyPurchased" "Na tym koncie Steam zarejestrowano już produkty powiązane z tym kluczem produktu. Kliknij przycisk „Zakończ”, by przejść do instalacji."

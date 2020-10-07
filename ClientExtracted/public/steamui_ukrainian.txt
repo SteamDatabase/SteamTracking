@@ -1247,8 +1247,6 @@
 "Steam_RegisterCDKey_Info"	"Будь ласка, введіть ключ продукту, який ви бажаєте додати до вашої бібліотеки Steam."
 "Steam_RegisterCDKey_Example"	"Ключі виглядають таким чином:\n    AAAAA-BBBBB-CCCCC\n    AAAAA-BBBBB-CCCCC-DDDDD-EEEEE\n    237ABCDGHJLPRST 23"
 
-"Steam_Rejected_Cdkey_Recover_Account" "Якщо ви раніше зареєстрували цей ключ в акаунті Steam і не можете згадати свій логін, будь ласка, натисніть «Відновити акаунт» для отримання електронного листа з логіном вашого акаунта Steam."
-"Steam_Rejected_Cdkey_Recover_Button"  "Відновити акаунт"
 "Steam_Rejected_Cdkey_Recover_Feedback" "Власнику введеного коду продукту було відправлено електронний лист."
 
 "Steam_Receipt_AlreadyPurchased" "Цей акаунт Steam вже має у власності продукти (чи продукт), які пов’язані з цим кодом активації. Натисніть «Далі», аби перейти до інсталяції."

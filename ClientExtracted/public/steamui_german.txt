@@ -1247,8 +1247,6 @@ Dies dauert in der Regel nicht länger als eine Minute."
 "Steam_RegisterCDKey_Info"	"Bitte geben Sie den Produktschlüssel ein, den Sie zu Ihrer Steam-Bibliothek hinzufügen möchten."
 "Steam_RegisterCDKey_Example"	"Der Code hat folgendes Muster:\nAAAAA-BBBBB-CCCCC\nAAAAA-BBBBB-CCCCC-DDDDD-EEEEE\n237ABCDGHJLPRST 23"
 
-"Steam_Rejected_Cdkey_Recover_Account" "Falls Sie diesen Produktschlüssel bereits auf einem Steam-Account registriert haben, sich aber nicht mehr an den Accountnamen erinnern können, klicken Sie bitte auf \"Account wiederfinden\", um eine E-Mail mit dem Steam-Accountnamen zugeschickt zu bekommen."
-"Steam_Rejected_Cdkey_Recover_Button"  "Account wiederfinden"
 "Steam_Rejected_Cdkey_Recover_Feedback" "Eine E-Mail wurde an den Besitzer des von Ihnen eingegebenen Produktschlüssels geschickt."
 
 "Steam_Receipt_AlreadyPurchased" "Dieser Steam-Account besitzt bereits die mit diesem Produktschlüssel verbundenen Produkte. Klicken Sie auf \"Weiter\", um mit der Installation fortzufahren."

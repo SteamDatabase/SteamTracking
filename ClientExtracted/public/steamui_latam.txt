@@ -1242,8 +1242,6 @@
 "Steam_RegisterCDKey_Info"	"Por favor, introduce la clave del producto que deseas añadir a tu biblioteca de Steam."
 "Steam_RegisterCDKey_Example"	"Las claves tienen estos formatos:\n AAAAA-BBBBB-CCCCC\n AAAAA-BBBBB-CCCCC-DDDDD-EEEEE\n 237ABCDGHJLPRST 23"
 
-"Steam_Rejected_Cdkey_Recover_Account" "Si has registrado previamente esta clave de producto en una cuenta de Steam y no recuerdas su nombre, por favor, haz clic en 'Recuperar cuenta' para recibir un email con el nombre de tu cuenta de Steam."
-"Steam_Rejected_Cdkey_Recover_Button"  "Recuperar cuenta"
 "Steam_Rejected_Cdkey_Recover_Feedback" "Se ha enviado un email al propietario del código del producto que has introducido."
 
 "Steam_Receipt_AlreadyPurchased" "Esta cuenta de Steam ya posee el producto o productos asociados a este código de activación. Haz clic en FINALIZAR para proceder a su instalación."

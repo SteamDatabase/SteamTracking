@@ -1253,8 +1253,6 @@ nødvendig for å kontakte deg via e-post."
 "Steam_RegisterCDKey_Info"	"Skriv inn produktkoden du vil legge til i ditt Steam-bibliotek."
 "Steam_RegisterCDKey_Example"	"Nøkler ser slik ut:\n             AAAAA-BBBBB-CCCCC\n             AAAAA-BBBBB-CCCCC-DDDDD-EEEEE\n             237ABCDGHJLPRST 23"
 
-"Steam_Rejected_Cdkey_Recover_Account" "Hvis du tidligere har registrert denne CD-nøkkelen til en Steam-konto og ikke husker brukernavnet, vennligst klikk på 'Hent konto' for å motta en e-post som inneholder ditt Steam-brukernavn."
-"Steam_Rejected_Cdkey_Recover_Button"  "Hent konto"
 "Steam_Rejected_Cdkey_Recover_Feedback" "En e-post har blitt sendt til eieren av produktkoden du tastet inn."
 
 "Steam_Receipt_AlreadyPurchased" "Denne Steam-kontoen eier allerede produktet/produktene tilknyttet til denne aktiveringskoden. Klikk neste for å fortsette til installasjon."

@@ -1246,8 +1246,6 @@ Steam，請在其圖示上按右鍵。"
 "Steam_RegisterCDKey_Info"	"請輸入您要加入至您 Steam 收藏庫的產品序號。"
 "Steam_RegisterCDKey_Example"	"序號格式如下：\n             AAAAA-BBBBB-CCCCC\n             AAAAA-BBBBB-CCCCC-DDDDD-EEEEE\n             237ABCDGHJLPRST 23"
 
-"Steam_Rejected_Cdkey_Recover_Account" "如果您之前已經在一個 Steam 帳戶啟動遊戲金鑰卻忘記帳戶名稱，請點選「取回帳戶」會收到一封包含您 Steam 帳戶名稱的郵件。"
-"Steam_Rejected_Cdkey_Recover_Button"  "取回帳戶"
 "Steam_Rejected_Cdkey_Recover_Feedback" "我們已經寄出一封電子郵件給產品序號的擁有者。"
 
 "Steam_Receipt_AlreadyPurchased" "此 Steam 帳戶已擁有此啟動序號所關聯的產品。點擊下一步來進行安裝。"

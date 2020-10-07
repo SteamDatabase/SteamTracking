@@ -1245,8 +1245,6 @@ Công đoạn này nên hoàn thành dưới một phút."
 "Steam_RegisterCDKey_Info"	"Xin vui lòng nhập mã sản phẩm bạn muốn thêm vào thư viện Steam."
 "Steam_RegisterCDKey_Example"	"Mã sẽ có định dạng như sau:\n       AAAAA-BBBBB-CCCCC\n       AAAAA-BBBBB-CCCCC-DDDDD-EEEEE\n       237ABCDGHJLPRST 23"
 
-"Steam_Rejected_Cdkey_Recover_Account" "Nếu trước đó bạn đã đăng ký mã CD này vào tài khoản Steam và không nhớ tên tài khoản, xin vui lòng nhấp vào \"Lấy lại tài khoản\" để nhận một email chứa tên tài khoản Steam của mình."
-"Steam_Rejected_Cdkey_Recover_Button"  "Lấy lại tài khoản"
 "Steam_Rejected_Cdkey_Recover_Feedback" "Một email đã được gửi tới chủ nhân của mã sản phẩm bạn nhập."
 
 "Steam_Receipt_AlreadyPurchased" "Tài khoản Steam này đã sở hữu sản phẩm liên quan đến mã kích hoạt này. Nhấp tiếp để chuyển đến quá trình cài đặt."

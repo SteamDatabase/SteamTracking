@@ -1249,8 +1249,6 @@ Oyunu açmak %borrower% adlı kullanıcıya oyunu bırakma zamanının geldiğin
 "Steam_RegisterCDKey_Info"	"Lütfen Steam kütüphanenize eklemek istediğiniz ürün kodunu girin."
 "Steam_RegisterCDKey_Example"	"Ürün anahtarları şu şekildedir:\n             AAAAA-BBBBB-CCCCC\n             AAAAA-BBBBB-CCCCC-DDDDD-EEEEE\n             237ABCDGHJLPRST 23"
 
-"Steam_Rejected_Cdkey_Recover_Account" "Eğer bu CD Anahtarını daha önce bir Steam hesabı ile ilişkilendirdiyseniz ve hesabın adını hatırlamıyorsanız lütfen Steam hesabınızın adını içeren e-postayı almak için 'Hesabı Kurtar'a tıklayın."
-"Steam_Rejected_Cdkey_Recover_Button"  "Hesabı Kurtar"
 "Steam_Rejected_Cdkey_Recover_Feedback" "Girmiş olduğunuz ürün kodunun sahibine bir e-posta gönderildi."
 
 "Steam_Receipt_AlreadyPurchased" "Bu Steam hesabı bu aktivasyon kodu ile ilişkilendirilmiş ürün(ler)e halihazırda sahip. Yükleme işlemine geçmek için İleri'ye tıklayın."

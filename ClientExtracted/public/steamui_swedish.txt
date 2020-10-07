@@ -1254,8 +1254,6 @@ Vänligen skriv in SMS-koden nedan."
 "Steam_RegisterCDKey_Info"	"Ange den produktkod du vill lägga till i ditt Steam-bibliotek."
 "Steam_RegisterCDKey_Example"	"Koderna ser ut så här:\n             AAAAA-BBBBB-CCCCC\n             AAAAA-BBBBB-CCCCC-DDDDD-EEEEE\n             237ABCDGHJLPRST 23"
 
-"Steam_Rejected_Cdkey_Recover_Account" "Om du tidigare har registrerat denna cd-nyckel till ett Steam-konto men inte kommer ihåg kontonamnet, klicka på \"Hämta konto\" för att få ett e-mail som innehåller ditt Steam-kontonamn."
-"Steam_Rejected_Cdkey_Recover_Button"  "Hämta konto"
 "Steam_Rejected_Cdkey_Recover_Feedback" "Ett e-postmeddelande har skickats till ägaren av produktkoden du angav."
 
 "Steam_Receipt_AlreadyPurchased" "Detta Steam-konto äger redan produkten/produkterna som associeras med denna kod. Klicka på nästa för att gå vidare till installation."

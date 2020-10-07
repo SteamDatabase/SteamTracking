@@ -1245,8 +1245,6 @@ A sua assinatura está registrada na seguinte conta Steam: %accountname%. No fut
 "Steam_RegisterCDKey_Info"	"Informe o código de produto que deseja adicionar à sua Biblioteca Steam."
 "Steam_RegisterCDKey_Example"	"O código terá um dos seguintes formatos:\n AAAAA-BBBBB-CCCCC\n AAAAA-BBBBB-CCCCC-DDDDD-EEEEE\n 237ABCDGHJLPRST 23"
 
-"Steam_Rejected_Cdkey_Recover_Account" "Caso já tenha ativado este código de produto em uma conta Steam e não lembra o nome de usuário, clique em \"Recuperar conta\" para receber uma mensagem de e-mail com o seu nome de usuário Steam."
-"Steam_Rejected_Cdkey_Recover_Button"  "Recuperar conta"
 "Steam_Rejected_Cdkey_Recover_Feedback" "Uma mensagem de e-mail foi enviada para o dono do código de produto inserido."
 
 "Steam_Receipt_AlreadyPurchased" "Esta conta Steam já possui os produtos associados a esse código de produto. Clique em \"concluir\" para continuar com a instalação."

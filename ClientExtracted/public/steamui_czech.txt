@@ -1249,8 +1249,6 @@ Tato operace zabere jenom okamžik."
 "Steam_RegisterCDKey_Info"	"Zadejte kód produktu, který si přejete přidat do své knihovny."
 "Steam_RegisterCDKey_Example"	"Kódy vypadají následovně:\n       AAAAA-BBBBB-CCCCC\n       AAAAA-BBBBB-CCCCC-DDDDD-EEEEE\n       237ABCDGHJLPRST 23"
 
-"Steam_Rejected_Cdkey_Recover_Account" "Pokud jste si již dříve zaregistrovali tento CD klíč na svém účtu služby Steam, ale nepamatujete si jeho název, klikněte níže na tlačítko „Získat účet zpět“ pro zaslání názvu na Váš email."
-"Steam_Rejected_Cdkey_Recover_Button"  "Získat účet zpět"
 "Steam_Rejected_Cdkey_Recover_Feedback" "Vlastníkovi vámi vloženého kódu produktu byl odeslán e-mail."
 
 "Steam_Receipt_AlreadyPurchased" "Tento účet služby Steam již disponuje produkty spojenými s tímto kódem. Abyste je nainstalovali, klikněte na tlačítko „Další“."

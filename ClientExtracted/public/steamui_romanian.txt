@@ -1245,8 +1245,6 @@ Te rugăm să reintroduci parola dorită."
 "Steam_RegisterCDKey_Info"	"Te rugăm să introduci codul de activare pe care dorești să îl adaugi colecției tale Steam."
 "Steam_RegisterCDKey_Example"	"Codurile de activare pot fi de forma:\n AAAAA-BBBBB-CCCCC\n AAAAA-BBBBB-CCCCC-DDDDD-EEEEE\n 237ABCDGHJLPRST 23"
 
-"Steam_Rejected_Cdkey_Recover_Account" "Dacă ai activat deja acest CD Key pe un alt cont Steam, dar nu mai ştii numele contului, te rugăm să apeşi butonul 'Recuperare Cont' pentru a primi un e-mail cu numele contului tău Steam."
-"Steam_Rejected_Cdkey_Recover_Button"  "Recuperare Cont"
 "Steam_Rejected_Cdkey_Recover_Feedback" "Un e-mail a fost trimis către titularul codului pe care l-ai introdus."
 
 "Steam_Receipt_AlreadyPurchased" "Acest cont Steam deţine deja produsele asociate acestui cod. Apasă butonul 'Continuă' pentru a trece la următorul pas al instalării."

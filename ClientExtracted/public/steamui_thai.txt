@@ -1248,8 +1248,6 @@ Steam ให้คลิกขวาที่ไอคอนนี้"
 "Steam_RegisterCDKey_Info"	"กรุณากรอกรหัสผลิตภัณฑ์ที่คุณต้องการเพิ่มไปยังคลัง Steam ของคุณ"
 "Steam_RegisterCDKey_Example"	"รหัสผลิตภัณฑ์มีลักษณะดังนี้:\n       AAAAA-BBBBB-CCCCC\n       AAAAA-BBBBB-CCCCC-DDDDD-EEEEE \n       237ABCDGHJLPRST 23"
 
-"Steam_Rejected_Cdkey_Recover_Account" "หากคุณได้ลงทะเบียนรหัสผลิตภัณฑ์นี้กับบัญชี Steam ใดไว้ก่อนหน้านี้ และจำชื่อบัญชีไม่ได้ กรุณาคลิก 'เรียกข้อมูลบัญชี' เพื่อรับอีเมลที่บรรจุชื่อบัญชี Steam ของคุณ"
-"Steam_Rejected_Cdkey_Recover_Button"  "เรียกข้อมูลบัญชี"
 "Steam_Rejected_Cdkey_Recover_Feedback" "อีเมลได้ถูกส่งไปยังเจ้าของรหัสผลิตภัณฑ์แล้ว สำหรับรหัสผลิตภัณฑ์ที่คุณกรอกไว้"
 
 "Steam_Receipt_AlreadyPurchased" "บัญชี Steam นี้ได้เป็นเจ้าของผลิตภัณฑ์ ที่เกี่ยวข้องกับรหัสเปิดการใช้งานนี้อยู่แล้ว คลิกถัดไปเพื่อดำเนินการติดตั้ง"

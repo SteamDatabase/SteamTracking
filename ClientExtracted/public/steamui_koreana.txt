@@ -1249,8 +1249,6 @@
 "Steam_RegisterCDKey_Info"	"Steam 라이브러리에 등록할 제품 코드를 입력하세요."
 "Steam_RegisterCDKey_Example"	"키는 다음과 같은 방식으로 표시됩니다:\n    AAAAA-BBBBB-CCCCC\n    AAAAA-BBBBB-CCCCC-DDDDD-EEEEE\n    237ABCDGHJLPRST 23"
 
-"Steam_Rejected_Cdkey_Recover_Account" "만약 이 CD 키를 다른 Steam 계정에 등록해두었으나 계정명이 기억나지 않는 경우에는 \"계정 복구\"를 클릭하여 계정명이 담긴 이메일을 받아보세요."
-"Steam_Rejected_Cdkey_Recover_Button"  "계정 되찾기"
 "Steam_Rejected_Cdkey_Recover_Feedback" "입력하신 코드의 소유자에게 이메일이 발송되었습니다."
 
 "Steam_Receipt_AlreadyPurchased" "이 계정은 이미 제품 활성화 코드가 등록된 계정입니다. 설치하려면 다음을 클릭하세요."

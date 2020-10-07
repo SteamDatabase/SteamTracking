@@ -1249,8 +1249,6 @@ Dit duurt niet langer dan een minuut."
 "Steam_RegisterCDKey_Info"	"Geef de productcode op die je aan je Steam-bibliotheek wilt toevoegen."
 "Steam_RegisterCDKey_Example"	"Een productcode ziet er als volgt uit:\n             AAAAA-BBBBB-CCCCC\n             AAAAA-BBBBB-CCCCC-DDDDD-EEEEE\n             237ABCDGHJLPRST 23"
 
-"Steam_Rejected_Cdkey_Recover_Account" "Als je deze CD-code al op een Steam-account hebt geregistreerd en je de accountnaam niet meer weet, klik dan op 'Accountherstel' om een e-mail te krijgen met je Steam-accountnaam."
-"Steam_Rejected_Cdkey_Recover_Button"  "Accountherstel"
 "Steam_Rejected_Cdkey_Recover_Feedback" "Er is een e-mail verzonden naar de eigenaar van de opgegeven productcode."
 
 "Steam_Receipt_AlreadyPurchased" "Dit Steam-account bevat de inhoud die gekoppeld is aan deze activatiecode al. Klik op 'Volgende' om door te gaan met de installatie."

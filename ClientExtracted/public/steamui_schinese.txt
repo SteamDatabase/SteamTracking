@@ -1247,8 +1247,6 @@
 "Steam_RegisterCDKey_Info"	"请输入您想要添加至您 Steam 库的产品代码。"
 "Steam_RegisterCDKey_Example"	"产品密钥为如下形式：\n             AAAAA-BBBBB-CCCCC\n             AAAAA-BBBBB-CCCCC-DDDDD-EEEEE\n             237ABCDGHJLPRST 23"
 
-"Steam_Rejected_Cdkey_Recover_Account" "如果您曾经将此序列号注册至一个 Steam 帐户，但是忘记了帐户名，请点击“取回帐户”来收取包含有您 Steam 帐户名的邮件。"
-"Steam_Rejected_Cdkey_Recover_Button"  "找回帐户"
 "Steam_Rejected_Cdkey_Recover_Feedback" "一封电子邮件已经发送至您输入的产品代码的所有者。"
 
 "Steam_Receipt_AlreadyPurchased" "该 Steam 帐户已经拥有此激活码所关联的产品。点击下一步来继续安装。"

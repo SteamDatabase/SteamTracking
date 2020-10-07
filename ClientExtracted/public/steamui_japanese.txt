@@ -1249,8 +1249,6 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_RegisterCDKey_Info"	"Steam ライブラリに追加したい CD キー（製品コード）を入力してください。"
 "Steam_RegisterCDKey_Example"	"キーは次のような形式で表示されます：\n             AAAAA-BBBBB-CCCCC\n             AAAAA-BBBBB-CCCCC-DDDDD-EEEEE\n             237ABCDGHJLPRST 23"
 
-"Steam_Rejected_Cdkey_Recover_Account" "この CDキ ーを以前に登録したのであれば Steam アカウント名を忘れた場合でも、[アカウントの再取得]をクリックすると Steam アカウント名が記載されたメールを受け取ることができます。"
-"Steam_Rejected_Cdkey_Recover_Button"  "アカウントの再取得"
 "Steam_Rejected_Cdkey_Recover_Feedback" "入力された製品コードの所有者宛てに、メールを送信しました。"
 
 "Steam_Receipt_AlreadyPurchased" "この Steam アカウントはそのコードで登録済みの製品を既に所有しています。[次へ]をクリックしてインストールに進んでください。"

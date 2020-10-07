@@ -1247,8 +1247,6 @@ L'operazione dovrebbe richiedere meno di un minuto."
 "Steam_RegisterCDKey_Info"	"Inserisci il codice del prodotto che desideri aggiungere alla tua libreria di Steam."
 "Steam_RegisterCDKey_Example"	"I codici da immettere sono di questo tipo:\n             AAAAA-BBBBB-CCCCC\n             AAAAA-BBBBB-CCCCC-DDDDD-EEEEE\n             237ABCDGHJLPRST 23"
 
-"Steam_Rejected_Cdkey_Recover_Account" "Se hai già registrato questo codice prodotto su un account di Steam di cui non ricordi il nome, clicca su \"Recupera account\" per ricevere un'email contenente il nome del tuo account di Steam."
-"Steam_Rejected_Cdkey_Recover_Button"  "Recupera account"
 "Steam_Rejected_Cdkey_Recover_Feedback" "È stata inviata un'email al proprietario del codice prodotto inserito."
 
 "Steam_Receipt_AlreadyPurchased" "Questo account di Steam possiede già il/i prodotto/i associato/i a questo codice d'attivazione. Clicca su Avanti per procedere all'installazione."
