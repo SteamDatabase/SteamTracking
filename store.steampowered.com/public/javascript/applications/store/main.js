@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6129276";
+var CLSTAMP = "6129678";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [37],
   {
@@ -47738,8 +47738,7 @@ var CLSTAMP = "6129276";
             }),
             (e.prototype.BShouldShowOnTab = function(e) {
               return (
-                !this.props.activeTab ||
-                this.props.activeTab.ShouldShowOnTab("game", e)
+                !this.props.activeTab || this.props.activeTab.ShouldShowOnTab(e)
               );
             }),
             (e.prototype.GetScheduleCalendarStore = function() {

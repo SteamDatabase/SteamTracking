@@ -14760,6 +14760,7 @@
                   ? t.props.eventModel.GetDayIndexFromEventStart()
                   : void 0
               }),
+              sn.e.AddStreamsLoadedListener(t.OnBroadcastStreamsLoaded),
               t.props.eventModel && t.OnSaleDataLoaded(),
               t
             );
@@ -14793,9 +14794,6 @@
                         (e.label = 2);
                     case 2:
                       return (
-                        sn.e.AddStreamsLoadedListener(
-                          this.OnBroadcastStreamsLoaded
-                        ),
                         an.a
                           .Get()
                           .SetCollectionInfo(
@@ -14823,7 +14821,10 @@
                 ) {
                   var n,
                     r = a[t],
-                    o = e.GetBroadcastWhitelistPriority(r.accountid, "primary");
+                    o = e.GetBroadcastWhitelistPriority(
+                      Number(r.accountid),
+                      "primary"
+                    );
                   o &&
                     ((n = (function(e) {
                       switch (e) {
@@ -15136,7 +15137,7 @@
           );
         })(H.Component),
         Or = (function() {
-          function n(e, t) {
+          function e(e, t) {
             var a = this;
             (this.m_activeTab = null),
               (this.m_capsuleFilter = null),
@@ -15144,15 +15145,12 @@
                 ((this.m_activeTab = e).capsules && 0 !== e.capsules.length
                   ? ((this.m_capsuleFilter = new Set()),
                     Gr(e.capsules, t).forEach(function(e) {
-                      a.m_capsuleFilter.add(n.GetSetName(e.type, e.id));
+                      a.m_capsuleFilter.add(Number(e.id));
                     }))
                   : (this.m_capsuleFilter = null));
           }
           return (
-            (n.GetSetName = function(e, t) {
-              return (e || "") + t;
-            }),
-            (n.prototype.ShouldShowSection = function(e) {
+            (e.prototype.ShouldShowSection = function(e) {
               var t = this;
               return (
                 !this.m_activeTab ||
@@ -15163,22 +15161,21 @@
                   }))
               );
             }),
-            (n.prototype.GetTab = function() {
+            (e.prototype.GetTab = function() {
               return this.m_activeTab;
             }),
-            (n.prototype.ShouldShowOnTab = function(e, t) {
+            (e.prototype.ShouldShowOnTab = function(e) {
               return (
-                !this.m_capsuleFilter ||
-                this.m_capsuleFilter.has(n.GetSetName(e, t))
+                !this.m_capsuleFilter || this.m_capsuleFilter.has(Number(e))
               );
             }),
-            (n.prototype.ShouldShowCapsule = function(e) {
-              return this.ShouldShowOnTab(e.type, e.id);
+            (e.prototype.ShouldShowCapsule = function(e) {
+              return this.ShouldShowOnTab(e.id);
             }),
-            (n.prototype.ShouldShowEvent = function(e) {
-              return 0 === e.appid || this.ShouldShowOnTab("game", e.appid);
+            (e.prototype.ShouldShowEvent = function(e) {
+              return 0 === e.appid || this.ShouldShowOnTab(e.appid);
             }),
-            n
+            e
           );
         })(),
         wr = (function(e) {
@@ -16685,10 +16682,7 @@
                           language: n,
                           bShowCapsuleArt: !0,
                           fnFilterStreams: function(e) {
-                            return (
-                              o.ShouldShowOnTab("game", e.appid) ||
-                              o.ShouldShowOnTab("series", e.appid)
-                            );
+                            return o.ShouldShowOnTab(e.appid);
                           }
                         }),
                       Boolean(!this.state.bOnceVisible) &&
