@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6127903";
+var CLSTAMP = "6128318";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [37],
   {
@@ -37983,7 +37983,7 @@ var CLSTAMP = "6127903";
                     O
                       ? ((y.strClosedCaptionFile =
                           this.m_strBaseURL + V(O, y.strID, 0)),
-                        "dev" == G.c.WEB_UNIVERSE &&
+                        "store" == Object(G.e)() &&
                           (y.strClosedCaptionFile =
                             G.c.STORE_BASE_URL +
                             "vtt/video/" +
