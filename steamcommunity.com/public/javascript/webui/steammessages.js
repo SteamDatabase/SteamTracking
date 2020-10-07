@@ -1,8 +1,6 @@
-/*! This file includes third-party software, governed by the licenses described here: https://steamcommunity.com/public/javascript/webui/steammessages.licenses.txt */
-
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6128068";
+var CLSTAMP = "6130087";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [1],
   {

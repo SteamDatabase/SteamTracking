@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6128068";
+var CLSTAMP = "6130087";
 !(function(e) {
   function t(t) {
     for (
@@ -46,9 +46,10 @@ var CLSTAMP = "6128068";
           (r[e] = new Promise(function(t, n) {
             for (
               var o =
-                  "../../css/webui/" +
+                  "css/webui/" +
                   ({ 3: "broadcast", 4: "broadcastapp" }[e] || e) +
-                  ".css",
+                  ".css?contenthash=" +
+                  { 3: "9125a51663951c775ae7", 4: "c34989a8f4c5f06c8d5e" }[e],
                 i = s.p + o,
                 a = document.getElementsByTagName("link"),
                 c = 0;
@@ -97,7 +98,11 @@ var CLSTAMP = "6128068";
           s.nc && c.setAttribute("nonce", s.nc),
           (c.src = (function(e) {
             return (
-              s.p + "" + ({ 3: "broadcast", 4: "broadcastapp" }[e] || e) + ".js"
+              s.p +
+              "javascript/webui/" +
+              ({ 3: "broadcast", 4: "broadcastapp" }[e] || e) +
+              ".js?contenthash=" +
+              { 3: "b49ee11e7471cf07c78a", 4: "262f53435c0e2b78ef94" }[e]
             );
           })(e));
         var l = new Error();
@@ -635,8 +640,8 @@ var CLSTAMP = "6128068";
       M = n("TA9H"),
       T = n("0N1H"),
       j = n("E7zH"),
-      G = n("WpBz"),
-      k = n("oh5H"),
+      k = n("WpBz"),
+      G = n("oh5H"),
       R = n("1VtQ"),
       A = (function() {
         return function() {
@@ -1055,8 +1060,8 @@ var CLSTAMP = "6128068";
             return this.is_blocked
               ? (r.a.IN_MOBILE
                   ? C.f.ShowAlert(
-                      Object(k.f)("#Friend_Chat_OpenError_Blocked"),
-                      Object(k.f)("#Friend_Chat_OpenError_BlockedBody")
+                      Object(G.f)("#Friend_Chat_OpenError_Blocked"),
+                      Object(G.f)("#Friend_Chat_OpenError_BlockedBody")
                     )
                   : C.f.OpenURLInBrowser(this.GetCommunityProfileURL(), e),
                 null)
@@ -1125,12 +1130,12 @@ var CLSTAMP = "6128068";
                   ? C.f.AppInfoStore.GetAppInfo(this.persona.m_broadcastAppId)
                   : null;
               return t && t.is_valid
-                ? Object(k.f)(
+                ? Object(G.f)(
                     "#PersonaStateWatchingBroadcast_PlayerGame",
                     e.display_name,
                     t.name
                   )
-                : Object(k.f)(
+                : Object(G.f)(
                     "#PersonaStateWatchingBroadcast_Player",
                     e.display_name
                   );
@@ -1481,9 +1486,9 @@ var CLSTAMP = "6128068";
                       e.m_rgPersonaStateChangeCallbacks.Dispatch(p);
                 }
               }
-              var G = C.f.AppInfoStore.EnsureAppInfoForAppIDs(o);
+              var k = C.f.AppInfoStore.EnsureAppInfoForAppIDs(o);
               e.m_bInitialPersonaStatesLoaded ||
-                e.m_InitialAppInfoPromises.push(G),
+                e.m_InitialAppInfoPromises.push(k),
                 !e.m_bInitialPersonaStatesLoaded &&
                   r.size &&
                   (console.log(
@@ -2139,7 +2144,7 @@ var CLSTAMP = "6128068";
                     r &&
                     C.f.NotificationManager.DisplayNotificationFromFriend(e, {
                       title: e.display_name,
-                      body: Object(k.f)("#Friend_StateChange_InGame", r),
+                      body: Object(G.f)("#Friend_StateChange_InGame", r),
                       rawbody: r,
                       tag: "state_" + e.accountid,
                       state: "ingame",
@@ -2153,7 +2158,7 @@ var CLSTAMP = "6128068";
                 e.BShowOnlineNotification() &&
                 C.f.NotificationManager.DisplayNotificationFromFriend(e, {
                   title: e.display_name,
-                  body: Object(k.f)("#Friend_StateChange_Online"),
+                  body: Object(G.f)("#Friend_StateChange_Online"),
                   tag: "state_" + e.accountid,
                   state: "online",
                   steamid: e.persona.m_steamid.ConvertTo64BitString()
@@ -2346,13 +2351,13 @@ var CLSTAMP = "6128068";
           Object(o.c)([O.k], e.prototype, "SetPersonasOffline", null),
           Object(o.c)([O.k], e.prototype, "SetFriendsList", null),
           Object(o.c)(
-            [R.a, Object(G.a)(100)],
+            [R.a, Object(k.a)(100)],
             e.prototype,
             "PlayJoinGameSound",
             null
           ),
           Object(o.c)(
-            [R.a, Object(G.a)(100)],
+            [R.a, Object(k.a)(100)],
             e.prototype,
             "PlayFriendOnlineSound",
             null
@@ -3737,7 +3742,7 @@ var CLSTAMP = "6128068";
         return M;
       }),
       n.d(t, "c", function() {
-        return k;
+        return G;
       });
     var o = n("mrSG"),
       r = n("q1tI"),
@@ -3869,7 +3874,7 @@ var CLSTAMP = "6128068";
                       },
                       t &&
                         r.createElement(T, { groupView: this.props.groupView }),
-                      r.createElement(G, { groupView: this.props.groupView }),
+                      r.createElement(k, { groupView: this.props.groupView }),
                       (!i || this.state.bMouseHover) &&
                         r.createElement(
                           "div",
@@ -4144,7 +4149,7 @@ var CLSTAMP = "6128068";
           (t = Object(o.c)([f.a], t))
         );
       })(r.Component),
-      G = (function(e) {
+      k = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -4197,7 +4202,7 @@ var CLSTAMP = "6128068";
                 )
               ),
               n.map(function(n) {
-                return r.createElement(k, {
+                return r.createElement(G, {
                   key: n.unique_id,
                   context: "VoiceRoomsGroup",
                   chat: n,
@@ -4220,7 +4225,7 @@ var CLSTAMP = "6128068";
           (t = Object(o.c)([f.a], t))
         );
       })(r.Component),
-      k = (function(e) {
+      G = (function(e) {
         function t(t) {
           var n = e.call(this, t) || this;
           return (
@@ -8811,8 +8816,8 @@ var CLSTAMP = "6128068";
       M = n("/FkP"),
       T = n("oh5H"),
       j = n("/SYB"),
-      G = n("XaMz"),
-      k = n("2sgH"),
+      k = n("XaMz"),
+      G = n("2sgH"),
       R = n("9Eit"),
       A = n("ujHl");
     function N(e, t) {
@@ -9086,7 +9091,7 @@ var CLSTAMP = "6128068";
                   case 7:
                   case 0:
                     i = t.GetChatRoomGroup(o);
-                    Object(G.a)(
+                    Object(k.a)(
                       i,
                       "Got state change for ChatRoomGroup we don't know about"
                     ),
@@ -9095,7 +9100,7 @@ var CLSTAMP = "6128068";
                   case 4:
                     break;
                   default:
-                    Object(G.a)(
+                    Object(k.a)(
                       !1,
                       "Don't know how to handle state change of type " +
                         Object(c.cb)(r) +
@@ -9521,7 +9526,7 @@ var CLSTAMP = "6128068";
             var t = this.m_mapActiveChatGroupsToRefCount.get(e),
               n = void 0 !== t && t > 0;
             if (
-              (Object(G.a)(
+              (Object(k.a)(
                 n,
                 "Attempting to DecRef a Chat Group that has no existing references. Doing nothing."
               ),
@@ -9604,7 +9609,7 @@ var CLSTAMP = "6128068";
                       o = i.b.Init(c.O);
                     e.m_mapActiveChatGroupsToRefCount.forEach(function(t, r) {
                       if (
-                        (Object(G.a)(
+                        (Object(k.a)(
                           t > 0,
                           "SendActiveChatRoomGroupsToServer found invalid ref count for chat group."
                         ),
@@ -9865,7 +9870,7 @@ var CLSTAMP = "6128068";
             (o.m_chat = n),
             o.m_tabset && o.m_chat.AddChatView(o),
             (o.m_strTextEntry = ""),
-            (o.m_fileUploadManager = new k.a(n)),
+            (o.m_fileUploadManager = new G.a(n)),
             o
           );
         }
@@ -13004,7 +13009,7 @@ var CLSTAMP = "6128068";
             (this.m_nSegmentDurationMS = 0),
             (this.m_nPlaybackRate = 0),
             (this.m_nTimeToFirstFrameMS = -1),
-            (this.m_fpsMonitor = new G());
+            (this.m_fpsMonitor = new k());
         }
         return (
           (e.prototype.GetBytesReceivedToDisplay = function() {
@@ -13647,7 +13652,7 @@ var CLSTAMP = "6128068";
           e
         );
       })(),
-      G = (function() {
+      k = (function() {
         function e() {
           (this.k_nTestFrequencyMS = 1e3),
             (this.k_nSlidingWindow = 6),
@@ -13739,7 +13744,7 @@ var CLSTAMP = "6128068";
           e
         );
       })();
-    function k(e, t) {
+    function G(e, t) {
       var n = e.getElementsByTagName("MPD");
       return n && 1 == n.length ? n[0] : null;
     }
@@ -13956,7 +13961,7 @@ var CLSTAMP = "6128068";
           }),
           (e.prototype.BParse = function(e) {
             var t = new DOMParser().parseFromString(e, "application/xml"),
-              n = k(t);
+              n = G(t);
             if (!n) return !1;
             var o = n.getAttribute("type");
             if (
@@ -14046,9 +14051,9 @@ var CLSTAMP = "6128068";
                   g < _.length;
                   g++
                 ) {
-                  (G = P(_[g], "value")) &&
-                    "subtitle" != G &&
-                    h.rgRoles.push(G);
+                  (k = P(_[g], "value")) &&
+                    "subtitle" != k &&
+                    h.rgRoles.push(k);
                 }
                 for (
                   var b = p.getElementsByTagName("Representation"), v = 0;
@@ -14106,8 +14111,8 @@ var CLSTAMP = "6128068";
                 }
                 var j = p.getElementsByTagName("Role");
                 for (E = 0; E < j.length; E++) {
-                  var G;
-                  (G = P(j[E], "value")) && h.rgRoles.push(G);
+                  var k;
+                  (k = P(j[E], "value")) && h.rgRoles.push(k);
                 }
                 var x = p.getElementsByTagName("SegmentTemplate");
                 if (0 == x.length)
@@ -14146,7 +14151,7 @@ var CLSTAMP = "6128068";
           }),
           (e.prototype.BUpdate = function(e) {
             var t = new DOMParser().parseFromString(e, "application/xml"),
-              n = k(t);
+              n = G(t);
             if (!n) return !1;
             if (this.IsLiveContent()) {
               var o = t.getElementsByTagName("Period");
@@ -18227,21 +18232,21 @@ var CLSTAMP = "6128068";
                 M = D > 0,
                 T = m - (a.bOverlapVertical ? I : E) - w,
                 j = T > 0,
-                G = (a.bPreferPopTop || !j) && M && !a.bDisablePopTop;
+                k = (a.bPreferPopTop || !j) && M && !a.bDisablePopTop;
               if (!M && !j) {
-                var k =
+                var G =
                   void 0 !== a.bShiftToFitWindow
                     ? a.bShiftToFitWindow
                     : a.bFitToWindow && !a.bOverlapHorizontal;
-                (G = D > T && !a.bDisablePopTop),
-                  k && (G ? (s.menuTop = 4) : (s.menuBottom = 4)),
+                (k = D > T && !a.bDisablePopTop),
+                  G && (k ? (s.menuTop = 4) : (s.menuBottom = 4)),
                   a.bFitToWindow &&
-                    (k ? (w = Math.min(w, m - 8)) : (w += G ? D : T),
+                    (G ? (w = Math.min(w, m - 8)) : (w += k ? D : T),
                     (s.menuHeight = w - 8));
               }
               void 0 === s.menuBottom &&
                 void 0 === s.menuTop &&
-                (G
+                (k
                   ? (s.menuBottom = m - (a.bOverlapVertical ? E : I))
                   : (s.menuTop = a.bOverlapVertical ? I : E)),
                 i
@@ -19376,8 +19381,8 @@ var CLSTAMP = "6128068";
       M = n("rsEv"),
       T = n("tkkQ"),
       j = n("uWOQ"),
-      G = n("+mma"),
-      k = n("e2SU"),
+      k = n("+mma"),
+      G = n("e2SU"),
       R = n("VZeO"),
       A = n("Ezvv"),
       N = n("vDqi"),
@@ -19982,7 +19987,7 @@ var CLSTAMP = "6128068";
                         onSelected: function() {},
                         bInteractableItem: !0
                       },
-                      c.createElement(k.l, null),
+                      c.createElement(G.l, null),
                       Object(u.f)("#ChatRoomRole_Owner")
                     )
                   : i
@@ -20005,7 +20010,7 @@ var CLSTAMP = "6128068";
             },
             Object(u.f)("#Friend_InviteError_VisitSteamSupport")
           );
-          Object(G.c)(
+          Object(k.c)(
             e,
             Object(u.f)("#Friend_Menu_AddToFriendsList"),
             Object(u.f)("#Friend_Menu_AddToFriendsList"),
@@ -20013,13 +20018,13 @@ var CLSTAMP = "6128068";
             Object(u.m)("#Friend_InviteError_LimitedUserLink", i)
           );
         } else
-          Object(G.c)(
+          Object(k.c)(
             e,
             Object(u.f)("#Friend_Menu_AddToFriendsList"),
             Object(u.f)(r, o)
           );
       else
-        Object(G.c)(
+        Object(k.c)(
           e,
           Object(u.f)("#Friend_Menu_AddToFriendsList"),
           Object(u.f)("#Friend_InviteError", o)
@@ -20073,13 +20078,13 @@ var CLSTAMP = "6128068";
                       (e = o.sent()),
                       (t = e.eResult),
                       4 == (n = e.eFriendRelationship)
-                        ? Object(G.c)(
+                        ? Object(k.c)(
                             this.props.ownerWindow,
                             Object(u.f)("#Friend_Menu_AddToFriendsList"),
                             Object(u.f)("#Friend_InviteSent")
                           )
                         : 3 == n
-                        ? Object(G.c)(
+                        ? Object(k.c)(
                             this.props.ownerWindow,
                             Object(u.f)("#Friend_Menu_AddToFriendsList"),
                             Object(u.f)(
@@ -20114,7 +20119,7 @@ var CLSTAMP = "6128068";
                       (e = n.sent()),
                       (t = e.eResult),
                       3 == e.eFriendRelationship
-                        ? Object(G.c)(
+                        ? Object(k.c)(
                             this.props.ownerWindow,
                             Object(u.f)("#Friend_Menu_AddToFriendsList"),
                             Object(u.f)(
@@ -20138,7 +20143,7 @@ var CLSTAMP = "6128068";
             var e = this;
             r.f.FriendStore.RemoveFriend(this.props.friend).then(function(t) {
               1 == t
-                ? Object(G.c)(
+                ? Object(k.c)(
                     e.props.ownerWindow,
                     Object(u.f)("#Friend_Menu_IgnoreIncomingInvite"),
                     Object(u.f)(
@@ -20146,7 +20151,7 @@ var CLSTAMP = "6128068";
                       e.props.friend.display_name
                     )
                   )
-                : Object(G.c)(
+                : Object(k.c)(
                     e.props.ownerWindow,
                     Object(u.f)("#Friend_Menu_IgnoreIncomingInvite"),
                     Object(u.f)(
@@ -20178,7 +20183,7 @@ var CLSTAMP = "6128068";
                   ? "#Friend_CancelInvitation_Error"
                   : "#Friend_RemoveFromFriendsList_Error"
               );
-            Object(G.d)(
+            Object(k.d)(
               this.props.ownerWindow,
               n,
               o,
@@ -20188,14 +20193,14 @@ var CLSTAMP = "6128068";
             )
               .then(function() {
                 r.f.FriendStore.RemoveFriend(e.props.friend).then(function(t) {
-                  (3 != t && 6 != t) || Object(G.c)(e.props.ownerWindow, n, a);
+                  (3 != t && 6 != t) || Object(k.c)(e.props.ownerWindow, n, a);
                 });
               })
               .catch(function() {});
           }),
           (t.prototype.BlockFriend = function() {
             var e = this;
-            Object(G.d)(
+            Object(k.d)(
               this.props.ownerWindow,
               Object(u.f)("#Friend_Menu_BlockAllCommunication"),
               Object(u.f)(
@@ -20211,7 +20216,7 @@ var CLSTAMP = "6128068";
           }),
           (t.prototype.UnblockFriend = function() {
             var e = this;
-            Object(G.d)(
+            Object(k.d)(
               this.props.ownerWindow,
               Object(u.f)("#Friend_Menu_UnblockAllCommunication"),
               Object(u.f)(
@@ -20358,7 +20363,7 @@ var CLSTAMP = "6128068";
                               t.InviteToVoice(T, o);
                             }
                           },
-                          c.createElement(k.ob, null),
+                          c.createElement(G.ob, null),
                           Object(u.f)("#Chat_Actions_InviteFriend_VoiceChat")
                         )
                       )
@@ -20503,9 +20508,9 @@ var CLSTAMP = "6128068";
                     ),
                   l.push(c.createElement(K, { key: "aliases", friend: p }));
                 var j = [],
-                  G = void 0;
+                  k = void 0;
                 if (0 == I)
-                  G = c.createElement(
+                  k = c.createElement(
                     "div",
                     { className: "contextMenuGameItem" },
                     c.createElement(
@@ -20516,7 +20521,7 @@ var CLSTAMP = "6128068";
                   );
                 else {
                   var R = r.f.AppInfoStore.GetAppInfo(I);
-                  G = c.createElement(
+                  k = c.createElement(
                     "div",
                     { className: "contextMenuGameItem" },
                     c.createElement(
@@ -20643,7 +20648,7 @@ var CLSTAMP = "6128068";
                             "contextMenuGameTitle contextMenuUnselectable",
                           onSelected: null
                         },
-                        G
+                        k
                       ),
                       c.createElement(
                         "div",
@@ -20840,7 +20845,7 @@ var CLSTAMP = "6128068";
                   c.createElement(
                     "button",
                     { className: t, onClick: this.OnMutingClick },
-                    c.createElement(k.pb, null)
+                    c.createElement(G.pb, null)
                   ),
                   c.createElement(p.A, {
                     min: 0,
@@ -20960,7 +20965,7 @@ var CLSTAMP = "6128068";
                   case 0:
                     return [
                       4,
-                      Object(G.a)(
+                      Object(k.a)(
                         this.props.ownerWindow,
                         Object(u.f)("#Friend_Ban"),
                         Object(u.f)(
@@ -20991,7 +20996,7 @@ var CLSTAMP = "6128068";
               n = ue,
               o = this.props.ownerWindow;
             new Promise(function(t, r) {
-              var a = Object(G.b)(
+              var a = Object(k.b)(
                 o,
                 Object(u.f)("#Friend_Kick", e.props.friend.display_name)
               );
@@ -21208,7 +21213,7 @@ var CLSTAMP = "6128068";
                         key: "showinsteam",
                         onSelected: this.ShowInSteam
                       },
-                      c.createElement(k.Q, null),
+                      c.createElement(G.Q, null),
                       Object(u.f)("#Friend_Menu_ShowInSteam")
                     )
                   )
@@ -21223,7 +21228,7 @@ var CLSTAMP = "6128068";
                             key: "joinparty",
                             onSelected: this.JoinPartyBeacon
                           },
-                          c.createElement(k.Q, null),
+                          c.createElement(G.Q, null),
                           Object(u.f)("#Friend_Menu_JoinFriendPartyBeacon")
                         )
                       )
@@ -21239,7 +21244,7 @@ var CLSTAMP = "6128068";
                             key: "joingame",
                             onSelected: this.JoinGame
                           },
-                          c.createElement(k.Q, null),
+                          c.createElement(G.Q, null),
                           Object(u.f)("#Friend_Menu_JoinFriendGame")
                         )
                       ),
@@ -21252,7 +21257,7 @@ var CLSTAMP = "6128068";
                         key: "launchgame",
                         onSelected: this.LaunchGame
                       },
-                      c.createElement(k.Q, null),
+                      c.createElement(G.Q, null),
                       Object(u.f)("#Friend_Menu_LaunchFriendGame")
                     )
                   )),
@@ -22121,8 +22126,8 @@ var CLSTAMP = "6128068";
       M = n("0wLp"),
       T = n("Hi0u"),
       j = n("ljid"),
-      G = n("vJVb"),
-      k = n("2vnA"),
+      k = n("vJVb"),
+      G = n("2vnA"),
       R = n("XCHq"),
       A = n("QHER"),
       N = (function(e) {
@@ -22512,7 +22517,7 @@ var CLSTAMP = "6128068";
                 )
             );
           }),
-          Object(o.c)([k.B], t.prototype, "m_nTheaterTopHoverHeight", void 0),
+          Object(o.c)([G.B], t.prototype, "m_nTheaterTopHoverHeight", void 0),
           Object(o.c)([S.a], t.prototype, "OnWindowResizeEvent", null),
           Object(o.c)([S.a], t.prototype, "HandleDropComplete", null),
           Object(o.c)([S.a], t.prototype, "OnTabRef", null),
@@ -22733,7 +22738,7 @@ var CLSTAMP = "6128068";
                       v.createElement(I.J, null)
                     ),
                   v.createElement(
-                    G.a,
+                    k.a,
                     null,
                     v.createElement(V, { tab: this.props.tab })
                   ),
@@ -24034,8 +24039,8 @@ var CLSTAMP = "6128068";
           t,
           u.map(function(e, t) {
             return e.flRandom > 0.5
-              ? i.a.createElement(k, { key: t, style: e })
-              : i.a.createElement(G, { key: t, style: e });
+              ? i.a.createElement(G, { key: t, style: e })
+              : i.a.createElement(k, { key: t, style: e });
           })
         );
       },
@@ -24065,7 +24070,7 @@ var CLSTAMP = "6128068";
           })
         });
       },
-      G = function(e) {
+      k = function(e) {
         var t = e.style;
         return i.a.createElement(
           S.animated.svg,
@@ -24084,7 +24089,7 @@ var CLSTAMP = "6128068";
           })
         );
       },
-      k = function(e) {
+      G = function(e) {
         var t = e.style;
         return i.a.createElement(
           S.animated.svg,
@@ -26807,7 +26812,7 @@ var CLSTAMP = "6128068";
                   this,
                   this.OnFriendSettingsChanged.bind(this)
                 ))
-              : (this.m_iFriendSettingsStore = new G(
+              : (this.m_iFriendSettingsStore = new k(
                   this,
                   this.OnFriendSettingsChanged.bind(this)
                 )),
@@ -27170,7 +27175,7 @@ var CLSTAMP = "6128068";
           t
         );
       })(T),
-      G = (function(e) {
+      k = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -27201,7 +27206,7 @@ var CLSTAMP = "6128068";
           t
         );
       })(T),
-      k = n("Oefq"),
+      G = n("Oefq"),
       R = (function() {
         function e() {
           var e = this;
@@ -27319,7 +27324,7 @@ var CLSTAMP = "6128068";
             (this.m_SettingsStore = t.SettingsStore || new M(e)),
             (this.m_FriendStore = t.FriendStore || new _.a()),
             (this.m_ChatStore = t.ChatStore || new d.b(this.m_FriendStore)),
-            (this.m_UIStore = t.UIStore || new k.b(this.m_ChatStore)),
+            (this.m_UIStore = t.UIStore || new G.b(this.m_ChatStore)),
             (this.m_VoiceChatStore = new A.a(this.m_SettingsStore));
         }
         return (
@@ -28111,6 +28116,14 @@ var CLSTAMP = "6128068";
         n
       );
     }
+  },
+  O0sN: function(e, t, n) {
+    "use strict";
+    "VALVE_PUBLIC_PATH" in window
+      ? (n.p = window.VALVE_PUBLIC_PATH)
+      : console.error(
+          "VALVE_PUBLIC_PATH not defined; check for a call to CHTMLHelpers::WebpackConfigScriptlet"
+        );
   },
   OAU9: function(e, t, n) {
     e.exports = {
@@ -31391,18 +31404,18 @@ var CLSTAMP = "6128068";
             : (r && (j += "\t"),
               o.includes("msg") && m && (E = !0),
               o.includes("block") && !y && (E = !0));
-          var G = l.getAttribute("data-copytext");
-          0 == G.length
-            ? (G = l.innerText)
+          var k = l.getAttribute("data-copytext");
+          0 == k.length
+            ? (k = l.innerText)
             : O && l.innerText.length > 0
-            ? (G = l.innerText + (u.includes("-with-newline") ? "\n" : " ") + G)
+            ? (k = l.innerText + (u.includes("-with-newline") ? "\n" : " ") + k)
             : I &&
               l.innerText.length > 0 &&
-              (G += (u.includes("-with-newline") ? "\n" : " ") + l.innerText),
-            0 != G.length &&
+              (k += (u.includes("-with-newline") ? "\n" : " ") + l.innerText),
+            0 != k.length &&
               (E && (n += "\n"),
               g || (n += j),
-              (n += v ? G : G.replace(/\n/g, "\n" + j)),
+              (n += v ? k : k.replace(/\n/g, "\n" + j)),
               b || (n += "\n"),
               w && (n += "\n")),
             (o = u);
@@ -34337,7 +34350,7 @@ var CLSTAMP = "6128068";
       return S;
     }),
       n.d(t, "a", function() {
-        return G;
+        return k;
       });
     var o,
       r = n("mrSG"),
@@ -34807,7 +34820,7 @@ var CLSTAMP = "6128068";
           e
         );
       })(),
-      G = (function() {
+      k = (function() {
         function e(e) {
           var t = this;
           if (
@@ -38420,8 +38433,8 @@ var CLSTAMP = "6128068";
       M = n("1VtQ"),
       T = n("J0bI"),
       j = n("uWOQ"),
-      G = n("s+DT"),
-      k = n("XaMz"),
+      k = n("s+DT"),
+      G = n("XaMz"),
       R = n("PJQb"),
       A = n.n(R),
       N = n("QHER");
@@ -39082,7 +39095,7 @@ var CLSTAMP = "6128068";
           (t.prototype.render = function() {
             var e = this,
               t = this.props.roomList.indexOf(this.props.room);
-            Object(k.a)(
+            Object(G.a)(
               -1 !== t,
               "Couldn't find CChatRoom inside of its list?"
             );
@@ -39583,7 +39596,7 @@ var CLSTAMP = "6128068";
               }),
               f = Object(D.f)("#ChatRoomRole_Description_NoEdit");
             if (r) {
-              var _ = G.a.InitFromClanID(t.GetClanID()),
+              var _ = k.a.InitFromClanID(t.GetClanID()),
                 g =
                   m.a.COMMUNITY_BASE_URL +
                   "gid/" +
@@ -40049,7 +40062,7 @@ var CLSTAMP = "6128068";
                   .DeleteInviteLink(e.invite_code())
                   .then(function(t) {
                     Object(
-                      k.a
+                      G.a
                     )("loaded" == n.loadingState, "somehow got a valid link to delete without links being loaded");
                     var o = n.rgInviteLinks.findIndex(function(t) {
                       return t.invite_code() == e.invite_code();
@@ -40778,7 +40791,7 @@ var CLSTAMP = "6128068";
                 watchingBroadcast: s
               });
             if (s) return null;
-            var l = new G.a(a),
+            var l = new k.a(a),
               u = o;
             return (
               o ||
@@ -41648,8 +41661,8 @@ var CLSTAMP = "6128068";
               "bHasGamePrivacy",
               "bNoMask"
             ]),
-            G = null,
             k = null,
+            G = null,
             R = null,
             A = [
               t,
@@ -41659,13 +41672,13 @@ var CLSTAMP = "6128068";
               T && h.a.NoMask
             ];
           O
-            ? (k = O())
+            ? (G = O())
             : D || i.has_public_party_beacon
-            ? (k = r.createElement(f, { persona: i }))
+            ? (G = r.createElement(f, { persona: i }))
             : Object(s.b)(d)
-            ? ((k = Object(a.f)("#PersonaStateBlocked")), A.push(h.a.blocked))
+            ? ((G = Object(a.f)("#PersonaStateBlocked")), A.push(h.a.blocked))
             : i.is_ingame
-            ? ((k =
+            ? ((G =
                 !i.is_in_nonsteam_game || _ || Object(s.c)(d)
                   ? i.GetCurrentGameName()
                   : Object(a.f)("#PersonaStateInNonSteamGame")),
@@ -41675,13 +41688,13 @@ var CLSTAMP = "6128068";
                   (R = Object(a.f)("#PersonaStateAway"))
                 : (R = i.GetCurrentGameRichPresence()))
             : i.m_broadcastAccountId &&
-              (k = Object(a.f)("#PersonaStateWatchingBroadcast")),
-            k || (k = i.GetLocalizedOnlineStatus());
+              (G = Object(a.f)("#PersonaStateWatchingBroadcast")),
+            G || (G = i.GetLocalizedOnlineStatus());
           var N = !E && !C;
           !1 === C && (N = !0),
             i.is_awayOrSnooze &&
               N &&
-              (G = r.createElement(l.a, { persona: i }));
+              (k = r.createElement(l.a, { persona: i }));
           var B = null;
           n
             ? (B = r.createElement(
@@ -41740,7 +41753,7 @@ var CLSTAMP = "6128068";
                   " *"
                 ),
               r.createElement(u.a, { persona: i }),
-              G,
+              k,
               i.m_bPlayerNamePending &&
                 r.createElement(
                   "div",
@@ -41775,7 +41788,7 @@ var CLSTAMP = "6128068";
                         },
                         r.createElement(p.z, null)
                       ),
-                    k
+                    G
                   ),
                 !S &&
                   R &&
@@ -41849,7 +41862,7 @@ var CLSTAMP = "6128068";
         return je;
       }),
       n.d(t, "d", function() {
-        return ke;
+        return Ge;
       });
     var o = n("mrSG"),
       r = n("tkkQ"),
@@ -42183,7 +42196,7 @@ var CLSTAMP = "6128068";
                     className: n
                   })
                 : o.chat
-                ? v.createElement(G, {
+                ? v.createElement(k, {
                     key: o.chat.GetGroupID(),
                     chat: o.chat,
                     className: n
@@ -42362,7 +42375,7 @@ var CLSTAMP = "6128068";
           (t = Object(o.c)([b.a], t))
         );
       })(v.Component),
-      G = (function(e) {
+      k = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -42409,7 +42422,7 @@ var CLSTAMP = "6128068";
           (t = Object(o.c)([b.a], t))
         );
       })(v.Component),
-      k = n("uWOQ"),
+      G = n("uWOQ"),
       R = n("1w3K"),
       A = n("8o0Y"),
       N = n("EGkk"),
@@ -44213,7 +44226,7 @@ var CLSTAMP = "6128068";
                                 )
                             ),
                           v.createElement(
-                            k.b,
+                            G.b,
                             { href: r.a.COMMUNITY_BASE_URL + "friends/add" },
                             v.createElement(
                               "div",
@@ -44282,7 +44295,7 @@ var CLSTAMP = "6128068";
                   Object(C.m)(
                     "#GiveFeedbackToSteam_Desc",
                     v.createElement(
-                      k.b,
+                      G.b,
                       { href: e, className: "betaFeedbackAnchor" },
                       " ",
                       Object(C.f)("#GiveFeedbackToSteam_URL"),
@@ -44400,7 +44413,7 @@ var CLSTAMP = "6128068";
           }),
           (t.prototype.ShowCurrentUserProfile = function(e) {
             var t = this.props.currentUser.GetCommunityProfileURL();
-            Object(k.e)(e, t), e.stopPropagation();
+            Object(G.e)(e, t), e.stopPropagation();
           }),
           (t.prototype.SetPendingPersonaNameCallback = function(e) {
             29 !== e &&
@@ -44636,7 +44649,7 @@ var CLSTAMP = "6128068";
                                 key: "clan_invite_" + n.GetAccountID()
                               },
                               v.createElement(
-                                k.b,
+                                G.b,
                                 { href: o },
                                 v.createElement(
                                   "div",
@@ -45784,7 +45797,7 @@ var CLSTAMP = "6128068";
                   Object(C.f)("#FriendGroup_Search_CantFind")
                 ),
                 v.createElement(
-                  k.b,
+                  G.b,
                   { href: r.a.COMMUNITY_BASE_URL + "search/users" },
                   Object(C.f)("#FriendGroup_Search_Link")
                 )
@@ -46119,9 +46132,9 @@ var CLSTAMP = "6128068";
                   }
                   b += " " + S;
                 }
-                var G = void 0;
+                var k = void 0;
                 this.props.bSingletonGroup &&
-                  (G = v.createElement(Me, {
+                  (k = v.createElement(Me, {
                     appid: d.persona.m_unGamePlayedAppID
                   })),
                   (b += " " + w.a.hoverClass),
@@ -46141,26 +46154,26 @@ var CLSTAMP = "6128068";
                         context: this.GetFriendRenderContext(),
                         bInGroup: y,
                         bFriendsListEntry: !0,
-                        listStatusIndicatorLeft: G
+                        listStatusIndicatorLeft: k
                       })
                     )
                   ),
                   f && e.push(f);
               }
             }
-            var k = "friendGroup gameGroup",
+            var G = "friendGroup gameGroup",
               A = this.props.group.name,
               N = null;
             return (
               this.props.bSingletonGroup &&
-                ((k += " OtherGamesGroup"),
+                ((G += " OtherGamesGroup"),
                 (N = this.props.bOtherGroups
                   ? Object(C.f)("#FriendGroup_InGame_Others")
                   : Object(C.f)("#FriendGroup_InGame"))),
               v.createElement(
                 u.a,
                 Object(o.a)(
-                  { className: k },
+                  { className: G },
                   this.GetDragDropProps(
                     this.props.group.modifiable ||
                       this.props.group.accepts_group_removals
@@ -46506,16 +46519,16 @@ var CLSTAMP = "6128068";
                 T = "";
               if (2 == e.efriendrelationship && !M) {
                 var j,
-                  G,
-                  k = l.f.FriendStore.FriendGroupStore.incoming_invites_group.map_steamid_to_mutual_friends.get(
+                  k,
+                  G = l.f.FriendStore.FriendGroupStore.incoming_invites_group.map_steamid_to_mutual_friends.get(
                     e.steamid64
                   );
-                void 0 === k
+                void 0 === G
                   ? (l.f.FriendStore.FriendGroupStore.EnsureMutualFriendsForIncomingInvites(),
-                    (G = Object(C.f)("#FriendGroup_NoMutualFriends")),
+                    (k = Object(C.f)("#FriendGroup_NoMutualFriends")),
                     (T = "noMutualFriends"))
-                  : ((G = Object(C.k)("#FriendGroup_YesMutualFriends", k.size)),
-                    (j = k.size)),
+                  : ((k = Object(C.k)("#FriendGroup_YesMutualFriends", G.size)),
+                    (j = G.size)),
                   (n = function() {
                     return v.createElement(
                       "span",
@@ -46525,7 +46538,7 @@ var CLSTAMP = "6128068";
                         { className: "mutualFriendNumber" },
                         j && j + " "
                       ),
-                      G
+                      k
                     );
                   });
               }
@@ -46545,7 +46558,7 @@ var CLSTAMP = "6128068";
                     v.createElement("div", {
                       className: "SteamPlayerGroupLines"
                     }),
-                  this.props.bInVoiceList && v.createElement(Ge, { friend: e }),
+                  this.props.bInVoiceList && v.createElement(ke, { friend: e }),
                   this.props.listStatusIndicatorLeft,
                   D,
                   !this.props.bHideStatusInfo &&
@@ -46587,7 +46600,7 @@ var CLSTAMP = "6128068";
           (t = Object(o.c)([b.a], t))
         );
       })(v.Component),
-      Ge = (function(e) {
+      ke = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -46650,7 +46663,7 @@ var CLSTAMP = "6128068";
           (t = Object(o.c)([b.a], t))
         );
       })(v.Component),
-      ke = (function(e) {
+      Ge = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -47020,7 +47033,7 @@ var CLSTAMP = "6128068";
         return jt;
       }),
       n.d(t, "e", function() {
-        return kt;
+        return Gt;
       }),
       n.d(t, "a", function() {
         return Rt;
@@ -47104,8 +47117,8 @@ var CLSTAMP = "6128068";
       M = n("vJVb"),
       T = n("Hi0u"),
       j = n("e2SU"),
-      G = n("XaMz"),
-      k = n("QHER"),
+      k = n("XaMz"),
+      G = n("QHER"),
       R = n("/IDK"),
       A = n("oh5H"),
       N = n("1VtQ"),
@@ -48904,7 +48917,7 @@ var CLSTAMP = "6128068";
             return m.createElement(
               "div",
               {
-                className: Object(k.a)("groupName", t && "Collapsed"),
+                className: Object(G.a)("groupName", t && "Collapsed"),
                 onClick: function() {
                   return n && o();
                 },
@@ -49224,8 +49237,8 @@ var CLSTAMP = "6128068";
       })(m.Component),
       Te = n("2vnA"),
       je = n("/SYB"),
-      Ge = n("adxy"),
-      ke = n("0N1H"),
+      ke = n("adxy"),
+      Ge = n("0N1H"),
       Re = n("5Nu3"),
       Ae = n("9Cmb"),
       Ne = n("7sd/"),
@@ -49383,7 +49396,7 @@ var CLSTAMP = "6128068";
                       Object(A.f)("#Chat_ErrorSending")
                     ));
               }
-            var _ = Object(k.a)("msg", c, t, {
+            var _ = Object(G.a)("msg", c, t, {
                 isCurrentUser: u.self.accountid === o.unAccountID,
                 HasTimeStamp: !d,
                 EmojiOnly: Ae.d(p)
@@ -49408,7 +49421,7 @@ var CLSTAMP = "6128068";
                   context: b,
                   parser: u.GetBBCodeParser()
                 }),
-              y = Object(k.a)("msgText", {
+              y = Object(G.a)("msgText", {
                 MsgNoUserContent: !o.HasUserContent(),
                 EmoticonOnly: f
               });
@@ -49438,7 +49451,7 @@ var CLSTAMP = "6128068";
         var t = e.friend.persona,
           n = !1;
         t.m_broadcastAccountId && (n = !0);
-        var o = Object(k.a)(
+        var o = Object(G.a)(
           e.className,
           (t.is_ingame ? "ingame" : t.is_online && "online") || "offline",
           { away: t.is_awayOrSnooze, watchingbroadcast: n }
@@ -49631,7 +49644,7 @@ var CLSTAMP = "6128068";
               t = this.props.chatView.chat,
               n = l.f.FriendStore.GetPlayer(e.unAccountID),
               o = e.strMessage.slice(e.strMessage.search(/\s/g) + 1),
-              r = Object(k.a)(
+              r = Object(G.a)(
                 "speaker",
                 n.persona.is_ingame
                   ? "ingame"
@@ -49644,7 +49657,7 @@ var CLSTAMP = "6128068";
                   ? this.props.speakerWidth + "px"
                   : void 0
               },
-              a = Object(k.a)(
+              a = Object(G.a)(
                 "msg",
                 "ChatMsgSlashEmote",
                 "ChatRoomSlashEmote",
@@ -49937,16 +49950,16 @@ var CLSTAMP = "6128068";
               r = this.props.chatView,
               i = r.chat.chat_message_blocks,
               a = !r.IsChatRoom() && i.time_passes_index,
-              s = r.IsChatRoom() ? r.chat.first_unread_msg_time : ke.i,
+              s = r.IsChatRoom() ? r.chat.first_unread_msg_time : Ge.i,
               c = i.message_blocks[e],
-              l = 0 == e ? ke.i : i.message_blocks[e - 1].GetRTimeLastMessage();
+              l = 0 == e ? Ge.i : i.message_blocks[e - 1].GetRTimeLastMessage();
             if (s && l <= s && c.GetRTimeLastMessage() > s) {
               var u = c,
                 p = void 0;
               s > c.GetRTimeFirstMessage() &&
                 ((p = (t = c.CreateVirtualSplitOnTimestamp(s))[0]),
                 (u = t[1]),
-                Object(G.a)(p.messages.length, "No messages in prefix"));
+                Object(k.a)(p.messages.length, "No messages in prefix"));
               var d = s;
               return m.createElement(
                 m.Fragment,
@@ -50631,7 +50644,7 @@ var CLSTAMP = "6128068";
             if ((this.LogScrollInfo("OnScroll"), 0 != r)) {
               var c = o - n <= r,
                 l = a - i <= s;
-              Object(G.a)(
+              Object(k.a)(
                 l == e.is_scrolled_to_bottom,
                 e.GetUniqueID() + ": computed and stored at bottom don't match"
               ),
@@ -50655,7 +50668,7 @@ var CLSTAMP = "6128068";
                         "**** IGNORING APPARENT SCROLL UP WHILE PINNED TO BOTTOM IN LAYOUT"
                       ),
                     (u = o - r),
-                    Object(G.a)(
+                    Object(k.a)(
                       u >= 0,
                       e.GetUniqueID() +
                         ": Onscroll client height bigger than scroll height"
@@ -50689,7 +50702,7 @@ var CLSTAMP = "6128068";
                 e.lastScrollHeight - e.lastScrollTop <= e.lastClientHeight
               );
               p &&
-                (Object(G.a)(
+                (Object(k.a)(
                   !p,
                   e.GetUniqueID() + ": setting mismatched computed and stored"
                 ),
@@ -50708,13 +50721,13 @@ var CLSTAMP = "6128068";
               n = e.clientHeight;
             this.LogScrollInfo("ScrollToBottom");
             var o = t - n;
-            Object(G.a)(
+            Object(k.a)(
               o >= 0,
               this.props.chatView.GetUniqueID() +
                 ": ScrollToBottom client height bigger than scroll height"
             ),
               this.m_animation && this.m_animation.Cancel(),
-              (this.m_animation = new Ge.a(
+              (this.m_animation = new ke.a(
                 this.m_elHistoryScroll,
                 { scrollTop: o },
                 { msDuration: 300, timing: "sine", onComplete: function() {} }
@@ -50783,7 +50796,7 @@ var CLSTAMP = "6128068";
                 (e.lastScrollHeight = n),
                 (e.lastClientHeight = o),
                 (this.m_elHistoryScroll.scrollTop = e.lastScrollTop),
-                Object(G.a)(
+                Object(k.a)(
                   e.is_scrolled_to_bottom ==
                     e.lastScrollHeight - e.lastScrollTop <= e.lastClientHeight,
                   e.GetUniqueID() + ": setting mismatched computed and stored"
@@ -51050,7 +51063,7 @@ var CLSTAMP = "6128068";
           Object(o.d)(t, e),
           (t.prototype.OnDragEnter = function(e, t) {
             if (
-              (Object(G.a)(
+              (Object(k.a)(
                 (e && "friend" == e.type) || t,
                 "Invalid data type passed to ChatRoomGroupDialog.OnDragEnter"
               ),
@@ -51071,7 +51084,7 @@ var CLSTAMP = "6128068";
             e.dataTransfer.dropEffect = "move";
           }),
           (t.prototype.OnDrop = function(e, t) {
-            Object(G.a)(
+            Object(k.a)(
               (e && "friend" == e.type) || 0 != t.dataTransfer.files.length,
               "Invalid data type passed to ChatRoomGroupDialog.OnDrop"
             );
@@ -51277,7 +51290,7 @@ var CLSTAMP = "6128068";
                 m.createElement(
                   "div",
                   {
-                    className: Object(k.a)(
+                    className: Object(G.a)(
                       "InnerChatTab",
                       !e.m_bShowGlobalChat && "Active"
                     ),
@@ -51299,7 +51312,7 @@ var CLSTAMP = "6128068";
                   m.createElement(
                     "div",
                     {
-                      className: Object(k.a)(
+                      className: Object(G.a)(
                         "InnerChatTab",
                         e.m_bShowGlobalChat && "Active"
                       ),
@@ -51417,15 +51430,15 @@ var CLSTAMP = "6128068";
             i && (T += " InsetWindowOpen"),
               s && (T += " BothChatsDisplayed"),
               e.IsNamedGroupChat() && (M += " namedGroup");
-            var G = "chatBody";
+            var k = "chatBody";
             this.state.dropToInviteFriend &&
-              (G = "chatBody chatRoomActiveDrop"),
+              (k = "chatBody chatRoomActiveDrop"),
               l.f.SettingsStore.FriendsSettings.bCompactFriendsList &&
                 (M += " compactView"),
               _ && (M += " broadcastVisible");
-            var k = null;
+            var G = null;
             this.props.bHideMemberList ||
-              (k = m.createElement(be, {
+              (G = m.createElement(be, {
                 groupView: this.props.groupView,
                 inactive: I
               }));
@@ -51473,7 +51486,7 @@ var CLSTAMP = "6128068";
                       )
                     ),
                     m.createElement("div", { className: "dropTargetBox" }),
-                    k
+                    G
                   ),
                   N
                 )
@@ -51545,7 +51558,7 @@ var CLSTAMP = "6128068";
                           (!t.m_bChatHidden || !t.isBroadcastShown) &&
                             m.createElement(
                               "div",
-                              { className: G },
+                              { className: k },
                               t.isBroadcastShown && this.RenderInnerChatTabs(),
                               m.createElement(
                                 "div",
@@ -51655,13 +51668,13 @@ var CLSTAMP = "6128068";
           (t.prototype.OnDragEnter = function(e, t) {
             if (
               (e
-                ? Object(G.a)(
+                ? Object(k.a)(
                     "friend" == e.type ||
                       "chatroomgroup" == e.type ||
                       "clan" == e.type,
                     "Invalid data type passed to FriendChatDialog.OnDrop"
                   )
-                : Object(G.a)(
+                : Object(k.a)(
                     t,
                     "Invalid data type passed to FriendChatDialog.OnDrop"
                   ),
@@ -51716,13 +51729,13 @@ var CLSTAMP = "6128068";
           }),
           (t.prototype.OnDrop = function(e, t) {
             e
-              ? Object(G.a)(
+              ? Object(k.a)(
                   "friend" == e.type ||
                     "chatroomgroup" == e.type ||
                     "clan" == e.type,
                   "Invalid data type passed to FriendChatDialog.OnDrop"
                 )
-              : Object(G.a)(
+              : Object(k.a)(
                   0 != t.dataTransfer.files.length,
                   "Invalid data type passed to FriendChatDialog.OnDrop"
                 );
@@ -51906,7 +51919,7 @@ var CLSTAMP = "6128068";
                 },
                 m.createElement(j.A, { showChat: !1 })
               ),
-              m.createElement(kt, {
+              m.createElement(Gt, {
                 chatView: this.props.chatView,
                 additionalClasses: "broadcastVisible"
               })
@@ -51988,7 +52001,7 @@ var CLSTAMP = "6128068";
             } else f = !1;
             var y = {};
             this.props.isActive || (y.display = "none");
-            var S = Object(k.a)(
+            var S = Object(G.a)(
                 "chatWindow",
                 "MultiUserChat",
                 r && "VoiceActive",
@@ -51999,7 +52012,7 @@ var CLSTAMP = "6128068";
                   "compactView",
                 f && "broadcastVisible"
               ),
-              C = Object(k.a)(
+              C = Object(G.a)(
                 "chatBody",
                 (c || u || d) && "chatRoomActiveDrop"
               ),
@@ -52047,7 +52060,7 @@ var CLSTAMP = "6128068";
                       })
                     ),
                     !i &&
-                      m.createElement(kt, {
+                      m.createElement(Gt, {
                         chatView: this.props.chatView,
                         additionalClasses: void 0
                       }),
@@ -52336,7 +52349,7 @@ var CLSTAMP = "6128068";
           }),
           (t.prototype.OnDragEnter = function(e) {
             if (
-              (Object(G.a)(
+              (Object(k.a)(
                 e &&
                   ("chattab" == e.type ||
                     "friend" == e.type ||
@@ -52364,7 +52377,7 @@ var CLSTAMP = "6128068";
           }),
           (t.prototype.OnDrop = function(e, t) {
             if (
-              (Object(G.a)(
+              (Object(k.a)(
                 e &&
                   ("chattab" == e.type ||
                     "friend" == e.type ||
@@ -52792,7 +52805,7 @@ var CLSTAMP = "6128068";
       }
       l
         ? Object(T.c)(
-            m.createElement(Gt, Object(o.a)({}, e)),
+            m.createElement(kt, Object(o.a)({}, e)),
             n,
             "InviteDialog",
             {
@@ -52810,7 +52823,7 @@ var CLSTAMP = "6128068";
             Object(A.f)("#Chat_Actions_DropGroupInvite_Denied_Description")
           );
     }
-    var Gt = (function(e) {
+    var kt = (function(e) {
         function t(t) {
           var n = e.call(this, t) || this;
           return (n.invitee = n.props.invitee), n;
@@ -53097,7 +53110,7 @@ var CLSTAMP = "6128068";
           (t = Object(o.c)([O.a], t))
         );
       })(m.Component),
-      kt = (function(e) {
+      Gt = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -53181,7 +53194,7 @@ var CLSTAMP = "6128068";
         return m.createElement(
           "div",
           {
-            className: Object(k.a)("BroadcastChatExpander", n),
+            className: Object(G.a)("BroadcastChatExpander", n),
             onClick: t,
             title: Object(A.f)("#Broadcast_View_ShowChat")
           },
@@ -53382,7 +53395,7 @@ var CLSTAMP = "6128068";
               r = Object(o.f)(e, ["chatView", "group", "clan"]);
             if (!t && !n)
               return (
-                Object(G.a)(
+                Object(k.a)(
                   !1,
                   "Either a group or clan must be passed to DropGroupToInviteFriendMessage."
                 ),
@@ -53507,10 +53520,10 @@ var CLSTAMP = "6128068";
         return j;
       }),
       n.d(t, "D", function() {
-        return G;
+        return k;
       }),
       n.d(t, "N", function() {
-        return k;
+        return G;
       }),
       n.d(t, "pb", function() {
         return R;
@@ -54677,7 +54690,7 @@ var CLSTAMP = "6128068";
         })
       );
     }
-    function G() {
+    function k() {
       return r.createElement(
         "svg",
         {
@@ -54725,7 +54738,7 @@ var CLSTAMP = "6128068";
         )
       );
     }
-    function k() {
+    function G() {
       return r.createElement(
         "svg",
         {
@@ -57186,10 +57199,10 @@ var CLSTAMP = "6128068";
             s || ((I += " " + g.a.notFriends), (D = !1)),
               c && ((I += " " + g.a.communicationBlocked), (T = !0));
             var j = void 0 !== a,
-              G = t.is_awayOrSnooze,
-              k = void 0;
+              k = t.is_awayOrSnooze,
+              G = void 0;
             return (
-              (k = j
+              (G = j
                 ? r.createElement(
                     "div",
                     null,
@@ -57274,7 +57287,7 @@ var CLSTAMP = "6128068";
                           className: Object(f.a)(
                             g.a.miniProfilePlayer,
                             t.online_state,
-                            G && g.a.isAway,
+                            k && g.a.isAway,
                             Object(u.d)(t)
                           )
                         },
@@ -57282,7 +57295,7 @@ var CLSTAMP = "6128068";
                           persona: this.props.persona,
                           community_data: _
                         }),
-                        G &&
+                        k &&
                           r.createElement(m.a, {
                             persona: t,
                             animating: !0,
@@ -57298,8 +57311,8 @@ var CLSTAMP = "6128068";
                             r.createElement(
                               "div",
                               { className: g.a.persona },
-                              k,
-                              G &&
+                              G,
+                              k &&
                                 r.createElement(
                                   "div",
                                   { className: g.a.awayStatusLabel },
@@ -57312,7 +57325,7 @@ var CLSTAMP = "6128068";
                                   this.props.persona.GetLocalizedOnlineStatus()
                                 ),
                               "online" == t.online_state &&
-                                !G &&
+                                !k &&
                                 r.createElement(
                                   "div",
                                   { className: g.a.awayStatusLabel },
@@ -58574,7 +58587,7 @@ var CLSTAMP = "6128068";
       r,
       i,
       a = n("mrSG"),
-      s = n("tkkQ"),
+      s = (n("O0sN"), n("tkkQ")),
       c = n("1n9R"),
       l = n("ywG3"),
       u = n("YiOU"),
@@ -58797,8 +58810,7 @@ var CLSTAMP = "6128068";
       I = (n("w/TS"), n("whIR"), n("eeM7"), n("m1EC"), n("ewzr"));
     (window.AssertMsg = b.a),
       document.addEventListener("DOMContentLoaded", function() {
-        Object(s.b)(),
-          (n.p = s.a.COMMUNITY_CDN_URL + "public/javascript/webui/");
+        Object(s.b)();
         var e = !0;
         c.a.steamid && Object(O.a)(c.a.steamid),
           !s.a.IN_CLIENT &&
@@ -60271,14 +60283,14 @@ var CLSTAMP = "6128068";
           e
         );
       })(),
-      G = n("OJz+"),
-      k = n("RBVV"),
+      k = n("OJz+"),
+      G = n("RBVV"),
       R = n("4HGb"),
       A = (function() {
         return function(e) {
           var t = this;
-          (this.m_UsabilityHandler = Object(G.c)(
-            k.Z.NotifyRequestClientUsabilityMetricsHandler,
+          (this.m_UsabilityHandler = Object(k.c)(
+            G.Z.NotifyRequestClientUsabilityMetricsHandler,
             function(e) {
               return Object(o.b)(t, void 0, void 0, function() {
                 var t;
@@ -60286,7 +60298,7 @@ var CLSTAMP = "6128068";
                   switch (n.label) {
                     case 0:
                       return (
-                        (t = R.b.Init(k.S))
+                        (t = R.b.Init(G.S))
                           .Body()
                           .set_metrics_run_id(e.Body().metrics_run_id()),
                         t.Body().set_metrics_version(3),
@@ -60342,7 +60354,7 @@ var CLSTAMP = "6128068";
                       n.sent(), (n.label = 9);
                     case 9:
                       return (
-                        k.ab.NotifyClientUsabilityMetrics(
+                        G.ab.NotifyClientUsabilityMetrics(
                           l.f.CMInterface.GetServiceTransport(),
                           t
                         ),
@@ -61742,7 +61754,7 @@ var CLSTAMP = "6128068";
       }
       Te = [];
     }
-    var Ge = (function(e) {
+    var ke = (function(e) {
         function t(n) {
           var o = e.call(this, n) || this;
           return (
@@ -61903,7 +61915,7 @@ var CLSTAMP = "6128068";
           t
         );
       })(P.Component),
-      ke = n("adxy"),
+      Ge = n("adxy"),
       Re = n("s+DT"),
       Ae = function(e) {
         var t = e.children;
@@ -61997,7 +62009,7 @@ var CLSTAMP = "6128068";
       return {
         url: Xe,
         youtube: et,
-        filteredurl: kt,
+        filteredurl: Gt,
         emoticon: At,
         img: nt,
         video: at,
@@ -62006,7 +62018,7 @@ var CLSTAMP = "6128068";
         inviteurl: St,
         publishedfile: Dt,
         tradeofferlink: Mt,
-        econitem: Gt,
+        econitem: kt,
         steamstore: Nt,
         broadcast: jt,
         oembed: pt,
@@ -62115,7 +62127,7 @@ var CLSTAMP = "6128068";
             this.setState(
               { nResizedWidth: o, bMinimized: !1, bIsMinimizing: !0 },
               function() {
-                (t.m_animationCollapse = new ke.b(
+                (t.m_animationCollapse = new Ge.b(
                   t,
                   { nResizedWidth: r },
                   {
@@ -62147,7 +62159,7 @@ var CLSTAMP = "6128068";
             this.state.bResized &&
               (this.m_animationCollapse && this.m_animationCollapse.Cancel(),
               this.setState({ bIsRestoring: !0 }, function() {
-                (t.m_animationCollapse = new ke.b(
+                (t.m_animationCollapse = new Ge.b(
                   t,
                   { nResizedWidth: t.m_frameDefaultWidth },
                   {
@@ -62446,7 +62458,7 @@ var CLSTAMP = "6128068";
                     className:
                       "BBCodeYouTubeComponent_Sizer BBCodeResizableElement"
                   },
-                  P.createElement(Ge, {
+                  P.createElement(ke, {
                     video: this.GetVideoID(),
                     startSeconds: i,
                     width: 640,
@@ -64321,7 +64333,7 @@ var CLSTAMP = "6128068";
           t
         );
       })(Ee.b),
-      Gt = (function(e) {
+      kt = (function(e) {
         function t(t) {
           var n = e.call(this, t) || this;
           return (
@@ -64615,7 +64627,7 @@ var CLSTAMP = "6128068";
           (t = Object(o.c)([te.a], t))
         );
       })(Ee.b),
-      kt = (function(e) {
+      Gt = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -65003,7 +65015,7 @@ var CLSTAMP = "6128068";
               M = !("0" == v || null == v),
               T = this.state.nThumbnailHovered,
               j = this.state.bPlayVideo,
-              G = P.createElement(
+              k = P.createElement(
                 "div",
                 { className: ee.a.ChatMessageSteamStore_FilteredDescription },
                 Object(V.f)("#bbcode_steam_store_embed_Filtered"),
@@ -65110,7 +65122,7 @@ var CLSTAMP = "6128068";
                     P.createElement(
                       "div",
                       { className: ee.a.ChatMessageSteamStore_Description },
-                      S ? G : u,
+                      S ? k : u,
                       " "
                     ),
                     P.createElement(
@@ -67810,15 +67822,15 @@ var CLSTAMP = "6128068";
     }
     function T(e) {
       var t = e;
-      return G(t) ? "#'" + t.id + "'.'" + t.className + "'" : "#?.?";
+      return k(t) ? "#'" + t.id + "'.'" + t.className + "'" : "#?.?";
     }
     function j(e) {
       return null == e ? "(?, ?)" : "(" + e.x + ", " + e.y + ")";
     }
-    function G(e) {
+    function k(e) {
       return null != e && void 0 !== e.focus;
     }
-    function k(e) {
+    function G(e) {
       for (
         var t = 1, n = e.ownerDocument.defaultView, o = e;
         null != o;
@@ -67831,7 +67843,7 @@ var CLSTAMP = "6128068";
     }
     function R(e) {
       if (E.IsDocumentUsingZoom) {
-        var t = k(e),
+        var t = G(e),
           n = e.getBoundingClientRect();
         return {
           x: { min: n.left * t, max: n.right * t },
@@ -67935,7 +67947,7 @@ var CLSTAMP = "6128068";
           (t.prototype.HandleOnFocusChanged = function(e, t, n, o) {
             var r = this.m_containerRef.current;
             if (r) {
-              var i = k(r);
+              var i = G(r);
               if (null != o)
                 (r.style.opacity = n ? "100%" : "75%"),
                   (r.style.left = o.x / i + "px"),
@@ -68009,7 +68021,7 @@ var CLSTAMP = "6128068";
               D(e + " none"), (t.style.display = "none");
             else if (null != this.m_focusedElement) {
               var n = R(this.m_focusedElement),
-                o = k(t);
+                o = G(t);
               D(
                 e +
                   " (" +
@@ -68069,14 +68081,14 @@ var CLSTAMP = "6128068";
         return (
           Object(o.d)(t, e),
           (t.prototype.GetFocus = function() {
-            return void 0 !== this.m_doc && G(this.m_doc.activeElement)
+            return void 0 !== this.m_doc && k(this.m_doc.activeElement)
               ? this.m_doc.activeElement
               : null;
           }),
           (t.prototype.Focus = function(e, t) {
             null != e
               ? (D("HDFC Focus e.focus {", e), e.focus(t), D("+ }"))
-              : G(this.m_doc.activeElement) &&
+              : k(this.m_doc.activeElement) &&
                 (D("HDFC Focus null with active IsHTMLElement e.blur() {", e),
                 this.m_doc.activeElement.blur(),
                 D("+ }"));
@@ -68087,7 +68099,7 @@ var CLSTAMP = "6128068";
           (t.prototype.AddFocusListener = function(e) {
             D("CHtmlDomFocusController AddFocusListener");
             var t = function(t) {
-              G(t.target) &&
+              k(t.target) &&
                 (D("HDFC focus listener {"), e(t.target), D("+ }"));
             };
             this.m_focusListeners.set(e, t),
@@ -68102,7 +68114,7 @@ var CLSTAMP = "6128068";
           (t.prototype.AddBlurListener = function(e) {
             D("CHtmlDomFocusController AddBlurListener");
             var t = function(t) {
-              G(t.target) && (D("HDFC blur listener {"), e(t.target), D("+ }"));
+              k(t.target) && (D("HDFC blur listener {"), e(t.target), D("+ }"));
             };
             this.m_blurListeners.set(e, t),
               this.m_win.addEventListener("blur", t, !0);
@@ -68652,7 +68664,7 @@ var CLSTAMP = "6128068";
           }),
           (t.GetNavAreaObjects = function(e, n, o) {
             if (!E.IsNavEnabled) return {};
-            if (!G(e))
+            if (!k(e))
               return (
                 Object(b.a)(
                   !0 !== o.target,
@@ -68853,7 +68865,7 @@ var CLSTAMP = "6128068";
               E = -1 === i ? "max" : "min",
               w = { min: S[C], max: S[C] },
               M =
-                a && G(n)
+                a && k(n)
                   ? ((O = w),
                     (I = R(n)[C]),
                     {
@@ -68861,7 +68873,7 @@ var CLSTAMP = "6128068";
                       max: O.max > I.max ? O.max : I.max
                     })
                   : w,
-              k = null,
+              G = null,
               N = null,
               B = 1 / 0,
               L = Object(v.m)(e, "data-nav");
@@ -68876,9 +68888,9 @@ var CLSTAMP = "6128068";
                   (null !== F && ++F, ne.getAttribute("data-nav") !== _.Area)
                 ) {
                   c &&
-                    null === k &&
+                    null === G &&
                     "true" === ne.getAttribute("data-nav-preferred") &&
-                    (k = ne);
+                    (G = ne);
                   var U = 0;
                   if (f) {
                     var H = R(ne),
@@ -68907,7 +68919,7 @@ var CLSTAMP = "6128068";
               void 0 === a && (a = !1);
               var s = n.getAttribute("data-nav");
               if (s === _.Stop || s === _.Click) {
-                if (G(n)) {
+                if (k(n)) {
                   var c = n,
                     l = A(c),
                     u = !o || a ? l : { x: o.x, y: o.y };
@@ -68924,8 +68936,8 @@ var CLSTAMP = "6128068";
               return null;
             };
             if (
-              (D("+ Searching " + L.length + " elements:", L, P, k, N), k) &&
-              (ee = Z(k, !0))
+              (D("+ Searching " + L.length + " elements:", L, P, G, N), G) &&
+              (ee = Z(G, !0))
             )
               return ee;
             if (N) {
@@ -69320,7 +69332,7 @@ var CLSTAMP = "6128068";
                       if (null != t)
                         for (
                           var r = R(t),
-                            i = k(t),
+                            i = G(t),
                             a = r[e].min - o * i,
                             s = r[e].max + o * i,
                             c = t.parentElement;
@@ -69353,7 +69365,7 @@ var CLSTAMP = "6128068";
                                     : Math.abs(h.min) <= Math.abs(h.max)
                                     ? 0
                                     : 1,
-                                _ = k(c),
+                                _ = G(c),
                                 g = ((1 - f) * h.min + f * h.max) / _;
                               return (
                                 D(
@@ -69469,7 +69481,7 @@ var CLSTAMP = "6128068";
             )
               return { htmlElement: s, pos: u || A(s) };
             var p = Object(v.m)(e, "data-nav").filter(function(e) {
-              return G(e) && "true" === e.getAttribute("data-nav-preferred");
+              return k(e) && "true" === e.getAttribute("data-nav-preferred");
             });
             if (p.length > 0) {
               var m = p[0],
@@ -69486,7 +69498,7 @@ var CLSTAMP = "6128068";
                 "[data-nav='" + _.Stop + "'],[data-nav='" + _.Click + "]"
               )
             ).filter(function(e) {
-              return G(e);
+              return k(e);
             });
             if (!f || 0 === f.length) return null;
             var b = t.GetNavAreaObjects(e, r, {
@@ -69520,8 +69532,8 @@ var CLSTAMP = "6128068";
                 T < j.length;
                 T++
               ) {
-                var k = o * R((H = j[T]))[n][E];
-                k < M && ((M = k), (w = H));
+                var G = o * R((H = j[T]))[n][E];
+                G < M && ((M = G), (w = H));
               }
               if (null !== w) return { htmlElement: w, pos: A(w) };
             }
@@ -69562,7 +69574,7 @@ var CLSTAMP = "6128068";
               a,
               s = null,
               c = this.GetFocusController().GetFocus();
-            if (G(c) && r.contains(c) && c !== o && o.contains(c)) {
+            if (k(c) && r.contains(c) && c !== o && o.contains(c)) {
               var l =
                   (null !== this.m_focusPos &&
                     this.m_focusedHtmlElement === c &&
@@ -70864,8 +70876,8 @@ var CLSTAMP = "6128068";
       M = n("UDpV"),
       T = n.n(M),
       j = n("QxgC"),
-      G = n("e2SU"),
-      k = n("tY0L"),
+      k = n("e2SU"),
+      G = n("tY0L"),
       R = n("Jdiq"),
       A = n("syWt"),
       N = new RegExp("ː([^ː]*)ː", "g"),
@@ -70939,7 +70951,7 @@ var CLSTAMP = "6128068";
             for (var n = e.split(N), o = [], i = 0; i < n.length; i += 1)
               i % 2 == 1
                 ? o.push(
-                    r.createElement(k.b, {
+                    r.createElement(G.b, {
                       emoticonHoverStore: R.b,
                       key: i,
                       emoticon: n[i],
@@ -71303,7 +71315,7 @@ var CLSTAMP = "6128068";
                             title: Object(m.f)("#ChatEntryButton_Submit"),
                             onClick: this.SendMessage
                           },
-                          r.createElement(G.fb, null)
+                          r.createElement(k.fb, null)
                         )
                       ),
                       r.createElement(
@@ -71335,7 +71347,7 @@ var CLSTAMP = "6128068";
                                 emoticonHoverStore: R.b,
                                 strFlairGroupID: this.m_chat.m_strFlairGroupID,
                                 title: Object(m.f)("#ChatEntryButton_Flair"),
-                                buttonIcon: r.createElement(G.e, null)
+                                buttonIcon: r.createElement(k.e, null)
                               })
                             : null
                         )
@@ -72286,10 +72298,10 @@ var CLSTAMP = "6128068";
         return j;
       }),
       n.d(t, "z", function() {
-        return G;
+        return k;
       }),
       n.d(t, "u", function() {
-        return k;
+        return G;
       }),
       n.d(t, "o", function() {
         return B;
@@ -72592,7 +72604,7 @@ var CLSTAMP = "6128068";
           t
         );
       })(T),
-      G = (function(e) {
+      k = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -72644,7 +72656,7 @@ var CLSTAMP = "6128068";
           t
         );
       })(T),
-      k = (function(e) {
+      G = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -78651,8 +78663,8 @@ PERFORMANCE OF THIS SOFTWARE.
         Object(o.a)({ className: Object(_.a)(t, v.AddonPickerMessage) }, n)
       );
     }
-    var G = n("OTLo"),
-      k = n("z9WT"),
+    var k = n("OTLo"),
+      G = n("z9WT"),
       R = (function(e) {
         function t() {
           var t = (null !== e && e.apply(this, arguments)) || this;
@@ -79107,12 +79119,12 @@ PERFORMANCE OF THIS SOFTWARE.
           Object(m.m)(
             "#AddonPicker_AcquireAtPointsShopOrMarket",
             a.createElement(
-              k.b,
+              G.b,
               { href: b.c.STORE_BASE_URL + "points/shop/c/emoticons" },
               Object(m.f)("#AddonPicker_AcquireAtPointsShop_Link")
             ),
             a.createElement(
-              k.b,
+              G.b,
               { href: b.c.COMMUNITY_BASE_URL + "market" },
               Object(m.f)("#AddonPicker_AcquireAtPointsShopOrMarket_Link")
             )
@@ -79175,7 +79187,7 @@ PERFORMANCE OF THIS SOFTWARE.
                         Object(m.m)(
                           "#AddonPicker_AcquireAtPointsShop",
                           a.createElement(
-                            k.b,
+                            G.b,
                             {
                               href:
                                 b.c.STORE_BASE_URL + "points/shop/c/stickers"
@@ -79249,7 +79261,7 @@ PERFORMANCE OF THIS SOFTWARE.
                         Object(m.m)(
                           "#AddonPicker_AcquireAtPointsShop",
                           a.createElement(
-                            k.b,
+                            G.b,
                             {
                               href:
                                 b.c.STORE_BASE_URL + "points/shop/c/chateffects"
@@ -79403,7 +79415,7 @@ PERFORMANCE OF THIS SOFTWARE.
           n = e.sticker,
           o = n.name,
           r = n.appid,
-          i = G.a.GetAppInfo(r);
+          i = k.a.GetAppInfo(r);
         return a.createElement(
           N,
           { target: t, title: o, subtitle: i.name },
@@ -79467,7 +79479,7 @@ PERFORMANCE OF THIS SOFTWARE.
           o = n.name,
           r = n.appid,
           i = e.roomEffectSettings[o],
-          s = G.a.GetAppInfo(r);
+          s = k.a.GetAppInfo(r);
         return a.createElement(
           N,
           { target: t, title: o, subtitle: s.name },
@@ -81197,10 +81209,10 @@ PERFORMANCE OF THIS SOFTWARE.
             }
           }, []),
           j = m.length > 0,
-          G = Object(p.a)("FriendPicker", j && "FriendPicker_FriendsChosen"),
-          k = b || h,
+          k = Object(p.a)("FriendPicker", j && "FriendPicker_FriendsChosen"),
+          G = b || h,
           R = m.map(function(e) {
-            return r.a.createElement(k, {
+            return r.a.createElement(G, {
               friend: e,
               key: e.accountid,
               onClick: function() {
@@ -81234,7 +81246,7 @@ PERFORMANCE OF THIS SOFTWARE.
           });
         return r.a.createElement(
           "div",
-          { className: G },
+          { className: k },
           r.a.createElement(
             c.q,
             {
@@ -81414,7 +81426,7 @@ PERFORMANCE OF THIS SOFTWARE.
   yoQ3: function(e, t, n) {
     "use strict";
     n.d(t, "c", function() {
-      return G;
+      return k;
     }),
       n.d(t, "e", function() {
         return N;
@@ -81576,10 +81588,10 @@ PERFORMANCE OF THIS SOFTWARE.
       M = n("XaMz"),
       T = n("kQil"),
       j = n("hEDq");
-    function G(e, t, n, o, r) {
+    function k(e, t, n, o, r) {
       (r ? a.h : setTimeout)(function() {
         g.render(
-          u.createElement(k, {
+          u.createElement(G, {
             friends: t,
             chats: n,
             browserContext: e,
@@ -81589,7 +81601,7 @@ PERFORMANCE OF THIS SOFTWARE.
         );
       });
     }
-    var k = (function(e) {
+    var G = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -82602,7 +82614,7 @@ PERFORMANCE OF THIS SOFTWARE.
   yolM: function(e, t, n) {
     "use strict";
     n.d(t, "a", function() {
-      return G;
+      return k;
     });
     var o = n("mrSG"),
       r = n("LAqV"),
@@ -83287,9 +83299,9 @@ PERFORMANCE OF THIS SOFTWARE.
         );
       }),
       j = n("/Byk");
-    function G(e, t, n) {
+    function k(e, t, n) {
       Object(s.c)(
-        c.createElement(k, { browserContext: e, startingPage: n }),
+        c.createElement(G, { browserContext: e, startingPage: n }),
         t,
         Object(d.f)("#Settings"),
         {
@@ -83300,7 +83312,7 @@ PERFORMANCE OF THIS SOFTWARE.
         Object(i.g)(t)
       );
     }
-    var k = (function(e) {
+    var G = (function(e) {
         function t(t) {
           return e.call(this, t, Object(d.f)("#Settings")) || this;
         }
@@ -83584,7 +83596,7 @@ PERFORMANCE OF THIS SOFTWARE.
         return b;
       }),
       n.d(t, "b", function() {
-        return G;
+        return k;
       });
     var o = n("mrSG"),
       r = n("OJz+"),
@@ -84498,7 +84510,7 @@ PERFORMANCE OF THIS SOFTWARE.
     function j(e) {
       return (e.msPing || 0) + (e.nCMLoad || 0);
     }
-    var G = (function(e) {
+    var k = (function(e) {
       function t(t) {
         var n = e.call(this) || this;
         return (
