@@ -16655,12 +16655,12 @@
               this.state.bOnceVisible || this.setState({ bOnceVisible: !0 });
             }),
             (e.prototype.render = function() {
-              var t = this,
-                e = this.props,
-                a = e.eventModel,
-                n = e.bIsPreview,
-                r = e.language,
-                o = e.promotionName;
+              var e = this.props,
+                t = e.eventModel,
+                a = e.bIsPreview,
+                n = e.language,
+                r = e.promotionName,
+                o = e.activeTab;
               return H.createElement(
                 f.a,
                 null,
@@ -16675,19 +16675,19 @@
                       { className: ar.a.SaleBroadcastSection },
                       Boolean(this.state.bOnceVisible) &&
                         H.createElement(yr, {
-                          promotionName: o,
+                          promotionName: r,
                           clanid: Number(q.b.CLANACCOUNTID),
-                          event: a,
-                          bIsPreview: n,
-                          accountIDs: n
-                            ? a.jsondata.broadcast_whitelist
+                          event: t,
+                          bIsPreview: a,
+                          accountIDs: a
+                            ? t.jsondata.broadcast_whitelist
                             : void 0,
-                          language: r,
+                          language: n,
                           bShowCapsuleArt: !0,
                           fnFilterStreams: function(e) {
-                            return t.props.activeTab.ShouldShowOnTab(
-                              "game",
-                              e.appid
+                            return (
+                              o.ShouldShowOnTab("game", e.appid) ||
+                              o.ShouldShowOnTab("series", e.appid)
                             );
                           }
                         }),

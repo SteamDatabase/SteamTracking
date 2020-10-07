@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6128318";
+var CLSTAMP = "6129276";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [37],
   {
@@ -43638,7 +43638,11 @@ var CLSTAMP = "6128318";
                           e.sent(),
                           (i = E.a.GetAppLinkInfo(n)),
                           (a = C.a.Get().GetDemoEventInfo(n)),
-                          (s = {}),
+                          (s = {
+                            exclude_tags: [
+                              "steam_game_festival_artist_statement"
+                            ]
+                          }),
                           [
                             4,
                             w.c.LoadAdjacentPartnerEvents(
