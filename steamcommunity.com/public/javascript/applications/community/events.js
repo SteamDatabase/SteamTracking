@@ -8271,6 +8271,7 @@
                 i = t.purchasePackageId,
                 o = t.is_free,
                 s = t.formatted_final_price;
+              if ("series" == a) return null;
               if (!a || Object(b.c)(a)) {
                 var l = t;
                 if (l.coming_soon && !i) return null;
