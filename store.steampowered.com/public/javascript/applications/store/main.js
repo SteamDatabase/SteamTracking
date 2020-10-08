@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6131773";
+var CLSTAMP = "6132599";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [37],
   {
@@ -7001,7 +7001,7 @@ var CLSTAMP = "6131773";
             (e.prototype.GetTimeNowWithOverride = function() {
               return this.nOverrideDateNow
                 ? this.nOverrideDateNow
-                : Date.now() / 1e3;
+                : Math.floor(Date.now() / 1e3);
             }),
             (e.prototype.GetTimeNowWithOverrideAsDate = function() {
               return this.nOverrideDateNow
@@ -47907,16 +47907,36 @@ var CLSTAMP = "6131773";
               this.props.fnVisibleAppChanged(o);
             }),
             (e.prototype.render = function() {
-              var n = this,
+              var t = this,
                 e = this.props.calendarStore,
-                t = e.GetCalendarSections(!0),
+                n = e.GetCalendarSections(!0),
                 r = new Array();
-              (this.m_visibleAppIDs = Object(T.e)(
+              this.m_visibleAppIDs = Object(T.e)(
                 this.m_visibleAppIDs,
-                t.length,
+                n.length,
                 null
-              )),
-                t.forEach(function(e, t) {
+              );
+              var o = Object(z.f)("#Time_Now"),
+                i = M.a.GetTimeNowWithOverride();
+              r.push(
+                l.createElement(
+                  k.a,
+                  {
+                    key: o,
+                    placeholderHeight: 600,
+                    rootMargin: "0px 0px 100px 0px",
+                    mode: "JustLoad"
+                  },
+                  l.createElement(re, {
+                    strSectionLabel: o,
+                    rtSectionStart: i - 3600,
+                    rtSectionEnd: i,
+                    fnOnAppVisibilityChange: this.OnAppVisibilityChange,
+                    indexOfSection: r.length
+                  })
+                )
+              ),
+                n.forEach(function(e) {
                   r.push(
                     l.createElement(
                       k.a,
@@ -47930,19 +47950,19 @@ var CLSTAMP = "6131773";
                         strSectionLabel: e.strSectionLabel,
                         rtSectionStart: e.rtSectionStart,
                         rtSectionEnd: e.rtSectionEnd,
-                        fnOnAppVisibilityChange: n.OnAppVisibilityChange,
-                        indexOfSection: t
+                        fnOnAppVisibilityChange: t.OnAppVisibilityChange,
+                        indexOfSection: r.length
                       })
                     )
                   );
                 });
-              var o =
+              var a =
                   e.BHitEventHorizon(
                     e.GetCalendarEndTime() < Math.floor(Date.now() / 1e3)
                       ? "backward"
                       : "forward"
                   ) && 0 == e.GetNumEventsLoaded(),
-                i =
+                s =
                   A.c.STORE_BASE_URL +
                   Object(U.f)() +
                   "/sale/" +
@@ -47957,7 +47977,7 @@ var CLSTAMP = "6131773";
                 l.createElement(
                   "div",
                   { className: Object(D.a)(J.a.SaleSchedList) },
-                  o &&
+                  a &&
                     l.createElement(
                       "div",
                       { className: J.a.NoEventsYet },
@@ -47970,7 +47990,7 @@ var CLSTAMP = "6131773";
                   {
                     className: Object(D.a)(J.a.NewsHubLink, C.a.Button),
                     bDisableContextMenu: !0,
-                    href: i
+                    href: s
                   },
                   Object(z.f)("#Sale_SeeAllUpcomingEvents")
                 )
