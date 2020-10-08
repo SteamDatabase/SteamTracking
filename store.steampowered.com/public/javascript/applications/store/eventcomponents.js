@@ -14254,7 +14254,8 @@
                           _.a.createElement(Fn.g, {
                             id: e.id,
                             type: e.type,
-                            bUseDemoLayout: Boolean(l.show_as_demos)
+                            bUseDemoLayout: Boolean(l.show_as_demos),
+                            bLoadShortDescription: !1
                           })
                         );
                       }),
