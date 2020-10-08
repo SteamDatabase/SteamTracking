@@ -2,6 +2,8 @@ h
 __TEXT
 __text
 __TEXT
+p=
+p=
 __stubs
 __TEXT
 __stub_helper
@@ -37,7 +39,6 @@ __thread_bss
 __DATA
 __bss
 __DATA
-A2
 __common
 __DATA
 H
@@ -248,6 +249,10 @@ com.valvesoftware.steam.ipctool
 ipcserver restart: expected: %d, got: %d
 StopJob
 CreateInterface
+-community
+Set the community URL
+%s/
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlstring.h
 Missing String for %s (%d)
 Unknown
 Assertion Failed: 0
@@ -265,7 +270,6 @@ Assertion Failed: nRead == nNumBytes
 rb
 Exceeded limit of number of vpk files supported (%d)!
 .%s
-%s/
 %s%s%s crc=0x%x metadatasz=%d
 fnumber=%d ofs=0x%x sz=%d
 /
@@ -585,7 +589,6 @@ http_test
 profile
 <seconds> profile for N seconds
 FCVAR_NEVER_AS_STRING
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlstring.h
 No room for new profile in vprof thread profile list, grow MAX_THREADS_TO_VPROF_AT_ONCE
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/vprof.h
 runscript <scriptfile> - runs console script file
@@ -640,6 +643,10 @@ CEG wrap failed with EResult %d (%s)
 Usage: sign_install_script <appid> <filename> <output filename>
 Usage: drm_wrap <appid> <filename> <output filename> <toolname> <flags>
 Usage: ceg_wrap <appid> <orig filename> <stripped filename> <strips filename>
+get_swarm_bucket_manifest
+<appid> <bucket_hw_id> <bucket_sw_id> - query Swarm bucket depot manifest, if depot built
+SUCCESS: manifest: %llu size: %u bucketID: %llu
+ERROR!
 workshop_build_item
 workshop_build_item <build config filename> : build a workshop item
 workshop_create_legacy_item
@@ -1175,6 +1182,7 @@ E
 
 =
 @
+
 a
 @
 @

@@ -35,6 +35,7 @@
  B CRTime::sm_rgchLocalDateCur
  B CRTime::sm_rgchLocalTimeCur
  B CSTime::sm_lTimeCur
+ B CURLHelper::s_eDefaultRealm
  B CUtlSymbol::s_pSymbolTable
  B ConCommandBase::s_pAccessor
  B ConCommandBase::s_pConCommandBases
@@ -477,7 +478,7 @@
  T CDbgFmtMsg::CDbgFmtMsg(char const*, ...)
  T CDirIterator::BNextFile()
  T CDirIterator::CDirIterator(StringView)
- T CDirIterator::CurrentFileName()
+ T CDirIterator::CurrentFileName() const
  T CDirIterator::Init(StringView)
  T CDirIterator::IsValid() const
  T CDirIterator::~CDirIterator()
@@ -650,6 +651,7 @@
  T CTSQueue<CFileWriterThread::FileWriterItem_t*>::Purge()
  T CTSQueue<CFileWriterThread::FileWriterItem_t*>::Validate(CValidator&, char const*)
  T CTSQueue<CFileWriterThread::FileWriterItem_t*>::~CTSQueue()
+ T CURLHelper::SetDefaultRealm(ESteamRealm)
  T CUtlBuffer::AddNullTermination()
  T CUtlBuffer::CUtlBuffer(int, int, int)
  T CUtlBuffer::CheckArbitraryPeekGet(int, int&)
@@ -903,8 +905,8 @@
  T CallbackMgr_RunCallbacks(int, bool)
  T CallbackMgr_UnregisterCallResult(CCallbackBase*, unsigned long long)
  T CallbackMgr_UnregisterCallback(CCallbackBase*)
- T ClientAPI_InitGlobalInstance(int, char**)
- T ClientAPI_InitLocalInstance(EAccountType, int, char**)
+ T ClientAPI_InitGlobalInstance(ELauncherType, int, char**)
+ T ClientAPI_InitLocalInstance(ELauncherType, EAccountType, int, char**)
  T ClientAPI_RunCallbacks()
  T ClientAPI_Shutdown()
  T ClientAppManager()
@@ -915,6 +917,7 @@
  T ClientFriends()
  T ClientProductBuilder()
  T ClientRemoteStorage()
+ T ClientShader()
  T ClientUGC()
  T ClientUser()
  T ClientUtils()
@@ -947,12 +950,13 @@
  T ConParams::Set(char const*)
  T ConParams::UArg(int) const
  T ConVar::AddOnChangeCallback(void (*)(void*, ConVar*, char const*), void*, bool)
- T ConVar::ApplyReplicatedValue(char const*, bool)
+ T ConVar::ApplyReplicatedValue(char const*, bool, bool)
  T ConVar::BLocalOverride()
  T ConVar::BReplicated()
  T ConVar::BSendDiscardLocalOverride()
  T ConVar::ChangeStringValue(char const*)
  T ConVar::ClampValue(float&)
+ T ConVar::ClearReplicated()
  T ConVar::ClearSendDiscardLocalOverride()
  T ConVar::ConVar(char const*, char const*, unsigned long long)
  T ConVar::ConVar(char const*, char const*, unsigned long long, char const*)
@@ -1019,7 +1023,7 @@
  T InitializeSpewConfig()
  T InternalAPI_Init_Internal(CSysModule**, IClientEngine**, bool, int, char**)
  T InternalClient()
- T Internal_ClientAPI_InitInstance(bool, EAccountType, bool, int, char**)
+ T Internal_ClientAPI_InitInstance(ELauncherType, bool, EAccountType, bool, int, char**)
  T KV_ResolveSymbol(char const*)
  T KeyValues::ConvertAndWriteWideString(KeyValues*, CUtlBuffer*, int) const
  T KeyValues::CopySubkeys(KeyValues*) const
@@ -1132,9 +1136,6 @@
  T __clang_call_terminate
  T _findfirst(char const*, _finddata_t*)
  T _findnext(long long, _finddata_t*)
- T bool BWaitGetAPICallResult<CreateItemResult_t>(unsigned long long, CreateItemResult_t*, int)
- T bool BWaitGetAPICallResult<RemoteStorageFileShareResult_t>(unsigned long long, RemoteStorageFileShareResult_t*, int)
- T bool BWaitGetAPICallResult<RemoteStoragePublishFileResult_t>(unsigned long long, RemoteStoragePublishFileResult_t*, int)
  T bool std::__1::__insertion_sort_incomplete<CUtlVector<char*, CUtlMemory<char*> >::Sort(int (*)(char* const*, char* const*))::{lambda(char* const&, char* const&)#1}&, char**>(char**, char**, CUtlVector<char*, CUtlMemory<char*> >::Sort(int (*)(char* const*, char* const*))::{lambda(char* const&, char* const&)#1}&)
  T bool std::__1::__insertion_sort_incomplete<CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&, unsigned int*>(unsigned int*, unsigned int*, CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&)
  T int CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>::FindOrInsert_Internal<unsigned int const&, int const&>(unsigned int const&, int const&, CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>::ReplaceExisting)
@@ -1310,6 +1311,7 @@
  b g_BreakSet
  b g_BreakSetIncludingColons
  b g_CleanupSymbolTable
+ b g_CommunityURLParam
  b g_bRunProfile
  b g_hSteamPipe
  b g_hSteamUser
@@ -1360,6 +1362,7 @@
  b g_pGetSymbolProc
  b g_pSysModuleSteam
  b g_rtime32EndProfile
+ b get_swarm_bucket_manifest_command
  b guard variable for CPackedStore::GetFileHandle(int)::invalid
  b guard variable for GCallbackMgr()::s_CallbackMgr
  b guard variable for GetNetAdrResolveCacheMutex()::mutex
@@ -1527,6 +1530,7 @@
  t _GLOBAL__sub_I_enum_names.cpp
  t _GLOBAL__sub_I_globals.cpp
  t _GLOBAL__sub_I_interface.cpp
+ t _GLOBAL__sub_I_language.cpp
  t _GLOBAL__sub_I_logger.cpp
  t _GLOBAL__sub_I_main.cpp
  t _GLOBAL__sub_I_msgspewthrottle.cpp
@@ -1534,9 +1538,11 @@
  t _GLOBAL__sub_I_predepot.cpp
  t _GLOBAL__sub_I_reliabletimer.cpp
  t _GLOBAL__sub_I_rtime.cpp
+ t _GLOBAL__sub_I_shader.cpp
  t _GLOBAL__sub_I_steamid.cpp
  t _GLOBAL__sub_I_stime.cpp
  t _GLOBAL__sub_I_string_misc.cpp
+ t _GLOBAL__sub_I_urlhelper.cpp
  t _GLOBAL__sub_I_utlbuffer.cpp
  t _GLOBAL__sub_I_utlsymbol.cpp
  t _GLOBAL__sub_I_workshopbuilder.cpp
@@ -1558,6 +1564,7 @@
  t exit(void*, ConParams&, ConCommand&)
  t find(void*, ConParams&, ConCommand&)
  t force_install_dir(void*, ConParams&, ConCommand&)
+ t get_swarm_bucket_manifest(void*, ConParams&, ConCommand&)
  t help(void*, ConParams&, ConCommand&)
  t http_test(void*, ConParams&, ConCommand&)
  t info(void*, ConParams&, ConCommand&)
