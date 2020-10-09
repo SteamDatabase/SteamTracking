@@ -3296,7 +3296,7 @@
                 H.createElement(
                   "div",
                   { className: "YoutubePreviewPlay" },
-                  H.createElement(B.X, null)
+                  H.createElement(B.Y, null)
                 ),
                 H.createElement(
                   "div",
@@ -3589,7 +3589,7 @@
                   className: Object(W.a)(Ve.a.FooterStat, Ve.a.Options),
                   onClick: this.CreateContextMenu
                 },
-                H.createElement(B.D, null)
+                H.createElement(B.E, null)
               );
             }),
             Object(z.c)([u.a], t.prototype, "OnMuteButton", null),
@@ -3841,7 +3841,7 @@
                         H.createElement(
                           "div",
                           { className: Ve.a.PatchIconCtn },
-                          H.createElement(B.H, null)
+                          H.createElement(B.I, null)
                         ),
                         H.createElement(
                           "div",
@@ -4279,7 +4279,7 @@
                     className: Object(W.a)(Ve.a.FooterStat, Ve.a.Vote, o),
                     onClick: this.OnPerformVoteUp
                   },
-                  H.createElement(B.U, { className: Ve.a.RateIcon }),
+                  H.createElement(B.V, { className: Ve.a.RateIcon }),
                   H.createElement("span", null, Number(n).toLocaleString())
                 ),
                 H.createElement(
@@ -5030,7 +5030,7 @@
                       H.createElement(
                         "div",
                         { className: mt.a.FilterLink },
-                        H.createElement(B.ab, { muted: !0 }),
+                        H.createElement(B.bb, { muted: !0 }),
                         Object(Z.f)("#EventCalendar_ManageMutedSources"),
                         H.createElement(
                           "div",
@@ -5105,7 +5105,7 @@
                 m = H.createElement(
                   "div",
                   { className: mt.a.MobileCloseButton, onClick: s },
-                  H.createElement(B.Q, null)
+                  H.createElement(B.R, null)
                 ),
                 h = o ? Math.max(0, r) : 0,
                 v = p
@@ -5138,7 +5138,7 @@
                           style: { marginTop: h + "px" },
                           className: mt.a.DesktopButton
                         },
-                        H.createElement(B.Q, null)
+                        H.createElement(B.R, null)
                       )
                     ),
                 b = d ? _ : v,
@@ -5182,7 +5182,7 @@
                                   H.createElement(
                                     "div",
                                     { className: mt.a.SidebarBackground },
-                                    H.createElement(B.R, null)
+                                    H.createElement(B.S, null)
                                   ),
                                   H.createElement(
                                     "div",
@@ -5215,7 +5215,7 @@
                                           return t.OpenFilterSettings(!0);
                                         }
                                       },
-                                      H.createElement(B.P, null),
+                                      H.createElement(B.Q, null),
                                       Object(Z.f)("#EventCalendar_EditFilters")
                                     )
                                   ),
@@ -5548,7 +5548,7 @@
                     className: mt.a.SettingsPanel,
                     onClick: this.props.fnToggleCollapsed
                   },
-                  H.createElement(B.P, null)
+                  H.createElement(B.Q, null)
                 ),
                 H.createElement(
                   "div",
@@ -5561,7 +5561,7 @@
                       return e.onExpandSearch(!t);
                     }
                   },
-                  H.createElement(B.A, null)
+                  H.createElement(B.B, null)
                 ),
                 t &&
                   H.createElement(
@@ -5872,7 +5872,7 @@
                           className: Ht.a.DismissButton,
                           onClick: this.OnDismissButton
                         },
-                        _.a.createElement(B.Q, null)
+                        _.a.createElement(B.R, null)
                       ),
                     _.a.createElement(
                       "div",
@@ -14238,7 +14238,7 @@
                           _.a.createElement(
                             "div",
                             { className: or.a.SuggestContainer },
-                            _.a.createElement(B.A, null),
+                            _.a.createElement(B.B, null),
                             _.a.createElement(S.j, {
                               type: "text",
                               onChange: this.OnUpdateSearch,

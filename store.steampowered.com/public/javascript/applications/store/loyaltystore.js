@@ -5148,7 +5148,7 @@
         return A.a.createElement(
           "div",
           Object(R.a)({ className: Object(Ge.a)(wt.Container, n) }, a),
-          A.a.createElement(Et.z, { className: wt.Icon }),
+          A.a.createElement(Et.A, { className: wt.Icon }),
           A.a.createElement(
             "div",
             {
@@ -8190,7 +8190,7 @@
                           P.createElement(
                             "div",
                             { className: hn.PointsContainer },
-                            P.createElement(Et.z, { className: hn.Icon }),
+                            P.createElement(Et.A, { className: hn.Icon }),
                             P.createElement(
                               "div",
                               { className: hn.BalanceColumn },
@@ -9262,7 +9262,7 @@
               { className: Object(Ge.a)(hn.WarningTextContainer, e.className) },
               t
             ),
-            P.createElement(Et.V, { className: hn.TimeWarning }),
+            P.createElement(Et.W, { className: hn.TimeWarning }),
             e.children
           );
         },
@@ -9942,7 +9942,7 @@
                   },
                   r
                 ),
-                P.createElement(Et.F, null)
+                P.createElement(Et.G, null)
               ),
             i &&
               P.createElement(
@@ -9959,7 +9959,7 @@
                   },
                   r
                 ),
-                P.createElement(Et.W, null)
+                P.createElement(Et.X, null)
               ),
             o &&
               P.createElement(
@@ -10169,7 +10169,7 @@
                               className: va.a.gameIsPrivateIcon,
                               title: Object(N.f)("#User_GameInfoHidden")
                             },
-                            P.createElement(Et.w, null)
+                            P.createElement(Et.x, null)
                           ),
                         C
                       ),
@@ -10897,7 +10897,7 @@
                   alignItems: "center",
                   className: Za.Header
                 },
-                A.a.createElement(Et.M, { className: Za.Icon }),
+                A.a.createElement(Et.N, { className: Za.Icon }),
                 A.a.createElement(
                   "div",
                   { className: Za.Title },
@@ -10975,7 +10975,7 @@
             A.a.createElement(
               "div",
               null,
-              A.a.createElement(Et.M, { className: Za.Icon }),
+              A.a.createElement(Et.N, { className: Za.Icon }),
               A.a.createElement("div", null, "+", i)
             )
           );
@@ -12711,7 +12711,7 @@
                 alignItems: "center",
                 className: $i.PointsContainer
               },
-              A.a.createElement(Et.z, { className: $i.Icon }),
+              A.a.createElement(Et.A, { className: $i.Icon }),
               A.a.createElement(
                 He,
                 {

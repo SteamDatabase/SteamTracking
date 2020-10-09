@@ -2651,6 +2651,34 @@ iframe.eventbbcodeparser_MedalTVWidget_1j2vi {
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
   border-radius: 4px; }
 
+.eventbbcodeparser_ExpandSectionBlock_zJ2Z3 .eventbbcodeparser_ExpandSectionHeader_2L3U_ {
+  padding: 3px 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: fit-content;
+  background-color: rgba(255, 255, 255, 0.11);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  cursor: pointer;
+  color: #aebac2; }
+  .eventbbcodeparser_ExpandSectionBlock_zJ2Z3 .eventbbcodeparser_ExpandSectionHeader_2L3U_ .eventbbcodeparser_EmbedArrow_3IjdP svg {
+    margin-left: 10px;
+    width: 12px;
+    height: 12px;
+    fill: #aebac2;
+    transition: transform;
+    transition-duration: 0.2s; }
+  .eventbbcodeparser_ExpandSectionBlock_zJ2Z3 .eventbbcodeparser_ExpandSectionHeader_2L3U_:hover {
+    color: white; }
+    .eventbbcodeparser_ExpandSectionBlock_zJ2Z3 .eventbbcodeparser_ExpandSectionHeader_2L3U_:hover .eventbbcodeparser_EmbedArrow_3IjdP svg {
+      fill: white; }
+
+.eventbbcodeparser_ExpandSectionBlock_zJ2Z3 .eventbbcodeparser_ExpandSectionBody_1QuZQ {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 8px;
+  border-radius: 2px; }
+
 /* special overrides for the artwork preview section in the event editor */
 .DetailPageExample .eventbbcodeparser_Header2_QuKtT {
   font-size: 10px;
