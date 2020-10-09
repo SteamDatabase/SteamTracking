@@ -763,6 +763,12 @@ LocalizationReady("shared", "english", {
 
   Bbcode_Originally_Posted_By: "Originally posted by",
   Bbcode_No_Match: "No matches to supported BBCode",
+  Bbcode_Expand_ShowMore_Collapsed: "Show More",
+  Bbcode_Expand_ShowMore_Expanded: "Show Less",
+  Bbcode_Expand_Spoiler_Collapsed: "Show Spoilers",
+  Bbcode_Expand_Spoiler_Expanded: "Hide Spoilers",
+  Bbcode_Expand_Details_Collapsed: "Show Details",
+  Bbcode_Expand_Details_Expanded: "Hide Details",
 
   Editor_Bold: "Bold",
   Editor_Underline: "Underline",

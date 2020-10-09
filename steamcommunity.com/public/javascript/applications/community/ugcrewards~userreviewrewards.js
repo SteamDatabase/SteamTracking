@@ -43,8 +43,8 @@
                 a.a.createElement(
                   "div",
                   { className: c.a.Throbber },
-                  a.a.createElement(o.J, { className: c.a.base }),
-                  a.a.createElement(o.J, { className: c.a.blur })
+                  a.a.createElement(o.K, { className: c.a.base }),
+                  a.a.createElement(o.K, { className: c.a.blur })
                 )
               );
               return a.a.createElement(
@@ -1864,8 +1864,8 @@
         H = r("exH9"),
         Q = r("Dsqm"),
         Y = r("0OaU"),
-        V = r("6Y59");
-      function K(e) {
+        K = r("6Y59");
+      function V(e) {
         return Object(L.f)("#RewardsReaction_" + e);
       }
       var J,
@@ -2668,7 +2668,7 @@
                             E.createElement(
                               "span",
                               { className: S.AwardName },
-                              K(c)
+                              V(c)
                             )
                           )
                         ),
@@ -2857,7 +2857,7 @@
             E.createElement(
               "div",
               { className: S.Left },
-              E.createElement(V.t, { className: S.BalanceIcon }),
+              E.createElement(K.u, { className: S.BalanceIcon }),
               E.createElement(
                 "div",
                 { className: S.BalanceDetails },
@@ -2958,7 +2958,7 @@
                     bDisableAnimation: n
                   })
                 ),
-                E.createElement("div", { className: S.Label }, K(t)),
+                E.createElement("div", { className: S.Label }, V(t)),
                 E.createElement(
                   Oe,
                   { className: S.Points },
@@ -2982,7 +2982,7 @@
           return E.createElement(
             "span",
             Object(s.a)({}, n, { className: Object(H.a)(r, S.PointsAmount) }),
-            E.createElement(V.t, { className: S.PointsAmountIcon }),
+            E.createElement(K.u, { className: S.PointsAmountIcon }),
             t
           );
         };
