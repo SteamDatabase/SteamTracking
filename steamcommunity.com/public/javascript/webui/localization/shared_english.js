@@ -1690,6 +1690,7 @@ LocalizationReady("shared", "english", {
   AppType_tag: "tag",
   AppType_music: "music",
   AppType_hardware: "hardware",
+  AppType_series: "series",
 
   GameHover_Tags: "Tags:",
   GameHover_UserReviewsHeader: "User Reviews:",

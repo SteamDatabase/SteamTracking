@@ -10919,8 +10919,8 @@
                   return Object(z.e)(this, function(e) {
                     switch (e.label) {
                       case 0:
-                        return (11 == h && (h = void 0),
-                        (t = Boolean(f)) && (_ = "search"),
+                        return ((t = Boolean(f)) &&
+                          ((_ = "search"), (h = void 0)),
                         (a = this.GetFlavorCacheKey(
                           _,
                           h,
@@ -14082,11 +14082,13 @@
                       return this.m_nHighestReceivedRequestID > v
                         ? [2]
                         : ((this.m_nHighestReceivedRequestID = v),
-                          (l = (l = _.map(function(e) {
+                          (l = _.map(function(e) {
                             return { id: e, type: "game" };
-                          })).filter(function(e) {
-                            return !r || r.ShouldShowCapsule(e);
                           })),
+                          this.state.strSearchQuery ||
+                            (l = l.filter(function(e) {
+                              return !r || r.ShouldShowCapsule(e);
+                            })),
                           [4, Object(nr.d)(l)]);
                     case 7:
                       return (
