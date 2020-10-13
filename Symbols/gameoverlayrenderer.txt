@@ -94,7 +94,6 @@
  B g_pVGUIPaintEvent
  B g_szExecutablePath
  B g_szWindowBlacklist
- B s_pfnglFlushRenderAPPLE
  CFAllocatorAllocate
  CFAllocatorDeallocate
  CFRelease
@@ -536,7 +535,6 @@
  T SteamCGGetLastMouseDelta(int*, int*)
  T SteamCGLChoosePixelFormat(_CGLPixelFormatAttribute const*, _CGLPixelFormatObject**, int*)
  T SteamCGLFlushDrawable(_CGLContextObject*)
- T SteamCGLSetCurrentContext(_CGLContextObject*)
  T SteamCGWarpMouseCursorPosition(CGPoint)
  T SteamHideCursor()
  T SteamInitCursor()
@@ -549,7 +547,7 @@
  T SteamThreadTools::CThreadLocalPtr<SteamThreadTools::CThread>::~CThreadLocalPtr()
  T SteamThreadTools::CThreadMutex::~CThreadMutex()
  T SteamThreadTools::InitMainThread()
- T SteamglFlushRenderAPPLE(__GLIContextRec*)
+ T SteamglSwapAPPLE()
  T StopMovieRecording()
  T TakeScreenshotNextFrame(bool)
  T ThreadInterlockedAssignIf64
@@ -816,13 +814,13 @@
  d _interpose_CGGetLastMouseDelta
  d _interpose_CGLChoosePixelFormat
  d _interpose_CGLFlushDrawable
- d _interpose_CGLSetCurrentContext
  d _interpose_CGWarpMouseCursorPosition
  d _interpose_HideCursor
  d _interpose_InitCursor
  d _interpose_SetAnimatedThemeCursor
  d _interpose_SetThemeCursor
  d _interpose_ShowCursor
+ d _interpose_glSwapAPPLE
  d cplus_demangle_builtin_types
  d cplus_demangle_operators
  d g_IdentityMatrix
@@ -865,6 +863,7 @@
  glIsEnabled
  glPixelStorei
  glReadPixels
+ glSwapAPPLE
  glTexCoord2i
  glTexImage2D
  glVertex2f
