@@ -1370,7 +1370,7 @@ function ChangeLanguage( strTargetLanguage, bStayOnPage )
 			Modal.Dismiss();
 		else
 		{
-						if( g_AccountID )
+						if( typeof g_AccountID  != 'undefined' && g_AccountID > 0 )
 				window.location = 'https://store.steampowered.com/account/languagepreferences/';
 			else if ( window.location.href.match( /[?&]l=/ ) )
 				window.location = window.location.href.replace( /([?&])l=[^&]*&?/, '$1' );

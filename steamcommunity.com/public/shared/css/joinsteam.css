@@ -429,7 +429,7 @@ p .csgoheadline{
 	max-width: 600px;
 }
 
-.joinsteam_content_container button > span {
+.joinsteam_content_container button > span, .joinsteam_button > span {
 	padding: 3px 50px;
 }
 

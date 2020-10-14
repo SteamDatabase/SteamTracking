@@ -518,13 +518,9 @@ function ReallyCreateAccount()
 				if (result && result.bSuccess)
 					bSuccess = true;
 			}
-			if (!bSuccess) {
-
+			if (!bSuccess)
+			{
 				ShowError( result.details ? result.details : 'Your account creation request failed, please try again later.' );
-
-				RefreshCaptcha();
-
-				g_creationSessionID = null;
 
 								if (result && result.ticket)
 					$('ticket').value = result.ticket;
