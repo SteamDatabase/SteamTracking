@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6133639";
+var CLSTAMP = "6142015";
 !(function(e) {
   function t(t) {
     for (
@@ -937,7 +937,7 @@ var CLSTAMP = "6133639";
               (this.m_bValid = !0),
               (this.m_bReady = !0);
           }),
-          Object(r.c)([i.B], e.prototype, "m_bReady", void 0),
+          Object(r.c)([i.C], e.prototype, "m_bReady", void 0),
           Object(r.c)([i.k], e.prototype, "InitInvalid", null),
           Object(r.c)([i.k], e.prototype, "InitDirectInvite", null),
           e
@@ -1439,12 +1439,12 @@ var CLSTAMP = "6133639";
             (this.customlist = void 0);
         }
         return (
-          Object(r.c)([o.B], e.prototype, "enabled", void 0),
-          Object(r.c)([o.B], e.prototype, "locked", void 0),
-          Object(r.c)([o.B], e.prototype, "features", void 0),
-          Object(r.c)([o.B], e.prototype, "allowallapps", void 0),
-          Object(r.c)([o.B], e.prototype, "baselist", void 0),
-          Object(r.c)([o.B], e.prototype, "customlist", void 0),
+          Object(r.c)([o.C], e.prototype, "enabled", void 0),
+          Object(r.c)([o.C], e.prototype, "locked", void 0),
+          Object(r.c)([o.C], e.prototype, "features", void 0),
+          Object(r.c)([o.C], e.prototype, "allowallapps", void 0),
+          Object(r.c)([o.C], e.prototype, "baselist", void 0),
+          Object(r.c)([o.C], e.prototype, "customlist", void 0),
           e
         );
       })(),
@@ -1632,7 +1632,7 @@ var CLSTAMP = "6133639";
         (e[(e.k_ESteamRealmGlobal = 1)] = "k_ESteamRealmGlobal"),
         (e[(e.k_ESteamRealmChina = 2)] = "k_ESteamRealmChina");
     })(g || (g = {}));
-    var E, S, C;
+    var E, S, C, y, I;
     !(function(e) {
       (e[(e.Unknown = 0)] = "Unknown"),
         (e[(e.Wired = 1)] = "Wired"),
@@ -1656,7 +1656,17 @@ var CLSTAMP = "6133639";
           (e[(e.Wpa2 = 16)] = "Wpa2"),
           (e[(e.Wpa2Enterprise = 32)] = "Wpa2Enterprise"),
           (e[(e.Unsupported = 32768)] = "Unsupported");
-      })(C || (C = {}));
+      })(C || (C = {})),
+      (function(e) {
+        (e[(e.SystemKey0 = 0)] = "SystemKey0"),
+          (e[(e.SystemKey1 = 1)] = "SystemKey1");
+      })(y || (y = {})),
+      (function(e) {
+        (e[(e.Hidden = 0)] = "Hidden"),
+          (e[(e.Notification = 1)] = "Notification"),
+          (e[(e.Overlay = 2)] = "Overlay"),
+          (e[(e.Opaque = 3)] = "Opaque");
+      })(I || (I = {}));
   },
   mrSG: function(e, t, n) {
     "use strict";
@@ -2274,15 +2284,15 @@ PERFORMANCE OF THIS SOFTWARE.
               a.b
                 .ShowChatRoomGroupInvite(this.m_invite.GetInviteCode())
                 .then(function(t) {
-                  Object(l.F)(function() {
+                  Object(l.G)(function() {
                     (e.m_bConnectingToClient = !1),
                       (e.m_connectResult = t),
                       console.log(t);
                   });
                 }));
           }),
-          Object(s.c)([l.B], e.prototype, "m_bConnectingToClient", void 0),
-          Object(s.c)([l.B], e.prototype, "m_connectResult", void 0),
+          Object(s.c)([l.C], e.prototype, "m_bConnectingToClient", void 0),
+          Object(s.c)([l.C], e.prototype, "m_connectResult", void 0),
           e
         );
       })(),
@@ -2471,7 +2481,7 @@ PERFORMANCE OF THIS SOFTWARE.
                   )
             );
           }),
-          Object(s.c)([l.B], t.prototype, "m_bTriedToLaunchSteam", void 0),
+          Object(s.c)([l.C], t.prototype, "m_bTriedToLaunchSteam", void 0),
           Object(s.c)([p.a], t.prototype, "LaunchWebChat", null),
           Object(s.c)([p.a], t.prototype, "OpenInSteamIgnoreAccount", null),
           Object(s.c)([p.a], t.prototype, "LaunchSteamClient", null),
@@ -2535,7 +2545,7 @@ PERFORMANCE OF THIS SOFTWARE.
       y,
       I,
       R = new a.a();
-    function L(e) {
+    function O(e) {
       var t;
       try {
         t = JSON.parse(e.getAttribute("data-inviteinfo"));
@@ -2557,7 +2567,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 r = n.getAttribute("data-component");
               switch (r) {
                 case "ChatInvite":
-                  L(n);
+                  O(n);
                   break;
                 default:
                   Object(u.a)(!1, 'unknown component: "' + r + '"');

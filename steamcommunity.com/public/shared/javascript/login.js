@@ -512,6 +512,10 @@ CLoginPromptManager.prototype.OnLoginResponse = function( results )
 		{
 			ShowDialog( 'Intel® Identity Protection Technology', this.m_$ModalIPT.show() ).always( $J.proxy( this.ClearLoginForm, this ) );
 		}
+		else if ( results.agreement_session_url )
+		{
+			window.location = results.agreement_session_url;
+		}
 		else
 		{
 			this.m_strUsernameEntered = null;

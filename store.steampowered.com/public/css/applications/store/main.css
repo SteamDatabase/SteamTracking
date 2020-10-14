@@ -3876,7 +3876,7 @@ textarea:-webkit-autofill:focus,
     padding: 9px 20px; }
 
 .salepreviewwidgets_CapsulePlatform_2bCf9 {
-  padding: 4px;
+  padding: 4px 4px 4px 20px;
   height: 20px;
   display: flex;
   flex-direction: row;
@@ -5147,7 +5147,6 @@ span.partnersaledisplay_vr_required_1P__h {
       padding: 46.73913% 0 0 0;
       z-index: 1;
       bottom: 0;
-      left: -16px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.7); }
       .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_CapsuleImageAnchorPoint_1OMas .gamehover_CapsuleImageCtn_wm-2T img {
         position: absolute;
@@ -5157,17 +5156,23 @@ span.partnersaledisplay_vr_required_1P__h {
         right: 0;
         max-width: 100%;
         height: auto; }
-  .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_WithCornerShine_2kRKA:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 1;
-    background-color: white;
-    -webkit-mask-image: linear-gradient(120deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.5) 12%, 33%, transparent);
-    mask-image: linear-gradient(120deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.5) 12%, 33%, transparent); }
+  .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_WithCornerShine_2kRKA {
+    overflow: hidden; }
+    .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_WithCornerShine_2kRKA:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: -30px;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      background-color: white;
+      -webkit-mask-image: linear-gradient(120deg, transparent 0%, rgba(0, 0, 0, 0.8) 15%, rgba(0, 0, 0, 0.7) 20%, transparent 33%);
+      mask-image: linear-gradient(120deg, transparent 0%, rgba(0, 0, 0, 0.8) 15%, rgba(0, 0, 0, 0.7) 20%, transparent 33%);
+      transition: transform 0.35s ease-out;
+      transform: translateX(-30px); }
+      .gamehover_Opening_3A24v .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_WithCornerShine_2kRKA:after, .gamehover_Open_1rWYa .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_WithCornerShine_2kRKA:after {
+        transform: translateX(0px); }
   .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN {
     color: white; }
     .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL {
@@ -5181,16 +5186,10 @@ span.partnersaledisplay_vr_required_1P__h {
         padding: 8px 0px 4px; }
         .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_TagRow_2SWQM .gamehover_Tags_fTGVi {
           overflow: hidden;
-          height: 17px;
+          max-height: 40px;
           padding-right: 12px;
           display: flex;
           flex-wrap: wrap; }
-          .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_TagRow_2SWQM .gamehover_Tags_fTGVi:hover {
-            overflow: visible; }
-            .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_TagRow_2SWQM .gamehover_Tags_fTGVi:hover .gamehover_Tag_1wO-t {
-              box-shadow: 0 0 20px rgba(51, 51, 85, 0.8); }
-              .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_TagRow_2SWQM .gamehover_Tags_fTGVi:hover .gamehover_Tag_1wO-t:after {
-                content: ''; }
           .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_TagRow_2SWQM .gamehover_Tags_fTGVi .gamehover_Tag_1wO-t {
             padding: 0px 6px;
             margin-bottom: 4px;
@@ -5201,14 +5200,6 @@ span.partnersaledisplay_vr_required_1P__h {
             text-overflow: ellipsis;
             white-space: nowrap;
             position: relative; }
-            .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_TagRow_2SWQM .gamehover_Tags_fTGVi .gamehover_Tag_1wO-t:after {
-              content: '...';
-              color: #88aacc;
-              position: absolute;
-              z-index: 0;
-              right: -12px; }
-            .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_TagRow_2SWQM .gamehover_Tags_fTGVi .gamehover_Tag_1wO-t:last-child:after {
-              content: ''; }
       .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_ReviewScore_3qvpp {
         font-size: 12px;
         display: flex; }
@@ -5569,7 +5560,7 @@ span.partnersaledisplay_vr_required_1P__h {
   line-height: 20px;
   font-weight: bold;
   white-space: nowrap;
-  background-image: url(images/applications/store/rebroadcast.png?v=valveisgoodatcaching);
+  background-image: url(../../../images/applications/store/rebroadcast.png?v=valveisgoodatcaching);
   box-shadow: 0 0 10px black; }
 
 .videoContainer.fullscreenVideo .STV_ReplayBanner {
@@ -6690,7 +6681,7 @@ iframe.steamTVLogin {
   width: 154px;
   height: 46px;
   display: inline-block;
-  background-image: url(images/applications/store/logo_steamtv.png?v=valveisgoodatcaching); }
+  background-image: url(../../../images/applications/store/logo_steamtv.png?v=valveisgoodatcaching); }
 
 .BroadcastContainerSectionVideoContainer {
   max-height: calc(100vh - 150px);
@@ -8105,6 +8096,8 @@ html:not(.client) .partner_events .apppartnereventspage_AppPartnerEventsBody_1XL
     display: flex;
     align-self: end;
     grid-column-start: 2; }
+  .apppartnereventspage_AppBannerGroup_qexk- .apppartnereventspage_HeaderFollowButton_1tnk5 {
+    margin-right: 16px; }
   .apppartnereventspage_AppBannerGroup_qexk- .apppartnereventspage_AppBannerLink_3Yoms {
     padding: 2px 16px 2px 0;
     color: #c5cedf;
@@ -8328,6 +8321,175 @@ div.apppartnereventspage_EventDetailsBody_3NW5v {
     color: #80bcd2;
     text-decoration: none; }
 
+.creatorhomeembed_DevSummaryCtn_1k0S- {
+  flex-grow: 1;
+  flex-basis: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 150px;
+  margin-bottom: 16px; }
+  .creatorhomeembed_DevSummaryCtn_1k0S-.creatorhomeembed_LargeFormat_1090T {
+    position: relative;
+    min-height: 127px; }
+    .creatorhomeembed_DevSummaryCtn_1k0S-.creatorhomeembed_LargeFormat_1090T .creatorhomeembed_CreatorDescCtn_3nKoQ {
+      justify-content: center;
+      margin-left: 16px;
+      width: 100%; }
+  .creatorhomeembed_DevSummaryCtn_1k0S-.creatorhomeembed_SmallFormat_18tLe {
+    margin-bottom: 0px; }
+
+.creatorhomeembed_DevSummaryWidgetCtn_A2B2V {
+  flex-grow: 1;
+  flex-basis: 0;
+  background: radial-gradient(ellipse at top left, rgba(66, 69, 76, 0.8), rgba(37, 40, 46, 0.8));
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden; }
+  .creatorhomeembed_SmallFormat_18tLe .creatorhomeembed_DevSummaryWidgetCtn_A2B2V {
+    background-image: radial-gradient(ellipse at top left, #42454c, #25282e); }
+  .creatorhomeembed_LargeFormat_1090T .creatorhomeembed_DevSummaryWidgetCtn_A2B2V {
+    background-image: radial-gradient(ellipse at top left, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4));
+    box-shadow: unset; }
+    .creatorhomeembed_LargeFormat_1090T .creatorhomeembed_DevSummaryWidgetCtn_A2B2V .creatorhomeembed_DevSummaryBackground_1TsqA {
+      opacity: 0; }
+
+.creatorhomeembed_DevSummaryBackground_1TsqA {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-mask-image: radial-gradient(circle at top left, black, rgba(0, 0, 0, 0) 60%);
+  mask-image: radial-gradient(circle at top left, black, rgba(0, 0, 0, 0) 60%);
+  filter: blur(30px);
+  opacity: 0.3; }
+
+.creatorhomeembed_DevSummaryContent_23xa4 {
+  padding: 16px; }
+
+.creatorhomeembed_Avatar_3Jepb {
+  width: 94px;
+  box-shadow: 0 0 8px #ffffff;
+  border-radius: 5px;
+  border: none; }
+
+.creatorhomeembed_CreatorTitleCtn_2T8Ub {
+  position: relative;
+  margin-left: 4px; }
+  .creatorhomeembed_CreatorTitleCtn_2T8Ub .creatorhomeembed_CreatorNameName_8196l {
+    padding-bottom: 2px;
+    font-size: 21px;
+    line-height: 21px;
+    font-weight: 300; }
+
+.creatorhomeembed_CreatorTagline_NX5We {
+  position: relative;
+  padding-bottom: 2px;
+  color: #c3c3c3; }
+  @media screen and (max-width: 910px) {
+    .creatorhomeembed_CreatorTagline_NX5We {
+      display: none; } }
+
+.creatorhomeembed_Title_37vyV {
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 1px;
+  margin-bottom: 4px; }
+
+.creatorhomeembed_Followers_2ZpFi {
+  display: block;
+  padding: 0px 6px;
+  font-size: 11px;
+  line-height: 12px; }
+  .creatorhomeembed_Followers_2ZpFi span {
+    font-size: 15px;
+    line-height: 16px; }
+
+@media screen and (max-width: 800px) {
+  .creatorhomeembed_SocialFollowersCtn_BT3Bj {
+    flex-direction: column; } }
+
+.creatorhomeembed_FollowBtnCtn_2artm {
+  display: flex;
+  flex-direction: row;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  padding: 4px;
+  margin-bottom: 4px;
+  height: fit-content; }
+
+.creatorhomeembed_FollowButton_1HwWX {
+  background-color: #54a5d4;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center; }
+  .creatorhomeembed_FollowButton_1HwWX img {
+    display: block;
+    margin-right: 4px; }
+
+.creatorhomeembed_FollowBtnText_1a5dj {
+  font-size: 12px; }
+
+div.creatorhomeembed_SocialContainer_1o1Ds {
+  display: flex;
+  flex-direction: unset;
+  flex-wrap: wrap; }
+  @media screen and (max-width: 1100px) {
+    .creatorhomeembed_SmallFormat_18tLe div.creatorhomeembed_SocialContainer_1o1Ds {
+      display: none; } }
+  @media screen and (max-width: 910px) {
+    .creatorhomeembed_SmallFormat_18tLe div.creatorhomeembed_SocialContainer_1o1Ds {
+      display: flex; } }
+  @media screen and (max-width: 600px) {
+    div.creatorhomeembed_SocialContainer_1o1Ds {
+      display: none; }
+      .creatorhomeembed_SmallFormat_18tLe div.creatorhomeembed_SocialContainer_1o1Ds {
+        display: none; } }
+
+.creatorhomeembed_SocialImg_2v_K1 {
+  width: 20px;
+  height: 20px;
+  display: block;
+  opacity: 0.5; }
+
+.creatorhomeembed_SocialLink_3eCVb {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 2px 8px 2px 3px;
+  margin-right: 4px;
+  margin-bottom: 4px;
+  border-radius: 3px;
+  color: #8e9093; }
+  .creatorhomeembed_SocialLink_3eCVb:hover {
+    background-color: #54a5d4;
+    color: #000000; }
+
+.creatorhomeembed_SocialLink_3eCVb > div {
+  padding-top: 0px;
+  padding-left: 4px;
+  display: block;
+  font-size: 12px; }
+
+.creatorhomeembed_CuratorHoverCtn_30j_R .creatorhomeembed_DevSummaryCtn_1k0S- {
+  height: min-content;
+  min-height: unset; }
+  .creatorhomeembed_CuratorHoverCtn_30j_R .creatorhomeembed_DevSummaryCtn_1k0S- .creatorhomeembed_CreatorDescCtn_3nKoQ {
+    margin-left: 0px; }
+  .creatorhomeembed_CuratorHoverCtn_30j_R .creatorhomeembed_DevSummaryCtn_1k0S- .creatorhomeembed_DevSummaryWidgetCtn_A2B2V {
+    overflow: visible; }
+  .creatorhomeembed_CuratorHoverCtn_30j_R .creatorhomeembed_DevSummaryCtn_1k0S- .creatorhomeembed_DevSummaryContent_23xa4 {
+    padding: 10px 12px 10px 8px;
+    position: relative; }
+
+.creatorhomeembed_CuratorHoverCtn_30j_R .creatorhomeembed_AvatarLink_1N0rY {
+  display: none; }
+
 .basicpartnereventrender_Main_1Zn_5 {
   height: 100vh;
   overflow-y: scroll; }
@@ -8341,11 +8503,11 @@ div.apppartnereventspage_EventDetailsBody_3NW5v {
   display: flex;
   flex-direction: column; }
   .demoandquickpitch_TileContainer_3YSNl .demoandquickpitch_TileTitleContainer_huv5k {
-    height: 72px;
+    min-height: 72px;
     padding-left: 16px;
     padding-right: 12px;
     padding-top: 21px;
-    padding-bottom: 12px;
+    padding-bottom: 21px;
     display: flex;
     flex-direction: row;
     box-sizing: border-box;
@@ -8404,7 +8566,7 @@ div.apppartnereventspage_EventDetailsBody_3NW5v {
   .demoandquickpitch_TileActionContainer_1AC_X .demoandquickpitch_TileActionInner_3Fxxr {
     background-color: rgba(0, 0, 0, 0.25);
     margin-top: 4px;
-    padding: 4px;
+    padding: 4px 8px;
     border-radius: 4px;
     flex-grow: 1;
     cursor: pointer; }
