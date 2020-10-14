@@ -1,6 +1,6 @@
 "osx"
 {
-	"version"		"1602546279"
+	"version"		"1602691456"
 	"tenfoot_misc_all"
 	{
 		"file"		"tenfoot_misc_all.zip.1ca83d76835b4613170f5cead778b176b11f2b0c"
@@ -61,11 +61,11 @@
 	}
 	"steamui_websrc_all"
 	{
-		"file"		"steamui_websrc_all.zip.3a438b747af5ceaa83e0e8761d7aa369ecedfc1a"
-		"size"		"3407846"
-		"sha2"		"5ada3ced2a423d7bc574b6e765a3319df0329bfe5f596d5346d052e432a63619"
-		"zipvz"		"steamui_websrc_all.zip.vz.a7318cc8a1b0f8e07d5b1c318b7858c51609e751_2573770"
-		"sha2vz"		"21978419ba9d3f9ed29ce9930d4c2005b87345b881731233861060610ed4bb71"
+		"file"		"steamui_websrc_all.zip.37e7a7da80433f7dee6c2831afca96cfe5ca0f48"
+		"size"		"3407637"
+		"sha2"		"6b1fec4d488faf8ecd6c0bc1e89dcedd6fd210de3f417ca21f7858ba46270709"
+		"zipvz"		"steamui_websrc_all.zip.vz.af9157fd21fee31819ea817626f3b2e4b5a3ef47_2573595"
+		"sha2vz"		"bf8d9216ea4bd921fe28ae702300772293b86fd524325973e0d9b22520b13d4b"
 	}
 	"resources_misc_all"
 	{
@@ -123,19 +123,19 @@
 	}
 	"bins_osx"
 	{
-		"file"		"bins_osx.zip.7f0267e11d65d52c1e184dbdc895d34f485c9929"
-		"size"		"26384770"
-		"sha2"		"5cf62434f1cf33465df99a9a23314bfe3600dc1bad703b6ec35edcd0426cbbe9"
-		"zipvz"		"bins_osx.zip.vz.262bbc208d4ace4696d5be36200bff77c8bfbe66_14086780"
-		"sha2vz"		"9f594e10a211664c1cdc6bdc25a25070f25e7d2dfe142ead4e3acd119177bdb1"
+		"file"		"bins_osx.zip.52ea13888b10ac600b78bba742a5dd4e5705513c"
+		"size"		"26385285"
+		"sha2"		"589eeb285243c98b3353c12aa600ed7a1de8d8a1d791f1c64d156d99700f9889"
+		"zipvz"		"bins_osx.zip.vz.d52961db738d2fde5fef0cf0bb2fa4a26ae8a4a7_14082280"
+		"sha2vz"		"c92b1e730ef5eaec26006e4e8f375d60f06f8ee59d801ea52904ce1f656d10fe"
 	}
 	"bins_client_osx"
 	{
-		"file"		"bins_client_osx.zip.41bd0868f86f18c0979bf99f90f0ac7b61c749ca"
-		"size"		"23096454"
-		"sha2"		"62dc9474a54d873191c4c4f4adfafd6dc456ea15b6e0640c30b68789edd8939a"
-		"zipvz"		"bins_client_osx.zip.vz.60c6953bd9d0181585fc34ecbe3d6414e9085802_14519157"
-		"sha2vz"		"9840b02786853b652b4b5fd55bbbda7c073c27f361908721eac2f0b24a845e1e"
+		"file"		"bins_client_osx.zip.7c3e5010c09e90170854cccdd9427d091051fb37"
+		"size"		"23096106"
+		"sha2"		"d9ae1ea40d8cfa3192fb08ef51352b59d363d3339e1a9ae25a83d6a5fe650046"
+		"zipvz"		"bins_client_osx.zip.vz.bead7cde164fe67220ee7ac43be5feac9f4d98bf_14513410"
+		"sha2vz"		"53bc097e791fd06b4425ee78d9c3b0823af9780b644de2ff13c5988e6f0a5f2f"
 	}
 	"bins_codecs_osx"
 	{
@@ -178,11 +178,11 @@
 		"sha2vz"		"6c8730b67d5689becee3622a4c6f99a2e4c8b749ff5b2e18900be3c5f7d5eedd"
 		"macos109"
 		{
-			"file"		"webhelpers_osx_macos109.zip.116c69c77edbbea12e2cd1aaa1ffa728b20ab8ab"
-			"size"		"2685808"
-			"sha2"		"62f3d81baffa480b4ff8a4d4fc92ad8e0347b51461f0f9625b8eeacf041cb4fb"
-			"zipvz"		"webhelpers_osx_macos109.zip.vz.a8e279bdbd6339faa80bbc311bc50f037b388101_1168657"
-			"sha2vz"		"54b28e3d606c94cafa2041f078c6f8797d64978fc78b86ee6e24ba259aa4430f"
+			"file"		"webhelpers_osx_macos109.zip.023ec3954eb11456932197669587382b8ee62dd0"
+			"size"		"2685861"
+			"sha2"		"5accd4e6d512bb330e2a858d8f04a84503d8c8949ee4b82134a3c6909b3962be"
+			"zipvz"		"webhelpers_osx_macos109.zip.vz.a78c5a54b83ac61c7302f59b03b997525479be2f_1171200"
+			"sha2vz"		"2f4eb05279ec604a970a38cd720ee8ac4ecf1488ea5bc39efc73fb770b37f854"
 		}
 	}
 	"webkit_osx"
@@ -233,9 +233,9 @@
 }
 "kvsign2"
 {
-	"osx"		"453e451fac9c9ba74ec7505c788020306ba66d3a301c455a99c7b25e73bee000b48e250a85bed8c1fd54db22555f525109d2e2580e73b5062dd76379108db102"
+	"osx"		"470dcedf6c0fb837e2e3623698db2521e633bc4000b1be5fe7670b127f012c7a8ab8d89451d2ac5c083164519a2ca92a3eb10bee0e9271803a449ccc09c17805"
 }
 "kvsignatures"
 {
-	"osx"		"949adf9065a1884331bcc5d77ca47368ad33ad5451f3e75ebb84668489a1831a29a367f918de47d59a3e9deb77b98bdb6b45a64d342e471af0ffd512b4e097863496234769e8ee01b86083153769065a2352c2eb8a06bbac3783c017671dc77a1f199cb5d70f67416adabe976b48f972709fe3a77740ab692de0f6aeab2f808a"
+	"osx"		"c96683825423b96ab7f6844598c6f605e4185db5376c79794b841af277b84a5ea5c30394723cff4b5f2b10600b16d82010812d1ec5aa32e7f18e65e0c98cfe1611ff278b38580b6ae7a0369660a0ddb290e351371cf7f5e4d2b769a79183f1ec52d1af6ae15ee311477c00b59cf5f252cd7ef350071920b315d050078d3e17d0"
 }
