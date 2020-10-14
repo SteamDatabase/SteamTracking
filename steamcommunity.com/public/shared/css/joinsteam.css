@@ -72,14 +72,17 @@
 
 }
 
-body.v6.joinsteam.csgo, .body.v6.joinsteam.dota {
+body.v6.joinsteam.csgo, body.v6.joinsteam.dota, body.v6.china.joinsteam {
 	background: #212429;
 	background-image: none;
 }
 
+body.v6.global.joinsteam {
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/joinsteam/acct_creation_bg.jpg' );
+}
+
 body.v6.joinsteam {
 	color: #E9E9E9;
-	background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/joinsteam/acct_creation_bg.jpg' );
 	background-color: #212429;
 	background-position: -40vw 0;
 	background-repeat: no-repeat;
@@ -89,10 +92,9 @@ body.v6.joinsteam {
 		;
 }
 
-.page_content, html.responsive .page_content_client {
-	background: linear-gradient(90deg, transparent, rgba( 33,36,41, 0.4 ) 2%, #212429 20%);
+body.v6.joinsteam #checkout_steam_logo {
+	display: none;
 }
-
 
 ::-webkit-scrollbar {
 	width: 15px;
@@ -427,6 +429,10 @@ p .csgoheadline{
 	max-width: 600px;
 }
 
+.joinsteam_content_container button > span {
+	padding: 3px 50px;
+}
+
 .joinsteam .green_check {
 	width: 16px;
 	vertical-align: sub;
@@ -507,8 +513,9 @@ body.joinsteam.verify_email {
 }
 
 .existingaccount_intro {
-	font-size: 14px;
+	font-size: 16px;
 	margin: 20px 0;
+	color: #FFFFFF;
 }
 
 .existingaccount_intro span {
@@ -516,16 +523,34 @@ body.joinsteam.verify_email {
 }
 
 .existingaccount_info_ctn {
-	background: rgba( 0, 0, 0, .3 );
-	padding: 35px;
-	margin-bottom: 10px;
-	max-width: 600px;
-	font-size: 14px;
+	margin-bottom: 30px;
+	font-size: 16px;
+	color: #A6A5AB;
 }
 
-.create_newaccount_ctn {
-	margin-top: 50px;
+.use_existing_account_ctn {
+	display: flex;
+	flex-direction: column;
+	align-content: start;
+	align-items: center;
+	flex-wrap: wrap;
 }
+
+.use_existing_account_ctn a {
+	margin-top: 10px;
+	color: #A6A5AB;
+}
+
+.existingaccount_info_subtext {
+	margin-top: 10px;
+}
+
+.existingaccount_ruler {
+	background:  #3C3F48;
+	height: 1px;
+	margin: 30px 0;
+}
+
 
 .create_newaccount_intro {
 	margin-bottom: 15px;

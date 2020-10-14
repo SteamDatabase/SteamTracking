@@ -21,8 +21,8 @@ function StartCreationSession()
 		data: {
 			'email': $J( '#email' ).val(),
 			'captchagid' : $J('#captchagid').val(),
-			'captcha_text' : CaptchaText()
-		}
+			'captcha_text' : CaptchaText(),
+			'elang' : 0		}
 	})
 	.done( function( data ) {
 
@@ -82,7 +82,7 @@ function StartCreationSessionParentalConsent()
 			'parental_email': $J( '#parental_email' ).val(),
 			'captchagid': $J('#captchagid').val(),
 			'captcha_text' : CaptchaText(),
-		}
+			'elang' : 0		}
 	})
 		.done( function( data ) {
 
@@ -127,7 +127,7 @@ function WaitForEmailVerification()
 
 	var $strDialogContent = $J( '#email_verification_dialog' );
 
-	g_emailVerificationDialog =  ShowDialog( 'Verify Your Email', $strDialogContent, { bExplicitDismissalOnly: true }  );
+	g_emailVerificationDialog = ShowDialog( 'Verify Your Email', $strDialogContent, { bExplicitDismissalOnly: true }  );
 
 	$J( '.insert_verification_email' ).text( $J( '#email' ).val() );
 	$strDialogContent.show();
@@ -151,7 +151,7 @@ function AjaxCheckEmailVerified()
 			switch( data.success )
 			{
 				case 1:
-					EmailConfirmedVerified( data.has_existing_account );
+					EmailConfirmedVerified( data );
 					break;
 				case 42:
 				case 29:
@@ -184,15 +184,25 @@ function ChangeEmail()
 	RefreshCaptcha();
 }
 
-function EmailConfirmedVerified( has_existing_account )
+function EmailConfirmedVerified( rgResults )
 {
 	if ( g_emailVerificationDialog )
 		g_emailVerificationDialog.Dismiss();
 
-	if ( has_existing_account )
+	if ( rgResults.has_existing_account )
 	{
 		$J( '.create_account_form_container' ).hide();
 		$J( '.joinsteam_existingaccount_ctn' ).show();
+
+		if ( rgResults.pw_account )
+		{
+			$J( '.existingaccount_info_ctn' ).show();
+		}
+
+		if ( rgResults.global_account )
+		{
+			$J( '#existingaccount_pw_china_global' ).show();
+		}
 	}
 	else
 	{
