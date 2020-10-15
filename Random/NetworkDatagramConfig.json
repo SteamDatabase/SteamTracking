@@ -1200,6 +1200,19 @@
         "180.153.252.0/24"
       ]
     },
+    "sof": {
+      "desc": "Sofia, Bulgaria",
+      "geo": [ 23.41, 42.7 ],
+      "relay_addresses": [
+        "139.45.193.10:27015-27019"
+      ],
+      "relays": [
+        {
+          "ipv4": "139.45.193.10",
+          "port_range": [ 27015, 27019 ]
+        }
+      ]
+    },
     "sto": {
       "desc": "Stockholm (Kista)",
       "geo": [ 17.9, 59.4 ],
@@ -1635,7 +1648,7 @@
     }
   },
   "relay_public_key": "5AC884C1045BA0FF44142AC8DCA51B8A98C8F1CB4FEE36284AFBE92FCF594932",
-  "revision": 282,
+  "revision": 283,
   "revoked_keys": [
     "123456789"
   ]
