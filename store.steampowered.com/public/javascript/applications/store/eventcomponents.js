@@ -2097,6 +2097,7 @@
                           cc: q.c.COUNTRY,
                           l: q.c.LANGUAGE,
                           realm: b.f.k_ESteamRealmGlobal,
+                          origin: self.origin,
                           f: "jsonfull",
                           term: s.replace(" ", "+"),
                           require_type: a.join(","),

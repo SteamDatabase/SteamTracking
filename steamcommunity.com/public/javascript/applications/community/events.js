@@ -33296,6 +33296,7 @@
                           cc: V.b.COUNTRY,
                           l: V.b.LANGUAGE,
                           realm: Xe.e.k_ESteamRealmGlobal,
+                          origin: self.origin,
                           f: "jsonfull",
                           term: l.replace(" ", "+"),
                           require_type: n.join(","),
