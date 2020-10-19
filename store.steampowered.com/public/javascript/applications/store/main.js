@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6148446";
+var CLSTAMP = "6152257";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [37],
   {
@@ -5494,42 +5494,49 @@ var CLSTAMP = "6148446";
               this.m_cancelSignal.cancel("StoreSalePreviewWidget: Unmounting");
             }),
             (e.prototype.LoadCapsule = function(e, t) {
-              var i = this;
+              var a = this;
               void 0 === t && (t = "game");
               var n = { id: e, type: t };
               Object(te.d)([n]).then(function() {
                 var t = ae(n),
-                  o = se(n.type);
-                i.m_cancelSignal.token.reason ||
+                  o = se(n.type),
+                  i = t.id;
+                a.m_cancelSignal.token.reason ||
                   (t && o
-                    ? (i.setState({ info: t, hoverType: o }),
+                    ? (a.setState({ info: t, hoverType: o, nHoverId: i }),
                       Object(te.c)(n).then(function(e) {
                         var n, r;
                         1 == e.length
                           ? (n = T.a.GetAppLinkInfo(e[0])) &&
-                            !i.m_cancelSignal.token.reason &&
-                            (i.setState({ appInfo: n }),
-                            !1 !== i.props.bLoadShortDescription &&
+                            !a.m_cancelSignal.token.reason &&
+                            ((o = "app"),
+                            (i = n.appid),
+                            a.setState({
+                              appInfo: n,
+                              hoverType: o,
+                              nHoverId: i
+                            }),
+                            !1 !== a.props.bLoadShortDescription &&
                               (r = O.a.Get())
                                 .LoadShortDesc(n.appid)
                                 .then(function(e) {
                                   var t;
                                   !e ||
                                     ((t = r.GetShortDesc(n.appid)) &&
-                                      !i.m_cancelSignal.token.reason &&
-                                      i.setState({
+                                      !a.m_cancelSignal.token.reason &&
+                                      a.setState({
                                         strAppShortDescription: Object(_.c)(t)
                                       }));
                                 }))
-                          : "bundle" != o || i.m_cancelSignal.token.reason
+                          : "bundle" != o || a.m_cancelSignal.token.reason
                           ? "sub" != o ||
-                            i.m_cancelSignal.token.reason ||
-                            i.setState({
+                            a.m_cancelSignal.token.reason ||
+                            a.setState({
                               rgContainedInfos: t.appids.map(function(e) {
                                 return T.a.GetAppLinkInfo(e);
                               })
                             })
-                          : i.setState({
+                          : a.setState({
                               rgContainedInfos: t.packageids.map(function(e) {
                                 return y.b.GetPackageInfo(e);
                               })
@@ -5546,42 +5553,41 @@ var CLSTAMP = "6148446";
             (e.prototype.render = function() {
               var t = this,
                 e = this.props,
-                n = e.id,
-                r = e.bUseDemoLayout,
-                o = e.bHidePrice,
-                i = e.bForceSmallCapsuleArt,
-                a = e.bUseSubscriptionLayout,
-                s = (e.bLoadShortDescription, this.state),
-                c = s.info,
-                l = s.hoverType,
-                p = s.bIsHovered,
-                u = s.rgContainedInfos,
-                d = s.appInfo,
-                m = s.strAppShortDescription;
-              if (!c || (!d && !u)) return null;
-              var h,
-                f,
-                b = c.name,
-                _ = c.discount_percent,
-                g = r && d ? d.appid : null,
-                v = "" + K.c.STORE_BASE_URL + l + "/" + n,
-                M = !1;
+                n = (e.id, e.bUseDemoLayout),
+                r = e.bHidePrice,
+                o = (e.bForceSmallCapsuleArt, e.bUseSubscriptionLayout),
+                i = (e.bLoadShortDescription, this.state),
+                a = i.info,
+                s = i.hoverType,
+                c = i.nHoverId,
+                l = i.bIsHovered,
+                p = i.rgContainedInfos,
+                u = i.appInfo,
+                d = i.strAppShortDescription;
+              if (!a || (!u && !p)) return null;
+              var m,
+                h,
+                f = a.name,
+                b = a.discount_percent,
+                _ = n && u ? u.appid : null,
+                g = "" + K.c.STORE_BASE_URL + s + "/" + c,
+                v = !1;
               return (
-                d
-                  ? ((h = m),
-                    (M =
-                      (f = d && (d.full_game_appid || d.appid)) &&
-                      I.e.BIsAppStreaming(f)))
-                  : (h = _
+                u
+                  ? ((m = d),
+                    (v =
+                      (h = u && (u.full_game_appid || u.appid)) &&
+                      I.e.BIsAppStreaming(h)))
+                  : (m = b
                       ? Object(H.f)(
                           "#Sale_BundleSave_WithDiscount",
-                          _,
-                          u.length
+                          b,
+                          p.length
                         )
-                      : Object(H.f)("#Sale_BundleSave", u.length)),
+                      : Object(H.f)("#Sale_BundleSave", p.length)),
                 w.createElement(
                   E,
-                  { appInfo: d },
+                  { appInfo: u },
                   w.createElement(
                     "div",
                     { className: re.a.StoreSaleWidgetContainer },
@@ -5591,27 +5597,27 @@ var CLSTAMP = "6148446";
                       w.createElement(
                         ie.a,
                         {
-                          strURL: v,
-                          type: l,
-                          id: n,
+                          strURL: g,
+                          type: s,
+                          id: c,
                           fnHoverState: this.OnHoverStateChange
                         },
                         w.createElement(
                           "div",
                           { className: re.a.StoreSaleWidgetImage },
-                          K.i.logged_in && w.createElement(fe, { appInfo: d }),
-                          M &&
+                          K.i.logged_in && w.createElement(fe, { appInfo: u }),
+                          v &&
                             w.createElement(
                               "div",
                               { className: re.a.CapsuleDecorators },
                               w.createElement(ye, null)
                             ),
                           w.createElement(he, {
-                            imageType: i ? "header" : "main",
-                            info: c,
-                            appInfo: d
+                            imageType: "header",
+                            info: a,
+                            appInfo: u
                           }),
-                          p && w.createElement(Ae, { appInfo: d })
+                          l && w.createElement(Ae, { appInfo: u })
                         )
                       )
                     ),
@@ -5624,32 +5630,32 @@ var CLSTAMP = "6148446";
                         w.createElement(
                           "a",
                           {
-                            href: Object(Q.e)(v),
+                            href: Object(Q.e)(g),
                             target: K.c.IN_CLIENT ? void 0 : "_blank"
                           },
                           w.createElement(
                             "div",
                             { className: re.a.StoreSaleWidgetTitle },
-                            b
+                            f
                           )
                         ),
-                        w.createElement(Me, { item: c })
+                        w.createElement(Me, { item: a })
                       ),
                       w.createElement(
                         "div",
                         { className: re.a.StoreSaleWidgetReleaseAndTags },
-                        d &&
+                        u &&
                           w.createElement(
                             "div",
                             { className: re.a.StoreSaleWidgetRelease },
-                            d.release
+                            u.release
                           ),
-                        d &&
-                          d.tags &&
+                        u &&
+                          u.tags &&
                           w.createElement(
                             "div",
                             { className: re.a.StoreSaleWidgetTags },
-                            d.tags.map(function(e) {
+                            u.tags.map(function(e) {
                               return w.createElement(
                                 "div",
                                 {
@@ -5661,7 +5667,7 @@ var CLSTAMP = "6148446";
                             })
                           )
                       ),
-                      h &&
+                      m &&
                         w.createElement(
                           "div",
                           {
@@ -5670,19 +5676,19 @@ var CLSTAMP = "6148446";
                               "StoreSaleWidgetShortDesc"
                             )
                           },
-                          h
+                          m
                         ),
-                      u && w.createElement(de, { rgInfo: u }),
-                      a && d
-                        ? w.createElement(be, { appid: d.appid, bIsMuted: p })
+                      p && w.createElement(de, { rgInfo: p }),
+                      o && u
+                        ? w.createElement(be, { appid: u.appid, bIsMuted: l })
                         : w.createElement(pe, {
-                            info: c,
-                            demoAppID: g,
-                            bHidePrice: o
+                            info: a,
+                            demoAppID: _,
+                            bHidePrice: r
                           })
                     )
                   ),
-                  u && 0 < u.length && w.createElement(ue, { rgInfo: u })
+                  p && 0 < p.length && w.createElement(ue, { rgInfo: p })
                 )
               );
             }),
@@ -5706,61 +5712,62 @@ var CLSTAMP = "6148446";
                 o = e.formatted_orig_price,
                 i = e.formatted_final_price,
                 a = "bundle" == t && e.bundle_base_discount;
-              return this.props.bShowInLibrary
-                ? w.createElement(
-                    "div",
-                    { className: re.a.StoreSalePriceBox },
-                    Object(H.f)("#EventDisplay_CallToAction_InLibrary")
+              if (this.props.bShowInLibrary)
+                return w.createElement(
+                  "div",
+                  { className: re.a.StoreSalePriceBox },
+                  Object(H.f)("#EventDisplay_CallToAction_InLibrary")
+                );
+              if (n)
+                return w.createElement(
+                  "div",
+                  { className: re.a.StoreSalePriceBox },
+                  Object(H.f)("#EventDisplay_CallToAction_FreeToPlay")
+                );
+              if (!i) return null;
+              var s = r || a,
+                c = s && a && a < s && a;
+              return w.createElement(
+                "div",
+                {
+                  className: Object(q.a)(
+                    re.a.StoreSalePriceWidgetContainer,
+                    r && re.a.Discounted
                   )
-                : n
-                ? w.createElement(
+                },
+                Boolean(c) &&
+                  w.createElement(
+                    "span",
+                    { className: Object(q.a)(re.a.BaseDiscount) },
+                    "-" + c + "%"
+                  ),
+                Boolean(s) &&
+                  w.createElement(
                     "div",
-                    { className: re.a.StoreSalePriceBox },
-                    Object(H.f)("#EventDisplay_CallToAction_FreeToPlay")
-                  )
-                : i
-                ? w.createElement(
-                    "div",
-                    {
-                      className: Object(q.a)(
-                        re.a.StoreSalePriceWidgetContainer,
-                        r && re.a.Discounted
-                      )
-                    },
-                    Boolean(a && r && a < r) &&
-                      w.createElement(
-                        "span",
-                        { className: Object(q.a)(re.a.BaseDiscount) },
-                        "-" + a + "%"
-                      ),
-                    Boolean(r) &&
+                    { className: re.a.StoreSaleDiscountBox },
+                    "-" + s + "%"
+                  ),
+                r && o
+                  ? w.createElement(
+                      "div",
+                      { className: re.a.StoreSaleDiscountedPriceCtn },
                       w.createElement(
                         "div",
-                        { className: re.a.StoreSaleDiscountBox },
-                        "-" + r + "%"
+                        { className: re.a.StoreOrignalPrice },
+                        o
                       ),
-                    r && o
-                      ? w.createElement(
-                          "div",
-                          { className: re.a.StoreSaleDiscountedPriceCtn },
-                          w.createElement(
-                            "div",
-                            { className: re.a.StoreOrignalPrice },
-                            o
-                          ),
-                          w.createElement(
-                            "div",
-                            { className: re.a.StoreSalePriceBox },
-                            i
-                          )
-                        )
-                      : w.createElement(
-                          "div",
-                          { className: re.a.StoreSalePriceBox },
-                          i
-                        )
-                  )
-                : null;
+                      w.createElement(
+                        "div",
+                        { className: re.a.StoreSalePriceBox },
+                        i
+                      )
+                    )
+                  : w.createElement(
+                      "div",
+                      { className: re.a.StoreSalePriceBox },
+                      i
+                    )
+              );
             }),
             (t = Object(C.c)([i.a], t))
           );
@@ -6000,23 +6007,31 @@ var CLSTAMP = "6148446";
           return (
             Object(C.d)(e, t),
             (e.prototype.componentDidMount = function() {
-              var n = this,
-                r = this.props.capsule;
+              var o = this,
+                t = this.props.capsule;
               (this.m_bIsMounted = !0),
                 D.a.HintLoad(),
-                Object(te.d)([r]).then(function() {
-                  var e, t;
-                  n.m_bIsMounted &&
-                    ((e = ae(r)),
-                    (t = se(r.type)),
-                    e && t
-                      ? n.setState({ info: e, hoverType: t })
-                      : console.warn("Unsupported item:", r.type, r.id),
-                    Object(te.c)(n.props.capsule).then(function(e) {
+                Object(te.d)([t]).then(function() {
+                  var e, n, r;
+                  o.m_bIsMounted &&
+                    ((e = ae(t)),
+                    (n = se(t.type)),
+                    (r = e.id),
+                    e && n
+                      ? o.setState({ info: e, hoverType: n, nHoverId: r })
+                      : console.warn("Unsupported item:", t.type, t.id),
+                    Object(te.c)(o.props.capsule).then(function(e) {
                       var t;
-                      n.m_bIsMounted &&
-                        ((t = 1 == e.length ? T.a.GetAppLinkInfo(e[0]) : null),
-                        n.setState({ rgAppIDs: e, appInfo: t }));
+                      o.m_bIsMounted &&
+                        ((t =
+                          1 == e.length ? T.a.GetAppLinkInfo(e[0]) : null) &&
+                          ((n = "app"), (r = t.appid)),
+                        o.setState({
+                          rgAppIDs: e,
+                          appInfo: t,
+                          hoverType: n,
+                          nHoverId: r
+                        }));
                     }));
                 });
             }),
@@ -6035,21 +6050,21 @@ var CLSTAMP = "6148446";
             }),
             (e.prototype.render = function() {
               var e = this.props,
-                t = e.capsule,
-                n = e.bShowParentApp,
-                r = e.bUseSubscriptionLayout,
-                o = e.bUseDemoLayout,
-                i = e.eventToShow,
-                a = e.bHidePriceIfOwned,
-                s = e.bHideStatusBanners,
-                c = e.bHidePrice,
-                l = this.state,
-                p = l.info,
-                u = l.hoverType,
-                d = l.bIsHovered,
-                m = l.rgAppIDs,
-                h = l.appInfo;
-              if (!p || 0 == m.length) return null;
+                t = (e.capsule, e.bShowParentApp),
+                n = e.bUseSubscriptionLayout,
+                r = e.bUseDemoLayout,
+                o = e.eventToShow,
+                i = e.bHidePriceIfOwned,
+                a = e.bHideStatusBanners,
+                s = e.bHidePrice,
+                c = this.state,
+                l = c.info,
+                p = c.hoverType,
+                u = c.nHoverId,
+                d = c.bIsHovered,
+                m = c.rgAppIDs,
+                h = c.appInfo;
+              if (!l || 0 == m.length) return null;
               var f = m.every(function(e) {
                   return D.a.BOwnsApp(e);
                 }),
@@ -6063,24 +6078,24 @@ var CLSTAMP = "6148446";
                     n = t && (t.full_game_appid || t.appid);
                   return I.e.BIsAppStreaming(n);
                 }),
-                g = f && a,
-                v = f && !s,
-                M = b && !s,
+                g = f && i,
+                v = f && !a,
+                M = b && !a,
                 A = v,
                 y =
-                  n &&
+                  t &&
                   h &&
                   h.full_game_appid &&
                   T.a.GetAppLinkInfo(h.full_game_appid),
                 O = null,
                 O =
-                  r && h
+                  n && h
                     ? w.createElement(be, { appid: h.appid, bIsMuted: d })
-                    : i
+                    : o
                     ? w.createElement(
                         "div",
                         { className: re.a.EventRow },
-                        w.createElement(oe.a, { item: i, bMiniMode: !0 })
+                        w.createElement(oe.a, { item: o, bMiniMode: !0 })
                       )
                     : w.createElement(
                         "div",
@@ -6090,12 +6105,12 @@ var CLSTAMP = "6148446";
                             A && re.a.Muted
                           )
                         },
-                        w.createElement(Me, { item: p }),
-                        !c &&
+                        w.createElement(Me, { item: l }),
+                        !s &&
                           w.createElement(
                             "span",
                             { className: re.a.BottomBarPriceInfo },
-                            w.createElement(le, { info: p, bShowInLibrary: g })
+                            w.createElement(le, { info: l, bShowInLibrary: g })
                           )
                       ),
                 S = w.createElement(
@@ -6127,16 +6142,16 @@ var CLSTAMP = "6148446";
                     _ && w.createElement(ye, null)
                   ),
                   K.i.logged_in &&
-                    !o &&
+                    !r &&
                     !Object(ee.a)() &&
                     w.createElement(fe, { appInfo: h }),
                   w.createElement(he, {
                     imageType: "header",
-                    info: p,
+                    info: l,
                     appInfo: h
                   }),
                   d &&
-                    !o &&
+                    !r &&
                     !Object(ee.a)() &&
                     w.createElement(Ae, { appInfo: h }),
                   O
@@ -6153,13 +6168,13 @@ var CLSTAMP = "6148446";
                         { fnRenderItem: this.RenderGameHoverSource },
                         S
                       )
-                    : o && h
+                    : r && h
                     ? w.createElement(
                         ee.c,
                         {
                           info: h,
                           className: re.a.CapsuleContainer,
-                          eventToShow: i,
+                          eventToShow: o,
                           fnHoverState: this.OnHoverStateChange,
                           hoverProps: { className: re.a.DemoLayoutPopup }
                         },
@@ -6168,9 +6183,9 @@ var CLSTAMP = "6148446";
                     : w.createElement(
                         ie.a,
                         {
-                          strURL: "" + K.c.STORE_BASE_URL + u + "/" + t.id,
-                          type: u,
-                          id: t.id,
+                          strURL: "" + K.c.STORE_BASE_URL + p + "/" + u,
+                          type: p,
+                          id: u,
                           fnHoverState: this.OnHoverStateChange,
                           hoverClassName: re.a.CapsuleContainer
                         },
