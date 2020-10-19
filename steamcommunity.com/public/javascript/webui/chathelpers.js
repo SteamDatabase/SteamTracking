@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6148450";
+var CLSTAMP = "6152454";
 !(function(e) {
   function t(t) {
     for (
@@ -937,7 +937,7 @@ var CLSTAMP = "6148450";
               (this.m_bValid = !0),
               (this.m_bReady = !0);
           }),
-          Object(r.c)([i.C], e.prototype, "m_bReady", void 0),
+          Object(r.c)([i.B], e.prototype, "m_bReady", void 0),
           Object(r.c)([i.k], e.prototype, "InitInvalid", null),
           Object(r.c)([i.k], e.prototype, "InitDirectInvite", null),
           e
@@ -1128,7 +1128,7 @@ var CLSTAMP = "6148450";
         if (!u.bGranularFutureTime)
           return (
             a.b(n.getTime() - c.getTime()),
-            n.getFullYear() == c.getFullYear() ? C(n) : y(n)
+            n.getFullYear() == c.getFullYear() ? y(n) : C(n)
           );
         a.b(new Date().setHours(24, 0, 0, 0) - c.getTime());
         var s = new Date();
@@ -1162,7 +1162,7 @@ var CLSTAMP = "6148450";
           ? Object(i.f)("#TimeSince_1Week")
           : Object(i.f)("#TimeSince_XWeeks", d);
       }
-      return n.getFullYear() == c.getFullYear() ? C(n) : y(n);
+      return n.getFullYear() == c.getFullYear() ? y(n) : C(n);
     }
     var _ = new Map(),
       b = new Map(),
@@ -1194,7 +1194,7 @@ var CLSTAMP = "6148450";
         t)
       );
     }
-    function C(e) {
+    function y(e) {
       var t = b.get(e.getMonth());
       return (
         t ||
@@ -1205,7 +1205,7 @@ var CLSTAMP = "6148450";
         t)
       );
     }
-    function y(e) {
+    function C(e) {
       var t = e.getMonth() + 12 * e.getFullYear(),
         n = v.get(t);
       return (
@@ -1439,12 +1439,12 @@ var CLSTAMP = "6148450";
             (this.customlist = void 0);
         }
         return (
-          Object(r.c)([o.C], e.prototype, "enabled", void 0),
-          Object(r.c)([o.C], e.prototype, "locked", void 0),
-          Object(r.c)([o.C], e.prototype, "features", void 0),
-          Object(r.c)([o.C], e.prototype, "allowallapps", void 0),
-          Object(r.c)([o.C], e.prototype, "baselist", void 0),
-          Object(r.c)([o.C], e.prototype, "customlist", void 0),
+          Object(r.c)([o.B], e.prototype, "enabled", void 0),
+          Object(r.c)([o.B], e.prototype, "locked", void 0),
+          Object(r.c)([o.B], e.prototype, "features", void 0),
+          Object(r.c)([o.B], e.prototype, "allowallapps", void 0),
+          Object(r.c)([o.B], e.prototype, "baselist", void 0),
+          Object(r.c)([o.B], e.prototype, "customlist", void 0),
           e
         );
       })(),
@@ -1632,7 +1632,7 @@ var CLSTAMP = "6148450";
         (e[(e.k_ESteamRealmGlobal = 1)] = "k_ESteamRealmGlobal"),
         (e[(e.k_ESteamRealmChina = 2)] = "k_ESteamRealmChina");
     })(g || (g = {}));
-    var E, S, C, y, I;
+    var E, S, y, C, I;
     !(function(e) {
       (e[(e.Unknown = 0)] = "Unknown"),
         (e[(e.Wired = 1)] = "Wired"),
@@ -1656,11 +1656,11 @@ var CLSTAMP = "6148450";
           (e[(e.Wpa2 = 16)] = "Wpa2"),
           (e[(e.Wpa2Enterprise = 32)] = "Wpa2Enterprise"),
           (e[(e.Unsupported = 32768)] = "Unsupported");
-      })(C || (C = {})),
+      })(y || (y = {})),
       (function(e) {
         (e[(e.SystemKey0 = 0)] = "SystemKey0"),
           (e[(e.SystemKey1 = 1)] = "SystemKey1");
-      })(y || (y = {})),
+      })(C || (C = {})),
       (function(e) {
         (e[(e.Hidden = 0)] = "Hidden"),
           (e[(e.Notification = 1)] = "Notification"),
@@ -2284,15 +2284,15 @@ PERFORMANCE OF THIS SOFTWARE.
               a.b
                 .ShowChatRoomGroupInvite(this.m_invite.GetInviteCode())
                 .then(function(t) {
-                  Object(l.G)(function() {
+                  Object(l.F)(function() {
                     (e.m_bConnectingToClient = !1),
                       (e.m_connectResult = t),
                       console.log(t);
                   });
                 }));
           }),
-          Object(s.c)([l.C], e.prototype, "m_bConnectingToClient", void 0),
-          Object(s.c)([l.C], e.prototype, "m_connectResult", void 0),
+          Object(s.c)([l.B], e.prototype, "m_bConnectingToClient", void 0),
+          Object(s.c)([l.B], e.prototype, "m_connectResult", void 0),
           e
         );
       })(),
@@ -2481,7 +2481,7 @@ PERFORMANCE OF THIS SOFTWARE.
                   )
             );
           }),
-          Object(s.c)([l.C], t.prototype, "m_bTriedToLaunchSteam", void 0),
+          Object(s.c)([l.B], t.prototype, "m_bTriedToLaunchSteam", void 0),
           Object(s.c)([p.a], t.prototype, "LaunchWebChat", null),
           Object(s.c)([p.a], t.prototype, "OpenInSteamIgnoreAccount", null),
           Object(s.c)([p.a], t.prototype, "LaunchSteamClient", null),
@@ -2541,8 +2541,8 @@ PERFORMANCE OF THIS SOFTWARE.
       );
     }
     window.AssertMsg = u.a;
-    var C,
-      y,
+    var y,
+      C,
       I,
       R = new a.a();
     function O(e) {
@@ -2577,18 +2577,18 @@ PERFORMANCE OF THIS SOFTWARE.
       }),
       (window.LocalizationReady = function(e, t, n) {
         if ("english" !== t)
-          "friendsui" == e ? (C = n) : "shared" == e && (y = n);
+          "friendsui" == e ? (y = n) : "shared" == e && (C = n);
         else if ("shared" == e) I = n;
         else {
           var r = void 0,
             i = null,
             o = void 0,
             a = null;
-          void 0 !== C ? ((r = C), (i = n)) : (r = n),
-            void 0 !== y ? ((o = y), (a = I)) : (o = I),
+          void 0 !== y ? ((r = y), (i = n)) : (r = n),
+            void 0 !== C ? ((o = C), (a = I)) : (o = I),
             c.e.InitFromObjects(r, i, o, a),
-            (C = void 0),
             (y = void 0),
+            (C = void 0),
             (I = void 0);
         }
       });
