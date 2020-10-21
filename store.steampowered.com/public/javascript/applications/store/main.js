@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6157987";
+var CLSTAMP = "6158287";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [37],
   {
@@ -49737,7 +49737,9 @@ var CLSTAMP = "6157987";
             (this.m_inFlightRequests = new Map()),
               (this.m_lookupKeyToEmbedStreamDef = new Map()),
               (this.m_lookupStreams = new Map()),
-              (this.m_chatVisibility = "hide"),
+              (this.m_pageChatStatus = "hide"),
+              (this.m_streamChatStatus = "hide"),
+              (this.m_bUserChatExpanded = void 0),
               (this.m_bHideBroadcast = void 0),
               (this.m_setStreamsLoadedListeners = new Set()),
               (this.m_setStreamChangedListeners = new Set()),
@@ -49772,12 +49774,21 @@ var CLSTAMP = "6157987";
               return t ? t.length : 0;
             }),
             (e.prototype.GetChatVisibility = function() {
-              return this.m_chatVisibility;
+              return "remove" === this.m_pageChatStatus ||
+                "remove" === this.m_streamChatStatus
+                ? "remove"
+                : void 0 !== this.m_bUserChatExpanded
+                ? this.m_bUserChatExpanded
+                  ? "show"
+                  : "hide"
+                : "hide" === this.m_pageChatStatus ||
+                  "hide" === this.m_streamChatStatus
+                ? "hide"
+                : "show";
             }),
             (e.prototype.ToggleChatVisibility = function() {
-              "remove" !== this.m_chatVisibility &&
-                (this.m_chatVisibility =
-                  "hide" === this.GetChatVisibility() ? "show" : "hide");
+              var e = this.GetChatVisibility();
+              "remove" !== e && (this.m_bUserChatExpanded = "hide" === e);
             }),
             (e.prototype.DisableAutoPlay = function() {
               this.m_bAllowStreamAutoPlay = !1;
@@ -49866,7 +49877,7 @@ var CLSTAMP = "6157987";
             (e.prototype.SetupEmbeddableVOD = function(e) {
               this.m_bUseFakeData = !1;
               var t = [];
-              this.m_chatVisibility = "remove";
+              this.m_pageChatStatus = "remove";
               var n = new b();
               (n.accountid = 7),
                 (n.nAppIDVOD = e.nAppIDVOD),
@@ -50001,7 +50012,7 @@ var CLSTAMP = "6157987";
                           }),
                           (this.m_bUseFakeData = !0)),
                         n.broadcast_chat_visibility &&
-                          (this.m_chatVisibility = n.broadcast_chat_visibility),
+                          (this.m_pageChatStatus = n.broadcast_chat_visibility),
                         this.m_lookupStreams.set(
                           this.GetStreamsLookupKeyFromDef(t),
                           n.filtered
@@ -50095,12 +50106,10 @@ var CLSTAMP = "6157987";
                         ? [2, null]
                         : ((s.steamid = t.data.steamid),
                           (this.m_playReadyStream = s),
-                          (a.appid || a.event) &&
-                            "remove" !== this.m_chatVisibility &&
-                            (1 < this.GetConcurrentStreams(a)
-                              ? (this.m_chatVisibility = "hide")
-                              : (this.m_chatVisibility =
-                                  s.broadcast_chat_visibility)),
+                          1 < this.GetConcurrentStreams(a)
+                            ? (this.m_streamChatStatus = "hide")
+                            : (this.m_streamChatStatus =
+                                s.broadcast_chat_visibility),
                           this.m_setStreamChangedListeners.forEach(function(e) {
                             return e(s);
                           }),
@@ -50167,7 +50176,9 @@ var CLSTAMP = "6157987";
             }),
             (e.prototype.Init = function() {}),
             Object(c.c)([o.C], e.prototype, "m_playReadyStream", void 0),
-            Object(c.c)([o.C], e.prototype, "m_chatVisibility", void 0),
+            Object(c.c)([o.C], e.prototype, "m_pageChatStatus", void 0),
+            Object(c.c)([o.C], e.prototype, "m_streamChatStatus", void 0),
+            Object(c.c)([o.C], e.prototype, "m_bUserChatExpanded", void 0),
             Object(c.c)([o.C], e.prototype, "m_bHideBroadcast", void 0),
             Object(c.c)(
               [o.k],
@@ -51199,6 +51210,9 @@ var CLSTAMP = "6157987";
                 );
               }
             }),
+            (e.prototype.BIsPartOfSomeTrack = function(e) {
+              return Boolean(this.GetScheduleTrackByEvent(e));
+            }),
             e
           );
         })(),
@@ -51579,6 +51593,7 @@ var CLSTAMP = "6157987";
             c = o.GetNameWithFallback(Object(u.g)(S.c.LANGUAGE));
           if (c.startsWith(i))
             for (c = c.slice(i.length); ve.has(c[0]); ) c = c.slice(1);
+          var l = de.Get().BIsPartOfSomeTrack(o);
           return _.createElement(
             X.c,
             {
@@ -51600,6 +51615,7 @@ var CLSTAMP = "6157987";
                 (((e = {})[$.a.SaleSchedRow] = !0),
                 (e[$.a.SchedRowSelected] = be.BIsEventSelected(t.unique_id)),
                 (e[$.a.MiniMode] = n),
+                (e.SchedEntryPartOfTrack = l),
                 e)
               )
             },
