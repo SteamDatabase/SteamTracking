@@ -14826,7 +14826,7 @@
                         break;
                       case "event_schedule":
                         i = H.createElement(
-                          Vn.b,
+                          Vn.c,
                           Object(z.a)({ section: e }, s.props, { activeTab: r })
                         );
                         break;

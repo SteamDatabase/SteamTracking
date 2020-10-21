@@ -2251,19 +2251,24 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
   padding: 8px;
   max-width: 370px; }
 
-.presenterpopup_SpeakerInfoOuter_1NC9n {
-  display: flex; }
+@media only screen and (min-width: 400px) {
+  .presenterpopup_SpeakerInfoOuter_1NC9n {
+    display: flex; } }
 
 .presenterpopup_SpeakerInfoOuter_1NC9n img {
-  flex: 1;
   max-width: 128px;
   width: 128px;
   margin-right: 8px; }
+  @media only screen and (min-width: 400px) {
+    .presenterpopup_SpeakerInfoOuter_1NC9n img {
+      flex: 1; } }
 
 .presenterpopup_SpeakerInfoInner_1bMpE {
-  flex: 2;
   font-size: 14px;
   padding: 8px 8px 8px 0px; }
+  @media only screen and (min-width: 400px) {
+    .presenterpopup_SpeakerInfoInner_1bMpE {
+      flex: 2; } }
 
 .presenterpopup_SpeakerTitle_2Vo0l {
   font-weight: bold; }
