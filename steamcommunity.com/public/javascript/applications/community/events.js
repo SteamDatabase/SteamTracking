@@ -40438,11 +40438,27 @@
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (
-              (e.m_currentRequest = 0), (e.state = { eventTagToSearch: "" }), e
+              (e.m_cancelSignal = B.a.CancelToken.source()),
+              (e.m_currentRequest = 0),
+              (e.state = { eventTagToSearch: "" }),
+              e
             );
           }
           return (
             Object(U.d)(e, t),
+            (e.prototype.componentDidMount = function() {
+              var e = (this.props.saleSection.events || []).map(function(e) {
+                return e.announcement_gid;
+              });
+              k.d.LoadBatchPartnerEventsByAnnouncementGID(
+                void 0,
+                e,
+                this.m_cancelSignal
+              );
+            }),
+            (e.prototype.componentWillUnmount = function() {
+              this.m_cancelSignal.cancel("unloading EventsSaleSectionEditor");
+            }),
             (e.prototype.AddEvent = function(e) {
               (this.m_refInput.element.value = ""),
                 this.props.saleSection.events.push({
@@ -40771,7 +40787,7 @@
             Object(U.c)([P.a], e.prototype, "RemoveEvent", null),
             Object(U.c)([P.a], e.prototype, "UpdateEventSuggestions", null),
             Object(U.c)([P.a], e.prototype, "OnEventSearchTagChange", null),
-            e
+            (e = Object(U.c)([Ve.a], e))
           );
         })(Fe.Component),
         Ns = (function(r) {
