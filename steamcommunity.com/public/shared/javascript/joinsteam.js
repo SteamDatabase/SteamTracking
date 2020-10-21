@@ -68,8 +68,8 @@ function StartCreationSessionParentalConsent()
 	var email_regex = /^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,24}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i
 	if ( email == '' || !email_regex.test(email) )
 	{
-		strError = 'Please enter a valid email address.<br/>';
-		new Effect.Morph( 'parental_email', {style: 'border: 1px solid #b44040', duration: 0.5 } );
+		var strError = 'Please enter a valid email address.<br/>';
+		$J( '#parental_email' ).css( "border", "1px solid #b44040" );
 		ShowError( strError );
 		return;
 	}
@@ -93,7 +93,7 @@ function StartCreationSessionParentalConsent()
                 if ( data.success == 62 )
                 {
                     strError = 'This e-mail address must be different from your own.';
-                    new Effect.Morph( 'parental_email', {style: 'border: 1px solid #b44040', duration: 0.5 } );
+					$J( '#parental_email' ).css( "border", "1px solid #b44040" );
                 }
                 else if ( data.success == 13 )
                 {
@@ -470,7 +470,9 @@ function AccountPasswordFormVerification(  )
 		for ( var key in rgBadFields )
 	{
 		if ( rgBadFields[key] )
-			new Effect.Morph( key, {style: 'border: 1px solid #b44040', duration: 0.5 } )
+		{
+			$J( '#' + key ).css( "border", "1px solid #b44040" );
+		}
 		else
 			$(key).style.borderColor = '#82807C';
 	}
@@ -589,29 +591,33 @@ function CheckAccountNameAvailability()
 	  {
 	    type: 'POST',
 	    parameters: { accountname: strName, count : iAjaxCalls },
-	    onSuccess: function(transport){
-	      if ( transport.responseText ){
-	        
+	    onSuccess: function(transport)
+		{
+	      if ( transport.responseText )
+	      {
 	        try {
 	      	  var result = transport.responseText.evalJSON(true);
 	      	} catch ( e ) {
 	      	  //alert(e);
 	      	  return;
 	      	}
-	      	var span = $('accountname_availability');
-	      	span.style.display = 'none'; // We'll fade in below
+
+	      	var elAvailibility = $J('#accountname_availability');
+	        elAvailibility.removeClass( 'warning' );
+	        elAvailibility.hide();
 
 	      	if ( result && result.bAvailable )
 	      	{
-				span.innerHTML = '<img class="green_check" src="https://community.cloudflare.steamstatic.com/public/shared/images/joinsteam/check.png" > Available';
-				span.style.color = "#b8b6b4";
+				elAvailibility.html('<img class="green_check" src="https://community.cloudflare.steamstatic.com/public/shared/images/joinsteam/icon_check.png?v=1" > Available');
+				elAvailibility.css( 'background', '#5c7e10' );
 				$('form_row_choose_suggested_name').style.display = 'none';
 				g_bAccountNameAvailable = true;
 	      	}
 	      	else
 	      	{
-	      		span.innerHTML = 'Not Available';
-				span.style.color = "#DE3F3F";
+				elAvailibility.html('Not Available');
+				elAvailibility.css( 'background', '#a0382b' );
+				elAvailibility.addClass( 'warning' );
 				g_bAccountNameAvailable = false;
 				if ( result.rgSuggestions.length > 0 )
 				{
@@ -627,7 +633,7 @@ function CheckAccountNameAvailability()
 					$('form_row_choose_suggested_name').style.display = 'none';
 				}
 	      	}
-	      	Effect.Appear( 'accountname_availability', { from : 0.2, to : 1.0, duration : 0.3 } );
+	      	elAvailibility.show();
 	      }
 	    },
 	    onFailure: function(){ alert('Something went wrong...') }

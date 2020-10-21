@@ -1120,6 +1120,62 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
     .toggle_ToggleRow_NnxzA .toggle_Label_xK7Vv.toggle_Disabled_1jIKG {
       opacity: 0.3; }
 
+.pagedsettings_PagedSettingsDialog_2sssI {
+  /*width: 842px;*/
+  display: flex;
+  flex-direction: row;
+  height: 720px; }
+
+.pagedsettings_PagedSettingsDialog_PageContent_CFTLX {
+  flex: 3; }
+
+.pagedsettings_PagedSettingsDialog_PageContent_CFTLX .DialogHeader {
+  margin-right: 0; }
+
+.pagedsettings_PagedSettingsDialog_PageListColumn_2kwFF {
+  background: #2a2d34;
+  flex: 1;
+  min-width: 140px;
+  max-width: 220px;
+  padding-left: 24px;
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  position: relative; }
+
+.pagedsettings_PagedSettingsDialog_Title_2rjVT {
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: #4297f8;
+  font-weight: 300;
+  font-size: 13px;
+  user-select: none; }
+
+.pagedsettings_PagedSettingsDialog_PageList_18QCu {
+  line-height: 16px;
+  white-space: nowrap;
+  overflow-y: overlay;
+  flex-shrink: 1; }
+
+.pagedsettings_PagedSettingsDialog_PageListItem_1-vlr {
+  white-space: normal;
+  max-width: 180px;
+  text-overflow: ellipsis;
+  color: #7e7e7e;
+  font-size: 15px;
+  font-weight: normal;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-bottom: 14px;
+  user-select: none; }
+  .pagedsettings_PagedSettingsDialog_PageListItem_1-vlr.pagedsettings_DisabledItem_oUzYn, .pagedsettings_PagedSettingsDialog_PageListItem_1-vlr.pagedsettings_DisabledItem_oUzYn:hover, .pagedsettings_PagedSettingsDialog_PageListItem_1-vlr.pagedsettings_DisabledItem_oUzYn:not(.pagedsettings_Active_2DpXj):hover {
+    color: #414141; }
+  .pagedsettings_PagedSettingsDialog_PageListItem_1-vlr:not(.pagedsettings_Active_2DpXj):hover {
+    color: #cccccc; }
+  .pagedsettings_PagedSettingsDialog_PageListItem_1-vlr.pagedsettings_Active_2DpXj {
+    color: #ffffff;
+    cursor: default; }
+
 body.modals_BodyNoScroll_32ZiC {
   overflow-y: hidden;
   height: 100vh; }
@@ -2180,163 +2236,43 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
   color: #74c069;
   background-color: #0000; }
 
-:root {
-  --main-text-color: #dbe2e6;
-  --main-light-blue-background: #93b3c8;
-  --main-text-on-light-blue: rgb(209, 209, 209);
-  --main-top-image-bg: #1f2126;
-  --main-editor-bg-color: #363a43;
-  --main-editor-text-color: #e6e7e8;
-  --main-editor-input-bg-color: #30333b;
-  --main-editor-section-title-color: #a3a3a3; }
-
-.bbcodeeditor_DragTarget_2sUvh {
+.presenterpopup_Speaker_3F7-F {
+  margin-bottom: 16px;
   font-size: 12px;
-  background-color: rgba(255, 255, 255, 0.4); }
+  flex: 1;
+  display: inline-block; }
 
-.bbcodeeditor_DragOnTopOfMe_1mvpI {
-  background-color: rgba(255, 255, 255, 0.4);
-  -webkit-filter: blur(5px);
-  -moz-filter: blur(5px);
-  -o-filter: blur(5px);
-  -ms-filter: blur(5px);
-  filter: blur(5px); }
-
-.bbcodeeditor_DescriptionCtn_3DQEB {
-  border: 2px solid transparent;
-  margin: -2px; }
-
-.bbcodeeditor_DescriptionCtn_3DQEB.bbcodeeditor_DragTarget_2sUvh {
-  border: 2px dashed #06beff; }
-
-.bbcodeeditor_EventEditorLinkInput_25nbu {
-  position: relative;
-  min-width: 30vw;
-  margin-right: 14px;
-  margin-top: 20px; }
-  .bbcodeeditor_EventEditorLinkInput_25nbu input {
-    width: calc(100% - 20px);
-    color: #dfe3e6;
-    background: rgba(59, 63, 72, 0.5);
-    border: none;
-    box-shadow: inset 0px 0px 0px #0000;
-    border-radius: 3px; }
-    .bbcodeeditor_EventEditorLinkInput_25nbu input:focus {
-      background: rgba(67, 73, 83, 0.6);
-      box-shadow: inset 1px 1px 8px #000a;
-      padding-left: 11px;
-      outline: none; }
-
-.bbcodeeditor_DefaultEditor_NENu2 {
-  border: none;
-  outline-width: 0;
-  padding: 10px;
-  background-color: var(--main-editor-input-bg-color);
-  box-shadow: 0 0 5px #000000 inset;
-  color: var(--main-editor-text-color);
+.presenterpopup_SpeakerPopup_3y7kV {
   font-size: 14px;
-  overflow-x: hidden; }
-
-.bbcodeeditor_ImportHTMLCtn_3sVZH {
-  position: relative;
-  margin-right: 14px;
-  min-width: calc(40vw - 40px); }
-  .bbcodeeditor_ImportHTMLCtn_3sVZH .bbcodeeditor_ImportHTMLTextArea_DHbRF {
-    width: calc(100% - 12px);
-    height: 200px;
-    margin: 4px 0px;
-    background-color: #1e2025;
-    border: solid 1px #000000;
-    outline-width: 0;
-    box-shadow: 1px 1px rgba(255, 255, 255, 0.1);
-    border-radius: 4px;
-    color: grey; }
-  .bbcodeeditor_ImportHTMLCtn_3sVZH .bbcodeeditor_ImportHTMLConvertButtons_lnyZa {
-    padding: 5px;
-    margin-left: 5px;
-    display: inline-block;
-    width: 30%;
-    line-height: 22px; }
-  .bbcodeeditor_ImportHTMLCtn_3sVZH .bbcodeeditor_ImportHTMLCheckBoxLine_3R3FN {
-    padding-top: 5px;
-    padding-bottom: 5px; }
-  .bbcodeeditor_ImportHTMLCtn_3sVZH .bbcodeeditor_OptionRow_2Y3ML {
-    display: flex;
-    flex-direction: column; }
-
-.bbcodeeditor_TextEditorToolBarContainer_2bOpQ {
-  padding: 10px 0px 0px 0px;
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap; }
-
-.bbcodeeditor_TextEditorToolBarContainer_2bOpQ > span,
-.bbcodeeditor_TextEditorToolBarContainer_2bOpQ > img.bbcodeeditor_EmoteOuter_1x3UO {
-  cursor: pointer;
-  padding: 5px;
+  background-color: #48484d;
+  box-shadow: 0 0 12px #00000066;
+  border: 1px solid #48484d;
   border-radius: 2px;
-  color: #afafaf;
-  background-color: #3d4450;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-  margin-right: 2px;
-  margin-bottom: 5px; }
+  padding: 8px;
+  max-width: 370px; }
 
-.bbcodeeditor_TextEditorToolBarContainer_2bOpQ > span:hover,
-.bbcodeeditor_TextEditorToolBarContainer_2bOpQ > img.bbcodeeditor_EmoteOuter_1x3UO:hover {
-  background-color: #4f5763;
-  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5); }
+.presenterpopup_SpeakerInfoOuter_1NC9n {
+  display: flex; }
 
-.bbcodeeditor_TextEditorToolBarContainer_2bOpQ > span > img,
-.bbcodeeditor_TextEditorToolBarContainer_2bOpQ > img.bbcodeeditor_EmoteOuter_1x3UO {
-  vertical-align: middle;
-  width: 16px;
-  height: 16px; }
+.presenterpopup_SpeakerInfoOuter_1NC9n img {
+  flex: 1;
+  max-width: 128px;
+  width: 128px;
+  margin-right: 8px; }
 
-.bbcodeeditor_YouTubeInput_3WXTC {
-  position: relative;
-  min-width: 30vw;
-  margin-right: 14px; }
-  .bbcodeeditor_YouTubeInput_3WXTC input[type=text] {
-    width: calc(100% - 20px);
-    color: #dfe3e6;
-    background: rgba(59, 63, 72, 0.5);
-    border: none;
-    box-shadow: inset 0px 0px 0px #0000;
-    border-radius: 3px; }
-    .bbcodeeditor_YouTubeInput_3WXTC input[type=text]:focus {
-      background: rgba(67, 73, 83, 0.6);
-      box-shadow: inset 1px 1px 8px #000a;
-      padding-left: 11px;
-      outline: none; }
+.presenterpopup_SpeakerInfoInner_1bMpE {
+  flex: 2;
+  font-size: 14px;
+  padding: 8px 8px 8px 0px; }
 
-.bbcodeeditor_YouTubePreviewInsertOption_6ocli {
-  padding: 2px;
-  margin-bottom: 2px;
-  background-color: rgba(57, 61, 71, 0.5);
-  color: #e5e5e5;
-  cursor: pointer;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center; }
-  .bbcodeeditor_YouTubePreviewInsertOption_6ocli:selected {
-    background-color: #9199a3; }
-  .bbcodeeditor_YouTubePreviewInsertOption_6ocli input {
-    margin-right: 5px; }
-  .bbcodeeditor_YouTubePreviewInsertOption_6ocli span {
-    padding-left: 10px; }
-  .bbcodeeditor_YouTubePreviewInsertOption_6ocli label {
-    cursor: pointer; }
-  .bbcodeeditor_YouTubePreviewInsertOption_6ocli label > span {
-    vertical-align: super; }
+.presenterpopup_SpeakerTitle_2Vo0l {
+  font-weight: bold; }
 
-.bbcodeeditor_EmoteOuter_1x3UO {
-  min-width: initial;
-  color: unset;
-  background-color: unset;
-  border: unset;
-  display: unset;
-  cursor: hand; }
+.presenterpopup_SpeakerBio_2yP7s {
+  padding: 8px 8px 8px 0px; }
+
+.presenterpopup_SpeakerHover_16UyH {
+  display: inline-block; }
 
 .eventbbcodeyoutubeembed_DynamicLinkBox_1zmYF {
   position: relative;
@@ -2724,6 +2660,14 @@ iframe.eventbbcodeparser_MedalTVWidget_1j2vi {
     width: 100%; } }
 
 /* end Game Awards styling hacks */
+.eventbbcodeparser_SocialLink_2LAnc {
+  display: inline-block; }
+
+.eventbbcodeparser_SocialIcon_dDjYN {
+  height: 1em;
+  width: 1em;
+  display: inline-block;
+  margin-right: 8px; }
 
 .eventbbcodesketchfab_sketchfab_play_overlay_image_j_bDC {
   position: absolute;
@@ -4219,6 +4163,174 @@ textarea:-webkit-autofill:focus,
   background-image: radial-gradient(101.49% 168.36% at 1.01% 0%, #4c5767 0%, #2f3742 100%);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.7); }
 
+.gamehover_GameHoverTransition_We-Ng {
+  transition: transform 0.15s ease-out;
+  transform: scale(0.95); }
+  .gamehover_GameHoverTransition_We-Ng.gamehover_Opening_3A24v, .gamehover_GameHoverTransition_We-Ng.gamehover_Open_1rWYa {
+    transform: scale(1); }
+
+.gamehover_GameHoverCapsuleCtn_2jsr3 {
+  box-sizing: border-box;
+  background: radial-gradient(ellipse at top right, #5577bb, #333355);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  outline: none; }
+  .gamehover_GameHoverCapsuleCtn_2jsr3:hover {
+    color: white; }
+  .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_TrailerCtn_1I27K {
+    position: relative;
+    width: 100%;
+    padding: 56.25% 0 0 0; }
+    .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_TrailerCtn_1I27K .gamehover_FullDivImage_2jpCs {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      display: block;
+      pointer-events: none;
+      background: black;
+      opacity: 1;
+      transition: opacity 0.5s; }
+      .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_TrailerCtn_1I27K .gamehover_FullDivImage_2jpCs.gamehover_Transparent_AZ9GL {
+        opacity: 0; }
+  .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_Midline_Xwe3c {
+    display: flex;
+    justify-content: space-between; }
+    .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_Midline_Xwe3c .gamehover_Price_2Eh6G {
+      max-width: 50%; }
+  .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_CapsuleImageAnchorPoint_1OMas {
+    position: relative;
+    width: 50%;
+    height: 0;
+    padding: 11.68478% 0 0 0; }
+    .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_CapsuleImageAnchorPoint_1OMas .gamehover_CapsuleImageCtn_wm-2T {
+      position: absolute;
+      width: 100%;
+      height: 0;
+      padding: 46.73913% 0 0 0;
+      z-index: 1;
+      bottom: 0;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.7); }
+      .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_CapsuleImageAnchorPoint_1OMas .gamehover_CapsuleImageCtn_wm-2T img {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        max-width: 100%;
+        height: auto; }
+  .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_WithCornerShine_2kRKA {
+    overflow: hidden; }
+    .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_WithCornerShine_2kRKA:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: -30px;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      background-color: white;
+      -webkit-mask-image: linear-gradient(120deg, transparent 0%, rgba(0, 0, 0, 0.8) 15%, rgba(0, 0, 0, 0.7) 20%, transparent 33%);
+      mask-image: linear-gradient(120deg, transparent 0%, rgba(0, 0, 0, 0.8) 15%, rgba(0, 0, 0, 0.7) 20%, transparent 33%);
+      transition: transform 0.35s ease-out;
+      transform: translateX(-30px); }
+      .gamehover_Opening_3A24v .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_WithCornerShine_2kRKA:after, .gamehover_Open_1rWYa .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_WithCornerShine_2kRKA:after {
+        transform: translateX(0px); }
+  .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN {
+    color: white; }
+    .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL {
+      padding: 4px 8px; }
+      .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_GameTitle_405wj {
+        font-size: 22px; }
+      .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_TagRow_2SWQM {
+        color: #88aacc;
+        font-size: 12px;
+        display: flex;
+        padding: 8px 0px 4px; }
+        .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_TagRow_2SWQM .gamehover_Tags_fTGVi {
+          overflow: hidden;
+          max-height: 40px;
+          padding-right: 12px;
+          display: flex;
+          flex-wrap: wrap; }
+          .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_TagRow_2SWQM .gamehover_Tags_fTGVi .gamehover_Tag_1wO-t {
+            padding: 0px 6px;
+            margin-bottom: 4px;
+            border-radius: 2px;
+            background-color: #6868af;
+            color: white;
+            margin-left: 4px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            position: relative; }
+      .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_ReviewScore_3qvpp {
+        font-size: 12px;
+        display: flex;
+        padding-bottom: 4px; }
+        .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreHeader_2t-0j {
+          color: #88aacc;
+          margin-right: 4px; }
+        .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreValue_3ZWs0 {
+          display: flex; }
+          .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreValue_3ZWs0.gamehover_ReviewScoreLow_3nU5I {
+            color: gray; }
+          .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreValue_3ZWs0.gamehover_ReviewScoreMixed_11Q2_ {
+            color: #d8d81e; }
+          .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreValue_3ZWs0.gamehover_ReviewScoreHigh_3wXHC {
+            color: #32ad32; }
+          .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreValue_3ZWs0 .gamehover_ReviewScorePercentage_38dPa {
+            margin-right: 4px; }
+        .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreCount_1wXL_ {
+          color: #88aacc;
+          margin-left: 4px; }
+      .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_PlatformDisplay_2UG4_ {
+        padding-left: 4px; }
+      .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_ReviewsAndRelease_1HFUC {
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+        margin-left: -4px; }
+        .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_ReviewsAndRelease_1HFUC .gamehover_ReleaseDate_35Bya {
+          padding: 4px; }
+          .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_ReviewsAndRelease_1HFUC .gamehover_ReleaseDate_35Bya .gamehover_ReleasePrefix_2ZKEX {
+            margin-right: 4px; }
+  .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_DemoButton_2V6ci {
+    margin: 4px 0;
+    background-color: rgba(255, 255, 255, 0.2); }
+  .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_WishlistButton_3notz {
+    position: absolute;
+    z-index: 2;
+    top: 8px;
+    right: 8px;
+    border-radius: 2px;
+    background: radial-gradient(ellipse at top right, #0673c6, #03628b);
+    display: flex;
+    overflow: hidden; }
+    .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_WishlistButton_3notz svg {
+      padding: 4px;
+      display: block; }
+    .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_WishlistButton_3notz .gamehover_WishlistButtonText_VI5mZ {
+      color: transparent;
+      width: 0;
+      height: 0;
+      padding: 7px 0;
+      transition: padding-right 0.2s ease-out; }
+      .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_WishlistButton_3notz .gamehover_WishlistButtonText_VI5mZ.gamehover_WishlistLoadingText_7-s8T {
+        /* stylelint-disable-line selector-class-pattern */
+        filter: opacity(50%); }
+    html.touch .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_WishlistButton_3notz, .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_WishlistButton_3notz:hover {
+      /* stylelint-disable-line selector-class-pattern */ }
+      html.touch .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_WishlistButton_3notz .gamehover_WishlistButtonText_VI5mZ, .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_WishlistButton_3notz:hover .gamehover_WishlistButtonText_VI5mZ {
+        color: white;
+        width: auto;
+        height: auto;
+        padding-right: 8px; }
+
 /** Applies the provided style block at mobile widths _and_ if the .touch override style is applied */
 .partnersaledisplay_SaleHeaderContainer_W4mvn {
   display: flex;
@@ -4476,6 +4588,35 @@ span.partnersaledisplay_vr_required_1P__h {
   margin: 0px auto;
   max-width: 940px; }
 
+.partnersaledisplay_CarouselPage_Hlkuk {
+  padding-left: 8px;
+  padding-right: 8px; }
+
+.partnersaledisplay_TabButtonsCtn_21-6t {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 -10px; }
+  .partnersaledisplay_TabButtonsCtn_21-6t .partnersaledisplay_TabButton_1Gz4s {
+    display: flex;
+    background: linear-gradient(0deg, #d45251 0%, #fc6e6d 100%);
+    border-radius: 3px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+    padding: 20px 40px;
+    margin: 10px;
+    justify-content: center;
+    cursor: pointer;
+    min-width: 100px;
+    max-width: 220px;
+    flex-grow: 1; }
+    .partnersaledisplay_TabButtonsCtn_21-6t .partnersaledisplay_TabButton_1Gz4s:hover {
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+      background: linear-gradient(0deg, #db7070 0%, #fd8787 100%); }
+    .partnersaledisplay_TabButtonsCtn_21-6t .partnersaledisplay_TabButton_1Gz4s .partnersaledisplay_SaleTabLabel_2mYMQ {
+      font-size: 16px;
+      font-weight: bold;
+      color: white; }
+
 /* stylelint-disable */
 
 .salesectioneventschedule_SaleSchedCtn_2g7il {
@@ -4537,7 +4678,7 @@ span.partnersaledisplay_vr_required_1P__h {
   display: grid;
   grid-auto-flow: row;
   grid-template: 1fr 1fr / 48% 48%;
-  grid-gap: 20px 4%; }
+  grid-gap: 10px 4%; }
   @media screen and (max-width: 800px) {
     .salesectioneventschedule_SaleSchedGridCtn_50nbv {
       max-width: 300px;
@@ -4572,7 +4713,7 @@ span.partnersaledisplay_vr_required_1P__h {
     margin-bottom: 12px; }
   .salesectioneventschedule_SaleSchedDetailCtn_31c5z .salesectioneventschedule_StatementAndHighlights_28vOL {
     display: flex; }
-    .salesectioneventschedule_SaleSchedDetailCtn_31c5z .salesectioneventschedule_StatementAndHighlights_28vOL .salesectioneventschedule_StatementCtn_2p5xO {
+    .salesectioneventschedule_SaleSchedDetailCtn_31c5z .salesectioneventschedule_StatementAndHighlights_28vOL .salesectioneventschedule_StatementCtn_2p5xO, .salesectioneventschedule_SaleSchedDetailCtn_31c5z .salesectioneventschedule_StatementAndHighlights_28vOL .salesectioneventschedule_PresenterEventStatementCtn_3-cGi {
       flex: 1;
       height: 189px;
       overflow: hidden;
@@ -4580,7 +4721,7 @@ span.partnersaledisplay_vr_required_1P__h {
       word-break: break-word;
       -webkit-mask-image: -webkit-gradient(linear, left 94%, left bottom, from(black), to(rgba(0, 0, 0, 0)));
       mask-image: linear-gradient(left 90%, left bottom, from(black), to(rgba(0, 0, 0, 0))); }
-      .salesectioneventschedule_SaleSchedDetailCtn_31c5z .salesectioneventschedule_StatementAndHighlights_28vOL .salesectioneventschedule_StatementCtn_2p5xO .salesectioneventschedule_Statement_GwN4S {
+      .salesectioneventschedule_SaleSchedDetailCtn_31c5z .salesectioneventschedule_StatementAndHighlights_28vOL .salesectioneventschedule_StatementCtn_2p5xO .salesectioneventschedule_Statement_GwN4S, .salesectioneventschedule_SaleSchedDetailCtn_31c5z .salesectioneventschedule_StatementAndHighlights_28vOL .salesectioneventschedule_PresenterEventStatementCtn_3-cGi .salesectioneventschedule_Statement_GwN4S {
         position: relative; }
     .salesectioneventschedule_SaleSchedDetailCtn_31c5z .salesectioneventschedule_StatementAndHighlights_28vOL .salesectioneventschedule_MediaContainer_u2Bv0 {
       flex: 1;
@@ -4613,14 +4754,13 @@ span.partnersaledisplay_vr_required_1P__h {
     color: white;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); }
   .salesectioneventschedule_SaleSchedRow_3l83c.salesectioneventschedule_MiniMode__L0SI {
-    width: 100%; }
+    width: 100%;
+    height: 33px; }
     .salesectioneventschedule_SaleSchedRow_3l83c.salesectioneventschedule_MiniMode__L0SI .salesectioneventschedule_AppTitle_3q715 {
       display: none; }
     .salesectioneventschedule_SaleSchedRow_3l83c.salesectioneventschedule_MiniMode__L0SI .salesectioneventschedule_Icon_26VBx {
       height: 20px;
       margin: -6px 0 0 6px; }
-    .salesectioneventschedule_SaleSchedRow_3l83c.salesectioneventschedule_MiniMode__L0SI .salesectioneventschedule_DetailsCtn_3deMj .salesectioneventschedule_EventTitle_109s- {
-      white-space: unset; }
   .salesectioneventschedule_SaleSchedRow_3l83c .salesectioneventschedule_Time_3qoMb {
     min-width: 55px;
     margin-right: 4px;
@@ -4740,14 +4880,14 @@ span.partnersaledisplay_vr_required_1P__h {
   margin-right: 10px;
   flex: 1; }
 
-.salesectioneventschedule_Screenshot_jxi-O {
+.salesectioneventschedule_Screenshot_jxi-O, .salesectioneventschedule_PresenterEventScreenshot_nlt1c {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   height: 51px;
   margin: 0; }
 
-.salesectioneventschedule_ScreenshotThumbnail_1_VV- {
+.salesectioneventschedule_ScreenshotThumbnail_1_VV-, .salesectioneventschedule_PresenterEventScreenshotThumbnail_1so47 {
   height: 100%;
   width: 91px;
   object-fit: cover;
@@ -4887,6 +5027,42 @@ span.partnersaledisplay_vr_required_1P__h {
 .salesectioneventschedule_PopupScreenshot_Qo4B7 {
   width: 100%;
   height: 100%; }
+
+.salesectioneventschedule_ClanEventCapsuleCtn_3rGzA {
+  width: 100%;
+  height: 100%; }
+  .salesectioneventschedule_ClanEventCapsuleCtn_3rGzA .salesectioneventschedule_ClanEventImage_2ZYCQ {
+    width: 100%; }
+
+.salesectioneventschedule_ClanEventDetailBackground_s3LS8 {
+  width: 100%;
+  height: 100%;
+  background-size: cover; }
+
+.salesectioneventschedule_PresenterEventStatementCtn_3-cGi {
+  font-size: 12px;
+  line-height: 15px;
+  overflow-y: auto !important; }
+
+.salesectioneventschedule_PresenterEventScreenshot_nlt1c {
+  flex-wrap: wrap;
+  align-content: space-around;
+  height: auto; }
+
+.salesectioneventschedule_PresenterEventScreenshotThumbnail_1so47 {
+  height: auto; }
+
+.salesectioneventschedule_SpeakerEventType_1rNgd {
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: #AAAAAA; }
+
+.salesectioneventschedule_SpeakerEventTitle_1EIao {
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 32px; }
 
 /* Other events, shown at the bottom of event page */
 .eventrow_OtherEventsCtn_9H6b5 {
@@ -5093,169 +5269,6 @@ span.partnersaledisplay_vr_required_1P__h {
   flex-shrink: 1; }
   .eventrow_AppCapsulePrice_2-l2M span {
     font-size: 12px; }
-
-.gamehover_GameHoverTransition_We-Ng {
-  transition: transform 0.15s ease-out;
-  transform: scale(0.95); }
-  .gamehover_GameHoverTransition_We-Ng.gamehover_Opening_3A24v, .gamehover_GameHoverTransition_We-Ng.gamehover_Open_1rWYa {
-    transform: scale(1); }
-
-.gamehover_GameHoverCapsuleCtn_2jsr3 {
-  box-sizing: border-box;
-  background: radial-gradient(ellipse at top right, #5577bb, #333355);
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  outline: none;
-  min-width: 300px; }
-  .gamehover_GameHoverCapsuleCtn_2jsr3:hover {
-    color: white; }
-  .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_TrailerCtn_1I27K {
-    position: relative;
-    width: 100%;
-    padding: 56.25% 0 0 0; }
-    .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_TrailerCtn_1I27K .gamehover_FullDivImage_2jpCs {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 100%;
-      width: 100%;
-      display: block;
-      pointer-events: none;
-      background: black;
-      opacity: 1;
-      transition: opacity 0.5s; }
-      .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_TrailerCtn_1I27K .gamehover_FullDivImage_2jpCs.gamehover_Transparent_AZ9GL {
-        opacity: 0; }
-  .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_Midline_Xwe3c {
-    display: flex;
-    justify-content: space-between; }
-    .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_Midline_Xwe3c .gamehover_Price_2Eh6G {
-      max-width: 50%; }
-  .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_CapsuleImageAnchorPoint_1OMas {
-    position: relative;
-    width: 50%;
-    height: 0;
-    padding: 11.68478% 0 0 0; }
-    .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_CapsuleImageAnchorPoint_1OMas .gamehover_CapsuleImageCtn_wm-2T {
-      position: absolute;
-      width: 100%;
-      height: 0;
-      padding: 46.73913% 0 0 0;
-      z-index: 1;
-      bottom: 0;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.7); }
-      .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_CapsuleImageAnchorPoint_1OMas .gamehover_CapsuleImageCtn_wm-2T img {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        max-width: 100%;
-        height: auto; }
-  .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_WithCornerShine_2kRKA {
-    overflow: hidden; }
-    .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_WithCornerShine_2kRKA:after {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: -30px;
-      bottom: 0;
-      left: 0;
-      z-index: 1;
-      background-color: white;
-      -webkit-mask-image: linear-gradient(120deg, transparent 0%, rgba(0, 0, 0, 0.8) 15%, rgba(0, 0, 0, 0.7) 20%, transparent 33%);
-      mask-image: linear-gradient(120deg, transparent 0%, rgba(0, 0, 0, 0.8) 15%, rgba(0, 0, 0, 0.7) 20%, transparent 33%);
-      transition: transform 0.35s ease-out;
-      transform: translateX(-30px); }
-      .gamehover_Opening_3A24v .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_WithCornerShine_2kRKA:after, .gamehover_Open_1rWYa .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_WithCornerShine_2kRKA:after {
-        transform: translateX(0px); }
-  .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN {
-    color: white; }
-    .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL {
-      padding: 4px 8px; }
-      .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_GameTitle_405wj {
-        font-size: 22px; }
-      .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_TagRow_2SWQM {
-        color: #88aacc;
-        font-size: 12px;
-        display: flex;
-        padding: 8px 0px 4px; }
-        .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_TagRow_2SWQM .gamehover_Tags_fTGVi {
-          overflow: hidden;
-          max-height: 40px;
-          padding-right: 12px;
-          display: flex;
-          flex-wrap: wrap; }
-          .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_TagRow_2SWQM .gamehover_Tags_fTGVi .gamehover_Tag_1wO-t {
-            padding: 0px 6px;
-            margin-bottom: 4px;
-            border-radius: 2px;
-            background-color: #6868af;
-            color: white;
-            margin-left: 4px;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            position: relative; }
-      .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_ReviewScore_3qvpp {
-        font-size: 12px;
-        display: flex; }
-        .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreHeader_2t-0j {
-          color: #88aacc;
-          margin-right: 4px; }
-        .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreValue_3ZWs0 {
-          display: flex; }
-          .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreValue_3ZWs0.gamehover_ReviewScoreLow_3nU5I {
-            color: gray; }
-          .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreValue_3ZWs0.gamehover_ReviewScoreMixed_11Q2_ {
-            color: #d8d81e; }
-          .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreValue_3ZWs0.gamehover_ReviewScoreHigh_3wXHC {
-            color: #32ad32; }
-          .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreValue_3ZWs0 .gamehover_ReviewScorePercentage_38dPa {
-            margin-right: 4px; }
-        .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreCount_1wXL_ {
-          color: #88aacc;
-          margin-left: 4px; }
-      .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_ReviewsAndRelease_1HFUC {
-        display: flex;
-        justify-content: space-between;
-        font-size: 14px;
-        margin-left: -4px; }
-        .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_ReviewsAndRelease_1HFUC .gamehover_ReleaseDate_35Bya {
-          padding: 4px; }
-          .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_ReviewsAndRelease_1HFUC .gamehover_ReleaseDate_35Bya .gamehover_ReleasePrefix_2ZKEX {
-            margin-right: 4px; }
-  .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_WishlistButton_3notz {
-    position: absolute;
-    z-index: 2;
-    top: 8px;
-    right: 8px;
-    border-radius: 2px;
-    background: radial-gradient(ellipse at top right, #0673c6, #03628b);
-    display: flex;
-    overflow: hidden; }
-    .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_WishlistButton_3notz svg {
-      padding: 4px;
-      display: block; }
-    .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_WishlistButton_3notz .gamehover_WishlistButtonText_VI5mZ {
-      color: transparent;
-      width: 0;
-      height: 0;
-      padding: 7px 0;
-      transition: padding-right 0.2s ease-out; }
-      .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_WishlistButton_3notz .gamehover_WishlistButtonText_VI5mZ.gamehover_WishlistLoadingText_7-s8T {
-        /* stylelint-disable-line selector-class-pattern */
-        filter: opacity(50%); }
-    html.touch .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_WishlistButton_3notz, .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_WishlistButton_3notz:hover {
-      /* stylelint-disable-line selector-class-pattern */ }
-      html.touch .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_WishlistButton_3notz .gamehover_WishlistButtonText_VI5mZ, .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_WishlistButton_3notz:hover .gamehover_WishlistButtonText_VI5mZ {
-        color: white;
-        width: auto;
-        height: auto;
-        padding-right: 8px; }
 
 .VODPlayer_BroadcastCtn_39rR9 {
   position: relative;
@@ -6534,15 +6547,15 @@ span.partnersaledisplay_vr_required_1P__h {
   background-repeat: no-repeat; }
 
 .BroadcastChatPositionToggle.bottom {
-  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAASCAYAAAC0EpUuAAAACXBIWXMAAAsTAAALEwEAmpwYAAAHTGlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDIgNzkuMTYwOTI0LCAyMDE3LzA3LzEzLTAxOjA2OjM5ICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6cGhvdG9zaG9wPSJodHRwOi8vbnMuYWRvYmUuY29tL3Bob3Rvc2hvcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOCAoV2luZG93cykiIHhtcDpDcmVhdGVEYXRlPSIyMDE4LTA4LTE2VDIyOjA4OjU2LTA3OjAwIiB4bXA6TW9kaWZ5RGF0ZT0iMjAxOC0wOC0yMlQxNzozNDo0OS0wNzowMCIgeG1wOk1ldGFkYXRhRGF0ZT0iMjAxOC0wOC0yMlQxNzozNDo0OS0wNzowMCIgZGM6Zm9ybWF0PSJpbWFnZS9wbmciIHBob3Rvc2hvcDpDb2xvck1vZGU9IjMiIHBob3Rvc2hvcDpJQ0NQcm9maWxlPSJzUkdCIElFQzYxOTY2LTIuMSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDoxN2I3ZmQ2Yi00MTRjLWZkNGQtYWVhZC1lYjJlZmZhMTRhODIiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6N2E2ZWVhNjAtMWY4OS1kMTQ0LWFjMzQtM2IwNjJjZWFhMjYxIiB4bXBNTTpPcmlnaW5hbERvY3VtZW50SUQ9InhtcC5kaWQ6N2E2ZWVhNjAtMWY4OS1kMTQ0LWFjMzQtM2IwNjJjZWFhMjYxIj4gPHBob3Rvc2hvcDpEb2N1bWVudEFuY2VzdG9ycz4gPHJkZjpCYWc+IDxyZGY6bGk+eG1wLmRpZDo3YTZlZWE2MC0xZjg5LWQxNDQtYWMzNC0zYjA2MmNlYWEyNjE8L3JkZjpsaT4gPC9yZGY6QmFnPiA8L3Bob3Rvc2hvcDpEb2N1bWVudEFuY2VzdG9ycz4gPHhtcE1NOkhpc3Rvcnk+IDxyZGY6U2VxPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0iY3JlYXRlZCIgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDo3YTZlZWE2MC0xZjg5LWQxNDQtYWMzNC0zYjA2MmNlYWEyNjEiIHN0RXZ0OndoZW49IjIwMTgtMDgtMTZUMjI6MDg6NTYtMDc6MDAiIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkFkb2JlIFBob3Rvc2hvcCBDQyAyMDE4IChXaW5kb3dzKSIvPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0ic2F2ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6NjIyZDNkMTEtZGVmMy0yNjRmLTg4MGItNGQzMzczMDEyNDBkIiBzdEV2dDp3aGVuPSIyMDE4LTA4LTIyVDAxOjAwOjU3LTA3OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOCAoV2luZG93cykiIHN0RXZ0OmNoYW5nZWQ9Ii8iLz4gPHJkZjpsaSBzdEV2dDphY3Rpb249InNhdmVkIiBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOjE3YjdmZDZiLTQxNGMtZmQ0ZC1hZWFkLWViMmVmZmExNGE4MiIgc3RFdnQ6d2hlbj0iMjAxOC0wOC0yMlQxNzozNDo0OS0wNzowMCIgc3RFdnQ6c29mdHdhcmVBZ2VudD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTggKFdpbmRvd3MpIiBzdEV2dDpjaGFuZ2VkPSIvIi8+IDwvcmRmOlNlcT4gPC94bXBNTTpIaXN0b3J5PiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PjO+occAAACqSURBVDiNtdS9DUIhFIbhM4MjOIKDOIojQCAWLEFlTUdi5QAmFHYmJlYmRm5HSwH3oNhj7mfxJFQvfwESQlQ06gNaSkpJ1lqCRhul1HD0xg5sNRgfir7YxK5sh4o+enTqE5zYBhn9uqCjZ7ZdGn322J3tUWfaYke2Rt7+rz5RrTU+igbbfnuizjncmRpjyHtPMUZMtP1MIQRKKVEpBRNtq8s5U6317W8XNQP/4a/7D5RmRwAAAABJRU5ErkJggg==);
+  background-image: url(../../../images/applications/store/icon_view_chatbottom.png?v=valveisgoodatcaching);
   margin-right: 4px; }
 
 .BroadcastChatPositionToggle.right {
-  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAASCAYAAABM8m7ZAAAACXBIWXMAAAsTAAALEwEAmpwYAAAHTGlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDIgNzkuMTYwOTI0LCAyMDE3LzA3LzEzLTAxOjA2OjM5ICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6cGhvdG9zaG9wPSJodHRwOi8vbnMuYWRvYmUuY29tL3Bob3Rvc2hvcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOCAoV2luZG93cykiIHhtcDpDcmVhdGVEYXRlPSIyMDE4LTA4LTE2VDIyOjA4OjU2LTA3OjAwIiB4bXA6TW9kaWZ5RGF0ZT0iMjAxOC0wOC0yMlQxNzozNToxNC0wNzowMCIgeG1wOk1ldGFkYXRhRGF0ZT0iMjAxOC0wOC0yMlQxNzozNToxNC0wNzowMCIgZGM6Zm9ybWF0PSJpbWFnZS9wbmciIHBob3Rvc2hvcDpDb2xvck1vZGU9IjMiIHBob3Rvc2hvcDpJQ0NQcm9maWxlPSJzUkdCIElFQzYxOTY2LTIuMSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo3MDM4ZGMxNy1jZTZhLWM1NDMtOThlYy0zNjYwNmMyMGNmOGUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MzE3ZmE4NTQtODAzYS00YzQ2LThhZmUtYTI5ZTMwNmQyMDZlIiB4bXBNTTpPcmlnaW5hbERvY3VtZW50SUQ9InhtcC5kaWQ6MzE3ZmE4NTQtODAzYS00YzQ2LThhZmUtYTI5ZTMwNmQyMDZlIj4gPHBob3Rvc2hvcDpEb2N1bWVudEFuY2VzdG9ycz4gPHJkZjpCYWc+IDxyZGY6bGk+eG1wLmRpZDo3YTZlZWE2MC0xZjg5LWQxNDQtYWMzNC0zYjA2MmNlYWEyNjE8L3JkZjpsaT4gPC9yZGY6QmFnPiA8L3Bob3Rvc2hvcDpEb2N1bWVudEFuY2VzdG9ycz4gPHhtcE1NOkhpc3Rvcnk+IDxyZGY6U2VxPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0iY3JlYXRlZCIgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDozMTdmYTg1NC04MDNhLTRjNDYtOGFmZS1hMjllMzA2ZDIwNmUiIHN0RXZ0OndoZW49IjIwMTgtMDgtMTZUMjI6MDg6NTYtMDc6MDAiIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkFkb2JlIFBob3Rvc2hvcCBDQyAyMDE4IChXaW5kb3dzKSIvPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0ic2F2ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6ZjJjZDM5MWYtMDUzMy0zMzRjLTg2MjEtOGQyMzYyODc1NzA0IiBzdEV2dDp3aGVuPSIyMDE4LTA4LTIyVDAxOjEyOjU5LTA3OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOCAoV2luZG93cykiIHN0RXZ0OmNoYW5nZWQ9Ii8iLz4gPHJkZjpsaSBzdEV2dDphY3Rpb249InNhdmVkIiBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOjcwMzhkYzE3LWNlNmEtYzU0My05OGVjLTM2NjA2YzIwY2Y4ZSIgc3RFdnQ6d2hlbj0iMjAxOC0wOC0yMlQxNzozNToxNC0wNzowMCIgc3RFdnQ6c29mdHdhcmVBZ2VudD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTggKFdpbmRvd3MpIiBzdEV2dDpjaGFuZ2VkPSIvIi8+IDwvcmRmOlNlcT4gPC94bXBNTTpIaXN0b3J5PiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PrfvlEsAAAB7SURBVEgNY6irq/s/EJgBymAgF////x8FA8UeoothUTNqMW4DicVUsxjIvgXEi4FYiBiHUdPiF0D8CoivA3EePS1+DLX4FdQRe4HYiN4Ww/CFgbD4JBD70cPiZ1AL7wJxCz3jGGThdiBWomuqHrB8THeLRysJWllMdwwAdG8ZdE1QFTUAAAAASUVORK5CYII=);
+  background-image: url(../../../images/applications/store/icon_view_chatright.png?v=valveisgoodatcaching);
   margin-right: 4px; }
 
 .BroadcastFullscreenToggle {
-  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAASCAYAAABM8m7ZAAAACXBIWXMAAAsTAAALEwEAmpwYAAAHZWlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDIgNzkuMTYwOTI0LCAyMDE3LzA3LzEzLTAxOjA2OjM5ICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6cGhvdG9zaG9wPSJodHRwOi8vbnMuYWRvYmUuY29tL3Bob3Rvc2hvcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOCAoV2luZG93cykiIHhtcDpDcmVhdGVEYXRlPSIyMDE4LTA4LTE2VDIyOjA4OjU2LTA3OjAwIiB4bXA6TW9kaWZ5RGF0ZT0iMjAxOC0wOC0yMlQxNzozODo1NC0wNzowMCIgeG1wOk1ldGFkYXRhRGF0ZT0iMjAxOC0wOC0yMlQxNzozODo1NC0wNzowMCIgZGM6Zm9ybWF0PSJpbWFnZS9wbmciIHBob3Rvc2hvcDpDb2xvck1vZGU9IjMiIHBob3Rvc2hvcDpJQ0NQcm9maWxlPSJzUkdCIElFQzYxOTY2LTIuMSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo0YmQzZGNhYS0xMmJlLTljNGQtYTg4Zi00NGJhOGU5NWI1MWYiIHhtcE1NOkRvY3VtZW50SUQ9ImFkb2JlOmRvY2lkOnBob3Rvc2hvcDoyNzVmZDViNS1jZTMyLWVjNDYtYTNjYi0yMWRkOTdlYjdhZjQiIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo4YWRmNjY1MC00NzZmLWMyNDItYWVhZi05OWJhNTYzZWYwZTkiPiA8cGhvdG9zaG9wOkRvY3VtZW50QW5jZXN0b3JzPiA8cmRmOkJhZz4gPHJkZjpsaT5hZG9iZTpkb2NpZDpwaG90b3Nob3A6Mjc1ZmQ1YjUtY2UzMi1lYzQ2LWEzY2ItMjFkZDk3ZWI3YWY0PC9yZGY6bGk+IDwvcmRmOkJhZz4gPC9waG90b3Nob3A6RG9jdW1lbnRBbmNlc3RvcnM+IDx4bXBNTTpIaXN0b3J5PiA8cmRmOlNlcT4gPHJkZjpsaSBzdEV2dDphY3Rpb249ImNyZWF0ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6OGFkZjY2NTAtNDc2Zi1jMjQyLWFlYWYtOTliYTU2M2VmMGU5IiBzdEV2dDp3aGVuPSIyMDE4LTA4LTE2VDIyOjA4OjU2LTA3OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOCAoV2luZG93cykiLz4gPHJkZjpsaSBzdEV2dDphY3Rpb249InNhdmVkIiBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOmRmZmExZDcwLTJjZTYtMmY0ZC04ZWRjLWE3ZmMxMjI4ODE5YyIgc3RFdnQ6d2hlbj0iMjAxOC0wOC0yMlQwMTo0OS0wNzowMCIgc3RFdnQ6c29mdHdhcmVBZ2VudD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTggKFdpbmRvd3MpIiBzdEV2dDpjaGFuZ2VkPSIvIi8+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJzYXZlZCIgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDo0YmQzZGNhYS0xMmJlLTljNGQtYTg4Zi00NGJhOGU5NWI1MWYiIHN0RXZ0OndoZW49IjIwMTgtMDgtMjJUMTc6Mzg6NTQtMDc6MDAiIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkFkb2JlIFBob3Rvc2hvcCBDQyAyMDE4IChXaW5kb3dzKSIgc3RFdnQ6Y2hhbmdlZD0iLyIvPiA8L3JkZjpTZXE+IDwveG1wTU06SGlzdG9yeT4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7EAK6YAAAAhElEQVRIDWP4//8/AwzX1dX9R8fI8qRgQmZhU/waiO3ItRCLA+ygZhK02B6q0J6KljoQtBhKwyxXpMBSBWQPEGUxlC1HBR/jNIOBWnFJKh61eNTiUYtpYzEtCxBii0w7KhSZisgVDjGVBLxgp4KPYWW+HbHVogMVq0V7YqtFihsBxDQEADgnFf6e0sUmAAAAAElFTkSuQmCC);
+  background-image: url(../../../images/applications/store/icon_view_fullscreen.png?v=valveisgoodatcaching);
   margin-left: 4px; }
 
 .BroadcastTheaterToggle {
@@ -7082,10 +7095,272 @@ img.broadcastplayer_BroadcastPlaceholderImg_3hxn9 {
   height: 100%;
   max-width: unset; }
 
+:root {
+  --main-text-color: #dbe2e6;
+  --main-light-blue-background: #93b3c8;
+  --main-text-on-light-blue: rgb(209, 209, 209);
+  --main-top-image-bg: #1f2126;
+  --main-editor-bg-color: #363a43;
+  --main-editor-text-color: #e6e7e8;
+  --main-editor-input-bg-color: #30333b;
+  --main-editor-section-title-color: #a3a3a3; }
+
+.bbcodeeditor_DragTarget_2sUvh {
+  font-size: 12px;
+  background-color: rgba(255, 255, 255, 0.4); }
+
+.bbcodeeditor_DragOnTopOfMe_1mvpI {
+  background-color: rgba(255, 255, 255, 0.4);
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px); }
+
+.bbcodeeditor_DescriptionCtn_3DQEB {
+  border: 2px solid transparent;
+  margin: -2px; }
+
+.bbcodeeditor_DescriptionCtn_3DQEB.bbcodeeditor_DragTarget_2sUvh {
+  border: 2px dashed #06beff; }
+
+.bbcodeeditor_EventEditorLinkInput_25nbu {
+  position: relative;
+  min-width: 30vw;
+  margin-right: 14px;
+  margin-top: 20px; }
+  .bbcodeeditor_EventEditorLinkInput_25nbu input {
+    width: calc(100% - 20px);
+    color: #dfe3e6;
+    background: rgba(59, 63, 72, 0.5);
+    border: none;
+    box-shadow: inset 0px 0px 0px #0000;
+    border-radius: 3px; }
+    .bbcodeeditor_EventEditorLinkInput_25nbu input:focus {
+      background: rgba(67, 73, 83, 0.6);
+      box-shadow: inset 1px 1px 8px #000a;
+      padding-left: 11px;
+      outline: none; }
+
+.bbcodeeditor_DefaultEditor_NENu2 {
+  border: none;
+  outline-width: 0;
+  padding: 10px;
+  background-color: var(--main-editor-input-bg-color);
+  box-shadow: 0 0 5px #000000 inset;
+  color: var(--main-editor-text-color);
+  font-size: 14px;
+  overflow-x: hidden; }
+
+.bbcodeeditor_ImportHTMLCtn_3sVZH {
+  position: relative;
+  margin-right: 14px;
+  min-width: calc(40vw - 40px); }
+  .bbcodeeditor_ImportHTMLCtn_3sVZH .bbcodeeditor_ImportHTMLTextArea_DHbRF {
+    width: calc(100% - 12px);
+    height: 200px;
+    margin: 4px 0px;
+    background-color: #1e2025;
+    border: solid 1px #000000;
+    outline-width: 0;
+    box-shadow: 1px 1px rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    color: grey; }
+  .bbcodeeditor_ImportHTMLCtn_3sVZH .bbcodeeditor_ImportHTMLConvertButtons_lnyZa {
+    padding: 5px;
+    margin-left: 5px;
+    display: inline-block;
+    width: 30%;
+    line-height: 22px; }
+  .bbcodeeditor_ImportHTMLCtn_3sVZH .bbcodeeditor_ImportHTMLCheckBoxLine_3R3FN {
+    padding-top: 5px;
+    padding-bottom: 5px; }
+  .bbcodeeditor_ImportHTMLCtn_3sVZH .bbcodeeditor_OptionRow_2Y3ML {
+    display: flex;
+    flex-direction: column; }
+
+.bbcodeeditor_TextEditorToolBarContainer_2bOpQ {
+  padding: 10px 0px 0px 0px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; }
+
+.bbcodeeditor_TextEditorToolBarContainer_2bOpQ > span,
+.bbcodeeditor_TextEditorToolBarContainer_2bOpQ > img.bbcodeeditor_EmoteOuter_1x3UO {
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 2px;
+  color: #afafaf;
+  background-color: #3d4450;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  margin-right: 2px;
+  margin-bottom: 5px; }
+
+.bbcodeeditor_TextEditorToolBarContainer_2bOpQ > span:hover,
+.bbcodeeditor_TextEditorToolBarContainer_2bOpQ > img.bbcodeeditor_EmoteOuter_1x3UO:hover {
+  background-color: #4f5763;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5); }
+
+.bbcodeeditor_TextEditorToolBarContainer_2bOpQ > span > img,
+.bbcodeeditor_TextEditorToolBarContainer_2bOpQ > img.bbcodeeditor_EmoteOuter_1x3UO {
+  vertical-align: middle;
+  width: 16px;
+  height: 16px; }
+
+.bbcodeeditor_YouTubeInput_3WXTC {
+  position: relative;
+  min-width: 30vw;
+  margin-right: 14px; }
+  .bbcodeeditor_YouTubeInput_3WXTC input[type=text] {
+    width: calc(100% - 20px);
+    color: #dfe3e6;
+    background: rgba(59, 63, 72, 0.5);
+    border: none;
+    box-shadow: inset 0px 0px 0px #0000;
+    border-radius: 3px; }
+    .bbcodeeditor_YouTubeInput_3WXTC input[type=text]:focus {
+      background: rgba(67, 73, 83, 0.6);
+      box-shadow: inset 1px 1px 8px #000a;
+      padding-left: 11px;
+      outline: none; }
+
+.bbcodeeditor_YouTubePreviewInsertOption_6ocli {
+  padding: 2px;
+  margin-bottom: 2px;
+  background-color: rgba(57, 61, 71, 0.5);
+  color: #e5e5e5;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center; }
+  .bbcodeeditor_YouTubePreviewInsertOption_6ocli:selected {
+    background-color: #9199a3; }
+  .bbcodeeditor_YouTubePreviewInsertOption_6ocli input {
+    margin-right: 5px; }
+  .bbcodeeditor_YouTubePreviewInsertOption_6ocli span {
+    padding-left: 10px; }
+  .bbcodeeditor_YouTubePreviewInsertOption_6ocli label {
+    cursor: pointer; }
+  .bbcodeeditor_YouTubePreviewInsertOption_6ocli label > span {
+    vertical-align: super; }
+
+.bbcodeeditor_EmoteOuter_1x3UO {
+  min-width: initial;
+  color: unset;
+  background-color: unset;
+  border: unset;
+  display: unset;
+  cursor: hand; }
+
+.bbcodeeditor_DropDownScroll_P0-tb {
+  max-height: 400px;
+  overflow: hidden scroll; }
+
+.cropmodal_CropImage_3qfqT {
+  position: relative;
+  margin: 0px auto; }
+
+.cropmodal_CropPreviewGroup_1RI-Q {
+  margin: 10px auto; }
+
+.cropmodal_CropPreviewLabel_3_zyL {
+  text-transform: uppercase;
+  color: white;
+  text-align: center; }
+
+.clanimagechooser_ImagesOuterContainer_3A8RG {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow-y: auto;
+  max-height: 732px;
+  background: #000; }
+  .clanimagechooser_ImagesOuterContainer_3A8RG::-webkit-scrollbar-thumb {
+    background: #3d4450; }
+
+.clanimagechooser_Hilight_1v_zQ {
+  /* When search matches a part of the filename */
+  font-weight: bold;
+  color: green; }
+
+.clanimagechooser_ImageContainer_2ti3y {
+  text-align: center;
+  width: 180px;
+  display: inline-block;
+  position: relative;
+  max-height: 168px;
+  overflow: hidden;
+  padding: 4px; }
+
+.clanimagechooser_Image_y902_ {
+  height: 100px;
+  width: 100%;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat; }
+
+.clanimagechooser_ImageFilename_2jzLZ {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  word-wrap: break-word;
+  white-space: normal;
+  font-size: 12px; }
+
+.clanimagepickandresize_Image_1po_j {
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat; }
+
+.reorderablelist_WhitelistNumber_IY3dF {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  background-color: #2A2E34;
+  margin-right: 8px; }
+
+.reorderablelist_WhitelistCtn_1Uhmx {
+  margin-bottom: 8px;
+  margin-top: 8px; }
+
+.reorderablelist_WhitelistRow_28TC1 {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  background-color: #333740;
+  padding: 4px;
+  margin-bottom: 2px;
+  user-select: none;
+  box-sizing: border-box; }
+
+.reorderablelist_Grabbable_riuel {
+  cursor: grab; }
+
+.reorderablelist_Grabbing_1vSZ5 {
+  cursor: grabbing; }
+
+.reorderablelist_DisabledGrab_2K0C_ {
+  cursor: not-allowed; }
+
+.reorderablelist_WhitelistAvatar_3DGjm {
+  margin-right: 8px; }
+
+.reorderablelist_ButtonCtn_1hSql {
+  margin-left: auto;
+  display: flex;
+  flex-direction: row; }
+
 .partnereventdisplay_EventDetailsPageContainer_2Ptra {
   display: flex;
   flex-direction: column;
   position: relative; }
+  @media screen and (min-width: 910px) {
+    .partnereventdisplay_EventDetailsPageContainer_2Ptra .AppPartnerEventsBanner {
+      display: none; } }
 
 .partnereventdisplay_EventBackgroundBlurCtn_32nPM {
   position: absolute;
@@ -7949,14 +8224,6 @@ img.broadcastplayer_BroadcastPlaceholderImg_3hxn9 {
 
 .nominationandvote_SteamAwardModalGameTitle_15lc0 {
   color: white; }
-
-@media screen and (min-width: 910px) {
-  html:not(.client) .partner_events .apppartnereventspage_AppPartnerEventsBanner_1HRiM {
-    display: none; } }
-
-@media screen and (max-width: 910px) {
-  html:not(.client) .partner_events .apppartnereventspage_AppPartnerEventsBanner_1HRiM {
-    margin-top: 60px; } }
 
 html:not(.client) .partner_events .apppartnereventspage_AppPartnerEventsPage_3CJsg .apppartnereventspage_AppPartnerEventsBanner_1HRiM {
   margin-top: 104px; }
@@ -9109,7 +9376,6 @@ button.DialogButton::-moz-focus-inner {
   overflow: visible;
   position: relative; }
 
-.PagedSettingsDialog_PageListItem,
 .DialogToggle_Label {
   user-select: none; }
 
@@ -9166,9 +9432,6 @@ button.DialogButton::-moz-focus-inner {
   max-height: none;
   width: 100%;
   height: 100%; }
-
-.DialogContent._DialogLayout.PagedSettingsDialog_PageContent .DialogHeader {
-  margin-right: 0; }
 
 .DialogHeader {
   font-weight: 300;
@@ -9638,67 +9901,6 @@ button.TextButton:focus {
 
 .DialogOnOffToggle_Option:hover {
   color: white; }
-
-.PagedSettingsDialog {
-  /*width: 842px;*/
-  display: flex;
-  flex-direction: row;
-  height: 720px; }
-
-.PagedSettingsDialog_PageListColumn {
-  background: #2a2d34;
-  flex: 1;
-  min-width: 140px;
-  max-width: 220px;
-  padding-left: 24px;
-  padding-top: 40px;
-  display: flex;
-  flex-direction: column;
-  position: relative; }
-
-.PagedSettingsDialog_Title {
-  text-transform: uppercase;
-  margin-bottom: 20px;
-  color: #4297f8;
-  font-weight: 300;
-  font-size: 13px;
-  user-select: none; }
-
-.PagedSettingsDialog_PageList {
-  line-height: 16px;
-  white-space: nowrap;
-  overflow-y: overlay;
-  flex-shrink: 1; }
-
-.PagedSettingsDialog_PageListItem {
-  white-space: normal;
-  max-width: 180px;
-  text-overflow: ellipsis;
-  color: #7e7e7e;
-  font-size: 15px;
-  font-weight: normal;
-  text-transform: uppercase;
-  cursor: pointer;
-  margin-bottom: 14px; }
-
-.PagedSettingsDialog_PageListItem.DisabledItem,
-.PagedSettingsDialog_PageListItem.DisabledItem:hover,
-.PagedSettingsDialog_PageListItem.DisabledItem:not(.Active):hover {
-  color: #414141; }
-
-.PagedSettingsDialog_PageListItem:not(.Active):hover {
-  color: #cccccc; }
-
-.PagedSettingsDialog_PageListItem.Active {
-  color: #ffffff;
-  cursor: default; }
-
-.PagedSettingsDialog_PageContent {
-  flex: 3; }
-
-.PagedSettingsDialog_PageContentTitle {
-  color: #ffffff;
-  font-size: 30px; }
 
 .DialogMenuPosition {
   position: absolute;

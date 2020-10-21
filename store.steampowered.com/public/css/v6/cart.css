@@ -716,8 +716,8 @@ body.v6 .cart_digital_notice_ctn h2
 }
 
 .checkout_review_item_desc_ext b, .review_notice b, .review_notice {
-	color: #ffcc6a;
-	font-weight: normal;
+    color: #ffcc6a;
+    font-weight: normal;
 }
 
 
@@ -2195,6 +2195,14 @@ label.send_choice_txt {
 		font-weight: 300; /* light */
 
 		}
+
+.ackgift_item_title {
+    font-size: 18px;
+}
+.ackgift_friend_line {
+    color: #c6d4df;
+    line-height: 24px;
+}
 
 .btn_checkout_print {
 	display: block;

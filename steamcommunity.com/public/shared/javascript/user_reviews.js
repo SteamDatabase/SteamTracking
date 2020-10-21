@@ -7,7 +7,7 @@ function UserReview_Award( bLoggedIn, loginURL, recommendationID, callbackFunc, 
 	}
 	else
 	{
-		var dialog = ShowConfirmDialog( 'Error', 'You must be logged in to perform that action.', 'Sign in' );
+		var dialog = ShowConfirmDialog( 'Error', 'You must be logged in to perform that action.', 'Sign In' );
 		dialog.done( function() {
 			top.location.href = loginURL;
 		} );

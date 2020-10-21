@@ -519,3 +519,360 @@ ul#why_list li {
 #privacy_link {
 	padding-top: 12px;
 }
+
+/* 2020 LOGIN PAGE */
+body.login {
+	color: #E9E9E9;
+	background: radial-gradient(30% 40% at 40% 30%, rgba(33, 36, 41, .5) 0%, rgba(33, 36, 41, 0) 100%) no-repeat, url( 'https://community.cloudflare.steamstatic.com/public/shared/images/joinsteam/acct_creation_bg.jpg' ) -45vw 0 no-repeat, #212429;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		;
+}
+
+body.login .page_content_flex {
+	display: flex;
+	justify-content: space-between;
+	min-height: 800px;
+}
+
+body.login.china {
+	background: radial-gradient(30% 40% at 40% 30%, #454D52 0%, rgba(69, 77, 82, 0) 100%) no-repeat, #212429;
+}
+
+.login #checkout_steam_logo {
+	display: none;
+}
+
+.login_title {
+	text-transform: uppercase;
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	font-size: 34px;
+	color: #ffffff;
+	margin-bottom: 30px;
+	font-weight: 200;
+	letter-spacing: 2px;
+	text-align: center;
+}
+
+.login_btn > span, #login_btn_wait {
+	padding: 3px 80px;
+}
+
+.login .input_title {
+	font-size: 14px;
+	color: #b8b6b4;
+	margin-bottom: 5px;
+}
+
+.login .subtext {
+	font-size: 14px;
+	color: #b8b6b4;
+}
+
+.login .login_join_desc {
+	max-width: 60%;
+	text-align: center;
+	font-size: 14px;
+}
+
+.about_link {
+	margin-top: 10px;
+	color: #FFFFFF;
+}
+
+.login .text_field, .login select {
+	max-width: 300px;
+	background: #32353C;
+	border-radius: 3px;
+	color: #E9E9E9;
+	padding: 8px 6px;
+	display: block;
+	box-shadow: none;
+	width: 100%;
+	transition: border ease-in-out .5s;
+	border: 1px solid #26282D;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		;
+}
+
+.join_image {
+	width: 320px;
+}
+
+.login_btn_ctn {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 20px;
+}
+
+.login_btn_ctn a {
+	margin: 20px 0 0 0;
+	display: block;
+	text-align: center;
+}
+
+.login_right_col {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.login_left_col.no_gradient {
+	background: transparent;
+}
+
+.login_left_col {
+	flex-grow: 1;
+	background: radial-gradient(60.12% 60.12% at 104.83% -0.03%, rgb(74, 81, 92, 0.3) 0%, rgba(74, 81, 92, 0) 100%);
+}
+
+.login_col_padding {
+	padding-top: 100px;
+}
+
+body.login .loginbox {
+	min-height: 352px;
+	padding: 40px 20px 20px 20px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.login #error_display {
+	color: #FFFFFF;
+	font-size: 14px;
+	margin-bottom: 20px;
+}
+
+.block_content.block_content_inner.login {
+	min-height: 364px;
+}
+
+.loginbox_left {
+	position: relative;
+	min-width: 274px;
+}
+.loginbox_right {
+	flex: 1;
+	position: relative;
+	min-width: 274px;
+}
+
+.loginbox_content {
+	min-height: 264px;
+	padding-bottom: 16px;
+	max-width: 300px;
+}
+
+.loginbox_left .btn_ctn {
+	height: 33px;
+}
+
+.loginbox_left a.btn_checkout_green, .loginbox_right a.btn_checkout_green {
+	color: #ffffff;
+	text-decoration: none;
+	float: right;
+}
+
+.loginbox_sep {
+	flex: 0;
+	border-left: 1px solid #264959;
+	width: 2px;
+	height: 210px;
+	margin: 0 16px;
+}
+
+.loginbox .captcha_image_row {
+	position: relative;
+}
+
+.loginbox .login_row {
+	margin-bottom: 18px;
+}
+
+.loginbox #captchImg {
+	position: absolute;
+	left: 0px;
+	right: 0px;
+}
+
+.loginbox #captchaRefresh {
+	margin-left: 220px;
+	padding-top: 8px;
+}
+
+.ackgift_header_ctn {
+	display: flex;
+	background: rgba(0, 0, 0, 0.2);
+	padding: 10px;
+	margin-top: 10px;
+	justify-content: space-between;
+}
+
+.ackgift_header_text {
+	color: #b8b6b4;
+	font-size: 14px;
+	padding: 10px;
+}
+
+.ackgift_header_title {
+	color: #FFFFFF;
+	font-size: 20px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: normal;
+	margin-bottom: 5px;
+}
+
+.ackgift_gift_text {
+	color: #b8b6b4;
+}
+
+.ackgift_gift_text div {
+	color: #FFFFFF;
+}
+
+.ackgift_gift_ctn {
+	background: none;
+	flex-grow: 1;
+	max-width: 400px;
+}
+
+.ackgift_gift {
+	background: none;
+	border: 1px solid #06bfff;
+	padding: 0 10px;
+}
+
+.ackgift_header h2 {
+	color: #efefef;
+}
+
+.ackgift_header p {
+	color: #acabab;
+	font-size: 14px;
+}
+
+.ackgift_header #checkout_pipeline {
+	padding-top: 22px;
+}
+
+.ackgift_header #checkout_header .content {
+	height: 78px;
+}
+
+.checkout_error {
+	padding: 16px;
+	background: rgba( 0, 0, 0, 0.2 );
+	margin-bottom: 8px;
+	border: 1px solid #b44040;
+	max-width: 350px;
+}
+
+.page_header_ctn {
+	margin-bottom: -94px;
+}
+
+#challenge_question_dselect_container {
+	margin-top: 5px;
+	width: 264px;
+}
+
+.email_used_actions {
+	margin-top: 12px;
+	line-height: 24px;
+}
+
+.linkspan {
+	color: #ffffff;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.linkspan:hover {
+	color: #67c1f5;
+}
+
+.login_menu_spacer {
+	height: 48px;
+}
+
+body.v6.steamtv
+{
+	background: transparent;
+}
+
+html.responsive body.v6.steamtv .responsive_page_template_content
+{
+	padding-bottom: 0;
+}
+
+@media screen and ( max-width: 640px )
+{
+	html.responsive .loginbox {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	html.responsive .loginbox_sep {
+		border-top: 1px solid #264959;
+		border-left: none;
+		width: auto;
+		height: 1px;
+		margin: 16px 0;
+	}
+
+	html.responsive .loginbox_content {
+		min-height: 0;
+	}
+
+	html.responsive .login_left_col {
+		background: none;
+	}
+}
+
+@media screen and ( max-width: 820px ) {
+	html.responsive .login_left_col {
+		width: 100%;
+	}
+}
+
+@media screen and ( max-width: 910px ) {
+	html.responsive body.login {
+		background-image: radial-gradient(60% 40% at 0% -0.03%, rgba(74, 81, 92, 0.5) 0%, rgba(74, 81, 92, 0) 100%);
+	}
+}
+
+@media screen and ( min-width: 1400px )
+{
+	html.responsive body.login {
+		background-position: -30vw 0;
+	}
+}
+
+@media screen and (min-width: 1700px) {
+	html.responsive body.login {
+		background-position: -24vw 0;
+	}
+}
+
+
+@media screen and (max-width: 910px )
+{
+	html.responsive body.login .page_content_flex, html.responsive  {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	html.responsive body.login .ackgift_header_ctn {
+		flex-wrap: wrap;
+	}
+
+	html.responsive body.login {
+		background-image: none;
+	}
+}

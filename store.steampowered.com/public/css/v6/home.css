@@ -4007,6 +4007,13 @@ body.v6 .home_rightcol.recommended h2, body.v6 .home_leftcol h2 {
 	color: #c4e4f2;
 }
 
+.daily_deal .bundle_base_discount {
+    font-size: 19px;
+}
+.daily_deal.store_capsule .bundle_base_discount {
+    display: none;
+}
+
 .discount_block > .discount_prices {
 	background-color: rgba(0,0,0,0.6);
 }

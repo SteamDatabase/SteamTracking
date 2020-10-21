@@ -31,7 +31,7 @@ function UserReviewVoteUp( bLoggedIn, strLoginURL, id )
 {
 	if ( !bLoggedIn )
 	{
-		var dialog = ShowConfirmDialog( 'Error', 'You must be logged in to perform that action.', 'Sign in' );
+		var dialog = ShowConfirmDialog( 'Error', 'You must be logged in to perform that action.', 'Sign In' );
 		dialog.done( function() {
 			top.location.href = strLoginURL;
 		} );
@@ -51,7 +51,7 @@ function UserReviewVoteDown( bLoggedIn, strLoginURL, id )
 {
 	if ( !bLoggedIn )
 	{
-		var dialog = ShowConfirmDialog( 'Error', 'You must be logged in to perform that action.', 'Sign in' );
+		var dialog = ShowConfirmDialog( 'Error', 'You must be logged in to perform that action.', 'Sign In' );
 		dialog.done( function() {
 			top.location.href = strLoginURL;
 		} );
@@ -71,7 +71,7 @@ function UserReviewVoteTag( bLoggedIn, strLoginURL, id, tagID, elemID )
 {
 	if ( !bLoggedIn )
 	{
-		var dialog = ShowConfirmDialog( 'Error', 'You must be logged in to perform that action.', 'Sign in' );
+		var dialog = ShowConfirmDialog( 'Error', 'You must be logged in to perform that action.', 'Sign In' );
 		dialog.done( function() {
 			top.location.href = strLoginURL;
 		} );

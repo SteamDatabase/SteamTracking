@@ -43,8 +43,8 @@
                 a.a.createElement(
                   "div",
                   { className: c.a.Throbber },
-                  a.a.createElement(o.K, { className: c.a.base }),
-                  a.a.createElement(o.K, { className: c.a.blur })
+                  a.a.createElement(o.N, { className: c.a.base }),
+                  a.a.createElement(o.N, { className: c.a.blur })
                 )
               );
               return a.a.createElement(
@@ -763,7 +763,7 @@
                         br: f.d.readUint32,
                         bw: f.h.writeUint32
                       },
-                      reactions: { n: 3, c: F, r: !0, q: !0 }
+                      reactions: { n: 3, c: N, r: !0, q: !0 }
                     }
                   }),
                 n.sm_m
@@ -802,7 +802,7 @@
             n
           );
         })(b),
-        F = (function(r) {
+        N = (function(r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -883,7 +883,7 @@
             n
           );
         })(b),
-        N = (function(r) {
+        F = (function(r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -1647,7 +1647,7 @@
           });
         }),
         (y.GetEligibleApps = function(e, t) {
-          return e.SendMsg("LoyaltyRewards.GetEligibleApps#1", t, N, {
+          return e.SendMsg("LoyaltyRewards.GetEligibleApps#1", t, F, {
             bConstMethod: !0,
             ePrivilege: 0,
             eWebAPIKeyRequirement: 1
@@ -1864,8 +1864,8 @@
         H = r("exH9"),
         Q = r("Dsqm"),
         Y = r("0OaU"),
-        K = r("6Y59");
-      function V(e) {
+        V = r("6Y59");
+      function K(e) {
         return Object(L.f)("#RewardsReaction_" + e);
       }
       var J,
@@ -2668,7 +2668,7 @@
                             E.createElement(
                               "span",
                               { className: S.AwardName },
-                              V(c)
+                              K(c)
                             )
                           )
                         ),
@@ -2857,7 +2857,7 @@
             E.createElement(
               "div",
               { className: S.Left },
-              E.createElement(K.u, { className: S.BalanceIcon }),
+              E.createElement(V.x, { className: S.BalanceIcon }),
               E.createElement(
                 "div",
                 { className: S.BalanceDetails },
@@ -2958,7 +2958,7 @@
                     bDisableAnimation: n
                   })
                 ),
-                E.createElement("div", { className: S.Label }, V(t)),
+                E.createElement("div", { className: S.Label }, K(t)),
                 E.createElement(
                   Oe,
                   { className: S.Points },
@@ -2982,7 +2982,7 @@
           return E.createElement(
             "span",
             Object(s.a)({}, n, { className: Object(H.a)(r, S.PointsAmount) }),
-            E.createElement(K.u, { className: S.PointsAmountIcon }),
+            E.createElement(V.x, { className: S.PointsAmountIcon }),
             t
           );
         };

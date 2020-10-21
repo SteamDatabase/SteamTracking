@@ -254,7 +254,7 @@
                   },
                   i
                 ),
-                g.createElement(v.z, null)
+                g.createElement(v.C, null)
               ),
             n &&
               g.createElement(
@@ -271,7 +271,7 @@
                   },
                   i
                 ),
-                g.createElement(v.L, null)
+                g.createElement(v.Q, null)
               ),
             o &&
               g.createElement(
@@ -294,7 +294,7 @@
         }),
         j = r("EImw"),
         A = r.n(j),
-        B = r("CdLH").e.PerMinute,
+        B = r("CdLH").f.PerMinute,
         w = (function() {
           function e(e) {
             (this.m_bLoadingData = !1),

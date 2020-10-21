@@ -778,7 +778,7 @@
             C.createElement(
               "div",
               { className: L.Left },
-              C.createElement(f.A, { className: L.BalanceIcon }),
+              C.createElement(f.D, { className: L.BalanceIcon }),
               C.createElement(
                 "div",
                 { className: L.BalanceDetails },
@@ -899,7 +899,7 @@
           return C.createElement(
             "span",
             Object(s.a)({}, n, { className: Object(j.a)(a, L.PointsAmount) }),
-            C.createElement(f.A, { className: L.PointsAmountIcon }),
+            C.createElement(f.D, { className: L.PointsAmountIcon }),
             t
           );
         };

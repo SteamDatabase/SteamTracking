@@ -732,39 +732,39 @@ function InitializeTransaction()
 		{
 			if ( $('send_self') && $('send_self').checked )
 			{
-								$('checkout_receipt_description').innerHTML = 'A receipt will be emailed to you shortly.<br/><br/>The items you purchased have been added to your Steam Inventory. Click <%1$s>here<%2$s> to view your Steam Inventory and to see options for sending these items as gifts to your friends.'.replace( '<%1$s>', '<a href="' + g_sInventoryLink + '">').replace( '<%2$s>', '</a>');
+								$('checkout_receipt_description').innerHTML = 'The items you purchased have been added to your Steam Inventory. Click <%1$s>here<%2$s> to view your Steam Inventory and to see options for sending these items as gifts to your friends.'.replace( '<%1$s>', '<a href="' + g_sInventoryLink + '">').replace( '<%2$s>', '</a>');
 			}
 			else
 			{
-								$('checkout_receipt_description').innerHTML = 'Your gift is on its way! A receipt will be emailed to you soon.';
+								$('checkout_receipt_description').innerHTML = 'Your gift is on its way!';
 				$('gift_tracking_description').show();
 			}
 		}
 		else if ( g_bMicroTxn )
 		{
-						$('checkout_receipt_description').innerHTML = 'Your funds are available for use immediately, and a receipt will be emailed to you shortly.';
+						$('checkout_receipt_description').innerHTML = 'Your funds are available for use immediately.';
 		}
 		else if ( g_bWalletCreditOnly )
 		{
-						$('checkout_receipt_description').innerHTML = 'Your funds are available for use immediately, and a receipt will be emailed to you shortly.';
+						$('checkout_receipt_description').innerHTML = 'Your funds are available for use immediately.';
 		}
 		else if ( g_bIsInOverlay )
 		{
-						$('checkout_receipt_description').innerHTML = 'An email confirmation has been sent to you.<br /><br/>Any digital items in this order are now registered to your account on Steam.  To access your items, simply visit your <a href="steam://open/games">library</a> in Steam whenever you\'re ready.';
+						$('checkout_receipt_description').innerHTML = 'Any digital items in this order are now registered to your account on Steam.  To access your items, simply visit your <a href="steam://open/games">library</a> in Steam whenever you\'re ready.';
 		}
 		else
 		{
 			if ( g_nItemsForSelf > 0 && g_nItemsForGifts > 0 )
 			{
-								$('checkout_receipt_description').innerHTML = 'A receipt will be emailed to you shortly.<br/><br/>Your digitally delivered items are now registered to your account on Steam. To access your items, simply visit your library in Steam whenever you\'re ready.<br/><br/>Extra copies of items from this purchase have been added to your Steam Inventory. Click <%1$s>here<%2$s> to view your Steam Inventory and to see options for sending your extra copies as gifts to your friends.'.replace( '<%1$s>', '<a href="' + g_sInventoryLink + '">').replace( '<%2$s>', '</a>');
+								$('checkout_receipt_description').innerHTML = 'Your digitally delivered items are now registered to your account on Steam. To access your items, simply visit your library in Steam whenever you\'re ready.<br/><br/>Extra copies of items from this purchase have been added to your Steam Inventory. Click <%1$s>here<%2$s> to view your Steam Inventory and to see options for sending your extra copies as gifts to your friends.'.replace( '<%1$s>', '<a href="' + g_sInventoryLink + '">').replace( '<%2$s>', '</a>');
 			}
 			else if ( g_nItemsForSelf == 0 && g_nItemsForGifts > 0 )
 			{
-								$('checkout_receipt_description').innerHTML = 'A receipt will be emailed to you shortly.<br/><br/>The items you purchased have been added to your Steam Inventory. Click <%1$s>here<%2$s> to view your Steam Inventory and to see options for sending these items as gifts to your friends.'.replace( '<%1$s>', '<a href="' + g_sInventoryLink + '">').replace( '<%2$s>', '</a>');
+								$('checkout_receipt_description').innerHTML = 'The items you purchased have been added to your Steam Inventory. Click <%1$s>here<%2$s> to view your Steam Inventory and to see options for sending these items as gifts to your friends.'.replace( '<%1$s>', '<a href="' + g_sInventoryLink + '">').replace( '<%2$s>', '</a>');
 			}
 			else
 			{
-								$('checkout_receipt_description').innerHTML = 'An email confirmation has been sent to you.<br /><br/>Any digital items in this order are now registered to your account on Steam.  To access your items, simply visit your <a href="steam://open/games">library</a> in Steam whenever you\'re ready.';
+								$('checkout_receipt_description').innerHTML = 'Any digital items in this order are now registered to your account on Steam.  To access your items, simply visit your <a href="steam://open/games">library</a> in Steam whenever you\'re ready.';
 			}
 		}
 

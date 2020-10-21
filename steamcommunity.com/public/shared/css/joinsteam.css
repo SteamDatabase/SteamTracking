@@ -4,7 +4,7 @@
 		display: none;
 	}
 
-	html.responsive	.form_notes, html.responsive .form_area, html.responsive .join_form select#country {
+	html.responsive	.form_notes, html.responsive .joinsteam .form_area, html.responsive .join_form select#country  {
 		width: 100%;
 		margin-left: 0;
 	}
@@ -47,6 +47,10 @@
 		max-width: 100%;
 	}
 
+	html.responsive .join_form_notes {
+		margin: 0;
+	}
+
 	html.responsive .joinsteam .row_flex {
 		display: block;
 	}
@@ -54,9 +58,18 @@
 	html.responsive .joinsteam_content_container {
 		padding: 20px;
 	}
+
+	html.responsive body.v6.joinsteam {
+		background-image: none;
+	}
+
+	html.responsive .joinsteam .form_notes {
+		margin: 10px 0 0 0;
+	}
+
 }
 
-@media screen and ( max-width: 500px ) {
+@media screen and ( max-width: 800px ) {
 
 	html.responsive body.v6.joinsteam {
 		background-image: none;
@@ -64,12 +77,17 @@
 
 }
 
-@media screen and ( min-width: 1500px ) {
-
+@media screen and ( min-width: 1200px )
+{
 	html.responsive body.v6.joinsteam {
-		background-position: -15vw 0;
+		background-position: -40vw 0;
 	}
+}
 
+@media screen and (min-width: 1600px) {
+	html.responsive body.v6.joinsteam {
+		background-position: -20vw 0;
+	}
 }
 
 body.v6.joinsteam.csgo, body.v6.joinsteam.dota, body.v6.china.joinsteam {
@@ -84,7 +102,7 @@ body.v6.global.joinsteam {
 body.v6.joinsteam {
 	color: #E9E9E9;
 	background-color: #212429;
-	background-position: -40vw 0;
+	background-position: -60vw 0;
 	background-repeat: no-repeat;
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: normal; /* normal */
@@ -95,6 +113,7 @@ body.v6.joinsteam {
 body.v6.joinsteam #checkout_steam_logo {
 	display: none;
 }
+
 
 ::-webkit-scrollbar {
 	width: 15px;
@@ -296,7 +315,6 @@ p .csgoheadline{
 }
 
 #create_account input, #create_account select {
-    max-width: 300px;
 	background: #32353C;
 	border-radius: 3px;
 	color: #E9E9E9;
@@ -317,6 +335,16 @@ p .csgoheadline{
 	width: 18px;
 	height: 18px;
 	background: #32353C;
+}
+
+.joinsteam .form_area {
+	max-width: 320px;
+	flex: 1 1 100%;
+	float: none;
+}
+
+.joinsteam #accountname_availability:before {
+	display: none;
 }
 
 .joinsteam label {
@@ -341,6 +369,7 @@ p .csgoheadline{
 .joinsteam .row_flex {
 	display: flex;
 	align-items: center;
+	flex-wrap: wrap;
 }
 
 .joinsteam .section_title {
@@ -362,7 +391,7 @@ p .csgoheadline{
 }
 
 .joinsteam #priv_and_sub {
-	margin-top: 25px;
+	margin-top: 35px;
 }
 
 .joinsteam .password_tag {
@@ -399,6 +428,11 @@ p .csgoheadline{
 	color: #B3B3B3;
 }
 
+.suggested_accountnames {
+	width: 100%;
+	margin-top: 25px;
+}
+
 .email_used_body {
     margin: 15px 0;
 }
@@ -426,7 +460,7 @@ p .csgoheadline{
 .joinsteam_content_container {
 	padding: 50px;
 	min-height: 600px;
-	max-width: 600px;
+	max-width: 700px;
 }
 
 .joinsteam_content_container button > span, .joinsteam_button > span {
@@ -445,6 +479,7 @@ p .csgoheadline{
 .joinsteam .form_notes {
 	max-width: 350px;
 	width: auto;
+	float: none;
 }
 
 .join_form_notes {
@@ -453,6 +488,10 @@ p .csgoheadline{
 
 .joinsteam .flex_row_align_end {
 	align-items: flex-end;
+}
+
+.joinsteam .account_name_row {
+	margin-bottom: 60px;
 }
 
 /* VERIFY EMAIL */

@@ -558,6 +558,62 @@ html.contextmenu_ContextMenuPopup_14wqd .contextmenu_contextMenuItem_1n7Wl {
     opacity: 1.0;
     word-wrap: break-word; }
 
+.pagedsettings_PagedSettingsDialog_2sssI {
+  /*width: 842px;*/
+  display: flex;
+  flex-direction: row;
+  height: 720px; }
+
+.pagedsettings_PagedSettingsDialog_PageContent_CFTLX {
+  flex: 3; }
+
+.pagedsettings_PagedSettingsDialog_PageContent_CFTLX .DialogHeader {
+  margin-right: 0; }
+
+.pagedsettings_PagedSettingsDialog_PageListColumn_2kwFF {
+  background: #2a2d34;
+  flex: 1;
+  min-width: 140px;
+  max-width: 220px;
+  padding-left: 24px;
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  position: relative; }
+
+.pagedsettings_PagedSettingsDialog_Title_2rjVT {
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: #4297f8;
+  font-weight: 300;
+  font-size: 13px;
+  user-select: none; }
+
+.pagedsettings_PagedSettingsDialog_PageList_18QCu {
+  line-height: 16px;
+  white-space: nowrap;
+  overflow-y: overlay;
+  flex-shrink: 1; }
+
+.pagedsettings_PagedSettingsDialog_PageListItem_1-vlr {
+  white-space: normal;
+  max-width: 180px;
+  text-overflow: ellipsis;
+  color: #7e7e7e;
+  font-size: 15px;
+  font-weight: normal;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-bottom: 14px;
+  user-select: none; }
+  .pagedsettings_PagedSettingsDialog_PageListItem_1-vlr.pagedsettings_DisabledItem_oUzYn, .pagedsettings_PagedSettingsDialog_PageListItem_1-vlr.pagedsettings_DisabledItem_oUzYn:hover, .pagedsettings_PagedSettingsDialog_PageListItem_1-vlr.pagedsettings_DisabledItem_oUzYn:not(.pagedsettings_Active_2DpXj):hover {
+    color: #414141; }
+  .pagedsettings_PagedSettingsDialog_PageListItem_1-vlr:not(.pagedsettings_Active_2DpXj):hover {
+    color: #cccccc; }
+  .pagedsettings_PagedSettingsDialog_PageListItem_1-vlr.pagedsettings_Active_2DpXj {
+    color: #ffffff;
+    cursor: default; }
+
 body.modals_BodyNoScroll_32ZiC {
   overflow-y: hidden;
   height: 100vh; }
@@ -926,7 +982,6 @@ button.DialogButton::-moz-focus-inner {
   overflow: visible;
   position: relative; }
 
-.PagedSettingsDialog_PageListItem,
 .DialogToggle_Label {
   user-select: none; }
 
@@ -983,9 +1038,6 @@ button.DialogButton::-moz-focus-inner {
   max-height: none;
   width: 100%;
   height: 100%; }
-
-.DialogContent._DialogLayout.PagedSettingsDialog_PageContent .DialogHeader {
-  margin-right: 0; }
 
 .DialogHeader {
   font-weight: 300;
@@ -1455,67 +1507,6 @@ button.TextButton:focus {
 
 .DialogOnOffToggle_Option:hover {
   color: white; }
-
-.PagedSettingsDialog {
-  /*width: 842px;*/
-  display: flex;
-  flex-direction: row;
-  height: 720px; }
-
-.PagedSettingsDialog_PageListColumn {
-  background: #2a2d34;
-  flex: 1;
-  min-width: 140px;
-  max-width: 220px;
-  padding-left: 24px;
-  padding-top: 40px;
-  display: flex;
-  flex-direction: column;
-  position: relative; }
-
-.PagedSettingsDialog_Title {
-  text-transform: uppercase;
-  margin-bottom: 20px;
-  color: #4297f8;
-  font-weight: 300;
-  font-size: 13px;
-  user-select: none; }
-
-.PagedSettingsDialog_PageList {
-  line-height: 16px;
-  white-space: nowrap;
-  overflow-y: overlay;
-  flex-shrink: 1; }
-
-.PagedSettingsDialog_PageListItem {
-  white-space: normal;
-  max-width: 180px;
-  text-overflow: ellipsis;
-  color: #7e7e7e;
-  font-size: 15px;
-  font-weight: normal;
-  text-transform: uppercase;
-  cursor: pointer;
-  margin-bottom: 14px; }
-
-.PagedSettingsDialog_PageListItem.DisabledItem,
-.PagedSettingsDialog_PageListItem.DisabledItem:hover,
-.PagedSettingsDialog_PageListItem.DisabledItem:not(.Active):hover {
-  color: #414141; }
-
-.PagedSettingsDialog_PageListItem:not(.Active):hover {
-  color: #cccccc; }
-
-.PagedSettingsDialog_PageListItem.Active {
-  color: #ffffff;
-  cursor: default; }
-
-.PagedSettingsDialog_PageContent {
-  flex: 3; }
-
-.PagedSettingsDialog_PageContentTitle {
-  color: #ffffff;
-  font-size: 30px; }
 
 .DialogMenuPosition {
   position: absolute;
