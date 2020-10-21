@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6156271";
+var CLSTAMP = "6156468";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [37],
   {
@@ -38744,8 +38744,8 @@ var CLSTAMP = "6156271";
         n.d(t, "a", function() {
           return d;
         });
-      var g = n("mrSG"),
-        M = n("q1tI"),
+      var v = n("mrSG"),
+        g = n("q1tI"),
         r = n("nrKv"),
         o = n("mgoM"),
         i = n("lkRc"),
@@ -38944,106 +38944,107 @@ var CLSTAMP = "6156271";
               })(e);
               return this.Parse_BuildReactComponents(n, t);
             }),
-            (e.prototype.Parse_BuildReactComponents = function(e, l) {
-              function p() {
-                return h.length < 1 ? void 0 : h[h.length - 1];
+            (e.prototype.Parse_BuildReactComponents = function(e, c) {
+              function l() {
+                return m.length < 1 ? void 0 : m[m.length - 1];
               }
-              function u(e, t, n) {
-                var r, o, i, a, s, c;
-                e && e.node.tag === t.text && f.get(e.node.tag)
-                  ? ((o = f.get(e.node.tag)),
-                    (i = h.map(function(e) {
+              function p(e, t, n) {
+                var r, o, i, a, s;
+                e && e.node.tag === t.text && h.get(e.node.tag)
+                  ? ((r = h.get(e.node.tag)),
+                    (o = m.map(function(e) {
                       return e.node.tag;
                     })),
-                    (a = {
-                      context: l,
-                      parentTags: i,
+                    (i = {
+                      context: c,
+                      parentTags: o,
                       tagname: e.node.tag,
                       args: e.node.args,
-                      language: b,
+                      language: f,
                       key: e.node.tag + "_" + n
                     }),
-                    (s = M.createElement.apply(
-                      M,
-                      Object(g.g)([o.Constructor, a], m.GetElements())
+                    (a = g.createElement.apply(
+                      g,
+                      Object(v.g)([r.Constructor, i], d.GetElements())
                     )),
-                    (m = e.accumulator).AppendNode(s),
-                    (_ = o.skipFollowingNewline),
-                    (v =
-                      null !== (r = o.allowWrapTextForCopying) &&
-                      void 0 !== r &&
-                      r))
-                  : e
-                  ? ((c = e.accumulator).AppendText(
+                    (d = e.accumulator).AppendNode(a),
+                    (b = r.skipFollowingNewline),
+                    (_ = e.bWrapTextForCopying))
+                  : e &&
+                    ((s = e.accumulator).AppendText(
                       "[" + e.node.text + "]",
                       !1
                     ),
-                    m.GetElements().forEach(function(e) {
-                      return c.AppendNode(e);
+                    d.GetElements().forEach(function(e) {
+                      return s.AppendNode(e);
                     }),
-                    c.AppendText("[/" + t.text + "]", !1),
-                    (m = c))
-                  : (v = !0);
+                    s.AppendText("[/" + t.text + "]", !1),
+                    (d = s),
+                    (_ = e.bWrapTextForCopying));
               }
-              var d = this,
-                m = this.m_fnAccumulatorFactory(void 0),
-                h = [],
-                f = this.m_dictComponents,
-                b = this.m_renderingLanguage,
-                _ = !1,
-                v = !0;
+              var u = this,
+                d = this.m_fnAccumulatorFactory(void 0),
+                m = [],
+                h = this.m_dictComponents,
+                f = this.m_renderingLanguage,
+                b = !1,
+                _ = !0;
               e.forEach(function(e, t) {
                 var n;
                 if (1 == e.type) {
-                  var r = _ ? e.text.replace(/^[\t\r ]*\n/g, "") : e.text;
-                  m.AppendText(r, v), (_ = !1);
+                  var r = b ? e.text.replace(/^[\t\r ]*\n/g, "") : e.text;
+                  d.AppendText(r, _), (b = !1);
                 } else if (2 == e.type) {
                   var o,
                     i,
-                    a = f.get(e.tag);
+                    a = h.get(e.tag);
                   a
-                    ? (void 0 === (o = p()) ||
-                        ((i = f.get(o.node.tag)) &&
+                    ? (void 0 === (o = l()) ||
+                        ((i = h.get(o.node.tag)) &&
                           i.autocloses &&
                           e.tag === o.node.tag &&
-                          u(h.pop(), o.node, t)),
-                      h.push({ accumulator: m, node: e }),
-                      (m = d.m_fnAccumulatorFactory(e)),
-                      (_ = a.skipInternalNewline),
-                      (v =
+                          p(m.pop(), o.node, t)),
+                      m.push({
+                        accumulator: d,
+                        node: e,
+                        bWrapTextForCopying: _
+                      }),
+                      (d = u.m_fnAccumulatorFactory(e)),
+                      (b = a.skipInternalNewline),
+                      (_ =
                         null !== (n = a.allowWrapTextForCopying) &&
                         void 0 !== n &&
                         n))
-                    : m.AppendText("[" + e.text + "]", 0 == h.length);
+                    : d.AppendText("[" + e.text + "]", 0 == m.length);
                 } else if (3 == e.type) {
                   for (
                     ;
-                    p() &&
-                    p().node.tag !== e.text &&
-                    f.get(p().node.tag) &&
-                    f.get(p().node.tag).autocloses;
+                    l() &&
+                    l().node.tag !== e.text &&
+                    h.get(l().node.tag) &&
+                    h.get(l().node.tag).autocloses;
 
                   ) {
-                    var s = h.pop();
-                    u(s, s.node, t);
+                    var s = m.pop();
+                    p(s, s.node, t);
                   }
-                  var c = h.pop();
-                  u(c, e, t);
+                  var c = m.pop();
+                  p(c, e, t);
                 }
               });
-              for (; 0 < h.length; )
+              for (; 0 < m.length; )
                 !(function() {
-                  var e = h.pop(),
+                  var e = m.pop(),
                     t = e.accumulator;
                   t.AppendText("[" + e.node.text + "]", !1),
-                    m.GetElements().forEach(function(e) {
+                    d.GetElements().forEach(function(e) {
                       return t.AppendNode(e);
                     }),
-                    (m = t);
+                    (d = t);
                 })();
-              var t = m.GetElements();
+              var t = d.GetElements();
               return 1 < t.length
-                ? M.createElement.apply(M, Object(g.g)([M.Fragment, null], t))
+                ? g.createElement.apply(g, Object(v.g)([g.Fragment, null], t))
                 : 1 == t.length
                 ? t[0]
                 : null;
@@ -49734,6 +49735,7 @@ var CLSTAMP = "6156271";
               (this.m_chatVisibility = "hide"),
               (this.m_bHideBroadcast = void 0),
               (this.m_setStreamsLoadedListeners = new Set()),
+              (this.m_setStreamChangedListeners = new Set()),
               (this.m_bHasStartedVideo = !1),
               (this.m_bUseFakeData = !1),
               (this.m_bAllowStreamAutoPlay = !0);
@@ -49808,6 +49810,12 @@ var CLSTAMP = "6156271";
                 }),
                 n
               );
+            }),
+            (e.prototype.AddStreamChangedListener = function(e) {
+              this.m_setStreamChangedListeners.add(e);
+            }),
+            (e.prototype.RemoveStreamChangedListener = function(e) {
+              this.m_setStreamChangedListeners.delete(e);
             }),
             (e.prototype.LoadBIsEmbeddedBroadcastHidden = function(i) {
               return Object(c.b)(this, void 0, void 0, function() {
@@ -50088,6 +50096,9 @@ var CLSTAMP = "6156271";
                               ? (this.m_chatVisibility = "hide")
                               : (this.m_chatVisibility =
                                   s.broadcast_chat_visibility)),
+                          this.m_setStreamChangedListeners.forEach(function(e) {
+                            return e(s);
+                          }),
                           v(s.appid, 1, s.snr),
                           [2, s]);
                   }
@@ -50804,6 +50815,7 @@ var CLSTAMP = "6156271";
               f.a
                 .Get()
                 .RemoveStreamsLoadedListener(this.OnBroadcastStreamsLoaded),
+                f.a.Get().RemoveStreamChangedListener(this.OnBroadcastSelected),
                 this.m_cancelSignal.cancel(
                   "SaleSectionEventScheduleInner to unload"
                 ),
@@ -50839,6 +50851,9 @@ var CLSTAMP = "6156271";
                         .AddStreamsLoadedListener(
                           this.OnBroadcastStreamsLoaded
                         ),
+                      f.a
+                        .Get()
+                        .AddStreamChangedListener(this.OnBroadcastSelected),
                       (t = this.GetScheduleCalendarStore()).SetFilteredView(
                         function(e) {
                           return r.BShouldShowOnTab(e.appid);
@@ -50918,6 +50933,33 @@ var CLSTAMP = "6156271";
                 this.GetScheduleCalendarStore(),
                 Object(u.g)(S.c.LANGUAGE)
               );
+            }),
+            (e.prototype.GetFirstEventWithBroadcaster = function(t) {
+              for (
+                var e = A.a.GetTimeNowWithOverride(),
+                  n = 0,
+                  r = this.GetScheduleCalendarStore().GetCalendarItemsInTimeRange(
+                    e - 3600,
+                    e
+                  ).rgCalendarItems;
+                n < r.length;
+                n++
+              ) {
+                var o = r[n],
+                  i = O.c.GetClanEventModel(o.unique_id);
+                if (
+                  i &&
+                  !(i.endTime && i.endTime < e) &&
+                  i.GetBroadcastWhitelistAsSteamIDs().some(function(e) {
+                    return e === t;
+                  })
+                )
+                  return o.unique_id;
+              }
+            }),
+            (e.prototype.OnBroadcastSelected = function(e) {
+              var t = this.GetFirstEventWithBroadcaster(e.steamid);
+              t && (he.BIsEventSelected(t) || he.ToggleClanEventGID(t));
             }),
             (e.prototype.ApplyScheduleToBroadcasts = function() {
               var t = this;
@@ -51056,6 +51098,7 @@ var CLSTAMP = "6156271";
               "cachedUpcomingCalenderEvents",
               null
             ),
+            Object(b.c)([G.a], e.prototype, "OnBroadcastSelected", null),
             Object(b.c)([G.a], e.prototype, "ApplyScheduleToBroadcasts", null),
             Object(b.c)([G.a], e.prototype, "OnBroadcastStreamsLoaded", null),
             Object(b.c)([G.a], e.prototype, "VisibleEventsChanged", null),

@@ -63888,8 +63888,8 @@
         n.d(t, "a", function() {
           return m;
         });
-      var f = n("mrSG"),
-        E = n("q1tI"),
+      var v = n("mrSG"),
+        f = n("q1tI"),
         a = n("nrKv"),
         r = n("mgoM"),
         o = n("lkRc"),
@@ -64088,106 +64088,107 @@
               })(e);
               return this.Parse_BuildReactComponents(n, t);
             }),
-            (e.prototype.Parse_BuildReactComponents = function(e, c) {
-              function p() {
-                return h.length < 1 ? void 0 : h[h.length - 1];
+            (e.prototype.Parse_BuildReactComponents = function(e, l) {
+              function c() {
+                return m.length < 1 ? void 0 : m[m.length - 1];
               }
-              function d(e, t, n) {
-                var a, r, o, i, s, l;
-                e && e.node.tag === t.text && _.get(e.node.tag)
-                  ? ((r = _.get(e.node.tag)),
-                    (o = h.map(function(e) {
+              function p(e, t, n) {
+                var a, r, o, i, s;
+                e && e.node.tag === t.text && h.get(e.node.tag)
+                  ? ((a = h.get(e.node.tag)),
+                    (r = m.map(function(e) {
                       return e.node.tag;
                     })),
-                    (i = {
-                      context: c,
-                      parentTags: o,
+                    (o = {
+                      context: l,
+                      parentTags: r,
                       tagname: e.node.tag,
                       args: e.node.args,
-                      language: g,
+                      language: _,
                       key: e.node.tag + "_" + n
                     }),
-                    (s = E.createElement.apply(
-                      E,
-                      Object(f.g)([r.Constructor, i], m.GetElements())
+                    (i = f.createElement.apply(
+                      f,
+                      Object(v.g)([a.Constructor, o], u.GetElements())
                     )),
-                    (m = e.accumulator).AppendNode(s),
-                    (b = r.skipFollowingNewline),
-                    (v =
-                      null !== (a = r.allowWrapTextForCopying) &&
-                      void 0 !== a &&
-                      a))
-                  : e
-                  ? ((l = e.accumulator).AppendText(
+                    (u = e.accumulator).AppendNode(i),
+                    (g = a.skipFollowingNewline),
+                    (b = e.bWrapTextForCopying))
+                  : e &&
+                    ((s = e.accumulator).AppendText(
                       "[" + e.node.text + "]",
                       !1
                     ),
-                    m.GetElements().forEach(function(e) {
-                      return l.AppendNode(e);
+                    u.GetElements().forEach(function(e) {
+                      return s.AppendNode(e);
                     }),
-                    l.AppendText("[/" + t.text + "]", !1),
-                    (m = l))
-                  : (v = !0);
+                    s.AppendText("[/" + t.text + "]", !1),
+                    (u = s),
+                    (b = e.bWrapTextForCopying));
               }
-              var u = this,
-                m = this.m_fnAccumulatorFactory(void 0),
-                h = [],
-                _ = this.m_dictComponents,
-                g = this.m_renderingLanguage,
-                b = !1,
-                v = !0;
+              var d = this,
+                u = this.m_fnAccumulatorFactory(void 0),
+                m = [],
+                h = this.m_dictComponents,
+                _ = this.m_renderingLanguage,
+                g = !1,
+                b = !0;
               e.forEach(function(e, t) {
                 var n;
                 if (1 == e.type) {
-                  var a = b ? e.text.replace(/^[\t\r ]*\n/g, "") : e.text;
-                  m.AppendText(a, v), (b = !1);
+                  var a = g ? e.text.replace(/^[\t\r ]*\n/g, "") : e.text;
+                  u.AppendText(a, b), (g = !1);
                 } else if (2 == e.type) {
                   var r,
                     o,
-                    i = _.get(e.tag);
+                    i = h.get(e.tag);
                   i
-                    ? (void 0 === (r = p()) ||
-                        ((o = _.get(r.node.tag)) &&
+                    ? (void 0 === (r = c()) ||
+                        ((o = h.get(r.node.tag)) &&
                           o.autocloses &&
                           e.tag === r.node.tag &&
-                          d(h.pop(), r.node, t)),
-                      h.push({ accumulator: m, node: e }),
-                      (m = u.m_fnAccumulatorFactory(e)),
-                      (b = i.skipInternalNewline),
-                      (v =
+                          p(m.pop(), r.node, t)),
+                      m.push({
+                        accumulator: u,
+                        node: e,
+                        bWrapTextForCopying: b
+                      }),
+                      (u = d.m_fnAccumulatorFactory(e)),
+                      (g = i.skipInternalNewline),
+                      (b =
                         null !== (n = i.allowWrapTextForCopying) &&
                         void 0 !== n &&
                         n))
-                    : m.AppendText("[" + e.text + "]", 0 == h.length);
+                    : u.AppendText("[" + e.text + "]", 0 == m.length);
                 } else if (3 == e.type) {
                   for (
                     ;
-                    p() &&
-                    p().node.tag !== e.text &&
-                    _.get(p().node.tag) &&
-                    _.get(p().node.tag).autocloses;
+                    c() &&
+                    c().node.tag !== e.text &&
+                    h.get(c().node.tag) &&
+                    h.get(c().node.tag).autocloses;
 
                   ) {
-                    var s = h.pop();
-                    d(s, s.node, t);
+                    var s = m.pop();
+                    p(s, s.node, t);
                   }
-                  var l = h.pop();
-                  d(l, e, t);
+                  var l = m.pop();
+                  p(l, e, t);
                 }
               });
-              for (; 0 < h.length; )
+              for (; 0 < m.length; )
                 !(function() {
-                  var e = h.pop(),
+                  var e = m.pop(),
                     t = e.accumulator;
                   t.AppendText("[" + e.node.text + "]", !1),
-                    m.GetElements().forEach(function(e) {
+                    u.GetElements().forEach(function(e) {
                       return t.AppendNode(e);
                     }),
-                    (m = t);
+                    (u = t);
                 })();
-              var t = m.GetElements();
+              var t = u.GetElements();
               return 1 < t.length
-                ? E.createElement.apply(E, Object(f.g)([E.Fragment, null], t))
+                ? f.createElement.apply(f, Object(v.g)([f.Fragment, null], t))
                 : 1 == t.length
                 ? t[0]
                 : null;
