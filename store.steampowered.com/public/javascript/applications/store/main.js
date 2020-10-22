@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6158287";
+var CLSTAMP = "6159599";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [37],
   {
@@ -1161,19 +1161,20 @@ var CLSTAMP = "6158287";
     "1BdX": function(e, t, n) {
       "use strict";
       n.d(t, "a", function() {
-        return r;
+        return o;
       }),
         n.d(t, "b", function() {
-          return o;
+          return i;
         });
       var b = n("mrSG"),
+        r = n("2vnA"),
         _ = n("kLLr"),
         v = n("5izx"),
         g = n("6oCP"),
-        r = (function() {
+        o = (function() {
           function l() {
             (this.m_mapBroadcasterSteamIDToEvents = new Map()),
-              (this.m_mapBroadcasterSteamIDToPresenters = new Map());
+              (this.m_mapBroadcasterSteamIDData = new Map());
           }
           return (
             (l.GetBBCodeParam = function(e, t, n) {
@@ -1211,6 +1212,39 @@ var CLSTAMP = "6158287";
             (l.ParseEventModelPresenters = function(e, t) {
               var n = e.GetDescriptionWithFallback(t);
               return l.ParseCalendarEventPresentersFromText(n);
+            }),
+            (l.ParseEventAppReferencesFromText = function(e) {
+              for (
+                var t = /\/\/store\.steampowered\.com\/app\/(\d+)/gis,
+                  n = new Set();
+                ;
+
+              ) {
+                var r = t.exec(e);
+                if (null === r) break;
+                var o = r[1];
+                n.add(Number(o));
+              }
+              return n;
+            }),
+            (l.ParseEventModelAppReferences = function(e, t) {
+              var n,
+                r = e.GetDescriptionWithFallback(t),
+                o = l.ParseEventAppReferencesFromText(r);
+              if (
+                null !== (n = e.jsondata) &&
+                void 0 !== n &&
+                n.referenced_appids
+              )
+                for (
+                  var i = 0, a = e.jsondata.referenced_appids;
+                  i < a.length;
+                  i++
+                ) {
+                  var s = a[i];
+                  o.add(s);
+                }
+              return o;
             }),
             (l.prototype.BuildBroadcasterSteamIDToActiveEventMap = function(f) {
               return Object(b.b)(this, void 0, void 0, function() {
@@ -1286,17 +1320,32 @@ var CLSTAMP = "6158287";
                 n.has(t) || r.push(t);
               }),
                 r.forEach(function(e) {
-                  t.m_mapBroadcasterSteamIDToPresenters.delete(e),
+                  t.m_mapBroadcasterSteamIDData.delete(e),
                     t.m_mapBroadcasterSteamIDToEvents.delete(e);
                 });
+            }),
+            (l.BuildAppIDRefsForEventList = function(e, t) {
+              for (var n = new Set(), r = 0, o = e; r < o.length; r++) {
+                var i = o[r];
+                l.ParseEventModelAppReferences(i, t).forEach(function(e) {
+                  return n.add(e);
+                });
+              }
+              return Array.from(n);
             }),
             (l.prototype.UpdateCachedDataFromEvents = function(e, r) {
               var o = this;
               e.forEach(function(e, t) {
                 var n;
                 o.IsBroadcasterAlreadyBound(t, e) ||
-                  ((n = l.BuildSteamIDToPresenterMapFromEventList(e, r)),
-                  o.m_mapBroadcasterSteamIDToPresenters.set(t, n),
+                  ((n = {
+                    m_mapPresenters: l.BuildSteamIDToPresenterMapFromEventList(
+                      e,
+                      r
+                    ),
+                    m_rgAppIDs: l.BuildAppIDRefsForEventList(e, r)
+                  }),
+                  o.m_mapBroadcasterSteamIDData.set(t, n),
                   o.m_mapBroadcasterSteamIDToEvents.set(
                     t,
                     e.map(function(e) {
@@ -1327,12 +1376,29 @@ var CLSTAMP = "6158287";
               });
             }),
             (l.prototype.GetPresenterMapForBroadcasterSteamID = function(e) {
-              return this.m_mapBroadcasterSteamIDToPresenters.get(e);
+              var t;
+              return null === (t = this.m_mapBroadcasterSteamIDData.get(e)) ||
+                void 0 === t
+                ? void 0
+                : t.m_mapPresenters;
             }),
+            (l.prototype.GetAppIDListForBroadcasterSteamID = function(e) {
+              var t;
+              return null === (t = this.m_mapBroadcasterSteamIDData.get(e)) ||
+                void 0 === t
+                ? void 0
+                : t.m_rgAppIDs;
+            }),
+            Object(b.c)(
+              [r.C],
+              l.prototype,
+              "m_mapBroadcasterSteamIDData",
+              void 0
+            ),
             l
           );
         })(),
-        o = new r();
+        i = new o();
     },
     "1fPh": function(e, t, n) {
       "use strict";
@@ -6791,20 +6857,32 @@ var CLSTAMP = "6158287";
           if (e.bShowInLibrary)
             return B.createElement(
               "div",
-              { className: te.a.StoreSalePriceBox },
-              Object(H.f)("#EventDisplay_CallToAction_InLibrary")
+              { className: te.a.StoreSalePriceWidgetContainer },
+              B.createElement(
+                "div",
+                { className: te.a.StoreSalePriceBox },
+                Object(H.f)("#EventDisplay_CallToAction_InLibrary")
+              )
             );
           if (s)
             return B.createElement(
               "div",
-              { className: te.a.StoreSalePriceBox },
-              Object(H.f)("#EventDisplay_CallToAction_ComingSoon")
+              { className: te.a.StoreSalePriceWidgetContainer },
+              B.createElement(
+                "div",
+                { className: te.a.StoreSalePriceBox },
+                Object(H.f)("#EventDisplay_CallToAction_ComingSoon")
+              )
             );
           if (r)
             return B.createElement(
               "div",
-              { className: te.a.StoreSalePriceBox },
-              Object(H.f)("#EventDisplay_CallToAction_FreeToPlay")
+              { className: te.a.StoreSalePriceWidgetContainer },
+              B.createElement(
+                "div",
+                { className: te.a.StoreSalePriceBox },
+                Object(H.f)("#EventDisplay_CallToAction_FreeToPlay")
+              )
             );
           if (!a) return null;
           var l = o || c,
@@ -6814,7 +6892,7 @@ var CLSTAMP = "6158287";
             {
               className: Object(q.a)(
                 te.a.StoreSalePriceWidgetContainer,
-                o && te.a.Discounted
+                l && te.a.Discounted
               )
             },
             Boolean(p) &&
@@ -6829,7 +6907,7 @@ var CLSTAMP = "6158287";
                 { className: te.a.StoreSaleDiscountBox },
                 "-" + l + "%"
               ),
-            o && i
+            l && i
               ? B.createElement(
                   "div",
                   { className: te.a.StoreSaleDiscountedPriceCtn },
@@ -51757,26 +51835,28 @@ var CLSTAMP = "6158287";
             style: { backgroundImage: "url(" + r + ")" }
           });
         },
-        Se = function(o) {
-          var t = o.appCapsule,
-            e = o.bShowDemoButton,
-            i = _.useRef(null),
-            n = _.useState(!1),
-            r = n[0],
-            a = n[1];
-          _.useEffect(
-            function() {
-              return (
-                i.current && i.current(),
-                function() {
-                  i.current &&
-                    i.current("SaleAppWideDetailWithAction: unmounting");
-                }
-              );
-            },
-            [null == t ? void 0 : t.appid]
-          );
-          if (!t) return null;
+        Se = function(e) {
+          var t = e.appCapsule,
+            n = e.bShowDemoButton,
+            r = _.useRef(null),
+            o = _.useState(!1);
+          o[0], o[1];
+          if (
+            (_.useEffect(
+              function() {
+                return (
+                  r.current && r.current(),
+                  function() {
+                    r.current &&
+                      r.current("SaleAppWideDetailWithAction: unmounting");
+                  }
+                );
+              },
+              [null == t ? void 0 : t.appid]
+            ),
+            !t)
+          )
+            return null;
           return _.createElement(
             "div",
             { className: $.a.SaleAppWideCtn },
@@ -51827,39 +51907,8 @@ var CLSTAMP = "6158287";
                     { disabled: !0 },
                     Object(k.f)("#Sale_InLibrary")
                   )
-                : _.createElement(
-                    C.d,
-                    {
-                      onClick: function() {
-                        return Object(b.b)(void 0, void 0, void 0, function() {
-                          var t, n, r;
-                          return Object(b.e)(this, function(e) {
-                            switch (e.label) {
-                              case 0:
-                                return (
-                                  a(!1),
-                                  (t = o.appCapsule.appid),
-                                  (n = t && M.a.BIsGameWishlisted(t)),
-                                  (r = l.a.CancelToken.source()),
-                                  (i.current = r.cancel),
-                                  [4, M.a.UpdateGameWishlist(t, !n, r)]
-                                );
-                              case 1:
-                                return e.sent(), r.token.reason || a(!1), [2];
-                            }
-                          });
-                        });
-                      },
-                      disabled: r
-                    },
-                    Boolean(r) && _.createElement(W.a, { size: "small" }),
-                    Object(k.f)(
-                      M.a.BIsGameWishlisted(t.appid)
-                        ? "#Sale_Wishlisted"
-                        : "#Sale_AddToWishlist"
-                    )
-                  ),
-              e && _.createElement(H.b, { appLinkInfo: t })
+                : _.createElement(ae.i, { info: t }),
+              n && _.createElement(H.b, { appLinkInfo: t })
             )
           );
         },
