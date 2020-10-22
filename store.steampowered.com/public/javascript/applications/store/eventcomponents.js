@@ -14787,8 +14787,7 @@
                                 activeTab: l.GetTab(),
                                 onTabSelected: s.OnTabSelected
                               })
-                            ),
-                            ";"
+                            )
                           )),
                           (o = !1);
                         break;
