@@ -40459,12 +40459,33 @@
             (e.prototype.componentWillUnmount = function() {
               this.m_cancelSignal.cancel("unloading EventsSaleSectionEditor");
             }),
-            (e.prototype.AddEvent = function(e) {
+            (e.prototype.AddEventWithDuplicatePrompt = function(t) {
+              var e = this;
               (this.m_refInput.element.value = ""),
-                this.props.saleSection.events.push({
-                  announcement_gid: e.id,
-                  clan_steamid: e.clan_steamid
-                }),
+                this.props.saleSection.events ||
+                  (this.props.saleSection.events = []),
+                this.props.saleSection.events.some(function(e) {
+                  return e.announcement_gid == t.id;
+                })
+                  ? Object(Jt.d)(
+                      Fe.createElement(Ht.c, {
+                        strTitle: Object(H.f)("#Sale_DuplicateCapsule"),
+                        strDescription: Object(H.f)(
+                          "#Sale_DuplicateEVent_Desc"
+                        ),
+                        onOK: function() {
+                          return e.AddEvent(t);
+                        }
+                      }),
+                      window
+                    )
+                  : this.AddEvent(t);
+            }),
+            (e.prototype.AddEvent = function(e) {
+              this.props.saleSection.events.push({
+                announcement_gid: e.id,
+                clan_steamid: e.clan_steamid
+              }),
                 k.d.LoadPartnerEventFromAnnoucementGIDAndClanSteamID(
                   new j.a(e.clan_steamid),
                   e.id,
@@ -40488,7 +40509,7 @@
                       {
                         key: e.id,
                         onSelected: function() {
-                          return t.AddEvent(e);
+                          return t.AddEventWithDuplicatePrompt(e);
                         }
                       },
                       Fe.createElement(
@@ -40783,6 +40804,12 @@
                 })
               );
             }),
+            Object(U.c)(
+              [P.a],
+              e.prototype,
+              "AddEventWithDuplicatePrompt",
+              null
+            ),
             Object(U.c)([P.a], e.prototype, "AddEvent", null),
             Object(U.c)([P.a], e.prototype, "RemoveEvent", null),
             Object(U.c)([P.a], e.prototype, "UpdateEventSuggestions", null),
