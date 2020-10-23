@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6161132";
+var CLSTAMP = "6161884";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [37],
   {
@@ -2598,6 +2598,17 @@ var CLSTAMP = "6161132";
           }),
           (r.prototype.BHasBroadcastEnabled = function() {
             return this.jsondata.bBroadcastEnabled;
+          }),
+          (r.prototype.BEventCanShowBroadcastWidget = function(e) {
+            if (this.jsondata.bSaleEnabled) return this.BHasBroadcastEnabled();
+            var t = v.a.GetTimeNowWithOverride(),
+              n = this.endTime ? this.endTime : t + 3600;
+            return (
+              this.BHasBroadcastEnabled() &&
+              this.jsondata.broadcast_whitelist &&
+              0 < this.jsondata.broadcast_whitelist.length &&
+              (e || (this.startTime - 600 <= t && t < n))
+            );
           }),
           (r.prototype.BHasBroadcastForceBanner = function() {
             return this.jsondata.broadcast_force_banner;
@@ -26230,7 +26241,8 @@ var CLSTAMP = "6161132";
                 event: e,
                 emoticonStore: l.b,
                 partnerEventStore: s.a.Get(),
-                appStore: a.a
+                appStore: a.a,
+                bDisableBroadcastPlayer: !1
               })
             );
           }),
@@ -39440,13 +39452,13 @@ var CLSTAMP = "6161132";
     boaH: function(e, t, n) {
       "use strict";
       n.d(t, "b", function() {
-        return Q;
+        return X;
       }),
         n.d(t, "c", function() {
-          return te;
+          return $;
         }),
         n.d(t, "a", function() {
-          return pe;
+          return ce;
         });
       var y = n("mrSG"),
         r = n("vDqi"),
@@ -39456,15 +39468,13 @@ var CLSTAMP = "6161132";
         o = n("A5MU"),
         s = n("bxiW"),
         i = n("qD+2"),
-        a = n("nWbB"),
-        c = n("5eAM"),
-        u = (function(e) {
+        a = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
           return Object(y.d)(t, e), t;
         })(Error),
-        d = (function(n) {
+        c = (function(n) {
           function e(e) {
             var t = n.call(this) || this;
             return (t.m_appid = e || 0), t;
@@ -39476,7 +39486,7 @@ var CLSTAMP = "6161132";
             }),
             (e.prototype.parseColor = function(e) {
               if ("string" != typeof e || !e.match(/^#[0-9a-fA-F]{6}$/))
-                throw new u("expected color string");
+                throw new a("expected color string");
               return [
                 parseInt(e.substring(1, 3), 16),
                 parseInt(e.substring(3, 5), 16),
@@ -39485,20 +39495,20 @@ var CLSTAMP = "6161132";
             }),
             (e.prototype.parseString = function(e) {
               if ("string" == typeof e) return e;
-              throw new u("expected string");
+              throw new a("expected string");
             }),
             (e.prototype.parseNumber = function(e) {
               if ("number" == typeof e) return e;
-              throw new u("expected number");
+              throw new a("expected number");
             }),
             (e.prototype.parseDate = function(e) {
               if ("number" == typeof e) return new Date(e);
-              throw new u("expected timestamp");
+              throw new a("expected timestamp");
             }),
             (e.prototype.parseArray = function(e, t) {
               var n = [];
               if ("object" != typeof e || !Array.isArray(e))
-                throw new u("expected array");
+                throw new a("expected array");
               for (var r = e.length, o = 0; o < r; ++o)
                 try {
                   n.push(t(e[o]));
@@ -39511,7 +39521,7 @@ var CLSTAMP = "6161132";
             (e.prototype.parseDict = function(e, t) {
               var n = new Map();
               if ("object" != typeof e || Array.isArray(e))
-                throw new u("expected object");
+                throw new a("expected object");
               for (var r in e)
                 try {
                   n.set(r, t(e[r]));
@@ -39624,48 +39634,38 @@ var CLSTAMP = "6161132";
               }
               return t;
             }),
-            (e.prototype.UpdateSoundtrack = function(e, t) {
-              var n = this.parseSoundTrack(t),
-                r = a.a.Get().GetPlayReadyStream();
-              r &&
-                r.steamid == e &&
-                (n.song_title &&
-                  r.gamedata_subtitle != n.song_title &&
-                  (r.gamedata_subtitle = n.song_title),
-                r.appid != n.appid &&
-                  ((r.appid = n.appid), c.a.LoadAppLinkInfo([r.appid])));
-            }),
+            (e.prototype.UpdateSoundtrack = function(e, t) {}),
             e
           );
         })(o.b),
         R = n("qhbg"),
-        m = n("mgoM"),
-        h = n("Kw0F"),
+        u = n("mgoM"),
+        d = n("Kw0F"),
         O = n("r64O"),
-        f = n("qiKp"),
-        b = n("TLQK"),
-        _ = n("YyVH"),
-        v = n("CdLH"),
+        m = n("qiKp"),
+        h = n("TLQK"),
+        f = n("YyVH"),
+        b = n("CdLH"),
         G = n("lkRc"),
-        g = n("kLLr");
-      var M = (function() {
+        _ = n("kLLr");
+      var v = (function() {
           return function() {
             this.playback_speed = 1;
           };
         })(),
-        S = (function(e) {
+        g = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
           return Object(y.d)(t, e), t;
-        })(M),
-        E = (function(e) {
+        })(v),
+        M = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
           return Object(y.d)(t, e), t;
-        })(M),
-        C = (function() {
+        })(v),
+        S = (function() {
           function e() {
             (this.m_steamIDBroadcast = ""),
               (this.m_steamIDViewer = ""),
@@ -39677,8 +39677,8 @@ var CLSTAMP = "6161132";
               (this.m_strStatsLink = ""),
               (this.m_strStalledLink = ""),
               (this.m_strEventLogLink = ""),
-              (this.m_allTimeSnapshot = new w(0)),
-              (this.m_rgSnapShots = new Array(new w(0))),
+              (this.m_allTimeSnapshot = new E(0)),
+              (this.m_rgSnapShots = new Array(new E(0))),
               (this.m_videoResolution = 0),
               (this.m_audioRate = 0),
               (this.m_audioChannel = 0),
@@ -39701,7 +39701,7 @@ var CLSTAMP = "6161132";
               (this.m_nSegmentDurationMS = 0),
               (this.m_nPlaybackRate = 0),
               (this.m_nTimeToFirstFrameMS = -1),
-              (this.m_fpsMonitor = new B());
+              (this.m_fpsMonitor = new w());
           }
           return (
             (e.prototype.GetBytesReceivedToDisplay = function() {
@@ -39745,9 +39745,9 @@ var CLSTAMP = "6161132";
                   p +
                   (i.bValueIsInBytes ? "bytes" : "bits") +
                   (i.bValueIsRate ? "_PerSecond" : "");
-                return Object(b.f)(
+                return Object(h.f)(
                   u,
-                  o.toLocaleString(b.e.GetPreferredLocales(), {
+                  o.toLocaleString(h.e.GetPreferredLocales(), {
                     minimumFractionDigits: 0,
                     maximumFractionDigits: i.nDigitsAfterDecimal
                   })
@@ -39792,7 +39792,7 @@ var CLSTAMP = "6161132";
                 ? Object(R.d)(this.m_videoBufferedRanges.start(e)) +
                     " - " +
                     Object(R.d)(this.m_videoBufferedRanges.end(e))
-                : Object(b.f)("#DASHPlayerStats_VideoNoRangeInformation");
+                : Object(h.f)("#DASHPlayerStats_VideoNoRangeInformation");
             }),
             (e.prototype.GetBufferedAudioSegmentForDisplay = function(e) {
               return this.m_audioBufferedRanges &&
@@ -39800,7 +39800,7 @@ var CLSTAMP = "6161132";
                 ? Object(R.d)(this.m_audioBufferedRanges.start(e)) +
                     " - " +
                     Object(R.d)(this.m_audioBufferedRanges.end(e))
-                : Object(b.f)("#DASHPlayerStats_AudioNoRangeInformation");
+                : Object(h.f)("#DASHPlayerStats_AudioNoRangeInformation");
             }),
             (e.prototype.GetBandwidthStatsToDisplay = function() {
               if (this.m_rgSnapShots.length < 2)
@@ -39903,7 +39903,7 @@ var CLSTAMP = "6161132";
             (e.prototype.GetCurrentFPSForDisplay = function() {
               return this.m_fpsMonitor.BHasCurrentFPS()
                 ? this.m_fpsMonitor.GetCurrentFPS().toFixed(1)
-                : Object(b.f)("#DASHPlayerStats_Tracking");
+                : Object(h.f)("#DASHPlayerStats_Tracking");
             }),
             (e.prototype.GetPlaybackRateForDisplay = function() {
               return this.m_nPlaybackRate.toFixed(1) + "x";
@@ -40014,7 +40014,7 @@ var CLSTAMP = "6161132";
                     (this.m_rgSnapShots[
                       this.m_rgSnapShots.length - 1
                     ].m_nStallEvents += 1);
-                  var r = new E();
+                  var r = new M();
                   this.GatherCommonStats(
                     r,
                     t,
@@ -40142,7 +40142,7 @@ var CLSTAMP = "6161132";
                     .m_nBytesReceived
                   ? (this.LogFrameInfo(n),
                     this.LogBufferDuration(e, t),
-                    (r = new S()),
+                    (r = new g()),
                     (o = this.m_rgSnapShots[this.m_rgSnapShots.length - 1]),
                     (r.frames_decoded = o.m_nFramesDecoded),
                     (r.frames_dropped = o.m_nFramesDropped),
@@ -40206,7 +40206,7 @@ var CLSTAMP = "6161132";
             }),
             (e.prototype.CreateNewEmptySnapshot = function(e) {
               5 <= this.m_rgSnapShots.length && this.m_rgSnapShots.shift(),
-                this.m_rgSnapShots.push(new w(e));
+                this.m_rgSnapShots.push(new E(e));
             }),
             (e.prototype.GatherCommonStats = function(e, t, n, r) {
               (e.steamid = this.m_steamIDViewer),
@@ -40218,7 +40218,7 @@ var CLSTAMP = "6161132";
                 (e.bw_required = n),
                 (e.bw_avg = Math.round(r)),
                 (e.broadcast_accountid = this.m_steamIDBroadcast
-                  ? new g.a(this.m_steamIDBroadcast).GetAccountID()
+                  ? new _.a(this.m_steamIDBroadcast).GetAccountID()
                   : 0),
                 (e.useragent = window.navigator.userAgent),
                 (e.sessionid = G.c.SESSIONID),
@@ -40263,7 +40263,7 @@ var CLSTAMP = "6161132";
             e
           );
         })(),
-        w = (function() {
+        E = (function() {
           function e(e) {
             (this.m_timeMS = Date.now()),
               (this.m_nBytesReceived = 0),
@@ -40353,7 +40353,7 @@ var CLSTAMP = "6161132";
             e
           );
         })(),
-        L = (function() {
+        C = (function() {
           function e() {}
           return (
             (e.prototype.reset = function(e, t) {
@@ -40362,14 +40362,14 @@ var CLSTAMP = "6161132";
             e
           );
         })(),
-        B = (function() {
+        w = (function() {
           function e() {
             (this.k_nTestFrequencyMS = 1e3),
               (this.k_nSlidingWindow = 6),
               (this.k_nDroppedFramesThreshold = 1),
               (this.k_nFailThreshold = 3),
               (this.k_nIgnoreReadingAroundResizeMS = 2e3),
-              (this.m_schTracker = new f.b()),
+              (this.m_schTracker = new m.b()),
               (this.m_rgResultsWindow = []),
               (this.m_nLastResizeMS = 0),
               (this.m_bDroppingFrameDetected = !1),
@@ -40444,7 +40444,7 @@ var CLSTAMP = "6161132";
               var n =
                 this.m_rgResultsWindow.length >= this.k_nSlidingWindow
                   ? this.m_rgResultsWindow.shift()
-                  : new L();
+                  : new C();
               n.reset(e, t), this.m_rgResultsWindow.push(n);
             }),
             Object(y.c)([l.C], e.prototype, "m_bDroppingFrameDetected", void 0),
@@ -40496,7 +40496,7 @@ var CLSTAMP = "6161132";
           n.toString()
         ));
       }
-      function T(e) {
+      function L(e) {
         return (
           0 == e.rgRoles.length ||
           0 <=
@@ -40505,20 +40505,20 @@ var CLSTAMP = "6161132";
             })
         );
       }
-      function I(e) {
+      function B(e) {
         return e
           ? 1e3 == e.segmentTemplate.nTimeScale
             ? e.segmentTemplate.nDuration
             : (e.segmentTemplate.nDuration / e.segmentTemplate.nTimeScale) * 1e3
           : 0;
       }
-      function D(e, t) {
-        var n = I(e);
+      function T(e, t) {
+        var n = B(e);
         return Math.floor(t / n) + 1;
       }
-      var N,
-        z,
-        j = (function() {
+      var I,
+        D,
+        N = (function() {
           function e() {
             (this.m_nMinBufferTime = 0),
               (this.m_dtAvailabilityStartTime = null),
@@ -40927,12 +40927,12 @@ var CLSTAMP = "6161132";
             e
           );
         })();
-      ((z = N = N || {})[(z.None = 0)] = "None"),
-        (z[(z.Append = 1)] = "Append"),
-        (z[(z.Remove = 2)] = "Remove");
-      var k,
-        V,
-        X = (function() {
+      ((D = I = I || {})[(D.None = 0)] = "None"),
+        (D[(D.Append = 1)] = "Append"),
+        (D[(D.Remove = 2)] = "Remove");
+      var z,
+        j,
+        k = (function() {
           function e(e, t, n, r) {
             (this.m_callbacks = null),
               (this.m_mpd = null),
@@ -40941,16 +40941,16 @@ var CLSTAMP = "6161132";
               (this.m_sourceBuffer = null),
               (this.m_nTrackBufferMS = 0),
               (this.m_representation = null),
-              (this.m_eBufferUpdate = N.None),
+              (this.m_eBufferUpdate = I.None),
               (this.m_rgBufferedSegments = []),
               (this.m_bNeedInitSegment = !0),
               (this.m_nNextSegment = 0),
               (this.m_bRemoveBufferState = !1),
               (this.m_bSeekInProgress = !1),
               (this.m_tsLastBufferRemove = 0),
-              (this.m_schNextDownload = new f.b()),
+              (this.m_schNextDownload = new m.b()),
               (this.m_xhrDownload = null),
-              (this.m_listeners = new f.c()),
+              (this.m_listeners = new m.c()),
               (this.m_rgDownloadLog = []),
               (this.m_nCurDownloadProgress = 0),
               (this.m_nCurDownloadBitrate = 0),
@@ -41025,7 +41025,7 @@ var CLSTAMP = "6161132";
             (e.prototype.GetMaxSegment = function() {
               if (this.m_mpd.IsLiveContent()) return Number.MAX_VALUE;
               var e = this.m_mpd.GetEndTime();
-              return D(this.m_adaptation, 1e3 * e) - 1;
+              return T(this.m_adaptation, 1e3 * e) - 1;
             }),
             (e.prototype.GetAmountBufferedInPlayerMS = function(e) {
               if (!this.m_sourceBuffer) return 0;
@@ -41094,7 +41094,7 @@ var CLSTAMP = "6161132";
               this.m_listeners.Unregister(),
                 (this.m_sourceBuffer = null),
                 this.ForceStopDownloads(),
-                (this.m_eBufferUpdate = N.None),
+                (this.m_eBufferUpdate = I.None),
                 (this.m_bRemoveBufferState = !1),
                 (this.m_callbacks = null),
                 (this.m_mpd = null),
@@ -41136,10 +41136,10 @@ var CLSTAMP = "6161132";
                   "]"
               );
               var r = this.m_eBufferUpdate;
-              (this.m_eBufferUpdate = N.None),
-                r == N.Append && this.m_callbacks.OnSegmentDownloaded(this),
+              (this.m_eBufferUpdate = I.None),
+                r == I.Append && this.m_callbacks.OnSegmentDownloaded(this),
                 this.m_bSeekInProgress &&
-                  r == N.Remove &&
+                  r == I.Remove &&
                   !this.m_bRemoveBufferState &&
                   this.ContinueSeek(),
                 this.UpdateBuffer();
@@ -41171,7 +41171,7 @@ var CLSTAMP = "6161132";
                   t = this.m_callbacks.GetPlaybackRate(),
                   n = (function(e, t, n) {
                     if (!e.IsLiveContent()) return 0;
-                    var r = I(t);
+                    var r = B(t);
                     return (
                       (n - t.segmentTemplate.nStartNumber) * r -
                       e.GetDurationSinceStarted()
@@ -41197,7 +41197,7 @@ var CLSTAMP = "6161132";
                     ),
                     void this.DownloadNextSegment()
                   );
-                var o = 1.1 * I(this.m_adaptation),
+                var o = 1.1 * B(this.m_adaptation),
                   i = this.GetAmountBufferedInPlayerMS(
                     this.m_callbacks.GetCurrentPlayTime()
                   );
@@ -41241,7 +41241,7 @@ var CLSTAMP = "6161132";
                   (n = this.m_representation),
                   (r = this.m_nNextSegment),
                   (s = H(e + t.segmentTemplate.strMedia, n.strID, r)),
-                  (c = I(this.m_adaptation)),
+                  (c = B(this.m_adaptation)),
                   this.m_nNextSegment++;
               }
               this.DownloadSegment(this.m_representation.strID, s, c);
@@ -41410,18 +41410,18 @@ var CLSTAMP = "6161132";
             }),
             (e.prototype.TrimGameDataIfNecessary = function() {}),
             (e.prototype.UpdateBuffer = function() {
-              if (this.m_eBufferUpdate == N.None)
+              if (this.m_eBufferUpdate == I.None)
                 if (this.m_bRemoveBufferState) this.RemoveAllBuffers();
                 else if (this.m_sourceBuffer)
                   if (0 < this.m_rgBufferedSegments.length)
                     try {
-                      this.m_eBufferUpdate = N.Append;
+                      this.m_eBufferUpdate = I.Append;
                       var e = this.m_rgBufferedSegments[0];
                       this.m_sourceBuffer.appendBuffer(e.data),
                         this.m_rgBufferedSegments.splice(0, 1);
                     } catch (e) {
                       "QuotaExceededError" === e.name
-                        ? ((this.m_eBufferUpdate = N.None),
+                        ? ((this.m_eBufferUpdate = I.None),
                           Object(R.c)(
                             this.GetDebugName() + " Buffer - QuotaExceededError"
                           ))
@@ -41442,7 +41442,7 @@ var CLSTAMP = "6161132";
                         var o = Math.min(this.GetBufferedEnd(), r);
                         return void (
                           o != n &&
-                          ((this.m_eBufferUpdate = N.Remove),
+                          ((this.m_eBufferUpdate = I.Remove),
                           this.m_sourceBuffer.remove(n, o),
                           (this.m_tsLastBufferRemove = t))
                         );
@@ -41462,7 +41462,7 @@ var CLSTAMP = "6161132";
                 )
                   e < t.end(n) && (e = t.end(n));
               (this.m_bRemoveBufferState = !1),
-                (this.m_eBufferUpdate = N.Remove),
+                (this.m_eBufferUpdate = I.Remove),
                 0 != e
                   ? this.m_sourceBuffer.remove(0, e + 1)
                   : this.OnSourceBufferUpdateEnd(null);
@@ -41504,7 +41504,7 @@ var CLSTAMP = "6161132";
                 this.m_bSeekInProgress || r || this.m_bNeedInitSegment)
               ) {
                 (this.m_bSeekInProgress = !0), this.ForceStopDownloads();
-                var o = D(this.m_adaptation, 1e3 * e);
+                var o = T(this.m_adaptation, 1e3 * e);
                 if (
                   ((this.m_nNextSegment = Math.min(o, this.GetMaxSegment())),
                   Object(R.c)(
@@ -41512,7 +41512,7 @@ var CLSTAMP = "6161132";
                       this.m_nNextSegment +
                       " at approx. " +
                       Object(R.d)(
-                        ((this.m_nNextSegment - 1) * I(this.m_adaptation)) / 1e3
+                        ((this.m_nNextSegment - 1) * B(this.m_adaptation)) / 1e3
                       ) +
                       " seconds."
                   ),
@@ -41528,7 +41528,7 @@ var CLSTAMP = "6161132";
             }),
             (e.prototype.ContinueSeek = function() {
               this.m_bSeekInProgress &&
-                (this.m_eBufferUpdate == N.Remove ||
+                (this.m_eBufferUpdate == I.Remove ||
                   this.m_bRemoveBufferState ||
                   ((this.m_bSeekInProgress = !1), this.ScheduleNextDownload()));
             }),
@@ -41584,19 +41584,19 @@ var CLSTAMP = "6161132";
             e
           );
         })();
-      ((V = k = k || {})[(V.HAVE_NOTHING = 0)] = "HAVE_NOTHING"),
-        (V[(V.HAVE_METADATA = 1)] = "HAVE_METADATA"),
-        (V[(V.HAVE_CURRENT_DATA = 2)] = "HAVE_CURRENT_DATA"),
-        (V[(V.HAVE_FUTURE_DATA = 3)] = "HAVE_FUTURE_DATA"),
-        (V[(V.HAVE_ENOUGH_DATA = 4)] = "HAVE_ENOUGH_DATA");
-      var Y = (function() {
+      ((j = z = z || {})[(j.HAVE_NOTHING = 0)] = "HAVE_NOTHING"),
+        (j[(j.HAVE_METADATA = 1)] = "HAVE_METADATA"),
+        (j[(j.HAVE_CURRENT_DATA = 2)] = "HAVE_CURRENT_DATA"),
+        (j[(j.HAVE_FUTURE_DATA = 3)] = "HAVE_FUTURE_DATA"),
+        (j[(j.HAVE_ENOUGH_DATA = 4)] = "HAVE_ENOUGH_DATA");
+      var V = (function() {
         function e(e, t) {
           void 0 === t && (t = !1),
             (this.m_elVideo = null),
             (this.m_strMPD = ""),
             (this.m_strHLS = ""),
             (this.m_strCDNAuthURLParameters = null),
-            (this.m_schUpdateMPD = new f.b()),
+            (this.m_schUpdateMPD = new m.b()),
             (this.m_bUseHLSManifest = !1),
             (this.m_strVideoAdaptationID = ""),
             (this.m_strAudioAdaptationID = ""),
@@ -41607,24 +41607,24 @@ var CLSTAMP = "6161132";
             (this.m_nLimitFPS = 0),
             (this.m_bIsBuffering = !0),
             (this.m_nSeekingToTime = -1),
-            (this.m_listeners = new f.c()),
+            (this.m_listeners = new m.c()),
             (this.m_bFirstPlay = !0),
-            (this.m_schGameDataEventTrigger = new f.b()),
-            (this.m_schReportPlayerTrigger = new f.b()),
+            (this.m_schGameDataEventTrigger = new m.b()),
+            (this.m_schReportPlayerTrigger = new m.b()),
             (this.m_nGameDataLastFramePTS = -1),
             (this.m_bStatsViewVisible = !1),
-            (this.m_schCaptureDisplayStatsTrigger = new f.b()),
+            (this.m_schCaptureDisplayStatsTrigger = new m.b()),
             (this.m_videoRepSelected = null),
             (this.m_nAudioRepresentationIndex = 0),
             (this.m_timedTextRepSelected = null),
-            (this.m_stats = new C()),
+            (this.m_stats = new S()),
             (this.m_bClosing = !1),
             (this.m_hlsTimeOffset = 0),
             (this.m_bUserPlayChoice = !0),
             (this.m_bUserLiveEdgeChoice = !0),
-            (this.m_schFirstFrameThrottler = new f.b()),
+            (this.m_schFirstFrameThrottler = new m.b()),
             (this.m_bookMarkAdapter = null),
-            (this.m_schBookmarkUpdater = new f.b()),
+            (this.m_schBookmarkUpdater = new m.b()),
             (this.m_elVideo = e),
             this.m_schReportPlayerTrigger.Schedule(3e4, this.ReportPlayerStats),
             (this.m_bUseHLSManifest = t);
@@ -41651,7 +41651,7 @@ var CLSTAMP = "6161132";
                     );
                   case 1:
                     return (t = e.sent())
-                      ? ((this.m_mpd = new j()),
+                      ? ((this.m_mpd = new N()),
                         this.m_mpd.BParse(t.data)
                           ? (this.IsLiveContent() &&
                               (0 < this.m_mpd.GetMinimumUpdatePeriod() &&
@@ -41676,7 +41676,7 @@ var CLSTAMP = "6161132";
                                 ))
                               : this.BCreateLoaders()
                               ? (this.m_stats.SetSegmentDurationMS(
-                                  I(this.GetCurrentVideoAdaptation())
+                                  B(this.GetCurrentVideoAdaptation())
                                 ),
                                 this.m_stats.SetAnalyticLinks(
                                   this.m_mpd.GetStatsLink(),
@@ -41710,18 +41710,18 @@ var CLSTAMP = "6161132";
               o = !0;
             this.m_mpd.GetTimedTextAdaptionSet(0).forEach(function(e) {
               var t,
-                n = Object(m.g)(G.c.LANGUAGE);
+                n = Object(u.g)(G.c.LANGUAGE);
               0 < e.rgRepresentations.length &&
                 e.rgRepresentations[0].strClosedCaptionFile &&
-                b.d[e.strLanguage] &&
+                h.d[e.strLanguage] &&
                 (((t = document.createElement("track")).kind = "subtitles"),
-                (t.label = Object(b.f)(
-                  "#Language_" + Object(m.e)(b.d[e.strLanguage])
+                (t.label = Object(h.f)(
+                  "#Language_" + Object(u.e)(h.d[e.strLanguage])
                 )),
                 (t.srclang = e.strLanguage),
                 (t.src = e.rgRepresentations[0].strClosedCaptionFile),
                 0 != n &&
-                  b.d[e.strLanguage] == n &&
+                  h.d[e.strLanguage] == n &&
                   ((t.default = !0),
                   (r.m_timedTextRepSelected = e.rgRepresentations[0]),
                   (o = !1)),
@@ -41744,7 +41744,7 @@ var CLSTAMP = "6161132";
               !(function(e) {
                 var t,
                   n = i.m_elVideo.textTracks[e];
-                b.d[n.language] == r
+                h.d[n.language] == r
                   ? ((t = i.GetTimeTextAdaptions(0).filter(function(e) {
                       return e.strLanguage == n.language;
                     })) &&
@@ -41869,7 +41869,7 @@ var CLSTAMP = "6161132";
                       : (Object(R.c)(
                           "Failed to download, will retry: " + this.m_strMPD
                         ),
-                        [4, Object(v.f)(200)]);
+                        [4, Object(b.f)(200)]);
                   case 6:
                     return e.sent(), [3, 1];
                   case 7:
@@ -41932,17 +41932,17 @@ var CLSTAMP = "6161132";
                 a = null;
               !this.m_strVideoAdaptationID &&
                 i.bContainsVideo &&
-                T(i) &&
+                L(i) &&
                 ((a = i), (this.m_strVideoAdaptationID = i.strID)),
                 !this.m_strAudioAdaptationID &&
                   i.bContainsAudio &&
-                  T(i) &&
+                  L(i) &&
                   ((a = i), (this.m_strAudioAdaptationID = i.strID)),
                 !this.m_strGameAdaptationID &&
                   i.bContainsGame &&
                   ((a = i), (this.m_strGameAdaptationID = i.strID)),
                 a &&
-                  ((o = new X(this, this.m_mpd, a, this.m_stats)),
+                  ((o = new k(this, this.m_mpd, a, this.m_stats)),
                   this.m_rgLoaders.push(o));
             }
             return 0 < this.m_strVideoAdaptationID.length;
@@ -42213,7 +42213,7 @@ var CLSTAMP = "6161132";
               ? ((e = Math.floor(this.m_mpd.GetDurationSinceStarted() / 1e3)),
                 (t = this.GetBufferedLiveEdgeTime()),
                 (n = this.m_mpd.GetTimeShiftBufferDepth()),
-                _.a(e - n + 10, 0, t))
+                f.a(e - n + 10, 0, t))
               : this.m_mpd.GetStartTime();
           }),
           (e.prototype.GetBufferedLiveEdgeTime = function() {
@@ -42311,7 +42311,7 @@ var CLSTAMP = "6161132";
             this.m_bIsBuffering && e.GetNumConsecutiveDownloadGones() <= 3
               ? this.Seek(
                   this.GetCurrentPlayTime() +
-                    I(this.GetCurrentVideoAdaptation()) / 1e3
+                    B(this.GetCurrentVideoAdaptation()) / 1e3
                 )
               : (Object(R.c)(
                   "OnSegmentDownloadGone: too many consecutive 'gone', erroring the download: " +
@@ -42362,7 +42362,7 @@ var CLSTAMP = "6161132";
               n = 0;
             if (
               (this.IsLiveContent()
-                ? ((a = I(this.GetCurrentVideoAdaptation())),
+                ? ((a = B(this.GetCurrentVideoAdaptation())),
                   (e = 1e3 * this.m_mpd.GetMinBufferTime()),
                   (t = Math.max(a, e)),
                   this.SetTrackBufferMS(t),
@@ -42401,7 +42401,7 @@ var CLSTAMP = "6161132";
                   c = i[o];
                 c.ContainsVideo()
                   ? (c.ChangeRepresentation(r),
-                    (a = I(c.GetAdaptation())),
+                    (a = B(c.GetAdaptation())),
                     this.m_schFirstFrameThrottler.Schedule(
                       a / 2,
                       this.VerifyFirstSegementDownloadProgress
@@ -42539,7 +42539,7 @@ var CLSTAMP = "6161132";
             if (!this.m_mpd) return 0;
             var t = this.GetAvailableVideoStartTime(),
               n = this.GetBufferedLiveEdgeTime();
-            (e = _.a(e, t, n)), (this.m_bUserLiveEdgeChoice = n - 5 <= e);
+            (e = f.a(e, t, n)), (this.m_bUserLiveEdgeChoice = n - 5 <= e);
             var r = this.m_elVideo.paused;
             if ((r || this.m_elVideo.pause(), this.m_bUseHLSManifest))
               (this.m_elVideo.currentTime = e - this.m_hlsTimeOffset),
@@ -42606,7 +42606,7 @@ var CLSTAMP = "6161132";
             this.m_elVideo.muted = e;
           }),
           (e.prototype.SetVolume = function(e) {
-            (e = _.a(e, 0, 1)), (this.m_elVideo.volume = e);
+            (e = f.a(e, 0, 1)), (this.m_elVideo.volume = e);
           }),
           (e.prototype.GetVolume = function() {
             return this.m_elVideo.volume;
@@ -42765,18 +42765,18 @@ var CLSTAMP = "6161132";
           e
         );
       })();
-      var Q,
-        K,
-        J = (function() {
+      var X,
+        Y,
+        Q = (function() {
           function e(e) {
             (this.m_elVideo = null),
               (this.m_peerConnection = null),
-              (this.m_schCandidateTimer = new f.b()),
-              (this.m_listeners = new f.c()),
+              (this.m_schCandidateTimer = new m.b()),
+              (this.m_listeners = new m.c()),
               (this.m_bFirstPlay = !0),
               (this.m_bStatsViewVisible = !1),
-              (this.m_schCaptureDisplayStatsTrigger = new f.b()),
-              (this.m_stats = new C()),
+              (this.m_schCaptureDisplayStatsTrigger = new m.b()),
+              (this.m_stats = new S()),
               (this.m_elVideo = e);
           }
           return (
@@ -43119,7 +43119,7 @@ var CLSTAMP = "6161132";
               this.m_elVideo.muted = e;
             }),
             (e.prototype.SetVolume = function(e) {
-              (e = _.a(e, 0, 1)), (this.m_elVideo.volume = e);
+              (e = f.a(e, 0, 1)), (this.m_elVideo.volume = e);
             }),
             (e.prototype.GetVolume = function() {
               return this.m_elVideo.volume;
@@ -43182,34 +43182,34 @@ var CLSTAMP = "6161132";
             e
           );
         })(),
-        Z = n("bDQf"),
-        $ = n("TQQK"),
-        ee = n("0tYJ");
-      ((K = Q = Q || {})[(K.None = 0)] = "None"),
-        (K[(K.Loading = 1)] = "Loading"),
-        (K[(K.Ready = 2)] = "Ready"),
-        (K[(K.Error = 3)] = "Error");
-      var te,
-        ne,
-        re = (function() {
+        K = n("bDQf"),
+        J = n("TQQK"),
+        Z = n("0tYJ");
+      ((Y = X = X || {})[(Y.None = 0)] = "None"),
+        (Y[(Y.Loading = 1)] = "Loading"),
+        (Y[(Y.Ready = 2)] = "Ready"),
+        (Y[(Y.Error = 3)] = "Error");
+      var $,
+        ee,
+        te = (function() {
           function e() {
             (this.m_steamIDBroadcast = ""),
               (this.m_ulBroadcastID = ""),
               (this.m_ulViewerToken = ""),
               (this.m_strCDNAuthUrlParameters = void 0),
               (this.m_bWebRTC = !1),
-              (this.m_eWatchState = Q.None),
+              (this.m_eWatchState = X.None),
               (this.m_strStateDescription = ""),
               (this.m_rgVideos = []),
-              (this.m_schManifestTimeout = new f.b()),
-              (this.m_schHeartbeatTimeout = new f.b());
+              (this.m_schManifestTimeout = new m.b()),
+              (this.m_schHeartbeatTimeout = new m.b());
           }
           return (
             (e.prototype.SetState = function(e, t) {
               void 0 === t && (t = ""),
                 (this.m_eWatchState = e),
                 (this.m_strStateDescription = t),
-                e == Q.Error && console.log(this.m_strStateDescription);
+                e == X.Error && console.log(this.m_strStateDescription);
             }),
             Object(y.c)([l.C], e.prototype, "m_ulBroadcastID", void 0),
             Object(y.c)([l.C], e.prototype, "m_eWatchState", void 0),
@@ -43218,7 +43218,7 @@ var CLSTAMP = "6161132";
             e
           );
         })(),
-        oe = (function() {
+        ne = (function() {
           function e(e) {
             (this.m_steamIDBroadcast = ""),
               (this.m_strTitle = ""),
@@ -43227,7 +43227,7 @@ var CLSTAMP = "6161132";
               (this.m_strThumbnailUrl = ""),
               (this.m_nViewerCount = 0),
               (this.m_bIsOnline = !1),
-              (this.m_schUpdateTimeout = new f.b()),
+              (this.m_schUpdateTimeout = new m.b()),
               (this.m_nRefCount = 0),
               (this.m_steamIDBroadcast = e);
           }
@@ -43241,9 +43241,9 @@ var CLSTAMP = "6161132";
             e
           );
         })(),
-        ie = (function() {
+        re = (function() {
           function e() {
-            (this.m_eWatchState = Q.None),
+            (this.m_eWatchState = X.None),
               (this.m_strStateDescription = ""),
               (this.m_rgVideos = []);
           }
@@ -43252,7 +43252,7 @@ var CLSTAMP = "6161132";
               void 0 === t && (t = ""),
                 (this.m_eWatchState = e),
                 (this.m_strStateDescription = t),
-                e == Q.Error && console.log(this.m_strStateDescription);
+                e == X.Error && console.log(this.m_strStateDescription);
             }),
             Object(y.c)([l.C], e.prototype, "m_eWatchState", void 0),
             Object(y.c)([l.C], e.prototype, "m_strStateDescription", void 0),
@@ -43260,19 +43260,19 @@ var CLSTAMP = "6161132";
             e
           );
         })(),
-        ae = (function(e) {
+        oe = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
           return Object(y.d)(t, e), t;
-        })(ie),
-        se = (function(e) {
+        })(re),
+        ie = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
           return Object(y.d)(t, e), t;
-        })(ie),
-        ce = (function() {
+        })(re),
+        ae = (function() {
           function e() {
             (this.m_mapBroadcasts = new Map()),
               (this.m_mapClips = new Map()),
@@ -43283,7 +43283,7 @@ var CLSTAMP = "6161132";
                 bMuted: !1,
                 ulViewerToken: "0"
               }),
-              (this.m_schSaveSettings = new f.b()),
+              (this.m_schSaveSettings = new m.b()),
               (this.m_broadcastInfos = {}),
               this.LoadBroadcastSettings();
           }
@@ -43291,14 +43291,14 @@ var CLSTAMP = "6161132";
             (e.prototype.GetBroadcastState = function(e) {
               if (e.IsBroadcastClip()) {
                 var t = this.m_mapClips.get(e.GetBroadcastClipID());
-                return t ? t.m_eWatchState : Q.None;
+                return t ? t.m_eWatchState : X.None;
               }
               if (e.IsBroadcastVOD()) {
                 var n = this.m_mapVODs.get(e.GetBroadcastAppIDVOD());
-                return n ? n.m_eWatchState : Q.None;
+                return n ? n.m_eWatchState : X.None;
               }
               var r = this.m_mapBroadcasts.get(e.GetBroadcastSteamID());
-              return r ? r.m_eWatchState : Q.None;
+              return r ? r.m_eWatchState : X.None;
             }),
             (e.prototype.GetBroadcastStateDescription = function(e) {
               if (e.IsBroadcastClip()) {
@@ -43317,7 +43317,7 @@ var CLSTAMP = "6161132";
                 i = this.m_broadcastSettings,
                 a = i.nVolume,
                 s = i.bMuted,
-                c = new le(e, a, s, n);
+                c = new se(e, a, s, n);
               return (
                 c.SetBroadcastSteamID(t),
                 o.m_rgVideos.push(c),
@@ -43325,8 +43325,8 @@ var CLSTAMP = "6161132";
                 Object(R.a)() ||
                   Object(R.b)() ||
                   o.SetState(
-                    Q.Error,
-                    Object(b.f)("#BroadcastWatch_MinBrowser")
+                    X.Error,
+                    Object(h.f)("#BroadcastWatch_MinBrowser")
                   ),
                 c
               );
@@ -43336,15 +43336,15 @@ var CLSTAMP = "6161132";
                 o = this.m_broadcastSettings,
                 i = o.nVolume,
                 a = o.bMuted,
-                s = new le(e, i, a, n);
+                s = new se(e, i, a, n);
               return (
                 s.SetBroadcastClipID(t),
                 r.m_rgVideos.push(s),
                 Object(R.a)() ||
                   Object(R.b)() ||
                   r.SetState(
-                    Q.Error,
-                    Object(b.f)("#BroadcastWatch_MinBrowser")
+                    X.Error,
+                    Object(h.f)("#BroadcastWatch_MinBrowser")
                   ),
                 s
               );
@@ -43354,15 +43354,15 @@ var CLSTAMP = "6161132";
                 o = this.m_broadcastSettings,
                 i = o.nVolume,
                 a = o.bMuted,
-                s = new le(e, i, a, n);
+                s = new se(e, i, a, n);
               return (
                 s.SetBroadcastAppIDVOD(t),
                 r.m_rgVideos.push(s),
                 Object(R.a)() ||
                   Object(R.b)() ||
                   r.SetState(
-                    Q.Error,
-                    Object(b.f)("#BroadcastWatch_MinBrowser")
+                    X.Error,
+                    Object(h.f)("#BroadcastWatch_MinBrowser")
                   ),
                 s
               );
@@ -43373,24 +43373,24 @@ var CLSTAMP = "6161132";
                 var t = this.m_mapClips.get(e.GetBroadcastClipID());
                 if (!t) return;
                 this.SetActiveVideo(e),
-                  t.m_eWatchState == Q.None
+                  t.m_eWatchState == X.None
                     ? this.GetClipManifest(t, e.GetWatchLocation())
-                    : t.m_eWatchState == Q.Ready && e.StartClip(t);
+                    : t.m_eWatchState == X.Ready && e.StartClip(t);
               } else if (e.IsBroadcastVOD()) {
                 console.log("Starting VOD for " + e.GetBroadcastAppIDVOD());
                 var n = this.m_mapVODs.get(e.GetBroadcastAppIDVOD());
                 if (!n) return;
                 this.SetActiveVideo(e),
-                  n.m_eWatchState == Q.None
+                  n.m_eWatchState == X.None
                     ? this.GetVODManifest(n, e.GetWatchLocation())
-                    : n.m_eWatchState == Q.Ready && e.StartVOD(n);
+                    : n.m_eWatchState == X.Ready && e.StartVOD(n);
               } else {
                 var r = this.m_mapBroadcasts.get(e.GetBroadcastSteamID());
                 if (!r) return;
                 this.SetActiveVideo(e),
-                  r.m_eWatchState == Q.None
+                  r.m_eWatchState == X.None
                     ? this.GetBroadcastManifest(r, e.GetWatchLocation())
-                    : r.m_eWatchState == Q.Ready && e.StartBroadcast(r);
+                    : r.m_eWatchState == X.Ready && e.StartBroadcast(r);
               }
             }),
             (e.prototype.SetActiveVideo = function(o) {
@@ -43462,7 +43462,7 @@ var CLSTAMP = "6161132";
                           n.m_ulBroadcastID,
                           this.m_broadcastSettings.ulViewerToken
                         ),
-                      h.d(n.m_rgVideos, function(e) {
+                      d.d(n.m_rgVideos, function(e) {
                         return e == r;
                       }),
                       this.RemoveBroadcastIfUnused(n)),
@@ -43489,7 +43489,7 @@ var CLSTAMP = "6161132";
               var t;
               return (
                 this.m_broadcastInfos[e] ||
-                  ((t = Object(l.C)(new oe(e))),
+                  ((t = Object(l.C)(new ne(e))),
                   (this.m_broadcastInfos[e] = t)),
                 this.m_broadcastInfos[e]
               );
@@ -43498,8 +43498,8 @@ var CLSTAMP = "6161132";
               var t = this.m_mapBroadcasts.get(e);
               return (
                 t ||
-                (((t = new re()).m_steamIDBroadcast = e),
-                (t.m_eWatchState = Q.None),
+                (((t = new te()).m_steamIDBroadcast = e),
+                (t.m_eWatchState = X.None),
                 this.m_mapBroadcasts.set(e, t),
                 t)
               );
@@ -43520,8 +43520,8 @@ var CLSTAMP = "6161132";
               var t = this.m_mapClips.get(e);
               return (
                 t ||
-                (((t = new ae()).m_clipID = e),
-                (t.m_eWatchState = Q.None),
+                (((t = new oe()).m_clipID = e),
+                (t.m_eWatchState = X.None),
                 this.m_mapClips.set(e, t),
                 t)
               );
@@ -43530,8 +43530,8 @@ var CLSTAMP = "6161132";
               var t = this.m_mapVODs.get(e);
               return (
                 t ||
-                (((t = new se()).m_nAppIDVOD = e),
-                (t.m_eWatchState = Q.None),
+                (((t = new ie()).m_nAppIDVOD = e),
+                (t.m_eWatchState = X.None),
                 this.m_mapVODs.set(e, t),
                 t)
               );
@@ -43622,7 +43622,7 @@ var CLSTAMP = "6161132";
                   return Object(y.e)(this, function(e) {
                     switch (e.label) {
                       case 0:
-                        p.SetState(Q.Loading, ""),
+                        p.SetState(X.Loading, ""),
                           (t = {
                             steamid: p.m_steamIDBroadcast,
                             broadcastid: 0,
@@ -43649,7 +43649,7 @@ var CLSTAMP = "6161132";
                       case 3:
                         return (
                           (r = e.sent()),
-                          (o = Object(Z.a)(r)),
+                          (o = Object(K.a)(r)),
                           console.error(o),
                           console.log(
                             "Failed to get broadcast manifest!" + o.strErrorMsg
@@ -43660,8 +43660,8 @@ var CLSTAMP = "6161132";
                         if (!n || 200 != n.status)
                           return (
                             p.SetState(
-                              Q.Error,
-                              Object(b.f)("#BroadcastWatch_RequestFailed")
+                              X.Error,
+                              Object(h.f)("#BroadcastWatch_RequestFailed")
                             ),
                             [2]
                           );
@@ -43670,7 +43670,7 @@ var CLSTAMP = "6161132";
                             this.SetViewerToken(i.viewertoken),
                           "ready" == (a = i.success))
                         )
-                          p.SetState(Q.Ready),
+                          p.SetState(X.Ready),
                             (p.m_ulBroadcastID = i.broadcastid),
                             (p.m_ulViewerToken = this.m_broadcastSettings.ulViewerToken),
                             (p.m_strCDNAuthUrlParameters =
@@ -43689,15 +43689,15 @@ var CLSTAMP = "6161132";
                         else if ("waiting" == a) {
                           if (
                             (p.SetState(
-                              Q.Loading,
-                              Object(b.f)("#BroadcastWatch_WaitingForResponse")
+                              X.Loading,
+                              Object(h.f)("#BroadcastWatch_WaitingForResponse")
                             ),
                             6e4 < (s = Date.now() - d))
                           )
                             return (
                               p.SetState(
-                                Q.Error,
-                                Object(b.f)("#BroadcastWatch_NotAvailable")
+                                X.Error,
+                                Object(h.f)("#BroadcastWatch_NotAvailable")
                               ),
                               [2]
                             );
@@ -43708,8 +43708,8 @@ var CLSTAMP = "6161132";
                         } else
                           "waiting_for_start" == a
                             ? (p.SetState(
-                                Q.Loading,
-                                Object(b.f)("#BroadcastWatch_WaitingForStart")
+                                X.Loading,
+                                Object(h.f)("#BroadcastWatch_WaitingForStart")
                               ),
                               p.m_schManifestTimeout.Schedule(
                                 i.retry,
@@ -43719,8 +43719,8 @@ var CLSTAMP = "6161132";
                               ))
                             : "waiting_for_reconnect" == a
                             ? (p.SetState(
-                                Q.Loading,
-                                Object(b.f)(
+                                X.Loading,
+                                Object(h.f)(
                                   "#BroadcastWatch_WaitingForReconnect"
                                 )
                               ),
@@ -43732,39 +43732,39 @@ var CLSTAMP = "6161132";
                               ))
                             : "end" == a
                             ? p.SetState(
-                                Q.Error,
-                                Object(b.f)("#BroadcastWatch_NotAvailable")
+                                X.Error,
+                                Object(h.f)("#BroadcastWatch_NotAvailable")
                               )
                             : "noservers" == a
                             ? p.SetState(
-                                Q.Error,
-                                Object(b.f)("#BroadcastWatch_ServerLoad")
+                                X.Error,
+                                Object(h.f)("#BroadcastWatch_ServerLoad")
                               )
                             : "system_not_supported" == a
                             ? p.SetState(
-                                Q.Error,
-                                Object(b.f)(
+                                X.Error,
+                                Object(h.f)(
                                   "#BroadcastWatch_SystemNotSupported"
                                 )
                               )
                             : "user_restricted" == a
                             ? p.SetState(
-                                Q.Error,
-                                Object(b.f)("#BroadcastWatch_UserRestricted")
+                                X.Error,
+                                Object(h.f)("#BroadcastWatch_UserRestricted")
                               )
                             : "poor_upload_quality" == a
                             ? p.SetState(
-                                Q.Error,
-                                Object(b.f)("#BroadcastWatch_PoorUploadQuality")
+                                X.Error,
+                                Object(h.f)("#BroadcastWatch_PoorUploadQuality")
                               )
                             : "request_failed" == a
                             ? p.SetState(
-                                Q.Error,
-                                Object(b.f)("#BroadcastWatch_RequestFailed")
+                                X.Error,
+                                Object(h.f)("#BroadcastWatch_RequestFailed")
                               )
                             : p.SetState(
-                                Q.Error,
-                                Object(b.f)("#BroadcastWatch_NotAvailable")
+                                X.Error,
+                                Object(h.f)("#BroadcastWatch_NotAvailable")
                               );
                         return [2];
                     }
@@ -43778,7 +43778,7 @@ var CLSTAMP = "6161132";
                 return Object(y.e)(this, function(e) {
                   switch (e.label) {
                     case 0:
-                      i.SetState(Q.Loading, ""),
+                      i.SetState(X.Loading, ""),
                         (t = {
                           clipid: i.m_clipID,
                           watchlocation: a,
@@ -43809,17 +43809,17 @@ var CLSTAMP = "6161132";
                     case 4:
                       return n && 200 == n.status
                         ? (1 == (o = n.data).success
-                            ? (i.SetState(Q.Ready),
+                            ? (i.SetState(X.Ready),
                               (i.m_data = o),
                               this.LoadClip(i))
                             : i.SetState(
-                                Q.Error,
-                                Object(b.f)("#BroadcastWatch_RequestFailed")
+                                X.Error,
+                                Object(h.f)("#BroadcastWatch_RequestFailed")
                               ),
                           [2])
                         : (i.SetState(
-                            Q.Error,
-                            Object(b.f)("#BroadcastWatch_RequestFailed")
+                            X.Error,
+                            Object(h.f)("#BroadcastWatch_RequestFailed")
                           ),
                           [2]);
                   }
@@ -43833,18 +43833,18 @@ var CLSTAMP = "6161132";
                   switch (e.label) {
                     case 0:
                       return (
-                        n.SetState(Q.Loading, ""),
-                        [4, $.a.Get().LoadVODForAppID(n.m_nAppIDVOD)]
+                        n.SetState(X.Loading, ""),
+                        [4, J.a.Get().LoadVODForAppID(n.m_nAppIDVOD)]
                       );
                     case 1:
                       return (
                         (t = e.sent())
-                          ? (n.SetState(Q.Ready),
+                          ? (n.SetState(X.Ready),
                             (n.m_manifestURL = t.video_url),
                             this.LoadVOD(n))
                           : n.SetState(
-                              Q.Error,
-                              Object(b.f)("#BroadcastWatch_RequestFailed")
+                              X.Error,
+                              Object(h.f)("#BroadcastWatch_RequestFailed")
                             ),
                         [2]
                       );
@@ -43904,7 +43904,7 @@ var CLSTAMP = "6161132";
               void 0 === t && (t = !0), e.Stop();
               var n = this.m_mapBroadcasts.get(e.GetBroadcastSteamID());
               n &&
-                n.m_eWatchState != Q.Loading &&
+                n.m_eWatchState != X.Loading &&
                 (n.m_bWebRTC && t && (n.m_bWebRTC = !1),
                 this.GetBroadcastManifest(n, e.GetWatchLocation()));
             }),
@@ -43925,7 +43925,7 @@ var CLSTAMP = "6161132";
                   ((t = JSON.parse(e)) &&
                     (Object.assign(this.m_broadcastSettings, t),
                     ((n = this.m_broadcastSettings).bMuted = !!n.bMuted),
-                    (n.nVolume = _.a(n.nVolume, 0, 1)),
+                    (n.nVolume = f.a(n.nVolume, 0, 1)),
                     "string" != typeof n.ulViewerToken &&
                       (n.ulViewerToken = "0"))));
             }),
@@ -43960,13 +43960,13 @@ var CLSTAMP = "6161132";
             e
           );
         })();
-      ((ne = te = te || {})[(ne.Timeline = 1)] = "Timeline"),
-        (ne[(ne.Minimap = 2)] = "Minimap");
-      var le = (function() {
+      ((ee = $ = $ || {})[(ee.Timeline = 1)] = "Timeline"),
+        (ee[(ee.Minimap = 2)] = "Minimap");
+      var se = (function() {
           function e(e, t, n, r) {
             (this.m_elVideo = null),
               (this.m_player = null),
-              (this.m_listeners = new f.c()),
+              (this.m_listeners = new m.c()),
               (this.m_gameDataParser = null),
               (this.m_eWatchLocation = 0),
               (this.m_rgSubtitles = []),
@@ -44084,14 +44084,14 @@ var CLSTAMP = "6161132";
               return null;
             }),
             (e.prototype.SetSubtitles = function(e) {
-              var t = e ? b.d[e] : -1;
+              var t = e ? h.d[e] : -1;
               this.m_player.SetSubtitles(t);
             }),
             (e.prototype.GetBroadcastState = function() {
-              return pe.GetBroadcastState(this);
+              return ce.GetBroadcastState(this);
             }),
             (e.prototype.GetBroadcastStateDescription = function() {
-              return pe.GetBroadcastStateDescription(this);
+              return ce.GetBroadcastStateDescription(this);
             }),
             (e.prototype.InitPlayer = function() {
               Object(O.a)(!this.m_player, "Initialized twice?"),
@@ -44154,7 +44154,7 @@ var CLSTAMP = "6161132";
             (e.prototype.StartBroadcast = function(e) {
               this.InitPlayer(),
                 e.m_data.url
-                  ? ((this.m_player = new Y(
+                  ? ((this.m_player = new V(
                       this.m_elVideo,
                       !Object(R.a)() && Object(R.b)()
                     )),
@@ -44163,7 +44163,7 @@ var CLSTAMP = "6161132";
                       e.m_strCDNAuthUrlParameters,
                       e.m_data.hls_url
                     ))
-                  : ((this.m_player = new J(this.m_elVideo)),
+                  : ((this.m_player = new Q(this.m_elVideo)),
                     this.m_player.PlayWebRTC(
                       this.m_steamIDBroadcast,
                       e.m_ulViewerToken,
@@ -44182,22 +44182,22 @@ var CLSTAMP = "6161132";
                   e.m_ulViewerToken,
                   e.m_strCDNAuthUrlParameters
                 ),
-                (this.m_BroadcastInfo = pe.StartInfo(this.m_steamIDBroadcast));
+                (this.m_BroadcastInfo = ce.StartInfo(this.m_steamIDBroadcast));
             }),
             (e.prototype.StartClip = function(e) {
               this.InitPlayer(),
-                (this.m_player = new Y(this.m_elVideo)),
+                (this.m_player = new V(this.m_elVideo)),
                 this.m_player.PlayMPD(e.m_data.clip_url, null),
                 this.SetVolume(this.m_nVolume),
                 this.m_player.SetMuted(this.m_bMuted);
             }),
             (e.prototype.StartVOD = function(e) {
               this.InitPlayer();
-              var t = new Y(this.m_elVideo);
+              var t = new V(this.m_elVideo);
               (this.m_player = t),
                 G.i.logged_in &&
                   e.m_nAppIDVOD &&
-                  t.SetBookmarkAdapter(new ee.a(e.m_nAppIDVOD)),
+                  t.SetBookmarkAdapter(new Z.a(e.m_nAppIDVOD)),
                 this.m_player.PlayMPD(e.m_manifestURL, null),
                 this.SetVolume(this.m_nVolume),
                 this.m_player.SetMuted(this.m_bMuted);
@@ -44205,7 +44205,7 @@ var CLSTAMP = "6161132";
             (e.prototype.Stop = function() {
               this.m_listeners.Unregister(),
                 this.m_BroadcastInfo &&
-                  (pe.StopInfo(this.m_BroadcastInfo),
+                  (ce.StopInfo(this.m_BroadcastInfo),
                   (this.m_BroadcastInfo = null)),
                 (this.m_gameDataParser = null),
                 this.m_player &&
@@ -44218,14 +44218,14 @@ var CLSTAMP = "6161132";
             }),
             (e.prototype.Play = function() {
               var e = this.GetBroadcastState();
-              e == Q.None || this.IsBroadcastClip()
-                ? pe.StartVideo(this)
-                : e == Q.Ready &&
-                  (pe.SetActiveVideo(this),
+              e == X.None || this.IsBroadcastClip()
+                ? ce.StartVideo(this)
+                : e == X.Ready &&
+                  (ce.SetActiveVideo(this),
                   this.m_player
                     ? this.m_player.Play()
                     : this.StartBroadcast(
-                        pe.GetBroadcast(this.m_steamIDBroadcast)
+                        ce.GetBroadcast(this.m_steamIDBroadcast)
                       ));
             }),
             (e.prototype.Pause = function() {
@@ -44254,12 +44254,12 @@ var CLSTAMP = "6161132";
             (e.prototype.SetVolume = function(e) {
               this.m_player && this.m_player.SetVolume(e),
                 (this.m_nVolume = this.m_player.GetVolume()),
-                pe.SaveVolumeChange(e, this.m_bMuted);
+                ce.SaveVolumeChange(e, this.m_bMuted);
             }),
             (e.prototype.SetMute = function(e) {
               this.m_player && this.m_player.SetMuted(e),
                 (this.m_bMuted = e),
-                pe.SaveVolumeChange(this.m_nVolume, e);
+                ce.SaveVolumeChange(this.m_nVolume, e);
             }),
             (e.prototype.IsMuted = function() {
               return this.m_bMuted;
@@ -44307,7 +44307,7 @@ var CLSTAMP = "6161132";
                 "object" == typeof o.gamedata &&
                 ((this.m_gameDataParser &&
                   this.m_gameDataParser.GetAppID() == o.gamedata.__appid) ||
-                  (this.m_gameDataParser = new d(o.gamedata.__appid)),
+                  (this.m_gameDataParser = new c(o.gamedata.__appid)),
                 (t = this.m_player.GetLiveContentStartTime().getTime()),
                 "timelinemarkers" in o.gamedata
                   ? ((n = this.m_gameDataParser.UpdateMarkers(
@@ -44326,13 +44326,13 @@ var CLSTAMP = "6161132";
                     ));
             }),
             (e.prototype.OnDownloadFailed = function() {
-              pe.BroadcastDownloadFailed(this);
+              ce.BroadcastDownloadFailed(this);
             }),
             (e.prototype.OnWebRTCRetry = function() {
-              pe.BroadcastDownloadFailed(this, !1);
+              ce.BroadcastDownloadFailed(this, !1);
             }),
             (e.prototype.OnWebRTCFailed = function() {
-              pe.BroadcastDownloadFailed(this, !0);
+              ce.BroadcastDownloadFailed(this, !0);
             }),
             (e.prototype.OnUserInputNeeded = function() {
               this.m_bUserInputNeeded = !0;
@@ -44351,17 +44351,17 @@ var CLSTAMP = "6161132";
               return this.m_nTimelineDuration;
             }),
             (e.prototype.GetTimeAtMousePosition = function(e, t, n, r) {
-              var o = _.c(e, t.left, t.right, n, r);
+              var o = f.c(e, t.left, t.right, n, r);
               return Math.floor(o + 0.5);
             }),
             (e.prototype.GetPercentOffsetFromTime = function(e, t) {
               var n = 0,
                 r = 0;
               return (
-                t == te.Timeline
+                t == $.Timeline
                   ? (n = (r = this.m_nVideoEndPos) - this.m_nTimelineDuration)
                   : (r = n = 0),
-                _.c(e, n, r, 0, 100)
+                f.c(e, n, r, 0, 100)
               );
             }),
             (e.prototype.GetTimelineMarkers = function() {
@@ -44420,8 +44420,8 @@ var CLSTAMP = "6161132";
             e
           );
         })(),
-        pe = new ce();
-      window.uiBroadcastWatchStore = pe;
+        ce = new ae();
+      window.uiBroadcastWatchStore = ce;
     },
     bxBv: function(e, t, n) {
       "use strict";
@@ -49779,49 +49779,52 @@ var CLSTAMP = "6161132";
     nWbB: function(e, t, n) {
       "use strict";
       n.d(t, "d", function() {
-        return s;
+        return m;
       }),
         n.d(t, "a", function() {
-          return f;
+          return b;
         }),
         n.d(t, "b", function() {
-          return m;
+          return h;
         }),
         n.d(t, "c", function() {
-          return _;
-        }),
-        n.d(t, "e", function() {
           return v;
         }),
-        n.d(t, "f", function() {
+        n.d(t, "e", function() {
           return g;
+        }),
+        n.d(t, "f", function() {
+          return M;
         });
       var c = n("mrSG"),
         r = n("vDqi"),
-        l = n.n(r),
+        s = n.n(r),
         o = n("2vnA"),
         i = n("kLLr"),
-        p = n("boaH"),
+        l = n("boaH"),
         a = n("UWWC"),
-        u = n("bDQf"),
-        d = n("lkRc");
-      function s(e) {
+        p = n("bDQf"),
+        u = n("lkRc"),
+        d = n("5izx");
+      function m(e) {
         return Boolean(e && e.thumbnail_http_address);
       }
-      var m,
-        h,
-        f = (function() {
+      var h,
+        f,
+        b = (function() {
           function e() {
             (this.m_inFlightRequests = new Map()),
               (this.m_lookupKeyToEmbedStreamDef = new Map()),
               (this.m_lookupStreams = new Map()),
+              (this.m_playReadyStream = new Map()),
+              (this.m_bMapHasStartedVideo = new Map()),
+              (this.m_mapBroadcastChecked = new Map()),
               (this.m_pageChatStatus = "hide"),
               (this.m_streamChatStatus = "hide"),
               (this.m_bUserChatExpanded = void 0),
               (this.m_bHideBroadcast = void 0),
               (this.m_setStreamsLoadedListeners = new Set()),
               (this.m_setStreamChangedListeners = new Set()),
-              (this.m_bHasStartedVideo = !1),
               (this.m_bUseFakeData = !1),
               (this.m_bAllowStreamAutoPlay = !0);
           }
@@ -49841,8 +49844,9 @@ var CLSTAMP = "6161132";
               var t = this.GetStreams(e);
               return Boolean(t && 0 < t.length);
             }),
-            (e.prototype.GetPlayReadyStream = function() {
-              return this.m_playReadyStream;
+            (e.prototype.GetPlayReadyStream = function(e) {
+              var t = this.GetStreamsLookupKeyFromDef(e);
+              return this.m_playReadyStream.get(t);
             }),
             (e.prototype.BIsEmbeddedBroadcastHidden = function() {
               return Boolean(this.m_bHideBroadcast);
@@ -49886,7 +49890,7 @@ var CLSTAMP = "6161132";
                   ? new i.a(e.steamid)
                   : i.a.InitFromAccountID(e.accountid);
               return (
-                d.c.COMMUNITY_BASE_URL +
+                u.c.COMMUNITY_BASE_URL +
                 "broadcast/watch/" +
                 t.ConvertTo64BitString()
               );
@@ -49919,7 +49923,7 @@ var CLSTAMP = "6161132";
                     case 0:
                       if (void 0 !== this.m_bHideBroadcast) return [3, 5];
                       if (
-                        (t = Object(d.f)("broadcastuser", "application_config"))
+                        (t = Object(u.f)("broadcastuser", "application_config"))
                       )
                         return [3, 4];
                       e.label = 1;
@@ -49927,9 +49931,9 @@ var CLSTAMP = "6161132";
                       return (
                         e.trys.push([1, 3, , 4]),
                         (n =
-                          d.c.STORE_BASE_URL +
+                          u.c.STORE_BASE_URL +
                           "broadcast/ajaxgetuserbroadcastpreferences"),
-                        [4, l.a.get(n, { params: {}, cancelToken: i.token })]
+                        [4, s.a.get(n, { params: {}, cancelToken: i.token })]
                       );
                     case 2:
                       return (r = e.sent()), (t = r.data), [3, 4];
@@ -49938,7 +49942,7 @@ var CLSTAMP = "6161132";
                         (o = e.sent()),
                         console.log(
                           "LoadBIsEmbeddedBroadcastHidden: " +
-                            Object(u.a)(o).strErrorMsg
+                            Object(p.a)(o).strErrorMsg
                         ),
                         (t = { bHideStoreBroadcast: !1 }),
                         [3, 4]
@@ -49956,13 +49960,14 @@ var CLSTAMP = "6161132";
               this.m_bUseFakeData = !1;
               var t = [];
               this.m_pageChatStatus = "remove";
-              var n = new b();
+              var n = new _();
               (n.accountid = 7),
                 (n.nAppIDVOD = e.nAppIDVOD),
-                (n.default_selection_priority = m.k_ePrimary),
-                (n.current_selection_priority = m.k_ePrimary),
-                t.push(n),
-                (this.m_playReadyStream = n),
+                (n.default_selection_priority = h.k_ePrimary),
+                (n.current_selection_priority = h.k_ePrimary),
+                t.push(n);
+              var r = this.GetStreamsLookupKeyFromDef(e);
+              this.m_playReadyStream.set(r, n),
                 this.NotifyStreamsLoadedListeners(t);
             }),
             (e.prototype.HintLoadEmbeddablePreviewStreams = function(i) {
@@ -49987,8 +49992,8 @@ var CLSTAMP = "6161132";
                         e.trys.push([1, 3, , 4]),
                         [
                           4,
-                          l.a.get(
-                            d.c.STORE_BASE_URL +
+                          s.a.get(
+                            u.c.STORE_BASE_URL +
                               "broadcast/ajaxgetstreamersforpreview",
                             { params: n }
                           )
@@ -50002,7 +50007,7 @@ var CLSTAMP = "6161132";
                     case 3:
                       return (
                         (r = e.sent()),
-                        (o = Object(u.a)(r)),
+                        (o = Object(p.a)(r)),
                         console.error(
                           "HintLoadEmbeddablePreviewStreams hit error loading: " +
                             o.strErrorMsg,
@@ -50043,8 +50048,8 @@ var CLSTAMP = "6161132";
                         (t = null),
                         [
                           4,
-                          l.a.get(
-                            d.c.STORE_BASE_URL +
+                          s.a.get(
+                            u.c.STORE_BASE_URL +
                               "broadcast/ajaxgetstreamersforpage",
                             { params: i }
                           )
@@ -50058,7 +50063,7 @@ var CLSTAMP = "6161132";
                     case 2:
                       return (
                         (n = e.sent()),
-                        (r = Object(u.a)(n)),
+                        (r = Object(p.a)(n)),
                         console.error(
                           "HintLoadEmbeddableStreams hit error loading: " +
                             r.strErrorMsg,
@@ -50108,103 +50113,127 @@ var CLSTAMP = "6161132";
                 });
               });
             }),
-            (e.prototype.AutoStartVideoStream = function(o, i) {
-              return Object(c.b)(this, void 0, void 0, function() {
-                var t, n, r;
-                return Object(c.e)(this, function(e) {
-                  switch (e.label) {
-                    case 0:
-                      if (this.m_bHasStartedVideo) return [2, null];
-                      (t = new Set()), (e.label = 1);
-                    case 1:
-                      return this.m_bUseFakeData
-                        ? (this.m_playReadyStream ||
-                            (this.m_playReadyStream = {
-                              accountid: 0,
-                              appid: 7,
-                              thumbnail_http_address: "",
-                              default_selection_priority: m.k_eGeneral,
-                              current_selection_priority: m.k_eGeneral
-                            }),
-                          [2, this.m_playReadyStream])
-                        : [3, 2];
-                    case 2:
-                      return (
-                        (n = i.filter(function(e) {
-                          return !t.has(e);
-                        })),
-                        (r = this.GetAutoStartStream(n))
-                          ? [4, this.AttemptToPlayStream(o, r)]
-                          : [2, null]
-                      );
-                    case 3:
-                      if (e.sent()) return [2, r];
-                      t.add(r), (e.label = 4);
-                    case 4:
-                      return [3, 1];
-                    case 5:
-                      return [2];
-                  }
-                });
-              });
-            }),
-            (e.prototype.AttemptToPlayStream = function(a, s) {
+            (e.prototype.AutoStartVideoStream = function(a, s) {
               return Object(c.b)(this, void 0, void 0, function() {
                 var t, n, r, o, i;
                 return Object(c.e)(this, function(e) {
                   switch (e.label) {
                     case 0:
-                      (t = null), (this.m_bHasStartedVideo = !0), (e.label = 1);
+                      if (
+                        ((t = this.GetStreamsLookupKeyFromDef(a)),
+                        this.m_bMapHasStartedVideo.get(t))
+                      )
+                        return [2, null];
+                      if (this.m_bUseFakeData)
+                        return (
+                          this.m_playReadyStream.get(t) ||
+                            ((n = {
+                              accountid: 0,
+                              appid: 7,
+                              thumbnail_http_address: "",
+                              default_selection_priority: h.k_eGeneral,
+                              current_selection_priority: h.k_eGeneral
+                            }),
+                            this.m_playReadyStream.set(t, n)),
+                          [2, this.m_playReadyStream]
+                        );
+                      (r = new Set()), (e.label = 1);
+                    case 1:
+                      return (
+                        (o = s.filter(function(e) {
+                          return !r.has(e);
+                        })),
+                        (i = this.GetAutoStartStream(o))
+                          ? [4, this.AttemptToPlayStream(a, i)]
+                          : [2, null]
+                      );
+                    case 2:
+                      return e.sent() ? [2, i] : (r.add(i), [3, 1]);
+                    case 3:
+                      return [2];
+                  }
+                });
+              });
+            }),
+            (e.prototype.AttemptToPlayStream = function(r, o) {
+              return Object(c.b)(this, void 0, void 0, function() {
+                var t, n;
+                return Object(c.e)(this, function(e) {
+                  switch (e.label) {
+                    case 0:
+                      return (
+                        (t = this.GetStreamsLookupKeyFromDef(r)),
+                        this.m_bMapHasStartedVideo.set(t, !0),
+                        this.m_mapBroadcastChecked.has(o.accountid) ||
+                          this.m_mapBroadcastChecked.set(
+                            o.accountid,
+                            this.InternalAttemptToPlayStream(r, o)
+                          ),
+                        [4, this.m_mapBroadcastChecked.get(o.accountid)]
+                      );
+                    case 1:
+                      return (n = e.sent()) && 1 == n.success
+                        ? ((o.steamid = n.steamid),
+                          this.m_playReadyStream.set(t, o),
+                          1 < this.GetConcurrentStreams(r)
+                            ? (this.m_streamChatStatus = "hide")
+                            : (this.m_streamChatStatus =
+                                o.broadcast_chat_visibility),
+                          this.m_setStreamChangedListeners.forEach(function(e) {
+                            return e(o);
+                          }),
+                          g(o.appid, 1, o.snr),
+                          [2, o])
+                        : [2, null];
+                  }
+                });
+              });
+            }),
+            (e.prototype.InternalAttemptToPlayStream = function(i, a) {
+              return Object(c.b)(this, void 0, void 0, function() {
+                var t, n, r, o;
+                return Object(c.e)(this, function(e) {
+                  switch (e.label) {
+                    case 0:
+                      this.GetStreamsLookupKeyFromDef(i), (e.label = 1);
                     case 1:
                       return (
                         e.trys.push([1, 3, , 4]),
-                        (n =
-                          d.c.STORE_BASE_URL + "broadcast/ajaxcheckbroadcast"),
-                        (r = {
-                          broadcastaccountid: s.accountid,
-                          viewer_token: p.a.GetViewerToken(),
+                        (t =
+                          u.c.STORE_BASE_URL + "broadcast/ajaxcheckbroadcast"),
+                        (n = {
+                          broadcastaccountid: a.accountid,
+                          viewer_token: l.a.GetViewerToken(),
                           origin: self.origin
                         }),
-                        [4, l.a.get(n, { params: r })]
+                        [4, s.a.get(t, { params: n })]
                       );
                     case 2:
-                      return (t = e.sent()), [3, 4];
+                      return [2, e.sent().data];
                     case 3:
                       return (
-                        (o = e.sent()),
-                        (i = Object(u.a)(o)),
+                        (r = e.sent()),
+                        (o = Object(p.a)(r)),
                         console.error(
-                          "Broadcast.AttemptToPlayStream: " + i.strErrorMsg,
-                          i
+                          "Broadcast.AttemptToPlayStream: " + o.strErrorMsg,
+                          o
                         ),
                         [3, 4]
                       );
                     case 4:
-                      return 1 != t.data.success
-                        ? [2, null]
-                        : ((s.steamid = t.data.steamid),
-                          (this.m_playReadyStream = s),
-                          1 < this.GetConcurrentStreams(a)
-                            ? (this.m_streamChatStatus = "hide")
-                            : (this.m_streamChatStatus =
-                                s.broadcast_chat_visibility),
-                          this.m_setStreamChangedListeners.forEach(function(e) {
-                            return e(s);
-                          }),
-                          v(s.appid, 1, s.snr),
-                          [2, s]);
+                      return [2, null];
                   }
                 });
               });
             }),
             (e.prototype.GetAutoStartStream = function(e) {
               if (!e) return null;
-              var t = e.filter(s),
+              var t = e.filter(m),
                 n = t.reduce(function(e, t) {
-                  return Math.max(e, _(t));
+                  return Math.max(e, v(t));
                 }, 0),
                 r = t.filter(function(e) {
-                  return _(e) === n;
+                  return v(e) === n;
                 });
               return 0 === r.length
                 ? null
@@ -50230,8 +50259,11 @@ var CLSTAMP = "6161132";
                       .join(",")
                   : void 0,
                 test: !1,
-                cc: d.c.COUNTRY,
-                l: d.c.LANGUAGE
+                cc: u.c.COUNTRY,
+                l: u.c.LANGUAGE,
+                rt_now_override_test: d.a.BHasTimeOverride()
+                  ? d.a.GetTimeNowWithOverride()
+                  : void 0
               };
             }),
             (e.prototype.GetStreamsLookupKeyFromDef = function(e) {
@@ -50246,7 +50278,7 @@ var CLSTAMP = "6161132";
               return (
                 e.s_GlobalStore ||
                   ((e.s_GlobalStore = new e()),
-                  "dev" == d.c.WEB_UNIVERSE &&
+                  "dev" == u.c.WEB_UNIVERSE &&
                     (window.g_BroadcastEmbeddableStore = e.s_GlobalStore),
                   e.s_GlobalStore.Init()),
                 e.s_GlobalStore
@@ -50268,14 +50300,14 @@ var CLSTAMP = "6161132";
             e
           );
         })();
-      ((h = m = m || {})[(h.k_ePrimary = 3)] = "k_ePrimary"),
-        (h[(h.k_eFeatured = 2)] = "k_eFeatured"),
-        (h[(h.k_eDefaultFeatured = 1)] = "k_eDefaultFeatured"),
-        (h[(h.k_eGeneral = 0)] = "k_eGeneral");
-      var b = (function() {
+      ((f = h = h || {})[(f.k_ePrimary = 3)] = "k_ePrimary"),
+        (f[(f.k_eFeatured = 2)] = "k_eFeatured"),
+        (f[(f.k_eDefaultFeatured = 1)] = "k_eDefaultFeatured"),
+        (f[(f.k_eGeneral = 0)] = "k_eGeneral");
+      var _ = (function() {
         function e() {
-          (this.default_selection_priority = m.k_eGeneral),
-            (this.current_selection_priority = m.k_eGeneral);
+          (this.default_selection_priority = h.k_eGeneral),
+            (this.current_selection_priority = h.k_eGeneral);
         }
         return (
           Object(c.c)([o.C], e.prototype, "title", void 0),
@@ -50285,10 +50317,10 @@ var CLSTAMP = "6161132";
           e
         );
       })();
-      function _(e) {
-        return e.current_selection_priority || m.k_eGeneral;
+      function v(e) {
+        return e.current_selection_priority || h.k_eGeneral;
       }
-      function v(n, r, o) {
+      function g(n, r, o) {
         return Object(c.b)(this, void 0, void 0, function() {
           var t;
           return Object(c.e)(this, function(e) {
@@ -50298,8 +50330,8 @@ var CLSTAMP = "6161132";
                 o &&
                 ((t = new URLSearchParams()).append("page_action", "" + r),
                 t.append("snr", o),
-                l.a.post(
-                  d.c.STORE_BASE_URL + "ajaxreportproductaction/" + n + "/",
+                s.a.post(
+                  u.c.STORE_BASE_URL + "ajaxreportproductaction/" + n + "/",
                   t
                 )),
               [2]
@@ -50307,7 +50339,7 @@ var CLSTAMP = "6161132";
           });
         });
       }
-      var g = new a.a();
+      var M = new a.a();
     },
     nrKv: function(e, t, n) {
       "use strict";
@@ -58964,7 +58996,8 @@ var CLSTAMP = "6161132";
                     disableReadTracking: l,
                     fnFilterImageURLsForKnownFailures: this.props
                       .fnFilterImageURLsForKnownFailures,
-                    fnImageFailureCallback: this.props.fnImageFailureCallback
+                    fnImageFailureCallback: this.props.fnImageFailureCallback,
+                    bDisableBroadcastPlayer: !l
                   })
                 ),
                   null == e && (e = c.appid),
@@ -59288,7 +59321,10 @@ var CLSTAMP = "6161132";
                     })
                   )
                 ),
-                t.BHasBroadcastEnabled() &&
+                Boolean(
+                  t.BEventCanShowBroadcastWidget() &&
+                    !this.props.bDisableBroadcastPlayer
+                ) &&
                   y.createElement(
                     "div",
                     { className: j.a.EventBroadcastCtn },

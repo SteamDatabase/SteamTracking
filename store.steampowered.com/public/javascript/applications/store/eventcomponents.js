@@ -12512,7 +12512,9 @@
                         t.GetSubTitle(a)
                       )
                   ),
-                  t.BHasBroadcastEnabled() &&
+                  Boolean(
+                    t.BEventCanShowBroadcastWidget(this.props.previewMode)
+                  ) &&
                     H.createElement(
                       "div",
                       { className: nn.a.EventBroadcastCtn },
@@ -14364,7 +14366,7 @@
                       : void 0
                   },
                   i =
-                    e.BHasBroadcastEnabled() &&
+                    e.BEventCanShowBroadcastWidget() &&
                     ("1688220857098505775" == e.GID ||
                       "1590261853006818581" == e.GID),
                   l = U.a.Get().GetPartnerEventPermissions(e.clanSteamID);
@@ -14440,7 +14442,7 @@
                         }
                       },
                       Boolean(
-                        e.BHasBroadcastEnabled() &&
+                        e.BEventCanShowBroadcastWidget() &&
                           e.BSaleShowBroadcastAtTopOfPage()
                       ) &&
                         H.createElement(
@@ -14458,7 +14460,9 @@
                                   bShowCapsuleArt: !0,
                                   fnRenderBroadcastContext: i
                                     ? function() {
-                                        return H.createElement(jr, null);
+                                        return H.createElement(jr, {
+                                          broadcastContext: o
+                                        });
                                       }
                                     : null
                                 })
@@ -14748,7 +14752,7 @@
                         );
                         break;
                       case "broadcast":
-                        c.BHasBroadcastEnabled() &&
+                        c.BEventCanShowBroadcastWidget() &&
                           !m &&
                           ((i = H.createElement(kr, {
                             broadcastEmbedContext:
@@ -16193,7 +16197,7 @@
           );
         })(H.Component),
         jr = Object(r.a)(function(e) {
-          var t = Va.a.Get().GetPlayReadyStream(),
+          var t = Va.a.Get().GetPlayReadyStream(e.broadcastContext),
             a = t && t.appid;
           g.a.EnsureStoreCapsuleInfoLoaded(a);
           var n = g.a.GetStoreCapsuleInfo(a),
