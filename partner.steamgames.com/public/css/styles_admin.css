@@ -2209,6 +2209,24 @@ html, body { height:100%; }
 	width: 1018px;
 	height: 1684px;
 	margin: 0 auto;
+	position: relative;
+}
+
+.profilebackground_preview_background > .profile_animated_background {
+	position: absolute;
+
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	overflow: hidden;
+}
+
+.profile_animated_background > video {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 1920px;
 }
 
 .gamecard_edit_block {
