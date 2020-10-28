@@ -364,14 +364,14 @@
   flex-direction: column; }
   .broadcast_embeddable_broadcast_floating_39rrm .broadcast_embeddable_PopOutVideoTitleBar_9UmMH {
     display: flex;
+    width: 100%;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: space-between;
     height: 30px;
     /* If you change this, also update broadcast_floating height */
     background: #92a0ac; }
-    .broadcast_embeddable_broadcast_floating_39rrm .broadcast_embeddable_PopOutVideoTitleBar_9UmMH a.broadcast_embeddable_PopOutVideoTitleText_1NhAJ {
-      width: 280px;
+    .broadcast_embeddable_broadcast_floating_39rrm .broadcast_embeddable_PopOutVideoTitleBar_9UmMH .broadcast_embeddable_PopOutVideoTitleText_1NhAJ {
+      flex: 1;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -380,12 +380,13 @@
       align-items: center;
       margin: 6px 0px 6px 8px;
       font-size: 14px; }
-      #game_highlights .broadcast_embeddable_broadcast_floating_39rrm .broadcast_embeddable_PopOutVideoTitleBar_9UmMH a.broadcast_embeddable_PopOutVideoTitleText_1NhAJ {
+      #game_highlights .broadcast_embeddable_broadcast_floating_39rrm .broadcast_embeddable_PopOutVideoTitleBar_9UmMH .broadcast_embeddable_PopOutVideoTitleText_1NhAJ {
         color: #ffffff; }
     .broadcast_embeddable_broadcast_floating_39rrm .broadcast_embeddable_PopOutVideoTitleBar_9UmMH .broadcast_embeddable_PopOutVideoCloseButton_3YKUp {
       margin: 8px;
       background: none;
-      border: none; }
+      border: none;
+      width: 20px; }
       .broadcast_embeddable_broadcast_floating_39rrm .broadcast_embeddable_PopOutVideoTitleBar_9UmMH .broadcast_embeddable_PopOutVideoCloseButton_3YKUp:hover {
         cursor: pointer; }
 

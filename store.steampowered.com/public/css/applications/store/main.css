@@ -2236,6 +2236,9 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
   color: #74c069;
   background-color: #0000; }
 
+.presenterpopup_SpeakerOuter_3rRqP {
+  display: block; }
+
 .presenterpopup_Speaker_3F7-F {
   margin-bottom: 16px;
   font-size: 12px;
@@ -7262,6 +7265,33 @@ img.broadcastplayer_BroadcastPlaceholderImg_3hxn9 {
 .bbcodeeditor_DropDownScroll_P0-tb {
   max-height: 400px;
   overflow: hidden scroll; }
+
+.bbcodeeditor_InsertSpeakerCtn_2f-6Y {
+  margin-top: 16px; }
+  .bbcodeeditor_InsertSpeakerCtn_2f-6Y .bbcodeeditor_TitleGroup_1ddLh {
+    display: flex;
+    flex-direction: row; }
+    .bbcodeeditor_InsertSpeakerCtn_2f-6Y .bbcodeeditor_TitleGroup_1ddLh > div {
+      flex-grow: 1; }
+    .bbcodeeditor_InsertSpeakerCtn_2f-6Y .bbcodeeditor_TitleGroup_1ddLh > div:not(:first-of-type) {
+      margin-left: 10px; }
+  .bbcodeeditor_InsertSpeakerCtn_2f-6Y .bbcodeeditor_AssociateRowCtn_2HeY5 {
+    display: flex;
+    flex-direction: row; }
+    .bbcodeeditor_InsertSpeakerCtn_2f-6Y .bbcodeeditor_AssociateRowCtn_2HeY5 button:not(:first-of-type) {
+      margin-left: 10px; }
+  .bbcodeeditor_InsertSpeakerCtn_2f-6Y .bbcodeeditor_PhotoCtn_2-f4C {
+    margin-top: 16px; }
+  .bbcodeeditor_InsertSpeakerCtn_2f-6Y .bbcodeeditor_AboutCtn_3hF9c {
+    margin-top: 16px; }
+  .bbcodeeditor_InsertSpeakerCtn_2f-6Y .bbcodeeditor_PreviewCtn__VCRy {
+    margin-top: 16px; }
+
+textarea {
+  color: #909090;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 1px solid #000;
+  border-radius: 3px; }
 
 .cropmodal_CropImage_3qfqT {
   position: relative;

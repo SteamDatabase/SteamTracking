@@ -120,6 +120,7 @@ td {
 }
 #editForm {
     padding-top: 20px;
+    box-sizing: border-box;
 }
 #editForm .LocTextAreaBar {
     position: sticky;
@@ -527,6 +528,7 @@ h2.editorOnly {
 	padding-left: 8px;
 	padding-right: 8px;
 	width: 100%;
+    padding-bottom: 16px;
 }
 
 .docSearchArea {
@@ -1004,4 +1006,23 @@ h2.editorOnly {
 		margin: 0;
 	}
 
+}
+
+#saveArea {
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: black;
+    padding: 16px;
+}
+#saveArea > div {
+    display: inline-block;
+}
+#saveArea .saveInstructions {
+    margin-left: 16px;
+}
+#saveResult {
+    position: sticky;
+    bottom: 0;
 }

@@ -1763,6 +1763,7 @@
         NewsChannelTitle: "eventcalendar_NewsChannelTitle_11O61",
         NewsChannelSubtitle: "eventcalendar_NewsChannelSubtitle_3_CIM",
         DiscoverGroup: "eventcalendar_DiscoverGroup_kUY00",
+        NewsChannelIcon: "eventcalendar_NewsChannelIcon_2NCtv",
         SidePanelGameSearch: "eventcalendar_SidePanelGameSearch_1LTVI",
         MobileNavBannerCtn: "eventcalendar_MobileNavBannerCtn_20PrZ",
         SearchDismiss: "eventcalendar_SearchDismiss_eIKAr",
@@ -1860,7 +1861,7 @@
         d = a("Dhs6"),
         L = a("6oCP"),
         f = a("IjL/"),
-        s = a("55Ip"),
+        u = a("55Ip"),
         S = a("Mgs7"),
         B = a("6Y59"),
         M = a("5E+2"),
@@ -1869,7 +1870,7 @@
         W = a("exH9"),
         V = a("X3Ds"),
         Z = a("TLQK"),
-        u = a("bxiW"),
+        s = a("bxiW"),
         q = a("lkRc"),
         l = a("ka0M"),
         x = a("ee7K"),
@@ -2288,7 +2289,7 @@
                   )
               );
             }),
-            Object(z.c)([u.a], e.prototype, "UpdateSuggestions", null),
+            Object(z.c)([s.a], e.prototype, "UpdateSuggestions", null),
             e
           );
         })(H.Component),
@@ -2652,13 +2653,13 @@
                 : e;
             }),
             (n.s_nPlayerIndex = 0),
-            Object(z.c)([u.a], n.prototype, "BindPlayerContainer", null),
-            Object(z.c)([u.a], n.prototype, "OnYoutubeScriptsReady", null),
-            Object(z.c)([u.a], n.prototype, "CreatePlayer", null),
-            Object(z.c)([u.a], n.prototype, "OnPlayerReady", null),
-            Object(z.c)([u.a], n.prototype, "OnPlayerStateChange", null),
-            Object(z.c)([u.a], n.prototype, "OnError", null),
-            Object(z.c)([u.a], n.prototype, "OnPlayerLeftView", null),
+            Object(z.c)([s.a], n.prototype, "BindPlayerContainer", null),
+            Object(z.c)([s.a], n.prototype, "OnYoutubeScriptsReady", null),
+            Object(z.c)([s.a], n.prototype, "CreatePlayer", null),
+            Object(z.c)([s.a], n.prototype, "OnPlayerReady", null),
+            Object(z.c)([s.a], n.prototype, "OnPlayerStateChange", null),
+            Object(z.c)([s.a], n.prototype, "OnError", null),
+            Object(z.c)([s.a], n.prototype, "OnPlayerLeftView", null),
             n
           );
         })(H.Component),
@@ -3012,15 +3013,15 @@
                 H.createElement(B.H, null)
               );
             }),
-            Object(z.c)([u.a], t.prototype, "OnMuteButton", null),
-            Object(z.c)([u.a], t.prototype, "OnUnMuteButton", null),
-            Object(z.c)([u.a], t.prototype, "HideAllEventsOfMyType", null),
-            Object(z.c)([u.a], t.prototype, "AddContextMenuForSource", null),
-            Object(z.c)([u.a], t.prototype, "RemoveFromWishlist", null),
-            Object(z.c)([u.a], t.prototype, "AddToWishlist", null),
-            Object(z.c)([u.a], t.prototype, "GotoGameOrClanHub", null),
-            Object(z.c)([u.a], t.prototype, "ToggleFollowCurator", null),
-            Object(z.c)([u.a], t.prototype, "CreateContextMenu", null),
+            Object(z.c)([s.a], t.prototype, "OnMuteButton", null),
+            Object(z.c)([s.a], t.prototype, "OnUnMuteButton", null),
+            Object(z.c)([s.a], t.prototype, "HideAllEventsOfMyType", null),
+            Object(z.c)([s.a], t.prototype, "AddContextMenuForSource", null),
+            Object(z.c)([s.a], t.prototype, "RemoveFromWishlist", null),
+            Object(z.c)([s.a], t.prototype, "AddToWishlist", null),
+            Object(z.c)([s.a], t.prototype, "GotoGameOrClanHub", null),
+            Object(z.c)([s.a], t.prototype, "ToggleFollowCurator", null),
+            Object(z.c)([s.a], t.prototype, "CreateContextMenu", null),
             (t = Object(z.c)([r.a], t))
           );
         })(H.Component),
@@ -3349,7 +3350,7 @@
                 H.createElement(Ue, Object(z.a)({}, this.props))
               );
             }),
-            Object(z.c)([u.a], e.prototype, "OnFallbackClick", null),
+            Object(z.c)([s.a], e.prototype, "OnFallbackClick", null),
             (e = Object(z.c)([r.a], e))
           );
         })(H.Component),
@@ -3417,7 +3418,7 @@
                 this.props.children
               );
             }),
-            Object(z.c)([u.a], t.prototype, "RenderHoverSource", null),
+            Object(z.c)([s.a], t.prototype, "RenderHoverSource", null),
             (t = Object(z.c)([r.a], t))
           );
         })(H.Component),
@@ -3504,7 +3505,7 @@
                 H.createElement("div", { className: Ie.a.TileTextHeader }, i)
               );
             }),
-            Object(z.c)([u.a], t.prototype, "OnTitleClick", null),
+            Object(z.c)([s.a], t.prototype, "OnTitleClick", null),
             t
           );
         })(H.Component),
@@ -3725,8 +3726,8 @@
               )
             );
           }),
-          Object(z.c)([u.a], t.prototype, "OnPerformVoteUp", null),
-          Object(z.c)([u.a], t.prototype, "OnDiscussionClicked", null),
+          Object(z.c)([s.a], t.prototype, "OnPerformVoteUp", null),
+          Object(z.c)([s.a], t.prototype, "OnDiscussionClicked", null),
           (t = Object(z.c)([r.a], t))
         );
       })(H.Component);
@@ -4019,9 +4020,9 @@
                 )
               );
             }),
-            Object(z.c)([u.a], e.prototype, "OnPreview", null),
-            Object(z.c)([u.a], e.prototype, "OnCloseEventPreview", null),
-            Object(z.c)([u.a], e.prototype, "OnEventNotFound", null),
+            Object(z.c)([s.a], e.prototype, "OnPreview", null),
+            Object(z.c)([s.a], e.prototype, "OnCloseEventPreview", null),
+            Object(z.c)([s.a], e.prototype, "OnEventNotFound", null),
             e
           );
         })(_.a.Component),
@@ -4106,7 +4107,7 @@
                 a = $e.IsCurrentlyActive(e),
                 n = $e.LocalizeDateString(e);
               return H.createElement(
-                s.b,
+                u.b,
                 { to: "/" + e.newshubUrl },
                 H.createElement(
                   "div",
@@ -4248,9 +4249,9 @@
             }),
             (i.knDefaultScrollMultiplier = 1),
             (i.knDefaultMinDragPixels = 20),
-            Object(z.c)([u.a], i.prototype, "OnPointerDown", null),
-            Object(z.c)([u.a], i.prototype, "OnPointerUp", null),
-            Object(z.c)([u.a], i.prototype, "OnPointerMove", null),
+            Object(z.c)([s.a], i.prototype, "OnPointerDown", null),
+            Object(z.c)([s.a], i.prototype, "OnPointerUp", null),
+            Object(z.c)([s.a], i.prototype, "OnPointerMove", null),
             i
           );
         })(H.Component),
@@ -4486,7 +4487,7 @@
                   )
               );
             }),
-            Object(z.c)([u.a], t.prototype, "OnBrowseCurator", null),
+            Object(z.c)([s.a], t.prototype, "OnBrowseCurator", null),
             (t = Object(z.c)([r.a], t))
           );
         })(H.Component),
@@ -4708,7 +4709,7 @@
                       ),
                       (a = "app/" + e.id)),
                   H.createElement(
-                    s.b,
+                    u.b,
                     {
                       key: "suggestion-" + e.id,
                       to: "/" + Object(me.f)() + "/" + a + "/"
@@ -4807,21 +4808,42 @@
         var e = Object(N.a)().BIsCollectionCalendar(),
           t = Object(me.f)(),
           a = new Array();
-        return (
-          a.push({
-            name: Object(Z.f)("#EventCalendar_NewsChannel_Featured"),
-            subtitle: Object(Z.f)("#EventCalendar_NewsChannel_TopSellers"),
-            key: "featured",
-            url: t + "/collection/featured/",
-            onPage: e && "featured" == Object(N.a)().GetCollectionID()
-          }),
+        a.push({
+          name: Object(Z.f)("#EventCalendar_NewsChannel_Featured"),
+          subtitle: Object(Z.f)("#EventCalendar_NewsChannel_TopSellers"),
+          key: "featured",
+          url: t + "/collection/featured/",
+          onPage: e && "featured" == Object(N.a)().GetCollectionID()
+        }),
           a.push({
             name: Object(Z.f)("#EventCalendar_NewsChannel_Steam"),
             subtitle: Object(Z.f)("#EventCalendar_NewsChannel_SteamSubtitle"),
             key: "steam",
             url: t + "/collection/steam/",
             onPage: e && "steam" == Object(N.a)().GetCollectionID()
-          }),
+          });
+        var n,
+          r = A.a.GetTimeNowWithOverrideAsDate(),
+          o = new Date(),
+          i = new Date();
+        return (
+          o.setMonth(9, 0),
+          i.setMonth(10, 7),
+          console.log("banana", o, i, r),
+          o < r &&
+            r < i &&
+            ((n = q.c.IMG_URL + "events/types/type_halloween_35.png?v=2"),
+            a.push({
+              name: Object(Z.f)("#EventCalendar_NewsChannel_Halloween"),
+              subtitle: Object(Z.f)(
+                "#EventCalendar_NewsChannel_HalloweenSubtitle"
+              ),
+              key: "halloween",
+              url: t + "/collection/halloween/",
+              onPage: e && "halloween" == Object(N.a)().GetCollectionID(),
+              icon: n,
+              bValveOnly: !1
+            })),
           a
         );
       }
@@ -4831,22 +4853,26 @@
           n = t.name,
           r = t.url,
           o = t.onPage,
-          i = t.count;
-        return H.createElement(
-          s.b,
-          { to: "/" + r },
-          H.createElement(
-            "div",
-            {
-              className: Object(W.a)(
-                Je.a.MobileNavButton,
-                o && Je.a.MobileNavButtonActive
+          i = t.count,
+          l = t.bValveOnly;
+        return !q.i.is_support && l
+          ? null
+          : H.createElement(
+              u.b,
+              { to: "/" + r },
+              H.createElement(
+                "div",
+                {
+                  className: Object(W.a)(
+                    Je.a.MobileNavButton,
+                    o && Je.a.MobileNavButtonActive
+                  )
+                },
+                a || n,
+                i &&
+                  H.createElement("div", { className: Je.a.MobileNavCount }, i)
               )
-            },
-            a || n,
-            i && H.createElement("div", { className: Je.a.MobileNavCount }, i)
-          )
-        );
+            );
       }
       function _t(e) {
         var t = e.element,
@@ -4855,11 +4881,12 @@
           r = t.url,
           o = t.onPage,
           i = t.count,
-          l = t.bValveOnly;
+          l = t.bValveOnly,
+          s = t.icon;
         return !q.i.is_support && l
           ? null
           : H.createElement(
-              s.b,
+              u.b,
               { to: "/" + r },
               H.createElement(
                 "div",
@@ -4869,6 +4896,11 @@
                     o && Je.a.NewsChannelOnPage
                   )
                 },
+                Boolean(s) &&
+                  H.createElement("img", {
+                    className: Object(W.a)(Je.a.NewsChannelIcon),
+                    src: s
+                  }),
                 H.createElement(
                   "div",
                   { className: Je.a.NewsChannelText },
@@ -4890,7 +4922,7 @@
                       n
                     )
                 ),
-                void 0 !== i &&
+                Boolean(void 0 !== i) &&
                   H.createElement(
                     "div",
                     { className: Je.a.NewsChannelCount },
@@ -5017,7 +5049,7 @@
                 )
               );
             }),
-            Object(z.c)([u.a], e.prototype, "onExpandSearch", null),
+            Object(z.c)([s.a], e.prototype, "onExpandSearch", null),
             (e = Object(z.c)([r.a], e))
           );
         })(H.Component),
@@ -5312,10 +5344,10 @@
               );
             }),
             (a.s_strLocalStorageKey = "SteamNewsHub_SuggestCuratorsDismissed"),
-            Object(z.c)([u.a], a.prototype, "OnResize", null),
-            Object(z.c)([u.a], a.prototype, "OnCommitDismiss", null),
-            Object(z.c)([u.a], a.prototype, "OnDismissButton", null),
-            Object(z.c)([u.a], a.prototype, "OnBrowseCurator", null),
+            Object(z.c)([s.a], a.prototype, "OnResize", null),
+            Object(z.c)([s.a], a.prototype, "OnCommitDismiss", null),
+            Object(z.c)([s.a], a.prototype, "OnDismissButton", null),
+            Object(z.c)([s.a], a.prototype, "OnBrowseCurator", null),
             a
           );
         })(_.a.Component),
@@ -5704,7 +5736,7 @@
                 )
               );
             }),
-            Object(z.c)([u.a], e.prototype, "OnResize", null),
+            Object(z.c)([s.a], e.prototype, "OnResize", null),
             (e = a = Object(z.c)([r.a], e))
           );
         })(H.Component),
@@ -6259,15 +6291,15 @@
               );
             }),
             (e.m_bInitialLoad = !0),
-            Object(z.c)([u.a], e.prototype, "OnResize", null),
-            Object(z.c)([u.a], e.prototype, "OnScroll", null),
-            Object(z.c)([u.a], e.prototype, "MobileNavOpenSettings", null),
-            Object(z.c)([u.a], e.prototype, "ToggleControlBarCollapsed", null),
-            Object(z.c)([u.a], e.prototype, "OnControlBarChange", null),
-            Object(z.c)([u.a], e.prototype, "CloseEventModal", null),
-            Object(z.c)([u.a], e.prototype, "OnEventClicked", null),
-            Object(z.c)([u.a], e.prototype, "ToggleFutureView", null),
-            Object(z.c)([u.a], e.prototype, "ResetAllFilters", null),
+            Object(z.c)([s.a], e.prototype, "OnResize", null),
+            Object(z.c)([s.a], e.prototype, "OnScroll", null),
+            Object(z.c)([s.a], e.prototype, "MobileNavOpenSettings", null),
+            Object(z.c)([s.a], e.prototype, "ToggleControlBarCollapsed", null),
+            Object(z.c)([s.a], e.prototype, "OnControlBarChange", null),
+            Object(z.c)([s.a], e.prototype, "CloseEventModal", null),
+            Object(z.c)([s.a], e.prototype, "OnEventClicked", null),
+            Object(z.c)([s.a], e.prototype, "ToggleFutureView", null),
+            Object(z.c)([s.a], e.prototype, "ResetAllFilters", null),
             (e = c = Object(z.c)([r.a], e))
           );
         })(H.Component),
@@ -6562,7 +6594,7 @@
               );
             }),
             Object(z.c)(
-              [u.a],
+              [s.a],
               t.prototype,
               "RecordSectionRenderedPositioning",
               null
@@ -7636,29 +7668,29 @@
                   })
               );
             }),
-            Object(z.c)([u.a], e.prototype, "HandleError", null),
+            Object(z.c)([s.a], e.prototype, "HandleError", null),
             Object(z.c)(
-              [u.a],
+              [s.a],
               e.prototype,
               "LoadMorePublicEventWithDelay",
               null
             ),
-            Object(z.c)([u.a], e.prototype, "LoadMoreModerationEvents", null),
+            Object(z.c)([s.a], e.prototype, "LoadMoreModerationEvents", null),
             Object(z.c)(
-              [u.a],
+              [s.a],
               e.prototype,
               "UpdateQueryParametersAndLoadMoreEvents",
               null
             ),
-            Object(z.c)([u.a], e.prototype, "OnScroll", null),
-            Object(z.c)([u.a], e.prototype, "OnDateChange", null),
-            Object(z.c)([u.a], e.prototype, "IsValidDate", null),
-            Object(z.c)([u.a], e.prototype, "OnEventPerPageLoad", null),
-            Object(z.c)([u.a], e.prototype, "OnChangeEventSelectedTags", null),
-            Object(z.c)([u.a], e.prototype, "OnChangeEventExcludeTags", null),
-            Object(z.c)([u.a], e.prototype, "OnChangeEventTypeFilter", null),
+            Object(z.c)([s.a], e.prototype, "OnScroll", null),
+            Object(z.c)([s.a], e.prototype, "OnDateChange", null),
+            Object(z.c)([s.a], e.prototype, "IsValidDate", null),
+            Object(z.c)([s.a], e.prototype, "OnEventPerPageLoad", null),
+            Object(z.c)([s.a], e.prototype, "OnChangeEventSelectedTags", null),
+            Object(z.c)([s.a], e.prototype, "OnChangeEventExcludeTags", null),
+            Object(z.c)([s.a], e.prototype, "OnChangeEventTypeFilter", null),
             Object(z.c)(
-              [u.a],
+              [s.a],
               e.prototype,
               "OnVisibilityStartTimeChange",
               null
@@ -7995,12 +8027,12 @@
                 )
               );
             }),
-            Object(z.c)([u.a], e.prototype, "ShowModalEvent", null),
-            Object(z.c)([u.a], e.prototype, "HideModalEvent", null),
-            Object(z.c)([u.a], e.prototype, "OnModeratedChanged", null),
-            Object(z.c)([u.a], e.prototype, "ApplyModerationToggle", null),
-            Object(z.c)([u.a], e.prototype, "OnChangeCategory", null),
-            Object(z.c)([u.a], e.prototype, "OnUpdateSeasonalTag", null),
+            Object(z.c)([s.a], e.prototype, "ShowModalEvent", null),
+            Object(z.c)([s.a], e.prototype, "HideModalEvent", null),
+            Object(z.c)([s.a], e.prototype, "OnModeratedChanged", null),
+            Object(z.c)([s.a], e.prototype, "ApplyModerationToggle", null),
+            Object(z.c)([s.a], e.prototype, "OnChangeCategory", null),
+            Object(z.c)([s.a], e.prototype, "OnUpdateSeasonalTag", null),
             (e = Object(z.c)([r.a], e))
           );
         })(H.Component);
@@ -8645,8 +8677,8 @@
                 )
               );
             }),
-            Object(z.c)([u.a], e.prototype, "ChangeCategoryForEvent", null),
-            Object(z.c)([u.a], e.prototype, "OnChangeSelection", null),
+            Object(z.c)([s.a], e.prototype, "ChangeCategoryForEvent", null),
+            Object(z.c)([s.a], e.prototype, "OnChangeSelection", null),
             (e = Object(z.c)([r.a], e))
           );
         })(H.Component),
@@ -8936,10 +8968,10 @@
                 )
               );
             }),
-            Object(z.c)([u.a], e.prototype, "ChangeAcceptance", null),
-            Object(z.c)([u.a], e.prototype, "ChangeHorror", null),
-            Object(z.c)([u.a], e.prototype, "ChangeCute", null),
-            Object(z.c)([u.a], e.prototype, "ApplyAction", null),
+            Object(z.c)([s.a], e.prototype, "ChangeAcceptance", null),
+            Object(z.c)([s.a], e.prototype, "ChangeHorror", null),
+            Object(z.c)([s.a], e.prototype, "ChangeCute", null),
+            Object(z.c)([s.a], e.prototype, "ApplyAction", null),
             e
           );
         })(H.Component),
@@ -10033,8 +10065,8 @@
                   })
               );
             }),
-            Object(z.c)([u.a], e.prototype, "OnArtworkResizeBackfill", null),
-            Object(z.c)([u.a], e.prototype, "BeginArtworkResize", null),
+            Object(z.c)([s.a], e.prototype, "OnArtworkResizeBackfill", null),
+            Object(z.c)([s.a], e.prototype, "BeginArtworkResize", null),
             (e = Object(z.c)([r.a], e))
           );
         })(H.Component),
@@ -11110,32 +11142,32 @@
             }),
             (l.m_uniqueError = 0),
             Object(z.c)(
-              [u.a],
+              [s.a],
               l.prototype,
               "OnDeleteEventSuccessCallback",
               null
             ),
             Object(z.c)(
-              [u.a],
+              [s.a],
               l.prototype,
               "OnDeleteForumTopicSuccessCallback",
               null
             ),
             Object(z.c)(
-              [u.a],
+              [s.a],
               l.prototype,
               "OnDeleteEventFailureCallback",
               null
             ),
             Object(z.c)(
-              [u.a],
+              [s.a],
               l.prototype,
               "OnDeleteForumTopicFailureCallback",
               null
             ),
-            Object(z.c)([u.a], l.prototype, "SetToWaiting", null),
-            Object(z.c)([u.a], l.prototype, "OnDelete", null),
-            Object(z.c)([u.a], l.prototype, "OnChangeDeleteForum", null),
+            Object(z.c)([s.a], l.prototype, "SetToWaiting", null),
+            Object(z.c)([s.a], l.prototype, "OnDelete", null),
+            Object(z.c)([s.a], l.prototype, "OnChangeDeleteForum", null),
             l
           );
         })(H.Component),
@@ -11363,9 +11395,9 @@
               }
               return H.createElement("span", null);
             }),
-            Object(z.c)([u.a], e.prototype, "OnDeleteVerifyRequest", null),
-            Object(z.c)([u.a], e.prototype, "OnDeleteSuccessAndComplete", null),
-            Object(z.c)([u.a], e.prototype, "OnChangeVisibilityDate", null),
+            Object(z.c)([s.a], e.prototype, "OnDeleteVerifyRequest", null),
+            Object(z.c)([s.a], e.prototype, "OnDeleteSuccessAndComplete", null),
+            Object(z.c)([s.a], e.prototype, "OnChangeVisibilityDate", null),
             (e = Object(z.c)([r.a], e))
           );
         })(H.Component);
@@ -12373,7 +12405,7 @@
                       )
                     : t.push(
                         H.createElement(
-                          s.b,
+                          u.b,
                           { key: "link_" + e.name, to: e.url },
                           e.name
                         )
@@ -13239,9 +13271,9 @@
                   null
               );
             }),
-            Object(z.c)([u.a], t.prototype, "OpenEnvelope", null),
-            Object(z.c)([u.a], t.prototype, "ShowLimitedUserDialog", null),
-            Object(z.c)([u.a], t.prototype, "VOOnClose", null),
+            Object(z.c)([s.a], t.prototype, "OpenEnvelope", null),
+            Object(z.c)([s.a], t.prototype, "ShowLimitedUserDialog", null),
+            Object(z.c)([s.a], t.prototype, "VOOnClose", null),
             (t = Object(z.c)([r.a], t))
           );
         })(H.Component),
@@ -13724,8 +13756,8 @@
                   )
                 : null;
             }),
-            Object(z.c)([u.a], e.prototype, "ShowMoreRows", null),
-            Object(z.c)([u.a], e.prototype, "OnUpdateSearch", null),
+            Object(z.c)([s.a], e.prototype, "ShowMoreRows", null),
+            Object(z.c)([s.a], e.prototype, "OnUpdateSearch", null),
             (e = Object(z.c)([r.a], e))
           );
         })(_.a.Component),
@@ -13865,7 +13897,7 @@
                 y
               );
             }),
-            Object(z.c)([u.a], t.prototype, "OnClickPurchase", null),
+            Object(z.c)([s.a], t.prototype, "OnClickPurchase", null),
             (t = Object(z.c)([r.a], t))
           );
         })(H.Component),
@@ -14539,8 +14571,8 @@
                 })
               );
             }),
-            Object(z.c)([u.a], e.prototype, "OnBroadcastStreamsLoaded", null),
-            Object(z.c)([u.a], e.prototype, "OnChangeDayIndex", null),
+            Object(z.c)([s.a], e.prototype, "OnBroadcastStreamsLoaded", null),
+            Object(z.c)([s.a], e.prototype, "OnChangeDayIndex", null),
             (e = Object(z.c)([r.a], e))
           );
         })(H.Component),
@@ -14898,7 +14930,7 @@
                 t
               );
             }),
-            Object(z.c)([u.a], e.prototype, "OnTabSelected", null),
+            Object(z.c)([s.a], e.prototype, "OnTabSelected", null),
             (e = Object(z.c)([r.a], e))
           );
         })(H.Component),
@@ -15598,10 +15630,11 @@
                         return "events" !== r.section_type
                           ? [3, 13]
                           : ((C = void 0),
-                            r.smart_section &&
-                            "recent_events" === r.smart_section_type
-                              ? [4, Qa.GetRecentEventsForSalesPage(i)]
-                              : [3, 10]);
+                            !r.smart_section ||
+                            ("recent_events" !== r.smart_section_type &&
+                              "recent_tagged_events" !== r.smart_section_type)
+                              ? [3, 10]
+                              : [4, Qa.GetRecentEventsForSalesPage(i)]);
                       case 8:
                         return (
                           (O = e.sent()),
@@ -16022,9 +16055,9 @@
                   )
               );
             }),
-            Object(z.c)([u.a], e.prototype, "ShowMoreContents", null),
-            Object(z.c)([u.a], e.prototype, "LoadCapsules", null),
-            Object(z.c)([u.a], e.prototype, "OnResize", null),
+            Object(z.c)([s.a], e.prototype, "ShowMoreContents", null),
+            Object(z.c)([s.a], e.prototype, "LoadCapsules", null),
+            Object(z.c)([s.a], e.prototype, "OnResize", null),
             (e = a = Object(z.c)([r.a], e))
           );
         })(H.Component);
@@ -16192,7 +16225,7 @@
                 )
               );
             }),
-            Object(z.c)([u.a], e.prototype, "OnEnter", null),
+            Object(z.c)([s.a], e.prototype, "OnEnter", null),
             e
           );
         })(H.Component),
@@ -16412,7 +16445,7 @@
                     )
                 : _.a.createElement(K.a, null);
             }),
-            Object(z.c)([u.a], e.prototype, "InfiniteScrollCloseModal", null),
+            Object(z.c)([s.a], e.prototype, "InfiniteScrollCloseModal", null),
             (e = Object(z.c)([r.a], e))
           );
         })(_.a.Component),
@@ -16618,8 +16651,8 @@
                 )
               );
             }),
-            Object(z.c)([u.a], e.prototype, "ShowModal", null),
-            Object(z.c)([u.a], e.prototype, "CloseModal", null),
+            Object(z.c)([s.a], e.prototype, "ShowModal", null),
+            Object(z.c)([s.a], e.prototype, "CloseModal", null),
             e
           );
         })(_.a.Component),

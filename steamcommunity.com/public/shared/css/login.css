@@ -765,6 +765,28 @@ body.login .loginbox {
 	height: 78px;
 }
 
+.banner_ctn {
+	display: flex;
+	background: rgba(24, 26, 33, 0.76);
+	padding: 10px;
+	margin-top: 10px;
+}
+
+.banner_header_ctn {
+	color: #b8b6b4;
+	font-size: 14px;
+	padding: 10px;
+}
+
+.banner_header_title {
+	color: #FFFFFF;
+	font-size: 20px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: normal;
+	margin-bottom: 5px;
+}
+
 .checkout_error {
 	padding: 16px;
 	background: rgba( 0, 0, 0, 0.2 );

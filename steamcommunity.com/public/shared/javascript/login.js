@@ -514,7 +514,7 @@ CLoginPromptManager.prototype.OnLoginResponse = function( results )
 		}
 		else if ( results.agreement_session_url )
 		{
-			window.location = results.agreement_session_url;
+			window.location = results.agreement_session_url + '&redir=' + this.m_strBaseURL;
 		}
 		else
 		{
