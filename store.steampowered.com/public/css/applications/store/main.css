@@ -4184,7 +4184,8 @@ textarea:-webkit-autofill:focus,
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  outline: none; }
+  outline: none;
+  font-family: 'Motiva Sans', Arial, Helvetica, sans-serif; }
   .gamehover_GameHoverCapsuleCtn_2jsr3:hover {
     color: white; }
   .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_TrailerCtn_1I27K {
@@ -4269,6 +4270,7 @@ textarea:-webkit-autofill:focus,
           .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_TagRow_2SWQM .gamehover_Tags_fTGVi .gamehover_Tag_1wO-t {
             padding: 0px 6px;
             margin-bottom: 4px;
+            line-height: 17px;
             border-radius: 2px;
             background-color: #6868af;
             color: white;
@@ -4536,7 +4538,7 @@ span.partnersaledisplay_vr_required_1P__h {
 .partnersaledisplay_SaleSectionTabs_1FPIV {
   top: 0px;
   position: sticky;
-  z-index: 150;
+  z-index: 99;
   left: 0px;
   right: 0px;
   margin-left: 0px;
