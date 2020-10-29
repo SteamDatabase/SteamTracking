@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6173400";
+var CLSTAMP = "6173987";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [37],
   {
@@ -1187,7 +1187,7 @@ var CLSTAMP = "6173400";
             }),
             (l.ParseCalendarEventPresentersFromText = function(e) {
               for (
-                var t = /\[\W*speaker(\W.*?)\](.*?)\[\W*\/speaker\W*\]/gis,
+                var t = /\[\W*speaker(\W[\s\S]*?)\]([\s\S]*?)\[\W*\/speaker\W*\]/gi,
                   n = new Array();
                 ;
 
@@ -1215,7 +1215,7 @@ var CLSTAMP = "6173400";
             }),
             (l.ParseEventAppReferencesFromText = function(e) {
               for (
-                var t = /\/\/store\.steampowered\.com\/app\/(\d+)/gis,
+                var t = /\/\/store\.steampowered\.com\/app\/(\d+)/gi,
                   n = new Set();
                 ;
 
@@ -35741,6 +35741,7 @@ var CLSTAMP = "6173400";
               (this.m_bFinishedSearchingBackward = !1),
               (this.m_rgCalendarSections = []),
               (this.m_rgFutureSections = []),
+              (this.m_collectionMetaData = void 0),
               (this.m_key = e),
               m.a.HintLoad();
           }
@@ -35813,6 +35814,25 @@ var CLSTAMP = "6173400";
             }),
             (e.prototype.GetCalendarEndTime = function() {
               return this.m_key.rtCalendarEnd;
+            }),
+            (e.prototype.SetCollectionMetaData = function(e) {
+              this.m_collectionMetaData = e;
+            }),
+            (e.prototype.GetCollectionMetaData = function() {
+              return this.m_collectionMetaData;
+            }),
+            (e.prototype.BHasCollectionMetaData = function() {
+              return Boolean(this.m_collectionMetaData);
+            }),
+            (e.prototype.ValidateCollectionMetadata = function(e) {
+              return (
+                this &&
+                "object" == typeof this &&
+                this.clanid &&
+                "number" == typeof this.clanid &&
+                this.clan_event_gid &&
+                "string" == typeof this.clan_event_gid
+              );
             }),
             (e.prototype.SetFilteredView = function(e, t) {
               var n = this,
@@ -36050,7 +36070,10 @@ var CLSTAMP = "6173400";
                             n.backwardComplete &&
                               (t.m_bFinishedSearchingBackward = !0),
                             t.InitCalendarSections(),
-                            t.InitFutureCalendarSections();
+                            t.InitFutureCalendarSections(),
+                            t.ValidateCollectionMetadata(n.metadatainfo) &&
+                              !t.BHasCollectionMetaData() &&
+                              t.SetCollectionMetaData(n.metadatainfo);
                         }),
                         [2]
                       );
