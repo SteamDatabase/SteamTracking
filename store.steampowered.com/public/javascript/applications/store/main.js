@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6176206";
+var CLSTAMP = "6177207";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [37],
   {
@@ -1664,79 +1664,79 @@ var CLSTAMP = "6176206";
     "3+zv": function(e, t, n) {
       "use strict";
       n.d(t, "d", function() {
-        return M;
+        return y;
       }),
         n.d(t, "c", function() {
-          return A;
-        }),
-        n.d(t, "w", function() {
           return O;
         }),
-        n.d(t, "v", function() {
+        n.d(t, "w", function() {
           return S;
         }),
+        n.d(t, "v", function() {
+          return E;
+        }),
         n.d(t, "h", function() {
-          return L;
-        }),
-        n.d(t, "e", function() {
-          return D;
-        }),
-        n.d(t, "m", function() {
           return B;
         }),
-        n.d(t, "g", function() {
-          return z;
+        n.d(t, "e", function() {
+          return N;
         }),
-        n.d(t, "x", function() {
+        n.d(t, "m", function() {
+          return T;
+        }),
+        n.d(t, "g", function() {
           return j;
         }),
-        n.d(t, "t", function() {
+        n.d(t, "x", function() {
           return k;
         }),
-        n.d(t, "r", function() {
+        n.d(t, "t", function() {
           return R;
         }),
-        n.d(t, "s", function() {
+        n.d(t, "r", function() {
           return G;
         }),
-        n.d(t, "q", function() {
+        n.d(t, "s", function() {
           return x;
         }),
-        n.d(t, "l", function() {
-          return F;
-        }),
-        n.d(t, "n", function() {
+        n.d(t, "q", function() {
           return P;
         }),
-        n.d(t, "u", function() {
+        n.d(t, "l", function() {
           return U;
         }),
-        n.d(t, "k", function() {
+        n.d(t, "n", function() {
+          return W;
+        }),
+        n.d(t, "u", function() {
           return q;
         }),
-        n.d(t, "y", function() {
+        n.d(t, "k", function() {
           return H;
         }),
-        n.d(t, "a", function() {
+        n.d(t, "y", function() {
           return V;
         }),
-        n.d(t, "o", function() {
+        n.d(t, "a", function() {
           return X;
         }),
-        n.d(t, "b", function() {
+        n.d(t, "o", function() {
           return Y;
         }),
-        n.d(t, "j", function() {
+        n.d(t, "b", function() {
           return Q;
         }),
-        n.d(t, "f", function() {
+        n.d(t, "j", function() {
           return K;
         }),
-        n.d(t, "i", function() {
+        n.d(t, "f", function() {
           return J;
         }),
-        n.d(t, "p", function() {
+        n.d(t, "i", function() {
           return Z;
+        }),
+        n.d(t, "p", function() {
+          return $;
         });
       var o = n("mrSG"),
         i = n("kLLr"),
@@ -1762,48 +1762,49 @@ var CLSTAMP = "6176206";
         b = n("YyVH"),
         _ = n("ZeAL"),
         v = n("5izx"),
-        g = [13, 14, 17, 18, 19, 22, 23, 24, 35, 25, 26, 28, 15, 32, 10];
-      function M(t) {
+        g = n("uIWk"),
+        M = [13, 14, 17, 18, 19, 22, 23, 24, 35, 25, 26, 28, 15, 32, 10];
+      function y(t) {
         return (
-          g.some(function(e) {
+          M.some(function(e) {
             return e == t.GetEventType();
           }) &&
           !t.BHasTag("steam_award_nomination_request") &&
           !t.BHasTag("curator")
         );
       }
-      var y = [20, 31, 34];
-      function A(t) {
+      var A = [20, 31, 34];
+      function O(t) {
         return (
-          !y.some(function(e) {
+          !A.some(function(e) {
             return e == t.GetEventType();
           }) && !t.BHasTag("curator")
         );
       }
       new Set([9, 11, 20, 21, 22, 23, 24, 25, 26, 27, 31, 35]);
-      var O = 593110,
-        S = [O, 766, 221410],
-        E = 4145017,
-        C = 4,
-        w = 20;
-      function L(e) {
-        return -1 !== (2 == m.c.EUNIVERSE ? [w] : [C, E]).indexOf(e);
+      var S = 593110,
+        E = [S, 766, 221410],
+        C = 4145017,
+        w = 4,
+        L = 20;
+      function B(e) {
+        return -1 !== (2 == m.c.EUNIVERSE ? [L] : [w, C]).indexOf(e);
       }
-      var B,
-        T,
-        I = [12, 34];
-      function D(t) {
+      var T,
+        I,
+        D = [12, 34];
+      function N(t) {
         return (
-          !I.some(function(e) {
+          !D.some(function(e) {
             return e == t.GetEventType();
           }) && !t.BHasTag("curator")
         );
       }
-      ((T = B = B || {})[(T.k_EEventStateUnpublished = 0)] =
+      ((I = T = T || {})[(I.k_EEventStateUnpublished = 0)] =
         "k_EEventStateUnpublished"),
-        (T[(T.k_EEventStateStaged = 1)] = "k_EEventStateStaged"),
-        (T[(T.k_EEventStateVisible = 2)] = "k_EEventStateVisible");
-      var N = [
+        (I[(I.k_EEventStateStaged = 1)] = "k_EEventStateStaged"),
+        (I[(I.k_EEventStateVisible = 2)] = "k_EEventStateVisible");
+      var z = [
         "topwishlisted",
         "trendingwishlisted",
         "popularcomingsoon",
@@ -1816,10 +1817,10 @@ var CLSTAMP = "6176206";
         "discounted",
         "price"
       ];
-      function z(e) {
-        return 0 <= N.indexOf(e);
+      function j(e) {
+        return 0 <= z.indexOf(e);
       }
-      var j = [
+      var k = [
         {
           label: "#Sale_BrowserSortOption_TopWishlisted",
           flavor: "topwishlisted",
@@ -1876,7 +1877,7 @@ var CLSTAMP = "6176206";
           tooltip: "#Sale_BrowserSortOption_Price_ttip"
         }
       ];
-      function k(e) {
+      function R(e) {
         switch (e) {
           case "links":
             return { nMaxItemsPerRow: 5, nItemMinimumWidth: 200 };
@@ -1884,22 +1885,22 @@ var CLSTAMP = "6176206";
             return { nMaxItemsPerRow: 4, nItemMinimumWidth: 300 };
         }
       }
-      function R(e) {
+      function G(e) {
         return e.carousel_rows || 1;
       }
-      function G(e) {
+      function x(e) {
         return e.cap_item_count || 0;
       }
-      function x(e) {
+      function P(e) {
         return e.cap_section_content
           ? e.cap_section_row_count && 0 < e.cap_section_row_count
             ? e.cap_section_row_count
             : 4
           : 0;
       }
-      var P,
-        W,
-        F = {
+      var W,
+        F,
+        U = {
           capsules: [],
           events: [],
           links: [],
@@ -1908,39 +1909,39 @@ var CLSTAMP = "6176206";
           default_label: "#Sale_default_label",
           section_type: "items"
         };
-      function U(e) {
+      function q(e) {
         switch (e) {
-          case P.k_EGameOfTheYear:
+          case W.k_EGameOfTheYear:
             return 1;
-          case P.k_EVRGameOfTheYear:
+          case W.k_EVRGameOfTheYear:
             return 2;
-          case P.k_ELaborOfLove:
+          case W.k_ELaborOfLove:
             return 3;
-          case P.k_EBetterWithFriends:
+          case W.k_EBetterWithFriends:
             return 4;
-          case P.k_EMostInnovativeGameplay:
+          case W.k_EMostInnovativeGameplay:
             return 5;
-          case P.k_EOutstandingStoryRichGame:
+          case W.k_EOutstandingStoryRichGame:
             return 6;
-          case P.k_EBestGameYouSuckAt:
+          case W.k_EBestGameYouSuckAt:
             return 7;
-          case P.k_EOutstandingVisualStyle:
+          case W.k_EOutstandingVisualStyle:
             return 8;
-          case P.k_ENone:
+          case W.k_ENone:
           default:
             return 0;
         }
       }
-      ((W = P = P || {}).k_ENone = "none"),
-        (W.k_EGameOfTheYear = "goty"),
-        (W.k_EVRGameOfTheYear = "vrgoty"),
-        (W.k_ELaborOfLove = "love"),
-        (W.k_EBetterWithFriends = "friends"),
-        (W.k_EMostInnovativeGameplay = "gameplay"),
-        (W.k_EOutstandingStoryRichGame = "storyrich"),
-        (W.k_EBestGameYouSuckAt = "yousuck"),
-        (W.k_EOutstandingVisualStyle = "visual");
-      var q = Object(o.a)(
+      ((F = W = W || {}).k_ENone = "none"),
+        (F.k_EGameOfTheYear = "goty"),
+        (F.k_EVRGameOfTheYear = "vrgoty"),
+        (F.k_ELaborOfLove = "love"),
+        (F.k_EBetterWithFriends = "friends"),
+        (F.k_EMostInnovativeGameplay = "gameplay"),
+        (F.k_EOutstandingStoryRichGame = "storyrich"),
+        (F.k_EBestGameYouSuckAt = "yousuck"),
+        (F.k_EOutstandingVisualStyle = "visual");
+      var H = Object(o.a)(
           Object(o.a)(
             {
               localized_subtitle: new Array(30),
@@ -1968,8 +1969,8 @@ var CLSTAMP = "6176206";
           ),
           { bScheduleEnabled: !1, scheduleEntries: [] }
         ),
-        H = "old_announce_",
-        V = [
+        V = "old_announce_",
+        X = [
           "steam_blog_featured",
           "workshop",
           "steam_blog",
@@ -2003,7 +2004,7 @@ var CLSTAMP = "6176206";
           "auto_rssfeed",
           "auto_migrated"
         ],
-        X = [
+        Y = [
           "patchnotes",
           "steam_award_nomination_request",
           "steam_award_vote_request",
@@ -2016,7 +2017,7 @@ var CLSTAMP = "6176206";
           "curator_group_members",
           "curator_public"
         ],
-        Y = {
+        Q = {
           capsule: { width: 800, height: 450 },
           spotlight: { width: 2108, height: 460 },
           background: { width: 1920, height: 622 },
@@ -2049,36 +2050,36 @@ var CLSTAMP = "6176206";
           product_mobile_banner_override: { width: 500, height: 160 },
           schedule_track_art: { width: 196, height: 92 }
         };
-      function Q(e, t, n) {
-        var r = Y[n];
+      function K(e, t, n) {
+        var r = Q[n];
         return (
           !!r &&
           (!!r.bDisableEnforceDimensions || (e === r.width && t === r.height))
         );
       }
-      function K(e, t, n) {
-        var r = Y[n];
+      function J(e, t, n) {
+        var r = Q[n];
         return (
           !!r &&
           (!r.bDisableEnforceDimensions && (e === r.width && t === r.height))
         );
       }
-      function J(e, t, n) {
-        var r = Y[n];
+      function Z(e, t, n) {
+        var r = Q[n];
         return (
           !!r &&
           (!!r.bDisableEnforceDimensions || !(e < r.width || t < r.height))
         );
       }
-      var Z = (function() {
+      var $ = (function() {
         function r() {
           (this.type = 1),
             (this.appid = 0),
             (this.name = new Map()),
             (this.description = new Map()),
             (this.timestamp_loc_updated = new Map()),
-            (this.visibility_state = B.k_EEventStateUnpublished),
-            (this.jsondata = q),
+            (this.visibility_state = T.k_EEventStateUnpublished),
+            (this.jsondata = H),
             (this.nCommentCount = 0),
             (this.nVotesUp = 0),
             (this.nVotesDown = 0),
@@ -2480,13 +2481,13 @@ var CLSTAMP = "6176206";
           (r.prototype.BIsVisibleEvent = function() {
             var e = Math.floor(v.a.GetTimeNowWithOverride());
             return (
-              this.visibility_state == B.k_EEventStateVisible &&
+              this.visibility_state == T.k_EEventStateVisible &&
               e > this.visibilityStartTime &&
               (this.visibilityEndTime < 10 || e < this.visibilityEndTime)
             );
           }),
           (r.prototype.BIsStagedEvent = function() {
-            return this.visibility_state == B.k_EEventStateStaged;
+            return this.visibility_state == T.k_EEventStateStaged;
           }),
           (r.prototype.GetStartTimeAndDateUnixSeconds = function() {
             return this.startTime;
@@ -2658,6 +2659,27 @@ var CLSTAMP = "6176206";
           }),
           (r.prototype.GetSaleVanity = function() {
             return this.jsondata.sale_vanity_id;
+          }),
+          (r.prototype.GetSaleURL = function() {
+            return Boolean(this.jsondata.sale_vanity_id)
+              ? this.jsondata.sale_vanity_id_valve_approved_for_sale_subpath
+                ? m.c.STORE_BASE_URL + "sale/" + this.jsondata.sale_vanity_id
+                : g.a.BHasCreatorHomeLoaded(this.clanSteamID)
+                ? g.a.GetCreatorHome(this.clanSteamID).GetURL("developer") +
+                  "sale/" +
+                  this.jsondata.sale_vanity_id
+                : m.c.STORE_BASE_URL +
+                  "curator/" +
+                  this.clanSteamID.GetAccountID() +
+                  "/sale/" +
+                  this.jsondata.sale_vanity_id
+              : m.c.STORE_BASE_URL +
+                  "newshub/" +
+                  (this.appid
+                    ? "app/" + this.appid
+                    : "group/" + this.clanSteamID.GetAccountID()) +
+                  "/view/" +
+                  this.GID;
           }),
           (r.prototype.BHasEmailEnabled = function() {
             return (
@@ -35764,6 +35786,9 @@ var CLSTAMP = "6176206";
                   : this.BIsSingleAppCalendar()
               );
             }),
+            (e.prototype.GetKey = function() {
+              return this.m_key;
+            }),
             (e.prototype.BEventMatchCalendarSingleSource = function(e) {
               return (
                 (this.BIsSingleAppCalendar() &&
@@ -35826,12 +35851,12 @@ var CLSTAMP = "6176206";
             }),
             (e.prototype.ValidateCollectionMetadata = function(e) {
               return (
-                this &&
-                "object" == typeof this &&
-                this.clanid &&
-                "number" == typeof this.clanid &&
-                this.clan_event_gid &&
-                "string" == typeof this.clan_event_gid
+                e &&
+                "object" == typeof e &&
+                e.clanid &&
+                "number" == typeof e.clanid &&
+                e.clan_event_gid &&
+                "string" == typeof e.clan_event_gid
               );
             }),
             (e.prototype.SetFilteredView = function(e, t) {
@@ -36071,9 +36096,11 @@ var CLSTAMP = "6176206";
                               (t.m_bFinishedSearchingBackward = !0),
                             t.InitCalendarSections(),
                             t.InitFutureCalendarSections(),
-                            t.ValidateCollectionMetadata(n.metadatainfo) &&
-                              !t.BHasCollectionMetaData() &&
-                              t.SetCollectionMetaData(n.metadatainfo);
+                            t.SetCollectionMetaData(
+                              t.ValidateCollectionMetadata(n.metadatainfo)
+                                ? n.metadatainfo
+                                : null
+                            );
                         }),
                         [2]
                       );
@@ -36385,6 +36412,7 @@ var CLSTAMP = "6176206";
             ),
             Object(h.c)([s.C], e.prototype, "m_rgCalendarSections", void 0),
             Object(h.c)([s.C], e.prototype, "m_rgFutureSections", void 0),
+            Object(h.c)([s.C], e.prototype, "m_collectionMetaData", void 0),
             Object(h.c)([s.k], e.prototype, "InitCalendarSections", null),
             Object(h.c)([s.k], e.prototype, "InitFutureCalendarSections", null),
             Object(h.c)(
@@ -59451,15 +59479,7 @@ var CLSTAMP = "6176206";
                         q.a,
                         {
                           className: Object(x.a)(R.a.Button),
-                          href:
-                            F.c.STORE_BASE_URL +
-                            (t.jsondata
-                              .sale_vanity_id_valve_approved_for_sale_subpath
-                              ? "sale/"
-                              : "curator/" +
-                                t.clanSteamID.GetAccountID() +
-                                "/sale/") +
-                            t.jsondata.sale_vanity_id
+                          href: t.GetSaleURL()
                         },
                         Object(P.f)("#Event_Button_VisitSalePage")
                       )
