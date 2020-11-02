@@ -4034,7 +4034,6 @@
               var _ = [];
               Object(I.b)(E.c.EREALM) ||
                 _.push(
-                  s(1461450),
                   s(870780),
                   s(1190460, void 0, void 0, { itemclass: [3] }),
                   s(570, he, Object(N.f)("#HeroCluster_dota_subtitile")),
@@ -4044,7 +4043,7 @@
                   s(632470, ge)
                 );
               for (var h = [], b = 0; b < Math.max(p.length, _.length); b++)
-                b < _.length && h.push(_[b]), b < p.length && h.push(p[b]);
+                b < p.length && h.push(p[b]), b < _.length && h.push(_[b]);
               t(new Ne(Ee, h)),
                 t(
                   new Ne(
