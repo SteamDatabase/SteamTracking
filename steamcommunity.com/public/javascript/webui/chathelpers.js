@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6171364";
+var CLSTAMP = "6183698";
 !(function(e) {
   function t(t) {
     for (
@@ -127,7 +127,7 @@ var CLSTAMP = "6171364";
                 15: "ee77090be8255eda4ec2",
                 16: "80f1f1bfef47291c28fb",
                 17: "91ad659d80a103a62196",
-                18: "ac3a1a3c14b6edfd7eb0",
+                18: "316870237b2b50c3b936",
                 19: "97a53d13d96d3d7cf08b",
                 20: "e99fa8bac428303767d9",
                 21: "93860d9d3ed713990a82",
@@ -149,35 +149,35 @@ var CLSTAMP = "6171364";
                 37: "0ea82066cafc59d7309a",
                 38: "e5d6b8dee4ef0ef22455",
                 39: "dd555942eeebcf691e37",
-                40: "8171d9620c4e8e149856",
-                41: "bf9f70400092adb7c2e3",
-                42: "1844d91542b5aabd2099",
-                43: "228d4e802088d3c7ae75",
-                44: "da3ca30d109745a2dd0f",
-                45: "fa71eaad52c530bd0e6f",
-                46: "89878e5f9e19e86fa66e",
-                47: "d322eff30a5b879e47c7",
-                48: "76814377e3e16fb41aef",
-                49: "de4db093c8e08dbf2f33",
-                50: "713de1c373113a4677c1",
-                51: "b67baa986f9571c12c7f",
-                52: "df8e2a36aae87f3287bb",
-                53: "800ebdc5cb284d412f5c",
-                54: "956255e5c8a845c5c80b",
-                55: "fd1cba5a7ceb59f3e8a9",
-                56: "7a650c7f18cc52821b1d",
-                57: "c46b2bc4cf394f29e0ca",
-                58: "e4de130456ab40d24488",
-                59: "5674ebf52961b259730c",
+                40: "f76e166c721630e7176a",
+                41: "598e8f732c12f97d0df6",
+                42: "e74f0c454e9bb287ed5e",
+                43: "0a05b8794132c34e7501",
+                44: "f35f052bd5663238bdc6",
+                45: "d6419083e9c2fc89f9c0",
+                46: "ef875d909b551435d2d1",
+                47: "d1703f459b4c6693194c",
+                48: "3c289c57ef39cedf5749",
+                49: "f487a5727db9077bef52",
+                50: "904314cb867c91c217f3",
+                51: "1956c66d40249d5680e9",
+                52: "1cc558f9472b2ec1d0ed",
+                53: "83b8629393b4523f6135",
+                54: "f83a20f5be8eaf31695b",
+                55: "87ff502ec7e082a1a431",
+                56: "247d418eb322cdeae58f",
+                57: "e5c7cb30a33eed67273d",
+                58: "9297cdbb01d629ef8eea",
+                59: "60594bb0ef0593dae4f5",
                 60: "29bad8abfba4b2d73901",
-                61: "1e75f8d093e7e878715b",
-                62: "da19ab5bdf2a698c80b1",
-                63: "300153dde51af927877a",
-                64: "d871fe443812c2fbe5ed",
-                65: "402c7abf70f54c762154",
-                66: "4e2a1fd433fdfbaa72f9",
-                67: "f0928d0b9e61786d0276",
-                68: "f7d620de3bb4698ccad2"
+                61: "f15959d04de2b471f45b",
+                62: "ef04482f20d3d070e546",
+                63: "ab7081ba2d1db6f34d4b",
+                64: "47e552c56eb0444f2eaa",
+                65: "efdc5d0a75aa3c193385",
+                66: "ed28488eeafb0761da48",
+                67: "7c0bb62091114fb73096",
+                68: "947f67df65803fb4c455"
               }[e]
             );
           })(e));
@@ -1672,54 +1672,57 @@ var CLSTAMP = "6171364";
   },
   hEDq: function(e, t, n) {
     "use strict";
-    n.d(t, "n", function() {
+    n.d(t, "o", function() {
       return a;
     }),
-      n.d(t, "d", function() {
+      n.d(t, "e", function() {
         return s;
       }),
-      n.d(t, "f", function() {
+      n.d(t, "g", function() {
         return c;
       }),
-      n.d(t, "h", function() {
+      n.d(t, "i", function() {
         return u;
       }),
-      n.d(t, "c", function() {
+      n.d(t, "d", function() {
         return l;
       }),
-      n.d(t, "i", function() {
+      n.d(t, "j", function() {
         return f;
       }),
-      n.d(t, "k", function() {
+      n.d(t, "l", function() {
         return d;
       }),
-      n.d(t, "e", function() {
+      n.d(t, "f", function() {
         return p;
       }),
-      n.d(t, "p", function() {
+      n.d(t, "q", function() {
         return _;
       }),
-      n.d(t, "g", function() {
+      n.d(t, "h", function() {
         return h;
       }),
-      n.d(t, "b", function() {
+      n.d(t, "c", function() {
         return m;
       }),
-      n.d(t, "j", function() {
+      n.d(t, "k", function() {
         return b;
       }),
-      n.d(t, "l", function() {
+      n.d(t, "m", function() {
         return g;
       }),
-      n.d(t, "m", function() {
+      n.d(t, "n", function() {
         return v;
+      }),
+      n.d(t, "b", function() {
+        return E;
       });
     var r = n("mrSG"),
       i = n("0N1H");
     n.d(t, "a", function() {
       return i.a;
     }),
-      n.d(t, "o", function() {
+      n.d(t, "p", function() {
         return i.f;
       });
     var o = n("2vnA"),
@@ -1921,17 +1924,20 @@ var CLSTAMP = "6171364";
             "k_ERemoteClientLaunchRestrictedCountry");
       })(g || (g = {}));
     var v;
+    function E(e) {
+      return e === v.k_ESteamRealmChina;
+    }
     !(function(e) {
       (e[(e.k_ESteamRealmUnknown = 0)] = "k_ESteamRealmUnknown"),
         (e[(e.k_ESteamRealmGlobal = 1)] = "k_ESteamRealmGlobal"),
         (e[(e.k_ESteamRealmChina = 2)] = "k_ESteamRealmChina");
     })(v || (v = {}));
-    var E, C, S, y, I;
+    var C, S, y, I, j;
     !(function(e) {
       (e[(e.Unknown = 0)] = "Unknown"),
         (e[(e.Wired = 1)] = "Wired"),
         (e[(e.Wireless = 2)] = "Wireless");
-    })(E || (E = {})),
+    })(C || (C = {})),
       (function(e) {
         (e[(e.NotPresent = 0)] = "NotPresent"),
           (e[(e.Failed = 1)] = "Failed"),
@@ -1940,7 +1946,7 @@ var CLSTAMP = "6171364";
           (e[(e.Connecting = 4)] = "Connecting"),
           (e[(e.Connected = 5)] = "Connected"),
           (e[(e.Retrying = 6)] = "Retrying");
-      })(C || (C = {})),
+      })(S || (S = {})),
       (function(e) {
         (e[(e.None = 0)] = "None"),
           (e[(e.StaticWep = 1)] = "StaticWep"),
@@ -1950,17 +1956,17 @@ var CLSTAMP = "6171364";
           (e[(e.Wpa2 = 16)] = "Wpa2"),
           (e[(e.Wpa2Enterprise = 32)] = "Wpa2Enterprise"),
           (e[(e.Unsupported = 32768)] = "Unsupported");
-      })(S || (S = {})),
+      })(y || (y = {})),
       (function(e) {
         (e[(e.SystemKey0 = 0)] = "SystemKey0"),
           (e[(e.SystemKey1 = 1)] = "SystemKey1");
-      })(y || (y = {})),
+      })(I || (I = {})),
       (function(e) {
         (e[(e.Hidden = 0)] = "Hidden"),
           (e[(e.Notification = 1)] = "Notification"),
           (e[(e.Overlay = 2)] = "Overlay"),
           (e[(e.Opaque = 3)] = "Opaque");
-      })(I || (I = {}));
+      })(j || (j = {}));
   },
   mrSG: function(e, t, n) {
     "use strict";
@@ -2259,7 +2265,7 @@ PERFORMANCE OF THIS SOFTWARE.
         }),
         (e.IsELanguageValidInRealm = function(e, t) {
           return (
-            t === (29 === e ? a.m.k_ESteamRealmChina : a.m.k_ESteamRealmGlobal)
+            t === (29 === e ? a.n.k_ESteamRealmChina : a.n.k_ESteamRealmGlobal)
           );
         }),
         (e.GetLanguageListForRealms = function(e) {

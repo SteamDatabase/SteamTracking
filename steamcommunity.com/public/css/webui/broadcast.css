@@ -364,6 +364,7 @@
   flex-direction: column; }
   .broadcast_embeddable_broadcast_floating_39rrm .broadcast_embeddable_PopOutVideoTitleBar_9UmMH {
     display: flex;
+    justify-content: space-between;
     width: 100%;
     flex-direction: row;
     flex-wrap: nowrap;

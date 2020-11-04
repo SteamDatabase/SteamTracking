@@ -276,7 +276,8 @@ function BuildGameRow( gameInfo, bViewingOwnProfile )
 	div.hide();
 	$(document.body).appendChild(div);
 
-	if ( !bSteamChina && statsLinks )
+	if ( statsLinks )
+
 	{
 		gameInfo['stats_links'] = statsLinks;
 		gameInfo['stats_button'] = gameStatsTemplate.evaluate(gameInfo);

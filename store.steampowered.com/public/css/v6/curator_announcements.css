@@ -88,7 +88,8 @@ body.v6 h2.announcement_top_title{
 
 
 .creator_announcement_browse_adjustment{
-
+    z-index: 2;
+    position: relative;
 }
 
 @media screen and (max-width: 1400px) {
