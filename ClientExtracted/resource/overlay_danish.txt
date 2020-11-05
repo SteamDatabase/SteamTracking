@@ -12,7 +12,7 @@
 "Overlay_SettingsDescriptionApp"	"Steam kan forblive aktiv og give dig meddelelser fra Steam-fællesskabet samt et komplet 'venner'-interface, mens du bruger en applikation."
 "Overlay_SettingsEnable"	"Slå Steam-overlayet til mens du spiller"
 "Overlay_SettingsEnableApp"	"Slå Steam-fællesskabet til, mens du bruger en applikation"
-"Overlay_SettingsSCTenfootEnable"	"Brug Big Picture-overlayet, når der bruges en Steam-input-aktiveret controller fra skrivebordet"
+"Overlay_SettingsSCTenfootEnable"	"Brug Big Picture-overlayet, når der bruges en Steam Input-aktiveret controller fra skrivebordet"
 "Overlay_SettingsHotKeyLabel"	"Overlay-genvejstaster"
 "Overlay_SettingsScreenshotHotKeyLabel"	"Skærmbillede-genvejstaster"
 "Overlay_SettingsScreenshotActionLabel" "Når et skærmbillede tages"

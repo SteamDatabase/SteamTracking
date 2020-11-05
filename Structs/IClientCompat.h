@@ -5,6 +5,7 @@ public:
     virtual unknown_ret EnableCompat(bool) = 0;
     virtual unknown_ret GetAvailableCompatTools(CUtlVector<CUtlString, CUtlMemory<CUtlString> >*) = 0;
     virtual unknown_ret GetAvailableCompatToolsFiltered(CUtlVector<CUtlString, CUtlMemory<CUtlString> >*, ERemoteStoragePlatform) = 0;
+    virtual unknown_ret GetAvailableCompatToolsForApp(CUtlVector<CUtlString, CUtlMemory<CUtlString> >*, unsigned int) = 0;
     virtual unknown_ret SpecifyCompatTool(unsigned int, char const*, char const*, int) = 0;
     virtual unknown_ret BIsCompatibilityToolEnabled(unsigned int) = 0;
     virtual unknown_ret GetCompatToolName(unsigned int) = 0;

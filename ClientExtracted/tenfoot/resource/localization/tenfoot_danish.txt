@@ -280,7 +280,7 @@
 	"MainMenu_Welcome_Controller_Update_BusyMonth" "Det har været en travl måned siden Steam Controlleren officielt blev lanceret, og med fællesskabets hjælp er den allerede vokset stort. Foruden de nye funktioner i opdateringen i dag vil vi gerne fremhæve nogle af de andre store funktioner, der er blevet tilføjet i den forgangne måned:"
 
 	"MainMenu_Welcome_Controller_Update_Gyro_Header" "Gyro"
-	"MainMenu_Welcome_Controller_Update_Gyro_Description" "Én af fællesskabets største opdagelser var, hvor godt FPS-sigte fungerede, når man kombinerede trackpad- og gyroinput. Fællesskabsmedlemmerne konstaterede, at når de afhang af trackpaden til store sving, og gyroen til finjustering, så følte de sig mere konkurrencedygtige, end de havde forventet."
+	"MainMenu_Welcome_Controller_Update_Gyro_Description" "Én af fællesskabets største opdagelser var, hvor godt FPS-sigte fungerede, når man kombinerede trackpad- og gyroinput. Fællesskabet konstaterede, at når de var afhængige af trackpaden til store sving, og gyroen til finjustering, så følte de sig mere konkurrencedygtige, end de havde forventet."
 	"MainMenu_Welcome_Controller_Update_Gyro_SeeVideo" "Se video"
 
 
@@ -293,10 +293,10 @@
 	"MainMenu_Welcome_Controller_Update_TouchMenu_Description2" "Tilføj og tilpas denne menu i ethvert spil!"
 
 	"MainMenu_Welcome_Controller_Update_MouseRegions_Header" "Museregioner"
-	"MainMenu_Welcome_Controller_Update_MouseRegions_Description" "Mange RTS- og RPG-spil til PC har indviklede brugergrænseflader på skærmen til minikort, besværgelsesbjælker, inventarplader osv. For at gøre det lettere at navigere dem hurtigt tilføjede vi museregioner; en konfigurerbar måde at tilknytte en hel trackpad til en region på skærmen."
+	"MainMenu_Welcome_Controller_Update_MouseRegions_Description" "Mange RTS- og RPG-spil til PC har indviklede brugergrænseflader på skærmen til minikort, besværgelsesbjælker, inventarpladser osv. For at gøre det lettere at navigere i dem hurtigt tilføjede vi museregioner; en konfigurerbar måde at tilknytte en hel trackpad til en region på skærmen."
 
 	"MainMenu_Welcome_Controller_Update_ConfigurationTravelling_Header" "Transportable konfigurationer"
-	"MainMenu_Welcome_Controller_Update_ConfigurationTravelling_Description" "Har du lyst til at spille nogle coop-spil hos en ven? Vi ville gøre det let at tage sin controller med sig, så i dag udgiver vi en ny funktion der sikrer, at din controllers spilkonfigurationer følger med den, selv når du spiller et coop-spil på en vens Steam-konto.\n\n*På nuværende tidspunkt tilgængeligt i Steam-betaklienten"
+	"MainMenu_Welcome_Controller_Update_ConfigurationTravelling_Description" "Har du lyst til at spille nogle co-op-spil hos en ven? Vi ville gøre det let at tage controlleren med sig, så i dag udgiver vi en ny funktion, der sikrer, at din controllers spilkonfigurationer følger med den, selv når du spiller et co-op-spil på en vens Steam-konto.\n\n*På nuværende tidspunkt tilgængeligt i Steam-betaklienten"
 
 	"MainMenu_Welcome_Controller_Update_HomeTheaterPC_Header" "Hjemmebiograf-PC'er"
 	"MainMenu_Welcome_Controller_Update_HomeTheaterPC_Description" "En af de ting, vi ikke forventede, var, at der ville være så mange brugere som erfarede, at Steam Controlleren er god til at styre deres HTPC, når de ikke bruger den til spil. Disse brugere er kommet med mange gode forslag, og det er allerede lykkedes os at implementere nogle af dem."
@@ -306,12 +306,12 @@
 	"MainMenu_Welcome_Controller_Update_Shortcut_Description" "Endnu en ting, fællesskabet har bedt om, er muligheden for at dele konfigurationer til spil, som man har købt andre steder end Steam. Dagens opdatering tilføjer også denne funktionalitet, så tilføj dine foretrukne ikke-Steam-spil til dit bibliotek og så finder vi automatisk konfigurationerne, som andre brugere har udgivet til dem."
 
 	"MainMenu_Welcome_Controller_Update_ControllerHUD_Header" "Controller-HUD"
-	"MainMenu_Welcome_Controller_Update_ControllerHUD_Description" "Idet fællesskabet hurtigt skaber og deler så mange måder at bruge Steam Controlleren på, ville vi gøre det lettere at lære, hvordan din controller fungerer. Det nye Controller-HUD lader dig med lethed se præcis hvilke input, din controller genererer."
+	"MainMenu_Welcome_Controller_Update_ControllerHUD_Description" "Fællesskabet skaber og deler hurtigt så mange måder at bruge Steam Controlleren på, så vi ville gøre det lettere at lære, hvordan din controller fungerer. Det nye Controller-HUD gør det nemt at se, præcis hvilke input controlleren genererer."
 
 	"MainMenu_Welcome_Sub_NoProd_H"		"Opdag de bedste nye spil"
-	"MainMenu_Welcome_Sub_NoProd_D"		"Hop forbi Steam-butikken for at finde gode tilbud på de nyeste spil, eller gennemse butikken for at finde klassiske spil, du måske har savnet. Tjek gratis at spille-spil for noget gratis underholdning, eller udforsk titler med tidlig adgang for at blive involveret med spil, mens de bliver udviklet."
-	"MainMenu_Welcome_Sub_NoFriends_H"	"Hold trit med dine venner"
-	"MainMenu_Welcome_Sub_NoFriends_D"	"Alt skønt ved at have Steam-venner på din PC er nu tilgængeligt på dit TV. Chat, hold styr på, hvad de spiller, kommenter på deres skærmbilleder og fællesskabsindhold og mere."
+	"MainMenu_Welcome_Sub_NoProd_D"		"Smut forbi Steam-butikken for at finde gode tilbud på de nyeste spil, eller gennemse butikken for at finde klassiske spil, du måske har misset. Tjek gratisspil for noget gratis underholdning, eller udforsk titler med tidlig adgang for at blive involveret i spil, mens de bliver udviklet."
+	"MainMenu_Welcome_Sub_NoFriends_H"	"Hold kontakten med dine venner"
+	"MainMenu_Welcome_Sub_NoFriends_D"	"Alt det gode ved at have Steam-venner på din PC er nu tilgængeligt på dit TV. Chat med dem, se, hvad de spiller, kommenter på skærmbilleder og fællesskabsindhold m.m."
 	"MainMenu_Welcome_Sub_NoFriends_E"	"Slut dig til de millioner af andre spillere på Steam. Du kan føje enhver anden spiller til din venneliste og chatte, kommentere på de skærmbilleder og videoer, de slår op, invitere dem til multiplayer-spil og meget mere."
 
 	"MainMenu_Welcome_Sub_Friends_Hint"	"VENNER"
@@ -335,13 +335,13 @@
 	"MainMenu_Welcome_Sub_Controller_5_Hint"		"ÅBN TASTATUR"
 
 	"MainMenu_Welcome_Sub_Security_PhoneA"					"Tilføj et SMS-telefonnummer"
-	"MainMenu_Welcome_Sub_Security_PhoneB"					"Hvis du har glemt din adgangskode, eller bare ikke kan logge på din konto, kan Steam sende dig en SMS for at få dig ind og spille spil igen."
+	"MainMenu_Welcome_Sub_Security_PhoneB"					"Hvis du har glemt din adgangskode eller bare ikke kan logge på din konto, kan Steam sende dig en SMS for at få dig ind og spille spil igen."
 	"MainMenu_Welcome_Sub_Security_TwoFactorA"				"Bedre kontosikkerhed\nmed tofaktorgodkendelse"
-	"MainMenu_Welcome_Sub_Security_TwoFactorB"				"E-mailkonti kan nemt brydes. Beskyt dine spil og genstande ved at sikre, at kun du kan få adgang til din Steam-konto. Få Steam-mobilapp'en nu."
+	"MainMenu_Welcome_Sub_Security_TwoFactorB"				"Det er nemt at kompromittere e-mailkonti. Beskyt dine spil og emner ved at sikre, at kun du kan få adgang til din Steam-konto. Hent Steam-mobilappen nu."
 	"MainMenu_Welcome_Sub_Security_DescAction_Phone_Controller"		"Tryk på <img src=\"file://{images}/library/controller/controller_button_a.png\"/> for at tilføje et telefonnummer til din konto"
 	"MainMenu_Welcome_Sub_Security_DescAction_Phone_MouseKB"		"Klik her for at tilføje et telefonnummer til din konto"
 	"MainMenu_Welcome_Sub_Security_DescAction_TwoFactor_Controller"	"Tryk på <img src=\"file://{images}/library/controller/controller_button_a.png\"/> for at lære mere og hente mobil-app'en"
-	"MainMenu_Welcome_Sub_Security_DescAction_TwoFactor_MouseKB"	"Klik her for at lære mere og få mobilapp'en"
+	"MainMenu_Welcome_Sub_Security_DescAction_TwoFactor_MouseKB"	"Klik her for at lære mere og få mobilappen"
 
 	"Test_MainLabel" "Steam 10'\nTEXT..................!"
 
@@ -720,9 +720,9 @@
 	"SettingsAbout_RAM"					"{s:ram_gb} GB"
 	"SettingsAbout_VideoCardLabel"		"Grafikkort"
 	"SettingsAbout_VideoCard"			"{s:video_card}"
-	"SettingsAbout_DriverVersionLabel"	"Driver-version"
+	"SettingsAbout_DriverVersionLabel"	"Driverversion"
 	"SettingsAbout_DriverVersion"		"{s:video_driver_version}"
-	"SettingsAbout_DriverDateLabel"		"Driver-dato"
+	"SettingsAbout_DriverDateLabel"		"Driverdato"
 	"SettingsAbout_DriverDate"			"{s:video_driver_date}"
 	"SettingsAbout_VideoRAMLabel"		"Videohukommelse"
 	"SettingsAbout_VideoRAM"			"{s:vram_gb} GB"
@@ -791,10 +791,10 @@
 	"SettingsFriends_SetPersonaName"		"INDSTIL PROFILNAVN"
 
 	// Settings, display screen
-	"SettingsDisplay_Intro"					"Steam kører i et kantløst vindue, som passer til din skrivebordsopløsning. Opløsningen, du har valgt nedenfor, vil styre den maksimale interne renderingsopløsning, før UI'en præsenteres i vinduet.\n\nFor at forbedre ydelsen kan du sænke målopløsningen til 720p eller lavere."
+	"SettingsDisplay_Intro"					"Steam kører i et kantløst vindue, som passer til din skrivebordsopløsning. Opløsningen, du vælger nedenfor, bestemmer den maksimale interne renderingsopløsning, før grænsefladen vises i vinduet.\n\nFor at forbedre ydelsen kan du sænke målopløsningen til 720p eller lavere."
 	"SettingsDisplay_DisplayDevice"				"Skærmenhed"
 	"SettingsDisplay_DisplayDeviceValue"			"{s:gpuinfostring}"
-	"SettingsDisplay_WindowSize"				"Vinduestørrelse"
+	"SettingsDisplay_WindowSize"				"Vinduesstørrelse"
 	"SettingsDisplay_SurfaceSize"				"Aktuel opløsning"
 	"SettingsDisplay_WindowSizeValue"			"{s:windowsize}"
 	"SettingsDisplay_SurfaceSizeValue"			"{s:surfacesize}"
@@ -811,12 +811,12 @@
 	"SettingsDisplay_Brightness"				"Juster lysstyrke"
 
 	// Settings, language
-	"SettingsLanguage_Intro"				"Vælg sproget som Steam skal bruge:"
+	"SettingsLanguage_Intro"				"Vælg sproget, som Steam skal bruge:"
 	"SettingsLanguage_Change_Title"			"Skift sprog"
 	"SettingsLanguage_Change_Description"	"Genstart Steam med dette sprog?"
 
 	// Settings, ingame screen
-	"SettingsInGame_Intro"					"Steam-overlayet giver dig adgang til Steam-fællesskabet og web-funktioner, mens du spiller spil."
+	"SettingsInGame_Intro"					"Steam-overlayet giver dig adgang til Steam-fællesskabet og webfunktioner, mens du spiller spil."
 	"SettingsInGame_Enable"					"Slå Steam-overlayet til"
 	"SettingsInGame_Overlay"				"Overlay"
 	"SettingsInGame_ShortcutKey"			"Tastaturgenvej"
@@ -833,23 +833,23 @@
 	"SettingsDownloads_Intro"				"Indstillinger for Steam-download"
 	"SettingsDownloads_LibrariesLabel"	"Indholdsbiblioteker"
 	"SettingsDownloads_LibraryFolders"	"STEAM-BIBLIOTEKSMAPPER"
-	"SettingsDownloads_RegionLabel"		"Vælg dit download-område"
+	"SettingsDownloads_RegionLabel"		"Vælg dit downloadområde"
 	"SettingsDownloads_ScheduleLabel"	"Planlæg automatiske opdateringer"
 	"SettingsDownloads_RegionsInfo"	"Steam vælger automatisk placeringen af den nærmeste indholdsserver, men denne kan ændres"
 	"SettingsDownloads_Restrictions"	"Download-begrænsninger"
 	"SettingsDownloads_TimeLimits"	"Begræns opdateringer til:"
-	"SettingsDownloads_TimeLimitFrom"	"Mellem"
-	"SettingsDownloads_TimeLimitTo"	"Og"
+	"SettingsDownloads_TimeLimitFrom"	"mellem"
+	"SettingsDownloads_TimeLimitTo"	"og"
 	"SettingsDownloads_Throttling"	"Begræns båndbredde til"
 	"SettingsDownloads_ChangeRegion_Title"			"Skift region"
 	"SettingsDownloads_ChangeRegion_Description"	"Du skal genstarte Steam før denne ændring anvendes"
 	"SettingsDownloads_No_Throttle"	"Ingen begrænsning"
 	"SettingsDownloads_AllowDownloadsDuringGameplay"	"Tillad downloads under spil"
-	"SettingsDownloads_AllowDownloadsDuringGameplayDetails"	"Hvis dette er afkrydset, kan Steam starte eller fortsætte download af opdateringer, mens du har et spil eller et andet Steam-program kørende. Du kan også manuelt vælge dette per spil i dit bibliotek."
+	"SettingsDownloads_AllowDownloadsDuringGameplayDetails"	"Hvis dette er markeret, kan Steam starte eller fortsætte download af opdateringer, mens du har et spil eller et andet Steam-program kørende. Du kan også manuelt vælge dette pr. spil i dit bibliotek."
 	"SettingsDownloads_ThrottleDownloadsWhileStreaming"	"Begræns downloads under streaming"
-	"SettingsDownloads_ThrottleDownloadsWhileStreamingDetails"	"Hvis denne er afkrydset, vil Steam begrænse downloadhastigheden for at sikre en god oplevelse med Steam Remote Play."
+	"SettingsDownloads_ThrottleDownloadsWhileStreamingDetails"	"Hvis dette er markeret, vil Steam begrænse downloadhastigheden for at sikre en god oplevelse med Steam Remote Play."
 	"SettingsDownloads_ShowDownloadRatesInBits"	"Vis downloadhastigheder i bits per sekund"
-	"SettingsDownloads_ThrottleShowDownloadRatesInBitsDetails"	"Hvis dette er afkrydset vil Steam vise downloadhastigheder i bits per sekund, f.eks. \"4 Mbps\" i stedet for \"500 KB/s\"."
+	"SettingsDownloads_ThrottleShowDownloadRatesInBitsDetails"	"Hvis dette er markeret, vil Steam vise downloadhastigheder i bits pr. sekund, f.eks. \"4 Mbps\" i stedet for \"500 KB/s\"."
 	
 	// Settings, network screen
 	//
@@ -947,7 +947,7 @@
 
 	// Settings, Keyboard input
 	"SettingsKeyboard_Description1"	"Vælg hvilken standard-inputtype skærmtastaturet skal bruge"
-	"SettingsKeyboard_Description2"	"Vælg hvilket standard-inputsprog skærmtastaturet skal bruge"
+	"SettingsKeyboard_Description2"	"Vælg, hvilket standardinputsprog skærmtastaturet skal bruge"
 	"SettingsKeyboard_UseDualTouch" "Brug standard-skærmtastaturet"
 	"SettingsKeyboard_UseDaisyWheel" "Brug Daisywheel-skærmtastaturet"
 	"SettingsKeyboard_UILanguage"	"Brug et tilpasset inputsprog"
@@ -1026,7 +1026,6 @@
 	"SettingsController_SteamDongleVersion"			"{s:receiverfirmwaretimestring} ({i:receiverfirmwaretime32})"
 	"SettingsController_SteamDongleVersionWired"	"Tilsluttet via kabel"
 	"SettingsController_ControllerAction"					"{s:controlleraction}"
-	"SettingsController_Detected"				""
 	"SettingsController_ConfigureController"		"Rediger styring"
 	"SettingsController_DifferentLook"					"Bemærk: din gamepad kan se anderledes ud end denne."
 	"SettingsController_PressButton"						"Hvis din gamepad har en knap i et område, magen til den vist foroven, anbefaler vi den til den valgte handling.\n\nDet kan være, det er nemmere hvis du bruger et tastatur, når du er på denne skærm."
@@ -1821,7 +1820,6 @@
 	"Library_Details_CancelControllerDetails" "ANNULLER"
 	"Library_Details_CloseControllerDetails" "LUK"
 	"Library_ControllerBindingsTitle" "{s:gamename}-bindinger"
-	"Library_Details_Controller_ButtonUnset"	""
 	"Library_Details_ControllerChooseBinding"	"GENNEMSE"
 	"Library_Details_ControllerEditBinding"		"REDIGER"
 	"Library_Details_ControllerUseBinding"		"BRUG"
@@ -2394,7 +2392,7 @@
 	"Library_Details_EnableRumble"			"[Eksperimentelt] Rumleemulering"
 	"Library_Details_EnableRealRumble"		"Vibrationsindstilling"
 	"Library_SetAppRumbleFrequency_Label"	"Rumleemulering: Frekvensindstilling"
-	"Library_Details_EnableConfigurator"		"Indstillinger for Steam-input pr. spil (kræver, at spillet genstartes)"
+	"Library_Details_EnableConfigurator"		"Steam Input-indstillinger pr. spil (kræver, at spillet genstartes)"
 	"Library_Details_EnableActionSetDisplay"	"Vis handlingssæt ved skift"
 	"Library_Details_EnableActionSetBeep"		"Bip ved skift"
 
@@ -2690,7 +2688,7 @@
 
 	"Library_Settings_Organize"				"Organiser"
 	"Library_Settings_Preferences"			"Præferencer"
-	"Library_Settings_ControllerSettings"	"Steam-input"
+	"Library_Settings_ControllerSettings"	"Steam Input"
 	"Library_Settings_Support"				"Support"
 	"Library_Settings_Content"				"Indhold"
 	"Library_Settings_Misc"					"Mere"
@@ -2699,7 +2697,7 @@
 	"Library_CategoryHeader" "Dine kategorier"
 	"Library_TypeHeader" "Begræns efter type"
 	"Library_NameHeader" "Begræns efter navn"
-	"Library_FilterHeader" "Filtrer efter {s:apptype}"
+	"Library_FilterHeader" "Filtrer efter: {s:apptype}"
 	"Library_InstalledLocally" "Installeret lokalt"
 	"Library_GamesICanPlay" "Spil der kan spilles"
 	"Library_VRFilter" "Understøtter VR"
@@ -3111,7 +3109,6 @@
 	"Friends_ClanStatus_Chat0_Game1_Online1"	"{i:numfriendsingame} i spil, {i:numfriendsonline} online"
 	"Friends_ClanStatus_Chat0_Game1_Online0"	"{i:numfriendsingame} i spil"
 	"Friends_ClanStatus_Chat0_Game0_Online1"	"{i:numfriendsonline} online"
-	"Friends_ClanStatus_Chat0_Game0_Online0"	""
 	"Friends_AddFriend_Instructions"			  "Vælg for at tilføje en ven"
 	"Friends_JoinGroup_Instructions"			  "Vælg for at tilmelde dig en gruppe"
 	"Friends_AddFriend"			"TILFØJ VEN"
@@ -3380,7 +3377,7 @@
 	"Downloads_Summary_TotalAmount"	"I alt : {s:downloadamount}"
 	"Downloads_Summary_PeakRate"		"Højeste : {s:downloadpeakrate}"
 	"Downloads_Summary_CurrentRate"	"Nuværende : {s:downloadrate}"
-	"Downloads_Summary_Settings_btn"    "Download-indstillinger"
+	"Downloads_Summary_Settings_btn"    "Downloadindstillinger"
 
 	"Downloads_None"	"Ingen downloads i gang"
 
@@ -3429,7 +3426,7 @@
 	"Quit_GoOnline"				"Gå online..."
 	"Quit_Shutdown"				"Luk ned for systemet"
 	"Quit_Restart"				"Genstart systemet"
-	"Quit_Sleep"				"Sæt systemet i slumretilstand"
+	"Quit_Sleep"				"Gå i slumretilstand"
 	"Quit_TurnOffController"		"Sluk controller"
 	"Quit_SwitchToHDMIInput"	"Skift til HDMI-input"
 	"Quit_ZeroTracker"			"Nulstil siddende position"
@@ -3476,7 +3473,6 @@
 	"DeviceAuth_StoppedSharedGame_Title" "Advarsel om delt bibliotek"
 	"DeviceAuth_StoppedSharedGame_Text" "Steam afsluttede \"{s:game}\", fordi {s:owner} bruger dette spilbibliotek på nuværende tidspunkt."
 
-	"Settings_ManageDevices_Item" " "
 	"Settings_ManageDevices_Name" "ENHEDSNAVN"
 	"Settings_ManageDevices_Time" "SIDST TILGÅET"
 	"Settings_ManageDevices_User" "AF STEAM-BRUGER"
@@ -3499,7 +3495,7 @@
 	"Settings_Family_Sharing_Title" "Familiebiblioteksdeling"
 	"Settings_Family_Sharing_ManageSharing" "Administrer andre computere ..."
 	"Settings_Family_Sharing_StateAuthorized" "Denne computer er lige nu godkendt af dig til familiebiblioteksdeling.\nUdvalgte konti kan bruge dit spilbibliotek, mens de er logget ind her."
-	"Settings_Family_Sharing_StateNotAuthorized" "At godkende denne computer til familiebiblioteksdeling tillader udvalgte konti at bruge dit spilbibliotek her, mens du ikke spiller."
+	"Settings_Family_Sharing_StateNotAuthorized" "Hvis du godkender denne computer til familiebiblioteksdeling, kan udvalgte konti bruge dit spilbibliotek her, når du ikke spiller."
 	"Settings_Family_Sharing_AuthorizeDevice" "Godkend denne computer"
 	"Settings_Family_Sharing_DeauthorizeDevice" "Fjern godkendelsen af denne computer"
 	"Settings_Family_Sharing_AuthorizeError" "Kunne ikke godkende computer ({s:reason})"
@@ -3510,7 +3506,7 @@
 	"Settings_Family_Sharing_BorrowerError" "Kunne ikke opdatere låner ({s:reason})"
 	"Settings_Family_Sharing_AuthorizedBorrower" "Godkendte konti"
 	"Settings_Family_Sharing_List_Empty" "Ingen andre lokale konti blev fundet."
-	"Settings_Family_Sharing_Borrowers" "Vælg op til 5 personer som må bruge dit spilbibliotek på dine godkendte computere. Følgende brugere har tidligere logget på Steam på en eller flere af dine delte computere."
+	"Settings_Family_Sharing_Borrowers" "Vælg op til 5 personer, som må bruge dit spilbibliotek på godkendte computere. Følgende brugere har tidligere logget på Steam på en eller flere af dine delte computere."
 
 	"Settings_RemoteClients_Title" "Remote Play"
 	"Settings_RemoteClients_Description" "Stream gameplay fra din computer til andre enheder.\nFor at forbinde dem skal du blot logge på den samme Steam-konto på en anden computer eller vælge \"Anden computer\" på din Steam Link."
@@ -3529,7 +3525,7 @@
 	"Settings_RemoteClients_QualityBeautiful" "Smuk"
 	"Settings_RemoteClients_AdvancedHostOptions" "Avancerede værtsindstillinger"
 	"Settings_RemoteClients_AdvancedHostOptions_Title" "Avancerede værtsindstillinger"
-	"Settings_RemoteClients_AdvancedHostOptions_Description" "Kvaliteten på din streaming-oplevelse kan forbedres ved at slå nedenstående indstillinger til eller fra."
+	"Settings_RemoteClients_AdvancedHostOptions_Description" "Kvaliteten på din streamingoplevelse kan forbedres ved at slå nedenstående indstillinger til eller fra."
 	"Settings_RemoteClients_AdvancedClientOptions" "Avancerede klientindstillinger"
 	"Settings_RemoteClients_AdvancedClientOptions_Title" "Avancerede klientindstillinger"
 	"Settings_RemoteClients_AdvancedClientOptions_DescriptionLocal" "For at forbedre streamingen til denne computer kan du prøve at reducere dit spils opløsning eller justere følgende indstillinger."
@@ -3598,7 +3594,7 @@
 	"Settings_RemoteClients_Streaming_ControllerOverlayHotkeyY"	"Y-knap"
 	"Settings_RemoteClients_Streaming_ControllerOverlayHotkeyNone"	"Slået fra"
 	"Settings_RemoteClients_EnableTouchController"	"Slå touch-styring til"
-	"Settings_RemoteClients_StreamingSupport"	"Vis support-oplysninger"
+	"Settings_RemoteClients_StreamingSupport"	"Vis supportoplysninger"
 
 	"Settings_RemoteClients_Connected" "Computer tilsluttet"
 	"Settings_RemoteClients_Paired" "Enhed tilknyttet"
@@ -3746,9 +3742,9 @@
 	"SettingsInterface_Search_Google"	"Google"
 	"SettingsInterface_Search_Bing"	"Bing"
 	"SettingsInterface_Search_Custom"	"Tilpasset (avanceret)"
-	"SettingsInterface_SearchProvider" "Standard søgemaskine:"
+	"SettingsInterface_SearchProvider" "Standardsøgemaskine:"
 	"SettingsInterface_SearchProvider_Custom" "Indtast URL:"
-	"SettingsInterface_TouchMode"	"Slå grænseflade med touch-skærmstilstand til"
+	"SettingsInterface_TouchMode"	"Slå touch-tilstand til"
 
 	"Overlay_EnterGameText"	"Indtast tekst som skal sendes til spillet"
 	"Overlay_OpenKeyboard"	"Åbn tastatur"
@@ -3885,7 +3881,6 @@
 	"Music_Transport_X_Of_Y"	"{i:CurrentQueueEntry} af {i:QueueCount} - {s:QueueDuration}"
 	"Music_Transport_X_Tracks" "{i:QueueCount} numre - {s:QueueDuration}"
 	"Music_Transport_X_Track" "{i:QueueCount} nummer - {s:QueueDuration}"
-	"Music_Transport_No_Tracks"	""
 	"Music_Transport_Footer_Pause" "PAUSE"
 	"Music_Transport_Footer_Play" "AFSPIL"
 	"Music_Transport_Footer_More" "MERE"
@@ -3932,7 +3927,6 @@
 	"Music_Library_Setup_Entry_ButtonLabel" "-"
 	"Music_Library_Setup_Select_To_Add_Library" "Vælg for at tilføje bibliotek"
 	"Music_Library_Setup_Marked_For_Removal" "Mappe markeret for fjernelse"
-	"Music_Library_Setup_Mark_For_Removal" " "
 	"Music_Library_Setup_Footer_Done"	"FÆRDIG"
 	"Music_Library_Setup_Footer_Cancel" "ANNULLER"
 	"Music_Library_Setup_Footer_Select" "VÆLG"
@@ -4162,7 +4156,6 @@
 	"SettingsRemoteControl_Text"			"For at fjernstyre Steam skal den tilknyttes med en enhed. Forneden ses en liste over tilknyttede eller blokerede enheder. Du kan også fjerne tilknytningen eller blokeringen af enhederne på denne liste."
 	"SettingsRemoteControl_DevicesHeader"	"ENHEDER"
 	"SettingsRemoteControl_Enable"			"Slå fjernkontrol til"
-	"SettingsRemoteControl_Item"			" "
 	"SettingsRemoteControl_Name"			"ENHEDSNAVN"
 	"SettingsRemoteControl_NameUnknown"		"Unavngivet enhed"
 	"SettingsRemoteControl_Access"			"ADGANG"
@@ -4199,7 +4192,7 @@
 	"Settings_Broadcast_ShowChat" "Vis seers chat i spil"
 	"Settings_Broadcast_PermissionsHeader" "Indstilling for synlighed"
 	"Settings_Broadcast_BitrateHeader" "Maksimal bitrate"
-	"Settings_Broadcast_DimensionsHeader" "Video-dimensioner"
+	"Settings_Broadcast_DimensionsHeader" "Videodimensioner"
 	"Settings_Broadcast_ShowChat_Off" "Fra"
 	"Settings_Broadcast_ShowChat_LeftTop" "Øverst til venstre"
 	"Settings_Broadcast_ShowChat_RightTop" "Øverst til højre"
@@ -4392,8 +4385,8 @@
 	"SettingsInterface_ClearWebCacheMsg"	"Slet alle filer i den indbyggede webbrowser-cache?"
 
 	"SettingsDiskManagement_UnknownApp" "Ukendt navn"
-	"Settings_DiskManagement"	"Diskadministrering"
-	"Settings_DiskManagement_Intro" "Følgende emner er installeret på din lokale harddisk. For at frigøre diskplads kan du vælge at slette lokalt indhold. Bemærk at slettede emner forbliver i dit Steam-bibliotek, men for at kunne spille dem fremover er du nødt til at downloade deres indhold igen."
+	"Settings_DiskManagement"	"Diskhåndtering"
+	"Settings_DiskManagement_Intro" "Følgende emner er installeret på din lokale harddisk. For at frigøre diskplads kan du vælge at slette lokalt indhold. Bemærk, at slettede emner forbliver i dit Steam-bibliotek, men for at kunne spille dem fremover er du nødt til at downloade indholdet igen."
 	"Settings_DiskManagement_Folder" "Vælg biblioteksmappe "
 	"Settings_DiskManagement_App"	"EMNE"
 	"Settings_DiskManagement_Size"	"STØRRELSE PÅ DISK"
@@ -5028,10 +5021,10 @@
 	"SettingsController_ModifiedByOfficial" "Ændret af dig, baseret på den officielle spilkonfiguration."
 	"SettingsController_SwapToUnifiedPad"	"Skift til forenet flade"
 	"SettingsController_SwapToSplitPad"	"Skift til delt flade"
-	"SettingsController_GenericJoystickSetupText"	"Hvis understøttelse af generisk gamepad-konfiguration til Steam-input er slået til, vil det være rekonfigurerbart for hvert spil ved at bruge det samme konfigurationssystem, som er tilgængeligt til Steam-controllere."
-	"SettingsController_PS4SetupText"	"Hvis understøttelse af PlayStation-konfiguration til Steam-input er slået til, vil det være rekonfigurerbart for hvert spil ved at bruge det samme konfigurationssystem, som er tilgængeligt til Steam-controllere.\n\nBemærk: Når der tilsluttes via Bluetooth, skal controlleren genstartes, når understøttelse er fravalgt. Fravælgelse er heller ikke muligt for individuelle spil."
-	"SettingsController_XBoxSetupText"	"Hvis understøttelse af Xbox-konfiguration til Steam-input er slået til, vil det være rekonfigurerbart for hvert spil ved at bruge det samme konfigurationssystem, som er tilgængeligt til Steam-controllere.\n\nBemærk: I Windows skal du muligvis justere applikationsindstillingerne for Xbox DVR, før Guide-knappen registreres."
-	"SettingsController_SwitchSetupText"	"Hvis understøttelse af Switch-konfiguration til Steam-input er slået til, vil det være rekonfigurerbart for hvert spil ved at bruge det samme konfigurationssystem, som er tilgængeligt til Steam-controllere.\n\nBemærk: Denne indstilling skal være deaktiveret, for at Switch Pro-controllere fungerer i spil, som ikke er opstartet gennem Steam, når Steam kører."
+	"SettingsController_GenericJoystickSetupText"	"Hvis understøttelse af generisk gamepad-konfiguration til Steam Input er slået til, vil det være rekonfigurerbart for hvert spil ved at bruge det samme konfigurationssystem, som er tilgængeligt til Steam-controllere."
+	"SettingsController_PS4SetupText"	"Hvis understøttelse af PlayStation-konfiguration til Steam Input er slået til, vil det være rekonfigurerbart for hvert spil ved at bruge det samme konfigurationssystem, som er tilgængeligt til Steam-controllere.\n\nBemærk: Når der tilsluttes via Bluetooth, skal controlleren genstartes, når understøttelse er fravalgt. Fravælgelse er heller ikke muligt for individuelle spil."
+	"SettingsController_XBoxSetupText"	"Hvis understøttelse af Xbox-konfiguration til Steam Input er slået til, vil det være rekonfigurerbart for hvert spil ved at bruge det samme konfigurationssystem, som er tilgængeligt til Steam-controllere.\n\nBemærk: I Windows skal du muligvis justere applikationsindstillingerne for Xbox DVR, før Guide-knappen registreres."
+	"SettingsController_SwitchSetupText"	"Hvis understøttelse af Switch-konfiguration til Steam Input er slået til, vil det være rekonfigurerbart for hvert spil ved at bruge det samme konfigurationssystem, som er tilgængeligt til Steam-controllere.\n\nBemærk: Denne indstilling skal være deaktiveret, for at Switch Pro-controllere fungerer i spil, som ikke er opstartet gennem Steam, når Steam kører."
 	"SettingsController_NintendoLayoutSetupText"	"Hvis Nintendos layout er slået til, ændres konfigurationen på Switch Pro-controllerne, så A- og B-knapperne og X- og Y-knapperne bytter plads. Når controlleren bruges med X-input-standardlayoutet, vil dette hjælpe med at få knappernes navne til at passe bedre, men med et andet fysisk layout."
 	"SettingsController_GuideButtonSetupText" "Bemærk: I Windows kan det være, at du skal justere dine Xbox DVR-applikationsindstillinger, før Guide-knappen fungerer."
 	"SettingsController_TurnOffSetupText" "Hvis \"Sluk når Big Picture lukkes\" er slået til, vil Steam slukke for controllere, som er trådløst tilsluttet, når Steam lukker ned. 
@@ -6934,7 +6927,6 @@
 	"friend_item_friendname"	"{s:friend_name}"
 	"friend_item_persona_state"		"{s:persona_state_label}"
 	"friend_item_status_detail"		"{s:status_detail}"
-	"friend_item_in_chat"		""
 	"friend_item_lobby_invite"	"Invitation!"
 
 	"friends_chat_accept_game_invite"	"Accepter spilinvitation"
@@ -7082,9 +7074,9 @@
 
 	"ContentFrame_Header_Store" "Butik"
 
-	"SettingsKeyboard_DualtouchSuggestions"					"Vælg hvordan du vil have forslag vist, når du bruger standard-skærmtastaturet"
+	"SettingsKeyboard_DualtouchSuggestions"					"Vælg, hvordan du vil have forslag vist, når du bruger standardskærmtastaturet"
 	"SettingsKeyboard_DTSuggest_SuggestTypoCorrection"		"Kom med forslag baseret på nærliggende taster"
-	"SettingsKeyboard_DTSuggest_SuggestNoTypoCorrection"	"Vis kun forslag baseret på taster direkte trykket på"
+	"SettingsKeyboard_DTSuggest_SuggestNoTypoCorrection"	"Vis kun forslag baseret på det, der er indtastet"
 	"SettingsKeyboard_DTSuggest_NoSuggestions"				"Vis ikke forslag"
 	"SettingsKeyboard_UseSystemLanguage"					"(brug systemsprog)"
 

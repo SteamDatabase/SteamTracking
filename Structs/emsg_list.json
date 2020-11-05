@@ -1400,16 +1400,6 @@
         "server_type": 16
     },
     {
-        "emsg": 5549,
-        "flags": 2,
-        "server_type": -1
-    },
-    {
-        "emsg": 5550,
-        "flags": 2,
-        "server_type": -1
-    },
-    {
         "emsg": 5551,
         "flags": 2,
         "server_type": -1

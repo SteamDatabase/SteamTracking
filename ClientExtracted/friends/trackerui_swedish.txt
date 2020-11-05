@@ -342,7 +342,6 @@
 "Friends_Chat_ActionResultVoiceSlotsFull" "Röstchatt kan inte startas i %chat%. För få lediga talplatser."
 "Friends_Chat_VoiceStatus"		"%availslots% platser finns [%maxslots% totalt]."
 
-"Friends_GroupSectionInfo_Offline"				""
 "Friends_GroupSectionInfo_Online"					"%online% ONLINE"
 "Friends_GroupSectionInfo_OnlineInGame"			"%ingame% I SPEL, %online% ONLINE"
 "Friends_GroupSectionInfo_OnlineChatting"			"%inchat% I CHATT, %online% ONLINE"

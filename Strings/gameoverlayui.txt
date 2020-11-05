@@ -1,22 +1,17 @@
 !
 __TEXT
+p6
+p6
 __text
 __TEXT
-@q
-@q
+db$
 __stubs
 __TEXT
-T=%
-T=%
 __stub_helper
 __TEXT
-DG%
-DG%
 __cstring
 __TEXT
 __gcc_except_tab__TEXT
-ta'
-ta'
 __const
 __TEXT
 __objc_methname
@@ -25,14 +20,22 @@ __unwind_info
 __TEXT
 __eh_frame
 __TEXT
+n-
+n-
 __DATA
+p6
+p6
 __nl_symbol_ptr
 __DATA
+p6
+p6
 __got
 __DATA
 __la_symbol_ptr
 __DATA
-@
+Pq6
+H
+Pq6
 __mod_init_func
 __DATA
 __const
@@ -40,31 +43,40 @@ __DATA
 __cfstring
 __DATA
 __objc_imageinfo__DATA
+SB
+SB
 __objc_selrefs
 __DATA
+(SB
+(SB
 __objc_classrefs__DATA
+0UB
+0UB
 __data
 __DATA
 __thread_vars
 __DATA
+0+K
+0+K
 __thread_bss
 __DATA
+P+K
 __bss
 __DATA
-q=
+P/K
 __common
 __DATA
+mK
 H
 __LINKEDIT
-0L
+0K
 
 @
 @loader_path/gameoverlayui.dylib
 "
-|Z
+0K
+`_K
 P
-3X
-3X
 _
 
 8
@@ -114,8 +126,8 @@ h
 8
 /usr/lib/libobjc.A.dylib
 &
+@E
 )
-xUL
 C
 14CParentalCache
 23IClientParentalSettings
@@ -7066,6 +7078,9 @@ $
 0
 $
 (
+,
+0
+4
 $
 8
 (
@@ -7132,6 +7147,7 @@ $
 $
 (
 ,
+0
 0
 9CMsgKeyUp
 11CMsgKeyDown
@@ -7276,7 +7292,9 @@ $
 23CMsgSetForegroundWindow
 25CMsgMaximizeRestoreWindow
 18CMsgMinimizeWindow
+41CMsgShowBrowserContextMenu_ContextCommand
 26CMsgShowBrowserContextMenu
+28CMsgHandleContextMenuCommand
 21CMsgImeSetComposition
 17CMsgImeCommitText
 24CMsgImeCancelComposition
@@ -7574,11 +7592,81 @@ N4vgui10GraphPanelE
 N4vgui11HotKeyEntryE
 N4vgui22HotkeyEntryClearButtonE
 @
+C
+E
+F
+R
+e
+n
+d
+e
+r
+:
+a
+v
+g
+(
+%
+u
+m
+s
+)
+s
+t
+d
+d
+e
+v
+(
+%
+1
+.
+2
+f
+m
+s
+)
+l
+o
+n
+g
+(
+%
+u
+m
+s
+)
+O
+v
+e
+r
+l
+a
+y
+R
+e
+n
+d
+e
+r
+:
+V
+G
+U
+I
+R
+e
+n
+d
+e
+r
+:
 16HTMLComboBoxHost
 N4vgui4HTMLE
 N4vgui4HTML12CHTMLFindBarE
 14IHTMLResponses
 7IHTMLJS
+22CFrameEventPerfTracker
 16CHTMLProtoBufMsgI15CMsgFullRepaintE
 20CHTMLBaseProtoBufMsg
 16CHTMLProtoBufMsgI19CMsgBrowserPositionE
@@ -7607,6 +7695,7 @@ N4vgui4HTML12CHTMLFindBarE
 16CHTMLProtoBufMsgI12CMsgSetFocusE
 16CHTMLProtoBufMsgI13CMsgMouseMoveE
 16CHTMLProtoBufMsgI14CMsgMouseLeaveE
+16CHTMLProtoBufMsgI28CMsgHandleContextMenuCommandE
 16CHTMLProtoBufMsgI14CMsgViewSourceE
 16CHTMLProtoBufMsgI8CMsgCopyE
 16CHTMLProtoBufMsgI9CMsgPasteE
@@ -7865,10 +7954,8 @@ Assertion Failed: pSrc == pDest || pSrc > pDest + (srcWidth * srcHeight * 3) || 
 Assertion Failed: nWidth >= 0 && nHeight >= 0
 Assertion Failed: bufRGB.TellPut() == nWidth*nHeight*3
 Assertion Failed: bufRGBA.TellPut() == nWidth*nHeight * 4
-No room for new profile in vprof thread profile list, grow MAX_THREADS_TO_VPROF_AT_ONCE
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/vprof.h
-Assertion Failed: m_pvOrigNameAddress
 Assertion Failed: m_pParent
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/vprof.h
 log_files_always_flush
 0
 %s
@@ -8420,20 +8507,28 @@ LoadTGA: Only type 2 and 10 targa RGB images supported
 Texture_LoadTGA: Only 32 or 24 bit images supported (no colormaps)
 -community
 Set the community URL
-/usr/bin/open
+-store
+Set the store URL
 http://
 https://
+Assertion Failed: eRet != k_ESteamRealmUnknown
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/urlhelper.cpp
+/usr/bin/open
 https://%s.valve.org/community/
-https://china.beta.steamcommunity.com/
+https://community-china.beta.valve.org/
 https://beta.steamcommunity.com/
 https://community.csgo.com.cn/
+https://my.steamchina.com/
 https://steamcommunity.com/
 https://steam-chat.com/
 https://%s.valve.org/help/
+https://help-china.beta.valve.org/
 https://help.beta.steampowered.com/
+https://help.steamchina.com
 https://help.steampowered.com/
 %s/
 https://%s/store/
+https://store-china.beta.valve.org/
 https://store.beta.steampowered.com/
 https://store.steamchina.com/
 https://store.steampowered.com/
@@ -8441,6 +8536,7 @@ https://cdn.beta.steampowered.com/steamcommunity/beta/
 https://steamcdn-a.akamaihd.net/steamcommunity/public/
 https://steamcommunity-a.akamaihd.net/
 https://cdn.beta.steampowered.com/store
+https://media.st.dl.pinyuncloud.com/store
 https://steamcdn-a.akamaihd.net/store
 ://
 steam://
@@ -9205,9 +9301,6 @@ public/url_list.txt
 %mystuff%
 profiles/%llu
 %language%
-extended/StorefrontURL
-http://storefront.steampowered.com
-http://store.steampowered.com
 %storehttps%
 Steam_Language
 %community%
@@ -9224,6 +9317,8 @@ http://store.steampowered.com/news/
 CancelMicroTxn
 #Overlay_MicroTxnCancelDlgCancel
 CloseImmediately
+resource/steamchina_logo_overlay
+resource/steam_logo_big
 resource/layout/overlaydashboard_lores.layout
 resource/layout/overlaydesktop_lores.layout
 am
@@ -9416,7 +9511,6 @@ CBasePanel::OnTimedTrialStatus
 CBaseDashboardPanel
 CloseMenu
 CBaseDesktopPanel
-Assertion Failed: !m_data.HasError()
 CIPAndPort::GetIPv4 called on IPv6 address
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/netadr.h
 LabelTitle
@@ -9515,8 +9609,8 @@ developer
 Steam pid that launched us
 VGUI_Application_001
 OK
-Oct 28 2020
-16:45:29
+Nov  4 2020
+10:51:39
 crashhandler003
 gameoverlayui
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/overlay/gameoverlayui/main.cpp
@@ -11074,6 +11168,8 @@ vietnamese
 #Panorama_Selection_Vietnamese
 #Panorama_Lang_Vietnamese
 vi_VN
+SteamChina_SChinese
+sc_schinese
 htmlmessages.proto
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/html/htmlmessages.pb.cc
 CHECK failed: file != NULL:
@@ -11517,9 +11613,29 @@ Win
 HotKeyEntry
 resource/icon_clear_field
 HotkeyEntryClearButton
+-fast-overlay-html
+Uses new faster overlay HTML path
+-html-perf-monitor
+Draws html perf data
 resource/webkit.css
 ComboBoxHost
 contextmenu
+#Steam_Browser_Disabled_NoBrowser
+#Steam_Browser_Disabled
+BrowserDisabledMessage
+BrowserDisabledKBLink
+#Steam_Browser_Disabled_KB
+#Steam_Browser_Disabled_KB_URL
+DefaultFixed
+HTML::Paint()
+HTML.SearchInsetY
+HTML.SearchInsetX
+HTML.SearchTall
+HTML.SearchWide
+%s%s.html
+steam\cached\offline_
+%senglish.html
+file://%s
 #vgui_HTMLBack
 back
 #vgui_HTMLForward
@@ -11542,26 +11658,13 @@ viewsource
 toggledevtools
 #vgui_HTMLInspectElement
 inspectelement
-#Steam_Browser_Disabled_NoBrowser
-#Steam_Browser_Disabled
-BrowserDisabledMessage
-BrowserDisabledKBLink
-#Steam_Browser_Disabled_KB
-#Steam_Browser_Disabled_KB_URL
-HTML::Paint()
-HTML.SearchInsetY
-HTML.SearchInsetX
-HTML.SearchTall
-HTML.SearchWide
-%s%s.html
-steam\cached\offline_
-%senglish.html
-file://%s
+custom_%d
 AcceptPanel
 HTMLFramelessWrapper
 html-findbar
 HTML.SearchAnimationTime
 DeletePanel
+custom_
 FindBar
 Assertion Failed: ulPlatformParentWindow == 0
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/controls/HTML.cpp
@@ -11633,7 +11736,7 @@ data:image/
 HTMLComboBoxHost
 CHTMLFindBar
 Assertion Failed: m_nLockedIdx >= 0
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/html/ihtmlchrome.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/html/htmlpaintbuffer.h
 Assertion Failed: m_nLockedIdx == -1
 Assertion Failed: iNewReadIndex != 3
 HtmlPopup
@@ -12657,14 +12760,15 @@ Assertion Failed: context.m_vecStack.Count() <= 1
 Memory leak: mempool blocks left in memory: %d
 CMemoryPool::AddNewBlob: mode == GROW_NONE
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/mempool.cpp
+Assertion Failed: blobSize <= nMaxBlobSize
 Fatal Assertion Failed: pBlob
 CMemoryPool::Alloc: ran out of memory
 Assertion Failed: k_nMemPoolMagic_Free == *(( (int *) returnBlock) - 1)
 CMemoryPool
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/netadr.cpp
 loopback
 %i.%i.%i.%i
 %i.%i.%i.%i:%i
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/netadr.cpp
 %d.%d.%d.%d:%d
 Assertion Failed: m_usType == k_EIPTypeV6
 Assertion Failed: pvecAddressesOut != nullptr || pSingleOutput != nullptr
@@ -12713,10 +12817,6 @@ Assertion Failed: nMinCapacity > Capacity()
 Assertion Failed: nMinCapacity >= nChars
 Assertion Failed: nMinCapacity <= k_nMaxStringSize
 Assertion Failed: len > 0 || HasError()
-CUtlStringBuilder::ReplaceInternal
-Assertion Failed: pstrNew == pszString
-Assertion Failed: pstrNew == pstrDestination
-Assertion Failed: PrepareBuffer( nNewLength ) == pstrNew
 Error State on string being set.
 CUtlStringBuilder::Data::MoveToHeap
 Assertion Failed: s_bAllowStaticSymbolTable
@@ -12901,6 +13001,9 @@ Cant remove item
 Account has been deleted
 Account has an existing user cancelled license
 Denied due to community cooldown
+No launcher specified
+Must agree to SSA
+Client no longer supported
 Invalid
 Public
 Beta
@@ -13168,100 +13271,87 @@ Nov
 Dec
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
-K
-K
-K
-K
-K
-K
-K
-K
-K
-K
-K
-K
-K
-K
-K
-K
-K
-K
-K
-K
-K
-K
-K
-K
-B
-B
-z$
-P#
+"u&
+l$
+1$
+$
+$
+$
+0
+p
+p
+0
+$
+3"
+A
+A
+A
+A
+A
 6
-6
+A
+A
+w
+=I
 0
 p
-p
-0
-E#
-zJ
-$
-$
-$
-$
-$
-$
-$
-$
-$
-!"
-$
-)
-f#
-c"
-M"
-0
-p
-w#
 #
 #
 #
 #
 #
-'#
+#
+#
+#
+#
+c@
 !
-6
+!
 @
-"
-"
-"
+@
 @
 @
 "
 "
 "
-~!
+y3
+V"
 "
-d
-
-
-
-
-
-
-@G
-p
-0
-0
-p
-0
-0
-p
-0
-0
-p
-0
-0
+:"
+"
+"
+"
+"
+"
+"
+"
 l
+!
+d
+!
+!
+P?
+&
+
+
+
+
+
+
+b
+5
+p
+0
+0
+p
+0
+0
+p
+0
+0
+p
+0
+0
 p
 0
 p
@@ -13284,16 +13374,32 @@ p
 0
 @
 =
-R
-.
+Y
+?
+?
 0
-A
+
+0@
 Hi
+$
+4
 0
 p
 I
 I
-SD
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
 $
 @
 @
@@ -13304,21 +13410,14 @@ $
 ?
 A
 Hc
-J-
 =
-G,
-AA
-AA
-A
-A
-A
-A
-A
-A
-/A
-1
+h,
+-A
+2
+2
+@
+@
 Hc
-t>
 ?
 ?
 ?
@@ -13371,6 +13470,8 @@ c
 P
 (
 =
+H;=
+K&
 U
 @
 @
@@ -13518,9 +13619,16 @@ P
 @
 @
 ?
+$
 @
 @
+$
 ?
+$
+$
+$
+9
+9
 `
 `
 !
@@ -13550,65 +13658,66 @@ P
 "
 3
 D
-R7
-M7
-|7
+e7
+z7
+s7
+f7
+$7
 (
-@
-+
-6
-6
-6
-6
-e
-&
-&
-d%
-%
-v3
-$
-d
 7
+7
+7
+@
+'
+5
+5
+Y4
+n%
+%
+%
 
 
 
 
-!
-a
-C
+/3
+L95 Y3
+d
+
+N-
+:
+2
 
 
-
-
+d
 &
 &
--
+d
 t=
 =
 =
-
-
 @
-X,
-
-,
-,
-,
-,
 uV%
 
 
 E
 +
 +
-+
-+
-+
-+
 
 
 
+*
+*
+*
+*
+*
+*
 @
+*
+*
+*
+*
+*
+*
 *
 @
 @
@@ -13648,10 +13757,6 @@ E
 @
 @
 @
-)
-)
-)
-)
 .
 .
 .
@@ -13662,7 +13767,9 @@ d
 d
 d
 =
-HckS(
+d(
+<(
+(
 
 =
 =
@@ -13671,7 +13778,6 @@ HckS(
 @
 @
 @
-B
 @
 @
 @
@@ -13680,6 +13786,11 @@ B
 @
 0
 E
-a'
-_
+Hc5
+]'
+O'
+{
+F'
+Hc5FI'
+5
 p

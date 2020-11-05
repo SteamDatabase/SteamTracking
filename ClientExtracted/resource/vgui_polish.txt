@@ -13,7 +13,6 @@
 "FileOpenDialog_Look_in"	"Szukaj w:"
 "FileOpenDialog_File_Name"	"Nazwa pliku:"
 "FileOpenDialog_File_Type"	"Typ pliku:"
-"FileOpenDialog_Icon"		" "
 "FileOpenDialog_Name"		"Nazwa"
 "FileOpenDialog_Type"		"Typ"
 "SysMenu_Minimize"		"Minimalizuj"

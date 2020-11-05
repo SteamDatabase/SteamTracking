@@ -283,6 +283,7 @@ message CPublishedFile_GetUserFiles_Request {
 	optional uint32 return_playtime_stats = 31 [(description) = "Return playtime stats for the specified number of days before today."];
 	optional bool strip_description_bbcode = 32 [(description) = "Strips BBCode from descriptions."];
 	optional bool return_reactions = 35 [default = false, (description) = "If true, then reactions to items will be returned."];
+	optional uint32 startindex_override = 25 [(description) = "Backwards compatible for the client."];
 	optional .EPublishedFileRevision desired_revision = 33 [default = k_EPublishedFileRevision_Default, (description) = "Return the data for the specified revision."];
 }
 

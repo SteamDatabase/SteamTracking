@@ -257,7 +257,14 @@
           <Label class="FieldLabel" text="#Library_Details_FieldLabel_TouchBinding" />
           <ControllerBindingButton class="BindingButtonPropertiesMode" id="MouseRegionStickTouch" />
         </Panel>
-
+        <Panel class="FieldWrapper" modes="mouseregion" sources="gyro" advanced="off">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_GyroButtonInvert" />
+          <DropDown id="MouseRegionGyroButtonInvert" />
+        </Panel>
+        <Panel class="FieldWrapper" modes="mouseregion" sources="gyro" advanced="off">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_GyroButton" />
+          <DropDown id="GyroButtonMouseRegion" />
+        </Panel>
         <!-- Mouse Region Mode Advanced -->
         <Panel class="FieldWrapper" modes="mouseregion" advanced="on" gameactions="off">
           <Label class="FieldLabel" text="#Library_Details_FieldLabel_EdgeBinding" />
@@ -767,7 +774,7 @@
 					<Slider id="VerticalSensitivityMouseRegion" direction="horizontal" />
 				</Panel>
 				<!-- Mouse Region Mode Advanced -->
-        <Panel class="FieldWrapper" modes="mouseregion" modeshift="on" gameactions="off" advanced="on">
+        <Panel class="FieldWrapper" modes="mouseregion" gameactions="off" advanced="on">
           <Label class="FieldLabel" text="#Library_Details_FieldLabel_TeleportStart" />
           <DropDown id="TeleportStart" />
         </Panel>

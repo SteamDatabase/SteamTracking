@@ -657,8 +657,6 @@
 "Steam_RecoverAuthenticator_BadPassword"			"Неверный пароль. Пожалуйста, проверьте его и попытайтесь снова."
 "Steam_RecoverAuthenticator_BadCode"				"Неверный код или пароль. Пожалуйста, проверьте их и попробуйте еще раз."
 "Steam_RecoverAuthenticator_BadCodes"				"Неверный код или пароль. Пожалуйста, проверьте их и попробуйте снова."
-"Steam_RecoverAuthenticator_SupportURL"				""
-
 "Steam_RecoverAuthenticator_Done"					"Аутентификатор Steam Guard был удален.\n\nТеперь вы можете войти в свой аккаунт."
 
 
@@ -1452,7 +1450,6 @@
 "SteamUI_ThrottleEditLabel"				"Введите новое значение:"
 "SteamUI_ThrottleApplyChange"			"Применить"
 "Steam_AutoUpdateTimeRestrictionLabel"	"Автоматически обновлять игры:"
-"Steam_AutoUpdateTimeRestrictionStart"	""
 "Steam_AutoUpdateTimeRestrictionEnd"		"до"
 "Steam_AllowDownloadsDuringGameplay"	"Разрешать загрузки во время игры"
 "Steam_AllowDownloadsDuringGameplayDetails"	"Если эта опция включена, Steam сможет начинать или продолжать загружать обновления, даже если \nзапущена игра или другое приложение Steam. Эту настройку можно изменить в окне «Свойства» у каждой игры."
@@ -1505,7 +1502,6 @@
 "SteamUI_HardwarePromoWizard_Title" "Зарегистрировать льготное предложение"
 "Steam_HardwarePromo_Intro" "Поздравляем! Ваш компьютер удовлетворяет требованиям данного предложения. Вы можете получить предложение, зарегистрировав его на один (и только один) аккаунт Steam. Вы сможете играть в игры, содержащиеся в этом предложении, если зайдете в систему Steam с этого аккаунта."
 "Steam_Legal_HardwarePromo_Unreleased" "Некоторые из продуктов, содержащихся в этом пакете, еще не поступили в продажу и недоступны. Эти игры станут доступны вам сразу после официального выхода. Дата выхода этих игр приблизительна и может меняться. Дополнительные условия можно посмотреть, щелкнув \"Далее\"."
-"Steam_Legal_HardwarePromo" ""
 "Steam_Working_HardwarePromo" "Регистрация предложения..."
 "SteamUI_OEMTicketWizard_Title" "Зарегистрировать OEM-лицензию"
 
@@ -3358,7 +3354,6 @@
 "Steam_ServerBrowserPingRateDefault"	"Автоматически (%PingsPerMin%)"
 
 "Steam_TextFilterSettingLabel"									"Фильтрация чата"
-"Steam_TextFilterStatus_SteamLabOptedOut"						"Новинка из лабораторий Steam уже доступна"
 "Steam_TextFilterStatus_Enabled"								"Текущая настройка: скрывать ругательства и оскорбления"
 "Steam_TextFilterStatus_Enabled_IgnoreFriends"					"Текущая настройка: скрывать ругательства и оскорбления ото всех, кроме друзей"
 "Steam_TextFilterStatus_EnabledAllowProfanity"					"Текущая настройка: показывать ругательства, но скрывать оскорбления"
@@ -4210,6 +4205,7 @@
 "Steam_TimedTrial_Over" "Пробная версия истекла"
 "Steam_TimedTrial_CloseNow" "Сейчас игра будет закрыта"
 "Steam_TimedTrial_Enjoy" "Наслаждайтесь пробной версией"
+"Steam_TimedTrial_Offline" "Пробная версия игры потеряла соединение со Steam"
 "Steam_TimedTrial_Minutes" "Осталось %minutes% мин. игрового времени"
 "Steam_TimedTrial_Hours" "Осталось %hours% ч. %minutes% мин. игрового времени"
 
@@ -4229,7 +4225,6 @@
 
 "Steam_Parental_UnlockTitle"			"Семейный просмотр"
 "Steam_Parental_UnlockInstructions"		"Введите свой ПИН ниже, чтобы выйти из семейного просмотра"
-"Steam_Parental_UnlockInstructions2"	""
 "Steam_Parental_ForgotPIN"				"Я не помню ПИН-код"
 "Steam_Parental_NoRecoveryEmail"		"Почта для восстановления не указана"
 "Steam_Parental_NoRecoveryEmail_Instructions"		 "У вашего аккаунта не указана электронная почта для восстановления. Чтобы указать адрес электронной почты для восстановления, пожалуйста, выйдите из Семейного просмотра и настройте его заново."
@@ -4430,7 +4425,6 @@
 "Music_Playlist_RenameDialog_Title" "Переименовать плейлист"
 "Music_Playlist_RenameDialog_Prompt" "Переименовать плейлист «%playlistname%»"
 "Music_Playlist_AddDialog_Title" "Создать новый плейлист"
-"Music_Playlist_AddDialog_Prompt" ""
 "Music_Playlist_DeleteDialog_Title" "Удалить плейлист"
 "Music_Playlist_DeleteDialog_Prompt" "Вы действительно хотите удалить плейлист «%playlistname%»?"
 "Music_Playlist_Details_Play" "Воспр."
@@ -4449,8 +4443,6 @@
 "Music_Queue_Menu_ReplacePlaylist" "Заменить плейлист очередью"
 "Music_Queue_Menu_AppendPlaylist" "Добавить в плейлист"
 "Music_Queue_AddPlaylist_Dialog_Title" "Добавить плейлист"
-"Music_Queue_AddPlaylist_Dialog_Prompt" ""
-
 "Steam_Settings_Controller"					"Контроллер"
 "Steam_SettingsControllerTitle"				"Настройки контроллера"
 "Steam_SettingsControllerDescription"		"Основные настройки контроллера позволяют включить или выключить поддержку одного из типов контроллера, настроить его и не только."

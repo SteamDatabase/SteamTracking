@@ -138,6 +138,7 @@ message CCDDBAppDetailCommon {
 	optional string friendly_name = 10;
 	optional string propagation = 11;
 	optional bool has_adult_content = 12;
+	optional bool is_visible_in_steam_china = 13;
 }
 
 message CMsgAppRights {

@@ -460,12 +460,14 @@ message CMsgClientGetDepotDecryptionKeyResponse {
 message CMsgClientCheckAppBetaPassword {
 	optional uint32 app_id = 1;
 	optional string betapassword = 2;
+	optional int32 language = 3;
 }
 
 message CMsgClientCheckAppBetaPasswordResponse {
 	message BetaPassword {
 		optional string betaname = 1;
 		optional string betapassword = 2;
+		optional string betadescription = 3;
 	}
 
 	optional int32 eresult = 1 [default = 2];

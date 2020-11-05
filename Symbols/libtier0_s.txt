@@ -198,7 +198,6 @@
  T CrackSmokingCompiler
  T CrashOnPurpose()
  T CreateSimpleProcess
- T CreateVProfile
  T DLog
  T DWarning
  T DeclareCurrentThreadIsMainThread
@@ -399,6 +398,7 @@
  T SteamVProf::CVProfNode::Resume()
  T SteamVProf::CVProfNode::SetCurFrameTime(unsigned long)
  T SteamVProf::CVProfNode::Validate(CValidator&, char const*)
+ T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)13, false, 4>::~CVProfScope()
  T SteamVProf::CVProfile::AddBudgetGroupName(EVProfBugdetGroup, int, char const*)
  T SteamVProf::CVProfile::BProfileHasNodesOutsideBudgetGroup_Recursive(SteamVProf::CVProfNode*, int)
  T SteamVProf::CVProfile::BudgetGroupNameToBudgetGroupID(char const*) const
@@ -494,17 +494,17 @@
  T ThreadTerminate
  T ThreadTerminateProcessCode
  T ThreadWaitForProcessExit
+ T VProfInternalEnterScopeCurrentThread
+ T VProfInternalGetProfileForCurrentThread
  T V_pretifymem(float, int, bool)
  T V_tier0_strncpy
  T ValidateSpew
  T Warning
  T WriteMiniDump
  T _DMsg
- T _DSpewMessage
- T _ExitOnFatalAssert
- T _SpewInfo
- T _SpewMessage
  T _SpewMessageType
+ T _SpewMessageTypeSourceFmt
+ T _SpewMessageTypeSourceV
  T _ZNSt3__16vectorIN10SteamVProf10TimeSums_tENS_9allocatorIS2_EEE6assignIPS2_EENS_9enable_ifIXaasr21__is_forward_iteratorIT_EE5valuesr16is_constructibleIS2_NS_15iterator_traitsIS9_E9referenceEEE5valueEvE4typeES9_S9_
  T __clang_call_terminate
  T bool std::__1::__insertion_sort_incomplete<bool (*&)(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&), SteamVProf::TimeSums_t*>(SteamVProf::TimeSums_t*, SteamVProf::TimeSums_t*, bool (*&)(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&))
@@ -639,7 +639,7 @@
  b SteamVProf::CVProfile::FindOrCreateCounter(char const*, SteamVProf::CounterGroup_t)::dummy
  b V_pretifymem(float, int, bool)::current
  b V_pretifymem(float, int, bool)::output
- b _SpewMessageType::autoMutex__
+ b _SpewMessageTypeSourceV::autoMutex__
  b _ZL6g_Info.0
  b _ZL6g_Info.1
  b _ZL6g_Info.2
@@ -665,18 +665,15 @@
  b guard variable for GetMinidumpsWritten()::s_MinidumpsWritten
  b guard variable for RTANoteAlloc(void*, unsigned long, bool, char const*, int, int, int)::g_FilenamesCache
  b guard variable for SecureRandomBytes::s_dev_urandom_fd
- b guard variable for _SpewMessageType::autoMutex__
+ b guard variable for _SpewMessageTypeSourceV::autoMutex__
  b s_AssertFailedNotifyFunc
  b s_DefaultLevel
  b s_DefaultLogLevel
  b s_FlushLogFunc
  b s_GroupCount
  b s_LastMiniDumpTime
- b s_Line
- b s_SpewType
  b s_StdMemAlloc
  b s_bSetSigHandler
- b s_pFileName
  b s_pSpewGroups
  b sm_bAssertDumpStack
  backtrace

@@ -13,7 +13,6 @@
 "FileOpenDialog_Look_in"	"查找："
 "FileOpenDialog_File_Name"	"文件名："
 "FileOpenDialog_File_Type"	"文件类型："
-"FileOpenDialog_Icon"		" "
 "FileOpenDialog_Name"		"名称"
 "FileOpenDialog_Type"		"类型"
 "SysMenu_Minimize"		" 最小化 "

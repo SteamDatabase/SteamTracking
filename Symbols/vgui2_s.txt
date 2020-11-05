@@ -151,7 +151,6 @@
  CValidator::IsClaimed(void*)
  CValidator::Pop()
  CValidator::Push(char const*, void*, char const*)
- CreateVProfile
  D CFontTextureCache::s_pStringPageSize
  D CUtlSymbol::s_bAllowStaticSymbolTable
  D OBJC_CLASS_$_VGUIApplicationDelegate
@@ -470,14 +469,12 @@
  SteamStdLib::CommandLine()
  SteamThreadTools::CThreadFullMutex::CThreadFullMutex(bool, char const*, bool, bool)
  SteamThreadTools::CThreadLocalBase::Get() const
- SteamThreadTools::CThreadLocalBase::Set(void*)
  SteamThreadTools::CThreadMutex::CThreadMutex()
  SteamThreadTools::CThreadMutex::~CThreadMutex()
  SteamThreadTools::CThreadSyncObject::~CThreadSyncObject()
  SteamVProf::CVProfNode::EnterScope(void*)
  SteamVProf::CVProfNode::ExitScope()
  SteamVProf::CVProfNode::GetSubNode(char const*, int, EVProfBugdetGroup, int)
- SteamVProf::CVProfile::~CVProfile()
  T AdvanceOverWhitespace(unsigned short const*)
  T ApplyBlurAndTransparencyToTextBitmap(int, int, int, unsigned char*, unsigned char*, Color, Color)
  T BExtractRegParts(StringView, ERegKeyRoot*, char*, int, char*, int)
@@ -1009,6 +1006,7 @@
  T CSchemeManager::ReloadFonts()
  T CSchemeManager::ReloadSchemes()
  T CSchemeManager::SetBaseLayoutFile(char const*)
+ T CSchemeManager::SetLanguage(char const*)
  T CSchemeManager::Shutdown(bool)
  T CSchemeManager::Validate(CValidator&, char const*)
  T CSchemeManager::~CSchemeManager()
@@ -1037,6 +1035,7 @@
  T CSerializedIME::SetIMEWindow(unsigned long long)
  T CSerializedIME::~CSerializedIME()
  T CSerializedSurface::AckAllTexturesDeleted()
+ T CSerializedSurface::AckChromePaintBufferDelete(unsigned long long)
  T CSerializedSurface::AckTextureDelete(int)
  T CSerializedSurface::AddCustomFontFile(char const*)
  T CSerializedSurface::ApplyChanges()
@@ -1049,8 +1048,10 @@
  T CSerializedSurface::CreateCursorFromMemory(void const*, int, int, int, int)
  T CSerializedSurface::CreateFont()
  T CSerializedSurface::CreateNewTextureID(bool)
+ T CSerializedSurface::DeleteChromeSharedPaintBuffer(unsigned long long)
  T CSerializedSurface::DeleteCursor(unsigned long)
  T CSerializedSurface::DisableOverlay()
+ T CSerializedSurface::DrawChromeSharedPaintBuffer(unsigned long long, int, int, int, int, int, int)
  T CSerializedSurface::DrawFilledRect(int, int, int, int)
  T CSerializedSurface::DrawFilledRectArray(vgui::IntRect*, int)
  T CSerializedSurface::DrawFlushText()
@@ -1086,6 +1087,7 @@
  T CSerializedSurface::GetAbsoluteWindowBounds(int&, int&, int&, int&)
  T CSerializedSurface::GetCharABCwide(unsigned long, wchar_t, int&, int&, int&)
  T CSerializedSurface::GetCharacterWidth(unsigned long, wchar_t)
+ T CSerializedSurface::GetChromePaintBufferRenderStats(unsigned long long, unsigned int&, unsigned int&, float&)
  T CSerializedSurface::GetDisplayPixelScaleFactor(unsigned long long, float&)
  T CSerializedSurface::GetFileTypeForFullPath(char const*, wchar_t*, unsigned long)
  T CSerializedSurface::GetFontAscent(unsigned long, wchar_t)
@@ -1168,6 +1170,7 @@
  T CSerializedSurface::SurfaceGetCursorPos(int&, int&)
  T CSerializedSurface::SurfaceSetCursorPos(int, int)
  T CSerializedSurface::SwapBuffers(unsigned long long)
+ T CSerializedSurface::TrackChromePaintBufferRenderStats(unsigned long long, unsigned int, unsigned int, float)
  T CSerializedSurface::UnlockCursor()
  T CSerializedSurface::~CSerializedSurface()
  T CStrAutoEncode::Clear()
@@ -1306,7 +1309,6 @@
  T CUtlHashMap<CUtlPtr<CStyleAppearance>, bool, CLayoutFile::StyleEquals, CLayoutFile::StyleHash, CUtlPtr<CStyleAppearance> >::RecursiveValidate(CValidator&, char const*)
  T CUtlHashMap<CUtlPtr<CStyleAppearance>, bool, CLayoutFile::StyleEquals, CLayoutFile::StyleHash, CUtlPtr<CStyleAppearance> >::RehashNodesInBucket(int)
  T CUtlHashMap<CUtlPtr<CStyleAppearance>, bool, CLayoutFile::StyleEquals, CLayoutFile::StyleHash, CUtlPtr<CStyleAppearance> >::RemoveAll()
- T CUtlHashMap<CUtlPtr<CStyleAppearance>, bool, CLayoutFile::StyleEquals, CLayoutFile::StyleHash, CUtlPtr<CStyleAppearance> >::UnlinkNodeFromBucket(int, int)
  T CUtlHashMap<CUtlPtr<CStyleAppearance>, bool, CLayoutFile::StyleEquals, CLayoutFile::StyleHash, CUtlPtr<CStyleAppearance> >::~CUtlHashMap()
  T CUtlHashMap<CUtlString, vgui::IImage*, CDefCaselessStringEquals, HashFunctorStringCaseless, CUtlString>::AllocNode()
  T CUtlHashMap<CUtlString, vgui::IImage*, CDefCaselessStringEquals, HashFunctorStringCaseless, CUtlString>::CUtlHashMap()
@@ -1317,9 +1319,18 @@
  T CUtlHashMap<CUtlString, vgui::IImage*, CDefCaselessStringEquals, HashFunctorStringCaseless, CUtlString>::Purge()
  T CUtlHashMap<CUtlString, vgui::IImage*, CDefCaselessStringEquals, HashFunctorStringCaseless, CUtlString>::PurgeAndDeleteElements()
  T CUtlHashMap<CUtlString, vgui::IImage*, CDefCaselessStringEquals, HashFunctorStringCaseless, CUtlString>::RehashNodesInBucket(int)
- T CUtlHashMap<CUtlString, vgui::IImage*, CDefCaselessStringEquals, HashFunctorStringCaseless, CUtlString>::UnlinkNodeFromBucket(int, int)
  T CUtlHashMap<CUtlString, vgui::IImage*, CDefCaselessStringEquals, HashFunctorStringCaseless, CUtlString>::Validate(CValidator&, char const*)
  T CUtlHashMap<CUtlString, vgui::IImage*, CDefCaselessStringEquals, HashFunctorStringCaseless, CUtlString>::~CUtlHashMap()
+ T CUtlHashMap<unsigned long long, CSerializedSurface::ChromePaintBufferData_t, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>::AllocNode()
+ T CUtlHashMap<unsigned long long, CSerializedSurface::ChromePaintBufferData_t, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>::CUtlHashMap()
+ T CUtlHashMap<unsigned long long, CSerializedSurface::ChromePaintBufferData_t, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>::EnsureCapacity(int)
+ T CUtlHashMap<unsigned long long, CSerializedSurface::ChromePaintBufferData_t, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>::Find(unsigned long long const&) const
+ T CUtlHashMap<unsigned long long, CSerializedSurface::ChromePaintBufferData_t, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>::IncrementalRehash()
+ T CUtlHashMap<unsigned long long, CSerializedSurface::ChromePaintBufferData_t, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>::Purge()
+ T CUtlHashMap<unsigned long long, CSerializedSurface::ChromePaintBufferData_t, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>::RehashNodesInBucket(int)
+ T CUtlHashMap<unsigned long long, CSerializedSurface::ChromePaintBufferData_t, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>::RemoveAt(int)
+ T CUtlHashMap<unsigned long long, CSerializedSurface::ChromePaintBufferData_t, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>::RemoveNodeFromBucket(int, int)
+ T CUtlHashMap<unsigned long long, CSerializedSurface::ChromePaintBufferData_t, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>::~CUtlHashMap()
  T CUtlLinkedList<CFontTextureCache::CacheLRUEntry_t, int>::AllocInternal(bool)
  T CUtlLinkedList<CFontTextureCache::CacheLRUEntry_t, int>::Free(int)
  T CUtlLinkedList<CFontTextureCache::CacheLRUEntry_t, int>::LinkBefore(int, int)
@@ -1544,6 +1555,7 @@
  T CUtlRBTreeBase<unsigned short, CDefRBTreeBalanceListener<unsigned short> >::_RotateRight(unsigned short, unsigned long, void*)
  T CUtlRBTreeBase<unsigned short, CDefRBTreeBalanceListener<unsigned short> >::_Unlink(unsigned short, unsigned long, void*)
  T CUtlSortVector<CBaseSurface::ChildWindowZPos_t>::Insert(CBaseSurface::ChildWindowZPos_t const&)
+ T CUtlString* Destruct<CUtlString>(CUtlString*)
  T CUtlString::AssertStringTooLong()
  T CUtlString::Format(char const*, ...)
  T CUtlString::SetValue(char const*)
@@ -1617,6 +1629,9 @@
  T CUtlVector<CUtlHashMap<CUtlString, vgui::IImage*, CDefCaselessStringEquals, HashFunctorStringCaseless, CUtlString>::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, vgui::IImage*, CDefCaselessStringEquals, HashFunctorStringCaseless, CUtlString>::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<CUtlString, vgui::IImage*, CDefCaselessStringEquals, HashFunctorStringCaseless, CUtlString>::HashBucket_t const*)
  T CUtlVector<CUtlHashMap<CUtlString, vgui::IImage*, CDefCaselessStringEquals, HashFunctorStringCaseless, CUtlString>::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, vgui::IImage*, CDefCaselessStringEquals, HashFunctorStringCaseless, CUtlString>::HashBucket_t> >::Validate(CValidator&, char const*)
  T CUtlVector<CUtlHashMap<CUtlString, vgui::IImage*, CDefCaselessStringEquals, HashFunctorStringCaseless, CUtlString>::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, vgui::IImage*, CDefCaselessStringEquals, HashFunctorStringCaseless, CUtlString>::HashBucket_t> >::~CUtlVector()
+ T CUtlVector<CUtlHashMap<unsigned long long, CSerializedSurface::ChromePaintBufferData_t, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned long long, CSerializedSurface::ChromePaintBufferData_t, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>::HashBucket_t> >::GrowVector(int)
+ T CUtlVector<CUtlHashMap<unsigned long long, CSerializedSurface::ChromePaintBufferData_t, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned long long, CSerializedSurface::ChromePaintBufferData_t, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<unsigned long long, CSerializedSurface::ChromePaintBufferData_t, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>::HashBucket_t const*)
+ T CUtlVector<CUtlHashMap<unsigned long long, CSerializedSurface::ChromePaintBufferData_t, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned long long, CSerializedSurface::ChromePaintBufferData_t, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>::HashBucket_t> >::~CUtlVector()
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::AddToTail(CUtlString&&)
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::GrowVector(int)
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::RecursiveValidate(CValidator&, char const*)
@@ -1920,9 +1935,9 @@
  T RegistryEmulatorManager()
  T SaveBufferToFile(IBaseFileSystem*, StringView, CUtlBuffer const&, StringView)
  T SetScissorRect(int, int, int, int)
- T SteamVProf::CVProfManager::AddProfileForThread(SteamVProf::CVProfile*, unsigned int, _opaque_pthread_t*)
- T SteamVProf::CVProfScope::CVProfScope(char const*, int, EVProfBugdetGroup, bool, int)
- T SteamVProf::CVProfileThreadEntry::DeleteProfile()
+ T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)2, false, 4>::~CVProfScope()
+ T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)20, false, 4>::~CVProfScope()
+ T SteamVProf::CVProfScope<1, (EVProfBugdetGroup)0, false, 0>::~CVProfScope()
  T Sys_GetFactory(CSysModule*)
  T Sys_GetFactoryThis()
  T Sys_GetProcAddress(CSysModule*, char const*)
@@ -2018,6 +2033,8 @@
  T int CUtlHashMap<CUtlString, vgui::IImage*, CDefCaselessStringEquals, HashFunctorStringCaseless, CUtlString>::FindOrInsert_Internal<CUtlString, vgui::IImage* const&>(CUtlString&&, vgui::IImage* const&, CUtlHashMap<CUtlString, vgui::IImage*, CDefCaselessStringEquals, HashFunctorStringCaseless, CUtlString>::ReplaceExisting)
  T int CUtlHashMap<CUtlString, vgui::IImage*, CDefCaselessStringEquals, HashFunctorStringCaseless, CUtlString>::InsertUnconstructed<CUtlString const&>(CUtlString const&, int*, bool)
  T int CUtlHashMap<CUtlString, vgui::IImage*, CDefCaselessStringEquals, HashFunctorStringCaseless, CUtlString>::InsertUnconstructed<CUtlString>(CUtlString&&, int*, bool)
+ T int CUtlHashMap<unsigned long long, CSerializedSurface::ChromePaintBufferData_t, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>::FindOrInsert_Internal<unsigned long long const&>(unsigned long long const&, CUtlHashMap<unsigned long long, CSerializedSurface::ChromePaintBufferData_t, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>::ReplaceExisting)
+ T int CUtlHashMap<unsigned long long, CSerializedSurface::ChromePaintBufferData_t, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>::InsertUnconstructed<unsigned long long const&>(unsigned long long const&, int*, bool)
  T int CUtlRBTree<CLocalizedStringTable::fastvalue_t, int, bool (*)(CLocalizedStringTable::fastvalue_t const&, CLocalizedStringTable::fastvalue_t const&), CDefRBTreeBalanceListener<int>, CLocalizedStringTable::fastvalue_t>::Insert_Internal<CLocalizedStringTable::fastvalue_t const&>(CLocalizedStringTable::fastvalue_t const&, bool)
  T int CUtlRBTree<CLocalizedStringTable::localizedstring_t, int, bool (*)(CLocalizedStringTable::localizedstring_t const&, CLocalizedStringTable::localizedstring_t const&), CDefRBTreeBalanceListener<int>, CLocalizedStringTable::localizedstring_t>::Insert_Internal<CLocalizedStringTable::localizedstring_t const&>(CLocalizedStringTable::localizedstring_t const&, bool)
  T int CUtlRBTree<CUtlMap<CFontManager::CFontAttributes, CFontManager::CFontInfo, int, CDefLess<CFontManager::CFontAttributes> >::Node_t, int, CUtlMap<CFontManager::CFontAttributes, CFontManager::CFontInfo, int, CDefLess<CFontManager::CFontAttributes> >::CKeyLess, CDefRBTreeBalanceListener<int>, CFontManager::CFontAttributes>::Insert_Internal<CUtlMap<CFontManager::CFontAttributes, CFontManager::CFontInfo, int, CDefLess<CFontManager::CFontAttributes> >::Node_t>(CUtlMap<CFontManager::CFontAttributes, CFontManager::CFontInfo, int, CDefLess<CFontManager::CFontAttributes> >::Node_t&&, bool)
@@ -2045,13 +2062,17 @@
  T non-virtual thunk to CInputBase::PostLogMessage(char const*)
  T non-virtual thunk to CInputBase::PostMessage(unsigned long long, char const*, IIMEPostCallback::PostItem_t const*, int, unsigned long long, float)
  T non-virtual thunk to CSerializedSurface::AckAllTexturesDeleted()
+ T non-virtual thunk to CSerializedSurface::AckChromePaintBufferDelete(unsigned long long)
  T non-virtual thunk to CSerializedSurface::AckTextureDelete(int)
  T non-virtual thunk to CSerializedSurface::BSerializeAllTextures()
  T non-virtual thunk to CSerializedSurface::CreateNewTextureID(bool)
+ T non-virtual thunk to CSerializedSurface::DeleteChromeSharedPaintBuffer(unsigned long long)
  T non-virtual thunk to CSerializedSurface::DisableOverlay()
+ T non-virtual thunk to CSerializedSurface::DrawChromeSharedPaintBuffer(unsigned long long, int, int, int, int, int, int)
  T non-virtual thunk to CSerializedSurface::EnableOverlay()
  T non-virtual thunk to CSerializedSurface::Font_DrawSetTextureRGBA(int, unsigned char const*, int, int)
  T non-virtual thunk to CSerializedSurface::Font_DrawUpdateSubTextureRGBA(int, int, int, unsigned char const*, int, int)
+ T non-virtual thunk to CSerializedSurface::GetChromePaintBufferRenderStats(unsigned long long, unsigned int&, unsigned int&, float&)
  T non-virtual thunk to CSerializedSurface::InternalNotifyOfMousePosition(int, int)
  T non-virtual thunk to CSerializedSurface::MarkAllTexturesUnserialized()
  T non-virtual thunk to CSerializedSurface::MarkTextureReceived(int, unsigned int)
@@ -2062,6 +2083,7 @@
  T non-virtual thunk to CSerializedSurface::SetScreenSize(int, int)
  T non-virtual thunk to CSerializedSurface::SetSurfaceFocus(bool)
  T non-virtual thunk to CSerializedSurface::SetTaskbarBounds(int, int, int, int)
+ T non-virtual thunk to CSerializedSurface::TrackChromePaintBufferRenderStats(unsigned long long, unsigned int, unsigned int, float)
  T png_XYZ_from_xy
  T png_XYZ_from_xy_checked
  T png_benign_error
@@ -2359,6 +2381,7 @@
  T vgui::VPanel::Validate(CValidator&, char const*)
  T vgui::VPanel::~VPanel()
  T vgui::__CreateVGUISetupIVGuiSetup_interface()
+ T vgui::layoutcmd_base_t* Destruct<vgui::layoutcmd_base_t>(vgui::layoutcmd_base_t*)
  T vgui::layoutcmd_base_t::Validate(CValidator&, char const*)
  T void CUtlRBTree<CFontTextureCache::CacheStringEntry_t, unsigned short, CDefLess<CFontTextureCache::CacheStringEntry_t>, CDefRBTreeBalanceListener<unsigned short>, CFontTextureCache::CacheStringEntry_t>::FindInsertionPosition<CFontTextureCache::CacheStringEntry_t>(CFontTextureCache::CacheStringEntry_t const&, bool, unsigned short&, bool&, bool&)
  T void CUtlRBTree<CLocalizedStringTable::fastvalue_t, int, bool (*)(CLocalizedStringTable::fastvalue_t const&, CLocalizedStringTable::fastvalue_t const&), CDefRBTreeBalanceListener<int>, CLocalizedStringTable::fastvalue_t>::FindInsertionPosition<CLocalizedStringTable::fastvalue_t>(CLocalizedStringTable::fastvalue_t const&, bool, int&, bool&, bool&)
@@ -2386,19 +2409,15 @@
  T void CUtlRBTree<int, int, CSchemeManager::CObjLessFunc<int, CSchemeManager>, CDefRBTreeBalanceListener<int>, int>::FindInsertionPosition<int>(int const&, bool, int&, bool&, bool&)
  T void CUtlRBTree<unsigned int, int, CDefLess<unsigned int>, CDefRBTreeBalanceListener<int>, unsigned int>::FindInsertionPosition<unsigned int>(unsigned int const&, bool, int&, bool&, bool&)
  T void CUtlRBTree<vgui::Texture, int, CDefLess<vgui::Texture>, CDefRBTreeBalanceListener<int>, vgui::Texture>::FindInsertionPosition<vgui::Texture>(vgui::Texture const&, bool, int&, bool&, bool&)
- T void Destruct<CUtlString>(CUtlString*)
- T void Destruct<vgui::layoutcmd_base_t>(vgui::layoutcmd_base_t*)
  T void RecursiveValidate<CUtlString>(CUtlString const&, CValidator&, char const*)
  T void _ValidateSelectType<CStyleAppearance>(CStyleAppearance*, CValidator&, char const*, fallback_)
  T void _ValidateSelectType<CUtlMap<CUtlString, bool, int, CDefLess<CUtlString> > >(CUtlMap<CUtlString, bool, int, CDefLess<CUtlString> >*, CValidator&, char const*, fallback_)
  T void _ValidateSelectType<CUtlMap<unsigned long long, bool, int, CDefLess<unsigned long long> > >(CUtlMap<unsigned long long, bool, int, CDefLess<unsigned long long> >*, CValidator&, char const*, fallback_)
  T void _ValidateSelectType<CUtlVector<style_t, CUtlMemory<style_t> > >(CUtlVector<style_t, CUtlMemory<style_t> >*, CValidator&, char const*, fallback_)
  T void _ValidateSelectType<char const>(char const*, CValidator&, char const*, fallback_)
- ThreadGetCurrentId
- ThreadGetCurrentRunningRef
  ThreadImplOneTimeInit
- ThreadInterlockedDecrement
- ThreadIsThreadRunning
+ VProfInternalEnterScopeCurrentThread
+ VProfInternalGetProfileForCurrentThread
  V_CopyAndFixSlashes
  V_EscapeShellArgumentAndAppend(CUtlStringBuilder*, char const*)
  V_FixDoubleSlashes
@@ -2472,12 +2491,14 @@
  atoi
  b (anonymous namespace)::_CLEANUP
  b -[VGUI_NSView unmarkText]::fAsserted
+ b BIsSteamChinaLauncherType()::pfnGetClientLauncherType
  b CBaseSurface::DeleteTextureByID(int)::fAsserted
  b CFileReader::Read(void*, unsigned int, unsigned int*)::fAsserted
  b CFontTextureCache::GetTextureForString(unsigned long, wchar_t const*, int, int&, int&, int&, float**)::cacheitem
  b CInputBase::UpdateMouseFocus()::fAsserted
  b CLayoutFile::MergeStyleKeys(KeyValues*, CUtlVector<KeyValues const*, CUtlMemory<KeyValues const*> >&)::hKeyRender
  b CLayoutFile::MergeStyleKeys(KeyValues*, CUtlVector<KeyValues const*, CUtlMemory<KeyValues const*> >&)::hKeyRenderBG
+ b CLocalizedStringTable::AddFile(IFileSystem*, char const*)::FALLBACK_LANGUAGE_STRING
  b CLocalizedStringTable::FindAsUTF8(char const*)::rgchT
  b COSXFont::GetCharABCWidths(int, int&, int&, int&)::fAsserted
  b COSXFont::GetKernedCharWidth(wchar_t, wchar_t, wchar_t, float&)::fAsserted
@@ -2515,8 +2536,10 @@
  b g_nWhiteTextureID
  b g_pGetSymbolProc
  b g_treeValidStyleKeySymbols
+ b guard variable for BIsSteamChinaLauncherType()::pfnGetClientLauncherType
  b guard variable for CLayoutFile::MergeStyleKeys(KeyValues*, CUtlVector<KeyValues const*, CUtlMemory<KeyValues const*> >&)::hKeyRender
  b guard variable for CLayoutFile::MergeStyleKeys(KeyValues*, CUtlVector<KeyValues const*, CUtlMemory<KeyValues const*> >&)::hKeyRenderBG
+ b guard variable for CLocalizedStringTable::AddFile(IFileSystem*, char const*)::FALLBACK_LANGUAGE_STRING
  b guard variable for GetNetAdrResolveCacheMutex()::mutex
  b guard variable for RegistryEmulatorManager()::s_PosixRegMgr
  b k_InvalidClientID
@@ -2528,6 +2551,7 @@
  b mExpression
  b mIdentifier
  b s_CCSyntaxParam
+ b s_ClientLanguage
  b s_PSN
  b s_VGUI2Focus
  b s_bAppFullyOccluded
@@ -2567,15 +2591,15 @@
  d CBaseSurface::CreateNewTextureID(bool)::staticBindIndex
  d CScheme::GetAdjustedFontHeightForCurrentLanguage(int)::language
  d __block_descriptor_tmp
- d __block_descriptor_tmp557
+ d __block_descriptor_tmp555
+ d __block_descriptor_tmp558
  d __block_descriptor_tmp560
- d __block_descriptor_tmp562
- d __block_descriptor_tmp601
- d __block_descriptor_tmp622
+ d __block_descriptor_tmp599
+ d __block_descriptor_tmp620
  d __block_literal_global
+ d __block_literal_global559
  d __block_literal_global561
- d __block_literal_global563
- d __block_literal_global623
+ d __block_literal_global621
  d g_FontMetricTweaks
  d g_bScissor
  d g_rgBorderColor
@@ -2600,7 +2624,6 @@
  fread
  free
  fstat$INODE64
- g_VProfManager
  g_VProfProfilesRunningCount
  g_VProfile
  g_pMemAllocSteam
@@ -2747,6 +2770,7 @@
  t -[VGUI_NSWindowDelegate windowDidChangeBackingProperties:]
  t -[VGUI_NSWindowDelegate windowDidChangeScreen:]
  t -[VGUI_NSWindowDelegate windowDidResize:]
+ t BIsSteamChinaLauncherType()
  t BlitCGImageToCGContextWithVFlip(CGContext*, CGImage*, int, int, int, int)
  t BlitToCGContextWithVFlip(CGContext*, unsigned char const*, int, int, int, int, int, vgui::ISurface::ETextureFormat, bool*)
  t BuildCGImageFromBits(bool, unsigned char const*, int, int, int, vgui::ISurface::ETextureFormat, bool*)
@@ -2821,9 +2845,9 @@
  t ___ZN4vgui15CBaseOSXSurfaceI12CBaseSurfaceEC2Ev_block_invoke_2
  t ___ZN4vgui15CBaseOSXSurfaceI12CBaseSurfaceEC2Ev_block_invoke_3
  t __copy_helper_block_
- t __copy_helper_block_599
+ t __copy_helper_block_597
  t __destroy_helper_block_
- t __destroy_helper_block_600
+ t __destroy_helper_block_598
  t fsevents_callback(__FSEventStream const*, void*, unsigned long, void*, unsigned int const*, unsigned long long const*)
  t png_build_16bit_table
  t png_format_buffer

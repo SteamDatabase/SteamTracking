@@ -342,7 +342,6 @@
 "Friends_Chat_ActionResultVoiceSlotsFull" "Không thể bật đàm thoại trong %chat%, không đủ chỗ trống."
 "Friends_Chat_VoiceStatus"		"Còn %availslots% chỗ [tối đa %maxslots% chỗ]."
 
-"Friends_GroupSectionInfo_Offline"				""
 "Friends_GroupSectionInfo_Online"					"%online% TRÊN MẠNG"
 "Friends_GroupSectionInfo_OnlineInGame"			"%ingame% ĐANG CHƠI, %online% TRÊN MẠNG"
 "Friends_GroupSectionInfo_OnlineChatting"			"%inchat% ĐANG TRÒ CHUYỆN, %online% TRÊN MẠNG"

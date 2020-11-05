@@ -45,11 +45,11 @@
 "Steam_Settings_Library_IconInGameList_Title" "左の列にゲームアイコンを表示"
 
 
-"Overlay_WebBrowserTitle"	"ゲーム中の Web ブラウザ"
-"Overlay_WebBrowserTitleApp"	"アプリ使用中の Web ブラウザ"
+"Overlay_WebBrowserTitle"	"ゲーム中のWebブラウザー"
+"Overlay_WebBrowserTitleApp"	"アプリ使用中のWebブラウザー"
 "Overlay_Settings_Title"		"Steam - 設定"
 "Overlay_WebBrowser_OpenInNewTab" "新規タブでリンクを開く"
-"Overlay_SettingsHomepageLabel"	"Web ブラウザホームページ"
+"Overlay_SettingsHomepageLabel"	"Webブラウザーホームページ"
 
 
 "Overlay_Taskbar_Friends"		"フレンド"
@@ -59,15 +59,15 @@
 "Overlay_Taskbar_News"		"ニュース"
 "Overlay_Taskbar_GameGroups"	"ゲームグループ"
 "Overlay_Taskbar_ChatRoom"	"チャットルーム"
-"Overlay_Taskbar_WebSite"	"Web サイト"
+"Overlay_Taskbar_WebSite"	"Webサイト"
 "Overlay_Taskbar_Forums"	"スレッド"
 "Overlay_Taskbar_Close"		"ゲームに戻るにはここをクリック"
 "Overlay_Taskbar_CloseApp"		"アプリに戻るにはここをクリック"
-"Overlay_Taskbar_WebBrowser"	"Web ブラウザ"
+"Overlay_Taskbar_WebBrowser"	"Webブラウザー"
 "Overlay_Taskbar_Screenshots"	"スクリーンショット"
 "Overlay_Taskbar_DLC"		"DLC"
 "Overlay_Taskbar_Guide"		"ガイド"
-"Overlay_Taskbar_legacycdkey"	"CD キー"
+"Overlay_Taskbar_legacycdkey"	"CDキー"
 "Overlay_Taskbar_Recommend"	"おすすめ"
 "Overlay_Taskbar_Workshop"	"ワークショップ"
 "Overlay_Taskbar_SteamGuides"		"コミュニティガイド"

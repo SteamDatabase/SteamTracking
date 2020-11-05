@@ -23,7 +23,6 @@
  CValidator::ClaimMemory(void*)
  CValidator::Pop()
  CValidator::Push(char const*, void*, char const*)
- CreateVProfile
  D g_BitStringEndMasks
  D g_VStdLibDLLValidate
  D pCV
@@ -111,7 +110,6 @@
  SteamVProf::CVProfNode::EnterScope(void*)
  SteamVProf::CVProfNode::ExitScope()
  SteamVProf::CVProfNode::GetSubNode(char const*, int, EVProfBugdetGroup, int)
- SteamVProf::CVProfile::~CVProfile()
  T AllocString(char const*, int)
  T BHanIdeograph
  T CBaseUtlSymbolTable<CUtlSymbol>::RemoveAll()
@@ -222,7 +220,6 @@
  T CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless, char const*>::IncrementalRehash()
  T CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless, char const*>::Purge()
  T CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless, char const*>::RehashNodesInBucket(int)
- T CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless, char const*>::UnlinkNodeFromBucket(int, int)
  T CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless, char const*>::Validate(CValidator&, char const*)
  T CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless, char const*>::~CUtlHashMap()
  T CUtlLinkedList<CCoroutine, int>::AllocInternal(bool)
@@ -284,6 +281,7 @@
  T CUtlRBTreeBase<int, CDefRBTreeBalanceListener<int> >::_RotateLeft(int, unsigned long, void*)
  T CUtlRBTreeBase<int, CDefRBTreeBalanceListener<int> >::_RotateRight(int, unsigned long, void*)
  T CUtlRBTreeBase<int, CDefRBTreeBalanceListener<int> >::_Unlink(int, unsigned long, void*)
+ T CUtlString* Destruct<CUtlString>(CUtlString*)
  T CUtlString::AppendFormat(char const*, ...)
  T CUtlString::AssertStringTooLong()
  T CUtlString::Format(char const*, ...)
@@ -439,9 +437,7 @@
  T SteamThreadTools::CRWLockAutoRead<SteamThreadTools::CThreadRWLock>::~CRWLockAutoRead()
  T SteamThreadTools::CRWLockAutoWrite<SteamThreadTools::CThreadRWLock>::~CRWLockAutoWrite()
  T SteamThreadTools::CThreadLocalPtr<CCoroutineMgr>::~CThreadLocalPtr()
- T SteamVProf::CVProfManager::AddProfileForThread(SteamVProf::CVProfile*, unsigned int, _opaque_pthread_t*)
- T SteamVProf::CVProfScope::CVProfScope(char const*, int, EVProfBugdetGroup, bool, int)
- T SteamVProf::CVProfileThreadEntry::DeleteProfile()
+ T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)20, false, 4>::~CVProfScope()
  T StringAfterPrefix
  T StringAfterPrefixCaseSensitive
  T StringFindSuffix
@@ -662,7 +658,6 @@
  T void CUtlRBTree<CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned int>::FindInsertionPosition<CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::Node_t>(CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::Node_t const&, bool, int&, bool&, bool&)
  T void CUtlRBTree<CUtlMap<void*, int, int, CDefLess<void*> >::Node_t, int, CUtlMap<void*, int, int, CDefLess<void*> >::CKeyLess, CDefRBTreeBalanceListener<int>, void*>::FindInsertionPosition<CUtlMap<void*, int, int, CDefLess<void*> >::Node_t>(CUtlMap<void*, int, int, CDefLess<void*> >::Node_t const&, bool, int&, bool&, bool&)
  T void CUtlRBTree<CUtlMap<wchar_t, wchar_t const*, int, CDefLess<wchar_t> >::Node_t, int, CUtlMap<wchar_t, wchar_t const*, int, CDefLess<wchar_t> >::CKeyLess, CDefRBTreeBalanceListener<int>, wchar_t>::FindInsertionPosition<CUtlMap<wchar_t, wchar_t const*, int, CDefLess<wchar_t> >::Node_t>(CUtlMap<wchar_t, wchar_t const*, int, CDefLess<wchar_t> >::Node_t const&, bool, int&, bool&, bool&)
- T void Destruct<CUtlString>(CUtlString*)
  T void JoinNumbers<CUtlVector<int, CUtlMemory<int> > >(char, CUtlVector<int, CUtlMemory<int> > const&, CUtlString&)
  T void JoinNumbers<CUtlVector<unsigned int, CUtlMemory<unsigned int> > >(char, CUtlVector<unsigned int, CUtlMemory<unsigned int> > const&, CUtlString&)
  T void JoinNumbers<CUtlVector<unsigned long long, CUtlMemory<unsigned long long> > >(char, CUtlVector<unsigned long long, CUtlMemory<unsigned long long> > const&, CUtlString&)
@@ -672,13 +667,13 @@
  T vstdlib_wcstoui64
  ThreadGetCurrentId
  ThreadGetCurrentProcessId
- ThreadGetCurrentRunningRef
  ThreadImplOneTimeInit
  ThreadInterlockedAssignIf
  ThreadInterlockedDecrement
  ThreadInterlockedExchange
  ThreadInterlockedIncrement
- ThreadIsThreadRunning
+ VProfInternalEnterScopeCurrentThread
+ VProfInternalGetProfileForCurrentThread
  Warning
  _DMsg
  _DefaultRuneLocale
@@ -755,7 +750,6 @@
  fprintf
  free
  fstat$INODE64
- g_VProfManager
  g_VProfProfilesRunningCount
  g_VProfile
  g_pMemAllocSteam

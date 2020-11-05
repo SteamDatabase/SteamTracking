@@ -658,8 +658,6 @@ tela. Para acessar o Steam, clique com o botão direito no seu ícone."
 "Steam_RecoverAuthenticator_BadPassword"			"A senha estava incorreta. Verifique-a e tente novamente."
 "Steam_RecoverAuthenticator_BadCode"				"A senha ou o código estava incorreto. Verifique-os e tente novamente."
 "Steam_RecoverAuthenticator_BadCodes"				"Os códigos ou a senha estavam incorretos. Verifique-os e tente novamente."
-"Steam_RecoverAuthenticator_SupportURL"				""
-
 "Steam_RecoverAuthenticator_Done"					"O autenticador do Steam Guard foi removido da sua conta.\n\nVocê já pode iniciar a sessão com a sua conta."
 
 
@@ -1455,11 +1453,10 @@ Você precisará finalizar a sessão no macOS para que a alteração surta efeit
 "SteamUI_ThrottleEditLabel"				"Informe um novo valor abaixo:"
 "SteamUI_ThrottleApplyChange"			"Aplicar"
 "Steam_AutoUpdateTimeRestrictionLabel"	"Atualizar automaticamente apenas entre as:"
-"Steam_AutoUpdateTimeRestrictionStart"	""
 "Steam_AutoUpdateTimeRestrictionEnd"		"e as"
 "Steam_AllowDownloadsDuringGameplay"	"Permitir downloads enquanto joga"
 "Steam_AllowDownloadsDuringGameplayDetails"	"Ative para permitir que o Steam inicie ou continue a baixar atualizações enquanto \num jogo ou aplicativo Steam estiver em execução. Esta opção pode ser definida individualmente na janela de propriedades do jogo desejado."
-"Steam_ThrottleDownloadsWhileStreaming"	"Reduzir velocidade de downloads durante transmissão"
+"Steam_ThrottleDownloadsWhileStreaming"	"Reduzir velocidade durante transmissão"
 "Steam_ThrottleDownloadsWhileStreamingDetails"	"Ative para que o Steam limite a velocidade de download para manter uma experiência de alta qualidade."
 "Steam_DownloadRatesInBits"			"Exibir taxas de download em bits/segundo"
 
@@ -1508,7 +1505,6 @@ Você precisará finalizar a sessão no macOS para que a alteração surta efeit
 "SteamUI_HardwarePromoWizard_Title" "Registrar oferta promocional"
 "Steam_HardwarePromo_Intro" "Parabéns! O seu computador se qualifica para esta oferta. Você pode resgatar esta oferta registrando-a com uma, e somente uma, conta Steam. Você poderá jogar os jogos inclusos nesta oferta de qualquer computador, contanto que você inicie sessão com esta conta Steam."
 "Steam_Legal_HardwarePromo_Unreleased" "Alguns dos produtos deste pacote ainda não foram lançados e serão disponibilizados automaticamente para você, no dia do lançamento, pelo Steam. A data de lançamento destes produtos é incerta e compradores não devem confiar em nenhuma data estimada de lançamento. Termos e condições adicionais serão exibidos ao clicar em \"Avançar\"."
-"Steam_Legal_HardwarePromo" ""
 "Steam_Working_HardwarePromo" "Registrando oferta..."
 "SteamUI_OEMTicketWizard_Title" "Registrar licença OEM"
 
@@ -3360,6 +3356,13 @@ a partir de agora, você vai precisar deles pra ter acesso aos seus jogos e outr
 "Steam_ServerBrowserPingRateInfo"	"Caso tenha problemas com a conexão à internet enquanto busca servidores, tente diminuir este valor."
 "Steam_ServerBrowserPingRateDefault"	"Automática (%PingsPerMin%)"
 
+"Steam_TextFilterSettingLabel"									"Filtragem de mensagens"
+"Steam_TextFilterStatus_Enabled"								"Configurado para filtrar palavras de baixo calão e xingamentos"
+"Steam_TextFilterStatus_Enabled_IgnoreFriends"					"Configurado para filtrar palavras de baixo calão e xingamentos, menos de amigos(as)"
+"Steam_TextFilterStatus_EnabledAllowProfanity"					"Configurado para exibir palavras de baixo calão, mas filtrar xingamentos"
+"Steam_TextFilterStatus_EnabledAllowProfanity_IgnoreFriends"	"Configurado para exibir palavras de baixo calão, mas filtrar xingamentos, menos de amigos(as)"
+"Steam_TextFilterStatus_Disabled"								"Configurado para exibir palavras de baixo calão e xingamentos"
+"Steam_TextFilterSettingURL"									"Alterar preferências de filtragem de mensagens"
 
 "Steam_SettingsInGameScreenshotFolder"	"Pasta de capturas"
 "Steam_SettingsInGameTitle"	"Painel Steam"
@@ -4204,6 +4207,7 @@ a partir de agora, você vai precisar deles pra ter acesso aos seus jogos e outr
 "Steam_TimedTrial_Over" "O teste acabou"
 "Steam_TimedTrial_CloseNow" "O jogo será fechado agora"
 "Steam_TimedTrial_Enjoy" "Aproveite o teste"
+"Steam_TimedTrial_Offline" "Teste do jogo perdeu conexão ao Steam"
 "Steam_TimedTrial_Minutes" "Você pode jogar por mais %minutes% minutos"
 "Steam_TimedTrial_Hours" "Você pode jogar por mais %hours% horas e %minutes% minutos"
 
@@ -4223,7 +4227,6 @@ a partir de agora, você vai precisar deles pra ter acesso aos seus jogos e outr
 
 "Steam_Parental_UnlockTitle"			"Modo família"
 "Steam_Parental_UnlockInstructions"		"Insira o seu código abaixo para desativar o modo família"
-"Steam_Parental_UnlockInstructions2"	""
 "Steam_Parental_ForgotPIN"				"Esqueci o meu código"
 "Steam_Parental_NoRecoveryEmail"		"Nenhum e-mail de recuperação associado"
 "Steam_Parental_NoRecoveryEmail_Instructions"		 "Não há um endereço de e-mail de recuperação associado à sua conta. Para atualizá-lo, saia do modo família e refaça a configuração do mesmo."
@@ -4424,7 +4427,6 @@ a partir de agora, você vai precisar deles pra ter acesso aos seus jogos e outr
 "Music_Playlist_RenameDialog_Title" "Renomear lista de reprodução"
 "Music_Playlist_RenameDialog_Prompt" "Renomear a lista de reprodução \"%playlistname%\""
 "Music_Playlist_AddDialog_Title" "Criar nova lista de reprodução"
-"Music_Playlist_AddDialog_Prompt" ""
 "Music_Playlist_DeleteDialog_Title" "Remover lista de reprodução"
 "Music_Playlist_DeleteDialog_Prompt" "Tem certeza de que deseja remover a lista de reprodução \"%playlistname%\"?"
 "Music_Playlist_Details_Play" "Reproduzir lista"
@@ -4443,8 +4445,6 @@ a partir de agora, você vai precisar deles pra ter acesso aos seus jogos e outr
 "Music_Queue_Menu_ReplacePlaylist" "Substituir lista de reprodução com a fila"
 "Music_Queue_Menu_AppendPlaylist" "Adicionar a lista de reprodução"
 "Music_Queue_AddPlaylist_Dialog_Title" "Adicionar lista de reprodução"
-"Music_Queue_AddPlaylist_Dialog_Prompt" ""
-
 "Steam_Settings_Controller"					"Controle"
 "Steam_SettingsControllerTitle"				"Configuração de controles"
 "Steam_SettingsControllerDescription"		"As configurações gerais de controle permitem (des)ativar o uso de configurações do Steam, personalizar cada controle, entre outras opções."

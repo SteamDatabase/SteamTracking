@@ -38,6 +38,7 @@
 		"textAlignment"		"west"
 		"wrap"		"0"
 		"URLText"		"http://translation.steampowered.com"
+		"group"			"SteamRealmGlobalOnly"
 	}
 	"Divider1"
 	{
@@ -381,10 +382,10 @@
 		"wrap"		"1"
 		"Default"		"0"
 	}
-	"Label4"
+	"LabelLanguageCombo"
 	{
 		"ControlName"		"Label"
-		"fieldName"		"Label4"
+		"fieldName"		"LabelLanguageCombo"
 		"xpos"		"20"
 		"ypos"		"15"
 		"wide"		"475"
@@ -399,7 +400,28 @@
 		"textAlignment"		"west"
 		"associate"		"LanguageCombo"
 		"wrap"		"0"
+		"group"			"SteamRealmGlobalOnly"
 	}
+	"LabelSteamChinaLanguageCombo"
+	{
+		"ControlName"		"Label"
+		"fieldName"		"LabelSteamChinaLanguageCombo"
+		"xpos"		"20"
+		"ypos"		"15"
+		"wide"		"475"
+		"tall"		"24"
+		"AutoResize"		"0"
+		"PinCorner"		"0"
+		"visible"		"1"
+		"enabled"		"1"
+		"tabPosition"		"0"
+		"paintbackground"		"1"
+		"labelText"		"#Steam_SteamChinaLanguageSelect"
+		"textAlignment"		"west"
+		"associate"		"LanguageCombo"
+		"wrap"		"0"
+		"group"			"SteamRealmChinaOnly"
+	}	
 	
 	"SetJumplistOptionsButton"
 	{

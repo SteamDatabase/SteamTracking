@@ -786,7 +786,7 @@
     },
     {
         "id": 943,
-        "size": 12,
+        "size": 16,
         "posted_in": "CClientJobMicroTxnAuthRequest::BYieldingRunClientJob(IMsgNetPacket*)"
     },
     {
@@ -818,16 +818,6 @@
         "id": 949,
         "size": 4,
         "posted_in": "CClientJobRequestMachineAuth::BYieldingRunAPIJob()"
-    },
-    {
-        "id": 952,
-        "size": 12,
-        "posted_in": "CClientJobRequestAccountData::BYieldingRunAPIJob()"
-    },
-    {
-        "id": 953,
-        "size": 196,
-        "posted_in": "CClientJobRequestAccountData::BYieldingRunAPIJob()"
     },
     {
         "id": 955,
@@ -1031,7 +1021,7 @@
     },
     {
         "id": 1007,
-        "size": 36,
+        "size": 32,
         "posted_in": "void CSteamEngine::PostCallbackToAllUsers<AppValidationComplete_t>(AppValidationComplete_t*)"
     },
     {
@@ -1086,7 +1076,7 @@
     },
     {
         "id": 1020,
-        "size": 72,
+        "size": 200,
         "posted_in": "EYieldingCheckAppBetaPassword(CUser*, unsigned int, char const*)"
     },
     {

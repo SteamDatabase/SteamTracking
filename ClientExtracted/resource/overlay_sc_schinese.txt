@@ -1,0 +1,7 @@
+﻿"lang"
+{
+"Language" "sc_schinese" 
+"Tokens"
+{
+}
+}  

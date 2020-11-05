@@ -207,6 +207,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/depotbuildbase.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/depotbuilder.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/depotdownloadmgr.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/depotfileverify.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/depotreconstruct.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/dgif_lib.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/eventlog.o
@@ -432,7 +433,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/voiceclient.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/voiceencoder_opus.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/voiceencoder_silk.o
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/vrcommon.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/vrmanager.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/vrpathregistry.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/vthumbstick.o
@@ -512,6 +512,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/depotbuildbase.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/depotbuilder.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/depotdownloadmgr.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/depotfileverify.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/depotreconstruct.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/dgif_lib.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/eventlog.o
@@ -737,7 +738,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/voiceclient.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/voiceencoder_opus.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/voiceencoder_silk.o
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/vrcommon.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/vrmanager.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/vrpathregistry.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/vthumbstick.o
@@ -830,6 +830,8 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/depotbuilder.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/depotdownloadmgr.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/depotdownloadmgr.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/depotfileverify.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/depotfileverify.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/depotreconstruct.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/depotreconstruct.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/gameserver.cpp
@@ -1271,6 +1273,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/udpconnection.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/udpconnection.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/udpsocket.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/urlhelper.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/vconnpkt.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/vconnudp.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/video/videotypes.h
@@ -1704,6 +1707,19 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libpcre.a(libpcre_la-pcre_ucd.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libpcre.a(libpcre_la-pcre_valid_utf8.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libpcre.a(libpcre_la-pcre_xclass.o)
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libpcre16.a(libpcre16_la-pcre16_chartables.o)
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libpcre16.a(libpcre16_la-pcre16_compile.o)
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libpcre16.a(libpcre16_la-pcre16_exec.o)
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libpcre16.a(libpcre16_la-pcre16_fullinfo.o)
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libpcre16.a(libpcre16_la-pcre16_globals.o)
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libpcre16.a(libpcre16_la-pcre16_newline.o)
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libpcre16.a(libpcre16_la-pcre16_ord2utf16.o)
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libpcre16.a(libpcre16_la-pcre16_string_utils.o)
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libpcre16.a(libpcre16_la-pcre16_study.o)
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libpcre16.a(libpcre16_la-pcre16_tables.o)
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libpcre16.a(libpcre16_la-pcre16_ucd.o)
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libpcre16.a(libpcre16_la-pcre16_valid_utf16.o)
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libpcre16.a(libpcre16_la-pcre16_xclass.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libpcrecpp.a(libpcrecpp_la-pcrecpp.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libpng.a(png.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libpng.a(pngerror.o)
@@ -1874,6 +1890,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/html/
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/html/htmlmessages.pb.cc
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/html/htmlmessages.pb.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/html/htmlpaintbuffer.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/html/htmlprotobuf.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/html/htmlprotobuf.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/html/ihtmlchrome.h

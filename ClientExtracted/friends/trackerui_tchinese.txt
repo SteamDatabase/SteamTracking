@@ -342,7 +342,6 @@
 "Friends_Chat_ActionResultVoiceSlotsFull" "無法在 %chat% 中開始語音交談，可用談話空間不足。"
 "Friends_Chat_VoiceStatus"		"%availslots% 個空間可用 [共 %maxslots% 個]。"
 
-"Friends_GroupSectionInfo_Offline"				""
 "Friends_GroupSectionInfo_Online"					"%online% 位在線上"
 "Friends_GroupSectionInfo_OnlineInGame"			"%ingame% 位遊戲中，%online% 位在線上"
 "Friends_GroupSectionInfo_OnlineChatting"			"%inchat% 位交談中，%online% 位在線上"

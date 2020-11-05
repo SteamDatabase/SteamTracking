@@ -13,7 +13,6 @@
 "FileOpenDialog_Look_in"	"Procurar em:"
 "FileOpenDialog_File_Name"	"Nome:"
 "FileOpenDialog_File_Type"	"Tipo:"
-"FileOpenDialog_Icon"		" "
 "FileOpenDialog_Name"		"Nome"
 "FileOpenDialog_Type"		"Tipo"
 "SysMenu_Minimize"		" Minimizar "
@@ -224,8 +223,8 @@
 "vgui_HTMLSearchMatch" "%findactive% de %findcount%"
 "vgui_HTMLSearchThisPage" "Procurar"
 "vgui_choosedirectoryname"	"Escolher diretório"
-"vgui_HTMLCloseDevTools"	"Fechar ferramentas de desenvolvedor"
-"vgui_HTMLOpenDevTools"		"Abrir ferramentas de desenvolvedor"
+"vgui_HTMLCloseDevTools"	"Fechar ferramentas de desenvolvimento"
+"vgui_HTMLOpenDevTools"		"Abrir ferramentas de desenvolvimento"
 "vgui_HTMLInspectElement"	"Inspecionar elemento"
 }
 }

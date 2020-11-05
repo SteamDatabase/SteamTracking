@@ -342,7 +342,6 @@
 "Friends_Chat_ActionResultVoiceSlotsFull" "%chat% でボイスを開始できません。十分な空きスピーキングスロットがありません。"
 "Friends_Chat_VoiceStatus"		"%availslots% 個のスロットを使用できます (合計 %maxslots% 個)。"
 
-"Friends_GroupSectionInfo_Offline"				""
 "Friends_GroupSectionInfo_Online"					"%online% 人がオンライン"
 "Friends_GroupSectionInfo_OnlineInGame"			"%ingame% 人がゲーム中、%online% 人がオンライン"
 "Friends_GroupSectionInfo_OnlineChatting"			"%inchat% 人がチャット中、%online% 人がオンライン"
@@ -571,7 +570,7 @@
 "friends_invitetogame_action"	"招待"
 "friends_invitetogame_done"		"送信した招待"
 
-"Friends_NoSoundSystems" "このコンピュータではサウンド入力システムが検出されませんでした。"
+"Friends_NoSoundSystems" "このコンピューターではサウンド入力システムが検出されませんでした。"
 "Friends_SoundSystemName" "デバイス"
 "FriendsUI_SelectSoundSystem" "サウンド入力デバイスを選択:"
 "FriendsUI_SoundSystemTitle" "サウンド入力を選択"
@@ -682,7 +681,7 @@
 "Friends_BroadcastCantStart_Streaming" "ホームストリーミング中はブロードキャストを視聴できません"
 "Friends_BroadcastApprove" "%friend% が視聴を希望しています"
 "Friends_BroadcastApprove_Approve" "承認"
-"Friends_BroadcastApprove_Or" "あるいは"
+"Friends_BroadcastApprove_Or" "または"
 "Friends_BroadcastApprove_Ignore" "無視"
 
 "Broadcast_FirstTime_Header" "Steam ブロードキャストにようこそ！他のプレイヤーのプレイを視聴したり、自分のSteam ライブラリ内のゲームプレイを配信することができます。"
@@ -786,14 +785,14 @@
 "Broadcast_Upload_Result_11" "オーディオが見つかりません"
 "Broadcast_Upload_Result_12" "遅延が大きすぎます"
 
-"Steam_Settings_Browser"	"Web ブラウザ"
-"Overlay_SettingsBrowserDesc" "以下の設定は Steam クライアントやゲーム内のオーバーレイで使用されるウェブブラウザに適用されます。"
-"Steam_SettingsBrowserClearWebCache"	"Web ブラウザのキャッシュを削除"
-"Steam_SettingsBrowserClearAllCookies"	"ブラウザの Cookie をすべて削除"
+"Steam_Settings_Browser"	"Webブラウザー"
+"Overlay_SettingsBrowserDesc" "以下の設定は Steam クライアントやゲーム内のオーバーレイで使用されるWebブラウザーに適用されます。"
+"Steam_SettingsBrowserClearWebCache"	"Webブラウザーのキャッシュを削除"
+"Steam_SettingsBrowserClearAllCookies"	"ブラウザーのCookieをすべて削除"
 "Steam_Settings_Browser_DeleteTitle"	"Cookie を削除"
-"Steam_Settings_Browser_DeleteMsg"	"Steam ブラウザの Cookie データをすべて削除しますか？"
-"Steam_Settings_Browser_ClearWebCacheTitle"	"ブラウザのキャッシュをクリア"
-"Steam_Settings_Browser_ClearWebCacheMsg"	"内蔵 Web ブラウザのキャッシュ内のファイルをすべて削除しますか？"
+"Steam_Settings_Browser_DeleteMsg"	"SteamブラウザーのCookieデータをすべて削除しますか？"
+"Steam_Settings_Browser_ClearWebCacheTitle"	"ブラウザーのキャッシュをクリア"
+"Steam_Settings_Browser_ClearWebCacheMsg"	"内蔵Webブラウザーのキャッシュ内のファイルをすべて削除しますか？"
 
 "RemotePlayTogether_Notification_AvailableToInvite_Title" "Remote Play Together"
 "RemotePlayTogether_Notification_AvailableToInvite" "フレンドリストでフレンドを右クリックして、プレイに招待しよう。"

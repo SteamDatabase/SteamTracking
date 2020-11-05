@@ -24,6 +24,7 @@ public:
     virtual unknown_ret ShowBindingPanel(unsigned int, unsigned long long) = 0;
     virtual unknown_ret GetControllerTypeForHandle(unsigned long long) = 0;
     virtual unknown_ret GetGamepadIndexForHandle(unsigned long long) = 0;
+    virtual unknown_ret GetGamepadIndexForControllerIndex(unsigned int) = 0;
     virtual unknown_ret GetHandleForGamepadIndex(int) = 0;
     virtual unknown_ret GetDigitalActionHandle(unsigned int, char const*) = 0;
     virtual unknown_ret GetAnalogActionHandle(unsigned int, char const*) = 0;

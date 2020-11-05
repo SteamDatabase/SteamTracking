@@ -13,7 +13,6 @@
 "FileOpenDialog_Look_in"	"Tìm:"
 "FileOpenDialog_File_Name"	"Tên tệp:"
 "FileOpenDialog_File_Type"	"Loại tệp:"
-"FileOpenDialog_Icon"		" "
 "FileOpenDialog_Name"		"Tên"
 "FileOpenDialog_Type"		"Loại"
 "SysMenu_Minimize"		" Thu nhỏ "

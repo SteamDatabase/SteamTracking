@@ -1,8 +1,8 @@
 __TEXT
 __text
 __TEXT
-`r
-`r
+s
+s
 __stubs
 __TEXT
 __stub_helper
@@ -15,6 +15,7 @@ __TEXT
 __cstring
 __TEXT
 __gcc_except_tab__TEXT
+`M
 __objc_classname__TEXT
 __objc_methtype
 __TEXT
@@ -33,6 +34,7 @@ __mod_init_func
 __DATA
 __const
 __DATA
+x1
 __cfstring
 __DATA
 __objc_classlist__DATA
@@ -57,16 +59,10 @@ __DATA
 H
 __LINKEDIT
 
-
 8
 @loader_path/vgui2_s.dylib
 "
-
-x-
-0.
-(N
 p
-(Z
 P
 
 8
@@ -113,9 +109,10 @@ h
 8
 /usr/lib/libobjc.A.dylib
 &
+>
 )
+hI
 H
-n
 P5
 10CUtlString
 10CUtlVectorIN12CFontAmalgam10TFontRangeE10CUtlMemoryIS1_EE
@@ -570,10 +567,8 @@ inputContext.m_MouseClickListeners
 inputContext.m_VecPotentialDefaultButtons
 inputContext.m_mapKeyCodeHooks
 g_pInputBase
-No room for new profile in vprof thread profile list, grow MAX_THREADS_TO_VPROF_AT_ONCE
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/vprof.h
-Assertion Failed: m_pvOrigNameAddress
 Assertion Failed: m_pParent
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/vprof.h
 VGUI_Input005
 VGUI_InputInternal001
 CInputOSX SetCursorPos not implemented
@@ -755,8 +750,11 @@ Assertion Failed: (unsigned)elem <= (unsigned)m_Size
 m_vecParentNames
 -ccsyntax
 Spew details about the localized strings we load
+-language
+Set Steam client UI language
 VGUI_Localize003
 %language%
+schinese
 english
 -all_languages
 ILocalize::AddFile() failed to load file "%s".
@@ -785,7 +783,9 @@ m_LocalizationFiles
 m_sLanguage
 m_FastValueLookup
 g_StringTable
+GetClientLauncherType
 HKEY_CURRENT_USER\Software\Valve\Steam\Language
+sc_schinese
 NULL
 Tick
 Notifications.PanelPosition
@@ -844,7 +844,6 @@ no
 Couldn't find scheme color '%s'
 koreana
 tchinese
-schinese
 japanese
 thai
 CScheme
@@ -866,6 +865,7 @@ m_mapFonts
 m_mapFonts.Key( i ).m_sFontFamily
 m_dictMenuFiles
 m_sFontOverride
+m_strLanguage
 CLayoutFile::ValidateStatics
 g_Scheme
 Assertion Failed: elem >= 0 && num >= 0 && INT_MAX - elem >= num
@@ -912,6 +912,7 @@ Valve Steam GameOverlay
 Assertion Failed: nBytes
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlbuffer.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/src/surface_base.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlhashmap.h
 ChromeHTML_Controller_003
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/src/surface_base.cpp
 CBaseSurface::PushMakeCurrent
@@ -1121,6 +1122,7 @@ m_SecondaryQueue[i]._params
 m_DelayedMessageQueue.Element(i)._params
 m_pkvCurrentParams
 IVALIDATE001
+Assertion Failed: m_pvOrigNameAddress
 OnAppShutdown
 m_heap
 VGUI
@@ -1751,6 +1753,7 @@ vietnamese
 #Panorama_Lang_Vietnamese
 vi_VN
 vi
+SteamChina_SChinese
 /Steam3PosixRegistryManager
 SteamBootstrapper_GetEUniverse
 /registry.vdf
@@ -1800,14 +1803,11 @@ Seconds
 @
 @
 @
-5
 =
 0
 
-9
-
+f
 =
-M
 8
 <
 :
@@ -1845,9 +1845,10 @@ P
 
 =
 @
+G
 @
 @
-Z
+Y
 @
 @
 @

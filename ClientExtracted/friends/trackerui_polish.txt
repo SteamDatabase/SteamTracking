@@ -342,7 +342,6 @@
 "Friends_Chat_ActionResultVoiceSlotsFull" "Nie można rozmawiać głosowo w %chat% – brak wolnych miejsc."
 "Friends_Chat_VoiceStatus"		"Dostępne miejsca: %availslots% [łącznie %maxslots%]."
 
-"Friends_GroupSectionInfo_Offline"				""
 "Friends_GroupSectionInfo_Online"					"%online% ONLINE"
 "Friends_GroupSectionInfo_OnlineInGame"			"%ingame% W GRZE, %online% ONLINE"
 "Friends_GroupSectionInfo_OnlineChatting"			"%inchat% NA CZACIE, %online% ONLINE"

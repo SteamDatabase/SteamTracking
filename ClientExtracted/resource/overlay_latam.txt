@@ -189,7 +189,7 @@
 "Overlay_Screenshots_Show" "Mostrar:"
 "Overlay_Screenshots_Size_Cloud" "%selected_ss_size%"
 "Overlay_Screenshots_Size_Original" " (%selected_ss_size_original% en disco)"
-"Overlay_View_All_Screenshots" "Ver capturas online"
+"Overlay_View_All_Screenshots" "Ver capturas en línea"
 "Overlay_View_Screenshots" "Ver capturas"
 "Overlay_View_Local" "Mostrar locales"
 "Overlay_Set_Shortcut" "Configurar acceso directo"

@@ -13,7 +13,6 @@
 "FileOpenDialog_Look_in"	"Göz at:"
 "FileOpenDialog_File_Name"	"Dosya adı:"
 "FileOpenDialog_File_Type"	"Dosya türü:"
-"FileOpenDialog_Icon"		" "
 "FileOpenDialog_Name"		"İsim"
 "FileOpenDialog_Type"		"Tür"
 "SysMenu_Minimize"		" Küçült "

@@ -12,7 +12,6 @@ public:
     virtual unknown_ret GetIPCountry() = 0;
     virtual unknown_ret GetImageSize(int, unsigned int*, unsigned int*) = 0;
     virtual unknown_ret GetImageRGBA(int, unsigned char*, int) = 0;
-    virtual unknown_ret GetCSERIPPort(unsigned int*, unsigned short*) = 0;
     virtual unknown_ret GetNumRunningApps() = 0;
     virtual unknown_ret GetCurrentBatteryPower() = 0;
     virtual unknown_ret GetBatteryInformation(int*, bool*) = 0;

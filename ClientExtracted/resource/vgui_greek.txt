@@ -13,7 +13,6 @@
 "FileOpenDialog_Look_in"	"Αναζήτηση σε:"
 "FileOpenDialog_File_Name"	"Όνομα αρχείου:"
 "FileOpenDialog_File_Type"	"Είδος αρχείου:"
-"FileOpenDialog_Icon"		" "
 "FileOpenDialog_Name"		"Όνομα"
 "FileOpenDialog_Type"		"Τύπος"
 "SysMenu_Minimize"		"Ελαχιστοποίηση"

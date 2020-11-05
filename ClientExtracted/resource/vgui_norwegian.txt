@@ -13,7 +13,6 @@
 "FileOpenDialog_Look_in"	"Søk i:"
 "FileOpenDialog_File_Name"	"Filnavn:"
 "FileOpenDialog_File_Type"	"Filtype:"
-"FileOpenDialog_Icon"		" "
 "FileOpenDialog_Name"		"Navn"
 "FileOpenDialog_Type"		"Type"
 "SysMenu_Minimize"		" Minimer "

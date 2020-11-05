@@ -115,4 +115,7 @@ typedef enum EResult
     k_EResultAccountHasBeenDeleted, // Account has been deleted
     k_EResultAccountHasAnExistingUserCancelledLicense, // Account has an existing user cancelled license
     k_EResultDeniedDueToCommunityCooldown, // Denied due to community cooldown
+    k_EResultNoLauncherSpecified, // No launcher specified
+    k_EResultMustAgreeToSSA, // Must agree to SSA
+    k_EResultClientNoLongerSupported, // Client no longer supported
 } EResult;

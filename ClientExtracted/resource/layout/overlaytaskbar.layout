@@ -64,7 +64,7 @@
 		region 	{name=bottom align=bottom width=max height=100 }
 		
 		place { control="TaskbarPanel" region="bottom" width=max height=64 margin-bottom=37 }
-		place { control="SteamLogo"  x=0 y=10 width=200 height=120 }
+		place { control="SteamLogo"  x=0 y=3 width=200 height=52 }
 		place { controls="WebBrowserButton,MusicPlayerButton,SettingsButton,ScreenshotsButton" x=225 dir=right height=32 spacing=30 align=bottom margin-bottom=20 }	
 
 		place { control="view_friends" height=84 width=96 align=right dir=right margin-right=16 }

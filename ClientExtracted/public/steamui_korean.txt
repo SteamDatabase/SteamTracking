@@ -663,8 +663,6 @@
 "Steam_RecoverAuthenticator_BadPassword"			"비밀번호가 틀렸습니다. 확인하고 다시 시도하세요."
 "Steam_RecoverAuthenticator_BadCode"				"코드 또는 비밀번호가 틀렸습니다. 확인하시고 다시 시도해보세요."
 "Steam_RecoverAuthenticator_BadCodes"				"코드 또는 암호가 틀렸습니다. 확인하시고 다시 시도하세요."
-"Steam_RecoverAuthenticator_SupportURL"				""
-
 "Steam_RecoverAuthenticator_Done"					"계정에서 Steam Guard 인증기가 제거되었습니다.\n\n이제 계정에 로그인할 수 있을 겁니다."
 
 
@@ -1459,7 +1457,6 @@
 "SteamUI_ThrottleEditLabel"				"아래에 새로운 값 입력:"
 "SteamUI_ThrottleApplyChange"			"적용"
 "Steam_AutoUpdateTimeRestrictionLabel"	"자동 업데이트 시간대 제한:"
-"Steam_AutoUpdateTimeRestrictionStart"	""
 "Steam_AutoUpdateTimeRestrictionEnd"		"그리고"
 "Steam_AllowDownloadsDuringGameplay"	"게임 플레이 중 다운로드 허용"
 "Steam_AllowDownloadsDuringGameplayDetails"	"이 항목을 선택하면, Steam이 게임이나 다른 \nSteam 애플리케이션을 실행하는 동안 업데이트 다운로드를 시작 또는 계속할 수 있습니다. 또한, 이는 게임 속성 페이지에서 각 게임당 재정의할 수 있습니다."
@@ -1512,7 +1509,6 @@
 "SteamUI_HardwarePromoWizard_Title" "프로모션 행사에 등록하십시오."
 "Steam_HardwarePromo_Intro" "축하합니다! 행사 대상 자격을 갖추셨군요. 제공되는 혜택은 단 하나의 Steam 계정에만 사용할 수 있으며, 어느 컴퓨터에서든 Steam 계정에 로그인하기만 하면 해당 게임을 플레이할 수 있습니다."
 "Steam_Legal_HardwarePromo_Unreleased" "이 패키지의 일부는 아직 출시되지 않아 현재 플레이할 수 없습니다. 출시되면 바로 Steam을 통해 자동으로 제공됩니다. 이들 제품의 출시 날짜는 아직 확정되지 않았으며, 다른 어떤 출시 예정일도 확실하지 않습니다. 추가 약관을 보려면 '다음'을 누르십시오."
-"Steam_Legal_HardwarePromo" ""
 "Steam_Working_HardwarePromo" "등록 요청..."
 "SteamUI_OEMTicketWizard_Title" "OEM 라이선스 등록"
 
@@ -3366,6 +3362,13 @@ Windows에 관리자로 로그인해야 합니다.
 "Steam_ServerBrowserPingRateInfo"	"게임 서버를 검색하는 도중 연결 관련 문제가 발생한다면 해당 값을 낮춘 후 다시 시도해 보십시오."
 "Steam_ServerBrowserPingRateDefault"	"자동(%PingsPerMin%)"
 
+"Steam_TextFilterSettingLabel"									"채팅 필터링"
+"Steam_TextFilterStatus_Enabled"								"심한 욕설과 비방을 필터링하도록 설정됨"
+"Steam_TextFilterStatus_Enabled_IgnoreFriends"					"친구를 제외한 모든 사람의 심한 욕설과 비방을 필터링하도록 설정됨"
+"Steam_TextFilterStatus_EnabledAllowProfanity"					"심한 욕설은 허용하고 비방은 필터링하도록 설정됨"
+"Steam_TextFilterStatus_EnabledAllowProfanity_IgnoreFriends"	"심한 욕설은 허용하고 친구를 제외한 모든 사람의 비방은 필터링하도록 설정됨"
+"Steam_TextFilterStatus_Disabled"								"심한 욕설과 비방을 허용하도록 설정됨"
+"Steam_TextFilterSettingURL"									"채팅 필터링 환경 설정 변경하기"
 
 "Steam_SettingsInGameScreenshotFolder"	"스크린샷 폴더"
 "Steam_SettingsInGameTitle"	"Steam 오버레이"
@@ -4210,6 +4213,7 @@ Windows에 관리자로 로그인해야 합니다.
 "Steam_TimedTrial_Over" "체험판 사용 기간이 종료되었습니다"
 "Steam_TimedTrial_CloseNow" "게임이 지금 종료됩니다"
 "Steam_TimedTrial_Enjoy" "체험판 사용을 시작합니다"
+"Steam_TimedTrial_Offline" "게임 체험판과 Steam과의 연결이 끊어졌습니다"
 "Steam_TimedTrial_Minutes" "플레이 시간이 %minutes%분 남았습니다"
 "Steam_TimedTrial_Hours" "플레이 시간이 %hours%시간 %minutes%분 남았습니다"
 
@@ -4229,7 +4233,6 @@ Windows에 관리자로 로그인해야 합니다.
 
 "Steam_Parental_UnlockTitle"			"자녀 보호"
 "Steam_Parental_UnlockInstructions"		"자녀 보호를 끄려면 아래에 PIN을 입력하세요"
-"Steam_Parental_UnlockInstructions2"	""
 "Steam_Parental_ForgotPIN"				"PIN을 잊어버렸습니다"
 "Steam_Parental_NoRecoveryEmail"		"복구 이메일 설정 안됨"
 "Steam_Parental_NoRecoveryEmail_Instructions"		 "귀하의 계정에 설정된 복구 메일 주소가 없습니다. 복구 메일을 갱신하시려면 자녀 보호를 끄신 후 자녀 보호 설정을 다시 실행하십시오."
@@ -4430,7 +4433,6 @@ Windows에 관리자로 로그인해야 합니다.
 "Music_Playlist_RenameDialog_Title" "재생 목록 이름 바꾸기"
 "Music_Playlist_RenameDialog_Prompt" "재생 목록 이름을 '%playlistname%'(으)로 바꾸기"
 "Music_Playlist_AddDialog_Title" "새 재생 목록 만들기"
-"Music_Playlist_AddDialog_Prompt" ""
 "Music_Playlist_DeleteDialog_Title" "재생 목록 삭제"
 "Music_Playlist_DeleteDialog_Prompt" "'%playlistname% 재생 목록을 삭제하시겠습니까?"
 "Music_Playlist_Details_Play" "재생 목록"
@@ -4449,8 +4451,6 @@ Windows에 관리자로 로그인해야 합니다.
 "Music_Queue_Menu_ReplacePlaylist" "재생 목록을 대기열로 바꾸기"
 "Music_Queue_Menu_AppendPlaylist" "재생 목록에 추가"
 "Music_Queue_AddPlaylist_Dialog_Title" "재생 목록에 추가"
-"Music_Queue_AddPlaylist_Dialog_Prompt" ""
-
 "Steam_Settings_Controller"					"컨트롤러"
 "Steam_SettingsControllerTitle"				"컨트롤러 설정"
 "Steam_SettingsControllerDescription"		"일반 컨트롤러 설정에서는 설정 지원, 개인 설정 및 기타 옵션을 사용 선택할 수 있습니다."

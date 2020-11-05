@@ -13,7 +13,6 @@
 "FileOpenDialog_Look_in"	"場所："
 "FileOpenDialog_File_Name"	"ファイル名："
 "FileOpenDialog_File_Type"	"ファイル形式："
-"FileOpenDialog_Icon"		" "
 "FileOpenDialog_Name"		"名前"
 "FileOpenDialog_Type"		"タイプ"
 "SysMenu_Minimize"		" 最小化 "

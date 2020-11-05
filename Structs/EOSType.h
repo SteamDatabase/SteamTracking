@@ -27,6 +27,8 @@ typedef enum EOSType
     k_EOSTypeLinux419, // linux419
     k_EOSTypeLinux5x, // linux5x
     k_EOSTypeLinux54, // linux54
+    k_EOSTypeLinux6x, // linux6x
+    k_EOSTypeLinux7x, // linux7x
     k_EOSTypeMacos = -102, // macos
     k_EOSTypeMacos104, // macos104
     k_EOSTypeMacos105, // macos105

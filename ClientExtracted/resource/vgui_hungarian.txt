@@ -13,7 +13,6 @@
 "FileOpenDialog_Look_in"	"Tallózás:"
 "FileOpenDialog_File_Name"	"Fájlnév:"
 "FileOpenDialog_File_Type"	"Fájltípus:"
-"FileOpenDialog_Icon"		" "
 "FileOpenDialog_Name"		"Név"
 "FileOpenDialog_Type"		"Típus"
 "SysMenu_Minimize"		" Kis méret "

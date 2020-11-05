@@ -55,7 +55,7 @@
 "Friends_InApp"			"Numa aplicação"
 "Friends_InMod"			"Num mod"
 "Friends_InShortcut"		"Num jogo não-Steam"
-"Friends_Blocked"		"Bloqueado"
+"Friends_Blocked"		"Bloqueados"
 
 "Friends_AddFriend"		"Adicionar um Amigo..."
 "Friends_Edit_Profile"	"Editar perfil..."
@@ -342,7 +342,6 @@
 "Friends_Chat_ActionResultVoiceSlotsFull" "Não é possível iniciar voz em %chat%; não existem lugares de fala livres suficientes."
 "Friends_Chat_VoiceStatus"		"%availslots% lugares disponíveis [%maxslots% total]."
 
-"Friends_GroupSectionInfo_Offline"				""
 "Friends_GroupSectionInfo_Online"					"%online% ONLINE"
 "Friends_GroupSectionInfo_OnlineInGame"			"%ingame% A JOGAR, %online% ONLINE"
 "Friends_GroupSectionInfo_OnlineChatting"			"%inchat% NO CHAT, %online% ONLINE"

@@ -448,6 +448,9 @@ message CMsgNeedsPaint {
 	optional uint32 scrolly = 11;
 	optional float pagescale = 12;
 	optional uint32 pageserial = 15;
+	optional uint32 avg_frame_ms = 20;
+	optional float stddev_sum_frame_ms = 21;
+	optional uint32 long_frame_ms = 22;
 }
 
 message CMsgComboNeedsPaint {
@@ -864,7 +867,18 @@ message CMsgMinimizeWindow {
 }
 
 message CMsgShowBrowserContextMenu {
+	message ContextCommand {
+		optional int32 id = 1;
+		optional string label = 2;
+	}
+
 	optional uint32 browser_handle = 1;
+	repeated .CMsgShowBrowserContextMenu.ContextCommand custom_commands = 2;
+}
+
+message CMsgHandleContextMenuCommand {
+	optional uint32 browser_handle = 1;
+	optional int32 command_id = 2;
 }
 
 message CMsgImeSetComposition {

@@ -1,0 +1,5 @@
+﻿"Language" "sc_schinese"
+"Tokens"
+{
+"steam_menu_file" "蒸汽平台"
+}

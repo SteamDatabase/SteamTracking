@@ -12,13 +12,13 @@
 "Overlay_SettingsDescriptionApp"	"Steam resta attivo mentre sei in un'applicazione, ma può mostrarti le notifiche dei messaggi da parte di amici della Comunità di Steam e affini tramite un'interfaccia disponibile all'interno dell'applicazione."
 "Overlay_SettingsEnable"	"Abilita l'Overlay di Steam mentre sei in gioco"
 "Overlay_SettingsEnableApp"	"Abilita la Comunità di Steam dall'applicazione"
-"Overlay_SettingsSCTenfootEnable"	"Apri l'Overlay di Big Picture quando usi un controller compatibile con Steam Input dal desktop"
+"Overlay_SettingsSCTenfootEnable"	"Apri Overlay di Big Picture quando usi controller compatibili con Steam Input dal desktop"
 "Overlay_SettingsHotKeyLabel"	"Scorciatoia per l'Overlay"
 "Overlay_SettingsScreenshotHotKeyLabel"	"Scorciatoia per gli screenshot"
 "Overlay_SettingsScreenshotActionLabel" "Allo scatto di uno screenshot"
-"Overlay_SettingsEnableVRDesktopGameTheaterCheck" "Usa la modalità Cinema quando avvii giochi da desktop e SteamVR è attivo"
+"Overlay_SettingsEnableVRDesktopGameTheaterCheck" "Usa modalità Cinema se avvii giochi da desktop con SteamVR attivo"
 "Overlay_SettingsDesktopGameTheaterCheck" "Usa la modalità Cinema quando SteamVR è attivo"
-"Overlay_SettingsIsVRShortcut"			"Includi nella libreria VR"
+"Overlay_SettingsIsVRShortcut"			"Includi nella Libreria VR"
 
 "Steam_Settings_Ingame_ShowFPS_Title"	"Contatore in gioco degli FPS"
 "Steam_Settings_Ingame_ShowFPS_Off" "Disattivato"
@@ -42,7 +42,7 @@
 "Steam_Settings_Library_DisableCommunityContent_Title" "Disabilita i contenuti della Comunità"
 "Steam_Settings_Library_DisableCommunityContent_Desc" "Evita il caricamento automatico dei contenuti della Comunità quando si visualizzano i dettagli di un gioco."
 "Steam_Settings_Library_DisableCommunityContent_Disabled_Desc" "Abilitato dalla modalità a basso consumo di banda.\n\nEvita il caricamento automatico dei contenuti della Comunità quando si visualizzano i dettagli di un gioco."
-"Steam_Settings_Library_IconInGameList_Title" "Mostra le icone dei giochi nella colonna sinistra"
+"Steam_Settings_Library_IconInGameList_Title" "Mostra icone a sinistra"
 
 
 "Overlay_WebBrowserTitle"	"Browser web dal gioco"

@@ -170,8 +170,8 @@ enum EMsg {
 	k_EMsgAMChatActionResult = 579;
 	k_EMsgAMFindAccounts = 580;
 	k_EMsgAMFindAccountsResponse = 581;
-	k_EMsgAMRequestAccountData = 582;
-	k_EMsgAMRequestAccountDataResponse = 583;
+	k_EMsgAMIsAccountNameInUse = 582;
+	k_EMsgAMIsAccountNameInUseResponse = 583;
 	k_EMsgAMSetAccountFlags = 584;
 	k_EMsgAMCreateClan = 586;
 	k_EMsgAMCreateClanResponse = 587;
@@ -895,8 +895,6 @@ enum EMsg {
 	k_EMsgPSCreateShoppingCartResponse = 5002;
 	k_EMsgPSIsValidShoppingCart = 5003;
 	k_EMsgPSIsValidShoppingCartResponse = 5004;
-	k_EMsgPSAddPackageToShoppingCart = 5005;
-	k_EMsgPSAddPackageToShoppingCartResponse = 5006;
 	k_EMsgPSRemoveLineItemFromShoppingCart = 5007;
 	k_EMsgPSRemoveLineItemFromShoppingCartResponse = 5008;
 	k_EMsgPSGetShoppingCartContents = 5009;

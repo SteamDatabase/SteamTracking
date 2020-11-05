@@ -342,7 +342,6 @@
 "Friends_Chat_ActionResultVoiceSlotsFull" "Nelze zahájit hlasovou konverzaci v konverzaci %chat%, nedostatek dostupných volných pozic pro hovor."
 "Friends_Chat_VoiceStatus"		"K dispozici je %availslots% pozic [celkem pozic %maxslots%]."
 
-"Friends_GroupSectionInfo_Offline"				""
 "Friends_GroupSectionInfo_Online"					"%online% ONLINE"
 "Friends_GroupSectionInfo_OnlineInGame"			"%ingame% VE HŘE, %online% ONLINE"
 "Friends_GroupSectionInfo_OnlineChatting"			"%inchat% V KONVERZACI, %online% ONLINE"
@@ -472,7 +471,7 @@
 
 "Friends_ChatURLWarning_Title"		"Výstraha: nejedná se o stránku služby Steam"
 "Friends_ChatURLWarning_Info"			"Poznámka: adresa URL, na kterou jste klepli, neodkazuje na oficiální stránky služby Steam."
-"Friends_ChatURLWarning_Info2"		"Pokud Vás tato webová stránka požádá o Vaše uživatelské jméno nebo heslo, tyto informace nezadávejte. Mohli byste tím přijít o svůj účet služby Steam a všechny hry!"
+"Friends_ChatURLWarning_Info2"		"Pokud Vás tato stránka požádá o název účtu nebo heslo, tyto informace nezadávejte. Mohli byste přijít o svůj účet služby Steam a všechny hry!"
 "Friends_ChatURLWarning_Continue"		"Ok, pokračovat na webovou stránku"
 "Friends_ChatURLWarning_DontAskAgainCheck"	"Tuto zprávu již nezobrazovat."
 

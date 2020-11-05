@@ -13,7 +13,6 @@
 "FileOpenDialog_Look_in"	"찾는 위치:"
 "FileOpenDialog_File_Name"	"파일 이름:"
 "FileOpenDialog_File_Type"	"파일 형식:"
-"FileOpenDialog_Icon"		" "
 "FileOpenDialog_Name"		"이름"
 "FileOpenDialog_Type"		"입력"
 "SysMenu_Minimize"		" 최소화 "

@@ -342,7 +342,6 @@
 "Friends_Chat_ActionResultVoiceSlotsFull" "No se puede iniciar la voz en %chat%: no hay suficientes ranuras de voz."
 "Friends_Chat_VoiceStatus"		"%availslots% ranuras disponibles [%maxslots% en total]."
 
-"Friends_GroupSectionInfo_Offline"				""
 "Friends_GroupSectionInfo_Online"					"%online% EN LÍNEA"
 "Friends_GroupSectionInfo_OnlineInGame"			"%ingame% JUGANDO, %online% EN LÍNEA"
 "Friends_GroupSectionInfo_OnlineChatting"			"%inchat% EN CHAT, %online% EN LÍNEA"

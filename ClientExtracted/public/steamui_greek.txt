@@ -428,13 +428,13 @@
 "Steam_WizardNext_Purchase"			"Αγορά"
 "Steam_PurchasingProgress_Title"		"Steam - σε λειτουργία"
 
-"Steam_DPIScaling_Option_Windows"		"Κλιμάκωση κειμένου και εικονιδίων για να ταιριάζουν με την ανάλυση της οθόνης (απαιτεί επανεκκίνηση)"
+"Steam_DPIScaling_Option_Windows"		"Κλιμάκωση κειμένου/εικονιδίων σε ανάλυση οθόνης (απαιτεί επανεκκίνηση)"
 "Steam_DPIScaling_Option"				"Μεγέθυνση κειμένου και εικονιδίων με βάση το μέγεθος της οθόνης (απαιτεί επανεκκίνηση)"
 "Steam_LaunchSteamOnStartup_Option"		"Εκτέλεση του Steam όποτε ξεκινάει ο υπολογιστής μου"
 "Steam_BPMOnStartup_Option"				"Εκκίνηση Steam σε Big Picture"
 "Steam_ShowUrlBar_Option"				"Προβολή της μπάρας διευθύνσεων URL του Steam"
 "Steam_UseDirectWrite_Option"			"Ενεργοποίηση DirectWrite για βελτιωμένη εξομάλυνση γραμματοσειρών."
-"Steam_UseH264HWAccel_Option"			"Αποκωδικοποίηση βίντεο μέσω υλικού, αν υποστηρίζεται (απαιτείται επανεκκίνηση)"
+"Steam_UseH264HWAccel_Option"			"Αποκωδικοποίηση υλικού, αν υποστηρίζεται (απαιτεί επανεκκίνηση)"
 
 "Steam_ErrorFilesystemNotExecutable_Title"	"Steam - Σφάλμα"
 "Steam_ErrorFilesystemNotExecutable"		"Το επιλεγμένο σύστημα αρχείων δεν υποστηρίζει εκτέλεση αρχείων.\nΦορτώστε το με επιλογή εκτέλεσης και προσπαθήστε ξανά."
@@ -469,8 +469,8 @@
 "Steam_ConversionNotEnoughDiskSpace_Info"	"Δε διαθέτετε αρκετό χώρο στο δίσκο για να γίνει η εγκατάσταση των επιλεγμένων παιχνιδιών.\nΠαρακαλούμε ελευθερώστε λίγο χώρο στο δίσκο, ή πατήστε «Πίσω» και αποεπιλέξτε κάποια αντικείμενα."
 "Steam_ConversionNotEnoughDiskSpaceForConversion_Info"	"Δεν υπάρχει αρκετός ελεύθερος χώρος στο δίσκο για τη μετατροπή των επιλεγμένων παιχνιδιών στο Steam.\nΠαρακαλούμε ελευθερώστε %s1 MB χώρου στο δίσκο και δοκιμάστε ξανά."
 "Steam_Interface"				"Διεπαφή"
-"Steam_EnableGPUWebViews_Option"		"Ενεργή επιτάχυνση υλικού GPU σε προβολές ιστού (απαιτεί επανεκκίνηση)"
-"Steam_SmoothScrollWebViews_Option"		"Ενεργοποίηση ομαλής κύλισης σε προβολές ιστού (απαιτεί επανεκκίνηση)"
+"Steam_EnableGPUWebViews_Option"		"Επιτάχυνση υλικού GPU σε προβολές ιστού (απαιτεί επανεκκίνηση)"
+"Steam_SmoothScrollWebViews_Option"		"Ομαλή κύλιση σε προβολές ιστού (απαιτεί επανεκκίνηση)"
 "Steam_SetJumplistOptions"		"ΕΠΙΛΟΓΕΣ ΓΡΑΜΜΗΣ ΕΡΓΑΣΙΩΝ"
 "Steam_ShowOnlineStatusOptions"	"Επιλέξτε τις online επιλογές προς εμφάνιση"
 "Steam_ShowDestinationOptions"	"Επιλέξτε τις επιλογές που θα εμφανίζονται"
@@ -657,8 +657,6 @@
 "Steam_RecoverAuthenticator_BadPassword"			"Ο κωδικός πρόσβασης ήταν εσφαλμένος. Παρακαλούμε ελέγξτε τον και προσπαθήστε ξανά."
 "Steam_RecoverAuthenticator_BadCode"				"Οι κωδικοί δεν ήταν σωστοί. Παρακαλούμε ελέγξτε τους και προσπαθήστε ξανά."
 "Steam_RecoverAuthenticator_BadCodes"				"Οι κωδικοί ή ο κωδικός πρόσβασης ήταν εσφαλμένοι. Παρακαλούμε ελέγξτε τους και προσπαθήστε ξανά."
-"Steam_RecoverAuthenticator_SupportURL"				""
-
 "Steam_RecoverAuthenticator_Done"					"Ο επαληθευτής Steam Guard αφαιρέθηκε από το λογαριασμό σας.\n\nΜπορείτε πλέον να συνδεθείτε στο λογαριασμό σας."
 
 
@@ -1453,7 +1451,6 @@
 "SteamUI_ThrottleEditLabel"				"Εισάγετε μία νέα τιμή παρακάτω:"
 "SteamUI_ThrottleApplyChange"			"Εφαρμογή"
 "Steam_AutoUpdateTimeRestrictionLabel"	"Αυτόματες ενημερώσεις μόνο μεταξύ:"
-"Steam_AutoUpdateTimeRestrictionStart"	""
 "Steam_AutoUpdateTimeRestrictionEnd"		"Και"
 "Steam_AllowDownloadsDuringGameplay"	"Να επιτρέπονται οι λήψεις κατά τη διάρκεια παιχνιδιού"
 "Steam_AllowDownloadsDuringGameplayDetails"	"Αν είναι επιλεγμένο, το Steam θα μπορεί να εκκινεί ή να συνεχίζει τη λήψη ενημερώσεων που έχετε ενώ χρησιμοποιείτε ένα παιχνίδι ή μια άλλη \nεφαρμογή Steam. Μπορείτε επίσης να το παρακάμψετε αυτό ανά παιχνίδι από τη σελίδα ιδιοτήτων κάθε παιχνιδιού"
@@ -1506,7 +1503,6 @@
 "SteamUI_HardwarePromoWizard_Title" "Εξαργύρωση προσφοράς"
 "Steam_HardwarePromo_Intro" "Συγχαρητήρια! Ο υπολογιστής σας πληροί τις προϋποθέσεις για αυτή την προσφορά. Μπορείτε να εξαργυρώσετε αυτή την προσφορά σε έναν, και μόνο έναν, λογαριασμό Steam. Θα μπορείτε να παίξετε τα παιχνίδια που περιέχονται σε αυτή την προσφορά από οποιονδήποτε υπολογιστή, εφόσον συνδέεστε με αυτό τον λογαριασμό Steam."
 "Steam_Legal_HardwarePromo_Unreleased" "Μερικά από τα προϊόντα σε αυτό το πακέτο δεν έχουν ακόμα κυκλοφορήσει και δεν είναι αυτή τη στιγμή διαθέσιμα. Αυτά τα προϊόντα θα καθιστούν αυτόματα διαθέσιμα σε εσάς μέσω Steam μόλις κυκλοφορήσουν. Η ημερομηνία κυκλοφορίας για αυτά τα προϊόντα δεν είναι καθορισμένη και οι αγοραστές δε θα πρέπει να βασίζονται σε εκτιμήσεις για την ημερομηνία κυκλοφορίας. Επιπλέον όροι και προϋποθέσεις θα εμφανιστούν πατώντας το «Επόμενο»."
-"Steam_Legal_HardwarePromo" ""
 "Steam_Working_HardwarePromo" "Εγγραφή προσφοράς..."
 "SteamUI_OEMTicketWizard_Title" "Εγγραφή άδειας OEM"
 
@@ -3360,12 +3356,11 @@
 "Steam_ServerBrowserPingRateDefault"	"Αυτόματο (%PingsPerMin%)"
 
 "Steam_TextFilterSettingLabel"									"Φιλτράρισμα συνομιλίας"
-"Steam_TextFilterStatus_SteamLabOptedOut"						"Τώρα διαθέσιμο μέσω Ερευν. κέντρου Steam"
-"Steam_TextFilterStatus_Enabled"								"Έχει οριστεί να φιλτράρει βωμολοχίες και βρισιές"
-"Steam_TextFilterStatus_Enabled_IgnoreFriends"					"Έχει οριστεί να φιλτράρει βωμολοχίες και βρισιές από όλους εκτός από φίλους"
-"Steam_TextFilterStatus_EnabledAllowProfanity"					"Έχει οριστεί να επιτρέπει βωμολοχίες, αλλά να φιλτράρει βρισιές"
-"Steam_TextFilterStatus_EnabledAllowProfanity_IgnoreFriends"	"Έχει οριστεί να επιτρέπει βωμολοχίες, αλλά να φιλτράρει βρισιές από όλους εκτός από φίλους"
-"Steam_TextFilterStatus_Disabled"								"Έχει οριστεί να επιτρέπει βωμολοχίες και βρισιές"
+"Steam_TextFilterStatus_Enabled"								"Έχει οριστεί να φιλτράρει βαριές βωμολοχίες και βρισιές"
+"Steam_TextFilterStatus_Enabled_IgnoreFriends"					"Έχει οριστεί να φιλτράρει βαριές βωμολοχίες και βρισιές από όλους εκτός από φίλους"
+"Steam_TextFilterStatus_EnabledAllowProfanity"					"Έχει οριστεί να επιτρέπει βαριές βωμολοχίες, αλλά να φιλτράρει βρισιές"
+"Steam_TextFilterStatus_EnabledAllowProfanity_IgnoreFriends"	"Έχει οριστεί να επιτρέπει βαριές βωμολοχίες, αλλά να φιλτράρει βρισιές από όλους εκτός από φίλους"
+"Steam_TextFilterStatus_Disabled"								"Έχει οριστεί να επιτρέπει βαριές βωμολοχίες και βρισιές"
 "Steam_TextFilterSettingURL"									"Αλλαγή προτιμήσεων φιλτραρίσματος συνομιλίας"
 
 "Steam_SettingsInGameScreenshotFolder"	"ΦΑΚΕΛΟΣ ΦΩΤΟΓΡΑΦΙΩΝ"
@@ -3536,7 +3531,7 @@
 "SteamUI_Video360PlayerInstall_Message"	"Η αναπαραγωγή βίντεο 360 απαιτεί μια εγκατάσταση του αναπαραγωγού βίντεο Steam 360.\n\nΟλοκληρώστε την εγκατάσταση και έπειτα πατήστε Παρακολούθηση σε ένα βίντεο 360 για να ξεκινήσετε την αναπαραγωγή."
 
 "steam_community"	"ΚΟΙΝΟΤΗΤΑ"
-"steam_library"		"ΣΥΛΛΟΓΗ"
+"steam_library"		"Συλλογη"
 
 "steam_library_games"		"ΠΑΙΧΝΙΔΙΑ"
 "steam_library_zoom"		"ΜΕΓΕΘΥΝΣΗ"
@@ -4211,6 +4206,7 @@
 "Steam_TimedTrial_Over" "Η δοκιμή σας τελείωσε τώρα"
 "Steam_TimedTrial_CloseNow" "Το παιχνίδι θα κλείσει τώρα"
 "Steam_TimedTrial_Enjoy" "Απολαύστε τη δοκιμή σας"
+"Steam_TimedTrial_Offline" "Η δοκιμή παιχνιδιού έχασε τη σύνδεση με το Steam"
 "Steam_TimedTrial_Minutes" "Απομένουν %minutes% λεπτά παιχνιδιού"
 "Steam_TimedTrial_Hours" "Απομένουν %hours% ώρες και %minutes% λεπτά παιχνιδιού"
 
@@ -4230,7 +4226,6 @@
 
 "Steam_Parental_UnlockTitle"			"Γονικός έλεγχος"
 "Steam_Parental_UnlockInstructions"		"Εισάγετε το PIN παρακάτω για τερματισμό γονικού ελέγχου"
-"Steam_Parental_UnlockInstructions2"	""
 "Steam_Parental_ForgotPIN"				"Ξέχασα το PIN μου"
 "Steam_Parental_NoRecoveryEmail"		"Δεν έχει οριστεί email ανάκτησης"
 "Steam_Parental_NoRecoveryEmail_Instructions"		 "Δεν έχει οριστεί διεύθυνση email ανάκτησης για τον λογαριασμό σας. Για να ανανεώσετε τη διεύθυνση ανάκτησής σας, βγείτε από τον γονικό έλεγχο και εκτελέστε ξανά τη ρύθμιση γονικού ελέγχου."
@@ -4389,7 +4384,7 @@
 "Music_Settings_Library_StartCrawling" "ΣΑΡΩΣΗ ΤΩΡΑ"
 "Music_Settings_Database_Header" "Βάση δεδομένων"
 "Music_Settings_Database_CrawlAtStartup" "Σάρωση στην εκκίνηση"
-"Music_Settings_CrawlSteamInstallFolders" "Σάρωση φακέλων Steam για soundtrack"
+"Music_Settings_CrawlSteamInstallFolders" "Σάρωση σε φακέλους Steam"
 "Music_Settings_Database_ResetDatabase" "ΕΠΑΝΑΦΟΡΑ ΒΑΣΗΣ ΔΕΔΟΜΕΝΩΝ"
 "Music_Settings_Database_StopCrawling" "Διακοπή σάρωσης"
 "Music_Settings_Database_BuildingMusicLibrary" "Δημιουργία της μουσικής συλλογής..."
@@ -4431,7 +4426,6 @@
 "Music_Playlist_RenameDialog_Title" "Μετονομασία λίστας"
 "Music_Playlist_RenameDialog_Prompt" "Μετονομασία της λίστας «%playlistname%»"
 "Music_Playlist_AddDialog_Title" "Δημιουργία νέας λίστας"
-"Music_Playlist_AddDialog_Prompt" ""
 "Music_Playlist_DeleteDialog_Title" "Διαγραφή λίστας"
 "Music_Playlist_DeleteDialog_Prompt" "Θέλετε σίγουρα να διαγράψετε τη λίστα «%playlistname%»;"
 "Music_Playlist_Details_Play" "ΑΝΑΠΑΡΑΓΩΓΗ ΛΙΣΤΑΣ"
@@ -4450,8 +4444,6 @@
 "Music_Queue_Menu_ReplacePlaylist" "Αντικατάσταση λίστας με τη σειρά"
 "Music_Queue_Menu_AppendPlaylist" "Προσθήκη σε λίστα αναπαραγωγής"
 "Music_Queue_AddPlaylist_Dialog_Title" "Προσθήκη λίστας αναπαραγωγής"
-"Music_Queue_AddPlaylist_Dialog_Prompt" ""
-
 "Steam_Settings_Controller"					"Χειριστήριο"
 "Steam_SettingsControllerTitle"				"Διαμόρφωση χειριστηρίου"
 "Steam_SettingsControllerDescription"		"Οι γενικές ρυθμίσεις χειριστηρίου επιτρέπουν ρύθμιση για συμμετοχή σε υποστήριξη διαμόρφωσης, σε εξατομίκευση και σε άλλες επιλογές."

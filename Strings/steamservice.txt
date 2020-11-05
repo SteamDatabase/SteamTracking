@@ -1,10 +1,10 @@
 __TEXT
-P%
-P%
+0%
+0%
 __text
 __TEXT
-;
-;
+9
+9
 __stubs
 __TEXT
 __stub_helper
@@ -19,16 +19,17 @@ __TEXT
 7
 __unwind_info
 __TEXT
+8u
 __eh_frame
 __TEXT
 __DATA
-P%
-P%
+0%
+0%
 
 __nl_symbol_ptr
 __DATA
-P%
-P%
+0%
+0%
 __got
 __DATA
 __la_symbol_ptr
@@ -38,15 +39,21 @@ __DATA
 __const
 __DATA
 __objc_imageinfo__DATA
+({&
+({&
 __objc_selrefs
 __DATA
+0{&
+0{&
 __objc_classrefs__DATA
+H{&
+H{&
 __data
 __DATA
+P{&
+P{&
 __thread_vars
 __DATA
-xK'
-xK'
 __thread_bss
 __DATA
 __common
@@ -55,18 +62,19 @@ __bss
 __DATA
 H
 __LINKEDIT
-p)
-P'
+P)
+0'
 
 8
 @loader_path/steamservice.dylib
 "
-P'
-Hj'
-k'
+0'
+HJ'
+K'
+(b'
 P
-C!
-C!
+Z!
+Z!
 g
 
 `
@@ -92,11 +100,10 @@ h
 /usr/lib/libobjc.A.dylib
 &
 )
-P+0
-"
 Hi
 H=
-O$
+$
+$
 10CUtlString
 N10CIPCServer13CThreadClientE
 10CIPCServer
@@ -116,8 +123,8 @@ N10OSXHelpers16CIOPollingHelper15IHelperCallbackE
 14CServiceEngine
 25CClientModuleManagerAsync
 21CWorkItemFunctionCall
-21CSTimeCumulativeTimer
-16CCumulativeTimerIyLy1000000EE
+25CFastTimerCumulativeTimer
+16CCumulativeTimerIdLy1EE
 14CUtlLinkedListIP21CWorkItemFunctionCalliE
 24CClientModuleManagerBase
 20IClientModuleManager
@@ -841,6 +848,7 @@ Fv14CPoolReferenceI8CMetricsEE
 @
 H
 P
+Q
 !
 "
 #
@@ -1011,6 +1019,7 @@ Last
 -------------------- ---------------------------------------- ---------- ---------- ----------
 %-20.20s %-40.40s %-10u %-10u %-10u
 Assertion Failed: m_pvOrigNameAddress
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/vprof.h
 Assertion Failed: m_pParent
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlvector.h
 -single_core
@@ -1149,7 +1158,6 @@ ClientModuleManagerThread
 Assertion Failed: eCallResult != k_ECallResultNone
 Assertion Failed: IsRunning()
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/cumulativetimer.h
-stime went backwards?
 CWorkItemFunctionCall
 CWorkItemFunctionCall::ThreadProcess
 Assertion Failed: m_iRefs > 0 && m_iRefs < 0x1000000
@@ -6012,16 +6020,17 @@ KeyValues Error: %s in file %s [offset: %d]
 Memory leak: mempool blocks left in memory: %d
 CMemoryPool::AddNewBlob: mode == GROW_NONE
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/mempool.cpp
+Assertion Failed: blobSize <= nMaxBlobSize
 Fatal Assertion Failed: pBlob
 CMemoryPool::Alloc: ran out of memory
 Assertion Failed: k_nMemPoolMagic_Free == *(( (int *) returnBlock) - 1)
 Assertion Failed: k_nMemPoolMagic_InUse == *(( (int *) pMem) - 1)
 CMemoryPool
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/netadr.cpp
 loopback
 broadcast
 %i.%i.%i.%i
 %i.%i.%i.%i:%i
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/netadr.cpp
 %d.%d.%d.%d:%d
 Address too small!
 CIPAndPort::GetIPv4 called on IPv6 address
@@ -6082,11 +6091,8 @@ CUtlStringBuilder::Data::MoveToHeap
 -nocrashdialog
 -debugbreak
 %s
-Fatal assert failed: %s, line %d.  Application exiting.
-Fatal assert
-console
-_ExitOnFatalAssert
 %s (%d) :
+console
 Exiting on SPEW_ABORT
 *
 IsSpewActive
@@ -6094,17 +6100,18 @@ Assertion Failed: %s
 Fatal Assertion Failed: %s
 -noassert
 DONT_BREAK_ON_ASSERT
-No room for new profile in vprof thread profile list, grow MAX_THREADS_TO_VPROF_AT_ONCE
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/vprof.h
+Fatal assert; application exiting
+Fatal assert
+_ExitOnFatalAssert
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/threadtools.h
 Assertion Failed: m_cReentrancyCount >= 0
 Failed to generate callstack
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier0/memblockhdr.cpp
 Assertion Failed: stack%2d: %s
 Stack%2d: %s
 Assertion Failed: stack%2d: 0x%llX
 Stack%2d: 0x%llX
 Assertion Failed: ppFrames[iFrame] != NULL
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier0/memblockhdr.cpp
 Assertion Failed: ((size_t)(m_nLogicalBytesAllocated) % 8) == 0
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier0/memstd.cpp
 No tracked allocs currently in use. Total %d
@@ -6132,8 +6139,8 @@ crashhandler002
 crashhandler.dylib
 CreateInterface
 1.0
-Oct 28 2020
-16:35:08
+Nov  4 2020
+10:47:23
 Jan
 Feb
 Mar
@@ -6186,8 +6193,9 @@ MiB
 KiB
 Assertion Failed: NULL == pValObjectPrev->m_pValObjectNext
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier0/valobject.cpp
-Assertion Failed: m_nRecursions > 0
+Assertion Failed: !g_VProfile
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier0/vprof.cpp
+Assertion Failed: m_nRecursions > 0
 Avg Time/Frame (ms)
 [ func+child   func ]     Count
 ---------- ------      ------
@@ -6242,6 +6250,7 @@ tier1
 Assertion Failed: m_CounterNames[n]
 Assertion Failed: m_pBudgetGroups
 Assertion Failed: eGroup < VPROF_BUDGETGROUP_MAX
+No room for new profile in vprof thread profile list, grow MAX_THREADS_TO_VPROF_AT_ONCE
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/crypto_digest_openssl.cpp
 CCrypto::GenerateSHA1Digest
 Assertion Failed: pOutDigest
@@ -6674,10 +6683,11 @@ Work Item (%s) for Work Pool %s completed but job no longer existed to notify
 CWorkThreadPool::BTryDeleteExitedWorkerThreads
 Work thread '%s' is marked exited, but we could not immediately join prior to deleting -- proceeding without join
 CWorkItem::DispatchCompletedWorkItem: got a work item with no job ID
-"
+Assertion Failed: m_cCurrentDepth > 0
 Hi
 H=
-O$
+$
+$
 @
 @
 =
@@ -6689,8 +6699,8 @@ A
 Hc
 =
 N
-L95X#
-#
+:!
+!
 Hc
 ?
 ?
@@ -7016,11 +7026,12 @@ AES-NI GCM module for x86_64, CRYPTOGAMS by <appro@openssl.org>
 =
 Montgomery Multiplication with scatter/gather for x86_64, CRYPTOGAMS by <appro@openssl.org>
 =
-A
-%
+
 3
 3
 IcE
+
+
 I;E
 ,
 H
@@ -7042,8 +7053,6 @@ P
 @
 @
 @
-Z
-7
 H=
 &
 =
@@ -7053,7 +7062,7 @@ H=
 @
 Hi
 E
-y
+Hc5
 $
 (
 0
@@ -7083,6 +7092,7 @@ i
 @
 @
 @
+n
 @
 @
 @
@@ -7093,5 +7103,4 @@ i
 @
 @
 @
-
 Hi

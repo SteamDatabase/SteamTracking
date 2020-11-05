@@ -64,7 +64,7 @@
 "Overlay_Taskbar_Close"		"Clica aqui para voltares ao jogo"
 "Overlay_Taskbar_CloseApp"		"Clica aqui para voltares à aplicação"
 "Overlay_Taskbar_WebBrowser"	"Browser da Web"
-"Overlay_Taskbar_Screenshots"	"Capturas de Ecrã"
+"Overlay_Taskbar_Screenshots"	"Capturas de ecrã"
 "Overlay_Taskbar_DLC"		"DLC"
 "Overlay_Taskbar_Guide"		"Guia"
 "Overlay_Taskbar_legacycdkey"	"Código de Produto"
@@ -185,7 +185,7 @@
 "Overlay_MicroTxnAuth_Insufficient_Funds_Info" "Não tens fundos suficientes na tua Carteira Steam para concluíres a tua compra. Gostarias de adicionar mais fundos e continuar?"
 
 "Overlay_Screenshots_Title" "Gestor de Capturas de Ecrã"
-"Overlay_Screenshots_Panel_Title" "Capturas de Ecrã"
+"Overlay_Screenshots_Panel_Title" "Capturas de ecrã"
 "Overlay_Screenshots_Show" "Mostrar:"
 "Overlay_Screenshots_Size_Cloud" "%selected_ss_size%"
 "Overlay_Screenshots_Size_Original" " (%selected_ss_size_original% no disco)"

@@ -278,9 +278,10 @@
  D typeinfo for CCrossProcessPipe
  D typeinfo for CCryptoKeyBase
  D typeinfo for CCryptoKeyBase_RawBuffer
- D typeinfo for CCumulativeTimer<unsigned long long, 1000000ull>
+ D typeinfo for CCumulativeTimer<double, 1ull>
  D typeinfo for CCuratorPreferences
  D typeinfo for CDebugStatsSystem
+ D typeinfo for CFastTimerCumulativeTimer
  D typeinfo for CFrameFunction<CJobMgr>
  D typeinfo for CFrameFunction<CScheduledFunctionMgr>
  D typeinfo for CHTTPClientMgr
@@ -325,7 +326,6 @@
  D typeinfo for CRefCountServiceBase<true, CRefMT>
  D typeinfo for CRefCounted<CRefCountServiceBase<false, CRefST> >
  D typeinfo for CRefCounted<CRefCountServiceBase<true, CRefMT> >
- D typeinfo for CSTimeCumulativeTimer
  D typeinfo for CScheduledFunction<CIPCServer>
  D typeinfo for CScheduledFunction<ClientProcessMonitor::CClientProcessMonitor>
  D typeinfo for CServiceEngine
@@ -395,6 +395,7 @@
  D vtable for CCryptoKeyBase_RawBuffer
  D vtable for CCuratorPreferences
  D vtable for CDebugStatsSystem
+ D vtable for CFastTimerCumulativeTimer
  D vtable for CFrameFunction<CJobMgr>
  D vtable for CFrameFunction<CScheduledFunctionMgr>
  D vtable for CHTTPClientMgr
@@ -433,7 +434,6 @@
  D vtable for CPipeEventCallbackHelper
  D vtable for CPipeWaiter
  D vtable for CRSAPublicKey
- D vtable for CSTimeCumulativeTimer
  D vtable for CScheduledFunction<CIPCServer>
  D vtable for CScheduledFunction<ClientProcessMonitor::CClientProcessMonitor>
  D vtable for CServiceEngine
@@ -496,9 +496,10 @@
  R typeinfo name for CCrossProcessPipe
  R typeinfo name for CCryptoKeyBase
  R typeinfo name for CCryptoKeyBase_RawBuffer
- R typeinfo name for CCumulativeTimer<unsigned long long, 1000000ull>
+ R typeinfo name for CCumulativeTimer<double, 1ull>
  R typeinfo name for CCuratorPreferences
  R typeinfo name for CDebugStatsSystem
+ R typeinfo name for CFastTimerCumulativeTimer
  R typeinfo name for CFrameFunction<CJobMgr>
  R typeinfo name for CFrameFunction<CScheduledFunctionMgr>
  R typeinfo name for CHTTPClientMgr
@@ -543,7 +544,6 @@
  R typeinfo name for CRefCountServiceBase<true, CRefMT>
  R typeinfo name for CRefCounted<CRefCountServiceBase<false, CRefST> >
  R typeinfo name for CRefCounted<CRefCountServiceBase<true, CRefMT> >
- R typeinfo name for CSTimeCumulativeTimer
  R typeinfo name for CScheduledFunction<CIPCServer>
  R typeinfo name for CScheduledFunction<ClientProcessMonitor::CClientProcessMonitor>
  R typeinfo name for CServiceEngine
@@ -1045,14 +1045,14 @@
  T CCryptoKeyBase_RawBuffer::Validate(CValidator&, char const*) const
  T CCryptoKeyBase_RawBuffer::Wipe()
  T CCryptoKeyBase_RawBuffer::~CCryptoKeyBase_RawBuffer()
- T CCumulativeTimer<unsigned long long, 1000000ull>::Accumulate(unsigned long long)
- T CCumulativeTimer<unsigned long long, 1000000ull>::Get() const
- T CCumulativeTimer<unsigned long long, 1000000ull>::GetCurrentSegment() const
- T CCumulativeTimer<unsigned long long, 1000000ull>::GetPreviousSegments() const
- T CCumulativeTimer<unsigned long long, 1000000ull>::IsRunning() const
- T CCumulativeTimer<unsigned long long, 1000000ull>::Reset()
- T CCumulativeTimer<unsigned long long, 1000000ull>::Start()
- T CCumulativeTimer<unsigned long long, 1000000ull>::Stop()
+ T CCumulativeTimer<double, 1ull>::Accumulate(double)
+ T CCumulativeTimer<double, 1ull>::Get() const
+ T CCumulativeTimer<double, 1ull>::GetCurrentSegment() const
+ T CCumulativeTimer<double, 1ull>::GetPreviousSegments() const
+ T CCumulativeTimer<double, 1ull>::IsRunning() const
+ T CCumulativeTimer<double, 1ull>::Reset()
+ T CCumulativeTimer<double, 1ull>::Start()
+ T CCumulativeTimer<double, 1ull>::Stop()
  T CCuratorPreferences::ByteSize() const
  T CCuratorPreferences::CCuratorPreferences()
  T CCuratorPreferences::Clear()
@@ -1089,6 +1089,10 @@
  T CDirIterator::Init(StringView)
  T CDirIterator::IsValid() const
  T CDirIterator::~CDirIterator()
+ T CFastTimerCumulativeTimer::InternalGetCurrentSegment() const
+ T CFastTimerCumulativeTimer::InternalReset()
+ T CFastTimerCumulativeTimer::InternalStart()
+ T CFastTimerCumulativeTimer::~CFastTimerCumulativeTimer()
  T CFileReader::BOpenFile(StringView, EFioModifiers)
  T CFileReader::CFileReader(bool, unsigned int)
  T CFileReader::Read(void*, unsigned int, unsigned int*)
@@ -1434,6 +1438,7 @@
  T CMsgClientLogonResponse::SetCachedSize(int) const
  T CMsgClientLogonResponse::SharedCtor()
  T CMsgClientLogonResponse::SharedDtor()
+ T CMsgClientLogonResponse::mutable_agreement_session_url()
  T CMsgClientLogonResponse::mutable_email_domain()
  T CMsgClientLogonResponse::mutable_ip_country_code()
  T CMsgClientLogonResponse::mutable_parental_setting_signature()
@@ -1442,6 +1447,7 @@
  T CMsgClientLogonResponse::mutable_steam2_ticket()
  T CMsgClientLogonResponse::mutable_vanity_url()
  T CMsgClientLogonResponse::mutable_webapi_authenticate_user_nonce()
+ T CMsgClientLogonResponse::set_agreement_session_url(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgClientLogonResponse::set_email_domain(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgClientLogonResponse::set_ip_country_code(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgClientLogonResponse::set_parental_setting_signature(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
@@ -1758,10 +1764,6 @@
  T CSTime::SetCurrentServerTime(unsigned long long)
  T CSTime::SetFromServerTime(long long)
  T CSTime::SetToServerTime()
- T CSTimeCumulativeTimer::InternalGetCurrentSegment() const
- T CSTimeCumulativeTimer::InternalReset()
- T CSTimeCumulativeTimer::InternalStart()
- T CSTimeCumulativeTimer::~CSTimeCumulativeTimer()
  T CSafeSet::~CSafeSet()
  T CScheduledFunction<CIPCServer>::CScheduledFunction(CIPCServer*, void (CIPCServer::*)())
  T CScheduledFunction<CIPCServer>::Run()
@@ -2037,7 +2039,6 @@
  T CUtlHashMap<CMetricsSymbol, long long, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::Purge()
  T CUtlHashMap<CMetricsSymbol, long long, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::RecursiveValidate(CValidator&, char const*)
  T CUtlHashMap<CMetricsSymbol, long long, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::RehashNodesInBucket(int)
- T CUtlHashMap<CMetricsSymbol, long long, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::UnlinkNodeFromBucket(int, int)
  T CUtlHashMap<CMetricsSymbol, long long, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::~CUtlHashMap()
  T CUtlHashMap<CMsgSpewThrottle::SpewLocation_t, CMsgSpewThrottle::SpewThrottleEntry_t, CDefEquals<CMsgSpewThrottle::SpewLocation_t>, CMsgSpewThrottle::SpewLocationHashFunctor, CMsgSpewThrottle::SpewLocation_t>::CUtlHashMap()
  T CUtlHashMap<CMsgSpewThrottle::SpewLocation_t, CMsgSpewThrottle::SpewThrottleEntry_t, CDefEquals<CMsgSpewThrottle::SpewLocation_t>, CMsgSpewThrottle::SpewLocationHashFunctor, CMsgSpewThrottle::SpewLocation_t>::Purge()
@@ -2050,7 +2051,6 @@
  T CUtlHashMap<CUtlString, bool, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::Purge()
  T CUtlHashMap<CUtlString, bool, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::RehashNodesInBucket(int)
  T CUtlHashMap<CUtlString, bool, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::RemoveAll()
- T CUtlHashMap<CUtlString, bool, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::UnlinkNodeFromBucket(int, int)
  T CUtlHashMap<CUtlString, bool, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::~CUtlHashMap()
  T CUtlHashMap<EMsg, int, CDefEquals<EMsg>, HashFunctor<EMsg>, EMsg>::CUtlHashMap()
  T CUtlHashMap<EMsg, int, CDefEquals<EMsg>, HashFunctor<EMsg>, EMsg>::Purge()
@@ -2071,7 +2071,6 @@
  T CUtlHashMap<unsigned int, ClientProcessMonitor::CMonitoredProcess*, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>::RehashNodesInBucket(int)
  T CUtlHashMap<unsigned int, ClientProcessMonitor::CMonitoredProcess*, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>::RemoveAt(int)
  T CUtlHashMap<unsigned int, ClientProcessMonitor::CMonitoredProcess*, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>::RemoveNodeFromBucket(int, int)
- T CUtlHashMap<unsigned int, ClientProcessMonitor::CMonitoredProcess*, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>::UnlinkNodeFromBucket(int, int)
  T CUtlHashMap<unsigned int, ClientProcessMonitor::CMonitoredProcess*, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>::~CUtlHashMap()
  T CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>::AllocNode()
  T CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>::CUtlHashMap()
@@ -2082,7 +2081,6 @@
  T CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>::Purge()
  T CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>::RehashNodesInBucket(int)
  T CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>::RemoveAll()
- T CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>::UnlinkNodeFromBucket(int, int)
  T CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>::~CUtlHashMap()
  T CUtlHashMap<unsigned long long, CJob*, CDefEquals<unsigned long long>, CJobMgr::JobHasFunctor_t, unsigned long long>::CUtlHashMap()
  T CUtlHashMap<unsigned long long, CJob*, CDefEquals<unsigned long long>, CJobMgr::JobHasFunctor_t, unsigned long long>::Find(unsigned long long const&) const
@@ -2100,7 +2098,6 @@
  T CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>::RemoveAll()
  T CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>::RemoveAt(int)
  T CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>::RemoveNodeFromBucket(int, int)
- T CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>::UnlinkNodeFromBucket(int, int)
  T CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>::~CUtlHashMap()
  T CUtlHashMap<unsigned long, OSXHelpers::CIOPollingHelper::IHelperCallback*, CDefEquals<unsigned long>, HashFunctor<unsigned long>, unsigned long>::AllocNode()
  T CUtlHashMap<unsigned long, OSXHelpers::CIOPollingHelper::IHelperCallback*, CDefEquals<unsigned long>, HashFunctor<unsigned long>, unsigned long>::CUtlHashMap()
@@ -2112,7 +2109,6 @@
  T CUtlHashMap<unsigned long, OSXHelpers::CIOPollingHelper::IHelperCallback*, CDefEquals<unsigned long>, HashFunctor<unsigned long>, unsigned long>::RemoveAll()
  T CUtlHashMap<unsigned long, OSXHelpers::CIOPollingHelper::IHelperCallback*, CDefEquals<unsigned long>, HashFunctor<unsigned long>, unsigned long>::RemoveAt(int)
  T CUtlHashMap<unsigned long, OSXHelpers::CIOPollingHelper::IHelperCallback*, CDefEquals<unsigned long>, HashFunctor<unsigned long>, unsigned long>::RemoveNodeFromBucket(int, int)
- T CUtlHashMap<unsigned long, OSXHelpers::CIOPollingHelper::IHelperCallback*, CDefEquals<unsigned long>, HashFunctor<unsigned long>, unsigned long>::UnlinkNodeFromBucket(int, int)
  T CUtlHashMap<unsigned long, OSXHelpers::CIOPollingHelper::IHelperCallback*, CDefEquals<unsigned long>, HashFunctor<unsigned long>, unsigned long>::~CUtlHashMap()
  T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short>, unsigned short>::AllocNode()
  T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short>, unsigned short>::CUtlHashMap()
@@ -2123,7 +2119,6 @@
  T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short>, unsigned short>::Purge()
  T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short>, unsigned short>::RehashNodesInBucket(int)
  T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short>, unsigned short>::RemoveAll()
- T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short>, unsigned short>::UnlinkNodeFromBucket(int, int)
  T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short>, unsigned short>::~CUtlHashMap()
  T CUtlLinkedList<CBaseScheduledFunction*, int>::AllocInternal(bool)
  T CUtlLinkedList<CBaseScheduledFunction*, int>::Free(int)
@@ -2268,6 +2263,12 @@
  T CUtlRBTree<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*, int, CDefLess<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*>, CDefRBTreeBalanceListener<int>, CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*>::RemoveAll()
  T CUtlRBTree<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*, int, CDefLess<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*>, CDefRBTreeBalanceListener<int>, CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*>::RemoveAt(int)
  T CUtlRBTree<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*, int, CDefLess<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*>, CDefRBTreeBalanceListener<int>, CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*>::~CUtlRBTree()
+ T CUtlRBTree<CWorkThreadPool*, int, CDefLess<CWorkThreadPool*>, CDefRBTreeBalanceListener<int>, CWorkThreadPool*>::Find(CWorkThreadPool* const&) const
+ T CUtlRBTree<CWorkThreadPool*, int, CDefLess<CWorkThreadPool*>, CDefRBTreeBalanceListener<int>, CWorkThreadPool*>::NewNode(bool)
+ T CUtlRBTree<CWorkThreadPool*, int, CDefLess<CWorkThreadPool*>, CDefRBTreeBalanceListener<int>, CWorkThreadPool*>::Remove(CWorkThreadPool* const&)
+ T CUtlRBTree<CWorkThreadPool*, int, CDefLess<CWorkThreadPool*>, CDefRBTreeBalanceListener<int>, CWorkThreadPool*>::RemoveAll()
+ T CUtlRBTree<CWorkThreadPool*, int, CDefLess<CWorkThreadPool*>, CDefRBTreeBalanceListener<int>, CWorkThreadPool*>::RemoveAt(int)
+ T CUtlRBTree<CWorkThreadPool*, int, CDefLess<CWorkThreadPool*>, CDefRBTreeBalanceListener<int>, CWorkThreadPool*>::~CUtlRBTree()
  T CUtlRBTreeBase<int, CDefRBTreeBalanceListener<int> >::_InsertRebalance(int, unsigned long, void*)
  T CUtlRBTreeBase<int, CDefRBTreeBalanceListener<int> >::_LinkToParent(int, int, bool, unsigned long, void*)
  T CUtlRBTreeBase<int, CDefRBTreeBalanceListener<int> >::_NextInorder(int, unsigned long, void*) const
@@ -2458,6 +2459,7 @@
  T CWorkItemFunctionCall::ThreadProcess(CWorkThread*)
  T CWorkItemFunctionCall::Validate(CValidator&, char const*)
  T CWorkItemFunctionCall::~CWorkItemFunctionCall()
+ T CWorkItemPipeline::RemoveItem()
  T CWorkThread::CWorkThread(CWorkThreadPool*, char const*)
  T CWorkThread::Cancel()
  T CWorkThread::CheckThreadShouldExit()
@@ -2472,6 +2474,7 @@
  T CWorkThreadPool::BShouldCreateNewThread() const
  T CWorkThreadPool::BTryDeleteExitedWorkerThreads()
  T CWorkThreadPool::CWorkThreadPool(char const*)
+ T CWorkThreadPool::GetAllWorkThreadPools()
  T CWorkThreadPool::GetCurrentBacklogTime() const
  T CWorkThreadPool::GetNextCompletedWorkItem()
  T CWorkThreadPool::GetNextWorkItemToProcess()
@@ -2589,7 +2592,6 @@
  T CreateMasterPipeName(char const*, bool, char*, int)
  T CreatePlatformSocket(int, int, int, unsigned int, int*)
  T CreateTempFileName(CUtlString*)
- T CreateVProfile
  T DES_cfb64_encrypt
  T DES_cfb_encrypt
  T DES_decrypt3
@@ -3295,7 +3297,15 @@
  T SteamVProf::CVProfNode::GetSubNode(char const*, int, EVProfBugdetGroup, int)
  T SteamVProf::CVProfNode::MarkFrame()
  T SteamVProf::CVProfNode::Reset()
- T SteamVProf::CVProfScope::CVProfScope(char const*, int, EVProfBugdetGroup, bool, int)
+ T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)1, false, 4>::~CVProfScope()
+ T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)13, false, 4>::~CVProfScope()
+ T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)14, false, 4>::~CVProfScope()
+ T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)16, false, 4>::~CVProfScope()
+ T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)18, false, 4>::~CVProfScope()
+ T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)20, false, 4>::~CVProfScope()
+ T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)4, false, 4>::~CVProfScope()
+ T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)6, false, 4>::~CVProfScope()
+ T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)7, false, 4>::~CVProfScope()
  T SteamVProf::CVProfile::AddBudgetGroupName(EVProfBugdetGroup, int, char const*)
  T SteamVProf::CVProfile::BProfileHasNodesOutsideBudgetGroup_Recursive(SteamVProf::CVProfNode*, int)
  T SteamVProf::CVProfile::CVProfile()
@@ -3358,6 +3368,8 @@
  T VALVE_CRYPTO_dbg_free(void*)
  T VALVE_CRYPTO_dbg_malloc(unsigned long, char const*, int)
  T VALVE_CRYPTO_dbg_realloc(void*, unsigned long, char const*, int)
+ T VProfInternalEnterScopeCurrentThread
+ T VProfInternalGetProfileForCurrentThread
  T V_AppendSlash
  T V_CopyAndFixSlashes
  T V_EscapeShellArgumentAndAppend(CUtlStringBuilder*, char const*)
@@ -3414,9 +3426,9 @@
  T X509_SIG_free
  T X509_signature_dump
  T _DMsg
- T _ExitOnFatalAssert
- T _SpewMessage
  T _SpewMessageType
+ T _SpewMessageTypeSourceFmt
+ T _SpewMessageTypeSourceV
  T _ZNSt3__16vectorIN10SteamVProf10TimeSums_tENS_9allocatorIS2_EEE6assignIPS2_EENS_9enable_ifIXaasr21__is_forward_iteratorIT_EE5valuesr16is_constructibleIS2_NS_15iterator_traitsIS9_E9referenceEEE5valueEvE4typeES9_S9_
  T __clang_call_terminate
  T _findfirst(char const*, _finddata_t*)
@@ -3675,6 +3687,7 @@
  T int CUtlRBTree<CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned int>::Insert_Internal<CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::Node_t>(CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::Node_t&&, bool)
  T int CUtlRBTree<CUtlMap<void*, int, int, CDefLess<void*> >::Node_t, int, CUtlMap<void*, int, int, CDefLess<void*> >::CKeyLess, CDefRBTreeBalanceListener<int>, void*>::Insert_Internal<CUtlMap<void*, int, int, CDefLess<void*> >::Node_t>(CUtlMap<void*, int, int, CDefLess<void*> >::Node_t&&, bool)
  T int CUtlRBTree<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*, int, CDefLess<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*>, CDefRBTreeBalanceListener<int>, CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*>::Insert_Internal<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*>(CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*&&, bool)
+ T int CUtlRBTree<CWorkThreadPool*, int, CDefLess<CWorkThreadPool*>, CDefRBTreeBalanceListener<int>, CWorkThreadPool*>::Insert_Internal<CWorkThreadPool*>(CWorkThreadPool*&&, bool)
  T int V_sprintf_safe<16ul>(char (&) [16ul], char const*, ...)
  T int_rsa_verify
  T lh_delete
@@ -3882,6 +3895,7 @@
  T void CUtlRBTree<CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned int>::FindInsertionPosition<CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::Node_t>(CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::Node_t const&, bool, int&, bool&, bool&)
  T void CUtlRBTree<CUtlMap<void*, int, int, CDefLess<void*> >::Node_t, int, CUtlMap<void*, int, int, CDefLess<void*> >::CKeyLess, CDefRBTreeBalanceListener<int>, void*>::FindInsertionPosition<CUtlMap<void*, int, int, CDefLess<void*> >::Node_t>(CUtlMap<void*, int, int, CDefLess<void*> >::Node_t const&, bool, int&, bool&, bool&)
  T void CUtlRBTree<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*, int, CDefLess<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*>, CDefRBTreeBalanceListener<int>, CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*>::FindInsertionPosition<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*>(CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >* const&, bool, int&, bool&, bool&)
+ T void CUtlRBTree<CWorkThreadPool*, int, CDefLess<CWorkThreadPool*>, CDefRBTreeBalanceListener<int>, CWorkThreadPool*>::FindInsertionPosition<CWorkThreadPool*>(CWorkThreadPool* const&, bool, int&, bool&, bool&)
  T void PipeDebugParam<ERegKeyRoot>(ERegKeyRoot)
  T void PipeDebugParam<ESteamRealm>(ESteamRealm)
  T void PipeDebugParam<EUniverse>(EUniverse)
@@ -4055,6 +4069,7 @@
  b CPipeWaiter::BAdd(CPipeEvent*)::fAsserted
  b CSteamID::Render() const::nBuf
  b CSteamID::Render() const::rgchBuf
+ b CWorkThreadPool::GetAllWorkThreadPools()::s_treePools
  b ClearWritingMiniDump::fAsserted
  b DebugStatsSystem::g_DebugStatsSystem
  b ERR_get_state.fallback
@@ -4090,7 +4105,7 @@
  b TestForAppleGraphicsUpdateInstalled()::handle
  b V_pretifymem(float, int, bool)::current
  b V_pretifymem(float, int, bool)::output
- b _SpewMessageType::autoMutex__
+ b _SpewMessageTypeSourceV::autoMutex__
  b _ZL6g_Info.0
  b _ZL6g_Info.1
  b _ZL6g_Info.2
@@ -4154,6 +4169,7 @@
  b guard variable for AssertMsgImplementation::s_ThreadLocalAssertMsgGuardStatic
  b guard variable for CFilenamesCache::FindOrCreateFilename(char const*)::autoMutex__
  b guard variable for CIPCServer::Thread_MainLoop()::signalWorkThreadPool
+ b guard variable for CWorkThreadPool::GetAllWorkThreadPools()::s_treePools
  b guard variable for DebugStatsSystem::g_DebugStatsSystem
  b guard variable for FindOrCreateStack(CStack*)::autoMutex__
  b guard variable for GScheduledFunctionMgr()::g_ScheduledFunctionMgr
@@ -4172,7 +4188,7 @@
  b guard variable for SecureRandomBytes::s_dev_urandom_fd
  b guard variable for SteamStdLib::CommandLine()::g_CmdLine
  b guard variable for TestForAppleGraphicsUpdateInstalled()::handle
- b guard variable for _SpewMessageType::autoMutex__
+ b guard variable for _SpewMessageTypeSourceV::autoMutex__
  b guard variable for protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgIPAddress_offsets_
  b guard variable for protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgProtoBufHeader_offsets_
  b hksAccept
@@ -4232,10 +4248,8 @@
  b s_GaussianStream
  b s_GroupCount
  b s_LastMiniDumpTime
- b s_Line
  b s_SharedUDPSocketPollHelper
  b s_SingleProcessHangupMutex
- b s_SpewType
  b s_UniformStream
  b s_WSASendThread
  b s_bCPUHasFastREPMOVSB
@@ -4247,7 +4261,6 @@
  b s_objCloseSocket
  b s_objDisconnect
  b s_objNullSendOp
- b s_pFileName
  b s_pSpewGroups
  b sm_bAssertDumpStack
  b ssl_cipher_methods

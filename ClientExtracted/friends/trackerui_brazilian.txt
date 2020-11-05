@@ -342,7 +342,6 @@
 "Friends_Chat_ActionResultVoiceSlotsFull" "Não é possível iniciar conversa por voz em %chat%, não há vagas de voz suficientes."
 "Friends_Chat_VoiceStatus"		"%availslots% vagas disponíveis [%maxslots% no total]."
 
-"Friends_GroupSectionInfo_Offline"				""
 "Friends_GroupSectionInfo_Online"					"%online% ONLINE"
 "Friends_GroupSectionInfo_OnlineInGame"			"%ingame% EM JOGO, %online% ONLINE"
 "Friends_GroupSectionInfo_OnlineChatting"			"%inchat% NA CONVERSA, %online% ONLINE"

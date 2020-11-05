@@ -1,0 +1,3 @@
+{
+	"language": "sc_schinese"
+}

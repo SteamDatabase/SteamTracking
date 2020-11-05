@@ -65,11 +65,13 @@ public:
     virtual unknown_ret BuildBackup(unsigned int, unsigned long long, char const*) = 0;
     virtual unknown_ret BuildInstaller(char const*, char const*, char const*, char const*) = 0;
     virtual unknown_ret CancelBackup() = 0;
-    virtual unknown_ret RestoreApp(unsigned int, int, char const*) = 0;
+    virtual unknown_ret RestoreAppFromBackup(unsigned int, char const*) = 0;
+    virtual unknown_ret RecoverAppFromFolder(unsigned int, char const*) = 0;
     virtual unknown_ret CanMoveApp(unsigned int) = 0;
     virtual unknown_ret MoveApp(unsigned int, int) = 0;
     virtual unknown_ret GetMoveAppProgress(unsigned int, unsigned long long*, unsigned long long*, unsigned int*) = 0;
     virtual unknown_ret CancelMoveApp(unsigned int) = 0;
+    virtual unknown_ret BWaitForFiles(unsigned int) = 0;
     virtual unknown_ret BNeedsFile(unsigned int, char const*, unsigned long long, unsigned int) = 0;
     virtual unknown_ret BAddFileOnDisk(unsigned int, char const*, unsigned long long, unsigned int, SHADigestWrapper_t) = 0;
     virtual unknown_ret FinishAddingFiles(unsigned int) = 0;

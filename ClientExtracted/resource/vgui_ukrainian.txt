@@ -13,7 +13,6 @@
 "FileOpenDialog_Look_in"	"Шукати в:"
 "FileOpenDialog_File_Name"	"Назва файлу:"
 "FileOpenDialog_File_Type"	"Тип файлу:"
-"FileOpenDialog_Icon"		" "
 "FileOpenDialog_Name"		"Назва"
 "FileOpenDialog_Type"		"Тип"
 "SysMenu_Minimize"		" Згорнути "

@@ -342,7 +342,6 @@
 "Friends_Chat_ActionResultVoiceSlotsFull" "Неможливо почати голосовий чат %chat%, недостатньо вільних місць для розмови."
 "Friends_Chat_VoiceStatus"		"Доступно місць: %availslots% [усього: %maxslots%]."
 
-"Friends_GroupSectionInfo_Offline"				""
 "Friends_GroupSectionInfo_Online"					"%online% У МЕРЕЖI"
 "Friends_GroupSectionInfo_OnlineInGame"			"%ingame% У ГРI, %online% У МЕРЕЖI"
 "Friends_GroupSectionInfo_OnlineChatting"			"%inchat% У ЧАТІ, %online% У МЕРЕЖІ"

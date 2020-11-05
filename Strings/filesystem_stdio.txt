@@ -1,8 +1,8 @@
 __TEXT
 __text
 __TEXT
-`;
-`;
+?
+?
 __stubs
 __TEXT
 __stub_helper
@@ -21,14 +21,14 @@ __DATA
 
 __nl_symbol_ptr
 __DATA
-f
+]
 __got
 __DATA
-H
-h
+8
+_
 __la_symbol_ptr
 __DATA
-q
+f
 __
 15CBaseFileSystem
 11IFileSystem
@@ -202,10 +202,6 @@ m_PathIDInfos
 m_OpenedFiles
 m_OpenedFileHandles
 m_FileNames
-No room for new profile in vprof thread profile list, grow MAX_THREADS_TO_VPROF_AT_ONCE
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/vprof.h
-Assertion Failed: m_pvOrigNameAddress
-Assertion Failed: m_pParent
 Assertion Failed: (&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlvector.h
 Assertion Failed: static_cast<_in>( ret ) == i
@@ -216,6 +212,8 @@ Assertion Failed: pPool->m_SpaceUsed < 0xFFFF
 Symbol table grew beyond unsigned short.  Time to upgrade UtlSymId_t for the symbol type or look for unnecessary spam in the tables.
 Assertion Failed: (unsigned)elem <= (unsigned)m_Size
 Assertion Failed: IsValidIndex(elem)
+Assertion Failed: m_pParent
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/vprof.h
 Assertion Failed: (elem == Count()) || IsValidIndex(elem)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utldict.h
 m_Memory
@@ -280,12 +278,11 @@ Assertion failed: length > k_cchMaxString
 Assertion Failed: s_bAllowStaticSymbolTable
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlsymbol.cpp
 s_pSymbolTable
+E
 @
 @
-}
 
-F
-F
+4
 =
 @
 =

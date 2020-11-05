@@ -84,6 +84,7 @@
  B CMsgGetZoomResponse::default_instance_
  B CMsgGoBack::default_instance_
  B CMsgGoForward::default_instance_
+ B CMsgHandleContextMenuCommand::default_instance_
  B CMsgHidePopup::default_instance_
  B CMsgHideToolTip::default_instance_
  B CMsgHideWindow::default_instance_
@@ -161,6 +162,7 @@
  B CMsgSetWindowPosition::default_instance_
  B CMsgSetZoomLevel::default_instance_
  B CMsgShowBrowserContextMenu::default_instance_
+ B CMsgShowBrowserContextMenu_ContextCommand::default_instance_
  B CMsgShowPopup::default_instance_
  B CMsgShowToolTip::default_instance_
  B CMsgShowWindow::default_instance_
@@ -390,7 +392,6 @@
  CValidator::Pop()
  CValidator::Push(char const*, void*, char const*)
  CanBreakBetween
- CreateVProfile
  D ASN1_ANY_it
  D ASN1_BIT_STRING_it
  D ASN1_INTEGER_it
@@ -2062,6 +2063,7 @@
  D typeinfo for CEnableHighResCaptureMsg
  D typeinfo for CFloatProperty
  D typeinfo for CFrameEvent
+ D typeinfo for CFrameEventPerfTracker
  D typeinfo for CFrameStatAccumulatedValue
  D typeinfo for CFrameStats
  D typeinfo for CFrameStatsListMsg
@@ -2181,6 +2183,7 @@
  D typeinfo for CHTMLProtoBufMsg<CMsgFullRepaint>
  D typeinfo for CHTMLProtoBufMsg<CMsgGoBack>
  D typeinfo for CHTMLProtoBufMsg<CMsgGoForward>
+ D typeinfo for CHTMLProtoBufMsg<CMsgHandleContextMenuCommand>
  D typeinfo for CHTMLProtoBufMsg<CMsgHidePopup>
  D typeinfo for CHTMLProtoBufMsg<CMsgImeCancelComposition>
  D typeinfo for CHTMLProtoBufMsg<CMsgImeCommitText>
@@ -2331,6 +2334,7 @@
  D typeinfo for CMsgGetZoomResponse
  D typeinfo for CMsgGoBack
  D typeinfo for CMsgGoForward
+ D typeinfo for CMsgHandleContextMenuCommand
  D typeinfo for CMsgHidePopup
  D typeinfo for CMsgHideToolTip
  D typeinfo for CMsgHideWindow
@@ -2408,6 +2412,7 @@
  D typeinfo for CMsgSetWindowPosition
  D typeinfo for CMsgSetZoomLevel
  D typeinfo for CMsgShowBrowserContextMenu
+ D typeinfo for CMsgShowBrowserContextMenu_ContextCommand
  D typeinfo for CMsgShowPopup
  D typeinfo for CMsgShowToolTip
  D typeinfo for CMsgShowWindow
@@ -2906,6 +2911,7 @@
  D vgui::HTML::PanelMessageFunc_OnFileSelected::InitVar()::bAdded
  D vgui::HTML::PanelMessageFunc_OnFileSelectionCancelled::InitVar()::bAdded
  D vgui::HTML::PanelMessageFunc_OnKeyCodeUnhandled::InitVar()::bAdded
+ D vgui::HTML::PanelMessageFunc_OnMenuClose::InitVar()::bAdded
  D vgui::HTML::PanelMessageFunc_OnScreenSizeChanged::InitVar()::bAdded
  D vgui::HTML::PanelMessageFunc_OnSetCursorVGUI::InitVar()::bAdded
  D vgui::HTMLFramelessPopup::ChainToAnimationMap()::chained
@@ -3532,6 +3538,7 @@
  D vtable for CEnableHighResCaptureMsg
  D vtable for CFloatProperty
  D vtable for CFrameEvent
+ D vtable for CFrameEventPerfTracker
  D vtable for CFrameStatAccumulatedValue
  D vtable for CFrameStats
  D vtable for CFrameStatsListMsg
@@ -3650,6 +3657,7 @@
  D vtable for CHTMLProtoBufMsg<CMsgFullRepaint>
  D vtable for CHTMLProtoBufMsg<CMsgGoBack>
  D vtable for CHTMLProtoBufMsg<CMsgGoForward>
+ D vtable for CHTMLProtoBufMsg<CMsgHandleContextMenuCommand>
  D vtable for CHTMLProtoBufMsg<CMsgHidePopup>
  D vtable for CHTMLProtoBufMsg<CMsgImeCancelComposition>
  D vtable for CHTMLProtoBufMsg<CMsgImeCommitText>
@@ -3800,6 +3808,7 @@
  D vtable for CMsgGetZoomResponse
  D vtable for CMsgGoBack
  D vtable for CMsgGoForward
+ D vtable for CMsgHandleContextMenuCommand
  D vtable for CMsgHidePopup
  D vtable for CMsgHideToolTip
  D vtable for CMsgHideWindow
@@ -3877,6 +3886,7 @@
  D vtable for CMsgSetWindowPosition
  D vtable for CMsgSetZoomLevel
  D vtable for CMsgShowBrowserContextMenu
+ D vtable for CMsgShowBrowserContextMenu_ContextCommand
  D vtable for CMsgShowPopup
  D vtable for CMsgShowToolTip
  D vtable for CMsgShowWindow
@@ -4386,6 +4396,7 @@
  R typeinfo name for CEnableHighResCaptureMsg
  R typeinfo name for CFloatProperty
  R typeinfo name for CFrameEvent
+ R typeinfo name for CFrameEventPerfTracker
  R typeinfo name for CFrameStatAccumulatedValue
  R typeinfo name for CFrameStats
  R typeinfo name for CFrameStatsListMsg
@@ -4505,6 +4516,7 @@
  R typeinfo name for CHTMLProtoBufMsg<CMsgFullRepaint>
  R typeinfo name for CHTMLProtoBufMsg<CMsgGoBack>
  R typeinfo name for CHTMLProtoBufMsg<CMsgGoForward>
+ R typeinfo name for CHTMLProtoBufMsg<CMsgHandleContextMenuCommand>
  R typeinfo name for CHTMLProtoBufMsg<CMsgHidePopup>
  R typeinfo name for CHTMLProtoBufMsg<CMsgImeCancelComposition>
  R typeinfo name for CHTMLProtoBufMsg<CMsgImeCommitText>
@@ -4655,6 +4667,7 @@
  R typeinfo name for CMsgGetZoomResponse
  R typeinfo name for CMsgGoBack
  R typeinfo name for CMsgGoForward
+ R typeinfo name for CMsgHandleContextMenuCommand
  R typeinfo name for CMsgHidePopup
  R typeinfo name for CMsgHideToolTip
  R typeinfo name for CMsgHideWindow
@@ -4732,6 +4745,7 @@
  R typeinfo name for CMsgSetWindowPosition
  R typeinfo name for CMsgSetZoomLevel
  R typeinfo name for CMsgShowBrowserContextMenu
+ R typeinfo name for CMsgShowBrowserContextMenu_ContextCommand
  R typeinfo name for CMsgShowPopup
  R typeinfo name for CMsgShowToolTip
  R typeinfo name for CMsgShowWindow
@@ -5167,14 +5181,9 @@
  SteamStdLib::CCommandLineParam::CCommandLineParam(char const*, char const*)
  SteamStdLib::CCommandLineParam::~CCommandLineParam()
  SteamStdLib::CommandLine()
- SteamThreadTools::CThreadLocalBase::Get() const
- SteamThreadTools::CThreadLocalBase::Set(void*)
  SteamThreadTools::CThreadMutex::CThreadMutex()
  SteamThreadTools::CThreadMutex::~CThreadMutex()
- SteamVProf::CVProfNode::EnterScope(void*)
  SteamVProf::CVProfNode::ExitScope()
- SteamVProf::CVProfNode::GetSubNode(char const*, int, EVProfBugdetGroup, int)
- SteamVProf::CVProfile::~CVProfile()
  StringAfterPrefix
  T AES_cbc_encrypt
  T AES_decrypt
@@ -5228,6 +5237,7 @@
  T ASN1_put_eoc
  T ASN1_put_object
  T ASN1_template_free
+ T BDrawHTMLPerfInfo()
  T BF_cbc_encrypt
  T BF_cfb64_encrypt
  T BF_decrypt
@@ -5235,10 +5245,12 @@
  T BF_encrypt
  T BF_ofb64_encrypt
  T BF_set_key
+ T BFastOverlayHTMLPathEnabled()
  T BFileExists(StringView)
  T BGetFriendGamePlayedName(CSteamID, CGameID, char*, unsigned int)
  T BGetFriendGamePlayedName(CSteamID, CGameID, wchar_t*, unsigned int)
  T BGetLocalFormattedDateAndTime(long, char*, int, char*, int, bool, bool)
+ T BGetURLFromCommandLine(CUtlString*, SteamStdLib::CCommandLineParam const&)
  T BHasNoBrowserCommandLineParam()
  T BIO_indent
  T BIO_printf
@@ -6715,6 +6727,8 @@
  T CFrameEvent::SerializeWithCachedSizesToArray(unsigned char*) const
  T CFrameEvent::SetCachedSize(int) const
  T CFrameEvent::~CFrameEvent()
+ T CFrameEventPerfTracker::TrackEventAndReturnIfAccumulated(unsigned int&, unsigned int&, float&)
+ T CFrameEventPerfTracker::Validate(CValidator&, char const*)
  T CFrameStatAccumulatedValue::ByteSize() const
  T CFrameStatAccumulatedValue::CFrameStatAccumulatedValue()
  T CFrameStatAccumulatedValue::Clear()
@@ -7836,6 +7850,8 @@
  T CHTMLProtoBufMsg<CMsgGoBack>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgGoForward>::CHTMLProtoBufMsg(EHTMLCommands)
  T CHTMLProtoBufMsg<CMsgGoForward>::~CHTMLProtoBufMsg()
+ T CHTMLProtoBufMsg<CMsgHandleContextMenuCommand>::CHTMLProtoBufMsg(EHTMLCommands)
+ T CHTMLProtoBufMsg<CMsgHandleContextMenuCommand>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgHidePopup>::CHTMLProtoBufMsg(EHTMLCommands)
  T CHTMLProtoBufMsg<CMsgHidePopup>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgImeCancelComposition>::CHTMLProtoBufMsg(EHTMLCommands)
@@ -7908,6 +7924,7 @@
  T CHTMLProtoBufMsg<CMsgWasHidden>::~CHTMLProtoBufMsg()
  T CHTMLWindow::AddGameOverlayPID(unsigned int)
  T CHTMLWindow::AddJSCallback(CJSCallbackFunc*)
+ T CHTMLWindow::AdditionalRoute_t* Destruct<CHTMLWindow::AdditionalRoute_t>(CHTMLWindow::AdditionalRoute_t*)
  T CHTMLWindow::BSupportsOffMainThreadPaints()
  T CHTMLWindow::BrowserAckPIDShuttingDown(CMsgAckPIDShuttingDown const*)
  T CHTMLWindow::BrowserBringWindowToFront(CMsgBringWindowToFront const*)
@@ -8201,6 +8218,7 @@
  T CItemImageManager::FindEmoticonImageString(char const*, CUtlString&, char const**, char const**, CItemImageManager::ItemIdentifier_t*)
  T CItemImageManager::FindImageString(char const*, CUtlString&, char const**, char const**, CItemImageManager::ItemIdentifier_t*)
  T CItemImageManager::FindInventoryImageString(char const*, CUtlString&, char const**, char const**, CItemImageManager::ItemIdentifier_t*)
+ T CItemImageManager::ImagesToDownload_t* Destruct<CItemImageManager::ImagesToDownload_t>(CItemImageManager::ImagesToDownload_t*)
  T CItemImageManager::Init(vgui::RichText*)
  T CItemImageManager::InsertURLOrImageString(vgui::RichText*, char const*, char const*, char const*, bool)
  T CItemImageManager::OnHTTPRequestCompleted(HTTPRequestCompleted_t*, bool)
@@ -8992,6 +9010,17 @@
  T CMsgGoForward::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgGoForward::SetCachedSize(int) const
  T CMsgGoForward::~CMsgGoForward()
+ T CMsgHandleContextMenuCommand::ByteSize() const
+ T CMsgHandleContextMenuCommand::CMsgHandleContextMenuCommand()
+ T CMsgHandleContextMenuCommand::Clear()
+ T CMsgHandleContextMenuCommand::GetCachedSize() const
+ T CMsgHandleContextMenuCommand::GetMetadata() const
+ T CMsgHandleContextMenuCommand::IsInitialized() const
+ T CMsgHandleContextMenuCommand::MergeFrom(CMsgHandleContextMenuCommand const&)
+ T CMsgHandleContextMenuCommand::New() const
+ T CMsgHandleContextMenuCommand::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgHandleContextMenuCommand::SetCachedSize(int) const
+ T CMsgHandleContextMenuCommand::~CMsgHandleContextMenuCommand()
  T CMsgHidePopup::ByteSize() const
  T CMsgHidePopup::CMsgHidePopup()
  T CMsgHidePopup::Clear()
@@ -10003,6 +10032,21 @@
  T CMsgShowBrowserContextMenu::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgShowBrowserContextMenu::SetCachedSize(int) const
  T CMsgShowBrowserContextMenu::~CMsgShowBrowserContextMenu()
+ T CMsgShowBrowserContextMenu_ContextCommand::ByteSize() const
+ T CMsgShowBrowserContextMenu_ContextCommand::CMsgShowBrowserContextMenu_ContextCommand()
+ T CMsgShowBrowserContextMenu_ContextCommand::Clear()
+ T CMsgShowBrowserContextMenu_ContextCommand::GetCachedSize() const
+ T CMsgShowBrowserContextMenu_ContextCommand::GetMetadata() const
+ T CMsgShowBrowserContextMenu_ContextCommand::IsInitialized() const
+ T CMsgShowBrowserContextMenu_ContextCommand::MergeFrom(CMsgShowBrowserContextMenu_ContextCommand const&)
+ T CMsgShowBrowserContextMenu_ContextCommand::New() const
+ T CMsgShowBrowserContextMenu_ContextCommand::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgShowBrowserContextMenu_ContextCommand::SetCachedSize(int) const
+ T CMsgShowBrowserContextMenu_ContextCommand::SharedCtor()
+ T CMsgShowBrowserContextMenu_ContextCommand::SharedDtor()
+ T CMsgShowBrowserContextMenu_ContextCommand::mutable_label()
+ T CMsgShowBrowserContextMenu_ContextCommand::set_label(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgShowBrowserContextMenu_ContextCommand::~CMsgShowBrowserContextMenu_ContextCommand()
  T CMsgShowPopup::ByteSize() const
  T CMsgShowPopup::CMsgShowPopup()
  T CMsgShowPopup::Clear()
@@ -11471,6 +11515,7 @@
  T CURLHelper::GetCommunityCDNURLForUniverse(EUniverse, CUtlString&, ESteamRealm)
  T CURLHelper::GetCommunityImagesURLForUniverse(EUniverse, ESteamRealm)
  T CURLHelper::GetLocalSteamClientURL()
+ T CURLHelper::GetRealmIfUnknown(ESteamRealm)
  T CURLHelper::GetSecureCommunityBaseURLForUniverse(EUniverse, CUtlString&, ESteamRealm)
  T CURLHelper::SetDefaultRealm(ESteamRealm)
  T CUtlBuffer::AddNullTermination()
@@ -11583,7 +11628,6 @@
  T CUtlHashMap<CUtlString, CHTMLWindow::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::Purge()
  T CUtlHashMap<CUtlString, CHTMLWindow::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::RehashNodesInBucket(int)
  T CUtlHashMap<CUtlString, CHTMLWindow::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::RemoveAll()
- T CUtlHashMap<CUtlString, CHTMLWindow::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::UnlinkNodeFromBucket(int, int)
  T CUtlHashMap<CUtlString, CHTMLWindow::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::~CUtlHashMap()
  T CUtlHashMap<CUtlString, CHTMLWindowController::JSRegisteredMethod_t, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::AllocNode()
  T CUtlHashMap<CUtlString, CHTMLWindowController::JSRegisteredMethod_t, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::CUtlHashMap()
@@ -11593,7 +11637,6 @@
  T CUtlHashMap<CUtlString, CHTMLWindowController::JSRegisteredMethod_t, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::IncrementalRehash()
  T CUtlHashMap<CUtlString, CHTMLWindowController::JSRegisteredMethod_t, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::Purge()
  T CUtlHashMap<CUtlString, CHTMLWindowController::JSRegisteredMethod_t, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::RehashNodesInBucket(int)
- T CUtlHashMap<CUtlString, CHTMLWindowController::JSRegisteredMethod_t, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::UnlinkNodeFromBucket(int, int)
  T CUtlHashMap<CUtlString, CHTMLWindowController::JSRegisteredMethod_t, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::~CUtlHashMap()
  T CUtlHashMap<CUtlString, CSteamUIMessagingController::ChannelCallback_t, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::AllocNode()
  T CUtlHashMap<CUtlString, CSteamUIMessagingController::ChannelCallback_t, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::CUtlHashMap()
@@ -11603,7 +11646,6 @@
  T CUtlHashMap<CUtlString, CSteamUIMessagingController::ChannelCallback_t, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::IncrementalRehash()
  T CUtlHashMap<CUtlString, CSteamUIMessagingController::ChannelCallback_t, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::Purge()
  T CUtlHashMap<CUtlString, CSteamUIMessagingController::ChannelCallback_t, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::RehashNodesInBucket(int)
- T CUtlHashMap<CUtlString, CSteamUIMessagingController::ChannelCallback_t, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::UnlinkNodeFromBucket(int, int)
  T CUtlHashMap<CUtlString, CSteamUIMessagingController::ChannelCallback_t, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::~CUtlHashMap()
  T CUtlHashMap<CUtlString, bool, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::AllocNode()
  T CUtlHashMap<CUtlString, bool, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::CUtlHashMap()
@@ -11613,7 +11655,6 @@
  T CUtlHashMap<CUtlString, bool, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::IncrementalRehash()
  T CUtlHashMap<CUtlString, bool, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::Purge()
  T CUtlHashMap<CUtlString, bool, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::RehashNodesInBucket(int)
- T CUtlHashMap<CUtlString, bool, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::UnlinkNodeFromBucket(int, int)
  T CUtlHashMap<CUtlString, bool, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::~CUtlHashMap()
  T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::AllocNode()
  T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::CUtlHashMap()
@@ -11624,7 +11665,6 @@
  T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::Purge()
  T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::RehashNodesInBucket(int)
  T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::RemoveAll()
- T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::UnlinkNodeFromBucket(int, int)
  T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::~CUtlHashMap()
  T CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>::AllocNode()
  T CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>::CUtlHashMap()
@@ -11634,7 +11674,6 @@
  T CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>::Purge()
  T CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>::RehashNodesInBucket(int)
  T CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>::RemoveAll()
- T CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>::UnlinkNodeFromBucket(int, int)
  T CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>::~CUtlHashMap()
  T CUtlHashMap<unsigned long long, CUtlString, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>::AllocNode()
  T CUtlHashMap<unsigned long long, CUtlString, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>::CUtlHashMap()
@@ -11646,7 +11685,6 @@
  T CUtlHashMap<unsigned long long, CUtlString, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>::Remove(unsigned long long const&)
  T CUtlHashMap<unsigned long long, CUtlString, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>::RemoveAt(int)
  T CUtlHashMap<unsigned long long, CUtlString, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>::RemoveNodeFromBucket(int, int)
- T CUtlHashMap<unsigned long long, CUtlString, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>::UnlinkNodeFromBucket(int, int)
  T CUtlHashMap<unsigned long long, CUtlString, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>::~CUtlHashMap()
  T CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t>, vgui::CFontWidthCache::key_t>::AllocNode()
  T CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t>, vgui::CFontWidthCache::key_t>::CUtlHashMap()
@@ -11656,7 +11694,6 @@
  T CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t>, vgui::CFontWidthCache::key_t>::IncrementalRehash()
  T CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t>, vgui::CFontWidthCache::key_t>::Purge()
  T CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t>, vgui::CFontWidthCache::key_t>::RehashNodesInBucket(int)
- T CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t>, vgui::CFontWidthCache::key_t>::UnlinkNodeFromBucket(int, int)
  T CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t>, vgui::CFontWidthCache::key_t>::Validate(CValidator&, char const*)
  T CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t>, vgui::CFontWidthCache::key_t>::~CUtlHashMap()
  T CUtlLinkedList<CHTMLWindow*, int>::AllocInternal(bool)
@@ -11966,8 +12003,10 @@
  T CUtlRBTreeBase<unsigned short, CDefRBTreeBalanceListener<unsigned short> >::_RotateLeft(unsigned short, unsigned long, void*)
  T CUtlRBTreeBase<unsigned short, CDefRBTreeBalanceListener<unsigned short> >::_RotateRight(unsigned short, unsigned long, void*)
  T CUtlSortVector<vgui::EditablePanel::LayoutPanel_t>::Insert(vgui::EditablePanel::LayoutPanel_t const&)
+ T CUtlString* Destruct<CUtlString>(CUtlString*)
  T CUtlString::AppendFormat(char const*, ...)
  T CUtlString::AssertStringTooLong()
+ T CUtlString::BEndsWithCaseless(char const*) const
  T CUtlString::Format(char const*, ...)
  T CUtlString::Replace(char const*, char const*)
  T CUtlString::ReplaceInternal(char const*, char const*, char const* (*)(char const*, char const*))
@@ -12925,6 +12964,7 @@
  T FreeArgsInTuple<3, std::__1::tuple<int, char const*, CSmartPtr<CJSCallbackFunc> > >::Call(std::__1::tuple<int, char const*, CSmartPtr<CJSCallbackFunc> >&, bool*)
  T FreeArgsInTuple<3, std::__1::tuple<unsigned int, char const*, CSmartPtr<CJSCallbackPromise> > >::Call(std::__1::tuple<unsigned int, char const*, CSmartPtr<CJSCallbackPromise> >&, bool*)
  T FreeArgsInTuple<4, std::__1::tuple<char const*, char const*, char const*, CSmartPtr<CJSCallbackPromise> > >::Call(std::__1::tuple<char const*, char const*, char const*, CSmartPtr<CJSCallbackPromise> >&, bool*)
+ T FriendAlias_t* Destruct<FriendAlias_t>(FriendAlias_t*)
  T FriendAlias_t::IsLess(void*, FriendAlias_t const*, FriendAlias_t const*)
  T FriendsDialog()
  T FriendsUIGetLauncherType()
@@ -13247,12 +13287,15 @@
  T SteamAPI_RegisterCallback
  T SteamAPI_UnregisterCallResult
  T SteamAPI_UnregisterCallback
- T SteamVProf::CVProfManager::AddProfileForThread(SteamVProf::CVProfile*, unsigned int, _opaque_pthread_t*)
  T SteamVProf::CVProfManager::DumpAllThreadProfiles(int)
  T SteamVProf::CVProfManager::StartProfilingAllThreads()
  T SteamVProf::CVProfManager::StopProfilingAllThreads()
- T SteamVProf::CVProfScope::CVProfScope(char const*, int, EVProfBugdetGroup, bool, int)
- T SteamVProf::CVProfileThreadEntry::DeleteProfile()
+ T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)12, false, 4>::~CVProfScope()
+ T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)19, false, 4>::~CVProfScope()
+ T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)2, false, 4>::~CVProfScope()
+ T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)20, false, 4>::~CVProfScope()
+ T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)5, false, 4>::~CVProfScope()
+ T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)7, false, 4>::~CVProfScope()
  T Sys_GetProcAddress(CSysModule*, char const*)
  T Sys_LoadModule(char const*, Sys_Flags)
  T Sys_UnloadModule(CSysModule*)
@@ -13568,6 +13611,7 @@
  T int CUtlRBTree<unsigned long long, int, CDefLess<unsigned long long>, CDefRBTreeBalanceListener<int>, unsigned long long>::Insert_Internal<unsigned long long const&>(unsigned long long const&, bool)
  T int CUtlRBTree<void*, int, CDefLess<void*>, CDefRBTreeBalanceListener<int>, void*>::Insert_Internal<void*>(void*&&, bool)
  T int V_sprintf_safe<1024ul>(char (&) [1024ul], char const*, ...)
+ T int V_swprintf_safe<256ul>(wchar_t (&) [256ul], wchar_t const*, ...)
  T int* std::__1::__rotate_gcd<int*>(int*, int*, int*)
  T int_rsa_verify
  T jcopy_block_row
@@ -15089,6 +15133,7 @@
  T vgui::GripPanel::~GripPanel()
  T vgui::HTML::AddCustomURLHandler(char const*, vgui::Panel*)
  T vgui::HTML::AddJSCallback(CJSCallbackFunc*)
+ T vgui::HTML::AdditionalRoute_t* Destruct<vgui::HTML::AdditionalRoute_t>(vgui::HTML::AdditionalRoute_t*)
  T vgui::HTML::ApplySchemeSettings(vgui::IScheme*)
  T vgui::HTML::BCanGoBack()
  T vgui::HTML::BCanGoForward()
@@ -15233,6 +15278,7 @@
  T vgui::HTML::OnKeyTyped(wchar_t)
  T vgui::HTML::OnKillFocus()
  T vgui::HTML::OnLinkAtPosition(char const*)
+ T vgui::HTML::OnMenuClose()
  T vgui::HTML::OnMouseDoublePressed(vgui::MouseCode)
  T vgui::HTML::OnMousePressed(vgui::MouseCode)
  T vgui::HTML::OnMouseReleased(vgui::MouseCode)
@@ -15258,6 +15304,7 @@
  T vgui::HTML::PanelMessageFunc_OnFileSelected::InitVar()
  T vgui::HTML::PanelMessageFunc_OnFileSelectionCancelled::InitVar()
  T vgui::HTML::PanelMessageFunc_OnKeyCodeUnhandled::InitVar()
+ T vgui::HTML::PanelMessageFunc_OnMenuClose::InitVar()
  T vgui::HTML::PanelMessageFunc_OnScreenSizeChanged::InitVar()
  T vgui::HTML::PanelMessageFunc_OnSetCursorVGUI::InitVar()
  T vgui::HTML::PchEVCertName() const
@@ -15265,6 +15312,7 @@
  T vgui::HTML::PositionFindDialog()
  T vgui::HTML::PostURL(char const*, char const*, bool)
  T vgui::HTML::RaiseJSException(char const*)
+ T vgui::HTML::RebuildContextMenu()
  T vgui::HTML::Refresh()
  T vgui::HTML::RegisterJSMethodInternal(char const*, IJSMethodCallHandler*, EJSRegisterMethodType)
  T vgui::HTML::ReleaseJSCallback(CJSCallbackFunc*)
@@ -17676,10 +17724,6 @@
  T void CUtlRBTree<CUtlMap<unsigned int, unsigned int, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, unsigned int, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned int>::FindInsertionPosition<CUtlMap<unsigned int, unsigned int, int, CDefLess<unsigned int> >::Node_t>(CUtlMap<unsigned int, unsigned int, int, CDefLess<unsigned int> >::Node_t const&, bool, int&, bool&, bool&)
  T void CUtlRBTree<unsigned long long, int, CDefLess<unsigned long long>, CDefRBTreeBalanceListener<int>, unsigned long long>::FindInsertionPosition<unsigned long long>(unsigned long long const&, bool, int&, bool&, bool&)
  T void CUtlRBTree<void*, int, CDefLess<void*>, CDefRBTreeBalanceListener<int>, void*>::FindInsertionPosition<void*>(void* const&, bool, int&, bool&, bool&)
- T void Destruct<CHTMLWindow::AdditionalRoute_t>(CHTMLWindow::AdditionalRoute_t*)
- T void Destruct<CItemImageManager::ImagesToDownload_t>(CItemImageManager::ImagesToDownload_t*)
- T void Destruct<FriendAlias_t>(FriendAlias_t*)
- T void Destruct<vgui::HTML::AdditionalRoute_t>(vgui::HTML::AdditionalRoute_t*)
  T void JSMethodCallTuple_Helper<CBroadcastController, std::__1::tuple<CSmartPtr<CJSCallbackFunc> >, CSmartPtr<CJSCallbackFunc>, 0>(CBroadcastController*, void (CBroadcastController::*)(CSmartPtr<CJSCallbackFunc>), index_tuple<0>, std::__1::tuple<CSmartPtr<CJSCallbackFunc> >&)
  T void JSMethodCallTuple_Helper<CBroadcastController, std::__1::tuple<char const*, CSmartPtr<CJSCallbackPromise> >, char const*, CSmartPtr<CJSCallbackPromise>, 0, 1>(CBroadcastController*, void (CBroadcastController::*)(char const*, CSmartPtr<CJSCallbackPromise>), index_tuple<0, 1>, std::__1::tuple<char const*, CSmartPtr<CJSCallbackPromise> >&)
  T void JSMethodCallTuple_Helper<CFriendSettingsController, std::__1::tuple<CSmartPtr<CJSCallbackFunc> >, CSmartPtr<CJSCallbackFunc>, 0>(CFriendSettingsController*, void (CFriendSettingsController::*)(CSmartPtr<CJSCallbackFunc>), index_tuple<0>, std::__1::tuple<CSmartPtr<CJSCallbackFunc> >&)
@@ -17731,15 +17775,14 @@
  T vrapi::VRSettings()
  ThreadGetCurrentId
  ThreadGetCurrentProcessId
- ThreadGetCurrentRunningRef
  ThreadImplOneTimeInit
  ThreadInterlockedCompareExchange
  ThreadInterlockedDecrement
  ThreadInterlockedExchangeAdd64
  ThreadInterlockedIncrement
- ThreadIsThreadRunning
  ThreadShellExecute
  ThreadSleep
+ VProfInternalEnterScopeCurrentThread
  V_AggressiveStripPrecedingAndTrailingWhitespace
  V_AppendSlash
  V_EscapeShellArgumentAndAppend(CUtlStringBuilder*, char const*)
@@ -17782,6 +17825,7 @@
  V_pretifynum
  V_snprintf
  V_strcat
+ V_stricmp_prefix
  V_stristr(char const*, char const*)
  V_strlower_fast
  V_strncat
@@ -17797,6 +17841,7 @@
  V_towupper32
  V_vsnprintf
  V_vsnprintfRet
+ V_vsnwprintf
  V_wcscat
  V_wcsncpy
  V_wcstoui64
@@ -18004,6 +18049,8 @@
  b (anonymous namespace)::CMsgGoBack_reflection_
  b (anonymous namespace)::CMsgGoForward_descriptor_
  b (anonymous namespace)::CMsgGoForward_reflection_
+ b (anonymous namespace)::CMsgHandleContextMenuCommand_descriptor_
+ b (anonymous namespace)::CMsgHandleContextMenuCommand_reflection_
  b (anonymous namespace)::CMsgHidePopup_descriptor_
  b (anonymous namespace)::CMsgHidePopup_reflection_
  b (anonymous namespace)::CMsgHideToolTip_descriptor_
@@ -18156,6 +18203,8 @@
  b (anonymous namespace)::CMsgSetWindowPosition_reflection_
  b (anonymous namespace)::CMsgSetZoomLevel_descriptor_
  b (anonymous namespace)::CMsgSetZoomLevel_reflection_
+ b (anonymous namespace)::CMsgShowBrowserContextMenu_ContextCommand_descriptor_
+ b (anonymous namespace)::CMsgShowBrowserContextMenu_ContextCommand_reflection_
  b (anonymous namespace)::CMsgShowBrowserContextMenu_descriptor_
  b (anonymous namespace)::CMsgShowBrowserContextMenu_reflection_
  b (anonymous namespace)::CMsgShowPopup_descriptor_
@@ -18360,9 +18409,12 @@
  b (anonymous namespace)::ScrollBarButton::GetMessageMap()::s_pMap
  b (anonymous namespace)::ScrollBarButton::KB_ChainToMap()::chained
  b (anonymous namespace)::protobuf_AssignDescriptors_once_
+ b BDrawHTMLPerfInfo()::s_CmdLineParam
+ b BFastOverlayHTMLPathEnabled()::s_CmdLineParam
  b BHasNoBrowserCommandLineParam()::s_CmdLineParamDisableBrowser
  b BUF_str_reasons
  b CCallbackMgr::RunCallbacks(int, bool)::bRunningCallbacks
+ b CEmoticonButton::OnShowMenu(vgui::Menu*)::eRealm
  b CEmoticonButton::OnShowMenu(vgui::Menu*)::eUniverse
  b CFileReader::Read(void*, unsigned int, unsigned int*)::fAsserted
  b CFriendPanel::UpdateContents()::bInOfflineMode
@@ -18452,6 +18504,7 @@
  b g_ScriptSymbols
  b g_ScrollBar_Horizontal_Helper
  b g_ScrollBar_Vertical_Helper
+ b g_StoreURLParam
  b g_TextEntry_Helper
  b g_ToggleButton_Helper
  b g_TreeView_Helper
@@ -18504,7 +18557,10 @@
  b g_pSysModuleSteam
  b guard variable for (anonymous namespace)::ScrollBarButton::GetKBMap()::s_pMap
  b guard variable for (anonymous namespace)::ScrollBarButton::GetMessageMap()::s_pMap
+ b guard variable for BDrawHTMLPerfInfo()::s_CmdLineParam
+ b guard variable for BFastOverlayHTMLPathEnabled()::s_CmdLineParam
  b guard variable for BHasNoBrowserCommandLineParam()::s_CmdLineParamDisableBrowser
+ b guard variable for CEmoticonButton::OnShowMenu(vgui::Menu*)::eRealm
  b guard variable for CEmoticonButton::OnShowMenu(vgui::Menu*)::eUniverse
  b guard variable for CFriendPanel::UpdateContents()::bInOfflineMode
  b guard variable for CFriendsDialog::PerformLayout()::s_bOfflineMode
@@ -18988,7 +19044,6 @@
  fwrite
  g_VProfManager
  g_VProfProfilesRunningCount
- g_VProfile
  g_pMemAllocSteam
  getcwd
  getenv
@@ -19247,6 +19302,7 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgGetZoom_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgGoBack_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgGoForward_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgHandleContextMenuCommand_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgHidePopup_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgHideToolTip_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgHideWindow_offsets_
@@ -19323,6 +19379,7 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetVerticalScroll_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetWindowPosition_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetZoomLevel_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgShowBrowserContextMenu_ContextCommand_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgShowBrowserContextMenu_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgShowPopup_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgShowToolTip_offsets_
@@ -19540,6 +19597,7 @@
  t BBeginsWithProtocol(char const*)
  t BContainsUnsafeCSS(char const*)
  t BDecodeSerializedMsgFromJS(CUtlBuffer&, char const*)
+ t BEndsWith(char const*, char const*, bool)
  t BFriendsNameCollisionCompare(CUtlString const&, CUtlString const&)
  t BIsMatchMore(char const*, char const*, int)
  t BN_from_montgomery_word

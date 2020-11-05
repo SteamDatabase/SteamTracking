@@ -95,7 +95,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_ErrorPasswordsDontMatch" "入力されたパスワードが間違っています。\nもう一度パスワードを入力してください。"
 "Steam_ErrorCantStartGame" "このゲームは現在利用できません。\n後でもう一度お試しください。"
 "Steam_ErrorCantStartGameDetailed" "ゲームの起動に失敗しました (%error%)。"
-"Steam_ErrorCantRunBecauseRequires64bitOS"	"このゲームのプレイには、64 ビット版が必要です。32 ビットの Windows を実行しているため、ゲームを開始できません。\n\nゲームに 32 ビット用の起動オプションがある場合はそれを選択してください。オプションがない場合、64 ビットの Windows コンピュータが必要です。\nプレイ用件を満たすコンピュータがない場合は、以下をクリックして返金をリクエストするための情報をお読みください。\n"
+"Steam_ErrorCantRunBecauseRequires64bitOS"	"このゲームのプレイには、64ビット版が必要です。32ビットのWindowsを実行しているため、ゲームを開始できません。\n\nゲームに32ビット用の起動オプションがある場合はそれを選択してください。オプションがない場合、64ビットのWindowsコンピューターが必要です。\nプレイ要件を満たすコンピューターがない場合は、以下をクリックして返金をリクエストするための情報をお読みください。\n"
 "Steam_ErrorCantStartGameDependency" "共有コンテンツとゲームを開始することに失敗しました。まずはこれらのゲームを更新してください:\n\n %detail%"
 "Steam_ErrorUsernameTooShort" "名前は3文字以上にしてください。"
 "Steam_ErrorPasswordTooShort2" "パスワードは8文字以上にしてください。"
@@ -222,7 +222,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "SteamUI_JoinDialog_SharedLicenseLocked_OwnerText" "あなたの共有ライブラリは現在%borrower%が使用中です。今プレイすると、%borrower%にプレイ終了のお知らせが送信されます。"
 "SteamUI_JoinDialog_SharedLicenseLocked_BorrowerText" "この共有ゲームは現在利用できません。後でもう一度試してみるか、自分のライブラリにこのゲームを購入してください。"
 
-"SteamUI_JoinDialog_KickSessions_Text" "すでに別のコンピュータでログインし、「%existing_app%」をプレイしています。\nこのコンピュータで「%launching_app%」を起動すると、もう一方のセッションを Steam から切断します。"
+"SteamUI_JoinDialog_KickSessions_Text" "すでに別のコンピューターでログインし、「%existing_app%」をプレイしています。\nこのコンピューターで「%launching_app%」を起動すると、もう一方のセッションをSteamから切断します。"
 "SteamUI_JoinDialog_KickSessions_Error" "%game%をプレイしている別のセッションの切断に失敗しました"
 
 "SteamUI_JoinDialog_VerifyingFiles_Error" "%game% 用の署名されたファイルを確認できませんでした。コンテンツの検証が必要です。"
@@ -264,7 +264,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 
 "SteamUI_JoinDialog_CloudSyncFailed_Title" "Steam - 注意"
 "SteamUI_JoinDialog_CloudSyncFailed_Text" "%game%のファイルを Steam クラウドと同期できませんでした"
-"SteamUI_JoinDialog_CloudSyncFailed_Detail" "過去に別のコンピュータからこのゲームを起動したことがある場合、ゲームの設定や進行状況がクラウドのデータと同期されていなかった可能性があります。今このアプリケーションを起動するとすると設定や進行状況が失われる可能性があります。"
+"SteamUI_JoinDialog_CloudSyncFailed_Detail" "過去に別のコンピューターからこのゲームを起動したことがある場合、ゲームの設定や進行状況がクラウドのデータと同期されていなかった可能性があります。今このアプリケーションを起動すると設定や進行状況が失われる可能性があります。"
 
 "Steam_CloudConflict_Title" "Steam - クラウド同期エラー"
 "Steam_CloudConflict_Text" "ローカルに保存されている%game%のファイルとSteam クラウドに保存されているファイルが一致しません。"
@@ -272,7 +272,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_CloudConflict_CloudFiles_Time" "最終更新: %remotetime%"
 "Steam_CloudConflict_LocalFiles" "ローカルファイル"
 "Steam_CloudConflict_LocalFiles_Time" "最終更新: %localtime%"
-"Steam_CloudConflict_Accept_Remote" "このコンピュータにダウンロード"
+"Steam_CloudConflict_Accept_Remote" "このコンピューターにダウンロード"
 "Steam_CloudConflict_Accept_Local" "Steam クラウドにアップロード"
 "Steam_CloudConflict_Cancel" "キャンセル - コピー操作は行わない"
 "Steam_CloudConflict_Note" "注: アプリケーションを起動するには、上記の2つのどちらかを選択する必要があります。"
@@ -349,7 +349,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 
 "Steam_PurchaseProductIntroTitle"		"Steam - %subscription% の購入"
 "Steam_ScanCDKey_NoRetailProduct"		"有効な製品コードにより、以下のゲームの\n登録を行うことができます。"
-"Steam_ScanCDKey_RetailProductFound"	"お使いのコンピュータには、%s1が\nすでにインストールされています。 製品コードにより、以下のゲームの\n登録を行うことができます。"
+"Steam_ScanCDKey_RetailProductFound"	"お使いのコンピューターには、%s1が\nすでにインストールされています。製品コードにより、以下のゲームの\n登録を行うことができます。"
 "Steam_ScanCDKey_SpaceRequired"		"必要なディスク領域："
 "Steam_ScanCDKey_SpaceAvailable"		"利用できるディスク領域:："
 "Steam_ScanCDKey_SelectGames"			"ライブラリに加えるゲームを選択してください。"
@@ -372,7 +372,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_CVV2_Info"					"クレジットカードのセキュリティ番号を入力してください。"
 "Steam_CardSecurityInstruction"		"この番号はカード裏面の書名欄に記載されています。 入力が必要な番号は最後の3桁です（アカウント番号以降の数字）。"
 "Steam_Working_ContactingSvr"		"サーバーに接続中..."
-"Steam_PayPalIntroToBrowser"		"%provider%での取引は%provider%のWebサイトを通して承認されます。 取引を開始するためには、下のボタンをクリックして、新しいWebブラウザを開いてください。"
+"Steam_PayPalIntroToBrowser"		"%provider%での取引は%provider%のWebサイトを通して承認されます。取引を開始するためには、下のボタンをクリックして、新しいWebブラウザーを開いてください。"
 "Steam_PayPalOpenBrowserButton"		"%provider%での購入を開始"
 "Steam_PayPalWaiting"				"%provider%のWebサイトにジャンプしました。 ログインするか、アカウントを作成して購入内容を確認し、購入処理を承認してください。"
 "Steam_PayPalNotAcceptedInGermany"	"現在ドイツではPayPal によるお支払いを受け付けておりません。 別のお支払い方法を選択してください。"
@@ -436,7 +436,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 
 "Steam_DPIScaling_Option_Windows"		"モニター設定に合うようにテキストとアイコンの大きさを微調整する (再起動が必要)"
 "Steam_DPIScaling_Option"				"モニターのサイズを基にテキストとアイコンを大きくする (再起動が必要)"
-"Steam_LaunchSteamOnStartup_Option"		"コンピュータの起動時に Steam を実行する"
+"Steam_LaunchSteamOnStartup_Option"		"コンピューターの起動時にSteamを実行する"
 "Steam_BPMOnStartup_Option"				"Big Picture モードで Steam を起動"
 "Steam_ShowUrlBar_Option"				"Steam上にURLアドレスバーを表示する"
 "Steam_UseDirectWrite_Option"			"DirectWrite を有効にしてフォントのスムージングと文字間距離の最適化を 行う"
@@ -447,11 +447,11 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_ErrorNotEnoughDiskSpace_Title"		"Steam - エラー"
 "Steam_ErrorNotEnoughDiskSpace"				"ゲームを起動するのに十分なディスク領域がありません。\n空き容量を増やし、もう一度お試しください。"
 "Steam_DeleteApplicationConfirmation_Title"	"アプリケーションファイルを削除しますか？"
-"Steam_DeleteApplicationConfirmation_Text"	"%s1 のアプリケーションコンテンツをこのコンピュータから\nすべて削除します。\n\nソフトウェアライブラリには残りますが、\n今後使用するには再度ダウンロードする\n必要があります。"
+"Steam_DeleteApplicationConfirmation_Text"	"%s1 のアプリケーションコンテンツをこのコンピューターから\nすべて削除します。\n\nソフトウェアライブラリには残りますが、\n今後使用するには再度ダウンロードする\n必要があります。"
 "Steam_DeleteCacheConfirmation_Title"		"ゲームファイルを削除しますか?"
-"Steam_DeleteCacheConfirmation_Text"		"お使いのコンピュータから\n%s1を削除します。\n\nゲームライブラリには残りますが、\nプレイするには再度ダウンロードする\n必要があります。"
-"Steam_DeleteCacheConfirmationMulti_Text"	"このコンピュータから\nこれらのゲームの全コンテンツの削除を行います。\n\nゲームライブラリには残りますが、\n今後プレイするにはまず再度ダウンロードする\n必要があります。"
-"Steam_DeleteFreeCacheConfirmation_Text"		"%s1のゲームコンテンツをこのコンピュータから\nすべて削除します。"
+"Steam_DeleteCacheConfirmation_Text"		"お使いのコンピューターから\n%s1を削除します。\n\nゲームライブラリには残りますが、\nプレイするには再度ダウンロードする\n必要があります。"
+"Steam_DeleteCacheConfirmationMulti_Text"	"このコンピューターから\nこれらのゲームの全コンテンツを削除します。\n\nゲームライブラリには残りますが、\n今後プレイするにはまず再度ダウンロードする\n必要があります。"
+"Steam_DeleteFreeCacheConfirmation_Text"		"%s1のゲームコンテンツをこのコンピューターから\nすべて削除します。"
 "Steam_UninstallAppError_Title"			"Steam - エラー"
 "Steam_UninstallAppError_Text"			"%game% のアンインストールに失敗 (%reason%)"
 
@@ -475,7 +475,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_ConversionNotEnoughDiskSpace_Info"	"選択されたゲームをインストールするには十分なディスク領域がありません。\n空き容量を増やすか、「戻る」を押して、インストールをするプログラムを減らしてください。"
 "Steam_ConversionNotEnoughDiskSpaceForConversion_Info"	"選択されたゲームを Steam に移行するのに十分なディスク領域がありません。\n空き容量をさらに%s1 MB以上増やしてから、もう一度お試しください。"
 "Steam_Interface"				"インターフェイス"
-"Steam_EnableGPUWebViews_Option"		"GPU アクセラレーションレンダリングを WebView で有効 (再起動が必要)"
+"Steam_EnableGPUWebViews_Option"		"GPUアクセラレーションレンダリングをWebViewで有効（再起動が必要）"
 "Steam_SmoothScrollWebViews_Option"		"Web表示でスムーズスクロールを有効（再起動が必要）"
 "Steam_SetJumplistOptions"		"タスクバーの設定"
 "Steam_ShowOnlineStatusOptions"	"表示するオンラインオプションを選択してください"
@@ -514,7 +514,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_ChangePasswordFailedTwoFactorMismatch"	"パスワードの変更ができませんでした。\nSteam ガード認証コードを正確に入力したかご確認ください。"
 "Steam_ChangePasswordFailedSmsFailed"			"パスワードの変更ができませんでした。\nSMS コードを正確に入力したかご確認ください。"
 "Steam_ChangePasswordSuccessful"		"パスワードが変更されました。\n次回のログインからは、この新しいパスワードを使用してください。"
-"Steam_ForceChangePassword"				"あなたのアカウントのパスワードを更新する必要があります。これは、パスワードは Steam が要求する複雑さを満たしていないか、あるいは Steam サポートがあなたの失われたアカウントを取り戻し、一時的なパスワードを発行したためです。\n\nこれから、新しいパスワードの設定を段階的に説明します。"
+"Steam_ForceChangePassword"				"あなたのアカウントのパスワードを更新する必要があります。これは、パスワードはSteamが要求する複雑さを満たしていないか、またはSteamサポートがあなたの失われたアカウントを取り戻し、一時的なパスワードを発行したためです。\n\nこれから、新しいパスワードの設定を段階的に説明します。"
 "Steam_ChangePasswordFailedIllegal"		"パスワードを変更できませんでした。\nご指定のパスワードの複雑さは十分ではありません。もう一度選んでください。"
 "Steam_ChangePasswordFailedReuse"		"パスワードを変更できませんでした。\n以前のパスワードを再度使用することはできません。もう一度選んでください。"
 "Steam_PasswordStrength"				"パスワードの強度:"
@@ -558,7 +558,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_PreLoading1"				"1. ゲームをプリロードします"
 "Steam_PreLoading1Detail"		"ダウンロード時にお支払い等は不要です。"
 "Steam_PreLoading2"				"2. クレジットカードで注文を完了します"
-"Steam_PreLoading2Detail"		"ゲームがお使いのコンピュータにインストールされた後、注文を完了できます。"
+"Steam_PreLoading2Detail"		"ゲームがお使いのコンピューターにインストールされた後、注文を完了できます。"
 "Steam_PreLoading3"				"3. 発売日からゲームをプレイできます!"
 "Steam_PreLoading3Detail"		"%game%の公式発売日から、プレイすることが可能です。"
 "Steam_StartPreloading"			"プリロードを始める"
@@ -569,20 +569,20 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_PreloadContinue"		"続ける"
 "Steam_PreloadCancel"		"プリロードをキャンセルします。\n既にダウンロードされたデータもすべて削除されます。\nキャンセルを確定するには「OK」を、キャンセルを中止するには「キャンセル」をクリックしてください。"
 "Steam_CancelPreloading"		"プリロードを中止"
-"Steam_PreloadProgressNotes"	"%game% を、お使いのコンピュータにプリロードしています。\n\n予約購入を完了すると、ゲームの公式発売日からプレイすることができます。"
-"Steam_PreloadProgressNotesPayed"	"「%game%」を、お使いのコンピュータにプリロードしています。\n\nプリロードには時間がかかる場合があります。 このウィンドウは閉じてもかまいませんが、Steam　は起動したままにしておき、後ほどプリロードの終了を確認してください。"
-"Steam_PreloadProgressNotesStart"	"%game% を、お使いのコンピュータにプリロードします。\n予約購入を完了すると、ゲームの公式発売日からプレイすることができます。"
-"Steam_PreloadProgressNotesStartPayed"	"%game%を、お使いのコンピュータにプリロードします。"
+"Steam_PreloadProgressNotes"	"%game%を、お使いのコンピューターにプリロードしています。\n\n予約購入を完了すると、ゲームの公式発売日からプレイすることができます。"
+"Steam_PreloadProgressNotesPayed"	"「%game%」を、お使いのコンピューターにプリロードしています。\n\nプリロードには時間がかかる場合があります。このウィンドウは閉じてもかまいませんが、Steamは起動したままにしておき、後ほどプリロードの終了を確認してください。"
+"Steam_PreloadProgressNotesStart"	"%game%を、お使いのコンピューターにプリロードします。\n予約購入を完了すると、ゲームの公式発売日からプレイすることができます。"
+"Steam_PreloadProgressNotesStartPayed"	"%game%を、お使いのコンピューターにプリロードします。"
 
 "Steam_PreloadDescription"		"注：%subscription% を予約購入しています。 公式発売日にロックが解除されプレイできるようになります。"
 
 "Steam_PreloadComplete_Title"	"%game%のプリロード完了"
 "Steam_PreloadComplete"			"プリロード完了"
-"Steam_PreloadCompletePreOrder"	"お使いのコンピュータにダウンロードされた %game% はロックされています。 予約購入したゲームは、公式発売日にプレイできるようになります。"
+"Steam_PreloadCompletePreOrder"	"お使いのコンピューターにダウンロードされた%game%はロックされています。予約購入したゲームは、公式発売日にプレイできるようになります。"
 "Steam_PreloadPrePayNow"		"予約購入完了..."
 "Steam_PreOrderNow"	"予約購入する..."
 
-"Steam_PreloadCompletePurchase"	"お使いのコンピュータには%game%がロックされた状態でインストールされています。 あとは購入するだけでプレイできます!"
+"Steam_PreloadCompletePurchase"	"お使いのコンピューターには%game%がロックされた状態でインストールされています。 あとは購入するだけでプレイできます！"
 "Steam_PreloadBuyNow"			"ゲームを購入する..."
 
 "Steam_PreloadAndPurchaseComplete_Title"	"%game%予約購入完了"
@@ -661,10 +661,8 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_RecoverAuthenticator_RevocationCode"			"登録時のコード"
 
 "Steam_RecoverAuthenticator_BadPassword"			"パスワードが間違っています。確認してもう一度お試しください。"
-"Steam_RecoverAuthenticator_BadCode"				"入力されたコードあるいはパスワードは正しくありません。確認して、もう一度お試しください。"
+"Steam_RecoverAuthenticator_BadCode"				"入力されたコードまたはパスワードが正しくありません。確認して、もう一度お試しください。"
 "Steam_RecoverAuthenticator_BadCodes"				"コードもしくはパスワードが間違っています。確認してもう一度お試しください。"
-"Steam_RecoverAuthenticator_SupportURL"				""
-
 "Steam_RecoverAuthenticator_Done"					"Steam ガード認証用機器はあなたのアカウントから削除されました。\n\n再びアカウントへログインできるようになります。"
 
 
@@ -681,8 +679,8 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_Logout_Exit" 	"終了とログアウト"
 "Steam_Logout_DontShowAgain" "次から表示しない"
 "Steam_Logout_ExitOff" "この状態で終了すると、次に Steam を起動するときに\n「オフラインモード」が使用できます。"
-"Steam_Logout_PersonalInfo" "一部の個人情報がこのコンピュータ上に保存されます。\nコンピュータを共用で使用している場合は、\n「終了とログアウト」で終了する方がよいかもしれません。\n"
-"Steam_Logout_Secure" "「終了とログアウト」で Steam を終了するのが最も安全です。\n共有しているコンピュータではこの方法をお奨めします。\nただしこの場合は、次回Steamにログインするまで「オフラインモード」は\n使用できなくなります。"
+"Steam_Logout_PersonalInfo" "一部の個人情報がこのコンピューター上に保存されます。\nコンピューターを共用で使用している場合は、\n「終了とログアウト」で終了する方がよいかもしれません。\n"
+"Steam_Logout_Secure" "「終了とログアウト」でSteamを終了するのが最も安全です。\n共有しているコンピューターではこの方法をお奨めします。\nただしこの場合は、次回Steamにログインするまで「オフラインモード」は\n使用できなくなります。"
 "Steam_Logout_AllowOffline" "次に Steam を起動するときに\n「オフラインモード」を使用するには、「キャンセル」を押して、\nSteam メニューで「終了」を選択してください。"
 "Steam_Logout_Title" "終了"
 "Steam_Logout_TitleLogout" "終了とログアウト"
@@ -692,8 +690,8 @@ Steam にアクセスするには、このアイコンを右クリックして�
 
 "SteamUI_OfflineMode_CouldNotConnect" "Steam ネットワークに接続できませんでした。"
 "SteamUI_OfflineMode_AppearOffline" "インターネットに接続されていないか、インターネット接続が Steam 用に正しく設定されていないようです。"
-"SteamUI_OfflineMode_SteamOffline" "Steam は現在利用できません。\n\n\nしばらくしてから「再試行」をクリックしてください。あるいはSteam を「オフラインモード」で開始してください。\n"
-"SteamUI_OfflineMode_ChosenOffline" "Steam は現在オフラインモードに設定されています。フレンドやサーバーブラウザなどの多くの機能は、オフライン中は使用できません。"
+"SteamUI_OfflineMode_SteamOffline" "Steamは現在利用できません。\n\n\nしばらくしてから「再試行」をクリックしてください。またはSteamを「オフラインモード」で開始してください。\n"
+"SteamUI_OfflineMode_ChosenOffline" "Steamは現在オフラインモードに設定されています。フレンドやサーバーブラウザーなどの多くの機能は、オフライン中は使用できません。"
 "SteamUI_OfflineMode_Choose" "接続を確認して、「再試行」をクリックするか、Steam を「オフラインモード」で起動してください。"
 "SteamUI_OfflineMode_ChooseConnectionOnly" "ネットワーク接続を確認して、「再試行」をクリックしてください。"
 "SteamUI_OfflineMode_GoOnlineButton" "オンラインにする"
@@ -707,11 +705,11 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "SteamUI_OfflineMode_RestartOnline" "再起動してオンラインにする"
 "SteamUI_OfflineMode_RestartOffline" "オフラインモードで再起動"
 "Steam_OfflineMode_NoPersonalInfoError_Title"	"Steam - オフラインモード"
-"Steam_OfflineMode_NoPersonalInfoError_Info"	"Steam をオフラインモードに切り替えるには、アカウントログイン情報をローカルにキャッシュする必要があります。\n\n［このコンピュータにアカウントログイン情報を保存しない］オプションが有効になっているため、\n現在キャッシュされている情報はありません。\n\nオフラインにできるように、アカウントログイン情報をローカルにキャッシュする機能を再度有効にしますか?\n"
+"Steam_OfflineMode_NoPersonalInfoError_Info"	"Steamをオフラインモードに切り替えるには、アカウントログイン情報をローカルにキャッシュする必要があります。\n\n［このコンピューターにアカウントログイン情報を保存しない］オプションが有効になっているため、\n現在キャッシュされている情報はありません。\n\nオフラインにできるように、アカウントログイン情報をローカルにキャッシュする機能を再度有効にしますか?\n"
 "Steam_OfflineMode_NoPersonalInfoError_DoItAnyway"	"アカウント資格情報の保存を有効にする"
 
 "SteamUI_OfflineMode_Title" "Steam - ダウンロード不可"
-"SteamUI_OfflineMode_GoOfflineDesc" "オフラインモードは、ラップトップのプラグを抜いて電源を切ったり、\nインターネットに接続できない場合に使用されます。\n\nフレンドやサーバーブラウザなどの多くの機能は、\nオフライン中は使用できません。 最新のゲームだけを\nプレイできます。"
+"SteamUI_OfflineMode_GoOfflineDesc" "オフラインモードは、ラップトップのプラグを抜いて電源を切ったり、\nインターネットに接続できない場合に使用されます。\n\nフレンドやサーバーブラウザーなどの多くの機能は、\nオフライン中は使用できません。最新のゲームだけを\nプレイできます。"
 "SteamUI_OfflineMode_GoOnlineDesc" "オンラインに戻りますか?\n\nこのためには、Steam を再起動する必要があります。"
 "SteamUI_GameProperties_Status"	"状態"
 "SteamUI_GameProperties_UpdateNews"	"更新情報"
@@ -824,9 +822,9 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "SteamUI_ValveSurvey_InternetLabel"							"調査にご参加いただきありがとうございます。\n\n最初の質問はご利用の回線速度です。 以下の選択肢から、ご利用の回線速度を選択してください。\n\n回線速度："
 "SteamUI_ValveSurvey_InternetDontKnow"						"分からない"
 
-"SteamUI_ValveSurvey_SummaryLabel"							"この調査で、お使いのコンピュータの性能診断を行いました。結果を下に表示します。\n\n（「次へ」をクリックすると、この情報がValveへ送信されます）"
+"SteamUI_ValveSurvey_SummaryLabel"							"この調査で、お使いのコンピューターの性能診断を行いました。結果を下に表示します。\n\n（「次へ」をクリックすると、この情報がValveへ送信されます）"
 
-"SteamUI_ValveSurvey_Summary_Computer"						"コンピュータ情報:"
+"SteamUI_ValveSurvey_Summary_Computer"						"コンピューター情報:"
 "SteamUI_ValveSurvey_Summary_Processor"						"プロセッサ情報："
 "SteamUI_ValveSurvey_Summary_IP"							"ネットワーク情報："
 "SteamUI_ValveSurvey_Summary_OSVersion"						"オペレーティングシステムのバージョン："
@@ -834,7 +832,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "SteamUI_ValveSurvey_Summary_Memory"						"メモリ："
 "SteamUI_ValveSurvey_Summary_Audio"							"サウンドカード："
 
-"SteamUI_ValveSurvey_ResultsLabel"							"これで調査は完了です。 ご協力に感謝いたします。\n\n他の Steam ユーザーとお使いのコンピュータの性能を比較したい場合は、以下のリンクをクリックしてください。\n\n（比較しない場合は、「完了」をクリックすることでこのウィンドウを閉じることができます）"
+"SteamUI_ValveSurvey_ResultsLabel"							"これで調査は完了です。 ご協力に感謝いたします。\n\n他のSteamユーザーとお使いのコンピューターの性能を比較したい場合は、以下のリンクをクリックしてください。\n\n（比較しない場合は、「完了」をクリックすることでこのウィンドウを閉じることができます）"
 "SteamUI_ValveSurvey_ResultsButton"							"調査結果ページを見る"
 
 "SteamUI_ValveSurvey_Summary_HardwareModel"					"モデル：%s1"
@@ -1081,10 +1079,10 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "SteamUI_SpecialSurvey_Error_Denied"	"この調査に招待されていません。"
 "SteamUI_SpecialSurvey_Error_AlreadyComplete"	"既にこの調査に参加済みです。ご協力ありがとうございました。"
 
-"SteamUI_SpecialSurvey_Welcome"			"%surveyname%\n\n調査参加に同意いただき、ありがとうございます。この調査は2部構成です。\n\nまずは、お使いのコンピュータの情報を収集します。本データは匿名ではなく、調査主と共有されます。\n\n次に、追加の統計データを収集する為のウェブサイトにお進み頂きます。\n\n開始するには\"次へ\"をクリックしてください。"
+"SteamUI_SpecialSurvey_Welcome"			"%surveyname%\n\n調査参加に同意いただき、ありがとうございます。この調査は2部構成です。\n\nまずは、お使いのコンピューターの情報を収集します。本データは匿名ではなく、調査主と共有されます。\n\n次に、追加の統計データを収集する為のWebサイトにお進み頂きます。\n\n開始するには\"次へ\"をクリックしてください。"
 "SteamUI_SpecialSurvey_Welcome_No_Web"	"%surveyname%\n\nこの度は調査にご協力いただきありがとうございます。\n\nこの調査ではあなたのマシンに関する情報を収集します。このデータは非匿名なものとして、調査の立案者間で共有されます。\n\n開始するには\"Next\"をクリックしてください。"
-"SteamUI_SpecialSurvey_Welcome_HW_Complete"	"%surveyname%\n\nこの調査に同意いただきましてありがとうございます。\n\n早期段階にてこの調査を開始されたので、このマシンの情報を再び収集する必要が無いようです。 \"終了\"をクリックしてウェブページを開き残りの調査を完了してください。"
-"SteamUI_SpecialSurvey_ForwardToWeb"	"パート1において、ハードウェア情報の収集を完了しました。\n\n\"完了\"をクリックしてパート2のためのウェブページを開いてください。この調査はパート2の完了まで行って初めて完結します。"
+"SteamUI_SpecialSurvey_Welcome_HW_Complete"	"%surveyname%\n\nこの調査に同意いただきましてありがとうございます。\n\n早期段階にてこの調査を開始されたので、このマシンの情報を再び収集する必要が無いようです。 \"終了\"をクリックしてWebページを開き残りの調査を完了してください。"
+"SteamUI_SpecialSurvey_ForwardToWeb"	"パート1において、ハードウェア情報の収集を完了しました。\n\n\"完了\"をクリックしてパート2のためのWebページを開いてください。この調査はパート2の完了まで行って初めて完結します。"
 "SteamUI_SpecialSurvey_Complete"		"調査へのご協力、ありがとうございました。あなたの回答は保存されました。"
 "SteamUI_SpecialSurvey_Sending_Data"	"収集データを送信中..."
 "SteamUI_SpecialSurvey_Cancel"			"キャンセル"
@@ -1106,7 +1104,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 
 "SteamUI_ChosenCreateNewAccountHeadline" "Steam アカウントは大切に扱ってください。"
 "SteamUI_ChosenCreateNewAccount" "ユーザー名およびパスワードは忘れないようにしてください。 ゲームにアクセスするためにログインする際に必要です。"
-"SteamUI_ForMoreInformation" "お使いのコンピュータに自動的にゲームがダウンロードされます。"
+"SteamUI_ForMoreInformation" "お使いのコンピューターに自動的にゲームがダウンロードされます。"
 
 "SteamUI_ChosenCreateMultipleHeadline" "Steam アカウントについての重要情報："
 "SteamUI_ChosenCreateDuplicate" "すでに Steam アカウントをお持ちの場合、そのアカウントで登録したゲームは、同じアカウントでログインした場合にのみご利用いただけます。Steam アカウントをすでにお持ちで無い場合に限り、新しいアカウントを作成するようにしてください。\n\nSteam アカウントをお持ちでない場合、「次へ」を押して先に進んでください。"
@@ -1115,7 +1113,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "SteamUI_CCWarning" "Steam - 注意"
 
 "SteamUI_ForgottenPasswordResetType" "Steam アカウントの情報を再確認するには、お客様のアカウント名が最初の手がかりとなります。"
-"SteamUI_ForgottenPasswordResetType2" "何を回復する必要がありますか？ここでパスワードをリセットすることができます。あるいは Steam ガード認証用機器のアプリへのアクセスを失ってしまった場合、アカウントから削除することができます。"
+"SteamUI_ForgottenPasswordResetType2" "何を回復する必要がありますか？ここでパスワードをリセットすることができます。またはSteamガード認証用機器のアプリへのアクセスを失ってしまった場合、アカウントから削除することができます。"
 "SteamUI_ForgottenPasswordGetAccountName" "アカウント名はわかりません。"
 "SteamUI_ForgottenPasswordResetPassword" "アカウント名はわかります。"
 "SteamUI_ForgottenPasswordForgotPassword" "パスワードを忘れました。"
@@ -1164,7 +1162,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_Subscription_Rejected_Cdkey" "入力された製品コードは別の Steam アカウントですでに有効になっているため使用できません。 このコードを購入した販売店やオンライン販売者にお問い合わせください。"
 
 "Steam_Subscription_RateLimitedCDKey_Headline" "有効化の試行回数が多すぎます"
-"Steam_Subscription_RateLimitedCDKey" "このアカウントあるいはインターネットアドレスにおいて、有効化失敗の回数が多すぎます。後ほど製品コードの登録を再度お試しください。"
+"Steam_Subscription_RateLimitedCDKey" "このアカウントまたはインターネットアドレスにおいて、有効化失敗の回数が多すぎます。後ほど製品コードの登録を再度お試しください。"
 
 "Steam_SubscriptionCancelled_InvalidCDKey_Headline" "無効な製品コード"
 "Steam_SubscriptionCancelled_InvalidCDKey" "入力した製品コードは無効です。 \n\n入力したキーが正しいかどうかを確認してください。「I」、「L」、「1」を見間違えてないか、また、「V」と「Y」、「0（ゼロ）」と「O」が正しく入力されているかも確認してください。"
@@ -1222,7 +1220,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 
 "Steam_Subscription_HardwarePromo_Used_Headline" "登録情報の重複"
 "Steam_Subscription_HardwarePromo_Used" "この製品は、別の Steam アカウントで既に有効化されています。"
-"Steam_PurchaseError_HardwarePromoIneligible" "このコンピュータは、%subscription%に必要なシステム要件を満たしていません。"
+"Steam_PurchaseError_HardwarePromoIneligible" "このコンピューターは、%subscription%に必要なシステム要件を満たしていません。"
 "Steam_HardwarePromo_SupportURL" "http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=628"
 
 "Steam_Subscription_HardwarePromo_AlreadyPurchased_Headline" "既に持っています"
@@ -1235,7 +1233,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 
 "Steam_SubscriptionSuccess_HardwarePromo_Headline" "登録が正常に完了しました"
 "Steam_SubscriptionSuccess_HardwarePromo" "%subscription% 製品の有効化が完了しました。 この内容は Steam アカウント %accountname% に登録されます。 今後ゲームにアクセスするには、このアカウントにログインしてください。"
-"Steam_SubscriptionSuccess_HardwarePromo2" "Steam アカウント「%accountname%」 にログインしている間は、どのコンピュータからでもこの製品に含まれるゲームにアクセスできます。"
+"Steam_SubscriptionSuccess_HardwarePromo2" "Steamアカウント「%accountname%」 にログインしている間は、どのコンピューターからでもこの製品に含まれるゲームにアクセスできます。"
 
 "Steam_PreorderCancelled_Headline" "予約注文をキャンセルしました。"
 "Steam_PreorderCancelled" "ご希望通り、Steam を通じて行われた「%subscription%」 の予約購入をキャンセルしました。 クレジットカードへの請求は行われません。"
@@ -1316,7 +1314,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_App_Update_NotEnoughDiskQuota" "%game% を更新するための ユーザーディスククォータが不足しています (%detail% 必要)"
 "Steam_App_Update_LockedByProcess" "%game% のファイルは %program% によりロックされているため更新できません。このプログラムを閉じて、再度お試しください。 \n\n プログラム: %executable%\n ファイル: %detail%"
 
-"Steam_PreloadCompleteNoPreorderAvailable" "お使いのコンピュータには%game%がロックされた状態でインストールされています。"
+"Steam_PreloadCompleteNoPreorderAvailable" "お使いのコンピューターには%game%がロックされた状態でインストールされています。"
 
 "Steam_SubscriptionCancelled_PaymentCardUseLimitHit_Headline" 	"クレジットカードの使用上限を超過しています"
 "Steam_SubscriptionCancelled_PaymentCardUseLimitHit_Info" 	"下記のクレジットカードは Steam での利用回数の限度を超えているため、この処理は実行されませんでした。\n\nこの規定は、クレジットカードの不正使用からお客様を保護する目的で設けられています。 弊社では、法律によって不正行為に厳格に対処しています。"
@@ -1377,7 +1375,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "SteamUI_Upgrade_Nvidia_Driver_URL" "https://support.steampowered.com/kb_article.php?ref=8509-RFXM-1964"
 
 "SteamUI_AMD_BigPicture_Problem_Title" "ビデオ ドライバー の問題"
-"SteamUI_AMD_BigPicture_Problem_Info" "あなたのシステムには AMD ビデオ ドライバー　バージョン 13.1 がインストールされています。Steam Big Picture をご使用になる前に、バージョン 13.2 あるいはそれ以降のバージョンにアップグレードしてください。"
+"SteamUI_AMD_BigPicture_Problem_Info" "あなたのシステムにはAMDビデオ ドライバー バージョン13.1がインストールされています。Steam Big Pictureをご使用になる前に、バージョン 13.2またはそれ以降のバージョンにアップグレードしてください。"
 "SteamUI_AMD_BigPicture_Problem_Url_Label" "AMD ビデオ ドライバーをダウンロード"
 "SteamUI_AMD_BigPicture_Problem_Url" "http://support.amd.com/us/gpudownload/linux/Pages/radeon_linux.aspx"
 
@@ -1417,7 +1415,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "SteamUI_UnknownDriverURL" "http://www.valvesoftware.com/privacy.htm"
 
 "SteamUI_Syscheck_Success_Title" "システム要件チェック合格"
-"SteamUI_Syscheck_Success" "このコンピュータは%game%をプレイするための最低システム要件を満たしています。"
+"SteamUI_Syscheck_Success" "このコンピューターは%game%をプレイするための最低システム要件を満たしています。"
 
 "SteamUI_MBPGPUWarning_Title"	"Steam - 複数のGPUが検出されました"
 "Steam_MBPGPUWarning_Info"	"ご使用のMackBook Proには二つのビデオカードが搭載されており、現在パフォーマンス優先ではなく、バッテリー寿命優先に設定されています。
@@ -1441,8 +1439,8 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_SubscribeShippingInfo"	"現在の配送先住所を入力してください。"
 
 "Steam_ChangeUser" "別のユーザーでログイン..."
-"Steam_NoSavePersonalInfoCheck" "このコンピュータにアカウントログイン情報を保存しない"
-"Steam_NoSavePersonalInfoCheckDescription" "このオプションは共有のコンピュータをご使用の場合にお勧めします。\nこれを選択した場合、「オフラインモード」が無効になります"
+"Steam_NoSavePersonalInfoCheck" "このコンピューターにアカウントログイン情報を保存しない"
+"Steam_NoSavePersonalInfoCheckDescription" "このオプションは共有のコンピューターをご使用の場合にお勧めします。\nこれを選択した場合、「オフラインモード」が無効になります"
 
 "Steam_PurchaseZipCodeInfoInvalid"    "郵便番号を入力してください"
 "Steam_PurchaseStateInfoInvalid"        "州名をアルファベット2文字で入力してください"
@@ -1455,7 +1453,6 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "SteamUI_ThrottleEditLabel"				"以下に新しい値を入力："
 "SteamUI_ThrottleApplyChange"			"適用"
 "Steam_AutoUpdateTimeRestrictionLabel"	"ゲームを自動アップデートする時間帯:"
-"Steam_AutoUpdateTimeRestrictionStart"	""
 "Steam_AutoUpdateTimeRestrictionEnd"		"および"
 "Steam_AllowDownloadsDuringGameplay"	"ゲームプレイ中にダウンロードを許可"
 "Steam_AllowDownloadsDuringGameplayDetails"	"ここをチェックすると、ゲーム中や別の Steam アプリケーションを実行中でも\nSteam はダウンロードを開始したり続行することができます。また、各ゲームのプロパティページでゲーム毎にこの設定を変更できます"
@@ -1508,7 +1505,6 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "SteamUI_HardwarePromoWizard_Title" "プロモーション製品の登録"
 "Steam_HardwarePromo_Intro" "おめでとうございます! 特典ギフトのお知らせです。 この特典は、お使いのSteamアカウント（1アカウント限定）に対して登録することで有効化されます。 有効化後は、特典に含まれるゲームがあらゆるPCからプレイ可能になります（対応するSteamアカウントでログインした場合）。"
 "Steam_Legal_HardwarePromo_Unreleased" "このパッケージに含まれる一部の製品は、まだリリースされていないため現在プレイすることはできません。 これらの製品は、リリース後、自動的にSteamでプレイ可能となります。 なお、これらの製品の正式なリリース日は未定です。ご購入の際には予めご了承ください。 ［次へ］をクリックすると、その他の契約条項が表示されます。"
-"Steam_Legal_HardwarePromo" ""
 "Steam_Working_HardwarePromo" "製品を登録中..."
 "SteamUI_OEMTicketWizard_Title" "OEMライセンスの登録"
 
@@ -1553,7 +1549,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_DisksRequiredApprox"		"データを書き込む圧縮\nファイル数"
 "Steam_BackupWizard_OpenFolder"	"バックアップフォルダを開く"
 
-"Steam_BackupComplete_Info"	"バックアップが完了しました。CD-RあるいはDVD-Rドライブを使用してあなたのバックアップファイルを保存することもできます。\n\nSteamのゲームのバックアップと復元機能をクリックしてゲームのバックアップを回復することができます。"
+"Steam_BackupComplete_Info"	"バックアップが完了しました。CD-RまたはDVD-Rドライブを使用してあなたのバックアップファイルを保存することもできます。\n\nSteamのゲームのバックアップと復元機能をクリックしてゲームのバックアップを回復することができます。"
 "Steam_BackupComplete_Error"	"バックアップに失敗しました。ローカルゲームファイルを確認してください。"
 
 
@@ -1978,7 +1974,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "SteamUI_AppTypeMusicInitialCapsPlural"	"ミュージック"
 
 "Steam_DeleteMediaCacheConfirmation_Title"		"メディアファイルを削除しますか?"
-"Steam_DeleteMediaCacheConfirmation_Text"		"%s1のコンテンツをこのコンピュータから\nすべて削除します。\n\n今後このメディアをプレイするには、コンテンツを\nダウンロードし直してください。"
+"Steam_DeleteMediaCacheConfirmation_Text"		"%s1のコンテンツをこのコンピューターから\nすべて削除します。\n\n今後このメディアをプレイするには、コンテンツを\nダウンロードし直してください。"
 "Steam_DeleteMediaCache_Button"			"削除"
 
 "Steam_AlwaysKeepThisGameUpToDate$appType=application"		"このアプリケーションを常に最新状態にする"
@@ -2272,7 +2268,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_CDKeyAlreadyRegistered_Info"	"入力されたコードは、すでにこの製品の有効化に使用されています。\n製品コードの再入力は不要ですので、アイテムにアクセスするには、このSteamアカウントにログインしてください。"
 
 "Steam_InstallComplete_RetailInstall"		"選択したゲームが、Steamの「ゲームライブラリ」から起動できるようになりました。 バックグランドでアップデートのダウンロードを開始しました。"
-"Steam_InstallComplete_RetailInstall_GamesAlwaysAvailable"	"Steamアカウント「%account%」にログインすれば、これらのゲームには、いつでも、どのコンピュータからでもアクセスすることができます。"
+"Steam_InstallComplete_RetailInstall_GamesAlwaysAvailable"	"Steamアカウント「%account%」にログインすれば、これらのゲームには、いつでも、どのコンピューターからでもアクセスすることができます。"
 "Steam_Install_AutoLaunchGamesList"		"Steam ライブラリを表示"
 "Steam_Install_AutoLaunchGameStart"		"今すぐ起動"
 "Steam_Install_DontShowPageAgain"		"今後このページを表示しない"
@@ -2313,7 +2309,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_ContinueBrowsingMedia"				"閲覧を続ける"
 
 "Steam_Uninstall_Title"			"Steam - ゲームをアンインストールしますか?"
-"Steam_Uninstall_Info"			"お使いのコンピュータから以下のゲームコンテンツを削除します：\n\n%games%\nゲームはゲームライブラリに残りますが、次回プレイする際に\nコンテンツの再インストール、もしくは再ダウンロードが必要になります。"
+"Steam_Uninstall_Info"			"お使いのコンピューターから以下のゲームコンテンツを削除します：\n\n%games%\nゲームはゲームライブラリに残りますが、次回プレイする際に\nコンテンツの再インストール、もしくは再ダウンロードが必要になります。"
 "Steam_Uninstall_ButtonText"		"ゲームをアンインストール"
 
 "Steam_Uninstall_Games_Dialog_Title"	"Steam - アンインストール"
@@ -2347,7 +2343,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "SteamUI_CABLEFIBER_10M"	"Cable/Fiber > 10Mbps"
 
 "Steam_RetailAccountActivating"		"Steamで%product%を有効にしています"
-"Steam_RetailAccountChoices"		"ゲームが有効になると、Steam アカウント「%account%」にログインするだけで、これらのゲームには、いつでも、どのコンピュータからでもアクセスすることができます。"
+"Steam_RetailAccountChoices"		"ゲームが有効になると、Steamアカウント「%account%」にログインするだけで、これらのゲームには、いつでも、どのコンピューターからでもアクセスすることができます。"
 
 "Steam_RetailInstallLocked_Title"		"Steam - ゲームはロックされています"
 "Steam_RetailInstallLocked_Info"		"%product%はまだ正式にリリースされていないため、現時点ではアンロックすることができません。 リリース日はSteamニュースでご確認ください。\nゲームがアンロック可能な状態になり次第、Steamでお知らせします。"
@@ -2764,7 +2760,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_GuestPassAccept_LinkURLAlreadyRedeemed"	"steam://store"
 
 "Steam_GuestPassAccept_HeadlineServiceUnavailable$type=guestpass"	"ゲストパス受け入れ失敗"
-"Steam_GuestPassAccept_TextServiceUnavailable"	"現在、お使いのコンピュータでSteamサーバーにアクセスできないか、またはサービスが一時的に無効になっている可能性があります。 しばらく待ってから、もう一度お試しください。"
+"Steam_GuestPassAccept_TextServiceUnavailable"	"現在、お使いのコンピューターでSteamサーバーにアクセスできないか、またはサービスが一時的に無効になっている可能性があります。 しばらく待ってから、もう一度お試しください。"
 "Steam_GuestPassAccept_LinkTextServiceUnavailable" 	"ギフトのトラブルシューティングについては、次のサポートページをご覧ください。"
 "Steam_GuestPassAccept_LinkURLServiceUnavailable"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=550"
 
@@ -2783,7 +2779,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_GuestPassRedeemed_TextFailed$type=guestpass"	"使用しようとしているゲストパスはもう有効ではありません。 このパスは、他のユーザーが既に使用しているか、有効期限が切れたか、または送信者により失効された可能性があります。"
 
 "Steam_GuestPassRedeemed_HeadlineServiceUnavailable$type=guestpass"	"ゲストパス有効化失敗"
-"Steam_GuestPassRedeemed_TextServiceUnavailable"	"現在、お使いのコンピュータでSteamサーバーにアクセスできないか、またはサービスが一時的に無効になっている可能性があります。 しばらく待ってから、もう一度お試しください。"
+"Steam_GuestPassRedeemed_TextServiceUnavailable"	"現在、お使いのコンピューターでSteamサーバーにアクセスできないか、またはサービスが一時的に無効になっている可能性があります。しばらく待ってから、もう一度お試しください。"
 "Steam_GuestPassRedeemed_LinkTextServiceUnavailable"	"ゲストパスのトラブルシューティングについては、次のサポートページをご覧ください。"
 "Steam_GuestPassRedeemed_LinkURLServiceUnavailable"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=550"
 
@@ -2831,7 +2827,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_ActivateGuestPass"		"有効化"
 "Steam_GuestPassPending"		"有効化可能"
 
-"SteamUI_ValveSurvey_MicrophoneLabel"		"コンピュータに接続するマイクを持っていますか?"
+"SteamUI_ValveSurvey_MicrophoneLabel"		"コンピューターに接続するマイクを持っていますか？"
 "SteamUI_ValveSurvey_MicrophoneDontKnow"	"分からない"
 "SteamUI_ValveSurvey_MicrophoneYes"		"マイクを持っている"
 "SteamUI_ValveSurvey_MicrophoneNo"		"マイクを持っていない"
@@ -2847,7 +2843,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "SteamUI_ValveSurvey_Linux_Runtime_Info" "Steam Linuxランタイム情報:"
 
 "Steam_SubscriptionFailure_ServiceUnavailable_Headline" "Steamサーバーにアクセスできません"
-"Steam_SubscriptionFailure_ServiceUnavailable" "現在、お使いのコンピュータでSteamサーバーにアクセスできないか、またはサービスが一時的に無効になっている可能性があります。 しばらく待ってから、もう一度お試しください。"
+"Steam_SubscriptionFailure_ServiceUnavailable" "現在、お使いのコンピューターでSteamサーバーにアクセスできないか、またはサービスが一時的に無効になっている可能性があります。しばらく待ってから、もう一度お試しください。"
 
 "Steam_SubscriptionCancelled_PayPalDeclined_InvalidShippingAddress"	"%subscription%の購入手続きが完了しませんでした。\n\n%provider%アカウントの登録住所に問題があることが検出されました。 この問題を解決するには、%provider%にアクセスして情報を変更するか、［戻る］をクリックして別のお支払い方法を選択してください。"
 "Steam_SubscriptionCancelled_PayPalDeclined_UseOtherFundingSource"	"%subscription%の購入手続きが完了しませんでした。\n\n%provider%アカウントの登録支払情報に問題があることが検出されました。 この問題を解決するには、%provider%にアクセスして情報を変更するか、［戻る］をクリックして別のお支払い方法を選択してください。"
@@ -2877,12 +2873,12 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_GuestPasses_LinkURL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=549"
 
 "Steam_AlreadyRunningError_Title"			"Steam - 起動できません"
-"Steam_AlreadyRunningError_Info"			"このコンピュータでは、既にSteamが別のユーザーアカウントで実行されています。 再起動する前に、別のユーザーアカウントのSteamを終了してください。"
+"Steam_AlreadyRunningError_Info"			"このコンピューターでは、既にSteamが別のユーザーアカウントで実行されています。再起動する前に、別のユーザーアカウントのSteamを終了してください。"
 "Steam_AlreadyRunningError_SupportLink"	"Steam サポートサイトにて詳細をご覧いただけます"
 "Steam_AlreadyRunningError_SupportTicket"	"できるだけ早くSteam サポートにご連絡くださいませ"
 
 "Steam_LoggedInElsewhere_Title"		"Steam - 別の場所でログインしています"
-"Steam_LoggedInElsewhere_Info"		"このSteamアカウントは現在、他のコンピュータからログインされています。"
+"Steam_LoggedInElsewhere_Info"		"このSteamアカウントは現在、他のコンピューターからログインされています。"
 "Steam_LoggedInElsewhere_Reconect"  "Steamに再接続"
 
 
@@ -2926,11 +2922,11 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_VideoDriverAvailableDownloaded"			"ビデオドライバのアップデートファイルのダウンロードが完了しました。"
 "Steam_InstallVideoDriverNow"					"今すぐインストール"
 "Steam_VideoDriverDownloadFailed_Title"			"Steam - 警告"
-"Steam_VideoDriverDownloadFailed_Text"			"お使いのコンピュータは Steam サーバーに接続できないか、 サービスが一時的に使用不可能になっています。\n\n時間を置いてから試行してください。"
+"Steam_VideoDriverDownloadFailed_Text"			"お使いのコンピュータは Steam サーバーに接続できないか、 サービスが一時的に使用不可能になっています。\n\n時間を置いてから再試行してください。"
 "Steam_VideoDriverInvokeFailed_Title"			"Steam - エラー"
 "Steam_VideoDriverInvokeFailed_Text"			"ビデオドライバの適用に問題が発生しました。"
 
-"Steam_InOfflineModeButNeedToLogIn" "Steamネットワークに接続できません。 \n「オフラインモード」は使用できません。\nSteamのログイン情報がコンピュータに保存されていません。\n\nSteamをご利用いただくには、\nSteamネットワークに再接続する必要があります。"
+"Steam_InOfflineModeButNeedToLogIn" "Steamネットワークに接続できません。 \n「オフラインモード」は使用できません。\nSteamのログイン情報がコンピューターに保存されていません。\n\nSteamをご利用いただくには、\nSteamネットワークに再接続する必要があります。"
 "Steam_InOfflineModeButNeedToLogIn_Link"			"Steamネットワークのステータスを確認するには、ここをクリックしてください"
 
 "Skin_By_Random_n"			"random_nのデザインに基づいたSteamスキン"
@@ -3036,30 +3032,30 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "SteamUI_P2P_DownloadTime"		"ダウンロード時間："
 
 "Steam_Win98Warning_Title"	"Steam - OSのサポート終了について"
-"Steam_Win98Warning_Info"		"ご利用のバージョンの Windows の Steam におけるサポートは　2012年8月31日を持って終了いたします。
-このコンピュータで引き続き Steam を実行するには、Windows のバージョンを Windows XP サービスパック2　以降に
+"Steam_Win98Warning_Info"		"ご利用のバージョンのWindowsのSteamにおけるサポートは2012年8月31日を持って終了いたします。
+このコンピューターで引き続きSteamを実行するには、WindowsのバージョンをWindows XPサービスパック2以降に
 アップグレードする必要があります。"
 
 "Steam_OSEOLWarning_Title"	"Steam - OSのサポート終了について"
-"Steam_MacOSX105Warning_Info"		"Mac OS X 10.5 での Steam のサポートは2014年8月に終了します。
-このコンピューターで Steam を利用し続けるためには、
-Mac OS X バージョン 10.6 以上に更新しなければなりません。"
+"Steam_MacOSX105Warning_Info"		"Mac OS X 10.5でのSteamのサポートは2014年8月に終了します。
+このコンピューターでSteamを利用し続けるためには、
+Mac OS X バージョン 10.6以上に更新しなければなりません。"
 
 "Steam_MacOSX105_SupportArticle"  "詳細は Steam サポートの記事をご覧ください。"
 "Steam_MacOSX105_SupportURL" "https://support.steampowered.com/kb_article.php?ref=5953-QTIO-1764"
 
-"Steam_MacOSX106Warning_Info"		"Mac OS X 10.6 での Steam のサポートは2015年11月に終了します。
+"Steam_MacOSX106Warning_Info"		"Mac OS X 10.6でのSteamのサポートは2015年11月に終了します。
 
-このコンピュータで Steam を利用し続けるには、Mac OS X バージョン 10.7 以上に更新しなければなりません。"
+このコンピューターでSteamを利用し続けるには、Mac OS Xバージョン 10.7以上に更新しなければなりません。"
 
 "Steam_MacOSX106_SupportArticle"  "詳細は Steam サポートの記事をご覧ください。"
 "Steam_MacOSX106_SupportURL" "https://support.steampowered.com/kb_article.php?ref=5953-QTIO-1764"
 
 "Steam_CPUSSEWarning_Title"	"Steam - サポート外のCPUが検出されました"
-"Steam_CPUSSEWarning_Info"	"今後数カ月以内に、%game%をこのコンピュータで実行することができなくなります。  
+"Steam_CPUSSEWarning_Info"	"今後数カ月以内に、%game%をこのコンピューターで実行することができなくなります。  
 これは、%game%がSSE機能を持たないCPUのサポートを終了するためです。
 
-引き続き%game%を実行するには、別のコンピュータを使用するか、システムハードウェアをアップグレードしてください。"
+引き続き%game%を実行するには、別のコンピューターを使用するか、システムハードウェアをアップグレードしてください。"
 
 "SteamUI_InstallScript_Failed_Title" "Steam - セットアップに失敗しました"
 "SteamUI_InstallScript_Failed_Text" "ゲームのセットアッププログラムはシステムコンポーネントのインストールに失敗しました。 このゲームを初めて起動する場合には、
@@ -3074,13 +3070,13 @@ Administrator権限のあるアカウントでWindowsにログインする必要
 "Steam_CPUSSERequired_Title"	"Steam - サポート外のCPUが検出されました"
 "Steam_CPUSSERequired_Info"	"%game%の実行にはSSE機能を持つCPUが必要です。
 
-このゲームを実行するには、別のコンピュータを使用するか、システムハードウェアをアップグレードしてください。"
+このゲームを実行するには、別のコンピューターを使用するか、システムハードウェアをアップグレードしてください。"
 
 "Steam_AccountPage_BetaParticipation"	"ベータへの参加："
 "Steam_NoBetaAvailable"	"（現在参加可能なものはありません）"
 "Steam_NoBetaChosen"	"参加していません\n（参加可能なものが現在%numbetas%あります）"
-"Steam_NoBetaChosenNonAdmin"	"%numbetas% 件のベータプログラムに現在参加可能です。\n(ベータプログラム参加の設定を切り替えるには、Steamインストール時のユーザーアカウントでコンピュータにログインしている必要があります。)"
-"Steam_UserCantSetBeta" "%electedbeta%\n(ベータプログラム参加の設定を切り替えるには、Steam インストール時のユーザーアカウントでコンピュータにログインしている必要があります。)"
+"Steam_NoBetaChosenNonAdmin"	"%numbetas% 件のベータプログラムに現在参加可能です。\n（ベータプログラム参加の設定を切り替えるには、Steamインストール時のユーザーアカウントでコンピューターにログインしている必要があります。）"
+"Steam_UserCantSetBeta" "%electedbeta%\n（ベータプログラム参加の設定を切り替えるには、Steamインストール時のユーザーアカウントでコンピューターにログインしている必要があります。）"
 "Steam_BetaReportBug"	"バグを報告"
 "Steam_ChooseBetaDlgTitle" "ベータへの参加 - Steam"
 "Steam_ChooseBetaExplanation"	"Steamでは正式リリースされる前のゲーム最新版、 もしくはSteam最新版を試すことが可能です。
@@ -3275,7 +3271,7 @@ Betaが終了しました。Steamを再起動し、現在のバージョンに�
 "Steam_ExternalRegistrationURL"			"お手持ちのゲームの登録..."
 
 "Steam_RetailInstallTitle" "Steam - %product%のインストール"
-"Steam_RetailInfo"		"これらのゲームには、Steam アカウント「%account%」にログインするだけで、いつでも、どのコンピュータからでもアクセスすることができます。"
+"Steam_RetailInfo"		"これらのゲームには、Steamアカウント「%account%」にログインするだけで、いつでも、どのコンピューターからでもアクセスすることができます。"
 "Steam_RetailChooseCreateNewAccount"			"新しいSteamアカウントの作成..."
 "Steam_RetailChooseLoginToExistingAccount"		"既存のSteamアカウントにログインする"
 
@@ -3363,6 +3359,13 @@ Betaが終了しました。Steamを再起動し、現在のバージョンに�
 "Steam_ServerBrowserPingRateInfo"	"ゲームサーバーを閲覧する際にインターネット接続に問題が発生する場合は、この値を小さくして下さい。"
 "Steam_ServerBrowserPingRateDefault"	"自動 (%PingsPerMin%)"
 
+"Steam_TextFilterSettingLabel"									"チャットフィルタリング"
+"Steam_TextFilterStatus_Enabled"								"強い冒涜／中傷表現をフィルター中"
+"Steam_TextFilterStatus_Enabled_IgnoreFriends"					"フレンド以外からの強い冒涜／中傷表現をフィルター中"
+"Steam_TextFilterStatus_EnabledAllowProfanity"					"強い冒涜表現は許可し、中傷表現をフィルター中"
+"Steam_TextFilterStatus_EnabledAllowProfanity_IgnoreFriends"	"強い冒涜表現は許可し、フレンド以外からの中傷表現をフィルター中"
+"Steam_TextFilterStatus_Disabled"								"強い冒涜／中傷表現を許可中"
+"Steam_TextFilterSettingURL"									"チャットフィルタリング設定を変更"
 
 "Steam_SettingsInGameScreenshotFolder"	"スクリーンショットフォルダ"
 "Steam_SettingsInGameTitle"	"Steam オーバーレイ"
@@ -3378,7 +3381,7 @@ Betaが終了しました。Steamを再起動し、現在のバージョンに�
 
 
 "SteamUI_GameRequires_NTFS_Detail"	"このゲームをインストールするには、NTFSファイルシステムのドライブが必要です。\nFAT32ファイルシステムでフォーマットされたドライブにはインストールできません。\n詳細については、下記のリンクからサポート情報を参照してください。"
-"SteamUI_GameRequires_64BitOS_Detail"	"インストールしようとしているゲームには、64 ビットの Windows コンピュータが必要です。\n必要条件を満たすコンピュータがない場合は、以下をクリックして返金をリクエストするための情報をお読みください。"
+"SteamUI_GameRequires_64BitOS_Detail"	"インストールしようとしているゲームには、64ビットのWindowsコンピューターが必要です。\n必要条件を満たすコンピューターがない場合は、以下をクリックして返金をリクエストするための情報をお読みください。"
 
 "SteamUI_SiteLicense_LockedDetail"	"現在この製品で使用可能なライセンスはありません。ライセンスの有無を\n後で確認するか、またはローカル管理者に連絡してください。"
 
@@ -3413,45 +3416,45 @@ Betaが終了しました。Steamを再起動し、現在のバージョンに�
 
 "SteamUI_ManageSecurity_ChooseName" "このマシンに対するわかりやすい名前を選択してください:"
 
-"SteamUI_ManageSecurity_DoNothing" "良い選択です! 別のコンピュータから Steam へログインするためにメールアドレスへのアクセスが必要になりますが、Steam ガードを有効化することによってアカウントのセキュリティが格段に増します。"
+"SteamUI_ManageSecurity_DoNothing" "良い選択です！別のコンピューターからSteamへログインするためにメールアドレスへのアクセスが必要になりますが、Steamガードを有効化することによってアカウントのセキュリティが格段に増します。"
 "SteamUI_ManageSecurity_DoNothing2" "安全のため、Steamアカウントとご使用のメールアドレスでパスワードを共有しないでください。"
 
-"SteamUI_ManageSecurity_UnlockAccount_Success" "現在アカウント名とパスワードを入力すれば、　どのコンピューターやブラウザからでもSteamアカウントにアクセスできる状態です。"
+"SteamUI_ManageSecurity_UnlockAccount_Success" "現在アカウント名とパスワードを入力すれば、どのコンピューターやブラウザーからでもSteamアカウントにアクセスできる状態です。"
 "SteamUI_ManageSecurity_Reenable" "Steam ガードを有効化するには、Steam＞設定から[Steam ガード・アカウントセキュリティ管理] をクリックしてください。"
 
-"SteamUI_ManageSecurity_CodeSent" "コードが記載されたメールがあなたのメールアドレスに送信されました。\n 新しいコンピュータにログインするときには、そのコードを使ってください。"
+"SteamUI_ManageSecurity_CodeSent" "コードが記載されたメールがあなたのメールアドレスに送信されました。\n 新しいコンピューターにログインするときには、そのコードを使ってください。"
 "SteamUI_ManageSecurity_OtherComputersDenied" "他のすべてのコンピューターにおいて、あなたによるEメールからの事前認証なしにアカウントへのアクセスが許可されることはありません。"
-"SteamUI_ManageSecurity_OtherComputersDenied2" "別のコンピュータから Steam へログインするには、その時メールアドレスに送られる特定のアクセスコードを入力する必要があります。"
+"SteamUI_ManageSecurity_OtherComputersDenied2" "別のコンピューターからSteamへログインするには、その時メールアドレスに送られる特定のアクセスコードを入力する必要があります。"
 
 "SteamUI_ManageSecurity_Working" "リクエストを処理するため Steam サーバーに接続しています..."
 
 "SteamUI_ManageSecurity_InfoLabel" "悪の手にアカウントが渡ることを防ぐ Steam ガードにより、お使いのアカウントは保護されています。"
-"SteamUI_ManageSecurity_InfoLabel2" "これはあなたが許可していないコンピュータもしくはブラウザから、 あなたのSteamアカウントにアクセスしようとした場合、 連絡用メールアカウントが必要となることを意味します。"
-"SteamUI_ManageSecurity_InfoLabel3" "一度も使用したことのないコンピュータやブラウザからあなたのSteamアカウントにアクセスしようとすると、Steamから連絡用メールアドレスにメッセージが送信されます。 このメッセージに記載されたスペシャルアクセスコードが、Steamアカウントへのアクセスに必要となります。"
+"SteamUI_ManageSecurity_InfoLabel2" "これはあなたが許可していないコンピューターもしくはブラウザーから、 あなたのSteamアカウントにアクセスしようとした場合、 連絡用メールアカウントが必要となることを意味します。"
+"SteamUI_ManageSecurity_InfoLabel3" "一度も使用したことのないコンピューターやブラウザーからあなたのSteamアカウントにアクセスしようとすると、Steamから連絡用メールアドレスにメッセージが送信されます。このメッセージに記載されたスペシャルアクセスコードが、Steamアカウントへのアクセスに必要となります。"
 "SteamUI_ManageSecurity_NothingRadio" "Steam ガードによる自分のアカウント保護を保つ"
 "SteamUI_ManageSecurity_UnlockRadio" "Steam ガードを無効化（推奨しません）"
-"SteamUI_ManageSecurity_UnlockWarning" "注:Steam トレーディングとSteam コミュニティマーケットは、Steam ガードを無効中あるいはSteam ガードを再有効にしてから 15 日の間はご利用できません。"
+"SteamUI_ManageSecurity_UnlockWarning" "注:SteamトレーディングとSteamコミュニティマーケットは、Steamガードを無効中、またはSteamガードを再有効にしてから15日の間はご利用できません。"
 
-"SteamUI_ManageSecurity_RemoveOtherComputersButton" "他のすべてのコンピュータの認証を解除する"
+"SteamUI_ManageSecurity_RemoveOtherComputersButton" "他のすべてのコンピューターの認証を解除する"
 
 "SteamUI_ManageSecurity_NotLockedInfo" "Steam ガードによりあなたのアカウントを悪の手から保護することができます。"
-"SteamUI_ManageSecurity_NotLockedInfo2" "Steam ガードによって、一度も使用したことのないコンピュータやブラウザからあなたの Steam アカウントにアクセスしようとすると、Steam から連絡用メールアドレスにメッセージが送信されます。このメッセージに記載されたスペシャルアクセスコードが、Steam アカウントへのアクセスに必要となります。"
+"SteamUI_ManageSecurity_NotLockedInfo2" "Steamガードによって、一度も使用したことのないコンピューターやブラウザーからあなたのSteamアカウントにアクセスしようとすると、Steamから連絡用メールアドレスにメッセージが送信されます。このメッセージに記載されたスペシャルアクセスコードが、Steamアカウントへのアクセスに必要となります。"
 "SteamUI_LockAccountButton" "Steam ガードでアカウントを保護(推奨)"
 
 "SteamUI_SteamGuardProviderEmail" "Eメール"
 "SteamUI_SteamGuardProviderMobile" "Steam モバイルクライアント"
-"SteamUI_SteamGuardDontRemember" "このコンピュータで今後あなたのアカウントにログインするためには、再度コードを入力しなければならなくなります。"
+"SteamUI_SteamGuardDontRemember" "このコンピューターで今後あなたのアカウントにログインするためには、再度コードを入力しなければならなくなります。"
 "SteamUI_SteamGuardUseMobile" "Steam モバイルアプリケーションを使って Steam ガードコードを入力する"
 "SteamUI_SteamGuardUseMobile2" "モバイルデバイスの準備はできています"
 "SteamUI_SteamGuardUseMobile3" "Steamモバイルアプリケーションをインストールしたモバイルデバイスへのアクセスはもうありません。"
 
 "SteamUI_SteamGuardNotifyNewMachinesTitle" "Steamガード 通知"
-"SteamUI_SteamGuardNotifyNewMachinesDetails" "このコンピュータで最後にアカウントにログインしてから、Steam ガードによって別の場所から認証を受けたようです。\n\nこれらのセッションはあなたによって承認されたセッションであることを確認してください:"
+"SteamUI_SteamGuardNotifyNewMachinesDetails" "このコンピューターで最後にアカウントにログインしてから、Steamガードによって別の場所から認証を受けたようです。\n\nこれらのセッションはあなたによって承認されたセッションであることを確認してください:"
 "SteamUI_SteamGuardNotifyNewMachinesExplainButtons" "あなたが承認していないセッションが含まれている場合、「いいえ、私ではありません。」 を選択し、Steam パスワードとメールアドレスを変更してから他の場所からの認証を無効化してください。"
-"SteamUI_SteamGuardNotifyNewMachinesTurnedOff" "このコンピュータから最後にログインした後、あなたのアカウント資格は使用され、別の場所からSteam ガードが無効化されました。\n\nあなたがこれらのセッションを承認したことをご確認ください："
+"SteamUI_SteamGuardNotifyNewMachinesTurnedOff" "このコンピューターから最後にログインした後、あなたのアカウント資格は使用され、別の場所からSteam ガードが無効化されました。\n\nあなたがこれらのセッションを承認したことをご確認ください："
 "SteamUI_SteamGuardNotifyNewMachinesExplainButtons2" "承認していないセッションが含まれていた場合、”いいえ、私ではありません。”を選択し、Steam パスワードとメールアドレスを変更してから、別の場所からのログインの認証を無効化した後、再度Steam ガードを有効化しましょう。"
-"SteamUI_SteamGuardNotifyNewMachines_WebBrowserAt" "ウェブブラウザ IP "
-"SteamUI_SteamGuardNotifyNewMachines_ComputerAt" "コンピュータ IP "
+"SteamUI_SteamGuardNotifyNewMachines_WebBrowserAt" "WebブラウザーIP "
+"SteamUI_SteamGuardNotifyNewMachines_ComputerAt" "コンピューターIP "
 "SteamUI_SteamGuardNotifyNewMachines_CloseButton" "はい、私です。"
 "SteamUI_SteamGuardNotifyNewMachines_PanicButton" "いいえ、私ではありません。"
 "SteamUI_SteamGuardNotifyNewMachines_UnknownCountry" "不明国"
@@ -3464,45 +3467,45 @@ Betaが終了しました。Steamを再起動し、現在のバージョンに�
 
 
 "SteamUI_SteamGuardCompromised_Title" "Steam - アカウントセキュリティが侵害されました"
-"SteamUI_SteamGuardCompromised_Explain"	"あなたの Steam 及びメールアカウントの安全性が侵害されている恐れがあります。\n\nこのコンピュータ以外の Steam ガード認証は無効化されました。"
-"SteamUI_SteamGuardCompromised_Explain2"	"あなたの Steam 及びメールアドレスアカウントの安全性が侵害された恐れがあります。\n\nSteam ガードは再度有効化され、他の全てのコンピュータからの認証は無効化されました。"
+"SteamUI_SteamGuardCompromised_Explain"	"あなたのSteam及びメールアカウントの安全性が侵害されている恐れがあります。\n\nこのコンピューター以外のSteamガード認証は無効化されました。"
+"SteamUI_SteamGuardCompromised_Explain2"	"あなたのSteam及びメールアドレスアカウントの安全性が侵害された恐れがあります。\n\nSteamガードは再度有効化され、他の全てのコンピューターからの認証は無効化されました。"
 "SteamUI_SteamGuardCompromised_ExplainActions" "すぐにメールアドレスのパスワードを変更してください：:\n%s1\n\n注意：新しい、どこでも使用していないパスワードを設定しましょう。\n\n完了するまで次に進まないでください。この変更を行わない限りあなたのアカウントの安全性は保証されません。"
 "SteamUI_SteamGuardCompromised_ExplainPasswords" "次に、Steam パスワードを変更します。"
 "SteamUI_SteamGuardCompromised_ChangePasswordButton" "パスワードを変更"
 
 
-"Steam_LockedAccountRecover_Title" "Steam ガード - コンピュータの認証が必要です"
-"Steam_RecoverLocked_Info" "こんにちは! あなたは新しいコンピューターでログインしようとしています。"
-"Steam_RecoverLocked_Details" "アカウントセキュリティの一環として、このブラウザで Steam に接続するには、あなたの登録メールアドレスである %s1 へ送信された専用のコードを入力してください。"
+"Steam_LockedAccountRecover_Title" "Steamガード - コンピューターの認証が必要です"
+"Steam_RecoverLocked_Info" "こんにちは！あなたは新しいコンピューターでログインしようとしています。"
+"Steam_RecoverLocked_Details" "アカウントセキュリティの一環として、このブラウザーでSteamに接続するには、あなたの登録メールアドレスである %s1 へ送信された専用のコードを入力してください。"
 "Steam_RecoverLocked_UseCode" "Steam サポートよりメッセージを受信したので、
 スペシャルアクセスコードを入力できます。"
 "Steam_RecoverLocked_MustRecover" "どんなEメールメッセージですか? 受け取っていません..."
 "Steam_RecoverLocked_WhyIsThisHappening" "原因は何ですか？"
 "Steam_RecoverLocked_EnterCode" "スペシャルアクセスコード:"
-"Steam_RecoverLocked_EnterCodeDetails" "コードが認証されると、 Steam ガードはこのコンピュータをあなたの Steam アカウントにアクセスする許可のあるコンピュータのリストに加えます。"
+"Steam_RecoverLocked_EnterCodeDetails" "コードが認証されると、SteamガードはこのコンピューターをあなたのSteamアカウントにアクセスする許可のあるコンピューターのリストに加えます。"
 "Steam_RecoverLocked_WrongCode" "申し訳ありませんが、 コードが正しくありません。"
 "Steam_RecoverLocked_ExpiredCode" "このコードは有効期限が切れています。"
 "Steam_RecoverLocked_WrongCodeDetails" "戻ってもう一度再入力を試すか、 もしくは、 このコンピューターからSteamアカウントへのアクセスを行うために、 [次へ]をクリックして必要なヘルプを参照してください。"
 "Steam_RecoverLocked_ExpiredCodeDetails" "もっと最近のメールがないか確認し、「戻る」で再入力してください。もしくは、新しいコードをリクエストするため「次へ」をクリックしてください。"
 "Steam_RecoverLocked_NoEmail" "スパムフォルダをチェックしましたか?"
 "Steam_RecoverLocked_NoEmailDetails" "Steam サポートからの新しいメッセージが受信ボックス内に無ければ、 Eメールアカウントのスパムフォルダ内を確認してみてください。"
-"Steam_RecoverLocked_NoEmailDetails2" "コードが見つかればそれを入力しに戻るか、[次へ]をクリックしてこのコンピュータからあなたのSteamアカウントにアクセスするために必要なヘルプを参照してください。"
+"Steam_RecoverLocked_NoEmailDetails2" "コードが見つかればそれを入力しに戻るか、[次へ]をクリックしてこのコンピューターからあなたのSteamアカウントにアクセスするために必要なヘルプを参照してください。"
 "Steam_RecoverLocked_StartRecovery" "残念ながら問題が発生しているようです -　お手伝いいたします！"
 "Steam_RecoverLocked_StartRecovery2" "我々はあなたの Steam アカウントの重要性を理解しており、そして、あなたが再びアカウントにアクセスする事ができるよう、全力でサポートすることを約束します。"
 "Steam_RecoverLocked_StartRecovery3" "お手数ですが、Steam サポートにお問い合わせください。正当なアカウントアクセスに関するサポートは、最優先事項として対応いたします。"
 "Steam_RecoverLocked_RecoverySupportLink" "Steam サポートに連絡する"
 "Steam_RecoverLocked_LearnMore" "Intel® Identity Protection Technologyについてもっと学ぶ"
-"Steam_RecoverLocked_CannotAccess" "申し訳ございません。 このコンピュータをまだ認証していないため、 このアカウントではアクセスできません。"
+"Steam_RecoverLocked_CannotAccess" "申し訳ございません。このコンピューターをまだ認証していないため、このアカウントではアクセスできません。"
 "Steam_RecoverLocked_Success" "成功!"
-"Steam_RecoverLocked_SuccessDetails" "これで、このコンピュータからあなたの Steam アカウントにアクセスすることが出来るようになりました。Steam ガードはこのコンピュータをあなたの Steam アカウントにアクセスする許可のあるコンピュータリストに加えました。"
+"Steam_RecoverLocked_SuccessDetails" "これで、このコンピューターからあなたのSteamアカウントにアクセスすることが出来るようになりました。SteamガードはこのコンピューターをあなたのSteamアカウントにアクセスする許可のあるコンピューターリストに加えました。"
 "Steam_RecoverLocked_ResultWorking" "Steam - 実行中..."
 "Steam_RecoverLocked_ResultFailure" "Steam サーバーへの接続に失敗しました"
 "Steam_RecoverLocked_ResultFailureDetails" "現在、Steam サーバーに接続できません。後で、もう一度お試しください。"
 "Steam_RecoverLocked_MachineNameLabel" "分かりやすい名前"
-"Steam_RecoverLocked_MachineNameBox" "Steam ガードのコンピューター名"
+"Steam_RecoverLocked_MachineNameBox" "Steamガードのコンピューター名"
 "Steam_RecoverLocked_MachineNameBoxText" "このコンピューターに対する6文字以上の名前を入力してください"
 
-"Steam_GetTwoFactorCode_Title" "Steam ガード - 必須のコンピュータ認証"
+"Steam_GetTwoFactorCode_Title" "Steamガード - 必須のコンピューター認証"
 "Steam_GetTwoFactorCode_EnterCode" "Steam ガードコード:"
 "Steam_GetTwoFactorCode_EnterCodeDetails" "追加のセキュリティ措置として、 現在携帯電話に表示されているSteam モバイル認証コードを入力する必要があります。"
 "Steam_GetTwoFactorCode_WrongCode" "申し訳ありませんが、 コードが正しくありません。"
@@ -3854,7 +3857,7 @@ Betaが終了しました。Steamを再起動し、現在のバージョンに�
 "tooltip_sharedlibrary2"	"後でプレイを試みるか、自分のライブラリにこのゲームを購入して、今すぐプレイしましょう。"
 
 "NoBigPicture_Title"		"Big Picture モード"
-"NoBigPicture_Explanation"	"このプラットフォームあるいはハードウェアでは Steam Big Picture モードはサポートされません。"
+"NoBigPicture_Explanation"	"このプラットフォームまたはハードウェアでは Steam Big Pictureモードはサポートされません。"
 "NoBigPicture_Anchor"		"詳細については Steam サポートをご覧ください。"
 
 "NoBigPictureVista_Title"		"Big Picture モード"
@@ -4142,7 +4145,7 @@ Betaが終了しました。Steamを再起動し、現在のバージョンに�
 "steam_subnav_badges"		"バッジ"
 "steam_subnav_inventory"	"インベントリ"
 
-"Steam_RememberThisComputer" "このコンピュータに記憶させますか？"
+"Steam_RememberThisComputer" "このコンピューターに記憶させますか？"
 "SteamUI_Invalid_Account_Name" "無効なアカウント名"
 "SteamUI_Invalid_Email_Address" "無効なメールアドレス"
 
@@ -4159,7 +4162,7 @@ Betaが終了しました。Steamを再起動し、現在のバージョンに�
 "Steam_DeviceAuth_RequestDialog_Title" "ファミリーライブラリシェアリングリクエスト"
 "Steam_DeviceAuth_RequestDialog_To" "%owner% さん"
 "Steam_DeviceAuth_RequestDialog_From" "よろしくお願いします、\n%user%"
-"Steam_DeviceAuth_RequestDialog_Text" "このコンピューター上であなたの Steam ライブラリへのアクセスを共有しますか？"
+"Steam_DeviceAuth_RequestDialog_Text" "このコンピューター上であなたのSteamライブラリへのアクセスを共有しますか？"
 "Steam_DeviceAuth_RequestDialog_Description" "このコンピューターに名前をつけてください:"
 "Steam_DeviceAuth_RequestDialog_Cancel" "キャンセル"
 "Steam_DeviceAuth_RequestDialog_Send" "リクエストの送信"
@@ -4173,12 +4176,12 @@ Betaが終了しました。Steamを再起動し、現在のバージョンに�
 "Steam_DeviceAuth_StoppedSharedGame_Text" "Steam は %game% を中断しました。 %owner% が現在、このゲームライブラリを使用中です。"
 
 "Steam_Settings_Family_Sharing_Title" "ファミリーライブラリシェアリング"
-"Steam_Settings_Family_Sharing_ManageSharing" "他のコンピュータの管理"
-"Steam_Settings_Family_Sharing_Info" "ファミリーライブラリシェアリングは、このコンピュータ上であなたの Steam ライブラリを共有可能にします。承認された Steam ユーザーは、共有コンピューター上で、あなたのライブラリ内のあなたがプレイ中でない Steam ゲームにアクセス・ダウンロード・プレイが出来るようになります。"
-"Steam_Settings_Family_Sharing_AuthorizedDevice" "このコンピュータ上でのライブラリシェアリングを承認する"
-"Steam_Settings_Family_Sharing_AuthorizedDevice_ToolTip" "10 台までコンピュータを承認することができます"
+"Steam_Settings_Family_Sharing_ManageSharing" "他のコンピューターの管理"
+"Steam_Settings_Family_Sharing_Info" "ファミリーライブラリシェアリングは、このコンピューター上であなたのSteamライブラリを共有可能にします。承認されたSteamユーザーは、共有コンピューター上で、あなたのライブラリ内のあなたがプレイ中でないSteamゲームにアクセス・ダウンロード・プレイが出来るようになります。"
+"Steam_Settings_Family_Sharing_AuthorizedDevice" "このコンピューター上でのライブラリシェアリングを承認する"
+"Steam_Settings_Family_Sharing_AuthorizedDevice_ToolTip" "10台までコンピューターを承認することができます"
 
-"Steam_Settings_Family_Sharing_AuthorizeError" "コンピュータ承認に失敗しました (%reason%)"
+"Steam_Settings_Family_Sharing_AuthorizeError" "コンピューター承認に失敗しました（%reason%）"
 "Steam_Settings_Family_Sharing_DeauthorizeError" "承認解除に失敗しました (%reason%)"
 "Steam_Settings_Family_Sharing_UpdateBorrowers" "貸出先を更新"
 "Steam_Settings_Family_Sharing_BorrowerError" "貸出先の更新に失敗しました (%reason%)"
@@ -4209,6 +4212,7 @@ Betaが終了しました。Steamを再起動し、現在のバージョンに�
 "Steam_TimedTrial_Over" "トライアルが終了しました"
 "Steam_TimedTrial_CloseNow" "ゲームが終了します"
 "Steam_TimedTrial_Enjoy" "トライアルをお楽しみください"
+"Steam_TimedTrial_Offline" "ゲームの体験版のSteamへの接続が切断されました"
 "Steam_TimedTrial_Minutes" "残りプレイ時間：%minutes%分"
 "Steam_TimedTrial_Hours" "残りプレイ時間：%hours%時間%minutes%分"
 
@@ -4223,12 +4227,11 @@ Betaが終了しました。Steamを再起動し、現在のバージョンに�
 
 "Steam_AllowGameLaunch_Info"	"%game% が以下に示すオプションのパラメータを使用して起動されようとしています。"
 "Steam_AllowGameLaunch_Info_args"	"\"%arguments%\"\n"
-"Steam_AllowGameLaunch_Info_Prompt" "この起動をリクエストしなかった、あるいはこれらのオプションを理解していない場合には、キャンセルを選択してください。"
+"Steam_AllowGameLaunch_Info_Prompt" "この起動をリクエストしなかった、またはこれらのオプションを理解していない場合には、キャンセルを選択してください。"
 "Steam_AllowGameLaunch_Title"	"ゲームの起動を許可しますか？"
 
 "Steam_Parental_UnlockTitle"			"ファミリービュー"
 "Steam_Parental_UnlockInstructions"		"以下に PIN を入力して、ファミリービューを終了してください"
-"Steam_Parental_UnlockInstructions2"	""
 "Steam_Parental_ForgotPIN"				"自分の PIN を忘れました"
 "Steam_Parental_NoRecoveryEmail"		"リカバリ用メールアドレスが設定されていません"
 "Steam_Parental_NoRecoveryEmail_Instructions"		 "リカバリ用メールアドレスがあなたのアカウントに設定されていません。ご自分のリカバリ用メールアドレスを更新するためには、ファミリービューを終了し、ファミリービューの設定に戻ってください。"
@@ -4265,20 +4268,20 @@ Betaが終了しました。Steamを再起動し、現在のバージョンに�
 "SteamUI_StreamClient_Failed_Title"	"ストリーミングクライアント 失敗"
 "SteamUI_StreamClient_Failed"		"ストリーミングクライアントが予期しない理由で終了しました (%error%)"
 "SteamUI_StreamClient_Failed_Connect"	"リモートコンピューターに接続できませんでした。"
-"SteamUI_StreamClient_Failed_Proto"	"ローカルとリモートのコンピューターでインストールされている Steam のバージョンが異なります。"
+"SteamUI_StreamClient_Failed_Proto"	"ローカルとリモートのコンピューターでインストールされているSteamのバージョンが異なります。"
 "SteamUI_StreamClient_Failed_Auth"	"認証に失敗しました。"
-"SteamUI_StreamClient_Failed_DirectX"	"マイクロソフトのウェブサイトから DirectX ランタイム をインストールしてください。"
+"SteamUI_StreamClient_Failed_DirectX"	"マイクロソフトのWebサイトから DirectX ランタイム をインストールしてください。"
 "SteamUI_StreamLaunch_Failed_Title" "ストリーミングの起動に失敗"
 "SteamUI_StreamLaunch_RequiresUI"	"このゲームの起動にはユーザーによる操作が必要です。\n\nリモートコンピューターで手動で起動した後、ここからストリーミングに参加してください。"
 "SteamUI_StreamLaunch_AccessDenied"	"認証の問題。"
 "SteamUI_StreamLaunch_Unsupported"	"このゲームは現在ストリーミングをサポートしておりません。"
-"SteamUI_StreamLaunch_ScreenLocked"	"画面はリモートコンピュータ上からロックされています。"
+"SteamUI_StreamLaunch_ScreenLocked"	"画面はリモートコンピューター上からロックされています。"
 "SteamUI_StreamLaunch_Broadcasting"	"リモートコンピューターが現在Steamブロードキャストを使用しているため、Remote Playセッションを開始できません。"
-"SteamUI_StreamLaunch_OtherGameRunning"	"リモートコンピュータですでに別のゲームを実行中です。"
+"SteamUI_StreamLaunch_OtherGameRunning"	"リモートコンピューターですでに別のゲームを実行中です。"
 "SteamUI_StreamLaunch_Timeout"		"ストリーミングの起動待機中にタイムアウトしました。"
 "SteamUI_StreamLaunch_InstallRequiresUI" "このゲームの起動にはユーザーによる操作が必要です。\n\nリモートコンピューターに手動でインストールしてください。"
 "SteamUI_StreamLaunch_Failed"		"ストリーミングを起動できません。"
-"SteamUI_StreamLaunch_InstallDrivers"	"ストリーミングには追加のドライバインストールが必要です。\n\nリモートコンピュータで Steam プロンプトの指示に従ってください。"
+"SteamUI_StreamLaunch_InstallDrivers"	"ストリーミングには追加のドライバインストールが必要です。\n\nリモートコンピューターでSteamプロンプトの指示に従ってください。"
 "SteamUI_StreamLaunch_StillDownloading" "アップデートが %ClientName% で進行中です。 ダウンロード完了時に%game% のストリーミングを始められます。"
 "SteamUI_StreamLaunch_TransportUnavailable"	"自宅外からのストリーミングは現在利用できません。後でもう一度お試しください。"
 
@@ -4288,7 +4291,7 @@ Betaが終了しました。Steamを再起動し、現在のバージョンに�
 "Steam_InstallGamepadInputDriver_Text"	"Steam のゲームパッドドライバをアップデートする必要があります。また、システム再起動を伴う場合もあります。\n\n\"インストール\"をクリックして続行してください。"
 
 "Steam_OtherSessionPlaying_Title" "エラー - Steam"
-"Steam_OtherSessionPlaying_Text" "別のコンピュータで 「%existing_app%」をプレイ中です。\nここで「%launching_app%」を起動すると、Steam からもう一方のセッションが切断されます。"
+"Steam_OtherSessionPlaying_Text" "別のコンピューターで「%existing_app%」をプレイ中です。\nここで「%launching_app%」を起動すると、Steamからもう一方のセッションが切断されます。"
 
 "Steam_SystemRequirementWarning_Title" "パフォーマンス警告"
 "Steam_SystemRequirementWarning_Text" "ご利用のシステムは %game% をプレイするための必要最低要件を満たしていません。"
@@ -4429,7 +4432,6 @@ Betaが終了しました。Steamを再起動し、現在のバージョンに�
 "Music_Playlist_RenameDialog_Title" "プレイリストの名前を変更"
 "Music_Playlist_RenameDialog_Prompt" "プレイリスト '%playlistname%' の名前を変更"
 "Music_Playlist_AddDialog_Title" "新しいプレイリストを作成"
-"Music_Playlist_AddDialog_Prompt" ""
 "Music_Playlist_DeleteDialog_Title" "プレイリストを削除"
 "Music_Playlist_DeleteDialog_Prompt" "プレイリスト '%playlistname%' を本当に削除しますか？"
 "Music_Playlist_Details_Play" "リストを再生"
@@ -4448,8 +4450,6 @@ Betaが終了しました。Steamを再起動し、現在のバージョンに�
 "Music_Queue_Menu_ReplacePlaylist" "プレイリストをキューで置き換える"
 "Music_Queue_Menu_AppendPlaylist" "プレイリストに追加"
 "Music_Queue_AddPlaylist_Dialog_Title" "プレイリストを追加"
-"Music_Queue_AddPlaylist_Dialog_Prompt" ""
-
 "Steam_Settings_Controller"					"コントローラ"
 "Steam_SettingsControllerTitle"				"コントローラ設定"
 "Steam_SettingsControllerDescription"		"コントローラ一般設定では、設定サポートへのオプトイン/オプトアウトや、カスタマイズなどのオプションを設定できます。"
@@ -4483,7 +4483,7 @@ Betaが終了しました。Steamを再起動し、現在のバージョンに�
 "Steam_Settings_Compat_Info_Link"		    "Steam Play FAQ"
 "Steam_Settings_Compat_No_Default"		    "未選択"
 
-"Steam_Settings_Compat_Launch_Prefix"   "次を経由してこのコンピュータで実行:"
+"Steam_Settings_Compat_Launch_Prefix"   "次を経由してこのコンピューターで実行:"
 "Steam_Settings_Compat_Launch_Name"     "Steam Play"
 
 "Steam_Settings_Compat_Launch_Whitelisted"     "Valveでのテストによる選択"
@@ -4522,7 +4522,7 @@ Betaが終了しました。Steamを再起動し、現在のバージョンに�
 "Steam_Settings_Streaming_EnableHardwareEncodingAMD" "AMD GPU のハードウェアエンコードを有効化"
 "Steam_Settings_Streaming_EnableHardwareEncodingIntel" "Intel iGPU のハードウェアエンコードを有効化"
 "Steam_Settings_Streaming_EnableHardwareDecoding" "ハードウェアデコーディングを有効にする"
-"Steam_Settings_Streaming_EnableTrafficPriority_Description" "比較的新しいあるいはハイエンドのルーターをお持ちの場合、ネットワークトラフィックの優先順位付けを有効にすることもできます。"
+"Steam_Settings_Streaming_EnableTrafficPriority_Description" "比較的新しい、またはハイエンドのルーターをお持ちの場合、ネットワークトラフィックの優先順位付けを有効にすることもできます。"
 "Steam_Settings_Streaming_EnableTrafficPriority" "ネットワークトラフィックの優先順位付け"
 "Steam_Settings_Streaming_PerformanceOverlay" "パフォーマンスオーバーレイ"
 "Steam_Settings_Streaming_PerformanceOverlayDisabled" "無効"
@@ -4583,15 +4583,15 @@ Betaが終了しました。Steamを再起動し、現在のバージョンに�
 
 "Steam_Settings_Streaming_StreamingSupport"	"サポート情報を表示"
 
-"Steam_Settings_Streaming_Connected" "接続先コンピュータ"
+"Steam_Settings_Streaming_Connected" "接続先コンピューター"
 "Steam_Settings_Streaming_Paired" "ペアリング済みデバイス"
 "Steam_Settings_Streaming_NotConnected" "接続されていません"
 "Steam_Settings_Streaming_DifferentVersion" "異なるクライアントバージョン"
 "Steam_Settings_Streaming_Disabled" "ストリーミング無効"
-"Steam_Settings_Streaming_Unsupported" "接続先コンピュータ"
+"Steam_Settings_Streaming_Unsupported" "接続先コンピューター"
 
 "Steam_Settings_Streaming_PIN_Title" "Steamリンクのセキュリティコードを設定する"
-"Steam_Settings_Streaming_PIN_Text" "このコンピュータからSteamリンクへストリーミングする度に必要となるPINコード番号を設定してください："
+"Steam_Settings_Streaming_PIN_Text" "このコンピューターからSteamリンクへストリーミングする度に必要となるPINコード番号を設定してください："
 
 "SteamUI_StreamingIntro_Title"		"Steam Remote Playへようこそ"
 "SteamUI_StreamingIntro"			"Steam Remote Playを利用して、別のコンピューターでゲームを起動させて、このデバイスからプレイしようとしています。"
@@ -4683,7 +4683,7 @@ Betaが終了しました。Steamを再起動し、現在のバージョンに�
 "Steam_WindowsCompat_Continue" "続ける"
 
 "Steam_WindowsCompat_BigPicture" "Steam は現在 Windows 互換モードで起動しています。Steam が Windows XP 以前の環境で動作していると認識し、Big Picture の起動に支障を及ぼすかもしれません。"
-"Steam_WindowsCompat_Webhelper" "Windows が Windows 互換モードで Steam ウェブブラウザを起動しているため、Steam が Web コンテンツを表示するのに問題が発生する恐れがあります。\n\nSteam は問題を修復し、再起動します。\n\nこのメッセージがまた表示される場合は、以下の指示に従い、互換モードを解除してください。"
+"Steam_WindowsCompat_Webhelper" "WindowsがWindows互換モードでSteam Webブラウザーを起動しているため、SteamがWebコンテンツを表示するのに問題が発生する恐れがあります。\n\nSteamは問題を修復し、再起動します。\n\nこのメッセージがまた表示される場合は、以下の指示に従い、互換モードを解除してください。"
 
 "Steam_InstallIssue_FolderReadOnly"	"現在 Steam インストールフォルダに書き込みができないため、Steam の機能やゲームの実行に問題が発生する可能性があります。\n\nSteam はこの問題を修復してから再起動される必要があります。"
 "Steam_InstallIssue_WindowsRegistry" 	"現在 Steam レジストリパスに書き込みができないため、Steam の機能やゲームの実行に問題が発生する可能性があります。\n\nSteam はこの問題を修復してから再起動される必要があります。"
@@ -4708,11 +4708,11 @@ Betaが終了しました。Steamを再起動し、現在のバージョンに�
 "Steam_BLEControllerFirmware_LearnMore" "詳細を見る"
 "Steam_BLEControllerFirmware_UpdateNow" "今すぐファームウェアを更新"
 
-"Steam_Browser_Disabled" "Steam ブラウザが無効になっています。"
+"Steam_Browser_Disabled" "Steamブラウザーが無効になっています。"
 "Steam_Browser_Disabled_NoBrowser" "Steamコマンドラインで「-no-browser」が指定されているため、Steamブラウザーは無効になっています。"
 "Steam_Browser_Disabled_KB" "詳細は Steam サポートの記事をご覧ください"
 "Steam_Browser_Disabled_KB_URL" "https://support.steampowered.com/kb_article.php?ref=4090-RTKZ-4347"
-"Steam_ViewSSAInBrowser" "Steam 利用規約をお読みになり同意する必要があります。\n<a href=\"%url%\">ここをクリック</a>してブラウザで規約を開いてください。続行するには、このウィンドウに戻ってください。"
+"Steam_ViewSSAInBrowser" "Steam利用規約をお読みになり同意する必要があります。\n<a href=\"%url%\">ここをクリック</a>してブラウザーで規約を開いてください。続行するには、このウィンドウに戻ってください。"
 
 "Steam_VR2DGameWarning_Title" "警告"
 "Steam_VR2DGameWarning_Desc" "%launching_app% はデスクトップ上と同時に VR HMD 環境でも立ち上がります。\nこのモードでは許容範囲のパフォーマンスが得られない可能性があります。このゲームをデスクトップでのみ立ち上げるには、ゲームの立ち上げ前に SteamVR を終了して下さい。"
@@ -4728,7 +4728,7 @@ Betaが終了しました。Steamを再起動し、現在のバージョンに�
 "Steam_VacBanOnAccount"		"VAC 検出されたアカウント"
 "Steam_NoVacBanOnAccount"	"VAC 検出のないアカウント"
 
-"Steam_ClientBrowserAuth_AllowBrowserAuth" "デスクトップ Web ブラウザが Steam サイトに自動ログインすることを許可する\n(変更を適用するには再起動が必要)"
+"Steam_ClientBrowserAuth_AllowBrowserAuth" "デスクトップWebブラウザーがSteamサイトに自動ログインすることを許可する\n（変更を適用するには再起動が必要）"
 
 "SteamUI_RunningConflictingSoftware" "競合するソフトウェアを検出しました"
 "SteamUI_RunningIncompatibleTcpService" "Steam プロセス内で %incompatdll% (%incompatname% 関連) \nの互換性のないバージョンを検出しました。Steam または個々のゲームの\n実行中にクラッシュやネットワークの遅延が発生した場合は、\nこのソフトウェアを更新またはアンインストールすることをお勧めします。"

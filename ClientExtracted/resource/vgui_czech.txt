@@ -13,7 +13,6 @@
 "FileOpenDialog_Look_in"	"Oblast hledání:"
 "FileOpenDialog_File_Name"	"Název souboru:"
 "FileOpenDialog_File_Type"	"Typ souboru:"
-"FileOpenDialog_Icon"		" "
 "FileOpenDialog_Name"		"Název"
 "FileOpenDialog_Type"		"Typ"
 "SysMenu_Minimize"		" Minimalizovat "

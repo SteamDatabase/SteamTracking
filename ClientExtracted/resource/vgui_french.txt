@@ -13,7 +13,6 @@
 "FileOpenDialog_Look_in"	"Emplacement :"
 "FileOpenDialog_File_Name"	"Nom :"
 "FileOpenDialog_File_Type"	"Type :"
-"FileOpenDialog_Icon"		" "
 "FileOpenDialog_Name"		"Nom"
 "FileOpenDialog_Type"		"Type"
 "SysMenu_Minimize"		" Réduire "

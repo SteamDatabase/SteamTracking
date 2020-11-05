@@ -342,7 +342,6 @@
 "Friends_Chat_ActionResultVoiceSlotsFull" "Nu se poate iniţia vocea în %chat%, nu există suficiente locuri de conversaţie."
 "Friends_Chat_VoiceStatus"		"%availslots% sloturi disponibile din [%maxslots% total]."
 
-"Friends_GroupSectionInfo_Offline"				""
 "Friends_GroupSectionInfo_Online"					"%online% ONLINE"
 "Friends_GroupSectionInfo_OnlineInGame"			"%ingame% ÎN JOC, %online% ONLINE"
 "Friends_GroupSectionInfo_OnlineChatting"			"%inchat% ÎN CHAT, %online% ONLINE"

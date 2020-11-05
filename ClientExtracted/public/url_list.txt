@@ -671,19 +671,19 @@ PointsShop
 
 LegalInformation
 {
-	url			"https://store.steampowered.com/legal"
+	url			"%store%/legal"
 	method		"internal"
 }
 
 SSA
 {
-	url			"http://store.steampowered.com/subscriber_agreement/"
+	url			"%store%/subscriber_agreement"
 	method		"internal"
 }
 
 PrivacyPolicy
 {
-	url			"http://store.steampowered.com/privacy_agreement/"
+	url			"%store%/privacy_agreement"
 	method		"internal"
 }
 

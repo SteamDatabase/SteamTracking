@@ -668,8 +668,6 @@ Vänligen skriv in SMS-koden nedan."
 "Steam_RecoverAuthenticator_BadPassword"			"Lösenordet var inte korrekt. Vänligen kontrollera det och försök igen."
 "Steam_RecoverAuthenticator_BadCode"				"Koden eller lösenordet är felaktigt. Kontrollera dem och försök igen."
 "Steam_RecoverAuthenticator_BadCodes"				"Koderna eller lösenordet var felaktigt. Vänligen kontrollera dem och försök igen."
-"Steam_RecoverAuthenticator_SupportURL"				""
-
 "Steam_RecoverAuthenticator_Done"					"Autentiseraren för Steam Guard har tagits bort från ditt konto.\n\nDu bör kunna logga in på ditt konto nu."
 
 
@@ -1463,7 +1461,6 @@ Du måste logga ut från OSX för att ändringen ska träda i kraft."
 "SteamUI_ThrottleEditLabel"				"Ange ett nytt värde nedanför:"
 "SteamUI_ThrottleApplyChange"			"Applicera"
 "Steam_AutoUpdateTimeRestrictionLabel"	"Uppdatera spel automatiskt endast mellan:"
-"Steam_AutoUpdateTimeRestrictionStart"	""
 "Steam_AutoUpdateTimeRestrictionEnd"		"och"
 "Steam_AllowDownloadsDuringGameplay"	"Tillåt nedladdning när jag spelar"
 "Steam_AllowDownloadsDuringGameplayDetails"	"Om detta är aktivt, kan Steam påbörja eller fortsätta att ladda ned uppdateringar medan du kör ett spel eller annan \nSteam-app. Du kan även ställa in om det ska gälla för vissa spel eller inte på varje spels egenskapssida."
@@ -1516,7 +1513,6 @@ Du måste logga ut från OSX för att ändringen ska träda i kraft."
 "SteamUI_HardwarePromoWizard_Title" "Registrera kampanjerbjudande"
 "Steam_HardwarePromo_Intro" "Grattis! Det här erbjudandet gäller för din dator. Du kan aktivera erbjudandet genom att registrera det till ett, och endast ett, Steam-konto. Du kan spela spelen i erbjudandet på vilken dator som helst, förutsatt att du loggar in med det här Steam-kontot."
 "Steam_Legal_HardwarePromo_Unreleased" "Några av produkterna i paketet har inte släppts än och är därför inte tillgängliga. De här produkterna blir tillgängliga automatiskt via Steam så fort de släpps. Produkternas releasedatum är okänt, så köparen bör inte förlita sig på uppskattade releasedatum. Ytterligare regler och villkor visas när du klickar på Nästa."
-"Steam_Legal_HardwarePromo" ""
 "Steam_Working_HardwarePromo" "Registrerar erbjudande..."
 "SteamUI_OEMTicketWizard_Title" "Registrera OEM-licens"
 
@@ -3367,6 +3363,13 @@ Skaffa dig en ny vän på Steam genom att skicka en gåva via e-post till någon
 "Steam_ServerBrowserPingRateInfo"	"Om du får problem med din anslutning när du letar bland spelservrar kan du testa att sänka det här värdet."
 "Steam_ServerBrowserPingRateDefault"	"Automatiskt (%PingsPerMin%)"
 
+"Steam_TextFilterSettingLabel"									"Chattfiltrering"
+"Steam_TextFilterStatus_Enabled"								"Inställt på att filtrera grova svordomar och skällsord"
+"Steam_TextFilterStatus_Enabled_IgnoreFriends"					"Inställt på att filtrera grova svordomar och skällsord från alla förutom vänner"
+"Steam_TextFilterStatus_EnabledAllowProfanity"					"Inställt på att tillåta grova svordomar men filtrera skällsord"
+"Steam_TextFilterStatus_EnabledAllowProfanity_IgnoreFriends"	"Inställt på att tillåta grova svordomar men filtrera skällsord från alla förutom vänner"
+"Steam_TextFilterStatus_Disabled"								"Inställt på att tillåta grova svordomar och skällsord"
+"Steam_TextFilterSettingURL"									"Ändra inställningar för chattfilter"
 
 "Steam_SettingsInGameScreenshotFolder"	"Skärmdumpsmapp"
 "Steam_SettingsInGameTitle"	"Steams överlägg"
@@ -4212,6 +4215,7 @@ Ange en kategori för det här spelet så kan du hitta det snabbare och sortera 
 "Steam_TimedTrial_Over" "Utvärderingsperioden har löpt ut"
 "Steam_TimedTrial_CloseNow" "Spelet stängs ned nu"
 "Steam_TimedTrial_Enjoy" "Hoppas du gillar utvärderingsversionen"
+"Steam_TimedTrial_Offline" "Provspelet förlorade anslutningen till Steam"
 "Steam_TimedTrial_Minutes" "%minutes% minuter speltid kvar"
 "Steam_TimedTrial_Hours" "%hours% timmar och %minutes% minuter speltid kvar"
 
@@ -4231,7 +4235,6 @@ Ange en kategori för det här spelet så kan du hitta det snabbare och sortera 
 
 "Steam_Parental_UnlockTitle"			"Familjealternativ"
 "Steam_Parental_UnlockInstructions"		"Ange er PIN-kod nedan för att gå ur familjeläget:"
-"Steam_Parental_UnlockInstructions2"	""
 "Steam_Parental_ForgotPIN"				"Jag glömde min PIN-kod"
 "Steam_Parental_NoRecoveryEmail"		"Ingen återställningsadress angiven"
 "Steam_Parental_NoRecoveryEmail_Instructions"		 "Ingen e-postadress för återställning har angetts för ditt konto. För att uppdatera din e-postadress för återställning, avsluta familjevyn och kör familjevyns installation på nytt.
@@ -4433,7 +4436,6 @@ Ange en kategori för det här spelet så kan du hitta det snabbare och sortera 
 "Music_Playlist_RenameDialog_Title" "Byt namn på spellista"
 "Music_Playlist_RenameDialog_Prompt" "Byt namn på spellistan \"%playlistname%\""
 "Music_Playlist_AddDialog_Title" "Skapa ny spellista"
-"Music_Playlist_AddDialog_Prompt" ""
 "Music_Playlist_DeleteDialog_Title" "Ta bort spellista"
 "Music_Playlist_DeleteDialog_Prompt" "Är du säker på att du vill ta bort spellistan \"%playlistname%\""
 "Music_Playlist_Details_Play" "Spela lista"
@@ -4452,8 +4454,6 @@ Ange en kategori för det här spelet så kan du hitta det snabbare och sortera 
 "Music_Queue_Menu_ReplacePlaylist" "Byt ut spellista med kö"
 "Music_Queue_Menu_AppendPlaylist" "Lägg till i spellista"
 "Music_Queue_AddPlaylist_Dialog_Title" "Lägg till spellista"
-"Music_Queue_AddPlaylist_Dialog_Prompt" ""
-
 "Steam_Settings_Controller"					"Handkontroll"
 "Steam_SettingsControllerTitle"				"Handkontrollskonfiguration"
 "Steam_SettingsControllerDescription"		"Allmänna kontrollinställningar tillåter val av inställningar för in/ut-konfigurationssupport, anpassningar och andra val."

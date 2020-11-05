@@ -1,8 +1,8 @@
 __TEXT
+"
+"
 __text
 __TEXT
-H
-H
 __stubs
 __TEXT
 __stub_helper
@@ -17,9 +17,13 @@ __TEXT
 __eh_frame
 __TEXT
 __DATA
+"
+"
 @
 __nl_symbol_ptr
 __DATA
+"
+"
 __got
 __DATA
 __la_symbol_ptr
@@ -28,38 +32,34 @@ __mod_init_func
 __DATA
 __const
 __DATA
+0,"
+0,"
 __cfstring
 __DATA
 __data
 __DATA
 __thread_vars
 __DATA
-)D,
-)D,
+9V,
+9V,
 __thread_bss
 __DATA
-PD,
+`V,
 __bss
 __DATA
-PH,
+`Z,
 __common
 __DATA
-.
 H
 __LINKEDIT
-P,
+`,
 
 @
 @loader_path/serverbrowser.dylib
 "
-P,
-pf,
-P
+`,
 @
 P
-p;
-p;
-r;
 
 8
 @loader_path/libtier0_s.dylib
@@ -88,8 +88,8 @@ x
 h
 /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
 &
+0
 )
-`o
 15CCallbackManualI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
 9CCallbackI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
 13CCallbackImplILi16EE
@@ -386,6 +386,9 @@ $
 0
 $
 (
+,
+0
+4
 $
 8
 (
@@ -452,6 +455,7 @@ $
 $
 (
 ,
+0
 0
 9CMsgKeyUp
 11CMsgKeyDown
@@ -596,7 +600,9 @@ $
 23CMsgSetForegroundWindow
 25CMsgMaximizeRestoreWindow
 18CMsgMinimizeWindow
+41CMsgShowBrowserContextMenu_ContextCommand
 26CMsgShowBrowserContextMenu
+28CMsgHandleContextMenuCommand
 21CMsgImeSetComposition
 17CMsgImeCommitText
 24CMsgImeCancelComposition
@@ -660,11 +666,81 @@ N4vgui10GraphPanelE
 14CUtlLinkedListIN4vgui10GraphPanel8Sample_tEiE
 10CUtlVectorIf10CUtlMemoryIfEE
 @
+C
+E
+F
+R
+e
+n
+d
+e
+r
+:
+a
+v
+g
+(
+%
+u
+m
+s
+)
+s
+t
+d
+d
+e
+v
+(
+%
+1
+.
+2
+f
+m
+s
+)
+l
+o
+n
+g
+(
+%
+u
+m
+s
+)
+O
+v
+e
+r
+l
+a
+y
+R
+e
+n
+d
+e
+r
+:
+V
+G
+U
+I
+R
+e
+n
+d
+e
+r
+:
 16HTMLComboBoxHost
 N4vgui4HTMLE
 N4vgui4HTML12CHTMLFindBarE
 14IHTMLResponses
 7IHTMLJS
+22CFrameEventPerfTracker
 10CUtlVectorIN4vgui4HTML18CustomURLHandler_tE10CUtlMemoryIS2_EE
 10CUtlString
 10CUtlVectorIN4vgui4HTML19CustomCursorCache_tE10CUtlMemoryIS2_EE
@@ -696,6 +772,7 @@ N4vgui4HTML12CHTMLFindBarE
 16CHTMLProtoBufMsgI12CMsgSetFocusE
 16CHTMLProtoBufMsgI13CMsgMouseMoveE
 16CHTMLProtoBufMsgI14CMsgMouseLeaveE
+16CHTMLProtoBufMsgI28CMsgHandleContextMenuCommandE
 16CHTMLProtoBufMsgI14CMsgViewSourceE
 16CHTMLProtoBufMsgI8CMsgCopyE
 16CHTMLProtoBufMsgI9CMsgPasteE
@@ -988,10 +1065,8 @@ com.valvesoftware.steam.ipctool
 ipcserver restart: expected: %d, got: %d
 StopJob
 CreateInterface
-No room for new profile in vprof thread profile list, grow MAX_THREADS_TO_VPROF_AT_ONCE
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/vprof.h
-Assertion Failed: m_pvOrigNameAddress
 Assertion Failed: m_pParent
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/vprof.h
 Assertion Failed: 0
 Steam_BGetCallback
 Steam_FreeLastCallback
@@ -1900,6 +1975,9 @@ Tokenizer::ParseStringAppend() passed text that could not have been tokenized as
 \U%08x
 -community
 Set the community URL
+-store
+Set the store URL
+/
 http://
 https://
 ://
@@ -2253,10 +2331,30 @@ m_Samples
 m_RangeList
 -no-browser
 unconditionally disables CEF
+-fast-overlay-html
+Uses new faster overlay HTML path
+-html-perf-monitor
+Draws html perf data
 resource/webkit.css
 SKIN
 ComboBoxHost
 contextmenu
+#Steam_Browser_Disabled_NoBrowser
+#Steam_Browser_Disabled
+BrowserDisabledMessage
+BrowserDisabledKBLink
+#Steam_Browser_Disabled_KB
+#Steam_Browser_Disabled_KB_URL
+DefaultFixed
+HTML::Paint()
+HTML.SearchInsetY
+HTML.SearchInsetX
+HTML.SearchTall
+HTML.SearchWide
+%s%s.html
+steam\cached\offline_
+%senglish.html
+file://%s
 #vgui_HTMLBack
 back
 #vgui_HTMLForward
@@ -2278,21 +2376,7 @@ viewsource
 toggledevtools
 #vgui_HTMLInspectElement
 inspectelement
-#Steam_Browser_Disabled_NoBrowser
-#Steam_Browser_Disabled
-BrowserDisabledMessage
-BrowserDisabledKBLink
-#Steam_Browser_Disabled_KB
-#Steam_Browser_Disabled_KB_URL
-HTML::Paint()
-HTML.SearchInsetY
-HTML.SearchInsetX
-HTML.SearchTall
-HTML.SearchWide
-%s%s.html
-steam\cached\offline_
-%senglish.html
-file://%s
+custom_%d
 HTMLBackRequested
 HTMLForwardRequested
 HTMLFramelessWrapper
@@ -2300,6 +2384,7 @@ HTML
 html-findbar
 HTML.SearchAnimationTime
 DeletePanel
+custom_
 FindBar
 Assertion Failed: ulPlatformParentWindow == 0
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/controls/HTML.cpp
@@ -2387,7 +2472,7 @@ data:image/
 HTMLComboBoxHost
 CHTMLFindBar
 Assertion Failed: m_nLockedIdx >= 0
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/html/ihtmlchrome.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/html/htmlpaintbuffer.h
 Assertion Failed: m_nLockedIdx == -1
 Assertion Failed: iNewReadIndex != 3
 m_CustomURLHandlers
@@ -2802,7 +2887,6 @@ S
 [
 ]
 .
-/
 -
 *
 (
@@ -3190,17 +3274,18 @@ KeyValues Error: %s in file %s [offset: %d]
 Memory leak: mempool blocks left in memory: %d
 CMemoryPool::AddNewBlob: mode == GROW_NONE
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/mempool.cpp
+Assertion Failed: blobSize <= nMaxBlobSize
 Fatal Assertion Failed: pBlob
 CMemoryPool::Alloc: ran out of memory
 Assertion Failed: k_nMemPoolMagic_Free == *(( (int *) returnBlock) - 1)
 CMemoryPool
+Assertion Failed: false
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/netadr.cpp
 loopback
 broadcast
 %i.%i.%i.%i
 %i.%i.%i.%i:%i
 unknown
-Assertion Failed: false
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/netadr.cpp
 %d.%d.%d.%d:%d
 Assertion Failed: m_usType == k_EIPTypeV6 && netadr.m_usType == k_EIPTypeV6
 Assertion Failed: m_usType == k_EIPTypeV6
@@ -3255,6 +3340,15 @@ Assertion Failed: !pszString || pszString[nChars] == '\0'
 Assertion Failed: s_bAllowStaticSymbolTable
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlsymbol.cpp
 s_pSymbolTable
+,
+,
+,
+,
+,
+#,
+(
+(
+(
 0
 p
 0
@@ -3273,9 +3367,8 @@ p
 p
 0
 p
-'
-'
-'
+
+_
 $
 @
 @
@@ -3287,8 +3380,15 @@ $
 A
 Hc
 =
-L95*l'
-L95pP'
+(
+(
+(
+(
+(
+L95fs'
+L95@f'
+'
+'
 Hc
 ?
 ?
@@ -3305,10 +3405,23 @@ Hc
 ?
 ?
 ?
-/$
+N$
+<$
 "
+]$
 3
+"$
 D
+3$
+.$
+!$
+$
+$
+$
+$
+$
+$
+$
 $
 $
 $
@@ -3319,26 +3432,24 @@ $
 $
 $
 @
-+
-L957"
-e
+^#
 
-!
-!
-!
-_
+
+x
+"
+"
+C
 
 
 
 d
 :
-!
-V
 
-*
 
+d
 &
 &
+d
 t=
 =
 =
@@ -3360,7 +3471,6 @@ E
 @
 @
 @
-k
 @
 @
 @
@@ -3402,7 +3512,8 @@ d
 @
 @
 @
-A
+l
+Z
 @
 @
 @

@@ -58,8 +58,8 @@
 "Steam_ErrorLoginBadTwoFactor" "Ese código de doble factor no era válido.\nPor favor, introduce tu código de autenticación de Steam Guard actual."
 
 "SteamGuardBanner"				"Steam Guard con la Tecnología de Protección de Identidad de Intel®"
-"LoginIPTNotDetected"			"Procesador Intel® Core™ de 2ª Generación no detectado.\nNo puedes usar esta cuenta en este ordenador."
-"LoginIPTDetected"				"Procesador Intel® Core™ de\n2ª Generación detectado..."
+"LoginIPTNotDetected"			"Procesador Intel® Core™ de 2.ª Generación no detectado.\nNo puedes usar esta cuenta en este ordenador."
+"LoginIPTDetected"				"Procesador Intel® Core™ de\n2.ª Generación detectado..."
 "LoginIPTNotEnabledOnAccount"	"IPT no habilitado para esta cuenta..."
 "LoginIPTAuthenticatingWithSteam" "Autenticando IPT con Steam..."
 "LoginIPTConfirmed"				"Autenticación confirmada, iniciando sesión..."

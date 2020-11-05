@@ -342,7 +342,6 @@
 "Friends_Chat_ActionResultVoiceSlotsFull" "Puhelua ei voida aloittaa keskustelussa %chat%: ei tarpeeksi vapaita puhepaikkoja."
 "Friends_Chat_VoiceStatus"		"%availslots% paikkaa saatavilla [enintään %maxslots%]."
 
-"Friends_GroupSectionInfo_Offline"				""
 "Friends_GroupSectionInfo_Online"					"%online% ONLINE"
 "Friends_GroupSectionInfo_OnlineInGame"			"%ingame% PELISSÄ, %online% PAIKALLA"
 "Friends_GroupSectionInfo_OnlineChatting"			"%inchat% KESKUSTELUSSA, %online% PAIKALLA"
@@ -785,7 +784,7 @@
 "Broadcast_Upload_Result_11" "ei ääntä"
 "Broadcast_Upload_Result_12" "liian suuri viive"
 
-"Steam_Settings_Browser"	"Web-selain"
+"Steam_Settings_Browser"	"Verkkoselain"
 "Overlay_SettingsBrowserDesc" "Nämä asetukset koskevat Steam-asiakasohjelman sisäistä verkkoselainta ja pelissä olevaa Steam-yhteisönäkymää."
 "Steam_SettingsBrowserClearWebCache"	"Poista verkkoselaimen välimuisti"
 "Steam_SettingsBrowserClearAllCookies"	"Poista kaikki selaimen evästeet"

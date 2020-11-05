@@ -342,7 +342,6 @@
 "Friends_Chat_ActionResultVoiceSlotsFull" "Не могу начать голосовой чат %chat%, недостаточно свободных позиций для разговора."
 "Friends_Chat_VoiceStatus"		"Доступно позиций: %availslots% [всего: %maxslots%]."
 
-"Friends_GroupSectionInfo_Offline"				""
 "Friends_GroupSectionInfo_Online"					"%online% В СЕТИ"
 "Friends_GroupSectionInfo_OnlineInGame"			"%ingame% В ИГРЕ, %online% В СЕТИ"
 "Friends_GroupSectionInfo_OnlineChatting"			"%inchat% В ЧАТЕ, %online% В СЕТИ"

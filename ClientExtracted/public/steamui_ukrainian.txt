@@ -661,8 +661,6 @@
 "Steam_RecoverAuthenticator_BadPassword"			"Хибний пароль. Спробуйте ввести ще раз."
 "Steam_RecoverAuthenticator_BadCode"				"Код або пароль виявилися хибними. Будь ласка, перевірте їх і спробуйте знову."
 "Steam_RecoverAuthenticator_BadCodes"				"Коди або паролі виявилися хибними. Перевірте їх і спробуйте ще раз."
-"Steam_RecoverAuthenticator_SupportURL"				""
-
 "Steam_RecoverAuthenticator_Done"					"Автентифікатор Steam Guard було вилучено з вашого акаунта.\n\nТепер ви зможете ввійти до свого акаунта."
 
 
@@ -1456,7 +1454,6 @@
 "SteamUI_ThrottleEditLabel"				"Введіть нове значення нижче:"
 "SteamUI_ThrottleApplyChange"			"Застосувати"
 "Steam_AutoUpdateTimeRestrictionLabel"	"Автоматично оновлювати ігри лише між:"
-"Steam_AutoUpdateTimeRestrictionStart"	""
 "Steam_AutoUpdateTimeRestrictionEnd"		"та"
 "Steam_AllowDownloadsDuringGameplay"	"Дозволити завантаження під час гри"
 "Steam_AllowDownloadsDuringGameplayDetails"	"Якщо ввімкнено, Steam може починати чи продовжувати завантаження, поки ви граєте у гру або користуєтеся програмою \nчерез Steam. Ви також можете перевизначити цю опцію індивідуально для кожного продукту у його «Властивостях»"
@@ -1509,7 +1506,6 @@
 "SteamUI_HardwarePromoWizard_Title" "Реєстрація акційної пропозиції"
 "Steam_HardwarePromo_Intro" "Вітаємо! Ваш комп’ютер підходить для цієї пропозиції. Ви можете скористатися пропозицією, зареєструвавши її на одному і тільки одному акаунті Steam. Ви зможете грати в ігри, що включені до пропозиції, на будь-якому комп’ютері за умови, що ви ввійшли з цього акаунта Steam."
 "Steam_Legal_HardwarePromo_Unreleased" "Деякі продукти цього пакунка ще не вийшли і наразі недоступні. Ці продукти автоматично стануть доступними для вас через Steam одразу після їхнього виходу. Точна дата виходу цих продуктів невідома, тож покупцям не слід покладатися на будь-які приблизні дати виходу. Додаткові умови ви побачите, клацнувши «Далі»."
-"Steam_Legal_HardwarePromo" ""
 "Steam_Working_HardwarePromo" "Триває реєстрація пропозиції…"
 "SteamUI_OEMTicketWizard_Title" "Реєстрація OEM-ліцензії"
 
@@ -3361,6 +3357,13 @@
 "Steam_ServerBrowserPingRateInfo"	"Якщо у вас виникають проблеми зі з’єднанням при перегляді списку ігрових серверів, спробуйте зменшити це число."
 "Steam_ServerBrowserPingRateDefault"	"Автоматично (%PingsPerMin%)"
 
+"Steam_TextFilterSettingLabel"									"Фільтрування чату"
+"Steam_TextFilterStatus_Enabled"								"Наразі налаштовано фільтрування грубої ненормативної лексики та образливих висловлювань"
+"Steam_TextFilterStatus_Enabled_IgnoreFriends"					"Наразі налаштовано фільтрування грубої ненормативної лексики та образливих висловлювань від усіх, окрім друзів"
+"Steam_TextFilterStatus_EnabledAllowProfanity"					"Наразі грубу ненормативну лексику дозволено, але образливі висловлювання відфільтровуються"
+"Steam_TextFilterStatus_EnabledAllowProfanity_IgnoreFriends"	"Наразі грубу ненормативну лексику дозволено, але образливі висловлювання відфільтровуються від усіх, окрім друзів"
+"Steam_TextFilterStatus_Disabled"								"Наразі грубу ненормативну лексику та образливі висловлювання дозволено"
+"Steam_TextFilterSettingURL"									"Змінити вподобання щодо фільтрування чату"
 
 "Steam_SettingsInGameScreenshotFolder"	"Тека для знімків екрана"
 "Steam_SettingsInGameTitle"	"Оверлей Steam"
@@ -4205,6 +4208,7 @@
 "Steam_TimedTrial_Over" "Закінчився термін дії вашої пробної версії"
 "Steam_TimedTrial_CloseNow" "Гра зараз буде закрита"
 "Steam_TimedTrial_Enjoy" "Насолоджуйтеся пробною версією"
+"Steam_TimedTrial_Offline" "Пробна версія гри втратила з’єднання зі Steam"
 "Steam_TimedTrial_Minutes" "Залишилося %minutes% хв ігрового часу"
 "Steam_TimedTrial_Hours" "Залишилося %hours% год %minutes% хв ігрового часу"
 
@@ -4224,7 +4228,6 @@
 
 "Steam_Parental_UnlockTitle"			"Сімейний режим"
 "Steam_Parental_UnlockInstructions"		"Введіть нижче свій ПІН-код, щоби вийти із сімейного режиму"
-"Steam_Parental_UnlockInstructions2"	""
 "Steam_Parental_ForgotPIN"				"Не пам’ятаю свій PIN."
 "Steam_Parental_NoRecoveryEmail"		"Не встановлено адреси ел. пошти для відновлення"
 "Steam_Parental_NoRecoveryEmail_Instructions"		 "Для вашого акаунта не встановлено електронної пошти відновлення. Аби оновити електронну пошту відновлення, вийдіть із сімейного режиму та запустіть його налаштування знову."
@@ -4425,7 +4428,6 @@
 "Music_Playlist_RenameDialog_Title" "Перейменування списку відтворення"
 "Music_Playlist_RenameDialog_Prompt" "Перейменування списку «%playlistname%»"
 "Music_Playlist_AddDialog_Title" "Створення нового списку відтворення"
-"Music_Playlist_AddDialog_Prompt" ""
 "Music_Playlist_DeleteDialog_Title" "Видалення списку відтворення"
 "Music_Playlist_DeleteDialog_Prompt" "Ви впевнені, що бажаєте видалити список відтворення «%playlistname%»?"
 "Music_Playlist_Details_Play" "Відтворити список"
@@ -4444,8 +4446,6 @@
 "Music_Queue_Menu_ReplacePlaylist" "Замінити список чергою"
 "Music_Queue_Menu_AppendPlaylist" "Додати до списку відтворення"
 "Music_Queue_AddPlaylist_Dialog_Title" "Додання списку відтворення"
-"Music_Queue_AddPlaylist_Dialog_Prompt" ""
-
 "Steam_Settings_Controller"					"Контролер"
 "Steam_SettingsControllerTitle"				"Конфігурація контролера"
 "Steam_SettingsControllerDescription"		"Загальні налаштування контролера дозволяють погодитися або відмовитися від підтримки конфігурацій, персоналізації та інших параметрів."

@@ -37,6 +37,7 @@ public:
     virtual unknown_ret WarmOptInStatus(unsigned int, unsigned int) = 0;
     virtual unknown_ret GetCurrentActionSetHandleForRunningApp(unsigned int, unsigned int) = 0;
     virtual unknown_ret BAnyControllerOptedInAndAvailible(unsigned int) = 0;
+    virtual unknown_ret GetGamepadIndexForControllerIndex(unsigned int) = 0;
     virtual unknown_ret CreateBindingInstanceFromVDFString(CControllerMappingCreateData const*) = 0;
     virtual unknown_ret FreeBindingInstance(unsigned int) = 0;
     virtual unknown_ret IsModified(unsigned int) = 0;
@@ -82,6 +83,8 @@ public:
     virtual unknown_ret BBindingMajorRevisionMismatch(unsigned int) = 0;
     virtual unknown_ret SetBindingDescription(unsigned int, char const*) = 0;
     virtual unknown_ret GetBindingTitleForIndex(unsigned int, unsigned int, char*, int) = 0;
+    virtual unknown_ret GetBindingDescForIndex(unsigned int, unsigned int, char*, int) = 0;
+    virtual unknown_ret GetBindingTypeForIndex(unsigned int, unsigned int) = 0;
     virtual unknown_ret SetBindingControllerType(unsigned int, EControllerType) = 0;
     virtual unknown_ret GetBindingControllerType(unsigned int) = 0;
     virtual unknown_ret SetBindingCreator(unsigned int, unsigned long long) = 0;
@@ -139,7 +142,6 @@ public:
     virtual unknown_ret GetGamepadIndexChangeCounter() = 0;
     virtual unknown_ret BSwapGamepadIndex(unsigned int, int, int) = 0;
     virtual unknown_ret GetGamepadIndexForXInputIndex(unsigned int) = 0;
-    virtual unknown_ret GetGamepadIndexForControllerIndex(unsigned int) = 0;
     virtual unknown_ret GetControllerIndexForGamepadIndex(int) = 0;
     virtual unknown_ret GetNumControllersWithDetails() = 0;
     virtual unknown_ret ConvertBindingToNewControllerType(unsigned int, unsigned int) = 0;

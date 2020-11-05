@@ -101,7 +101,6 @@ public:
     virtual unknown_ret GetTwoFactorDetails() = 0;
     virtual unknown_ret BHasTwoFactor() = 0;
     virtual unknown_ret GetEmail(char*, int, bool*) = 0;
-    virtual unknown_ret FindAccountsByCdKey(char const*) = 0;
     virtual unknown_ret Test_FakeConnectionTimeout() = 0;
     virtual unknown_ret RunInstallScript(unsigned int, char const*, bool) = 0;
     virtual unknown_ret IsInstallScriptRunning() = 0;
@@ -147,6 +146,7 @@ public:
     virtual unknown_ret GetMicroTxnAppID(unsigned long long) = 0;
     virtual unknown_ret GetMicroTxnOrderID(unsigned long long) = 0;
     virtual unknown_ret BGetMicroTxnPrice(unsigned long long, CAmount*, CAmount*, bool*, CAmount*) = 0;
+    virtual unknown_ret GetMicroTxnSteamRealm(unsigned long long) = 0;
     virtual unknown_ret GetMicroTxnLineItemCount(unsigned long long) = 0;
     virtual unknown_ret BGetMicroTxnLineItem(unsigned long long, unsigned int, CAmount*, unsigned int*, char*, unsigned int, int*, unsigned char*, CAmount*, bool*) = 0;
     virtual unknown_ret BIsSandboxMicroTxn(unsigned long long, bool*) = 0;
@@ -179,6 +179,7 @@ public:
     virtual unknown_ret SetUserMachineName(char const*) = 0;
     virtual unknown_ret GetUserMachineName(char*, int) = 0;
     virtual unknown_ret GetEmailDomainFromLogonFailure(char*, int) = 0;
+    virtual unknown_ret GetAgreementSessionUrl() = 0;
     virtual unknown_ret GetDurationControl() = 0;
     virtual unknown_ret GetDurationControlForApp(unsigned int) = 0;
     virtual unknown_ret BSetDurationControlOnlineState(EDurationControlOnlineState) = 0;

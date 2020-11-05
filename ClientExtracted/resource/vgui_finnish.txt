@@ -13,7 +13,6 @@
 "FileOpenDialog_Look_in"	"Etsi kohteesta:"
 "FileOpenDialog_File_Name"	"Tiedoston nimi:"
 "FileOpenDialog_File_Type"	"Tiedoston tyyppi:"
-"FileOpenDialog_Icon"		" "
 "FileOpenDialog_Name"		"Nimi"
 "FileOpenDialog_Type"		"Tyyppi"
 "SysMenu_Minimize"		" Pienennä "

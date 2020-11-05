@@ -78,7 +78,7 @@
 "ServerBrowser_ServerNotResponding"		"サーバーの反応がありません。"
 "ServerBrowser_RefreshingPercentDone"		"サーバーリストを更新中...%s1% 完了"
 "ServerBrowser_ServersResponding"		"%s1 からゲームサーバーが応答中"
-"ServerBrowser_ServersRespondingLocal"	"ローカルコンピュータからゲームサーバーが応答中"
+"ServerBrowser_ServersRespondingLocal"	"ローカルコンピューターからゲームサーバーが応答中"
 "ServerBrowser_RefreshingServerList"		"リスト更新中..."
 "ServerBrowser_FilterDescLatency"		"レイテンシー"
 "ServerBrowser_FilterDescNotFull"		"満員でない"
@@ -162,7 +162,7 @@
 "VAC_ConnectionIssuesSupportSite"	"Steam のサポートサイトにアクセスするにはここをクリックしてください"
 "VAC_ConnectionIssuesSupportURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=374"
 "VAC_LoggedInElsewhere_Title"		"アカウント使用中"
-"VAC_LoggedInElsewhereReason"		"この Steam アカウントは、別のコンピュータからのログインで使用されています。 引き続き Steam を使用するには、再度ログインする必要があります。"
+"VAC_LoggedInElsewhereReason"		"このSteamアカウントは、別のコンピューターからのログインで使用されています。 引き続きSteamを使用するには、再度ログインする必要があります。"
 
 "ServerBrowser_FriendNotInGameServer"	"%friend% は、現在ゲームサーバー上でプレイしていません。"
 "ServerBrowser_NotInGame"				"<なし>"

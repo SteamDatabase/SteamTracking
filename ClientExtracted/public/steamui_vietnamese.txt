@@ -659,8 +659,6 @@ Công đoạn này nên hoàn thành dưới một phút."
 "Steam_RecoverAuthenticator_BadPassword"			"Mật khẩu không chính xác. Vui lòng kiểm tra và thử lại."
 "Steam_RecoverAuthenticator_BadCode"				"Mã hoặc mật khẩu không đúng. Xin vui lòng kiểm tra chúng và thử lại."
 "Steam_RecoverAuthenticator_BadCodes"				"Mã hoặc mật khẩu không chính xác. Vui lòng kiểm tra và thử lại."
-"Steam_RecoverAuthenticator_SupportURL"				""
-
 "Steam_RecoverAuthenticator_Done"					"Bộ xác thực Steam Guard đã được xóa khỏi tài khoản của bạn.\n\nBạn đã có thể đăng nhập vào tài khoản của mình ngay bây giờ."
 
 
@@ -1456,7 +1454,6 @@ Bạn cần phải đăng xuất khỏi OSX để thay đổi này có hiệu l�
 "SteamUI_ThrottleEditLabel"				"Nhập giá trị mới vào bên dưới:"
 "SteamUI_ThrottleApplyChange"			"Áp dụng"
 "Steam_AutoUpdateTimeRestrictionLabel"	"Chỉ tự động cập nhật trò chơi trong khoảng:"
-"Steam_AutoUpdateTimeRestrictionStart"	""
 "Steam_AutoUpdateTimeRestrictionEnd"		"đến"
 "Steam_AllowDownloadsDuringGameplay"	"Cho phép tải xuống trong khi chơi."
 "Steam_AllowDownloadsDuringGameplayDetails"	"Nếu điều này được chọn, Steam có thể bắt đầu hoặc tiếp tục tải xuống các bản cập nhật trong khi bạn đang chơi hoặc sử dụng \nứng dụng Steam khác. Bạn còn có thể ghi đè lựa chọn này bằng cách đi đến trang thiết lập của từng trò chơi"
@@ -1465,9 +1462,9 @@ Bạn cần phải đăng xuất khỏi OSX để thay đổi này có hiệu l�
 "Steam_DownloadRatesInBits"			"Hiển thị tốc độ tải xuống ở dạng bit trên giây"
 
 "Steam_CloudLabel"					"Steam Cloud"
-"Steam_CloudInfo"					"Steam Cloud lưu trữ thông tin để cho bạn trải nghiệm tốt nhất, kể cả khi bạn sử dụng máy tính khác."
-"Steam_EnableCloud"					"Kích hoạt đồng hóa Steam Cloud cho các ứng dụng hỗ trợ nó"
-"Steam_EnableCloudForApp"			"Kích hoạt đồng hóa Steam Cloud cho %game%"
+"Steam_CloudInfo"					"Steam Cloud lưu trữ thông tin dữ liệu, giúp cho trải nghiệm của bạn đồng nhất xuyên suốt các máy tính khác nhau."
+"Steam_EnableCloud"					"Bật đồng bộ dữ liệu Steam Cloud cho các ứng dụng hỗ trợ"
+"Steam_EnableCloudForApp"			"Bật đồng bộ dữ liệu Steam Cloud cho %game%"
 "Steam_EnableCloudScreenshots"		"Mở công cụ tải ảnh chụp lên sau khi đóng trò chơi nếu có ảnh chụp"
 "Steam_CloudUsage"					"Lưu trữ %used%  / còn %available%"
 "Steam_CloudEnableLink"				"Ghé thăm thiết lập / Tải xuống + Cloud"
@@ -1509,7 +1506,6 @@ Bạn cần phải đăng xuất khỏi OSX để thay đổi này có hiệu l�
 "SteamUI_HardwarePromoWizard_Title" "Đăng ký sản phẩm khuyến mại"
 "Steam_HardwarePromo_Intro" "Xin chúc mừng! Máy tính bạn đạt tiêu chuẩn cho ưu đãi này. Bạn có thể sử dụng ưu đãi này bằng cách đăng ký nó vào một, và chỉ một, tài khoản Steam. Bạn sẽ chơi được mọi trò chơi được bao gồm trong ưu đãi này từ bất kỳ máy tính nào, chỉ cần bạn đăng nhập vào tài khoản Steam này."
 "Steam_Legal_HardwarePromo_Unreleased" "Một số sản phẩm trong gói hàng này vẫn chưa được phát hành và hiện không tồn tại. Bạn sẽ có thể sử dụng những sản phẩm này qua Steam ngay trong ngày chúng phát hành. Ngày phát hành của những sản phẩm này chưa được ấn định và người mua không nên dựa vào ngày phát hành dự kiến. Các điều khoản và điều kiện phụ sẽ được hiển thị bằng cách nhấp \"Tiếp\"."
-"Steam_Legal_HardwarePromo" ""
 "Steam_Working_HardwarePromo" "Đang đăng ký ưu đãi..."
 "SteamUI_OEMTicketWizard_Title" "Đăng ký bản quyền nhà phát triển gốc (OEM)"
 
@@ -1749,7 +1745,7 @@ Bạn cần phải đăng xuất khỏi OSX để thay đổi này có hiệu l�
 "Steam_GameDownloadStopping"	"Đang dừng tải về..."
 "steam_gamecalculating" "Đang tính toán..."
 "steam_gamepreloaded"		"Tải trước hoàn thành"
-"Steam_GameSyncing"		"Đồng bộ hóa"
+"Steam_GameSyncing"		"Đang đồng bộ"
 "Steam_CloudSyncConflict"	"Sai lệch đồng bộ"
 "Steam_GameDownloadWaitingForComponentInUse"	"Chờ tải về"
 "Steam_VideoReady"	"Sẵn sàng để xem"
@@ -2325,7 +2321,7 @@ Bạn cần phải đăng xuất khỏi OSX để thay đổi này có hiệu l�
 "Steam_Shutdown_Waiting_For_Game" "Đang đợi %game% tắt ..."
 "Steam_Shutdown_Finishing_Download" "Đang đợi hoàn thành hàng chờ tải về..."
 "Steam_Shutdown_Waiting_For_Download" "Ngừng tải %game% về ..."
-"Steam_Shutdown_Waiting_For_Cloud" "Đang hoàn thành đồng bộ hóa Steam cloud ..."
+"Steam_Shutdown_Waiting_For_Cloud" "Đang hoàn thành đồng bộ Steam Cloud..."
 "Steam_Shutdown_Waiting_For_Logoff" "Đang đăng xuất ..."
 "Steam_Shutdown_ForceQuit" "Thoát ngay"
 
@@ -3280,8 +3276,8 @@ Cuộc thử nghiệm beta đã kết thúc - xin vui lòng khởi động lại
 "Steam_RetailChooseCreateNewAccount"			"Tạo một tài khoản Steam mới"
 "Steam_RetailChooseLoginToExistingAccount"		"Đăng nhập vào một tài khoản Steam có sẵn"
 
-"Steam_WaitingForCloudSyncTitle" "Steam Cloud - Đang đồng bộ hóa"
-"Steam_WaitingForCloudSyncDebrief" "Steam hiện đang đồng bộ hóa trò chơi của bạn với Steam Cloud. Steam sẽ tự động thoát ngay khi quá trình này hoàn tất.\n\nĐể buộc Steam thoát mà không đồng hộ hóa các tệp của bạn, nhấp \"Thoát ngay\"."
+"Steam_WaitingForCloudSyncTitle" "Steam Cloud - Đang đồng bộ"
+"Steam_WaitingForCloudSyncDebrief" "Steam hiện đang đồng bộ trò chơi của bạn với Steam Cloud. Steam sẽ tự động thoát ngay khi quá trình này hoàn tất.\n\nĐể buộc Steam thoát mà không đồng hộ các tệp của bạn, nhấp \"Thoát ngay\"."
 "Steam_CloudSyncForceQuit" "Thoát ngay"
 
 "Steam_ModNeedsFullGame_Title"	"Steam - Không thể cài đặt %game%"
@@ -3361,11 +3357,10 @@ Cuộc thử nghiệm beta đã kết thúc - xin vui lòng khởi động lại
 "Steam_DownloadRestrictionsLabel"	"Hạn chế tải về"
 
 "Steam_ServerBrowserPingRateLabel"	"Tìm máy chủ trong trò chơi: ping tối đa / phút"
-"Steam_ServerBrowserPingRateInfo"	"Nếu bạn gặp vấn đề kết nối khi đang dò tìm máy chủ cho trò chơi, hãy thử hạ thấp giá trị này."
+"Steam_ServerBrowserPingRateInfo"	"Nếu bạn gặp vấn đề kết nối khi đang tìm máy chủ trò chơi, hãy thử giảm giá trị này."
 "Steam_ServerBrowserPingRateDefault"	"Tự động (%PingsPerMin%)"
 
-"Steam_TextFilterSettingLabel"									""
-"Steam_TextFilterStatus_SteamLabOptedOut"						"Đã có mặt trên Steam Labs"
+"Steam_TextFilterSettingLabel"									"Lọc ẩn từ ngữ"
 "Steam_TextFilterStatus_Enabled"								"Hiện đặt bộ lọc ẩn từ ngữ tục tĩu và miệt thị"
 "Steam_TextFilterStatus_Enabled_IgnoreFriends"					"Hiện đặt bộ lọc ẩn từ ngữ tục tĩu và miệt thị từ mọi người trừ bạn bè"
 "Steam_TextFilterStatus_EnabledAllowProfanity"					"Hiện đặt bộ lọc không ẩn từ ngữ tục tĩu, nhưng ẩn từ miệt thị"
@@ -3833,7 +3828,7 @@ Cuộc thử nghiệm beta đã kết thúc - xin vui lòng khởi động lại
 "Steam_Tooltip_Steam" "Steam"
 "Steam_Tooltip_Working" "Steam - đang hoạt động"
 "Steam_Tooltip_Offline" "Steam - ngắt mạng"
-"Steam_Tooltip_Syncing" "Steam - đang đồng bộ hóa"
+"Steam_Tooltip_Syncing" "Steam - đang đồng bộ"
 "Steam_Tooltip_Downloading" "Steam - đang tải về với tốc độ %s1/s"
 "Steam_Tooltip_VoiceActive" "Steam - đang đàm thoại"
 "Steam_Tooltip_UnreadMessageS" "Steam - tin nhắn chưa đọc"
@@ -4217,6 +4212,7 @@ Cuộc thử nghiệm beta đã kết thúc - xin vui lòng khởi động lại
 "Steam_TimedTrial_Over" "Thời gian dùng thử của bạn đã kết thúc"
 "Steam_TimedTrial_CloseNow" "Trò chơi giờ sẽ đóng"
 "Steam_TimedTrial_Enjoy" "Chúc bạn chơi thử vui vẻ"
+"Steam_TimedTrial_Offline" "Phiên chơi thử mất kết nối với Steam"
 "Steam_TimedTrial_Minutes" "Thời gian chơi còn lại: %minutes% phút"
 "Steam_TimedTrial_Hours" "Thời gian chơi còn lại: %hours% giờ %minutes% phút"
 
@@ -4236,7 +4232,6 @@ Cuộc thử nghiệm beta đã kết thúc - xin vui lòng khởi động lại
 
 "Steam_Parental_UnlockTitle"			"Chế độ gia đình"
 "Steam_Parental_UnlockInstructions"		"Nhập mã PIN của bạn để thoát khỏi chế độ gia đình"
-"Steam_Parental_UnlockInstructions2"	""
 "Steam_Parental_ForgotPIN"				"Tôi đã quên mã PIN"
 "Steam_Parental_NoRecoveryEmail"		"Chưa đặt email phục hồi"
 "Steam_Parental_NoRecoveryEmail_Instructions"		 "Không có địa chỉ email phục hồi đặt cho tài khoản bạn. Để cập nhật địa chỉ email phục hồi, xin vui lòng thoát chế độ gia đình và quay lại cài đặt hiển thị gia đình."
@@ -4437,7 +4432,6 @@ Cuộc thử nghiệm beta đã kết thúc - xin vui lòng khởi động lại
 "Music_Playlist_RenameDialog_Title" "Đổi tên danh sách phát"
 "Music_Playlist_RenameDialog_Prompt" "Đổi tên danh sách phát \"%playlistname%\""
 "Music_Playlist_AddDialog_Title" "Tạo danh sách phát mới"
-"Music_Playlist_AddDialog_Prompt" ""
 "Music_Playlist_DeleteDialog_Title" "Xóa danh sách phát"
 "Music_Playlist_DeleteDialog_Prompt" "Bạn có muốn xóa danh sách phát \"%playlistname%\"?"
 "Music_Playlist_Details_Play" "Danh sách phát"
@@ -4456,8 +4450,6 @@ Cuộc thử nghiệm beta đã kết thúc - xin vui lòng khởi động lại
 "Music_Queue_Menu_ReplacePlaylist" "Thay danh sách nhạc với hàng chờ"
 "Music_Queue_Menu_AppendPlaylist" "Thêm vào danh sách phát"
 "Music_Queue_AddPlaylist_Dialog_Title" "Thêm danh sách phát"
-"Music_Queue_AddPlaylist_Dialog_Prompt" ""
-
 "Steam_Settings_Controller"					"Tay cầm"
 "Steam_SettingsControllerTitle"				"Thiết lập tay cầm"
 "Steam_SettingsControllerDescription"		"Tùy chỉnh chung tay cầm cho phép cài đặt bật/tắt hỗ trợ cấu hình tay cầm, tinh chỉnh cá nhân và các tùy chọn khác."
@@ -4469,7 +4461,7 @@ Cuộc thử nghiệm beta đã kết thúc - xin vui lòng khởi động lại
 "Steam_SteamInputDisableNotifications"		"Tắt thông báo tay cầm đã được kết nối cho phần mềm phiên bản desktop."
 
 "Steam_Settings_ShaderCache"			"Lưu trước Shader"
-"Steam_Settings_ShaderCache_Info"		"Lưu trước Shader (Shader Pre-Caching) cho phép Steam tải trước các GPU shader đã kết xuất trước đó mà tương ứng với thiết lập hệ thống của bạn. Nó cho phép các trò chơi hỗ trợ Vulkan và OpenGL nạp nhanh hơn và cải thiện độ ổn định khung hình khi chơi.\n\nNếu bật, Steam sẽ thu thập shader từ máy của bạn khi cần thiết. Bật tính năng này có thể tăng lượng ổ cứng và băng thông sử dụng."
+"Steam_Settings_ShaderCache_Info"		"Lưu trước Shader (Shader Pre-Caching) cho phép Steam tải trước các GPU shader đã dựng sẵn tương ứng với thiết lập hệ thống của bạn. Tính năng này cho phép các trò chơi hỗ trợ Vulkan và OpenGL nạp nhanh hơn và khung hình khi chơi được cải thiện và ổn định hơn.\n\nNếu bật, Steam sẽ thu thập shader từ máy tính của bạn khi cần thiết. Bật tính năng này có thể tăng dung lượng ổ cứng và băng thông sử dụng."
 "Steam_Settings_ShaderCache_Enable"		"Bật lưu trước Shader (%shaderdiskusagemb% MB đã lưu)"
 "Steam_Settings_ShaderCache_BGProcessing_Enable"		"Cho phép xử lý ngầm shader cho Vulkan"
 "Steam_Settings_ShaderCache_CurrentlyProcessing"		"Xử lý %shaderapp%... (%shaderpercent%%)"

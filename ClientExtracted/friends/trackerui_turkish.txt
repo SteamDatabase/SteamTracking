@@ -342,7 +342,6 @@
 "Friends_Chat_ActionResultVoiceSlotsFull" "%chat% sohbetinde sesi başlatamazsınız, yeterli konuşma yeri yok."
 "Friends_Chat_VoiceStatus"		"%availslots% yer mevcut [%maxslots% toplam]."
 
-"Friends_GroupSectionInfo_Offline"				""
 "Friends_GroupSectionInfo_Online"					"%online% ÇEVRİMİÇİ"
 "Friends_GroupSectionInfo_OnlineInGame"			"%ingame% OYUNDA, %online% ÇEVRİMİÇİ"
 "Friends_GroupSectionInfo_OnlineChatting"			"%inchat% SOHBETTE, %online% ÇEVRİMİÇİ"

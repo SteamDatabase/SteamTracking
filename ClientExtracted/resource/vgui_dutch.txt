@@ -13,7 +13,6 @@
 "FileOpenDialog_Look_in"	"Bladeren in:"
 "FileOpenDialog_File_Name"	"Bestandsnaam:"
 "FileOpenDialog_File_Type"	"Bestandstype:"
-"FileOpenDialog_Icon"		" "
 "FileOpenDialog_Name"		"Naam"
 "FileOpenDialog_Type"		"Type"
 "SysMenu_Minimize"		" Minimaliseren "

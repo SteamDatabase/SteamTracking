@@ -15,6 +15,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steamui/SettingsSubFriends.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steamui/urlmanager.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/string_misc.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/urlhelper.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/protobuf-2.6.1/src/google/protobuf/repeated_field.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/overlay/common/shmemstream.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/overlay/gameoverlayui/BasePanel.cpp
@@ -28,8 +29,8 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/overlay/gameoverlayui/overlaynews.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/overlay/gameoverlayui/screenshotthread.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/html/htmlmessages.pb.cc
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/html/htmlpaintbuffer.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/html/htmlprotobuf.cpp
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/html/ihtmlchrome.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/rtime.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/threadtools.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/vprof.h

@@ -342,7 +342,6 @@
 "Friends_Chat_ActionResultVoiceSlotsFull" "Kan ikke starte %chat%-stemmesamtale, ikke nok ledige lydspor."
 "Friends_Chat_VoiceStatus"		"%availslots% spor tilgj. [%maxslots% totalt]."
 
-"Friends_GroupSectionInfo_Offline"				""
 "Friends_GroupSectionInfo_Online"					"%online% TILKOBLET"
 "Friends_GroupSectionInfo_OnlineInGame"			"%ingame% I SPILL, %online% TILKOBLET"
 "Friends_GroupSectionInfo_OnlineChatting"			"%inchat% I SAMTALE, %online% TILKOBLET"
@@ -795,7 +794,7 @@
 "Steam_Settings_Browser_ClearWebCacheMsg"	"Slett alle filene i bufferen til den innebygde nettleseren?"
 
 "RemotePlayTogether_Notification_AvailableToInvite_Title" "Remote Play Together"
-"RemotePlayTogether_Notification_AvailableToInvite" "Høyreklikk på noen i vennelisten for å invitere dem til å spille."
+"RemotePlayTogether_Notification_AvailableToInvite" "Høyreklikk på venner for å invitere dem til å spille."
 
 } 
 }  

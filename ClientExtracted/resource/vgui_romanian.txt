@@ -13,7 +13,6 @@
 "FileOpenDialog_Look_in"	"Caută în:"
 "FileOpenDialog_File_Name"	"Nume fişier:"
 "FileOpenDialog_File_Type"	"Tip fişier:"
-"FileOpenDialog_Icon"		" "
 "FileOpenDialog_Name"		"Nume"
 "FileOpenDialog_Type"		"Tip"
 "SysMenu_Minimize"		"Ascunde"

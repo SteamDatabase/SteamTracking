@@ -1,6 +1,8 @@
 __TEXT
 __text
 __TEXT
+;
+;
 __stubs
 __TEXT
 __stub_helper
@@ -12,13 +14,13 @@ __cstring
 __TEXT
 __unwind_info
 __TEXT
-\v
+4~
 __eh_frame
 __TEXT
 __DATA
 __got
 __DATA
-x
+p
 __nl_symbol_ptr
 __DATA
 __la_symbol_ptr
@@ -34,7 +36,7 @@ __bss
 __DATA
 __common
 __DATA
-X*
+p*
 H
 __LINKEDIT
 
@@ -67,7 +69,7 @@ h
 /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
 &
 )
-0J
+J
 N3IPC15BinarySemaphoreE
 N3IPC10PosixMutexE
 N3IPC6IMutexE
@@ -165,6 +167,9 @@ $
 0
 $
 (
+,
+0
+4
 $
 8
 (
@@ -231,6 +236,7 @@ $
 $
 (
 ,
+0
 0
 9CMsgKeyUp
 11CMsgKeyDown
@@ -375,7 +381,9 @@ $
 23CMsgSetForegroundWindow
 25CMsgMaximizeRestoreWindow
 18CMsgMinimizeWindow
+41CMsgShowBrowserContextMenu_ContextCommand
 26CMsgShowBrowserContextMenu
+28CMsgHandleContextMenuCommand
 21CMsgImeSetComposition
 17CMsgImeCommitText
 24CMsgImeCancelComposition
@@ -683,10 +691,8 @@ m_pSpaceAvail
 m_pMutex
 m_pDataWritten
 m_pMapFile
-No room for new profile in vprof thread profile list, grow MAX_THREADS_TO_VPROF_AT_ONCE
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/vprof.h
-Assertion Failed: m_pvOrigNameAddress
 Assertion Failed: m_pParent
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/vprof.h
 htmlmessages.proto
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/html/htmlmessages.pb.cc
 CHECK failed: file != NULL:
@@ -700,6 +706,8 @@ Assertion Failed: eCmd > 0 && eCmd < eHTMLCommands_None
 Assertion Failed: pBuffer->TellPut() == 0
 CUIProtoBufMsg::BDeserialize
 Assertion Failed: 0
+-fast-overlay-html
+Uses new faster overlay HTML path
 ChromeHTML_Controller_003
 Assertion Failed: BOffScreenRendererBrowser( eBrowserType )
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/html/chromewrapper.cpp
@@ -842,6 +850,8 @@ wt
 -steampid=%u
 -buildid=%u
 -steamid=%llu
+-html-perf-monitor
+Draws html perf data
 -steamuniverse=Dev
 -steamuniverse=Beta
 -steamuniverse=Internal
@@ -1753,33 +1763,23 @@ vietnamese
 #Panorama_Lang_Vietnamese
 vi_VN
 vi
+SteamChina_SChinese
+sc_schinese
 
 
 
 
 
 
-"
-3
 U
-D
-?
-8
-1
-
-@
-+
-A
-e
-
-H
-D
-
-3
-
-!
 "
-A
+3
+D
+@
+u
+
+B
+
 Hi
 `
 $
@@ -1793,7 +1793,7 @@ $
 A
 Hc
 =
-
+O
 
 
 

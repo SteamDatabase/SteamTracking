@@ -342,7 +342,6 @@
 "Friends_Chat_ActionResultVoiceSlotsFull" "无法启动 %chat% 中的语音聊天，没有足够的可用语音空位。"
 "Friends_Chat_VoiceStatus"		"%availslots% 个空位可用 [共 %maxslots% 个]。"
 
-"Friends_GroupSectionInfo_Offline"				""
 "Friends_GroupSectionInfo_Online"					"%online% 人在线"
 "Friends_GroupSectionInfo_OnlineInGame"			"%ingame% 人在游戏中，%online% 人在线"
 "Friends_GroupSectionInfo_OnlineChatting"			"%inchat% 人在聊天中，%online% 人在线"

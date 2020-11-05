@@ -276,7 +276,6 @@
  T CreateDirRecursive(StringView)
  T CreateInterface
  T CreateSimpleProcess
- T CreateVProfile
  T DefaultSpewFunc(SpewType_t, char const*)
  T DoNewAssertDialog
  T Error
@@ -334,7 +333,8 @@
  T SteamVProf::CVProfNode::ExitScope()
  T SteamVProf::CVProfNode::GetSubNode(char const*, int, EVProfBugdetGroup, int)
  T SteamVProf::CVProfNode::Reset()
- T SteamVProf::CVProfScope::CVProfScope(char const*, int, EVProfBugdetGroup, bool, int)
+ T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)13, false, 4>::~CVProfScope()
+ T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)20, false, 4>::~CVProfScope()
  T SteamVProf::CVProfile::AddBudgetGroupName(EVProfBugdetGroup, int, char const*)
  T SteamVProf::CVProfile::CVProfile()
  T SteamVProf::CVProfile::CreateBudgetGroups()
@@ -358,6 +358,8 @@
  T TouchFile(StringView)
  T UnlinkFile(StringView)
  T UtlMemory_CalcNewAllocationCount(int, int, int, unsigned long)
+ T VProfInternalEnterScopeCurrentThread
+ T VProfInternalGetProfileForCurrentThread
  T V_EscapeShellArgumentAndAppend(CUtlStringBuilder*, char const*)
  T V_EscapeShellArgumentAndAppendPOSIX(char*, unsigned long, char const*)
  T V_FixDoubleSlashes
@@ -375,9 +377,8 @@
  T WeakRandomUint32
  T WriteMiniDump
  T _DMsg
- T _ExitOnFatalAssert
- T _SpewMessage
- T _SpewMessageType
+ T _SpewMessageTypeSourceFmt
+ T _SpewMessageTypeSourceV
  T __clang_call_terminate
  T _findfirst(char const*, _finddata_t*)
  T _findnext(long long, _finddata_t*)
@@ -475,7 +476,7 @@
  b TestForAppleGraphicsUpdateInstalled()::handle
  b V_pretifymem(float, int, bool)::current
  b V_pretifymem(float, int, bool)::output
- b _SpewMessageType::autoMutex__
+ b _SpewMessageTypeSourceV::autoMutex__
  b _ZL6g_Info.0
  b _ZL6g_Info.1
  b _ZL6g_Info.2
@@ -500,20 +501,17 @@
  b guard variable for GetMinidumpsWritten()::s_MinidumpsWritten
  b guard variable for RTANoteAlloc(void*, unsigned long, bool, char const*, int, int, int)::g_FilenamesCache
  b guard variable for TestForAppleGraphicsUpdateInstalled()::handle
- b guard variable for _SpewMessageType::autoMutex__
+ b guard variable for _SpewMessageTypeSourceV::autoMutex__
  b s_AssertFailedNotifyFunc
  b s_DefaultLevel
  b s_FlushLogFunc
  b s_GaussianStream
  b s_GroupCount
  b s_LastMiniDumpTime
- b s_Line
  b s_OSXBreakpadFactory
- b s_SpewType
  b s_UniformStream
  b s_bCPUHasFastREPMOVSB
  b s_bSetSigHandler
- b s_pFileName
  b s_pSpewGroups
  b sm_bAssertDumpStack
  backtrace

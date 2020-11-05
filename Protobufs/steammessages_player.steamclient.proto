@@ -1,4 +1,5 @@
 import "steammessages_unified_base.steamclient.proto";
+import "enums.proto";
 
 option cc_generic_services = true;
 
@@ -33,6 +34,12 @@ enum EProfileCustomizationStyle {
 	k_EProfileCustomizationStyleMostRecent = 3;
 	k_EProfileCustomizationStyleRandom = 4;
 	k_EProfileCustomizationStyleHighestRated = 5;
+}
+
+enum EAgreementType {
+	k_EAgreementType_Invalid = -1;
+	k_EAgreementType_GlobalSSA = 0;
+	k_EAgreementType_ChinaSSA = 1;
 }
 
 enum ENotificationSetting {
@@ -358,6 +365,7 @@ message ProfileCustomizationSlot {
 	optional uint32 border_color = 10;
 	optional uint64 item_classid = 11;
 	optional uint64 item_instanceid = 12;
+	optional .EBanContentCheckResult ban_check_result = 13 [default = k_EBanContentCheckResult_NotScanned];
 }
 
 message ProfileCustomization {
@@ -447,6 +455,7 @@ message CPlayer_GetLastPlayedTimes_Response {
 }
 
 message CPlayer_AcceptSSA_Request {
+	optional .EAgreementType agreement_type = 1 [default = k_EAgreementType_Invalid];
 }
 
 message CPlayer_AcceptSSA_Response {
@@ -524,7 +533,7 @@ message CPlayer_CommunityPreferences {
 	optional bool hide_adult_content_violence = 1 [default = true];
 	optional bool hide_adult_content_sex = 2 [default = true];
 	optional bool parenthesize_nicknames = 4 [default = false];
-	optional .ETextFilterSetting text_filter_setting = 5 [default = k_ETextFilterSettingEnabled];
+	optional .ETextFilterSetting text_filter_setting = 5 [default = k_ETextFilterSettingSteamLabOptedOut];
 	optional bool text_filter_ignore_friends = 6 [default = true];
 	optional uint32 text_filter_words_revision = 7;
 	optional uint32 timestamp_updated = 3;

@@ -19,7 +19,6 @@
  CValidator::IsClaimed(void*)
  CValidator::Pop()
  CValidator::Push(char const*, void*, char const*)
- CreateVProfile
  D CUtlSymbol::s_bAllowStaticSymbolTable
  D g_FileSystemStdIODLLValidate
  D pModuleExtension
@@ -75,14 +74,9 @@
  SteamStdLib::CCommandLineParam::CCommandLineParam(char const*, char const*)
  SteamStdLib::CCommandLineParam::~CCommandLineParam()
  SteamStdLib::CommandLine()
- SteamThreadTools::CThreadLocalBase::Get() const
- SteamThreadTools::CThreadLocalBase::Set(void*)
  SteamThreadTools::CThreadMutex::CThreadMutex()
  SteamThreadTools::CThreadMutex::~CThreadMutex()
- SteamVProf::CVProfNode::EnterScope(void*)
  SteamVProf::CVProfNode::ExitScope()
- SteamVProf::CVProfNode::GetSubNode(char const*, int, EVProfBugdetGroup, int)
- SteamVProf::CVProfile::~CVProfile()
  T BCreateDirectory(StringView)
  T CBaseFileSystem::AddLoggingFunc(void (*)(char const*, char const*))
  T CBaseFileSystem::AddMapPackFile(char const*, char const*, SearchPathAdd_t)
@@ -105,6 +99,7 @@
  T CBaseFileSystem::FileExists(char const*, char const*)
  T CBaseFileSystem::FileTimeToString(char*, int, long)
  T CBaseFileSystem::FindClose(int)
+ T CBaseFileSystem::FindData_t* Destruct<CBaseFileSystem::FindData_t>(CBaseFileSystem::FindData_t*)
  T CBaseFileSystem::FindFile(CBaseFileSystem::CSearchPath const*, char const*, char const*)
  T CBaseFileSystem::FindFirst(char const*, int*)
  T CBaseFileSystem::FindFirstEx(char const*, char const*, int*)
@@ -331,9 +326,8 @@
  T FillDataStruct(_finddata_t*)
  T FioGetFileData(StringView, SFioFileData*)
  T InterfaceReg::InterfaceReg(void* (*)(), char const*)
- T SteamVProf::CVProfManager::AddProfileForThread(SteamVProf::CVProfile*, unsigned int, _opaque_pthread_t*)
- T SteamVProf::CVProfScope::CVProfScope(char const*, int, EVProfBugdetGroup, bool, int)
- T SteamVProf::CVProfileThreadEntry::DeleteProfile()
+ T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)20, false, 4>::~CVProfScope()
+ T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)3, false, 4>::~CVProfScope()
  T Sys_LoadModule(char const*, Sys_Flags)
  T Sys_UnloadModule(CSysModule*)
  T Sys_ValidateModules(CValidator*, bool)
@@ -354,11 +348,7 @@
  T void CUtlRBTree<CBaseFileSystem::CPackFileEntry, int, CDefLess<CBaseFileSystem::CPackFileEntry>, CDefRBTreeBalanceListener<int>, CBaseFileSystem::CPackFileEntry>::FindInsertionPosition<CBaseFileSystem::CPackFileEntry>(CBaseFileSystem::CPackFileEntry const&, bool, int&, bool&, bool&)
  T void CUtlRBTree<CStringPoolIndex, unsigned short, CBaseUtlSymbolTable<CUtlSymbol>::CLess, CDefRBTreeBalanceListener<unsigned short>, CStringPoolIndex>::FindInsertionPosition<CStringPoolIndex>(CStringPoolIndex const&, bool, unsigned short&, bool&, bool&)
  T void CUtlRBTree<CUtlMap<char const*, int, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, int, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>::FindInsertionPosition<CUtlMap<char const*, int, int, CDefCaselessStringLess>::Node_t>(CUtlMap<char const*, int, int, CDefCaselessStringLess>::Node_t const&, bool, int&, bool&, bool&)
- T void Destruct<CBaseFileSystem::FindData_t>(CBaseFileSystem::FindData_t*)
- ThreadGetCurrentId
- ThreadGetCurrentRunningRef
- ThreadInterlockedDecrement
- ThreadIsThreadRunning
+ VProfInternalEnterScopeCurrentThread
  V_ExtractFilePath
  V_FixDoubleSlashes
  V_FixSlashes
@@ -418,9 +408,7 @@
  fseek
  ftell
  fwrite
- g_VProfManager
  g_VProfProfilesRunningCount
- g_VProfile
  g_pMemAllocSteam
  getcwd
  getenv

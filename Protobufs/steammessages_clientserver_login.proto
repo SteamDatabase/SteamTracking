@@ -104,6 +104,7 @@ message CMsgClientLogonResponse {
 	optional int32 ogs_data_report_time_window = 26;
 	optional uint64 client_instance_id = 27;
 	optional bool force_client_update_check = 28;
+	optional string agreement_session_url = 29;
 }
 
 message CMsgClientRequestWebAPIAuthenticateUserNonce {

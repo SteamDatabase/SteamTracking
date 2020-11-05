@@ -47,4 +47,5 @@ typedef enum EStoreCategory
     k_EStoreCategoryCategory_48, // category_48
     k_EStoreCategoryCategory_49, // category_49
     k_EStoreCategoryCategory_50, // category_50
+    k_EStoreCategoryCategory_51, // category_51
 } EStoreCategory;

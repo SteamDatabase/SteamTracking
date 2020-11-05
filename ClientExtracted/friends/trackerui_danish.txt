@@ -342,7 +342,6 @@
 "Friends_Chat_ActionResultVoiceSlotsFull" "Kan ikke starte tale i %chat%. Ikke tilstrækkelige ledige pladser."
 "Friends_Chat_VoiceStatus"		"%availslots% pladser tilg. [i alt %maxslots%]."
 
-"Friends_GroupSectionInfo_Offline"				""
 "Friends_GroupSectionInfo_Online"					"%online% ONLINE"
 "Friends_GroupSectionInfo_OnlineInGame"			"%ingame% I SPIL, %online% ONLINE"
 "Friends_GroupSectionInfo_OnlineChatting"			"%inchat% I CHAT, %online% ONLINE"
@@ -745,8 +744,8 @@
 "Steam_Settings_Broadcast_EncoderHeader" "Optimer indkodning til:"
 "Steam_Settings_Broadcast_EncoderQuality" "Bedste kvalitet"
 "Steam_Settings_Broadcast_EncoderPerformance" "Bedste ydelse"
-"Steam_Settings_Broadcast_StatusNotBroadcast" "Broadcaster ikke"
-"Steam_Settings_Broadcast_StatusBroadcast" "Broadcaster"
+"Steam_Settings_Broadcast_StatusNotBroadcast" "Sender ikke"
+"Steam_Settings_Broadcast_StatusBroadcast" "Sender"
 "Steam_Settings_Broadcast_ShowChat_Off" "Slået fra"
 "Steam_Settings_Broadcast_ShowChat_LeftTop" "Øverst til venstre"
 "Steam_Settings_Broadcast_ShowChat_RightTop" "Øverst til højre"
