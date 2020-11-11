@@ -564,19 +564,7 @@ html.contextmenu_ContextMenuPopup_14wqd .contextmenu_contextMenuItem_1n7Wl {
   .dropdown_DialogDropDownMenu_Item_2oAiZ:hover {
     background: #3e444d; }
 
-.dropdown_DialogDropDownMenu_30wJO {
-  color: #dfe3e6;
-  font-size: 14px;
-  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
-  font-weight: 300;
-  margin: 0;
-  padding: 0;
-  border: none;
-  border-radius: 3px;
-  transition: all .2s ease-in-out;
-  padding: 12px;
-  line-height: 18px;
-  margin-bottom: 22px;
+.dropdown_DialogDropDownMenu_30wJO._DialogInputContainer {
   background: #373c44;
   box-shadow: 0px 8px 26px 2px rgba(0, 0, 0, 0.2);
   margin-top: 2px; }

@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6183698";
+var CLSTAMP = "6195383";
 !(function(e) {
   function t(t) {
     for (
@@ -149,35 +149,35 @@ var CLSTAMP = "6183698";
                 37: "0ea82066cafc59d7309a",
                 38: "e5d6b8dee4ef0ef22455",
                 39: "dd555942eeebcf691e37",
-                40: "f76e166c721630e7176a",
-                41: "598e8f732c12f97d0df6",
-                42: "e74f0c454e9bb287ed5e",
-                43: "0a05b8794132c34e7501",
-                44: "f35f052bd5663238bdc6",
-                45: "d6419083e9c2fc89f9c0",
-                46: "ef875d909b551435d2d1",
-                47: "d1703f459b4c6693194c",
-                48: "3c289c57ef39cedf5749",
-                49: "f487a5727db9077bef52",
-                50: "904314cb867c91c217f3",
-                51: "1956c66d40249d5680e9",
-                52: "1cc558f9472b2ec1d0ed",
-                53: "83b8629393b4523f6135",
-                54: "f83a20f5be8eaf31695b",
-                55: "87ff502ec7e082a1a431",
-                56: "247d418eb322cdeae58f",
-                57: "e5c7cb30a33eed67273d",
-                58: "9297cdbb01d629ef8eea",
-                59: "60594bb0ef0593dae4f5",
+                40: "aa96f531fcb750e0eb86",
+                41: "f080fd9af8e860b54628",
+                42: "30cb96a33dfd52b6d6b4",
+                43: "b6f721f0329c469730db",
+                44: "e9348e892324f8ae6709",
+                45: "6ed85852319f62d9b842",
+                46: "0fdcc2fa5609a2d779ed",
+                47: "25ce852c7975f87664b9",
+                48: "61dc8f02d42e78c1f172",
+                49: "05b6d8aa0bfb53279571",
+                50: "ffdb2d209ecfc4d841fe",
+                51: "928d5f545160927794b6",
+                52: "f44f3575a81cd084cc74",
+                53: "b91daeb83963598b1d8c",
+                54: "e5e60b999edcec321291",
+                55: "ef944c49a7d78f172b88",
+                56: "d821dffce4d4b25f97e9",
+                57: "d8c03b09a69f28cfecde",
+                58: "840fbcc48157ae18588b",
+                59: "feca5474861236f722ab",
                 60: "29bad8abfba4b2d73901",
-                61: "f15959d04de2b471f45b",
-                62: "ef04482f20d3d070e546",
-                63: "ab7081ba2d1db6f34d4b",
-                64: "47e552c56eb0444f2eaa",
-                65: "efdc5d0a75aa3c193385",
-                66: "ed28488eeafb0761da48",
-                67: "7c0bb62091114fb73096",
-                68: "947f67df65803fb4c455"
+                61: "31e595f7727af6479fa1",
+                62: "8dc90cd175e633cb400d",
+                63: "b0285c9c24018daf1c32",
+                64: "16a2a1381828f33090dd",
+                65: "979eff32ebb03cf68f93",
+                66: "e201a8e3747b99339cab",
+                67: "ed08be8fa0f516824482",
+                68: "bf9d45c40524970e9eea"
               }[e]
             );
           })(e));
@@ -294,10 +294,10 @@ var CLSTAMP = "6183698";
     function i(e) {
       return 5 == e || 6 == e;
     }
-    n.d(t, "c", function() {
+    n.d(t, "b", function() {
       return r;
     }),
-      n.d(t, "b", function() {
+      n.d(t, "a", function() {
         return i;
       }),
       n.d(t, "q", function() {
@@ -336,16 +336,16 @@ var CLSTAMP = "6183698";
       n.d(t, "h", function() {
         return m;
       }),
-      n.d(t, "e", function() {
+      n.d(t, "d", function() {
         return b;
       }),
-      n.d(t, "d", function() {
+      n.d(t, "e", function() {
         return g;
       }),
-      n.d(t, "f", function() {
+      n.d(t, "c", function() {
         return v;
       }),
-      n.d(t, "a", function() {
+      n.d(t, "f", function() {
         return E;
       });
     var o = 1,
@@ -426,7 +426,10 @@ var CLSTAMP = "6183698";
           return t;
       }
     }
-    function g(e, t) {
+    var g = function(e) {
+      return "koreana" === e ? "korean" : e;
+    };
+    function v(e, t) {
       switch ((void 0 === t && (t = ""), e)) {
         case 0:
           return "english";
@@ -437,7 +440,7 @@ var CLSTAMP = "6183698";
         case 3:
           return "italian";
         case 4:
-          return "korean";
+          return "koreana";
         case 5:
           return "spanish";
         case 6:
@@ -492,7 +495,7 @@ var CLSTAMP = "6183698";
           return t;
       }
     }
-    function v(e, t) {
+    function E(e, t) {
       switch ((void 0 === t && (t = 0), e)) {
         case "english":
           return 0;
@@ -558,18 +561,6 @@ var CLSTAMP = "6183698";
         default:
           return t;
       }
-    }
-    function E(e) {
-      switch (e) {
-        default:
-          break;
-        case 4:
-        case 1:
-        case 7:
-        case 8:
-          return !0;
-      }
-      return !1;
     }
   },
   "1VtQ": function(e, t, n) {
@@ -1213,7 +1204,7 @@ var CLSTAMP = "6183698";
               (this.m_bValid = !0),
               (this.m_bReady = !0);
           }),
-          Object(r.c)([i.C], e.prototype, "m_bReady", void 0),
+          Object(r.c)([i.B], e.prototype, "m_bReady", void 0),
           Object(r.c)([i.k], e.prototype, "InitInvalid", null),
           Object(r.c)([i.k], e.prototype, "InitDirectInvite", null),
           e
@@ -1249,7 +1240,7 @@ var CLSTAMP = "6183698";
         return E;
       }),
       n.d(t, "b", function() {
-        return C;
+        return S;
       });
     var r = n("mrSG"),
       i = n("oh5H"),
@@ -1404,7 +1395,7 @@ var CLSTAMP = "6183698";
         if (!c.bGranularFutureTime)
           return (
             a.b(n.getTime() - s.getTime()),
-            n.getFullYear() == s.getFullYear() ? S(n) : y(n)
+            n.getFullYear() == s.getFullYear() ? C(n) : y(n)
           );
         a.b(new Date().setHours(24, 0, 0, 0) - s.getTime());
         var u = new Date();
@@ -1416,7 +1407,7 @@ var CLSTAMP = "6183698";
             : (u.setDate(u.getDate() + 1),
               n < u
                 ? Object(i.f)("#Time_Tomorrow")
-                : (u.setDate(u.getDate() + 5), n < u ? C(n) : E(n, !0)))
+                : (u.setDate(u.getDate() + 5), n < u ? S(n) : E(n, !0)))
         );
       }
       a.b(new Date().setHours(24, 0, 0, 0) - s.getTime());
@@ -1438,7 +1429,7 @@ var CLSTAMP = "6183698";
           ? Object(i.f)("#TimeSince_1Week")
           : Object(i.f)("#TimeSince_XWeeks", d);
       }
-      return n.getFullYear() == s.getFullYear() ? S(n) : y(n);
+      return n.getFullYear() == s.getFullYear() ? C(n) : y(n);
     }
     var m = new Map(),
       b = new Map(),
@@ -1459,7 +1450,7 @@ var CLSTAMP = "6183698";
         r)
       );
     }
-    function C(e) {
+    function S(e) {
       var t = m.get(e.getDay());
       return (
         t ||
@@ -1470,7 +1461,7 @@ var CLSTAMP = "6183698";
         t)
       );
     }
-    function S(e) {
+    function C(e) {
       var t = b.get(e.getMonth());
       return (
         t ||
@@ -1672,59 +1663,56 @@ var CLSTAMP = "6183698";
   },
   hEDq: function(e, t, n) {
     "use strict";
-    n.d(t, "o", function() {
+    n.d(t, "n", function() {
       return a;
     }),
-      n.d(t, "e", function() {
+      n.d(t, "d", function() {
         return s;
       }),
-      n.d(t, "g", function() {
+      n.d(t, "f", function() {
         return c;
       }),
-      n.d(t, "i", function() {
+      n.d(t, "h", function() {
         return u;
       }),
-      n.d(t, "d", function() {
+      n.d(t, "c", function() {
         return l;
       }),
-      n.d(t, "j", function() {
+      n.d(t, "i", function() {
         return f;
       }),
-      n.d(t, "l", function() {
+      n.d(t, "k", function() {
         return d;
       }),
-      n.d(t, "f", function() {
+      n.d(t, "e", function() {
         return p;
       }),
-      n.d(t, "q", function() {
+      n.d(t, "p", function() {
         return _;
       }),
-      n.d(t, "h", function() {
+      n.d(t, "g", function() {
         return h;
       }),
-      n.d(t, "c", function() {
+      n.d(t, "b", function() {
         return m;
       }),
-      n.d(t, "k", function() {
+      n.d(t, "j", function() {
         return b;
       }),
-      n.d(t, "m", function() {
+      n.d(t, "l", function() {
         return g;
       }),
-      n.d(t, "n", function() {
+      n.d(t, "m", function() {
         return v;
       }),
-      n.d(t, "b", function() {
+      n.d(t, "a", function() {
         return E;
       });
     var r = n("mrSG"),
       i = n("0N1H");
-    n.d(t, "a", function() {
-      return i.a;
-    }),
-      n.d(t, "p", function() {
-        return i.f;
-      });
+    n.d(t, "o", function() {
+      return i.f;
+    });
     var o = n("2vnA"),
       a = (function() {
         function e() {
@@ -1736,12 +1724,12 @@ var CLSTAMP = "6183698";
             (this.customlist = void 0);
         }
         return (
-          Object(r.c)([o.C], e.prototype, "enabled", void 0),
-          Object(r.c)([o.C], e.prototype, "locked", void 0),
-          Object(r.c)([o.C], e.prototype, "features", void 0),
-          Object(r.c)([o.C], e.prototype, "allowallapps", void 0),
-          Object(r.c)([o.C], e.prototype, "baselist", void 0),
-          Object(r.c)([o.C], e.prototype, "customlist", void 0),
+          Object(r.c)([o.B], e.prototype, "enabled", void 0),
+          Object(r.c)([o.B], e.prototype, "locked", void 0),
+          Object(r.c)([o.B], e.prototype, "features", void 0),
+          Object(r.c)([o.B], e.prototype, "allowallapps", void 0),
+          Object(r.c)([o.B], e.prototype, "baselist", void 0),
+          Object(r.c)([o.B], e.prototype, "customlist", void 0),
           e
         );
       })(),
@@ -1932,12 +1920,12 @@ var CLSTAMP = "6183698";
         (e[(e.k_ESteamRealmGlobal = 1)] = "k_ESteamRealmGlobal"),
         (e[(e.k_ESteamRealmChina = 2)] = "k_ESteamRealmChina");
     })(v || (v = {}));
-    var C, S, y, I, j;
+    var S, C, y, I, j;
     !(function(e) {
       (e[(e.Unknown = 0)] = "Unknown"),
         (e[(e.Wired = 1)] = "Wired"),
         (e[(e.Wireless = 2)] = "Wireless");
-    })(C || (C = {})),
+    })(S || (S = {})),
       (function(e) {
         (e[(e.NotPresent = 0)] = "NotPresent"),
           (e[(e.Failed = 1)] = "Failed"),
@@ -1946,7 +1934,7 @@ var CLSTAMP = "6183698";
           (e[(e.Connecting = 4)] = "Connecting"),
           (e[(e.Connected = 5)] = "Connected"),
           (e[(e.Retrying = 6)] = "Retrying");
-      })(S || (S = {})),
+      })(C || (C = {})),
       (function(e) {
         (e[(e.None = 0)] = "None"),
           (e[(e.StaticWep = 1)] = "StaticWep"),
@@ -2265,7 +2253,7 @@ PERFORMANCE OF THIS SOFTWARE.
         }),
         (e.IsELanguageValidInRealm = function(e, t) {
           return (
-            t === (29 === e ? a.n.k_ESteamRealmChina : a.n.k_ESteamRealmGlobal)
+            t === (29 === e ? a.m.k_ESteamRealmChina : a.m.k_ESteamRealmGlobal)
           );
         }),
         (e.GetLanguageListForRealms = function(e) {
@@ -2584,15 +2572,15 @@ PERFORMANCE OF THIS SOFTWARE.
               s.b
                 .ShowChatRoomGroupInvite(this.m_invite.GetInviteCode())
                 .then(function(t) {
-                  Object(l.G)(function() {
+                  Object(l.F)(function() {
                     (e.m_bConnectingToClient = !1),
                       (e.m_connectResult = t),
                       console.log(t);
                   });
                 }));
           }),
-          Object(r.c)([l.C], e.prototype, "m_bConnectingToClient", void 0),
-          Object(r.c)([l.C], e.prototype, "m_connectResult", void 0),
+          Object(r.c)([l.B], e.prototype, "m_bConnectingToClient", void 0),
+          Object(r.c)([l.B], e.prototype, "m_connectResult", void 0),
           e
         );
       })(),
@@ -2689,7 +2677,7 @@ PERFORMANCE OF THIS SOFTWARE.
                   )
                 : e.account_mismatch
                 ? i.createElement(
-                    C,
+                    S,
                     { render: this.props.controller.GetPreRenderedHTML() },
                     i.createElement(
                       "div",
@@ -2747,7 +2735,7 @@ PERFORMANCE OF THIS SOFTWARE.
                     )
                   )
                 : i.createElement(
-                    C,
+                    S,
                     { render: this.props.controller.GetPreRenderedHTML() },
                     i.createElement(
                       "div",
@@ -2781,7 +2769,7 @@ PERFORMANCE OF THIS SOFTWARE.
                   )
             );
           }),
-          Object(r.c)([l.C], t.prototype, "m_bTriedToLaunchSteam", void 0),
+          Object(r.c)([l.B], t.prototype, "m_bTriedToLaunchSteam", void 0),
           Object(r.c)([p.a], t.prototype, "LaunchWebChat", null),
           Object(r.c)([p.a], t.prototype, "OpenInSteamIgnoreAccount", null),
           Object(r.c)([p.a], t.prototype, "LaunchSteamClient", null),
@@ -2808,7 +2796,7 @@ PERFORMANCE OF THIS SOFTWARE.
           t
         );
       })(i.Component);
-    function C(e) {
+    function S(e) {
       return i.createElement(
         "div",
         { className: "ChatMessageInvite" },
@@ -2841,7 +2829,7 @@ PERFORMANCE OF THIS SOFTWARE.
       );
     }
     window.AssertMsg = u.a;
-    var S = new s.a();
+    var C = new s.a();
     function y(e) {
       var t;
       try {
@@ -2887,7 +2875,7 @@ PERFORMANCE OF THIS SOFTWARE.
         });
       });
     }
-    (window.ClientConnectionAPI = S),
+    (window.ClientConnectionAPI = C),
       document.addEventListener("DOMContentLoaded", function() {
         return Object(r.b)(this, void 0, void 0, function() {
           return Object(r.e)(this, function(e) {

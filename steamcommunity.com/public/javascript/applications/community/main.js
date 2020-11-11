@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6183698";
+var CLSTAMP = "6195383";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [69],
   {
@@ -85,6 +85,17 @@ var CLSTAMP = "6183698";
               (this.nOverrideDateNow = void 0);
           }
           return (
+            Object.defineProperty(
+              e.prototype,
+              "bRequireAllEventsLoadedInTimeBlock",
+              {
+                get: function() {
+                  return !1;
+                },
+                enumerable: !1,
+                configurable: !0
+              }
+            ),
             Object.defineProperty(e.prototype, "bInSteamLabs", {
               get: function() {
                 return !this.bUseSlashNews;
@@ -2585,9 +2596,9 @@ var CLSTAMP = "6183698";
               var r;
               !this.browser_info ||
                 ((r = this.browser_info).m_eBrowserType !=
-                  p.d.EBrowserType_OpenVROverlay &&
+                  p.c.EBrowserType_OpenVROverlay &&
                   r.m_eBrowserType !=
-                    p.d.EBrowserType_OpenVROverlay_Dashboard) ||
+                    p.c.EBrowserType_OpenVROverlay_Dashboard) ||
                 (t.ownerDocument.body.className += " VR"),
                 this.Render(e, t),
                 this.OnLoad(),
@@ -4736,7 +4747,12 @@ var CLSTAMP = "6183698";
                 t = this.props.renderMenuContainer || "div";
               return f.createElement(
                 t,
-                { className: Object(c.a)(U.a.DialogDropDownMenu) },
+                {
+                  className: Object(c.a)(
+                    U.a.DialogDropDownMenu,
+                    "_DialogInputContainer"
+                  )
+                },
                 e
               );
             }),
@@ -6903,7 +6919,7 @@ var CLSTAMP = "6183698";
           (n.IsELanguageValidInRealm = function(e, t) {
             return (
               t ===
-              (29 === e ? o.e.k_ESteamRealmChina : o.e.k_ESteamRealmGlobal)
+              (29 === e ? o.d.k_ESteamRealmChina : o.d.k_ESteamRealmGlobal)
             );
           }),
           (n.GetLanguageListForRealms = function(e) {
@@ -10976,29 +10992,26 @@ var CLSTAMP = "6183698";
     },
     kyHq: function(e, t, n) {
       "use strict";
-      n.d(t, "d", function() {
+      n.d(t, "c", function() {
         return o;
       }),
-        n.d(t, "g", function() {
+        n.d(t, "f", function() {
           return m;
         }),
-        n.d(t, "c", function() {
+        n.d(t, "b", function() {
           return d;
         }),
-        n.d(t, "e", function() {
+        n.d(t, "d", function() {
           return b;
         }),
-        n.d(t, "b", function() {
+        n.d(t, "a", function() {
           return y;
         });
       n("mrSG");
       var r = n("mgoM");
-      n.d(t, "a", function() {
-        return r.a;
-      }),
-        n.d(t, "f", function() {
-          return r.d;
-        });
+      n.d(t, "e", function() {
+        return r.d;
+      });
       n("2vnA");
       var o, i;
       ((i = o = o || {})[(i.EBrowserType_OffScreen = 0)] =
@@ -11430,16 +11443,16 @@ var CLSTAMP = "6183698";
         n.d(t, "e", function() {
           return i;
         }),
-        n.d(t, "c", function() {
+        n.d(t, "b", function() {
           return a;
         }),
-        n.d(t, "b", function() {
+        n.d(t, "c", function() {
           return s;
         }),
-        n.d(t, "d", function() {
+        n.d(t, "a", function() {
           return c;
         }),
-        n.d(t, "a", function() {
+        n.d(t, "d", function() {
           return l;
         });
       var r = 1,
@@ -11511,7 +11524,10 @@ var CLSTAMP = "6183698";
             return t;
         }
       }
-      function s(e, t) {
+      var s = function(e) {
+        return "koreana" === e ? "korean" : e;
+      };
+      function c(e, t) {
         switch ((void 0 === t && (t = ""), e)) {
           case 0:
             return "english";
@@ -11522,7 +11538,7 @@ var CLSTAMP = "6183698";
           case 3:
             return "italian";
           case 4:
-            return "korean";
+            return "koreana";
           case 5:
             return "spanish";
           case 6:
@@ -11577,7 +11593,7 @@ var CLSTAMP = "6183698";
             return t;
         }
       }
-      function c(e, t) {
+      function l(e, t) {
         switch ((void 0 === t && (t = 0), e)) {
           case "english":
             return 0;
@@ -11643,16 +11659,6 @@ var CLSTAMP = "6183698";
           default:
             return t;
         }
-      }
-      function l(e) {
-        switch (e) {
-          case 4:
-          case 1:
-          case 7:
-          case 8:
-            return !0;
-        }
-        return !1;
       }
     },
     nmPn: function(e, t, n) {

@@ -592,6 +592,7 @@ body.login.china {
 	width: 100%;
 	transition: border ease-in-out .5s;
 	border: 1px solid #26282D;
+	outline: none;
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: normal; /* normal */
 

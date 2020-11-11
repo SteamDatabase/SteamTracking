@@ -64,8 +64,9 @@ function InitShowcaseEditors( cSlots )
 	//	these will be displayed by the dropdowns when chosen.
 	$J('#showcase_previews').children().each( function() {
 		var eShowcaseType = this.getAttribute( 'data-eshowcasetype' );
-		g_rgShowcasePreviews[eShowcaseType] = this;
-		g_rgShowcaseStyles[eShowcaseType] = $J(this).children('.showcase_style_select_ctn').detach();
+		var nShowcasePurchaseID = this.getAttribute( 'data-purchaseid' );
+		g_rgShowcasePreviews[eShowcaseType + '_' + nShowcasePurchaseID] = this;
+		g_rgShowcaseStyles[eShowcaseType + '_' + nShowcasePurchaseID] = $J(this).children('.showcase_style_select_ctn').detach();
 	});
 
 	// bind all the select and next/previous events
@@ -119,6 +120,12 @@ function OnSelectChange( $Previews, $PreviewsNone, $StyleCtn, $Select, iSlot )
 
 	var eShowcase = $Select.val();
 	var eShowcasePrevious = $Select.data( 'lastval' );
+	var nShowcasePurchaseID = $Select.find(":selected").data( 'purchaseid' );
+
+	var nShowcaseSlot = $Select.data( 'slot' );
+	var parent = $Select.parent();
+	var elemPurchaseID = parent.find( '#showcase_' + nShowcaseSlot + '_purchaseid' );
+	elemPurchaseID.val( nShowcasePurchaseID );
 
 	if ( eShowcase != eShowcasePrevious )
 	{
@@ -128,9 +135,9 @@ function OnSelectChange( $Previews, $PreviewsNone, $StyleCtn, $Select, iSlot )
 			if ( $OtherSelect != $Select )
 			{
 				if ( eShowcasePrevious != 0 )
-					SetSelectOptionDisabled( $OtherSelect, eShowcasePrevious, false );
+					SetSelectOptionDisabled( $OtherSelect, eShowcasePrevious, nShowcasePurchaseID, false );
 				if ( eShowcase != 0 )
-					SetSelectOptionDisabled( $OtherSelect, eShowcase, true );
+					SetSelectOptionDisabled( $OtherSelect, eShowcase, nShowcasePurchaseID, true );
 			}
 		}
 
@@ -141,8 +148,8 @@ function OnSelectChange( $Previews, $PreviewsNone, $StyleCtn, $Select, iSlot )
 		}
 		else
 		{
-			$Previews.append( g_rgShowcasePreviews[ eShowcase ] );
-			$StyleCtn.append( g_rgShowcaseStyles[ eShowcase ] );
+			$Previews.append( g_rgShowcasePreviews[ eShowcase + '_' + nShowcasePurchaseID ] );
+			$StyleCtn.append( g_rgShowcaseStyles[ eShowcase + '_' + nShowcasePurchaseID ] );
 
 			$PreviewsNone.hide();
 			$Previews.show();
@@ -151,13 +158,14 @@ function OnSelectChange( $Previews, $PreviewsNone, $StyleCtn, $Select, iSlot )
 	}
 }
 
-function SetSelectOptionDisabled( $Select, value, bDisable )
+function SetSelectOptionDisabled( $Select, value, purchaseid, bDisable )
 {
 	var elSelect = $Select[0];
 	for ( var i=0; i < elSelect.options.length; i++ )
 	{
 		var option = elSelect.options[i];
-		if ( option.value == value )
+		var optionPurchaseID = $J( option ).data( 'purchaseid' );
+		if ( option.value == value && purchaseid == optionPurchaseID )
 		{
 			option.disabled = bDisable;
 			break;
@@ -175,20 +183,21 @@ function ChangeSelectedIndex( $Select, delta )
 }
 
 /* params should be object of appid, publishedfileid, etc */
-function SetShowcaseConfig( eShowcase, iSlot, params )
+function SetShowcaseConfig( eShowcase, purchaseid, iSlot, params )
 {
 	var rgParams = params || {};
 	rgParams.customization_type = eShowcase;
+	rgParams.purchaseid = purchaseid;
 	rgParams.slot = iSlot;
 	rgParams.sessionid = g_sessionID;
 
 	return $J.post( g_rgProfileData['url'] + 'ajaxsetshowcaseconfig', rgParams );
 }
 
-function ShowcaseGatherSlots( eShowcase )
+function ShowcaseGatherSlots( eShowcase, purchaseid )
 {
 	var rgSlots = {};
-	$J(g_rgShowcasePreviews[eShowcase]).find('[data-slotjson]').each( function() {
+	$J(g_rgShowcasePreviews[eShowcase + '_' + purchaseid]).find('[data-slotjson]').each( function() {
 		var json = this.getAttribute( 'data-slotjson' );
 		if ( json )
 		{
@@ -199,43 +208,46 @@ function ShowcaseGatherSlots( eShowcase )
 	return rgSlots;
 }
 
-function PreviewShowcaseConfigWithSlotChange( eShowcase, iSlot, rgSlot )
+function PreviewShowcaseConfigWithSlotChange( eShowcase, purchaseid, iSlot, rgSlot )
 {
 	// read the slot metadata embedded in the page
-	var rgSlots = ShowcaseGatherSlots( eShowcase );
+	var rgSlots = ShowcaseGatherSlots( eShowcase, purchaseid );
 	rgSlots[iSlot] = rgSlot;
-	PreviewShowcaseConfig( eShowcase, rgSlots );
+	PreviewShowcaseConfig( eShowcase, purchaseid, rgSlots );
 }
 
-function ShowcaseSetStyle( eShowcase, eShowcaseStyle )
+function ShowcaseSetStyle( eShowcase, purchaseid, eShowcaseStyle )
 {
 	// PreviewShowcaseConfig will read the style
-	PreviewShowcaseConfig( eShowcase, ShowcaseGatherSlots( eShowcase ) );
+	PreviewShowcaseConfig( eShowcase, purchaseid, ShowcaseGatherSlots( eShowcase, purchaseid ) );
 }
 
 /* params should be object of appid, publishedfileid, etc */
-function PreviewShowcaseConfig( eShowcase, rgSlotData )
+function PreviewShowcaseConfig( eShowcase, purchaseid, rgSlotData )
 {
 	var rgParams = {};
 	rgParams.customization_type = eShowcase;
+	rgParams.purchaseid = purchaseid;
 	rgParams.sessionid = g_sessionID;
 	rgParams.slot_data = V_ToJSON( rgSlotData );
 
 	// if this showcase has styles, include that in the preview
-	var $StyleSelect = $J('#showcase_style_' + eShowcase );
+	var $StyleSelect = $J('#showcase_style_' + eShowcase + '_' + purchaseid );
 	if ( $StyleSelect.length )
 		rgParams.customization_style = $StyleSelect.val();
 
+	var key = eShowcase + '_' + purchaseid;
+
 	$J.post( g_rgProfileData['url'] + 'ajaxpreviewshowcase', rgParams)
 	.done( function( data ) {
-		$J(g_rgShowcasePreviews[ eShowcase ]).html( data );
-		g_rgShowcaseStyles[eShowcase] = $J(g_rgShowcasePreviews[ eShowcase ]).children('.showcase_style_select_ctn').detach();
+		$J(g_rgShowcasePreviews[ key ]).html( data );
+		g_rgShowcaseStyles[key] = $J(g_rgShowcasePreviews[key]).children('.showcase_style_select_ctn').detach();
 	} ).fail( function() {
 		ShowAlertDialog( 'Error', 'There was an error communicating with the network. Please try again later.');
 	} );
 }
 
-function ShowcaseGamePicker( elSlot, eShowcase, iSlot, fnOnChange )
+function ShowcaseGamePicker( elSlot, eShowcase, purchaseid, iSlot, fnOnChange )
 {
 	var $DialogContent = $J('<div/>', {'class': '' });
 	$DialogContent.append( $J('<div/>', {'class': 'featured_game_dialog_header' }).text( 'Select one of your games to display as a Featured Game on your profile.' ) );
@@ -251,7 +263,7 @@ function ShowcaseGamePicker( elSlot, eShowcase, iSlot, fnOnChange )
 	if ( !fnOnChange )
 		fnOnChange = SetShowcaseGame;
 
-	var fnOnSelect = function( Selector, game ) { fnOnChange( elSlot, eShowcase, iSlot, game ); Modal.Dismiss(); };
+	var fnOnSelect = function( Selector, game ) { fnOnChange( elSlot, eShowcase, purchaseid, iSlot, game ); Modal.Dismiss(); };
 	var GameSelector = new CGameSelectorProfileShowcaseGames( $Input[0], null, null, fnOnSelect );
 }
 
@@ -306,7 +318,7 @@ function ShowcaseSalienCustomization()
 	});
 }
 
-function SetShowcaseGame( elSlot, eShowcase, iSlot, game )
+function SetShowcaseGame( elSlot, eShowcase, purchaseid, iSlot, game )
 {
 	SetShowcaseConfig(
 		eShowcase, iSlot, {appid: game.appid }
@@ -324,7 +336,7 @@ function SetShowcaseGame( elSlot, eShowcase, iSlot, game )
 	});
 }
 
-function FavoriteGameShowcaseOnGameChange( elSlot, eShowcase, iSlot, game )
+function FavoriteGameShowcaseOnGameChange( elSlot, eShowcase, purchaseid, iSlot, game )
 {
 	// this will show for a moment before the real data loads from the backend
 	$J(elSlot).find('img').attr( 'src', game.logo );
@@ -336,10 +348,10 @@ function FavoriteGameShowcaseOnGameChange( elSlot, eShowcase, iSlot, game )
 	$Showcase.find('.showcase_stats_row').hide();
 	$Showcase.find('.game_info_stats').hide();
 
-	PreviewShowcaseConfigWithSlotChange( eShowcase, iSlot, { appid: game.appid } );
+	PreviewShowcaseConfigWithSlotChange( eShowcase, purchaseid, iSlot, { appid: game.appid } );
 }
 
-function ShowcaseRecommendationPicker( elSlot, eShowcase, iSlot )
+function ShowcaseRecommendationPicker( elSlot, eShowcase, purchaseid, iSlot )
 {
 	var Modal = ShowDialog( 'Select a Game You\'ve Publicly Reviewed', '<div class="group_invite_throbber"><img src="https://community.cloudflare.steamstatic.com/public/images/login/throbber.gif"></div>' );
 	var $ListElement = $J('<div/>', {'class': 'newmodal_content_innerbg'} );
@@ -358,14 +370,14 @@ function ShowcaseRecommendationPicker( elSlot, eShowcase, iSlot )
 				$J(this).click( function() {
 					Modal.Dismiss();
 					$J( elSlot ).find( '.showcase_openslot_placeholder').html('<img src="https://community.cloudflare.steamstatic.com/public/images/login/throbber.gif">');
-					PreviewShowcaseConfigWithSlotChange( eShowcase, iSlot, { appid: appid } );
+					PreviewShowcaseConfigWithSlotChange( eShowcase, purchaseid, iSlot, { appid: appid } );
 				} );
 			}
 		});
 	});
 }
 
-function ShowcaseItemPicker( elSlot, eShowcase, iSlot, bTradableOnly )
+function ShowcaseItemPicker( elSlot, eShowcase, purchaseid, iSlot, bTradableOnly )
 {
 	var url = g_rgProfileData['url'] + 'inventory/?modal=1&picker=1&showcase=1';
 
@@ -382,7 +394,7 @@ function ShowcaseItemPicker( elSlot, eShowcase, iSlot, bTradableOnly )
 		
 		// save the showcase config
 		SetShowcaseConfig(
-			eShowcase, iSlot, {appid: item.appid, item_contextid: item.contextid, item_assetid: item.assetid || item.id }
+			eShowcase, purchaseid, iSlot, {appid: item.appid, item_contextid: item.contextid, item_assetid: item.assetid || item.id }
 		).done( function() {
 			var description = item.description || item;
 
@@ -405,16 +417,16 @@ function ShowcaseItemPicker( elSlot, eShowcase, iSlot, bTradableOnly )
 	}
 }
 
-function ShowcaseClearItem( elSlot, eShowcase, iSlot )
+function ShowcaseClearItem( elSlot, eShowcase, purchaseid, iSlot )
 {
-	SetShowcaseConfig( eShowcase, iSlot, {appid: 0, item_contextid: 0, item_assetid: 0} );
+	SetShowcaseConfig( eShowcase, purchaseid, iSlot, {appid: 0, item_contextid: 0, item_assetid: 0} );
 	$J(elSlot).find('img.item_image').attr( 'src', 'https://community.cloudflare.steamstatic.com/public/images/trans.gif' ).attr( 'srcset', '' );
 	$J(elSlot).css( 'border-color', '' );
 	$J(elSlot).css( 'background-color', '' );
 	$J(elSlot).addClass( 'openslot' );
 }
 
-function ShowcasePublishedFilePicker( elSlot, eShowcase, iSlot, strDialogTitle, strType, strDialogSubTitle )
+function ShowcasePublishedFilePicker( elSlot, eShowcase, purchaseid, iSlot, strDialogTitle, strType, strDialogSubTitle )
 {
 	var url = g_rgProfileData['url'] + 'publishedfilebrowsepopup/' + strType + '/';
 
@@ -427,12 +439,12 @@ function ShowcasePublishedFilePicker( elSlot, eShowcase, iSlot, strDialogTitle, 
 	window.OnPublishedFileSelected = function( publishedfileid )
 	{
 		Modal.Dismiss();
-		PreviewShowcaseConfigWithSlotChange( eShowcase, iSlot, { publishedfileid: publishedfileid } );
+		PreviewShowcaseConfigWithSlotChange( eShowcase, purchaseid, iSlot, { publishedfileid: publishedfileid } );
 	};
 }
 
 var g_AchievementShowcaseLastApp = 0;
-function ShowcaseAchievementPicker( elSlot, eShowcase, iSlot, rgGamesWithAchievements )
+function ShowcaseAchievementPicker( elSlot, eShowcase, purchaseid, iSlot, rgGamesWithAchievements )
 {
 	var $Content = $J('<div/>', {'class': 'showcase_achievement_picker'} );
 	var $SelectCtn = $J('<div/>', {'class': 'showcase_achievement_picker_select_ctn'});
@@ -481,7 +493,7 @@ function ShowcaseAchievementPicker( elSlot, eShowcase, iSlot, rgGamesWithAchieve
 							$Achievement.click( function() {
 								var statid = $Achievement.data('statid');
 								var bit = $Achievement.data('bit');
-								PreviewShowcaseConfigWithSlotChange( eShowcase, iSlot, { appid: appid, title: statid + '_' + bit } );
+								PreviewShowcaseConfigWithSlotChange( eShowcase, purchaseid, iSlot, { appid: appid, title: statid + '_' + bit } );
 								Modal.Dismiss();
 							} );
 						});
@@ -498,7 +510,7 @@ function ShowcaseAchievementPicker( elSlot, eShowcase, iSlot, rgGamesWithAchieve
 
 }
 
-function ShowcaseBadgePicker( elSlot, eShowcaseType, iSlot )
+function ShowcaseBadgePicker( elSlot, eShowcaseType, purchaseid, iSlot )
 {
 	ShowSelectBadgeDialog( function( Badge ) {
 		var rgSlot;
@@ -512,7 +524,7 @@ function ShowcaseBadgePicker( elSlot, eShowcaseType, iSlot )
 			if ( !Badge.is_blank_badge )
 				rgSlot.badgeid = Badge.badgeid;
 		}
-		PreviewShowcaseConfigWithSlotChange( eShowcaseType, iSlot, rgSlot );
+		PreviewShowcaseConfigWithSlotChange( eShowcaseType, purchaseid, iSlot, rgSlot );
 	} );
 }
 
@@ -532,7 +544,7 @@ function LoadPlayerGroupList( fnCallback )
 	}
 }
 
-function ShowcaseGroupPicker( elSlot, eShowcase, iSlot, fnOnChange )
+function ShowcaseGroupPicker( elSlot, eShowcase, purchaseid, iSlot, fnOnChange )
 {
 	var Modal = ShowDialog( 'Select a Group to Feature', '<div class="group_invite_throbber"><img src="https://community.cloudflare.steamstatic.com/public/images/login/throbber.gif"></div>' );
 	var $ListElement = $J('<div/>', {'class': 'newmodal_content_innerbg'} );
@@ -551,7 +563,7 @@ function ShowcaseGroupPicker( elSlot, eShowcase, iSlot, fnOnChange )
 				$J(this).click( function() {
 					Modal.Dismiss();
 					$J( elSlot ).find( '.showcase_openslot_placeholder').html('<img src="https://community.cloudflare.steamstatic.com/public/images/login/throbber.gif">');
-					PreviewShowcaseConfigWithSlotChange( eShowcase, iSlot, { steamid: groupid } );
+					PreviewShowcaseConfigWithSlotChange( eShowcase, purchaseid, iSlot, { steamid: groupid } );
 				} );
 			}
 		});

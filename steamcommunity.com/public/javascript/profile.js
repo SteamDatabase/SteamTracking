@@ -738,11 +738,11 @@ function UpdateProfileTextContentCheckResult( steamID, ban )
 	});
 }
 
-function UpdateProfileShowcaseContentCheckResult( steamID, type, slot, ban )
+function UpdateProfileShowcaseContentCheckResult( steamID, type, slot, purchaseid, ban )
 {
 	var dialog = ShowConfirmDialog( 'Update Automated Text Content Check Result?', !ban ? 'Are you sure you want to reset the automated text content check result for this user\'s profile showcase?  This cannot be undone.' : 'Are you sure you want to mark this user\'s profile showcase containing harmful content? This cannot be undone.' );
 	dialog.done( function() {
-		$J.post( 'https://steamcommunity.com/moderation/ajaxupdateprofileshowcasecontentcheckresult/', { sessionid: g_sessionID, steamid: steamID, type: type, slot: slot, ban: ban ? 1 : 0 } )
+		$J.post( 'https://steamcommunity.com/moderation/ajaxupdateprofileshowcasecontentcheckresult/', { sessionid: g_sessionID, steamid: steamID, type: type, slot: slot, purchaseid: purchaseid, ban: ban ? 1 : 0 } )
 		.done( function( data ) {
 			top.location.reload();
 		} );

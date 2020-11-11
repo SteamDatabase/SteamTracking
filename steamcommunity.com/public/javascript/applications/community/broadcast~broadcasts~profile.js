@@ -30,19 +30,19 @@
           return D;
         }),
         t.d(r, "l", function() {
-          return ee;
+          return ne;
         }),
         t.d(r, "a", function() {
-          return Be;
+          return ve;
         }),
         t.d(r, "b", function() {
-          return _e;
-        }),
-        t.d(r, "m", function() {
           return Me;
         }),
+        t.d(r, "m", function() {
+          return ge;
+        }),
         t.d(r, "e", function() {
-          return he;
+          return je;
         }),
         t.d(r, "n", function() {
           return n;
@@ -54,8 +54,8 @@
       var n,
         s,
         c,
-        l,
-        f = (function(t) {
+        f,
+        l = (function(t) {
           function n(e) {
             void 0 === e && (e = null);
             var r = t.call(this) || this;
@@ -2510,6 +2510,11 @@
                         n: 5,
                         br: a.d.readEnum,
                         bw: a.h.writeEnum
+                      },
+                      purchaseid: {
+                        n: 6,
+                        br: a.d.readUint64String,
+                        bw: a.h.writeUint64String
                       }
                     }
                   }),
@@ -2617,7 +2622,7 @@
             var r = t.call(this) || this;
             return (
               n.prototype.customizations || a.a(n.M()),
-              u.initialize(r, e, 0, -1, [1], null),
+              u.initialize(r, e, 0, -1, [1, 4], null),
               r
             );
           }
@@ -2635,7 +2640,8 @@
                         br: a.d.readUint32,
                         bw: a.h.writeUint32
                       },
-                      profile_theme: { n: 3, c: X }
+                      profile_theme: { n: 3, c: X },
+                      purchased_customizations: { n: 4, c: Z, r: !0, q: !0 }
                     }
                   }),
                 n.sm_m
@@ -2675,6 +2681,195 @@
           );
         })(u),
         Z = (function(t) {
+          function n(e) {
+            void 0 === e && (e = null);
+            var r = t.call(this) || this;
+            return (
+              n.prototype.purchaseid || a.a(n.M()),
+              u.initialize(r, e, 0, -1, void 0, null),
+              r
+            );
+          }
+          return (
+            Object(i.d)(n, t),
+            (n.M = function() {
+              return (
+                n.sm_m ||
+                  (n.sm_m = {
+                    proto: n,
+                    fields: {
+                      purchaseid: {
+                        n: 1,
+                        br: a.d.readUint64String,
+                        bw: a.h.writeUint64String
+                      },
+                      customization_type: {
+                        n: 2,
+                        br: a.d.readEnum,
+                        bw: a.h.writeEnum
+                      }
+                    }
+                  }),
+                n.sm_m
+              );
+            }),
+            (n.MBF = function() {
+              return n.sm_mbf || (n.sm_mbf = a.e(n.M())), n.sm_mbf;
+            }),
+            (n.prototype.toObject = function(e) {
+              return void 0 === e && (e = !1), n.toObject(e, this);
+            }),
+            (n.toObject = function(e, r) {
+              return a.g(n.M(), e, r);
+            }),
+            (n.fromObject = function(e) {
+              return a.c(n.M(), e);
+            }),
+            (n.deserializeBinary = function(e) {
+              var r = new o.BinaryReader(e),
+                t = new n();
+              return n.deserializeBinaryFromReader(t, r);
+            }),
+            (n.deserializeBinaryFromReader = function(e, r) {
+              return a.b(n.MBF(), e, r);
+            }),
+            (n.prototype.serializeBinary = function() {
+              var e = new o.BinaryWriter();
+              return n.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            }),
+            (n.serializeBinaryToWriter = function(e, r) {
+              a.f(n.M(), e, r);
+            }),
+            (n.prototype.getClassName = function() {
+              return "CPlayer_GetProfileCustomization_Response_PurchasedCustomization";
+            }),
+            n
+          );
+        })(u),
+        ee = (function(t) {
+          function n(e) {
+            void 0 === e && (e = null);
+            var r = t.call(this) || this;
+            return (
+              n.prototype.purchased_customizations || a.a(n.M()),
+              u.initialize(r, e, 0, -1, [1], null),
+              r
+            );
+          }
+          return (
+            Object(i.d)(n, t),
+            (n.M = function() {
+              return (
+                n.sm_m ||
+                  (n.sm_m = {
+                    proto: n,
+                    fields: {
+                      purchased_customizations: { n: 1, c: re, r: !0, q: !0 }
+                    }
+                  }),
+                n.sm_m
+              );
+            }),
+            (n.MBF = function() {
+              return n.sm_mbf || (n.sm_mbf = a.e(n.M())), n.sm_mbf;
+            }),
+            (n.prototype.toObject = function(e) {
+              return void 0 === e && (e = !1), n.toObject(e, this);
+            }),
+            (n.toObject = function(e, r) {
+              return a.g(n.M(), e, r);
+            }),
+            (n.fromObject = function(e) {
+              return a.c(n.M(), e);
+            }),
+            (n.deserializeBinary = function(e) {
+              var r = new o.BinaryReader(e),
+                t = new n();
+              return n.deserializeBinaryFromReader(t, r);
+            }),
+            (n.deserializeBinaryFromReader = function(e, r) {
+              return a.b(n.MBF(), e, r);
+            }),
+            (n.prototype.serializeBinary = function() {
+              var e = new o.BinaryWriter();
+              return n.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            }),
+            (n.serializeBinaryToWriter = function(e, r) {
+              a.f(n.M(), e, r);
+            }),
+            (n.prototype.getClassName = function() {
+              return "CPlayer_GetPurchasedProfileCustomizations_Response";
+            }),
+            n
+          );
+        })(u),
+        re = (function(t) {
+          function n(e) {
+            void 0 === e && (e = null);
+            var r = t.call(this) || this;
+            return (
+              n.prototype.purchaseid || a.a(n.M()),
+              u.initialize(r, e, 0, -1, void 0, null),
+              r
+            );
+          }
+          return (
+            Object(i.d)(n, t),
+            (n.M = function() {
+              return (
+                n.sm_m ||
+                  (n.sm_m = {
+                    proto: n,
+                    fields: {
+                      purchaseid: {
+                        n: 1,
+                        br: a.d.readUint64String,
+                        bw: a.h.writeUint64String
+                      },
+                      customization_type: {
+                        n: 2,
+                        br: a.d.readEnum,
+                        bw: a.h.writeEnum
+                      }
+                    }
+                  }),
+                n.sm_m
+              );
+            }),
+            (n.MBF = function() {
+              return n.sm_mbf || (n.sm_mbf = a.e(n.M())), n.sm_mbf;
+            }),
+            (n.prototype.toObject = function(e) {
+              return void 0 === e && (e = !1), n.toObject(e, this);
+            }),
+            (n.toObject = function(e, r) {
+              return a.g(n.M(), e, r);
+            }),
+            (n.fromObject = function(e) {
+              return a.c(n.M(), e);
+            }),
+            (n.deserializeBinary = function(e) {
+              var r = new o.BinaryReader(e),
+                t = new n();
+              return n.deserializeBinaryFromReader(t, r);
+            }),
+            (n.deserializeBinaryFromReader = function(e, r) {
+              return a.b(n.MBF(), e, r);
+            }),
+            (n.prototype.serializeBinary = function() {
+              var e = new o.BinaryWriter();
+              return n.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            }),
+            (n.serializeBinaryToWriter = function(e, r) {
+              a.f(n.M(), e, r);
+            }),
+            (n.prototype.getClassName = function() {
+              return "CPlayer_GetPurchasedProfileCustomizations_Response_PurchasedCustomization";
+            }),
+            n
+          );
+        })(u),
+        te = (function(t) {
           function n(e) {
             void 0 === e && (e = null);
             var r = t.call(this) || this;
@@ -2729,7 +2924,7 @@
             n
           );
         })(u),
-        ee = (function(t) {
+        ne = (function(t) {
           function n(e) {
             void 0 === e && (e = null);
             var r = t.call(this) || this;
@@ -2790,7 +2985,7 @@
             n
           );
         })(u),
-        re = (function(t) {
+        ie = (function(t) {
           function n(e) {
             void 0 === e && (e = null);
             var r = t.call(this) || this;
@@ -2826,7 +3021,7 @@
             n
           );
         })(u),
-        te = (function(t) {
+        oe = (function(t) {
           function n(e) {
             void 0 === e && (e = null);
             var r = t.call(this) || this;
@@ -2844,12 +3039,12 @@
                   (n.sm_m = {
                     proto: n,
                     fields: {
-                      your_info: { n: 1, c: ie },
-                      in_game: { n: 2, c: ne, r: !0, q: !0 },
-                      played_recently: { n: 3, c: ne, r: !0, q: !0 },
-                      played_ever: { n: 4, c: ne, r: !0, q: !0 },
-                      owns: { n: 5, c: ne, r: !0, q: !0 },
-                      in_wishlist: { n: 6, c: ne, r: !0, q: !0 }
+                      your_info: { n: 1, c: ue },
+                      in_game: { n: 2, c: ae, r: !0, q: !0 },
+                      played_recently: { n: 3, c: ae, r: !0, q: !0 },
+                      played_ever: { n: 4, c: ae, r: !0, q: !0 },
+                      owns: { n: 5, c: ae, r: !0, q: !0 },
+                      in_wishlist: { n: 6, c: ae, r: !0, q: !0 }
                     }
                   }),
                 n.sm_m
@@ -2888,7 +3083,7 @@
             n
           );
         })(u),
-        ne = (function(t) {
+        ae = (function(t) {
           function n(e) {
             void 0 === e && (e = null);
             var r = t.call(this) || this;
@@ -2959,7 +3154,7 @@
             n
           );
         })(u),
-        ie = (function(t) {
+        ue = (function(t) {
           function n(e) {
             void 0 === e && (e = null);
             var r = t.call(this) || this;
@@ -3036,7 +3231,7 @@
             n
           );
         })(u),
-        oe = (function(t) {
+        se = (function(t) {
           function n(e) {
             void 0 === e && (e = null);
             var r = t.call(this) || this;
@@ -3054,14 +3249,14 @@
                   (n.sm_m = {
                     proto: n,
                     fields: {
-                      trending: { n: 1, c: ue, r: !0, q: !0 },
-                      recent_purchases: { n: 2, c: ue, r: !0, q: !0 },
-                      unowned: { n: 3, c: ue, r: !0, q: !0 },
-                      popular: { n: 4, c: ue, r: !0, q: !0 },
-                      dont_forget: { n: 5, c: ue, r: !0, q: !0 },
-                      being_discussed: { n: 6, c: ue, r: !0, q: !0 },
-                      new_to_group: { n: 7, c: ue, r: !0, q: !0 },
-                      returned_to_group: { n: 8, c: ue, r: !0, q: !0 },
+                      trending: { n: 1, c: fe, r: !0, q: !0 },
+                      recent_purchases: { n: 2, c: fe, r: !0, q: !0 },
+                      unowned: { n: 3, c: fe, r: !0, q: !0 },
+                      popular: { n: 4, c: fe, r: !0, q: !0 },
+                      dont_forget: { n: 5, c: fe, r: !0, q: !0 },
+                      being_discussed: { n: 6, c: fe, r: !0, q: !0 },
+                      new_to_group: { n: 7, c: fe, r: !0, q: !0 },
+                      returned_to_group: { n: 8, c: fe, r: !0, q: !0 },
                       active_friend_count: {
                         n: 9,
                         d: 0,
@@ -3106,7 +3301,7 @@
             n
           );
         })(u),
-        ae = (function(t) {
+        ce = (function(t) {
           function n(e) {
             void 0 === e && (e = null);
             var r = t.call(this) || this;
@@ -3187,7 +3382,7 @@
             n
           );
         })(u),
-        ue = (function(t) {
+        fe = (function(t) {
           function n(e) {
             void 0 === e && (e = null);
             var r = t.call(this) || this;
@@ -3206,7 +3401,7 @@
                     proto: n,
                     fields: {
                       appid: { n: 1, br: a.d.readUint32, bw: a.h.writeUint32 },
-                      friends: { n: 2, c: ae, r: !0, q: !0 },
+                      friends: { n: 2, c: ce, r: !0, q: !0 },
                       display_order: {
                         n: 3,
                         br: a.d.readUint32,
@@ -3250,7 +3445,7 @@
             n
           );
         })(u),
-        se = (function(t) {
+        le = (function(t) {
           function n(e) {
             void 0 === e && (e = null);
             var r = t.call(this) || this;
@@ -3286,7 +3481,7 @@
             n
           );
         })(u),
-        ce = (function(t) {
+        de = (function(t) {
           function n(e) {
             void 0 === e && (e = null);
             var r = t.call(this) || this;
@@ -3303,7 +3498,7 @@
                 n.sm_m ||
                   (n.sm_m = {
                     proto: n,
-                    fields: { nicknames: { n: 1, c: le, r: !0, q: !0 } }
+                    fields: { nicknames: { n: 1, c: me, r: !0, q: !0 } }
                   }),
                 n.sm_m
               );
@@ -3341,7 +3536,7 @@
             n
           );
         })(u),
-        le = (function(t) {
+        me = (function(t) {
           function n(e) {
             void 0 === e && (e = null);
             var r = t.call(this) || this;
@@ -3407,7 +3602,7 @@
             n
           );
         })(u),
-        fe = (function(t) {
+        ye = (function(t) {
           function n(e) {
             void 0 === e && (e = null);
             var r = t.call(this) || this;
@@ -3508,7 +3703,7 @@
             n
           );
         })(u),
-        de = (function(t) {
+        be = (function(t) {
           function n(e) {
             void 0 === e && (e = null);
             var r = t.call(this) || this;
@@ -3525,7 +3720,7 @@
                 n.sm_m ||
                   (n.sm_m = {
                     proto: n,
-                    fields: { preferences: { n: 1, c: fe, r: !0, q: !0 } }
+                    fields: { preferences: { n: 1, c: ye, r: !0, q: !0 } }
                   }),
                 n.sm_m
               );
@@ -3563,7 +3758,7 @@
             n
           );
         })(u),
-        me = (function(t) {
+        pe = (function(t) {
           function n(e) {
             void 0 === e && (e = null);
             var r = t.call(this) || this;
@@ -3599,7 +3794,7 @@
             n
           );
         })(u),
-        ye = (function(t) {
+        Be = (function(t) {
           function n(e) {
             void 0 === e && (e = null);
             var r = t.call(this) || this;
@@ -3666,7 +3861,7 @@
             n
           );
         })(u),
-        be = (function(t) {
+        _e = (function(t) {
           function n(e) {
             void 0 === e && (e = null);
             var r = t.call(this) || this;
@@ -3727,7 +3922,7 @@
             n
           );
         })(u),
-        pe = (function(t) {
+        we = (function(t) {
           function n(e) {
             void 0 === e && (e = null);
             var r = t.call(this) || this;
@@ -3788,7 +3983,7 @@
             n
           );
         })(u),
-        Be = (function(t) {
+        ve = (function(t) {
           function n(e) {
             void 0 === e && (e = null);
             var r = t.call(this) || this;
@@ -3826,7 +4021,6 @@
                       },
                       text_filter_setting: {
                         n: 5,
-                        d: 1,
                         br: a.d.readEnum,
                         bw: a.h.writeEnum
                       },
@@ -3884,7 +4078,7 @@
             n
           );
         })(u),
-        _e = (function(t) {
+        Me = (function(t) {
           function n(e) {
             void 0 === e && (e = null);
             var r = t.call(this) || this;
@@ -3920,7 +4114,7 @@
             n
           );
         })(u),
-        we = (function(t) {
+        he = (function(t) {
           function n(e) {
             void 0 === e && (e = null);
             var r = t.call(this) || this;
@@ -3937,7 +4131,7 @@
                 n.sm_m ||
                   (n.sm_m = {
                     proto: n,
-                    fields: { preferences: { n: 1, c: Be } }
+                    fields: { preferences: { n: 1, c: ve } }
                   }),
                 n.sm_m
               );
@@ -3975,7 +4169,7 @@
             n
           );
         })(u),
-        ve = (function(t) {
+        ze = (function(t) {
           function n(e) {
             void 0 === e && (e = null);
             var r = t.call(this) || this;
@@ -4011,7 +4205,7 @@
             n
           );
         })(u),
-        Me = (function(t) {
+        ge = (function(t) {
           function n(e) {
             void 0 === e && (e = null);
             var r = t.call(this) || this;
@@ -4086,7 +4280,7 @@
             n
           );
         })(u),
-        he = (function(t) {
+        je = (function(t) {
           function n(e) {
             void 0 === e && (e = null);
             var r = t.call(this) || this;
@@ -4122,7 +4316,7 @@
             n
           );
         })(u),
-        ze = (function(t) {
+        Oe = (function(t) {
           function n(e) {
             void 0 === e && (e = null);
             var r = t.call(this) || this;
@@ -4137,7 +4331,7 @@
             (n.M = function() {
               return (
                 n.sm_m ||
-                  (n.sm_m = { proto: n, fields: { words: { n: 1, c: Me } } }),
+                  (n.sm_m = { proto: n, fields: { words: { n: 1, c: ge } } }),
                 n.sm_m
               );
             }),
@@ -4174,7 +4368,7 @@
             n
           );
         })(u),
-        ge = (function(t) {
+        Re = (function(t) {
           function n(e) {
             void 0 === e && (e = null);
             var r = t.call(this) || this;
@@ -4251,7 +4445,7 @@
             n
           );
         })(u),
-        je = (function(t) {
+        Fe = (function(t) {
           function n(e) {
             void 0 === e && (e = null);
             var r = t.call(this) || this;
@@ -4287,7 +4481,7 @@
             n
           );
         })(u),
-        Oe = (function(t) {
+        Pe = (function(t) {
           function n(e) {
             void 0 === e && (e = null);
             var r = t.call(this) || this;
@@ -4373,7 +4567,7 @@
             n
           );
         })(u),
-        Re = (function(t) {
+        We = (function(t) {
           function n(e) {
             void 0 === e && (e = null);
             var r = t.call(this) || this;
@@ -4390,7 +4584,7 @@
                 n.sm_m ||
                   (n.sm_m = {
                     proto: n,
-                    fields: { privacy_settings: { n: 1, c: Oe } }
+                    fields: { privacy_settings: { n: 1, c: Pe } }
                   }),
                 n.sm_m
               );
@@ -4428,7 +4622,7 @@
             n
           );
         })(u),
-        Fe = (function(t) {
+        Se = (function(t) {
           function n(e) {
             void 0 === e && (e = null);
             var r = t.call(this) || this;
@@ -4506,7 +4700,7 @@
             n
           );
         })(u),
-        Pe = (function(t) {
+        Ce = (function(t) {
           function n(e) {
             void 0 === e && (e = null);
             var r = t.call(this) || this;
@@ -4561,7 +4755,7 @@
             n
           );
         })(u),
-        We = (function(t) {
+        Te = (function(t) {
           function n(e) {
             void 0 === e && (e = null);
             var r = t.call(this) || this;
@@ -4632,7 +4826,7 @@
             n
           );
         })(u),
-        Se = (function(t) {
+        Ue = (function(t) {
           function n(e) {
             void 0 === e && (e = null);
             var r = t.call(this) || this;
@@ -4693,7 +4887,7 @@
             n
           );
         })(u),
-        Ce = (function(t) {
+        Ne = (function(t) {
           function n(e) {
             void 0 === e && (e = null);
             var r = t.call(this) || this;
@@ -4770,7 +4964,7 @@
             n
           );
         })(u),
-        Te = (function(t) {
+        Ge = (function(t) {
           function n(e) {
             void 0 === e && (e = null);
             var r = t.call(this) || this;
@@ -4787,7 +4981,7 @@
                 n.sm_m ||
                   (n.sm_m = {
                     proto: n,
-                    fields: { preferences: { n: 1, c: Be } }
+                    fields: { preferences: { n: 1, c: ve } }
                   }),
                 n.sm_m
               );
@@ -4825,7 +5019,7 @@
             n
           );
         })(u),
-        Ue = (function(t) {
+        Ie = (function(t) {
           function n(e) {
             void 0 === e && (e = null);
             var r = t.call(this) || this;
@@ -4840,7 +5034,7 @@
             (n.M = function() {
               return (
                 n.sm_m ||
-                  (n.sm_m = { proto: n, fields: { words: { n: 1, c: Me } } }),
+                  (n.sm_m = { proto: n, fields: { words: { n: 1, c: ge } } }),
                 n.sm_m
               );
             }),
@@ -4877,7 +5071,7 @@
             n
           );
         })(u),
-        Ne = (function(t) {
+        qe = (function(t) {
           function n(e) {
             void 0 === e && (e = null);
             var r = t.call(this) || this;
@@ -4900,7 +5094,7 @@
                         br: a.d.readFixed32,
                         bw: a.h.writeFixed32
                       },
-                      preferences: { n: 2, c: fe }
+                      preferences: { n: 2, c: ye }
                     }
                   }),
                 n.sm_m
@@ -4939,7 +5133,7 @@
             n
           );
         })(u),
-        Ge = (function(t) {
+        Ae = (function(t) {
           function n(e) {
             void 0 === e && (e = null);
             var r = t.call(this) || this;
@@ -4956,7 +5150,7 @@
                 n.sm_m ||
                   (n.sm_m = {
                     proto: n,
-                    fields: { privacy_settings: { n: 1, c: Oe } }
+                    fields: { privacy_settings: { n: 1, c: Pe } }
                   }),
                 n.sm_m
               );
@@ -5014,13 +5208,13 @@
           });
         }),
         (s.GetFriendsGameplayInfo = function(e, r) {
-          return e.SendMsg("Player.GetFriendsGameplayInfo#1", r, te, {
+          return e.SendMsg("Player.GetFriendsGameplayInfo#1", r, oe, {
             bConstMethod: !0,
             ePrivilege: 1
           });
         }),
         (s.GetFriendsAppsActivity = function(e, r) {
-          return e.SendMsg("Player.GetFriendsAppsActivity#1", r, oe, {
+          return e.SendMsg("Player.GetFriendsAppsActivity#1", r, se, {
             bConstMethod: !0,
             ePrivilege: 1
           });
@@ -5125,14 +5319,22 @@
             eWebAPIKeyRequirement: 1
           });
         }),
+        (s.GetPurchasedProfileCustomizations = function(e, r) {
+          return e.SendMsg(
+            "Player.GetPurchasedProfileCustomizations#1",
+            r,
+            ee,
+            { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 }
+          );
+        }),
         (s.GetProfileThemesAvailable = function(e, r) {
-          return e.SendMsg("Player.GetProfileThemesAvailable#1", r, Z, {
+          return e.SendMsg("Player.GetProfileThemesAvailable#1", r, te, {
             bConstMethod: !0,
             ePrivilege: 1
           });
         }),
         (s.SetProfileTheme = function(e, r) {
-          return e.SendMsg("Player.SetProfileTheme#1", r, re, {
+          return e.SendMsg("Player.SetProfileTheme#1", r, ie, {
             ePrivilege: 1
           });
         }),
@@ -5153,108 +5355,108 @@
           });
         }),
         (s.ClientGetLastPlayedTimes = function(e, r) {
-          return e.SendMsg("Player.ClientGetLastPlayedTimes#1", r, f, {
+          return e.SendMsg("Player.ClientGetLastPlayedTimes#1", r, l, {
             bConstMethod: !0,
             ePrivilege: 2,
             eWebAPIKeyRequirement: 1
           });
         }),
         (s.AcceptSSA = function(e, r) {
-          return e.SendMsg("Player.AcceptSSA#1", r, se, { ePrivilege: 1 });
+          return e.SendMsg("Player.AcceptSSA#1", r, le, { ePrivilege: 1 });
         }),
         (s.GetNicknameList = function(e, r) {
-          return e.SendMsg("Player.GetNicknameList#1", r, ce, {
+          return e.SendMsg("Player.GetNicknameList#1", r, de, {
             bConstMethod: !0,
             ePrivilege: 1
           });
         }),
         (s.GetPerFriendPreferences = function(e, r) {
-          return e.SendMsg("Player.GetPerFriendPreferences#1", r, de, {
+          return e.SendMsg("Player.GetPerFriendPreferences#1", r, be, {
             bConstMethod: !0,
             ePrivilege: 1
           });
         }),
         (s.SetPerFriendPreferences = function(e, r) {
-          return e.SendMsg("Player.SetPerFriendPreferences#1", r, me, {
+          return e.SendMsg("Player.SetPerFriendPreferences#1", r, pe, {
             ePrivilege: 1
           });
         }),
         (s.AddFriend = function(e, r) {
-          return e.SendMsg("Player.AddFriend#1", r, ye, { ePrivilege: 1 });
+          return e.SendMsg("Player.AddFriend#1", r, Be, { ePrivilege: 1 });
         }),
         (s.RemoveFriend = function(e, r) {
-          return e.SendMsg("Player.RemoveFriend#1", r, be, { ePrivilege: 1 });
+          return e.SendMsg("Player.RemoveFriend#1", r, _e, { ePrivilege: 1 });
         }),
         (s.IgnoreFriend = function(e, r) {
-          return e.SendMsg("Player.IgnoreFriend#1", r, pe, { ePrivilege: 1 });
+          return e.SendMsg("Player.IgnoreFriend#1", r, we, { ePrivilege: 1 });
         }),
         (s.GetCommunityPreferences = function(e, r) {
-          return e.SendMsg("Player.GetCommunityPreferences#1", r, we, {
+          return e.SendMsg("Player.GetCommunityPreferences#1", r, he, {
             ePrivilege: 1
           });
         }),
         (s.SetCommunityPreferences = function(e, r) {
-          return e.SendMsg("Player.SetCommunityPreferences#1", r, ve, {
+          return e.SendMsg("Player.SetCommunityPreferences#1", r, ze, {
             ePrivilege: 1
           });
         }),
         (s.GetTextFilterWords = function(e, r) {
-          return e.SendMsg("Player.GetTextFilterWords#1", r, ze, {
+          return e.SendMsg("Player.GetTextFilterWords#1", r, Oe, {
             ePrivilege: 1
           });
         }),
         (s.GetNewSteamAnnouncementState = function(e, r) {
-          return e.SendMsg("Player.GetNewSteamAnnouncementState#1", r, ge, {
+          return e.SendMsg("Player.GetNewSteamAnnouncementState#1", r, Re, {
             bConstMethod: !0,
             ePrivilege: 1
           });
         }),
         (s.UpdateSteamAnnouncementLastRead = function(e, r) {
-          return e.SendMsg("Player.UpdateSteamAnnouncementLastRead#1", r, je, {
+          return e.SendMsg("Player.UpdateSteamAnnouncementLastRead#1", r, Fe, {
             ePrivilege: 1
           });
         }),
         (s.GetPrivacySettings = function(e, r) {
-          return e.SendMsg("Player.GetPrivacySettings#1", r, Re, {
+          return e.SendMsg("Player.GetPrivacySettings#1", r, We, {
             ePrivilege: 1
           });
         }),
         (s.GetDurationControl = function(e, r) {
-          return e.SendMsg("Player.GetDurationControl#1", r, Fe, {
+          return e.SendMsg("Player.GetDurationControl#1", r, Se, {
             ePrivilege: 1
           });
         }),
-        ((l = c = c || {}).NotifyLastPlayedTimesHandler = {
+        ((f = c = c || {}).NotifyLastPlayedTimesHandler = {
           name: "PlayerClient.NotifyLastPlayedTimes#1",
-          request: Pe
-        }),
-        (l.NotifyFriendNicknameChangedHandler = {
-          name: "PlayerClient.NotifyFriendNicknameChanged#1",
-          request: We
-        }),
-        (l.NotifyFriendEquippedProfileItemsChangedHandler = {
-          name: "PlayerClient.NotifyFriendEquippedProfileItemsChanged#1",
-          request: Se
-        }),
-        (l.NotifyNewSteamAnnouncementStateHandler = {
-          name: "PlayerClient.NotifyNewSteamAnnouncementState#1",
           request: Ce
         }),
-        (l.NotifyCommunityPreferencesChangedHandler = {
-          name: "PlayerClient.NotifyCommunityPreferencesChanged#1",
+        (f.NotifyFriendNicknameChangedHandler = {
+          name: "PlayerClient.NotifyFriendNicknameChanged#1",
           request: Te
         }),
-        (l.NotifyTextFilterWordsChangedHandler = {
-          name: "PlayerClient.NotifyTextFilterWordsChanged#1",
+        (f.NotifyFriendEquippedProfileItemsChangedHandler = {
+          name: "PlayerClient.NotifyFriendEquippedProfileItemsChanged#1",
           request: Ue
         }),
-        (l.NotifyPerFriendPreferencesChangedHandler = {
-          name: "PlayerClient.NotifyPerFriendPreferencesChanged#1",
+        (f.NotifyNewSteamAnnouncementStateHandler = {
+          name: "PlayerClient.NotifyNewSteamAnnouncementState#1",
           request: Ne
         }),
-        (l.NotifyPrivacyPrivacySettingsChangedHandler = {
-          name: "PlayerClient.NotifyPrivacyPrivacySettingsChanged#1",
+        (f.NotifyCommunityPreferencesChangedHandler = {
+          name: "PlayerClient.NotifyCommunityPreferencesChanged#1",
           request: Ge
+        }),
+        (f.NotifyTextFilterWordsChangedHandler = {
+          name: "PlayerClient.NotifyTextFilterWordsChanged#1",
+          request: Ie
+        }),
+        (f.NotifyPerFriendPreferencesChangedHandler = {
+          name: "PlayerClient.NotifyPerFriendPreferencesChanged#1",
+          request: qe
+        }),
+        (f.NotifyPrivacyPrivacySettingsChangedHandler = {
+          name: "PlayerClient.NotifyPrivacyPrivacySettingsChanged#1",
+          request: Ae
         });
     },
     u2yL: function(e, r, t) {

@@ -1126,19 +1126,7 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   .dropdown_DialogDropDownMenu_Item_2oAiZ:hover {
     background: #3e444d; }
 
-.dropdown_DialogDropDownMenu_30wJO {
-  color: #dfe3e6;
-  font-size: 14px;
-  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
-  font-weight: 300;
-  margin: 0;
-  padding: 0;
-  border: none;
-  border-radius: 3px;
-  transition: all .2s ease-in-out;
-  padding: 12px;
-  line-height: 18px;
-  margin-bottom: 22px;
+.dropdown_DialogDropDownMenu_30wJO._DialogInputContainer {
   background: #373c44;
   box-shadow: 0px 8px 26px 2px rgba(0, 0, 0, 0.2);
   margin-top: 2px; }
@@ -3696,12 +3684,14 @@ textarea:-webkit-autofill:focus,
     font-size: 12px; }
 
 .gamehover_GameHoverTransition_We-Ng {
+  height: 100%;
   transition: transform 0.15s ease-out;
   transform: scale(0.95); }
   .gamehover_GameHoverTransition_We-Ng.gamehover_Opening_3A24v, .gamehover_GameHoverTransition_We-Ng.gamehover_Open_1rWYa {
     transform: scale(1); }
 
 .gamehover_GameHoverCapsuleCtn_2jsr3 {
+  height: 100%;
   box-sizing: border-box;
   background: radial-gradient(ellipse at top right, #5577bb, #333355);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
@@ -3712,6 +3702,11 @@ textarea:-webkit-autofill:focus,
   font-family: 'Motiva Sans', Arial, Helvetica, sans-serif; }
   .gamehover_GameHoverCapsuleCtn_2jsr3:hover {
     color: white; }
+  .gamehover_GameHoverCapsuleCtn_2jsr3.gamehover_UseHidingBottomHalf_5hPHC {
+    overflow: hidden; }
+  .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_TrailerAnchorStoreLink_OxANH {
+    height: 100%;
+    position: relative; }
   .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_TrailerCtn_1I27K {
     position: relative;
     width: 100%;
@@ -3733,7 +3728,8 @@ textarea:-webkit-autofill:focus,
         opacity: 0; }
   .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_Midline_Xwe3c {
     display: flex;
-    justify-content: space-between; }
+    justify-content: space-between;
+    flex: none; }
     .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_Midline_Xwe3c .gamehover_Price_2Eh6G {
       max-width: 50%; }
   .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_CapsuleImageAnchorPoint_1OMas {
@@ -3774,65 +3770,6 @@ textarea:-webkit-autofill:focus,
       transform: translateX(-30px); }
       .gamehover_Opening_3A24v .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_WithCornerShine_2kRKA:after, .gamehover_Open_1rWYa .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_WithCornerShine_2kRKA:after {
         transform: translateX(0px); }
-  .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN {
-    color: white; }
-    .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL {
-      padding: 4px 8px; }
-      .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_GameTitle_405wj {
-        font-size: 22px; }
-      .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_TagRow_2SWQM {
-        color: #88aacc;
-        font-size: 12px;
-        display: flex;
-        padding: 8px 0px 4px; }
-        .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_TagRow_2SWQM .gamehover_Tags_fTGVi {
-          overflow: hidden;
-          max-height: 40px;
-          padding-right: 12px;
-          display: flex;
-          flex-wrap: wrap; }
-          .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_TagRow_2SWQM .gamehover_Tags_fTGVi .gamehover_Tag_1wO-t {
-            padding: 0px 6px;
-            margin-bottom: 4px;
-            line-height: 17px;
-            border-radius: 2px;
-            background-color: #6868af;
-            color: white;
-            margin-left: 4px;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            position: relative; }
-      .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_ReviewScore_3qvpp {
-        font-size: 12px;
-        display: flex;
-        padding-bottom: 4px; }
-        .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreHeader_2t-0j {
-          color: #88aacc;
-          margin-right: 4px; }
-        .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreValue_3ZWs0 {
-          display: flex; }
-          .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreValue_3ZWs0.gamehover_ReviewScoreLow_3nU5I {
-            color: gray; }
-          .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreValue_3ZWs0.gamehover_ReviewScoreMixed_11Q2_ {
-            color: #d8d81e; }
-          .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreValue_3ZWs0.gamehover_ReviewScoreHigh_3wXHC {
-            color: #32ad32; }
-          .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreValue_3ZWs0 .gamehover_ReviewScorePercentage_38dPa {
-            margin-right: 4px; }
-        .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreCount_1wXL_ {
-          color: #88aacc;
-          margin-left: 4px; }
-      .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_PlatformDisplay_2UG4_ {
-        padding-left: 4px; }
-      .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_ReviewsAndRelease_1HFUC {
-        display: flex;
-        justify-content: space-between;
-        font-size: 14px;
-        margin-left: -4px; }
-        .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_ReviewsAndRelease_1HFUC .gamehover_ReleaseDate_35Bya {
-          padding: 4px; }
-          .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_ReviewsAndRelease_1HFUC .gamehover_ReleaseDate_35Bya .gamehover_ReleasePrefix_2ZKEX {
-            margin-right: 4px; }
   .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_DemoButton_2V6ci {
     margin: 4px 0;
     background-color: rgba(255, 255, 255, 0.2); }
@@ -3864,6 +3801,81 @@ textarea:-webkit-autofill:focus,
         width: auto;
         height: auto;
         padding-right: 8px; }
+
+.gamehover_BottomShelf_oAqlZ {
+  background: radial-gradient(ellipse at top right, #5577bb, #333355);
+  position: relative;
+  z-index: 1;
+  transition: transform 0.25s ease-in-out;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.9);
+  color: white;
+  display: flex;
+  flex-direction: column; }
+  .gamehover_UseHidingBottomHalf_5hPHC .gamehover_BottomShelf_oAqlZ {
+    max-height: 85%;
+    transform: translateY(-50%); }
+    .gamehover_Open_1rWYa .gamehover_UseHidingBottomHalf_5hPHC .gamehover_BottomShelf_oAqlZ {
+      transform: translateY(0); }
+  .gamehover_BottomShelf_oAqlZ .gamehover_BottomShelfOffScreen_36zpR {
+    flex-shrink: 1;
+    overflow-y: auto; }
+  .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL {
+    padding: 4px 8px; }
+    .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_GameTitle_405wj {
+      font-size: 18px; }
+    .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_TagRow_2SWQM {
+      color: #88aacc;
+      font-size: 10px;
+      display: flex;
+      padding: 8px 0px 4px; }
+      .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_TagRow_2SWQM .gamehover_Tags_fTGVi {
+        overflow: hidden;
+        max-height: 40px;
+        padding-right: 12px;
+        display: flex;
+        flex-wrap: wrap; }
+        .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_TagRow_2SWQM .gamehover_Tags_fTGVi .gamehover_Tag_1wO-t {
+          padding: 0px 6px;
+          margin-bottom: 4px;
+          line-height: 17px;
+          border-radius: 2px;
+          background-color: rgba(112, 129, 137, 0.15);
+          color: rgba(255, 255, 255, 0.65);
+          margin-left: 4px;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          position: relative; }
+    .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_ReviewScore_3qvpp {
+      font-size: 12px;
+      display: flex;
+      padding-bottom: 4px; }
+      .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreHeader_2t-0j {
+        color: #88aacc;
+        margin-right: 4px; }
+      .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreValue_3ZWs0 {
+        display: flex; }
+        .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreValue_3ZWs0.gamehover_ReviewScoreLow_3nU5I {
+          color: gray; }
+        .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreValue_3ZWs0.gamehover_ReviewScoreMixed_11Q2_ {
+          color: #d8d81e; }
+        .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreValue_3ZWs0.gamehover_ReviewScoreHigh_3wXHC {
+          color: #32ad32; }
+        .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreValue_3ZWs0 .gamehover_ReviewScorePercentage_38dPa {
+          margin-right: 4px; }
+      .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreCount_1wXL_ {
+        color: #88aacc;
+        margin-left: 4px; }
+    .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_PlatformDisplay_2UG4_ {
+      padding-left: 4px; }
+    .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_ReviewsAndRelease_1HFUC {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      margin-left: -4px; }
+      .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_ReviewsAndRelease_1HFUC .gamehover_ReleaseDate_35Bya {
+        padding: 4px; }
+        .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_ReviewsAndRelease_1HFUC .gamehover_ReleaseDate_35Bya .gamehover_ReleasePrefix_2ZKEX {
+          margin-right: 4px; }
 
 .salepreviewwidgets_StoreSaleWidgetContainer_2hhNO {
   display: flex;
@@ -7329,7 +7341,6 @@ textarea {
 .reorderablelist_WhitelistRow_28TC1 {
   display: flex;
   align-items: center;
-  height: 40px;
   background-color: #333740;
   padding: 4px;
   margin-bottom: 2px;
@@ -8401,7 +8412,7 @@ html:not(.client) .partner_events .apppartnereventspage_AppPartnerEventsBody_1XL
 
 .apppartnereventspage_AppPartnerEventsContainer_3GCEy {
   padding: 0px 20px;
-  margin: 0 auto;
+  margin: 0 auto 80px;
   pointer-events: none; }
   @media screen and (max-width: 910px) {
     .apppartnereventspage_AppPartnerEventsContainer_3GCEy {

@@ -893,6 +893,8 @@
         EventEmail_Template_Sub_youtube: "YouTube Video Link Sub Section",
         EventEmail_Template_AddSection: "Add New Section",
         EventEmail_CreatorHidden: "(Hidden)",
+        EventEmail_SteamChina_Warning:
+          "Warning: Emails will not be sent to customers who are only registered in Steam China",
         EventEmail_Stats_Title: "Email Summary Stats",
         EventEmail_Stats_State: "State: %1$s",
         EventEmail_Stats_State_complete: "Email Send Completed",
@@ -1998,7 +2000,9 @@
         FacetedBrowseEditor_Subtitle: "Subtitle (Optional)",
         FacetedBrowseEditor_Tag: "Tag",
         FacetedBrowseEditor_AddFacetValue: "Add Facet Value",
-        FacetedBrowseEditor_AddFacet: "Add Facet"
+        FacetedBrowseEditor_AddFacet: "Add Facet",
+        FacetedBrowseEditor_NumFacets: "%1$s Facets",
+        FacetedBrowseEditor_NumFacetValues: "%1$s Facet Values"
       };
     }
   }

@@ -1056,6 +1056,9 @@ function DoSearch( last_key_up, funcLinkGenerator, strLanguage )
     if ( last_key_up != $J('#quicktext_search').data( 'last-keyup') )
         return;
 
+    var bIncludeContent = $J( '#include_content' ).is(':checked');
+    console.log( bIncludeContent );
+
 	var strSearch = $J('#quicktext_search').val();
     $J.ajax({
         type: "GET",
@@ -1064,7 +1067,8 @@ function DoSearch( last_key_up, funcLinkGenerator, strLanguage )
             search: strSearch,
             altsearch: g_strRawQuicktextInput,
 			escalation_level: eEscalationLevel,
-            lang: strLanguage
+            lang: strLanguage,
+			bIncludeContent: bIncludeContent
         }
     })
     .fail( function()

@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [36],
+  [37],
   {
     "++az": function(e, t, n) {
       e.exports =
@@ -234,35 +234,35 @@
     },
     Aqke: function(e, t, r) {
       var a = {
-        "./loyalty_brazilian.json": ["jJTi", 8],
-        "./loyalty_bulgarian.json": ["YXmX", 9],
-        "./loyalty_czech.json": ["Yw6T", 10],
-        "./loyalty_danish.json": ["LeJ7", 11],
-        "./loyalty_dutch.json": ["3s9e", 12],
-        "./loyalty_english.json": ["nz6u", 2],
-        "./loyalty_finnish.json": ["cCRj", 13],
-        "./loyalty_french.json": ["WjZg", 14],
-        "./loyalty_german.json": ["2HFY", 15],
-        "./loyalty_greek.json": ["puzw", 16],
-        "./loyalty_hungarian.json": ["h+vV", 17],
-        "./loyalty_italian.json": ["1xjJ", 18],
-        "./loyalty_japanese.json": ["KhFN", 19],
-        "./loyalty_koreana.json": ["0T2E", 20],
-        "./loyalty_latam.json": ["SFVQ", 21],
-        "./loyalty_norwegian.json": ["6qpk", 22],
-        "./loyalty_polish.json": ["c9AW", 23],
-        "./loyalty_portuguese.json": ["H3eu", 24],
-        "./loyalty_romanian.json": ["gt0D", 25],
-        "./loyalty_russian.json": ["4nQk", 26],
-        "./loyalty_sc_schinese.json": ["0Z0/", 27],
-        "./loyalty_schinese.json": ["svug", 28],
-        "./loyalty_spanish.json": ["x/nm", 29],
-        "./loyalty_swedish.json": ["d/hP", 30],
-        "./loyalty_tchinese.json": ["EWje", 31],
-        "./loyalty_thai.json": ["SnkP", 32],
-        "./loyalty_turkish.json": ["cD82", 33],
-        "./loyalty_ukrainian.json": ["jV8j", 34],
-        "./loyalty_vietnamese.json": ["TxFk", 35]
+        "./loyalty_brazilian.json": ["jJTi", 9],
+        "./loyalty_bulgarian.json": ["YXmX", 10],
+        "./loyalty_czech.json": ["Yw6T", 11],
+        "./loyalty_danish.json": ["LeJ7", 12],
+        "./loyalty_dutch.json": ["3s9e", 13],
+        "./loyalty_english.json": ["nz6u", 3],
+        "./loyalty_finnish.json": ["cCRj", 14],
+        "./loyalty_french.json": ["WjZg", 15],
+        "./loyalty_german.json": ["2HFY", 16],
+        "./loyalty_greek.json": ["puzw", 17],
+        "./loyalty_hungarian.json": ["h+vV", 18],
+        "./loyalty_italian.json": ["1xjJ", 19],
+        "./loyalty_japanese.json": ["KhFN", 20],
+        "./loyalty_koreana.json": ["0T2E", 21],
+        "./loyalty_latam.json": ["SFVQ", 22],
+        "./loyalty_norwegian.json": ["6qpk", 23],
+        "./loyalty_polish.json": ["c9AW", 24],
+        "./loyalty_portuguese.json": ["H3eu", 25],
+        "./loyalty_romanian.json": ["gt0D", 26],
+        "./loyalty_russian.json": ["4nQk", 27],
+        "./loyalty_sc_schinese.json": ["0Z0/", 28],
+        "./loyalty_schinese.json": ["svug", 29],
+        "./loyalty_spanish.json": ["x/nm", 30],
+        "./loyalty_swedish.json": ["d/hP", 31],
+        "./loyalty_tchinese.json": ["EWje", 32],
+        "./loyalty_thai.json": ["SnkP", 33],
+        "./loyalty_turkish.json": ["cD82", 34],
+        "./loyalty_ukrainian.json": ["jV8j", 35],
+        "./loyalty_vietnamese.json": ["TxFk", 36]
       };
       function n(t) {
         if (!r.o(a, t))
@@ -4031,7 +4031,7 @@
                 );
               p.unshift({ cluster: f, type: 1 });
               var _ = [];
-              Object(I.b)(E.c.EREALM) ||
+              Object(I.a)(E.c.EREALM) ||
                 _.push(
                   s(1314563),
                   s(870780),
@@ -10141,12 +10141,12 @@
                 ? (C = u())
                 : h || r.has_public_party_beacon
                 ? (C = P.createElement(Ba, { persona: r }))
-                : Object(ga.b)(a)
+                : Object(ga.a)(a)
                 ? ((C = Object(N.f)("#PersonaStateBlocked")),
                   E.push(Oa.a.blocked))
                 : r.is_ingame
                 ? ((C =
-                    !r.is_in_nonsteam_game || i || Object(ga.c)(a)
+                    !r.is_in_nonsteam_game || i || Object(ga.b)(a)
                       ? r.GetCurrentGameName()
                       : Object(N.f)("#PersonaStateInNonSteamGame")),
                   i || f
@@ -11754,7 +11754,7 @@
               A.a.createElement(si, null),
               A.a.createElement(li, null),
               A.a.createElement(ci, null),
-              !Object(I.b)(E.c.EREALM) && A.a.createElement(Li, null),
+              !Object(I.a)(E.c.EREALM) && A.a.createElement(Li, null),
               A.a.createElement(mi, null)
             )
           )
@@ -12462,7 +12462,7 @@
           }
         ];
         return (
-          Object(I.b)(E.c.EREALM) ||
+          Object(I.a)(E.c.EREALM) ||
             e[0].items.push({
               props: {
                 iconComponent: Dt,
@@ -13601,7 +13601,7 @@
                                   ),
                                   "english" === E.c.LANGUAGE
                                     ? void 0
-                                    : a.e(2).then(a.t.bind(null, "nz6u", 3))
+                                    : a.e(3).then(a.t.bind(null, "nz6u", 3))
                                 ])
                               ];
                             case 1:

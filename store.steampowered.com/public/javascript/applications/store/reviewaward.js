@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [68],
+  [69],
   {
     ARGL: function(e, t, a) {
       e.exports = {
@@ -148,7 +148,8 @@
                                 .points()
                             ))
                           : console.error(
-                              "Error when calling LoyaltyRewardsService.GetSummary: EResult=${msgResponse.GetEResult()}"
+                              "Error when calling LoyaltyRewardsService.GetSummary: EResult=" +
+                                a.GetEResult()
                             ),
                         [2]
                       );
@@ -188,7 +189,8 @@
                             );
                       else
                         console.error(
-                          "Error when calling LoyaltyRewardsService.GetReactionConfig: EResult=${msgResponse.GetEResult()}"
+                          "Error when calling LoyaltyRewardsService.GetReactionConfig: EResult=" +
+                            a.GetEResult()
                         );
                       return [2];
                   }
@@ -224,7 +226,8 @@
                                 return n.m_mapExistingReactions.set(e, !0);
                               })
                           : console.error(
-                              "Error when calling LoyaltyRewardsService.GetReactions: EResult=${msgResponse.GetEResult()}"
+                              "Error when calling LoyaltyRewardsService.GetReactions: EResult=" +
+                                a.GetEResult()
                             ),
                         [2]
                       );
@@ -249,8 +252,8 @@
           );
         })(),
         j = a("exH9"),
-        p = a("qbgq"),
-        _ = a("0OaU"),
+        _ = a("qbgq"),
+        p = a("0OaU"),
         f = a("6Y59");
       function B(e) {
         return Object(T.f)("#RewardsReaction_" + e);
@@ -455,24 +458,24 @@
               if (!a) return null;
               var u,
                 m,
-                p,
-                _ = o.GetExistingReactions(),
+                _,
+                p = o.GetExistingReactions(),
                 f = o.GetAwardConfigurations(),
                 b = o.GetUserPointBalance(),
                 h = ((u = n),
                 (m = r),
-                (p = []),
+                (_ = []),
                 f.forEach(function(e) {
                   if (e.valid_target_types.includes(u))
                     switch (u) {
                       case 1:
-                        p.push(e.reactionid);
+                        _.push(e.reactionid);
                         break;
                       case 2:
-                        e.valid_ugc_types.includes(m) && p.push(e.reactionid);
+                        e.valid_ugc_types.includes(m) && _.push(e.reactionid);
                     }
                 }),
-                p),
+                _),
                 E = 0 === c ? null : f.get(c),
                 w = E ? E.points_cost : 0,
                 g = E ? E.points_transferred : 0,
@@ -482,7 +485,7 @@
                     : Object(T.f)("#GrantAwardDescription_Review");
               switch (l) {
                 case I.SELECTING:
-                  var v = 0 === c || _.get(c),
+                  var v = 0 === c || p.get(c),
                     O = !b || b.greaterThanOrEqual(w),
                     A = C.createElement(
                       F,
@@ -513,11 +516,11 @@
                           return C.createElement(H, {
                             key: e,
                             reaction: e,
-                            selected: e === c && !_.get(e),
+                            selected: e === c && !p.get(e),
                             cost: f.get(e).points_cost,
-                            alreadyAwarded: _.get(e),
+                            alreadyAwarded: p.get(e),
                             onClick: function() {
-                              _.get(e) ||
+                              p.get(e) ||
                                 t.setState({
                                   selectedReaction: e === c ? 0 : e
                                 });
@@ -815,7 +818,7 @@
           var t = e.className,
             a = Object(s.f)(e, ["className"]);
           return C.createElement(
-            p.a,
+            _.a,
             Object(s.a)({}, a, { className: Object(j.a)(t, L.SubmitButton) })
           );
         },
@@ -823,7 +826,7 @@
           var t = e.className,
             a = Object(s.f)(e, ["className"]);
           return C.createElement(
-            p.a,
+            _.a,
             Object(s.a)({}, a, { className: Object(j.a)(t, L.BackButton) })
           );
         },
@@ -856,7 +859,7 @@
                   "cost"
                 ]);
               return C.createElement(
-                p.a,
+                _.a,
                 Object(s.a)(
                   {
                     type: "button",
@@ -890,7 +893,7 @@
           );
         })(C.PureComponent),
         V = function() {
-          return C.createElement(_.a, { size: "large", className: L.Loading });
+          return C.createElement(p.a, { size: "large", className: L.Loading });
         },
         q = function(e) {
           var t = e.children,

@@ -195,6 +195,9 @@
         SteamLabs: "Steam Labs",
         SteamLabs_ExperimentNumber: "Experiment %1$s",
         SteamLabs_DiscussionLink: "Discuss this experiment",
+        EventCalendar_SignIn_Title: "Welcome to the new Steam News Hub",
+        EventCalendar_SignIn_Text:
+          "Sign in with your Steam account to access your personalized news hub or explore featured news and updates below.",
         EventCalendar_FutureEventsHint: "Scroll up to see what's coming next",
         EventCalendar_FutureEventsLink: "See all upcoming",
         EventCalendar_LoadEventsProgress: "Loaded %1$s events through %2$s",

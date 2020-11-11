@@ -8384,13 +8384,13 @@
                 },
                 BadgesAvailable: function() {
                   return (
-                    !Object(Le.b)(p.b.EREALM) &&
+                    !Object(Le.a)(p.b.EREALM) &&
                     0 < t.ProfileBadges.Badges.length
                   );
                 },
                 GroupsAvailable: function() {
                   return (
-                    !Object(Le.b)(p.b.EREALM) &&
+                    !Object(Le.a)(p.b.EREALM) &&
                     (!r.GroupList.BGroupsLoaded() ||
                       r.GroupList.BHasAnyGroups())
                   );
@@ -8460,13 +8460,13 @@
                     { path: "" + e + s.ProfileModifier() },
                     g.createElement(Fr, { ProfileItems: i })
                   ),
-                  !Object(Le.b)(p.b.EREALM) &&
+                  !Object(Le.a)(p.b.EREALM) &&
                     g.createElement(
                       u.c,
                       { path: "" + e + s.FavoriteBadge() },
                       g.createElement(Ft, { Badges: t.ProfileBadges })
                     ),
-                  !Object(Le.b)(p.b.EREALM) &&
+                  !Object(Le.a)(p.b.EREALM) &&
                     g.createElement(
                       u.c,
                       { path: "" + e + s.FavoriteGroup() },
