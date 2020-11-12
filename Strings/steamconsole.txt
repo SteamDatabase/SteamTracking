@@ -2,8 +2,8 @@ h
 __TEXT
 __text
 __TEXT
-p=
-p=
+>
+>
 __stubs
 __TEXT
 __stub_helper
@@ -13,7 +13,6 @@ __TEXT
 __cstring
 __TEXT
 __gcc_except_tab__TEXT
-(3
 __unwind_info
 __TEXT
 __eh_frame
@@ -25,6 +24,7 @@ __nl_symbol_ptr
 __DATA
 __got
 __DATA
+x
 __la_symbol_ptr
 __DATA
 __mod_init_func
@@ -39,8 +39,10 @@ __thread_bss
 __DATA
 __bss
 __DATA
+a2
 __common
 __DATA
+(D
 H
 __LINKEDIT
 
@@ -70,7 +72,6 @@ h
 /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
 &
 )
--
 public
 local
 anonymous
@@ -89,7 +90,7 @@ N@
 13CCallbackImplILi12EE
 N11CAppUpdater40CCallback_OnCheckAppBetaPasswordResponseE
 9CCallbackI11CAppUpdater30CheckAppBetaPasswordResponse_tLb0EE
-13CCallbackImplILi72EE
+13CCallbackImplILi200EE
 N12CAppLauncher29CCallback_OnAppLifetimeNoticeE
 9CCallbackI12CAppLauncher19AppLifetimeNotice_tLb0EE
 10CSteamUser
@@ -251,6 +252,9 @@ StopJob
 CreateInterface
 -community
 Set the community URL
+-store
+Set the store URL
+/
 %s/
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlstring.h
 Missing String for %s (%d)
@@ -272,13 +276,11 @@ Exceeded limit of number of vpk files supported (%d)!
 .%s
 %s%s%s crc=0x%x metadatasz=%d
 fnumber=%d ofs=0x%x sz=%d
-/
 Assertion Failed: (&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlvector.h
 Assertion Failed: count >= 0
 Assertion Failed: !pToCopy || (pToCopy + num <= Base()) || (pToCopy >= (Base() + Count()) )
 Assertion Failed: (elem == Count()) || IsValidIndex(elem)
-1
 stopping
 reconfiguring
 preallocating
@@ -324,8 +326,6 @@ app_install_script
 Assertion Failed: m_eAppInfoResult != k_EResultPending
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamconsole/appupdater.cpp
 CAppInfoUpdater::OnAppInfoUpdate
-Assertion Failed: m_pvOrigNameAddress
-Assertion Failed: m_pParent
 ERROR! AppInfo request for AppId %d returned error %s.
 CAppUpdater::OnCheckAppBetaPasswordResponse
 %s
@@ -456,15 +456,13 @@ Preparing update...
 Building file mapping...
 Scanning content
 Updating local CS
-Uploading content
 Signing install script
+Uploading content
 app_build_all_depots
 app_build_all_depots [-desc <text>] -depotconfigpath <folder> -contentroot <folder> -buildoutput <folder> <appid>  : Build all depots for one app
 ERROR! Not logged on.
 run_app_build
 run_app_build [-preview] [-desc <text>] <appbuildfile> : run app depot build as specified in appbuildfile
-run_app_build_http
-run_app_build_http : alias for run_app_build
 build_installer
 <project file> <target folder> [beta key] [beta pwd]
 build_backup
@@ -511,12 +509,17 @@ ERROR! App build file %s has no depots section.
 ERROR! Invalid depot ID: %s.
 ERROR! Depot config file does not exist: %s.
 localcspath
-ERROR! No valid depot specified for appID %u
-Starting appID %u build (flags 0x%x).
+ERROR! No valid depot specified for AppID %u
+Starting AppID %u build (flags 0x%x).
 Assertion Failed: m_vecDepotConfigKVs.Count() == m_vecDepotIDs.Count()
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamconsole/depotbuilder.cpp
 Building depot %u...
+Successfully finished AppID %u build preview.
+ERROR! Failed to commit build for AppID %u : %s
+Successfully finished AppID %u build (BuildID %d).
 CAppInstallerBuilder::OnAppBackupStatus
+Assertion Failed: m_pParent
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/vprof.h
 ERROR! Failed to begin installer build
 ERROR! Installer build failed (%s)
 ERROR! Failed to begin backup build
@@ -589,8 +592,6 @@ http_test
 profile
 <seconds> profile for N seconds
 FCVAR_NEVER_AS_STRING
-No room for new profile in vprof thread profile list, grow MAX_THREADS_TO_VPROF_AT_ONCE
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/vprof.h
 runscript <scriptfile> - runs console script file
 Usage: api_logging <enabled> <verbose>
 Logging set (%s/%s).
@@ -610,6 +611,7 @@ STEAM_CLIENT_LOG_FOLDER
 -sitelicense
 -gui
 SITE_SERVER_GUI
+1
 SteamAppId
 steam_appid.txt
 +quit
@@ -825,10 +827,10 @@ KeyValues Error: %s in file %s [offset: %d]
 ,
 (*
 *),
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/netadr.cpp
 loopback
 %i.%i.%i.%i
 %i.%i.%i.%i:%i
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/netadr.cpp
 "
 Assertion Failed: info.m_pReplacementString == 0
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlbuffer.cpp
@@ -1016,6 +1018,9 @@ Cant remove item
 Account has been deleted
 Account has an existing user cancelled license
 Denied due to community cooldown
+No launcher specified
+Must agree to SSA
+Client no longer supported
 Invalid
 Public
 Beta
@@ -1176,14 +1181,13 @@ Assertion Failed: (unsigned)elem <= (unsigned)m_Size
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/string_misc.cpp
 E
 @
-"
+t
 @
 @
+b
 
 =
 @
-
-a
 @
 @
 @
@@ -1192,3 +1196,4 @@ a
 @
 @
 @
+}

@@ -95,7 +95,6 @@
  CValidator::Pop()
  CValidator::Push(char const*, void*, char const*)
  CreateSimpleProcess
- CreateVProfile
  D g_BitStringEndMasks
  D g_pchHelpStringAppBuild
  D g_pchHelpStringAppUpdate
@@ -127,10 +126,10 @@
  D typeinfo for CCallbackImpl<12>
  D typeinfo for CCallbackImpl<16>
  D typeinfo for CCallbackImpl<1>
+ D typeinfo for CCallbackImpl<200>
  D typeinfo for CCallbackImpl<2>
  D typeinfo for CCallbackImpl<40>
  D typeinfo for CCallbackImpl<4>
- D typeinfo for CCallbackImpl<72>
  D typeinfo for CCallbackImpl<7>
  D typeinfo for CCallbackImpl<8>
  D typeinfo for CCallbackManual<CCallbackMgr, SteamAPICallCompleted_t, false>
@@ -184,10 +183,10 @@
  D vtable for CCallbackImpl<12>
  D vtable for CCallbackImpl<16>
  D vtable for CCallbackImpl<1>
+ D vtable for CCallbackImpl<200>
  D vtable for CCallbackImpl<2>
  D vtable for CCallbackImpl<40>
  D vtable for CCallbackImpl<4>
- D vtable for CCallbackImpl<72>
  D vtable for CCallbackImpl<7>
  D vtable for CCallbackImpl<8>
  D vtable for CCallbackManual<CCallbackMgr, SteamAPICallCompleted_t, false>
@@ -256,10 +255,10 @@
  R typeinfo name for CCallbackImpl<12>
  R typeinfo name for CCallbackImpl<16>
  R typeinfo name for CCallbackImpl<1>
+ R typeinfo name for CCallbackImpl<200>
  R typeinfo name for CCallbackImpl<2>
  R typeinfo name for CCallbackImpl<40>
  R typeinfo name for CCallbackImpl<4>
- R typeinfo name for CCallbackImpl<72>
  R typeinfo name for CCallbackImpl<7>
  R typeinfo name for CCallbackImpl<8>
  R typeinfo name for CCallbackManual<CCallbackMgr, SteamAPICallCompleted_t, false>
@@ -327,10 +326,7 @@
  SteamThreadTools::CThreadSpinLock::Lock(unsigned int) volatile
  SteamThreadTools::CThreadSyncObject::Wait(unsigned int)
  SteamThreadTools::CThreadSyncObject::~CThreadSyncObject()
- SteamVProf::CVProfNode::EnterScope(void*)
  SteamVProf::CVProfNode::ExitScope()
- SteamVProf::CVProfNode::GetSubNode(char const*, int, EVProfBugdetGroup, int)
- SteamVProf::CVProfile::~CVProfile()
  T BCreateDirectory(StringView)
  T BDeleteFileIfExists(StringView)
  T BFileExists(StringView)
@@ -340,8 +336,8 @@
  T BWaitForAppUpdate(IClientAppManager*, unsigned int, bool)
  T CAppContentBuilder::BInit(unsigned int, char const*, char const*, char const*, char const*, unsigned int)
  T CAppContentBuilder::BRunBuild()
- T CAppDepotBuilderHttp::BInit(char const*, KeyValues*)
- T CAppDepotBuilderHttp::BRunBuild()
+ T CAppDepotBuilder::BInit(char const*, KeyValues*)
+ T CAppDepotBuilder::BRunBuild()
  T CAppDepotsUpdater::BRunUpdate(unsigned int)
  T CAppDepotsUpdater::CAppDepotsUpdater()
  T CAppInfoUpdater::BUpdateAppInfo(unsigned int)
@@ -430,6 +426,9 @@
  T CCallbackImpl<1>::GetCallbackSizeBytes()
  T CCallbackImpl<1>::Run(void*, bool, unsigned long long)
  T CCallbackImpl<1>::~CCallbackImpl()
+ T CCallbackImpl<200>::GetCallbackSizeBytes()
+ T CCallbackImpl<200>::Run(void*, bool, unsigned long long)
+ T CCallbackImpl<200>::~CCallbackImpl()
  T CCallbackImpl<2>::GetCallbackSizeBytes()
  T CCallbackImpl<2>::Run(void*, bool, unsigned long long)
  T CCallbackImpl<2>::~CCallbackImpl()
@@ -439,9 +438,6 @@
  T CCallbackImpl<4>::GetCallbackSizeBytes()
  T CCallbackImpl<4>::Run(void*, bool, unsigned long long)
  T CCallbackImpl<4>::~CCallbackImpl()
- T CCallbackImpl<72>::GetCallbackSizeBytes()
- T CCallbackImpl<72>::Run(void*, bool, unsigned long long)
- T CCallbackImpl<72>::~CCallbackImpl()
  T CCallbackImpl<7>::GetCallbackSizeBytes()
  T CCallbackImpl<7>::Run(void*, bool, unsigned long long)
  T CCallbackImpl<7>::~CCallbackImpl()
@@ -711,7 +707,6 @@
  T CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>::Purge()
  T CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>::RehashNodesInBucket(int)
  T CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>::RemoveAll()
- T CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>::UnlinkNodeFromBucket(int, int)
  T CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>::~CUtlHashMap()
  T CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>::AllocNode()
  T CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>::CUtlHashMap()
@@ -722,7 +717,6 @@
  T CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>::Purge()
  T CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>::RehashNodesInBucket(int)
  T CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>::RemoveAll()
- T CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>::UnlinkNodeFromBucket(int, int)
  T CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>::~CUtlHashMap()
  T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short>, unsigned short>::AllocNode()
  T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short>, unsigned short>::CUtlHashMap()
@@ -733,7 +727,6 @@
  T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short>, unsigned short>::Purge()
  T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short>, unsigned short>::RehashNodesInBucket(int)
  T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short>, unsigned short>::RemoveAll()
- T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short>, unsigned short>::UnlinkNodeFromBucket(int, int)
  T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short>, unsigned short>::~CUtlHashMap()
  T CUtlIntrusiveList<CFileExtensionData>::Purge()
  T CUtlLinkedList<CLogWatchParam, int>::RemoveAll()
@@ -802,6 +795,7 @@
  T CUtlRBTreeBase<int, CDefRBTreeBalanceListener<int> >::_RotateLeft(int, unsigned long, void*)
  T CUtlRBTreeBase<int, CDefRBTreeBalanceListener<int> >::_RotateRight(int, unsigned long, void*)
  T CUtlRBTreeBase<int, CDefRBTreeBalanceListener<int> >::_Unlink(int, unsigned long, void*)
+ T CUtlString* Destruct<CUtlString>(CUtlString*)
  T CUtlString::AssertStringTooLong()
  T CUtlString::Format(char const*, ...)
  T CUtlString::Replace(char const*, char const*)
@@ -1119,12 +1113,13 @@
  T SteamThreadTools::CThreadLocalStackCounter<long long>::CThreadLocalStackCounter(SteamThreadTools::CThreadLocal<long long>&)
  T SteamThreadTools::CThreadLocalStackCounter<long long>::~CThreadLocalStackCounter()
  T SteamThreadTools::CThreadSpinLock::~CThreadSpinLock()
- T SteamVProf::CVProfManager::AddProfileForThread(SteamVProf::CVProfile*, unsigned int, _opaque_pthread_t*)
  T SteamVProf::CVProfManager::DumpAllThreadProfiles(int)
  T SteamVProf::CVProfManager::StartProfilingAllThreads()
  T SteamVProf::CVProfManager::StopProfilingAllThreads()
- T SteamVProf::CVProfScope::CVProfScope(char const*, int, EVProfBugdetGroup, bool, int)
- T SteamVProf::CVProfileThreadEntry::DeleteProfile()
+ T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)12, false, 4>::~CVProfScope()
+ T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)13, false, 4>::~CVProfScope()
+ T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)20, false, 4>::~CVProfScope()
+ T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)5, false, 4>::~CVProfScope()
  T Sys_LoadModule(char const*, Sys_Flags)
  T Sys_UnloadModule(CSysModule*)
  T TSLNodeBase_t::operator delete(void*)
@@ -1175,7 +1170,6 @@
  T void CUtlRBTree<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*, int, CDefLess<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*>, CDefRBTreeBalanceListener<int>, CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*>::FindInsertionPosition<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*>(CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >* const&, bool, int&, bool&, bool&)
  T void CUtlRBTree<CachedVPKRead_t, int, CDefLess<CachedVPKRead_t>, CDefRBTreeBalanceListener<int>, CachedVPKRead_t>::FindInsertionPosition<CachedVPKRead_t>(CachedVPKRead_t const&, bool, int&, bool&, bool&)
  T void CUtlRBTree<unsigned long long, int, CDefLess<unsigned long long>, CDefRBTreeBalanceListener<int>, unsigned long long>::FindInsertionPosition<unsigned long long>(unsigned long long const&, bool, int&, bool&, bool&)
- T void Destruct<CUtlString>(CUtlString*)
  T void std::__1::__insertion_sort_3<CUtlVector<char*, CUtlMemory<char*> >::Sort(int (*)(char* const*, char* const*))::{lambda(char* const&, char* const&)#1}&, char**>(char**, char**, CUtlVector<char*, CUtlMemory<char*> >::Sort(int (*)(char* const*, char* const*))::{lambda(char* const&, char* const&)#1}&)
  T void std::__1::__insertion_sort_3<CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&, unsigned int*>(unsigned int*, unsigned int*, CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&)
  T void std::__1::__sort<CUtlVector<char*, CUtlMemory<char*> >::Sort(int (*)(char* const*, char* const*))::{lambda(char* const&, char* const&)#1}&, char**>(char**, char**, CUtlVector<char*, CUtlMemory<char*> >::Sort(int (*)(char* const*, char* const*))::{lambda(char* const&, char* const&)#1}&)
@@ -1198,16 +1192,15 @@
  ThreadCloseProcess
  ThreadGetCurrentId
  ThreadGetCurrentProcessId
- ThreadGetCurrentRunningRef
  ThreadInMainThread
  ThreadInterlockedAssignIf
  ThreadInterlockedDecrement
  ThreadInterlockedExchange
  ThreadInterlockedExchangeAdd
  ThreadInterlockedIncrement
- ThreadIsThreadRunning
  ThreadSleep
  ThreadTerminateProcessCode
+ VProfInternalEnterScopeCurrentThread
  V_ExtractFileExtension
  V_ExtractFilePath
  V_FileBase
@@ -1312,6 +1305,7 @@
  b g_BreakSetIncludingColons
  b g_CleanupSymbolTable
  b g_CommunityURLParam
+ b g_StoreURLParam
  b g_bRunProfile
  b g_hSteamPipe
  b g_hSteamUser
@@ -1387,7 +1381,6 @@
  b profile_command
  b quit_command
  b run_app_build_command
- b run_app_build_http_command
  b runscript_command
  b s_CmdLineParamGlobalUser
  b s_CurrentRoutingIDPtr
@@ -1447,7 +1440,6 @@
  g_ClockSpeedSecondsMultiplier
  g_VProfManager
  g_VProfProfilesRunningCount
- g_VProfile
  g_pMemAllocSteam
  getcwd
  getpid
@@ -1575,7 +1567,6 @@
  t profile(void*, ConParams&, ConCommand&)
  t quit(void*, ConParams&, ConCommand&)
  t run_app_build(void*, ConParams&, ConCommand&)
- t run_app_build_http(void*, ConParams&, ConCommand&)
  t runscript(void*, ConParams&, ConCommand&)
  t set_app_beta_password(void*, ConParams&, ConCommand&)
  t set_spew(void*, ConParams&, ConCommand&)
