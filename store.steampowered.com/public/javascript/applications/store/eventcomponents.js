@@ -14786,6 +14786,17 @@
                   break;
                 }
               }
+              this.DisableBackgroundImageFromPHP();
+            }),
+            (e.prototype.DisableBackgroundImageFromPHP = function() {
+              var e = document.getElementsByClassName(
+                "react_landing_background"
+              );
+              Object(h.a)(
+                e.length <= 1,
+                "Must have at most one react_landing_background"
+              ),
+                1 <= e.length && (e[0].style.backgroundImage = null);
             }),
             (e.prototype.render = function() {
               var e = this.GetEventModel();
@@ -15419,7 +15430,11 @@
           return z.createElement(
             "div",
             {
-              className: Object(V.a)(Vn.a.SaleSection, pn.a.SaleSectionCtn),
+              className: Object(V.a)(
+                Vn.a.SaleSection,
+                pn.a.SaleSectionCtn,
+                "SaleSectionForCustomCSS"
+              ),
               style: Br(t, a)
             },
             z.createElement(Cr, Object(U.a)({}, e)),
@@ -15446,7 +15461,11 @@
           return z.createElement(
             "div",
             {
-              className: Object(V.a)(Vn.a.SaleSection, pn.a.SaleSectionCtn),
+              className: Object(V.a)(
+                Vn.a.SaleSection,
+                pn.a.SaleSectionCtn,
+                "SaleSectionForCustomCSS"
+              ),
               style: Br(t, a)
             },
             z.createElement(Cr, Object(U.a)({}, e)),
@@ -15480,7 +15499,11 @@
                   placeholderHeight: "100vh",
                   rootMargin: "0px 0px 100% 0px",
                   mode: "LoadAndUnload",
-                  className: Object(V.a)(Vn.a.SaleSection, pn.a.SaleSectionCtn),
+                  className: Object(V.a)(
+                    Vn.a.SaleSection,
+                    pn.a.SaleSectionCtn,
+                    "SaleSectionForCustomCSS"
+                  ),
                   style: Br(t, a)
                 },
                 z.createElement(Cr, Object(U.a)({}, this.props)),
