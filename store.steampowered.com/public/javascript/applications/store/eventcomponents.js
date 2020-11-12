@@ -16557,7 +16557,8 @@
                     className: Object(V.a)(
                       Vn.a.SaleSection,
                       v.show_as_carousel && Vn.a.CarouselDisplay,
-                      pn.a.SaleSectionCtn
+                      pn.a.SaleSectionCtn,
+                      "SaleSectionForCustomCSS"
                     ),
                     style: Br(v, a)
                   },
