@@ -321,16 +321,12 @@ function ShowcaseSalienCustomization()
 function SetShowcaseGame( elSlot, eShowcase, purchaseid, iSlot, game )
 {
 	SetShowcaseConfig(
-		eShowcase, iSlot, {appid: game.appid }
+		eShowcase, purchaseid, iSlot, {appid: game.appid }
 	).done( function() {
 			$J(elSlot).find('img').attr( 'src', game.logo );
 			$J(elSlot).find('a').attr( 'href', 'https://steamcommunity.com/app/' + game.appid);
 			$J(elSlot).find('.favorite_game_name').text( game.name );
 			$J(elSlot).removeClass( 'openslot' );
-
-			if ( fnOnChange )
-				fnOnChange( eShowcase, elSlot, game );
-
 	}).fail( function() {
 			ShowAlertDialog( 'Select Featured Game', 'There was an error saving the featured game configuration.  Please try again later.' );
 	});
