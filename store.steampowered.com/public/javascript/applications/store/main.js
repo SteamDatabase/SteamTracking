@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6199063";
+var CLSTAMP = "6200192";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [38],
   {
@@ -51227,28 +51227,37 @@ var CLSTAMP = "6199063";
             (e = Object(b.c)([a.a], e))
           );
         })(_.Component),
-        fe = function(i) {
-          function e(e) {
-            var t = i.item,
-              n = i.fnOnEventVisibilityChange,
-              r = i.indexOfSection,
-              o = i.indexInSection;
-            n(e, t.unique_id, r, o);
-          }
-          var t = i.item;
-          return _.createElement(
-            U.a,
-            {
-              topOffset: "55px",
-              bottomOffset: "50px",
-              onEnter: function() {
-                return e(!0);
+        fe = function(e) {
+          var t = e.item,
+            n = e.fnOnEventVisibilityChange,
+            r = e.indexOfSection,
+            o = e.indexInSection,
+            i = _.useState(!1),
+            a = i[0],
+            s = i[1];
+          return (
+            _.useEffect(function() {
+              return (
+                n(a, t.unique_id, r, o),
+                function() {
+                  return n(!1, t.unique_id, r, o);
+                }
+              );
+            }),
+            _.createElement(
+              U.a,
+              {
+                topOffset: "55px",
+                bottomOffset: "50px",
+                onEnter: function() {
+                  return s(!0);
+                },
+                onLeave: function() {
+                  return s(!1);
+                }
               },
-              onLeave: function() {
-                return e(!1);
-              }
-            },
-            _.createElement("div", null, _.createElement(_e, { item: t }))
+              _.createElement("div", null, _.createElement(_e, { item: t }))
+            )
           );
         },
         be = new ((function() {
