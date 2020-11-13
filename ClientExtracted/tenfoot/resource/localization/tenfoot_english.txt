@@ -2187,7 +2187,7 @@
 	"Library_Details_ControllerAction_Change_Player_Number_To"	"CHANGE PLAYER NUMBER TO"
 	"Library_Details_ControllerAction_MouseDelta"	"MOUSE DELTA"
 	"Controller_SetMouseDelta_Title"				"SET MOUSE DELTA BINDING"
-	"Controller_SetMouseDelta_Description"			"Select the vaules for this binding"
+	"Controller_SetMouseDelta_Description"			"Select the values for this binding"
 	"ControllerConfig_MouseDeltaX"					"X Axis"
 	"ControllerConfig_MouseDeltaY"					"Y Axis"
 

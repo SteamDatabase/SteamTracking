@@ -37,7 +37,7 @@
           return (
             Object(e.d)(t, n),
             (t.prototype.render = function() {
-              var n = Object(u.k)(
+              var n = Object(u.m)(
                 "#RewardsReaction_Tooltip",
                 this.props.reaction.count || 0,
                 Object(c.a)(this.props.reaction.reaction_type)

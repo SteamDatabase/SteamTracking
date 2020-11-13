@@ -1,8 +1,6 @@
 __TEXT
 __text
 __TEXT
-s
-s
 __stubs
 __TEXT
 __stub_helper
@@ -1158,6 +1156,7 @@ m_pPlatformModuleData
 VFileSystem013
 VGUI_Panel010
 VGUI_Application_001
+Keycode not in range of s_pVirtualKeyToVGUI
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/src/vgui_key_translation.cpp
 Assertion Failed: pDesc->macKeyCode == -1 || s_pVirtualKeyToVGUI[ pDesc->macKeyCode ] == 0
 Assertion Failed: s_pVGUIToVirtualKey[ keyMap[i].vguiKeyCode ] == 0

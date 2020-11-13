@@ -141,27 +141,30 @@ h
 X"M
 )
 H|M
-\2
 
 
 
 
 
 
-'2
+LL
 "
->L
-NK
+5
 5
 5
 3
+2L
 2
 2
+2
+AK
 D
-"L
-+K
-&K
-!K
+*K
+%K
+K
+L
+L
+L
 @
 8
 HC
@@ -5070,8 +5073,8 @@ linux
 Linux;tenfoot
 X-ValveUserAgent
 panorama %s %s
-Nov  4 2020
-10:54:11
+Nov 12 2020
+19:27:32
 X-SteamClientVersion
 Assertion Failed: hostName
 Assertion Failed: pchRemoteHost
@@ -7628,27 +7631,30 @@ Assertion Failed: q.IsValid()
 Assertion Failed: angles.IsValid()
 SSE and SSE2 are required.
 Assertion Failed: src.IsValid()
-\2
 
 
 
 
 
 
-'2
+LL
 "
->L
-NK
+5
 5
 5
 3
+2L
 2
 2
+2
+AK
 D
-"L
-+K
-&K
-!K
+*K
+%K
+K
+L
+L
+L
 K
 K
 K
@@ -7665,65 +7671,65 @@ K
 K
 K
 K
-r1
+K
+E'
+{H
 @
-r1
-5K
+;1
+FH
+aK
+^'
 1
 1
 H
 "
-"
 '
 !
 !
-'
 !
 1
-~0
-H!
-4
-!
-!
+1
+H
+~
+=
+<&
 !
 !
 !
 !
 !
 &
-%
+F
+BI
+-/
+I
 G
 $
 $
 $
-L.
-M$
-,$
+3.
+h.
 .
 .
 .
 .
+)H
 $
+.
+&G
 E
 #
 -
 -
 -
-WE
+~"
 #
 #
 (
 9
-q,
-d,
-`,
-O,
 1
 "
 N
-<,
-,
-,
 ,
 ,
 ,
@@ -7746,10 +7752,11 @@ t1Mcu
 @
 @
 @
-YD
-VD
-QD
-ND
+ZD
+WD
+UD
+RD
+MD
 *
 *
 *
@@ -7790,6 +7797,7 @@ H=
 '
 '
 K)
+9@
 "
 @
 @
@@ -7806,8 +7814,8 @@ K)
 @
 -
 @
-j?
 &
+&>
 $
 @
 @
@@ -7824,6 +7832,7 @@ $
 @
 @
 @
+9@
 %
 %
 %
@@ -7832,11 +7841,12 @@ $
 @
 @
 @
-0>
 @
 @
 U$
+Y=
 <
+=>
 $
 8#
 #
@@ -7854,8 +7864,6 @@ $
 @
 @
 ~"
-g:
-k;
 "
 "
 "
@@ -7866,9 +7874,8 @@ k;
 "
 :
 :
-L95|#;
+2;
 :
-;
 ;
 @
 P
@@ -7902,20 +7909,20 @@ $
 !
 !
 L
-_:
-Y:
+a:
+^:
 D"
 6
 
+U9
 0
 p
-!7
+c7
+W7
 4
-o6
 >
 
 
-A7
 @
 @
 0
@@ -7925,8 +7932,6 @@ p
 1
 Hi
 '.
-'0
-+2
 .
 .
 @
@@ -7935,6 +7940,7 @@ Hi
 
 -
 -
+m/
 p,
 .
 @
@@ -8281,11 +8287,8 @@ p,
 @
 ,
 ,
-U,
->,
-4,
-L-
-F-
+,
+I-
 @
 @
 @
@@ -8363,17 +8366,18 @@ $
 ?
 A
 Hc
-}'
 =
-P'
 M
-|&
-L95;X&
+h&
+7%
+L95KX&
+L95
+*&
+L%
 Hc
 
 
 
-q%
 
 
 
