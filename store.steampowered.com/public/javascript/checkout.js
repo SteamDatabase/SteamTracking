@@ -5400,7 +5400,7 @@ function HandlePollForTransactionStatusFailure()
 		}
 
 		var error_text = '';
-		error_text = 'Your purchase may have been completed, but there was a problem checking on the status of this transaction.  Please check your <a href="http://store.valvesoftware.com/account/">account status page</a> or your email for a confirmation receipt.';
+		error_text = '#check_purchase_status_error';
 	}
 	catch(e)
 	{
