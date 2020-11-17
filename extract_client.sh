@@ -41,8 +41,8 @@ done
 echo Dumping protobufs
 
 # https://github.com/SteamRE/SteamKit/tree/master/Resources/ProtobufDumper
-dotnet ~/ProtobufDumper/ProtobufDumper.dll bins/steamui.dylib "$DIR/Protobufs/" > /dev/null
-dotnet ~/ProtobufDumper/ProtobufDumper.dll bins/steamclient.dylib "$DIR/Protobufs/" > /dev/null
+~/ProtobufDumper/ProtobufDumper bins/steamui.dylib "$DIR/Protobufs/" > /dev/null
+~/ProtobufDumper/ProtobufDumper bins/steamclient.dylib "$DIR/Protobufs/" > /dev/null
 
 node ../protobufdumper_v2.js "$DIR/ClientExtracted/steamui/libraryroot.js" > ~/ValveProtobufs/webui/steamui_libraryroot.proto
 node ../protobufdumper_v2.js "$DIR/ClientExtracted/steamui/broadcast.js" > ~/ValveProtobufs/webui/steamui_broadcast.proto
