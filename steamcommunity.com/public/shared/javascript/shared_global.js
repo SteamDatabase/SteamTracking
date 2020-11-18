@@ -3081,21 +3081,19 @@ function HideFlyoutMenu( event, elemLink, elemPopup )
 function AlignMenu( elemLink, elemPopup, align, valign, bLinkHasBorder, elemAlternateAlignTo )
 {
 	var align = align ? align : 'left';
-
-	// alternate align to is used to align the genre menu on the store; it's only used for horizontal alignment,
-	// trying to align to it vertically messes up responsive view.
-	var $LinkVertical = $JFromIDOrElement(elemLink);
-	var $LinkHorizontal = elemAlternateAlignTo ? $JFromIDOrElement(elemAlternateAlignTo) : $LinkVertical;
-
+	var $Link = $JFromIDOrElement(elemLink);
 	var $Popup = $JFromIDOrElement(elemPopup);
 
+	if( elemAlternateAlignTo != null )
+	{
+		$Link = $JFromIDOrElement(elemAlternateAlignTo);
+	}
 
-	var offsetLinkVertical = $LinkVertical.offset();
-	var offsetLinkHorizontal = $LinkHorizontal.offset();
+	var offsetLink = $Link.offset();
 	var nWindowScrollTop = $J(window).scrollTop();
 	var nViewportHeight = $J(window).height();
 
-	var nLinkViewportTop = offsetLinkVertical.top - nWindowScrollTop;
+	var nLinkViewportTop = offsetLink.top - nWindowScrollTop;
 
 	// add a little bit of padding so we don't position it flush to an edge if possible
 	var nPopupHeight = $Popup.height() + 8;
@@ -3103,14 +3101,14 @@ function AlignMenu( elemLink, elemPopup, align, valign, bLinkHasBorder, elemAlte
 	if ( !valign )
 	{
 		//if there's not enough room between our spot and the top of the document, we definitely want to drop down
-		if ( nWindowScrollTop + offsetLinkVertical.top < nPopupHeight )
+		if ( nWindowScrollTop + offsetLink.top < nPopupHeight )
 		{
 			valign = 'bottom';
 		}
 		else
 		{
 			var nSpaceAbove = nLinkViewportTop;
-			var nSpaceBelow = nViewportHeight - ( nLinkViewportTop + $LinkVertical.height() );
+			var nSpaceBelow = nViewportHeight - ( nLinkViewportTop + $Link.height() );
 			//otherwise we only want to drop down if we've got enough space below us (measured based on view area)
 			// or if there's not enough space above to pop in either direction and there's more space below
 			if ( nSpaceBelow > nPopupHeight || ( nSpaceAbove < nPopupHeight && nSpaceBelow > nSpaceAbove ) )
@@ -3133,7 +3131,7 @@ function AlignMenu( elemLink, elemPopup, align, valign, bLinkHasBorder, elemAlte
 	else if ( align == 'right' )
 	{
 		//elemPopup.style.left = ( elemLink.positionedOffset()[0] + elemLink.getWidth() - elemPopup.getWidth() + 13 ) + 'px';
-		offsetLeft = $LinkHorizontal.outerWidth() - $Popup.outerWidth() + shadowpx + borderpx;
+		offsetLeft = $Link.outerWidth() - $Popup.outerWidth() + shadowpx + borderpx;
 	}
 	else if ( align == 'leftsubmenu' )
 	{
@@ -3143,14 +3141,14 @@ function AlignMenu( elemLink, elemPopup, align, valign, bLinkHasBorder, elemAlte
 	else if ( align == 'rightsubmenu' )
 	{
 		//elemPopup.style.left = ( elemLink.positionedOffset()[0] + elemLink.getWidth() - 12 ) + 'px';
-		offsetLeft = $LinkHorizontal.outerWidth()  - shadowpx + 2 * borderpx;
+		offsetLeft = $Link.outerWidth()  - shadowpx + 2 * borderpx;
 	}
 
 	var offsetTop = 0;
 	if ( valign == 'bottom' )
 	{
 		//elemPopup.style.top = ( elemLink.positionedOffset()[1] + elemLink.getHeight() - 12 ) + 'px';
-		offsetTop = $LinkVertical.outerHeight() - shadowpx;
+		offsetTop = $Link.outerHeight() - shadowpx;
 	}
 	else if ( valign == 'top' )
 	{
@@ -3174,8 +3172,8 @@ function AlignMenu( elemLink, elemPopup, align, valign, bLinkHasBorder, elemAlte
 	}
 
 	$Popup.offset( {
-		top: Math.max( offsetLinkVertical.top + offsetTop, 0 ),
-		left: Math.max( offsetLinkHorizontal.left + offsetLeft, 0 )
+		top: Math.max( offsetLink.top + offsetTop, 0 ),
+		left: Math.max( offsetLink.left + offsetLeft, 0 )
 	});
 
 	if ( bPopupHidden )
@@ -4490,29 +4488,6 @@ CAjaxSubPageController.prototype.OnWindowPopState = function( event )
 		this.InstrumentLinks( elNewContents );
 	}
 };
-
-function SetupAnimateOnHoverImages()
-{
-	var $Images = $J( '[data-animate-on-hover-src]', document );
-	if ( $Images.length )
-	{
-		for ( var i = 0; i < $Images.length; ++i )
-		{
-			var img = $J( $Images[i] );
-			img.data( 'static-src', img.attr( 'src') );
-			img.hover(
-				function() {
-					var thisImage = $J( this );
-					thisImage.attr( 'src', thisImage.data( 'animate-on-hover-src' ) );
-				},
-				function() {
-					var thisImage = $J( this );
-					thisImage.attr( 'src', thisImage.data( 'static-src' ) );
-				},
-			);
-		}
-	}
-}
 
 function BindTooltips(selector, rgOptions)
 {
