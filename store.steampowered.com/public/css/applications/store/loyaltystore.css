@@ -76,15 +76,29 @@ body.v6.rewards {
       font-family: "Motiva Sans", Helvetica, sans-serif;
       text-transform: uppercase;
       color: #D0D0D0; }
+    .styles_ShellHeader_yV5Uz .styles_AppFilterContainer_3FDv4 .styles_AppFilterIconContainer_2SOq8 {
+      position: relative;
+      display: flex; }
     .styles_ShellHeader_yV5Uz .styles_AppFilterContainer_3FDv4 .styles_AppFilterIcon_3McBd {
       height: 24px;
+      width: 24px;
+      margin-left: 20px;
       cursor: pointer;
       color: #C5CBD8;
       stroke: currentColor;
       fill: currentColor;
       transition-property: color;
       transition-duration: .15s;
-      transition-timing-function: ease-in; }
+      transition-timing-function: ease-in;
+      position: relative; }
+    .styles_ShellHeader_yV5Uz .styles_AppFilterContainer_3FDv4 .styles_FilterInUse_yokUs {
+      width: 11px;
+      height: 11px;
+      border-radius: 6px;
+      background-color: #4A9CE7;
+      position: absolute;
+      top: -5px;
+      right: -5px; }
     .styles_ShellHeader_yV5Uz .styles_AppFilterContainer_3FDv4 .styles_AppFilterIcon_3McBd:hover {
       color: #ffffff;
       stroke: currentColor;
@@ -564,15 +578,29 @@ body.v6.rewards {
       font-family: "Motiva Sans", Helvetica, sans-serif;
       text-transform: uppercase;
       color: #D0D0D0; }
+    .rewarditemsection_ShellHeader_1rWvB .rewarditemsection_AppFilterContainer_1pCqF .rewarditemsection_AppFilterIconContainer_2RDJg {
+      position: relative;
+      display: flex; }
     .rewarditemsection_ShellHeader_1rWvB .rewarditemsection_AppFilterContainer_1pCqF .rewarditemsection_AppFilterIcon_ZDxAf {
       height: 24px;
+      width: 24px;
+      margin-left: 20px;
       cursor: pointer;
       color: #C5CBD8;
       stroke: currentColor;
       fill: currentColor;
       transition-property: color;
       transition-duration: .15s;
-      transition-timing-function: ease-in; }
+      transition-timing-function: ease-in;
+      position: relative; }
+    .rewarditemsection_ShellHeader_1rWvB .rewarditemsection_AppFilterContainer_1pCqF .rewarditemsection_FilterInUse_2DH-W {
+      width: 11px;
+      height: 11px;
+      border-radius: 6px;
+      background-color: #4A9CE7;
+      position: absolute;
+      top: -5px;
+      right: -5px; }
     .rewarditemsection_ShellHeader_1rWvB .rewarditemsection_AppFilterContainer_1pCqF .rewarditemsection_AppFilterIcon_ZDxAf:hover {
       color: #ffffff;
       stroke: currentColor;
@@ -764,15 +792,29 @@ body.v6.rewards {
       font-family: "Motiva Sans", Helvetica, sans-serif;
       text-transform: uppercase;
       color: #D0D0D0; }
+    .loyaltypoints_ShellHeader_3JsJ9 .loyaltypoints_AppFilterContainer_3MeGW .loyaltypoints_AppFilterIconContainer_3j5ck {
+      position: relative;
+      display: flex; }
     .loyaltypoints_ShellHeader_3JsJ9 .loyaltypoints_AppFilterContainer_3MeGW .loyaltypoints_AppFilterIcon_3HzcH {
       height: 24px;
+      width: 24px;
+      margin-left: 20px;
       cursor: pointer;
       color: #C5CBD8;
       stroke: currentColor;
       fill: currentColor;
       transition-property: color;
       transition-duration: .15s;
-      transition-timing-function: ease-in; }
+      transition-timing-function: ease-in;
+      position: relative; }
+    .loyaltypoints_ShellHeader_3JsJ9 .loyaltypoints_AppFilterContainer_3MeGW .loyaltypoints_FilterInUse_1pl5d {
+      width: 11px;
+      height: 11px;
+      border-radius: 6px;
+      background-color: #4A9CE7;
+      position: absolute;
+      top: -5px;
+      right: -5px; }
     .loyaltypoints_ShellHeader_3JsJ9 .loyaltypoints_AppFilterContainer_3MeGW .loyaltypoints_AppFilterIcon_3HzcH:hover {
       color: #ffffff;
       stroke: currentColor;
@@ -919,15 +961,29 @@ body.v6.rewards {
       font-family: "Motiva Sans", Helvetica, sans-serif;
       text-transform: uppercase;
       color: #D0D0D0; }
+    .rewarditem_ShellHeader_3Pva4 .rewarditem_AppFilterContainer_3P7pL .rewarditem_AppFilterIconContainer_2X4x8 {
+      position: relative;
+      display: flex; }
     .rewarditem_ShellHeader_3Pva4 .rewarditem_AppFilterContainer_3P7pL .rewarditem_AppFilterIcon_s_r3v {
       height: 24px;
+      width: 24px;
+      margin-left: 20px;
       cursor: pointer;
       color: #C5CBD8;
       stroke: currentColor;
       fill: currentColor;
       transition-property: color;
       transition-duration: .15s;
-      transition-timing-function: ease-in; }
+      transition-timing-function: ease-in;
+      position: relative; }
+    .rewarditem_ShellHeader_3Pva4 .rewarditem_AppFilterContainer_3P7pL .rewarditem_FilterInUse_3Xffm {
+      width: 11px;
+      height: 11px;
+      border-radius: 6px;
+      background-color: #4A9CE7;
+      position: absolute;
+      top: -5px;
+      right: -5px; }
     .rewarditem_ShellHeader_3Pva4 .rewarditem_AppFilterContainer_3P7pL .rewarditem_AppFilterIcon_s_r3v:hover {
       color: #ffffff;
       stroke: currentColor;
@@ -1055,15 +1111,29 @@ body.v6.rewards {
       font-family: "Motiva Sans", Helvetica, sans-serif;
       text-transform: uppercase;
       color: #D0D0D0; }
+    .rewarditem_ShellHeader_3Pva4 .rewarditem_AppFilterContainer_3P7pL .rewarditem_AppFilterIconContainer_2X4x8 {
+      position: relative;
+      display: flex; }
     .rewarditem_ShellHeader_3Pva4 .rewarditem_AppFilterContainer_3P7pL .rewarditem_AppFilterIcon_s_r3v {
       height: 24px;
+      width: 24px;
+      margin-left: 20px;
       cursor: pointer;
       color: #C5CBD8;
       stroke: currentColor;
       fill: currentColor;
       transition-property: color;
       transition-duration: .15s;
-      transition-timing-function: ease-in; }
+      transition-timing-function: ease-in;
+      position: relative; }
+    .rewarditem_ShellHeader_3Pva4 .rewarditem_AppFilterContainer_3P7pL .rewarditem_FilterInUse_3Xffm {
+      width: 11px;
+      height: 11px;
+      border-radius: 6px;
+      background-color: #4A9CE7;
+      position: absolute;
+      top: -5px;
+      right: -5px; }
     .rewarditem_ShellHeader_3Pva4 .rewarditem_AppFilterContainer_3P7pL .rewarditem_AppFilterIcon_s_r3v:hover {
       color: #ffffff;
       stroke: currentColor;
@@ -1232,15 +1302,29 @@ body.v6.rewards {
       font-family: "Motiva Sans", Helvetica, sans-serif;
       text-transform: uppercase;
       color: #D0D0D0; }
+    .rewarditem_ShellHeader_3Pva4 .rewarditem_AppFilterContainer_3P7pL .rewarditem_AppFilterIconContainer_2X4x8 {
+      position: relative;
+      display: flex; }
     .rewarditem_ShellHeader_3Pva4 .rewarditem_AppFilterContainer_3P7pL .rewarditem_AppFilterIcon_s_r3v {
       height: 24px;
+      width: 24px;
+      margin-left: 20px;
       cursor: pointer;
       color: #C5CBD8;
       stroke: currentColor;
       fill: currentColor;
       transition-property: color;
       transition-duration: .15s;
-      transition-timing-function: ease-in; }
+      transition-timing-function: ease-in;
+      position: relative; }
+    .rewarditem_ShellHeader_3Pva4 .rewarditem_AppFilterContainer_3P7pL .rewarditem_FilterInUse_3Xffm {
+      width: 11px;
+      height: 11px;
+      border-radius: 6px;
+      background-color: #4A9CE7;
+      position: absolute;
+      top: -5px;
+      right: -5px; }
     .rewarditem_ShellHeader_3Pva4 .rewarditem_AppFilterContainer_3P7pL .rewarditem_AppFilterIcon_s_r3v:hover {
       color: #ffffff;
       stroke: currentColor;
@@ -1706,15 +1790,29 @@ body.v6.rewards {
       font-family: "Motiva Sans", Helvetica, sans-serif;
       text-transform: uppercase;
       color: #D0D0D0; }
+    .itembox_ShellHeader_1B30P .itembox_AppFilterContainer_1DdJC .itembox_AppFilterIconContainer_7Da_o {
+      position: relative;
+      display: flex; }
     .itembox_ShellHeader_1B30P .itembox_AppFilterContainer_1DdJC .itembox_AppFilterIcon_3-KRc {
       height: 24px;
+      width: 24px;
+      margin-left: 20px;
       cursor: pointer;
       color: #C5CBD8;
       stroke: currentColor;
       fill: currentColor;
       transition-property: color;
       transition-duration: .15s;
-      transition-timing-function: ease-in; }
+      transition-timing-function: ease-in;
+      position: relative; }
+    .itembox_ShellHeader_1B30P .itembox_AppFilterContainer_1DdJC .itembox_FilterInUse_3OtaX {
+      width: 11px;
+      height: 11px;
+      border-radius: 6px;
+      background-color: #4A9CE7;
+      position: absolute;
+      top: -5px;
+      right: -5px; }
     .itembox_ShellHeader_1B30P .itembox_AppFilterContainer_1DdJC .itembox_AppFilterIcon_3-KRc:hover {
       color: #ffffff;
       stroke: currentColor;
@@ -1892,15 +1990,29 @@ body.v6.rewards {
       font-family: "Motiva Sans", Helvetica, sans-serif;
       text-transform: uppercase;
       color: #D0D0D0; }
+    .herogroup_ShellHeader_1Ke_2 .herogroup_AppFilterContainer_sVAn7 .herogroup_AppFilterIconContainer_1fqSL {
+      position: relative;
+      display: flex; }
     .herogroup_ShellHeader_1Ke_2 .herogroup_AppFilterContainer_sVAn7 .herogroup_AppFilterIcon_BMm9o {
       height: 24px;
+      width: 24px;
+      margin-left: 20px;
       cursor: pointer;
       color: #C5CBD8;
       stroke: currentColor;
       fill: currentColor;
       transition-property: color;
       transition-duration: .15s;
-      transition-timing-function: ease-in; }
+      transition-timing-function: ease-in;
+      position: relative; }
+    .herogroup_ShellHeader_1Ke_2 .herogroup_AppFilterContainer_sVAn7 .herogroup_FilterInUse_b2rcj {
+      width: 11px;
+      height: 11px;
+      border-radius: 6px;
+      background-color: #4A9CE7;
+      position: absolute;
+      top: -5px;
+      right: -5px; }
     .herogroup_ShellHeader_1Ke_2 .herogroup_AppFilterContainer_sVAn7 .herogroup_AppFilterIcon_BMm9o:hover {
       color: #ffffff;
       stroke: currentColor;
@@ -2078,15 +2190,29 @@ body.v6.rewards {
       font-family: "Motiva Sans", Helvetica, sans-serif;
       text-transform: uppercase;
       color: #D0D0D0; }
+    .redeempointsmodal_ShellHeader_2I8Eu .redeempointsmodal_AppFilterContainer_xEgIP .redeempointsmodal_AppFilterIconContainer_20SKW {
+      position: relative;
+      display: flex; }
     .redeempointsmodal_ShellHeader_2I8Eu .redeempointsmodal_AppFilterContainer_xEgIP .redeempointsmodal_AppFilterIcon_1ZU44 {
       height: 24px;
+      width: 24px;
+      margin-left: 20px;
       cursor: pointer;
       color: #C5CBD8;
       stroke: currentColor;
       fill: currentColor;
       transition-property: color;
       transition-duration: .15s;
-      transition-timing-function: ease-in; }
+      transition-timing-function: ease-in;
+      position: relative; }
+    .redeempointsmodal_ShellHeader_2I8Eu .redeempointsmodal_AppFilterContainer_xEgIP .redeempointsmodal_FilterInUse_3qtJ8 {
+      width: 11px;
+      height: 11px;
+      border-radius: 6px;
+      background-color: #4A9CE7;
+      position: absolute;
+      top: -5px;
+      right: -5px; }
     .redeempointsmodal_ShellHeader_2I8Eu .redeempointsmodal_AppFilterContainer_xEgIP .redeempointsmodal_AppFilterIcon_1ZU44:hover {
       color: #ffffff;
       stroke: currentColor;
@@ -2810,15 +2936,29 @@ body.v6.rewards {
       font-family: "Motiva Sans", Helvetica, sans-serif;
       text-transform: uppercase;
       color: #D0D0D0; }
+    .page_ShellHeader_2zzZm .page_AppFilterContainer_trIsu .page_AppFilterIconContainer_2whub {
+      position: relative;
+      display: flex; }
     .page_ShellHeader_2zzZm .page_AppFilterContainer_trIsu .page_AppFilterIcon_3udHN {
       height: 24px;
+      width: 24px;
+      margin-left: 20px;
       cursor: pointer;
       color: #C5CBD8;
       stroke: currentColor;
       fill: currentColor;
       transition-property: color;
       transition-duration: .15s;
-      transition-timing-function: ease-in; }
+      transition-timing-function: ease-in;
+      position: relative; }
+    .page_ShellHeader_2zzZm .page_AppFilterContainer_trIsu .page_FilterInUse_12wdJ {
+      width: 11px;
+      height: 11px;
+      border-radius: 6px;
+      background-color: #4A9CE7;
+      position: absolute;
+      top: -5px;
+      right: -5px; }
     .page_ShellHeader_2zzZm .page_AppFilterContainer_trIsu .page_AppFilterIcon_3udHN:hover {
       color: #ffffff;
       stroke: currentColor;
@@ -2998,7 +3138,7 @@ body.v6.rewards {
   from {
     transform: translate(0, 0) rotate(0deg); }
   to {
-    transform: translate(-131px, 110vh) rotate(-231deg); } }
+    transform: translate(-86px, 110vh) rotate(-223deg); } }
 
 .chatroomeffects_Snowflake-1_2b67l {
   animation-name: chatroomeffects_snowflake-1_2Rb7w; }
@@ -3007,7 +3147,7 @@ body.v6.rewards {
   from {
     transform: translate(0, 0) rotate(0deg); }
   to {
-    transform: translate(124px, 110vh) rotate(-323deg); } }
+    transform: translate(-141px, 110vh) rotate(-84deg); } }
 
 .chatroomeffects_Snowflake-2_2_NWs {
   animation-name: chatroomeffects_snowflake-2_1Y4tS; }
@@ -3016,7 +3156,7 @@ body.v6.rewards {
   from {
     transform: translate(0, 0) rotate(0deg); }
   to {
-    transform: translate(40px, 110vh) rotate(-51deg); } }
+    transform: translate(64px, 110vh) rotate(-86deg); } }
 
 .chatroomeffects_Snowflake-3_cBxtQ {
   animation-name: chatroomeffects_snowflake-3_3t5Lt; }
@@ -3025,7 +3165,7 @@ body.v6.rewards {
   from {
     transform: translate(0, 0) rotate(0deg); }
   to {
-    transform: translate(190px, 110vh) rotate(-354deg); } }
+    transform: translate(-110px, 110vh) rotate(-388deg); } }
 
 .chatroomeffects_Snowflake-4_1JQNl {
   animation-name: chatroomeffects_snowflake-4_1vyLw; }
@@ -3034,7 +3174,7 @@ body.v6.rewards {
   from {
     transform: translate(0, 0) rotate(0deg); }
   to {
-    transform: translate(-33px, 110vh) rotate(-320deg); } }
+    transform: translate(142px, 110vh) rotate(-332deg); } }
 
 .chatroomeffects_Snowflake-5_cUP1f {
   animation-name: chatroomeffects_snowflake-5_3louc; }
@@ -3043,7 +3183,7 @@ body.v6.rewards {
   from {
     transform: translate(0, 0) rotate(0deg); }
   to {
-    transform: translate(-32px, 110vh) rotate(-11deg); } }
+    transform: translate(119px, 110vh) rotate(-57deg); } }
 
 .chatroomeffects_Snowflake-6_2F8cs {
   animation-name: chatroomeffects_snowflake-6_3Hfej; }
@@ -3052,7 +3192,7 @@ body.v6.rewards {
   from {
     transform: translate(0, 0) rotate(0deg); }
   to {
-    transform: translate(52px, 110vh) rotate(278deg); } }
+    transform: translate(144px, 110vh) rotate(-31deg); } }
 
 .chatroomeffects_Snowflake-7_zJ9BE {
   animation-name: chatroomeffects_snowflake-7_nX1rZ; }
@@ -3061,7 +3201,7 @@ body.v6.rewards {
   from {
     transform: translate(0, 0) rotate(0deg); }
   to {
-    transform: translate(-81px, 110vh) rotate(45deg); } }
+    transform: translate(180px, 110vh) rotate(91deg); } }
 
 .chatroomeffects_Snowflake-8_3BAdG {
   animation-name: chatroomeffects_snowflake-8_WFJba; }
@@ -3070,7 +3210,7 @@ body.v6.rewards {
   from {
     transform: translate(0, 0) rotate(0deg); }
   to {
-    transform: translate(114px, 110vh) rotate(51deg); } }
+    transform: translate(-136px, 110vh) rotate(-189deg); } }
 
 .chatroomeffects_Snowflake-9_2DNE8 {
   animation-name: chatroomeffects_snowflake-9_1m6q0; }
@@ -3079,7 +3219,7 @@ body.v6.rewards {
   from {
     transform: translate(0, 0) rotate(0deg); }
   to {
-    transform: translate(-100px, 110vh) rotate(-93deg); } }
+    transform: translate(54px, 110vh) rotate(123deg); } }
 
 .chatroomeffects_Snowflake-10_19m8q {
   animation-name: chatroomeffects_snowflake-10_3HhrW; }
@@ -3088,7 +3228,7 @@ body.v6.rewards {
   from {
     transform: translate(0, 0) rotate(0deg); }
   to {
-    transform: translate(-48px, 110vh) rotate(448deg); } }
+    transform: translate(6px, 110vh) rotate(-110deg); } }
 
 .chatroomeffects_Snowflake-11_ijWSF {
   animation-name: chatroomeffects_snowflake-11_vukho; }
@@ -3097,7 +3237,7 @@ body.v6.rewards {
   from {
     transform: translate(0, 0) rotate(0deg); }
   to {
-    transform: translate(170px, 110vh) rotate(379deg); } }
+    transform: translate(79px, 110vh) rotate(-258deg); } }
 
 .chatroomeffects_Snowflake-12_Ripsa {
   animation-name: chatroomeffects_snowflake-12_2KXNx; }
@@ -3106,7 +3246,7 @@ body.v6.rewards {
   from {
     transform: translate(0, 0) rotate(0deg); }
   to {
-    transform: translate(31px, 110vh) rotate(-11deg); } }
+    transform: translate(86px, 110vh) rotate(410deg); } }
 
 .chatroomeffects_Snowflake-13__5IUE {
   animation-name: chatroomeffects_snowflake-13_35I49; }
@@ -3115,7 +3255,7 @@ body.v6.rewards {
   from {
     transform: translate(0, 0) rotate(0deg); }
   to {
-    transform: translate(-151px, 110vh) rotate(-179deg); } }
+    transform: translate(-93px, 110vh) rotate(-39deg); } }
 
 .chatroomeffects_Snowflake-14_pmIdk {
   animation-name: chatroomeffects_snowflake-14_1MH-J; }
@@ -3124,7 +3264,7 @@ body.v6.rewards {
   from {
     transform: translate(0, 0) rotate(0deg); }
   to {
-    transform: translate(175px, 110vh) rotate(71deg); } }
+    transform: translate(88px, 110vh) rotate(-28deg); } }
 
 .chatroomeffects_Snowflake-15_2nQdH {
   animation-name: chatroomeffects_snowflake-15_ek7ku; }
@@ -3133,7 +3273,7 @@ body.v6.rewards {
   from {
     transform: translate(0, 0) rotate(0deg); }
   to {
-    transform: translate(-8px, 110vh) rotate(92deg); } }
+    transform: translate(179px, 110vh) rotate(293deg); } }
 
 .chatroomeffects_Snowflake-16_lJyG7 {
   animation-name: chatroomeffects_snowflake-16_20hUR; }
@@ -3142,7 +3282,7 @@ body.v6.rewards {
   from {
     transform: translate(0, 0) rotate(0deg); }
   to {
-    transform: translate(-165px, 110vh) rotate(426deg); } }
+    transform: translate(-15px, 110vh) rotate(-190deg); } }
 
 .chatroomeffects_Snowflake-17_1L0AZ {
   animation-name: chatroomeffects_snowflake-17_3CfBV; }
@@ -3151,7 +3291,7 @@ body.v6.rewards {
   from {
     transform: translate(0, 0) rotate(0deg); }
   to {
-    transform: translate(-31px, 110vh) rotate(-103deg); } }
+    transform: translate(-59px, 110vh) rotate(115deg); } }
 
 .chatroomeffects_Snowflake-18_1ozac {
   animation-name: chatroomeffects_snowflake-18_HP-ye; }
@@ -3160,7 +3300,7 @@ body.v6.rewards {
   from {
     transform: translate(0, 0) rotate(0deg); }
   to {
-    transform: translate(-137px, 110vh) rotate(-171deg); } }
+    transform: translate(-83px, 110vh) rotate(280deg); } }
 
 .chatroomeffects_Snowflake-19_FOXzc {
   animation-name: chatroomeffects_snowflake-19_1d9D9; }
@@ -3169,7 +3309,7 @@ body.v6.rewards {
   from {
     transform: translate(0, 0) rotate(0deg); }
   to {
-    transform: translate(147px, 110vh) rotate(-194deg); } }
+    transform: translate(-137px, 110vh) rotate(119deg); } }
 
 .chatroomeffects_Snowflake-20_Qt7pR {
   animation-name: chatroomeffects_snowflake-20_2N-xe; }
@@ -3178,23 +3318,23 @@ body.v6.rewards {
   from {
     transform: translate(0, 0) rotate(0deg); }
   to {
-    transform: translate(13px, 110vh) rotate(398deg); } }
+    transform: translate(190px, 110vh) rotate(-343deg); } }
 
 /* Confetti effect */
 .chatroomeffects_confetti_VelNh {
   position: absolute; }
 
 .chatroomeffects_confetti-0_tlO-i {
-  width: 9px;
-  height: 3.6px;
-  background-color: #263672;
+  width: 12px;
+  height: 4.8px;
+  background-color: #ffbf00;
   top: -10%;
-  left: 90%;
-  opacity: 0.8065;
-  transform: rotate(268.33531deg);
+  left: 54%;
+  opacity: 0.51101;
+  transform: rotate(299.9769deg);
   animation: chatroomeffects_drop-0__37zJ;
-  animation-duration: 4.06097s;
-  animation-delay: 0.6605s;
+  animation-duration: 5.33428s;
+  animation-delay: 0.18616s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-0__37zJ {
@@ -3205,19 +3345,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 95%; } }
+    left: 59%; } }
 
 .chatroomeffects_confetti-1_3OuSs {
-  width: 17px;
-  height: 6.8px;
+  width: 13px;
+  height: 5.2px;
   background-color: #d13447;
   top: -10%;
-  left: 58%;
-  opacity: 0.83991;
-  transform: rotate(290.59374deg);
+  left: 79%;
+  opacity: 1.3979;
+  transform: rotate(293.41482deg);
   animation: chatroomeffects_drop-1_x-HP7;
-  animation-duration: 5.03982s;
-  animation-delay: 0.15595s;
+  animation-duration: 4.92802s;
+  animation-delay: 0.73538s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-1_x-HP7 {
@@ -3228,19 +3368,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 63%; } }
+    left: 85%; } }
 
 .chatroomeffects_confetti-2_1mdZ0 {
-  width: 16px;
-  height: 6.4px;
+  width: 5px;
+  height: 2px;
   background-color: #d13447;
   top: -10%;
-  left: 37%;
-  opacity: 0.6385;
-  transform: rotate(162.67014deg);
+  left: 66%;
+  opacity: 1.42356;
+  transform: rotate(110.9336deg);
   animation: chatroomeffects_drop-2_3XfWb;
-  animation-duration: 5.71625s;
-  animation-delay: 0.20685s;
+  animation-duration: 5.95105s;
+  animation-delay: 0.71148s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-2_3XfWb {
@@ -3251,19 +3391,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 52%; } }
+    left: 69%; } }
 
 .chatroomeffects_confetti-3_36OCs {
-  width: 18px;
-  height: 7.2px;
-  background-color: #263672;
+  width: 12px;
+  height: 4.8px;
+  background-color: #ffbf00;
   top: -10%;
-  left: 80%;
-  opacity: 0.63877;
-  transform: rotate(90.4135deg);
+  left: 38%;
+  opacity: 0.62469;
+  transform: rotate(269.87928deg);
   animation: chatroomeffects_drop-3_OTZKZ;
-  animation-duration: 5.83112s;
-  animation-delay: 0.10025s;
+  animation-duration: 4.43125s;
+  animation-delay: 0.61795s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-3_OTZKZ {
@@ -3274,19 +3414,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 92%; } }
+    left: 50%; } }
 
 .chatroomeffects_confetti-4_3NbOc {
-  width: 5px;
-  height: 2px;
-  background-color: #263672;
+  width: 4px;
+  height: 1.6px;
+  background-color: #ffbf00;
   top: -10%;
-  left: 40%;
-  opacity: 1.49865;
-  transform: rotate(22.04767deg);
+  left: 48%;
+  opacity: 1.10151;
+  transform: rotate(187.35079deg);
   animation: chatroomeffects_drop-4_1CAil;
-  animation-duration: 5.94003s;
-  animation-delay: 0.74022s;
+  animation-duration: 5.1177s;
+  animation-delay: 0.76567s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-4_1CAil {
@@ -3297,19 +3437,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 46%; } }
+    left: 55%; } }
 
 .chatroomeffects_confetti-5_VnTYG {
-  width: 14px;
-  height: 5.6px;
-  background-color: #d13447;
+  width: 7px;
+  height: 2.8px;
+  background-color: #263672;
   top: -10%;
-  left: 84%;
-  opacity: 1.45871;
-  transform: rotate(268.27923deg);
+  left: 22%;
+  opacity: 1.36328;
+  transform: rotate(186.29061deg);
   animation: chatroomeffects_drop-5_1pPPC;
-  animation-duration: 4.53271s;
-  animation-delay: 0.10144s;
+  animation-duration: 4.81642s;
+  animation-delay: 0.19823s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-5_1pPPC {
@@ -3320,19 +3460,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 95%; } }
+    left: 33%; } }
 
 .chatroomeffects_confetti-6_3KEfm {
-  width: 13px;
-  height: 5.2px;
-  background-color: #263672;
+  width: 7px;
+  height: 2.8px;
+  background-color: #d13447;
   top: -10%;
-  left: 31%;
-  opacity: 1.11768;
-  transform: rotate(10.9797deg);
+  left: 38%;
+  opacity: 1.48692;
+  transform: rotate(117.3697deg);
   animation: chatroomeffects_drop-6_4Wj8s;
-  animation-duration: 4.1024s;
-  animation-delay: 0.64576s;
+  animation-duration: 4.29007s;
+  animation-delay: 0.02657s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-6_4Wj8s {
@@ -3343,19 +3483,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 39%; } }
+    left: 50%; } }
 
 .chatroomeffects_confetti-7_1C-Ak {
-  width: 16px;
-  height: 6.4px;
-  background-color: #ffbf00;
+  width: 17px;
+  height: 6.8px;
+  background-color: #263672;
   top: -10%;
-  left: 29%;
-  opacity: 1.4018;
-  transform: rotate(144.67737deg);
+  left: 52%;
+  opacity: 0.56881;
+  transform: rotate(182.78329deg);
   animation: chatroomeffects_drop-7_oHsjU;
-  animation-duration: 4.39313s;
-  animation-delay: 0.75823s;
+  animation-duration: 4.98699s;
+  animation-delay: 0.54701s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-7_oHsjU {
@@ -3366,19 +3506,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 34%; } }
+    left: 63%; } }
 
 .chatroomeffects_confetti-8_4oJYN {
-  width: 16px;
-  height: 6.4px;
-  background-color: #ffbf00;
+  width: 15px;
+  height: 6px;
+  background-color: #263672;
   top: -10%;
-  left: 4%;
-  opacity: 0.92333;
-  transform: rotate(70.63888deg);
+  left: 50%;
+  opacity: 1.24226;
+  transform: rotate(271.9566deg);
   animation: chatroomeffects_drop-8_2y189;
-  animation-duration: 4.21143s;
-  animation-delay: 0.79437s;
+  animation-duration: 4.25571s;
+  animation-delay: 0.84707s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-8_2y189 {
@@ -3389,19 +3529,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 19%; } }
+    left: 64%; } }
 
 .chatroomeffects_confetti-9_1bEjR {
-  width: 12px;
-  height: 4.8px;
-  background-color: #263672;
+  width: 8px;
+  height: 3.2px;
+  background-color: #ffbf00;
   top: -10%;
-  left: 94%;
-  opacity: 1.25205;
-  transform: rotate(67.42714deg);
+  left: 93%;
+  opacity: 0.83856;
+  transform: rotate(100.55871deg);
   animation: chatroomeffects_drop-9_5c9w0;
-  animation-duration: 5.47656s;
-  animation-delay: 0.41457s;
+  animation-duration: 5.61695s;
+  animation-delay: 0.31693s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-9_5c9w0 {
@@ -3412,19 +3552,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 95%; } }
+    left: 105%; } }
 
 .chatroomeffects_confetti-10_1oRBM {
-  width: 9px;
-  height: 3.6px;
-  background-color: #ffbf00;
+  width: 19px;
+  height: 7.6px;
+  background-color: #d13447;
   top: -10%;
-  left: 15%;
-  opacity: 0.87571;
-  transform: rotate(293.44441deg);
+  left: 16%;
+  opacity: 0.8522;
+  transform: rotate(53.06669deg);
   animation: chatroomeffects_drop-10_1L13_;
-  animation-duration: 5.64594s;
-  animation-delay: 0.58338s;
+  animation-duration: 4.70728s;
+  animation-delay: 0.53715s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-10_1L13_ {
@@ -3435,19 +3575,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 27%; } }
+    left: 17%; } }
 
 .chatroomeffects_confetti-11_3W9ZL {
-  width: 4px;
-  height: 1.6px;
-  background-color: #263672;
+  width: 17px;
+  height: 6.8px;
+  background-color: #ffbf00;
   top: -10%;
-  left: 82%;
-  opacity: 1.20022;
-  transform: rotate(356.0853deg);
+  left: 13%;
+  opacity: 1.26754;
+  transform: rotate(354.33783deg);
   animation: chatroomeffects_drop-11_vYvGB;
-  animation-duration: 5.96077s;
-  animation-delay: 0.17498s;
+  animation-duration: 4.07361s;
+  animation-delay: 0.64473s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-11_vYvGB {
@@ -3458,19 +3598,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 96%; } }
+    left: 22%; } }
 
 .chatroomeffects_confetti-12_2TwZ0 {
-  width: 19px;
-  height: 7.6px;
+  width: 13px;
+  height: 5.2px;
   background-color: #263672;
   top: -10%;
-  left: 58%;
-  opacity: 0.59095;
-  transform: rotate(216.81344deg);
+  left: 7%;
+  opacity: 1.40891;
+  transform: rotate(193.00587deg);
   animation: chatroomeffects_drop-12_3b2Dc;
-  animation-duration: 5.62489s;
-  animation-delay: 0.91938s;
+  animation-duration: 4.28385s;
+  animation-delay: 0.43193s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-12_3b2Dc {
@@ -3481,19 +3621,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 59%; } }
+    left: 15%; } }
 
 .chatroomeffects_confetti-13_1m8Vr {
-  width: 4px;
-  height: 1.6px;
+  width: 12px;
+  height: 4.8px;
   background-color: #ffbf00;
   top: -10%;
-  left: 89%;
-  opacity: 0.78191;
-  transform: rotate(294.64682deg);
+  left: 24%;
+  opacity: 0.56955;
+  transform: rotate(38.65537deg);
   animation: chatroomeffects_drop-13_2n4ZP;
-  animation-duration: 5.3238s;
-  animation-delay: 0.10265s;
+  animation-duration: 5.80074s;
+  animation-delay: 0.17925s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-13_2n4ZP {
@@ -3504,19 +3644,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 95%; } }
+    left: 36%; } }
 
 .chatroomeffects_confetti-14_1YV6p {
-  width: 2px;
-  height: 0.8px;
-  background-color: #ffbf00;
+  width: 16px;
+  height: 6.4px;
+  background-color: #d13447;
   top: -10%;
-  left: 87%;
-  opacity: 0.7444;
-  transform: rotate(222.32127deg);
+  left: 90%;
+  opacity: 0.6808;
+  transform: rotate(356.72268deg);
   animation: chatroomeffects_drop-14_xQzPb;
-  animation-duration: 5.80123s;
-  animation-delay: 0.05486s;
+  animation-duration: 5.59305s;
+  animation-delay: 0.09868s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-14_xQzPb {
@@ -3527,19 +3667,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 90%; } }
+    left: 96%; } }
 
 .chatroomeffects_confetti-15_2D2LH {
-  width: 3px;
-  height: 1.2px;
+  width: 18px;
+  height: 7.2px;
   background-color: #ffbf00;
   top: -10%;
-  left: 83%;
-  opacity: 1.0854;
-  transform: rotate(131.43207deg);
+  left: 46%;
+  opacity: 1.18632;
+  transform: rotate(250.13596deg);
   animation: chatroomeffects_drop-15_oKVqM;
-  animation-duration: 5.62624s;
-  animation-delay: 0.86262s;
+  animation-duration: 4.85502s;
+  animation-delay: 0.52297s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-15_oKVqM {
@@ -3550,19 +3690,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 89%; } }
+    left: 60%; } }
 
 .chatroomeffects_confetti-16_pvt2J {
-  width: 8px;
-  height: 3.2px;
-  background-color: #d13447;
+  width: 7px;
+  height: 2.8px;
+  background-color: #263672;
   top: -10%;
-  left: 26%;
-  opacity: 0.64339;
-  transform: rotate(34.56821deg);
+  left: 39%;
+  opacity: 0.95399;
+  transform: rotate(245.28986deg);
   animation: chatroomeffects_drop-16_T5UBd;
-  animation-duration: 5.9308s;
-  animation-delay: 0.11477s;
+  animation-duration: 5.41276s;
+  animation-delay: 0.93447s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-16_T5UBd {
@@ -3573,19 +3713,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 41%; } }
+    left: 47%; } }
 
 .chatroomeffects_confetti-17_2NCF0 {
-  width: 14px;
-  height: 5.6px;
+  width: 1px;
+  height: 0.4px;
   background-color: #263672;
   top: -10%;
-  left: 73%;
-  opacity: 0.65088;
-  transform: rotate(6.96243deg);
+  left: 57%;
+  opacity: 1.27941;
+  transform: rotate(97.58247deg);
   animation: chatroomeffects_drop-17_1d8Dj;
-  animation-duration: 5.71624s;
-  animation-delay: 0.93755s;
+  animation-duration: 4.26366s;
+  animation-delay: 0.03894s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-17_1d8Dj {
@@ -3596,19 +3736,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 85%; } }
+    left: 59%; } }
 
 .chatroomeffects_confetti-18_o_Hf7 {
-  width: 1px;
-  height: 0.4px;
-  background-color: #263672;
+  width: 10px;
+  height: 4px;
+  background-color: #d13447;
   top: -10%;
-  left: 100%;
-  opacity: 1.09331;
-  transform: rotate(256.48035deg);
+  left: 29%;
+  opacity: 1.00214;
+  transform: rotate(209.16942deg);
   animation: chatroomeffects_drop-18_1zoqm;
-  animation-duration: 5.57302s;
-  animation-delay: 0.88559s;
+  animation-duration: 5.97283s;
+  animation-delay: 0.29252s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-18_1zoqm {
@@ -3619,19 +3759,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 103%; } }
+    left: 31%; } }
 
 .chatroomeffects_confetti-19_28L_3 {
-  width: 8px;
-  height: 3.2px;
+  width: 20px;
+  height: 8px;
   background-color: #263672;
   top: -10%;
-  left: 26%;
-  opacity: 1.37313;
-  transform: rotate(308.91455deg);
+  left: 1%;
+  opacity: 1.30384;
+  transform: rotate(171.74948deg);
   animation: chatroomeffects_drop-19_1zkpz;
-  animation-duration: 5.84852s;
-  animation-delay: 0.4526s;
+  animation-duration: 5.15241s;
+  animation-delay: 0.0138s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-19_1zkpz {
@@ -3642,19 +3782,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 34%; } }
+    left: 13%; } }
 
 .chatroomeffects_confetti-20_P-SKX {
-  width: 17px;
-  height: 6.8px;
+  width: 3px;
+  height: 1.2px;
   background-color: #263672;
   top: -10%;
-  left: 45%;
-  opacity: 1.04466;
-  transform: rotate(20.07826deg);
+  left: 22%;
+  opacity: 0.77248;
+  transform: rotate(176.37869deg);
   animation: chatroomeffects_drop-20_2HmVc;
-  animation-duration: 4.4415s;
-  animation-delay: 0.85224s;
+  animation-duration: 4.86912s;
+  animation-delay: 0.20518s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-20_2HmVc {
@@ -3665,19 +3805,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 60%; } }
+    left: 32%; } }
 
 .chatroomeffects_confetti-21_27GkO {
-  width: 9px;
-  height: 3.6px;
+  width: 4px;
+  height: 1.6px;
   background-color: #d13447;
   top: -10%;
-  left: 43%;
-  opacity: 1.2645;
-  transform: rotate(101.87811deg);
+  left: 32%;
+  opacity: 1.36831;
+  transform: rotate(17.65658deg);
   animation: chatroomeffects_drop-21_1T4Mt;
-  animation-duration: 4.6992s;
-  animation-delay: 0.90007s;
+  animation-duration: 5.51563s;
+  animation-delay: 0.29688s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-21_1T4Mt {
@@ -3688,19 +3828,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 50%; } }
+    left: 35%; } }
 
 .chatroomeffects_confetti-22_1sCDh {
-  width: 1px;
-  height: 0.4px;
+  width: 13px;
+  height: 5.2px;
   background-color: #263672;
   top: -10%;
-  left: 75%;
-  opacity: 0.93027;
-  transform: rotate(323.21306deg);
+  left: 29%;
+  opacity: 1.03189;
+  transform: rotate(40.89213deg);
   animation: chatroomeffects_drop-22_2svz8;
-  animation-duration: 4.80897s;
-  animation-delay: 0.88367s;
+  animation-duration: 5.10421s;
+  animation-delay: 0.9749s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-22_2svz8 {
@@ -3711,19 +3851,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 88%; } }
+    left: 37%; } }
 
 .chatroomeffects_confetti-23_9SZ_A {
-  width: 17px;
-  height: 6.8px;
+  width: 20px;
+  height: 8px;
   background-color: #263672;
   top: -10%;
-  left: 15%;
-  opacity: 0.68126;
-  transform: rotate(17.16395deg);
+  left: 74%;
+  opacity: 0.66978;
+  transform: rotate(45.31683deg);
   animation: chatroomeffects_drop-23_3vAxI;
-  animation-duration: 5.21818s;
-  animation-delay: 0.79858s;
+  animation-duration: 5.86239s;
+  animation-delay: 0.14939s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-23_3vAxI {
@@ -3734,19 +3874,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 26%; } }
+    left: 85%; } }
 
 .chatroomeffects_confetti-24_1Am3e {
-  width: 16px;
-  height: 6.4px;
+  width: 18px;
+  height: 7.2px;
   background-color: #263672;
   top: -10%;
-  left: 50%;
-  opacity: 0.9722;
-  transform: rotate(321.50673deg);
+  left: 30%;
+  opacity: 1.28857;
+  transform: rotate(4.50202deg);
   animation: chatroomeffects_drop-24_RhAjb;
-  animation-duration: 5.83579s;
-  animation-delay: 0.3893s;
+  animation-duration: 5.85842s;
+  animation-delay: 0.00805s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-24_RhAjb {
@@ -3757,19 +3897,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 57%; } }
+    left: 43%; } }
 
 .chatroomeffects_confetti-25_1Ja7L {
-  width: 16px;
-  height: 6.4px;
-  background-color: #d13447;
+  width: 7px;
+  height: 2.8px;
+  background-color: #263672;
   top: -10%;
-  left: 9%;
-  opacity: 1.49787;
-  transform: rotate(292.63856deg);
+  left: 27%;
+  opacity: 0.76606;
+  transform: rotate(272.47008deg);
   animation: chatroomeffects_drop-25_201NA;
-  animation-duration: 5.64462s;
-  animation-delay: 0.78059s;
+  animation-duration: 4.90869s;
+  animation-delay: 0.36555s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-25_201NA {
@@ -3780,19 +3920,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 10%; } }
+    left: 39%; } }
 
 .chatroomeffects_confetti-26_2jMUO {
-  width: 3px;
-  height: 1.2px;
-  background-color: #d13447;
+  width: 14px;
+  height: 5.6px;
+  background-color: #263672;
   top: -10%;
-  left: 14%;
-  opacity: 0.76514;
-  transform: rotate(49.03382deg);
+  left: 34%;
+  opacity: 1.18494;
+  transform: rotate(274.50126deg);
   animation: chatroomeffects_drop-26_29n7q;
-  animation-duration: 4.09299s;
-  animation-delay: 0.61906s;
+  animation-duration: 5.71776s;
+  animation-delay: 0.99921s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-26_29n7q {
@@ -3803,19 +3943,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 24%; } }
+    left: 41%; } }
 
 .chatroomeffects_confetti-27_2yQQd {
-  width: 20px;
-  height: 8px;
-  background-color: #263672;
+  width: 9px;
+  height: 3.6px;
+  background-color: #ffbf00;
   top: -10%;
-  left: 15%;
-  opacity: 0.80161;
-  transform: rotate(39.62383deg);
+  left: 67%;
+  opacity: 1.06449;
+  transform: rotate(49.36375deg);
   animation: chatroomeffects_drop-27_2m3A7;
-  animation-duration: 4.51832s;
-  animation-delay: 0.73103s;
+  animation-duration: 5.46993s;
+  animation-delay: 0.74146s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-27_2m3A7 {
@@ -3826,19 +3966,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 19%; } }
+    left: 77%; } }
 
 .chatroomeffects_confetti-28_1Qlxx {
-  width: 10px;
-  height: 4px;
+  width: 9px;
+  height: 3.6px;
   background-color: #263672;
   top: -10%;
-  left: 93%;
-  opacity: 1.17851;
-  transform: rotate(312.18426deg);
+  left: 66%;
+  opacity: 1.32446;
+  transform: rotate(177.95249deg);
   animation: chatroomeffects_drop-28_18frj;
-  animation-duration: 4.1179s;
-  animation-delay: 0.07129s;
+  animation-duration: 5.72021s;
+  animation-delay: 0.62751s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-28_18frj {
@@ -3849,19 +3989,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 94%; } }
+    left: 73%; } }
 
 .chatroomeffects_confetti-29_1b2l6 {
-  width: 9px;
-  height: 3.6px;
+  width: 1px;
+  height: 0.4px;
   background-color: #d13447;
   top: -10%;
-  left: 44%;
-  opacity: 1.17012;
-  transform: rotate(82.11641deg);
+  left: 75%;
+  opacity: 0.51655;
+  transform: rotate(1.23204deg);
   animation: chatroomeffects_drop-29_2Q2T3;
-  animation-duration: 5.67394s;
-  animation-delay: 0.07067s;
+  animation-duration: 4.16627s;
+  animation-delay: 0.67491s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-29_2Q2T3 {
@@ -3872,19 +4012,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 49%; } }
+    left: 77%; } }
 
 .chatroomeffects_confetti-30_1JH00 {
-  width: 15px;
-  height: 6px;
+  width: 20px;
+  height: 8px;
   background-color: #d13447;
   top: -10%;
-  left: 59%;
-  opacity: 1.08756;
-  transform: rotate(350.64932deg);
+  left: 81%;
+  opacity: 1.49996;
+  transform: rotate(190.49129deg);
   animation: chatroomeffects_drop-30_35aPE;
-  animation-duration: 4.68196s;
-  animation-delay: 0.04389s;
+  animation-duration: 5.96264s;
+  animation-delay: 0.10424s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-30_35aPE {
@@ -3895,19 +4035,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 68%; } }
+    left: 88%; } }
 
 .chatroomeffects_confetti-31_Osdxn {
-  width: 14px;
-  height: 5.6px;
+  width: 4px;
+  height: 1.6px;
   background-color: #ffbf00;
   top: -10%;
-  left: 29%;
-  opacity: 1.29347;
-  transform: rotate(139.05125deg);
+  left: 82%;
+  opacity: 0.73966;
+  transform: rotate(48.50889deg);
   animation: chatroomeffects_drop-31_3xx2U;
-  animation-duration: 5.61521s;
-  animation-delay: 0.70481s;
+  animation-duration: 4.66245s;
+  animation-delay: 0.13665s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-31_3xx2U {
@@ -3918,19 +4058,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 36%; } }
+    left: 95%; } }
 
 .chatroomeffects_confetti-32_f1SYA {
-  width: 18px;
-  height: 7.2px;
-  background-color: #d13447;
+  width: 12px;
+  height: 4.8px;
+  background-color: #263672;
   top: -10%;
-  left: 30%;
-  opacity: 0.89611;
-  transform: rotate(160.7869deg);
+  left: 47%;
+  opacity: 1.14441;
+  transform: rotate(290.31986deg);
   animation: chatroomeffects_drop-32_215c3;
-  animation-duration: 5.54178s;
-  animation-delay: 0.07198s;
+  animation-duration: 5.357s;
+  animation-delay: 0.57197s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-32_215c3 {
@@ -3941,19 +4081,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 42%; } }
+    left: 52%; } }
 
 .chatroomeffects_confetti-33_g65ei {
-  width: 18px;
-  height: 7.2px;
-  background-color: #d13447;
+  width: 9px;
+  height: 3.6px;
+  background-color: #ffbf00;
   top: -10%;
-  left: 49%;
-  opacity: 0.8881;
-  transform: rotate(333.40727deg);
+  left: 97%;
+  opacity: 0.91125;
+  transform: rotate(45.43565deg);
   animation: chatroomeffects_drop-33_2oegr;
-  animation-duration: 5.05322s;
-  animation-delay: 0.92193s;
+  animation-duration: 4.47893s;
+  animation-delay: 0.20843s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-33_2oegr {
@@ -3964,19 +4104,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 61%; } }
+    left: 99%; } }
 
 .chatroomeffects_confetti-34_2yCKI {
-  width: 7px;
-  height: 2.8px;
-  background-color: #ffbf00;
+  width: 19px;
+  height: 7.6px;
+  background-color: #d13447;
   top: -10%;
-  left: 13%;
-  opacity: 1.30705;
-  transform: rotate(214.28099deg);
+  left: 10%;
+  opacity: 0.65868;
+  transform: rotate(144.44783deg);
   animation: chatroomeffects_drop-34_3K9VA;
-  animation-duration: 4.35211s;
-  animation-delay: 0.04699s;
+  animation-duration: 4.02978s;
+  animation-delay: 0.49313s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-34_3K9VA {
@@ -3987,19 +4127,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 24%; } }
+    left: 25%; } }
 
 .chatroomeffects_confetti-35_3JsiR {
-  width: 12px;
-  height: 4.8px;
+  width: 18px;
+  height: 7.2px;
   background-color: #d13447;
   top: -10%;
-  left: 38%;
-  opacity: 1.26939;
-  transform: rotate(341.39475deg);
+  left: 28%;
+  opacity: 1.25296;
+  transform: rotate(10.87092deg);
   animation: chatroomeffects_drop-35_5jMlo;
-  animation-duration: 4.67688s;
-  animation-delay: 0.51053s;
+  animation-duration: 4.00879s;
+  animation-delay: 0.19502s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-35_5jMlo {
@@ -4010,19 +4150,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 45%; } }
+    left: 39%; } }
 
 .chatroomeffects_confetti-36_R14L0 {
-  width: 5px;
-  height: 2px;
+  width: 8px;
+  height: 3.2px;
   background-color: #d13447;
   top: -10%;
-  left: 30%;
-  opacity: 0.92204;
-  transform: rotate(224.3448deg);
+  left: 41%;
+  opacity: 1.12268;
+  transform: rotate(194.97979deg);
   animation: chatroomeffects_drop-36_13yR4;
-  animation-duration: 5.77538s;
-  animation-delay: 0.73238s;
+  animation-duration: 4.40656s;
+  animation-delay: 0.15901s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-36_13yR4 {
@@ -4036,16 +4176,16 @@ body.v6.rewards {
     left: 43%; } }
 
 .chatroomeffects_confetti-37_24ZmD {
-  width: 2px;
-  height: 0.8px;
-  background-color: #d13447;
+  width: 3px;
+  height: 1.2px;
+  background-color: #263672;
   top: -10%;
-  left: 2%;
-  opacity: 0.96048;
-  transform: rotate(125.17373deg);
+  left: 75%;
+  opacity: 1.17589;
+  transform: rotate(216.17194deg);
   animation: chatroomeffects_drop-37_2uYeL;
-  animation-duration: 5.89369s;
-  animation-delay: 0.15304s;
+  animation-duration: 4.13938s;
+  animation-delay: 0.91242s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-37_2uYeL {
@@ -4056,19 +4196,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 8%; } }
+    left: 79%; } }
 
 .chatroomeffects_confetti-38_25jbU {
-  width: 13px;
-  height: 5.2px;
+  width: 16px;
+  height: 6.4px;
   background-color: #263672;
   top: -10%;
-  left: 94%;
-  opacity: 1.31219;
-  transform: rotate(99.47873deg);
+  left: 13%;
+  opacity: 0.72539;
+  transform: rotate(129.37991deg);
   animation: chatroomeffects_drop-38_3BJYZ;
-  animation-duration: 5.34027s;
-  animation-delay: 0.6879s;
+  animation-duration: 4.95598s;
+  animation-delay: 0.45315s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-38_3BJYZ {
@@ -4079,19 +4219,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 105%; } }
+    left: 17%; } }
 
 .chatroomeffects_confetti-39_8zwxi {
-  width: 20px;
-  height: 8px;
-  background-color: #ffbf00;
+  width: 2px;
+  height: 0.8px;
+  background-color: #263672;
   top: -10%;
-  left: 78%;
-  opacity: 1.23876;
-  transform: rotate(305.99761deg);
+  left: 28%;
+  opacity: 1.27402;
+  transform: rotate(286.04246deg);
   animation: chatroomeffects_drop-39_2zKzQ;
-  animation-duration: 4.59814s;
-  animation-delay: 0.28914s;
+  animation-duration: 5.47309s;
+  animation-delay: 0.6737s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-39_2zKzQ {
@@ -4102,19 +4242,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 92%; } }
+    left: 39%; } }
 
 .chatroomeffects_confetti-40_Du-Wg {
-  width: 12px;
-  height: 4.8px;
+  width: 13px;
+  height: 5.2px;
   background-color: #d13447;
   top: -10%;
-  left: 48%;
-  opacity: 1.26351;
-  transform: rotate(3.18326deg);
+  left: 33%;
+  opacity: 1.12145;
+  transform: rotate(206.11031deg);
   animation: chatroomeffects_drop-40_3DiQ2;
-  animation-duration: 5.04106s;
-  animation-delay: 0.84019s;
+  animation-duration: 4.52599s;
+  animation-delay: 0.37836s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-40_3DiQ2 {
@@ -4125,19 +4265,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 52%; } }
+    left: 47%; } }
 
 .chatroomeffects_confetti-41_3LjK4 {
-  width: 12px;
-  height: 4.8px;
-  background-color: #d13447;
+  width: 4px;
+  height: 1.6px;
+  background-color: #263672;
   top: -10%;
-  left: 20%;
-  opacity: 0.85067;
-  transform: rotate(284.25986deg);
+  left: 30%;
+  opacity: 0.90483;
+  transform: rotate(1.97824deg);
   animation: chatroomeffects_drop-41_10ZGR;
-  animation-duration: 5.81715s;
-  animation-delay: 0.16362s;
+  animation-duration: 5.91657s;
+  animation-delay: 0.25307s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-41_10ZGR {
@@ -4148,19 +4288,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 27%; } }
+    left: 42%; } }
 
 .chatroomeffects_confetti-42_3u0x8 {
-  width: 8px;
-  height: 3.2px;
-  background-color: #d13447;
+  width: 18px;
+  height: 7.2px;
+  background-color: #263672;
   top: -10%;
-  left: 40%;
-  opacity: 0.9836;
-  transform: rotate(19.25204deg);
+  left: 60%;
+  opacity: 1.39632;
+  transform: rotate(89.88872deg);
   animation: chatroomeffects_drop-42_2GaWP;
-  animation-duration: 4.06064s;
-  animation-delay: 0.22312s;
+  animation-duration: 5.26592s;
+  animation-delay: 0.65132s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-42_2GaWP {
@@ -4171,19 +4311,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 42%; } }
+    left: 62%; } }
 
 .chatroomeffects_confetti-43_2Iip- {
-  width: 10px;
-  height: 4px;
-  background-color: #ffbf00;
+  width: 20px;
+  height: 8px;
+  background-color: #d13447;
   top: -10%;
-  left: 100%;
-  opacity: 0.63763;
-  transform: rotate(313.76997deg);
+  left: 42%;
+  opacity: 0.80316;
+  transform: rotate(83.33397deg);
   animation: chatroomeffects_drop-43_3zDFZ;
-  animation-duration: 4.45468s;
-  animation-delay: 0.38201s;
+  animation-duration: 4.43805s;
+  animation-delay: 0.64536s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-43_3zDFZ {
@@ -4194,19 +4334,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 110%; } }
+    left: 57%; } }
 
 .chatroomeffects_confetti-44_2qI_Q {
-  width: 12px;
-  height: 4.8px;
-  background-color: #d13447;
+  width: 14px;
+  height: 5.6px;
+  background-color: #ffbf00;
   top: -10%;
-  left: 78%;
-  opacity: 1.41399;
-  transform: rotate(202.58534deg);
+  left: 19%;
+  opacity: 1.18229;
+  transform: rotate(264.04882deg);
   animation: chatroomeffects_drop-44_3G_AJ;
-  animation-duration: 5.92177s;
-  animation-delay: 0.26509s;
+  animation-duration: 4.2682s;
+  animation-delay: 0.43186s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-44_3G_AJ {
@@ -4217,19 +4357,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 82%; } }
+    left: 22%; } }
 
 .chatroomeffects_confetti-45_3FUIw {
-  width: 13px;
-  height: 5.2px;
-  background-color: #263672;
+  width: 20px;
+  height: 8px;
+  background-color: #d13447;
   top: -10%;
-  left: 76%;
-  opacity: 0.81486;
-  transform: rotate(238.36132deg);
+  left: 70%;
+  opacity: 1.43945;
+  transform: rotate(134.00475deg);
   animation: chatroomeffects_drop-45_1BAsF;
-  animation-duration: 5.01591s;
-  animation-delay: 0.97267s;
+  animation-duration: 4.36369s;
+  animation-delay: 0.31744s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-45_1BAsF {
@@ -4240,19 +4380,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 89%; } }
+    left: 84%; } }
 
 .chatroomeffects_confetti-46_2wAK3 {
   width: 13px;
   height: 5.2px;
-  background-color: #d13447;
+  background-color: #ffbf00;
   top: -10%;
-  left: 26%;
-  opacity: 1.3846;
-  transform: rotate(240.55605deg);
+  left: 27%;
+  opacity: 1.10206;
+  transform: rotate(168.33714deg);
   animation: chatroomeffects_drop-46_1LOgZ;
-  animation-duration: 4.45493s;
-  animation-delay: 0.26048s;
+  animation-duration: 4.26459s;
+  animation-delay: 0.4649s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-46_1LOgZ {
@@ -4263,19 +4403,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 29%; } }
+    left: 40%; } }
 
 .chatroomeffects_confetti-47_2dO3B {
-  width: 7px;
-  height: 2.8px;
-  background-color: #d13447;
+  width: 11px;
+  height: 4.4px;
+  background-color: #ffbf00;
   top: -10%;
-  left: 37%;
-  opacity: 0.58865;
-  transform: rotate(18.56354deg);
+  left: 29%;
+  opacity: 0.61488;
+  transform: rotate(92.27687deg);
   animation: chatroomeffects_drop-47_l_1GZ;
-  animation-duration: 4.65485s;
-  animation-delay: 0.68094s;
+  animation-duration: 5.83752s;
+  animation-delay: 0.13572s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-47_l_1GZ {
@@ -4286,19 +4426,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 52%; } }
+    left: 38%; } }
 
 .chatroomeffects_confetti-48_2ud75 {
-  width: 18px;
-  height: 7.2px;
-  background-color: #ffbf00;
+  width: 8px;
+  height: 3.2px;
+  background-color: #263672;
   top: -10%;
-  left: 40%;
-  opacity: 0.62359;
-  transform: rotate(310.78125deg);
+  left: 33%;
+  opacity: 1.26237;
+  transform: rotate(191.17433deg);
   animation: chatroomeffects_drop-48_cnRU6;
-  animation-duration: 5.17664s;
-  animation-delay: 0.78958s;
+  animation-duration: 5.66749s;
+  animation-delay: 0.7972s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-48_cnRU6 {
@@ -4309,19 +4449,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 41%; } }
+    left: 35%; } }
 
 .chatroomeffects_confetti-49_EX-pu {
-  width: 20px;
-  height: 8px;
-  background-color: #263672;
+  width: 11px;
+  height: 4.4px;
+  background-color: #ffbf00;
   top: -10%;
-  left: 71%;
-  opacity: 0.99853;
-  transform: rotate(221.35796deg);
+  left: 30%;
+  opacity: 1.00655;
+  transform: rotate(313.98352deg);
   animation: chatroomeffects_drop-49_3ElNG;
-  animation-duration: 4.97695s;
-  animation-delay: 0.16469s;
+  animation-duration: 5.43676s;
+  animation-delay: 0.97198s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-49_3ElNG {
@@ -4332,19 +4472,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 81%; } }
+    left: 42%; } }
 
 .chatroomeffects_confetti-50_8qyUx {
-  width: 17px;
-  height: 6.8px;
-  background-color: #ffbf00;
+  width: 16px;
+  height: 6.4px;
+  background-color: #263672;
   top: -10%;
-  left: 72%;
-  opacity: 1.1623;
-  transform: rotate(177.40522deg);
+  left: 54%;
+  opacity: 0.73396;
+  transform: rotate(174.00481deg);
   animation: chatroomeffects_drop-50_IlkNs;
-  animation-duration: 5.75131s;
-  animation-delay: 0.15303s;
+  animation-duration: 4.69308s;
+  animation-delay: 0.14213s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-50_IlkNs {
@@ -4355,19 +4495,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 84%; } }
+    left: 68%; } }
 
 .chatroomeffects_confetti-51_AtKXb {
-  width: 20px;
-  height: 8px;
-  background-color: #263672;
+  width: 3px;
+  height: 1.2px;
+  background-color: #ffbf00;
   top: -10%;
-  left: 79%;
-  opacity: 0.65159;
-  transform: rotate(47.51726deg);
+  left: 10%;
+  opacity: 0.89387;
+  transform: rotate(259.29269deg);
   animation: chatroomeffects_drop-51_2msFB;
-  animation-duration: 4.69616s;
-  animation-delay: 0.12969s;
+  animation-duration: 4.82424s;
+  animation-delay: 0.0902s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-51_2msFB {
@@ -4378,19 +4518,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 86%; } }
+    left: 17%; } }
 
 .chatroomeffects_confetti-52_1my5Z {
-  width: 16px;
-  height: 6.4px;
-  background-color: #ffbf00;
+  width: 2px;
+  height: 0.8px;
+  background-color: #263672;
   top: -10%;
-  left: 50%;
-  opacity: 1.32947;
-  transform: rotate(189.02506deg);
+  left: 81%;
+  opacity: 0.5335;
+  transform: rotate(2.11004deg);
   animation: chatroomeffects_drop-52_1QnRe;
-  animation-duration: 5.92023s;
-  animation-delay: 0.4055s;
+  animation-duration: 4.99722s;
+  animation-delay: 0.09972s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-52_1QnRe {
@@ -4401,19 +4541,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 64%; } }
+    left: 83%; } }
 
 .chatroomeffects_confetti-53_2Cb1i {
-  width: 15px;
-  height: 6px;
-  background-color: #263672;
+  width: 3px;
+  height: 1.2px;
+  background-color: #d13447;
   top: -10%;
-  left: 30%;
-  opacity: 0.7946;
-  transform: rotate(157.89949deg);
+  left: 100%;
+  opacity: 0.60985;
+  transform: rotate(347.01838deg);
   animation: chatroomeffects_drop-53_1CQh7;
-  animation-duration: 5.45235s;
-  animation-delay: 0.93746s;
+  animation-duration: 5.41649s;
+  animation-delay: 0.82849s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-53_1CQh7 {
@@ -4424,19 +4564,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 31%; } }
+    left: 103%; } }
 
 .chatroomeffects_confetti-54_2VhA6 {
-  width: 7px;
-  height: 2.8px;
+  width: 8px;
+  height: 3.2px;
   background-color: #d13447;
   top: -10%;
-  left: 75%;
-  opacity: 0.86333;
-  transform: rotate(44.08095deg);
+  left: 27%;
+  opacity: 1.49743;
+  transform: rotate(189.41205deg);
   animation: chatroomeffects_drop-54_3hZKt;
-  animation-duration: 5.78896s;
-  animation-delay: 0.17533s;
+  animation-duration: 4.8403s;
+  animation-delay: 0.91311s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-54_3hZKt {
@@ -4447,19 +4587,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 77%; } }
+    left: 36%; } }
 
 .chatroomeffects_confetti-55_yL87g {
-  width: 6px;
-  height: 2.4px;
+  width: 17px;
+  height: 6.8px;
   background-color: #d13447;
   top: -10%;
-  left: 50%;
-  opacity: 0.83768;
-  transform: rotate(125.36396deg);
+  left: 12%;
+  opacity: 1.18086;
+  transform: rotate(277.46506deg);
   animation: chatroomeffects_drop-55_3dM49;
-  animation-duration: 4.13189s;
-  animation-delay: 0.32855s;
+  animation-duration: 4.29579s;
+  animation-delay: 0.07961s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-55_3dM49 {
@@ -4470,19 +4610,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 55%; } }
+    left: 22%; } }
 
 .chatroomeffects_confetti-56_1xqgg {
-  width: 17px;
-  height: 6.8px;
-  background-color: #263672;
+  width: 13px;
+  height: 5.2px;
+  background-color: #d13447;
   top: -10%;
-  left: 38%;
-  opacity: 0.60671;
-  transform: rotate(355.7527deg);
+  left: 99%;
+  opacity: 0.65938;
+  transform: rotate(328.42929deg);
   animation: chatroomeffects_drop-56_3SnEp;
-  animation-duration: 4.56942s;
-  animation-delay: 0.5705s;
+  animation-duration: 5.45047s;
+  animation-delay: 0.79115s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-56_3SnEp {
@@ -4493,19 +4633,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 47%; } }
+    left: 111%; } }
 
 .chatroomeffects_confetti-57_f9kuG {
-  width: 13px;
-  height: 5.2px;
-  background-color: #263672;
+  width: 11px;
+  height: 4.4px;
+  background-color: #d13447;
   top: -10%;
-  left: 83%;
-  opacity: 1.35654;
-  transform: rotate(310.33447deg);
+  left: 10%;
+  opacity: 1.07713;
+  transform: rotate(240.58911deg);
   animation: chatroomeffects_drop-57_3DCDa;
-  animation-duration: 4.65232s;
-  animation-delay: 0.76164s;
+  animation-duration: 4.12778s;
+  animation-delay: 0.56383s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-57_3DCDa {
@@ -4516,19 +4656,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 95%; } }
+    left: 17%; } }
 
 .chatroomeffects_confetti-58_1O4Ku {
-  width: 17px;
-  height: 6.8px;
+  width: 20px;
+  height: 8px;
   background-color: #ffbf00;
   top: -10%;
-  left: 100%;
-  opacity: 0.66866;
-  transform: rotate(238.49105deg);
+  left: 37%;
+  opacity: 0.50053;
+  transform: rotate(198.92446deg);
   animation: chatroomeffects_drop-58_3d1_1;
-  animation-duration: 5.88848s;
-  animation-delay: 0.78097s;
+  animation-duration: 4.16799s;
+  animation-delay: 0.92469s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-58_3d1_1 {
@@ -4539,19 +4679,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 115%; } }
+    left: 51%; } }
 
 .chatroomeffects_confetti-59_XOFkR {
-  width: 18px;
-  height: 7.2px;
+  width: 5px;
+  height: 2px;
   background-color: #263672;
   top: -10%;
-  left: 10%;
-  opacity: 0.7219;
-  transform: rotate(13.80742deg);
+  left: 21%;
+  opacity: 0.86705;
+  transform: rotate(211.92014deg);
   animation: chatroomeffects_drop-59_1ZKa_;
-  animation-duration: 4.5901s;
-  animation-delay: 0.5967s;
+  animation-duration: 4.97638s;
+  animation-delay: 0.33957s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-59_1ZKa_ {
@@ -4562,19 +4702,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 20%; } }
+    left: 30%; } }
 
 .chatroomeffects_confetti-60_2iInd {
-  width: 5px;
-  height: 2px;
+  width: 13px;
+  height: 5.2px;
   background-color: #d13447;
   top: -10%;
-  left: 4%;
-  opacity: 1.22692;
-  transform: rotate(204.17117deg);
+  left: 21%;
+  opacity: 1.16167;
+  transform: rotate(1.67019deg);
   animation: chatroomeffects_drop-60_3stXq;
-  animation-duration: 5.20581s;
-  animation-delay: 0.38345s;
+  animation-duration: 4.58418s;
+  animation-delay: 0.44874s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-60_3stXq {
@@ -4585,19 +4725,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 6%; } }
+    left: 30%; } }
 
 .chatroomeffects_confetti-61_4hvgI {
-  width: 11px;
-  height: 4.4px;
-  background-color: #ffbf00;
+  width: 6px;
+  height: 2.4px;
+  background-color: #d13447;
   top: -10%;
-  left: 54%;
-  opacity: 1.15657;
-  transform: rotate(11.46453deg);
+  left: 39%;
+  opacity: 0.92587;
+  transform: rotate(151.14058deg);
   animation: chatroomeffects_drop-61_ENSW2;
-  animation-duration: 5.41171s;
-  animation-delay: 0.47505s;
+  animation-duration: 4.48066s;
+  animation-delay: 0.77802s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-61_ENSW2 {
@@ -4608,19 +4748,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 67%; } }
+    left: 43%; } }
 
 .chatroomeffects_confetti-62_1vcmC {
   width: 10px;
   height: 4px;
   background-color: #ffbf00;
   top: -10%;
-  left: 46%;
-  opacity: 1.43089;
-  transform: rotate(166.78623deg);
+  left: 21%;
+  opacity: 0.70483;
+  transform: rotate(144.54428deg);
   animation: chatroomeffects_drop-62_3gyQe;
-  animation-duration: 5.47239s;
-  animation-delay: 0.63704s;
+  animation-duration: 4.81427s;
+  animation-delay: 0.67884s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-62_3gyQe {
@@ -4631,19 +4771,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 58%; } }
+    left: 27%; } }
 
 .chatroomeffects_confetti-63_3dgPj {
-  width: 5px;
-  height: 2px;
-  background-color: #263672;
+  width: 4px;
+  height: 1.6px;
+  background-color: #ffbf00;
   top: -10%;
-  left: 23%;
-  opacity: 0.71586;
-  transform: rotate(66.26554deg);
+  left: 82%;
+  opacity: 1.41355;
+  transform: rotate(215.73645deg);
   animation: chatroomeffects_drop-63_2047M;
-  animation-duration: 5.51949s;
-  animation-delay: 0.98226s;
+  animation-duration: 5.10599s;
+  animation-delay: 0.53544s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-63_2047M {
@@ -4654,19 +4794,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 28%; } }
+    left: 91%; } }
 
 .chatroomeffects_confetti-64_Cewk5 {
-  width: 7px;
-  height: 2.8px;
+  width: 2px;
+  height: 0.8px;
   background-color: #263672;
   top: -10%;
-  left: 36%;
-  opacity: 1.42252;
-  transform: rotate(237.99183deg);
+  left: 4%;
+  opacity: 0.56287;
+  transform: rotate(125.51704deg);
   animation: chatroomeffects_drop-64_2YCRK;
-  animation-duration: 5.92238s;
-  animation-delay: 0.1648s;
+  animation-duration: 4.35623s;
+  animation-delay: 0.23159s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-64_2YCRK {
@@ -4677,19 +4817,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 39%; } }
+    left: 6%; } }
 
 .chatroomeffects_confetti-65_ciQUm {
-  width: 15px;
-  height: 6px;
+  width: 14px;
+  height: 5.6px;
   background-color: #263672;
   top: -10%;
-  left: 67%;
-  opacity: 1.35291;
-  transform: rotate(102.54957deg);
+  left: 57%;
+  opacity: 1.42517;
+  transform: rotate(6.8387deg);
   animation: chatroomeffects_drop-65_3kUQk;
-  animation-duration: 5.52494s;
-  animation-delay: 0.24709s;
+  animation-duration: 4.59919s;
+  animation-delay: 0.35619s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-65_3kUQk {
@@ -4700,19 +4840,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 68%; } }
+    left: 61%; } }
 
 .chatroomeffects_confetti-66_3a3mu {
-  width: 8px;
-  height: 3.2px;
+  width: 10px;
+  height: 4px;
   background-color: #d13447;
   top: -10%;
-  left: 77%;
-  opacity: 1.38887;
-  transform: rotate(112.4368deg);
+  left: 33%;
+  opacity: 1.40264;
+  transform: rotate(321.2424deg);
   animation: chatroomeffects_drop-66_3DoHw;
-  animation-duration: 4.68156s;
-  animation-delay: 0.12165s;
+  animation-duration: 4.9687s;
+  animation-delay: 0.05842s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-66_3DoHw {
@@ -4723,19 +4863,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 85%; } }
+    left: 47%; } }
 
 .chatroomeffects_confetti-67_39YTy {
-  width: 3px;
-  height: 1.2px;
-  background-color: #d13447;
+  width: 8px;
+  height: 3.2px;
+  background-color: #263672;
   top: -10%;
-  left: 7%;
-  opacity: 0.91717;
-  transform: rotate(315.70429deg);
+  left: 48%;
+  opacity: 1.31432;
+  transform: rotate(206.54844deg);
   animation: chatroomeffects_drop-67_Qb0h2;
-  animation-duration: 5.23625s;
-  animation-delay: 0.11511s;
+  animation-duration: 5.40688s;
+  animation-delay: 0.70055s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-67_Qb0h2 {
@@ -4746,19 +4886,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 10%; } }
+    left: 58%; } }
 
 .chatroomeffects_confetti-68_2zcwH {
-  width: 1px;
-  height: 0.4px;
-  background-color: #263672;
+  width: 13px;
+  height: 5.2px;
+  background-color: #ffbf00;
   top: -10%;
-  left: 66%;
-  opacity: 1.29051;
-  transform: rotate(35.2965deg);
+  left: 30%;
+  opacity: 0.99521;
+  transform: rotate(323.69802deg);
   animation: chatroomeffects_drop-68_zRaTb;
-  animation-duration: 4.709s;
-  animation-delay: 0.18881s;
+  animation-duration: 5.85834s;
+  animation-delay: 0.98746s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-68_zRaTb {
@@ -4769,19 +4909,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 74%; } }
+    left: 36%; } }
 
 .chatroomeffects_confetti-69_1O9Qn {
-  width: 7px;
-  height: 2.8px;
-  background-color: #d13447;
+  width: 16px;
+  height: 6.4px;
+  background-color: #263672;
   top: -10%;
-  left: 6%;
-  opacity: 0.85582;
-  transform: rotate(290.99405deg);
+  left: 93%;
+  opacity: 1.25671;
+  transform: rotate(263.89573deg);
   animation: chatroomeffects_drop-69_oogaf;
-  animation-duration: 5.10703s;
-  animation-delay: 0.39073s;
+  animation-duration: 4.38679s;
+  animation-delay: 0.95768s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-69_oogaf {
@@ -4792,19 +4932,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 20%; } }
+    left: 107%; } }
 
 .chatroomeffects_confetti-70_3wL25 {
-  width: 5px;
-  height: 2px;
-  background-color: #ffbf00;
+  width: 19px;
+  height: 7.6px;
+  background-color: #263672;
   top: -10%;
-  left: 90%;
-  opacity: 1.30273;
-  transform: rotate(194.93104deg);
+  left: 75%;
+  opacity: 1.49378;
+  transform: rotate(104.2859deg);
   animation: chatroomeffects_drop-70_ouiMF;
-  animation-duration: 5.9531s;
-  animation-delay: 0.62108s;
+  animation-duration: 4.05981s;
+  animation-delay: 0.63082s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-70_ouiMF {
@@ -4815,19 +4955,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 91%; } }
+    left: 88%; } }
 
 .chatroomeffects_confetti-71_2FN6I {
-  width: 18px;
-  height: 7.2px;
-  background-color: #ffbf00;
+  width: 6px;
+  height: 2.4px;
+  background-color: #263672;
   top: -10%;
-  left: 43%;
-  opacity: 1.26135;
-  transform: rotate(254.52815deg);
+  left: 9%;
+  opacity: 1.09746;
+  transform: rotate(150.25701deg);
   animation: chatroomeffects_drop-71_y2t-j;
-  animation-duration: 5.024s;
-  animation-delay: 0.04211s;
+  animation-duration: 5.65961s;
+  animation-delay: 0.43723s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-71_y2t-j {
@@ -4838,19 +4978,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 48%; } }
+    left: 24%; } }
 
 .chatroomeffects_confetti-72_2tgnG {
-  width: 1px;
-  height: 0.4px;
+  width: 7px;
+  height: 2.8px;
   background-color: #d13447;
   top: -10%;
-  left: 100%;
-  opacity: 1.37697;
-  transform: rotate(328.15175deg);
+  left: 8%;
+  opacity: 1.01156;
+  transform: rotate(68.47945deg);
   animation: chatroomeffects_drop-72_3hLQt;
-  animation-duration: 5.38019s;
-  animation-delay: 0.32943s;
+  animation-duration: 5.19845s;
+  animation-delay: 0.88948s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-72_3hLQt {
@@ -4861,19 +5001,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 112%; } }
+    left: 22%; } }
 
 .chatroomeffects_confetti-73_-0y9h {
-  width: 20px;
-  height: 8px;
+  width: 15px;
+  height: 6px;
   background-color: #d13447;
   top: -10%;
-  left: 78%;
-  opacity: 1.41462;
-  transform: rotate(261.7637deg);
+  left: 4%;
+  opacity: 0.73078;
+  transform: rotate(112.55229deg);
   animation: chatroomeffects_drop-73_-Wx7W;
-  animation-duration: 5.20286s;
-  animation-delay: 0.86815s;
+  animation-duration: 4.11248s;
+  animation-delay: 0.43551s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-73_-Wx7W {
@@ -4884,19 +5024,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 88%; } }
+    left: 13%; } }
 
 .chatroomeffects_confetti-74_1_vWA {
-  width: 1px;
-  height: 0.4px;
+  width: 4px;
+  height: 1.6px;
   background-color: #ffbf00;
   top: -10%;
-  left: 96%;
-  opacity: 1.0873;
-  transform: rotate(41.43309deg);
+  left: 73%;
+  opacity: 1.21362;
+  transform: rotate(319.21013deg);
   animation: chatroomeffects_drop-74_2L0XL;
-  animation-duration: 5.88759s;
-  animation-delay: 0.39594s;
+  animation-duration: 4.95748s;
+  animation-delay: 0.26547s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-74_2L0XL {
@@ -4907,19 +5047,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 105%; } }
+    left: 74%; } }
 
 .chatroomeffects_confetti-75_qNiwF {
-  width: 9px;
-  height: 3.6px;
+  width: 7px;
+  height: 2.8px;
   background-color: #d13447;
   top: -10%;
-  left: 61%;
-  opacity: 0.50908;
-  transform: rotate(281.38962deg);
+  left: 92%;
+  opacity: 0.82357;
+  transform: rotate(112.61633deg);
   animation: chatroomeffects_drop-75_2iJw_;
-  animation-duration: 4.08083s;
-  animation-delay: 0.90054s;
+  animation-duration: 4.90964s;
+  animation-delay: 0.43863s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-75_2iJw_ {
@@ -4930,19 +5070,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 65%; } }
+    left: 98%; } }
 
 .chatroomeffects_confetti-76_2Isn6 {
-  width: 2px;
-  height: 0.8px;
-  background-color: #d13447;
+  width: 15px;
+  height: 6px;
+  background-color: #ffbf00;
   top: -10%;
-  left: 56%;
-  opacity: 0.79107;
-  transform: rotate(33.95961deg);
+  left: 46%;
+  opacity: 0.83686;
+  transform: rotate(286.89551deg);
   animation: chatroomeffects_drop-76_3MdvI;
-  animation-duration: 4.70564s;
-  animation-delay: 0.25951s;
+  animation-duration: 5.90254s;
+  animation-delay: 0.28047s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-76_3MdvI {
@@ -4953,19 +5093,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 64%; } }
+    left: 49%; } }
 
 .chatroomeffects_confetti-77_2bgtx {
-  width: 13px;
-  height: 5.2px;
+  width: 20px;
+  height: 8px;
   background-color: #263672;
   top: -10%;
-  left: 90%;
-  opacity: 1.48291;
-  transform: rotate(63.69357deg);
+  left: 73%;
+  opacity: 1.16549;
+  transform: rotate(191.20196deg);
   animation: chatroomeffects_drop-77_2ItPx;
-  animation-duration: 4.7065s;
-  animation-delay: 0.99373s;
+  animation-duration: 5.62077s;
+  animation-delay: 0.37945s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-77_2ItPx {
@@ -4976,19 +5116,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 103%; } }
+    left: 83%; } }
 
 .chatroomeffects_confetti-78_veCdx {
-  width: 9px;
-  height: 3.6px;
+  width: 13px;
+  height: 5.2px;
   background-color: #ffbf00;
   top: -10%;
-  left: 72%;
-  opacity: 0.94083;
-  transform: rotate(78.02311deg);
+  left: 33%;
+  opacity: 1.36707;
+  transform: rotate(271.4172deg);
   animation: chatroomeffects_drop-78_3D9KT;
-  animation-duration: 5.89458s;
-  animation-delay: 0.54317s;
+  animation-duration: 5.90435s;
+  animation-delay: 0.45359s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-78_3D9KT {
@@ -4999,19 +5139,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 78%; } }
+    left: 35%; } }
 
 .chatroomeffects_confetti-79_5cczs {
-  width: 5px;
-  height: 2px;
+  width: 1px;
+  height: 0.4px;
   background-color: #263672;
   top: -10%;
-  left: 82%;
-  opacity: 0.67532;
-  transform: rotate(253.865deg);
+  left: 4%;
+  opacity: 0.96869;
+  transform: rotate(316.57078deg);
   animation: chatroomeffects_drop-79_1x9H7;
-  animation-duration: 5.80589s;
-  animation-delay: 0.74307s;
+  animation-duration: 5.5518s;
+  animation-delay: 0.33981s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-79_1x9H7 {
@@ -5022,19 +5162,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 83%; } }
+    left: 19%; } }
 
 .chatroomeffects_confetti-80_hz59y {
-  width: 3px;
-  height: 1.2px;
+  width: 18px;
+  height: 7.2px;
   background-color: #ffbf00;
   top: -10%;
-  left: 2%;
-  opacity: 1.2774;
-  transform: rotate(12.20068deg);
+  left: 78%;
+  opacity: 0.79047;
+  transform: rotate(251.31514deg);
   animation: chatroomeffects_drop-80_2ZjKF;
-  animation-duration: 4.37573s;
-  animation-delay: 0.73377s;
+  animation-duration: 4.17445s;
+  animation-delay: 0.61886s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-80_2ZjKF {
@@ -5045,19 +5185,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 4%; } }
+    left: 82%; } }
 
 .chatroomeffects_confetti-81_1rhSJ {
-  width: 17px;
-  height: 6.8px;
-  background-color: #d13447;
+  width: 4px;
+  height: 1.6px;
+  background-color: #ffbf00;
   top: -10%;
-  left: 73%;
-  opacity: 1.06126;
-  transform: rotate(1.93634deg);
+  left: 28%;
+  opacity: 0.95302;
+  transform: rotate(246.11914deg);
   animation: chatroomeffects_drop-81_tGBBf;
-  animation-duration: 4.10998s;
-  animation-delay: 0.22824s;
+  animation-duration: 4.19391s;
+  animation-delay: 0.64121s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-81_tGBBf {
@@ -5068,19 +5208,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 80%; } }
+    left: 41%; } }
 
 .chatroomeffects_confetti-82_1jWl7 {
-  width: 19px;
-  height: 7.6px;
-  background-color: #263672;
+  width: 1px;
+  height: 0.4px;
+  background-color: #ffbf00;
   top: -10%;
-  left: 58%;
-  opacity: 0.94426;
-  transform: rotate(213.74766deg);
+  left: 92%;
+  opacity: 1.45414;
+  transform: rotate(5.97894deg);
   animation: chatroomeffects_drop-82_26Ftm;
-  animation-duration: 5.73383s;
-  animation-delay: 0.92875s;
+  animation-duration: 5.79241s;
+  animation-delay: 0.43569s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-82_26Ftm {
@@ -5091,19 +5231,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 64%; } }
+    left: 93%; } }
 
 .chatroomeffects_confetti-83_1Veaf {
-  width: 18px;
-  height: 7.2px;
-  background-color: #ffbf00;
+  width: 14px;
+  height: 5.6px;
+  background-color: #d13447;
   top: -10%;
-  left: 90%;
-  opacity: 0.62039;
-  transform: rotate(215.93557deg);
+  left: 28%;
+  opacity: 1.17193;
+  transform: rotate(110.21082deg);
   animation: chatroomeffects_drop-83_2VByP;
-  animation-duration: 5.75495s;
-  animation-delay: 0.09854s;
+  animation-duration: 4.65085s;
+  animation-delay: 0.066s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-83_2VByP {
@@ -5114,19 +5254,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 105%; } }
+    left: 36%; } }
 
 .chatroomeffects_confetti-84_3_bdr {
-  width: 5px;
-  height: 2px;
-  background-color: #ffbf00;
+  width: 15px;
+  height: 6px;
+  background-color: #d13447;
   top: -10%;
-  left: 76%;
-  opacity: 0.55848;
-  transform: rotate(292.45215deg);
+  left: 31%;
+  opacity: 0.5526;
+  transform: rotate(183.92595deg);
   animation: chatroomeffects_drop-84_m6um-;
-  animation-duration: 5.9236s;
-  animation-delay: 0.13725s;
+  animation-duration: 4.87344s;
+  animation-delay: 0.38705s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-84_m6um- {
@@ -5137,19 +5277,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 91%; } }
+    left: 36%; } }
 
 .chatroomeffects_confetti-85_9Zttw {
-  width: 13px;
-  height: 5.2px;
-  background-color: #d13447;
+  width: 8px;
+  height: 3.2px;
+  background-color: #ffbf00;
   top: -10%;
-  left: 36%;
-  opacity: 1.16794;
-  transform: rotate(172.96396deg);
+  left: 66%;
+  opacity: 1.47938;
+  transform: rotate(218.93274deg);
   animation: chatroomeffects_drop-85_2xtS5;
-  animation-duration: 5.66436s;
-  animation-delay: 0.32324s;
+  animation-duration: 4.85034s;
+  animation-delay: 0.17474s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-85_2xtS5 {
@@ -5160,19 +5300,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 38%; } }
+    left: 67%; } }
 
 .chatroomeffects_confetti-86_2EJMi {
   width: 12px;
   height: 4.8px;
-  background-color: #ffbf00;
+  background-color: #263672;
   top: -10%;
-  left: 44%;
-  opacity: 1.25085;
-  transform: rotate(316.91724deg);
+  left: 25%;
+  opacity: 0.75319;
+  transform: rotate(2.21678deg);
   animation: chatroomeffects_drop-86_2dudW;
-  animation-duration: 4.44102s;
-  animation-delay: 0.32137s;
+  animation-duration: 5.05594s;
+  animation-delay: 0.79301s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-86_2dudW {
@@ -5183,19 +5323,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 58%; } }
+    left: 34%; } }
 
 .chatroomeffects_confetti-87_uys-9 {
-  width: 16px;
-  height: 6.4px;
+  width: 5px;
+  height: 2px;
   background-color: #d13447;
   top: -10%;
-  left: 85%;
-  opacity: 0.51912;
-  transform: rotate(342.85233deg);
+  left: 4%;
+  opacity: 1.40491;
+  transform: rotate(103.04586deg);
   animation: chatroomeffects_drop-87_1PZvt;
-  animation-duration: 4.45527s;
-  animation-delay: 0.96033s;
+  animation-duration: 5.53747s;
+  animation-delay: 0.39559s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-87_1PZvt {
@@ -5206,19 +5346,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 90%; } }
+    left: 14%; } }
 
 .chatroomeffects_confetti-88_24exN {
-  width: 13px;
-  height: 5.2px;
-  background-color: #d13447;
+  width: 10px;
+  height: 4px;
+  background-color: #ffbf00;
   top: -10%;
-  left: 78%;
-  opacity: 1.07747;
-  transform: rotate(117.25041deg);
+  left: 51%;
+  opacity: 1.22947;
+  transform: rotate(122.92711deg);
   animation: chatroomeffects_drop-88_5ZbRz;
-  animation-duration: 4.65362s;
-  animation-delay: 0.74308s;
+  animation-duration: 4.63488s;
+  animation-delay: 0.62938s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-88_5ZbRz {
@@ -5229,19 +5369,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 80%; } }
+    left: 62%; } }
 
 .chatroomeffects_confetti-89_2yKbS {
-  width: 4px;
-  height: 1.6px;
+  width: 8px;
+  height: 3.2px;
   background-color: #d13447;
   top: -10%;
-  left: 55%;
-  opacity: 1.16999;
-  transform: rotate(141.69721deg);
+  left: 69%;
+  opacity: 1.31256;
+  transform: rotate(258.37175deg);
   animation: chatroomeffects_drop-89_1s66w;
-  animation-duration: 4.67557s;
-  animation-delay: 0.30858s;
+  animation-duration: 5.71049s;
+  animation-delay: 0.86104s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-89_1s66w {
@@ -5252,19 +5392,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 70%; } }
+    left: 73%; } }
 
 .chatroomeffects_confetti-90_2tEzr {
-  width: 6px;
-  height: 2.4px;
-  background-color: #d13447;
+  width: 13px;
+  height: 5.2px;
+  background-color: #ffbf00;
   top: -10%;
-  left: 86%;
-  opacity: 0.7941;
-  transform: rotate(158.60964deg);
+  left: 94%;
+  opacity: 1.26858;
+  transform: rotate(325.94902deg);
   animation: chatroomeffects_drop-90_1dLha;
-  animation-duration: 5.06683s;
-  animation-delay: 0.41797s;
+  animation-duration: 5.70943s;
+  animation-delay: 0.32516s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-90_1dLha {
@@ -5275,19 +5415,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 90%; } }
+    left: 105%; } }
 
 .chatroomeffects_confetti-91_3T4UL {
-  width: 15px;
-  height: 6px;
+  width: 6px;
+  height: 2.4px;
   background-color: #ffbf00;
   top: -10%;
-  left: 55%;
-  opacity: 1.16932;
-  transform: rotate(161.53402deg);
+  left: 20%;
+  opacity: 0.78323;
+  transform: rotate(12.77184deg);
   animation: chatroomeffects_drop-91_P_MRR;
-  animation-duration: 4.04782s;
-  animation-delay: 0.25782s;
+  animation-duration: 4.01053s;
+  animation-delay: 0.7174s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-91_P_MRR {
@@ -5298,19 +5438,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 61%; } }
+    left: 32%; } }
 
 .chatroomeffects_confetti-92_7p5vh {
   width: 3px;
   height: 1.2px;
   background-color: #263672;
   top: -10%;
-  left: 59%;
-  opacity: 0.50306;
-  transform: rotate(262.15927deg);
+  left: 75%;
+  opacity: 0.79764;
+  transform: rotate(192.18653deg);
   animation: chatroomeffects_drop-92_1Mwkv;
-  animation-duration: 5.56027s;
-  animation-delay: 0.4513s;
+  animation-duration: 4.59311s;
+  animation-delay: 0.8405s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-92_1Mwkv {
@@ -5321,19 +5461,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 72%; } }
+    left: 89%; } }
 
 .chatroomeffects_confetti-93_2BaTW {
-  width: 3px;
-  height: 1.2px;
-  background-color: #ffbf00;
+  width: 20px;
+  height: 8px;
+  background-color: #263672;
   top: -10%;
-  left: 72%;
-  opacity: 0.83683;
-  transform: rotate(10.7517deg);
+  left: 2%;
+  opacity: 0.9424;
+  transform: rotate(80.2698deg);
   animation: chatroomeffects_drop-93_3NCsF;
-  animation-duration: 4.30458s;
-  animation-delay: 0.16006s;
+  animation-duration: 4.08397s;
+  animation-delay: 0.56344s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-93_3NCsF {
@@ -5344,19 +5484,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 84%; } }
+    left: 17%; } }
 
 .chatroomeffects_confetti-94_3DVf7 {
-  width: 7px;
-  height: 2.8px;
-  background-color: #ffbf00;
+  width: 6px;
+  height: 2.4px;
+  background-color: #d13447;
   top: -10%;
-  left: 47%;
-  opacity: 1.33034;
-  transform: rotate(353.61294deg);
+  left: 39%;
+  opacity: 0.50046;
+  transform: rotate(130.1509deg);
   animation: chatroomeffects_drop-94_fZgnW;
-  animation-duration: 4.47141s;
-  animation-delay: 0.57304s;
+  animation-duration: 5.68938s;
+  animation-delay: 0.19153s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-94_fZgnW {
@@ -5367,19 +5507,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 60%; } }
+    left: 43%; } }
 
 .chatroomeffects_confetti-95_23jtb {
-  width: 13px;
-  height: 5.2px;
-  background-color: #ffbf00;
+  width: 6px;
+  height: 2.4px;
+  background-color: #d13447;
   top: -10%;
-  left: 34%;
-  opacity: 0.73178;
-  transform: rotate(36.14067deg);
+  left: 38%;
+  opacity: 0.55415;
+  transform: rotate(293.18054deg);
   animation: chatroomeffects_drop-95_1tw1t;
-  animation-duration: 4.84665s;
-  animation-delay: 0.24506s;
+  animation-duration: 5.43956s;
+  animation-delay: 0.54069s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-95_1tw1t {
@@ -5390,19 +5530,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 48%; } }
+    left: 43%; } }
 
 .chatroomeffects_confetti-96_2CxeZ {
-  width: 5px;
-  height: 2px;
+  width: 3px;
+  height: 1.2px;
   background-color: #263672;
   top: -10%;
-  left: 83%;
-  opacity: 0.56043;
-  transform: rotate(63.52114deg);
+  left: 34%;
+  opacity: 0.58595;
+  transform: rotate(197.81802deg);
   animation: chatroomeffects_drop-96_37GFJ;
-  animation-duration: 4.99377s;
-  animation-delay: 0.35698s;
+  animation-duration: 5.21441s;
+  animation-delay: 0.62127s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-96_37GFJ {
@@ -5413,19 +5553,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 89%; } }
+    left: 46%; } }
 
 .chatroomeffects_confetti-97_qoLlt {
-  width: 17px;
-  height: 6.8px;
+  width: 5px;
+  height: 2px;
   background-color: #d13447;
   top: -10%;
-  left: 2%;
-  opacity: 1.1539;
-  transform: rotate(93.88744deg);
+  left: 33%;
+  opacity: 1.49012;
+  transform: rotate(237.09927deg);
   animation: chatroomeffects_drop-97_v1bhd;
-  animation-duration: 4.22555s;
-  animation-delay: 0.34676s;
+  animation-duration: 5.29896s;
+  animation-delay: 0.00876s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-97_v1bhd {
@@ -5436,19 +5576,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 13%; } }
+    left: 37%; } }
 
 .chatroomeffects_confetti-98_3Po3_ {
-  width: 10px;
-  height: 4px;
+  width: 19px;
+  height: 7.6px;
   background-color: #263672;
   top: -10%;
-  left: 65%;
-  opacity: 1.3746;
-  transform: rotate(146.60234deg);
+  left: 32%;
+  opacity: 1.08484;
+  transform: rotate(30.11322deg);
   animation: chatroomeffects_drop-98_1TcCu;
-  animation-duration: 4.29013s;
-  animation-delay: 0.04746s;
+  animation-duration: 5.66142s;
+  animation-delay: 0.58027s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-98_1TcCu {
@@ -5459,19 +5599,19 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 76%; } }
+    left: 42%; } }
 
 .chatroomeffects_confetti-99_2-vdA {
-  width: 6px;
-  height: 2.4px;
+  width: 14px;
+  height: 5.6px;
   background-color: #263672;
   top: -10%;
-  left: 77%;
-  opacity: 1.4024;
-  transform: rotate(119.55108deg);
+  left: 58%;
+  opacity: 0.9577;
+  transform: rotate(11.98245deg);
   animation: chatroomeffects_drop-99_3lQGo;
-  animation-duration: 5.10594s;
-  animation-delay: 0.16265s;
+  animation-duration: 5.87108s;
+  animation-delay: 0.40119s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-99_3lQGo {
@@ -5482,7 +5622,7 @@ body.v6.rewards {
     top: 0%; }
   100% {
     top: 110%;
-    left: 83%; } }
+    left: 71%; } }
 
 /* Golden Confetti - Goldfetti */
 
@@ -5976,7 +6116,7 @@ body.v6.rewards {
 
 @keyframes chatroomeffects_bang_3GL2k {
   to {
-    box-shadow: -8px -308.66667px #00ffe6, 147px -111.66667px #ff4d00, 97px -80.66667px darkorange, 14px -409.66667px #00fff2, -226px -107.66667px #3c00ff, 230px 4.33333px #00ff37, -225px -341.66667px #d9ff00, -202px -62.66667px #ff0095, 2px -137.66667px #009dff, 29px -154.66667px #007bff, -78px -64.66667px #0099ff, 230px -230.66667px #ff8400, 23px 18.33333px #00d5ff, -125px -18.66667px #84ff00, 157px -319.66667px #00ff44, 58px 40.33333px #0088ff, -38px -165.66667px #ff0037, -47px -326.66667px #95ff00, 104px -187.66667px #0048ff, -31px -357.66667px #00ff33, -159px -165.66667px #00ff95, 232px -268.66667px #00a6ff, -27px -85.66667px #00ffa6, 41px -161.66667px #ff00fb, -115px -49.66667px cyan, -97px -76.66667px #00ffd0, -31px -116.66667px #aa00ff, -189px -383.66667px #0059ff, -105px -123.66667px #00ff6a, 64px -144.66667px #00ffc4, -159px -264.66667px #fbff00, 194px -171.66667px #bfff00, -223px -179.66667px #15ff00, -59px -49.66667px #ffbf00, 223px -264.66667px #003cff, -79px -64.66667px #00ffe6, -22px -298.66667px #e600ff, -238px -68.66667px #4400ff, 182px -103.66667px #6200ff, -79px -89.66667px #ff0062, 239px -396.66667px #ff003c, -171px -269.66667px #aeff00, 206px -133.66667px #b7ff00, 248px -215.66667px #4dff00, -87px -153.66667px darkorange, 9px -359.66667px #8800ff, 137px 66.33333px #0dff00, 62px -183.66667px #84ff00, -192px -102.66667px darkorange, -226px -62.66667px #1a00ff, -168px -166.66667px #006aff; } }
+    box-shadow: -243px -208.66667px #f2ff00, 118px -384.66667px #00bbff, -58px -249.66667px #ff00d0, 89px 66.33333px #00ff62, -17px -241.66667px #00ffa2, 94px -47.66667px #ff008c, 142px -317.66667px #ff5900, -79px -361.66667px #eeff00, 184px 37.33333px #4d00ff, 128px 53.33333px #0dff00, 98px -41.66667px #ccff00, 214px 50.33333px #00ff1a, 133px -14.66667px #ff5500, 82px -131.66667px #ff00a6, -94px 37.33333px #ff00ee, 133px -179.66667px #001eff, 225px -319.66667px #ffaa00, 127px 37.33333px #d5ff00, -194px -66.66667px #00ff04, 181px -81.66667px #00bbff, -154px -358.66667px #d500ff, -224px -226.66667px #00ff26, -33px -58.66667px #ff00d5, -23px 61.33333px #00eeff, -193px 34.33333px #a200ff, -69px -66.66667px #00a2ff, 185px 71.33333px #ff005e, 138px -335.66667px #ffb300, 212px -191.66667px #ffb700, 71px -69.66667px #ff1500, -99px -180.66667px #ff00c8, 177px -136.66667px #ffea00, -141px -336.66667px #8cff00, 161px -82.66667px #00ffe1, -197px -397.66667px #00ffdd, 161px -348.66667px #ff8000, 111px -193.66667px #00ffae, 131px -111.66667px #66ff00, 33px -327.66667px #ff0095, 34px -77.66667px #ff0095, -221px 7.33333px #b700ff, -147px -380.66667px #5900ff, -93px -16.66667px #ff0044, 214px 79.33333px #002bff, -163px 21.33333px #c4ff00, -155px -199.66667px #4800ff, 67px -174.66667px #2b00ff, 220px -379.66667px #40ff00, 230px -370.66667px #ffaa00, -233px -404.66667px #ff002b, -89px 74.33333px #6f00ff; } }
 
 @keyframes chatroomeffects_gravity_S4aDc {
   to {
@@ -6829,15 +6969,29 @@ body.v6.rewards {
       font-family: "Motiva Sans", Helvetica, sans-serif;
       text-transform: uppercase;
       color: #D0D0D0; }
+    .index_ShellHeader_1iZtn .index_AppFilterContainer_26hNv .index_AppFilterIconContainer_HT_HI {
+      position: relative;
+      display: flex; }
     .index_ShellHeader_1iZtn .index_AppFilterContainer_26hNv .index_AppFilterIcon_3-SYz {
       height: 24px;
+      width: 24px;
+      margin-left: 20px;
       cursor: pointer;
       color: #C5CBD8;
       stroke: currentColor;
       fill: currentColor;
       transition-property: color;
       transition-duration: .15s;
-      transition-timing-function: ease-in; }
+      transition-timing-function: ease-in;
+      position: relative; }
+    .index_ShellHeader_1iZtn .index_AppFilterContainer_26hNv .index_FilterInUse_1uMhF {
+      width: 11px;
+      height: 11px;
+      border-radius: 6px;
+      background-color: #4A9CE7;
+      position: absolute;
+      top: -5px;
+      right: -5px; }
     .index_ShellHeader_1iZtn .index_AppFilterContainer_26hNv .index_AppFilterIcon_3-SYz:hover {
       color: #ffffff;
       stroke: currentColor;
@@ -7373,15 +7527,29 @@ body.v6.rewards {
       font-family: "Motiva Sans", Helvetica, sans-serif;
       text-transform: uppercase;
       color: #D0D0D0; }
+    .index_ShellHeader_k366j .index_AppFilterContainer_1Dh9O .index_AppFilterIconContainer_XK5Bh {
+      position: relative;
+      display: flex; }
     .index_ShellHeader_k366j .index_AppFilterContainer_1Dh9O .index_AppFilterIcon_1Mpes {
       height: 24px;
+      width: 24px;
+      margin-left: 20px;
       cursor: pointer;
       color: #C5CBD8;
       stroke: currentColor;
       fill: currentColor;
       transition-property: color;
       transition-duration: .15s;
-      transition-timing-function: ease-in; }
+      transition-timing-function: ease-in;
+      position: relative; }
+    .index_ShellHeader_k366j .index_AppFilterContainer_1Dh9O .index_FilterInUse_3Fbfr {
+      width: 11px;
+      height: 11px;
+      border-radius: 6px;
+      background-color: #4A9CE7;
+      position: absolute;
+      top: -5px;
+      right: -5px; }
     .index_ShellHeader_k366j .index_AppFilterContainer_1Dh9O .index_AppFilterIcon_1Mpes:hover {
       color: #ffffff;
       stroke: currentColor;
@@ -7525,15 +7693,29 @@ body.v6.rewards {
       font-family: "Motiva Sans", Helvetica, sans-serif;
       text-transform: uppercase;
       color: #D0D0D0; }
+    .loyaltyprimarynav_ShellHeader_2VMec .loyaltyprimarynav_AppFilterContainer_5SId0 .loyaltyprimarynav_AppFilterIconContainer_vqZCf {
+      position: relative;
+      display: flex; }
     .loyaltyprimarynav_ShellHeader_2VMec .loyaltyprimarynav_AppFilterContainer_5SId0 .loyaltyprimarynav_AppFilterIcon_3c-oe {
       height: 24px;
+      width: 24px;
+      margin-left: 20px;
       cursor: pointer;
       color: #C5CBD8;
       stroke: currentColor;
       fill: currentColor;
       transition-property: color;
       transition-duration: .15s;
-      transition-timing-function: ease-in; }
+      transition-timing-function: ease-in;
+      position: relative; }
+    .loyaltyprimarynav_ShellHeader_2VMec .loyaltyprimarynav_AppFilterContainer_5SId0 .loyaltyprimarynav_FilterInUse_3HotG {
+      width: 11px;
+      height: 11px;
+      border-radius: 6px;
+      background-color: #4A9CE7;
+      position: absolute;
+      top: -5px;
+      right: -5px; }
     .loyaltyprimarynav_ShellHeader_2VMec .loyaltyprimarynav_AppFilterContainer_5SId0 .loyaltyprimarynav_AppFilterIcon_3c-oe:hover {
       color: #ffffff;
       stroke: currentColor;
@@ -7745,15 +7927,29 @@ body.v6.rewards {
       font-family: "Motiva Sans", Helvetica, sans-serif;
       text-transform: uppercase;
       color: #D0D0D0; }
+    .globals_ShellHeader_3M7bf .globals_AppFilterContainer_3G7_B .globals_AppFilterIconContainer_1h_Ic {
+      position: relative;
+      display: flex; }
     .globals_ShellHeader_3M7bf .globals_AppFilterContainer_3G7_B .globals_AppFilterIcon_CFiLd {
       height: 24px;
+      width: 24px;
+      margin-left: 20px;
       cursor: pointer;
       color: #C5CBD8;
       stroke: currentColor;
       fill: currentColor;
       transition-property: color;
       transition-duration: .15s;
-      transition-timing-function: ease-in; }
+      transition-timing-function: ease-in;
+      position: relative; }
+    .globals_ShellHeader_3M7bf .globals_AppFilterContainer_3G7_B .globals_FilterInUse_CWExc {
+      width: 11px;
+      height: 11px;
+      border-radius: 6px;
+      background-color: #4A9CE7;
+      position: absolute;
+      top: -5px;
+      right: -5px; }
     .globals_ShellHeader_3M7bf .globals_AppFilterContainer_3G7_B .globals_AppFilterIcon_CFiLd:hover {
       color: #ffffff;
       stroke: currentColor;
@@ -7881,15 +8077,29 @@ body.v6.rewards {
       font-family: "Motiva Sans", Helvetica, sans-serif;
       text-transform: uppercase;
       color: #D0D0D0; }
+    .appfilterpopup_ShellHeader_2rgA4 .appfilterpopup_AppFilterContainer_13WnQ .appfilterpopup_AppFilterIconContainer_NeF-u {
+      position: relative;
+      display: flex; }
     .appfilterpopup_ShellHeader_2rgA4 .appfilterpopup_AppFilterContainer_13WnQ .appfilterpopup_AppFilterIcon_1zRO6 {
       height: 24px;
+      width: 24px;
+      margin-left: 20px;
       cursor: pointer;
       color: #C5CBD8;
       stroke: currentColor;
       fill: currentColor;
       transition-property: color;
       transition-duration: .15s;
-      transition-timing-function: ease-in; }
+      transition-timing-function: ease-in;
+      position: relative; }
+    .appfilterpopup_ShellHeader_2rgA4 .appfilterpopup_AppFilterContainer_13WnQ .appfilterpopup_FilterInUse_1hK6- {
+      width: 11px;
+      height: 11px;
+      border-radius: 6px;
+      background-color: #4A9CE7;
+      position: absolute;
+      top: -5px;
+      right: -5px; }
     .appfilterpopup_ShellHeader_2rgA4 .appfilterpopup_AppFilterContainer_13WnQ .appfilterpopup_AppFilterIcon_1zRO6:hover {
       color: #ffffff;
       stroke: currentColor;

@@ -502,6 +502,7 @@ h2.editorOnly {
 
 #docToc {
 	max-width: 360px;
+    min-width: 360px;
 	width: 360px;
 	background-color: #2b3647;
 	padding-left: 16px;
@@ -769,6 +770,11 @@ h2.editorOnly {
 #landingWelcome .breadcrumbs,
 #landingWelcome .breadcrumbs a {
 	color: #cccccc;
+}
+
+.fileManagementCtn {
+    position: sticky;
+    top: 0;
 }
 
 #filePreviewArea, #fileSelectionArea {

@@ -175,6 +175,8 @@
         EventCalendar_Goto_RSSFeed: "Open %1$s RSS Feed",
         EventCalendar_SingleAppIsMuted:
           "Note: This game is muted and will not show up in your personalized news hub.",
+        EventCalendar_SingleGroupIsMuted:
+          "Note: This group is muted and will not show up in your personalized news hub.",
         EventCalendar_WatchYouTubeVideo: "Watch YouTube Video",
         EventCalendar_WatchLiveBroadcast: "Watch Live Broadcast",
         EventCalendar_Collection_News_Title: "Discover News Sources",
@@ -195,7 +197,7 @@
         SteamLabs: "Steam Labs",
         SteamLabs_ExperimentNumber: "Experiment %1$s",
         SteamLabs_DiscussionLink: "Discuss this experiment",
-        EventCalendar_SignIn_Title: "Welcome to the new Steam News Hub",
+        EventCalendar_SignIn_Title: "Sign In To Get Personalized News",
         EventCalendar_SignIn_Text:
           "Sign in with your Steam account to access your personalized news hub or explore featured news and updates below.",
         EventCalendar_FutureEventsHint: "Scroll up to see what's coming next",
@@ -334,6 +336,11 @@
         EventCalendar_GameSource_curator: "Curators You Follow",
         EventCalendar_GameSource_ttip_curator:
           "Includes posts from curators you follow on Steam",
+        EventCalendar_GameSource_UnhideCuratorsDialog_Title: "Show Curators?",
+        EventCalendar_GameSource_UnhideCuratorsDialog_Description:
+          "You just followed a Steam Curator. Would you like to include news from Curators in your personalized News Hub?",
+        EventCalendar_GameSource_UnhideCuratorsDialog_OKButton: "Yes",
+        EventCalendar_GameSource_UnhideCuratorsDialog_CancelButton: "No",
         EventCalendar_EditFilters: "Options and Filters",
         EventCalendar_CloseFilters: "News Hub",
         EventCalendar_FiltersTitle: "Filters",
@@ -1302,6 +1309,8 @@
         Sale_Preferences: "Preferences",
         Sale_PlaceHolder:
           "Preview Mode: This section has no capsules. Will not appear on user page if it is empty.",
+        Sale_EventSchedulePlaceHolder:
+          "Preview Mode: There are currently no events associated with this schedule, this will not appear in the current state on the sale",
         Sale_SmartPlaceHolder:
           "Preview Mode: This smart section has no apps for you. This would not appear on user page if it is empty.",
         Sale_default_label: "(no title)",
@@ -1499,7 +1508,7 @@
         SteamAwards_EventMainTitle: "The Steam Awards",
         SteamAwards_EventMainTitleSecondLine: "Nominee",
         SteamAwards_EventCallToAction: "Coming this December",
-        SteamAwards_EventVotingDateTeaser: "December 2019",
+        SteamAwards_EventVotingDateTeaser: "December %1$s",
         SteamAwards_EventVoteForGamePrompt:
           "Click below to vote for %1$s for the category:",
         SteamAwards_EventNominateGamePrompt_Long:
@@ -1518,28 +1527,28 @@
           "Do not suggest a specific category, and instead let your fans pick the category they think best fits your game. The event will still include a link to the nominations page.",
         SteamAward_CategoryTitle_goty: "Game of the Year",
         SteamAward_CategoryDesc_goty:
-          "While it may have been born under a bad sign, this game was the star of 2020.",
+          "Maybe it was its immersive gameplay, or its gripping story... its well-crafted characters, immaculate design, or addictive multiplayer. Whatever the reason, the winner of 2020's Game of the Year Award is an instant classic.",
         SteamAward_CategoryTitle_vrgoty: "VR Game of the Year",
         SteamAward_CategoryDesc_vrgoty:
           "The VR Game of the Year isn't merely masquerading as regular reality. This game improves on reality, taking advantage of the medium of VR and pushing the boundaries of the virtual realm.",
         SteamAward_CategoryTitle_love: "Labor of Love Award",
         SteamAward_CategoryDesc_love:
-          "This game has been out for a while. The team is well past the debut of their creative baby, but being the good parents they are, these devs continue to nurture and support their creation. This game, to this day, is still getting new content after all these years.",
+          "This game has been out for a while. The team is well past the debut of their creative baby, but being the good parents they are, they continue to nurture and support their creation. This game, to this day, is still getting new content, features, mechanics and more after all these years.",
         SteamAward_CategoryTitle_friends: "Better with Friends Award",
         SteamAward_CategoryDesc_friends:
-          "There are some games out there that just aren't the same when you play by yourself. Maybe you need to have a friend to watch your back. Maybe you need to have a friend that you can stab in their back. Either way, mirth is awaiting those who gather friends to play these games.",
+          "There are some games out there that just aren't the same when you play by yourself. Maybe you need to have a friend to watch your back. Maybe you need to have a friend that you can stab in their back. Either way, fun is awaiting those who gather friends together play this game.",
         SteamAward_CategoryTitle_gameplay: "Most Innovative Gameplay",
         SteamAward_CategoryDesc_gameplay:
-          "This game is at the front lines of experimentation, pushing the boundaries of the medium with exciting, novel interactions and brain-breaking surprises. This game thinks outside the box, and pulls you out with it!",
+          "The designers of this game are at the front lines of creative experimentation, bringing a fresh perspective and brain-breaking surprises. This game delighted, inspired and entertained with newness never played before.",
         SteamAward_CategoryTitle_storyrich: "Outstanding Story-Rich Game",
         SteamAward_CategoryDesc_storyrich:
-          "Some days, only a narrative-heavy game will hit the spot, and this one packs a wallop. It's as gripping as any soap opera and as well-tuned as a prestige-TV screenplay. Bravissimo -- for making us feel things!",
+          "Some days, only a narrative-heavy game will hit the spot, and this one packs a wallop. It's as gripping as any soap opera, and as well-tuned as a prestige-TV screenplay. Bravissimo -- for making us feel things!",
         SteamAward_CategoryTitle_yousuck: "The Best Game You Suck at Award",
         SteamAward_CategoryDesc_yousuck:
           "This is the game that rewards persistence, and is not for the faint of heart. It's the toughest game we've ever loved.",
         SteamAward_CategoryTitle_visual: "The Outstanding Visual Style Award",
         SteamAward_CategoryDesc_visual:
-          "Visual style doesn't aspire to real-world graphical fidelity (though a noble goal in itself)… it describes a distinctive look and feel that suffuses an entire game. This game (yay) made this year (boo) more beautiful to look at.",
+          "Visual style doesn't aspire to real-world graphical fidelity (though a noble goal in itself)… it describes a distinctive look and feel that suffuses an entire game.",
         SteamAward_CategoryTitle_soundtrack: "Best Soundtrack",
         SteamAward_CategoryDesc_soundtrack:
           "This unsung hero deserves to be recognized for its outstanding musical score. It's the OST with the MOST!",
@@ -1547,6 +1556,9 @@
           "The World is Grim Enough Let's All Just Get Along Award",
         SteamAward_CategoryDesc_getalong:
           "This category was first introduced in 2017, but seems to deserve a reprise: let's celebrate the undeniably most-conflict-free game of 2020.",
+        SteamAward_CategoryTitle_sitbackrelax: "The 'Sit Back and Relax' Award",
+        SteamAward_CategoryDesc_sitbackrelax:
+          "This game is the antidote to a busy day. It's smooth, it's relaxing, it lets your worries melt away. This game is your moment of zen.",
         SteamAward_NominationConflictWarning_Title: "Change your nomination?",
         SteamAward_NominationConflictWarning_Explanation:
           "You can only nominate one game for each category, and you have already nominated %1$s for this one. Would you like to nominate %2$s instead?",
@@ -1555,6 +1567,10 @@
         SteamAward_VoteConflictWarning_Title: "Change your vote?",
         SteamAward_VoteConflictWarning_Explanation:
           "You can only vote for one game for each category, and you have already voted for %1$s for this one. Would you like to change your vote to %2$s?",
+        SteamAward_Nominate_LimitedAccount:
+          "It appears that your account is limited. To prevent nomination abuse, you must spend $5 USD on Steam in order to participate in the Steam Awards. Visit <a %1$s>Steam Support</a> for more info.",
+        SteamAward_Vote_LimitedAccount:
+          "It appears that your account is limited. To prevent vote abuse, you must spend $5 USD on Steam in order to participate in the Steam Awards. Visit <a %1$s>Steam Support</a> for more info.",
         Store_VR_Support_OnlyVR: "VR Only",
         Store_VR_Support_SupportsVR: "VR Supported",
         Giveaway_CountDown: "%1$s left until next random draw!",
@@ -1638,6 +1654,8 @@
           "Use your Steam Points to emphasize this review and grant the reviewer bonus points!",
         GrantAwardDescription_UGC:
           "Use your Steam Points to grant this item a special award and grant the author bonus points!",
+        GrantAwardDescription_Profile:
+          "Use your Steam Points to grant this profile a special award and grant the user bonus points!",
         GrantAwardNowButton: "Give Award",
         GrantAward_PointsLink: "What are Steam Points?",
         GrantAward_PromptTooltip: "Please select an award",

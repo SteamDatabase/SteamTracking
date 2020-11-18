@@ -25,9 +25,7 @@
 	margin-top: 16px;
 }
 
-	/* to match the width of the profile page left column */
 .profile_showcase_selector {
-	max-width: 636px;
 }
 
 select.gray_bevel {

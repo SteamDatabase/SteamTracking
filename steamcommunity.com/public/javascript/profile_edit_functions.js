@@ -208,26 +208,27 @@ function ShowcaseGatherSlots( eShowcase, purchaseid )
 	return rgSlots;
 }
 
-function PreviewShowcaseConfigWithSlotChange( eShowcase, purchaseid, iSlot, rgSlot )
+function PreviewShowcaseConfigWithSlotChange( eShowcase, purchaseid, level, iSlot, rgSlot )
 {
 	// read the slot metadata embedded in the page
 	var rgSlots = ShowcaseGatherSlots( eShowcase, purchaseid );
 	rgSlots[iSlot] = rgSlot;
-	PreviewShowcaseConfig( eShowcase, purchaseid, rgSlots );
+	PreviewShowcaseConfig( eShowcase, purchaseid, level, rgSlots );
 }
 
-function ShowcaseSetStyle( eShowcase, purchaseid, eShowcaseStyle )
+function ShowcaseSetStyle( eShowcase, purchaseid, level, eShowcaseStyle )
 {
 	// PreviewShowcaseConfig will read the style
-	PreviewShowcaseConfig( eShowcase, purchaseid, ShowcaseGatherSlots( eShowcase, purchaseid ) );
+	PreviewShowcaseConfig( eShowcase, purchaseid, level, ShowcaseGatherSlots( eShowcase, purchaseid ) );
 }
 
 /* params should be object of appid, publishedfileid, etc */
-function PreviewShowcaseConfig( eShowcase, purchaseid, rgSlotData )
+function PreviewShowcaseConfig( eShowcase, purchaseid, level, rgSlotData )
 {
 	var rgParams = {};
 	rgParams.customization_type = eShowcase;
 	rgParams.purchaseid = purchaseid;
+	rgParams.level = level;
 	rgParams.sessionid = g_sessionID;
 	rgParams.slot_data = V_ToJSON( rgSlotData );
 
@@ -247,7 +248,7 @@ function PreviewShowcaseConfig( eShowcase, purchaseid, rgSlotData )
 	} );
 }
 
-function ShowcaseGamePicker( elSlot, eShowcase, purchaseid, iSlot, fnOnChange )
+function ShowcaseGamePicker( elSlot, eShowcase, purchaseid, level, iSlot, fnOnChange )
 {
 	var $DialogContent = $J('<div/>', {'class': '' });
 	$DialogContent.append( $J('<div/>', {'class': 'featured_game_dialog_header' }).text( 'Select one of your games to display as a Featured Game on your profile.' ) );
@@ -263,7 +264,7 @@ function ShowcaseGamePicker( elSlot, eShowcase, purchaseid, iSlot, fnOnChange )
 	if ( !fnOnChange )
 		fnOnChange = SetShowcaseGame;
 
-	var fnOnSelect = function( Selector, game ) { fnOnChange( elSlot, eShowcase, purchaseid, iSlot, game ); Modal.Dismiss(); };
+	var fnOnSelect = function( Selector, game ) { fnOnChange( elSlot, eShowcase, purchaseid, level, iSlot, game ); Modal.Dismiss(); };
 	var GameSelector = new CGameSelectorProfileShowcaseGames( $Input[0], null, null, fnOnSelect );
 }
 
@@ -318,7 +319,7 @@ function ShowcaseSalienCustomization()
 	});
 }
 
-function SetShowcaseGame( elSlot, eShowcase, purchaseid, iSlot, game )
+function SetShowcaseGame( elSlot, eShowcase, purchaseid, level, iSlot, game )
 {
 	SetShowcaseConfig(
 		eShowcase, purchaseid, iSlot, {appid: game.appid }
@@ -332,7 +333,7 @@ function SetShowcaseGame( elSlot, eShowcase, purchaseid, iSlot, game )
 	});
 }
 
-function FavoriteGameShowcaseOnGameChange( elSlot, eShowcase, purchaseid, iSlot, game )
+function FavoriteGameShowcaseOnGameChange( elSlot, eShowcase, purchaseid, level, iSlot, game )
 {
 	// this will show for a moment before the real data loads from the backend
 	$J(elSlot).find('img').attr( 'src', game.logo );
@@ -344,10 +345,10 @@ function FavoriteGameShowcaseOnGameChange( elSlot, eShowcase, purchaseid, iSlot,
 	$Showcase.find('.showcase_stats_row').hide();
 	$Showcase.find('.game_info_stats').hide();
 
-	PreviewShowcaseConfigWithSlotChange( eShowcase, purchaseid, iSlot, { appid: game.appid } );
+	PreviewShowcaseConfigWithSlotChange( eShowcase, purchaseid, level, iSlot, { appid: game.appid } );
 }
 
-function ShowcaseRecommendationPicker( elSlot, eShowcase, purchaseid, iSlot )
+function ShowcaseRecommendationPicker( elSlot, eShowcase, purchaseid, level, iSlot )
 {
 	var Modal = ShowDialog( 'Select a Game You\'ve Publicly Reviewed', '<div class="group_invite_throbber"><img src="https://community.cloudflare.steamstatic.com/public/images/login/throbber.gif"></div>' );
 	var $ListElement = $J('<div/>', {'class': 'newmodal_content_innerbg'} );
@@ -366,7 +367,7 @@ function ShowcaseRecommendationPicker( elSlot, eShowcase, purchaseid, iSlot )
 				$J(this).click( function() {
 					Modal.Dismiss();
 					$J( elSlot ).find( '.showcase_openslot_placeholder').html('<img src="https://community.cloudflare.steamstatic.com/public/images/login/throbber.gif">');
-					PreviewShowcaseConfigWithSlotChange( eShowcase, purchaseid, iSlot, { appid: appid } );
+					PreviewShowcaseConfigWithSlotChange( eShowcase, purchaseid, level, iSlot, { appid: appid } );
 				} );
 			}
 		});
@@ -422,7 +423,7 @@ function ShowcaseClearItem( elSlot, eShowcase, purchaseid, iSlot )
 	$J(elSlot).addClass( 'openslot' );
 }
 
-function ShowcasePublishedFilePicker( elSlot, eShowcase, purchaseid, iSlot, strDialogTitle, strType, strDialogSubTitle )
+function ShowcasePublishedFilePicker( elSlot, eShowcase, purchaseid, level, iSlot, strDialogTitle, strType, strDialogSubTitle )
 {
 	var url = g_rgProfileData['url'] + 'publishedfilebrowsepopup/' + strType + '/';
 
@@ -435,12 +436,12 @@ function ShowcasePublishedFilePicker( elSlot, eShowcase, purchaseid, iSlot, strD
 	window.OnPublishedFileSelected = function( publishedfileid )
 	{
 		Modal.Dismiss();
-		PreviewShowcaseConfigWithSlotChange( eShowcase, purchaseid, iSlot, { publishedfileid: publishedfileid } );
+		PreviewShowcaseConfigWithSlotChange( eShowcase, purchaseid, level, iSlot, { publishedfileid: publishedfileid } );
 	};
 }
 
 var g_AchievementShowcaseLastApp = 0;
-function ShowcaseAchievementPicker( elSlot, eShowcase, purchaseid, iSlot, rgGamesWithAchievements )
+function ShowcaseAchievementPicker( elSlot, eShowcase, purchaseid, level, iSlot, rgGamesWithAchievements )
 {
 	var $Content = $J('<div/>', {'class': 'showcase_achievement_picker'} );
 	var $SelectCtn = $J('<div/>', {'class': 'showcase_achievement_picker_select_ctn'});
@@ -489,7 +490,7 @@ function ShowcaseAchievementPicker( elSlot, eShowcase, purchaseid, iSlot, rgGame
 							$Achievement.click( function() {
 								var statid = $Achievement.data('statid');
 								var bit = $Achievement.data('bit');
-								PreviewShowcaseConfigWithSlotChange( eShowcase, purchaseid, iSlot, { appid: appid, title: statid + '_' + bit } );
+								PreviewShowcaseConfigWithSlotChange( eShowcase, purchaseid, level, iSlot, { appid: appid, title: statid + '_' + bit } );
 								Modal.Dismiss();
 							} );
 						});
@@ -506,7 +507,7 @@ function ShowcaseAchievementPicker( elSlot, eShowcase, purchaseid, iSlot, rgGame
 
 }
 
-function ShowcaseBadgePicker( elSlot, eShowcaseType, purchaseid, iSlot )
+function ShowcaseBadgePicker( elSlot, eShowcaseType, purchaseid, level, iSlot )
 {
 	ShowSelectBadgeDialog( function( Badge ) {
 		var rgSlot;
@@ -520,7 +521,7 @@ function ShowcaseBadgePicker( elSlot, eShowcaseType, purchaseid, iSlot )
 			if ( !Badge.is_blank_badge )
 				rgSlot.badgeid = Badge.badgeid;
 		}
-		PreviewShowcaseConfigWithSlotChange( eShowcaseType, purchaseid, iSlot, rgSlot );
+		PreviewShowcaseConfigWithSlotChange( eShowcaseType, purchaseid, level, iSlot, rgSlot );
 	} );
 }
 
@@ -540,7 +541,7 @@ function LoadPlayerGroupList( fnCallback )
 	}
 }
 
-function ShowcaseGroupPicker( elSlot, eShowcase, purchaseid, iSlot, fnOnChange )
+function ShowcaseGroupPicker( elSlot, eShowcase, purchaseid, level, iSlot, fnOnChange )
 {
 	var Modal = ShowDialog( 'Select a Group to Feature', '<div class="group_invite_throbber"><img src="https://community.cloudflare.steamstatic.com/public/images/login/throbber.gif"></div>' );
 	var $ListElement = $J('<div/>', {'class': 'newmodal_content_innerbg'} );
@@ -559,7 +560,7 @@ function ShowcaseGroupPicker( elSlot, eShowcase, purchaseid, iSlot, fnOnChange )
 				$J(this).click( function() {
 					Modal.Dismiss();
 					$J( elSlot ).find( '.showcase_openslot_placeholder').html('<img src="https://community.cloudflare.steamstatic.com/public/images/login/throbber.gif">');
-					PreviewShowcaseConfigWithSlotChange( eShowcase, purchaseid, iSlot, { steamid: groupid } );
+					PreviewShowcaseConfigWithSlotChange( eShowcase, purchaseid, level, iSlot, { steamid: groupid } );
 				} );
 			}
 		});

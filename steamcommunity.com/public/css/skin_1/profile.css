@@ -1181,6 +1181,21 @@ a.popup_menu_item:hover h4 {
 	padding-left:17px;
 }
 
+.profile_awards {
+	padding: 6px;
+}
+
+.profile_awards .profile_award {
+	float: left;
+	margin-right: 4px;
+	margin-bottom: 4px;
+}
+
+.profile_awards .profile_award_icon {
+	height: 54px;
+	width: 54px;
+}
+
 .profile_badges {
 	padding: 6px;
 }

@@ -254,18 +254,18 @@
         j = a("exH9"),
         _ = a("qbgq"),
         p = a("0OaU"),
-        f = a("6Y59");
+        b = a("6Y59");
       function B(e) {
         return Object(T.f)("#RewardsReaction_" + e);
       }
       var I,
-        b,
+        f,
         M = a("oet2");
-      ((b = I = I || {})[(b.SELECTING = 0)] = "SELECTING"),
-        (b[(b.CONFIRM = 1)] = "CONFIRM"),
-        (b[(b.SUBMITTING = 2)] = "SUBMITTING"),
-        (b[(b.DONE = 3)] = "DONE"),
-        (b[(b.ERROR = 4)] = "ERROR");
+      ((f = I = I || {})[(f.SELECTING = 0)] = "SELECTING"),
+        (f[(f.CONFIRM = 1)] = "CONFIRM"),
+        (f[(f.SUBMITTING = 2)] = "SUBMITTING"),
+        (f[(f.DONE = 3)] = "DONE"),
+        (f[(f.ERROR = 4)] = "ERROR");
       var h = function(e) {
           return C.createElement(
             "svg",
@@ -460,12 +460,12 @@
                 m,
                 _,
                 p = o.GetExistingReactions(),
-                f = o.GetAwardConfigurations(),
-                b = o.GetUserPointBalance(),
+                b = o.GetAwardConfigurations(),
+                f = o.GetUserPointBalance(),
                 h = ((u = n),
                 (m = r),
                 (_ = []),
-                f.forEach(function(e) {
+                b.forEach(function(e) {
                   if (e.valid_target_types.includes(u))
                     switch (u) {
                       case 1:
@@ -473,20 +473,30 @@
                         break;
                       case 2:
                         e.valid_ugc_types.includes(m) && _.push(e.reactionid);
+                        break;
+                      case 3:
+                        _.push(e.reactionid);
                     }
                 }),
                 _),
-                E = 0 === c ? null : f.get(c),
+                E = 0 === c ? null : b.get(c),
                 w = E ? E.points_cost : 0,
                 g = E ? E.points_transferred : 0,
-                y =
-                  2 == n
-                    ? Object(T.f)("#GrantAwardDescription_UGC")
-                    : Object(T.f)("#GrantAwardDescription_Review");
+                y = "";
+              switch (n) {
+                case 1:
+                  y = Object(T.f)("#GrantAwardDescription_Review");
+                  break;
+                case 2:
+                  y = Object(T.f)("#GrantAwardDescription_UGC");
+                  break;
+                case 3:
+                  y = Object(T.f)("#GrantAwardDescription_Profile");
+              }
               switch (l) {
                 case I.SELECTING:
                   var v = 0 === c || p.get(c),
-                    O = !b || b.greaterThanOrEqual(w),
+                    O = !f || f.greaterThanOrEqual(w),
                     A = C.createElement(
                       F,
                       {
@@ -517,7 +527,7 @@
                             key: e,
                             reaction: e,
                             selected: e === c && !p.get(e),
-                            cost: f.get(e).points_cost,
+                            cost: b.get(e).points_cost,
                             alreadyAwarded: p.get(e),
                             onClick: function() {
                               p.get(e) ||
@@ -540,7 +550,7 @@
                                 { key: "msg", className: L.NotEnoughPoints },
                                 Object(T.f)(
                                   "#GrantAward_CantAfford",
-                                  b
+                                  f
                                     .negate()
                                     .add(w)
                                     .toNumber()
@@ -781,7 +791,7 @@
             C.createElement(
               "div",
               { className: L.Left },
-              C.createElement(f.D, { className: L.BalanceIcon }),
+              C.createElement(b.D, { className: L.BalanceIcon }),
               C.createElement(
                 "div",
                 { className: L.BalanceDetails },
@@ -902,7 +912,7 @@
           return C.createElement(
             "span",
             Object(s.a)({}, n, { className: Object(j.a)(a, L.PointsAmount) }),
-            C.createElement(f.D, { className: L.PointsAmountIcon }),
+            C.createElement(b.D, { className: L.PointsAmountIcon }),
             t
           );
         };

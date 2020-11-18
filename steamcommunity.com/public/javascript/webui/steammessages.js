@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6195383";
+var CLSTAMP = "6208719";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [2],
   {
@@ -2767,37 +2767,37 @@ var CLSTAMP = "6195383";
           return C;
         }),
         t.d(r, "e", function() {
-          return ae;
+          return ce;
         }),
         t.d(r, "l", function() {
-          return se;
+          return fe;
         }),
         t.d(r, "a", function() {
-          return de;
+          return me;
         }),
         t.d(r, "j", function() {
-          return le;
+          return ye;
         }),
         t.d(r, "i", function() {
-          return be;
-        }),
-        t.d(r, "b", function() {
-          return Be;
-        }),
-        t.d(r, "c", function() {
           return pe;
         }),
-        t.d(r, "k", function() {
+        t.d(r, "b", function() {
           return we;
         }),
-        t.d(r, "m", function() {
-          return ge;
+        t.d(r, "c", function() {
+          return he;
         }),
-        t.d(r, "h", function() {
+        t.d(r, "k", function() {
           return Me;
         }),
+        t.d(r, "m", function() {
+          return ze;
+        }),
+        t.d(r, "h", function() {
+          return Re;
+        }),
         t.d(r, "f", function() {
-          return je;
+          return Se;
         }),
         t.d(r, "o", function() {
           return u;
@@ -4878,7 +4878,8 @@ var CLSTAMP = "6195383";
                         n: 6,
                         br: o.d.readUint64String,
                         bw: o.h.writeUint64String
-                      }
+                      },
+                      level: { n: 7, br: o.d.readUint32, bw: o.h.writeUint32 }
                     }
                   }),
                 r.sm_m
@@ -5070,7 +5071,8 @@ var CLSTAMP = "6195383";
                         n: 2,
                         br: o.d.readEnum,
                         bw: o.h.writeEnum
-                      }
+                      },
+                      level: { n: 3, br: o.d.readUint32, bw: o.h.writeUint32 }
                     }
                   }),
                 r.sm_m
@@ -5237,6 +5239,188 @@ var CLSTAMP = "6195383";
             void 0 === t && (t = null);
             var n = e.call(this) || this;
             return (
+              r.prototype.purchased_customizations || o.a(r.M()),
+              a.initialize(n, t, 0, -1, [1, 2], null),
+              n
+            );
+          }
+          return (
+            Object(n.d)(r, e),
+            (r.M = function() {
+              return (
+                r.sm_m ||
+                  (r.sm_m = {
+                    proto: r,
+                    fields: {
+                      purchased_customizations: { n: 1, c: Q, r: !0, q: !0 },
+                      upgraded_customizations: { n: 2, c: J, r: !0, q: !0 }
+                    }
+                  }),
+                r.sm_m
+              );
+            }),
+            (r.MBF = function() {
+              return r.sm_mbf || (r.sm_mbf = o.e(r.M())), r.sm_mbf;
+            }),
+            (r.prototype.toObject = function(e) {
+              return void 0 === e && (e = !1), r.toObject(e, this);
+            }),
+            (r.toObject = function(e, t) {
+              return o.g(r.M(), e, t);
+            }),
+            (r.fromObject = function(e) {
+              return o.c(r.M(), e);
+            }),
+            (r.deserializeBinary = function(e) {
+              var t = new i.BinaryReader(e),
+                n = new r();
+              return r.deserializeBinaryFromReader(n, t);
+            }),
+            (r.deserializeBinaryFromReader = function(e, t) {
+              return o.b(r.MBF(), e, t);
+            }),
+            (r.prototype.serializeBinary = function() {
+              var e = new i.BinaryWriter();
+              return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            }),
+            (r.serializeBinaryToWriter = function(e, t) {
+              o.f(r.M(), e, t);
+            }),
+            (r.prototype.getClassName = function() {
+              return "CPlayer_GetPurchasedAndUpgradedProfileCustomizations_Response";
+            }),
+            r
+          );
+        })(a),
+        Q = (function(e) {
+          function r(t) {
+            void 0 === t && (t = null);
+            var n = e.call(this) || this;
+            return (
+              r.prototype.customization_type || o.a(r.M()),
+              a.initialize(n, t, 0, -1, void 0, null),
+              n
+            );
+          }
+          return (
+            Object(n.d)(r, e),
+            (r.M = function() {
+              return (
+                r.sm_m ||
+                  (r.sm_m = {
+                    proto: r,
+                    fields: {
+                      customization_type: {
+                        n: 1,
+                        br: o.d.readEnum,
+                        bw: o.h.writeEnum
+                      },
+                      count: { n: 2, br: o.d.readUint32, bw: o.h.writeUint32 }
+                    }
+                  }),
+                r.sm_m
+              );
+            }),
+            (r.MBF = function() {
+              return r.sm_mbf || (r.sm_mbf = o.e(r.M())), r.sm_mbf;
+            }),
+            (r.prototype.toObject = function(e) {
+              return void 0 === e && (e = !1), r.toObject(e, this);
+            }),
+            (r.toObject = function(e, t) {
+              return o.g(r.M(), e, t);
+            }),
+            (r.fromObject = function(e) {
+              return o.c(r.M(), e);
+            }),
+            (r.deserializeBinary = function(e) {
+              var t = new i.BinaryReader(e),
+                n = new r();
+              return r.deserializeBinaryFromReader(n, t);
+            }),
+            (r.deserializeBinaryFromReader = function(e, t) {
+              return o.b(r.MBF(), e, t);
+            }),
+            (r.prototype.serializeBinary = function() {
+              var e = new i.BinaryWriter();
+              return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            }),
+            (r.serializeBinaryToWriter = function(e, t) {
+              o.f(r.M(), e, t);
+            }),
+            (r.prototype.getClassName = function() {
+              return "CPlayer_GetPurchasedAndUpgradedProfileCustomizations_Response_PurchasedCustomization";
+            }),
+            r
+          );
+        })(a),
+        J = (function(e) {
+          function r(t) {
+            void 0 === t && (t = null);
+            var n = e.call(this) || this;
+            return (
+              r.prototype.customization_type || o.a(r.M()),
+              a.initialize(n, t, 0, -1, void 0, null),
+              n
+            );
+          }
+          return (
+            Object(n.d)(r, e),
+            (r.M = function() {
+              return (
+                r.sm_m ||
+                  (r.sm_m = {
+                    proto: r,
+                    fields: {
+                      customization_type: {
+                        n: 1,
+                        br: o.d.readEnum,
+                        bw: o.h.writeEnum
+                      },
+                      level: { n: 2, br: o.d.readUint32, bw: o.h.writeUint32 }
+                    }
+                  }),
+                r.sm_m
+              );
+            }),
+            (r.MBF = function() {
+              return r.sm_mbf || (r.sm_mbf = o.e(r.M())), r.sm_mbf;
+            }),
+            (r.prototype.toObject = function(e) {
+              return void 0 === e && (e = !1), r.toObject(e, this);
+            }),
+            (r.toObject = function(e, t) {
+              return o.g(r.M(), e, t);
+            }),
+            (r.fromObject = function(e) {
+              return o.c(r.M(), e);
+            }),
+            (r.deserializeBinary = function(e) {
+              var t = new i.BinaryReader(e),
+                n = new r();
+              return r.deserializeBinaryFromReader(n, t);
+            }),
+            (r.deserializeBinaryFromReader = function(e, t) {
+              return o.b(r.MBF(), e, t);
+            }),
+            (r.prototype.serializeBinary = function() {
+              var e = new i.BinaryWriter();
+              return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            }),
+            (r.serializeBinaryToWriter = function(e, t) {
+              o.f(r.M(), e, t);
+            }),
+            (r.prototype.getClassName = function() {
+              return "CPlayer_GetPurchasedAndUpgradedProfileCustomizations_Response_UpgradedCustomization";
+            }),
+            r
+          );
+        })(a),
+        Y = (function(e) {
+          function r(t) {
+            void 0 === t && (t = null);
+            var n = e.call(this) || this;
+            return (
               r.prototype.profile_themes || o.a(r.M()),
               a.initialize(n, t, 0, -1, [1], null),
               n
@@ -5287,7 +5471,7 @@ var CLSTAMP = "6195383";
             r
           );
         })(a),
-        Q = (function(e) {
+        X = (function(e) {
           function r(r) {
             void 0 === r && (r = null);
             var t = e.call(this) || this;
@@ -5323,7 +5507,7 @@ var CLSTAMP = "6195383";
             r
           );
         })(a),
-        J = (function(e) {
+        Z = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -5341,12 +5525,12 @@ var CLSTAMP = "6195383";
                   (r.sm_m = {
                     proto: r,
                     fields: {
-                      your_info: { n: 1, c: X },
-                      in_game: { n: 2, c: Y, r: !0, q: !0 },
-                      played_recently: { n: 3, c: Y, r: !0, q: !0 },
-                      played_ever: { n: 4, c: Y, r: !0, q: !0 },
-                      owns: { n: 5, c: Y, r: !0, q: !0 },
-                      in_wishlist: { n: 6, c: Y, r: !0, q: !0 }
+                      your_info: { n: 1, c: re },
+                      in_game: { n: 2, c: ee, r: !0, q: !0 },
+                      played_recently: { n: 3, c: ee, r: !0, q: !0 },
+                      played_ever: { n: 4, c: ee, r: !0, q: !0 },
+                      owns: { n: 5, c: ee, r: !0, q: !0 },
+                      in_wishlist: { n: 6, c: ee, r: !0, q: !0 }
                     }
                   }),
                 r.sm_m
@@ -5385,7 +5569,7 @@ var CLSTAMP = "6195383";
             r
           );
         })(a),
-        Y = (function(e) {
+        ee = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -5456,7 +5640,7 @@ var CLSTAMP = "6195383";
             r
           );
         })(a),
-        X = (function(e) {
+        re = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -5533,7 +5717,7 @@ var CLSTAMP = "6195383";
             r
           );
         })(a),
-        Z = (function(e) {
+        te = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -5551,14 +5735,14 @@ var CLSTAMP = "6195383";
                   (r.sm_m = {
                     proto: r,
                     fields: {
-                      trending: { n: 1, c: re, r: !0, q: !0 },
-                      recent_purchases: { n: 2, c: re, r: !0, q: !0 },
-                      unowned: { n: 3, c: re, r: !0, q: !0 },
-                      popular: { n: 4, c: re, r: !0, q: !0 },
-                      dont_forget: { n: 5, c: re, r: !0, q: !0 },
-                      being_discussed: { n: 6, c: re, r: !0, q: !0 },
-                      new_to_group: { n: 7, c: re, r: !0, q: !0 },
-                      returned_to_group: { n: 8, c: re, r: !0, q: !0 },
+                      trending: { n: 1, c: ie, r: !0, q: !0 },
+                      recent_purchases: { n: 2, c: ie, r: !0, q: !0 },
+                      unowned: { n: 3, c: ie, r: !0, q: !0 },
+                      popular: { n: 4, c: ie, r: !0, q: !0 },
+                      dont_forget: { n: 5, c: ie, r: !0, q: !0 },
+                      being_discussed: { n: 6, c: ie, r: !0, q: !0 },
+                      new_to_group: { n: 7, c: ie, r: !0, q: !0 },
+                      returned_to_group: { n: 8, c: ie, r: !0, q: !0 },
                       active_friend_count: {
                         n: 9,
                         d: 0,
@@ -5603,7 +5787,7 @@ var CLSTAMP = "6195383";
             r
           );
         })(a),
-        ee = (function(e) {
+        ne = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -5684,7 +5868,7 @@ var CLSTAMP = "6195383";
             r
           );
         })(a),
-        re = (function(e) {
+        ie = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -5703,7 +5887,7 @@ var CLSTAMP = "6195383";
                     proto: r,
                     fields: {
                       appid: { n: 1, br: o.d.readUint32, bw: o.h.writeUint32 },
-                      friends: { n: 2, c: ee, r: !0, q: !0 },
+                      friends: { n: 2, c: ne, r: !0, q: !0 },
                       display_order: {
                         n: 3,
                         br: o.d.readUint32,
@@ -5747,7 +5931,7 @@ var CLSTAMP = "6195383";
             r
           );
         })(a),
-        te = (function(e) {
+        oe = (function(e) {
           function r(r) {
             void 0 === r && (r = null);
             var t = e.call(this) || this;
@@ -5783,7 +5967,7 @@ var CLSTAMP = "6195383";
             r
           );
         })(a),
-        ne = (function(e) {
+        ae = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -5800,7 +5984,7 @@ var CLSTAMP = "6195383";
                 r.sm_m ||
                   (r.sm_m = {
                     proto: r,
-                    fields: { nicknames: { n: 1, c: ie, r: !0, q: !0 } }
+                    fields: { nicknames: { n: 1, c: ue, r: !0, q: !0 } }
                   }),
                 r.sm_m
               );
@@ -5838,7 +6022,7 @@ var CLSTAMP = "6195383";
             r
           );
         })(a),
-        ie = (function(e) {
+        ue = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -5904,7 +6088,7 @@ var CLSTAMP = "6195383";
             r
           );
         })(a),
-        oe = (function(e) {
+        se = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -6005,7 +6189,7 @@ var CLSTAMP = "6195383";
             r
           );
         })(a),
-        ae = (function(e) {
+        ce = (function(e) {
           function r(r) {
             void 0 === r && (r = null);
             var t = e.call(this) || this;
@@ -6041,7 +6225,7 @@ var CLSTAMP = "6195383";
             r
           );
         })(a),
-        ue = (function(e) {
+        de = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -6058,7 +6242,7 @@ var CLSTAMP = "6195383";
                 r.sm_m ||
                   (r.sm_m = {
                     proto: r,
-                    fields: { preferences: { n: 1, c: oe, r: !0, q: !0 } }
+                    fields: { preferences: { n: 1, c: se, r: !0, q: !0 } }
                   }),
                 r.sm_m
               );
@@ -6096,7 +6280,7 @@ var CLSTAMP = "6195383";
             r
           );
         })(a),
-        se = (function(e) {
+        fe = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -6113,7 +6297,7 @@ var CLSTAMP = "6195383";
                 r.sm_m ||
                   (r.sm_m = {
                     proto: r,
-                    fields: { preferences: { n: 1, c: oe } }
+                    fields: { preferences: { n: 1, c: se } }
                   }),
                 r.sm_m
               );
@@ -6151,7 +6335,7 @@ var CLSTAMP = "6195383";
             r
           );
         })(a),
-        ce = (function(e) {
+        le = (function(e) {
           function r(r) {
             void 0 === r && (r = null);
             var t = e.call(this) || this;
@@ -6187,7 +6371,7 @@ var CLSTAMP = "6195383";
             r
           );
         })(a),
-        de = (function(e) {
+        me = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -6248,7 +6432,7 @@ var CLSTAMP = "6195383";
             r
           );
         })(a),
-        fe = (function(e) {
+        be = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -6315,7 +6499,7 @@ var CLSTAMP = "6195383";
             r
           );
         })(a),
-        le = (function(e) {
+        ye = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -6376,7 +6560,7 @@ var CLSTAMP = "6195383";
             r
           );
         })(a),
-        me = (function(e) {
+        Be = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -6437,7 +6621,7 @@ var CLSTAMP = "6195383";
             r
           );
         })(a),
-        be = (function(e) {
+        pe = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -6499,7 +6683,7 @@ var CLSTAMP = "6195383";
             r
           );
         })(a),
-        ye = (function(e) {
+        _e = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -6560,7 +6744,7 @@ var CLSTAMP = "6195383";
             r
           );
         })(a),
-        Be = (function(e) {
+        we = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -6655,7 +6839,7 @@ var CLSTAMP = "6195383";
             r
           );
         })(a),
-        pe = (function(e) {
+        he = (function(e) {
           function r(r) {
             void 0 === r && (r = null);
             var t = e.call(this) || this;
@@ -6691,7 +6875,7 @@ var CLSTAMP = "6195383";
             r
           );
         })(a),
-        _e = (function(e) {
+        ge = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -6708,7 +6892,7 @@ var CLSTAMP = "6195383";
                 r.sm_m ||
                   (r.sm_m = {
                     proto: r,
-                    fields: { preferences: { n: 1, c: Be } }
+                    fields: { preferences: { n: 1, c: we } }
                   }),
                 r.sm_m
               );
@@ -6746,7 +6930,7 @@ var CLSTAMP = "6195383";
             r
           );
         })(a),
-        we = (function(e) {
+        Me = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -6763,7 +6947,7 @@ var CLSTAMP = "6195383";
                 r.sm_m ||
                   (r.sm_m = {
                     proto: r,
-                    fields: { preferences: { n: 1, c: Be } }
+                    fields: { preferences: { n: 1, c: we } }
                   }),
                 r.sm_m
               );
@@ -6801,7 +6985,7 @@ var CLSTAMP = "6195383";
             r
           );
         })(a),
-        he = (function(e) {
+        ve = (function(e) {
           function r(r) {
             void 0 === r && (r = null);
             var t = e.call(this) || this;
@@ -6837,7 +7021,7 @@ var CLSTAMP = "6195383";
             r
           );
         })(a),
-        ge = (function(e) {
+        ze = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -6912,7 +7096,7 @@ var CLSTAMP = "6195383";
             r
           );
         })(a),
-        Me = (function(e) {
+        Re = (function(e) {
           function r(r) {
             void 0 === r && (r = null);
             var t = e.call(this) || this;
@@ -6948,7 +7132,7 @@ var CLSTAMP = "6195383";
             r
           );
         })(a),
-        ve = (function(e) {
+        Oe = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -6963,7 +7147,7 @@ var CLSTAMP = "6195383";
             (r.M = function() {
               return (
                 r.sm_m ||
-                  (r.sm_m = { proto: r, fields: { words: { n: 1, c: ge } } }),
+                  (r.sm_m = { proto: r, fields: { words: { n: 1, c: ze } } }),
                 r.sm_m
               );
             }),
@@ -7000,7 +7184,7 @@ var CLSTAMP = "6195383";
             r
           );
         })(a),
-        ze = (function(e) {
+        je = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -7077,7 +7261,7 @@ var CLSTAMP = "6195383";
             r
           );
         })(a),
-        Re = (function(e) {
+        Fe = (function(e) {
           function r(r) {
             void 0 === r && (r = null);
             var t = e.call(this) || this;
@@ -7113,7 +7297,7 @@ var CLSTAMP = "6195383";
             r
           );
         })(a),
-        Oe = (function(e) {
+        Ce = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -7199,7 +7383,7 @@ var CLSTAMP = "6195383";
             r
           );
         })(a),
-        je = (function(e) {
+        Se = (function(e) {
           function r(r) {
             void 0 === r && (r = null);
             var t = e.call(this) || this;
@@ -7235,7 +7419,7 @@ var CLSTAMP = "6195383";
             r
           );
         })(a),
-        Fe = (function(e) {
+        We = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -7252,7 +7436,7 @@ var CLSTAMP = "6195383";
                 r.sm_m ||
                   (r.sm_m = {
                     proto: r,
-                    fields: { privacy_settings: { n: 1, c: Oe } }
+                    fields: { privacy_settings: { n: 1, c: Ce } }
                   }),
                 r.sm_m
               );
@@ -7290,7 +7474,7 @@ var CLSTAMP = "6195383";
             r
           );
         })(a),
-        Ce = (function(e) {
+        Te = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -7368,7 +7552,7 @@ var CLSTAMP = "6195383";
             r
           );
         })(a),
-        Se = (function(e) {
+        Ue = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -7423,7 +7607,7 @@ var CLSTAMP = "6195383";
             r
           );
         })(a),
-        We = (function(e) {
+        Ne = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -7494,7 +7678,7 @@ var CLSTAMP = "6195383";
             r
           );
         })(a),
-        Te = (function(e) {
+        Pe = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -7555,7 +7739,7 @@ var CLSTAMP = "6195383";
             r
           );
         })(a),
-        Ue = (function(e) {
+        Ie = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -7632,7 +7816,7 @@ var CLSTAMP = "6195383";
             r
           );
         })(a),
-        Ne = (function(e) {
+        Ge = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -7649,7 +7833,7 @@ var CLSTAMP = "6195383";
                 r.sm_m ||
                   (r.sm_m = {
                     proto: r,
-                    fields: { preferences: { n: 1, c: Be } }
+                    fields: { preferences: { n: 1, c: we } }
                   }),
                 r.sm_m
               );
@@ -7687,7 +7871,7 @@ var CLSTAMP = "6195383";
             r
           );
         })(a),
-        Pe = (function(e) {
+        qe = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -7702,7 +7886,7 @@ var CLSTAMP = "6195383";
             (r.M = function() {
               return (
                 r.sm_m ||
-                  (r.sm_m = { proto: r, fields: { words: { n: 1, c: ge } } }),
+                  (r.sm_m = { proto: r, fields: { words: { n: 1, c: ze } } }),
                 r.sm_m
               );
             }),
@@ -7739,7 +7923,7 @@ var CLSTAMP = "6195383";
             r
           );
         })(a),
-        Ie = (function(e) {
+        xe = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -7762,7 +7946,7 @@ var CLSTAMP = "6195383";
                         br: o.d.readFixed32,
                         bw: o.h.writeFixed32
                       },
-                      preferences: { n: 2, c: oe }
+                      preferences: { n: 2, c: se }
                     }
                   }),
                 r.sm_m
@@ -7801,7 +7985,7 @@ var CLSTAMP = "6195383";
             r
           );
         })(a),
-        Ge = (function(e) {
+        ke = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -7818,7 +8002,7 @@ var CLSTAMP = "6195383";
                 r.sm_m ||
                   (r.sm_m = {
                     proto: r,
-                    fields: { privacy_settings: { n: 1, c: Oe } }
+                    fields: { privacy_settings: { n: 1, c: Ce } }
                   }),
                 r.sm_m
               );
@@ -7879,13 +8063,13 @@ var CLSTAMP = "6195383";
             });
           }),
           (e.GetFriendsGameplayInfo = function(e, r) {
-            return e.SendMsg("Player.GetFriendsGameplayInfo#1", r, J, {
+            return e.SendMsg("Player.GetFriendsGameplayInfo#1", r, Z, {
               bConstMethod: !0,
               ePrivilege: 1
             });
           }),
           (e.GetFriendsAppsActivity = function(e, r) {
-            return e.SendMsg("Player.GetFriendsAppsActivity#1", r, Z, {
+            return e.SendMsg("Player.GetFriendsAppsActivity#1", r, te, {
               bConstMethod: !0,
               ePrivilege: 1
             });
@@ -8000,14 +8184,22 @@ var CLSTAMP = "6195383";
               { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 }
             );
           }),
+          (e.GetPurchasedAndUpgradedProfileCustomizations = function(e, r) {
+            return e.SendMsg(
+              "Player.GetPurchasedAndUpgradedProfileCustomizations#1",
+              r,
+              K,
+              { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 }
+            );
+          }),
           (e.GetProfileThemesAvailable = function(e, r) {
-            return e.SendMsg("Player.GetProfileThemesAvailable#1", r, K, {
+            return e.SendMsg("Player.GetProfileThemesAvailable#1", r, Y, {
               bConstMethod: !0,
               ePrivilege: 1
             });
           }),
           (e.SetProfileTheme = function(e, r) {
-            return e.SendMsg("Player.SetProfileTheme#1", r, Q, {
+            return e.SendMsg("Player.SetProfileTheme#1", r, X, {
               ePrivilege: 1
             });
           }),
@@ -8035,51 +8227,51 @@ var CLSTAMP = "6195383";
             });
           }),
           (e.AcceptSSA = function(e, r) {
-            return e.SendMsg("Player.AcceptSSA#1", r, te, { ePrivilege: 1 });
+            return e.SendMsg("Player.AcceptSSA#1", r, oe, { ePrivilege: 1 });
           }),
           (e.GetNicknameList = function(e, r) {
-            return e.SendMsg("Player.GetNicknameList#1", r, ne, {
+            return e.SendMsg("Player.GetNicknameList#1", r, ae, {
               bConstMethod: !0,
               ePrivilege: 1
             });
           }),
           (e.GetPerFriendPreferences = function(e, r) {
-            return e.SendMsg("Player.GetPerFriendPreferences#1", r, ue, {
+            return e.SendMsg("Player.GetPerFriendPreferences#1", r, de, {
               bConstMethod: !0,
               ePrivilege: 1
             });
           }),
           (e.SetPerFriendPreferences = function(e, r) {
-            return e.SendMsg("Player.SetPerFriendPreferences#1", r, ce, {
+            return e.SendMsg("Player.SetPerFriendPreferences#1", r, le, {
               ePrivilege: 1
             });
           }),
           (e.AddFriend = function(e, r) {
-            return e.SendMsg("Player.AddFriend#1", r, fe, { ePrivilege: 1 });
+            return e.SendMsg("Player.AddFriend#1", r, be, { ePrivilege: 1 });
           }),
           (e.RemoveFriend = function(e, r) {
-            return e.SendMsg("Player.RemoveFriend#1", r, me, { ePrivilege: 1 });
+            return e.SendMsg("Player.RemoveFriend#1", r, Be, { ePrivilege: 1 });
           }),
           (e.IgnoreFriend = function(e, r) {
-            return e.SendMsg("Player.IgnoreFriend#1", r, ye, { ePrivilege: 1 });
+            return e.SendMsg("Player.IgnoreFriend#1", r, _e, { ePrivilege: 1 });
           }),
           (e.GetCommunityPreferences = function(e, r) {
-            return e.SendMsg("Player.GetCommunityPreferences#1", r, _e, {
+            return e.SendMsg("Player.GetCommunityPreferences#1", r, ge, {
               ePrivilege: 1
             });
           }),
           (e.SetCommunityPreferences = function(e, r) {
-            return e.SendMsg("Player.SetCommunityPreferences#1", r, he, {
+            return e.SendMsg("Player.SetCommunityPreferences#1", r, ve, {
               ePrivilege: 1
             });
           }),
           (e.GetTextFilterWords = function(e, r) {
-            return e.SendMsg("Player.GetTextFilterWords#1", r, ve, {
+            return e.SendMsg("Player.GetTextFilterWords#1", r, Oe, {
               ePrivilege: 1
             });
           }),
           (e.GetNewSteamAnnouncementState = function(e, r) {
-            return e.SendMsg("Player.GetNewSteamAnnouncementState#1", r, ze, {
+            return e.SendMsg("Player.GetNewSteamAnnouncementState#1", r, je, {
               bConstMethod: !0,
               ePrivilege: 1
             });
@@ -8088,17 +8280,17 @@ var CLSTAMP = "6195383";
             return e.SendMsg(
               "Player.UpdateSteamAnnouncementLastRead#1",
               r,
-              Re,
+              Fe,
               { ePrivilege: 1 }
             );
           }),
           (e.GetPrivacySettings = function(e, r) {
-            return e.SendMsg("Player.GetPrivacySettings#1", r, Fe, {
+            return e.SendMsg("Player.GetPrivacySettings#1", r, We, {
               ePrivilege: 1
             });
           }),
           (e.GetDurationControl = function(e, r) {
-            return e.SendMsg("Player.GetDurationControl#1", r, Ce, {
+            return e.SendMsg("Player.GetDurationControl#1", r, Te, {
               ePrivilege: 1
             });
           });
@@ -8106,35 +8298,35 @@ var CLSTAMP = "6195383";
         (function(e) {
           (e.NotifyLastPlayedTimesHandler = {
             name: "PlayerClient.NotifyLastPlayedTimes#1",
-            request: Se
+            request: Ue
           }),
             (e.NotifyFriendNicknameChangedHandler = {
               name: "PlayerClient.NotifyFriendNicknameChanged#1",
-              request: We
+              request: Ne
             }),
             (e.NotifyFriendEquippedProfileItemsChangedHandler = {
               name: "PlayerClient.NotifyFriendEquippedProfileItemsChanged#1",
-              request: Te
+              request: Pe
             }),
             (e.NotifyNewSteamAnnouncementStateHandler = {
               name: "PlayerClient.NotifyNewSteamAnnouncementState#1",
-              request: Ue
+              request: Ie
             }),
             (e.NotifyCommunityPreferencesChangedHandler = {
               name: "PlayerClient.NotifyCommunityPreferencesChanged#1",
-              request: Ne
+              request: Ge
             }),
             (e.NotifyTextFilterWordsChangedHandler = {
               name: "PlayerClient.NotifyTextFilterWordsChanged#1",
-              request: Pe
+              request: qe
             }),
             (e.NotifyPerFriendPreferencesChangedHandler = {
               name: "PlayerClient.NotifyPerFriendPreferencesChanged#1",
-              request: Ie
+              request: xe
             }),
             (e.NotifyPrivacyPrivacySettingsChangedHandler = {
               name: "PlayerClient.NotifyPrivacyPrivacySettingsChanged#1",
-              request: Ge
+              request: ke
             });
         })(s || (s = {}));
     },

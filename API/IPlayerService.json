@@ -91,6 +91,12 @@
                     "type": "bool",
                     "optional": false,
                     "description": "Some games are in the free sub, which are excluded by default."
+                },
+                {
+                    "name": "skip_unvetted_apps",
+                    "type": "bool",
+                    "optional": true,
+                    "description": "if set, skip unvetted store apps"
                 }
             ]
         },

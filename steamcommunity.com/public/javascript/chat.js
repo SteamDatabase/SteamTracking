@@ -1330,7 +1330,7 @@ CWebChat.prototype.OnChatHistoryLoaded = function ( Friend, ChatDialog, data )
 	ChatDialog.m_elContent.html('');	//clear the throbber
 
 	var elPhishingWarning = $J( '<div/>', {'class': 'chat_message chat_message_system' } );
-	elPhishingWarning.append( $J( '<a/>', {'class': 'whiteLink', href: 'https://support.steampowered.com/kb_article.php?p_faqid=301', target: '_blank' }).text( 'Never tell your password to anyone.' ) );
+	elPhishingWarning.append( $J( '<a/>', {'class': 'whiteLink', href: 'https://support.steampowered.com/kb_article.php?ref=1266-OAFV-8478&l=english', target: '_blank' }).text( 'Never tell your password to anyone.' ) );
 	ChatDialog.m_elContent.append( elPhishingWarning );
 
 	for ( var i = 0; i < data.length; i++ )

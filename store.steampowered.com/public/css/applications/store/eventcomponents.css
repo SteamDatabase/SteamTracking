@@ -119,13 +119,9 @@
   padding: 4px;
   margin: -4px 0 0px -4px; }
   .eventcalendartile_GameTitleContainer_WHJ_W .eventcalendartile_AppIcon_3gwk6 {
-    width: 24px;
-    height: 24px;
+    width: 16px;
+    height: 16px;
     border-radius: 3px; }
-    @media screen and (max-width: 700px) {
-      .eventcalendartile_GameTitleContainer_WHJ_W .eventcalendartile_AppIcon_3gwk6 {
-        width: 20px;
-        height: 20px; } }
   .eventcalendartile_GameTitleContainer_WHJ_W .eventcalendartile_TileTextAppName_71phF {
     padding: 0px 8px;
     color: #c6d4df; }
@@ -170,15 +166,17 @@
     color: #909da7;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    font-size: 11px;
-    line-height: 20px; }
+    font-size: 11px; }
   .eventcalendartile_TileContainer_1E3An .eventcalendartile_GameSource_vfv1Q {
-    display: flex; }
+    display: flex;
+    flex-grow: 1; }
     .eventcalendartile_TileContainer_1E3An .eventcalendartile_GameSource_vfv1Q .eventcalendartile_SourceList_3BIx7 {
-      height: 26px;
+      height: 25px;
       display: flex;
       color: #707b8f;
       align-items: center; }
+      .eventcalendartile_TileContainer_1E3An .eventcalendartile_GameSource_vfv1Q .eventcalendartile_SourceList_3BIx7 .eventcalendartile_Source_2lYFq {
+        font-size: 13px; }
       .eventcalendartile_TileContainer_1E3An .eventcalendartile_GameSource_vfv1Q .eventcalendartile_SourceList_3BIx7 .eventcalendartile_Source_2lYFq:not(:first-of-type) {
         margin-left: 5px; }
       @media screen and (max-width: 700px) {
@@ -211,7 +209,7 @@
   .eventcalendartile_TileContainer_1E3An .eventcalendartile_EventTypeAndDateCtn_sUBHF {
     display: flex;
     flex-direction: row;
-    margin-top: 4px;
+    margin-top: 6px;
     margin-bottom: 4px;
     font-size: 11px;
     position: relative;
@@ -228,27 +226,20 @@
     font-size: 11px;
     line-height: 16px;
     margin-right: 6px;
-    color: #e5e5e5;
-    padding: 2px 6px;
-    border-radius: 2px;
-    background-image: linear-gradient(135deg, #8c8c8c 0%, #7a7a7a 50%); }
+    color: #909da7;
+    border-radius: 2px; }
     .eventcalendartile_TileContainer_1E3An .eventcalendartile_TileTextCategoryType_1LkWX.eventcalendartile_EventType28_1qGfE {
-      background-image: linear-gradient(135deg, #a4a184 0%, #84816f 50%);
-      color: #e6e3c7; }
+      color: #b0ad92; }
     .eventcalendartile_TileContainer_1E3An .eventcalendartile_TileTextCategoryType_1LkWX.eventcalendartile_EventType10_22QY5 {
-      background-image: linear-gradient(135deg, #119def 0%, #1f7aaf 50%);
-      color: #abd8f9; }
+      color: #5fa3d3; }
     .eventcalendartile_TileContainer_1E3An .eventcalendartile_TileTextCategoryType_1LkWX.eventcalendartile_EventType11_2Gv13, .eventcalendartile_TileContainer_1E3An .eventcalendartile_TileTextCategoryType_1LkWX.eventcalendartile_EventType23_590_l, .eventcalendartile_TileContainer_1E3An .eventcalendartile_TileTextCategoryType_1LkWX.eventcalendartile_EventType35_2wHiB {
-      background-image: linear-gradient(135deg, #76873b 0%, #757d59 50%);
       color: #d3dfa9; }
     .eventcalendartile_TileContainer_1E3An .eventcalendartile_TileTextCategoryType_1LkWX.eventcalendartile_EventType13_2D0ZN {
-      background-image: linear-gradient(135deg, #6399bf 0%, #557e9b 50%);
-      color: #abd8f9; }
+      color: #5fa3d3; }
     .eventcalendartile_TileContainer_1E3An .eventcalendartile_TileTextCategoryType_1LkWX.eventcalendartile_EventType14_2mVdt {
-      background-image: linear-gradient(135deg, #ce9327 0%, #b18c48 50%);
       color: #f5deb3; }
     .eventcalendartile_TileContainer_1E3An .eventcalendartile_TileTextCategoryType_1LkWX.eventcalendartile_EventType15_2Xke6 {
-      background-image: linear-gradient(135deg, #a655b2 0%, #a655b2 100%); }
+      color: #a380a8; }
   .eventcalendartile_TileContainer_1E3An.eventcalendartile_EventType14_2mVdt .eventcalendartile_Tile_3xvUZ {
     background: radial-gradient(circle at top left, #5e594a 10%, rgba(62, 57, 50, 0.4) 90%); }
     @media screen and (max-width: 700px) {
@@ -275,7 +266,11 @@
           padding-left: 12px; } }
   .eventcalendartile_TileContainer_1E3An.eventcalendartile_EventType12_2X_hM .eventcalendartile_Tile_3xvUZ .eventcalendartile_EventName_1M8-P {
     font-weight: 300;
-    color: #e5e5e5; }
+    font-size: 20px;
+    color: #e5e5e5;
+    margin-top: 2px;
+    margin-bottom: 0px;
+    line-height: 21px; }
   .eventcalendartile_TileContainer_1E3An.eventcalendartile_EventType12_2X_hM .eventcalendartile_Tile_3xvUZ .eventcalendartile_EventSubTitle_1JjUp {
     display: none; }
   .eventcalendartile_TileContainer_1E3An.eventcalendartile_EventType12_2X_hM .eventcalendartile_Tile_3xvUZ .eventcalendartile_MainContentContainer_2pq2v .eventcalendartile_CoverImageCtn_3HF9t {
@@ -322,8 +317,7 @@
           margin-top: 0px;
           margin-bottom: 0px;
           padding-top: 0px; }
-        .eventcalendartile_TileContainer_1E3An.eventcalendartile_EventType12_2X_hM .eventcalendartile_Tile_3xvUZ .eventcalendartile_MainContentContainer_2pq2v .eventcalendartile_TileTextContainer_3IQK4 .eventcalendartile_EventTypeAndDateCtn_sUBHF,
-        .eventcalendartile_TileContainer_1E3An.eventcalendartile_EventType12_2X_hM .eventcalendartile_Tile_3xvUZ .eventcalendartile_MainContentContainer_2pq2v .eventcalendartile_TileTextContainer_3IQK4 .eventcalendartile_EventTypeAndDateCtn_sUBHF.eventcalendartile_Mobile_2-hIy {
+        .eventcalendartile_TileContainer_1E3An.eventcalendartile_EventType12_2X_hM .eventcalendartile_Tile_3xvUZ .eventcalendartile_MainContentContainer_2pq2v .eventcalendartile_TileTextContainer_3IQK4 .eventcalendartile_EventTypeAndDateCtn_sUBHF {
           flex-direction: column;
           margin-bottom: 0px;
           margin-top: 2px; }
@@ -472,8 +466,15 @@
       overflow: hidden;
       width: 100%;
       box-sizing: border-box; }
-      .eventcalendartile_TileContainer_1E3An .eventcalendartile_Tile_3xvUZ .eventcalendartile_TileTextContainer_3IQK4 .eventcalendartile_EventTypeAndDateCtn_sUBHF.eventcalendartile_Mobile_2-hIy {
-        display: none; }
+      .eventcalendartile_TileContainer_1E3An .eventcalendartile_Tile_3xvUZ .eventcalendartile_TileTextContainer_3IQK4 .eventcalendartile_EventTitleCtn_1h5cJ {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; }
+        .eventcalendartile_TileContainer_1E3An .eventcalendartile_Tile_3xvUZ .eventcalendartile_TileTextContainer_3IQK4 .eventcalendartile_EventTitleCtn_1h5cJ > div:last-of-type {
+          flex-grow: 1; }
+        .eventcalendartile_TileContainer_1E3An .eventcalendartile_Tile_3xvUZ .eventcalendartile_TileTextContainer_3IQK4 .eventcalendartile_EventTitleCtn_1h5cJ .eventcalendartile_CoverImageCtn_3HF9t {
+          padding: 0px 0px 12px 0px; }
     .eventcalendartile_TileContainer_1E3An .eventcalendartile_Tile_3xvUZ .eventcalendartile_TileTextHeader_3-0KO {
       display: flex;
       flex-direction: row;
@@ -512,9 +513,10 @@
       line-height: 26px;
       color: #ffffff;
       font-weight: 500;
-      text-transform: unset;
+      text-transform: capitalize;
       word-break: break-word;
-      flex: none; }
+      flex: none;
+      margin-bottom: 4px; }
       @media screen and (max-width: 1260px) and (min-width: 910px) {
         .eventcalendartile_TileContainer_1E3An .eventcalendartile_Tile_3xvUZ .eventcalendartile_EventName_1M8-P {
           font-size: 18px;
@@ -524,10 +526,10 @@
           font-size: 22px;
           line-height: 22px; } }
     .eventcalendartile_TileContainer_1E3An .eventcalendartile_Tile_3xvUZ .eventcalendartile_EventSubTitle_1JjUp {
-      font-size: 14px;
-      font-weight: 400;
+      font-size: 16px;
+      font-weight: 300;
       color: #e5e5e5;
-      padding-top: 4px;
+      margin-bottom: 4px;
       text-overflow: ellipsis;
       word-wrap: break-word;
       word-break: break-word;
@@ -544,11 +546,11 @@
     .eventcalendartile_TileContainer_1E3An .eventcalendartile_Tile_3xvUZ .eventcalendartile_EventSummaryDefault_2g3Jj {
       font-size: 14px;
       font-weight: 300;
-      line-height: 17px;
-      color: #a0afbb;
+      line-height: 19px;
+      color: #e4e8ec;
       word-wrap: break-word;
       word-break: break-word;
-      margin-top: 8px; }
+      margin-top: 4px; }
   .eventcalendartile_TileContainer_1E3An .eventcalendartile_Vote_NotLoggedIn_17oqR {
     color: gray; }
   .eventcalendartile_TileContainer_1E3An .eventcalendartile_Vote_LimitedUser_2FlPo {
@@ -644,8 +646,6 @@
   .EventTileCarouselCtn .eventcalendartile_TileContainer_1E3An .eventcalendartile_Tile_3xvUZ {
     background: none; }
     @media screen and (max-width: 700px) {
-      .EventTileCarouselCtn .eventcalendartile_TileContainer_1E3An .eventcalendartile_Tile_3xvUZ .eventcalendartile_MainContentContainer_2pq2v .eventcalendartile_TileTextContainer_3IQK4 .eventcalendartile_EventTypeAndDateCtn_sUBHF.eventcalendartile_Mobile_2-hIy {
-        margin-top: 0px; }
       .EventTileCarouselCtn .eventcalendartile_TileContainer_1E3An .eventcalendartile_Tile_3xvUZ .eventcalendartile_MainContentContainer_2pq2v .eventcalendartile_TileTextContainer_3IQK4 .eventcalendartile_EventName_1M8-P {
         margin-top: 8px; }
       .EventTileCarouselCtn .eventcalendartile_TileContainer_1E3An .eventcalendartile_Tile_3xvUZ .eventcalendartile_MainContentContainer_2pq2v .eventcalendartile_TileTextContainer_3IQK4 .eventcalendartile_ReminderContainer_1_taB {
@@ -661,8 +661,6 @@
 .HorizontalTileCtn .eventcalendartile_TileContainer_1E3An .eventcalendartile_Tile_3xvUZ {
   background: none; }
   @media screen and (max-width: 700px) {
-    .HorizontalTileCtn .eventcalendartile_TileContainer_1E3An .eventcalendartile_Tile_3xvUZ .eventcalendartile_MainContentContainer_2pq2v .eventcalendartile_TileTextContainer_3IQK4 .eventcalendartile_EventTypeAndDateCtn_sUBHF.eventcalendartile_Mobile_2-hIy {
-      margin-top: 0px; }
     .HorizontalTileCtn .eventcalendartile_TileContainer_1E3An .eventcalendartile_Tile_3xvUZ .eventcalendartile_MainContentContainer_2pq2v .eventcalendartile_TileTextContainer_3IQK4 .eventcalendartile_EventName_1M8-P {
       margin-top: 8px; }
     .HorizontalTileCtn .eventcalendartile_TileContainer_1E3An .eventcalendartile_Tile_3xvUZ .eventcalendartile_MainContentContainer_2pq2v .eventcalendartile_TileTextContainer_3IQK4 .eventcalendartile_ReminderContainer_1_taB {
@@ -831,17 +829,14 @@
           .eventcalendartile_TileContainer_1E3An .eventcalendartile_Tile_3xvUZ .eventcalendartile_MainContentContainer_2pq2v .eventcalendartile_TileTextContainer_3IQK4 .eventcalendartile_EventSummaryDefault_2g3Jj.eventcalendartile_SubTitleShown_5C13z {
             display: none; }
         .eventcalendartile_TileContainer_1E3An .eventcalendartile_Tile_3xvUZ .eventcalendartile_MainContentContainer_2pq2v .eventcalendartile_TileTextContainer_3IQK4 .eventcalendartile_EventTypeAndDateCtn_sUBHF {
-          display: none; }
-        .eventcalendartile_TileContainer_1E3An .eventcalendartile_Tile_3xvUZ .eventcalendartile_MainContentContainer_2pq2v .eventcalendartile_TileTextContainer_3IQK4 .eventcalendartile_EventTypeAndDateCtn_sUBHF.eventcalendartile_Mobile_2-hIy {
-          display: inline-flex;
-          margin-top: 16px; }
-          .eventcalendartile_TileContainer_1E3An .eventcalendartile_Tile_3xvUZ .eventcalendartile_MainContentContainer_2pq2v .eventcalendartile_TileTextContainer_3IQK4 .eventcalendartile_EventTypeAndDateCtn_sUBHF.eventcalendartile_Mobile_2-hIy .eventcalendartile_TileTextCategoryType_1LkWX {
+          order: 10; }
+          .eventcalendartile_TileContainer_1E3An .eventcalendartile_Tile_3xvUZ .eventcalendartile_MainContentContainer_2pq2v .eventcalendartile_TileTextContainer_3IQK4 .eventcalendartile_EventTypeAndDateCtn_sUBHF .eventcalendartile_TileTextCategoryType_1LkWX {
             background: none;
             padding-left: 0px; }
-          .eventcalendartile_TileContainer_1E3An .eventcalendartile_Tile_3xvUZ .eventcalendartile_MainContentContainer_2pq2v .eventcalendartile_TileTextContainer_3IQK4 .eventcalendartile_EventTypeAndDateCtn_sUBHF.eventcalendartile_Mobile_2-hIy .eventcalendartile_LiveText_RNDf0 {
+          .eventcalendartile_TileContainer_1E3An .eventcalendartile_Tile_3xvUZ .eventcalendartile_MainContentContainer_2pq2v .eventcalendartile_TileTextContainer_3IQK4 .eventcalendartile_EventTypeAndDateCtn_sUBHF .eventcalendartile_LiveText_RNDf0 {
             padding-left: 8px;
             padding-right: 8px; }
-            .eventcalendartile_TileContainer_1E3An .eventcalendartile_Tile_3xvUZ .eventcalendartile_MainContentContainer_2pq2v .eventcalendartile_TileTextContainer_3IQK4 .eventcalendartile_EventTypeAndDateCtn_sUBHF.eventcalendartile_Mobile_2-hIy .eventcalendartile_LiveText_RNDf0 .eventcalendartile_LiveNow_EVDkY {
+            .eventcalendartile_TileContainer_1E3An .eventcalendartile_Tile_3xvUZ .eventcalendartile_MainContentContainer_2pq2v .eventcalendartile_TileTextContainer_3IQK4 .eventcalendartile_EventTypeAndDateCtn_sUBHF .eventcalendartile_LiveText_RNDf0 .eventcalendartile_LiveNow_EVDkY {
               display: none; }
         .eventcalendartile_TileContainer_1E3An .eventcalendartile_Tile_3xvUZ .eventcalendartile_MainContentContainer_2pq2v .eventcalendartile_TileTextContainer_3IQK4 .eventcalendartile_TileCoverImagePlayable_2eoFk {
           left: 20px !important; }
@@ -864,7 +859,8 @@
         min-width: 160px;
         padding: 0px 0px 12px 12px; }
         .eventcalendartile_TileContainer_1E3An .eventcalendartile_Tile_3xvUZ .eventcalendartile_MainContentContainer_2pq2v .eventcalendartile_CoverImageCtn_3HF9t .eventcalendartile_YoutubePreviewImage_1UgZv {
-          min-width: 160px; }
+          min-width: 160px;
+          height: fit-content; }
         .eventcalendartile_TileContainer_1E3An .eventcalendartile_Tile_3xvUZ .eventcalendartile_MainContentContainer_2pq2v .eventcalendartile_CoverImageCtn_3HF9t .eventcalendartile_EventCapsuleCtn_27kWH {
           height: 100%;
           min-width: 100%; }
@@ -875,20 +871,14 @@
       /* news */ }
       .eventcalendartile_TileContainer_1E3An.eventcalendartile_EventType28_1qGfE .eventcalendartile_Tile_3xvUZ {
         background: unset; }
-        .eventcalendartile_TileContainer_1E3An.eventcalendartile_EventType28_1qGfE .eventcalendartile_Tile_3xvUZ .eventcalendartile_MainContentContainer_2pq2v .eventcalendartile_TileTextContainer_3IQK4 .eventcalendartile_EventTypeAndDateCtn_sUBHF.eventcalendartile_Mobile_2-hIy .eventcalendartile_TileTextCategoryType_1LkWX {
-          color: #c7c283; }
     .eventcalendartile_TileContainer_1E3An.eventcalendartile_EventType35_2wHiB, .eventcalendartile_TileContainer_1E3An.eventcalendartile_EventType23_590_l, .eventcalendartile_TileContainer_1E3An.eventcalendartile_EventType11_2Gv13 {
       /* in-game events, loot events, livestreams */ }
       .eventcalendartile_TileContainer_1E3An.eventcalendartile_EventType35_2wHiB .eventcalendartile_Tile_3xvUZ, .eventcalendartile_TileContainer_1E3An.eventcalendartile_EventType23_590_l .eventcalendartile_Tile_3xvUZ, .eventcalendartile_TileContainer_1E3An.eventcalendartile_EventType11_2Gv13 .eventcalendartile_Tile_3xvUZ {
         background: unset; }
-        .eventcalendartile_TileContainer_1E3An.eventcalendartile_EventType35_2wHiB .eventcalendartile_Tile_3xvUZ .eventcalendartile_MainContentContainer_2pq2v .eventcalendartile_TileTextContainer_3IQK4 .eventcalendartile_EventTypeAndDateCtn_sUBHF.eventcalendartile_Mobile_2-hIy .eventcalendartile_TileTextCategoryType_1LkWX, .eventcalendartile_TileContainer_1E3An.eventcalendartile_EventType23_590_l .eventcalendartile_Tile_3xvUZ .eventcalendartile_MainContentContainer_2pq2v .eventcalendartile_TileTextContainer_3IQK4 .eventcalendartile_EventTypeAndDateCtn_sUBHF.eventcalendartile_Mobile_2-hIy .eventcalendartile_TileTextCategoryType_1LkWX, .eventcalendartile_TileContainer_1E3An.eventcalendartile_EventType11_2Gv13 .eventcalendartile_Tile_3xvUZ .eventcalendartile_MainContentContainer_2pq2v .eventcalendartile_TileTextContainer_3IQK4 .eventcalendartile_EventTypeAndDateCtn_sUBHF.eventcalendartile_Mobile_2-hIy .eventcalendartile_TileTextCategoryType_1LkWX {
-          color: #dcef9c; }
     .eventcalendartile_TileContainer_1E3An.eventcalendartile_EventType13_2D0ZN {
       /* regular updates */ }
       .eventcalendartile_TileContainer_1E3An.eventcalendartile_EventType13_2D0ZN .eventcalendartile_Tile_3xvUZ {
         background: unset; }
-        .eventcalendartile_TileContainer_1E3An.eventcalendartile_EventType13_2D0ZN .eventcalendartile_Tile_3xvUZ .eventcalendartile_MainContentContainer_2pq2v .eventcalendartile_TileTextContainer_3IQK4 .eventcalendartile_EventTypeAndDateCtn_sUBHF.eventcalendartile_Mobile_2-hIy .eventcalendartile_TileTextCategoryType_1LkWX {
-          color: #abd8f9; }
     .eventcalendartile_TileContainer_1E3An.eventcalendartile_VideoPlayerReady_1onQj {
       position: relative; }
       .eventcalendartile_TileContainer_1E3An.eventcalendartile_VideoPlayerReady_1onQj .eventcalendartile_Tile_3xvUZ .eventcalendartile_MainContentContainer_2pq2v {
@@ -1071,8 +1061,8 @@
   display: flex;
   flex-direction: row-reverse;
   z-index: 11;
-  background-color: #474e59;
-  box-shadow: 0px 0px 12px 12px rgba(0, 0, 0, 0.5);
+  background-color: #30343b;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   overflow: auto;
   transition: transform 0.15s ease-in-out; }
   .eventcalendar_SidebarContainer_15YLD.eventcalendar_SidebarCollapsed_3x2Ig {
@@ -1320,6 +1310,8 @@
       margin-left: 300px; }
       .eventcalendar_EventCalendarContainer_1e3Wb .eventcalendar_ReserveControlSpace_18npk.eventcalendar_WideLeftGutter_ws9AN .eventcalendar_SteamLabsBanner_8sQfl, .eventcalendar_EventCalendarContainer_1e3Wb .eventcalendar_ReserveControlSpace_18npk.eventcalendar_WideLeftGutter_ws9AN .eventcalendar_HubBanner_2zTu0 {
         width: calc( 100% - 300px); }
+      .eventcalendar_EventCalendarContainer_1e3Wb .eventcalendar_ReserveControlSpace_18npk.eventcalendar_WideLeftGutter_ws9AN .eventcalendar_LogInFeedRow_nydHE {
+        width: calc( 100% - 300px); }
     html.responsive.touch .eventcalendar_EventCalendarContainer_1e3Wb .eventcalendar_ReserveControlSpace_18npk, html.responsive.touch .eventcalendar_EventCalendarContainer_1e3Wb .eventcalendar_ReserveControlSpace_18npk.eventcalendar_WideLeftGutter_ws9AN {
       margin-left: 0; }
       html.responsive.touch .eventcalendar_EventCalendarContainer_1e3Wb .eventcalendar_ReserveControlSpace_18npk .eventcalendar_SteamLabsBanner_8sQfl, html.responsive.touch .eventcalendar_EventCalendarContainer_1e3Wb .eventcalendar_ReserveControlSpace_18npk .eventcalendar_HubBanner_2zTu0, html.responsive.touch .eventcalendar_EventCalendarContainer_1e3Wb .eventcalendar_ReserveControlSpace_18npk.eventcalendar_WideLeftGutter_ws9AN .eventcalendar_SteamLabsBanner_8sQfl, html.responsive.touch .eventcalendar_EventCalendarContainer_1e3Wb .eventcalendar_ReserveControlSpace_18npk.eventcalendar_WideLeftGutter_ws9AN .eventcalendar_HubBanner_2zTu0 {
@@ -1417,11 +1409,14 @@
             margin: 0px auto;
             display: flex;
             justify-content: space-between;
-            color: #07bfff; }
+            color: #e5e5e5;
+            font-size: 18px;
+            font-weight: 300;
+            letter-spacing: 2px; }
           .eventcalendar_EventCalendarContainer_1e3Wb .eventcalendar_RowContainer_3yqpP .eventcalendar_Rows_r3Dia .eventcalendar_CalendarRow_398u2.eventcalendar_GroupHeader_3j2de .eventcalendar_GroupHeaderLine_bcTEU {
             margin-left: 8px;
             margin-right: 8px;
-            border-top: 1px solid #2d778f;
+            border-top: 1px solid #373c44;
             flex-grow: 1;
             margin-top: 20px; }
           .eventcalendar_EventCalendarContainer_1e3Wb .eventcalendar_RowContainer_3yqpP .eventcalendar_Rows_r3Dia .eventcalendar_CalendarRow_398u2.eventcalendar_GroupHeader_3j2de .eventcalendar_SeeAllLink_28rp7 {
@@ -1569,8 +1564,7 @@
       color: #e26767; }
 
 .eventcalendar_NewsChannelGroup_3U5MY {
-  margin-top: 3vh;
-  margin-bottom: 20px; }
+  margin-top: 3vh; }
   .eventcalendar_NewsChannelGroup_3U5MY .eventcalendar_NewsChannelListTitle_3X16T {
     color: #a7aeb4;
     margin-bottom: 7px;
@@ -1579,7 +1573,7 @@
     display: flex;
     flex-direction: column; }
   .eventcalendar_NewsChannelGroup_3U5MY .eventcalendar_NewsChannel_1n4vp {
-    background-color: #575e69;
+    background: linear-gradient(30deg, rgba(87, 94, 105, 0.3) 0%, rgba(87, 94, 105, 0) 100%);
     padding: 4px 16px;
     margin-bottom: 2px;
     height: 54px;
@@ -1597,17 +1591,22 @@
       padding: 4px 8px;
       border-radius: 4px; }
     .eventcalendar_NewsChannelGroup_3U5MY .eventcalendar_NewsChannel_1n4vp:hover {
-      background-image: linear-gradient(to right, rgba(119, 126, 137, 0) 20%, #777e89 100%); }
+      background-image: linear-gradient(to right, rgba(87, 94, 105, 0.3) 20%, #777e89 100%); }
     .eventcalendar_NewsChannelGroup_3U5MY .eventcalendar_NewsChannel_1n4vp.eventcalendar_NewsChannelOnPage_kJoC7 {
       padding-right: 12px;
-      border-right: 4px solid #07bfff; }
+      border-right: 4px solid #07bfff;
+      background: linear-gradient(30deg, rgba(7, 191, 255, 0.2) 0%, rgba(7, 191, 255, 0.1) 100%); }
       .eventcalendar_NewsChannelGroup_3U5MY .eventcalendar_NewsChannel_1n4vp.eventcalendar_NewsChannelOnPage_kJoC7 .eventcalendar_NewsChannelTitle_11O61 {
         color: #07bfff;
         font-weight: 600; }
+      .eventcalendar_NewsChannelGroup_3U5MY .eventcalendar_NewsChannel_1n4vp.eventcalendar_NewsChannelOnPage_kJoC7 .eventcalendar_NewsChannelSubtitle_3_CIM {
+        color: #07bfff; }
     .eventcalendar_NewsChannelGroup_3U5MY .eventcalendar_NewsChannel_1n4vp .eventcalendar_NewsChannelTitle_11O61 {
       color: #fff; }
     .eventcalendar_NewsChannelGroup_3U5MY .eventcalendar_NewsChannel_1n4vp .eventcalendar_NewsChannelSubtitle_3_CIM {
-      color: #aaa; }
+      text-transform: none;
+      letter-spacing: 0;
+      color: #7e8187; }
   .eventcalendar_NewsChannelGroup_3U5MY.eventcalendar_DiscoverGroup_kUY00 {
     margin-top: 0px; }
     .eventcalendar_NewsChannelGroup_3U5MY.eventcalendar_DiscoverGroup_kUY00 .eventcalendar_NewsChannel_1n4vp {
@@ -1621,6 +1620,11 @@
 
 .eventcalendar_SidePanelGameSearch_1LTVI {
   margin-right: 20px; }
+  .eventcalendar_SidePanelGameSearch_1LTVI .DialogLabel {
+    color: #a7aeb4;
+    letter-spacing: 0.1em;
+    margin-bottom: 7px;
+    margin-top: 2vh; }
 
 .eventcalendar_MobileNavBannerCtn_20PrZ {
   position: fixed;
@@ -1710,42 +1714,60 @@
   z-index: 9;
   height: 239px;
   box-sizing: border-box;
-  width: 100%;
+  width: calc( 100% - 36px);
   display: flex;
   flex-direction: column;
-  padding: 60px 120px;
+  padding: 60px 0px;
   background: linear-gradient(90deg, #10a2d7, #2b74fe);
   color: white; }
   .eventcalendar_LogInFeedRow_nydHE.eventcalendar_LogInSmallMode_21ANY {
     height: 100px;
-    padding: 20px 120px;
+    padding: 20px 0px;
     flex-direction: row;
     align-items: center; }
     .eventcalendar_LogInFeedRow_nydHE.eventcalendar_LogInSmallMode_21ANY .eventcalendar_LogInFeedText_3HgPB {
       display: none; }
-    .eventcalendar_LogInFeedRow_nydHE.eventcalendar_LogInSmallMode_21ANY .eventcalendar_LogInButton_35WTO {
-      margin-left: 40px; }
-  .eventcalendar_LogInFeedRow_nydHE .eventcalendar_LogInFeedTitle_cmQc6 {
-    font-weight: bold;
-    font-size: 20px;
-    margin-bottom: 10px; }
-  .eventcalendar_LogInFeedRow_nydHE .eventcalendar_LogInButton_35WTO {
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 14px;
-    cursor: pointer;
-    width: max-content;
-    color: #e1e1e1;
-    background-color: #07bfff;
-    padding: 10px 35px;
-    border-radius: 2px;
-    border: 0px;
-    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.2); }
-    .eventcalendar_LogInFeedRow_nydHE .eventcalendar_LogInButton_35WTO:hover {
-      filter: brightness(1.2); }
-  .eventcalendar_LogInFeedRow_nydHE .eventcalendar_LogInFeedText_3HgPB {
-    margin-top: 20px;
-    font-size: 14px; }
+    .eventcalendar_LogInFeedRow_nydHE.eventcalendar_LogInSmallMode_21ANY .eventcalendar_PromptCtn_19gyw {
+      display: flex;
+      flex-direction: row;
+      align-items: center; }
+      .eventcalendar_LogInFeedRow_nydHE.eventcalendar_LogInSmallMode_21ANY .eventcalendar_PromptCtn_19gyw .eventcalendar_LogInFeedTitle_cmQc6 {
+        order: 2;
+        margin-bottom: 0px; }
+      .eventcalendar_LogInFeedRow_nydHE.eventcalendar_LogInSmallMode_21ANY .eventcalendar_PromptCtn_19gyw .eventcalendar_LogInButton_35WTO {
+        margin-right: 20px; }
+  .eventcalendar_LogInFeedRow_nydHE .eventcalendar_PromptCtn_19gyw {
+    max-width: 1012px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 16px;
+    box-sizing: border-box; }
+    .eventcalendar_LogInFeedRow_nydHE .eventcalendar_PromptCtn_19gyw .eventcalendar_LogInFeedTitle_cmQc6 {
+      font-weight: bold;
+      font-size: 20px;
+      margin-bottom: 10px; }
+    .eventcalendar_LogInFeedRow_nydHE .eventcalendar_PromptCtn_19gyw .eventcalendar_LogInButton_35WTO {
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 14px;
+      cursor: pointer;
+      width: max-content;
+      color: #e1e1e1;
+      background-color: #07bfff;
+      padding: 10px 35px;
+      border-radius: 2px;
+      border: 0px;
+      box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.2); }
+      .eventcalendar_LogInFeedRow_nydHE .eventcalendar_PromptCtn_19gyw .eventcalendar_LogInButton_35WTO:hover {
+        filter: brightness(1.2); }
+    .eventcalendar_LogInFeedRow_nydHE .eventcalendar_PromptCtn_19gyw .eventcalendar_LogInFeedText_3HgPB {
+      margin-top: 20px;
+      font-size: 16px; }
+  @media screen and (max-width: 700px) {
+    .eventcalendar_LogInFeedRow_nydHE {
+      width: 100%; }
+      .eventcalendar_LogInFeedRow_nydHE .eventcalendar_LogInFeedTitle_cmQc6 {
+        font-size: 16px; } }
 
 .horizontalscrollcontainer_HorizontalScrollInDragForceCursor_2kFhN {
   cursor: grabbing !important; }
@@ -1770,10 +1792,17 @@
   margin-right: auto;
   margin-top: 10px;
   margin-bottom: 20px; }
+  @media screen and (max-width: 700px) {
+    .curatorfeedsuggestrow_FeedSuggestContainer_1420T {
+      padding: 0px;
+      background-image: unset; } }
 
 .curatorfeedsuggestrow_FeedSuggestCaption_38Zh0 {
   font-size: 17px;
   margin: 4px; }
+  @media screen and (max-width: 700px) {
+    .curatorfeedsuggestrow_FeedSuggestCaption_38Zh0 {
+      font-size: 14px; } }
 
 .curatorfeedsuggestrow_RowContainer_39bJZ {
   display: flex;
@@ -2301,6 +2330,64 @@ h4 {
 .eventbackfill_Error_1eWgI {
   color: darkred; }
 
+.facetedbrowse_FacetedBrowseCtn_1Drr- {
+  display: flex;
+  flex-direction: row;
+  margin-top: 48px; }
+
+.facetedbrowse_FacetedBrowseControls_1JM3A {
+  width: 30%;
+  margin-right: 32px;
+  color: white; }
+
+.facetedbrowse_FacetedBrowseControls_1JM3A h1 {
+  text-transform: uppercase;
+  font-size: 17px;
+  letter-spacing: 2px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid white; }
+
+.facetedbrowse_FacetedBrowseControls_1JM3A h2 {
+  text-transform: uppercase;
+  font-size: 15px;
+  letter-spacing: 2px;
+  margin-top: 32px;
+  margin-bottom: 16px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid gray; }
+
+.facetedbrowse_FacetValue_12piy {
+  display: flex;
+  align-items: baseline;
+  cursor: pointer;
+  padding-left: 12px; }
+
+.facetedbrowse_FacetValueEnabled_TZdsh {
+  display: flex;
+  align-items: baseline;
+  cursor: pointer;
+  font-weight: bold;
+  color: darkorange;
+  padding-left: 8px;
+  border-left: 4px solid darkorange; }
+
+.facetedbrowse_FacetValueName_2uSEn {
+  font-size: 13px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  flex-grow: 1; }
+
+.facetedbrowse_FacetValueDescription_1inQ1 {
+  font-size: 11px;
+  font-weight: normal;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  opacity: 50%; }
+
+.facetedbrowse_FacetedBrowseItems_3EdZT {
+  display: block;
+  width: 100%; }
+
 .partnereventstats_StatsTitle_3YLaB {
   display: flex;
   flex-direction: row;
@@ -2591,64 +2678,6 @@ h4 {
 .salesectionsubscription_UnOwned_1-zl0:hover {
   cursor: pointer;
   background-color: #3692f7; }
-
-.facetedbrowse_FacetedBrowseCtn_1Drr- {
-  display: flex;
-  flex-direction: row;
-  margin-top: 48px; }
-
-.facetedbrowse_FacetedBrowseControls_1JM3A {
-  width: 30%;
-  margin-right: 32px;
-  color: white; }
-
-.facetedbrowse_FacetedBrowseControls_1JM3A h1 {
-  text-transform: uppercase;
-  font-size: 17px;
-  letter-spacing: 2px;
-  padding-bottom: 4px;
-  border-bottom: 1px solid white; }
-
-.facetedbrowse_FacetedBrowseControls_1JM3A h2 {
-  text-transform: uppercase;
-  font-size: 15px;
-  letter-spacing: 2px;
-  margin-top: 32px;
-  margin-bottom: 16px;
-  padding-bottom: 4px;
-  border-bottom: 1px solid gray; }
-
-.facetedbrowse_FacetValue_12piy {
-  display: flex;
-  align-items: baseline;
-  cursor: pointer;
-  padding-left: 12px; }
-
-.facetedbrowse_FacetValueEnabled_TZdsh {
-  display: flex;
-  align-items: baseline;
-  cursor: pointer;
-  font-weight: bold;
-  color: darkorange;
-  padding-left: 8px;
-  border-left: 4px solid darkorange; }
-
-.facetedbrowse_FacetValueName_2uSEn {
-  font-size: 13px;
-  margin-top: 2px;
-  margin-bottom: 2px;
-  flex-grow: 1; }
-
-.facetedbrowse_FacetValueDescription_1inQ1 {
-  font-size: 11px;
-  font-weight: normal;
-  margin-top: 2px;
-  margin-bottom: 2px;
-  opacity: 50%; }
-
-.facetedbrowse_FacetedBrowseItems_3EdZT {
-  display: block;
-  width: 100%; }
 
 .rss_moderation_SectionContainer_3P-ff {
   min-height: 250px; }

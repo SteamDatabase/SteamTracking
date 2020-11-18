@@ -749,3 +749,22 @@ function UpdateProfileShowcaseContentCheckResult( steamID, type, slot, purchasei
 	});
 }
 
+function AddProfileAward( bLoggedIn, loginURL, steamID, selectedAward )
+{
+	if ( !bLoggedIn )
+	{
+		var dialog = ShowConfirmDialog( 'Error', 'You must be logged in to perform that action.', 'Sign In' );
+		dialog.done( function() {
+			top.location.href = loginURL;
+		} );
+	}
+	else
+	{
+		function callbackFunc( id, award )
+		{
+			top.location.reload();
+		};
+		fnLoyalty_ShowAwardModal( steamID, callbackFunc, undefined, selectedAward );
+	}
+}
+

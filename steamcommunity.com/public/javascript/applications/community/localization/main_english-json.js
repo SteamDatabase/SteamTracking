@@ -1861,6 +1861,10 @@
         Sale_SyncTaggedItems_ttip:
           "This will allow for synchronizing various tags and other information between the tagged items and other sources",
         Sale_SyncDemoTags_Title: "Syncing Demo Tags",
+        Sale_EditAutoTags_Title: "Edit Auto Tags",
+        Sale_EditAutoTags_Placeholder: "Enter tag name",
+        Sale_EditAutoTags_Tooltip:
+          "This is the name of the tag that will be applied to any tagged items that match the associated filter",
         Sale_EditTaggedItemFilter: "Item Filter",
         Sale_EditTaggedItemFilter_ttip:
           "This allows for setting up a filter that will be applied to all tagged items prior to considering for sections. You can use this to filter out say all games that don't have demos, or that have a tag that you choose.",
@@ -1870,6 +1874,9 @@
         Sale_BatchEditTaggedItems: "Batch Edit",
         Sale_BatchEditTaggedItems_ttip:
           "Allows for the editing of tagged items in batches. A list of items can be provided and then tags added or removed from them as a group",
+        Sale_EditAutoTags: "Auto Tags",
+        Sale_EditAutoTags_ttip:
+          "Allows creating auto tags, which is a filter that will apply the named tag to any tagged item that matches",
         Sale_ShowFilteredTaggedItems: "Show Filtered",
         Sale_ShowFilteredTaggedItems_ttip:
           "When checked, this will display all items, including those that have been filtered out",

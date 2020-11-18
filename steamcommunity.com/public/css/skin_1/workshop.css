@@ -1767,6 +1767,7 @@ textarea {
 {
 	font-size: 12px;
 	color: #8F98A0;
+	max-width: 200px;
 }
 
 .workshopItem.left, .workshopItem.middle

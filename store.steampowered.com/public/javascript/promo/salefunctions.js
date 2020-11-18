@@ -503,7 +503,7 @@ function SaleTagBackground( colors )
 	var g = Number.parseInt( hex[3] + hex[4], 16 );
 	var b = Number.parseInt( hex[5] + hex[6], 16 );
 	// return 'background: rgba( ' + r + ', ' + g + ', ' + b + ', 0.3 );';
-	return 'background: #102839';
+	return 'background: #581c17';
 }
 
 function SaleTagBlock( $Parent, rgPersonalizedTagData )
