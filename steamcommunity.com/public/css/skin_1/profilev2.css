@@ -930,8 +930,8 @@ html.responsive .showcase_achievement:nth-child(7n-6) {
 .showcase_gamecollector_games {
 }
 
-.showcase_gamecollector_games .showcase_gamecollector_game:nth-child(4n-1),
-html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:nth-child(4n-1) {
+.showcase_gamecollector_games .showcase_gamecollector_game:nth-child(4n-3),
+html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:nth-child(4n-3) {
 	margin-left: 0;
 }
 
