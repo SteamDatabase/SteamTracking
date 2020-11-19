@@ -239,10 +239,13 @@
 	min-height: 64px;
 	position:relative;
 	background: rgba( 0, 0, 0, 0.5 );
+
+	display: flex;
+	align-items: center;
 }
 
 .achieveTxt {
-	padding: 17px 6px 6px 6px;
+	padding: 6px 6px 6px 6px;
 }
 
 .achieveTxt h3 {
@@ -255,7 +258,10 @@
 	font-weight:normal;
 	font-size:12px;
 	color:#898989;
+	white-space: normal;
+	max-height: 28px;
 }
+
 .whiteText {
 	color:#e0e0e0;
 }
