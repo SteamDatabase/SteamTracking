@@ -578,6 +578,7 @@ message CMsgGameServerData {
 		optional fixed64 steam_id = 1;
 	}
 
+	optional uint32 revision = 24;
 	optional fixed64 steam_id_gs = 1;
 	optional uint32 deprecated_ip = 2;
 	optional uint32 query_port = 3;
@@ -598,7 +599,6 @@ message CMsgGameServerData {
 	optional bool dedicated = 16;
 	optional string os = 17;
 	optional string game_data = 18;
-	optional uint32 game_data_version = 19;
 	optional string game_type = 20;
 	optional string map = 21;
 }

@@ -1957,6 +1957,12 @@
  T CTSQueue<CWorkItem*>::operator delete(void*)
  T CTSQueue<CWorkItem*>::operator new(unsigned long)
  T CTSQueue<CWorkItem*>::~CTSQueue()
+ T CTSQueue<CWorkThread*>::AllocNode()
+ T CTSQueue<CWorkThread*>::Pop()
+ T CTSQueue<CWorkThread*>::PopItem(CWorkThread**)
+ T CTSQueue<CWorkThread*>::Purge()
+ T CTSQueue<CWorkThread*>::operator delete(void*)
+ T CTSQueue<CWorkThread*>::~CTSQueue()
  T CTSQueue<CompletionData_t*>::AllocNode()
  T CTSQueue<CompletionData_t*>::Pop()
  T CTSQueue<CompletionData_t*>::Purge()
@@ -2460,6 +2466,7 @@
  T CWorkItemFunctionCall::Validate(CValidator&, char const*)
  T CWorkItemFunctionCall::~CWorkItemFunctionCall()
  T CWorkItemPipeline::RemoveItem()
+ T CWorkThread::CWorkThread(CWorkThreadPool*)
  T CWorkThread::CWorkThread(CWorkThreadPool*, char const*)
  T CWorkThread::Cancel()
  T CWorkThread::CheckThreadShouldExit()
@@ -3332,6 +3339,7 @@
  T TSLNodeBase_t::operator delete(void*)
  T TSLNodeTemplate_t<CWSASendThread::send_t*>::operator delete(void*)
  T TSLNodeTemplate_t<CWorkItem*>::operator delete(void*)
+ T TSLNodeTemplate_t<CWorkThread*>::operator delete(void*)
  T TSLNodeTemplate_t<CompletionData_t*>::operator delete(void*)
  T TSListBase_Init
  T TSListBase_Pop

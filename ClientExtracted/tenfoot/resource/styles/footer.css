@@ -40,6 +40,8 @@ TenfootFooterPanel.WebFooter
 
 .Show.Anim_LT_btn #LB_btn, .Show.Anim_LT_txt #LB_txt,
 .Show.Anim_RT_btn #RB_btn, .Show.Anim_RT_txt #RB_txt,
+.Show.Anim_L1_btn #L1_btn,
+.Show.Anim_R1_btn #R1_btn,
 .Show.Anim_MID #A_btn, .Show.Anim_MID #A_txt,
 .Show.Anim_MID #B_btn, .Show.Anim_MID #B_txt,
 .Show.Anim_MID #X_btn, .Show.Anim_MID #X_txt,
@@ -126,6 +128,8 @@ TenfootFooterPanel.WebFooter
 .Hide #Y_btn_s, .Hide #Y_txt_s,
 .Hide #RB_btn, .Hide #RB_txt,
 .Hide #LB_btn, .Hide #LB_txt,
+.Hide #R1_btn, .Hide #R1_txt,
+.Hide #L1_btn, .Hide #L1_txt,
 .Hide #START_btn, .Hide #START_txt,
 .Hide #BACK_btn, .Hide #BACK_txt,
 .Hide #RightLegend .FriendsNotifications,
@@ -138,6 +142,8 @@ TenfootFooterPanel.WebFooter
 
 .Hide.Anim_LT_btn #LB_btn, .Hide.Anim_LT_txt #LB_txt,
 .Hide.Anim_RT_btn #RB_btn, .Hide.Anim_RT_txt #RB_txt,
+.Hide.Anim_LT_btn #L1_btn, .Hide.Anim_LT_txt #L1_txt,
+.Hide.Anim_RT_btn #R1_btn, .Hide.Anim_RT_txt #R1_txt,
 .Hide.Anim_MID #A_btn, .Hide.Anim_MID #A_txt,
 .Hide.Anim_MID #B_btn, .Hide.Anim_MID #B_txt,
 .Hide.Anim_MID #X_btn, .Hide.Anim_MID #X_txt,
@@ -252,14 +258,18 @@ TenfootFooterPanel.WebFooter
 }
 
 
-#RB_btn_ps4,
-#LB_btn_ps4,
+#R1_btn,
+#L1_btn,
 #A_btn_nintendo,  
 #B_btn_nintendo, 
 #X_btn_nintendo,
 #Y_btn_nintendo,
 #START_btn_nintendo,
 #BACK_btn_nintendo,
+#A_btn_ps4,  
+#B_btn_ps4, 
+#X_btn_ps4, 
+#Y_btn_ps4, 
 {
     visibility: collapse;
 }
@@ -268,8 +278,14 @@ TenfootFooterPanel.WebFooter
 .PS4Origin #LegendRow Label.LegendButtonBox.BButtonBox,
 .PS4Origin #LegendRow Label.LegendButtonBox.XButtonBox,
 .PS4Origin #LegendRow Label.LegendButtonBox.YButtonBox,
-.PS4Origin #RB_btn_std,
-.PS4Origin #LB_btn_std,
+.PS4Origin #RB_btn,
+.PS4Origin #LB_btn,
+.PS5Origin #LegendRow Label.LegendButtonBox.AButtonBox,  
+.PS5Origin #LegendRow Label.LegendButtonBox.BButtonBox,
+.PS5Origin #LegendRow Label.LegendButtonBox.XButtonBox,
+.PS5Origin #LegendRow Label.LegendButtonBox.YButtonBox,
+.PS5Origin #RB_btn,
+.PS5Origin #LB_btn,
 .NintendoOrigin #A_btn_std,  
 .NintendoOrigin #B_btn_std, 
 .NintendoOrigin #X_btn_std,
@@ -280,12 +296,18 @@ TenfootFooterPanel.WebFooter
     visibility: collapse;
 }
 
-.PS4Origin #LegendRow Label.LegendButtonBox.CrossButtonBox,  
-.PS4Origin #LegendRow Label.LegendButtonBox.CircleButtonBox,
-.PS4Origin #LegendRow Label.LegendButtonBox.SquareButtonBox,
-.PS4Origin #LegendRow Label.LegendButtonBox.TriangleButtonBox,
-.PS4Origin #RB_btn_ps4,
-.PS4Origin #LB_btn_ps4,
+.PS4Origin #A_btn_ps4,  
+.PS4Origin #B_btn_ps4, 
+.PS4Origin #X_btn_ps4, 
+.PS4Origin #Y_btn_ps4,
+.PS4Origin #R1_btn,
+.PS4Origin #L1_btn,
+.PS5Origin #A_btn_ps4,  
+.PS5Origin #B_btn_ps4, 
+.PS5Origin #X_btn_ps4, 
+.PS5Origin #Y_btn_ps4,
+.PS5Origin #R1_btn,
+.PS5Origin #L1_btn,
 {
     visibility: visible;
 	font-family: "Noto Sans CJK JP Regular";
@@ -303,10 +325,10 @@ TenfootFooterPanel.WebFooter
     visibility: visible;
 }
 
-#LegendRow Label.LegendButtonBox.CrossButtonBox,  
-#LegendRow Label.LegendButtonBox.CircleButtonBox,
-#LegendRow Label.LegendButtonBox.SquareButtonBox,
-#LegendRow Label.LegendButtonBox.TriangleButtonBox
+.PS4Origin Label.LegendButtonBox.CrossButtonBox,  
+.PS4Origin Label.LegendButtonBox.CircleButtonBox,
+.PS4Origin Label.LegendButtonBox.SquareButtonBox,
+.PS4Origin Label.LegendButtonBox.TriangleButtonBox
 {
 	background-color: #111111;
     font-weight: bold;
@@ -317,6 +339,19 @@ TenfootFooterPanel.WebFooter
     padding-left: 0.5px;
 }
 
+.PS5Origin Label.LegendButtonBox.CrossButtonBox,  
+.PS5Origin Label.LegendButtonBox.CircleButtonBox,
+.PS5Origin Label.LegendButtonBox.SquareButtonBox,
+.PS5Origin Label.LegendButtonBox.TriangleButtonBox
+{
+    background-color: #FFFFFF;
+    font-weight: bold;
+    font-size: 28px;
+    padding-top: -3px;
+    color: gradient( linear, 0% 0%, 0% 100%, color-stop( 0.0, #072e47ff ), color-stop( 1.0, #000000ff ) );
+    visibility: collapse;
+    padding-left: 0.5px;
+}
 
 #LegendRow Label.LegendButtonBox.CrossButtonBox {
     border: 2px solid #4ca2ff95;
@@ -345,6 +380,11 @@ TenfootFooterPanel.WebFooter
     color: #30ffffee;
     font-size: 30px;
     padding-top: -7.5px;
+}
+
+.PS5Origin #LegendRow Label.LegendButtonBox
+{
+    color: #949494;
 }
 
 .OSX #LegendRow Label.LegendButtonBox.CrossButtonBox {
@@ -477,6 +517,35 @@ TenfootFooterPanel.WebFooter
 	box-shadow: #00000022 -3px -3px 4px 6px;
 }
 
+.PS5Origin #LegendRow .RBButtonBox,
+.PS5Origin #LegendRow .RBButtonBox
+{
+    border-top-right-radius: 20px 12px;
+    border-top-left-radius: 20px 12px;
+    color: #949494;
+    background-color: #FFFFFF;
+}
+
+.PS5Origin #LegendRow .LBButtonBox,
+.PS5Origin #LegendRow .LBButtonBox
+{
+    border-top-left-radius: 20px 12px;
+    color: #949494;
+    background-color: #FFFFFF;
+}
+
+
+.NintendoOrigin #LegendRow .LBButtonBox,
+.NintendoOrigin #LegendRow .LBButtonBox,
+.NintendoOrigin #LegendRow .RBButtonBox,
+.NintendoOrigin #LegendRow .RBButtonBox
+{
+	border: 2px solid #606060ff;
+	color: gradient( linear, 0% 0%, 0% 100%, color-stop( 0.0, #ccccccff ), color-stop( 1.0, #606060ff ) );
+	background-color: #222222;
+}
+
+.PS4Origin #LegendRow .RBButtonBox,
 .PS4Origin #LegendRow .RBButtonBox
 {
     border-top-left-radius: 20px 12px;
@@ -500,6 +569,9 @@ TenfootFooterPanel.WebFooter
 	box-shadow: #00000022 -3px -3px 4px 6px;
 }
 
+.PS5Origin #LegendRow .LBButtonBox,
+.PS5Origin #LegendRow .LBButtonBox,
+.PS4Origin #LegendRow .LBButtonBox,
 .PS4Origin #LegendRow .LBButtonBox
 {
     border-top-right-radius: 20px 12px;
@@ -587,6 +659,8 @@ TenfootFooterPanel.WebFooter
 }
 
 
+.PS5Origin #LegendRow .STARTButtonBox,
+.PS5Origin #LegendRow .BACKButtonBox,
 .PS4Origin #LegendRow .STARTButtonBox,
 .PS4Origin #LegendRow .BACKButtonBox
 {
@@ -694,10 +768,6 @@ TenfootFooterPanel.WebFooter
 .CursorVisible #LegendRow .SquareButtonBox,
 .CursorVisible #LegendRow .TriangleButtonBox,
 .CursorVisible #LegendRow .SwitchButtonBox,
-.CursorVisible.PS4Origin #LegendRow Label.LegendButtonBox.CrossButtonBox,
-.CursorVisible.PS4Origin #LegendRow Label.LegendButtonBox.CircleButtonBox,
-.CursorVisible.PS4Origin #LegendRow Label.LegendButtonBox.SquareButtonBox,
-.CursorVisible.PS4Origin #LegendRow Label.LegendButtonBox.TriangleButtonBox,
 .CursorVisible #LegendRow .STARTButtonBox,
 .CursorVisible #LegendRow .BACKButtonBox,
 {

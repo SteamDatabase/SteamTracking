@@ -9,6 +9,7 @@
 			<Panel id="LegendRow" hittest="false" >
 				<Panel id="LeftLegend" class="LegendButton">
 					<Label id="LB_btn" class="LegendButtonBox LBButtonBox" text="#UI_LeftBumper_Short" />
+					<Label id="L1_btn" class="LegendButtonBox LBButtonBox" text="#UI_LeftBumper_L1_Short" />
 					<FooterLabelButton id="LB_txt" class="LegendText LBButtonText" padevent="pad_left_shoulder" />
 				</Panel>
 				<Panel id="MiddleLegend" class="LegendButton">
@@ -92,6 +93,7 @@
 						<Image id="OngoingVoiceChat" src="file://{images}/friends/friends_voicechatactivity.tga" />
 					</Panel>
 					<Label id="RB_btn" class="LegendButtonBox RBButtonBox" text="#UI_RightBumper_Short" />
+					<Label id="R1_btn" class="LegendButtonBox RBButtonBox" text="#UI_RightBumper_R1_Short" />
 				</Panel>
 			</Panel>
 	</TenfootFooterPanel>	

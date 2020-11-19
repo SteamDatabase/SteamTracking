@@ -47,8 +47,8 @@ __cfstring
 __DATA
 __data
 __DATA
-qR
-qR
+0qR
+0qR
 __thread_vars
 __DATA
 __thread_bss
@@ -57,7 +57,7 @@ __bss
 __DATA
 __common
 __DATA
-0^
+00^
 H
 __LINKEDIT
 p^
@@ -10899,6 +10899,7 @@ controller_front_panel_board
 controller_keyboard_generic
 controller_mouse_generic
 controller_switch_pro_generic
+controller_ps5
 optional
 Windows
 LoadFileIntoBuffer: NULL parameters
@@ -10921,7 +10922,6 @@ n6
 R
 R
 R
-R
 (
 3
 p
@@ -10933,6 +10933,7 @@ p
 0
 ;)
 *
+:Q
 0
 p
 0
@@ -10964,11 +10965,11 @@ B.
 @
 H
 P
-J[
+G[
 
 
 "
-|[
+~[
 @
 /-
 -
@@ -10989,10 +10990,10 @@ G
 Y
 Y
 I/
+(Y
 /
 +
 +
-M
 !
 0
 p
@@ -11047,6 +11048,7 @@ p
 0
 0
 )
+"M
 p-
 L
 L
@@ -11068,6 +11070,7 @@ P)
 )
 )
 p
+N
 N
 N
 G
@@ -11122,7 +11125,6 @@ p
 #
 0
 p
-TM
 0
 p
 p
@@ -11168,6 +11170,7 @@ p
 E
 0
 p
+VT
 A
 p
 X&
@@ -11191,7 +11194,6 @@ p
 p
 0
 p
-4N
 p
 p
 0
@@ -11226,10 +11228,8 @@ n#
 #
 #
 .
-gP
-L95{WP
-L950)P
-L95P
+iP
+L95@)P
 P
 v=
 "
@@ -11248,7 +11248,6 @@ Hc
 %
 %
 %
-{M
 '
 ?
 ?
@@ -11265,6 +11264,7 @@ Hc
 ?
 ?
 ?
+\L
 .
 0
 @
@@ -11582,7 +11582,6 @@ I;E
 H
 H
 
-{B
 
 
 i[
@@ -11688,20 +11687,17 @@ P
 @
 |
 |
-->
+*>
+g>
 "
-]>
 3
 >
 >
 >
 >
->
->
 D
-@>
-/>
-*>
+0>
++>
 >
 >
 >
@@ -11719,14 +11715,10 @@ D
 >
 >
 >
->
->
-p=
 @
-G=
 =
 =
-L95bG<
+L95rG<
 =)
 !*
 ;
@@ -11736,11 +11728,9 @@ L95bG<
 
 
 %'
-;9
 (
 (
 d
-"8
 (
 
 
@@ -11754,27 +11744,28 @@ d
 &
 &
 d
-E3
+n3
 t=
 =
 =
 @
 *
-82
+j2
+L5
+"2
 uV%
 
 
 
 
 E
-61
 
 
 
-W0
 @
-N0
+V0
 L
+H0
 @
 @
 &
@@ -11791,7 +11782,6 @@ L
 @
 @
 =
-m/
 @
 @
 @
@@ -11838,6 +11828,7 @@ d
 @
 =
 @
+A.
 @
 @
 V

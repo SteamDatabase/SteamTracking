@@ -744,6 +744,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/workshopcontentupdatejob.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/xinputmemstream.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/../common/hiddevicesdl.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/../common/mach_helpers.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/../steamexe/osx/ipctool.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/../streaming/proto/stream.pb.h

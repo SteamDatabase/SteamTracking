@@ -24,11 +24,11 @@
 				</Panel>
 
 				<!-- Dpad Mode -->
-				<Panel class="FieldWrapper" modes="DPad" sources="trackpad" normal_but_ga_advanced ="on">
+				<Panel class="FieldWrapper" modes="dpad" sources="trackpad" normal_but_ga_advanced ="on">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_RequiresClick" />
 					<DropDown id="RequiresClick" />
 				</Panel>
-				<Panel class="FieldWrapper" modes="DPad" sources="trackpad joystick gyro ABXY" advanced="off" gameactions="off" sourcedropdownoverride="DPadLayout DPad ABXY" sourcedropdownentries="0 1 3">
+				<Panel class="FieldWrapper" modes="dpad" sources="trackpad joystick gyro ABXY" advanced="off" gameactions="off" sourcedropdownoverride="DPadLayout DPad ABXY" sourcedropdownentries="0 1 3">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_DPadLayout" />
 					<DropDown id="DPadLayout" />
 				</Panel>
@@ -36,46 +36,46 @@
           <Label class="FieldLabel" text="#Library_Details_FieldLabel_GyroButton" />
           <DropDown id="GyroButtonDpad" />
         </Panel>     
-				<Panel class="FieldWrapper" modes="DPad" advanced="off" gameactions="on"> 
+				<Panel class="FieldWrapper" modes="dpad 2DScroll" advanced="off" gameactions="on"> 
 					<Label class="FieldLabel" text="#Gamepad_Up" />
 					<ControllerBindingButton class="BindingButtonPropertiesMode GAButton" id="DpadUpButtonGA" />
 				</Panel>				
-				<Panel class="FieldWrapper" modes="DPad" advanced="off" gameactions="on">
+				<Panel class="FieldWrapper" modes="dpad 2DScroll" advanced="off" gameactions="on">
 					<Label class="FieldLabel" text="#Gamepad_Left" />
 					<ControllerBindingButton class="BindingButtonPropertiesMode GAButton" id="DpadLeftButtonGA" />
 				</Panel>
-        <Panel class="FieldWrapper" modes="DPad" legacy_ga="on" gameactions="on">
+        <Panel class="FieldWrapper" modes="dpad 2DScroll" legacy_ga="on" gameactions="on">
           <Label class="FieldLabel" text="#Gamepad_Up" />
           <ControllerBindingButton class="BindingButtonPropertiesMode GAButton" id="DpadUpButtonGALeg" />
         </Panel>
-        <Panel class="FieldWrapper" modes="DPad" legacy_ga="on" gameactions="on">
+        <Panel class="FieldWrapper" modes="dpad 2DScroll" legacy_ga="on" gameactions="on">
           <Label class="FieldLabel" text="#Gamepad_Left" />
           <ControllerBindingButton class="BindingButtonPropertiesMode GAButton" id="DpadLeftButtonGALeg" />
         </Panel>
 
-        <Panel class="FieldWrapper" modes="DPad" sources="trackpad joystick" normal_but_ga_advanced="on" dependency="OverlapRegion">
+        <Panel class="FieldWrapper" modes="dpad" sources="trackpad joystick" normal_but_ga_advanced="on" dependency="OverlapRegion">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_OverlapRegion" />
 					<Slider id="OverlapRegion" direction="horizontal" />
 				</Panel>
         <!-- Dpad Mode Advanced -->
 				<!-- Now In Activators
-				<Panel class="FieldWrapper" modes="DPad" advanced="on">
+				<Panel class="FieldWrapper" modes="dpad 2DScroll" advanced="on">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_HoldRepeats" />
 					<DropDown id="HoldRepeatsDpad" />
 				</Panel>
-        <Panel class="FieldWrapper" modes="DPad" advanced="on">
+        <Panel class="FieldWrapper" modes="dpad 2DScroll" advanced="on">
           <Label class="FieldLabel" text="#Library_Details_FieldLabel_HoldRepeatInterval" />
           <Slider id="HoldRepeatIntervalDpad" direction="horizontal" />
         </Panel> -->
-        <Panel class="FieldWrapper" modes="DPad" sources="trackpad joystick trigger" advanced="on">
+        <Panel class="FieldWrapper" modes="dpad" sources="trackpad joystick trigger" advanced="on">
           <Label class="FieldLabel" text="#Library_Details_FieldLabel_AnalogEmulationPeriod" />
           <Slider id="AnalogEmulationPeriod" direction="horizontal" />
         </Panel>
-        <Panel class="FieldWrapper" modes="DPad" sources="trackpad joystick trigger" advanced="on">
+        <Panel class="FieldWrapper" modes="dpad" sources="trackpad joystick trigger" advanced="on">
           <Label class="FieldLabel" text="#Library_Details_FieldLabel_AnalogEmulationDutyCyclePct" />
           <Slider id="AnalogEmulationDutyCyclePct" direction="horizontal" />
         </Panel>
-        <Panel class="FieldWrapper" modes="dpad" gameactions="off" sources="gyro" advanced="off">
+        <Panel class="FieldWrapper" modes="dpad 2DScroll" gameactions="off" sources="gyro" advanced="off">
           <Label class="FieldLabel" text="#Library_Details_FieldLabel_GyroButtonInvert" />
           <DropDown id="GyroButtonInvertDpad" />
         </Panel>
@@ -329,6 +329,10 @@
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_GyroButton" />
 					<DropDown id="GyroButtonAbsMouse" />
 				</Panel>
+        <Panel class="FieldWrapper" modes="2DScroll" sources="gyro" advanced="off">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_GyroButton" />
+          <DropDown id="GyroButton2DScroll" />
+        </Panel>
         <Panel class="FieldWrapper" modes="absmouse" gameactions="off" sources="gyro" advanced="off">
           <Label class="FieldLabel" text="#Library_Details_FieldLabel_GyroButtonInvert" />
           <DropDown id="GyroButtonInvertAbsMouse" />
@@ -342,7 +346,16 @@
 					<Slider id="RotationAbsMouse" direction="horizontal" />
 				</Panel>
 
-        <!-- Mouse Mode Advanced -->	
+          <Panel class="FieldWrapper" modes="2DScroll" advanced="off">
+            <Label class="FieldLabel" text="#Library_Details_FieldLabel_Sensitivity" />
+            <Slider id="Sensitivity2DScroll" direction="horizontal" />
+          </Panel>
+          <Panel class="FieldWrapper" modes="2DScroll" sources="trackpad joystick ABXY gyro" advanced="off">
+            <Label class="FieldLabel" text="#Library_Details_FieldLabel_Rotation" />
+            <Slider id="Rotation2DScroll" direction="horizontal" />
+          </Panel>
+          
+          <!-- Mouse Mode Advanced -->	
 				<Panel class="FieldWrapper" modes="absmouse" advanced="on">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_SensitivityVertScale" />
 					<Slider id="VerticalSensitivity" direction="horizontal" />
@@ -563,7 +576,7 @@
 			-->
 			<Panel id="MiddleColumn" class="Column">
 				<!-- Dpad Mode -->
-				<Panel id="CenterImageDpad" class="CenterImageDpadPanel CenterImage" modes="DPad" advanced="off" gameactions="off" legacy_ga="off">
+				<Panel id="CenterImageDpad" class="CenterImageDpadPanel CenterImage" modes="dpad 2DScroll" advanced="off" gameactions="off" legacy_ga="off">
 					<Panel id="DpadButtonContainer" class="FlowDown">
 						<ControllerBindingButton id="DpadUpButton" type="glyph" />
 						<Panel id="DpadButtonContainer" class="FlowRight">
@@ -573,7 +586,7 @@
 						<ControllerBindingButton id="DpadDownButton" type="glyph" />
 					</Panel>
 				</Panel>
-				<Panel id="CenterImageDpad_GA" class="CenterImageDpadPanel CenterImage" modes="DPad" advanced="off" gameactions="on">
+				<Panel id="CenterImageDpad_GA" class="CenterImageDpadPanel CenterImage" modes="dpad 2DScroll" advanced="off" gameactions="on">
 					<Panel id="DpadButtonContainer" class="FlowDown">
 						<Panel id="DpadUpButton" class="FakeDpadButtonPanel" >
 							<Label class="FakeDpadButton" text="" />
@@ -607,7 +620,7 @@
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_EdgeRadius" />
 						<Slider id="EdgeBindingRadiusDpad" direction="horizontal" />
 					</Panel>
-        <Panel id="CenterImageDpad_GA_Advanced" class="CenterImageDpadPanel CenterImage" modes="DPad" legacy_ga="on" gameactions="on">
+        <Panel id="CenterImageDpad_GA_Advanced" class="CenterImageDpadPanel CenterImage" modes="dpad 2DScroll" legacy_ga="on" gameactions="on">
           <Panel id="DpadButtonContainer" class="FlowDown">
             <Panel id="DpadUpButton" class="FakeDpadButtonPanel" >
               <Label class="FakeDpadButton" text="" />
@@ -924,8 +937,9 @@
 				<Panel class="FieldWrapper" modes="absmouse" advanced="on" sources="gyro">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_GyroAxis" />
 					<DropDown id="GyroAxisAbsMouse" />
-				</Panel>	
-				<Panel class="FieldWrapper" modes="absmouse" advanced="on" sources="gyro">
+				</Panel>
+
+        <Panel class="FieldWrapper" modes="absmouse" advanced="on" sources="gyro">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_LeanSensitivity" />
 					<Slider id="LeanSensitivityAbsMouse" direction="horizontal" />
 				</Panel>				
@@ -1087,7 +1101,6 @@
           <DropDown id="ScrollWheelFriction" />
         </Panel>
 
-
         <!-- ScrollWheel Mode Advanced -->
 				<Panel class="FieldWrapper" modes="scrollwheel" advanced="on">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_ScrollWheelList4" />
@@ -1170,31 +1183,40 @@
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_HapticIntensity" />
 						<DropDown id="HapticIntensityDpad" />
 					</Panel>
+          <Panel class="FieldWrapper" modes="2dscroll" advanced="off" sources="gyro">
+            <Label class="FieldLabel" text="#Library_Details_FieldLabel_GyroAxis" />
+            <DropDown id="GyroAxis2DScroll" />
+          </Panel>
 
-          <Panel class="FieldWrapper" modes="dpad" gameactions="on" advanced="off">
+          <Panel class="FieldWrapper" modes="dpad 2DScroll" gameactions="on" advanced="off">
 						<Label class="FieldLabel" text="#Gamepad_Right" />
 						<ControllerBindingButton class="BindingButtonPropertiesMode GAButton" id="DpadRightButtonGA" />
 					</Panel>
-					<Panel class="FieldWrapper" modes="dpad" gameactions="on" advanced="off">
+					<Panel class="FieldWrapper" modes="dpad 2DScroll" gameactions="on" advanced="off">
 						<Label class="FieldLabel" text="#Gamepad_Down" />
 						<ControllerBindingButton class="BindingButtonPropertiesMode GAButton" id="DpadDownButtonGA" />
 					</Panel>
-          <Panel class="FieldWrapper" modes="dpad" gameactions="on" legacy_ga="on">
+          <Panel class="FieldWrapper" modes="dpad 2DScroll" gameactions="on" legacy_ga="on">
             <Label class="FieldLabel" text="#Gamepad_Right" />
             <ControllerBindingButton class="BindingButtonPropertiesMode GAButton" id="DpadRightButtonGALeg" />
           </Panel>
-          <Panel class="FieldWrapper" modes="dpad" gameactions="on" legacy_ga="on">
+          <Panel class="FieldWrapper" modes="dpad 2DScroll" gameactions="on" legacy_ga="on">
             <Label class="FieldLabel" text="#Gamepad_Down" />
             <ControllerBindingButton class="BindingButtonPropertiesMode GAButton" id="DpadDownButtonGALeg" />
           </Panel>
-					<Panel class="FieldWrapper" modes="DPad" sources="ABXY trackpad joystick bumper" normal_but_ga_advanced="on">
+					<Panel class="FieldWrapper" modes="dpad 2DScroll" sources="ABXY trackpad joystick bumper" normal_but_ga_advanced="on">
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_DpadClick" />
 						<ControllerBindingButton class="BindingButtonPropertiesMode" id="DpadClick" />
 					</Panel>
-          <Panel class="FieldWrapper" modes="dpad" advanced="off" sources="gyro">
+          <Panel class="FieldWrapper" modes="dpad 2DScroll" advanced="off" sources="gyro">
             <Label class="FieldLabel" text="#Library_Details_FieldLabel_GyroNeutralAngle" />
             <Slider id="GyroNeutralAngleDpad" direction="horizontal" />
-          </Panel>          
+          </Panel>
+
+          <Panel class="FieldWrapper" modes="2dscroll" advanced="off" >
+            <Label class="FieldLabel" text="#Library_Details_FieldLabel_2DScrollSwipe" />
+            <DropDown id="Momentum2DScroll" />
+          </Panel>
 					<!-- Dpad Mode Advanced -->
 		
 					<Panel class="FieldWrapper" modes="dpad" sources="trackpad joystick trigger" normal_but_ga_advanced="on" >

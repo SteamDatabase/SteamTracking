@@ -20,8 +20,8 @@ __unwind_info
 __TEXT
 __eh_frame
 __TEXT
-n-
-n-
+0n-
+0n-
 __DATA
 p6
 p6
@@ -43,30 +43,30 @@ __DATA
 __cfstring
 __DATA
 __objc_imageinfo__DATA
-SB
-SB
+0SB
+0SB
 __objc_selrefs
 __DATA
-(SB
-(SB
+8SB
+8SB
 __objc_classrefs__DATA
-0UB
-0UB
+@UB
+@UB
 __data
 __DATA
 __thread_vars
 __DATA
-0+K
-0+K
+@+K
+@+K
 __thread_bss
 __DATA
-P+K
+`+K
 __bss
 __DATA
-P/K
+`/K
 __common
 __DATA
-mK
+0mK
 H
 __LINKEDIT
 0K
@@ -9609,8 +9609,8 @@ developer
 Steam pid that launched us
 VGUI_Application_001
 OK
-Nov 12 2020
-19:26:56
+Nov 18 2020
+13:58:32
 crashhandler003
 gameoverlayui
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/overlay/gameoverlayui/main.cpp
@@ -13128,6 +13128,7 @@ controller_front_panel_board
 controller_keyboard_generic
 controller_mouse_generic
 controller_switch_pro_generic
+controller_ps5
 optional
 Windows
 PS3
@@ -13288,13 +13289,16 @@ A
 A
 A
 A
+A
 6
 A
 A
 w
-=I
+zI
+mI
 0
 p
+&I
 #
 #
 #
@@ -13304,7 +13308,7 @@ p
 #
 #
 #
-c@
+d@
 !
 !
 @
@@ -13330,7 +13334,7 @@ l
 d
 !
 !
-P?
+'?
 &
 
 
@@ -13379,14 +13383,20 @@ Y
 ?
 0
 
-0@
+<?
+C@
+a@
 Hi
+EE
 $
+g@
 4
 0
 p
+@
 I
 I
+@
 @
 @
 @
@@ -13412,9 +13422,10 @@ A
 Hc
 =
 h,
--A
+!A
 2
 2
+@
 @
 @
 Hc
@@ -13658,11 +13669,10 @@ P
 "
 3
 D
-e7
-z7
-s7
-f7
-$7
+~7
+w7
+p7
+h7
 (
 7
 7
@@ -13671,7 +13681,6 @@ $7
 '
 5
 5
-Y4
 n%
 %
 %
@@ -13679,15 +13688,15 @@ n%
 
 
 
-/3
-L95 Y3
+L950Y3
 d
 
-N-
+[(
 :
 2
 
 
+-
 d
 &
 &
@@ -13696,6 +13705,7 @@ d
 =
 =
 @
+#,
 uV%
 
 
@@ -13711,7 +13721,9 @@ E
 *
 *
 *
+7+
 @
+*
 *
 *
 *
@@ -13735,6 +13747,7 @@ E
 @
 @
 =
+k)
 
 
 @
@@ -13767,8 +13780,6 @@ d
 d
 d
 =
-d(
-<(
 (
 
 =
@@ -13786,11 +13797,7 @@ d(
 @
 0
 E
-Hc5
-]'
-O'
 {
-F'
-Hc5FI'
+Hc5VI'
 5
 p

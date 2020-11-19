@@ -8407,6 +8407,8 @@
  T CTSQueue<CWSASendThread::send_t*>::~CTSQueue()
  T CTSQueue<CWorkItem*>::PopItem(CWorkItem**)
  T CTSQueue<CWorkItem*>::Validate(CValidator&, char const*)
+ T CTSQueue<CWorkThread*>::PopItem(CWorkThread**)
+ T CTSQueue<CWorkThread*>::Validate(CValidator&, char const*)
  T CTSQueue<CompletionData_t*>::AllocNode()
  T CTSQueue<CompletionData_t*>::Pop()
  T CTSQueue<CompletionData_t*>::Purge()

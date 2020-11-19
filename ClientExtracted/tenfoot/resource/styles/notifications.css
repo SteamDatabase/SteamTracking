@@ -511,6 +511,12 @@
     background-image: url( "file://{images}/controller_icon_steamcontroller.png" );
 }
 
+#ControllerConfigImage.controller_ps5,
+#ControllerImage.controller_ps5
+{
+    background-image: url( "file://{images}/controller_icon_ps5.png" );
+}
+
 #ControllerConfigImage.controller_ps4,
 #ControllerImage.controller_ps4
 {

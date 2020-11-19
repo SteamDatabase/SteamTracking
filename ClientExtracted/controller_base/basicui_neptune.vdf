@@ -225,7 +225,7 @@
 		"mode"		"scrollwheel"
 		"inputs"
 		{
-			"scroll_clockwise"
+			"dpad_north"
 			{
 				"activators"
 				{
@@ -233,12 +233,12 @@
 					{
 						"bindings"
 						{
-							"binding"		"mouse_wheel SCROLL_DOWN"
+							"binding"		"key_press UP_ARROW"
 						}
 					}
 				}
 			}
-			"scroll_counterclockwise"
+			"dpad_south"
 			{
 				"activators"
 				{
@@ -246,7 +246,33 @@
 					{
 						"bindings"
 						{
-							"binding"		"mouse_wheel SCROLL_UP"
+							"binding"		"key_press DOWN_ARROW"
+						}
+					}
+				}
+			}
+			"dpad_east"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press RIGHT_ARROW"
+						}
+					}
+				}
+			}
+			"dpad_west"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press LEFT_ARROW"
 						}
 					}
 				}
@@ -255,13 +281,6 @@
 			{
 				"activators"
 				{
-					"Soft_Press"
-					{
-						"bindings"
-						{
-							"binding"		"mouse_button MIDDLE"
-						}
-					}
 				}
 			}
 		}
