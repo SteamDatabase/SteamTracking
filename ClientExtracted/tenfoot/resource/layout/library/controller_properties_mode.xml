@@ -75,9 +75,13 @@
           <Label class="FieldLabel" text="#Library_Details_FieldLabel_AnalogEmulationDutyCyclePct" />
           <Slider id="AnalogEmulationDutyCyclePct" direction="horizontal" />
         </Panel>
-        <Panel class="FieldWrapper" modes="dpad 2DScroll" gameactions="off" sources="gyro" advanced="off">
+        <Panel class="FieldWrapper" modes="dpad" gameactions="off" sources="gyro" advanced="off">
           <Label class="FieldLabel" text="#Library_Details_FieldLabel_GyroButtonInvert" />
           <DropDown id="GyroButtonInvertDpad" />
+        </Panel>
+        <Panel class="FieldWrapper" modes="2DScroll" gameactions="off" sources="gyro" advanced="off">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_GyroButtonInvert" />
+          <DropDown id="GyroButtonInvert2DScroll" />
         </Panel>
         <!-- ABXY Mode -->
 				<!-- Now In Activators
@@ -1208,11 +1212,10 @@
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_DpadClick" />
 						<ControllerBindingButton class="BindingButtonPropertiesMode" id="DpadClick" />
 					</Panel>
-          <Panel class="FieldWrapper" modes="dpad 2DScroll" advanced="off" sources="gyro">
+          <Panel class="FieldWrapper" modes="dpad" advanced="off" sources="gyro">
             <Label class="FieldLabel" text="#Library_Details_FieldLabel_GyroNeutralAngle" />
             <Slider id="GyroNeutralAngleDpad" direction="horizontal" />
           </Panel>
-
           <Panel class="FieldWrapper" modes="2dscroll" advanced="off" >
             <Label class="FieldLabel" text="#Library_Details_FieldLabel_2DScrollSwipe" />
             <DropDown id="Momentum2DScroll" />

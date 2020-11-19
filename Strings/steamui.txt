@@ -9,7 +9,6 @@ __TEXT
 __gcc_except_tab__TEXT
 __cstring
 __TEXT
-h$
 __const
 __TEXT
 __objc_methname
@@ -130,18 +129,19 @@ h
 /usr/lib/libobjc.A.dylib
 &
 )
-Oa
-?
+Ma
 }
+r
 (
 (
 
 u
+_
 H=
-M
+L
 @
 @
-aQ
+_Q
 C=
 tl=
 2=
@@ -152,9 +152,11 @@ t)=
 @
 @
 Q
+Q
 j
 @
-nL
+lL
+r
 25CFriendSettingsController
 13IUIController
 N25CFriendSettingsController41CCallbackInternal_OnClientSettingsChangedE
@@ -16494,9 +16496,9 @@ DpadUpButtonGALeg
 DpadLeftButtonGALeg
 DpadRightButtonGALeg
 DpadDownButtonGALeg
+GyroButtonInvert2DScroll
 Sensitivity2DScroll
 Rotation2DScroll
-GyroButtonInvertAbsMouse
 Friction2DScroll
 Smoothing2DScroll
 GyroAxis2DScroll
@@ -16571,6 +16573,7 @@ AbsMouseClick
 AbsMouseGyroLeft
 AbsMouseGyroRight
 AbsMouseStickTouch
+GyroButtonInvertAbsMouse
 AbsMouseTouch
 Friction
 VerticalFriction
@@ -20022,7 +20025,7 @@ file://{resources}/layout/settings/settings_about.xml
 build_date
 Nov 18 2020
 build_time
-14:01:33
+20:38:23
 package_version
 local
 SteamClient020
@@ -27957,7 +27960,7 @@ ChatInvitationNotification
 GameInviteNotification
 TradeInviteNotification
 steam/cached/aboutdialog.res
-14:03:44
+20:40:16
 CAboutDialog
 ValveSurveySummarizeData
 #steam_systeminfo_title
@@ -36221,18 +36224,19 @@ SSE and SSE2 are required.
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/mathlib/vector2d.h
 0
 
-Oa
-?
+Ma
 }
+r
 (
 (
 
 u
+_
 H=
-M
+L
 @
 @
-aQ
+_Q
 C=
 tl=
 2=
@@ -36243,58 +36247,54 @@ t)=
 @
 @
 Q
+Q
 j
 @
-nL
-\Q
-6L
-*
-*
-bj
+lL
+ZQ
+4L
+Q
+Q
+`j
+d
+d
+d
+d
 n
+n
+]
 ]
 i
 i
-i
-j
+k
 
 
 
 
 
 
-km
+im
 "
-m
 
-L
 L
 L
 "
-M
-gL
 H
+eL
+M
 G
 G
 @
-L
 <
+G
 G
 G
 x
 L
 ?
 K
+"K
 K
-K
-$K
-F
-K
-K
-F
-E
-K
-E
 u
 
 
@@ -36317,7 +36317,9 @@ g
 p
 0
 p
-=
+m
+m
+m
 0
 p
 (#
@@ -36344,15 +36346,13 @@ p
 
 
 
-xf
+vf
 uB=
 =
 t2=
 =
 =
-k
-k
->g
+<g
 Hi
 0u
 0
@@ -36361,8 +36361,7 @@ p
 p
 0
 p
-Ke
-f
+Ie
 @
 @
 @
@@ -36380,7 +36379,7 @@ p
 0
 p
 p
-=
+;
 @
 @
 @
@@ -36413,7 +36412,7 @@ p
 @
 @
 @
-d~
+b~
 @
 @
 @
@@ -36479,12 +36478,10 @@ d~
 @
 @
 @
-~
 @
 @
 @
-"
-p
+n
 @
 @
 0
@@ -36500,7 +36497,7 @@ p
 @
 @
 '
-E
+C
 p
 0
 0
@@ -36516,7 +36513,7 @@ p
 p
 0
 0
-4
+2
 @
 @
 @
@@ -36530,7 +36527,13 @@ p
 p
 @
 @
-q
+#
+0
+p
+0
+p
+!
+!
 0
 p
 0
@@ -36539,11 +36542,6 @@ p
 p
 0
 p
-0
-p
-0
-p
-q
 @
 @
 @
@@ -36663,16 +36661,8 @@ p
 0
 p
 c
-c
-c
-c
 0
 p
-~
-~
-~
-~
-~
 p
 0
 @
@@ -36694,9 +36684,11 @@ p
 @
 @
 @
+|
+|
+|
 
 p
-8
 0
 p
 @
@@ -36743,7 +36735,9 @@ p
 p
 p
 p
-1}
+o
+/}
+l
 @
 @
 @
@@ -36795,8 +36789,9 @@ p
 @
 @
 @
-r
+|
 d
+n
 ?
 @
 @
@@ -36859,19 +36854,20 @@ d
 @
 @
 @
-u{
 s{
+q{
 m
--`
-C{
++`
+A{
 @
 @
 m
 ?
-m
-m
-m
-m
+{
+{
+3
+3
+3
 @
 @
 @
@@ -36900,8 +36896,8 @@ m
 @
 0
 p
-`z
-_z
+^z
+]z
 @
 @
 @
@@ -36909,7 +36905,7 @@ _z
 @
 @
 @
-x2
+v2
 @
 @
 @
@@ -36917,8 +36913,6 @@ x2
 @
 @
 @
-_
-_
 m
 @
 @
@@ -37572,7 +37566,6 @@ Ab
 @
 @
 p
-Q
 @
 @
 @
@@ -37668,6 +37661,7 @@ Q
 @
 @
 @
+z~
 a
 @
 @
@@ -37825,6 +37819,7 @@ pz
 @
 m
 m
+U|
 @
 @
 @
@@ -37915,7 +37910,6 @@ y
 @
 @
 y
-4{
 0
 p
 y
@@ -38071,8 +38065,6 @@ p
 @
 @
 @
-By
-By
 @
 @
 @
@@ -38095,7 +38087,6 @@ By
 @
 @
 @
-y
 y
 y
 y
@@ -38220,6 +38211,7 @@ M
 @
 @
 SY
+tw
 @
 @
 @
@@ -38233,9 +38225,9 @@ SY
 @
 @
 @
+Uw
 g
 g
-<w
 @
 @
 @
@@ -38346,7 +38338,6 @@ J
 p
 p
 0
-}
 |
 |
 |
@@ -38393,6 +38384,7 @@ d
 d
 d
 d
+#x
 @
 @
 @
@@ -38427,7 +38419,7 @@ p
 @
 @
 n
-Ys
+[s
 |b
 @
 @
@@ -38500,7 +38492,6 @@ p
 0
 0
 `o
-Ur
 n
 x
 @
@@ -38646,10 +38637,13 @@ G^
 `
 @
 @
+~v
+bp
 @
 @
 @
 @
+v
 
 
 =am
@@ -38663,6 +38657,7 @@ G^
 @
 @
 @
+7s
 O
 Q
 @
@@ -38684,13 +38679,11 @@ Q
 @
 @
 @
-]o
 k
 m^
 l
-Lo
+Uo
 :^
--o
 @
 @
 @
@@ -38768,12 +38761,10 @@ Lo
 @
 @
 @
-Dn
 @
 @
 t
 5
-Cn
 ]
 ]
 @
@@ -38996,6 +38987,11 @@ l
 l
 l
 l
+l
+l
+l
+l
+l
 4
 =
 @t*=
@@ -39024,6 +39020,7 @@ p
 Y
 Y
 Y
+#m
 @
 @
 @
@@ -39033,21 +39030,18 @@ Y
 @
 @
 @
-Sj
+&j
 q
-j
 j
 _X
 WX
 6
 6
-Wi
 :7
 ?
 2
 2
 2
-"i
 +
 d
 sW
@@ -39056,17 +39050,18 @@ Q<
 
 
 d
-ck
+Ck
 9
 K<
 W
 $
 =
 =
-`h
 xV
+-h
+&h
 h
-h
+Ag
 ,V
 V
 V
@@ -39076,6 +39071,7 @@ V
 V
 V
 $6
+)g
 @
 3
 3
@@ -39091,6 +39087,7 @@ g
 !/
 
 /
+jf
 a
 T
 4
@@ -39108,28 +39105,22 @@ TS
 8
 l
 .
-#e
 IcE
 6
 -
 6
 
 3
-xd
-uf
 _
->d
-)f
+3d
 `
 A#u
 KQ
 IQ
 2Q
-gc
 Q
 Q
 Q
-3c
 p
 0
 0
@@ -39142,7 +39133,6 @@ I#E
 2
 2
 uP
-?i
 `P
 @
 @
@@ -39150,8 +39140,6 @@ uP
 0
 p
 '5
-b
-b
 5
 5
 5
@@ -39167,10 +39155,8 @@ P
 0
 0
 g4
-ba
-5b
+'b
 ,/
-$_
 FO
 =O
 ;O
@@ -39190,11 +39176,10 @@ k/
 @
 @
 @
-y`
 I'
 `
+m`
 C-
-d`
 0
 p
 0
@@ -39207,10 +39192,8 @@ p
 p
 0
 p
-.`
 
 Z
-1_
 %
 %
 %
@@ -39235,7 +39218,6 @@ d
 C
 J
 _
-_
 G,
 1
 L
@@ -39249,6 +39231,7 @@ i
 p
 0
 p
+^^
 ,/
 +
 +
@@ -39274,7 +39257,6 @@ W
 =
 =
 =
-7]
 p
 0
 p
@@ -39297,18 +39279,20 @@ p
 Y
 
 n.
+w\
 kI
+_\
 @
-G\
+,\
 tM=
-6\
+/\
 \
 \
 )
 \
 )
 \
-\
+[
 &
 &
 Y
@@ -39336,30 +39320,29 @@ A#u
 p
 0
 &T
+_
 hG
 I
 2,
 0
 p
+|Z
 0
 p
-WZ
 Z
 Z
 p
 0
 0
 F
-:]
 Y
 Y
 Y
 K*
 H*
+gY
 'E
 E
-8X
-;X
 0
 p
 !Q
@@ -39373,7 +39356,6 @@ p
 @
 Q
 S
-pW
 @
 @
 (
@@ -39392,8 +39374,6 @@ C
 p
 @
 4
-^V
-^V
 @
 @
 L
@@ -39401,8 +39381,10 @@ I
 Q
 I
 V
+V
 '
 '
+EV
 0
 p
 0
@@ -39455,12 +39437,10 @@ A
 @
 @
 f@
-9T
 0
 p
 T
-T
-jS
+CY
 @
 @
 =
@@ -39468,7 +39448,6 @@ jS
 @
 ?
 ?
-S
 S
 ?
 ?
@@ -39480,7 +39459,6 @@ Hc
 h>
 T>
 =
-fR
 >
 N
 R
@@ -39488,25 +39466,21 @@ R
 R
 R
 R
-R
 =
 u<
-"P
 <
 <
 P
 P
 P
 Hc
-DU
 Z;
+=O
 I
 ;
 O
-O
 i:
 H:
-HN
 ?
 ?
 ?
@@ -39717,6 +39691,7 @@ B
 @
 @
 {
+{
 d
 d
 I3
@@ -39749,8 +39724,8 @@ $
 $
 @
 
+FP
 z
-I
 I
 I
 =
@@ -39772,7 +39747,7 @@ L
 @
 8
 8
--K
+yN
 U
 U
 U
@@ -39998,6 +39973,7 @@ B
 B
 @
 @
+B
 P
 @
 `
@@ -40022,6 +39998,7 @@ P
 @
 @
 &
+ot
 @
 @
 {=
@@ -40032,12 +40009,11 @@ P
 D
 ',
 ,
+Z@
 @
 >
 )
 )
-I=
-=
 (
 (
 4
@@ -40054,15 +40030,20 @@ d
 ;
 ;
 n
+n
+n
 8
 8
 
 m
 m
 2
+16
 0
 
 
+9
+9
 9
 9
 d
@@ -40083,7 +40064,6 @@ $
 #
 #
 #
-P7
 k"
 _"
 $
@@ -40095,7 +40075,7 @@ A"
 "
 "
 .
-;6
+j3
 /
 E
 6
@@ -40113,11 +40093,9 @@ E
 
 
 j
-p4
 <
 
 w,
-/
 .
 @
 ,
@@ -40166,6 +40144,7 @@ g
 @
 @
 @
+~2
 .
 .
 .
@@ -40193,8 +40172,9 @@ d
 @
 @
 @
-u0
+p0
 )
+L0
 P
 P
 @
@@ -40210,7 +40190,11 @@ P
 =
 0
 '
+\/
+3/
 E
+;/
+/
 &
 &
 a
@@ -40218,7 +40202,6 @@ a
 `
 0
 p
-1.
 @
 @
 p
@@ -40265,6 +40248,7 @@ i
 =
 0
 =
+y]
 >
 %
 @
@@ -40272,6 +40256,7 @@ i
 @
 @
 @
+A+
 @
 @
 @
@@ -40300,6 +40285,7 @@ i
 +
 +
 +
+Ry
 @
 @
 @
@@ -40316,6 +40302,7 @@ i
 @
 @
 +
+.)
 @
 @
 @
@@ -40334,7 +40321,6 @@ w
 @
 @
 @
-NZ
 @
 @
 @
@@ -40385,7 +40371,6 @@ w
 w
 @
 @
-Y%
 @
 @
 @
@@ -40449,7 +40434,7 @@ X
 @
 @
 @
-$
+u
 
 @
 @
@@ -40465,7 +40450,6 @@ $
 @
 @
 Hc
-%
 @
 @
 @
@@ -40496,6 +40480,7 @@ t
 @
 @
 @
+.V
 @
 @
 @
@@ -40504,14 +40489,12 @@ t
 @
 @
 @
-<!
 @
 @
 @
 @
 @
 @
-o#
 v
 :
 /
@@ -40539,6 +40522,7 @@ v
 @
 @
 !
+!
 @
 @
 @
@@ -40551,7 +40535,6 @@ v
 @
 @
 @
-@q
 @
 @
 @
@@ -40561,7 +40544,6 @@ v
 @
 @
 @
-[S
 @
 @
 @
@@ -40591,12 +40573,14 @@ v
 @
 @
 @
+R
 H=
 
 
 
 "
 *
+gf
 @
 $
 @
@@ -40620,7 +40604,6 @@ $
 @
 @
 @
-d
 @
 @
 @
@@ -40634,17 +40617,19 @@ d
 @
 @
 N
+DL
+x!
+ZK
+}
 K
 @
 @
 @
-R}
 
 @
 @
 @
 @
-h
 h
 @
 @
@@ -40673,7 +40658,6 @@ h
 @
 @
 @
->J
 J
 @
 @
@@ -40686,6 +40670,7 @@ J
 @
 @
 @
+}
 }
 @
 @
@@ -40702,7 +40687,6 @@ J
 @
 @
 @
-II
 @
 @
 @
@@ -40719,6 +40703,7 @@ II
 @
 g
 g
+g
 @
 @
 @
@@ -40800,7 +40785,6 @@ g
 @
 @
 @
-I
 @
 @
 @
@@ -40921,7 +40905,7 @@ I
 @
 @
 @
-tf
+N|
 @
 @
 @
@@ -40996,13 +40980,13 @@ tf
 @
 @
 @
+3|
 @
 @
 @
 @
 @
 @
-uH
 @
 @
 @
@@ -41019,8 +41003,6 @@ uH
 @
 @
 @
-|
-|
 |
 |
 |
@@ -41039,7 +41021,8 @@ uH
 {
 {
 {
-cz
+ez
+[z
 @
 @
 @
@@ -41090,10 +41073,10 @@ P
 @
 @
 @
+w{
 @
 @
 @
 @
 @
-s{
-0z
+/z
