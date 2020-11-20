@@ -156,7 +156,6 @@ Q
 j
 @
 lL
-r
 25CFriendSettingsController
 13IUIController
 N25CFriendSettingsController41CCallbackInternal_OnClientSettingsChangedE
@@ -2142,6 +2141,22 @@ B
 /
 2
 3
+A
+C
+D
+B
+=
+>
+?
+@
+5
+6
+0
+1
+.
+/
+.
+/
 A
 C
 D
@@ -20023,9 +20038,9 @@ ShowLegalInformation
 SettingsPanel_About
 file://{resources}/layout/settings/settings_about.xml
 build_date
-Nov 18 2020
+Nov 19 2020
 build_time
-20:38:23
+19:15:42
 package_version
 local
 SteamClient020
@@ -27960,7 +27975,7 @@ ChatInvitationNotification
 GameInviteNotification
 TradeInviteNotification
 steam/cached/aboutdialog.res
-20:40:16
+19:17:40
 CAboutDialog
 ValveSurveySummarizeData
 #steam_systeminfo_title
@@ -38933,6 +38948,7 @@ Q
 @
 @
 @
+vs
 @
 @
 @
@@ -39031,7 +39047,7 @@ Y
 @
 @
 &j
-q
+!q
 j
 _X
 WX
@@ -39261,6 +39277,7 @@ p
 0
 p
 0
+Rc
 /
 p
 0
@@ -39274,6 +39291,7 @@ p
 J
 J
 J
+f
 0
 p
 Y
@@ -39440,7 +39458,6 @@ f@
 0
 p
 T
-CY
 @
 @
 =
@@ -39654,6 +39671,7 @@ i[
 @
 @
 @
+}
 @
 @
 @
@@ -39690,6 +39708,7 @@ B
 }
 @
 @
+;M
 {
 {
 d
@@ -39724,8 +39743,6 @@ $
 $
 @
 
-FP
-z
 I
 I
 =
@@ -39739,6 +39756,7 @@ L
 8
 }
 8
+Fy
 8
 8
 8
@@ -39747,7 +39765,7 @@ L
 @
 8
 8
-yN
+gK
 U
 U
 U
@@ -39800,6 +39818,7 @@ B
 >
 0
 0
+~J
 @
 p
 >
@@ -39834,7 +39853,6 @@ Hc
 0
 Hc
 Hc
-w
 =
 0
 :]
@@ -39853,6 +39871,7 @@ Hc
 Hc
 >
 0
+}v
 p
 =
 0
@@ -39910,6 +39929,10 @@ C
 @
 @
 ?
+J
+J
+J
+J
 `
 F
 F
@@ -39998,7 +40021,6 @@ P
 @
 @
 &
-ot
 @
 @
 {=
@@ -40031,11 +40053,9 @@ d
 ;
 n
 n
-n
 8
 8
 
-m
 m
 2
 16
@@ -40093,14 +40113,12 @@ E
 
 
 j
-<
 
 w,
 .
 @
 ,
 ,
-g
 4
 9
 @
@@ -40159,7 +40177,6 @@ d
 d
 d
 =
-d
 
 =
 %
@@ -40194,10 +40211,10 @@ P
 3/
 E
 ;/
+ga
 /
 &
 &
-a
 @
 `
 0
@@ -40248,7 +40265,6 @@ i
 =
 0
 =
-y]
 >
 %
 @
@@ -40285,7 +40301,6 @@ A+
 +
 +
 +
-Ry
 @
 @
 @
@@ -40302,6 +40317,7 @@ Ry
 @
 @
 +
+I[
 .)
 @
 @
@@ -40309,13 +40325,14 @@ Ry
 @
 !
 !
+[
+[
 @
 @
 @
 @
 @
 @
-w
 @
 @
 @
@@ -40364,7 +40381,6 @@ w
 @
 @
 @
-w
 @
 @
 @
@@ -40434,7 +40450,6 @@ X
 @
 @
 @
-u
 
 @
 @
@@ -40450,6 +40465,7 @@ u
 @
 @
 Hc
+W
 @
 @
 @
@@ -40459,7 +40475,6 @@ Hc
 @
 +
 .
-t
 @
 @
 @
@@ -40480,7 +40495,6 @@ t
 @
 @
 @
-.V
 @
 @
 @
@@ -40580,8 +40594,8 @@ H=
 
 "
 *
-gf
 @
+n
 $
 @
 @
@@ -40617,20 +40631,17 @@ $
 @
 @
 N
-DL
-x!
-ZK
-}
+~}
 K
 @
 @
 @
+S}
 
 @
 @
 @
 @
-h
 @
 @
 @
@@ -40664,6 +40675,7 @@ J
 @
 @
 @
+g}
 @
 @
 @
@@ -40678,6 +40690,7 @@ J
 @
 @
 @
+PI
 @
 @
 @
@@ -40905,7 +40918,6 @@ g
 @
 @
 @
-N|
 @
 @
 @
@@ -40980,7 +40992,6 @@ N|
 @
 @
 @
-3|
 @
 @
 @
@@ -41003,12 +41014,6 @@ N|
 @
 @
 @
-|
-|
-|
-|
-|
-|
 |
 |
 |
@@ -41021,8 +41026,7 @@ N|
 {
 {
 {
-ez
-[z
+]z
 @
 @
 @
@@ -41073,10 +41077,8 @@ P
 @
 @
 @
-w{
 @
 @
 @
 @
 @
-/z
