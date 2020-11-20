@@ -1508,6 +1508,8 @@
         SteamAwards_EventMainTitle: "The Steam Awards",
         SteamAwards_EventMainTitleSecondLine: "Nominee",
         SteamAwards_EventCallToAction: "Coming this December",
+        SteamAwards_ExpiredEvent:
+          "This event's Steam Awards has ended. Check back in during this year's Autumn and Winter sale for the annual Steam Awards!",
         SteamAwards_EventVotingDateTeaser: "December %1$s",
         SteamAwards_EventVoteForGamePrompt:
           "Click below to vote for %1$s for the category:",

@@ -7273,7 +7273,7 @@
                         "promo/autumn2020/event_nomination_banner_2020.png"
                     }),
                     Xe.createElement(
-                      "span",
+                      "div",
                       { className: Ut.event_nomination_banner_text },
                       n
                         ? Object(V.f)(
