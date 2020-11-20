@@ -8949,7 +8949,7 @@
                     case 2:
                       return (
                         e.sent(),
-                        (i = va.o),
+                        (i = va.n),
                         (l = []),
                         r.value.tags &&
                           r.value.tags.forEach(function(e) {
@@ -13303,7 +13303,7 @@
                 z.createElement(
                   "div",
                   { className: cn.a.RightSideTitles },
-                  va.v.some(function(e) {
+                  va.t.some(function(e) {
                     return t === e;
                   })
                     ? Object(q.f)("#EventDisplay_RightColumnTitle_Blog")
@@ -14021,7 +14021,7 @@
               return (
                 (e.tabs &&
                   e.tabs.find(function(t) {
-                    return va.x.find(function(e) {
+                    return va.v.find(function(e) {
                       return e.flavor === t;
                     });
                   })) ||
@@ -14038,7 +14038,7 @@
               var o = Boolean(n) ? "search" : a;
               return r.tabs
                 .map(function(t) {
-                  return va.x.find(function(e) {
+                  return va.v.find(function(e) {
                     return e.flavor === t;
                   });
                 })
@@ -15563,7 +15563,7 @@
               return 940 <= window.innerWidth;
             }),
             (e.prototype.GetMaxCapsulesPerRow = function() {
-              var e = Object(va.t)(this.props.section.section_type);
+              var e = Object(va.s)(this.props.section.section_type);
               return a.IsWideScreen()
                 ? e.nMaxItemsPerRow
                 : Math.min(
@@ -16045,7 +16045,7 @@
                               4 <
                               h &&
                               ((h = _), (m = !0))),
-                          0 < (S = Object(va.s)(r)) &&
+                          0 < (S = Object(va.r)(r)) &&
                             ((b = Math.max(S + 5, Math.floor(1.1 * S))),
                             (h = Math.min(h, b))),
                           d.length > h && (d = d.slice(0, h)),
@@ -16062,7 +16062,7 @@
                         return (
                           (E = e.sent()),
                           (y = f.length),
-                          0 < (S = Object(va.s)(r)) &&
+                          0 < (S = Object(va.r)(r)) &&
                             S < E.length &&
                             (E = E.slice(0, S)),
                           r.enable_faceted_browsing &&
@@ -16196,7 +16196,7 @@
             (e.prototype.GetRowsToShow = function(e) {
               var t = this.props.section;
               if (t.show_as_carousel) return 0;
-              var a = Object(va.q)(t);
+              var a = Object(va.p)(t);
               return a <= 0 ? 0 : a + e;
             }),
             (e.prototype.WrapWithFacetedBrowsingControls = function(e, t, a) {
@@ -16417,7 +16417,7 @@
                 }),
                 f = null;
               if (0 < g.length) {
-                var E = Object(va.r)(v),
+                var E = Object(va.q)(v),
                   y = Math.min(b[0], m),
                   S = v.show_as_carousel && E <= 1;
                 if (S && g.length > y)

@@ -4583,10 +4583,10 @@
                 "Invalid Clan SteamID: " + a.clanSteamID.ConvertTo64BitString()
               ),
               (a.appid = z.a.APPID),
-              (a.bOldAnnouncement = e && e.startsWith(W.D)),
+              (a.bOldAnnouncement = e && e.startsWith(W.B)),
               (a.bLoaded = !0),
               null == e && (a.loadedAllLanguages = !0),
-              a.appid == W.A &&
+              a.appid == W.y &&
                 (a.vecTags.push("hide_library_overview"),
                 a.vecTags.push("steam_blog"),
                 a.vecTags.push("mod_reviewed")),
@@ -4868,7 +4868,7 @@
                     return (
                       (t =
                         !!this.m_editModel.GetGID() &&
-                        !this.m_editModel.GetGID().startsWith(W.D)),
+                        !this.m_editModel.GetGID().startsWith(W.B)),
                       _ && !t
                         ? [
                             2,
@@ -6274,7 +6274,7 @@
       function Nt(e) {
         var t = Je.GetEditModel();
         t.setEventType(e.type),
-          t.ClearTags(W.p),
+          t.ClearTags(W.o),
           e.tags &&
             e.tags.forEach(function(e) {
               return t.ToggleTag(e);
@@ -6600,14 +6600,14 @@
                 a = new Set(this.props.tags || []),
                 e =
                   t.GetCategoryAsType() == this.props.type &&
-                  W.p.every(function(e) {
+                  W.o.every(function(e) {
                     return t.BHasTag(e) == a.has(e);
                   }),
                 n =
                   z.b.IMG_URL +
                   "events/types/type_" +
                   (this.props.icon ? this.props.icon : this.props.type) +
-                  ".png?v=2";
+                  ".png?v=4";
               return Xe.createElement(
                 "div",
                 {
@@ -6713,7 +6713,7 @@
                 a = new Set(this.props.tags || []),
                 n =
                   t.GetCategoryAsType() == this.props.type &&
-                  W.p.every(function(e) {
+                  W.o.every(function(e) {
                     return t.BHasTag(e) == a.has(e);
                   }),
                 r = this.props.bIsValveOnly,
@@ -6724,7 +6724,7 @@
                   z.b.IMG_URL +
                   "events/types/type_" +
                   (this.props.icon ? this.props.icon : this.props.type) +
-                  ".png?v=2";
+                  ".png?v=4";
               return Xe.createElement(
                 "div",
                 {
@@ -7194,61 +7194,51 @@
             (t.prototype.render = function() {
               var a = Je.GetEditModel(),
                 e = a.GetAppReleaseDate(),
-                t = B()("2019-11-25T10:00:00-08:00").unix(),
+                t = B()("2019-12-03T10:00:00-08:00").unix(),
                 n = e && t < e,
-                r = [
-                  W.o.k_ENone,
-                  W.o.k_EGameOfTheYear,
-                  W.o.k_EVRGameOfTheYear,
-                  W.o.k_ELaborOfLove,
-                  W.o.k_EBetterWithFriends,
-                  W.o.k_EOutstandingVisualStyle,
-                  W.o.k_EMostInnovativeGameplay,
-                  W.o.k_EOutstandingStoryRichGame,
-                  W.o.k_EBestGameYouSuckAt,
-                  W.o.k_EBestSoundTrack,
-                  W.o.k_ESitBackRelax
-                ],
-                i = [W.o.k_ENone, W.o.k_ELaborOfLove],
-                o = (n ? r : i).map(function(e) {
-                  var t = "EventEditor_SteamAwardCategory_" + e;
-                  return Xe.createElement(
-                    "div",
-                    {
-                      key: t,
-                      className: Object(lt.a)(
-                        ct.a.FlexRowContainer,
-                        ct.a.RadioOption
-                      )
-                    },
-                    Xe.createElement("input", {
-                      type: "radio",
-                      name: "SteamAwardCategoryRadioButtons",
-                      id: t,
-                      value: e,
-                      checked: a.GetSteamAwardCategory() == e,
-                      onChange: function() {
-                        return a.SetSteamAwardCategory(e);
-                      }
-                    }),
-                    Xe.createElement(
-                      "label",
-                      { htmlFor: t, className: Ut.CategoryOption },
+                r = (n ? [0, 50, 51, 56, 57, 53, 55, 58, 54, 59] : [0, 52]).map(
+                  function(e) {
+                    var t = "EventEditor_SteamAwardCategory_" + e;
+                    return Xe.createElement(
+                      "div",
+                      {
+                        key: t,
+                        className: Object(lt.a)(
+                          ct.a.FlexRowContainer,
+                          ct.a.RadioOption
+                        )
+                      },
+                      Xe.createElement("input", {
+                        type: "radio",
+                        name: "SteamAwardCategoryRadioButtons",
+                        id: t,
+                        value: e,
+                        checked: a.GetSteamAwardCategory() == e,
+                        onChange: function() {
+                          return a.SetSteamAwardCategory(e);
+                        }
+                      }),
                       Xe.createElement(
-                        "span",
-                        { className: Ut.CategoryTitle },
-                        Object(V.f)("#SteamAward_CategoryTitle_" + e)
-                      ),
-                      Xe.createElement(
-                        "span",
-                        null,
-                        " - ",
-                        Object(V.f)("#SteamAward_CategoryDesc_" + e),
-                        " "
+                        "label",
+                        { htmlFor: t, className: Ut.CategoryOption },
+                        Xe.createElement(
+                          "span",
+                          { className: Ut.CategoryTitle },
+                          Object(V.f)("#promo_steamawards2020_cat" + e)
+                        ),
+                        Xe.createElement(
+                          "span",
+                          null,
+                          " - ",
+                          Object(V.f)(
+                            "#promo_steamawards2020_cat" + e + "_desc"
+                          ),
+                          " "
+                        )
                       )
-                    )
-                  );
-                });
+                    );
+                  }
+                );
               return Xe.createElement(
                 "div",
                 { className: Ut.SteamAwardCategoryPicker },
@@ -7279,23 +7269,27 @@
                     Xe.createElement("img", {
                       className: Ut.event_nomination_banner,
                       src:
-                        z.b.STORE_CDN_URL +
-                        "public/images/promo/autumn2019/event_nomination_banner.png"
+                        z.b.BASE_URL_STORE_CDN_ASSETS +
+                        "promo/autumn2020/event_nomination_banner_2020.png"
                     }),
                     Xe.createElement(
                       "span",
                       { className: Ut.event_nomination_banner_text },
-                      Object(V.f)(
-                        n
-                          ? "#EventEditor_Options_SteamAwardNominations_Description"
-                          : "#EventEditor_Options_SteamAwardNominations_OldGame_Description"
-                      )
+                      n
+                        ? Object(V.f)(
+                            "#EventEditor_Options_SteamAwardNominations_Description"
+                          )
+                        : Object(V.f)(
+                            "#EventEditor_Options_SteamAwardNominations_OldGame_Description",
+                            "2020",
+                            Object(V.j)(t)
+                          )
                     )
                   ),
                   Xe.createElement("div", {
                     className: ct.a.EventEditorTextSubTitle
                   }),
-                  o
+                  r
                 )
               );
             }),
@@ -11839,7 +11833,7 @@
                 Xe.createElement(
                   "div",
                   { className: Qa.a.RightSideTitles },
-                  W.w.some(function(e) {
+                  W.u.some(function(e) {
                     return t === e;
                   })
                     ? Object(V.f)("#EventDisplay_RightColumnTitle_Blog")
@@ -13900,7 +13894,7 @@
               return (
                 (e.tabs &&
                   e.tabs.find(function(t) {
-                    return W.B.find(function(e) {
+                    return W.z.find(function(e) {
                       return e.flavor === t;
                     });
                   })) ||
@@ -13917,7 +13911,7 @@
               var i = Boolean(n) ? "search" : a;
               return r.tabs
                 .map(function(t) {
-                  return W.B.find(function(e) {
+                  return W.z.find(function(e) {
                     return e.flavor === t;
                   });
                 })
@@ -15444,7 +15438,7 @@
               return 940 <= window.innerWidth;
             }),
             (e.prototype.GetMaxCapsulesPerRow = function() {
-              var e = Object(W.u)(this.props.section.section_type);
+              var e = Object(W.t)(this.props.section.section_type);
               return a.IsWideScreen()
                 ? e.nMaxItemsPerRow
                 : Math.min(
@@ -15926,7 +15920,7 @@
                               4 <
                               _ &&
                               ((_ = g), (m = !0))),
-                          0 < (y = Object(W.t)(r)) &&
+                          0 < (y = Object(W.s)(r)) &&
                             ((b = Math.max(y + 5, Math.floor(1.1 * y))),
                             (_ = Math.min(_, b))),
                           p.length > _ && (p = p.slice(0, _)),
@@ -15943,7 +15937,7 @@
                         return (
                           (f = e.sent()),
                           (S = v.length),
-                          0 < (y = Object(W.t)(r)) &&
+                          0 < (y = Object(W.s)(r)) &&
                             y < f.length &&
                             (f = f.slice(0, y)),
                           r.enable_faceted_browsing &&
@@ -16077,7 +16071,7 @@
             (e.prototype.GetRowsToShow = function(e) {
               var t = this.props.section;
               if (t.show_as_carousel) return 0;
-              var a = Object(W.r)(t);
+              var a = Object(W.q)(t);
               return a <= 0 ? 0 : a + e;
             }),
             (e.prototype.WrapWithFacetedBrowsingControls = function(e, t, a) {
@@ -16294,7 +16288,7 @@
                 }),
                 v = null;
               if (0 < E.length) {
-                var f = Object(W.s)(h),
+                var f = Object(W.r)(h),
                   S = Math.min(b[0], m),
                   y = h.show_as_carousel && f <= 1;
                 if (y && E.length > S)
@@ -23268,12 +23262,12 @@
               0 == o.trim().length &&
                 (l =
                   0 == i.length
-                    ? Object(V.f)("#EventEditor_Summary_Placeholder", W.y)
+                    ? Object(V.f)("#EventEditor_Summary_Placeholder", W.w)
                     : Object(V.f)("#EventEditor_Summary_Autogenerated") +
-                      W.q.GenerateSummaryFromText(i));
-              var s = Boolean(n.length >= W.z),
-                c = Boolean(r.length >= W.x),
-                d = Boolean(o.length >= W.y);
+                      W.p.GenerateSummaryFromText(i));
+              var s = Boolean(n.length >= W.x),
+                c = Boolean(r.length >= W.v),
+                d = Boolean(o.length >= W.w);
               return Xe.createElement(
                 Xe.Fragment,
                 null,
@@ -23313,7 +23307,7 @@
                       { className: ct.a.EventEditorTextTitleLengthInfo },
                       Object(V.f)(
                         "#EventEditor_EventTitle_Max_Characters_Reached",
-                        W.z
+                        W.x
                       )
                     ),
                   Xe.createElement(
@@ -23321,7 +23315,7 @@
                     {
                       "data-tooltip-text": Object(V.f)(
                         "#EventEditor_Title_General_ttip",
-                        W.z
+                        W.x
                       ),
                       className: ct.a.tooltip_Ctn
                     },
@@ -23337,7 +23331,7 @@
                     },
                     Object(V.f)(
                       "#EventEditor_Input_Characters_Left",
-                      W.z - n.length
+                      W.x - n.length
                     )
                   )
                 ),
@@ -23354,7 +23348,7 @@
                     placeholder: Object(V.f)("#EventEditor_Name_Placeholder"),
                     onFocus: this.onFocus,
                     onChange: this.OnTitleChange,
-                    maxLength: W.z
+                    maxLength: W.x
                   })
                 ),
                 Xe.createElement(
@@ -23372,7 +23366,7 @@
                       c
                         ? "#EventEditor_Event_SubTitle_Details_Reached"
                         : "#EventEditor_Event_SubTitle_Details",
-                      W.x
+                      W.v
                     )
                   ),
                   Xe.createElement(
@@ -23380,7 +23374,7 @@
                     {
                       "data-tooltip-text": Object(V.f)(
                         "#EventEditor_SubTitle_General_ttip",
-                        W.x
+                        W.v
                       ),
                       className: ct.a.tooltip_Ctn
                     },
@@ -23396,7 +23390,7 @@
                     },
                     Object(V.f)(
                       "#EventEditor_Input_Characters_Left",
-                      W.x - r.length
+                      W.v - r.length
                     )
                   )
                 ),
@@ -23416,7 +23410,7 @@
                     ),
                     onFocus: this.onFocus,
                     onChange: this.OnSubTitleChange,
-                    maxLength: W.x
+                    maxLength: W.v
                   })
                 ),
                 Xe.createElement(
@@ -23440,7 +23434,7 @@
                           d
                             ? "#EventEditor_Summary_Title_Length_Reached"
                             : "#EventEditor_Summary_Title_Length",
-                          W.y
+                          W.w
                         )
                       ),
                       Xe.createElement(
@@ -23448,7 +23442,7 @@
                         {
                           "data-tooltip-text": Object(V.f)(
                             "#EventEditor_Summary_Ttip",
-                            W.y
+                            W.w
                           ),
                           className: ct.a.tooltip_Ctn
                         },
@@ -23464,7 +23458,7 @@
                         },
                         Object(V.f)(
                           "#EventEditor_Input_Characters_Left",
-                          W.y - o.length
+                          W.w - o.length
                         )
                       )
                     ),
@@ -23478,7 +23472,7 @@
                       placeholder: l,
                       onFocus: this.onTextAreaFocus,
                       onChange: this.OnSummaryChange,
-                      maxLength: W.y,
+                      maxLength: W.w,
                       cols: 40,
                       rows: 2
                     })
@@ -27268,7 +27262,7 @@
             (t.prototype.OnHideLibraryOverviewChange = function(e) {
               var t = this,
                 a = this.props.editModel;
-              a.GetAppID() == W.A && a.BHasTag("hide_library_overview")
+              a.GetAppID() == W.y && a.BHasTag("hide_library_overview")
                 ? Object(la.d)(
                     Xe.createElement(ea.c, {
                       strTitle: Object(V.f)("#EventEditor_GenericAreYouSure"),
@@ -27530,7 +27524,7 @@
                                 description:
                                   "Add the 'blog' tag to this post. Allowing game team website to filter news posts intended for their blog."
                               }),
-                              t.GetAppID() == W.A &&
+                              t.GetAppID() == W.y &&
                                 Xe.createElement(Xt.p, {
                                   onChange: this.OnSteamBlog,
                                   label: "(VO) Steam Official Blog",
@@ -27949,7 +27943,7 @@
         }),
         zl = Object(et.a)(function(e) {
           var t = e.editModel,
-            a = Object(W.E)(t.GetEventModel());
+            a = Object(W.C)(t.GetEventModel());
           return Xe.createElement(
             "div",
             null,
@@ -37098,8 +37092,8 @@
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (
               (e.state = {
-                maxRowsString: Object(W.r)(e.props.saleSection).toString(),
-                capItemCountString: Object(W.t)(e.props.saleSection).toString()
+                maxRowsString: Object(W.q)(e.props.saleSection).toString(),
+                capItemCountString: Object(W.s)(e.props.saleSection).toString()
               }),
               e
             );
@@ -37109,12 +37103,12 @@
             (e.prototype.OnRandomChange = function(e, t) {
               t || (e.cap_item_count = 0),
                 this.setState({
-                  maxRowsString: Object(W.t)(this.props.saleSection).toString()
+                  maxRowsString: Object(W.s)(this.props.saleSection).toString()
                 });
             }),
             (e.prototype.OnCapSectionChange = function(e, t) {
               this.setState({
-                maxRowsString: Object(W.r)(this.props.saleSection).toString()
+                maxRowsString: Object(W.q)(this.props.saleSection).toString()
               });
             }),
             (e.prototype.OnCapItemCountChange = function(e, t) {
@@ -37154,7 +37148,7 @@
                   }
                 ],
                 n = Vr(a).join(","),
-                r = Object(W.u)(a.section_type),
+                r = Object(W.t)(a.section_type),
                 i = e.filter(function(e) {
                   return (
                     e.data === n ||
@@ -37217,7 +37211,7 @@
                         bShowValue: !0,
                         min: 1,
                         max: 3,
-                        value: Object(W.s)(a),
+                        value: Object(W.r)(a),
                         onChange: function(e) {
                           return t.OnCarouselRowsChange(a, e);
                         },
@@ -38095,7 +38089,7 @@
                 this.props.editModel.SetDirty(K.jsondata_sales);
             }),
             (e.prototype.RenderTabName = function(t) {
-              var e = W.B.find(function(e) {
+              var e = W.z.find(function(e) {
                 return e.flavor === t;
               });
               return Xe.createElement(
@@ -38110,7 +38104,7 @@
                 e = this.props.saleSection.item_browse_section_data || {},
                 a = e.master_subscription,
                 n = e.tabs || [],
-                r = W.C.filter(function(t) {
+                r = W.A.filter(function(t) {
                   return (
                     void 0 ===
                     n.find(function(e) {

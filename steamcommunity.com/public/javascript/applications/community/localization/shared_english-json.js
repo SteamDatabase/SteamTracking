@@ -1516,49 +1516,45 @@
         SteamAwards_EventNominateGamePrompt_NoCategory:
           "Click here to nominate %1$s for a category on the Steam Awards page.",
         SteamAwards_Event_NominationsClosed:
-          "Nominations have closed. Vote during the Winter Sale. Winners announced December 31st.",
+          "Nominations have closed. Vote during the Winter Sale. Winners announced January 3rd.",
         SteamAwards_Event_VotesClosed:
           "Voting has ended. Click here to see the results.",
         SteamAwards_EventNominateGamePrompt_CategoryPrefix: "Nominate for:",
         SteamAwards_EventNominationAlternativeLinkText:
           "Or pick another category",
-        SteamAward_CategoryTitle_none: "No category",
-        SteamAward_CategoryDesc_none:
+        promo_steamawards2020_cat50: "Game of the Year",
+        promo_steamawards2020_cat51: "VR Game of the Year",
+        promo_steamawards2020_cat52: "Labor of Love",
+        promo_steamawards2020_cat53: "Better With Friends",
+        promo_steamawards2020_cat54: "Outstanding Visual Style",
+        promo_steamawards2020_cat55: "Most Innovative Gameplay",
+        promo_steamawards2020_cat56: "Best Game You Suck At",
+        promo_steamawards2020_cat57: "Best Soundtrack",
+        promo_steamawards2020_cat58: "Outstanding Story-Rich Game",
+        promo_steamawards2020_cat59: "Sit Back and Relax",
+        promo_steamawards2020_cat0:
           "Do not suggest a specific category, and instead let your fans pick the category they think best fits your game. The event will still include a link to the nominations page.",
-        SteamAward_CategoryTitle_goty: "Game of the Year",
-        SteamAward_CategoryDesc_goty:
+        promo_steamawards2020_cat0_desc: "No Category",
+        promo_steamawards2020_cat50_desc:
           "Maybe it was its immersive gameplay, or its gripping story... its well-crafted characters, immaculate design, or addictive multiplayer. Whatever the reason, the winner of 2020's Game of the Year Award is an instant classic.",
-        SteamAward_CategoryTitle_vrgoty: "VR Game of the Year",
-        SteamAward_CategoryDesc_vrgoty:
+        promo_steamawards2020_cat51_desc:
           "The VR Game of the Year isn't merely masquerading as regular reality. This game improves on reality, taking advantage of the medium of VR and pushing the boundaries of the virtual realm.",
-        SteamAward_CategoryTitle_love: "Labor of Love Award",
-        SteamAward_CategoryDesc_love:
-          "This game has been out for a while. The team is well past the debut of their creative baby, but being the good parents they are, they continue to nurture and support their creation. This game, to this day, is still getting new content, features, mechanics and more after all these years.",
-        SteamAward_CategoryTitle_friends: "Better with Friends Award",
-        SteamAward_CategoryDesc_friends:
-          "There are some games out there that just aren't the same when you play by yourself. Maybe you need to have a friend to watch your back. Maybe you need to have a friend that you can stab in their back. Either way, fun is awaiting those who gather friends together play this game.",
-        SteamAward_CategoryTitle_gameplay: "Most Innovative Gameplay",
-        SteamAward_CategoryDesc_gameplay:
-          "The designers of this game are at the front lines of creative experimentation, bringing a fresh perspective and brain-breaking surprises. This game delighted, inspired and entertained with newness never played before.",
-        SteamAward_CategoryTitle_storyrich: "Outstanding Story-Rich Game",
-        SteamAward_CategoryDesc_storyrich:
-          "Some days, only a narrative-heavy game will hit the spot, and this one packs a wallop. It's as gripping as any soap opera, and as well-tuned as a prestige-TV screenplay. Bravissimo -- for making us feel things!",
-        SteamAward_CategoryTitle_yousuck: "The Best Game You Suck at Award",
-        SteamAward_CategoryDesc_yousuck:
+        promo_steamawards2020_cat52_desc:
+          "This game has been out for a while. The team is well past the debut of their creative baby, but being the good parents they are, these devs continue to nurture and support their creation. This game, to this day, is still getting new content after all these years.",
+        promo_steamawards2020_cat53_desc:
+          "There are some games out there that just aren't the same when you play by yourself. Maybe you need to have a friend to watch your back. Maybe you need to have a friend that you can stab in their back. Either way, mirth is awaiting those who gather friends to play these games.",
+        promo_steamawards2020_cat54_desc:
+          "Visual style doesn't aspire to real-world graphical fidelity (though a noble goal in itself)… it describes a distinctive look and feel that suffuses an entire game. This game (yay) made this year (boo) more beautiful to look at.",
+        promo_steamawards2020_cat55_desc:
+          "The designers of this game are at the front lines of creative experimentation, bringing a fresh perspective and brain-breaking surprises.",
+        promo_steamawards2020_cat56_desc:
           "This is the game that rewards persistence, and is not for the faint of heart. It's the toughest game we've ever loved.",
-        SteamAward_CategoryTitle_visual: "The Outstanding Visual Style Award",
-        SteamAward_CategoryDesc_visual:
-          "Visual style doesn't aspire to real-world graphical fidelity (though a noble goal in itself)… it describes a distinctive look and feel that suffuses an entire game.",
-        SteamAward_CategoryTitle_soundtrack: "Best Soundtrack",
-        SteamAward_CategoryDesc_soundtrack:
-          "This unsung hero deserves to be recognized for its outstanding musical score. It's the OST with the MOST!",
-        SteamAward_CategoryTitle_getalong:
-          "The World is Grim Enough Let's All Just Get Along Award",
-        SteamAward_CategoryDesc_getalong:
-          "This category was first introduced in 2017, but seems to deserve a reprise: let's celebrate the undeniably most-conflict-free game of 2020.",
-        SteamAward_CategoryTitle_sitbackrelax: "The 'Sit Back and Relax' Award",
-        SteamAward_CategoryDesc_sitbackrelax:
-          "This game is the antidote to a busy day. It's smooth, it's relaxing, it lets your worries melt away. This game is your moment of zen.",
+        promo_steamawards2020_cat57_desc:
+          "This unsung hero deserves to be recognized for its outstanding musical score. It's the OST with the MOST! ",
+        promo_steamawards2020_cat58_desc:
+          "Some days, only a narrative-heavy game will hit the spot, and this one packs a wallop. It's as gripping as any soap opera, and as well-tuned as a prestige-TV screenplay. Bravissimo -- for making us feel things!",
+        promo_steamawards2020_cat59_desc:
+          "The Steam Awards Selection Committee (i.e., you) wrote-in this category in 2016, and we think it bears repeating: what is the chillest game of the year?",
         SteamAward_NominationConflictWarning_Title: "Change your nomination?",
         SteamAward_NominationConflictWarning_Explanation:
           "You can only nominate one game for each category, and you have already nominated %1$s for this one. Would you like to nominate %2$s instead?",

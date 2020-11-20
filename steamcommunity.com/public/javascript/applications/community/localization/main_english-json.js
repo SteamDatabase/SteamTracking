@@ -558,7 +558,7 @@
         EventEditor_Options_SteamAwardNominations_Description:
           "You can suggest a particular category for your fans to nominate your game for, or you can let them choose. If you choose a specific category here, your fans will be able to nominate this game for that category right in the event.",
         EventEditor_Options_SteamAwardNominations_OldGame_Description:
-          "Most Steam Awards categories this year are for games released in 2019 (since the last Steam Awards nominations, Nov 27, 2018 actually). Since your game released prior to that date, it will only be elegible for the 'Labor of Love' category.",
+          "Most Steam Awards categories this year are for games released in %1$s (since the last Steam Awards nominations on %2$s). Since your game released prior to that date, it will only be elegible for the 'Labor of Love' category.",
         EventEditor_Options_VisibilityOptIn_Title:
           "Invisible store page acknowledgement",
         EventEditor_Options_VisibilityOptIn_Description:
