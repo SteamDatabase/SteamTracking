@@ -146,20 +146,20 @@ X2M
 I2
 <2
 92
-PL
+ML
+^K
 "
-TK
-9L
 3
 5
 5
 5
+6L
 2
 2
 D
-.K
-)K
-$K
+)L
+*K
+%K
 @
 8
 HC
@@ -2814,6 +2814,7 @@ PDP Xbox One Aqualime
 PDP Xbox One Red Camo
 PDP Xbox One RC Gamepad
 PowerA XBox One Controller
+HORI Fighting Commander
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/tslist.h
 Assertion Failed: m_Count == 0
 Assertion Failed: pNode && pNode->Next == QueueEnd()
@@ -5068,8 +5069,8 @@ linux
 Linux;tenfoot
 X-ValveUserAgent
 panorama %s %s
-Nov 19 2020
-19:13:50
+Nov 20 2020
+13:51:52
 X-SteamClientVersion
 Assertion Failed: hostName
 Assertion Failed: pchRemoteHost
@@ -7636,20 +7637,20 @@ Assertion Failed: src.IsValid()
 I2
 <2
 92
-PL
+ML
+^K
 "
-TK
-9L
 3
 5
 5
 5
+6L
 2
 2
 D
-.K
-)K
-$K
+)L
+*K
+%K
 L
 L
 L
@@ -7695,11 +7696,11 @@ f!
 !
 K!
 50
+NG
 D&
 <
 4
-L95ZII
-zI
+L95jII
 !
 !
 !
@@ -7725,7 +7726,6 @@ $
 -
 #
 #
-)D
 9
 ,
 1
@@ -7746,32 +7746,33 @@ C
 ,
 ,
 ,
-`E
 2
 2
 t1Mcu
 /
 ?
 V+
+4B
+/B
 %
-N-
 @
 @
 @
 @
 @
 @
-[D
-YD
-VD
-QD
+]D
+ZD
+WD
+UD
+RD
+OD
 *
 *
+W*
 j
 %
 %
-\@
-,
 $
 )
 @
@@ -7792,13 +7793,11 @@ $
 $
 @
 @
-TB
 H=
-PB
-LB
 #
 *
 +'
+9>
 (
 (
 '
@@ -7806,7 +7805,6 @@ LB
 '
 '
 "
-@
 @
 @
 @
@@ -7831,9 +7829,6 @@ $
 @
 @
 @
-F=
-6@
-*@
 @
 @
 =
@@ -7844,10 +7839,10 @@ F=
 @
 @
 @
-%=
 ?
 ?
 <
+B=
 $
 <
 >
@@ -7873,22 +7868,27 @@ $
 @
 @
 @
+x:
+P=
+&=
 =
 =
-L95<w;
+L95Lw;
 "
 :
 :
-L95B?;
-L95*;
+L95R?;
+J;
+L95:;
 @
-:"
 m!
 P
 (
 E!
 (
 P
+"8
+"8
 5!
 "
 A
@@ -7911,7 +7911,6 @@ A
 !
 !
 @
-o!
 @
 A
 A
@@ -7927,38 +7926,42 @@ $
 !
 6
 L
-h:
+^:
+t8
+\8
+%"
 8
 0
 p
 5
-e7
 7
 !
 >
+W5
 
 
 3
 @
-d5
 @
-[2
 0
 p
 ?
-~4
+4
+0
 1
 Hi
 1
 1
+9.
 E0
-D0
+50
 @
 @
+}/
 
 
+=-
 -
-h,
 @
 @
 +
@@ -7998,6 +8001,7 @@ h,
 @
 @
 @
+-
 @
 @
 @
@@ -8120,6 +8124,7 @@ h,
 @
 @
 @
+i*
 @
 @
 @
@@ -8299,16 +8304,16 @@ h,
 @
 @
 @
+o,
+h,
 ,
 ,
-,
-D,
-Q-
-H-
+H,
+N-
+G-
 @
 @
 @
-*
 $
 @
 @
@@ -8371,6 +8376,7 @@ $
 @
 @
 @
+^)
 '
 (
 @
@@ -8385,19 +8391,15 @@ Hc
 =
 b
 $
-$
 
 
-_&
 %
-L95`,&
+L95p,&
 %
 &
-1$
+<$
 $
 Hc
-O"
-:
 
 
 
@@ -8447,12 +8449,11 @@ HcU
 #
 i[
 ~
-1
+a
 B
 ?
 E
 I;E
-
 
 I;E
 B
