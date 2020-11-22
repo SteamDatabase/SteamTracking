@@ -3,17 +3,28 @@
 
 	class SteamTracker
 	{
-		private $APIKey;
-		private $AppStart;
-		private $CurrentTime;
-		private $UseCache = true;
-		private $ExtractClientArchives = false;
-		private $SyncProtobufs = false;
-		private $ETags = [];
-		private $Requests = [];
-		private $URLsToFetch = [];
+		private string $APIKey = '';
+		private float $AppStart;
+		private int $CurrentTime;
+		private bool $UseCache = true;
+		private bool $ExtractClientArchives = false;
+		private bool $SyncProtobufs = false;
 
-		private $Options = Array(
+		/** @var array<string, string> */
+		private array $ETags = [];
+
+		/** @var array<int, string> */
+		private array $Requests = [];
+
+		/** @var array<int, array{URL: string, File: string}> */
+		private array $URLsToFetch = [];
+
+		/** @var array<string> */
+		private array $URLsToProtoDump = [];
+
+		/** @var array<int, mixed> */
+		private array $Options =
+		[
 			CURLOPT_USERAGENT      => 'SteamDB',
 			CURLOPT_ENCODING       => '',
 			CURLOPT_HEADER         => 1,
@@ -24,9 +35,9 @@
 			CURLOPT_CONNECTTIMEOUT => 10,
 			CURLOPT_SSL_VERIFYPEER => 0,
 			CURLOPT_SSL_VERIFYHOST => 0,
-		);
+		];
 
-		public function __construct( $Option )
+		public function __construct( string $Option )
 		{
 			$this->AppStart = MicroTime( true );
 
@@ -35,19 +46,12 @@
 				$this->UseCache = false;
 			}
 
-			$UrlsPath   = __DIR__ . '/urls.txt';
 			$ApiKeyPath = __DIR__ . '/.support/apikey.txt';
 			$ETagsPath  = __DIR__ . '/.support/etags.txt';
 
 			if( !File_Exists( $ApiKeyPath ) )
 			{
 				$this->Log( '{lightred}Missing ' . $ApiKeyPath );
-
-				Exit;
-			}
-			else if( !File_Exists( $UrlsPath ) )
-			{
-				$this->Log( '{lightred}Missing ' . $UrlsPath );
 
 				Exit;
 			}
@@ -60,7 +64,8 @@
 			$this->APIKey = Trim( File_Get_Contents( $ApiKeyPath ) );
 			$this->CurrentTime = Time( );
 
-			$this->URLsToFetch = $this->ParseUrls( file_get_contents( $UrlsPath ) );
+			$this->URLsToFetch = $this->ParseUrls( );
+			$this->URLsToProtoDump = $this->GetUrlsToProtoDump( );
 
 			$Tries = 5;
 
@@ -72,7 +77,7 @@
 
 				$this->URLsToFetch = Array( );
 
-				$this->Fetch( $URLs, $Tries );
+				$this->Fetch( $URLs );
 			}
 			while( !Empty( $this->URLsToFetch ) && $Tries-- > 0 );
 
@@ -97,7 +102,7 @@
 			$this->Log( '{lightblue}Done' );
 		}
 
-		private function GenerateURL( $URL )
+		private function GenerateURL( string $URL ) : string
 		{
 			return Str_Replace(
 				Array( '__KEY__', '__TIME__' ),
@@ -106,7 +111,7 @@
 			);
 		}
 
-		private function HandleResponse( $File, $Data )
+		private function HandleResponse( string $File, string $Data ) : bool
 		{
 			if( $File === 'API/SupportedAPIList.json' )
 			{
@@ -280,7 +285,8 @@
 						$People[] = $Person;
 					}
 
-					array_multisort( array_column( $People, 'name' ), SORT_ASC, $People );
+					$People = array_column( $People, 'name' );
+					array_multisort( $People, SORT_ASC, $People );
 
 					if( !empty( $People ) )
 					{
@@ -367,7 +373,8 @@
 			return true;
 		}
 
-		private function Fetch( $URLs, $Tries )
+		/** @param array<int, array{URL: string, File: string}> $URLs */
+		private function Fetch( array $URLs ) : void
 		{
 			$this->Requests = Array( );
 
@@ -400,14 +407,14 @@
 
 				while( $Done = cURL_Multi_Info_Read( $Master ) )
 				{
-					$Slave = $Done[ 'handle' ];
-					$URL   = cURL_GetInfo( $Slave, CURLINFO_EFFECTIVE_URL );
-					$Code  = cURL_GetInfo( $Slave, CURLINFO_HTTP_CODE );
-					$Data  = cURL_Multi_GetContent( $Slave );
+					$Handle = $Done[ 'handle' ];
+					$URL   = cURL_GetInfo( $Handle, CURLINFO_EFFECTIVE_URL );
+					$Code  = cURL_GetInfo( $Handle, CURLINFO_HTTP_CODE );
+					$Data  = cURL_Multi_GetContent( $Handle );
 
-					$Request = $this->Requests[ (int)$Slave ];
+					$Request = $this->Requests[ (int)$Handle ];
 
-					$HeaderSize = cURL_GetInfo( $Slave, CURLINFO_HEADER_SIZE );
+					$HeaderSize = cURL_GetInfo( $Handle, CURLINFO_HEADER_SIZE );
 
 					$Header = SubStr( $Data, 0, $HeaderSize );
 					$Data   = SubStr( $Data, $HeaderSize );
@@ -439,8 +446,8 @@
 					}
 					else
 					{
-						$LengthExpected = cURL_GetInfo( $Slave, CURLINFO_CONTENT_LENGTH_DOWNLOAD );
-						$LengthDownload = cURL_GetInfo( $Slave, CURLINFO_SIZE_DOWNLOAD );
+						$LengthExpected = cURL_GetInfo( $Handle, CURLINFO_CONTENT_LENGTH_DOWNLOAD );
+						$LengthDownload = cURL_GetInfo( $Handle, CURLINFO_SIZE_DOWNLOAD );
 
 						if( $LengthExpected !== $LengthDownload && $Request !== 'Scripts/WebUI/steammobile_android.js' )
 						{
@@ -476,10 +483,10 @@
 						$this->CreateHandle( $Master, $URL );
 					}
 
-					cURL_Multi_Remove_Handle( $Master, $Slave );
-					cURL_Close( $Slave );
+					cURL_Multi_Remove_Handle( $Master, $Handle );
+					cURL_Close( $Handle );
 
-					unset( $Request, $Slave );
+					unset( $Request, $Handle );
 				}
 
 				if( $Running )
@@ -492,16 +499,17 @@
 			cURL_Multi_Close( $Master );
 		}
 
-		private function CreateHandle( $Master, $URL )
+		/** @param array{URL: string, File: string} $URL */
+		private function CreateHandle( $Master, array $URL )
 		{
-			$Slave = cURL_Init( );
+			$Handle = cURL_Init( );
 			$File  = $URL[ 'File' ];
 
 			$Options = $this->Options;
 
 			$Options[ CURLOPT_URL ] = $this->GenerateURL( $URL[ 'URL' ] );
 
-			$this->Requests[ (int)$Slave ] = $File;
+			$this->Requests[ (int)$Handle ] = $File;
 
 			if( $this->UseCache )
 			{
@@ -518,15 +526,26 @@
 				}
 			}
 
-			cURL_SetOpt_Array( $Slave, $Options );
+			cURL_SetOpt_Array( $Handle, $Options );
 
-			cURL_Multi_Add_Handle( $Master, $Slave );
+			cURL_Multi_Add_Handle( $Master, $Handle );
 
-			return $Slave;
+			return $Handle;
 		}
 
-		private function ParseUrls( string $Data ) : array
+		/** @return array<int, array{URL: string, File: string}> */
+		private function ParseUrls() : array
 		{
+			$UrlsPath = __DIR__ . '/urls.txt';
+
+			if( !file_exists( $UrlsPath ) )
+			{
+				$this->Log( '{lightred}Missing ' . $UrlsPath );
+
+				Exit;
+			}
+
+			$Data = file_get_contents( $UrlsPath );
 			$Data = explode( "\n", $Data );
 			$Urls = [];
 
@@ -569,7 +588,38 @@
 			return $Urls;
 		}
 
-		private function Log( $String )
+		/** @return array<string> */
+		private function GetUrlsToProtoDump() : array
+		{
+			$UrlsPath = __DIR__ . '/urls_protobufdumper.txt';
+
+			if( !file_exists( $UrlsPath ) )
+			{
+				$this->Log( '{lightred}Missing ' . $UrlsPath );
+
+				Exit;
+			}
+
+			$Data = file_get_contents( $UrlsPath );
+			$Data = explode( "\n", $Data );
+			$Urls = [];
+
+			foreach( $Data as $Line )
+			{
+				$Line = trim( $Line );
+
+				if( empty( $Line ) || $Line[ 0 ] === '/' )
+				{
+					continue;
+				}
+
+				$Urls[] = trim( $Line );
+			}
+
+			return $Urls;
+		}
+
+		private function Log( string $String ) : void
 		{
 			$Log  = '[';
 			$Log .= Number_Format( MicroTime( true ) - $this->AppStart, 2 );
@@ -600,4 +650,3 @@
 			echo $Log;
 		}
 	}
-

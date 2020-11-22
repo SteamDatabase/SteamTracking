@@ -402,6 +402,7 @@ https://store.steampowered.com/public/javascript/app_tagging.js?__TIME__&l=engli
 https://store.steampowered.com/public/javascript/applications/interactive_recommender/main.js?__TIME__&l=english
 https://store.steampowered.com/public/javascript/applications/store/broadcast~loyaltystore.js?__TIME__&l=english
 https://store.steampowered.com/public/javascript/applications/store/curator_admin.js?__TIME__&l=english
+https://store.steampowered.com/public/javascript/applications/store/curator_admin~eventcomponents.js?__TIME__&l=english
 https://store.steampowered.com/public/javascript/applications/store/eventcomponents.js?__TIME__&l=english
 https://store.steampowered.com/public/javascript/applications/store/interactiverecommender.js?__TIME__&l=english
 https://store.steampowered.com/public/javascript/applications/store/loyalty_english-json.js?__TIME__&l=english
