@@ -44,8 +44,8 @@ echo Dumping protobufs
 ~/ProtobufDumper/ProtobufDumper bins/steamui.dylib "$DIR/Protobufs/" > /dev/null
 ~/ProtobufDumper/ProtobufDumper bins/steamclient.dylib "$DIR/Protobufs/" > /dev/null
 
-cp "$DIR/ClientExtracted/steamui/libraryroot.js" "$DIR/original_js/steamui_libraryroot.js"
-cp "$DIR/ClientExtracted/steamui/broadcast.js" "$DIR/original_js/steamui_broadcast.js"
+cp "$DIR/ClientExtracted/steamui/libraryroot.js" "$DIR/.support/original_js/steamui_libraryroot.js"
+cp "$DIR/ClientExtracted/steamui/broadcast.js" "$DIR/.support/original_js/steamui_broadcast.js"
 
 node ../protobufdumper_v2.js "$DIR/ClientExtracted/steamui/libraryroot.js" > ~/ValveProtobufs/webui/steamui_libraryroot.proto
 node ../protobufdumper_v2.js "$DIR/ClientExtracted/steamui/broadcast.js" > ~/ValveProtobufs/webui/steamui_broadcast.proto

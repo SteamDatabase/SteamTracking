@@ -20,7 +20,7 @@
 		/** @var array<int, array{URL: string, File: string}> */
 		private array $URLsToFetch = [];
 
-		/** @var array<string> */
+		/** @var array<string, bool> */
 		private array $URLsToProtoDump = [];
 
 		/** @var array<int, mixed> */
@@ -602,7 +602,7 @@
 			return $Urls;
 		}
 
-		/** @return array<string> */
+		/** @return array<string, bool> */
 		private function GetUrlsToProtoDump() : array
 		{
 			$UrlsPath = __DIR__ . '/urls_protobufdumper.txt';
@@ -636,7 +636,7 @@
 					continue;
 				}
 
-				$Urls[] = trim( $Line );
+				$Urls[ trim( $Line ) ] = true;
 			}
 
 			return $Urls;
