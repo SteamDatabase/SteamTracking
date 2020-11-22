@@ -329,6 +329,8 @@
 					return false;
 				}
 
+				file_put_contents( $File, $Data );
+
 				if( isset( $this->URLsToProtoDump[ $OriginalFile ] ) )
 				{
 					file_put_contents( __DIR__ . '/.support/original_js/' . md5( $OriginalFile ) . '.js', $Data );
