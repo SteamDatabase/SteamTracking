@@ -9,6 +9,7 @@
 		private bool $UseCache = true;
 		private bool $ExtractClientArchives = false;
 		private bool $SyncProtobufs = false;
+		private bool $DumpWebProtobufs = false;
 
 		/** @var array<string, string> */
 		private array $ETags = [];
@@ -86,10 +87,17 @@
 			if( $this->ExtractClientArchives )
 			{
 				$this->Log( '{lightblue}Extracting client archives and doing voodoo magic' );
+				$this->DumpWebProtobufs = true;
 				$this->SyncProtobufs = true;
 
-				// Let's break all kinds of things! :(
-				System( 'bash ' . __DIR__ . '/extract_client.sh' );
+				system( 'bash extract_client.sh' );
+			}
+
+			if( $this->DumpWebProtobufs )
+			{
+				$this->Log( '{lightblue}Dumping web protobufs' );
+
+				//system( 'node protobufdumper_v2.js ' . escapeshellarg( realpath( __DIR__ . '/.support/original_js/' ) ) . ' ' . escapeshellarg( realpath( '../ValveProtobufs/webui/' ) ) );
 			}
 
 			if( $this->SyncProtobufs )
@@ -321,8 +329,12 @@
 					return false;
 				}
 
-				file_put_contents( $File, $Data );
-
+				if( isset( $this->URLsToProtoDump[ $OriginalFile ] ) )
+				{
+					file_put_contents( __DIR__ . '/.support/original_js/' . md5( $OriginalFile ) . '.js', $Data );
+					$this->DumpWebProtobufs = true;
+				}
+				
 				$this->ETags[ $HashPath ] = $Hash;
 
 				$WebProtobufs =
@@ -598,6 +610,15 @@
 				$this->Log( '{lightred}Missing ' . $UrlsPath );
 
 				Exit;
+			}
+
+			$Folder = __DIR__ . '/.support/original_js/';
+
+			if( !is_dir( $Folder ) )
+			{
+				$this->Log( '{lightblue}Creating ' . $Folder );
+
+				mkdir( $Folder, 0755, true );
 			}
 
 			$Data = file_get_contents( $UrlsPath );
