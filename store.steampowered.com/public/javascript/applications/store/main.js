@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6214351";
+var CLSTAMP = "6220046";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [38],
   {
@@ -8365,7 +8365,8 @@ var CLSTAMP = "6214351";
         HoverPosition: "hoverposition_HoverPosition_3vg1v",
         Ready: "hoverposition_Ready_1Ye_0",
         NoSpace: "hoverposition_NoSpace_pxVZH",
-        EnablePointerEvents: "hoverposition_EnablePointerEvents_2b9OE"
+        EnablePointerEvents: "hoverposition_EnablePointerEvents_2b9OE",
+        HoverAboveModal: "hoverposition_HoverAboveModal_EQqOx"
       };
     },
     "6Aav": function(e, t, n) {
@@ -38523,7 +38524,7 @@ var CLSTAMP = "6214351";
     ZApo: function(e, t, n) {
       "use strict";
       n.d(t, "a", function() {
-        return h;
+        return _;
       });
       var o = n("mrSG"),
         i = n("q1tI"),
@@ -38536,7 +38537,10 @@ var CLSTAMP = "6214351";
         u = n("P++D"),
         d = n.n(u),
         m = n("exH9"),
-        h = (function(n) {
+        h = n("5E+2"),
+        f = n("6+2x"),
+        b = n.n(f),
+        _ = (function(n) {
           function e(e) {
             var t = n.call(this, e) || this;
             return (
@@ -38666,7 +38670,7 @@ var CLSTAMP = "6214351";
                 i.createElement(
                   p.a.Provider,
                   { value: this.context },
-                  i.createElement(f, {
+                  i.createElement(v, {
                     rgOptions: this.props.rgOptions,
                     fnOnItemSelected: this.OnItemSelected,
                     strDropDownItemClassName: this.props
@@ -38770,14 +38774,14 @@ var CLSTAMP = "6214351";
             e
           );
         })(i.Component);
-      function f(e) {
+      function v(e) {
         var t = Object(p.b)();
         return i.createElement(
           c.d,
-          Object(o.a)({ component: t.renderDropDownMenu, fallback: b }, e)
+          Object(o.a)({ component: t.renderDropDownMenu, fallback: g }, e)
         );
       }
-      function b(n) {
+      function g(n) {
         function r(e) {
           var t = parseInt(e.currentTarget.getAttribute("data-dropdown-index"));
           (t || 0 === t) &&
@@ -38800,7 +38804,16 @@ var CLSTAMP = "6214351";
                 "data-dropdown-index": t,
                 onClick: r
               },
-              e.label
+              Boolean(e.tooltip)
+                ? i.createElement(
+                    h.a,
+                    {
+                      toolTipContent: e.tooltip,
+                      strTooltipClassname: b.a.HoverAboveModal
+                    },
+                    e.label
+                  )
+                : i.createElement(i.Fragment, null, e.label)
             );
           });
         return i.createElement(

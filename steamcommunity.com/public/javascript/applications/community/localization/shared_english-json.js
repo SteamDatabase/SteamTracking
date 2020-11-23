@@ -1742,6 +1742,13 @@
         TrailerPlayer_LoadingError:
           "Please use a browser that supports HTML videos to watch this trailer.",
         FacetedBrowse_Heading: "Narrow By",
+        App_Taxonomy_Survey_QSuperGenreTitle: "Top-Level Genres",
+        App_Taxonomy_Survey_QGenreTitle: "Genres",
+        App_Taxonomy_Survey_QSubGenreTitle: "Sub-Genres",
+        App_Taxonomy_Survey_QVisualsTitle: "Visuals & Viewpoint",
+        App_Taxonomy_Survey_QThemeMoodTitle: "Themes & Moods",
+        App_Taxonomy_Survey_QFeaturesTitle: "Features",
+        App_Taxonomy_Survey_QPlayersTitle: "Players",
         bytes: "%1$s B",
         bytes_PerSecond: "%1$s B/s",
         bits: "%1$s b",
