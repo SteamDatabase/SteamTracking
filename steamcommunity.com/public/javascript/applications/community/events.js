@@ -3734,8 +3734,18 @@
                 ? e + 86400 * a
                 : e + 3600 * a;
             }),
+            (a.prototype.RemoveNullCapsules = function() {
+              for (var e = 0, t = this.GetSaleSections(); e < t.length; e++) {
+                var a = t[e];
+                -1 !== a.capsules.findIndex(null) &&
+                  (a.capsules = a.capsules.filter(function(e) {
+                    return Boolean(e);
+                  }));
+              }
+            }),
             (a.prototype.OnPreSave = function() {
-              this.PreSaveEventTimeAssignment(),
+              this.RemoveNullCapsules(),
+                this.PreSaveEventTimeAssignment(),
                 this.FixupTabVisibilitySettings(),
                 Le(this);
             }),
@@ -30715,21 +30725,22 @@
         var t,
           a = null,
           n = "",
-          r = !1;
+          r = !1,
+          i = null == e ? void 0 : e.type;
         return (
-          (r =
-            "bundle" === e.type
-              ? ((a = he.a.GetBundleInfo(e.id)),
-                (n = z.b.STORE_BASE_URL + "bundle/" + e.id),
-                !a)
-              : "sub" === e.type
-              ? ((a = ge.b.GetPackageInfo(e.id)),
-                (n = z.b.STORE_BASE_URL + "sub/" + e.id),
-                !a)
-              : (_e.a.LoadAppLinkInfo([e.id]),
-                (a = (t = _e.a.GetAppLinkInfo(e.id)) && t.name ? t : null),
-                (n = z.b.STORE_BASE_URL + "app/" + e.id),
-                !a && _e.a.BHasAppLinkLoaded(e.id))),
+          "bundle" === i
+            ? ((a = he.a.GetBundleInfo(e.id)),
+              (n = z.b.STORE_BASE_URL + "bundle/" + e.id),
+              (r = !a))
+            : "sub" === i
+            ? ((a = ge.b.GetPackageInfo(e.id)),
+              (n = z.b.STORE_BASE_URL + "sub/" + e.id),
+              (r = !a))
+            : i &&
+              (_e.a.LoadAppLinkInfo([e.id]),
+              (a = (t = _e.a.GetAppLinkInfo(e.id)) && t.name ? t : null),
+              (n = z.b.STORE_BASE_URL + "app/" + e.id),
+              (r = !a && _e.a.BHasAppLinkLoaded(e.id))),
           { appData: a, linkURL: n, bInvalidID: r }
         );
       }
@@ -36379,30 +36390,20 @@
         return (
           Object(U.d)(e, t),
           (e.prototype.componentDidMount = function() {
-            var e = this.props.saleSection.capsules
-                .filter(function(e) {
-                  return "bundle" !== e.type && "sub" !== e.type;
-                })
-                .map(function(e) {
-                  return e.id;
-                }),
-              t = this.props.saleSection.capsules
-                .filter(function(e) {
-                  return "bundle" === e.type;
-                })
-                .map(function(e) {
-                  return e.id;
-                }),
-              a = this.props.saleSection.capsules
-                .filter(function(e) {
-                  return "sub" === e.type;
-                })
-                .map(function(e) {
-                  return e.id;
-                });
-            me.a.EnsureAppInfoForAppIDs(new Set(e)),
-              he.a.LoadBundleInfo(t),
-              ge.b.LoadPackageInfo(a),
+            var t = new Set(),
+              a = new Array(),
+              n = new Array();
+            this.props.saleSection.capsules.forEach(function(e) {
+              e &&
+                ("bundle" === e.type
+                  ? a.push(e.id)
+                  : "sub" === e.type
+                  ? n.push(e.id)
+                  : t.add(e.id));
+            }),
+              me.a.EnsureAppInfoForAppIDs(new Set(t)),
+              he.a.LoadBundleInfo(a),
+              ge.b.LoadPackageInfo(n),
               k.d.LoadBatchPartnerEventsByAnnouncementGID(
                 null,
                 this.props.saleSection.events.map(function(e) {
@@ -39105,7 +39106,7 @@
                 var i = !1;
                 return (
                   t.capsules.forEach(function(e) {
-                    if (void 0 !== e.visibility_index) {
+                    if (void 0 !== (null == e ? void 0 : e.visibility_index)) {
                       for (; r.length <= e.visibility_index; ) r.push(0);
                       (i = !0), (r[e.visibility_index] += 1);
                     }
@@ -39938,6 +39939,7 @@
               for (var n = 0, r = a.capsules; n < r.length; n++) {
                 var i = r[n];
                 if (
+                  i &&
                   i !== t &&
                   i.id == t.id &&
                   i.type == t.type &&
@@ -39950,8 +39952,14 @@
               return !1;
             }),
             (t.prototype.render = function() {
-              var e = this.props.capsule,
-                t = this.DoesCapsuleConflict(),
+              var e = this.props.capsule;
+              if (!e)
+                return Xe.createElement(
+                  "div",
+                  null,
+                  Object(V.f)("#EventEditor_InvalidCapsuleItem")
+                );
+              var t = this.DoesCapsuleConflict(),
                 a = Ms(e),
                 n = a.appData,
                 r = a.linkURL,
@@ -40031,24 +40039,28 @@
               var e = this.props.capsuleContainer,
                 t = !1;
               e.capsules.forEach(function(e) {
-                return (t = t || void 0 !== e.visibility_index);
+                return (t =
+                  t || void 0 !== (null == e ? void 0 : e.visibility_index));
               });
               for (var a = "", n = 0, r = e.capsules; n < r.length; n++) {
                 var i,
-                  o = r[n],
-                  l = "";
-                l =
-                  "bundle" === o.type
-                    ? (i = he.a.GetBundleInfo(o.id)) && i.name
-                    : "sub" === o.type
-                    ? (i = ge.b.GetPackageInfo(o.id)) && i.name
-                    : (i = me.a.GetAppInfo(o.id)) && i.name;
-                var s = o.id + "\t" + o.type;
-                void 0 !== o.visibility_index
-                  ? (s += "\tDay " + o.visibility_index)
-                  : t && (s += "\t"),
-                  l && (s += '\t"' + l + '"'),
-                  (a += s + "\n");
+                  o,
+                  l,
+                  s = r[n];
+                s &&
+                  ((i = ""),
+                  (i =
+                    "bundle" === s.type
+                      ? (o = he.a.GetBundleInfo(s.id)) && o.name
+                      : "sub" === s.type
+                      ? (o = ge.b.GetPackageInfo(s.id)) && o.name
+                      : (o = me.a.GetAppInfo(s.id)) && o.name),
+                  (l = s.id + "\t" + s.type),
+                  void 0 !== s.visibility_index
+                    ? (l += "\tDay " + s.visibility_index)
+                    : t && (l += "\t"),
+                  i && (l += '\t"' + i + '"'),
+                  (a += l + "\n"));
               }
               return a;
             }),
