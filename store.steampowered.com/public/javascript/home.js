@@ -489,7 +489,7 @@ GHomepage = {
         }
 
         var position = 0;
-        for ( const module in rgShuffled )
+        for ( var module in rgShuffled )
         {
             var module_name = rgShuffled[module]
             $J( '#module_shuffle_target' ).append( $J( module_name ) );

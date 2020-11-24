@@ -3737,7 +3737,10 @@
             (a.prototype.RemoveNullCapsules = function() {
               for (var e = 0, t = this.GetSaleSections(); e < t.length; e++) {
                 var a = t[e];
-                -1 !== a.capsules.findIndex(null) &&
+                a.capsules &&
+                  a.capsules.some(function(e) {
+                    return !Boolean(e);
+                  }) &&
                   (a.capsules = a.capsules.filter(function(e) {
                     return Boolean(e);
                   }));

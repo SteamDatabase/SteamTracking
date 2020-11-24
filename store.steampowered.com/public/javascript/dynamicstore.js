@@ -1413,7 +1413,7 @@ GStoreItemData = {
 	rgPersonalizedBundleData: {},
 	rgAccountData: [],
 	rgNavParams: {},
-	fnFormatCurrency: function( nValueInCents, bWholeNumbersOnly = false ) { return v_numberformat( nValueInCents / 100, bWholeNumbersOnly ); },
+		fnFormatCurrency: function( nValueInCents, bWholeNumbersOnly ) { return v_numberformat( nValueInCents / 100, bWholeNumbersOnly !== undefined ? bWholeNumbersOnly : false ); },
 	nCurrencyMinPriceIncrement : 1,
 
 	AddStoreItemDataSet: function( rgStoreItemData )
@@ -2162,7 +2162,7 @@ var GDynamicStoreHelpers = {
 			CreateFadingCarousel( $elTarget, 0 );
 	},
 
-	AddSNRDepthParamsToCapsuleList( $Capsules )
+	AddSNRDepthParamsToCapsuleList: function( $Capsules )
 	{
 		var nDepth = 1;
 		$Capsules.filter('a:visible').each( function() {
@@ -2275,7 +2275,10 @@ GDynamicStorePage = {
 				bVisible = true;
 
 			if( bVisible )
+			{
 				$capsule.removeClass('hidden');
+				$capsule.parent().append( $capsule );
+			}
 			else
 				$capsule.remove();
 		}

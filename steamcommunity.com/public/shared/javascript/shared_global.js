@@ -4508,7 +4508,7 @@ function SetupAnimateOnHoverImages()
 				function() {
 					var thisImage = $J( this );
 					thisImage.attr( 'src', thisImage.data( 'static-src' ) );
-				},
+				}
 			);
 		}
 	}

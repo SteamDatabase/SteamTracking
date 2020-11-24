@@ -1,16 +1,16 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6220536";
+var CLSTAMP = "6221839";
 !(function(r) {
   function a(a) {
     for (
-      var e, n, i = a[0], o = a[1], c = a[2], s = 0, d = [];
-      s < i.length;
-      s++
+      var e, n, i = a[0], o = a[1], c = a[2], d = 0, s = [];
+      d < i.length;
+      d++
     )
-      (n = i[s]), b[n] && d.push(b[n][0]), (b[n] = 0);
+      (n = i[d]), b[n] && s.push(b[n][0]), (b[n] = 0);
     for (e in o) Object.prototype.hasOwnProperty.call(o, e) && (r[e] = o[e]);
-    for (_ && _(a); d.length; ) d.shift()();
+    for (_ && _(a); s.length; ) s.shift()();
     return l.push.apply(l, c || []), f();
   }
   function f() {
@@ -252,16 +252,16 @@ var CLSTAMP = "6220536";
               c < n.length;
               c++
             ) {
-              var s =
-                (d = n[c]).getAttribute("data-href") || d.getAttribute("href");
-              if ("stylesheet" === d.rel && (s === e || s === o)) return a();
+              var d =
+                (s = n[c]).getAttribute("data-href") || s.getAttribute("href");
+              if ("stylesheet" === s.rel && (d === e || d === o)) return a();
             }
             for (
-              var d, r = document.getElementsByTagName("style"), c = 0;
+              var s, r = document.getElementsByTagName("style"), c = 0;
               c < r.length;
               c++
             ) {
-              if ((s = (d = r[c]).getAttribute("data-href")) === e || s === o)
+              if ((d = (s = r[c]).getAttribute("data-href")) === e || d === o)
                 return a();
             }
             var f = document.createElement("link");
@@ -288,7 +288,7 @@ var CLSTAMP = "6220536";
     var e,
       c,
       n,
-      s,
+      d,
       i,
       o = b[l];
     return (
@@ -416,7 +416,7 @@ var CLSTAMP = "6220536";
                 6: "fe757d081729243f33c4",
                 7: "006e77077776afc1475f",
                 8: "0db41c26c5c29083b14e",
-                9: "1c173f776a9becd9468a",
+                9: "054bdda718a2d9202988",
                 10: "01c5e498b54d231486ef",
                 11: "40c6d5212b805b2f823f",
                 12: "7f8d51b40335dfbe2f83",
@@ -509,7 +509,7 @@ var CLSTAMP = "6220536";
                 101: "b7028174b6895bd29710"
               }[i]),
             (n = function(a) {
-              (c.onerror = c.onload = null), clearTimeout(s);
+              (c.onerror = c.onload = null), clearTimeout(d);
               var e,
                 n,
                 i,
@@ -525,7 +525,7 @@ var CLSTAMP = "6220536";
                   o[1](i)),
                 (b[l] = void 0));
             }),
-            (s = setTimeout(function() {
+            (d = setTimeout(function() {
               n({ type: "timeout", target: c });
             }, 12e4)),
             (c.onerror = c.onload = n),
