@@ -5542,9 +5542,7 @@
             }),
             (t.prototype.RenderChildren = function() {
               var n = this,
-                r = this.props.bSkipLazyRenderChildrenOnFirstPage
-                  ? this.GetPageSize()
-                  : 0;
+                r = this.GetPageSize();
               return z.Children.map(this.props.children, function(e, t) {
                 var a =
                   n.props.bLazyRenderChildren && r <= t
@@ -5783,8 +5781,7 @@
                       className: Pt.a.HorizontalTiles,
                       useTestScrollbar: !0,
                       bLazyRenderChildren: !0,
-                      disableEdgeWrap: !0,
-                      bSkipLazyRenderChildrenOnFirstPage: !0
+                      disableEdgeWrap: !0
                     },
                     i
                   )

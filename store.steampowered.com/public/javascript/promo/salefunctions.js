@@ -185,12 +185,19 @@ function HomeSaleFilterHeroes( $Parent )
 	var $Row = $Parent.find('.hero_row' );
 	var rgHeroes = $Row.children('.hero_capsule').toArray();
 
-	var rgAppPriorityList = g_rgAppPriorityLists['hero'];
+	var rgAppPriorityList = g_rgAppPriorityLists['hero'] || [];
 
 
 	var rgPositionByApp = {};
 	for ( var i = 0; i < rgAppPriorityList.length; i++ )
 		rgPositionByApp[ rgAppPriorityList[i] ] = i;
+
+	for ( var i = 0; i < rgHeroes.length; i++ )
+	{
+		var appid = $J(rgHeroes[i]).data('dsAppid');
+		if ( appid && rgPositionByApp[appid] === undefined )
+			rgPositionByApp[appid] = i + 1000;
+	}
 
 	rgHeroes.sort( function( a, b ) {
 		var appidA = $J(a).data('dsAppid');
@@ -202,10 +209,15 @@ function HomeSaleFilterHeroes( $Parent )
 
 
 	
+
 	GDynamicStorePage.FilterCapsules( 3, 3, $J( rgHeroes ), $Row, Settings );
 
 	$Row.children('.hero_capsule:not(.hidden)').children('.hero_capsule_img').each( function () {
 		$J(this).attr('src', $J(this).data('src') );
+	});
+
+	$Row.children('.hero_capsule:not(.hidden)').children('a').each( function() {
+		ModifyLinkSNR( $J(this), function( snr ) { return GStoreItemData.rgNavParams['sale_heroes_priority'] } );
 	});
 
 	$Row.children().each( function( i, div ) {
@@ -217,7 +229,7 @@ function HomeSaleFilterHeroes( $Parent )
 
 function SortItemListByPriorityList( rgItemList, strPriorityListName )
 {
-	var rgAppPriorityList = g_rgAppPriorityLists[strPriorityListName];
+	var rgAppPriorityList = g_rgAppPriorityLists[strPriorityListName] || [];
 
 	if ( !rgAppPriorityList )
 		return;
@@ -225,6 +237,13 @@ function SortItemListByPriorityList( rgItemList, strPriorityListName )
 	var rgPositionByApp = {};
 	for ( var i = 0; i < rgAppPriorityList.length; i++ )
 		rgPositionByApp[ rgAppPriorityList[i] ] = i;
+
+	for ( var i = 0; i < rgItemList.length; i++ )
+	{
+		var appid = rgItemList[i].appid;
+		if ( appid && rgPositionByApp[appid] === undefined )
+			rgPositionByApp[appid] = i + 1000;
+	}
 
 	var rgItemListSorted = rgItemList.slice();
 	rgItemListSorted.sort( function( a, b ) {
@@ -270,7 +289,7 @@ function HomeRenderFeaturedItems( rgDisplayLists, rgTagData, rgFranchiseData )
 
 	GDynamicStore.MarkAppDisplayed( rgTier2 );
 
-	HomeSaleBlock( rgTier1, $J('#tier1_target' ) );
+	HomeSaleBlock( rgTier1, $J('#tier1_target' ), 'sale_dailydeals_priority' );
 
 
 	var $FranchiseBlock = $J('#franchise_target' );
@@ -280,7 +299,7 @@ function HomeRenderFeaturedItems( rgDisplayLists, rgTagData, rgFranchiseData )
 
 	
 	var $Tier2 = $J('#tier2_target' );
-	new CScrollOffsetWatcher( $Tier2, function() { HomeSaleBlock( rgTier2,$Tier2  ); } );
+	new CScrollOffsetWatcher( $Tier2, function() { HomeSaleBlock( rgTier2, $Tier2, 'sale_dailydeals_t2'  ); } );
 
 
 	var $UserArea = $J('#home_sale_account_ctn');
@@ -631,7 +650,7 @@ function SaleTagBlock( $Parent, rgPersonalizedTagData )
 		else
 		{
 			$Ctn.append( $J('<div/>', { 'class': 'home_category_title_ctn', style: SaleTagTexture( texture ) } ).
-				append( $J('<div/>', { 'class': 'home_category_title'}).html( rgTagData.name ) ) );
+				append( $J('<div/>', { 'class': 'home_tag_category_title'}).html( rgTagData.name ) ) );
 		}
 	}
 	
