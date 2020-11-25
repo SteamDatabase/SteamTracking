@@ -38958,6 +38958,16 @@
                 r.push({
                   label:
                     "(VO) " +
+                    Object(V.f)("#Sale_BrowserSortOption_NewAndTrending") +
+                    " (?)",
+                  tooltip:
+                    "Shows games in a similar fashion to the front pages New and Trending tab. Mix of recency of release, review score and play count",
+                  strOptionClass: Object(lt.a)(st.ValveOnlyBackground),
+                  data: "newandtrending"
+                }),
+                r.push({
+                  label:
+                    "(VO) " +
                     Object(V.f)("#Sale_BrowserSortOption_PopularComingSoon") +
                     " (?)",
                   tooltip:

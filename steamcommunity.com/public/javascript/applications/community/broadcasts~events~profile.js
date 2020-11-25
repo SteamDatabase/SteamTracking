@@ -1458,6 +1458,11 @@
         U,
         V = [
           {
+            label: "#Sale_BrowserSortOption_NewAndTrending",
+            flavor: "newandtrending",
+            tooltip: "#Sale_BrowserSortOption_NewAndTrending_ttip"
+          },
+          {
             label: "#Sale_BrowserSortOption_TopWishlisted",
             flavor: "topwishlisted",
             tooltip: "#Sale_BrowserSortOption_TopWishlisted_ttip"
@@ -2126,7 +2131,9 @@
             (r.prototype.BIsEventActionEnabled = function() {
               return (
                 !!this.jsondata.action_end_time &&
-                this.jsondata.action_end_time > v.a.GetTimeNowWithOverride()
+                (this.jsondata.action_end_time > v.a.GetTimeNowWithOverride() ||
+                  (1575396e3 == this.jsondata.action_end_time &&
+                    v.a.GetTimeNowWithOverride() < 1606845600))
               );
             }),
             (r.prototype.BHasSubTitle = function(e) {

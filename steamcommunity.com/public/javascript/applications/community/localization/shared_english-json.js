@@ -1498,6 +1498,9 @@
           "The most deeply discounted items right now",
         Sale_BrowserSortOption_Price: "Price",
         Sale_BrowserSortOption_Price_ttip: "The lowest price games right now",
+        Sale_BrowserSortOption_NewAndTrending: "New and Trending",
+        Sale_BrowserSortOption_NewAndTrending_ttip:
+          "New and Trending that have released recently and have positive indicators on the store; similar to the front page new and trending tab.",
         SalePage_WatchForDrop_Minutes_Developer:
           "Watch the stream for %1$s minutes and get item drops from the developer when the event is over!",
         SalePage_WatchForDrop_Minutes_CreatorNamed:

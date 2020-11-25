@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6224535";
+var CLSTAMP = "6224829";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [38],
   {
@@ -1845,6 +1845,11 @@ var CLSTAMP = "6224535";
         R,
         G = [
           {
+            label: "#Sale_BrowserSortOption_NewAndTrending",
+            flavor: "newandtrending",
+            tooltip: "#Sale_BrowserSortOption_NewAndTrending_ttip"
+          },
+          {
             label: "#Sale_BrowserSortOption_TopWishlisted",
             flavor: "topwishlisted",
             tooltip: "#Sale_BrowserSortOption_TopWishlisted_ttip"
@@ -2513,7 +2518,9 @@ var CLSTAMP = "6224535";
           (a.prototype.BIsEventActionEnabled = function() {
             return (
               !!this.jsondata.action_end_time &&
-              this.jsondata.action_end_time > v.a.GetTimeNowWithOverride()
+              (this.jsondata.action_end_time > v.a.GetTimeNowWithOverride() ||
+                (1575396e3 == this.jsondata.action_end_time &&
+                  v.a.GetTimeNowWithOverride() < 1606845600))
             );
           }),
           (a.prototype.BHasSubTitle = function(e) {

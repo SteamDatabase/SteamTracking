@@ -192,6 +192,10 @@ function HomeSaleFilterHeroes( $Parent )
 	for ( var i = 0; i < rgAppPriorityList.length; i++ )
 		rgPositionByApp[ rgAppPriorityList[i] ] = i;
 
+	/* promote Destiny 2 position to match Beyond Light, if present */
+	if ( rgPositionByApp[1314563] !== undefined )
+		rgPositionByApp[1085660] = Math.min( rgPositionByApp[1314563] , rgPositionByApp[1085660] || 0 );
+
 	for ( var i = 0; i < rgHeroes.length; i++ )
 	{
 		var appid = $J(rgHeroes[i]).data('dsAppid');
