@@ -1097,6 +1097,16 @@
                         q: !0,
                         br: f.d.readEnum,
                         bw: f.h.writeRepeatedEnum
+                      },
+                      max_slots_per_type: {
+                        n: 5,
+                        br: f.d.readUint32,
+                        bw: f.h.writeUint32
+                      },
+                      max_upgradable_level: {
+                        n: 6,
+                        br: f.d.readUint32,
+                        bw: f.h.writeUint32
                       }
                     }
                   }),
@@ -1136,7 +1146,7 @@
             n
           );
         })(b),
-        W = (function(r) {
+        U = (function(r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -1153,7 +1163,7 @@
                 n.sm_m ||
                   (n.sm_m = {
                     proto: n,
-                    fields: { apps: { n: 1, c: U, r: !0, q: !0 } }
+                    fields: { apps: { n: 1, c: W, r: !0, q: !0 } }
                   }),
                 n.sm_m
               );
@@ -1191,7 +1201,7 @@
             n
           );
         })(b),
-        U = (function(r) {
+        W = (function(r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -1932,7 +1942,7 @@
           );
         }),
         (p.GetEligibleApps = function(e, t) {
-          return e.SendMsg("LoyaltyRewards.GetEligibleApps#1", t, W, {
+          return e.SendMsg("LoyaltyRewards.GetEligibleApps#1", t, U, {
             bConstMethod: !0,
             ePrivilege: 0,
             eWebAPIKeyRequirement: 1
@@ -2291,7 +2301,7 @@
                 })
             };
           },
-          [t]
+          [t, r, n]
         );
       }
       function ce(e) {

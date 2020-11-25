@@ -2,6 +2,12 @@
 var k_nTier1Max = 15;
 var k_nTier2Max = 18;
 
+var g_rgAppPriorityLists = {};
+function InitAppPriorityLists( rgAppPriorityLists )
+{
+	Object.assign( g_rgAppPriorityLists, rgAppPriorityLists );
+}
+
 function BIsSameItem( rgItem1, rgItem2 )
 {
 	return ( rgItem1.appid && rgItem1.appid == rgItem2.appid ) ||
@@ -177,13 +183,60 @@ function HomeSaleFilterHeroes( $Parent )
 	var Settings = { games_already_in_library: false, only_current_platform: true, enforce_minimum: true };
 
 	var $Row = $Parent.find('.hero_row' );
-	GDynamicStorePage.FilterCapsules( 3, 3, $Row.children('.hero_capsule'), $Row, Settings );
+	var rgHeroes = $Row.children('.hero_capsule').toArray();
+
+	var rgAppPriorityList = g_rgAppPriorityLists['hero'];
+
+
+	var rgPositionByApp = {};
+	for ( var i = 0; i < rgAppPriorityList.length; i++ )
+		rgPositionByApp[ rgAppPriorityList[i] ] = i;
+
+	rgHeroes.sort( function( a, b ) {
+		var appidA = $J(a).data('dsAppid');
+		var appidB = $J(b).data('dsAppid');
+		var posA = rgPositionByApp[appidA];
+		var posB = rgPositionByApp[appidB];
+		return ( posA !== undefined ? posA : 1000 ) - ( posB !== undefined ? posB : 1000 );
+	});
+
+
+	
+	GDynamicStorePage.FilterCapsules( 3, 3, $J( rgHeroes ), $Row, Settings );
 
 	$Row.children('.hero_capsule:not(.hidden)').children('.hero_capsule_img').each( function () {
 		$J(this).attr('src', $J(this).data('src') );
 	});
 
+	$Row.children().each( function( i, div ) {
+		GDynamicStore.MarkAppIDsAsDisplayed( [ $J(div).data('dsAppid') ] );
+	});
+
 	$Row.css('minHeight', '' );
+}
+
+function SortItemListByPriorityList( rgItemList, strPriorityListName )
+{
+	var rgAppPriorityList = g_rgAppPriorityLists[strPriorityListName];
+
+	if ( !rgAppPriorityList )
+		return;
+
+	var rgPositionByApp = {};
+	for ( var i = 0; i < rgAppPriorityList.length; i++ )
+		rgPositionByApp[ rgAppPriorityList[i] ] = i;
+
+	var rgItemListSorted = rgItemList.slice();
+	rgItemListSorted.sort( function( a, b ) {
+		var appidA = a.appid;
+		var appidB = b.appid;
+		var posA = rgPositionByApp[appidA];
+		var posB = rgPositionByApp[appidB];
+		return ( posA !== undefined ? posA : 1000 ) - ( posB !== undefined ? posB : 1000 );
+	});
+
+	
+	return rgItemListSorted;
 }
 
 function HomeRenderFeaturedItems( rgDisplayLists, rgTagData, rgFranchiseData )
@@ -203,26 +256,52 @@ function HomeRenderFeaturedItems( rgDisplayLists, rgTagData, rgFranchiseData )
 		HomeSaleBlock( rgSteamAwardWinners, $J('#steamawards_target' ), 'sale_steamawards' );
 	}
 
+	rgAllTier1Items = GHomepage.MergeLists( rgDisplayLists.sale_tier1, false, rgDisplayLists.sale_tier1_fallback, false );
+
 	var rgTier1 = GHomepage.FilterItemsForDisplay(
-		rgDisplayLists.sale_tier1.concat( rgDisplayLists.sale_tier1_fallback ), 'home', k_nTier1ItemsMin, k_nTier1ItemsMax, { games_already_in_library: false, localized: true, displayed_elsewhere: false, only_current_platform: true, enforce_minimum: true }
+		SortItemListByPriorityList( rgAllTier1Items, 'tier1' ), 'home', k_nTier1ItemsMin, k_nTier1ItemsMax, { games_already_in_library: false, localized: true, displayed_elsewhere: false, only_current_platform: true, enforce_minimum: true }
 	);
+
+	GDynamicStore.MarkAppDisplayed( rgTier1 );
 
 	var rgTier2 = GHomepage.FilterItemsForDisplay(
 		rgDisplayLists.sale_tier2.concat( rgDisplayLists.sale_tier2_fallback ), 'home', k_nTier2ItemsMin, k_nTier2ItemsMax, { games_already_in_library: false, localized: true, displayed_elsewhere: false, only_current_platform: true, enforce_minimum: true }
 	);
 
-	GDynamicStore.MarkAppDisplayed( rgTier1 );
 	GDynamicStore.MarkAppDisplayed( rgTier2 );
 
 	HomeSaleBlock( rgTier1, $J('#tier1_target' ) );
 
-	var $Tier2 = $J('#tier2_target' );
-	new CScrollOffsetWatcher( $Tier2, function() { HomeSaleBlock( rgTier2,$Tier2  ); } );
 
 	var $FranchiseBlock = $J('#franchise_target' );
 	new CScrollOffsetWatcher( $FranchiseBlock, function() {
 		SaleFranchiseBlock( $FranchiseBlock, rgFranchiseData );
 	});
+
+	
+	var $Tier2 = $J('#tier2_target' );
+	new CScrollOffsetWatcher( $Tier2, function() { HomeSaleBlock( rgTier2,$Tier2  ); } );
+
+
+	var $UserArea = $J('#home_sale_account_ctn');
+	if ( $UserArea.length )
+	{
+		if ( g_AccountID )
+		{
+			new CScrollOffsetWatcher( $UserArea, function() {
+				$J.get( 'https://store.steampowered.com/default/home_sale_data', {u: g_AccountID } ).done( function( data ) {
+					GStoreItemData.AddStoreItemDataSet( data.StoreItemData );
+					RenderWishlistAndDLCArea( $UserArea, data.rgWishlistOnSale, data.rgDLCOnSale );
+				}).fail( function() {
+					$UserArea.hide();
+				});
+			});
+		}
+		else
+		{
+			$UserArea.hide();
+		}
+	}
 
 	var $DiscountsArea = $J('#sale_discounts_area');
 	new CScrollOffsetWatcher( $DiscountsArea, function() {
@@ -246,25 +325,6 @@ function HomeRenderFeaturedItems( rgDisplayLists, rgTagData, rgFranchiseData )
 	// NOTE: If we are already using home.js, then we don't need this. Found we were doubling up the streams
 	// GSteamBroadcasts.Init( GHomepage.FilterItemsForDisplay );
 
-	var $UserArea = $J('#home_sale_account_ctn');
-	if ( $UserArea.length )
-	{
-		if ( g_AccountID )
-		{
-			new CScrollOffsetWatcher( $UserArea, function() {
-				$J.get( 'https://store.steampowered.com/default/home_sale_data', {u: g_AccountID } ).done( function( data ) {
-					GStoreItemData.AddStoreItemDataSet( data.StoreItemData );
-					RenderWishlistAndDLCArea( $UserArea, data.rgWishlistOnSale, data.rgDLCOnSale );
-				}).fail( function() {
-					$UserArea.hide();
-				});
-			});
-		}
-		else
-		{
-			$UserArea.hide();
-		}
-	}
 
 
 	AddMicrotrailersToStaticCaps( $J('.home_topsellers_games_ctn' ) );
@@ -503,7 +563,7 @@ function SaleTagBackground( colors )
 	var g = Number.parseInt( hex[3] + hex[4], 16 );
 	var b = Number.parseInt( hex[5] + hex[6], 16 );
 	// return 'background: rgba( ' + r + ', ' + g + ', ' + b + ', 0.3 );';
-	return 'background: #581c17';
+	return 'background: #ffffff11';
 }
 
 function SaleTagBlock( $Parent, rgPersonalizedTagData )
@@ -822,7 +882,7 @@ function SaleRenderDiscountsArea( rgUnder10, rgDeals )
 	TryPopulateSaleItems( rgDealsFiltered, rgDeals, 4, 4 );
 
 
-	GDynamicStore.MarkAppDisplayed( rgDeals );
+	GDynamicStore.MarkAppDisplayed( rgDealsFiltered );
 
 	SaleRenderTwoByTwo( $J('#75pct_tier' ), rgDealsFiltered, 'sale_deals' );
 	SaleRenderTwoByTwo( $J('#10off_tier' ), rgUnder10Filtered, 'under10' );
@@ -1001,7 +1061,7 @@ CVideoScrollController.prototype.update = function()
  writein	o
  }
  */
-function InitSteamAwardNominationDialog( nominatedid, appname, rgCategories, bReleasedCurrentYear )
+function InitSteamAwardNominationDialog( nominatedid, appname, rgCategories, bReleasedCurrentYear, bLimitedUser )
 {
 	$J('.show_nomination_dialog').click( function() {
 		var $PageElement = $J(this);
@@ -1021,17 +1081,26 @@ function InitSteamAwardNominationDialog( nominatedid, appname, rgCategories, bRe
 			return;
 		}
 
+		if ( bLimitedUser )
+		{
+			ShowAlertDialog( 'Error', 'It appears that your account is limited. To prevent nomination abuse, you must spend $5 USD on Steam in order to participate in the Steam Awards. Visit <a href="https://support.steampowered.com/kb_article.php?ref=3330-IAGK-7663" target="_blank" rel="noreferrer">Steam Support</a> for more info.' );
+			return;
+		}
+
 		var $Form = $J('<form/>', {'class': 'steamward_nominate_form'});
 
 		var bFoundCurrentApp = false;
-
+		var rgPreviousLaborOfLoveWinners = [230410,271590];
 		for ( var i = 0; i < rgCategories.length; i++ )
 		{
 			var oCategory = rgCategories[i];
 			if ( oCategory.categoryid == -1 )
 				continue;
 
-			var bHideCategory = !bReleasedCurrentYear && oCategory.categoryid != 3;
+			var bHideCategory = !bReleasedCurrentYear && oCategory.categoryid != 52;
+
+			if ( oCategory.categoryid == 52 && $J.inArray( nominatedid, rgPreviousLaborOfLoveWinners ) !== -1 )
+				bHideCategory = true;
 
 			if ( bHideCategory )
 				continue;
@@ -1089,7 +1158,7 @@ function InitSteamAwardNominationDialog( nominatedid, appname, rgCategories, bRe
 			var categoryid = $Form.find( 'input[name=nomination_category]:checked' ).val();
 			var writein = $Form.find('#category' + categoryid + '_writein').val();
 
-			if ( categoryid == 13 && v_trim( writein || '' ).length < 5 )
+			if ( categoryid == -1 && v_trim( writein || '' ).length < 5 )
 			{
 				ShowAlertDialog( 'Error', 'Please enter a category suggestion' );
 				return;

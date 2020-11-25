@@ -1078,6 +1078,11 @@ body.v6 .page_content_ctn.dark:last-child {
 	color: #ffffff;
 }
 
+.help_top_details {
+	font-size: 14px;
+	margin: 12px 0px;
+	max-width: 712px; }
+
 .help_intro_text {
 	color: #5eafde;
 	font-size: 20px;

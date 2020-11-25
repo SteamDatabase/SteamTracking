@@ -11,34 +11,40 @@
       r.d(t, "g", function() {
         return c;
       }),
-        r.d(t, "j", function() {
+        r.d(t, "l", function() {
           return m;
         }),
         r.d(t, "i", function() {
           return y;
         }),
-        r.d(t, "a", function() {
+        r.d(t, "k", function() {
+          return p;
+        }),
+        r.d(t, "j", function() {
           return B;
         }),
-        r.d(t, "f", function() {
+        r.d(t, "a", function() {
           return _;
         }),
+        r.d(t, "f", function() {
+          return v;
+        }),
         r.d(t, "e", function() {
-          return R;
+          return C;
         }),
         r.d(t, "d", function() {
-          return O;
+          return L;
         }),
         r.d(t, "c", function() {
-          return T;
-        }),
-        r.d(t, "h", function() {
           return P;
         }),
-        r.d(t, "b", function() {
+        r.d(t, "h", function() {
           return x;
         }),
-        r.d(t, "k", function() {
+        r.d(t, "b", function() {
+          return G;
+        }),
+        r.d(t, "m", function() {
           return n;
         });
       var i = r("mrSG"),
@@ -500,6 +506,67 @@
             void 0 === e && (e = null);
             var t = r.call(this) || this;
             return (
+              n.prototype.customization_type || a.a(n.M()),
+              u.initialize(t, e, 0, -1, void 0, null),
+              t
+            );
+          }
+          return (
+            Object(i.d)(n, r),
+            (n.M = function() {
+              return (
+                n.sm_m ||
+                  (n.sm_m = {
+                    proto: n,
+                    fields: {
+                      customization_type: {
+                        n: 1,
+                        br: a.d.readEnum,
+                        bw: a.h.writeEnum
+                      }
+                    }
+                  }),
+                n.sm_m
+              );
+            }),
+            (n.MBF = function() {
+              return n.sm_mbf || (n.sm_mbf = a.e(n.M())), n.sm_mbf;
+            }),
+            (n.prototype.toObject = function(e) {
+              return void 0 === e && (e = !1), n.toObject(e, this);
+            }),
+            (n.toObject = function(e, t) {
+              return a.g(n.M(), e, t);
+            }),
+            (n.fromObject = function(e) {
+              return a.c(n.M(), e);
+            }),
+            (n.deserializeBinary = function(e) {
+              var t = new o.BinaryReader(e),
+                r = new n();
+              return n.deserializeBinaryFromReader(r, t);
+            }),
+            (n.deserializeBinaryFromReader = function(e, t) {
+              return a.b(n.MBF(), e, t);
+            }),
+            (n.prototype.serializeBinary = function() {
+              var e = new o.BinaryWriter();
+              return n.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            }),
+            (n.serializeBinaryToWriter = function(e, t) {
+              a.f(n.M(), e, t);
+            }),
+            (n.prototype.getClassName = function() {
+              return "CLoyaltyRewards_RedeemPointsForProfileCustomization_Request";
+            }),
+            n
+          );
+        })(u),
+        w = (function(r) {
+          function n(e) {
+            void 0 === e && (e = null);
+            var t = r.call(this) || this;
+            return (
               n.prototype.purchaseid || a.a(n.M()),
               u.initialize(t, e, 0, -1, void 0, null),
               t
@@ -556,7 +623,73 @@
             n
           );
         })(u),
-        w = (function(r) {
+        B = (function(r) {
+          function n(e) {
+            void 0 === e && (e = null);
+            var t = r.call(this) || this;
+            return (
+              n.prototype.customization_type || a.a(n.M()),
+              u.initialize(t, e, 0, -1, void 0, null),
+              t
+            );
+          }
+          return (
+            Object(i.d)(n, r),
+            (n.M = function() {
+              return (
+                n.sm_m ||
+                  (n.sm_m = {
+                    proto: n,
+                    fields: {
+                      customization_type: {
+                        n: 1,
+                        br: a.d.readEnum,
+                        bw: a.h.writeEnum
+                      },
+                      new_level: {
+                        n: 2,
+                        br: a.d.readUint32,
+                        bw: a.h.writeUint32
+                      }
+                    }
+                  }),
+                n.sm_m
+              );
+            }),
+            (n.MBF = function() {
+              return n.sm_mbf || (n.sm_mbf = a.e(n.M())), n.sm_mbf;
+            }),
+            (n.prototype.toObject = function(e) {
+              return void 0 === e && (e = !1), n.toObject(e, this);
+            }),
+            (n.toObject = function(e, t) {
+              return a.g(n.M(), e, t);
+            }),
+            (n.fromObject = function(e) {
+              return a.c(n.M(), e);
+            }),
+            (n.deserializeBinary = function(e) {
+              var t = new o.BinaryReader(e),
+                r = new n();
+              return n.deserializeBinaryFromReader(r, t);
+            }),
+            (n.deserializeBinaryFromReader = function(e, t) {
+              return a.b(n.MBF(), e, t);
+            }),
+            (n.prototype.serializeBinary = function() {
+              var e = new o.BinaryWriter();
+              return n.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            }),
+            (n.serializeBinaryToWriter = function(e, t) {
+              a.f(n.M(), e, t);
+            }),
+            (n.prototype.getClassName = function() {
+              return "CLoyaltyRewards_RedeemPointsForProfileCustomizationUpgrade_Request";
+            }),
+            n
+          );
+        })(u),
+        h = (function(r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -592,7 +725,7 @@
             n
           );
         })(u),
-        B = (function(r) {
+        _ = (function(r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -663,7 +796,7 @@
             n
           );
         })(u),
-        h = (function(r) {
+        g = (function(r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -699,7 +832,7 @@
             n
           );
         })(u),
-        _ = (function(r) {
+        v = (function(r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -765,7 +898,7 @@
             n
           );
         })(u),
-        g = (function(r) {
+        M = (function(r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -828,7 +961,7 @@
             n
           );
         })(u),
-        v = (function(r) {
+        R = (function(r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -846,10 +979,10 @@
                   (n.sm_m = {
                     proto: n,
                     fields: {
-                      total: { n: 1, c: M, r: !0, q: !0 },
-                      user_reviews: { n: 2, c: M, r: !0, q: !0 },
-                      ugc: { n: 3, c: M, r: !0, q: !0 },
-                      profile: { n: 4, c: M, r: !0, q: !0 },
+                      total: { n: 1, c: z, r: !0, q: !0 },
+                      user_reviews: { n: 2, c: z, r: !0, q: !0 },
+                      ugc: { n: 3, c: z, r: !0, q: !0 },
+                      profile: { n: 4, c: z, r: !0, q: !0 },
                       total_given: {
                         n: 5,
                         br: a.d.readUint32,
@@ -908,7 +1041,7 @@
             n
           );
         })(u),
-        M = (function(r) {
+        z = (function(r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -981,7 +1114,7 @@
             n
           );
         })(u),
-        R = (function(r) {
+        C = (function(r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -1017,7 +1150,7 @@
             n
           );
         })(u),
-        z = (function(r) {
+        j = (function(r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -1034,7 +1167,7 @@
                 n.sm_m ||
                   (n.sm_m = {
                     proto: n,
-                    fields: { reactions: { n: 3, c: C, r: !0, q: !0 } }
+                    fields: { reactions: { n: 3, c: O, r: !0, q: !0 } }
                   }),
                 n.sm_m
               );
@@ -1072,7 +1205,7 @@
             n
           );
         })(u),
-        C = (function(r) {
+        O = (function(r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -1153,7 +1286,7 @@
             n
           );
         })(u),
-        j = (function(r) {
+        F = (function(r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -1194,6 +1327,16 @@
                         q: !0,
                         br: a.d.readEnum,
                         bw: a.h.writeRepeatedEnum
+                      },
+                      max_slots_per_type: {
+                        n: 5,
+                        br: a.d.readUint32,
+                        bw: a.h.writeUint32
+                      },
+                      max_upgradable_level: {
+                        n: 6,
+                        br: a.d.readUint32,
+                        bw: a.h.writeUint32
                       }
                     }
                   }),
@@ -1233,7 +1376,7 @@
             n
           );
         })(u),
-        O = (function(r) {
+        L = (function(r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -1294,7 +1437,7 @@
             n
           );
         })(u),
-        F = (function(r) {
+        S = (function(r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -1311,7 +1454,7 @@
                 n.sm_m ||
                   (n.sm_m = {
                     proto: n,
-                    fields: { apps: { n: 1, c: S, r: !0, q: !0 } }
+                    fields: { apps: { n: 1, c: W, r: !0, q: !0 } }
                   }),
                 n.sm_m
               );
@@ -1349,7 +1492,7 @@
             n
           );
         })(u),
-        S = (function(r) {
+        W = (function(r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -1417,7 +1560,7 @@
             n
           );
         })(u),
-        L = (function(r) {
+        U = (function(r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -1484,7 +1627,7 @@
                         bw: a.h.writeString
                       },
                       active: { n: 12, br: a.d.readBool, bw: a.h.writeBool },
-                      community_item_data: { n: 13, c: W },
+                      community_item_data: { n: 13, c: E },
                       bundle_defids: {
                         n: 15,
                         r: !0,
@@ -1535,7 +1678,7 @@
             n
           );
         })(u),
-        W = (function(r) {
+        E = (function(r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -1599,7 +1742,7 @@
                         bw: a.h.writeString
                       },
                       animated: { n: 8, br: a.d.readBool, bw: a.h.writeBool },
-                      badge_data: { n: 9, c: U, r: !0, q: !0 }
+                      badge_data: { n: 9, c: T, r: !0, q: !0 }
                     }
                   }),
                 n.sm_m
@@ -1638,7 +1781,7 @@
             n
           );
         })(u),
-        U = (function(r) {
+        T = (function(r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -1696,7 +1839,7 @@
             n
           );
         })(u),
-        E = (function(r) {
+        I = (function(r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -1775,7 +1918,7 @@
             n
           );
         })(u),
-        T = (function(r) {
+        P = (function(r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -1811,7 +1954,7 @@
             n
           );
         })(u),
-        I = (function(r) {
+        q = (function(r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -1828,7 +1971,7 @@
                 n.sm_m ||
                   (n.sm_m = {
                     proto: n,
-                    fields: { bonuses: { n: 1, c: E, r: !0, q: !0 } }
+                    fields: { bonuses: { n: 1, c: I, r: !0, q: !0 } }
                   }),
                 n.sm_m
               );
@@ -1866,7 +2009,7 @@
             n
           );
         })(u),
-        P = (function(r) {
+        x = (function(r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -1997,7 +2140,7 @@
             n
           );
         })(u),
-        q = (function(r) {
+        N = (function(r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -2015,7 +2158,7 @@
                   (n.sm_m = {
                     proto: n,
                     fields: {
-                      definitions: { n: 1, c: L, r: !0, q: !0 },
+                      definitions: { n: 1, c: U, r: !0, q: !0 },
                       total_count: {
                         n: 2,
                         br: a.d.readInt32,
@@ -2065,7 +2208,7 @@
             n
           );
         })(u),
-        x = (function(r) {
+        G = (function(r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -2082,7 +2225,7 @@
                 n.sm_m ||
                   (n.sm_m = {
                     proto: n,
-                    fields: { requests: { n: 1, c: P, r: !0, q: !0 } }
+                    fields: { requests: { n: 1, c: x, r: !0, q: !0 } }
                   }),
                 n.sm_m
               );
@@ -2120,7 +2263,7 @@
             n
           );
         })(u),
-        G = (function(r) {
+        A = (function(r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -2137,7 +2280,7 @@
                 n.sm_m ||
                   (n.sm_m = {
                     proto: n,
-                    fields: { responses: { n: 1, c: N, r: !0, q: !0 } }
+                    fields: { responses: { n: 1, c: Z, r: !0, q: !0 } }
                   }),
                 n.sm_m
               );
@@ -2175,7 +2318,7 @@
             n
           );
         })(u),
-        N = (function(r) {
+        Z = (function(r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -2194,7 +2337,7 @@
                     proto: n,
                     fields: {
                       eresult: { n: 1, br: a.d.readInt32, bw: a.h.writeInt32 },
-                      response: { n: 2, c: q }
+                      response: { n: 2, c: N }
                     }
                   }),
                 n.sm_m
@@ -2265,7 +2408,7 @@
           return e.SendMsg(
             "LoyaltyRewards.RedeemPointsForProfileCustomization#1",
             t,
-            p,
+            w,
             { ePrivilege: 1 }
           );
         }),
@@ -2273,17 +2416,17 @@
           return e.SendMsg(
             "LoyaltyRewards.RedeemPointsForProfileCustomizationUpgrade#1",
             t,
-            w,
+            h,
             { ePrivilege: 1 }
           );
         }),
         (s.AddReaction = function(e, t) {
-          return e.SendMsg("LoyaltyRewards.AddReaction#1", t, h, {
+          return e.SendMsg("LoyaltyRewards.AddReaction#1", t, g, {
             ePrivilege: 1
           });
         }),
         (s.GetReactions = function(e, t) {
-          return e.SendMsg("LoyaltyRewards.GetReactions#1", t, g, {
+          return e.SendMsg("LoyaltyRewards.GetReactions#1", t, M, {
             bConstMethod: !0,
             ePrivilege: 1
           });
@@ -2292,12 +2435,12 @@
           return e.SendMsg(
             "LoyaltyRewards.GetReactionsSummaryForUser#1",
             t,
-            v,
+            R,
             { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 }
           );
         }),
         (s.GetReactionConfig = function(e, t) {
-          return e.SendMsg("LoyaltyRewards.GetReactionConfig#1", t, z, {
+          return e.SendMsg("LoyaltyRewards.GetReactionConfig#1", t, j, {
             bConstMethod: !0,
             ePrivilege: 0,
             eWebAPIKeyRequirement: 1
@@ -2307,33 +2450,33 @@
           return e.SendMsg(
             "LoyaltyRewards.GetProfileCustomizationsConfig#1",
             t,
-            j,
+            F,
             { bConstMethod: !0, ePrivilege: 0, eWebAPIKeyRequirement: 1 }
           );
         }),
         (s.GetEligibleApps = function(e, t) {
-          return e.SendMsg("LoyaltyRewards.GetEligibleApps#1", t, F, {
+          return e.SendMsg("LoyaltyRewards.GetEligibleApps#1", t, S, {
             bConstMethod: !0,
             ePrivilege: 0,
             eWebAPIKeyRequirement: 1
           });
         }),
         (s.GetActivePurchaseBonuses = function(e, t) {
-          return e.SendMsg("LoyaltyRewards.GetActivePurchaseBonuses#1", t, I, {
+          return e.SendMsg("LoyaltyRewards.GetActivePurchaseBonuses#1", t, q, {
             bConstMethod: !0,
             ePrivilege: 2,
             eWebAPIKeyRequirement: 1
           });
         }),
         (s.QueryRewardItems = function(e, t) {
-          return e.SendMsg("LoyaltyRewards.QueryRewardItems#1", t, q, {
+          return e.SendMsg("LoyaltyRewards.QueryRewardItems#1", t, N, {
             bConstMethod: !0,
             ePrivilege: 2,
             eWebAPIKeyRequirement: 1
           });
         }),
         (s.BatchedQueryRewardItems = function(e, t) {
-          return e.SendMsg("LoyaltyRewards.BatchedQueryRewardItems#1", t, G, {
+          return e.SendMsg("LoyaltyRewards.BatchedQueryRewardItems#1", t, A, {
             bConstMethod: !0,
             ePrivilege: 2,
             eWebAPIKeyRequirement: 1
@@ -2490,7 +2633,7 @@
                 })
             };
           },
-          [t]
+          [t, r, n]
         );
       }
       var s = { position: "absolute", left: "50%", top: 0 },

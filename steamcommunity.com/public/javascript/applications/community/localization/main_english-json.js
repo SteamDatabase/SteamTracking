@@ -1493,9 +1493,12 @@
           "This is a list of all the sale tagged items that are currently not placed within ANY section, either explicitly or included through a filter. This is useful for making sure every element is visible on a sale and exploring groupings of unused items.",
         Sale_TagFilter_ShowTagBreakdown: "Show Tag Breakdown",
         Sale_TagFilter_HideTagBreakdown: "Hide Tag Breakdown",
+        Sale_TagFilter_SectionTooltip:
+          "Tagged items provide a pool of items along with associated attributes that can be added to the sale via filters that can select which items match based upon a defined criteria. It is important to note that these items aren't actually part of the sale or visible to users until they are included in either a tab or a sale section through a filter.",
         Sale_TagFilter_TagBreakdown_ttip:
           "This provides a listing of all the tags contained by the matching items and how many of each there are. This is useful for determining if there may be other breakdowns of tags available. Each tag can be selected to see which items in the list have the associated tag.",
-        Sale_TagFilter_NoFilter: "No filter has been setup",
+        Sale_TagFilter_NoFilter:
+          "No filter has been setup - Including all tagged items",
         Sale_TagFilter_NoFilter_ttip:
           "This section has been configured to display items based upon a filter that will be applied against all tagged items in the sale. However, this filter has not been configured. Click the button below to set up this filter.",
         Sale_TagFilter_EditFilter: "Edit Filter",

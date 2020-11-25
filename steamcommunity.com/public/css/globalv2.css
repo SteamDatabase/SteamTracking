@@ -20,6 +20,13 @@ body.flat_page {
 	min-height: 100%;
 }
 
+body.flat_page.black {
+	background: #000000;
+}
+body.flat_page.no_bg {
+	background: none;
+}
+
 body.flat_page.blue {
 	color: #636363;
 }

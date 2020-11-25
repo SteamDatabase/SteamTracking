@@ -74,6 +74,15 @@ function UpdateSubscription(agreementid, cancelTerms, bBillingAgreement)
 		      	   	}
 		      	   	else
 		      	   	{
+		      	   		if ( result.success == 107 )
+						{
+							if ( result.purchase_result == 49 )
+							{
+								OnPaymentMethodNeeded( agreementid, packageid );
+								return;
+							}
+						}
+
 		      	   		OnUpdateSubscriptionFailure( agreementid, result.bCancel );
 		      	   		return;
 		      	   	}
@@ -148,6 +157,11 @@ function OnUpdateSubscriptionFailure( agreementid, cancel )
 	{
 		ReportYourAccountJSError( 'Failed in agreementid()', e );
 	}
+}
+
+function OnPaymentMethodNeeded( agreementid, packageid )
+{
+	location.href = 'https://store.steampowered.com/checkout/?purchasetype=updatebillinginfo&agreementid=' + agreementid + '&agreementpackageid=' + packageid;
 }
 
 function ShowRenewSubscriptionDialog(agreementid)

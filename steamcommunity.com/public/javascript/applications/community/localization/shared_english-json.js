@@ -169,6 +169,14 @@
         EventCalendar_SearchResultsHeader_CuratorSection: "Curators",
         EventCalendar_FollowingCurator: "following",
         EventCalendar_GroupTitle_Curators: "From Curators You Follow",
+        EventCalendar_GroupTitle_FeaturedCurators:
+          "Stories From Featured Curators",
+        EventCalendar_NewsLanguage_Title:
+          "Showing available news sources in your languages",
+        EventCalendar_NewsLanguage_Text:
+          "Update your language preferences to allow content and sources in more languages by visiting your %1$s",
+        EventCalendar_NewsLanguage_TextInHyperlink:
+          "store language preferences",
         EventCalendar_GlobalCalendar_Action: "Return to News Hub",
         EventCalendar_SpecificCalendar: "%1$s %2$s News Hub",
         EventCalendar_Goto_SpecificCalendar: "Go to %1$s News Hub",
@@ -1455,35 +1463,36 @@
         SalePage_ParentApp_DLC: "DLC For",
         SalePage_ParentApp_SoundTrack: "Soundtrack For",
         SalePage_Tabs_AllContents: "This tab will show all products",
-        Sale_BrowserSortOption_TopWishlisted: "Most Wishlisted",
+        Sale_BrowserSortOption_TopWishlisted: "Most Wishlisted Upcoming Games",
         Sale_BrowserSortOption_TopWishlisted_ttip:
-          "Games sorted by total wishlist counts",
-        Sale_BrowserSortOption_TrendingWishlisted: "Trending Now",
+          "Upcoming games sorted by total (All-time) wishlist counts. Only includes games not yet released on Steam.",
+        Sale_BrowserSortOption_TrendingWishlisted: "Trending Upcoming Games",
         Sale_BrowserSortOption_TrendingWishlisted_ttip:
-          "Games sorted by recent wishlist counts",
+          "Upcoming Games sorted by trending or recent wishlist counts. Only includes games not yet released on Steam.",
         Sale_BrowserSortOption_PopularComingSoon: "Launching Soon",
         Sale_BrowserSortOption_PopularComingSoon_ttip:
-          "Highly-wishlisted games, sorted by release date",
+          "Highly-wishlisted games, sorted by release date. Only includes games not yet released on Steam.",
         Sale_BrowserSortOption_PopularUpcoming: "Popular Upcoming",
         Sale_BrowserSortOption_PopularUpcoming_ttip:
-          "Highly-wishlisted games, sorted by release date",
-        Sale_BrowserSortOption_MostPlayedDemo: "Most Downloaded",
+          "Highly-wishlisted games, sorted by release date. Only includes games not yet released on Steam.",
+        Sale_BrowserSortOption_MostPlayedDemo: "Most Downloaded Demos",
         Sale_BrowserSortOption_MostPlayedDemo_ttip:
-          "Games sorted by all-time peak user count",
-        Sale_BrowserSortOption_DailyActiveUserDemo: "Active Users",
+          "Games sorted by their Demo's all-time peak user count",
+        Sale_BrowserSortOption_DailyActiveUserDemo: "Daily Active Demo Players",
         Sale_BrowserSortOption_DailyActiveUserDemo_ttip:
-          "Games sorted by daily user count",
-        Sale_BrowserSortOption_PlayedNowDemo: "Playing Now",
+          "Games sorted by their Demo's daily user count - using recent daily active data.",
+        Sale_BrowserSortOption_PlayedNowDemo: "Demo's Playing Now",
         Sale_BrowserSortOption_PlayedNowDemo_ttip:
-          "Games sorted by current online user count",
+          "Games sorted by their Demo's current online user count",
         Sale_BrowserSortOption_RecentlyReleased: "Recently Released",
-        Sale_BrowserSortOption_RecentlyReleased_ttip: "Recently released games",
+        Sale_BrowserSortOption_RecentlyReleased_ttip:
+          "Recently released games; ordered by descending Steam release date.",
         Sale_BrowserSortOption_PopularPurchased: "Popular",
         Sale_BrowserSortOption_PopularPurchased_ttip:
-          "The most popular games right now",
+          "The most popular games right now based on purchase data",
         Sale_BrowserSortOption_PopularPurchasedDiscounted: "Discounted",
         Sale_BrowserSortOption_PopularPurchasedDiscounted_ttip:
-          "The most popular games that have a discount right now",
+          "The most popular games based on purchase; that also have a discount right now",
         Sale_BrowserSortOption_Discounted: "Discount Amount",
         Sale_BrowserSortOption_Discounted_ttip:
           "The most deeply discounted items right now",

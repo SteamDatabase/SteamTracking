@@ -5,9 +5,9 @@
   {
     "2l+k": function(e, t, n) {
       "use strict";
-      var u = n("mrSG"),
+      var d = n("mrSG"),
         r = n("vDqi"),
-        d = n.n(r),
+        u = n.n(r),
         m = n("2vnA"),
         p = n("lkRc"),
         a = n("WBba"),
@@ -28,7 +28,7 @@
             );
           }
           return (
-            Object(u.d)(r, n),
+            Object(d.d)(r, n),
             (r.M = function() {
               return (
                 r.sm_m ||
@@ -145,7 +145,7 @@
             );
           }
           return (
-            Object(u.d)(r, n),
+            Object(d.d)(r, n),
             (r.M = function() {
               return (
                 r.sm_m ||
@@ -260,7 +260,7 @@
             );
           }
           return (
-            Object(u.d)(r, n),
+            Object(d.d)(r, n),
             (r.M = function() {
               return (
                 r.sm_m ||
@@ -322,7 +322,7 @@
             );
           }
           return (
-            Object(u.d)(r, n),
+            Object(d.d)(r, n),
             (r.M = function() {
               return (
                 r.sm_m ||
@@ -346,7 +346,13 @@
                         br: o.d.readString,
                         bw: o.h.writeString
                       },
-                      post: { n: 6, c: h }
+                      post: { n: 6, c: h },
+                      valid_post: { n: 7, br: o.d.readBool, bw: o.h.writeBool },
+                      post_error_msg: {
+                        n: 8,
+                        br: o.d.readString,
+                        bw: o.h.writeString
+                      }
                     }
                   }),
                 r.sm_m
@@ -396,7 +402,7 @@
             );
           }
           return (
-            Object(u.d)(r, n),
+            Object(d.d)(r, n),
             (r.M = function() {
               return (
                 r.sm_m ||
@@ -458,7 +464,7 @@
             );
           }
           return (
-            Object(u.d)(r, n),
+            Object(d.d)(r, n),
             (r.M = function() {
               return (
                 r.sm_m ||
@@ -525,7 +531,7 @@
             );
           }
           return (
-            Object(u.d)(r, n),
+            Object(d.d)(r, n),
             (r.M = function() {
               return (
                 r.sm_m ||
@@ -580,7 +586,7 @@
             );
           }
           return (
-            Object(u.d)(r, n),
+            Object(d.d)(r, n),
             (r.M = function() {
               return (
                 r.sm_m ||
@@ -638,7 +644,7 @@
             );
           }
           return (
-            Object(u.d)(r, n),
+            Object(d.d)(r, n),
             (r.M = function() {
               return (
                 r.sm_m ||
@@ -704,7 +710,7 @@
             );
           }
           return (
-            Object(u.d)(r, n),
+            Object(d.d)(r, n),
             (r.M = function() {
               return (
                 r.sm_m ||
@@ -777,7 +783,7 @@
             );
           }
           return (
-            Object(u.d)(r, n),
+            Object(d.d)(r, n),
             (r.M = function() {
               return (
                 r.sm_m ||
@@ -941,9 +947,9 @@
               return Boolean(this.m_strRSSGID);
             }),
             (e.prototype.PreviewPartnerEventsFromRSSFeed = function(r) {
-              return Object(u.b)(this, void 0, void 0, function() {
+              return Object(d.b)(this, void 0, void 0, function() {
                 var t, n;
-                return Object(u.e)(this, function(e) {
+                return Object(d.e)(this, function(e) {
                   switch (e.label) {
                     case 0:
                       return this.BIsLoggedIn()
@@ -978,11 +984,11 @@
             (e.prototype.FetchPublishedEvents = function(a) {
               return (
                 void 0 === a && (a = 100),
-                Object(u.b)(this, void 0, void 0, function() {
+                Object(d.b)(this, void 0, void 0, function() {
                   var t,
                     n,
                     r = this;
-                  return Object(u.e)(this, function(e) {
+                  return Object(d.e)(this, function(e) {
                     switch (e.label) {
                       case 0:
                         return this.BIsLoggedIn()
@@ -1050,12 +1056,12 @@
             (e.prototype.CreateOrUpdateRSSNewFeed = function(i, o) {
               return (
                 void 0 === o && (o = 0),
-                Object(u.b)(this, void 0, void 0, function() {
+                Object(d.b)(this, void 0, void 0, function() {
                   var t,
                     n,
                     r,
                     a = this;
-                  return Object(u.e)(this, function(e) {
+                  return Object(d.e)(this, function(e) {
                     switch (e.label) {
                       case 0:
                         return (
@@ -1072,7 +1078,7 @@
                             "curator/" +
                             this.m_clanAccountID +
                             "/admin/ajaxmanagerssfeed"),
-                          [4, d.a.post(n, t, { withCredentials: !0 })]
+                          [4, u.a.post(n, t, { withCredentials: !0 })]
                         );
                       case 1:
                         return (
@@ -1090,8 +1096,8 @@
               );
             }),
             (e.prototype.UpdateAutomation = function(t) {
-              return Object(u.b)(this, void 0, void 0, function() {
-                return Object(u.e)(this, function(e) {
+              return Object(d.b)(this, void 0, void 0, function() {
+                return Object(d.e)(this, function(e) {
                   return [
                     2,
                     this.CreateOrUpdateRSSNewFeed(
@@ -1103,9 +1109,9 @@
               });
             }),
             (e.prototype.CheckForNewUpdate = function() {
-              return Object(u.b)(this, void 0, void 0, function() {
+              return Object(d.b)(this, void 0, void 0, function() {
                 var t, n;
-                return Object(u.e)(this, function(e) {
+                return Object(d.e)(this, function(e) {
                   switch (e.label) {
                     case 0:
                       return this.m_strRSSGID
@@ -1119,7 +1125,7 @@
                             "curator/" +
                             this.m_clanAccountID +
                             "/admin/ajaxcheckfornews"),
-                          [4, d.a.post(n, t, { withCredentials: !0 })])
+                          [4, u.a.post(n, t, { withCredentials: !0 })])
                         : [3, 2];
                     case 1:
                       e.sent(), (e.label = 2);
@@ -1130,12 +1136,12 @@
               });
             }),
             (e.prototype.CreatePost = function(i, o) {
-              return Object(u.b)(this, void 0, void 0, function() {
+              return Object(d.b)(this, void 0, void 0, function() {
                 var t,
                   n,
                   r,
                   a = this;
-                return Object(u.e)(this, function(e) {
+                return Object(d.e)(this, function(e) {
                   switch (e.label) {
                     case 0:
                       return this.BIsLoggedIn()
@@ -1204,13 +1210,13 @@
                 });
               });
             }),
-            Object(u.c)([m.C], e.prototype, "m_strRSSFeedURL", void 0),
-            Object(u.c)([m.C], e.prototype, "m_strRSSGID", void 0),
-            Object(u.c)([m.C], e.prototype, "m_rtimeRSSLastChecked", void 0),
-            Object(u.c)([m.C], e.prototype, "m_nPollIntervalSeconds", void 0),
-            Object(u.c)([m.C], e.prototype, "m_eRSSFeedLanguage", void 0),
-            Object(u.c)([m.C], e.prototype, "m_eCuratorLanguage", void 0),
-            Object(u.c)([m.C], e.prototype, "m_mapURLToPosted", void 0),
+            Object(d.c)([m.C], e.prototype, "m_strRSSFeedURL", void 0),
+            Object(d.c)([m.C], e.prototype, "m_strRSSGID", void 0),
+            Object(d.c)([m.C], e.prototype, "m_rtimeRSSLastChecked", void 0),
+            Object(d.c)([m.C], e.prototype, "m_nPollIntervalSeconds", void 0),
+            Object(d.c)([m.C], e.prototype, "m_eRSSFeedLanguage", void 0),
+            Object(d.c)([m.C], e.prototype, "m_eCuratorLanguage", void 0),
+            Object(d.c)([m.C], e.prototype, "m_mapURLToPosted", void 0),
             e
           );
         })(),
@@ -1286,9 +1292,9 @@
               return this.m_mapClanAccountToAdmin.get(e);
             }),
             (e.prototype.QueueCuratorAdminInfoLoad = function(n) {
-              return Object(u.b)(this, void 0, void 0, function() {
+              return Object(d.b)(this, void 0, void 0, function() {
                 var t = this;
-                return Object(u.e)(this, function(e) {
+                return Object(d.e)(this, function(e) {
                   return n
                     ? this.m_mapClanAccountToAdmin.has(n)
                       ? [2, Promise.resolve()]
@@ -1312,9 +1318,9 @@
               });
             }),
             (e.prototype.FlushPendingClanInfo = function() {
-              return Object(u.b)(this, void 0, void 0, function() {
+              return Object(d.b)(this, void 0, void 0, function() {
                 var t, n;
-                return Object(u.e)(this, function(e) {
+                return Object(d.e)(this, function(e) {
                   switch (e.label) {
                     case 0:
                       return (
@@ -1349,11 +1355,11 @@
               );
             }),
             (e.prototype.LoadBatchedClanRSSAdminInfo = function(l) {
-              return Object(u.b)(this, void 0, void 0, function() {
+              return Object(d.b)(this, void 0, void 0, function() {
                 var s,
                   t,
                   c = this;
-                return Object(u.e)(this, function(e) {
+                return Object(d.e)(this, function(e) {
                   switch (e.label) {
                     case 0:
                       this.m_cClanInfoRequestsInFlight++,
@@ -1362,7 +1368,7 @@
                         })),
                         (t = function() {
                           var t, n, r, a, i, o;
-                          return Object(u.e)(this, function(e) {
+                          return Object(d.e)(this, function(e) {
                             switch (e.label) {
                               case 0:
                                 (t = Math.min(50, s.length)),
@@ -1378,7 +1384,7 @@
                                   (r = { clanids: l }),
                                   [
                                     4,
-                                    d.a.get(n, {
+                                    u.a.get(n, {
                                       params: r,
                                       withCredentials: !0
                                     })
@@ -1444,13 +1450,13 @@
                 });
               });
             }),
-            Object(u.c)(
+            Object(d.c)(
               [m.C.shallow],
               e.prototype,
               "m_mapClanAccountToAdmin",
               void 0
             ),
-            Object(u.c)(
+            Object(d.c)(
               [m.C.shallow],
               e.prototype,
               "m_mapClanToEventRSSStats",
@@ -1470,6 +1476,7 @@
         PostTitle: "managerss_PostTitle_1Zsns",
         ActivePost: "managerss_ActivePost_h-qBF",
         PostDate: "managerss_PostDate_2vXmu",
+        ErrorPost: "managerss_ErrorPost_aBLy2",
         PostDraft: "managerss_PostDraft_10_gL",
         PostStaged: "managerss_PostStaged_nNzd6",
         PreviewListBtn: "managerss_PreviewListBtn_3NT8s",
@@ -1520,9 +1527,9 @@
         r = n("vDqi"),
         l = n.n(r),
         a = n("2l+k"),
-        u = n("lkRc"),
+        d = n("lkRc"),
         i = n("kLLr"),
-        d = (function() {
+        u = (function() {
           function e() {
             this.m_mapClanToRecommendation = new Map();
           }
@@ -1571,7 +1578,7 @@
                       }),
                       0 < n.length)
                         ? ((r =
-                            u.c.STORE_BASE_URL +
+                            d.c.STORE_BASE_URL +
                             "curator/" +
                             o.GetAccountID() +
                             "/admin/ajaxgetrecbyapps"),
@@ -1580,8 +1587,8 @@
                             l.a.get(r, {
                               params: {
                                 appids: n,
-                                cc: u.c.COUNTRY || "US",
-                                l: u.c.LANGUAGE
+                                cc: d.c.COUNTRY || "US",
+                                l: d.c.LANGUAGE
                               }
                             })
                           ])
@@ -1710,7 +1717,7 @@
                       y.a,
                       {
                         href:
-                          u.c.COMMUNITY_BASE_URL +
+                          d.c.COMMUNITY_BASE_URL +
                           "gid/" +
                           this.m_Admin.GetClanSteamID().ConvertTo64BitString() +
                           "/partnerevents/",
@@ -1736,7 +1743,7 @@
                       "a",
                       {
                         href:
-                          u.c.COMMUNITY_BASE_URL +
+                          d.c.COMMUNITY_BASE_URL +
                           "gid/" +
                           this.m_Admin.GetClanSteamID().ConvertTo64BitString() +
                           "/edit ",
@@ -1979,7 +1986,7 @@
                                             ? ((t = a.GetClanSteamID()),
                                               [
                                                 4,
-                                                d
+                                                u
                                                   .Get()
                                                   .LoadAppRecommendation(t, r)
                                               ])
@@ -2072,7 +2079,7 @@
                         y.a,
                         {
                           href:
-                            u.c.COMMUNITY_BASE_URL +
+                            d.c.COMMUNITY_BASE_URL +
                             "gid/" +
                             t.GetClanSteamID().ConvertTo64BitString() +
                             "/partnerevents/",
@@ -2234,7 +2241,6 @@
                   )
                 )
               }),
-              (e.m_refParent = m.a.createRef()),
               e
             );
           }
@@ -2279,7 +2285,7 @@
               var t = this.props,
                 n = t.newsData,
                 r = t.clanSteamID,
-                a = new _.o();
+                a = new _.p();
               (a.GID = "PreviewPartnerEventRow_0"),
                 (a.clanSteamID = r),
                 (a.postTime = Date.now() / 1e3),
@@ -2412,13 +2418,14 @@
                 l =
                   0 !== e.post.recommendation_state &&
                   c &&
-                  d.Get().BHasReviewForApp(o, c);
+                  u.Get().BHasReviewForApp(o, c);
               return m.a.createElement(
                 "div",
                 {
                   className: Object(E.a)(
                     M.PostCtn,
-                    Boolean(n) ? M.ActivePost : ""
+                    Boolean(n) ? M.ActivePost : "",
+                    Boolean(e.valid_post) ? "" : M.ErrorPost
                   )
                 },
                 m.a.createElement("span", { className: M.PostTitle }, e.title),
@@ -2463,6 +2470,14 @@
                         )
                       )
                   ),
+                Boolean(!e.valid_post && e.post_error_msg) &&
+                  m.a.createElement(
+                    "div",
+                    { className: A.a.ErrorStylesBackground },
+                    Object(B.f)("#Error_Generic_Label"),
+                    " ",
+                    Object(B.f)(e.post_error_msg)
+                  ),
                 m.a.createElement(
                   "div",
                   { className: M.ButtonCtn },
@@ -2489,7 +2504,7 @@
                           {
                             className: Object(E.a)(S.a.Button, M.PreviewBtn),
                             href:
-                              u.c.COMMUNITY_BASE_URL +
+                              d.c.COMMUNITY_BASE_URL +
                               "gid/" +
                               i.GetClanSteamID().ConvertTo64BitString() +
                               "/partnerevents/edit/" +
@@ -2511,7 +2526,7 @@
                             {
                               className: Object(E.a)(S.a.Button, M.PreviewBtn),
                               href:
-                                u.c.STORE_BASE_URL +
+                                d.c.STORE_BASE_URL +
                                 "app/" +
                                 e.post.appids[0] +
                                 "/?curator_clanid=" +
@@ -2769,7 +2784,7 @@
                           }),
                           m.a.createElement(
                             y.a,
-                            { href: u.c.STORE_BASE_URL + "online_conduct/" },
+                            { href: d.c.STORE_BASE_URL + "online_conduct/" },
                             Object(B.f)("#RSSManager_CreateFeed_Conduct_Link")
                           )
                         )
@@ -2923,7 +2938,7 @@
                         "a",
                         {
                           href:
-                            u.c.COMMUNITY_BASE_URL +
+                            d.c.COMMUNITY_BASE_URL +
                             "gid/" +
                             this.props.admin
                               .GetClanSteamID()

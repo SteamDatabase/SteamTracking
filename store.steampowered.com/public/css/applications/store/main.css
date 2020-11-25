@@ -7386,7 +7386,7 @@ textarea {
     position: relative;
     padding: 16px;
     border-top-left-radius: 4px;
-    background-color: #061822;
+    background-color: #1b1f05;
     height: 153px;
     font-size: 12px; }
     .nominationandvote_SteamAwardContainer_3n6v2 .nominationandvote_SteamAwardHeader_2jgrT .nominationandvote_SteamAwardHeaderImage__lRFQ {
@@ -7505,6 +7505,14 @@ textarea {
 
 .nominationandvote_SteamAwardModalGameTitle_15lc0 {
   color: white; }
+
+.nominationandvote_ExpiredEventHeader_3O3Xs {
+  font-size: 16px;
+  color: #c9d3d9;
+  font-weight: bold;
+  margin-bottom: 30px;
+  padding: 10px;
+  background: rgba(30, 33, 38, 0.5); }
 
 .partnereventdisplay_EventDetailsPageContainer_2Ptra {
   display: flex;

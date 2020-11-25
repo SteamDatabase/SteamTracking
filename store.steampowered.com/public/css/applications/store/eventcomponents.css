@@ -574,6 +574,12 @@
         margin-bottom: 24px; } }
   .eventcalendartile_TileContainer_1E3An .eventcalendartile_FooterRightSide_1Hhqg {
     display: flex; }
+    @media screen and (max-width: 700px) {
+      .eventcalendartile_TileContainer_1E3An .eventcalendartile_FooterRightSide_1Hhqg {
+        justify-content: space-between;
+        width: 100%;
+        padding: 0 20%;
+        height: 40px; } }
     .eventcalendartile_TileContainer_1E3An .eventcalendartile_FooterRightSide_1Hhqg .eventcalendartile_Options_3nZg0 svg {
       width: 18px;
       height: 18px;
@@ -805,11 +811,12 @@
       margin-right: 12px;
       margin-top: 12px; }
     .eventcalendartile_TileContainer_1E3An .eventcalendartile_Tile_3xvUZ {
-      background: unset;
+      background-image: linear-gradient(#3a404a, rgba(50, 53, 62, 0) 100%);
       border-top: 1px solid #3a404a; }
       .eventcalendartile_TileContainer_1E3An .eventcalendartile_Tile_3xvUZ .eventcalendartile_TileTextHeader_3-0KO {
         flex-direction: column-reverse;
-        margin-bottom: 8px; }
+        margin-bottom: 8px;
+        height: 25px; }
       .eventcalendartile_TileContainer_1E3An .eventcalendartile_Tile_3xvUZ .eventcalendartile_MainContentContainer_2pq2v .eventcalendartile_TileTextContainer_3IQK4 {
         padding-bottom: 0px; }
         .eventcalendartile_TileContainer_1E3An .eventcalendartile_Tile_3xvUZ .eventcalendartile_MainContentContainer_2pq2v .eventcalendartile_TileTextContainer_3IQK4 .eventcalendartile_EventName_1M8-P {
@@ -867,18 +874,6 @@
           .eventcalendartile_TileContainer_1E3An .eventcalendartile_Tile_3xvUZ .eventcalendartile_MainContentContainer_2pq2v .eventcalendartile_CoverImageCtn_3HF9t .eventcalendartile_EventCapsuleCtn_27kWH .eventcalendartile_TileImage_d8bPi {
             width: 100%;
             height: auto; }
-    .eventcalendartile_TileContainer_1E3An.eventcalendartile_EventType28_1qGfE {
-      /* news */ }
-      .eventcalendartile_TileContainer_1E3An.eventcalendartile_EventType28_1qGfE .eventcalendartile_Tile_3xvUZ {
-        background: unset; }
-    .eventcalendartile_TileContainer_1E3An.eventcalendartile_EventType35_2wHiB, .eventcalendartile_TileContainer_1E3An.eventcalendartile_EventType23_590_l, .eventcalendartile_TileContainer_1E3An.eventcalendartile_EventType11_2Gv13 {
-      /* in-game events, loot events, livestreams */ }
-      .eventcalendartile_TileContainer_1E3An.eventcalendartile_EventType35_2wHiB .eventcalendartile_Tile_3xvUZ, .eventcalendartile_TileContainer_1E3An.eventcalendartile_EventType23_590_l .eventcalendartile_Tile_3xvUZ, .eventcalendartile_TileContainer_1E3An.eventcalendartile_EventType11_2Gv13 .eventcalendartile_Tile_3xvUZ {
-        background: unset; }
-    .eventcalendartile_TileContainer_1E3An.eventcalendartile_EventType13_2D0ZN {
-      /* regular updates */ }
-      .eventcalendartile_TileContainer_1E3An.eventcalendartile_EventType13_2D0ZN .eventcalendartile_Tile_3xvUZ {
-        background: unset; }
     .eventcalendartile_TileContainer_1E3An.eventcalendartile_VideoPlayerReady_1onQj {
       position: relative; }
       .eventcalendartile_TileContainer_1E3An.eventcalendartile_VideoPlayerReady_1onQj .eventcalendartile_Tile_3xvUZ .eventcalendartile_MainContentContainer_2pq2v {
@@ -1441,11 +1436,13 @@
             .eventcalendar_EventCalendarContainer_1e3Wb .eventcalendar_RowContainer_3yqpP .eventcalendar_Rows_r3Dia .eventcalendar_CalendarRow_398u2.eventcalendar_GroupHeader_3j2de {
               height: 37px;
               font-size: 18px;
-              padding: 8px 10px; }
+              padding: 8px 10px;
+              background: #254d60; }
               .eventcalendar_EventCalendarContainer_1e3Wb .eventcalendar_RowContainer_3yqpP .eventcalendar_Rows_r3Dia .eventcalendar_CalendarRow_398u2.eventcalendar_GroupHeader_3j2de .eventcalendar_GroupHeaderTitle_2aVLR {
                 line-height: 25px; }
               .eventcalendar_EventCalendarContainer_1e3Wb .eventcalendar_RowContainer_3yqpP .eventcalendar_Rows_r3Dia .eventcalendar_CalendarRow_398u2.eventcalendar_GroupHeader_3j2de .eventcalendar_GroupHeaderLine_bcTEU {
-                margin-top: 11px; }
+                margin-top: 11px;
+                border-top: none; }
               .eventcalendar_EventCalendarContainer_1e3Wb .eventcalendar_RowContainer_3yqpP .eventcalendar_Rows_r3Dia .eventcalendar_CalendarRow_398u2.eventcalendar_GroupHeader_3j2de .eventcalendar_SeeAllLink_28rp7 {
                 font-size: 10px; } }
           @media screen and (max-width: 500px) {
@@ -1799,7 +1796,7 @@
 
 .curatorfeedsuggestrow_FeedSuggestCaption_38Zh0 {
   font-size: 17px;
-  margin: 4px; }
+  margin: 4px 40px 4px 4px; }
   @media screen and (max-width: 700px) {
     .curatorfeedsuggestrow_FeedSuggestCaption_38Zh0 {
       font-size: 14px; } }
@@ -1816,11 +1813,16 @@
   cursor: pointer;
   position: absolute;
   right: 0px;
-  top: 11px;
+  top: 20px;
   width: 16px;
   height: 16px;
   margin-right: 20px;
   margin-top: 5px; }
+  @media screen and (max-width: 700px) {
+    .curatorfeedsuggestrow_DismissButton_3YtGj {
+      top: 0; } }
+  .curatorfeedsuggestrow_DismissButton_3YtGj svg {
+    fill: #8a9299; }
   .curatorfeedsuggestrow_DismissButton_3YtGj:hover svg {
     fill: white; }
 
@@ -2186,6 +2188,55 @@
     flex: 1; }
   .eventtilecarousel_EventTileCarouselTitleContainer_3I_aG .eventtilecarousel_EventTileCarouselFollow_1qgVA {
     margin-right: 20px; }
+
+.languagefeedrow_LanguageFeedCtn_3o5ly {
+  position: relative;
+  background-image: linear-gradient(115deg, #6792a2 0%, #383f4b 100%);
+  width: 100%;
+  max-width: 970px;
+  padding: 10px 14px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  margin: 20px 0px; }
+  .languagefeedrow_LanguageFeedCtn_3o5ly .languagefeedrow_BodyFlow_1JI7C {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center; }
+  .languagefeedrow_LanguageFeedCtn_3o5ly .languagefeedrow_LeftColumn_3l03T {
+    width: 80px;
+    height: 80px; }
+    .languagefeedrow_LanguageFeedCtn_3o5ly .languagefeedrow_LeftColumn_3l03T SVG {
+      fill: white;
+      width: 80px;
+      height: 80px; }
+  .languagefeedrow_LanguageFeedCtn_3o5ly .languagefeedrow_RightColumn_XKuYh {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    margin-left: 20px;
+    max-width: 700px; }
+  .languagefeedrow_LanguageFeedCtn_3o5ly .languagefeedrow_Title_Tzlhg {
+    font-size: 24px;
+    margin-bottom: 5px;
+    color: white; }
+  .languagefeedrow_LanguageFeedCtn_3o5ly .languagefeedrow_LanguageList_1VBz- {
+    font-size: 12px;
+    margin-bottom: 5px; }
+  .languagefeedrow_LanguageFeedCtn_3o5ly .languagefeedrow_Text_1SGbC {
+    font-size: 14px; }
+
+.languagefeedrow_DismissButton_3zHKD {
+  cursor: pointer;
+  position: absolute;
+  right: 0px;
+  top: 11px;
+  width: 16px;
+  height: 16px;
+  margin-right: 20px;
+  margin-top: 5px; }
+  .languagefeedrow_DismissButton_3zHKD:hover svg {
+    fill: white; }
 
 .eventmoderationaudit_ModeratorAuditActionCtn_f6z__ {
   margin-bottom: 10px; }

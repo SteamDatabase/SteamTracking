@@ -10340,6 +10340,16 @@
                         q: !0,
                         br: p.d.readEnum,
                         bw: p.h.writeRepeatedEnum
+                      },
+                      max_slots_per_type: {
+                        n: 5,
+                        br: p.d.readUint32,
+                        bw: p.h.writeUint32
+                      },
+                      max_upgradable_level: {
+                        n: 6,
+                        br: p.d.readUint32,
+                        bw: p.h.writeUint32
                       }
                     }
                   }),
@@ -11534,7 +11544,7 @@
                 })
             };
           },
-          [t]
+          [t, r, i]
         );
       }
       function ce(e) {

@@ -728,7 +728,6 @@ background-color: transparent;
 }
 
 .profile_customization_header {
-	
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: 200; /* thin */
 
@@ -745,18 +744,6 @@ background-color: transparent;
 
 .profile_customization.myart .profile_customization_header {
 	display:none;
-			font-family: "Motiva Sans", Sans-serif;
-		font-weight: 200; /* thin */
-
-			background: var(--color-showcase-header);
-	background: linear-gradient(90deg, var(--gradient-showcase-header-left) 0%, var(--color-showcase-header) 90%);
-	padding: 5px 10px 5px 10px;
-	color: #ffffff;
-	font-size: 16px;
-	line-height: 30px;
-	overflow: hidden;
-	white-space: nowrap;
-	text-overflow: ellipsis;
 }
 
 .profile_customization.myart .profile_customization_editlink
@@ -1592,6 +1579,18 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:nth-c
     margin-right: 7px;
 }
 
+.screenshot_showcase_primary.single {
+	float: none;
+	width: 100%;
+	min-height: 100px;
+	max-width: 100%;
+	margin-right: 0px;
+}
+
+.screenshot_showcase_primary.showcase_slot.openslot {
+	height: 397px;
+}
+
 .screenshot_showcase_screenshot {
 	cursor: pointer;
 	border: 1px solid #000000;
@@ -1610,6 +1609,11 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:nth-c
 
 .screenshot_showcase_screenshot img {
 	display: block;
+}
+
+.screenshot_showcase_primary .screenshot_showcase_screenshot img {
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .screenshot_showcase_itemname {
@@ -1663,6 +1667,19 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:nth-c
 }
 .screenshot_showcase .screenshot_showcase_primary.showcase_slot.openslot .showcase_openslot_placeholder {
     line-height: 337px !important;
+}
+.screenshot_showcase .screenshot_showcase_primary.single.showcase_slot.openslot .showcase_openslot_placeholder {
+	line-height: 100px !important;
+}
+
+.screenshot_showcase .showcase_slot .play_video_icon
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -30px;
+	margin-left: -40px;
+	z-index: 2;
 }
 
 .profile_recentgame_header {

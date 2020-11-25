@@ -102,7 +102,7 @@
                           console.log(" ProtoBuf sending..."),
                           console.log(t),
                           console.log("Target ID is..." + t.Body().targetid()),
-                          [4, u.k.AddReaction(this.m_transport, t)])
+                          [4, u.m.AddReaction(this.m_transport, t)])
                         : [2, { eResult: 21, strMessage: "Not logged on" }];
                     case 1:
                       return (
@@ -136,7 +136,7 @@
                           (t = d.a.Init(u.g)).SetBodyFields({
                             steamid: G.i.steamid
                           }),
-                          [4, u.k.GetSummary(this.m_transport, t)])
+                          [4, u.m.GetSummary(this.m_transport, t)])
                         : [2, Promise.resolve(null)];
                     case 1:
                       return (
@@ -173,7 +173,7 @@
                       return (
                         (this.m_bReactionConfigurationLoadedOrInFlight = !0),
                         (t = d.a.Init(u.e)),
-                        [4, u.k.GetReactionConfig(this.m_transport, t)]
+                        [4, u.m.GetReactionConfig(this.m_transport, t)]
                       );
                     case 1:
                       if (1 == (a = e.sent()).GetEResult())
@@ -214,7 +214,7 @@
                           .Body()
                           .set_target_type(this.m_eTargetType),
                         t.Body().set_targetid(this.m_targetID),
-                        [4, u.k.GetReactions(this.m_transport, t)]
+                        [4, u.m.GetReactions(this.m_transport, t)]
                       );
                     case 1:
                       return (
@@ -791,7 +791,7 @@
             C.createElement(
               "div",
               { className: L.Left },
-              C.createElement(b.D, { className: L.BalanceIcon }),
+              C.createElement(b.E, { className: L.BalanceIcon }),
               C.createElement(
                 "div",
                 { className: L.BalanceDetails },
@@ -912,7 +912,7 @@
           return C.createElement(
             "span",
             Object(s.a)({}, n, { className: Object(j.a)(a, L.PointsAmount) }),
-            C.createElement(b.D, { className: L.PointsAmountIcon }),
+            C.createElement(b.E, { className: L.PointsAmountIcon }),
             t
           );
         };

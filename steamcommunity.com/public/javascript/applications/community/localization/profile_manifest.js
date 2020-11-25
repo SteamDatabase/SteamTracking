@@ -85,9 +85,9 @@ LocalizationManifestReady("profile", "manifest", {
   Profile_Edit_YourGameAvatars: "Your Game Avatars",
   Profile_Edit_MoreGameAvatars: "More Game Avatars",
   Profile_Edit_YourPreviousAvatars: "Recently Uploaded Avatars",
-  Profile_About: "General",
+  Profile_About: "About",
   Profile_Edit_About_Instructions:
-    "Set your profile name and details.  Providing additional information like your real name can help friends find you on the Steam Community.\n\nYour profile name represents you throughout Steam and cannot be hidden. As it is displayed to other users on the Steam Store, Community and in-game, your profile name must adhere to the [url=https://support.steampowered.com/kb_article.php?ref=4045-USHJ-3810]Community Guidelines[/url].",
+    "Set your profile name and details. Providing additional information like your real name can help friends find you on the Steam Community.\n\nYour profile name and avatar represent you throughout Steam, and must be appropriate for all audiences. Please see the [url=https://support.steampowered.com/kb_article.php?ref=6864-RYOA-6811]FAQ[/url] for more details.",
   Profile_Edit_Background_Instructions:
     "Choose a background to show on your profile page.",
   Profile_Edit_MiniProfile_Instructions:
