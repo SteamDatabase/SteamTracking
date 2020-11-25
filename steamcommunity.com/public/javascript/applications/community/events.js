@@ -7233,49 +7233,48 @@
                 e = a.GetAppReleaseDate(),
                 t = B()("2019-12-03T10:00:00-08:00").unix(),
                 n = e && t < e,
-                r = (n ? [0, 50, 51, 56, 57, 53, 55, 58, 54, 59] : [0, 52]).map(
-                  function(e) {
-                    var t = "EventEditor_SteamAwardCategory_" + e;
-                    return Xe.createElement(
-                      "div",
-                      {
-                        key: t,
-                        className: Object(lt.a)(
-                          ct.a.FlexRowContainer,
-                          ct.a.RadioOption
-                        )
-                      },
-                      Xe.createElement("input", {
-                        type: "radio",
-                        name: "SteamAwardCategoryRadioButtons",
-                        id: t,
-                        value: e,
-                        checked: a.GetSteamAwardCategory() == e,
-                        onChange: function() {
-                          return a.SetSteamAwardCategory(e);
-                        }
-                      }),
-                      Xe.createElement(
-                        "label",
-                        { htmlFor: t, className: Ut.CategoryOption },
-                        Xe.createElement(
-                          "span",
-                          { className: Ut.CategoryTitle },
-                          Object(V.f)("#promo_steamawards2020_cat" + e)
-                        ),
-                        Xe.createElement(
-                          "span",
-                          null,
-                          " - ",
-                          Object(V.f)(
-                            "#promo_steamawards2020_cat" + e + "_desc"
-                          ),
-                          " "
-                        )
+                r = (n
+                  ? [0, 50, 51, 52, 56, 57, 53, 55, 58, 54, 59]
+                  : [0, 52]
+                ).map(function(e) {
+                  var t = "EventEditor_SteamAwardCategory_" + e;
+                  return Xe.createElement(
+                    "div",
+                    {
+                      key: t,
+                      className: Object(lt.a)(
+                        ct.a.FlexRowContainer,
+                        ct.a.RadioOption
                       )
-                    );
-                  }
-                );
+                    },
+                    Xe.createElement("input", {
+                      type: "radio",
+                      name: "SteamAwardCategoryRadioButtons",
+                      id: t,
+                      value: e,
+                      checked: a.GetSteamAwardCategory() == e,
+                      onChange: function() {
+                        return a.SetSteamAwardCategory(e);
+                      }
+                    }),
+                    Xe.createElement(
+                      "label",
+                      { htmlFor: t, className: Ut.CategoryOption },
+                      Xe.createElement(
+                        "span",
+                        { className: Ut.CategoryTitle },
+                        Object(V.f)("#promo_steamawards2020_cat" + e)
+                      ),
+                      Xe.createElement(
+                        "span",
+                        null,
+                        " - ",
+                        Object(V.f)("#promo_steamawards2020_cat" + e + "_desc"),
+                        " "
+                      )
+                    )
+                  );
+                });
               return Xe.createElement(
                 "div",
                 { className: Ut.SteamAwardCategoryPicker },

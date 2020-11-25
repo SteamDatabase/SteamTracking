@@ -185,7 +185,7 @@ function HomeSaleFilterHeroes( $Parent )
 	var $Row = $Parent.find('.hero_row' );
 	var rgHeroes = $Row.children('.hero_capsule').toArray();
 
-	var rgAppPriorityList = g_rgAppPriorityLists['hero'] || [];
+	var rgAppPriorityList = g_rgAppPriorityLists['tier1'] || [];
 
 
 	var rgPositionByApp = {};
