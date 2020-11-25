@@ -1886,7 +1886,7 @@
         g = a.n(z),
         U = a("mrSG"),
         n = a("vDqi"),
-        C = a.n(n),
+        T = a.n(n),
         m = a("2vnA"),
         r = a("TyAF"),
         o = a("Gp1o"),
@@ -1910,7 +1910,7 @@
         R = a("6Y59"),
         h = a("5E+2"),
         S = a("+d9t"),
-        O = a("r64O"),
+        C = a("r64O"),
         W = a("exH9"),
         q = a("X3Ds"),
         Z = a("TLQK"),
@@ -1918,7 +1918,7 @@
         Y = a("lkRc"),
         l = a("ka0M"),
         x = a("ee7K"),
-        w = (function() {
+        O = (function() {
           function e() {
             (this.m_mapNewsCurators = new Map()),
               (this.m_bIsLoadComplete = !1),
@@ -1973,7 +1973,7 @@
                           }),
                         (t = Y.c.STORE_BASE_URL + "events/ajaxgetnewscurators"),
                         (a = { origin: self.origin }),
-                        [4, C.a.get(t, { params: a })]
+                        [4, T.a.get(t, { params: a })]
                       );
                     case 1:
                       return (
@@ -2012,7 +2012,7 @@
             e
           );
         })(),
-        T = a("qiKp"),
+        w = a("qiKp"),
         I = a("bS9Q"),
         j = a("I2Hi"),
         k = a.n(j);
@@ -2040,7 +2040,7 @@
                 ["apps", 0],
                 ["curators", 0]
               ])),
-              (e.m_timerForChange = new T.b()),
+              (e.m_timerForChange = new w.b()),
               e
             );
           }
@@ -2068,7 +2068,7 @@
                 var t, a, n, r, o, i, l, s, c;
                 return Object(U.e)(this, function(e) {
                   for (
-                    t = w.Get().allNewsCurators, a = [], n = 0, r = t;
+                    t = O.Get().allNewsCurators, a = [], n = 0, r = t;
                     n < r.length;
                     n++
                   )
@@ -2150,7 +2150,7 @@
                           excluded_content_descriptors: x.a.GetExcludedContentDescriptor()
                         }),
                         (r = Y.c.STORE_BASE_URL + "search/suggest"),
-                        [4, C.a.get(r, { params: n, withCredentials: !0 })]
+                        [4, T.a.get(r, { params: n, withCredentials: !0 })]
                       );
                     case 1:
                       return ((o = e.sent()),
@@ -2386,7 +2386,7 @@
             return (
               (e.state = { bLoading: !1, eventModel: e.props.eventModel }),
               (e.m_refParent = z.createRef()),
-              (e.m_cancelSignal = C.a.CancelToken.source()),
+              (e.m_cancelSignal = T.a.CancelToken.source()),
               e
             );
           }
@@ -3674,7 +3674,7 @@
               t = V.a.Get();
             !0 !== t.GetPreviouslyLoadedVote(this.props.eventModel) &&
               Object(Te.a)(e, t) &&
-              (t.Vote(e, !0, C.a.CancelToken.source()),
+              (t.Vote(e, !0, T.a.CancelToken.source()),
               me.b.RecordAppInteractionEvent(e.appid, me.a.k_eThumbsUp));
           }),
           (t.prototype.OnDiscussionClicked = function() {
@@ -3811,7 +3811,7 @@
         qe = (function(t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
-            return (e.state = { bLoaded: w.Get().IsLoaded() }), e;
+            return (e.state = { bLoaded: O.Get().IsLoaded() }), e;
           }
           return (
             Object(U.d)(e, t),
@@ -3822,7 +3822,7 @@
                     case 0:
                       return this.state.bLoaded
                         ? [3, 2]
-                        : [4, w.Get().WaitForInitialLoad()];
+                        : [4, O.Get().WaitForInitialLoad()];
                     case 1:
                       e.sent(), this.setState({ bLoaded: !0 }), (e.label = 2);
                     case 2:
@@ -3896,8 +3896,7 @@
           return (
             Object(U.d)(t, e),
             (t.prototype.render = function() {
-              var e = w
-                .Get()
+              var e = O.Get()
                 .GetCuratorsForLang(this.props.lang)
                 .map(function(e) {
                   return E.a.GetClanInfoByClanAccountID(e.clanAccountID);
@@ -4736,7 +4735,7 @@
                   "curators" == e.corpus
                     ? (a = "group/" + e.id)
                     : "games" == e.corpus &&
-                      (Object(O.a)(
+                      (Object(C.a)(
                         Object(v.b)(e.type),
                         "Unexpected app type " + e.type
                       ),
@@ -5251,7 +5250,7 @@
                     case 0:
                       return this.state.rgCuratorList
                         ? [3, 2]
-                        : [4, w.Get().WaitForInitialLoad()];
+                        : [4, O.Get().WaitForInitialLoad()];
                     case 1:
                       e.sent(),
                         this.setState({
@@ -5311,8 +5310,7 @@
                 }) && e.push(0);
               for (var t = new Array(), a = 0, n = e; a < n.length; a++) {
                 var r = n[a],
-                  o = w
-                    .Get()
+                  o = O.Get()
                     .GetCuratorsForLang(r)
                     .filter(function(e) {
                       return !x.a.BIsIgnoringCurator(e.clanAccountID);
@@ -5900,7 +5898,7 @@
         if (e && "none" != getComputedStyle(e).display) return e;
         var t = document.getElementsByClassName("responsive_header");
         return (
-          Object(O.a)(t.length <= 1, "Must have at most one responsive_header"),
+          Object(C.a)(t.length <= 1, "Must have at most one responsive_header"),
           1 != t.length ? null : t[0]
         );
       }
@@ -5939,7 +5937,7 @@
                 nLogInBannerHeight: 0
               }),
               (e.m_refControlBar = z.createRef()),
-              (e.m_cancelSignal = C.a.CancelToken.source()),
+              (e.m_cancelSignal = T.a.CancelToken.source()),
               e
             );
           }
@@ -7544,7 +7542,7 @@
                           e.trys.push([1, 3, , 4]),
                           [
                             4,
-                            C.a.get(t, {
+                            T.a.get(t, {
                               params: a,
                               withCredentials: !0,
                               cancelToken: s ? s.token : void 0
@@ -7609,7 +7607,7 @@
                         n.append("remove_tags", s.join(",")),
                         [
                           4,
-                          C.a.post(t, n, {
+                          T.a.post(t, n, {
                             withCredentials: !0,
                             cancelToken: r.token
                           })
@@ -7637,7 +7635,7 @@
                         a.append("new_event_type", "" + i),
                         [
                           4,
-                          C.a.post(t, a, {
+                          T.a.post(t, a, {
                             withCredentials: !0,
                             cancelToken: n.token
                           })
@@ -7761,7 +7759,7 @@
                           }),
                           [
                             4,
-                            C.a.get(t, {
+                            T.a.get(t, {
                               params: a,
                               withCredentials: !0,
                               cancelToken: r ? r.token : void 0
@@ -7806,7 +7804,7 @@
                     return Object(U.e)(this, function(e) {
                       switch (e.label) {
                         case 0:
-                          (t = C.a.CancelToken.source()),
+                          (t = T.a.CancelToken.source()),
                             (o.current = t.cancel),
                             (e.label = 1);
                         case 1:
@@ -7877,7 +7875,7 @@
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (
-              (e.m_cancelSignal = C.a.CancelToken.source()),
+              (e.m_cancelSignal = T.a.CancelToken.source()),
               (e.m_refScroll = z.createRef()),
               (e.m_IntervalTimer = void 0),
               (e.state = {
@@ -8332,7 +8330,7 @@
                 bShowAsModal: !1,
                 bSavingModeration: !1
               }),
-              (e.m_cancelSignal = C.a.CancelToken.source()),
+              (e.m_cancelSignal = T.a.CancelToken.source()),
               e
             );
           }
@@ -8663,7 +8661,7 @@
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (
               (e.state = { bDownloadingImages: !1, nLocLanguages: 0 }),
-              (e.m_cancelSignal = C.a.CancelToken.source()),
+              (e.m_cancelSignal = T.a.CancelToken.source()),
               e
             );
           }
@@ -8817,7 +8815,7 @@
               (e.state = {
                 bLoadingAppInfo: !_.a.BIsAppidLoaded(e.props.appid)
               }),
-              (e.m_cancelSignal = C.a.CancelToken.source()),
+              (e.m_cancelSignal = T.a.CancelToken.source()),
               e
             );
           }
@@ -9026,7 +9024,7 @@
                   value: { eventType: 34 }
                 }
               }),
-              (e.m_cancelSignal = C.a.CancelToken.source()),
+              (e.m_cancelSignal = T.a.CancelToken.source()),
               e
             );
           }
@@ -9226,7 +9224,7 @@
                 bHorror: e.props.eventModel.BHasTag("horror"),
                 bCute: e.props.eventModel.BHasTag("cute")
               }),
-              (e.m_cancelSignal = C.a.CancelToken.source()),
+              (e.m_cancelSignal = T.a.CancelToken.source()),
               e
             );
           }
@@ -9388,7 +9386,7 @@
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (
               (e.state = { bLoadingEvent: !0 }),
-              (e.m_cancelSignal = C.a.CancelToken.source()),
+              (e.m_cancelSignal = T.a.CancelToken.source()),
               e
             );
           }
@@ -9875,7 +9873,7 @@
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (
-              (e.m_cancelSignal = C.a.CancelToken.source()),
+              (e.m_cancelSignal = T.a.CancelToken.source()),
               (e.m_nImageID = 0),
               (e.m_mapArtworkResizeSuccess = new Map()),
               (e.state = { eBackfillState: void 0 }),
@@ -10466,6 +10464,7 @@
               (this.m_rgMySaleTags = null),
               (this.m_rgMyTagRecommendation = null),
               (this.m_mapSaleGameListsByFlavor = new Map()),
+              (this.m_mapPromisesByFlavor = new Map()),
               (this.m_rgTopN = null);
           }
           return (
@@ -10487,7 +10486,7 @@
                           ? [3, 2]
                           : [
                               4,
-                              C.a.get(
+                              T.a.get(
                                 Y.c.STORE_BASE_URL + "actions/ajaxgetdiscounts",
                                 {
                                   params: Object(U.a)(Object(U.a)({}, o), {
@@ -10561,7 +10560,7 @@
                             ? [3, 2]
                             : [
                                 4,
-                                C.a.get(
+                                T.a.get(
                                   Y.c.STORE_BASE_URL +
                                     "saleaction/ajaxgetwishlistonsale",
                                   { withCredentials: !0 }
@@ -10593,7 +10592,7 @@
                             ? [3, 2]
                             : [
                                 4,
-                                C.a.get(
+                                T.a.get(
                                   Y.c.STORE_BASE_URL +
                                     "saleaction/ajaxgetdlconsale",
                                   { withCredentials: !0 }
@@ -10624,7 +10623,7 @@
                             ? [3, 2]
                             : [
                                 4,
-                                C.a.get(
+                                T.a.get(
                                   Y.c.STORE_BASE_URL +
                                     "saleaction/ajaxgetsoundtracksonsale",
                                   { withCredentials: !0 }
@@ -10657,7 +10656,7 @@
                             ? [3, 2]
                             : [
                                 4,
-                                C.a.get(
+                                T.a.get(
                                   Y.c.STORE_BASE_URL +
                                     "saleaction/ajaxgetironsale",
                                   { withCredentials: !0 }
@@ -10689,7 +10688,7 @@
                             ? [3, 2]
                             : [
                                 4,
-                                C.a.get(
+                                T.a.get(
                                   Y.c.STORE_BASE_URL +
                                     "saleaction/ajaxgetsaletags",
                                   { withCredentials: !1 }
@@ -10732,7 +10731,7 @@
                               }),
                               [
                                 4,
-                                C.a.get(t, { params: a, withCredentials: !0 })
+                                T.a.get(t, { params: a, withCredentials: !0 })
                               ]));
                     case 1:
                       200 == (n = e.sent()).status &&
@@ -10761,7 +10760,9 @@
                 Array.isArray(e.appids)
               );
             }),
-            (e.prototype.GetSaleGamesByFlavor = function(
+            (e.prototype.InternalGetSaleGamesByFlavor = function(
+              m,
+              v,
               h,
               _,
               b,
@@ -10771,61 +10772,54 @@
               y,
               S
             ) {
+              var C, O, w;
               return (
                 void 0 === E && (E = 0),
                 void 0 === y && (y = void 0),
                 Object(U.b)(this, void 0, void 0, function() {
-                  var t, a, n, r, o, i, l, s, c, u, d, p, m, v;
+                  var t, a, n, r, o, i, l, s, c, u, d, p;
                   return Object(U.e)(this, function(e) {
                     switch (e.label) {
                       case 0:
-                        return ((t = Boolean(y)) &&
-                          ((g = "search"), (_ = void 0)),
-                        (a = this.GetFlavorCacheKey(
-                          g,
-                          _,
-                          y,
-                          b.AnnouncementGID
-                        )),
-                        (n = this.m_mapSaleGameListsByFlavor.get(a)) ||
-                          ((r =
+                        return ((t = this.m_mapSaleGameListsByFlavor.get(m)) ||
+                          ((a =
                             "browser_" +
                             g +
                             (_ ? "_" + _ : "_*") +
-                            (t ? y : "")),
-                          (o = Object(Y.f)(r, "application_config")),
-                          this.ValidateDataGameByFlavor(o)
-                            ? ((n = o),
-                              this.m_mapSaleGameListsByFlavor.set(a, o))
-                            : ((n = {
+                            (v ? y : "")),
+                          (n = Object(Y.f)(a, "application_config")),
+                          this.ValidateDataGameByFlavor(n)
+                            ? ((t = n),
+                              this.m_mapSaleGameListsByFlavor.set(m, n))
+                            : ((t = {
                                 appids: [],
                                 solr_index: 0,
                                 possible_has_more: !0
                               }),
-                              this.m_mapSaleGameListsByFlavor.set(a, n))),
-                        (i = n.appids.length),
-                        0 < (l = E + f - i) && n.possible_has_more)
-                          ? ((s =
+                              this.m_mapSaleGameListsByFlavor.set(m, t))),
+                        (r = t.appids.length),
+                        0 < (o = E + f - r) && t.possible_has_more)
+                          ? ((i =
                               Y.c.STORE_BASE_URL +
                               (h
                                 ? "saleaction/ajaxpreviewsaledynamicappquery"
                                 : "saleaction/ajaxgetsaledynamicappquery")),
-                            (c = {
+                            (l = {
                               cc: Y.c.COUNTRY,
                               l: Y.c.LANGUAGE,
                               clanAccountID: b.clanSteamID.GetAccountID(),
                               clanAnnouncementGID: b.AnnouncementGID,
                               flavor: g,
-                              start: n.solr_index,
-                              count: Math.max(l, 25),
+                              start: t.solr_index,
+                              count: Math.max(o, 25),
                               tabuniqueid: _,
                               return_capsules: !0,
-                              search: y
+                              search: v ? y : void 0
                             }),
                             [
                               4,
-                              C.a.get(s, {
-                                params: c,
+                              T.a.get(i, {
+                                params: l,
                                 withCredentials: h,
                                 cancelToken: null == S ? void 0 : S.token
                               })
@@ -10833,28 +10827,125 @@
                           : [3, 2];
                       case 1:
                         if (
-                          200 != (u = e.sent()).status ||
-                          !u.data ||
-                          !u.data.appids
+                          200 != (null == (s = e.sent()) ? void 0 : s.status) ||
+                          1 !=
+                            (null === (C = s.data) || void 0 === C
+                              ? void 0
+                              : C.success) ||
+                          null === (O = s.data) ||
+                          void 0 === O ||
+                          !O.appids
                         )
-                          throw new Error("query failed, status=" + u.status);
-                        for (d = 0, p = u.data.appids; d < p.length; d++)
-                          (m = p[d]), n.appids.push(m);
-                        (n.possible_has_more = u.data.possible_has_more),
-                          (n.solr_index = u.data.solr_index),
-                          u.data.app_info && pe.a.AddAppLinks(u.data.app_info),
+                          throw new Error(
+                            "query failed, status=" +
+                              (null == s ? void 0 : s.status) +
+                              " success: " +
+                              (null === (w = null == s ? void 0 : s.data) ||
+                              void 0 === w
+                                ? void 0
+                                : w.success)
+                          );
+                        for (c = 0, u = s.data.appids; c < u.length; c++)
+                          (d = u[c]), t.appids.push(d);
+                        (t.possible_has_more = s.data.possible_has_more),
+                          (t.solr_index = s.data.solr_index),
+                          s.data.app_info && pe.a.AddAppLinks(s.data.app_info),
                           (e.label = 2);
                       case 2:
                         return (
-                          this.m_mapSaleGameListsByFlavor.set(a, n),
-                          (v = n.possible_has_more || E + f < n.appids.length),
+                          this.m_mapSaleGameListsByFlavor.set(m, t),
+                          (p = t.possible_has_more || E + f < t.appids.length),
                           [
                             2,
                             {
-                              appids: n.appids.slice(E, f),
-                              bHasPossibleMoreResults: v
+                              appids: t.appids.slice(E, f),
+                              bHasPossibleMoreResults: p
                             }
                           ]
+                        );
+                    }
+                  });
+                })
+              );
+            }),
+            (e.prototype.GetSaleGamesByFlavor = function(
+              o,
+              i,
+              l,
+              s,
+              c,
+              u,
+              d,
+              p
+            ) {
+              return (
+                void 0 === u && (u = 0),
+                void 0 === d && (d = void 0),
+                Object(U.b)(this, void 0, void 0, function() {
+                  var t,
+                    a,
+                    n,
+                    r = this;
+                  return Object(U.e)(this, function(e) {
+                    switch (e.label) {
+                      case 0:
+                        (d = null == d ? void 0 : d.trim()),
+                          (t = Boolean(d)) && ((s = "search"), (i = void 0)),
+                          (a = this.GetFlavorCacheKey(
+                            s,
+                            i,
+                            d,
+                            l.AnnouncementGID
+                          )),
+                          (e.label = 1);
+                      case 1:
+                        if (!this.m_mapPromisesByFlavor.has(a)) return [3, 6];
+                        e.label = 2;
+                      case 2:
+                        return (
+                          e.trys.push([2, 4, , 5]),
+                          [4, this.m_mapPromisesByFlavor.get(a)]
+                        );
+                      case 3:
+                        return e.sent(), [3, 5];
+                      case 4:
+                        return e.sent(), [3, 5];
+                      case 5:
+                        return [3, 1];
+                      case 6:
+                        return (
+                          (n = this.InternalGetSaleGamesByFlavor(
+                            a,
+                            t,
+                            o,
+                            i,
+                            l,
+                            s,
+                            c,
+                            u,
+                            d,
+                            p
+                          )),
+                          this.m_mapPromisesByFlavor.set(a, n),
+                          (function() {
+                            return Object(U.b)(r, void 0, void 0, function() {
+                              return Object(U.e)(this, function(e) {
+                                switch (e.label) {
+                                  case 0:
+                                    return e.trys.push([0, , 2, 3]), [4, n];
+                                  case 1:
+                                    return e.sent(), [3, 3];
+                                  case 2:
+                                    return (
+                                      this.m_mapPromisesByFlavor.delete(a), [7]
+                                    );
+                                  case 3:
+                                    return [2];
+                                }
+                              });
+                            });
+                          })(),
+                          [2, n]
                         );
                     }
                   });
@@ -10908,7 +10999,7 @@
                         : ((t =
                             Y.c.STORE_BASE_URL +
                             "lunarnewyearmarket/ajaxgettokensummary"),
-                          [4, C.a.get(t, { withCredentials: !0 })]);
+                          [4, T.a.get(t, { withCredentials: !0 })]);
                     case 1:
                       (a = e.sent()),
                         Object(m.G)(function() {
@@ -10988,7 +11079,7 @@
                   case 0:
                     return (
                       (t = Y.c.STORE_BASE_URL + "saleaction/ajaxgetopendoor"),
-                      [4, C.a.get(t, { withCredentials: !0 })]
+                      [4, T.a.get(t, { withCredentials: !0 })]
                     );
                   case 1:
                     return (
@@ -11053,7 +11144,7 @@
                     case 1:
                       return (
                         e.trys.push([1, 3, , 4]),
-                        [4, C.a.post(t, a, { withCredentials: !0 })]
+                        [4, T.a.post(t, a, { withCredentials: !0 })]
                       );
                     case 2:
                       return 1 == (n = e.sent()).data.success
@@ -11228,7 +11319,7 @@
                     case 1:
                       return (
                         e.trys.push([1, 3, , 4]),
-                        [4, C.a.get(t, { params: l, withCredentials: !0 })]
+                        [4, T.a.get(t, { params: l, withCredentials: !0 })]
                       );
                     case 2:
                       return (
@@ -11362,7 +11453,7 @@
                         ? [2, !0]
                         : [
                             4,
-                            C.a.get(
+                            T.a.get(
                               Y.c.STORE_BASE_URL +
                                 "actions/ajaxresolvesubscriptions",
                               {
@@ -11428,7 +11519,7 @@
                         a.append("gidforumtopic", l),
                         [
                           4,
-                          C.a.post(t, a, {
+                          T.a.post(t, a, {
                             withCredentials: !0,
                             cancelToken: s.token
                           })
@@ -11448,7 +11539,7 @@
           function l(e) {
             var t = a.call(this, e) || this;
             return (
-              (t.m_cancelSignal = C.a.CancelToken.source()),
+              (t.m_cancelSignal = T.a.CancelToken.source()),
               (t.state = {
                 dialogState: t.props.bNoConfirmationNeeded
                   ? "waiting"
@@ -11928,7 +12019,7 @@
                               m.current(
                                 "PartnerEventRow Initializng new mount"
                               ),
-                            (t = C.a.CancelToken.source()),
+                            (t = T.a.CancelToken.source()),
                             (m.current = t.cancel),
                             (a = f.a.InitFromClanID(c)),
                             [4, E.a.LoadClanInfoForClanSteamID(a)]
@@ -12556,7 +12647,7 @@
                         e.trys.push([1, 3, , 4]),
                         [
                           4,
-                          C.a.get(a, {
+                          T.a.get(a, {
                             params: r,
                             withCredentials: !0,
                             cancelToken: d.token
@@ -12997,7 +13088,7 @@
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (
-              (e.m_cancelSignal = C.a.CancelToken.source()),
+              (e.m_cancelSignal = T.a.CancelToken.source()),
               (e.state = {
                 bLoadingAppInfo: !_.a.BIsAppidLoaded(e.props.event.appid),
                 bLoadingClanInfo: !!E.a.GetClanInfoByClanAccountID(
@@ -13364,7 +13455,7 @@
                 );
               if (!i)
                 return (
-                  Object(O.a)(
+                  Object(C.a)(
                     i,
                     "EventDetailsRightColumn - clan info (" +
                       t.clanSteamID.GetAccountID() +
@@ -13429,7 +13520,7 @@
             Object(U.d)(t, e),
             (t.prototype.render = function() {
               var t = this.props.appid;
-              Object(O.a)(t && 0 != t, "Expected Appid In Game Info Section");
+              Object(C.a)(t && 0 != t, "Expected Appid In Game Info Section");
               var e = _.a.GetStoreCapsuleInfo(t).GetAppStoreData();
               return z.createElement(
                 "div",
@@ -13490,7 +13581,7 @@
                       })
                     )
                   )
-                : (Object(O.a)(
+                : (Object(C.a)(
                     t,
                     "EventDetailsRightCreatorInfo - clan info (" +
                       e.GetAccountID() +
@@ -13506,7 +13597,7 @@
         (function(t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
-            return (e.m_cancelSignal = C.a.CancelToken.source()), e;
+            return (e.m_cancelSignal = T.a.CancelToken.source()), e;
           }
           return (
             Object(U.d)(e, t),
@@ -13743,7 +13834,7 @@
               var e = this.props,
                 t = e.iDoorIndex,
                 a = e.strFontFamily;
-              Object(O.a)(
+              Object(C.a)(
                 0 <= t && t < Yn.length && t < an.GetDoorCount(),
                 "Day index #" + t + " not in valid range."
               );
@@ -13969,8 +14060,8 @@
                 strSearchQuery: "",
                 strRawSearch: ""
               }),
-              (e.m_timerForChange = new T.b()),
-              (e.m_cancelSignal = C.a.CancelToken.source()),
+              (e.m_timerForChange = new w.b()),
+              (e.m_cancelSignal = T.a.CancelToken.source()),
               (e.m_nHighestSentRequestID = 0),
               (e.m_nHighestReceivedRequestID = 0),
               e
@@ -14963,7 +15054,7 @@
               var e = document.getElementsByClassName(
                 "react_landing_background"
               );
-              Object(O.a)(
+              Object(C.a)(
                 e.length <= 1,
                 "Must have at most one react_landing_background"
               ),
@@ -17644,7 +17735,7 @@
                     case 1:
                       return (
                         e.trys.push([1, 3, , 4]),
-                        [4, C.a.post(t, a, { withCredentials: !0 })]
+                        [4, T.a.post(t, a, { withCredentials: !0 })]
                       );
                     case 2:
                       return (

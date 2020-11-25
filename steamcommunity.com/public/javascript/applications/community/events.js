@@ -4794,70 +4794,92 @@
               })
             );
           }),
-          (e.prototype.SaveModel = function(p, u, m) {
+          (e.prototype.PreSaveActions = function(d) {
+            return Object(U.b)(this, void 0, void 0, function() {
+              var t, a, n, r, i, o, l, s, c;
+              return Object(U.e)(this, function(e) {
+                switch (e.label) {
+                  case 0:
+                    if (
+                      (30 == this.m_editModel.GetFirstLanguageWithTitle() &&
+                        this.m_editModel.SetName(
+                          this.m_editModel.GetCurEditLanguage(),
+                          Object(V.f)("#EventEditor_Placeholder_Title")
+                        ),
+                      !this.m_editModel.BHasEmailEnabled())
+                    )
+                      return [3, 6];
+                    (t = this.m_editModel.GetEmailSettings().sections),
+                      (a = 0),
+                      (e.label = 1);
+                  case 1:
+                    if (!(a < t.length)) return [3, 6];
+                    if (
+                      ((n = t[a]),
+                      !(r = new ue(n, this.m_editModel)).BHasValidVideoURL())
+                    )
+                      return [3, 5];
+                    if (!(i = r.GetYouTubeVideoID()) || r.BHasVideoImage())
+                      return [3, 5];
+                    (o =
+                      z.b.COMMUNITY_BASE_URL +
+                      "gid/" +
+                      this.m_editModel.GetClanSteamID().ConvertTo64BitString() +
+                      "/fetchyoutubeimage?videoid=" +
+                      i),
+                      (l =
+                        z.b.COMMUNITY_BASE_URL +
+                        "public/images/events/media_play_icon.png"),
+                      (e.label = 2);
+                  case 2:
+                    return (
+                      e.trys.push([2, 4, , 5]),
+                      [4, x.d.AsyncOverlay(d, o, l, i, 740, 555)]
+                    );
+                  case 3:
+                    return (s = e.sent()), r.SetVideoHashAndExt(s), [3, 5];
+                  case 4:
+                    return (
+                      (c = e.sent()),
+                      console.error(
+                        "We failed to create a video image, not a blocker: " +
+                          Object(ze.a)(c).strErrorMsg
+                      ),
+                      [3, 5]
+                    );
+                  case 5:
+                    return ++a, [3, 1];
+                  case 6:
+                    return (
+                      this.m_editModel.BHasSaleEnabled() &&
+                        0 < this.m_editModel.GetSaleSectionCount() &&
+                        this.m_editModel.GetSaleSections().forEach(function(e) {
+                          "items" == e.section_type &&
+                            Boolean(e.smart_section_type) &&
+                            (e.capsules = []);
+                        }),
+                      [2]
+                    );
+                }
+              });
+            });
+          }),
+          (e.prototype.SaveModel = function(a, n, r) {
             return (
-              void 0 === u && (u = !1),
+              void 0 === n && (n = !1),
               Object(U.b)(this, void 0, void 0, function() {
-                var t, a, n, r, i, o, l, s, c, d;
+                var t;
                 return Object(U.e)(this, function(e) {
                   switch (e.label) {
                     case 0:
-                      if (
-                        (30 == this.m_editModel.GetFirstLanguageWithTitle() &&
-                          this.m_editModel.SetName(
-                            this.m_editModel.GetCurEditLanguage(),
-                            Object(V.f)("#EventEditor_Placeholder_Title")
-                          ),
-                        !this.m_editModel.BHasEmailEnabled())
-                      )
-                        return [3, 6];
-                      (t = this.m_editModel.GetEmailSettings().sections),
-                        (a = 0),
-                        (e.label = 1);
+                      return [4, this.PreSaveActions(a)];
                     case 1:
-                      if (!(a < t.length)) return [3, 6];
-                      if (
-                        ((n = t[a]),
-                        !(r = new ue(n, this.m_editModel)).BHasValidVideoURL())
-                      )
-                        return [3, 5];
-                      if (!(i = r.GetYouTubeVideoID()) || r.BHasVideoImage())
-                        return [3, 5];
-                      (o =
-                        z.b.COMMUNITY_BASE_URL +
-                        "gid/" +
-                        this.m_editModel
-                          .GetClanSteamID()
-                          .ConvertTo64BitString() +
-                        "/fetchyoutubeimage?videoid=" +
-                        i),
-                        (l =
-                          z.b.COMMUNITY_BASE_URL +
-                          "public/images/events/media_play_icon.png"),
-                        (e.label = 2);
+                      return (
+                        e.sent(), [4, this.InternalSaveAction(a, !1, n, r)]
+                      );
                     case 2:
-                      return (
-                        e.trys.push([2, 4, , 5]),
-                        [4, x.d.AsyncOverlay(p, o, l, i, 740, 555)]
-                      );
-                    case 3:
-                      return (s = e.sent()), r.SetVideoHashAndExt(s), [3, 5];
-                    case 4:
-                      return (
-                        (c = e.sent()),
-                        console.error(
-                          "We failed to create a video image, not a blocker: " +
-                            Object(ze.a)(c).strErrorMsg
-                        ),
-                        [3, 5]
-                      );
-                    case 5:
-                      return ++a, [3, 1];
-                    case 6:
-                      return [4, this.InternalSaveAction(p, !1, u, m)];
-                    case 7:
-                      if (1 != (d = e.sent()).success) throw d;
-                      return [2, d];
+                      if (1 != (t = e.sent()).success) throw t;
+                      return [2, t];
                   }
                 });
               })
@@ -12604,6 +12626,7 @@
               (this.m_rgMySaleTags = null),
               (this.m_rgMyTagRecommendation = null),
               (this.m_mapSaleGameListsByFlavor = new Map()),
+              (this.m_mapPromisesByFlavor = new Map()),
               (this.m_rgTopN = null);
           }
           return (
@@ -12899,7 +12922,9 @@
                 Array.isArray(e.appids)
               );
             }),
-            (e.prototype.GetSaleGamesByFlavor = function(
+            (e.prototype.InternalGetSaleGamesByFlavor = function(
+              m,
+              _,
               h,
               g,
               b,
@@ -12909,61 +12934,54 @@
               S,
               y
             ) {
+              var O, C, T;
               return (
                 void 0 === f && (f = 0),
                 void 0 === S && (S = void 0),
                 Object(U.b)(this, void 0, void 0, function() {
-                  var t, a, n, r, i, o, l, s, c, d, p, u, m, _;
+                  var t, a, n, r, i, o, l, s, c, d, p, u;
                   return Object(U.e)(this, function(e) {
                     switch (e.label) {
                       case 0:
-                        return ((t = Boolean(S)) &&
-                          ((E = "search"), (g = void 0)),
-                        (a = this.GetFlavorCacheKey(
-                          E,
-                          g,
-                          S,
-                          b.AnnouncementGID
-                        )),
-                        (n = this.m_mapSaleGameListsByFlavor.get(a)) ||
-                          ((r =
+                        return ((t = this.m_mapSaleGameListsByFlavor.get(m)) ||
+                          ((a =
                             "browser_" +
                             E +
                             (g ? "_" + g : "_*") +
-                            (t ? S : "")),
-                          (i = Object(z.e)(r, "application_config")),
-                          this.ValidateDataGameByFlavor(i)
-                            ? ((n = i),
-                              this.m_mapSaleGameListsByFlavor.set(a, i))
-                            : ((n = {
+                            (_ ? S : "")),
+                          (n = Object(z.e)(a, "application_config")),
+                          this.ValidateDataGameByFlavor(n)
+                            ? ((t = n),
+                              this.m_mapSaleGameListsByFlavor.set(m, n))
+                            : ((t = {
                                 appids: [],
                                 solr_index: 0,
                                 possible_has_more: !0
                               }),
-                              this.m_mapSaleGameListsByFlavor.set(a, n))),
-                        (o = n.appids.length),
-                        0 < (l = f + v - o) && n.possible_has_more)
-                          ? ((s =
+                              this.m_mapSaleGameListsByFlavor.set(m, t))),
+                        (r = t.appids.length),
+                        0 < (i = f + v - r) && t.possible_has_more)
+                          ? ((o =
                               z.b.STORE_BASE_URL +
                               (h
                                 ? "saleaction/ajaxpreviewsaledynamicappquery"
                                 : "saleaction/ajaxgetsaledynamicappquery")),
-                            (c = {
+                            (l = {
                               cc: z.b.COUNTRY,
                               l: z.b.LANGUAGE,
                               clanAccountID: b.clanSteamID.GetAccountID(),
                               clanAnnouncementGID: b.AnnouncementGID,
                               flavor: E,
-                              start: n.solr_index,
-                              count: Math.max(l, 25),
+                              start: t.solr_index,
+                              count: Math.max(i, 25),
                               tabuniqueid: g,
                               return_capsules: !0,
-                              search: S
+                              search: _ ? S : void 0
                             }),
                             [
                               4,
-                              M.a.get(s, {
-                                params: c,
+                              M.a.get(o, {
+                                params: l,
                                 withCredentials: h,
                                 cancelToken: null == y ? void 0 : y.token
                               })
@@ -12971,28 +12989,125 @@
                           : [3, 2];
                       case 1:
                         if (
-                          200 != (d = e.sent()).status ||
-                          !d.data ||
-                          !d.data.appids
+                          200 != (null == (s = e.sent()) ? void 0 : s.status) ||
+                          1 !=
+                            (null === (O = s.data) || void 0 === O
+                              ? void 0
+                              : O.success) ||
+                          null === (C = s.data) ||
+                          void 0 === C ||
+                          !C.appids
                         )
-                          throw new Error("query failed, status=" + d.status);
-                        for (p = 0, u = d.data.appids; p < u.length; p++)
-                          (m = u[p]), n.appids.push(m);
-                        (n.possible_has_more = d.data.possible_has_more),
-                          (n.solr_index = d.data.solr_index),
-                          d.data.app_info && _e.a.AddAppLinks(d.data.app_info),
+                          throw new Error(
+                            "query failed, status=" +
+                              (null == s ? void 0 : s.status) +
+                              " success: " +
+                              (null === (T = null == s ? void 0 : s.data) ||
+                              void 0 === T
+                                ? void 0
+                                : T.success)
+                          );
+                        for (c = 0, d = s.data.appids; c < d.length; c++)
+                          (p = d[c]), t.appids.push(p);
+                        (t.possible_has_more = s.data.possible_has_more),
+                          (t.solr_index = s.data.solr_index),
+                          s.data.app_info && _e.a.AddAppLinks(s.data.app_info),
                           (e.label = 2);
                       case 2:
                         return (
-                          this.m_mapSaleGameListsByFlavor.set(a, n),
-                          (_ = n.possible_has_more || f + v < n.appids.length),
+                          this.m_mapSaleGameListsByFlavor.set(m, t),
+                          (u = t.possible_has_more || f + v < t.appids.length),
                           [
                             2,
                             {
-                              appids: n.appids.slice(f, v),
-                              bHasPossibleMoreResults: _
+                              appids: t.appids.slice(f, v),
+                              bHasPossibleMoreResults: u
                             }
                           ]
+                        );
+                    }
+                  });
+                })
+              );
+            }),
+            (e.prototype.GetSaleGamesByFlavor = function(
+              i,
+              o,
+              l,
+              s,
+              c,
+              d,
+              p,
+              u
+            ) {
+              return (
+                void 0 === d && (d = 0),
+                void 0 === p && (p = void 0),
+                Object(U.b)(this, void 0, void 0, function() {
+                  var t,
+                    a,
+                    n,
+                    r = this;
+                  return Object(U.e)(this, function(e) {
+                    switch (e.label) {
+                      case 0:
+                        (p = null == p ? void 0 : p.trim()),
+                          (t = Boolean(p)) && ((s = "search"), (o = void 0)),
+                          (a = this.GetFlavorCacheKey(
+                            s,
+                            o,
+                            p,
+                            l.AnnouncementGID
+                          )),
+                          (e.label = 1);
+                      case 1:
+                        if (!this.m_mapPromisesByFlavor.has(a)) return [3, 6];
+                        e.label = 2;
+                      case 2:
+                        return (
+                          e.trys.push([2, 4, , 5]),
+                          [4, this.m_mapPromisesByFlavor.get(a)]
+                        );
+                      case 3:
+                        return e.sent(), [3, 5];
+                      case 4:
+                        return e.sent(), [3, 5];
+                      case 5:
+                        return [3, 1];
+                      case 6:
+                        return (
+                          (n = this.InternalGetSaleGamesByFlavor(
+                            a,
+                            t,
+                            i,
+                            o,
+                            l,
+                            s,
+                            c,
+                            d,
+                            p,
+                            u
+                          )),
+                          this.m_mapPromisesByFlavor.set(a, n),
+                          (function() {
+                            return Object(U.b)(r, void 0, void 0, function() {
+                              return Object(U.e)(this, function(e) {
+                                switch (e.label) {
+                                  case 0:
+                                    return e.trys.push([0, , 2, 3]), [4, n];
+                                  case 1:
+                                    return e.sent(), [3, 3];
+                                  case 2:
+                                    return (
+                                      this.m_mapPromisesByFlavor.delete(a), [7]
+                                    );
+                                  case 3:
+                                    return [2];
+                                }
+                              });
+                            });
+                          })(),
+                          [2, n]
                         );
                     }
                   });
