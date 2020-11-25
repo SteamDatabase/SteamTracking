@@ -2240,7 +2240,7 @@ GDynamicStorePage = {
 				// If the user owns the base game already, only show the DLC
 				if( rgAppData && rgAppData.dlc_for_app )
 				{
-					if( !GDynamicStore.BIsAppOwned( rgAppData.dlc_for_app, false ) && rgAppIds.indexOf( parseInt( rgAppData.dlc_for_app ) ) !== -1 )
+					if( !GDynamicStore.BIsAppOwned( rgAppData.dlc_for_app, false ) )
 					{
 						$capsule.remove();
 						continue;
