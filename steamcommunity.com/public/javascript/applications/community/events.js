@@ -33371,14 +33371,14 @@
             }),
             (e.prototype.DoImport = function() {
               return Object(U.b)(this, void 0, void 0, function() {
-                var t, a, n, r, i, o, l, s, c, d, p, u, m, _, h;
+                var n, a, t, r, i, o, l, s, c, d, p, u, m, _, h;
                 return Object(U.e)(this, function(e) {
                   switch (e.label) {
                     case 0:
                       for (
-                        t = this.props.editModel,
+                        n = this.props.editModel,
                           a = new Array(),
-                          n = this.state.editValue.split("\n"),
+                          t = this.state.editValue.split("\n"),
                           r = function(e) {
                             var t = i.ParseTagItemInfoFromLine(e);
                             t &&
@@ -33392,7 +33392,7 @@
                           },
                           i = this,
                           o = 0,
-                          l = n;
+                          l = t;
                         o < l.length;
                         o++
                       )
@@ -33428,6 +33428,10 @@
                                     a.forEach(function(e) {
                                       return t.tags.push(e);
                                     }),
+                                  Be(
+                                    n.GetEventModel().jsondata.auto_item_tags,
+                                    t
+                                  ),
                                   [2]
                                 );
                             }
@@ -33445,11 +33449,11 @@
                     case 5:
                       return (
                         this.setState({ bImporting: !1, errMsg: "" }),
-                        JSON.stringify(t.GetEventModel().GetTaggedItems()) !==
+                        JSON.stringify(n.GetEventModel().GetTaggedItems()) !==
                           JSON.stringify(a) &&
-                          ((t.GetEventModel().jsondata.tagged_items = a),
-                          t.SetDirty(K.jsondata_sales)),
-                        Le(t),
+                          ((n.GetEventModel().jsondata.tagged_items = a),
+                          n.SetDirty(K.jsondata_sales)),
+                        Le(n),
                         this.props.closeModal(),
                         [2]
                       );
