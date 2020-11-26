@@ -289,7 +289,7 @@
 	"MainMenu_Welcome_Controller_Update_Moystick_Description2" "Some games don't support simultaneous mouse and gamepad input. With Mouse-Like Joystick you can play with gamepad input and still enjoy mouse accuracy."
 
 	"MainMenu_Welcome_Controller_Update_TouchMenu_Header" "Touch Menu"
-	"MainMenu_Welcome_Controller_Update_TouchMenu_Description" "Some games have hotkeys that are infequently used, but you still want to have at your fingertips. We added the Touch Menu, a fully configurable UI with up to 16 buttons, allowing you to select your desired hotkey on a single trackpad."
+	"MainMenu_Welcome_Controller_Update_TouchMenu_Description" "Some games have hotkeys that are infrequently used, but you still want to have at your fingertips. We added the Touch Menu, a fully configurable UI with up to 16 buttons, allowing you to select your desired hotkey on a single trackpad."
 	"MainMenu_Welcome_Controller_Update_TouchMenu_Description2" "Add and customize this menu in any game!"
 
 	"MainMenu_Welcome_Controller_Update_MouseRegions_Header" "Mouse Regions"
