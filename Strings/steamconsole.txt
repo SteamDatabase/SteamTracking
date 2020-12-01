@@ -2,8 +2,6 @@ h
 __TEXT
 __text
 __TEXT
->
->
 __stubs
 __TEXT
 __stub_helper
@@ -509,6 +507,7 @@ ERROR! App build file %s has no depots section.
 ERROR! Invalid depot ID: %s.
 ERROR! Depot config file does not exist: %s.
 localcspath
+deltabranch
 ERROR! No valid depot specified for AppID %u
 Starting AppID %u build (flags 0x%x).
 Assertion Failed: m_vecDepotConfigKVs.Count() == m_vecDepotIDs.Count()
@@ -1181,7 +1180,7 @@ Assertion Failed: (unsigned)elem <= (unsigned)m_Size
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/string_misc.cpp
 E
 @
-t
+Q
 @
 @
 b
