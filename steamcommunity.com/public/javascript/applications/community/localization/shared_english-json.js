@@ -187,12 +187,6 @@
           "Note: This group is muted and will not show up in your personalized news hub.",
         EventCalendar_WatchYouTubeVideo: "Watch YouTube Video",
         EventCalendar_WatchLiveBroadcast: "Watch Live Broadcast",
-        EventCalendar_Collection_News_Title: "Discover News Sources",
-        EventCalendar_Collection_News_Subtitle:
-          "Browse the recent posts from Steam Curators below. Follow a curator to add their news and game recommendations to your Steam",
-        EventCalendar_Collection_Halloween_Title: "Halloween Events",
-        EventCalendar_Collection_Halloween_Subtitle:
-          "Browse spooky Halloween related news and events from games on Steam",
         EventModTile_Moderator: "Moderator: %1$s",
         EventModTile_Action_Reviewed: "%1$s %2$s marked reviewed",
         EventModTile_Action_UnReviewed: "%1$s %2$s cleared reviewed flag",
@@ -360,20 +354,32 @@
         EventCalendar_NewsChannels_Global: "Global News & Events",
         EventCalendar_NewsChannels_Discover: "Discover",
         EventCalendar_NewsChannel_YourNews: "Your News",
+        EventCalendar_NewsChannel_YourNews_HeaderTitle:
+          "Your Personalized Game News",
         EventCalendar_NewsChannel_Upcoming: "Your Upcoming Events",
         EventCalendar_NewsChannel_UpcomingShort: "Upcoming",
         EventCalendar_NewsChannel_Featured: "Featured",
+        EventCalendar_NewsChannel_Featured_HeaderTitle: "Featured News",
         EventCalendar_NewsChannel_Personalized: "Personalized",
         EventCalendar_NewsChannel_Filtered: "Filtered",
         EventCalendar_NewsChannel_AllGames: "From all games",
         EventCalendar_NewsChannel_TopSellers: "From Top sources",
         EventCalendar_NewsChannel_Press: "News Curators",
+        EventCalendar_Collection_News_Title: "Discover News Curators",
+        EventCalendar_Collection_News_Subtitle:
+          "Catch the latest in gaming news from top gaming news sources. Follow a Steam News Curator to add their news and game recommendations to your Steam News Hub.",
         EventCalendar_NewsChannel_Steam: "Steam Official",
         EventCalendar_NewsChannel_SteamSubtitle: "Steam Blog and News",
+        EventCalendar_NewsChannel_Steam_HeaderTitle: "Official Steam News",
         EventCalendar_NewsChannel_All: "All News",
         EventCalendar_NewsChannel_AllSales: "All Sales Events",
+        EventCalendar_NewsChannel_AssociatedPress:
+          "Press Events Linked to Apps",
         EventCalendar_NewsChannel_Halloween: "Halloween Events",
         EventCalendar_NewsChannel_HalloweenSubtitle: "Beware: Spooky",
+        EventCalendar_Collection_Halloween_Title: "Halloween Events",
+        EventCalendar_Collection_Halloween_Subtitle:
+          "Browse spooky Halloween related news and events from games on Steam",
         EventDisplay_Admin_Title: "Admin tools:",
         EventDisplay_ViewInLibrary: "View in Library",
         EventDisplay_ViewStorePage: "View Store Page",
@@ -1556,11 +1562,11 @@
         promo_steamawards2020_cat52_desc:
           "This game has been out for a while. The team is well past the debut of their creative baby, but being the good parents they are, these devs continue to nurture and support their creation. This game, to this day, is still getting new content after all these years.",
         promo_steamawards2020_cat53_desc:
-          "There are some games out there that just aren't the same when you play by yourself. Maybe you need to have a friend to watch your back. Maybe you need to have a friend that you can stab in their back. Either way, mirth is awaiting those who gather friends to play these games.",
+          "There are some games out there that just aren't the same when you play by yourself. Maybe you need to have a friend to watch your back. Maybe you need to have a friend that you can stab in their back. Either way, fun is awaiting those who gather friends together play this game.",
         promo_steamawards2020_cat54_desc:
-          "Visual style doesn't aspire to real-world graphical fidelity (though a noble goal in itself)… it describes a distinctive look and feel that suffuses an entire game. This game (yay) made this year (boo) more beautiful to look at.",
+          "Visual style doesn't aspire to real-world graphical fidelity (though a noble goal in itself)… it describes a distinctive look and feel that suffuses an entire game.",
         promo_steamawards2020_cat55_desc:
-          "The designers of this game are at the front lines of creative experimentation, bringing a fresh perspective and brain-breaking surprises.",
+          "The designers of this game are at the front lines of creative experimentation, bringing a fresh perspective and brain-breaking surprises. This game delighted, inspired and entertained with newness never played before.",
         promo_steamawards2020_cat56_desc:
           "This is the game that rewards persistence, and is not for the faint of heart. It's the toughest game we've ever loved.",
         promo_steamawards2020_cat57_desc:
@@ -1568,7 +1574,7 @@
         promo_steamawards2020_cat58_desc:
           "Some days, only a narrative-heavy game will hit the spot, and this one packs a wallop. It's as gripping as any soap opera, and as well-tuned as a prestige-TV screenplay. Bravissimo -- for making us feel things!",
         promo_steamawards2020_cat59_desc:
-          "The Steam Awards Selection Committee (i.e., you) wrote-in this category in 2016, and we think it bears repeating: what is the chillest game of the year?",
+          "This game is the antidote to a busy day. It's smooth, it's relaxing, it lets your worries melt away. This game is your moment of zen.",
         SteamAward_NominationConflictWarning_Title: "Change your nomination?",
         SteamAward_NominationConflictWarning_Explanation:
           "You can only nominate one game for each category, and you have already nominated %1$s for this one. Would you like to nominate %2$s instead?",

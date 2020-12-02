@@ -248,7 +248,7 @@ function PreviewShowcaseConfig( eShowcase, purchaseid, level, rgSlotData )
 	} );
 }
 
-function ShowcaseGamePicker( elSlot, eShowcase, purchaseid, level, iSlot, fnOnChange )
+function ShowcaseGamePicker( elSlot, eShowcase, purchaseid, level, iSlot, fnOnChange, rgFilteredGames )
 {
 	var $DialogContent = $J('<div/>', {'class': '' });
 	$DialogContent.append( $J('<div/>', {'class': 'featured_game_dialog_header' }).text( 'Select one of your games to display as a Featured Game on your profile.' ) );
@@ -265,7 +265,7 @@ function ShowcaseGamePicker( elSlot, eShowcase, purchaseid, level, iSlot, fnOnCh
 		fnOnChange = SetShowcaseGame;
 
 	var fnOnSelect = function( Selector, game ) { fnOnChange( elSlot, eShowcase, purchaseid, level, iSlot, game ); Modal.Dismiss(); };
-	var GameSelector = new CGameSelectorProfileShowcaseGames( $Input[0], null, null, fnOnSelect );
+	var GameSelector = new CGameSelectorProfileShowcaseGames( $Input[0], null, null, fnOnSelect, rgFilteredGames );
 }
 
 function ShowcaseSalienCustomization()

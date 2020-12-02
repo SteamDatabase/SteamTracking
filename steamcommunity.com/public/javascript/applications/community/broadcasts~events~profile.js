@@ -1370,14 +1370,14 @@
         n.d(t, "v", function() {
           return se;
         });
-      var i = n("mrSG"),
-        o = n("kLLr"),
-        a = n("2vnA"),
+      var r = n("mrSG"),
+        i = n("kLLr"),
+        o = n("2vnA"),
         d = n("U+Q5"),
         m = n("ir+G"),
         s = n("bS9Q"),
         h = n("TLQK"),
-        r = n("t3gG"),
+        a = n("t3gG"),
         c = n("N0Ye"),
         l = n("+VX6"),
         f = n("lkRc"),
@@ -1552,8 +1552,8 @@
           section_type: "items"
         },
         Z = { internal_type: "subscription_pricing" },
-        q = Object(i.a)(
-          Object(i.a)(
+        q = Object(r.a)(
+          Object(r.a)(
             {
               localized_subtitle: new Array(30),
               localized_summary: new Array(30),
@@ -1576,7 +1576,7 @@
               sale_header_offset: 150,
               referenced_appids: []
             },
-            r.b
+            a.b
           ),
           u.c
         ),
@@ -1679,7 +1679,7 @@
         );
       }
       var oe = (function() {
-          function r() {
+          function a() {
             (this.type = 1),
               (this.appid = 0),
               (this.name = new Map()),
@@ -1698,25 +1698,25 @@
               (this.vecTags = new Array());
           }
           return (
-            (r.prototype.BIsPartnerEvent = function() {
+            (a.prototype.BIsPartnerEvent = function() {
               return !this.bOldAnnouncement && Boolean(this.GID);
             }),
-            (r.FromJSON = function(e) {
-              var t = new r(),
+            (a.FromJSON = function(e) {
+              var t = new a(),
                 n = JSON.parse(e);
               return (
                 Object.assign(t, n),
                 (t.name = new Map(n.name)),
                 (t.description = new Map(n.description)),
                 (t.vecTags = new Array(n.vecTags)),
-                (t.clanSteamID = new o.a(n.clanSteamID)),
+                (t.clanSteamID = new i.a(n.clanSteamID)),
                 Object(p.a)(
                   t.clanSteamID && t.clanSteamID.BIsValid(),
                   "Invalid Clan SteamID: " +
                     t.clanSteamID.ConvertTo64BitString()
                 ),
                 n.broadcaster &&
-                  ((t.broadcaster = new o.a(n.broadcaster)),
+                  ((t.broadcaster = new i.a(n.broadcaster)),
                   Object(p.a)(
                     t.broadcaster && t.broadcaster.BIsValid(),
                     "Invalid Broadcast SteamID: " +
@@ -1725,7 +1725,7 @@
                 t
               );
             }),
-            (r.prototype.toJSON = function(e) {
+            (a.prototype.toJSON = function(e) {
               var t = new Object();
               return (
                 Object.assign(t, this),
@@ -1738,8 +1738,8 @@
                 t
               );
             }),
-            (r.prototype.clone = function() {
-              var n = new r();
+            (a.prototype.clone = function() {
+              var n = new a();
               return (
                 (n.GID = this.GID),
                 (n.AnnouncementGID = this.AnnouncementGID),
@@ -1779,7 +1779,7 @@
                 (n.loadedAllLanguages = this.loadedAllLanguages),
                 (n.bLoaded = this.bLoaded),
                 (n.broadcaster = this.broadcaster
-                  ? new o.a(this.broadcaster.ConvertTo64BitString())
+                  ? new i.a(this.broadcaster.ConvertTo64BitString())
                   : null),
                 (n.jsondata = JSON.parse(JSON.stringify(this.jsondata))),
                 (n.vecTags = new Array()),
@@ -1789,7 +1789,7 @@
                 n
               );
             }),
-            (r.prototype.GetLastReferencedSaleDayFromCapsules = function(e, t) {
+            (a.prototype.GetLastReferencedSaleDayFromCapsules = function(e, t) {
               for (var n = t, r = 0, i = e; r < i.length; r++) {
                 var o = i[r];
                 void 0 !== o.visibility_index &&
@@ -1800,7 +1800,7 @@
               }
               return n;
             }),
-            (r.prototype.GetLastReferencedSaleDay = function() {
+            (a.prototype.GetLastReferencedSaleDay = function() {
               for (
                 var e = void 0, t = 0, n = this.GetSaleSections();
                 t < n.length;
@@ -1819,7 +1819,7 @@
               }
               return e;
             }),
-            (r.prototype.GetDayIndexFromEventStart = function() {
+            (a.prototype.GetDayIndexFromEventStart = function() {
               var e = 0,
                 t = v.a.GetTimeNowWithOverride();
               void 0 !== this.startTime &&
@@ -1831,15 +1831,15 @@
               var n = this.GetLastReferencedSaleDay() || 0;
               return Math.min(e, n);
             }),
-            (r.prototype.GetNameWithFallback = function(e) {
+            (a.prototype.GetNameWithFallback = function(e) {
               var t = h.b.GetELanguageFallback(e);
               return this.name.get(e) || this.name.get(t);
             }),
-            (r.prototype.GetGameTitle = function(e) {
+            (a.prototype.GetGameTitle = function(e) {
               return m.a.GetStoreCapsuleInfo(this.appid).GetAppStoreData()
                 .title;
             }),
-            (r.prototype.GetImgArray = function(e) {
+            (a.prototype.GetImgArray = function(e) {
               var t,
                 n = [];
               return (
@@ -1883,7 +1883,7 @@
                 n
               );
             }),
-            (r.prototype.GetImageURL = function(e, t, n) {
+            (a.prototype.GetImageURL = function(e, t, n) {
               void 0 === t && (t = 0), void 0 === n && (n = d.c.full);
               var r = this.GetImgArray(e);
               return r && r.length > t && null != r[t]
@@ -1894,14 +1894,14 @@
                   )
                 : void 0;
             }),
-            (r.prototype.GetImageHash = function(e, t) {
+            (a.prototype.GetImageHash = function(e, t) {
               void 0 === t && (t = 0);
               var n = this.GetImgArray(e);
               return n && n.length > t && null != n[t]
                 ? n[t].substr(0, n[t].length - 4)
                 : null;
             }),
-            (r.prototype.BHasSomeImage = function(e) {
+            (a.prototype.BHasSomeImage = function(e) {
               var t = this.GetImgArray(e);
               return (
                 t &&
@@ -1910,28 +1910,28 @@
                 })
               );
             }),
-            (r.prototype.BHasImage = function(e, t) {
+            (a.prototype.BHasImage = function(e, t) {
               var n = this.GetImgArray(e);
               return n && n.length > t && null != n[t];
             }),
-            (r.prototype.BHasAnnouncementGID = function() {
+            (a.prototype.BHasAnnouncementGID = function() {
               return (
                 null !== this.AnnouncementGID &&
                 void 0 !== this.AnnouncementGID &&
                 1 < this.AnnouncementGID.length
               );
             }),
-            (r.prototype.GetAnnouncementGID = function() {
+            (a.prototype.GetAnnouncementGID = function() {
               return this.AnnouncementGID;
             }),
-            (r.prototype.BHasForumTopicGID = function() {
+            (a.prototype.BHasForumTopicGID = function() {
               return (
                 null !== this.forumTopicGID &&
                 void 0 !== this.forumTopicGID &&
                 1 < this.forumTopicGID.length
               );
             }),
-            (r.prototype.GetForumTopicURL = function() {
+            (a.prototype.GetForumTopicURL = function() {
               if (!this.BHasForumTopicGID()) return "";
               if (this.appid)
                 return (
@@ -1956,13 +1956,13 @@
                     "/eventcomments/" +
                     this.forumTopicGID;
             }),
-            (r.prototype.BIsEventInFuture = function() {
+            (a.prototype.BIsEventInFuture = function() {
               return v.a.GetTimeNowWithOverride() < this.startTime;
             }),
-            (r.prototype.BHasEventEnded = function() {
+            (a.prototype.BHasEventEnded = function() {
               return this.endTime < v.a.GetTimeNowWithOverride();
             }),
-            (r.prototype.UpdateVoteCount = function(e, t) {
+            (a.prototype.UpdateVoteCount = function(e, t) {
               "up" == e
                 ? (this.nVotesUp = Object(g.a)(
                     this.nVotesUp + t,
@@ -1976,7 +1976,7 @@
                     Number.MAX_SAFE_INTEGER
                   ));
             }),
-            (r.prototype.GetImageFromBeginningOfDescription = function(e, t) {
+            (a.prototype.GetImageFromBeginningOfDescription = function(e, t) {
               var n = this.GetDescriptionWithFallback(e);
               if (n) {
                 var r = n.indexOf("[img]");
@@ -1995,7 +1995,7 @@
               }
               return null;
             }),
-            (r.prototype.GetImageURLWithFallback = function(e, t, n) {
+            (a.prototype.GetImageURLWithFallback = function(e, t, n) {
               var r, i;
               void 0 === n && (n = d.c.full);
               var o = this.GetImageURL(e, t, n);
@@ -2038,7 +2038,7 @@
                 ? p.GetAppStoreData().capsule
                 : f.b.MEDIA_CDN_URL + "steam/apps/" + u + "/header.jpg";
             }),
-            (r.prototype.GetFallbackArtworkScreenshot = function() {
+            (a.prototype.GetFallbackArtworkScreenshot = function() {
               if (this.appid) {
                 m.a.EnsureStoreCapsuleInfoLoaded(this.appid);
                 var e = m.a.GetStoreCapsuleInfo(this.appid).GetAppStoreData();
@@ -2063,7 +2063,7 @@
               }
               return null;
             }),
-            (r.prototype.BImageNeedScreenshotFallback = function(e, t) {
+            (a.prototype.BImageNeedScreenshotFallback = function(e, t) {
               var n,
                 r = this.GetImageURL(e, t);
               return (
@@ -2073,7 +2073,7 @@
                 !r || 0 == r.length
               );
             }),
-            (r.prototype.GetImageForSizeAsArrayWithFallback = function(
+            (a.prototype.GetImageForSizeAsArrayWithFallback = function(
               e,
               t,
               n,
@@ -2087,11 +2087,11 @@
               var o = this.GetFallbackArtworkScreenshot();
               return o && !r && i.push(o), i;
             }),
-            (r.prototype.GetDescriptionWithFallback = function(e) {
+            (a.prototype.GetDescriptionWithFallback = function(e) {
               var t = h.b.GetELanguageFallback(e);
               return this.description.get(e) || this.description.get(t);
             }),
-            (r.prototype.BIsImageSafeForAllAges = function(e, t) {
+            (a.prototype.BIsImageSafeForAllAges = function(e, t) {
               var n = _.a.GetClanInfoByClanAccountID(
                   this.clanSteamID.GetAccountID()
                 ),
@@ -2105,7 +2105,7 @@
                 (!this.appid && n && (n.is_creator_home || n.is_curator))
               );
             }),
-            (r.prototype.BIsVisibleEvent = function() {
+            (a.prototype.BIsVisibleEvent = function() {
               var e = Math.floor(v.a.GetTimeNowWithOverride());
               return (
                 this.visibility_state == k.k_EEventStateVisible &&
@@ -2113,22 +2113,22 @@
                 (this.visibilityEndTime < 10 || e < this.visibilityEndTime)
               );
             }),
-            (r.prototype.BIsStagedEvent = function() {
+            (a.prototype.BIsStagedEvent = function() {
               return this.visibility_state == k.k_EEventStateStaged;
             }),
-            (r.prototype.GetStartTimeAndDateUnixSeconds = function() {
+            (a.prototype.GetStartTimeAndDateUnixSeconds = function() {
               return this.startTime;
             }),
-            (r.prototype.GetEndTimeAndDateUnixSeconds = function() {
+            (a.prototype.GetEndTimeAndDateUnixSeconds = function() {
               return this.endTime;
             }),
-            (r.prototype.GetPostTimeAndDateUnixSeconds = function() {
+            (a.prototype.GetPostTimeAndDateUnixSeconds = function() {
               return this.postTime;
             }),
-            (r.prototype.GetVisibilityStartTimeAndDateUnixSeconds = function() {
+            (a.prototype.GetVisibilityStartTimeAndDateUnixSeconds = function() {
               return this.visibilityStartTime;
             }),
-            (r.prototype.BIsEventActionEnabled = function() {
+            (a.prototype.BIsEventActionEnabled = function() {
               return (
                 !!this.jsondata.action_end_time &&
                 (this.jsondata.action_end_time > v.a.GetTimeNowWithOverride() ||
@@ -2136,7 +2136,7 @@
                     v.a.GetTimeNowWithOverride() < 1606845600))
               );
             }),
-            (r.prototype.BHasSubTitle = function(e) {
+            (a.prototype.BHasSubTitle = function(e) {
               if (
                 !this.jsondata ||
                 !this.jsondata.localized_subtitle ||
@@ -2146,7 +2146,7 @@
               var t = this.jsondata.localized_subtitle[e];
               return null != t && "" != t;
             }),
-            (r.prototype.GetSubTitle = function(e) {
+            (a.prototype.GetSubTitle = function(e) {
               if (
                 !this.jsondata ||
                 !this.jsondata.localized_subtitle ||
@@ -2156,12 +2156,12 @@
               var t = this.jsondata.localized_subtitle[e];
               return t || "";
             }),
-            (r.prototype.GetSubTitleWithLanguageFallback = function(e) {
+            (a.prototype.GetSubTitleWithLanguageFallback = function(e) {
               return this.jsondata
                 ? h.a.GetWithFallback(this.jsondata.localized_subtitle, e)
                 : "";
             }),
-            (r.prototype.GetSubTitleWithSummaryFallback = function(e) {
+            (a.prototype.GetSubTitleWithSummaryFallback = function(e) {
               var t;
               return (
                 h.a.GetWithFallback(
@@ -2170,10 +2170,10 @@
                     : t.localized_subtitle,
                   e
                 ) ||
-                r.GenerateSummaryFromText(this.GetDescriptionWithFallback(e))
+                a.GenerateSummaryFromText(this.GetDescriptionWithFallback(e))
               );
             }),
-            (r.prototype.GetSummaryWithFallback = function(e) {
+            (a.prototype.GetSummaryWithFallback = function(e) {
               var t;
               return (
                 h.a.GetWithFallback(
@@ -2182,10 +2182,10 @@
                     : t.localized_summary,
                   e
                 ) ||
-                r.GenerateSummaryFromText(this.GetDescriptionWithFallback(e))
+                a.GenerateSummaryFromText(this.GetDescriptionWithFallback(e))
               );
             }),
-            (r.prototype.GetSummary = function(e) {
+            (a.prototype.GetSummary = function(e) {
               var t;
               return h.a.Get(
                 null === (t = this.jsondata) || void 0 === t
@@ -2194,10 +2194,10 @@
                 e
               );
             }),
-            (r.prototype.BHasSummary = function(e) {
+            (a.prototype.BHasSummary = function(e) {
               return Boolean(this.GetSummary(e));
             }),
-            (r.GenerateSummaryFromText = function(e) {
+            (a.GenerateSummaryFromText = function(e) {
               return e && 0 != e.trim().length
                 ? ((e = Object(b.b)(e, [
                     "img",
@@ -2216,22 +2216,22 @@
                   Object(s.d)(e, $))
                 : "";
             }),
-            (r.prototype.BHasTag = function(e) {
+            (a.prototype.BHasTag = function(e) {
               return -1 != this.vecTags.indexOf(e);
             }),
-            (r.prototype.BIsOGGEvent = function() {
+            (a.prototype.BIsOGGEvent = function() {
               return 0 !== this.appid;
             }),
-            (r.prototype.BShowLibrarySpotlight = function() {
+            (a.prototype.BShowLibrarySpotlight = function() {
               return Boolean(this.jsondata.library_spotlight);
             }),
-            (r.prototype.BShowLibrarySpotlightText = function() {
+            (a.prototype.BShowLibrarySpotlightText = function() {
               return Boolean(this.jsondata.library_spotlight_text);
             }),
-            (r.prototype.BHasBroadcastEnabled = function() {
+            (a.prototype.BHasBroadcastEnabled = function() {
               return this.jsondata.bBroadcastEnabled;
             }),
-            (r.prototype.BEventCanShowBroadcastWidget = function(e) {
+            (a.prototype.BEventCanShowBroadcastWidget = function(e) {
               if (this.jsondata.bSaleEnabled)
                 return this.BHasBroadcastEnabled();
               var t = v.a.GetTimeNowWithOverride(),
@@ -2243,10 +2243,10 @@
                 (e || (this.startTime - 600 <= t && t < n))
               );
             }),
-            (r.prototype.BHasBroadcastForceBanner = function() {
+            (a.prototype.BHasBroadcastForceBanner = function() {
               return this.jsondata.broadcast_force_banner;
             }),
-            (r.prototype.BSaleShowBroadcastAtTopOfPage = function() {
+            (a.prototype.BSaleShowBroadcastAtTopOfPage = function() {
               return !(
                 this.jsondata.sale_sections &&
                 this.jsondata.sale_sections.some(function(e) {
@@ -2254,10 +2254,10 @@
                 })
               );
             }),
-            (r.prototype.GetBroadcastChatVisibility = function() {
+            (a.prototype.GetBroadcastChatVisibility = function() {
               return this.jsondata.broadcastChatSetting;
             }),
-            (r.prototype.GetBroadcastTitle = function(e) {
+            (a.prototype.GetBroadcastTitle = function(e) {
               return (
                 h.a.GetWithFallback(
                   this.jsondata.localized_broadcast_title,
@@ -2265,15 +2265,15 @@
                 ) || Object(h.f)(this.jsondata.default_broadcast_title)
               );
             }),
-            (r.prototype.GetBroadcastWhitelist = function() {
+            (a.prototype.GetBroadcastWhitelist = function() {
               return this.jsondata.broadcast_whitelist;
             }),
-            (r.prototype.GetBroadcastWhitelistAsSteamIDs = function() {
+            (a.prototype.GetBroadcastWhitelistAsSteamIDs = function() {
               return this.jsondata.broadcast_whitelist.map(function(e) {
-                return o.a.InitFromAccountID(e).ConvertTo64BitString();
+                return i.a.InitFromAccountID(e).ConvertTo64BitString();
               });
             }),
-            (r.prototype.GetBroadcastWhitelistPriority = function(e, t) {
+            (a.prototype.GetBroadcastWhitelistPriority = function(e, t) {
               var n = this.jsondata.broadcast_whitelist.indexOf(e);
               return n < 0
                 ? null
@@ -2282,19 +2282,19 @@
                     this.jsondata.broadcast_priority[n]) ||
                     t;
             }),
-            (r.prototype.BHasSaleEnabled = function() {
+            (a.prototype.BHasSaleEnabled = function() {
               return this.jsondata.bSaleEnabled;
             }),
-            (r.prototype.BHasSaleVanity = function() {
+            (a.prototype.BHasSaleVanity = function() {
               return (
                 this.jsondata.bSaleEnabled &&
                 Boolean(this.jsondata.sale_vanity_id)
               );
             }),
-            (r.prototype.GetSaleVanity = function() {
+            (a.prototype.GetSaleVanity = function() {
               return this.jsondata.sale_vanity_id;
             }),
-            (r.prototype.GetSaleURL = function() {
+            (a.prototype.GetSaleURL = function() {
               return Boolean(this.jsondata.sale_vanity_id)
                 ? this.jsondata.sale_vanity_id_valve_approved_for_sale_subpath
                   ? f.b.STORE_BASE_URL + "sale/" + this.jsondata.sale_vanity_id
@@ -2315,35 +2315,42 @@
                     "/view/" +
                     this.GID;
             }),
-            (r.prototype.BHasEmailEnabled = function() {
+            (a.prototype.BHasEmailEnabled = function() {
               return (
                 this.jsondata.email_setting &&
                 this.jsondata.email_setting.bEnable
               );
             }),
-            (r.prototype.GetSaleSections = function() {
+            (a.prototype.GetSaleSections = function() {
               return this.jsondata.sale_sections;
             }),
-            (r.prototype.GetSaleSectionCount = function() {
+            (a.prototype.GetSaleSectionCount = function() {
               return this.jsondata.sale_sections.length;
             }),
-            (r.prototype.GetSaleItemCountOfType = function(r) {
-              if (!this.jsondata.bSaleEnabled) return 0;
-              var i = new Set();
+            (a.AccumulateCapsuleListIDs = function(e, t, n) {
+              e &&
+                e.forEach(function(e) {
+                  e && t.has(e.type) && n.add(e.id);
+                });
+            }),
+            (a.prototype.GetSaleItemCountOfType = function(e) {
+              if (!this.jsondata.sale_sections) return 0;
+              var i = new Set(e),
+                o = new Set();
               return (
                 this.jsondata.sale_sections.forEach(function(e) {
-                  e.capsules.forEach(function(e) {
-                    var t, n;
-                    e &&
-                      ((t = -1 != r.indexOf(e.type)),
-                      (n = i.has(e.id)),
-                      t && !n && i.add(e.id));
-                  });
+                  if ("items" === e.section_type)
+                    a.AccumulateCapsuleListIDs(e.capsules, i, o);
+                  else if ("tabs" === e.section_type && e.tabs)
+                    for (var t = 0, n = e.tabs; t < n.length; t++) {
+                      var r = n[t];
+                      a.AccumulateCapsuleListIDs(r.capsules, i, o);
+                    }
                 }),
-                i.size
+                o.size
               );
             }),
-            (r.prototype.GetSaleFeaturedApps = function() {
+            (a.prototype.GetSaleFeaturedApps = function() {
               return this.GetSaleItemCountOfType([
                 "game",
                 "application",
@@ -2352,25 +2359,25 @@
                 "music"
               ]);
             }),
-            (r.prototype.GetSaleFeaturedBundles = function() {
+            (a.prototype.GetSaleFeaturedBundles = function() {
               return this.GetSaleItemCountOfType(["bundle"]);
             }),
-            (r.prototype.GetSaleFeaturedPackages = function() {
+            (a.prototype.GetSaleFeaturedPackages = function() {
               return this.GetSaleItemCountOfType(["sub"]);
             }),
-            (r.prototype.GetTaggedItems = function() {
+            (a.prototype.GetTaggedItems = function() {
               return this.jsondata.tagged_items || [];
             }),
-            (r.prototype.BHasScheduleEnabled = function() {
+            (a.prototype.BHasScheduleEnabled = function() {
               return this.jsondata.bScheduleEnabled;
             }),
-            (r.prototype.GetEventType = function() {
+            (a.prototype.GetEventType = function() {
               return this.type;
             }),
-            (r.prototype.GetEventTypeAsString = function() {
+            (a.prototype.GetEventTypeAsString = function() {
               return Object(c.e)(this.type);
             }),
-            (r.prototype.GetCategoryAsString = function() {
+            (a.prototype.GetCategoryAsString = function() {
               return this.BHasTag("steam_award_nomination_request")
                 ? Object(h.f)("#PartnerEvent_SteamAwardNominations")
                 : this.BHasTag("steam_award_vote_request")
@@ -2383,85 +2390,85 @@
                 ? Object(h.f)("#PartnerEvent_SteamGameFestival_Broadcast")
                 : this.GetEventTypeAsString();
             }),
-            (r.prototype.GetAllTags = function() {
+            (a.prototype.GetAllTags = function() {
               return this.vecTags;
             }),
-            (r.prototype.BHasSteamStoreSpotlight = function() {
+            (a.prototype.BHasSteamStoreSpotlight = function() {
               return Boolean(this.jsondata.store_spotlight);
             }),
-            (r.prototype.BHasLibaryHomeSpotlight = function() {
+            (a.prototype.BHasLibaryHomeSpotlight = function() {
               return Boolean(this.jsondata.library_home_spotlight);
             }),
-            (r.prototype.BHasSaleProductBanners = function() {
+            (a.prototype.BHasSaleProductBanners = function() {
               return (
                 this.jsondata.bSaleEnabled &&
                 (this.BHasSomeImage("product_banner") ||
                   this.BHasSomeImage("product_banner_override"))
               );
             }),
-            (r.prototype.GetSteamAwardCategory = function() {
+            (a.prototype.GetSteamAwardCategory = function() {
               return this.jsondata.steam_award_category_suggestion;
             }),
-            (r.prototype.BIsLockedToAppOwners = function() {
+            (a.prototype.BIsLockedToAppOwners = function() {
               return Boolean(
                 this.jsondata.ownership_requirement_info &&
                   this.jsondata.ownership_requirement_info.bLockedToAppOwners
               );
             }),
-            (r.prototype.GetRequiredAppIDs = function() {
+            (a.prototype.GetRequiredAppIDs = function() {
               return this.jsondata.ownership_requirement_info
                 ? this.jsondata.ownership_requirement_info.rgRequiredAppIDs
                 : [];
             }),
-            (r.prototype.GetOwnershipRequirements = function() {
+            (a.prototype.GetOwnershipRequirements = function() {
               return this.jsondata.ownership_requirement_info;
             }),
-            (r.prototype.GetValveAccessLog = function() {
+            (a.prototype.GetValveAccessLog = function() {
               return this.jsondata.valve_access_log;
             }),
-            Object(i.c)([a.C], r.prototype, "GID", void 0),
-            Object(i.c)([a.C], r.prototype, "AnnouncementGID", void 0),
-            Object(i.c)([a.C], r.prototype, "forumTopicGID", void 0),
-            Object(i.c)([a.C], r.prototype, "type", void 0),
-            Object(i.c)([a.C], r.prototype, "appid", void 0),
-            Object(i.c)([a.C], r.prototype, "name", void 0),
-            Object(i.c)([a.C], r.prototype, "description", void 0),
-            Object(i.c)([a.C], r.prototype, "timestamp_loc_updated", void 0),
-            Object(i.c)([a.C], r.prototype, "startTime", void 0),
-            Object(i.c)([a.C], r.prototype, "endTime", void 0),
-            Object(i.c)([a.C], r.prototype, "visibilityStartTime", void 0),
-            Object(i.c)([a.C], r.prototype, "visibilityEndTime", void 0),
-            Object(i.c)([a.C], r.prototype, "postTime", void 0),
-            Object(i.c)([a.C], r.prototype, "visibility_state", void 0),
-            Object(i.c)([a.C], r.prototype, "broadcaster", void 0),
-            Object(i.c)([a.C], r.prototype, "jsondata", void 0),
-            Object(i.c)([a.C], r.prototype, "nCommentCount", void 0),
-            Object(i.c)([a.C], r.prototype, "nVotesUp", void 0),
-            Object(i.c)([a.C], r.prototype, "nVotesDown", void 0),
-            Object(i.c)([a.C], r.prototype, "bOldAnnouncement", void 0),
-            Object(i.c)([a.C], r.prototype, "announcementClanSteamID", void 0),
-            Object(i.c)([a.C], r.prototype, "loadedAllLanguages", void 0),
-            Object(i.c)([a.C], r.prototype, "bLoaded", void 0),
-            Object(i.c)([a.C], r.prototype, "deleteInProgress", void 0),
-            Object(i.c)([a.C], r.prototype, "vecTags", void 0),
-            Object(i.c)([a.C], r.prototype, "last_update_steamid", void 0),
-            Object(i.c)([a.C], r.prototype, "rtime32_last_modified", void 0),
-            Object(i.c)(
-              [a.C],
-              r.prototype,
+            Object(r.c)([o.C], a.prototype, "GID", void 0),
+            Object(r.c)([o.C], a.prototype, "AnnouncementGID", void 0),
+            Object(r.c)([o.C], a.prototype, "forumTopicGID", void 0),
+            Object(r.c)([o.C], a.prototype, "type", void 0),
+            Object(r.c)([o.C], a.prototype, "appid", void 0),
+            Object(r.c)([o.C], a.prototype, "name", void 0),
+            Object(r.c)([o.C], a.prototype, "description", void 0),
+            Object(r.c)([o.C], a.prototype, "timestamp_loc_updated", void 0),
+            Object(r.c)([o.C], a.prototype, "startTime", void 0),
+            Object(r.c)([o.C], a.prototype, "endTime", void 0),
+            Object(r.c)([o.C], a.prototype, "visibilityStartTime", void 0),
+            Object(r.c)([o.C], a.prototype, "visibilityEndTime", void 0),
+            Object(r.c)([o.C], a.prototype, "postTime", void 0),
+            Object(r.c)([o.C], a.prototype, "visibility_state", void 0),
+            Object(r.c)([o.C], a.prototype, "broadcaster", void 0),
+            Object(r.c)([o.C], a.prototype, "jsondata", void 0),
+            Object(r.c)([o.C], a.prototype, "nCommentCount", void 0),
+            Object(r.c)([o.C], a.prototype, "nVotesUp", void 0),
+            Object(r.c)([o.C], a.prototype, "nVotesDown", void 0),
+            Object(r.c)([o.C], a.prototype, "bOldAnnouncement", void 0),
+            Object(r.c)([o.C], a.prototype, "announcementClanSteamID", void 0),
+            Object(r.c)([o.C], a.prototype, "loadedAllLanguages", void 0),
+            Object(r.c)([o.C], a.prototype, "bLoaded", void 0),
+            Object(r.c)([o.C], a.prototype, "deleteInProgress", void 0),
+            Object(r.c)([o.C], a.prototype, "vecTags", void 0),
+            Object(r.c)([o.C], a.prototype, "last_update_steamid", void 0),
+            Object(r.c)([o.C], a.prototype, "rtime32_last_modified", void 0),
+            Object(r.c)(
+              [o.C],
+              a.prototype,
               "rtime32_last_local_modification",
               void 0
             ),
-            Object(i.c)(
-              [a.C],
-              r.prototype,
+            Object(r.c)(
+              [o.C],
+              a.prototype,
               "rtime32_moderator_reviewed",
               void 0
             ),
-            Object(i.c)([a.C], r.prototype, "video_preview_type", void 0),
-            Object(i.c)([a.C], r.prototype, "video_preview_id", void 0),
-            Object(i.c)([a.C], r.prototype, "m_overrideCurrentDay", void 0),
-            r
+            Object(r.c)([o.C], a.prototype, "video_preview_type", void 0),
+            Object(r.c)([o.C], a.prototype, "video_preview_id", void 0),
+            Object(r.c)([o.C], a.prototype, "m_overrideCurrentDay", void 0),
+            a
           );
         })(),
         ae = function(e) {
@@ -5311,7 +5318,7 @@
                         backgroundImage:
                           "url(https://steamcdn-a.akamaihd.net/store/promo/autumn2020/nom_modal_art_" +
                           r +
-                          ".png)"
+                          ".png?v=2)"
                       }
                     : void 0
                 },
@@ -21357,7 +21364,11 @@
             s = g.a.GetExtensionStringFromHashAndExt(o);
           return (
             null != t &&
-              ((n = Object(_.c)(Object(_.a)(t))), r.push(i + a + "/" + n + s)),
+              ((n = Object(_.a)(t)),
+              r.push(i + a + "/" + n + s),
+              4 == t &&
+                ((n = Object(_.c)(Object(_.a)(t))),
+                r.push(i + a + "/" + n + s))),
             r.push(i + o),
             r
           );
@@ -23660,27 +23671,40 @@
     },
     WF3T: function(e, t, n) {
       "use strict";
-      var h = n("mrSG"),
-        r = n("vDqi"),
-        f = n.n(r),
+      var r,
+        i,
+        h = n("mrSG"),
+        o = n("vDqi"),
+        f = n.n(o),
         s = n("2vnA"),
         E = n("wd/R"),
-        o = n("5bld"),
+        a = n("5bld"),
         c = n("5eAM"),
-        i = n("kLLr"),
-        a = n("9w6b"),
-        l = n("6oCP"),
-        u = n("gyoR"),
-        p = n("r64O"),
+        l = n("kLLr"),
+        u = n("9w6b"),
+        p = n("6oCP"),
+        d = n("gyoR"),
+        m = n("r64O"),
         A = n("TLQK"),
         _ = n("bDQf"),
-        d = n("bxiW"),
-        g = n("lkRc"),
-        m = n("ee7K"),
-        b = n("O0NR"),
-        v = n("KEpR"),
-        y = n("5izx"),
-        S = (function() {
+        g = n("bxiW"),
+        b = n("lkRc"),
+        v = n("ee7K"),
+        y = n("O0NR"),
+        S = n("KEpR");
+      n("mB/g");
+      ((i = r = r || {}).Default = "default"),
+        (i.Upcoming = "upcoming"),
+        (i.Featured = "featured"),
+        (i.Press = "press"),
+        (i.Steam = "steam"),
+        (i.Halloween = "halloween"),
+        (i.Dev_All = "all"),
+        (i.Dev_AssociatedPress = "associated_press"),
+        (i.Dev_Sales = "associated_sales");
+      new Map();
+      var C = n("5izx"),
+        O = (function() {
           function e() {
             (this.m_mapBlockedAppIds = new Map()),
               (this.m_mapBlockedClanIds = new Map());
@@ -23700,9 +23724,9 @@
             }),
             (e.prototype.Init = function() {
               var t = this,
-                e = Object(g.e)("mutedcomminfo", "application_config");
+                e = Object(b.e)("mutedcomminfo", "application_config");
               this.ValidateStoreDefault(e) &&
-                (("dev" != g.b.WEB_UNIVERSE && "beta" != g.b.WEB_UNIVERSE) ||
+                (("dev" != b.b.WEB_UNIVERSE && "beta" != b.b.WEB_UNIVERSE) ||
                   console.log(
                     "DEV_DEBUG: CMutedCommunicationStore loading bundles payload: " +
                       JSON.stringify(e)
@@ -23744,9 +23768,9 @@
                     case 0:
                       if (
                         ((t =
-                          g.b.STORE_BASE_URL +
+                          b.b.STORE_BASE_URL +
                           "account/optoutappcommunication/"),
-                        (n = new FormData()).append("sessionid", g.b.SESSIONID),
+                        (n = new FormData()).append("sessionid", b.b.SESSIONID),
                         n.append("allowCommunication", i ? "1" : "0"),
                         o)
                       ) {
@@ -23762,7 +23786,7 @@
                       } else {
                         if (!a)
                           return (
-                            Object(p.a)(
+                            Object(m.a)(
                               !1,
                               "BlockEventsFromCalenderEvent: Invalid AppID and ClanID"
                             ),
@@ -23811,7 +23835,6 @@
         n.d(t, "a", function() {
           return M;
         });
-      var C, O;
       function w(e, t, n, r) {
         return {
           strId: "section-" + t,
@@ -23823,13 +23846,6 @@
           nTopOffset: 0
         };
       }
-      ((O = C = C || {}).Featured = "featured"),
-        (O.Press = "press"),
-        (O.Steam = "steam"),
-        (O.Halloween = "halloween"),
-        (O.Dev_All = "all"),
-        (O.Dev_AssociatedPress = "associated_press"),
-        (O.Dev_Sales = "associated_sales");
       var I = (function() {
           function e(e) {
             (this.m_nForwardStuckCount = 0),
@@ -23838,7 +23854,7 @@
               (this.m_mapCalendarClansByID = new Map()),
               (this.m_mapCalendarEventsByGid = new Map()),
               (this.m_rgSortedCalendarEvents = new Array()),
-              (this.m_visibilityStore = new v.a()),
+              (this.m_visibilityStore = new S.a()),
               (this.m_currentView = s.C.box(null)),
               (this.m_bFinishedSearchingForward = !1),
               (this.m_bFinishedSearchingBackward = !1),
@@ -23846,7 +23862,7 @@
               (this.m_rgFutureSections = []),
               (this.m_collectionMetaData = void 0),
               (this.m_key = e),
-              m.a.HintLoad();
+              v.a.HintLoad();
           }
           return (
             (e.prototype.GetNumEventsLoaded = function() {
@@ -23862,8 +23878,8 @@
             }),
             (e.prototype.BIsShowingFeaturedFeed = function() {
               return Boolean(
-                this.GetCollectionID() === C.Featured ||
-                  (this.BIsGlobalCalendar() && !g.g.accountid)
+                this.GetCollectionID() === r.Featured ||
+                  (this.BIsGlobalCalendar() && !b.g.accountid)
               );
             }),
             (e.prototype.BIsSingleSourceCalendar = function() {
@@ -23888,8 +23904,8 @@
               return (
                 !!this.BIsSingleSourceCalendar() &&
                 (this.BIsSingleAppCalendar()
-                  ? S.Get().BIsMutedAppID(this.GetSingleAppID())
-                  : S.Get().BIsMutedClanID(this.GetSingleGroupID()))
+                  ? O.Get().BIsMutedAppID(this.GetSingleAppID())
+                  : O.Get().BIsMutedClanID(this.GetSingleGroupID()))
               );
             }),
             (e.prototype.BIsSingleGroupCalendar = function() {
@@ -23998,7 +24014,7 @@
             (e.prototype.GetStoreInitializationTimestamp = function() {
               return (
                 this.m_dtInitTime ||
-                  (this.m_dtInitTime = y.a.GetTimeNowWithOverrideAsDate()),
+                  (this.m_dtInitTime = C.a.GetTimeNowWithOverrideAsDate()),
                 this.m_dtInitTime
               );
             }),
@@ -24166,7 +24182,7 @@
                 return Object(h.e)(this, function(e) {
                   switch (e.label) {
                     case 0:
-                      return [4, m.a.HintLoad()];
+                      return [4, v.a.HintLoad()];
                     case 1:
                       return (
                         e.sent(),
@@ -24174,7 +24190,7 @@
                           t.RegisterCalendarApps(n.apps),
                             t.RegisterCalendarClans(n.clans),
                             t.RegisterCalendarEvents(n.documents),
-                            l.d.RegisterClanEvents(n.events),
+                            p.d.RegisterClanEvents(n.events),
                             t.RegisterReadEvents(n.events_read),
                             t.RegisterEventVotes(n.event_votes),
                             n.forwardComplete &&
@@ -24201,7 +24217,7 @@
                   var r,
                     i = n[t];
                   this.m_mapCalendarAppsByID.has(i.appid) ||
-                    (((r = new o.b()).appid = i.appid),
+                    (((r = new a.b()).appid = i.appid),
                     (r.source = i.source),
                     (r.playtime = i.playtime),
                     (r.last_played = i.last_played),
@@ -24215,21 +24231,21 @@
                   var r,
                     i = n[t];
                   this.m_mapCalendarClansByID.has(i.clanid) ||
-                    (((r = new o.c()).clanid = i.clanid),
+                    (((r = new a.c()).clanid = i.clanid),
                     (r.source = i.source),
                     this.m_mapCalendarClansByID.set(i.clanid, r));
                 }
             }),
             (e.prototype.RegisterReadEvents = function(e) {
               if (e)
-                for (var t = a.a.Get(), n = 0, r = e; n < r.length; n++) {
+                for (var t = u.a.Get(), n = 0, r = e; n < r.length; n++) {
                   var i = r[n];
                   t.SetEventAsRead(i);
                 }
             }),
             (e.prototype.RegisterEventVotes = function(e) {
               if (e)
-                for (var t = a.a.Get(), n = 0, r = e; n < r.length; n++) {
+                for (var t = u.a.Get(), n = 0, r = e; n < r.length; n++) {
                   var i = r[n],
                     o = void 0 === i.vote ? void 0 : Boolean(i.vote);
                   t.SetVote(i.id, o);
@@ -24285,7 +24301,7 @@
                 : this.m_backwardRequestInFlight;
             }),
             (e.prototype.SetRequestInFlight = function(e, t) {
-              Object(p.a)(
+              Object(m.a)(
                 !t || !this.GetRequestInFlight(e),
                 "Already have a request in flight for",
                 e
@@ -24312,7 +24328,7 @@
                     ? [2, 1]
                     : ((t = this.GetRequestInFlight(d)) ||
                         ((n =
-                          g.b.STORE_BASE_URL +
+                          b.b.STORE_BASE_URL +
                           "events/ajaxgetusereventcalendarrange/"),
                         (r =
                           "forward" === d
@@ -24320,11 +24336,11 @@
                             : this.m_nBackwardStuckCount),
                         (i = r < 3 ? r : 0),
                         (o = 3 <= r ? 1 : 0),
-                        (a = "dev" === g.b.WEB_UNIVERSE ? 50 : 250),
+                        (a = "dev" === b.b.WEB_UNIVERSE ? 50 : 250),
                         (s = a + 50 * i),
                         (c = this.GetTimeEdgeForDirection(
                           d,
-                          y.a.GetTimeNowWithOverride()
+                          C.a.GetTimeNowWithOverride()
                         )),
                         (l = {
                           minTime: 0,
@@ -24424,7 +24440,7 @@
             (e.prototype.BInternalInsertCalendarEventItem = function(e) {
               if (!e.unique_id)
                 return (
-                  Object(p.a)(
+                  Object(m.a)(
                     !1,
                     "Attmpted to register a calendar event item with an invalid unique id!"
                   ),
@@ -24435,7 +24451,7 @@
                 n = this.m_mapCalendarClansByID.get(e.clanid);
               if (!t && !n)
                 return console.log("No AppInfo or ClanInfo For: ", e), !1;
-              var r = new o.d();
+              var r = new a.d();
               return (
                 (r.clanid = e.clanid),
                 (r.unique_id = e.unique_id),
@@ -24466,17 +24482,17 @@
                         (t = r.appInfo ? r.appid : void 0),
                         (n = r.clanInfo ? r.clanInfo.clanid : void 0),
                         null == t && null == n
-                          ? (Object(p.a)(
+                          ? (Object(m.a)(
                               !1,
                               "Both clan id and account id are missing, cannot change communication status"
                             ),
                             [2])
-                          : [4, S.Get().UpdateCommunitionSetting(i, t, n)]
+                          : [4, O.Get().UpdateCommunitionSetting(i, t, n)]
                       );
                     case 1:
                       return (
                         e.sent(),
-                        b.b.RecordAppInteractionEvent(t, b.a.k_eMuted),
+                        y.b.RecordAppInteractionEvent(t, y.a.k_eMuted),
                         [2]
                       );
                   }
@@ -24513,7 +24529,7 @@
             Object(h.c)([s.k], e.prototype, "RegisterReadEvents", null),
             Object(h.c)([s.k], e.prototype, "RegisterEventVotes", null),
             Object(h.c)([s.k], e.prototype, "RegisterCalendarEvents", null),
-            Object(h.c)([d.a], e.prototype, "BHitEventHorizon", null),
+            Object(h.c)([g.a], e.prototype, "BHitEventHorizon", null),
             Object(h.c)([s.k.bound], e.prototype, "LoadAdditionalEvents", null),
             Object(h.c)(
               [s.k],
@@ -24586,16 +24602,16 @@
                   if (e.appid) {
                     if (
                       !t.m_bAllowMutedAndIgnoredSources &&
-                      (S.Get().BIsMutedAppID(e.appid) ||
-                        m.a.BIsGameIgnored(e.appid))
+                      (O.Get().BIsMutedAppID(e.appid) ||
+                        v.a.BIsGameIgnored(e.appid))
                     )
                       return !1;
                     if (
                       !t.m_bSkipStorePreferenceCheck &&
-                      Object(u.b)(c.a.GetAppLinkInfo(e.appid))
+                      Object(d.b)(c.a.GetAppLinkInfo(e.appid))
                     )
                       return !1;
-                  } else if (!t.m_bAllowMutedAndIgnoredSources && (S.Get().BIsMutedClanID(e.clanid) || m.a.BIsIgnoringCurator(i.a.InitFromClanID(e.clanid)))) return !1;
+                  } else if (!t.m_bAllowMutedAndIgnoredSources && (O.Get().BIsMutedClanID(e.clanid) || v.a.BIsIgnoringCurator(l.a.InitFromClanID(e.clanid)))) return !1;
                   return !0;
                 });
               },
@@ -25491,6 +25507,7 @@
                 (this.full_game_appid = e.full_game_appid),
                 (this.title = e.title),
                 (this.release = e.release),
+                (this.rt_release_date = e.rt_release_date),
                 (this.capsule = e.capsule),
                 (this.tiny_capsule = e.tiny_capsule),
                 (this.main_capsule = e.main_capsule),
@@ -25536,6 +25553,7 @@
             }),
             Object(s.c)([i.C], e.prototype, "success", void 0),
             Object(s.c)([i.C], e.prototype, "release", void 0),
+            Object(s.c)([i.C], e.prototype, "rt_release_date", void 0),
             Object(s.c)([i.C], e.prototype, "tiny_capsule", void 0),
             Object(s.c)([i.C], e.prototype, "main_capsule", void 0),
             Object(s.c)([i.C], e.prototype, "type", void 0),
@@ -34375,7 +34393,7 @@
                       strTitle:
                         (null == c ? void 0 : c.strTitle) ||
                         Object(p.f)("#Dialog_DefaultWindowTitle"),
-                      closeModal: null == c ? void 0 : c.closeModal,
+                      fnOnClose: null == c ? void 0 : c.fnOnClose,
                       popupWidth:
                         (null == c ? void 0 : c.popupWidth) ||
                         (null == r ? void 0 : r.width),
@@ -34417,10 +34435,10 @@
       }
       function h(e, t, n, r, i, o, a) {
         function s() {
-          h && h(), r && r.closeModal && r.closeModal();
+          p && p.Close(), h && h(), null != r && r.fnOnClose && r.fnOnClose();
         }
         function c() {
-          l && l.Close(), p && p.Close(), s();
+          l && l.Close(), s();
         }
         var l,
           u,
@@ -34443,7 +34461,7 @@
                     g.createElement("div", null)
                   )),
                   (p = a.ShowModal(u))),
-                (d = Object(_.a)(Object(_.a)({}, r), { closeModal: s })),
+                (d = Object(_.a)(Object(_.a)({}, r), { fnOnClose: s })),
                 (m = new y(t, n, d, f, i, o)).Show(),
                 m)
               : a.ShowModal(f))
@@ -34510,7 +34528,7 @@
           (e.prototype.OnLoad = function() {}),
           (e.prototype.OnResize = function() {}),
           (e.prototype.OnClose = function() {
-            this.m_modalProps.closeModal && this.m_modalProps.closeModal();
+            this.m_modalProps.fnOnClose && this.m_modalProps.fnOnClose();
           }),
           (e.prototype.Render = function(e, t) {
             var n, r;

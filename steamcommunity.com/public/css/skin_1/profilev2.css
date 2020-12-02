@@ -896,7 +896,7 @@ html.responsive .showcase_achievement:nth-child(7n-6) {
 	height: 80px;
 }
 
-.showcase_badges_icons .showcase_badge:first-child, html.responsive .showcase_badges_icons .showcase_badge:nth-child(6n-5) {
+.showcase_badges_icons .showcase_badge:nth-child(6n-5) {
 	margin-left: 0;
 }
 

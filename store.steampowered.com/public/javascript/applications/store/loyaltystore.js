@@ -106,6 +106,11 @@
       e.exports =
         "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgzIiBoZWlnaHQ9IjEwNyIgdmlld0JveD0iMCAwIDE4MyAxMDciIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+DQo8cmVjdCB4PSI0Mi4xNjUiIHk9IjQxLjg1NzQiIHdpZHRoPSIxNDAiIGhlaWdodD0iNjUiIHJ4PSI1IiBmaWxsPSJ1cmwoI3BhaW50MF9saW5lYXIpIiBmaWxsLW9wYWNpdHk9IjAuODUiLz4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTYxLjMzMSAyNi4xNDI2QzE2MS4zMzEgMjMuMzgxMiAxNTkuMDkyIDIxLjE0MjYgMTU2LjMzMSAyMS4xNDI2SDI2LjE0MjZDMjMuMzgxMiAyMS4xNDI2IDIxLjE0MjYgMjMuMzgxMiAyMS4xNDI2IDI2LjE0MjZWODAuNzE0QzIxLjE0MjYgODMuNDc1NCAyMy4zODEyIDg1LjcxNCAyNi4xNDI2IDg1LjcxNEgyOC44ODY5QzMxLjY0ODQgODUuNzE0IDMzLjg4NjkgODMuNDc1NCAzMy44ODY5IDgwLjcxNFYzOC4wMzczQzMzLjg4NjkgMzUuMjc1OSAzNi4xMjU1IDMzLjAzNzMgMzguODg2OSAzMy4wMzczSDE1Ni4zMzFDMTU5LjA5MiAzMy4wMzczIDE2MS4zMzEgMzAuNzk4NyAxNjEuMzMxIDI4LjAzNzNWMjYuMTQyNloiIGZpbGw9InVybCgjcGFpbnQxX2xpbmVhcikiIGZpbGwtb3BhY2l0eT0iMC44NSIvPg0KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xNDAuMTg4IDVDMTQwLjE4OCAyLjIzODU4IDEzNy45NDkgMCAxMzUuMTg4IDBINUMyLjIzODU4IDAgMCAyLjIzODU3IDAgNVY1OS41NzE0QzAgNjIuMzMyOSAyLjIzODU4IDY0LjU3MTQgNSA2NC41NzE0SDcuNzQ0MzZDMTAuNTA1OCA2NC41NzE0IDEyLjc0NDQgNjIuMzMyOSAxMi43NDQ0IDU5LjU3MTRWMTYuODk0N0MxMi43NDQ0IDE0LjEzMzMgMTQuOTgyOSAxMS44OTQ3IDE3Ljc0NDQgMTEuODk0N0gxMzUuMTg4QzEzNy45NDkgMTEuODk0NyAxNDAuMTg4IDkuNjU2MTYgMTQwLjE4OCA2Ljg5NDc0VjVaIiBmaWxsPSJ1cmwoI3BhaW50Ml9saW5lYXIpIiBmaWxsLW9wYWNpdHk9IjAuODUiLz4NCjxkZWZzPg0KPGxpbmVhckdyYWRpZW50IGlkPSJwYWludDBfbGluZWFyIiB4MT0iMTEyLjE2NSIgeTE9IjQxLjg1NzQiIHgyPSIxMTIuMTY1IiB5Mj0iMTA2Ljg1NyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPg0KPHN0b3Agc3RvcC1jb2xvcj0id2hpdGUiLz4NCjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0id2hpdGUiIHN0b3Atb3BhY2l0eT0iMC41OCIvPg0KPC9saW5lYXJHcmFkaWVudD4NCjxsaW5lYXJHcmFkaWVudCBpZD0icGFpbnQxX2xpbmVhciIgeDE9IjkxLjIzNjYiIHkxPSIyMS4xNDI2IiB4Mj0iOTEuMjM2NiIgeTI9Ijg1LjcxNCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPg0KPHN0b3Agc3RvcC1jb2xvcj0id2hpdGUiLz4NCjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0id2hpdGUiIHN0b3Atb3BhY2l0eT0iMC41OCIvPg0KPC9saW5lYXJHcmFkaWVudD4NCjxsaW5lYXJHcmFkaWVudCBpZD0icGFpbnQyX2xpbmVhciIgeDE9IjcwLjA5NCIgeTE9IjAiIHgyPSI3MC4wOTQiIHkyPSI2NC41NzE0IiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+DQo8c3RvcCBzdG9wLWNvbG9yPSJ3aGl0ZSIvPg0KPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSJ3aGl0ZSIgc3RvcC1vcGFjaXR5PSIwLjU4Ii8+DQo8L2xpbmVhckdyYWRpZW50Pg0KPC9kZWZzPg0KPC9zdmc+DQo=";
     },
+    "1aCw": function(e, t, n) {
+      e.exports =
+        n.p +
+        "images/applications/store/icon_showcase_23.svg?v=valveisgoodatcaching";
+    },
     "1sV+": function(e, t, n) {
       e.exports =
         n.p +
@@ -162,6 +167,7 @@
         "./icon_showcase_2.svg": "1VA/",
         "./icon_showcase_21.svg": "CeOW",
         "./icon_showcase_22.svg": "mts6",
+        "./icon_showcase_23.svg": "1aCw",
         "./icon_showcase_3.svg": "Ayj8",
         "./icon_showcase_4.svg": "IoTS",
         "./icon_showcase_5.svg": "aLBk",
@@ -8304,7 +8310,12 @@
         })(O.Component),
         Pr = a("0OaU");
       function Br(e, t, n, r) {
-        var a = { type: 1, rewardDefinition: t, itemLevel: n };
+        var a = {
+          type: 1,
+          rewardDefinition: t,
+          itemLevel: n,
+          desiredItemLevel: n
+        };
         Object(yn.b)(
           O.createElement(Gr, { definition: a, saleitem: r }),
           e ? Object(vn.m)(e) : window
@@ -8638,7 +8649,7 @@
                     we.Get()
                       .RedeemPointsForProfileShowcaseUpgrade(
                         this.props.definition.profileCustomizationType,
-                        this.props.definition.itemLevel + 1
+                        this.props.definition.desiredItemLevel
                       )
                       .then(function(e) {
                         1 == e.eResult
@@ -8744,7 +8755,7 @@
                     ? Object(P.f)(
                         "#ProfileShowcases_UpgradeLevel",
                         this.props.definition.itemLevel,
-                        this.props.definition.itemLevel + 1
+                        this.props.definition.desiredItemLevel
                       )
                     : Object(P.f)(
                         "#ProfileShowcases_UpgradeAtMaxLevel",
@@ -9929,7 +9940,7 @@
               if (2 == this.props.definition.type)
                 return Object(P.f)(
                   "#Redeem_UsePoints_ProfileShowcaseUpgrade",
-                  this.props.definition.itemLevel + 1
+                  this.props.definition.desiredItemLevel
                 );
               var t = we.Get().GetMaxProfileShowcaseSlots();
               return Object(P.f)(
@@ -9961,9 +9972,9 @@
                 n = rn(this.props.definition.profileCustomizationType),
                 r = this.props.definition.profileCustomizationType,
                 a = Math.min(
-                  this.props.definition.itemLevel
-                    ? this.props.definition.itemLevel + 1
-                    : 1,
+                  this.props.definition.desiredItemLevel
+                    ? this.props.definition.desiredItemLevel
+                    : this.props.definition.itemLevel,
                   we.Get().GetMaxProfileShowcaseUpgradeLevel()
                 ),
                 i = 0.5 * this.state.iframeHeight;

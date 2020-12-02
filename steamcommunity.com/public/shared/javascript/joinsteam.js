@@ -162,8 +162,7 @@ function AjaxCheckEmailVerified()
 					ChangeEmail();
 					ShowError( 'You\'ve waited too long to verify your email. Please try creating your account and verifying your email again.' );
 					break;
-				case 36:
-				case 10:
+				default:
 															setTimeout( AjaxCheckEmailVerified, 3000);
 					break;
 			}

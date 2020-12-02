@@ -2756,6 +2756,15 @@ CGameSelectorOwnedGames.AreOwnedGamesLoaded = function()
 {
 	return CGameSelectorOwnedGames.s_rgOwnedGames != null;
 };
+CGameSelectorOwnedGames.NormalizeGameNames = function( rgOwnedGames )
+{
+	var regexNormalize = new RegExp( /[^0-9a-zA-Z]/g );
+	for( var i=0; i < rgOwnedGames.length; i++ )
+	{
+		var game = rgOwnedGames[i];
+		game.name_normalized = game.name.replace( regexNormalize, '' ).toLowerCase();
+	}
+};
 CGameSelectorOwnedGames.LoadOwnedGames = function( fnCallback )
 {
 	if ( !CGameSelectorOwnedGames.AreOwnedGamesLoaded() )
@@ -2776,12 +2785,7 @@ CGameSelectorOwnedGames.LoadOwnedGames = function( fnCallback )
 			{
 				CGameSelectorOwnedGames.s_rgOwnedGames = transport.responseJSON || [];
 
-				var regexNormalize = new RegExp( /[^0-9a-zA-Z]/g );
-				for( var i=0; i < CGameSelectorOwnedGames.s_rgOwnedGames.length; i++ )
-				{
-					var game = CGameSelectorOwnedGames.s_rgOwnedGames[i];
-					game.name_normalized = game.name.replace( regexNormalize, '' ).toLowerCase();
-				}
+				CGameSelectorOwnedGames.NormalizeGameNames( CGameSelectorOwnedGames.s_rgOwnedGames );
 			},
 			onFailure: function()
 			{
@@ -2804,9 +2808,11 @@ CGameSelectorOwnedGames.LoadOwnedGames = function( fnCallback )
 };
 
 CGameSelectorProfileShowcaseGames = Class.create( CGameSelectorOwnedGames, {
-	initialize: function( $super, elInput, elSuggestionsCtn, elSuggestions, fnOnClick )
+	initialize: function( $super, elInput, elSuggestionsCtn, elSuggestions, fnOnClick, rgFilteredGames )
 	{
 		CGameSelectorOwnedGames.s_rgParams['for_showcase'] = 1;
+		CGameSelectorOwnedGames.s_rgOwnedGames = rgFilteredGames;
+		CGameSelectorOwnedGames.NormalizeGameNames( CGameSelectorOwnedGames.s_rgOwnedGames );
 		$super( elInput, elSuggestionsCtn, elSuggestions, fnOnClick );
 	},
 } );
