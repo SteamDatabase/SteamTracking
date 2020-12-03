@@ -2811,8 +2811,11 @@ CGameSelectorProfileShowcaseGames = Class.create( CGameSelectorOwnedGames, {
 	initialize: function( $super, elInput, elSuggestionsCtn, elSuggestions, fnOnClick, rgFilteredGames )
 	{
 		CGameSelectorOwnedGames.s_rgParams['for_showcase'] = 1;
-		CGameSelectorOwnedGames.s_rgOwnedGames = rgFilteredGames;
-		CGameSelectorOwnedGames.NormalizeGameNames( CGameSelectorOwnedGames.s_rgOwnedGames );
+		if ( rgFilteredGames )
+		{
+			CGameSelectorOwnedGames.s_rgOwnedGames = rgFilteredGames;
+			CGameSelectorOwnedGames.NormalizeGameNames( CGameSelectorOwnedGames.s_rgOwnedGames );
+		}
 		$super( elInput, elSuggestionsCtn, elSuggestions, fnOnClick );
 	},
 } );
