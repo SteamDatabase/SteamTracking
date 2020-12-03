@@ -52,7 +52,7 @@ public:
     virtual unknown_ret GetStringForXboxOrigin(EXboxOrigin) = 0;
     virtual unknown_ret GetActionOriginFromXboxOrigin(unsigned long long, EXboxOrigin) = 0;
     virtual unknown_ret TranslateActionOrigin(ESteamInputType, EControllerActionOrigin) = 0;
-    virtual unknown_ret GetInputTypeForHandle(unsigned long long) = 0;
+    virtual unknown_ret GetInputTypeForHandle(unsigned long long, int) = 0;
     virtual unknown_ret TranslateSteamInputOriginToSteamControllerOrigin(EInputActionOrigin) = 0;
     virtual unknown_ret TranslateSteamControllerOriginToSteamInputOrigin(EControllerActionOrigin) = 0;
     virtual unknown_ret GetMotionData(unsigned long long) = 0;

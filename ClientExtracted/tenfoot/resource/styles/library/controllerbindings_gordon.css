@@ -621,8 +621,8 @@ SelectMousePosition
 
 .controller_ps5 #BackgroundController
 {
-	background-position: 510px -30px;
-	background-size: 720px 700px;
+	background-position: 533px -15px;
+	background-size: 670px 650px;
 	background-image: url("file://{images}/library/controller/controller_config_controller_ps5.png");
 	wash-color: #102f4b72;
 }
@@ -969,7 +969,7 @@ SelectMousePosition
 .controller_ps5 #BackgroundLines.GyroSelected
 {
     background-size: 75%;
-    background-position: 220px 110px;
+    background-position: 220px 80px;
 }
 
 
@@ -981,7 +981,7 @@ SelectMousePosition
 .controller_ps5 #BackgroundLines.DPadSelected,
 {
 	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_8.png");
-    background-position: -128px -55px;
+    background-position: -118px -60px;
 }
 
 .controller_ps4 #BackgroundLines.DPadSelected,
@@ -1016,7 +1016,7 @@ SelectMousePosition
 .controller_ps5 #BackgroundLines.LeftJoystickSelected
 {
     background-image: url("file://{images}/library/controller/cropped_controller_config_lines_9.png");
-    background-position: -125px -60px;
+    background-position: -120px -70px;
 }
 
 .controller_ps4 #BackgroundLines.LeftJoystickSelected,
@@ -1044,7 +1044,7 @@ SelectMousePosition
 
 .controller_ps5 #BackgroundLines.SlotThreeSelected,
 {
-    background-position: -50px -55px;
+    background-position: -60px -65px;
 }
 
 .controller_ps4 #BackgroundLines.SlotThreeSelected,
@@ -1085,7 +1085,7 @@ SelectMousePosition
 .controller_ps5 #BackgroundLines.SlotABXYSelected,
 {
 	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_11.png");
-    background-position: -50px -60px;
+    background-position: -65px -60px;
 }
 
 .controller_mobile_touch #BackgroundLines.SlotABXYSelected 
@@ -1119,11 +1119,16 @@ SelectMousePosition
 	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_12.png");
 }
 
+.controller_ps5 #BackgroundLines.CaptureButtonSelected
+{
+    background-position: 70px 195px;
+	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_1.png");
+}
+
 .controller_ps5 #BackgroundLines.BackButtonSelected,
 {
-    background-position: -195px -126px;
     background-image: url("file://{images}/library/controller/cropped_controller_config_lines_2.png");
-    background-position: -90px -10px;
+    background-position: -83px -12px;
 }
 
 .controller_ps4 #BackgroundLines.BackButtonSelected
@@ -1178,7 +1183,7 @@ SelectMousePosition
 .controller_ps5 #BackgroundLines.StartButtonSelected,
 {
     background-image: url("file://{images}/library/controller/cropped_controller_config_lines_15.png");
-    background-position: -75px -10px;
+    background-position: -88px -12px;
 }
 
 .controller_ps4 #BackgroundLines.StartButtonSelected

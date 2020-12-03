@@ -382,9 +382,45 @@ TenfootFooterPanel.WebFooter
     padding-top: -7.5px;
 }
 
+.PS5Origin #LegendRow Label.STARTButtonBox.LegendButtonBox,
+{
+	border: 2px solid #4ca2ff95;
+	border-radius: 8px;
+    background-size: 14px;
+	width: 20px;
+	height: 34px;
+	text-align: center;
+	margin: 6px;
+	margin-left: 16px;
+	margin-right: 2px;
+	background-repeat: no-repeat;
+	background-position: 55% 50%;
+	padding: 0px;
+    background-color: #FFFFFF; 
+	background-image: url( "file://{images}/footer/start_ps5.png" );
+}
+
+.PS5Origin #LegendRow Label.BACKButtonBox.LegendButtonBox,
+{
+   	border: 2px solid #4ca2ff95;
+	border-radius: 8px;
+    background-size: 14px;
+	width: 20px;
+	height: 34px;
+	text-align: center;
+	margin: 6px;
+	margin-left: 16px;
+	margin-right: 2px;
+	background-repeat: no-repeat;
+	background-position: 55% 50%;
+	padding: 0px;
+    background-color: #FFFFFF; 
+	background-image: url( "file://{images}/footer/back_ps5.png" );
+}
 .PS5Origin #LegendRow Label.LegendButtonBox
 {
     color: #949494;
+    background-color: #FFFFFF;
 }
 
 .OSX #LegendRow Label.LegendButtonBox.CrossButtonBox {
@@ -625,8 +661,9 @@ TenfootFooterPanel.WebFooter
 	padding-top: 3px;
 }
 
-#LegendRow .STARTButtonBox,
-#LegendRow .BACKButtonBox,
+
+:not(.PS5Origin) #LegendRow .STARTButtonBox,
+:not(.PS5Origin) #LegendRow .BACKButtonBox,
 {
 	border-radius: 16px;
 	border: 2px solid #EEEEEEf0;
@@ -658,9 +695,6 @@ TenfootFooterPanel.WebFooter
     font-size: 36px;
 }
 
-
-.PS5Origin #LegendRow .STARTButtonBox,
-.PS5Origin #LegendRow .BACKButtonBox,
 .PS4Origin #LegendRow .STARTButtonBox,
 .PS4Origin #LegendRow .BACKButtonBox
 {

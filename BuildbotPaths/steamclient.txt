@@ -137,7 +137,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/MultiUserVoiceChat.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/ServerList.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/ServerMsgHandlerDetails.o
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/ServerPlayerListMsgHandler.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/albumcovercontroller.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/appdatacache.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/applicationmanager.o
@@ -442,7 +441,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/MultiUserVoiceChat.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/ServerList.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/ServerMsgHandlerDetails.o
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/ServerPlayerListMsgHandler.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/albumcovercontroller.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/appdatacache.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/applicationmanager.o
@@ -852,9 +850,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/matchmaking/
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/matchmaking/ServerList.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/matchmaking/ServerList.h
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/matchmaking/ServerMsgHandlerDetails.cpp
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/matchmaking/ServerMsgHandlerDetails.h
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/matchmaking/ServerPlayerListMsgHandler.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/matchmaking/matchmaking.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/matchmaking/matchmaking.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/music/
