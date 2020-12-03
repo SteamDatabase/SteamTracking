@@ -33370,11 +33370,11 @@
                 ",",
                 "\t"
               );
-              var a = /^\s*([0-9]+)\W+(.*)/.exec(r);
+              var a = /^\s*([0-9]+)[\'\,\"\s]+(.*)/.exec(r);
               if (a) {
                 var n = { id: parseInt(a[1]), type: "game" },
                   r = a[2],
-                  i = /^(game|software|dlc|bundle|video|sub|event|tag|music)\W+(.*)/i.exec(
+                  i = /^(game|software|dlc|bundle|video|sub|event|tag|music)[\'\,\"\s]+(.*)/i.exec(
                     r
                   );
                 i && ((n.type = i[1]), (r = i[2]));
