@@ -220,7 +220,7 @@ function OnImageDragEnter( evt )
 {
 	evt.stopPropagation();
 	evt.preventDefault();
-	var t = $J( evt.target );
+	var t = $J( evt.currentTarget );
 	t.addClass( "drag_over" );
 }
 
@@ -235,10 +235,10 @@ function OnImageDragLeave( evt )
 		return;
 
 	// chrome doesn't set evt.relatedTarget.. wtf?
-	if ( $J( evt.target ).is(':hover') )
+	if ( $J( evt.currentTarget ).is(':hover') )
 		return;
 
-	$J( evt.target ).removeClass( 'drag_over' );
+	$J( evt.currentTarget ).removeClass( 'drag_over' );
 }
 
 // called when mouse dragging over a drop box
@@ -256,7 +256,7 @@ function OnImageDrop( evt )
 
 	var files = evt.originalEvent.dataTransfer.files; // FileList object.
 
-	$J( evt.target ).removeClass( 'drag_over' );
+	$J( evt.currentTarget ).removeClass( 'drag_over' );
 	LoadImageFilesForUpload( files );
 }
 
@@ -266,15 +266,14 @@ function OnImageDrop( evt )
 // called when mouse releases file on drop box
 function OnScreenshotDrop( evt )
 {
-
 	evt.stopPropagation();
 	evt.preventDefault();
 
 	var files = evt.originalEvent.dataTransfer.files; // FileList object.
 
-	$J( evt.target ).removeClass( 'drag_over' );
+	$J( evt.currentTarget ).removeClass( 'drag_over' );
 
-	var parent = $J(evt.target).parent().parent();
+	var parent = $J(evt.currentTarget).parent().parent();
 	var target = $J('.screenshot_loc_upload', parent );
 	$J('.imagelanguagebutton', parent ).show();
 	var strParentID = parent[0].id;
