@@ -65,6 +65,7 @@ __LINKEDIT
 `0M
 P
 
+dN
 
 8
 @loader_path/libtier0_s.dylib
@@ -5070,7 +5071,7 @@ Linux;tenfoot
 X-ValveUserAgent
 panorama %s %s
 Dec  3 2020
-11:46:51
+16:23:13
 X-SteamClientVersion
 Assertion Failed: hostName
 Assertion Failed: pchRemoteHost
