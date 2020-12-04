@@ -7785,10 +7785,10 @@
     "6oCP": function(e, t, n) {
       "use strict";
       n.d(t, "a", function() {
-        return m;
+        return d;
       }),
         n.d(t, "d", function() {
-          return h;
+          return m;
         });
       var v = n("mrSG"),
         r = n("vDqi"),
@@ -7805,15 +7805,14 @@
         C = n("bDQf"),
         l = n("bS9Q"),
         O = n("lkRc"),
-        u = n("5izx"),
-        p = n("TLQK");
+        u = n("TLQK");
       n.d(t, "b", function() {
         return s.n;
       }),
         n.d(t, "c", function() {
           return s.q;
         });
-      var d = (function() {
+      var p = (function() {
         return function(e) {
           Object(_.a)(
             "number" == typeof e.appid,
@@ -7828,10 +7827,10 @@
       })();
       function w(e) {
         var t = "" + e,
-          n = p.b.GetELanguageFallback(e);
+          n = u.b.GetELanguageFallback(e);
         return e != n && (t += "_" + n), t;
       }
-      var m = (function() {
+      var d = (function() {
           function e() {
             (this.m_mapExistingEvents = new Map()),
               (this.m_mapAnnouncementBodyToEvent = new Map()),
@@ -8624,69 +8623,6 @@
                 })
               );
             }),
-            (e.prototype.GetStartRangeWithDefault = function(e) {
-              return e && 0 != e ? e : u.a.GetTimeNowWithOverride() - 7776e3;
-            }),
-            (e.prototype.GetEndRangeWithDefault = function(e, t) {
-              return t || e + 864e4;
-            }),
-            (e.prototype.LoadPartnerEventInDateRange = function(a, s, c) {
-              return Object(v.b)(this, void 0, void 0, function() {
-                var t,
-                  n,
-                  r,
-                  i,
-                  o = this;
-                return Object(v.e)(this, function(e) {
-                  switch (e.label) {
-                    case 0:
-                      (s = this.GetStartRangeWithDefault(s)),
-                        (c = this.GetEndRangeWithDefault(s, c)),
-                        (t =
-                          O.b.COMMUNITY_BASE_URL +
-                          "/gid/" +
-                          a.ConvertTo64BitString() +
-                          "/ajaxlistevents/"),
-                        (n = {
-                          startRange: s,
-                          endRange: c,
-                          l: O.b.LANGUAGE,
-                          origin: self.origin
-                        }),
-                        (e.label = 1);
-                    case 1:
-                      return (
-                        e.trys.push([1, 3, , 4]), [4, y.a.get(t, { params: n })]
-                      );
-                    case 2:
-                      return (
-                        (r = e.sent()),
-                        Object(S.G)(function() {
-                          for (
-                            var e = 0, t = JSON.parse(r.data.events);
-                            e < t.length;
-                            e++
-                          ) {
-                            var n = t[e];
-                            o.InsertEventModelFromClanEventData(a, n);
-                          }
-                        }),
-                        [3, 4]
-                      );
-                    case 3:
-                      return (
-                        (i = e.sent()),
-                        console.error(
-                          "LoadClanEventInDateRange hit error " + Object(C.a)(i)
-                        ),
-                        [3, 4]
-                      );
-                    case 4:
-                      return [2, this.GetAllClanEvents(a)];
-                  }
-                });
-              });
-            }),
             (e.prototype.GetBestEventsForCurrentUser = function(r, i, o) {
               return Object(v.b)(this, void 0, void 0, function() {
                 var a,
@@ -9097,6 +9033,26 @@
                 });
               });
             }),
+            (e.prototype.LoadHiddenPartnerEventByAnnouncementGID = function(
+              t,
+              n
+            ) {
+              return Object(v.b)(this, void 0, void 0, function() {
+                return Object(v.e)(this, function(e) {
+                  return [
+                    2,
+                    this.InternalLoadPartnerEventFromClanEventOrClanAnnouncementGID(
+                      t,
+                      null,
+                      null,
+                      n,
+                      0,
+                      !0
+                    )
+                  ];
+                });
+              });
+            }),
             (e.prototype.HintLoadImportantUpdates = function() {
               return Object(v.b)(this, void 0, void 0, function() {
                 var t,
@@ -9124,7 +9080,7 @@
                         Object(S.G)(function() {
                           var e = new Map(
                             i.data.apps.map(function(e) {
-                              return [e.appid, new d(e)];
+                              return [e.appid, new p(e)];
                             })
                           );
                           o.m_mapUpdatedApps = e;
@@ -9304,8 +9260,8 @@
             e
           );
         })(),
-        h = new m();
-      window.g_PartnerEventStore = h;
+        m = new d();
+      window.g_PartnerEventStore = m;
     },
     "6x+F": function(e, t) {
       e.exports =
