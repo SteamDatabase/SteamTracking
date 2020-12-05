@@ -95,6 +95,8 @@
 
 			if( $this->DumpWebProtobufs )
 			{
+				$this->SyncProtobufs = true;
+
 				$this->Log( '{lightblue}Dumping web protobufs' );
 
 				system( 'node protobufdumper.js' );
