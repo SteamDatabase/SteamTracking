@@ -39,8 +39,6 @@ public:
     virtual unknown_ret GetGameplayStats() = 0;
     virtual unknown_ret GetServerReputation() = 0;
     virtual unknown_ret GetPublicIP() = 0;
-    virtual unknown_ret HandleIncomingPacket(void const*, int, unsigned int, unsigned short) = 0;
-    virtual unknown_ret GetNextOutgoingPacket(void*, int, unsigned int*, unsigned short*) = 0;
     virtual unknown_ret EnableHeartbeats(bool) = 0;
     virtual unknown_ret SetHeartbeatInterval(int) = 0;
     virtual unknown_ret ForceHeartbeat() = 0;

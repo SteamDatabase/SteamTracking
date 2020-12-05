@@ -85,6 +85,11 @@
         "posted_in": "CGameServer::_GSSendSteam2UserConnect(unsigned int, void const*, unsigned int, unsigned int, unsigned short, void const*, unsigned int)"
     },
     {
+        "id": 205,
+        "size": 12,
+        "posted_in": "CGameServer::_GSSendSteam2UserConnect(unsigned int, void const*, unsigned int, unsigned int, unsigned short, void const*, unsigned int)"
+    },
+    {
         "id": 206,
         "size": 140,
         "posted_in": "CGSClientJobGetUserAchievementStatus::BYieldingRunClientJob()"

@@ -11,6 +11,7 @@ public:
     virtual unknown_ret IsValidHSteamUserPipe(int, int) = 0;
     virtual unknown_ret GetIClientUser(int, int) = 0;
     virtual unknown_ret GetIClientGameServer(int, int) = 0;
+    virtual unknown_ret GetIClientGameServerPacketHandler(int, int) = 0;
     virtual unknown_ret SetLocalIPBinding(SteamIPAddress_t const&, unsigned short) = 0;
     virtual unknown_ret GetUniverseName(EUniverse) = 0;
     virtual unknown_ret GetIClientFriends(int, int) = 0;
