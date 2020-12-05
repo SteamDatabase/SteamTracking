@@ -97,7 +97,7 @@
 			{
 				$this->Log( '{lightblue}Dumping web protobufs' );
 
-				//system( 'node protobufdumper_v2.js ' . escapeshellarg( realpath( __DIR__ . '/.support/original_js/' ) ) . ' ' . escapeshellarg( realpath( '../ValveProtobufs/webui/' ) ) );
+				system( 'node protobufdumper.js' );
 			}
 
 			if( $this->SyncProtobufs )
@@ -339,29 +339,7 @@
 				
 				$this->ETags[ $HashPath ] = $Hash;
 
-				$WebProtobufs =
-				[
-					'steamcommunity.com/public/javascript/webui/steammessages.js' => 'friends',
-					'steamcommunity.com/public/javascript/applications/community/main.js' => 'community',
-					'steamcommunity.com/public/javascript/applications/community/events.js' => 'community_events',
-					'steamcommunity.com/public/javascript/applications/community/profile.js' => 'community_profile',
-					'steamcommunity.com/public/javascript/applications/community/ugcrewards~userreviewrewards.js' => 'community_ugcrewards_userreviewrewards',
-					'steamcommunity.com/public/javascript/applications/community/broadcast~broadcasts~profile.js' => 'community_broadcast_profile',
-					'steamcommunity.com/public/javascript/applications/community/broadcasts~events~profile.js' => 'community_events_profile',
-					'store.steampowered.com/public/javascript/applications/store/main.js' => 'store',
-					'store.steampowered.com/public/javascript/applications/store/curator_admin.js' => 'curator_admin',
-					'store.steampowered.com/public/javascript/applications/store/loyaltystore.js' => 'loyaltystore',
-					'store.steampowered.com/public/javascript/applications/store/loyaltystore~reviewaward.js' => 'loyaltystore_reviewaward',
-					'store.steampowered.com/public/javascript/applications/store/broadcast~loyaltystore.js' => 'store_broadcast_loyaltystore',
-				];
-
-				if( isset( $WebProtobufs[ $OriginalFile ] ) )
-				{
-					$this->SyncProtobufs = true;
-
-					system( 'node protobufdumper_v2.js ' . escapeshellarg( realpath( $OriginalFile ) ) . ' > ' . escapeshellarg( '../ValveProtobufs/webui/' . $WebProtobufs[ $OriginalFile ] . '.proto' ) );
-				}
-				else if( $OriginalFile === 'Scripts/WebUI/steammobile_android.js' )
+				if( $OriginalFile === 'Scripts/WebUI/steammobile_android.js' )
 				{
 					$this->SyncProtobufs = true;
 

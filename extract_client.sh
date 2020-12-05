@@ -47,10 +47,6 @@ echo Dumping protobufs
 cp "$DIR/ClientExtracted/steamui/libraryroot.js" "$DIR/.support/original_js/steamui_libraryroot.js"
 cp "$DIR/ClientExtracted/steamui/broadcast.js" "$DIR/.support/original_js/steamui_broadcast.js"
 
-node ../protobufdumper_v2.js "$DIR/ClientExtracted/steamui/libraryroot.js" > ~/ValveProtobufs/webui/steamui_libraryroot.proto
-node ../protobufdumper_v2.js "$DIR/ClientExtracted/steamui/broadcast.js" > ~/ValveProtobufs/webui/steamui_broadcast.proto
-node ../protobufdumper.js "$DIR/ClientExtracted/steamui/awardmodal.js" > ~/ValveProtobufs/webui/steamui_awardmodal.proto
-
 # https://github.com/m4dEngi/steamworks_dumper
 echo Dumping structs
 ./MachoDumper/swdumper bins/steamclient.dylib "$DIR/Structs/"
