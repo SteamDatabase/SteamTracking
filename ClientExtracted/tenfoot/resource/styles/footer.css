@@ -703,7 +703,8 @@ TenfootFooterPanel.WebFooter
     border-radius: 8px;
     background-size: 14px;
 }
-#LegendRow .BACKButtonBox
+
+:not(.PS5Origin) #LegendRow .BACKButtonBox
 {
 	background-position: 40% 50%;
 	background-image: url( "file://{images}/footer/back_xinput.png" );
