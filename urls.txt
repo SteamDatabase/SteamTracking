@@ -214,6 +214,7 @@ https://store.steampowered.com/public/css/v6/steamaccount.css?__TIME__
 https://store.steampowered.com/public/css/v6/steamaccount_sale_tokens.css?__TIME__
 https://store.steampowered.com/public/css/v6/steamlink_about.css?__TIME__
 https://store.steampowered.com/public/css/v6/store.css?__TIME__
+https://store.steampowered.com/public/css/v6/store_browse_experiment.css?__TIME__
 https://store.steampowered.com/public/css/v6/tags.css?__TIME__
 https://store.steampowered.com/public/css/v6/updated_apps.css?__TIME__
 https://store.steampowered.com/public/css/v6/wishlist.css?__TIME__
