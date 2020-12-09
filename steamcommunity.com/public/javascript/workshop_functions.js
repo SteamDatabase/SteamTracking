@@ -1099,6 +1099,31 @@ function ShowExternalTagSelectorDialog( url, formID, submitFuncCB )
 	)
 }
 
+function IncludeTag( elem )
+{
+	if ( elem.checked )
+	{
+		var excludedTag = $J( '#excludetag_' + elem.id );
+		excludedTag.removeClass( 'checked' );
+	}
+
+	FilterByTags();
+}
+
+function ExcludeTag( elem )
+{
+	elem = $J( elem );
+	elem.toggleClass( 'checked' );
+
+	var tagCheckbox = $J( "#" + elem.data( 'tagid' ) );
+	if ( elem.hasClass( 'checked' ) )
+	{
+		tagCheckbox[0].checked = false;
+	}
+
+	FilterByTags();
+}
+
 /**
  * Service Provider Revenue Sharing
  */

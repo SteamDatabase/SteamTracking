@@ -716,6 +716,13 @@ a.pagingPageLink,a.pagingPageLink:hover,a.pagingPageLink:visited,a.pagingPageLin
 .searchedForTermImage
 {
 	margin-left: 10px;
+	vertical-align: middle;
+}
+
+.searchedForExcludedTermImage {
+	width: 14px;
+	margin-right: 5px;
+	vertical-align: middle;
 }
 
 .video_items_ctn {

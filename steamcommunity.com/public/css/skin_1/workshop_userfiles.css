@@ -2624,6 +2624,20 @@ input[type='checkbox'] {
 	width: 222px;
 }
 
+.filterOption .tag_filter_control_not {
+	float: right;
+	margin: 3px 3px 0px 0px;
+	width: 16px;
+	height: 16px;
+	cursor: pointer;
+}
+.filterOption .tag_filter_control_not img {
+	opacity: 0.1;
+}
+.filterOption .tag_filter_control_not.checked img {
+	opacity: 1;
+}
+
 .breadcrumbs
 {
 	color: #ffffff;

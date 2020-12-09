@@ -2906,6 +2906,20 @@ input.inputTagsFilter:checked + label:hover
 	background-color: rgba(27,43,59,1);
 }
 
+.filterOption .tag_filter_control_not {
+	float: right;
+	margin: 3px 3px 0px 0px;
+	width: 16px;
+	height: 16px;
+	cursor: pointer;
+}
+.filterOption .tag_filter_control_not img {
+	opacity: 0.1;
+}
+.filterOption .tag_filter_control_not.checked img {
+	opacity: 1;
+}
+
 input[type='checkbox'] {
 	border-style: none;
 }
@@ -2983,9 +2997,8 @@ input.searchText
 
 .searchedForTerm
 {
-	float: left;
-	min-height: 15px;
-	line-height: 15px;
+	display: inline-block;
+	height: 18px;
 	padding: 4px;
 	background-color: #68932f;
 	border: 2px solid #68932f;
@@ -2993,7 +3006,7 @@ input.searchText
 	-moz-border-radius: 2px;
 	color: #d2ff96;
 	font-size: 14px;
-	margin-right: 5px;
+	margin-right: 2px;
 	margin-top: 9px;
 }
 
@@ -3007,8 +3020,14 @@ input.searchText
 .searchedForTermImage
 {
 	margin-left: 10px;
+	vertical-align: middle;
 }
 
+.searchedForExcludedTermImage {
+	width: 14px;
+	margin-right: 5px;
+	vertical-align: middle;
+}
 
 .tagsFilterSubmitBtn
 {
