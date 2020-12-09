@@ -90,6 +90,12 @@ input.custom_form_text.right_hint
 	padding-bottom: 4px;
 }
 
+.custom_form_iframe
+{
+	width: 100%;
+	border: none;
+}
+
 .create_request_form_row
 {
 	padding-bottom: 20px;

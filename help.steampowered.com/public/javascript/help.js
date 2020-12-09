@@ -1765,6 +1765,30 @@ function CancelAccountDeletion()
 	} );
 }
 
+function CancelSteamChinaAccessDeletion()
+{
+	$J.ajax( {
+		url: 'https://help.steampowered.com/wizard/AjaxCancelSteamChinaAccessDeletion/',
+		type: 'POST',
+		data: g_rgDefaultWizardPageParams,
+	} ).fail( function( jqxhr ) {
+		ShowAlertDialog( 'Cancel Steam China Access and Information Deletion', 'Could not contact the servers to cancel the request. Please try again or <a href="https://help.steampowered.com/wizard/HelpDeleteAccountRequest" target="_blank" rel="noreferrer">contact Steam Support</a>.' );
+	} ).done( function( data ) {
+		if ( data.success != 1 )
+		{
+			ShowAlertDialog( 'Cancel Steam China Access and Information Deletion', 'Could not contact the servers to cancel the request. Please try again or <a href="https://help.steampowered.com/wizard/HelpDeleteAccountRequest" target="_blank" rel="noreferrer">contact Steam Support</a>.' );
+		}
+		else
+		{
+			ShowAlertDialog( 'Cancel Steam China Access and Information Deletion', 'Successfully canceled your Steam China access and information deletion.'  )
+			.done( function() {
+				window.location = 'https://help.steampowered.com/';
+			});
+		}
+	} );
+}
+
+
 // contains all the functions for generating hardware returns & replacements
 HardwareRMA = {
 	m_bDoingAjax: false,
@@ -2323,7 +2347,56 @@ HelpRequestPage = {
 			// Can't include zipped logs/dumps, should never hit this else in the client anyway
 		}
 
+		// If there are iframes, submit all the iframes, wait for them to reply that they're done
+		// then submit our form.  Give them five seconds, if they aren't done by then proceed anyway.
+		//
+		// If there are no iframes, then just go ahead and submit.
+		var $iFrame = $Form.find(".custom_form_iframe");
+		if ( $iFrame.length > 0 )
+		{
+			var rgFrameCompleteTimeout = {};
+			$iFrame.each( function( i, frame ) {
+				var url = $J( frame ).attr( 'src' );
+				// If we don't hear back from the frame within 5 seconds, proceed anyway.
+				rgFrameCompleteTimeout[ url ] = setTimeout( function() {
+					console.error( 'iframe', url, 'timed out waiting for formSubmitted' );
+					MarkFrameCompleted( url );
+					}, 5000 );
+			} );
 
+			function MarkFrameCompleted( context )
+			{
+				clearTimeout( rgFrameCompleteTimeout[ context ] );
+				rgFrameCompleteTimeout[ context ] = undefined;
+				var bAllFramesComplete = Object.values( rgFrameCompleteTimeout ).reduce( ( accum, val ) => accum && ( val === undefined ), true );
+				if ( bAllFramesComplete )
+				{
+					HelpRequestPage.AjaxCreateHelpRequest( $Form, oParams );
+				}
+			}
+
+			window.addEventListener( 'message', function( e ) {
+				if ( e.data.cmd && e.data.cmd == 'formSubmitted' )
+				{
+					MarkFrameCompleted( e.data.context.url );
+				}
+			} );
+
+			$iFrame.each( function( i, frame ) {
+				var url = $J( frame ).attr( 'src' );
+				var urlParse = new URL( url );
+				var target = urlParse.protocol + '//' + urlParse.hostname;
+				frame.contentWindow.postMessage( {cmd: 'submitForm', context: url }, target );
+			} );
+		}
+		else
+		{
+			HelpRequestPage.AjaxCreateHelpRequest( $Form, oParams );
+		}
+	},
+
+	AjaxCreateHelpRequest: function( $Form, oParams )
+	{
 		$J.ajax(
 			oParams
 		).done( function( data ) {
@@ -2365,15 +2438,15 @@ HelpRequestPage = {
 					$J( 'input[name="validation_id"]' ).val( data.validation_id );
 
 				var $Dialog = ShowConfirmDialog( 'Contact Steam Support', $DialogContents.show(), 'Send' )
-				.done( function( innerData )
-				{
-					$J( 'input[name="validation_code"]' ).val( $DialogContents.find( 'input[name="validation_code"]' ).val() );
-					HelpRequestPage.SubmitCreateHelpRequestForm( form );
-				})
-				.fail( function( xhr )
-				{
-					$J( 'input[name="validation_id"]' ).val( '' );
-				});
+					.done( function( innerData )
+					{
+						$J( 'input[name="validation_code"]' ).val( $DialogContents.find( 'input[name="validation_code"]' ).val() );
+						HelpRequestPage.SubmitCreateHelpRequestForm( form );
+					})
+					.fail( function( xhr )
+					{
+						$J( 'input[name="validation_id"]' ).val( '' );
+					});
 				$Dialog.SetDismissOnBackgroundClick(false);
 			}
 			else if ( data.next_page )
