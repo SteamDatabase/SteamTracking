@@ -1719,6 +1719,7 @@
         SidebarTitle: "eventcalendar_SidebarTitle_3uZE-",
         FilterControlPage: "eventcalendar_FilterControlPage__uX0h",
         FilterOption: "eventcalendar_FilterOption_2LoOb",
+        FilterSubOption: "eventcalendar_FilterSubOption_2ctVa",
         SideBarFilterNavLinks: "eventcalendar_SideBarFilterNavLinks_fhYfj",
         FilterLink: "eventcalendar_FilterLink_1zyVy",
         NumberDisplay: "eventcalendar_NumberDisplay_23qmf",
@@ -3124,7 +3125,12 @@
             }),
             (t.prototype.RenderGameSourceCheckbox = function(t, e) {
               var a = this,
-                n = this.GetVisibilityStore().BIsGameSourceAllowed(t);
+                n =
+                  this.GetVisibilityStore().BIsGameSourceAllowed(t) ||
+                  (t == d.c.k_ELibrary &&
+                    this.GetVisibilityStore().BIsGameSourceAllowed(
+                      d.c.k_ERecent
+                    ));
               return H.createElement(
                 I.a,
                 {
@@ -3214,8 +3220,12 @@
                           "#EventCalendar_FilterSubSection_GameSources"
                         )
                       ),
-                      this.RenderGameSourceCheckbox(d.c.k_ERecent, !t),
                       this.RenderGameSourceCheckbox(d.c.k_ELibrary, !t),
+                      H.createElement(
+                        "div",
+                        { className: _e.a.FilterSubOption },
+                        this.RenderGameSourceCheckbox(d.c.k_ERecent, !t)
+                      ),
                       this.RenderGameSourceCheckbox(d.c.k_EWishlist, !t),
                       this.RenderGameSourceCheckbox(d.c.k_EFollowing, !t),
                       this.RenderGameSourceCheckbox(d.c.k_ERecommended, !t),
