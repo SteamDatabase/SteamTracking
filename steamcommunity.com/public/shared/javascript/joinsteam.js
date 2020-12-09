@@ -193,14 +193,18 @@ function EmailConfirmedVerified( rgResults )
 		$J( '.create_account_form_container' ).hide();
 		$J( '.joinsteam_existingaccount_ctn' ).show();
 
-		if ( rgResults.pw_account )
+		if ( rgResults.steam_china_account && !rgResults.pw_account && !rgResults.global_account )
 		{
-			$J( '.existingaccount_info_ctn' ).show();
+			$J( '#intro_china' ).show();
 		}
-
-		if ( rgResults.global_account )
+		else if ( rgResults.pw_account )
 		{
-			$J( '#existingaccount_pw_china_global' ).show();
+			$J( '#intro_pw' ).show();
+			$J( '#desc_pw' ).show();
+			if ( rgResults.global_account )
+			{
+				$J( '#desc_global' ).show();
+			}
 		}
 	}
 	else

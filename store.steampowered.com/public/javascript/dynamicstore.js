@@ -199,7 +199,8 @@ GDynamicStore = {
 						GDynamicStore.s_rgExcludedTags[tag.tagid] = tag.name;
 					}
 				}
-				if ( data.rgExcludedContentDescriptorIDs && data.rgExcludedContentDescriptorIDs.length > 0 )
+				if ( data.rgExcludedContentDescriptorIDs && data.rgExcludedContentDescriptorIDs.length > 0 &&
+						!V_GetCookie( 'wants_mature_content') )
 				{
 					for ( var i = i = 0; i < data.rgExcludedContentDescriptorIDs.length; ++i )
 					{

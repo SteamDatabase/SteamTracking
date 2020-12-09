@@ -348,6 +348,20 @@ function FavoriteGameShowcaseOnGameChange( elSlot, eShowcase, purchaseid, level,
 	PreviewShowcaseConfigWithSlotChange( eShowcase, purchaseid, level, iSlot, { appid: game.appid } );
 }
 
+function AchievementsCompletionistGameShowcaseOnGameChange( elSlot, eShowcase, purchaseid, level, iSlot, game )
+{
+	SetShowcaseConfig(
+		eShowcase, purchaseid, iSlot, {appid: game.appid }
+	).done( function() {
+		$J(elSlot).find('img').attr( 'src', game.header );
+		$J(elSlot).find('a').attr( 'href', 'https://steamcommunity.com/app/' + game.appid);
+		$J(elSlot).find('.showcase_achievementscompletionist_game_num_achievements').text( game.num_achievements + ' / ' + game.num_achievements + ' Achievements' );
+		$J(elSlot).removeClass( 'openslot' );
+	}).fail( function() {
+		ShowAlertDialog( 'Select Featured Game', 'There was an error saving the featured game configuration.  Please try again later.' );
+	});
+}
+
 function ShowcaseRecommendationPicker( elSlot, eShowcase, purchaseid, level, iSlot )
 {
 	var Modal = ShowDialog( 'Select a Game You\'ve Publicly Reviewed', '<div class="group_invite_throbber"><img src="https://community.cloudflare.steamstatic.com/public/images/login/throbber.gif"></div>' );

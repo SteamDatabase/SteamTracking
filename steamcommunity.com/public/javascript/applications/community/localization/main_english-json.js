@@ -1026,7 +1026,9 @@
         EventPublishing_Summary: "summary",
         EventPublishing_Summary_VisibilityStart: "Visibility Start",
         EventPublishing_Summary_Immediate:
-          "This will be visible immediately once you publish.",
+          "This will be visible immediately in most places once you publish.",
+        EventPublishing_Summary_ModerationNote:
+          "Note that new posts are reviewed by our moderation team and there may be a 1-2 hour delay before news or events appear in the Steam library.",
         EventError_Desc:
           "Loading the event information encountered the following error. ",
         EventError_Code: "Error Code: (%1$s)",
@@ -1830,6 +1832,19 @@
         Sale_Section_HidePrices: "Hide Prices",
         Sale_Section_HidePrices_ttip:
           "When checked, this will not show the prices on item capsules within this section",
+        Sale_Section_SingleItemDisplay:
+          "How should we display the single item?",
+        Sale_Section_SingleItemDisplay_ttip:
+          "Choose the single item display style which will change the height of the item, the content it displays and possible interactivity directly in the capsule.",
+        Sale_Section_SingleItemDisplay_bordered: "Bordered Capsule display",
+        Sale_Section_SingleItemDisplay_bordered_ttip:
+          "Shows the capsule item bordered with additional information release date, platforms, upto 5 few tags and short description of the of the game. This will use the pop-out hover for additional information and interactivity",
+        Sale_Section_SingleItemDisplay_full: "Full Capsule Display",
+        Sale_Section_SingleItemDisplay_full_ttip:
+          "Shows the capsule item expanded fully providing Border content plus review, and direct wishlist actions",
+        Sale_Section_SingleItemDisplay_library: "Library Art display",
+        Sale_Section_SingleItemDisplay_library_ttip:
+          "A taller display per item, we uses the library asset instead of the store capsule. This has all of the information as the Full and additional interactiving to watch trailer and choose between screenshots. Not bundles will not be able to use this display and will fallback to Full, and subscriptions will fallback to use the primary app's library asset.",
         Sale_Section_Type_items: "Items",
         Sale_Section_Type_events: "Events",
         Sale_Section_Type_links: "Links",
@@ -1854,6 +1869,9 @@
         Sale_EditRaw: "Edit Raw",
         Sale_EditRawTaggedItems_ttip:
           "Allows for directly editing the list of tagged items for this sale. This can be used to import or export from tools such as Excel, or quickly make large changes to the list of items",
+        Sale_EditRawCustom: "Custom Tags",
+        Sale_EditRawCustomTaggedItems_ttip:
+          "Allows for directly editing the list of tagged items for this sale and importing and exporting just the custom colleciton of tags on the sale items. This is primarily used for importing a selection of custom tags managed by an external spreadsheet without modifying the other tags on the items. In addition, a subset can be imported via this dialog as it will not remove items not listed",
         Sale_ImportOptIn: "Import From Opt In Page",
         Sale_ImportOptIn_ttip:
           "Opens a dialog that will allow for all apps to be imported from an opt in page and pulled into the tagged items list",

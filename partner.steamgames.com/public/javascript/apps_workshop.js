@@ -240,3 +240,9 @@ function SetAdminTagsVisibility( appid, elem )
 	);
 }
 
+function DownloadCommunityItemLocalization()
+{
+	var form = $J( "#download_localization_form" );
+	form.submit();
+}
+

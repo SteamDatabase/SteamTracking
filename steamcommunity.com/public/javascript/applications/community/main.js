@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6243158";
+var CLSTAMP = "6250048";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [69],
   {
@@ -3928,7 +3928,12 @@ var CLSTAMP = "6243158";
                 });
               return u.createElement(
                 "div",
-                { className: "FullModalOverlay" },
+                {
+                  className: Object(c.a)(
+                    this.props.className,
+                    "FullModalOverlay"
+                  )
+                },
                 u.createElement("div", {
                   className: "ModalOverlayContent ModalOverlayBackground"
                 }),
@@ -4124,58 +4129,57 @@ var CLSTAMP = "6243158";
         return o.a.createElement(
           "div",
           {
-            className: Object(c.a)(s.a.Toggle, r && s.a.Disabled),
+            className: Object(y.a)(s.a.Toggle, r && s.a.Disabled),
             onClick: function() {
               return !r && n(!t);
             }
           },
           o.a.createElement("div", { className: s.a.ToggleRail }),
           o.a.createElement("div", {
-            className: Object(c.a)(
+            className: Object(y.a)(
               s.a.ToggleRail,
               s.a.Highlight,
               t ? s.a.On : s.a.Off
             )
           }),
           o.a.createElement("div", {
-            className: Object(c.a)(s.a.ToggleSwitch, t ? s.a.On : s.a.Off)
+            className: Object(y.a)(s.a.ToggleSwitch, t ? s.a.On : s.a.Off)
           })
         );
       }
       var h = n("mrSG"),
-        f = n("q1tI"),
-        o = n.n(f),
-        v = n("6Y59"),
-        g = n("TLQK"),
+        g = n("q1tI"),
+        o = n.n(g),
+        b = n("6Y59"),
+        _ = n("TLQK"),
         i = n("bxiW"),
-        c = n("exH9"),
+        y = n("exH9"),
         a = n("umRa"),
         s = n.n(a),
-        l = f.createContext({}),
-        u = function() {
-          return f.useContext(l);
+        c = g.createContext({}),
+        l = function() {
+          return g.useContext(c);
         },
-        p = n("+d9t"),
-        m = P("DialogHeader"),
-        d = P("DialogSubHeader"),
-        b = P("DialogFooter"),
-        _ = P("DialogLabel _DialogLayout"),
-        y = P("DialogBodyText"),
-        w = P("DialogBody"),
-        E = (P("DialogInnerBody"),
-        P("DialogBodyNotificationBar"),
-        P("DialogTwoColLayout _DialogColLayout")),
-        O = P("DialogThreeColLayout _DialogColLayout");
-      P("DialogTwoThirdColLayout _DialogColLayout"),
-        P("DialogColumn _DialogLayout");
-      function S(e) {
-        var t = u();
-        return f.createElement(
-          p.d,
-          Object(h.a)({ component: t.Content, fallback: C }, e)
+        w = n("+d9t"),
+        E = U("DialogHeader"),
+        u = U("DialogSubHeader"),
+        p = U("DialogFooter"),
+        m = U("DialogLabel _DialogLayout"),
+        d = U("DialogBodyText"),
+        f = U("DialogBody"),
+        O = (U("DialogInnerBody"), U("DialogBodyNotificationBar")),
+        v = U("DialogTwoColLayout _DialogColLayout"),
+        S = U("DialogThreeColLayout _DialogColLayout");
+      U("DialogTwoThirdColLayout _DialogColLayout"),
+        U("DialogColumn _DialogLayout");
+      function C(e) {
+        var t = l();
+        return g.createElement(
+          w.d,
+          Object(h.a)({ component: t.Content, fallback: D }, e)
         );
       }
-      function C(e) {
+      function D(e) {
         var t = e.children,
           n = e.bCenterVertically,
           r = e.renderDialogContentDiv,
@@ -4191,11 +4195,11 @@ var CLSTAMP = "6243158";
             (e.className ? " " + e.className : "");
         return (
           n && (a += " _DialogCenterVertically"),
-          f.createElement(
-            p.d,
+          g.createElement(
+            w.d,
             Object(h.a)({ component: r, fallback: "div" }, i, { className: a }),
-            f.createElement(
-              p.d,
+            g.createElement(
+              w.d,
               {
                 component: o,
                 fallback: "div",
@@ -4206,7 +4210,7 @@ var CLSTAMP = "6243158";
           )
         );
       }
-      var D = (function(e) {
+      var x = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -4216,7 +4220,7 @@ var CLSTAMP = "6243158";
             e.preventDefault(), this.props.onSubmit && this.props.onSubmit(e);
           }),
           (t.prototype.render = function() {
-            return f.createElement(
+            return g.createElement(
               "form",
               Object(h.a)({}, this.props, { onSubmit: this.OnSubmit })
             );
@@ -4224,31 +4228,31 @@ var CLSTAMP = "6243158";
           Object(h.c)([i.a], t.prototype, "OnSubmit", null),
           t
         );
-      })(f.Component);
-      function x(e) {
+      })(g.Component);
+      function M(e) {
         var t = e.classNameContent,
           n = e.bCenterVertically,
           r = Object(h.f)(e, ["classNameContent", "bCenterVertically"]);
-        return f.createElement(
-          S,
+        return g.createElement(
+          C,
           { className: t, bCenterVertically: n },
-          f.createElement(D, Object(h.a)({}, r))
-        );
-      }
-      function M(e) {
-        var t = u();
-        return f.createElement(
-          p.d,
-          Object(h.a)({ component: t.BaseButton, fallback: A }, e)
+          g.createElement(x, Object(h.a)({}, r))
         );
       }
       function A(e) {
+        var t = l();
+        return g.createElement(
+          w.d,
+          Object(h.a)({ component: t.BaseButton, fallback: k }, e)
+        );
+      }
+      function k(e) {
         var t = e.svgicon,
           n = (e.primary, e.renderButtonElement),
           r = Object(h.f)(e, ["svgicon", "primary", "renderButtonElement"]),
-          o = Object(c.a)(e.className, { hasSVGIcon: void 0 !== t });
-        return f.createElement(
-          p.d,
+          o = Object(y.a)(e.className, { hasSVGIcon: void 0 !== t });
+        return g.createElement(
+          w.d,
           Object(h.a)({ component: n, fallback: "button" }, r, {
             className: o
           }),
@@ -4256,14 +4260,14 @@ var CLSTAMP = "6243158";
           e.children
         );
       }
-      function k(e) {
-        return f.createElement(
-          M,
+      function T(e) {
+        return g.createElement(
+          A,
           Object(h.a)(
             { primary: !0, type: e.onClick ? "button" : "submit" },
             e,
             {
-              className: Object(c.a)(
+              className: Object(y.a)(
                 e.className,
                 "DialogButton",
                 "_DialogLayout",
@@ -4273,11 +4277,11 @@ var CLSTAMP = "6243158";
           )
         );
       }
-      function T(e) {
-        return f.createElement(
-          M,
+      function j(e) {
+        return g.createElement(
+          A,
           Object(h.a)({ type: "button" }, e, {
-            className: Object(c.a)(
+            className: Object(y.a)(
               e.className,
               "DialogButton",
               "_DialogLayout",
@@ -4286,58 +4290,65 @@ var CLSTAMP = "6243158";
           })
         );
       }
-      function j(e) {
-        return f.createElement(
-          M,
+      function I(e) {
+        return g.createElement(
+          A,
           Object(h.a)({ type: "button" }, e, {
-            className: Object(c.a)(
+            className: Object(y.a)(
               e.className,
               "DialogButton _DialogLayout Small"
             )
           })
         );
       }
-      function I(e) {
-        return f.createElement(
-          E,
-          null,
-          f.createElement(
-            k,
-            { onClick: e.onOK, disabled: e.bOKDisabled },
-            e.strOKText || Object(g.f)("#Button_Confirm"),
-            " "
-          ),
-          f.createElement(
-            T,
-            { onClick: e.onCancel },
-            e.strCancelText || Object(g.f)("#Button_Cancel")
-          )
-        );
-      }
       function N(e) {
-        return f.createElement(
-          O,
+        return g.createElement(
+          v,
           null,
-          f.createElement(
-            k,
-            { onClick: e.onOK, disabled: e.bOKDisabled },
-            e.strOKText || Object(g.f)("#Button_Confirm"),
-            " "
-          ),
-          f.createElement(
-            k,
-            { onClick: e.onUpdate, disabled: e.bUpdateDisabled },
-            e.strUpdateText || Object(g.f)("#Button_Update"),
-            " "
-          ),
-          f.createElement(
+          g.createElement(
             T,
+            { onClick: e.onOK, disabled: e.bOKDisabled },
+            e.strOKText || Object(_.f)("#Button_Confirm"),
+            " "
+          ),
+          g.createElement(
+            j,
             { onClick: e.onCancel },
-            e.strCancelText || Object(g.f)("#Button_Cancel")
+            e.strCancelText || Object(_.f)("#Button_Cancel")
           )
         );
       }
-      var L = (function(n) {
+      function L(e) {
+        return g.createElement(
+          S,
+          null,
+          g.createElement(
+            T,
+            { onClick: e.onOK, disabled: e.bOKDisabled },
+            e.strOKText || Object(_.f)("#Button_Confirm"),
+            " "
+          ),
+          g.createElement(
+            T,
+            { onClick: e.onUpdate, disabled: e.bUpdateDisabled },
+            e.strUpdateText || Object(_.f)("#Button_Update"),
+            " "
+          ),
+          g.createElement(
+            j,
+            { onClick: e.onCancel },
+            e.strCancelText || Object(_.f)("#Button_Cancel")
+          )
+        );
+      }
+      function R(e) {
+        var t = l();
+        return g.createElement(
+          w.d,
+          Object(h.a)({ component: t.OnOffToggle, fallback: G }, e)
+        );
+      }
+      var B = (function(n) {
           function e(e) {
             var t = n.call(this, e) || this;
             return (t.state = { checked: e.checked, disabled: e.disabled }), t;
@@ -4391,8 +4402,8 @@ var CLSTAMP = "6243158";
             Object(h.c)([i.a], e.prototype, "KeyDown", null),
             e
           );
-        })(f.Component),
-        R = (function(e) {
+        })(g.Component),
+        F = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -4403,7 +4414,7 @@ var CLSTAMP = "6243158";
               return (
                 1 == this.state.disabled && (e += " Disabled"),
                 this.props.label
-                  ? f.createElement(
+                  ? g.createElement(
                       "div",
                       Object(h.a)(
                         {
@@ -4413,44 +4424,44 @@ var CLSTAMP = "6243158";
                         },
                         this.GetElementProps()
                       ),
-                      f.createElement(
+                      g.createElement(
                         "div",
                         { className: e },
-                        f.createElement(v.k, {
+                        g.createElement(b.k, {
                           color: this.props.color,
                           highlightColor: this.props.highlightColor
                         })
                       ),
-                      f.createElement(
+                      g.createElement(
                         "div",
                         { className: "DialogToggle_Label" },
-                        f.createElement("span", null, this.props.label),
+                        g.createElement("span", null, this.props.label),
                         this.props.tooltip &&
-                          f.createElement(
+                          g.createElement(
                             "span",
                             { "data-tooltip-text": this.props.tooltip },
                             " (?)"
                           )
                       ),
-                      f.createElement("div", { style: { clear: "left" } }),
+                      g.createElement("div", { style: { clear: "left" } }),
                       this.props.description &&
-                        f.createElement(
+                        g.createElement(
                           "div",
                           { className: "DialogToggle_Description" },
                           this.props.description
                         )
                     )
-                  : f.createElement(
+                  : g.createElement(
                       "div",
                       Object(h.a)({ className: e }, this.GetElementProps()),
-                      f.createElement(v.k, null)
+                      g.createElement(b.k, null)
                     )
               );
             }),
             t
           );
-        })(L),
-        B = (function(e) {
+        })(B),
+        P = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -4458,11 +4469,11 @@ var CLSTAMP = "6243158";
             Object(h.d)(t, e),
             (t.prototype.render = function() {
               var e = this.state.checked ? " Active" : "";
-              return f.createElement(
+              return g.createElement(
                 "div",
                 Object(h.a)(
                   {
-                    className: Object(c.a)(
+                    className: Object(y.a)(
                       "DialogRoundCheckbox_Container",
                       this.props.classname,
                       this.props.label ? "WithLabel" : ""
@@ -4470,28 +4481,28 @@ var CLSTAMP = "6243158";
                   },
                   this.GetElementProps()
                 ),
-                f.createElement(
+                g.createElement(
                   "div",
                   { className: "DialogRoundCheckbox" },
-                  f.createElement(
+                  g.createElement(
                     "div",
                     { className: "DialogRoundCheckbox_Control" + e },
-                    f.createElement(
+                    g.createElement(
                       "div",
                       { className: "DialogRoundCheckbox_OuterCircle" },
-                      f.createElement("div", {
+                      g.createElement("div", {
                         className: "DialogRoundCheckbox_InnerCircle"
                       })
                     )
                   )
                 ),
                 this.props.label &&
-                  f.createElement(
+                  g.createElement(
                     "div",
                     { className: "DialogToggle_Label" },
-                    f.createElement("span", null, this.props.label),
+                    g.createElement("span", null, this.props.label),
                     this.props.tooltip &&
-                      f.createElement(
+                      g.createElement(
                         "span",
                         { "data-tooltip-text": this.props.tooltip },
                         " (?)"
@@ -4501,8 +4512,8 @@ var CLSTAMP = "6243158";
             }),
             t
           );
-        })(L),
-        F = (function(e) {
+        })(B),
+        G = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -4523,29 +4534,29 @@ var CLSTAMP = "6243158";
                 (this.props.classname ? this.props.classname : "");
               return (
                 this.props.disabled && (e += " Disabled"),
-                f.createElement(
+                g.createElement(
                   "div",
                   {
                     className: e,
                     tabIndex: this.props.tabIndex || 0,
                     onKeyDown: this.OnOffKeyDown
                   },
-                  f.createElement(
+                  g.createElement(
                     "div",
                     { className: "displayColumn alignSelfCenter" },
-                    f.createElement(
+                    g.createElement(
                       "div",
                       { className: "DialogToggle_Label" },
-                      f.createElement("span", null, this.props.label),
+                      g.createElement("span", null, this.props.label),
                       this.props.tooltip &&
-                        f.createElement(
+                        g.createElement(
                           "span",
                           { "data-tooltip-text": this.props.tooltip },
                           " (?)"
                         )
                     ),
                     this.props.description &&
-                      f.createElement(
+                      g.createElement(
                         "div",
                         { className: "DialogToggle_Description" },
                         this.props.description
@@ -4553,37 +4564,37 @@ var CLSTAMP = "6243158";
                     this.props.children
                   ),
                   this.props.useToggleRail
-                    ? f.createElement(
+                    ? g.createElement(
                         "div",
                         { className: "DialogOnOffToggle_NewUIContainer" },
-                        f.createElement(r, {
+                        g.createElement(r, {
                           onChange: this.OnNewUIToggle,
                           value: this.state.checked
                         })
                       )
-                    : f.createElement(
+                    : g.createElement(
                         "div",
                         {
                           className: "DialogOnOffToggle_Control",
                           onClick: this.Toggle
                         },
-                        f.createElement(
+                        g.createElement(
                           "div",
                           {
                             className:
                               "DialogOnOffToggle_Option Off" +
                               (this.state.checked ? "" : " Active")
                           },
-                          Object(g.f)("#Dialog_Off")
+                          Object(_.f)("#Dialog_Off")
                         ),
-                        f.createElement(
+                        g.createElement(
                           "div",
                           {
                             className:
                               "DialogOnOffToggle_Option On" +
                               (this.state.checked ? " Active" : "")
                           },
-                          Object(g.f)("#Dialog_On")
+                          Object(_.f)("#Dialog_On")
                         )
                       )
                 )
@@ -4593,16 +4604,16 @@ var CLSTAMP = "6243158";
             Object(h.c)([i.a], t.prototype, "OnNewUIToggle", null),
             t
           );
-        })(L);
-      function P(n) {
+        })(B);
+      function U(n) {
         return function(e) {
           var t = n + (e.className ? " " + e.className : "");
-          return f.createElement("div", Object(h.a)({}, e, { className: t }));
+          return g.createElement("div", Object(h.a)({}, e, { className: t }));
         };
       }
-      var G = n("hJxo"),
-        U = n("r64O"),
-        H = (function(n) {
+      var H = n("hJxo"),
+        W = n("r64O"),
+        z = (function(n) {
           function e(e) {
             var t = n.call(this, e) || this;
             return (
@@ -4692,7 +4703,7 @@ var CLSTAMP = "6243158";
                   this.m_CopiedAnimation && this.m_CopiedAnimation.Cancel(),
                   this.setState({ m_bCompletedCopiedAnimation: !1 }),
                   this.setState({ m_CopiedYPos: -4 }, function() {
-                    (n.m_CopiedAnimation = new G.b(
+                    (n.m_CopiedAnimation = new H.b(
                       n,
                       { m_CopiedYPos: -24 },
                       {
@@ -4716,7 +4727,7 @@ var CLSTAMP = "6243158";
                 ));
             }),
             (e.prototype.CheckProps = function(e) {
-              Object(U.a)(
+              Object(W.a)(
                 !(e.bShowClearAction || e.bAlwaysShowClearAction) || e.onChange,
                 "In order for bShowClearAction to work correctly, you should be handling onChange and passing value to the Dialog.Input."
               );
@@ -4765,18 +4776,18 @@ var CLSTAMP = "6243158";
                 (p.transform = "translateY(" + this.state.m_CopiedYPos + "px)");
               var m = void 0;
               n &&
-                (m = f.createElement(
+                (m = g.createElement(
                   "div",
                   { className: "DialogLabelExplainer" },
                   n
                 ));
-              var d = f.createElement(
-                f.Fragment,
+              var d = g.createElement(
+                g.Fragment,
                 null,
-                f.createElement(
+                g.createElement(
                   "div",
                   { className: "DialogInput_Wrapper _DialogLayout" },
-                  f.createElement(
+                  g.createElement(
                     "input",
                     Object(h.a)({ type: a ? "password" : "text" }, s, {
                       className: c,
@@ -4785,54 +4796,54 @@ var CLSTAMP = "6243158";
                     })
                   ),
                   r &&
-                    f.createElement(
+                    g.createElement(
                       "div",
                       { className: "displayRow" },
-                      f.createElement(
-                        T,
+                      g.createElement(
+                        j,
                         {
                           className: "DialogInput_CopyAction Primary",
                           onClick: this.OnCopyClick
                         },
-                        Object(g.f)("#Button_CopyLink")
+                        Object(_.f)("#Button_CopyLink")
                       ),
-                      f.createElement(
+                      g.createElement(
                         "div",
                         { style: p, className: l },
                         "Link Copied"
                       )
                     ),
                   (i || (o && s.value)) &&
-                    f.createElement(
+                    g.createElement(
                       "div",
                       {
                         className: "DialogInput_ClearAction",
                         onClick: this.OnClearClick
                       },
-                      f.createElement(v.V, null)
+                      g.createElement(b.V, null)
                     )
                 ),
                 m
               );
               return t
-                ? f.createElement(
+                ? g.createElement(
                     "div",
                     { className: "DialogInputLabelGroup _DialogLayout " },
-                    f.createElement(
+                    g.createElement(
                       "label",
                       null,
-                      f.createElement(
+                      g.createElement(
                         "div",
                         { className: "DialogLabel" },
                         t,
                         " ",
                         this.props.tooltip &&
-                          f.createElement(
+                          g.createElement(
                             "span",
                             { "data-tooltip-text": this.props.tooltip },
                             " (?)"
                           ),
-                        f.createElement(
+                        g.createElement(
                           "span",
                           { className: "DialogInputRequirementLabel" },
                           this.props.requiredLabel
@@ -4841,47 +4852,47 @@ var CLSTAMP = "6243158";
                       ),
                       d,
                       this.state.m_bNumberBelowMinRange
-                        ? f.createElement(
+                        ? g.createElement(
                             "div",
                             null,
                             " ",
-                            Object(g.f)("#Input_Error_NumberTooSmall"),
+                            Object(_.f)("#Input_Error_NumberTooSmall"),
                             " "
                           )
                         : null,
                       this.state.m_bNumberAboveMaxRange
-                        ? f.createElement(
+                        ? g.createElement(
                             "div",
                             null,
                             " ",
-                            Object(g.f)("#Input_Error_NumberTooLarge"),
+                            Object(_.f)("#Input_Error_NumberTooLarge"),
                             " "
                           )
                         : null,
                       this.state.m_bIsInvalidURL
-                        ? f.createElement(
+                        ? g.createElement(
                             "div",
                             null,
                             " ",
-                            Object(g.f)("#Input_Error_MustBeURL"),
+                            Object(_.f)("#Input_Error_MustBeURL"),
                             " "
                           )
                         : null,
                       this.state.m_bIsInvalidEmail
-                        ? f.createElement(
+                        ? g.createElement(
                             "div",
                             null,
                             " ",
-                            Object(g.f)("#Input_Error_MustBeEmail"),
+                            Object(_.f)("#Input_Error_MustBeEmail"),
                             " "
                           )
                         : null,
                       this.state.m_bIsNotNumeric
-                        ? f.createElement(
+                        ? g.createElement(
                             "div",
                             null,
                             " ",
-                            Object(g.f)("#Input_Error_MustBeNumber"),
+                            Object(_.f)("#Input_Error_MustBeNumber"),
                             " "
                           )
                         : null
@@ -4895,8 +4906,8 @@ var CLSTAMP = "6243158";
             Object(h.c)([i.a], e.prototype, "OnClearClick", null),
             e
           );
-        })(f.PureComponent),
-        W = (function(n) {
+        })(g.PureComponent),
+        V = (function(n) {
           function e(e) {
             var t = n.call(this, e) || this;
             return (t.state = { value: t.ClampValue(e.value) }), t;
@@ -5034,12 +5045,12 @@ var CLSTAMP = "6243158";
                 s = (Object(h.f)(r, ["label", "explainer", "tooltip"]), void 0);
               return (
                 i &&
-                  (s = f.createElement(
+                  (s = g.createElement(
                     "div",
                     { className: "DialogLabelExplainer" },
                     i
                   )),
-                f.createElement(
+                g.createElement(
                   "div",
                   {
                     className:
@@ -5049,35 +5060,35 @@ var CLSTAMP = "6243158";
                     tabIndex: this.props.tabIndex || 0
                   },
                   o &&
-                    f.createElement(
+                    g.createElement(
                       "div",
                       { className: "DialogLabel" },
                       o,
                       Boolean(a) &&
-                        f.createElement(
+                        g.createElement(
                           "span",
                           { "data-tooltip-text": a },
                           " (?)"
                         )
                     ),
-                  f.createElement(
+                  g.createElement(
                     "div",
                     {
                       className: "DialogSlider_Slider",
                       onMouseDown: this.OnMouseDown,
                       onTouchStart: this.OnTouchStart
                     },
-                    f.createElement("div", {
+                    g.createElement("div", {
                       className: "DialogSlider_Value",
                       style: t
                     }),
-                    f.createElement("div", {
+                    g.createElement("div", {
                       className: "DialogSlider_Grabber",
                       style: n
                     })
                   ),
                   this.props.bShowValue
-                    ? f.createElement(
+                    ? g.createElement(
                         "div",
                         { className: "DialogLabelExplainer" },
                         this.state.value
@@ -5096,14 +5107,14 @@ var CLSTAMP = "6243158";
             Object(h.c)([i.a], e.prototype, "OnKeyDown", null),
             e
           );
-        })(f.Component),
-        z = n("TtDX"),
-        V = n("P++D"),
-        Y = n.n(V),
-        K = n("5E+2"),
-        X = n("6+2x"),
-        q = n.n(X),
-        J = (function(n) {
+        })(g.Component),
+        Y = n("TtDX"),
+        K = n("P++D"),
+        X = n.n(K),
+        q = n("5E+2"),
+        J = n("6+2x"),
+        Z = n.n(J),
+        Q = (function(n) {
           function e(e) {
             var t = n.call(this, e) || this;
             return (
@@ -5229,11 +5240,11 @@ var CLSTAMP = "6243158";
                 },
                 this.props.contextMenuPositionOptions
               );
-              (this.m_iMenuInstance = Object(z.a)(
-                f.createElement(
-                  l.Provider,
+              (this.m_iMenuInstance = Object(Y.a)(
+                g.createElement(
+                  c.Provider,
                   { value: this.context },
-                  f.createElement(Z, {
+                  g.createElement($, {
                     rgOptions: this.props.rgOptions,
                     fnOnItemSelected: this.OnItemSelected,
                     strDropDownItemClassName: this.props
@@ -5276,33 +5287,33 @@ var CLSTAMP = "6243158";
               this.state.bOpened && (n += " Active"),
                 this.props.disabled && (n += " Disabled"),
                 this.props.strClassName && (r += " " + this.props.strClassName);
-              var o = f.createElement(
-                f.Fragment,
+              var o = g.createElement(
+                g.Fragment,
                 null,
                 this.props.postDropdownElement,
                 !this.props.disabled &&
-                  f.createElement(
+                  g.createElement(
                     "div",
                     { className: "DialogDropDown_Arrow" },
-                    f.createElement(v.m, null)
+                    g.createElement(b.m, null)
                   ),
                 this.props.postOptionElement,
-                f.createElement(
+                g.createElement(
                   "div",
                   { className: "DialogDropDown_CurrentDisplay" },
                   t
                 )
               );
-              return f.createElement(
+              return g.createElement(
                 "div",
                 { className: r },
                 this.props.label &&
-                  f.createElement(
+                  g.createElement(
                     "div",
                     { className: "DialogLabel" },
                     this.props.label,
                     Boolean(this.props.tooltip) &&
-                      f.createElement(
+                      g.createElement(
                         "span",
                         { "data-tooltip-text": this.props.tooltip },
                         " (?)"
@@ -5316,7 +5327,7 @@ var CLSTAMP = "6243158";
                       htmlElementRef: this.OnInputRef,
                       children: o
                     })
-                  : f.createElement(
+                  : g.createElement(
                       "div",
                       {
                         className: n,
@@ -5328,7 +5339,7 @@ var CLSTAMP = "6243158";
                     )
               );
             }),
-            (e.contextType = l),
+            (e.contextType = c),
             Object(h.c)([i.a], e.prototype, "OnInputRef", null),
             Object(h.c)([i.a], e.prototype, "ToggleMenu", null),
             Object(h.c)([i.a], e.prototype, "OnItemSelected", null),
@@ -5336,15 +5347,15 @@ var CLSTAMP = "6243158";
             Object(h.c)([i.a], e.prototype, "HideMenu", null),
             e
           );
-        })(f.Component);
-      function Z(e) {
-        var t = u();
-        return f.createElement(
-          p.d,
-          Object(h.a)({ component: t.DropDownMenu, fallback: Q }, e)
+        })(g.Component);
+      function $(e) {
+        var t = l();
+        return g.createElement(
+          w.d,
+          Object(h.a)({ component: t.DropDownMenu, fallback: ee }, e)
         );
       }
-      function Q(n) {
+      function ee(n) {
         function r(e) {
           var t = parseInt(e.currentTarget.getAttribute("data-dropdown-index"));
           (t || 0 === t) &&
@@ -5352,47 +5363,47 @@ var CLSTAMP = "6243158";
             t < n.rgOptions.length &&
             n.fnOnItemSelected(t, n.rgOptions[t]);
         }
-        var o = Object(c.a)(
-            Y.a.DialogDropDownMenu_Item,
+        var o = Object(y.a)(
+            X.a.DialogDropDownMenu_Item,
             n.strDropDownItemClassName
           ),
           e = n.rgOptions.map(function(e, t) {
-            return f.createElement(
-              p.d,
+            return g.createElement(
+              w.d,
               {
                 component: n.renderMenuItem,
                 fallback: "div",
                 key: t,
-                className: Object(c.a)(o, e.strOptionClass),
+                className: Object(y.a)(o, e.strOptionClass),
                 "data-dropdown-index": t,
                 onClick: r
               },
               Boolean(e.tooltip)
-                ? f.createElement(
-                    K.a,
+                ? g.createElement(
+                    q.a,
                     {
                       toolTipContent: e.tooltip,
-                      strTooltipClassname: q.a.HoverAboveModal
+                      strTooltipClassname: Z.a.HoverAboveModal
                     },
                     e.label
                   )
-                : f.createElement(f.Fragment, null, e.label)
+                : g.createElement(g.Fragment, null, e.label)
             );
           });
-        return f.createElement(
-          p.d,
+        return g.createElement(
+          w.d,
           {
             component: n.renderMenuContainer,
             fallback: "div",
-            className: Object(c.a)(
-              Y.a.DialogDropDownMenu,
+            className: Object(y.a)(
+              X.a.DialogDropDownMenu,
               "_DialogInputContainer"
             )
           },
           e
         );
       }
-      var $ = (function(t) {
+      var te = (function(t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (e.state = { rgOptions: void 0 }), e;
@@ -5434,8 +5445,8 @@ var CLSTAMP = "6243158";
                   (t || n
                     ? ((o = [{ label: t, data: n }]), (r.selectedOption = n))
                     : (o = [])),
-                f.createElement(
-                  J,
+                g.createElement(
+                  Q,
                   Object(h.a)({}, r, {
                     rgOptions: o,
                     onMenuOpened: this.OnMenuOpened
@@ -5446,21 +5457,21 @@ var CLSTAMP = "6243158";
             Object(h.c)([i.a], e.prototype, "OnMenuOpened", null),
             e
           );
-        })(f.Component),
-        ee = n("2vnA"),
-        te = n("sUmc"),
-        ne = n("Kw0F"),
-        re = n("YyVH"),
-        oe = n("UPxs");
-      f.Component;
-      function ie(e, t, n, r) {
+        })(g.Component),
+        ne = n("2vnA"),
+        re = n("sUmc"),
+        oe = n("Kw0F"),
+        ie = n("YyVH"),
+        ae = n("UPxs");
+      g.Component;
+      function se(e, t, n, r) {
         return r
           ? n && e > n.left && e < n.right && t > n.top && t < n.bottom
           : n && e >= n.left && e <= n.right && t >= n.top && t <= n.bottom;
       }
-      var ae = (function() {
+      var ce = (function() {
           function e() {
-            (this.m_embeddedElement = new te.a("DragGhosts")),
+            (this.m_embeddedElement = new re.a("DragGhosts")),
               (this.m_rgDropRegions = []),
               (this.m_rgActiveDropRegions = []);
           }
@@ -5473,8 +5484,8 @@ var CLSTAMP = "6243158";
                   this.m_rgActiveDropRegions.push(e));
             }),
             (e.prototype.UnregisterDropRegion = function(e) {
-              ne.c(this.m_rgDropRegions, e),
-                ne.c(this.m_rgActiveDropRegions, e),
+              oe.c(this.m_rgDropRegions, e),
+                oe.c(this.m_rgActiveDropRegions, e),
                 this.m_activeDropRegion == e &&
                   ((this.m_activeDropRegion = void 0),
                   this.m_activeDraggable && this.ShowDragGhost());
@@ -5484,11 +5495,11 @@ var CLSTAMP = "6243158";
             }),
             (e.prototype.ShowDragGhost = function() {
               var e = this.m_activeDraggable.renderDragGhost(),
-                t = Object(c.a)(
+                t = Object(y.a)(
                   e.props.className,
                   !!this.m_activeDropRegion && "DraggedOverActiveDrop"
                 ),
-                n = f.cloneElement(e, {
+                n = g.cloneElement(e, {
                   ref: this.OnDragGhostRef,
                   className: t
                 });
@@ -5596,20 +5607,20 @@ var CLSTAMP = "6243158";
                     (l || u) &&
                     ((r = t + l),
                     (o = n + u),
-                    ie(
+                    se(
                       t,
                       n,
                       (i = e.GetDragDocument().body.getBoundingClientRect())
                     ) &&
-                      !ie(r, o, i, !0) &&
-                      ((a = re.c(
+                      !se(r, o, i, !0) &&
+                      ((a = ie.c(
                         r,
                         i.left,
                         i.right,
                         i.left - 200,
                         i.right + 200
                       )),
-                      (s = re.c(
+                      (s = ie.c(
                         o,
                         i.top,
                         i.bottom,
@@ -5645,7 +5656,7 @@ var CLSTAMP = "6243158";
             e
           );
         })(),
-        se = (function(t) {
+        le = (function(t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (
@@ -5659,7 +5670,7 @@ var CLSTAMP = "6243158";
                 startHeight: void 0,
                 ownerWin: void 0
               }),
-              (e.m_divRef = f.createRef()),
+              (e.m_divRef = g.createRef()),
               e
             );
           }
@@ -5810,7 +5821,7 @@ var CLSTAMP = "6243158";
                 s = n || "DialogDraggable";
               return (
                 this.m_DragInfo.bStarted
-                  ? ((s = Object(c.a)(s, r || "DraggedOut")),
+                  ? ((s = Object(y.a)(s, r || "DraggedOut")),
                     t &&
                       (a = {
                         onDrag: this.ProcessDragMove,
@@ -5826,7 +5837,7 @@ var CLSTAMP = "6243158";
                           onMouseDown: this.OnMouseDown,
                           onTouchStart: this.OnTouchStart
                         }),
-                f.createElement(
+                g.createElement(
                   "div",
                   Object(h.a)({ ref: this.m_divRef, className: s }, a, i, {
                     draggable: t
@@ -5838,12 +5849,12 @@ var CLSTAMP = "6243158";
             (e.prototype.renderDropGhost = function() {
               return this.props.fnRenderDropGhost
                 ? this.props.fnRenderDropGhost()
-                : f.createElement(ce, { elContent: this.GetClone() });
+                : g.createElement(ue, { elContent: this.GetClone() });
             }),
             (e.prototype.renderDragGhost = function() {
               return this.props.fnRenderDragGhost
                 ? this.props.fnRenderDragGhost()
-                : f.createElement(le, {
+                : g.createElement(pe, {
                     elContent: this.GetClone(),
                     offsetX: this.m_DragInfo.startOffsetX,
                     offsetY: this.m_DragInfo.startOffsetY,
@@ -5869,13 +5880,13 @@ var CLSTAMP = "6243158";
             Object(h.c)([i.a], e.prototype, "OnMouseUp", null),
             Object(h.c)([i.a], e.prototype, "OnTouchStart", null),
             Object(h.c)([i.a], e.prototype, "OnTouchEnd", null),
-            Object(h.c)([ee.k], e.prototype, "ResetDragState", null),
+            Object(h.c)([ne.k], e.prototype, "ResetDragState", null),
             Object(h.c)([i.a], e.prototype, "OnHTMLDragStart", null),
             Object(h.c)([i.a], e.prototype, "OnHTMLDragEnd", null),
             e
           );
-        })(f.Component),
-        ce = (function(e) {
+        })(g.Component),
+        ue = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -5885,7 +5896,7 @@ var CLSTAMP = "6243158";
               e && e.appendChild(this.props.elContent);
             }),
             (t.prototype.render = function() {
-              return f.createElement("div", {
+              return g.createElement("div", {
                 className: "DialogDraggable_DropGhost",
                 ref: this.OnRef
               });
@@ -5893,8 +5904,8 @@ var CLSTAMP = "6243158";
             Object(h.c)([i.a], t.prototype, "OnRef", null),
             t
           );
-        })(f.Component),
-        le = (function(t) {
+        })(g.Component),
+        pe = (function(t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (
@@ -5924,7 +5935,7 @@ var CLSTAMP = "6243158";
                 void 0 === this.state.clientX ||
                 void 0 === this.state.clientY
               )
-                return f.createElement("div", null);
+                return g.createElement("div", null);
               var e = {
                   left: this.state.clientX - (this.props.offsetX || 0),
                   top: this.state.clientY - (this.props.offsetY || 0),
@@ -5932,7 +5943,7 @@ var CLSTAMP = "6243158";
                   height: this.props.height || "auto",
                   perspective: "600px"
                 },
-                t = re.c(
+                t = ie.c(
                   this.CalculateRotationDegrees(this.state.clientYDelta),
                   -90,
                   90,
@@ -5952,17 +5963,17 @@ var CLSTAMP = "6243158";
                   filter: "brightness(" + t + ")"
                 },
                 r = this.props.className || "DialogDraggable_DragGhost";
-              return f.createElement(
+              return g.createElement(
                 "div",
                 { className: r, style: e },
-                f.createElement("div", { ref: this.OnRef, style: n })
+                g.createElement("div", { ref: this.OnRef, style: n })
               );
             }),
             Object(h.c)([i.a], e.prototype, "OnRef", null),
             e
           );
-        })(f.Component),
-        ue = (function(e) {
+        })(g.Component),
+        me = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -5984,7 +5995,7 @@ var CLSTAMP = "6243158";
           (function(n) {
             function e(e) {
               var t = n.call(this, e) || this;
-              return (t.m_divRef = f.createRef()), (t.state = {}), t;
+              return (t.m_divRef = g.createRef()), (t.state = {}), t;
             }
             return (
               Object(h.d)(e, n),
@@ -6019,7 +6030,7 @@ var CLSTAMP = "6243158";
                 );
               }),
               (e.prototype.BDraggableInRegion = function(e, t, n) {
-                return ie(e, t, this.GetClientRect());
+                return se(e, t, this.GetClientRect());
               }),
               (e.prototype.GetElement = function() {
                 return this.m_divRef.current;
@@ -6050,12 +6061,12 @@ var CLSTAMP = "6243158";
                     "strActiveClassName",
                     "children"
                   ]),
-                  i = Object(c.a)(
+                  i = Object(y.a)(
                     t || "DialogDropRegion",
                     this.state.bDraggableActive && (n || "Active")
                   );
-                return f.createElement(
-                  oe.a,
+                return g.createElement(
+                  ae.a,
                   Object(h.a)(
                     { htmlElementRef: this.m_divRef, className: i },
                     o,
@@ -6067,14 +6078,128 @@ var CLSTAMP = "6243158";
               }),
               e
             );
-          })(f.Component)
+          })(g.Component)
+        ),
+        de = n("zBSo"),
+        he = n.n(de);
+      function fe(e) {
+        return g.createElement("div", Object(h.a)({}, e));
+      }
+      function ve(e) {
+        var t = e.title,
+          n = (e.active, Object(h.f)(e, ["title", "active"]));
+        return g.createElement("div", Object(h.a)({}, n), t);
+      }
+      g.forwardRef(function(o, e) {
+        var t,
+          n,
+          i = null !== (t = o.stylesheet) && void 0 !== t ? t : he.a,
+          r =
+            null != o.startingPage
+              ? o.pages
+                  .map(function(e) {
+                    return e.identifier;
+                  })
+                  .indexOf(o.startingPage)
+              : -1,
+          a = null == o.page,
+          s = g.useState(r),
+          c = s[0],
+          l = s[1],
+          u = a
+            ? c
+            : o.pages.findIndex(function(e) {
+                return e.identifier === o.page;
+              }),
+          p = u < 0 || u >= o.pages.length ? 0 : u,
+          m = o.pages[p],
+          d = o.pages.map(function(e, t) {
+            var n,
+              r = e == m;
+            return g.createElement(w.d, {
+              component: o.renderPageListItem,
+              fallback: ve,
+              className: Object(y.a)(
+                i.PagedSettingsDialog_PageListItem,
+                (((n = {})[i.Active] = r), n)
+              ),
+              key: e.title,
+              onClick: function() {
+                o.onPageRequested && o.onPageRequested(e.identifier),
+                  e.click ? e.click() : a && t != c && l(t);
+              },
+              title: e.title,
+              active: r
+            });
+          }),
+          h = m.hideTitle,
+          f = !1 !== m.enabled,
+          v = null === (n = o.showTitle) || void 0 === n || n;
+        return g.createElement(
+          "div",
+          {
+            className: Object(y.a)(i.PagedSettingsDialog, o.className),
+            ref: e
+          },
+          g.createElement(
+            "div",
+            { className: i.PagedSettingsDialog_PageListColumn },
+            v &&
+              g.createElement(
+                "div",
+                { className: i.PagedSettingsDialog_Title },
+                o.title
+              ),
+            g.createElement(
+              w.d,
+              {
+                component: o.renderPageList,
+                fallback: fe,
+                className: i.PagedSettingsDialog_PageList
+              },
+              d
+            )
+          ),
+          g.createElement(
+            "div",
+            { className: "DialogContentTransition" },
+            m &&
+              g.createElement(
+                C,
+                {
+                  className: Object(y.a)(
+                    i.PagedSettingsDialog_PageContent,
+                    m.pageClassName,
+                    { noPermission: !f }
+                  )
+                },
+                !h &&
+                  g.createElement(
+                    E,
+                    null,
+                    m.title,
+                    g.createElement(
+                      O,
+                      null,
+                      !f &&
+                        g.createElement(
+                          g.Fragment,
+                          null,
+                          g.createElement(b.w, null),
+                          Object(_.f)("#Chat_Settings_Permission_Denied")
+                        )
+                    )
+                  ),
+                null != m.content && g.cloneElement(m.content)
+              )
+          )
         );
-      n("zBSo");
-      var pe = (function(t) {
+      });
+      var ge = (function(t) {
         function e() {
           var e = (null !== t && t.apply(this, arguments)) || this;
           return (
-            (e.m_refTextArea = f.createRef()),
+            (e.m_refTextArea = g.createRef()),
             (e.m_cEntryLength = Number.MAX_VALUE),
             e
           );
@@ -6167,7 +6292,7 @@ var CLSTAMP = "6243158";
               t = (e.nMinHeight,
               e.nMaxHeight,
               Object(h.f)(e, ["nMinHeight", "nMaxHeight"]));
-            return f.createElement(
+            return g.createElement(
               "textarea",
               Object(h.a)({}, t, {
                 ref: this.m_refTextArea,
@@ -6187,72 +6312,72 @@ var CLSTAMP = "6243158";
           Object(h.c)([i.a], e.prototype, "OnCut", null),
           e
         );
-      })(f.Component);
+      })(g.Component);
       n.d(t, "k", function() {
-        return m;
+        return E;
       }),
         n.d(t, "u", function() {
-          return d;
+          return u;
         }),
         n.d(t, "j", function() {
-          return b;
+          return p;
         }),
         n.d(t, "m", function() {
-          return _;
+          return m;
         }),
         n.d(t, "c", function() {
-          return y;
+          return d;
         }),
         n.d(t, "b", function() {
-          return w;
+          return f;
         }),
         n.d(t, "v", function() {
-          return E;
+          return v;
         }),
         n.d(t, "f", function() {
-          return S;
+          return C;
         }),
         n.d(t, "g", function() {
-          return x;
+          return M;
         }),
         n.d(t, "q", function() {
-          return k;
-        }),
-        n.d(t, "d", function() {
           return T;
         }),
-        n.d(t, "t", function() {
+        n.d(t, "d", function() {
           return j;
         }),
-        n.d(t, "n", function() {
+        n.d(t, "t", function() {
           return I;
         }),
-        n.d(t, "o", function() {
+        n.d(t, "n", function() {
           return N;
         }),
+        n.d(t, "o", function() {
+          return L;
+        }),
         n.d(t, "e", function() {
-          return R;
-        }),
-        n.d(t, "r", function() {
-          return B;
-        }),
-        n.d(t, "p", function() {
           return F;
         }),
+        n.d(t, "r", function() {
+          return P;
+        }),
+        n.d(t, "p", function() {
+          return R;
+        }),
         n.d(t, "l", function() {
-          return H;
+          return z;
         }),
         n.d(t, "s", function() {
-          return W;
+          return V;
         }),
         n.d(t, "h", function() {
-          return J;
+          return Q;
         }),
         n.d(t, "i", function() {
-          return $;
+          return te;
         }),
         n.d(t, "a", function() {
-          return pe;
+          return ge;
         });
     },
     OS8t: function(e, t, n) {
@@ -8803,6 +8928,20 @@ var CLSTAMP = "6243158";
                 this.NeedsComponentFromElement && H(this.m_htmlElement, this),
                 S(this.props.htmlElementRef, e));
           }),
+          (a.prototype.HasFocusWithin = function() {
+            var e, t;
+            return (
+              null !==
+                (t =
+                  null === (e = this.m_htmlElement) || void 0 === e
+                    ? void 0
+                    : e.contains(
+                        this.m_htmlElement.ownerDocument.activeElement
+                      )) &&
+              void 0 !== t &&
+              t
+            );
+          }),
           (a.prototype.FocusWithin = function() {
             this.m_htmlElement && de.FocusWithin(this.m_htmlElement);
           }),
@@ -8957,6 +9096,9 @@ var CLSTAMP = "6243158";
           }
           return (
             Object(u.d)(V, n),
+            (V.DocumentElementHasFocus = function(e) {
+              return e && null != e.activeElement && e.activeElement !== e.body;
+            }),
             (V.FocusWithin = function(e) {
               var t,
                 n = V.GetNavAreaObjects(e, "NavArea.FocusWithin", {
@@ -13806,105 +13948,104 @@ var CLSTAMP = "6243158";
                 T = this.props.element;
               k &&
                 T &&
-                ((e = T.ownerDocument.defaultView),
-                (k.ownerDocument.defaultView.CtxUpdate = this.PositionMenu.bind(
-                  this
-                )),
-                (t = T.getBoundingClientRect()),
-                (n = k.getBoundingClientRect()),
-                (r = null != this.props.popup),
-                (o = this.props.options),
-                (i = {
-                  menuLeft: void 0,
-                  menuRight: void 0,
-                  menuTop: void 0,
-                  menuBottom: void 0,
-                  menuWidth: void 0,
-                  menuHeight: void 0
-                }),
-                (a = this.props.clientX),
-                (s = this.props.clientY),
-                (c = e.innerWidth),
-                (l = e.innerHeight),
-                r &&
-                  (this.props.options.bScreenCoordinates ||
-                    ((a += e.screenLeft), (s += e.screenTop)),
-                  (t = j.f(e, t)),
-                  (m = p = 0),
-                  (u = e.screen).availLeft && (p = u.availLeft),
-                  u.availTop && (m = u.availTop),
-                  (c = p + u.availWidth),
-                  (l = m + u.availHeight)),
-                (o.bOverlapHorizontal || o.bOverlapVertical) &&
-                  (a = s = void 0),
-                (d = a || t.left),
-                (h = a || t.right),
-                (f = n.width),
-                o.bMatchWidth && ((f = h - d), (i.menuWidth = f)),
-                (g = 0 < (v = (o.bOverlapHorizontal ? h : d) - f)),
-                (_ = 0 < (b = c - (o.bOverlapHorizontal ? d : h) - f)),
-                (y = (o.bPreferPopLeft || !_) && g),
-                g ||
-                  _ ||
-                  ((y = _ < g),
-                  o.bFitToWindow &&
-                    ((f += (y ? v : b) - 8), (i.menuWidth = f))),
-                (!o.bPreferPopLeft && _) || !g
-                  ? (i.menuLeft = o.bOverlapHorizontal ? d : h)
-                  : (i.menuRight = c - (o.bOverlapHorizontal ? h : d)),
-                (w = s || t.top),
-                (E = s || t.bottom),
-                (O = k.scrollHeight),
-                o.bMatchHeight && ((O = E - w), (i.menuHeight = O)),
-                (C = 0 < (S = (o.bOverlapVertical ? E : w) - O)),
-                (x = 0 < (D = l - (o.bOverlapVertical ? w : E) - O)),
-                (A = (o.bPreferPopTop || !x) && C && !o.bDisablePopTop),
-                C ||
-                  x ||
-                  ((M =
-                    void 0 !== o.bShiftToFitWindow
-                      ? o.bShiftToFitWindow
-                      : o.bFitToWindow && !o.bOverlapHorizontal),
-                  (A = D < S && !o.bDisablePopTop),
-                  M && (A ? (i.menuTop = 4) : (i.menuBottom = 4)),
-                  o.bFitToWindow &&
-                    (M ? (O = Math.min(O, l - 8)) : (O += A ? S : D),
-                    (i.menuHeight = O - 8))),
-                void 0 === i.menuBottom &&
-                  void 0 === i.menuTop &&
-                  (A
-                    ? (i.menuBottom = l - (o.bOverlapVertical ? E : w))
-                    : (i.menuTop = o.bOverlapVertical ? w : E)),
-                r
-                  ? (i.menuHeight || (i.menuHeight = n.height),
-                    i.menuWidth || (i.menuWidth = n.width),
-                    i.menuBottom &&
-                      !i.menuTop &&
-                      ((i.menuTop = l - i.menuBottom - i.menuHeight),
-                      (i.menuBottom = void 0)),
-                    i.menuRight &&
-                      !i.menuLeft &&
-                      ((i.menuLeft = c - i.menuRight - i.menuWidth),
-                      (i.menuRight = void 0)))
-                  : (i.menuLeft && (i.menuLeft += e.scrollX),
-                    i.menuTop && (i.menuTop += e.scrollY),
-                    i.menuBottom &&
-                      (i.menuBottom +=
-                        e.document.body.clientHeight -
-                        e.scrollY -
-                        e.innerHeight),
-                    i.menuRight &&
-                      (i.menuRight +=
-                        e.document.body.clientWidth -
-                        e.scrollX -
-                        e.innerWidth)),
-                (i.menuLeft === this.state.menuLeft &&
-                  i.menuRight === this.state.menuRight &&
-                  i.menuTop === this.state.menuTop &&
-                  i.menuBottom === this.state.menuBottom &&
-                  i.menuWidth === this.state.menuWidth &&
-                  i.menuHeight === this.state.menuHeight) ||
-                  this.setState(i));
+                ("none" !==
+                  (e = T.ownerDocument.defaultView).getComputedStyle(T)
+                    .display &&
+                  ((t = T.getBoundingClientRect()),
+                  (n = k.getBoundingClientRect()),
+                  (r = null != this.props.popup),
+                  (o = this.props.options),
+                  (i = {
+                    menuLeft: void 0,
+                    menuRight: void 0,
+                    menuTop: void 0,
+                    menuBottom: void 0,
+                    menuWidth: void 0,
+                    menuHeight: void 0
+                  }),
+                  (a = this.props.clientX),
+                  (s = this.props.clientY),
+                  (c = e.innerWidth),
+                  (l = e.innerHeight),
+                  r &&
+                    (this.props.options.bScreenCoordinates ||
+                      ((a += e.screenLeft), (s += e.screenTop)),
+                    (t = j.f(e, t)),
+                    (m = p = 0),
+                    (u = e.screen).availLeft && (p = u.availLeft),
+                    u.availTop && (m = u.availTop),
+                    (c = p + u.availWidth),
+                    (l = m + u.availHeight)),
+                  (o.bOverlapHorizontal || o.bOverlapVertical) &&
+                    (a = s = void 0),
+                  (d = a || t.left),
+                  (h = a || t.right),
+                  (f = n.width),
+                  o.bMatchWidth && ((f = h - d), (i.menuWidth = f)),
+                  (g = 0 < (v = (o.bOverlapHorizontal ? h : d) - f)),
+                  (_ = 0 < (b = c - (o.bOverlapHorizontal ? d : h) - f)),
+                  (y = (o.bPreferPopLeft || !_) && g),
+                  g ||
+                    _ ||
+                    ((y = _ < g),
+                    o.bFitToWindow &&
+                      ((f += (y ? v : b) - 8), (i.menuWidth = f))),
+                  (!o.bPreferPopLeft && _) || !g
+                    ? (i.menuLeft = o.bOverlapHorizontal ? d : h)
+                    : (i.menuRight = c - (o.bOverlapHorizontal ? h : d)),
+                  (w = s || t.top),
+                  (E = s || t.bottom),
+                  (O = k.scrollHeight),
+                  o.bMatchHeight && ((O = E - w), (i.menuHeight = O)),
+                  (C = 0 < (S = (o.bOverlapVertical ? E : w) - O)),
+                  (x = 0 < (D = l - (o.bOverlapVertical ? w : E) - O)),
+                  (A = (o.bPreferPopTop || !x) && C && !o.bDisablePopTop),
+                  C ||
+                    x ||
+                    ((M =
+                      void 0 !== o.bShiftToFitWindow
+                        ? o.bShiftToFitWindow
+                        : o.bFitToWindow && !o.bOverlapHorizontal),
+                    (A = D < S && !o.bDisablePopTop),
+                    M && (A ? (i.menuTop = 4) : (i.menuBottom = 4)),
+                    o.bFitToWindow &&
+                      (M ? (O = Math.min(O, l - 8)) : (O += A ? S : D),
+                      (i.menuHeight = O - 8))),
+                  void 0 === i.menuBottom &&
+                    void 0 === i.menuTop &&
+                    (A
+                      ? (i.menuBottom = l - (o.bOverlapVertical ? E : w))
+                      : (i.menuTop = o.bOverlapVertical ? w : E)),
+                  r
+                    ? (i.menuHeight || (i.menuHeight = n.height),
+                      i.menuWidth || (i.menuWidth = n.width),
+                      i.menuBottom &&
+                        !i.menuTop &&
+                        ((i.menuTop = l - i.menuBottom - i.menuHeight),
+                        (i.menuBottom = void 0)),
+                      i.menuRight &&
+                        !i.menuLeft &&
+                        ((i.menuLeft = c - i.menuRight - i.menuWidth),
+                        (i.menuRight = void 0)))
+                    : (i.menuLeft && (i.menuLeft += e.scrollX),
+                      i.menuTop && (i.menuTop += e.scrollY),
+                      i.menuBottom &&
+                        (i.menuBottom +=
+                          e.document.body.clientHeight -
+                          e.scrollY -
+                          e.innerHeight),
+                      i.menuRight &&
+                        (i.menuRight +=
+                          e.document.body.clientWidth -
+                          e.scrollX -
+                          e.innerWidth)),
+                  (i.menuLeft === this.state.menuLeft &&
+                    i.menuRight === this.state.menuRight &&
+                    i.menuTop === this.state.menuTop &&
+                    i.menuBottom === this.state.menuBottom &&
+                    i.menuWidth === this.state.menuWidth &&
+                    i.menuHeight === this.state.menuHeight) ||
+                    this.setState(i)));
             }),
             (e.prototype.render = function() {
               var o,

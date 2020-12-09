@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6243158";
+var CLSTAMP = "6250048";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [2],
   {
@@ -17763,40 +17763,40 @@ var CLSTAMP = "6243158";
     },
     RBVV: function(e, r, t) {
       "use strict";
-      t.d(r, "cb", function() {
+      t.d(r, "eb", function() {
         return s;
       }),
-        t.d(r, "T", function() {
+        t.d(r, "V", function() {
           return y;
         }),
         t.d(r, "e", function() {
           return _;
         }),
-        t.d(r, "B", function() {
+        t.d(r, "C", function() {
           return h;
         }),
-        t.d(r, "I", function() {
+        t.d(r, "J", function() {
           return M;
         }),
-        t.d(r, "M", function() {
+        t.d(r, "N", function() {
           return z;
         }),
-        t.d(r, "L", function() {
+        t.d(r, "M", function() {
           return O;
         }),
-        t.d(r, "N", function() {
+        t.d(r, "O", function() {
           return F;
         }),
-        t.d(r, "A", function() {
+        t.d(r, "B", function() {
           return T;
         }),
-        t.d(r, "x", function() {
+        t.d(r, "y", function() {
           return N;
         }),
-        t.d(r, "P", function() {
+        t.d(r, "Q", function() {
           return I;
         }),
-        t.d(r, "H", function() {
+        t.d(r, "I", function() {
           return q;
         }),
         t.d(r, "a", function() {
@@ -17805,16 +17805,16 @@ var CLSTAMP = "6243158";
         t.d(r, "h", function() {
           return V;
         }),
-        t.d(r, "D", function() {
+        t.d(r, "E", function() {
           return $;
         }),
-        t.d(r, "F", function() {
+        t.d(r, "G", function() {
           return K;
         }),
         t.d(r, "m", function() {
           return J;
         }),
-        t.d(r, "G", function() {
+        t.d(r, "H", function() {
           return Z;
         }),
         t.d(r, "d", function() {
@@ -17826,7 +17826,7 @@ var CLSTAMP = "6243158";
         t.d(r, "b", function() {
           return le;
         }),
-        t.d(r, "V", function() {
+        t.d(r, "X", function() {
           return me;
         }),
         t.d(r, "f", function() {
@@ -17835,97 +17835,103 @@ var CLSTAMP = "6243158";
         t.d(r, "j", function() {
           return _e;
         }),
-        t.d(r, "C", function() {
+        t.d(r, "D", function() {
           return he;
         }),
-        t.d(r, "E", function() {
+        t.d(r, "F", function() {
           return Me;
         }),
-        t.d(r, "t", function() {
+        t.d(r, "u", function() {
           return Oe;
         }),
-        t.d(r, "v", function() {
+        t.d(r, "w", function() {
           return Fe;
         }),
-        t.d(r, "u", function() {
+        t.d(r, "v", function() {
           return Se;
         }),
-        t.d(r, "y", function() {
+        t.d(r, "z", function() {
           return Te;
         }),
-        t.d(r, "w", function() {
+        t.d(r, "x", function() {
           return Ne;
         }),
-        t.d(r, "z", function() {
+        t.d(r, "A", function() {
           return Ie;
         }),
-        t.d(r, "K", function() {
+        t.d(r, "L", function() {
           return xe;
         }),
         t.d(r, "s", function() {
           return Le;
         }),
         t.d(r, "c", function() {
-          return Qe;
-        }),
-        t.d(r, "g", function() {
           return Je;
         }),
+        t.d(r, "g", function() {
+          return Ye;
+        }),
         t.d(r, "p", function() {
-          return Xe;
+          return Ze;
         }),
         t.d(r, "o", function() {
-          return er;
+          return rr;
         }),
         t.d(r, "q", function() {
-          return tr;
+          return nr;
         }),
         t.d(r, "k", function() {
-          return or;
+          return ar;
         }),
         t.d(r, "n", function() {
-          return ur;
+          return sr;
         }),
         t.d(r, "r", function() {
-          return fr;
+          return lr;
         }),
-        t.d(r, "O", function() {
-          return mr;
-        }),
-        t.d(r, "Q", function() {
-          return yr;
-        }),
-        t.d(r, "i", function() {
-          return wr;
+        t.d(r, "P", function() {
+          return br;
         }),
         t.d(r, "R", function() {
-          return Mr;
+          return Br;
         }),
-        t.d(r, "J", function() {
-          return Rr;
-        }),
-        t.d(r, "U", function() {
-          return Fr;
+        t.d(r, "i", function() {
+          return hr;
         }),
         t.d(r, "S", function() {
-          return Ir;
+          return vr;
         }),
-        t.d(r, "Y", function() {
-          return c;
+        t.d(r, "K", function() {
+          return Or;
         }),
-        t.d(r, "X", function() {
-          return d;
+        t.d(r, "T", function() {
+          return Cr;
         }),
-        t.d(r, "bb", function() {
-          return f;
+        t.d(r, "t", function() {
+          return Tr;
         }),
         t.d(r, "W", function() {
-          return l;
+          return Nr;
+        }),
+        t.d(r, "U", function() {
+          return Vr;
         }),
         t.d(r, "ab", function() {
-          return m;
+          return c;
         }),
         t.d(r, "Z", function() {
+          return d;
+        }),
+        t.d(r, "db", function() {
+          return f;
+        }),
+        t.d(r, "Y", function() {
+          return l;
+        }),
+        t.d(r, "cb", function() {
+          return m;
+        }),
+        t.d(r, "bb", function() {
           return b;
         });
       var n = t("mrSG"),
@@ -23107,7 +23113,7 @@ var CLSTAMP = "6243158";
             var n = e.call(this) || this;
             return (
               r.prototype.sender || o.a(r.M()),
-              u.initialize(n, t, 0, -1, void 0, null),
+              u.initialize(n, t, 0, -1, [7], null),
               n
             );
           }
@@ -23136,7 +23142,8 @@ var CLSTAMP = "6243158";
                         bw: o.h.writeUint32
                       },
                       server_message: { n: 5, c: p },
-                      deleted: { n: 6, br: o.d.readBool, bw: o.h.writeBool }
+                      deleted: { n: 6, br: o.d.readBool, bw: o.h.writeBool },
+                      reactions: { n: 7, c: De, r: !0, q: !0 }
                     }
                   }),
                 r.sm_m
@@ -23176,6 +23183,82 @@ var CLSTAMP = "6243158";
           );
         })(u),
         De = (function(e) {
+          function r(t) {
+            void 0 === t && (t = null);
+            var n = e.call(this) || this;
+            return (
+              r.prototype.reaction_type || o.a(r.M()),
+              u.initialize(n, t, 0, -1, void 0, null),
+              n
+            );
+          }
+          return (
+            Object(n.d)(r, e),
+            (r.M = function() {
+              return (
+                r.sm_m ||
+                  (r.sm_m = {
+                    proto: r,
+                    fields: {
+                      reaction_type: {
+                        n: 1,
+                        br: o.d.readEnum,
+                        bw: o.h.writeEnum
+                      },
+                      reaction: {
+                        n: 2,
+                        br: o.d.readString,
+                        bw: o.h.writeString
+                      },
+                      num_reactors: {
+                        n: 3,
+                        br: o.d.readUint32,
+                        bw: o.h.writeUint32
+                      },
+                      has_user_reacted: {
+                        n: 4,
+                        br: o.d.readBool,
+                        bw: o.h.writeBool
+                      }
+                    }
+                  }),
+                r.sm_m
+              );
+            }),
+            (r.MBF = function() {
+              return r.sm_mbf || (r.sm_mbf = o.e(r.M())), r.sm_mbf;
+            }),
+            (r.prototype.toObject = function(e) {
+              return void 0 === e && (e = !1), r.toObject(e, this);
+            }),
+            (r.toObject = function(e, t) {
+              return o.g(r.M(), e, t);
+            }),
+            (r.fromObject = function(e) {
+              return o.c(r.M(), e);
+            }),
+            (r.deserializeBinary = function(e) {
+              var t = new i.BinaryReader(e),
+                n = new r();
+              return r.deserializeBinaryFromReader(n, t);
+            }),
+            (r.deserializeBinaryFromReader = function(e, t) {
+              return o.b(r.MBF(), e, t);
+            }),
+            (r.prototype.serializeBinary = function() {
+              var e = new i.BinaryWriter();
+              return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            }),
+            (r.serializeBinaryToWriter = function(e, t) {
+              o.f(r.M(), e, t);
+            }),
+            (r.prototype.getClassName = function() {
+              return "CChatRoom_GetMessageHistory_Response_ChatMessage_MessageReaction";
+            }),
+            r
+          );
+        })(u),
+        Ke = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -23238,7 +23321,7 @@ var CLSTAMP = "6243158";
             r
           );
         })(u),
-        Ke = (function(e) {
+        Qe = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -23305,7 +23388,7 @@ var CLSTAMP = "6243158";
             r
           );
         })(u),
-        Qe = (function(e) {
+        Je = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -23376,7 +23459,7 @@ var CLSTAMP = "6243158";
             r
           );
         })(u),
-        Je = (function(e) {
+        Ye = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -23447,7 +23530,7 @@ var CLSTAMP = "6243158";
             r
           );
         })(u),
-        Ye = (function(e) {
+        Xe = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -23513,7 +23596,7 @@ var CLSTAMP = "6243158";
             r
           );
         })(u),
-        Xe = (function(e) {
+        Ze = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -23574,7 +23657,7 @@ var CLSTAMP = "6243158";
             r
           );
         })(u),
-        Ze = (function(e) {
+        er = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -23653,7 +23736,7 @@ var CLSTAMP = "6243158";
             r
           );
         })(u),
-        er = (function(e) {
+        rr = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -23729,7 +23812,7 @@ var CLSTAMP = "6243158";
             r
           );
         })(u),
-        rr = (function(e) {
+        tr = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -23792,7 +23875,7 @@ var CLSTAMP = "6243158";
             r
           );
         })(u),
-        tr = (function(e) {
+        nr = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -23853,7 +23936,7 @@ var CLSTAMP = "6243158";
             r
           );
         })(u),
-        nr = (function(e) {
+        ir = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -23870,7 +23953,7 @@ var CLSTAMP = "6243158";
                 r.sm_m ||
                   (r.sm_m = {
                     proto: r,
-                    fields: { invite_links: { n: 1, c: ir, r: !0, q: !0 } }
+                    fields: { invite_links: { n: 1, c: or, r: !0, q: !0 } }
                   }),
                 r.sm_m
               );
@@ -23908,7 +23991,7 @@ var CLSTAMP = "6243158";
             r
           );
         })(u),
-        ir = (function(e) {
+        or = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -23984,7 +24067,7 @@ var CLSTAMP = "6243158";
             r
           );
         })(u),
-        or = (function(e) {
+        ar = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -24050,7 +24133,7 @@ var CLSTAMP = "6243158";
             r
           );
         })(u),
-        ar = (function(e) {
+        ur = (function(e) {
           function r(r) {
             void 0 === r && (r = null);
             var t = e.call(this) || this;
@@ -24086,7 +24169,7 @@ var CLSTAMP = "6243158";
             r
           );
         })(u),
-        ur = (function(e) {
+        sr = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -24147,7 +24230,7 @@ var CLSTAMP = "6243158";
             r
           );
         })(u),
-        sr = (function(e) {
+        cr = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -24164,7 +24247,7 @@ var CLSTAMP = "6243158";
                 r.sm_m ||
                   (r.sm_m = {
                     proto: r,
-                    fields: { bans: { n: 1, c: cr, r: !0, q: !0 } }
+                    fields: { bans: { n: 1, c: dr, r: !0, q: !0 } }
                   }),
                 r.sm_m
               );
@@ -24202,7 +24285,7 @@ var CLSTAMP = "6243158";
             r
           );
         })(u),
-        cr = (function(e) {
+        dr = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -24278,7 +24361,7 @@ var CLSTAMP = "6243158";
             r
           );
         })(u),
-        dr = (function(e) {
+        fr = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -24349,7 +24432,7 @@ var CLSTAMP = "6243158";
             r
           );
         })(u),
-        fr = (function(e) {
+        lr = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -24410,7 +24493,7 @@ var CLSTAMP = "6243158";
             r
           );
         })(u),
-        lr = (function(e) {
+        mr = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -24427,7 +24510,7 @@ var CLSTAMP = "6243158";
                 r.sm_m ||
                   (r.sm_m = {
                     proto: r,
-                    fields: { invites: { n: 1, c: dr, r: !0, q: !0 } }
+                    fields: { invites: { n: 1, c: fr, r: !0, q: !0 } }
                   }),
                 r.sm_m
               );
@@ -24465,7 +24548,7 @@ var CLSTAMP = "6243158";
             r
           );
         })(u),
-        mr = (function(e) {
+        br = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -24540,7 +24623,7 @@ var CLSTAMP = "6243158";
             r
           );
         })(u),
-        br = (function(e) {
+        yr = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -24604,7 +24687,7 @@ var CLSTAMP = "6243158";
             r
           );
         })(u),
-        yr = (function(e) {
+        Br = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -24627,8 +24710,8 @@ var CLSTAMP = "6243158";
                         br: o.d.readUint64String,
                         bw: o.h.writeUint64String
                       },
-                      chat_group_preferences: { n: 2, c: Br },
-                      chat_room_preferences: { n: 3, c: pr, r: !0, q: !0 }
+                      chat_group_preferences: { n: 2, c: pr },
+                      chat_room_preferences: { n: 3, c: _r, r: !0, q: !0 }
                     }
                   }),
                 r.sm_m
@@ -24667,7 +24750,7 @@ var CLSTAMP = "6243158";
             r
           );
         })(u),
-        Br = (function(e) {
+        pr = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -24738,7 +24821,7 @@ var CLSTAMP = "6243158";
             r
           );
         })(u),
-        pr = (function(e) {
+        _r = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -24814,7 +24897,7 @@ var CLSTAMP = "6243158";
             r
           );
         })(u),
-        _r = (function(e) {
+        wr = (function(e) {
           function r(r) {
             void 0 === r && (r = null);
             var t = e.call(this) || this;
@@ -24850,7 +24933,7 @@ var CLSTAMP = "6243158";
             r
           );
         })(u),
-        wr = (function(e) {
+        hr = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -24878,7 +24961,7 @@ var CLSTAMP = "6243158";
                         br: o.d.readUint64String,
                         bw: o.h.writeUint64String
                       },
-                      messages: { n: 3, c: hr, r: !0, q: !0 }
+                      messages: { n: 3, c: gr, r: !0, q: !0 }
                     }
                   }),
                 r.sm_m
@@ -24917,7 +25000,7 @@ var CLSTAMP = "6243158";
             r
           );
         })(u),
-        hr = (function(e) {
+        gr = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -24979,7 +25062,7 @@ var CLSTAMP = "6243158";
             r
           );
         })(u),
-        gr = (function(e) {
+        Mr = (function(e) {
           function r(r) {
             void 0 === r && (r = null);
             var t = e.call(this) || this;
@@ -25015,7 +25098,7 @@ var CLSTAMP = "6243158";
             r
           );
         })(u),
-        Mr = (function(e) {
+        vr = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -25107,7 +25190,7 @@ var CLSTAMP = "6243158";
             r
           );
         })(u),
-        vr = (function(e) {
+        zr = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -25180,7 +25263,7 @@ var CLSTAMP = "6243158";
             r
           );
         })(u),
-        zr = (function(e) {
+        Rr = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -25239,7 +25322,7 @@ var CLSTAMP = "6243158";
             r
           );
         })(u),
-        Rr = (function(e) {
+        Or = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -25315,7 +25398,7 @@ var CLSTAMP = "6243158";
             r
           );
         })(u),
-        Or = (function(e) {
+        jr = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -25333,7 +25416,7 @@ var CLSTAMP = "6243158";
                   (r.sm_m = {
                     proto: r,
                     fields: {
-                      matching_members: { n: 1, c: jr, r: !0, q: !0 },
+                      matching_members: { n: 1, c: Fr, r: !0, q: !0 },
                       status_flags: {
                         n: 2,
                         br: o.d.readUint32,
@@ -25377,7 +25460,7 @@ var CLSTAMP = "6243158";
             r
           );
         })(u),
-        jr = (function(e) {
+        Fr = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -25439,7 +25522,397 @@ var CLSTAMP = "6243158";
             r
           );
         })(u),
-        Fr = (function(e) {
+        Cr = (function(e) {
+          function r(t) {
+            void 0 === t && (t = null);
+            var n = e.call(this) || this;
+            return (
+              r.prototype.chat_group_id || o.a(r.M()),
+              u.initialize(n, t, 0, -1, void 0, null),
+              n
+            );
+          }
+          return (
+            Object(n.d)(r, e),
+            (r.M = function() {
+              return (
+                r.sm_m ||
+                  (r.sm_m = {
+                    proto: r,
+                    fields: {
+                      chat_group_id: {
+                        n: 1,
+                        br: o.d.readUint64String,
+                        bw: o.h.writeUint64String
+                      },
+                      chat_id: {
+                        n: 2,
+                        br: o.d.readUint64String,
+                        bw: o.h.writeUint64String
+                      },
+                      server_timestamp: {
+                        n: 3,
+                        br: o.d.readUint32,
+                        bw: o.h.writeUint32
+                      },
+                      ordinal: {
+                        n: 4,
+                        br: o.d.readUint32,
+                        bw: o.h.writeUint32
+                      },
+                      reaction_type: {
+                        n: 5,
+                        br: o.d.readEnum,
+                        bw: o.h.writeEnum
+                      },
+                      reaction: {
+                        n: 6,
+                        br: o.d.readString,
+                        bw: o.h.writeString
+                      },
+                      is_add: { n: 7, br: o.d.readBool, bw: o.h.writeBool }
+                    }
+                  }),
+                r.sm_m
+              );
+            }),
+            (r.MBF = function() {
+              return r.sm_mbf || (r.sm_mbf = o.e(r.M())), r.sm_mbf;
+            }),
+            (r.prototype.toObject = function(e) {
+              return void 0 === e && (e = !1), r.toObject(e, this);
+            }),
+            (r.toObject = function(e, t) {
+              return o.g(r.M(), e, t);
+            }),
+            (r.fromObject = function(e) {
+              return o.c(r.M(), e);
+            }),
+            (r.deserializeBinary = function(e) {
+              var t = new i.BinaryReader(e),
+                n = new r();
+              return r.deserializeBinaryFromReader(n, t);
+            }),
+            (r.deserializeBinaryFromReader = function(e, t) {
+              return o.b(r.MBF(), e, t);
+            }),
+            (r.prototype.serializeBinary = function() {
+              var e = new i.BinaryWriter();
+              return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            }),
+            (r.serializeBinaryToWriter = function(e, t) {
+              o.f(r.M(), e, t);
+            }),
+            (r.prototype.getClassName = function() {
+              return "CChatRoom_UpdateMessageReaction_Request";
+            }),
+            r
+          );
+        })(u),
+        Sr = (function(e) {
+          function r(t) {
+            void 0 === t && (t = null);
+            var n = e.call(this) || this;
+            return (
+              r.prototype.num_reactors || o.a(r.M()),
+              u.initialize(n, t, 0, -1, void 0, null),
+              n
+            );
+          }
+          return (
+            Object(n.d)(r, e),
+            (r.M = function() {
+              return (
+                r.sm_m ||
+                  (r.sm_m = {
+                    proto: r,
+                    fields: {
+                      num_reactors: {
+                        n: 1,
+                        br: o.d.readUint32,
+                        bw: o.h.writeUint32
+                      }
+                    }
+                  }),
+                r.sm_m
+              );
+            }),
+            (r.MBF = function() {
+              return r.sm_mbf || (r.sm_mbf = o.e(r.M())), r.sm_mbf;
+            }),
+            (r.prototype.toObject = function(e) {
+              return void 0 === e && (e = !1), r.toObject(e, this);
+            }),
+            (r.toObject = function(e, t) {
+              return o.g(r.M(), e, t);
+            }),
+            (r.fromObject = function(e) {
+              return o.c(r.M(), e);
+            }),
+            (r.deserializeBinary = function(e) {
+              var t = new i.BinaryReader(e),
+                n = new r();
+              return r.deserializeBinaryFromReader(n, t);
+            }),
+            (r.deserializeBinaryFromReader = function(e, t) {
+              return o.b(r.MBF(), e, t);
+            }),
+            (r.prototype.serializeBinary = function() {
+              var e = new i.BinaryWriter();
+              return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            }),
+            (r.serializeBinaryToWriter = function(e, t) {
+              o.f(r.M(), e, t);
+            }),
+            (r.prototype.getClassName = function() {
+              return "CChatRoom_UpdateMessageReaction_Response";
+            }),
+            r
+          );
+        })(u),
+        Wr = (function(e) {
+          function r(t) {
+            void 0 === t && (t = null);
+            var n = e.call(this) || this;
+            return (
+              r.prototype.chat_group_id || o.a(r.M()),
+              u.initialize(n, t, 0, -1, void 0, null),
+              n
+            );
+          }
+          return (
+            Object(n.d)(r, e),
+            (r.M = function() {
+              return (
+                r.sm_m ||
+                  (r.sm_m = {
+                    proto: r,
+                    fields: {
+                      chat_group_id: {
+                        n: 1,
+                        br: o.d.readUint64String,
+                        bw: o.h.writeUint64String
+                      },
+                      chat_id: {
+                        n: 2,
+                        br: o.d.readUint64String,
+                        bw: o.h.writeUint64String
+                      },
+                      server_timestamp: {
+                        n: 3,
+                        br: o.d.readUint32,
+                        bw: o.h.writeUint32
+                      },
+                      ordinal: {
+                        n: 4,
+                        br: o.d.readUint32,
+                        bw: o.h.writeUint32
+                      },
+                      reactor: {
+                        n: 5,
+                        br: o.d.readFixed64String,
+                        bw: o.h.writeFixed64String
+                      },
+                      reaction_type: {
+                        n: 6,
+                        br: o.d.readEnum,
+                        bw: o.h.writeEnum
+                      },
+                      reaction: {
+                        n: 7,
+                        br: o.d.readString,
+                        bw: o.h.writeString
+                      },
+                      is_add: { n: 8, br: o.d.readBool, bw: o.h.writeBool }
+                    }
+                  }),
+                r.sm_m
+              );
+            }),
+            (r.MBF = function() {
+              return r.sm_mbf || (r.sm_mbf = o.e(r.M())), r.sm_mbf;
+            }),
+            (r.prototype.toObject = function(e) {
+              return void 0 === e && (e = !1), r.toObject(e, this);
+            }),
+            (r.toObject = function(e, t) {
+              return o.g(r.M(), e, t);
+            }),
+            (r.fromObject = function(e) {
+              return o.c(r.M(), e);
+            }),
+            (r.deserializeBinary = function(e) {
+              var t = new i.BinaryReader(e),
+                n = new r();
+              return r.deserializeBinaryFromReader(n, t);
+            }),
+            (r.deserializeBinaryFromReader = function(e, t) {
+              return o.b(r.MBF(), e, t);
+            }),
+            (r.prototype.serializeBinary = function() {
+              var e = new i.BinaryWriter();
+              return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            }),
+            (r.serializeBinaryToWriter = function(e, t) {
+              o.f(r.M(), e, t);
+            }),
+            (r.prototype.getClassName = function() {
+              return "CChatRoom_MessageReaction_Notification";
+            }),
+            r
+          );
+        })(u),
+        Tr = (function(e) {
+          function r(t) {
+            void 0 === t && (t = null);
+            var n = e.call(this) || this;
+            return (
+              r.prototype.chat_group_id || o.a(r.M()),
+              u.initialize(n, t, 0, -1, void 0, null),
+              n
+            );
+          }
+          return (
+            Object(n.d)(r, e),
+            (r.M = function() {
+              return (
+                r.sm_m ||
+                  (r.sm_m = {
+                    proto: r,
+                    fields: {
+                      chat_group_id: {
+                        n: 1,
+                        br: o.d.readUint64String,
+                        bw: o.h.writeUint64String
+                      },
+                      chat_id: {
+                        n: 2,
+                        br: o.d.readUint64String,
+                        bw: o.h.writeUint64String
+                      },
+                      server_timestamp: {
+                        n: 3,
+                        br: o.d.readUint32,
+                        bw: o.h.writeUint32
+                      },
+                      ordinal: {
+                        n: 4,
+                        br: o.d.readUint32,
+                        bw: o.h.writeUint32
+                      },
+                      reaction_type: {
+                        n: 5,
+                        br: o.d.readEnum,
+                        bw: o.h.writeEnum
+                      },
+                      reaction: {
+                        n: 6,
+                        br: o.d.readString,
+                        bw: o.h.writeString
+                      },
+                      limit: { n: 7, br: o.d.readUint32, bw: o.h.writeUint32 }
+                    }
+                  }),
+                r.sm_m
+              );
+            }),
+            (r.MBF = function() {
+              return r.sm_mbf || (r.sm_mbf = o.e(r.M())), r.sm_mbf;
+            }),
+            (r.prototype.toObject = function(e) {
+              return void 0 === e && (e = !1), r.toObject(e, this);
+            }),
+            (r.toObject = function(e, t) {
+              return o.g(r.M(), e, t);
+            }),
+            (r.fromObject = function(e) {
+              return o.c(r.M(), e);
+            }),
+            (r.deserializeBinary = function(e) {
+              var t = new i.BinaryReader(e),
+                n = new r();
+              return r.deserializeBinaryFromReader(n, t);
+            }),
+            (r.deserializeBinaryFromReader = function(e, t) {
+              return o.b(r.MBF(), e, t);
+            }),
+            (r.prototype.serializeBinary = function() {
+              var e = new i.BinaryWriter();
+              return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            }),
+            (r.serializeBinaryToWriter = function(e, t) {
+              o.f(r.M(), e, t);
+            }),
+            (r.prototype.getClassName = function() {
+              return "CChatRoom_GetMessageReactionReactors_Request";
+            }),
+            r
+          );
+        })(u),
+        Ur = (function(e) {
+          function r(t) {
+            void 0 === t && (t = null);
+            var n = e.call(this) || this;
+            return (
+              r.prototype.reactors || o.a(r.M()),
+              u.initialize(n, t, 0, -1, [1], null),
+              n
+            );
+          }
+          return (
+            Object(n.d)(r, e),
+            (r.M = function() {
+              return (
+                r.sm_m ||
+                  (r.sm_m = {
+                    proto: r,
+                    fields: {
+                      reactors: {
+                        n: 1,
+                        r: !0,
+                        q: !0,
+                        br: o.d.readUint32,
+                        bw: o.h.writeRepeatedUint32
+                      }
+                    }
+                  }),
+                r.sm_m
+              );
+            }),
+            (r.MBF = function() {
+              return r.sm_mbf || (r.sm_mbf = o.e(r.M())), r.sm_mbf;
+            }),
+            (r.prototype.toObject = function(e) {
+              return void 0 === e && (e = !1), r.toObject(e, this);
+            }),
+            (r.toObject = function(e, t) {
+              return o.g(r.M(), e, t);
+            }),
+            (r.fromObject = function(e) {
+              return o.c(r.M(), e);
+            }),
+            (r.deserializeBinary = function(e) {
+              var t = new i.BinaryReader(e),
+                n = new r();
+              return r.deserializeBinaryFromReader(n, t);
+            }),
+            (r.deserializeBinaryFromReader = function(e, t) {
+              return o.b(r.MBF(), e, t);
+            }),
+            (r.prototype.serializeBinary = function() {
+              var e = new i.BinaryWriter();
+              return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            }),
+            (r.serializeBinaryToWriter = function(e, t) {
+              o.f(r.M(), e, t);
+            }),
+            (r.prototype.getClassName = function() {
+              return "CChatRoom_GetMessageReactionReactors_Response";
+            }),
+            r
+          );
+        })(u),
+        Nr = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -25506,7 +25979,7 @@ var CLSTAMP = "6243158";
             r
           );
         })(u),
-        Cr = (function(e) {
+        Pr = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -25561,7 +26034,7 @@ var CLSTAMP = "6243158";
             r
           );
         })(u),
-        Sr = (function(e) {
+        Ir = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -25622,7 +26095,7 @@ var CLSTAMP = "6243158";
             r
           );
         })(u),
-        Wr = (function(e) {
+        Gr = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -25686,7 +26159,7 @@ var CLSTAMP = "6243158";
             r
           );
         })(u),
-        Tr = (function(e) {
+        qr = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -25749,7 +26222,7 @@ var CLSTAMP = "6243158";
             r
           );
         })(u),
-        Ur = (function(e) {
+        xr = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -25777,14 +26250,14 @@ var CLSTAMP = "6243158";
                         br: o.d.readUint64String,
                         bw: o.h.writeUint64String
                       },
-                      view: { n: 3, c: vr },
-                      members: { n: 4, c: Nr, r: !0, q: !0 },
+                      view: { n: 3, c: zr },
+                      members: { n: 4, c: kr, r: !0, q: !0 },
                       status_flags: {
                         n: 5,
                         br: o.d.readUint32,
                         bw: o.h.writeUint32
                       },
-                      member_summary: { n: 6, c: zr },
+                      member_summary: { n: 6, c: Rr },
                       subscribed_personas: { n: 7, c: a.n, r: !0, q: !0 }
                     }
                   }),
@@ -25824,7 +26297,7 @@ var CLSTAMP = "6243158";
             r
           );
         })(u),
-        Nr = (function(e) {
+        kr = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -25887,7 +26360,7 @@ var CLSTAMP = "6243158";
             r
           );
         })(u),
-        Pr = (function(e) {
+        Ar = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -25948,7 +26421,7 @@ var CLSTAMP = "6243158";
             r
           );
         })(u),
-        Ir = (function(e) {
+        Vr = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -25982,10 +26455,10 @@ var CLSTAMP = "6243158";
                         bw: o.h.writeUint32
                       },
                       in_web: { n: 4, br: o.d.readBool, bw: o.h.writeBool },
-                      settings: { n: 10, c: Gr },
-                      voice_settings: { n: 11, c: qr },
-                      ui_state: { n: 12, c: xr },
-                      metrics: { n: 13, c: Ar }
+                      settings: { n: 10, c: Er },
+                      voice_settings: { n: 11, c: Lr },
+                      ui_state: { n: 12, c: Hr },
+                      metrics: { n: 13, c: Dr }
                     }
                   }),
                 r.sm_m
@@ -26024,7 +26497,7 @@ var CLSTAMP = "6243158";
             r
           );
         })(u),
-        Gr = (function(e) {
+        Er = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -26205,7 +26678,7 @@ var CLSTAMP = "6243158";
             r
           );
         })(u),
-        qr = (function(e) {
+        Lr = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -26316,7 +26789,7 @@ var CLSTAMP = "6243158";
             r
           );
         })(u),
-        xr = (function(e) {
+        Hr = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -26389,7 +26862,7 @@ var CLSTAMP = "6243158";
                         br: o.d.readInt32,
                         bw: o.h.writeInt32
                       },
-                      category_collapse: { n: 12, c: kr },
+                      category_collapse: { n: 12, c: $r },
                       group_chat_left_col_collapsed: {
                         n: 13,
                         br: o.d.readInt32,
@@ -26448,7 +26921,7 @@ var CLSTAMP = "6243158";
             r
           );
         })(u),
-        kr = (function(e) {
+        $r = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -26529,7 +27002,7 @@ var CLSTAMP = "6243158";
             r
           );
         })(u),
-        Ar = (function(e) {
+        Dr = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -26851,37 +27324,37 @@ var CLSTAMP = "6243158";
               });
             }),
             (e.CreateInviteLink = function(e, r) {
-              return e.SendMsg("ChatRoom.CreateInviteLink#1", r, Ye, {
+              return e.SendMsg("ChatRoom.CreateInviteLink#1", r, Xe, {
                 ePrivilege: 3
               });
             }),
             (e.GetInviteLinkInfo = function(e, r) {
-              return e.SendMsg("ChatRoom.GetInviteLinkInfo#1", r, Ze, {
+              return e.SendMsg("ChatRoom.GetInviteLinkInfo#1", r, er, {
                 ePrivilege: 2
               });
             }),
             (e.GetInviteInfo = function(e, r) {
-              return e.SendMsg("ChatRoom.GetInviteInfo#1", r, rr, {
+              return e.SendMsg("ChatRoom.GetInviteInfo#1", r, tr, {
                 ePrivilege: 1
               });
             }),
             (e.GetInviteLinksForGroup = function(e, r) {
-              return e.SendMsg("ChatRoom.GetInviteLinksForGroup#1", r, nr, {
+              return e.SendMsg("ChatRoom.GetInviteLinksForGroup#1", r, ir, {
                 ePrivilege: 3
               });
             }),
             (e.GetBanList = function(e, r) {
-              return e.SendMsg("ChatRoom.GetBanList#1", r, sr, {
+              return e.SendMsg("ChatRoom.GetBanList#1", r, cr, {
                 ePrivilege: 3
               });
             }),
             (e.GetInviteList = function(e, r) {
-              return e.SendMsg("ChatRoom.GetInviteList#1", r, lr, {
+              return e.SendMsg("ChatRoom.GetInviteList#1", r, mr, {
                 ePrivilege: 3
               });
             }),
             (e.DeleteInviteLink = function(e, r) {
-              return e.SendMsg("ChatRoom.DeleteInviteLink#1", r, ar, {
+              return e.SendMsg("ChatRoom.DeleteInviteLink#1", r, ur, {
                 ePrivilege: 3
               });
             }),
@@ -26889,7 +27362,7 @@ var CLSTAMP = "6243158";
               return e.SendMsg(
                 "ChatRoom.SetSessionActiveChatRoomGroups#1",
                 r,
-                br,
+                yr,
                 { ePrivilege: 1 }
               );
             }),
@@ -26897,12 +27370,12 @@ var CLSTAMP = "6243158";
               return e.SendMsg(
                 "ChatRoom.SetUserChatGroupPreferences#1",
                 r,
-                _r,
+                wr,
                 { ePrivilege: 1 }
               );
             }),
             (e.DeleteChatMessages = function(e, r) {
-              return e.SendMsg("ChatRoom.DeleteChatMessages#1", r, gr, {
+              return e.SendMsg("ChatRoom.DeleteChatMessages#1", r, Mr, {
                 ePrivilege: 1
               });
             }),
@@ -26912,14 +27385,24 @@ var CLSTAMP = "6243158";
               });
             }),
             (e.SearchMembers = function(e, r) {
-              return e.SendMsg("ChatRoom.SearchMembers#1", r, Or, {
+              return e.SendMsg("ChatRoom.SearchMembers#1", r, jr, {
+                ePrivilege: 1
+              });
+            }),
+            (e.UpdateMessageReaction = function(e, r) {
+              return e.SendMsg("ChatRoom.UpdateMessageReaction#1", r, Sr, {
+                ePrivilege: 1
+              });
+            }),
+            (e.GetMessageReactionReactors = function(e, r) {
+              return e.SendMsg("ChatRoom.GetMessageReactionReactors#1", r, Ur, {
                 ePrivilege: 1
               });
             });
         })(d || (d = {})),
         (function(e) {
           (e.GetClanChatRoomInfo = function(e, r) {
-            return e.SendMsg("ClanChatRooms.GetClanChatRoomInfo#1", r, Cr, {
+            return e.SendMsg("ClanChatRooms.GetClanChatRoomInfo#1", r, Pr, {
               ePrivilege: 2
             });
           }),
@@ -26927,7 +27410,7 @@ var CLSTAMP = "6243158";
               return e.SendMsg(
                 "ClanChatRooms.SetClanChatRoomPrivate#1",
                 r,
-                Sr,
+                Ir,
                 { ePrivilege: 3 }
               );
             });
@@ -26943,7 +27426,7 @@ var CLSTAMP = "6243158";
             }),
             (e.NotifyMemberStateChangeHandler = {
               name: "ChatRoomClient.NotifyMemberStateChange#1",
-              request: De
+              request: Ke
             }),
             (e.NotifyChatRoomHeaderStateChangeHandler = {
               name: "ChatRoomClient.NotifyChatRoomHeaderStateChange#1",
@@ -26951,7 +27434,7 @@ var CLSTAMP = "6243158";
             }),
             (e.NotifyChatRoomGroupRoomsChangeHandler = {
               name: "ChatRoomClient.NotifyChatRoomGroupRoomsChange#1",
-              request: Ke
+              request: Qe
             }),
             (e.NotifyShouldRejoinChatRoomVoiceChatHandler = {
               name: "ChatRoomClient.NotifyShouldRejoinChatRoomVoiceChat#1",
@@ -26959,19 +27442,23 @@ var CLSTAMP = "6243158";
             }),
             (e.NotifyChatGroupUserStateChangedHandler = {
               name: "ChatRoomClient.NotifyChatGroupUserStateChanged#1",
-              request: Wr
+              request: Gr
             }),
             (e.NotifyAckChatMessageEchoHandler = {
               name: "ChatRoomClient.NotifyAckChatMessageEcho#1",
-              request: Qe
+              request: Je
             }),
             (e.NotifyChatRoomDisconnectHandler = {
               name: "ChatRoomClient.NotifyChatRoomDisconnect#1",
-              request: Tr
+              request: qr
             }),
             (e.NotifyMemberListViewUpdatedHandler = {
               name: "ChatRoomClient.NotifyMemberListViewUpdated#1",
-              request: Ur
+              request: xr
+            }),
+            (e.NotifyMessageReactionHandler = {
+              name: "ChatRoomClient.NotifyMessageReaction#1",
+              request: Wr
             });
         })(l || (l = {})),
         (function(e) {
@@ -26986,7 +27473,7 @@ var CLSTAMP = "6243158";
         (function(e) {
           e.NotifyRequestClientUsabilityMetricsHandler = {
             name: "ChatUsabilityClient.NotifyRequestClientUsabilityMetrics#1",
-            request: Pr
+            request: Ar
           };
         })(b || (b = {}));
     },
@@ -28991,16 +29478,16 @@ var CLSTAMP = "6243158";
     fzER: function(e, r, t) {
       "use strict";
       t.d(r, "c", function() {
-        return R;
+        return O;
       }),
         t.d(r, "b", function() {
-          return O;
-        }),
-        t.d(r, "e", function() {
           return j;
         }),
-        t.d(r, "a", function() {
+        t.d(r, "e", function() {
           return F;
+        }),
+        t.d(r, "a", function() {
+          return C;
         }),
         t.d(r, "d", function() {
           return u;
@@ -29106,7 +29593,7 @@ var CLSTAMP = "6243158";
             var n = e.call(this) || this;
             return (
               r.prototype.item_type || o.a(r.M()),
-              a.initialize(n, t, 0, -1, [11, 20, 21, 41, 42], null),
+              a.initialize(n, t, 0, -1, [11, 12, 20, 21, 41, 42], null),
               n
             );
           }
@@ -29137,11 +29624,6 @@ var CLSTAMP = "6243158";
                         br: o.d.readString,
                         bw: o.h.writeString
                       },
-                      short_description: {
-                        n: 8,
-                        br: o.d.readString,
-                        bw: o.h.writeString
-                      },
                       appid: { n: 9, br: o.d.readUint32, bw: o.h.writeUint32 },
                       type: { n: 10, br: o.d.readEnum, bw: o.h.writeEnum },
                       included_types: {
@@ -29151,9 +29633,16 @@ var CLSTAMP = "6243158";
                         br: o.d.readEnum,
                         bw: o.h.writeRepeatedEnum
                       },
-                      is_free: { n: 12, br: o.d.readBool, bw: o.h.writeBool },
+                      included_appids: {
+                        n: 12,
+                        r: !0,
+                        q: !0,
+                        br: o.d.readUint32,
+                        bw: o.h.writeRepeatedUint32
+                      },
+                      is_free: { n: 13, br: o.d.readBool, bw: o.h.writeBool },
                       is_early_access: {
-                        n: 13,
+                        n: 14,
                         br: o.d.readBool,
                         bw: o.h.writeBool
                       },
@@ -29174,15 +29663,16 @@ var CLSTAMP = "6243158";
                       },
                       categories: { n: 22, c: f },
                       reviews: { n: 23, c: l },
-                      assets: { n: 30, c: b },
-                      release: { n: 31, c: y },
-                      platforms: { n: 32, c: B },
+                      basic_info: { n: 24, c: b },
+                      assets: { n: 30, c: y },
+                      release: { n: 31, c: B },
+                      platforms: { n: 32, c: p },
                       game_rating: { n: 33, c: s },
-                      best_purchase_option: { n: 40, c: _ },
-                      purchase_options: { n: 41, c: _, r: !0, q: !0 },
-                      accessories: { n: 42, c: _, r: !0, q: !0 },
-                      screenshots: { n: 50, c: h },
-                      trailers: { n: 51, c: M }
+                      best_purchase_option: { n: 40, c: w },
+                      purchase_options: { n: 41, c: w, r: !0, q: !0 },
+                      accessories: { n: 42, c: w, r: !0, q: !0 },
+                      screenshots: { n: 50, c: g },
+                      trailers: { n: 51, c: v }
                     }
                   }),
                 r.sm_m
@@ -29498,6 +29988,81 @@ var CLSTAMP = "6243158";
             void 0 === t && (t = null);
             var n = e.call(this) || this;
             return (
+              r.prototype.short_description || o.a(r.M()),
+              a.initialize(n, t, 0, -1, [2, 3], null),
+              n
+            );
+          }
+          return (
+            Object(n.d)(r, e),
+            (r.M = function() {
+              return (
+                r.sm_m ||
+                  (r.sm_m = {
+                    proto: r,
+                    fields: {
+                      short_description: {
+                        n: 1,
+                        br: o.d.readString,
+                        bw: o.h.writeString
+                      },
+                      publishers: {
+                        n: 2,
+                        r: !0,
+                        q: !0,
+                        br: o.d.readString,
+                        bw: o.h.writeRepeatedString
+                      },
+                      developers: {
+                        n: 3,
+                        r: !0,
+                        q: !0,
+                        br: o.d.readString,
+                        bw: o.h.writeRepeatedString
+                      }
+                    }
+                  }),
+                r.sm_m
+              );
+            }),
+            (r.MBF = function() {
+              return r.sm_mbf || (r.sm_mbf = o.e(r.M())), r.sm_mbf;
+            }),
+            (r.prototype.toObject = function(e) {
+              return void 0 === e && (e = !1), r.toObject(e, this);
+            }),
+            (r.toObject = function(e, t) {
+              return o.g(r.M(), e, t);
+            }),
+            (r.fromObject = function(e) {
+              return o.c(r.M(), e);
+            }),
+            (r.deserializeBinary = function(e) {
+              var t = new i.BinaryReader(e),
+                n = new r();
+              return r.deserializeBinaryFromReader(n, t);
+            }),
+            (r.deserializeBinaryFromReader = function(e, t) {
+              return o.b(r.MBF(), e, t);
+            }),
+            (r.prototype.serializeBinary = function() {
+              var e = new i.BinaryWriter();
+              return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            }),
+            (r.serializeBinaryToWriter = function(e, t) {
+              o.f(r.M(), e, t);
+            }),
+            (r.prototype.getClassName = function() {
+              return "StoreItem_BasicInfo";
+            }),
+            r
+          );
+        })(a),
+        y = (function(e) {
+          function r(t) {
+            void 0 === t && (t = null);
+            var n = e.call(this) || this;
+            return (
               r.prototype.asset_url_format || o.a(r.M()),
               a.initialize(n, t, 0, -1, void 0, null),
               n
@@ -29585,7 +30150,7 @@ var CLSTAMP = "6243158";
             r
           );
         })(a),
-        y = (function(e) {
+        B = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -29687,7 +30252,7 @@ var CLSTAMP = "6243158";
             r
           );
         })(a),
-        B = (function(e) {
+        p = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -29708,7 +30273,7 @@ var CLSTAMP = "6243158";
                       windows: { n: 1, br: o.d.readBool, bw: o.h.writeBool },
                       mac: { n: 2, br: o.d.readBool, bw: o.h.writeBool },
                       linux: { n: 3, br: o.d.readBool, bw: o.h.writeBool },
-                      vr_support: { n: 10, c: p }
+                      vr_support: { n: 10, c: _ }
                     }
                   }),
                 r.sm_m
@@ -29747,7 +30312,7 @@ var CLSTAMP = "6243158";
             r
           );
         })(a),
-        p = (function(e) {
+        _ = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -29821,7 +30386,7 @@ var CLSTAMP = "6243158";
             r
           );
         })(a),
-        _ = (function(e) {
+        w = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -29880,9 +30445,9 @@ var CLSTAMP = "6243158";
                         br: o.d.readInt32,
                         bw: o.h.writeInt32
                       },
-                      active_discounts: { n: 20, c: w, r: !0, q: !0 },
-                      user_active_discounts: { n: 21, c: w, r: !0, q: !0 },
-                      inactive_discounts: { n: 22, c: w, r: !0, q: !0 },
+                      active_discounts: { n: 20, c: h, r: !0, q: !0 },
+                      user_active_discounts: { n: 21, c: h, r: !0, q: !0 },
+                      inactive_discounts: { n: 22, c: h, r: !0, q: !0 },
                       user_can_purchase: {
                         n: 30,
                         br: o.d.readBool,
@@ -29931,7 +30496,7 @@ var CLSTAMP = "6243158";
             r
           );
         })(a),
-        w = (function(e) {
+        h = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -30002,7 +30567,7 @@ var CLSTAMP = "6243158";
             r
           );
         })(a),
-        h = (function(e) {
+        g = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -30020,8 +30585,8 @@ var CLSTAMP = "6243158";
                   (r.sm_m = {
                     proto: r,
                     fields: {
-                      all_ages_screenshots: { n: 2, c: g, r: !0, q: !0 },
-                      mature_content_screenshots: { n: 3, c: g, r: !0, q: !0 }
+                      all_ages_screenshots: { n: 2, c: M, r: !0, q: !0 },
+                      mature_content_screenshots: { n: 3, c: M, r: !0, q: !0 }
                     }
                   }),
                 r.sm_m
@@ -30060,7 +30625,7 @@ var CLSTAMP = "6243158";
             r
           );
         })(a),
-        g = (function(e) {
+        M = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -30122,7 +30687,7 @@ var CLSTAMP = "6243158";
             r
           );
         })(a),
-        M = (function(e) {
+        v = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -30140,8 +30705,8 @@ var CLSTAMP = "6243158";
                   (r.sm_m = {
                     proto: r,
                     fields: {
-                      highlights: { n: 1, c: z, r: !0, q: !0 },
-                      other_trailers: { n: 2, c: z, r: !0, q: !0 }
+                      highlights: { n: 1, c: R, r: !0, q: !0 },
+                      other_trailers: { n: 2, c: R, r: !0, q: !0 }
                     }
                   }),
                 r.sm_m
@@ -30180,7 +30745,7 @@ var CLSTAMP = "6243158";
             r
           );
         })(a),
-        v = (function(e) {
+        z = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -30242,7 +30807,7 @@ var CLSTAMP = "6243158";
             r
           );
         })(a),
-        z = (function(e) {
+        R = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -30270,9 +30835,9 @@ var CLSTAMP = "6243158";
                         br: o.d.readString,
                         bw: o.h.writeString
                       },
-                      trailer_480p: { n: 3, c: v, r: !0, q: !0 },
-                      trailer_max: { n: 4, c: v, r: !0, q: !0 },
-                      microtrailer: { n: 5, c: v, r: !0, q: !0 },
+                      trailer_480p: { n: 3, c: z, r: !0, q: !0 },
+                      trailer_max: { n: 4, c: z, r: !0, q: !0 },
+                      microtrailer: { n: 5, c: z, r: !0, q: !0 },
                       screenshot_medium: {
                         n: 10,
                         br: o.d.readString,
@@ -30326,7 +30891,7 @@ var CLSTAMP = "6243158";
             r
           );
         })(a),
-        R = (function(e) {
+        O = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -30393,6 +30958,12 @@ var CLSTAMP = "6243158";
                         d: !0,
                         br: o.d.readBool,
                         bw: o.h.writeBool
+                      },
+                      include_basic_info: {
+                        n: 10,
+                        d: !0,
+                        br: o.d.readBool,
+                        bw: o.h.writeBool
                       }
                     }
                   }),
@@ -30432,7 +31003,7 @@ var CLSTAMP = "6243158";
             r
           );
         })(a),
-        O = (function(e) {
+        j = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -30508,7 +31079,7 @@ var CLSTAMP = "6243158";
             r
           );
         })(a),
-        j = (function(e) {
+        F = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -30575,7 +31146,7 @@ var CLSTAMP = "6243158";
             r
           );
         })(a),
-        F = (function(e) {
+        C = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -30593,9 +31164,9 @@ var CLSTAMP = "6243158";
                   (r.sm_m = {
                     proto: r,
                     fields: {
-                      ids: { n: 1, c: j, r: !0, q: !0 },
-                      context: { n: 2, c: O },
-                      data_request: { n: 3, c: R }
+                      ids: { n: 1, c: F, r: !0, q: !0 },
+                      context: { n: 2, c: j },
+                      data_request: { n: 3, c: O }
                     }
                   }),
                 r.sm_m
@@ -30634,7 +31205,7 @@ var CLSTAMP = "6243158";
             r
           );
         })(a),
-        C = (function(e) {
+        S = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -30689,7 +31260,7 @@ var CLSTAMP = "6243158";
             r
           );
         })(a),
-        S = (function(e) {
+        W = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -30706,7 +31277,7 @@ var CLSTAMP = "6243158";
                 r.sm_m ||
                   (r.sm_m = {
                     proto: r,
-                    fields: { categories: { n: 1, c: W, r: !0, q: !0 } }
+                    fields: { categories: { n: 1, c: T, r: !0, q: !0 } }
                   }),
                 r.sm_m
               );
@@ -30744,7 +31315,7 @@ var CLSTAMP = "6243158";
             r
           );
         })(a),
-        W = (function(e) {
+        T = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
@@ -30828,14 +31399,14 @@ var CLSTAMP = "6243158";
         })(a);
       !(function(e) {
         (e.GetItems = function(e, r) {
-          return e.SendMsg("StoreBrowse.GetItems#1", r, C, {
+          return e.SendMsg("StoreBrowse.GetItems#1", r, S, {
             bConstMethod: !0,
             ePrivilege: 2,
             eWebAPIKeyRequirement: 1
           });
         }),
           (e.GetStoreCategories = function(e, r) {
-            return e.SendMsg("StoreBrowse.GetStoreCategories#1", r, S, {
+            return e.SendMsg("StoreBrowse.GetStoreCategories#1", r, W, {
               bConstMethod: !0,
               ePrivilege: 0,
               eWebAPIKeyRequirement: 1
@@ -35662,42 +36233,45 @@ var CLSTAMP = "6243158";
       t.d(r, "b", function() {
         return c;
       }),
-        t.d(r, "e", function() {
-          return l;
+        t.d(r, "f", function() {
+          return m;
         }),
         t.d(r, "d", function() {
-          return y;
+          return B;
         }),
         t.d(r, "a", function() {
-          return _;
-        }),
-        t.d(r, "c", function() {
           return w;
         }),
-        t.d(r, "g", function() {
-          return n;
+        t.d(r, "c", function() {
+          return h;
         }),
-        t.d(r, "f", function() {
-          return i;
+        t.d(r, "e", function() {
+          return M;
+        }),
+        t.d(r, "h", function() {
+          return u;
+        }),
+        t.d(r, "g", function() {
+          return s;
         });
-      var n,
-        i,
-        o = t("mrSG"),
-        a = t("hRO2"),
-        u = t("sQq0"),
-        s = a.Message,
+      var n = t("mrSG"),
+        i = t("hRO2"),
+        o = t("sQq0"),
+        a = i.Message;
+      var u,
+        s,
         c = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
             return (
-              r.prototype.steamid1 || u.a(r.M()),
-              s.initialize(n, t, 0, -1, void 0, null),
+              r.prototype.steamid1 || o.a(r.M()),
+              a.initialize(n, t, 0, -1, void 0, null),
               n
             );
           }
           return (
-            Object(o.d)(r, e),
+            Object(n.d)(r, e),
             (r.M = function() {
               return (
                 r.sm_m ||
@@ -35706,44 +36280,44 @@ var CLSTAMP = "6243158";
                     fields: {
                       steamid1: {
                         n: 1,
-                        br: u.d.readFixed64String,
-                        bw: u.h.writeFixed64String
+                        br: o.d.readFixed64String,
+                        bw: o.h.writeFixed64String
                       },
                       steamid2: {
                         n: 2,
-                        br: u.d.readFixed64String,
-                        bw: u.h.writeFixed64String
+                        br: o.d.readFixed64String,
+                        bw: o.h.writeFixed64String
                       },
-                      count: { n: 3, br: u.d.readUint32, bw: u.h.writeUint32 },
+                      count: { n: 3, br: o.d.readUint32, bw: o.h.writeUint32 },
                       most_recent_conversation: {
                         n: 4,
-                        br: u.d.readBool,
-                        bw: u.h.writeBool
+                        br: o.d.readBool,
+                        bw: o.h.writeBool
                       },
                       rtime32_start_time: {
                         n: 5,
-                        br: u.d.readFixed32,
-                        bw: u.h.writeFixed32
+                        br: o.d.readFixed32,
+                        bw: o.h.writeFixed32
                       },
                       bbcode_format: {
                         n: 6,
-                        br: u.d.readBool,
-                        bw: u.h.writeBool
+                        br: o.d.readBool,
+                        bw: o.h.writeBool
                       },
                       start_ordinal: {
                         n: 7,
-                        br: u.d.readUint32,
-                        bw: u.h.writeUint32
+                        br: o.d.readUint32,
+                        bw: o.h.writeUint32
                       },
                       time_last: {
                         n: 8,
-                        br: u.d.readUint32,
-                        bw: u.h.writeUint32
+                        br: o.d.readUint32,
+                        bw: o.h.writeUint32
                       },
                       ordinal_last: {
                         n: 9,
-                        br: u.d.readUint32,
-                        bw: u.h.writeUint32
+                        br: o.d.readUint32,
+                        bw: o.h.writeUint32
                       }
                     }
                   }),
@@ -35751,50 +36325,50 @@ var CLSTAMP = "6243158";
               );
             }),
             (r.MBF = function() {
-              return r.sm_mbf || (r.sm_mbf = u.e(r.M())), r.sm_mbf;
+              return r.sm_mbf || (r.sm_mbf = o.e(r.M())), r.sm_mbf;
             }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
             (r.toObject = function(e, t) {
-              return u.g(r.M(), e, t);
+              return o.g(r.M(), e, t);
             }),
             (r.fromObject = function(e) {
-              return u.c(r.M(), e);
+              return o.c(r.M(), e);
             }),
             (r.deserializeBinary = function(e) {
-              var t = new a.BinaryReader(e),
+              var t = new i.BinaryReader(e),
                 n = new r();
               return r.deserializeBinaryFromReader(n, t);
             }),
             (r.deserializeBinaryFromReader = function(e, t) {
-              return u.b(r.MBF(), e, t);
+              return o.b(r.MBF(), e, t);
             }),
             (r.prototype.serializeBinary = function() {
-              var e = new a.BinaryWriter();
+              var e = new i.BinaryWriter();
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              u.f(r.M(), e, t);
+              o.f(r.M(), e, t);
             }),
             (r.prototype.getClassName = function() {
               return "CFriendMessages_GetRecentMessages_Request";
             }),
             r
           );
-        })(s),
+        })(a),
         d = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
             return (
-              r.prototype.messages || u.a(r.M()),
-              s.initialize(n, t, 0, -1, [1], null),
+              r.prototype.messages || o.a(r.M()),
+              a.initialize(n, t, 0, -1, [1], null),
               n
             );
           }
           return (
-            Object(o.d)(r, e),
+            Object(n.d)(r, e),
             (r.M = function() {
               return (
                 r.sm_m ||
@@ -35804,8 +36378,8 @@ var CLSTAMP = "6243158";
                       messages: { n: 1, c: f, r: !0, q: !0 },
                       more_available: {
                         n: 4,
-                        br: u.d.readBool,
-                        bw: u.h.writeBool
+                        br: o.d.readBool,
+                        bw: o.h.writeBool
                       }
                     }
                   }),
@@ -35813,50 +36387,50 @@ var CLSTAMP = "6243158";
               );
             }),
             (r.MBF = function() {
-              return r.sm_mbf || (r.sm_mbf = u.e(r.M())), r.sm_mbf;
+              return r.sm_mbf || (r.sm_mbf = o.e(r.M())), r.sm_mbf;
             }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
             (r.toObject = function(e, t) {
-              return u.g(r.M(), e, t);
+              return o.g(r.M(), e, t);
             }),
             (r.fromObject = function(e) {
-              return u.c(r.M(), e);
+              return o.c(r.M(), e);
             }),
             (r.deserializeBinary = function(e) {
-              var t = new a.BinaryReader(e),
+              var t = new i.BinaryReader(e),
                 n = new r();
               return r.deserializeBinaryFromReader(n, t);
             }),
             (r.deserializeBinaryFromReader = function(e, t) {
-              return u.b(r.MBF(), e, t);
+              return o.b(r.MBF(), e, t);
             }),
             (r.prototype.serializeBinary = function() {
-              var e = new a.BinaryWriter();
+              var e = new i.BinaryWriter();
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              u.f(r.M(), e, t);
+              o.f(r.M(), e, t);
             }),
             (r.prototype.getClassName = function() {
               return "CFriendMessages_GetRecentMessages_Response";
             }),
             r
           );
-        })(s),
+        })(a),
         f = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
             return (
-              r.prototype.accountid || u.a(r.M()),
-              s.initialize(n, t, 0, -1, void 0, null),
+              r.prototype.accountid || o.a(r.M()),
+              a.initialize(n, t, 0, -1, [5], null),
               n
             );
           }
           return (
-            Object(o.d)(r, e),
+            Object(n.d)(r, e),
             (r.M = function() {
               return (
                 r.sm_m ||
@@ -35865,70 +36439,148 @@ var CLSTAMP = "6243158";
                     fields: {
                       accountid: {
                         n: 1,
-                        br: u.d.readUint32,
-                        bw: u.h.writeUint32
+                        br: o.d.readUint32,
+                        bw: o.h.writeUint32
                       },
                       timestamp: {
                         n: 2,
-                        br: u.d.readUint32,
-                        bw: u.h.writeUint32
+                        br: o.d.readUint32,
+                        bw: o.h.writeUint32
                       },
                       message: {
                         n: 3,
-                        br: u.d.readString,
-                        bw: u.h.writeString
+                        br: o.d.readString,
+                        bw: o.h.writeString
                       },
-                      ordinal: { n: 4, br: u.d.readUint32, bw: u.h.writeUint32 }
+                      ordinal: {
+                        n: 4,
+                        br: o.d.readUint32,
+                        bw: o.h.writeUint32
+                      },
+                      reactions: { n: 5, c: l, r: !0, q: !0 }
                     }
                   }),
                 r.sm_m
               );
             }),
             (r.MBF = function() {
-              return r.sm_mbf || (r.sm_mbf = u.e(r.M())), r.sm_mbf;
+              return r.sm_mbf || (r.sm_mbf = o.e(r.M())), r.sm_mbf;
             }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
             (r.toObject = function(e, t) {
-              return u.g(r.M(), e, t);
+              return o.g(r.M(), e, t);
             }),
             (r.fromObject = function(e) {
-              return u.c(r.M(), e);
+              return o.c(r.M(), e);
             }),
             (r.deserializeBinary = function(e) {
-              var t = new a.BinaryReader(e),
+              var t = new i.BinaryReader(e),
                 n = new r();
               return r.deserializeBinaryFromReader(n, t);
             }),
             (r.deserializeBinaryFromReader = function(e, t) {
-              return u.b(r.MBF(), e, t);
+              return o.b(r.MBF(), e, t);
             }),
             (r.prototype.serializeBinary = function() {
-              var e = new a.BinaryWriter();
+              var e = new i.BinaryWriter();
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              u.f(r.M(), e, t);
+              o.f(r.M(), e, t);
             }),
             (r.prototype.getClassName = function() {
               return "CFriendMessages_GetRecentMessages_Response_FriendMessage";
             }),
             r
           );
-        })(s),
+        })(a),
         l = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
             return (
-              r.prototype.lastmessage_since || u.a(r.M()),
-              s.initialize(n, t, 0, -1, void 0, null),
+              r.prototype.reaction_type || o.a(r.M()),
+              a.initialize(n, t, 0, -1, [3], null),
               n
             );
           }
           return (
-            Object(o.d)(r, e),
+            Object(n.d)(r, e),
+            (r.M = function() {
+              return (
+                r.sm_m ||
+                  (r.sm_m = {
+                    proto: r,
+                    fields: {
+                      reaction_type: {
+                        n: 1,
+                        br: o.d.readEnum,
+                        bw: o.h.writeEnum
+                      },
+                      reaction: {
+                        n: 2,
+                        br: o.d.readString,
+                        bw: o.h.writeString
+                      },
+                      reactors: {
+                        n: 3,
+                        r: !0,
+                        q: !0,
+                        br: o.d.readUint32,
+                        bw: o.h.writeRepeatedUint32
+                      }
+                    }
+                  }),
+                r.sm_m
+              );
+            }),
+            (r.MBF = function() {
+              return r.sm_mbf || (r.sm_mbf = o.e(r.M())), r.sm_mbf;
+            }),
+            (r.prototype.toObject = function(e) {
+              return void 0 === e && (e = !1), r.toObject(e, this);
+            }),
+            (r.toObject = function(e, t) {
+              return o.g(r.M(), e, t);
+            }),
+            (r.fromObject = function(e) {
+              return o.c(r.M(), e);
+            }),
+            (r.deserializeBinary = function(e) {
+              var t = new i.BinaryReader(e),
+                n = new r();
+              return r.deserializeBinaryFromReader(n, t);
+            }),
+            (r.deserializeBinaryFromReader = function(e, t) {
+              return o.b(r.MBF(), e, t);
+            }),
+            (r.prototype.serializeBinary = function() {
+              var e = new i.BinaryWriter();
+              return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            }),
+            (r.serializeBinaryToWriter = function(e, t) {
+              o.f(r.M(), e, t);
+            }),
+            (r.prototype.getClassName = function() {
+              return "CFriendMessages_GetRecentMessages_Response_FriendMessage_MessageReaction";
+            }),
+            r
+          );
+        })(a),
+        m = (function(e) {
+          function r(t) {
+            void 0 === t && (t = null);
+            var n = e.call(this) || this;
+            return (
+              r.prototype.lastmessage_since || o.a(r.M()),
+              a.initialize(n, t, 0, -1, void 0, null),
+              n
+            );
+          }
+          return (
+            Object(n.d)(r, e),
             (r.M = function() {
               return (
                 r.sm_m ||
@@ -35937,13 +36589,13 @@ var CLSTAMP = "6243158";
                     fields: {
                       lastmessage_since: {
                         n: 1,
-                        br: u.d.readUint32,
-                        bw: u.h.writeUint32
+                        br: o.d.readUint32,
+                        bw: o.h.writeUint32
                       },
                       only_sessions_with_messages: {
                         n: 2,
-                        br: u.d.readBool,
-                        bw: u.h.writeBool
+                        br: o.d.readBool,
+                        bw: o.h.writeBool
                       }
                     }
                   }),
@@ -35951,61 +36603,61 @@ var CLSTAMP = "6243158";
               );
             }),
             (r.MBF = function() {
-              return r.sm_mbf || (r.sm_mbf = u.e(r.M())), r.sm_mbf;
+              return r.sm_mbf || (r.sm_mbf = o.e(r.M())), r.sm_mbf;
             }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
             (r.toObject = function(e, t) {
-              return u.g(r.M(), e, t);
+              return o.g(r.M(), e, t);
             }),
             (r.fromObject = function(e) {
-              return u.c(r.M(), e);
+              return o.c(r.M(), e);
             }),
             (r.deserializeBinary = function(e) {
-              var t = new a.BinaryReader(e),
+              var t = new i.BinaryReader(e),
                 n = new r();
               return r.deserializeBinaryFromReader(n, t);
             }),
             (r.deserializeBinaryFromReader = function(e, t) {
-              return u.b(r.MBF(), e, t);
+              return o.b(r.MBF(), e, t);
             }),
             (r.prototype.serializeBinary = function() {
-              var e = new a.BinaryWriter();
+              var e = new i.BinaryWriter();
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              u.f(r.M(), e, t);
+              o.f(r.M(), e, t);
             }),
             (r.prototype.getClassName = function() {
               return "CFriendsMessages_GetActiveMessageSessions_Request";
             }),
             r
           );
-        })(s),
-        m = (function(e) {
+        })(a),
+        b = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
             return (
-              r.prototype.message_sessions || u.a(r.M()),
-              s.initialize(n, t, 0, -1, [1], null),
+              r.prototype.message_sessions || o.a(r.M()),
+              a.initialize(n, t, 0, -1, [1], null),
               n
             );
           }
           return (
-            Object(o.d)(r, e),
+            Object(n.d)(r, e),
             (r.M = function() {
               return (
                 r.sm_m ||
                   (r.sm_m = {
                     proto: r,
                     fields: {
-                      message_sessions: { n: 1, c: b, r: !0, q: !0 },
+                      message_sessions: { n: 1, c: y, r: !0, q: !0 },
                       timestamp: {
                         n: 2,
-                        br: u.d.readUint32,
-                        bw: u.h.writeUint32
+                        br: o.d.readUint32,
+                        bw: o.h.writeUint32
                       }
                     }
                   }),
@@ -36013,50 +36665,50 @@ var CLSTAMP = "6243158";
               );
             }),
             (r.MBF = function() {
-              return r.sm_mbf || (r.sm_mbf = u.e(r.M())), r.sm_mbf;
+              return r.sm_mbf || (r.sm_mbf = o.e(r.M())), r.sm_mbf;
             }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
             (r.toObject = function(e, t) {
-              return u.g(r.M(), e, t);
+              return o.g(r.M(), e, t);
             }),
             (r.fromObject = function(e) {
-              return u.c(r.M(), e);
+              return o.c(r.M(), e);
             }),
             (r.deserializeBinary = function(e) {
-              var t = new a.BinaryReader(e),
+              var t = new i.BinaryReader(e),
                 n = new r();
               return r.deserializeBinaryFromReader(n, t);
             }),
             (r.deserializeBinaryFromReader = function(e, t) {
-              return u.b(r.MBF(), e, t);
+              return o.b(r.MBF(), e, t);
             }),
             (r.prototype.serializeBinary = function() {
-              var e = new a.BinaryWriter();
+              var e = new i.BinaryWriter();
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              u.f(r.M(), e, t);
+              o.f(r.M(), e, t);
             }),
             (r.prototype.getClassName = function() {
               return "CFriendsMessages_GetActiveMessageSessions_Response";
             }),
             r
           );
-        })(s),
-        b = (function(e) {
+        })(a),
+        y = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
             return (
-              r.prototype.accountid_friend || u.a(r.M()),
-              s.initialize(n, t, 0, -1, void 0, null),
+              r.prototype.accountid_friend || o.a(r.M()),
+              a.initialize(n, t, 0, -1, void 0, null),
               n
             );
           }
           return (
-            Object(o.d)(r, e),
+            Object(n.d)(r, e),
             (r.M = function() {
               return (
                 r.sm_m ||
@@ -36065,23 +36717,23 @@ var CLSTAMP = "6243158";
                     fields: {
                       accountid_friend: {
                         n: 1,
-                        br: u.d.readUint32,
-                        bw: u.h.writeUint32
+                        br: o.d.readUint32,
+                        bw: o.h.writeUint32
                       },
                       last_message: {
                         n: 2,
-                        br: u.d.readUint32,
-                        bw: u.h.writeUint32
+                        br: o.d.readUint32,
+                        bw: o.h.writeUint32
                       },
                       last_view: {
                         n: 3,
-                        br: u.d.readUint32,
-                        bw: u.h.writeUint32
+                        br: o.d.readUint32,
+                        bw: o.h.writeUint32
                       },
                       unread_message_count: {
                         n: 4,
-                        br: u.d.readUint32,
-                        bw: u.h.writeUint32
+                        br: o.d.readUint32,
+                        bw: o.h.writeUint32
                       }
                     }
                   }),
@@ -36089,50 +36741,50 @@ var CLSTAMP = "6243158";
               );
             }),
             (r.MBF = function() {
-              return r.sm_mbf || (r.sm_mbf = u.e(r.M())), r.sm_mbf;
+              return r.sm_mbf || (r.sm_mbf = o.e(r.M())), r.sm_mbf;
             }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
             (r.toObject = function(e, t) {
-              return u.g(r.M(), e, t);
+              return o.g(r.M(), e, t);
             }),
             (r.fromObject = function(e) {
-              return u.c(r.M(), e);
+              return o.c(r.M(), e);
             }),
             (r.deserializeBinary = function(e) {
-              var t = new a.BinaryReader(e),
+              var t = new i.BinaryReader(e),
                 n = new r();
               return r.deserializeBinaryFromReader(n, t);
             }),
             (r.deserializeBinaryFromReader = function(e, t) {
-              return u.b(r.MBF(), e, t);
+              return o.b(r.MBF(), e, t);
             }),
             (r.prototype.serializeBinary = function() {
-              var e = new a.BinaryWriter();
+              var e = new i.BinaryWriter();
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              u.f(r.M(), e, t);
+              o.f(r.M(), e, t);
             }),
             (r.prototype.getClassName = function() {
               return "CFriendsMessages_GetActiveMessageSessions_Response_FriendMessageSession";
             }),
             r
           );
-        })(s),
-        y = (function(e) {
+        })(a),
+        B = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
             return (
-              r.prototype.steamid || u.a(r.M()),
-              s.initialize(n, t, 0, -1, void 0, null),
+              r.prototype.steamid || o.a(r.M()),
+              a.initialize(n, t, 0, -1, void 0, null),
               n
             );
           }
           return (
-            Object(o.d)(r, e),
+            Object(n.d)(r, e),
             (r.M = function() {
               return (
                 r.sm_m ||
@@ -36141,38 +36793,48 @@ var CLSTAMP = "6243158";
                     fields: {
                       steamid: {
                         n: 1,
-                        br: u.d.readFixed64String,
-                        bw: u.h.writeFixed64String
+                        br: o.d.readFixed64String,
+                        bw: o.h.writeFixed64String
                       },
                       chat_entry_type: {
                         n: 2,
-                        br: u.d.readInt32,
-                        bw: u.h.writeInt32
+                        br: o.d.readInt32,
+                        bw: o.h.writeInt32
                       },
                       message: {
                         n: 3,
-                        br: u.d.readString,
-                        bw: u.h.writeString
+                        br: o.d.readString,
+                        bw: o.h.writeString
                       },
                       contains_bbcode: {
                         n: 4,
-                        br: u.d.readBool,
-                        bw: u.h.writeBool
+                        br: o.d.readBool,
+                        bw: o.h.writeBool
                       },
                       echo_to_sender: {
                         n: 5,
-                        br: u.d.readBool,
-                        bw: u.h.writeBool
+                        br: o.d.readBool,
+                        bw: o.h.writeBool
                       },
                       low_priority: {
                         n: 6,
-                        br: u.d.readBool,
-                        bw: u.h.writeBool
+                        br: o.d.readBool,
+                        bw: o.h.writeBool
+                      },
+                      override_limits: {
+                        n: 7,
+                        br: o.d.readBool,
+                        bw: o.h.writeBool
                       },
                       client_message_id: {
                         n: 8,
-                        br: u.d.readString,
-                        bw: u.h.writeString
+                        br: o.d.readString,
+                        bw: o.h.writeString
+                      },
+                      blocked_in_china: {
+                        n: 9,
+                        br: o.d.readBool,
+                        bw: o.h.writeBool
                       }
                     }
                   }),
@@ -36180,50 +36842,50 @@ var CLSTAMP = "6243158";
               );
             }),
             (r.MBF = function() {
-              return r.sm_mbf || (r.sm_mbf = u.e(r.M())), r.sm_mbf;
+              return r.sm_mbf || (r.sm_mbf = o.e(r.M())), r.sm_mbf;
             }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
             (r.toObject = function(e, t) {
-              return u.g(r.M(), e, t);
+              return o.g(r.M(), e, t);
             }),
             (r.fromObject = function(e) {
-              return u.c(r.M(), e);
+              return o.c(r.M(), e);
             }),
             (r.deserializeBinary = function(e) {
-              var t = new a.BinaryReader(e),
+              var t = new i.BinaryReader(e),
                 n = new r();
               return r.deserializeBinaryFromReader(n, t);
             }),
             (r.deserializeBinaryFromReader = function(e, t) {
-              return u.b(r.MBF(), e, t);
+              return o.b(r.MBF(), e, t);
             }),
             (r.prototype.serializeBinary = function() {
-              var e = new a.BinaryWriter();
+              var e = new i.BinaryWriter();
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              u.f(r.M(), e, t);
+              o.f(r.M(), e, t);
             }),
             (r.prototype.getClassName = function() {
               return "CFriendMessages_SendMessage_Request";
             }),
             r
           );
-        })(s),
-        B = (function(e) {
+        })(a),
+        p = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
             return (
-              r.prototype.modified_message || u.a(r.M()),
-              s.initialize(n, t, 0, -1, void 0, null),
+              r.prototype.modified_message || o.a(r.M()),
+              a.initialize(n, t, 0, -1, void 0, null),
               n
             );
           }
           return (
-            Object(o.d)(r, e),
+            Object(n.d)(r, e),
             (r.M = function() {
               return (
                 r.sm_m ||
@@ -36232,23 +36894,23 @@ var CLSTAMP = "6243158";
                     fields: {
                       modified_message: {
                         n: 1,
-                        br: u.d.readString,
-                        bw: u.h.writeString
+                        br: o.d.readString,
+                        bw: o.h.writeString
                       },
                       server_timestamp: {
                         n: 2,
-                        br: u.d.readUint32,
-                        bw: u.h.writeUint32
+                        br: o.d.readUint32,
+                        bw: o.h.writeUint32
                       },
                       ordinal: {
                         n: 3,
-                        br: u.d.readUint32,
-                        bw: u.h.writeUint32
+                        br: o.d.readUint32,
+                        bw: o.h.writeUint32
                       },
                       message_without_bb_code: {
                         n: 4,
-                        br: u.d.readString,
-                        bw: u.h.writeString
+                        br: o.d.readString,
+                        bw: o.h.writeString
                       }
                     }
                   }),
@@ -36256,50 +36918,50 @@ var CLSTAMP = "6243158";
               );
             }),
             (r.MBF = function() {
-              return r.sm_mbf || (r.sm_mbf = u.e(r.M())), r.sm_mbf;
+              return r.sm_mbf || (r.sm_mbf = o.e(r.M())), r.sm_mbf;
             }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
             (r.toObject = function(e, t) {
-              return u.g(r.M(), e, t);
+              return o.g(r.M(), e, t);
             }),
             (r.fromObject = function(e) {
-              return u.c(r.M(), e);
+              return o.c(r.M(), e);
             }),
             (r.deserializeBinary = function(e) {
-              var t = new a.BinaryReader(e),
+              var t = new i.BinaryReader(e),
                 n = new r();
               return r.deserializeBinaryFromReader(n, t);
             }),
             (r.deserializeBinaryFromReader = function(e, t) {
-              return u.b(r.MBF(), e, t);
+              return o.b(r.MBF(), e, t);
             }),
             (r.prototype.serializeBinary = function() {
-              var e = new a.BinaryWriter();
+              var e = new i.BinaryWriter();
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              u.f(r.M(), e, t);
+              o.f(r.M(), e, t);
             }),
             (r.prototype.getClassName = function() {
               return "CFriendMessages_SendMessage_Response";
             }),
             r
           );
-        })(s),
-        p = (function(e) {
+        })(a),
+        _ = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
             return (
-              r.prototype.steamid_friend || u.a(r.M()),
-              s.initialize(n, t, 0, -1, void 0, null),
+              r.prototype.steamid_friend || o.a(r.M()),
+              a.initialize(n, t, 0, -1, void 0, null),
               n
             );
           }
           return (
-            Object(o.d)(r, e),
+            Object(n.d)(r, e),
             (r.M = function() {
               return (
                 r.sm_m ||
@@ -36308,44 +36970,44 @@ var CLSTAMP = "6243158";
                     fields: {
                       steamid_friend: {
                         n: 1,
-                        br: u.d.readFixed64String,
-                        bw: u.h.writeFixed64String
+                        br: o.d.readFixed64String,
+                        bw: o.h.writeFixed64String
                       },
                       chat_entry_type: {
                         n: 2,
-                        br: u.d.readInt32,
-                        bw: u.h.writeInt32
+                        br: o.d.readInt32,
+                        bw: o.h.writeInt32
                       },
                       from_limited_account: {
                         n: 3,
-                        br: u.d.readBool,
-                        bw: u.h.writeBool
+                        br: o.d.readBool,
+                        bw: o.h.writeBool
                       },
                       message: {
                         n: 4,
-                        br: u.d.readString,
-                        bw: u.h.writeString
+                        br: o.d.readString,
+                        bw: o.h.writeString
                       },
                       rtime32_server_timestamp: {
                         n: 5,
-                        br: u.d.readFixed32,
-                        bw: u.h.writeFixed32
+                        br: o.d.readFixed32,
+                        bw: o.h.writeFixed32
                       },
                       ordinal: {
                         n: 6,
-                        br: u.d.readUint32,
-                        bw: u.h.writeUint32
+                        br: o.d.readUint32,
+                        bw: o.h.writeUint32
                       },
-                      local_echo: { n: 7, br: u.d.readBool, bw: u.h.writeBool },
+                      local_echo: { n: 7, br: o.d.readBool, bw: o.h.writeBool },
                       message_no_bbcode: {
                         n: 8,
-                        br: u.d.readString,
-                        bw: u.h.writeString
+                        br: o.d.readString,
+                        bw: o.h.writeString
                       },
                       low_priority: {
                         n: 9,
-                        br: u.d.readBool,
-                        bw: u.h.writeBool
+                        br: o.d.readBool,
+                        bw: o.h.writeBool
                       }
                     }
                   }),
@@ -36353,50 +37015,50 @@ var CLSTAMP = "6243158";
               );
             }),
             (r.MBF = function() {
-              return r.sm_mbf || (r.sm_mbf = u.e(r.M())), r.sm_mbf;
+              return r.sm_mbf || (r.sm_mbf = o.e(r.M())), r.sm_mbf;
             }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
             (r.toObject = function(e, t) {
-              return u.g(r.M(), e, t);
+              return o.g(r.M(), e, t);
             }),
             (r.fromObject = function(e) {
-              return u.c(r.M(), e);
+              return o.c(r.M(), e);
             }),
             (r.deserializeBinary = function(e) {
-              var t = new a.BinaryReader(e),
+              var t = new i.BinaryReader(e),
                 n = new r();
               return r.deserializeBinaryFromReader(n, t);
             }),
             (r.deserializeBinaryFromReader = function(e, t) {
-              return u.b(r.MBF(), e, t);
+              return o.b(r.MBF(), e, t);
             }),
             (r.prototype.serializeBinary = function() {
-              var e = new a.BinaryWriter();
+              var e = new i.BinaryWriter();
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              u.f(r.M(), e, t);
+              o.f(r.M(), e, t);
             }),
             (r.prototype.getClassName = function() {
               return "CFriendMessages_IncomingMessage_Notification";
             }),
             r
           );
-        })(s),
-        _ = (function(e) {
+        })(a),
+        w = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
             return (
-              r.prototype.steamid_partner || u.a(r.M()),
-              s.initialize(n, t, 0, -1, void 0, null),
+              r.prototype.steamid_partner || o.a(r.M()),
+              a.initialize(n, t, 0, -1, void 0, null),
               n
             );
           }
           return (
-            Object(o.d)(r, e),
+            Object(n.d)(r, e),
             (r.M = function() {
               return (
                 r.sm_m ||
@@ -36405,13 +37067,13 @@ var CLSTAMP = "6243158";
                     fields: {
                       steamid_partner: {
                         n: 1,
-                        br: u.d.readFixed64String,
-                        bw: u.h.writeFixed64String
+                        br: o.d.readFixed64String,
+                        bw: o.h.writeFixed64String
                       },
                       timestamp: {
                         n: 2,
-                        br: u.d.readUint32,
-                        bw: u.h.writeUint32
+                        br: o.d.readUint32,
+                        bw: o.h.writeUint32
                       }
                     }
                   }),
@@ -36419,50 +37081,50 @@ var CLSTAMP = "6243158";
               );
             }),
             (r.MBF = function() {
-              return r.sm_mbf || (r.sm_mbf = u.e(r.M())), r.sm_mbf;
+              return r.sm_mbf || (r.sm_mbf = o.e(r.M())), r.sm_mbf;
             }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
             (r.toObject = function(e, t) {
-              return u.g(r.M(), e, t);
+              return o.g(r.M(), e, t);
             }),
             (r.fromObject = function(e) {
-              return u.c(r.M(), e);
+              return o.c(r.M(), e);
             }),
             (r.deserializeBinary = function(e) {
-              var t = new a.BinaryReader(e),
+              var t = new i.BinaryReader(e),
                 n = new r();
               return r.deserializeBinaryFromReader(n, t);
             }),
             (r.deserializeBinaryFromReader = function(e, t) {
-              return u.b(r.MBF(), e, t);
+              return o.b(r.MBF(), e, t);
             }),
             (r.prototype.serializeBinary = function() {
-              var e = new a.BinaryWriter();
+              var e = new i.BinaryWriter();
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              u.f(r.M(), e, t);
+              o.f(r.M(), e, t);
             }),
             (r.prototype.getClassName = function() {
               return "CFriendMessages_AckMessage_Notification";
             }),
             r
           );
-        })(s),
-        w = (function(e) {
+        })(a),
+        h = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
             return (
-              r.prototype.steamid || u.a(r.M()),
-              s.initialize(n, t, 0, -1, void 0, null),
+              r.prototype.steamid || o.a(r.M()),
+              a.initialize(n, t, 0, -1, void 0, null),
               n
             );
           }
           return (
-            Object(o.d)(r, e),
+            Object(n.d)(r, e),
             (r.M = function() {
               return (
                 r.sm_m ||
@@ -36471,8 +37133,8 @@ var CLSTAMP = "6243158";
                     fields: {
                       steamid: {
                         n: 1,
-                        br: u.d.readFixed64String,
-                        bw: u.h.writeFixed64String
+                        br: o.d.readFixed64String,
+                        bw: o.h.writeFixed64String
                       }
                     }
                   }),
@@ -36480,50 +37142,50 @@ var CLSTAMP = "6243158";
               );
             }),
             (r.MBF = function() {
-              return r.sm_mbf || (r.sm_mbf = u.e(r.M())), r.sm_mbf;
+              return r.sm_mbf || (r.sm_mbf = o.e(r.M())), r.sm_mbf;
             }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
             (r.toObject = function(e, t) {
-              return u.g(r.M(), e, t);
+              return o.g(r.M(), e, t);
             }),
             (r.fromObject = function(e) {
-              return u.c(r.M(), e);
+              return o.c(r.M(), e);
             }),
             (r.deserializeBinary = function(e) {
-              var t = new a.BinaryReader(e),
+              var t = new i.BinaryReader(e),
                 n = new r();
               return r.deserializeBinaryFromReader(n, t);
             }),
             (r.deserializeBinaryFromReader = function(e, t) {
-              return u.b(r.MBF(), e, t);
+              return o.b(r.MBF(), e, t);
             }),
             (r.prototype.serializeBinary = function() {
-              var e = new a.BinaryWriter();
+              var e = new i.BinaryWriter();
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              u.f(r.M(), e, t);
+              o.f(r.M(), e, t);
             }),
             (r.prototype.getClassName = function() {
               return "CFriendMessages_IsInFriendsUIBeta_Request";
             }),
             r
           );
-        })(s),
-        h = (function(e) {
+        })(a),
+        g = (function(e) {
           function r(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
             return (
-              r.prototype.online_in_friendsui || u.a(r.M()),
-              s.initialize(n, t, 0, -1, void 0, null),
+              r.prototype.online_in_friendsui || o.a(r.M()),
+              a.initialize(n, t, 0, -1, void 0, null),
               n
             );
           }
           return (
-            Object(o.d)(r, e),
+            Object(n.d)(r, e),
             (r.M = function() {
               return (
                 r.sm_m ||
@@ -36532,13 +37194,13 @@ var CLSTAMP = "6243158";
                     fields: {
                       online_in_friendsui: {
                         n: 1,
-                        br: u.d.readBool,
-                        bw: u.h.writeBool
+                        br: o.d.readBool,
+                        bw: o.h.writeBool
                       },
                       has_used_friendsui: {
                         n: 2,
-                        br: u.d.readBool,
-                        bw: u.h.writeBool
+                        br: o.d.readBool,
+                        bw: o.h.writeBool
                       }
                     }
                   }),
@@ -36546,38 +37208,270 @@ var CLSTAMP = "6243158";
               );
             }),
             (r.MBF = function() {
-              return r.sm_mbf || (r.sm_mbf = u.e(r.M())), r.sm_mbf;
+              return r.sm_mbf || (r.sm_mbf = o.e(r.M())), r.sm_mbf;
             }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
             (r.toObject = function(e, t) {
-              return u.g(r.M(), e, t);
+              return o.g(r.M(), e, t);
             }),
             (r.fromObject = function(e) {
-              return u.c(r.M(), e);
+              return o.c(r.M(), e);
             }),
             (r.deserializeBinary = function(e) {
-              var t = new a.BinaryReader(e),
+              var t = new i.BinaryReader(e),
                 n = new r();
               return r.deserializeBinaryFromReader(n, t);
             }),
             (r.deserializeBinaryFromReader = function(e, t) {
-              return u.b(r.MBF(), e, t);
+              return o.b(r.MBF(), e, t);
             }),
             (r.prototype.serializeBinary = function() {
-              var e = new a.BinaryWriter();
+              var e = new i.BinaryWriter();
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              u.f(r.M(), e, t);
+              o.f(r.M(), e, t);
             }),
             (r.prototype.getClassName = function() {
               return "CFriendMessages_IsInFriendsUIBeta_Response";
             }),
             r
           );
-        })(s);
+        })(a),
+        M = (function(e) {
+          function r(t) {
+            void 0 === t && (t = null);
+            var n = e.call(this) || this;
+            return (
+              r.prototype.steamid || o.a(r.M()),
+              a.initialize(n, t, 0, -1, void 0, null),
+              n
+            );
+          }
+          return (
+            Object(n.d)(r, e),
+            (r.M = function() {
+              return (
+                r.sm_m ||
+                  (r.sm_m = {
+                    proto: r,
+                    fields: {
+                      steamid: {
+                        n: 1,
+                        br: o.d.readFixed64String,
+                        bw: o.h.writeFixed64String
+                      },
+                      server_timestamp: {
+                        n: 2,
+                        br: o.d.readUint32,
+                        bw: o.h.writeUint32
+                      },
+                      ordinal: {
+                        n: 3,
+                        br: o.d.readUint32,
+                        bw: o.h.writeUint32
+                      },
+                      reaction_type: {
+                        n: 4,
+                        br: o.d.readEnum,
+                        bw: o.h.writeEnum
+                      },
+                      reaction: {
+                        n: 5,
+                        br: o.d.readString,
+                        bw: o.h.writeString
+                      },
+                      is_add: { n: 6, br: o.d.readBool, bw: o.h.writeBool }
+                    }
+                  }),
+                r.sm_m
+              );
+            }),
+            (r.MBF = function() {
+              return r.sm_mbf || (r.sm_mbf = o.e(r.M())), r.sm_mbf;
+            }),
+            (r.prototype.toObject = function(e) {
+              return void 0 === e && (e = !1), r.toObject(e, this);
+            }),
+            (r.toObject = function(e, t) {
+              return o.g(r.M(), e, t);
+            }),
+            (r.fromObject = function(e) {
+              return o.c(r.M(), e);
+            }),
+            (r.deserializeBinary = function(e) {
+              var t = new i.BinaryReader(e),
+                n = new r();
+              return r.deserializeBinaryFromReader(n, t);
+            }),
+            (r.deserializeBinaryFromReader = function(e, t) {
+              return o.b(r.MBF(), e, t);
+            }),
+            (r.prototype.serializeBinary = function() {
+              var e = new i.BinaryWriter();
+              return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            }),
+            (r.serializeBinaryToWriter = function(e, t) {
+              o.f(r.M(), e, t);
+            }),
+            (r.prototype.getClassName = function() {
+              return "CFriendMessages_UpdateMessageReaction_Request";
+            }),
+            r
+          );
+        })(a),
+        v = (function(e) {
+          function r(t) {
+            void 0 === t && (t = null);
+            var n = e.call(this) || this;
+            return (
+              r.prototype.reactors || o.a(r.M()),
+              a.initialize(n, t, 0, -1, [1], null),
+              n
+            );
+          }
+          return (
+            Object(n.d)(r, e),
+            (r.M = function() {
+              return (
+                r.sm_m ||
+                  (r.sm_m = {
+                    proto: r,
+                    fields: {
+                      reactors: {
+                        n: 1,
+                        r: !0,
+                        q: !0,
+                        br: o.d.readUint32,
+                        bw: o.h.writeRepeatedUint32
+                      }
+                    }
+                  }),
+                r.sm_m
+              );
+            }),
+            (r.MBF = function() {
+              return r.sm_mbf || (r.sm_mbf = o.e(r.M())), r.sm_mbf;
+            }),
+            (r.prototype.toObject = function(e) {
+              return void 0 === e && (e = !1), r.toObject(e, this);
+            }),
+            (r.toObject = function(e, t) {
+              return o.g(r.M(), e, t);
+            }),
+            (r.fromObject = function(e) {
+              return o.c(r.M(), e);
+            }),
+            (r.deserializeBinary = function(e) {
+              var t = new i.BinaryReader(e),
+                n = new r();
+              return r.deserializeBinaryFromReader(n, t);
+            }),
+            (r.deserializeBinaryFromReader = function(e, t) {
+              return o.b(r.MBF(), e, t);
+            }),
+            (r.prototype.serializeBinary = function() {
+              var e = new i.BinaryWriter();
+              return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            }),
+            (r.serializeBinaryToWriter = function(e, t) {
+              o.f(r.M(), e, t);
+            }),
+            (r.prototype.getClassName = function() {
+              return "CFriendMessages_UpdateMessageReaction_Response";
+            }),
+            r
+          );
+        })(a),
+        z = (function(e) {
+          function r(t) {
+            void 0 === t && (t = null);
+            var n = e.call(this) || this;
+            return (
+              r.prototype.steamid_friend || o.a(r.M()),
+              a.initialize(n, t, 0, -1, void 0, null),
+              n
+            );
+          }
+          return (
+            Object(n.d)(r, e),
+            (r.M = function() {
+              return (
+                r.sm_m ||
+                  (r.sm_m = {
+                    proto: r,
+                    fields: {
+                      steamid_friend: {
+                        n: 1,
+                        br: o.d.readFixed64String,
+                        bw: o.h.writeFixed64String
+                      },
+                      server_timestamp: {
+                        n: 2,
+                        br: o.d.readUint32,
+                        bw: o.h.writeUint32
+                      },
+                      ordinal: {
+                        n: 3,
+                        br: o.d.readUint32,
+                        bw: o.h.writeUint32
+                      },
+                      reactor: {
+                        n: 4,
+                        br: o.d.readFixed64String,
+                        bw: o.h.writeFixed64String
+                      },
+                      reaction_type: {
+                        n: 5,
+                        br: o.d.readEnum,
+                        bw: o.h.writeEnum
+                      },
+                      reaction: {
+                        n: 6,
+                        br: o.d.readString,
+                        bw: o.h.writeString
+                      },
+                      is_add: { n: 7, br: o.d.readBool, bw: o.h.writeBool }
+                    }
+                  }),
+                r.sm_m
+              );
+            }),
+            (r.MBF = function() {
+              return r.sm_mbf || (r.sm_mbf = o.e(r.M())), r.sm_mbf;
+            }),
+            (r.prototype.toObject = function(e) {
+              return void 0 === e && (e = !1), r.toObject(e, this);
+            }),
+            (r.toObject = function(e, t) {
+              return o.g(r.M(), e, t);
+            }),
+            (r.fromObject = function(e) {
+              return o.c(r.M(), e);
+            }),
+            (r.deserializeBinary = function(e) {
+              var t = new i.BinaryReader(e),
+                n = new r();
+              return r.deserializeBinaryFromReader(n, t);
+            }),
+            (r.deserializeBinaryFromReader = function(e, t) {
+              return o.b(r.MBF(), e, t);
+            }),
+            (r.prototype.serializeBinary = function() {
+              var e = new i.BinaryWriter();
+              return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            }),
+            (r.serializeBinaryToWriter = function(e, t) {
+              o.f(r.M(), e, t);
+            }),
+            (r.prototype.getClassName = function() {
+              return "CFriendMessages_MessageReaction_Notification";
+            }),
+            r
+          );
+        })(a);
       !(function(e) {
         (e.GetRecentMessages = function(e, r) {
           return e.SendMsg("FriendMessages.GetRecentMessages#1", r, d, {
@@ -36589,12 +37483,12 @@ var CLSTAMP = "6243158";
             return e.SendMsg(
               "FriendMessages.GetActiveMessageSessions#1",
               r,
-              m,
+              b,
               { bConstMethod: !0, ePrivilege: 1 }
             );
           }),
           (e.SendMessage = function(e, r) {
-            return e.SendMsg("FriendMessages.SendMessage#1", r, B, {
+            return e.SendMsg("FriendMessages.SendMessage#1", r, p, {
               ePrivilege: 1
             });
           }),
@@ -36604,21 +37498,30 @@ var CLSTAMP = "6243158";
             });
           }),
           (e.IsInFriendsUIBeta = function(e, r) {
-            return e.SendMsg("FriendMessages.IsInFriendsUIBeta#1", r, h, {
+            return e.SendMsg("FriendMessages.IsInFriendsUIBeta#1", r, g, {
+              ePrivilege: 1
+            });
+          }),
+          (e.UpdateMessageReaction = function(e, r) {
+            return e.SendMsg("FriendMessages.UpdateMessageReaction#1", r, v, {
               ePrivilege: 1
             });
           });
-      })(n || (n = {})),
+      })(u || (u = {})),
         (function(e) {
           (e.IncomingMessageHandler = {
             name: "FriendMessagesClient.IncomingMessage#1",
-            request: p
+            request: _
           }),
             (e.NotifyAckMessageEchoHandler = {
               name: "FriendMessagesClient.NotifyAckMessageEcho#1",
-              request: _
+              request: w
+            }),
+            (e.MessageReactionHandler = {
+              name: "FriendMessagesClient.MessageReaction#1",
+              request: z
             });
-        })(i || (i = {}));
+        })(s || (s = {}));
     },
     p7Z6: function(e, r, t) {
       "use strict";

@@ -386,6 +386,145 @@ html.responsive body {
 	padding: 16px;
 }
 
+/* China Mobile Footer */
+
+.mainmenu_socials_china {
+	display: flex;
+	align-items: center;
+}
+
+.mainmenu_social_box {
+	margin-right: 25px;
+	display: flex;
+	align-items: center;
+}
+
+.mainmenu_line {
+	height: 1px;
+	background: #2f3138;
+	margin: 15px 0;
+}
+
+.mainmenu_links_china {
+	margin: 10px 0;
+	line-height: 17px;
+}
+
+.mainmenu_footer a {
+	color: #8a8a8a;
+}
+
+.mainmenu_footer a:hover {
+	color: #FFFFFF;
+}
+
+.mainmenu_legal_china {
+	font-size: 9px;
+}
+
+.mainmenu_legal_pwlegal {
+	margin-top: 15px;
+}
+
+.mainmenu_logos_china {
+	margin-bottom: 15px;
+	display: flex;
+	align-items: center;
+}
+
+.mainmenu_china_wechat_logo {
+	width: 31px;
+	height: 27px;
+}
+
+.mainmenu_china_weibo_logo {
+	width: 30px;
+	height: 26px;
+}
+
+.mainmenu_china_pw_logo {
+	width: 68px;
+	height: 23px;
+	margin-right: 10px;
+}
+
+.mainmenu_china_valve_logo {
+	width: 64px;
+	height: 19px;
+}
+
+.mainmenu_footer_spacer.china_spacer {
+	height: 330px;
+}
+
+/* China Desktop Footer */
+
+.china_footer_content a, #footer .china_footer_content a {
+	color: #8F8E93;
+}
+
+.china_footer_content a:hover, #footer .china_footer_content a:hover {
+	color: #FFFFFF;
+}
+
+.china_footer_navlinks {
+	user-select: none;
+}
+
+.china_footer_content {
+	width: 940px;
+	margin: 0px auto;
+	padding-top: 16px;
+	color: #8F8E93;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		}
+
+.china_footer_row {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.china_pw_logo {
+	margin-right: 10px;
+}
+
+.china_steam_logo {
+	width: 142px;
+	height: 44px;
+}
+
+.china_footer_line {
+	height: 1px;
+	background: #24272C;
+	margin: 20px 0;
+}
+
+.china_footer_social_box {
+	display: flex;
+	align-items: center;
+}
+
+.china_footer_social_box:first-of-type {
+	margin-right: 20px;
+}
+
+.china_footer_social_box.tooltip {
+	cursor: default;
+	user-select: none;
+}
+
+.china_footer_socials_ctn {
+	display: flex;
+}
+
+.china_footer_legal_ctn {
+	margin-top: 20px;
+}
+
+
 @media screen and (max-width: 910px)
 {
 	/* these elements end up getting moved, but hide them in the main page while content is loading */
@@ -417,6 +556,9 @@ html.responsive body {
 .responsive_menu_user_persona {
 	line-height: 36px;
 	padding-bottom: 12px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 
 .responsive_menu_user_persona .playerAvatar {
@@ -433,10 +575,6 @@ html.responsive body {
 	font-size: 16px;
 	line-height: normal;
 	margin-top: 12px;
-}
-
-.responsive_menu_cartwallet_area .responsive_menu_user_cart {
-	float: right;
 }
 
 

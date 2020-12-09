@@ -933,6 +933,63 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:nth-c
 	line-height: 52px;
 }
 
+
+/* achievements completionist */
+.showcase_achievementscompletionist_games .showcase_content_bg {
+	padding-bottom: 2px;
+}
+
+.showcase_achievementscompletionist_game {
+	position: relative;
+	width: 304px;
+	height: 167px;
+	line-height: 167px;
+	margin-left: 7px;
+	margin-bottom: 12px;
+	//box-shadow: 0 0 3px 2px rgba( 255, 246, 23, 0.8 );
+}
+
+.showcase_achievementscompletionist_games .showcase_achievementscompletionist_game:nth-child(2n-1) {
+	margin-left: 0;
+}
+
+.showcase_achievementscompletionist_game img.game_capsule {
+	width: 304px;
+	height: 142px;
+}
+
+.showcase_achievementscompletionist_game.openslot {
+	width: 300px;
+}
+
+.showcase_achievementscompletionist_game_num_achievements {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 200; /* thin */
+
+			position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	color: offWhite;
+	font-weight: 400;
+	background: linear-gradient(90deg, #055ae3 0%, #2d73ff 90%);
+	padding: 2px 8px;
+	line-height: 19px;
+}
+
+.achievement_icon
+{
+	width: 45px;
+	height: 45px;
+	position: absolute;
+	bottom: 0;
+	left: 260px;
+	right: 0;
+	top: 130px;
+
+}
+
+/* salien */
 #showcase_salien_body {
 	position:absolute;
 	z-index: 0;

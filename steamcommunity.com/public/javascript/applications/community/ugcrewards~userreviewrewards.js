@@ -27,8 +27,6 @@
         Actions: "awardmodal_Actions_1-AT2",
         Action: "awardmodal_Action_1Beae",
         FooterLink: "awardmodal_FooterLink_KId8d",
-        SubmitButton: "awardmodal_SubmitButton_2FENd",
-        BackButton: "awardmodal_BackButton_32qks",
         Divider: "awardmodal_Divider_105py",
         ConfirmContainer: "awardmodal_ConfirmContainer_3rAoe",
         ConfirmAwardImage: "awardmodal_ConfirmAwardImage_1ARgx",
@@ -2329,19 +2327,19 @@
         switch (o) {
           case re.Gold:
             a = u.map(function(e, t) {
-              return m.a.createElement(be, { key: t, style: e });
+              return m.a.createElement(me, { key: t, style: e });
             });
             break;
           case re.LNY2020:
             a = u.map(function(e, t) {
               return t % 2
-                ? m.a.createElement(fe, { key: t, style: e })
-                : m.a.createElement(ye, { key: t, style: e });
+                ? m.a.createElement(de, { key: t, style: e })
+                : m.a.createElement(fe, { key: t, style: e });
             });
             break;
           case re.Default:
             a = u.map(function(e, t) {
-              return m.a.createElement(fe, { key: t, style: e });
+              return m.a.createElement(de, { key: t, style: e });
             });
         }
         return m.a.createElement(
@@ -2360,47 +2358,45 @@
           a,
           d.map(function(e, t) {
             return 0.5 < e.flRandom
-              ? m.a.createElement(we, { key: t, style: e })
-              : m.a.createElement(pe, { key: t, style: e });
+              ? m.a.createElement(ye, { key: t, style: e })
+              : m.a.createElement(be, { key: t, style: e });
           })
         );
       }
-      var le,
-        ue,
-        de = { position: "absolute", left: "50%", top: 0 },
-        me = Object(s.a)(Object(s.a)({}, de), {
+      var le = { position: "absolute", left: "50%", top: 0 },
+        ue = Object(s.a)(Object(s.a)({}, le), {
           width: 10,
           height: 5,
           borderWidth: 1,
           borderColor: "black"
         }),
-        fe = function(e) {
+        de = function(e) {
           var t = e.style;
           return m.a.createElement(ie.animated.div, {
-            style: Object(s.a)(Object(s.a)({}, me), t)
+            style: Object(s.a)(Object(s.a)({}, ue), t)
+          });
+        },
+        me = function(e) {
+          var t = e.style,
+            r = Object(j.useState)(Math.floor(Math.random() * pe.length))[0],
+            n = pe[r];
+          return m.a.createElement(n, {
+            style: Object(s.a)(Object(s.a)(Object(s.a)({}, le), t), {
+              backgroundColor: void 0
+            })
+          });
+        },
+        fe = function(e) {
+          var t = e.style,
+            r = Object(j.useState)(Math.floor(Math.random() * we.length))[0],
+            n = we[r];
+          return m.a.createElement(n, {
+            style: Object(s.a)(Object(s.a)(Object(s.a)({}, le), t), {
+              backgroundColor: void 0
+            })
           });
         },
         be = function(e) {
-          var t = e.style,
-            r = Object(j.useState)(Math.floor(Math.random() * he.length))[0],
-            n = he[r];
-          return m.a.createElement(n, {
-            style: Object(s.a)(Object(s.a)(Object(s.a)({}, de), t), {
-              backgroundColor: void 0
-            })
-          });
-        },
-        ye = function(e) {
-          var t = e.style,
-            r = Object(j.useState)(Math.floor(Math.random() * _e.length))[0],
-            n = _e[r];
-          return m.a.createElement(n, {
-            style: Object(s.a)(Object(s.a)(Object(s.a)({}, de), t), {
-              backgroundColor: void 0
-            })
-          });
-        },
-        pe = function(e) {
           var t = e.style;
           return m.a.createElement(
             ie.animated.svg,
@@ -2419,7 +2415,7 @@
             })
           );
         },
-        we = function(e) {
+        ye = function(e) {
           var t = e.style;
           return m.a.createElement(
             ie.animated.svg,
@@ -2438,7 +2434,7 @@
             })
           );
         },
-        he = [
+        pe = [
           function(e) {
             var t = e.style;
             return m.a.createElement(
@@ -2611,7 +2607,7 @@
             );
           }
         ],
-        _e = [
+        we = [
           function(e) {
             var t = e.style;
             return m.a.createElement(
@@ -2672,12 +2668,16 @@
             );
           }
         ];
-      ((ue = le = le || {})[(ue.SELECTING = 0)] = "SELECTING"),
-        (ue[(ue.CONFIRM = 1)] = "CONFIRM"),
-        (ue[(ue.SUBMITTING = 2)] = "SUBMITTING"),
-        (ue[(ue.DONE = 3)] = "DONE"),
-        (ue[(ue.ERROR = 4)] = "ERROR");
-      function ge(e) {
+      var he,
+        _e,
+        ge = r("Mgs7");
+      r("idvb");
+      ((_e = he = he || {})[(_e.SELECTING = 0)] = "SELECTING"),
+        (_e[(_e.CONFIRM = 1)] = "CONFIRM"),
+        (_e[(_e.SUBMITTING = 2)] = "SUBMITTING"),
+        (_e[(_e.DONE = 3)] = "DONE"),
+        (_e[(_e.ERROR = 4)] = "ERROR");
+      function ve(e) {
         return j.createElement(
           "svg",
           Object(s.a)(
@@ -2697,7 +2697,7 @@
           })
         );
       }
-      var ve = (function(r) {
+      var Be = (function(r) {
         function e(e) {
           var t = r.call(this, e) || this;
           return (t.state = { bHovered: !1 }), t;
@@ -2735,7 +2735,7 @@
           e
         );
       })(j.PureComponent);
-      var Be = (function(t) {
+      var Re = (function(t) {
           function e(e) {
             var i = t.call(this, e) || this;
             return (
@@ -2780,7 +2780,7 @@
                 c = l.s_LoyaltyAwardModalStore;
               if (!n) return null;
               c.GetAwardConfigurations();
-              return j.createElement(Re, {
+              return j.createElement(Me, {
                 key: a,
                 targetid: a,
                 active: n,
@@ -2798,7 +2798,7 @@
             (e = l = Object(s.c)([n.a], e))
           );
         })(j.Component),
-        Re = ((t.a = Be),
+        Me = ((t.a = Re),
         j.Component,
         (function(r) {
           function e(e) {
@@ -2807,7 +2807,7 @@
               e.store.SetTarget(e.targetid, e.targetType),
               (t.state = {
                 selectedReaction: e.initialSelectedReaction || 0,
-                ePhase: le.SELECTING
+                ePhase: he.SELECTING
               }),
               t
             );
@@ -2865,14 +2865,14 @@
                   v = Object(S.f)("#GrantAwardDescription_Profile");
               }
               switch (l) {
-                case le.SELECTING:
+                case he.SELECTING:
                   var B = 0 === c || b.get(c),
                     R = !p || p.greaterThanOrEqual(_),
                     M = j.createElement(
-                      Oe,
+                      ge.q,
                       {
                         onClick: function() {
-                          return t.setState({ ePhase: le.CONFIRM });
+                          return t.setState({ ePhase: he.CONFIRM });
                         },
                         disabled: B,
                         title: Object(S.f)(
@@ -2888,13 +2888,13 @@
                     C = j.createElement(
                       j.Fragment,
                       null,
-                      j.createElement(Me, { description: v }),
-                      j.createElement(Ee, null),
+                      j.createElement(Ce, { description: v }),
+                      j.createElement(je, null),
                       j.createElement(
                         "div",
                         { className: z.ButtonContainer },
                         w.map(function(e) {
-                          return j.createElement(ze, {
+                          return j.createElement(Ee, {
                             key: e,
                             reaction: e,
                             selected: e === c && !b.get(e),
@@ -2909,9 +2909,9 @@
                           });
                         })
                       ),
-                      j.createElement(Ee, null),
+                      j.createElement(je, null),
                       j.createElement(
-                        Ce,
+                        Oe,
                         { store: a },
                         B || R
                           ? M
@@ -2935,7 +2935,7 @@
                                   href: L.b.STORE_BASE_URL + "points/howitworks"
                                 },
                                 j.createElement(
-                                  je,
+                                  ge.d,
                                   { key: "button" },
                                   Object(S.f)("#GrantAward_HowToGetPoints")
                                 )
@@ -2944,14 +2944,14 @@
                       )
                     );
                   break;
-                case le.CONFIRM:
-                case le.SUBMITTING:
-                case le.DONE:
+                case he.CONFIRM:
+                case he.SUBMITTING:
+                case he.DONE:
                   C = j.createElement(
                     j.Fragment,
                     null,
-                    j.createElement(Me, { description: v }),
-                    j.createElement(Ee, null),
+                    j.createElement(Ce, { description: v }),
+                    j.createElement(je, null),
                     j.createElement(
                       "div",
                       { style: { position: "relative" } },
@@ -2960,10 +2960,10 @@
                         {
                           className: Object(J.a)(
                             z.ConfirmContainer,
-                            l === le.CONFIRM && z.Visible
+                            l === he.CONFIRM && z.Visible
                           )
                         },
-                        j.createElement(ve, {
+                        j.createElement(Be, {
                           className: z.ConfirmAwardImage,
                           reactionType: c
                         }),
@@ -2972,7 +2972,7 @@
                           { className: z.ConfirmText },
                           Object(S.m)(
                             "#GrantAward_Confirm",
-                            j.createElement(Le, null, _.toLocaleString()),
+                            j.createElement(Se, null, _.toLocaleString()),
                             j.createElement(
                               "span",
                               { className: z.AwardName },
@@ -2985,7 +2985,7 @@
                           { className: z.ConfirmText },
                           Object(S.m)(
                             "#GrantAward_Confirm_Details",
-                            j.createElement(Le, null, g.toLocaleString()),
+                            j.createElement(Se, null, g.toLocaleString()),
                             j.createElement(
                               "span",
                               { className: z.TimePeriod },
@@ -3001,20 +3001,20 @@
                         {
                           className: Object(J.a)(
                             z.LoadingContainer,
-                            l === le.SUBMITTING && z.Visible
+                            l === he.SUBMITTING && z.Visible
                           )
                         },
-                        j.createElement(Se, null)
+                        j.createElement(ze, null)
                       ),
                       j.createElement(
                         "div",
                         {
                           className: Object(J.a)(
                             z.SuccessContainer,
-                            l === le.DONE && z.Visible
+                            l === he.DONE && z.Visible
                           )
                         },
-                        j.createElement(ve, {
+                        j.createElement(Be, {
                           className: z.ConfirmAwardImage,
                           reactionType: c
                         }),
@@ -3025,33 +3025,33 @@
                         )
                       )
                     ),
-                    j.createElement(Ee, null),
+                    j.createElement(je, null),
                     j.createElement(
-                      Ce,
+                      Oe,
                       { store: a },
                       j.createElement(
-                        je,
+                        ge.d,
                         {
                           onClick: function() {
-                            return t.setState({ ePhase: le.SELECTING });
+                            return t.setState({ ePhase: he.SELECTING });
                           },
-                          disabled: l !== le.CONFIRM
+                          disabled: l !== he.CONFIRM
                         },
                         Object(S.f)("#GrantAward_Back")
                       ),
                       j.createElement(
-                        Oe,
+                        ge.q,
                         {
                           onClick: this.GrantAward,
                           title: Object(S.f)("#GrantAward_SubmitTooltip"),
-                          disabled: l !== le.CONFIRM
+                          disabled: l !== he.CONFIRM
                         },
                         Object(S.f)("#GrantAwardNowButton")
                       )
                     )
                   );
                   break;
-                case le.ERROR:
+                case he.ERROR:
                   var O = "";
                   switch (this.state.eResult) {
                     case 10:
@@ -3078,8 +3078,8 @@
                   C = j.createElement(
                     j.Fragment,
                     null,
-                    j.createElement(Me, { description: v }),
-                    j.createElement(Ee, null),
+                    j.createElement(Ce, { description: v }),
+                    j.createElement(je, null),
                     j.createElement(
                       "div",
                       { style: { position: "relative" } },
@@ -3089,15 +3089,15 @@
                         j.createElement("div", { className: z.ErrorText }, O)
                       )
                     ),
-                    j.createElement(Ee, null),
+                    j.createElement(je, null),
                     j.createElement(
-                      Ce,
+                      Oe,
                       { store: a },
                       j.createElement(
-                        je,
+                        ge.d,
                         {
                           onClick: function() {
-                            return t.setState({ ePhase: le.SELECTING });
+                            return t.setState({ ePhase: he.SELECTING });
                           }
                         },
                         Object(S.f)("#GrantAward_Back")
@@ -3121,27 +3121,27 @@
                 a = this.state.selectedReaction;
               null !== a &&
                 0 != a &&
-                (this.setState({ ePhase: le.SUBMITTING }),
+                (this.setState({ ePhase: he.SUBMITTING }),
                 t.AddReaction(a).then(function(e) {
                   var t = e.eResult;
                   e.strMessage;
                   1 == t
                     ? r.setState(
-                        { ePhase: le.DONE, celebrate: !0 },
+                        { ePhase: he.DONE, celebrate: !0 },
                         function() {
                           return setTimeout(function() {
                             i && i(n, a);
                           }, 2e3);
                         }
                       )
-                    : r.setState({ ePhase: le.ERROR, eResult: t });
+                    : r.setState({ ePhase: he.ERROR, eResult: t });
                 }));
             }),
             Object(s.c)([i.a], e.prototype, "GrantAward", null),
             (e = Object(s.c)([n.a], e))
           );
         })(j.Component)),
-        Me = function(e) {
+        Ce = function(e) {
           var t = e.description;
           return j.createElement(
             "div",
@@ -3154,7 +3154,7 @@
             j.createElement("div", { className: z.Description }, t)
           );
         },
-        Ce = Object(n.a)(function(e) {
+        Oe = Object(n.a)(function(e) {
           var t = e.store,
             r = e.children,
             n = t.GetUserPointBalance(),
@@ -3198,26 +3198,10 @@
             )
           );
         }),
-        Oe = function(e) {
-          var t = e.className,
-            r = Object(s.f)(e, ["className"]);
-          return j.createElement(
-            K,
-            Object(s.a)({}, r, { className: Object(J.a)(t, z.SubmitButton) })
-          );
-        },
-        je = function(e) {
-          var t = e.className,
-            r = Object(s.f)(e, ["className"]);
-          return j.createElement(
-            K,
-            Object(s.a)({}, r, { className: Object(J.a)(t, z.BackButton) })
-          );
-        },
-        Ee = function() {
+        je = function() {
           return j.createElement("div", { className: z.Divider });
         },
-        ze = (function(r) {
+        Ee = (function(r) {
           function e(e) {
             var t = r.call(this, e) || this;
             return (t.state = { bHovered: !1 }), t;
@@ -3260,7 +3244,7 @@
                 j.createElement(
                   "div",
                   { className: z.IconCtn },
-                  j.createElement(ve, {
+                  j.createElement(Be, {
                     reactionType: t,
                     bForceAnimated: this.state.bHovered,
                     bDisableAnimation: n
@@ -3268,11 +3252,11 @@
                 ),
                 j.createElement("div", { className: z.Label }, te(t)),
                 j.createElement(
-                  Le,
+                  Se,
                   { className: z.Points },
                   i.toLocaleString()
                 ),
-                n && j.createElement(ge, { className: z.IconCheckMark })
+                n && j.createElement(ve, { className: z.IconCheckMark })
               );
             }),
             Object(s.c)([i.a], e.prototype, "handleMouseOver", null),
@@ -3280,10 +3264,10 @@
             e
           );
         })(j.PureComponent),
-        Se = function() {
+        ze = function() {
           return j.createElement($.a, { size: "large", className: z.Loading });
         },
-        Le = function(e) {
+        Se = function(e) {
           var t = e.children,
             r = e.className,
             n = Object(s.f)(e, ["children", "className"]);

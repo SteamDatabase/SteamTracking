@@ -3468,6 +3468,14 @@ body.v6 .discover_queue_empty>h3 {
 	padding-top: 40px;
 }
 
+.refund_policy .header_ctn {
+	margin: 40px 0;
+}
+
+body.v6.refund_policy {
+	background: #212429;
+}
+
 body.v6.refund_policy .page_content_ctn {
 	font-size: 14px;
 	line-height: 18px;
@@ -5002,9 +5010,6 @@ body.v6 .quadscreenshot_carousel h2 {
 .carousel_container.paging_capsules .carousel_items > * {
 	transition: opacity 400ms;
 }
-
-
-
 
 /* Arrows */
 .carousel_container  .arrow {

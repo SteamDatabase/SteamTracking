@@ -3777,34 +3777,38 @@ textarea:-webkit-autofill:focus,
   .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_DemoButton_2V6ci {
     margin: 4px 0;
     background-color: rgba(255, 255, 255, 0.2); }
-  .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_WishlistButton_3notz {
-    position: absolute;
-    z-index: 2;
-    top: 8px;
-    right: 8px;
-    border-radius: 2px;
-    background: radial-gradient(ellipse at top right, #0673c6, #03628b);
-    display: flex;
-    overflow: hidden; }
-    .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_WishlistButton_3notz svg {
-      padding: 4px;
-      display: block; }
-    .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_WishlistButton_3notz .gamehover_WishlistButtonText_VI5mZ {
-      color: transparent;
-      width: 0;
-      height: 0;
-      padding: 7px 0;
-      transition: padding-right 0.2s ease-out; }
-      .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_WishlistButton_3notz .gamehover_WishlistButtonText_VI5mZ.gamehover_WishlistLoadingText_7-s8T {
-        /* stylelint-disable-line selector-class-pattern */
-        filter: opacity(50%); }
-    html.touch .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_WishlistButton_3notz, .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_WishlistButton_3notz:hover {
-      /* stylelint-disable-line selector-class-pattern */ }
-      html.touch .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_WishlistButton_3notz .gamehover_WishlistButtonText_VI5mZ, .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_WishlistButton_3notz:hover .gamehover_WishlistButtonText_VI5mZ {
-        color: white;
-        width: auto;
-        height: auto;
-        padding-right: 8px; }
+
+.gamehover_WishlistButton_3notz {
+  position: absolute;
+  z-index: 2;
+  top: 8px;
+  right: 8px;
+  border-radius: 2px;
+  background: radial-gradient(ellipse at top right, #0673c6, #03628b);
+  display: flex;
+  overflow: hidden; }
+  .gamehover_WishlistButton_3notz svg {
+    padding: 4px;
+    display: block; }
+  .gamehover_WishlistButton_3notz .gamehover_WishlistButtonText_VI5mZ {
+    color: transparent;
+    width: 0;
+    height: 0;
+    padding: 7px 0;
+    transition: padding-right 0.2s ease-out; }
+    .gamehover_WishlistButton_3notz .gamehover_WishlistButtonText_VI5mZ.gamehover_WishlistLoadingText_7-s8T {
+      /* stylelint-disable-line selector-class-pattern */
+      filter: opacity(50%); }
+  html.touch .gamehover_WishlistButton_3notz, .gamehover_WishlistButton_3notz:hover {
+    /* stylelint-disable-line selector-class-pattern */ }
+    html.touch .gamehover_WishlistButton_3notz .gamehover_WishlistButtonText_VI5mZ, .gamehover_WishlistButton_3notz:hover .gamehover_WishlistButtonText_VI5mZ {
+      color: white;
+      width: auto;
+      height: auto;
+      padding-right: 8px; }
+
+.gamehover_WishlistButtonNotTop_3VcyY {
+  top: unset; }
 
 .gamehover_BottomShelf_oAqlZ {
   background: radial-gradient(ellipse at top right, #5577bb, #333355);
@@ -3849,26 +3853,6 @@ textarea:-webkit-autofill:focus,
           text-overflow: ellipsis;
           white-space: nowrap;
           position: relative; }
-    .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_ReviewScore_3qvpp {
-      font-size: 12px;
-      display: flex;
-      padding-bottom: 4px; }
-      .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreHeader_2t-0j {
-        color: #88aacc;
-        margin-right: 4px; }
-      .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreValue_3ZWs0 {
-        display: flex; }
-        .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreValue_3ZWs0.gamehover_ReviewScoreLow_3nU5I {
-          color: gray; }
-        .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreValue_3ZWs0.gamehover_ReviewScoreMixed_11Q2_ {
-          color: #d8d81e; }
-        .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreValue_3ZWs0.gamehover_ReviewScoreHigh_3wXHC {
-          color: #32ad32; }
-        .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreValue_3ZWs0 .gamehover_ReviewScorePercentage_38dPa {
-          margin-right: 4px; }
-      .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreCount_1wXL_ {
-        color: #88aacc;
-        margin-left: 4px; }
     .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_PlatformDisplay_2UG4_ {
       padding-left: 4px; }
     .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_ReviewsAndRelease_1HFUC {
@@ -3880,6 +3864,27 @@ textarea:-webkit-autofill:focus,
         padding: 4px; }
         .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_ReviewsAndRelease_1HFUC .gamehover_ReleaseDate_35Bya .gamehover_ReleasePrefix_2ZKEX {
           margin-right: 4px; }
+
+.gamehover_ReviewScore_3qvpp {
+  font-size: 12px;
+  display: flex;
+  padding-bottom: 4px; }
+  .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreHeader_2t-0j {
+    color: #88aacc;
+    margin-right: 4px; }
+  .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreValue_3ZWs0 {
+    display: flex; }
+    .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreValue_3ZWs0.gamehover_ReviewScoreLow_3nU5I {
+      color: gray; }
+    .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreValue_3ZWs0.gamehover_ReviewScoreMixed_11Q2_ {
+      color: #d8d81e; }
+    .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreValue_3ZWs0.gamehover_ReviewScoreHigh_3wXHC {
+      color: #32ad32; }
+    .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreValue_3ZWs0 .gamehover_ReviewScorePercentage_38dPa {
+      margin-right: 4px; }
+  .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreCount_1wXL_ {
+    color: #88aacc;
+    margin-left: 4px; }
 
 .salepreviewwidgets_StoreSaleWidgetContainer_2hhNO {
   display: flex;
@@ -3983,6 +3988,32 @@ textarea:-webkit-autofill:focus,
   padding: 0px;
   flex-basis: 35%;
   min-width: 200px; }
+
+.salepreviewwidgets_StoreSaleWidgetCenter_2asUT {
+  padding: 0px 4px 4px 4px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 65%; }
+  .salepreviewwidgets_StoreSaleWidgetCenter_2asUT .salepreviewwidgets_TitleCtn_3rrH9 {
+    display: flex;
+    justify-content: space-between; }
+
+.salepreviewwidgets_SaleTagBlockCtn_1ZqQL {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start; }
+  .salepreviewwidgets_SaleTagBlockCtn_1ZqQL .salepreviewwidgets_TagTitle_v1i4W {
+    text-transform: uppercase; }
+  .salepreviewwidgets_SaleTagBlockCtn_1ZqQL .salepreviewwidgets_TagBox_1lqaD {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; }
+    .salepreviewwidgets_SaleTagBlockCtn_1ZqQL .salepreviewwidgets_TagBox_1lqaD .salepreviewwidgets_Tag_33yqk {
+      background-color: #d3deea;
+      padding-right: 20px;
+      padding-left: 20px; }
 
 .salepreviewwidgets_StoreSaleWidgetRight_v9uRg {
   padding: 0px 4px 4px 4px;
@@ -4189,17 +4220,19 @@ textarea:-webkit-autofill:focus,
   .salepreviewwidgets_CapsulePlatform_2bCf9 .SVGIcon_VR {
     max-width: 26px; }
 
-.salepreviewwidgets_HeaderCapsuleImageContainer_2oW_y {
+.salepreviewwidgets_HeaderCapsuleImageContainer_2oW_y, .salepreviewwidgets_MainCapsuleImageContainer_1vpxH, .salepreviewwidgets_LibraryAssetImageContainer_1ziMX {
   width: 100%;
-  padding: 46.73913% 0 0 0;
   position: relative;
   overflow: hidden; }
 
+.salepreviewwidgets_HeaderCapsuleImageContainer_2oW_y, .salepreviewwidgets_MainCapsuleImageContainer_1vpxH, .salepreviewwidgets_LibraryAssetImageContainer_1ziMX {
+  padding: 46.73913% 0 0 0; }
+
 .salepreviewwidgets_MainCapsuleImageContainer_1vpxH {
-  width: 100%;
-  padding: 57.30519% 0 0 0;
-  position: relative;
-  overflow: hidden; }
+  padding: 57.30519% 0 0 0; }
+
+.salepreviewwidgets_LibraryAssetImageContainer_1ziMX {
+  padding: 150% 0 0 0; }
 
 .salepreviewwidgets_CapsuleImage_2eQ4m {
   position: absolute;
@@ -4519,6 +4552,37 @@ textarea:-webkit-autofill:focus,
   width: 340px;
   background-image: radial-gradient(101.49% 168.36% at 1.01% 0%, #4c5767 0%, #2f3742 100%);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.7); }
+
+.salepreviewwidgets_StoreSaleWidgetCrossCenterRight_oW0H1 {
+  padding: 0px 4px 4px 4px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 65%; }
+  .salepreviewwidgets_StoreSaleWidgetCrossCenterRight_oW0H1 .salepreviewwidgets_CapsuleBottomBar_3lmdE {
+    margin-left: unset;
+    padding: unset; }
+  .salepreviewwidgets_StoreSaleWidgetCrossCenterRight_oW0H1 .salepreviewwidgets_TitleCtn_3rrH9 {
+    padding-top: 30px; }
+
+.salepreviewwidgets_StoreSaleWidgetHalfLeft_111nf {
+  padding: 0px;
+  flex-basis: 50%;
+  min-width: 460px; }
+
+.salepreviewwidgets_StoreSaleWidgetHalfRight_2zN4Q {
+  padding: 0px 4px 4px 4px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 65%; }
+  .salepreviewwidgets_StoreSaleWidgetHalfRight_2zN4Q .salepreviewwidgets_TitleCtn_3rrH9 {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px; }
+  .salepreviewwidgets_StoreSaleWidgetHalfRight_2zN4Q .salepreviewwidgets_ReleaseDate_3vKik {
+    justify-content: flex-end;
+    display: flex; }
 
 .basicpartnereventrender_Main_1Zn_5 {
   height: 100vh;
@@ -4916,12 +4980,6 @@ span.partnersaledisplay_vr_required_1P__h {
       mask-image: linear-gradient(left 90%, left bottom, from(black), to(rgba(0, 0, 0, 0))); }
       .salesectioneventschedule_SaleSchedDetailCtn_31c5z .salesectioneventschedule_StatementAndHighlights_28vOL .salesectioneventschedule_StatementCtn_2p5xO .salesectioneventschedule_Statement_GwN4S, .salesectioneventschedule_SaleSchedDetailCtn_31c5z .salesectioneventschedule_StatementAndHighlights_28vOL .salesectioneventschedule_PresenterEventStatementCtn_3-cGi .salesectioneventschedule_Statement_GwN4S {
         position: relative; }
-    .salesectioneventschedule_SaleSchedDetailCtn_31c5z .salesectioneventschedule_StatementAndHighlights_28vOL .salesectioneventschedule_MediaContainer_u2Bv0 {
-      flex: 1;
-      min-width: 284px; }
-      @media screen and (max-width: 800px) {
-        .salesectioneventschedule_SaleSchedDetailCtn_31c5z .salesectioneventschedule_StatementAndHighlights_28vOL .salesectioneventschedule_MediaContainer_u2Bv0 {
-          display: none; } }
   @media screen and (max-width: 600px) {
     .salesectioneventschedule_SaleSchedDetailCtn_31c5z {
       display: none; } }
@@ -5048,116 +5106,6 @@ span.partnersaledisplay_vr_required_1P__h {
     display: flex;
     flex-direction: column; }
 
-.salesectioneventschedule_MainMediaCtn_64yk2 {
-  width: 100%;
-  border-radius: 8px;
-  margin-bottom: 10px; }
-  .salesectioneventschedule_MainMediaCtn_64yk2 > img {
-    border-radius: 2px;
-    width: 100%;
-    object-fit: cover;
-    max-height: 128px;
-    background-color: black;
-    margin-bottom: -4px; }
-  .salesectioneventschedule_MainMediaCtn_64yk2 .salesectioneventschedule_VideoThumbnail_TxIKn > img {
-    border-radius: 8px;
-    width: 100%;
-    object-fit: cover;
-    max-height: 123px;
-    min-height: 123px;
-    background-color: black; }
-
-.salesectioneventschedule_ThumbnailsContainer_1QVAW {
-  display: flex;
-  margin-top: 6px;
-  flex-direction: row;
-  margin-right: 10px;
-  flex: 1; }
-
-.salesectioneventschedule_Screenshot_jxi-O, .salesectioneventschedule_PresenterEventScreenshot_nlt1c {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  height: 51px;
-  margin: 0; }
-
-.salesectioneventschedule_ScreenshotThumbnail_1_VV-, .salesectioneventschedule_PresenterEventScreenshotThumbnail_1so47 {
-  height: 100%;
-  width: 91px;
-  object-fit: cover;
-  cursor: pointer; }
-
-.salesectioneventschedule_VideoThumbnail_TxIKn {
-  width: 100%;
-  height: auto;
-  position: relative;
-  cursor: pointer;
-  transition: all .21s ease-in-out;
-  margin-bottom: 0; }
-  .salesectioneventschedule_VideoThumbnail_TxIKn.salesectioneventschedule_videoPlaying_3_Mmg {
-    opacity: 0;
-    transform: translateX(-198px) scale(1.7) translateY(5px); }
-
-.salesectioneventschedule_VideoPlayButton_3D5uj {
-  position: absolute;
-  top: calc(50% - 32px);
-  left: calc(50% - 32px);
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  background-color: #0006;
-  border: 1px solid #aaa3;
-  opacity: .75;
-  transition: all .16s ease-in-out; }
-  .salesectioneventschedule_VideoThumbnail_TxIKn:hover .salesectioneventschedule_VideoPlayButton_3D5uj {
-    opacity: 1; }
-    .salesectioneventschedule_VideoThumbnail_TxIKn:hover .salesectioneventschedule_VideoPlayButton_3D5uj .SVGIcon_Play {
-      fill: #fff; }
-  .salesectioneventschedule_VideoPlayButton_3D5uj .SVGIcon_Play {
-    fill: #ccc;
-    width: 50%;
-    height: 50%;
-    margin-left: 18px;
-    margin-top: 15px;
-    transition: all .16s ease-in-out; }
-
-.salesectioneventschedule_VideoLargeContainer_3WfQM {
-  position: absolute;
-  width: calc(100% - 16px);
-  height: calc(100% - 16px);
-  top: 8px;
-  left: 8px;
-  border-radius: 4px;
-  z-index: 3;
-  background-color: #000d;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  opacity: 0;
-  pointer-events: none;
-  transition: all .26s ease-in-out; }
-  .salesectioneventschedule_VideoLargeContainer_3WfQM.salesectioneventschedule_videoPlaying_3_Mmg {
-    opacity: 1;
-    pointer-events: initial; }
-  .salesectioneventschedule_VideoLargeContainer_3WfQM .SVGIcon_X_Line {
-    position: absolute;
-    width: 22px;
-    height: 22px;
-    right: 8px;
-    top: 8px;
-    cursor: pointer; }
-    .salesectioneventschedule_VideoLargeContainer_3WfQM .SVGIcon_X_Line line {
-      stroke-width: 30px;
-      stroke: #aaa; }
-    .salesectioneventschedule_VideoLargeContainer_3WfQM .SVGIcon_X_Line:hover line {
-      stroke: #fff; }
-
-.salesectioneventschedule_VideoLarge_k_PYH {
-  height: calc(100% - 16px);
-  object-fit: contain;
-  align-self: center;
-  flex: 1; }
-
 .salesectioneventschedule_EventWideCtn_3ebd7 {
   display: flex;
   flex-direction: column;
@@ -5213,15 +5161,6 @@ span.partnersaledisplay_vr_required_1P__h {
     color: white;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); }
 
-.salesectioneventschedule_PopupScreenshotContainer_2p5I9 {
-  width: 80vw;
-  height: auto;
-  margin: 5px; }
-
-.salesectioneventschedule_PopupScreenshot_Qo4B7 {
-  width: 100%;
-  height: 100%; }
-
 .salesectioneventschedule_ClanEventCapsuleCtn_3rGzA {
   width: 100%;
   height: 100%; }
@@ -5238,14 +5177,6 @@ span.partnersaledisplay_vr_required_1P__h {
   line-height: 15px;
   overflow-y: auto !important; }
 
-.salesectioneventschedule_PresenterEventScreenshot_nlt1c {
-  flex-wrap: wrap;
-  align-content: space-around;
-  height: auto; }
-
-.salesectioneventschedule_PresenterEventScreenshotThumbnail_1so47 {
-  height: auto; }
-
 .salesectioneventschedule_SpeakerEventType_1rNgd {
   text-transform: uppercase;
   font-size: 11px;
@@ -5257,6 +5188,135 @@ span.partnersaledisplay_vr_required_1P__h {
   font-weight: bold;
   color: white;
   margin-bottom: 32px; }
+
+/* stylelint-disable */
+
+.salehilightplayerembed_MediaContainer_-ap7m {
+  flex: 1;
+  min-width: 284px; }
+  @media screen and (max-width: 800px) {
+    .salehilightplayerembed_MediaContainer_-ap7m {
+      display: none; } }
+
+.salehilightplayerembed_MainMediaCtn_FATLc {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px; }
+  .salehilightplayerembed_MainMediaCtn_FATLc > img {
+    border-radius: 2px;
+    width: 100%;
+    object-fit: cover;
+    max-height: 128px;
+    background-color: black;
+    margin-bottom: -4px; }
+  .salehilightplayerembed_MainMediaCtn_FATLc .salehilightplayerembed_VideoThumbnail_h0pph > img {
+    border-radius: 8px;
+    width: 100%;
+    object-fit: cover;
+    max-height: 123px;
+    min-height: 123px;
+    background-color: black; }
+
+.salehilightplayerembed_Screenshot_1xxBa, .salehilightplayerembed_PresenterEventScreenshot_31z_A {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 51px;
+  margin: 0; }
+
+.salehilightplayerembed_ScreenshotThumbnail_3IAX7, .salehilightplayerembed_PresenterEventScreenshotThumbnail_1A_Lw {
+  height: 100%;
+  width: 91px;
+  object-fit: cover;
+  cursor: pointer; }
+
+.salehilightplayerembed_VideoThumbnail_h0pph {
+  width: 100%;
+  height: auto;
+  position: relative;
+  cursor: pointer;
+  transition: all .21s ease-in-out;
+  margin-bottom: 0; }
+  .salehilightplayerembed_VideoThumbnail_h0pph.salehilightplayerembed_videoPlaying_3D99v {
+    opacity: 0;
+    transform: translateX(-198px) scale(1.7) translateY(5px); }
+
+.salehilightplayerembed_VideoPlayButton_2sJlI {
+  position: absolute;
+  top: calc(50% - 32px);
+  left: calc(50% - 32px);
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: #0006;
+  border: 1px solid #aaa3;
+  opacity: .75;
+  transition: all .16s ease-in-out; }
+  .salehilightplayerembed_VideoThumbnail_h0pph:hover .salehilightplayerembed_VideoPlayButton_2sJlI {
+    opacity: 1; }
+    .salehilightplayerembed_VideoThumbnail_h0pph:hover .salehilightplayerembed_VideoPlayButton_2sJlI .SVGIcon_Play {
+      fill: #fff; }
+  .salehilightplayerembed_VideoPlayButton_2sJlI .SVGIcon_Play {
+    fill: #ccc;
+    width: 50%;
+    height: 50%;
+    margin-left: 18px;
+    margin-top: 15px;
+    transition: all .16s ease-in-out; }
+
+.salehilightplayerembed_VideoLargeContainer_3mzKC {
+  position: absolute;
+  width: calc(100% - 16px);
+  height: calc(100% - 16px);
+  top: 8px;
+  left: 8px;
+  border-radius: 4px;
+  z-index: 3;
+  background-color: #000d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: all .26s ease-in-out; }
+  .salehilightplayerembed_VideoLargeContainer_3mzKC.salehilightplayerembed_videoPlaying_3D99v {
+    opacity: 1;
+    pointer-events: initial; }
+  .salehilightplayerembed_VideoLargeContainer_3mzKC .SVGIcon_X_Line {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    right: 8px;
+    top: 8px;
+    cursor: pointer; }
+    .salehilightplayerembed_VideoLargeContainer_3mzKC .SVGIcon_X_Line line {
+      stroke-width: 30px;
+      stroke: #aaa; }
+    .salehilightplayerembed_VideoLargeContainer_3mzKC .SVGIcon_X_Line:hover line {
+      stroke: #fff; }
+
+.salehilightplayerembed_VideoLarge_3zPl6 {
+  height: calc(100% - 16px);
+  object-fit: contain;
+  align-self: center;
+  flex: 1; }
+
+.salehilightplayerembed_PresenterEventScreenshot_31z_A {
+  flex-wrap: wrap;
+  align-content: space-around;
+  height: auto; }
+
+.salehilightplayerembed_PresenterEventScreenshotThumbnail_1A_Lw {
+  height: auto; }
+
+.salehilightplayerembed_PopupScreenshotContainer_3ezhP {
+  width: 80vw;
+  height: auto;
+  margin: 5px; }
+
+.salehilightplayerembed_PopupScreenshot_2XVyT {
+  width: 100%;
+  height: 100%; }
 
 .VODPlayer_BroadcastCtn_39rR9 {
   position: relative;

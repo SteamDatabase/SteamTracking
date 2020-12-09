@@ -3,6 +3,7 @@ var INVENTORY_PAGE_WIDTH = 416;
 var g_bIsTrading = false;
 var g_bTradeOffer = false;	// implies g_bIsTrading
 var g_bIsInventoryPage = false;
+var g_bUseMarketLinks = true;
 
 var g_bReadOnly = false;
 
@@ -41,6 +42,8 @@ function InitInventoryPage( bHasPendingGifts, showAppId, bShowTradableItemsOnly 
 	g_bShowTradableItemsOnly = bShowTradableItemsOnly;
 	g_bAllowHighDPIItemImages = $J('html').hasClass('responsive');
 
+		g_bUseMarketLinks = typeof g_bInChinaRealm == 'undefined' || !g_bInChinaRealm;
+	
 	// disable the global tooltip mutation observer.  We don't use tooltips and it has perf implications
 	//	for how frequently we move items around.
 	DisableTooltipMutationObserver();
@@ -716,10 +719,13 @@ CInventory.prototype.AddInventoryData = function( data )
 						description.tags.push( kStandardTag_Untradable );
 				}
 
-				if( description.marketable )
-					description.tags.push( kStandardTag_Marketable );
-				else
-					description.tags.push( kStandardTag_Unmarketable );
+				if ( g_bUseMarketLinks )
+				{
+					if ( description.marketable )
+						description.tags.push( kStandardTag_Marketable );
+					else
+						description.tags.push( kStandardTag_Unmarketable );
+				}
 
 				description.use_count = 0;
 
@@ -3513,7 +3519,7 @@ function PopulateMarketActions( elActions, item )
 {
 	var description = item.description;
 	elActions.update('');
-	if ( !description.marketable || ( item.is_currency && CurrencyIsWalletFunds( item ) ) )
+	if ( !description.marketable || ( item.is_currency && CurrencyIsWalletFunds( item ) ) || !g_bUseMarketLinks )
 	{
 		elActions.hide();
 		return;

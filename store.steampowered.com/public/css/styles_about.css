@@ -11,6 +11,10 @@ body.v6 #footer_spacer {
 	height: 210px;
 }
 
+body.v6.chinaabout #footer_spacer {
+	height: 265px;
+}
+
 body .responsive_page_template_content, body.v6 .responsive_page_template_content {
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: 500; /* medium */

@@ -1694,6 +1694,11 @@ img.dynamiclink_preview {
 	.dynamiclink_author span {
 		color: #809fb7;
 	}
+	.dynamiclink_author img.app_icon {
+		vertical-align: top;
+		padding-right: 5px;
+		height: 16px;
+	}
 .dynamiclink_url {
 	margin-top: 8px;
 }
@@ -1708,6 +1713,28 @@ img.dynamiclink_preview {
 .dynamiclink_url a, .dynamiclink_authorname {
 	color: #ffffff;
 }
+
+.dynamiclink_app {
+	min-height: 16px;
+	font-size: 12px;
+	color: #95a6b2;
+	margin-bottom: 4px;
+}
+	.dynamiclink_app a {
+		color: #c6d4df;
+	}
+	.dynamiclink_app a:hover {
+		color: #ffffff;
+		text-decoration: underline;
+	}
+	.dynamiclink_app span {
+		color: #809fb7;
+	}
+	.dynamiclink_app img.app_icon {
+		vertical-align: top;
+		padding-right: 5px;
+		height: 16px;
+	}
 
 .dynamiclink_youtubeviewvideoembedded {
 	position: relative;
@@ -1759,6 +1786,13 @@ img.dynamiclink_sketchfab_play_overlay_image
 	margin-top: -25px;
 	width: 50px;
 	height: 50px;
+}
+
+.dynamiclink_pointsshopitem {
+
+}
+.dynamiclink_pointsshopitem .dynamiclink_itemtype {
+	padding-bottom: 2px;
 }
 
 /* blur capsule images for games with adult content if the user has opted out of seeing them*/

@@ -541,6 +541,8 @@
         EventDashBoard_SummaryStats_Desc:
           "(Beta) These are impressions and views of your events and announcements by unique logged-in users. This is only for new events and announcements crafted with this editor.",
         EventDashBoard_SummaryStats_Link: "Click here for more details.",
+        EventDashBoard_ModerationQueueWarning:
+          "This event has not yet been moderated and will therefore not be visible in the Library.",
         EventDashBoard_Summary_LibraryHome_Shown:
           "Impressions of events (cover image):",
         EventDashBoard_Summary_LibraryHome_Read:

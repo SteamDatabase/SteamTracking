@@ -72,8 +72,8 @@ LocalizationManifestReady("profile", "manifest", {
   Profile_Edit_ChooseFavoriteBadge: "Choose a badge to feature",
   Profile_EditPrivacySettings: "Privacy Settings",
   Profile_Edit_FeaturedShowcase: "Featured Showcase",
-  Profile_Edit_ProfileModifier: "Golden Profile",
-  ProfileModifier_EnabledTitle: "Enable Profile Modifier",
+  Profile_Edit_ProfileModifier: "Special Profile",
+  ProfileModifier_EnabledTitle: "Enable Special Profile Modifier",
   Profile_Edit_EditYourAvatar: "Edit Your Avatar",
   Profile_Edit_Avatar_Instructions: "Choose your avatar image and frame.",
   Profile_Edit_Avatar_UploadInstructions:
@@ -104,7 +104,7 @@ LocalizationManifestReady("profile", "manifest", {
   Profile_Edit_BackgroundEquipFlag_FullScreen: "Full Screen",
   Profile_Edit_BackgroundEquipFlag_OriginalSize: "Original Size",
   Profile_Edit_GoldenProfileOverridesTheme:
-    "The Golden Profile overrides any profile theme setting.",
+    "The Special Profile overrides any profile theme setting.",
   Profile_FieldPrimaryGroup: "Primary Group",
   Profile_ChangePrimaryGroup: "Change primary group",
   Error_Error: "Error",

@@ -763,6 +763,11 @@
                     "name": "remove_tags",
                     "type": "string",
                     "optional": false
+                },
+                {
+                    "name": "language",
+                    "type": "int32",
+                    "optional": false
                 }
             ]
         }

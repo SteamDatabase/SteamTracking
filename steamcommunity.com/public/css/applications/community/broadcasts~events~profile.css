@@ -3225,34 +3225,38 @@ div.creatorhomeembed_SocialContainer_1o1Ds {
   .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_DemoButton_2V6ci {
     margin: 4px 0;
     background-color: rgba(255, 255, 255, 0.2); }
-  .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_WishlistButton_3notz {
-    position: absolute;
-    z-index: 2;
-    top: 8px;
-    right: 8px;
-    border-radius: 2px;
-    background: radial-gradient(ellipse at top right, #0673c6, #03628b);
-    display: flex;
-    overflow: hidden; }
-    .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_WishlistButton_3notz svg {
-      padding: 4px;
-      display: block; }
-    .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_WishlistButton_3notz .gamehover_WishlistButtonText_VI5mZ {
-      color: transparent;
-      width: 0;
-      height: 0;
-      padding: 7px 0;
-      transition: padding-right 0.2s ease-out; }
-      .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_WishlistButton_3notz .gamehover_WishlistButtonText_VI5mZ.gamehover_WishlistLoadingText_7-s8T {
-        /* stylelint-disable-line selector-class-pattern */
-        filter: opacity(50%); }
-    html.touch .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_WishlistButton_3notz, .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_WishlistButton_3notz:hover {
-      /* stylelint-disable-line selector-class-pattern */ }
-      html.touch .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_WishlistButton_3notz .gamehover_WishlistButtonText_VI5mZ, .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_WishlistButton_3notz:hover .gamehover_WishlistButtonText_VI5mZ {
-        color: white;
-        width: auto;
-        height: auto;
-        padding-right: 8px; }
+
+.gamehover_WishlistButton_3notz {
+  position: absolute;
+  z-index: 2;
+  top: 8px;
+  right: 8px;
+  border-radius: 2px;
+  background: radial-gradient(ellipse at top right, #0673c6, #03628b);
+  display: flex;
+  overflow: hidden; }
+  .gamehover_WishlistButton_3notz svg {
+    padding: 4px;
+    display: block; }
+  .gamehover_WishlistButton_3notz .gamehover_WishlistButtonText_VI5mZ {
+    color: transparent;
+    width: 0;
+    height: 0;
+    padding: 7px 0;
+    transition: padding-right 0.2s ease-out; }
+    .gamehover_WishlistButton_3notz .gamehover_WishlistButtonText_VI5mZ.gamehover_WishlistLoadingText_7-s8T {
+      /* stylelint-disable-line selector-class-pattern */
+      filter: opacity(50%); }
+  html.touch .gamehover_WishlistButton_3notz, .gamehover_WishlistButton_3notz:hover {
+    /* stylelint-disable-line selector-class-pattern */ }
+    html.touch .gamehover_WishlistButton_3notz .gamehover_WishlistButtonText_VI5mZ, .gamehover_WishlistButton_3notz:hover .gamehover_WishlistButtonText_VI5mZ {
+      color: white;
+      width: auto;
+      height: auto;
+      padding-right: 8px; }
+
+.gamehover_WishlistButtonNotTop_3VcyY {
+  top: unset; }
 
 .gamehover_BottomShelf_oAqlZ {
   background: radial-gradient(ellipse at top right, #5577bb, #333355);
@@ -3297,26 +3301,6 @@ div.creatorhomeembed_SocialContainer_1o1Ds {
           text-overflow: ellipsis;
           white-space: nowrap;
           position: relative; }
-    .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_ReviewScore_3qvpp {
-      font-size: 12px;
-      display: flex;
-      padding-bottom: 4px; }
-      .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreHeader_2t-0j {
-        color: #88aacc;
-        margin-right: 4px; }
-      .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreValue_3ZWs0 {
-        display: flex; }
-        .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreValue_3ZWs0.gamehover_ReviewScoreLow_3nU5I {
-          color: gray; }
-        .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreValue_3ZWs0.gamehover_ReviewScoreMixed_11Q2_ {
-          color: #d8d81e; }
-        .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreValue_3ZWs0.gamehover_ReviewScoreHigh_3wXHC {
-          color: #32ad32; }
-        .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreValue_3ZWs0 .gamehover_ReviewScorePercentage_38dPa {
-          margin-right: 4px; }
-      .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreCount_1wXL_ {
-        color: #88aacc;
-        margin-left: 4px; }
     .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_PlatformDisplay_2UG4_ {
       padding-left: 4px; }
     .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_ReviewsAndRelease_1HFUC {
@@ -3328,6 +3312,27 @@ div.creatorhomeembed_SocialContainer_1o1Ds {
         padding: 4px; }
         .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_ReviewsAndRelease_1HFUC .gamehover_ReleaseDate_35Bya .gamehover_ReleasePrefix_2ZKEX {
           margin-right: 4px; }
+
+.gamehover_ReviewScore_3qvpp {
+  font-size: 12px;
+  display: flex;
+  padding-bottom: 4px; }
+  .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreHeader_2t-0j {
+    color: #88aacc;
+    margin-right: 4px; }
+  .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreValue_3ZWs0 {
+    display: flex; }
+    .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreValue_3ZWs0.gamehover_ReviewScoreLow_3nU5I {
+      color: gray; }
+    .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreValue_3ZWs0.gamehover_ReviewScoreMixed_11Q2_ {
+      color: #d8d81e; }
+    .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreValue_3ZWs0.gamehover_ReviewScoreHigh_3wXHC {
+      color: #32ad32; }
+    .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreValue_3ZWs0 .gamehover_ReviewScorePercentage_38dPa {
+      margin-right: 4px; }
+  .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreCount_1wXL_ {
+    color: #88aacc;
+    margin-left: 4px; }
 
 .salepreviewwidgets_StoreSaleWidgetContainer_2hhNO {
   display: flex;
@@ -3431,6 +3436,32 @@ div.creatorhomeembed_SocialContainer_1o1Ds {
   padding: 0px;
   flex-basis: 35%;
   min-width: 200px; }
+
+.salepreviewwidgets_StoreSaleWidgetCenter_2asUT {
+  padding: 0px 4px 4px 4px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 65%; }
+  .salepreviewwidgets_StoreSaleWidgetCenter_2asUT .salepreviewwidgets_TitleCtn_3rrH9 {
+    display: flex;
+    justify-content: space-between; }
+
+.salepreviewwidgets_SaleTagBlockCtn_1ZqQL {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start; }
+  .salepreviewwidgets_SaleTagBlockCtn_1ZqQL .salepreviewwidgets_TagTitle_v1i4W {
+    text-transform: uppercase; }
+  .salepreviewwidgets_SaleTagBlockCtn_1ZqQL .salepreviewwidgets_TagBox_1lqaD {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; }
+    .salepreviewwidgets_SaleTagBlockCtn_1ZqQL .salepreviewwidgets_TagBox_1lqaD .salepreviewwidgets_Tag_33yqk {
+      background-color: #d3deea;
+      padding-right: 20px;
+      padding-left: 20px; }
 
 .salepreviewwidgets_StoreSaleWidgetRight_v9uRg {
   padding: 0px 4px 4px 4px;
@@ -3637,17 +3668,19 @@ div.creatorhomeembed_SocialContainer_1o1Ds {
   .salepreviewwidgets_CapsulePlatform_2bCf9 .SVGIcon_VR {
     max-width: 26px; }
 
-.salepreviewwidgets_HeaderCapsuleImageContainer_2oW_y {
+.salepreviewwidgets_HeaderCapsuleImageContainer_2oW_y, .salepreviewwidgets_MainCapsuleImageContainer_1vpxH, .salepreviewwidgets_LibraryAssetImageContainer_1ziMX {
   width: 100%;
-  padding: 46.73913% 0 0 0;
   position: relative;
   overflow: hidden; }
 
+.salepreviewwidgets_HeaderCapsuleImageContainer_2oW_y, .salepreviewwidgets_MainCapsuleImageContainer_1vpxH, .salepreviewwidgets_LibraryAssetImageContainer_1ziMX {
+  padding: 46.73913% 0 0 0; }
+
 .salepreviewwidgets_MainCapsuleImageContainer_1vpxH {
-  width: 100%;
-  padding: 57.30519% 0 0 0;
-  position: relative;
-  overflow: hidden; }
+  padding: 57.30519% 0 0 0; }
+
+.salepreviewwidgets_LibraryAssetImageContainer_1ziMX {
+  padding: 150% 0 0 0; }
 
 .salepreviewwidgets_CapsuleImage_2eQ4m {
   position: absolute;
@@ -3967,6 +4000,37 @@ div.creatorhomeembed_SocialContainer_1o1Ds {
   width: 340px;
   background-image: radial-gradient(101.49% 168.36% at 1.01% 0%, #4c5767 0%, #2f3742 100%);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.7); }
+
+.salepreviewwidgets_StoreSaleWidgetCrossCenterRight_oW0H1 {
+  padding: 0px 4px 4px 4px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 65%; }
+  .salepreviewwidgets_StoreSaleWidgetCrossCenterRight_oW0H1 .salepreviewwidgets_CapsuleBottomBar_3lmdE {
+    margin-left: unset;
+    padding: unset; }
+  .salepreviewwidgets_StoreSaleWidgetCrossCenterRight_oW0H1 .salepreviewwidgets_TitleCtn_3rrH9 {
+    padding-top: 30px; }
+
+.salepreviewwidgets_StoreSaleWidgetHalfLeft_111nf {
+  padding: 0px;
+  flex-basis: 50%;
+  min-width: 460px; }
+
+.salepreviewwidgets_StoreSaleWidgetHalfRight_2zN4Q {
+  padding: 0px 4px 4px 4px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 65%; }
+  .salepreviewwidgets_StoreSaleWidgetHalfRight_2zN4Q .salepreviewwidgets_TitleCtn_3rrH9 {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px; }
+  .salepreviewwidgets_StoreSaleWidgetHalfRight_2zN4Q .salepreviewwidgets_ReleaseDate_3vKik {
+    justify-content: flex-end;
+    display: flex; }
 
 .nominationandvote_SteamAwardContainer_3n6v2 {
   margin-right: 24px;
@@ -5475,6 +5539,321 @@ span.partnersaledisplay_vr_required_1P__h {
       font-weight: bold;
       color: white; }
 
+/* stylelint-disable */
+
+.salesectioneventschedule_SaleSchedCtn_2g7il {
+  height: 480px;
+  background-image: radial-gradient(101.49% 168.36% at 1.01% 0%, #4c5767 0%, #2f3742 100%);
+  box-sizing: border-box;
+  padding: 16px 0px 0px 16px;
+  display: flex;
+  flex-direction: column; }
+  @media screen and (max-width: 600px) {
+    .salesectioneventschedule_SaleSchedCtn_2g7il {
+      height: 340px; } }
+  .salesectioneventschedule_SaleSchedCtn_2g7il .salesectioneventschedule_ScheduleSectionHeader_2EXgw {
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    font-size: 18px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3); }
+  .salesectioneventschedule_SaleSchedCtn_2g7il .salesectioneventschedule_SectionCtn_2wwgk {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    overflow: hidden;
+    min-width: 0;
+    font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+    font-weight: 300; }
+
+.salesectioneventschedule_SaleSchedListCtn_1THwn {
+  margin-bottom: 12px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+  .salesectioneventschedule_SaleSchedListCtn_1THwn .salesectioneventschedule_SaleSchedList_2BWbK {
+    position: relative;
+    flex-grow: 1;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin-bottom: 12px;
+    margin-right: 12px;
+    -webkit-mask-image: -webkit-gradient(linear, left 94%, left bottom, from(black), to(rgba(0, 0, 0, 0))); }
+  .salesectioneventschedule_SaleSchedListCtn_1THwn .salesectioneventschedule_NoEventsYet_1ZTMP {
+    min-height: 100px;
+    width: 100%;
+    text-align: center;
+    padding-top: 100px; }
+  @media screen and (max-width: 600px) {
+    .salesectioneventschedule_SaleSchedListCtn_1THwn, .salesectioneventschedule_SaleSchedListCtn_1THwn .salesectioneventschedule_SaleSchedRow_3l83c, .salesectioneventschedule_SaleSchedListCtn_1THwn .salesectioneventschedule_NewsHubLink_TafBI {
+      width: 100%; }
+    .salesectioneventschedule_SaleSchedListCtn_1THwn .salesectioneventschedule_SaleSchedList_2BWbK {
+      margin-right: 0; } }
+
+.salesectioneventschedule_SaleSchedGridCtn_50nbv {
+  margin: 10px 16px 10px 0;
+  flex: 1;
+  overflow: initial;
+  min-width: 0;
+  display: grid;
+  grid-auto-flow: row;
+  grid-template: 1fr 1fr / 48% 48%;
+  grid-gap: 10px 4%; }
+  @media screen and (max-width: 800px) {
+    .salesectioneventschedule_SaleSchedGridCtn_50nbv {
+      max-width: 300px;
+      grid-auto-flow: column;
+      grid-template: 1fr 1fr / 1fr 0px; } }
+  @media screen and (max-width: 600px) {
+    .salesectioneventschedule_SaleSchedGridCtn_50nbv {
+      display: none; } }
+
+.salesectioneventschedule_SchedSectionLabel_2UAed {
+  text-transform: uppercase;
+  color: white;
+  font-weight: 500;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  padding: 4px 8px;
+  background: #2d343e;
+  margin-bottom: 3px; }
+
+.salesectioneventschedule_SaleSchedDetailCtn_31c5z {
+  width: 100%;
+  max-width: 612px;
+  background-color: #292D32;
+  padding: 12px;
+  display: flex;
+  flex-direction: column; }
+  .salesectioneventschedule_SaleSchedDetailCtn_31c5z .salesectioneventschedule_SaleTagAndOS_2rcuH {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 12px; }
+  .salesectioneventschedule_SaleSchedDetailCtn_31c5z .salesectioneventschedule_StatementAndHighlights_28vOL {
+    display: flex; }
+    .salesectioneventschedule_SaleSchedDetailCtn_31c5z .salesectioneventschedule_StatementAndHighlights_28vOL .salesectioneventschedule_StatementCtn_2p5xO, .salesectioneventschedule_SaleSchedDetailCtn_31c5z .salesectioneventschedule_StatementAndHighlights_28vOL .salesectioneventschedule_PresenterEventStatementCtn_3-cGi {
+      flex: 1;
+      height: 189px;
+      overflow: hidden;
+      padding-right: 12px;
+      word-break: break-word;
+      -webkit-mask-image: -webkit-gradient(linear, left 94%, left bottom, from(black), to(rgba(0, 0, 0, 0)));
+      mask-image: linear-gradient(left 90%, left bottom, from(black), to(rgba(0, 0, 0, 0))); }
+      .salesectioneventschedule_SaleSchedDetailCtn_31c5z .salesectioneventschedule_StatementAndHighlights_28vOL .salesectioneventschedule_StatementCtn_2p5xO .salesectioneventschedule_Statement_GwN4S, .salesectioneventschedule_SaleSchedDetailCtn_31c5z .salesectioneventschedule_StatementAndHighlights_28vOL .salesectioneventschedule_PresenterEventStatementCtn_3-cGi .salesectioneventschedule_Statement_GwN4S {
+        position: relative; }
+  @media screen and (max-width: 600px) {
+    .salesectioneventschedule_SaleSchedDetailCtn_31c5z {
+      display: none; } }
+
+.salesectioneventschedule_SaleSchedRowProxy_2HMsx, .salesectioneventschedule_SaleSchedRow_3l83c {
+  height: 50px;
+  width: 286px;
+  box-sizing: border-box;
+  margin-bottom: 3px;
+  padding: 8px; }
+
+.salesectioneventschedule_SaleSchedRow_3l83c {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  cursor: pointer;
+  user-select: none;
+  background-image: radial-gradient(101.49% 168.36% at 1.01% 0%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.1) 100%);
+  border-radius: 3px;
+  color: #dfe3e6; }
+  .salesectioneventschedule_SaleSchedRow_3l83c:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); }
+  .salesectioneventschedule_SaleSchedRow_3l83c.salesectioneventschedule_MiniMode__L0SI {
+    width: 100%;
+    height: 33px; }
+    .salesectioneventschedule_SaleSchedRow_3l83c.salesectioneventschedule_MiniMode__L0SI .salesectioneventschedule_AppTitle_3q715 {
+      display: none; }
+    .salesectioneventschedule_SaleSchedRow_3l83c.salesectioneventschedule_MiniMode__L0SI .salesectioneventschedule_Icon_26VBx {
+      height: 20px;
+      margin: -6px 0 0 6px; }
+  .salesectioneventschedule_SaleSchedRow_3l83c .salesectioneventschedule_Time_3qoMb {
+    min-width: 55px;
+    margin-right: 4px;
+    word-break: keep-all; }
+  .salesectioneventschedule_SaleSchedRow_3l83c .salesectioneventschedule_DetailsCtn_3deMj {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 4;
+    overflow: hidden;
+    font-size: 12px;
+    font-weight: 400; }
+    .salesectioneventschedule_SaleSchedRow_3l83c .salesectioneventschedule_DetailsCtn_3deMj .salesectioneventschedule_AppTitle_3q715 {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      font-weight: 600; }
+    .salesectioneventschedule_SaleSchedRow_3l83c .salesectioneventschedule_DetailsCtn_3deMj .salesectioneventschedule_EventTitle_109s- {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis; }
+  .salesectioneventschedule_SaleSchedRow_3l83c .salesectioneventschedule_Icon_26VBx {
+    width: 26px;
+    opacity: 0.4; }
+
+.salesectioneventschedule_SchedRowSelected_3GxYn {
+  background-color: white;
+  color: black; }
+  .salesectioneventschedule_SchedRowSelected_3GxYn:hover {
+    background-color: white;
+    color: black; }
+
+.salesectioneventschedule_SaleAppWideCtn_3QOgi {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-image: radial-gradient(101.49% 168.36% at 1.01% 0%, #4c5767 0%, rgba(47, 55, 66, 0) 100%); }
+  @media screen and (max-width: 800px) {
+    .salesectioneventschedule_SaleAppWideCtn_3QOgi {
+      flex-wrap: wrap; } }
+  .salesectioneventschedule_SaleAppWideCtn_3QOgi .salesectioneventschedule_SaleAppCapsule_2mp1u {
+    flex-basis: 196px;
+    flex-shrink: 1; }
+  .salesectioneventschedule_SaleAppWideCtn_3QOgi .salesectioneventschedule_WideHeader_wI_4v {
+    height: auto;
+    width: 100%;
+    max-width: 196px;
+    display: block; }
+  .salesectioneventschedule_SaleAppWideCtn_3QOgi .salesectioneventschedule_WideDetailCtn_2UUN8 {
+    display: flex;
+    flex-direction: column;
+    white-space: nowrap;
+    overflow: hidden;
+    justify-content: center;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 200px;
+    padding-left: 12px;
+    padding-right: 12px;
+    box-sizing: border-box;
+    white-space: normal; }
+    .salesectioneventschedule_SaleAppWideCtn_3QOgi .salesectioneventschedule_WideDetailCtn_2UUN8 .salesectioneventschedule_AppTitle_3q715 {
+      font-size: 18px;
+      line-height: 20px;
+      font-weight: 500;
+      min-width: 120px;
+      color: white;
+      white-space: pre-wrap; }
+    .salesectioneventschedule_SaleAppWideCtn_3QOgi .salesectioneventschedule_WideDetailCtn_2UUN8 .salesectioneventschedule_ReleaseDate_3pYbY {
+      font-size: 11px;
+      color: #CECECE; }
+  .salesectioneventschedule_SaleAppWideCtn_3QOgi .salesectioneventschedule_GameButtons_nZS28 {
+    flex: 1;
+    min-width: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 14px;
+    padding: 6px 0;
+    margin-right: 7px; }
+    .salesectioneventschedule_SaleAppWideCtn_3QOgi .salesectioneventschedule_GameButtons_nZS28 .DialogButton {
+      margin: 2px 3px;
+      padding: 0 10px;
+      white-space: nowrap;
+      width: auto;
+      flex-basis: 50%; }
+      .salesectioneventschedule_SaleAppWideCtn_3QOgi .salesectioneventschedule_GameButtons_nZS28 .DialogButton:hover {
+        background: linear-gradient(to right, #8ed629 5%, #6aa621 95%);
+        color: white;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); }
+  .salesectioneventschedule_SaleAppWideCtn_3QOgi .salesectioneventschedule_WideActionCtn_mZEz5 {
+    display: flex;
+    flex-direction: column; }
+
+.salesectioneventschedule_EventWideCtn_3ebd7 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  color: #dfe3e6; }
+  .salesectioneventschedule_EventWideCtn_3ebd7 .salesectioneventschedule_Title_J6ivk {
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: #AAAAAA; }
+  .salesectioneventschedule_EventWideCtn_3ebd7 hr {
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: linear-gradient(to right, #565F70, #252930); }
+  .salesectioneventschedule_EventWideCtn_3ebd7 .salesectioneventschedule_EventWideDetailCtn_jM8go {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 8px; }
+  .salesectioneventschedule_EventWideCtn_3ebd7 .salesectioneventschedule_EventDetails_1B7Oi {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 2;
+    align-items: center; }
+    .salesectioneventschedule_EventWideCtn_3ebd7 .salesectioneventschedule_EventDetails_1B7Oi .salesectioneventschedule_EventTitle_109s- {
+      font-size: 14px;
+      color: #ffffff;
+      font-weight: 300;
+      padding-right: 20px; }
+    .salesectioneventschedule_EventWideCtn_3ebd7 .salesectioneventschedule_EventDetails_1B7Oi .salesectioneventschedule_EventTime_2-ep9 {
+      font-size: 12px;
+      color: white;
+      font-weight: 600; }
+  .salesectioneventschedule_EventWideCtn_3ebd7 .salesectioneventschedule_EventOptionsCtn_3O1DS {
+    flex: none; }
+  .salesectioneventschedule_EventWideCtn_3ebd7 .salesectioneventschedule_EventDetailsBtn_1yVMk {
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-right: 10px; }
+  .salesectioneventschedule_EventWideCtn_3ebd7 .salesectioneventschedule_EventIcon_1qfgw {
+    width: 50px; }
+
+.salesectioneventschedule_NewsHubLink_TafBI {
+  margin-right: 24px;
+  font: menu;
+  display: inline-block;
+  box-sizing: border-box;
+  text-align: center;
+  background-image: radial-gradient(circle at top left, #399aec 10%, #225dce 80%); }
+  .salesectioneventschedule_NewsHubLink_TafBI:hover {
+    background: linear-gradient(to right, #8ed629 5%, #6aa621 95%);
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); }
+
+.salesectioneventschedule_ClanEventCapsuleCtn_3rGzA {
+  width: 100%;
+  height: 100%; }
+  .salesectioneventschedule_ClanEventCapsuleCtn_3rGzA .salesectioneventschedule_ClanEventImage_2ZYCQ {
+    width: 100%; }
+
+.salesectioneventschedule_ClanEventDetailBackground_s3LS8 {
+  width: 100%;
+  height: 100%;
+  background-size: cover; }
+
+.salesectioneventschedule_PresenterEventStatementCtn_3-cGi {
+  font-size: 12px;
+  line-height: 15px;
+  overflow-y: auto !important; }
+
+.salesectioneventschedule_SpeakerEventType_1rNgd {
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: #AAAAAA; }
+
+.salesectioneventschedule_SpeakerEventTitle_1EIao {
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 32px; }
+
 :root {
   --main-text-color: #dbe2e6;
   --main-light-blue-background: #93b3c8;
@@ -5820,254 +6199,25 @@ textarea {
 
 /* stylelint-disable */
 
-.salesectioneventschedule_SaleSchedCtn_2g7il {
-  height: 480px;
-  background-image: radial-gradient(101.49% 168.36% at 1.01% 0%, #4c5767 0%, #2f3742 100%);
-  box-sizing: border-box;
-  padding: 16px 0px 0px 16px;
-  display: flex;
-  flex-direction: column; }
-  @media screen and (max-width: 600px) {
-    .salesectioneventschedule_SaleSchedCtn_2g7il {
-      height: 340px; } }
-  .salesectioneventschedule_SaleSchedCtn_2g7il .salesectioneventschedule_ScheduleSectionHeader_2EXgw {
-    font-weight: 400;
-    letter-spacing: 0.05em;
-    font-size: 18px;
-    color: #FFFFFF;
-    text-transform: uppercase;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3); }
-  .salesectioneventschedule_SaleSchedCtn_2g7il .salesectioneventschedule_SectionCtn_2wwgk {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    overflow: hidden;
-    min-width: 0;
-    font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
-    font-weight: 300; }
-
-.salesectioneventschedule_SaleSchedListCtn_1THwn {
-  margin-bottom: 12px;
-  margin-top: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; }
-  .salesectioneventschedule_SaleSchedListCtn_1THwn .salesectioneventschedule_SaleSchedList_2BWbK {
-    position: relative;
-    flex-grow: 1;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    margin-bottom: 12px;
-    margin-right: 12px;
-    -webkit-mask-image: -webkit-gradient(linear, left 94%, left bottom, from(black), to(rgba(0, 0, 0, 0))); }
-  .salesectioneventschedule_SaleSchedListCtn_1THwn .salesectioneventschedule_NoEventsYet_1ZTMP {
-    min-height: 100px;
-    width: 100%;
-    text-align: center;
-    padding-top: 100px; }
-  @media screen and (max-width: 600px) {
-    .salesectioneventschedule_SaleSchedListCtn_1THwn, .salesectioneventschedule_SaleSchedListCtn_1THwn .salesectioneventschedule_SaleSchedRow_3l83c, .salesectioneventschedule_SaleSchedListCtn_1THwn .salesectioneventschedule_NewsHubLink_TafBI {
-      width: 100%; }
-    .salesectioneventschedule_SaleSchedListCtn_1THwn .salesectioneventschedule_SaleSchedList_2BWbK {
-      margin-right: 0; } }
-
-.salesectioneventschedule_SaleSchedGridCtn_50nbv {
-  margin: 10px 16px 10px 0;
+.salehilightplayerembed_MediaContainer_-ap7m {
   flex: 1;
-  overflow: initial;
-  min-width: 0;
-  display: grid;
-  grid-auto-flow: row;
-  grid-template: 1fr 1fr / 48% 48%;
-  grid-gap: 10px 4%; }
+  min-width: 284px; }
   @media screen and (max-width: 800px) {
-    .salesectioneventschedule_SaleSchedGridCtn_50nbv {
-      max-width: 300px;
-      grid-auto-flow: column;
-      grid-template: 1fr 1fr / 1fr 0px; } }
-  @media screen and (max-width: 600px) {
-    .salesectioneventschedule_SaleSchedGridCtn_50nbv {
+    .salehilightplayerembed_MediaContainer_-ap7m {
       display: none; } }
 
-.salesectioneventschedule_SchedSectionLabel_2UAed {
-  text-transform: uppercase;
-  color: white;
-  font-weight: 500;
-  position: sticky;
-  top: 0;
-  z-index: 3;
-  padding: 4px 8px;
-  background: #2d343e;
-  margin-bottom: 3px; }
-
-.salesectioneventschedule_SaleSchedDetailCtn_31c5z {
-  width: 100%;
-  max-width: 612px;
-  background-color: #292D32;
-  padding: 12px;
-  display: flex;
-  flex-direction: column; }
-  .salesectioneventschedule_SaleSchedDetailCtn_31c5z .salesectioneventschedule_SaleTagAndOS_2rcuH {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 12px; }
-  .salesectioneventschedule_SaleSchedDetailCtn_31c5z .salesectioneventschedule_StatementAndHighlights_28vOL {
-    display: flex; }
-    .salesectioneventschedule_SaleSchedDetailCtn_31c5z .salesectioneventschedule_StatementAndHighlights_28vOL .salesectioneventschedule_StatementCtn_2p5xO, .salesectioneventschedule_SaleSchedDetailCtn_31c5z .salesectioneventschedule_StatementAndHighlights_28vOL .salesectioneventschedule_PresenterEventStatementCtn_3-cGi {
-      flex: 1;
-      height: 189px;
-      overflow: hidden;
-      padding-right: 12px;
-      word-break: break-word;
-      -webkit-mask-image: -webkit-gradient(linear, left 94%, left bottom, from(black), to(rgba(0, 0, 0, 0)));
-      mask-image: linear-gradient(left 90%, left bottom, from(black), to(rgba(0, 0, 0, 0))); }
-      .salesectioneventschedule_SaleSchedDetailCtn_31c5z .salesectioneventschedule_StatementAndHighlights_28vOL .salesectioneventschedule_StatementCtn_2p5xO .salesectioneventschedule_Statement_GwN4S, .salesectioneventschedule_SaleSchedDetailCtn_31c5z .salesectioneventschedule_StatementAndHighlights_28vOL .salesectioneventschedule_PresenterEventStatementCtn_3-cGi .salesectioneventschedule_Statement_GwN4S {
-        position: relative; }
-    .salesectioneventschedule_SaleSchedDetailCtn_31c5z .salesectioneventschedule_StatementAndHighlights_28vOL .salesectioneventschedule_MediaContainer_u2Bv0 {
-      flex: 1;
-      min-width: 284px; }
-      @media screen and (max-width: 800px) {
-        .salesectioneventschedule_SaleSchedDetailCtn_31c5z .salesectioneventschedule_StatementAndHighlights_28vOL .salesectioneventschedule_MediaContainer_u2Bv0 {
-          display: none; } }
-  @media screen and (max-width: 600px) {
-    .salesectioneventschedule_SaleSchedDetailCtn_31c5z {
-      display: none; } }
-
-.salesectioneventschedule_SaleSchedRowProxy_2HMsx, .salesectioneventschedule_SaleSchedRow_3l83c {
-  height: 50px;
-  width: 286px;
-  box-sizing: border-box;
-  margin-bottom: 3px;
-  padding: 8px; }
-
-.salesectioneventschedule_SaleSchedRow_3l83c {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  cursor: pointer;
-  user-select: none;
-  background-image: radial-gradient(101.49% 168.36% at 1.01% 0%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.1) 100%);
-  border-radius: 3px;
-  color: #dfe3e6; }
-  .salesectioneventschedule_SaleSchedRow_3l83c:hover {
-    background-color: rgba(255, 255, 255, 0.3);
-    color: white;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); }
-  .salesectioneventschedule_SaleSchedRow_3l83c.salesectioneventschedule_MiniMode__L0SI {
-    width: 100%;
-    height: 33px; }
-    .salesectioneventschedule_SaleSchedRow_3l83c.salesectioneventschedule_MiniMode__L0SI .salesectioneventschedule_AppTitle_3q715 {
-      display: none; }
-    .salesectioneventschedule_SaleSchedRow_3l83c.salesectioneventschedule_MiniMode__L0SI .salesectioneventschedule_Icon_26VBx {
-      height: 20px;
-      margin: -6px 0 0 6px; }
-  .salesectioneventschedule_SaleSchedRow_3l83c .salesectioneventschedule_Time_3qoMb {
-    min-width: 55px;
-    margin-right: 4px;
-    word-break: keep-all; }
-  .salesectioneventschedule_SaleSchedRow_3l83c .salesectioneventschedule_DetailsCtn_3deMj {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 4;
-    overflow: hidden;
-    font-size: 12px;
-    font-weight: 400; }
-    .salesectioneventschedule_SaleSchedRow_3l83c .salesectioneventschedule_DetailsCtn_3deMj .salesectioneventschedule_AppTitle_3q715 {
-      overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-      font-weight: 600; }
-    .salesectioneventschedule_SaleSchedRow_3l83c .salesectioneventschedule_DetailsCtn_3deMj .salesectioneventschedule_EventTitle_109s- {
-      overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis; }
-  .salesectioneventschedule_SaleSchedRow_3l83c .salesectioneventschedule_Icon_26VBx {
-    width: 26px;
-    opacity: 0.4; }
-
-.salesectioneventschedule_SchedRowSelected_3GxYn {
-  background-color: white;
-  color: black; }
-  .salesectioneventschedule_SchedRowSelected_3GxYn:hover {
-    background-color: white;
-    color: black; }
-
-.salesectioneventschedule_SaleAppWideCtn_3QOgi {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  background-image: radial-gradient(101.49% 168.36% at 1.01% 0%, #4c5767 0%, rgba(47, 55, 66, 0) 100%); }
-  @media screen and (max-width: 800px) {
-    .salesectioneventschedule_SaleAppWideCtn_3QOgi {
-      flex-wrap: wrap; } }
-  .salesectioneventschedule_SaleAppWideCtn_3QOgi .salesectioneventschedule_SaleAppCapsule_2mp1u {
-    flex-basis: 196px;
-    flex-shrink: 1; }
-  .salesectioneventschedule_SaleAppWideCtn_3QOgi .salesectioneventschedule_WideHeader_wI_4v {
-    height: auto;
-    width: 100%;
-    max-width: 196px;
-    display: block; }
-  .salesectioneventschedule_SaleAppWideCtn_3QOgi .salesectioneventschedule_WideDetailCtn_2UUN8 {
-    display: flex;
-    flex-direction: column;
-    white-space: nowrap;
-    overflow: hidden;
-    justify-content: center;
-    flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: 200px;
-    padding-left: 12px;
-    padding-right: 12px;
-    box-sizing: border-box;
-    white-space: normal; }
-    .salesectioneventschedule_SaleAppWideCtn_3QOgi .salesectioneventschedule_WideDetailCtn_2UUN8 .salesectioneventschedule_AppTitle_3q715 {
-      font-size: 18px;
-      line-height: 20px;
-      font-weight: 500;
-      min-width: 120px;
-      color: white;
-      white-space: pre-wrap; }
-    .salesectioneventschedule_SaleAppWideCtn_3QOgi .salesectioneventschedule_WideDetailCtn_2UUN8 .salesectioneventschedule_ReleaseDate_3pYbY {
-      font-size: 11px;
-      color: #CECECE; }
-  .salesectioneventschedule_SaleAppWideCtn_3QOgi .salesectioneventschedule_GameButtons_nZS28 {
-    flex: 1;
-    min-width: 150px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-size: 14px;
-    padding: 6px 0;
-    margin-right: 7px; }
-    .salesectioneventschedule_SaleAppWideCtn_3QOgi .salesectioneventschedule_GameButtons_nZS28 .DialogButton {
-      margin: 2px 3px;
-      padding: 0 10px;
-      white-space: nowrap;
-      width: auto;
-      flex-basis: 50%; }
-      .salesectioneventschedule_SaleAppWideCtn_3QOgi .salesectioneventschedule_GameButtons_nZS28 .DialogButton:hover {
-        background: linear-gradient(to right, #8ed629 5%, #6aa621 95%);
-        color: white;
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); }
-  .salesectioneventschedule_SaleAppWideCtn_3QOgi .salesectioneventschedule_WideActionCtn_mZEz5 {
-    display: flex;
-    flex-direction: column; }
-
-.salesectioneventschedule_MainMediaCtn_64yk2 {
+.salehilightplayerembed_MainMediaCtn_FATLc {
   width: 100%;
   border-radius: 8px;
   margin-bottom: 10px; }
-  .salesectioneventschedule_MainMediaCtn_64yk2 > img {
+  .salehilightplayerembed_MainMediaCtn_FATLc > img {
     border-radius: 2px;
     width: 100%;
     object-fit: cover;
     max-height: 128px;
     background-color: black;
     margin-bottom: -4px; }
-  .salesectioneventschedule_MainMediaCtn_64yk2 .salesectioneventschedule_VideoThumbnail_TxIKn > img {
+  .salehilightplayerembed_MainMediaCtn_FATLc .salehilightplayerembed_VideoThumbnail_h0pph > img {
     border-radius: 8px;
     width: 100%;
     object-fit: cover;
@@ -6075,38 +6225,31 @@ textarea {
     min-height: 123px;
     background-color: black; }
 
-.salesectioneventschedule_ThumbnailsContainer_1QVAW {
-  display: flex;
-  margin-top: 6px;
-  flex-direction: row;
-  margin-right: 10px;
-  flex: 1; }
-
-.salesectioneventschedule_Screenshot_jxi-O, .salesectioneventschedule_PresenterEventScreenshot_nlt1c {
+.salehilightplayerembed_Screenshot_1xxBa, .salehilightplayerembed_PresenterEventScreenshot_31z_A {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   height: 51px;
   margin: 0; }
 
-.salesectioneventschedule_ScreenshotThumbnail_1_VV-, .salesectioneventschedule_PresenterEventScreenshotThumbnail_1so47 {
+.salehilightplayerembed_ScreenshotThumbnail_3IAX7, .salehilightplayerembed_PresenterEventScreenshotThumbnail_1A_Lw {
   height: 100%;
   width: 91px;
   object-fit: cover;
   cursor: pointer; }
 
-.salesectioneventschedule_VideoThumbnail_TxIKn {
+.salehilightplayerembed_VideoThumbnail_h0pph {
   width: 100%;
   height: auto;
   position: relative;
   cursor: pointer;
   transition: all .21s ease-in-out;
   margin-bottom: 0; }
-  .salesectioneventschedule_VideoThumbnail_TxIKn.salesectioneventschedule_videoPlaying_3_Mmg {
+  .salehilightplayerembed_VideoThumbnail_h0pph.salehilightplayerembed_videoPlaying_3D99v {
     opacity: 0;
     transform: translateX(-198px) scale(1.7) translateY(5px); }
 
-.salesectioneventschedule_VideoPlayButton_3D5uj {
+.salehilightplayerembed_VideoPlayButton_2sJlI {
   position: absolute;
   top: calc(50% - 32px);
   left: calc(50% - 32px);
@@ -6117,11 +6260,11 @@ textarea {
   border: 1px solid #aaa3;
   opacity: .75;
   transition: all .16s ease-in-out; }
-  .salesectioneventschedule_VideoThumbnail_TxIKn:hover .salesectioneventschedule_VideoPlayButton_3D5uj {
+  .salehilightplayerembed_VideoThumbnail_h0pph:hover .salehilightplayerembed_VideoPlayButton_2sJlI {
     opacity: 1; }
-    .salesectioneventschedule_VideoThumbnail_TxIKn:hover .salesectioneventschedule_VideoPlayButton_3D5uj .SVGIcon_Play {
+    .salehilightplayerembed_VideoThumbnail_h0pph:hover .salehilightplayerembed_VideoPlayButton_2sJlI .SVGIcon_Play {
       fill: #fff; }
-  .salesectioneventschedule_VideoPlayButton_3D5uj .SVGIcon_Play {
+  .salehilightplayerembed_VideoPlayButton_2sJlI .SVGIcon_Play {
     fill: #ccc;
     width: 50%;
     height: 50%;
@@ -6129,7 +6272,7 @@ textarea {
     margin-top: 15px;
     transition: all .16s ease-in-out; }
 
-.salesectioneventschedule_VideoLargeContainer_3WfQM {
+.salehilightplayerembed_VideoLargeContainer_3mzKC {
   position: absolute;
   width: calc(100% - 16px);
   height: calc(100% - 16px);
@@ -6144,127 +6287,44 @@ textarea {
   opacity: 0;
   pointer-events: none;
   transition: all .26s ease-in-out; }
-  .salesectioneventschedule_VideoLargeContainer_3WfQM.salesectioneventschedule_videoPlaying_3_Mmg {
+  .salehilightplayerembed_VideoLargeContainer_3mzKC.salehilightplayerembed_videoPlaying_3D99v {
     opacity: 1;
     pointer-events: initial; }
-  .salesectioneventschedule_VideoLargeContainer_3WfQM .SVGIcon_X_Line {
+  .salehilightplayerembed_VideoLargeContainer_3mzKC .SVGIcon_X_Line {
     position: absolute;
     width: 22px;
     height: 22px;
     right: 8px;
     top: 8px;
     cursor: pointer; }
-    .salesectioneventschedule_VideoLargeContainer_3WfQM .SVGIcon_X_Line line {
+    .salehilightplayerembed_VideoLargeContainer_3mzKC .SVGIcon_X_Line line {
       stroke-width: 30px;
       stroke: #aaa; }
-    .salesectioneventschedule_VideoLargeContainer_3WfQM .SVGIcon_X_Line:hover line {
+    .salehilightplayerembed_VideoLargeContainer_3mzKC .SVGIcon_X_Line:hover line {
       stroke: #fff; }
 
-.salesectioneventschedule_VideoLarge_k_PYH {
+.salehilightplayerembed_VideoLarge_3zPl6 {
   height: calc(100% - 16px);
   object-fit: contain;
   align-self: center;
   flex: 1; }
 
-.salesectioneventschedule_EventWideCtn_3ebd7 {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  color: #dfe3e6; }
-  .salesectioneventschedule_EventWideCtn_3ebd7 .salesectioneventschedule_Title_J6ivk {
-    text-transform: uppercase;
-    font-size: 11px;
-    letter-spacing: 1px;
-    color: #AAAAAA; }
-  .salesectioneventschedule_EventWideCtn_3ebd7 hr {
-    border: 0;
-    height: 1px;
-    background: #333;
-    background-image: linear-gradient(to right, #565F70, #252930); }
-  .salesectioneventschedule_EventWideCtn_3ebd7 .salesectioneventschedule_EventWideDetailCtn_jM8go {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: 8px; }
-  .salesectioneventschedule_EventWideCtn_3ebd7 .salesectioneventschedule_EventDetails_1B7Oi {
-    display: flex;
-    flex-direction: row;
-    flex-grow: 2;
-    align-items: center; }
-    .salesectioneventschedule_EventWideCtn_3ebd7 .salesectioneventschedule_EventDetails_1B7Oi .salesectioneventschedule_EventTitle_109s- {
-      font-size: 14px;
-      color: #ffffff;
-      font-weight: 300;
-      padding-right: 20px; }
-    .salesectioneventschedule_EventWideCtn_3ebd7 .salesectioneventschedule_EventDetails_1B7Oi .salesectioneventschedule_EventTime_2-ep9 {
-      font-size: 12px;
-      color: white;
-      font-weight: 600; }
-  .salesectioneventschedule_EventWideCtn_3ebd7 .salesectioneventschedule_EventOptionsCtn_3O1DS {
-    flex: none; }
-  .salesectioneventschedule_EventWideCtn_3ebd7 .salesectioneventschedule_EventDetailsBtn_1yVMk {
-    box-sizing: border-box;
-    padding-left: 10px;
-    padding-right: 10px; }
-  .salesectioneventschedule_EventWideCtn_3ebd7 .salesectioneventschedule_EventIcon_1qfgw {
-    width: 50px; }
-
-.salesectioneventschedule_NewsHubLink_TafBI {
-  margin-right: 24px;
-  font: menu;
-  display: inline-block;
-  box-sizing: border-box;
-  text-align: center;
-  background-image: radial-gradient(circle at top left, #399aec 10%, #225dce 80%); }
-  .salesectioneventschedule_NewsHubLink_TafBI:hover {
-    background: linear-gradient(to right, #8ed629 5%, #6aa621 95%);
-    color: white;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); }
-
-.salesectioneventschedule_PopupScreenshotContainer_2p5I9 {
-  width: 80vw;
-  height: auto;
-  margin: 5px; }
-
-.salesectioneventschedule_PopupScreenshot_Qo4B7 {
-  width: 100%;
-  height: 100%; }
-
-.salesectioneventschedule_ClanEventCapsuleCtn_3rGzA {
-  width: 100%;
-  height: 100%; }
-  .salesectioneventschedule_ClanEventCapsuleCtn_3rGzA .salesectioneventschedule_ClanEventImage_2ZYCQ {
-    width: 100%; }
-
-.salesectioneventschedule_ClanEventDetailBackground_s3LS8 {
-  width: 100%;
-  height: 100%;
-  background-size: cover; }
-
-.salesectioneventschedule_PresenterEventStatementCtn_3-cGi {
-  font-size: 12px;
-  line-height: 15px;
-  overflow-y: auto !important; }
-
-.salesectioneventschedule_PresenterEventScreenshot_nlt1c {
+.salehilightplayerembed_PresenterEventScreenshot_31z_A {
   flex-wrap: wrap;
   align-content: space-around;
   height: auto; }
 
-.salesectioneventschedule_PresenterEventScreenshotThumbnail_1so47 {
+.salehilightplayerembed_PresenterEventScreenshotThumbnail_1A_Lw {
   height: auto; }
 
-.salesectioneventschedule_SpeakerEventType_1rNgd {
-  text-transform: uppercase;
-  font-size: 11px;
-  letter-spacing: 1px;
-  color: #AAAAAA; }
+.salehilightplayerembed_PopupScreenshotContainer_3ezhP {
+  width: 80vw;
+  height: auto;
+  margin: 5px; }
 
-.salesectioneventschedule_SpeakerEventTitle_1EIao {
-  font-size: 16px;
-  font-weight: bold;
-  color: white;
-  margin-bottom: 32px; }
+.salehilightplayerembed_PopupScreenshot_2XVyT {
+  width: 100%;
+  height: 100%; }
 
 .cropmodal_CropImage_3qfqT {
   position: relative;

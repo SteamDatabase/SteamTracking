@@ -1623,8 +1623,8 @@ span.partnereventeditor_RequiredFieldLabel_11TnL {
 
 .partnereventstats_StatsCtnTitle_1LlRF {
   background-color: rgba(0, 0, 0, 0.2);
-  border-bottom: rgba(255, 255, 255, 0.1);
   padding: 20px;
+  margin-bottom: 6px;
   border: 1px solid #323a49;
   border-bottom: none;
   border-top-left-radius: 4px;
@@ -1668,6 +1668,16 @@ span.partnereventeditor_RequiredFieldLabel_11TnL {
   .partnereventstats_StatsCtn_hWCs4.partnereventstats_SmallStatsMode_2A2-p .partnereventstats_StatsRightSection_1yibD {
     width: 100%;
     margin-top: 20px; }
+
+.partnereventstats_ModerationWarning_1aIU0 {
+  padding: 8px;
+  color: #993333;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase; }
+
+.partnereventstats_DisabledStats_2Zp-j {
+  color: #666666; }
 
 .breadcrumbs_BreadContainer_3jswb {
   color: #56707f;
@@ -4276,14 +4286,19 @@ input.partnereventemails_HeadlineInput_2lHX9 {
         background-color: pink; }
       .partnereventsaletagitems_TagItemCtn_m0Krj .partnereventsaletagitems_NameAndTagCtn_3iqFC .partnereventsaletagitems_TagListCtn_1QkXs .TagCollection_Auto {
         background-color: gold; }
+      .partnereventsaletagitems_TagItemCtn_m0Krj .partnereventsaletagitems_NameAndTagCtn_3iqFC .partnereventsaletagitems_TagListCtn_1QkXs .TagCollection_Custom {
+        background-color: #44F; }
 
 .partnereventsaletagitems_TagItemEditorCtn_BCZuV {
   margin-bottom: 10px; }
   .partnereventsaletagitems_TagItemEditorCtn_BCZuV .partnereventsaletagitems_ItemListControls_3d5Ah {
     width: 100%;
     display: flex;
-    flex-direction: row;
-    align-items: center; }
+    flex-direction: column; }
+    .partnereventsaletagitems_TagItemEditorCtn_BCZuV .partnereventsaletagitems_ItemListControls_3d5Ah .partnereventsaletagitems_ButtonRow_jzDFC {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 8px; }
     .partnereventsaletagitems_TagItemEditorCtn_BCZuV .partnereventsaletagitems_ItemListControls_3d5Ah .DialogInputLabelGroup {
       flex: 1; }
     .partnereventsaletagitems_TagItemEditorCtn_BCZuV .partnereventsaletagitems_ItemListControls_3d5Ah button {
