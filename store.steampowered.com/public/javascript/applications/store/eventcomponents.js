@@ -10,7 +10,7 @@
           return r;
         });
       var n = a("5y3B"),
-        L = a.n(n);
+        G = a.n(n);
       function r() {
         var r, o, i, l, e, s, c, u;
         (window.ZdogSpookyHouse = {
@@ -30,9 +30,9 @@
           }
         }),
           (ZdogSpookyHouse.addBones = function(e) {
-            var t = L.a.TAU,
+            var t = G.a.TAU,
               a = ZdogSpookyHouse.color.light,
-              n = new L.a.Shape({
+              n = new G.a.Shape({
                 addTo: e.addTo,
                 path: [{ x: -2 }, { x: 2 }],
                 closed: !1,
@@ -76,7 +76,7 @@
           (ZdogSpookyHouse.addCarRoad = function(e) {
             for (
               var t = ZdogSpookyHouse.color,
-                a = L.a.TAU,
+                a = G.a.TAU,
                 n = 120,
                 r = (125 * a) / 40 / 2,
                 o = [
@@ -90,7 +90,7 @@
               i++
             ) {
               var l = (i / 40) * a;
-              new L.a.Shape({
+              new G.a.Shape({
                 addTo: e.addTo,
                 path: o,
                 translate: { x: Math.cos(l) * n, z: Math.sin(l) * n },
@@ -103,27 +103,27 @@
             var s = -2.5,
               c = 2.5,
               u = {
-                grill: new L.a.Vector({ x: -5, y: -1, z: c }),
-                hood: new L.a.Vector({ x: -4, y: s, z: c }),
-                wipers: new L.a.Vector({ x: -2, y: s, z: c }),
-                windshield: new L.a.Vector({ x: -1, y: -4.5, z: 1.5 }),
-                roof: new L.a.Vector({ x: 2, y: -4.5, z: 1.5 }),
-                trunk: new L.a.Vector({ x: 4, y: s, z: c }),
-                bumper: new L.a.Vector({ x: 5, y: -1, z: c })
+                grill: new G.a.Vector({ x: -5, y: -1, z: c }),
+                hood: new G.a.Vector({ x: -4, y: s, z: c }),
+                wipers: new G.a.Vector({ x: -2, y: s, z: c }),
+                windshield: new G.a.Vector({ x: -1, y: -4.5, z: 1.5 }),
+                roof: new G.a.Vector({ x: 2, y: -4.5, z: 1.5 }),
+                trunk: new G.a.Vector({ x: 4, y: s, z: c }),
+                bumper: new G.a.Vector({ x: 5, y: -1, z: c })
               },
               d = {};
             for (var p in u) {
               var m = u[p];
               d[p] = m.copy().multiply({ z: -1 });
             }
-            var v = new L.a.Anchor({ addTo: e.addTo }),
-              h = new L.a.Group({
+            var v = new G.a.Anchor({ addTo: e.addTo }),
+              h = new G.a.Group({
                 addTo: v,
                 translate: { z: n, y: -6 },
                 scale: 1.2,
                 updateSort: !0
               }),
-              _ = new L.a.Shape({
+              _ = new G.a.Shape({
                 addTo: h,
                 path: [
                   u.grill,
@@ -151,8 +151,8 @@
               b("windshield", "roof"),
               b("roof", "trunk", t.medium),
               b("trunk", "bumper");
-            var g = new L.a.Vector({ x: -3.5, z: c, y: -1 }),
-              f = new L.a.Ellipse({
+            var g = new G.a.Vector({ x: -3.5, z: c, y: -1 }),
+              f = new G.a.Ellipse({
                 addTo: h,
                 diameter: 1.8,
                 translate: g,
@@ -166,7 +166,7 @@
               f.copy({ translate: g.copy().multiply({ x: -1, z: -1 }) }),
               {
                 animate: function(e) {
-                  (v.rotate.y = L.a.easeInOut((e / 4) % 1) * a + (3 * a) / 8),
+                  (v.rotate.y = G.a.easeInOut((e / 4) % 1) * a + (3 * a) / 8),
                     (h.rotate.x = 0.1 * Math.sin(e * a * 2)),
                     (h.translate.y = 2 * Math.sin(e * a * 1.5) - 6);
                 }
@@ -174,16 +174,16 @@
             );
           }),
           (ZdogSpookyHouse.addCats = function(e) {
-            var t = L.a.TAU,
+            var t = G.a.TAU,
               a = ZdogSpookyHouse.color,
               n = 1.1,
-              r = new L.a.Anchor({
+              r = new G.a.Anchor({
                 addTo: e.addTo,
                 translate: { z: -22, x: -28, y: -2 },
                 scale: n,
                 rotate: { y: t / 8 }
               });
-            new L.a.Cone({
+            new G.a.Cone({
               addTo: r,
               diameter: 1,
               length: 3,
@@ -191,13 +191,13 @@
               stroke: 4.4,
               color: a.deep
             });
-            var o = new L.a.Shape({
+            var o = new G.a.Shape({
               addTo: r,
               translate: { y: -4 },
               stroke: 5.5,
               color: a.deep
             });
-            new L.a.Shape({
+            new G.a.Shape({
               addTo: o,
               translate: { x: -1, z: 1 },
               stroke: 0.9 * n,
@@ -205,11 +205,11 @@
             }).copy({ translate: { x: 1, z: 1 } });
             var i = { x: -1, y: -1 },
               l = { x: 1, y: 1, z: -1 },
-              s = new L.a.Anchor({
+              s = new G.a.Anchor({
                 addTo: o,
-                scale: new L.a.Vector({ x: 1, y: 1, z: 1.25 })
+                scale: new G.a.Vector({ x: 1, y: 1, z: 1.25 })
               });
-            new L.a.Shape({
+            new G.a.Shape({
               addTo: s,
               path: [{ x: -1, y: 1 }, i, l],
               translate: { x: -0.96, y: -1.5, z: 0 },
@@ -218,7 +218,7 @@
               color: a.deep
             }).copy({ path: [i, { x: 1, y: 1 }, l] }),
               s.copyGraph({ scale: s.scale.copy().multiply({ x: -1 }) }),
-              new L.a.Shape({
+              new G.a.Shape({
                 addTo: r,
                 path: [
                   {},
@@ -248,9 +248,9 @@
           }),
           (ZdogSpookyHouse.addFogMonster = function(e) {
             for (
-              var t = L.a.TAU,
+              var t = G.a.TAU,
                 a = ZdogSpookyHouse.color,
-                r = new L.a.Anchor(e),
+                r = new G.a.Anchor(e),
                 o = (4 * t) / 8,
                 i = [],
                 n = 0;
@@ -259,7 +259,7 @@
             ) {
               var l = n / 74,
                 s = l * o,
-                c = new L.a.Shape({
+                c = new G.a.Shape({
                   addTo: r,
                   path: [{}, { x: ((54 * t) / 74) * 0.8 }],
                   stroke: 22 + 8 * -Math.cos((t / 8) * (3 + 5 * l)),
@@ -274,13 +274,13 @@
               i.push(c);
             }
             return (
-              new L.a.Shape({
+              new G.a.Shape({
                 addTo: i[0],
                 translate: { x: -10, z: 8 },
                 color: a.deep,
                 stroke: 3.5
               }).copy({ translate: { x: -10, z: -8 } }),
-              new L.a.Ellipse({
+              new G.a.Ellipse({
                 addTo: i[0],
                 translate: { x: -10, y: 4 },
                 quarters: 2,
@@ -303,7 +303,7 @@
             );
           }),
           (ZdogSpookyHouse.addHouse = function(e) {
-            var i = L.a.TAU,
+            var i = G.a.TAU,
               l = ZdogSpookyHouse.color,
               s = [],
               c = [];
@@ -313,7 +313,7 @@
             function a(e) {
               c.push(e);
             }
-            var n = new L.a.Anchor({
+            var n = new G.a.Anchor({
                 addTo: e.addTo,
                 translate: { x: 0, y: -8, z: -6 }
               }),
@@ -326,9 +326,9 @@
                 backface: l.deep
               },
               o = Object.assign({ color: l.light }, r),
-              u = new L.a.Group({ addTo: n, translate: { z: 24 } });
-            a(new L.a.Rect(Object.assign({}, o, { addTo: u }))),
-              new L.a.Rect({
+              u = new G.a.Group({ addTo: n, translate: { z: 24 } });
+            a(new G.a.Rect(Object.assign({}, o, { addTo: u }))),
+              new G.a.Rect({
                 addTo: u,
                 width: 6,
                 height: 8,
@@ -352,7 +352,7 @@
                 r
               ),
               p = Object.assign({ color: l.medium, rotate: { y: i / 4 } }, r),
-              m = new L.a.Rect(
+              m = new G.a.Rect(
                 Object.assign({}, d, { translate: { x: 6, z: 18 } })
               );
             t(m),
@@ -365,8 +365,8 @@
             t(v),
               t(v.copy({ translate: { x: -6, y: -12, z: 18 } })),
               t(v.copy({ translate: { x: -6, y: -24, z: 18 } }));
-            var h = new L.a.Anchor({ addTo: n, translate: { y: -36, z: 18 } }),
-              _ = new L.a.Shape({
+            var h = new G.a.Anchor({ addTo: n, translate: { y: -36, z: 18 } }),
+              _ = new G.a.Shape({
                 addTo: h,
                 path: [
                   { x: -8, y: 6 },
@@ -390,7 +390,7 @@
                 translate: { x: 8 },
                 color: l.deep
               }),
-              new L.a.Rect({
+              new G.a.Rect({
                 addTo: h,
                 width: 8,
                 height: 8,
@@ -448,7 +448,7 @@
                 rotate: { y: i / 2 },
                 color: l.dark
               }),
-              g = new L.a.Shape({
+              g = new G.a.Shape({
                 addTo: n,
                 path: [
                   { x: -4, y: 12 },
@@ -466,7 +466,7 @@
                 color: l.dark,
                 fill: !0
               });
-            new L.a.Shape({
+            new G.a.Shape({
               addTo: g,
               path: [
                 { move: { x: -4, y: -6 } },
@@ -513,7 +513,7 @@
                 pane: l.highlight,
                 wallRectCallback: t
               }),
-              new L.a.Rect({
+              new G.a.Rect({
                 addTo: n,
                 width: 12,
                 height: 6,
@@ -536,7 +536,7 @@
                 height: 18,
                 translate: { x: -6, y: -27, z: -18 }
               }),
-              new L.a.Rect({
+              new G.a.Rect({
                 addTo: n,
                 width: 12,
                 height: 6,
@@ -546,7 +546,7 @@
                 fill: !0,
                 color: l.medium
               }),
-              new L.a.Shape({
+              new G.a.Shape({
                 addTo: n,
                 path: [
                   { z: 2, y: -3 },
@@ -565,7 +565,7 @@
                 width: 12,
                 translate: { x: -6, y: -33, z: -6 }
               }),
-              new L.a.Rect({
+              new G.a.Rect({
                 addTo: n,
                 width: 12,
                 height: 6,
@@ -576,12 +576,12 @@
                 color: l.deep
               }),
               h.copyGraph({ translate: { x: -6, y: -42, z: -12 } });
-            var E = new L.a.Anchor({
+            var E = new G.a.Anchor({
                 addTo: n,
                 translate: { x: 18, y: -18, z: -12 }
               }),
-              y = new L.a.Group({ addTo: E });
-            new L.a.Cylinder({
+              y = new G.a.Group({ addTo: E });
+            new G.a.Cylinder({
               addTo: y,
               diameter: 12,
               length: 24,
@@ -590,7 +590,7 @@
               rotate: { x: i / 4 },
               stroke: !1
             }),
-              new L.a.Cone({
+              new G.a.Cone({
                 addTo: E,
                 diameter: 16,
                 length: 16,
@@ -599,7 +599,7 @@
                 color: l.deep,
                 stroke: !1
               }),
-              new L.a.Rect({
+              new G.a.Rect({
                 addTo: y,
                 width: 2,
                 height: 6,
@@ -615,7 +615,7 @@
                 rotate: { y: -i / 4 },
                 scale: { x: -1 }
               });
-            var S = new L.a.Shape({
+            var S = new G.a.Shape({
               addTo: n,
               path: [
                 { x: -6, y: 6 },
@@ -642,7 +642,7 @@
                 translate: { x: -26, y: -24, z: 6 },
                 rotate: { y: i / 4 }
               });
-            var C = new L.a.Shape({
+            var C = new G.a.Shape({
               addTo: n,
               path: [
                 { x: -3, y: 6 },
@@ -670,8 +670,8 @@
                 translate: { x: 3, y: -24, z: -14 },
                 color: l.deep
               });
-            var O = new L.a.Anchor({ addTo: n, translate: { y: -30 } }),
-              w = new L.a.Rect({
+            var O = new G.a.Anchor({ addTo: n, translate: { y: -30 } }),
+              w = new G.a.Rect({
                 addTo: O,
                 width: 12,
                 height: 10,
@@ -687,9 +687,9 @@
               w.copy({ width: 4, translate: { x: -20, z: 5 } }),
               w.copy({ width: 6, translate: { x: 3, z: -5 } }),
               w.copy({ height: 6, translate: { x: -6, z: -3 } });
-            var T = new L.a.Anchor({ addTo: n, translate: { y: 2 } }),
-              I = new L.a.Anchor({ addTo: T, translate: { x: 9, z: 30 } });
-            new L.a.Shape({
+            var T = new G.a.Anchor({ addTo: n, translate: { y: 2 } }),
+              I = new G.a.Anchor({ addTo: T, translate: { x: 9, z: 30 } });
+            new G.a.Shape({
               addTo: I,
               path: [
                 { x: -3, y: 0 },
@@ -703,7 +703,7 @@
               stroke: 1,
               color: l.deep
             });
-            var j = new L.a.Rect({
+            var j = new G.a.Rect({
               addTo: I,
               width: 6,
               height: 10,
@@ -728,7 +728,7 @@
                 translate: { x: -12, z: 27 },
                 rotate: { y: i / 4 }
               }).copyGraph({ translate: { x: -12, z: 21 } });
-            var D = new L.a.Shape({
+            var D = new G.a.Shape({
               addTo: n,
               path: [
                 { x: -12, y: 2 },
@@ -776,7 +776,7 @@
                   { x: -6, y: 0, z: -12 }
                 ]
               }),
-              new L.a.Rect({
+              new G.a.Rect({
                 addTo: n,
                 width: 12,
                 height: 12,
@@ -805,16 +805,16 @@
           }),
           (ZdogSpookyHouse.addInteriorScene = function(e) {
             var t = ZdogSpookyHouse.color,
-              a = L.a.TAU,
+              a = G.a.TAU,
               n = [{ y: 0 }, { y: 1 }],
-              r = new L.a.Anchor({
+              r = new G.a.Anchor({
                 addTo: e.addTo,
                 translate: e.translate,
                 rotate: e.rotate
               }),
               o = t.medium,
-              i = new L.a.Anchor({ addTo: r, rotate: { z: 0.1 } });
-            new L.a.Rect({
+              i = new G.a.Anchor({ addTo: r, rotate: { z: 0.1 } });
+            new G.a.Rect({
               addTo: i,
               width: 9,
               height: 4,
@@ -823,7 +823,7 @@
               color: o,
               stroke: 1.5
             });
-            var l = new L.a.Shape({
+            var l = new G.a.Shape({
               addTo: i,
               path: n,
               scale: 3,
@@ -834,9 +834,9 @@
             l.copy({ translate: { x: 4.5, z: -2 } }),
               l.copy({ translate: { x: 4.5, z: 2 } }),
               l.copy({ translate: { x: -4.5, z: 2 } });
-            var s = new L.a.Anchor({ addTo: i, translate: { y: -8 } }),
-              c = new L.a.Group({ addTo: s, rotate: { y: a / 2 } }),
-              u = new L.a.Rect({
+            var s = new G.a.Anchor({ addTo: i, translate: { y: -8 } }),
+              c = new G.a.Group({ addTo: s, rotate: { y: a / 2 } }),
+              u = new G.a.Rect({
                 addTo: c,
                 width: 10,
                 height: 5,
@@ -844,7 +844,7 @@
                 fill: !0,
                 stroke: 1.5
               });
-            new L.a.Rect({
+            new G.a.Rect({
               addTo: c,
               width: 9.5,
               height: 4.5,
@@ -860,7 +860,7 @@
                 rotate: { x: a / 4 },
                 translate: { y: 5 }
               }),
-              new L.a.Shape({
+              new G.a.Shape({
                 addTo: s,
                 path: n,
                 scale: 2,
@@ -868,12 +868,12 @@
                 stroke: 1.5,
                 color: t.deep
               });
-            var d = new L.a.Anchor({
+            var d = new G.a.Anchor({
               addTo: r,
               translate: { z: -15 },
               rotate: { z: -0.1 }
             });
-            new L.a.Rect({
+            new G.a.Rect({
               addTo: d,
               width: 3,
               height: 3,
@@ -882,14 +882,14 @@
               stroke: 1.5,
               color: o
             }),
-              new L.a.Shape({
+              new G.a.Shape({
                 addTo: d,
                 path: n,
                 scale: 3,
                 stroke: 1.5,
                 color: o
               });
-            var p = new L.a.Shape({
+            var p = new G.a.Shape({
               addTo: d,
               path: [{}, { z: -2.5, y: 0.5 }],
               translate: { y: 3 },
@@ -900,7 +900,7 @@
               p.copy({ rotate: { y: (a / 5) * 2 } }),
               p.copy({ rotate: { y: (a / 5) * 3 } }),
               p.copy({ rotate: { y: (a / 5) * 4 } }),
-              new L.a.Rect({
+              new G.a.Rect({
                 addTo: d,
                 width: 3,
                 height: 4,
@@ -911,12 +911,12 @@
                 fill: !0
               });
             var m = t.deep,
-              v = new L.a.Anchor({
+              v = new G.a.Anchor({
                 addTo: r,
                 translate: { z: -13, y: -6 },
                 scale: 0.6
               }),
-              h = new L.a.Shape({
+              h = new G.a.Shape({
                 addTo: v,
                 path: [
                   { x: -1 },
@@ -929,7 +929,7 @@
                 color: m,
                 fill: !0
               });
-            new L.a.Shape({
+            new G.a.Shape({
               addTo: h,
               path: n,
               scale: -1,
@@ -937,7 +937,7 @@
               stroke: 2.5,
               color: m
             });
-            var _ = new L.a.Shape({
+            var _ = new G.a.Shape({
               addTo: h,
               path: [{}, { y: 3 }, { z: 2, y: 4 }],
               translate: { x: -1.5, y: -3 },
@@ -948,7 +948,7 @@
               color: m
             });
             _.copy({ translate: { x: 1.5, y: -3 }, rotate: { z: -1 } });
-            var b = new L.a.Shape({
+            var b = new G.a.Shape({
               addTo: v,
               path: [{ x: -1 }, { x: 1 }],
               translate: { y: 2, z: 0.5 },
@@ -972,12 +972,12 @@
             );
           }),
           (ZdogSpookyHouse.getConeTree = function(e) {
-            L.a.extend(e, {
-              rotate: { x: L.a.TAU / 4 },
+            G.a.extend(e, {
+              rotate: { x: G.a.TAU / 4 },
               stroke: !1,
               color: ZdogSpookyHouse.color.deep
             });
-            var t = new L.a.Cone(e);
+            var t = new G.a.Cone(e);
             return (
               t.copy({
                 addTo: t,
@@ -988,16 +988,16 @@
             );
           }),
           (ZdogSpookyHouse.getGraveIsland = function(e) {
-            var t = L.a.TAU,
+            var t = G.a.TAU,
               a = ZdogSpookyHouse.color,
-              n = new L.a.Anchor({ addTo: e.addTo, translate: e.translate });
+              n = new G.a.Anchor({ addTo: e.addTo, translate: e.translate });
             ZdogSpookyHouse.getPyramid({
               addTo: n,
               scale: { x: 9, y: -9, z: 9 },
               color: a.deep,
               snub: e.snub
             }),
-              new L.a.Rect({
+              new G.a.Rect({
                 width: 18,
                 height: 18,
                 addTo: n,
@@ -1006,7 +1006,7 @@
                 stroke: 4,
                 fill: !0
               });
-            var r = new L.a.Rect({
+            var r = new G.a.Rect({
               addTo: n,
               width: 4,
               height: 4,
@@ -1016,7 +1016,7 @@
               color: a.medium
             });
             return (
-              new L.a.Ellipse({
+              new G.a.Ellipse({
                 addTo: r,
                 diameter: 4,
                 translate: { y: -2 },
@@ -1026,7 +1026,7 @@
               n
             );
           }),
-          (r = L.a.TAU),
+          (r = G.a.TAU),
           (o = ZdogSpookyHouse.color),
           (i = [
             { move: { x: 0, y: 14 } },
@@ -1061,19 +1061,19 @@
           ]),
           (ZdogSpookyHouse.getLeafTree = function(e) {
             var t = -e.height;
-            L.a.extend(e, {
+            G.a.extend(e, {
               path: [{ y: 0 }, { y: t - 26 }],
               stroke: 0.5,
               color: o.deep
             });
-            var a = new L.a.Shape(e),
-              n = new L.a.Anchor({
+            var a = new G.a.Shape(e),
+              n = new G.a.Anchor({
                 addTo: a,
                 translate: { y: t - 14 },
                 rotate: { y: -r / 8 }
               });
             return (
-              new L.a.Shape({
+              new G.a.Shape({
                 addTo: n,
                 path: i,
                 closed: !1,
@@ -1083,7 +1083,7 @@
               a
             );
           }),
-          (l = L.a.TAU),
+          (l = G.a.TAU),
           (e = Math.sqrt(2)),
           (s = [{ x: -1 }, { x: 1 }, { y: -e }]),
           (c = [
@@ -1093,16 +1093,16 @@
             { x: -0.5, y: -0.5 * e }
           ]),
           (ZdogSpookyHouse.getPyramid = function(e) {
-            var t = new L.a.Anchor({
+            var t = new G.a.Anchor({
                 addTo: e.addTo,
                 translate: e.translate,
                 scale: e.scale,
                 rotate: e.rotate
               }),
               a = e.stroke || 4,
-              n = new L.a.Anchor({ addTo: t });
+              n = new G.a.Anchor({ addTo: t });
             return (
-              new L.a.Shape({
+              new G.a.Shape({
                 addTo: n,
                 path: e.snub ? c : s,
                 translate: { z: 1 },
@@ -1116,7 +1116,7 @@
               n.copyGraph({ rotate: { y: l / 2 } }),
               n.copyGraph({ rotate: { y: (3 * l) / 4 } }),
               e.snub &&
-                new L.a.Rect({
+                new G.a.Rect({
                   addTo: t,
                   translate: { y: -0.5 },
                   rotate: { x: -l / 4 },
@@ -1133,15 +1133,15 @@
             return (
               e.pane
                 ? (t = (function(a) {
-                    var e = new L.a.Group(a.wall),
+                    var e = new G.a.Group(a.wall),
                       t = u.reduce(function(e, t) {
                         return (e[t] = a.wall[t]), e;
                       }, {});
                     t.addTo = e;
-                    var n = new L.a.Rect(t);
+                    var n = new G.a.Rect(t);
                     a.wallRectCallback && a.wallRectCallback(n);
                     return (
-                      new L.a.Rect({
+                      new G.a.Rect({
                         addTo: e,
                         width: 8,
                         height: 6,
@@ -1151,7 +1151,7 @@
                         stroke: !1,
                         backface: !1
                       }),
-                      new L.a.Rect({
+                      new G.a.Rect({
                         addTo: e,
                         width: 4,
                         height: 6,
@@ -1163,16 +1163,16 @@
                       e
                     );
                   })(e))
-                : ((t = new L.a.Rect(e.wall)),
+                : ((t = new G.a.Rect(e.wall)),
                   e.wallRectCallback && e.wallRectCallback(t)),
               t
             );
           }),
           (ZdogSpookyHouse.init = function(e) {
-            var r = L.a.TAU,
+            var r = G.a.TAU,
               t = ZdogSpookyHouse.color,
               a = Math.floor(e.width / 135) / 2,
-              o = new L.a.Illustration({
+              o = new G.a.Illustration({
                 element: e,
                 zoom: a,
                 rotate: { y: r / 8 },
@@ -1181,12 +1181,12 @@
                   ZdogSpookyHouse.wobbling = !1;
                 }
               }),
-              n = new L.a.Anchor({
+              n = new G.a.Anchor({
                 addTo: o,
                 translate: { y: ZdogSpookyHouse.sceneY }
               }),
-              i = new L.a.Anchor({ addTo: n });
-            new L.a.Rect({
+              i = new G.a.Anchor({ addTo: n });
+            new G.a.Rect({
               addTo: i,
               width: 72,
               height: 72,
@@ -1221,7 +1221,7 @@
                 height: 3,
                 translate: { x: -35, z: 3 }
               });
-            var l = new L.a.Anchor({
+            var l = new G.a.Anchor({
               addTo: i,
               translate: { x: 20, y: 54, z: -16 },
               scale: { x: 4, y: -8, z: 4 }
@@ -1232,13 +1232,13 @@
               color: t.deep
             }),
               ZdogSpookyHouse.getPyramid({ addTo: l, color: t.deep });
-            var s = new L.a.Group({
+            var s = new G.a.Group({
                 addTo: n,
                 translate: { x: 18, z: 80 },
                 scale: ZdogSpookyHouse.hillScale,
                 updateSort: !0
               }),
-              c = new L.a.Anchor({ addTo: s, scale: { x: 24, y: 32, z: 24 } });
+              c = new G.a.Anchor({ addTo: s, scale: { x: 24, y: 32, z: 24 } });
             ZdogSpookyHouse.getPyramid({ addTo: c, color: t.dark }),
               ZdogSpookyHouse.getPyramid({
                 addTo: c,
@@ -1278,7 +1278,7 @@
               });
             var u = t.dark,
               d = t.deep,
-              p = new L.a.Group({
+              p = new G.a.Group({
                 addTo: n,
                 translate: { x: -52, z: -64 },
                 scale: ZdogSpookyHouse.hillScale,
@@ -1330,7 +1330,7 @@
                 length: 10,
                 translate: { x: 0, y: -28, z: -22 }
               });
-            var m = new L.a.Group({
+            var m = new G.a.Group({
               addTo: n,
               translate: { x: 76, z: 36 },
               scale: ZdogSpookyHouse.hillScale,
@@ -1370,7 +1370,7 @@
                 scale: { x: 4, y: -6, z: 4 },
                 translate: { x: 0, y: 28, z: 2 }
               });
-            var v = new L.a.Group({
+            var v = new G.a.Group({
                 addTo: n,
                 translate: { x: -78, z: -36 },
                 scale: ZdogSpookyHouse.hillScale,
@@ -1419,7 +1419,7 @@
                 length: 8,
                 translate: { x: -22, y: -10, z: 15 }
               });
-            var b = new L.a.Anchor({
+            var b = new G.a.Anchor({
               addTo: v,
               scale: { x: 6, y: 9, z: 6 },
               translate: { x: 0, y: 40, z: 0 }
@@ -1447,21 +1447,21 @@
                 translate: { x: 32, z: -64 }
               });
             var g = t.darker,
-              f = new L.a.Anchor({ addTo: n, translate: { y: -94 } }),
-              E = new L.a.Shape({
+              f = new G.a.Anchor({ addTo: n, translate: { y: -94 } }),
+              E = new G.a.Shape({
                 addTo: f,
                 translate: { z: -64 },
                 stroke: 32,
                 scale: 2,
                 color: g
               });
-            new L.a.Shape({
+            new G.a.Shape({
               addTo: E,
               translate: { x: -9, y: 4, z: 4 },
               stroke: 16,
               color: g
             }).copy({ translate: { x: 9, y: 5, z: 6 }, stroke: 20 });
-            var y = new L.a.RoundedRect({
+            var y = new G.a.RoundedRect({
               addTo: E,
               width: 26,
               height: 12,
@@ -1473,9 +1473,9 @@
               fill: !0
             });
             y.copy({ translate: { x: 6, y: 9, z: 8 } });
-            var S = new L.a.Anchor({ addTo: n, translate: { y: -60 } }),
-              C = new L.a.Anchor({ addTo: S, translate: { z: 88 } });
-            new L.a.Hemisphere({
+            var S = new G.a.Anchor({ addTo: n, translate: { y: -60 } }),
+              C = new G.a.Anchor({ addTo: S, translate: { z: 88 } });
+            new G.a.Hemisphere({
               addTo: C,
               diameter: 36,
               rotate: { x: r / 4 },
@@ -1511,7 +1511,7 @@
                 a,
                 n = j / k;
               ZdogSpookyHouse.wobbling & (n <= 2) &&
-                ((t = L.a.easeInOut(n % 1) * r),
+                ((t = G.a.easeInOut(n % 1) * r),
                 (a = (-3 * r) / 64),
                 (o.rotate.y = Math.sin(t) * a + r / 8),
                 (o.rotate.x = (-0.5 * Math.cos(t) + 0.5) * a)),
@@ -1880,10 +1880,10 @@
           return Do;
         }),
         a.d(t, "EventSteamGameFestivalDebug", function() {
-          return Lo;
+          return Go;
         }),
         a.d(t, "RssEnabledAccountDashboard", function() {
-          return Go;
+          return Lo;
         });
       var H = a("q1tI"),
         g = a.n(H),
@@ -2020,8 +2020,8 @@
         })(),
         l = a("qiKp"),
         D = a("bS9Q"),
-        L = a("I2Hi"),
-        G = a.n(L);
+        G = a("I2Hi"),
+        L = a.n(G);
       function F(e) {
         var t = new Set();
         return (
@@ -2338,7 +2338,7 @@
                 _ = !p && !d && !h;
               return H.createElement(
                 "div",
-                { className: G.a.SuggestContainer },
+                { className: L.a.SuggestContainer },
                 H.createElement(b.k, {
                   type: "text",
                   label: a,
@@ -2349,7 +2349,7 @@
                 u &&
                   H.createElement(
                     "div",
-                    { className: Object(W.a)(G.a.Results, o) },
+                    { className: Object(W.a)(L.a.Results, o) },
                     d &&
                       H.createElement(
                         "div",
@@ -2357,7 +2357,7 @@
                         m &&
                           H.createElement(
                             "div",
-                            { className: G.a.ResultSectionHeader },
+                            { className: L.a.ResultSectionHeader },
                             v
                           ),
                         s
@@ -2369,7 +2369,7 @@
                         m &&
                           H.createElement(
                             "div",
-                            { className: G.a.ResultSectionHeader },
+                            { className: L.a.ResultSectionHeader },
                             Object(Z.f)(
                               "#EventCalendar_SearchResultsHeader_CuratorSection"
                             )
@@ -2379,7 +2379,7 @@
                     _ &&
                       H.createElement(
                         "div",
-                        { className: G.a.EmptyResults, key: "empty-results" },
+                        { className: L.a.EmptyResults, key: "empty-results" },
                         Object(Z.f)("#EventCalendar_GameSearch_NoneFound")
                       )
                   )
@@ -2393,7 +2393,7 @@
           return H.createElement(
             "div",
             {
-              className: G.a.ResultRow,
+              className: L.a.ResultRow,
               key: "suggestion-" + e.suggestion.id,
               onClick: function() {
                 return e.fnOnSelected(e.suggestion);
@@ -2401,11 +2401,11 @@
             },
             H.createElement("img", {
               src: e.suggestion.img,
-              className: G.a.AvatarImage
+              className: L.a.AvatarImage
             }),
             H.createElement(
               "div",
-              { className: G.a.GameName },
+              { className: L.a.GameName },
               " ",
               Object(D.b)(e.suggestion.name),
               " "
@@ -2413,7 +2413,7 @@
             e.bShowFollowingLabel &&
               H.createElement(
                 "div",
-                { className: G.a.Label },
+                { className: L.a.Label },
                 Object(Z.f)("#EventCalendar_FollowingCurator")
               )
           );
@@ -2940,8 +2940,8 @@
         e.push("?" + we.a.stringify(n));
       }
       var De = a("xLK1"),
-        Le = a.n(De),
-        Ge = (function(t) {
+        Ge = a.n(De),
+        Le = (function(t) {
           function i() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (
@@ -2972,7 +2972,7 @@
                 (this.state.bInScroll &&
                   (t.releasePointerCapture(e.pointerId),
                   document.body.classList.remove(
-                    Le.a.HorizontalScrollInDragForceCursor
+                    Ge.a.HorizontalScrollInDragForceCursor
                   ),
                   this.props.dragClassName &&
                     t.classList.remove(this.props.dragClassName)),
@@ -3000,7 +3000,7 @@
                   ((o.scrollLeft = a),
                   this.setState({ bInScroll: !0 }),
                   document.body.classList.add(
-                    Le.a.HorizontalScrollInDragForceCursor
+                    Ge.a.HorizontalScrollInDragForceCursor
                   ),
                   this.props.dragClassName &&
                     o.classList.add(this.props.dragClassName),
@@ -3865,7 +3865,7 @@
                     )
                   ),
                 H.createElement(
-                  Ge,
+                  Le,
                   { className: _e.a.MobileNavHScroll },
                   H.createElement(
                     "div",
@@ -4702,8 +4702,8 @@
             (t = Object(z.c)([r.a], t))
           );
         })(H.Component),
-        Lt = Object(i.i)(Dt),
-        Gt = a("XmAN"),
+        Gt = Object(i.i)(Dt),
+        Lt = a("XmAN"),
         At = a("cGQe"),
         Nt = (function(t) {
           function e() {
@@ -4916,12 +4916,12 @@
                       bExpandLeft: k
                     })
                   ),
-                L = Boolean(12 !== t.type && S),
-                G = Boolean(y && (!L || !this.BIsSubTitleRedundant(y, S)));
+                G = Boolean(12 !== t.type && S),
+                L = Boolean(y && (!G || !this.BIsSubTitleRedundant(y, S)));
               return H.createElement(
                 "div",
                 { className: f },
-                H.createElement(Gt.a, { event: t, recordNewsHubStats: !0 }),
+                H.createElement(Lt.a, { event: t, recordNewsHubStats: !0 }),
                 H.createElement(
                   Ce.c,
                   { eventModel: t, route: Ce.a.k_eView },
@@ -4984,13 +4984,13 @@
                             }),
                             k && D
                           ),
-                          G &&
+                          L &&
                             H.createElement(
                               "div",
                               { className: It.a.EventSubTitle },
                               y
                             ),
-                          L &&
+                          G &&
                             H.createElement(
                               "div",
                               {
@@ -5281,7 +5281,7 @@
                       )
                     )
                   ),
-                H.createElement(Lt, Object(z.a)({}, this.props))
+                H.createElement(Gt, Object(z.a)({}, this.props))
               )
             );
           }),
@@ -5834,7 +5834,9 @@
                 nMobileNavBannerHeight: 0,
                 nHubBannerHeight: 0,
                 nGroupHeaderHeight: 0,
-                nLogInBannerHeight: 0
+                nLogInBannerHeight: 0,
+                nAccumScrollUp: 0,
+                nAccumScrollDown: 0
               }),
               (e.m_refControlBar = H.createRef()),
               (e.m_cancelSignal = T.a.CancelToken.source()),
@@ -6098,39 +6100,37 @@
               });
             }),
             (e.prototype.OnScroll = function() {
-              var u = this,
-                d = Math.round(window.scrollY);
+              var m = this,
+                v = Math.round(window.scrollY);
               this.setState(function(e) {
                 var t,
                   a = e.nScrollTop <= 0,
-                  n = d <= 0,
+                  n = v <= 0,
                   r = e.nHubBannerHeight,
                   o = e.nLogInBannerHeight;
-                if (
-                  (a != n &&
-                    ((r = (t = u.GetCurrentHeaderHeights(n)).nHubBannerHeight),
-                    (o = t.nLogInBannerHeight)),
-                  Math.abs(d - e.nScrollTop) < 2)
-                )
-                  return {
-                    nScrollTop: d,
-                    nDisappearingHeaderTop: e.nDisappearingHeaderTop,
-                    nHubBannerHeight: r,
-                    nLogInBannerHeight: o
-                  };
-                var i = d > e.nScrollTop,
-                  l = e.nSteamNavHeaderHeight + r + e.nMobileNavBannerHeight,
-                  s =
-                    (i && l < d && u.state.bControlBarIsCollapsed) ||
-                    !!e.modalEvent
-                      ? -1 * l
-                      : 0,
-                  c = la();
+                a != n &&
+                  ((r = (t = m.GetCurrentHeaderHeights(n)).nHubBannerHeight),
+                  (o = t.nLogInBannerHeight));
+                var i = v - e.nScrollTop,
+                  l = Math.max(0, e.nAccumScrollUp - i),
+                  s = Math.max(0, e.nAccumScrollDown + i),
+                  c = e.nDisappearingHeaderTop,
+                  u = e.nDisappearingHeaderTop < 0;
+                80 < s && (u = !(s = l = 0)),
+                  (100 < l || n) && ((s = l = 0), (u = !1)),
+                  m.state.bControlBarIsCollapsed || (u = !1),
+                  e.modalEvent && (u = !0);
+                var d,
+                  p = e.nSteamNavHeaderHeight + r + e.nMobileNavBannerHeight;
                 return (
-                  c && (c.style.transform = "translateY(" + s + "px)"),
+                  (c = u ? -1 * p : 0) === e.nDisappearingHeaderTop ||
+                    ((d = la()) &&
+                      (d.style.transform = "translateY(" + c + "px)")),
                   {
-                    nScrollTop: d,
-                    nDisappearingHeaderTop: s,
+                    nScrollTop: v,
+                    nAccumScrollUp: l,
+                    nAccumScrollDown: s,
+                    nDisappearingHeaderTop: c,
                     nHubBannerHeight: r,
                     nLogInBannerHeight: o
                   }
@@ -7250,7 +7250,7 @@
           a = t[0],
           n = t[1],
           r = e.eventModel.GetAllTags().filter(function(e) {
-            return Ga.IsAuditAction(e);
+            return La.IsAuditAction(e);
           }),
           o = r.length,
           i = 3 < r.length && a;
@@ -7263,7 +7263,7 @@
           (s = new Array()),
           (c = e.eventModel),
           l.forEach(function(e) {
-            var t = new Ga();
+            var t = new La();
             t.FromString(e),
               s.push(
                 H.createElement(
@@ -7361,13 +7361,13 @@
             )
         );
       }
-      var La = "ModAct",
-        Ga = (function() {
+      var Ga = "ModAct",
+        La = (function() {
           function e() {}
           return (
             (e.prototype.ToModString = function() {
               var e =
-                La +
+                Ga +
                 "_" +
                 this.m_moderator +
                 "_" +
@@ -7385,7 +7385,7 @@
             }),
             (e.prototype.FromString = function(e) {
               var t = e.split("_");
-              if (!t || t[0] !== La) return !1;
+              if (!t || t[0] !== Ga) return !1;
               switch (
                 ((this.m_moderator = Number(t[1])),
                 (this.m_rtWhen = Number(t[2])),
@@ -7426,7 +7426,7 @@
               );
             }),
             (e.IsAuditAction = function(e) {
-              return e.startsWith(La);
+              return e.startsWith(Ga);
             }),
             (e.prototype.SetUpdateSeasonalTags = function(e) {
               return (
@@ -8356,7 +8356,7 @@
                         (i =
                           n.BHasTag("mod_reviewed") &&
                           !n.BHasTag("mod_require_rereview")),
-                        (l = new Ga().SetReviewAction(!i)),
+                        (l = new La().SetReviewAction(!i)),
                         i
                           ? r.push("mod_require_rereview")
                           : (r.push("mod_reviewed"),
@@ -9015,7 +9015,7 @@
                         r.value.tags &&
                           r.value.tags.forEach(function(e) {
                             l.push(e);
-                            var t = new Ga()
+                            var t = new La()
                               .SetUpdateSeasonalTags(e)
                               .ToModString();
                             l.push(t);
@@ -9028,7 +9028,7 @@
                             a.GetAnnouncementGID(),
                             l,
                             i,
-                            new Ga().SetActionChangeEvent(o)
+                            new La().SetActionChangeEvent(o)
                           )
                         ]
                       );
@@ -9221,7 +9221,7 @@
                             n.AnnouncementGID,
                             t,
                             a,
-                            new Ga().SetUpdateSeasonalTags(
+                            new La().SetUpdateSeasonalTags(
                               this.state.bAccept
                                 ? "halloween2019"
                                 : "halloween2019reviewed"
@@ -11936,7 +11936,7 @@
         jn = a("NKJh"),
         kn = a.n(jn),
         Dn = a("RQmk"),
-        Ln = Object(r.a)(function(e) {
+        Gn = Object(r.a)(function(e) {
           var c = e.clanAccountID,
             u = e.gidAnnouncement,
             d = e.partnerEventStore,
@@ -12102,7 +12102,7 @@
                 "div",
                 { className: Tn.a.OtherEvents },
                 r.map(function(e) {
-                  return g.a.createElement(Gn, {
+                  return g.a.createElement(Ln, {
                     key: e.AnnouncementGID,
                     event: e
                   });
@@ -12121,7 +12121,7 @@
             )
           );
         }),
-        Gn = Object(r.a)(function(e) {
+        Ln = Object(r.a)(function(e) {
           var t = e.event,
             a = e.imageURLOverride,
             n = e.openNewWindow,
@@ -14364,7 +14364,7 @@
                     "div",
                     { className: pr.a.SaleItemBrowserContainer },
                     g.a.createElement(
-                      Ge,
+                      Le,
                       { className: pr.a.SaleItemBrowserHeaderContainer },
                       g.a.createElement(
                         "div",
@@ -14907,7 +14907,7 @@
                     style: Qr(n, t)
                   },
                   H.createElement(
-                    Ge,
+                    Le,
                     { className: cr.a.SaleSectionTabContainer },
                     H.createElement(
                       "div",
@@ -15090,7 +15090,7 @@
                   y.a,
                   null,
                   H.createElement(
-                    Lr,
+                    Gr,
                     {
                       className: Object(W.a)(
                         cr.a["CustomStyle_" + e.jsondata.sale_vanity_id],
@@ -15143,7 +15143,7 @@
                       "div",
                       { className: cr.a.SaleHeaderContainer },
                       e.jsondata.sale_header_overlay &&
-                        H.createElement(Gr, null)
+                        H.createElement(Lr, null)
                     ),
                     H.createElement(
                       "div",
@@ -15260,7 +15260,7 @@
             (e = Object(z.c)([r.a], e))
           );
         })(H.Component),
-        Lr = (function(t) {
+        Gr = (function(t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (e.m_refBackgroundPanel = H.createRef()), e;
@@ -15308,7 +15308,7 @@
             e
           );
         })(H.Component),
-        Gr = (function(e) {
+        Lr = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -15939,9 +15939,9 @@
               }
               return t;
             }),
-            (e.prototype.LoadCapsules = function(G) {
+            (e.prototype.LoadCapsules = function(L) {
               return (
-                void 0 === G && (G = 0),
+                void 0 === L && (L = 0),
                 Object(z.b)(this, void 0, void 0, function() {
                   var r,
                     o,
@@ -15970,7 +15970,7 @@
                     j,
                     k,
                     D,
-                    L;
+                    G;
                   return Object(z.e)(this, function(e) {
                     switch (e.label) {
                       case 0:
@@ -16300,7 +16300,7 @@
                           )),
                           (m = !1),
                           (v = d.length),
-                          0 < (h = this.GetRowsToShow(G)) &&
+                          0 < (h = this.GetRowsToShow(L)) &&
                             !s &&
                             "store" === Object(Y.e)() &&
                             ((_ =
@@ -16423,8 +16423,8 @@
                               ? [3, 18]
                               : [4, cn.GetSaleTags()]);
                       case 17:
-                        (L = e.sent()),
-                          (D = L.map(function(e) {
+                        (G = e.sent()),
+                          (D = G.map(function(e) {
                             return {
                               url: e.url,
                               localized_link_capsule: void 0,
@@ -16672,8 +16672,8 @@
                                 style: {},
                                 className: Tn.a.OtherEvents
                               },
-                              H.createElement(Gt.a, { event: t }),
-                              H.createElement(Gn, {
+                              H.createElement(Lt.a, { event: t }),
+                              H.createElement(Ln, {
                                 event: t,
                                 openNewWindow: !0,
                                 appInfo: o.hide_prices
@@ -16789,7 +16789,7 @@
                   if (v.show_as_carousel) (S = f), (C = y);
                   else if (0 == this.state.nShowAdditionalRows && 0 < S) {
                     for (var O = 0, w = 0; O < S; O++) {
-                      if ((w += G = Math.min(_[O % _.length], p)) > b.length)
+                      if ((w += L = Math.min(_[O % _.length], p)) > b.length)
                         break;
                     }
                     S = Math.max(2, O);
@@ -16799,17 +16799,17 @@
                     k < b.length;
                     D++
                   ) {
-                    for (var L = 0; (0 == S || L < S) && k < b.length; L++) {
-                      var G = Math.min(_[L % _.length], p),
-                        A = Math.min(G, b.length - k);
-                      A < G && 0 === L && (G = Math.max(2, A));
-                      var N = G - A,
+                    for (var G = 0; (0 == S || G < S) && k < b.length; G++) {
+                      var L = Math.min(_[G % _.length], p),
+                        A = Math.min(L, b.length - k);
+                      A < L && 0 === G && (L = Math.max(2, A));
+                      var N = L - A,
                         B =
                           N % 2 != 0
                             ? "minmax(0, 0.5fr) repeat(" +
-                              (G - 1) +
+                              (L - 1) +
                               ", minmax(0, 1fr)) minmax(0, 0.5fr)"
-                            : "repeat(" + G + ", minmax(0, 1fr))",
+                            : "repeat(" + L + ", minmax(0, 1fr))",
                         M = null,
                         R = null;
                       if (0 < N)
@@ -16829,12 +16829,12 @@
                         H.createElement(
                           "div",
                           {
-                            key: "Row_" + L,
+                            key: "Row_" + G,
                             className: Object(W.a)(
                               V.a.SaleSectionContainer,
                               cr.a.SaleSectionContainer
                             ),
-                            style: { gridTemplateColumns: 1 < G ? B : null }
+                            style: { gridTemplateColumns: 1 < L ? B : null }
                           },
                           M,
                           b.slice(k, k + A),
@@ -17371,7 +17371,7 @@
                           eventModel: e,
                           partnerEventStore: eo
                         }),
-                        otherEventRow: g.a.createElement(Ln, {
+                        otherEventRow: g.a.createElement(Gn, {
                           clanAccountID: e.clanSteamID.GetAccountID(),
                           gidAnnouncement: e.AnnouncementGID,
                           partnerEventStore: eo
@@ -17574,7 +17574,7 @@
                   { className: ro.EventsSummariesCtn },
                   n.slice(0, e).map(function(t) {
                     var e =
-                      1 === n.length && 500 < window.screen.width ? An : Gn;
+                      1 === n.length && 500 < window.screen.width ? An : Ln;
                     return g.a.createElement(e, {
                       key: t.GID,
                       event: t,
@@ -18292,8 +18292,8 @@
         jo = Oo(va),
         ko = Oo(ao),
         Do = Oo(lo),
-        Lo = Oo(an),
-        Go = Oo(ho);
+        Go = Oo(an),
+        Lo = Oo(ho);
     },
     ZCZY: function(e, t, a) {
       e.exports = { BreadContainer: "breadcrumbs_BreadContainer_3jswb" };
