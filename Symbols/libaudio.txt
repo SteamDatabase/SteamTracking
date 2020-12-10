@@ -11,6 +11,7 @@
  CDbgFmtSafeImplT<false>::CDbgFmtSafeImplT(char const*, ...)
  CDbgFmtSafeImplT<true>::CDbgFmtSafeImplT(DbgFmtFatalMsgTag_t*, StringView)
  CDbgFmtSafeImplT<true>::CDbgFmtSafeImplT(StringView)
+ CVProfile_ExitScope
  CValidator::ClaimArrayMemory(void*)
  CValidator::ClaimMemory(void*)
  CValidator::IsClaimed(void*)
@@ -219,7 +220,6 @@
  R typeinfo name for IValidate
  SteamThreadTools::CThreadMutex::CThreadMutex()
  SteamThreadTools::CThreadMutex::~CThreadMutex()
- SteamVProf::CVProfNode::ExitScope()
  T AudioSinkList
  T CAudioController::BIsDormant()
  T CAudioController::CAudioController()
@@ -671,7 +671,6 @@
  T FreeAudioDevice
  T GetMilesFunctionsList()
  T InterfaceReg::InterfaceReg(void* (*)(), char const*)
- T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)20, false, 4>::~CVProfScope()
  T Sys_GetProcAddress(CSysModule*, char const*)
  T Sys_LoadModule(char const*, Sys_Flags)
  T Sys_UnloadModule(CSysModule*)

@@ -3379,8 +3379,8 @@ Make a new Friend on Steam by emailing a gift to someone you know."
 "Steam_LibrariesLabel"	"Content Libraries"
 "Steam_DownloadRestrictionsLabel"	"Download Restrictions"
 
-"Steam_ServerBrowserPingRateLabel"	"In-Game server browser: Max pings / minute"
-"Steam_ServerBrowserPingRateInfo"	"If you experience connection problems while browsing game servers, try lowering this value."
+"Steam_ServerBrowserPingRateLabel"	"Server Browser Pings / Minute"
+"Steam_ServerBrowserPingRateInfo"	"Connection problems while browsing game servers?  Try lowering this value."
 "Steam_ServerBrowserPingRateDefault"	"Automatic (%PingsPerMin%)"
 
 "Steam_TextFilterSettingLabel"									"Chat Filtering"
@@ -4620,6 +4620,14 @@ Set a category for these games to help you find them quickly and organize your L
 
 "Steam_Settings_Streaming_PIN_Title" "Set Steam Link Security Code"
 "Steam_Settings_Streaming_PIN_Text" "Set a numeric PIN code that must be entered on the Steam Link each time to stream from this computer:"
+
+"Steam_Settings_ShareIPNetworking_Label" "Steam Networking"
+"Steam_Settings_ShareIPNetworking_Info" "Allow games using Steam Networking to share my IP address for a faster connection"
+"Steam_Settings_ShareIPNetworking_Default" "Default"
+"Steam_Settings_ShareIPNetworking_Always" "Always"
+"Steam_Settings_ShareIPNetworking_FriendsOnly" "Friends Only"
+"Steam_Settings_ShareIPNetworking_Never" "Never"
+"Steam_Settings_ShareIPNetworking_URL" "Learn More"
 
 "SteamUI_StreamingIntro_Title"		"Welcome to Steam Remote Play"
 "SteamUI_StreamingIntro"			"You are about to run this game on another computer and play it here using Steam Remote Play."

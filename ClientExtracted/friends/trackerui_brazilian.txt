@@ -544,7 +544,7 @@
 "controller_wii"									"Wii Remote"
 "controller_apple"									"Controle para dispositivos Apple"
 "controller_android"								"Controle para Android"
-"controller_switch_pro"								"Nintendo Switch Pro Controller"
+"controller_switch_pro"								"Controle Pro do Nintendo Switch"
 "controller_switch_joycon_pair"						"Par de Joy-Con de Nintendo Switch"
 "controller_mobile_touch"							"Controle por toque do Steam Link"
 

@@ -33,6 +33,6 @@ public:
     virtual unknown_ret GetHostedDedicatedServerAddress(SteamDatagramHostedAddress*) = 0;
     virtual unknown_ret CreateHostedDedicatedServerListenSocket(int, int, SteamNetworkingConfigValue_t const*) = 0;
     virtual unknown_ret GetGameCoordinatorServerLogin(SteamDatagramGameCoordinatorServerLogin*, int*, void*) = 0;
-    virtual unknown_ret ConnectP2PCustomSignaling(ISteamNetworkingConnectionCustomSignaling*, SteamNetworkingIdentity const*, int, SteamNetworkingConfigValue_t const*) = 0;
-    virtual unknown_ret ReceivedP2PCustomSignal(void const*, int, ISteamNetworkingCustomSignalingRecvContext*) = 0;
+    virtual unknown_ret ConnectP2PCustomSignaling(ISteamNetworkingConnectionSignaling*, SteamNetworkingIdentity const*, int, SteamNetworkingConfigValue_t const*) = 0;
+    virtual unknown_ret ReceivedP2PCustomSignal(void const*, int, ISteamNetworkingSignalingRecvContext*) = 0;
 };

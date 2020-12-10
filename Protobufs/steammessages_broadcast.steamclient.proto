@@ -80,7 +80,6 @@ message CBroadcast_WatchBroadcast_Request {
 	optional fixed64 steamid = 1 [(description) = "broadcaster steamID."];
 	optional fixed64 existing_broadcast_id = 2 [(description) = "broadcast session ID (optional, rejoin if specified)."];
 	optional fixed64 viewer_token = 3 [(description) = "viewer token received from last WatchRequest call, from browser storage."];
-	optional uint32 client_ip = 4;
 	optional uint32 client_cell = 5;
 	optional .EBroadcastWatchLocation watch_location = 6 [default = k_EBroadcastWatchLocation_Invalid];
 	optional bool is_webrtc = 7;

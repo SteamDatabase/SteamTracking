@@ -536,7 +536,7 @@
 "controller_unknown"								"Nieznany kontroler"
 "controller_steamcontroller_unknown"				"Steam Controller"
 "controller_steamcontroller_gordon" 				"Steam Controller"
-"controller_generic"								"Standardowy gamepad"
+"controller_generic"								"Standardowy kontroler"
 "controller_xbox360"								"Kontroler Xbox 360"
 "controller_xboxone"								"Kontroler Xbox One"
 "controller_ps3"									"Kontroler PlayStation 3"

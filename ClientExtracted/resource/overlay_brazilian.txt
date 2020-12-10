@@ -42,7 +42,7 @@
 "Steam_Settings_Library_DisableCommunityContent_Title" "Desativar conteúdo da comunidade"
 "Steam_Settings_Library_DisableCommunityContent_Desc" "Impede o carregamento automático de conteúdo da comunidade ao abrir os detalhes de um jogo."
 "Steam_Settings_Library_DisableCommunityContent_Disabled_Desc" "Ativado pelo modo de economia de dados.\n\nImpede o carregamento automático de conteúdo da comunidade ao abrir os detalhes de um jogo."
-"Steam_Settings_Library_IconInGameList_Title" "Exibir ícones dos jogos na coluna à esquerda"
+"Steam_Settings_Library_IconInGameList_Title" "Exibir ícones à esquerda dos nomes"
 
 
 "Overlay_WebBrowserTitle"	"Navegador dentro do jogo"

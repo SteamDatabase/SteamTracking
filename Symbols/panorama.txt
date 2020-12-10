@@ -947,6 +947,7 @@
  CGLSetParameter
  CGLTexImageIOSurface2D
  CGOpenGLDisplayMaskToDisplayID
+ CVProfile_ExitScope
  CatchAndWriteMiniDumpForVoidPtrFn
  CreateVideoPlayer
  D AutoReloadFailedLayoutReloads::pchEvent
@@ -3785,13 +3786,7 @@
  SteamThreadTools::CThreadSpinLock::Lock(unsigned int) volatile
  SteamThreadTools::CThreadSyncObject::Wait(unsigned int)
  SteamThreadTools::CThreadSyncObject::~CThreadSyncObject()
- SteamVProf::CVProfNode::EnterScope(void*)
- SteamVProf::CVProfNode::ExitScope()
- SteamVProf::CVProfNode::GetSubNode(char const*, int, EVProfBugdetGroup, int)
- SteamVProf::CVProfNode::MarkFrame()
- SteamVProf::CVProfNode::Reset()
- SteamVProf::CVProfile::GetFrameTimeOutsideBudgetGroup_Recursive(SteamVProf::CVProfNode*, EVProfBugdetGroup)
- SteamVProf::CVProfile::OutputReport(int, char const*, int)
+ SteamVProf::CVProfile::MarkFrame(char const*)
  StringAfterPrefix
  T AES_set_decrypt_key
  T AES_set_encrypt_key
@@ -10409,12 +10404,13 @@
  T KeyValues::MergeFromBuffer(StringView, CUtlBuffer&, KeyValuesTextParser*)
  T KeyValues::MergeFromBuffer(StringView, StringView, KeyValuesTextParser*)
  T KeyValues::ReadToken(CUtlBuffer&, bool&, char, KeyValuesTextParser*, bool&)
- T KeyValues::RecursiveMergeFromBuffer(char const*, CUtlBuffer&, KeyValuesTextParser*, bool)
+ T KeyValues::RecursiveMergeFromBuffer(CUtlBuffer&, KeyValuesTextParser*, bool)
  T KeyValues::RemoveEverything()
  T KeyValues::RemoveSubKey(KeyValues*)
  T KeyValues::UsesEscapeSequences(bool, bool)
  T KeyValues::deleteThis()
  T KeyValues::~KeyValues()
+ T KeyValuesTextParser::InitBuffer(int)
  T KeyValuesTextParser::KeyValuesTextParser(bool, int)
  T KeyValuesTextParser::Pop()
  T KeyValuesTextParser::ReportError(StringView, CUtlBuffer const&)
@@ -10504,18 +10500,6 @@
  T SteamThreadTools::CThreadSpinLock::~CThreadSpinLock()
  T SteamThreadTools::CValidatableThread::SleepForValidate()
  T SteamThreadTools::CValidatableThread::WakeFromValidate()
- T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)1, false, 4>::~CVProfScope()
- T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)10, false, 4>::~CVProfScope()
- T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)12, false, 4>::~CVProfScope()
- T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)13, false, 4>::~CVProfScope()
- T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)16, false, 4>::~CVProfScope()
- T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)19, false, 4>::~CVProfScope()
- T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)20, false, 4>::~CVProfScope()
- T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)5, false, 4>::~CVProfScope()
- T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)6, false, 4>::~CVProfScope()
- T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)7, false, 4>::~CVProfScope()
- T SteamVProf::CVProfileThreadEntry::OnFrameCompleted()
- T SteamVProf::CVProfileThreadEntry::OnNewFrameEntered()
  T Sys_GetFactory(CSysModule*)
  T Sys_GetProcAddress(CSysModule*, char const*)
  T Sys_LoadModule(char const*, Sys_Flags)
@@ -17447,6 +17431,7 @@
  b g_pClientMusic
  b g_pClientNetworkDeviceManager
  b g_pClientNetworkingSockets
+ b g_pClientNetworkingSocketsSerialized
  b g_pClientNetworkingUtils
  b g_pClientParentalSettings
  b g_pClientParties
@@ -18265,6 +18250,7 @@
  r extra_pool_slop
  r first_pool_slop
  r fourbppswaptable
+ r g_szLoggerVprofNode
  r illByte
  r jpeg_zigzag_order
  r jpeg_zigzag_order2

@@ -277,6 +277,8 @@ message CMsgSteamDatagramGameserverSessionRequest {
 	optional fixed32 server_connection_id = 8;
 	optional uint32 network_config_version = 6;
 	optional uint32 protocol_version = 7;
+	optional string platform = 9;
+	optional string build = 10;
 }
 
 message CMsgSteamDatagramGameserverSessionEstablished {
@@ -378,6 +380,8 @@ message CMsgSteamDatagramP2PSessionRequestBody {
 	optional uint32 protocol_version = 8;
 	optional uint32 network_config_version = 9;
 	optional fixed32 unused_public_ip = 10;
+	optional string platform = 12;
+	optional string build = 13;
 }
 
 message CMsgSteamDatagramP2PSessionRequest {

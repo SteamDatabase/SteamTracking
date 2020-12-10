@@ -1,8 +1,6 @@
 __TEXT
 __text
 __TEXT
-?
-?
 __stubs
 __TEXT
 __stub_helper
@@ -16,6 +14,7 @@ __unwind_info
 __TEXT
 __eh_frame
 __TEXT
+82
 __DATA
 @
 
@@ -212,8 +211,6 @@ Assertion Failed: pPool->m_SpaceUsed < 0xFFFF
 Symbol table grew beyond unsigned short.  Time to upgrade UtlSymId_t for the symbol type or look for unnecessary spam in the tables.
 Assertion Failed: (unsigned)elem <= (unsigned)m_Size
 Assertion Failed: IsValidIndex(elem)
-Assertion Failed: m_pParent
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/vprof.h
 Assertion Failed: (elem == Count()) || IsValidIndex(elem)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utldict.h
 m_Memory
@@ -278,11 +275,11 @@ Assertion failed: length > k_cchMaxString
 Assertion Failed: s_bAllowStaticSymbolTable
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlsymbol.cpp
 s_pSymbolTable
-E
+v
+*
 @
 @
 
-4
 =
 @
 =

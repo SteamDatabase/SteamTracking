@@ -735,8 +735,6 @@ enum EMsg {
 	k_EMsgMarketingMessageUpdate = 4216;
 	k_EMsgChatServerRouteFriendMsg = 4219;
 	k_EMsgAMTicketAuthRequestOrResponse = 4220;
-	k_EMsgAMVerifyDepotManagementRights = 4222;
-	k_EMsgAMVerifyDepotManagementRightsResponse = 4223;
 	k_EMsgAMAddFreeLicense = 4224;
 	k_EMsgAMValidateEmailLink = 4231;
 	k_EMsgAMValidateEmailLinkResponse = 4232;

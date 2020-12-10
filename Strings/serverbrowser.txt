@@ -32,22 +32,20 @@ __mod_init_func
 __DATA
 __const
 __DATA
-0,"
-0,"
+P,"
+P,"
 __cfstring
 __DATA
 __data
 __DATA
 __thread_vars
 __DATA
-9V,
-9V,
+YV,
+YV,
 __thread_bss
 __DATA
-`V,
 __bss
 __DATA
-`Z,
 __common
 __DATA
 H
@@ -88,7 +86,6 @@ x
 h
 /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
 &
-0
 )
 15CCallbackManualI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
 9CCallbackI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
@@ -810,6 +807,7 @@ N4vgui9CIMEPanelE
 N4vgui11InputDialogE
 N4vgui5LabelE
 10CUtlVectorIN4vgui5Label10TImageInfoE10CUtlMemoryIS2_EE
+N4vgui17ListPanelCheckBoxE
 N4vgui18CTypingJumpHandler17ITypingJumpClientE
 N4vgui17ListPanelInteriorE
 27ListPanelColumnSelectButton
@@ -1065,8 +1063,6 @@ com.valvesoftware.steam.ipctool
 ipcserver restart: expected: %d, got: %d
 StopJob
 CreateInterface
-Assertion Failed: m_pParent
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/vprof.h
 Assertion Failed: 0
 Steam_BGetCallback
 Steam_FreeLastCallback
@@ -2749,6 +2745,8 @@ MessageBox.ButtonHeight
 Command
 command
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/controls/Panel.cpp
+{
+}
 OnScreenSizeChanged
 oldwide
 oldtall
@@ -2879,6 +2877,7 @@ MouseReleased
 MouseFocusTicked
 Invalidate
 Move
+0
 A
 D
 H
@@ -2910,6 +2909,7 @@ m_PanelKeyBindingMapPool
 Assertion Failed: nIndex < ( unsigned int )m_list.Count()
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlhandletable.h
 Assertion Failed: scheme
+true
 ProgressBar
 progress
 continuous
@@ -3218,10 +3218,7 @@ Assertion Failed: filesystem
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/KeyValues.cpp
 You should clear the KeyValues instance before calling this function or call MergeFromFile instead.
 "
-{
 KeyValues::RecursiveSaveToFile: TODO, missing code for TYPE_COLOR.
-}
-0
 :
 
 ]
@@ -3229,7 +3226,6 @@ GetIntFromString() did not get correct peCS parameter
 GetUint64FromString() did not get correct peCS parameter
 GetFloatFromString() did not get correct peCS parameter
 can't convert uint64 to int32 (data loss)
-true
 false
 can't convert int64 to uint64 (negative number)
 RGBA: %.2X %.2X %.2X %.2X
@@ -3345,7 +3341,11 @@ s_pSymbolTable
 ,
 ,
 ,
-#,
+,
+J(
+(
+(
+(
 (
 (
 (
@@ -3365,10 +3365,11 @@ p
 p
 0
 p
+]
+l'
 0
 p
 
-_
 $
 @
 @
@@ -3385,10 +3386,10 @@ Hc
 (
 (
 (
-L95fs'
-L95@f'
-'
-'
+(
+(
+(
+L95
 Hc
 ?
 ?
@@ -3405,16 +3406,17 @@ Hc
 ?
 ?
 ?
-N$
-<$
+{$
+L$
 "
-]$
+2$
 3
-"$
+R$
 D
-3$
-.$
-!$
+$
+A$
+4$
+/$
 $
 $
 $
@@ -3432,13 +3434,20 @@ $
 $
 $
 @
-^#
+U#
+a#
 
 
-x
-"
-"
-C
+
+
+
+
+
+
+`
+!
+!
+!
 
 
 
@@ -3446,14 +3455,23 @@ d
 :
 
 
+
+
+
+
+
+
 d
 &
 &
 d
+
 t=
 =
 =
+R
 @
+"
 uV%
 
 
@@ -3510,10 +3528,10 @@ d
 @
 =
 @
+R
 @
 @
-l
-Z
+H
 @
 @
 @

@@ -189,7 +189,7 @@
 "Friends_ViewSteamIDPage"				"瀏覽 Steam 個人檔案"
 "Friends_ViewFacebookIDPage"			"檢視 Facebook 頁面"
 "Friends_Tooltip_GroupOfficer"		"群組幹部"
-"Friends_Tooltip_GroupModerator"		"群組板務"
+"Friends_Tooltip_GroupModerator"		"群組管理員"
 
 "Friends_InviteFriendToGroup"			"邀請加入群組"
 "Friends_InviteToGroupConfirmation_Title"	"好友 - 已傳送邀請"

@@ -58,7 +58,7 @@ message CMsgClientP2PConnectionInfo {
 	optional fixed64 steam_id_src = 2;
 	optional uint32 app_id = 3;
 	optional bytes candidate = 4;
-	optional fixed64 connection_id_src = 5;
+	optional fixed64 legacy_connection_id_src = 5;
 	optional bytes rendezvous = 6;
 }
 

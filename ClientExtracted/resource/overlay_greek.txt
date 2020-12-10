@@ -210,7 +210,7 @@
 "Overlay_Delete_Screenshot_Error" "Παρουσιάστηκε ένα σφάλμα κατά τη διαγραφή της φωτογραφίας. Παρακαλούμε δοκιμάστε ξανά αργότερα."
 "Overlay_Tag_As_Potential_Spoiler" "Μαρκάρισμα ως πιθανό spoiler"
 "Overlay_Publish_NeedWorkshopLegalAgreementAcceptance_Title" "Νομική συμφωνία εργαστηρίου Steam"
-"Overlay_Publish_NeedWorkshopLegalAgreementAcceptance_Desc" "Πρέπει να αποδεχθείτε τη νεότερη νομική συμφωνία εργαστηρίου πριν δημοσιεύσετε πλήρως το αντικείμενό σας."
+"Overlay_Publish_NeedWorkshopLegalAgreementAcceptance_Desc" "Πρέπει να αποδεχθείτε τη νεότερη Νομική Συμφωνία Εργαστηρίου πριν δημοσιεύσετε πλήρως το αντικείμενό σας."
 "Overlay_Publish_NeedWorkshopLegalAgreementAcceptance_ViewItem" "Προβολή αντικειμένου"
 
 "Overlay_Share"						"Κοινοποίηση στο Facebook"

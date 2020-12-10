@@ -218,17 +218,17 @@ Công đoạn này nên hoàn thành dưới một phút."
 "SteamUI_JoinDialog_SharedLicenseLocked_OwnerText" "Thư viện chia sẻ của bạn hiện đang được %borrower% dùng. Nếu bạn chơi ngay bây giờ thì %borrower% sẽ nhận được một thông báo yêu cầu thoát ra."
 "SteamUI_JoinDialog_SharedLicenseLocked_BorrowerText" "Hiện không thể dùng trò chơi chia sẻ này. Xin vui lòng thử lại sau hoặc mua trò chơi này cho thư viện của bạn."
 
-"SteamUI_JoinDialog_KickSessions_Text" "Bạn đang đăng nhập trên một máy tính khác đang chơi \"%existing_app%\".\nChạy \"%launching_app%\" ở đây sẽ ngắt kết nối phiên hoạt động kia khỏi Steam."
+"SteamUI_JoinDialog_KickSessions_Text" "Ngắt kết nối phiên hoạt động khác đang chơi %dots%"
 "SteamUI_JoinDialog_KickSessions_Error" "Không thể ngắt kết nối các phiên khác đang sử dụng %game%"
 
 "SteamUI_JoinDialog_VerifyingFiles_Error" "Không thể xác thực các tập tin đã được đăng ký cho %game%. Việc xác thực nội dung là bắt buộc."
 "SteamUI_JoinDialog_CreateProcess_Error" "Không thể khởi động %game%:\n\n%detail%"
 
 "SteamUI_JoinDialog_OpenVRStartupFailure" "Không thể khởi động %game% ở chế độ VR. (Lỗi: %error%)"
-"SteamUI_JoinDialog_OpenVRWaitingForQuit" "Đang chờ %quitting_game% thoát ra..."
+"SteamUI_JoinDialog_OpenVRWaitingForQuit" "Đang chờ %quitting_game% thoát ra %dots%"
 
-"SteamUI_JoinDialog_UpdatingAppInfo" "Đang cập nhật thiết lập ..."
-"SteamUI_JoinDialog_UpdatingAppTicket" "Đang cập nhật phiếu ..."
+"SteamUI_JoinDialog_UpdatingAppInfo" "Đang cập nhật thiết lập %dots%"
+"SteamUI_JoinDialog_UpdatingAppTicket" "Đang cập nhật phiếu %dots%"
 
 "SteamUI_JoinDialog_TimedTrial_Error" "Không thể khởi động %game% dưới dạng dùng thử giới hạn. (Lỗi: %error%)"
 
@@ -478,6 +478,7 @@ Công đoạn này nên hoàn thành dưới một phút."
 "Steam_ShowDestinationOptions"	"Chọn lối tắt được hiển thị"
 "Steam_MustRestartToTakeEffect"			"Các lựa chọn này sẽ không có tác dụng cho đến khi\nbạn khởi động lại Steam."
 "Steam_LanguageSelect"				"Chọn ngôn ngữ hiển thị cho Steam (yêu cầu khởi động lại Steam)"
+"Steam_SteamChinaLanguageSelect"	"Chỉ có thể dùng Steam bản tiếng Trung giản thể"
 "Steam_SelectSkinToUse"				"Chọn giao diện mà bạn muốn Steam sử dụng (cần khởi động lại Steam)"
 "Steam_CreateShortcut_Title"			"Steam - Tạo lối tắt"
 "Steam_CreateShortcut_Info"			"Một lối tắt đã được tạo và đặt trên màn hình desktop của bạn."
@@ -3349,6 +3350,16 @@ Cuộc thử nghiệm beta đã kết thúc - xin vui lòng khởi động lại
 "Steam_InstallAborted_InfoAppUnreleased"	"Chưa thể cài %game%, vì nó chưa được phát hành."
 "Steam_InstallAborted_InfoAppNoDemo"		"Không thể cài %game% , vì đây là demo, và bạn hiện sở hữu bản đầy đủ của sản phẩm này. Xin vui lòng cài bản đầy đủ của trò chơi."
 
+"Steam_Startup_SteamChinaRequiredTitle"					"Yêu cầu Steam China"
+"Steam_Startup_GetSteamChina"						"%gamename% hiện đã có mặt qua Steam China, vui lòng truy cập đường dẫn phía dưới để cài phiên bản đó."
+"Steam_Startup_RunSteamChina"						"%gamename% hiện đã có mặt qua Steam China, vui lòng khởi động Steam China để nạp trò chơi."
+"Steam_Startup_SteamChinaImportedUninstall"			"%gamename% đã được nạp vào Steam China, bạn giờ có thể thoải mái gỡ cài đặt trình khởi chạy này."
+"Steam_Startup_LauncherDeprecated"					"%gamename% giờ được vận hành qua Steam China, phiên bản này không còn được hỗ trợ và sẽ thoát."
+"Steam_Startup_ImportGameFromLauncherTitle"			"Nạp trò chơi"
+"Steam_Startup_ImportGameFromLauncherMsg"			"Bạn có muốn nạp %gamename% vào Steam China? Sau đó, bạn có thể thoải mái gỡ cài đặt trình khởi chạy cũ."
+
+"Steam_Download_SteamChina"							"Tải Steam China"
+
 "Steam_ValidateGame_GameRunning"	"Xin vui lòng thoát bất kỳ trò chơi hoặc công cụ nào đang chạy trước khi thử xác thực các tệp lưu trên máy."
 
 "Steam_RegionLabel"	"Khu vực tải xuống"
@@ -3371,14 +3382,12 @@ Cuộc thử nghiệm beta đã kết thúc - xin vui lòng khởi động lại
 "Steam_SettingsInGameScreenshotFolder"	"Thư mục ảnh chụp màn hình"
 "Steam_SettingsInGameTitle"	"Lớp phủ Steam"
 
-"SteamUI_JoinDialog_PreparingToPlay1" 	"Đang chuẩn bị chạy %game%."
-"SteamUI_JoinDialog_PreparingToPlay2" 	"Đang chuẩn bị chạy %game%.."
-"SteamUI_JoinDialog_PreparingToPlay3" 	"Đang chuẩn bị chạy %game%..."
+"SteamUI_JoinDialog_PreparingToPlay" 	"Đang chuẩn bị chạy %game% %dots%"
 "SteamUI_JoinDialog_Title"		"%game% - Steam"
 "SteamUI_JoinDialog_Updating_Title" 	"Cập nhật %game%"
 "SteamUI_JoinDialog_Ready_Title"	"Sẵn sàng - %game%"
 "SteamUI_JoinDialog_NoName_Title" 	"Steam"
-"SteamUI_JoinDialog_InstallScriptInfo"	"Đang thực thi lần chạy đầu tiên...\n\nĐang cài: %stepname% (bước %step% trên %steptotal%)"
+"SteamUI_JoinDialog_InstallScriptInfo"	"Đang thực thi lần chạy đầu tiên %dots% \n\nĐang cài: %stepname% (bước %step% trên %steptotal%)"
 
 
 "SteamUI_GameRequires_NTFS_Detail"	"Trò chơi bạn đang cài yêu cậu một ổ cứng với hệ thống tệp NTFS và\nkhông thể cài trên một hệ thống tệp FAT32. Để biết thêm thông tin xin vui lòng xem\nbài viết hỗ trợ ở đường dẫn bên dưới."
@@ -4111,6 +4120,7 @@ Cuộc thử nghiệm beta đã kết thúc - xin vui lòng khởi động lại
 "Steam_AppUpdateError_48"		"quá giới hạn giờ chơi cho phép"
 "Steam_AppUpdateError_49"		"Tệp Steam bị hỏng"
 "Steam_AppUpdateError_50"		"thiếu tệp nội dung"
+"Steam_AppUpdateError_51"		"thiết lập công cụ tương thích thất bại"
 
 
 "steam_subnav_featured"		"Đặc sắc"
@@ -4212,7 +4222,7 @@ Cuộc thử nghiệm beta đã kết thúc - xin vui lòng khởi động lại
 "Steam_TimedTrial_Over" "Thời gian dùng thử của bạn đã kết thúc"
 "Steam_TimedTrial_CloseNow" "Trò chơi giờ sẽ đóng"
 "Steam_TimedTrial_Enjoy" "Chúc bạn chơi thử vui vẻ"
-"Steam_TimedTrial_Offline" "Phiên chơi thử mất kết nối với Steam"
+"Steam_TimedTrial_Offline" "Phiên chơi thử mất kết nối"
 "Steam_TimedTrial_Minutes" "Thời gian chơi còn lại: %minutes% phút"
 "Steam_TimedTrial_Hours" "Thời gian chơi còn lại: %hours% giờ %minutes% phút"
 
@@ -4726,6 +4736,9 @@ Cuộc thử nghiệm beta đã kết thúc - xin vui lòng khởi động lại
 
 "Steam_VacBanOnAccount"		"Lệnh cấm VAC trên tài khoản"
 "Steam_NoVacBanOnAccount"	"Không có lệnh cấm VAC trên tài khoản"
+
+"Steam_NeedToRestart"		"Cần khởi động lại"
+"Steam_NeedToRestartDifferentClientLauncher" "Một phiên bản khác của Steam trên máy tính này đang cố khởi động.\n\nĐể chạy nó, bạn đầu tiên phải thoát khỏi phiên bản này của Steam."
 
 "Steam_ClientBrowserAuth_AllowBrowserAuth" "Cho phép trình duyệt web tại desktop tự động đăng nhập vào trang\nSteam (cần phải khởi động lại để áp dụng thay đổi này)"
 

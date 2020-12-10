@@ -8,7 +8,6 @@
  B SteamThreadTools::g_SuspendResumeLock
  B SteamThreadTools::g_nCurThreadSuspendCount
  B SteamThreadTools::g_pCurThread
- B SteamVProf::CVProfNode::s_iCurrentUniqueNodeID
  B SteamVProf::g_mutexProfileDump
  B g_AllocTrackMutex
  B g_CrashHandler
@@ -265,6 +264,7 @@
  T CUtlVector<CHandlerContext*, CUtlMemory<CHandlerContext*> >::GrowVector(int)
  T CUtlVector<CHandlerContext*, CUtlMemory<CHandlerContext*> >::Remove(int)
  T CUtlVector<CHandlerContext*, CUtlMemory<CHandlerContext*> >::~CUtlVector()
+ T CVProfile_ExitScope
  T CValObject::ClaimMemoryBlock(void*, unsigned long)
  T CValObject::Init(char const*, void*, char const*, CValObject*, CValObject*)
  T CValidator::ClaimArrayMemory(void*)
@@ -329,15 +329,17 @@
  T SteamThreadTools::InitMainThread()
  T SteamVProf::CVProfManager::AddProfileForThread(SteamVProf::CVProfile*, unsigned int, _opaque_pthread_t*)
  T SteamVProf::CVProfManager::~CVProfManager()
+ T SteamVProf::CVProfNode::CVProfNode(SteamVProf::CVProfile*, char const*, SteamVProf::CVProfNode*, EVProfBugdetGroup)
  T SteamVProf::CVProfNode::EnterScope(void*)
  T SteamVProf::CVProfNode::ExitScope()
- T SteamVProf::CVProfNode::GetSubNode(char const*, int, EVProfBugdetGroup, int)
+ T SteamVProf::CVProfNode::GetSubNode(char const*, EVProfBugdetGroup)
  T SteamVProf::CVProfNode::Reset()
- T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)13, false, 4>::~CVProfScope()
- T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)20, false, 4>::~CVProfScope()
+ T SteamVProf::CVProfNode::~CVProfNode()
  T SteamVProf::CVProfile::AddBudgetGroupName(EVProfBugdetGroup, int, char const*)
  T SteamVProf::CVProfile::CVProfile()
  T SteamVProf::CVProfile::CreateBudgetGroups()
+ T SteamVProf::CVProfile::EnterScope(char const*, EVProfBugdetGroup, void*)
+ T SteamVProf::CVProfile::ExitScope()
  T SteamVProf::CVProfile::FreeNodes_R(SteamVProf::CVProfNode*)
  T SteamVProf::CVProfile::Term()
  T SteamVProf::CVProfile::~CVProfile()

@@ -42,7 +42,7 @@
 "Steam_Settings_Library_DisableCommunityContent_Title" "Dezactivează conținutul comunitar"
 "Steam_Settings_Library_DisableCommunityContent_Desc" "Previne încărcarea automată a conținutului comunitar atunci când sunt vizualizate informațiile jocului."
 "Steam_Settings_Library_DisableCommunityContent_Disabled_Desc" "Activat de modul pentru lățime de bandă scăzută.\n\nPrevine încărcarea automată a conținutului comunitar atunci când sunt vizualizate informațiile jocului."
-"Steam_Settings_Library_IconInGameList_Title" "Afișează pictogramele jocurilor în coloana stângă"
+"Steam_Settings_Library_IconInGameList_Title" "Afișează pictogramele jocurilor în\ncoloana stângă"
 
 
 "Overlay_WebBrowserTitle"	"Browser web în joc"

@@ -65,16 +65,16 @@ rohu obrazovky. Chcete-li použít službu Steam, klepněte na její ikonu prav�
 "Steam_trayHint" "Služba Steam je spuštěna v oznamovací oblasti. Chcete-li spustit
 nebo ukončit klienta služby Steam, klikněte na jeho ikonu pravým tlačítkem."
 
-"Steam_SubscribeUserInfo" "Zadejte své křestní jméno a příjmení přesně dle vzoru na Vaší kreditní kartě."
+"Steam_SubscribeUserInfo" "Zadejte své křestní jméno a příjmení přesně dle vzoru na Vaší platební kartě."
 "Steam_EmailAddress" "E-mailová adresa"
 "Steam_EmailAddressVerification" "(pro zaslání potvrzení o nákupu a potvrzení o platbě)"
 "Steam_FirstName" "Křestní jméno"
 "Steam_LastName" "Příjmení"
-"Steam_SubscribeCardInfo" "Zadejte číslo karty a datum konce platnosti dle údajů na vaší kreditní kartě."
-"Steam_CreditCardType" "Typ kreditní karty"
-"Steam_CreditCardNumber" "Číslo kreditní karty %cardtype%"
+"Steam_SubscribeCardInfo" "Zadejte číslo karty a datum konce platnosti přesně dle vzoru na Vaší platební kartě."
+"Steam_CreditCardType" "Typ platební karty"
+"Steam_CreditCardNumber" "Číslo platební karty %cardtype%"
 "Steam_CreditCardExpiration" "Datum konce platnosti karty"
-"Steam_SubscribeBillingInfo" "Zadejte svoji adresu dle údajů na vyúčtování kreditní karty."
+"Steam_SubscribeBillingInfo" "Zadejte svoji adresu přesně dle vzoru z výpisu účtu."
 "Steam_City" "Město"
 "Steam_StateOrProvince" "Stát nebo kraj"
 "Steam_Country" "Země"
@@ -88,7 +88,7 @@ nebo ukončit klienta služby Steam, klikněte na jeho ikonu pravým tlačítkem
 Tato operace zabere jenom okamžik."
 "Steam_SubscribeCompleteInfo" "Děkujeme vám! Zakoupení titulu %s1 bylo dokončeno. \n\nV Knihovně her nyní můžete poklepat na hru, kterou chcete hrát (nebo klepnout pravým tlačítkem na název hry a potom na tlačítko „Hrát“ v nabídce.)"
 "Steam_PreorderCompleteInfo" "Děkujeme Vám! Předobjednávka titulu %s1 byla dokončena. \n\nHru si budete moci zahrát v okamžiku, kdy bude oficiálně vydána!"
-"Steam_SubscribeFailedInfo"	"Váš nákup nebyl dokončen. Poskytnuté \núdaje o kreditní kartě byly odmítnuty.\n\nNa vaši adresu byl odeslán e-mail s \npodrobnostmi. Chcete-li zadat odlišné údaje o \nkreditní kartě, proveďte nákup znovu."
+"Steam_SubscribeFailedInfo"	"Váš nákup nebyl dokončen. Poskytnuté \núdaje o platební kartě byly zamítnuty.\n\nNa Vaši adresu byl odeslán e-mail \ns podrobnostmi. Chcete-li zadat odlišné údaje \no platební kartě, proveďte nákup znovu."
 
 "Steam_ErrorPasswordNotSet" "Heslo nebylo úspěšně nastaveno.\nŠpatně jste odpověděli na tajnou otázku, nebo zadaný účet neexistuje."
 "Steam_ErrorPasswordTooShort" "Nové heslo musí obsahovat alespoň 8 znaků."
@@ -222,17 +222,17 @@ Tato operace zabere jenom okamžik."
 "SteamUI_JoinDialog_SharedLicenseLocked_OwnerText" "Vaše sdílená knihovna je v současné době používána uživatelem %borrower%. Začnete-li nyní hrát, obdrží uživatel %borrower% upozornění, že je načase skončit."
 "SteamUI_JoinDialog_SharedLicenseLocked_BorrowerText" "Tato sdílená hra je v současné době nedostupná. Zkuste to prosím znovu později nebo si tuto hru zakupte do své knihovny."
 
-"SteamUI_JoinDialog_KickSessions_Text" "Na Vašem účtu je na jiném počítači spuštěna aplikace „%existing_app%“.\nPokud spustíte aplikaci „%launching_app%“ na tomto počítači, služba Steam odpojí všechny ostatní relace."
+"SteamUI_JoinDialog_KickSessions_Text" "Probíhá odpojování další herní relace%dots%"
 "SteamUI_JoinDialog_KickSessions_Error" "Nepodařilo se odpojit jinou relaci hry %game%"
 
 "SteamUI_JoinDialog_VerifyingFiles_Error" "Nepodařilo se ověřit podepsané soubory hry %game%. Obsah je však nutné ověřit."
 "SteamUI_JoinDialog_CreateProcess_Error" "Nepodařilo se zahájit proces hry %game% :\n\n%detail%"
 
 "SteamUI_JoinDialog_OpenVRStartupFailure" "Hru %game% se nepodařilo spustit v režimu virtuální reality. (Chyba: %error%)"
-"SteamUI_JoinDialog_OpenVRWaitingForQuit" "Čeká se na ukončení hry %quitting_game%..."
+"SteamUI_JoinDialog_OpenVRWaitingForQuit" "Čeká se na ukončení hry %quitting_game%%dots%"
 
-"SteamUI_JoinDialog_UpdatingAppInfo" "Probíhá aktualizace konfigurace..."
-"SteamUI_JoinDialog_UpdatingAppTicket" "Probíhá aktualizace tiketu..."
+"SteamUI_JoinDialog_UpdatingAppInfo" "Probíhá aktualizace konfigurace%dots%"
+"SteamUI_JoinDialog_UpdatingAppTicket" "Probíhá aktualizace tiketu%dots%"
 
 "SteamUI_JoinDialog_TimedTrial_Error" "Zkušební verzi hry %game% se nepodařilo spustit. (Chyba: %error%)"
 
@@ -360,7 +360,7 @@ Tato operace zabere jenom okamžik."
 
 "Steam_ChoosePaymentMethod"			"Vyberte způsob platby."
 "Steam_PaymentMethod"				"Způsob platby"
-"Steam_PayWithCreditCard"			"Kreditní karta"
+"Steam_PayWithCreditCard"			"Platební karta"
 "Steam_PayWithPayPal"				"PayPal"
 "Steam_IAlreadyOwnThisProduct"		"Tento produkt již vlastním"
 "Steam_Working_PurchasingProduct"		"Probíhá nákup..."
@@ -369,7 +369,7 @@ Tato operace zabere jenom okamžik."
 "Steam_Working_GetFinalPrice"		"Zjišťování koncové ceny..."
 "Steam_PurchaseFailedTitle"			"Steam – Chyba"
 "Steam_PurchaseFailedMessage"			"Nákup se nepodařilo dokončit kvůli chybě při zpracování\n vaší transakce. Zkuste to znovu později."
-"Steam_CVV2_Info"					"Zadejte bezpečnostní číslo své kreditní karty."
+"Steam_CVV2_Info"					"Zadejte bezpečnostní číslo své platební karty."
 "Steam_CardSecurityInstruction"		"Toto číslo se nachází na zadní straně karty v oblasti s podpisem. Jedná se o poslední tři číslice (po číslu účtu)."
 "Steam_Working_ContactingSvr"		"Hledá se server…"
 "Steam_PayPalIntroToBrowser"		"Transakce %provider% jsou ověřovány prostřednictvím webové stránky společnosti %provider%. Klepnutím na tlačítko dole otevřete webový prohlížeč a zahajte transakci."
@@ -424,9 +424,9 @@ Tato operace zabere jenom okamžik."
 "Steam_ErrorDataInvalid_Title"			"Steam"
 "Steam_PurchaseUserInfoInvalid"			"K pokračování je nutné vyplnit všechna pole."
 "Steam_PurchaseUserEmailInvalid"		"Je vyžadována platná e-mailová adresa."
-"Steam_CreditCardInfoInvalid"			"Zadané číslo kreditní karty je neplatné."
-"Steam_CreditCardExpired"			"Platnost zadané kreditní karty vypršela."
-"Steam_CreditCardCVV2Invalid"			"Bezpečnostní číslo kreditní karty musí obsahovat 3 číslice."
+"Steam_CreditCardInfoInvalid"			"Zadané číslo platební karty je neplatné."
+"Steam_CreditCardExpired"			"Platnost zadané platební karty vypršela."
+"Steam_CreditCardCVV2Invalid"			"Bezpečnostní číslo platební karty musí obsahovat 3 číslice."
 "Steam_PurchaseAddressInfoInvalid"		"Je nutné vyplnit všechna pole s adresou."
 "Steam_PurchasePhoneInfoInvalid"		"Zadejte platné telefonní číslo s 10 číslicemi."
 "Steam_PurchasePhoneInfoEmpty"			"K pokračování je nutné vyplnit pole s telefonním číslem."
@@ -482,6 +482,7 @@ Tato operace zabere jenom okamžik."
 "Steam_ShowDestinationOptions"	"Vyberte položky, které chcete zobrazit"
 "Steam_MustRestartToTakeEffect"			"Toto nastavení se použije po\nrestartování služby Steam."
 "Steam_LanguageSelect"				"Vyberte jazyk, který bude služba Steam používat (vyžaduje restart klienta)"
+"Steam_SteamChinaLanguageSelect"	"Klient nelze nastavit do jiného jazyka než zjednodušené čínštiny"
 "Steam_SelectSkinToUse"				"Vyberte vzhled, který má klient služby Steam používat (vyžaduje restart)"
 "Steam_CreateShortcut_Title"			"Steam – Vytvořit zástupce"
 "Steam_CreateShortcut_Info"			"Zástupce byl umístěn na plochu."
@@ -557,7 +558,7 @@ Tato operace zabere jenom okamžik."
 "Steam_PreLoadingDescription"	"Zvolili jste předběžné objednání hry %game%. Služba Steam zpracovává předobjednávky ve třech snadných krocích:"
 "Steam_PreLoading1"				"1. Předběžné stažení obsahu hry"
 "Steam_PreLoading1Detail"		"Stáhněte si hru bez jakýchkoliv závazků."
-"Steam_PreLoading2"				"2. Dokončení objednávky s pomocí kreditní karty"
+"Steam_PreLoading2"				"2. Dokončení objednávky s pomocí platební karty"
 "Steam_PreLoading2Detail"		"Po stažení obsahu do počítače můžete dokončit svoji objednávku."
 "Steam_PreLoading3"				"3. Hrajte hru v den, kdy vyjde!"
 "Steam_PreLoading3Detail"		"Jakmile bude hra %game% oficiálně vydána, bude vaše kopie hry odemčena a připravena ke hraní."
@@ -1095,7 +1096,7 @@ Tato operace zabere jenom okamžik."
 "Steam_PackageChoice"        "Hra %game% je dostupná k zakoupení jako část dvou různých balíčků. Vyberte balíček, který si přejete objednat."
 "Steam_PackageIncludes"       "Obsahuje:"
 
-"Steam_CreditCardEncrypted"	"Informace o vaší kreditní kartě budou během přenosu a zpracování zašifrovány."
+"Steam_CreditCardEncrypted"	"Informace o Vaší platební kartě budou během přenosu a zpracování zašifrovány."
 
 "SteamUI_AccountNameInUse" "Nepodařilo se vytvořit účet.\nNázev účtu je již používán.\nZkuste to znovu s jiným názvem účtu."
 "Steam_ErrorValidEmailRequired" "Je vyžadována platná e-mailová adresa."
@@ -1316,10 +1317,10 @@ Tato operace zabere jenom okamžik."
 
 "Steam_PreloadCompleteNoPreorderAvailable" "V počítači se nyní nachází uzamčená kopie hry %game%."
 
-"Steam_SubscriptionCancelled_PaymentCardUseLimitHit_Headline" 	"Byl překročen limit pro použití kreditní karty"
-"Steam_SubscriptionCancelled_PaymentCardUseLimitHit_Info" 	"Tato transakce nebyla zpracována, protože uvedená kreditní karta byla ve službě Steam použita pro příliš mnoho transakcí.\n\nToto omezení uplatňujeme pro ochranu našich zákazníků před zneužitím jejich kreditní karty. Pokud narazíme na jakýkoli podvod, podnikneme veškerá možná opatření podle příslušných právních předpisů."
+"Steam_SubscriptionCancelled_PaymentCardUseLimitHit_Headline" 	"Byl překročen limit pro použití platební karty"
+"Steam_SubscriptionCancelled_PaymentCardUseLimitHit_Info" 	"Tato transakce nebyla zpracována, protože uvedená platební karta byla ve službě Steam použita pro příliš mnoho transakcí.\n\nToto omezení uplatňujeme pro ochranu našich zákazníků před zneužitím jejich platební karty. Pokud narazíme na jakýkoli podvod, podnikneme veškerá možná opatření podle příslušných právních předpisů."
 "Steam_SubscriptionCancelled_PaymentCardAlert_Headline" 	"Karta byla odmítnuta"
-"Steam_SubscriptionCancelled_PaymentCardAlert_Info" 		"Tato transakce nebyla zpracována, protože banka, která vydala kartu, zjistila možnost zneužití kreditní karty.\n\nToto omezení uplatňujeme pro ochranu našich zákazníků před zneužitím jejich kreditní karty. Pokud narazíme na jakýkoli podvod, podnikneme veškerá možná opatření podle příslušných právních předpisů."
+"Steam_SubscriptionCancelled_PaymentCardAlert_Info" 		"Tato transakce nebyla zpracována, protože banka, která vydala platební kartu, zjistila možnost jejího zneužití.\n\nToto omezení uplatňujeme pro ochranu našich zákazníků před zneužitím jejich platební karty. Pokud narazíme na jakýkoli podvod, podnikneme veškerá možná opatření podle příslušných právních předpisů."
 
 "Steam_InstallDirectXDialog_Title"	"Steam – jsou vyžadovány nejnovější ovladače DirectX"
 "Steam_InstallDirextX_Info"		"Pro hraní hry %game% je vyžadována nejnovější verze ovladačů DirectX(r) společnosti Microsoft."
@@ -1333,7 +1334,7 @@ Tato operace zabere jenom okamžik."
 "Steam_Error_Preload_Title" "Chyba předběžného zavedení"
 "Steam_PreloadProgress"			"Předběžně staženo %preload_amount%%%"
 
-"Steam_PurchaseFraudWarning" "Zneužití kreditní karty je zločin a společnost Valve spolupracuje se soudními orgány a policií v trestním stíhání nelegálních aktivit."
+"Steam_PurchaseFraudWarning" "Zneužití platební karty je zločin a společnost Valve spolupracuje se soudními orgány a policií v trestním stíhání nelegálních aktivit."
 
 "Steam_CacheValidation_Title"		"Ověřují se soubory služby Steam – %progress%%% hotovo"
 "Steam_ValidatingSteamCaches"		"Ověřují se soubory hry %cache_name% (%cache_number% z %cache_total%)"
@@ -1562,7 +1563,7 @@ Změna se projeví až po odhlášení z OSX."
 "Steam_InstallExplanation_Install"	"Stáhnout a nainstalovat"
 "Steam_InstallExplanation_Title"	"Steam – Nástroje"
 
-"Steam_CreditCardAmexInvalid"	"Bezpečnostní číslo kreditní karty musí obsahovat 4 číslice."
+"Steam_CreditCardAmexInvalid"	"Bezpečnostní číslo platební karty musí obsahovat 4 číslice."
 "Steam_CreditCardDinersInvalid"	"[temp]"
 
 "Steam_UnlockAppStatus1"	"Dešifrování %s1 souborů hry."
@@ -3303,7 +3304,7 @@ Odešlete dárek někomu z vašich známých a vytvořte tak nového přítele.
 "Steam_Subscription_Success_WithShippingCart$purchasetype=regular"	"Vaše objednávka předplatného následujících položek byla úspěšně dokončena.\n\nMůžete hrát kteroukoliv hru z aktuálně vydaných her klepnutím na hru v Knihovně her služby Steam. Současně obdržíte e-mail s potvrzením, jakmile bude odesláno zboží z vaší objednávky. Děkujeme za váš nákup!"
 "Steam_Subscription_Success_WithShippingCart$purchasetype=gift"	"Dárkové balení následujících položek bylo odesláno osobě %giftee%. Jakmile bude odesláno zboží z vaší objednávky, obdržíte e-mail s potvrzením. Děkujeme za váš nákup!"
 "Steam_Subscription_Success_WithShippingCart$purchasetype=unknown"	"Váš nákup následujících položek byl dokončen. Jakmile bude odesláno zboží z vaší objednávky, obdržíte e-mail s potvrzením. Děkujeme za váš nákup!"
-"Steam_SubscriptionCancelled_PaymentCardUseLimitHit_InfoCart" 	"Tato transakce nebyla zpracována, protože uvedená kreditní karta byla ve službě Steam použita pro příliš mnoho transakcí.\n\nToto omezení uplatňujeme pro ochranu našich zákazníků před zneužitím jejich kreditní karty. Pokud narazíme na jakýkoli podvod, podnikneme veškerá možná opatření podle příslušných právních předpisů."
+"Steam_SubscriptionCancelled_PaymentCardUseLimitHit_InfoCart" 	"Tato transakce nebyla zpracována, protože uvedená platební karta byla ve službě Steam použita pro příliš mnoho transakcí.\n\nToto omezení uplatňujeme pro ochranu našich zákazníků před zneužitím jejich platební karty. Pokud narazíme na jakýkoli podvod, podnikneme veškerá možná opatření podle příslušných právních předpisů."
 "Steam_Subscription_ContactSupportCart" "Nastala neočekávaná chyba. Vaše objednávka předplatného následujících položek nebyla dokončena.  \n\nKontaktujte podporu služby Steam pomocí odkazu uvedeného níže."
 "Steam_SubscriptionCancelled_PayPalDeclinedCart" "Váš nákup následujících položek nebyl dokončen.\n\nSpolečnost %provider% nahlásila problém s ověřením. Zkuste nákup provést znovu volbou jiného způsobu platby."
 "Steam_SubscriptionCancelled_PayPalDeclined_InvalidShippingAddressCart"	"Váš nákup následujících položek nebyl dokončen.\n\nSpolečnost %provider% hlásí problém s adresou, která je přiřazena k vašemu účtu společnosti %provider%. Tento problém můžete řešit buď se společností %provider%, nebo zkuste nákup provést znovu volbou jiného způsobu platby."
@@ -3350,6 +3351,16 @@ Odešlete dárek někomu z vašich známých a vytvořte tak nového přítele.
 "Steam_InstallAborted_InfoAppUnreleased"	"Hru %game% zatím není možné nainstalovat, protože ještě nebyla vydána."
 "Steam_InstallAborted_InfoAppNoDemo"		"Hru %game% není možné nainstalovat, protože jde o demoverzi a vy vlastníte plnou verzi tohoto produktu. Nainstalujte prosím plnou verzi této hry."
 
+"Steam_Startup_SteamChinaRequiredTitle"					"Je vyžadován klient služby Steam China"
+"Steam_Startup_GetSteamChina"						"Hra %gamename% je nyní dostupná skrze klienta služby Steam China. Kliknutím na odkaz níže ho nainstalujte."
+"Steam_Startup_RunSteamChina"						"Hra %gamename% je nyní dostupná skrze klienta služby Steam China. Spusťte ho a hru importujte."
+"Steam_Startup_SteamChinaImportedUninstall"			"Hra %gamename% byla importována do klienta služby Steam China. Tento spouštěč můžete nyní bezpečně odinstalovat."
+"Steam_Startup_LauncherDeprecated"					"Hra %gamename% je nyní spouštěna skrze klienta služby Steam China. Tento spouštěč již není podporován a bude ukončen."
+"Steam_Startup_ImportGameFromLauncherTitle"			"Importovat hru"
+"Steam_Startup_ImportGameFromLauncherMsg"			"Jakmile importujete hru %gamename% do klienta služby Steam China, budete moci bezpečně odinstalovat její zastaralý spouštěč."
+
+"Steam_Download_SteamChina"							"Stáhnout službu Steam China"
+
 "Steam_ValidateGame_GameRunning"	"Před pokusem o ověření místních souborů hry ukončete všechny spuštěné hry a nástroje."
 
 "Steam_RegionLabel"	"Oblast pro stahování"
@@ -3372,14 +3383,12 @@ Odešlete dárek někomu z vašich známých a vytvořte tak nového přítele.
 "Steam_SettingsInGameScreenshotFolder"	"Složka se snímky obrazovky"
 "Steam_SettingsInGameTitle"	"Překrytí služby Steam ve hře"
 
-"SteamUI_JoinDialog_PreparingToPlay1" 	"Připravuje se spuštění hry %game%."
-"SteamUI_JoinDialog_PreparingToPlay2" 	"Připravuje se spuštění hry %game%.."
-"SteamUI_JoinDialog_PreparingToPlay3" 	"Připravuje se spuštění hry %game%..."
+"SteamUI_JoinDialog_PreparingToPlay" 	"Připravuje se spuštění hry %game%%dots%"
 "SteamUI_JoinDialog_Title"		"Hra %game% – Steam"
 "SteamUI_JoinDialog_Updating_Title" 	"Aktualizace hry %game%"
 "SteamUI_JoinDialog_Ready_Title"	"Připraveno - %game%"
 "SteamUI_JoinDialog_NoName_Title" 	"Steam"
-"SteamUI_JoinDialog_InstallScriptInfo"	"Probíhá prvotní nastavení...\n\nInstalace: %stepname% (krok %step% ze %steptotal%)"
+"SteamUI_JoinDialog_InstallScriptInfo"	"Probíhá prvotní nastavení%dots% \n\nInstalace: %stepname% (krok %step% ze %steptotal%)"
 
 
 "SteamUI_GameRequires_NTFS_Detail"	"Hra, kterou instalujete, vyžaduje jednotku se systémem souborů NTFS \na nelze ji nainstalovat v systému souborů FAT32. Další informace naleznete \nv níže uvedeném článku podpory."
@@ -3476,7 +3485,7 @@ Odešlete dárek někomu z vašich známých a vytvořte tak nového přítele.
 "SteamUI_SteamGuardCompromised_ChangePasswordButton" "Změnit heslo"
 
 
-"Steam_LockedAccountRecover_Title" "Steam Guard – vyžadována autorizace počítače"
+"Steam_LockedAccountRecover_Title" "Steam Guard – je vyžadována autorizace počítače"
 "Steam_RecoverLocked_Info" "Ahoj! Vidíme, že se přihlašujete z nového počítače."
 "Steam_RecoverLocked_Details" "Jako další bezpečností opatření je nutné, abyste povolili přístup tomuto počítači pomocí speciálního kódu, který jsme právě odeslali na Váš e-mail %s1."
 "Steam_RecoverLocked_UseCode" "Obdržel jsem zprávu od Podpory služby Steam a jsem připraven zadat můj speciální přístupový kód."
@@ -3506,7 +3515,7 @@ Odešlete dárek někomu z vašich známých a vytvořte tak nového přítele.
 "Steam_RecoverLocked_MachineNameBox" "Steam Guard – Název počítače"
 "Steam_RecoverLocked_MachineNameBoxText" "Zadejte prosím alespoň 6 znaků dlouhý název pro tento počítač"
 
-"Steam_GetTwoFactorCode_Title" "Steam Guard – vyžadována autorizace počítače"
+"Steam_GetTwoFactorCode_Title" "Steam Guard – je vyžadována autorizace počítače"
 "Steam_GetTwoFactorCode_EnterCode" "Můj kód funkce Steam Guard je:"
 "Steam_GetTwoFactorCode_EnterCodeDetails" "Jako další bezpečností opatření musíte zadat aktuální kód funkce Steam Guard vygenerovaný mobilním autentifikátorem služby Steam ve Vašem mobilním telefonu."
 "Steam_GetTwoFactorCode_WrongCode" "Je nám líto, ale zadaný kód nesouhlasí."
@@ -4093,7 +4102,7 @@ Odešlete dárek někomu z vašich známých a vytvořte tak nového přítele.
 "Steam_AppUpdateError_30"		"nepodporovaný souborový systém"
 "Steam_AppUpdateError_31"		"poškozené soubory aktualizace"
 "Steam_AppUpdateError_32"		"stahování je vypnuto"
-"Steam_AppUpdateError_33"		"sdílená knihovna zamčena"
+"Steam_AppUpdateError_33"		"sdílená knihovna je uzamčená"
 "Steam_AppUpdateError_34"		"čeká se na nákup"
 "Steam_AppUpdateError_35"		"již se hraje v jiné relaci"
 "Steam_AppUpdateError_36"		"stažené soubory jsou poškozené"
@@ -4111,6 +4120,7 @@ Odešlete dárek někomu z vašich známých a vytvořte tak nového přítele.
 "Steam_AppUpdateError_48"		"byl překročen povolený herní čas"
 "Steam_AppUpdateError_49"		"poškozené soubory klienta služby Steam"
 "Steam_AppUpdateError_50"		"chybějící soubory s obsahem"
+"Steam_AppUpdateError_51"		"nepodařilo se nakonfigurovat nástroj pro kompatibilitu"
 
 
 "steam_subnav_featured"		"Zajímavé položky"
@@ -4212,7 +4222,7 @@ Odešlete dárek někomu z vašich známých a vytvořte tak nového přítele.
 "Steam_TimedTrial_Over" "Vaše zkušební verze vypršela"
 "Steam_TimedTrial_CloseNow" "Hra se nyní ukončí"
 "Steam_TimedTrial_Enjoy" "Užijte si zkušební verzi"
-"Steam_TimedTrial_Offline" "Zkušební verze ztratila spojení se službou Steam"
+"Steam_TimedTrial_Offline" "Zkušební verze ztratila spojení"
 "Steam_TimedTrial_Minutes" "Zbývá %minutes% minut hraní"
 "Steam_TimedTrial_Hours" "Zbývá %hours% hodin a %minutes% minut hraní"
 
@@ -4726,6 +4736,9 @@ Odešlete dárek někomu z vašich známých a vytvořte tak nového přítele.
 
 "Steam_VacBanOnAccount"		"ban(y) ochrany VAC"
 "Steam_NoVacBanOnAccount"	"Žádné bany ochrany VAC"
+
+"Steam_NeedToRestart"		"Je vyžadován restart"
+"Steam_NeedToRestartDifferentClientLauncher" "Na tomto počítači se pokouší spustit jiná verze klienta služby Steam.\n\nPro její spuštění musíte nejprve ukončit tuto verzi."
 
 "Steam_ClientBrowserAuth_AllowBrowserAuth" "Povolit webovým prohlížečům automaticky přihlašovat na stránkách služby Steam\n (vyžaduje restart)"
 

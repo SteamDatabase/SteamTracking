@@ -215,17 +215,17 @@
 "SteamUI_JoinDialog_SharedLicenseLocked_OwnerText" "Tu biblioteca compartida está siendo usada actualmente por %borrower%. Si juegas a alguno de tus juegos ahora, %borrower% recibirá un aviso de que ha llegado el momento de dejarlo."
 "SteamUI_JoinDialog_SharedLicenseLocked_BorrowerText" "Este juego compartido no está disponible actualmente. Por favor, inténtalo de nuevo más tarde o compra este juego para tu propia biblioteca."
 
-"SteamUI_JoinDialog_KickSessions_Text" "Has iniciado sesión en otro equipo que está jugando a \"%existing_app%\".\nIniciar \"%launching_app%\" aquí desconectará la otra sesión de Steam."
+"SteamUI_JoinDialog_KickSessions_Text" "Desconectando la otra sesión en la que se está jugando %dots%"
 "SteamUI_JoinDialog_KickSessions_Error" "Error al desconectar otra sesión que está jugando a %game%"
 
 "SteamUI_JoinDialog_VerifyingFiles_Error" "Error al verificar los archivos firmados de %game%, se requiere la validación del contenido."
 "SteamUI_JoinDialog_CreateProcess_Error" "Error al iniciar el proceso de %game% :\n\n%detail%"
 
 "SteamUI_JoinDialog_OpenVRStartupFailure" "No se ha podido iniciar %game% en RV. (Error: %error%)"
-"SteamUI_JoinDialog_OpenVRWaitingForQuit" "Esperando a que se cierre %quitting_game%..."
+"SteamUI_JoinDialog_OpenVRWaitingForQuit" "Esperando que %quitting_game% cierre %dots%"
 
-"SteamUI_JoinDialog_UpdatingAppInfo" "Actualizando configuración..."
-"SteamUI_JoinDialog_UpdatingAppTicket" "Actualizando ticket..."
+"SteamUI_JoinDialog_UpdatingAppInfo" "Actualizando configuración %dots%"
+"SteamUI_JoinDialog_UpdatingAppTicket" "Actualizando el ticket %dots%"
 
 "SteamUI_JoinDialog_TimedTrial_Error" "No se pudo iniciar %game% como prueba limitada. (Error: %error%)"
 
@@ -475,6 +475,7 @@
 "Steam_ShowDestinationOptions"	"Seleccionar destinos a mostrar"
 "Steam_MustRestartToTakeEffect"			"Esta configuración no será efectiva hasta\nque reinicies Steam."
 "Steam_LanguageSelect"				"Selecciona el idioma de Steam (es necesario reiniciar Steam)"
+"Steam_SteamChinaLanguageSelect"	"Steam solo puede utilizarse en chino simplificado"
 "Steam_SelectSkinToUse"				"Selecciona la apariencia de Steam (es necesario reiniciar Steam)"
 "Steam_CreateShortcut_Title"			"Steam - Crear acceso directo"
 "Steam_CreateShortcut_Info"			"Se ha creado un acceso directo en tu escritorio"
@@ -3345,6 +3346,16 @@ Haz nuevos amigos en Steam enviando un regalo por email a alguien que conozcas."
 "Steam_InstallAborted_InfoAppUnreleased"	"%game% aún no puede instalarse porque todavía no ha sido lanzado."
 "Steam_InstallAborted_InfoAppNoDemo"		"%game% no puede instalarse porque es una demo y dispones de la versión completa. Instala la versión completa de este juego."
 
+"Steam_Startup_SteamChinaRequiredTitle"					"Se requiere Steam China"
+"Steam_Startup_GetSteamChina"						"%gamename% está disponible ahora a través de Steam China, por favor, sigue el enlace de abajo para instalar el cliente."
+"Steam_Startup_RunSteamChina"						"%gamename% está disponible ahora a través de Steam China, por favor, inicia Steam China para importar tu juego."
+"Steam_Startup_SteamChinaImportedUninstall"			"%gamename% se importó a Steam China, ahora puedes desinstalar con seguridad este lanzador."
+"Steam_Startup_LauncherDeprecated"					"%gamename% se ejecuta ahora a través de Steam China, esta instalación ya no es compatible y se cerrará."
+"Steam_Startup_ImportGameFromLauncherTitle"			"Importar juego"
+"Steam_Startup_ImportGameFromLauncherMsg"			"¿Deseas importar %gamename% a Steam China? Entonces, podrás desinstalar con seguridad el lanzador clásico."
+
+"Steam_Download_SteamChina"							"Descargar Steam China"
+
 "Steam_ValidateGame_GameRunning"	"Sal de cualquier juego o herramienta que se esté ejecutando antes de verificar tus archivos locales."
 
 "Steam_RegionLabel"	"Región de descarga"
@@ -3367,14 +3378,12 @@ Haz nuevos amigos en Steam enviando un regalo por email a alguien que conozcas."
 "Steam_SettingsInGameScreenshotFolder"	"Carpeta de capturas de pantalla"
 "Steam_SettingsInGameTitle"	"Interfaz de Steam"
 
-"SteamUI_JoinDialog_PreparingToPlay1" 	"Preparándose para iniciar %game%."
-"SteamUI_JoinDialog_PreparingToPlay2" 	"Preparándose para iniciar %game%.."
-"SteamUI_JoinDialog_PreparingToPlay3" 	"Preparándose para iniciar %game%..."
+"SteamUI_JoinDialog_PreparingToPlay" 	"Preparándose para iniciar %game% %dots%"
 "SteamUI_JoinDialog_Title"		"%game% - Steam"
 "SteamUI_JoinDialog_Updating_Title" 	"Actualizando %game%"
 "SteamUI_JoinDialog_Ready_Title"	"%game% listo"
 "SteamUI_JoinDialog_NoName_Title" 	"Steam"
-"SteamUI_JoinDialog_InstallScriptInfo"	"Realizando configuración inicial...\n\nInstalando: %stepname% (paso %step% de %steptotal%)"
+"SteamUI_JoinDialog_InstallScriptInfo"	"Realizando la configuración inicial %dots% \n\nInstalando: %stepname% (paso %step% de %steptotal%)"
 
 
 "SteamUI_GameRequires_NTFS_Detail"	"El juego que estás instalando requiere un disco duro con el sistema de archivos NTFS y\nno puede instalarse en uno con el sistema FAT32. Para más información,\nconsulta el artículo de soporte en el vínculo que aparece abajo."
@@ -4106,6 +4115,7 @@ Haz nuevos amigos en Steam enviando un regalo por email a alguien que conozcas."
 "Steam_AppUpdateError_48"		"tiempo de juego permitido excedido"
 "Steam_AppUpdateError_49"		"archivos de Steam dañados"
 "Steam_AppUpdateError_50"		"faltan archivos de contenido"
+"Steam_AppUpdateError_51"		"falló la configuración de la herramienta de compatibilidad"
 
 
 "steam_subnav_featured"		"Destacados"
@@ -4207,7 +4217,7 @@ Haz nuevos amigos en Steam enviando un regalo por email a alguien que conozcas."
 "Steam_TimedTrial_Over" "Tu prueba ha terminado"
 "Steam_TimedTrial_CloseNow" "El juego se cerrará ahora"
 "Steam_TimedTrial_Enjoy" "Disfruta de tu prueba"
-"Steam_TimedTrial_Offline" "La prueba de juego ha perdido la conexión a Steam"
+"Steam_TimedTrial_Offline" "La prueba del juego perdió la conexión"
 "Steam_TimedTrial_Minutes" "Quedan %minutes% minutos de tiempo de juego"
 "Steam_TimedTrial_Hours" "Quedan %hours% horas y %minutes% minutos de tiempo de juego"
 
@@ -4721,6 +4731,9 @@ Haz nuevos amigos en Steam enviando un regalo por email a alguien que conozcas."
 
 "Steam_VacBanOnAccount"		"Bloqueo(s) por VAC en la cuenta"
 "Steam_NoVacBanOnAccount"	"Sin bloqueos por VAC en la cuenta"
+
+"Steam_NeedToRestart"		"Reinicio necesario"
+"Steam_NeedToRestartDifferentClientLauncher" "Otra versión de Steam en esta computadora está tratando de iniciarse.\n\nPara ejecutarla primero tienes que salir de esta versión de Steam."
 
 "Steam_ClientBrowserAuth_AllowBrowserAuth" "Permitir que los navegadores del escritorio accedan automáticamente a los sitios de Steam\n (Requiere reiniciar para que se apliquen los cambios)"
 

@@ -14,6 +14,7 @@
  CDbgFmtSafeImplT<true>::CDbgFmtSafeImplT(StringView)
  CFRelease
  CFStringGetCStringPtr
+ CVProfile_ExitScope
  CValidator::ClaimArrayMemory(void*)
  CValidator::ClaimMemory(void*)
  CValidator::IsClaimed(void*)
@@ -76,7 +77,6 @@
  SteamStdLib::CommandLine()
  SteamThreadTools::CThreadMutex::CThreadMutex()
  SteamThreadTools::CThreadMutex::~CThreadMutex()
- SteamVProf::CVProfNode::ExitScope()
  T BCreateDirectory(StringView)
  T CBaseFileSystem::AddLoggingFunc(void (*)(char const*, char const*))
  T CBaseFileSystem::AddMapPackFile(char const*, char const*, SearchPathAdd_t)
@@ -326,8 +326,6 @@
  T FillDataStruct(_finddata_t*)
  T FioGetFileData(StringView, SFioFileData*)
  T InterfaceReg::InterfaceReg(void* (*)(), char const*)
- T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)20, false, 4>::~CVProfScope()
- T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)3, false, 4>::~CVProfScope()
  T Sys_LoadModule(char const*, Sys_Flags)
  T Sys_UnloadModule(CSysModule*)
  T Sys_ValidateModules(CValidator*, bool)

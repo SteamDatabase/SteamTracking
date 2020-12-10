@@ -198,7 +198,7 @@ Potrwa to niecałą minutę."
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=music"    	"Odtwórz"
 "SteamUI_JoinDialog_Cancel_Btn"		"Anuluj"
 "SteamUI_JoinDialog_OverrideThrottle"	"Obejdź obecne ograniczenie przepustowości"
-"SteamUI_JoinDialog_SkipUpdateInfo" "Pomiń aktualizację i zagraj teraz"
+"SteamUI_JoinDialog_SkipUpdateInfo" "Pomiń aktualizację i graj teraz"
 
 "SteamUI_JoinDialog_ProcessingShaderCache" "Przetwarzanie shaderów API Vulkan..."
 "SteamUI_JoinDialog_SkipShaderProcessing" "Pomiń"
@@ -219,17 +219,17 @@ Potrwa to niecałą minutę."
 "SteamUI_JoinDialog_SharedLicenseLocked_OwnerText" "Twoje gry są aktualnie używane przez użytkownika %borrower%. Uruchomienie gry spowoduje, że %borrower% otrzyma powiadomienie o tym, że musi zakończyć rozgrywkę."
 "SteamUI_JoinDialog_SharedLicenseLocked_BorrowerText" "Ta współdzielona gra jest obecnie niedostępna. Spróbuj ponownie później lub zakup tę grę do własnej biblioteki."
 
-"SteamUI_JoinDialog_KickSessions_Text" "Twoje konto jest już zalogowane na innym komputerze grającym w „%existing_app%”.\nUruchomienie „%launching_app%” na tym komputerze spowoduje rozłączenie drugiej sesji ze Steam."
+"SteamUI_JoinDialog_KickSessions_Text" "Rozłączanie innej sesji już w grze%dots%"
 "SteamUI_JoinDialog_KickSessions_Error" "Błąd odłączania sesji gry %game%"
 
 "SteamUI_JoinDialog_VerifyingFiles_Error" "Nie udało się zweryfikować podpisanych plików dla %game%, wymagana jest walidacja treści."
 "SteamUI_JoinDialog_CreateProcess_Error" "Nie udało się rozpocząć procesu dla %game%:\n\n%detail%"
 
 "SteamUI_JoinDialog_OpenVRStartupFailure" "Nie udało się uruchomić %game% w trybie VR (błąd: %error%)."
-"SteamUI_JoinDialog_OpenVRWaitingForQuit" "Oczekiwanie na zamknięcie %quitting_game%..."
+"SteamUI_JoinDialog_OpenVRWaitingForQuit" "Oczekiwanie na zamknięcie %quitting_game%%dots%"
 
-"SteamUI_JoinDialog_UpdatingAppInfo" "Aktualizowanie konfiguracji..."
-"SteamUI_JoinDialog_UpdatingAppTicket" "Aktualizowanie tokenu..."
+"SteamUI_JoinDialog_UpdatingAppInfo" "Aktualizowanie konfiguracji%dots%"
+"SteamUI_JoinDialog_UpdatingAppTicket" "Aktualizowanie tokenu%dots%"
 
 "SteamUI_JoinDialog_TimedTrial_Error" "Nie udało się uruchomić %game% jako ograniczonej wersji próbnej (błąd: %error%)."
 
@@ -479,6 +479,7 @@ Potrwa to niecałą minutę."
 "Steam_ShowDestinationOptions"	"Wybierz wyświetlane miejsca docelowe"
 "Steam_MustRestartToTakeEffect"			"Zmiany zostaną zastosowane\npo ponownym uruchomieniu Steam."
 "Steam_LanguageSelect"				"Wybierz język interfejsu Steam (wymaga ponownego uruchomienia Steam)"
+"Steam_SteamChinaLanguageSelect"	"Ze Steam można korzystać tylko w chińskim uproszczonym"
 "Steam_SelectSkinToUse"				"Wybierz skórkę, której ma używać Steam (wymaga ponownego uruchomienia Steam)"
 "Steam_CreateShortcut_Title"			"Steam - utwórz skrót"
 "Steam_CreateShortcut_Info"			"Skrót został utworzony i umieszczony na pulpicie."
@@ -1324,7 +1325,7 @@ Potrwa to niecałą minutę."
 
 "Steam_PurchaseError_AllAppsInSubscriptionAlreadyOwned"	"Posiadasz już wszystkie te gry.\nDostęp do nich możliwy jest przez bibliotekę Steam."
 "SteamUI_ProductRegistrationWizard_Title"	"Aktywacja produktu"
-"Steam_Install_AutoLaunchGame"		"Graj teraz w %game%"
+"Steam_Install_AutoLaunchGame"		"Graj w %game% teraz"
 
 "Steam_UnableToPreload" "Serwery Steam są w tej chwili zbyt zajęte, by obsłużyć więcej pobrań wstępnych %game%.\nSpróbuj ponownie za kilka godzin."
 "Steam_Error_Preload_Title" "Pobieranie wstępne – błąd"
@@ -3337,6 +3338,16 @@ Jeśli będziesz kontynuować, możesz mieć problemy z uruchomieniem gry."
 "Steam_InstallAborted_InfoAppUnreleased"	"Nie można zainstalować gry %game%, gdyż nie miała ona jeszcze premiery."
 "Steam_InstallAborted_InfoAppNoDemo"		"Nie można zainstalować gry %game%, ponieważ jest to wersja demo, a posiadasz już pełną wersję produktu. Zainstaluj pełną wersję gry."
 
+"Steam_Startup_SteamChinaRequiredTitle"					"Wymagany Steam China"
+"Steam_Startup_GetSteamChina"						"%gamename% jest już dostępne poprzez Steam China. Kliknij poniższy link, by zainstalować tego klienta."
+"Steam_Startup_RunSteamChina"						"%gamename% jest już dostępne poprzez Steam China. Uruchom Steam China, by zaimportować swoją grę."
+"Steam_Startup_SteamChinaImportedUninstall"			"%gamename% zostało zaimportowane do Steam China. Możesz teraz bezpiecznie odinstalować ten program uruchamiający."
+"Steam_Startup_LauncherDeprecated"					"%gamename% jest teraz uruchamiane poprzez Steam China. Ta instalacja nie jest już obsługiwana i zostanie zamknięta."
+"Steam_Startup_ImportGameFromLauncherTitle"			"Importuj grę"
+"Steam_Startup_ImportGameFromLauncherMsg"			"Czy chcesz zaimportować %gamename% do Steam China? Po wykonaniu tego działania będziesz w stanie bezpiecznie odinstalować ten starszy program uruchamiający."
+
+"Steam_Download_SteamChina"							"Pobierz Steam China"
+
 "Steam_ValidateGame_GameRunning"	"Zakończ wszystkie uruchomione gry oraz narzędzia przed próbą sprawdzenia integralności plików gry."
 
 "Steam_RegionLabel"	"Region pobierania"
@@ -3359,14 +3370,12 @@ Jeśli będziesz kontynuować, możesz mieć problemy z uruchomieniem gry."
 "Steam_SettingsInGameScreenshotFolder"	"Folder zrzutów ekranu"
 "Steam_SettingsInGameTitle"	"Nakładka Steam"
 
-"SteamUI_JoinDialog_PreparingToPlay1" 	"Przygotowywanie do uruchomienia %game%."
-"SteamUI_JoinDialog_PreparingToPlay2" 	"Przygotowywanie do uruchomienia %game%.."
-"SteamUI_JoinDialog_PreparingToPlay3" 	"Przygotowywanie do uruchomienia %game%..."
+"SteamUI_JoinDialog_PreparingToPlay" 	"Przygotowywanie do uruchomienia %game%%dots%"
 "SteamUI_JoinDialog_Title"		"%game% - Steam"
 "SteamUI_JoinDialog_Updating_Title" 	"Aktualizowanie %game%"
 "SteamUI_JoinDialog_Ready_Title"	"Gotowa - %game%"
 "SteamUI_JoinDialog_NoName_Title" 	"Steam"
-"SteamUI_JoinDialog_InstallScriptInfo"	"Przeprowadzanie pierwszej konfiguracji...\n\nInstalacja: %stepname% (etap %step% z %steptotal%)"
+"SteamUI_JoinDialog_InstallScriptInfo"	"Przeprowadzanie pierwszej konfiguracji%dots%\n\nInstalowanie: %stepname% (etap %step% z %steptotal%)"
 
 
 "SteamUI_GameRequires_NTFS_Detail"	"Instalowana gra wymaga dysku z systemem plików NTFS\ni nie może być zainstalowana na systemie FAT32. Aby przeczytać dalsze informacje, zapoznaj się z\nartykułem Pomocy technicznej Steam, do którego łącze umieszczono poniżej."
@@ -4098,6 +4107,7 @@ Jeśli będziesz kontynuować, możesz mieć problemy z uruchomieniem gry."
 "Steam_AppUpdateError_48"		"przekroczono dozwolony czas gry"
 "Steam_AppUpdateError_49"		"uszkodzone pliki Steam"
 "Steam_AppUpdateError_50"		"brak plików zawartości"
+"Steam_AppUpdateError_51"		"konfiguracja narzędzia zgodności nieudana"
 
 
 "steam_subnav_featured"		"Wyróżnione"
@@ -4199,7 +4209,7 @@ Jeśli będziesz kontynuować, możesz mieć problemy z uruchomieniem gry."
 "Steam_TimedTrial_Over" "Twoja wersja próbna zakończyła się"
 "Steam_TimedTrial_CloseNow" "Gra zostanie teraz zamknięta"
 "Steam_TimedTrial_Enjoy" "Miłej zabawy w wersji próbnej"
-"Steam_TimedTrial_Offline" "Wersja próbna gry utraciła połączenie ze Steam"
+"Steam_TimedTrial_Offline" "Wersja próbna gry utraciła połączenie"
 "Steam_TimedTrial_Minutes" "Pozostały czas rozgrywki: %minutes% min"
 "Steam_TimedTrial_Hours" "Pozostały czas rozgrywki: %hours% godz. i %minutes% min"
 
@@ -4713,6 +4723,9 @@ Jeśli będziesz kontynuować, możesz mieć problemy z uruchomieniem gry."
 
 "Steam_VacBanOnAccount"		"Blokada(-y) VAC na koncie"
 "Steam_NoVacBanOnAccount"	"Brak blokad VAC na koncie"
+
+"Steam_NeedToRestart"		"Wymagany restart"
+"Steam_NeedToRestartDifferentClientLauncher" "Inna wersja Steam próbuje się uruchomić na tym komputerze.\n\nAby ją uruchomić, musisz najpierw wyjść z tej wersji Steam."
 
 "Steam_ClientBrowserAuth_AllowBrowserAuth" "Zezwalaj pulpitowym przeglądarkom internetowym na automatyczne logowanie do stron Steam\n(wymaga ponownego uruchomienia w celu zastosowania zmian)"
 

@@ -92,10 +92,10 @@
 		"textAlignment"		"west"
 		"wrap"		"0"
 	}
-	"URLLabel1"
+	"WebsiteURL"
 	{
 		"ControlName"		"URLLabel"
-		"fieldName"		"URLLabel1"
+		"fieldName"		"WebsiteURL"
 		"xpos"		"25"
 		"ypos"		"138"
 		"wide"		"296"
@@ -106,10 +106,8 @@
 		"enabled"		"1"
 		"tabPosition"		"0"
 		"paintbackground"		"1"
-		"labelText"		"#Steam_SteamPoweredURL"
 		"textAlignment"		"west"
 		"wrap"		"0"
-		"URLText"		"http://www.steampowered.com"
 	}
 	"GreyStrip"
 	{

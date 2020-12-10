@@ -118,7 +118,7 @@
 
 
 "Friends_UserRequestingFriendship_Title"		"Друзі — %friend%"
-"Friends_UserRequestingFriendship_Info"		"%friend% додав вас до своїх друзів."
+"Friends_UserRequestingFriendship_Info"		"Користувач %friend% додав вас до своїх друзів."
 "Friends_AllowUserToSeeMeOnline"				"Дозволити %friend% бачити коли ви в мережі та зв’язуватися з вами."
 "Friends_BlockUserFromSeeingMeOnline"			"Заблокувати цю особу, аби вона не мала змоги бачити вас у мережі і зв’язатися з вами"
 

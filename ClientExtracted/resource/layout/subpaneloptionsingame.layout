@@ -34,6 +34,13 @@
 		TextFilterLabel { controlname=label labeltext="#Steam_TextFilterSettingLabel" wrap=1 style=highlight }
 		TextFilterStatus { controlname=label wrap=1 }
 		TextFilterUpdateSettingURL { controlname=urllabel labeltext="#Steam_TextFilterSettingURL" URLText="steam://url/TextFilterSettings" wrap=1 style=highlight }
+
+		Divider2 { ControlName=Divider	}
+
+		ShareIPNetworkingLabel { ControlName=label labelText=#Steam_Settings_ShareIPNetworking_Label wrap=1 style=highlight }
+		ShareIPNetworkingInfo { ControlName=label labelText=#Steam_Settings_ShareIPNetworking_Info wrap=1 }
+		ShareIPNetworkingURL { ControlName=urllabel labelText=#Steam_Settings_ShareIPNetworking_URL URLText="https://support.steampowered.com/kb/9929-UAFN-9329/" wrap=1 }
+		ShareIPNetworkingCombo { ControlName=combobox fieldName=ShareIPNetworkingCombo editable="0" }
 	}
 	
 	colors
@@ -58,16 +65,16 @@
 	{
 		region { name=box margin-top=10 margin-bottom=20 margin-left=20 margin-right=20 width=max height=max }
 		region { name=top region=box margin-top=10 }
-		region { name=topleft region=top y=130 width=255 margin-right=20 }
-		region { name=topright region=top x=263 width=235 y=131}
+		region { name=topleft region=top y=120 width=255 margin-right=20 }
+		region { name=topright region=top x=263 width=235 y=121}
 		
-		region { name=bottom region=box y=320 }
+		region { name=bottom region=box y=310 }
 		region { name=bottomleft region=bottom width=255 margin-right=20 }
 		region { name=bottomright region=bottom x=263 width=255 }
 		
 		place { controls=TitleLabel region=top }
-		place { controls=DescriptionLabel height=40 width=max region=top start=TitleLabel dir=down margin-top=8 }
-		place { controls=EnableOverlayCheck region=top start=DescriptionLabel dir=down height=20 }
+		place { controls=DescriptionLabel width=max region=top start=TitleLabel dir=down margin-top=8 }
+		place { controls=EnableOverlayCheck region=top start=DescriptionLabel dir=down height=20 margin-top=8 }
 		place [!$OSX] { controls=EnableSCTenfootOverlayCheck region=top start=EnableOverlayCheck dir=down height=20 }
 		place [!$OSX&&!$LINUX] { controls=EnableVRDesktopGameTheaterCheck region=top start=EnableSCTenfootOverlayCheck dir=down height=20 }
 		place { controls=HotKeySelectorLabel,HotKeySelector dir=down spacing=5 width=max region=topleft }
@@ -89,12 +96,19 @@
 		
 		place { control=Divider1 region=bottom width=max }
 
-		place { controls="PingRateLabel" region=bottomright start=Divider1 margin-top=10 width=max dir=down }
-		place { controls="PingRateCombo" region=bottomright start=PingRateLabel margin-top=10 width=235 dir=down height=25 }
-		place { controls="PingRateInfo" region=bottomright start=PingRateCombo margin-top=10 width=235 dir=down }		
-
 		place { controls="TextFilterLabel" region=bottomleft start=Divider1 margin-top=10 width=max dir=down }
 		place { controls="TextFilterStatus" region=bottomleft start=TextFilterLabel margin-top=10 width=235 dir=down height=25 }
 		place { controls="TextFilterUpdateSettingURL" region=bottomleft start=TextFilterStatus margin-top=10 width=235 dir=down }			
+
+		place { controls="PingRateLabel" region=bottomright start=Divider1 margin-top=10 width=max dir=down }
+		place { controls="PingRateInfo" region=bottomright start=PingRateLabel margin-top=5 width=235 dir=down }		
+		place { controls="PingRateCombo" region=bottomright start=PingRateInfo margin-top=5 width=235 dir=down height=25 }
+
+		place { control=Divider2 region=bottom margin-top=100 width=max }
+
+		place { controls="ShareIPNetworkingLabel" region=bottomleft start=Divider2 margin-top=15 width=235 dir=down }
+		place { controls="ShareIPNetworkingInfo" region=bottomleft start=ShareIPNetworkingLabel margin-top=5 width=235 dir=down }		
+		place { controls="ShareIPNetworkingURL" region=bottomleft start=ShareIPNetworkingInfo margin-top=5 width=235 dir=down }
+		place { controls="ShareIPNetworkingCombo" region=bottomright start=Divider2 margin-top=32 width=235 dir=down height=25}
 	}
 }

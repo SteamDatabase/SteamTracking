@@ -222,17 +222,17 @@ Dit duurt niet langer dan een minuut."
 "SteamUI_JoinDialog_SharedLicenseLocked_OwnerText" "Je gedeelde games zijn momenteel in gebruik door %borrower%. Als je nu speelt zal %borrower% een bericht ontvangen dat het tijd is om te stoppen."
 "SteamUI_JoinDialog_SharedLicenseLocked_BorrowerText" "Dit gedeelde spel is momenteel niet beschikbaar. Probeer het later nog eens, of koop dit spel voor jezelf."
 
-"SteamUI_JoinDialog_KickSessions_Text" "Je bent ingelogt op een andere computer waar je \"%existing_app%\" speelt.\nHet starten van \"%launching_app%\" zal de andere Steam-sessie verbreken."
+"SteamUI_JoinDialog_KickSessions_Text" "Verbinding wordt verbroken met andere actieve sessie %dots%"
 "SteamUI_JoinDialog_KickSessions_Error" "Kon andere sessie die %game% speelt niet afbreken"
 
 "SteamUI_JoinDialog_VerifyingFiles_Error" "Ondertekende bestanden voor %game% verifiëren mislukt. Inhoudsvalidatie is vereist."
 "SteamUI_JoinDialog_CreateProcess_Error" "Proces voor %game% starten mislukt:\n\n%detail%"
 
 "SteamUI_JoinDialog_OpenVRStartupFailure" "Het starten van %game% in VR is mislukt. (Fout: %error%)"
-"SteamUI_JoinDialog_OpenVRWaitingForQuit" "Wachten tot %quitting_game% is afgesloten..."
+"SteamUI_JoinDialog_OpenVRWaitingForQuit" "Wachten tot %quitting_game% afsluit %dots%"
 
-"SteamUI_JoinDialog_UpdatingAppInfo" "Configuratie bijwerken ..."
-"SteamUI_JoinDialog_UpdatingAppTicket" "Ticket bijwerken ..."
+"SteamUI_JoinDialog_UpdatingAppInfo" "Configuratie wordt bijgewerkt %dots% "
+"SteamUI_JoinDialog_UpdatingAppTicket" "Ticket wordt bijgewerkt %dots% "
 
 "SteamUI_JoinDialog_TimedTrial_Error" "%game% kon niet opstarten als beperkte proefversie. (Foutmelding: %error%)"
 
@@ -482,6 +482,7 @@ Dit duurt niet langer dan een minuut."
 "Steam_ShowDestinationOptions"	"Selecteer bestemmingen die je wilt weergeven"
 "Steam_MustRestartToTakeEffect"			"Deze instelling wordt pas van kracht wanneer je\nSteam opnieuw opstart."
 "Steam_LanguageSelect"				"Selecteer de taal waarin je Steam wilt gebruiken (herstart vereist)"
+"Steam_SteamChinaLanguageSelect"	"Je kunt Steam enkel in het vereenvoudigd Chinees gebruiken"
 "Steam_SelectSkinToUse"				"Kies het uiterlijk waarin je Steam wilt weergeven (herstart vereist):"
 "Steam_CreateShortcut_Title"			"Steam - Snelkoppeling maken"
 "Steam_CreateShortcut_Info"			"Er is een snelkoppeling gemaakt en op je bureaublad geplaatst."
@@ -3351,6 +3352,16 @@ Maak een nieuwe Steam-vriend door een geschenk naar een bekende te e-mailen."
 "Steam_InstallAborted_InfoAppUnreleased"	"%game% kan nog niet worden geïnstalleerd, omdat dit spel nog niet is uitgebracht."
 "Steam_InstallAborted_InfoAppNoDemo"		"%game% kan niet worden geïnstalleerd, omdat dit een demo is en jij de volledige versie van het product in je bezit hebt. Installeer de volledige versie van het spel."
 
+"Steam_Startup_SteamChinaRequiredTitle"					"Steam China is vereist"
+"Steam_Startup_GetSteamChina"						"%gamename% is nu beschikbaar op Steam China. Je kunt de client voor Steam China installeren via de onderstaande link."
+"Steam_Startup_RunSteamChina"						"%gamename% is nu beschikbaar op Steam China. Start Steam China op om je spel te importeren."
+"Steam_Startup_SteamChinaImportedUninstall"			"%gamename% is geïmporteerd naar Steam China. Je kunt dit lanceerprogramma nu zonder problemen verwijderen."
+"Steam_Startup_LauncherDeprecated"					"%gamename% draait nu via Steam China. Deze geïnstalleerde versie is niet meer ondersteund en zal afsluiten."
+"Steam_Startup_ImportGameFromLauncherTitle"			"Spel importeren"
+"Steam_Startup_ImportGameFromLauncherMsg"			"Wil je %gamename% importeren naar Steam China? Daarna kun je zonder problemen het lanceerprogramma van de oorspronkelijke versie verwijderen."
+
+"Steam_Download_SteamChina"							"Steam China downloaden"
+
 "Steam_ValidateGame_GameRunning"	"Sluit alle actieve spellen of tools af voordat je probeert je lokale bestanden te verifiëren."
 
 "Steam_RegionLabel"	"Downloadregio:"
@@ -3373,14 +3384,12 @@ Maak een nieuwe Steam-vriend door een geschenk naar een bekende te e-mailen."
 "Steam_SettingsInGameScreenshotFolder"	"Screenshotmap"
 "Steam_SettingsInGameTitle"	"De Steam-overlay"
 
-"SteamUI_JoinDialog_PreparingToPlay1" 	"%game% wordt gestart."
-"SteamUI_JoinDialog_PreparingToPlay2" 	"%game% wordt gestart.."
-"SteamUI_JoinDialog_PreparingToPlay3" 	"%game% wordt gestart..."
+"SteamUI_JoinDialog_PreparingToPlay" 	"Opstarten van %game% wordt voorbereid %dots%"
 "SteamUI_JoinDialog_Title"		"%game% - Steam"
 "SteamUI_JoinDialog_Updating_Title" 	"%game% wordt bijgewerkt"
 "SteamUI_JoinDialog_Ready_Title"	"Gereed - %game%"
 "SteamUI_JoinDialog_NoName_Title" 	"Steam"
-"SteamUI_JoinDialog_InstallScriptInfo"	"Eerste gebruik voorbereiden...\n\n%stepname% installeren... (stap %step% van %steptotal%)"
+"SteamUI_JoinDialog_InstallScriptInfo"	"Eerste configuratie aan de gang %dots% \n\nInstalleert nu: %stepname% (stap %step% / %steptotal%)"
 
 
 "SteamUI_GameRequires_NTFS_Detail"	"Voor de game die je wilt installeren is een station met het NTFS-bestandssysteem nodig. Je kunt de game\nniet installeren op het FAT32-bestandssysteem. Ga via de koppeling hieronder naar het\nondersteuningsartikel voor meer informatie."
@@ -4115,6 +4124,7 @@ Stel een categorie in voor dit spel, zodat je het snel kunt vinden en je spellen
 "Steam_AppUpdateError_48"		"toegestane speeltijd overschreden"
 "Steam_AppUpdateError_49"		"Steam-bestanden beschadigd"
 "Steam_AppUpdateError_50"		"inhoudsbestanden ontbreken"
+"Steam_AppUpdateError_51"		"Configuratie van com­pa­ti­bi­li­teitstool mislukt"
 
 
 "steam_subnav_featured"		"Uitgelicht"
@@ -4216,7 +4226,7 @@ Stel een categorie in voor dit spel, zodat je het snel kunt vinden en je spellen
 "Steam_TimedTrial_Over" "Je proefversie is nu beëindigd"
 "Steam_TimedTrial_CloseNow" "Het spel wordt nu afgesloten"
 "Steam_TimedTrial_Enjoy" "Veel plezier met je proefversie"
-"Steam_TimedTrial_Offline" "Proefversie heeft geen verbinding met Steam"
+"Steam_TimedTrial_Offline" "Verbinding van proefversie verbroken"
 "Steam_TimedTrial_Minutes" "Nog %minutes% minuten resterende speeltijd"
 "Steam_TimedTrial_Hours" "Nog %hours% uur en %minutes% minuten speeltijd"
 
@@ -4730,6 +4740,9 @@ Stel een categorie in voor dit spel, zodat je het snel kunt vinden en je spellen
 
 "Steam_VacBanOnAccount"		"VAC-ban(s) op account"
 "Steam_NoVacBanOnAccount"	"Geen VAC-bans op account"
+
+"Steam_NeedToRestart"		"Opnieuw opstarten vereist"
+"Steam_NeedToRestartDifferentClientLauncher" "Een andere versie van Steam op deze computer probeert op te starten.\n\nOm die versie te draaien, moet je eerst deze versie van Steam afsluiten."
 
 "Steam_ClientBrowserAuth_AllowBrowserAuth" "Desktopbrowsers toestaan om automatisch in te loggen op Steam-sites\n (vereist opnieuw starten om wijzigingen toe te passen)"
 

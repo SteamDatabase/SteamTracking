@@ -234,11 +234,11 @@
 "Overlay_CommunityDiscussions_Panel_NumDiscussions" "%num_discussions% スレッドが進行中"
 
 "Overlay_SaveUncompressed" "圧縮されていないコピーを保存する"
-"Overlay_SetScreenshotFolder" "外部スクリーンショットフォルダを選択"
+"Overlay_SetScreenshotFolder" "外部スクリーンショットフォルダーを選択"
 
 
 "Overlay_SetScreenshotFolder_NoDriveRoot" "ドライブのルートを選択することはできません"
-"Overlay_SetScreenshotFolder_InvalidFolder" "有効なスクリーンショットフォルダを選択する必要があります"
+"Overlay_SetScreenshotFolder_InvalidFolder" "有効なスクリーンショットフォルダーを選択する必要があります"
 
 "Overlay_AsyncNotificatoinsRequestedDialog_Title" "通知を許可しますか？"
 "Overlay_AsyncNotificatoinsRequestedDialog_Allow" "通知を許可する"

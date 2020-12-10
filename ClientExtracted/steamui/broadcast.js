@@ -9640,12 +9640,12 @@
         Br = r("uIWk"),
         yr = r("rKv1"),
         gr = r.n(yr),
-        wr = Object(i.observer)(function(n) {
-          var e = n.event,
-            t = !e || !e.jsondata || !e.jsondata.broadcast_item_drops_enabled,
+        wr = Object(i.observer)(function(e) {
+          var n = e.event,
+            t = !n || !n.jsondata || !n.jsondata.broadcast_item_drops_enabled,
             i = Object(d.useRef)(null),
             r = Object(d.useState)(
-              e ? Br.a.GetCreatorHome(e.clanSteamID) : null
+              n ? Br.a.GetCreatorHome(n.clanSteamID) : null
             ),
             a = r[0],
             o = r[1];
@@ -9660,10 +9660,7 @@
                     return Object(h.e)(this, function(e) {
                       switch (e.label) {
                         case 0:
-                          return [
-                            4,
-                            Br.a.LoadCreatorHome(n.event.clanSteamID, r)
-                          ];
+                          return [4, Br.a.LoadCreatorHome(n.clanSteamID, r)];
                         case 1:
                           return (t = e.sent()), r.token.reason || o(t), [2];
                       }
@@ -9674,7 +9671,7 @@
                   }
                 );
               },
-              [e]
+              [n]
             ),
             t || !a || !a.BIsLoaded())
           )
@@ -9682,9 +9679,9 @@
           var s =
             Mt.b.COMMUNITY_BASE_URL +
             "gid/" +
-            e.jsondata.broadcast_item_drops_details_clan_accountid +
+            n.jsondata.broadcast_item_drops_details_clan_accountid +
             "/partnerevents/view/" +
-            e.jsondata.broadcast_item_drops_details_event_gid;
+            n.jsondata.broadcast_item_drops_details_event_gid;
           return c.a.createElement(
             "div",
             { className: gr.a.item_drop_ctn },
@@ -9693,22 +9690,22 @@
               null,
               Object(vt.f)(
                 0 < a.GetName().length
-                  ? e.jsondata.broadcast_item_drops_min_watch_time_minutes %
+                  ? n.jsondata.broadcast_item_drops_min_watch_time_minutes %
                       60 ==
                     0
                     ? "#SalePage_WatchForDrop_Hours_CreatorNamed"
                     : "#SalePage_WatchForDrop_Minutes_CreatorNamed"
-                  : e.jsondata.broadcast_item_drops_min_watch_time_minutes %
+                  : n.jsondata.broadcast_item_drops_min_watch_time_minutes %
                       60 ==
                     0
                   ? "#SalePage_WatchForDrop_Hours_Developer"
                   : "#SalePage_WatchForDrop_Minutes_Developer",
-                e.jsondata.broadcast_item_drops_min_watch_time_minutes % 60 == 0
-                  ? e.jsondata.broadcast_item_drops_min_watch_time_minutes / 60
-                  : e.jsondata.broadcast_item_drops_min_watch_time_minutes,
+                n.jsondata.broadcast_item_drops_min_watch_time_minutes % 60 == 0
+                  ? n.jsondata.broadcast_item_drops_min_watch_time_minutes / 60
+                  : n.jsondata.broadcast_item_drops_min_watch_time_minutes,
                 a.GetName()
               ),
-              Boolean(e.jsondata.broadcast_item_drops_details_clan_accountid) &&
+              Boolean(n.jsondata.broadcast_item_drops_details_clan_accountid) &&
                 c.a.createElement(
                   "a",
                   { href: s, target: Mt.b.IN_CLIENT ? "" : "_blank" },

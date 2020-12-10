@@ -1,6 +1,8 @@
 __TEXT
 __text
 __TEXT
+q
+q
 __stubs
 __TEXT
 __stub_helper
@@ -13,7 +15,7 @@ __TEXT
 __cstring
 __TEXT
 __gcc_except_tab__TEXT
-`M
+\S
 __objc_classname__TEXT
 __objc_methtype
 __TEXT
@@ -57,10 +59,16 @@ __DATA
 H
 __LINKEDIT
 
+
 8
 @loader_path/vgui2_s.dylib
 "
+
 p
+X-
+M
+p
+(Y
 P
 
 8
@@ -107,11 +115,10 @@ h
 8
 /usr/lib/libobjc.A.dylib
 &
->
+pM
 )
-hI
 H
-P5
+`5
 10CUtlString
 10CUtlVectorIN12CFontAmalgam10TFontRangeE10CUtlMemoryIS1_EE
 10CUtlVectorI12CFontAmalgam10CUtlMemoryIS0_EE
@@ -565,8 +572,6 @@ inputContext.m_MouseClickListeners
 inputContext.m_VecPotentialDefaultButtons
 inputContext.m_mapKeyCodeHooks
 g_pInputBase
-Assertion Failed: m_pParent
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/vprof.h
 VGUI_Input005
 VGUI_InputInternal001
 CInputOSX SetCursorPos not implemented
@@ -752,6 +757,7 @@ Spew details about the localized strings we load
 Set Steam client UI language
 VGUI_Localize003
 %language%
+sc_schinese
 schinese
 english
 -all_languages
@@ -781,9 +787,8 @@ m_LocalizationFiles
 m_sLanguage
 m_FastValueLookup
 g_StringTable
-GetClientLauncherType
 HKEY_CURRENT_USER\Software\Valve\Steam\Language
-sc_schinese
+GetClientLauncherType
 NULL
 Tick
 Notifications.PanelPosition
@@ -869,7 +874,11 @@ g_Scheme
 Assertion Failed: elem >= 0 && num >= 0 && INT_MAX - elem >= num
 Assertion Failed: elem + num <= Count()
 CUtlDict
+-pid
+Pid that we should be watching for
+Assertion Failed: m_fdShMemFDSender >= 0
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/src/SerializedSurface.cpp
+/tmp/steam_chrome_overlay_uid%d_spid%s
 Assertion Failed: top >= 0
 Assertion Failed: m_PaintStateStack[top].m_pPanel == pPanel
 ClearSchemeSettings
@@ -886,6 +895,9 @@ SerializedSurface::DrawLine() not yet implemented
 SerializedSurface::DrawPolyLine() not yet implemented
 CSerializedSurface::DrawSetTextureRGBA
 Loading raw RGBA texture with invalid height/width
+Assertion Failed: res > 0
+Assertion Failed: iClientFD != m_mapShMemFD.InvalidIndex()
+Assertion Failed: iRet > 0
 DrawSetSubTextureRGBA called on invalid texture
 DrawSetSubTextureRGBA called on unallocated texture
 DrawSetSubTextureRGBA out of bounds (width)
@@ -1120,7 +1132,6 @@ m_SecondaryQueue[i]._params
 m_DelayedMessageQueue.Element(i)._params
 m_pkvCurrentParams
 IVALIDATE001
-Assertion Failed: m_pvOrigNameAddress
 OnAppShutdown
 m_heap
 VGUI
@@ -1805,7 +1816,6 @@ Seconds
 =
 0
 
-f
 =
 8
 <
@@ -1844,10 +1854,10 @@ P
 
 =
 @
-G
 @
 @
-Y
+t
+V
 @
 @
 @

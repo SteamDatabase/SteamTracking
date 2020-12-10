@@ -220,17 +220,17 @@ Dette bør ta under ett minutt."
 "SteamUI_JoinDialog_SharedLicenseLocked_OwnerText" "Ditt delte bibliotek brukes for øyeblikket av %borrower%. Å spille nå vil sende %borrower% et varsel om at det er på tide å avslutte."
 "SteamUI_JoinDialog_SharedLicenseLocked_BorrowerText" "Dette delte spillet er for øyeblikket utilgjengelig. Vennligst prøv igjen senere eller kjøp spillet til ditt eget bibliotek."
 
-"SteamUI_JoinDialog_KickSessions_Text" "Du er logget inn på en annen datamaskin som allerede spiller \"%existing_app%\".\nOppstart av \"%launching_app%\" her vil frakoble den andre økten fra Steam."
+"SteamUI_JoinDialog_KickSessions_Text" "Frakobler den andre økten som allerede spiller %dots%"
 "SteamUI_JoinDialog_KickSessions_Error" "Kunne ikke koble fra den andre økten som spiller %game%"
 
 "SteamUI_JoinDialog_VerifyingFiles_Error" "Kunne ikke bekrefte signerte filer for %game%, innholdsvalidering er nødvendig."
 "SteamUI_JoinDialog_CreateProcess_Error" "Kunne ikke starte prosess for %game% :\n\n%detail%"
 
 "SteamUI_JoinDialog_OpenVRStartupFailure" "Kunne ikke starte %game% i VR. (Feil: %error%)"
-"SteamUI_JoinDialog_OpenVRWaitingForQuit" "Venter på at %quitting_game% lukkes..."
+"SteamUI_JoinDialog_OpenVRWaitingForQuit" "Venter på at %quitting_game% lukkes %dots%"
 
-"SteamUI_JoinDialog_UpdatingAppInfo" "Oppdaterer konfigurasjon …"
-"SteamUI_JoinDialog_UpdatingAppTicket" "Oppdaterer billett …"
+"SteamUI_JoinDialog_UpdatingAppInfo" "Oppdaterer konfigurasjon %dots%"
+"SteamUI_JoinDialog_UpdatingAppTicket" "Oppdaterer billett %dots%"
 
 "SteamUI_JoinDialog_TimedTrial_Error" "Kunne ikke starte %game% som begrenset prøveversjon. (Feil: %error%)"
 
@@ -480,6 +480,7 @@ Dette bør ta under ett minutt."
 "Steam_ShowDestinationOptions"	"Velg hvilke mål som skal vises"
 "Steam_MustRestartToTakeEffect"			"Denne innstillingen trer ikke i kraft før\ndu har startet Steam på nytt."
 "Steam_LanguageSelect"				"Velg språket du vil at Steam skal bruke (krever at Steam må startes på nytt)"
+"Steam_SteamChinaLanguageSelect"	"Steam kan bare brukes på forenklet kinesisk"
 "Steam_SelectSkinToUse"				"Velg bakgrunnen du vil at Steam skal bruke (krever at Steam må startes på nytt)"
 "Steam_CreateShortcut_Title"			"Steam – lag snarvei"
 "Steam_CreateShortcut_Info"			"En snarvei ble laget og plassert på skrivebordet."
@@ -3347,6 +3348,16 @@ Skaff deg en ny venn på Steam ved å sende en gave til noen du kjenner."
 "Steam_InstallAborted_InfoAppUnreleased"	"%game% kan ikke installeres ennå, da det ikke er utgitt ennå."
 "Steam_InstallAborted_InfoAppNoDemo"		"%game% kan ikke installeres fordi det er en demo, og du eier fullversjonen av produktet. Vennligst installer fullversjonen av produktet."
 
+"Steam_Startup_SteamChinaRequiredTitle"					"Steam China kreves"
+"Steam_Startup_GetSteamChina"						"%gamename% er nå tilgjengelig på Steam China. Følg lenken nedenfor for å installere klienten."
+"Steam_Startup_RunSteamChina"						"%gamename% er nå tilgjengelig på Steam China. Start Steam China for å importere spillet ditt."
+"Steam_Startup_SteamChinaImportedUninstall"			"%gamename% er blitt importert til Steam China. Du kan nå avinstallere dette startprogrammet."
+"Steam_Startup_LauncherDeprecated"					"%gamename% kjøres nå gjennom Steam China. Denne installeringen støttes ikke lenger og vil avsluttes."
+"Steam_Startup_ImportGameFromLauncherTitle"			"Importer spill"
+"Steam_Startup_ImportGameFromLauncherMsg"			"Vil du importere %gamename% til Steam China? Da vil du trygt kunne avinstallere det klassiske startprogrammet."
+
+"Steam_Download_SteamChina"							"Last ned Steam China"
+
 "Steam_ValidateGame_GameRunning"	"Avslutt alle spill eller verktøy som kjører, før du prøver å sjekke dine lokale filer."
 
 "Steam_RegionLabel"	"Nedlastingsregion"
@@ -3369,14 +3380,12 @@ Skaff deg en ny venn på Steam ved å sende en gave til noen du kjenner."
 "Steam_SettingsInGameScreenshotFolder"	"Skjermbildemappe"
 "Steam_SettingsInGameTitle"	"Steam-overlegget"
 
-"SteamUI_JoinDialog_PreparingToPlay1" 	"Gjør klar til å starte %game%."
-"SteamUI_JoinDialog_PreparingToPlay2" 	"Gjør klar til å starte %game% .."
-"SteamUI_JoinDialog_PreparingToPlay3" 	"Gjør klar til å starte %game% ..."
+"SteamUI_JoinDialog_PreparingToPlay" 	"Gjør klar til å starte %game% %dots%"
 "SteamUI_JoinDialog_Title"		"%game% – Steam"
 "SteamUI_JoinDialog_Updating_Title" 	"Oppdaterer %game%"
 "SteamUI_JoinDialog_Ready_Title"	"Klar – %game%"
 "SteamUI_JoinDialog_NoName_Title" 	"Steam"
-"SteamUI_JoinDialog_InstallScriptInfo"	"Utfører førstegangsinstallasjon...\n\nInstallerer: %stepname% (trinn %step% av %steptotal%)"
+"SteamUI_JoinDialog_InstallScriptInfo"	"Utfører førstegangsinstallasjon %dots% \n\nInstallerer: %stepname% (trinn %step% av %steptotal%)"
 
 
 "SteamUI_GameRequires_NTFS_Detail"	"Spillet du installerer krever en disk med NTFS-filsystem og \nkan ikke installeres på et FAT32 filsystem. For mer informasjon se\nhjelpeartikkelen linket nedenfor."
@@ -4110,6 +4119,7 @@ Angi en kategori for dette spillet for å hjelpe deg med å finne det raskt og o
 "Steam_AppUpdateError_48"		"tillatt spilletid overskredet"
 "Steam_AppUpdateError_49"		"skadede Steam-filer"
 "Steam_AppUpdateError_50"		"mangler innholdsfiler"
+"Steam_AppUpdateError_51"		"konfigurasjon av kompatibilitetsverktøy mislyktes"
 
 
 "steam_subnav_featured"		"Utvalgt"
@@ -4211,7 +4221,7 @@ Angi en kategori for dette spillet for å hjelpe deg med å finne det raskt og o
 "Steam_TimedTrial_Over" "Prøveperioden din er over nå"
 "Steam_TimedTrial_CloseNow" "Spillet lukkes nå"
 "Steam_TimedTrial_Enjoy" "Håper du liker prøveversjonen"
-"Steam_TimedTrial_Offline" "Prøveversjonen mistet forbindelse til Steam"
+"Steam_TimedTrial_Offline" "Prøveversjonen mistet forbindelsen"
 "Steam_TimedTrial_Minutes" "%minutes% minutter med spilletid igjen"
 "Steam_TimedTrial_Hours" "%hours% timer og %minutes% minutter med spilletid igjen"
 
@@ -4725,6 +4735,9 @@ Angi en kategori for dette spillet for å hjelpe deg med å finne det raskt og o
 
 "Steam_VacBanOnAccount"		"VAC-utestengelse(r) på konto"
 "Steam_NoVacBanOnAccount"	"Ingen VAC-utestengelser på konto"
+
+"Steam_NeedToRestart"		"Omstart kreves"
+"Steam_NeedToRestartDifferentClientLauncher" "En annen versjon av Steam på denne datamaskinen prøver å starte.\n\nDu må først avslutte denne versjonen av Steam for å kunne kjøre den andre."
 
 "Steam_ClientBrowserAuth_AllowBrowserAuth" "Tillat at skrivebordsnettlesere automatisk logger inn på Steam-nettsteder\n (krever omstart for å tre i kraft)"
 

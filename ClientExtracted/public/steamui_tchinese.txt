@@ -219,17 +219,17 @@ Steam，請在其圖示上按右鍵。"
 "SteamUI_JoinDialog_SharedLicenseLocked_OwnerText" "您的同享收藏庫正由 %borrower% 使用中。現在遊玩將會傳送訊息給 %borrower%，告知他們是時候該結束了。"
 "SteamUI_JoinDialog_SharedLicenseLocked_BorrowerText" "這款共享的遊戲目前無法使用，請稍後再試或自行購買此遊戲。"
 
-"SteamUI_JoinDialog_KickSessions_Text" "您目前已在另一台電腦上登入正在執行「%existing_app%」的帳戶。在這裡啟動「%launching_app%」會中斷其他 Steam 執行中的工作階段。"
+"SteamUI_JoinDialog_KickSessions_Text" "正在中斷另一個在執行 %dots% 的工作階段"
 "SteamUI_JoinDialog_KickSessions_Error" "無法中斷另一個在執行 %game% 的工作階段"
 
 "SteamUI_JoinDialog_VerifyingFiles_Error" "%game% 的已簽章檔案驗證失敗，需要進行內容驗證。"
 "SteamUI_JoinDialog_CreateProcess_Error" "%game% 程序啟動失敗：\n\n%detail%"
 
 "SteamUI_JoinDialog_OpenVRStartupFailure" "%game% 在虛擬實境下啟動失敗。（錯誤：%error%）"
-"SteamUI_JoinDialog_OpenVRWaitingForQuit" "正在等待 %quitting_game% 關閉..."
+"SteamUI_JoinDialog_OpenVRWaitingForQuit" "正在等待 %quitting_game% 退出 %dots%"
 
-"SteamUI_JoinDialog_UpdatingAppInfo" "正在更新設定檔..."
-"SteamUI_JoinDialog_UpdatingAppTicket" "正在更新票證..."
+"SteamUI_JoinDialog_UpdatingAppInfo" "正在更新設定 %dots%"
+"SteamUI_JoinDialog_UpdatingAppTicket" "正在更新票證 %dots%"
 
 "SteamUI_JoinDialog_TimedTrial_Error" "開始限時試玩遊戲 %game% 失敗（錯誤：%error%）"
 
@@ -479,6 +479,7 @@ Steam，請在其圖示上按右鍵。"
 "Steam_ShowDestinationOptions"	"選擇要顯示的目的地"
 "Steam_MustRestartToTakeEffect"			"這項修改須等到下次啟動Steam\n之後才會完成。"
 "Steam_LanguageSelect"				"選擇您希望 Steam 使用的語言（需要重新啟動 Steam）"
+"Steam_SteamChinaLanguageSelect"	"Steam 中國僅支援簡體中文"
 "Steam_SelectSkinToUse"				"選擇您希望 Steam 使用的面板（需要重新啟動 Steam）"
 "Steam_CreateShortcut_Title"			"Steam - 建立捷徑"
 "Steam_CreateShortcut_Info"			"已經於您的桌面上建立了一個捷徑。"
@@ -3346,6 +3347,16 @@ Mac OS X 10.7 或是更高的版本。"
 "Steam_InstallAborted_InfoAppUnreleased"	"尚無法安裝 %game%，因為仍未發行。"
 "Steam_InstallAborted_InfoAppNoDemo"		"無法安裝 %game%，因為這是試玩版，而您擁有產品的完整版。請安裝完整版遊戲。"
 
+"Steam_Startup_SteamChinaRequiredTitle"					"需要 Steam 中國"
+"Steam_Startup_GetSteamChina"						"現在可以透過 Steam 中國遊玩 %gamename%，請依循以下連結安裝該用戶端。"
+"Steam_Startup_RunSteamChina"						"現在可以透過 Steam 中國遊玩 %gamename%，請開啟 Steam 中國以匯入您的遊戲。"
+"Steam_Startup_SteamChinaImportedUninstall"			"%gamename% 已匯入 Steam 中國，現在可以安全地解除安裝此啟動器。"
+"Steam_Startup_LauncherDeprecated"					"%gamename% 現已透過 Steam 中國執行，已不再支援該安裝並會將其退出。"
+"Steam_Startup_ImportGameFromLauncherTitle"			"匯入遊戲"
+"Steam_Startup_ImportGameFromLauncherMsg"			"您希望將 %gamename% 匯入 Steam 中國嗎？之後您便可安全地解除安裝舊版啟動器。"
+
+"Steam_Download_SteamChina"							"下載 Steam 中國"
+
 "Steam_ValidateGame_GameRunning"	"在嘗試驗證您的本機檔案前，請退出所有正在執行的遊戲或工具。"
 
 "Steam_RegionLabel"	"下載區域"
@@ -3358,19 +3369,22 @@ Mac OS X 10.7 或是更高的版本。"
 "Steam_ServerBrowserPingRateDefault"	"自動（%PingsPerMin%）"
 
 "Steam_TextFilterSettingLabel"									"聊天過濾功能"
+"Steam_TextFilterStatus_Enabled"								"目前設為過濾強烈不雅和誹謗字眼"
+"Steam_TextFilterStatus_Enabled_IgnoreFriends"					"目前設為過濾好友除外所有人的強烈不雅和誹謗字眼"
+"Steam_TextFilterStatus_EnabledAllowProfanity"					"目前設為允許強烈不雅字眼，但過濾誹謗字眼"
+"Steam_TextFilterStatus_EnabledAllowProfanity_IgnoreFriends"	"目前設為允許強烈不雅字眼，但過濾好友除外所有人的誹謗字眼"
+"Steam_TextFilterStatus_Disabled"								"目前設為允許強烈不雅和誹謗字眼"
 "Steam_TextFilterSettingURL"									"修改聊天過濾偏好設定"
 
 "Steam_SettingsInGameScreenshotFolder"	"螢幕擷圖資料夾"
 "Steam_SettingsInGameTitle"	"Steam 內嵌介面"
 
-"SteamUI_JoinDialog_PreparingToPlay1" 	"即將啟動 %game%."
-"SteamUI_JoinDialog_PreparingToPlay2" 	"即將啟動 %game%.."
-"SteamUI_JoinDialog_PreparingToPlay3" 	"即將啟動 %game%..."
+"SteamUI_JoinDialog_PreparingToPlay" 	"即將啟動 %game% %dots%"
 "SteamUI_JoinDialog_Title"		"%game% - Steam"
 "SteamUI_JoinDialog_Updating_Title" 	"正在更新 %game%"
 "SteamUI_JoinDialog_Ready_Title"	"準備就緒 - %game%"
 "SteamUI_JoinDialog_NoName_Title" 	"Steam"
-"SteamUI_JoinDialog_InstallScriptInfo"	"進行首次設定...\n\n正在安裝：%stepname% (步驟 %step% / %steptotal%)"
+"SteamUI_JoinDialog_InstallScriptInfo"	"進行首次設定 %dots% \n\n正在安裝：%stepname% (步驟 %step% / %steptotal%)"
 
 
 "SteamUI_GameRequires_NTFS_Detail"	"您要安裝的遊戲需要配備 NTFS 檔案系統的磁碟機，\n且遊戲無法安裝於 FAT32 檔案系統上。如需詳細資訊，請參閱\n下面的支援文章連結。"
@@ -4102,6 +4116,7 @@ Mac OS X 10.7 或是更高的版本。"
 "Steam_AppUpdateError_48"		"已超過允許的遊玩時間"
 "Steam_AppUpdateError_49"		"Steam 檔案毀損"
 "Steam_AppUpdateError_50"		"遺失內容檔案"
+"Steam_AppUpdateError_51"		"相容性工具設定失敗"
 
 
 "steam_subnav_featured"		"精選"
@@ -4203,6 +4218,7 @@ Mac OS X 10.7 或是更高的版本。"
 "Steam_TimedTrial_Over" "您的試玩期現已結束"
 "Steam_TimedTrial_CloseNow" "此遊戲將立即關閉"
 "Steam_TimedTrial_Enjoy" "好好享受試玩"
+"Steam_TimedTrial_Offline" "遊戲試玩失去連線"
 "Steam_TimedTrial_Minutes" "剩下 %minutes% 分鐘遊玩時間"
 "Steam_TimedTrial_Hours" "剩下 %hours% 小時 %minutes% 分鐘遊玩時間"
 
@@ -4716,6 +4732,9 @@ Mac OS X 10.7 或是更高的版本。"
 
 "Steam_VacBanOnAccount"		"此帳戶上的 VAC 封鎖"
 "Steam_NoVacBanOnAccount"	"此帳戶無 VAC 封鎖"
+
+"Steam_NeedToRestart"		"需要重新啟動"
+"Steam_NeedToRestartDifferentClientLauncher" "這台電腦上有另一個版本的 Steam 正在嘗試啟動。\n\n如欲執行，您必須先退出此版本的 Steam。"
 
 "Steam_ClientBrowserAuth_AllowBrowserAuth" "允許桌面網頁瀏覽器自動登入 Steam 網站\n（需要重新啟動以套用）"
 

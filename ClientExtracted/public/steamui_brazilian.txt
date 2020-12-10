@@ -217,17 +217,17 @@ tela. Para acessar o Steam, clique com o botão direito no seu ícone."
 "SteamUI_JoinDialog_SharedLicenseLocked_OwnerText" "A sua biblioteca compartilhada está sendo usada por %borrower%. Ao jogar agora, %borrower% será avisado que está na hora de parar."
 "SteamUI_JoinDialog_SharedLicenseLocked_BorrowerText" "Jogo compartilhado atualmente indisponível. Tente novamente mais tarde ou compre-o para a sua conta."
 
-"SteamUI_JoinDialog_KickSessions_Text" "Você já iniciou a sessão em outro computador, onde \"%existing_app%\" está aberto.\nIniciar \"%launching_app%\" aqui finalizará a outra sessão no Steam."
+"SteamUI_JoinDialog_KickSessions_Text" "Desconectando outra sessão em jogo %dots%"
 "SteamUI_JoinDialog_KickSessions_Error" "Falha ao finalizar sessão com %game% em execução"
 
 "SteamUI_JoinDialog_VerifyingFiles_Error" "Falha ao verificar os arquivos sinalizados de %game%, validação do conteúdo necessária."
 "SteamUI_JoinDialog_CreateProcess_Error" "Falha ao iniciar processo para %game% :\n\n%detail%"
 
 "SteamUI_JoinDialog_OpenVRStartupFailure" "Falha ao iniciar %game% em realidade virtual. (Erro: %error%)"
-"SteamUI_JoinDialog_OpenVRWaitingForQuit" "Esperando o encerramento de %quitting_game%..."
+"SteamUI_JoinDialog_OpenVRWaitingForQuit" "Esperando o encerramento de %quitting_game% %dots%"
 
-"SteamUI_JoinDialog_UpdatingAppInfo" "Atualizando configurações..."
-"SteamUI_JoinDialog_UpdatingAppTicket" "Atualizando ticket..."
+"SteamUI_JoinDialog_UpdatingAppInfo" "Atualizando configurações %dots%"
+"SteamUI_JoinDialog_UpdatingAppTicket" "Atualizando ticket %dots%"
 
 "SteamUI_JoinDialog_TimedTrial_Error" "Falha ao iniciar %game% como teste limitado. (Erro: %error%)"
 
@@ -477,6 +477,7 @@ tela. Para acessar o Steam, clique com o botão direito no seu ícone."
 "Steam_ShowDestinationOptions"	"Selecione destinos para exibir"
 "Steam_MustRestartToTakeEffect"			"Essa opção não surtirá efeito até que\nvocê reinicie o Steam."
 "Steam_LanguageSelect"				"Selecione o idioma desejado para usar o Steam (o Steam será reiniciado)"
+"Steam_SteamChinaLanguageSelect"	"O Steam só pode ser usado em chinês simplificado"
 "Steam_SelectSkinToUse"				"Selecione o visual desejado para o Steam (o Steam será reiniciado)"
 "Steam_CreateShortcut_Title"			"Steam — Criar atalho"
 "Steam_CreateShortcut_Info"			"Um atalho foi criado e posicionado na sua área de trabalho."
@@ -3345,6 +3346,16 @@ a partir de agora, você vai precisar deles pra ter acesso aos seus jogos e outr
 "Steam_InstallAborted_InfoAppUnreleased"	"%game% ainda não pode ser instalado porque ainda não foi lançado."
 "Steam_InstallAborted_InfoAppNoDemo"		"%game% não pode ser instalado porque é uma demonstração e você possui a versão completa do produto. Instale a versão completa do jogo."
 
+"Steam_Startup_SteamChinaRequiredTitle"					"Requer Steam China"
+"Steam_Startup_GetSteamChina"						"%gamename% já está disponível no Steam China. Clique no link abaixo para instalar o cliente."
+"Steam_Startup_RunSteamChina"						"%gamename% já está disponível no Steam China. Inicie o cliente para importar o jogo."
+"Steam_Startup_SteamChinaImportedUninstall"			"%gamename% foi importado para o Steam China. Você já pode desinstalar este inicializador."
+"Steam_Startup_LauncherDeprecated"					"%gamename% deve ser iniciado pelo Steam China. Esta instalação está obsoleta e será encerrada."
+"Steam_Startup_ImportGameFromLauncherTitle"			"Importar jogo"
+"Steam_Startup_ImportGameFromLauncherMsg"			"Deseja importar %gamename% para o Steam China? Após a importação, o inicializador dedicado poderá ser desinstalado."
+
+"Steam_Download_SteamChina"							"Baixar o Steam China"
+
 "Steam_ValidateGame_GameRunning"	"Feche quaisquer jogos ou ferramentas em execução antes de tentar verificar os arquivos locais."
 
 "Steam_RegionLabel"	"Região de download"
@@ -3367,14 +3378,12 @@ a partir de agora, você vai precisar deles pra ter acesso aos seus jogos e outr
 "Steam_SettingsInGameScreenshotFolder"	"Pasta de capturas"
 "Steam_SettingsInGameTitle"	"Painel Steam"
 
-"SteamUI_JoinDialog_PreparingToPlay1" 	"Preparando para iniciar %game%."
-"SteamUI_JoinDialog_PreparingToPlay2" 	"Preparando para iniciar %game%.."
-"SteamUI_JoinDialog_PreparingToPlay3" 	"Preparando para iniciar %game%..."
+"SteamUI_JoinDialog_PreparingToPlay" 	"Preparando para iniciar %game% %dots%"
 "SteamUI_JoinDialog_Title"		"%game% — Steam"
 "SteamUI_JoinDialog_Updating_Title" 	"Atualizando %game%"
 "SteamUI_JoinDialog_Ready_Title"	"Pronto - %game%"
 "SteamUI_JoinDialog_NoName_Title" 	"Steam"
-"SteamUI_JoinDialog_InstallScriptInfo"	"Realizando configuração inicial...\n\nInstalando: %stepname% (passo %step% de %steptotal%)"
+"SteamUI_JoinDialog_InstallScriptInfo"	"Realizando configuração inicial %dots% \n\nInstalando: %stepname% (passo %step% de %steptotal%)"
 
 
 "SteamUI_GameRequires_NTFS_Detail"	"O jogo que você está instalando requer um disco com o sistema de arquivos NTFS e\nnão pode ser instalado em um sistema de arquivos FAT32. Para mais informações, veja o\narquivo de suporte indicado abaixo."
@@ -4106,6 +4115,7 @@ a partir de agora, você vai precisar deles pra ter acesso aos seus jogos e outr
 "Steam_AppUpdateError_48"		"limite de tempo de jogo excedido"
 "Steam_AppUpdateError_49"		"arquivos do Steam corrompidos"
 "Steam_AppUpdateError_50"		"arquivos de conteúdo ausentes"
+"Steam_AppUpdateError_51"		"falha na configuração da ferramenta de compatibilidade"
 
 
 "steam_subnav_featured"		"Destaques"
@@ -4207,7 +4217,7 @@ a partir de agora, você vai precisar deles pra ter acesso aos seus jogos e outr
 "Steam_TimedTrial_Over" "O teste acabou"
 "Steam_TimedTrial_CloseNow" "O jogo será fechado agora"
 "Steam_TimedTrial_Enjoy" "Aproveite o teste"
-"Steam_TimedTrial_Offline" "Teste do jogo perdeu conexão ao Steam"
+"Steam_TimedTrial_Offline" "Teste do jogo perdeu a conexão"
 "Steam_TimedTrial_Minutes" "Você pode jogar por mais %minutes% minutos"
 "Steam_TimedTrial_Hours" "Você pode jogar por mais %hours% horas e %minutes% minutos"
 
@@ -4721,6 +4731,9 @@ a partir de agora, você vai precisar deles pra ter acesso aos seus jogos e outr
 
 "Steam_VacBanOnAccount"		"Banimento(s) VAC na conta"
 "Steam_NoVacBanOnAccount"	"Sem banimentos VAC na conta"
+
+"Steam_NeedToRestart"		"Reinicialização necessária"
+"Steam_NeedToRestartDifferentClientLauncher" "Outra versão do Steam instalada neste computador tentou ser inicializada.\n\nPara tal, feche esta versão do Steam primeiro."
 
 "Steam_ClientBrowserAuth_AllowBrowserAuth" "Permitir que navegadores iniciem a sessão automaticamente em sites do Steam\n (requer reinicialização)"
 

@@ -17,4 +17,6 @@ public:
     virtual unknown_ret BAppHasPendingShaderContentDownload(unsigned int) = 0;
     virtual unknown_ret GetAppPendingShaderDownloadSize(unsigned int) = 0;
     virtual unknown_ret GetBucketManifest(unsigned int, char const*, char const*) = 0;
+    virtual unknown_ret GetStaleBucket(char const*, char const*) = 0;
+    virtual unknown_ret ReportExternalBuild(unsigned int, char const*, char const*, unsigned long long, char const*, char const*, unsigned long long) = 0;
 };

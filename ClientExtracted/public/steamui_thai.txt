@@ -220,17 +220,17 @@ Steam ให้คลิกขวาที่ไอคอนนี้"
 "SteamUI_JoinDialog_SharedLicenseLocked_OwnerText" "คลังที่ใช้ร่วมกันกำลังถูกใช้โดย %borrower% ในขณะนี้ ถ้าต้องการเล่นเดี๋ยวนี้จะส่งการแจ้งเตือนไปยัง %borrower% ว่าได้เวลาเลิกแล้ว"
 "SteamUI_JoinDialog_SharedLicenseLocked_BorrowerText" "เกมที่ถูกแบ่งปันนี้ไม่สามารถใช้ได้ในขณะนี้ กรุณาลองใหม่อีกครั้งภายหลังหรือซื้อเกมนี้ลงคลังของคุณเอง"
 
-"SteamUI_JoinDialog_KickSessions_Text" "คุณได้เข้าสู่ระบบอยู่บนคอมพิวเตอร์อื่น และกำลังเล่น \"%existing_app%\" \nหากเริ่มเปิด \"%launching_app%\" ที่นี่ เซสชันอื่นจะถูกตัดการเชื่อมต่อจาก Steam"
+"SteamUI_JoinDialog_KickSessions_Text" "กำลังตัดการเชื่อมต่อเซสชันอื่นที่กำลังเล่น %dots% อยู่"
 "SteamUI_JoinDialog_KickSessions_Error" "ล้มเหลวในการตัดการเชื่อมต่อกับเซสชันอื่นที่กำลังเล่น %game%"
 
 "SteamUI_JoinDialog_VerifyingFiles_Error" "ล้มเหลวในการยืนยันไฟล์แบบลงนามสำหรับ %game% จำเป็นต้องมีการตรวจสอบเนื้อหา"
 "SteamUI_JoinDialog_CreateProcess_Error" "ล้มเหลวในการสร้างโปรเซสสำหรับ %game% :\n\n%detail%"
 
 "SteamUI_JoinDialog_OpenVRStartupFailure" "ล้มเหลวในการเริ่ม %game% ใน VR (ข้อผิดพลาด: %error%)"
-"SteamUI_JoinDialog_OpenVRWaitingForQuit" "กำลังรอ %quitting_game% เพื่อออก..."
+"SteamUI_JoinDialog_OpenVRWaitingForQuit" "กำลังรอ %quitting_game% เพื่อออก %dots%"
 
-"SteamUI_JoinDialog_UpdatingAppInfo" "กำลังอัปเดตการกำหนดค่า ..."
-"SteamUI_JoinDialog_UpdatingAppTicket" "กำลังอัปเดตตั๋ว ..."
+"SteamUI_JoinDialog_UpdatingAppInfo" "กำลังอัปเดตการกำหนดค่า %dots%"
+"SteamUI_JoinDialog_UpdatingAppTicket" "กำลังอัปเดตตั๋ว %dots%"
 
 "SteamUI_JoinDialog_TimedTrial_Error" "ล้มเหลวในการเริ่ม %game% เป็นตัวทดลองแบบจำกัดเวลา (ข้อผิดพลาด: %error%)"
 
@@ -481,6 +481,7 @@ Steam ให้คลิกขวาที่ไอคอนนี้"
 "Steam_ShowDestinationOptions"	"เลือกจุดหมายที่จะแสดง"
 "Steam_MustRestartToTakeEffect"			"การติดตั้งจะไม่มีผลจนกว่า\nคุณจะรีสตาร์ท Steam"
 "Steam_LanguageSelect"				"เลือกภาษาที่คุณต้องการใช้บน Steam (ต้องเริ่มการใช้งาน Steam ใหม่)"
+"Steam_SteamChinaLanguageSelect"	"Steam สามารถใช้งานได้ในภาษาจีนตัวย่อเท่านั้น"
 "Steam_SelectSkinToUse"				"เลือกสกินที่คุณต้องการใช้ใน Steam (ต้องเริ่มการใช้งาน Steam ใหม่)"
 "Steam_CreateShortcut_Title"			"Steam - สร้างชอร์ตคัต"
 "Steam_CreateShortcut_Info"			"ชอร์ตคัตได้ถูกสร้างแล้ว และวางอยู่บนเดสก์ทอปของคุณ"
@@ -3348,6 +3349,16 @@ Steam ให้คลิกขวาที่ไอคอนนี้"
 "Steam_InstallAborted_InfoAppUnreleased"	"ไม่สามารถติดตั้ง %game% ได้ เนื่องจากยังไม่วางจำหน่าย"
 "Steam_InstallAborted_InfoAppNoDemo"		"ไม่สามารถติดตั้ง %game% ได้ เนื่องจากเป็นตัวอย่างเกม และคุณเป็นเจ้าของเวอร์ชันเต็มของผลิตภัณฑ์นี้แล้ว โปรดติดตั้งเกมเวอร์ชันเต็ม"
 
+"Steam_Startup_SteamChinaRequiredTitle"					"จำเป็นต้องใช้ Steam China"
+"Steam_Startup_GetSteamChina"						"%gamename% พร้อมเล่นแล้วในขณะนี้ทาง Steam China กรุณาเปิดลิงก์ด้านล่างเพื่อติดตั้งไคลเอนต์ดังกล่าว"
+"Steam_Startup_RunSteamChina"						"%gamename% พร้อมเล่นแล้วในขณะนี้ทาง Steam China กรุณาเริ่ม Steam China เพื่อนำเข้าเกมของคุณ"
+"Steam_Startup_SteamChinaImportedUninstall"			"%gamename% ได้รับการนำเข้าไปยัง Steam China แล้ว และตอนนี้คุณสามารถถอนการติดตั้งโปรแกรมเริ่มนี้ได้แล้ว"
+"Steam_Startup_LauncherDeprecated"					"%gamename% ใช้งานแล้วในขณะนี้ทาง Steam China การติดตั้งครั้งนี้จะไม่ได้รับการรองรับอีกต่อไป และจะออกจากระบบ"
+"Steam_Startup_ImportGameFromLauncherTitle"			"นำเข้าเกม"
+"Steam_Startup_ImportGameFromLauncherMsg"			"คุณต้องการนำ %gamename% เข้าไปใน Steam China แล้วคุณจะถอนการติดตั้งโปรแกรมเริ่มรุ่นดั้งเดิมได้อย่างปลอดภัย"
+
+"Steam_Download_SteamChina"							"ดาวน์โหลด Steam China"
+
 "Steam_ValidateGame_GameRunning"	"กรุณาออกจากเกมหรือเครื่องมือที่กำลังเปิดอยู่ทั้งหมด ก่อนจะพยายามดำเนินการตรวจสอบไฟล์ภายในเครื่องของคุณ"
 
 "Steam_RegionLabel"	"ภูมิภาคดาวน์โหลด"
@@ -3370,14 +3381,12 @@ Steam ให้คลิกขวาที่ไอคอนนี้"
 "Steam_SettingsInGameScreenshotFolder"	"โฟลเดอร์ภาพหน้าจอ"
 "Steam_SettingsInGameTitle"	"โอเวอร์เลย์ Steam"
 
-"SteamUI_JoinDialog_PreparingToPlay1" 	"กำลังเตรียมดำเนินการเริ่ม %game%."
-"SteamUI_JoinDialog_PreparingToPlay2" 	"กำลังเตรียมดำเนินการเริ่ม %game%.."
-"SteamUI_JoinDialog_PreparingToPlay3" 	"กำลังเตรียมดำเนินการเริ่ม %game%..."
+"SteamUI_JoinDialog_PreparingToPlay" 	"กำลังเตรียมดำเนินการเริ่มเปิด %game% %dots%"
 "SteamUI_JoinDialog_Title"		"%game% - Steam"
 "SteamUI_JoinDialog_Updating_Title" 	"กำลังอัปเดต %game%"
 "SteamUI_JoinDialog_Ready_Title"	"พร้อม - %game%"
 "SteamUI_JoinDialog_NoName_Title" 	"Steam"
-"SteamUI_JoinDialog_InstallScriptInfo"	"กำลังดำเนินการติดตั้งครั้งแรก... \n\nกำลังติดตั้ง: %stepname% (ขั้นตอนที่ %step% จาก %steptotal%)"
+"SteamUI_JoinDialog_InstallScriptInfo"	"กำลังดำเนินการติดตั้ง %dots% ครั้งแรก\n\nกำลังติดตั้ง: %stepname% (ขั้นตอนที่ %step% จาก %steptotal%)"
 
 
 "SteamUI_GameRequires_NTFS_Detail"	"เกมที่คุณกำลังติดตั้งจำเป็นต้องใช้ไดรฟ์ที่เป็นระบบไฟล์ NTFS \nและไม่สามารถติดตั้งบนระบบไฟล์ FAT32 ได้ \nสำหรับข้อมูลเพิ่มเติม กรุณาดูลิงก์บทความฝ่ายสนับสนุนด้านล่าง"
@@ -4109,6 +4118,7 @@ Steam ให้คลิกขวาที่ไอคอนนี้"
 "Steam_AppUpdateError_48"		"เกินเวลาเล่นที่อนุญาตแล้ว"
 "Steam_AppUpdateError_49"		"ไฟล์บน Steam เสียหาย"
 "Steam_AppUpdateError_50"		"ไฟล์เนื้อหาสูญหาย"
+"Steam_AppUpdateError_51"		"การกำหนดค่าเครื่องมือความเข้ากันได้ไม่ประสบผลสำเร็จ"
 
 
 "steam_subnav_featured"		"โดดเด่น"
@@ -4210,7 +4220,7 @@ Steam ให้คลิกขวาที่ไอคอนนี้"
 "Steam_TimedTrial_Over" "การทดลองเล่นของคุณสิ้นสุดลงแล้ว"
 "Steam_TimedTrial_CloseNow" "เกมจะถูกปิดลงตอนนี้"
 "Steam_TimedTrial_Enjoy" "ขอให้สนุกกับการทดลองของคุณ"
-"Steam_TimedTrial_Offline" "การทดลองเกมสูญเสียการเชื่อมต่อกับ Steam"
+"Steam_TimedTrial_Offline" "การทดลองเกมขาดการเชื่อมต่อ"
 "Steam_TimedTrial_Minutes" "เวลาเล่นคงเหลือ %minutes% นาที"
 "Steam_TimedTrial_Hours" "เวลาเล่นคงเหลือ %hours% ชั่วโมง %minutes% นาที"
 
@@ -4724,6 +4734,9 @@ Steam ให้คลิกขวาที่ไอคอนนี้"
 
 "Steam_VacBanOnAccount"		"VAC แบนบนบัญชี"
 "Steam_NoVacBanOnAccount"	"ไม่มี VAC แบนบนบัญชี"
+
+"Steam_NeedToRestart"		"จำเป็นต้องรีสตาร์ท"
+"Steam_NeedToRestartDifferentClientLauncher" "Steam อีกเวอร์ชันหนึ่งบนคอมพิวเตอร์เครื่องนี้พยายามที่จะเริ่มทำงาน\n\nหากต้องการใช้งาน คุณต้องออกจาก Steam เวอร์ชันนี้ก่อน"
 
 "Steam_ClientBrowserAuth_AllowBrowserAuth" "อนุญาตให้เว็บเบราเซอร์บนเดสก์ทอปเข้าสู่ระบบไปยังไซต์ Steam ได้โดยอัตโนมัติ \n (จำเป็นต้องรีสตาร์ทเพื่อให้การเปลี่ยนแปลงมีผลใช้)"
 

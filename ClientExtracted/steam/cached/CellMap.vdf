@@ -80,6 +80,8 @@
 		"Inetcom"	"35598, 51077, 19588"
         	"rogers"    "812"
 		"KPN"		"1136"
+		"T2"		"34779"
+		"Norlys"	"39642, 43557, 197288, 204274"
 	}
 	"cells"
 	{
@@ -232,11 +234,12 @@
 				41 { }
 				165 { "cost"	OneWayCellEdge} // Belarus
 				// Backbones
-				66 { "dest"	66	"cost"	1 }
-				129 { "dest"	129	"cost"	1 }
-				15 { "dest"	15	"cost"	LocalBackbone }
-				92 { "dest"	92	"cost"	RegionalBackbone }
-				38 { "dest"	38	"cost"	OneWayCellEdge}
+				66 { "cost"	1 }
+				129 { "cost"	1 }
+				15 { "cost"	LocalBackbone }
+				40 { "cost"	RegionalBackbone }
+				92 { "cost"	RegionalBackbone }
+				38 { "cost"	RegionalBackbone }
 				// High Cost
 				43
 				{ 
@@ -277,6 +280,8 @@
 				"Inetcom" { "cost_reduction"	"-4" }
                                 "HLKomm" { "cost_reduction" "4"}
 				"KPN"	{ "cost_reduction" "4"}
+				"Norlys" { "cost_reduction"	"-4" }
+				"T2" { "cost_reduction"	"-4" }
  			}
 		}
 
@@ -414,8 +419,9 @@
 			"edges"
 			{
 				4 { "dest"	 4  	"cost"	OutwardCost}
-				15 { "cost"	OutwardCost }
+				15 { "cost"	1 }
 				129 { "dest"	129  	"cost"	1}
+				40 { "cost"	RegionalBackbone }
 			}
 			"affinities"
 			{
@@ -425,6 +431,7 @@
 				"OTEGlobe"  { "cost_reduction" "-4" }
 				"Exatel" { "cost_reduction"	"-5" }
 				"MEO" { "cost_reduction"	"-4" }
+				"T2" { "cost_reduction"	"-4" }
 			}
 
 		}
@@ -465,6 +472,8 @@
 				"Bahnhof" { "cost_reduction"	"-2" }
 				"MEO" { "cost_reduction"	"-4" }
 				"TalkTalk" { "cost_reduction"	"-4" }
+				"Norlys" { "cost_reduction"	"-4" }
+				"T2" { "cost_reduction"	"-4" }
 			}
 		}
 
@@ -941,6 +950,7 @@
 				"TEO" { "cost_reduction"	"3" }
 				"Exatel" { "cost_reduction"	"5" }
 				"Beltelcom" { "cost_reduction"	"-5" }
+				"T2" { "cost_reduction"	"-4" }
 			}
 		}
 
@@ -972,7 +982,8 @@
 			{
 				// Backbone
 				4 { "cost"	RegionalBackbone }
-				5 { "cost"	InwardCost }
+				5 { "cost"	LocalBackbone }
+				14 { "cost"	LocalBackbone }
 				92 { "cost"	GlobalBackbone }
 				185 { "cost"	OutwardCost }
 				186 { "cost"	OutwardCost }
@@ -985,6 +996,7 @@
 				"Procono" { "cost_reduction"	"1" }
 				"MEO" { "cost_reduction"	"5" }
 				"Orange-Spain" { "cost_reduction"	"4" }
+				"T2" { "cost_reduction"	"-4" }
 			}
 
 		}
@@ -1075,6 +1087,7 @@
 		46
 		{
 			"name" "China - Beijing"
+			"steamchina"	"1"
 			"countrycode"	"CN"
 			"region"	"china north"
 			"latitude"	"39.904586"
@@ -1089,6 +1102,7 @@
 		47
 		{
 			"name" "China - Shanghai"
+			"steamchina"	"1"
 			"region"	"china east"
 			"countrycode"	"CN"
 			"latitude"	"31.231592"
@@ -1133,6 +1147,7 @@
 		48
 		{
 			"name" "China - Chengdu"
+			"steamchina"	"1"
 			"region"	"china southwest"
 			"countrycode"	"CN"
 			"latitude"	"30.571721"
@@ -1382,8 +1397,9 @@
 			{
 				"shaw" { "cost_reduction"	"0.4" }
 				"DTAG" { "cost_reduction"	"-5" }
-				"videotron" { "cost_reduction"	"4" }
+				"videotron" { "cost_reduction"	"-4" }
 				"ACCL" { "cost_reduction"	-1 }
+				"Hargray" { "cost_reduction"	"-4" }
 			}
 		}
 		// #64 US - Los Angeles
@@ -1495,6 +1511,8 @@
 				"MEO"  { "cost_reduction" "-4" }
 				"Bahnhof" { "cost_reduction"	"2" }
 				"Inetcom" { "cost_reduction"	"4" }
+				"Norlys" { "cost_reduction"	"4" }
+				"T2" { "cost_reduction"	"-4" }
 			}
 		}
 		// #67 Norway
@@ -1863,6 +1881,7 @@
 				"OTEGlobe" { "cost_reduction"	"-5" }
 				"Exatel" { "cost_reduction"	"-5" }
 				"A1Telekom" { "cost_reduction"	"4" }
+				"T2" { "cost_reduction"	"4" }
 			}
 		}			
 		// #93 Budapest
@@ -2441,6 +2460,7 @@
 		{
 			"name" "China (Perfect World Unicom)"
 			"region"	"china"
+			"steamchina"	"1"
 			"countrycode"	"CN"
 			"deprecated" 1
 			"latitude"	"31.231592"
@@ -2454,6 +2474,7 @@
 		{
 			"name" "China (Perfect World Telecom)"
 			"region"	"china"
+			"steamchina"	"1"
 			"countrycode"	"CN"
 			"deprecated" 1
 			"latitude"	"31.231592"
@@ -2586,6 +2607,7 @@
 		{
 			"name" "China - Guangzhou"
 			"region"	"china south"
+			"steamchina"	"1"
 			"countrycode"	"CN"
 			"latitude"	"23.125205"
 			"longitude"	"113.257198"
@@ -2730,6 +2752,7 @@
 		{
 			"name" "China - Wuhan"
 			"region"	"china central"
+			"steamchina"	"1"
 			"countrycode"	"CN"
 			"latitude"	"30.531663"
 			"longitude"	"114.282076"
@@ -2742,6 +2765,7 @@
 		{
 			"name" "China - Xi'an"
 			"region"	"china northwest"
+			"steamchina"	"1"
 			"countrycode"	"CN"
 			"latitude"	"34.296195"
 			"longitude"	"108.964354"
@@ -2818,6 +2842,7 @@
 		{
 			"name" "China - Harbin"
 			"region"	"china northeast"
+			"steamchina"	"1"
 			"countrycode"	"CN"
 			"latitude"	"45.777438"
 			"longitude"	"126.577405"
@@ -2830,6 +2855,7 @@
 		{
 			"name" "China - Kunming"
 			"region"	"china southwest"
+			"steamchina"	"1"
 			"countrycode"	"CN"
 			"latitude"	"24.946498"
 			"longitude"	"102.706997"
@@ -2842,6 +2868,7 @@
 		{
 			"name" "China - Qingdao"
 			"region"	"china east"
+			"steamchina"	"1"
 			"countrycode"	"CN"
 			"latitude"	"36.061225"
 			"longitude"	"120.380089"
@@ -2854,6 +2881,7 @@
 		{
 			"name" "China - Urumqi"
 			"region"	"china northwest"
+			"steamchina"	"1"
 			"countrycode"	"CN"
 			"latitude"	"43.814962"
 			"longitude"	"87.597942"
@@ -2866,6 +2894,7 @@
 		{
 			"name" "China - Zhengzhou"
 			"region"	"china central"
+			"steamchina"	"1"
 			"countrycode"	"CN"
 			"latitude"	"34.745894"
 			"longitude"	"113.661751"
@@ -2878,6 +2907,7 @@
 		{
 			"name" "China - Changsha"
 			"region"	"china central"
+			"steamchina"	"1"
 			"countrycode"	"CN"
 			"latitude"	"28.200774"
 			"longitude"	"112.963677"
@@ -3194,6 +3224,7 @@
 		{
 			"name" "China - Suzhou"
 			"region"	"china east"
+			"steamchina"	"1"
 			"countrycode"	"CN"
 			"latitude"	"31.293638"
 			"longitude"	"120.575299"
@@ -3206,6 +3237,7 @@
 		{
 			"name" "China - Hangzhou"
 			"region"	"china east"
+			"steamchina"	"1"
 			"countrycode"	"CN"
 			"latitude"	"30.274921"
 			"longitude"	"120.162224"
@@ -3218,6 +3250,7 @@
 		{
 			"name" "China - Ningbo"
 			"region"	"china east"
+			"steamchina"	"1"
 			"countrycode"	"CN"
 			"latitude"	"29.872564"
 			"longitude"	"121.560226"
@@ -3230,6 +3263,7 @@
 		{
 			"name" "China - Nanjing"
 			"region"	"china east"
+			"steamchina"	"1"
 			"countrycode"	"CN"
 			"latitude"	"32.069854"
 			"longitude"	"118.799455"
@@ -3242,6 +3276,7 @@
 		{
 			"name" "China - Shenzhen"
 			"region"	"china south"
+			"steamchina"	"1"
 			"countrycode"	"CN"
 			"latitude"	"22.532146"
 			"longitude"	"113.997626"
@@ -3254,6 +3289,7 @@
 		{
 			"name" "China - Dongguan"
 			"region"	"china south"
+			"steamchina"	"1"
 			"countrycode"	"CN"
 			"latitude"	"23.041631"
 			"longitude"	"113.738451"
@@ -3266,6 +3302,7 @@
 		{
 			"name" "China - Tianjin"
 			"region"	"china north"
+			"steamchina"	"1"
 			"countrycode"	"CN"
 			"latitude"	"39.085787"
 			"longitude"	"117.209123"
@@ -3278,6 +3315,7 @@
 		{
 			"name" "China - Chongqing"
 			"region"	"china southwest"
+			"steamchina"	"1"
 			"countrycode"	"CN"
 			"latitude"	"29.520374"
 			"longitude"	"106.532466"
@@ -3290,6 +3328,7 @@
 		{
 			"name" "China - Shenyang"
 			"region"	"china northeast"
+			"steamchina"	"1"
 			"countrycode"	"CN"
 			"latitude"	"41.783013"
 			"longitude"	"123.434066"
@@ -3302,6 +3341,7 @@
 		{
 			"name" "China - Dalian"
 			"region"	"china northeast"
+			"steamchina"	"1"
 			"countrycode"	"CN"
 			"latitude"	"38.911861"
 			"longitude"	"121.615360"
@@ -3366,6 +3406,7 @@
 		{
 			"name" "China - Nanning"
 			"region"	"china south"
+			"steamchina"	"1"
 			"countrycode"	"CN"
 			"latitude"	"22.818501"
 			"longitude"	"108.355362"
@@ -3395,7 +3436,7 @@
 			"longitude"	"57.503574"
 			"edges"
 			{
-				26 { "cost"	InwardCost }
+				26 { "cost"	4 }
 				36 { "cost"	InwardCost }
 			}		
 		}
@@ -3408,7 +3449,7 @@
 			"longitude"	"55.478003"
 			"edges"
 			{
-				26 { "cost"	InwardCost }
+				26 { "cost"	4 }
 				36 { "cost"	InwardCost }
 			}		
 		}

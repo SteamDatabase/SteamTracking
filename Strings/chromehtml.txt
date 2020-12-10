@@ -1,8 +1,6 @@
 __TEXT
 __text
 __TEXT
-;
-;
 __stubs
 __TEXT
 __stub_helper
@@ -14,7 +12,6 @@ __cstring
 __TEXT
 __unwind_info
 __TEXT
-4~
 __eh_frame
 __TEXT
 __DATA
@@ -69,7 +66,7 @@ h
 /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
 &
 )
-J
+0J
 N3IPC15BinarySemaphoreE
 N3IPC10PosixMutexE
 N3IPC6IMutexE
@@ -391,6 +388,7 @@ $
 18CMsgInspectElement
 13CMsgDisableF5
 17CMsgStartDownload
+N15CHTMLController12CIPCTaskPostE
 15CHTMLController
 21IHTMLChromeController
 16CHTMLProtoBufMsgI25CMsgAckSharedPaintBuffersE
@@ -691,8 +689,6 @@ m_pSpaceAvail
 m_pMutex
 m_pDataWritten
 m_pMapFile
-Assertion Failed: m_pParent
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/vprof.h
 htmlmessages.proto
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/html/htmlmessages.pb.cc
 CHECK failed: file != NULL:
@@ -793,8 +789,9 @@ HTMLController Commands
 Assertion Failed: m_Count == 0
 Assertion Failed: pNode && pNode->Next == QueueEnd()
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlstring.h
-WARNING: Disabling vprof spike dumping and stopping profile for thread %d - %s because of exceeded rate limit, try a higher threshold.
 Assertion Failed: pCmd->m_eCmd == eHTMLCommands_SetSharedPaintBuffers
+-pid
+Pid that we should be watching for
 Assertion Failed: pCmd->m_eCmd > 0 && pCmd->m_eCmd < eHTMLCommands_None
 Assertion Failed: m_bExit
 Assertion Failed: IsValidIndex( elem )
@@ -1771,15 +1768,21 @@ sc_schinese
 
 
 
-U
+m
+K
 "
 3
 D
+
 @
-u
 
-B
 
+;
+
+
+
+
+7
 Hi
 `
 $
@@ -1793,10 +1796,8 @@ $
 A
 Hc
 =
-O
-
-
-
+l
+L95
 
 Hc
 ?

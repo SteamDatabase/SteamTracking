@@ -2,4 +2,6 @@
 "Tokens"
 {
 "steam_menu_file" "蒸汽平台"
+"Steam_About_Title"				"关于蒸汽平台"
+"Steam_About_Info"				"蒸汽平台"
 }

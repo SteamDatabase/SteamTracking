@@ -386,6 +386,7 @@
  CFStringGetCString
  CFStringGetTypeID
  CStringNormalization::Normalize(bool, char const*, char*, int)
+ CVProfile_ExitScope
  CValidator::ClaimArrayMemory(void*)
  CValidator::ClaimMemory(void*)
  CValidator::IsClaimed(void*)
@@ -5183,7 +5184,9 @@
  SteamStdLib::CommandLine()
  SteamThreadTools::CThreadMutex::CThreadMutex()
  SteamThreadTools::CThreadMutex::~CThreadMutex()
- SteamVProf::CVProfNode::ExitScope()
+ SteamVProf::CVProfManager::DumpAllThreadProfiles(int)
+ SteamVProf::CVProfManager::StartProfilingAllThreads()
+ SteamVProf::CVProfManager::StopProfilingAllThreads()
  StringAfterPrefix
  T AES_cbc_encrypt
  T AES_decrypt
@@ -12003,7 +12006,6 @@
  T CUtlRBTreeBase<unsigned short, CDefRBTreeBalanceListener<unsigned short> >::_RotateLeft(unsigned short, unsigned long, void*)
  T CUtlRBTreeBase<unsigned short, CDefRBTreeBalanceListener<unsigned short> >::_RotateRight(unsigned short, unsigned long, void*)
  T CUtlSortVector<vgui::EditablePanel::LayoutPanel_t>::Insert(vgui::EditablePanel::LayoutPanel_t const&)
- T CUtlString* Destruct<CUtlString>(CUtlString*)
  T CUtlString::AppendFormat(char const*, ...)
  T CUtlString::AssertStringTooLong()
  T CUtlString::BEndsWithCaseless(char const*) const
@@ -13096,7 +13098,7 @@
  T KeyValues::MergeFromFile(IBaseFileSystem*, StringView, StringView)
  T KeyValues::ReadAsBinary(CUtlBuffer&, int, bool)
  T KeyValues::ReadToken(CUtlBuffer&, bool&, char, KeyValuesTextParser*, bool&)
- T KeyValues::RecursiveMergeFromBuffer(char const*, CUtlBuffer&, KeyValuesTextParser*, bool)
+ T KeyValues::RecursiveMergeFromBuffer(CUtlBuffer&, KeyValuesTextParser*, bool)
  T KeyValues::RecursiveSaveToBuffer(CUtlBuffer*, int, EKeyValuesSerializationFlags) const
  T KeyValues::RecursiveSaveToBufferAsJSON(CUtlBuffer*, int, EKeyValuesSerializationFlags) const
  T KeyValues::RemoveEverything()
@@ -13115,6 +13117,7 @@
  T KeyValuesAD::operator KeyValues*()
  T KeyValuesAD::operator->()
  T KeyValuesAD::~KeyValuesAD()
+ T KeyValuesTextParser::InitBuffer(int)
  T KeyValuesTextParser::KeyValuesTextParser(bool, int)
  T KeyValuesTextParser::Pop()
  T KeyValuesTextParser::ReportError(StringView, CUtlBuffer const&)
@@ -13198,6 +13201,7 @@
  T ParseFile(char*, char*, bool*)
  T ParseIPv6Addr
  T PchNameFromEControllerType(int)
+ T PchNameFromELauncherType(int)
  T PchPersonaState(EPersonaState)
  T PreparePanelMessageMap(vgui::PanelMessageMap*)
  T RAND_SSLeay
@@ -13287,15 +13291,6 @@
  T SteamAPI_RegisterCallback
  T SteamAPI_UnregisterCallResult
  T SteamAPI_UnregisterCallback
- T SteamVProf::CVProfManager::DumpAllThreadProfiles(int)
- T SteamVProf::CVProfManager::StartProfilingAllThreads()
- T SteamVProf::CVProfManager::StopProfilingAllThreads()
- T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)12, false, 4>::~CVProfScope()
- T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)19, false, 4>::~CVProfScope()
- T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)2, false, 4>::~CVProfScope()
- T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)20, false, 4>::~CVProfScope()
- T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)5, false, 4>::~CVProfScope()
- T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)7, false, 4>::~CVProfScope()
  T Sys_GetProcAddress(CSysModule*, char const*)
  T Sys_LoadModule(char const*, Sys_Flags)
  T Sys_UnloadModule(CSysModule*)
@@ -18425,7 +18420,7 @@
  b CMAC_Init.zero_iv
  b CUtlSymbol::Initialize()::symbolsInitialized
  b ClientUIHTMLController()::s_ClientUIHTMLController
- b CommonKeyCode::InitKeyTranslation()::threadonce_538_43
+ b CommonKeyCode::InitKeyTranslation()::threadonce_538_36
  b CommonKeyCode::s_pKeyCodeToVirtualKey
  b CommonKeyCode::s_pKeyCodeToWindowsVirtualKey
  b CommonKeyCode::s_pVirtualKeyToKeyCode
@@ -18446,7 +18441,7 @@
  b KeyValues::ReadAsBinary(CUtlBuffer&, int, bool)::fAsserted
  b OPENSSL_cpuid_setup.trigger
  b OPENSSL_init.done
- b OneTimeCryptoInitOpenSSL()::threadonce_324_43
+ b OneTimeCryptoInitOpenSSL()::threadonce_324_36
  b SHA1.m
  b SYS_str_reasons
  b add_lock_callback
@@ -18533,6 +18528,7 @@
  b g_pClientMusic
  b g_pClientNetworkDeviceManager
  b g_pClientNetworkingSockets
+ b g_pClientNetworkingSocketsSerialized
  b g_pClientNetworkingUtils
  b g_pClientParentalSettings
  b g_pClientParties
@@ -18991,6 +18987,7 @@
  d realloc_func
  d rsa_pkcs1_eay_meth
  d s_EControllerType
+ d s_ELauncherType
  d s_pConversionArrays_NoEscConversion
  d s_pConversionArrays_StringCharConversion
  d selectBuf

@@ -1,10 +1,7 @@
 !
 __TEXT
-p6
-p6
 __text
 __TEXT
-db$
 __stubs
 __TEXT
 __stub_helper
@@ -16,26 +13,22 @@ __const
 __TEXT
 __objc_methname
 __TEXT
+#o,
+#o,
 __unwind_info
 __TEXT
+tt,
+tt,
 __eh_frame
 __TEXT
-0n-
-0n-
 __DATA
-p6
-p6
 __nl_symbol_ptr
 __DATA
-p6
-p6
 __got
 __DATA
 __la_symbol_ptr
 __DATA
-Pq6
-H
-Pq6
+8
 __mod_init_func
 __DATA
 __const
@@ -43,39 +36,36 @@ __DATA
 __cfstring
 __DATA
 __objc_imageinfo__DATA
-0SB
-0SB
+`sB
+`sB
 __objc_selrefs
 __DATA
-8SB
-8SB
+hsB
+hsB
 __objc_classrefs__DATA
-@UB
-@UB
+puB
+puB
 __data
 __DATA
 __thread_vars
 __DATA
-@+K
-@+K
+pKK
+pKK
 __thread_bss
 __DATA
-`+K
 __bss
 __DATA
-`/K
 __common
 __DATA
-0mK
 H
 __LINKEDIT
-0K
+PK
 
 @
 @loader_path/gameoverlayui.dylib
 "
-0K
-`_K
+PK
+hK
 P
 _
 
@@ -126,7 +116,7 @@ h
 8
 /usr/lib/libobjc.A.dylib
 &
-@E
+0E
 )
 C
 14CParentalCache
@@ -471,6 +461,7 @@ N17CPanelHideWrapperIN4vgui8URLLabelEE31CCallback_OnParentalLockChangedE
 N17CPanelHideWrapperIN4vgui6ButtonEE31CCallback_OnParentalLockChangedE
 9CCallbackI17CPanelHideWrapperIN4vgui6ButtonEE21ParentalLockChanged_tLb0EE
 NSt3__110__function6__baseIFvvEEE
+23CVGUIApplicationOverlay
 16AppModalQueryBox
 12CMainOverlay
 N4vgui20IVGUIHostApplicationE
@@ -7930,6 +7921,7 @@ d
 19CUtlNoEscConversion
 14CUtlMemoryBase
 NSt3__115basic_stringbufIwNS_11char_traitsIwEENS_9allocatorIwEEEE
+Logger
 -friendsui
 -nofriendsui
 -no-browser
@@ -7954,8 +7946,6 @@ Assertion Failed: pSrc == pDest || pSrc > pDest + (srcWidth * srcHeight * 3) || 
 Assertion Failed: nWidth >= 0 && nHeight >= 0
 Assertion Failed: bufRGB.TellPut() == nWidth*nHeight*3
 Assertion Failed: bufRGBA.TellPut() == nWidth*nHeight * 4
-Assertion Failed: m_pParent
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/vprof.h
 log_files_always_flush
 0
 %s
@@ -8271,6 +8261,10 @@ Assertion Failed: !m_callbackSetPersonaNameResponse.IsActive()
 #Friends_NameChangeFailed_Title
 CSettingsSubFriends
 CSettingsSubFriends::OnPersonaStateChange
+#Steam_Settings_ShareIPNetworking_Default
+#Steam_Settings_ShareIPNetworking_Never
+#Steam_Settings_ShareIPNetworking_FriendsOnly
+#Steam_Settings_ShareIPNetworking_Always
 EnableOverlayCheck
 HotKeySelector
 ScreenshotHotKeySelector
@@ -8285,6 +8279,9 @@ PingRateCombo
 PingRate
 %d
 TextFilterStatus
+ShareIPNetworkingCombo
+ShareIP
+eValue
 resource/layout/subpaneloptionsingame.layout
 #Steam_TextFilterStatus_Disabled
 #Steam_TextFilterStatus_EnabledAllowProfanity_IgnoreFriends
@@ -9609,8 +9606,8 @@ developer
 Steam pid that launched us
 VGUI_Application_001
 OK
-Dec  7 2020
-10:09:10
+Dec  9 2020
+15:30:11
 crashhandler003
 gameoverlayui
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/overlay/gameoverlayui/main.cpp
@@ -9680,7 +9677,6 @@ Unable to get home directory
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/../common/clientdirectories.h
 SteamUniverse
 %s/%s%s
-WARNING: Disabling vprof spike dumping and stopping profile for thread %d - %s because of exceeded rate limit, try a higher threshold.
 MessageBox
 -pid
 Pid that we should be watching for
@@ -9717,6 +9713,7 @@ ProcessInputEvents()
 SwappingStreamBuffers
 InitializingRenderStream()
 SetEvent failed for paint event
+SerializeAllTextures
 Failed during internal/external buffer swapping
 Failed putting data into external buffer during swapping
 FinalizingRenderStream
@@ -9934,7 +9931,6 @@ Label2
 #Overlay_SettingsDescription
 #Overlay_SettingsEnableApp
 #Overlay_SettingsEnable
-#Overlay_SettingsSCTenfootEnable
 #Voice_Settings_NewTabTitle
 steam/OverlaySettingsDialog
 #Overlay_Settings_Title
@@ -13224,7 +13220,6 @@ Persistent Logfiles created which have no cleanup limit specified!
 CLogInstance::EmitEventNow
 ...
 Last Message Repeated %d times.%s
-Logger
 Assertion Failed: bitNum >= 0 && bitNum < this->Size()
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/bitstring.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/threadtools.h
@@ -13272,32 +13267,41 @@ Nov
 Dec
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
-"u&
-l$
-$
-$
-$
-0
-p
-p
-0
-$
-3"
-A
-A
-A
-A
-A
-A
+9x&
+&t&
+Rx&
 6
-A
-A
-w
-zI
-mI
+Q$
 0
 p
-&I
+$
+tJ
+$
+$
+$
+p
+0
+$
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+e#
+V6
+#
+#
+#
+I#
+/#
+0
+p
 #
 #
 #
@@ -13307,42 +13311,49 @@ p
 #
 #
 #
-d@
+#
+#
 !
 !
+!
+"
+"
+"
+"
+"
 @
 @
-@
-@
 "
-"
-"
-y3
-V"
-"
-:"
+t
 "
 "
 "
 "
 "
 "
-"
-l
+r!
+U!
+3
+3
+I
+!
 !
 d
 !
-!
-'?
-&
+f!
+G
+G
+G
+G
+G
+
 
 
 
 
 
 
-b
-5
+2
 p
 0
 0
@@ -13377,24 +13388,35 @@ p
 0
 @
 =
-Y
-?
-?
 0
-
-<?
-C@
-a@
+!%
+J
+9
+?
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+T?
+@
+@
+@
+@
+@
 Hi
-EE
-$
-g@
-4
 0
 p
-@
 I
 I
+HD
 @
 @
 @
@@ -13403,13 +13425,12 @@ I
 @
 @
 @
-@
-@
-@
-@
-@
-@
+/
+/
+/
+/
 $
+?
 @
 @
 =
@@ -13417,14 +13438,29 @@ $
 @
 ?
 ?
+.
+.
 A
 Hc
+R-
 =
-h,
-!A
-2
-2
-@
+O,
+KA
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+c1
 @
 @
 Hc
@@ -13480,8 +13516,6 @@ c
 P
 (
 =
-H;=
-K&
 U
 @
 @
@@ -13629,16 +13663,9 @@ P
 @
 @
 ?
-$
 @
 @
-$
 ?
-$
-$
-$
-9
-9
 `
 `
 !
@@ -13665,70 +13692,77 @@ P
 @
 |
 |
+#
+#
 "
 3
 D
-~7
-w7
-p7
-h7
-(
-7
-7
+B7
 7
 @
-'
-5
-5
-n%
-%
-%
+>'
+6
+6
+6
+x&
+R&
+w4
+.%
+R
 
-
-
-
-L950Y3
+M3
+L95 w3
+3
+3
+$
+$
+$
 d
+k
 
-[(
-:
-2
+
+1
+1
+1
+1
+
+50
 
 
 -
+-
+t-
 d
 &
 &
 d
+2-
+-
 t=
 =
 =
 @
-#,
+A,
+"
+"
+,
+,
+,
+,
 uV%
 
 
+"
+"
 E
-+
-+
+>
+
+0!
 
 
 
-*
-*
-*
-*
-*
-*
-7+
+
 @
-*
-*
-*
-*
-*
-*
-*
 *
 @
 @
@@ -13746,7 +13780,6 @@ E
 @
 @
 =
-k)
 
 
 @
@@ -13769,6 +13802,7 @@ k)
 @
 @
 @
+)
 .
 .
 .
@@ -13779,13 +13813,14 @@ d
 d
 d
 =
-(
+HckY(
 
 =
 =
 @
 =
 @
+
 @
 @
 @
@@ -13795,8 +13830,10 @@ d
 @
 @
 0
+{'
 E
-{
-Hc5VI'
-5
+}
+$
 p
+'
+'

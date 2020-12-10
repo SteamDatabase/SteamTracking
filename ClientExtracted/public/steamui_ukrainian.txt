@@ -220,17 +220,17 @@
 "SteamUI_JoinDialog_SharedLicenseLocked_OwnerText" "Вашою спільною бібліотекою зараз користується %borrower%. Якщо ви почнете грати, %borrower% отримає повідомлення, що треба виходити."
 "SteamUI_JoinDialog_SharedLicenseLocked_BorrowerText" "Ця спільна гра зараз недоступна. Спробуйте, будь ласка, пізніше або придбайте цю гру для власної бібліотеки."
 
-"SteamUI_JoinDialog_KickSessions_Text" "Ви авторизовані на іншому комп’ютері, де вже запущено «%existing_app%».\nЗапуск «%launching_app%» тут від’єднає інший сеанс від Steam."
+"SteamUI_JoinDialog_KickSessions_Text" "Від'єднання іншого активного сеансу %dots%"
 "SteamUI_JoinDialog_KickSessions_Error" "Не вдалося завершити інший ігровий сеанс %game%"
 
 "SteamUI_JoinDialog_VerifyingFiles_Error" "Не вдалося перевірити підписані файли для %game%, необхідна перевірка вмісту."
 "SteamUI_JoinDialog_CreateProcess_Error" "Не вдалося розпочати процес для %game% :\n\n%detail%"
 
 "SteamUI_JoinDialog_OpenVRStartupFailure" "Не вдалося запустити %game% у режимі VR. (Помилка: %error%)"
-"SteamUI_JoinDialog_OpenVRWaitingForQuit" "Очікування завершення %quitting_game%…"
+"SteamUI_JoinDialog_OpenVRWaitingForQuit" "Очікування завершення %quitting_game% %dots%"
 
-"SteamUI_JoinDialog_UpdatingAppInfo" "Оновлення конфігурації…"
-"SteamUI_JoinDialog_UpdatingAppTicket" "Оновлення звернення…"
+"SteamUI_JoinDialog_UpdatingAppInfo" "Оновлення конфігурації %dots%"
+"SteamUI_JoinDialog_UpdatingAppTicket" "Оновлення звернення %dots%"
 
 "SteamUI_JoinDialog_TimedTrial_Error" "Не вдалося запустити  %game% як обмежену пробну версію. (Помилка: %error%)"
 
@@ -480,6 +480,7 @@
 "Steam_ShowDestinationOptions"	"Оберіть доступні посилання"
 "Steam_MustRestartToTakeEffect"			"Це налаштування не почне діяти, допоки\nви не перезапустите Steam."
 "Steam_LanguageSelect"				"Оберіть мову, яка використовуватиметься у Steam (вимагає перезапуску Steam)"
+"Steam_SteamChinaLanguageSelect"	"Steam можна використовувати лише спрощеною китайською мовою"
 "Steam_SelectSkinToUse"				"Обрати обкладинку для Steam (вимагає перезапуску)"
 "Steam_CreateShortcut_Title"			"Steam — Створення ярлика"
 "Steam_CreateShortcut_Info"			"Ярлик створено та поміщено на ваш робочий стіл."
@@ -1199,7 +1200,7 @@
 "Steam_Subscription_Preorder_Timeout" "Ваше замовлення на %subscription% не завершене, оскільки Steam наразі перевантажений і не може обробити трансакцію.\n\nМи повідомимо вам результат, щойно ми зможемо обробити вашу трансакцію."
 
 "Steam_SubscriptionCancelled_Cancelled_Headline" "Підписка анульована"
-"Steam_SubscriptionCancelled_Cancelled"	"Підписку на %subscription% скасовано. Це сталося на запит власника акаунта або на запит Valve у відповідності до «Угоди підписника Steam»."
+"Steam_SubscriptionCancelled_Cancelled"	"Підписку на %subscription% скасовано у відповідь на запит власника акаунта або запит Valve відповідно до Угоди підписника Steam."
 
 "Steam_SubscriptionCancelled_ServerFailed_Headline" "Сервер Steam наразі перевантажений."
 "Steam_SubscriptionCancelled_ServerFailed" "Замовлення %subscription% не оформлене. Наразі сервери Steam перевантажені і не можуть обробити ваш запит. \n\nВибачаємося за незручності. Будь ласка, повторіть операцію через кілька годин."
@@ -1496,11 +1497,11 @@
 "Steam_AgreeToTheTerms"		"Я погоджуюся з умовами"
 "Steam_SteamSubscriberAgreement"	"Угода підписника Steam"
 "Steam_ComplianceRequired_Title"	"Steam — Увага"
-"Steam_ComplianceRequired_Info"		"Для продовження необхідно прийняти умови «Угоди підписника служби Steam»."
+"Steam_ComplianceRequired_Info"		"Для продовження необхідно прийняти умови Угоди підписника Steam."
 
 "Steam_Legal_UnreleasedProduct"	"* Цей продукт ще не надійшов у продаж і саме тому недоступний. Точна дата виходу ще невідома, і покупець не повинен покладатися на орієнтовну дату."
 "Steam_Legal_TimeToShipGoods"	"** Зважте, що доставка супутніх товарів до пакунку Half-Life 2 Gold займає 6-8 тижнів."
-"Steam_Legal_SSACheckbox"	"Я приймаю умови «Угоди підписника служби Steam» і положення, що стосуються купівлі даного товару."
+"Steam_Legal_SSACheckbox"	"Я приймаю умови Угоди підписника Steam і положення, що стосуються купівлі цього товару."
 "Steam_Legal_SSANext"	"Погоджуюся"
 "Steam_Legal_SSADisagree"	"Я не погоджуюсь"
 "SteamUI_HardwarePromoWizard_Title" "Реєстрація акційної пропозиції"
@@ -1618,13 +1619,13 @@
 "SteamUI_NetworkTroubleshootingTips"	"Поради щодо пошуку мережевих проблем"
 
 
-"SteamUI_SSA_Agree"				"Будь ласка, повністю прочитайте цю угоду. Щоб продовжити, ви повинні погодитись з умовами Угоди підписника Steam."
+"SteamUI_SSA_Agree"				"Будь ласка, повністю прочитайте цю угоду. Для продовження необхідно прийняти умови Угоди підписника Steam."
 "SteamUI_SSA_CybercafeAgree"		"Я ліцензований оператор інтернет-кафе та погоджуюсь на ці умови"
 "SteamUI_SSA_ActivateProduct"		"Щоби зареєструвати продукт у Steam і додати його до бібліотеки, введіть ключ продукту, вказаний на придбаному CD чи DVD, або ж інший ключ продукту Steam. Клацніть «Далі» для продовження."
 "SteamUI_ActivateProductLockedDown"		"Наразі ваш акаунт самоблокований чи заблокований службою підтримки Steam. Ви не зможете активувати нові продукти на цьому акаунті, доки проблему не буде вирішено."
 "SteamUI_ActivateProduct_ViewSupportMessage" "Переглянути активні сповіщення служби підтримки Steam"
 
-"SteamUI_PPA_Agree"				"Будь ласка, прочитайте повністю цю угоду. Щоб продовжити, ви повинні погодитись на умови Політики конфіденційності Valve."
+"SteamUI_PPA_Agree"				"Будь ласка, повністю прочитайте цю угоду. Для продовження необхідно прийняти умови Політики конфіденційності Valve."
 "Steam_ClickToPrint"			"Натисніть тут для друку"
 
 
@@ -1901,7 +1902,7 @@
 "ServerBrowser_AppNotFound" "Неможливо підключитися до сервера,\n вказаний сервером AppID неправильний."
 "ServerBrowser_NotInitialized" "Steam не ініціалізований. Будь ласка, спробуйте ще раз"
 
-"SteamUI_SSAUpdatedInfo"	"Угоду підписника Steam було оновлено %SSA_date%. Користування Steam та іграми в ньому передбачає що ви прочитали та погодились з цими змінами."
+"SteamUI_SSAUpdatedInfo"	"Угоду підписника Steam було оновлено %SSA_date%. Користування Steam та іграми в ньому передбачає, що ви ознайомилися з цими змінами та приймаєте їх."
 "Steam_SSAUpdated_Link"	"Клацніть тут, щоби переглянути оновлений текст угоди."
 
 "Steam_Settings_Title"		"Налаштування"
@@ -3346,6 +3347,16 @@
 "Steam_InstallAborted_InfoAppUnreleased"	"%game% ще не можна інсталювати, бо цей продукт ще не видано."
 "Steam_InstallAborted_InfoAppNoDemo"		"%game% не можна інсталювати, бо це демоверсія, а ви вже володієте повною версією. Будь ласка, інсталюйте повну версію гри."
 
+"Steam_Startup_SteamChinaRequiredTitle"					"Потрібен Steam China"
+"Steam_Startup_GetSteamChina"						"Гра %gamename% уже доступна в Steam China. Будь ласка, перейдіть за посиланням нижче, щоб інсталювати цей клієнт."
+"Steam_Startup_RunSteamChina"						"Гра %gamename% уже доступна в Steam China. Будь ласка, запустіть Steam China, щоб імпортувати її."
+"Steam_Startup_SteamChinaImportedUninstall"			"Гру %gamename% імпортовано до Steam China. Тепер можна деінсталювати цей запускач."
+"Steam_Startup_LauncherDeprecated"					"Гра %gamename% тепер запускається через Steam China. Цей інсталятор більше не підтримується й буде закрито."
+"Steam_Startup_ImportGameFromLauncherTitle"			"Імпортувати гру"
+"Steam_Startup_ImportGameFromLauncherMsg"			"Бажаєте імпортувати гру %gamename% до Steam China? Після цього можна безпечно деінсталювати застарілу версію запускача."
+
+"Steam_Download_SteamChina"							"Завантажити Steam China"
+
 "Steam_ValidateGame_GameRunning"	"Перед початком перевірки файлів гри завершіть роботу всіх запущених ігор та програм у Steam."
 
 "Steam_RegionLabel"	"Регіон для завантажень"
@@ -3368,14 +3379,12 @@
 "Steam_SettingsInGameScreenshotFolder"	"Тека для знімків екрана"
 "Steam_SettingsInGameTitle"	"Оверлей Steam"
 
-"SteamUI_JoinDialog_PreparingToPlay1" 	"Підготовка %game% до запуску."
-"SteamUI_JoinDialog_PreparingToPlay2" 	"Підготовка %game% до запуску.."
-"SteamUI_JoinDialog_PreparingToPlay3" 	"Підготовка %game% до запуску..."
+"SteamUI_JoinDialog_PreparingToPlay" 	"Підготовка до запуску %game% %dots%"
 "SteamUI_JoinDialog_Title"		"%game% — Steam"
 "SteamUI_JoinDialog_Updating_Title" 	"Оновлення %game%"
 "SteamUI_JoinDialog_Ready_Title"	"Готово — %game%"
 "SteamUI_JoinDialog_NoName_Title" 	"Steam"
-"SteamUI_JoinDialog_InstallScriptInfo"	"Проводиться початкове налаштування…\n\nІнсталюється: %stepname% (крок %step% з %steptotal%)"
+"SteamUI_JoinDialog_InstallScriptInfo"	"Проводиться початкове налаштування %dots% \n\nІнсталюється: %stepname% (крок %step% з %steptotal%)"
 
 
 "SteamUI_GameRequires_NTFS_Detail"	"Гра, яку ви інсталюєте, вимагає диск з файловою системою NTFS та\nне може бути інстальована на файловій системі FAT32. Для більш детальної інформації дивіться \nстаттю за посилання нижче."
@@ -4107,6 +4116,7 @@
 "Steam_AppUpdateError_48"		"перевищено дозволений час гри"
 "Steam_AppUpdateError_49"		"файли Steam пошкоджені"
 "Steam_AppUpdateError_50"		"відсутні файли вмісту"
+"Steam_AppUpdateError_51"		"помилка налаштування інструменту сумісності"
 
 
 "steam_subnav_featured"		"Відібране"
@@ -4208,7 +4218,7 @@
 "Steam_TimedTrial_Over" "Закінчився термін дії вашої пробної версії"
 "Steam_TimedTrial_CloseNow" "Гра зараз буде закрита"
 "Steam_TimedTrial_Enjoy" "Насолоджуйтеся пробною версією"
-"Steam_TimedTrial_Offline" "Пробна версія гри втратила з’єднання зі Steam"
+"Steam_TimedTrial_Offline" "Пробна версія гри втратила з’єднання"
 "Steam_TimedTrial_Minutes" "Залишилося %minutes% хв ігрового часу"
 "Steam_TimedTrial_Hours" "Залишилося %hours% год %minutes% хв ігрового часу"
 
@@ -4722,6 +4732,9 @@
 
 "Steam_VacBanOnAccount"		"Блокування античіта Valve на акаунті"
 "Steam_NoVacBanOnAccount"	"Акаунт не має блокувань VAC"
+
+"Steam_NeedToRestart"		"Потрібне перезавантаження"
+"Steam_NeedToRestartDifferentClientLauncher" "Відбувається спроба запуску іншої версії Steam на цьому комп'ютері.\n\nЩоб запустити її, потрібно спершу вийти з цієї версії Steam."
 
 "Steam_ClientBrowserAuth_AllowBrowserAuth" "Дозволити браузерам автоматично входити на сайти Steam\n (для застосування змін необхідний перезапуск)"
 

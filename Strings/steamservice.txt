@@ -3,8 +3,8 @@ __TEXT
 @%
 __text
 __TEXT
-C
-C
+D
+D
 __stubs
 __TEXT
 __stub_helper
@@ -21,8 +21,8 @@ __unwind_info
 __TEXT
 __eh_frame
 __TEXT
-h]!
-h]!
+0\!
+0\!
 __DATA
 @%
 @%
@@ -66,8 +66,8 @@ HZ'
 ['
 (r'
 P
-f!
-f!
+^!
+^!
 g
 
 `
@@ -93,11 +93,9 @@ h
 /usr/lib/libobjc.A.dylib
 &
 )
-@$0
 Hi
 H=
 10CUtlString
-N10CIPCServer13CThreadClientE
 10CIPCServer
 11CPipeWaiter
 10IIPCServer
@@ -802,6 +800,7 @@ N10OSXHelpers13CCompatThreadE
 14CUtlLinkedListIN7CJobMgr13JobYielding_tEiE
 kvsignatures
 kvsign2
+Logger
 11CUtlHashMapI14CMetricsSymbol9CSmartPtrI14CMetricsStringE10CDefEqualsIS0_E11HashFunctorIS0_ES0_E
 10CUtlVectorIN11CUtlHashMapI14CMetricsSymbol9CSmartPtrI14CMetricsStringE10CDefEqualsIS1_E11HashFunctorIS1_ES1_E12HashBucket_tE10CUtlMemoryISA_EE
 12CAutoReleaseI14CMetricsStringE
@@ -1010,10 +1009,6 @@ First
 Last
 -------------------- ---------------------------------------- ---------- ---------- ----------
 %-20.20s %-40.40s %-10u %-10u %-10u
-Assertion Failed: m_pvOrigNameAddress
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/vprof.h
-Assertion Failed: m_pParent
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlvector.h
 -single_core
 Force Steam to run on your primary CPU only
 CIPCServer::m_ThreadClient
@@ -1037,7 +1032,6 @@ Assertion Failed: m_nEpollSet >= 0
 adding pipe event to the same waiter twice
 Assertion Failed: m_count > 0
 CPipeWaiter::BRemove(%d) -- not present
-WARNING: Disabling vprof spike dumping and stopping profile for thread %d - %s because of exceeded rate limit, try a higher threshold.
 Assertion Failed: m_pObj
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/scheduledfunction.h
 Assertion Failed: m_Func
@@ -1059,7 +1053,6 @@ Assertion Failed: m_dwThreadID == ThreadGetCurrentId()
 CServerPipe::SerializeCallbacks()
 Assertion Failed: !pToCopy || (pToCopy + num <= Base()) || (pToCopy >= (Base() + Count()) )
 Assertion Failed: (elem == Count()) || IsValidIndex(elem)
-Assertion Failed: (&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
 Assertion Failed: bManualReset
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/processpipe_posix.cpp
 Assertion Failed: m_fds[1] != k_SOCKET_WRAPPER
@@ -5823,7 +5816,6 @@ Assertion Failed: m_cubSavedStack < k_cubMaxCoroutineStackSize
 Assertion Failed: m_pStackHigh
 Assertion Failed: m_pSavedStack
 Restoring saved stack over RestoreStackFrame (%p, %p, %p, %p)
-Assertion Failed: m_pszName
 Assertion Failed: m_VecCoroutineStack.Count() > 1
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/vstdlib/debugstatssystem.cpp
 String pool bytes used %u, max %u, %u pools
@@ -5898,7 +5890,8 @@ Assertion Failed: prefix != NULL
 Assertion Failed: !pszString || pszString[nChars] == '\0'
 Assertion Failed: nBytes
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlbuffer.h
-%u
+Assertion Failed: (&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlvector.h
 %llu
 invalid input pointer
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/vstdlib/strtools_unicode.cpp
@@ -6116,7 +6109,7 @@ Compact is no longer supported
 OUT OF MEMORY
 Assertion Failed: (iub & (m_nSizeWithStack-1)) == 0
 Assertion Failed: pAllocTracker->m_uSentinel == 0xaa110ced
-InitVirtualHeap( %d ) called twice (%d, %d)
+InitVirtualHeap( %d ) called twice (%d)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier0/memstd.h
 Assertion Failed: pLeft->m_iStackPC <= V_ARRAYSIZE(pLeft->m_StackPC)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/memblockhdr.h
@@ -6130,9 +6123,10 @@ crashhandler003
 crashhandler002
 crashhandler.dylib
 CreateInterface
+%u
 1.0
-Dec  7 2020
-10:04:31
+Dec  9 2020
+15:25:37
 Jan
 Feb
 Mar
@@ -6187,6 +6181,7 @@ Assertion Failed: NULL == pValObjectPrev->m_pValObjectNext
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier0/valobject.cpp
 Assertion Failed: !g_VProfile
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier0/vprof.cpp
+Assertion Failed: pszName
 Assertion Failed: m_nRecursions > 0
 Avg Time/Frame (ms)
 [ func+child   func ]     Count
@@ -6239,10 +6234,13 @@ Streaming
 ThreadWorkItem
 TenFoot
 tier1
-Assertion Failed: m_CounterNames[n]
 Assertion Failed: m_pBudgetGroups
 Assertion Failed: eGroup < VPROF_BUDGETGROUP_MAX
 No room for new profile in vprof thread profile list, grow MAX_THREADS_TO_VPROF_AT_ONCE
+WARNING: Disabling vprof spike dumping and stopping profile for thread %d - %s because of exceeded rate limit, try a higher threshold.
+Assertion Failed: m_pParent
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/vprof.h
+Assertion Failed: m_pszName
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/crypto_digest_openssl.cpp
 CCrypto::GenerateSHA1Digest
 Assertion Failed: pOutDigest
@@ -6290,6 +6288,8 @@ Assertion Failed: m_iSampleBucketCurrent < m_cSampleBuckets
 Assertion Failed: m_iSampleBucketLast < m_cSampleBuckets
 @nIOCPThreadCount
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/completionportmanager.cpp
+DispatchCompletedItem
+DispatchCompletedItem - error
 Assertion Failed: ulResult != 0
 CCompletionPortManager::IOCPWorkerThread: got 100 consecutive errors, last error %d (%s), IOCP thread aborting and exiting
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/completionportmanager_posix.cpp
@@ -6337,8 +6337,10 @@ Assertion Failed: pchName
 Assertion Failed: V_strlen( pchName ) < V_ARRAYSIZE( m_rgchName )
 Assertion Failed: m_iHistory < V_ARRAYSIZE( m_rgunMicroSecRunHistory )
 CFrameFunctionMgr::~CFrameFunctionMgr: non static FrameFunction[%s] still registered
+Assertion Failed: *pBaseFrameFunction->GetName()
 CFrameFunctionMgr::Deregister: function to deregister not found
 CFrameFunctionMgr::BRun - OverageWarning
+CFrameFunctionMgr::BRun - DeletePass
 publish
 bootstrap
 startup
@@ -6487,6 +6489,7 @@ CLogInstance::EmitEventNow
 Last Message Repeated %d times.%s
 Assertion Failed: (unsigned)elem <= (unsigned)m_Size
 totaltime
+CMetrics::Increment_int
 m_nullMetrics
 m_totalTime
 m_stringDimensions
@@ -6689,10 +6692,13 @@ H=
 A
 Hc
 =
+"
 N
-@!
-L#
+<#
+#
+#
 Hc
+
 ?
 ?
 ?
@@ -6708,7 +6714,6 @@ Hc
 ?
 ?
 ?
-T
 .
 0
 @
@@ -7018,11 +7023,9 @@ AES-NI GCM module for x86_64, CRYPTOGAMS by <appro@openssl.org>
 =
 Montgomery Multiplication with scatter/gather for x86_64, CRYPTOGAMS by <appro@openssl.org>
 =
-"
 3
 3
 IcE
-
 I;E
 ,
 H
@@ -7044,6 +7047,7 @@ P
 @
 @
 @
+4
 H=
 &
 =
@@ -7053,6 +7057,7 @@ H=
 @
 Hi
 E
+Hc5
 $
 (
 0
@@ -7082,6 +7087,7 @@ i
 @
 @
 @
+x
 @
 @
 @
@@ -7092,6 +7098,5 @@ i
 @
 @
 @
-B
 Hi
-+
+

@@ -2741,13 +2741,17 @@ button.appdetailsheader_ExitEditModeButton_i7jBC.appdetailsheader_ExitEditModeBu
   .appproperties_AppProperties_1FyBL .appproperties_Page_1SvWY .appproperties_Title_3zuIC {
     text-transform: uppercase; }
   .appproperties_AppProperties_1FyBL .appproperties_Page_1SvWY .appproperties_Detail_Hxqea {
-    font-size: 14px; }
-  .appproperties_AppProperties_1FyBL .appproperties_Page_1SvWY .appproperties_CheckboxRow_3-u-p {
-    margin-bottom: 10px; }
+    font-size: 13px;
+    margin-top: 5px; }
+  .appproperties_AppProperties_1FyBL .appproperties_Page_1SvWY .appproperties_TopGap_1Ym7e {
+    margin-top: 10px; }
+  .appproperties_AppProperties_1FyBL .appproperties_Page_1SvWY .appproperties_TopGapSmall_2evqi {
+    margin-top: 5px; }
+  .appproperties_AppProperties_1FyBL .appproperties_Page_1SvWY .appproperties_TopGapLarge_1FyDt {
+    margin-top: 20px; }
   .appproperties_AppProperties_1FyBL .appproperties_Page_1SvWY .appproperties_SteamCloudSection_F0Rww {
     display: flex;
-    flex-direction: column;
-    margin-top: 0; }
+    flex-direction: column; }
     .appproperties_AppProperties_1FyBL .appproperties_Page_1SvWY .appproperties_SteamCloudSection_F0Rww .appproperties_SteamCloudUsage_2Dfy8 {
       align-self: flex-end; }
   .appproperties_AppProperties_1FyBL .appproperties_Page_1SvWY .appproperties_BrowseDiskRow_vgVsC {
@@ -2761,8 +2765,6 @@ button.appdetailsheader_ExitEditModeButton_i7jBC.appdetailsheader_ExitEditModeBu
       flex: 1 1 auto; }
     .appproperties_AppProperties_1FyBL .appproperties_Page_1SvWY .appproperties_BrowseDiskRow_vgVsC .appproperties_BrowseDiskButton_OF562 {
       width: 260px; }
-  .appproperties_AppProperties_1FyBL .appproperties_Page_1SvWY .appproperties_VerifyGameButton_1mDup {
-    margin-top: 20px; }
   .appproperties_AppProperties_1FyBL .appproperties_Page_1SvWY .appproperties_BetaAccessCodeRow_2WZcp {
     display: flex;
     flex-direction: row; }
@@ -2774,19 +2776,14 @@ button.appdetailsheader_ExitEditModeButton_i7jBC.appdetailsheader_ExitEditModeBu
       padding: 0 20px; }
   .appproperties_AppProperties_1FyBL .appproperties_Page_1SvWY .appproperties_BetaOptIntoButton_8mlSY {
     margin-top: 10px; }
-  .appproperties_AppProperties_1FyBL .appproperties_Page_1SvWY .appproperties_SteamInputDescription_2fYin {
-    margin-top: 20px;
-    margin-bottom: 10px; }
   .appproperties_AppProperties_1FyBL .appproperties_Page_1SvWY .appproperties_SteamInputLink_fy_T9 {
     text-decoration: underline;
     cursor: pointer; }
     .appproperties_AppProperties_1FyBL .appproperties_Page_1SvWY .appproperties_SteamInputLink_fy_T9:hover {
       color: #dfe3e6; }
   .appproperties_AppProperties_1FyBL .appproperties_Page_1SvWY .appproperties_SteamInputComboHeader_117yW {
-    margin-top: 10px;
-    margin-bottom: 10px;
     display: flex;
-    justify-content: flex-end; }
+    align-items: flex-end; }
     .appproperties_AppProperties_1FyBL .appproperties_Page_1SvWY .appproperties_SteamInputComboHeader_117yW .appproperties_PerGameName_1ZX8p {
       flex: 1 0 auto;
       text-transform: uppercase; }
@@ -2800,7 +2797,7 @@ button.appdetailsheader_ExitEditModeButton_i7jBC.appdetailsheader_ExitEditModeBu
     row-gap: 5px;
     padding: 5px 20px;
     background-color: rgba(59, 63, 72, 0.2);
-    margin: 5px 0 0 20px;
+    margin-left: 20px;
     border-radius: 3px; }
     .appproperties_AppProperties_1FyBL .appproperties_Page_1SvWY .appproperties_SteamInputStatusGrid_3lj3- .appproperties_SteamInputStatus_2H4Ly {
       color: #dfe3e6; }
@@ -14904,13 +14901,16 @@ textarea:-webkit-autofill:focus,
   .eventrow_AppCapsulePrice_2-l2M span {
     font-size: 12px; }
 
-.gamehover_GameHoverTransition_We-Ng {
+.gamehover_HoverContentTransition_3-pnC {
+  height: 100%;
   transition: transform 0.15s ease-out;
-  transform: scale(0.95); }
-  .gamehover_GameHoverTransition_We-Ng.gamehover_Opening_3A24v, .gamehover_GameHoverTransition_We-Ng.gamehover_Open_1rWYa {
+  transform: scale(0.95);
+  outline: none; }
+  .gamehover_HoverContentTransition_3-pnC.gamehover_Opening_3A24v, .gamehover_HoverContentTransition_3-pnC.gamehover_Open_1rWYa {
     transform: scale(1); }
 
 .gamehover_GameHoverCapsuleCtn_2jsr3 {
+  height: 100%;
   box-sizing: border-box;
   background: radial-gradient(ellipse at top right, #5577bb, #333355);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
@@ -14921,6 +14921,11 @@ textarea:-webkit-autofill:focus,
   font-family: 'Motiva Sans', Arial, Helvetica, sans-serif; }
   .gamehover_GameHoverCapsuleCtn_2jsr3:hover {
     color: white; }
+  .gamehover_GameHoverCapsuleCtn_2jsr3.gamehover_UseHidingBottomHalf_5hPHC {
+    overflow: hidden; }
+  .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_TrailerAnchorStoreLink_OxANH {
+    height: 100%;
+    position: relative; }
   .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_TrailerCtn_1I27K {
     position: relative;
     width: 100%;
@@ -14942,7 +14947,8 @@ textarea:-webkit-autofill:focus,
         opacity: 0; }
   .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_Midline_Xwe3c {
     display: flex;
-    justify-content: space-between; }
+    justify-content: space-between;
+    flex: none; }
     .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_Midline_Xwe3c .gamehover_Price_2Eh6G {
       max-width: 50%; }
   .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_CapsuleImageAnchorPoint_1OMas {
@@ -14983,65 +14989,6 @@ textarea:-webkit-autofill:focus,
       transform: translateX(-30px); }
       .gamehover_Opening_3A24v .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_WithCornerShine_2kRKA:after, .gamehover_Open_1rWYa .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_WithCornerShine_2kRKA:after {
         transform: translateX(0px); }
-  .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN {
-    color: white; }
-    .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL {
-      padding: 4px 8px; }
-      .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_GameTitle_405wj {
-        font-size: 22px; }
-      .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_TagRow_2SWQM {
-        color: #88aacc;
-        font-size: 12px;
-        display: flex;
-        padding: 8px 0px 4px; }
-        .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_TagRow_2SWQM .gamehover_Tags_fTGVi {
-          overflow: hidden;
-          max-height: 40px;
-          padding-right: 12px;
-          display: flex;
-          flex-wrap: wrap; }
-          .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_TagRow_2SWQM .gamehover_Tags_fTGVi .gamehover_Tag_1wO-t {
-            padding: 0px 6px;
-            margin-bottom: 4px;
-            line-height: 17px;
-            border-radius: 2px;
-            background-color: #6868af;
-            color: white;
-            margin-left: 4px;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            position: relative; }
-      .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_ReviewScore_3qvpp {
-        font-size: 12px;
-        display: flex;
-        padding-bottom: 4px; }
-        .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreHeader_2t-0j {
-          color: #88aacc;
-          margin-right: 4px; }
-        .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreValue_3ZWs0 {
-          display: flex; }
-          .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreValue_3ZWs0.gamehover_ReviewScoreLow_3nU5I {
-            color: gray; }
-          .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreValue_3ZWs0.gamehover_ReviewScoreMixed_11Q2_ {
-            color: #d8d81e; }
-          .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreValue_3ZWs0.gamehover_ReviewScoreHigh_3wXHC {
-            color: #32ad32; }
-          .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreValue_3ZWs0 .gamehover_ReviewScorePercentage_38dPa {
-            margin-right: 4px; }
-        .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreCount_1wXL_ {
-          color: #88aacc;
-          margin-left: 4px; }
-      .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_PlatformDisplay_2UG4_ {
-        padding-left: 4px; }
-      .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_ReviewsAndRelease_1HFUC {
-        display: flex;
-        justify-content: space-between;
-        font-size: 14px;
-        margin-left: -4px; }
-        .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_ReviewsAndRelease_1HFUC .gamehover_ReleaseDate_35Bya {
-          padding: 4px; }
-          .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_LowerContent_2-blN .gamehover_TextContent_2VvFL .gamehover_ReviewsAndRelease_1HFUC .gamehover_ReleaseDate_35Bya .gamehover_ReleasePrefix_2ZKEX {
-            margin-right: 4px; }
   .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_DemoButton_2V6ci {
     margin: 4px 0;
     background-color: rgba(255, 255, 255, 0.2); }
@@ -15073,6 +15020,81 @@ textarea:-webkit-autofill:focus,
         width: auto;
         height: auto;
         padding-right: 8px; }
+
+.gamehover_BottomShelf_oAqlZ {
+  background: radial-gradient(ellipse at top right, #5577bb, #333355);
+  position: relative;
+  z-index: 1;
+  transition: transform 0.25s ease-in-out;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.9);
+  color: white;
+  display: flex;
+  flex-direction: column; }
+  .gamehover_UseHidingBottomHalf_5hPHC .gamehover_BottomShelf_oAqlZ {
+    max-height: 85%;
+    transform: translateY(-50%); }
+    .gamehover_Open_1rWYa .gamehover_UseHidingBottomHalf_5hPHC .gamehover_BottomShelf_oAqlZ {
+      transform: translateY(0); }
+  .gamehover_BottomShelf_oAqlZ .gamehover_BottomShelfOffScreen_36zpR {
+    flex-shrink: 1;
+    overflow-y: auto; }
+  .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL {
+    padding: 4px 8px; }
+    .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_GameTitle_405wj {
+      font-size: 18px; }
+    .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_TagRow_2SWQM {
+      color: #88aacc;
+      font-size: 10px;
+      display: flex;
+      padding: 8px 0px 4px; }
+      .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_TagRow_2SWQM .gamehover_Tags_fTGVi {
+        overflow: hidden;
+        max-height: 40px;
+        padding-right: 12px;
+        display: flex;
+        flex-wrap: wrap; }
+        .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_TagRow_2SWQM .gamehover_Tags_fTGVi .gamehover_Tag_1wO-t {
+          padding: 0px 6px;
+          margin-bottom: 4px;
+          line-height: 17px;
+          border-radius: 2px;
+          background-color: rgba(112, 129, 137, 0.15);
+          color: rgba(255, 255, 255, 0.65);
+          margin-left: 4px;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          position: relative; }
+    .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_ReviewScore_3qvpp {
+      font-size: 12px;
+      display: flex;
+      padding-bottom: 4px; }
+      .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreHeader_2t-0j {
+        color: #88aacc;
+        margin-right: 4px; }
+      .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreValue_3ZWs0 {
+        display: flex; }
+        .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreValue_3ZWs0.gamehover_ReviewScoreLow_3nU5I {
+          color: gray; }
+        .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreValue_3ZWs0.gamehover_ReviewScoreMixed_11Q2_ {
+          color: #d8d81e; }
+        .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreValue_3ZWs0.gamehover_ReviewScoreHigh_3wXHC {
+          color: #32ad32; }
+        .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreValue_3ZWs0 .gamehover_ReviewScorePercentage_38dPa {
+          margin-right: 4px; }
+      .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreCount_1wXL_ {
+        color: #88aacc;
+        margin-left: 4px; }
+    .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_PlatformDisplay_2UG4_ {
+      padding-left: 4px; }
+    .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_ReviewsAndRelease_1HFUC {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      margin-left: -4px; }
+      .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_ReviewsAndRelease_1HFUC .gamehover_ReleaseDate_35Bya {
+        padding: 4px; }
+        .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_ReviewsAndRelease_1HFUC .gamehover_ReleaseDate_35Bya .gamehover_ReleasePrefix_2ZKEX {
+          margin-right: 4px; }
 
 .salepreviewwidgets_StoreSaleWidgetContainer_2hhNO {
   display: flex;
@@ -18518,7 +18540,6 @@ textarea {
 .reorderablelist_WhitelistRow_28TC1 {
   display: flex;
   align-items: center;
-  height: 40px;
   background-color: #333740;
   padding: 4px;
   margin-bottom: 2px;
@@ -18541,6 +18562,169 @@ textarea {
   margin-left: auto;
   display: flex;
   flex-direction: row; }
+
+.nominationandvote_SteamAwardContainer_3n6v2 {
+  margin-right: 24px;
+  margin-bottom: 40px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
+  position: relative;
+  background: #355a5f; }
+  .nominationandvote_InLibraryView_pqLcz .nominationandvote_SteamAwardContainer_3n6v2 {
+    margin: 24px; }
+  .nominationandvote_SteamAwardContainer_3n6v2.nominationandvote_Category_love_2f8jC {
+    background: url(https://steamcdn-a.akamaihd.net/store/promo/autumn2019/nom_modal_art_3.png), #355a5f;
+    background-size: cover; }
+  .nominationandvote_SteamAwardContainer_3n6v2.nominationandvote_Category_goty_2pCT3 {
+    background: url(https://steamcdn-a.akamaihd.net/store/promo/autumn2019/nom_modal_art_1.png), #355a5f;
+    background-size: cover; }
+  .nominationandvote_SteamAwardContainer_3n6v2.nominationandvote_Category_vrgoty__wA2f {
+    background: url(https://steamcdn-a.akamaihd.net/store/promo/autumn2019/nom_modal_art_2.png), #355a5f;
+    background-size: cover; }
+  .nominationandvote_SteamAwardContainer_3n6v2.nominationandvote_Category_friends_2p0XH {
+    background: url(https://steamcdn-a.akamaihd.net/store/promo/autumn2019/nom_modal_art_4.png), #355a5f;
+    background-size: cover; }
+  .nominationandvote_SteamAwardContainer_3n6v2.nominationandvote_Category_gameplay_rbEsY {
+    background: url(https://steamcdn-a.akamaihd.net/store/promo/autumn2019/nom_modal_art_5.png), #355a5f;
+    background-size: cover; }
+  .nominationandvote_SteamAwardContainer_3n6v2.nominationandvote_Category_storyrich_2XCN7 {
+    background: url(https://steamcdn-a.akamaihd.net/store/promo/autumn2019/nom_modal_art_6.png), #355a5f;
+    background-size: cover; }
+  .nominationandvote_SteamAwardContainer_3n6v2.nominationandvote_Category_yousuck_IzDwF {
+    background: url(https://steamcdn-a.akamaihd.net/store/promo/autumn2019/nom_modal_art_7.png), #355a5f;
+    background-size: cover; }
+  .nominationandvote_SteamAwardContainer_3n6v2.nominationandvote_Category_visual_1-FVz {
+    background: url(https://steamcdn-a.akamaihd.net/store/promo/autumn2019/nom_modal_art_8.png), #355a5f;
+    background-size: cover; }
+  .nominationandvote_SteamAwardContainer_3n6v2 .nominationandvote_SteamAwardHeader_2jgrT {
+    box-sizing: border-box;
+    position: relative;
+    padding: 16px;
+    border-top-left-radius: 4px;
+    background-color: #061822;
+    height: 153px;
+    font-size: 12px; }
+    .nominationandvote_SteamAwardContainer_3n6v2 .nominationandvote_SteamAwardHeader_2jgrT .nominationandvote_SteamAwardHeaderImage__lRFQ {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      max-width: 100%; }
+    .nominationandvote_SteamAwardContainer_3n6v2 .nominationandvote_SteamAwardHeader_2jgrT .nominationandvote_SteamAwardMainCtn_1uGju {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      justify-content: center;
+      position: relative; }
+    .nominationandvote_SteamAwardContainer_3n6v2 .nominationandvote_SteamAwardHeader_2jgrT .nominationandvote_SteamAwardMainTitle_161Yb {
+      position: relative;
+      color: #bcf3dc;
+      text-transform: uppercase;
+      font-weight: 800;
+      font-size: 36px;
+      line-height: 36px; }
+    .nominationandvote_SteamAwardContainer_3n6v2 .nominationandvote_SteamAwardHeader_2jgrT .nominationandvote_SteamAwardSubTitle_Sxxel {
+      position: relative;
+      text-transform: uppercase;
+      font-size: 12px;
+      color: #bcf3dc; }
+    .nominationandvote_SteamAwardContainer_3n6v2 .nominationandvote_SteamAwardHeader_2jgrT .nominationandvote_SteamAwardLearnMore_VQlY6 {
+      color: #c9d3d9;
+      margin-left: 12px;
+      text-transform: uppercase;
+      font-style: normal; }
+      .nominationandvote_SteamAwardContainer_3n6v2 .nominationandvote_SteamAwardHeader_2jgrT .nominationandvote_SteamAwardLearnMore_VQlY6:hover {
+        color: white; }
+      .nominationandvote_SteamAwardContainer_3n6v2 .nominationandvote_SteamAwardHeader_2jgrT .nominationandvote_SteamAwardLearnMore_VQlY6.nominationandvote_BottomRight_zr64Q {
+        margin-left: auto; }
+    .nominationandvote_SteamAwardContainer_3n6v2 .nominationandvote_SteamAwardHeader_2jgrT .nominationandvote_SteamAwardHeaderText_2mrzK {
+      position: relative;
+      padding-top: 15px;
+      width: 85%;
+      color: #c9d3d9;
+      font-style: italic;
+      display: flex; }
+      .nominationandvote_SteamAwardContainer_3n6v2 .nominationandvote_SteamAwardHeader_2jgrT .nominationandvote_SteamAwardHeaderText_2mrzK .nominationandvote_LinkText_2x4pg {
+        color: #ebebeb;
+        text-decoration: underline;
+        font-style: normal; }
+        .nominationandvote_SteamAwardContainer_3n6v2 .nominationandvote_SteamAwardHeader_2jgrT .nominationandvote_SteamAwardHeaderText_2mrzK .nominationandvote_LinkText_2x4pg:hover {
+          color: white; }
+      @media screen and (max-width: 620px) {
+        .nominationandvote_SteamAwardContainer_3n6v2 .nominationandvote_SteamAwardHeader_2jgrT .nominationandvote_SteamAwardHeaderText_2mrzK {
+          display: none; } }
+  .nominationandvote_SteamAwardContainer_3n6v2 .nominationandvote_SteamAwardVoteWidget_khWz0 {
+    padding: 4px 10px 8px;
+    color: #ebebeb;
+    font-size: 12px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px; }
+    .nominationandvote_SteamAwardContainer_3n6v2 .nominationandvote_SteamAwardVoteWidget_khWz0 .nominationandvote_SteamAwardVotePrompt_H5jrP {
+      text-transform: uppercase;
+      color: #bcf3dc;
+      margin-bottom: 4px;
+      letter-spacing: 0.05em; }
+    .nominationandvote_SteamAwardContainer_3n6v2 .nominationandvote_SteamAwardVoteWidget_khWz0 .nominationandvote_SteamAwardCategoryTitle_JVE9O {
+      color: white;
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 31px; }
+    .nominationandvote_SteamAwardContainer_3n6v2 .nominationandvote_SteamAwardVoteWidget_khWz0 .nominationandvote_SteamAwardCategoryDesc_1V-8W {
+      display: block; }
+    .nominationandvote_SteamAwardContainer_3n6v2 .nominationandvote_SteamAwardVoteWidget_khWz0 .nominationandvote_SteamAwardVoteButtonArea_1v9LH {
+      border-radius: 4px;
+      color: #dfe3e6;
+      padding: 0px 20% 6px 6px; }
+      .nominationandvote_SteamAwardContainer_3n6v2 .nominationandvote_SteamAwardVoteWidget_khWz0 .nominationandvote_SteamAwardVoteButtonArea_1v9LH .nominationandvote_SteamAwardVoteButton_cTcgI {
+        border: none;
+        margin: 12px 0px 6px;
+        padding: 0px;
+        cursor: pointer;
+        color: #fff;
+        background: transparent; }
+        .nominationandvote_SteamAwardContainer_3n6v2 .nominationandvote_SteamAwardVoteWidget_khWz0 .nominationandvote_SteamAwardVoteButtonArea_1v9LH .nominationandvote_SteamAwardVoteButton_cTcgI .nominationandvote_SteamAwardVoteButtonText_247y3 {
+          border: 1px solid rgba(255, 255, 255, 0.4);
+          border-radius: 2px;
+          text-transform: uppercase;
+          letter-spacing: 1.8px;
+          font-weight: 600;
+          padding: 5px 10px; }
+        .nominationandvote_SteamAwardContainer_3n6v2 .nominationandvote_SteamAwardVoteWidget_khWz0 .nominationandvote_SteamAwardVoteButtonArea_1v9LH .nominationandvote_SteamAwardVoteButton_cTcgI:hover .nominationandvote_SteamAwardVoteButtonText_247y3 {
+          border: 1px solid white; }
+      .nominationandvote_SteamAwardContainer_3n6v2 .nominationandvote_SteamAwardVoteWidget_khWz0 .nominationandvote_SteamAwardVoteButtonArea_1v9LH .nominationandvote_SteamAwardVoteButtonSubmitted_1ouD4 {
+        display: inline-block;
+        box-sizing: border-box;
+        border: 1px solid white;
+        border-radius: 2px;
+        margin-top: 6px;
+        height: 32px;
+        padding: 5px 10px;
+        cursor: pointer;
+        text-transform: uppercase;
+        color: #355a5f;
+        font-size: 13.33px;
+        font-weight: 600;
+        letter-spacing: 1.8px;
+        background: #fff; }
+    .nominationandvote_SteamAwardContainer_3n6v2 .nominationandvote_SteamAwardVoteWidget_khWz0 .nominationandvote_SteamAwardNominateButton_1uxCj {
+      border: 1px solid rgba(188, 243, 220, 0.4);
+      border-radius: 4px;
+      padding: 4px 6px 0px;
+      color: #dfe3e6; }
+      .nominationandvote_SteamAwardContainer_3n6v2 .nominationandvote_SteamAwardVoteWidget_khWz0 .nominationandvote_SteamAwardNominateButton_1uxCj:hover {
+        border: 1px solid #bcf3dc; }
+      .nominationandvote_SteamAwardContainer_3n6v2 .nominationandvote_SteamAwardVoteWidget_khWz0 .nominationandvote_SteamAwardNominateButton_1uxCj .DialogCheckbox {
+        background-color: rgba(0, 0, 0, 0.1);
+        border: 1px solid #bcf3dc;
+        border-radius: 12px;
+        margin-top: 4px; }
+      .nominationandvote_SteamAwardContainer_3n6v2 .nominationandvote_SteamAwardVoteWidget_khWz0 .nominationandvote_SteamAwardNominateButton_1uxCj .nominationandvote_SteamAwardCategoryDesc_1V-8W {
+        margin-left: 32px; }
+    .nominationandvote_SteamAwardContainer_3n6v2 .nominationandvote_SteamAwardVoteWidget_khWz0 .nominationandvote_SteamAwardLinkToNominationPage_3p83s {
+      margin-top: 4px;
+      text-decoration: underline; }
+
+.nominationandvote_SteamAwardModalGameTitle_15lc0 {
+  color: white; }
 
 .partnereventdisplay_EventDetailsPageContainer_2Ptra {
   display: flex;
@@ -19250,169 +19434,6 @@ textarea {
 .partnereventdisplay_ReadMoreCnt_1L8Mo {
   padding-top: 20px; }
 
-.nominationandvote_SteamAwardContainer_3n6v2 {
-  margin-right: 24px;
-  margin-bottom: 40px;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
-  border-radius: 4px;
-  position: relative;
-  background: #355a5f; }
-  .nominationandvote_InLibraryView_pqLcz .nominationandvote_SteamAwardContainer_3n6v2 {
-    margin: 24px; }
-  .nominationandvote_SteamAwardContainer_3n6v2.nominationandvote_Category_love_2f8jC {
-    background: url(https://steamcdn-a.akamaihd.net/store/promo/autumn2019/nom_modal_art_3.png), #355a5f;
-    background-size: cover; }
-  .nominationandvote_SteamAwardContainer_3n6v2.nominationandvote_Category_goty_2pCT3 {
-    background: url(https://steamcdn-a.akamaihd.net/store/promo/autumn2019/nom_modal_art_1.png), #355a5f;
-    background-size: cover; }
-  .nominationandvote_SteamAwardContainer_3n6v2.nominationandvote_Category_vrgoty__wA2f {
-    background: url(https://steamcdn-a.akamaihd.net/store/promo/autumn2019/nom_modal_art_2.png), #355a5f;
-    background-size: cover; }
-  .nominationandvote_SteamAwardContainer_3n6v2.nominationandvote_Category_friends_2p0XH {
-    background: url(https://steamcdn-a.akamaihd.net/store/promo/autumn2019/nom_modal_art_4.png), #355a5f;
-    background-size: cover; }
-  .nominationandvote_SteamAwardContainer_3n6v2.nominationandvote_Category_gameplay_rbEsY {
-    background: url(https://steamcdn-a.akamaihd.net/store/promo/autumn2019/nom_modal_art_5.png), #355a5f;
-    background-size: cover; }
-  .nominationandvote_SteamAwardContainer_3n6v2.nominationandvote_Category_storyrich_2XCN7 {
-    background: url(https://steamcdn-a.akamaihd.net/store/promo/autumn2019/nom_modal_art_6.png), #355a5f;
-    background-size: cover; }
-  .nominationandvote_SteamAwardContainer_3n6v2.nominationandvote_Category_yousuck_IzDwF {
-    background: url(https://steamcdn-a.akamaihd.net/store/promo/autumn2019/nom_modal_art_7.png), #355a5f;
-    background-size: cover; }
-  .nominationandvote_SteamAwardContainer_3n6v2.nominationandvote_Category_visual_1-FVz {
-    background: url(https://steamcdn-a.akamaihd.net/store/promo/autumn2019/nom_modal_art_8.png), #355a5f;
-    background-size: cover; }
-  .nominationandvote_SteamAwardContainer_3n6v2 .nominationandvote_SteamAwardHeader_2jgrT {
-    box-sizing: border-box;
-    position: relative;
-    padding: 16px;
-    border-top-left-radius: 4px;
-    background-color: #061822;
-    height: 153px;
-    font-size: 12px; }
-    .nominationandvote_SteamAwardContainer_3n6v2 .nominationandvote_SteamAwardHeader_2jgrT .nominationandvote_SteamAwardHeaderImage__lRFQ {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      max-width: 100%; }
-    .nominationandvote_SteamAwardContainer_3n6v2 .nominationandvote_SteamAwardHeader_2jgrT .nominationandvote_SteamAwardMainCtn_1uGju {
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-      justify-content: center;
-      position: relative; }
-    .nominationandvote_SteamAwardContainer_3n6v2 .nominationandvote_SteamAwardHeader_2jgrT .nominationandvote_SteamAwardMainTitle_161Yb {
-      position: relative;
-      color: #bcf3dc;
-      text-transform: uppercase;
-      font-weight: 800;
-      font-size: 36px;
-      line-height: 36px; }
-    .nominationandvote_SteamAwardContainer_3n6v2 .nominationandvote_SteamAwardHeader_2jgrT .nominationandvote_SteamAwardSubTitle_Sxxel {
-      position: relative;
-      text-transform: uppercase;
-      font-size: 12px;
-      color: #bcf3dc; }
-    .nominationandvote_SteamAwardContainer_3n6v2 .nominationandvote_SteamAwardHeader_2jgrT .nominationandvote_SteamAwardLearnMore_VQlY6 {
-      color: #c9d3d9;
-      margin-left: 12px;
-      text-transform: uppercase;
-      font-style: normal; }
-      .nominationandvote_SteamAwardContainer_3n6v2 .nominationandvote_SteamAwardHeader_2jgrT .nominationandvote_SteamAwardLearnMore_VQlY6:hover {
-        color: white; }
-      .nominationandvote_SteamAwardContainer_3n6v2 .nominationandvote_SteamAwardHeader_2jgrT .nominationandvote_SteamAwardLearnMore_VQlY6.nominationandvote_BottomRight_zr64Q {
-        margin-left: auto; }
-    .nominationandvote_SteamAwardContainer_3n6v2 .nominationandvote_SteamAwardHeader_2jgrT .nominationandvote_SteamAwardHeaderText_2mrzK {
-      position: relative;
-      padding-top: 15px;
-      width: 85%;
-      color: #c9d3d9;
-      font-style: italic;
-      display: flex; }
-      .nominationandvote_SteamAwardContainer_3n6v2 .nominationandvote_SteamAwardHeader_2jgrT .nominationandvote_SteamAwardHeaderText_2mrzK .nominationandvote_LinkText_2x4pg {
-        color: #ebebeb;
-        text-decoration: underline;
-        font-style: normal; }
-        .nominationandvote_SteamAwardContainer_3n6v2 .nominationandvote_SteamAwardHeader_2jgrT .nominationandvote_SteamAwardHeaderText_2mrzK .nominationandvote_LinkText_2x4pg:hover {
-          color: white; }
-      @media screen and (max-width: 620px) {
-        .nominationandvote_SteamAwardContainer_3n6v2 .nominationandvote_SteamAwardHeader_2jgrT .nominationandvote_SteamAwardHeaderText_2mrzK {
-          display: none; } }
-  .nominationandvote_SteamAwardContainer_3n6v2 .nominationandvote_SteamAwardVoteWidget_khWz0 {
-    padding: 4px 10px 8px;
-    color: #ebebeb;
-    font-size: 12px;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px; }
-    .nominationandvote_SteamAwardContainer_3n6v2 .nominationandvote_SteamAwardVoteWidget_khWz0 .nominationandvote_SteamAwardVotePrompt_H5jrP {
-      text-transform: uppercase;
-      color: #bcf3dc;
-      margin-bottom: 4px;
-      letter-spacing: 0.05em; }
-    .nominationandvote_SteamAwardContainer_3n6v2 .nominationandvote_SteamAwardVoteWidget_khWz0 .nominationandvote_SteamAwardCategoryTitle_JVE9O {
-      color: white;
-      font-weight: 500;
-      font-size: 15px;
-      line-height: 31px; }
-    .nominationandvote_SteamAwardContainer_3n6v2 .nominationandvote_SteamAwardVoteWidget_khWz0 .nominationandvote_SteamAwardCategoryDesc_1V-8W {
-      display: block; }
-    .nominationandvote_SteamAwardContainer_3n6v2 .nominationandvote_SteamAwardVoteWidget_khWz0 .nominationandvote_SteamAwardVoteButtonArea_1v9LH {
-      border-radius: 4px;
-      color: #dfe3e6;
-      padding: 0px 20% 6px 6px; }
-      .nominationandvote_SteamAwardContainer_3n6v2 .nominationandvote_SteamAwardVoteWidget_khWz0 .nominationandvote_SteamAwardVoteButtonArea_1v9LH .nominationandvote_SteamAwardVoteButton_cTcgI {
-        border: none;
-        margin: 12px 0px 6px;
-        padding: 0px;
-        cursor: pointer;
-        color: #fff;
-        background: transparent; }
-        .nominationandvote_SteamAwardContainer_3n6v2 .nominationandvote_SteamAwardVoteWidget_khWz0 .nominationandvote_SteamAwardVoteButtonArea_1v9LH .nominationandvote_SteamAwardVoteButton_cTcgI .nominationandvote_SteamAwardVoteButtonText_247y3 {
-          border: 1px solid rgba(255, 255, 255, 0.4);
-          border-radius: 2px;
-          text-transform: uppercase;
-          letter-spacing: 1.8px;
-          font-weight: 600;
-          padding: 5px 10px; }
-        .nominationandvote_SteamAwardContainer_3n6v2 .nominationandvote_SteamAwardVoteWidget_khWz0 .nominationandvote_SteamAwardVoteButtonArea_1v9LH .nominationandvote_SteamAwardVoteButton_cTcgI:hover .nominationandvote_SteamAwardVoteButtonText_247y3 {
-          border: 1px solid white; }
-      .nominationandvote_SteamAwardContainer_3n6v2 .nominationandvote_SteamAwardVoteWidget_khWz0 .nominationandvote_SteamAwardVoteButtonArea_1v9LH .nominationandvote_SteamAwardVoteButtonSubmitted_1ouD4 {
-        display: inline-block;
-        box-sizing: border-box;
-        border: 1px solid white;
-        border-radius: 2px;
-        margin-top: 6px;
-        height: 32px;
-        padding: 5px 10px;
-        cursor: pointer;
-        text-transform: uppercase;
-        color: #355a5f;
-        font-size: 13.33px;
-        font-weight: 600;
-        letter-spacing: 1.8px;
-        background: #fff; }
-    .nominationandvote_SteamAwardContainer_3n6v2 .nominationandvote_SteamAwardVoteWidget_khWz0 .nominationandvote_SteamAwardNominateButton_1uxCj {
-      border: 1px solid rgba(188, 243, 220, 0.4);
-      border-radius: 4px;
-      padding: 4px 6px 0px;
-      color: #dfe3e6; }
-      .nominationandvote_SteamAwardContainer_3n6v2 .nominationandvote_SteamAwardVoteWidget_khWz0 .nominationandvote_SteamAwardNominateButton_1uxCj:hover {
-        border: 1px solid #bcf3dc; }
-      .nominationandvote_SteamAwardContainer_3n6v2 .nominationandvote_SteamAwardVoteWidget_khWz0 .nominationandvote_SteamAwardNominateButton_1uxCj .DialogCheckbox {
-        background-color: rgba(0, 0, 0, 0.1);
-        border: 1px solid #bcf3dc;
-        border-radius: 12px;
-        margin-top: 4px; }
-      .nominationandvote_SteamAwardContainer_3n6v2 .nominationandvote_SteamAwardVoteWidget_khWz0 .nominationandvote_SteamAwardNominateButton_1uxCj .nominationandvote_SteamAwardCategoryDesc_1V-8W {
-        margin-left: 32px; }
-    .nominationandvote_SteamAwardContainer_3n6v2 .nominationandvote_SteamAwardVoteWidget_khWz0 .nominationandvote_SteamAwardLinkToNominationPage_3p83s {
-      margin-top: 4px;
-      text-decoration: underline; }
-
-.nominationandvote_SteamAwardModalGameTitle_15lc0 {
-  color: white; }
-
 html:not(.client) .partner_events .apppartnereventspage_AppPartnerEventsPage_3CJsg .apppartnereventspage_AppPartnerEventsBanner_1HRiM {
   margin-top: 104px; }
 
@@ -19590,7 +19611,7 @@ html:not(.client) .partner_events .apppartnereventspage_AppPartnerEventsBody_1XL
 
 .apppartnereventspage_AppPartnerEventsContainer_3GCEy {
   padding: 0px 20px;
-  margin: 0 auto;
+  margin: 0 auto 80px;
   pointer-events: none; }
   @media screen and (max-width: 910px) {
     .apppartnereventspage_AppPartnerEventsContainer_3GCEy {

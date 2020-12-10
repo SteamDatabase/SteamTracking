@@ -209,8 +209,8 @@
 "Overlay_Publish_Error_Quota_Plural" "Недостатньо місця у Steam Cloud, аби завантажити ці знімки екрана"
 "Overlay_Delete_Screenshot_Error" "Виникла помилка під час вилучення знімка екрана. Спробуйте знову пізніше."
 "Overlay_Tag_As_Potential_Spoiler" "Позначити як спойлер"
-"Overlay_Publish_NeedWorkshopLegalAgreementAcceptance_Title" "Ліцензійна угода Майстерні Steam"
-"Overlay_Publish_NeedWorkshopLegalAgreementAcceptance_Desc" "Для повноцінного розміщення предмета вам необхідно прийняти останню версію ліцензійної угоди Майстерні Steam."
+"Overlay_Publish_NeedWorkshopLegalAgreementAcceptance_Title" "Угода майстерні Steam"
+"Overlay_Publish_NeedWorkshopLegalAgreementAcceptance_Desc" "Для остаточної публікації предмета вам необхідно прийняти останню версію Угоди майстерні Steam."
 "Overlay_Publish_NeedWorkshopLegalAgreementAcceptance_ViewItem" "Переглянути предмет"
 
 "Overlay_Share"						"Поділитися на Facebook"

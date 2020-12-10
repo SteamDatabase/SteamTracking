@@ -253,6 +253,7 @@
  CFStringCreateWithCString
  CFStringGetCString
  CFStringGetTypeID
+ CVProfile_ExitScope
  CValidator::ClaimArrayMemory(void*)
  CValidator::ClaimMemory(void*)
  CValidator::IsClaimed(void*)
@@ -2568,7 +2569,9 @@
  SteamStdLib::CommandLine()
  SteamThreadTools::CThreadMutex::CThreadMutex()
  SteamThreadTools::CThreadMutex::~CThreadMutex()
- SteamVProf::CVProfNode::ExitScope()
+ SteamVProf::CVProfManager::DumpAllThreadProfiles(int)
+ SteamVProf::CVProfManager::StartProfilingAllThreads()
+ SteamVProf::CVProfManager::StopProfilingAllThreads()
  StringAfterPrefix
  T BDrawHTMLPerfInfo()
  T BFastOverlayHTMLPathEnabled()
@@ -5870,7 +5873,7 @@
  T KeyValues::MergeFromBuffer(StringView, CUtlBuffer&, KeyValuesTextParser*)
  T KeyValues::MergeFromFile(IBaseFileSystem*, StringView, StringView)
  T KeyValues::ReadToken(CUtlBuffer&, bool&, char, KeyValuesTextParser*, bool&)
- T KeyValues::RecursiveMergeFromBuffer(char const*, CUtlBuffer&, KeyValuesTextParser*, bool)
+ T KeyValues::RecursiveMergeFromBuffer(CUtlBuffer&, KeyValuesTextParser*, bool)
  T KeyValues::RecursiveSaveToBuffer(CUtlBuffer*, int, EKeyValuesSerializationFlags) const
  T KeyValues::RemoveEverything()
  T KeyValues::RemoveSubKey(KeyValues*)
@@ -5884,6 +5887,7 @@
  T KeyValuesAD::operator KeyValues*()
  T KeyValuesAD::operator->()
  T KeyValuesAD::~KeyValuesAD()
+ T KeyValuesTextParser::InitBuffer(int)
  T KeyValuesTextParser::KeyValuesTextParser(bool, int)
  T KeyValuesTextParser::Pop()
  T KeyValuesTextParser::ReportError(StringView, CUtlBuffer const&)
@@ -5941,14 +5945,6 @@
  T ServerNameCompare(vgui::ListPanelItem const&, vgui::ListPanelItem const&)
  T SteamAPI_RegisterCallback
  T SteamAPI_UnregisterCallback
- T SteamVProf::CVProfManager::DumpAllThreadProfiles(int)
- T SteamVProf::CVProfManager::StartProfilingAllThreads()
- T SteamVProf::CVProfManager::StopProfilingAllThreads()
- T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)12, false, 4>::~CVProfScope()
- T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)19, false, 4>::~CVProfScope()
- T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)2, false, 4>::~CVProfScope()
- T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)20, false, 4>::~CVProfScope()
- T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)5, false, 4>::~CVProfScope()
  T Sys_LoadModule(char const*, Sys_Flags)
  T Sys_UnloadModule(CSysModule*)
  T Sys_ValidateModules(CValidator*, bool)
@@ -9598,6 +9594,7 @@
  b g_pClientMusic
  b g_pClientNetworkDeviceManager
  b g_pClientNetworkingSockets
+ b g_pClientNetworkingSocketsSerialized
  b g_pClientNetworkingUtils
  b g_pClientParentalSettings
  b g_pClientParties

@@ -224,17 +224,17 @@
 "SteamUI_JoinDialog_SharedLicenseLocked_OwnerText" "Понастоящем споделената Ви библиотека се използва от %borrower%. Пускането на игра сега ще изпрати известие до %borrower%, че е време да излезе."
 "SteamUI_JoinDialog_SharedLicenseLocked_BorrowerText" "Понастоящем тази споделена игра е недостъпна. Моля, опитайте отново по-късно или я закупете за собствената Ви библиотека."
 
-"SteamUI_JoinDialog_KickSessions_Text" "Вече сте влезли на друг компютър и е пуснато „%existing_app%“.\nПускането на „%launching_app%“ тук ще разкачи другата сесия от Steam."
+"SteamUI_JoinDialog_KickSessions_Text" "Разкачва се другата сесия на %dots%, която е пусната в момента"
 "SteamUI_JoinDialog_KickSessions_Error" "Неуспешно разкачване на друга текуща игрална сесия от „%game%“."
 
 "SteamUI_JoinDialog_VerifyingFiles_Error" "Неуспешно потвърждаване на подписаните файлове за %game%. Изисква се потвърждаване на съдържанието."
 "SteamUI_JoinDialog_CreateProcess_Error" "Неуспешно стартиране на процеса за %game%:\n\n%detail%"
 
 "SteamUI_JoinDialog_OpenVRStartupFailure" "Неуспешно пускане на %game% във VR. (Грешка: %error%)"
-"SteamUI_JoinDialog_OpenVRWaitingForQuit" "Изчакване за изход от %quitting_game%…"
+"SteamUI_JoinDialog_OpenVRWaitingForQuit" "Изчакване на %quitting_game% да излезе от %dots%"
 
-"SteamUI_JoinDialog_UpdatingAppInfo" "Обновяване на конфигурация…"
-"SteamUI_JoinDialog_UpdatingAppTicket" "Обновяване на билет…"
+"SteamUI_JoinDialog_UpdatingAppInfo" "Обновяване на конфигурация %dots%"
+"SteamUI_JoinDialog_UpdatingAppTicket" "Обновяване на билет %dots%"
 
 "SteamUI_JoinDialog_TimedTrial_Error" "Неуспешно стартиране на %game% като ограничен пробен период. (Грешка: %error%)"
 
@@ -485,6 +485,7 @@
 "Steam_ShowDestinationOptions"	"Изберете дестинация за показване"
 "Steam_MustRestartToTakeEffect"			"Тази настройка няма да влезе в сила, докато\nне рестартирате Steam."
 "Steam_LanguageSelect"				"Избиране на предпочитан език (изисква рестартиране на Steam)"
+"Steam_SteamChinaLanguageSelect"	"Steam може да бъде използван само на опростен китайски"
 "Steam_SelectSkinToUse"				"Избор на предпочитан облик (изисква рестартиране на Steam)"
 "Steam_CreateShortcut_Title"			"Steam — създаване на пряк път"
 "Steam_CreateShortcut_Info"			"Пряк път беше създаден и поставен на работния Ви плот."
@@ -3357,6 +3358,16 @@ Windows до Windows XP Service Pack 2 или по-нов."
 "Steam_InstallAborted_InfoAppUnreleased"	"%game% не може да бъде инсталирана, защото все още не е излязла."
 "Steam_InstallAborted_InfoAppNoDemo"		"%game% не може да бъде инсталирана, защото това е демо и Вие притежавате пълната версия на продукта. Моля, инсталирайте пълната версия на играта."
 
+"Steam_Startup_SteamChinaRequiredTitle"					"Изисква се „Steam China“ („Steam | Китай“)"
+"Steam_Startup_GetSteamChina"						"%gamename% вече е достъпна в „Steam China“ („Steam | Китай“). Моля, последвайте връзката по-долу, за да инсталирате този клиент."
+"Steam_Startup_RunSteamChina"						"%gamename% вече е достъпна в „Steam China“ („Steam | Китай“). Моля, стартирайте „Steam China“ („Steam | Китай“), за да внесете Вашата игра."
+"Steam_Startup_SteamChinaImportedUninstall"			"%gamename% е внесена в „Steam China“ („Steam | Китай“). Вече можете безопасно да деинсталирате тази стартова програма."
+"Steam_Startup_LauncherDeprecated"					"%gamename% вече се пуска през „Steam China“ („Steam | Китай“). Тази инсталация вече не се поддържа и ще бъде затворена."
+"Steam_Startup_ImportGameFromLauncherTitle"			"Внасяне на игра"
+"Steam_Startup_ImportGameFromLauncherMsg"			"Желаете ли да внесете %gamename% в „Steam China“ („Steam | Китай“)? След това ще можете безопасно да деинсталирате класическата стартова програма."
+
+"Steam_Download_SteamChina"							"Сваляне на „Steam China“ („Steam | Китай“)"
+
 "Steam_ValidateGame_GameRunning"	"Моля, излезте от всички пуснати игри или инструменти, преди да опитате потвърждаване на локалните файлове."
 
 "Steam_RegionLabel"	"Регион за сваляне"
@@ -3379,14 +3390,12 @@ Windows до Windows XP Service Pack 2 или по-нов."
 "Steam_SettingsInGameScreenshotFolder"	"Папка за снимки"
 "Steam_SettingsInGameTitle"	"Steam слоят"
 
-"SteamUI_JoinDialog_PreparingToPlay1" 	"Подготвяне за пускане на %game%."
-"SteamUI_JoinDialog_PreparingToPlay2" 	"Подготвяне за пускане на %game%.."
-"SteamUI_JoinDialog_PreparingToPlay3" 	"Подготвяне за пускане на %game%..."
+"SteamUI_JoinDialog_PreparingToPlay" 	"Подготовка за пускане на %game% %dots%"
 "SteamUI_JoinDialog_Title"		"%game% — Steam"
 "SteamUI_JoinDialog_Updating_Title" 	"Обновяване %game%"
 "SteamUI_JoinDialog_Ready_Title"	"Готова — %game%"
 "SteamUI_JoinDialog_NoName_Title" 	"Steam"
-"SteamUI_JoinDialog_InstallScriptInfo"	"Извършване на първоначална инсталация… Инсталира се:\n%stepname%\n(стъпка %step% от %steptotal%)"
+"SteamUI_JoinDialog_InstallScriptInfo"	"Извършване на първоначална инсталация %dots% \n\nИнсталира се: %stepname% (стъпка %step% от %steptotal%)"
 
 
 "SteamUI_GameRequires_NTFS_Detail"	"Играта, която инсталирате, изисква дялът на диска да е с NTFS файлова система и\nне може да се инсталира на система FAT32. За още информация вижте\nвръзката за статията от поддръжката по-долу."
@@ -4118,6 +4127,7 @@ Windows до Windows XP Service Pack 2 или по-нов."
 "Steam_AppUpdateError_48"		"позволеното игрално време е надвишено"
 "Steam_AppUpdateError_49"		"повредени Steam файлове"
 "Steam_AppUpdateError_50"		"липсващи файлове за съдържание"
+"Steam_AppUpdateError_51"		"конфигурирането на инструмента за съвместимост беше неуспешно"
 
 
 "steam_subnav_featured"		"Отличени"
@@ -4219,7 +4229,7 @@ Windows до Windows XP Service Pack 2 или по-нов."
 "Steam_TimedTrial_Over" "Пробният Ви период вече свърши"
 "Steam_TimedTrial_CloseNow" "Играта ще се затвори сега"
 "Steam_TimedTrial_Enjoy" "Насладете се на своя пробен период"
-"Steam_TimedTrial_Offline" "Пробният период за играта загуби връзка към Steam"
+"Steam_TimedTrial_Offline" "Пробният период за играта загуби връзка"
 "Steam_TimedTrial_Minutes" "Остават %minutes% минути игрално време"
 "Steam_TimedTrial_Hours" "Остават %hours% часа и %minutes% минути игрално време"
 
@@ -4734,6 +4744,9 @@ Windows до Windows XP Service Pack 2 или по-нов."
 
 "Steam_VacBanOnAccount"		"наложена(и) VAC забрана(и) на акаунта"
 "Steam_NoVacBanOnAccount"	"Няма наложени VAC забрани на акаунта"
+
+"Steam_NeedToRestart"		"Необходимо е рестартиране"
+"Steam_NeedToRestartDifferentClientLauncher" "Друга версия на Steam в този компютър се опитва да стартира.\n\nЗа да я пуснете, трябва първо да затворите тази версия на Steam."
 
 "Steam_ClientBrowserAuth_AllowBrowserAuth" "Позволяване на уеб браузърите от десктопа да влизат автоматично в Steam сайтовете\n(изисква рестартиране, за да се приложат промените)"
 

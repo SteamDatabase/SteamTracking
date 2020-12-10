@@ -280,9 +280,11 @@
  T CBaseInputHandler::~CBaseInputHandler()
  T CBaseOverlayRenderer::CBaseOverlayRenderer()
  T CBaseOverlayRenderer::CleanupMovieStream()
+ T CBaseOverlayRenderer::ConnectToMasterFDShMem()
  T CBaseOverlayRenderer::CreateMovieStream()
  T CBaseOverlayRenderer::DeleteChromePaintBuffer(unsigned long long)
  T CBaseOverlayRenderer::ReadRenderStream(IMemStream*)
+ T CBaseOverlayRenderer::ReadShMemFD()
  T CBaseOverlayRenderer::RenderFrame()
  T CBaseOverlayRenderer::RequestTexture(int)
  T CBaseOverlayRenderer::Sleep(unsigned int)
@@ -303,6 +305,7 @@
  T CBaseOverlayRenderer::ValveUnlockRenderResources()
  T CBaseOverlayRenderer::~CBaseOverlayRenderer()
  T CCrossProcessSharedMemory::BInitWriteable(void const*, void const*, unsigned int, bool)
+ T CCrossProcessSharedMemory::Base() const
  T CCrossProcessSharedMemory::CCrossProcessSharedMemory()
  T CCrossProcessSharedMemory::Close()
  T CCrossProcessSharedMemory::~CCrossProcessSharedMemory()
@@ -428,6 +431,8 @@
  T COverlayGLRenderer::ValveGetSharedTextureSupport()
  T COverlayGLRenderer::ValveIsFullScreen()
  T COverlayGLRenderer::ValveLoadOrUpdateTexture(int, bool, int, int, unsigned int, unsigned int, int, char*, ETextureFormat, unsigned int, bool*)
+ T COverlayGLRenderer::ValveLoadOrUpdateTextureFromChromePaintBuffer(CChromePaintBufferClient*, int)
+ T COverlayGLRenderer::ValveLoadOrUpdateTexture_Internal(int, bool, int, int, unsigned int, unsigned int, int, char*, ETextureFormat, unsigned int, bool*, bool)
  T COverlayGLRenderer::ValveRestoreRenderState()
  T COverlayGLRenderer::ValveSetDesiredRenderState()
  T COverlayGLRenderer::ValveSetupForNewContext(_CGLContextObject*)
@@ -798,6 +803,8 @@
  class_replaceMethod
  close
  close$UNIX2003
+ connect
+ connect$UNIX2003
  d CBaseOverlayRenderer::UpdateNotificationToastPosition()::iLastPosition
  d __block_descriptor_tmp
  d __block_descriptor_tmp167
@@ -872,6 +879,7 @@
  getpid
  getrlimit
  getrlimit$UNIX2003
+ getuid
  glBegin
  glBindTexture
  glColorMask
@@ -945,6 +953,8 @@
  pthread_setspecific
  r IPC::crc32(unsigned int, void const*, unsigned long)::s_crc32
  realloc
+ recvmsg
+ recvmsg$UNIX2003
  sem_close
  sem_open
  sem_post
@@ -952,11 +962,14 @@
  sem_unlink
  sem_wait
  sem_wait$UNIX2003
+ sendmsg
+ sendmsg$UNIX2003
  setrlimit
  setrlimit$UNIX2003
  shm_open
  shm_unlink
  snprintf
+ socket
  sprintf
  sscanf
  std::__1::__vector_base_common<true>::__throw_length_error() const

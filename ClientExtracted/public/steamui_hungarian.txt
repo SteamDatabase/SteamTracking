@@ -215,17 +215,17 @@
 "SteamUI_JoinDialog_SharedLicenseLocked_OwnerText" "Megosztott könyvtáradat jelenleg %borrower% használja. Most játszva velük %borrower% felszólítást fog kapni, hogy ideje kilépni."
 "SteamUI_JoinDialog_SharedLicenseLocked_BorrowerText" "Ez a megosztott játék jelenleg nem érhető el. Próbáld meg később, vagy vedd meg a játékot a saját könyvtáradba."
 
-"SteamUI_JoinDialog_KickSessions_Text" "Már be vagy jelentkezve egy másik számítógépen a(z) \"%existing_app%\" játékkal játszva.\nA(z) \"%launching_app%\" itteni indítása le fogja választani a másik munkamenetet a Steamről."
+"SteamUI_JoinDialog_KickSessions_Text" "Már játszó munkamenet lecsatlakoztatása%dots%"
 "SteamUI_JoinDialog_KickSessions_Error" "Nem sikerült leválasztani a(z) %game% játékkal játszó többi bejelentkezést."
 
 "SteamUI_JoinDialog_VerifyingFiles_Error" "Nem sikerült ellenőrizni a(z) %game% aláírt fájljait, tartalomellenőrzés szükséges."
 "SteamUI_JoinDialog_CreateProcess_Error" "A(z) %game% folyamatának indítása sikertelen:\n\n%detail%"
 
 "SteamUI_JoinDialog_OpenVRStartupFailure" "Nem sikerült a(z) %game% indítása VR módban. (Hiba: %error%)"
-"SteamUI_JoinDialog_OpenVRWaitingForQuit" "Várakozás a(z) %quitting_game% bezáródására..."
+"SteamUI_JoinDialog_OpenVRWaitingForQuit" "Várakozás a(z) %quitting_game% bezáródására%dots%"
 
-"SteamUI_JoinDialog_UpdatingAppInfo" "Konfiguráció frissítése..."
-"SteamUI_JoinDialog_UpdatingAppTicket" "Jegy frissítése..."
+"SteamUI_JoinDialog_UpdatingAppInfo" "Konfiguráció frissítése%dots%"
+"SteamUI_JoinDialog_UpdatingAppTicket" "Jegy frissítése%dots%"
 
 "SteamUI_JoinDialog_TimedTrial_Error" "Nem sikerült a(z) %game% elindítása korlátozott próbaverzióként. (Hiba: %error%)"
 
@@ -475,6 +475,7 @@
 "Steam_ShowDestinationOptions"	"Megjelenítendő helyek kiválasztása"
 "Steam_MustRestartToTakeEffect"			"Ez a beállítás nem lép érvénybe,\nmíg újra nem indítod a Steamet."
 "Steam_LanguageSelect"				"Válaszd ki, melyik nyelvet használja a Steam (a Steam újraindítását igényli)"
+"Steam_SteamChinaLanguageSelect"	"A Steam csak egyszerűsített kínai nyelven használható."
 "Steam_SelectSkinToUse"				"Válaszd ki, melyik felületet használja a Steam (a Steam újraindítását igényli)"
 "Steam_CreateShortcut_Title"			"Steam - Parancsikon létrehozása"
 "Steam_CreateShortcut_Info"			"A parancsikon elkészült, és az asztalodra került."
@@ -815,7 +816,7 @@
 "SteamUI_ValveSurvey_InternetLabel"							"Köszönjük, hogy részt veszel a felmérésben.\n\nAz első, amit tudni szeretnénk, az internetkapcsolatod sebessége. Kérjük, válaszd ki a sajátodat az alábbi lehetőségek közül.\n\nInternetkapcsolat sebessége:"
 "SteamUI_ValveSurvey_InternetDontKnow"						"Nem tudom"
 
-"SteamUI_ValveSurvey_SummaryLabel"							"A felmérés összegyűjtött néhány diagnosztikai információt a számítógépedről, melyeket alább láthatsz.\n\n(Mikor a „Következő” gombra kattintasz, az információk továbbítódnak a Valve-hoz.)"
+"SteamUI_ValveSurvey_SummaryLabel"							"A felmérés összegyűjtött néhány diagnosztikai információt a számítógépedről, melyeket alább láthatsz.\n\n(Mikor a „Következő” gombra kattintasz, az információk továbbítódnak a Valve-hez.)"
 
 "SteamUI_ValveSurvey_Summary_Computer"						"Számítógép-információk:"
 "SteamUI_ValveSurvey_Summary_Processor"						"Processzor adatai:"
@@ -3326,6 +3327,16 @@ kell Mac OS X 10.7 vagy magasabb verzióra."
 "Steam_InstallAborted_InfoAppUnreleased"	"A(z) %game% játékot nem lehet telepíteni, mert még nem jelent meg."
 "Steam_InstallAborted_InfoAppNoDemo"		"A(z) %game% játékot nem lehet telepíteni, mert demó, neked pedig már megvan a termék teljes verziója. Telepítsd a játék teljes verzióját."
 
+"Steam_Startup_SteamChinaRequiredTitle"					"Steam China szükséges"
+"Steam_Startup_GetSteamChina"						"A(z) %gamename% mostantól elérhető a Steam Chinán, kérjük, kövesd az alábbi hivatkozást a kliens telepítéséhez."
+"Steam_Startup_RunSteamChina"						"A(z) %gamename% mostantól elérhető a Steam Chinán, játékod importálásához kérjük, indítsd el a Steam Chinát."
+"Steam_Startup_SteamChinaImportedUninstall"			"A(z) %gamename% importálva lett a Steam Chinára, most már biztonságosan eltávolíthatod ezt az indítóprogramot."
+"Steam_Startup_LauncherDeprecated"					"A(z) %gamename% játékot mostantól a Steam China futtatja. E telepítés többé nem támogatott, így ki fog lépni."
+"Steam_Startup_ImportGameFromLauncherTitle"			"Játék importálása"
+"Steam_Startup_ImportGameFromLauncherMsg"			"Szeretnéd importálni a(z) %gamename% játékot a Steam Chinára? Utána biztonságosan eltávolíthatod a régi indítóprogramot."
+
+"Steam_Download_SteamChina"							"A Steam China letöltése"
+
 "Steam_ValidateGame_GameRunning"	"Kérjük, mielőtt megpróbálnád ellenőrizni a helyi fájlokat, lépj ki a futó játékokból vagy kellékekből."
 
 "Steam_RegionLabel"	"Letöltési régió"
@@ -3348,14 +3359,12 @@ kell Mac OS X 10.7 vagy magasabb verzióra."
 "Steam_SettingsInGameScreenshotFolder"	"Képernyőmentés mappa"
 "Steam_SettingsInGameTitle"	"A Steam Átfedés"
 
-"SteamUI_JoinDialog_PreparingToPlay1" 	"%game% indításának előkészítése."
-"SteamUI_JoinDialog_PreparingToPlay2" 	"%game% indításának előkészítése.."
-"SteamUI_JoinDialog_PreparingToPlay3" 	"%game% indításának előkészítése..."
+"SteamUI_JoinDialog_PreparingToPlay" 	"A(z) %game% indításának előkészítése%dots%"
 "SteamUI_JoinDialog_Title"		"%game% - Steam"
 "SteamUI_JoinDialog_Updating_Title" 	"%game% frissítése"
 "SteamUI_JoinDialog_Ready_Title"	"Kész – %game%"
 "SteamUI_JoinDialog_NoName_Title" 	"Steam"
-"SteamUI_JoinDialog_InstallScriptInfo"	"Első indítás előkészítése...\n\nTelepítés alatt: %stepname% (%steptotal%/%step%. lépés)"
+"SteamUI_JoinDialog_InstallScriptInfo"	"Első indítás előkészítése%dots% \n\nTelepítés alatt: %stepname% (%steptotal%/%step%. lépés)"
 
 
 "SteamUI_GameRequires_NTFS_Detail"	"A telepített játékhoz NTFS fájlrendszerű meghajtóra van szükség, FAT32 fájlrendszerre\nnem telepíthető. További információért lásd az alább hivatkozott támogatási cikket."
@@ -4087,6 +4096,7 @@ kell Mac OS X 10.7 vagy magasabb verzióra."
 "Steam_AppUpdateError_48"		"engedélyezett játékidő túllépve"
 "Steam_AppUpdateError_49"		"hibás Steam fájlok"
 "Steam_AppUpdateError_50"		"hiányzó tartalomfájlok"
+"Steam_AppUpdateError_51"		"kompatibilitási eszköz beállítása sikertelen"
 
 
 "steam_subnav_featured"		"Kiemelt"
@@ -4188,7 +4198,7 @@ kell Mac OS X 10.7 vagy magasabb verzióra."
 "Steam_TimedTrial_Over" "Próbaidőszakod véget ért"
 "Steam_TimedTrial_CloseNow" "A játék most bezárul"
 "Steam_TimedTrial_Enjoy" "Jó szórakozást próbaidőszakodhoz"
-"Steam_TimedTrial_Offline" "A próbaverzió elvesztette a kapcsolatot a Steammel"
+"Steam_TimedTrial_Offline" "A próbaverzió elvesztette a kapcsolatot"
 "Steam_TimedTrial_Minutes" "%minutes% perc játékidő maradt"
 "Steam_TimedTrial_Hours" "%hours% óra és %minutes% perc játékidő maradt"
 
@@ -4702,6 +4712,9 @@ kell Mac OS X 10.7 vagy magasabb verzióra."
 
 "Steam_VacBanOnAccount"		"VAC-kitiltás(ok) a fiókon"
 "Steam_NoVacBanOnAccount"	"Nincs VAC-kitiltás a fiókon"
+
+"Steam_NeedToRestart"		"Újraindítás szükséges"
+"Steam_NeedToRestartDifferentClientLauncher" "A Steam egy másik verziója próbál elindulni ezen a számítógépen.\n\nA futtatásához előbb ki kell lépned a Steam e verziójából."
 
 "Steam_ClientBrowserAuth_AllowBrowserAuth" "Asztali böngészők automatikusan bejelentkezhetnek Steames weboldalakra\n (a változások alkalmazása újraindítást igényel)"
 

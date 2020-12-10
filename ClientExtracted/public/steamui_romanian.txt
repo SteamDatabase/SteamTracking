@@ -215,18 +215,12 @@
 "SteamUI_JoinDialog_SharedLicenseLocked_OwnerText" "Ca să știi, jocurile tale sunt momentan folosite de %borrower%. Dacă te joci acum, va fi trimisă o înștiințare %borrower% că e timpul să termine."
 "SteamUI_JoinDialog_SharedLicenseLocked_BorrowerText" "Acest joc împărtășit este momentan indisponibil. Te rugăm să încerci din nou mai târziu sau să cumperi acest joc pentru propria ta colecţie."
 
-"SteamUI_JoinDialog_KickSessions_Text" "Ești conectat pe un alt calculator și deja joci \"%existing_app%\".\nDacă lansezi \"%launching_app%\" aici, vei disconecta cealaltă sesiune din Steam."
 "SteamUI_JoinDialog_KickSessions_Error" "Nu a reușit deconectarea celeilalte sesiuni de joc %game%"
 
 "SteamUI_JoinDialog_VerifyingFiles_Error" "Nu s-au putut verifica fișierele semnate pentru %game%. Este necesară validarea conținutului."
 "SteamUI_JoinDialog_CreateProcess_Error" "Pornirea procesului pentru %game% a eșuat:\n\n%detail%"
 
 "SteamUI_JoinDialog_OpenVRStartupFailure" "Pornirea jocului %game% în modul VR a eșuat. (Eroare: %error%)"
-"SteamUI_JoinDialog_OpenVRWaitingForQuit" "Se aşteaptă ca %quitting_game% să se închidă..."
-
-"SteamUI_JoinDialog_UpdatingAppInfo" "Se actualizează configurația..."
-"SteamUI_JoinDialog_UpdatingAppTicket" "Se actualizează tichetul..."
-
 "SteamUI_JoinDialog_TimedTrial_Error" "Perioada de probă pentru %game% nu a putut începe. (Eroare: %error%)"
 
 "SteamUI_SetCustomImage_Title" "%gamename% - Setează imagine personalizată"
@@ -475,6 +469,7 @@
 "Steam_ShowDestinationOptions"	"Alege destinațiile care vor fi afișate"
 "Steam_MustRestartToTakeEffect"			"Această setare nu va intra în vigoare decât după\nce repornești Steam."
 "Steam_LanguageSelect"				"Alege limba pe care dorești s-o folosească Steam (necesită repornire)"
+"Steam_SteamChinaLanguageSelect"	"Steam este disponibil numai în chineza simplificată"
 "Steam_SelectSkinToUse"				"Alege interfața pe care o va folosi Steam (necesită repornire)"
 "Steam_CreateShortcut_Title"			"Steam - Creează scurtătură"
 "Steam_CreateShortcut_Info"			"A fost creată o scurtătură și plasată pe desktop."
@@ -2016,8 +2011,8 @@ Te rugăm să reintroduci parola dorită."
 "Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=music"	"Cât timp redai %game%, ar trebui ca Steam să aibă permisiunea de a descărca alte jocuri sau aplicații?"
 "Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=tool"	"Cât timp utilizezi %game%, ar trebui ca Steam să aibă permisiunea de a descărca alte jocuri sau aplicații?"
 
-"Steam_BackgroundDownloadsDefault_Allow"	"Urmărește setările mele globale (permite descărcări în fundal)"
-"Steam_BackgroundDownloadsDefault_Deny"	"Urmărește setările mele globale (oprește descărcările în fundal)"
+"Steam_BackgroundDownloadsDefault_Allow"	"Folosește setările mele globale (permite descărcările\nîn fundal)"
+"Steam_BackgroundDownloadsDefault_Deny"	"Folosește setările mele globale (oprește descărcările\nîn fundal)"
 "Steam_BackgroundDownloadsAllow"	"Permite întotdeauna descărcări în fundal"
 "Steam_BackgroundDownloadsDeny"	"Nu permite niciodată descărcări în fundal"
 
@@ -3340,6 +3335,16 @@ Fă-ţi un prieten nou pe Steam, trimiţând un cadou prin e-mail către cineva 
 "Steam_InstallAborted_InfoAppUnreleased"	"%game% nu poate fi încă instalat, deoarece nu este încă lansat."
 "Steam_InstallAborted_InfoAppNoDemo"		"%game% nu poate fi încă instalat, deoarece este un demo şi deţii versiunea integrală a produsului. Instalează versiunea integrală a jocului."
 
+"Steam_Startup_SteamChinaRequiredTitle"					"Steam China este necesar"
+"Steam_Startup_GetSteamChina"						"%gamename% este acum disponibil via Steam China. Te rugăm să accesezi linkul de mai jos pentru a instala clientul."
+"Steam_Startup_RunSteamChina"						"%gamename% este acum disponibil via Steam China. Te rugăm să accesezi linkul de mai jos pentru a-ți importa jocul."
+"Steam_Startup_SteamChinaImportedUninstall"			"%gamename% a fost importat pe Steam China. Poți dezinstala acum în siguranță acest lansator."
+"Steam_Startup_LauncherDeprecated"					"%gamename% poate rula acum pe Steam China. Această instalare nu mai este disponibilă și va fi anulată."
+"Steam_Startup_ImportGameFromLauncherTitle"			"Importă jocul"
+"Steam_Startup_ImportGameFromLauncherMsg"			"Vrei să imporți %gamename% pe Steam China? În acest caz, poți dezinstala în siguranță lansatorul moștenit."
+
+"Steam_Download_SteamChina"							"Descarcă Steam China"
+
 "Steam_ValidateGame_GameRunning"	"Te rugăm să părăseşti orice joc sau utilitar înainte de a încerca să-ți verifici fişierele locale."
 
 "Steam_RegionLabel"	"Regiune pentru descărcare"
@@ -3357,16 +3362,11 @@ Fă-ţi un prieten nou pe Steam, trimiţând un cadou prin e-mail către cineva 
 "Steam_SettingsInGameScreenshotFolder"	"Folder cu capturi de ecran"
 "Steam_SettingsInGameTitle"	"Interfața Steam"
 
-"SteamUI_JoinDialog_PreparingToPlay1" 	"Se pregăteşte lansarea %game%."
-"SteamUI_JoinDialog_PreparingToPlay2" 	"Se pregăteşte lansarea %game%.."
-"SteamUI_JoinDialog_PreparingToPlay3" 	"Se pregăteşte lansarea %game%..."
+"SteamUI_JoinDialog_PreparingToPlay" 	"Se pregătește lansarea %game% %dots%"
 "SteamUI_JoinDialog_Title"		"%game% - Steam"
 "SteamUI_JoinDialog_Updating_Title" 	"Se actualizează %game%"
 "SteamUI_JoinDialog_Ready_Title"	"Pregătit - %game%"
 "SteamUI_JoinDialog_NoName_Title" 	"Steam"
-"SteamUI_JoinDialog_InstallScriptInfo"	"Se efectuează configurarea iniţială...\n\nSe instalează: %stepname% (pasul %step% din %steptotal%)"
-
-
 "SteamUI_GameRequires_NTFS_Detail"	"Jocul pe care îl instalezi necesită un hard disk cu un sistem de fişiere NTFS şi\nnu poate fi instalat pe un sistem de fişiere FAT32. Pentru mai multe informaţii\nte rugăm să citeşti articolul de mai jos."
 "SteamUI_GameRequires_64BitOS_Detail"	"Jocul pe care îl instalezi necesită o versiune pe 64 de biți a Windowsului. Dacă nu ai\nun PC compatibil, apasă mai jos pentru a afla mai multe despre rambursări."
 
@@ -4096,6 +4096,7 @@ Fă-ţi un prieten nou pe Steam, trimiţând un cadou prin e-mail către cineva 
 "Steam_AppUpdateError_48"		"timpul permis de joc a fost depășit"
 "Steam_AppUpdateError_49"		"Fișierele Steam sunt corupte"
 "Steam_AppUpdateError_50"		"Fișierele de conținut lipsesc"
+"Steam_AppUpdateError_51"		"nu s-a reușit configurarea instrumentului de compatibilitate"
 
 
 "steam_subnav_featured"		"Deosebite"
@@ -4711,6 +4712,9 @@ Artiști"
 
 "Steam_VacBanOnAccount"		"Banare(ări) VAC pe cont"
 "Steam_NoVacBanOnAccount"	"Nu există banări VAC pe cont"
+
+"Steam_NeedToRestart"		"Este necesară repornirea"
+"Steam_NeedToRestartDifferentClientLauncher" "O altă versiune de Steam încearcă să pornească pe acest calculator.\n\nPentru a putea rula, trebuie mai întâi să părăsești această versiune de Steam."
 
 "Steam_ClientBrowserAuth_AllowBrowserAuth" "Permite browserelor web de pe desktop să se autentifice automat pe site-urile Steam\n (necesită o repornire pentru ca schimbările să fie aplicate)"
 

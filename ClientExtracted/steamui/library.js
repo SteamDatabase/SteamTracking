@@ -1,5 +1,5 @@
 /* Third-party software licenses can be found at licenses.txt */
-var CLSTAMP = "6241052";
+var CLSTAMP = "6253092";
 !(function(l) {
   function e(e) {
     for (
@@ -42,15 +42,7 @@ var CLSTAMP = "6241052";
         e.push(
           (f[u] = new Promise(function(e, r) {
             for (
-              var t =
-                  "css\\" +
-                  ({
-                    1: "awardicon",
-                    2: "broadcast",
-                    3: "libraries/libraries_cm",
-                    5: "libraryroot"
-                  }[u] || u) +
-                  ".css",
+              var t = "css\\" + u + ".css",
                 c = d.p + t,
                 n = document.getElementsByTagName("link"),
                 o = 0;
@@ -188,7 +180,7 @@ var CLSTAMP = "6241052";
     (d.o = function(e, t) {
       return Object.prototype.hasOwnProperty.call(e, t);
     }),
-    (d.p = ""),
+    (d.p = "/"),
     (d.oe = function(e) {
       throw (console.error(e), e);
     });
@@ -810,12 +802,13 @@ var CLSTAMP = "6241052";
       );
     }
     function _(e) {
+      var t = e.className;
       return o.createElement(
         "svg",
         {
           version: "1.1",
           xmlns: "http://www.w3.org/2000/svg",
-          className: "SVGIcon_Button SVGIcon_PlusCircle",
+          className: Object(a.a)("SVGIcon_Button SVGIcon_PlusCircle", t),
           x: "0px",
           y: "0px",
           width: "256px",
@@ -3528,7 +3521,7 @@ var CLSTAMP = "6241052";
   BNtT: function(e, t, n) {
     "use strict";
     n.d(t, "c", function() {
-      return i;
+      return l;
     }),
       n.d(t, "b", function() {
         return h;
@@ -3538,8 +3531,8 @@ var CLSTAMP = "6241052";
       });
     var s = n("mrSG"),
       u = n("TLQK"),
-      a = n("mgoM");
-    function l(e) {
+      i = n("mgoM");
+    function a(e) {
       var t = {},
         n = {},
         r = window.document.createElement("canvas");
@@ -3554,26 +3547,24 @@ var CLSTAMP = "6241052";
         }
       return window.document.body.removeChild(r), t;
     }
-    function o(i) {
+    function o(o) {
       return Object(s.b)(this, void 0, void 0, function() {
-        var t, n, r, c, o;
+        var t, n, r, c;
         return Object(s.e)(this, function(e) {
           switch (e.label) {
             case 0:
               for (t = [], n = 0; n < 30; n++)
-                (r = Object(a.e)(n)),
-                  (c = "korean" == r ? "koreana" : r),
-                  t.push(i(c));
-              return (o = l), [4, Promise.all(t)];
+                (r = Object(i.e)(n)), t.push(o(r));
+              return (c = a), [4, Promise.all(t)];
             case 1:
-              return [2, o.apply(void 0, [e.sent()])];
+              return [2, c.apply(void 0, [e.sent()])];
           }
         });
       });
     }
     var r = n("vDqi"),
       c = n.n(r);
-    function i() {
+    function l() {
       SteamClient._internal.RegisterForStyleChanges(function(e) {
         for (
           var t = "https://steamloopback.host/",
@@ -4020,9 +4011,9 @@ var CLSTAMP = "6241052";
           void 0 === e && (e = null);
           var t = new Array();
           return (
-            t.push(Object(r.g)(o.b.LANGUAGE)),
+            t.push(Object(r.h)(o.b.LANGUAGE)),
             (o.b.SUPPORTED_LANGUAGES || []).forEach(function(e) {
-              e.value != o.b.LANGUAGE && t.push(Object(r.g)(e.value));
+              e.value != o.b.LANGUAGE && t.push(Object(r.h)(e.value));
             }),
             e &&
               n.GetLanguageListForRealms(e).forEach(function(e) {
@@ -4596,10 +4587,10 @@ var CLSTAMP = "6241052";
         return c.e;
       }),
       n.d(t, "r", function() {
-        return c.g;
+        return c.h;
       }),
       n.d(t, "w", function() {
-        return c.i;
+        return c.j;
       });
     var o = n("2vnA"),
       i = (function() {
@@ -5051,56 +5042,59 @@ var CLSTAMP = "6241052";
       n.d(t, "b", function() {
         return c;
       }),
-      n.d(t, "r", function() {
+      n.d(t, "s", function() {
         return o;
       }),
-      n.d(t, "s", function() {
+      n.d(t, "t", function() {
         return i;
       }),
-      n.d(t, "q", function() {
+      n.d(t, "r", function() {
         return a;
       }),
-      n.d(t, "j", function() {
+      n.d(t, "k", function() {
         return l;
       }),
-      n.d(t, "l", function() {
+      n.d(t, "m", function() {
         return s;
       }),
-      n.d(t, "k", function() {
+      n.d(t, "l", function() {
         return u;
       }),
-      n.d(t, "m", function() {
+      n.d(t, "n", function() {
         return f;
       }),
-      n.d(t, "n", function() {
+      n.d(t, "o", function() {
         return h;
       }),
-      n.d(t, "p", function() {
+      n.d(t, "q", function() {
         return d;
       }),
-      n.d(t, "o", function() {
+      n.d(t, "p", function() {
         return m;
       }),
-      n.d(t, "h", function() {
+      n.d(t, "i", function() {
         return p;
       }),
-      n.d(t, "i", function() {
+      n.d(t, "j", function() {
         return g;
       }),
       n.d(t, "f", function() {
         return w;
       }),
-      n.d(t, "e", function() {
+      n.d(t, "g", function() {
         return _;
       }),
-      n.d(t, "g", function() {
+      n.d(t, "e", function() {
         return x;
       }),
-      n.d(t, "a", function() {
+      n.d(t, "h", function() {
         return v;
       }),
-      n.d(t, "d", function() {
+      n.d(t, "a", function() {
         return E;
+      }),
+      n.d(t, "d", function() {
+        return b;
       });
     var o = 1,
       i = 4,
@@ -5180,7 +5174,10 @@ var CLSTAMP = "6241052";
           return t;
       }
     }
-    function _(e, t) {
+    var _ = function(e) {
+      return "koreana" === e ? "korean" : e;
+    };
+    function x(e, t) {
       switch ((void 0 === t && (t = ""), e)) {
         case 0:
           return "english";
@@ -5191,7 +5188,7 @@ var CLSTAMP = "6241052";
         case 3:
           return "italian";
         case 4:
-          return "korean";
+          return "koreana";
         case 5:
           return "spanish";
         case 6:
@@ -5246,7 +5243,7 @@ var CLSTAMP = "6241052";
           return t;
       }
     }
-    function x(e, t) {
+    function v(e, t) {
       switch ((void 0 === t && (t = 0), e)) {
         case "english":
           return 0;
@@ -5313,7 +5310,7 @@ var CLSTAMP = "6241052";
           return t;
       }
     }
-    function v(e) {
+    function E(e) {
       switch (e) {
         case 4:
         case 1:
@@ -5323,7 +5320,7 @@ var CLSTAMP = "6241052";
       }
       return !1;
     }
-    function E(e) {
+    function b(e) {
       switch (e) {
         case 4:
         case 1:

@@ -220,17 +220,17 @@ Cela devrait prendre moins d'une minute."
 "SteamUI_JoinDialog_SharedLicenseLocked_OwnerText" "Votre bibliothèque partagée est actuellement en cours d'utilisation par %borrower%. Jouer maintenant enverra à %borrower% une notification lui indiquant qu'il est temps de quitter."
 "SteamUI_JoinDialog_SharedLicenseLocked_BorrowerText" "Ce jeu partagé est actuellement indisponible. Veuillez réessayer plus tard ou acheter ce jeu pour votre bibliothèque."
 
-"SteamUI_JoinDialog_KickSessions_Text" "Vous êtes connecté sur un autre ordinateur utilisant déjà « %existing_app% ».\nLe lancement de « %launching_app% » ici déconnectera l'autre session de Steam."
+"SteamUI_JoinDialog_KickSessions_Text" "Déconnexion de l'autre session en cours%dots%"
 "SteamUI_JoinDialog_KickSessions_Error" "Échec de la déconnexion de l'autre session jouant à %game%."
 
 "SteamUI_JoinDialog_VerifyingFiles_Error" "Échec de la vérification des fichiers signés de %game%. Validation du contenu requise."
 "SteamUI_JoinDialog_CreateProcess_Error" "Échec du démarrage du processus de %game% :\n\n%detail%"
 
 "SteamUI_JoinDialog_OpenVRStartupFailure" "Impossible de démarrer %game% en mode RV. (Erreur : %error%)"
-"SteamUI_JoinDialog_OpenVRWaitingForQuit" "En attente de la fermeture de %quitting_game%..."
+"SteamUI_JoinDialog_OpenVRWaitingForQuit" "En attente de l'arrêt de %quitting_game%%dots%"
 
-"SteamUI_JoinDialog_UpdatingAppInfo" "Mise à jour de la configuration..."
-"SteamUI_JoinDialog_UpdatingAppTicket" "Mise à jour du ticket..."
+"SteamUI_JoinDialog_UpdatingAppInfo" "Mise à jour de la configuration%dots%"
+"SteamUI_JoinDialog_UpdatingAppTicket" "Mise à jour du ticket%dots%"
 
 "SteamUI_JoinDialog_TimedTrial_Error" "Impossible de démarrer l'essai limité de %game%. (Erreur : %error%)"
 
@@ -480,6 +480,7 @@ Cela devrait prendre moins d'une minute."
 "Steam_ShowDestinationOptions"	"Sélectionnez les destinations à afficher"
 "Steam_MustRestartToTakeEffect"			"Les modifications ne prendront effet\nqu'après un redémarrage de Steam."
 "Steam_LanguageSelect"				"Sélectionnez la langue que Steam doit utiliser (requiert un redémarrage de Steam)."
+"Steam_SteamChinaLanguageSelect"	"Vous ne pouvez utiliser Steam qu'en chinois simplifié"
 "Steam_SelectSkinToUse"				"Sélectionnez le skin que Steam doit utiliser (requiert un redémarrage de Steam)."
 "Steam_CreateShortcut_Title"			"Steam - Créer un raccourci"
 "Steam_CreateShortcut_Info"			"Un raccourci a été créé et placé sur votre bureau."
@@ -2910,7 +2911,7 @@ Invitez sans plus attendre votre premier ami en lui envoyant un cadeau."
 "steam_checkforupdates_title"						"Steam - Mise à jour automatique"
 "steam_ClientUpdateAvailableDownloading"			"Une mise à jour du client Steam est en cours de téléchargement."
 "steam_ClientUpdateAvailableDownloaded"			"Une mise à jour du client Steam a été téléchargée."
-"steam_ClientUpdateAvailableDownloadedInfo"		"Voulez-vous redémarrer Steam maintenant pour appliquer cette mise à jour ?"
+"steam_ClientUpdateAvailableDownloadedInfo"		"Voulez-vous redémarrer Steam maintenant pour l'appliquer ?"
 "Steam_NoClientUpdateAvailable"					"Votre client Steam est déjà à jour."
 "Steam_NotEnoughDiskSpaceCheckingForUpdates"		"Steam a besoin de plus d'espace disque disponible pour rechercher et appliquer les mises à jour."
 "Steam_ClientUpdateSuppressed"						"Les mises à jour du client Steam ont été désactivées par une option de lancement facultative ou un fichier de configuration. Veuillez supprimer le blocage, redémarrer Steam et essayer à nouveau."
@@ -3351,6 +3352,16 @@ Faites-vous un nouvel ami Steam en envoyant un cadeau à une de vos connaissance
 "Steam_InstallAborted_InfoAppUnreleased"	"%game% ne peut pas encore être installé, car il n'est pas encore sorti."
 "Steam_InstallAborted_InfoAppNoDemo"		"%game% ne peut pas être installé, car il s'agit d'une démo et vous possédez déjà la version complète de ce jeu. Veuillez installer la version complète du jeu."
 
+"Steam_Startup_SteamChinaRequiredTitle"					"Steam China est requis"
+"Steam_Startup_GetSteamChina"						"%gamename% est maintenant disponible via Steam China. Veuillez suivre le lien ci-dessous pour installer ce client."
+"Steam_Startup_RunSteamChina"						"%gamename% est maintenant disponible via Steam China. Veuillez lancer Steam China pour importer votre jeu."
+"Steam_Startup_SteamChinaImportedUninstall"			"%gamename% a été importé sur Steam China. Vous pouvez désinstaller ce lanceur en toute sécurité."
+"Steam_Startup_LauncherDeprecated"					"Vous devez maintenant lancer %gamename% via Steam China. Cette version n'est plus prise en charge et va s'arrêter."
+"Steam_Startup_ImportGameFromLauncherTitle"			"Importer le jeu"
+"Steam_Startup_ImportGameFromLauncherMsg"			"Voulez-vous importer %gamename% dans Steam China ? Vous pourrez alors désinstaller en toute sécurité le lanceur classique."
+
+"Steam_Download_SteamChina"							"Télécharger Steam China"
+
 "Steam_ValidateGame_GameRunning"	"Veuillez quitter tout jeu ou application en cours d'exécution avant de vérifier les fichiers locaux."
 
 "Steam_RegionLabel"	"Région de téléchargement"
@@ -3363,24 +3374,22 @@ Faites-vous un nouvel ami Steam en envoyant un cadeau à une de vos connaissance
 "Steam_ServerBrowserPingRateDefault"	"Automatique (%PingsPerMin%)"
 
 "Steam_TextFilterSettingLabel"									"Filtre de chat"
-"Steam_TextFilterStatus_Enabled"								"Configuration actuelle : les obscénités et les insultes sont filtrées"
-"Steam_TextFilterStatus_Enabled_IgnoreFriends"					"Configuration actuelle : les obscénités et les insultes sont filtrées, sauf de la part des contacts"
-"Steam_TextFilterStatus_EnabledAllowProfanity"					"Configuration actuelle : les insultes sont filtrées, mais pas les obscénités"
-"Steam_TextFilterStatus_EnabledAllowProfanity_IgnoreFriends"	"Configuration actuelle : les insultes sont filtrées sauf de la part de vos contacts, et les obscénités ne sont pas filtrées"
-"Steam_TextFilterStatus_Disabled"								"Configuration actuelle : les obscénités et les insultes ne sont pas filtrées"
+"Steam_TextFilterStatus_Enabled"								"Actuel : obscénités et insultes filtrées"
+"Steam_TextFilterStatus_Enabled_IgnoreFriends"					"Actuel : obscénités et insultes filtrées, sauf de la part des contacts"
+"Steam_TextFilterStatus_EnabledAllowProfanity"					"Actuel : insultes filtrées, mais pas les obscénités"
+"Steam_TextFilterStatus_EnabledAllowProfanity_IgnoreFriends"	"Actuel : insultes filtrées sauf de la part de vos contacts, obscénités non filtrées"
+"Steam_TextFilterStatus_Disabled"								"Actuel : obscénités et insultes non filtrées"
 "Steam_TextFilterSettingURL"									"Modifier les préférences du filtre de chat"
 
 "Steam_SettingsInGameScreenshotFolder"	"Dossier des captures d'écran"
 "Steam_SettingsInGameTitle"	"Overlay Steam"
 
-"SteamUI_JoinDialog_PreparingToPlay1" 	"Préparation du lancement de %game%."
-"SteamUI_JoinDialog_PreparingToPlay2" 	"Préparation du lancement de %game%.."
-"SteamUI_JoinDialog_PreparingToPlay3" 	"Préparation du lancement de %game%..."
+"SteamUI_JoinDialog_PreparingToPlay" 	"Préparation du lancement de %game%%dots%"
 "SteamUI_JoinDialog_Title"		"%game% - Steam"
 "SteamUI_JoinDialog_Updating_Title" 	"Mise à jour de %game%"
 "SteamUI_JoinDialog_Ready_Title"	"Prêt - %game%"
 "SteamUI_JoinDialog_NoName_Title" 	"Steam"
-"SteamUI_JoinDialog_InstallScriptInfo"	"Configuration initiale en cours...\n\nInstallation de : %stepname% (étape %step% sur %steptotal%)"
+"SteamUI_JoinDialog_InstallScriptInfo"	"Configuration initiale en cours%dots%\n\nInstallation de : %stepname% (étape %step% sur %steptotal%)"
 
 
 "SteamUI_GameRequires_NTFS_Detail"	"Le jeu que vous êtes en train d'installer doit être installé sur un disque dur dont le système de fichier est NTFS et ne peut pas être installé sur un disque formaté en FAT32. Pour plus d'informations, consultez l'article de support correspondant en cliquant sur le lien ci-dessous."
@@ -4112,6 +4121,7 @@ Faites-vous un nouvel ami Steam en envoyant un cadeau à une de vos connaissance
 "Steam_AppUpdateError_48"		"temps de jeu autorisé dépassé"
 "Steam_AppUpdateError_49"		"fichiers Steam corrompus"
 "Steam_AppUpdateError_50"		"fichiers de contenu manquants"
+"Steam_AppUpdateError_51"		"échec de la configuration de l'outil de compatibilité"
 
 
 "steam_subnav_featured"		"À la une"
@@ -4213,7 +4223,7 @@ Faites-vous un nouvel ami Steam en envoyant un cadeau à une de vos connaissance
 "Steam_TimedTrial_Over" "Votre essai est terminé"
 "Steam_TimedTrial_CloseNow" "Le jeu va se fermer"
 "Steam_TimedTrial_Enjoy" "Profitez de votre essai"
-"Steam_TimedTrial_Offline" "La version d'essai du jeu a perdu sa connexion à Steam"
+"Steam_TimedTrial_Offline" "La version d'essai du jeu a perdu sa connexion"
 "Steam_TimedTrial_Minutes" "%minutes% minute(s) de jeu restante(s)"
 "Steam_TimedTrial_Hours" "%hours% heure(s) et %minutes% minute(s) de jeu restante(s)"
 
@@ -4727,6 +4737,9 @@ Faites-vous un nouvel ami Steam en envoyant un cadeau à une de vos connaissance
 
 "Steam_VacBanOnAccount"		"Bannissement(s) VAC enregistré(s)"
 "Steam_NoVacBanOnAccount"	"Aucun bannissement VAC enregistré"
+
+"Steam_NeedToRestart"		"Redémarrage requis"
+"Steam_NeedToRestartDifferentClientLauncher" "Une autre version de Steam essaie de démarrer sur cet ordinateur.\n\nPour la lancer, vous devez d'abord quitter cette version de Steam."
 
 "Steam_ClientBrowserAuth_AllowBrowserAuth" "Permet aux navigateurs web de se connecter automatiquement aux sites Steam\n (nécessite un redémarrage)"
 

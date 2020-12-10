@@ -19,6 +19,7 @@
  CDbgFmtSafeImplT<false>::CDbgFmtSafeImplT(char const*, ...)
  CDbgFmtSafeImplT<true>::CDbgFmtSafeImplT(DbgFmtFatalMsgTag_t*, StringView)
  CDbgFmtSafeImplT<true>::CDbgFmtSafeImplT(StringView)
+ CVProfile_ExitScope
  CValidator::ClaimArrayMemory(void*)
  CValidator::ClaimMemory(void*)
  CValidator::Pop()
@@ -107,9 +108,8 @@
  SteamThreadTools::CThreadRWLock::WaitForRead()
  SteamThreadTools::CThreadSpinLock::Lock(unsigned int) volatile
  SteamThreadTools::CThreadSyncObject::~CThreadSyncObject()
- SteamVProf::CVProfNode::EnterScope(void*)
- SteamVProf::CVProfNode::ExitScope()
- SteamVProf::CVProfNode::GetSubNode(char const*, int, EVProfBugdetGroup, int)
+ SteamVProf::CVProfile::EnterScope(char const*, EVProfBugdetGroup, void*)
+ SteamVProf::CVProfile::ExitScope()
  T AllocString(char const*, int)
  T BHanIdeograph
  T CBaseUtlSymbolTable<CUtlSymbol>::RemoveAll()
@@ -437,7 +437,6 @@
  T SteamThreadTools::CRWLockAutoRead<SteamThreadTools::CThreadRWLock>::~CRWLockAutoRead()
  T SteamThreadTools::CRWLockAutoWrite<SteamThreadTools::CThreadRWLock>::~CRWLockAutoWrite()
  T SteamThreadTools::CThreadLocalPtr<CCoroutineMgr>::~CThreadLocalPtr()
- T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)20, false, 4>::~CVProfScope()
  T StringAfterPrefix
  T StringAfterPrefixCaseSensitive
  T StringFindSuffix
@@ -694,7 +693,7 @@
  __tolower
  __toupper
  b CFileReader::Read(void*, unsigned int, unsigned int*)::fAsserted
- b CStringNormalization::Initialize()::threadonce_1176_27
+ b CStringNormalization::Initialize()::threadonce_1176_20
  b CStringNormalization::Normalize(bool, char const*, char*, int)::fAsserted
  b CStringNormalization::Normalize(bool, wchar_t const*, wchar_t*, int)::fAsserted
  b CStringNormalization::Test_BValidateStructures()::fAsserted

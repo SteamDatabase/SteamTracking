@@ -222,17 +222,17 @@ Bu işlem bir dakikadan az sürer."
 Oyunu açmak %borrower% adlı kullanıcıya oyunu bırakma zamanının geldiğine dair bir bildirim gönderecektir."
 "SteamUI_JoinDialog_SharedLicenseLocked_BorrowerText" "Bu paylaşılan oyuna şu anda erişilemez. Lütfen daha sonra tekrar deneyin ya da bu oyunu kendi kütüphaneniz için satın alın."
 
-"SteamUI_JoinDialog_KickSessions_Text" "\"%existing_app%\" oynanırken başka bir bilgisayardan giriş yaptınız.\n\"%launching_app%\" buradan başlatıldığında diğer oturumun Steam ile bağlantısı kesilecektir."
+"SteamUI_JoinDialog_KickSessions_Text" "Devam eden diğer oturumların bağlantısı kesiliyor%dots%"
 "SteamUI_JoinDialog_KickSessions_Error" "%game% oynayan diğer oturumun bağlantısını kesme başarısız oldu"
 
 "SteamUI_JoinDialog_VerifyingFiles_Error" "%game% için imzalanmış dosyalar doğrulanamadı, içerik doğrulaması gerekiyor."
 "SteamUI_JoinDialog_CreateProcess_Error" "%game% için işlem başlatılamadı:\n\n%detail%"
 
 "SteamUI_JoinDialog_OpenVRStartupFailure" "%game% VR'da başlatılamadı. (Hata: %error%)"
-"SteamUI_JoinDialog_OpenVRWaitingForQuit" "Çıkış için %quitting_game% bekleniyor..."
+"SteamUI_JoinDialog_OpenVRWaitingForQuit" "Çıkış için %quitting_game% bekleniyor%dots%"
 
-"SteamUI_JoinDialog_UpdatingAppInfo" "Yapılandırma güncelleniyor..."
-"SteamUI_JoinDialog_UpdatingAppTicket" "Destek talebi güncelleniyor..."
+"SteamUI_JoinDialog_UpdatingAppInfo" "Yapılandırma güncelleniyor%dots%"
+"SteamUI_JoinDialog_UpdatingAppTicket" "Destek talebi güncelleniyor%dots%"
 
 "SteamUI_JoinDialog_TimedTrial_Error" "%game%, sınırlı süreli deneme olarak başlatılamadı. (Hata: %error%)"
 
@@ -482,6 +482,7 @@ Oyunu açmak %borrower% adlı kullanıcıya oyunu bırakma zamanının geldiğin
 "Steam_ShowDestinationOptions"	"Gösterilecek menüleri seçin"
 "Steam_MustRestartToTakeEffect"			"Bu ayarlar Steam'i yeniden başlattıktan sonra uygulanacaktır."
 "Steam_LanguageSelect"				"Kullanmak istediğiniz dili seçin (Steam'i yeniden başlatmak gerekir)"
+"Steam_SteamChinaLanguageSelect"	"Steam sadece Basitleştirilmiş Çince olarak kullanılabilir"
 "Steam_SelectSkinToUse"				"Kullanmak istediğiniz görünümü seçin (Steam'i yeniden başlatmak gerekir)"
 "Steam_CreateShortcut_Title"			"Steam - Kısayol Oluştur"
 "Steam_CreateShortcut_Info"			"Masaüstüne kısayol oluşturuldu."
@@ -3351,6 +3352,16 @@ Steam üzerinden yeni bir arkadaş edinmek istiyorsanız tanıdığınız birine
 "Steam_InstallAborted_InfoAppUnreleased"	"%game% henüz yüklenmedi, çünkü daha yayınlanmadı."
 "Steam_InstallAborted_InfoAppNoDemo"		"%game% yüklenmedi, çünkü bu bir demo ve siz oyunun tam sürümüne sahipsiniz. Lütfen oyunun tam sürümünü yükleyin."
 
+"Steam_Startup_SteamChinaRequiredTitle"					"Steam China Gerekli"
+"Steam_Startup_GetSteamChina"						"%gamename% şimdi Steam China'da. Bu istemciyi yüklemek için lütfen aşağıdaki bağlantıyı takip edin."
+"Steam_Startup_RunSteamChina"						"%gamename% şimdi Steam China'da. Oyunu aktarmak için lütfen Steam China'yı başlatın."
+"Steam_Startup_SteamChinaImportedUninstall"			"%gamename%, Steam China'ya aktarıldı. Artık bu başlatıcıyı güvenle kaldırabilirsiniz."
+"Steam_Startup_LauncherDeprecated"					"%gamename% artık Steam China üzerinden çalıştırılıyor. Bu kurulum artık desteklenmiyor ve çıkış yapılacak."
+"Steam_Startup_ImportGameFromLauncherTitle"			"Oyunu Aktar"
+"Steam_Startup_ImportGameFromLauncherMsg"			"%gamename% oyununu Steam China'ya aktarmak istediğinize emin misiniz? Bunu yaptıktan sonra eski başlatıcıyı silebilirsiniz."
+
+"Steam_Download_SteamChina"							"Steam China'yı İndir"
+
 "Steam_ValidateGame_GameRunning"	"Lütfen yerel oyun dosyalarınızı doğrulamadan önce çalışan oyunları veya araçları kapatın."
 
 "Steam_RegionLabel"	"İndirme bölgesi"
@@ -3363,19 +3374,22 @@ Steam üzerinden yeni bir arkadaş edinmek istiyorsanız tanıdığınız birine
 "Steam_ServerBrowserPingRateDefault"	"Otomatik (%PingsPerMin%)"
 
 "Steam_TextFilterSettingLabel"									"Sohbet Filtrelemesi"
+"Steam_TextFilterStatus_Enabled"								"Küfürler ve hakaretler filtrelenecek şekilde ayarlanmış"
+"Steam_TextFilterStatus_Enabled_IgnoreFriends"					"Arkadaşlar harici diğer herkesten gelecek küfürler ve hakaretler filtrelenecek şekilde ayarlanmış"
+"Steam_TextFilterStatus_EnabledAllowProfanity"					"Küfürlere izin verilecek, hakaretlerse filtrelenecek şekilde ayarlanmış"
+"Steam_TextFilterStatus_EnabledAllowProfanity_IgnoreFriends"	"Küfürlere izin verilecek, arkadaşlar harici diğer herkesten gelecek hakaretlerse filtrelenecek şekilde ayarlanmış"
+"Steam_TextFilterStatus_Disabled"								"Küfürler ve hakaretlere izin verilecek şekilde ayarlanmış"
 "Steam_TextFilterSettingURL"									"Sohbet Filtrelemesi Tercihlerinizi Değiştirin"
 
 "Steam_SettingsInGameScreenshotFolder"	"Ekran görüntüsü klasörü"
 "Steam_SettingsInGameTitle"	"Steam Arayüzü"
 
-"SteamUI_JoinDialog_PreparingToPlay1" 	"%game% başlatılıyor."
-"SteamUI_JoinDialog_PreparingToPlay2" 	"%game% başlatılıyor.."
-"SteamUI_JoinDialog_PreparingToPlay3" 	"%game% başlatılıyor..."
+"SteamUI_JoinDialog_PreparingToPlay" 	"%game% başlatılmaya hazırlanıyor%dots%"
 "SteamUI_JoinDialog_Title"		"Steam - %game%"
 "SteamUI_JoinDialog_Updating_Title" 	"%game% güncelleniyor"
 "SteamUI_JoinDialog_Ready_Title"	"%game% - Hazır"
 "SteamUI_JoinDialog_NoName_Title" 	"Steam"
-"SteamUI_JoinDialog_InstallScriptInfo"	"İlk defa çalıştırılmak için hazırlanıyor...\n\nYükleniyor: %stepname% (%step% / %steptotal%)"
+"SteamUI_JoinDialog_InstallScriptInfo"	"İlk defa çalıştırılmak için hazırlanıyor%dots% \n\nYükleniyor: %stepname% (%step% / %steptotal%)"
 
 
 "SteamUI_GameRequires_NTFS_Detail"	"Oyunu yüklemeniz için bölümün NTFS dosya sistemiyle\nbiçimlendirilmesi ve FAT32 dosya sistemi kullanmaması gerekli. Daha fazla bilgi için\naşağıdaki destek bağlantısına tıklayın."
@@ -4108,6 +4122,7 @@ Bu oyun için bir kategori ayarlamanız, o oyunu çabuk bulmanıza ve Kütüphan
 "Steam_AppUpdateError_48"		"izin verilen oynama süresi aşıldı"
 "Steam_AppUpdateError_49"		"bozuk Steam dosyaları"
 "Steam_AppUpdateError_50"		"eksik içerik dosyaları"
+"Steam_AppUpdateError_51"		"uyumluluk aracı yapılandırma başarısız"
 
 
 "steam_subnav_featured"		"Öne Çıkanlar"
@@ -4209,6 +4224,7 @@ Bu oyun için bir kategori ayarlamanız, o oyunu çabuk bulmanıza ve Kütüphan
 "Steam_TimedTrial_Over" "Deneme süreniz bitti"
 "Steam_TimedTrial_CloseNow" "Oyun şimdi kapanacak"
 "Steam_TimedTrial_Enjoy" "Deneme sürenizin tadını çıkarın"
+"Steam_TimedTrial_Offline" "Oyun denemesinin bağlantısı kesildi"
 "Steam_TimedTrial_Minutes" "%minutes% dakika oyun süresi kaldı"
 "Steam_TimedTrial_Hours" "%hours% saat %minutes% dakika oyun süresi kaldı"
 
@@ -4723,6 +4739,9 @@ Bu oyun için bir kategori ayarlamanız, o oyunu çabuk bulmanıza ve Kütüphan
 
 "Steam_VacBanOnAccount"		"Hesaptaki VAC Yasakları"
 "Steam_NoVacBanOnAccount"	"Hesapta VAC Yasağı Yok"
+
+"Steam_NeedToRestart"		"Yeniden Başlatma Gerekli"
+"Steam_NeedToRestartDifferentClientLauncher" "Bu bilgisayarda Steam'in başka bir sürümü başlatılmaya çalışıyor.\n\nOnu çalıştırmak için Steam'in bu sürümüden çıkış yapmalısınız."
 
 "Steam_ClientBrowserAuth_AllowBrowserAuth" "Masaüstü internet tarayıcılarının Steam sitelerine otomatik olarak giriş yapmasına izin ver\n (değişikliklerin uygulanması için yeniden başlatılması gerekiyor)"
 

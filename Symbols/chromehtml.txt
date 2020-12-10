@@ -162,6 +162,7 @@
  B s_StringCharConversion
  CDbgFmtSafeImplT<false>::CDbgFmtSafeImplT(char const*, ...)
  CDbgFmtSafeImplT<true>::CDbgFmtSafeImplT(StringView)
+ CVProfile_ExitScope
  CValidator::ClaimArrayMemory(void*)
  CValidator::ClaimMemory(void*)
  CValidator::IsClaimed(void*)
@@ -653,7 +654,6 @@
  GetMiniDumpSteamID
  GetOSType
  Log
- Msg
  OSAtomicCompareAndSwap64Barrier
  OSMemoryBarrier
  Plat_AbsoluteTime
@@ -936,12 +936,7 @@
  SteamThreadTools::CThreadSemaphore::Release(long)
  SteamThreadTools::CThreadSyncObject::Wait(unsigned int)
  SteamThreadTools::CThreadSyncObject::~CThreadSyncObject()
- SteamVProf::CVProfNode::EnterScope(void*)
- SteamVProf::CVProfNode::ExitScope()
- SteamVProf::CVProfNode::MarkFrame()
- SteamVProf::CVProfNode::Reset()
- SteamVProf::CVProfile::GetFrameTimeOutsideBudgetGroup_Recursive(SteamVProf::CVProfNode*, EVProfBugdetGroup)
- SteamVProf::CVProfile::OutputReport(int, char const*, int)
+ SteamVProf::CVProfile::MarkFrame(char const*)
  T BDeleteFileIfExists(StringView)
  T BFileExists(StringView)
  T CChromeIPCClient::AbortWaitForPendingData()
@@ -3315,13 +3310,6 @@
  T IPC::PosixSharedMemory::~PosixSharedMemory()
  T InterfaceReg::InterfaceReg(void* (*)(), char const*)
  T MakeFileWriteable(StringView)
- T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)1, false, 4>::~CVProfScope()
- T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)10, false, 4>::~CVProfScope()
- T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)19, false, 4>::~CVProfScope()
- T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)20, false, 4>::~CVProfScope()
- T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)5, false, 4>::~CVProfScope()
- T SteamVProf::CVProfileThreadEntry::OnFrameCompleted()
- T SteamVProf::CVProfileThreadEntry::OnNewFrameEntered()
  T Sys_GetProcAddress(CSysModule*, char const*)
  T TSLNodeBase_t::operator delete(void*)
  T TSLNodeTemplate_t<HTMLCommandBuffer_t*>::operator delete(void*)
@@ -3783,9 +3771,11 @@
  b CChromeIPCClient::Init(unsigned int, CUtlDelegate<void ()>)::fAsserted
  b CChromeIPCClient::PushCommand(HTMLCommandBuffer_t*)::fAsserted
  b CChromeIPCClient::RunFrame()::fAsserted
+ b TranslateSharedPaintBuffers(HTMLCommandBuffer_t*, CChromeIPCClient*)::s_PIDParam
  b guard variable for CChromeIPCClient::BIsBrowserEnabled()::s_CmdLineParamDisableBrowser
  b guard variable for CChromeIPCClient::BStartMasterCEFProcess(char const*, EUniverse, ELanguage, EUIMode, bool, bool, bool)::paramFastOverlay
  b guard variable for CChromeIPCClient::BStartMasterCEFProcess(char const*, EUniverse, ELanguage, EUIMode, bool, bool, bool)::paramHTMLPerfMonitor
+ b guard variable for TranslateSharedPaintBuffers(HTMLCommandBuffer_t*, CChromeIPCClient*)::s_PIDParam
  b k_InvalidClientID
  b protobuf_AddDesc_htmlmessages_2eproto()::already_here
  b s_CmdLineParamCefDisableBreakpad

@@ -2,6 +2,8 @@ class IClientGameServer
 {
 public:
     virtual unknown_ret GetHSteamUser() = 0;
+    virtual unknown_ret GetHSteamPipe() = 0;
+    virtual unknown_ret SetSDRLogin(CUtlBuffer*) = 0;
     virtual unknown_ret InitGameServer(unsigned int, unsigned short, unsigned short, unsigned int, unsigned int, char const*) = 0;
     virtual unknown_ret SetProduct(char const*) = 0;
     virtual unknown_ret SetGameDescription(char const*) = 0;

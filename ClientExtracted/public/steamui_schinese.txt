@@ -220,17 +220,17 @@
 "SteamUI_JoinDialog_SharedLicenseLocked_OwnerText" "您共享的库现在正由 %borrower% 使用。若现在开始游戏，则借用人 %borrower% 将会收到准备退出游戏的通知。"
 "SteamUI_JoinDialog_SharedLicenseLocked_BorrowerText" "此共享游戏当前不可用。请稍后再试或为您自己的库购买该款游戏。"
 
-"SteamUI_JoinDialog_KickSessions_Text" "您已在另一台正在运行“%existing_app%”的计算机上登录。\n在此启动“%launching_app%”将会断开其它会话与 Steam 的连接。"
+"SteamUI_JoinDialog_KickSessions_Text" "正在断开已在运行 %dots% 的其他会话"
 "SteamUI_JoinDialog_KickSessions_Error" "无法断开另一个在进行的 %game% 会话"
 
 "SteamUI_JoinDialog_VerifyingFiles_Error" "验证 %game% 的签名文件失败，需要内容验证。"
 "SteamUI_JoinDialog_CreateProcess_Error" "无法为 %game% 执行启动程序：\n\n%detail%"
 
 "SteamUI_JoinDialog_OpenVRStartupFailure" "虚拟现实下启动 %game% 失败。（错误：%error%）"
-"SteamUI_JoinDialog_OpenVRWaitingForQuit" "正在等待 %quitting_game% 退出…"
+"SteamUI_JoinDialog_OpenVRWaitingForQuit" "正在等待 %quitting_game% 退出 %dots%"
 
-"SteamUI_JoinDialog_UpdatingAppInfo" "正在更新配置…"
-"SteamUI_JoinDialog_UpdatingAppTicket" "正在更新票证…"
+"SteamUI_JoinDialog_UpdatingAppInfo" "正在更新配置 %dots%"
+"SteamUI_JoinDialog_UpdatingAppTicket" "正在更新票证 %dots%"
 
 "SteamUI_JoinDialog_TimedTrial_Error" "无法将 %game% 作为有限试用开启。(Error: %error%)"
 
@@ -480,6 +480,7 @@
 "Steam_ShowDestinationOptions"	"选择要显示的目标内容"
 "Steam_MustRestartToTakeEffect"			"此设置将在您重启\n Steam 客户端后才会生效。"
 "Steam_LanguageSelect"				"选择您希望 Steam 使用的语言（需要重新启动 Steam）"
+"Steam_SteamChinaLanguageSelect"	"蒸汽平台仅支持简体中文"
 "Steam_SelectSkinToUse"				"选择您希望 Steam 使用的皮肤（需要重新启动 Steam）"
 "Steam_CreateShortcut_Title"			"Steam - 创建快捷方式"
 "Steam_CreateShortcut_Info"			"桌面快捷方式已创建。"
@@ -3347,6 +3348,16 @@ Mac OS X 版本升级至 10.7 或更高版本。"
 "Steam_InstallAborted_InfoAppUnreleased"	"无法安装 %game%，因为它尚未发行。"
 "Steam_InstallAborted_InfoAppNoDemo"		"无法安装 %game%，因为它是试玩版，而您拥有该产品的完整版本。 请安装游戏的完整版本。"
 
+"Steam_Startup_SteamChinaRequiredTitle"					"需要蒸汽平台"
+"Steam_Startup_GetSteamChina"						"现在可以通过蒸汽平台游玩 %gamename%，请按照以下链接安装该客户端"
+"Steam_Startup_RunSteamChina"						"现在可以通过蒸汽平台游玩 %gamename%，请开启蒸汽平台以导入您的游戏。"
+"Steam_Startup_SteamChinaImportedUninstall"			"%gamename% 已导入蒸汽平台，现在您可以安全卸载此启动器。"
+"Steam_Startup_LauncherDeprecated"					"%gamename% 现已通过蒸汽平台运行，该安装不再受支持并将退出。"
+"Steam_Startup_ImportGameFromLauncherTitle"			"导入游戏"
+"Steam_Startup_ImportGameFromLauncherMsg"			"您想将 %gamename% 导入蒸汽平台吗？然后您可以安全卸载传统启动器。"
+
+"Steam_Download_SteamChina"							"下载蒸汽平台"
+
 "Steam_ValidateGame_GameRunning"	"在尝试验证您的本地文件前，请退出所有正在运行的游戏和工具。"
 
 "Steam_RegionLabel"	"下载地区"
@@ -3369,14 +3380,12 @@ Mac OS X 版本升级至 10.7 或更高版本。"
 "Steam_SettingsInGameScreenshotFolder"	"截图文件夹"
 "Steam_SettingsInGameTitle"	"Steam 界面"
 
-"SteamUI_JoinDialog_PreparingToPlay1" 	"正在准备启动 %game%."
-"SteamUI_JoinDialog_PreparingToPlay2" 	"正在准备启动 %game%.."
-"SteamUI_JoinDialog_PreparingToPlay3" 	"正在准备启动 %game%..."
+"SteamUI_JoinDialog_PreparingToPlay" 	"正在准备启动 %game% %dots%"
 "SteamUI_JoinDialog_Title"		"%game% - Steam"
 "SteamUI_JoinDialog_Updating_Title" 	"更新 %game%"
 "SteamUI_JoinDialog_Ready_Title"	"准备就绪 - %game%"
 "SteamUI_JoinDialog_NoName_Title" 	"Steam"
-"SteamUI_JoinDialog_InstallScriptInfo"	"正在执行初始设置...\n\n正在安装：%stepname%（第 %step% 步，共 %steptotal% 步）"
+"SteamUI_JoinDialog_InstallScriptInfo"	"正在执行初始设置 %dots% \n\n正在安装：%stepname%（第 %step% 步，共 %steptotal% 步）"
 
 
 "SteamUI_GameRequires_NTFS_Detail"	"您正安装的游戏需要带有 NTFS 文件系统的硬盘并且\n无法安装在\n FAT32 文件系统下。要了解更多信息，请参见下面链接的客服支持文章。"
@@ -4108,6 +4117,7 @@ Mac OS X 版本升级至 10.7 或更高版本。"
 "Steam_AppUpdateError_48"		"允许的游戏时间已超过"
 "Steam_AppUpdateError_49"		"Steam 文件已损坏"
 "Steam_AppUpdateError_50"		"缺失内容文件"
+"Steam_AppUpdateError_51"		"兼容工具配置失败"
 
 
 "steam_subnav_featured"		"精选"
@@ -4209,7 +4219,7 @@ Mac OS X 版本升级至 10.7 或更高版本。"
 "Steam_TimedTrial_Over" "您的试用现已结束"
 "Steam_TimedTrial_CloseNow" "游戏现将关闭"
 "Steam_TimedTrial_Enjoy" "尽情享受您的试用吧"
-"Steam_TimedTrial_Offline" "游戏试玩与 Steam 的连接丢失。"
+"Steam_TimedTrial_Offline" "游戏试玩连接丢失"
 "Steam_TimedTrial_Minutes" "还有 %minutes% 分钟剩余游戏时间"
 "Steam_TimedTrial_Hours" "还剩 %hours% 小时 %minutes% 分钟游戏时间"
 
@@ -4723,6 +4733,9 @@ Mac OS X 版本升级至 10.7 或更高版本。"
 
 "Steam_VacBanOnAccount"		"此帐户上的 VAC 封禁"
 "Steam_NoVacBanOnAccount"	"帐户无 VAC 封禁"
+
+"Steam_NeedToRestart"		"需要重启"
+"Steam_NeedToRestartDifferentClientLauncher" "此电脑上另一版本的 Steam 正在尝试启动。\n\n 要运行它，您必须首先退出此版本的 Steam。"
 
 "Steam_ClientBrowserAuth_AllowBrowserAuth" "允许桌面网页浏览器自动登入 Steam 站点\n（需要重新启动以应用更改）"
 

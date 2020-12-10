@@ -140,7 +140,6 @@
  B SteamThreadTools::g_SuspendResumeLock
  B SteamThreadTools::g_nCurThreadSuspendCount
  B SteamThreadTools::g_pCurThread
- B SteamVProf::CVProfNode::s_iCurrentUniqueNodeID
  B SteamVProf::g_mutexProfileDump
  B app_pkey_methods
  B force_php_generation
@@ -1601,9 +1600,7 @@
  T CClientStructNetPacket::GetTargetJobName() const
  T CClientStructNetPacket::PubData() const
  T CClientStructNetPacket::SetHConnection(unsigned int)
- T CClientStructNetPacket::SetHdrIP(CIPAddress const&)
  T CClientStructNetPacket::SetMsgTraceTag(unsigned long long)
- T CClientStructNetPacket::SetRealm(ESteamRealm)
  T CClientStructNetPacket::SetSessionID(int)
  T CClientStructNetPacket::SetSourceJobID(unsigned long long)
  T CClientStructNetPacket::SetSteamID(CSteamID)
@@ -2415,6 +2412,7 @@
  T CMsgProtoBufHeader::SetCachedSize(int) const
  T CMsgProtoBufHeader::SharedCtor()
  T CMsgProtoBufHeader::SharedDtor()
+ T CMsgProtoBufHeader::Swap(CMsgProtoBufHeader*)
  T CMsgProtoBufHeader::clear_ip_addr()
  T CMsgProtoBufHeader::mutable_error_message()
  T CMsgProtoBufHeader::mutable_ip_v6()
@@ -2732,8 +2730,11 @@
  T CProtoBufNetPacket::GetSysID() const
  T CProtoBufNetPacket::GetTargetJobID() const
  T CProtoBufNetPacket::GetTargetJobName() const
+ T CProtoBufNetPacket::MarkHeaderDirty()
  T CProtoBufNetPacket::PubData() const
  T CProtoBufNetPacket::RebuildPacketIfNeeded()
+ T CProtoBufNetPacket::SanitizeHeaderFieldsFromClientToServer()
+ T CProtoBufNetPacket::SanitizeHeaderFieldsFromServerToClient()
  T CProtoBufNetPacket::SetHConnection(unsigned int)
  T CProtoBufNetPacket::SetHdrIP(CIPAddress const&)
  T CProtoBufNetPacket::SetMsgTraceTag(unsigned long long)
@@ -3972,6 +3973,7 @@
  T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::InsertBefore(int, unsigned int const&)
  T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::RecursiveValidate(CValidator&, char const*)
  T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::~CUtlVector()
+ T CVProfile_ExitScope
  T CValObject::ClaimMemoryBlock(void*, unsigned long)
  T CValObject::Init(char const*, void*, char const*, CValObject*, CValObject*)
  T CValidateAutoPushPop::~CValidateAutoPushPop()
@@ -4915,6 +4917,10 @@
  T IMetricsFactory::NullMetrics()
  T IMetricsFactory::Service()
  T IMetricsFactory::ValidateGlobals(CValidator&, char const*)
+ T IMsgNetPacket::SanitizeHeaderFieldsFromClientToServer()
+ T IMsgNetPacket::SanitizeHeaderFieldsFromServerToClient()
+ T IMsgNetPacket::SetHdrIP(CIPAddress const&)
+ T IMsgNetPacket::SetRealm(ESteamRealm)
  T IMsgNetPacketFromCNetPacket(CNetPacket*, bool)
  T IPv6AddrToString
  T IPv6IPToString
@@ -5325,21 +5331,13 @@
  T SteamThreadTools::InitMainThread()
  T SteamVProf::CVProfManager::AddProfileForThread(SteamVProf::CVProfile*, unsigned int, _opaque_pthread_t*)
  T SteamVProf::CVProfManager::~CVProfManager()
+ T SteamVProf::CVProfNode::CVProfNode(SteamVProf::CVProfile*, char const*, SteamVProf::CVProfNode*, EVProfBugdetGroup)
  T SteamVProf::CVProfNode::EnterScope(void*)
  T SteamVProf::CVProfNode::ExitScope()
- T SteamVProf::CVProfNode::GetSubNode(char const*, int, EVProfBugdetGroup, int)
+ T SteamVProf::CVProfNode::GetSubNode(char const*, EVProfBugdetGroup)
  T SteamVProf::CVProfNode::MarkFrame()
  T SteamVProf::CVProfNode::Reset()
- T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)1, false, 4>::~CVProfScope()
- T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)13, false, 4>::~CVProfScope()
- T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)16, false, 4>::~CVProfScope()
- T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)17, false, 4>::~CVProfScope()
- T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)18, false, 4>::~CVProfScope()
- T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)20, false, 4>::~CVProfScope()
- T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)4, false, 4>::~CVProfScope()
- T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)5, false, 4>::~CVProfScope()
- T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)6, false, 4>::~CVProfScope()
- T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)7, false, 4>::~CVProfScope()
+ T SteamVProf::CVProfNode::~CVProfNode()
  T SteamVProf::CVProfile::AddBudgetGroupName(EVProfBugdetGroup, int, char const*)
  T SteamVProf::CVProfile::BProfileHasNodesOutsideBudgetGroup_Recursive(SteamVProf::CVProfNode*, int)
  T SteamVProf::CVProfile::CVProfile()
@@ -5347,9 +5345,12 @@
  T SteamVProf::CVProfile::Dump(char const*, ...)
  T SteamVProf::CVProfile::DumpNodes(SteamVProf::CVProfNode*, int, bool)
  T SteamVProf::CVProfile::DumpSorted(char const*, double, bool (*)(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&), int)
+ T SteamVProf::CVProfile::EnterScope(char const*, EVProfBugdetGroup, void*)
+ T SteamVProf::CVProfile::ExitScope()
  T SteamVProf::CVProfile::FindNode(SteamVProf::CVProfNode*, char const*)
  T SteamVProf::CVProfile::FreeNodes_R(SteamVProf::CVProfNode*)
  T SteamVProf::CVProfile::GetFrameTimeOutsideBudgetGroup_Recursive(SteamVProf::CVProfNode*, EVProfBugdetGroup)
+ T SteamVProf::CVProfile::MarkFrame(char const*)
  T SteamVProf::CVProfile::OutputReport(int, char const*, int)
  T SteamVProf::CVProfile::SumTimes(SteamVProf::CVProfNode*, int)
  T SteamVProf::CVProfile::SumTimes(char const*, int)
@@ -6893,7 +6894,7 @@
  b OPENSSL_init.done
  b OSXHelpers::s_bUseLibDispatch
  b OSXHelpers::s_pPollingHelperSingleton
- b OneTimeCryptoInitOpenSSL()::threadonce_324_43
+ b OneTimeCryptoInitOpenSSL()::threadonce_324_36
  b RTANoteAlloc(void*, unsigned long, bool, char const*, int, int, int)::g_FilenamesCache
  b SHA1.m
  b SYS_str_reasons
@@ -7763,6 +7764,7 @@
  r eccurves_auto
  r ecformats_default
  r ecp_nistz256_precomputed
+ r g_szLoggerVprofNode
  r gmul
  r hex_to_string.hexdig
  r illByte

@@ -220,17 +220,17 @@ Dies dauert in der Regel nicht länger als eine Minute."
 "SteamUI_JoinDialog_SharedLicenseLocked_OwnerText" "Ihre geteilte Bibilothek wird momentan von %borrower% verwendet. Wenn Sie jetzt spielen, wird %borrower% mitgeteilt, dass es Zeit wird, aufzuhören."
 "SteamUI_JoinDialog_SharedLicenseLocked_BorrowerText" "Dieses geteilte Spiel ist zurzeit nicht verfügbar. Bitte versuchen Sie es später erneut oder kaufen Sie dieses Spiel für Ihre eigene Bibliothek."
 
-"SteamUI_JoinDialog_KickSessions_Text" "Sie sind an einem anderen Computer angemeldet, der \"%existing_app%\" bereits spielt.\nWenn Sie \"%launching_app%\" hier starten, wird die andere Sitzung von Steam getrennt."
+"SteamUI_JoinDialog_KickSessions_Text" "Andere Sitzung wird getrennt %dots%"
 "SteamUI_JoinDialog_KickSessions_Error" "Trennen der anderen Sitzung mit %game% fehlgeschlagen"
 
 "SteamUI_JoinDialog_VerifyingFiles_Error" "Signierte Dateien von %game% konnten nicht verifiziert werden, Inhaltsüberprüfung ist erforderlich."
 "SteamUI_JoinDialog_CreateProcess_Error" "Prozess für %game% konnte nicht gestartet werden:\n\n%detail%"
 
 "SteamUI_JoinDialog_OpenVRStartupFailure" "%game% konnte nicht in VR gestartet werden. (Fehler: %error%)"
-"SteamUI_JoinDialog_OpenVRWaitingForQuit" "%quitting_game% wird beendet..."
+"SteamUI_JoinDialog_OpenVRWaitingForQuit" "%quitting_game% wird beendet %dots%"
 
-"SteamUI_JoinDialog_UpdatingAppInfo" "Konfiguration wird aktualisiert …"
-"SteamUI_JoinDialog_UpdatingAppTicket" "Ticket wird aktualisiert …"
+"SteamUI_JoinDialog_UpdatingAppInfo" "Konfiguration wird aktualisiert %dots%"
+"SteamUI_JoinDialog_UpdatingAppTicket" "Ticket wird aktualisiert %dots%"
 
 "SteamUI_JoinDialog_TimedTrial_Error" "%game% konnte nicht als begrenzte Testversion gestartet werden. (Fehler: %error%)"
 
@@ -480,6 +480,7 @@ Dies dauert in der Regel nicht länger als eine Minute."
 "Steam_ShowDestinationOptions"	"Anzuzeigende Verlinkungen auswählen"
 "Steam_MustRestartToTakeEffect"			"Diese Einstellung wird erst aktiv, nachdem\nSie Steam neu gestartet haben."
 "Steam_LanguageSelect"				"Wählen Sie die Sprache aus, die Steam benutzen soll (Steam-Neustart erforderlich)."
+"Steam_SteamChinaLanguageSelect"	"Steam kann nur auf Chinesisch (vereinfacht) genutzt werden."
 "Steam_SelectSkinToUse"				"Wählen Sie den Skin aus, den Steam benutzen soll (Steam-Neustart erforderlich)."
 "Steam_CreateShortcut_Title"			"Steam - Verknüpfung erstellen"
 "Steam_CreateShortcut_Info"			"Es wurde eine Verknüpfung erstellt und auf Ihrem Desktop abgelegt."
@@ -3349,6 +3350,16 @@ Senden Sie einem Bekannten ein Geschenk und werden Sie Freunde auf Steam."
 "Steam_InstallAborted_InfoAppUnreleased"	"%game% kann noch nicht installiert werden, da es noch nicht veröffentlicht wurde."
 "Steam_InstallAborted_InfoAppNoDemo"		"%game% kann nicht installiert werden, da es sich um eine Demoversion handelt und Sie die Vollversion besitzen. Installieren Sie die Vollversion des Spiels."
 
+"Steam_Startup_SteamChinaRequiredTitle"					"Erfordert Steam China"
+"Steam_Startup_GetSteamChina"						"%gamename% ist jetzt auf Steam China erhältlich. Bitte installieren Sie den Steam-China-Client über den Link unten."
+"Steam_Startup_RunSteamChina"						"%gamename% ist jetzt auf Steam China erhältlich. Bitte starten Sie Steam China, um Ihr Spiel zu importieren."
+"Steam_Startup_SteamChinaImportedUninstall"			"%gamename% wurde nach Steam China importiert. Sie können diesen Launcher jetzt deinstallieren."
+"Steam_Startup_LauncherDeprecated"					"%gamename% wird jetzt über Steam China ausgeführt. Diese Installation wird nicht länger unterstützt und beendet."
+"Steam_Startup_ImportGameFromLauncherTitle"			"Spiel importieren"
+"Steam_Startup_ImportGameFromLauncherMsg"			"Möchten Sie %gamename% nach Steam China importieren? Sie können den Original-Launcher anschließend deinstallieren."
+
+"Steam_Download_SteamChina"							"Steam China herunterladen"
+
 "Steam_ValidateGame_GameRunning"	"Bitte beenden Sie alle momentan ausgeführten Spiele oder Tools, bevor Sie versuchen, Ihre lokalen Dateien auf Fehler zu überprüfen."
 
 "Steam_RegionLabel"	"Downloadregion"
@@ -3371,14 +3382,12 @@ Senden Sie einem Bekannten ein Geschenk und werden Sie Freunde auf Steam."
 "Steam_SettingsInGameScreenshotFolder"	"Screenshot-Ordner"
 "Steam_SettingsInGameTitle"	"Das Steam Overlay"
 
-"SteamUI_JoinDialog_PreparingToPlay1" 	"%game% wird gestartet."
-"SteamUI_JoinDialog_PreparingToPlay2" 	"%game% wird gestartet.."
-"SteamUI_JoinDialog_PreparingToPlay3" 	"%game% wird gestartet..."
+"SteamUI_JoinDialog_PreparingToPlay" 	"%game% wird gestartet %dots%"
 "SteamUI_JoinDialog_Title"		"%game% - Steam"
 "SteamUI_JoinDialog_Updating_Title" 	"%game% wird aktualisiert"
 "SteamUI_JoinDialog_Ready_Title"	"Bereit - %game%"
 "SteamUI_JoinDialog_NoName_Title" 	"Steam"
-"SteamUI_JoinDialog_InstallScriptInfo"	"Erstmalige Installation wird ausgeführt...\n\nInstallation: %stepname% (Schritt %step% von %steptotal%)"
+"SteamUI_JoinDialog_InstallScriptInfo"	"Erstmalige Installation wird ausgeführt %dots%\n\nInstallation: %stepname% (Schritt %step% von %steptotal%)"
 
 
 "SteamUI_GameRequires_NTFS_Detail"	"Für die Installation des Spiels ist ein Laufwerk mit NTFS-Dateisystem \nerforderlich. Die Installation auf einem FAT32-Dateisystem \nist nicht möglich. Weitere Informationen erhalten Sie über den unten angegebenen Link zur Systemunterstützung."
@@ -4110,6 +4119,7 @@ Senden Sie einem Bekannten ein Geschenk und werden Sie Freunde auf Steam."
 "Steam_AppUpdateError_48"		"erlaubte Spielzeit überschritten"
 "Steam_AppUpdateError_49"		"Steam-Dateien beschädigt"
 "Steam_AppUpdateError_50"		"fehlende Inhaltsdateien"
+"Steam_AppUpdateError_51"		"Konfiguration des Kompatibilitätswerkzeugs fehlgeschlagen"
 
 
 "steam_subnav_featured"		"Angesagt"
@@ -4211,7 +4221,7 @@ Senden Sie einem Bekannten ein Geschenk und werden Sie Freunde auf Steam."
 "Steam_TimedTrial_Over" "Ihre Testzeit ist nun abgelaufen"
 "Steam_TimedTrial_CloseNow" "Das Spiel schließt sich jetzt"
 "Steam_TimedTrial_Enjoy" "Viel Spaß in der Testzeit"
-"Steam_TimedTrial_Offline" "Testversion hat die Verbindung zu Steam verloren"
+"Steam_TimedTrial_Offline" "Testversion hat die Verbindung verloren"
 "Steam_TimedTrial_Minutes" "%minutes% Minuten Spielzeit verbleibend"
 "Steam_TimedTrial_Hours" "%hours% Stunden und %minutes% Minuten Spielzeit verbleibend"
 
@@ -4725,6 +4735,9 @@ Senden Sie einem Bekannten ein Geschenk und werden Sie Freunde auf Steam."
 
 "Steam_VacBanOnAccount"		"Von VAC ausgeschlossen"
 "Steam_NoVacBanOnAccount"	"Keine VAC-Ausschlüsse"
+
+"Steam_NeedToRestart"		"Neustart erforderlich"
+"Steam_NeedToRestartDifferentClientLauncher" "Eine weitere Version von Steam versucht auf diesem Computer zu starten.\n\nUm diese auszuführen, müssen Sie zuerst die aktuelle Version von Steam schließen."
 
 "Steam_ClientBrowserAuth_AllowBrowserAuth" "Erlauben Sie Webbrowsern, sich automatisch auf Steam-Seiten anzumelden\n(Damit die Änderungen wirksam werden, ist ein Neustart erforderlich.)"
 

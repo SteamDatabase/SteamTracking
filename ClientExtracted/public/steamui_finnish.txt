@@ -220,17 +220,17 @@ Tämä kestää alle minuutin."
 "SteamUI_JoinDialog_SharedLicenseLocked_OwnerText" "%borrower% käyttää jaettua kirjastoasi tällä hetkellä. Aloittaessasi pelin %borrower% saa viestin, että olisi aika lopettaa."
 "SteamUI_JoinDialog_SharedLicenseLocked_BorrowerText" "Tätä jaettua peliä ei tällä hetkellä voi käyttää. Yritä myöhemmin uudelleen tai osta peli omaan kirjastoosi."
 
-"SteamUI_JoinDialog_KickSessions_Text" "Olet kirjautunut sisään toisella tietokoneella, joka käyttää jo kohdetta \"%existing_app%\".\nJos käynnistät kohteen \"%launching_app%\" nyt, toinen istunto keskeytetään."
+"SteamUI_JoinDialog_KickSessions_Text" "Katkaistaan pelin muut istunnot%dots%"
 "SteamUI_JoinDialog_KickSessions_Error" "Pelissä %game% olevan toisen istunnon katkaisu epäonnistui"
 
 "SteamUI_JoinDialog_VerifyingFiles_Error" "Allekirjoitettujen tiedostojen vahvistus epäonnistui pelille %game%. Sisällön vahvistusta vaaditaan."
 "SteamUI_JoinDialog_CreateProcess_Error" "Epäonnistui prosessin aloituksessa pelille %game% :\n\n%detail%"
 
 "SteamUI_JoinDialog_OpenVRStartupFailure" "Pelin %game% aloittaminen VR:ssä epäonnistui. (Virhe: %error%)"
-"SteamUI_JoinDialog_OpenVRWaitingForQuit" "Odotetaan pelin %quitting_game% loppumista..."
+"SteamUI_JoinDialog_OpenVRWaitingForQuit" "Odotetaan pelin %quitting_game% sulkeutumista%dots%"
 
-"SteamUI_JoinDialog_UpdatingAppInfo" "Päivitetään asetuksia..."
-"SteamUI_JoinDialog_UpdatingAppTicket" "Päivitetään lippua..."
+"SteamUI_JoinDialog_UpdatingAppInfo" "Päivitetään asetuksia%dots%"
+"SteamUI_JoinDialog_UpdatingAppTicket" "Päivitetään lippua%dots%"
 
 "SteamUI_JoinDialog_TimedTrial_Error" "Pelin %game% rajoitetun ajan kokeiluversion käynnistäminen epäonnistui. (Virhe: %error%)"
 
@@ -480,6 +480,7 @@ Tämä kestää alle minuutin."
 "Steam_ShowDestinationOptions"	"Valitse näytettävät kohteet"
 "Steam_MustRestartToTakeEffect"			"Asetus tulee voimaan vasta,\nkun käynnistät Steamin uudelleen."
 "Steam_LanguageSelect"				"Valitse Steamin kieli (vaatii Steamin uudelleenkäynnistyksen)"
+"Steam_SteamChinaLanguageSelect"	"Steamiä voi käyttää ainoastaan kiinaksi (yksinkertaistettu)"
 "Steam_SelectSkinToUse"				"Valitse Steamin ulkoasu (vaatii Steamin uudelleenkäynnistyksen)"
 "Steam_CreateShortcut_Title"			"Steam - Luo pikakuvake"
 "Steam_CreateShortcut_Info"			"Pikakuvake on luotu työpöydälle."
@@ -919,9 +920,9 @@ Tämä kestää alle minuutin."
 "SteamUI_ValveSurvey_Summary_Month_2"								"helmi"
 "SteamUI_ValveSurvey_Summary_Month_3"								"maalis"
 "SteamUI_ValveSurvey_Summary_Month_4"								"huhti"
-"SteamUI_ValveSurvey_Summary_Month_5"								"Touko"
-"SteamUI_ValveSurvey_Summary_Month_6"								"Kesä"
-"SteamUI_ValveSurvey_Summary_Month_7"								"Heinä"
+"SteamUI_ValveSurvey_Summary_Month_5"								"touko"
+"SteamUI_ValveSurvey_Summary_Month_6"								"kesä"
+"SteamUI_ValveSurvey_Summary_Month_7"								"heinä"
 "SteamUI_ValveSurvey_Summary_Month_8"								"elo"
 "SteamUI_ValveSurvey_Summary_Month_9"								"syys"
 "SteamUI_ValveSurvey_Summary_Month_10"								"loka"
@@ -3347,6 +3348,16 @@ Saat uuden Steam-kaverin lähettämällä sähköpostitse lahjan jollekin tutull
 "Steam_InstallAborted_InfoAppUnreleased"	"%game% -peliä ei voi vielä asentaa, koska sitä ei ole vielä julkaistu."
 "Steam_InstallAborted_InfoAppNoDemo"		"%game% -peliä ei voi asentaa, koska se on demo ja omistat tuotteen täyden version. Asenna pelin täysi versio."
 
+"Steam_Startup_SteamChinaRequiredTitle"					"Steam China vaaditaan"
+"Steam_Startup_GetSteamChina"						"%gamename% on nyt saatavilla Steam Chinassa. Asenna asiakasohjelma tästä linkistä."
+"Steam_Startup_RunSteamChina"						"%gamename% on nyt saatavilla Steam Chinassa. Käynnistä Steam China tuodaksesi pelin."
+"Steam_Startup_SteamChinaImportedUninstall"			"%gamename% on tuotu Steam Chinaan. Voit nyt turvallisesti poistaa tämän käynnistysohjelman."
+"Steam_Startup_LauncherDeprecated"					"Peli %gamename% käynnistetään nyt Steam Chinasta. Tätä asennusta ei enää tueta ja se suljetaan."
+"Steam_Startup_ImportGameFromLauncherTitle"			"Tuo peli"
+"Steam_Startup_ImportGameFromLauncherMsg"			"Haluatko tuoda pelin %gamename% Steam Chinaan? Voit sen jälkeen poistaa vanhan käynnistysohjelman turvallisesti."
+
+"Steam_Download_SteamChina"							"Lataa Steam China"
+
 "Steam_ValidateGame_GameRunning"	"Sulje kaikki käynnissä olevat pelit ja työkalut ennen tiedostojen tarkistamista."
 
 "Steam_RegionLabel"	"Latausalue"
@@ -3369,14 +3380,12 @@ Saat uuden Steam-kaverin lähettämällä sähköpostitse lahjan jollekin tutull
 "Steam_SettingsInGameScreenshotFolder"	"Kuvakaappauskansio"
 "Steam_SettingsInGameTitle"	"Steam-yhteisönäkymä"
 
-"SteamUI_JoinDialog_PreparingToPlay1" 	"Käynnistetään peliä %game%."
-"SteamUI_JoinDialog_PreparingToPlay2" 	"Käynnistetään peliä %game%.."
-"SteamUI_JoinDialog_PreparingToPlay3" 	"Käynnistetään peliä %game%..."
+"SteamUI_JoinDialog_PreparingToPlay" 	"Käynnistetään peliä %game%%dots%"
 "SteamUI_JoinDialog_Title"		"%game% - Steam"
 "SteamUI_JoinDialog_Updating_Title" 	"Päivitetään peliä %game%"
 "SteamUI_JoinDialog_Ready_Title"	"Valmis - %game%"
 "SteamUI_JoinDialog_NoName_Title" 	"Steam"
-"SteamUI_JoinDialog_InstallScriptInfo"	"Suoritetaan ensiasennusta...\n\nAsennetaan: %stepname% (vaihe %step% / %steptotal%)"
+"SteamUI_JoinDialog_InstallScriptInfo"	"Suoritetaan ensiasennusta%dots%\n\nAsennetaan: %stepname% (vaihe %step% / %steptotal%)"
 
 
 "SteamUI_GameRequires_NTFS_Detail"	"Peli, jota yrität asentaa, vaatii toimiakseen NTFS-tiedostojärjestelmän, eikä\n sitä voi asentaa FAT32-tiedostojärjestelmään. Lisätietoja on tukiartikkelissa,\njohon on linkki alla."
@@ -4110,6 +4119,7 @@ Luo ja valitse luokkia tälle pelille alla, minkä jälkeen voit kokoelman Näyt
 "Steam_AppUpdateError_48"		"sallittu peliaika ylitetty"
 "Steam_AppUpdateError_49"		"vioittuneet Steam-tiedostot"
 "Steam_AppUpdateError_50"		"puuttuvia sisältötiedostoja"
+"Steam_AppUpdateError_51"		"yhteensopivuustyökalun määritys epäonnistui"
 
 
 "steam_subnav_featured"		"Esittelyssä"
@@ -4211,7 +4221,7 @@ Luo ja valitse luokkia tälle pelille alla, minkä jälkeen voit kokoelman Näyt
 "Steam_TimedTrial_Over" "Kokeilu on päättynyt"
 "Steam_TimedTrial_CloseNow" "Peli suljetaan nyt"
 "Steam_TimedTrial_Enjoy" "Nauti kokeilusta"
-"Steam_TimedTrial_Offline" "Pelikokeilun yhteys Steamiin katkesi"
+"Steam_TimedTrial_Offline" "Pelikokeilun yhteys katkesi"
 "Steam_TimedTrial_Minutes" "Sinulla on %minutes% minuuttia peliaikaa jäljellä"
 "Steam_TimedTrial_Hours" "Sinulla on %hours% tuntia %minutes% minuuttia peliaikaa jäljellä"
 
@@ -4726,6 +4736,9 @@ Luo ja valitse luokkia tälle pelille alla, minkä jälkeen voit kokoelman Näyt
 
 "Steam_VacBanOnAccount"		"Tilin VAC-kiellot"
 "Steam_NoVacBanOnAccount"	"Tilillä ei ole VAC-kieltoja"
+
+"Steam_NeedToRestart"		"Uudelleenkäynnistys vaaditaan"
+"Steam_NeedToRestartDifferentClientLauncher" "Toinen Steamin versio yrittää käynnistyä tällä koneella.\n\nJotta voit käynnistää sen, sinun tulee ensin poistua tästä Steamin versiosta."
 
 "Steam_ClientBrowserAuth_AllowBrowserAuth" "Salli selainten kirjautua automaattisesti Steam-sivustoille\n (käyttöönotto vaatii uudelleenkäynnistyksen)"
 

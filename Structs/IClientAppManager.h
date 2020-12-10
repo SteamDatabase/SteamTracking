@@ -40,7 +40,6 @@ public:
     virtual unknown_ret BHasCachedBetaPassword(unsigned int, char const*) = 0;
     virtual unknown_ret GetActiveBeta(unsigned int, char*, int) = 0;
     virtual unknown_ret BGetActiveBetaForApps(unsigned int*, int, char*, int) = 0;
-    virtual unknown_ret BIsManifestAvailableForUser(unsigned int, unsigned int, unsigned long long) = 0;
     virtual unknown_ret SetDownloadingEnabled(bool) = 0;
     virtual unknown_ret BIsDownloadingEnabled() = 0;
     virtual unknown_ret GetDownloadStats(DownloadStats_s*) = 0;

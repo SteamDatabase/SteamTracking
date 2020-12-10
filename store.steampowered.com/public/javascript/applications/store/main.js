@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6251938";
+var CLSTAMP = "6253520";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [38],
   {
@@ -1597,9 +1597,6 @@ var CLSTAMP = "6251938";
                   },
                   LoyaltyAvatar: function() {
                     return "/points/shop/c/avatar";
-                  },
-                  LoyaltySteamBadge: function() {
-                    return "/points/shop/c/steambadge";
                   },
                   LoyaltyByGame: function() {
                     return "/points/shop/c/games";

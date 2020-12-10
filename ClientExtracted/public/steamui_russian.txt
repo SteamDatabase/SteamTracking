@@ -215,17 +215,17 @@
 "SteamUI_JoinDialog_SharedLicenseLocked_OwnerText" "Сейчас вашей библиотекой пользуется %borrower%. Если вы начнете играть, %borrower% получит уведомление, что пора выходить."
 "SteamUI_JoinDialog_SharedLicenseLocked_BorrowerText" "Эта общая игра сейчас недоступна. Пожалуйста, повторите попытку позднее или купите игру для своей библиотеки."
 
-"SteamUI_JoinDialog_KickSessions_Text" "Вы авторизованы на другом компьютере, где уже открыта «%existing_app%».\nЕсли вы сейчас запустите «%launching_app%», то завершите другую сессию в Steam."
+"SteamUI_JoinDialog_KickSessions_Text" "Отключение другой сессии игры %dots%"
 "SteamUI_JoinDialog_KickSessions_Error" "Не удалось отключить другую сессию игры %game%"
 
 "SteamUI_JoinDialog_VerifyingFiles_Error" "Не удалось проверить подписанные файлы %game%. Необходимо подтвердить их содержимое."
 "SteamUI_JoinDialog_CreateProcess_Error" "Не удалось запустить процесс %game% :\n\n%detail%"
 
 "SteamUI_JoinDialog_OpenVRStartupFailure" "Не удалось запустить %game% в режиме виртуальной реальности. Ошибка: %error%"
-"SteamUI_JoinDialog_OpenVRWaitingForQuit" "%quitting_game% закрывается…"
+"SteamUI_JoinDialog_OpenVRWaitingForQuit" "%quitting_game% закрывается %dots%"
 
-"SteamUI_JoinDialog_UpdatingAppInfo" "Обновление настроек..."
-"SteamUI_JoinDialog_UpdatingAppTicket" "Обновление обращения..."
+"SteamUI_JoinDialog_UpdatingAppInfo" "Обновление настроек %dots%"
+"SteamUI_JoinDialog_UpdatingAppTicket" "Обновление обращения %dots%"
 
 "SteamUI_JoinDialog_TimedTrial_Error" "Не удалось запустить ограниченную пробную версию %game% (ошибка: %error%)"
 
@@ -476,6 +476,7 @@
 "Steam_ShowDestinationOptions"	"Выбрать элементы меню"
 "Steam_MustRestartToTakeEffect"			"Чтобы изменения вступили в силу,\nперезапустите Steam."
 "Steam_LanguageSelect"				"Выберите язык (потребуется перезапуск Steam)"
+"Steam_SteamChinaLanguageSelect"	"Steam можно использовать только на упрощённом китайском языке"
 "Steam_SelectSkinToUse"				"Выберите оформление клиента (потребуется перезапуск Steam)"
 "Steam_CreateShortcut_Title"			"Steam — Создание ярлыка"
 "Steam_CreateShortcut_Info"			"Ярлык создан и помещён на рабочий стол."
@@ -3342,6 +3343,16 @@
 "Steam_InstallAborted_InfoAppUnreleased"	"На данный момент невозможно установить %game%, так как эта игра еще не вышла."
 "Steam_InstallAborted_InfoAppNoDemo"		"Не удалось установить %game%, так как это демоверсия, а у вас уже есть полная версия. Установите полную версию игры."
 
+"Steam_Startup_SteamChinaRequiredTitle"					"Требуется Steam China"
+"Steam_Startup_GetSteamChina"						"%gamename% уже доступна в Steam China. Пожалуйста, перейдите по ссылке ниже, чтобы установить клиент игры."
+"Steam_Startup_RunSteamChina"						"%gamename% уже доступна в Steam China. Пожалуйста, запустите Steam China, чтобы импортировать игру."
+"Steam_Startup_SteamChinaImportedUninstall"			"%gamename% импортирована в Steam China, вы можете спокойно удалить эту программу запуска."
+"Steam_Startup_LauncherDeprecated"					"%gamename% запущена в Steam China, эта установка больше не поддерживается и будет закрыта."
+"Steam_Startup_ImportGameFromLauncherTitle"			"Импорт игры"
+"Steam_Startup_ImportGameFromLauncherMsg"			"Вы хотите импортировать %gamename% в Steam China? После этого вы спокойно сможете удалить устаревшую программу запуска."
+
+"Steam_Download_SteamChina"							"Загрузить Steam China"
+
 "Steam_ValidateGame_GameRunning"	"Закройте все запущенные игры и программы и только затем проверьте файлы игры."
 
 "Steam_RegionLabel"	"Регион для загрузки"
@@ -3364,14 +3375,12 @@
 "Steam_SettingsInGameScreenshotFolder"	"Папка скриншотов"
 "Steam_SettingsInGameTitle"	"Оверлей Steam"
 
-"SteamUI_JoinDialog_PreparingToPlay1" 	"Подготовка к запуску %game%."
-"SteamUI_JoinDialog_PreparingToPlay2" 	"Подготовка к запуску %game%.."
-"SteamUI_JoinDialog_PreparingToPlay3" 	"Подготовка к запуску %game%..."
+"SteamUI_JoinDialog_PreparingToPlay" 	"Подготовка к запуску %game% %dots%"
 "SteamUI_JoinDialog_Title"		"%game% — Steam"
 "SteamUI_JoinDialog_Updating_Title" 	"Обновление %game%"
 "SteamUI_JoinDialog_Ready_Title"	"Готово — %game%"
 "SteamUI_JoinDialog_NoName_Title" 	"Steam"
-"SteamUI_JoinDialog_InstallScriptInfo"	"Производится первоначальная настройка...\n\nУстановка: %stepname% (шаг %step% из %steptotal%)"
+"SteamUI_JoinDialog_InstallScriptInfo"	"Производится первоначальная настройка %dots% \n\nУстановка: %stepname% (шаг %step% из %steptotal%)"
 
 
 "SteamUI_GameRequires_NTFS_Detail"	"Устанавливаемая вами игра требует наличия диска с файловой системой NTFS и не может быть установлена на диск с файловой системой\n FAT32. Для получения более подробной информации, обратитесь к справочному разделу\n по расположенной ниже ссылке."
@@ -4104,6 +4113,7 @@
 "Steam_AppUpdateError_48"		"превышено разрешённое время игры"
 "Steam_AppUpdateError_49"		"файлы Steam повреждены"
 "Steam_AppUpdateError_50"		"файлы контента отсутствуют"
+"Steam_AppUpdateError_51"		"настройка инструмента совместимости не удалась"
 
 
 "steam_subnav_featured"		"Популярное"
@@ -4205,7 +4215,7 @@
 "Steam_TimedTrial_Over" "Пробная версия истекла"
 "Steam_TimedTrial_CloseNow" "Сейчас игра будет закрыта"
 "Steam_TimedTrial_Enjoy" "Наслаждайтесь пробной версией"
-"Steam_TimedTrial_Offline" "Пробная версия игры потеряла соединение со Steam"
+"Steam_TimedTrial_Offline" "Пробная версия игры потеряла соединение"
 "Steam_TimedTrial_Minutes" "Осталось %minutes% мин. игрового времени"
 "Steam_TimedTrial_Hours" "Осталось %hours% ч. %minutes% мин. игрового времени"
 
@@ -4719,6 +4729,9 @@
 
 "Steam_VacBanOnAccount"		"Имеются блокировки VAC"
 "Steam_NoVacBanOnAccount"	"Блокировок VAC нет"
+
+"Steam_NeedToRestart"		"Требуется перезапуск"
+"Steam_NeedToRestartDifferentClientLauncher" "На этом компьютере пытается запуститься другая версия Steam.\n\nЧтобы запуск состоялся, закройте текущую версию Steam."
 
 "Steam_ClientBrowserAuth_AllowBrowserAuth" "Разрешить браузерам автоматически выполнять вход в аккаунт на сайтах Steam\n(изменения вступят в силу только после перезагрузки компьютера)"
 

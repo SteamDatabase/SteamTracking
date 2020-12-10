@@ -363,7 +363,7 @@
 
 "Friends_FriendAliases_Title"			"フレンド - %FriendName%"
 "Friends_FriendAliasesInfo"			"%FriendName% には次の名前もあります:"
-"Friends_FriendAliases_None"			"このプレーヤーはほかのどんな名前も使っていません。"
+"Friends_FriendAliases_None"			"このプレイヤーはほかのどんな名前も使っていません。"
 
 
 "Friends_Settings_TabTitle"			"フレンド"

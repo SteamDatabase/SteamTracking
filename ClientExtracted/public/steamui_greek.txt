@@ -216,17 +216,17 @@
 "SteamUI_JoinDialog_SharedLicenseLocked_OwnerText" "Τα κοινά παιχνίδια σας αυτή τη στιγμή χρησιμοποιούνται από τον χρήστη %borrower%. Με την εκκίνησή τους θα αποσταλεί στον χρήστη %borrower% μια ειδοποίηση ότι είναι ώρα να τα τερματίσει."
 "SteamUI_JoinDialog_SharedLicenseLocked_BorrowerText" "Αυτό το κοινό παιχνίδι δεν είναι διαθέσιμο αυτή τη στιγμή. Παρακαλούμε δοκιμάστε ξανά αργότερα ή αγοράστε αυτό το παιχνίδι για τη δική σας συλλογή."
 
-"SteamUI_JoinDialog_KickSessions_Text" "Είστε συνδεδεμένοι σε έναν άλλον υπολογιστή με την εφαρμογή «%existing_app%» ήδη εκκινημένη. Η εκκίνηση της εφαρμογής «%launching_app%» εδώ, θα προκαλέσει την αποσύνδεση της άλλης συνεδρίας από το Steam."
+"SteamUI_JoinDialog_KickSessions_Text" "Γίνεται αποσύνδεση από την άλλη συνεδρία που παίζει ήδη %dots%"
 "SteamUI_JoinDialog_KickSessions_Error" "Αποτυχία αποσύνδεσης άλλου λογαριασμού που παίζει %game%"
 
 "SteamUI_JoinDialog_VerifyingFiles_Error" "Αδυναμία επαλήθευσης υπογεγραμμένων αρχείων για %game%, απαιτείται η επικύρωση περιεχομένου."
 "SteamUI_JoinDialog_CreateProcess_Error" "Αποτυχία εκκίνησης διαδικασίας για %game% :\n\n%detail%"
 
 "SteamUI_JoinDialog_OpenVRStartupFailure" "Αποτυχία εκκίνησης του %game% σε VR. (Σφάλμα: %error%)"
-"SteamUI_JoinDialog_OpenVRWaitingForQuit" "Αναμονή για τερματισμό του %quitting_game%..."
+"SteamUI_JoinDialog_OpenVRWaitingForQuit" "Αναμονή για %quitting_game% να τερματίσει το %dots%"
 
-"SteamUI_JoinDialog_UpdatingAppInfo" "Ενημέρωση διαμόρφωσης ..."
-"SteamUI_JoinDialog_UpdatingAppTicket" "Ενημέρωση δελτίου ..."
+"SteamUI_JoinDialog_UpdatingAppInfo" "Ενημέρωση διαμόρφωσης %dots%"
+"SteamUI_JoinDialog_UpdatingAppTicket" "Ενημέρωση δελτίου %dots%"
 
 "SteamUI_JoinDialog_TimedTrial_Error" "Αποτυχία εκκίνησης %game% ως περιορισμένη δοκιμή. (Σφάλμα: %error%)"
 
@@ -476,6 +476,7 @@
 "Steam_ShowDestinationOptions"	"Επιλέξτε τις επιλογές που θα εμφανίζονται"
 "Steam_MustRestartToTakeEffect"			"Αυτή η ρύθμιση δε θα εφαρμοστεί μέχρι\nνα επανεκκινήσετε το Steam."
 "Steam_LanguageSelect"				"Επιλέξτε τη γλώσσα του Steam (απαιτείται επανεκκίνηση του Steam)"
+"Steam_SteamChinaLanguageSelect"	"Το Steam μπορεί να χρησιμοποιηθεί μόνο στα απλοποιημένα κινέζικα"
 "Steam_SelectSkinToUse"				"Επιλέξτε το θέμα του Steam (απαιτείται επανεκκίνηση του Steam)"
 "Steam_CreateShortcut_Title"			"Steam - Δημιουργία συντόμευσης"
 "Steam_CreateShortcut_Info"			"Μία συντόμευση έχει δημιουργηθεί και τοποθετηθεί στην επιφάνεια εργασίας σας."
@@ -3344,6 +3345,16 @@
 "Steam_InstallAborted_InfoAppUnreleased"	"Το %game% δεν μπορεί να εγκατασταθεί αυτή τη στιγμή, επειδή δεν έχει κυκλοφορήσει ακόμα."
 "Steam_InstallAborted_InfoAppNoDemo"		"Το %game% δεν μπορεί να εγκατασταθεί, επειδή είναι demo, ενώ σας ανήκει η πλήρης έκδοση του προϊόντος. Εγκαταστήστε την πλήρη έκδοση του παιχνιδιού."
 
+"Steam_Startup_SteamChinaRequiredTitle"					"Απαιτείται Steam China"
+"Steam_Startup_GetSteamChina"						"Το %gamename% είναι τώρα διαθέσιμο στο Steam China, ακολουθήστε τον παρακάτω σύνδεσμο για να εγκαταστήσετε αυτήν την εφαρμογή."
+"Steam_Startup_RunSteamChina"						"Το %gamename% είναι τώρα διαθέσιμο στο Steam China, επανεκκινήστε το Steam China για να εισαγάγετε το παιχνίδι σας."
+"Steam_Startup_SteamChinaImportedUninstall"			"Το %gamename% εισήχθηκε στο Steam China, μπορείτε τώρα να απεγκαταστήσετε αυτό το πρόγραμμα εκκίνησης με ασφάλεια."
+"Steam_Startup_LauncherDeprecated"					"Το %gamename% τρέχει τώρα μέσω Steam China, αυτή η εγκατάσταση δεν υποστήριζεται πλέον και θα τερματιστεί."
+"Steam_Startup_ImportGameFromLauncherTitle"			"Εισαγωγή παιχνιδιού"
+"Steam_Startup_ImportGameFromLauncherMsg"			"Θέλετε να εισαγάγετε το %gamename% στο Steam China, έπειτα θα μπορείτε να απεγκαταστήσετε το παραδοσιακό πρόγραμμα εκκίνησης με ασφάλεια."
+
+"Steam_Download_SteamChina"							"Λήψη Steam China"
+
 "Steam_ValidateGame_GameRunning"	"Τερματίστε όλα τα παιχνίδια ή εργαλεία που εκτελούνται αυτή στιγμή πριν επιχειρήσετε να επαληθεύσετε τα τοπικά αρχεία σας."
 
 "Steam_RegionLabel"	"Περιοχή λήψεων"
@@ -3366,14 +3377,12 @@
 "Steam_SettingsInGameScreenshotFolder"	"ΦΑΚΕΛΟΣ ΦΩΤΟΓΡΑΦΙΩΝ"
 "Steam_SettingsInGameTitle"	"Επικάλυψη Steam"
 
-"SteamUI_JoinDialog_PreparingToPlay1" 	"Προετοιμασία για εκκίνηση του %game%."
-"SteamUI_JoinDialog_PreparingToPlay2" 	"Προετοιμασία για εκκίνηση του %game%.."
-"SteamUI_JoinDialog_PreparingToPlay3" 	"Προετοιμασία για εκκίνηση του %game%..."
+"SteamUI_JoinDialog_PreparingToPlay" 	"Προετοιμασία για εκκίνηση %game% %dots%"
 "SteamUI_JoinDialog_Title"		"%game% - Steam"
 "SteamUI_JoinDialog_Updating_Title" 	"Ενημέρωση του %game%"
 "SteamUI_JoinDialog_Ready_Title"	"Έτοιμο- %game%"
 "SteamUI_JoinDialog_NoName_Title" 	"Steam"
-"SteamUI_JoinDialog_InstallScriptInfo"	"Πραγματοποιείται εγκατάσταση για πρώτη φορά...\n\nΕγκατάσταση: %stepname% (βήμα %step% από %steptotal%)"
+"SteamUI_JoinDialog_InstallScriptInfo"	"Πραγματοποιείται εγκατάσταση για πρώτη φορά %dots% \n\\Εγκατάσταση: %stepname% (βήμα %step% από %steptotal%)"
 
 
 "SteamUI_GameRequires_NTFS_Detail"	"Το παιχνίδι που προσπαθείτε να εγκαταστήσετε απαιτεί ένα δίσκο με σύστημα αρχείων NTFS \nκαι δεν μπορεί να εγκατασταθεί σε σύστημα αρχείων FAT32. Για περισσότερες πληροφορίες δείτε\nτο άρθρο της υποστήριξης από τον παρακάτω σύνδεσμο."
@@ -4049,7 +4058,7 @@
 "steam_gamehub"		"ΚΕΝΤΡΟ ΚΟΙΝΟΤΗΤΑΣ"
 "steam_details_contributioncount"	"ΣΥΝΕΙΣΦΟΡΕΣ"
 
-"steam_subscribed_files" "%name% - Περιεχόμενο εργαστηρίου"
+"steam_subscribed_files" "%name% - Περιεχόμενο Εργαστηρίου"
 "steam_subscribed_files_complete" "ΟΛΟΚΛΗΡΩΘΗΚΑΝ"
 
 "steam_shader_depots" "%name% - Περιεχόμενο προαποθήκευσης φωτισμών"
@@ -4105,6 +4114,7 @@
 "Steam_AppUpdateError_48"		"υπέρβαση επιτρεπόμενου χρόνου παιχνιδιού"
 "Steam_AppUpdateError_49"		"Κατεστραμμένα αρχεία Steam"
 "Steam_AppUpdateError_50"		"λείπουν αρχεία περιεχομένου"
+"Steam_AppUpdateError_51"		"η διαμόρφωση του εργαλείου συμβατότητας απέτυχε"
 
 
 "steam_subnav_featured"		"ΠΡΟΒΑΛΛΟΜΕΝΑ"
@@ -4206,7 +4216,7 @@
 "Steam_TimedTrial_Over" "Η δοκιμή σας τελείωσε τώρα"
 "Steam_TimedTrial_CloseNow" "Το παιχνίδι θα κλείσει τώρα"
 "Steam_TimedTrial_Enjoy" "Απολαύστε τη δοκιμή σας"
-"Steam_TimedTrial_Offline" "Η δοκιμή παιχνιδιού έχασε τη σύνδεση με το Steam"
+"Steam_TimedTrial_Offline" "Η δοκιμή παιχνιδιού έχασε τη σύνδεση"
 "Steam_TimedTrial_Minutes" "Απομένουν %minutes% λεπτά παιχνιδιού"
 "Steam_TimedTrial_Hours" "Απομένουν %hours% ώρες και %minutes% λεπτά παιχνιδιού"
 
@@ -4720,6 +4730,9 @@
 
 "Steam_VacBanOnAccount"		"Αποκλεισμοί VAC στον λογαριασμό"
 "Steam_NoVacBanOnAccount"	"Χωρίς αποκλεισμούς VAC"
+
+"Steam_NeedToRestart"		"Απαιτείται επανεκκίνηση"
+"Steam_NeedToRestartDifferentClientLauncher" "Μια άλλη έκδοση του Steam σε αυτόν τον υπολογιστή προσπαθεί να κάνει εκκίνηση.\n\nΓια να την τρέξετε πρέπει πρώτα να τερματίσετε αυτήν την έκδοση του Steam."
 
 "Steam_ClientBrowserAuth_AllowBrowserAuth" "Να επιτρέπεται η αυτόματη σύνδεση σε ιστοσελίδες Steam από περιηγητές υπολογιστών\n (απαιτεί επανεκκίνηση για εφαρμογή αλλαγών)"
 

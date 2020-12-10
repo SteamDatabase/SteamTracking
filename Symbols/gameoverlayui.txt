@@ -345,6 +345,7 @@
  CFStringGetTypeID
  CFURLCopyFileSystemPath
  CFURLCreateFromFSRef
+ CVProfile_ExitScope
  CValidator::ClaimArrayMemory(void*)
  CValidator::ClaimMemory(void*)
  CValidator::IsClaimed(void*)
@@ -4820,13 +4821,11 @@
  SteamThreadTools::CThreadMutex::CThreadMutex()
  SteamThreadTools::CThreadMutex::~CThreadMutex()
  SteamThreadTools::CThreadSpinLock::Lock(unsigned int) volatile
- SteamVProf::CVProfNode::EnterScope(void*)
- SteamVProf::CVProfNode::ExitScope()
- SteamVProf::CVProfNode::MarkFrame()
- SteamVProf::CVProfNode::Reset()
- SteamVProf::CVProfile::GetFrameTimeOutsideBudgetGroup_Recursive(SteamVProf::CVProfNode*, EVProfBugdetGroup)
- SteamVProf::CVProfile::OutputReport(int, char const*, int)
- SteamVProf::CVProfile::~CVProfile()
+ SteamVProf::CVProfManager::CleanupUnusedProfiles()
+ SteamVProf::CVProfManager::DumpAllThreadProfiles(int)
+ SteamVProf::CVProfManager::StartProfilingAllThreads()
+ SteamVProf::CVProfManager::StopProfilingAllThreads()
+ SteamVProf::CVProfile::MarkFrame(char const*)
  StringAfterPrefix
  T AppModalQueryBox::AppModalQueryBox(wchar_t const*, wchar_t const*, CVGUIApplicationOverlay*)
  T AppModalQueryBox::ChainToAnimationMap()
@@ -10074,7 +10073,6 @@
  T CUtlRBTreeBase<unsigned short, CDefRBTreeBalanceListener<unsigned short> >::_RotateRight(unsigned short, unsigned long, void*)
  T CUtlSortVector<CScreenshotImageClickPanel*>::Insert(CScreenshotImageClickPanel* const&)
  T CUtlSortVector<vgui::EditablePanel::LayoutPanel_t>::Insert(vgui::EditablePanel::LayoutPanel_t const&)
- T CUtlString* Destruct<CUtlString>(CUtlString*)
  T CUtlString::AppendFormat(char const*, ...)
  T CUtlString::AssertStringTooLong()
  T CUtlString::BEndsWithCaseless(char const*) const
@@ -10490,6 +10488,7 @@
  T ClientGameStats()
  T ClientHTTP()
  T ClientMusic()
+ T ClientNetworkingSocketsSerialized()
  T ClientParentalSettings()
  T ClientParentalSettingsUncached()
  T ClientRemoteClientManager()
@@ -10747,7 +10746,7 @@
  T KeyValues::MergeFromFile(IBaseFileSystem*, StringView, StringView)
  T KeyValues::ReadAsBinary(CUtlBuffer&, int, bool)
  T KeyValues::ReadToken(CUtlBuffer&, bool&, char, KeyValuesTextParser*, bool&)
- T KeyValues::RecursiveMergeFromBuffer(char const*, CUtlBuffer&, KeyValuesTextParser*, bool)
+ T KeyValues::RecursiveMergeFromBuffer(CUtlBuffer&, KeyValuesTextParser*, bool)
  T KeyValues::RecursiveSaveToBuffer(CUtlBuffer*, int, EKeyValuesSerializationFlags) const
  T KeyValues::RemoveEverything()
  T KeyValues::RemoveSubKey(KeyValues*)
@@ -10765,10 +10764,12 @@
  T KeyValuesAD::operator->()
  T KeyValuesAD::operator->() const
  T KeyValuesAD::~KeyValuesAD()
+ T KeyValuesTextParser::InitBuffer(int)
  T KeyValuesTextParser::KeyValuesTextParser(bool, int)
  T KeyValuesTextParser::Pop()
  T KeyValuesTextParser::ReportError(StringView, CUtlBuffer const&)
  T KeyValuesTextParser::Reset(int, int)
+ T KeyValuesTextParser::SetFilename(char const*)
  T KeyValuesTextParser::~KeyValuesTextParser()
  T LayoutDebugDialog::ChainToAnimationMap()
  T LayoutDebugDialog::ChainToMap()
@@ -10897,23 +10898,6 @@
  T SteamThreadTools::CThreadLocalStackCounter<long long>::CThreadLocalStackCounter(SteamThreadTools::CThreadLocal<long long>&)
  T SteamThreadTools::CThreadLocalStackCounter<long long>::~CThreadLocalStackCounter()
  T SteamThreadTools::CThreadSpinLock::~CThreadSpinLock()
- T SteamVProf::CVProfManager::CleanupUnusedProfiles()
- T SteamVProf::CVProfManager::DumpAllThreadProfiles(int)
- T SteamVProf::CVProfManager::StartProfilingAllThreads()
- T SteamVProf::CVProfManager::StopProfilingAllThreads()
- T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)1, false, 4>::~CVProfScope()
- T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)10, false, 4>::~CVProfScope()
- T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)11, false, 4>::~CVProfScope()
- T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)12, false, 4>::~CVProfScope()
- T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)13, false, 4>::~CVProfScope()
- T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)19, false, 4>::~CVProfScope()
- T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)2, false, 4>::~CVProfScope()
- T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)20, false, 4>::~CVProfScope()
- T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)5, false, 4>::~CVProfScope()
- T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)7, false, 4>::~CVProfScope()
- T SteamVProf::CVProfileThreadEntry::DeleteProfile()
- T SteamVProf::CVProfileThreadEntry::OnFrameCompleted()
- T SteamVProf::CVProfileThreadEntry::OnNewFrameEntered()
  T Sys_GetFactory(CSysModule*)
  T Sys_GetFactoryThis()
  T Sys_GetProcAddress(CSysModule*, char const*)
@@ -14880,7 +14864,6 @@
  ThreadInterlockedExchange
  ThreadInterlockedIncrement
  ThreadIsProcessIdActive
- ThreadIsThreadRunning
  ThreadShellExecute
  ThreadSleep
  VProfInternalEnterScopeCurrentThread
@@ -15405,6 +15388,7 @@
  b g_pClientMusic
  b g_pClientNetworkDeviceManager
  b g_pClientNetworkingSockets
+ b g_pClientNetworkingSocketsSerialized
  b g_pClientNetworkingUtils
  b g_pClientParentalSettings
  b g_pClientParties
@@ -15565,6 +15549,7 @@
  cos
  crc32
  d .memset_pattern
+ d GetInGameShareIPNetworkingOption(int)::k_rgOptions
  d GetShowFPSCornerOption(int)::k_rgShowFPSCorner
  d VTT for (anonymous namespace)::ScrollBarButton
  d _ZL9selectBuf$tlv$init
@@ -15740,6 +15725,7 @@
  r first_pool_slop
  r fourbppswaptable
  r g_rgubValidatedEmoticonDelimiter
+ r g_szLoggerVprofNode
  r jpeg_zigzag_order
  r jpeg_zigzag_order2
  r jpeg_zigzag_order3

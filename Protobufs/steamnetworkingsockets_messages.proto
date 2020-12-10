@@ -164,6 +164,7 @@ message CMsgSteamNetworkingP2PRendezvous {
 	optional bytes sdr_routes = 2;
 	optional uint32 ack_peer_routes_revision = 3;
 	optional bool ice_enabled = 7;
+	optional bytes hosted_server_ticket = 14;
 	optional .CMsgSteamNetworkingP2PRendezvous.ConnectRequest connect_request = 4;
 	optional .CMsgSteamNetworkingP2PRendezvous.ConnectOK connect_ok = 5;
 	optional .CMsgSteamNetworkingP2PRendezvous.ConnectionClosed connection_closed = 6;

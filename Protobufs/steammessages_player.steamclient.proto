@@ -3,30 +3,6 @@ import "enums.proto";
 
 option cc_generic_services = true;
 
-enum EProfileCustomizationType {
-	k_EProfileCustomizationTypeInvalid = 0;
-	k_EProfileCustomizationTypeRareAchievementShowcase = 1;
-	k_EProfileCustomizationTypeGameCollector = 2;
-	k_EProfileCustomizationTypeItemShowcase = 3;
-	k_EProfileCustomizationTypeTradeShowcase = 4;
-	k_EProfileCustomizationTypeBadges = 5;
-	k_EProfileCustomizationTypeFavoriteGame = 6;
-	k_EProfileCustomizationTypeScreenshotShowcase = 7;
-	k_EProfileCustomizationTypeCustomText = 8;
-	k_EProfileCustomizationTypeFavoriteGroup = 9;
-	k_EProfileCustomizationTypeRecommendation = 10;
-	k_EProfileCustomizationTypeWorkshopItem = 11;
-	k_EProfileCustomizationTypeMyWorkshop = 12;
-	k_EProfileCustomizationTypeArtworkShowcase = 13;
-	k_EProfileCustomizationTypeVideoShowcase = 14;
-	k_EProfileCustomizationTypeGuides = 15;
-	k_EProfileCustomizationTypeMyGuides = 16;
-	k_EProfileCustomizationTypeAchievements = 17;
-	k_EProfileCustomizationTypeGreenlight = 18;
-	k_EProfileCustomizationTypeMyGreenlight = 19;
-	k_EProfileCustomizationTypeSalien = 20;
-}
-
 enum EProfileCustomizationStyle {
 	k_EProfileCustomizationStyleDefault = 0;
 	k_EProfileCustomizationStyleSelected = 1;
@@ -73,6 +49,7 @@ message CPlayer_GetOwnedGames_Request {
 	optional bool include_played_free_games = 3 [(description) = "Free games are excluded by default.  If this is set, free games the user has played will be returned."];
 	repeated uint32 appids_filter = 4 [(description) = "if set, restricts result set to the passed in apps"];
 	optional bool include_free_sub = 5 [(description) = "Some games are in the free sub, which are excluded by default."];
+	optional bool skip_unvetted_apps = 6 [default = true, (description) = "if set, skip unvetted store apps"];
 }
 
 message CPlayer_GetOwnedGames_Response {
@@ -350,6 +327,7 @@ message CPlayer_SetFavoriteBadge_Response {
 message CPlayer_GetProfileCustomization_Request {
 	optional fixed64 steamid = 1;
 	optional bool include_inactive_customizations = 2;
+	optional bool include_purchased_customizations = 3;
 }
 
 message ProfileCustomizationSlot {
@@ -374,6 +352,8 @@ message ProfileCustomization {
 	repeated .ProfileCustomizationSlot slots = 3;
 	optional bool active = 4;
 	optional .EProfileCustomizationStyle customization_style = 5 [default = k_EProfileCustomizationStyleDefault];
+	optional uint64 purchaseid = 6;
+	optional uint32 level = 7;
 }
 
 message ProfileTheme {
@@ -382,9 +362,48 @@ message ProfileTheme {
 }
 
 message CPlayer_GetProfileCustomization_Response {
+	message PurchasedCustomization {
+		optional uint64 purchaseid = 1;
+		optional .EProfileCustomizationType customization_type = 2 [default = k_EProfileCustomizationTypeInvalid];
+		optional uint32 level = 3;
+	}
+
 	repeated .ProfileCustomization customizations = 1;
 	optional uint32 slots_available = 2;
 	optional .ProfileTheme profile_theme = 3;
+	repeated .CPlayer_GetProfileCustomization_Response.PurchasedCustomization purchased_customizations = 4;
+}
+
+message CPlayer_GetPurchasedProfileCustomizations_Request {
+	optional fixed64 steamid = 1;
+}
+
+message CPlayer_GetPurchasedProfileCustomizations_Response {
+	message PurchasedCustomization {
+		optional uint64 purchaseid = 1;
+		optional .EProfileCustomizationType customization_type = 2 [default = k_EProfileCustomizationTypeInvalid];
+	}
+
+	repeated .CPlayer_GetPurchasedProfileCustomizations_Response.PurchasedCustomization purchased_customizations = 1;
+}
+
+message CPlayer_GetPurchasedAndUpgradedProfileCustomizations_Request {
+	optional fixed64 steamid = 1;
+}
+
+message CPlayer_GetPurchasedAndUpgradedProfileCustomizations_Response {
+	message PurchasedCustomization {
+		optional .EProfileCustomizationType customization_type = 1 [default = k_EProfileCustomizationTypeInvalid];
+		optional uint32 count = 2;
+	}
+
+	message UpgradedCustomization {
+		optional .EProfileCustomizationType customization_type = 1 [default = k_EProfileCustomizationTypeInvalid];
+		optional uint32 level = 2;
+	}
+
+	repeated .CPlayer_GetPurchasedAndUpgradedProfileCustomizations_Response.PurchasedCustomization purchased_customizations = 1;
+	repeated .CPlayer_GetPurchasedAndUpgradedProfileCustomizations_Response.UpgradedCustomization upgraded_customizations = 2;
 }
 
 message CPlayer_GetProfileThemesAvailable_Request {
@@ -740,6 +759,14 @@ service Player {
 
 	rpc GetProfileCustomization (.CPlayer_GetProfileCustomization_Request) returns (.CPlayer_GetProfileCustomization_Response) {
 		option (method_description) = "Returns the customizations (if any) for a profile";
+	}
+
+	rpc GetPurchasedProfileCustomizations (.CPlayer_GetPurchasedProfileCustomizations_Request) returns (.CPlayer_GetPurchasedProfileCustomizations_Response) {
+		option (method_description) = "Returns the purchased profile customizations";
+	}
+
+	rpc GetPurchasedAndUpgradedProfileCustomizations (.CPlayer_GetPurchasedAndUpgradedProfileCustomizations_Request) returns (.CPlayer_GetPurchasedAndUpgradedProfileCustomizations_Response) {
+		option (method_description) = "Returns the purchased and upgraded profile customizations";
 	}
 
 	rpc GetProfileThemesAvailable (.CPlayer_GetProfileThemesAvailable_Request) returns (.CPlayer_GetProfileThemesAvailable_Response) {
