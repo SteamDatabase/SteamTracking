@@ -13,6 +13,11 @@
     "IjoIARIg8+9JL2vE+dNmhBPauZ/QZg7uQfZxiNCseZkk4XzGPlJFkPT3XU2QW7phUKLCPlCS8z9Qmr5DKT6tfJIvitz8MkCGwzi5bBUDxSGkSeHWzyhAYQCLZvyd1TxixJLUJMze19YoWyU5K9m4yfcfSd25VhhkP7Ho1t3J0zBxuSBLpg4A",
     "IjIIARIgaMVHur3UExsppAQNmlq0lEm4VJJ2R+HAu3V2JFKxV8FFkPT3XU2QW7phULLKNCk+rXySL4rc/DJAbLtp6gz5mlfS38tyySVkSdouS/KjLsODT7aJBeWIp0qkzeS75qm7LhRS84MLrF8Ng15o7DTrPpM+yLWYUo5yBA=="
   ],
+  "p2p_share_ip": {
+    "cn": 20,
+    "default": 40,
+    "ru": 20
+  },
   "pops": {
     "ams": {
       "desc": "Amsterdam",
@@ -1648,7 +1653,7 @@
     }
   },
   "relay_public_key": "5AC884C1045BA0FF44142AC8DCA51B8A98C8F1CB4FEE36284AFBE92FCF594932",
-  "revision": 285,
+  "revision": 286,
   "revoked_keys": [
     "123456789"
   ]
