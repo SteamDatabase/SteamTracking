@@ -2371,7 +2371,7 @@ HelpRequestPage = {
 				var bAllFramesComplete = Object.values( rgFrameCompleteTimeout ).reduce( ( accum, val ) => accum && ( val === undefined ), true );
 				if ( bAllFramesComplete )
 				{
-					HelpRequestPage.AjaxCreateHelpRequest( $Form, oParams );
+					HelpRequestPage.AjaxCreateHelpRequest( form, oParams );
 				}
 			}
 
@@ -2391,12 +2391,13 @@ HelpRequestPage = {
 		}
 		else
 		{
-			HelpRequestPage.AjaxCreateHelpRequest( $Form, oParams );
+			HelpRequestPage.AjaxCreateHelpRequest( form, oParams );
 		}
 	},
 
-	AjaxCreateHelpRequest: function( $Form, oParams )
+	AjaxCreateHelpRequest: function( form, oParams )
 	{
+		var $Form = $J( form );
 		$J.ajax(
 			oParams
 		).done( function( data ) {
