@@ -1367,15 +1367,17 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	padding-top: 5px;
 }
 
-.collectionChildren .workshopItem.middle
-{
-	margin-left: 15px;
-	margin-right: 15px;
+.collectionChildren .collections {
+	display: flex;
+	flex-wrap: wrap;
 }
 
-.collectionChildren .workshopItem.left
-{
-	margin-right: 0px;
+.collectionChildren .workshopItem {
+	width: unset;
+	margin-left: 15px;
+}
+.collectionChildren .workshopItem:nth-child(3n-2) {
+	margin-left: 0px;
 }
 
 .collectionNoChildren
