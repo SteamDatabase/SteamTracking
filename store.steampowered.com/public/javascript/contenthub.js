@@ -496,7 +496,11 @@ function InitHubTabControls( rgPagingData, cc, tag, default_tab_override )
 		if ( oPagingData.total_count > 0 )
 		{
 			var oPagingControls = new CAjaxPagingControls( oPagingData, oPagingData[ 'url' ] );
-			oPagingControls.m_rgStaticParams = g_rgTabBaseParams;
+			oPagingControls.m_rgStaticParams = $J.extend(
+				{},
+				g_rgTabBaseParams,
+				oPagingData.params || {}
+			);
 
 			oPagingControls.SetResponseHandler( function ( response )
 			{
