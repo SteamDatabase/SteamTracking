@@ -90,7 +90,7 @@ do
 	echo "Prettifying $file"
 
 	prettier --write "$file"
-done <   <(find steamui/ -maxdepth 1 -name '*.js' -print0)
+done <   <(find steamui/ clientui/ -maxdepth 1 -name '*.js' -print0)
 
 #
 # CHANGE CRAPPY ENCODINGS TO UTF-8
