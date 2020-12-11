@@ -7,6 +7,9 @@ public:
     virtual unknown_ret CreateQueryUGCDetailsRequest(unsigned long long*, unsigned int) = 0;
     virtual unknown_ret SendQueryUGCRequest(unsigned long long) = 0;
     virtual unknown_ret GetQueryUGCResult(unsigned long long, unsigned int, SteamUGCDetails_t*) = 0;
+    virtual unknown_ret GetQueryUGCNumTags(unsigned long long, unsigned int) = 0;
+    virtual unknown_ret GetQueryUGCTag(unsigned long long, unsigned int, unsigned int, char*, unsigned int) = 0;
+    virtual unknown_ret GetQueryUGCTagDisplayName(unsigned long long, unsigned int, unsigned int, char*, unsigned int) = 0;
     virtual unknown_ret GetQueryUGCPreviewURL(unsigned long long, unsigned int, char*, unsigned int) = 0;
     virtual unknown_ret GetQueryUGCImageURL(unsigned long long, unsigned int, char*, unsigned int, unsigned int*, unsigned int*) = 0;
     virtual unknown_ret GetQueryUGCMetadata(unsigned long long, unsigned int, char*, unsigned int) = 0;

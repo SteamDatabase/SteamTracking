@@ -1394,7 +1394,7 @@
 	"SteamAwards_EventCallToAction": "Coming this December",
 	"SteamAwards_ExpiredEvent": "This event's Steam Awards has ended. Check back in during this year's Autumn and Winter sale for the annual Steam Awards!",
 	"SteamAwards_EventVotingDateTeaser": "December %1$s",
-	"SteamAwards_EventVoteForGamePrompt": "Click below to vote for %1$s for the category:",
+	"SteamAwards_EventVoteForGamePrompt": "Click below to vote for %1$s:",
 	"SteamAwards_EventNominateGamePrompt_Long": "Nominate %1$s for the category below as suggested by the developers of this game, or select a different category",
 	"SteamAwards_EventNominateGamePrompt_NoCategory": "Click here to nominate %1$s for a category on the Steam Awards page.",
 	"SteamAwards_Event_NominationsClosed": "Nominations have closed. Vote during the Winter Sale. Winners announced January 3rd.",

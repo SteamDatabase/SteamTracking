@@ -20063,7 +20063,7 @@ textarea {
     position: relative;
     padding: 16px;
     border-top-left-radius: 4px;
-    background-color: #1b1f05;
+    background-color: #1a1a06;
     height: 153px;
     font-size: 12px; }
     .nominationandvote_SteamAwardContainer_3n6v2 .nominationandvote_SteamAwardHeader_2jgrT .nominationandvote_SteamAwardHeaderImage__lRFQ {
@@ -20145,7 +20145,8 @@ textarea {
           text-transform: uppercase;
           letter-spacing: 1.8px;
           font-weight: 600;
-          padding: 5px 10px; }
+          padding: 5px 10px;
+          color: #f5db7e; }
         .nominationandvote_SteamAwardContainer_3n6v2 .nominationandvote_SteamAwardVoteWidget_khWz0 .nominationandvote_SteamAwardVoteButtonArea_1v9LH .nominationandvote_SteamAwardVoteButton_cTcgI:hover .nominationandvote_SteamAwardVoteButtonText_247y3 {
           border: 1px solid white; }
       .nominationandvote_SteamAwardContainer_3n6v2 .nominationandvote_SteamAwardVoteWidget_khWz0 .nominationandvote_SteamAwardVoteButtonArea_1v9LH .nominationandvote_SteamAwardVoteButtonSubmitted_1ouD4 {
