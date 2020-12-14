@@ -761,7 +761,7 @@
           { className: Object(M.a)(F.PlayedGame, r && F.Ignored) },
           P.a.createElement(
             "a",
-            { href: k.BASE_URL + "app/" + t },
+            { href: k.BASE_URL + "app/" + t + "?snr=" + k.LINK_PARAM },
             P.a.createElement("img", { className: F.Logo, src: o })
           ),
           P.a.createElement(
@@ -1231,8 +1231,8 @@
                 O = !0,
                 R = "",
                 N = "",
-                C = "",
                 L = "",
+                C = "",
                 I = "",
                 A = !1,
                 j = !0;
@@ -1253,8 +1253,8 @@
                     : (I = f.video_mp4),
                   (R = "-" + f.discount_pct + "%"),
                   (N = f.base_price),
-                  (C = O ? Object(x.f)("#FreeToPlay") : f.discount_price),
-                  (L = f.description)));
+                  (L = O ? Object(x.f)("#FreeToPlay") : f.discount_price),
+                  (C = f.description)));
               var D = I && 0 < I.length;
               return P.a.createElement(
                 U.a,
@@ -1368,7 +1368,7 @@
                               !b && F.Hidden
                             )
                           },
-                          L
+                          C
                         )
                       ),
                       y &&
@@ -1414,7 +1414,7 @@
                                     P.a.createElement(
                                       "div",
                                       { className: "discount_final_price" },
-                                      C
+                                      L
                                     )
                                   )
                                 ),
@@ -1428,7 +1428,7 @@
                                       F.Price
                                     )
                                   },
-                                  C
+                                  L
                                 ),
                               !O &&
                                 P.a.createElement(
@@ -1586,14 +1586,14 @@
                 });
                 if (0 < O.length) {
                   for (
-                    var R = 0, N = 0, C = (O = O.slice(0, 30));
-                    N < C.length;
+                    var R = 0, N = 0, L = (O = O.slice(0, 30));
+                    N < L.length;
                     N++
                   ) {
-                    (C[N].rank = R), R++;
+                    (L[N].rank = R), R++;
                   }
-                  for (var L = 0, I = O; L < I.length; L++) {
-                    var A = I[L];
+                  for (var C = 0, I = O; C < I.length; C++) {
+                    var A = I[C];
                     h.push(
                       P.a.createElement(D, {
                         key: A.appid,
@@ -1646,7 +1646,7 @@
             (e = Object(u.c)([n.a], e))
           );
         })(P.a.Component),
-        C = (function(t) {
+        L = (function(t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (e.state = { width: window.innerWidth }), e;
@@ -1730,7 +1730,7 @@
             (e = Object(u.c)([n.a], e))
           );
         })(P.a.Component);
-      t.default = C;
+      t.default = L;
     },
     Asqs: function(e, t, a) {
       e.exports = {

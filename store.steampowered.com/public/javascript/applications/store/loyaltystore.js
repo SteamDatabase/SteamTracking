@@ -3698,7 +3698,8 @@
                         (a = Object(p.a)(r)),
                         console.error(
                           "Error when calling ajaxredeemtokensforcartdiscount: " +
-                            a
+                            a.strErrorMsg,
+                          a
                         ),
                         [3, 4]
                       );

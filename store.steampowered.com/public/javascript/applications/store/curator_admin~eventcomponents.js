@@ -5,9 +5,9 @@
   {
     "2l+k": function(e, t, n) {
       "use strict";
-      var d = n("mrSG"),
+      var u = n("mrSG"),
         r = n("vDqi"),
-        u = n.n(r),
+        d = n.n(r),
         m = n("2vnA"),
         p = n("lkRc"),
         a = n("WBba"),
@@ -28,7 +28,7 @@
             );
           }
           return (
-            Object(d.d)(r, n),
+            Object(u.d)(r, n),
             (r.M = function() {
               return (
                 r.sm_m ||
@@ -134,7 +134,7 @@
             r
           );
         })(c),
-        h = (function(n) {
+        b = (function(n) {
           function r(e) {
             void 0 === e && (e = null);
             var t = n.call(this) || this;
@@ -145,7 +145,7 @@
             );
           }
           return (
-            Object(d.d)(r, n),
+            Object(u.d)(r, n),
             (r.M = function() {
               return (
                 r.sm_m ||
@@ -249,7 +249,7 @@
             r
           );
         })(c),
-        b = (function(n) {
+        h = (function(n) {
           function r(e) {
             void 0 === e && (e = null);
             var t = n.call(this) || this;
@@ -260,7 +260,7 @@
             );
           }
           return (
-            Object(d.d)(r, n),
+            Object(u.d)(r, n),
             (r.M = function() {
               return (
                 r.sm_m ||
@@ -322,7 +322,7 @@
             );
           }
           return (
-            Object(d.d)(r, n),
+            Object(u.d)(r, n),
             (r.M = function() {
               return (
                 r.sm_m ||
@@ -346,7 +346,7 @@
                         br: o.d.readString,
                         bw: o.h.writeString
                       },
-                      post: { n: 6, c: h },
+                      post: { n: 6, c: b },
                       valid_post: { n: 7, br: o.d.readBool, bw: o.h.writeBool },
                       post_error_msg: {
                         n: 8,
@@ -402,7 +402,7 @@
             );
           }
           return (
-            Object(d.d)(r, n),
+            Object(u.d)(r, n),
             (r.M = function() {
               return (
                 r.sm_m ||
@@ -464,7 +464,7 @@
             );
           }
           return (
-            Object(d.d)(r, n),
+            Object(u.d)(r, n),
             (r.M = function() {
               return (
                 r.sm_m ||
@@ -531,7 +531,7 @@
             );
           }
           return (
-            Object(d.d)(r, n),
+            Object(u.d)(r, n),
             (r.M = function() {
               return (
                 r.sm_m ||
@@ -586,14 +586,14 @@
             );
           }
           return (
-            Object(d.d)(r, n),
+            Object(u.d)(r, n),
             (r.M = function() {
               return (
                 r.sm_m ||
                   (r.sm_m = {
                     proto: r,
                     fields: {
-                      post: { n: 1, c: h },
+                      post: { n: 1, c: b },
                       draft: { n: 2, br: o.d.readBool, bw: o.h.writeBool }
                     }
                   }),
@@ -644,7 +644,7 @@
             );
           }
           return (
-            Object(d.d)(r, n),
+            Object(u.d)(r, n),
             (r.M = function() {
               return (
                 r.sm_m ||
@@ -710,7 +710,7 @@
             );
           }
           return (
-            Object(d.d)(r, n),
+            Object(u.d)(r, n),
             (r.M = function() {
               return (
                 r.sm_m ||
@@ -783,7 +783,7 @@
             );
           }
           return (
-            Object(d.d)(r, n),
+            Object(u.d)(r, n),
             (r.M = function() {
               return (
                 r.sm_m ||
@@ -860,7 +860,7 @@
           );
         })(c);
       ((_ = l = l || {}).ConvertHTMLToBBCode = function(e, t) {
-        return e.SendMsg("News.ConvertHTMLToBBCode#1", t, b, {
+        return e.SendMsg("News.ConvertHTMLToBBCode#1", t, h, {
           bConstMethod: !0,
           ePrivilege: 0,
           eWebAPIKeyRequirement: 1
@@ -947,9 +947,9 @@
               return Boolean(this.m_strRSSGID);
             }),
             (e.prototype.PreviewPartnerEventsFromRSSFeed = function(r) {
-              return Object(d.b)(this, void 0, void 0, function() {
+              return Object(u.b)(this, void 0, void 0, function() {
                 var t, n;
-                return Object(d.e)(this, function(e) {
+                return Object(u.e)(this, function(e) {
                   switch (e.label) {
                     case 0:
                       return this.BIsLoggedIn()
@@ -984,11 +984,11 @@
             (e.prototype.FetchPublishedEvents = function(a) {
               return (
                 void 0 === a && (a = 100),
-                Object(d.b)(this, void 0, void 0, function() {
+                Object(u.b)(this, void 0, void 0, function() {
                   var t,
                     n,
                     r = this;
-                  return Object(d.e)(this, function(e) {
+                  return Object(u.e)(this, function(e) {
                     switch (e.label) {
                       case 0:
                         return this.BIsLoggedIn()
@@ -1056,12 +1056,12 @@
             (e.prototype.CreateOrUpdateRSSNewFeed = function(i, o) {
               return (
                 void 0 === o && (o = 0),
-                Object(d.b)(this, void 0, void 0, function() {
+                Object(u.b)(this, void 0, void 0, function() {
                   var t,
                     n,
                     r,
                     a = this;
-                  return Object(d.e)(this, function(e) {
+                  return Object(u.e)(this, function(e) {
                     switch (e.label) {
                       case 0:
                         return (
@@ -1078,7 +1078,7 @@
                             "curator/" +
                             this.m_clanAccountID +
                             "/admin/ajaxmanagerssfeed"),
-                          [4, u.a.post(n, t, { withCredentials: !0 })]
+                          [4, d.a.post(n, t, { withCredentials: !0 })]
                         );
                       case 1:
                         return (
@@ -1096,8 +1096,8 @@
               );
             }),
             (e.prototype.UpdateAutomation = function(t) {
-              return Object(d.b)(this, void 0, void 0, function() {
-                return Object(d.e)(this, function(e) {
+              return Object(u.b)(this, void 0, void 0, function() {
+                return Object(u.e)(this, function(e) {
                   return [
                     2,
                     this.CreateOrUpdateRSSNewFeed(
@@ -1109,9 +1109,9 @@
               });
             }),
             (e.prototype.CheckForNewUpdate = function() {
-              return Object(d.b)(this, void 0, void 0, function() {
+              return Object(u.b)(this, void 0, void 0, function() {
                 var t, n;
-                return Object(d.e)(this, function(e) {
+                return Object(u.e)(this, function(e) {
                   switch (e.label) {
                     case 0:
                       return this.m_strRSSGID
@@ -1125,7 +1125,7 @@
                             "curator/" +
                             this.m_clanAccountID +
                             "/admin/ajaxcheckfornews"),
-                          [4, u.a.post(n, t, { withCredentials: !0 })])
+                          [4, d.a.post(n, t, { withCredentials: !0 })])
                         : [3, 2];
                     case 1:
                       e.sent(), (e.label = 2);
@@ -1136,17 +1136,17 @@
               });
             }),
             (e.prototype.CreatePost = function(i, o) {
-              return Object(d.b)(this, void 0, void 0, function() {
+              return Object(u.b)(this, void 0, void 0, function() {
                 var t,
                   n,
                   r,
                   a = this;
-                return Object(d.e)(this, function(e) {
+                return Object(u.e)(this, function(e) {
                   switch (e.label) {
                     case 0:
                       return this.BIsLoggedIn()
                         ? this.m_strRSSGID
-                          ? ((t = new h()).set_gid(i.post.gid),
+                          ? ((t = new b()).set_gid(i.post.gid),
                             t.set_news_feed_gid(this.m_strRSSGID),
                             t.set_title(i.post.title),
                             t.set_url(i.post.url),
@@ -1210,13 +1210,13 @@
                 });
               });
             }),
-            Object(d.c)([m.C], e.prototype, "m_strRSSFeedURL", void 0),
-            Object(d.c)([m.C], e.prototype, "m_strRSSGID", void 0),
-            Object(d.c)([m.C], e.prototype, "m_rtimeRSSLastChecked", void 0),
-            Object(d.c)([m.C], e.prototype, "m_nPollIntervalSeconds", void 0),
-            Object(d.c)([m.C], e.prototype, "m_eRSSFeedLanguage", void 0),
-            Object(d.c)([m.C], e.prototype, "m_eCuratorLanguage", void 0),
-            Object(d.c)([m.C], e.prototype, "m_mapURLToPosted", void 0),
+            Object(u.c)([m.C], e.prototype, "m_strRSSFeedURL", void 0),
+            Object(u.c)([m.C], e.prototype, "m_strRSSGID", void 0),
+            Object(u.c)([m.C], e.prototype, "m_rtimeRSSLastChecked", void 0),
+            Object(u.c)([m.C], e.prototype, "m_nPollIntervalSeconds", void 0),
+            Object(u.c)([m.C], e.prototype, "m_eRSSFeedLanguage", void 0),
+            Object(u.c)([m.C], e.prototype, "m_eCuratorLanguage", void 0),
+            Object(u.c)([m.C], e.prototype, "m_mapURLToPosted", void 0),
             e
           );
         })(),
@@ -1292,9 +1292,9 @@
               return this.m_mapClanAccountToAdmin.get(e);
             }),
             (e.prototype.QueueCuratorAdminInfoLoad = function(n) {
-              return Object(d.b)(this, void 0, void 0, function() {
+              return Object(u.b)(this, void 0, void 0, function() {
                 var t = this;
-                return Object(d.e)(this, function(e) {
+                return Object(u.e)(this, function(e) {
                   return n
                     ? this.m_mapClanAccountToAdmin.has(n)
                       ? [2, Promise.resolve()]
@@ -1318,9 +1318,9 @@
               });
             }),
             (e.prototype.FlushPendingClanInfo = function() {
-              return Object(d.b)(this, void 0, void 0, function() {
+              return Object(u.b)(this, void 0, void 0, function() {
                 var t, n;
-                return Object(d.e)(this, function(e) {
+                return Object(u.e)(this, function(e) {
                   switch (e.label) {
                     case 0:
                       return (
@@ -1355,11 +1355,11 @@
               );
             }),
             (e.prototype.LoadBatchedClanRSSAdminInfo = function(l) {
-              return Object(d.b)(this, void 0, void 0, function() {
+              return Object(u.b)(this, void 0, void 0, function() {
                 var s,
                   t,
                   c = this;
-                return Object(d.e)(this, function(e) {
+                return Object(u.e)(this, function(e) {
                   switch (e.label) {
                     case 0:
                       this.m_cClanInfoRequestsInFlight++,
@@ -1368,7 +1368,7 @@
                         })),
                         (t = function() {
                           var t, n, r, a, i, o;
-                          return Object(d.e)(this, function(e) {
+                          return Object(u.e)(this, function(e) {
                             switch (e.label) {
                               case 0:
                                 (t = Math.min(50, s.length)),
@@ -1384,7 +1384,7 @@
                                   (r = { clanids: l }),
                                   [
                                     4,
-                                    u.a.get(n, {
+                                    d.a.get(n, {
                                       params: r,
                                       withCredentials: !0
                                     })
@@ -1450,13 +1450,13 @@
                 });
               });
             }),
-            Object(d.c)(
+            Object(u.c)(
               [m.C.shallow],
               e.prototype,
               "m_mapClanAccountToAdmin",
               void 0
             ),
-            Object(d.c)(
+            Object(u.c)(
               [m.C.shallow],
               e.prototype,
               "m_mapClanToEventRSSStats",
@@ -1494,21 +1494,6 @@
         LanguageSet: "managerss_LanguageSet_2zsMr"
       };
     },
-    qP7j: function(e, t, n) {
-      e.exports = {
-        ErrorStyles: "partnereventdialog_ErrorStyles_2Sg7W",
-        ErrorStylesWithIcon: "partnereventdialog_ErrorStylesWithIcon_Lc2PK",
-        ErrorIconLayout: "partnereventdialog_ErrorIconLayout_42__6",
-        ErrorStylesBackground: "partnereventdialog_ErrorStylesBackground_3fVv6",
-        WarningStyles: "partnereventdialog_WarningStyles_3gxgE",
-        WarningStylesWithIcon: "partnereventdialog_WarningStylesWithIcon_1S_uS",
-        WarningIconLayout: "partnereventdialog_WarningIconLayout_2jM80",
-        WarningStylesBackground:
-          "partnereventdialog_WarningStylesBackground_UYrHs",
-        Padding: "partnereventdialog_Padding_36hma",
-        NotTooWideModal: "partnereventdialog_NotTooWideModal_UfQcb"
-      };
-    },
     "r+ba": function(e, t, n) {
       e.exports = {
         Container: "partnereventwebrowembed_Container_2Jd3M",
@@ -1521,15 +1506,15 @@
     wjMc: function(e, t, n) {
       "use strict";
       n.d(t, "a", function() {
-        return U;
+        return G;
       });
       var c = n("mrSG"),
         r = n("vDqi"),
         l = n.n(r),
         a = n("2l+k"),
-        d = n("lkRc"),
+        u = n("lkRc"),
         i = n("kLLr"),
-        u = (function() {
+        d = (function() {
           function e() {
             this.m_mapClanToRecommendation = new Map();
           }
@@ -1578,7 +1563,7 @@
                       }),
                       0 < n.length)
                         ? ((r =
-                            d.c.STORE_BASE_URL +
+                            u.c.STORE_BASE_URL +
                             "curator/" +
                             o.GetAccountID() +
                             "/admin/ajaxgetrecbyapps"),
@@ -1587,8 +1572,8 @@
                             l.a.get(r, {
                               params: {
                                 appids: n,
-                                cc: d.c.COUNTRY || "US",
-                                l: d.c.LANGUAGE
+                                cc: u.c.COUNTRY || "US",
+                                l: u.c.LANGUAGE
                               }
                             })
                           ])
@@ -1616,8 +1601,8 @@
         p = n("mgoM"),
         _ = n("3+zv"),
         f = n("6oCP"),
-        h = n("Mgs7"),
-        b = n("T27q"),
+        b = n("Mgs7"),
+        h = n("T27q"),
         v = n("fpVW"),
         S = n.n(v),
         g = n("r+ba"),
@@ -1633,9 +1618,10 @@
         M = n("A2AY"),
         F = n("Kw0F"),
         D = n("bS9Q"),
-        L = n("qP7j"),
-        A = n.n(L),
-        I = (function(t) {
+        A = n("qP7j"),
+        L = n.n(A),
+        I = n("IzPI"),
+        U = (function(t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (
@@ -1657,7 +1643,7 @@
             (e.prototype.OnCreateOrSaveFeed = function(e) {
               e.preventDefault(),
                 Object(R.d)(
-                  m.a.createElement(N, {
+                  m.a.createElement(z, {
                     strRSSUrl: this.state.strRssURL,
                     admin: this.m_Admin
                   }),
@@ -1717,7 +1703,7 @@
                       y.a,
                       {
                         href:
-                          d.c.COMMUNITY_BASE_URL +
+                          u.c.COMMUNITY_BASE_URL +
                           "gid/" +
                           this.m_Admin.GetClanSteamID().ConvertTo64BitString() +
                           "/partnerevents/",
@@ -1743,7 +1729,7 @@
                       "a",
                       {
                         href:
-                          d.c.COMMUNITY_BASE_URL +
+                          u.c.COMMUNITY_BASE_URL +
                           "gid/" +
                           this.m_Admin.GetClanSteamID().ConvertTo64BitString() +
                           "/edit ",
@@ -1762,7 +1748,7 @@
                       {
                         className: Object(E.a)(
                           M.LanguageRow,
-                          A.a.WarningIconLayout
+                          L.a.WarningIconLayout
                         )
                       },
                       m.a.createElement(
@@ -1786,7 +1772,7 @@
                         M.UrlSettingCtn
                       )
                     },
-                    m.a.createElement(h.k, {
+                    m.a.createElement(b.k, {
                       className: M.RssInpu,
                       type: "text",
                       name: "link_url",
@@ -1821,9 +1807,9 @@
                         Object(B.f)("#Button_Revert")
                       )
                   ),
-                  m.a.createElement(G, { admin: n }),
+                  m.a.createElement(T, { admin: n }),
                   m.a.createElement("br", null),
-                  m.a.createElement(U, {
+                  m.a.createElement(G, {
                     strRssURL: this.state.strRssURL,
                     admin: n
                   })
@@ -1836,7 +1822,7 @@
             (e = Object(c.c)([o.a], e))
           );
         })(m.a.Component),
-        U = ((t.b = I),
+        G = ((t.b = U),
         (function(t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
@@ -1885,7 +1871,7 @@
                     })
                     .forEach(function(e) {
                       n.push(
-                        m.a.createElement(T, {
+                        m.a.createElement(N, {
                           newsData: e,
                           admin: o,
                           key: "id: " + e.unique_id,
@@ -1986,7 +1972,7 @@
                                             ? ((t = a.GetClanSteamID()),
                                               [
                                                 4,
-                                                u
+                                                d
                                                   .Get()
                                                   .LoadAppRecommendation(t, r)
                                               ])
@@ -2035,9 +2021,9 @@
                     "div",
                     { className: M.PreviewListBtn },
                     m.a.createElement(
-                      h.d,
+                      b.d,
                       {
-                        disabled: !h.k.validateUrl(this.props.strRssURL),
+                        disabled: !b.k.validateUrl(this.props.strRssURL),
                         onClick: this.OnLoadPreview
                       },
                       Object(B.f)("#CuratorAdmin_RSSFeed_preview")
@@ -2079,7 +2065,7 @@
                         y.a,
                         {
                           href:
-                            d.c.COMMUNITY_BASE_URL +
+                            u.c.COMMUNITY_BASE_URL +
                             "gid/" +
                             t.GetClanSteamID().ConvertTo64BitString() +
                             "/partnerevents/",
@@ -2096,7 +2082,7 @@
             (e = Object(c.c)([o.a], e))
           );
         })(m.a.Component)),
-        G = (function(t) {
+        T = (function(t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (e.state = {}), e;
@@ -2107,7 +2093,7 @@
               e
                 ? (this.setState({ strErrorMessage: void 0 }),
                   Object(R.d)(
-                    m.a.createElement(N, {
+                    m.a.createElement(z, {
                       strRSSUrl: this.props.admin.GetRSSUrl(),
                       admin: this.props.admin,
                       bActivatePooling: !0
@@ -2190,7 +2176,7 @@
                         { className: M.Error },
                         this.state.strErrorMessage
                       ),
-                    m.a.createElement(h.o, {
+                    m.a.createElement(b.o, {
                       onChange: this.OnToggleChannelAutomation,
                       label: Object(B.f)("#RSSManager_Status_Automation_Desc"),
                       checked: this.props.admin.BIsAutomationEnabled(),
@@ -2227,7 +2213,7 @@
             (e = Object(c.c)([o.a], e))
           );
         })(m.a.Component),
-        T = (function(t) {
+        N = (function(t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (
@@ -2345,7 +2331,7 @@
                 n = t.newsData,
                 r = t.fnGetRSSUrl;
               Object(R.d)(
-                m.a.createElement(N, {
+                m.a.createElement(z, {
                   newsData: n,
                   admin: this.props.admin,
                   strRSSUrl: r(),
@@ -2359,7 +2345,7 @@
                 n = t.newsData,
                 r = t.fnGetRSSUrl;
               Object(R.d)(
-                m.a.createElement(N, {
+                m.a.createElement(z, {
                   newsData: n,
                   strRSSUrl: r(),
                   admin: this.props.admin,
@@ -2418,7 +2404,7 @@
                 l =
                   0 !== e.post.recommendation_state &&
                   c &&
-                  u.Get().BHasReviewForApp(o, c);
+                  d.Get().BHasReviewForApp(o, c);
               return m.a.createElement(
                 "div",
                 {
@@ -2473,7 +2459,7 @@
                 Boolean(!e.valid_post && e.post_error_msg) &&
                   m.a.createElement(
                     "div",
-                    { className: A.a.ErrorStylesBackground },
+                    { className: L.a.ErrorStylesBackground },
                     Object(B.f)("#Error_Generic_Label"),
                     " ",
                     Object(B.f)(e.post_error_msg)
@@ -2504,7 +2490,7 @@
                           {
                             className: Object(E.a)(S.a.Button, M.PreviewBtn),
                             href:
-                              d.c.COMMUNITY_BASE_URL +
+                              u.c.COMMUNITY_BASE_URL +
                               "gid/" +
                               i.GetClanSteamID().ConvertTo64BitString() +
                               "/partnerevents/edit/" +
@@ -2525,12 +2511,13 @@
                             "a",
                             {
                               className: Object(E.a)(S.a.Button, M.PreviewBtn),
-                              href:
-                                d.c.STORE_BASE_URL +
-                                "app/" +
-                                e.post.appids[0] +
-                                "/?curator_clanid=" +
-                                o.GetAccountID()
+                              href: Object(I.e)(
+                                u.c.STORE_BASE_URL +
+                                  "app/" +
+                                  e.post.appids[0] +
+                                  "/?curator_clanid=" +
+                                  o.GetAccountID()
+                              )
                             },
                             Object(B.f)("#RSSManager_SeeReview")
                           )
@@ -2568,7 +2555,7 @@
                       m.a.createElement(
                         "div",
                         null,
-                        m.a.createElement(b.b, {
+                        m.a.createElement(h.b, {
                           event: this.state.eventModelForPreviewNow,
                           fnClose: this.HideModalEvent
                         })
@@ -2593,7 +2580,7 @@
             (e = Object(c.c)([o.a], e))
           );
         })(m.a.Component),
-        N = (function(t) {
+        z = (function(t) {
           function n() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (
@@ -2732,12 +2719,12 @@
                   return m.a.createElement(
                     w.d,
                     null,
-                    m.a.createElement(h.j, null, " ", this.GetStrTitle(), " "),
+                    m.a.createElement(b.j, null, " ", this.GetStrTitle(), " "),
                     m.a.createElement(
-                      h.b,
+                      b.b,
                       null,
                       m.a.createElement(
-                        h.c,
+                        b.c,
                         null,
                         this.props.newsData &&
                           m.a.createElement(
@@ -2764,7 +2751,7 @@
                         m.a.createElement(
                           "div",
                           null,
-                          m.a.createElement(h.e, {
+                          m.a.createElement(b.e, {
                             label: Object(B.f)(
                               "#RSSManager_CreateFeed_Permissions_v1"
                             ),
@@ -2775,7 +2762,7 @@
                         m.a.createElement(
                           "div",
                           null,
-                          m.a.createElement(h.e, {
+                          m.a.createElement(b.e, {
                             label: Object(B.f)(
                               "#RSSManager_CreateFeed_Conduct_v1"
                             ),
@@ -2784,15 +2771,15 @@
                           }),
                           m.a.createElement(
                             y.a,
-                            { href: d.c.STORE_BASE_URL + "online_conduct/" },
+                            { href: u.c.STORE_BASE_URL + "online_conduct/" },
                             Object(B.f)("#RSSManager_CreateFeed_Conduct_Link")
                           )
                         )
                       ),
                       m.a.createElement(
-                        h.i,
+                        b.i,
                         null,
-                        m.a.createElement(h.m, {
+                        m.a.createElement(b.m, {
                           bOKDisabled: !Boolean(
                             this.state.bPermissions && this.state.bConduct
                           ),
@@ -2838,12 +2825,12 @@
                   return m.a.createElement(
                     w.d,
                     null,
-                    m.a.createElement(h.j, null, " ", this.GetStrTitle(), " "),
+                    m.a.createElement(b.j, null, " ", this.GetStrTitle(), " "),
                     m.a.createElement(
-                      h.b,
+                      b.b,
                       null,
                       m.a.createElement(
-                        h.c,
+                        b.c,
                         null,
                         m.a.createElement(
                           "div",
@@ -2862,7 +2849,7 @@
                           m.a.createElement(
                             "div",
                             null,
-                            m.a.createElement(h.e, {
+                            m.a.createElement(b.e, {
                               label: Object(B.f)(
                                 "#RSSManager_PostEvent_CreatePost_Draft"
                               ),
@@ -2873,9 +2860,9 @@
                         )
                       ),
                       m.a.createElement(
-                        h.i,
+                        b.i,
                         null,
-                        m.a.createElement(h.m, {
+                        m.a.createElement(b.m, {
                           onOK: this.OnCreatePost,
                           onCancel: this.props.closeModal
                         })
@@ -2886,12 +2873,12 @@
                   return m.a.createElement(
                     w.d,
                     null,
-                    m.a.createElement(h.j, null, " ", this.GetStrTitle(), " "),
+                    m.a.createElement(b.j, null, " ", this.GetStrTitle(), " "),
                     m.a.createElement(
-                      h.b,
+                      b.b,
                       null,
                       m.a.createElement(
-                        h.c,
+                        b.c,
                         null,
                         m.a.createElement(
                           "div",
@@ -2911,9 +2898,9 @@
                         )
                       ),
                       m.a.createElement(
-                        h.i,
+                        b.i,
                         null,
-                        m.a.createElement(h.m, {
+                        m.a.createElement(b.m, {
                           onOK: this.OnCreatePost,
                           onCancel: this.props.closeModal
                         })
@@ -2938,7 +2925,7 @@
                         "a",
                         {
                           href:
-                            d.c.COMMUNITY_BASE_URL +
+                            u.c.COMMUNITY_BASE_URL +
                             "gid/" +
                             this.props.admin
                               .GetClanSteamID()
