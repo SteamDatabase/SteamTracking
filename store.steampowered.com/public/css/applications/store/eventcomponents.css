@@ -1170,6 +1170,7 @@ div.curatorfeedbrowse_CuratorHoverToolTip_rSTyU {
   .eventcalendartile_TileContainer_1E3An .eventcalendartile_CoverImageCtn_3HF9t .eventcalendartile_GameShortDescription_3Se1T {
     display: none; }
   .eventcalendartile_TileContainer_1E3An .eventcalendartile_LiveText_RNDf0 {
+    height: fit-content;
     color: #a4d007;
     display: flex;
     align-items: center;
