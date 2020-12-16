@@ -61,6 +61,18 @@ function Forum_InitTooltips()
 
 }
 
+function Forum_InitPostAndCommentControls( container )
+{
+	if ( container )
+	{
+		$J( container ).find('.forum_comment_action_trigger').v_tooltip({'location':'bottom', 'destroyWhenDone': false, 'tooltipClass': 'forum_comment_action_menu', 'offsetY':0, 'offsetX': 1, 'horizontalSnap': 4, /*'tooltipParent': '#global_header .supernav_container',*/ 'correctForScreenSize': true});
+	}
+	else
+	{
+		$J('.forum_comment_action_trigger').v_tooltip({'location':'bottom', 'destroyWhenDone': false, 'tooltipClass': 'forum_comment_action_menu', 'offsetY':0, 'offsetX': 1, 'horizontalSnap': 4, /*'tooltipParent': '#global_header .supernav_container',*/ 'correctForScreenSize': true});
+	}
+}
+
 var g_rgForums = {};
 function InitializeForum( name, rgForumData, url )
 {
@@ -762,6 +774,64 @@ function Forum_ReplyToPost( gidTopic, gidComment )
 	ScrollToIfNotInView( elTextArea, 80, 40 );
 }
 
+function Forum_OnCommunityAwardGranted( containerNamePrefix, id, award )
+{
+	var rewardsCtn = $J( "#" + containerNamePrefix + id );
+	if ( rewardsCtn.length != 0 )
+	{
+		var bFoundExisting = false;
+		var rewards = rewardsCtn.find( ".community_award" );
+		for ( var j = 0; j < rewards.length; ++j )
+		{
+			var reward = $J( rewards[j] );
+			if ( reward.data( "reaction" ) == award )
+			{
+				bFoundExisting = true;
+
+				var count = parseInt( reward.data( "reactioncount" ) );
+				var countElem = reward.find( ".community_award_count" );
+				countElem.text( count + 1 );
+				countElem.removeClass( "hidden" );
+
+				reward.data( "reactioncount", count + 1 );
+				rewardsCtn.prepend( reward );
+				break;
+			}
+		}
+
+		if ( !bFoundExisting )
+		{
+			var reward = $J( "<span>", { class: "community_award" } );
+			var img = $J( "<img>", { class: "community_award_icon tooltip", src: "https://store.cloudflare.steamstatic.com/public/images/loyalty/reactions/still/" + award + ".png" } );
+			reward.append( img );
+
+			var countElem = $J( "<span>", { class: "community_award_count hidden", text: "1" } );
+			reward.append( countElem );
+			reward.data( "reaction", award );
+			reward.data( "reactioncount", 1 );
+			rewardsCtn.prepend( reward );
+		}
+	}
+}
+
+function Forum_ShowAwardDialogForTopic( gidTopic, currentSelection )
+{
+	function callbackFunc( id, award )
+	{
+		Forum_OnCommunityAwardGranted( "community_awards_forum_topic_", id, award );
+	};
+	fnLoyalty_ShowAwardModal( gidTopic, 4, callbackFunc, undefined, currentSelection );
+}
+
+function Forum_ShowAwardDialogForComment( gidComment, currentSelection )
+{
+	function callbackFunc( id, award )
+	{
+		Forum_OnCommunityAwardGranted( "community_awards_comment_", id, award );
+	};
+	fnLoyalty_ShowAwardModal( gidComment, 5, callbackFunc, undefined, currentSelection );
+}
+
 var g_elAuthorMenu = null;
 function Forum_AuthorMenu( elLink, accountIDTarget, gidComment )
 {
@@ -1196,6 +1266,7 @@ CCommentThreadForumTopic = Class.create( CCommentThread, {
 		elContainer.style.height = elContainer.getHeight() + 'px';
 
 		elPosts.update( strNewHTML );
+		Forum_InitPostAndCommentControls( elPosts );
 
 		if ( eRenderReason == CCommentThread.RENDER_GOTOPAGE || eRenderReason == CCommentThread.RENDER_NEWPOST )
 		{
@@ -2182,13 +2253,6 @@ function IssueCommunityWarning( steamid )
 }
 
 $J( function($) {
-	$(document ).on( 'click.ForumCommentActions', 'div.forum_comment_action_trigger', function(e) {
-		var $Comment = $( e.currentTarget ).parents( '.forum_op, .commentthread_comment');
-		$Comment.toggleClass( 'forum_comment_actions_expanded' );
-
-		$(document ).one( 'click', function(e) {
-			$Comment.toggleClass( 'forum_comment_actions_expanded');
-		});
-	});
+	Forum_InitPostAndCommentControls();
 });
 

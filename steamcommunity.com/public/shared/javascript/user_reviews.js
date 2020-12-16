@@ -3,7 +3,7 @@ function UserReview_Award( bLoggedIn, loginURL, recommendationID, callbackFunc, 
 {
 	if ( bLoggedIn )
 	{
-		fnLoyalty_ShowAwardModal( recommendationID, callbackFunc, undefined, selectedAward );
+		fnLoyalty_ShowAwardModal( recommendationID, 1, callbackFunc, undefined, selectedAward );
 	}
 	else
 	{

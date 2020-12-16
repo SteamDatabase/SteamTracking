@@ -1686,6 +1686,7 @@ var CreateTicket = {
                 	{
                 		$J( '#contact_form' ).html( data.html );
                 		$J( '#contact_form' ).fadeIn();
+                		HelpRequestPage.InitHelpRequestAttachmentUpload( $J('#contact_form'));
                 	} );
 			}
 		}

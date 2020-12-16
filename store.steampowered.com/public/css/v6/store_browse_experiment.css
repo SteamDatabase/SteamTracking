@@ -481,7 +481,7 @@ a.store_header_btn_content:hover {
 }
 
 div#store_search {
-	float: right;
+    float: none;
 	padding: 3px 4px 2px;
 	height: 30px;
 }
@@ -502,7 +502,7 @@ a#store_search_link img {
 	background-image: url( '/public/images/v6/store_header_search.png?v=1' );
 
 	color: #a6a5a2;
-	width: 210px;
+	width: auto;
 	height: 30px;
 
 	position: relative;
@@ -511,11 +511,6 @@ a#store_search_link img {
 }
 .searchbox:hover {
     background-image: url( '/public/images/v6/store_header_search_hover.png' );
-}
-
-.searchbox.short {
-
-	width:  210px;
 }
 
 .searchbox input {
@@ -555,12 +550,25 @@ a#store_search_link img {
 
 .store_nav {
 	height: 35px;
+    display: flex;
 }
 
 .store_nav .tab {
-	float: left;
 	cursor: pointer;
 	border-right: none;
+    white-space: nowrap;
+}
+
+.store_nav .search_flex_spacer
+{
+    flex: 1;
+    width: 20px;
+}
+
+.store_nav .search_area {
+    flex-grow: 1;
+    flex-shrink: 0;
+    max-width: 210px;
 }
 
 
@@ -3409,6 +3417,7 @@ a.pulldown_mobile {
 	html.responsive #store_nav_area .store_nav {
 		height: auto;
 		margin: 0;
+        display: block;
 	}
 
 	html.responsive #store_nav_area .store_nav .tab {
@@ -3446,8 +3455,9 @@ a.pulldown_mobile {
 		line-height: 28px;
 	}
 
-	html.responsive .search_area {
+	html.responsive .store_nav .search_area {
 		position: relative;
+        max-width: none;
 	}
 
 	html.responsive .search_area .search_suggest {
@@ -4312,6 +4322,7 @@ body.v6 .store_nav .popup_block_new .popup_body {
 	transition-property: border;
 	transition-duration: 0.15s;
 	transition-timing-function: ease-in-out;
+    white-space: normal;
 }
 
 .store_nav .popup_menu .popup_menu_item:hover,

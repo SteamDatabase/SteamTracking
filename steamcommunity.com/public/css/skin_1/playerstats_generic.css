@@ -196,8 +196,8 @@
 }
 
 .achieveUnlockTime {
-	float: right;
-	text-align: right;
+	margin-left: auto;
+	padding-right: 6px;
 	color: #898989;
 	font-size: 12px;
 }

@@ -313,7 +313,7 @@ function PublishedFileAward( id, fileType, currentSelection )
 		}
 	};
 
-	fnLoyalty_ShowAwardModal( id, callbackFunc, fileType, currentSelection );
+	fnLoyalty_ShowAwardModal( id, 2, callbackFunc, fileType, currentSelection );
 }
 
 function ToggleItemState(item_id, app_id, buttonType, activate, deactivate) {

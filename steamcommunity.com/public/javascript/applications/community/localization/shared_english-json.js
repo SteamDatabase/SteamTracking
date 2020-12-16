@@ -386,10 +386,12 @@
         EventDisplay_RSSFeed: "RSS Feed",
         EventDisplay_RSSFeed_ExtraShort: "RSS",
         EventDisplay_ViewCommunityPage: "View Community Page",
+        EventDisplay_ViewForum: "View Discussion Forum",
         EventDisplay_ViewRssFeed: "View RSS Feed",
         EventDisplay_ViewInLibrary_ExtraShort: "Library",
         EventDisplay_ViewStorePage_ExtraShort: "Store",
         EventDisplay_ViewCommunityPage_ExtraShort: "Community",
+        EventDisplay_ViewForum_ExtraShort: "Forum",
         EventDisplay_ViewRssFeed_ExtraShort: "RSS",
         EventDisplay_Admin: "Admin Dashboard",
         EventDisplay_Admin_ExtraShort: "Admin",
@@ -657,6 +659,9 @@
         Time_Tomorrow: "Tomorrow",
         Time_Yesterday: "Yesterday",
         Time_Recent: "Recent",
+        Time_Today_At: "Today at %1$s",
+        Time_Yesterday_At: "Yesterday at %1$s",
+        Time_Past_At: "%1$s at %2$s",
         ContextMenu_Copy: "Copy",
         ContextMenu_Cut: "Cut",
         ContextMenu_Paste: "Paste",
@@ -1531,8 +1536,7 @@
         SteamAwards_ExpiredEvent:
           "This event's Steam Awards has ended. Check back in during this year's Autumn and Winter sale for the annual Steam Awards!",
         SteamAwards_EventVotingDateTeaser: "December %1$s",
-        SteamAwards_EventVoteForGamePrompt:
-          "Click below to vote for %1$s for the category:",
+        SteamAwards_EventVoteForGamePrompt: "Click below to vote for %1$s:",
         SteamAwards_EventNominateGamePrompt_Long:
           "Nominate %1$s for the category below as suggested by the developers of this game, or select a different category",
         SteamAwards_EventNominateGamePrompt_NoCategory:
@@ -1674,6 +1678,10 @@
           "Use your Steam Points to grant this item a special award and grant the author bonus points!",
         GrantAwardDescription_Profile:
           "Use your Steam Points to grant this profile a special award and grant the user bonus points!",
+        GrantAwardDescription_ForumTopic:
+          "Use your Steam Points to grant this discussion post a special award and grant the author bonus points!",
+        GrantAwardDescription_Comment:
+          "Use your Steam Points to grant this comment a special award and grant the author bonus points!",
         GrantAwardNowButton: "Give Award",
         GrantAward_PointsLink: "What are Steam Points?",
         GrantAward_PromptTooltip: "Please select an award",

@@ -2368,9 +2368,6 @@ CAjaxPagingControls.prototype.GoToPage = function( iPage, bForce )
 			if ( typeof sParamName != "string" )
 				continue;
 
-			if ( typeof this.m_rgStaticParams[sParamName] != "string" )
-				continue;
-
 			params[sParamName] = this.m_rgStaticParams[sParamName];
 		}
 	}

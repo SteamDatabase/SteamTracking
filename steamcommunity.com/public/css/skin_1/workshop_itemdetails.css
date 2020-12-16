@@ -1372,11 +1372,11 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	flex-wrap: wrap;
 }
 
-.collectionChildren .workshopItem {
+.collectionChildren .collections .workshopItem {
 	width: unset;
 	margin-left: 15px;
 }
-.collectionChildren .workshopItem:nth-child(3n-2) {
+.collectionChildren .collections .workshopItem:nth-child(3n-2) {
 	margin-left: 0px;
 }
 
@@ -3409,6 +3409,10 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 
 	html.responsive .collectionHighlightVideo {
 		display: none;
+	}
+
+	html.responsive .collectionChildren .collections .workshopItem {
+		margin-left: 0px;
 	}
 }
 

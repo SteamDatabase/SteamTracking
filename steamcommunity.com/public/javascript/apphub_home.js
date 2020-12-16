@@ -411,7 +411,7 @@ function PublishedFileAward( id, fileType, currentSelection )
 	{
 	};
 
-	fnLoyalty_ShowAwardModal( id, callbackFunc, fileType, currentSelection );
+	fnLoyalty_ShowAwardModal( id, 2, callbackFunc, fileType, currentSelection );
 }
 
 function PublishedFileBan( id, appid )

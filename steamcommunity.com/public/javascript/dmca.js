@@ -137,7 +137,6 @@ function SaveTakeDownNotice()
 	{
 		bHasRequiredFields &= HasRequiredField( "#state_input" );
 	}
-	bHasRequiredFields &= HasRequiredField( "#input_captcha" );
 	if ( $J( "#check_is_ownerb" ).prop('checked') )
 	{
 		bHasRequiredFields &= HasRequiredField( "#copyright_holder" );
@@ -183,10 +182,10 @@ function SaveTakeDownNotice()
 		} )
 		.fail(function() {
 			var data = V_ParseJSON( jqxhr.responseText );
-			if ( data['captchagid'] )
+			if ( data['gid'] )
 			{
 				ShowAlertDialog( 'Error', 'Error verifying humanity' );
-				UpdateCaptcha( data['captchagid'] );
+				UpdateCaptcha( data );
 				return;
 			}
 			alert('fail' + data.success );
@@ -194,41 +193,54 @@ function SaveTakeDownNotice()
 }
 
 
-/* captcha */
-var iAjaxCalls = 0;
-
-// Refresh the catpcha image
+// Refresh the captcha data
 function RefreshCaptcha()
 {
-	++iAjaxCalls;
-
-	new Ajax.Request('https://steamcommunity.com/dmca/ajaxrefreshcaptcha/',
-		{
-			method:'get',
-			parameters: { count : iAjaxCalls },
-			onSuccess: function(transport){
-				if ( transport.responseText ){
-
-					try {
-						var result = transport.responseText.evalJSON(true);
-					} catch ( e ) {
-						//alert(e);
-						return;
-					}
-
-					gid = result.gid;
-					UpdateCaptcha( gid );
-				}
-			}
-		});
+	$J.ajax({
+		type: "POST",
+		url: "https://steamcommunity.com/dmca/ajaxrefreshcaptcha/",
+	}).done( function ( data ) {
+		UpdateCaptcha( data );
+	});
 }
 
-function UpdateCaptcha( gid )
+// Render captcha on form
+function RenderRecaptcha( parent_sel, gid, sitekey, s )
 {
-	if ( gid != -1 )
-	{
-		$('captcha_entry').show();
-		$('captchaImg').src = 'https://steamcommunity.com/public/captcha.php?gid='+gid;
-	}
-	$('captchagid').value = gid;
+    var render_div_id = 'recaptcha_render_' + gid;
+    $J( parent_sel ).empty();
+    $J( parent_sel ).append('<div id="' + render_div_id + '"></div>');
+    grecaptcha.enterprise.render( render_div_id, {
+        'sitekey': sitekey,
+        'theme': 'dark',
+        'callback': function(n){},
+        's': s
+    });
 }
+
+function UpdateCaptcha( data )
+{
+    if ( data.gid != -1 )
+    {
+        $J( '#captcha_entry' ).show();
+        $J( '#input_captcha' ).val( '' );
+        if ( data.type == 1 ) {
+            $J( '#captcha_entry_text' ).show();
+            $J( '#captcha_entry_recaptcha' ).hide();
+            $J( '#captchaImg' ).attr( 'src', 'https://steamcommunity.com/public/captcha.php?gid=' + data.gid );
+        } else if ( data.type == 2 ) {
+            $J( '#captcha_entry_text' ).hide();
+            $J( '#captcha_entry_recaptcha' ).show();
+            RenderRecaptcha( '#captcha_entry_recaptcha', data.gid, data.sitekey, data.s );
+        }
+        $J( '#input_captcha_gid' ).val( data.gid );
+    }
+    else
+    {
+        $J( '#captcha_entry' ).hide();
+        $J( '#captcha_entry_recaptcha' ).empty();
+        $J( '#input_captcha' ).val( '' );
+        $J( '#input_captcha_gid' ).val( '' );
+    }
+}
+

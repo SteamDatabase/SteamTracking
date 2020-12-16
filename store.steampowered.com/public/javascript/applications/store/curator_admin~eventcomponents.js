@@ -134,7 +134,7 @@
             r
           );
         })(c),
-        b = (function(n) {
+        h = (function(n) {
           function r(e) {
             void 0 === e && (e = null);
             var t = n.call(this) || this;
@@ -249,7 +249,7 @@
             r
           );
         })(c),
-        h = (function(n) {
+        b = (function(n) {
           function r(e) {
             void 0 === e && (e = null);
             var t = n.call(this) || this;
@@ -346,7 +346,7 @@
                         br: o.d.readString,
                         bw: o.h.writeString
                       },
-                      post: { n: 6, c: b },
+                      post: { n: 6, c: h },
                       valid_post: { n: 7, br: o.d.readBool, bw: o.h.writeBool },
                       post_error_msg: {
                         n: 8,
@@ -593,7 +593,7 @@
                   (r.sm_m = {
                     proto: r,
                     fields: {
-                      post: { n: 1, c: b },
+                      post: { n: 1, c: h },
                       draft: { n: 2, br: o.d.readBool, bw: o.h.writeBool }
                     }
                   }),
@@ -860,7 +860,7 @@
           );
         })(c);
       ((_ = l = l || {}).ConvertHTMLToBBCode = function(e, t) {
-        return e.SendMsg("News.ConvertHTMLToBBCode#1", t, h, {
+        return e.SendMsg("News.ConvertHTMLToBBCode#1", t, b, {
           bConstMethod: !0,
           ePrivilege: 0,
           eWebAPIKeyRequirement: 1
@@ -1146,7 +1146,7 @@
                     case 0:
                       return this.BIsLoggedIn()
                         ? this.m_strRSSGID
-                          ? ((t = new b()).set_gid(i.post.gid),
+                          ? ((t = new h()).set_gid(i.post.gid),
                             t.set_news_feed_gid(this.m_strRSSGID),
                             t.set_title(i.post.title),
                             t.set_url(i.post.url),
@@ -1512,9 +1512,9 @@
         r = n("vDqi"),
         l = n.n(r),
         a = n("2l+k"),
-        u = n("lkRc"),
+        m = n("lkRc"),
         i = n("kLLr"),
-        d = (function() {
+        p = (function() {
           function e() {
             this.m_mapClanToRecommendation = new Map();
           }
@@ -1563,7 +1563,7 @@
                       }),
                       0 < n.length)
                         ? ((r =
-                            u.c.STORE_BASE_URL +
+                            m.c.STORE_BASE_URL +
                             "curator/" +
                             o.GetAccountID() +
                             "/admin/ajaxgetrecbyapps"),
@@ -1572,8 +1572,8 @@
                             l.a.get(r, {
                               params: {
                                 appids: n,
-                                cc: u.c.COUNTRY || "US",
-                                l: u.c.LANGUAGE
+                                cc: m.c.COUNTRY || "US",
+                                l: m.c.LANGUAGE
                               }
                             })
                           ])
@@ -1597,12 +1597,12 @@
         })(),
         o = n("TyAF"),
         s = n("q1tI"),
-        m = n.n(s),
-        p = n("mgoM"),
-        _ = n("3+zv"),
+        _ = n.n(s),
+        u = n("mgoM"),
+        d = n("3+zv"),
         f = n("6oCP"),
-        b = n("Mgs7"),
-        h = n("T27q"),
+        h = n("Mgs7"),
+        b = n("T27q"),
         v = n("fpVW"),
         S = n.n(v),
         g = n("r+ba"),
@@ -1643,7 +1643,7 @@
             (e.prototype.OnCreateOrSaveFeed = function(e) {
               e.preventDefault(),
                 Object(R.d)(
-                  m.a.createElement(z, {
+                  _.a.createElement(z, {
                     strRSSUrl: this.state.strRssURL,
                     admin: this.m_Admin
                   }),
@@ -1660,32 +1660,32 @@
               );
               if (void 0 !== window.Prototype)
                 return window.location.reload(), null;
-              var t = Object(p.f)(
-                  Object(p.d)(this.m_Admin.GetFeedLanguageHandleUnset())
+              var t = Object(u.f)(
+                  Object(u.d)(this.m_Admin.GetFeedLanguageHandleUnset())
                 ),
                 n = a.a.Get().GetDefaultAdmin();
-              return m.a.createElement(
+              return _.a.createElement(
                 "div",
                 { className: Object(E.a)(M.Ctn) },
-                m.a.createElement(
+                _.a.createElement(
                   "div",
                   { className: "titleframe" },
-                  m.a.createElement(
+                  _.a.createElement(
                     "h4",
                     null,
                     Object(B.f)("#CuratorAdmin_RSSFeed_title")
                   ),
-                  m.a.createElement(
+                  _.a.createElement(
                     "p",
                     { className: "subtitle" },
                     Object(B.f)("#CuratorAdmin_RSSFeed_desc")
                   ),
-                  m.a.createElement(
+                  _.a.createElement(
                     "p",
                     null,
                     Object(B.n)(
                       "#CuratorAdmin_RSSFeed_doc_link",
-                      m.a.createElement(
+                      _.a.createElement(
                         "a",
                         {
                           href:
@@ -1696,14 +1696,14 @@
                       )
                     )
                   ),
-                  m.a.createElement(
+                  _.a.createElement(
                     "p",
                     { className: M.DashboardBtn },
-                    m.a.createElement(
+                    _.a.createElement(
                       y.a,
                       {
                         href:
-                          u.c.COMMUNITY_BASE_URL +
+                          m.c.COMMUNITY_BASE_URL +
                           "gid/" +
                           this.m_Admin.GetClanSteamID().ConvertTo64BitString() +
                           "/partnerevents/",
@@ -1713,23 +1713,23 @@
                     )
                   )
                 ),
-                m.a.createElement(
+                _.a.createElement(
                   "div",
                   { className: "darkframe" },
-                  m.a.createElement(
+                  _.a.createElement(
                     "div",
                     { className: M.LanguageRow },
-                    m.a.createElement(
+                    _.a.createElement(
                       "span",
                       { className: M.LanguageTitle },
                       Object(B.f)("#CuratorAdmin_RSSFeed_lang_only")
                     ),
-                    m.a.createElement("span", { className: M.LanguageSet }, t),
-                    m.a.createElement(
+                    _.a.createElement("span", { className: M.LanguageSet }, t),
+                    _.a.createElement(
                       "a",
                       {
                         href:
-                          u.c.COMMUNITY_BASE_URL +
+                          m.c.COMMUNITY_BASE_URL +
                           "gid/" +
                           this.m_Admin.GetClanSteamID().ConvertTo64BitString() +
                           "/edit ",
@@ -1743,7 +1743,7 @@
                     this.m_Admin.GetFeedLanguageHandleUnset() !=
                       this.m_Admin.GetCuratorLanguage()
                   ) &&
-                    m.a.createElement(
+                    _.a.createElement(
                       "div",
                       {
                         className: Object(E.a)(
@@ -1751,20 +1751,20 @@
                           L.a.WarningIconLayout
                         )
                       },
-                      m.a.createElement(
+                      _.a.createElement(
                         "span",
                         { className: M.LanguageTitle },
                         Object(B.f)(
                           "#CuratorAdmin_Curator_lang_only",
                           Object(B.f)(
                             "#Language_" +
-                              Object(p.d)(this.m_Admin.GetCuratorLanguage())
+                              Object(u.d)(this.m_Admin.GetCuratorLanguage())
                           ),
                           t
                         )
                       )
                     ),
-                  m.a.createElement(
+                  _.a.createElement(
                     "div",
                     {
                       className: Object(E.a)(
@@ -1772,7 +1772,7 @@
                         M.UrlSettingCtn
                       )
                     },
-                    m.a.createElement(b.k, {
+                    _.a.createElement(h.k, {
                       className: M.RssInpu,
                       type: "text",
                       name: "link_url",
@@ -1785,20 +1785,20 @@
                       onChange: this.OnChangeActualRSSURL,
                       mustBeURL: !0
                     }),
-                    m.a.createElement(
+                    _.a.createElement(
                       "a",
                       {
                         className: "btn_green_white_innerfade btn_medium",
                         onClick: this.OnCreateOrSaveFeed
                       },
-                      m.a.createElement(
+                      _.a.createElement(
                         "span",
                         null,
                         Object(B.f)(e ? "#Button_Saved" : "#Button_Save")
                       )
                     ),
                     !e &&
-                      m.a.createElement(
+                      _.a.createElement(
                         "a",
                         {
                           onClick: this.OnRevert,
@@ -1807,9 +1807,9 @@
                         Object(B.f)("#Button_Revert")
                       )
                   ),
-                  m.a.createElement(T, { admin: n }),
-                  m.a.createElement("br", null),
-                  m.a.createElement(G, {
+                  _.a.createElement(T, { admin: n }),
+                  _.a.createElement("br", null),
+                  _.a.createElement(G, {
                     strRssURL: this.state.strRssURL,
                     admin: n
                   })
@@ -1821,7 +1821,7 @@
             Object(c.c)([P.a], e.prototype, "OnRevert", null),
             (e = Object(c.c)([o.a], e))
           );
-        })(m.a.Component),
+        })(_.a.Component),
         G = ((t.b = U),
         (function(t) {
           function e() {
@@ -1871,7 +1871,7 @@
                     })
                     .forEach(function(e) {
                       n.push(
-                        m.a.createElement(N, {
+                        _.a.createElement(N, {
                           newsData: e,
                           admin: o,
                           key: "id: " + e.unique_id,
@@ -1972,7 +1972,7 @@
                                             ? ((t = a.GetClanSteamID()),
                                               [
                                                 4,
-                                                d
+                                                p
                                                   .Get()
                                                   .LoadAppRecommendation(t, r)
                                               ])
@@ -2010,42 +2010,42 @@
             (e.prototype.render = function() {
               var e = this.RenderPreviews(),
                 t = this.props.admin;
-              return m.a.createElement(
+              return _.a.createElement(
                 "div",
                 null,
                 Boolean(
                   !this.state.bLoadingPreview &&
                     this.state.strPreviewURL !== this.props.strRssURL
                 ) &&
-                  m.a.createElement(
+                  _.a.createElement(
                     "div",
                     { className: M.PreviewListBtn },
-                    m.a.createElement(
-                      b.d,
+                    _.a.createElement(
+                      h.d,
                       {
-                        disabled: !b.k.validateUrl(this.props.strRssURL),
+                        disabled: !h.k.validateUrl(this.props.strRssURL),
                         onClick: this.OnLoadPreview
                       },
                       Object(B.f)("#CuratorAdmin_RSSFeed_preview")
                     )
                   ),
                 this.state.bLoadingPreview &&
-                  m.a.createElement(O.a, {
+                  _.a.createElement(O.a, {
                     string: Object(B.f)("#Loading"),
                     size: "medium",
                     position: "center"
                   }),
                 this.state.strPreviewErrorMsg &&
-                  m.a.createElement(
+                  _.a.createElement(
                     "div",
                     { className: S.a.ErrorMsg },
                     this.state.strPreviewErrorMsg
                   ),
                 Boolean(0 < e.length) &&
-                  m.a.createElement(
+                  _.a.createElement(
                     "div",
                     null,
-                    m.a.createElement(
+                    _.a.createElement(
                       "p",
                       null,
                       Object(B.f)(
@@ -2053,19 +2053,19 @@
                         this.state.strPreviewURL
                       )
                     ),
-                    m.a.createElement(
+                    _.a.createElement(
                       "div",
                       { className: M.PreviewListCtn },
                       e
                     ),
-                    m.a.createElement(
+                    _.a.createElement(
                       "p",
                       { className: M.DashboardBtn },
-                      m.a.createElement(
+                      _.a.createElement(
                         y.a,
                         {
                           href:
-                            u.c.COMMUNITY_BASE_URL +
+                            m.c.COMMUNITY_BASE_URL +
                             "gid/" +
                             t.GetClanSteamID().ConvertTo64BitString() +
                             "/partnerevents/",
@@ -2081,7 +2081,7 @@
             Object(c.c)([P.a], e.prototype, "OnLoadPreview", null),
             (e = Object(c.c)([o.a], e))
           );
-        })(m.a.Component)),
+        })(_.a.Component)),
         T = (function(t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
@@ -2093,7 +2093,7 @@
               e
                 ? (this.setState({ strErrorMessage: void 0 }),
                   Object(R.d)(
-                    m.a.createElement(z, {
+                    _.a.createElement(z, {
                       strRSSUrl: this.props.admin.GetRSSUrl(),
                       admin: this.props.admin,
                       bActivatePooling: !0
@@ -2145,12 +2145,12 @@
                       .then(function() {
                         return Object(
                           R.d
-                        )(m.a.createElement(w.c, { strTitle: Object(B.f)("#CuratorAdmin_RSSFeed_scannow"), strDescription: Object(B.f)("#CuratorAdmin_RSSFeed_queued") }), Object(C.m)(n));
+                        )(_.a.createElement(w.c, { strTitle: Object(B.f)("#CuratorAdmin_RSSFeed_scannow"), strDescription: Object(B.f)("#CuratorAdmin_RSSFeed_queued") }), Object(C.m)(n));
                       })
                       .catch(function(e) {
                         return Object(
                           R.d
-                        )(m.a.createElement(w.e, { strTitle: Object(B.f)("#CuratorAdmin_RSSFeed_scannow"), strDescription: Object(j.a)(e) }), Object(C.m)(n));
+                        )(_.a.createElement(w.e, { strTitle: Object(B.f)("#CuratorAdmin_RSSFeed_scannow"), strDescription: Object(j.a)(e) }), Object(C.m)(n));
                       })
                       .finally(function() {
                         return t.setState({ strReasonWaiting: void 0 });
@@ -2162,28 +2162,28 @@
             }),
             (e.prototype.render = function() {
               return this.props.admin.BHasSavedRSSURL()
-                ? m.a.createElement(
+                ? _.a.createElement(
                     "div",
                     null,
                     Boolean(this.state.strReasonWaiting) &&
-                      m.a.createElement(O.a, {
+                      _.a.createElement(O.a, {
                         size: "medium",
                         string: this.state.strReasonWaiting
                       }),
                     Boolean(this.state.strErrorMessage) &&
-                      m.a.createElement(
+                      _.a.createElement(
                         "div",
                         { className: M.Error },
                         this.state.strErrorMessage
                       ),
-                    m.a.createElement(b.o, {
+                    _.a.createElement(h.o, {
                       onChange: this.OnToggleChannelAutomation,
                       label: Object(B.f)("#RSSManager_Status_Automation_Desc"),
                       checked: this.props.admin.BIsAutomationEnabled(),
                       description: ""
                     }),
                     this.props.admin.BIsAutomationEnabled() &&
-                      m.a.createElement(
+                      _.a.createElement(
                         "p",
                         null,
                         Object(B.f)("#CuratorAdmin_RSSFeed_lastscanned"),
@@ -2195,10 +2195,10 @@
                         "  @ ",
                         Object(B.m)(this.props.admin.GetRSSLastRtimeChecked()),
                         " ",
-                        m.a.createElement(
+                        _.a.createElement(
                           "a",
                           { onClick: this.OnQueueScan },
-                          m.a.createElement(
+                          _.a.createElement(
                             "span",
                             null,
                             Object(B.f)("#CuratorAdmin_RSSFeed_scannow")
@@ -2212,7 +2212,7 @@
             Object(c.c)([P.a], e.prototype, "OnQueueScan", null),
             (e = Object(c.c)([o.a], e))
           );
-        })(m.a.Component),
+        })(_.a.Component),
         N = (function(t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
@@ -2271,7 +2271,7 @@
               var t = this.props,
                 n = t.newsData,
                 r = t.clanSteamID,
-                a = new _.p();
+                a = new d.p();
               (a.GID = "PreviewPartnerEventRow_0"),
                 (a.clanSteamID = r),
                 (a.postTime = Date.now() / 1e3),
@@ -2331,7 +2331,7 @@
                 n = t.newsData,
                 r = t.fnGetRSSUrl;
               Object(R.d)(
-                m.a.createElement(z, {
+                _.a.createElement(z, {
                   newsData: n,
                   admin: this.props.admin,
                   strRSSUrl: r(),
@@ -2345,7 +2345,7 @@
                 n = t.newsData,
                 r = t.fnGetRSSUrl;
               Object(R.d)(
-                m.a.createElement(z, {
+                _.a.createElement(z, {
                   newsData: n,
                   strRSSUrl: r(),
                   admin: this.props.admin,
@@ -2373,13 +2373,13 @@
                   return t ? Object(D.b)(t[0]) : e[0];
                 })();
               Object(R.d)(
-                m.a.createElement(
+                _.a.createElement(
                   w.c,
                   {
                     bAlertDialog: !0,
                     strTitle: Object(B.f)("#RSSManager_PostEvent_ViewRaw")
                   },
-                  m.a.createElement("textarea", {
+                  _.a.createElement("textarea", {
                     className: M.RawRSS,
                     value: t,
                     disabled: !0
@@ -2389,178 +2389,188 @@
               );
             }),
             (e.prototype.render = function() {
-              var e = this.props.newsData,
-                t = this.state,
-                n = t.clan_event_gid,
-                r = t.existingEventModel,
-                a = t.bLoadingPartnerEvent,
-                i = this.props.admin,
-                o = i.GetClanSteamID(),
-                s = r && r.BIsStagedEvent(),
-                c =
-                  e.post.appids &&
-                  1 == e.post.appids.length &&
-                  e.post.appids[0],
+              var e,
+                t = this.props.newsData,
+                n = this.state,
+                r = n.clan_event_gid,
+                a = n.existingEventModel,
+                i = n.bLoadingPartnerEvent,
+                o = this.props.admin,
+                s = o.GetClanSteamID(),
+                c = a && a.BIsStagedEvent(),
                 l =
-                  0 !== e.post.recommendation_state &&
-                  c &&
-                  d.Get().BHasReviewForApp(o, c);
-              return m.a.createElement(
-                "div",
-                {
-                  className: Object(E.a)(
-                    M.PostCtn,
-                    Boolean(n) ? M.ActivePost : "",
-                    Boolean(e.valid_post) ? "" : M.ErrorPost
-                  )
-                },
-                m.a.createElement("span", { className: M.PostTitle }, e.title),
-                m.a.createElement("br", null),
-                Boolean(r) &&
-                  m.a.createElement(
-                    m.a.Fragment,
-                    null,
-                    Boolean(r.BIsVisibleEvent()) &&
-                      m.a.createElement(
-                        "span",
-                        { className: M.PostDate },
-                        Object(B.n)(
-                          "#RSSManager_PostEvent_PostedDate",
-                          Object(B.o)(r.GetPostTimeAndDateUnixSeconds()) +
-                            " @ " +
-                            Object(B.m)(r.GetPostTimeAndDateUnixSeconds())
-                        )
-                      ),
-                    Boolean(!r.BIsVisibleEvent()) &&
-                      m.a.createElement(
-                        "span",
-                        {
-                          className: Object(E.a)(
-                            M.PostDraft,
-                            s ? M.PostStaged : ""
-                          )
-                        },
-                        Object(B.f)(
-                          s
-                            ? "#RSSManager_PostEvent_Staged"
-                            : "#RSSManager_PostEvent_Draft",
-                          s
-                            ? Object(B.o)(
-                                r.GetVisibilityStartTimeAndDateUnixSeconds()
-                              ) +
-                                " @ " +
-                                Object(B.m)(
-                                  r.GetVisibilityStartTimeAndDateUnixSeconds()
-                                )
-                            : ""
-                        )
-                      )
-                  ),
-                Boolean(!e.valid_post && e.post_error_msg) &&
-                  m.a.createElement(
-                    "div",
-                    { className: L.a.ErrorStylesBackground },
-                    Object(B.f)("#Error_Generic_Label"),
-                    " ",
-                    Object(B.f)(e.post_error_msg)
-                  ),
-                m.a.createElement(
+                  t.post.appids &&
+                  1 == t.post.appids.length &&
+                  t.post.appids[0],
+                u =
+                  0 !== t.post.recommendation_state &&
+                  l &&
+                  p.Get().BHasReviewForApp(s, l),
+                d = "";
+              return (
+                a &&
+                  ((e =
+                    a.GetVisibilityStartTimeAndDateUnixSeconds() ||
+                    a.GetPostTimeAndDateUnixSeconds()),
+                  (d = Object(B.o)(e) + " @ " + Object(B.m)(e))),
+                _.a.createElement(
                   "div",
-                  { className: M.ButtonCtn },
-                  Boolean(n)
-                    ? m.a.createElement(
-                        m.a.Fragment,
-                        null,
-                        Boolean(a)
-                          ? m.a.createElement(O.a, {
-                              string: Object(B.f)("#Loading"),
-                              size: "small",
-                              position: "center"
-                            })
-                          : m.a.createElement(
-                              "div",
-                              {
-                                onClick: this.OnViewEvent,
-                                className: Object(E.a)(S.a.Button, M.PreviewBtn)
-                              },
-                              Object(B.f)("#RSSManager_PostEvent_ViewEvent")
-                            ),
-                        m.a.createElement(
-                          "a",
-                          {
-                            className: Object(E.a)(S.a.Button, M.PreviewBtn),
-                            href:
-                              u.c.COMMUNITY_BASE_URL +
-                              "gid/" +
-                              i.GetClanSteamID().ConvertTo64BitString() +
-                              "/partnerevents/edit/" +
-                              this.state.clan_event_gid
-                          },
-                          Object(B.f)("#RSSManager_PostEvent_EditEvent")
+                  {
+                    className: Object(E.a)(
+                      M.PostCtn,
+                      Boolean(r) ? M.ActivePost : "",
+                      Boolean(t.valid_post) ? "" : M.ErrorPost
+                    )
+                  },
+                  _.a.createElement(
+                    "span",
+                    { className: M.PostTitle },
+                    t.title
+                  ),
+                  _.a.createElement("br", null),
+                  Boolean(a) &&
+                    _.a.createElement(
+                      _.a.Fragment,
+                      null,
+                      Boolean(a.BIsVisibleEvent()) &&
+                        _.a.createElement(
+                          "span",
+                          { className: M.PostDate },
+                          Object(B.f)("#RSSManager_PostEvent_PostedDate", d)
                         ),
-                        m.a.createElement(
-                          "div",
+                      Boolean(!a.BIsVisibleEvent()) &&
+                        _.a.createElement(
+                          "span",
                           {
-                            onClick: this.OnUpdateNewsEvent,
-                            className: Object(E.a)(S.a.Button, M.PreviewBtn)
+                            className: Object(E.a)(
+                              M.PostDraft,
+                              c ? M.PostStaged : ""
+                            )
                           },
-                          Object(B.f)("#RSSManager_PostEvent_UpdateEvent")
-                        ),
-                        l &&
-                          m.a.createElement(
+                          Object(B.f)(
+                            c
+                              ? "#RSSManager_PostEvent_Staged"
+                              : "#RSSManager_PostEvent_Draft",
+                            d
+                          )
+                        )
+                    ),
+                  Boolean(!t.valid_post && t.post_error_msg) &&
+                    _.a.createElement(
+                      "div",
+                      { className: L.a.ErrorStylesBackground },
+                      Object(B.f)("#Error_Generic_Label"),
+                      " ",
+                      Object(B.f)(t.post_error_msg)
+                    ),
+                  _.a.createElement(
+                    "div",
+                    { className: M.ButtonCtn },
+                    Boolean(r)
+                      ? _.a.createElement(
+                          _.a.Fragment,
+                          null,
+                          Boolean(i)
+                            ? _.a.createElement(O.a, {
+                                string: Object(B.f)("#Loading"),
+                                size: "small",
+                                position: "center"
+                              })
+                            : _.a.createElement(
+                                "div",
+                                {
+                                  onClick: this.OnViewEvent,
+                                  className: Object(E.a)(
+                                    S.a.Button,
+                                    M.PreviewBtn
+                                  )
+                                },
+                                Object(B.f)("#RSSManager_PostEvent_ViewEvent")
+                              ),
+                          _.a.createElement(
                             "a",
                             {
                               className: Object(E.a)(S.a.Button, M.PreviewBtn),
-                              href: Object(I.e)(
-                                u.c.STORE_BASE_URL +
-                                  "app/" +
-                                  e.post.appids[0] +
-                                  "/?curator_clanid=" +
-                                  o.GetAccountID()
-                              )
+                              href:
+                                m.c.COMMUNITY_BASE_URL +
+                                "gid/" +
+                                o.GetClanSteamID().ConvertTo64BitString() +
+                                "/partnerevents/edit/" +
+                                this.state.clan_event_gid
                             },
-                            Object(B.f)("#RSSManager_SeeReview")
-                          )
-                      )
-                    : m.a.createElement(
-                        m.a.Fragment,
-                        null,
-                        m.a.createElement(
-                          "div",
-                          {
-                            onClick: this.OnOpenPreviewAsPartnerEvent,
-                            className: Object(E.a)(S.a.Button, M.PreviewBtn)
-                          },
-                          Object(B.f)("#CuratorAdmin_RSSFeed_col_preview_event")
-                        ),
-                        m.a.createElement(
-                          "div",
-                          {
-                            onClick: this.OnPostNewsEvent,
-                            className: Object(E.a)(S.a.Button, M.PreviewBtn)
-                          },
-                          Object(B.f)("#CuratorAdmin_RSSFeed_col_create_event")
+                            Object(B.f)("#RSSManager_PostEvent_EditEvent")
+                          ),
+                          _.a.createElement(
+                            "div",
+                            {
+                              onClick: this.OnUpdateNewsEvent,
+                              className: Object(E.a)(S.a.Button, M.PreviewBtn)
+                            },
+                            Object(B.f)("#RSSManager_PostEvent_UpdateEvent")
+                          ),
+                          u &&
+                            _.a.createElement(
+                              "a",
+                              {
+                                className: Object(E.a)(
+                                  S.a.Button,
+                                  M.PreviewBtn
+                                ),
+                                href: Object(I.e)(
+                                  m.c.STORE_BASE_URL +
+                                    "app/" +
+                                    t.post.appids[0] +
+                                    "/?curator_clanid=" +
+                                    s.GetAccountID()
+                                )
+                              },
+                              Object(B.f)("#RSSManager_SeeReview")
+                            )
                         )
-                      ),
-                  Boolean(e.rss_message && 0 < e.rss_message.length) &&
-                    m.a.createElement(
-                      "div",
-                      { onClick: this.OnShowRawRSS, className: M.ViewRaw },
-                      Object(B.f)("#RSSManager_PostEvent_ViewRaw")
-                    ),
-                  Boolean(this.state.eventModelForPreviewNow) &&
-                    m.a.createElement(
-                      w.h,
-                      { className: g.StoreHeaderAdjust },
-                      m.a.createElement(
+                      : _.a.createElement(
+                          _.a.Fragment,
+                          null,
+                          _.a.createElement(
+                            "div",
+                            {
+                              onClick: this.OnOpenPreviewAsPartnerEvent,
+                              className: Object(E.a)(S.a.Button, M.PreviewBtn)
+                            },
+                            Object(B.f)(
+                              "#CuratorAdmin_RSSFeed_col_preview_event"
+                            )
+                          ),
+                          _.a.createElement(
+                            "div",
+                            {
+                              onClick: this.OnPostNewsEvent,
+                              className: Object(E.a)(S.a.Button, M.PreviewBtn)
+                            },
+                            Object(B.f)(
+                              "#CuratorAdmin_RSSFeed_col_create_event"
+                            )
+                          )
+                        ),
+                    Boolean(t.rss_message && 0 < t.rss_message.length) &&
+                      _.a.createElement(
                         "div",
-                        null,
-                        m.a.createElement(h.b, {
-                          event: this.state.eventModelForPreviewNow,
-                          fnClose: this.HideModalEvent
-                        })
+                        { onClick: this.OnShowRawRSS, className: M.ViewRaw },
+                        Object(B.f)("#RSSManager_PostEvent_ViewRaw")
+                      ),
+                    Boolean(this.state.eventModelForPreviewNow) &&
+                      _.a.createElement(
+                        w.h,
+                        { className: g.StoreHeaderAdjust },
+                        _.a.createElement(
+                          "div",
+                          null,
+                          _.a.createElement(b.b, {
+                            event: this.state.eventModelForPreviewNow,
+                            fnClose: this.HideModalEvent
+                          })
+                        )
                       )
-                    )
+                  )
                 )
               );
             }),
@@ -2579,7 +2589,7 @@
             Object(c.c)([P.a], e.prototype, "OnShowRawRSS", null),
             (e = Object(c.c)([o.a], e))
           );
-        })(m.a.Component),
+        })(_.a.Component),
         z = (function(t) {
           function n() {
             var e = (null !== t && t.apply(this, arguments)) || this;
@@ -2716,18 +2726,18 @@
                 case "activate_feed":
                 case "update_feed":
                 default:
-                  return m.a.createElement(
+                  return _.a.createElement(
                     w.d,
                     null,
-                    m.a.createElement(b.j, null, " ", this.GetStrTitle(), " "),
-                    m.a.createElement(
-                      b.b,
+                    _.a.createElement(h.j, null, " ", this.GetStrTitle(), " "),
+                    _.a.createElement(
+                      h.b,
                       null,
-                      m.a.createElement(
-                        b.c,
+                      _.a.createElement(
+                        h.c,
                         null,
                         this.props.newsData &&
-                          m.a.createElement(
+                          _.a.createElement(
                             "div",
                             null,
                             Object(B.f)(
@@ -2735,7 +2745,7 @@
                             )
                           ),
                         Boolean("activate_feed" !== this.state.step) &&
-                          m.a.createElement(
+                          _.a.createElement(
                             "div",
                             null,
                             Object(B.f)(
@@ -2743,15 +2753,15 @@
                               e
                             )
                           ),
-                        m.a.createElement(
+                        _.a.createElement(
                           "div",
                           null,
                           Object(B.f)("#RSSManager_CreateFeed_Review")
                         ),
-                        m.a.createElement(
+                        _.a.createElement(
                           "div",
                           null,
-                          m.a.createElement(b.e, {
+                          _.a.createElement(h.e, {
                             label: Object(B.f)(
                               "#RSSManager_CreateFeed_Permissions_v1"
                             ),
@@ -2759,27 +2769,27 @@
                             checked: Boolean(this.state.bPermissions)
                           })
                         ),
-                        m.a.createElement(
+                        _.a.createElement(
                           "div",
                           null,
-                          m.a.createElement(b.e, {
+                          _.a.createElement(h.e, {
                             label: Object(B.f)(
                               "#RSSManager_CreateFeed_Conduct_v1"
                             ),
                             onChange: this.OnChangeConductCreateFeed,
                             checked: Boolean(this.state.bConduct)
                           }),
-                          m.a.createElement(
+                          _.a.createElement(
                             y.a,
-                            { href: u.c.STORE_BASE_URL + "online_conduct/" },
+                            { href: m.c.STORE_BASE_URL + "online_conduct/" },
                             Object(B.f)("#RSSManager_CreateFeed_Conduct_Link")
                           )
                         )
                       ),
-                      m.a.createElement(
-                        b.i,
+                      _.a.createElement(
+                        h.i,
                         null,
-                        m.a.createElement(b.m, {
+                        _.a.createElement(h.m, {
                           bOKDisabled: !Boolean(
                             this.state.bPermissions && this.state.bConduct
                           ),
@@ -2790,7 +2800,7 @@
                     )
                   );
                 case "failure":
-                  return m.a.createElement(
+                  return _.a.createElement(
                     w.e,
                     {
                       strDescription: Object(B.f)(
@@ -2798,7 +2808,7 @@
                       ),
                       closeModal: this.props.closeModal
                     },
-                    m.a.createElement(
+                    _.a.createElement(
                       "div",
                       null,
                       Object(B.f)(
@@ -2810,7 +2820,7 @@
                   );
                 case "creating_feed":
                 case "waiting_post":
-                  return m.a.createElement(
+                  return _.a.createElement(
                     w.c,
                     {
                       strTitle: this.GetStrTitle(),
@@ -2819,37 +2829,37 @@
                       ),
                       closeModal: this.props.closeModal
                     },
-                    m.a.createElement(O.a, { position: "center" })
+                    _.a.createElement(O.a, { position: "center" })
                   );
                 case "create_post":
-                  return m.a.createElement(
+                  return _.a.createElement(
                     w.d,
                     null,
-                    m.a.createElement(b.j, null, " ", this.GetStrTitle(), " "),
-                    m.a.createElement(
-                      b.b,
+                    _.a.createElement(h.j, null, " ", this.GetStrTitle(), " "),
+                    _.a.createElement(
+                      h.b,
                       null,
-                      m.a.createElement(
-                        b.c,
+                      _.a.createElement(
+                        h.c,
                         null,
-                        m.a.createElement(
+                        _.a.createElement(
                           "div",
                           null,
-                          m.a.createElement(
+                          _.a.createElement(
                             "div",
                             null,
                             Object(B.f)("#RSSManager_PostEvent_CreatePost")
                           ),
-                          m.a.createElement(
+                          _.a.createElement(
                             "div",
                             { className: M.DialogPostTitle },
                             this.props.newsData.title
                           ),
-                          m.a.createElement("br", null),
-                          m.a.createElement(
+                          _.a.createElement("br", null),
+                          _.a.createElement(
                             "div",
                             null,
-                            m.a.createElement(b.e, {
+                            _.a.createElement(h.e, {
                               label: Object(B.f)(
                                 "#RSSManager_PostEvent_CreatePost_Draft"
                               ),
@@ -2859,10 +2869,10 @@
                           )
                         )
                       ),
-                      m.a.createElement(
-                        b.i,
+                      _.a.createElement(
+                        h.i,
                         null,
-                        m.a.createElement(b.m, {
+                        _.a.createElement(h.m, {
                           onOK: this.OnCreatePost,
                           onCancel: this.props.closeModal
                         })
@@ -2870,37 +2880,37 @@
                     )
                   );
                 case "update_post":
-                  return m.a.createElement(
+                  return _.a.createElement(
                     w.d,
                     null,
-                    m.a.createElement(b.j, null, " ", this.GetStrTitle(), " "),
-                    m.a.createElement(
-                      b.b,
+                    _.a.createElement(h.j, null, " ", this.GetStrTitle(), " "),
+                    _.a.createElement(
+                      h.b,
                       null,
-                      m.a.createElement(
-                        b.c,
+                      _.a.createElement(
+                        h.c,
                         null,
-                        m.a.createElement(
+                        _.a.createElement(
                           "div",
                           null,
-                          m.a.createElement(
+                          _.a.createElement(
                             "div",
                             null,
                             Object(B.f)("#RSSManager_PostEvent_UpdatePost")
                           ),
-                          m.a.createElement("br", null),
-                          m.a.createElement(
+                          _.a.createElement("br", null),
+                          _.a.createElement(
                             "div",
                             { className: M.DialogPostTitle },
                             this.props.newsData.title
                           ),
-                          m.a.createElement("br", null)
+                          _.a.createElement("br", null)
                         )
                       ),
-                      m.a.createElement(
-                        b.i,
+                      _.a.createElement(
+                        h.i,
                         null,
-                        m.a.createElement(b.m, {
+                        _.a.createElement(h.m, {
                           onOK: this.OnCreatePost,
                           onCancel: this.props.closeModal
                         })
@@ -2908,7 +2918,7 @@
                     )
                   );
                 case "success":
-                  return m.a.createElement(
+                  return _.a.createElement(
                     w.c,
                     {
                       strTitle: this.GetStrTitle(),
@@ -2921,11 +2931,11 @@
                       bAlertDialog: !0
                     },
                     Boolean(this.state.eventGID) &&
-                      m.a.createElement(
+                      _.a.createElement(
                         "a",
                         {
                           href:
-                            u.c.COMMUNITY_BASE_URL +
+                            m.c.COMMUNITY_BASE_URL +
                             "gid/" +
                             this.props.admin
                               .GetClanSteamID()
@@ -2953,7 +2963,7 @@
             Object(c.c)([P.a], n.prototype, "GetStrTitle", null),
             n
           );
-        })(m.a.Component);
+        })(_.a.Component);
     }
   }
 ]);

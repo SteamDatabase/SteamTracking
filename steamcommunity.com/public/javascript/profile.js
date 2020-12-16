@@ -764,7 +764,7 @@ function AddProfileAward( bLoggedIn, loginURL, steamID, selectedAward )
 		{
 			top.location.reload();
 		};
-		fnLoyalty_ShowAwardModal( steamID, callbackFunc, undefined, selectedAward );
+		fnLoyalty_ShowAwardModal( steamID, 3, callbackFunc, undefined, selectedAward );
 	}
 }
 

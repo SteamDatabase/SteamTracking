@@ -5052,7 +5052,6 @@ a.readmore_link
 		height: auto;
 	}
 
-	html.responsive .workshopBrowseRow,
 	html.responsive .workshopItem {
 		min-height: 0;
 	}

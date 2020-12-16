@@ -155,16 +155,25 @@ KeyRequestWizard.prototype.KeyWizardTab = function( show )
 			$J( "#keywiz_package_select_continue" ).attr( 'disabled', $J( this.m_key_to_row_class[ this.m_key_type ] + " > td > input:checked" ).length === 0 );
 			break;
 		case 'keywiz_enterquant':
-			if( ( "" + this.m_selected_package_id ) in this.m_package_desc && this.m_package_desc[ this.m_selected_package_id]['total'] > 0  )
+			if( ( "" + this.m_selected_package_id ) in this.m_package_desc )
 			{
 				$J( "#keywiz_history_container").show();
-				$J( "#keywiz_previous_keyrequest").text( "" + this.m_package_desc[ this.m_selected_package_id]['total'].toLocaleString() );
-				$J( "#keywiz_previous_received").text( "" + this.m_package_desc[ this.m_selected_package_id]['received'].toLocaleString() );
-				$J( "#keywiz_previous_activated").text( "" + this.m_package_desc[ this.m_selected_package_id]['activated'].toLocaleString() );
+
+				if ( this.m_package_desc[ this.m_selected_package_id]['total'] > 0 )
+				{
+					$J( "#keywiz_previous_keyrequest").text( "" + this.m_package_desc[ this.m_selected_package_id]['total'].toLocaleString() );
+					$J( "#keywiz_previous_received").text( "" + this.m_package_desc[ this.m_selected_package_id]['received'].toLocaleString() );
+					$J( "#keywiz_previous_activated").text( "" + this.m_package_desc[ this.m_selected_package_id]['activated'].toLocaleString() );
+				}
+				else
+				{
+					$J( '#keywiz_history_data_container' ).hide();
+				}
 
 				$J( "#keywiz_history_title_container").removeClass( "keywiz_default_color" ).removeClass( "keywiz_override_color" )
 					.removeClass( "keywiz_dev_color" ).addClass( this.m_key_to_bg_color_class[ this.m_key_type ] );
 				$J( "#keywiz_history_pkgname" ).text( this.m_package_desc[ this.m_selected_package_id]['name'] );
+				$J( "#keywiz_history_tagname" ).text(  $J( "#keywiz_tag_select option:selected" ).text() );
 				$J( "#keywiz_history_apps").text( "Appids: " + this.m_package_desc[ this.m_selected_package_id]['appids'] );
 			}
 
@@ -263,7 +272,7 @@ KeyRequestWizard.prototype.KeyWizardSetup = function( show, localize_key_type_de
 	this.KeyWizardTab( show );
 };
 
-KeyRequestWizard.prototype.KeyWizardSelectKeyType = function( typeSelected, reason )
+KeyRequestWizard.prototype.KeyWizardSelectKeyType = function( typeSelected, reason, label )
 {
 	if( typeSelected < this.m_key_default_type || typeSelected > this.m_key_dev_type )
 	{
@@ -275,6 +284,11 @@ KeyRequestWizard.prototype.KeyWizardSelectKeyType = function( typeSelected, reas
 	}
 	else
 	{
+		var strLabel = String( label ).trim().toLocaleUpperCase();
+		if ( strLabel.length == 0 )
+			strLabel = 'Select Type';
+
+		$J( "#keywiz_seltype" ).text( strLabel );
 		this.m_key_type = typeSelected;
 		this.m_reason = reason;
 		this.m_selected_package_id = 0; 		this.KeyWizardTab( 'keywiz_seltag' );
@@ -294,6 +308,11 @@ KeyRequestWizard.prototype.KeyWizardPackageSelected = function()
 		this.m_selected_package_id = row_package_id.substring( "radio_".length );
 		if( this.KeyWiz_isNumber( this.m_selected_package_id ) && this.m_selected_package_id > 0 )
 		{
+			var strLabel = String( this.m_package_desc[ this.m_selected_package_id]['name'] );
+			if ( strLabel.trim().length == 0 )
+				strLabel = 'Select Package';
+
+			$J( "#keywiz_selpackage" ).text( strLabel );
 			this.KeyWizardTab( 'keywiz_enterquant' );
 		}
 		else
@@ -333,14 +352,24 @@ KeyRequestWizard.prototype.KeyWizardQuantityEntered = function()
 	}
 	else
 	{
+		var strLabel = this.m_key_quantity.toLocaleString();
+		if ( strLabel.length == 0 )
+			strLabel = 'Enter Quantity';
+
+		$J( "#keywiz_enterquant" ).text( strLabel );
 		this.KeyWizardTab( 'keywiz_confirm' );
 	}
 }
 
 KeyRequestWizard.prototype.KeyWizardTagSelected = function()
 {
-	this.KeyWizardTab( 'keywiz_selpackage' );
-};
+	var strLabel = $J( "#keywiz_tag_select option:selected" ).text().trim();
+	if ( strLabel.length == 0 )
+		strLabel = 'Select Tag';
+
+	$J( "#keywiz_seltag" ).text( strLabel );
+	g_keyRequestWiz.KeyWizardTab( 'keywiz_selpackage' )
+}
 
 KeyRequestWizard.prototype.KeyWizardVerifyBeforeKeyRequest = function( )
 {

@@ -680,7 +680,7 @@ function SaleTagBlock( $Parent, rgPersonalizedTagData )
 	if ( $FeatureName == "sale_tag_bucket" )
 	    $Ctn.append( $J('<a/>', {'class': 'see_more_link', 'href': rgTagData.url } ).text( 'See More' ) );
 	else if ( $FeatureName == "sale_recommended_by_steam_labs" )
-        $Ctn.append( $J('<a/>', {'class': 'see_more_link', 'href': rgTagData.url } ).text( 'See more via the Interactive Recommender' ) );
+        $Ctn.append( $J('<a/>', {'class': 'see_more_link', 'href': rgTagData.url } ).text( 'Discover more in the Interactive Recommender' ) );
 
 	$Parent.append( $Ctn ).css('height','');
 	GDynamicStore.DecorateDynamicItems( $Parent );

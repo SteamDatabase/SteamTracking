@@ -172,7 +172,7 @@
           "These posts will not appear on the Steam library homepage",
         EventCategory_SteamAwardsVoteRequest: "NEW: Steam Awards Vote Requests",
         EventCategory_SteamAwardsVoteRequest_Desc:
-          "Invite your fans to vote for your game for the 2020 Steam Awards. (This category is only available until Dec 31)",
+          "Invite your fans to vote for your game for the 2020 Steam Awards. (This category is only available until Jan 3 when voting ends)",
         EventCategory_Visibility_SteamAwardsVoteRequest_Exception:
           "These posts will not appear on the Steam library homepage",
         EventCategory_SteamGameFestival_Title:
@@ -257,6 +257,8 @@
         EventEditor_LangaugeDesc:
           "Select a language from the drop-down to see and edit text fields for that specific language. Or use the export/import option to set multiple languages at once.",
         EventEditor_NoneLanguage: "None Chosen",
+        EventEditor_SaleNotReady_ttip:
+          "We require sale page vanity URL to be set to be able to publish a sale page. The vanity URL is used for building the URL for the sale for csutomers to access.",
         EventEditor_PreviewSale: "Preview Sale",
         EventEditor_Preview: "Preview Event",
         EventEditor_Preview_News: "Preview Announcement",
@@ -382,6 +384,8 @@
         EventEditor_Preview_Refresh: "Refresh Preview Now",
         EventEditor_Preview_AutoRefresh: "Automatically Refresh",
         EventEditor_Preview_Title: "Preview:",
+        EventEditor_Publish_Disable_ttip:
+          "This event type will automatically publish at the setup time. This event type is NOT allowed to publish before that start time.",
         EventEditor_Publish_ttip:
           "Publishing the event will save any changes and make the event visible as controlled by the visibility settings.",
         EventEditor_Publish_Notice:
@@ -1333,44 +1337,47 @@
           "Artwork must be at least 1920x800 (height x width). It can be larger in any or both dimensions.",
         AppRight_apprighteditinfo: "Edit App Metadata",
         AppRight_apprighteditinfo_Tooltip:
-          "Can upload depots, test Steamworks features, define achievements, leaderboards, post trading cards, etc.)",
+          'Grants permission to upload depots, test Steamworks features, define achievements, leaderboards, post trading cards, etc. Also grants "Officer" access and designation for the Steam Community for any Applications in the group.',
         AppRight_apprightpublish: "Publish App Changes To Steam",
         AppRight_apprightpublish_Tooltip:
-          "Can publish changes made in the Steamworks Developer site for your title",
+          "Grants permission to publish changes made in the Technical Tools > Edit Steamworks Settings section of the Steamworks Developer site for your title.",
         AppRight_apprightviewerrordata: "View Error Data",
         AppRight_apprightviewerrordata_Tooltip:
-          "Can view error reports for your title (if your title is integrated with Steamworks error reporting system)",
+          "Grants permission to view error reports for your title (if your title is integrated with Steamworks error reporting system).",
         AppRight_apprightdownload: "Download Games Via Steam",
         AppRight_apprightuploadcdkeys: "Upload CD Keys",
         AppRight_apprightgeneratecdkeys: "Generate Steam Keys",
         AppRight_apprightgeneratecdkeys_Tooltip:
-          "Can request Steam Key batches for your title",
+          "Can request CD Key batches for your application or upload third-party keys.",
         AppRight_apprightviewfinancials: "View Financial Info",
         AppRight_apprightviewfinancials_Tooltip:
-          "Can view sales and download data for your title",
+          "Can view sales and download data for your applications and packages.",
         AppRight_apprightmanageceg: "Manage Game CEG",
         AppRight_apprightmanageceg_Tooltip:
-          "Can manage CEG settings and integration for your title",
+          "Can manage CEG settings and integration for your title.",
         AppRight_apprightmanagesigning: "Manage Signing",
         AppRight_apprightmanagesigning_Tooltip:
-          "Can manage digital signing for your title",
+          "Can manage digital signing for your title. This will enable management of Anti-Cheat and SDK Auth settings for an Application.",
         AppRight_apprightmanagecdkeys: "Manage CD Keys",
-        AppRight_apprighteditmarketing: "Edit App Marketing Data",
+        AppRight_apprighteditmarketing: "Edit Store Localization Data",
         AppRight_apprighteditmarketing_Tooltip:
-          "Can submit store page data such as game description, branding images, and videos",
+          'Grants permission to edit and publish store page data such as game description, branding images, and videos. Also includes access to marketing tools like visibility rounds. Note: This is a subset of the "Edit App Marketing Data" functionality.',
         AppRight_apprighteconomysupport: "Economy/Workshop Support",
         AppRight_apprighteconomysupport_Tooltip:
-          "Allows the user to view/grant economy items in the partner site economy support tool",
+          "Allows the user to view/grant economy items in the partner site economy support tool.",
         AppRight_apprighteconomysupportsupervisor:
           "Economy/Workshop Supervisor",
         AppRight_apprighteconomysupportsupervisor_Tooltip:
-          "Currently same functionality as Support just above",
+          "Currently same functionality as Economy/Workshop Support just above.",
         AppRight_appmanagepricing: "Manage pricing and discounts",
         AppRight_appmanagepricing_Tooltip:
-          "Allows submitting package price proposals and scheduling discounts",
+          "Allows the user to suggest pricing changes and opt in to discounts and promotions.",
         AppRight_apprightbroadcastlive: "Broadcast Live",
         AppRight_apprightbroadcastlive_Tooltip:
-          "Allows broadcasting official live streams",
+          "Allows the user to broadcast official live streams for your applications.",
+        AppRight_apprightviewmarketingtraffic: "View Marketing Traffic Data",
+        AppRight_apprightviewmarketingtraffic_Tooltip:
+          "Can view Steam Store, Community, and Platform navigation traffic data for your title",
         PubRight_pubrightmanageusers: "Manage Users",
         PubRight_pubrightmanageusers_Tooltip:
           "Publisher-wide: these users can add and promote other users",
@@ -1663,6 +1670,8 @@
         Sale_CapsulesPerRow_4: "4",
         Sale_CapsulesPerRow_5: "5",
         Sale_CapsulesPerRow_Pattern_2343: "Vary per row: 2/3/4/3",
+        Sale_CapsulesPerRow_Pattern_3t23: "Vary per row: 3 Tall/2/3",
+        Sale_CapsulesPerRow_Pattern_5t: "5 Tall",
         Sale_VOInternalSection_SubscriptionPricing: "Subscription - Pricing",
         Sale_SectionType_EventSchedule: "Event Schedule",
         Sale_VOInternalSection_TabContents: "Tab Contents",
@@ -2047,7 +2056,29 @@
         FacetedBrowseEditor_SortFacetValuesText: "Sort facet values",
         FacetedBrowseEditor_SortFacetValues_Name: "By name",
         FacetedBrowseEditor_SortFacetValues_MatchCount: "By match count",
-        FacetedBrowseEditor_SortFacetValues_Manual: "Manually"
+        FacetedBrowseEditor_SortFacetValues_Manual: "Manually",
+        FacetedBrowseEditor_Tooltip_FacetValue_Name:
+          'Name of this facet value. A facet value is an individual option that the user can click to filter the games shown in this section. For example, "First-Person".',
+        FacetedBrowseEditor_Tooltip_FacetValue_Subtitle:
+          'Optional text to show to the right of this facet value. Use this to provide a very brief explanation of a facet value. For example, "1-2 hours" for a facet value that applies to games with a short playtime.',
+        FacetedBrowseEditor_Tooltip_Facet_Name:
+          'Name of this facet. A facet is a group of related options, each of which the user can click to filter the games shown in this section. For example, "Genre".',
+        FacetedBrowseEditor_Tooltip_AutoGenerate:
+          'Automatically populate the facets and facet values based on store tag categories, such as "Genre" and "Visuals & Viewpoint". After auto-generation, you can manually edit each facet and facet value as needed.',
+        FacetedBrowseEditor_Tooltip_PruneUnused:
+          "Remove any facet values that do not match any of the items in this section.",
+        FacetedBrowseEditor_Tooltip_MinMatches:
+          "Hide any facet values that do not match at least this many items from this section. This count is calculated after any tab filters are applied.",
+        FacetedBrowseEditor_Tooltip_MaxFacetValues:
+          'Show at most this many options under any facet. For example, don\'t show more than this many genres under a facet called "Genre".',
+        FacetedBrowseEditor_Tooltip_SortFacetValues:
+          "For each facet, sort facet values by this metric.",
+        FacetedBrowseEditor_Tooltip_SortFacetValues_ByName:
+          "Within each facet, sort facet values in alphabetical order of their name.",
+        FacetedBrowseEditor_Tooltip_SortFacetValues_ByCount:
+          'Within each facet, sort facet values in descending order of the number of items that match them. For example, under a facet called "Genre", "RPG" will appear before "Strategy" if there are more RPG games in this section than Strategy games.',
+        FacetedBrowseEditor_Tooltip_SortFacetValues_Manual:
+          "Don't sort facet values. They will be shown in the order defined in the lists below."
       };
     }
   }

@@ -228,13 +228,16 @@ textarea.forumtopic_reply_textarea {
 	line-height: 48px;
 }
 
-.forum_topic_reply_count {
+.forum_topic_reply_count,
+.forum_topic_award_count {
 	font-size: 14px;
 	float: right;
 	color: #c6d4df;
+	padding-left: 5px;
 }
 
-.forum_topic_reply_count img {
+.forum_topic_reply_count img,
+.forum_topic_award_count img {
 	vertical-align: middle;
 }
 
@@ -243,6 +246,9 @@ textarea.forumtopic_reply_textarea {
 	float: right;
 	padding-right: 28px;
 	color: #8ED1F9;
+}
+.forum_topic_details.has_reactions .forum_topic_lastpost {
+	padding-right: 2px;
 }
 .forum_topic:hover .forum_topic_lastpost {
 	color: #70beed;
@@ -417,6 +423,11 @@ textarea.forumtopic_reply_textarea {
 	line-height: 40px;
 }
 
+.forum_op .community_award_ctn,
+.commentthread_comment_content .community_award_ctn {
+	display: inline-flex;
+}
+
 .forum_op_author {
 	font-size: 14px;
 	color: #ffffff;
@@ -437,6 +448,10 @@ textarea.forumtopic_reply_textarea {
 	padding-right: 0px;
 	background: none;
 }
+.forumtopic_comments .commentthread_comment_actions {
+	margin-right: 0px;
+}
+
 
 .commentthread_moderatormessages {
 	display: inline-block;
@@ -757,14 +772,16 @@ a.commentthread_author_officer {
 }
 
 .forum_comment_action_trigger {
-	display: none;
+	margin-top: 5px;
 	float: right;
+	visibility: hidden;
 }
 
 .forum_comment_actions {
+	margin-top: 5px;
 	float: right;
-
 	visibility: hidden;
+	line-height: 28px;
 }
 
 a.forum_comment_action {
@@ -782,9 +799,29 @@ a.forum_comment_action {
 	margin-left: 2px;
 }
 
-
-.commentthread_comment:hover .forum_comment_actions, .forum_op:hover .forum_comment_actions {
-	visibility: visible;
+.forum_comment_action_menu {
+	background-color: #172436;
+	padding: 2px;
+	display: flex;
+	flex-direction: column;
+}
+.forum_comment_action_menu > .forum_comment_action.reply,
+.forum_comment_action_menu > .forum_comment_action.award
+{
+	display: none;
+}
+.forum_comment_action_menu > .forum_comment_action {
+	margin-left: 0px;
+	margin-bottom: 2px;
+	width: calc( 100% - 5px );
+	text-align: left;
+	padding-right: 5px;
+}
+.forum_comment_action_menu > .forum_comment_action:last-child {
+	 margin-bottom: 0px;
+}
+.forum_comment_action_menu > .forum_comment_action > img {
+	 padding: 0px 5px 0px 5px;
 }
 
 @media screen and (max-width: 910px)
@@ -792,27 +829,10 @@ a.forum_comment_action {
 
 	html.responsive .forum_comment_action_trigger {
 		display: block;
+		visibility: visible;
 	}
 
 	html.responsive .forum_comment_actions {
-		visibility: visible;
-		display: none;
-
-		position: absolute;
-		z-index: 2;
-		top: 4px;
-		right: 4px;
-		background: #182433;
-		padding: 4px;
-
-		box-shadow: 0 0 4px 0 #000000;
-	}
-
-	html.responsive .forum_comment_actions_expanded .forum_comment_actions {
-		display: block;
-	}
-
-	html.responsive .forum_comment_actions_expanded .forum_comment_action_trigger {
 		display: none;
 	}
 
@@ -820,44 +840,20 @@ a.forum_comment_action {
 		opacity: 1;
 	}
 
-	html.responsive .forum_comment_action {
-		margin-left: 8px;
-	}
-
-	html.responsive .forum_comment_action:first-child {
-		margin-left: 0;
-	}
-
-	html.responsive .forum_comment_actions .actionlink {
+	html.responsive .forum_comment_action_menu > .forum_comment_action.reply,
+	html.responsive .forum_comment_action_menu > .forum_comment_action.award
+	{
 		display: inline;
-		visibility: visible;
 	}
 
 }
 
 	html.responsive.touch .forum_comment_action_trigger {
 		display: block;
+		visibility: visible;
 	}
 
 	html.responsive.touch .forum_comment_actions {
-		visibility: visible;
-		display: none;
-
-		position: absolute;
-		z-index: 2;
-		top: 4px;
-		right: 4px;
-		background: #182433;
-		padding: 4px;
-
-		box-shadow: 0 0 4px 0 #000000;
-	}
-
-	html.responsive.touch .forum_comment_actions_expanded .forum_comment_actions {
-		display: block;
-	}
-
-	html.responsive.touch .forum_comment_actions_expanded .forum_comment_action_trigger {
 		display: none;
 	}
 
@@ -865,19 +861,16 @@ a.forum_comment_action {
 		opacity: 1;
 	}
 
-	html.responsive.touch .forum_comment_action {
-		margin-left: 8px;
-	}
-
-	html.responsive.touch .forum_comment_action:first-child {
-		margin-left: 0;
-	}
-
-	html.responsive.touch .forum_comment_actions .actionlink {
+	html.responsive.touch .forum_comment_action_menu > .forum_comment_action.reply,
+	html.responsive.touch .forum_comment_action_menu > .forum_comment_action.award
+	{
 		display: inline;
-		visibility: visible;
 	}
 
+.commentthread_comment:hover .forum_comment_actions, .commentthread_comment:hover .forum_comment_action_trigger,
+.forum_op:hover .forum_comment_actions, .forum_op:hover .forum_comment_action_trigger {
+	visibility: visible;
+}
 
 a.forum_comment_action img {
 	vertical-align: middle;

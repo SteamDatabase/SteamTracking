@@ -2520,42 +2520,118 @@ body.v6 #footer_nav .popup_menu .hr{
 	line-height: 14px;
 }
 
+/* community awards hover */
 .reaction_award_hover {
 	font-family: "Motiva Sans", sans-serif;
 	width: 150px;
 	background: #DADEE0;
 }
-.community_tooltip.reaction_award_hover,
-.store_tooltip.reaction_award_hover {
-	padding: 0px;
+	.community_tooltip.reaction_award_hover,
+	.store_tooltip.reaction_award_hover {
+		padding: 0px;
+	}
+	.reaction_award_hover .reaction_award_icon {
+		background-color: #474C52;
+		border-radius: 3px 3px 0 0;
+		padding-top: 5px;
+		text-align: center;
+	}
+	.reaction_award_hover .reaction_award_icon > img {
+		height: 100px;
+	}
+	.reaction_award_hover .reaction_award_info {
+		padding: 10px;
+		text-align: center;
+	}
+	.reaction_award_hover .reaction_award_name {
+		font-weight: bold;
+		font-size: 12px;
+		color: #0A212E;
+	}
+	.reaction_award_hover .reaction_award_count {
+		font-size: 10px;
+		color: #0A212E;
+	}
+	.reaction_award_hover .reaction_award_points {
+		padding-top: 5px;
+		font-size: 10px;
+		color: #737678;
+	}
+
+/* community awards */
+.community_award_btn_icon {
+	vertical-align: middle;
+	margin-right: 5px;
 }
-.reaction_award_hover .reaction_award_icon {
-	background-color: #474C52;
-	border-radius: 3px 3px 0 0;
-	padding-top: 5px;
-	text-align: center;
+
+.community_award_ctn {
+	display: flex;
+	flex-wrap: wrap;
 }
-.reaction_award_hover .reaction_award_icon > img {
-	height: 100px;
+
+.community_award {
+	position: relative;
+	background-color: rgba(0, 0, 0, 0.2);
+	border-radius: 3px;
+	padding: 0px 2px 0px 2px;
+	margin: 0 2px;
+	line-height: 30px;
+	height: 30px;
+	cursor: pointer;
 }
-.reaction_award_hover .reaction_award_info {
-	padding: 10px;
-	text-align: center;
+.community_award:hover {
+	background-color: rgba(255, 255, 255, 0.2);
 }
-.reaction_award_hover .reaction_award_name {
+
+.community_award_icon {
+	width: 20px;
+	height: 20px;
+	vertical-align: middle;
+}
+.community_award_count {
+	color: #66c0f4;
+	font-size: 13px;
+	vertical-align: middle;
 	font-weight: bold;
-	font-size: 12px;
-	color: #0A212E;
+	padding: 3px;
 }
-.reaction_award_hover .reaction_award_count {
-	font-size: 10px;
-	color: #0A212E;
+.community_award_count.hidden {
+	display: none;
 }
-.reaction_award_hover .reaction_award_points {
-	padding-top: 5px;
-	font-size: 10px;
-	color: #737678;
+
+.community_tooltip.community_award_tooltip {
+	background: #141c27;
+	color: #7cc5fb;
 }
+
+/* hover */
+.community_award_ctn_hover {
+	display: inline-block;
+}
+	.community_award_ctn_hover .community_award {
+		display: inline-block;
+		background-color: rgba(255, 255, 255, 0.05);
+		border-radius: 5px;
+		padding: 3px;
+		margin: 1px;
+		line-height: unset;
+		height: unset;
+	}
+	.community_award_ctn_hover .community_award .community_award_icon {
+		width: 16px;
+		height: 16px;
+		vertical-align: middle;
+	}
+	.community_award_ctn_hover .community_award .community_award_count {
+		color: #66c0f4;
+		font-size: 12px;
+		vertical-align: middle;
+		font-weight: bold;
+		padding: 0;
+	}
+	.community_award_ctn_hover .community_award .community_award_count.hidden {
+		display: none;
+	}
 
 @media screen and (max-width: 910px)
 {

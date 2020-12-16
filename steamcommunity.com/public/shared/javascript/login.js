@@ -410,7 +410,7 @@ CLoginPromptManager.prototype.OnAuthCodeResponse = function( results, authCode )
 	$J.post(this.m_strBaseURL + 'dologin/', this.GetParameters(rgParameters))
 		.done($J.proxy(this.OnLoginResponse, this))
 		.fail(function () {
-			ShowAlertDialog('Error', 'There was a problem communicating with the Steam servers.  Please try again later.');
+			ShowAlertDialog('Error', 'There was a problem communicating with the Steam servers.  Please try again later.' );
 
 			$J('#login_btn_signin').show();
 			$J('#login_btn_wait').hide();

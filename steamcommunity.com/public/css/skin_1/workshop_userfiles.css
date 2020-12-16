@@ -1749,7 +1749,6 @@ textarea {
 		height: auto;
 	}
 
-	html.responsive .workshopBrowseRow,
 	html.responsive .workshopItem {
 		min-height: 0;
 	}

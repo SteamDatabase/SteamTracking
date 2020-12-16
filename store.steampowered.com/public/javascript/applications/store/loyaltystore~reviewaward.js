@@ -9,40 +9,40 @@
     OU48: function(e, t, r) {
       "use strict";
       r.d(t, "g", function() {
-        return c;
+        return d;
       }),
         r.d(t, "l", function() {
-          return m;
+          return b;
         }),
         r.d(t, "i", function() {
-          return y;
-        }),
-        r.d(t, "k", function() {
           return p;
         }),
-        r.d(t, "j", function() {
+        r.d(t, "k", function() {
           return B;
         }),
-        r.d(t, "a", function() {
+        r.d(t, "j", function() {
           return _;
         }),
-        r.d(t, "f", function() {
+        r.d(t, "a", function() {
           return v;
         }),
+        r.d(t, "f", function() {
+          return R;
+        }),
         r.d(t, "e", function() {
-          return C;
+          return O;
         }),
         r.d(t, "d", function() {
           return L;
         }),
         r.d(t, "c", function() {
-          return P;
-        }),
-        r.d(t, "h", function() {
           return x;
         }),
-        r.d(t, "b", function() {
+        r.d(t, "h", function() {
           return G;
+        }),
+        r.d(t, "b", function() {
+          return Z;
         }),
         r.d(t, "m", function() {
           return n;
@@ -53,7 +53,9 @@
         u = o.Message;
       var n,
         s,
-        c = (function(r) {
+        c,
+        l,
+        d = (function(r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -114,7 +116,7 @@
             n
           );
         })(u),
-        l = (function(r) {
+        f = (function(r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -132,7 +134,7 @@
                   (n.sm_m = {
                     proto: n,
                     fields: {
-                      summary: { n: 1, c: d },
+                      summary: { n: 1, c: m },
                       timestamp_updated: {
                         n: 2,
                         br: a.d.readUint32,
@@ -181,7 +183,7 @@
             n
           );
         })(u),
-        d = (function(r) {
+        m = (function(r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -252,7 +254,7 @@
             n
           );
         })(u),
-        f = (function(r) {
+        y = (function(r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -313,7 +315,7 @@
             n
           );
         })(u),
-        m = (function(r) {
+        b = (function(r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -370,7 +372,7 @@
             n
           );
         })(u),
-        y = (function(r) {
+        p = (function(r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -433,7 +435,7 @@
             n
           );
         })(u),
-        b = (function(r) {
+        w = (function(r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -501,7 +503,7 @@
             n
           );
         })(u),
-        p = (function(r) {
+        B = (function(r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -562,7 +564,7 @@
             n
           );
         })(u),
-        w = (function(r) {
+        h = (function(r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -623,7 +625,7 @@
             n
           );
         })(u),
-        B = (function(r) {
+        _ = (function(r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -689,7 +691,7 @@
             n
           );
         })(u),
-        h = (function(r) {
+        g = (function(r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -725,7 +727,7 @@
             n
           );
         })(u),
-        _ = (function(r) {
+        v = (function(r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -796,7 +798,7 @@
             n
           );
         })(u),
-        g = (function(r) {
+        M = (function(r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -832,7 +834,7 @@
             n
           );
         })(u),
-        v = (function(r) {
+        R = (function(r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -898,7 +900,7 @@
             n
           );
         })(u),
-        M = (function(r) {
+        z = (function(r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -961,13 +963,13 @@
             n
           );
         })(u),
-        R = (function(r) {
+        C = (function(r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
             return (
               n.prototype.total || a.a(n.M()),
-              u.initialize(t, e, 0, -1, [1, 2, 3, 4], null),
+              u.initialize(t, e, 0, -1, [1, 2, 3, 4, 5, 6], null),
               t
             );
           }
@@ -979,27 +981,29 @@
                   (n.sm_m = {
                     proto: n,
                     fields: {
-                      total: { n: 1, c: z, r: !0, q: !0 },
-                      user_reviews: { n: 2, c: z, r: !0, q: !0 },
-                      ugc: { n: 3, c: z, r: !0, q: !0 },
-                      profile: { n: 4, c: z, r: !0, q: !0 },
+                      total: { n: 1, c: j, r: !0, q: !0 },
+                      user_reviews: { n: 2, c: j, r: !0, q: !0 },
+                      ugc: { n: 3, c: j, r: !0, q: !0 },
+                      profile: { n: 4, c: j, r: !0, q: !0 },
+                      forum_topics: { n: 5, c: j, r: !0, q: !0 },
+                      comments: { n: 6, c: j, r: !0, q: !0 },
                       total_given: {
-                        n: 5,
+                        n: 7,
                         br: a.d.readUint32,
                         bw: a.h.writeUint32
                       },
                       total_received: {
-                        n: 6,
+                        n: 8,
                         br: a.d.readUint32,
                         bw: a.h.writeUint32
                       },
                       total_points_given: {
-                        n: 7,
+                        n: 9,
                         br: a.d.readInt64String,
                         bw: a.h.writeInt64String
                       },
                       total_points_received: {
-                        n: 8,
+                        n: 10,
                         br: a.d.readInt64String,
                         bw: a.h.writeInt64String
                       }
@@ -1041,7 +1045,7 @@
             n
           );
         })(u),
-        z = (function(r) {
+        j = (function(r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -1114,7 +1118,7 @@
             n
           );
         })(u),
-        C = (function(r) {
+        O = (function(r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -1150,7 +1154,7 @@
             n
           );
         })(u),
-        j = (function(r) {
+        F = (function(r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -1167,7 +1171,7 @@
                 n.sm_m ||
                   (n.sm_m = {
                     proto: n,
-                    fields: { reactions: { n: 3, c: O, r: !0, q: !0 } }
+                    fields: { reactions: { n: 3, c: S, r: !0, q: !0 } }
                   }),
                 n.sm_m
               );
@@ -1205,7 +1209,7 @@
             n
           );
         })(u),
-        O = (function(r) {
+        S = (function(r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -1286,7 +1290,7 @@
             n
           );
         })(u),
-        F = (function(r) {
+        W = (function(r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -1437,7 +1441,7 @@
             n
           );
         })(u),
-        S = (function(r) {
+        U = (function(r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -1454,7 +1458,7 @@
                 n.sm_m ||
                   (n.sm_m = {
                     proto: n,
-                    fields: { apps: { n: 1, c: W, r: !0, q: !0 } }
+                    fields: { apps: { n: 1, c: I, r: !0, q: !0 } }
                   }),
                 n.sm_m
               );
@@ -1492,7 +1496,7 @@
             n
           );
         })(u),
-        W = (function(r) {
+        I = (function(r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -1560,7 +1564,7 @@
             n
           );
         })(u),
-        U = (function(r) {
+        T = (function(r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -1742,7 +1746,7 @@
                         bw: a.h.writeString
                       },
                       animated: { n: 8, br: a.d.readBool, bw: a.h.writeBool },
-                      badge_data: { n: 9, c: T, r: !0, q: !0 }
+                      badge_data: { n: 9, c: P, r: !0, q: !0 }
                     }
                   }),
                 n.sm_m
@@ -1781,7 +1785,7 @@
             n
           );
         })(u),
-        T = (function(r) {
+        P = (function(r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -1839,7 +1843,7 @@
             n
           );
         })(u),
-        I = (function(r) {
+        q = (function(r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -1918,7 +1922,7 @@
             n
           );
         })(u),
-        P = (function(r) {
+        x = (function(r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -1954,7 +1958,7 @@
             n
           );
         })(u),
-        q = (function(r) {
+        N = (function(r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -1971,7 +1975,7 @@
                 n.sm_m ||
                   (n.sm_m = {
                     proto: n,
-                    fields: { bonuses: { n: 1, c: I, r: !0, q: !0 } }
+                    fields: { bonuses: { n: 1, c: q, r: !0, q: !0 } }
                   }),
                 n.sm_m
               );
@@ -2009,7 +2013,7 @@
             n
           );
         })(u),
-        x = (function(r) {
+        G = (function(r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -2140,7 +2144,7 @@
             n
           );
         })(u),
-        N = (function(r) {
+        A = (function(r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -2158,7 +2162,7 @@
                   (n.sm_m = {
                     proto: n,
                     fields: {
-                      definitions: { n: 1, c: U, r: !0, q: !0 },
+                      definitions: { n: 1, c: T, r: !0, q: !0 },
                       total_count: {
                         n: 2,
                         br: a.d.readInt32,
@@ -2208,7 +2212,7 @@
             n
           );
         })(u),
-        G = (function(r) {
+        Z = (function(r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -2225,7 +2229,7 @@
                 n.sm_m ||
                   (n.sm_m = {
                     proto: n,
-                    fields: { requests: { n: 1, c: x, r: !0, q: !0 } }
+                    fields: { requests: { n: 1, c: G, r: !0, q: !0 } }
                   }),
                 n.sm_m
               );
@@ -2263,7 +2267,7 @@
             n
           );
         })(u),
-        A = (function(r) {
+        k = (function(r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -2280,7 +2284,7 @@
                 n.sm_m ||
                   (n.sm_m = {
                     proto: n,
-                    fields: { responses: { n: 1, c: Z, r: !0, q: !0 } }
+                    fields: { responses: { n: 1, c: H, r: !0, q: !0 } }
                   }),
                 n.sm_m
               );
@@ -2318,7 +2322,7 @@
             n
           );
         })(u),
-        Z = (function(r) {
+        H = (function(r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -2337,7 +2341,7 @@
                     proto: n,
                     fields: {
                       eresult: { n: 1, br: a.d.readInt32, bw: a.h.writeInt32 },
-                      response: { n: 2, c: N }
+                      response: { n: 2, c: A }
                     }
                   }),
                 n.sm_m
@@ -2375,32 +2379,162 @@
             }),
             n
           );
+        })(u),
+        D = (function(r) {
+          function n(e) {
+            void 0 === e && (e = null);
+            var t = r.call(this) || this;
+            return (
+              n.prototype.communityitemid || a.a(n.M()),
+              u.initialize(t, e, 0, -1, void 0, null),
+              t
+            );
+          }
+          return (
+            Object(i.d)(n, r),
+            (n.M = function() {
+              return (
+                n.sm_m ||
+                  (n.sm_m = {
+                    proto: n,
+                    fields: {
+                      communityitemid: {
+                        n: 1,
+                        br: a.d.readUint64String,
+                        bw: a.h.writeUint64String
+                      },
+                      next_claim_time: {
+                        n: 2,
+                        br: a.d.readUint32,
+                        bw: a.h.writeUint32
+                      },
+                      reward_item: { n: 3, c: T }
+                    }
+                  }),
+                n.sm_m
+              );
+            }),
+            (n.MBF = function() {
+              return n.sm_mbf || (n.sm_mbf = a.e(n.M())), n.sm_mbf;
+            }),
+            (n.prototype.toObject = function(e) {
+              return void 0 === e && (e = !1), n.toObject(e, this);
+            }),
+            (n.toObject = function(e, t) {
+              return a.g(n.M(), e, t);
+            }),
+            (n.fromObject = function(e) {
+              return a.c(n.M(), e);
+            }),
+            (n.deserializeBinary = function(e) {
+              var t = new o.BinaryReader(e),
+                r = new n();
+              return n.deserializeBinaryFromReader(r, t);
+            }),
+            (n.deserializeBinaryFromReader = function(e, t) {
+              return a.b(n.MBF(), e, t);
+            }),
+            (n.prototype.serializeBinary = function() {
+              var e = new o.BinaryWriter();
+              return n.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            }),
+            (n.serializeBinaryToWriter = function(e, t) {
+              a.f(n.M(), e, t);
+            }),
+            (n.prototype.getClassName = function() {
+              return "CSaleItemRewards_ClaimItem_Response";
+            }),
+            n
+          );
+        })(u),
+        Q = (function(r) {
+          function n(e) {
+            void 0 === e && (e = null);
+            var t = r.call(this) || this;
+            return (
+              n.prototype.can_claim || a.a(n.M()),
+              u.initialize(t, e, 0, -1, void 0, null),
+              t
+            );
+          }
+          return (
+            Object(i.d)(n, r),
+            (n.M = function() {
+              return (
+                n.sm_m ||
+                  (n.sm_m = {
+                    proto: n,
+                    fields: {
+                      can_claim: { n: 1, br: a.d.readBool, bw: a.h.writeBool },
+                      next_claim_time: {
+                        n: 2,
+                        br: a.d.readUint32,
+                        bw: a.h.writeUint32
+                      },
+                      reward_item: { n: 3, c: T }
+                    }
+                  }),
+                n.sm_m
+              );
+            }),
+            (n.MBF = function() {
+              return n.sm_mbf || (n.sm_mbf = a.e(n.M())), n.sm_mbf;
+            }),
+            (n.prototype.toObject = function(e) {
+              return void 0 === e && (e = !1), n.toObject(e, this);
+            }),
+            (n.toObject = function(e, t) {
+              return a.g(n.M(), e, t);
+            }),
+            (n.fromObject = function(e) {
+              return a.c(n.M(), e);
+            }),
+            (n.deserializeBinary = function(e) {
+              var t = new o.BinaryReader(e),
+                r = new n();
+              return n.deserializeBinaryFromReader(r, t);
+            }),
+            (n.deserializeBinaryFromReader = function(e, t) {
+              return a.b(n.MBF(), e, t);
+            }),
+            (n.prototype.serializeBinary = function() {
+              var e = new o.BinaryWriter();
+              return n.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            }),
+            (n.serializeBinaryToWriter = function(e, t) {
+              a.f(n.M(), e, t);
+            }),
+            (n.prototype.getClassName = function() {
+              return "CSaleItemRewards_CanClaimItem_Response";
+            }),
+            n
+          );
         })(u);
       ((s = n = n || {}).GetPointsForSpend = function(e, t) {
-        return e.SendMsg("LoyaltyRewards.GetPointsForSpend#1", t, f, {
+        return e.SendMsg("LoyaltyRewards.GetPointsForSpend#1", t, y, {
           bConstMethod: !0,
           ePrivilege: 0,
           eWebAPIKeyRequirement: 1
         });
       }),
         (s.GetSummary = function(e, t) {
-          return e.SendMsg("LoyaltyRewards.GetSummary#1", t, l, {
+          return e.SendMsg("LoyaltyRewards.GetSummary#1", t, f, {
             bConstMethod: !0,
             ePrivilege: 1
           });
         }),
         (s.RedeemPoints = function(e, t) {
-          return e.SendMsg("LoyaltyRewards.RedeemPoints#1", t, b, {
+          return e.SendMsg("LoyaltyRewards.RedeemPoints#1", t, w, {
             ePrivilege: 1
           });
         }),
         (s.RedeemPointsForBadgeLevel = function(e, t) {
-          return e.SendMsg("LoyaltyRewards.RedeemPointsForBadgeLevel#1", t, b, {
+          return e.SendMsg("LoyaltyRewards.RedeemPointsForBadgeLevel#1", t, w, {
             ePrivilege: 1
           });
         }),
         (s.RedeemPointsToUpgradeItem = function(e, t) {
-          return e.SendMsg("LoyaltyRewards.RedeemPointsToUpgradeItem#1", t, b, {
+          return e.SendMsg("LoyaltyRewards.RedeemPointsToUpgradeItem#1", t, w, {
             ePrivilege: 1
           });
         }),
@@ -2408,7 +2542,7 @@
           return e.SendMsg(
             "LoyaltyRewards.RedeemPointsForProfileCustomization#1",
             t,
-            w,
+            h,
             { ePrivilege: 1 }
           );
         }),
@@ -2416,17 +2550,17 @@
           return e.SendMsg(
             "LoyaltyRewards.RedeemPointsForProfileCustomizationUpgrade#1",
             t,
-            h,
+            g,
             { ePrivilege: 1 }
           );
         }),
         (s.AddReaction = function(e, t) {
-          return e.SendMsg("LoyaltyRewards.AddReaction#1", t, g, {
+          return e.SendMsg("LoyaltyRewards.AddReaction#1", t, M, {
             ePrivilege: 1
           });
         }),
         (s.GetReactions = function(e, t) {
-          return e.SendMsg("LoyaltyRewards.GetReactions#1", t, M, {
+          return e.SendMsg("LoyaltyRewards.GetReactions#1", t, z, {
             bConstMethod: !0,
             ePrivilege: 1
           });
@@ -2435,12 +2569,12 @@
           return e.SendMsg(
             "LoyaltyRewards.GetReactionsSummaryForUser#1",
             t,
-            R,
+            C,
             { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 }
           );
         }),
         (s.GetReactionConfig = function(e, t) {
-          return e.SendMsg("LoyaltyRewards.GetReactionConfig#1", t, j, {
+          return e.SendMsg("LoyaltyRewards.GetReactionConfig#1", t, F, {
             bConstMethod: !0,
             ePrivilege: 0,
             eWebAPIKeyRequirement: 1
@@ -2450,36 +2584,47 @@
           return e.SendMsg(
             "LoyaltyRewards.GetProfileCustomizationsConfig#1",
             t,
-            F,
+            W,
             { bConstMethod: !0, ePrivilege: 0, eWebAPIKeyRequirement: 1 }
           );
         }),
         (s.GetEligibleApps = function(e, t) {
-          return e.SendMsg("LoyaltyRewards.GetEligibleApps#1", t, S, {
+          return e.SendMsg("LoyaltyRewards.GetEligibleApps#1", t, U, {
             bConstMethod: !0,
             ePrivilege: 0,
             eWebAPIKeyRequirement: 1
           });
         }),
         (s.GetActivePurchaseBonuses = function(e, t) {
-          return e.SendMsg("LoyaltyRewards.GetActivePurchaseBonuses#1", t, q, {
+          return e.SendMsg("LoyaltyRewards.GetActivePurchaseBonuses#1", t, N, {
             bConstMethod: !0,
             ePrivilege: 2,
             eWebAPIKeyRequirement: 1
           });
         }),
         (s.QueryRewardItems = function(e, t) {
-          return e.SendMsg("LoyaltyRewards.QueryRewardItems#1", t, N, {
+          return e.SendMsg("LoyaltyRewards.QueryRewardItems#1", t, A, {
             bConstMethod: !0,
             ePrivilege: 2,
             eWebAPIKeyRequirement: 1
           });
         }),
         (s.BatchedQueryRewardItems = function(e, t) {
-          return e.SendMsg("LoyaltyRewards.BatchedQueryRewardItems#1", t, A, {
+          return e.SendMsg("LoyaltyRewards.BatchedQueryRewardItems#1", t, k, {
             bConstMethod: !0,
             ePrivilege: 2,
             eWebAPIKeyRequirement: 1
+          });
+        }),
+        ((l = c = c || {}).ClaimItem = function(e, t) {
+          return e.SendMsg("SaleItemRewards.ClaimItem#1", t, D, {
+            ePrivilege: 1
+          });
+        }),
+        (l.CanClaimItem = function(e, t) {
+          return e.SendMsg("SaleItemRewards.CanClaimItem#1", t, Q, {
+            bConstMethod: !0,
+            ePrivilege: 1
           });
         });
     },
