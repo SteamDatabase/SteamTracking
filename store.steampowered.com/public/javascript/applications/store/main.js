@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6267225";
+var CLSTAMP = "6267822";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [38],
   {
@@ -54355,13 +54355,13 @@ var CLSTAMP = "6267225";
     "daJ/": function(e, t, n) {
       "use strict";
       n.d(t, "b", function() {
-        return Ut;
+        return qt;
       }),
         n.d(t, "a", function() {
-          return qt;
+          return Ht;
         }),
         n.d(t, "c", function() {
-          return $t;
+          return en;
         });
       var D = n("mrSG"),
         r = n("vDqi"),
@@ -55284,7 +55284,7 @@ var CLSTAMP = "6267225";
               return this.m_curDisplay;
             }),
             (t.prototype.ShowBrowseCurator = function(e) {
-              Ut()
+              qt()
                 ? t.Get().SetDisplay("browse_curator")
                 : Object(B.d)(N.createElement(Y, null), Object(L.m)(e));
             }),
@@ -55568,7 +55568,7 @@ var CLSTAMP = "6267225";
                 o = n.bIsCollapsed,
                 i = n.fnToggleCollapsed,
                 s = n.fnOnFilterChange,
-                c = Ut(),
+                c = qt(),
                 l = N.createElement(
                   "div",
                   {
@@ -55685,7 +55685,7 @@ var CLSTAMP = "6267225";
               { className: le.a.SidebarTitle },
               Object(x.n)("#EventCalendar_Title", N.createElement("br", null))
             ),
-            N.createElement(Re, { bIsUpcoming: n }),
+            N.createElement(ke, { bIsUpcoming: n }),
             N.createElement(fe, null),
             N.createElement(
               "div",
@@ -55694,7 +55694,7 @@ var CLSTAMP = "6267225";
                 label: Object(x.f)("#EventCalendar_UniversalSearch")
               })
             ),
-            N.createElement(Ge, { bIsUpcoming: n }),
+            N.createElement(Re, { bIsUpcoming: n }),
             N.createElement(
               "div",
               { className: le.a.FilterSettingsCtn },
@@ -55977,53 +55977,7 @@ var CLSTAMP = "6267225";
               )
             );
       }
-      function ze(e) {
-        var t = e.titleToken,
-          n = e.subtitleToken,
-          r = e.backgroundImg,
-          a = e.headerImg,
-          o = e.headerURL,
-          i = r ? { backgroundImage: r } : {};
-        return N.createElement(
-          "div",
-          {
-            className: Object(P.a)(
-              Ye.a.CommonHeaderStyles,
-              Ye.a.SimpleTitleHeaderCtn,
-              e.largeHeader && Ye.a.LargeHeader
-            ),
-            style: i
-          },
-          Boolean(o && a) &&
-            N.createElement(
-              "a",
-              { href: o, className: Ye.a.AppBannerLogoCtn },
-              N.createElement("img", { className: Ye.a.AppBannerLogo, src: a })
-            ),
-          Boolean(a && !o) &&
-            N.createElement(
-              "div",
-              { className: Ye.a.AppBannerLogoCtn },
-              N.createElement("img", { className: Ye.a.AppBannerLogo, src: a })
-            ),
-          N.createElement(
-            "div",
-            { className: Ye.a.SimpleTitleCtn },
-            N.createElement(
-              "div",
-              { className: Ye.a.Title },
-              t.startsWith("#") ? Object(x.f)(t) : t
-            ),
-            n &&
-              N.createElement(
-                "div",
-                { className: Ye.a.Subtitle },
-                n.startsWith("#") ? Object(x.f)(n) : n
-              )
-          )
-        );
-      }
-      var ke = (function(t) {
+      var ze = (function(t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (e.state = { bSearchExpanded: !1 }), e;
@@ -56107,7 +56061,7 @@ var CLSTAMP = "6267225";
             (e = Object(D.c)([a.a], e))
           );
         })(N.Component),
-        Re = (function(e) {
+        ke = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -56148,7 +56102,7 @@ var CLSTAMP = "6267225";
             (t = Object(D.c)([a.a], t))
           );
         })(N.Component),
-        Ge = (function(e) {
+        Re = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -56183,14 +56137,14 @@ var CLSTAMP = "6267225";
             t
           );
         })(N.Component),
-        Pe = n("MnIK"),
-        xe = n("yJqL"),
-        Fe = n("G24H"),
-        We = n.n(Fe),
-        Ue = n("Kw0F"),
-        qe = n("FKsz"),
-        He = n.n(qe),
-        Ve = (function(t) {
+        Ge = n("MnIK"),
+        Pe = n("yJqL"),
+        xe = n("G24H"),
+        Fe = n.n(xe),
+        We = n("Kw0F"),
+        Ue = n("FKsz"),
+        qe = n.n(Ue),
+        He = (function(t) {
           function n() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (
@@ -56282,7 +56236,7 @@ var CLSTAMP = "6267225";
                     .filter(function(e) {
                       return !I.a.BIsIgnoringCurator(e.clanAccountID);
                     });
-                Object(Ue.g)(o), t.push.apply(t, o);
+                Object(We.g)(o), t.push.apply(t, o);
               }
               return t;
             }),
@@ -56291,7 +56245,7 @@ var CLSTAMP = "6267225";
               return t
                 ? l.a.createElement(
                     "div",
-                    { className: He.a.ClanInfo, key: t.clanAccountID },
+                    { className: qe.a.ClanInfo, key: t.clanAccountID },
                     l.a.createElement(se, { clanInfo: t, layout: "icon" })
                   )
                 : null;
@@ -56311,32 +56265,32 @@ var CLSTAMP = "6267225";
                 null,
                 l.a.createElement(
                   "div",
-                  { className: He.a.FeedSuggestContainerBG },
+                  { className: qe.a.FeedSuggestContainerBG },
                   l.a.createElement(
                     "div",
-                    { className: He.a.FeedSuggestContainer },
+                    { className: qe.a.FeedSuggestContainer },
                     l.a.createElement(
                       "div",
-                      { className: He.a.FeedSuggestCaption },
+                      { className: qe.a.FeedSuggestCaption },
                       Object(x.f)("#EventCurator_FeedCaption_Long")
                     ),
                     e &&
                       l.a.createElement(
                         "div",
                         {
-                          className: He.a.DismissButton,
+                          className: qe.a.DismissButton,
                           onClick: this.OnDismissButton
                         },
                         l.a.createElement(G.W, null)
                       ),
                     l.a.createElement(
                       "div",
-                      { className: He.a.RowContainer, ref: this.m_ref },
+                      { className: qe.a.RowContainer, ref: this.m_ref },
                       o || l.a.createElement($.a, null),
                       l.a.createElement(
                         "div",
                         {
-                          className: He.a.BrowseMore,
+                          className: qe.a.BrowseMore,
                           onClick: ge.Get().ShowBrowseCurator
                         },
                         Object(x.f)("#EventCurator_BrowseMore")
@@ -56353,18 +56307,70 @@ var CLSTAMP = "6267225";
             n
           );
         })(l.a.Component),
-        Xe = n("4SZ2"),
-        Ye = n.n(Xe);
+        Ve = n("4SZ2"),
+        Xe = n.n(Ve),
+        Ye = function(e) {
+          var t = e.titleToken,
+            n = e.subtitleToken,
+            r = e.backgroundImg,
+            a = e.headerImg,
+            o = e.headerURL,
+            i = r ? { backgroundImage: r } : {};
+          return N.createElement(
+            "div",
+            {
+              className: Object(P.a)(
+                Xe.a.CommonHeaderStyles,
+                Xe.a.SimpleTitleHeaderCtn,
+                e.largeHeader && Xe.a.LargeHeader
+              ),
+              style: i
+            },
+            Boolean(o && a) &&
+              N.createElement(
+                "a",
+                { href: o, className: Xe.a.AppBannerLogoCtn },
+                N.createElement("img", {
+                  className: Xe.a.AppBannerLogo,
+                  src: a
+                })
+              ),
+            Boolean(a && !o) &&
+              N.createElement(
+                "div",
+                { className: Xe.a.AppBannerLogoCtn },
+                N.createElement("img", {
+                  className: Xe.a.AppBannerLogo,
+                  src: a
+                })
+              ),
+            N.createElement(
+              "div",
+              { className: Xe.a.SimpleTitleCtn },
+              N.createElement(
+                "div",
+                { className: Xe.a.Title },
+                t.startsWith("#") ? Object(x.f)(t) : t
+              ),
+              n &&
+                N.createElement(
+                  "div",
+                  { className: Xe.a.Subtitle },
+                  n.startsWith("#") ? Object(x.f)(n) : n
+                )
+            )
+          );
+        };
       function Qe(e) {
         var r = Object(A.b)(e);
         return (
           Object(w.a)(!!r, "Must define collection " + e),
           {
             collection: e,
-            smallHeight: Number(Ye.a.simpleTitleSmallHeight),
-            largeHeight: Number(Ye.a.simpleTitleLargeHeight),
+            smallHeight: Number(Xe.a.simpleTitleSmallHeight),
+            largeHeight: Number(Xe.a.simpleTitleLargeHeight),
             component: function(e, t, n) {
-              return N.createElement(ze, {
+              return N.createElement(Ye, {
                 largeHeader: e,
                 titleToken: r.strHeaderTitle,
                 subtitleToken: r.strHeaderSubtitle,
@@ -56375,42 +56381,50 @@ var CLSTAMP = "6267225";
           }
         );
       }
-      var Ke,
-        Ze,
-        Je = [Qe(A.a.Press), Qe(A.a.Halloween)],
-        $e = n("uuth"),
-        et = n("3+zv"),
-        tt = n("O0NR"),
-        nt = n("YLyR"),
-        rt = n("02Wr");
-      ((Ze = Ke = Ke || {})[(Ze.NotLoaded = 0)] = "NotLoaded"),
-        (Ze[(Ze.Loading = 1)] = "Loading"),
-        (Ze[(Ze.Loaded = 2)] = "Loaded");
-      var at = Ke.NotLoaded,
-        ot = [];
-      function it(t) {
+      var Ke = null;
+      function Ze() {
+        return (
+          Ke ||
+            ((Ke = new Array()).push(Qe(A.a.Press)),
+            Ke.push(Qe(A.a.Halloween))),
+          Ke
+        );
+      }
+      var Je,
+        $e,
+        et = n("uuth"),
+        tt = n("3+zv"),
+        nt = n("O0NR"),
+        rt = n("YLyR"),
+        at = n("02Wr");
+      (($e = Je = Je || {})[($e.NotLoaded = 0)] = "NotLoaded"),
+        ($e[($e.Loading = 1)] = "Loading"),
+        ($e[($e.Loaded = 2)] = "Loaded");
+      var ot = Je.NotLoaded,
+        it = [];
+      function st(t) {
         var e, n;
-        at != Ke.Loaded
-          ? (at == Ke.NotLoaded &&
+        ot != Je.Loaded
+          ? (ot == Je.NotLoaded &&
               (((e = document.createElement("script")).src =
                 "https://www.youtube.com/iframe_api"),
               (n = document.getElementsByTagName(
                 "script"
               )[0]).parentNode.insertBefore(e, n),
-              (window.onYouTubeIframeAPIReady = st)),
-            ot.findIndex(function(e) {
+              (window.onYouTubeIframeAPIReady = ct)),
+            it.findIndex(function(e) {
               return t == e;
-            }) < 0 && ot.push(t))
+            }) < 0 && it.push(t))
           : t();
       }
-      function st() {
-        at = Ke.Loaded;
-        for (var e = 0, t = ot; e < t.length; e++) {
+      function ct() {
+        ot = Je.Loaded;
+        for (var e = 0, t = it; e < t.length; e++) {
           (0, t[e])();
         }
-        ot = [];
+        it = [];
       }
-      function ct(e) {
+      function lt(e) {
         var t = ["maxresdefault", "mqdefault", "default"],
           n = N.useState(0),
           r = n[0],
@@ -56423,7 +56437,7 @@ var CLSTAMP = "6267225";
         );
         var o = N.useRef();
         if (e.altImgWithFallback && 0 < e.altImgWithFallback.length)
-          return N.createElement(rt.b, {
+          return N.createElement(at.b, {
             className: e.className,
             srcs: e.altImgWithFallback
           });
@@ -56446,19 +56460,19 @@ var CLSTAMP = "6267225";
           className: e.className
         });
       }
-      function lt(t) {
+      function ut(t) {
         var e = N.useState(!1),
           n = e[0],
           r = e[1];
         return (
           N.useEffect(
             function() {
-              t.preloadYoutubeScripts && it(function() {});
+              t.preloadYoutubeScripts && st(function() {});
             },
             [t.preloadYoutubeScripts]
           ),
           n
-            ? N.createElement(ut, Object(D.a)({}, t))
+            ? N.createElement(pt, Object(D.a)({}, t))
             : N.createElement(
                 "div",
                 {
@@ -56473,7 +56487,7 @@ var CLSTAMP = "6267225";
                       e.preventDefault();
                   }
                 },
-                N.createElement(ct, {
+                N.createElement(lt, {
                   className: "YoutubePreviewImage",
                   altImgWithFallback: t.altImgWithFallback,
                   altImg: t.altImg,
@@ -56492,7 +56506,7 @@ var CLSTAMP = "6267225";
               )
         );
       }
-      var ut = (function(n) {
+      var pt = (function(n) {
           function r(e) {
             var t = n.call(this, e) || this;
             return (
@@ -56511,7 +56525,7 @@ var CLSTAMP = "6267225";
               var e;
               this.DestroyPlayer(),
                 (e = this.OnYoutubeScriptsReady),
-                Ue.c(ot, e);
+                We.c(it, e);
             }),
             (r.prototype.shouldComponentUpdate = function(e, t) {
               if (!this.m_player) return !1;
@@ -56544,7 +56558,7 @@ var CLSTAMP = "6267225";
               this.m_playerContainer != e &&
                 ((this.m_playerContainer = e),
                 this.DestroyPlayer(),
-                this.m_playerContainer && it(this.OnYoutubeScriptsReady));
+                this.m_playerContainer && st(this.OnYoutubeScriptsReady));
             }),
             (r.prototype.OnYoutubeScriptsReady = function() {
               this.CreatePlayer(this.props);
@@ -56632,7 +56646,7 @@ var CLSTAMP = "6267225";
                 N.createElement($.a, { className: "YoutubePlayerThrobber" })
               );
               return this.props.autopause
-                ? N.createElement($e.a, { onLeave: this.OnPlayerLeftView }, e)
+                ? N.createElement(et.a, { onLeave: this.OnPlayerLeftView }, e)
                 : e;
             }),
             (r.s_nPlayerIndex = 0),
@@ -56646,14 +56660,14 @@ var CLSTAMP = "6267225";
             r
           );
         })(N.Component),
-        pt = n("N0Ye"),
-        dt = n("ylkE"),
-        mt = n("i6tc"),
-        ht = n.n(mt),
-        ft = n("TtDX"),
-        bt = n("y+6m"),
-        _t = n("IzPI"),
-        vt = (function(e) {
+        dt = n("N0Ye"),
+        mt = n("ylkE"),
+        ht = n("i6tc"),
+        ft = n.n(ht),
+        bt = n("TtDX"),
+        _t = n("y+6m"),
+        vt = n("IzPI"),
+        gt = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -56711,7 +56725,7 @@ var CLSTAMP = "6267225";
                   (r &&
                     e.push(
                       N.createElement(
-                        bt.d,
+                        _t.d,
                         {
                           key: "item-source-" + n + "-" + t,
                           disabled: !0,
@@ -56722,7 +56736,7 @@ var CLSTAMP = "6267225";
                     ),
                   e.push(
                     N.createElement(
-                      bt.d,
+                      _t.d,
                       {
                         key: "item-hidesource-" + n + "-" + t,
                         onSelected: function() {
@@ -56759,7 +56773,7 @@ var CLSTAMP = "6267225";
                   ) && a.appInfo
                     ? (o.push(
                         N.createElement(
-                          bt.d,
+                          _t.d,
                           {
                             key: "item-source-" + s + "-lastplayed",
                             disabled: !0,
@@ -56797,7 +56811,7 @@ var CLSTAMP = "6267225";
                   this.AddContextMenuForSource(o, b.c.k_EFeatured, s)),
                 o.push(
                   N.createElement(
-                    bt.d,
+                    _t.d,
                     {
                       key: r.GID + "hidetype",
                       onSelected: this.HideAllEventsOfMyType
@@ -56817,7 +56831,7 @@ var CLSTAMP = "6267225";
                   (_.a.Get().BIsEventBlocked(a)
                     ? o.push(
                         N.createElement(
-                          bt.d,
+                          _t.d,
                           {
                             key: r.GID + "unmuteapp",
                             onSelected: this.OnUnMuteButton
@@ -56838,7 +56852,7 @@ var CLSTAMP = "6267225";
                       )
                     : o.push(
                         N.createElement(
-                          bt.d,
+                          _t.d,
                           {
                             key: r.GID + "muteapp",
                             onSelected: this.OnMuteButton
@@ -56862,7 +56876,7 @@ var CLSTAMP = "6267225";
                   ((t = I.a.BIsFollowingCurator(r.clanSteamID)),
                   o.push(
                     N.createElement(
-                      bt.d,
+                      _t.d,
                       {
                         key: r.GID + "followcurator",
                         onSelected: this.ToggleFollowCurator
@@ -56888,7 +56902,7 @@ var CLSTAMP = "6267225";
                 l.BIsSingleSourceCalendar() ||
                   o.push(
                     N.createElement(
-                      bt.d,
+                      _t.d,
                       {
                         key: r.GID + "goto",
                         onSelected: this.GotoGameOrClanHub
@@ -56902,13 +56916,13 @@ var CLSTAMP = "6267225";
                 r.appid &&
                   o.push(
                     N.createElement(
-                      bt.d,
+                      _t.d,
                       {
                         key: r.GID + "goto",
                         onSelected: function(e) {
                           return Object(O.c)(
                             e,
-                            Object(_t.e)(
+                            Object(vt.e)(
                               F.c.STORE_BASE_URL + "app/" + l.GetSingleAppID()
                             )
                           );
@@ -56917,13 +56931,13 @@ var CLSTAMP = "6267225";
                       Object(x.f)("#EventDisplay_ViewStorePage")
                     )
                   ),
-                Object(ft.a)(N.createElement(bt.c, null, o), e);
+                Object(bt.a)(N.createElement(_t.c, null, o), e);
             }),
             (t.prototype.render = function() {
               return N.createElement(
                 "div",
                 {
-                  className: Object(P.a)(ht.a.FooterStat, ht.a.Options),
+                  className: Object(P.a)(ft.a.FooterStat, ft.a.Options),
                   onClick: this.CreateContextMenu
                 },
                 N.createElement(G.J, null)
@@ -56939,10 +56953,10 @@ var CLSTAMP = "6267225";
             (t = Object(D.c)([a.a], t))
           );
         })(N.Component),
-        gt = Object(s.i)(vt),
-        Mt = n("XmAN"),
-        yt = n("cGQe"),
-        St = (function(t) {
+        Mt = Object(s.i)(gt),
+        yt = n("XmAN"),
+        St = n("cGQe"),
+        Ot = (function(t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (e.state = { bVideoPlayerReady: !1 }), e;
@@ -56950,9 +56964,9 @@ var CLSTAMP = "6267225";
           return (
             Object(D.d)(e, t),
             (e.prototype.OnFallbackClick = function(e) {
-              tt.b.RecordAppInteractionEvent(
+              nt.b.RecordAppInteractionEvent(
                 this.props.calendarEvent.appid,
-                tt.a.k_eClickThrough
+                nt.a.k_eClickThrough
               ),
                 this.props.fnOnClicked(this.props.eventModel),
                 e.stopPropagation(),
@@ -56976,7 +56990,7 @@ var CLSTAMP = "6267225";
               if ("youtube" !== n) return null;
               var a = Object(j.g)(F.c.LANGUAGE),
                 o =
-                  qt() && 14 == this.props.eventModel.GetEventType()
+                  Ht() && 14 == this.props.eventModel.GetEventType()
                     ? z.c.full
                     : z.c.capsule_main,
                 i = this.props.eventModel.GetImageForSizeAsArrayWithFallback(
@@ -56986,23 +57000,23 @@ var CLSTAMP = "6267225";
                   !0
                 );
               if ("carousel" === this.props.mode)
-                return N.createElement(ct, {
+                return N.createElement(lt, {
                   altImgWithFallback: i,
                   video: r,
-                  className: ht.a.YoutubePreviewImage
+                  className: ft.a.YoutubePreviewImage
                 });
-              return N.createElement(lt, {
+              return N.createElement(ut, {
                 video: r,
                 altImgWithFallback: i,
                 autoplay: !0,
                 autopause: !0,
                 showFullscreenBtn: !0,
                 controls: !0,
-                imageClassnames: ht.a.YoutubePreviewImage,
+                imageClassnames: ft.a.YoutubePreviewImage,
                 onPlayerActivated: function() {
-                  tt.b.RecordAppInteractionEvent(
+                  nt.b.RecordAppInteractionEvent(
                     e.props.calendarEvent.appid,
-                    tt.a.k_ePlayedVideo
+                    nt.a.k_ePlayedVideo
                   ),
                     e.setState({ bVideoPlayerReady: !0 });
                 },
@@ -57029,7 +57043,7 @@ var CLSTAMP = "6267225";
                 c = t.has_live_stream,
                 l = t.has_live_stream,
                 u =
-                  qt() && 14 == t.GetEventType() ? z.c.full : z.c.capsule_main,
+                  Ht() && 14 == t.GetEventType() ? z.c.full : z.c.capsule_main,
                 p = t.BImageNeedScreenshotFallback("capsule", s),
                 d = Boolean(p && t.appid)
                   ? t.GetFallbackArtworkScreenshot()
@@ -57037,24 +57051,24 @@ var CLSTAMP = "6267225";
                 m = "upcoming" !== a && this.getVideoPreviewControl(),
                 h = !m && "upcoming" !== a,
                 f = t.GetCategoryAsString(),
-                b = ht.a["EventType" + t.GetEventType()],
+                b = ft.a["EventType" + t.GetEventType()],
                 _ = t.GetAllTags().map(function(e) {
-                  return ht.a["Tag-" + e];
+                  return ft.a["Tag-" + e];
                 }),
                 v = P.a.apply(
                   void 0,
                   Object(D.g)(
                     [
-                      ht.a.TileContainer,
+                      ft.a.TileContainer,
                       b,
-                      c && ht.a.TileVideoIcon,
-                      r ? ht.a.DisableHovers : ht.a.EnableHovers,
-                      this.state.bVideoPlayerReady && ht.a.VideoPlayerReady,
-                      m && ht.a.HasVideo,
-                      o.HasEventBeenRead(t.GID) && ht.a.HasBeenRead,
-                      "wide" === a && ht.a.WideMode,
-                      "carousel" === a && ht.a.CarouselMode,
-                      "upcoming" === a && ht.a.UpcomingMode
+                      c && ft.a.TileVideoIcon,
+                      r ? ft.a.DisableHovers : ft.a.EnableHovers,
+                      this.state.bVideoPlayerReady && ft.a.VideoPlayerReady,
+                      m && ft.a.HasVideo,
+                      o.HasEventBeenRead(t.GID) && ft.a.HasBeenRead,
+                      "wide" === a && ft.a.WideMode,
+                      "carousel" === a && ft.a.CarouselMode,
+                      "upcoming" === a && ft.a.UpcomingMode
                     ],
                     _
                   )
@@ -57063,10 +57077,10 @@ var CLSTAMP = "6267225";
                 M = t.GetSubTitleWithLanguageFallback(s),
                 y = t.GetSummaryWithFallback(s);
               M === y && (y = void 0), M === g && (M = void 0);
-              var S = Object(et.u)(d),
+              var S = Object(tt.u)(d),
                 O = N.createElement(
                   "div",
-                  { className: ht.a.CoverImageCtn },
+                  { className: ft.a.CoverImageCtn },
                   m,
                   h &&
                     N.createElement(
@@ -57078,15 +57092,15 @@ var CLSTAMP = "6267225";
                           null,
                           N.createElement(
                             "div",
-                            { className: ht.a.GameCapsuleCtn },
+                            { className: ft.a.GameCapsuleCtn },
                             N.createElement("div", {
-                              className: ht.a.AppBannerLogo,
+                              className: ft.a.AppBannerLogo,
                               style: { backgroundImage: "url(" + i + ")" }
                             })
                           ),
                           N.createElement(
                             "div",
-                            { className: ht.a.GameShortDescription },
+                            { className: ft.a.GameShortDescription },
                             y
                           )
                         ),
@@ -57095,25 +57109,25 @@ var CLSTAMP = "6267225";
                           "div",
                           {
                             className: Object(P.a)(
-                              ht.a.EventCapsuleCtn,
-                              c && ht.a.LiveBroadcastPreview
+                              ft.a.EventCapsuleCtn,
+                              c && ft.a.LiveBroadcastPreview
                             )
                           },
                           N.createElement("div", {
                             className: Object(P.a)(
-                              ht.a.TileImage,
-                              p && ht.a.FallbackImage
+                              ft.a.TileImage,
+                              p && ft.a.FallbackImage
                             ),
                             style: { backgroundImage: "url(" + S + ")" }
                           }),
                           c &&
                             N.createElement("div", {
-                              className: ht.a.TileCoverImagePlayable
+                              className: ft.a.TileCoverImagePlayable
                             }),
                           l &&
                             N.createElement(
                               "div",
-                              { className: ht.a.TileCoverLiveIcon },
+                              { className: ft.a.TileCoverLiveIcon },
                               Object(x.f)("#home_page_live_broadcast")
                             ),
                           c &&
@@ -57139,11 +57153,11 @@ var CLSTAMP = "6267225";
                     "div",
                     {
                       className: Object(P.a)(
-                        ht.a.ReminderContainer,
-                        L && ht.a.OnlyIcon
+                        ft.a.ReminderContainer,
+                        L && ft.a.OnlyIcon
                       )
                     },
-                    N.createElement(yt.a, {
+                    N.createElement(St.a, {
                       eventModel: t,
                       eventGID: t.GID,
                       lang: s,
@@ -57157,65 +57171,65 @@ var CLSTAMP = "6267225";
               return N.createElement(
                 "div",
                 { className: v },
-                N.createElement(Mt.a, { event: t, recordNewsHubStats: !0 }),
+                N.createElement(yt.a, { event: t, recordNewsHubStats: !0 }),
                 N.createElement(
                   be.c,
                   { eventModel: t, route: be.a.k_eView },
                   N.createElement(
                     "div",
-                    { className: ht.a.Tile, onClick: this.OnFallbackClick },
+                    { className: ft.a.Tile, onClick: this.OnFallbackClick },
                     14 === t.type &&
                       N.createElement("div", {
                         className: Object(P.a)(
-                          ht.a.TileBackgroundImage,
-                          p && ht.a.FallbackImage
+                          ft.a.TileBackgroundImage,
+                          p && ft.a.FallbackImage
                         ),
                         style: { backgroundImage: "url(" + S + ")" }
                       }),
                     N.createElement(
                       "div",
-                      { className: ht.a.MainContentContainer },
+                      { className: ft.a.MainContentContainer },
                       N.createElement(
                         "div",
-                        { className: ht.a.TileTextContainer },
+                        { className: ft.a.TileTextContainer },
                         N.createElement(
                           "div",
-                          { className: ht.a.PatchIconCtn },
+                          { className: ft.a.PatchIconCtn },
                           N.createElement(G.N, null)
                         ),
                         N.createElement(
                           "div",
-                          { className: ht.a.EventTitleCtn },
+                          { className: ft.a.EventTitleCtn },
                           C,
                           !this.props.bHideGameTitle &&
                             N.createElement(
                               "div",
-                              { className: ht.a.GameSource },
-                              N.createElement(Et, Object(D.a)({}, this.props)),
-                              n && N.createElement(Ct, { calendarEvent: n })
+                              { className: ft.a.GameSource },
+                              N.createElement(At, Object(D.a)({}, this.props)),
+                              n && N.createElement(wt, { calendarEvent: n })
                             ),
                           N.createElement(
                             "div",
-                            { className: ht.a.EventName },
+                            { className: ft.a.EventName },
                             g
                           ),
                           N.createElement(
                             "div",
-                            { className: ht.a.EventTypeAndDateCtn },
+                            { className: ft.a.EventTypeAndDateCtn },
                             N.createElement(
                               "div",
                               {
                                 className: Object(P.a)(
-                                  ht.a.TileTextCategoryType,
+                                  ft.a.TileTextCategoryType,
                                   b
                                 )
                               },
                               f
                             ),
-                            N.createElement(At, {
+                            N.createElement(Ct, {
                               eventModel: t,
                               className: Object(P.a)(
-                                L && ht.a.LeaveRoomForReminder
+                                L && ft.a.LeaveRoomForReminder
                               )
                             }),
                             L && T
@@ -57223,7 +57237,7 @@ var CLSTAMP = "6267225";
                           I &&
                             N.createElement(
                               "div",
-                              { className: ht.a.EventSubTitle },
+                              { className: ft.a.EventSubTitle },
                               M
                             ),
                           B &&
@@ -57231,8 +57245,8 @@ var CLSTAMP = "6267225";
                               "div",
                               {
                                 className: Object(P.a)(
-                                  ht.a.EventSummaryDefault,
-                                  M ? ht.a.SubTitleShown : ""
+                                  ft.a.EventSummaryDefault,
+                                  M ? ft.a.SubTitleShown : ""
                                 )
                               },
                               y
@@ -57244,14 +57258,14 @@ var CLSTAMP = "6267225";
                     )
                   )
                 ),
-                N.createElement(Lt, Object(D.a)({}, this.props))
+                N.createElement(Tt, Object(D.a)({}, this.props))
               );
             }),
             Object(D.c)([T.a], e.prototype, "OnFallbackClick", null),
             (e = Object(D.c)([a.a], e))
           );
         })(N.Component),
-        Ot = (function(e) {
+        Et = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -57271,22 +57285,22 @@ var CLSTAMP = "6267225";
                 r = t.GetEntityName(),
                 a = t.GetGameIcon(),
                 o = Object(P.a)(
-                  ht.a.GameTitleContainer,
-                  n ? ht.a.DisableHovers : ht.a.EnableHovers
+                  ft.a.GameTitleContainer,
+                  n ? ft.a.DisableHovers : ft.a.EnableHovers
                 );
               return N.createElement(
                 v.a,
                 null,
                 N.createElement(
                   "div",
-                  { className: ht.a.TileTextHeader },
+                  { className: ft.a.TileTextHeader },
                   N.createElement(
                     "div",
                     { className: o, onClick: this.OnTitleClick },
-                    N.createElement("img", { className: ht.a.AppIcon, src: a }),
+                    N.createElement("img", { className: ft.a.AppIcon, src: a }),
                     N.createElement(
                       "div",
-                      { className: ht.a.TileTextAppName },
+                      { className: ft.a.TileTextAppName },
                       r,
                       " "
                     )
@@ -57298,8 +57312,8 @@ var CLSTAMP = "6267225";
             (t = Object(D.c)([a.a], t))
           );
         })(N.Component),
-        Et = Object(s.i)(Ot),
-        At = Object(a.a)(function(e) {
+        At = Object(s.i)(Et),
+        Ct = Object(a.a)(function(e) {
           var t = e.eventModel,
             n = e.calendarEvent,
             r = e.className,
@@ -57308,25 +57322,25 @@ var CLSTAMP = "6267225";
                 .GetStoreInitializationTimestamp()
                 .getTime() / 1e3,
             o = t ? t.GetStartTimeAndDateUnixSeconds() : n.start_time,
-            i = t && Object(pt.a)(t.type) && t.GetEndTimeAndDateUnixSeconds();
+            i = t && Object(dt.a)(t.type) && t.GetEndTimeAndDateUnixSeconds();
           if (i && o < a && a < i) {
             var s = i - a,
               c = Object(x.q)(s, !0);
             return N.createElement(
               "div",
-              { className: Object(P.a)(ht.a.LiveText, r) },
+              { className: Object(P.a)(ft.a.LiveText, r) },
               N.createElement(
-                nt.f,
-                { rtFullDate: o, stylesmodule: ht.a },
+                rt.f,
+                { rtFullDate: o, stylesmodule: ft.a },
                 N.createElement(
                   "div",
-                  { className: ht.a.LiveNow },
+                  { className: ft.a.LiveNow },
                   Object(x.f)("#EventCalendar_LiveNow")
                 )
               ),
               N.createElement(
-                nt.f,
-                { rtFullDate: i, stylesmodule: ht.a },
+                rt.f,
+                { rtFullDate: i, stylesmodule: ft.a },
                 Object(x.f)("#EventCalendar_TimeLeft", c)
               )
             );
@@ -57335,9 +57349,9 @@ var CLSTAMP = "6267225";
             var l = a - o,
               u = l < 86400 ? Object(x.q)(l, !1, !0) : Object(x.p)(o);
             return N.createElement(
-              nt.f,
-              { className: r, rtFullDate: o, stylesmodule: ht.a },
-              N.createElement("div", { className: ht.a.PastDateText }, u)
+              rt.f,
+              { className: r, rtFullDate: o, stylesmodule: ft.a },
+              N.createElement("div", { className: ft.a.PastDateText }, u)
             );
           }
           var p = new Date(1e3 * a);
@@ -57346,18 +57360,18 @@ var CLSTAMP = "6267225";
             m = Math.floor((o - d) / 86400),
             h =
               1 < m && m <= 5 ? Object(x.h)(new Date(1e3 * o)) : Object(x.p)(o),
-            f = Object(nt.e)(o);
+            f = Object(rt.e)(o);
           return N.createElement(
-            nt.f,
-            { className: r, rtFullDate: o, stylesmodule: ht.a },
+            rt.f,
+            { className: r, rtFullDate: o, stylesmodule: ft.a },
             N.createElement(
               "div",
-              { className: ht.a.FutureDateText },
+              { className: ft.a.FutureDateText },
               Object(x.f)("#EventCalendar_WillStartAtDateTime", h, f)
             )
           );
         }),
-        Ct = Object(a.a)(function(r) {
+        wt = Object(a.a)(function(r) {
           var e = r.calendarEvent.GetSource(),
             a = [],
             t = Object(E.b)().m_visibilityStore;
@@ -57366,7 +57380,7 @@ var CLSTAMP = "6267225";
                 id: d.a.k_eLibrary,
                 name: "#EventCalendar_GameSource_inLibrary",
                 ttip: "#EventCalendar_GameSource_EventExplanation_ttip_library",
-                styles: ht.a.LibrarySource
+                styles: ft.a.LibrarySource
               })
             : e & d.a.k_eWishlist && t.BIsGameSourceAllowed(b.c.k_EWishlist)
             ? a.push({
@@ -57374,7 +57388,7 @@ var CLSTAMP = "6267225";
                 name: "#EventCalendar_GameSource_onWishlist",
                 ttip:
                   "#EventCalendar_GameSource_EventExplanation_ttip_wishlist",
-                styles: ht.a.WishlistSource
+                styles: ft.a.WishlistSource
               })
             : e & d.a.k_eRecommended &&
               t.BIsGameSourceAllowed(b.c.k_ERecommended)
@@ -57383,7 +57397,7 @@ var CLSTAMP = "6267225";
                 name: "#EventCalendar_GameSource_recommended_Verbose",
                 ttip:
                   "#EventCalendar_GameSource_EventExplanation_ttip_recommended",
-                styles: ht.a.RecommendedSource
+                styles: ft.a.RecommendedSource
               })
             : e & d.a.k_eFeatured &&
               t.BIsGameSourceAllowed(b.c.k_EFeatured) &&
@@ -57391,7 +57405,7 @@ var CLSTAMP = "6267225";
                 id: d.a.k_eFeatured,
                 name: "#EventCalendar_GameSource_featured",
                 ttip: "#EventCalendar_GameSource_ttip_featured",
-                styles: ht.a.FeaturedSource
+                styles: ft.a.FeaturedSource
               }),
             e & d.a.k_eFollowing &&
               t.BIsGameSourceAllowed(b.c.k_EFollowing) &&
@@ -57400,11 +57414,11 @@ var CLSTAMP = "6267225";
                 name: "#EventCalendar_GameSource_followed",
                 ttip:
                   "#EventCalendar_GameSource_EventExplanation_ttip_following",
-                styles: ht.a.FollowingSource
+                styles: ft.a.FollowingSource
               });
           var n = a.map(function(e, t) {
             var n = r.calendarEvent.unique_id;
-            return wt(
+            return Lt(
               "item-source-" + n + "-" + e.id,
               e.name,
               e.ttip,
@@ -57412,20 +57426,20 @@ var CLSTAMP = "6267225";
               t + 1 < a.length
             );
           });
-          return N.createElement("div", { className: ht.a.SourceList }, n);
+          return N.createElement("div", { className: ft.a.SourceList }, n);
         }),
-        wt = function(e, t, n, r, a) {
+        Lt = function(e, t, n, r, a) {
           return N.createElement(
             C.a,
             {
               key: e,
-              className: Object(P.a)(ht.a.Source, r),
+              className: Object(P.a)(ft.a.Source, r),
               toolTipContent: Object(x.f)(n)
             },
             Object(x.f)(t) + (a ? ", " : "")
           );
         };
-      var Lt = (function(e) {
+      var Tt = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -57435,13 +57449,13 @@ var CLSTAMP = "6267225";
             var e = this.props.eventModel,
               t = R.a.Get();
             !0 !== t.GetPreviouslyLoadedVote(this.props.eventModel) &&
-              Object(dt.a)(e, t) &&
+              Object(mt.a)(e, t) &&
               (t.Vote(e, !0, p.a.CancelToken.source()),
-              tt.b.RecordAppInteractionEvent(e.appid, tt.a.k_eThumbsUp));
+              nt.b.RecordAppInteractionEvent(e.appid, nt.a.k_eThumbsUp));
           }),
           (t.prototype.OnDiscussionClicked = function() {
             var e = this.props.eventModel;
-            tt.b.RecordAppInteractionEvent(e.appid, tt.a.k_eDiscussions);
+            nt.b.RecordAppInteractionEvent(e.appid, nt.a.k_eDiscussions);
           }),
           (t.prototype.render = function() {
             var e,
@@ -57452,13 +57466,13 @@ var CLSTAMP = "6267225";
               o = ((e = a),
               t.BIsUserLoggedIn()
                 ? F.i.is_limited
-                  ? ht.a.Vote_LimitedUser
+                  ? ft.a.Vote_LimitedUser
                   : !0 === e
-                  ? ht.a.Vote_Positive
+                  ? ft.a.Vote_Positive
                   : !1 === e
-                  ? ht.a.Vote_Negative
-                  : ht.a.Vote_Ready
-                : ht.a.Vote_NotLoggedIn),
+                  ? ft.a.Vote_Negative
+                  : ft.a.Vote_Ready
+                : ft.a.Vote_NotLoggedIn),
               i = n.GetForumTopicURL(),
               s = F.c.EREALM !== u.e.k_ESteamRealmChina && i,
               c =
@@ -57467,38 +57481,38 @@ var CLSTAMP = "6267225";
                   : void 0;
             return N.createElement(
               "div",
-              { className: ht.a.Footer },
+              { className: ft.a.Footer },
               N.createElement(
                 "div",
-                { className: ht.a.FooterRightSide },
+                { className: ft.a.FooterRightSide },
                 Boolean(c) &&
                   N.createElement(
                     "div",
-                    { className: ht.a.TileViewerCount },
+                    { className: ft.a.TileViewerCount },
                     c.toLocaleString(x.e.GetPreferredLocales())
                   ),
                 N.createElement(
                   "div",
                   {
-                    className: Object(P.a)(ht.a.FooterStat, ht.a.Vote, o),
+                    className: Object(P.a)(ft.a.FooterStat, ft.a.Vote, o),
                     onClick: this.OnPerformVoteUp
                   },
-                  N.createElement(G.ab, { className: ht.a.RateIcon }),
+                  N.createElement(G.ab, { className: ft.a.RateIcon }),
                   N.createElement("span", null, Number(r).toLocaleString())
                 ),
                 s &&
                   N.createElement(
                     "div",
-                    { className: ht.a.FooterStat },
+                    { className: ft.a.FooterStat },
                     N.createElement(
                       "a",
                       {
                         href: i,
-                        className: ht.a.CommentIconCtn,
+                        className: ft.a.CommentIconCtn,
                         target: "_blank",
                         onClick: this.OnDiscussionClicked
                       },
-                      N.createElement(G.q, { className: ht.a.CommentIcon }),
+                      N.createElement(G.q, { className: ft.a.CommentIcon }),
                       N.createElement(
                         "span",
                         null,
@@ -57506,7 +57520,7 @@ var CLSTAMP = "6267225";
                       )
                     )
                   ),
-                N.createElement(gt, Object(D.a)({}, this.props))
+                N.createElement(Mt, Object(D.a)({}, this.props))
               )
             );
           }),
@@ -57515,7 +57529,7 @@ var CLSTAMP = "6267225";
           (t = Object(D.c)([a.a], t))
         );
       })(N.Component);
-      function Tt(e) {
+      function Bt(e) {
         var t,
           n = new Array();
         return (
@@ -57526,12 +57540,12 @@ var CLSTAMP = "6267225";
             : n.push(Object(x.f)("#Language_" + F.c.LANGUAGE)),
           l.a.createElement(
             "div",
-            { className: Pt.a.LanguageList },
+            { className: xt.a.LanguageList },
             n.join(", ")
           )
         );
       }
-      function Bt(e) {
+      function It(e) {
         var t,
           n = "SteamNewsHub_LanguageDismissed",
           r = l.a.useState(
@@ -57544,14 +57558,14 @@ var CLSTAMP = "6267225";
         var i = F.c.STORE_BASE_URL + "account/languagepreferences/";
         return l.a.createElement(
           "div",
-          { className: Pt.a.LanguageFeedNoteBucket },
+          { className: xt.a.LanguageFeedNoteBucket },
           l.a.createElement(
             "div",
-            { className: Pt.a.LanguageFeedNoteCtn },
+            { className: xt.a.LanguageFeedNoteCtn },
             l.a.createElement(
               "div",
               {
-                className: Pt.a.DismissButton,
+                className: xt.a.DismissButton,
                 onClick: function() {
                   o(!0),
                     localStorage.setItem(n, JSON.stringify({ bDismissed: !0 }));
@@ -57561,24 +57575,24 @@ var CLSTAMP = "6267225";
             ),
             l.a.createElement(
               "div",
-              { className: Pt.a.BodyFlow },
+              { className: xt.a.BodyFlow },
               l.a.createElement(
                 "div",
-                { className: Pt.a.LeftColumn },
+                { className: xt.a.LeftColumn },
                 l.a.createElement(G.C, null)
               ),
               l.a.createElement(
                 "div",
-                { className: Pt.a.RightColumn },
+                { className: xt.a.RightColumn },
                 l.a.createElement(
                   "div",
-                  { className: Pt.a.Title },
+                  { className: xt.a.Title },
                   Object(x.f)("#EventCalendar_NewsLanguage_Title")
                 ),
-                l.a.createElement(Tt, null),
+                l.a.createElement(Bt, null),
                 l.a.createElement(
                   "div",
-                  { className: Pt.a.Text },
+                  { className: xt.a.Text },
                   Object(x.n)(
                     "#EventCalendar_NewsLanguage_Text",
                     l.a.createElement(
@@ -57593,15 +57607,15 @@ var CLSTAMP = "6267225";
           )
         );
       }
-      var It = Object(a.a)(function(e) {
+      var Dt = Object(a.a)(function(e) {
           var n = e.calendarEvent,
             r = e.partnerEventStore,
             t = e.mode,
-            a = ht.a["EventType" + n.event_type],
-            o = Object(P.a)(ht.a.TileContainer, a),
+            a = ft.a["EventType" + n.event_type],
+            o = Object(P.a)(ft.a.TileContainer, a),
             i = "carousel" === t;
           return N.createElement(
-            $e.a,
+            et.a,
             {
               onEnter: function() {
                 var e, t;
@@ -57620,14 +57634,14 @@ var CLSTAMP = "6267225";
               { className: o },
               N.createElement(
                 "div",
-                { className: Object(P.a)(ht.a.Tile, ht.a.LoadingTile) },
+                { className: Object(P.a)(ft.a.Tile, ft.a.LoadingTile) },
                 i && N.createElement($.a, null)
               ),
-              N.createElement("div", { className: ht.a.Footer })
+              N.createElement("div", { className: ft.a.Footer })
             )
           );
         }),
-        Dt = Object(a.a)(function(e) {
+        Nt = Object(a.a)(function(e) {
           var t = e.partnerEventStore,
             n = e.calendarEvent,
             r = Object(D.f)(e, ["partnerEventStore", "calendarEvent"]);
@@ -57638,20 +57652,20 @@ var CLSTAMP = "6267225";
               (a.clanInfo && !f.a.HasLoadedClanAccountID(a.clanInfo.clanid)))
           )
             return N.createElement(
-              It,
+              Dt,
               Object(D.a)({ calendarEvent: n, partnerEventStore: t }, r)
             );
           var a,
             o = t.GetClanEventModel(n.unique_id);
           return N.createElement(
-            St,
+            Ot,
             Object(D.a)({ eventModel: o, calendarEvent: n }, r)
           );
         }),
-        Nt = n("xVl9"),
-        jt = n("90oc"),
-        zt = n.n(jt),
-        kt = (function(e) {
+        jt = n("xVl9"),
+        zt = n("90oc"),
+        kt = n.n(zt),
+        Rt = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -57672,10 +57686,10 @@ var CLSTAMP = "6267225";
                 return r
                   ? N.createElement(
                       "div",
-                      { className: zt.a.EventTileCarouselTitleContainer },
+                      { className: kt.a.EventTileCarouselTitleContainer },
                       N.createElement(
                         "div",
-                        { className: zt.a.EventTileCarouselTextTitle },
+                        { className: kt.a.EventTileCarouselTextTitle },
                         r
                       )
                     )
@@ -57683,11 +57697,11 @@ var CLSTAMP = "6267225";
               var o = Boolean(0 === a.appid && F.i.accountid);
               return N.createElement(
                 "div",
-                { className: zt.a.EventTileCarouselTitleContainer },
+                { className: kt.a.EventTileCarouselTitleContainer },
                 N.createElement(
                   "div",
-                  { className: zt.a.EventTileCarouselTitle },
-                  N.createElement($t, {
+                  { className: kt.a.EventTileCarouselTitle },
+                  N.createElement(en, {
                     calendarItem: a,
                     bSuppressHoverEffects: n
                   })
@@ -57695,7 +57709,7 @@ var CLSTAMP = "6267225";
                 o &&
                   N.createElement(
                     "div",
-                    { className: zt.a.EventTileCarouselFollow },
+                    { className: kt.a.EventTileCarouselFollow },
                     N.createElement(ee.c, { clanAccountID: a.clanid })
                   )
               );
@@ -57703,7 +57717,7 @@ var CLSTAMP = "6267225";
             (t = Object(D.c)([a.a], t))
           );
         })(N.Component),
-        Rt = (function(t) {
+        Gt = (function(t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (
@@ -57744,7 +57758,7 @@ var CLSTAMP = "6267225";
                 o = e.strMultipleSourceTitle;
               if (!t || 0 == t.length) return null;
               var i = t.map(function(e) {
-                return N.createElement(Dt, {
+                return N.createElement(Nt, {
                   key: "ht-" + e.unique_id,
                   calendarEvent: e,
                   partnerEventStore: M.c,
@@ -57756,8 +57770,8 @@ var CLSTAMP = "6267225";
               });
               return N.createElement(
                 "div",
-                { className: zt.a.CalendarRow },
-                N.createElement(kt, {
+                { className: kt.a.CalendarRow },
+                N.createElement(Rt, {
                   rgCalendarItems: t,
                   bSuppressHoverEffects: r,
                   strMultipleSourceTitle: o
@@ -57766,19 +57780,19 @@ var CLSTAMP = "6267225";
                   "div",
                   {
                     className: Object(P.a)(
-                      zt.a.EventTileCarousel,
+                      kt.a.EventTileCarousel,
                       "EventTileCarouselCtn"
                     )
                   },
                   N.createElement(
-                    Nt.a,
+                    jt.a,
                     {
                       hideArrows: !0,
                       visibleElements: Math.min(
                         this.state.nMaxCapsulesPerRow,
                         this.props.rgCalendarItems.length
                       ),
-                      className: zt.a.HorizontalTiles,
+                      className: kt.a.HorizontalTiles,
                       useTestScrollbar: !0,
                       bLazyRenderChildren: !0,
                       disableEdgeWrap: !0
@@ -57792,12 +57806,12 @@ var CLSTAMP = "6267225";
             (e = n = Object(D.c)([a.a], e))
           );
         })(N.Component),
-        Gt = n("2rGr"),
-        Pt = n.n(Gt),
-        xt = n("BFsE"),
-        Ft = "global_header";
-      function Wt() {
-        var e = document.getElementById(Ft);
+        Pt = n("2rGr"),
+        xt = n.n(Pt),
+        Ft = n("BFsE"),
+        Wt = "global_header";
+      function Ut() {
+        var e = document.getElementById(Wt);
         if (e && "none" != getComputedStyle(e).display) return e;
         var t = document.getElementsByClassName("responsive_header");
         return (
@@ -57805,24 +57819,24 @@ var CLSTAMP = "6267225";
           1 != t.length ? null : t[0]
         );
       }
-      function Ut() {
-        var e = Wt();
-        return e && e.id != Ft;
-      }
       function qt() {
-        return window.innerWidth < parseInt(le.a.strMaxMobileWidth);
+        var e = Ut();
+        return e && e.id != Wt;
       }
       function Ht() {
+        return window.innerWidth < parseInt(le.a.strMaxMobileWidth);
+      }
+      function Vt() {
         return (
-          Ut() ||
+          qt() ||
           window.innerWidth <
             parseInt(le.a.strDesktopControlBarWidth) +
               parseInt(le.a.strMaxMobileWidth)
         );
       }
-      var Vt,
-        Xt,
-        Yt = (function(t) {
+      var Xt,
+        Yt,
+        Qt = (function(t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (
@@ -57830,7 +57844,7 @@ var CLSTAMP = "6267225";
                 bUserIsLoggedIn: F.i.logged_in,
                 nVisibleHeight: 0,
                 nScrollTop: 0,
-                bControlBarIsCollapsed: Ht(),
+                bControlBarIsCollapsed: Vt(),
                 bControlBarWasOpenedByUser: !1,
                 nDisappearingHeaderTop: 0,
                 nSteamNavHeaderHeight: 0,
@@ -57882,7 +57896,7 @@ var CLSTAMP = "6267225";
                   this.state.bControlBarIsCollapsed) ||
                   ("desktop_navigation" == e &&
                     !this.state.bControlBarIsCollapsed &&
-                    Ut())) &&
+                    qt())) &&
                   this.ToggleControlBarCollapsed());
             }),
             (e.prototype.componentWillUnmount = function() {
@@ -57890,17 +57904,17 @@ var CLSTAMP = "6267225";
                 window.removeEventListener("resize", this.OnResize),
                 window.removeEventListener("scroll", this.OnScroll),
                 this.UpdateBodyScrollState(!0);
-              var e = Wt();
+              var e = Ut();
               e && (e.style.transform = "");
             }),
             (e.prototype.GetCurrentHubBannerHeight = function(e) {
               var t,
                 n,
-                r = e && !qt();
+                r = e && !Ht();
               return Object(E.b)().GetCollectionID()
                 ? (function(t, e) {
                     if (!t) return 0;
-                    var n = Je.find(function(e) {
+                    var n = Ze().find(function(e) {
                       return e.collection === t;
                     });
                     return n ? (e ? n.largeHeight : n.smallHeight) : 0;
@@ -57910,8 +57924,8 @@ var CLSTAMP = "6267225";
                   (n = r),
                   t && M.c.GetClanEventModel(t)
                     ? n
-                      ? Number(Ye.a.simpleTitleLargeHeight)
-                      : Number(Ye.a.simpleTitleSmallHeight)
+                      ? Number(Xe.a.simpleTitleLargeHeight)
+                      : Number(Xe.a.simpleTitleSmallHeight)
                     : 0)
                 : Object(E.b)().BIsSingleSourceCalendar()
                 ? parseInt(
@@ -57927,10 +57941,10 @@ var CLSTAMP = "6267225";
               );
             }),
             (e.prototype.GetCurrentHeaderHeights = function(e) {
-              var t = Ut(),
-                n = qt(),
+              var t = qt(),
+                n = Ht(),
                 r = 0;
-              Wt() &&
+              Ut() &&
                 ((r = parseInt(
                   t
                     ? le.a.strMobileGlobalHeaderHeight
@@ -58091,7 +58105,7 @@ var CLSTAMP = "6267225";
               var a = this;
               this.setState(function(e) {
                 var t = window.innerHeight,
-                  n = !e.bControlBarWasOpenedByUser && Ht(),
+                  n = !e.bControlBarWasOpenedByUser && Vt(),
                   r = a.GetCurrentHeaderHeights(a.state.nScrollTop <= 0);
                 return (
                   a.UpdateBodyScrollState(n),
@@ -58127,7 +58141,7 @@ var CLSTAMP = "6267225";
                   d = e.nSteamNavHeaderHeight + a + e.nMobileNavBannerHeight;
                 return (
                   (l = u ? -1 * d : 0) === e.nDisappearingHeaderTop ||
-                    ((p = Wt()) &&
+                    ((p = Ut()) &&
                       (p.style.transform = "translateY(" + l + "px)")),
                   {
                     nScrollTop: h,
@@ -58212,7 +58226,7 @@ var CLSTAMP = "6267225";
               });
             }),
             (e.prototype.UpdateBodyScrollState = function(e) {
-              var t = !e && Ut(),
+              var t = !e && qt(),
                 n = document.body;
               n &&
                 (t
@@ -58230,7 +58244,7 @@ var CLSTAMP = "6267225";
                 var t = !e.bControlBarIsCollapsed,
                   n = e.bControlBarIsCollapsed,
                   r = t ? e.nDisappearingHeaderTop : 0,
-                  a = Wt();
+                  a = Ut();
                 return (
                   a && (a.style.transform = "translateY(" + r + "px)"),
                   o.UpdateBodyScrollState(t),
@@ -58246,7 +58260,7 @@ var CLSTAMP = "6267225";
               window.scrollTo(0, 0);
             }),
             (e.prototype.CloseEventModal = function() {
-              var e = Wt();
+              var e = Ut();
               e &&
                 (e.style.transform =
                   "translateY(" + this.state.nDisappearingHeaderTop + "px)"),
@@ -58264,7 +58278,7 @@ var CLSTAMP = "6267225";
                   this.state.nSteamNavHeaderHeight +
                   this.state.nHubBannerHeight +
                   this.state.nMobileNavBannerHeight,
-                r = Wt();
+                r = Ut();
               r && (r.style.transform = "translateY(" + -1 * n + "px)"),
                 k.a.bOpenEventLandingPage
                   ? ((t = Object(be.d)(e, be.a.k_eStoreView, "allowRelative")),
@@ -58342,7 +58356,7 @@ var CLSTAMP = "6267225";
                       nDisappearingHeaderVisibleHeight: o,
                       bIsCollapsed: this.state.bControlBarIsCollapsed,
                       bShowUpcoming: this.BShowFutureView(),
-                      bShouldIncludeLegalFooter: !Ut(),
+                      bShouldIncludeLegalFooter: !qt(),
                       fnToggleCollapsed: this.ToggleControlBarCollapsed,
                       fnOnFilterChange: this.OnControlBarChange
                     })
@@ -58363,29 +58377,29 @@ var CLSTAMP = "6267225";
                         v.a,
                         null,
                         0 < this.state.nLogInBannerHeight &&
-                          N.createElement(nn, {
+                          N.createElement(rn, {
                             nTopOffset: n,
-                            bLargeMode: this.state.nScrollTop <= 0 && !qt()
+                            bLargeMode: this.state.nScrollTop <= 0 && !Ht()
                           })
                       ),
                       N.createElement(
                         v.a,
                         null,
                         0 < this.state.nMobileNavBannerHeight &&
-                          N.createElement(ke, {
+                          N.createElement(ze, {
                             bIsUpcoming: this.BShowFutureView(),
                             nTopOffset: t,
                             fnToggleCollapsed: this.MobileNavOpenSettings
                           }),
-                        N.createElement(Qt, {
+                        N.createElement(Kt, {
                           nTopOffset: r,
-                          bLargeMode: this.state.nScrollTop <= 0 && !qt()
+                          bLargeMode: this.state.nScrollTop <= 0 && !Ht()
                         })
                       ),
                       N.createElement(
                         v.a,
                         null,
-                        N.createElement(Kt, {
+                        N.createElement(Zt, {
                           bShowFutureViewOnly: this.BShowFutureView(),
                           bShowUpdatesOnly: this.BShowUpdatesOnly(),
                           fnOnEventClick: this.OnEventClicked,
@@ -58417,7 +58431,7 @@ var CLSTAMP = "6267225";
             (e = u = Object(D.c)([a.a], e))
           );
         })(N.Component),
-        Qt = ((t.d = Object(s.i)(Yt)),
+        Kt = ((t.d = Object(s.i)(Qt)),
         Object(a.a)(function(e) {
           var r = Object(E.b)(),
             t = r.BHasCollectionMetaData(),
@@ -58477,14 +58491,14 @@ var CLSTAMP = "6267225";
                   (l = i.GetSaleURL()))),
               !(s = (function(t, e, n, r) {
                 if (!t) return null;
-                var a = Je.find(function(e) {
+                var a = Ze().find(function(e) {
                   return e.collection === t;
                 });
                 return a ? a.component(e, n, r) : null;
               })(r.GetCollectionID(), e.bLargeMode, c, l)))
             )
               return null;
-            var u = Object(P.a)(le.a.HubBanner, We.a.WideBanner);
+            var u = Object(P.a)(le.a.HubBanner, Fe.a.WideBanner);
             return N.createElement(
               "div",
               {
@@ -58501,7 +58515,7 @@ var CLSTAMP = "6267225";
                 var n = M.c.GetClanEventModel(e);
                 if (!n) return null;
                 var r = Object(j.g)(F.c.LANGUAGE);
-                return N.createElement(ze, {
+                return N.createElement(Ye, {
                   largeHeader: t,
                   titleToken: n.GetNameWithFallback(r),
                   subtitleToken: n.GetSubTitleWithSummaryFallback(r),
@@ -58514,7 +58528,7 @@ var CLSTAMP = "6267225";
               })(r.GetSaleID(), e.bLargeMode))
             )
               return null;
-            u = Object(P.a)(le.a.HubBanner, We.a.WideBanner);
+            u = Object(P.a)(le.a.HubBanner, Fe.a.WideBanner);
             return N.createElement(
               "div",
               {
@@ -58529,9 +58543,9 @@ var CLSTAMP = "6267225";
               d = r.BIsSingleGroupCalendar() ? r.GetSingleGroupID() : void 0,
               u = Object(P.a)(
                 le.a.HubBanner,
-                We.a.WideBanner,
+                Fe.a.WideBanner,
                 e.bLargeMode && le.a.LargeMode,
-                e.bLargeMode && We.a.TallBanner
+                e.bLargeMode && Fe.a.TallBanner
               );
             return N.createElement(
               "div",
@@ -58539,12 +58553,12 @@ var CLSTAMP = "6267225";
                 style: { transform: "translateY(" + e.nTopOffset + "px)" },
                 className: u
               },
-              N.createElement(xe.b, { appId: p, clanId: d, bShowRSSFeed: !0 })
+              N.createElement(Pe.b, { appId: p, clanId: d, bShowRSSFeed: !0 })
             );
           }
           return null;
         })),
-        Kt = (function(e) {
+        Zt = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -58603,7 +58617,7 @@ var CLSTAMP = "6267225";
                 o = t.nDisappearingHeaderVisibleHeight,
                 i = e.GetCalendarSections(h);
               if (0 == i.length) return null;
-              var _ = qt(),
+              var _ = Ht(),
                 s = e.m_visibilityStore.BAreAllEventsHidden(),
                 v = a,
                 g = !0,
@@ -58633,14 +58647,14 @@ var CLSTAMP = "6267225";
                           (y = t));
                       var d = !h && c;
                       return N.createElement(
-                        Pe.a,
+                        Ge.a,
                         {
                           key: a,
                           className: le.a.LazyCalendarSectionCtn,
                           placeholderHeight: l,
                           rootMargin: "100% 0px 100% 0px"
                         },
-                        N.createElement(en, {
+                        N.createElement(tn, {
                           bRenderStickyHeader: u,
                           strSectionLabel: o,
                           rtSectionStart: i,
@@ -58660,7 +58674,7 @@ var CLSTAMP = "6267225";
                 c.splice(
                   y,
                   0,
-                  N.createElement(Ve, {
+                  N.createElement(He, {
                     key: "CuratorSuggestions",
                     bCanDismiss: M.bInlineDismissable
                   })
@@ -58669,7 +58683,7 @@ var CLSTAMP = "6267225";
                   c.splice(
                     0,
                     0,
-                    N.createElement(Bt, { key: "LanguageFeedRow" })
+                    N.createElement(It, { key: "LanguageFeedRow" })
                   );
               var l = i[0].rtSectionStart,
                 u = Object(E.b)().GetCurrentlyLoadedEventCount(0, l),
@@ -58744,7 +58758,7 @@ var CLSTAMP = "6267225";
                       )
                     ),
                     M.bShowAtEnd &&
-                      N.createElement(Ve, {
+                      N.createElement(He, {
                         key: "CuratorSuggestions",
                         bCanDismiss: !1
                       }),
@@ -58774,7 +58788,7 @@ var CLSTAMP = "6267225";
             (t = Object(D.c)([a.a], t))
           );
         })(N.Component),
-        Zt = (function(e) {
+        Jt = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -58803,7 +58817,7 @@ var CLSTAMP = "6267225";
             (t = Object(D.c)([a.a], t))
           );
         })(N.Component),
-        Jt = (function(e) {
+        $t = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -58831,7 +58845,7 @@ var CLSTAMP = "6267225";
                         "div",
                         { className: le.a.HorizontalTiles },
                         t.map(function(e) {
-                          return N.createElement(Dt, {
+                          return N.createElement(Nt, {
                             key: "ht-" + e.unique_id,
                             calendarEvent: e,
                             partnerEventStore: M.c,
@@ -58844,7 +58858,7 @@ var CLSTAMP = "6267225";
                           });
                         })
                       ),
-                      N.createElement(Zt, {
+                      N.createElement(Jt, {
                         rgCalendarItems: t,
                         fnOnSeeFutureClick: r
                       })
@@ -58855,7 +58869,7 @@ var CLSTAMP = "6267225";
             (t = Object(D.c)([a.a], t))
           );
         })(N.Component),
-        $t = Object(a.a)(function(e) {
+        en = Object(a.a)(function(e) {
           var t = e.calendarItem,
             n = e.bSuppressHoverEffects,
             r = M.c.GetClanEventModel(t.unique_id);
@@ -58863,7 +58877,7 @@ var CLSTAMP = "6267225";
             ? N.createElement(
                 "div",
                 { className: le.a.EventListTitle },
-                N.createElement(Et, {
+                N.createElement(At, {
                   eventModel: r,
                   calendarEvent: t,
                   bSuppressHoverEffects: n
@@ -58871,8 +58885,8 @@ var CLSTAMP = "6267225";
               )
             : null;
         });
-      (Xt = Vt = Vt || {})[(Xt.eCurators = 1)] = "eCurators";
-      var en = (function(t) {
+      (Yt = Xt = Xt || {})[(Yt.eCurators = 1)] = "eCurators";
+      var tn = (function(t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (e.m_ref = N.createRef()), e;
@@ -58921,14 +58935,14 @@ var CLSTAMP = "6267225";
             (e.prototype.GenerateKeyFromItem = function(e, t) {
               return t.GetSource() & d.a.k_eSteam || t.appid || "full" !== e
                 ? t.clanid
-                : Vt.eCurators;
+                : Xt.eCurators;
             }),
             (e.prototype.RenderEventList = function(e) {
               function i(e) {
                 return N.createElement(
                   "div",
                   { key: e.unique_id, className: le.a.CalendarRow },
-                  N.createElement(Dt, {
+                  N.createElement(Nt, {
                     calendarEvent: e,
                     partnerEventStore: M.c,
                     mode: "wide",
@@ -58969,11 +58983,11 @@ var CLSTAMP = "6267225";
                   if (!n) return;
                   var r,
                     a,
-                    o = e === Vt.eCurators ? b : h;
+                    o = e === Xt.eCurators ? b : h;
                   n.length < 3
                     ? o.push(i(t))
                     : ((r =
-                        e === Vt.eCurators ? _.GetCarouselGroupTitle(u) : ""),
+                        e === Xt.eCurators ? _.GetCarouselGroupTitle(u) : ""),
                       (a = !n.find(function(e) {
                         return e.clanid != t.clanid;
                       })),
@@ -58992,7 +59006,7 @@ var CLSTAMP = "6267225";
                           N.createElement(
                             "div",
                             { className: le.a.CalendarEventListContainer },
-                            N.createElement(Rt, {
+                            N.createElement(Gt, {
                               key: t.unique_id,
                               rgCalendarItems: n,
                               bSuppressHoverEffects: c,
@@ -59063,7 +59077,7 @@ var CLSTAMP = "6267225";
                   p ||
                   (a && 3 <= u.length)) &&
                   (m = a
-                    ? N.createElement(Jt, {
+                    ? N.createElement($t, {
                         rgCalendarItems: u.slice(0, 3),
                         fnOnEventClick: s,
                         fnOnSeeFutureClick: o,
@@ -59077,7 +59091,7 @@ var CLSTAMP = "6267225";
                   m,
                   !p &&
                     !a &&
-                    N.createElement(tn, {
+                    N.createElement(nn, {
                       bShowEarliestFirst: this.props.bShowEarliestFirst
                     })
                 )
@@ -59087,7 +59101,7 @@ var CLSTAMP = "6267225";
             (e = Object(D.c)([a.a], e))
           );
         })(N.Component),
-        tn = function(e) {
+        nn = function(e) {
           var t = Object(E.b)().GetTimeEdgeForDirection(
             e.bShowEarliestFirst ? "forward" : "backward",
             void 0
@@ -59117,7 +59131,7 @@ var CLSTAMP = "6267225";
               )
           );
         },
-        nn = function(e) {
+        rn = function(e) {
           return N.createElement(
             "div",
             {
@@ -59137,7 +59151,7 @@ var CLSTAMP = "6267225";
               ),
               N.createElement(
                 "button",
-                { onClick: xt.a, className: le.a.LogInButton },
+                { onClick: Ft.a, className: le.a.LogInButton },
                 Object(x.f)("#Login_SignIn")
               ),
               N.createElement(
