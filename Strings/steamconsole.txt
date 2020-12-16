@@ -37,7 +37,7 @@ __thread_bss
 __DATA
 __bss
 __DATA
-a2
+!3
 __common
 __DATA
 (D
@@ -70,6 +70,7 @@ h
 /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
 &
 )
+-
 public
 local
 anonymous
@@ -150,6 +151,7 @@ e
 18CUtlCharConversion
 19CUtlNoEscConversion
 14CUtlMemoryBase
+Logger
 10CUtlString
 console
 generic
@@ -326,7 +328,6 @@ Assertion Failed: m_eAppInfoResult != k_EResultPending
 CAppInfoUpdater::OnAppInfoUpdate
 ERROR! AppInfo request for AppId %d returned error %s.
 CAppUpdater::OnCheckAppBetaPasswordResponse
-%s
 -complete
 CAppLauncher::OnAppLifetimeNotice
 ERROR! AppId %u launch failed (%s)
@@ -439,6 +440,7 @@ Assertion Failed: IsText()
 %s%capp_build_%u.log
 [%s]:
 
+%s
 preview
 setpublic
 nobaseline
@@ -461,6 +463,8 @@ app_build_all_depots [-desc <text>] -depotconfigpath <folder> -contentroot <fold
 ERROR! Not logged on.
 run_app_build
 run_app_build [-preview] [-desc <text>] <appbuildfile> : run app depot build as specified in appbuildfile
+run_app_build_http
+run_app_build_http : alias for run_app_build
 build_installer
 <project file> <target folder> [beta key] [beta pwd]
 build_backup
@@ -473,8 +477,6 @@ download_depot
 download_depot <appid> <depotid> [<target manifestid>] [<delta manifestid>] [<depot flags filter>]: download a single depot
 desc
 depotconfigpath
-contentroot
-buildoutput
 %s/%u
 ERROR! Depot config root folder does not exist: %s.
 ERROR! Content root folder does not exist: %s.
@@ -517,8 +519,6 @@ Successfully finished AppID %u build preview.
 ERROR! Failed to commit build for AppID %u : %s
 Successfully finished AppID %u build (BuildID %d).
 CAppInstallerBuilder::OnAppBackupStatus
-Assertion Failed: m_pParent
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/vprof.h
 ERROR! Failed to begin installer build
 ERROR! Installer build failed (%s)
 ERROR! Failed to begin backup build
@@ -644,10 +644,52 @@ CEG wrap failed with EResult %d (%s)
 Usage: sign_install_script <appid> <filename> <output filename>
 Usage: drm_wrap <appid> <filename> <output filename> <toolname> <flags>
 Usage: ceg_wrap <appid> <orig filename> <stripped filename> <strips filename>
-get_swarm_bucket_manifest
+swarm_get_bucket_manifest
 <appid> <bucket_hw_id> <bucket_sw_id> - query Swarm bucket depot manifest, if depot built
-SUCCESS: manifest: %llu size: %u bucketID: %llu
-ERROR!
+swarm_tc_loop
+<src_bucket_hw_id> <src_bucketsw_id> <dst_bucket_hw_id> <dst_bucket_sw_id> <work_dir> <tool_appid> <entrypoint> <src_file> <dst_file>
+ERROR %u!
+SUCCESS: manifest: %llu size: %llu bucketID: %llu
+%s/tools_install_dir/%u
+Tool DownloadDepot ERROR %u!
+Tool DownloadDepot success: %s
+%s/%s
+Tool entrypoint %s not found!
+Tool entrypoint found at %s
+GetStaleBucket ERROR %u!
+GetStaleBucket success: appID: %u manifest: %llu bucketID: %llu
+%s/incoming_content/app_%u/bucket_%llu
+%s/incoming_content/app_%u/%llu.tcdepotmanifestcache
+tc_depot_manifest_cache
+current_manifest
+Updating depot from %llu to %llu .
+DownloadDepot ERROR %u!
+DownloadDepot success: %s
+%s/outgoing_content/%u/%llu
+%s/depot_root
+%s/depot_build_output
+ERROR: Source file %s doesn't exist!
+%s %s %s
+TC command line: %s
+ERROR %u running TC tool!
+GetBucketManifest ERROR %u!
+GetBucketManifest SUCCESS: baseline manifest: %llu size: %llu bucketID: %llu
+contentroot
+buildoutput
+baselinemanifest
+filemapping
+localpath
+*
+depotpath
+recursive
+ERROR! Build for depot failed : %s
+StartDepotBuild success. manifest: %llu size: %llu
+ReportExternalBuild ERROR %u!
+AppID %u done! Restarting.
+ShaderConversion ERROR!
+ShaderConversion success
+Current downloaded manifest matches, skipping download.
+got empty manifest from GetStaleBucket!
 workshop_build_item
 workshop_build_item <build config filename> : build a workshop item
 workshop_create_legacy_item
@@ -731,7 +773,6 @@ LOCK_EX
 LOCK_SH
 fcntl failed to set F_NOCACHE
 Assertion Failed: ret != 0
-*
 flock LOCK_EX %s failed, errno = %d
 write %s failed, errno = %d
 Assertion Failed: written == count
@@ -1147,7 +1188,6 @@ Last Message Repeated %d times.%s
 Assertion Failed: eGroup >= static_cast< ESpewGroup >( 0 ) && eGroup < k_ESpew_ArraySize
 CIPAndPort::GetIPv4 called on IPv6 address
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/netadr.h
-Logger
 Assertion Failed: nBytes
 Assertion Failed: bitNum >= 0 && bitNum < this->Size()
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/bitstring.h
@@ -1180,11 +1220,12 @@ Assertion Failed: (unsigned)elem <= (unsigned)m_Size
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/string_misc.cpp
 E
 @
-Q
+
+3
 @
 @
-b
 
+=
 =
 @
 @
@@ -1195,4 +1236,3 @@ b
 @
 @
 @
-}

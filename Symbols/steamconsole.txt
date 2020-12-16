@@ -89,6 +89,7 @@
  B s_convarStartupScript
  CDbgFmtSafeImplT<false>::CDbgFmtSafeImplT(char const*, ...)
  CDbgFmtSafeImplT<true>::CDbgFmtSafeImplT(StringView)
+ CVProfile_ExitScope
  CValidator::ClaimArrayMemory(void*)
  CValidator::ClaimMemory(void*)
  CValidator::IsClaimed(void*)
@@ -326,7 +327,9 @@
  SteamThreadTools::CThreadSpinLock::Lock(unsigned int) volatile
  SteamThreadTools::CThreadSyncObject::Wait(unsigned int)
  SteamThreadTools::CThreadSyncObject::~CThreadSyncObject()
- SteamVProf::CVProfNode::ExitScope()
+ SteamVProf::CVProfManager::DumpAllThreadProfiles(int)
+ SteamVProf::CVProfManager::StartProfilingAllThreads()
+ SteamVProf::CVProfManager::StopProfilingAllThreads()
  T BCreateDirectory(StringView)
  T BDeleteFileIfExists(StringView)
  T BFileExists(StringView)
@@ -472,8 +475,10 @@
  T CControllerConfigUploader::OnSendQueryUGCRequestResult(SteamUGCQueryCompleted_t*, bool)
  T CControllerConfigUploader::Upload(unsigned int, char const*)
  T CDbgFmtMsg::CDbgFmtMsg(char const*, ...)
+ T CDirIterator::BCurrentIsDir() const
  T CDirIterator::BNextFile()
  T CDirIterator::CDirIterator(StringView)
+ T CDirIterator::CDirIterator(StringView, StringView)
  T CDirIterator::CurrentFileName() const
  T CDirIterator::Init(StringView)
  T CDirIterator::IsValid() const
@@ -988,7 +993,8 @@
  T DeserializeVaArgs(char const*, char const*, char*, int)
  T DoLogin(ConParams&)
  T ECommitAppBuild(unsigned int, unsigned int, unsigned int const*, unsigned long long const*, char const*, char const*, unsigned int&)
- T EWaitForDepotBuild(unsigned long long, unsigned long long&)
+ T ERunBuildProcess(unsigned int, unsigned int, unsigned int, char const*, unsigned long long&, unsigned long long&)
+ T EWaitForDepotBuild(unsigned long long, unsigned long long&, unsigned long long&)
  T EmitSpewMessagePrim(char const*, int, ESpewGroup, SpewType_t, int, int, CSteamID const&, CIPAndPort const&, unsigned long long const&, char const*, ...)
  T EmitSpewMessagePrimV(char const*, int, ESpewGroup, SpewType_t, int, int, CSteamID const&, CIPAndPort const&, unsigned long long const&, char const*, __va_list_tag*)
  T EvaluateExpression(bool&, char const*, bool (*)(char const*))
@@ -1010,6 +1016,7 @@
  T GetBuildFlagsFromCommandLine(KeyValues const*)
  T GetCStringCharConversion()
  T GetCchTempTextBuffer_Harmful()
+ T GetDirectorySize(StringView, bool)
  T GetNoEscCharConversion()
  T GetPchTempTextBuffer_Harmful()
  T IPv6AddrToString
@@ -1050,7 +1057,7 @@
  T KeyValues::MergeKey(KeyValues const*, bool)
  T KeyValues::ReadAsBinary(CUtlBuffer&, int, bool)
  T KeyValues::ReadToken(CUtlBuffer&, bool&, char, KeyValuesTextParser*, bool&)
- T KeyValues::RecursiveMergeFromBuffer(char const*, CUtlBuffer&, KeyValuesTextParser*, bool)
+ T KeyValues::RecursiveMergeFromBuffer(CUtlBuffer&, KeyValuesTextParser*, bool)
  T KeyValues::RecursiveSaveToBuffer(CUtlBuffer*, int, EKeyValuesSerializationFlags) const
  T KeyValues::RemoveEverything()
  T KeyValues::RemoveSubKey(KeyValues*)
@@ -1063,6 +1070,7 @@
  T KeyValuesAD::operator KeyValues*()
  T KeyValuesAD::operator->()
  T KeyValuesAD::~KeyValuesAD()
+ T KeyValuesTextParser::InitBuffer(int)
  T KeyValuesTextParser::KeyValuesTextParser(bool, int)
  T KeyValuesTextParser::Pop()
  T KeyValuesTextParser::ReportError(StringView, CUtlBuffer const&)
@@ -1113,13 +1121,6 @@
  T SteamThreadTools::CThreadLocalStackCounter<long long>::CThreadLocalStackCounter(SteamThreadTools::CThreadLocal<long long>&)
  T SteamThreadTools::CThreadLocalStackCounter<long long>::~CThreadLocalStackCounter()
  T SteamThreadTools::CThreadSpinLock::~CThreadSpinLock()
- T SteamVProf::CVProfManager::DumpAllThreadProfiles(int)
- T SteamVProf::CVProfManager::StartProfilingAllThreads()
- T SteamVProf::CVProfManager::StopProfilingAllThreads()
- T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)12, false, 4>::~CVProfScope()
- T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)13, false, 4>::~CVProfScope()
- T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)20, false, 4>::~CVProfScope()
- T SteamVProf::CVProfScope<0, (EVProfBugdetGroup)5, false, 4>::~CVProfScope()
  T Sys_LoadModule(char const*, Sys_Flags)
  T Sys_UnloadModule(CSysModule*)
  T TSLNodeBase_t::operator delete(void*)
@@ -1333,6 +1334,7 @@
  b g_pClientMusic
  b g_pClientNetworkDeviceManager
  b g_pClientNetworkingSockets
+ b g_pClientNetworkingSocketsSerialized
  b g_pClientNetworkingUtils
  b g_pClientParentalSettings
  b g_pClientParties
@@ -1356,7 +1358,6 @@
  b g_pGetSymbolProc
  b g_pSysModuleSteam
  b g_rtime32EndProfile
- b get_swarm_bucket_manifest_command
  b guard variable for CPackedStore::GetFileHandle(int)::invalid
  b guard variable for GCallbackMgr()::s_CallbackMgr
  b guard variable for GetNetAdrResolveCacheMutex()::mutex
@@ -1381,6 +1382,7 @@
  b profile_command
  b quit_command
  b run_app_build_command
+ b run_app_build_http_command
  b runscript_command
  b s_CmdLineParamGlobalUser
  b s_CurrentRoutingIDPtr
@@ -1396,6 +1398,8 @@
  b set_spew_level_command
  b set_steam_guard_code_command
  b sign_install_script_command
+ b swarm_get_bucket_manifest_command
+ b swarm_tc_loop_command
  b upload_controller_config_command
  b verify_chunk_store_command
  b verify_vpk_command
@@ -1474,6 +1478,7 @@
  puts
  r IPv6IPToString.hexdigits
  r LoadConVarsFromKeyValues(KeyValues const*)::rgchConVarFlag
+ r g_szLoggerVprofNode
  r s_rgCRCTable_Standard
  read
  remove
@@ -1500,6 +1505,7 @@
  strtod
  strtol
  strtoul
+ system
  t (anonymous namespace)::CLEANUP::~CLEANUP()
  t CRC32_ProcessBuffer_Internal_SliceBy4(unsigned int*, void const*, int, unsigned int const (&) [4][256])
  t FileSelect(dirent const*)
@@ -1556,7 +1562,6 @@
  t exit(void*, ConParams&, ConCommand&)
  t find(void*, ConParams&, ConCommand&)
  t force_install_dir(void*, ConParams&, ConCommand&)
- t get_swarm_bucket_manifest(void*, ConParams&, ConCommand&)
  t help(void*, ConParams&, ConCommand&)
  t http_test(void*, ConParams&, ConCommand&)
  t info(void*, ConParams&, ConCommand&)
@@ -1567,12 +1572,15 @@
  t profile(void*, ConParams&, ConCommand&)
  t quit(void*, ConParams&, ConCommand&)
  t run_app_build(void*, ConParams&, ConCommand&)
+ t run_app_build_http(void*, ConParams&, ConCommand&)
  t runscript(void*, ConParams&, ConCommand&)
  t set_app_beta_password(void*, ConParams&, ConCommand&)
  t set_spew(void*, ConParams&, ConCommand&)
  t set_spew_level(void*, ConParams&, ConCommand&)
  t set_steam_guard_code(void*, ConParams&, ConCommand&)
  t sign_install_script(void*, ConParams&, ConCommand&)
+ t swarm_get_bucket_manifest(void*, ConParams&, ConCommand&)
+ t swarm_tc_loop(void*, ConParams&, ConCommand&)
  t upload_controller_config(void*, ConParams&, ConCommand&)
  t verify_chunk_store(void*, ConParams&, ConCommand&)
  t verify_vpk(void*, ConParams&, ConCommand&)
