@@ -7130,7 +7130,7 @@
               (this.m_regexBannedWords = null),
               (this.m_regexCleanWords = null),
               (this.m_bShownFilterTip = !1),
-              (this.m_TextFilterPreferences = new Rt.u());
+              (this.m_TextFilterPreferences = new Rt.t());
             var e = new Ot.a();
             (this.m_TextFilterPreferences.eTextFilterSetting = e.text_filter_setting()),
               (this.m_TextFilterPreferences.bIgnoreFriends = e.text_filter_ignore_friends()),
@@ -9769,7 +9769,7 @@
           return (
             Object(h.d)(e, t),
             ((u = e).IsBroadcastAllowed = function() {
-              return Mt.b.EREALM != Rt.p.k_ESteamRealmChina;
+              return Mt.b.EREALM != Rt.o.k_ESteamRealmChina;
             }),
             (e.prototype.componentDidMount = function() {
               return Object(h.b)(this, void 0, void 0, function() {
@@ -9941,14 +9941,14 @@
                   (e = Object(h.a)(Object(h.a)({}, e), {
                     left_panel: n.GetImageURL(
                       "broadcast_left",
-                      i || Object(Rt.r)(Mt.b.LANGUAGE)
+                      i || Object(Rt.q)(Mt.b.LANGUAGE)
                     ),
                     right_panel: n.GetImageURL(
                       "broadcast_right",
-                      i || Object(Rt.r)(Mt.b.LANGUAGE)
+                      i || Object(Rt.q)(Mt.b.LANGUAGE)
                     ),
                     store_title: n.GetBroadcastTitle(
-                      i || Object(Rt.r)(Mt.b.LANGUAGE)
+                      i || Object(Rt.q)(Mt.b.LANGUAGE)
                     ),
                     broadcast_chat_visibility: n.GetBroadcastChatVisibility()
                   }));

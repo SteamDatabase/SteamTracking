@@ -16,7 +16,7 @@
 		"PermissionFriends"	{ controlname="RadioButton" labeltext="#Steam_Settings_Broadcast_FriendsAllowed" group="intro" style="PermissionOption" }
 		"PermissionPublic"	{ controlname="RadioButton" labeltext="#Steam_Settings_Broadcast_FriendsPublic" group="intro" style="PermissionOption" }
 		"DesktopOnlyLabel"	{ controlname="Label" labeltext="#Broadcast_FirstTime_DesktopOnly" group="intro" wrap="1"}
-		"FAQLink"		{ controlname="URLLabel" labeltext="#Broadcast_FirstTime_FAQ" URLText="https://support.steampowered.com/kb_article.php?ref=6730-TOAK-6497"}
+		"FAQLink"		{ controlname="URLLabel" labeltext="#Broadcast_FirstTime_FAQ" URLText="#Broadcast_FirstTime_FAQLink"}
 
 "NextButton"		{ controlname="Button" labeltext="#Broadcast_FirstTime_OK" }
 }

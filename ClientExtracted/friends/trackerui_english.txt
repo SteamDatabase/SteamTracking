@@ -688,6 +688,7 @@
 "Broadcast_FirstTime_PermissionHeader" "Take a minute to set up your preferences..."
 "Broadcast_FirstTime_DesktopOnly" "By default, only your game content can be watched. Your desktop will not be broadcast."
 "Broadcast_FirstTime_FAQ" "Read the Steam Broadcasting FAQ"
+"Broadcast_FirstTime_FAQLink" "https://support.steampowered.com/kb_article.php?ref=6730-TOAK-6497"
 "Broadcast_FirstTime_Title" "Steam Broadcasting"
 "Broadcast_FirstTime_OK" "OK"
 "Broadcast_FirstTime_Cancel" "Cancel"

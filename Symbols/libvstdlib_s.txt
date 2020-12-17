@@ -497,6 +497,7 @@
  T V_ParseShellCommandLinePOSIX(char const*, CUtlVector<CUtlString, CUtlMemory<CUtlString> >&, int, char const**)
  T V_ParseShellCommandLineWin32(char const*, CUtlVector<CUtlString, CUtlMemory<CUtlString> >&, int, char const**)
  T V_ParseURLQueryString
+ T V_RemoveChar
  T V_RemoveDotSlashes
  T V_ReplaceBadFilenameCharacters
  T V_ReplaceBadFilenameCharactersInPlace

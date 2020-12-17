@@ -3365,8 +3365,8 @@ Mac OS X 版本升级至 10.7 或更高版本。"
 "Steam_LibrariesLabel"	"内容库"
 "Steam_DownloadRestrictionsLabel"	"下载限制"
 
-"Steam_ServerBrowserPingRateLabel"	"游戏内的服务器浏览器：最大延迟 / 分钟"
-"Steam_ServerBrowserPingRateInfo"	"如果您在浏览游戏服务器时出现了连接问题，请尝试降低此数值。"
+"Steam_ServerBrowserPingRateLabel"	"服务器浏览器 Ping /分钟"
+"Steam_ServerBrowserPingRateInfo"	"在浏览游戏服务器时出现了连接问题？请尝试降低此数值。"
 "Steam_ServerBrowserPingRateDefault"	"自动（%PingsPerMin%）"
 
 "Steam_TextFilterSettingLabel"									"聊天过滤"
@@ -4599,6 +4599,14 @@ Mac OS X 版本升级至 10.7 或更高版本。"
 
 "Steam_Settings_Streaming_PIN_Title" "设置 Steam 流式技术安全代码"
 "Steam_Settings_Streaming_PIN_Text" "设置每次从此电脑进行流式传输时，必须在 Steam 流式设备上输入的数字 PIN 码："
+
+"Steam_Settings_ShareIPNetworking_Label" "Steam 网络"
+"Steam_Settings_ShareIPNetworking_Info" "允许游戏使用 Steam 网络分享我的 IP 地址，以获得更快连接"
+"Steam_Settings_ShareIPNetworking_Default" "默认"
+"Steam_Settings_ShareIPNetworking_Always" "始终"
+"Steam_Settings_ShareIPNetworking_FriendsOnly" "仅限好友"
+"Steam_Settings_ShareIPNetworking_Never" "从不"
+"Steam_Settings_ShareIPNetworking_URL" "了解更多"
 
 "SteamUI_StreamingIntro_Title"		"欢迎使用 Steam 远程畅玩"
 "SteamUI_StreamingIntro"			"您即将在另一台电脑上运行此游戏，并在此电脑上使用 Steam 远程畅玩。"

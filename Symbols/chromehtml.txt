@@ -654,6 +654,22 @@
  GetMiniDumpSteamID
  GetOSType
  Log
+ OBJC_CLASS_$_NSArray
+ OBJC_CLASS_$_NSAutoreleasePool
+ OBJC_CLASS_$_NSBundle
+ OBJC_CLASS_$_NSColorSpace
+ OBJC_CLASS_$_NSEvent
+ OBJC_CLASS_$_NSFileManager
+ OBJC_CLASS_$_NSFont
+ OBJC_CLASS_$_NSLocale
+ OBJC_CLASS_$_NSProcessInfo
+ OBJC_CLASS_$_NSRunningApplication
+ OBJC_CLASS_$_NSScreen
+ OBJC_CLASS_$_NSString
+ OBJC_CLASS_$_NSURL
+ OBJC_CLASS_$_NSUserDefaults
+ OBJC_CLASS_$_NSWindow
+ OBJC_CLASS_$_NSWorkspace
  OSAtomicCompareAndSwap64Barrier
  OSMemoryBarrier
  Plat_AbsoluteTime
@@ -3310,6 +3326,7 @@
  T IPC::PosixSharedMemory::~PosixSharedMemory()
  T InterfaceReg::InterfaceReg(void* (*)(), char const*)
  T MakeFileWriteable(StringView)
+ T OSXHelpers::BIsCPUArm64()
  T Sys_GetProcAddress(CSysModule*, char const*)
  T TSLNodeBase_t::operator delete(void*)
  T TSLNodeTemplate_t<HTMLCommandBuffer_t*>::operator delete(void*)
@@ -3771,10 +3788,12 @@
  b CChromeIPCClient::Init(unsigned int, CUtlDelegate<void ()>)::fAsserted
  b CChromeIPCClient::PushCommand(HTMLCommandBuffer_t*)::fAsserted
  b CChromeIPCClient::RunFrame()::fAsserted
+ b GetNetAdrResolveCacheMutex()::mutex
  b TranslateSharedPaintBuffers(HTMLCommandBuffer_t*, CChromeIPCClient*)::s_PIDParam
  b guard variable for CChromeIPCClient::BIsBrowserEnabled()::s_CmdLineParamDisableBrowser
  b guard variable for CChromeIPCClient::BStartMasterCEFProcess(char const*, EUniverse, ELanguage, EUIMode, bool, bool, bool)::paramFastOverlay
  b guard variable for CChromeIPCClient::BStartMasterCEFProcess(char const*, EUniverse, ELanguage, EUIMode, bool, bool, bool)::paramHTMLPerfMonitor
+ b guard variable for GetNetAdrResolveCacheMutex()::mutex
  b guard variable for TranslateSharedPaintBuffers(HTMLCommandBuffer_t*, CChromeIPCClient*)::s_PIDParam
  b k_InvalidClientID
  b protobuf_AddDesc_htmlmessages_2eproto()::already_here
@@ -3795,6 +3814,8 @@
  b s_CmdLineParamEnableKeyring
  b s_CmdLineParamStoreURL
  b s_HTMLController
+ b s_netadrResolveCache
+ b s_netadrResolveCacheMutexEnforceConstruction
  bootstrap_look_up
  bootstrap_port
  ceilf
@@ -4064,8 +4085,10 @@
  strtoll
  strtoul
  strtoull
+ sysctlbyname
  t (anonymous namespace)::protobuf_RegisterTypes(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  t BlockingWait(int*, unsigned int, int*)
+ t GetNetAdrResolveCacheMutex()
  t IPC::crc32(unsigned int, void const*, unsigned long)
  t _GLOBAL__sub_I_chrome_ipc_client.cpp
  t _GLOBAL__sub_I_chromewrapper.cpp
@@ -4076,6 +4099,7 @@
  t _GLOBAL__sub_I_interface.cpp
  t _GLOBAL__sub_I_ipcposix.cpp
  t _GLOBAL__sub_I_language.cpp
+ t _GLOBAL__sub_I_netadr.cpp
  t _GLOBAL__sub_I_utlbuffer.cpp
  typeinfo for SteamThreadTools::CThread
  typeinfo for std::exception

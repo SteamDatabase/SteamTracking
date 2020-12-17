@@ -1118,6 +1118,8 @@
 	"AppProperties_BetasPage": "Betas",
 	"AppProperties_ControllerPage": "Controller",
 	"AppProperties_DLCPage": "DLC",
+	"AppProperties_ShortcutPage": "Shortcut",
+	"AppProperties_AppID": "App ID: %1$s",
 	"AppProperties_EnableOverlay": "Enable the Steam Overlay while in-game",
 	"AppProperties_UseTheatreWhileVR": "Use Desktop Game Theatre while SteamVR is active",
 	"AppProperties_SharingNotSupported": "Steam Family Sharing is currently not supported by this title.",
@@ -1180,5 +1182,14 @@
 	"AppProperties_SteamInput_ReasonGameOverride": ", per-game override",
 	"AppProperties_SteamInput_ReasonGeneralSetting": ", general setting",
 	"AppProperties_SteamInput_ReasonDeveloperSetting": ", set by developer",
-	"AppProperties_SteamInput_ReasonRequired": ", always required"
+	"AppProperties_SteamInput_ReasonRequired": ", always required",
+	"AppProperties_Dlc_ViewInStore": "View more in Store",
+	"AppProperties_Dlc_Search": "Search...",
+	"AppProperties_Dlc_Installed": "Install",
+	"AppProperties_Dlc_Name": "Name",
+	"AppProperties_Dlc_DateAdded": "Added",
+	"AppProperties_Shortcut_TargetExecutable": "Target",
+	"AppProperties_Shortcut_StartInFolder": "Start In",
+	"AppProperties_Shortcut_BrowseFiles": "Browse...",
+	"AppProperties_Shortcut_InVR": "Include in VR Library"
 }

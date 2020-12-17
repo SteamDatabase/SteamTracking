@@ -39,7 +39,7 @@
 
 		ShareIPNetworkingLabel { ControlName=label labelText=#Steam_Settings_ShareIPNetworking_Label wrap=1 style=highlight }
 		ShareIPNetworkingInfo { ControlName=label labelText=#Steam_Settings_ShareIPNetworking_Info wrap=1 }
-		ShareIPNetworkingURL { ControlName=urllabel labelText=#Steam_Settings_ShareIPNetworking_URL URLText="https://support.steampowered.com/kb/9929-UAFN-9329/" wrap=1 }
+		ShareIPNetworkingURL { ControlName=urllabel labelText=#Steam_Settings_ShareIPNetworking_URL URLText="#Steam_Settings_ShareIPNetworking_URLText" wrap=1 }
 		ShareIPNetworkingCombo { ControlName=combobox fieldName=ShareIPNetworkingCombo editable="0" }
 	}
 	

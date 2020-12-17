@@ -4,4 +4,6 @@
 "steam_menu_file" "蒸汽平台"
 "Steam_About_Title"				"关于蒸汽平台"
 "Steam_About_Info"				"蒸汽平台"
+"Steam_Settings_ShareIPNetworking_URLText"	"https://help.steamchina.com/zh/kb/9929-UAFN-9329"
+"Steam_Settings_Streaming_StreamingSupportLink"	"https://help.steamchina.com/zh/kb/3629-RIAV-1617"
 }

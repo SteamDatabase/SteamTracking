@@ -2,6 +2,7 @@
 __TEXT
 __text
 __TEXT
+$c$
 __stubs
 __TEXT
 __stub_helper
@@ -74,7 +75,6 @@ _
 8
 @loader_path/libvstdlib_s.dylib
 @
-
 @loader_path/libSDL2-2.0.0.dylib
 8
 @loader_path/vgui2_s.dylib
@@ -8521,7 +8521,7 @@ https://steam-chat.com/
 https://%s.valve.org/help/
 https://help-china.beta.valve.org/
 https://help.beta.steampowered.com/
-https://help.steamchina.com
+https://help.steamchina.com/
 https://help.steampowered.com/
 %s/
 https://%s/store/
@@ -9304,9 +9304,7 @@ Steam_Language
 %communityhttps%
 %chat%
 %buildid%
-extended/newsurl
 %news%
-http://store.steampowered.com/news/
 %help%
 #Overlay_MicroTxnCancelDlgTitle
 #Overlay_MicroTxnCancelDlgText
@@ -9606,8 +9604,8 @@ developer
 Steam pid that launched us
 VGUI_Application_001
 OK
-Dec 10 2020
-16:43:31
+Dec 16 2020
+18:39:18
 crashhandler003
 gameoverlayui
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/overlay/gameoverlayui/main.cpp
@@ -13270,89 +13268,66 @@ Dec
 9x&
 &t&
 Rx&
+$
+0
+p
+$
+$
+$
+$
+p
+0
+$
+_A
 6
-Q$
+6
+6
+X#
+u#
+d#
+e!
+#
+#
 0
 p
-$
-tJ
-$
-$
-$
-p
-0
-$
-A
-A
-A
-A
-A
-A
-A
-A
-A
-A
-A
-e#
-V6
+[!
 #
 #
 #
-I#
-/#
-0
-p
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-!
-!
 !
 "
 "
 "
 "
 "
-@
-@
 "
-t
 "
+g"
 "
 "
 "
-"
-"
-r!
-U!
 3
 3
+L
 I
+!
 !
 !
 d
 !
-f!
-G
-G
-G
-G
-G
-
+!
+!
+H?
+:!
+r?
 
 
 
 
 
 
+!
+v
 2
 p
 0
@@ -13388,9 +13363,12 @@ p
 0
 @
 =
+T
 0
-!%
+W1
 J
+@
+=
 9
 ?
 @
@@ -13405,20 +13383,22 @@ J
 @
 @
 @
-T?
+g>
+'?
+U?
 @
 @
 @
 @
 @
+B@
 Hi
+S4
 0
 p
 I
 I
-HD
-@
-@
+^D
 @
 @
 @
@@ -13430,7 +13410,6 @@ HD
 /
 /
 $
-?
 @
 @
 =
@@ -13438,14 +13417,13 @@ $
 @
 ?
 ?
+.
 .
 .
 A
 Hc
-R-
 =
-O,
-KA
+{,
 A
 A
 A
@@ -13460,8 +13438,6 @@ A
 A
 A
 A
-c1
-@
 @
 Hc
 ?
@@ -13694,30 +13670,29 @@ P
 |
 #
 #
+#
 "
 3
 D
-B7
-7
+|7
 @
->'
 6
 6
 6
-x&
-R&
-w4
-.%
+Y5
+>5
+t5
+C&
 R
+4
 
-M3
-L95 w3
 3
 3
 $
 $
 $
 d
+2
 k
 
 
@@ -13726,44 +13701,40 @@ k
 1
 1
 
-50
 
 
--
--
-t-
+e-
 d
 &
 &
 d
-2-
 -
 t=
 =
 =
 @
-A,
+.,
 "
 "
 ,
 ,
 ,
 ,
+%
 uV%
 
 
 "
-"
+7+
 E
 >
 
-0!
+-!
 
 
 
 
 @
-*
 @
 @
 &
@@ -13803,6 +13774,7 @@ E
 @
 @
 )
+)
 .
 .
 .
@@ -13813,13 +13785,14 @@ d
 d
 d
 =
-HckY(
+Hc+Y(
 
 =
 =
 @
 =
 @
+8(
 
 @
 @
@@ -13830,10 +13803,13 @@ HckY(
 @
 @
 0
-{'
+z'
 E
+Hc5@y'
 }
+Hc5[e'
 $
+'
 p
 '
 '

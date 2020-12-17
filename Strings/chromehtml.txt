@@ -5,35 +5,41 @@ __stubs
 __TEXT
 __stub_helper
 __TEXT
-__gcc_except_tab__TEXT
-__const
+__objc_methname
 __TEXT
 __cstring
+__TEXT
+__gcc_except_tab__TEXT
+__const
 __TEXT
 __unwind_info
 __TEXT
 __eh_frame
 __TEXT
 __DATA
-__got
-__DATA
-p
 __nl_symbol_ptr
 __DATA
+__got
+__DATA
+x
 __la_symbol_ptr
 __DATA
 __mod_init_func
 __DATA
-P
+X
 __const
 __DATA
-__data
+__objc_imageinfo__DATA
+__objc_selrefs
 __DATA
-__bss
+__objc_classrefs__DATA
+__data
 __DATA
 __common
 __DATA
 p*
+__bss
+__DATA
 H
 __LINKEDIT
 
@@ -57,16 +63,26 @@ X
 h
 /System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration
 `
+p
+0
+/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices
+X
+/System/Library/Frameworks/Cocoa.framework/Versions/A/Cocoa
 0
 x
 /usr/lib/libc++.1.dylib
 8
 /usr/lib/libSystem.B.dylib
+X
+-
+/System/Library/Frameworks/AppKit.framework/Versions/C/AppKit
 h
 /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+8
+/usr/lib/libobjc.A.dylib
 &
 )
-0J
+@J
 N3IPC15BinarySemaphoreE
 N3IPC10PosixMutexE
 N3IPC6IMutexE
@@ -633,6 +649,14 @@ N6google8protobuf2io14ErrorCollectorE
 18CUtlCharConversion
 19CUtlNoEscConversion
 14CUtlMemoryBase
+en_US
+r
+hw.optional.arm64
+com.valvesoftware.steam.ipctool
+ipcserver restart: expected: %d, got: %d
+StopJob
+Assertion Failed: (&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlvector.h
 Fatal on Lock(): Locked the floor, couldn't release the ceiling: %s
 Fatal on Release(): Locked the ceiling, couldn't release the floor: %s
 /BSem/%x
@@ -656,9 +680,6 @@ false
 Bad Access flag on shared mem create: %s: %u
 /Shm/%x
 /dev/null
-com.valvesoftware.steam.ipctool
-ipcserver restart: expected: %d, got: %d
-StopJob
 %s_mutex
 %s_written
 Failed creating write event %s
@@ -799,8 +820,6 @@ Assertion Failed: IsValidIndex( elem )
 Assertion Failed: _IsValidIndex( elem, unNodeSize, pMemBase )
 Assertion Failed: _IsValidIndex( y, unNodeSize, pMemBase )
 Assertion Failed: IsValidIndex(elem)
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlvector.h
-Assertion Failed: (&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
 m_Tree
 m_Elements
 static_cast<Node_t*>(pNode)->elem
@@ -1529,7 +1548,6 @@ n
 t
 v
 b
-r
 f
 a
 \
@@ -1564,7 +1582,6 @@ english
 #SteamUI_Selection_English
 #Panorama_Selection_English
 #Panorama_Lang_English
-en_US
 en
 German
 german
@@ -1768,18 +1785,12 @@ sc_schinese
 
 
 
-m
-K
+u
 "
+:
 3
 D
-
 @
-
-
-;
-
-
 
 
 7
@@ -1796,9 +1807,7 @@ $
 A
 Hc
 =
-l
-L95
-
+L95uq
 Hc
 ?
 ?

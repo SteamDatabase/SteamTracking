@@ -3,5 +3,6 @@
 "Language" "sc_schinese" 
 "Tokens" 
 {
+"Broadcast_FirstTime_FAQLink" "https://help.steamchina.com/zh/kb/6730-TOAK-6497"
 } 
 }  

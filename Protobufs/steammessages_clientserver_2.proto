@@ -584,6 +584,7 @@ message CMsgGameServerData {
 	optional uint32 game_port = 4;
 	optional uint32 spectator_port = 5;
 	optional string server_name = 22;
+	optional string game_description = 29;
 	optional string spectator_server_name = 27;
 	optional fixed32 fake_ip = 28;
 	optional bytes sdr_login = 26;

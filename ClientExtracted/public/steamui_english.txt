@@ -4610,6 +4610,7 @@ Set a category for these games to help you find them quickly and organize your L
 "Steam_Settings_Streaming_EnableTouchController"	"Enable Touch Controls"
 
 "Steam_Settings_Streaming_StreamingSupport"	"View support information"
+"Steam_Settings_Streaming_StreamingSupportLink"	"https://support.steampowered.com/kb_article.php?ref=3629-RIAV-1617"
 
 "Steam_Settings_Streaming_Connected" "Computer connected"
 "Steam_Settings_Streaming_Paired" "Device paired"
@@ -4628,6 +4629,7 @@ Set a category for these games to help you find them quickly and organize your L
 "Steam_Settings_ShareIPNetworking_FriendsOnly" "Friends Only"
 "Steam_Settings_ShareIPNetworking_Never" "Never"
 "Steam_Settings_ShareIPNetworking_URL" "Learn More"
+"Steam_Settings_ShareIPNetworking_URLText" "https://support.steampowered.com/kb_article.php?ref=9929-UAFN-9329"
 
 "SteamUI_StreamingIntro_Title"		"Welcome to Steam Remote Play"
 "SteamUI_StreamingIntro"			"You are about to run this game on another computer and play it here using Steam Remote Play."

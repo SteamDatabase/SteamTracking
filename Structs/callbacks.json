@@ -2212,12 +2212,12 @@
     {
         "id": 3701,
         "size": 8,
-        "posted_in": "CUserShortcuts::OnShortcutChanged(unsigned int, CClientShortcut*)"
+        "posted_in": "CUserShortcuts::OnShortcutChanged(CClientShortcut*)"
     },
     {
         "id": 3702,
         "size": 8,
-        "posted_in": "CUserShortcuts::OnShortcutChanged(unsigned int, CClientShortcut*)"
+        "posted_in": "CUserShortcuts::RemoveShortcut(unsigned int)"
     },
     {
         "id": 3901,

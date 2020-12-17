@@ -1594,7 +1594,6 @@
  D construction vtable for vgui::TreeView-in-DirectoryTreeView
  D construction vtable for vgui::URLLabel-in-CPanelHideWrapper<vgui::URLLabel>
  D g_BitStringEndMasks
- D g_nPlatformCacheAppID
  D g_pchValidatedEmoticonDelimiter
  D guard variable for AppModalQueryBox::GetKBMap()::s_pMap
  D guard variable for AppModalQueryBox::GetMessageMap()::s_pMap
