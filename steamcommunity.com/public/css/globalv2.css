@@ -155,11 +155,18 @@ body #footer .responsive_optin_link {
 	display: none;
 }
 
-body.flat_page #footer_spacer, body.headerless_page #footer_spacer {
+body.flat_page #footer_spacer,
+body.headerless_page #footer_spacer {
 	height: 78px;
 	padding-top: 16px;
 	clear: both;
 }
+
+body.flat_page #footer_spacer.steam_china_footer_spacer,
+body.flat_page #footer_spacer.steam_china_footer_spacer {
+    height: 227px;
+}
+
 
 #footer .footer_content {
 	position: relative;
