@@ -12642,6 +12642,7 @@
  T vgui::HotKeyEntry::OnKeyFocusTicked()
  T vgui::HotKeyEntry::OnMousePressed(vgui::MouseCode)
  T vgui::HotKeyEntry::PaintBackground()
+ T vgui::HotKeyEntry::PerformLayout()
  T vgui::HotKeyEntry::ResetCursorBlink()
  T vgui::HotKeyEntry::SetAllowModifiersAsRealKeys(bool)
  T vgui::HotKeyEntry::SetAllowMouseButtons(bool)

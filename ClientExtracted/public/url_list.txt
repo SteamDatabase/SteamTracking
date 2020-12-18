@@ -327,23 +327,6 @@ MyHelpRequests
 	url			"%help%wizard/HelpRequests"
 	method		"internal"
 }
-SupportNewTicket
-{
-	url			"https://support.steampowered.com/newticket.php"
-	method		"external"
-}
-DownloadsSupportInfo
-{
-	// this needs to be updated when we have the real page
-	url			"http://support.steampowered.com/"
-	method		"external"
-}
-SupportAppPage
-{
-	url			"https://support.steampowered.com/kb_article.php?appid=%p1%"
-	method		"external"
-}
-
 HelpAppPage
 {
 	url			"%help%wizard/HelpWithGame/?appid=%p1%"
