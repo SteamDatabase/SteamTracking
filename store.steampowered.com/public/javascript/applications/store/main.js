@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6267822";
+var CLSTAMP = "6277229";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [38],
   {
@@ -7867,6 +7867,7 @@ var CLSTAMP = "6267822";
                       className: oe.a.CapsuleContainer,
                       eventToShow: o,
                       bShowDemoButton: a,
+                      bHidePrice: c,
                       fnOnHoverStateChange: this.OnHoverStateChange
                     },
                     A
@@ -24166,7 +24167,7 @@ var CLSTAMP = "6267822";
             !s)
           )
             return null;
-          if (!k()) {
+          if (!k() || e.bHidePrice) {
             var m = u || Object(y.b)(o.type) ? "app" : o.type,
               h = (u || s).id;
             return M.a.createElement(
@@ -32405,78 +32406,85 @@ var CLSTAMP = "6267822";
       n.d(t, "a", function() {
         return a;
       });
-      var c = n("mrSG"),
-        l = n("q1tI"),
+      var u = n("mrSG"),
+        p = n("q1tI"),
         r = n("bxiW"),
-        u = n("lypr"),
+        d = n("lypr"),
         a = (function(t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (
-              (e.state = { bRenderChildren: !1, nPrevRenderHeight: 0 }),
-              (e.m_refContainer = l.createRef()),
+              (e.state = {
+                bRenderChildren: !1,
+                nPrevRenderWidth: 0,
+                nPrevRenderHeight: 0
+              }),
+              (e.m_refContainer = p.createRef()),
               e
             );
           }
           return (
-            Object(c.d)(e, t),
+            Object(u.d)(e, t),
             (e.prototype.BLoadAndUnload = function() {
               return "LoadAndUnload" == (this.props.mode || "JustLoad");
             }),
-            (e.prototype.GetRenderedHeight = function() {
-              var e,
-                t = 0;
-              return (
-                !this.m_refContainer.current ||
-                  ((e = this.m_refContainer.current.GetBoundingClientRect()) &&
-                    (t = e.height)),
-                t
-              );
-            }),
             (e.prototype.OnVisibilityChange = function(e) {
-              var t = this.state.bRenderChildren;
-              t != e &&
-                ((t && !this.BLoadAndUnload()) ||
-                  (this.setState({
+              var t,
+                n,
+                r,
+                a = this.state.bRenderChildren;
+              a != e &&
+                ((a && !this.BLoadAndUnload()) ||
+                  ((n = t = 0),
+                  !this.m_refContainer.current ||
+                    ((r = this.m_refContainer.current.GetBoundingClientRect()) &&
+                      ((t = r.width), (n = r.height))),
+                  this.setState({
                     bRenderChildren: e,
-                    nPrevRenderHeight: this.GetRenderedHeight()
+                    nPrevRenderWidth: t,
+                    nPrevRenderHeight: n
                   }),
                   e && this.props.onRender && this.props.onRender()));
             }),
             (e.prototype.render = function() {
               var e,
-                t = this.props,
-                n = t.placeholderHeight,
-                r = (t.onRender, t.style),
-                a = (t.mode,
-                Object(c.f)(t, [
+                t,
+                n = this.props,
+                r = n.placeholderWidth,
+                a = n.placeholderHeight,
+                o = (n.onRender, n.style),
+                i = (n.mode,
+                Object(u.f)(n, [
+                  "placeholderWidth",
                   "placeholderHeight",
                   "onRender",
                   "style",
                   "mode"
                 ])),
-                o = this.state.bRenderChildren,
-                i = r;
-              o ||
-                ((e = n),
-                this.state.nPrevRenderHeight &&
-                  (e = this.state.nPrevRenderHeight),
-                void 0 !== e &&
-                  (i = Object(c.a)(Object(c.a)({}, r), { minHeight: e })));
-              var s = this.BLoadAndUnload() ? "repeated" : "once";
-              return l.createElement(
-                u.a,
-                Object(c.a)({ ref: this.m_refContainer, style: i }, a, {
+                s = this.state.bRenderChildren,
+                c = o;
+              s ||
+                ((e = this.state.nPrevRenderWidth || r),
+                (void 0 === (t = this.state.nPrevRenderHeight || a) &&
+                  void 0 === e) ||
+                  (c = Object(u.a)(Object(u.a)({}, o), {
+                    minHeight: t,
+                    minWidth: e
+                  })));
+              var l = this.BLoadAndUnload() ? "repeated" : "once";
+              return p.createElement(
+                d.a,
+                Object(u.a)({ ref: this.m_refContainer, style: c }, i, {
                   onVisibiltyChange: this.OnVisibilityChange,
-                  trigger: s
+                  trigger: l
                 }),
-                o && this.props.children
+                s && this.props.children
               );
             }),
-            Object(c.c)([r.a], e.prototype, "OnVisibilityChange", null),
+            Object(u.c)([r.a], e.prototype, "OnVisibilityChange", null),
             e
           );
-        })(l.Component);
+        })(p.Component);
     },
     N0Ye: function(e, t, n) {
       "use strict";
@@ -72010,17 +72018,20 @@ var CLSTAMP = "6267822";
               );
             }),
             (t.prototype.RenderChildren = function() {
-              var r = this,
-                a = this.GetPageSize();
+              var r = this;
               return l.Children.map(this.props.children, function(e, t) {
-                var n =
-                  r.props.bLazyRenderChildren && a <= t
-                    ? l.createElement(
-                        i.a,
-                        { rootMargin: "0px 100% 0px 100%", bHorizontal: !0 },
-                        e
-                      )
-                    : e;
+                var n = r.props.bLazyRenderChildren
+                  ? l.createElement(
+                      i.a,
+                      {
+                        rootMargin: "0px 100% 0px 100%",
+                        bHorizontal: !0,
+                        placeholderWidth: 1,
+                        placeholderHeight: 1
+                      },
+                      e
+                    )
+                  : e;
                 return l.createElement(c.e, { key: "slide_" + t, index: t }, n);
               });
             }),
