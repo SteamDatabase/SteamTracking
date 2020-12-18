@@ -2996,9 +2996,19 @@ div .cdkey_request_details_row
 	display: inline-block;
 }
 
+.cdkey_request_details_row .header_row .narrow
+{
+	width: 100px;
+}
+
 .cdkey_request_details_row .title.dim
 {
 	color: #818588;
+}
+
+.cdkey_request_details_row .title.critical_warning
+{
+	color: #e24044;
 }
 
 .cdkey_request_details_row .value.warning
