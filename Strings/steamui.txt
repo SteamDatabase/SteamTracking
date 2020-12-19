@@ -20044,7 +20044,7 @@ file://{resources}/layout/settings/settings_about.xml
 build_date
 Dec 18 2020
 build_time
-13:25:01
+18:15:08
 package_version
 local
 SteamClient020
@@ -27990,7 +27990,7 @@ https://steamchina.com
 https://www.steampowered.com
 WebsiteURL
 steam/cached/aboutdialog.res
-13:27:10
+18:17:09
 CAboutDialog
 ValveSurveySummarizeData
 #steam_systeminfo_title
@@ -39524,7 +39524,6 @@ H=
 
 
 
-9
 
 
 9
@@ -40258,6 +40257,7 @@ z\
 @
 @
 @
+#z
 @
 @
 @
@@ -40267,7 +40267,6 @@ z\
 @
 @
 \
-Dx
 @
 @
 @
@@ -40311,7 +40310,6 @@ D
 @
 @
 @
-Cx
 '
 +
 @
@@ -40469,7 +40467,6 @@ E
 @
 @
 @
-nt
 @
 @
 @
@@ -40575,7 +40572,6 @@ LT
 !
 !
 #
-io
 H=
 
 
@@ -40583,6 +40579,7 @@ H=
 "
 *
 g
+pn
 @
 $
 @
@@ -40608,7 +40605,6 @@ $
 @
 m
 e
-Cl
 @
 @
 @
@@ -40622,8 +40618,7 @@ Cl
 @
 @
 N
-~
-~
+f~
 ~
 ~
 @
@@ -40657,24 +40652,24 @@ K
 @
 @
 @
-K}
 @
 @
 @
 @
+~
 @
 @
 @
 @
 @
-||
+i|
 @
 @
 @
 @
 @
 @
-:|
+;|
 @
 @
 @
@@ -40749,6 +40744,7 @@ K}
 @
 @
 @
+A}
 @
 @
 @
@@ -40883,6 +40879,7 @@ g
 @
 @
 @
+g
 @
 @
 @
@@ -41005,7 +41002,27 @@ I
 @
 @
 @
-D{
+E{
+;|
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+.f
 @
 @
 @
@@ -41042,22 +41059,5 @@ D{
 @
 @
 @
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
+|
 |

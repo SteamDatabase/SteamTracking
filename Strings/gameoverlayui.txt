@@ -39,21 +39,19 @@ __DATA
 __cfstring
 __DATA
 __objc_imageinfo__DATA
-`sB
-`sB
+psB
+psB
 __objc_selrefs
 __DATA
-hsB
-hsB
+xsB
+xsB
 __objc_classrefs__DATA
-puB
-puB
 __data
 __DATA
+vB
+vB
 __thread_vars
 __DATA
-pKK
-pKK
 __thread_bss
 __DATA
 __bss
@@ -9607,7 +9605,7 @@ Steam pid that launched us
 VGUI_Application_001
 OK
 Dec 18 2020
-13:20:35
+18:11:07
 crashhandler003
 gameoverlayui
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/overlay/gameoverlayui/main.cpp
@@ -13284,9 +13282,11 @@ A
 A
 A
 A
+A
 D#
 x#
 #
+A
 A
 A
 A
@@ -13307,7 +13307,7 @@ a4
 84
 !
 !
-@
+/@
 "
 "
 "
@@ -13332,12 +13332,13 @@ d
 !
 !
 v!
-1?
+,?
 G
 G
 G
 G
 G
+>G
 
 
 
@@ -13345,6 +13346,7 @@ G
 
 
 2
+M>
 p
 0
 0
@@ -13392,14 +13394,16 @@ G
 @
 @
 @
+g>
+c>
+f>
 @
-z?
+`@
 Hi
+dE
 %0
 0
 p
-D@
-hD
 I
 I
 @
@@ -13417,6 +13421,7 @@ I
 /
 /
 $
+IC
 ?
 @
 @
@@ -13440,7 +13445,7 @@ A
 A
 A
 A
-L95c)A
+L95s)A
 2
 @
 @
@@ -13680,19 +13685,23 @@ P
 "
 3
 D
-H7
+u7
+>7
 @
 6
 6
-@5
+N5
 5
 5
+{4
 W%
 9
 
-L95`w3
+q3
+L95pw3
 3
 3
+'3
 E$
 f
 $
@@ -13701,7 +13710,8 @@ d
 o
 
 
-N-
+t-
+c-
 
 
 
@@ -13711,7 +13721,8 @@ N-
 -
 -
 -
-e-
+-
+#-
 d
 &
 &
@@ -13721,10 +13732,8 @@ d
 =
 =
 @
-?,
 "
 "
-Y.
 ,
 ,
 ,
@@ -13734,8 +13743,8 @@ uV%
 
 "
 "
-%+
 E
+j+
 >
 
 
@@ -13782,25 +13791,20 @@ A
 @
 @
 @
-)
 .
 .
 .
 .
 .
 .
-q)
 d
 d
 d
-k(
 =
-Hc{Y(
 
 =
 =
 @
->(
 =
 @
 
@@ -13813,13 +13817,12 @@ Hc{Y(
 @
 @
 0
-z'
 E
-'
-o'
+z'
 }
-h'
 $
 p
+'
+'
 '
 '
