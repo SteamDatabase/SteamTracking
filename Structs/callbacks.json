@@ -1071,7 +1071,7 @@
     },
     {
         "id": 1018,
-        "size": 572,
+        "size": 588,
         "posted_in": "void CSteamEngine::PostCallbackToAllUsers<AppUpdateStopped_t>(AppUpdateStopped_t*)"
     },
     {
