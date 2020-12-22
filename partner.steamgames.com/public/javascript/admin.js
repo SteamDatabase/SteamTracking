@@ -1495,4 +1495,71 @@ function CloseEmailReminder()
 	V_SetCookie( "hideEmailAddressReminder", 1, 30 );
 }
 
+function RetireAppInternal( nAppID, nPubID, bDMCARetire, strNotes, strRetireAction, bRemoveCommunityPresence, bPurgeContent, bVerboseOutput )
+{
+	var Promise;
+	var strRetireError = 'Unable to retire appID ';
+	var strRetireSuccess = 'Successfully retired appID ';
+	if ( !strRetireAction.localeCompare( 'Banned', undefined, { sensitivity: 'accent' }) )
+	{
+		strRetireError = 'Unable to ban appID';
+		strRetireSuccess = 'Successfully banned appID ';
+	}
+	else if ( !strRetireAction.localeCompare( 'DMCA', undefined, { sensitivity: 'accent' }) )
+	{
+		strRetireError = 'Unable to DMCA retire appID';
+		strRetireSuccess = 'Successfully DMCA retired appID ';
+	}
+
+	var progressMessages = $J( '#ProgressMessagesContainer' );
+
+	Promise = $J.post( 'https://partner.steamgames.com/apps/retireapp/' + nAppID, {
+		notes: strNotes,
+		partnerid: nPubID,
+		retireaction: strRetireAction,
+		dmcaretire: bDMCARetire ? 1 : 0,
+		remove_community_presence: bRemoveCommunityPresence ? 1 : 0,
+		purge_content: bPurgeContent ? 1 : 0,
+		sessionid: g_sessionID
+	}).fail( function( xhr ) {
+		progressMessages.append( '<div class="add_dlc_error_msg">' + strRetireError + nAppID + '</div>' );
+	}).done( function( response ) {
+		if ( response.success == 1 )
+		{
+			progressMessages.append( '<div class="add_dlc_msg parent">' + strRetireSuccess + nAppID + '</div>' );
+		}
+		else
+		{
+			progressMessages.append( '<div class="add_dlc_msg parent">' + '</div>' );
+			progressMessages.append( '<div class="add_dlc_error_msg">' + 'Error with appID ' + nAppID + '</div>' );
+			if ( response.msg_errors )
+			{
+				for ( var i = 0; i < response.msg_errors.length; i++ )
+				{
+					progressMessages.append( '<div class="add_dlc_error_msg">' + response.msg_errors[i] + '</div>' );
+				}
+			}
+			else
+			{
+				progressMessages.append( '<div class="add_dlc_error_msg">' + response + '</div>' );
+			}
+		}
+	}).always( function( response ) {
+		if ( bVerboseOutput )
+		{
+			if ( response.msg_success )
+			{
+				for ( var i = 0; i < response.msg_success.length; i++ )
+				{
+					progressMessages.append( '<div class="add_dlc_msg">' + response.msg_success[i] + '</div>' );
+				}
+			}
+
+			progressMessages.append( '<div class="add_dlc_msg">' + 'Finished appID ' + nAppID + '</div>' );
+		}
+	});
+
+	return Promise;
+}
+
 

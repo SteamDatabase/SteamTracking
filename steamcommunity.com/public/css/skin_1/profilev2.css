@@ -82,6 +82,7 @@ body.GoldenProfileDebutTheme {
     --gradient-right: rgba(156, 66, 17, 0.18);
     --gradient-left: rgba(213, 172, 81, 0.62);
 	--gradient-background: rgba(61, 47, 20, 0.6);
+	--gradient-background: #34526F;
     --gradient-background-right: rgba(0, 0, 0, 0);
     --gradient-background-left: rgba(243, 200, 9, 0.13);
     --color-showcase-header: rgba(95, 72, 33, 0.82);
@@ -89,6 +90,22 @@ body.GoldenProfileDebutTheme {
     --btn-background: rgb(125, 98, 44);
     --btn-background-hover: rgb(135, 108, 54);
     --btn-outline: rgb(175, 148, 94);
+}
+
+
+body.WinterProfile2020Theme {
+	--gradient-right: #7770A988;
+    --gradient-left: #34526F88;
+    --gradient-background: #34526F88;
+	--gradient-background-right: rgba(25, 20, 65, 0.333);
+	--gradient-background-left: rgba(3, 7, 12, 0.333);
+	--color-showcase-header: #07817f;
+    --gradient-showcase-header-left: #34526F;
+	--btn-background: #34526F;
+    --btn-background-hover: rgb(54, 104, 151);
+	--btn-outline: #34526F;
+	
+	
 }
 
 div.profile_page {

@@ -3912,6 +3912,7 @@ Label.AchievementPercent,
 
 .StatsRow .ImageCol Image {
 	max-width: 64px;
+	max-height: 64px;
 }
 
 .StatsRow .TextCol {

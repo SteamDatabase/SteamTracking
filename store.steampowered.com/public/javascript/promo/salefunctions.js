@@ -262,7 +262,7 @@ function SortItemListByPriorityList( rgItemList, strPriorityListName )
 	return rgItemListSorted;
 }
 
-function HomeRenderFeaturedItems( rgDisplayLists, rgTagData, rgFranchiseData )
+function HomeRenderFeaturedItems( rgDisplayLists, rgTagData, rgFranchiseData, rgTagGenres = null )
 {
 	HomeSaleFilterHeroes( $J('.hero_parent_ctn') );
 
@@ -348,7 +348,16 @@ function HomeRenderFeaturedItems( rgDisplayLists, rgTagData, rgFranchiseData )
 	// NOTE: If we are already using home.js, then we don't need this. Found we were doubling up the streams
 	// GSteamBroadcasts.Init( GHomepage.FilterItemsForDisplay );
 
-
+	// Order and display the tag / genre section (a carousel of square box that lead you to custom genre/tag sale pages, based
+	// on the users preference, otherwise, fallback to the random order that they were provided to us in.
+	var $elTagGenreBlock = $J('#sale_tag_genre');
+	if( rgTagGenres && $elTagGenreBlock.length )
+	{
+		new CScrollOffsetWatcher( $elTagGenreBlock, function() {
+			const rgPriorityOrderTagGenre = PrioritizeTagGenreList( rgTagGenres );
+			RenderTagGenreBlock( rgPriorityOrderTagGenre );
+		} );
+	}
 
 	AddMicrotrailersToStaticCaps( $J('.home_topsellers_games_ctn' ) );
 	AddMicrotrailersToStaticCaps( $J('.home_newupcoming_games_ctn') );
@@ -577,6 +586,67 @@ function SaleTagGradient( colorsIn )
 	strStyle += colors.shift() + ' 90% );';
 
 	return strStyle;
+}
+
+// Prioritize the genre/tag blocks based on the users tag prefernce, then display the renaming in the provided random order
+// Returns the priority list; can modify and alter the rgTagGenre list
+function PrioritizeTagGenreList( rgTagGenres )
+{
+	rgPriorityTagGenreList = [];
+
+	// Walk through the user's preference if any, and append to the rgPriorityTagGenreList list. Since multiple tagid
+	// can refer to the same entity, we null out the value, so we don't add the same item more than once.
+	//
+	// We won't have any recommendation tags for a not-logged in users, so we don't prioritize and fallback to random ordering.
+	if( GDynamicStore && GDynamicStore.s_rgRecommendedTags && GDynamicStore.s_rgRecommendedTags.length > 0 )
+	{
+		// Map the tagid to index into the rgTagGenres list;
+		const mapTagIDSourceIndex = new Map();
+		rgTagGenres.forEach( function ( TagGenre, index ) {
+			TagGenre.tagids.forEach( function( tagid ) {
+				mapTagIDSourceIndex.set( tagid, index );
+			});
+		});
+
+		GDynamicStore.s_rgRecommendedTags.forEach( function( preferredTag ) {
+			if( mapTagIDSourceIndex.has( preferredTag.tagid ) )
+			{
+				const index = mapTagIDSourceIndex.get( preferredTag.tagid );
+				if( rgTagGenres[index])
+				{
+					rgPriorityTagGenreList.push( rgTagGenres[index]);
+					rgTagGenres[index] = null; // invalidate so we don't add it again
+				}
+			}
+		});
+	}
+
+	rgTagGenres.forEach( function( TagGenre ) {
+		if (TagGenre) {
+			rgPriorityTagGenreList.push(TagGenre)
+		}
+	} );
+
+	return rgPriorityTagGenreList;
+}
+
+// Display the Tag Genre which are a list of art block that refer to a custom sale page for that tag/genre
+function RenderTagGenreBlock( rgTagGenres )
+{
+	// This has scroll row per contain
+	var $elCtn = $J( '#sale_tag_genre_ctn');
+
+	rgTagGenres.forEach( function ( TagGenre, index ) {
+
+		var nScrollRowIndex = Math.floor( index / 5 );
+		var $elScrollRow = $J( $elCtn.children()[ nScrollRowIndex] );
+		var $Link = $J('<a/>', { 'class': 'tag_square', 'href': TagGenre.url  } );
+		$Link.append( $J('<img/>', { 'class': 'tag_square_img', 'src': TagGenre.square } ) );
+		$Link.append( $J('<div/>', { 'class': 'tag_genre_title' } ).html( TagGenre.name ) );
+		$Link.append( $J('<div/>', { 'class': 'tag_square_overlay' } ) );
+
+		$elScrollRow.append( $Link );
+	});
 }
 
 function SaleTagBackground( colors )

@@ -25,7 +25,56 @@
 	margin-top: 16px;
 }
 
+.profile_showcase_sort_controls {
+	position: absolute;
+	right: 4px;
+	top: calc( 50% - 9px );
+	display: none;
+}
+.has_showcase .profile_showcase_sort_controls {
+	display: block;
+}
+
+.profile_showcase_sort_btn {
+	cursor: pointer;
+	margin-left: 2px;
+}
+.profile_showcase_sort_up {
+	width: 0px;
+	height: 0px;
+	border-left: 7px solid transparent;
+	border-right: 7px solid transparent;
+	border-bottom: 7px solid #737373;
+}
+.profile_showcase_sort_down {
+	width: 0px;
+	height: 0px;
+	border-left: 7px solid transparent;
+	border-right: 7px solid transparent;
+	border-top: 7px solid #737373;
+}
+.profile_showcase_sort_up:hover {
+	border-bottom: 7px solid #c8c8c8;
+}
+.profile_showcase_sort_down:hover {
+	border-top: 7px solid #c8c8c8;
+}
+
+.profile_showcase_drag_handle {
+	width: 18px;
+	height: 18px;
+	padding: 0;
+	cursor: move;
+}
+
+.profile_showcase_drag_and_drop_highlight {
+	border: 2px dashed #666;
+	background-color: #333;
+	margin: 8px 0;
+}
+
 .profile_showcase_selector {
+	position: relative;
 }
 
 select.gray_bevel {
@@ -61,7 +110,8 @@ select.gray_bevel {
 }
 
 .customization_controls select {
-	width: 250px;
+	width: 100%;
+	max-width: 652px;
 }
 
 .customization_controls_nextprev {

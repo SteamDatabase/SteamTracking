@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [7],
+  [6],
   {
     E9gz: function(e, t, n) {
       e.exports = {
@@ -213,7 +213,10 @@
                   "div",
                   { key: s.GID + e },
                   (function(e) {
-                    var t = Object(N.k)(e.m_rtWhen),
+                    var t =
+                        Object(N.k)(e.m_rtWhen) +
+                        " @ " +
+                        Object(N.m)(e.m_rtWhen),
                       n = v.createElement(U, {
                         locToken: "#EventModTile_Moderator",
                         accountID: e.m_moderator

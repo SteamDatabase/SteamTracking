@@ -705,3 +705,13 @@ input[type=date] {
 	display: none;
 	color: #B0AEAC;
 }
+
+body.v6 h2.pageheader.youraccount_pageheader {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.youraccount_steamid {
+	color: #808891;
+	margin-bottom: 10px;
+}

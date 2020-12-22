@@ -29,7 +29,12 @@ GSteamBroadcasts = {
 		GSteamBroadcasts.m_categoryid = categoryid;
 		GSteamBroadcasts.m_nMaxBroadcasts = maxBroadcasts;
 		GSteamBroadcasts.m_bAutoPlayingFeaturedBroadcast = bAutoPlayingFeaturedBroadcast;
-		GSteamBroadcasts.Render();
+
+		// If we have zero maxBroadcast, it means we should be disable
+		if( GSteamBroadcasts.m_nMaxBroadcasts > 0 )
+		{
+			GSteamBroadcasts.Render();
+		}
 	},
 
 

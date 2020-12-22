@@ -3471,7 +3471,7 @@ textarea:-webkit-autofill:focus,
 .gamehover_GameHoverCapsuleCtn_2jsr3 {
   height: 100%;
   box-sizing: border-box;
-  background: radial-gradient(ellipse at top right, #5577bb, #333355);
+  background: linear-gradient(360deg, #5c6770 0%, black 15%);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
   display: flex;
   flex-direction: column;
@@ -3541,7 +3541,7 @@ textarea:-webkit-autofill:focus,
       bottom: 0;
       left: 0;
       z-index: 1;
-      background-color: white;
+      background-color: rgba(255, 255, 255, 0.65);
       -webkit-mask-image: linear-gradient(120deg, transparent 0%, rgba(0, 0, 0, 0.8) 15%, rgba(0, 0, 0, 0.7) 20%, transparent 33%);
       mask-image: linear-gradient(120deg, transparent 0%, rgba(0, 0, 0, 0.8) 15%, rgba(0, 0, 0, 0.7) 20%, transparent 33%);
       transition: transform 0.35s ease-out;
@@ -3560,7 +3560,8 @@ textarea:-webkit-autofill:focus,
   border-radius: 2px;
   background: radial-gradient(ellipse at top right, #0673c6, #03628b);
   display: flex;
-  overflow: hidden; }
+  overflow: hidden;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.9); }
   .gamehover_WishlistButton_3notz svg {
     padding: 4px;
     display: block; }
@@ -3579,13 +3580,16 @@ textarea:-webkit-autofill:focus,
       color: white;
       width: auto;
       height: auto;
-      padding-right: 8px; }
+      padding-right: 8px;
+      text-shadow: 0 0 3px rgba(0, 0, 0, 0.9); }
 
 .gamehover_WishlistButtonNotTop_3VcyY {
   top: unset; }
 
 .gamehover_BottomShelf_oAqlZ {
-  background: radial-gradient(ellipse at top right, #5577bb, #333355);
+  background: linear-gradient(359.91deg, #2b333a 30%, rgba(103, 113, 122, 0.3) 85%);
+  mix-blend-mode: normal;
+  backdrop-filter: blur(10px);
   position: relative;
   z-index: 1;
   transition: transform 0.25s ease-in-out;
@@ -3600,16 +3604,24 @@ textarea:-webkit-autofill:focus,
       transform: translateY(0); }
   .gamehover_BottomShelf_oAqlZ .gamehover_BottomShelfOffScreen_36zpR {
     flex-shrink: 1;
-    overflow-y: auto; }
+    overflow-y: none; }
   .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL {
-    padding: 4px 8px; }
+    padding: 4px 8px;
+    padding-left: 4px;
+    padding-top: 4px; }
     .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_GameTitle_405wj {
-      font-size: 18px; }
+      font-size: 18px;
+      padding: 0px 4px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      max-height: 24px; }
     .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_TagRow_2SWQM {
       color: #88aacc;
       font-size: 10px;
       display: flex;
-      padding: 8px 0px 4px; }
+      padding: 8px 0px 0px 0px;
+      max-height: 20px; }
       .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_TagRow_2SWQM .gamehover_Tags_fTGVi {
         overflow: hidden;
         max-height: 40px;
@@ -3621,21 +3633,41 @@ textarea:-webkit-autofill:focus,
           margin-bottom: 4px;
           line-height: 17px;
           border-radius: 2px;
-          background-color: rgba(112, 129, 137, 0.15);
+          background-color: rgba(112, 129, 137, 0.25);
           color: rgba(255, 255, 255, 0.65);
           margin-left: 4px;
           text-overflow: ellipsis;
           white-space: nowrap;
           position: relative; }
+    .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_ReviewScoreHeader_2t-0j {
+      color: #6b8aaa;
+      margin-left: 4px; }
+    .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_ReviewScoreValue_3ZWs0 {
+      display: flex; }
+      .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_ReviewScoreValue_3ZWs0.gamehover_ReviewScoreLow_3nU5I {
+        color: gray; }
+      .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_ReviewScoreValue_3ZWs0.gamehover_ReviewScoreMixed_11Q2_ {
+        color: #d8d81e; }
+      .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_ReviewScoreValue_3ZWs0.gamehover_ReviewScoreHigh_3wXHC {
+        color: #32ad32; }
+      .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_ReviewScoreValue_3ZWs0 .gamehover_ReviewScorePercentage_38dPa {
+        margin-right: 4px; }
+    .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_ReviewScoreCount_1wXL_ {
+      color: #6b8aaa;
+      margin-left: 4px; }
     .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_PlatformDisplay_2UG4_ {
-      padding-left: 4px; }
+      padding-left: 8px;
+      margin-bottom: 4px;
+      opacity: 0.4; }
     .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_ReviewsAndRelease_1HFUC {
       display: flex;
-      justify-content: space-between;
+      justify-content: left;
       font-size: 14px;
       margin-left: -4px; }
       .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_ReviewsAndRelease_1HFUC .gamehover_ReleaseDate_35Bya {
-        padding: 4px; }
+        padding: 4px;
+        font-size: 12px;
+        color: #6b8aaa; }
         .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_ReviewsAndRelease_1HFUC .gamehover_ReleaseDate_35Bya .gamehover_ReleasePrefix_2ZKEX {
           margin-right: 4px; }
 
@@ -4065,7 +4097,7 @@ textarea:-webkit-autofill:focus,
       min-height: 38px; }
 
 .salepreviewwidgets_InGameHover_axjdi .salepreviewwidgets_StoreSalePriceWidgetContainer_2s-O5, .salepreviewwidgets_InGameHover_axjdi .salepreviewwidgets_StoreSalePriceBox_3j4dI {
-  background-color: #31506c; }
+  background-color: #00000000; }
 
 .salepreviewwidgets_StoreSaleDiscountedPriceCtn_3NhLu {
   display: flex;
@@ -4075,16 +4107,20 @@ textarea:-webkit-autofill:focus,
   padding-left: 5px; }
   .salepreviewwidgets_StoreSaleDiscountedPriceCtn_3NhLu .salepreviewwidgets_StoreSalePriceBox_3j4dI {
     padding: 0px;
-    line-height: 16px; }
+    line-height: 16px;
+    font-size: 15px;
+    color: #cbf240;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7); }
 
 .salepreviewwidgets_StoreSaleDiscountBox_cnkoF {
-  font-size: 16px;
-  font-weight: 500;
-  padding: 3px 8px;
-  background-color: #4C6B22;
-  color: #A4D007;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 16px;
+  padding: 4px 8px;
+  color: #beee11;
   display: flex;
-  align-items: center; }
+  align-items: center;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.7); }
 
 .salepreviewwidgets_StoreOrignalPrice_18ANC {
   color: #626366;
@@ -4210,13 +4246,13 @@ textarea:-webkit-autofill:focus,
     padding: 9px 20px; }
 
 .salepreviewwidgets_CapsulePlatform_2bCf9 {
-  padding: 4px 4px 4px 20px;
-  height: 20px;
+  padding: 4px 4px 4px 16px;
+  height: 16px;
   display: flex;
   flex-direction: row;
   flex: none; }
   .salepreviewwidgets_CapsulePlatform_2bCf9 img {
-    max-width: 20px; }
+    max-width: 16px; }
   .salepreviewwidgets_CapsulePlatform_2bCf9 .SVGIcon_VR {
     max-width: 26px; }
 
@@ -6401,35 +6437,37 @@ div.creatorhomeembed_SocialContainer_1o1Ds {
 .facetedbrowse_FacetedBrowseCtn_1Drr- {
   display: flex;
   flex-direction: row; }
-
-.facetedbrowse_FacetedBrowseControls_1JM3A {
-  color: white; }
   @media only screen and (min-width: 1200px) {
-    .facetedbrowse_FacetedBrowseControls_1JM3A {
-      width: 30%;
-      margin-right: 32px;
-      position: absolute;
-      width: 200px;
-      left: -220px; } }
-  @media only screen and (max-width: 1200px) {
-    .facetedbrowse_FacetedBrowseControls_1JM3A {
-      width: 100%; } }
+    .facetedbrowse_FacetedBrowseCtn_1Drr- {
+      flex-wrap: nowrap;
+      justify-content: flex-end; } }
+
+@media only screen and (min-width: 1200px) {
+  .facetedbrowse_FacetedBrowseControls_1JM3A {
+    padding: 10px;
+    box-shadow: inset -10px 0 10px rgba(0, 0, 0, 0.25);
+    flex-shrink: 0;
+    flex-basis: 200px;
+    padding-right: 20px;
+    margin-right: 16px; } }
+
+@media only screen and (max-width: 1200px) {
+  .facetedbrowse_FacetedBrowseControls_1JM3A {
+    width: 100%; } }
 
 .facetedbrowse_FacetedBrowseControls_1JM3A h1 {
   text-transform: uppercase;
   font-size: 17px;
   letter-spacing: 2px;
-  padding-bottom: 4px;
-  border-bottom: 1px solid white; }
+  padding-bottom: 4px; }
 
 .facetedbrowse_FacetedBrowseControls_1JM3A h2 {
   text-transform: uppercase;
   font-size: 15px;
   letter-spacing: 2px;
-  margin-top: 32px;
-  margin-bottom: 16px;
-  padding-bottom: 4px;
-  border-bottom: 1px solid gray; }
+  margin-top: 32px !important;
+  margin-bottom: 16px !important;
+  padding-bottom: 4px; }
 
 .facetedbrowse_FacetValue_12piy {
   display: flex;
@@ -6442,9 +6480,7 @@ div.creatorhomeembed_SocialContainer_1o1Ds {
   align-items: baseline;
   cursor: pointer;
   font-weight: bold;
-  color: darkorange;
-  padding-left: 8px;
-  border-left: 4px solid darkorange; }
+  padding-left: 8px; }
 
 .facetedbrowse_FacetValueName_2uSEn {
   font-size: 13px;
@@ -6462,6 +6498,10 @@ div.creatorhomeembed_SocialContainer_1o1Ds {
 .facetedbrowse_FacetedBrowseItems_3EdZT {
   display: block;
   width: 100%; }
+  @media only screen and (min-width: 1200px) {
+    .facetedbrowse_FacetedBrowseItems_3EdZT {
+      flex-shrink: 0;
+      flex-basis: 100%; } }
 
 .facetedbrowse_FacetedBrowsePopup_2FEDs {
   height: 24px;
@@ -9188,15 +9228,25 @@ div.apppartnereventspage_EventDetailsBody_3NW5v {
     width: 100%;
     margin-top: 20px; }
 
-.partnereventstats_ModerationWarning_1aIU0 {
-  padding: 8px;
-  color: #993333;
-  font-size: 12px;
-  font-weight: 600;
-  text-transform: uppercase; }
+.partnereventstats_ModerationWarningCtn_3Jwi3 {
+  padding: 8px; }
+  .partnereventstats_ModerationWarningCtn_3Jwi3 .partnereventstats_ModerationWarning_1aIU0 {
+    color: #d67f35;
+    font-size: 13px; }
+  .partnereventstats_ModerationWarningCtn_3Jwi3 a {
+    text-decoration: underline;
+    line-height: 30px; }
+
+.partnereventstats_ModerationNote_11Z9I {
+  display: none; }
 
 .partnereventstats_DisabledStats_2Zp-j {
-  color: #666666; }
+  color: #666666;
+  padding-left: 8px; }
+  .partnereventstats_DisabledStats_2Zp-j .partnereventstats_StatsTitle_3YLaB {
+    display: none; }
+  .partnereventstats_DisabledStats_2Zp-j .partnereventstats_ModerationNote_11Z9I {
+    display: block; }
 
 .breadcrumbs_BreadContainer_3jswb {
   color: #56707f;
@@ -9303,6 +9353,7 @@ div.apppartnereventspage_EventDetailsBody_3NW5v {
         margin: 12px 0px 6px;
         padding: 0px;
         cursor: pointer;
+        font-size: 13px;
         background: transparent; }
         .nominationandvote_SteamAwardContainer_3n6v2 .nominationandvote_SteamAwardVoteWidget_khWz0 .nominationandvote_SteamAwardVoteButtonArea_1v9LH .nominationandvote_SteamAwardVoteButton_cTcgI .nominationandvote_SteamAwardVoteButtonText_247y3 {
           border: 1px solid rgba(255, 255, 255, 0.4);
@@ -9315,20 +9366,23 @@ div.apppartnereventspage_EventDetailsBody_3NW5v {
         .nominationandvote_SteamAwardContainer_3n6v2 .nominationandvote_SteamAwardVoteWidget_khWz0 .nominationandvote_SteamAwardVoteButtonArea_1v9LH .nominationandvote_SteamAwardVoteButton_cTcgI:hover .nominationandvote_SteamAwardVoteButtonText_247y3 {
           border: 1px solid white; }
       .nominationandvote_SteamAwardContainer_3n6v2 .nominationandvote_SteamAwardVoteWidget_khWz0 .nominationandvote_SteamAwardVoteButtonArea_1v9LH .nominationandvote_SteamAwardVoteButtonSubmitted_1ouD4 {
-        display: inline-block;
-        box-sizing: border-box;
-        border: 1px solid white;
-        border-radius: 2px;
-        margin-top: 6px;
-        height: 32px;
-        padding: 5px 10px;
+        font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+        border: none;
+        margin: 12px 0px 6px;
+        padding: 0px;
         cursor: pointer;
-        text-transform: uppercase;
-        color: #355a5f;
-        font-size: 13.33px;
-        font-weight: 600;
-        letter-spacing: 1.8px;
-        background: #fff; }
+        font-size: 13px;
+        background: transparent;
+        box-sizing: border-box; }
+        .nominationandvote_SteamAwardContainer_3n6v2 .nominationandvote_SteamAwardVoteWidget_khWz0 .nominationandvote_SteamAwardVoteButtonArea_1v9LH .nominationandvote_SteamAwardVoteButtonSubmitted_1ouD4 .nominationandvote_SteamAwardVoteButtonText_247y3 {
+          border: 1px solid white;
+          background: #fff;
+          border-radius: 2px;
+          text-transform: uppercase;
+          letter-spacing: 1.8px;
+          font-weight: 600;
+          padding: 5px 10px;
+          color: #355a5f; }
     .nominationandvote_SteamAwardContainer_3n6v2 .nominationandvote_SteamAwardVoteWidget_khWz0 .nominationandvote_SteamAwardNominateButton_1uxCj {
       border: 1px solid #bb8f0d;
       border-radius: 4px;
@@ -9356,6 +9410,31 @@ div.apppartnereventspage_EventDetailsBody_3NW5v {
   margin-bottom: 30px;
   padding: 10px;
   background: rgba(30, 33, 38, 0.5); }
+
+.steam_awards_vote_section .nominationandvote_AwardCategoriesCtn_2u4z7 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; }
+  .steam_awards_vote_section .nominationandvote_AwardCategoriesCtn_2u4z7 .nominationandvote_SteamAwardVoteWidget_khWz0 {
+    flex-grow: 1; }
+    .steam_awards_vote_section .nominationandvote_AwardCategoriesCtn_2u4z7 .nominationandvote_SteamAwardVoteWidget_khWz0 .nominationandvote_SteamAwardVoteButtonArea_1v9LH {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: flex-end;
+      padding-right: 0px; }
+      .steam_awards_vote_section .nominationandvote_AwardCategoriesCtn_2u4z7 .nominationandvote_SteamAwardVoteWidget_khWz0 .nominationandvote_SteamAwardVoteButtonArea_1v9LH .nominationandvote_SteamAwardCategoryTitle_JVE9O {
+        padding-left: 8px; }
+
+.steam_awards_vote_section .nominationandvote_SteamAwardContainer_3n6v2 {
+  margin-right: 0px; }
+  .steam_awards_vote_section .nominationandvote_SteamAwardContainer_3n6v2 .nominationandvote_SteamAwardHeader_2jgrT {
+    height: 115px; }
+    .steam_awards_vote_section .nominationandvote_SteamAwardContainer_3n6v2 .nominationandvote_SteamAwardHeader_2jgrT .nominationandvote_SteamAwardHeaderImage__lRFQ {
+      height: 143px; }
+    .steam_awards_vote_section .nominationandvote_SteamAwardContainer_3n6v2 .nominationandvote_SteamAwardHeader_2jgrT .nominationandvote_SteamAwardMainTitle_161Yb {
+      font-size: 28px;
+      line-height: 28px; }
 
 .partnereventreferencedapps_ReferencedApps_1bfua {
   font-size: 14px;

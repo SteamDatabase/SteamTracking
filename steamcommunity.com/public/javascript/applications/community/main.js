@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6276786";
+var CLSTAMP = "6283537";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [68],
   {
@@ -3855,28 +3855,28 @@ var CLSTAMP = "6276786";
     "Jqb/": function(e, t, n) {
       "use strict";
       n.d(t, "a", function() {
-        return g;
+        return y;
       }),
         n.d(t, "g", function() {
-          return _;
-        }),
-        n.d(t, "h", function() {
-          return y;
-        }),
-        n.d(t, "c", function() {
           return w;
         }),
-        n.d(t, "d", function() {
-          return E;
-        }),
-        n.d(t, "e", function() {
+        n.d(t, "h", function() {
           return O;
         }),
-        n.d(t, "b", function() {
+        n.d(t, "c", function() {
           return S;
         }),
-        n.d(t, "f", function() {
+        n.d(t, "d", function() {
+          return C;
+        }),
+        n.d(t, "e", function() {
           return D;
+        }),
+        n.d(t, "b", function() {
+          return x;
+        }),
+        n.d(t, "f", function() {
+          return A;
         });
       var l = n("mrSG"),
         u = n("q1tI"),
@@ -3890,8 +3890,13 @@ var CLSTAMP = "6276786";
         c = n("exH9"),
         d = n("JJA/"),
         h = n.n(d),
-        f = n("r64O");
-      var v = (function(e) {
+        f = n("r64O"),
+        v = n("+d9t"),
+        g = u.createContext({}),
+        b = function() {
+          return u.useContext(g);
+        };
+      var _ = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -3912,7 +3917,7 @@ var CLSTAMP = "6276786";
                 t
                   ? this.m_ModalHandle
                     ? this.m_ModalHandle.Update(n)
-                    : (this.m_ModalHandle = D(window).ShowModal(n))
+                    : (this.m_ModalHandle = A(window).ShowModal(n))
                   : this.HideModal(),
                 null
               );
@@ -3920,24 +3925,30 @@ var CLSTAMP = "6276786";
             t
           );
         })(u.Component),
-        g = function(e) {
+        y = function(e) {
           var t = e.active,
             n = e.onDismiss,
             r = e.className,
             o = e.modalClassName,
             i = e.children;
           return u.createElement(
-            v,
+            _,
             { active: t },
             u.createElement(
-              _,
+              w,
               { onEscKeypress: n, className: o },
               u.createElement(m.f, { className: r }, i)
             )
           );
-        },
-        b = u.createContext(!1);
-      function _(t) {
+        };
+      function w(e) {
+        var t = b();
+        return u.createElement(
+          v.f,
+          Object(l.a)({ component: t.ModalPosition, fallback: E }, e)
+        );
+      }
+      function E(t) {
         var e,
           n = {};
         t.onEscKeypress &&
@@ -3976,16 +3987,12 @@ var CLSTAMP = "6276786";
                     u.createElement(a.fb, null)
                   )
                 ),
-              u.createElement(
-                b.Provider,
-                { value: !0 },
-                u.createElement(i.a, null, t.children)
-              )
+              u.createElement(i.a, null, t.children)
             )
           )
         );
       }
-      var y = (function(t) {
+      var O = (function(t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (
@@ -4020,7 +4027,7 @@ var CLSTAMP = "6276786";
             e
           );
         })(u.Component),
-        w = (function(e) {
+        S = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -4048,7 +4055,7 @@ var CLSTAMP = "6276786";
                 ]),
                 c = r || Object(p.f)("#Button_Close");
               return u.createElement(
-                E,
+                C,
                 Object(l.a)({}, s),
                 u.createElement(m.k, null, " ", t, " "),
                 u.createElement(
@@ -4074,7 +4081,7 @@ var CLSTAMP = "6276786";
             (t = Object(l.c)([s.a], t))
           );
         })(u.Component),
-        E = (function(e) {
+        C = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -4091,7 +4098,7 @@ var CLSTAMP = "6276786";
             }),
             (t.prototype.render = function() {
               return u.createElement(
-                _,
+                w,
                 {
                   onEscKeypress: this.Cancel,
                   bDestructiveWarning: this.props.bDestructiveWarning,
@@ -4119,7 +4126,7 @@ var CLSTAMP = "6276786";
             (t = Object(l.c)([s.a], t))
           );
         })(u.Component),
-        O = (function(e) {
+        D = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -4139,12 +4146,12 @@ var CLSTAMP = "6276786";
                 },
                 this.props
               );
-              return u.createElement(w, Object(l.a)({}, e));
+              return u.createElement(S, Object(l.a)({}, e));
             }),
             (t = Object(l.c)([s.a], t))
           );
         })(u.Component),
-        S = (function(e) {
+        x = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -4202,7 +4209,7 @@ var CLSTAMP = "6276786";
             t
           );
         })(u.Component),
-        C = (function() {
+        M = (function() {
           function e() {
             (this.m_bUsePopups = !0),
               (this.m_rgModals = []),
@@ -4270,11 +4277,11 @@ var CLSTAMP = "6276786";
             e
           );
         })();
-      function D(e) {
-        var t = x.get(e);
-        return t || ((t = new C()), x.set(e, t)), t;
+      function A(e) {
+        var t = k.get(e);
+        return t || ((t = new M()), k.set(e, t)), t;
       }
-      var x = new WeakMap();
+      var k = new WeakMap();
     },
     Kw0F: function(e, t, n) {
       "use strict";
@@ -12948,7 +12955,7 @@ var CLSTAMP = "6276786";
           return "/" + r() + "/:anything*/diagdata";
         },
         w = function() {
-          return "/migrate";
+          return "/(migrateevents|migrate)";
         },
         E = function(e) {
           return "/" + r() + "/" + e + "/(partnerevents|events|announcements)";

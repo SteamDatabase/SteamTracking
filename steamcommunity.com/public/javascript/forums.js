@@ -774,6 +774,16 @@ function Forum_ReplyToPost( gidTopic, gidComment )
 	ScrollToIfNotInView( elTextArea, 80, 40 );
 }
 
+function Forum_ShowMoreAwardsForTopic( id )
+{
+	$J( "#community_awards_forum_topic_" + id ).addClass( "show_all_awards" );
+}
+
+function Forum_ShowMoreAwardsForComment( id )
+{
+	$J( "#community_awards_comment_" + id ).addClass( "show_all_awards" );
+}
+
 function Forum_OnCommunityAwardGranted( containerNamePrefix, id, award )
 {
 	var rewardsCtn = $J( "#" + containerNamePrefix + id );
@@ -810,6 +820,21 @@ function Forum_OnCommunityAwardGranted( containerNamePrefix, id, award )
 			reward.data( "reaction", award );
 			reward.data( "reactioncount", 1 );
 			rewardsCtn.prepend( reward );
+
+			// find "show more" button
+			var moreElem = rewardsCtn.find( ".community_award.more_btn" );
+			if ( moreElem.length != 0 )
+			{
+				var moreCount = parseInt( moreElem.data( 'count' ) );
+				moreElem.data( 'count', moreCount + 1 );
+				var countElem = moreElem.find( ".community_award_count" );
+				countElem.text( moreCount + 1 );
+			}
+			else
+			{
+				// fallback and show everything if the user is adding things
+				rewardsCtn.addClass( "show_all_awards" );
+			}
 		}
 	}
 }

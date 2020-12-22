@@ -187,6 +187,12 @@
           "Note: This group is muted and will not show up in your personalized news hub.",
         EventCalendar_WatchYouTubeVideo: "Watch YouTube Video",
         EventCalendar_WatchLiveBroadcast: "Watch Live Broadcast",
+        EventCalendar_Collection_News_Title: "Discover News Curators",
+        EventCalendar_Collection_News_Subtitle:
+          "Catch the latest in gaming news from top gaming news sources. Follow a Steam News Curator to add their news and game recommendations to your Steam News Hub.",
+        EventCalendar_Collection_Halloween_Title: "Halloween Events",
+        EventCalendar_Collection_Halloween_Subtitle:
+          "Browse spooky Halloween related news and events from games on Steam",
         EventModTile_Moderator: "Moderator: %1$s",
         EventModTile_Action_Reviewed: "%1$s %2$s marked reviewed",
         EventModTile_Action_UnReviewed: "%1$s %2$s cleared reviewed flag",
@@ -365,9 +371,6 @@
         EventCalendar_NewsChannel_AllGames: "From all games",
         EventCalendar_NewsChannel_TopSellers: "From Top sources",
         EventCalendar_NewsChannel_Press: "News Curators",
-        EventCalendar_Collection_News_Title: "Discover News Curators",
-        EventCalendar_Collection_News_Subtitle:
-          "Catch the latest in gaming news from top gaming news sources. Follow a Steam News Curator to add their news and game recommendations to your Steam News Hub.",
         EventCalendar_NewsChannel_Steam: "Steam Official",
         EventCalendar_NewsChannel_SteamSubtitle: "Steam Blog and News",
         EventCalendar_NewsChannel_Steam_HeaderTitle: "Official Steam News",
@@ -377,9 +380,6 @@
           "Press Events Linked to Apps",
         EventCalendar_NewsChannel_Halloween: "Halloween Events",
         EventCalendar_NewsChannel_HalloweenSubtitle: "Beware: Spooky",
-        EventCalendar_Collection_Halloween_Title: "Halloween Events",
-        EventCalendar_Collection_Halloween_Subtitle:
-          "Browse spooky Halloween related news and events from games on Steam",
         EventDisplay_Admin_Title: "Admin tools:",
         EventDisplay_ViewInLibrary: "View in Library",
         EventDisplay_ViewStorePage: "View Store Page",
@@ -544,7 +544,7 @@
           "(Beta) These are impressions and views of your events and announcements by unique logged-in users. This is only for new events and announcements crafted with this editor.",
         EventDashBoard_SummaryStats_Link: "Click here for more details.",
         EventDashBoard_ModerationQueueWarning:
-          "This event has not yet been moderated and will therefore not be visible in the Library.",
+          "This event has not yet gone through routine moderation and is therefore not currently visible in the Library.",
         EventDashBoard_Summary_LibraryHome_Shown:
           "Impressions of events (cover image):",
         EventDashBoard_Summary_LibraryHome_Read:
@@ -573,6 +573,9 @@
         EventDashBoard_Location_CommunityDetail: "Community App Hub",
         EventDashBoard_Location_PopUpViews: "Views of event pop-up",
         EventDashBoard_Location_NewsHubDetail: "News Hub",
+        EventDashBoard_Location_ModerationTitle: "About Event Moderation",
+        EventDashBoard_Location_WaitingModeraion:
+          "Visibility pending moderation",
         EventDisplay_ReferencedApps_Joiner: ", ",
         EventDisplay_ReferencedApps: "Referenced content: %2$s.",
         EventDisplay_ReferencedApps_Plural: "Referenced content: %2$s.",
@@ -1585,6 +1588,7 @@
         SteamAward_NominationConflictWarning_Explanation:
           "You can only nominate one game for each category, and you have already nominated %1$s for this one. Would you like to nominate %2$s instead?",
         SteamAward_VoteButton_PromptText: "Vote",
+        SteamAward_VoteButton_VotedText: "Voted",
         SteamAward_VoteButton_AlreadyVotedText: "Vote submitted",
         SteamAward_VoteConflictWarning_Title: "Change your vote?",
         SteamAward_VoteConflictWarning_Explanation:
@@ -1707,9 +1711,11 @@
         GrantAwardError_InsufficientFunds:
           "You do not have enough Steam Points to grant the selected award.",
         GrantAwardError_Fail:
-          "There was a problem granting this reward.  Please try again later.",
+          "There was a problem granting this award.  Please try again later.",
         GrantAwardError_AccessDenied:
           "You cannot redeem points for an award due to the restrictions placed on your account.",
+        GrantAwardError_NotLoggedOn:
+          "You will need to log in before you can grant any awards.",
         YourBalance: "Your Balance",
         RewardsReaction_1: "Deep Thoughts",
         RewardsReaction_2: "Heartwarming",
@@ -1723,6 +1729,17 @@
         RewardsReaction_10: "Mind Blown",
         RewardsReaction_11: "Golden Unicorn",
         RewardsReaction_12: "Mad Scientist",
+        RewardsReaction_13: "Clever",
+        RewardsReaction_14: "Warm Blanket",
+        RewardsReaction_15: "Saucy",
+        RewardsReaction_16: "Slow Clap",
+        RewardsReaction_17: "Take My Points",
+        RewardsReaction_18: "Wholesome",
+        RewardsReaction_19: "Jester",
+        RewardsReaction_20: "Fancy Pants",
+        RewardsReaction_21: "Whoa",
+        RewardsReaction_22: "Super Star",
+        RewardsReaction_23: "Wild",
         RewardsReaction_Tooltip: "%1$s person marked this item as '%2$s'",
         RewardsReaction_Tooltip_Plural:
           "%1$s people marked this item as '%2$s'",
@@ -1743,9 +1760,9 @@
         AppType_music: "music",
         AppType_hardware: "hardware",
         AppType_series: "series",
-        GameHover_Tags: "Tags:",
-        GameHover_UserReviewsHeader: "User Reviews:",
-        GameHover_UserReviewCount: "(%1$s)",
+        GameHover_Tags: "Tags",
+        GameHover_UserReviewsHeader: "",
+        GameHover_UserReviewCount: "| %1$s User Reviews",
         Localization_Export_Btn_RowLanguages: "Language per row",
         Localization_Export_Btn_ColumnLanguages: "Language per Column",
         Localization_Export_Btn_TokenLanguages: "Token, Language list",

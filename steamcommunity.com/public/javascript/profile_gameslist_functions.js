@@ -400,7 +400,7 @@ function GetClientActionIcon( summary, appid )
 			}
 		}
 		
-		return '<div class="clientConnItemIcon" style="background-image: url(' + actionIcon + ');"' + actionIconOnClick + '></div>';
+		return '<div class="clientConnItemIcon ' + actionApi + '" style="background-image: url(' + actionIcon + ');"' + actionIconOnClick + '></div>';
 	}
 	
 	return '';

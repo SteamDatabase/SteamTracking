@@ -74,6 +74,7 @@ LocalizationManifestReady("profile", "manifest", {
   Profile_Edit_FeaturedShowcase: "Featured Showcase",
   Profile_Edit_ProfileModifier: "Special Profile",
   ProfileModifier_EnabledTitle: "Enable Special Profile Modifier",
+  ProfileModifier_DisabledTitle: "None",
   Profile_Edit_EditYourAvatar: "Edit Your Avatar",
   Profile_Edit_Avatar_Instructions: "Choose your avatar image and frame.",
   Profile_Edit_Avatar_UploadInstructions:
@@ -92,6 +93,8 @@ LocalizationManifestReady("profile", "manifest", {
     "Choose a background to show on your profile page.",
   Profile_Edit_MiniProfile_Instructions:
     "Choose a background to appear in your miniprofile hover.",
+  Profile_Edit_ProfileModifier_Instructions:
+    "Choose a Special Profile item that will set a special theme, background, miniprofile hover, and avatar frame.",
   Profile_Edit_Theme_Instructions:
     "Choose a color theme for your profile page.",
   Profile_Edit_Badge_Instructions:

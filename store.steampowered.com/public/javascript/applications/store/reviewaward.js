@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [69],
+  [40],
   {
     ARGL: function(e, t, a) {
       e.exports = {
@@ -100,7 +100,7 @@
                           console.log(" ProtoBuf sending..."),
                           console.log(t),
                           console.log("Target ID is..." + t.Body().targetid()),
-                          [4, u.m.AddReaction(this.m_transport, t)])
+                          [4, u.o.AddReaction(this.m_transport, t)])
                         : [2, { eResult: 21, strMessage: "Not logged on" }];
                     case 1:
                       return (
@@ -134,7 +134,7 @@
                           (t = d.a.Init(u.g)).SetBodyFields({
                             steamid: L.i.steamid
                           }),
-                          [4, u.m.GetSummary(this.m_transport, t)])
+                          [4, u.o.GetSummary(this.m_transport, t)])
                         : [2, Promise.resolve(null)];
                     case 1:
                       return (
@@ -171,7 +171,7 @@
                       return (
                         (this.m_bReactionConfigurationLoadedOrInFlight = !0),
                         (t = d.a.Init(u.e)),
-                        [4, u.m.GetReactionConfig(this.m_transport, t)]
+                        [4, u.o.GetReactionConfig(this.m_transport, t)]
                       );
                     case 1:
                       if (1 == (a = e.sent()).GetEResult())
@@ -212,7 +212,7 @@
                           .Body()
                           .set_target_type(this.m_eTargetType),
                         t.Body().set_targetid(this.m_targetID),
-                        [4, u.m.GetReactions(this.m_transport, t)]
+                        [4, u.o.GetReactions(this.m_transport, t)]
                       );
                     case 1:
                       return (

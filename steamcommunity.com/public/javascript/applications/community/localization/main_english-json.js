@@ -1713,12 +1713,12 @@
           "(VO) Import an existing Steam Sale from URL (e.g. https://store.steampowered.com/sale/pdxcon)",
         Sale_ImportSale_ttip:
           "Used to import a sale from the old sale system into this new sale system given the URL to the old sale system",
+        Sale_DeleteFilteredItems: "Delete Filtered",
+        Sale_DeleteFilteredItems_ttip:
+          "This will delete all tagged items that are currently filtered out. This can help reduce the sale size and make the sale page more efficient and easier to work with",
         Sale_OptInPageName: "Opt In Page Name",
         Sale_OptInPageName_ttip:
           "The name of an opt in page that when provided will allow for importing of tag items from the opt in page. An example might be 'sale_fighting'",
-        Sale_DisableTagCollection: "Disable New Tag Collections",
-        Sale_DisableTagCollection_ttip:
-          "This willd isable the new tag collection system. This will be removed shortly after current live sales are concluded.",
         Sale_SyncTag_OptInItems: "Sync Opt In Items",
         Sale_SyncTag_OptInItems_ttip:
           "This will add new opt-in items, and remove items that are no longer in the opt-in page from the list of tagged items. New items will get default store and opt in tags.",
@@ -2078,7 +2078,8 @@
         FacetedBrowseEditor_Tooltip_SortFacetValues_ByCount:
           'Within each facet, sort facet values in descending order of the number of items that match them. For example, under a facet called "Genre", "RPG" will appear before "Strategy" if there are more RPG games in this section than Strategy games.',
         FacetedBrowseEditor_Tooltip_SortFacetValues_Manual:
-          "Don't sort facet values. They will be shown in the order defined in the lists below."
+          "Don't sort facet values. They will be shown in the order defined in the lists below.",
+        FacetedBrowseEditor_HighlightedFacetColor: "Highlighted Facet Color"
       };
     }
   }

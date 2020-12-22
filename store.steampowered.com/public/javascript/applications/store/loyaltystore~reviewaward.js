@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [4],
+  [3],
   {
     Dsqm: function(e, t, r) {
       e.exports = { UnstyledButton: "unstyledbutton_UnstyledButton_1hcJa" };
@@ -44,8 +44,17 @@
         r.d(t, "b", function() {
           return Z;
         }),
+        r.d(t, "n", function() {
+          return D;
+        }),
         r.d(t, "m", function() {
+          return Y;
+        }),
+        r.d(t, "o", function() {
           return n;
+        }),
+        r.d(t, "p", function() {
+          return c;
         });
       var i = r("mrSG"),
         o = r("hRO2"),
@@ -2385,6 +2394,67 @@
             void 0 === e && (e = null);
             var t = r.call(this) || this;
             return (
+              n.prototype.language || a.a(n.M()),
+              u.initialize(t, e, 0, -1, void 0, null),
+              t
+            );
+          }
+          return (
+            Object(i.d)(n, r),
+            (n.M = function() {
+              return (
+                n.sm_m ||
+                  (n.sm_m = {
+                    proto: n,
+                    fields: {
+                      language: {
+                        n: 1,
+                        br: a.d.readString,
+                        bw: a.h.writeString
+                      }
+                    }
+                  }),
+                n.sm_m
+              );
+            }),
+            (n.MBF = function() {
+              return n.sm_mbf || (n.sm_mbf = a.e(n.M())), n.sm_mbf;
+            }),
+            (n.prototype.toObject = function(e) {
+              return void 0 === e && (e = !1), n.toObject(e, this);
+            }),
+            (n.toObject = function(e, t) {
+              return a.g(n.M(), e, t);
+            }),
+            (n.fromObject = function(e) {
+              return a.c(n.M(), e);
+            }),
+            (n.deserializeBinary = function(e) {
+              var t = new o.BinaryReader(e),
+                r = new n();
+              return n.deserializeBinaryFromReader(r, t);
+            }),
+            (n.deserializeBinaryFromReader = function(e, t) {
+              return a.b(n.MBF(), e, t);
+            }),
+            (n.prototype.serializeBinary = function() {
+              var e = new o.BinaryWriter();
+              return n.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            }),
+            (n.serializeBinaryToWriter = function(e, t) {
+              a.f(n.M(), e, t);
+            }),
+            (n.prototype.getClassName = function() {
+              return "CSaleItemRewards_ClaimItem_Request";
+            }),
+            n
+          );
+        })(u),
+        Q = (function(r) {
+          function n(e) {
+            void 0 === e && (e = null);
+            var t = r.call(this) || this;
+            return (
               n.prototype.communityitemid || a.a(n.M()),
               u.initialize(t, e, 0, -1, void 0, null),
               t
@@ -2447,7 +2517,68 @@
             n
           );
         })(u),
-        Q = (function(r) {
+        Y = (function(r) {
+          function n(e) {
+            void 0 === e && (e = null);
+            var t = r.call(this) || this;
+            return (
+              n.prototype.language || a.a(n.M()),
+              u.initialize(t, e, 0, -1, void 0, null),
+              t
+            );
+          }
+          return (
+            Object(i.d)(n, r),
+            (n.M = function() {
+              return (
+                n.sm_m ||
+                  (n.sm_m = {
+                    proto: n,
+                    fields: {
+                      language: {
+                        n: 1,
+                        br: a.d.readString,
+                        bw: a.h.writeString
+                      }
+                    }
+                  }),
+                n.sm_m
+              );
+            }),
+            (n.MBF = function() {
+              return n.sm_mbf || (n.sm_mbf = a.e(n.M())), n.sm_mbf;
+            }),
+            (n.prototype.toObject = function(e) {
+              return void 0 === e && (e = !1), n.toObject(e, this);
+            }),
+            (n.toObject = function(e, t) {
+              return a.g(n.M(), e, t);
+            }),
+            (n.fromObject = function(e) {
+              return a.c(n.M(), e);
+            }),
+            (n.deserializeBinary = function(e) {
+              var t = new o.BinaryReader(e),
+                r = new n();
+              return n.deserializeBinaryFromReader(r, t);
+            }),
+            (n.deserializeBinaryFromReader = function(e, t) {
+              return a.b(n.MBF(), e, t);
+            }),
+            (n.prototype.serializeBinary = function() {
+              var e = new o.BinaryWriter();
+              return n.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            }),
+            (n.serializeBinaryToWriter = function(e, t) {
+              a.f(n.M(), e, t);
+            }),
+            (n.prototype.getClassName = function() {
+              return "CSaleItemRewards_CanClaimItem_Request";
+            }),
+            n
+          );
+        })(u),
+        K = (function(r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -2617,12 +2748,12 @@
           });
         }),
         ((l = c = c || {}).ClaimItem = function(e, t) {
-          return e.SendMsg("SaleItemRewards.ClaimItem#1", t, D, {
+          return e.SendMsg("SaleItemRewards.ClaimItem#1", t, Q, {
             ePrivilege: 1
           });
         }),
         (l.CanClaimItem = function(e, t) {
-          return e.SendMsg("SaleItemRewards.CanClaimItem#1", t, Q, {
+          return e.SendMsg("SaleItemRewards.CanClaimItem#1", t, K, {
             bConstMethod: !0,
             ePrivilege: 1
           });

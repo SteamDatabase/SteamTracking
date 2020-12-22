@@ -81,6 +81,46 @@ function InitShowcaseEditors( cSlots )
 	{
 		g_rgShowcaseSelects[i].change();
 	}
+
+	InitSortables();
+}
+
+function InitSortables()
+{
+	$J("#showcases").sortable({
+		items: ".sortable",
+		handle: ".profile_showcase_drag_handle",
+		placeholder: "profile_showcase_drag_and_drop_highlight",
+		cursor: "move",
+		forcePlaceholderSize: true,
+		forceHelperSize: true,
+		opacity: 0.5,
+		tolerance: "pointer",
+		containment: "parent"
+	});
+}
+
+function OnChangeShowcasePosition( elem, bMovePrev )
+{
+	var showcase = $J( elem ).parents( '.profile_showcase_selector' );
+	var parent = showcase.parent();
+
+	if ( bMovePrev )
+	{
+		var prev = showcase.prev();
+		if ( prev.length != 0 )
+		{
+			showcase.insertBefore( prev );
+		}
+	}
+	else
+	{
+		var next = showcase.next();
+		if ( next.length != 0 )
+		{
+			showcase.insertAfter( next );
+		}
+	}
 }
 
 function InitShowcaseEditor( strSelectID, iSlot )
@@ -143,11 +183,13 @@ function OnSelectChange( $Previews, $PreviewsNone, $StyleCtn, $Select, iSlot )
 
 		if ( eShowcase == 0 )
 		{
+			parent.removeClass( "has_showcase" );
 			$PreviewsNone.show();
 			$Previews.hide();
 		}
 		else
 		{
+			parent.addClass( "has_showcase" );
 			$Previews.append( g_rgShowcasePreviews[ eShowcase + '_' + nShowcasePurchaseID ] );
 			$StyleCtn.append( g_rgShowcaseStyles[ eShowcase + '_' + nShowcasePurchaseID ] );
 

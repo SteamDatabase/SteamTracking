@@ -1006,16 +1006,20 @@ h5.hours_played {
     width: 40px;
     height: 26px;
 	padding-top: 6px;
-	background-size: 40px 64px;
-	background-position: center top;
-	background-repeat: no-repeat
+	cursor: pointer;
+	background-size: 40px 32px;
 }
 
-.clientConnItemIcon:hover {
+.clientConnItemIcon.install {
+	background-size: 40px 64px;
+	background-position: center top;
+	background-repeat: no-repeat;
+}
+
+.clientConnItemIcon.install:hover {
 	background-size: 40px 64px;
 	background-position: center bottom ;
 	background-repeat: no-repeat;
-	cursor: pointer;
 }
 
 #uninstallConfirm {

@@ -2548,7 +2548,8 @@ body.v6 #footer_nav .popup_menu .hr{
 		font-size: 12px;
 		color: #0A212E;
 	}
-	.reaction_award_hover .reaction_award_count {
+	.reaction_award_hover .reaction_award_desc {
+		padding-top: 5px;
 		font-size: 10px;
 		color: #0A212E;
 	}
@@ -2573,10 +2574,10 @@ body.v6 #footer_nav .popup_menu .hr{
 	position: relative;
 	background-color: rgba(0, 0, 0, 0.2);
 	border-radius: 3px;
-	padding: 0px 2px 0px 2px;
-	margin: 0 2px;
-	line-height: 30px;
-	height: 30px;
+	padding: 0px 3px 0px 3px;
+	margin: 0 1px;
+	line-height: 28px;
+	height: 28px;
 	cursor: pointer;
 }
 .community_award:hover {
@@ -2584,7 +2585,6 @@ body.v6 #footer_nav .popup_menu .hr{
 }
 
 .community_award_icon {
-	width: 20px;
 	height: 20px;
 	vertical-align: middle;
 }
@@ -2593,7 +2593,6 @@ body.v6 #footer_nav .popup_menu .hr{
 	font-size: 13px;
 	vertical-align: middle;
 	font-weight: bold;
-	padding: 3px;
 }
 .community_award_count.hidden {
 	display: none;
