@@ -236,9 +236,18 @@ textarea.forumtopic_reply_textarea {
 	padding-left: 5px;
 }
 
+.forum_topic_award_count {
+	padding-left: 10px;
+	padding-right: 5px;
+}
+
 .forum_topic_reply_count img,
 .forum_topic_award_count img {
 	vertical-align: middle;
+}
+
+.forum_topic_award_count img {
+	padding-right: 3px;
 }
 
 .forum_topic_lastpost {

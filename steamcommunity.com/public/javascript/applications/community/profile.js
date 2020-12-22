@@ -8839,19 +8839,25 @@
         o = Object(i.a)(function(e) {
           var t = e.profileItem,
             r = e.className,
-            i = Object(c.f)(e, ["profileItem", "className"]);
+            i = e.bDisableAnimation,
+            n = Object(c.f)(e, [
+              "profileItem",
+              "className",
+              "bDisableAnimation"
+            ]);
           if (!t || !t.image_small || 0 == t.image_small.length) return null;
-          var n = null,
-            n = t.image_small.startsWith("https://")
-              ? t.image_small
-              : d.b.MEDIA_CDN_COMMUNITY_URL + "images/" + t.image_small;
-          return l.createElement(
-            "div",
-            Object(c.a)(
-              { className: Object(m.a)(u.a.avatarFrame, r, "avatarFrame") },
-              i
-            ),
-            l.createElement("img", { className: u.a.avatarFrameImg, src: n })
+          var a = i ? t.image_large : t.image_small;
+          return (
+            (a = a || t.image_small).startsWith("https://") ||
+              (a = d.b.MEDIA_CDN_COMMUNITY_URL + "images/" + a),
+            l.createElement(
+              "div",
+              Object(c.a)(
+                { className: Object(m.a)(u.a.avatarFrame, r, "avatarFrame") },
+                n
+              ),
+              l.createElement("img", { className: u.a.avatarFrameImg, src: a })
+            )
           );
         });
       l.Component;
