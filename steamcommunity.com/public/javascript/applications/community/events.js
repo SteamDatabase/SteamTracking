@@ -4840,7 +4840,7 @@
             i = c.strFileNamePrefix,
             r = c.lang,
             o = n(),
-            l = new cn(),
+            l = new dn(),
             s = i ? i + "_localization" : "localization";
           switch (t) {
             case "csv_row":
@@ -4872,7 +4872,7 @@
               Qe.a.Fragment,
               null,
               Qe.a.createElement(
-                Xt.q,
+                en.q,
                 {
                   onClick: function(e) {
                     return t(e, "csv_row");
@@ -4881,7 +4881,7 @@
                 Object(M.f)("#Localization_Export_Btn_RowLanguages")
               ),
               Qe.a.createElement(
-                Xt.q,
+                en.q,
                 {
                   onClick: function(e) {
                     return t(e, "csv_column");
@@ -4890,7 +4890,7 @@
                 Object(M.f)("#Localization_Export_Btn_ColumnLanguages")
               ),
               Qe.a.createElement(
-                Xt.q,
+                en.q,
                 {
                   onClick: function(e) {
                     return t(e, "csv_token");
@@ -4901,7 +4901,7 @@
             ),
           Boolean(c.bShowXML) &&
             Qe.a.createElement(
-              Xt.q,
+              en.q,
               {
                 onClick: function(e) {
                   return t(e, "xml");
@@ -4918,9 +4918,9 @@
               "ImportLocalizationAction: On Handle Parse error: " + e.message,
               e
             ),
-            Object(an.d)(
+            Object(Xt.d)(
               Qe.a.createElement(
-                nn.e,
+                Jt.e,
                 null,
                 Qe.a.createElement(
                   "div",
@@ -4943,9 +4943,9 @@
             0 < t.length && (t += ", "),
               (t += Object(M.f)("#Language_" + Object(A.a)(e)));
           }),
-            Object(an.d)(
+            Object(Xt.d)(
               Qe.a.createElement(
-                nn.c,
+                Jt.c,
                 {
                   strTitle: Object(M.f)("#EventDisplay_Share_Success"),
                   bAlertDialog: !0
@@ -4972,19 +4972,19 @@
                   if (!((t = c.target.files) && 0 < t.length)) return [3, 10];
                   m(!0),
                     (n = new Array()),
-                    (a = new cn()),
+                    (a = new dn()),
                     (i = 0),
                     (e.label = 1);
                 case 1:
                   return i < t.length
                     ? t[i]
                       ? t[i].name.toLocaleLowerCase().endsWith(".csv")
-                        ? (ln.a.parse(t[0], {
+                        ? (sn.a.parse(t[0], {
                             header: !0,
                             complete: function(e) {
                               var t,
                                 n,
-                                a = new cn().DetectAndFormatCSV(e);
+                                a = new dn().DetectAndFormatCSV(e);
                               a
                                 ? ((t = M.b.GetLanguageListForRealms([
                                     P.d.k_ESteamRealmGlobal
@@ -5079,7 +5079,7 @@
           n = t[0],
           m = t[1];
         return Qe.a.createElement(
-          dn.a,
+          pn.a,
           {
             className: Object(at.a)(
               d.className ? d.className : it.EditPreviewButton
@@ -5092,7 +5092,7 @@
             n && Qe.a.createElement(Ot.a, { size: "small" }),
             Qe.a.createElement(
               "span",
-              { className: pn.Label },
+              { className: un.Label },
               Object(M.f)(d.strLabel ? d.strLabel : "#Localization_Import_Btn")
             ),
             Qe.a.createElement("input", {
@@ -6188,20 +6188,21 @@
             );
           })(qe.Component)
         ),
-        qt = n("EOKZ"),
-        Qt = n.n(qt),
-        Jt = n("WFIl"),
-        Xt = n("Mgs7"),
-        Kt = n("IjL/"),
-        $t = n("Z7M3"),
-        en = n("mB/g"),
-        tn = n("02Wr"),
-        nn = n("Jqb/"),
-        an = n("ka0M"),
-        rn = n("X3Ds"),
-        on = n("NpuA"),
-        ln = n.n(on),
-        sn = (function() {
+        qt = n("WFIl"),
+        Qt = n("KzMr"),
+        Jt = n("Jqb/"),
+        Xt = n("ka0M"),
+        Kt = n("EOKZ"),
+        $t = n.n(Kt),
+        en = n("Mgs7"),
+        tn = n("IjL/"),
+        nn = n("Z7M3"),
+        an = n("mB/g"),
+        rn = n("02Wr"),
+        on = n("X3Ds"),
+        ln = n("NpuA"),
+        sn = n.n(ln),
+        cn = (function() {
           function e() {
             this.m_mapTokens = new Map();
           }
@@ -6257,7 +6258,7 @@
             e
           );
         })(),
-        cn = (function() {
+        dn = (function() {
           function e() {
             this.m_DummyValueForQuestionHack = 0;
           }
@@ -6331,7 +6332,7 @@
               });
             }),
             (e.prototype.WriteCSVToFile = function(e, t) {
-              var n = ln.a.unparse(e, { header: !0 });
+              var n = sn.a.unparse(e, { header: !0 });
               this.WriteFile(
                 new Blob([n], { type: "text/csv:charset=utf-8;" }),
                 t
@@ -6364,7 +6365,7 @@
                   switch (e.label) {
                     case 0:
                       return (
-                        (t = new sn()),
+                        (t = new cn()),
                         (n = new DOMParser()),
                         [4, this.ReadFile(c)]
                       );
@@ -6391,7 +6392,7 @@
             (e.prototype.ReadLocalizationData_CSV_TokenLanguageList = function(
               e
             ) {
-              var a = new sn();
+              var a = new cn();
               return (
                 e.data.forEach(function(e) {
                   var t = e.field,
@@ -6404,7 +6405,7 @@
             (e.prototype.ReadLocalizationData_CSV_LanguageColumns = function(
               e
             ) {
-              var i = new sn();
+              var i = new cn();
               return (
                 e.data.forEach(function(e) {
                   for (var t = e.field, n = 0; n < 30; ++n) {
@@ -6416,7 +6417,7 @@
               );
             }),
             (e.prototype.ReadLocalizationData_CSV_LanguageRows = function(e) {
-              var l = new sn();
+              var l = new cn();
               return (
                 e.data.forEach(function(e) {
                   var t = Object(A.d)(e.language, 30);
@@ -6518,16 +6519,16 @@
             e
           );
         })(),
-        dn = n("5E+2"),
-        pn = n("KmXr"),
-        un = "email_headline_",
-        mn = "email_body_",
-        _n = "sale_section_label_id_",
-        gn = "sale_section_text_id_",
-        hn = "email_subject",
-        En = "sale_tab_name_";
-      function bn(o, e, t, n) {
-        var l = new sn();
+        pn = n("5E+2"),
+        un = n("KmXr"),
+        mn = "email_headline_",
+        _n = "email_body_",
+        gn = "sale_section_label_id_",
+        hn = "sale_section_text_id_",
+        En = "email_subject",
+        bn = "sale_tab_name_";
+      function vn(o, e, t, n) {
+        var l = new cn();
         if (e)
           for (var a = 0; a < 30; ++a) {
             var i = o.GetEventModel();
@@ -6545,13 +6546,13 @@
           if (Object(F.i)(o.GetClanSteamID().GetAccountID()))
             for (var s = new ae(o.GetEmailSettings()), a = 0; a < 30; ++a)
               s.BHasLocalizedSubject(a) &&
-                l.SetLocalization(hn, a, s.GetLocalizedSubject(a));
+                l.SetLocalization(En, a, s.GetLocalizedSubject(a));
           r.sections.forEach(function(e, t) {
             for (var n = new ie(e), a = 0; a < 30; ++a)
               n.BHasHeadlineInLanguage(a) &&
-                l.SetLocalization(un + t, a, n.GetHeadline(a)),
+                l.SetLocalization(mn + t, a, n.GetHeadline(a)),
                 n.BHasBodyInLanguage(a) &&
-                  l.SetLocalization(mn + t, a, n.GetBody(a));
+                  l.SetLocalization(_n + t, a, n.GetBody(a));
           });
         }
         return (
@@ -6562,13 +6563,13 @@
                 if (
                   (o.BHasSaleSectionLabelLocalization(n, t) &&
                     l.SetLocalization(
-                      _n + e.unique_id,
+                      gn + e.unique_id,
                       n,
                       e.localized_label[n]
                     ),
                   o.BHasSaleSectionTextLocalization(n, t) &&
                     l.SetLocalization(
-                      gn + e.unique_id,
+                      hn + e.unique_id,
                       n,
                       e.text_section_contents[n]
                     ),
@@ -6578,7 +6579,7 @@
                     var r = i[a];
                     o.BHasSaleSectionTabName(n, r) &&
                       l.SetLocalization(
-                        En + e.unique_id + "_" + r.unique_id,
+                        bn + e.unique_id + "_" + r.unique_id,
                         n,
                         r.localized_label[n]
                       );
@@ -6587,7 +6588,7 @@
           l
         );
       }
-      function vn(c, n, e) {
+      function fn(c, n, e) {
         var t = new Array(),
           a = n.GetSortedTokenList();
         return (
@@ -6617,7 +6618,7 @@
                   c.BHasEmailEnabled() &&
                     ((e = c.GetEmailSettings()),
                     Object(F.i)(c.GetClanSteamID().GetAccountID()) &&
-                      r === hn &&
+                      r === En &&
                       ((t = new de(c)),
                       (o || t.BHasLocalizedSubject(l)) &&
                         t.SetLocalizedSubject(l, o) &&
@@ -6625,12 +6626,12 @@
                     e.sections.forEach(function(e, t) {
                       var n = new pe(e, c);
                       n.BHasHeadline() &&
-                        r === un + t &&
+                        r === mn + t &&
                         (o || n.BHasHeadlineInLanguage(l)) &&
                         n.SetHeadline(o, l) &&
                         (s = !0),
                         n.BHasBody() &&
-                          r === mn + t &&
+                          r === _n + t &&
                           (o || n.BHasBodyInLanguage(l)) &&
                           n.SetBody(o, l) &&
                           (s = !0);
@@ -6639,7 +6640,7 @@
                     c.GetSaleSections().forEach(function(e, t) {
                       if (
                         ((r !== "sale_section_label_" + t &&
-                          r !== _n + e.unique_id) ||
+                          r !== gn + e.unique_id) ||
                           ((o || c.BHasSaleSectionLabelLocalization(l, t)) &&
                             c.SetSaleSectionLabelLocalization(l, t, o) &&
                             (s = !0)),
@@ -6647,13 +6648,13 @@
                       )
                         for (var n = 0, a = e.tabs; n < a.length; n++) {
                           var i = a[n];
-                          r === En + e.unique_id + "_" + i.unique_id &&
+                          r === bn + e.unique_id + "_" + i.unique_id &&
                             (o || c.BHasSaleSectionTabName(l, i)) &&
                             c.SetSaleSectionTabName(l, i, o) &&
                             (s = !0);
                         }
                       "text_section" === e.section_type &&
-                        r === gn + e.unique_id &&
+                        r === hn + e.unique_id &&
                         (o || c.BHasSaleSectionTextLocalization(l, t)) &&
                         c.SetSaleSectionTextLocalization(l, t, o) &&
                         (s = !0);
@@ -6665,7 +6666,7 @@
           t
         );
       }
-      var fn = (function(t) {
+      var Sn = (function(t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (
@@ -6687,9 +6688,9 @@
             }),
             (e.prototype.OnExportCSVRequest = function(e) {
               e.preventDefault(),
-                Object(an.d)(
-                  qe.createElement(Sn, { editModel: this.props.editModel }),
-                  Object(rn.m)(e)
+                Object(Xt.d)(
+                  qe.createElement(On, { editModel: this.props.editModel }),
+                  Object(on.m)(e)
                 );
             }),
             (e.prototype.OnRequestTranslations = function(e) {
@@ -6700,9 +6701,9 @@
                 ? (console.log(
                     "LocalizationToolPartnerEvents: OnRequestTranslations error"
                   ),
-                  Object(an.d)(
+                  Object(Xt.d)(
                     qe.createElement(
-                      nn.e,
+                      Jt.e,
                       null,
                       qe.createElement(
                         "p",
@@ -6710,10 +6711,10 @@
                         "We cannot initiate translation if the event has unsaved changes. Please save first."
                       )
                     ),
-                    Object(rn.m)(e)
+                    Object(on.m)(e)
                   ))
-                : Object(an.d)(
-                    qe.createElement(nn.c, {
+                : Object(Xt.d)(
+                    qe.createElement(Jt.c, {
                       strTitle: "(VO) Localization Request",
                       strDescription:
                         "Create or update an English translate for this event and email. Best to be issued once editing is completed.",
@@ -6724,7 +6725,7 @@
                         );
                       }
                     }),
-                    Object(rn.m)(e)
+                    Object(on.m)(e)
                   );
             }),
             (e.prototype.RequestTranslation = function() {
@@ -6736,8 +6737,8 @@
                 this.m_cancelSignal
               )
                 .then(function() {
-                  Object(an.d)(
-                    qe.createElement(nn.c, {
+                  Object(Xt.d)(
+                    qe.createElement(Jt.c, {
                       strTitle: "(VO) Localization Request",
                       strDescription:
                         "Success! Translation request pushed to CrowdIn",
@@ -6753,9 +6754,9 @@
                   console.log(
                     "LocalizationToolPartnerEvents: RequestTranslation error"
                   ),
-                    Object(an.d)(
+                    Object(Xt.d)(
                       qe.createElement(
-                        nn.e,
+                        Jt.e,
                         {
                           closeModal: function() {
                             return t.setState({ translating: !1 });
@@ -6802,7 +6803,7 @@
                   strToolTip: Object(M.f)("#EventEditor_Loc_Import_ttip"),
                   strLabel: Object(M.f)("#EventEditor_Loc_Import"),
                   fnOnImportLocData: function(e, t) {
-                    return vn(n.props.editModel, e, t);
+                    return fn(n.props.editModel, e, t);
                   }
                 })
               );
@@ -6813,7 +6814,7 @@
             (e = Object(I.c)([Je.a], e))
           );
         })(qe.Component),
-        Sn = (function(t) {
+        On = (function(t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (
@@ -6833,7 +6834,7 @@
               return (e && "" != e.trim()) || (e = "event"), e;
             }),
             (e.prototype.GetLocalizationModel = function() {
-              return bn(
+              return vn(
                 this.props.editModel,
                 this.state.bExportEventBody,
                 this.state.bExportEmail,
@@ -6850,18 +6851,18 @@
                 a = e.editModel,
                 i = He.a.Get().GetPartnerEventPermissions(a.GetClanSteamID());
               return qe.createElement(
-                nn.d,
+                Jt.d,
                 { onCancel: n, closeModal: n },
                 qe.createElement(
-                  Xt.k,
+                  en.k,
                   null,
                   Object(M.f)("#EventEditor_Loc_Export")
                 ),
                 qe.createElement(
-                  Xt.b,
+                  en.b,
                   null,
                   qe.createElement(
-                    Xt.c,
+                    en.c,
                     null,
                     qe.createElement(
                       "div",
@@ -6939,14 +6940,14 @@
                             null,
                             "(VO) Identify which sections to export"
                           ),
-                          qe.createElement(Xt.e, {
+                          qe.createElement(en.e, {
                             label: "Export Event Body",
                             onChange: function(e) {
                               return t.setState({ bExportEventBody: e });
                             },
                             checked: this.state.bExportEventBody
                           }),
-                          qe.createElement(Xt.e, {
+                          qe.createElement(en.e, {
                             disabled: !a.BHasEmailEnabled(),
                             label: "Export Email",
                             onChange: function(e) {
@@ -6954,7 +6955,7 @@
                             },
                             checked: this.state.bExportEmail
                           }),
-                          qe.createElement(Xt.e, {
+                          qe.createElement(en.e, {
                             disabled: !a.BHasSaleEnabled(),
                             label: "Export Sales",
                             onChange: function(e) {
@@ -7000,7 +7001,7 @@
                     )
                   ),
                   qe.createElement(
-                    Xt.j,
+                    en.j,
                     null,
                     qe.createElement(Bt, {
                       fnGetLocData: this.GetLocalizationModel,
@@ -7011,7 +7012,7 @@
                       closeModal: this.props.closeModal
                     }),
                     qe.createElement(
-                      Xt.d,
+                      en.d,
                       { onClick: n },
                       Object(M.f)("#Button_Cancel")
                     )
@@ -7024,9 +7025,9 @@
             (e = Object(I.c)([Je.a], e))
           );
         })(qe.Component),
-        On = n("qP7j"),
-        yn = n.n(On);
-      function Cn(e, t) {
+        yn = n("qP7j"),
+        Cn = n.n(yn);
+      function Tn(e, t) {
         var n = new Array(),
           a = e.BPublished(),
           i = e.BHidden(),
@@ -7046,7 +7047,7 @@
               { key: "EventEdit_Error_StartTimeNotSet" },
               qe.createElement(
                 "div",
-                { className: yn.a.ErrorStyles },
+                { className: Cn.a.ErrorStyles },
                 Object(M.f)("#EventEdit_Error_StartTimeNotSet")
               )
             )
@@ -7060,7 +7061,7 @@
                 { key: "EventEdit_Error_VisibilityAfterStart" },
                 qe.createElement(
                   "div",
-                  { className: yn.a.ErrorStyles },
+                  { className: Cn.a.ErrorStyles },
                   Object(M.f)("#EventEdit_Error_VisibilityAfterStart")
                 )
               )
@@ -7073,7 +7074,7 @@
                     { key: "EventEdit_Error_StartTimeTooEarly_" + o },
                     qe.createElement(
                       "div",
-                      { className: yn.a.ErrorStyles },
+                      { className: Cn.a.ErrorStyles },
                       Object(M.n)(
                         "#EventEdit_Error_StartTimeTooEarly",
                         qe.createElement(nt.a, {
@@ -7094,7 +7095,7 @@
                     { key: "EventEdit_Error_StartTimeInPast_" + o },
                     qe.createElement(
                       "div",
-                      { className: yn.a.ErrorStyles },
+                      { className: Cn.a.ErrorStyles },
                       Object(M.n)(
                         "#EventEdit_Error_StartTimeInPast",
                         qe.createElement(nt.a, {
@@ -7116,7 +7117,7 @@
               { key: "EventEdit_Error_EndTimeNeededNotSet" },
               qe.createElement(
                 "div",
-                { className: yn.a.ErrorStyles },
+                { className: Cn.a.ErrorStyles },
                 Object(M.f)("#EventEdit_Error_EndTimeNeededNotSet")
               )
             )
@@ -7130,7 +7131,7 @@
                 { key: "EventEdit_Error_EndTimeBeforeStart" },
                 qe.createElement(
                   "div",
-                  { className: yn.a.ErrorStyles },
+                  { className: Cn.a.ErrorStyles },
                   Object(M.f)("#EventEdit_Error_EndTimeBeforeStart")
                 )
               )
@@ -7149,7 +7150,7 @@
                 { key: g + _ },
                 qe.createElement(
                   "div",
-                  { className: yn.a.ErrorStyles },
+                  { className: Cn.a.ErrorStyles },
                   Object(M.f)("#" + g, h)
                 )
               )
@@ -7162,7 +7163,7 @@
                   { key: "EventEdit_Error_DescriptionTooLong" + _ },
                   qe.createElement(
                     "div",
-                    { className: yn.a.ErrorStyles },
+                    { className: Cn.a.ErrorStyles },
                     Object(M.f)("#EventEdit_Error_DescriptionTooLong", h)
                   )
                 )
@@ -7180,7 +7181,7 @@
                 { key: "EventEdit_Error_MissingTitleAndDesc" },
                 qe.createElement(
                   "div",
-                  { className: yn.a.ErrorStyles },
+                  { className: Cn.a.ErrorStyles },
                   Object(M.f)("#EventEdit_Error_MissingTitleAndDesc")
                 )
               )
@@ -7203,7 +7204,7 @@
                   { key: "EventEdit_Error_MissingChinaTitleAndDesc" + v },
                   qe.createElement(
                     "div",
-                    { className: yn.a.ErrorStyles },
+                    { className: Cn.a.ErrorStyles },
                     Object(M.f)("#EventEdit_Error_MissingChinaTitleAndDesc", h)
                   )
                 )
@@ -7211,7 +7212,7 @@
           }
         return (
           c &&
-            ((p = e.BInRealmGlobal() && !Tn(e, "capsule", 0)),
+            ((p = e.BInRealmGlobal() && !jn(e, "capsule", 0)),
             (u =
               e.BInRealmChina() &&
               !(function(e, t) {
@@ -7223,7 +7224,7 @@
                 ) {
                   var i = a[n],
                     r = M.b.GetELanguageFallback(i);
-                  if (!Tn(e, t, i, r)) return !1;
+                  if (!jn(e, t, i, r)) return !1;
                 }
                 return !0;
               })(e, "capsule")),
@@ -7234,7 +7235,7 @@
                   { key: "EventEdit_Error_MissingCapsule" },
                   qe.createElement(
                     "div",
-                    { className: yn.a.ErrorStyles },
+                    { className: Cn.a.ErrorStyles },
                     Object(M.f)(
                       "#EventEdit_Error_MissingCapsule",
                       Object(M.f)("#PartnerEvent_" + e.GetEventType())
@@ -7249,7 +7250,7 @@
                   { key: "EventEdit_Error_MissingCapsuleChina" },
                   qe.createElement(
                     "div",
-                    { className: yn.a.ErrorStyles },
+                    { className: Cn.a.ErrorStyles },
                     Object(M.f)(
                       "#EventEdit_Error_MissingCapsuleChina",
                       Object(M.f)("#PartnerEvent_" + e.GetEventType())
@@ -7267,7 +7268,7 @@
                 { key: "EventEdit_Error_TooManyTabsSections" },
                 qe.createElement(
                   "div",
-                  { className: yn.a.ErrorStyles },
+                  { className: Cn.a.ErrorStyles },
                   Object(M.f)("#EventEdit_Error_TooManyTabsSections")
                 )
               )
@@ -7280,7 +7281,7 @@
                 { key: "EventEdit_Error_PublishingForHiddenGame" },
                 qe.createElement(
                   "div",
-                  { className: yn.a.ErrorStyles },
+                  { className: Cn.a.ErrorStyles },
                   Object(M.f)("#EventEdit_Error_PublishingForHiddenGame")
                 )
               )
@@ -7293,7 +7294,7 @@
                 { key: "EventEditor_SaleNotReady_ttip" },
                 qe.createElement(
                   "div",
-                  { className: yn.a.ErrorStyles },
+                  { className: Cn.a.ErrorStyles },
                   Object(M.f)("#EventEditor_SaleNotReady_ttip")
                 )
               )
@@ -7301,7 +7302,7 @@
           n
         );
       }
-      function Tn(e, t, n, a) {
+      function jn(e, t, n, a) {
         void 0 === a && (a = -1);
         var i = e.GetImageURL(t, n);
         return (
@@ -7309,7 +7310,7 @@
           i && 1 < i.length
         );
       }
-      function jn(e) {
+      function In(e) {
         var t = new Array(),
           n = e.BPublished(),
           a = e.BHidden();
@@ -7321,7 +7322,7 @@
               { key: "EventEdit_Warning_EnglishMissing" },
               qe.createElement(
                 "div",
-                { className: yn.a.WarningStyles },
+                { className: Cn.a.WarningStyles },
                 Object(M.f)("#EventEdit_Warning_EnglishMissing")
               )
             )
@@ -7333,7 +7334,7 @@
                 { key: "EventEdit_Warning_Other" },
                 qe.createElement(
                   "div",
-                  { className: yn.a.WarningStyles },
+                  { className: Cn.a.WarningStyles },
                   Object(M.f)("#EventEdit_Warning_Other")
                 )
               )
@@ -7343,9 +7344,9 @@
             d = M.b.IsELanguageValidInRealm(s, P.d.k_ESteamRealmGlobal),
             p = M.b.IsELanguageValidInRealm(s, P.d.k_ESteamRealmChina);
           ((d && e.BInRealmGlobal()) || (p && e.BInRealmChina())) &&
-            (Tn(e, "capsule", s, (c = p ? M.b.GetELanguageFallback(s) : s)) &&
+            (jn(e, "capsule", s, (c = p ? M.b.GetELanguageFallback(s) : s)) &&
               i++,
-            Tn(e, "spotlight", s, c) && l++,
+            jn(e, "spotlight", s, c) && l++,
             e.BHasLanguageRequiredOrFallback(s, c) &&
               (r++, (e.GetSubTitle(s) || e.GetSubTitle(c)) && o++));
         }
@@ -7357,7 +7358,7 @@
               { key: "EventEdit_Warning_ArtworkMissing" },
               qe.createElement(
                 "div",
-                { className: yn.a.WarningStyles },
+                { className: Cn.a.WarningStyles },
                 Object(M.f)("#EventEdit_Warning_ArtworkMissing")
               )
             )
@@ -7370,7 +7371,7 @@
                 { key: "EventEdit_Warnign_SubTitle" },
                 qe.createElement(
                   "div",
-                  { className: yn.a.WarningStyles },
+                  { className: Cn.a.WarningStyles },
                   Object(M.f)("#EventEdit_Warnign_SubTitle", o, r)
                 )
               )
@@ -7383,7 +7384,7 @@
                 { key: "EventEdit_Warnign_Artwork" },
                 qe.createElement(
                   "div",
-                  { className: yn.a.WarningStyles },
+                  { className: Cn.a.WarningStyles },
                   Object(M.f)("#EventEdit_Warnign_Artwork", i, r)
                 )
               )
@@ -7400,7 +7401,7 @@
                 { key: "EventEdit_Warning_VisibilityTimeChange" },
                 qe.createElement(
                   "div",
-                  { className: yn.a.WarningStyles },
+                  { className: Cn.a.WarningStyles },
                   Object(M.f)("#EventEdit_Warning_VisibilityTimeChange")
                 )
               )
@@ -7413,7 +7414,7 @@
                 { key: "EventEdit_Warning_SpotlightImageWithFlag" },
                 qe.createElement(
                   "div",
-                  { className: yn.a.WarningStyles },
+                  { className: Cn.a.WarningStyles },
                   Object(M.f)("#EventEdit_Warning_SpotlightImageWithFlag")
                 )
               )
@@ -7421,9 +7422,9 @@
           t
         );
       }
-      var In,
-        Dn,
-        wn = (function(t) {
+      var Dn,
+        wn,
+        Mn = (function(t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (
@@ -7485,8 +7486,8 @@
                 t = oe.a.GetTimeNowWithOverride(),
                 n = e.ComputeStartTime(t),
                 a = e.ComputeVisibilityStartTime(t, n),
-                i = Cn(e, !0),
-                r = jn(e),
+                i = Tn(e, !0),
+                r = In(e),
                 o = this.state.dialogState,
                 l = He.a.Get().GetPartnerEventPermissions(e.GetClanSteamID());
               switch (
@@ -7500,7 +7501,7 @@
               ) {
                 case "prevalidateerror":
                   return qe.createElement(
-                    nn.e,
+                    Jt.e,
                     {
                       strTitle: Object(M.f)("#EventEditor_Publish_Failed"),
                       strDescription: Object(M.f)(
@@ -7524,7 +7525,7 @@
                   );
                 case "showwarning":
                   return qe.createElement(
-                    nn.c,
+                    Jt.c,
                     {
                       strTitle: Object(M.f)("#EventEditor_Publish_Warning"),
                       strDescription: Object(M.f)(
@@ -7551,7 +7552,7 @@
                       ((s = e.ComputeVisibilityStartTime(t, c)),
                       (p = p || s <= t)),
                     qe.createElement(
-                      nn.c,
+                      Jt.c,
                       {
                         strTitle: Object(M.f)("#Button_Publish"),
                         strDescription: "",
@@ -7605,7 +7606,7 @@
                 default:
                 case "displayerror":
                   return qe.createElement(
-                    nn.e,
+                    Jt.e,
                     {
                       strTitle: Object(M.f)("#EventEditor_Publish_Failed"),
                       strDescription: Object(M.f)(
@@ -7619,7 +7620,7 @@
                   );
                 case "waiting":
                   return qe.createElement(
-                    nn.c,
+                    Jt.c,
                     {
                       strTitle: Object(M.f)("#Button_Publish"),
                       strDescription: Object(M.f)(
@@ -7638,7 +7639,7 @@
                     )
                   );
                 case "showsuccess":
-                  return qe.createElement(nn.c, {
+                  return qe.createElement(Jt.c, {
                     strTitle: Object(M.f)("#Button_Publish"),
                     strDescription: Object(M.f)(
                       "#EventEdit_Publishing_Success"
@@ -7657,7 +7658,7 @@
             (e = Object(I.c)([Je.a], e))
           );
         })(qe.Component),
-        Mn = (function(o) {
+        An = (function(o) {
           function e(e) {
             var t,
               n,
@@ -7666,8 +7667,8 @@
               r = i.props.editModel;
             return (
               r.BPublished() && !i.props.bSkipChecks
-                ? ((t = Cn(r, !1)),
-                  (n = jn(r)),
+                ? ((t = Tn(r, !1)),
+                  (n = In(r)),
                   (a = "default"),
                   null != t && 0 < t.length
                     ? (a = "prevalidateerror")
@@ -7734,7 +7735,7 @@
               switch (t.dialogState) {
                 case "prevalidateerror":
                   return qe.createElement(
-                    nn.e,
+                    Jt.e,
                     {
                       strTitle: Object(M.f)("#EventEdit_Saving_Error_Title"),
                       strDescription: Object(M.f)(
@@ -7758,7 +7759,7 @@
                   );
                 case "showwarning":
                   return qe.createElement(
-                    nn.c,
+                    Jt.c,
                     {
                       strTitle: Object(M.f)("#EventEdit_Saving_Warning_Title"),
                       strDescription: Object(M.f)(
@@ -7775,19 +7776,19 @@
                 case "default":
                 default:
                   return qe.createElement(
-                    nn.d,
+                    Jt.d,
                     {
                       bDisableBackgroundDismiss: !0,
                       bOKDisabled: !0,
                       bHideCloseIcon: !0
                     },
                     qe.createElement(
-                      Xt.k,
+                      en.k,
                       null,
                       Object(M.f)("#EventEdit_Saving_Title")
                     ),
                     qe.createElement(
-                      Xt.b,
+                      en.b,
                       null,
                       qe.createElement(
                         "div",
@@ -7809,7 +7810,7 @@
                       (i +=
                         " " +
                         Object(M.f)("#EventEdit_Saving_Successful_Visible")),
-                    qe.createElement(nn.c, {
+                    qe.createElement(Jt.c, {
                       strTitle: Object(M.f)("#EventEdit_Saving_Success_Title"),
                       strDescription: i,
                       onOK: this.props.OnSuccess,
@@ -7820,7 +7821,7 @@
                   );
                 case "error":
                   return qe.createElement(
-                    nn.e,
+                    Jt.e,
                     {
                       strTitle: Object(M.f)("#EventEdit_Saving_Error_Title"),
                       strDescription: Object(M.f)(
@@ -7834,7 +7835,7 @@
                   );
                 case "overwrite":
                   return qe.createElement(
-                    nn.c,
+                    Jt.c,
                     {
                       strTitle: Object(M.f)(
                         "#EventEditor_SaveOrPublish_ClobberTitle"
@@ -7859,8 +7860,8 @@
             (e = Object(I.c)([Je.a], e))
           );
         })(qe.Component),
-        An = n("0XOM"),
-        Gn = (n("f0Wu"),
+        Gn = n("0XOM"),
+        kn = (n("f0Wu"),
         (function(n) {
           function e(e) {
             var t = n.call(this, e) || this;
@@ -7900,21 +7901,21 @@
                   case "clone":
                     return qe.createElement(Xe.b, { push: !0, to: v(a, "") });
                   case "edit":
-                    return Object(en.i)(
+                    return Object(an.i)(
                       this.props.eventModel,
-                      en.a.k_eCommunityEdit,
+                      an.a.k_eCommunityEdit,
                       this.props.appid_or_vanity_str
                     );
                   case "view":
                     return n.BIsVisibleEvent()
-                      ? Object(en.i)(
+                      ? Object(an.i)(
                           this.props.eventModel,
-                          en.a.k_eView,
+                          an.a.k_eView,
                           this.props.appid_or_vanity_str
                         )
-                      : Object(en.i)(
+                      : Object(an.i)(
                           this.props.eventModel,
-                          en.a.k_eCommunityPreview,
+                          an.a.k_eCommunityPreview,
                           this.props.appid_or_vanity_str
                         );
                   default:
@@ -7936,14 +7937,14 @@
                   n.visibilityStartTime == n.startTime
                     ? qe.createElement(
                         "div",
-                        { className: An.TileTextStartsIn },
+                        { className: Gn.TileTextStartsIn },
                         Object(M.f)(
                           "#EventEditor_Status_WillBeVisible_EventStart"
                         )
                       )
                     : qe.createElement(
                         "div",
-                        { className: An.TileTextStartsIn },
+                        { className: Gn.TileTextStartsIn },
                         Object(M.n)(
                           "#EventEditor_Status_WillBeVisible_At",
                           qe.createElement(nt.a, {
@@ -7960,19 +7961,19 @@
                 n.GetStartTimeAndDateUnixSeconds() > _
                   ? (g = qe.createElement(
                       "span",
-                      { className: An.EventStateUpcoming },
+                      { className: Gn.EventStateUpcoming },
                       Object(M.f)("#EventDisplay_Upcoming")
                     ))
                   : Object(le.a)(n.type) && n.GetEndTimeAndDateUnixSeconds() > _
                   ? (g = qe.createElement(
                       "span",
-                      { className: An.EventStateActive },
+                      { className: Gn.EventStateActive },
                       Object(M.f)("#EventDisplay_Active")
                     ))
                   : n.GetStartTimeAndDateUnixSeconds() > _ + 3600 &&
                     (g = qe.createElement(
                       "span",
-                      { className: An.EventStateRecent },
+                      { className: Gn.EventStateRecent },
                       Object(M.f)("#EventDisplay_RecentlyActive")
                     ))),
                 i &&
@@ -7983,7 +7984,7 @@
               var h =
                   n.BIsPartnerEvent() &&
                   n.BIsVisibleEvent() &&
-                  Jt.a.GetStatsFor(n.clanSteamID, r),
+                  qt.a.GetStatsFor(n.clanSteamID, r),
                 E = re.a.GetOGGClanInfo(n.appid),
                 b = Boolean(
                   o &&
@@ -7992,48 +7993,48 @@
                     E.clanAccountID != n.announcementClanSteamID.GetAccountID()
                 );
               return qe.createElement(
-                Kt.a,
+                tn.a,
                 null,
                 qe.createElement(
                   "div",
                   {
                     className: Object(at.a)(
-                      An.TileContainer,
-                      An.TileAgeAppropriate
+                      Gn.TileContainer,
+                      Gn.TileAgeAppropriate
                     )
                   },
                   qe.createElement(
                     "div",
                     {
-                      className: An.TileImageCtn,
+                      className: Gn.TileImageCtn,
                       onClick: function(e) {
                         return t.OnFallbackClick(e);
                       }
                     },
-                    qe.createElement(tn.b, { className: An.TileImage, srcs: s })
+                    qe.createElement(rn.b, { className: Gn.TileImage, srcs: s })
                   ),
                   qe.createElement(
                     "div",
                     {
-                      className: An.TileTextContainer,
+                      className: Gn.TileTextContainer,
                       onClick: function(e) {
                         return t.OnFallbackClick(e);
                       }
                     },
                     qe.createElement(
                       "div",
-                      { className: An.TileDescriptionContainer },
+                      { className: Gn.TileDescriptionContainer },
                       qe.createElement(
                         "div",
                         { style: { display: "flex" } },
                         qe.createElement(
                           "div",
-                          { className: An.TileTextAppName },
+                          { className: Gn.TileTextAppName },
                           c
                         ),
                         qe.createElement(
                           "div",
-                          { className: An.TileTextEventType },
+                          { className: Gn.TileTextEventType },
                           n.GetCategoryAsString()
                         )
                       ),
@@ -8043,7 +8044,7 @@
                         { className: it.ContainerSpaceBetween },
                         qe.createElement(
                           "div",
-                          { className: An.TileTextStartsIn },
+                          { className: Gn.TileTextStartsIn },
                           qe.createElement(nt.a, {
                             dateAndTime: n.GetStartTimeAndDateUnixSeconds(),
                             bSingleLine: !0
@@ -8071,7 +8072,7 @@
                         Boolean(h) &&
                           qe.createElement(
                             "div",
-                            { className: An.TileStats },
+                            { className: Gn.TileStats },
                             Object(M.n)(
                               "#EventDashBoard_Summary_Tile_Impressions",
                               qe.createElement(
@@ -8096,7 +8097,7 @@
                         ? qe.createElement(
                             "div",
                             {
-                              className: An.TileButtonContainer,
+                              className: Gn.TileButtonContainer,
                               onClick: function(e) {
                                 return t.OnIgnoreFallbackClick(e);
                               }
@@ -8109,21 +8110,21 @@
                               )
                             ),
                             qe.createElement(
-                              en.c,
+                              an.c,
                               {
                                 className: Object(at.a)(
-                                  An.ManageButton,
-                                  An.Edit
+                                  Gn.ManageButton,
+                                  Gn.Edit
                                 ),
                                 eventModel: n,
-                                route: en.a.k_eView,
+                                route: an.a.k_eView,
                                 openNewWindow: !0
                               },
                               Object(M.f)("#Button_ViewPage")
                             )
                           )
                         : qe.createElement(
-                            kn,
+                            Nn,
                             Object(I.a)(
                               { fnOnGotoPage: this.OnGotoPage },
                               this.props
@@ -8140,7 +8141,7 @@
             (e = Object(I.c)([Je.a], e))
           );
         })(qe.Component)),
-        kn = (function(e) {
+        Nn = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -8157,7 +8158,7 @@
                 .then(function(e) {
                   var n,
                     a,
-                    t = bn(e, !0, !0, !0),
+                    t = vn(e, !0, !0, !0),
                     i = t.GetLanguagesWithTokens();
                   1 < i.length
                     ? (i.sort(function(e, t) {
@@ -8171,9 +8172,9 @@
                       (a = new Array()),
                       i.forEach(function(t) {
                         n.push(
-                          qe.createElement(Xt.e, {
+                          qe.createElement(en.e, {
                             key: t,
-                            classname: An.CloneCheckBox,
+                            classname: Gn.CloneCheckBox,
                             onChange: function(e) {
                               e ? a.splice(i.indexOf(t), 1) : a.push(t);
                             },
@@ -8182,9 +8183,9 @@
                           })
                         );
                       }),
-                      Object(an.d)(
+                      Object(Xt.d)(
                         qe.createElement(
-                          nn.c,
+                          Jt.c,
                           {
                             strTitle: Object(M.f)("#Button_Clone"),
                             onOK: function() {
@@ -8196,7 +8197,7 @@
                           },
                           qe.createElement(
                             "div",
-                            { className: An.CloneLangCtn },
+                            { className: Gn.CloneLangCtn },
                             n
                           )
                         ),
@@ -8207,8 +8208,8 @@
                 .catch(function(e) {
                   var t = Object(ue.a)(e);
                   Object(
-                    an.d
-                  )(qe.createElement(nn.e, { strTitle: Object(M.f)("#EventEditor_CloneError"), bAlertDialog: !0, bDestructiveWarning: !0, strDescription: Object(M.f)("#EventEditor_CloneError_Desc", t.strErrorMsg) }), window, { strTitle: Object(M.f)("#EventEditor_CloneError") });
+                    Xt.d
+                  )(qe.createElement(Jt.e, { strTitle: Object(M.f)("#EventEditor_CloneError"), bAlertDialog: !0, bDestructiveWarning: !0, strDescription: Object(M.f)("#EventEditor_CloneError_Desc", t.strErrorMsg) }), window, { strTitle: Object(M.f)("#EventEditor_CloneError") });
                 });
             }),
             (t.prototype.DoCloneAction = function(e, t) {
@@ -8216,7 +8217,7 @@
               t &&
                 0 < t.length &&
                 (e.ClearLanguagesTokens(t),
-                vn(
+                fn(
                   n,
                   e,
                   M.b.GetLanguageListForRealms([P.d.k_ESteamRealmGlobal])
@@ -8230,14 +8231,14 @@
               Ye.LoadEditorModel(n.clanSteamID, n.GID)
                 .then(function() {
                   Object(
-                    an.c
-                  )(qe.createElement(wn, { editModel: Ye.GetEditModel(), OnPublishSuccess: t.OnPublishSuccess }), window);
+                    Xt.c
+                  )(qe.createElement(Mn, { editModel: Ye.GetEditModel(), OnPublishSuccess: t.OnPublishSuccess }), window);
                 })
                 .catch(function(e) {
                   var t = Object(ue.a)(e);
                   Object(
-                    an.d
-                  )(qe.createElement(nn.e, { strTitle: Object(M.f)("#EventEditor_PublishingError"), bAlertDialog: !0, bDestructiveWarning: !0, strDescription: Object(M.f)("#EventEditor_PublishingError_Desc", t.strErrorMsg) }), window, { strTitle: Object(M.f)("#EventEditor_PublishingError") });
+                    Xt.d
+                  )(qe.createElement(Jt.e, { strTitle: Object(M.f)("#EventEditor_PublishingError"), bAlertDialog: !0, bDestructiveWarning: !0, strDescription: Object(M.f)("#EventEditor_PublishingError_Desc", t.strErrorMsg) }), window, { strTitle: Object(M.f)("#EventEditor_PublishingError") });
                 });
             }),
             (t.prototype.OnPublishSuccess = function() {
@@ -8248,12 +8249,12 @@
             }),
             (t.prototype.OnDeleteClickAndVerify = function(e) {
               e.stopPropagation(),
-                Object(an.c)(
-                  qe.createElement($t.a, {
+                Object(Xt.c)(
+                  qe.createElement(nn.a, {
                     eventModel: this.props.eventModel,
                     partnerEventStore: Ye
                   }),
-                  Object(rn.m)(e)
+                  Object(on.m)(e)
                 );
             }),
             (t.prototype.render = function() {
@@ -8267,18 +8268,18 @@
               return qe.createElement(
                 "div",
                 {
-                  className: An.TileButtonContainer,
+                  className: Gn.TileButtonContainer,
                   onClick: function(e) {
                     return t.OnIgnoreFallbackClick(e);
                   }
                 },
                 !i &&
                   qe.createElement(
-                    en.c,
+                    an.c,
                     {
-                      className: Object(at.a)(An.ManageButton, An.Edit),
+                      className: Object(at.a)(Gn.ManageButton, Gn.Edit),
                       eventModel: n,
-                      route: en.a.k_eCommunityEdit,
+                      route: an.a.k_eCommunityEdit,
                       onClick: this.StopPropagation,
                       vanityID: a
                     },
@@ -8286,14 +8287,14 @@
                   ),
                 i &&
                   qe.createElement(
-                    en.c,
+                    an.c,
                     {
-                      className: Object(at.a)(An.ManageButton, An.Edit),
+                      className: Object(at.a)(Gn.ManageButton, Gn.Edit),
                       "data-tooltip-text": Object(M.f)(
                         "#EventEditor_Button_MigrateAndEdit_Announcement_ttip"
                       ),
                       eventModel: n,
-                      route: en.a.k_eCommunityMigrate,
+                      route: an.a.k_eCommunityMigrate,
                       onClick: this.StopPropagation,
                       vanityID: a
                     },
@@ -8301,14 +8302,14 @@
                   ),
                 r &&
                   qe.createElement(
-                    en.c,
+                    an.c,
                     {
-                      className: Object(at.a)(An.ManageButton, An.View),
+                      className: Object(at.a)(Gn.ManageButton, Gn.View),
                       "data-tooltip-text": Object(M.f)(
                         "#EventEditor_Button_PreviewButton_ttip"
                       ),
                       eventModel: n,
-                      route: en.a.k_eCommunityPreview,
+                      route: an.a.k_eCommunityPreview,
                       onClick: this.StopPropagation,
                       vanityID: a
                     },
@@ -8316,11 +8317,11 @@
                   ),
                 !r &&
                   qe.createElement(
-                    en.c,
+                    an.c,
                     {
-                      className: Object(at.a)(An.ManageButton, An.View),
+                      className: Object(at.a)(Gn.ManageButton, Gn.View),
                       eventModel: n,
-                      route: en.a.k_eView,
+                      route: an.a.k_eView,
                       onClick: this.StopPropagation,
                       vanityID: a
                     },
@@ -8331,17 +8332,17 @@
                   qe.createElement(
                     "div",
                     {
-                      className: Object(at.a)(An.ManageButton, An.Publish),
+                      className: Object(at.a)(Gn.ManageButton, Gn.Publish),
                       onClick: this.OnPublishEvent
                     },
                     Object(M.f)("#EventDisplay_Publish")
                   ),
-                qe.createElement("div", { className: An.Spacer }, " "),
+                qe.createElement("div", { className: Gn.Spacer }, " "),
                 !i &&
                   qe.createElement(
                     "div",
                     {
-                      className: Object(at.a)(An.ManageButton, An.Clone),
+                      className: Object(at.a)(Gn.ManageButton, Gn.Clone),
                       onClick: this.OnClone
                     },
                     Object(M.f)("#Button_Clone")
@@ -8349,7 +8350,7 @@
                 qe.createElement(
                   "div",
                   {
-                    className: Object(at.a)(An.ManageButton, An.Delete),
+                    className: Object(at.a)(Gn.ManageButton, Gn.Delete),
                     "data-tooltip-text": Object(M.f)(
                       "#EventEditor_Button_DeleteButton_ttip"
                     ),
@@ -8369,7 +8370,6 @@
             (t = Object(I.c)([Je.a], t))
           );
         })(qe.Component),
-        Nn = n("KzMr"),
         Bn = (function(t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
@@ -8418,7 +8418,7 @@
                           );
                         }
                       )).length &&
-                      Jt.a.LoadStatsForEvents(
+                      qt.a.LoadStatsForEvents(
                         this.m_clanSteamID,
                         t,
                         this.m_cancelSignal
@@ -8430,9 +8430,9 @@
             }),
             (e.prototype.HandleErrorWithDialog = function(e) {
               var t = Object(ue.a)(e);
-              Object(an.d)(
+              Object(Xt.d)(
                 qe.createElement(
-                  nn.e,
+                  Jt.e,
                   null,
                   Object(M.f)("#Error_Description", t.errorCode, t.strErrorMsg)
                 ),
@@ -8480,7 +8480,7 @@
                   l &&
                     l.visibility_state == t &&
                     n.push(
-                      qe.createElement(Gn, {
+                      qe.createElement(kn, {
                         key: o,
                         appid_or_vanity_str: this.props.match.params
                           .appid_or_vanity_str,
@@ -8625,7 +8625,7 @@
                   {
                     className: Object(at.a)(
                       "maincontent",
-                      Qt.a.EventDashboardCtn
+                      $t.a.EventDashboardCtn
                     )
                   },
                   qe.createElement(Ln, {
@@ -8635,12 +8635,12 @@
                 ),
                 qe.createElement(
                   "div",
-                  { className: Qt.a.MainLists },
+                  { className: $t.a.MainLists },
                   0 < e.length &&
                     qe.createElement(
                       "div",
                       {
-                        className: Object(at.a)(Qt.a.Section, Qt.a.Unpublished)
+                        className: Object(at.a)($t.a.Section, $t.a.Unpublished)
                       },
                       qe.createElement(
                         "div",
@@ -8648,12 +8648,12 @@
                           className: Object(at.a)(
                             "maincontent",
                             "eventlist",
-                            Qt.a.EventDashboardCtn
+                            $t.a.EventDashboardCtn
                           )
                         },
                         qe.createElement(
                           "div",
-                          { className: Qt.a.DisplaySectionHeader },
+                          { className: $t.a.DisplaySectionHeader },
                           Object(M.f)("#EventDisplay_Unpublished_Title"),
                           " ",
                           qe.createElement(
@@ -8672,19 +8672,19 @@
                   0 < t.length &&
                     qe.createElement(
                       "div",
-                      { className: Object(at.a)(Qt.a.Section, Qt.a.Staged) },
+                      { className: Object(at.a)($t.a.Section, $t.a.Staged) },
                       qe.createElement(
                         "div",
                         {
                           className: Object(at.a)(
                             "maincontent",
                             "eventlist",
-                            Qt.a.EventDashboardCtn
+                            $t.a.EventDashboardCtn
                           )
                         },
                         qe.createElement(
                           "div",
-                          { className: Qt.a.DisplaySectionHeader },
+                          { className: $t.a.DisplaySectionHeader },
                           Object(M.f)("#EventDisplay_Stage_Title"),
                           " ",
                           qe.createElement(
@@ -8704,9 +8704,9 @@
                     "div",
                     {
                       className: Object(at.a)(
-                        Qt.a.Section,
-                        Qt.a.DisplaySectionHeaderContainer,
-                        Qt.a.Visible
+                        $t.a.Section,
+                        $t.a.DisplaySectionHeaderContainer,
+                        $t.a.Visible
                       )
                     },
                     qe.createElement(
@@ -8715,17 +8715,17 @@
                         className: Object(at.a)(
                           "maincontent",
                           "eventlist",
-                          Qt.a.EventDashboardCtn
+                          $t.a.EventDashboardCtn
                         )
                       },
                       qe.createElement(
                         "div",
-                        { className: Qt.a.DisplaySectionHeader },
+                        { className: $t.a.DisplaySectionHeader },
                         Object(M.f)("#EventDisplay_Visible_Title")
                       ),
                       qe.createElement(
                         "div",
-                        { className: Qt.a.DisplaySectionSubHeader },
+                        { className: $t.a.DisplaySectionSubHeader },
                         Object(M.f)("#EventDisplay_Visible_Title_WithRange")
                       ),
                       n && n,
@@ -8771,12 +8771,13 @@
         })(qe.Component),
         Ln = Object(Je.a)(function(e) {
           var t = new G.a(D.a.CLANSTEAMID),
-            n = e.appid_or_vanity_str,
-            a = Jt.a.GetTotalStats(t);
+            n = re.a.GetClanInfoByClanAccountID(t.GetAccountID()),
+            a = e.appid_or_vanity_str,
+            i = qt.a.GetTotalStats(t);
           return qe.createElement(
             "div",
             { className: rt.a.EventDashboardHeader },
-            qe.createElement(jt, { identifier: n, partnerEventStore: Ye }),
+            qe.createElement(jt, { identifier: a, partnerEventStore: Ye }),
             qe.createElement(
               "div",
               { className: rt.a.EventDashboardTitles },
@@ -8797,7 +8798,7 @@
                   ut.b,
                   {
                     className: Object(at.a)(rt.a.Button, rt.a.Primary),
-                    to: r(n),
+                    to: r(a),
                     onClick: function() {
                       return Ye.ResetModel();
                     }
@@ -8809,8 +8810,9 @@
             qe.createElement(
               "div",
               { className: rt.a.EventDashboardStatsCtn },
-              qe.createElement(Nn.a, {
-                summary: a.m_stats,
+              qe.createElement(Qt.a, {
+                summary: i.m_stats,
+                bIsAllowedInLibrary: null == n ? void 0 : n.is_ogg,
                 bIncludeDescription: !0
               })
             )
@@ -8838,8 +8840,8 @@
               var e = this,
                 t = Ye.GetEditModel(),
                 n = t.BHasGid();
-              Object(an.c)(
-                qe.createElement(Mn, {
+              Object(Xt.c)(
+                qe.createElement(An, {
                   editModel: t,
                   OnSuccess: function() {
                     n || e.setState({ bRedirectToMaterialEdit: !0 });
@@ -8967,10 +8969,10 @@
                   qe.createElement(st, null),
                   l &&
                     qe.createElement(
-                      en.c,
+                      an.c,
                       {
                         className: rt.a.EditPreviewButton,
-                        route: en.a.k_eCommunityPreview,
+                        route: an.a.k_eCommunityPreview,
                         eventModel: e.GetEventModel(),
                         vanityID: o
                       },
@@ -8978,10 +8980,10 @@
                     ),
                   s &&
                     qe.createElement(
-                      en.c,
+                      an.c,
                       {
                         className: rt.a.EditPreviewButton,
-                        route: en.a.k_eCommunityPreviewSale,
+                        route: an.a.k_eCommunityPreviewSale,
                         eventModel: e.GetEventModel(),
                         vanityID: o
                       },
@@ -9078,11 +9080,11 @@
           );
         })(qe.Component),
         Xn = n("eDP5");
-      ((Dn = In = In || {})[(Dn.k_ModReviewed = 0)] = "k_ModReviewed"),
-        (Dn[(Dn.k_ModUnreviewed = 1)] = "k_ModUnreviewed"),
-        (Dn[(Dn.k_ChangeEventType = 2)] = "k_ChangeEventType"),
-        (Dn[(Dn.k_UpdateSeasonTags = 3)] = "k_UpdateSeasonTags"),
-        (Dn[(Dn.k_ModReReviewed = 4)] = "k_ModReReviewed");
+      ((wn = Dn = Dn || {})[(wn.k_ModReviewed = 0)] = "k_ModReviewed"),
+        (wn[(wn.k_ModUnreviewed = 1)] = "k_ModUnreviewed"),
+        (wn[(wn.k_ChangeEventType = 2)] = "k_ChangeEventType"),
+        (wn[(wn.k_UpdateSeasonTags = 3)] = "k_UpdateSeasonTags"),
+        (wn[(wn.k_ModReReviewed = 4)] = "k_ModReReviewed");
       function Kn(e) {
         var t = qe.useState(!0),
           n = t[0],
@@ -9117,7 +9119,7 @@
                         accountID: e.m_moderator
                       });
                     switch (e.m_action) {
-                      case In.k_ModReviewed:
+                      case Dn.k_ModReviewed:
                         return qe.createElement(
                           "div",
                           { className: ia.ModeratorAuditActionCtn },
@@ -9127,7 +9129,7 @@
                             n
                           )
                         );
-                      case In.k_ModUnreviewed:
+                      case Dn.k_ModUnreviewed:
                         return qe.createElement(
                           "div",
                           { className: ia.ModeratorAuditActionCtn },
@@ -9137,7 +9139,7 @@
                             n
                           )
                         );
-                      case In.k_ChangeEventType:
+                      case Dn.k_ChangeEventType:
                         return qe.createElement(
                           "div",
                           { className: ia.ModeratorAuditActionCtn },
@@ -9148,7 +9150,7 @@
                             Object(le.e)(e.m_newEventType)
                           )
                         );
-                      case In.k_UpdateSeasonTags:
+                      case Dn.k_UpdateSeasonTags:
                         return qe.createElement(
                           "div",
                           { className: ia.ModeratorAuditActionCtn },
@@ -9218,10 +9220,10 @@
                 "_" +
                 this.m_action;
               switch (this.m_action) {
-                case In.k_ChangeEventType:
+                case Dn.k_ChangeEventType:
                   e += "_" + this.m_newEventType;
                   break;
-                case In.k_UpdateSeasonTags:
+                case Dn.k_UpdateSeasonTags:
                   e += "_" + this.m_newTagAdded;
               }
               return e;
@@ -9235,10 +9237,10 @@
                 (this.m_action = Number(t[3])),
                 this.m_action)
               ) {
-                case In.k_ChangeEventType:
+                case Dn.k_ChangeEventType:
                   this.m_newEventType = Number(t[4]);
                   break;
-                case In.k_UpdateSeasonTags:
+                case Dn.k_UpdateSeasonTags:
                   this.m_newTagAdded = t.slice(4).join("_");
               }
               return !0;
@@ -9247,7 +9249,7 @@
               return (
                 (this.m_moderator = D.g.accountid),
                 (this.m_rtWhen = Date.now() / 1e3),
-                (this.m_action = In.k_ChangeEventType),
+                (this.m_action = Dn.k_ChangeEventType),
                 (this.m_newEventType = e),
                 this
               );
@@ -9256,7 +9258,7 @@
               return (
                 (this.m_moderator = D.g.accountid),
                 (this.m_rtWhen = Date.now() / 1e3),
-                (this.m_action = e ? In.k_ModReviewed : In.k_ModUnreviewed),
+                (this.m_action = e ? Dn.k_ModReviewed : Dn.k_ModUnreviewed),
                 this
               );
             }),
@@ -9264,7 +9266,7 @@
               return (
                 (this.m_moderator = D.g.accountid),
                 (this.m_rtWhen = Date.now() / 1e3),
-                (this.m_action = e ? In.k_ModReReviewed : In.k_ModUnreviewed),
+                (this.m_action = e ? Dn.k_ModReReviewed : Dn.k_ModUnreviewed),
                 this
               );
             }),
@@ -9275,7 +9277,7 @@
               return (
                 (this.m_moderator = D.g.accountid),
                 (this.m_rtWhen = Date.now() / 1e3),
-                (this.m_action = In.k_UpdateSeasonTags),
+                (this.m_action = Dn.k_UpdateSeasonTags),
                 (this.m_newTagAdded = e),
                 this
               );
@@ -9409,7 +9411,7 @@
               qe.createElement(
                 "div",
                 null,
-                qe.createElement(Xt.e, {
+                qe.createElement(en.e, {
                   label: "collapse empty arrays",
                   checked: n,
                   onChange: function(e) {
@@ -9630,7 +9632,7 @@
                           condition: Boolean(t.statusToolTip),
                           wrap: function(e) {
                             return qe.createElement(
-                              dn.a,
+                              pn.a,
                               { toolTipContent: t.statusToolTip },
                               e
                             );
@@ -9650,7 +9652,7 @@
                           },
                           Boolean(t.vo_warning) &&
                             qe.createElement(
-                              dn.a,
+                              pn.a,
                               { toolTipContent: t.vo_warning },
                               qe.createElement(
                                 "div",
@@ -10119,9 +10121,9 @@
               );
             }),
             (e.prototype.OnExampleClick = function() {
-              Object(an.d)(
+              Object(Xt.d)(
                 qe.createElement(
-                  nn.c,
+                  Jt.c,
                   {
                     onOK: function() {},
                     onCancel: function() {},
@@ -10166,8 +10168,8 @@
               var t = this,
                 n = Ye.GetEditModel();
               n.GetEventModel().jsondata.sale_num_headers !== e.data &&
-                Object(an.d)(
-                  qe.createElement(nn.c, {
+                Object(Xt.d)(
+                  qe.createElement(Jt.c, {
                     strTitle: Object(M.f)("#Button_Confirm"),
                     strDescription: Object(M.f)("#Sale_HeaderArtwork_Warning"),
                     onOK: function() {
@@ -10394,13 +10396,13 @@
                       )
                     ),
                     qe.createElement("br", null),
-                    qe.createElement(Xt.l, {
+                    qe.createElement(en.l, {
                       onChange: this.OnHeaderOffsetChange,
                       label: Object(M.f)("#Sale_HeaderOffset"),
                       value: e.GetEventModel().jsondata.sale_header_offset
                     }),
                     qe.createElement(
-                      Xt.d,
+                      en.d,
                       {
                         onClick: this.OnOpenBackgroundColor,
                         className: rt.a.EventEditorTextTitle,
@@ -10411,7 +10413,7 @@
                       },
                       Object(M.f)("#Sale_BackgroundColor")
                     ),
-                    qe.createElement(Xt.h, {
+                    qe.createElement(en.h, {
                       ref: this.m_refNumSalesHeadersDropDown,
                       strDropDownClassName: rt.a.DropDownScroll,
                       label: Object(M.f)("#Sale_HeaderArtwork_Multi"),
@@ -10428,7 +10430,7 @@
                       strClassName: Ba.a.SaleDaySelection
                     }),
                     Boolean(1 < e.GetNumSalesBackgroundHeader()) &&
-                      qe.createElement(Xt.h, {
+                      qe.createElement(en.h, {
                         strDropDownClassName: rt.a.DropDownScroll,
                         label: Object(M.f)("#Sale_HeaderArtwork_EditDay"),
                         tooltip: Object(M.f)(
@@ -10460,7 +10462,7 @@
                     !o.GetAppStoreData().library_asset_setup_complete &&
                       qe.createElement(
                         "p",
-                        { className: On.ErrorStylesBackground },
+                        { className: yn.ErrorStylesBackground },
                         Object(M.f)("#EventEdtior_ArtworkType_hero_warning")
                       )
                   )))
@@ -10542,7 +10544,7 @@
                   r,
                   this.props.fnToggleMinimize &&
                     qe.createElement(
-                      Xt.d,
+                      en.d,
                       {
                         "data-tooltip-text": Object(M.f)(
                           this.props.bIsMinimized
@@ -10582,7 +10584,7 @@
                         null,
                         qe.createElement(
                           "p",
-                          { className: On.WarningStylesWithIcon },
+                          { className: yn.WarningStylesWithIcon },
                           this.props.strWarning
                         )
                       ),
@@ -10591,7 +10593,7 @@
                       { className: rt.a.FlexRowContainer },
                       this.GetExampleContents() &&
                         qe.createElement(
-                          Xt.t,
+                          en.t,
                           {
                             style: {
                               width: "160px",
@@ -10603,7 +10605,7 @@
                         ),
                       this.GetExampleContents() &&
                         qe.createElement(
-                          Xt.t,
+                          en.t,
                           {
                             style: {
                               width: "160px",
@@ -10710,8 +10712,8 @@
               var t = Ye.GetEditModel();
               e && !t.BHasImage("spotlight", 0)
                 ? (console.error("EventArtworkSelector: OnSpotlightChange"),
-                  Object(an.d)(
-                    qe.createElement(nn.e, {
+                  Object(Xt.d)(
+                    qe.createElement(Jt.e, {
                       strTitle: Object(M.f)("#Error_FailureNotice"),
                       strDescription: Object(M.f)(
                         "#EventEditor_Options_Spotlight_Error",
@@ -10734,7 +10736,7 @@
                     "div",
                     { style: { padding: "16px" } },
                     qe.createElement(
-                      Xt.d,
+                      en.d,
                       {
                         style: { textTransform: "uppercase", width: "200px" },
                         onClick: function() {
@@ -10764,7 +10766,7 @@
                         qe.createElement(
                           "div",
                           { className: Ba.a.SpotlightOptions },
-                          qe.createElement(Xt.p, {
+                          qe.createElement(en.p, {
                             onChange: this.OnSpotlightChange,
                             label: Object(M.f)(
                               "#EventEditor_Options_Spotlight_Label"
@@ -10781,7 +10783,7 @@
                         qe.createElement(
                           "div",
                           { className: Ba.a.SpotlightOptions },
-                          qe.createElement(Xt.p, {
+                          qe.createElement(en.p, {
                             onChange: this.OnSpotlightTextChange,
                             label: Object(M.f)(
                               "#EventEditor_Options_SpotlightText_Label"
@@ -10845,7 +10847,7 @@
             Object(I.d)(t, e),
             (t.prototype.ShowLangChangeDialog = function(e, t) {
               var n = this.props.fnOnArtworkLanguageChange;
-              Object(an.d)(
+              Object(Xt.d)(
                 qe.createElement(Za, {
                   clanImage: e,
                   lang: t,
@@ -10936,7 +10938,7 @@
                 ),
                 r = Ye.GetEditModel();
               return qe.createElement(
-                nn.c,
+                Jt.c,
                 {
                   strTitle: Object(M.f)(
                     "#selectimage_change_artwork_lang_title"
@@ -11118,7 +11120,7 @@
                 o = a(r);
               !o ||
                 ((t = U.d.GetClanImageByImageHash(i, o)) &&
-                  Object(an.d)(
+                  Object(Xt.d)(
                     qe.createElement(Za, {
                       clanImage: t,
                       lang: r,
@@ -11131,8 +11133,8 @@
               var t = this;
               e.stopPropagation(), e.preventDefault();
               var n = +e.currentTarget.dataset.lang;
-              Object(an.c)(
-                qe.createElement(nn.c, {
+              Object(Xt.c)(
+                qe.createElement(Jt.c, {
                   strTitle: Object(M.f)("#selectimage_remove_image"),
                   strDescription: Object(M.f)(
                     "#selectimage_remove_details",
@@ -11144,7 +11146,7 @@
                   },
                   onCancel: this.OnCloseDeleteDialog
                 }),
-                Object(rn.m)(e)
+                Object(on.m)(e)
               );
             }),
             (t.prototype.ConstructLanguages = function() {
@@ -11376,7 +11378,7 @@
                   U.a.GetHashAndExt(n)
                 );
               return qe.createElement(
-                nn.d,
+                Jt.d,
                 {
                   onOK: this.OnCommitGroup,
                   bAllowFullSize: !0,
@@ -11384,15 +11386,15 @@
                   closeModal: t
                 },
                 qe.createElement(
-                  Xt.k,
+                  en.k,
                   null,
                   Object(M.f)("#ImagePickerLoc_Title")
                 ),
                 qe.createElement(
-                  Xt.b,
+                  en.b,
                   null,
                   qe.createElement(
-                    Xt.c,
+                    en.c,
                     null,
                     qe.createElement(
                       "div",
@@ -11612,8 +11614,8 @@
                             " file=" +
                             a.name
                         ),
-                        Object(an.d)(
-                          qe.createElement(nn.e, {
+                        Object(Xt.d)(
+                          qe.createElement(Jt.e, {
                             strDescription: Object(M.f)(
                               "#ImagePicker_Error",
                               a.name
@@ -11689,7 +11691,7 @@
             }),
             (e.prototype.InternalOpenLocalizeImageGroup = function(e) {
               var t = this.props.clanSteamID;
-              Object(an.d)(
+              Object(Xt.d)(
                 qe.createElement(Xa, {
                   primaryLocalizedImage: e,
                   clanSteamID: t
@@ -11848,7 +11850,7 @@
                 t = e.clanSteamID,
                 n = e.closeModal;
               return qe.createElement(
-                nn.c,
+                Jt.c,
                 {
                   strTitle: Object(M.f)("#ImagePicker_Images"),
                   strDescription: Object(M.f)(
@@ -11922,12 +11924,12 @@
               var t = this.props,
                 n = t.clanSteamID,
                 a = t.OnClanImageSelected;
-              Object(an.d)(
+              Object(Xt.d)(
                 qe.createElement(ei, {
                   clanSteamID: n,
                   OnClanImageSelected: a
                 }),
-                Object(rn.m)(e)
+                Object(on.m)(e)
               );
             }),
             (e.prototype.render = function() {
@@ -12071,9 +12073,9 @@
               });
             }),
             (e.prototype.OnDeleteClick = function(e) {
-              Object(an.c)(
+              Object(Xt.c)(
                 qe.createElement(
-                  nn.c,
+                  Jt.c,
                   {
                     strTitle: Object(M.f)("#ImagePicker_DeleteImageTitle"),
                     strDescription: "",
@@ -12101,14 +12103,14 @@
                     )
                   )
                 ),
-                Object(rn.m)(e)
+                Object(on.m)(e)
               );
             }),
             (e.prototype.ShowDeleteError = function(e) {
               console.log("ClanImageWrapper on delete error: " + e),
-                Object(an.d)(
+                Object(Xt.d)(
                   qe.createElement(
-                    nn.e,
+                    Jt.e,
                     {
                       strTitle: Object(M.f)("#Error_FailureNotice"),
                       strDescription: Object(M.f)(
@@ -12403,8 +12405,8 @@
                             " file=" +
                             s.name
                         ),
-                        Object(an.d)(
-                          qe.createElement(nn.e, {
+                        Object(Xt.d)(
+                          qe.createElement(Jt.e, {
                             strDescription: Object(M.f)(
                               "#ImagePicker_Error",
                               s.name
@@ -12510,8 +12512,8 @@
                                       "AddExistingClanImage: " + r.strErrorMsg,
                                       r
                                     ),
-                                    Object(an.d)(
-                                      qe.createElement(nn.e, {
+                                    Object(Xt.d)(
+                                      qe.createElement(Jt.e, {
                                         strDescription: Object(M.f)(
                                           "#EventError_Code",
                                           r.strErrorMsg
@@ -12607,13 +12609,13 @@
                 },
                 Boolean(t.m_filesToUpload.length) &&
                   qe.createElement(
-                    Xt.d,
+                    en.d,
                     { style: { margin: "8px" }, onClick: n },
                     Object(M.f)("#ImageUpload_Upload")
                   ),
                 Boolean(t.m_filesToUpload.length) &&
                   qe.createElement(
-                    Xt.d,
+                    en.d,
                     { style: { margin: "8px" }, onClick: t.ClearImages },
                     Object(M.f)("#ImageUpload_Clear")
                   )
@@ -12644,7 +12646,7 @@
                   forceResolution: this.props.forceResolution,
                   fileType: this.props.forceFileType || 3
                 });
-              Object(an.c)(n, t, "CropModal", {
+              Object(Xt.c)(n, t, "CropModal", {
                 strTitle: Object(M.f)("#ImageUpload_CropModalTitle")
               });
             }),
@@ -12752,7 +12754,7 @@
                     i.height
                   )
                 ),
-                qe.createElement(Xt.h, {
+                qe.createElement(en.h, {
                   strDropDownClassName: rt.a.DropDownScroll,
                   rgOptions: m,
                   selectedOption: i.language,
@@ -12762,7 +12764,7 @@
                   bDisableMouseOverlay: !0
                 }),
                 Boolean(1 < o.length) &&
-                  qe.createElement(Xt.h, {
+                  qe.createElement(en.h, {
                     rgOptions: o.filter(function(e) {
                       return "hero" !== e.data;
                     }),
@@ -12798,7 +12800,7 @@
                     qe.Fragment,
                     null,
                     qe.createElement(
-                      Xt.q,
+                      en.q,
                       {
                         onClick: function() {
                           return t.ShowCropModal(i);
@@ -13154,8 +13156,8 @@
               var t = this;
               this.GetScheduleEditModel().BIsDefaultEntry(e)
                 ? this.RemoveEntryWithDelay(e)
-                : Object(an.d)(
-                    Qe.a.createElement(nn.c, {
+                : Object(Xt.d)(
+                    Qe.a.createElement(Jt.c, {
                       strTitle: Object(M.f)("#EventSchedule_Remove"),
                       strDescription: Object(M.f)("#EventSchedule_EntryChange"),
                       onOK: function() {
@@ -13235,7 +13237,7 @@
                 Qe.a.createElement(
                   "div",
                   { className: rt.a.InputBorder },
-                  Qe.a.createElement(Xt.p, {
+                  Qe.a.createElement(en.p, {
                     onChange: this.OnScheduleEnabledChange,
                     label: Object(M.f)("#EventSchedule_EnableOption"),
                     checked: a.GetEventModel().BHasScheduleEnabled()
@@ -13246,7 +13248,7 @@
                     "div",
                     null,
                     Qe.a.createElement(
-                      Xt.q,
+                      en.q,
                       { onClick: this.AddScheduleEntry },
                       Object(M.f)("#EventSchedule_Add")
                     ),
@@ -13347,7 +13349,7 @@
                     rt.a.FlexColumnContainer
                   )
                 },
-                Qe.a.createElement(Xt.h, {
+                Qe.a.createElement(en.h, {
                   bDisableMouseOverlay: !0,
                   label: Object(M.f)("#EventSchedule_Type"),
                   rgOptions: l,
@@ -13359,7 +13361,7 @@
                 Qe.a.createElement(vi, { editModel: n, entry: a, index: i }),
                 Qe.a.createElement("div", null, "title"),
                 Qe.a.createElement(
-                  Xt.d,
+                  en.d,
                   {
                     onClick: function() {
                       return r(i);
@@ -13410,7 +13412,7 @@
                   "div",
                   { className: rt.a.EventEditorTextSubTitle },
                   Object(M.f)("#EventSchedule_StartTime"),
-                  Qe.a.createElement(Xt.e, {
+                  Qe.a.createElement(en.e, {
                     label: Object(M.f)("#EventSchedule_Delta"),
                     onChange: this.OnStartTimeInputChange,
                     checked: a
@@ -13896,7 +13898,7 @@
                 qe.createElement(
                   "div",
                   { className: rt.a.InputBorder },
-                  qe.createElement(Xt.p, {
+                  qe.createElement(en.p, {
                     onChange: this.OnBroadcastOptionChange,
                     label: Object(M.f)("#Broadcast_option"),
                     checked: t.GetEventModel().BHasBroadcastEnabled()
@@ -13924,7 +13926,7 @@
                         null,
                         Object(M.f)("#Broadcast_title_desc")
                       ),
-                      qe.createElement(Xt.h, {
+                      qe.createElement(en.h, {
                         rgOptions: e,
                         selectedOption: e[0].data,
                         onChange: this.OnTitleChange
@@ -13948,7 +13950,7 @@
                           qe.createElement(
                             "div",
                             { style: { width: "400px" } },
-                            qe.createElement(Xt.l, {
+                            qe.createElement(en.l, {
                               placeholder: Object(M.f)("#Broadcast_use_custom"),
                               onChange: this.OnCustomTitleChange,
                               value: this.state.strCustomTitle
@@ -13957,7 +13959,7 @@
                           qe.createElement(
                             "div",
                             { className: Ti.a.LanguageContainer },
-                            qe.createElement(Xt.h, {
+                            qe.createElement(en.h, {
                               bDisableMouseOverlay: !0,
                               strDropDownClassName: rt.a.DropDownScroll,
                               rgOptions: r,
@@ -13969,7 +13971,7 @@
                             "div",
                             { className: Ti.a.AddTitleButton },
                             qe.createElement(
-                              Xt.q,
+                              en.q,
                               {
                                 onClick: function() {
                                   return n.AddTitle();
@@ -14027,7 +14029,7 @@
                       Object(M.f)("#Broadcast_background")
                     ),
                     qe.createElement(
-                      Xt.d,
+                      en.d,
                       {
                         onClick: this.OnOpenGradientOuterColor,
                         className: rt.a.EventEditorTextTitle,
@@ -14039,7 +14041,7 @@
                       Object(M.f)("#Broadcast_GradientOuterColor")
                     ),
                     qe.createElement(
-                      Xt.d,
+                      en.d,
                       {
                         onClick: this.OnOpenGradientInnerColor,
                         className: rt.a.EventEditorTextTitle,
@@ -14163,7 +14165,7 @@
                           { className: rt.a.EventEditorTextTitle },
                           "(VO) " + Object(M.f)("#Broadcast_DropsTitle")
                         ),
-                        qe.createElement(Xt.e, {
+                        qe.createElement(en.e, {
                           onChange: function(e) {
                             return n.GetBroadcastEditModel().SetDropsEnabled(e);
                           },
@@ -14174,7 +14176,7 @@
                           qe.createElement(
                             qe.Fragment,
                             null,
-                            qe.createElement(Xt.e, {
+                            qe.createElement(en.e, {
                               onChange: function(e) {
                                 return n
                                   .GetBroadcastEditModel()
@@ -14266,7 +14268,7 @@
                     qe.createElement(
                       "div",
                       { className: rt.a.InputBorder },
-                      qe.createElement(Xt.p, {
+                      qe.createElement(en.p, {
                         onChange: this.OnBroadcastForceBanner,
                         label: Object(M.f)("#Broadcast_artwork_banner"),
                         tooltip: Object(M.f)("#Broadcast_artwork_banner_hint"),
@@ -14410,7 +14412,7 @@
                   i ? i.persona_name : null
                 ),
                 qe.createElement(
-                  dn.a,
+                  pn.a,
                   { toolTipContent: Object(M.f)("#Broadcast_Language_hint") },
                   qe.createElement(
                     "span",
@@ -14460,7 +14462,7 @@
             ],
             i = n.GetWhiteListAccountPriority(t.accountid, "primary");
           return qe.createElement(
-            dn.a,
+            pn.a,
             {
               toolTipContent: Object(M.f)("#Broadcast_Priority_hint"),
               className: $e.a.PrioritySelector
@@ -14471,7 +14473,7 @@
               Object(M.f)("#Broadcast_Priority_label"),
               ": "
             ),
-            qe.createElement(Xt.h, {
+            qe.createElement(en.h, {
               rgOptions: a,
               selectedOption: i,
               onChange: function(e) {
@@ -14501,10 +14503,10 @@
                   )
                 },
                 qe.createElement(
-                  en.c,
+                  an.c,
                   {
                     eventModel: e.GetEventModel(),
-                    route: en.a.k_eCommunityAdminPage,
+                    route: an.a.k_eCommunityAdminPage,
                     className: rt.a.EventBarBack
                   },
                   Object(M.f)("#EventDisplay_EventsDashBtn")
@@ -14519,10 +14521,10 @@
                   { className: rt.a.EventOptions },
                   qe.createElement(st, null),
                   qe.createElement(
-                    en.c,
+                    an.c,
                     {
                       eventModel: e.GetEventModel(),
-                      route: en.a.k_eCommunityPreview,
+                      route: an.a.k_eCommunityPreview,
                       className: rt.a.EditPreviewButton
                     },
                     28 == t
@@ -14531,10 +14533,10 @@
                   ),
                   e.BHasSaleEnabled() &&
                     qe.createElement(
-                      en.c,
+                      an.c,
                       {
                         eventModel: e.GetEventModel(),
-                        route: en.a.k_eCommunityPreviewSale,
+                        route: an.a.k_eCommunityPreviewSale,
                         className: rt.a.EditPreviewButton
                       },
                       Object(M.f)("#EventEditor_PreviewSale")
@@ -14569,20 +14571,20 @@
                 { className: rt.a.FlexRowWrapFlexStartContainer },
                 qe.createElement(qn, { editModel: Ye.GetEditModel() }),
                 qe.createElement(
-                  en.c,
+                  an.c,
                   {
                     eventModel: t,
-                    route: en.a.k_eCommunityPreview,
+                    route: an.a.k_eCommunityPreview,
                     className: rt.a.EditPreviewButton
                   },
                   Object(M.f)("#EventEditor_Preview")
                 ),
                 t.BHasSaleEnabled() &&
                   qe.createElement(
-                    en.c,
+                    an.c,
                     {
                       eventModel: t,
-                      route: en.a.k_eCommunityPreviewSale,
+                      route: an.a.k_eCommunityPreviewSale,
                       className: rt.a.EditPreviewButton
                     },
                     Object(M.f)("#EventEditor_PreviewSale")
@@ -14597,11 +14599,11 @@
                       " "
                     ),
                     qe.createElement(
-                      en.c,
+                      an.c,
                       {
                         className: rt.a.EditPreviewButton,
                         eventModel: t,
-                        route: en.a.k_eView
+                        route: an.a.k_eView
                       },
                       Object(M.f)("#EventEditor_ViewLive")
                     ),
@@ -14927,7 +14929,7 @@
                           )
                         },
                         qe.createElement(st, null),
-                        qe.createElement(fn, { editModel: t })
+                        qe.createElement(Sn, { editModel: t })
                       )
                     )
                   )
@@ -15344,7 +15346,7 @@
               qe.createElement(
                 "div",
                 { className: Object(at.a)(rt.a.FlexColumnContainer) },
-                qe.createElement(Xt.p, {
+                qe.createElement(en.p, {
                   label: Object(M.f)("#EventEmail_EnableEmailOption"),
                   onChange: function(e) {
                     var t = a.editModel,
@@ -15361,17 +15363,17 @@
                 "div",
                 { className: Ke.EventEditorInputPaneContainer },
                 qe.createElement(
-                  Kt.a,
+                  tn.a,
                   null,
                   qe.createElement(Sr, { editModel: e })
                 ),
                 qe.createElement(
-                  Kt.a,
+                  tn.a,
                   null,
                   qe.createElement(dr, { editModel: e })
                 ),
                 qe.createElement(
-                  Kt.a,
+                  tn.a,
                   null,
                   Object(F.i)(t)
                     ? qe.createElement(yr, { editModel: e })
@@ -15379,7 +15381,7 @@
                 ),
                 qe.createElement(cr, { editModel: e }),
                 qe.createElement(
-                  Kt.a,
+                  tn.a,
                   null,
                   Object(F.i)(t)
                     ? qe.createElement(Cr, { editModel: e })
@@ -15397,7 +15399,7 @@
           return Object(lr.a)(e.editModel.GetAppID())
             ? qe.createElement(
                 "div",
-                { className: On.WarningStylesBackground },
+                { className: yn.WarningStylesBackground },
                 Object(M.f)("#EventEmail_SteamChina_Warning")
               )
             : null;
@@ -15426,22 +15428,22 @@
               )
                 .then(function(e) {
                   Object(
-                    an.d
-                  )(qe.createElement(nn.c, { strTitle: Object(M.f)("#EventDisplay_Share_Success"), onOK: function() {}, onCancel: function() {}, bAlertDialog: !0 }, Object(M.f)("#EventEmail_TestEmailQueue")), window);
+                    Xt.d
+                  )(qe.createElement(Jt.c, { strTitle: Object(M.f)("#EventDisplay_Share_Success"), onOK: function() {}, onCancel: function() {}, bAlertDialog: !0 }, Object(M.f)("#EventEmail_TestEmailQueue")), window);
                 })
                 .catch(function(e) {
                   Object(
-                    an.d
-                  )(qe.createElement(nn.e, null, Object(ue.a)(e).strErrorMsg), window);
+                    Xt.d
+                  )(qe.createElement(Jt.e, null, Object(ue.a)(e).strErrorMsg), window);
                 });
             }),
             (e.prototype.OnTestEmail = function(e) {
               var t = this.props.editModel;
               e.preventDefault(),
                 Zi.a.BHasValidatedEmail() && !t.BIsDirtyType(J.jsondata_email)
-                  ? Object(an.c)(
+                  ? Object(Xt.c)(
                       qe.createElement(
-                        nn.c,
+                        Jt.c,
                         {
                           strTitle: Object(M.f)("#EventEmail_Test_Email"),
                           onOK: this.FireTestEmail,
@@ -15459,20 +15461,20 @@
                           )
                         )
                       ),
-                      Object(rn.m)(e)
+                      Object(on.m)(e)
                     )
                   : t.BIsDirtyType(J.jsondata_email)
-                  ? Object(an.d)(
+                  ? Object(Xt.d)(
                       qe.createElement(
-                        nn.e,
+                        Jt.e,
                         null,
                         Object(M.f)("#EventEmail_Test_Dirty")
                       ),
                       window
                     )
-                  : Object(an.d)(
+                  : Object(Xt.d)(
                       qe.createElement(
-                        nn.e,
+                        Jt.e,
                         null,
                         Object(M.n)(
                           "#EventEmail_Test_Email_Fail",
@@ -15490,16 +15492,16 @@
                     );
             }),
             (e.prototype.OnPrepareEmail = function(e) {
-              Object(an.d)(
+              Object(Xt.d)(
                 qe.createElement(fr, { editModel: this.props.editModel }),
-                Object(rn.m)(e)
+                Object(on.m)(e)
               );
             }),
             (e.prototype.OnSetupAndFireEmailConfirm = function(e) {
               var t = this;
-              Object(an.c)(
+              Object(Xt.c)(
                 qe.createElement(
-                  nn.c,
+                  Jt.c,
                   {
                     strTitle: "(VO) Setup and Send Email",
                     onOK: function() {
@@ -15516,7 +15518,7 @@
                     "(VO) Be thoughtful. Talk to Alden or Adil if not sure. By pressing this, we will setup a database entry to fire this email in its current form and target. Double check the audience make sense and the localization looks good. This will also begin firing immediately."
                   )
                 ),
-                Object(rn.m)(e)
+                Object(on.m)(e)
               );
             }),
             (e.prototype.OnSetupAndFireEmail = function() {
@@ -15557,9 +15559,9 @@
                     case 5:
                       return (
                         (n = a),
-                        Object(an.d)(
+                        Object(Xt.d)(
                           qe.createElement(
-                            nn.c,
+                            Jt.c,
                             {
                               strTitle: Object(M.f)(
                                 "#EventDisplay_Share_Success"
@@ -15588,9 +15590,9 @@
                         console.error(
                           "OnSetupAndFireEmail failed: " + r.strErrorMsg
                         ),
-                        Object(an.d)(
+                        Object(Xt.d)(
                           qe.createElement(
-                            nn.c,
+                            Jt.c,
                             {
                               strTitle: Object(M.f)("#Error_Message"),
                               onOK: function() {},
@@ -15936,8 +15938,8 @@
               var t = this.props,
                 n = t.section,
                 a = t.fnRemoveSection;
-              Object(an.d)(
-                qe.createElement(nn.c, {
+              Object(Xt.d)(
+                qe.createElement(Jt.c, {
                   strTitle: Object(M.f)("#EventEmail_Template_EditTitle"),
                   strDescription: Object(M.f)(
                     "#EventEmail_Template_RemoveSubSection",
@@ -16203,7 +16205,7 @@
             }),
             (e.prototype.OnChangeStorePageURL = function() {
               var e = this.props.section;
-              Object(an.d)(
+              Object(Xt.d)(
                 qe.createElement(_r, {
                   strExistingURL:
                     D.b.STORE_BASE_URL + e.GetDestinationStorePath(),
@@ -16278,7 +16280,7 @@
                       D.b.STORE_BASE_URL + e.GetDestinationStorePath()
                     ),
                     qe.createElement(
-                      Xt.q,
+                      en.q,
                       { onClick: this.OnChangeStorePageURL },
                       Object(M.f)("#EventEmail_Section_UpdateURL")
                     )
@@ -16314,7 +16316,7 @@
                 n = t.fnUpdateURLOnSuccess,
                 a = t.closeModal;
               return qe.createElement(
-                nn.c,
+                Jt.c,
                 {
                   strDescription: Object(M.f)(
                     "#EventEmail_Section_EnterSalesPage_ttip"
@@ -16500,8 +16502,8 @@
                             " file=" +
                             r.name
                         ),
-                        Object(an.d)(
-                          qe.createElement(nn.e, {
+                        Object(Xt.d)(
+                          qe.createElement(Jt.e, {
                             strDescription: Object(M.f)(
                               "#ImagePicker_Error",
                               r.name
@@ -16577,8 +16579,8 @@
                                       "AddExistingClanImage: " + i.strErrorMsg,
                                       i
                                     ),
-                                    Object(an.d)(
-                                      qe.createElement(nn.e, {
+                                    Object(Xt.d)(
+                                      qe.createElement(Jt.e, {
                                         strDescription: Object(M.f)(
                                           "#EventError_Code",
                                           i.strErrorMsg
@@ -16733,7 +16735,7 @@
                     Object(M.f)("#EventEmail_Filter_Desc")
                   ),
                   Boolean(this.state.clanInfo.is_ogg) &&
-                    qe.createElement(Xt.p, {
+                    qe.createElement(en.p, {
                       onChange: function(e) {
                         return t.GetEmailEditModel().SetFilterIRTopN(e);
                       },
@@ -16741,14 +16743,14 @@
                       checked: n.BIsIRTopNFiltering()
                     }),
                   Boolean(this.state.clanInfo.is_ogg) &&
-                    qe.createElement(Xt.p, {
+                    qe.createElement(en.p, {
                       onChange: function(e) {
                         return t.GetEmailEditModel().SetFilterWishlist(e);
                       },
                       label: Object(M.f)("#EventEmail_Filter_Wishlist"),
                       checked: n.BIsWishListFiltering()
                     }),
-                  qe.createElement(Xt.l, {
+                  qe.createElement(en.l, {
                     type: "number",
                     min: "0",
                     max: "99",
@@ -16871,7 +16873,7 @@
                             )
                           })),
                           l.push(
-                            qe.createElement(Xt.p, {
+                            qe.createElement(en.p, {
                               key: "RecipientToggle_" + t.clan_account_id,
                               onChange: function(e) {
                                 return o
@@ -16903,7 +16905,7 @@
                                     rt.a.ValveOnlyBackground
                                   )
                                 },
-                                qe.createElement(Xt.p, {
+                                qe.createElement(en.p, {
                                   onChange: function(e) {
                                     return o
                                       .GetEmailEditModel()
@@ -16972,7 +16974,7 @@
                     null,
                     Object(M.f)("#EventEmail_Recipients_desc")
                   ),
-                  qe.createElement(Xt.p, {
+                  qe.createElement(en.p, {
                     onChange: function(e) {
                       return t
                         .GetEmailEditModel()
@@ -16981,14 +16983,14 @@
                     label: Object(M.f)("#EventEmail_Recipients_players"),
                     checked: n.BIsTargetingGamePlayers()
                   }),
-                  qe.createElement(Xt.p, {
+                  qe.createElement(en.p, {
                     onChange: function(e) {
                       return t.GetEmailEditModel().SetTargetingGameWishlist(e);
                     },
                     label: Object(M.f)("#EventEmail_Recipients_wishlist"),
                     checked: n.BIsTargetingGameWishlisters()
                   }),
-                  qe.createElement(Xt.p, {
+                  qe.createElement(en.p, {
                     onChange: function(e) {
                       return t.GetEmailEditModel().SetTargetingGameFollower(e);
                     },
@@ -16998,7 +17000,7 @@
                     }),
                     checked: n.BIsTargetingGameFollowers()
                   }),
-                  qe.createElement(Xt.p, {
+                  qe.createElement(en.p, {
                     onChange: function(e) {
                       return t.GetEmailEditModel().SetExcludeGameOwners(e);
                     },
@@ -17009,7 +17011,7 @@
                     }),
                     checked: n.BIsExcludingGameOwners()
                   }),
-                  qe.createElement(Xt.p, {
+                  qe.createElement(en.p, {
                     onChange: function(e) {
                       return t.GetEmailEditModel().SetOwnersWithNoPlaytime(e);
                     },
@@ -17097,7 +17099,7 @@
                             { key: "EventEmail_Error_LanguageIncomplete" + r },
                             qe.createElement(
                               "div",
-                              { className: yn.a.ErrorStyles },
+                              { className: Cn.a.ErrorStyles },
                               Object(M.f)(
                                 "#EventEmail_Error_LanguageIncomplete",
                                 Object(M.f)("#Language_" + Object(A.a)(r)),
@@ -17123,7 +17125,7 @@
                               { key: "EventEmail_Error_NoText" },
                               qe.createElement(
                                 "div",
-                                { className: yn.a.ErrorStyles },
+                                { className: Cn.a.ErrorStyles },
                                 Object(M.f)("#EventEmail_Error_NoText")
                               )
                             )
@@ -17136,7 +17138,7 @@
                               { key: "EventEmail_Error_InternalTarget" },
                               qe.createElement(
                                 "div",
-                                { className: yn.a.ErrorStyles },
+                                { className: Cn.a.ErrorStyles },
                                 Object(M.f)("#EventEmail_Error_InternalTarget")
                               )
                             )
@@ -17148,7 +17150,7 @@
                               { key: "EventEmail_Error_EnglishArtworkMissing" },
                               qe.createElement(
                                 "div",
-                                { className: yn.a.ErrorStyles },
+                                { className: Cn.a.ErrorStyles },
                                 Object(M.f)(
                                   "#EventEmail_Error_EnglishArtworkMissing"
                                 )
@@ -17162,7 +17164,7 @@
                               { key: "EventEmail_Error_TargetSelection" },
                               qe.createElement(
                                 "div",
-                                { className: yn.a.ErrorStyles },
+                                { className: Cn.a.ErrorStyles },
                                 Object(M.f)("#EventEmail_Error_TargetSelection")
                               )
                             )
@@ -17177,7 +17179,7 @@
                               { key: "EventEmail_Error_InvalidVideo" },
                               qe.createElement(
                                 "div",
-                                { className: yn.a.ErrorStyles },
+                                { className: Cn.a.ErrorStyles },
                                 Object(M.f)("#EventEmail_Error_InvalidVideo")
                               )
                             )
@@ -17189,7 +17191,7 @@
                           { key: "EventEmail_Error_EventNotLive" },
                           qe.createElement(
                             "div",
-                            { className: yn.a.ErrorStyles },
+                            { className: Cn.a.ErrorStyles },
                             Object(M.f)("#EventEmail_Error_EventNotLive")
                           )
                         )
@@ -17232,7 +17234,7 @@
                               },
                               qe.createElement(
                                 "div",
-                                { className: yn.a.WarningStyles },
+                                { className: Cn.a.WarningStyles },
                                 Object(M.f)(
                                   "#EventEmail_Warning_ImageLanguage_1",
                                   Object(M.f)("#Language_" + Object(A.a)(i[0]))
@@ -17249,7 +17251,7 @@
                               },
                               qe.createElement(
                                 "div",
-                                { className: yn.a.WarningStyles },
+                                { className: Cn.a.WarningStyles },
                                 Object(M.f)(
                                   "#EventEmail_Warning_ImageLanguage_2",
                                   Object(M.f)("#Language_" + Object(A.a)(i[0])),
@@ -17266,7 +17268,7 @@
                               },
                               qe.createElement(
                                 "div",
-                                { className: yn.a.WarningStyles },
+                                { className: Cn.a.WarningStyles },
                                 Object(M.f)(
                                   "#EventEmail_Warning_ImageLanguage_n",
                                   Object(M.f)("#Language_" + Object(A.a)(i[0])),
@@ -17304,7 +17306,7 @@
               switch (this.state.state) {
                 case "loading":
                   return qe.createElement(
-                    nn.c,
+                    Jt.c,
                     {
                       strTitle: Object(M.f)("#EventEmail_Preparation_Title"),
                       onOK: this.props.closeModal,
@@ -17314,7 +17316,7 @@
                     qe.createElement(Ot.a, null)
                   );
                 case "ready":
-                  return qe.createElement(nn.c, {
+                  return qe.createElement(Jt.c, {
                     strTitle: Object(M.f)("#EventEmail_Preparation_Title"),
                     strDescription: Object(M.f)("#EventEmail_Preparation_Desc"),
                     onOK: this.OnLockEmail,
@@ -17322,7 +17324,7 @@
                   });
                 case "readywithwarning":
                   return qe.createElement(
-                    nn.c,
+                    Jt.c,
                     {
                       strTitle: Object(M.f)("#EventEmail_Preparation_Title"),
                       strDescription: Object(M.f)(
@@ -17344,7 +17346,7 @@
                     )
                   );
                 case "unsaved":
-                  return qe.createElement(nn.e, {
+                  return qe.createElement(Jt.e, {
                     strTitle: Object(M.f)("#EventEmail_Preparation_Title"),
                     strDescription: Object(M.f)(
                       "#EventEmail_Preparation_Unsaved"
@@ -17353,7 +17355,7 @@
                   });
                 case "saving":
                   return qe.createElement(
-                    nn.c,
+                    Jt.c,
                     {
                       strTitle: Object(M.f)("#EventEmail_Preparation_Title"),
                       strDescription: Object(M.f)(
@@ -17365,7 +17367,7 @@
                     qe.createElement(Ot.a, null)
                   );
                 case "done":
-                  return qe.createElement(nn.c, {
+                  return qe.createElement(Jt.c, {
                     strTitle: Object(M.f)("#EventEmail_Preparation_Title"),
                     strDescription: Object(M.f)("#EventEmail_Preparation_Done"),
                     onOK: this.props.closeModal,
@@ -17374,7 +17376,7 @@
                 case "error":
                 default:
                   return qe.createElement(
-                    nn.e,
+                    Jt.e,
                     {
                       strTitle: Object(M.f)("#EventEmail_Preparation_Title"),
                       strDescription: Object(M.f)(
@@ -17974,9 +17976,9 @@
                   "app" == t
                     ? e.GetInternalTargetAppIDs()
                     : e.GetInternalTargetPublisherIDs();
-              Object(an.d)(
+              Object(Xt.d)(
                 qe.createElement(
-                  nn.c,
+                  Jt.c,
                   {
                     strTitle: Object(M.f)(
                       "app" == t
@@ -18006,7 +18008,7 @@
                   return { value: e, label: e.capability };
                 }),
                 a = or.PubRights.map(function(t) {
-                  return qe.createElement(Xt.e, {
+                  return qe.createElement(en.e, {
                     key: "PubRights" + t.flag,
                     onChange: function(e) {
                       return n.UpdateInternalTargetPublisherRights(t.flag, e);
@@ -18017,7 +18019,7 @@
                   });
                 }),
                 i = or.AppRights.map(function(t) {
-                  return qe.createElement(Xt.e, {
+                  return qe.createElement(en.e, {
                     key: "AppRights" + t.flag,
                     onChange: function(e) {
                       return n.UpdateInternalTargetAppRights(t.flag, e);
@@ -18069,7 +18071,7 @@
                         qe.createElement(
                           "td",
                           null,
-                          qe.createElement(Xt.e, {
+                          qe.createElement(en.e, {
                             onChange: function(e) {
                               return n.SetInternalTargetPriority(e);
                             },
@@ -18440,7 +18442,7 @@
                       }
                     })
                   ),
-                  qe.createElement(Xt.h, {
+                  qe.createElement(en.h, {
                     key: o
                       ? "pluraldurationdropdown"
                       : "singulardurationdropnow",
@@ -18888,8 +18890,8 @@
             (t.prototype.OnSpotlightChange = function(e) {
               var t = this.props.editModel;
               e && !t.BHasImage("spotlight", 0)
-                ? Object(an.d)(
-                    qe.createElement(nn.e, {
+                ? Object(Xt.d)(
+                    qe.createElement(Jt.e, {
                       strTitle: Object(M.f)("#Error_FailureNotice"),
                       strDescription: Object(M.f)(
                         "#EventEditor_Options_Spotlight_Error",
@@ -18904,8 +18906,8 @@
               var t = this,
                 n = this.props.editModel;
               n.GetAppID() == F.B && n.BHasTag("hide_library_overview")
-                ? Object(an.d)(
-                    qe.createElement(nn.c, {
+                ? Object(Xt.d)(
+                    qe.createElement(Jt.c, {
                       strTitle: Object(M.f)("#EventEditor_GenericAreYouSure"),
                       strDescription:
                         "Showing on the library home page will pin this event into the first spot in the 'Whats New' section for ALL Steam Library. Are you sure this is an Steam update that applies to all Steam Library users? Be thoughtful.",
@@ -19005,7 +19007,7 @@
                               )
                             )
                           ),
-                          qe.createElement(Xt.p, {
+                          qe.createElement(en.p, {
                             onChange: this.OnHideLibraryOverviewChange,
                             label: Object(M.f)(
                               "#EventEditor_Options_Show_Library_Overview"
@@ -19023,7 +19025,7 @@
                                 ),
                             disabled: !i
                           }),
-                          qe.createElement(Xt.p, {
+                          qe.createElement(en.p, {
                             onChange: this.OnHideLibraryDetailChange,
                             label: Object(M.f)(
                               "#EventEditor_Options_Show_Library_Detail"
@@ -19039,7 +19041,7 @@
                                 ),
                             disabled: !r
                           }),
-                          qe.createElement(Xt.p, {
+                          qe.createElement(en.p, {
                             onChange: this.OnHideStoreChange,
                             label: Object(M.f)(
                               "#EventEditor_Options_Show_Store"
@@ -19058,14 +19060,14 @@
                             { className: rt.a.EventEditorTextSubTitle },
                             Object(M.f)("#EventEditor_Options_Desc")
                           ),
-                          qe.createElement(Xt.p, {
+                          qe.createElement(en.p, {
                             onChange: this.OnWorkshopOptionChange,
                             label: Object(M.f)(
                               "#EventEditor_Options_Workshop_Label"
                             ),
                             checked: t.GetEventModel().BHasTag("workshop")
                           }),
-                          qe.createElement(Xt.p, {
+                          qe.createElement(en.p, {
                             onChange: this.OnSpotlightChange,
                             label: Object(M.f)(
                               "#EventEditor_Options_Spotlight_Label"
@@ -19096,7 +19098,7 @@
                                 { className: rt.a.EventEditorTextSubTitle },
                                 Object(M.f)("#EventEditor_Options_Moderation")
                               ),
-                              qe.createElement(Xt.p, {
+                              qe.createElement(en.p, {
                                 onChange: this.OnModsHideLibraryOverviewChange,
                                 label: Object(M.f)(
                                   "#EventEditor_Options_Hide_Library_Overview"
@@ -19105,7 +19107,7 @@
                                   .GetEventModel()
                                   .BHasTag("mod_hide_library_overview")
                               }),
-                              qe.createElement(Xt.p, {
+                              qe.createElement(en.p, {
                                 onChange: this.OnModsHideLibraryDetailChange,
                                 label: Object(M.f)(
                                   "#EventEditor_Options_Hide_Library_Detail"
@@ -19114,7 +19116,7 @@
                                   .GetEventModel()
                                   .BHasTag("mod_hide_library_detail")
                               }),
-                              qe.createElement(Xt.p, {
+                              qe.createElement(en.p, {
                                 onChange: this.OnModsHideStoreChange,
                                 label: Object(M.f)(
                                   "#EventEditor_Options_Hide_Store"
@@ -19137,7 +19139,7 @@
                                 { className: rt.a.EventEditorTextSubTitle },
                                 "These are Valve Admin only options"
                               ),
-                              qe.createElement(Xt.p, {
+                              qe.createElement(en.p, {
                                 onChange: function(e) {
                                   return t.SetSteamStoreSpotlight(e);
                                 },
@@ -19148,7 +19150,7 @@
                                 description:
                                   "Shows the spotlight artwork on the product page for upto a week from the event start.  After saving the event with this flag enable, it takes 5 to 10 minutes to make its way through solr."
                               }),
-                              qe.createElement(Xt.p, {
+                              qe.createElement(en.p, {
                                 onChange: function(e) {
                                   return t.SetLibraryHomeSpotlight(e);
                                 },
@@ -19158,7 +19160,7 @@
                                 description:
                                   "Shows the spotlight artwork in the 'Whats New' section at the top of the library home for all owners."
                               }),
-                              qe.createElement(Xt.p, {
+                              qe.createElement(en.p, {
                                 onChange: this.OnGameTeamBlog,
                                 label: "(VO) Mark as Blog for Valve Game Teams",
                                 checked: t.GetEventModel().BHasTag("blog"),
@@ -19166,7 +19168,7 @@
                                   "Add the 'blog' tag to this post. Allowing game team website to filter news posts intended for their blog."
                               }),
                               t.GetAppID() == F.B &&
-                                qe.createElement(Xt.p, {
+                                qe.createElement(en.p, {
                                   onChange: this.OnSteamBlog,
                                   label: "(VO) Steam Official Blog",
                                   checked: t
@@ -19175,7 +19177,7 @@
                                   description:
                                     "When checked this event will surface on https://store.steampowered.com/news/?feed=steam_blog. Make sure to set this before you publish, or it will have no effect."
                                 }),
-                              qe.createElement(Xt.p, {
+                              qe.createElement(en.p, {
                                 onChange: this.OnPostForceFeatured,
                                 label:
                                   "(VO) Force Feature this event in the NewsHub",
@@ -19365,7 +19367,7 @@
                     t.GetAppName()
                   )
                 ),
-                qe.createElement(Xt.p, {
+                qe.createElement(en.p, {
                   onChange: function(e) {
                     return t.SetOptedInForOGGWithoutVisibleStorePage(e);
                   },
@@ -19447,24 +19449,24 @@
             );
           }, []),
           Qe.a.createElement(
-            Kt.a,
+            tn.a,
             null,
             Qe.a.createElement(
-              nn.g,
+              Jt.g,
               { onEscKeypress: t },
               Qe.a.createElement(
-                Xt.f,
+                en.f,
                 null,
                 Qe.a.createElement(
-                  Xt.k,
+                  en.k,
                   null,
                   Object(M.f)("#Sale_Debug_Title")
                 ),
                 Qe.a.createElement(
-                  Xt.b,
+                  en.b,
                   null,
                   Qe.a.createElement(
-                    Xt.c,
+                    en.c,
                     null,
                     Boolean(i)
                       ? Qe.a.createElement(
@@ -19499,15 +19501,15 @@
                   )
                 ),
                 Qe.a.createElement(
-                  Xt.j,
+                  en.j,
                   null,
-                  Qe.a.createElement(Xt.n, {
+                  Qe.a.createElement(en.n, {
                     onCancel: t,
                     bOKDisabled: !l,
                     strOKText: Object(M.f)("#Button_Delete"),
                     onOK: function() {
-                      Object(an.d)(
-                        Qe.a.createElement(nn.c, {
+                      Object(Xt.d)(
+                        Qe.a.createElement(Jt.c, {
                           title: Object(M.f)("#EventEditor_GenericAreYouSure"),
                           strDescription: Object(M.f)("#Sale_Debug_Delete"),
                           onOK: function() {
@@ -19553,7 +19555,7 @@
       }
       var Fr = Object(Je.a)(function(e) {
           var t = e.editModel;
-          return qe.createElement(Xt.p, {
+          return qe.createElement(en.p, {
             onChange: function(e) {
               e
                 ? (t.AddTag("enable_steam_china"),
@@ -19571,7 +19573,7 @@
         xr = Object(Je.a)(function(e) {
           var t = e.editModel;
           if (t.BInRealmGlobal() && !t.BInRealmChina()) return null;
-          return qe.createElement(Xt.p, {
+          return qe.createElement(en.p, {
             onChange: function() {
               t.ToggleTag("disable_steam_global"), Lr(t);
             },
@@ -19613,12 +19615,12 @@
                 this.refActionButton.current.click();
             }),
             (e.prototype.OnCreatePublishDialog = function(e) {
-              Object(an.c)(
-                qe.createElement(wn, {
+              Object(Xt.c)(
+                qe.createElement(Mn, {
                   editModel: this.props.editModel,
                   OnPublishSuccess: this.OnPublishSuccess
                 }),
-                Object(rn.m)(e)
+                Object(on.m)(e)
               );
             }),
             (e.prototype.OnPublishSuccess = function() {
@@ -19627,22 +19629,22 @@
             (e.prototype.OnMakeVisibleNow = function(e) {
               var t = this;
               this.props.editModel.SetVisibilityPublishingSetup(Fe.immediate),
-                Object(an.c)(
-                  qe.createElement(wn, {
+                Object(Xt.c)(
+                  qe.createElement(Mn, {
                     editModel: this.props.editModel,
                     OnPublishSuccess: this.OnPublishSuccess,
                     closeModal: function() {
                       t.props.editModel.ResetSetVisibilityStartTime();
                     }
                   }),
-                  Object(rn.m)(e)
+                  Object(on.m)(e)
                 );
             }),
             (e.prototype.render = function() {
               var e = this.props.editModel;
               e.GetEventModel().bOldAnnouncement;
               if (this.state.bRedirectToView)
-                return Object(en.i)(e.GetEventModel(), en.a.k_eView);
+                return Object(an.i)(e.GetEventModel(), an.a.k_eView);
               var t = e.BHidden(),
                 n = e.BPublished();
               if (!t && n) return qe.createElement("div", null);
@@ -19687,7 +19689,7 @@
                         condition: !a,
                         wrap: function(e) {
                           return qe.createElement(
-                            dn.a,
+                            pn.a,
                             {
                               toolTipContent: Object(M.f)(
                                 "#EventEditor_Publish_Disable_ttip"
@@ -20454,7 +20456,7 @@
             },
             [c]
           );
-          return Qe.a.createElement(Xt.l, {
+          return Qe.a.createElement(en.l, {
             type: "text",
             placeholder: Object(M.f)("#Sale_Debug_Placeholder"),
             tooltip: Object(M.f)("#Sale_Debug_InputToolTip"),
@@ -20684,24 +20686,24 @@
             r = a[1],
             o = oo.Get().BHasSomethingSelected();
           return Qe.a.createElement(
-            Kt.a,
+            tn.a,
             null,
             Qe.a.createElement(
-              nn.g,
+              Jt.g,
               { onEscKeypress: t },
               Qe.a.createElement(
-                Xt.f,
+                en.f,
                 null,
                 Qe.a.createElement(
-                  Xt.k,
+                  en.k,
                   null,
                   Object(M.f)("#Sale_DiscountEvent_Add")
                 ),
                 Qe.a.createElement(
-                  Xt.b,
+                  en.b,
                   null,
                   Qe.a.createElement(
-                    Xt.c,
+                    en.c,
                     null,
                     Qe.a.createElement(
                       "div",
@@ -20712,9 +20714,9 @@
                   )
                 ),
                 Qe.a.createElement(
-                  Xt.j,
+                  en.j,
                   null,
-                  Qe.a.createElement(Xt.n, {
+                  Qe.a.createElement(en.n, {
                     onCancel: t,
                     bOKDisabled: !o,
                     strOKText: Object(M.f)("#Sale_New_CreateEvent"),
@@ -20963,7 +20965,7 @@
             Qe.a.createElement(
               "div",
               null,
-              Qe.a.createElement(Xt.l, {
+              Qe.a.createElement(en.l, {
                 type: "text",
                 label: Object(M.f)("#EventCalendar_UniversalSearch"),
                 value: i || "",
@@ -20973,7 +20975,7 @@
               }),
               Qe.a.createElement("h2", null, "Apps:"),
               Qe.a.createElement(
-                Xt.d,
+                en.d,
                 {
                   onClick: function() {
                     return oo.Get().SelectAllApps(d.apps);
@@ -20982,7 +20984,7 @@
                 "Select All Apps"
               ),
               Qe.a.createElement(
-                Xt.d,
+                en.d,
                 {
                   onClick: function() {
                     return oo.Get().ClearAllSelectedApps();
@@ -21118,7 +21120,7 @@
               ")" +
               ("application" != a.type && "game" != a.type ? " DLC" : "")
             : Object(M.f)("#Sale_DiscountEvent_AppMissing", t);
-          return Qe.a.createElement(Xt.e, {
+          return Qe.a.createElement(en.e, {
             label: i,
             checked: oo.Get().BIsAppSelected(t),
             onChange: function(e) {
@@ -21143,7 +21145,7 @@
               ") : " +
               Object(M.f)("#Sale_DiscountEvent_SubContains", a.appids.length)
             : Object(M.f)("#Sale_DiscountEvent_SubMissing", t);
-          return Qe.a.createElement(Xt.e, {
+          return Qe.a.createElement(en.e, {
             label: i,
             checked: oo.Get().BIsAppSelected(t),
             onChange: function(e) {
@@ -21338,24 +21340,24 @@
                 a = e.artworkType,
                 i = n.GetClanSteamID();
               return qe.createElement(
-                nn.d,
+                Jt.d,
                 {
                   onCancel: t,
                   closeModal: t,
                   bDisableBackgroundDismiss: !0,
                   bAllowFullSize: !0,
-                  className: On.NotTooWideModal
+                  className: yn.NotTooWideModal
                 },
                 qe.createElement(
-                  Xt.k,
+                  en.k,
                   null,
                   Object(M.f)("#ImagePickerLoc_Title")
                 ),
                 qe.createElement(
-                  Xt.b,
+                  en.b,
                   null,
                   qe.createElement(
-                    Xt.c,
+                    en.c,
                     null,
                     qe.createElement(
                       qe.Fragment,
@@ -21373,16 +21375,16 @@
                     )
                   ),
                   qe.createElement(
-                    Xt.j,
+                    en.j,
                     null,
                     qe.createElement(
-                      Xt.q,
+                      en.q,
                       { onClick: this.OnSaveToEditModel, disabled: !1 },
                       Object(M.f)("#Button_Confirm"),
                       " "
                     ),
                     qe.createElement(
-                      Xt.d,
+                      en.d,
                       { onClick: this.props.closeModal, disabled: !1 },
                       Object(M.f)("#Button_Cancel")
                     )
@@ -21560,13 +21562,13 @@
             n = e.fnCategoryToggle,
             a = e.fnContainCategory;
           return qe.createElement(
-            dn.a,
+            pn.a,
             {
               direction: "top",
               className: Object(at.a)(_o.EventCategoryWidth),
               toolTipContent: Object(M.f)(t.description)
             },
-            qe.createElement(Xt.e, {
+            qe.createElement(en.e, {
               label: Object(M.f)(t.name),
               checked: a(t),
               onChange: function(e) {
@@ -21593,8 +21595,8 @@
               ? qe.createElement(xi, {
                   items: a.event_schedule_tracks,
                   onDelete: function(e) {
-                    Object(an.d)(
-                      qe.createElement(nn.c, {
+                    Object(Xt.d)(
+                      qe.createElement(Jt.c, {
                         strTitle: Object(M.f)(
                           "#EventSchedule_DeletePrompt_Title"
                         ),
@@ -21627,10 +21629,10 @@
                   Object(M.f)("#EventSchedule_NoTracks")
                 ),
             qe.createElement(
-              dn.a,
+              pn.a,
               { toolTipContent: Object(M.f)("#EventSchedule_AddTrack_ttip") },
               qe.createElement(
-                Xt.q,
+                en.q,
                 {
                   onClick: function() {
                     a.event_schedule_tracks || (a.event_schedule_tracks = []);
@@ -21698,10 +21700,10 @@
             "div",
             null,
             qe.createElement(
-              Xt.d,
+              en.d,
               {
                 onClick: function(e) {
-                  Object(an.d)(
+                  Object(Xt.d)(
                     qe.createElement(go, {
                       loc_images: n.localized_track_image,
                       fnSetImage: function(e, t) {
@@ -21714,7 +21716,7 @@
                       editModel: t,
                       artworkType: "schedule_track_art"
                     }),
-                    Object(rn.m)(e)
+                    Object(on.m)(e)
                   );
                 }
               },
@@ -21726,7 +21728,7 @@
               "div",
               null,
               qe.createElement(
-                Xt.d,
+                en.d,
                 {
                   onClick: function(e) {
                     return fo(e, n, t, "label_color");
@@ -21737,7 +21739,7 @@
                 Object(M.f)("#Sale_Section_Label_Color")
               ),
               qe.createElement(
-                Xt.d,
+                en.d,
                 {
                   onClick: function(e) {
                     return fo(e, n, t, "background_gradient_left");
@@ -21748,7 +21750,7 @@
                 Object(M.f)("#Sale_Section_Background_Left")
               ),
               qe.createElement(
-                Xt.d,
+                en.d,
                 {
                   onClick: function(e) {
                     return fo(e, n, t, "background_gradient_right");
@@ -21867,8 +21869,8 @@
                 this.props.saleSection.events.some(function(e) {
                   return e.announcement_gid == t.id;
                 })
-                  ? Object(an.d)(
-                      qe.createElement(nn.c, {
+                  ? Object(Xt.d)(
+                      qe.createElement(Jt.c, {
                         strTitle: Object(M.f)("#Sale_DuplicateCapsule"),
                         strDescription: Object(M.f)(
                           "#Sale_DuplicateEVent_Desc"
@@ -22147,11 +22149,11 @@
                       e.announcement_gid
                     );
                     return qe.createElement(
-                      en.c,
+                      an.c,
                       {
                         className: h.a.FlexCenter,
                         eventModel: t,
-                        route: en.a.k_eView,
+                        route: an.a.k_eView,
                         openNewWindow: !0
                       },
                       t
@@ -22167,7 +22169,7 @@
                     );
                   }
                 }),
-                qe.createElement(Xt.l, {
+                qe.createElement(en.l, {
                   onBlur: function() {
                     setTimeout(function() {
                       return (
@@ -22212,7 +22214,7 @@
                   : "#Sele_Event_SmartSection_RecentEvents"
               )
             ),
-            qe.createElement(Xt.l, {
+            qe.createElement(en.l, {
               type: "number",
               min: "4",
               max: "90",
@@ -22243,7 +22245,7 @@
             qe.createElement(
               po,
               { editModel: e.editModel },
-              qe.createElement(Xt.h, {
+              qe.createElement(en.h, {
                 label: Object(M.f)("#Sale_EventTagsToSearch"),
                 strDropDownClassName: it.DropDownScroll,
                 tooltip: Object(M.f)("#Sale_EventTagsToSearch_ttip"),
@@ -22549,7 +22551,7 @@
               return qe.createElement(
                 "div",
                 { className: mo.SaleImportURL },
-                qe.createElement(Xt.l, {
+                qe.createElement(en.l, {
                   type: "text",
                   label: Object(M.f)("#Sale_SelectApps"),
                   onChange: this.UpdateAppSuggestions,
@@ -22586,7 +22588,7 @@
             }),
             (t.prototype.OnEditFilter = function() {
               var e = this.props.capsuleContainer;
-              Object(an.d)(
+              Object(Xt.d)(
                 qe.createElement(Qo, {
                   editModel: this.props.editModel,
                   filter: e.sale_tag_filter,
@@ -22615,7 +22617,7 @@
                   { className: Go.FilterActionsCtn },
                   qe.createElement(Ro, { filter: e.sale_tag_filter }),
                   qe.createElement(
-                    Xt.d,
+                    en.d,
                     { onClick: this.OnEditFilter },
                     Object(M.f)("#Sale_TagFilter_EditFilter")
                   )
@@ -22686,7 +22688,7 @@
             }),
             (e.prototype.OnExploreTags = function() {
               var e = { clauses: new Array() };
-              Object(an.d)(
+              Object(Xt.d)(
                 qe.createElement(Qo, {
                   editModel: this.props.editModel,
                   filter: e,
@@ -22696,13 +22698,13 @@
               );
             }),
             (e.prototype.OnBatchEditTags = function() {
-              Object(an.d)(
+              Object(Xt.d)(
                 qe.createElement(Zo, { editModel: this.props.editModel }),
                 window
               );
             }),
             (e.prototype.OnEditAutoTags = function() {
-              Object(an.d)(
+              Object(Xt.d)(
                 qe.createElement($o, { editModel: this.props.editModel }),
                 window
               );
@@ -22715,7 +22717,7 @@
             }),
             (e.prototype.OnEditFilter = function() {
               var e = this.props.editModel;
-              Object(an.d)(
+              Object(Xt.d)(
                 qe.createElement(Qo, {
                   editModel: e,
                   filter: Be(e),
@@ -22733,7 +22735,7 @@
               this.setState({ bShowItemEditor: !0 });
             }),
             (e.prototype.OnEditRaw = function(e) {
-              Object(an.d)(
+              Object(Xt.d)(
                 qe.createElement(Jo, {
                   editModel: this.props.editModel,
                   bRemoveMissingEntries: !0
@@ -22742,7 +22744,7 @@
               );
             }),
             (e.prototype.OnEditRawCustom = function(e) {
-              Object(an.d)(
+              Object(Xt.d)(
                 qe.createElement(Jo, {
                   editModel: this.props.editModel,
                   collection: z.Custom,
@@ -22770,14 +22772,14 @@
               })(e) || e.SetDirty(J.jsondata_sales);
             }),
             (e.prototype.OnSync = function(e) {
-              Object(an.d)(
+              Object(Xt.d)(
                 qe.createElement(Xo, { editModel: this.props.editModel }),
                 window
               );
             }),
             (e.prototype.OnImportDiscountEvent = function(e) {
               var t = this;
-              Object(an.d)(
+              Object(Xt.d)(
                 qe.createElement(ao, {
                   onDiscountEventSelected: function(i, r) {
                     return Object(I.b)(t, void 0, void 0, function() {
@@ -22845,7 +22847,7 @@
                   Object(M.f)("#Sale_EditTags_EnableItemEditingDesc")
                 ),
                 qe.createElement(
-                  Xt.q,
+                  en.q,
                   { onClick: this.OnShowItemEditor },
                   Object(M.f)("#Sale_EditTags_EnableItemEditing")
                 )
@@ -22895,7 +22897,7 @@
                     "div",
                     { className: Go.ButtonRow },
                     qe.createElement(
-                      Xt.d,
+                      en.d,
                       { onClick: this.OnExploreTags },
                       Object(M.f)("#Sale_Explore"),
                       qe.createElement(dl, {
@@ -22903,7 +22905,7 @@
                       })
                     ),
                     qe.createElement(
-                      Xt.d,
+                      en.d,
                       { onClick: this.OnEditRaw },
                       Object(M.f)("#Sale_EditRaw"),
                       qe.createElement(dl, {
@@ -22911,7 +22913,7 @@
                       })
                     ),
                     qe.createElement(
-                      Xt.d,
+                      en.d,
                       { onClick: this.OnBatchEditTags },
                       Object(M.f)("#Sale_BatchEditTaggedItems"),
                       qe.createElement(dl, {
@@ -22919,7 +22921,7 @@
                       })
                     ),
                     qe.createElement(
-                      Xt.d,
+                      en.d,
                       { onClick: this.OnEditAutoTags },
                       Object(M.f)("#Sale_EditAutoTags"),
                       qe.createElement(dl, {
@@ -22934,7 +22936,7 @@
                       "div",
                       { className: Go.ButtonRow },
                       qe.createElement(
-                        Xt.d,
+                        en.d,
                         { onClick: this.OnEditFilter },
                         Object(M.f)("#Sale_EditTaggedItemFilter"),
                         qe.createElement(dl, {
@@ -22944,7 +22946,7 @@
                         })
                       ),
                       qe.createElement(
-                        Xt.d,
+                        en.d,
                         { onClick: this.OnSync },
                         Object(M.f)("#Sale_SyncTaggedItems"),
                         qe.createElement(dl, {
@@ -22952,7 +22954,7 @@
                         })
                       ),
                       qe.createElement(
-                        Xt.d,
+                        en.d,
                         { onClick: this.OnImportDiscountEvent },
                         Object(M.f)("#Sale_DiscountEvent_Add"),
                         qe.createElement(dl, {
@@ -22960,7 +22962,7 @@
                         })
                       ),
                       qe.createElement(
-                        Xt.d,
+                        en.d,
                         { onClick: this.OnEditRawCustom },
                         Object(M.f)("#Sale_EditRawCustom"),
                         qe.createElement(dl, {
@@ -22971,7 +22973,7 @@
                       ),
                       0 < c &&
                         qe.createElement(
-                          Xt.d,
+                          en.d,
                           { onClick: this.OnDeleteFiltered },
                           Object(M.f)("#Sale_DeleteFilteredItems"),
                           qe.createElement(dl, {
@@ -23012,7 +23014,7 @@
                     "div",
                     { className: Go.ItemList },
                     0 < c &&
-                      qe.createElement(Xt.e, {
+                      qe.createElement(en.e, {
                         label: Object(M.f)("#Sale_ShowFilteredTaggedItems"),
                         tooltip: Object(M.f)(
                           "#Sale_ShowFilteredTaggedItems_ttip"
@@ -23020,7 +23022,7 @@
                         checked: this.state.bShowFiltered,
                         onChange: this.OnShowFiltered
                       }),
-                    qe.createElement(Xt.l, {
+                    qe.createElement(en.l, {
                       type: "text",
                       label: Object(M.f)("#Sale_TaggedItemsFilter"),
                       placeholder: Object(M.f)("#Sale_TaggedItemsFilter"),
@@ -23069,7 +23071,7 @@
           return (
             Object(I.d)(e, t),
             (e.prototype.OnEditTags = function() {
-              Object(an.d)(
+              Object(Xt.d)(
                 qe.createElement(Yo, {
                   editModel: this.props.editModel,
                   item: this.props.item,
@@ -23548,16 +23550,16 @@
                   return { label: e, value: e };
                 });
               return qe.createElement(
-                nn.d,
+                Jt.d,
                 {
                   onCancel: n,
                   closeModal: n,
                   bDisableBackgroundDismiss: !0,
                   bAllowFullSize: !0,
-                  className: On.NotTooWideModal
+                  className: yn.NotTooWideModal
                 },
                 qe.createElement(
-                  Xt.k,
+                  en.k,
                   { className: Go.EditTagsTitle },
                   g
                     ? qe.createElement("img", {
@@ -23575,7 +23577,7 @@
                   )
                 ),
                 qe.createElement(
-                  Xt.b,
+                  en.b,
                   null,
                   qe.createElement(
                     "div",
@@ -23689,7 +23691,7 @@
                       "div",
                       { className: Go.OKButton },
                       qe.createElement(
-                        Xt.q,
+                        en.q,
                         { onClick: this.OnOK },
                         Object(M.f)("#Sale_TagFilter_OK")
                       )
@@ -23752,7 +23754,7 @@
             }),
             (e.prototype.OnPopulateFromFilter = function() {
               new Array();
-              Object(an.d)(
+              Object(Xt.d)(
                 qe.createElement(Qo, {
                   editModel: this.props.editModel,
                   filter: this.state.filter,
@@ -23942,16 +23944,16 @@
                   return { label: e.tag + " (" + e.count + ")", value: e.tag };
                 });
               return qe.createElement(
-                nn.d,
+                Jt.d,
                 {
                   onCancel: e,
                   closeModal: e,
                   bDisableBackgroundDismiss: !0,
                   bAllowFullSize: !0,
-                  className: On.NotTooWideModal
+                  className: yn.NotTooWideModal
                 },
                 qe.createElement(
-                  Xt.b,
+                  en.b,
                   null,
                   qe.createElement(
                     "div",
@@ -24103,7 +24105,7 @@
                       "div",
                       { className: Go.OKButton },
                       qe.createElement(
-                        Xt.q,
+                        en.q,
                         { onClick: this.OnOK },
                         Object(M.f)("#Sale_TagFilter_OK")
                       )
@@ -24399,7 +24401,7 @@
                 qe.createElement(
                   "div",
                   { className: Go.ClauseTypeDropDown },
-                  qe.createElement(Xt.h, {
+                  qe.createElement(en.h, {
                     rgOptions: t,
                     selectedOption: e.type,
                     onChange: function(e) {
@@ -24410,7 +24412,7 @@
                 r,
                 e.or_tags.length < 3 &&
                   qe.createElement(
-                    Xt.d,
+                    en.d,
                     {
                       onClick: function() {
                         return a.OnAddClauseTagSlot(n);
@@ -24447,7 +24449,7 @@
                   t,
                   e.clauses.length < 5 &&
                     qe.createElement(
-                      Xt.d,
+                      en.d,
                       { onClick: this.OnAddClause },
                       "+",
                       Object(M.f)("#Sale_TagFilter_And"),
@@ -24684,16 +24686,16 @@
                 }),
                 O = c ? Go.ShowTagBreakdown : Go.HideTagBreakdown;
               return qe.createElement(
-                nn.d,
+                Jt.d,
                 {
                   closeModal: t,
                   bDisableBackgroundDismiss: !0,
                   bAllowFullSize: !0,
-                  className: On.NotTooWideModal
+                  className: yn.NotTooWideModal
                 },
-                qe.createElement(Xt.k, null, i),
+                qe.createElement(en.k, null, i),
                 qe.createElement(
-                  Xt.b,
+                  en.b,
                   null,
                   qe.createElement(
                     "div",
@@ -24705,7 +24707,7 @@
                       qe.createElement(
                         "div",
                         { className: Go.TagSelector },
-                        qe.createElement(Xt.h, {
+                        qe.createElement(en.h, {
                           rgOptions: f,
                           selectedOption: o,
                           onChange: function(e) {
@@ -24714,7 +24716,7 @@
                         })
                       ),
                       qe.createElement(
-                        Xt.d,
+                        en.d,
                         {
                           className: Object(at.a)(
                             Go.ShowTagBreakdown,
@@ -24745,7 +24747,7 @@
                       ),
                       this.RenderTagBreakdown(S.length, b)
                     ),
-                    qe.createElement(Xt.l, {
+                    qe.createElement(en.l, {
                       type: "text",
                       label: Object(M.f)("#Sale_TaggedItemsFilter"),
                       onChange: this.UpdateSearchText,
@@ -24756,7 +24758,7 @@
                       "div",
                       { className: Go.OKButton },
                       qe.createElement(
-                        Xt.q,
+                        en.q,
                         { onClick: this.OnOK },
                         Object(M.f)("#Sale_TagFilter_OK")
                       )
@@ -24967,7 +24969,7 @@
             (e.prototype.render = function() {
               var e = this.props.closeModal;
               return qe.createElement(
-                nn.d,
+                Jt.d,
                 {
                   onCancel: e,
                   closeModal: e,
@@ -24976,12 +24978,12 @@
                   bHideCloseIcon: this.state.bImporting
                 },
                 qe.createElement(
-                  Xt.k,
+                  en.k,
                   null,
                   Object(M.f)("#Sale_EditRaw_Title")
                 ),
                 qe.createElement(
-                  Xt.b,
+                  en.b,
                   null,
                   qe.createElement(
                     "div",
@@ -25016,7 +25018,7 @@
                   Boolean(this.state.errMsg) &&
                     qe.createElement(
                       "p",
-                      { className: On.ErrorStyles },
+                      { className: yn.ErrorStyles },
                       this.state.errMsg
                     ),
                   this.state.bImporting &&
@@ -25038,16 +25040,16 @@
                 ),
                 !this.state.bImporting &&
                   qe.createElement(
-                    Xt.j,
+                    en.j,
                     null,
                     qe.createElement(
-                      Xt.q,
+                      en.q,
                       { onClick: this.OnCompleteEdit, disabled: !1 },
                       Object(M.f)("#Button_Confirm"),
                       " "
                     ),
                     qe.createElement(
-                      Xt.d,
+                      en.d,
                       { onClick: e, disabled: !1 },
                       Object(M.f)("#Button_Cancel")
                     )
@@ -25229,7 +25231,7 @@
                 a = e.editModel,
                 i = Boolean(a.GetEventModel().jsondata.sale_opt_in_page_name);
               return qe.createElement(
-                nn.d,
+                Jt.d,
                 {
                   onCancel: n,
                   closeModal: n,
@@ -25238,17 +25240,17 @@
                   bHideCloseIcon: this.state.bImporting
                 },
                 qe.createElement(
-                  Xt.k,
+                  en.k,
                   null,
                   Object(M.f)("#Sale_SyncTaggedItems_Title")
                 ),
                 qe.createElement(
-                  Xt.b,
+                  en.b,
                   null,
                   Boolean(this.state.errMsg) &&
                     qe.createElement(
                       "p",
-                      { className: On.ErrorStyles },
+                      { className: yn.ErrorStyles },
                       this.state.errMsg
                     ),
                   this.state.bImporting &&
@@ -25267,7 +25269,7 @@
                       qe.Fragment,
                       null,
                       i &&
-                        qe.createElement(Xt.e, {
+                        qe.createElement(en.e, {
                           label: Object(M.f)("#Sale_SyncTag_OptInItems"),
                           tooltip: Object(M.f)("#Sale_SyncTag_OptInItems_ttip"),
                           checked: this.state.sync_opt_in_items,
@@ -25276,7 +25278,7 @@
                           }
                         }),
                       i &&
-                        qe.createElement(Xt.e, {
+                        qe.createElement(en.e, {
                           label: Object(M.f)("#Sale_SyncTag_OptInTags"),
                           tooltip: Object(M.f)("#Sale_SyncTag_OptInTags_ttip"),
                           checked: this.state.sync_opt_in_tags,
@@ -25284,7 +25286,7 @@
                             return t.setState({ sync_opt_in_tags: e });
                           }
                         }),
-                      qe.createElement(Xt.e, {
+                      qe.createElement(en.e, {
                         label: Object(M.f)("#Sale_SyncTag_StoreTags"),
                         tooltip: Object(M.f)("#Sale_SyncTag_StoreTags_ttip"),
                         checked: this.state.sync_store_tags,
@@ -25292,7 +25294,7 @@
                           return t.setState({ sync_store_tags: e });
                         }
                       }),
-                      qe.createElement(Xt.e, {
+                      qe.createElement(en.e, {
                         label: Object(M.f)("#Sale_SyncTag_Features"),
                         tooltip: Object(M.f)("#Sale_SyncTag_Features"),
                         checked: this.state.sync_feature_tags,
@@ -25304,10 +25306,10 @@
                 ),
                 !this.state.bImporting &&
                   qe.createElement(
-                    Xt.j,
+                    en.j,
                     null,
                     qe.createElement(
-                      Xt.q,
+                      en.q,
                       {
                         onClick: this.OnPerformSync,
                         disabled: !this.CanPerformSync()
@@ -25315,7 +25317,7 @@
                       Object(M.f)("#Button_Confirm")
                     ),
                     qe.createElement(
-                      Xt.d,
+                      en.d,
                       { onClick: n, disabled: !1 },
                       Object(M.f)("#Button_Cancel")
                     )
@@ -25375,7 +25377,7 @@
               });
             });
           return qe.createElement(
-            nn.d,
+            Jt.d,
             {
               onCancel: t,
               closeModal: t,
@@ -25383,12 +25385,12 @@
               bAllowFullSize: !0
             },
             qe.createElement(
-              Xt.k,
+              en.k,
               null,
               Object(M.f)("#Sale_EditAutoTags_Title")
             ),
             qe.createElement(
-              Xt.b,
+              en.b,
               null,
               qe.createElement(
                 "div",
@@ -25398,7 +25400,7 @@
                   { className: Go.AutoTagList },
                   _,
                   qe.createElement(
-                    Xt.d,
+                    en.d,
                     {
                       onClick: function() {
                         m(
@@ -25415,10 +25417,10 @@
               )
             ),
             qe.createElement(
-              Xt.j,
+              en.j,
               null,
               qe.createElement(
-                Xt.d,
+                en.d,
                 {
                   onClick: function() {
                     o &&
@@ -25460,7 +25462,7 @@
             qe.createElement(
               "div",
               { className: Go.AutoTagRow },
-              qe.createElement(Xt.l, {
+              qe.createElement(en.l, {
                 type: "text",
                 onChange: function(e) {
                   i(e.target.value),
@@ -25482,10 +25484,10 @@
               { className: Go.AutoTagRow },
               qe.createElement(Ro, { filter: o }),
               qe.createElement(
-                Xt.d,
+                en.d,
                 {
                   onClick: function() {
-                    Object(an.d)(
+                    Object(Xt.d)(
                       qe.createElement(Qo, {
                         editModel: t.editModel,
                         filter: o,
@@ -25533,7 +25535,7 @@
             qe.createElement(
               "div",
               { className: Mo.FacetValueCtn },
-              qe.createElement(Xt.l, {
+              qe.createElement(en.l, {
                 name: "name",
                 label: Object(M.f)("#FacetedBrowseEditor_Name"),
                 tooltip: Object(M.f)(
@@ -25542,7 +25544,7 @@
                 value: M.a.Get(o.name, r),
                 onChange: t
               }),
-              qe.createElement(Xt.l, {
+              qe.createElement(en.l, {
                 name: "subtitle",
                 label: Object(M.f)("#FacetedBrowseEditor_Subtitle"),
                 tooltip: Object(M.f)(
@@ -25552,10 +25554,10 @@
                 onChange: t
               }),
               qe.createElement(
-                Xt.d,
+                en.d,
                 {
                   onClick: function() {
-                    Object(an.c)(
+                    Object(Xt.c)(
                       qe.createElement(Qo, {
                         editModel: a,
                         filter: o.filter,
@@ -25626,7 +25628,7 @@
                   }
                 }),
                 qe.createElement(
-                  Xt.d,
+                  en.d,
                   {
                     onClick: function(e) {
                       n.push({
@@ -25657,7 +25659,7 @@
                 Mo.FacetFilterDisplayCtn
               )
             },
-            qe.createElement(Xt.l, {
+            qe.createElement(en.l, {
               name: "name",
               label: Object(M.f)("#FacetedBrowseEditor_Name"),
               tooltip: Object(M.f)("#FacetedBrowseEditor_Tooltip_Facet_Name"),
@@ -25742,7 +25744,7 @@
                   bDisabled: p
                 }),
                 qe.createElement(
-                  Xt.d,
+                  en.d,
                   {
                     onClick: function(e) {
                       a.push({ name: [], facetValues: [] }), o();
@@ -25846,12 +25848,12 @@
                 });
             };
           return qe.createElement(
-            Kt.a,
+            tn.a,
             null,
             qe.createElement(
               po,
               { editModel: s, requireAdmin: !0 },
-              qe.createElement(Xt.p, {
+              qe.createElement(en.p, {
                 label: Object(M.f)("#FacetedBrowseEditor_FacetsCheckbox"),
                 description: Object(M.f)(
                   "#FacetedBrowseEditor_FacetsCheckboxHelp"
@@ -25885,7 +25887,7 @@
                       { className: Go.FilterActionsCtn },
                       qe.createElement("span", null),
                       qe.createElement(
-                        Xt.d,
+                        en.d,
                         {
                           onClick: function(e) {
                             Object(Ta.a)(
@@ -25920,7 +25922,7 @@
                         })
                       ),
                       qe.createElement(
-                        Xt.d,
+                        en.d,
                         {
                           onClick: function() {
                             function e() {
@@ -26349,8 +26351,8 @@
                             (null === (t = l.facets) || void 0 === t
                               ? void 0
                               : t.length)
-                              ? Object(an.c)(
-                                  qe.createElement(nn.c, {
+                              ? Object(Xt.c)(
+                                  qe.createElement(Jt.c, {
                                     strTitle: Object(M.f)(
                                       "#FacetedBrowseEditor_AutoGenerateDialogTitle"
                                     ),
@@ -26382,7 +26384,7 @@
                           })
                         ),
                         qe.createElement(
-                          Xt.d,
+                          en.d,
                           { onClick: d },
                           Object(M.f)("#FacetedBrowseEditor_PruneUnusedButton")
                         )
@@ -26403,7 +26405,7 @@
                       qe.createElement(
                         "div",
                         { className: Go.FilterSettingRightCol },
-                        qe.createElement(Xt.l, {
+                        qe.createElement(en.l, {
                           mustBeNumeric: !0,
                           rangeMin: 1,
                           value: l.min_capsule_matches_for_facet_values,
@@ -26432,7 +26434,7 @@
                       qe.createElement(
                         "div",
                         { className: Go.FilterSettingRightCol },
-                        qe.createElement(Xt.l, {
+                        qe.createElement(en.l, {
                           mustBeNumeric: !0,
                           rangeMin: 1,
                           value: l.max_facet_values_for_facet,
@@ -26461,7 +26463,7 @@
                       qe.createElement(
                         "div",
                         { className: Go.FilterSettingRightCol },
-                        qe.createElement(Xt.h, {
+                        qe.createElement(en.h, {
                           rgOptions: o,
                           selectedOption: l.facet_sort_order,
                           onChange: function(e) {
@@ -26685,14 +26687,14 @@
                 cl.SetMinimizedList(this.props.editModel, e, !0);
             }),
             (e.prototype.ReorderSaleSections = function() {
-              Object(an.c)(
+              Object(Xt.c)(
                 qe.createElement(Zl, { editModel: this.props.editModel }),
                 window
               );
             }),
             (e.prototype.WrapWithNavWaypoint = function(e, t) {
               return qe.createElement(
-                Kt.a,
+                tn.a,
                 { key: "eb_sale_sect_" + e },
                 qe.createElement(
                   wo.a,
@@ -26965,8 +26967,8 @@
                         this.props.editModel.GetEventModel().jsondata
                           .sale_discount_event_id ||
                           (this.props.editModel.GetEventModel().jsondata.sale_discount_event_id = a),
-                        Object(an.c)(
-                          qe.createElement(Mn, {
+                        Object(Xt.c)(
+                          qe.createElement(An, {
                             editModel: this.props.editModel,
                             bSkipChecks: !0,
                             OnSuccess: function() {
@@ -27114,7 +27116,7 @@
                 qe.createElement(
                   "div",
                   { className: it.InputBorder },
-                  qe.createElement(Xt.p, {
+                  qe.createElement(en.p, {
                     onChange: this.OnSaleOptionChange,
                     label: Object(M.f)("#Sale_option"),
                     checked: this.props.editModel
@@ -27124,7 +27126,7 @@
                   Boolean(!e.BIsSourceEventSaleEnabled()) &&
                     qe.createElement(
                       "div",
-                      { className: On.WarningStyles },
+                      { className: yn.WarningStyles },
                       Object(M.f)("#Sale_Enable_Warning")
                     )
                 ),
@@ -27139,17 +27141,17 @@
                         "div",
                         { className: Ke.ReoderSections },
                         qe.createElement(
-                          dn.a,
+                          pn.a,
                           {
                             toolTipContent: Object(M.f)("#Sale_Debug_Tooltip")
                           },
                           qe.createElement(
-                            Xt.d,
+                            en.d,
                             {
                               onClick: function(e) {
-                                return Object(an.d)(
+                                return Object(Xt.d)(
                                   qe.createElement(Rr, null),
-                                  Object(rn.m)(e)
+                                  Object(on.m)(e)
                                 );
                               }
                             },
@@ -27161,14 +27163,14 @@
                         "div",
                         { className: Ke.ReoderSections },
                         qe.createElement(
-                          dn.a,
+                          pn.a,
                           {
                             toolTipContent: Object(M.f)(
                               "#Sale_ReorderSections_ttip"
                             )
                           },
                           qe.createElement(
-                            Xt.d,
+                            en.d,
                             { onClick: this.ReorderSaleSections },
                             Object(M.f)("#Sale_ReorderSections")
                           )
@@ -27178,14 +27180,14 @@
                         "div",
                         { className: Ke.MinimizeAll },
                         qe.createElement(
-                          dn.a,
+                          pn.a,
                           {
                             toolTipContent: Object(M.f)(
                               "#Sale_Section_MinimizeAll_Tooltip"
                             )
                           },
                           qe.createElement(
-                            Xt.d,
+                            en.d,
                             { onClick: this.MinimizeAllSaleSections },
                             Object(M.f)("#Sale_Section_MinimizeAll")
                           )
@@ -27214,7 +27216,7 @@
                               )
                             },
                             qe.createElement(st, null),
-                            qe.createElement(fn, { editModel: e })
+                            qe.createElement(Sn, { editModel: e })
                           )
                         )
                       )
@@ -27253,7 +27255,7 @@
                             qe.createElement(
                               "div",
                               { className: mo.LeftCol },
-                              qe.createElement(Xt.l, {
+                              qe.createElement(en.l, {
                                 type: "text",
                                 label: Object(M.f)("#Sale_VanityID"),
                                 tooltip: Object(M.f)("#Sale_VanityID_ttip"),
@@ -27311,7 +27313,7 @@
                               qe.createElement(
                                 po,
                                 { requireAdmin: !0, editModel: e },
-                                qe.createElement(Xt.e, {
+                                qe.createElement(en.e, {
                                   label: Object(M.f)("#Sale_ValveTopSalePath"),
                                   tooltip: Object(M.f)(
                                     "#Sale_ValveTopSalePath_ttip"
@@ -27321,7 +27323,7 @@
                                   checked: u
                                 })
                               ),
-                              qe.createElement(Xt.h, {
+                              qe.createElement(en.h, {
                                 label: Object(M.f)("#Sale_SaleFont"),
                                 tooltip: Object(M.f)("#Sale_SaleFont_ttip"),
                                 strDropDownClassName: it.DropDownScroll,
@@ -27332,7 +27334,7 @@
                                   bDisablePopTop: !0
                                 }
                               }),
-                              qe.createElement(Xt.l, {
+                              qe.createElement(en.l, {
                                 type: "text",
                                 label: Object(M.f)(
                                   "#Sale_SectionTitleFontSize"
@@ -27343,7 +27345,7 @@
                                 onChange: this.OnSectionTitleFontSizeChange,
                                 value: p
                               }),
-                              qe.createElement(Xt.e, {
+                              qe.createElement(en.e, {
                                 label: Object(M.f)(
                                   "#Sale_DontCapitalizeSectionTitles"
                                 ),
@@ -27363,7 +27365,7 @@
                                   editModel: e,
                                   className: it.EditPreviewButton
                                 },
-                                qe.createElement(Xt.l, {
+                                qe.createElement(en.l, {
                                   type: "text",
                                   label: Object(M.f)("#Sale_ImportSale"),
                                   tooltip: Object(M.f)("#Sale_ImportSale_ttip"),
@@ -27371,7 +27373,7 @@
                                   onChange: this.OnImportSaleChange
                                 }),
                                 qe.createElement(
-                                  Xt.q,
+                                  en.q,
                                   { onClick: this.OnImportSaleSubmit },
                                   Object(M.f)("#Sale_ImportButton")
                                 )
@@ -27396,7 +27398,7 @@
                                   })
                                 ),
                                 qe.createElement(
-                                  Xt.q,
+                                  en.q,
                                   { onClick: this.OnCreateUpdateDiscountEvent },
                                   this.props.editModel.GetEventModel().jsondata
                                     .sale_discount_event_id
@@ -27414,7 +27416,7 @@
                                   editModel: e,
                                   className: it.EditPreviewButton
                                 },
-                                qe.createElement(Xt.l, {
+                                qe.createElement(en.l, {
                                   type: "text",
                                   label: Object(M.f)("#Sale_OptInPageName"),
                                   tooltip: Object(M.f)(
@@ -27425,7 +27427,7 @@
                                 })
                               ),
                               qe.createElement(
-                                dn.a,
+                                pn.a,
                                 {
                                   toolTipContent: "#Sale_ShowCreatorHome_ttip",
                                   direction: "top"
@@ -27433,7 +27435,7 @@
                                 qe.createElement(
                                   "div",
                                   { className: it.InputBorder },
-                                  qe.createElement(Xt.p, {
+                                  qe.createElement(en.p, {
                                     onChange: this.OnShowCreatorChange,
                                     label: Object(M.f)("#Sale_ShowCreatorHome"),
                                     checked: e.GetEventModel().jsondata
@@ -27445,7 +27447,7 @@
                                 po,
                                 { editModel: e },
                                 qe.createElement(
-                                  dn.a,
+                                  pn.a,
                                   {
                                     toolTipContent:
                                       "#Sale_OwnershipRestrictions_ttip",
@@ -27454,7 +27456,7 @@
                                   qe.createElement(
                                     "div",
                                     { className: it.InputBorder },
-                                    qe.createElement(Xt.p, {
+                                    qe.createElement(en.p, {
                                       onChange: this
                                         .OnOwnershipRestrictionChange,
                                       label: Object(M.f)(
@@ -27470,7 +27472,7 @@
                                   qe.createElement(
                                     qe.Fragment,
                                     null,
-                                    qe.createElement(Xt.l, {
+                                    qe.createElement(en.l, {
                                       type: "text",
                                       label: Object(M.f)("#Sale_RequiredApps"),
                                       tooltip: Object(M.f)(
@@ -27479,7 +27481,7 @@
                                       onChange: this.OnRequiredAppIdChange,
                                       value: this.state.strRequiredAppInput
                                     }),
-                                    qe.createElement(Xt.l, {
+                                    qe.createElement(en.l, {
                                       type: "text",
                                       label: Object(M.f)(
                                         "#Sale_OwnershipLockRedirect"
@@ -27669,7 +27671,7 @@
                         Object(M.f)("#Sale_AddNewSection_Desc")
                       ),
                       qe.createElement(
-                        Xt.q,
+                        en.q,
                         {
                           onClick: function() {
                             return a.AddSection();
@@ -27687,7 +27689,7 @@
                         { className: mo.Title },
                         Object(M.f)("#Sale_BrowseMore")
                       ),
-                      qe.createElement(Xt.p, {
+                      qe.createElement(en.p, {
                         onChange: this.OnBrowseMoreButtonChange,
                         label: Object(M.f)("#Sale_BrowseMore_Desc"),
                         checked: this.props.editModel.GetEventModel().jsondata
@@ -27698,7 +27700,7 @@
                         qe.createElement(
                           "div",
                           null,
-                          qe.createElement(Xt.l, {
+                          qe.createElement(en.l, {
                             type: "text",
                             label: Object(M.f)("#Sale_BrowseMore_URL"),
                             name: "sale_browsemore_url",
@@ -27707,7 +27709,7 @@
                             onChange: this.OnSaleChange
                           }),
                           qe.createElement(
-                            Xt.d,
+                            en.d,
                             {
                               onClick: this.OnOpenButtonTextColor,
                               className: it.EventEditorTextTitle,
@@ -27716,7 +27718,7 @@
                             Object(M.f)("#Sale_Section_Label_Color")
                           ),
                           qe.createElement(
-                            Xt.d,
+                            en.d,
                             {
                               onClick: this.OnOpenButtonBackgroundColor,
                               className: it.EventEditorTextTitle,
@@ -27851,10 +27853,10 @@
                 t = e.editModel,
                 n = (e.saleSection,
                 qe.createElement(
-                  en.c,
+                  an.c,
                   {
                     eventModel: t.GetEventModel(),
-                    route: en.a.k_eCommunityEditBroadcast,
+                    route: an.a.k_eCommunityEditBroadcast,
                     className: mo.CrossTabLink
                   },
                   Object(M.f)("#Sale_Broadcast_TabLink")
@@ -27867,7 +27869,7 @@
                       qe.createElement(
                         "div",
                         { className: it.InputBorder },
-                        qe.createElement(Xt.p, {
+                        qe.createElement(en.p, {
                           onChange: this.OnShowOnlySaleWhiteListedBroadcasts,
                           label: Object(M.f)(
                             "#Sale_BroadcastOnlyWhiteListedInSale"
@@ -28047,7 +28049,7 @@
                         qe.createElement(
                           "div",
                           { className: mo.LanguageInput },
-                          qe.createElement(Xt.l, {
+                          qe.createElement(en.l, {
                             placeholder: Object(M.f)("#Broadcast_use_custom"),
                             onChange: this.OnCustomTitleChange,
                             value: this.state.strCustomTitle
@@ -28057,14 +28059,14 @@
                           "div",
                           { className: mo.AddTitleButton },
                           qe.createElement(
-                            dn.a,
+                            pn.a,
                             {
                               toolTipContent: Object(M.f)(
                                 "#Broadcast_save_title_ttip"
                               )
                             },
                             qe.createElement(
-                              Xt.q,
+                              en.q,
                               {
                                 onClick: function() {
                                   return e.props.onSetCustomTitle(
@@ -28081,14 +28083,14 @@
                           "div",
                           { className: mo.RemoveTitleButton },
                           qe.createElement(
-                            dn.a,
+                            pn.a,
                             {
                               toolTipContent: Object(M.f)(
                                 "#Broadcast_remove_title_ttip"
                               )
                             },
                             qe.createElement(
-                              Xt.q,
+                              en.q,
                               {
                                 onClick: this.OnClearCustomTitle,
                                 disabled: !t
@@ -28140,7 +28142,7 @@
                     })(r.capsules, t.capsules)
                   : void 0,
               a = void 0 === n ? "" : " (" + n + ")";
-            return qe.createElement(Xt.e, {
+            return qe.createElement(en.e, {
               key: t.unique_id,
               classname: Ke.ShowOnTabCheckBox,
               onChange: function(e) {
@@ -28150,9 +28152,9 @@
               checked: o.has(t.unique_id)
             });
           })),
-          Object(an.d)(
+          Object(Xt.d)(
             qe.createElement(
-              nn.c,
+              Jt.c,
               {
                 strTitle: Object(M.f)("#Sale_Section_ShowOnTabs_DialogTitle"),
                 strDescription: Object(M.f)(
@@ -28254,7 +28256,7 @@
                             "div",
                             { className: Ke.ShowOnTabsButton },
                             qe.createElement(
-                              Xt.q,
+                              en.q,
                               { onClick: this.OnEditTabSections },
                               Object(M.f)("#Sale_Section_ShowOnTabs_Edit")
                             )
@@ -28332,8 +28334,8 @@
           }),
           (e.prototype.RemoveSection = function(e) {
             var t = this;
-            Object(an.d)(
-              qe.createElement(nn.c, {
+            Object(Xt.d)(
+              qe.createElement(Jt.c, {
                 strTitle: Object(M.f)("#Button_Remove"),
                 strDescription: Object(M.f)("#Sale_RemoveSectionConfirmation"),
                 onOK: function() {
@@ -28380,7 +28382,7 @@
           (e.prototype.OnShowTitleImageUpload = function(e, n) {
             e.preventDefault(),
               e.stopPropagation(),
-              Object(an.d)(
+              Object(Xt.d)(
                 qe.createElement(go, {
                   loc_images: n.localized_label_image,
                   fnSetImage: function(e, t) {
@@ -28494,8 +28496,8 @@
                       : (console.error(
                           "SaleSection.OnDropFiles: failed file=" + o[0].name
                         ),
-                        Object(an.d)(
-                          qe.createElement(nn.e, {
+                        Object(Xt.d)(
+                          qe.createElement(Jt.e, {
                             strDescription: Object(M.f)(
                               "#ImagePicker_Error",
                               o[0].name
@@ -28555,7 +28557,7 @@
           }),
           (e.prototype.OnSectionOverrideBannerAction = function(n) {
             var a = this.props.saleSection;
-            Object(an.d)(
+            Object(Xt.d)(
               qe.createElement(go, {
                 loc_images: n
                   ? a.localized_sale_product_mobile_banner_override
@@ -28680,7 +28682,7 @@
                     "div",
                     { className: it.FlexRowContainer },
                     qe.createElement(
-                      Xt.d,
+                      en.d,
                       {
                         "data-tooltip-text": Object(M.f)(
                           "#Sale_Section_ReorderUp_Title"
@@ -28693,7 +28695,7 @@
                       qe.createElement(Ea.b, { angle: 0 })
                     ),
                     qe.createElement(
-                      Xt.d,
+                      en.d,
                       {
                         "data-tooltip-text": Object(M.f)(
                           "#Sale_Section_ReorderDown_Title"
@@ -28713,7 +28715,7 @@
                       }
                     }),
                     qe.createElement(
-                      Xt.d,
+                      en.d,
                       {
                         "data-tooltip-text": Object(M.f)("#Button_Remove"),
                         onClick: function() {
@@ -28794,7 +28796,7 @@
                                     "div",
                                     { className: mo.UploadImageButton },
                                     qe.createElement(
-                                      Xt.q,
+                                      en.q,
                                       {
                                         onClick: function(e) {
                                           return t.OnShowTitleImageUpload(e, a);
@@ -28812,7 +28814,7 @@
                                   )
                                 ),
                               m &&
-                                qe.createElement(Xt.l, {
+                                qe.createElement(en.l, {
                                   label: Object(M.f)("#Sale_LinkURL"),
                                   tooltip: Object(M.f)(
                                     "#Sale_LinkURL_title_hint"
@@ -28851,7 +28853,7 @@
                             "div",
                             { className: it.HalfColumn },
                             qe.createElement(
-                              Xt.d,
+                              en.d,
                               {
                                 onClick: this.OpenLabelColorSelector,
                                 className: it.EventEditorTextTitle,
@@ -28866,7 +28868,7 @@
                                 qe.Fragment,
                                 null,
                                 qe.createElement(
-                                  Xt.d,
+                                  en.d,
                                   {
                                     onClick: this.OpenBackgroundTopSelector,
                                     className: it.EventEditorTextTitle,
@@ -28887,7 +28889,7 @@
                                   Object(M.f)("#Sale_Section_Background_Top")
                                 ),
                                 qe.createElement(
-                                  Xt.d,
+                                  en.d,
                                   {
                                     onClick: this.OpenBackgroundBottomSelector,
                                     className: it.EventEditorTextTitle,
@@ -28928,7 +28930,7 @@
                                 clanSteamID: this.props.editModel.GetClanSteamID()
                               }),
                               qe.createElement(
-                                Xt.d,
+                                en.d,
                                 {
                                   onClick: this.OnSectionOverrideBanner,
                                   "data-tooltip-text": Object(M.f)(
@@ -28941,7 +28943,7 @@
                                 )
                               ),
                               qe.createElement(
-                                Xt.d,
+                                en.d,
                                 {
                                   onClick: this.OnSectionOverrideMobileBanner,
                                   "data-tooltip-text": Object(M.f)(
@@ -28960,7 +28962,7 @@
                                     a.localized_sale_product_mobile_banner_override
                               ) &&
                                 qe.createElement(
-                                  Xt.d,
+                                  en.d,
                                   {
                                     onClick: this.OnSectionBannerOverrideClear,
                                     className: it.EventEditorTextTitle
@@ -28968,7 +28970,7 @@
                                   Object(M.f)("#Sale_Section_BannerImage_Clear")
                                 ),
                               qe.createElement(
-                                Xt.d,
+                                en.d,
                                 {
                                   onClick: this.OnSectionBackgroundClear,
                                   className: it.EventEditorTextTitle
@@ -29006,7 +29008,7 @@
                           Object(M.f)("#Sale_SectionContents"),
                           " "
                         ),
-                        qe.createElement(Xt.h, {
+                        qe.createElement(en.h, {
                           rgOptions: r,
                           strDropDownClassName: it.DropDownScroll,
                           selectedOption: p,
@@ -29138,7 +29140,7 @@
               return qe.createElement(
                 qe.Fragment,
                 null,
-                qe.createElement(Xt.p, {
+                qe.createElement(en.p, {
                   onChange: this.OnSmartSectionChange,
                   label: Object(M.f)("#Sale_SmartSection"),
                   description: Object(M.f)("#Sale_SmartSectionDescription"),
@@ -29168,7 +29170,7 @@
           return qe.createElement(
             qe.Fragment,
             null,
-            qe.createElement(Xt.p, {
+            qe.createElement(en.p, {
               onChange: function(t) {
                 Object(k.G)(function() {
                   n.smart_section = t;
@@ -29218,7 +29220,7 @@
             (e.prototype.OnShowLinkCapsuleUpload = function(e, n) {
               e.preventDefault(),
                 e.stopPropagation(),
-                Object(an.d)(
+                Object(Xt.d)(
                   qe.createElement(go, {
                     loc_images: n.localized_link_capsule,
                     fnSetImage: function(e, t) {
@@ -29268,7 +29270,7 @@
                           "div",
                           { className: mo.UploadLinkImageButton },
                           qe.createElement(
-                            Xt.q,
+                            en.q,
                             {
                               onClick: function(e) {
                                 return a.OnShowLinkCapsuleUpload(e, t);
@@ -29286,7 +29288,7 @@
                     );
                   }
                 }),
-                qe.createElement(Xt.l, {
+                qe.createElement(en.l, {
                   ref: function(e) {
                     return (a.m_refInput = e);
                   },
@@ -29295,7 +29297,7 @@
                   onChange: this.OnLinkChange
                 }),
                 qe.createElement(
-                  Xt.q,
+                  en.q,
                   { onClick: this.AddLink },
                   Object(M.f)("#Sale_AddLink")
                 )
@@ -29421,7 +29423,7 @@
                   n.capsule_style_per_row_array
                 );
               Object(F.u)(n.section_type);
-              return qe.createElement(Xt.h, {
+              return qe.createElement(en.h, {
                 rgOptions: i,
                 label: Object(M.f)("#Sale_Section_CapsulesPerRow"),
                 tooltip: Object(M.f)("#Sale_Section_CapsulesPerRow_Tooltip"),
@@ -29473,7 +29475,7 @@
                     "div",
                     { className: it.HalfColumn },
                     a.show_as_carousel &&
-                      qe.createElement(Xt.s, {
+                      qe.createElement(en.s, {
                         label: Object(M.f)("#Sale_Section_CarouselRows"),
                         bShowValue: !0,
                         min: 1,
@@ -29513,7 +29515,7 @@
                       qe.createElement(
                         po,
                         { editModel: r },
-                        qe.createElement(Xt.l, {
+                        qe.createElement(en.l, {
                           mustBeNumeric: !0,
                           rangeMin: 0,
                           label:
@@ -29548,7 +29550,7 @@
                           ttipToken: "#Sale_Section_CapSectionContent_Tooltip"
                         }),
                         a.cap_section_content &&
-                          qe.createElement(Xt.l, {
+                          qe.createElement(en.l, {
                             mustBeNumeric: !0,
                             rangeMin: 1,
                             label: Object(M.f)(
@@ -29631,7 +29633,7 @@
                 data: "library"
               }
             ];
-          return qe.createElement(Xt.h, {
+          return qe.createElement(en.h, {
             rgOptions: a,
             label: Object(M.f)("#Sale_Section_SingleItemDisplay"),
             tooltip: Object(M.f)("#Sale_Section_SingleItemDisplay_ttip"),
@@ -29658,14 +29660,14 @@
             ? qe.createElement(
                 po,
                 { editModel: n },
-                qe.createElement(Xt.e, {
+                qe.createElement(en.e, {
                   onChange: t,
                   label: "(VO) " + Object(M.f)(o),
                   tooltip: Object(M.f)(l),
                   checked: a[i]
                 })
               )
-            : qe.createElement(Xt.e, {
+            : qe.createElement(en.e, {
                 onChange: t,
                 label: Object(M.f)(o),
                 tooltip: Object(M.f)(l),
@@ -29685,10 +29687,10 @@
                 Object(M.f)("#Sale_UsingEventBodyElsewhere")
               );
           return qe.createElement(
-            en.c,
+            an.c,
             {
               eventModel: a,
-              route: en.a.k_eCommunityEdit,
+              route: an.a.k_eCommunityEdit,
               className: mo.CrossTabLink
             },
             Object(M.f)("#Sale_EventDescriptionTabLink")
@@ -29810,7 +29812,7 @@
                 qe.createElement(
                   "div",
                   { className: mo.SaleImportURL },
-                  qe.createElement(Xt.l, {
+                  qe.createElement(en.l, {
                     type: "text",
                     label: Object(M.f)("#Sale_SearchCurator"),
                     onChange: this.UpdateCuratorSuggestions,
@@ -29988,8 +29990,8 @@
             (t.prototype.OnDeleteTabPrompt = function(e) {
               var t = this,
                 n = this.props.saleSection.tabs[e];
-              Object(an.d)(
-                qe.createElement(nn.c, {
+              Object(Xt.d)(
+                qe.createElement(Jt.c, {
                   strTitle: Object(M.f)("#Sale_Tabs_DeletePrompt_Title"),
                   strDescription: Object(M.f)(
                     "#Sale_Tabs_DeletePrompt_Body",
@@ -30055,10 +30057,10 @@
                 ),
                 this.RenderTabs(),
                 qe.createElement(
-                  dn.a,
+                  pn.a,
                   { toolTipContent: Object(M.f)("#Sale_Tabs_AddTab_ttip") },
                   qe.createElement(
-                    Xt.q,
+                    en.q,
                     {
                       onClick: function() {
                         return e.OnAddTab();
@@ -30112,7 +30114,7 @@
                 { className: Ke.TabHideItemFilterCtn },
                 Object(M.f)("#Sale_Tabs_ShowItems"),
                 qe.createElement(
-                  Xt.d,
+                  en.d,
                   { onClick: this.OnShowTabItems },
                   Object(M.f)("#Sale_Tabs_ShowItems_Button")
                 )
@@ -30197,7 +30199,7 @@
                   "div",
                   { className: it.HalfColumn },
                   qe.createElement(
-                    Xt.d,
+                    en.d,
                     {
                       onClick: function(e) {
                         return Ll(e, t, n, "tab_inactive_label_color");
@@ -30208,7 +30210,7 @@
                     Object(M.f)("#Sale_Section_TabInactive_Label_Color")
                   ),
                   qe.createElement(
-                    Xt.d,
+                    en.d,
                     {
                       onClick: function(e) {
                         return Ll(
@@ -30224,7 +30226,7 @@
                     Object(M.f)("#Sale_Section_TabInactive_Background_Top")
                   ),
                   qe.createElement(
-                    Xt.d,
+                    en.d,
                     {
                       onClick: function(e) {
                         return Ll(
@@ -30244,7 +30246,7 @@
                   "div",
                   { className: it.HalfColumn },
                   qe.createElement(
-                    Xt.d,
+                    en.d,
                     {
                       onClick: function(e) {
                         return Ll(e, t, n, "tab_active_label_color");
@@ -30255,7 +30257,7 @@
                     Object(M.f)("#Sale_Section_TabActive_Label_Color")
                   ),
                   qe.createElement(
-                    Xt.d,
+                    en.d,
                     {
                       onClick: function(e) {
                         return Ll(
@@ -30271,7 +30273,7 @@
                     Object(M.f)("#Sale_Section_TabActive_Background_Top")
                   ),
                   qe.createElement(
-                    Xt.d,
+                    en.d,
                     {
                       onClick: function(e) {
                         return Ll(
@@ -30441,19 +30443,19 @@
               return qe.createElement(
                 "div",
                 null,
-                qe.createElement(Xt.e, {
+                qe.createElement(en.e, {
                   label: Object(M.f)("#Sale_Section_EnableSearch"),
                   tooltip: Object(M.f)("#Sale_Section_EnableSearch_ttip"),
                   onChange: this.OnEnableSearch,
                   checked: e.enable_search
                 }),
-                qe.createElement(Xt.e, {
+                qe.createElement(en.e, {
                   label: Object(M.f)("#Sale_Section_UseDemoLayout"),
                   tooltip: Object(M.f)("#Sale_Section_UseDemoLayout_ttip"),
                   onChange: this.OnShowAsDemos,
                   checked: e.show_as_demos
                 }),
-                qe.createElement(Xt.l, {
+                qe.createElement(en.l, {
                   type: "text",
                   label: Object(M.f)("#Sale_BrowseSection_SubscriptionID"),
                   tooltip: Object(M.f)(
@@ -30548,7 +30550,7 @@
               return qe.createElement(
                 qe.Fragment,
                 null,
-                qe.createElement(Xt.h, {
+                qe.createElement(en.h, {
                   rgOptions: a,
                   strDropDownClassName: it.DropDownScroll,
                   selectedOption: n || "subscription_pricing",
@@ -30562,7 +30564,7 @@
                   disableDaySelection: !0
                 }),
                 "subscription_pricing" === n &&
-                  qe.createElement(Xt.l, {
+                  qe.createElement(en.l, {
                     type: "text",
                     label: Object(M.f)("#Sale_SubscriptionLogo"),
                     tooltip: Object(M.f)("#Sale_SubscriptionLogo_ttip"),
@@ -30767,9 +30769,9 @@
                 });
             }),
             (e.prototype.OnChooseMasterSubscriptionID = function(e) {
-              Object(an.d)(
+              Object(Xt.d)(
                 qe.createElement(ql, { fnAddCapsule: this.SetMasterAppID }),
-                Object(rn.m)(e)
+                Object(on.m)(e)
               );
             }),
             (e.prototype.render = function() {
@@ -30949,12 +30951,12 @@
               var r = this.props.saleSection,
                 o = this.props.saleSection.smart_section_type;
               return qe.createElement(
-                Kt.a,
+                tn.a,
                 null,
                 qe.createElement(
                   "div",
                   { className: Object(at.a)(it.FlexRowContainer) },
-                  qe.createElement(Xt.h, {
+                  qe.createElement(en.h, {
                     strClassName: mo.SmartSelType,
                     label: Object(M.f)("#Sale_SmartSectionType"),
                     rgOptions: i,
@@ -30990,7 +30992,7 @@
                   qe.createElement(
                     qe.Fragment,
                     null,
-                    qe.createElement(Xt.l, {
+                    qe.createElement(en.l, {
                       onBlur: function() {
                         setTimeout(function() {
                           return (
@@ -31021,7 +31023,7 @@
                     )
                   ),
                 "category" === o &&
-                  qe.createElement(Xt.h, {
+                  qe.createElement(en.h, {
                     key: a.length,
                     label: Object(M.f)("#Sale_SelectCategory"),
                     strDropDownClassName: it.DropDownScroll,
@@ -31041,13 +31043,13 @@
                       "div",
                       { className: mo.SaleImportBarButtonGroup },
                       qe.createElement(
-                        dn.a,
+                        pn.a,
                         {
                           toolTipContent:
                             "Enter the master subscription appid ID."
                         },
                         qe.createElement(
-                          Xt.d,
+                          en.d,
                           {
                             className: mo.SaleImportBarButton,
                             onClick: this.OnChooseMasterSubscriptionID
@@ -31140,9 +31142,9 @@
               }
             }),
             (e.prototype.ImportSaleItems = function(e) {
-              Object(an.d)(
+              Object(Xt.d)(
                 qe.createElement(ql, { fnAddCapsule: this.AddCapsule }),
-                Object(rn.m)(e)
+                Object(on.m)(e)
               );
             }),
             (e.prototype.OnChangeVisibilityDate = function(e) {
@@ -31152,8 +31154,8 @@
               this.setState({ nShowVisibilityIndexOnly: e });
             }),
             (e.prototype.OnRemoveAllPrompt = function() {
-              Object(an.d)(
-                qe.createElement(nn.c, {
+              Object(Xt.d)(
+                qe.createElement(Jt.c, {
                   strTitle: Object(M.f)("#Sale_RemoveAllConfirm_Title"),
                   strDescription: Object(M.f)("#Sale_RemoveAllConfirm_Body"),
                   onOK: this.OnRemoveAllConfirmed
@@ -31166,12 +31168,12 @@
                 this.props.editModel.SetDirty(J.jsondata_sales);
             }),
             (e.prototype.OnEditRaw = function(e) {
-              Object(an.d)(
+              Object(Xt.d)(
                 qe.createElement(Yl, {
                   editModel: this.props.editModel,
                   capsuleContainer: this.props.capsuleContainer
                 }),
-                Object(rn.m)(e)
+                Object(on.m)(e)
               );
             }),
             (e.prototype.OnUseTagFilterChangeConfirmed = function(e) {
@@ -31205,8 +31207,8 @@
               if (e) {
                 if (i.sale_tag_filter) return;
                 i.capsules.length
-                  ? Object(an.d)(
-                      qe.createElement(nn.c, {
+                  ? Object(Xt.d)(
+                      qe.createElement(Jt.c, {
                         strTitle: Object(M.f)(
                           "#Sale_TaggedItemFilter_EnableTitle"
                         ),
@@ -31225,8 +31227,8 @@
                 null !== (t = i.sale_tag_filter.clauses) &&
                 void 0 !== t &&
                 t.length
-                  ? Object(an.d)(
-                      qe.createElement(nn.c, {
+                  ? Object(Xt.d)(
+                      qe.createElement(Jt.c, {
                         strTitle: Object(M.f)(
                           "#Sale_TaggedItemFilter_DisableTitle"
                         ),
@@ -31260,7 +31262,7 @@
                 r = "ShowFilterItems_" + this.props.uniqueKey,
                 o = cl.IsMinimized(t, r, !0);
               return qe.createElement(
-                Kt.a,
+                tn.a,
                 null,
                 qe.createElement(
                   "div",
@@ -31309,7 +31311,7 @@
             }),
             (e.prototype.OnSelectDiscountEvent = function(e) {
               var i = this;
-              Object(an.d)(
+              Object(Xt.d)(
                 qe.createElement(ao, {
                   onDiscountEventSelected: function(e, t) {
                     var n =
@@ -31342,7 +31344,7 @@
                       i.props.editModel.SetDirty(J.jsondata_sales);
                   }
                 }),
-                Object(rn.m)(e)
+                Object(on.m)(e)
               );
             }),
             (e.prototype.renderItemView = function() {
@@ -31465,7 +31467,7 @@
                     "#Sale_Section_ReferencedProducts_Tooltip"
                 );
               return qe.createElement(
-                Kt.a,
+                tn.a,
                 null,
                 qe.createElement(
                   "div",
@@ -31508,13 +31510,13 @@
                       "div",
                       { className: mo.SaleImportBar },
                       qe.createElement(
-                        dn.a,
+                        pn.a,
                         {
                           className: mo.SaleImportBarTooltip,
                           toolTipContent: Object(M.f)("#Sale_RemoveAll_Tooltip")
                         },
                         qe.createElement(
-                          Xt.d,
+                          en.d,
                           {
                             className: mo.SaleImportBarButton,
                             onClick: this.OnRemoveAllPrompt
@@ -31523,7 +31525,7 @@
                         )
                       ),
                       qe.createElement(
-                        dn.a,
+                        pn.a,
                         {
                           className: mo.SaleImportBarTooltip,
                           toolTipContent: Object(M.f)(
@@ -31531,7 +31533,7 @@
                           )
                         },
                         qe.createElement(
-                          Xt.d,
+                          en.d,
                           {
                             className: mo.SaleImportBarButton,
                             onClick: this.ImportSaleItems
@@ -31540,13 +31542,13 @@
                         )
                       ),
                       qe.createElement(
-                        dn.a,
+                        pn.a,
                         {
                           className: mo.SaleImportBarTooltip,
                           toolTipContent: Object(M.f)("#Sale_EditRaw_Tooltip")
                         },
                         qe.createElement(
-                          Xt.d,
+                          en.d,
                           {
                             className: mo.SaleImportBarButton,
                             onClick: this.OnEditRaw
@@ -31558,7 +31560,7 @@
                         po,
                         { requireAdmin: !0, editModel: t },
                         qe.createElement(
-                          dn.a,
+                          pn.a,
                           {
                             className: mo.SaleImportBarTooltip,
                             toolTipContent: Object(M.f)(
@@ -31566,7 +31568,7 @@
                             )
                           },
                           qe.createElement(
-                            Xt.d,
+                            en.d,
                             {
                               className: mo.SaleImportBarButton,
                               onClick: this.OnSelectDiscountEvent
@@ -31600,7 +31602,7 @@
                       }
                     }),
                     1 < i.length &&
-                      qe.createElement(Xt.h, {
+                      qe.createElement(en.h, {
                         strDropDownClassName: it.DropDownScroll,
                         label: Object(M.f)("#Sale_VisibilityIndex_Label"),
                         rgOptions: i,
@@ -31628,10 +31630,10 @@
                 i = Boolean(n.sale_tag_filter),
                 r = i || 0 < t.GetEventModel().GetTaggedItems().length;
               return qe.createElement(
-                Kt.a,
+                tn.a,
                 null,
                 r &&
-                  qe.createElement(Xt.p, {
+                  qe.createElement(en.p, {
                     onChange: this.OnUseTagFilterChange,
                     label: Object(M.f)("#Sale_TaggedItemFilter"),
                     description: Object(M.f)(
@@ -31887,7 +31889,7 @@
             (e.prototype.render = function() {
               var e = this.props.closeModal;
               return qe.createElement(
-                nn.d,
+                Jt.d,
                 {
                   onCancel: e,
                   closeModal: e,
@@ -31896,12 +31898,12 @@
                   bHideCloseIcon: this.state.bImporting
                 },
                 qe.createElement(
-                  Xt.k,
+                  en.k,
                   null,
                   Object(M.f)("#Sale_EditRaw_Title")
                 ),
                 qe.createElement(
-                  Xt.b,
+                  en.b,
                   null,
                   qe.createElement(
                     "div",
@@ -31936,7 +31938,7 @@
                   Boolean(this.state.errMsg) &&
                     qe.createElement(
                       "p",
-                      { className: On.ErrorStyles },
+                      { className: yn.ErrorStyles },
                       this.state.errMsg
                     ),
                   this.state.bImporting &&
@@ -31955,16 +31957,16 @@
                 ),
                 !this.state.bImporting &&
                   qe.createElement(
-                    Xt.j,
+                    en.j,
                     null,
                     qe.createElement(
-                      Xt.q,
+                      en.q,
                       { onClick: this.OnCompleteEdit, disabled: !1 },
                       Object(M.f)("#Button_Confirm"),
                       " "
                     ),
                     qe.createElement(
-                      Xt.d,
+                      en.d,
                       { onClick: e, disabled: !1 },
                       Object(M.f)("#Button_Cancel")
                     )
@@ -32016,21 +32018,21 @@
               var e = this.props.closeModal,
                 t = this.state.sections;
               return qe.createElement(
-                nn.d,
+                Jt.d,
                 {
                   onOK: this.OnOK,
                   closeModal: e,
                   bDisableBackgroundDismiss: !0,
                   bAllowFullSize: !0,
-                  className: On.NotTooWideModal
+                  className: yn.NotTooWideModal
                 },
                 qe.createElement(
-                  Xt.k,
+                  en.k,
                   null,
                   Object(M.f)("#Sale_ReorderSections")
                 ),
                 qe.createElement(
-                  Xt.b,
+                  en.b,
                   null,
                   qe.createElement(
                     "div",
@@ -32047,7 +32049,7 @@
                       "div",
                       { className: Ke.OKButton },
                       qe.createElement(
-                        Xt.q,
+                        en.q,
                         { onClick: this.OnOK },
                         Object(M.f)("#Sale_TagFilter_OK")
                       )
@@ -32171,7 +32173,7 @@
                   );
                 }),
                 qe.createElement(
-                  nn.d,
+                  Jt.d,
                   {
                     onCancel: e,
                     closeModal: e,
@@ -32180,12 +32182,12 @@
                     bHideCloseIcon: this.state.bImporting
                   },
                   qe.createElement(
-                    Xt.k,
+                    en.k,
                     null,
                     Object(M.f)("#Sale_ImportItems")
                   ),
                   qe.createElement(
-                    Xt.b,
+                    en.b,
                     null,
                     qe.createElement(
                       "div",
@@ -32195,7 +32197,7 @@
                     Boolean(this.state.errMsg) &&
                       qe.createElement(
                         "p",
-                        { className: On.ErrorStyles },
+                        { className: yn.ErrorStyles },
                         this.state.errMsg
                       ),
                     n,
@@ -32214,16 +32216,16 @@
                   ),
                   !this.state.bImporting &&
                     qe.createElement(
-                      Xt.j,
+                      en.j,
                       null,
                       qe.createElement(
-                        Xt.q,
+                        en.q,
                         { onClick: this.OnImportAction, disabled: !1 },
                         Object(M.f)("#Button_Confirm"),
                         " "
                       ),
                       qe.createElement(
-                        Xt.d,
+                        en.d,
                         { onClick: this.props.closeModal, disabled: !1 },
                         Object(M.f)("#Button_Cancel")
                       )
@@ -32240,7 +32242,7 @@
         })(qe.Component),
         Ql = function(e) {
           return qe.createElement(
-            Xt.d,
+            en.d,
             {
               "data-tooltip-text": Object(M.f)(
                 e.bIsMinimized
@@ -32322,7 +32324,7 @@
                     "tabs" === e.section_type && (c = !0);
                 }),
                 qe.createElement(
-                  Kt.a,
+                  tn.a,
                   null,
                   qe.createElement(ol, {
                     strHeader: Object(M.f)("#Sale_TOC"),
@@ -32405,7 +32407,7 @@
                     status: o.text,
                     statusType: o.complete >= o.total ? "success" : "danger",
                     contents: qe.createElement(
-                      Kt.a,
+                      tn.a,
                       null,
                       qe.createElement(Wi, {
                         editModel: t,
@@ -32423,7 +32425,7 @@
                     statusType:
                       l && l.complete >= l.total ? "success" : "danger",
                     contents: qe.createElement(
-                      Kt.a,
+                      tn.a,
                       null,
                       qe.createElement(kr, { editModel: t }),
                       qe.createElement("div", { className: rt.a.ClearThings })
@@ -32453,7 +32455,7 @@
                       this.BCanOnlyUploadBecauseSupportUser() &&
                       Object(M.f)("#EventEditor_CuratorImageWarning"),
                     contents: qe.createElement(
-                      Kt.a,
+                      tn.a,
                       null,
                       qe.createElement(ji, { editModel: t })
                     ),
@@ -32466,7 +32468,7 @@
                     statusType: "success",
                     hidden: !r.valve_admin,
                     contents: qe.createElement(
-                      Kt.a,
+                      tn.a,
                       null,
                       qe.createElement(Ei, { editModel: t })
                     ),
@@ -32481,7 +32483,7 @@
                     statusType: "success",
                     hidden: a,
                     contents: qe.createElement(
-                      Kt.a,
+                      tn.a,
                       null,
                       qe.createElement(sr, { editModel: t })
                     ),
@@ -32501,7 +32503,7 @@
                       this.BCanOnlyUploadBecauseSupportUser() &&
                       Object(M.f)("#EventEditor_CuratorImageWarning"),
                     contents: qe.createElement(
-                      Kt.a,
+                      tn.a,
                       null,
                       qe.createElement(ul, { editModel: t })
                     ),
@@ -32513,7 +32515,7 @@
                     status: "",
                     statusType: "success",
                     contents: qe.createElement(
-                      Kt.a,
+                      tn.a,
                       null,
                       qe.createElement(Wr, { editModel: t })
                     ),
@@ -32526,7 +32528,7 @@
                     statusType: "success",
                     hidden: !r.valve_admin,
                     contents: qe.createElement(
-                      Kt.a,
+                      tn.a,
                       null,
                       qe.createElement(oa, { editModel: t })
                     ),
@@ -32711,7 +32713,7 @@
               var e = this.props.editModel;
               Object(le.d)(e.GetEventType());
               return qe.createElement(
-                Kt.a,
+                tn.a,
                 null,
                 qe.createElement(
                   "div",
@@ -33690,7 +33692,7 @@
                   n = Object(A.d)(D.b.LANGUAGE);
                 return t.BHasSaleEnabled()
                   ? qe.createElement(
-                      Kt.a,
+                      tn.a,
                       null,
                       qe.createElement(zn.c, {
                         eventModel: t,
@@ -34001,10 +34003,10 @@
                         Object(M.f)("#EventBrowse_MoreEventsBtn")
                       )
                     : Qe.a.createElement(
-                        en.c,
+                        an.c,
                         {
                           eventModel: a[0],
-                          route: en.a.k_eViewWebSiteHub,
+                          route: an.a.k_eViewWebSiteHub,
                           forceAnchor: !0,
                           className: vs.SectionButton
                         },

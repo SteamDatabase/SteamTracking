@@ -1564,47 +1564,6 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
     display: flex;
     flex-wrap: wrap; }
 
-.partnereventdialog_ErrorStyles_2Sg7W, .partnereventdialog_ErrorStylesWithIcon_Lc2PK {
-  color: #c44848; }
-
-.partnereventdialog_ErrorIconLayout_42__6, .partnereventdialog_ErrorStylesBackground_3fVv6, .partnereventdialog_ErrorStylesWithIcon_Lc2PK {
-  padding: 10px;
-  padding-left: 42px;
-  background-image: url(https://community.cloudflare.steamstatic.com/public/images//sharedfiles/icons/icon_warning.png);
-  background-repeat: no-repeat;
-  background-position-x: 10px;
-  background-position-y: 10px; }
-
-.partnereventdialog_ErrorStylesBackground_3fVv6 {
-  background-color: #472025; }
-
-.partnereventdialog_ErrorStyles_2Sg7W > div, .partnereventdialog_ErrorStylesWithIcon_Lc2PK > div {
-  display: inline;
-  color: #d78484; }
-
-.partnereventdialog_WarningStyles_3gxgE, .partnereventdialog_WarningStylesWithIcon_1S_uS {
-  color: darkgoldenrod; }
-
-.partnereventdialog_WarningIconLayout_2jM80, .partnereventdialog_WarningStylesBackground_UYrHs, .partnereventdialog_WarningStylesWithIcon_1S_uS {
-  padding: 10px;
-  padding-left: 42px;
-  background-image: url(https://community.cloudflare.steamstatic.com/public/images//sharedfiles/icons/icon_warning.png);
-  background-repeat: no-repeat;
-  background-position-x: 10px;
-  background-position-y: 10px; }
-
-.partnereventdialog_WarningStylesBackground_UYrHs {
-  background-color: darkgoldenrod;
-  color: white; }
-
-.partnereventdialog_Padding_36hma {
-  padding-top: 10px; }
-
-.ModalPosition_Content .partnereventdialog_NotTooWideModal_UfQcb.DialogContent {
-  width: initial; }
-  .ModalPosition_Content .partnereventdialog_NotTooWideModal_UfQcb.DialogContent .DialogContent_InnerWidth > form {
-    padding-right: 8px; }
-
 .partnereventstats_StatsTitle_3YLaB {
   display: flex;
   flex-direction: row;
@@ -1680,6 +1639,47 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
     display: none; }
   .partnereventstats_DisabledStats_2Zp-j .partnereventstats_ModerationNote_11Z9I {
     display: block; }
+
+.partnereventdialog_ErrorStyles_2Sg7W, .partnereventdialog_ErrorStylesWithIcon_Lc2PK {
+  color: #c44848; }
+
+.partnereventdialog_ErrorIconLayout_42__6, .partnereventdialog_ErrorStylesBackground_3fVv6, .partnereventdialog_ErrorStylesWithIcon_Lc2PK {
+  padding: 10px;
+  padding-left: 42px;
+  background-image: url(https://community.cloudflare.steamstatic.com/public/images//sharedfiles/icons/icon_warning.png);
+  background-repeat: no-repeat;
+  background-position-x: 10px;
+  background-position-y: 10px; }
+
+.partnereventdialog_ErrorStylesBackground_3fVv6 {
+  background-color: #472025; }
+
+.partnereventdialog_ErrorStyles_2Sg7W > div, .partnereventdialog_ErrorStylesWithIcon_Lc2PK > div {
+  display: inline;
+  color: #d78484; }
+
+.partnereventdialog_WarningStyles_3gxgE, .partnereventdialog_WarningStylesWithIcon_1S_uS {
+  color: darkgoldenrod; }
+
+.partnereventdialog_WarningIconLayout_2jM80, .partnereventdialog_WarningStylesBackground_UYrHs, .partnereventdialog_WarningStylesWithIcon_1S_uS {
+  padding: 10px;
+  padding-left: 42px;
+  background-image: url(https://community.cloudflare.steamstatic.com/public/images//sharedfiles/icons/icon_warning.png);
+  background-repeat: no-repeat;
+  background-position-x: 10px;
+  background-position-y: 10px; }
+
+.partnereventdialog_WarningStylesBackground_UYrHs {
+  background-color: darkgoldenrod;
+  color: white; }
+
+.partnereventdialog_Padding_36hma {
+  padding-top: 10px; }
+
+.ModalPosition_Content .partnereventdialog_NotTooWideModal_UfQcb.DialogContent {
+  width: initial; }
+  .ModalPosition_Content .partnereventdialog_NotTooWideModal_UfQcb.DialogContent .DialogContent_InnerWidth > form {
+    padding-right: 8px; }
 
 .discussionwidget_Container_mKmrO {
   display: flex;
