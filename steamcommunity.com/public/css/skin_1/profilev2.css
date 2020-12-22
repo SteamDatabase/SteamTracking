@@ -135,7 +135,7 @@ div.profile_page.private_profile {
 body.profile_page.has_profile_background,
 div.profile_page.has_profile_background {
 	background-image: none;
-	background-color: #000000;
+ 	background-color: #000000;
 	background-position: center top;
 	background-repeat: no-repeat;
 }
