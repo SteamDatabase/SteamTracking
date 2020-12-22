@@ -1,18 +1,18 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6283363";
+var CLSTAMP = "6285217";
 !(function(o) {
   function e(e) {
     for (
-      var a, d, n = e[0], c = e[1], s = e[2], r = 0, f = [];
-      r < n.length;
-      r++
+      var a, d, n = e[0], c = e[1], s = e[2], f = 0, r = [];
+      f < n.length;
+      f++
     )
-      (d = n[r]),
-        Object.prototype.hasOwnProperty.call(h, d) && h[d] && f.push(h[d][0]),
+      (d = n[f]),
+        Object.prototype.hasOwnProperty.call(h, d) && h[d] && r.push(h[d][0]),
         (h[d] = 0);
     for (a in c) Object.prototype.hasOwnProperty.call(c, a) && (o[a] = c[a]);
-    for (j && j(e); f.length; ) f.shift()();
+    for (j && j(e); r.length; ) r.shift()();
     return i.push.apply(i, s || []), b();
   }
   function b() {
@@ -39,7 +39,7 @@ var CLSTAMP = "6283363";
     t[i]
       ? e.push(t[i])
       : 0 !== t[i] &&
-        { 2: 1, 3: 1, 4: 1, 6: 1, 7: 1, 8: 1, 40: 1 }[i] &&
+        { 2: 1, 3: 1, 4: 1, 6: 1, 7: 1, 8: 1, 40: 1, 41: 1 }[i] &&
         e.push(
           (t[i] = new Promise(function(e, n) {
             for (
@@ -83,37 +83,38 @@ var CLSTAMP = "6283363";
                     36: "main_turkish-json",
                     37: "main_ukrainian-json",
                     38: "main_vietnamese-json",
-                    40: "reviewaward",
-                    41: "shared_arabic-json",
-                    42: "shared_brazilian-json",
-                    43: "shared_bulgarian-json",
-                    44: "shared_czech-json",
-                    45: "shared_danish-json",
-                    46: "shared_dutch-json",
-                    47: "shared_english-json",
-                    48: "shared_finnish-json",
-                    49: "shared_french-json",
-                    50: "shared_german-json",
-                    51: "shared_greek-json",
-                    52: "shared_hungarian-json",
-                    53: "shared_italian-json",
-                    54: "shared_japanese-json",
-                    55: "shared_koreana-json",
-                    56: "shared_latam-json",
-                    57: "shared_norwegian-json",
-                    58: "shared_polish-json",
-                    59: "shared_portuguese-json",
-                    60: "shared_romanian-json",
-                    61: "shared_russian-json",
-                    62: "shared_sc_schinese-json",
-                    63: "shared_schinese-json",
-                    64: "shared_spanish-json",
-                    65: "shared_swedish-json",
-                    66: "shared_tchinese-json",
-                    67: "shared_thai-json",
-                    68: "shared_turkish-json",
-                    69: "shared_ukrainian-json",
-                    70: "shared_vietnamese-json"
+                    40: "profileshowcases",
+                    41: "reviewaward",
+                    42: "shared_arabic-json",
+                    43: "shared_brazilian-json",
+                    44: "shared_bulgarian-json",
+                    45: "shared_czech-json",
+                    46: "shared_danish-json",
+                    47: "shared_dutch-json",
+                    48: "shared_english-json",
+                    49: "shared_finnish-json",
+                    50: "shared_french-json",
+                    51: "shared_german-json",
+                    52: "shared_greek-json",
+                    53: "shared_hungarian-json",
+                    54: "shared_italian-json",
+                    55: "shared_japanese-json",
+                    56: "shared_koreana-json",
+                    57: "shared_latam-json",
+                    58: "shared_norwegian-json",
+                    59: "shared_polish-json",
+                    60: "shared_portuguese-json",
+                    61: "shared_romanian-json",
+                    62: "shared_russian-json",
+                    63: "shared_sc_schinese-json",
+                    64: "shared_schinese-json",
+                    65: "shared_spanish-json",
+                    66: "shared_swedish-json",
+                    67: "shared_tchinese-json",
+                    68: "shared_thai-json",
+                    69: "shared_turkish-json",
+                    70: "shared_ukrainian-json",
+                    71: "shared_vietnamese-json"
                   }[i] || i) +
                   ".css?contenthash=" +
                   {
@@ -124,7 +125,7 @@ var CLSTAMP = "6283363";
                     5: "31d6cfe0d16ae931b73c",
                     6: "af17ac0a598cb32e8ba3",
                     7: "ec433dd8cfb12ab117d0",
-                    8: "da231cf22c053f7200ed",
+                    8: "b69026ac7f8d2dbd171f",
                     10: "31d6cfe0d16ae931b73c",
                     11: "31d6cfe0d16ae931b73c",
                     12: "31d6cfe0d16ae931b73c",
@@ -154,8 +155,8 @@ var CLSTAMP = "6283363";
                     36: "31d6cfe0d16ae931b73c",
                     37: "31d6cfe0d16ae931b73c",
                     38: "31d6cfe0d16ae931b73c",
-                    40: "9d2f18a48c5b86df0c2e",
-                    41: "31d6cfe0d16ae931b73c",
+                    40: "f5206ed04564b086a58e",
+                    41: "9d2f18a48c5b86df0c2e",
                     42: "31d6cfe0d16ae931b73c",
                     43: "31d6cfe0d16ae931b73c",
                     44: "31d6cfe0d16ae931b73c",
@@ -213,7 +214,8 @@ var CLSTAMP = "6283363";
                     96: "31d6cfe0d16ae931b73c",
                     97: "31d6cfe0d16ae931b73c",
                     98: "31d6cfe0d16ae931b73c",
-                    99: "31d6cfe0d16ae931b73c"
+                    99: "31d6cfe0d16ae931b73c",
+                    100: "31d6cfe0d16ae931b73c"
                   }[i],
                 c = _.p + a,
                 d = document.getElementsByTagName("link"),
@@ -221,16 +223,16 @@ var CLSTAMP = "6283363";
               s < d.length;
               s++
             ) {
-              var r =
-                (f = d[s]).getAttribute("data-href") || f.getAttribute("href");
-              if ("stylesheet" === f.rel && (r === a || r === c)) return e();
+              var f =
+                (r = d[s]).getAttribute("data-href") || r.getAttribute("href");
+              if ("stylesheet" === r.rel && (f === a || f === c)) return e();
             }
             for (
-              var f, o = document.getElementsByTagName("style"), s = 0;
+              var r, o = document.getElementsByTagName("style"), s = 0;
               s < o.length;
               s++
             ) {
-              if ((r = (f = o[s]).getAttribute("data-href")) === a || r === c)
+              if ((f = (r = o[s]).getAttribute("data-href")) === a || f === c)
                 return e();
             }
             var b = document.createElement("link");
@@ -258,17 +260,17 @@ var CLSTAMP = "6283363";
       c,
       s,
       d,
-      r,
+      f,
       n,
-      f = h[i];
+      r = h[i];
     return (
-      0 !== f &&
-        (f
-          ? e.push(f[2])
+      0 !== r &&
+        (r
+          ? e.push(r[2])
           : ((a = new Promise(function(e, a) {
-              f = h[i] = [e, a];
+              r = h[i] = [e, a];
             })),
-            e.push((f[2] = a)),
+            e.push((r[2] = a)),
             ((c = document.createElement("script")).charset = "utf-8"),
             (c.timeout = 120),
             _.nc && c.setAttribute("nonce", _.nc),
@@ -313,37 +315,38 @@ var CLSTAMP = "6283363";
                 36: "main_turkish-json",
                 37: "main_ukrainian-json",
                 38: "main_vietnamese-json",
-                40: "reviewaward",
-                41: "shared_arabic-json",
-                42: "shared_brazilian-json",
-                43: "shared_bulgarian-json",
-                44: "shared_czech-json",
-                45: "shared_danish-json",
-                46: "shared_dutch-json",
-                47: "shared_english-json",
-                48: "shared_finnish-json",
-                49: "shared_french-json",
-                50: "shared_german-json",
-                51: "shared_greek-json",
-                52: "shared_hungarian-json",
-                53: "shared_italian-json",
-                54: "shared_japanese-json",
-                55: "shared_koreana-json",
-                56: "shared_latam-json",
-                57: "shared_norwegian-json",
-                58: "shared_polish-json",
-                59: "shared_portuguese-json",
-                60: "shared_romanian-json",
-                61: "shared_russian-json",
-                62: "shared_sc_schinese-json",
-                63: "shared_schinese-json",
-                64: "shared_spanish-json",
-                65: "shared_swedish-json",
-                66: "shared_tchinese-json",
-                67: "shared_thai-json",
-                68: "shared_turkish-json",
-                69: "shared_ukrainian-json",
-                70: "shared_vietnamese-json"
+                40: "profileshowcases",
+                41: "reviewaward",
+                42: "shared_arabic-json",
+                43: "shared_brazilian-json",
+                44: "shared_bulgarian-json",
+                45: "shared_czech-json",
+                46: "shared_danish-json",
+                47: "shared_dutch-json",
+                48: "shared_english-json",
+                49: "shared_finnish-json",
+                50: "shared_french-json",
+                51: "shared_german-json",
+                52: "shared_greek-json",
+                53: "shared_hungarian-json",
+                54: "shared_italian-json",
+                55: "shared_japanese-json",
+                56: "shared_koreana-json",
+                57: "shared_latam-json",
+                58: "shared_norwegian-json",
+                59: "shared_polish-json",
+                60: "shared_portuguese-json",
+                61: "shared_romanian-json",
+                62: "shared_russian-json",
+                63: "shared_sc_schinese-json",
+                64: "shared_schinese-json",
+                65: "shared_spanish-json",
+                66: "shared_swedish-json",
+                67: "shared_tchinese-json",
+                68: "shared_thai-json",
+                69: "shared_turkish-json",
+                70: "shared_ukrainian-json",
+                71: "shared_vietnamese-json"
               }[(n = i)] || n) +
               ".js?contenthash=" +
               {
@@ -354,8 +357,8 @@ var CLSTAMP = "6283363";
                 5: "8e9b929357e0ec545604",
                 6: "a9cec61ed8d40a33c257",
                 7: "e8dfe727c791810ed992",
-                8: "4a51d3fede3fd2e186da",
-                10: "f6519401f2083e7c670a",
+                8: "a75feb994728c735b085",
+                10: "99107bbf3e6e95c70dd4",
                 11: "85a74beea50dda150676",
                 12: "bea6c3708c9d0845ead3",
                 13: "28cef608630be995a326",
@@ -384,70 +387,71 @@ var CLSTAMP = "6283363";
                 36: "d29b526c91aba859462f",
                 37: "f05be1b1172ba6afc8f8",
                 38: "7d446dd9165e55189466",
-                40: "55919e6b0284be8e0f43",
-                41: "2faf6714c3650351b6f6",
-                42: "23f69e3066ef7bde19a1",
-                43: "f115e0d736368a690400",
-                44: "8ce2a3d954731a3511c2",
-                45: "94ac5e570a4a572ae3a9",
-                46: "ae3ec0dfce04aaebf3f5",
-                47: "d857998f93904fc260f2",
-                48: "ad3cb8563b6ef13b3fd9",
-                49: "585fe36544ec8dc09b9a",
-                50: "aa247c157e9bd2b34a22",
-                51: "1ab96e0512cefb437459",
-                52: "d2bb94959aea2a0512c6",
-                53: "4c49ed712953d668fd8d",
-                54: "55d1c32f8403ba8e4423",
-                55: "797434074614d5897e4f",
-                56: "047f9b1f44a7257c492a",
-                57: "e9a0465850d25910a872",
-                58: "f5d1cccaa0b0ab224833",
-                59: "85e973d7d441b2e84c32",
-                60: "63f6e3e63639a2b1b39a",
-                61: "e42f892739d548c5528d",
-                62: "c7a635bdc21ea4b3b42f",
-                63: "09196b081a275c41cf84",
-                64: "5c8d190defa8e4c09e88",
-                65: "5e63f9ced069555d224e",
-                66: "cc021ff8814320805be6",
-                67: "5789191d29926c202c5c",
-                68: "2243b7d114d2b06cdeda",
-                69: "ab07b284203e8f044acd",
-                70: "81ba38dd82da5144ca07",
-                71: "d6b3773f1dd3ad286d58",
-                72: "ff3f2fd7da9d2fa2ce1c",
-                73: "4cc6cead129439bf1586",
-                74: "f240062c8b43d292f596",
-                75: "bf5547be85805bf80ac4",
-                76: "6f1dfc7a7e7b97a24d46",
-                77: "9ef5d12c1e3c1effabe7",
-                78: "1fdf6cae9d62036742a8",
-                79: "bc05bb896395f12d2ab2",
-                80: "a463035c80eeded2b3f6",
-                81: "18dbfbfdee8405bfd728",
-                82: "de22e3afcf016613ff50",
-                83: "ec6dcae0c35a6c663719",
-                84: "3cc1ef8486baab69fd95",
-                85: "55dc9a9a48947c7ee55c",
-                86: "500d474f60bd8ed47325",
-                87: "b69c61d91da971558a63",
-                88: "3bf8d14707b59de83cb6",
-                89: "382fef68c680678125a5",
-                90: "47380e0b0c027125b1da",
-                91: "d885871336c48fa2e0c1",
-                92: "84fec756e12d424b0834",
-                93: "6f556b991e1cb967de2c",
-                94: "bdd6a2d0599b8e9c2c72",
-                95: "2d2bfcf85139314f01a9",
-                96: "6f48f4a9a2ce0ec33506",
-                97: "e88f097db7bc96f36c4e",
-                98: "7f77c3d1f503ee4f2b25",
-                99: "effb7c093b7c42af1c91"
+                40: "0257c76e7344d6816073",
+                41: "caec6ecee805e95c5286",
+                42: "b304d7fbec771dbdb0bd",
+                43: "8674ed50292f22e29a7a",
+                44: "20b19f027032e744360f",
+                45: "1cdef7474934d4f8f0ba",
+                46: "23a11ca448e9a47585a5",
+                47: "f92757bd98bc75f86086",
+                48: "f3894521e712f666dc14",
+                49: "0c7939475f07d4822276",
+                50: "549608f2bae7e9ca944d",
+                51: "99f01b1d3f4bf128847d",
+                52: "124cf2b13e123d8b971d",
+                53: "10804aa724038cf7064a",
+                54: "cd61f4f442ecbdfa7b8b",
+                55: "19e4e2a11f94eaf292d1",
+                56: "4657acc55577e061fb95",
+                57: "da7c1fa983051e30c9bb",
+                58: "8e98181d75a86d525df7",
+                59: "2680d71c26b1e96e45da",
+                60: "3354e67cbfc392b916c8",
+                61: "7fea54506b427b2e8d0c",
+                62: "4590d1a90ece09391356",
+                63: "f7d7f0b3506490af3a68",
+                64: "c6f61dce39f75f474408",
+                65: "364386f1c6d53be1b4c4",
+                66: "ee277d1e67a3be220ff1",
+                67: "515fbee6119cefca78b5",
+                68: "74d2b4f81773c8bd928d",
+                69: "15af7bdc5afc86f786ba",
+                70: "094f2a0fbd2a4acf7c23",
+                71: "9b2d3d69d0a5cc37fe7f",
+                72: "0f81d9aff93ff40f869b",
+                73: "dfc6352baf4176189335",
+                74: "9d62b596f850b80c1bce",
+                75: "2bdb817ef6f80cf6361e",
+                76: "4579578d5d2a043c5c37",
+                77: "23638e27c4f1cd808c1b",
+                78: "66741914c55e1dabdc43",
+                79: "d0ed946091746559652d",
+                80: "1e4f7773af2f93e5098b",
+                81: "1f9bcda398b8c7a1bd00",
+                82: "0e048cf734b4844b00ff",
+                83: "60876d6ad8e7e2a74909",
+                84: "d7511f4e997a676d64ff",
+                85: "04a01247caa0c5feb565",
+                86: "216b27e8e78ca5aa9781",
+                87: "8f1221aa184492286472",
+                88: "0a8a5de4d1602dcdf993",
+                89: "1aebdf68ed9c238a4cbd",
+                90: "7ce5345cb51a12edeb3c",
+                91: "fca24d4f7305e6f8f6c3",
+                92: "4b014e87b81149a57db9",
+                93: "814573b0a0a7e7ac6305",
+                94: "50a978b29ea79af92266",
+                95: "7feddce222a5a497d4ed",
+                96: "97ebf9d8a8ec1ed1c2ad",
+                97: "cc21fed3637657fda4bf",
+                98: "1501dba803ec1f6c5a0d",
+                99: "feaf8f2cd3b2d89fd66a",
+                100: "95218dba6bee6d22b4e1"
               }[n]),
             (s = new Error()),
             (d = function(e) {
-              (c.onerror = c.onload = null), clearTimeout(r);
+              (c.onerror = c.onload = null), clearTimeout(f);
               var a,
                 d,
                 n = h[i];
@@ -463,7 +467,7 @@ var CLSTAMP = "6283363";
                   n[1](s)),
                 (h[i] = void 0));
             }),
-            (r = setTimeout(function() {
+            (f = setTimeout(function() {
               d({ type: "timeout", target: c });
             }, 12e4)),
             (c.onerror = c.onload = d),

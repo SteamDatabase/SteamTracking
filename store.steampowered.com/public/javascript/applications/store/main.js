@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6283363";
+var CLSTAMP = "6285217";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [9],
   {
@@ -1450,7 +1450,14 @@ var CLSTAMP = "6283363";
       var r = n("mrSG"),
         a = n("lkRc"),
         o = {},
-        i = {},
+        i = {
+          LoyaltySteamBadge: function() {
+            return "/points/shop/c/steambadge";
+          },
+          LoyaltyProfileCustomizations: function() {
+            return "/points/shop/profileshowcases";
+          }
+        },
         s = {},
         c = Object(r.a)(
           Object(r.a)(
@@ -23826,10 +23833,10 @@ var CLSTAMP = "6283363";
         E = n("5eAM"),
         s = n("DWPT"),
         c = n("ee7K"),
-        u = n("IjL/"),
+        p = n("IjL/"),
         l = n("6Y59"),
         A = (n("5E+2"), n("r64O")),
-        p = n("qiKp"),
+        u = n("qiKp"),
         d = n("exH9"),
         m = n("X3Ds"),
         h = n("TLQK"),
@@ -23921,7 +23928,7 @@ var CLSTAMP = "6283363";
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (
               (e.state = { rgImages: [], nCurrentIndex: 0 }),
-              (e.m_imageRotationCallback = new p.b()),
+              (e.m_imageRotationCallback = new u.b()),
               e
             );
           }
@@ -24358,7 +24365,7 @@ var CLSTAMP = "6283363";
           );
         },
         V = (function(t) {
-          function l() {
+          function u() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (
               (e.m_refHoverSourceDiv = S.a.createRef()),
@@ -24367,27 +24374,27 @@ var CLSTAMP = "6283363";
             );
           }
           return (
-            Object(g.d)(l, t),
-            (l.prototype.ClosePopup = function() {
+            Object(g.d)(u, t),
+            (u.prototype.ClosePopup = function() {
               this.m_fnHidePopup &&
                 (this.m_fnHidePopup(),
                 (this.m_fnHidePopup = null),
                 window.removeEventListener("scroll", this.OnScroll));
             }),
-            (l.prototype.OnUnhover = function() {
+            (u.prototype.OnUnhover = function() {
               this.m_bPopupShowPending &&
                 (this.ClosePopup(), (this.m_bPopupShowPending = !1));
             }),
-            (l.prototype.componentWillUnmount = function() {
+            (u.prototype.componentWillUnmount = function() {
               this.ClosePopup();
             }),
-            (l.prototype.OnScroll = function() {
+            (u.prototype.OnScroll = function() {
               50 < Math.abs(window.scrollY - this.m_nScrollYAtHoverStart) &&
                 this.ClosePopup();
             }),
-            (l.prototype.OnHover = function(e) {
+            (u.prototype.OnHover = function(e) {
               return Object(g.b)(this, void 0, void 0, function() {
-                var t, n, r, a, o, i, s, c;
+                var t, n, r, a, o, i, s, c, l;
                 return Object(g.e)(this, function(e) {
                   switch (e.label) {
                     case 0:
@@ -24403,7 +24410,8 @@ var CLSTAMP = "6283363";
                         "children"
                       ]),
                       (o = this.m_refHoverSourceDiv.current) && n)
-                        ? ((i = Object(g.a)(
+                        ? ((i = o.clientWidth < 200 ? "8px" : "10px"),
+                          (s = Object(g.a)(
                             Object(g.a)(
                               {
                                 direction: "overlay-center",
@@ -24416,6 +24424,7 @@ var CLSTAMP = "6283363";
                                 {
                                   zIndex: 98,
                                   width: 1.15 * o.clientWidth,
+                                  fontSize: i,
                                   minHeight: "hiding" == R() ? void 0 : 300,
                                   height:
                                     "hiding" == R()
@@ -24427,28 +24436,28 @@ var CLSTAMP = "6283363";
                               target: o
                             }
                           )),
-                          (s = "game-hover-" + Math.floor(1e8 * Math.random())),
+                          (c = "game-hover-" + Math.floor(1e8 * Math.random())),
                           (this.m_fnHidePopup = function() {
-                            return l.sm_embeddedElements.HideElement(
+                            return u.sm_embeddedElements.HideElement(
                               o.ownerDocument,
-                              s
+                              c
                             );
                           }),
                           (this.m_nScrollYAtHoverStart = window.scrollY),
                           window.addEventListener("scroll", this.OnScroll),
-                          (c = null != a ? a : 150),
+                          (l = null != a ? a : 150),
                           (this.m_bPopupShowPending = !0),
                           [
                             4,
-                            l.sm_embeddedElements.ShowElementDelayed(
+                            u.sm_embeddedElements.ShowElementDelayed(
                               o.ownerDocument,
-                              c,
+                              l,
                               S.a.createElement(
                                 P,
-                                { hoverProps: i, fnClose: this.ClosePopup },
-                                S.a.createElement(u.a, null, n)
+                                { hoverProps: s, fnClose: this.ClosePopup },
+                                S.a.createElement(p.a, null, n)
                               ),
-                              s
+                              c
                             )
                           ])
                         : [2];
@@ -24458,7 +24467,7 @@ var CLSTAMP = "6283363";
                 });
               });
             }),
-            (l.prototype.render = function() {
+            (u.prototype.render = function() {
               var e = this.props,
                 t = (e.hoverContent, e.hoverProps, e.nDelayShowMs, e.children),
                 n = Object(g.f)(e, [
@@ -24475,15 +24484,15 @@ var CLSTAMP = "6283363";
                   onFocus: this.OnHover,
                   onBlur: this.OnUnhover
                 }),
-                S.a.createElement(u.a, null, t)
+                S.a.createElement(p.a, null, t)
               );
             }),
-            (l.sm_embeddedElements = new i.a("item-hover-source-elements")),
-            Object(g.c)([f.a], l.prototype, "ClosePopup", null),
-            Object(g.c)([f.a], l.prototype, "OnUnhover", null),
-            Object(g.c)([f.a], l.prototype, "OnScroll", null),
-            Object(g.c)([f.a], l.prototype, "OnHover", null),
-            l
+            (u.sm_embeddedElements = new i.a("item-hover-source-elements")),
+            Object(g.c)([f.a], u.prototype, "ClosePopup", null),
+            Object(g.c)([f.a], u.prototype, "OnUnhover", null),
+            Object(g.c)([f.a], u.prototype, "OnScroll", null),
+            Object(g.c)([f.a], u.prototype, "OnHover", null),
+            u
           );
         })(S.a.Component);
     },
@@ -44226,18 +44235,18 @@ var CLSTAMP = "6283363";
         TagRow: "gamehover_TagRow_2SWQM",
         Tags: "gamehover_Tags_fTGVi",
         Tag: "gamehover_Tag_1wO-t",
-        ReviewScoreHeader: "gamehover_ReviewScoreHeader_2t-0j",
-        ReviewScoreValue: "gamehover_ReviewScoreValue_3ZWs0",
-        ReviewScoreLow: "gamehover_ReviewScoreLow_3nU5I",
-        ReviewScoreMixed: "gamehover_ReviewScoreMixed_11Q2_",
-        ReviewScoreHigh: "gamehover_ReviewScoreHigh_3wXHC",
-        ReviewScorePercentage: "gamehover_ReviewScorePercentage_38dPa",
-        ReviewScoreCount: "gamehover_ReviewScoreCount_1wXL_",
         PlatformDisplay: "gamehover_PlatformDisplay_2UG4_",
         ReviewsAndRelease: "gamehover_ReviewsAndRelease_1HFUC",
         ReleaseDate: "gamehover_ReleaseDate_35Bya",
         ReleasePrefix: "gamehover_ReleasePrefix_2ZKEX",
-        ReviewScore: "gamehover_ReviewScore_3qvpp"
+        ReviewScore: "gamehover_ReviewScore_3qvpp",
+        ReviewScoreHeader: "gamehover_ReviewScoreHeader_2t-0j",
+        ReviewScoreCount: "gamehover_ReviewScoreCount_1wXL_",
+        ReviewScoreValue: "gamehover_ReviewScoreValue_3ZWs0",
+        ReviewScoreLow: "gamehover_ReviewScoreLow_3nU5I",
+        ReviewScoreMixed: "gamehover_ReviewScoreMixed_11Q2_",
+        ReviewScoreHigh: "gamehover_ReviewScoreHigh_3wXHC",
+        ReviewScorePercentage: "gamehover_ReviewScorePercentage_38dPa"
       };
     },
     Xhj9: function(e, t, n) {
@@ -61009,7 +61018,7 @@ var CLSTAMP = "6283363";
           );
         }),
         $ = b.a.lazy(function() {
-          return Promise.all([l.e(0), l.e(3), l.e(40)]).then(
+          return Promise.all([l.e(0), l.e(3), l.e(41)]).then(
             l.bind(null, "tPo2")
           );
         }),
@@ -68187,36 +68196,36 @@ var CLSTAMP = "6283363";
     },
     rCDf: function(e, t, r) {
       var a = {
-        "./shared_arabic.json": ["d1TB", 41],
-        "./shared_brazilian.json": ["Pg9r", 42],
-        "./shared_bulgarian.json": ["ENge", 43],
-        "./shared_czech.json": ["Ts6V", 44],
-        "./shared_danish.json": ["9oiU", 45],
-        "./shared_dutch.json": ["nxN4", 46],
-        "./shared_english.json": ["TYjx", 47],
-        "./shared_finnish.json": ["NuB8", 48],
-        "./shared_french.json": ["bOPj", 49],
-        "./shared_german.json": ["svuF", 50],
-        "./shared_greek.json": ["eJKB", 51],
-        "./shared_hungarian.json": ["T7i2", 52],
-        "./shared_italian.json": ["w96W", 53],
-        "./shared_japanese.json": ["XQ4S", 54],
-        "./shared_koreana.json": ["4hyI", 55],
-        "./shared_latam.json": ["3qrw", 56],
-        "./shared_norwegian.json": ["XA4Q", 57],
-        "./shared_polish.json": ["TpXn", 58],
-        "./shared_portuguese.json": ["Q8UV", 59],
-        "./shared_romanian.json": ["Eme1", 60],
-        "./shared_russian.json": ["BUiO", 61],
-        "./shared_sc_schinese.json": ["O0N/", 62],
-        "./shared_schinese.json": ["3UpY", 63],
-        "./shared_spanish.json": ["4Fxc", 64],
-        "./shared_swedish.json": ["0JhB", 65],
-        "./shared_tchinese.json": ["OYRc", 66],
-        "./shared_thai.json": ["lhAZ", 67],
-        "./shared_turkish.json": ["RSoU", 68],
-        "./shared_ukrainian.json": ["lNXI", 69],
-        "./shared_vietnamese.json": ["RSmC", 70]
+        "./shared_arabic.json": ["d1TB", 42],
+        "./shared_brazilian.json": ["Pg9r", 43],
+        "./shared_bulgarian.json": ["ENge", 44],
+        "./shared_czech.json": ["Ts6V", 45],
+        "./shared_danish.json": ["9oiU", 46],
+        "./shared_dutch.json": ["nxN4", 47],
+        "./shared_english.json": ["TYjx", 48],
+        "./shared_finnish.json": ["NuB8", 49],
+        "./shared_french.json": ["bOPj", 50],
+        "./shared_german.json": ["svuF", 51],
+        "./shared_greek.json": ["eJKB", 52],
+        "./shared_hungarian.json": ["T7i2", 53],
+        "./shared_italian.json": ["w96W", 54],
+        "./shared_japanese.json": ["XQ4S", 55],
+        "./shared_koreana.json": ["4hyI", 56],
+        "./shared_latam.json": ["3qrw", 57],
+        "./shared_norwegian.json": ["XA4Q", 58],
+        "./shared_polish.json": ["TpXn", 59],
+        "./shared_portuguese.json": ["Q8UV", 60],
+        "./shared_romanian.json": ["Eme1", 61],
+        "./shared_russian.json": ["BUiO", 62],
+        "./shared_sc_schinese.json": ["O0N/", 63],
+        "./shared_schinese.json": ["3UpY", 64],
+        "./shared_spanish.json": ["4Fxc", 65],
+        "./shared_swedish.json": ["0JhB", 66],
+        "./shared_tchinese.json": ["OYRc", 67],
+        "./shared_thai.json": ["lhAZ", 68],
+        "./shared_turkish.json": ["RSoU", 69],
+        "./shared_ukrainian.json": ["lNXI", 70],
+        "./shared_vietnamese.json": ["RSmC", 71]
       };
       function n(t) {
         if (!r.o(a, t))

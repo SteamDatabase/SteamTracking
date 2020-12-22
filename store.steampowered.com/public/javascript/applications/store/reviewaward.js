@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [40],
+  [41],
   {
     ARGL: function(e, t, a) {
       e.exports = {
@@ -48,7 +48,7 @@
       "use strict";
       a.r(t),
         a.d(t, "CheckmarkCircle", function() {
-          return b;
+          return h;
         }),
         a.d(t, "LibraryLoyaltyAwardModal", function() {
           return w;
@@ -249,24 +249,24 @@
             e
           );
         })(),
-        I = a("exH9"),
+        j = a("exH9"),
         p = a("qbgq"),
         _ = a("0OaU"),
         f = a("6Y59");
-      function j(e) {
+      function I(e) {
         return Object(N.f)("#RewardsReaction_" + e);
       }
       var B,
-        h,
+        b,
         M = a("oet2"),
         k = a("Mgs7");
       a("idvb");
-      ((h = B = B || {})[(h.SELECTING = 0)] = "SELECTING"),
-        (h[(h.CONFIRM = 1)] = "CONFIRM"),
-        (h[(h.SUBMITTING = 2)] = "SUBMITTING"),
-        (h[(h.DONE = 3)] = "DONE"),
-        (h[(h.ERROR = 4)] = "ERROR");
-      var b = function(e) {
+      ((b = B = B || {})[(b.SELECTING = 0)] = "SELECTING"),
+        (b[(b.CONFIRM = 1)] = "CONFIRM"),
+        (b[(b.SUBMITTING = 2)] = "SUBMITTING"),
+        (b[(b.DONE = 3)] = "DONE"),
+        (b[(b.ERROR = 4)] = "ERROR");
+      var h = function(e) {
           return S.createElement(
             "svg",
             Object(s.a)(
@@ -463,8 +463,8 @@
                 p,
                 _ = o.GetExistingReactions(),
                 f = o.GetAwardConfigurations(),
-                h = o.GetUserPointBalance(),
-                b = ((u = n),
+                b = o.GetUserPointBalance(),
+                h = ((u = n),
                 (m = r),
                 (p = []),
                 f.forEach(function(e) {
@@ -506,7 +506,7 @@
               switch (l) {
                 case B.SELECTING:
                   var v = 0 === c || _.get(c),
-                    O = !h || h.greaterThanOrEqual(w),
+                    O = !b || b.greaterThanOrEqual(w),
                     A = S.createElement(
                       k.p,
                       {
@@ -532,7 +532,7 @@
                       S.createElement(
                         "div",
                         { className: G.ButtonContainer },
-                        b.map(function(e) {
+                        h.map(function(e) {
                           return S.createElement(U, {
                             key: e,
                             reaction: e,
@@ -560,7 +560,7 @@
                                 { key: "msg", className: G.NotEnoughPoints },
                                 Object(N.f)(
                                   "#GrantAward_CantAfford",
-                                  h
+                                  b
                                     .negate()
                                     .add(w)
                                     .toNumber()
@@ -597,7 +597,7 @@
                       S.createElement(
                         "div",
                         {
-                          className: Object(I.a)(
+                          className: Object(j.a)(
                             G.ConfirmContainer,
                             l === B.CONFIRM && G.Visible
                           )
@@ -615,7 +615,7 @@
                             S.createElement(
                               "span",
                               { className: G.AwardName },
-                              j(c)
+                              I(c)
                             )
                           )
                         ),
@@ -638,7 +638,7 @@
                       S.createElement(
                         "div",
                         {
-                          className: Object(I.a)(
+                          className: Object(j.a)(
                             G.LoadingContainer,
                             l === B.SUBMITTING && G.Visible
                           )
@@ -648,7 +648,7 @@
                       S.createElement(
                         "div",
                         {
-                          className: Object(I.a)(
+                          className: Object(j.a)(
                             G.SuccessContainer,
                             l === B.DONE && G.Visible
                           )
@@ -710,6 +710,9 @@
                       break;
                     case 15:
                       C = Object(N.f)("#GrantAwardError_AccessDenied");
+                      break;
+                    case 21:
+                      C = Object(N.f)("#GrantAwardError_NotLoggedOn");
                       break;
                     default:
                       C = Object(N.f)("#GrantAwardError_Fail");
@@ -869,7 +872,7 @@
                     type: "button",
                     onMouseEnter: this.handleMouseOver,
                     onMouseLeave: this.handleMouseOut,
-                    className: Object(I.a)(
+                    className: Object(j.a)(
                       G.Button,
                       a && G.Selected,
                       n && G.Disabled
@@ -886,9 +889,9 @@
                     bDisableAnimation: n
                   })
                 ),
-                S.createElement("div", { className: G.Label }, j(t)),
+                S.createElement("div", { className: G.Label }, I(t)),
                 S.createElement(V, { className: G.Points }, r.toLocaleString()),
-                n && S.createElement(b, { className: G.IconCheckMark })
+                n && S.createElement(h, { className: G.IconCheckMark })
               );
             }),
             Object(s.c)([r.a], e.prototype, "handleMouseOver", null),
@@ -905,7 +908,7 @@
             n = Object(s.f)(e, ["children", "className"]);
           return S.createElement(
             "span",
-            Object(s.a)({}, n, { className: Object(I.a)(a, G.PointsAmount) }),
+            Object(s.a)({}, n, { className: Object(j.a)(a, G.PointsAmount) }),
             S.createElement(f.F, { className: G.PointsAmountIcon }),
             t
           );

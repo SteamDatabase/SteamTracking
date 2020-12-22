@@ -3483,7 +3483,6 @@ textarea:-webkit-autofill:focus,
   .gamehover_GameHoverCapsuleCtn_2jsr3.gamehover_UseHidingBottomHalf_5hPHC {
     overflow: hidden; }
   .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_TrailerAnchorStoreLink_OxANH {
-    height: 100%;
     position: relative; }
   .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_TrailerCtn_1I27K {
     position: relative;
@@ -3570,7 +3569,8 @@ textarea:-webkit-autofill:focus,
     width: 0;
     height: 0;
     padding: 7px 0;
-    transition: padding-right 0.2s ease-out; }
+    transition: padding-right 0.2s ease-out;
+    font-size: 13px; }
     .gamehover_WishlistButton_3notz .gamehover_WishlistButtonText_VI5mZ.gamehover_WishlistLoadingText_7-s8T {
       /* stylelint-disable-line selector-class-pattern */
       filter: opacity(50%); }
@@ -3596,21 +3596,20 @@ textarea:-webkit-autofill:focus,
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.9);
   color: white;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  flex: 1; }
   .gamehover_UseHidingBottomHalf_5hPHC .gamehover_BottomShelf_oAqlZ {
     max-height: 85%;
     transform: translateY(-50%); }
     .gamehover_Open_1rWYa .gamehover_UseHidingBottomHalf_5hPHC .gamehover_BottomShelf_oAqlZ {
       transform: translateY(0); }
   .gamehover_BottomShelf_oAqlZ .gamehover_BottomShelfOffScreen_36zpR {
-    flex-shrink: 1;
-    overflow-y: none; }
+    flex: 1;
+    overflow-y: auto; }
   .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL {
-    padding: 4px 8px;
-    padding-left: 4px;
-    padding-top: 4px; }
+    padding: 4px; }
     .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_GameTitle_405wj {
-      font-size: 18px;
+      font-size: 2em;
       padding: 0px 4px;
       text-overflow: ellipsis;
       white-space: nowrap;
@@ -3618,9 +3617,8 @@ textarea:-webkit-autofill:focus,
       max-height: 24px; }
     .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_TagRow_2SWQM {
       color: #88aacc;
-      font-size: 10px;
       display: flex;
-      padding: 8px 0px 0px 0px;
+      padding: 8px 0px 4px;
       max-height: 20px; }
       .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_TagRow_2SWQM .gamehover_Tags_fTGVi {
         overflow: hidden;
@@ -3639,22 +3637,6 @@ textarea:-webkit-autofill:focus,
           text-overflow: ellipsis;
           white-space: nowrap;
           position: relative; }
-    .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_ReviewScoreHeader_2t-0j {
-      color: #6b8aaa;
-      margin-left: 4px; }
-    .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_ReviewScoreValue_3ZWs0 {
-      display: flex; }
-      .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_ReviewScoreValue_3ZWs0.gamehover_ReviewScoreLow_3nU5I {
-        color: gray; }
-      .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_ReviewScoreValue_3ZWs0.gamehover_ReviewScoreMixed_11Q2_ {
-        color: #d8d81e; }
-      .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_ReviewScoreValue_3ZWs0.gamehover_ReviewScoreHigh_3wXHC {
-        color: #32ad32; }
-      .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_ReviewScoreValue_3ZWs0 .gamehover_ReviewScorePercentage_38dPa {
-        margin-right: 4px; }
-    .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_ReviewScoreCount_1wXL_ {
-      color: #6b8aaa;
-      margin-left: 4px; }
     .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_PlatformDisplay_2UG4_ {
       padding-left: 8px;
       margin-bottom: 4px;
@@ -3662,21 +3644,21 @@ textarea:-webkit-autofill:focus,
     .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_ReviewsAndRelease_1HFUC {
       display: flex;
       justify-content: left;
-      font-size: 14px;
+      font-size: 1.4em;
       margin-left: -4px; }
       .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_ReviewsAndRelease_1HFUC .gamehover_ReleaseDate_35Bya {
         padding: 4px;
-        font-size: 12px;
+        font-size: 1.2em;
         color: #6b8aaa; }
         .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_ReviewsAndRelease_1HFUC .gamehover_ReleaseDate_35Bya .gamehover_ReleasePrefix_2ZKEX {
           margin-right: 4px; }
 
 .gamehover_ReviewScore_3qvpp {
-  font-size: 12px;
+  font-size: 1.2em;
   display: flex;
-  padding-bottom: 4px; }
-  .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreHeader_2t-0j {
-    color: #88aacc;
+  padding: 0 0 4px 4px; }
+  .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreHeader_2t-0j, .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreCount_1wXL_ {
+    color: #6b8aaa;
     margin-right: 4px; }
   .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreValue_3ZWs0 {
     display: flex; }
@@ -3688,9 +3670,6 @@ textarea:-webkit-autofill:focus,
       color: #32ad32; }
     .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreValue_3ZWs0 .gamehover_ReviewScorePercentage_38dPa {
       margin-right: 4px; }
-  .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreCount_1wXL_ {
-    color: #88aacc;
-    margin-left: 4px; }
 
 .demobutton_DemoButton_3euSF {
   position: relative;
@@ -4098,6 +4077,9 @@ textarea:-webkit-autofill:focus,
 
 .salepreviewwidgets_InGameHover_axjdi .salepreviewwidgets_StoreSalePriceWidgetContainer_2s-O5, .salepreviewwidgets_InGameHover_axjdi .salepreviewwidgets_StoreSalePriceBox_3j4dI {
   background-color: #00000000; }
+
+.salepreviewwidgets_InGameHover_axjdi .salepreviewwidgets_StoreSaleDiscountBox_cnkoF, .salepreviewwidgets_InGameHover_axjdi .salepreviewwidgets_StoreSaleDiscountedPriceCtn_3NhLu .salepreviewwidgets_StoreSalePriceBox_3j4dI {
+  font-size: 1.5em; }
 
 .salepreviewwidgets_StoreSaleDiscountedPriceCtn_3NhLu {
   display: flex;
@@ -6434,13 +6416,12 @@ div.creatorhomeembed_SocialContainer_1o1Ds {
 .creatorhomeembed_CuratorHoverCtn_30j_R .creatorhomeembed_AvatarLink_1N0rY {
   display: none; }
 
-.facetedbrowse_FacetedBrowseCtn_1Drr- {
-  display: flex;
-  flex-direction: row; }
-  @media only screen and (min-width: 1200px) {
-    .facetedbrowse_FacetedBrowseCtn_1Drr- {
-      flex-wrap: nowrap;
-      justify-content: flex-end; } }
+@media only screen and (min-width: 1200px) {
+  .facetedbrowse_FacetedBrowseCtn_1Drr- {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end; } }
 
 @media only screen and (min-width: 1200px) {
   .facetedbrowse_FacetedBrowseControls_1JM3A {
@@ -6506,10 +6487,8 @@ div.creatorhomeembed_SocialContainer_1o1Ds {
 .facetedbrowse_FacetedBrowsePopup_2FEDs {
   height: 24px;
   width: 24px;
-  margin-bottom: auto;
-  position: absolute;
-  top: 24px;
-  right: 24px;
+  margin-left: auto;
+  margin-bottom: 16px;
   filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.3)); }
 
 .facetedbrowse_FacetedBrowsePopup_2FEDs svg {

@@ -239,7 +239,14 @@ GDynamicStore = {
 		if ( !window.history || !window.history.replaceState || !window.location.search )
 			return;
 
+		GDynamicStore.RemoveParamFromURL( 'snr' );
+		GDynamicStore.RemoveParamFromURL( 'ser' );
+	},
+
+	RemoveParamFromURL: function( strParamName )
+	{
 		// find snr param
+		var strParamPrefix = '' + strParamName + '=';
 		var strSearch = window.location.search;
 		if ( strSearch.indexOf( '?' ) == 0 )
 			strSearch = strSearch.slice( 1 );
@@ -249,7 +256,7 @@ GDynamicStore = {
 		for ( var i = 0; i < rgParams.length; i++ )
 		{
 			var strParam = rgParams[i];
-			if (strParam.indexOf('snr=') == 0)
+			if (strParam.indexOf( strParamPrefix ) == 0)
 			{
 				iParam = i;
 				break;

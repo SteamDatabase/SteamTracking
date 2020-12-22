@@ -190,7 +190,11 @@ function HomeSaleFilterHeroes( $Parent )
 
 	var rgPositionByApp = {};
 	for ( var i = 0; i < rgAppPriorityList.length; i++ )
-		rgPositionByApp[ rgAppPriorityList[i] ] = i;
+	{
+		if ( !rgAppPriorityList[i].appid )
+			continue;
+		rgPositionByApp[ rgAppPriorityList[i].appid ] = i;
+	}
 
 	/* promote Destiny 2 position to match Beyond Light, if present */
 	if ( rgPositionByApp[1314563] !== undefined )
@@ -231,6 +235,21 @@ function HomeSaleFilterHeroes( $Parent )
 	$Row.css('minHeight', '' );
 }
 
+
+
+function ItemKey( rgItem )
+{
+	if ( rgItem.appid )
+		return 'a' + rgItem.appid;
+	else if ( rgItem.packageid )
+		return 'p' + rgItem.packageid;
+	else if ( rgItem.bundleid )
+		return 'b' + rgItem.bundleid;
+
+	return 'unknown';
+}
+
+
 function SortItemListByPriorityList( rgItemList, strPriorityListName )
 {
 	var rgAppPriorityList = g_rgAppPriorityLists[strPriorityListName] || [];
@@ -240,21 +259,19 @@ function SortItemListByPriorityList( rgItemList, strPriorityListName )
 
 	var rgPositionByApp = {};
 	for ( var i = 0; i < rgAppPriorityList.length; i++ )
-		rgPositionByApp[ rgAppPriorityList[i] ] = i;
+		rgPositionByApp[ ItemKey( rgAppPriorityList[i] ) ] = i;
 
 	for ( var i = 0; i < rgItemList.length; i++ )
 	{
-		var appid = rgItemList[i].appid;
-		if ( appid && rgPositionByApp[appid] === undefined )
-			rgPositionByApp[appid] = i + 1000;
+		var key = ItemKey( rgItemList[i] );
+		if ( key && rgPositionByApp[key] === undefined )
+			rgPositionByApp[key] = i + 1000;
 	}
 
 	var rgItemListSorted = rgItemList.slice();
 	rgItemListSorted.sort( function( a, b ) {
-		var appidA = a.appid;
-		var appidB = b.appid;
-		var posA = rgPositionByApp[appidA];
-		var posB = rgPositionByApp[appidB];
+		var posA = rgPositionByApp[ ItemKey( a ) ];
+		var posB = rgPositionByApp[ ItemKey( b ) ];
 		return ( posA !== undefined ? posA : 1000 ) - ( posB !== undefined ? posB : 1000 );
 	});
 
@@ -279,7 +296,7 @@ function HomeRenderFeaturedItems( rgDisplayLists, rgTagData, rgFranchiseData, rg
 		HomeSaleBlock( rgSteamAwardWinners, $J('#steamawards_target' ), 'sale_steamawards' );
 	}
 
-	rgAllTier1Items = GHomepage.MergeLists( rgDisplayLists.sale_tier1, false, rgDisplayLists.sale_tier1_fallback, false );
+	var rgAllTier1Items = GHomepage.MergeLists( rgDisplayLists.sale_tier1, false, rgDisplayLists.sale_tier1_fallback, false );
 
 	var rgTier1 = GHomepage.FilterItemsForDisplay(
 		SortItemListByPriorityList( rgAllTier1Items, 'tier1' ), 'home', k_nTier1ItemsMin, k_nTier1ItemsMax, { games_already_in_library: false, localized: true, displayed_elsewhere: false, only_current_platform: true, enforce_minimum: true }
@@ -287,8 +304,10 @@ function HomeRenderFeaturedItems( rgDisplayLists, rgTagData, rgFranchiseData, rg
 
 	GDynamicStore.MarkAppDisplayed( rgTier1 );
 
+	var rgAllTier2Items = GHomepage.MergeLists( rgDisplayLists.sale_tier2, false, rgDisplayLists.sale_tier2_fallback, false );
+
 	var rgTier2 = GHomepage.FilterItemsForDisplay(
-		rgDisplayLists.sale_tier2.concat( rgDisplayLists.sale_tier2_fallback ), 'home', k_nTier2ItemsMin, k_nTier2ItemsMax, { games_already_in_library: false, localized: true, displayed_elsewhere: false, only_current_platform: true, enforce_minimum: true }
+		SortItemListByPriorityList( rgAllTier2Items, 'tier2' ), 'home', k_nTier2ItemsMin, k_nTier2ItemsMax, { games_already_in_library: false, localized: true, displayed_elsewhere: false, only_current_platform: true, enforce_minimum: true }
 	);
 
 	GDynamicStore.MarkAppDisplayed( rgTier2 );
@@ -303,7 +322,7 @@ function HomeRenderFeaturedItems( rgDisplayLists, rgTagData, rgFranchiseData, rg
 
 	
 	var $Tier2 = $J('#tier2_target' );
-	new CScrollOffsetWatcher( $Tier2, function() { HomeSaleBlock( rgTier2, $Tier2, 'sale_dailydeals_t2'  ); } );
+	new CScrollOffsetWatcher( $Tier2, function() { HomeSaleBlock( rgTier2, $Tier2, 'sale_dailydeals_t2_priority'  ); } );
 
 
 	var $UserArea = $J('#home_sale_account_ctn');
