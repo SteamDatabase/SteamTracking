@@ -4076,7 +4076,7 @@ textarea:-webkit-autofill:focus,
       min-height: 38px; }
 
 .salepreviewwidgets_InGameHover_axjdi .salepreviewwidgets_StoreSalePriceWidgetContainer_2s-O5, .salepreviewwidgets_InGameHover_axjdi .salepreviewwidgets_StoreSalePriceBox_3j4dI {
-  background-color: #00000000; }
+  background-color: transparent; }
 
 .salepreviewwidgets_InGameHover_axjdi .salepreviewwidgets_StoreSaleDiscountBox_cnkoF, .salepreviewwidgets_InGameHover_axjdi .salepreviewwidgets_StoreSaleDiscountedPriceCtn_3NhLu .salepreviewwidgets_StoreSalePriceBox_3j4dI {
   font-size: 1.5em; }
@@ -4120,10 +4120,8 @@ textarea:-webkit-autofill:focus,
     transform: skewY(-15deg); }
 
 .salepreviewwidgets_StoreSalePriceBox_3j4dI {
-  background: black;
   font-size: 14px;
   padding: 5px 8px;
-  background-color: black;
   align-items: center;
   display: flex;
   border-top-left-radius: 3px;
@@ -4132,8 +4130,7 @@ textarea:-webkit-autofill:focus,
 .salepreviewwidgets_Discounted_1g0B- {
   margin: 0 0 0 4px;
   display: flex;
-  align-items: center;
-  background-color: black; }
+  align-items: center; }
   .salepreviewwidgets_Discounted_1g0B- .salepreviewwidgets_BaseDiscount_3mInD {
     padding: 6px;
     font-size: 18px;
