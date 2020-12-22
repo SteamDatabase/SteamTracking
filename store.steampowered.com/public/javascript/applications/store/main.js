@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6285217";
+var CLSTAMP = "6285575";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [9],
   {
@@ -6006,16 +6006,16 @@ var CLSTAMP = "6285217";
       "use strict";
       n.r(t),
         n.d(t, "EventDisplaySteamAwardNomination", function() {
-          return T;
-        }),
-        n.d(t, "ConfirmOverwriteVoteOrNominationDialog", function() {
-          return I;
-        }),
-        n.d(t, "EventDisplaySteamAwardVote", function() {
           return B;
         }),
-        n.d(t, "WinterSaleSteamAwardVoteWrapper", function() {
+        n.d(t, "ConfirmOverwriteVoteOrNominationDialog", function() {
+          return D;
+        }),
+        n.d(t, "EventDisplaySteamAwardVote", function() {
           return N;
+        }),
+        n.d(t, "WinterSaleSteamAwardVoteWrapper", function() {
+          return z;
         });
       var l = n("mrSG"),
         r = n("vDqi"),
@@ -6025,12 +6025,12 @@ var CLSTAMP = "6285217";
         p = n("q1tI"),
         i = n("ir+G"),
         d = n("Mgs7"),
-        s = n("exH9"),
-        m = n("TLQK"),
-        h = n("bDQf"),
-        c = n("bxiW"),
-        f = n("lkRc"),
-        b = n("Jqb/"),
+        m = n("exH9"),
+        h = n("TLQK"),
+        f = n("bDQf"),
+        s = n("bxiW"),
+        b = n("lkRc"),
+        c = n("Jqb/"),
         _ = n("ka0M"),
         v = n("0OaU"),
         g = n("/PpB"),
@@ -6038,13 +6038,15 @@ var CLSTAMP = "6285217";
         y = n.n(M),
         S = n("6eA3"),
         O = n.n(S),
-        E = n("BFsE"),
-        A = n("wd/R"),
-        C = n.n(A),
-        w = n("5eAM");
-      function L(e) {
-        if (f.i.logged_in) {
-          if (!f.i.is_limited) return 1;
+        E = n("fpVW"),
+        A = n.n(E),
+        C = n("BFsE"),
+        w = n("wd/R"),
+        L = n.n(w),
+        T = n("5eAM");
+      function I(e) {
+        if (b.i.logged_in) {
+          if (!b.i.is_limited) return 1;
           Object(_.d)(
             p.createElement(g.a, {
               strTokenOverride: e
@@ -6055,18 +6057,18 @@ var CLSTAMP = "6285217";
           );
         } else
           Object(_.d)(
-            p.createElement(b.c, {
-              strTitle: Object(m.f)("#EventDisplay_Share_NotLoggedIn"),
-              strDescription: Object(m.f)(
+            p.createElement(c.c, {
+              strTitle: Object(h.f)("#EventDisplay_Share_NotLoggedIn"),
+              strDescription: Object(h.f)(
                 "#EventDisplay_Share_NotLoggedIn_Description"
               ),
-              strOKButtonText: Object(m.f)("#MobileLogin_SignIn"),
-              onOK: E.a
+              strOKButtonText: Object(h.f)("#MobileLogin_SignIn"),
+              onOK: C.a
             }),
             window
           );
       }
-      var T = (function(t) {
+      var B = (function(t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (
@@ -6110,13 +6112,13 @@ var CLSTAMP = "6285217";
                         );
                       if (
                         ((t =
-                          f.c.STORE_BASE_URL +
+                          b.c.STORE_BASE_URL +
                           "steamawards/ajaxgetusernominations"),
                         (n = {
-                          sessionid: f.c.SESSIONID,
-                          authwgtoken: f.i.authwgtoken
+                          sessionid: b.c.SESSIONID,
+                          authwgtoken: b.i.authwgtoken
                         }),
-                        !f.i.logged_in)
+                        !b.i.logged_in)
                       )
                         return [3, 5];
                       e.label = 1;
@@ -6146,7 +6148,7 @@ var CLSTAMP = "6285217";
                     case 3:
                       return (
                         (a = e.sent()),
-                        (o = Object(h.a)(a)),
+                        (o = Object(f.a)(a)),
                         console.error(
                           "Could not fetch previous nominations:" +
                             o.strErrorMsg,
@@ -6200,7 +6202,7 @@ var CLSTAMP = "6285217";
                   return (
                     (t = this.props.event.GetSteamAwardCategory()) !=
                       this.state.eCategoryLoaded ||
-                      (L(!1) &&
+                      (I(!1) &&
                         ((n = this.props.event.appid),
                         this.state.nomineeAppID && this.state.nomineeAppID != n
                           ? a &&
@@ -6216,7 +6218,7 @@ var CLSTAMP = "6285217";
             (e.prototype.HandleConflict = function(e) {
               var t = this;
               Object(_.d)(
-                p.createElement(I, {
+                p.createElement(D, {
                   strLocTokenInfix: "Nomination",
                   strNewGameTitle: this.props.event.GetGameTitle(
                     this.props.lang
@@ -6250,12 +6252,12 @@ var CLSTAMP = "6285217";
                         this.props.previewMode)
                       )
                         return [2];
-                      (t = f.c.STORE_BASE_URL + "steamawards/ajaxnominategame"),
+                      (t = b.c.STORE_BASE_URL + "steamawards/ajaxnominategame"),
                         (n = new URLSearchParams()).append(
                           "sessionid",
-                          f.c.SESSIONID
+                          b.c.SESSIONID
                         ),
-                        n.append("authwgtoken", f.i.authwgtoken),
+                        n.append("authwgtoken", b.i.authwgtoken),
                         n.append("categoryid", i.toString()),
                         n.append("nominatedid", s.toString()),
                         n.append("rescind", c ? "0" : "1"),
@@ -6278,13 +6280,13 @@ var CLSTAMP = "6285217";
                         : ((r && 200 == r.status && 1 == r.data.success) ||
                             console.error(
                               "Nomination request failed.",
-                              r && Object(h.a)(r)
+                              r && Object(f.a)(r)
                             ),
                           [3, 4]);
                     case 3:
                       return (
                         (a = e.sent()),
-                        (o = Object(h.a)(a)),
+                        (o = Object(f.a)(a)),
                         console.error(
                           "SaveNomination failed: " + o.strErrorMsg,
                           o
@@ -6299,8 +6301,8 @@ var CLSTAMP = "6285217";
             }),
             (e.prototype.render = function() {
               var e = Math.floor(Date.now() / 1e3),
-                t = C()("2020-11-25T10:00:00-08:00").unix(),
-                n = C()("2020-12-01T10:00:00-08:00").unix();
+                t = L()("2020-11-25T10:00:00-08:00").unix(),
+                n = L()("2020-12-01T10:00:00-08:00").unix();
               if (
                 this.props.event.GetStartTimeAndDateUnixSeconds() < t ||
                 n < e
@@ -6309,7 +6311,7 @@ var CLSTAMP = "6285217";
                   "div",
                   { className: y.a.ExpiredEventHeader },
                   " ",
-                  Object(m.f)("#SteamAwards_ExpiredEvent"),
+                  Object(h.f)("#SteamAwards_ExpiredEvent"),
                   " "
                 );
               var r = this.props.event.GetSteamAwardCategory(),
@@ -6325,7 +6327,10 @@ var CLSTAMP = "6285217";
               return p.createElement(
                 "div",
                 {
-                  className: y.a.SteamAwardContainer,
+                  className: Object(m.a)(
+                    y.a.SteamAwardContainer,
+                    A.a.PartnerEventFont
+                  ),
                   style: a
                     ? {
                         backgroundImage:
@@ -6341,7 +6346,7 @@ var CLSTAMP = "6285217";
                   p.createElement("img", {
                     className: y.a.SteamAwardHeaderImage,
                     src:
-                      f.c.MEDIA_CDN_URL +
+                      b.c.MEDIA_CDN_URL +
                       "store/promo/autumn2020/event_nomination_banner_2020.png?v=2"
                   }),
                   p.createElement(
@@ -6351,25 +6356,25 @@ var CLSTAMP = "6285217";
                       "div",
                       { className: y.a.SteamAwardMainTitle },
                       " ",
-                      Object(m.f)("#SteamAwards_EventMainTitle"),
+                      Object(h.f)("#SteamAwards_EventMainTitle"),
                       " "
                     ),
                     p.createElement(
                       "div",
                       { className: y.a.SteamAwardSubTitle },
                       i
-                        ? Object(m.f)("#SteamAwards_EventCallToAction")
-                        : Object(m.f)("#SteamAwards_EventVotingDateTeaser", c),
+                        ? Object(h.f)("#SteamAwards_EventCallToAction")
+                        : Object(h.f)("#SteamAwards_EventVotingDateTeaser", c),
                       i &&
                         p.createElement(
                           "a",
                           {
                             href:
-                              f.c.STORE_BASE_URL + "steamawards/nominations/",
+                              b.c.STORE_BASE_URL + "steamawards/nominations/",
                             className: y.a.SteamAwardLearnMore
                           },
                           "(",
-                          Object(m.f)("#EventDisplay_CallToAction_LearnMore"),
+                          Object(h.f)("#EventDisplay_CallToAction_LearnMore"),
                           ")"
                         )
                     ),
@@ -6378,7 +6383,7 @@ var CLSTAMP = "6285217";
                       { className: y.a.SteamAwardHeaderText },
                       i
                         ? a
-                          ? Object(m.f)(
+                          ? Object(h.f)(
                               "#SteamAwards_EventNominateGamePrompt_Long",
                               this.props.event.GetGameTitle(this.props.lang)
                             )
@@ -6387,15 +6392,15 @@ var CLSTAMP = "6285217";
                               {
                                 className: O.a.LinkText,
                                 href:
-                                  f.c.STORE_BASE_URL +
+                                  b.c.STORE_BASE_URL +
                                   "steamawards/nominations/"
                               },
-                              Object(m.f)(
+                              Object(h.f)(
                                 "#SteamAwards_EventNominateGamePrompt_NoCategory",
                                 this.props.event.GetGameTitle(this.props.lang)
                               )
                             )
-                        : Object(m.f)("#SteamAwards_Event_NominationsClosed")
+                        : Object(h.f)("#SteamAwards_Event_NominationsClosed")
                     )
                   )
                 ),
@@ -6408,7 +6413,7 @@ var CLSTAMP = "6285217";
                       { className: y.a.SteamAwardVotePrompt },
                       " ",
                       i &&
-                        Object(m.f)(
+                        Object(h.f)(
                           "#SteamAwards_EventNominateGamePrompt_CategoryPrefix"
                         ),
                       " "
@@ -6430,12 +6435,12 @@ var CLSTAMP = "6285217";
                           p.createElement(
                             "div",
                             { className: y.a.SteamAwardCategoryTitle },
-                            Object(m.f)("#promo_steamawards2020_cat" + r)
+                            Object(h.f)("#promo_steamawards2020_cat" + r)
                           ),
                           p.createElement(
                             "span",
                             { className: y.a.SteamAwardCategoryDesc },
-                            Object(m.f)(
+                            Object(h.f)(
                               "#promo_steamawards2020_cat" + r + "_desc"
                             )
                           )
@@ -6450,10 +6455,10 @@ var CLSTAMP = "6285217";
                             "a",
                             {
                               href:
-                                f.c.STORE_BASE_URL + "steamawards/nominations/"
+                                b.c.STORE_BASE_URL + "steamawards/nominations/"
                             },
                             " ",
-                            Object(m.f)(
+                            Object(h.f)(
                               "#SteamAwards_EventNominationAlternativeLinkText"
                             ),
                             " "
@@ -6469,12 +6474,12 @@ var CLSTAMP = "6285217";
               "m_strPreviousNomineeTitle",
               void 0
             ),
-            Object(l.c)([c.a], e.prototype, "OnNominateClick", null),
-            Object(l.c)([c.a], e.prototype, "SaveNomination", null),
+            Object(l.c)([s.a], e.prototype, "OnNominateClick", null),
+            Object(l.c)([s.a], e.prototype, "SaveNomination", null),
             (e = Object(l.c)([o.a], e))
           );
         })(p.Component),
-        I = (function(e) {
+        D = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -6503,16 +6508,16 @@ var CLSTAMP = "6285217";
                   : p.createElement(v.a, {
                       size: "small",
                       position: "center",
-                      string: Object(m.f)("#Loading")
+                      string: Object(h.f)("#Loading")
                     });
-              return p.createElement(b.c, {
+              return p.createElement(c.c, {
                 bDestructiveWarning: !0,
-                strTitle: Object(m.f)(
+                strTitle: Object(h.f)(
                   "#SteamAward_" +
                     this.props.strLocTokenInfix +
                     "ConflictWarning_Title"
                 ),
-                strDescription: Object(m.n)(
+                strDescription: Object(h.n)(
                   "#SteamAward_" +
                     this.props.strLocTokenInfix +
                     "ConflictWarning_Explanation",
@@ -6523,12 +6528,12 @@ var CLSTAMP = "6285217";
                 onCancel: this.OnCancel
               });
             }),
-            Object(l.c)([c.a], t.prototype, "OnConfirm", null),
-            Object(l.c)([c.a], t.prototype, "OnCancel", null),
+            Object(l.c)([s.a], t.prototype, "OnConfirm", null),
+            Object(l.c)([s.a], t.prototype, "OnCancel", null),
             (t = Object(l.c)([o.a], t))
           );
         })(p.Component),
-        B = (function(t) {
+        N = (function(t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (
@@ -6561,12 +6566,12 @@ var CLSTAMP = "6285217";
                     case 0:
                       if (
                         ((t =
-                          f.c.STORE_BASE_URL + "steamawards/ajaxgetuservotes"),
+                          b.c.STORE_BASE_URL + "steamawards/ajaxgetuservotes"),
                         (n = {
-                          sessionid: f.c.SESSIONID,
-                          authwgtoken: f.i.authwgtoken
+                          sessionid: b.c.SESSIONID,
+                          authwgtoken: b.i.authwgtoken
                         }),
-                        !f.i.logged_in)
+                        !b.i.logged_in)
                       )
                         return [3, 5];
                       e.label = 1;
@@ -6596,7 +6601,7 @@ var CLSTAMP = "6285217";
                     case 3:
                       return (
                         (a = e.sent()),
-                        (o = Object(h.a)(a)),
+                        (o = Object(f.a)(a)),
                         console.error(
                           "Could not fetch previous votes:" + o.strErrorMsg,
                           o
@@ -6648,7 +6653,7 @@ var CLSTAMP = "6285217";
                   return (
                     (t = this.props.eVoteCategory) !=
                       this.state.eCategoryLoaded ||
-                      (L(!0) &&
+                      (I(!0) &&
                         ((n = this.props.appID),
                         this.state.votedForAppID &&
                         this.state.votedForAppID != n
@@ -6663,9 +6668,9 @@ var CLSTAMP = "6285217";
             }),
             (e.prototype.HandleConflict = function(e) {
               var t = this,
-                n = w.a.GetAppLinkInfo(this.props.appID);
+                n = T.a.GetAppLinkInfo(this.props.appID);
               Object(_.d)(
-                p.createElement(I, {
+                p.createElement(D, {
                   strLocTokenInfix: "Vote",
                   strNewGameTitle: n.name,
                   fnGetOldGameTitle: function() {
@@ -6688,15 +6693,15 @@ var CLSTAMP = "6285217";
                           eCategoryLoaded: i,
                           votedForAppID: s
                         }),
-                        this.props.previewMode && 1 == f.c.EUNIVERSE)
+                        this.props.previewMode && 1 == b.c.EUNIVERSE)
                       )
                         return [2];
-                      (t = f.c.STORE_BASE_URL + "steamawards/ajaxvoteforgame"),
+                      (t = b.c.STORE_BASE_URL + "steamawards/ajaxvoteforgame"),
                         (n = new URLSearchParams()).append(
                           "sessionid",
-                          f.c.SESSIONID
+                          b.c.SESSIONID
                         ),
-                        n.append("authwgtoken", f.i.authwgtoken),
+                        n.append("authwgtoken", b.i.authwgtoken),
                         n.append("categoryid", i.toString()),
                         n.append("appid", s.toString()),
                         (e.label = 1);
@@ -6717,13 +6722,13 @@ var CLSTAMP = "6285217";
                         : ((r && 200 == r.status && 1 == r.data.success) ||
                             console.error(
                               "Vote request failed.",
-                              r && Object(h.a)(r)
+                              r && Object(f.a)(r)
                             ),
                           [3, 4]);
                     case 3:
                       return (
                         (a = e.sent()),
-                        (o = Object(h.a)(a)),
+                        (o = Object(f.a)(a)),
                         console.error("SaveVote failed: " + o.strErrorMsg, o),
                         [3, 4]
                       );
@@ -6743,7 +6748,7 @@ var CLSTAMP = "6285217";
                 t
                 ? p.createElement(
                     "div",
-                    { className: Object(s.a)(y.a.SteamAwardVoteWidget) },
+                    { className: Object(m.a)(y.a.SteamAwardVoteWidget) },
                     p.createElement("div", {
                       className: y.a.SteamAwardVotePrompt
                     }),
@@ -6753,13 +6758,13 @@ var CLSTAMP = "6285217";
                       p.createElement(
                         "div",
                         { className: y.a.SteamAwardCategoryTitle },
-                        Object(m.f)("#promo_steamawards2020_cat" + e)
+                        Object(h.f)("#promo_steamawards2020_cat" + e)
                       ),
                       !this.props.bRenderFromStorePage &&
                         p.createElement(
                           "span",
                           { className: y.a.SteamAwardCategoryDesc },
-                          Object(m.f)(
+                          Object(h.f)(
                             "#promo_steamawards2020_cat" + e + "_desc"
                           )
                         ),
@@ -6770,7 +6775,7 @@ var CLSTAMP = "6285217";
                             p.createElement(
                               "span",
                               { className: y.a.SteamAwardVoteButtonText },
-                              Object(m.f)("#SteamAward_VoteButton_VotedText")
+                              Object(h.f)("#SteamAward_VoteButton_VotedText")
                             )
                           )
                         : p.createElement(
@@ -6782,7 +6787,7 @@ var CLSTAMP = "6285217";
                             p.createElement(
                               "span",
                               { className: y.a.SteamAwardVoteButtonText },
-                              Object(m.f)("#SteamAward_VoteButton_PromptText")
+                              Object(h.f)("#SteamAward_VoteButton_PromptText")
                             )
                           )
                     )
@@ -6795,15 +6800,15 @@ var CLSTAMP = "6285217";
               "m_strPreviousVotedForAppTitle",
               void 0
             ),
-            Object(l.c)([c.a], e.prototype, "OnVoteClick", null),
-            Object(l.c)([c.a], e.prototype, "SaveVote", null),
+            Object(l.c)([s.a], e.prototype, "OnVoteClick", null),
+            Object(l.c)([s.a], e.prototype, "SaveVote", null),
             (e = Object(l.c)([o.a], e))
           );
         })(p.Component),
-        D = (function(r) {
+        j = (function(r) {
           function e(e) {
             var t = r.call(this, e) || this,
-              n = Object(f.f)("steamwawards", "application_config");
+              n = Object(b.f)("steamwawards", "application_config");
             return (
               (t.m_voteCategories = null == n ? void 0 : n.votecategories), t
             );
@@ -6812,7 +6817,7 @@ var CLSTAMP = "6285217";
             Object(l.d)(e, r),
             (e.prototype.render = function() {
               return this.m_voteCategories
-                ? p.createElement(N, {
+                ? p.createElement(z, {
                     appID: this.props.appID,
                     bRenderFromStorePage: !0,
                     bIsEventActionEnabled: !0,
@@ -6826,8 +6831,8 @@ var CLSTAMP = "6285217";
             e
           );
         })(p.Component);
-      t.default = D;
-      var N = (function(n) {
+      t.default = j;
+      var z = (function(n) {
         function e(e) {
           var t = n.call(this, e) || this;
           return (t.state = { bAppInfoLoaded: !1 }), t;
@@ -6836,8 +6841,8 @@ var CLSTAMP = "6285217";
           Object(l.d)(e, n),
           (e.prototype.componentDidMount = function() {
             var e = this;
-            w.a.LoadAppLinkInfo([this.props.appID]).then(function() {
-              (e.m_appInfo = w.a.GetAppLinkInfo(e.props.appID)),
+            T.a.LoadAppLinkInfo([this.props.appID]).then(function() {
+              (e.m_appInfo = T.a.GetAppLinkInfo(e.props.appID)),
                 e.m_appInfo && e.setState({ bAppInfoLoaded: !0 });
             });
           }),
@@ -6848,7 +6853,7 @@ var CLSTAMP = "6285217";
               this.props.voteCategories.forEach(function(e) {
                 n.push(
                   p.createElement(
-                    B,
+                    N,
                     Object(l.a)({ key: e, eVoteCategory: e }, t.props)
                   )
                 );
@@ -6860,14 +6865,19 @@ var CLSTAMP = "6285217";
             return this.state.bAppInfoLoaded
               ? p.createElement(
                   "div",
-                  { className: Object(s.a)(y.a.SteamAwardContainer) },
+                  {
+                    className: Object(m.a)(
+                      y.a.SteamAwardContainer,
+                      A.a.PartnerEventFont
+                    )
+                  },
                   p.createElement(
                     "div",
                     { className: y.a.SteamAwardHeader },
                     p.createElement("img", {
                       className: y.a.SteamAwardHeaderImage,
                       src:
-                        f.c.MEDIA_CDN_URL +
+                        b.c.MEDIA_CDN_URL +
                         "store/promo/autumn2020/event_nomination_banner_2020.png?v=2"
                     }),
                     p.createElement(
@@ -6877,14 +6887,14 @@ var CLSTAMP = "6285217";
                         "div",
                         { className: y.a.SteamAwardMainTitle },
                         " ",
-                        Object(m.f)("#SteamAwards_EventMainTitle"),
+                        Object(h.f)("#SteamAwards_EventMainTitle"),
                         " "
                       ),
                       p.createElement(
                         "div",
                         { className: y.a.SteamAwardMainTitle },
                         " ",
-                        Object(m.f)("#SteamAwards_EventMainTitleSecondLine"),
+                        Object(h.f)("#SteamAwards_EventMainTitleSecondLine"),
                         " "
                       ),
                       p.createElement(
@@ -6894,20 +6904,20 @@ var CLSTAMP = "6285217";
                           ? p.createElement(
                               p.Fragment,
                               null,
-                              Object(m.f)(
+                              Object(h.f)(
                                 "#SteamAwards_EventVoteForGamePrompt",
                                 this.m_appInfo.name
                               ),
                               p.createElement(
                                 "a",
                                 {
-                                  href: f.c.STORE_BASE_URL + "steamawards/",
-                                  className: Object(s.a)(
+                                  href: b.c.STORE_BASE_URL + "steamawards/",
+                                  className: Object(m.a)(
                                     y.a.SteamAwardLearnMore,
                                     y.a.BottomRight
                                   )
                                 },
-                                Object(m.f)(
+                                Object(h.f)(
                                   "#EventDisplay_CallToAction_LearnMore"
                                 )
                               )
@@ -6915,10 +6925,10 @@ var CLSTAMP = "6285217";
                           : p.createElement(
                               "a",
                               {
-                                href: f.c.STORE_BASE_URL + "steamawards/",
+                                href: b.c.STORE_BASE_URL + "steamawards/",
                                 className: y.a.LinkText
                               },
-                              Object(m.f)("#SteamAwards_Event_VotesClosed")
+                              Object(h.f)("#SteamAwards_Event_VotesClosed")
                             )
                       )
                     )
@@ -45904,7 +45914,7 @@ var CLSTAMP = "6285217";
                 ),
               E.createElement(
                 "div",
-                { className: K.a.EventColumns },
+                { className: Object(I.a)(K.a.EventColumns, "EventDetail") },
                 E.createElement(
                   "div",
                   { className: K.a.EventDetailsDescription },

@@ -7746,7 +7746,6 @@
                   t.appid +
                   "/" +
                   t.community_item_data.item_image_small))),
-            "bulgarian" == K.c.LANGUAGE && 0,
             v.a.createElement(
               w.a,
               {
@@ -15819,7 +15818,7 @@
                 t(
                   new we(
                     "avatar",
-                    [{ cluster: u, type: 0 }, { cluster: d, type: 0 }],
+                    [{ cluster: u, type: 1 }, { cluster: d, type: 1 }],
                     Object(E.f)("#ShopPageTitle_Avatar")
                   )
                 ),

@@ -9241,6 +9241,8 @@ div.apppartnereventspage_EventDetailsBody_3NW5v {
 
 .nominationandvote_SteamAwardContainer_3n6v2 {
   margin-right: 24px;
+  margin-left: 24px;
+  margin-top: 24px;
   margin-bottom: 40px;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
   border-radius: 4px;
@@ -9389,6 +9391,16 @@ div.apppartnereventspage_EventDetailsBody_3NW5v {
   margin-bottom: 30px;
   padding: 10px;
   background: rgba(30, 33, 38, 0.5); }
+
+.EventDetail .nominationandvote_SteamAwardContainer_3n6v2 {
+  max-width: 713px;
+  margin-right: 0px;
+  margin-left: 0px;
+  margin-top: 0px; }
+
+.steam_awards_vote_section .nominationandvote_SteamAwardContainer_3n6v2 {
+  margin-left: 0px;
+  margin-top: 0px; }
 
 .steam_awards_vote_section .nominationandvote_AwardCategoriesCtn_2u4z7 {
   display: flex;
