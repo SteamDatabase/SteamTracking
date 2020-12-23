@@ -304,7 +304,7 @@
                   },
                   i
                 ),
-                g.createElement(_.I, null)
+                g.createElement(_.D, null)
               ),
             a &&
               g.createElement(
@@ -321,7 +321,7 @@
                   },
                   i
                 ),
-                g.createElement(_.Z, null)
+                g.createElement(_.S, null)
               ),
             o &&
               g.createElement(
@@ -338,7 +338,7 @@
                   },
                   i
                 ),
-                g.createElement(_.d, null)
+                g.createElement(_.c, null)
               )
           );
         }),
@@ -4808,7 +4808,7 @@
               { className: $e.ErrorMessage },
               t,
               " ",
-              Object(O.q)(a, { bExcludeAgo: !0, bForceSingleUnits: !0 }),
+              Object(O.p)(a, { bExcludeAgo: !0, bForceSingleUnits: !0 }),
               " "
             ),
             g.createElement("div", { dangerouslySetInnerHTML: { __html: i } })
@@ -6748,7 +6748,7 @@
                       PrivacyKey: "PrivacyInventory",
                       LimitPrivacyKey: "PrivacyProfile"
                     },
-                    Object(O.n)(
+                    Object(O.m)(
                       "#ProfilePrivacy_Inventory_Desc",
                       g.createElement(
                         "a",
@@ -6788,7 +6788,7 @@
                       strLabel: Object(O.f)("#ProfilePrivacy_UGC"),
                       strReadOnlySetting: Object(O.f)("#Privacy_PerItem")
                     },
-                    Object(O.n)(
+                    Object(O.m)(
                       "#ProfilePrivacy_UGC_Desc",
                       g.createElement(
                         "a",
@@ -9199,7 +9199,7 @@
             var t = o.a.CMInterface.GetServerRTime32() - this.last_seen_online;
             return t < 60
               ? Object(s.f)("#PersonaStateLastSeen_JustNow")
-              : Object(s.f)("#PersonaStateLastSeen", Object(s.q)(t));
+              : Object(s.f)("#PersonaStateLastSeen", Object(s.p)(t));
           }),
           (e.prototype.GetLocalizedOnlineStatus = function() {
             switch (this.m_ePersonaState) {
@@ -12433,7 +12433,7 @@
                         B.createElement(
                           "div",
                           { className: A.ConfirmText },
-                          Object(R.n)(
+                          Object(R.m)(
                             "#GrantAward_Confirm",
                             B.createElement(Ne, null, y.toLocaleString()),
                             B.createElement(
@@ -12446,7 +12446,7 @@
                         B.createElement(
                           "div",
                           { className: A.ConfirmText },
-                          Object(R.n)(
+                          Object(R.m)(
                             "#GrantAward_Confirm_Details",
                             B.createElement(Ne, null, g.toLocaleString()),
                             B.createElement(
@@ -12631,7 +12631,7 @@
             B.createElement(
               "div",
               { className: A.Left },
-              B.createElement(ne.C, { className: A.BalanceIcon }),
+              B.createElement(ne.y, { className: A.BalanceIcon }),
               B.createElement(
                 "div",
                 { className: A.BalanceDetails },
@@ -12740,7 +12740,7 @@
           return B.createElement(
             "span",
             Object(s.a)({}, i, { className: Object(te.a)(r, A.PointsAmount) }),
-            B.createElement(ne.C, { className: A.PointsAmountIcon }),
+            B.createElement(ne.y, { className: A.PointsAmountIcon }),
             t
           );
         };

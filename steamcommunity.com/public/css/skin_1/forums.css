@@ -1988,11 +1988,20 @@ select.subforum_select_control {
 	}
 
 	html.responsive .forum_topic_details .forum_topic_reply_count,
+	html.responsive .forum_topic_details .forum_topic_award_count,
 	html.responsive .forum_topic_details .forum_topic_lastpost
 	{
+		padding-left: 2px;
+	}
+
+	html.responsive .forum_topic_details .forum_topic_lastpost {
 		float: none;
-		line-height: 24px;
-		padding: 0;
+		padding-right: 0px;
+	}
+	html.responsive .forum_topic_details .forum_topic_lastpost:before {
+		content: ' ';
+		clear: right;
+		display: block;
 	}
 
 	html.responsive .forumtopic_comments .commentthread_comment .commentthread_comment_avatar,
