@@ -3165,6 +3165,7 @@ function UpdatePaymentInfoForm()
 		var bDisabledPaymentMethod = false;
 		var bShowBankSelection = false;
 		var bPaymentMethodRefundable = rgPaymentMethodProperties[ method.value ].refundable;
+		var bPaymentMethodDelaysInProcessing = rgPaymentMethodProperties[ method.value ].delaysinprocessing;		
 		var bShowCafeFundedInstructions = false;
 		var bShowSaveMyAddressOverride = false;
 		
@@ -3429,10 +3430,13 @@ function UpdatePaymentInfoForm()
 		var strPaymentMethodNotRefundable = !bPaymentMethodRefundable ? 'list-item' : 'none';
 		$('payment_row_not_refundable' ).style.display = strPaymentMethodNotRefundable;
 		
+		var strPaymentMethodDelayInProcessing = bPaymentMethodDelaysInProcessing ? 'list-item' : 'none';
+		$('payment_method_delays_in_processing' ).style.display = strPaymentMethodDelayInProcessing;
+
 		var strCafeFundedInstructions = bShowCafeFundedInstructions ? 'list-item' : 'none';
 		$('payment_method_cafe_funded' ).style.display = strCafeFundedInstructions;
 
-		var strPaymentMethodNotes = !bCanBeSplit || !bPaymentMethodRefundable || bShowPaymentSpecificNote || bShowCafeFundedInstructions ? 'block': 'none';
+		var strPaymentMethodNotes = !bCanBeSplit || !bPaymentMethodRefundable || bShowPaymentSpecificNote || bShowCafeFundedInstructions || bPaymentMethodDelaysInProcessing ? 'block': 'none';
 		$('payment_method_notes' ).style.display = strPaymentMethodNotes;
 	} 
 	catch( e ) 

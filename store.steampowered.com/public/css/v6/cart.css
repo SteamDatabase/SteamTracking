@@ -2023,6 +2023,11 @@ label.send_choice_txt {
   right:auto;
 }
 
+.payment_method_notes_bubble li#payment_method_delays_in_processing
+{
+	color: #f3961c;
+}
+
 .payment_method_notes_bubble li
 {
 	display: list-item;
@@ -2031,6 +2036,7 @@ label.send_choice_txt {
 	margin-bottom: 8px;
 	font-size: 13px;
 }
+
 
 .checkout_tab .form_row
 {

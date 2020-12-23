@@ -40726,7 +40726,7 @@
         p = n("3+zv"),
         h = n("FhLd"),
         f = n("TLQK"),
-        c = n("6AJf"),
+        s = n("6AJf"),
         l = n("5eAM"),
         _ = n("0OaU"),
         b = n("gyoR"),
@@ -40895,57 +40895,69 @@
                   }
               return n;
             }),
-            (r.GenerateMetadata = function(o, s) {
+            (r.GenerateMetadata = function(i, o) {
               return Object(u.b)(this, void 0, void 0, function() {
-                var t, n, a, r, i;
+                var t, n, c, r, a;
                 return Object(u.e)(this, function(e) {
                   switch (e.label) {
                     case 0:
-                      return (t = o.facets), [4, Object(b.e)(s)];
+                      return (t = i.facets), [4, Object(b.e)(o)];
                     case 1:
                       return (
                         e.sent(),
-                        (n = s.map(function(e) {
+                        (n = o.map(function(e) {
                           return Object(b.c)(e);
                         })),
                         [4, Promise.all(n)]
                       );
                     case 2:
                       return (
-                        (a = e.sent()),
-                        (r = s.map(function(e, t) {
-                          var n = a[t].map(function(e) {
-                              return l.a
-                                .GetAppLinkInfo(e)
-                                .tags.map(function(e) {
-                                  return e.name;
-                                });
-                            }),
-                            r = new Set();
+                        (c = e.sent()),
+                        (r = o.map(function(e, t) {
+                          for (
+                            var n = new Array(), r = 0, a = c[t];
+                            r < a.length;
+                            r++
+                          ) {
+                            var i = a[r],
+                              o = l.a.GetAppLinkInfo(i);
+                            o && o.tags
+                              ? n.push(
+                                  o.tags.map(function(e) {
+                                    return e.name;
+                                  })
+                                )
+                              : (n.push(new Array()),
+                                console.log(
+                                  "WARNING: Unable to load app info for app id: " +
+                                    i
+                                ));
+                          }
+                          var s = new Set();
                           return (
                             n.forEach(function(e) {
                               return e.forEach(function(e) {
-                                return r.add(e);
+                                return s.add(e);
                               });
                             }),
-                            Array.from(r)
+                            Array.from(s)
                           );
                         })),
-                        (i = new Array()),
+                        (a = new Array()),
                         t.forEach(function(e) {
                           var t = new Array();
                           e.facetValues.forEach(function(n) {
-                            var e = s.filter(function(e, t) {
-                              return Object(c.b)(r[t], n.filter);
+                            var e = o.filter(function(e, t) {
+                              return Object(s.b)(r[t], n.filter);
                             });
                             t.push({ facetValue: n, matchingCapsules: e });
                           }),
-                            i.push({
+                            a.push({
                               facet: e,
                               matchingCapsulesForFacetValues: t
                             });
                         }),
-                        [2, i]
+                        [2, a]
                       );
                   }
                 });
