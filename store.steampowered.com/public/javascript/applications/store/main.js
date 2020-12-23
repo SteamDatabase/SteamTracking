@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6286643";
+var CLSTAMP = "6288087";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [9],
   {
@@ -7777,6 +7777,11 @@ var CLSTAMP = "6286643";
                   { className: oe.a.StoreSaleDiscountedPriceCtn },
                   L.a.createElement(
                     "div",
+                    { className: oe.a.StoreOriginalPrice },
+                    o
+                  ),
+                  L.a.createElement(
+                    "div",
                     { className: oe.a.StoreSalePriceBox },
                     i
                   )
@@ -8246,36 +8251,37 @@ var CLSTAMP = "6286643";
         Ae = function(e) {
           var t = e.info,
             n = e.appInfo,
-            r = new Array(),
-            a = L.a.useState(null),
-            o = a[0],
-            i = a[1];
-          r.push(t.library_asset), n && t != n && r.push(n.library_asset);
-          var s = r.length - 1;
+            r = t.name,
+            a = new Array(),
+            o = L.a.useState(null),
+            i = o[0],
+            s = o[1];
+          a.push(t.library_asset), n && t != n && a.push(n.library_asset);
+          var c = a.length - 1;
           return (
-            Oe(t, n, !0, r),
+            Oe(t, n, !0, a),
             L.a.createElement(
               "div",
               {
-                className: o
+                className: i
                   ? oe.a.LibraryFallbackAssetImageContainer
                   : oe.a.LibraryAssetImageContainer
               },
-              o &&
+              i &&
                 L.a.createElement("div", {
                   className: oe.a.FallbackBackground,
-                  style: { backgroundImage: "url(" + o + ")" }
+                  style: { backgroundImage: "url(" + i + ")" }
                 }),
               L.a.createElement(P.b, {
                 lazyLoad: !0,
-                srcs: r,
+                srcs: a,
                 className: oe.a.CapsuleImage,
                 width: oe.a.libraryAssetImgWidth,
                 height: oe.a.libraryAssetImgHeight,
-                alt: name,
+                alt: r,
                 onImageError: function(e) {
-                  var t = r.indexOf(e);
-                  s <= t && t < r.length - 1 && i(r[t + 1]);
+                  var t = a.indexOf(e);
+                  c <= t && t < a.length - 1 && s(a[t + 1]);
                 }
               })
             )
@@ -32807,7 +32813,7 @@ var CLSTAMP = "6286643";
         StoreSalePriceBox: "salepreviewwidgets_StoreSalePriceBox_3j4dI",
         StoreSaleDiscountedPriceCtn:
           "salepreviewwidgets_StoreSaleDiscountedPriceCtn_3NhLu",
-        StoreOrignalPrice: "salepreviewwidgets_StoreOrignalPrice_18ANC",
+        StoreOriginalPrice: "salepreviewwidgets_StoreOriginalPrice_3fFFs",
         Discounted: "salepreviewwidgets_Discounted_1g0B-",
         BaseDiscount: "salepreviewwidgets_BaseDiscount_3mInD",
         StoreSalePriceButton: "salepreviewwidgets_StoreSalePriceButton_1BejQ",
