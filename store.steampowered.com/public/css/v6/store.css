@@ -5449,3 +5449,40 @@ background: -webkit-linear-gradient( 297deg, rgba( 255, 255, 255, 0.2) 5%,rgba( 
 
 .range_input:focus::-ms-fill-upper {
 	background: #7fcbf7; }
+
+.important_notice_ctn
+{
+	padding: 20px 40px 20px 40px;
+    display: flex;
+    flex-direction: row;
+	background: linear-gradient(180deg, #3275A6 0%, #125280 100%);
+	border: 3px solid #4891C5;
+}
+
+.important_notice_ctn.important_notice_home
+{
+    margin-top: 80px;
+}
+
+.important_notice_ctn .important_notice_ctn_logo
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+	width: 40px;
+    padding-right: 40px;
+}
+
+.important_notice_ctn .important_notice_ctn_logo img
+{
+	width: 40px;
+	height: 40px;
+}
+
+.important_notice_ctn .important_notice_ctn_text
+{
+	color: #ffffff;
+    line-height: 16px;
+	font-size: 13px;
+	letter-spacing: 1px;
+}
