@@ -1897,6 +1897,10 @@ a.guide_row {
 	margin-top: 10px;
 }
 
+.help_issue_warning {
+	border: 1px solid #f3961c!important
+}
+
 .help_purchase_package.price_strikeout .refund_value,
 .help_microtxn_info.price_strikeout .refund_value
 {
