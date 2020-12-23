@@ -42,29 +42,30 @@
 .profile_showcase_sort_up {
 	width: 0px;
 	height: 0px;
-	border-left: 7px solid transparent;
-	border-right: 7px solid transparent;
-	border-bottom: 7px solid #737373;
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+	border-bottom: 10px solid #737373;
 }
 .profile_showcase_sort_down {
 	width: 0px;
 	height: 0px;
-	border-left: 7px solid transparent;
-	border-right: 7px solid transparent;
-	border-top: 7px solid #737373;
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+	border-top: 10px solid #737373;
 }
 .profile_showcase_sort_up:hover {
-	border-bottom: 7px solid #c8c8c8;
+	border-bottom: 10px solid #c8c8c8;
 }
 .profile_showcase_sort_down:hover {
-	border-top: 7px solid #c8c8c8;
+	border-top: 10px solid #c8c8c8;
 }
 
 .profile_showcase_drag_handle {
 	width: 18px;
 	height: 18px;
-	padding: 0;
+	padding: 10px 0px;
 	cursor: move;
+	padding-left: 1px;
 }
 
 .profile_showcase_drag_and_drop_highlight {
