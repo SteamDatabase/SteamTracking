@@ -4202,7 +4202,9 @@ textarea:-webkit-autofill:focus,
   color: white;
   height: 30px;
   box-sizing: border-box;
-  z-index: 2; }
+  z-index: 2;
+  cursor: pointer;
+  font-size: 14px; }
   .salepreviewwidgets_CapsuleBottomBar_3lmdE .salepreviewwidgets_BottomBarPriceInfo_1X3j2 {
     margin-left: auto;
     display: flex; }
