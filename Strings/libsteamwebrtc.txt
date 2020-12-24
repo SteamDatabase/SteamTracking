@@ -8,19 +8,17 @@ __TEXT
 __gcc_except_tab__TEXT
 __cstring
 __TEXT
-p>\
-p>\
+@k\
+@k\
 __const
 __TEXT
-i_
-i_
 __objc_methname
 __TEXT
 y
 __unwind_info
 __TEXT
-dBd
-dBd
+4qd
+4qd
 __eh_frame
 __TEXT
 8
@@ -32,27 +30,31 @@ __got
 __DATA
 __la_symbol_ptr
 __DATA
+h e
+h e
 __mod_init_func
 __DATA
+@)e
+@)e
 __const
 __DATA
+`)e
+`)e
 __objc_imageinfo__DATA
-Xqg
-Xqg
 __objc_selrefs
 __DATA
-`qg
 0
-`qg
 __objc_classrefs__DATA
 __data
 __DATA
+P#
 __thread_vars
 __DATA
 __thread_data
 __DATA
 __common
 __DATA
+$
 __bss
 __DATA
 H
@@ -62,8 +64,7 @@ __LINKEDIT
 0
 libsteamwebrtc.dylib
 "
-hh
-PAi
+8
 P
 
 
@@ -86,7 +87,6 @@ h
 /usr/lib/libobjc.A.dylib
 &
 )
-p9i
 88
 1
 $
@@ -119,8 +119,7 @@ G
 8
 8
 G
-@@
-IncomingVideoStream
+@@IncomingVideoStream
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/0123456789abcdef89ab
 \\\\\\\\\\\\\\\\6666666666666666md5
 sha-1
@@ -145,7 +144,9 @@ AEAD_AES_128_GCM
 AEAD_AES_256_GCM
 libvpx
 WebRTC-VP8-Forced-Fallback-Encoder-v2
-!
+0C
+0E
+0C
 ;
 Z
 x
@@ -1585,18 +1586,12 @@ y
 +
 1
 (
-1
-,
-1
-)
 !
 A
 2
 1
 %
 }
-A
-0
 @@
 HC
 HB
@@ -1825,9 +1820,6 @@ urn:ietf:params:rtp-hdrext:sdes:repaired-rtp-stream-id
 urn:ietf:params:rtp-hdrext:sdes:mid
 Z
 `@
-0C
-0E
-0C
 
 !
 BO@
@@ -3135,10 +3127,6 @@ level-asymmetry-allowed
 packetization-mode
 sprop-parameter-sets
 <
-A
-<
-A
->
 q
 c
 Q
@@ -3158,12 +3146,21 @@ holdconn
 2
 0
 0u
+A
+6
+!
 a
 \
+A
+>
 q
 h
 v
+A
+<
 q
+A
+7
 stun
 prflx
 relay
@@ -3180,7 +3177,8 @@ Wrong Credentials
 Unsupported Protocol
 Role Conflict
 Server Error
-!
+1
+*
 WebRTC-UseBaseHeavyVP8TL3RateAllocation
 WebRTC-VP8-Forced-Fallback-Encoder-v2
 0u
@@ -4782,8 +4780,6 @@ A
 external hmac sha-1 authentication
 Q
 L
-A
-6
 RTP/AVPF
 UDP/TLS/RTP/SAVPF
 RTP/SAVPF
@@ -4875,7 +4871,6 @@ A
 1
 q
 f
-!
 1
 .
 a
@@ -4885,12 +4880,8 @@ N
 q
 k
 !
-A
-7
 1
 "
-1
-*
 Description contains invalid candidates.
 default
 Invalid session description.
@@ -4900,7 +4891,6 @@ The order of m-lines in answer doesn't match order in offer. Rejecting answer.
 The order of m-lines in subsequent offer doesn't match order from previous offer/answer.
 Session error code:
 Session error description:
-_
 receiver
 A
 4
@@ -4918,6 +4908,9 @@ Q
 A
 !
 !
+!
+1
+)
 1
 !
 a
@@ -4937,7 +4930,13 @@ A
 Q
 F
 A
+0
+A
 8
+1
+,
+!
+_
 IN
 127.0.0.1
 WMS
@@ -4993,9 +4992,33 @@ H264 frame encoding failed.
 SteamH264
 profile_string
 allocator<T>::allocate(size_t n) 'n' exceeds maximum supported size
-Couldn't start socket thread
+~CICESession
+ice_session.cpp:182
 BInitialize
-steamwebrtc.cpp:270
+ice_session.cpp:205
+stun:
+Invalid STUN server address '%s'
+PortAllocator::SetConfiguration failed
+Failed to create P2PTransportChannel
+Error parsing ICE candidate '%s': %s
+AddRemoteIceCandidate
+ice_session.cpp:483
+BSendData
+ice_session.cpp:525
+SetRemoteAuth
+ice_session.cpp:536
+P2PTransportChannel::OnTransportGatheringState now %d
+Ignoring removal of %d ICE candidate
+ICE role conflict detected!
+ICE completed
+ICE failed
+ICE OnWritableState now %d
+ICE OnReceivingState now %d
+~CWebRTCTURNServer
+turnserver.cpp:118
+Couldn't start socket thread
+turnserver.cpp:137
+webrtc_session.cpp:272
 stun:stun.l.google.com:19302
 CreatePeerConnectionFactory() failed
 CreatePeerConnection() failed
@@ -5030,9 +5053,6 @@ true
 .
 object
 map::at:  key not found
-~CWebRTCTURNServer
-turnserver.cpp:113
-turnserver.cpp:132
 , rtcp_send_transport:
 ../../../audio/audio_receive_stream.cc
 AudioReceiveStream:
@@ -5306,10 +5326,12 @@ UpdateNetworksContinually
 ../../../rtc_base/network.cc:958
 NetworkManager detected
 networks:
+:
 , active ?
 , Ignored
 Net[
 :id=
+Unknown
 BeginSSL
 ../../../rtc_base/openssladapter.cc
 OpenSSLAdapter::BeginSSL:
@@ -5375,6 +5397,7 @@ OpenSSLStreamAdapter::Read(
 -- remote side closed
 -- error
 -- flushed
+bytes
 OpenSSLStreamAdapter::OnEvent SE_OPEN
 OpenSSLStreamAdapter::OnEvent
 SE_READ
@@ -5394,6 +5417,18 @@ Failed to compute peer cert digest.
 Rejected peer certificate due to mismatched digest.
 Accepted peer certificate.
 Waiting to verify certificate until digest is known.
+SRTP_AES128_CM_SHA1_80
+SRTP_AES128_CM_SHA1_32
+SRTP_AEAD_AES_128_GCM
+SRTP_AEAD_AES_256_GCM
+TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
+TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA
+TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256
+TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA
+TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA
+TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256
+TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256
 ../../../rtc_base/opensslutility.cc
 Unable to add certificate.
 ../../../rtc_base/physicalsocketserver.cc
@@ -5425,7 +5460,6 @@ fcntl #1 failed
 fcntl #2 failed
 GenerateCertificateAsync
 ../../../rtc_base/rtccertificategenerator.cc:158
-OnMessage
 ../../../rtc_base/rtccertificategenerator.cc:72
 Run
 ../../../rtc_base/signalthread.cc:149
@@ -5727,9 +5761,7 @@ Bad optional access
 Seek(original_byte_offset, original_bit_offset)
 out_byte_offset != nullptr
 out_bit_offset != nullptr
-w
 }
-Unknown
 %s@%s
 ../../../rtc_base/numerics/histogram_percentile_counter.cc
 fraction <= 1.0
@@ -5744,7 +5776,6 @@ frames. Old offset:
 too short translated timestamp interval:
 system time (us) =
 , interval (us) =
-:
 ]
 (
 ):
@@ -5782,7 +5813,6 @@ inf
 %lf%7s
 inf bps
 kbps
-bytes
 +inf ms
 -inf ms
 us
@@ -7773,10 +7803,6 @@ xn--
 ../../../third_party/boringssl/src/ssl/internal.h
 ../../../third_party/boringssl/src/ssl/d1_pkt.cc
 ../../../third_party/boringssl/src/ssl/d1_srtp.cc
-SRTP_AES128_CM_SHA1_80
-SRTP_AES128_CM_SHA1_32
-SRTP_AEAD_AES_128_GCM
-SRTP_AEAD_AES_256_GCM
 ../../../third_party/boringssl/src/ssl/dtls_method.cc
 ../../../third_party/boringssl/src/ssl/dtls_record.cc
 ../../../third_party/boringssl/src/ssl/handshake.cc
@@ -7844,19 +7870,13 @@ TLS_AES_256_GCM_SHA384
 AEAD-CHACHA20-POLY1305-SHA256
 TLS_CHACHA20_POLY1305_SHA256
 ECDHE-ECDSA-AES128-SHA
-TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA
 ECDHE-ECDSA-AES256-SHA
-TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA
 ECDHE-RSA-AES128-SHA
-TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
 ECDHE-RSA-AES256-SHA
-TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA
 ECDHE-ECDSA-AES128-GCM-SHA256
-TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256
 ECDHE-ECDSA-AES256-GCM-SHA384
 TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384
 ECDHE-RSA-AES128-GCM-SHA256
-TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
 ECDHE-RSA-AES256-GCM-SHA384
 TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
 ECDHE-PSK-AES128-CBC-SHA
@@ -7864,9 +7884,7 @@ TLS_ECDHE_PSK_WITH_AES_128_CBC_SHA
 ECDHE-PSK-AES256-CBC-SHA
 TLS_ECDHE_PSK_WITH_AES_256_CBC_SHA
 ECDHE-RSA-CHACHA20-POLY1305
-TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256
 ECDHE-ECDSA-CHACHA20-POLY1305
-TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256
 ECDHE-PSK-CHACHA20-POLY1305
 TLS_ECDHE_PSK_WITH_CHACHA20_POLY1305_SHA256
 ../../../third_party/boringssl/src/ssl/ssl_key_share.cc
@@ -9613,6 +9631,7 @@ ssrc=
 , len=
 RTCP
 RTP
+{
 semantics:
 ;
 groupid:
@@ -9627,7 +9646,6 @@ VAdapt Drop Frame: scaled
 / in
 Changes:
 Input:
-x
 timestamp:
 Output fps:
 Frame size changed: scaled
@@ -9857,6 +9875,8 @@ ms without a response, rtt=
 C
 R
 W
+w
+x
 I
 S
 F
@@ -9928,7 +9948,6 @@ error-code bits not zero
 : Starting STUN host lookup for
 : StunPort: stun host lookup received error
 STUN server address is incompatible.
-stun:
 sendto
 Binding response missing mapped address.
 Binding address has bad family
@@ -10015,6 +10034,7 @@ OnRefreshError
 seconds.
 : Received response with long lifetime:
 : Scheduled refresh in
+ms.
 Missing STUN_ATTR_REALM attribute in stale nonce error response.
 Missing STUN_ATTR_NONCE attribute in stale nonce error response.
 ScheduleEntryDestruction
@@ -10105,6 +10125,7 @@ Udp
 Relay
 Tcp
 : Allocation Phase=
+OnMessage
 ../../../p2p/client/basicportallocator.cc:1346
 AllocationSequence: UDP ports disabled, skipping.
 AllocationSequence: UDPPort will be handling the STUN candidate generation.
@@ -10225,7 +10246,6 @@ WebRtcVideoChannel::SetRecvParameters
 SetRecvParameters:
 Changing FlexFEC payload type (recv) from
 Changing recv codecs from
-{
 GetSendCodec: No send codec set.
 WebRtcVideoChannel::SetSend
 SetSend:
@@ -11298,7 +11318,6 @@ Closing the DataChannel due to a failure to send the CONTROL message, send_resul
 InsertDtmf is called with invalid duration or tones gap. The duration cannot be more than
 ms or less than
 ms. The gap between tones must be at least
-ms.
 InsertDtmf is called on DtmfSender that can't send DTMF.
 ../../../pc/dtmfsender.cc:136
 The DtmfProvider has been destroyed.
@@ -12125,24 +12144,29 @@ either infinite, zero, or negative.  send_delta =
 smoothed_rtt(us):
 mean_deviation(us):
 88
-}[
+\
+\
+\
+2
+\
 L
 L
 L
 L
 L
-@[
+Z[
+d
+d
 Hc
-[
-[
+d
 >
 >
 >
 >
 >
-`
 j
 <
+dZ
 j
 j
 j
@@ -12155,6 +12179,9 @@ j
 j
 j
 j
+f
+f
+f
 j
 j
 j
@@ -12194,29 +12221,20 @@ j
 j
 Z
 Z
-+Z
-(Z
+Z
 @KL
 
 
-~Y
-{Y
+j
+j
+j
+j
+j
+j
+j
+j
 b
 b
-b
-j
-j
-j
-j
-j
-j
-j
-j
-Y
-Y
-Y
-Y
-5Y
 @
 @
 @
@@ -12225,67 +12243,54 @@ Y
 @
 @
 @
+!Y
+1Y
 j
 j
+vX
+X
+X
 2
+.X
 ARj
 Sj
 Sj
 Sj
 Sj
 Sj
-w`
 X
 X
-b
 
-H`
-5W
-=`
+fZ
+:W
 W
 W
 W
 W
 j
 j
-ob
-[
-W
-W
-W
-W
-W
-W
-W
-W
-W
-W
-W
-W
-W
-W
-W
-W
-zV
+`
+AW
+__
 j
 j
 j
-V
-V
-8V
-ra
 $V
+V
+V
+V
+IV
+[
 H= N
 =!N
+j
+j
 ^
 j
 j
 j
 j
 U
-j
-j
-U
 U
 j
 j
@@ -12293,23 +12298,27 @@ j
 j
 j
 j
-f`
-d`
-;
-c_
+r`
+F`
+k`
+$`
+`
+`
+d
+
 T
 0
 0
-gT
 0
 &
 0
 0
 0
-/S
++_
+_
+_
 <
 <
--S
 j
 j
 j
@@ -12318,47 +12327,33 @@ j
 j
 j
 j
-)S
 j
 j
 j
 j
 S
-S
-S
-S
-S
-S
-S
-S
-S
-S
-S
-S
-^
-^
-^
++S
 Pj
 ARj
 j
 
 0
 =
-lR
 j
 @
 @
 @
-R
+V
 R
 0
 0
 E9e
 E9e
 E9e
+]Q
 @
-]
-0P
+o
+SP
 \
 \
 `
@@ -12368,47 +12363,19 @@ p
 @
 $
 @
-O
+S
+=N
+N
+N
 j
 j
 j
-bR
 0
 @
 
-Y
-Y
-Y
-Y
-Y
-Y
-Y
-Y
-Y
-Y
-Y
-Y
-Y
-Y
-Y
-Y
-Y
-Y
-Y
-Y
-Y
-Y
-Y
-Y
-Y
-Y
-Y
-Y
-Y
-Y
-Y
 0
 @
+V
 0
 j
 j
@@ -12422,7 +12389,8 @@ I;]
 `
 `
 @
-1M
+zM
+8U
 A
 B
 "
@@ -12444,6 +12412,7 @@ B
 $
 *
 +
+M
 l
 
 @
@@ -12457,6 +12426,9 @@ l
 @
 @
 @
+P
+P
+DK
 %
 =
 @
@@ -12469,6 +12441,8 @@ l
 V
 /
 
+K
+K
 
 
 
@@ -12478,21 +12452,17 @@ V
 @
 8
 j
-rJ
 d
+?S
 P
 
-J
+I
+I
+I
 `=
 =
 B=
 ~q=
-S
-S
-S
-S
-S
-S
 A
 A
 A
@@ -12513,12 +12483,12 @@ j
 I
 j
 j
+j
+j
 M
 M
+j
 I
-j
-j
-j
 !
 
 @
@@ -12595,6 +12565,7 @@ Montgomery Multiplication with scatter/gather for x86_64, CRYPTOGAMS by <appro@o
 @
 @
 @
+CP
 *
 @
 @
@@ -12608,13 +12579,13 @@ M
 8
 
 @
-SD
 }
 }
 @
 @
 @
 @
+J
 @
 @
 @
@@ -12653,19 +12624,14 @@ j
 }
 j
 j
-SL
 
-C
-C
-C
-C
 }
 }
+H
 
 }
 A
 ?
-H
 3
 3
 }
@@ -12684,19 +12650,11 @@ x
 }
 }
 0
-`G
 0
-B
-B
-B
-B
-B
-B
-B
 A
 !
 G
-)M
+G
 !
 (
 @
@@ -12719,25 +12677,26 @@ s
 @
 ;
 P
-yF
 P
-pF
-AF
-D
+yF
+yF
+PF
+PF
+PF
+PF
 }
+F
+-@
 H
-@
-@
 }
+A
+A
 J
-SF
-_?
-K
-K
-?
+]?
+E
+<?
+H
 d
-?
-@
 =
 @
 }
@@ -12745,25 +12704,30 @@ j
 j
 j
 j
-;
-^?
+G
+G
 j
 PATj
 j
 @
 j
+=
+=
 P
 @
 =
 @
 =
 =
+1<
 =
 =
 ,
 =
 ,
 ,
+E
+E
 =
 ,
 ,
@@ -12773,47 +12737,34 @@ P
 ,
 ,
 =
+=
+,
+=
+,
 <
-=
-,
-=
-,
 ,
 H=
 :
 }
-;
-<
-<
-<
-<
 H=
 j
 j
 j
 j
 
-C
-y;
 :
-j?
-);
-`B
-&;
-OB
+LD
+Z;
+:
+N?
 j
 <
 <
-;
-;
 
-B
 }
 <
 x
-9
-9
-9
+>
 @
 @
 @
@@ -12821,7 +12772,6 @@ j
 @
 j
 @
-oA
 @
 @
 @
@@ -12850,14 +12800,16 @@ j
 0
 }
 }
+8
+8
+^=
 j
 0
 @
 @
+(7
 <
 @
-=
-=
 (
 $
 P
@@ -12865,13 +12817,13 @@ x
 |3%
 x
 @
+x6
 }
 d
 d
 
 d
 C
-k=
 =
 =
 d
@@ -12882,6 +12834,7 @@ O
 d
 d
 <
+6
 =
 =
 
@@ -12891,9 +12844,11 @@ d
 '
 =
 @
+;
+;
+a5
 j
 0
-K5
 }
 = N
 =
@@ -12901,7 +12856,6 @@ K5
 =
 @
 @
-l8
 
 j
 j
@@ -12911,15 +12865,17 @@ j
 0
 j
 
-;
-;
-;
 @
+:
 6
 6
-w5
+i3
+Z3
+3
+p>
 }
 :
+6
 @
 @
 @
@@ -12930,7 +12886,6 @@ w5
 ~
 ~
 @
-#8
 }
 }
 =
@@ -12948,44 +12903,39 @@ x
 @
 @
 X
-5
-5
-H8
+)8
 }
 }
 }
 }
 }
 }
-:
 1
-1
-1
-1
+j;
 H
 X
 
 0
 <
-6
 @
 @
 =
 }
 @
-{0
 @
 @
 @
 @
 @
 @
+s0
 
 @
 @
 @
 }
 }
+B2
 }
 }
 @
@@ -13003,7 +12953,8 @@ t!=
 }
 @
 @
-O0
+9
+0
 -
 }
 @
@@ -13011,11 +12962,12 @@ j
 j
 j
 j
+j
+j
+j
+j
 0
-j
-j
-j
-j
+0
 
 
 
@@ -13035,25 +12987,29 @@ c
 @
 }
 }
-.1
 }
 }
 }
 @
 @
 @
+C/
 }
 d
-1
-1
-1
+8
+8
+8
 H=AKL
+/
 H=
-8
-.
+2.
 .
 .
 H=
+8
+8
+8
+M-
 -
 -
 -
@@ -13122,6 +13078,7 @@ j
 j
 j
 j
+f8
 j
 j
 j
@@ -13135,12 +13092,12 @@ j
 j
 j
 j
-q,
-_3
+i,
+18
 j
 j
+\,
 H=
-,
 @
 @
 @
@@ -13172,16 +13129,10 @@ j
 j
 j
 j
-U-
-=-
-+
-+
-+
-2
-2
-2
-2
-2
+H4
+c-
+13
+-
 
 j
 j
@@ -13192,30 +13143,40 @@ j
 j
 sh=
 d
-R1
-;*
-&*
-)
+c1
+5*
+3
+!*
+",
+*
+*
+*
+*
+*
+*
+*
+*
 =
-=)
+4
+N+
 9
-=,
-y3
-Y(
+E(
+s*
 Hc
 1
+(
 9
-*
 @
+6'
 Pj
 0
 AVj
-'
-'
-'
-'
+M)
 '
 .
+.
+.
+%)
 
 9
 @
@@ -13223,14 +13184,13 @@ v
 @
 9
 @
+L/
 1
-L&
-:&
+T
 @
-X(
+&
 (
-(
-(
+Q.
 
 }
 }
@@ -13239,7 +13199,8 @@ X(
 }`=
 }|=
 =
-%
+L%
+.
 %
 %
 %
@@ -13279,7 +13240,7 @@ j
 j
 j
 Hc
-D$
+j$
 $
 $
 $
@@ -13287,6 +13248,28 @@ $
 2
 }
 }
++
+}
+u$
+j
+j
+j
+j
+j
+j
+j
+j
+?&
+j
+j
+j
+j
+}
+j
+j
+j
+j
+'&
 }
 u$
 j
@@ -13301,38 +13284,20 @@ j
 j
 j
 j
-}
 j
 j
+&
 j
 j
-}
-u$
+M/
 &
 &
 j
 j
 j
 j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
 }
 u$
-,
 @
 @
 @
@@ -13340,12 +13305,6 @@ u$
 @
 @
 !
-])
--
-
-
-"
-"
 
 
 
@@ -13355,7 +13314,8 @@ u$
 
 
 
-&$
+
+
 x
 d
 P
@@ -13371,9 +13331,16 @@ $
 $
 $
 $
+!
+!
+!
+!
+!
+!
 
 
 
+~'
 @
 '
 '
@@ -13403,15 +13370,15 @@ t%
 |A=
 H=
 &
-&
 j
 j
 j
 j
 j
 j
-V$
-7$
+Z$
+M$
+O$
 j
 j
 j
@@ -13617,6 +13584,8 @@ l
 @
 @
 @
+"
+"
 "
 G"
 [3
@@ -13665,6 +13634,7 @@ j
 j
 j
 j
+x
 j
 j
 j
@@ -13689,7 +13659,6 @@ j
 j
 j
 j
-H
 j
 j
 j
@@ -14010,7 +13979,6 @@ j
 j
 =
 j
-
 j
 @
 =
@@ -14081,6 +14049,8 @@ H=
 @
 @
 @
+t
+X
 
 @
 @
@@ -14090,8 +14060,6 @@ H=
 
 @
 @
-
-!
 H=
 2
 j
@@ -14158,6 +14126,12 @@ j
 j
 j
 
+z
+j
+j
+j
+j
+X
 j
 j
 j
@@ -14170,13 +14144,6 @@ j
 j
 j
 j
-j
-j
-j
-j
-
-
-
 
 W
 j
@@ -14219,10 +14186,6 @@ j
 j
 j
 j
-
-
-
-
 Hc
 P
 X

@@ -15,6 +15,9 @@
  AudioObjectIsPropertySettable
  AudioObjectRemovePropertyListener
  AudioObjectSetPropertyData
+ B CICESession::s_nInstaneCount
+ B CICESession::s_pSocketServer
+ B CICESession::s_pSocketThread
  B CustomH264Encoder::s_pH264EncoderFactoryFunc
  B OPENSSL_ia32cap_P
  B WebRtcAecm_CalcLinearEnergies
@@ -36,6 +39,9 @@
  B cricket::g_libsrtp_lock
  B cricket::g_libsrtp_usage_count
  B crypto_kernel
+ B g_fnWriteEvent_send
+ B g_fnWriteEvent_sendto
+ B g_fnWriteEvent_setsockopt
  B mbstat
  B rtc::LogMessage::streams_
  B rtc::LogMessage::thread_
@@ -293,6 +299,7 @@
  D AUTHORITY_KEYID_it
  D BASIC_CONSTRAINTS_it
  D CERTIFICATEPOLICIES_it
+ D CICESession::s_mutex
  D CRL_DIST_POINTS_it
  D DIRECTORYSTRING_it
  D DISPLAYTEXT_it
@@ -514,6 +521,7 @@
  D vp8_dct_value_tokens_ptr
  D vp8_extra_bits
  D vpx_codec_vp8_cx_algo
+ D vtable for CICESession
  D vtable for CWebRTCSession
  D vtable for CWebRTCTURNServer
  D vtable for CustomAudioSource
@@ -522,6 +530,7 @@
  D vtable for CustomVideoDecoderFactory
  D vtable for CustomVideoEncoderFactory
  D vtable for CustomVideoSource
+ D vtable for SendPacketInGoogleThread
  D vtable for cricket::AllocateRequest
  D vtable for cricket::AllocationSequence
  D vtable for cricket::AsyncStunTCPSocket
@@ -658,6 +667,7 @@
  D vtable for rtc::FireAndForgetAsyncClosure<rtc::MethodFunctor<webrtc::RTCStatsCollector, void (webrtc::RTCStatsCollector::*)(rtc::scoped_refptr<webrtc::RTCStatsReport const>, std::__1::vector<webrtc::RTCStatsCollector::RequestInfo, std::__1::allocator<webrtc::RTCStatsCollector::RequestInfo> >), void, rtc::scoped_refptr<webrtc::RTCStatsReport const>, std::__1::vector<webrtc::RTCStatsCollector::RequestInfo, std::__1::allocator<webrtc::RTCStatsCollector::RequestInfo> > > >
  D vtable for rtc::FireAndForgetAsyncClosure<rtc::MethodFunctor<webrtc::RTCStatsCollector, void (webrtc::RTCStatsCollector::*)(rtc::scoped_refptr<webrtc::RTCStatsReport>), void, rtc::scoped_refptr<webrtc::RTCStatsReport> > >
  D vtable for rtc::FireAndForgetAsyncClosure<rtc::UnretainedMethodFunctor<webrtc::VideoCapturerTrackSource, void (webrtc::VideoCapturerTrackSource::*)(cricket::VideoCapturer*, cricket::CaptureState), void, cricket::VideoCapturer*, cricket::CaptureState> >
+ D vtable for rtc::FunctorMessageHandler<bool, rtc::MethodFunctor<CICESession, bool (CICESession::*)(ICESessionConfig const&), bool, ICESessionConfig const&> >
  D vtable for rtc::FunctorMessageHandler<bool, rtc::MethodFunctor<CWebRTCSession, bool (CWebRTCSession::*)(), bool> >
  D vtable for rtc::FunctorMessageHandler<bool, rtc::MethodFunctor<CWebRTCTURNServer, bool (CWebRTCTURNServer::*)(), bool> >
  D vtable for rtc::FunctorMessageHandler<bool, rtc::MethodFunctor<cricket::BaseChannel const, bool (cricket::BaseChannel::*)() const, bool> >
@@ -673,8 +683,11 @@
  D vtable for rtc::FunctorMessageHandler<std::__1::unique_ptr<webrtc::Call, std::__1::default_delete<webrtc::Call> >, rtc::MethodFunctor<webrtc::PeerConnectionFactory, std::__1::unique_ptr<webrtc::Call, std::__1::default_delete<webrtc::Call> > (webrtc::PeerConnectionFactory::*)(webrtc::RtcEventLog*), std::__1::unique_ptr<webrtc::Call, std::__1::default_delete<webrtc::Call> >, webrtc::RtcEventLog*> >
  D vtable for rtc::FunctorMessageHandler<std::__1::unique_ptr<webrtc::RtcEventLog, std::__1::default_delete<webrtc::RtcEventLog> >, rtc::MethodFunctor<webrtc::PeerConnectionFactory, std::__1::unique_ptr<webrtc::RtcEventLog, std::__1::default_delete<webrtc::RtcEventLog> > (webrtc::PeerConnectionFactory::*)(), std::__1::unique_ptr<webrtc::RtcEventLog, std::__1::default_delete<webrtc::RtcEventLog> >> >
  D vtable for rtc::FunctorMessageHandler<std::__1::vector<cricket::IceParameters, std::__1::allocator<cricket::IceParameters> >, rtc::MethodFunctor<cricket::PortAllocator, std::__1::vector<cricket::IceParameters, std::__1::allocator<cricket::IceParameters> > (cricket::PortAllocator::*)(), std::__1::vector<cricket::IceParameters, std::__1::allocator<cricket::IceParameters> >> >
+ D vtable for rtc::FunctorMessageHandler<void, rtc::MethodFunctor<CICESession, void (CICESession::*)(), void> >
  D vtable for rtc::FunctorMessageHandler<void, rtc::MethodFunctor<CWebRTCTURNServer, void (CWebRTCTURNServer::*)(), void> >
  D vtable for rtc::FunctorMessageHandler<void, rtc::MethodFunctor<cricket::BaseChannel, void (cricket::BaseChannel::*)(), void> >
+ D vtable for rtc::FunctorMessageHandler<void, rtc::MethodFunctor<cricket::P2PTransportChannel, void (cricket::P2PTransportChannel::*)(cricket::Candidate const&), void, cricket::Candidate const&> >
+ D vtable for rtc::FunctorMessageHandler<void, rtc::MethodFunctor<cricket::P2PTransportChannel, void (cricket::P2PTransportChannel::*)(cricket::IceParameters const&), void, cricket::IceParameters const&> >
  D vtable for rtc::FunctorMessageHandler<void, rtc::MethodFunctor<cricket::PortAllocator, void (cricket::PortAllocator::*)(), void> >
  D vtable for rtc::FunctorMessageHandler<void, rtc::MethodFunctor<cricket::PortAllocator, void (cricket::PortAllocator::*)(int), void, int> >
  D vtable for rtc::FunctorMessageHandler<void, rtc::MethodFunctor<cricket::PortAllocator, void (cricket::PortAllocator::*)(std::__1::vector<cricket::CandidateStats, std::__1::allocator<cricket::CandidateStats> >*), void, std::__1::vector<cricket::CandidateStats, std::__1::allocator<cricket::CandidateStats> >*> >
@@ -2361,6 +2374,33 @@
  T CBS_peek_asn1_tag
  T CBS_skip
  T CBS_strdup
+ T CICESession::AddRemoteIceCandidate(char const*)
+ T CICESession::BInitialize(ICESessionConfig const&)
+ T CICESession::BInitializeOnSocketThread(ICESessionConfig const&)
+ T CICESession::BSendData(void const*, unsigned long)
+ T CICESession::CICESession(IICESessionDelegate*)
+ T CICESession::Destroy()
+ T CICESession::DestroyOnSocketThread()
+ T CICESession::GetPing()
+ T CICESession::GetRoute(EICECandidateType&, EICECandidateType&, char (&) [64])
+ T CICESession::GetWritableState()
+ T CICESession::OnMessage(rtc::Message*)
+ T CICESession::OnNetworkRouteChanged(absl::optional<rtc::NetworkRoute>)
+ T CICESession::OnReadPacket(rtc::PacketTransportInternal*, char const*, unsigned long, rtc::PacketTime const&, int)
+ T CICESession::OnReadyToSend(rtc::PacketTransportInternal*)
+ T CICESession::OnReceivingState(rtc::PacketTransportInternal*)
+ T CICESession::OnSentPacket(rtc::PacketTransportInternal*, rtc::SentPacket const&)
+ T CICESession::OnTransportCandidateGathered_n(cricket::IceTransportInternal*, cricket::Candidate const&)
+ T CICESession::OnTransportCandidatesRemoved_n(cricket::IceTransportInternal*, std::__1::vector<cricket::Candidate, std::__1::allocator<cricket::Candidate> > const&)
+ T CICESession::OnTransportGatheringState_n(cricket::IceTransportInternal*)
+ T CICESession::OnTransportRoleConflict_n(cricket::IceTransportInternal*)
+ T CICESession::OnTransportStateChanged_n(cricket::IceTransportInternal*)
+ T CICESession::OnWritableState(rtc::PacketTransportInternal*)
+ T CICESession::SetRemoteAuth(char const*, char const*)
+ T CICESession::SetWriteEvent_send(void (*)(int))
+ T CICESession::SetWriteEvent_sendto(void (*)(void*, int))
+ T CICESession::SetWriteEvent_setsockopt(void (*)(int, int, int))
+ T CICESession::~CICESession()
  T CONF_VALUE_new
  T CONF_parse_list
  T CRL_DIST_POINTS_free
@@ -2472,6 +2512,7 @@
  T CopyRow_C
  T CopyRow_ERMS
  T CopyRow_SSE2
+ T CreateWebRTCICESession
  T CreateWebRTCSession
  T CreateWebRTCTURNServer
  T CustomAudioSource::ActiveAudioLayer(webrtc::AudioDeviceModule::AudioLayer*) const
@@ -2820,6 +2861,7 @@
  T GENERAL_NAME_free
  T GENERAL_NAME_new
  T GENERAL_NAME_print
+ T GetICECandidateType(cricket::Candidate const&)
  T GetSubframesPitchParameters(int, double*, double*, int, int, double*, double*, double*, double*)
  T HKDF
  T HKDF_expand
@@ -3110,6 +3152,7 @@
  T ScaleRowDown4_C
  T ScaleRowDown4_SSSE3
  T ScaleSlope
+ T SendPacketInGoogleThread::~SendPacketInGoogleThread()
  T SetRow_Any_X86
  T SetRow_C
  T SetRow_ERMS
@@ -4921,7 +4964,6 @@
  T cricket::SsrcGroup::SsrcGroup(cricket::SsrcGroup&&)
  T cricket::SsrcGroup::SsrcGroup(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::vector<unsigned int, std::__1::allocator<unsigned int> > const&)
  T cricket::SsrcGroup::ToString() const
- T cricket::SsrcGroup::operator=(cricket::SsrcGroup const&)
  T cricket::SsrcGroup::~SsrcGroup()
  T cricket::StreamInterfaceChannel::Close()
  T cricket::StreamInterfaceChannel::GetState() const
@@ -5593,6 +5635,8 @@
  T md5_block_asm_data_order
  T mlp_process
  T name_cmp
+ T non-virtual thunk to CICESession::OnMessage(rtc::Message*)
+ T non-virtual thunk to CICESession::~CICESession()
  T non-virtual thunk to CWebRTCSession::OnAddStream(rtc::scoped_refptr<webrtc::MediaStreamInterface>)
  T non-virtual thunk to CWebRTCSession::OnBufferedAmountChange(unsigned long long)
  T non-virtual thunk to CWebRTCSession::OnConnectionChange(webrtc::PeerConnectionInterface::PeerConnectionState)
@@ -6340,6 +6384,8 @@
  T rtc::FireAndForgetAsyncClosure<rtc::UnretainedMethodFunctor<webrtc::VideoCapturerTrackSource, void (webrtc::VideoCapturerTrackSource::*)(cricket::VideoCapturer*, cricket::CaptureState), void, cricket::VideoCapturer*, cricket::CaptureState> >::Execute()
  T rtc::FireAndForgetAsyncClosure<rtc::UnretainedMethodFunctor<webrtc::VideoCapturerTrackSource, void (webrtc::VideoCapturerTrackSource::*)(cricket::VideoCapturer*, cricket::CaptureState), void, cricket::VideoCapturer*, cricket::CaptureState> >::~FireAndForgetAsyncClosure()
  T rtc::FromString(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool*)
+ T rtc::FunctorMessageHandler<bool, rtc::MethodFunctor<CICESession, bool (CICESession::*)(ICESessionConfig const&), bool, ICESessionConfig const&> >::OnMessage(rtc::Message*)
+ T rtc::FunctorMessageHandler<bool, rtc::MethodFunctor<CICESession, bool (CICESession::*)(ICESessionConfig const&), bool, ICESessionConfig const&> >::~FunctorMessageHandler()
  T rtc::FunctorMessageHandler<bool, rtc::MethodFunctor<CWebRTCSession, bool (CWebRTCSession::*)(), bool> >::OnMessage(rtc::Message*)
  T rtc::FunctorMessageHandler<bool, rtc::MethodFunctor<CWebRTCSession, bool (CWebRTCSession::*)(), bool> >::~FunctorMessageHandler()
  T rtc::FunctorMessageHandler<bool, rtc::MethodFunctor<CWebRTCTURNServer, bool (CWebRTCTURNServer::*)(), bool> >::OnMessage(rtc::Message*)
@@ -6370,10 +6416,16 @@
  T rtc::FunctorMessageHandler<std::__1::unique_ptr<webrtc::RtcEventLog, std::__1::default_delete<webrtc::RtcEventLog> >, rtc::MethodFunctor<webrtc::PeerConnectionFactory, std::__1::unique_ptr<webrtc::RtcEventLog, std::__1::default_delete<webrtc::RtcEventLog> > (webrtc::PeerConnectionFactory::*)(), std::__1::unique_ptr<webrtc::RtcEventLog, std::__1::default_delete<webrtc::RtcEventLog> >> >::~FunctorMessageHandler()
  T rtc::FunctorMessageHandler<std::__1::vector<cricket::IceParameters, std::__1::allocator<cricket::IceParameters> >, rtc::MethodFunctor<cricket::PortAllocator, std::__1::vector<cricket::IceParameters, std::__1::allocator<cricket::IceParameters> > (cricket::PortAllocator::*)(), std::__1::vector<cricket::IceParameters, std::__1::allocator<cricket::IceParameters> >> >::OnMessage(rtc::Message*)
  T rtc::FunctorMessageHandler<std::__1::vector<cricket::IceParameters, std::__1::allocator<cricket::IceParameters> >, rtc::MethodFunctor<cricket::PortAllocator, std::__1::vector<cricket::IceParameters, std::__1::allocator<cricket::IceParameters> > (cricket::PortAllocator::*)(), std::__1::vector<cricket::IceParameters, std::__1::allocator<cricket::IceParameters> >> >::~FunctorMessageHandler()
+ T rtc::FunctorMessageHandler<void, rtc::MethodFunctor<CICESession, void (CICESession::*)(), void> >::OnMessage(rtc::Message*)
+ T rtc::FunctorMessageHandler<void, rtc::MethodFunctor<CICESession, void (CICESession::*)(), void> >::~FunctorMessageHandler()
  T rtc::FunctorMessageHandler<void, rtc::MethodFunctor<CWebRTCTURNServer, void (CWebRTCTURNServer::*)(), void> >::OnMessage(rtc::Message*)
  T rtc::FunctorMessageHandler<void, rtc::MethodFunctor<CWebRTCTURNServer, void (CWebRTCTURNServer::*)(), void> >::~FunctorMessageHandler()
  T rtc::FunctorMessageHandler<void, rtc::MethodFunctor<cricket::BaseChannel, void (cricket::BaseChannel::*)(), void> >::OnMessage(rtc::Message*)
  T rtc::FunctorMessageHandler<void, rtc::MethodFunctor<cricket::BaseChannel, void (cricket::BaseChannel::*)(), void> >::~FunctorMessageHandler()
+ T rtc::FunctorMessageHandler<void, rtc::MethodFunctor<cricket::P2PTransportChannel, void (cricket::P2PTransportChannel::*)(cricket::Candidate const&), void, cricket::Candidate const&> >::OnMessage(rtc::Message*)
+ T rtc::FunctorMessageHandler<void, rtc::MethodFunctor<cricket::P2PTransportChannel, void (cricket::P2PTransportChannel::*)(cricket::Candidate const&), void, cricket::Candidate const&> >::~FunctorMessageHandler()
+ T rtc::FunctorMessageHandler<void, rtc::MethodFunctor<cricket::P2PTransportChannel, void (cricket::P2PTransportChannel::*)(cricket::IceParameters const&), void, cricket::IceParameters const&> >::OnMessage(rtc::Message*)
+ T rtc::FunctorMessageHandler<void, rtc::MethodFunctor<cricket::P2PTransportChannel, void (cricket::P2PTransportChannel::*)(cricket::IceParameters const&), void, cricket::IceParameters const&> >::~FunctorMessageHandler()
  T rtc::FunctorMessageHandler<void, rtc::MethodFunctor<cricket::PortAllocator, void (cricket::PortAllocator::*)(), void> >::OnMessage(rtc::Message*)
  T rtc::FunctorMessageHandler<void, rtc::MethodFunctor<cricket::PortAllocator, void (cricket::PortAllocator::*)(), void> >::~FunctorMessageHandler()
  T rtc::FunctorMessageHandler<void, rtc::MethodFunctor<cricket::PortAllocator, void (cricket::PortAllocator::*)(int), void, int> >::OnMessage(rtc::Message*)
@@ -6976,9 +7028,11 @@
  T rtc::SimpleStringBuilder::operator<<(unsigned long)
  T rtc::SocketAddress::Clear()
  T rtc::SocketAddress::EqualIPs(rtc::SocketAddress const&) const
+ T rtc::SocketAddress::FromString(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T rtc::SocketAddress::HostAsSensitiveURIString() const
  T rtc::SocketAddress::HostAsURIString() const
  T rtc::SocketAddress::IsAnyIP() const
+ T rtc::SocketAddress::IsComplete() const
  T rtc::SocketAddress::IsLoopbackIP() const
  T rtc::SocketAddress::IsNil() const
  T rtc::SocketAddress::IsPrivateIP() const
@@ -8155,6 +8209,7 @@
  T std::__1::pair<std::__1::__tree_iterator<std::__1::__value_type<webrtc::video_coding::VideoLayerFrameId, webrtc::video_coding::FrameBuffer::FrameInfo>, std::__1::__tree_node<std::__1::__value_type<webrtc::video_coding::VideoLayerFrameId, webrtc::video_coding::FrameBuffer::FrameInfo>, void*>*, long>, bool> std::__1::__tree<std::__1::__value_type<webrtc::video_coding::VideoLayerFrameId, webrtc::video_coding::FrameBuffer::FrameInfo>, std::__1::__map_value_compare<webrtc::video_coding::VideoLayerFrameId, std::__1::__value_type<webrtc::video_coding::VideoLayerFrameId, webrtc::video_coding::FrameBuffer::FrameInfo>, std::__1::less<webrtc::video_coding::VideoLayerFrameId>, true>, std::__1::allocator<std::__1::__value_type<webrtc::video_coding::VideoLayerFrameId, webrtc::video_coding::FrameBuffer::FrameInfo> > >::__emplace_unique_key_args<webrtc::video_coding::VideoLayerFrameId, webrtc::video_coding::VideoLayerFrameId const&, webrtc::video_coding::FrameBuffer::FrameInfo>(webrtc::video_coding::VideoLayerFrameId const&, webrtc::video_coding::VideoLayerFrameId const&, webrtc::video_coding::FrameBuffer::FrameInfo&&)
  T std::__1::pair<std::__1::__tree_iterator<unsigned short, std::__1::__tree_node<unsigned short, void*>*, long>, bool> std::__1::__tree<unsigned short, webrtc::DescendingSeqNumComp<unsigned short, (unsigned short)0>, std::__1::allocator<unsigned short> >::__emplace_unique_key_args<unsigned short, unsigned short const&>(unsigned short const&, unsigned short const&)
  T std::__1::pair<std::__1::__tree_iterator<unsigned short, std::__1::__tree_node<unsigned short, void*>*, long>, bool> std::__1::__tree<unsigned short, webrtc::DescendingSeqNumComp<unsigned short, (unsigned short)32768>, std::__1::allocator<unsigned short> >::__emplace_unique_key_args<unsigned short, unsigned short>(unsigned short const&, unsigned short&&)
+ T std::__1::set<sigslot::_signal_base_interface*, std::__1::less<sigslot::_signal_base_interface*>, std::__1::allocator<sigslot::_signal_base_interface*> >::~set()
  T std::__1::unique_ptr<rtc::SSLCertificateStats, std::__1::default_delete<rtc::SSLCertificateStats> >::reset(rtc::SSLCertificateStats*)
  T std::__1::unique_ptr<ssl_session_st, bssl::internal::Deleter<ssl_session_st> > bssl::MakeUnique<ssl_session_st, bssl::SSL_X509_METHOD const*&>(bssl::SSL_X509_METHOD const*&)
  T std::__1::unique_ptr<std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, picojson::value>, void*>, std::__1::__tree_node_destructor<std::__1::allocator<std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, picojson::value>, void*> > > > std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, picojson::value>, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, picojson::value>, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, picojson::value> > >::__construct_node<std::__1::pair<char const*, picojson::value> >(std::__1::pair<char const*, picojson::value>&&)
@@ -8307,6 +8362,15 @@
  T void rtc::FunctionView<void (std::__1::unique_ptr<webrtc::AudioEncoder, std::__1::default_delete<webrtc::AudioEncoder> >*)>::CallVoidPtr<webrtc::AudioCodingModule::SetEncoder(std::__1::unique_ptr<webrtc::AudioEncoder, std::__1::default_delete<webrtc::AudioEncoder> >)::{lambda(std::__1::unique_ptr<webrtc::AudioEncoder, std::__1::default_delete<webrtc::AudioEncoder> >*)#1}>(rtc::FunctionView<void (std::__1::unique_ptr<webrtc::AudioEncoder, std::__1::default_delete<webrtc::AudioEncoder> >*)>::VoidUnion, std::__1::unique_ptr<webrtc::AudioEncoder, std::__1::default_delete<webrtc::AudioEncoder> >*)
  T void rtc::MethodFunctor<webrtc::RTCStatsCollector, void (webrtc::RTCStatsCollector::*)(rtc::scoped_refptr<webrtc::RTCStatsReport const>, std::__1::vector<webrtc::RTCStatsCollector::RequestInfo, std::__1::allocator<webrtc::RTCStatsCollector::RequestInfo> >), void, rtc::scoped_refptr<webrtc::RTCStatsReport const>, std::__1::vector<webrtc::RTCStatsCollector::RequestInfo, std::__1::allocator<webrtc::RTCStatsCollector::RequestInfo> > >::CallMethod<0, 1>(rtc::sequence<0, 1>) const
  T void rtc::Thread::Invoke<void, rtc::MethodFunctor<CWebRTCTURNServer, void (CWebRTCTURNServer::*)(), void> >(rtc::Location const&, rtc::MethodFunctor<CWebRTCTURNServer, void (CWebRTCTURNServer::*)(), void>&&)
+ T void rtc::Thread::Invoke<void, rtc::MethodFunctor<cricket::P2PTransportChannel, void (cricket::P2PTransportChannel::*)(cricket::Candidate const&), void, cricket::Candidate const&> >(rtc::Location const&, rtc::MethodFunctor<cricket::P2PTransportChannel, void (cricket::P2PTransportChannel::*)(cricket::Candidate const&), void, cricket::Candidate const&>&&)
+ T void rtc::Thread::Invoke<void, rtc::MethodFunctor<cricket::P2PTransportChannel, void (cricket::P2PTransportChannel::*)(cricket::IceParameters const&), void, cricket::IceParameters const&> >(rtc::Location const&, rtc::MethodFunctor<cricket::P2PTransportChannel, void (cricket::P2PTransportChannel::*)(cricket::IceParameters const&), void, cricket::IceParameters const&>&&)
+ T void sigslot::_opaque_connection::emitter<CICESession, absl::optional<rtc::NetworkRoute> >(sigslot::_opaque_connection const*, absl::optional<rtc::NetworkRoute>)
+ T void sigslot::_opaque_connection::emitter<CICESession, cricket::IceTransportInternal*, cricket::Candidate const&>(sigslot::_opaque_connection const*, cricket::IceTransportInternal*, cricket::Candidate const&)
+ T void sigslot::_opaque_connection::emitter<CICESession, cricket::IceTransportInternal*, std::__1::vector<cricket::Candidate, std::__1::allocator<cricket::Candidate> > const&>(sigslot::_opaque_connection const*, cricket::IceTransportInternal*, std::__1::vector<cricket::Candidate, std::__1::allocator<cricket::Candidate> > const&)
+ T void sigslot::_opaque_connection::emitter<CICESession, cricket::IceTransportInternal*>(sigslot::_opaque_connection const*, cricket::IceTransportInternal*)
+ T void sigslot::_opaque_connection::emitter<CICESession, rtc::PacketTransportInternal*, char const*, unsigned long, rtc::PacketTime const&, int>(sigslot::_opaque_connection const*, rtc::PacketTransportInternal*, char const*, unsigned long, rtc::PacketTime const&, int)
+ T void sigslot::_opaque_connection::emitter<CICESession, rtc::PacketTransportInternal*, rtc::SentPacket const&>(sigslot::_opaque_connection const*, rtc::PacketTransportInternal*, rtc::SentPacket const&)
+ T void sigslot::_opaque_connection::emitter<CICESession, rtc::PacketTransportInternal*>(sigslot::_opaque_connection const*, rtc::PacketTransportInternal*)
  T void sigslot::_opaque_connection::emitter<cricket::AllocationSequence, cricket::PortInterface*>(sigslot::_opaque_connection const*, cricket::PortInterface*)
  T void sigslot::_opaque_connection::emitter<cricket::AllocationSequence, rtc::AsyncPacketSocket*, char const*, unsigned long, rtc::SocketAddress const&, rtc::PacketTime const&>(sigslot::_opaque_connection const*, rtc::AsyncPacketSocket*, char const*, unsigned long, rtc::SocketAddress const&, rtc::PacketTime const&)
  T void sigslot::_opaque_connection::emitter<cricket::BaseChannel, absl::optional<rtc::NetworkRoute> >(sigslot::_opaque_connection const*, absl::optional<rtc::NetworkRoute>)
@@ -13584,6 +13648,7 @@
  T webrtc::SdpAudioFormat::operator=(webrtc::SdpAudioFormat&&)
  T webrtc::SdpAudioFormat::~SdpAudioFormat()
  T webrtc::SdpDeserialize(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, webrtc::JsepSessionDescription*, webrtc::SdpParseError*)
+ T webrtc::SdpDeserializeCandidate(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, cricket::Candidate*, webrtc::SdpParseError*)
  T webrtc::SdpDeserializeCandidate(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, webrtc::JsepIceCandidate*, webrtc::SdpParseError*)
  T webrtc::SdpSerialize(webrtc::JsepSessionDescription const&)
  T webrtc::SdpSerializeCandidate(cricket::Candidate const&)
@@ -16975,6 +17040,7 @@
  pthread_condattr_init
  pthread_create
  pthread_equal
+ pthread_getschedparam
  pthread_getspecific
  pthread_join
  pthread_key_create
@@ -17686,10 +17752,12 @@
  std::nothrow
  std::out_of_range::~out_of_range()
  std::terminate()
+ strcasecmp
  strchr
  strcmp
  strerror
  strlen
+ strncasecmp
  strncmp
  strncpy
  strnlen
@@ -17780,6 +17848,7 @@
  t TimeToFrequencyDomain(AecmCore*, short const*, ComplexInt16*, unsigned short*, unsigned int*)
  t WebRtcIsac_ZeroPoleFilter
  t X509_REVOKED_cmp
+ t _GLOBAL__sub_I_ice_session.cpp
  t _GLOBAL__sub_I_logging.cc
  t __cxx_global_var_init
  t _aesni_set_encrypt_key

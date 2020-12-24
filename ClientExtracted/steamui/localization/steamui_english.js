@@ -197,6 +197,7 @@
 	"GameList_View_Platform_Apple": "Show only games that run on macOS",
 	"GameList_View_MyOwnGames": "My games",
 	"GameList_View_GamesSharedByOther": "%1$s's games",
+	"GameList_View_GamesProvidedByNamedCafe": "From %1$s",
 	"GameList_View_NothingSelected": "None",
 	"GameList_View_NothingSelected_HelpText": "Nothing matches this view filter.",
 	"GameList_Search_GamesCheckbox_Link": "Show games",
