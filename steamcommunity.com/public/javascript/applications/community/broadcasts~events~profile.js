@@ -11084,7 +11084,9 @@
                         return (
                           (f = e.sent()),
                           (p = f.capsules),
-                          (m = f.bMoreRemaining),
+                          (m =
+                            f.bMoreRemaining &&
+                            p.length < a.smart_section_max_apps),
                           a.enable_faceted_browsing
                             ? m ||
                               ((_ = new Set(
