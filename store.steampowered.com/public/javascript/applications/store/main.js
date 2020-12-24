@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6288461";
+var CLSTAMP = "6289058";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [9],
   {
@@ -10130,57 +10130,69 @@ var CLSTAMP = "6288461";
                   }
               return n;
             }),
-            (r.GenerateMetadata = function(i, s) {
+            (r.GenerateMetadata = function(o, i) {
               return Object(W.b)(this, void 0, void 0, function() {
-                var t, n, a, r, o;
+                var t, n, c, r, a;
                 return Object(W.e)(this, function(e) {
                   switch (e.label) {
                     case 0:
-                      return (t = i.facets), [4, Object(J.e)(s)];
+                      return (t = o.facets), [4, Object(J.e)(i)];
                     case 1:
                       return (
                         e.sent(),
-                        (n = s.map(function(e) {
+                        (n = i.map(function(e) {
                           return Object(J.c)(e);
                         })),
                         [4, Promise.all(n)]
                       );
                     case 2:
                       return (
-                        (a = e.sent()),
-                        (r = s.map(function(e, t) {
-                          var n = a[t].map(function(e) {
-                              return q.a
-                                .GetAppLinkInfo(e)
-                                .tags.map(function(e) {
-                                  return e.name;
-                                });
-                            }),
-                            r = new Set();
+                        (c = e.sent()),
+                        (r = i.map(function(e, t) {
+                          for (
+                            var n = new Array(), r = 0, a = c[t];
+                            r < a.length;
+                            r++
+                          ) {
+                            var o = a[r],
+                              i = q.a.GetAppLinkInfo(o);
+                            i && i.tags
+                              ? n.push(
+                                  i.tags.map(function(e) {
+                                    return e.name;
+                                  })
+                                )
+                              : (n.push(new Array()),
+                                console.log(
+                                  "WARNING: Unable to load app info for app id: " +
+                                    o
+                                ));
+                          }
+                          var s = new Set();
                           return (
                             n.forEach(function(e) {
                               return e.forEach(function(e) {
-                                return r.add(e);
+                                return s.add(e);
                               });
                             }),
-                            Array.from(r)
+                            Array.from(s)
                           );
                         })),
-                        (o = new Array()),
+                        (a = new Array()),
                         t.forEach(function(e) {
                           var t = new Array();
                           e.facetValues.forEach(function(n) {
-                            var e = s.filter(function(e, t) {
+                            var e = i.filter(function(e, t) {
                               return ut(r[t], n.filter);
                             });
                             t.push({ facetValue: n, matchingCapsules: e });
                           }),
-                            o.push({
+                            a.push({
                               facet: e,
                               matchingCapsulesForFacetValues: t
                             });
                         }),
-                        [2, o]
+                        [2, a]
                       );
                   }
                 });
@@ -10582,6 +10594,7 @@ var CLSTAMP = "6288461";
                 (A += I);
             }
             if (g) break;
+            if (A >= a.length && 0 === S.length) break;
             S.push(
               D.createElement(
                 "div",
@@ -13002,7 +13015,9 @@ var CLSTAMP = "6288461";
                         return (
                           (f = e.sent()),
                           (p = f.capsules),
-                          (m = f.bMoreRemaining),
+                          (m =
+                            f.bMoreRemaining &&
+                            p.length < a.smart_section_max_apps),
                           a.enable_faceted_browsing
                             ? m ||
                               ((b = new Set(
