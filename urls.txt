@@ -170,6 +170,7 @@ https://store.steampowered.com/public/css/promo/winter2019_best.css?__TIME__
 https://store.steampowered.com/public/css/promo/winter2019_sale.css?__TIME__
 https://store.steampowered.com/public/css/promo/winter2019_steamawards.css?__TIME__
 https://store.steampowered.com/public/css/promo/winter2019_steamtown.css?__TIME__
+https://store.steampowered.com/public/css/promo/winter2020_sale.css?__TIME__
 https://store.steampowered.com/public/css/promo/winter_2015_main.css?__TIME__
 https://store.steampowered.com/public/css/styles_about.css?__TIME__
 https://store.steampowered.com/public/css/styles_aboutv5.css?__TIME__
@@ -259,9 +260,6 @@ https://steamcommunity.com/public/javascript/applications/community/localization
 https://steamcommunity.com/public/javascript/applications/community/main.js?__TIME__&l=english
 https://steamcommunity.com/public/javascript/applications/community/manifest.js?__TIME__&l=english
 https://steamcommunity.com/public/javascript/applications/community/profile.js?__TIME__&l=english
-https://steamcommunity.com/public/javascript/applications/community/ugcrewards.js?__TIME__&l=english
-https://steamcommunity.com/public/javascript/applications/community/ugcrewards~userreviewrewards.js?__TIME__&l=english
-https://steamcommunity.com/public/javascript/applications/community/userreviewrewards.js?__TIME__&l=english
 https://steamcommunity.com/public/javascript/auction.js?__TIME__&l=english
 https://steamcommunity.com/public/javascript/badges.js?__TIME__&l=english
 https://steamcommunity.com/public/javascript/bigpicture/apphub_bigpicture.js?__TIME__&l=english
@@ -405,7 +403,6 @@ https://store.steampowered.com/public/javascript/applications/store/curator_admi
 https://store.steampowered.com/public/javascript/applications/store/curator_admin~eventcomponents.js?__TIME__&l=english
 https://store.steampowered.com/public/javascript/applications/store/eventcomponents.js?__TIME__&l=english
 https://store.steampowered.com/public/javascript/applications/store/interactiverecommender.js?__TIME__&l=english
-https://store.steampowered.com/public/javascript/applications/store/loyalty_english-json.js?__TIME__&l=english
 https://store.steampowered.com/public/javascript/applications/store/loyaltystore.js?__TIME__&l=english
 https://store.steampowered.com/public/javascript/applications/store/loyaltystore~reviewaward.js?__TIME__&l=english
 https://store.steampowered.com/public/javascript/applications/store/main.js?__TIME__&l=english
