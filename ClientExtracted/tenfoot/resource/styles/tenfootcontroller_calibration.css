@@ -32,10 +32,11 @@
 }
 
 .TenfootControllerPadCalibrationPopupBody {
-    padding: 40px 40px 30px 40px;
+    padding: 20px 30px 20px 30px;
     flow-children: down;
     horizontal-align: center;
     vertical-align: center;
+    margin-bottom: 50px;
     width: 620px;
     height: fit-children;
     opacity: 1.0;
@@ -94,7 +95,7 @@
 
 .Joystick #ButtonPanel
 {
-    visibility: collapse;
+   // visibility: collapse;
 }
 
 .CalibrationButton
@@ -160,7 +161,12 @@ Slider:Selected
     visibility: collapse;
 }
 
-.JoystickCalibration .LeftStick,
+.JoystickCalibration .LeftStick
+{
+    visibility: visible;
+    margin-top: 32px;
+}
+
 .JoystickCalibration .RightStick
 {
     visibility: visible;
@@ -211,7 +217,7 @@ Slider:Selected
     border: 7px;
     border-style: solid;
     border-color: ui_primary_color;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     overflow: hidden;
     flow-children: down;
 }
@@ -248,17 +254,72 @@ Slider:Selected
     margin-left: 292.5px;
 }
 
+.JoystickCalibration.IMU .LeftStick,
+.JoystickCalibration.IMU .RightStick,
+.JoystickCalibration.Joystick #LeftStickSliderContainer,
+.JoystickCalibration.Joystick #RightStickSliderContainer
+{
+    visibility: collapse;
+}
+
 #LockJoystickButton
 {
     visibility: collapse;
 }
 
-#LockJoystickButton .JoystickCalibration
+.JoystickCalibration #LockJoystickButton
 {
     visibility: visible;
+    margin-top: 0px;
+}
+
+.JoystickCalibration.IMU #LockJoystickButton,
+.JoystickCalibration.Joystick #LockJoystickButton
+{
+    visibility: collapse;
 }
 
 #StickVisualization
 {
     visibility: collapse;
+}
+
+.JoystickCalibration #StickVisualization
+{
+    visibility: visible;
+}
+
+.JoystickCalibration.IMU #StickVisualization
+{
+    visibility: collapse;
+}
+
+.Joystick #OKButton,
+.IMU #OKButton,
+{
+    visibility: collapse;   
+}
+
+#IMUMsg
+{
+    margin-bottom: 12px;
+    padding-top: 0px;
+}
+
+.FooterButtons
+{
+    visibility: visible;
+	flow-children: right;
+	width: 100%;
+}
+
+.Button,
+{
+ //min-height:40px;
+ //padding: 2px 20px 0px 10px;
+}
+
+.TickBox
+{
+    margin-left: 8px;
 }

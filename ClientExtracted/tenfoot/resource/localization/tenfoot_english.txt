@@ -1092,6 +1092,7 @@
 	"SettingsController_Accounts_DeregAYSDesc"			"Deregistering this account will stop your configs travelling with your controller when you log into the account."
 	"SettingsController_Deregister"						"DEREGISTER ACCOUNT"
 	"SettingsController_SwitchControllerAccount"		"SWITCH TO THIS ACCOUNT"
+	"SettingsController_AutoCalibrateDuringUse"			"AUTO-CALIBRATE GYRO DURING USE"
 	"Controller_Registration_TurnOnSound"				"Turn On Sound:"
 	"Controller_Registration_TurnOffSound"				"Turn Off Sound:"
 	"SettingController_HapticSound_Default"				"Default Sound"

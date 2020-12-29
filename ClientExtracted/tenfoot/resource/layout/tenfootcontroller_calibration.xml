@@ -37,25 +37,29 @@
           <Panel id="RightStickDeadzone" class="StickDeadzone RightStick"></Panel>
           <Panel id="RightStickCursor" class="StickCursor RightStick"></Panel>
         </Panel>
-        <Panel class="CalibrationButton LeftStick">
-          <Label class="SliderLabel" text="#ControllerCalibration_Left_Deadzone" />
-          <Slider id="ControllerCalibration_Left_Deadzone" direction="horizontal" />
-        </Panel>
-        <Panel class="CalibrationButton RightStick">
-          <Label class="SliderLabel" text="#ControllerCalibration_Right_Deadzone" />
-          <Slider id="ControllerCalibration_Right_Deadzone" direction="horizontal" />
-        </Panel>
         <Button id="LockJoystickButton" class="Button CalibrationButton" tabindex="auto" selectionpos="auto" onactivate="CalibrationLockJoysticks()">
           <Label class="CalibrationButtonText" text="#ControllerCalibration_LockSticks" />
         </Button>
+        <Panel class="CalibrationButton LeftStick" id="LeftStickSliderContainer">
+          <Label class="SliderLabel" text="#ControllerCalibration_Left_Deadzone" />
+          <Slider id="ControllerCalibration_Left_Deadzone" direction="horizontal" />
+        </Panel>
+        <Panel class="CalibrationButton RightStick" id="RightStickSliderContainer">
+          <Label class="SliderLabel" text="#ControllerCalibration_Right_Deadzone" />
+          <Slider id="ControllerCalibration_Right_Deadzone" direction="horizontal" />
+        </Panel>
         <Button class="Button CalibrationButton" tabindex="auto" selectionpos="auto" onactivate="CalibrationStart()">
           <Label id="CalibrationStatusText" class="CalibrationButtonText" text="#ControllerCalibration_Start" />
         </Button>
         <Button id="GyroButton" class="Button CalibrationButton" tabindex="auto" selectionpos="auto" onactivate="GyroCalibrationStart()">
           <Label class="CalibrationButtonText" text="#ControllerCalibration_Gyro" />
         </Button>
-        <Button class="Button CalibrationButton" tabindex="auto" selectionpos="auto" onactivate="AcceptButton()">
+        <ToggleButton class="CheckBox CalibrationButton" selectionpos="auto" id="GyroAutoCalCheckbox" onactivate="GyroCalibrationSettingToggle()" text="#SettingsController_AutoCalibrateDuringUse"/>
+        <Button class="Button CalibrationButton OKButton" id="OKButton" tabindex="auto" selectionpos="auto" onactivate="AcceptButton()">
           <Label class="CalibrationButtonText" text="#UI_OK" />
+        </Button>
+        <Button class="Button CalibrationButton" id="CancelButton" tabindex="auto" selectionpos="auto" onactivate="CancelButton()">
+          <Label class="CalibrationButtonText" text="#UI_CANCEL" />
         </Button>
       </Panel>
     </Panel>
