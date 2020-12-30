@@ -482,6 +482,7 @@ ClientManifest/steam_client_publicbeta_osx      @ https://steamcdn-a.akamaihd.ne
 //
 // Steam China Manifests
 //
+ClientManifest/steamchina_win32                 @ https://steamcdn-a.akamaihd.net/client/steamchina_win32
 ClientManifest/steamchina_publicbeta_ubuntu12   @ https://steamcdn-a.akamaihd.net/client/steamchina_publicbeta_ubuntu12?__TIME__
 ClientManifest/steamchina_publicbeta_win32      @ https://steamcdn-a.akamaihd.net/client/steamchina_publicbeta_win32?__TIME__
 ClientManifest/steamchina_publicbeta_osx        @ https://steamcdn-a.akamaihd.net/client/steamchina_publicbeta_osx?__TIME__
