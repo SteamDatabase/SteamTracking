@@ -281,8 +281,6 @@ function SortItemListByPriorityList( rgItemList, strPriorityListName )
 
 function HomeRenderFeaturedItems( rgDisplayLists, rgTagData, rgFranchiseData, rgTagGenres = null )
 {
-	HomeSaleFilterHeroes( $J('.hero_parent_ctn') );
-
 	var k_nTier1ItemsMin = 14;
 	var k_nTier1ItemsMax = 14;
 
@@ -295,6 +293,8 @@ function HomeRenderFeaturedItems( rgDisplayLists, rgTagData, rgFranchiseData, rg
 		GDynamicStore.MarkAppDisplayed( rgSteamAwardWinners );
 		HomeSaleBlock( rgSteamAwardWinners, $J('#steamawards_target' ), 'sale_steamawards' );
 	}
+
+	HomeSaleFilterHeroes( $J('.hero_parent_ctn') );
 
 	var rgAllTier1Items = GHomepage.MergeLists( rgDisplayLists.sale_tier1, false, rgDisplayLists.sale_tier1_fallback, false );
 

@@ -1928,6 +1928,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/dbg.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/fasttimer.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/memalloc.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/memdbgon.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/platform.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/printf_check.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/thread_full_mutex.h

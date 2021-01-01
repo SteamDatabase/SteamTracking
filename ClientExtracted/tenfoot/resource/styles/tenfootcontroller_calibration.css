@@ -323,3 +323,17 @@ Slider:Selected
 {
     margin-left: 8px;
 }
+
+#GyroAutoCalCheckbox,
+#GyroButton,
+#CancelButton
+{
+    visibility: collapse;   
+}
+
+.JoystickCalibration.GyroCalibration #GyroAutoCalCheckbox,
+.GyroCalibration #GyroButton,
+.JoystickCalibration #CancelButton
+{
+    visibility: visible;
+}
