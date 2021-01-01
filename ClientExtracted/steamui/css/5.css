@@ -1059,6 +1059,9 @@ body.modals_BodyNoScrollDialog_105OB {
 .uninstalldialog_UninstallError_2n_P7 {
   margin-top: 20px; }
 
+.GenericConfirmDialog.durationcontroldialog_DurationControlDialogBackground_2iwqV {
+  background: linear-gradient(to bottom right, #6383b1, #273f65); }
+
 .durationcontroldialog_DurationControlDialog_3iEiQ {
   display: flex;
   flex-direction: column;
@@ -1074,7 +1077,6 @@ body.modals_BodyNoScrollDialog_105OB {
   height: 2em;
   width: 2em;
   align-items: center;
-  background-color: #333;
   border-radius: 50%; }
 
 .durationcontroldialog_TimerText_25RpV {
