@@ -829,14 +829,60 @@ body.v6 .page_content_ctn.dark
 	background-size: contain;
 }
 
+.steamawards_winners_header {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.steamaward_winners_ctn {
+    background: linear-gradient( 360deg, rgb(19 14 3), #292111 80%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    position: relative;
+    padding: 25px 50px;
+}
+
+.steamaward_winners_title {
+    text-align: left;
+    color: #f5db7e;
+    font-size: 28px;
+    text-transform: uppercase;
+    		font-family: "Motiva Sans", Sans-serif;
+		font-weight: 900; /* black */
+
+		}
+
+.steamaward_winners_title div {
+    font-size: 60px;
+}
+
+.steamaward_winners_trophy_img {
+    width: 80px;
+    margin-top: -100px;
+    margin-right: 20px;
+}
+
+.steamaward_winners_link_ctn {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+    text-align: right;
+}
+
+.steamaward_winners_link {
+    color: #f5db7e;
+    font-size: 14px;
+    text-transform: uppercase;
+    		font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		}
+
 @media screen and (min-width: 2300px )
 {
 	body.v6.sale_winter2020 {
 		            background-size: unset;
 	            }
 }
-
-
 
 @media screen and (max-width: 1800px )
 {
@@ -1061,7 +1107,7 @@ body.v6 .page_content_ctn.dark
 		padding-left: 0px;
 	}
 
-	html.responsive .steamaward_winners_trophy {
+	html.responsive .steamaward_winners_trophy_img {
 		display: none;
 	}
 

@@ -289,7 +289,7 @@ function HomeRenderFeaturedItems( rgDisplayLists, rgTagData, rgFranchiseData, rg
 
 	if ( rgDisplayLists.steam_award_winners )
 	{
-		var rgSteamAwardWinners = GHomepage.FilterItemsForDisplay( rgDisplayLists.steam_award_winners, 'home', 8, 8, { games_already_in_library: false, localized: true, displayed_elsewhere: false, only_current_platform: false, enforce_minimum: true } );
+		var rgSteamAwardWinners = GHomepage.FilterItemsForDisplay( rgDisplayLists.steam_award_winners, 'home', 10, 10, { games_already_in_library: false, localized: true, displayed_elsewhere: false, only_current_platform: false, enforce_minimum: true } );
 		GDynamicStore.MarkAppDisplayed( rgSteamAwardWinners );
 		HomeSaleBlock( rgSteamAwardWinners, $J('#steamawards_target' ), 'sale_steamawards' );
 	}
