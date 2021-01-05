@@ -514,6 +514,7 @@ SelectMousePosition
 .EditAlwaysOnButton.controller_ps4  #BackgroundController,
 .EditAlwaysOnButton.controller_ps3  #BackgroundController,
 .EditAlwaysOnButton.controller_xboxone  #BackgroundController,
+.EditAlwaysOnButton.controller_xboxelite  #BackgroundController,
 .EditAlwaysOnButton.controller_xbox360  #BackgroundController,
 .EditAlwaysOnButton.controller_generic  #BackgroundController,
 .EditAlwaysOnButton.controller_apple  #BackgroundController,
@@ -644,6 +645,14 @@ SelectMousePosition
     wash-color: #102f4b72;
 }
 
+.controller_xboxelite #BackgroundController
+{
+	background-position: 510px 95px;
+    background-size: 725px 421px;
+	background-image: url("file://{images}/library/controller/controller_config_controller_xboxelite.png");
+    wash-color: #102f4b72;
+}
+
 .controller_xbox360 #BackgroundController
 {
 	background-position: 434px 60px;
@@ -704,6 +713,7 @@ SelectMousePosition
 .controller_ps4 #BackgroundBaseLinesLeft,
 .controller_ps3 #BackgroundBaseLinesLeft,
 .controller_xboxone #BackgroundBaseLinesLeft,
+.controller_xboxelite #BackgroundBaseLinesLeft,
 .controller_xbox360 #BackgroundBaseLinesLeft,
 .controller_generic #BackgroundBaseLinesLeft,
 .controller_switch_pro #BackgroundBaseLinesLeft,
@@ -730,6 +740,7 @@ SelectMousePosition
 .controller_ps4 #BackgroundBaseLinesRight,
 .controller_ps3 #BackgroundBaseLinesRight,
 .controller_xboxone #BackgroundBaseLinesRight,
+.controller_xboxelite #BackgroundBaseLinesRight,
 .controller_xbox360 #BackgroundBaseLinesRight,
 .controller_generic #BackgroundBaseLinesRight,
 .controller_switch_pro #BackgroundBaseLinesRight,
@@ -782,6 +793,7 @@ SelectMousePosition
 .controller_ps4 #BackgroundLines.LeftTriggerSelected,
 .controller_ps3 #BackgroundLines.LeftTriggerSelected,
 .controller_xboxone #BackgroundLines.LeftTriggerSelected,
+.controller_xboxelite #BackgroundLines.LeftTriggerSelected,
 .controller_xbox360 #BackgroundLines.LeftTriggerSelected,
 .controller_generic #BackgroundLines.LeftTriggerSelected,
 .controller_switch_pro #BackgroundLines.LeftTriggerSelected,
@@ -809,6 +821,7 @@ SelectMousePosition
 .controller_ps4 #BackgroundLines.LeftBumperSelected,
 .controller_ps3 #BackgroundLines.LeftBumperSelected,
 .controller_xboxone #BackgroundLines.LeftBumperSelected,
+.controller_xboxelite #BackgroundLines.LeftBumperSelected,
 .controller_xbox360 #BackgroundLines.LeftBumperSelected,
 .controller_generic #BackgroundLines.LeftBumperSelected,
 .controller_switch_pro #BackgroundLines.LeftBumperSelected,
@@ -826,6 +839,7 @@ SelectMousePosition
 .controller_ps5 #BackgroundLines.LeftGripSelected, 
 .controller_ps4 #BackgroundLines.LeftGripSelected, 
 .controller_ps3 #BackgroundLines.LeftGripSelected,
+.controller_xboxelite #BackgroundLines.LeftGripSelected,
 .controller_xboxone #BackgroundLines.LeftGripSelected,
 .controller_xbox360 #BackgroundLines.LeftGripSelected,
 .controller_generic #BackgroundLines.LeftGripSelected,
@@ -841,6 +855,7 @@ SelectMousePosition
 .controller_ps4 #BackgroundLines.RightGripSelected,
 .controller_ps3 #BackgroundLines.RightGripSelected,
 .controller_xboxone #BackgroundLines.RightGripSelected,
+.controller_xboxelite #BackgroundLines.RightGripSelected,
 .controller_xbox360 #BackgroundLines.RightGripSelected,
 .controller_generic #BackgroundLines.RightGripSelected,
 .controller_switch_pro #BackgroundLines.RightGripSelected,
@@ -878,6 +893,13 @@ SelectMousePosition
 	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_3.png");
 }
 
+.controller_xboxelite.cap_additional_buttons #BackgroundLines.LeftGripSelected
+{
+	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_3.png");
+	visibility: visible;
+	z-index: -10;
+}
+
 #BackgroundLines.RightTriggerSelected
 {
 	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_5.png");
@@ -891,6 +913,7 @@ SelectMousePosition
 .controller_ps4 #BackgroundLines.RightTriggerSelected,
 .controller_ps3 #BackgroundLines.RightTriggerSelected,
 .controller_xboxone #BackgroundLines.RightTriggerSelected,
+.controller_xboxelite #BackgroundLines.RightTriggerSelected,
 .controller_xbox360 #BackgroundLines.RightTriggerSelected,
 .controller_generic #BackgroundLines.RightTriggerSelected,
 .controller_switch_pro #BackgroundLines.RightTriggerSelected,
@@ -919,6 +942,7 @@ SelectMousePosition
 .controller_ps4 #BackgroundLines.RightBumperSelected,
 .controller_ps3 #BackgroundLines.RightBumperSelected,
 .controller_xboxone #BackgroundLines.RightBumperSelected,
+.controller_xboxelite #BackgroundLines.RightBumperSelected,
 .controller_xbox360 #BackgroundLines.RightBumperSelected,
 .controller_generic #BackgroundLines.RightBumperSelected,
 .controller_switch_pro #BackgroundLines.RightBumperSelected,
@@ -948,6 +972,7 @@ SelectMousePosition
 #BackgroundLines.RightUpperGripSelected
 {
 	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_7.png");
+	z-index: -10;
 }
 
 .controller_ps3 #BackgroundLines.GyroSelected
@@ -987,6 +1012,7 @@ SelectMousePosition
 .controller_ps4 #BackgroundLines.DPadSelected,
 .controller_ps3 #BackgroundLines.DPadSelected,
 .controller_xboxone #BackgroundLines.LeftJoystickSelected,
+.controller_xboxelite #BackgroundLines.LeftJoystickSelected,
 .controller_xbox360 #BackgroundLines.LeftJoystickSelected,
 .controller_generic #BackgroundLines.LeftJoystickSelected,
 .controller_switch_pro #BackgroundLines.LeftJoystickSelected,
@@ -1022,6 +1048,7 @@ SelectMousePosition
 .controller_ps4 #BackgroundLines.LeftJoystickSelected,
 .controller_ps3 #BackgroundLines.LeftJoystickSelected,
 .controller_xboxone #BackgroundLines.DPadSelected,
+.controller_xboxelite #BackgroundLines.DPadSelected,
 .controller_xbox360 #BackgroundLines.DPadSelected,
 .controller_generic #BackgroundLines.DPadSelected,
 .controller_switch_pro #BackgroundLines.DPadSelected,
@@ -1050,6 +1077,7 @@ SelectMousePosition
 .controller_ps4 #BackgroundLines.SlotThreeSelected,
 .controller_ps3 #BackgroundLines.SlotThreeSelected,
 .controller_xboxone #BackgroundLines.SlotThreeSelected,
+.controller_xboxelite #BackgroundLines.SlotThreeSelected,
 .controller_xbox360 #BackgroundLines.SlotThreeSelected,
 .controller_generic #BackgroundLines.SlotThreeSelected,
 .controller_switch_pro #BackgroundLines.SlotThreeSelected,
@@ -1072,6 +1100,7 @@ SelectMousePosition
 .controller_ps4 #BackgroundLines.SlotABXYSelected,
 .controller_ps3 #BackgroundLines.SlotABXYSelected,
 .controller_xboxone #BackgroundLines.SlotABXYSelected,
+.controller_xboxelite #BackgroundLines.SlotABXYSelected,
 .controller_xbox360 #BackgroundLines.SlotABXYSelected,
 .controller_generic #BackgroundLines.SlotABXYSelected,
 .controller_switch_pro #BackgroundLines.SlotABXYSelected,
@@ -1103,6 +1132,7 @@ SelectMousePosition
 .controller_ps4 #BackgroundLines.SlotFourSelected,
 .controller_ps3 #BackgroundLines.SlotFourSelected,
 .controller_xboxone #BackgroundLines.SlotFourSelected,
+.controller_xboxelite #BackgroundLines.SlotFourSelected,
 .controller_xbox360 #BackgroundLines.SlotFourSelected,
 .controller_generic #BackgroundLines.SlotFourSelected,
 .controller_switch_pro #BackgroundLines.SlotFourSelected,
@@ -1125,6 +1155,13 @@ SelectMousePosition
 	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_1.png");
 }
 
+.controller_xboxone #BackgroundLines.CaptureButtonSelected
+{
+    background-position: -50px -50px;
+    background-image: url("file://{images}/library/controller/cropped_controller_config_lines_12.png");
+}
+
+
 .controller_ps5 #BackgroundLines.BackButtonSelected,
 {
     background-image: url("file://{images}/library/controller/cropped_controller_config_lines_2.png");
@@ -1141,7 +1178,8 @@ SelectMousePosition
     background-position: -118px -180px;
 }
 
-.controller_xboxone #BackgroundLines.BackButtonSelected
+.controller_xboxone #BackgroundLines.BackButtonSelected,
+.controller_xboxelite #BackgroundLines.BackButtonSelected,
 {
     background-position: 200px 20px;
     background-size: 75%;
@@ -1196,10 +1234,45 @@ SelectMousePosition
     background-position: -66px -180px;
 }
 
-.controller_xboxone #BackgroundLines.StartButtonSelected
+.controller_xboxone #BackgroundLines.StartButtonSelected,
+.controller_xboxelite #BackgroundLines.StartButtonSelected
 {
     background-position: 225px 20px;
     background-size: 75%;
+}
+
+.cap_grip_buttons #BackgroundLines.StartButtonSelected,
+.cap_grip_buttons #BackgroundLines.BackButtonSelected
+{
+    visibility: collapse;
+}
+
+.controller_xboxelite.cap_grip_buttons #BackgroundLines.LeftGripSelected,
+{
+    background-position: 0px -10px;
+    visibility: visible;
+    z-index: -10;
+}
+
+.controller_xboxelite.cap_grip_buttons #BackgroundLines.RightGripSelected,
+{
+    background-position: -100px -10px;
+    visibility: visible;
+    z-index: -10;
+}
+
+.controller_xboxelite.cap_grip_buttons #BackgroundLines.LeftUpperGripSelected,
+{
+    background-position: 0px -100px;
+    visibility: visible;
+    z-index: -10;
+}
+
+.controller_xboxelite.cap_grip_buttons #BackgroundLines.RightUpperGripSelected,
+{
+    background-position: -100px -100px;
+    visibility: visible;
+    z-index: -10;
 }
 
 .controller_steamcontroller_headcrab #BackgroundLines.StartButtonSelected
@@ -1222,8 +1295,6 @@ SelectMousePosition
     background-position: 265px -40px;
     background-size: 75%;
 }
-
-
 
 .HasMultipleActionSets #BackgroundController
 {
@@ -1493,6 +1564,7 @@ SelectMousePosition
 .controller_ps4 .ModeWrapper.SteamController,
 .controller_ps3 .ModeWrapper.SteamController,
 .controller_xboxone .ModeWrapper.SteamController,
+.controller_xboxelite .ModeWrapper.SteamController,
 .controller_xbox360 .ModeWrapper.SteamController,
 .controller_generic .ModeWrapper.SteamController,
 .controller_switch_pro .ModeWrapper.SteamController,
@@ -1500,6 +1572,7 @@ SelectMousePosition
 .controller_apple .ModeWrapper.SteamController,
 .controller_mobile_touch .ModeWrapper.SteamController,
 .controller_xboxone .ModeWrapper.LJoyCenter,
+.controller_xboxelite .ModeWrapper.LJoyCenter,
 .controller_xbox360 .ModeWrapper.LJoyCenter,
 .controller_generic .ModeWrapper.LJoyCenter,
 .controller_switch_pro .ModeWrapper.LJoyCenter,
@@ -1520,12 +1593,14 @@ SelectMousePosition
 .controller_ps3 .ModeWrapper.TraditionalController,
 .controller_ps3 .ModeWrapper.LJoyCenter,
 .controller_xboxone .ModeWrapper.TraditionalController,
+.controller_xboxelite .ModeWrapper.TraditionalController,
 .controller_xbox360 .ModeWrapper.TraditionalController,
 .controller_generic .ModeWrapper.TraditionalController,
 .controller_switch_pro .ModeWrapper.TraditionalController,
 .controller_android .ModeWrapper.TraditionalController,
 .controller_apple .ModeWrapper.TraditionalController,
 .controller_xboxone .ModeWrapper.LJoyLeft,
+.controller_xboxelite .ModeWrapper.LJoyLeft,
 .controller_xbox360 .ModeWrapper.LJoyLeft,
 .controller_generic .ModeWrapper.LJoyLeft,
 .controller_switch_pro .ModeWrapper.LJoyLeft,
@@ -1738,6 +1813,7 @@ Label.ModeTitle
 .controller_ps4 .BindingButton.Steam,
 .controller_ps3 .BindingButton.Steam,
 .controller_xboxone .BindingButton.Steam,
+.controller_xboxelite .BindingButton.Steam,
 .controller_xbox360 .BindingButton.Steam,
 .controller_generic .BindingButton.Steam,
 .controller_switch_pro .BindingButton.Steam,
@@ -1806,6 +1882,7 @@ Label.ModeTitle
 }
 
 .controller_xboxone .BindingButton.AlwaysOn,
+.controller_xboxelite .BindingButton.AlwaysOn,
 .controller_xbox360 .BindingButton.AlwaysOn,
 .controller_ps4 .BindingButton.AlwaysOn,
 .controller_ps5 .BindingButton.AlwaysOn,
@@ -1831,6 +1908,7 @@ Label.ModeTitle
 .controller_ps4 .BindingButton.Playstation,
 .controller_ps3 .BindingButton.Playstation,
 .controller_xboxone .BindingButton.Xbox,
+.controller_xboxelite .BindingButton.Xbox,
 .controller_xbox360 .BindingButton.Xbox,
 .controller_generic .BindingButton.Xbox,
 .controller_switch_pro .BindingButton.Xbox,
@@ -1846,6 +1924,18 @@ ControllerBindingButton.BindingButton
 	height: 100px;
 	margin-bottom: 9px;
 	background-color: none;
+}
+
+.cap_additonal_buttons  ControllerBindingButton.BindingButton
+{
+    height: 80px;
+
+}
+
+.controller_xboxelite.cap_additonal_buttons  ControllerBindingButton.BindingButton
+{
+    height: 80px;
+    margin-top: 0px;
 }
 
 .controller_steamcontroller_headcrab ControllerBindingButton.BindingButton
@@ -1963,10 +2053,20 @@ ControllerBindingButton.BindingButton.Right
     visibility: visible;
 }
 
-.controller_switch_pro #CaptureButton.BindingButton Label,
-.controller_switch_pair #CaptureButton.BindingButton Label
+.cap_capture_button.controller_xboxone #BackgroundController
 {
-	margin-left: 64px;
+    background-image: url("file://{images}/library/controller/controller_config_controller_xboxone_x.png");
+}
+
+.cap_capture_button #CaptureButton.BindingButton,
+.cap_capture_button #CaptureButton.BindingButton Label
+{
+    visibility: visible;
+}
+
+.controller_switch_pro #CaptureButton.BindingButton Label,
+.controller_switch_pair #CaptureButton.BindingButton Label {
+    margin-left: 64px;
     visibility: visible;
 }
 
@@ -2205,6 +2305,7 @@ ControllerPropertiesMode, ControllerPropertiesActivator
 }
 
 .controller_xboxone #GyroModeContainer,
+.controller_xboxelite #GyroModeContainer,
 .controller_xbox360 #GyroModeContainer,
 .controller_generic #GyroModeContainer,
 .controller_apple #GyroModeContainer,

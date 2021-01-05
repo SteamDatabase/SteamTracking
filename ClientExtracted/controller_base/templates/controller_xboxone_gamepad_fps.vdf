@@ -464,7 +464,7 @@
 					}
 				}
 			}
-			"button_back_left"
+						"button_back_left_upper"
 			{
 				"activators"
 				{
@@ -472,7 +472,20 @@
 					{
 						"bindings"
 						{
-							"binding"		"xinput_button a"
+							"binding"		"xinput_button x"
+						}
+					}
+				}
+			}
+			"button_back_right_upper"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"xinput_button b"
 						}
 					}
 				}
@@ -485,7 +498,20 @@
 					{
 						"bindings"
 						{
-							"binding"		"xinput_button x"
+							"binding"		"xinput_button a"
+						}
+					}
+				}
+			}
+			"button_capture"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"controller_action SCREENSHOT"
 						}
 					}
 				}

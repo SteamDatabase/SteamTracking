@@ -6,8 +6,6 @@ __stubs
 __TEXT
 __stub_helper
 __TEXT
-0s3
-0s3
 __cstring
 __TEXT
 __const
@@ -57,7 +55,6 @@ __LINKEDIT
 @loader_path/panorama.dylib
 "
 p]
-_M
 P
 
 
@@ -129,8 +126,8 @@ h
 8
 /usr/lib/libobjc.A.dylib
 &
+aM
 )
-M
 M
 M
 M
@@ -147,20 +144,18 @@ k2
 '
 '
 '
+~L
 "
-mL
 3
-~K
-5
+gL
 5
 5
 D
 2
 2
-mK
-^K
-YK
-MK
+`K
+[K
+NK
 @
 8
 HC
@@ -2773,8 +2768,7 @@ PDP Xbox 360 Controller
 SteelSeries Stratus Duo
 Xbox One Controller
 Xbox One S Controller
-Xbox One Elite Controller
-Xbox One Elite 2 Controller
+Xbox One Series X Controller
 PDP Xbox One Afterglow
 PDP Xbox One Face-Off Controller
 PDP MK X Fight Pad
@@ -2813,6 +2807,8 @@ PDP Xbox One Aqualime
 PDP Xbox One Red Camo
 PDP Xbox One RC Gamepad
 PowerA XBox One Controller
+Xbox One Elite Controller
+Xbox One Elite 2 Controller
 HORI Fighting Commander
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/tslist.h
 Assertion Failed: m_Count == 0
@@ -5068,8 +5064,8 @@ linux
 Linux;tenfoot
 X-ValveUserAgent
 panorama %s %s
-Dec 31 2020
-22:13:50
+Jan  4 2021
+17:58:37
 X-SteamClientVersion
 Assertion Failed: hostName
 Assertion Failed: pchRemoteHost
@@ -7634,7 +7630,6 @@ M
 M
 M
 M
-M
 k2
 
 
@@ -7645,25 +7640,23 @@ k2
 '
 '
 '
+~L
 "
-mL
 3
-~K
-5
+gL
 5
 5
 D
 2
 2
-mK
-^K
-YK
-MK
-FK
-?K
+`K
+[K
+NK
+GK
+@K
 "
-2K
-,K
+6K
+0K
 J
 @
 "
@@ -7680,7 +7673,7 @@ J
 J
 N0
 n!
-uG
+L95>~I
 &
 {%
 &
@@ -7688,15 +7681,15 @@ uG
 A
 /
 /
-=F
 %
+&G
 I
 I
 H
 .
+{G
 $
 .
-L95p1G
 F
 V#
 6#
@@ -7709,8 +7702,6 @@ V#
 #
 #
 -
-WD
-G
 G
 (
 (
@@ -7720,7 +7711,6 @@ G
 O
 L,
 ,
-/
 ,
 C
 2
@@ -7732,18 +7722,17 @@ t1Mcu
 .
 .
 .
-.C
 %
 "+
 +
 +
 +
+uD
 +
 +
 a%
 T%
 &
-a-
 r
 @
 @
@@ -7751,8 +7740,7 @@ r
 @
 @
 @
-u*
-A
+/-
 %
 %
 *
@@ -7766,11 +7754,12 @@ B
 @
 @
 @
-]+
 @
 @
+x)
 @
 @
+!)
 *
 @
 @
@@ -7785,8 +7774,10 @@ H=
 (
 (
 (
+0*
 z'
 P
+A
 A
 "
 @
@@ -7798,13 +7789,16 @@ B
 B
 B
 B
+B
+B
+B
+B
 "
 '
 '
 '
+x@
 "
-,@
-A
 @
 @
 @
@@ -7823,9 +7817,7 @@ B
 @
 @
 @
-QA
-:>
-'
+@
 @
 b&
 $
@@ -7844,19 +7836,21 @@ $
 @
 @
 @
-)@
+?
 @
 @
 @
 @
+_>
 @
 @
-s?
 =
-n?
 B$
 %
 6$
+D<
+T>
+R>
 $
 *#
 @
@@ -7873,14 +7867,16 @@ $
 @
 V"
 #
+L95:o;
 :
+L95"=;
 ;
 @
 P
-"
 (
 (
 P
+"
 -!
 A
 '!
@@ -7898,6 +7894,7 @@ A
 A
 A
 A
+K#
 A
 A
 A
@@ -7908,12 +7905,10 @@ A
 !
 D
 "
-u#
-r"
-F7
+G"
+!
 !
 8
-\!
 0
 p
 !
@@ -7921,30 +7916,27 @@ p
 !
 !
 !
-c7
+!
+v6
+I6
 ]
 @
 @
 0
 p
 ?
-84
 =
-P2
-'1
 Hi
-i/
-p0
-^0
-T0
-S2
-.
+%1
+].
 .
 @
 @
 
 
-b/
+0
+g-
+8.
 9
 @
 @
@@ -8096,6 +8088,7 @@ b/
 @
 @
 @
+#-
 @
 @
 @
@@ -8284,9 +8277,6 @@ b/
 @
 @
 @
-t,
-q,
-],
 ,
 ,
 ,
@@ -8294,10 +8284,9 @@ q,
 E
 @
 @
-,
-5*
 @
 @
+|)
 =
 =
 @
@@ -8373,12 +8362,11 @@ Hc
 _
 
 
-!(
-L95pP&
 
-`$
+&
 Hc
 $
+s"
 
 
 
@@ -8432,10 +8420,10 @@ HcU
 #
 i[
 ~
-*
 B
 ?
 E
+5
 I;E
 I;E
 B

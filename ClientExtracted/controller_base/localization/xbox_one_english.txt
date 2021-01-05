@@ -29,4 +29,7 @@
 	"origin_xboxone_button_menu"					"Menu Button"
 	"origin_xboxone_button_view"					"View Button"
 	"origin_xboxone_button_dpad_move"				"D-Pad Movement"
-}
+	"origin_xboxone_button_paddle_1"				"P1 Paddle"
+	"origin_xboxone_button_paddle_2"				"P2 Paddle"
+	"origin_xboxone_button_paddle_3"				"P3 Paddle"
+	"origin_xboxone_button_paddle_4"				"P4 Paddle"

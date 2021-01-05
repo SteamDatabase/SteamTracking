@@ -608,6 +608,19 @@
 					}
 				}
 			}
+			"button_back_left_upper"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press R, Reload"
+						}
+					}
+				}
+			}
 			"button_back_left"
 			{
 				"activators"
@@ -616,7 +629,20 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press C, Crouch"
+							"binding"		"key_press F, Flashlight"
+						}
+					}
+				}
+			}
+			"button_back_right_upper"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press E, Use"
 						}
 					}
 				}
@@ -629,7 +655,20 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press R, Reload"
+							"binding"		"key_press SPACE, Jump"
+						}
+					}
+				}
+			}
+			"button_capture"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"controller_action SCREENSHOT"
 						}
 					}
 				}

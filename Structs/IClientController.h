@@ -77,6 +77,7 @@ public:
     virtual unknown_ret SetStickExtents(unsigned int, int, short, short, short, short) = 0;
     virtual unknown_ret ResetStickExtents(unsigned int) = 0;
     virtual unknown_ret SetRumble(unsigned int, int, int, unsigned short, unsigned short) = 0;
+    virtual unknown_ret SetRumbleExtended(unsigned int, int, int, unsigned short, unsigned short, unsigned short, unsigned short) = 0;
     virtual unknown_ret SendIRCode(unsigned int, int, bool, unsigned int) = 0;
     virtual unknown_ret StopIRCode(unsigned int) = 0;
     virtual unknown_ret InvalidateBindingCache() = 0;

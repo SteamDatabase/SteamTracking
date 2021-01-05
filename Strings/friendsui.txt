@@ -10900,6 +10900,7 @@ controller_keyboard_generic
 controller_mouse_generic
 controller_switch_pro_generic
 controller_ps5
+controller_xboxelite
 optional
 Windows
 LoadFileIntoBuffer: NULL parameters

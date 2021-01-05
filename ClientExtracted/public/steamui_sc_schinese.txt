@@ -6,4 +6,5 @@
 "Steam_About_Info"				"蒸汽平台"
 "Steam_Settings_ShareIPNetworking_URLText"	"https://help.steamchina.com/zh/kb/9929-UAFN-9329"
 "Steam_Settings_Streaming_StreamingSupportLink"	"https://help.steamchina.com/zh/kb/3629-RIAV-1617"
+"steam_emailaddress_query_info_url"		"https://help.steamchina.com/zh/kb/5151-RUAS-1543"
 }

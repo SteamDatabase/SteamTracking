@@ -22,7 +22,7 @@ typedef enum EControllerType
     k_EControllerTypeController_switch_pro_generic, // controller_switch_pro_generic
     k_EControllerTypeController_mobile_touch, // controller_mobile_touch
     k_EControllerTypeController_ps5 = 45, // controller_ps5
-    k_EControllerTypeController_xboxone, // controller_xboxone
+    k_EControllerTypeController_xboxelite, // controller_xboxelite
     k_EControllerTypeController_keyboard_generic = 400, // controller_keyboard_generic
     k_EControllerTypeController_mouse_generic = 800, // controller_mouse_generic
 } EControllerType;

@@ -58,6 +58,10 @@
 										<Label id="RumbleLabel" text="#Controller_Registration_Rumble" />
 										<DropDown id="RumbleDropdown" class="SoundDropdown"/>
 									</Panel>
+                  <Panel id="PlayerSlotLEDSettingContainer" class="SoundDropdownContainer">
+                    <Label id="PlayerSlotLEDLabel" text="#Controller_Registration_PlayerSlotLED" />
+                    <DropDown id="PlayerSlotLEDDropdown" class="SoundDropdown"/>
+                  </Panel>
 									<Panel id="LEDColorContainer">
 										<Label text="#Controller_Registration_LEDHue" />
 										<Slider id="LEDColorSlider" direction="horizontal" />

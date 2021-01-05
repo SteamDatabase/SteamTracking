@@ -54,7 +54,7 @@
 		"labelText"		"#Steam_TroubleshooterLink"
 		"textAlignment"		"west"
 		"wrap"		"0"
-		"URLText"		"https://support.steampowered.com/kb_article.php?ref=5151-RUAS-1543"
+		"URLText"		"#steam_emailaddress_query_info_url"
 	}
 	
 }

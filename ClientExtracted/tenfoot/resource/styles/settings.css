@@ -4057,6 +4057,16 @@ SettingsPanel_ControllerConfigs .SettingsContent
 	visibility: visible;
 }
 
+#SettingsController_XBoxDriver.XboxEnabled
+{
+    visibility: visible;
+}
+
+#SettingsController_XBoxDriver
+{
+    visibility: collapse;
+}
+
 #SettingsController_NintendoLayout.NintendoEnabled
 {
     visibility: visible;
@@ -4066,6 +4076,7 @@ SettingsPanel_ControllerConfigs .SettingsContent
 {
     height: 800px;
 }
+
 #SettingsController_NintendoLayout
 {
     visibility: collapse;

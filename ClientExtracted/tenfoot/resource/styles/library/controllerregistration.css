@@ -197,6 +197,16 @@ DropDownMenu.DropDownMenuVisible
     visibility: collapse;
 }
 
+.SupportsPlayerSlotLED #PlayerSlotLEDSettingContainer
+{
+    visibility: visible;
+}
+
+#PlayerSlotLEDSettingContainer
+{
+    visibility: collapse;
+}
+
 #GuideBrightnessContainer, #LEDSaturationContainer
 {
 	flow-children: right;
@@ -371,4 +381,17 @@ DropDownMenu.DropDownMenuVisible
 .PersonalizationActive #LoadingBlockout
 {
 	visibility: visible;
+}
+
+
+#MsgBoxButtons Button
+{
+    margin: 7px 7px 7px 7px;
+    padding: 10px 10px 10px 10px;
+}
+
+#MsgBoxButtons Button Label
+{
+    horizontal-align: center;
+    padding: 0px 0px 0px 0px;
 }

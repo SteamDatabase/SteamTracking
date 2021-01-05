@@ -31,6 +31,7 @@ public:
     virtual unknown_ret BIsStreamingController(unsigned int) = 0;
     virtual unknown_ret SetUserLedColor(unsigned int, unsigned char, unsigned char, unsigned char) = 0;
     virtual unknown_ret SetRumble(unsigned int, int, int, unsigned short, unsigned short) = 0;
+    virtual unknown_ret SetRumbleExtended(unsigned int, int, int, unsigned short, unsigned short, unsigned short, unsigned short) = 0;
     virtual unknown_ret LoadConfigFromVDFString(unsigned int, char const*, unsigned int, SteamControllerAppSettings_t) = 0;
     virtual unknown_ret InvalidateBindingCache() = 0;
     virtual unknown_ret ActivateConfig(unsigned int, unsigned int) = 0;
