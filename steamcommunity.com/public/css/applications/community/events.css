@@ -2382,7 +2382,26 @@ p a:hover {
   width: 250px; }
 
 .importexportdialog_Label_1LhIt {
+  width: 100%;
+  height: 100%;
   color: #ebebeb; }
+
+.importexportdialog_ImportLocSampleButtonCtn_D-1dl {
+  margin: 10px auto;
+  max-width: 450px;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .importexportdialog_ImportLocSampleButtonCtn_D-1dl button {
+    padding: 0px 20px; }
+  .importexportdialog_ImportLocSampleButtonCtn_D-1dl .importexportdialog_SampleTitle_9189i {
+    margin: 10px auto; }
+
+.importexportdialog_ImportButton_Wyfyx {
+  width: 100%;
+  height: 100%;
+  cursor: pointer; }
 
 .partnereventdescriptiontab_ToolContainer_1YUip {
   padding: 10px 0px; }

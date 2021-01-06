@@ -253,6 +253,7 @@
           "This event is in draft mode. No one except members of your community team can see this event. All of the changes will remain hidden until you take action to publish the event.",
         EventEditor_Status_FromRSSFeed:
           "Posted by RSS Feed. Click to Open RSS Admin.",
+        EventEditor_Status_FutureURL: "Event URL when publicaly visible:",
         EventEditor_Langauge: "Language",
         EventEditor_LangaugeDesc:
           "Select a language from the drop-down to see and edit text fields for that specific language. Or use the export/import option to set multiple languages at once.",

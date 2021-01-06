@@ -5886,6 +5886,8 @@ span.partnersaledisplay_vr_required_1P__h {
   padding: 10px;
   margin-top: 20px;
   background-color: rgba(30, 33, 38, 0.5); }
+  .partnereventdisplay_EditorStatsCtn_e2BAg .partnereventdisplay_VisibilityNote_1G3X_ {
+    color: orange; }
 
 .partnereventdisplay_EditorStatsRow_2Seco {
   display: flex;
@@ -7932,6 +7934,21 @@ div.apppartnereventspage_EventDetailsBody_3NW5v {
 .eventcalendar_LazyCalendarSectionCtn_1_BP6 {
   width: 100%; }
 
+.eventcalendar_TimeEventRow_2JQL9 {
+  width: 100%;
+  max-width: 980px;
+  background-color: black;
+  border-radius: 8px;
+  padding: 10px;
+  justify-content: center;
+  box-sizing: border-box;
+  font-size: 14px;
+  margin: 20px 0; }
+  .eventcalendar_TimeEventRow_2JQL9.eventcalendar_TimeEventLastPlayed_1QplX {
+    color: red; }
+  .eventcalendar_TimeEventRow_2JQL9.eventcalendar_TimeEventWishlisted_3_Huj {
+    color: blue; }
+
 /* stylelint-disable */
 
 .eventcalendarcollectionheaders_SimpleTitleHeaderCtn_3VhPz {
@@ -9180,6 +9197,8 @@ div.apppartnereventspage_EventDetailsBody_3NW5v {
     font-size: 18px;
     color: white;
     font-weight: 200; }
+  .partnereventstats_StatsCtnTitle_1LlRF .partnereventstats_VisibilityNote_1G-k1 {
+    color: orange; }
 
 .partnereventstats_StatsCtnTitle_1LlRF.partnereventstats_SmallStatsMode_2A2-p {
   background-color: transparent;

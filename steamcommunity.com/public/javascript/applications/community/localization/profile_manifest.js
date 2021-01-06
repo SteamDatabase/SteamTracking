@@ -89,6 +89,8 @@ LocalizationManifestReady("profile", "manifest", {
   Profile_About: "About",
   Profile_Edit_About_Instructions:
     "Set your profile name and details. Providing additional information like your real name can help friends find you on the Steam Community.\n\nYour profile name and avatar represent you throughout Steam, and must be appropriate for all audiences. Please see the [url=https://support.steampowered.com/kb_article.php?ref=6864-RYOA-6811]FAQ[/url] for more details.",
+  Profile_Edit_About_Instructions_SteamChina:
+    "Set your profile name.\n\nYour profile name and avatar represent you throughout Steam, and must be appropriate for all audiences. Please see the [url=https://support.steampowered.com/kb_article.php?ref=6864-RYOA-6811]FAQ[/url] for more details.",
   Profile_Edit_Background_Instructions:
     "Choose a background to show on your profile page.",
   Profile_Edit_MiniProfile_Instructions:

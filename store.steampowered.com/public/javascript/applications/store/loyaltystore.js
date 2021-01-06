@@ -7844,7 +7844,7 @@
         Le = Object(r.a)(function(e) {
           var t = e.time,
             n = Object(O.f)(e, ["time"]),
-            r = Math.floor(Math.max(0, t - Ae.b()) / 1e3),
+            r = Math.floor(Math.max(0, t - Ae.c()) / 1e3),
             a = Math.floor(r / De.e.PerHour),
             i = Math.floor((r - a * De.e.PerHour) / De.e.PerMinute),
             o = Math.floor(r - (a * De.e.PerHour + i * De.e.PerMinute));
@@ -8524,19 +8524,25 @@
         f = Object(r.a)(function(e) {
           var t = e.profileItem,
             n = e.className,
-            r = Object(c.f)(e, ["profileItem", "className"]);
+            r = e.bDisableAnimation,
+            a = Object(c.f)(e, [
+              "profileItem",
+              "className",
+              "bDisableAnimation"
+            ]);
           if (!t || !t.image_small || 0 == t.image_small.length) return null;
-          var a = null,
-            a = t.image_small.startsWith("https://")
-              ? t.image_small
-              : d.c.MEDIA_CDN_COMMUNITY_URL + "images/" + t.image_small;
-          return l.createElement(
-            "div",
-            Object(c.a)(
-              { className: Object(m.a)(u.a.avatarFrame, n, "avatarFrame") },
-              r
-            ),
-            l.createElement("img", { className: u.a.avatarFrameImg, src: a })
+          var i = r ? t.image_large : t.image_small;
+          return (
+            (i = i || t.image_small).startsWith("https://") ||
+              (i = d.c.MEDIA_CDN_COMMUNITY_URL + "images/" + i),
+            l.createElement(
+              "div",
+              Object(c.a)(
+                { className: Object(m.a)(u.a.avatarFrame, n, "avatarFrame") },
+                a
+              ),
+              l.createElement("img", { className: u.a.avatarFrameImg, src: i })
+            )
           );
         }),
         i = (function(n) {
@@ -8607,7 +8613,10 @@
                   o,
                   Object(c.a)({ animatedAvatar: t }, i),
                   r,
-                  l.createElement(f, { profileItem: n })
+                  l.createElement(f, {
+                    profileItem: n,
+                    bDisableAnimation: "None" === this.props.loopDuration
+                  })
                 )
               );
             }),
@@ -11372,7 +11381,7 @@
             if (0 == this.last_seen_online)
               return Object(s.f)("#PersonaStateOffline");
             var e = this.GetOfflineStatusUpdateRate();
-            (!c.c.IN_MOBILE || e <= 60) && Object(i.b)(e);
+            (!c.c.IN_MOBILE || e <= 60) && Object(i.c)(e);
             var t = o.a.CMInterface.GetServerRTime32() - this.last_seen_online;
             return t < 60
               ? Object(s.f)("#PersonaStateLastSeen_JustNow")

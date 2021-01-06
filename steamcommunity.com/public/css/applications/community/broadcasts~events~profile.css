@@ -334,6 +334,133 @@ img.emoticon_emoticon_AB86v {
     color: #4297f8;
     text-decoration: none; }
 
+.eventbbcodeyoutubeembed_DynamicLinkBox_1zmYF {
+  position: relative;
+  font-family: Helvetica, Arial, sans-serif;
+  border-radius: 6px;
+  padding: 8px;
+  margin: 10px 0px 10px 0px;
+  cursor: pointer;
+  overflow: hidden;
+  background: -webkit-linear-gradient(60deg, rgba(87, 92, 104, 0.3) 5%, rgba(255, 255, 255, 0.05) 95%);
+  background: linear-gradient(60deg, rgba(87, 92, 104, 0.3) 5%, rgba(255, 255, 255, 0.05) 95%); }
+  .eventbbcodeyoutubeembed_DynamicLinkBox_1zmYF .eventbbcodeyoutubeembed_DynamicLink_Preview_3Z5cW {
+    float: left;
+    margin-right: 14px;
+    max-height: 88px;
+    max-width: 75%; }
+
+a.eventbbcodeyoutubeembed_DynamicLinkBox_1zmYF {
+  display: block;
+  text-decoration: none !important;
+  border-bottom: none; }
+  a.eventbbcodeyoutubeembed_DynamicLinkBox_1zmYF:hover {
+    border-bottom: none; }
+
+.eventbbcodeyoutubeembed_DynamicLink_Author_xG6te {
+  height: 16px;
+  font-size: 12px;
+  color: #95a6b2;
+  margin-bottom: 4px; }
+  .eventbbcodeyoutubeembed_DynamicLink_Author_xG6te span {
+    color: #809fb7; }
+
+.eventbbcodeyoutubeembed_DynamicLink_Description_2Nwb8 {
+  padding-bottom: 10px; }
+
+.eventbbcodeyoutubeembed_DynamicLink_Content_10QvP {
+  font-family: "Motiva Sans", Sans-serif;
+  font-weight: 300;
+  color: silver;
+  text-shadow: 0 0 16px black;
+  font-size: 13px;
+  line-height: normal;
+  text-align: left;
+  display: flow-root; }
+
+.eventbbcodeyoutubeembed_DynamicLink_Name_Ef9WZ {
+  font-size: 15px;
+  color: #aad8ec;
+  font-family: "Motiva Sans", Sans-serif;
+  font-weight: 300;
+  border-bottom: 1px dotted rgba(109, 207, 246, 0.6);
+  padding-bottom: 0px;
+  display: inline-block;
+  margin-bottom: 6px; }
+
+.eventbbcodeyoutubeembed_DynamicLink_YoutubeViews_1EXif {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  color: #bfbfbf; }
+
+.eventbbcodeyoutubeembed_Dynamiclink_Content_SmLh- {
+  font-family: "Motiva Sans", Sans-serif;
+  font-weight: 300;
+  color: silver;
+  text-shadow: 0 0 16px black;
+  font-size: 13px;
+  line-height: 15px;
+  margin-bottom: 9px;
+  text-align: left;
+  display: flow-root; }
+
+.eventbbcodeyoutubeembed_DynamicLink_URL_3zVTF a,
+.eventbbcodeyoutubeembed_DynamicLink_AuthorName_2scjl {
+  color: #ffffff; }
+
+.eventbbcodeyoutubeembed_DynamicLink_Date_2hEHb {
+  float: right; }
+
+/* YouTube Videos */
+.eventbbcodeyoutubeembed_PreviewYouTubeVideo_2sJoC {
+  /* recommended YouTube diemnsion is 640x385 for 16:9 content */
+  display: block;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden; }
+
+.eventbbcodeyoutubeembed_PreviewYouTubeVideo_2sJoC img {
+  width: 100%;
+  display: block; }
+
+.eventbbcodeyoutubeembed_PreviewYouTubeVideo_2sJoC iframe {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+/* size */
+.eventbbcodeyoutubeembed_PreviewYouTubeVideo_2sJoC.eventbbcodeyoutubeembed_sizeThumb_3olWW {
+  width: 311px;
+  height: 187px; }
+
+.eventbbcodeyoutubeembed_PreviewYouTubeVideo_2sJoC.eventbbcodeyoutubeembed_sizeFull_126sP {
+  width: 100%;
+  margin-bottom: 6px;
+  margin-top: 4px; }
+
+/* alignment */
+.eventbbcodeyoutubeembed_PreviewYouTubeVideo_2sJoC.eventbbcodeyoutubeembed_floatLeft_1-UTh {
+  float: left;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px; }
+
+.eventbbcodeyoutubeembed_PreviewYouTubeVideo_2sJoC.eventbbcodeyoutubeembed_floatRight_IHcwx {
+  float: right;
+  padding-left: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px; }
+
+iframe.eventbbcodeyoutubeembed_PreviewYouTubeVideo_2sJoC.eventbbcodeyoutubeembed_floatLeft_1-UTh, iframe.eventbbcodeyoutubeembed_PreviewYouTubeVideo_2sJoC.eventbbcodeyoutubeembed_floatRight_IHcwx {
+  float: none;
+  padding: 0px; }
+
 .chatentry_chatEntryControls_3Ule3 {
   /* for flyouts */
   position: relative;
@@ -728,133 +855,6 @@ img.emoticon_emoticon_AB86v {
   text-align: center;
   color: #74c069;
   background-color: #0000; }
-
-.eventbbcodeyoutubeembed_DynamicLinkBox_1zmYF {
-  position: relative;
-  font-family: Helvetica, Arial, sans-serif;
-  border-radius: 6px;
-  padding: 8px;
-  margin: 10px 0px 10px 0px;
-  cursor: pointer;
-  overflow: hidden;
-  background: -webkit-linear-gradient(60deg, rgba(87, 92, 104, 0.3) 5%, rgba(255, 255, 255, 0.05) 95%);
-  background: linear-gradient(60deg, rgba(87, 92, 104, 0.3) 5%, rgba(255, 255, 255, 0.05) 95%); }
-  .eventbbcodeyoutubeembed_DynamicLinkBox_1zmYF .eventbbcodeyoutubeembed_DynamicLink_Preview_3Z5cW {
-    float: left;
-    margin-right: 14px;
-    max-height: 88px;
-    max-width: 75%; }
-
-a.eventbbcodeyoutubeembed_DynamicLinkBox_1zmYF {
-  display: block;
-  text-decoration: none !important;
-  border-bottom: none; }
-  a.eventbbcodeyoutubeembed_DynamicLinkBox_1zmYF:hover {
-    border-bottom: none; }
-
-.eventbbcodeyoutubeembed_DynamicLink_Author_xG6te {
-  height: 16px;
-  font-size: 12px;
-  color: #95a6b2;
-  margin-bottom: 4px; }
-  .eventbbcodeyoutubeembed_DynamicLink_Author_xG6te span {
-    color: #809fb7; }
-
-.eventbbcodeyoutubeembed_DynamicLink_Description_2Nwb8 {
-  padding-bottom: 10px; }
-
-.eventbbcodeyoutubeembed_DynamicLink_Content_10QvP {
-  font-family: "Motiva Sans", Sans-serif;
-  font-weight: 300;
-  color: silver;
-  text-shadow: 0 0 16px black;
-  font-size: 13px;
-  line-height: normal;
-  text-align: left;
-  display: flow-root; }
-
-.eventbbcodeyoutubeembed_DynamicLink_Name_Ef9WZ {
-  font-size: 15px;
-  color: #aad8ec;
-  font-family: "Motiva Sans", Sans-serif;
-  font-weight: 300;
-  border-bottom: 1px dotted rgba(109, 207, 246, 0.6);
-  padding-bottom: 0px;
-  display: inline-block;
-  margin-bottom: 6px; }
-
-.eventbbcodeyoutubeembed_DynamicLink_YoutubeViews_1EXif {
-  padding-top: 4px;
-  padding-bottom: 4px;
-  color: #bfbfbf; }
-
-.eventbbcodeyoutubeembed_Dynamiclink_Content_SmLh- {
-  font-family: "Motiva Sans", Sans-serif;
-  font-weight: 300;
-  color: silver;
-  text-shadow: 0 0 16px black;
-  font-size: 13px;
-  line-height: 15px;
-  margin-bottom: 9px;
-  text-align: left;
-  display: flow-root; }
-
-.eventbbcodeyoutubeembed_DynamicLink_URL_3zVTF a,
-.eventbbcodeyoutubeembed_DynamicLink_AuthorName_2scjl {
-  color: #ffffff; }
-
-.eventbbcodeyoutubeembed_DynamicLink_Date_2hEHb {
-  float: right; }
-
-/* YouTube Videos */
-.eventbbcodeyoutubeembed_PreviewYouTubeVideo_2sJoC {
-  /* recommended YouTube diemnsion is 640x385 for 16:9 content */
-  display: block;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-  overflow: hidden; }
-
-.eventbbcodeyoutubeembed_PreviewYouTubeVideo_2sJoC img {
-  width: 100%;
-  display: block; }
-
-.eventbbcodeyoutubeembed_PreviewYouTubeVideo_2sJoC iframe {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%; }
-
-/* size */
-.eventbbcodeyoutubeembed_PreviewYouTubeVideo_2sJoC.eventbbcodeyoutubeembed_sizeThumb_3olWW {
-  width: 311px;
-  height: 187px; }
-
-.eventbbcodeyoutubeembed_PreviewYouTubeVideo_2sJoC.eventbbcodeyoutubeembed_sizeFull_126sP {
-  width: 100%;
-  margin-bottom: 6px;
-  margin-top: 4px; }
-
-/* alignment */
-.eventbbcodeyoutubeembed_PreviewYouTubeVideo_2sJoC.eventbbcodeyoutubeembed_floatLeft_1-UTh {
-  float: left;
-  padding-right: 8px;
-  padding-top: 4px;
-  padding-bottom: 4px; }
-
-.eventbbcodeyoutubeembed_PreviewYouTubeVideo_2sJoC.eventbbcodeyoutubeembed_floatRight_IHcwx {
-  float: right;
-  padding-left: 8px;
-  padding-top: 4px;
-  padding-bottom: 4px; }
-
-iframe.eventbbcodeyoutubeembed_PreviewYouTubeVideo_2sJoC.eventbbcodeyoutubeembed_floatLeft_1-UTh, iframe.eventbbcodeyoutubeembed_PreviewYouTubeVideo_2sJoC.eventbbcodeyoutubeembed_floatRight_IHcwx {
-  float: none;
-  padding: 0px; }
 
 .image_ErrorDiv_2FXME {
   background-color: hotpink;
@@ -3009,7 +3009,6 @@ textarea:-webkit-autofill:focus,
   .gamehover_GameHoverCapsuleCtn_2jsr3.gamehover_UseHidingBottomHalf_5hPHC {
     overflow: hidden; }
   .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_TrailerAnchorStoreLink_OxANH {
-    height: 100%;
     position: relative; }
   .gamehover_GameHoverCapsuleCtn_2jsr3 .gamehover_TrailerCtn_1I27K {
     position: relative;
@@ -3096,7 +3095,8 @@ textarea:-webkit-autofill:focus,
     width: 0;
     height: 0;
     padding: 7px 0;
-    transition: padding-right 0.2s ease-out; }
+    transition: padding-right 0.2s ease-out;
+    font-size: 13px; }
     .gamehover_WishlistButton_3notz .gamehover_WishlistButtonText_VI5mZ.gamehover_WishlistLoadingText_7-s8T {
       /* stylelint-disable-line selector-class-pattern */
       filter: opacity(50%); }
@@ -3122,21 +3122,20 @@ textarea:-webkit-autofill:focus,
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.9);
   color: white;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  flex: 1; }
   .gamehover_UseHidingBottomHalf_5hPHC .gamehover_BottomShelf_oAqlZ {
     max-height: 85%;
     transform: translateY(-50%); }
     .gamehover_Open_1rWYa .gamehover_UseHidingBottomHalf_5hPHC .gamehover_BottomShelf_oAqlZ {
       transform: translateY(0); }
   .gamehover_BottomShelf_oAqlZ .gamehover_BottomShelfOffScreen_36zpR {
-    flex-shrink: 1;
-    overflow-y: none; }
+    flex: 1;
+    overflow-y: auto; }
   .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL {
-    padding: 4px 8px;
-    padding-left: 4px;
-    padding-top: 4px; }
+    padding: 4px; }
     .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_GameTitle_405wj {
-      font-size: 18px;
+      font-size: 2em;
       padding: 0px 4px;
       text-overflow: ellipsis;
       white-space: nowrap;
@@ -3144,9 +3143,8 @@ textarea:-webkit-autofill:focus,
       max-height: 24px; }
     .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_TagRow_2SWQM {
       color: #88aacc;
-      font-size: 10px;
       display: flex;
-      padding: 8px 0px 0px 0px;
+      padding: 8px 0px 4px;
       max-height: 20px; }
       .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_TagRow_2SWQM .gamehover_Tags_fTGVi {
         overflow: hidden;
@@ -3165,22 +3163,6 @@ textarea:-webkit-autofill:focus,
           text-overflow: ellipsis;
           white-space: nowrap;
           position: relative; }
-    .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_ReviewScoreHeader_2t-0j {
-      color: #6b8aaa;
-      margin-left: 4px; }
-    .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_ReviewScoreValue_3ZWs0 {
-      display: flex; }
-      .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_ReviewScoreValue_3ZWs0.gamehover_ReviewScoreLow_3nU5I {
-        color: gray; }
-      .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_ReviewScoreValue_3ZWs0.gamehover_ReviewScoreMixed_11Q2_ {
-        color: #d8d81e; }
-      .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_ReviewScoreValue_3ZWs0.gamehover_ReviewScoreHigh_3wXHC {
-        color: #32ad32; }
-      .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_ReviewScoreValue_3ZWs0 .gamehover_ReviewScorePercentage_38dPa {
-        margin-right: 4px; }
-    .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_ReviewScoreCount_1wXL_ {
-      color: #6b8aaa;
-      margin-left: 4px; }
     .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_PlatformDisplay_2UG4_ {
       padding-left: 8px;
       margin-bottom: 4px;
@@ -3188,21 +3170,21 @@ textarea:-webkit-autofill:focus,
     .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_ReviewsAndRelease_1HFUC {
       display: flex;
       justify-content: left;
-      font-size: 14px;
+      font-size: 1.4em;
       margin-left: -4px; }
       .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_ReviewsAndRelease_1HFUC .gamehover_ReleaseDate_35Bya {
         padding: 4px;
-        font-size: 12px;
+        font-size: 1.2em;
         color: #6b8aaa; }
         .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_ReviewsAndRelease_1HFUC .gamehover_ReleaseDate_35Bya .gamehover_ReleasePrefix_2ZKEX {
           margin-right: 4px; }
 
 .gamehover_ReviewScore_3qvpp {
-  font-size: 12px;
+  font-size: 1.2em;
   display: flex;
-  padding-bottom: 4px; }
-  .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreHeader_2t-0j {
-    color: #88aacc;
+  padding: 0 0 4px 4px; }
+  .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreHeader_2t-0j, .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreCount_1wXL_ {
+    color: #6b8aaa;
     margin-right: 4px; }
   .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreValue_3ZWs0 {
     display: flex; }
@@ -3214,9 +3196,6 @@ textarea:-webkit-autofill:focus,
       color: #32ad32; }
     .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreValue_3ZWs0 .gamehover_ReviewScorePercentage_38dPa {
       margin-right: 4px; }
-  .gamehover_ReviewScore_3qvpp .gamehover_ReviewScoreCount_1wXL_ {
-    color: #88aacc;
-    margin-left: 4px; }
 
 .demobutton_DemoButton_3euSF {
   position: relative;
@@ -3623,7 +3602,16 @@ textarea:-webkit-autofill:focus,
       min-height: 38px; }
 
 .salepreviewwidgets_InGameHover_axjdi .salepreviewwidgets_StoreSalePriceWidgetContainer_2s-O5, .salepreviewwidgets_InGameHover_axjdi .salepreviewwidgets_StoreSalePriceBox_3j4dI {
-  background-color: #00000000; }
+  background-color: transparent; }
+
+.salepreviewwidgets_InGameHover_axjdi .salepreviewwidgets_StoreSaleDiscountBox_cnkoF {
+  font-size: 1.8em; }
+
+.salepreviewwidgets_InGameHover_axjdi .salepreviewwidgets_StoreSaleDiscountedPriceCtn_3NhLu .salepreviewwidgets_StoreOriginalPrice_3fFFs {
+  font-size: 1em; }
+
+.salepreviewwidgets_InGameHover_axjdi .salepreviewwidgets_StoreSaleDiscountedPriceCtn_3NhLu .salepreviewwidgets_StoreSalePriceBox_3j4dI {
+  font-size: 1.5em; }
 
 .salepreviewwidgets_StoreSaleDiscountedPriceCtn_3NhLu {
   display: flex;
@@ -3648,13 +3636,14 @@ textarea:-webkit-autofill:focus,
   align-items: center;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.7); }
 
-.salepreviewwidgets_StoreOrignalPrice_18ANC {
-  color: #626366;
-  font-size: 11px;
+.salepreviewwidgets_StoreOriginalPrice_3fFFs {
+  color: #b2b5bb;
+  font-size: 10px;
+  letter-spacing: 1px;
   line-height: 11px;
   margin-top: 2px;
   position: relative; }
-  .salepreviewwidgets_StoreOrignalPrice_18ANC::before {
+  .salepreviewwidgets_StoreOriginalPrice_3fFFs::before {
     content: '';
     left: 0px;
     right: 0px;
@@ -3664,10 +3653,8 @@ textarea:-webkit-autofill:focus,
     transform: skewY(-15deg); }
 
 .salepreviewwidgets_StoreSalePriceBox_3j4dI {
-  background: black;
   font-size: 14px;
   padding: 5px 8px;
-  background-color: black;
   align-items: center;
   display: flex;
   border-top-left-radius: 3px;
@@ -3676,8 +3663,7 @@ textarea:-webkit-autofill:focus,
 .salepreviewwidgets_Discounted_1g0B- {
   margin: 0 0 0 4px;
   display: flex;
-  align-items: center;
-  background-color: black; }
+  align-items: center; }
   .salepreviewwidgets_Discounted_1g0B- .salepreviewwidgets_BaseDiscount_3mInD {
     padding: 6px;
     font-size: 18px;
@@ -3749,7 +3735,9 @@ textarea:-webkit-autofill:focus,
   color: white;
   height: 30px;
   box-sizing: border-box;
-  z-index: 2; }
+  z-index: 2;
+  cursor: pointer;
+  font-size: 14px; }
   .salepreviewwidgets_CapsuleBottomBar_3lmdE .salepreviewwidgets_BottomBarPriceInfo_1X3j2 {
     margin-left: auto;
     display: flex; }
@@ -5383,6 +5371,8 @@ span.partnersaledisplay_vr_required_1P__h {
   padding: 10px;
   margin-top: 20px;
   background-color: rgba(30, 33, 38, 0.5); }
+  .partnereventdisplay_EditorStatsCtn_e2BAg .partnereventdisplay_VisibilityNote_1G3X_ {
+    color: orange; }
 
 .partnereventdisplay_EditorStatsRow_2Seco {
   display: flex;
@@ -7281,6 +7271,21 @@ div.apppartnereventspage_EventDetailsBody_3NW5v {
 .eventcalendar_LazyCalendarSectionCtn_1_BP6 {
   width: 100%; }
 
+.eventcalendar_TimeEventRow_2JQL9 {
+  width: 100%;
+  max-width: 980px;
+  background-color: black;
+  border-radius: 8px;
+  padding: 10px;
+  justify-content: center;
+  box-sizing: border-box;
+  font-size: 14px;
+  margin: 20px 0; }
+  .eventcalendar_TimeEventRow_2JQL9.eventcalendar_TimeEventLastPlayed_1QplX {
+    color: red; }
+  .eventcalendar_TimeEventRow_2JQL9.eventcalendar_TimeEventWishlisted_3_Huj {
+    color: blue; }
+
 /* stylelint-disable */
 
 .eventcalendarcollectionheaders_SimpleTitleHeaderCtn_3VhPz {
@@ -8387,6 +8392,8 @@ div.apppartnereventspage_EventDetailsBody_3NW5v {
     font-size: 18px;
     color: white;
     font-weight: 200; }
+  .partnereventstats_StatsCtnTitle_1LlRF .partnereventstats_VisibilityNote_1G-k1 {
+    color: orange; }
 
 .partnereventstats_StatsCtnTitle_1LlRF.partnereventstats_SmallStatsMode_2A2-p {
   background-color: transparent;
@@ -8457,6 +8464,8 @@ div.apppartnereventspage_EventDetailsBody_3NW5v {
 
 .nominationandvote_SteamAwardContainer_3n6v2 {
   margin-right: 24px;
+  margin-left: 24px;
+  margin-top: 24px;
   margin-bottom: 40px;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
   border-radius: 4px;
@@ -8493,7 +8502,8 @@ div.apppartnereventspage_EventDetailsBody_3NW5v {
       text-transform: uppercase;
       font-weight: 800;
       font-size: 36px;
-      line-height: 36px; }
+      line-height: 36px;
+      padding-right: 90px; }
     .nominationandvote_SteamAwardContainer_3n6v2 .nominationandvote_SteamAwardHeader_2jgrT .nominationandvote_SteamAwardSubTitle_Sxxel {
       position: relative;
       text-transform: uppercase;
@@ -8605,6 +8615,16 @@ div.apppartnereventspage_EventDetailsBody_3NW5v {
   margin-bottom: 30px;
   padding: 10px;
   background: rgba(30, 33, 38, 0.5); }
+
+.EventDetail .nominationandvote_SteamAwardContainer_3n6v2 {
+  max-width: 713px;
+  margin-right: 0px;
+  margin-left: 0px;
+  margin-top: 0px; }
+
+.steam_awards_vote_section .nominationandvote_SteamAwardContainer_3n6v2 {
+  margin-left: 0px;
+  margin-top: 0px; }
 
 .steam_awards_vote_section .nominationandvote_AwardCategoriesCtn_2u4z7 {
   display: flex;

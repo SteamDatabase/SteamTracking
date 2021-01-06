@@ -197,10 +197,15 @@ function EmailConfirmedVerified( rgResults )
 		{
 			$J( '#intro_china' ).show();
 		}
-		else if ( rgResults.pw_account )
+		else if ( rgResults.pw_account || rgResults.global_account )
 		{
 			$J( '#intro_pw' ).show();
-			$J( '#desc_pw' ).show();
+
+			if ( rgResults.pw_account )
+			{
+				$J( '#desc_pw' ).show();
+			}
+
 			if ( rgResults.global_account )
 			{
 				$J( '#desc_global' ).show();

@@ -177,6 +177,8 @@
           "Update your language preferences to allow content and sources in more languages by visiting your %1$s",
         EventCalendar_NewsLanguage_TextInHyperlink:
           "store language preferences",
+        EventCalendar_TimeEventLastPlayed: "Last Played %1$s",
+        EventCalendar_TimeEventWishlisted: "Wishlisted %1$s",
         EventCalendar_GlobalCalendar_Action: "Return to News Hub",
         EventCalendar_SpecificCalendar: "%1$s %2$s News Hub",
         EventCalendar_Goto_SpecificCalendar: "Go to %1$s News Hub",
@@ -187,12 +189,6 @@
           "Note: This group is muted and will not show up in your personalized news hub.",
         EventCalendar_WatchYouTubeVideo: "Watch YouTube Video",
         EventCalendar_WatchLiveBroadcast: "Watch Live Broadcast",
-        EventCalendar_Collection_News_Title: "Discover News Curators",
-        EventCalendar_Collection_News_Subtitle:
-          "Catch the latest in gaming news from top gaming news sources. Follow a Steam News Curator to add their news and game recommendations to your Steam News Hub.",
-        EventCalendar_Collection_Halloween_Title: "Halloween Events",
-        EventCalendar_Collection_Halloween_Subtitle:
-          "Browse spooky Halloween related news and events from games on Steam",
         EventModTile_Moderator: "Moderator: %1$s",
         EventModTile_Action_Reviewed: "%1$s %2$s marked reviewed",
         EventModTile_Action_UnReviewed: "%1$s %2$s cleared reviewed flag",
@@ -371,6 +367,9 @@
         EventCalendar_NewsChannel_AllGames: "From all games",
         EventCalendar_NewsChannel_TopSellers: "From Top sources",
         EventCalendar_NewsChannel_Press: "News Curators",
+        EventCalendar_Collection_News_Title: "Discover News Curators",
+        EventCalendar_Collection_News_Subtitle:
+          "Catch the latest in gaming news from top gaming news sources. Follow a Steam News Curator to add their news and game recommendations to your Steam News Hub.",
         EventCalendar_NewsChannel_Steam: "Steam Official",
         EventCalendar_NewsChannel_SteamSubtitle: "Steam Blog and News",
         EventCalendar_NewsChannel_Steam_HeaderTitle: "Official Steam News",
@@ -380,6 +379,9 @@
           "Press Events Linked to Apps",
         EventCalendar_NewsChannel_Halloween: "Halloween Events",
         EventCalendar_NewsChannel_HalloweenSubtitle: "Beware: Spooky",
+        EventCalendar_Collection_Halloween_Title: "Halloween Events",
+        EventCalendar_Collection_Halloween_Subtitle:
+          "Browse spooky Halloween related news and events from games on Steam",
         EventDisplay_Admin_Title: "Admin tools:",
         EventDisplay_ViewInLibrary: "View in Library",
         EventDisplay_ViewStorePage: "View Store Page",
@@ -543,6 +545,8 @@
         EventDashBoard_SummaryStats_Desc:
           "(Beta) These are impressions and views of your events and announcements by unique logged-in users. This is only for new events and announcements crafted with this editor.",
         EventDashBoard_SummaryStats_Link: "Click here for more details.",
+        EventDashBoard_SummaryStats_Dec2020Note:
+          "Note: Due to heavy load, visibility was greatly undercounted from Dec 23 - Jan 5, 2021",
         EventDashBoard_ModerationQueueWarning:
           "This event has not yet gone through routine moderation and is therefore not currently visible in the Library.",
         EventDashBoard_Summary_LibraryHome_Shown:
@@ -1474,6 +1478,7 @@
         Sale_default_label_100: "Puzzle Platfomers",
         Sale_default_label_101: "Third Person",
         Sale_default_label_102: "Rhythm",
+        Sale_default_label_103: "Featured Titles",
         SalePage_LoginPrompt:
           "Sign in to view additional items selected just for you.",
         SalePage_ParentApp_DLC: "DLC For",
@@ -1535,6 +1540,7 @@
         Steam_Settings_Compat_Launch_Whitelisted: "selected by Valve testing.",
         SteamAwards_EventMainTitle: "The Steam Awards",
         SteamAwards_EventMainTitleSecondLine: "Nominee",
+        SteamAwards_EventMainTitleCombined: "The Steam Awards Nominee",
         SteamAwards_EventCallToAction: "Coming this December",
         SteamAwards_ExpiredEvent:
           "This event's Steam Awards has ended. Check back in during this year's Autumn and Winter sale for the annual Steam Awards!",
@@ -1815,6 +1821,14 @@
         Terabytes_PerSecond: "%1$s TB/s",
         Terabits: "%1$s Tb",
         Terabits_PerSecond: "%1$s Tb/s",
+        ImportLoc_Title: "Import Localization",
+        ImportLoc_Description:
+          "Import text for a variety of languages by importing a file from your machine. A variety of formats are supported, and for an example of each you can select a sample below.",
+        ImportLoc_SampleTitle: "Download Samples",
+        ImportLoc_CSVLangPerRow: "CSV Language Per Row",
+        ImportLoc_CSVLangPerCol: "CSV Language Per Column",
+        ImportLoc_CSVTokenLang: "CSV Token List",
+        ImportLoc_XML: "XML Single Language",
         shared_dummy: "dont translate"
       };
     }

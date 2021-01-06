@@ -1,18 +1,18 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6289547";
+var CLSTAMP = "6296064";
 !(function(o) {
   function e(e) {
     for (
-      var a, d, n = e[0], c = e[1], s = e[2], r = 0, f = [];
-      r < n.length;
-      r++
+      var a, d, n = e[0], c = e[1], s = e[2], f = 0, r = [];
+      f < n.length;
+      f++
     )
-      (d = n[r]),
-        Object.prototype.hasOwnProperty.call(h, d) && h[d] && f.push(h[d][0]),
+      (d = n[f]),
+        Object.prototype.hasOwnProperty.call(h, d) && h[d] && r.push(h[d][0]),
         (h[d] = 0);
     for (a in c) Object.prototype.hasOwnProperty.call(c, a) && (o[a] = c[a]);
-    for (j && j(e); f.length; ) f.shift()();
+    for (j && j(e); r.length; ) r.shift()();
     return i.push.apply(i, s || []), b();
   }
   function b() {
@@ -125,7 +125,7 @@ var CLSTAMP = "6289547";
                     5: "31d6cfe0d16ae931b73c",
                     6: "af17ac0a598cb32e8ba3",
                     7: "ec433dd8cfb12ab117d0",
-                    8: "66b4eb6c6fd5d9d798f7",
+                    8: "eb20acc22489256d0720",
                     10: "31d6cfe0d16ae931b73c",
                     11: "31d6cfe0d16ae931b73c",
                     12: "31d6cfe0d16ae931b73c",
@@ -223,16 +223,16 @@ var CLSTAMP = "6289547";
               s < d.length;
               s++
             ) {
-              var r =
-                (f = d[s]).getAttribute("data-href") || f.getAttribute("href");
-              if ("stylesheet" === f.rel && (r === a || r === c)) return e();
+              var f =
+                (r = d[s]).getAttribute("data-href") || r.getAttribute("href");
+              if ("stylesheet" === r.rel && (f === a || f === c)) return e();
             }
             for (
-              var f, o = document.getElementsByTagName("style"), s = 0;
+              var r, o = document.getElementsByTagName("style"), s = 0;
               s < o.length;
               s++
             ) {
-              if ((r = (f = o[s]).getAttribute("data-href")) === a || r === c)
+              if ((f = (r = o[s]).getAttribute("data-href")) === a || f === c)
                 return e();
             }
             var b = document.createElement("link");
@@ -260,17 +260,17 @@ var CLSTAMP = "6289547";
       c,
       s,
       d,
-      r,
+      f,
       n,
-      f = h[i];
+      r = h[i];
     return (
-      0 !== f &&
-        (f
-          ? e.push(f[2])
+      0 !== r &&
+        (r
+          ? e.push(r[2])
           : ((a = new Promise(function(e, a) {
-              f = h[i] = [e, a];
+              r = h[i] = [e, a];
             })),
-            e.push((f[2] = a)),
+            e.push((r[2] = a)),
             ((c = document.createElement("script")).charset = "utf-8"),
             (c.timeout = 120),
             _.nc && c.setAttribute("nonce", _.nc),
@@ -351,13 +351,13 @@ var CLSTAMP = "6289547";
               ".js?contenthash=" +
               {
                 1: "75262414458c24b548da",
-                2: "17054824ff84bb969dc0",
+                2: "3e8e4e8c2e291aa8162f",
                 3: "97a568adcae97ee342ff",
-                4: "436c1b83dc9f16e3edaa",
+                4: "35cc543394abcf338e19",
                 5: "8e9b929357e0ec545604",
-                6: "a9cec61ed8d40a33c257",
-                7: "e8dfe727c791810ed992",
-                8: "c561a62590774593d069",
+                6: "41785f63532d033a52d6",
+                7: "00f32aea1ae2acdf9862",
+                8: "84d45347d2beae9f4a02",
                 10: "99107bbf3e6e95c70dd4",
                 11: "85a74beea50dda150676",
                 12: "bea6c3708c9d0845ead3",
@@ -367,7 +367,7 @@ var CLSTAMP = "6289547";
                 16: "8d241819523be5b74b36",
                 17: "b4bd9bc6fc3df9a2b65e",
                 18: "7d9385661f94d033f1db",
-                19: "403f7e570aa0b5aacd1b",
+                19: "01be9a8ee5434dce2360",
                 20: "6148e39d45215eb3b2f2",
                 21: "db176c0d2146bd2c6756",
                 22: "6a451d0f0119abe9284d",
@@ -388,36 +388,36 @@ var CLSTAMP = "6289547";
                 37: "f05be1b1172ba6afc8f8",
                 38: "7d446dd9165e55189466",
                 40: "0257c76e7344d6816073",
-                41: "caec6ecee805e95c5286",
+                41: "3b9de34dc71dd14fe25d",
                 42: "b304d7fbec771dbdb0bd",
-                43: "648f2a3c730b43e3ef02",
-                44: "89c1a9bafbe6d370dc0d",
-                45: "7857fcb0160ae12f329b",
+                43: "44d0db715c2e48c5b384",
+                44: "f28461510dfe5e9db562",
+                45: "af2c6a3ec29b03eb9270",
                 46: "dc2abb58a978ab232707",
-                47: "d7949b0fb5064ed527e6",
-                48: "0149a1f9eda8bc47c748",
-                49: "549ebdd82aa948ca48ec",
-                50: "a9e79b1920c9400598ab",
+                47: "77ea52cab9e9a4f96350",
+                48: "79437371a3944ac0877d",
+                49: "08ecd089344bee1f4cfe",
+                50: "be3dd4141bae989f4d8d",
                 51: "7fff5fd333c57886d784",
                 52: "464a6ff05e76ac786e47",
                 53: "47c24381ff8b67cc1bff",
                 54: "06ccb1aab1307de8ce21",
                 55: "6fb4f71ee0e5160245fa",
                 56: "a4d9466b56b0f2a0ece6",
-                57: "25807de257f8af3f86ba",
-                58: "c994f12b930449498839",
+                57: "675248740d579cf56bde",
+                58: "717a7ac106cf622f3aee",
                 59: "8182ad446167337be9fc",
-                60: "4718ae36c3a5263011d4",
-                61: "16c997d05312a599706f",
-                62: "2df6f41e202814f5e48e",
+                60: "24cf5a33f61e939d3a6a",
+                61: "5377299a9923d4741289",
+                62: "64dd7f89fde1e3bcc779",
                 63: "f7d7f0b3506490af3a68",
-                64: "f8874206ee7b827c19eb",
-                65: "4eafc3db55e18e7a4d67",
-                66: "1a2b1be57370a3105744",
-                67: "eb0ea6e5f08411a465bd",
-                68: "aa5d57ce6fd949310b4c",
-                69: "7e42f2a90eab8ce2d438",
-                70: "3647ce2ea9fd3511340f",
+                64: "bde635089858a8bcf5f4",
+                65: "b14412b5ad1a201f4be9",
+                66: "2f69c3aa0429ef60f705",
+                67: "fcbdb600ca883e172680",
+                68: "20f1566877c420e507fd",
+                69: "7280ab1e176d415d69f7",
+                70: "8ecc572c91564b0308dd",
                 71: "be44690703222d1b2fbc",
                 72: "0f81d9aff93ff40f869b",
                 73: "dfc6352baf4176189335",
@@ -426,9 +426,9 @@ var CLSTAMP = "6289547";
                 76: "4579578d5d2a043c5c37",
                 77: "23638e27c4f1cd808c1b",
                 78: "66741914c55e1dabdc43",
-                79: "d0ed946091746559652d",
+                79: "cc4c352cbe004b6cfb97",
                 80: "2ccb0f69c25df9836290",
-                81: "1931294f8121d5c8593e",
+                81: "dc45cb4e94a00f92b383",
                 82: "0e048cf734b4844b00ff",
                 83: "60876d6ad8e7e2a74909",
                 84: "cb61050750fdc8ab63c1",
@@ -451,7 +451,7 @@ var CLSTAMP = "6289547";
               }[n]),
             (s = new Error()),
             (d = function(e) {
-              (c.onerror = c.onload = null), clearTimeout(r);
+              (c.onerror = c.onload = null), clearTimeout(f);
               var a,
                 d,
                 n = h[i];
@@ -467,7 +467,7 @@ var CLSTAMP = "6289547";
                   n[1](s)),
                 (h[i] = void 0));
             }),
-            (r = setTimeout(function() {
+            (f = setTimeout(function() {
               d({ type: "timeout", target: c });
             }, 12e4)),
             (c.onerror = c.onload = d),
