@@ -15743,15 +15743,15 @@
               var _,
                 g = [];
               Object(O.a)(S.c.EREALM) ||
-                (g.push(
+                g.push(
+                  s(1492660),
+                  s(1091500),
                   s(1314563),
                   s(870780),
                   s(1190460, void 0, void 0, { itemclass: [3] }),
                   s(570, re, Object(E.f)("#HeroCluster_dota_subtitile")),
-                  s(292030, ae),
-                  s(976310)
+                  s(292030, ae)
                 ),
-                16075584e5 <= Date.now() && g.unshift(s(1091500))),
                 (_ = {
                   type: "banner",
                   title: Object(E.f)("#FeaturedBanner_Headline"),
