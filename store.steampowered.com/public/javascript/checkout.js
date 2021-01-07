@@ -1839,12 +1839,12 @@ function OnGetFinalPriceSuccess( result )
 				}
 				else if ( method.value == 'wechat' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'WeChat transactions are authorized through the Smart2Pay website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_bottom_note_paypalgc').innerHTML = '#wechat_authorization_explanation';
 					$('purchase_button_bottom_text').innerHTML = 'Continue to WeChat';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for WeChat customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Smart2Pay website by scanning the QR code with your WeChat application.  Please be aware that your WeChat account must be linked to a valid Chinese bank issued card or the payment may be rejected.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = '#wechat_payment_tips_text';
 					}
 				}
 				else if ( method.value == 'molpoints' )
