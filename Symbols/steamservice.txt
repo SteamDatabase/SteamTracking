@@ -2646,9 +2646,6 @@
  T DSA_verify
  T DebugStatsSystem
  T DefaultSpewFunc(SpewType_t, char const*)
- T Deserialize(CUtlBuffer&, StringView*)
- T Deserialize(CUtlBuffer&, char const**)
- T Deserialize(CUtlBuffer&, void*, int)
  T DeserializeVaArgs(char const*, char const*, char*, int)
  T DisconnectPlatformSocket(int)
  T DispatchOpenSSLErrors(char const*)
@@ -3002,6 +2999,9 @@
  T IRegistryInterfaceDispatchMsg(IRegistryInterface*, CUtlBuffer&, CUtlBuffer&, IInterfaceStats*)
  T InitStackWalk()
  T InitializeSpewConfig()
+ T InterfaceMapDeserialize(CUtlBuffer&, StringView*)
+ T InterfaceMapDeserialize(CUtlBuffer&, char const**)
+ T InterfaceMapDeserialize(CUtlBuffer&, void*, int)
  T Internal_Coroutine_Continue(int, bool, char const*)
  T IsSpewActive
  T KV_ResolveSymbol(char const*)
@@ -4657,7 +4657,17 @@
  r BN_value_one.data_one
  r CCrypto::Base64Decode(char const*, unsigned int, void*, unsigned int*, bool)::rgchInvBase64
  r Hex
+ r IClientInstallUtilsDispatchMsg(IClientInstallUtils*, CUtlBuffer&, CUtlBuffer&, IInterfaceStats*)::fname
+ r IClientInstallUtilsDispatchMsg(IClientInstallUtils*, CUtlBuffer&, CUtlBuffer&, IInterfaceStats*)::k_pszInterface
+ r IClientModuleManagerDispatchMsg(IClientModuleManager*, CUtlBuffer&, CUtlBuffer&, IInterfaceStats*)::fname
+ r IClientModuleManagerDispatchMsg(IClientModuleManager*, CUtlBuffer&, CUtlBuffer&, IInterfaceStats*)::k_pszInterface
+ r IClientProcessMonitorDispatchMsg(IClientProcessMonitor*, CUtlBuffer&, CUtlBuffer&, IInterfaceStats*)::fname
+ r IClientProcessMonitorDispatchMsg(IClientProcessMonitor*, CUtlBuffer&, CUtlBuffer&, IInterfaceStats*)::k_pszInterface
+ r IClientSecureDesktopDispatchMsg(IClientSecureDesktop*, CUtlBuffer&, CUtlBuffer&, IInterfaceStats*)::fname
+ r IClientSecureDesktopDispatchMsg(IClientSecureDesktop*, CUtlBuffer&, CUtlBuffer&, IInterfaceStats*)::k_pszInterface
  r IPv6IPToString.hexdigits
+ r IRegistryInterfaceDispatchMsg(IRegistryInterface*, CUtlBuffer&, CUtlBuffer&, IInterfaceStats*)::fname
+ r IRegistryInterfaceDispatchMsg(IRegistryInterface*, CUtlBuffer&, CUtlBuffer&, IInterfaceStats*)::k_pszInterface
  r SQR_tb
  r V_binarytohex::k_rgchHexToASCII
  r _EC_IPSEC_155_ID3
@@ -4734,6 +4744,9 @@
  r _EC_brainpoolP384t1
  r _EC_brainpoolP512r1
  r _EC_brainpoolP512t1
+ r _ZZ29IRegistryInterfaceDispatchMsgP18IRegistryInterfaceR10CUtlBufferS2_P15IInterfaceStatsE5fname__10_
+ r _ZZ29IRegistryInterfaceDispatchMsgP18IRegistryInterfaceR10CUtlBufferS2_P15IInterfaceStatsE5fname__11_
+ r _ZZ30IClientInstallUtilsDispatchMsgP19IClientInstallUtilsR10CUtlBufferS2_P15IInterfaceStatsE5fname__10_
  r _nist_p_224
  r _nist_p_224_sqr
  r _nist_p_521

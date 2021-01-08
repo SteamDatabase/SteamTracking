@@ -3,8 +3,8 @@ __TEXT
 @%
 __text
 __TEXT
-D
-D
+A
+A
 __stubs
 __TEXT
 __stub_helper
@@ -66,8 +66,6 @@ HZ'
 ['
 (r'
 P
-^!
-^!
 g
 
 `
@@ -93,9 +91,11 @@ h
 /usr/lib/libobjc.A.dylib
 &
 )
+50
 Hi
 H=
 ?
+;$
 10CUtlString
 10CIPCServer
 11CPipeWaiter
@@ -111,6 +111,47 @@ H=
 12IProcessPipe
 24CPipeEventCallbackHelper
 N10OSXHelpers16CIOPollingHelper15IHelperCallbackE
+IClientInstallUtils
+SetUniverse
+AddShortcut
+RemoveShortcut
+AddUninstallEntry
+RemoveUninstallEntry
+AddToFirewall
+RemoveFromFirewall
+RegisterSteamProtocolHandler
+AddInstallScriptToWhiteList
+RunInstallScript
+GetInstallScriptExitCode
+ConfigureNetworDeviceIPAddresses
+IClientModuleManager
+LoadModule
+UnloadModule
+CallFunction
+CallFunctionAsync
+PollResponseAsync
+IRegistryInterface
+BGetValueStr
+BGetValueUint
+BGetValueBin
+BSetValueStr
+BSetValueUint
+BSetValueBin
+BDeleteValue
+BDeleteKey
+BKeyExists
+BGetSubKeys
+BGetValues
+BEnumerateKey
+BEnumerateValue
+IClientProcessMonitor
+RegisterProcess
+UnregisterProcess
+TerminateProcess
+IClientSecureDesktop
+BStartStreaming
+StopStreaming
+SendSAS
 14CServiceEngine
 25CClientModuleManagerAsync
 21CWorkItemFunctionCall
@@ -1090,51 +1131,11 @@ Unknown
 Assertion Failed: hSteamUser == 0
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/SteamServiceClient/serviceengine.cpp
 Assertion Failed: !"Interface type not found"
-IClientInstallUtils
-SetUniverse
-Fencepost deserialize mismatch (%u vs %u)
+Fencepost deserialize mismatch in %s::%s
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/interfacemap_service.h
 )
-AddShortcut
 ) =
-RemoveShortcut
-AddUninstallEntry
-RemoveUninstallEntry
-AddToFirewall
-RemoveFromFirewall
-RegisterSteamProtocolHandler
-AddInstallScriptToWhiteList
-RunInstallScript
-GetInstallScriptExitCode
-ConfigureNetworDeviceIPAddresses
-IClientModuleManager
-LoadModule
-UnloadModule
-CallFunction
-CallFunctionAsync
-PollResponseAsync
-IRegistryInterface
-BGetValueStr
-BGetValueUint
-BGetValueBin
-BSetValueStr
-BSetValueUint
-BSetValueBin
-BDeleteValue
-BDeleteKey
-BKeyExists
-BGetSubKeys
-BGetValues
-BEnumerateKey
-BEnumerateValue
-IClientProcessMonitor
-RegisterProcess
-UnregisterProcess
-TerminateProcess
-IClientSecureDesktop
-BStartStreaming
-StopStreaming
-SendSAS
+Unknown IPC call %s::0x%x
 %u,
 0x%llX,
 ClientModuleManagerPool
@@ -6126,8 +6127,8 @@ crashhandler.dylib
 CreateInterface
 %u
 1.0
-Jan  5 2021
-14:31:20
+Jan  7 2021
+18:16:43
 Jan
 Feb
 Mar
@@ -6684,6 +6685,7 @@ Assertion Failed: m_cCurrentDepth > 0
 Hi
 H=
 ?
+;$
 @
 @
 =
@@ -6696,10 +6698,9 @@ Hc
 =
 "
 N
-<#
-#
-#
+6
 Hc
+Z!
 
 ?
 ?
@@ -7025,8 +7026,14 @@ AES-NI GCM module for x86_64, CRYPTOGAMS by <appro@openssl.org>
 =
 Montgomery Multiplication with scatter/gather for x86_64, CRYPTOGAMS by <appro@openssl.org>
 =
+)
+
+
 3
 3
+m
+/
+*
 IcE
 I;E
 ,
@@ -7089,7 +7096,7 @@ i
 @
 @
 @
-x
+u
 @
 @
 @

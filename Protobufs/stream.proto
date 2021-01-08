@@ -138,7 +138,7 @@ enum EStreamBitrate {
 }
 
 enum EStreamP2PScope {
-	k_EStreamP2PScopeUnknown = 0;
+	k_EStreamP2PScopeAutomatic = 0;
 	k_EStreamP2PScopeDisabled = 1;
 	k_EStreamP2PScopeOnlyMe = 2;
 	k_EStreamP2PScopeFriends = 3;
@@ -368,7 +368,7 @@ message CStreamingClientConfig {
 	optional bool enable_microphone_streaming = 15 [default = false];
 	optional string controller_overlay_hotkey = 16;
 	optional bool enable_touch_controller = 17 [default = false];
-	optional .EStreamP2PScope p2p_scope = 18 [default = k_EStreamP2PScopeUnknown];
+	optional .EStreamP2PScope p2p_scope = 19 [default = k_EStreamP2PScopeAutomatic];
 }
 
 message CStreamingServerConfig {

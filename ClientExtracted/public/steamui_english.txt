@@ -4586,6 +4586,7 @@ Set a category for these games to help you find them quickly and organize your L
 "Steam_Settings_Streaming_SoftwareEncodingThreads_7"	"7"
 "Steam_Settings_Streaming_SoftwareEncodingThreads_8"	"8"
 "Steam_Settings_Streaming_P2PScope_Description"	"Allow Direct Connection (IP sharing)"
+"Steam_Settings_Streaming_P2PScopeAutomatic"	"Automatic (enabled)"
 "Steam_Settings_Streaming_P2PScopeDisabled"	"Disabled"
 "Steam_Settings_Streaming_P2PScopeOnlyMe" "My Devices"
 "Steam_Settings_Streaming_P2PScopeEveryone" "All Devices"
@@ -4772,4 +4773,9 @@ Set a category for these games to help you find them quickly and organize your L
 
 "SteamUI_RunningConflictingSoftware" "Conflicting Software Detected"
 "SteamUI_RunningIncompatibleTcpService" "An incompatible version of %incompatdll% (related to %incompatname%)\nhas been detected inside of the Steam process.\n\nWe suggest updating or uninstalling this software if you experience crashes\nor network slowdowns while running Steam or individual games."
+
+"Steam_XboxDriverInstall_Title"		"Xbox Driver Installation"
+"Steam_XboxDriverInstall_Success"	"Driver successfully updated, and will be active after you restart your computer."
+"Steam_XboxDriverInstall_Failure"	"Driver update failed, is the Steam service running and up to date?"
+"Steam_XboxDriverInstall_Failure"	"Driver update failed, error = %error%"
 }

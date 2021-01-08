@@ -59,6 +59,7 @@
 					  <Panel class="Spacer" />
 					  <Label class="SettingsLabel" text="#Settings_RemoteClients_P2PScope" />
 					  <DropDown id="P2PScope" class="Filter" tabindex="auto">
+						  <Label id="0" text="#Settings_RemoteClients_P2PScope_Automatic" />
 						  <Label id="1" text="#Settings_RemoteClients_P2PScope_Disabled" />
 						  <Label id="2" text="#Settings_RemoteClients_P2PScope_OnlyMe" />
 						  <Label id="4" text="#Settings_RemoteClients_P2PScope_Everyone" />
