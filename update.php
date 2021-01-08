@@ -352,7 +352,7 @@
 					);
 				}
 
-				system( 'prettier --write ' . escapeshellarg( $File ) );
+				system( 'npm run prettier ' . escapeshellarg( $File ) );
 
 				return true;
 			}

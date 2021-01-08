@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "name": "steamtracking",
+  "scripts": {
+    "prettier": "prettier --write"
+  },
+  "dependencies": {
+    "prettier": "^2.2.1"
+  }
+}

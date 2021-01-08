@@ -7,8 +7,6 @@ if [ -f "$LOCKFILE" ] && kill -0 "$(cat $LOCKFILE)" 2>/dev/null; then
 	exit 1
 fi
 
-export PATH="$(yarn global bin):$PATH"
-
 echo $$ > $LOCKFILE
 
 php update.php "$1"
