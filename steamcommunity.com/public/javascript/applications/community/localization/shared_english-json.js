@@ -3,7 +3,7 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [44],
   {
-    TYjx: function(e) {
+    TYjx: function (e) {
       e.exports = {
         language: "english",
         Button_About: "About",
@@ -1829,8 +1829,8 @@
         ImportLoc_CSVLangPerCol: "CSV Language Per Column",
         ImportLoc_CSVTokenLang: "CSV Token List",
         ImportLoc_XML: "XML Single Language",
-        shared_dummy: "dont translate"
+        shared_dummy: "dont translate",
       };
-    }
-  }
+    },
+  },
 ]);

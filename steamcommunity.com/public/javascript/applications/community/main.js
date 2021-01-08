@@ -4,24 +4,24 @@ var CLSTAMP = "6296065";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [68],
   {
-    "+d9t": function(e, t, n) {
+    "+d9t": function (e, t, n) {
       "use strict";
-      n.d(t, "e", function() {
+      n.d(t, "e", function () {
         return p;
       }),
-        n.d(t, "b", function() {
+        n.d(t, "b", function () {
           return m;
         }),
-        n.d(t, "d", function() {
+        n.d(t, "d", function () {
           return f;
         }),
-        n.d(t, "f", function() {
+        n.d(t, "f", function () {
           return v;
         }),
-        n.d(t, "a", function() {
+        n.d(t, "a", function () {
           return g;
         }),
-        n.d(t, "c", function() {
+        n.d(t, "c", function () {
           return b;
         });
       var c = n("mrSG"),
@@ -54,7 +54,7 @@ var CLSTAMP = "6296065";
             "onContextMenu",
             "bForceExternal",
             "href",
-            "bUseLinkFilter"
+            "bUseLinkFilter",
           ]);
         return (
           t || n || (n = h),
@@ -69,12 +69,12 @@ var CLSTAMP = "6296065";
             "a",
             Object(c.a)({}, a, {
               href: o,
-              onClick: function(e) {
+              onClick: function (e) {
                 e.preventDefault(),
                   f(window, o, { bForceExternal: !!r, bUseLinkFilter: !!i });
               },
               onContextMenu: n,
-              rel: i ? "noopener noreferrer" : void 0
+              rel: i ? "noopener noreferrer" : void 0,
             }),
             e.children
           )
@@ -89,18 +89,18 @@ var CLSTAMP = "6296065";
           l.createElement(
             r.d,
             {
-              onSelected: function() {
+              onSelected: function () {
                 i.h(t);
-              }
+              },
             },
             Object(o.f)("#ContextMenu_CopyLinkURL")
           ),
           l.createElement(
             r.d,
             {
-              onSelected: function(e) {
+              onSelected: function (e) {
                 f(e, t, { unPID: n });
-              }
+              },
             },
             Object(o.f)("#ContextMenu_OpenLinkInNewWindow")
           )
@@ -148,7 +148,7 @@ var CLSTAMP = "6296065";
           s = null != i ? i : a;
         return l.createElement(s, r);
       }
-      var g = function(e) {
+      var g = function (e) {
         return l.createElement(
           l.Fragment,
           null,
@@ -156,18 +156,18 @@ var CLSTAMP = "6296065";
         );
       };
       function b(n) {
-        return l.forwardRef(function(e, t) {
+        return l.forwardRef(function (e, t) {
           return l.createElement(
             "div",
             Object(c.a)({}, e, {
               className: Object(u.a)(n, e.className),
-              ref: t
+              ref: t,
             })
           );
         });
       }
     },
-    "+jbA": function(e, t, n) {
+    "+jbA": function (e, t, n) {
       e.exports = {
         ContextMenuMouseOverlay: "contextmenu_ContextMenuMouseOverlay_3Knd7",
         ContextMenuFocusContainer:
@@ -184,10 +184,10 @@ var CLSTAMP = "6296065";
         Label: "contextmenu_Label_2qdHl",
         Arrow: "contextmenu_Arrow_114nF",
         PopoutSubMenu: "contextmenu_PopoutSubMenu_Baq37",
-        PopoutSubMenuItems: "contextmenu_PopoutSubMenuItems_2fZ_e"
+        PopoutSubMenuItems: "contextmenu_PopoutSubMenuItems_2fZ_e",
       };
     },
-    "2i24": function(e, t, n) {
+    "2i24": function (e, t, n) {
       e.exports = {
         LoadingWrapper: "throbber_LoadingWrapper_2wAKy",
         Static: "throbber_Static_1Qfwp",
@@ -227,12 +227,12 @@ var CLSTAMP = "6296065";
         roundThrobber01: "throbber_roundThrobber01_2tXge",
         ThrobberRoundLoopThickness: "throbber_ThrobberRoundLoopThickness_1fs4R",
         throbber_xlarge: "throbber_throbber_xlarge_1gYeZ",
-        throbber_xxlarge: "throbber_throbber_xxlarge_3j-p4"
+        throbber_xxlarge: "throbber_throbber_xxlarge_3j-p4",
       };
     },
-    "5E+2": function(e, t, n) {
+    "5E+2": function (e, t, n) {
       "use strict";
-      n.d(t, "a", function() {
+      n.d(t, "a", function () {
         return u;
       });
       var f = n("mrSG"),
@@ -245,19 +245,19 @@ var CLSTAMP = "6296065";
         s = n("bxiW"),
         c = n("LY6W"),
         l = n.n(c),
-        u = (function(e) {
+        u = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
           return (
             Object(f.d)(t, e),
-            (t.prototype.TryHide = function() {
+            (t.prototype.TryHide = function () {
               this.m_fnHide && this.m_fnHide(), (this.m_fnHide = null);
             }),
-            (t.prototype.componentWillUnmount = function() {
+            (t.prototype.componentWillUnmount = function () {
               this.TryHide();
             }),
-            (t.prototype.render = function() {
+            (t.prototype.render = function () {
               var e,
                 t = this,
                 n = this.props,
@@ -279,7 +279,7 @@ var CLSTAMP = "6296065";
                   "nBodyDistance",
                   "nAllowOffscreenPx",
                   "nMaxLateralMoveOnScreen",
-                  "strTooltipClassname"
+                  "strTooltipClassname",
                 ]),
                 d = {
                   direction: a,
@@ -287,12 +287,12 @@ var CLSTAMP = "6296065";
                   nBodyDistance: c,
                   nAllowOffscreenPx: l,
                   nMaxLateralMoveOnScreen: u,
-                  className: p
+                  className: p,
                 },
                 h = null;
               return (
                 i ||
-                  ((e = function(e) {
+                  ((e = function (e) {
                     return (t.m_fnHide = e);
                   }),
                   (h =
@@ -305,7 +305,7 @@ var CLSTAMP = "6296065";
                     {
                       navStop: !!m.onClick,
                       onMouseEnter: h ? h.ShowToolTip : null,
-                      onMouseLeave: this.TryHide
+                      onMouseLeave: this.TryHide,
                     },
                     m
                   ),
@@ -318,66 +318,70 @@ var CLSTAMP = "6296065";
             t
           );
         })(v.Component),
-        b = (v.Component,
-        v.Component,
-        v.Component,
-        (function() {
-          function o(e, t, n, r) {
-            (this.m_rctContent = e),
-              (this.m_nDelayShowMS = n),
-              (this.m_hoverPositionProps = r),
-              (this.m_strKey = "tooltip-" + Math.floor(1e8 * Math.random())),
-              (this.m_fnOnShow = t);
-          }
-          return (
-            (o.ForReactNode = function(e, t, n, r) {
-              return new o(e, t, n, r);
-            }),
-            (o.ForText = function(e, t, n, r) {
-              return new o(
-                v.createElement(
-                  "div",
-                  { className: l.a.TextToolTip },
-                  Object(a.f)(e)
+        b =
+          (v.Component,
+          v.Component,
+          v.Component,
+          (function () {
+            function o(e, t, n, r) {
+              (this.m_rctContent = e),
+                (this.m_nDelayShowMS = n),
+                (this.m_hoverPositionProps = r),
+                (this.m_strKey = "tooltip-" + Math.floor(1e8 * Math.random())),
+                (this.m_fnOnShow = t);
+            }
+            return (
+              (o.ForReactNode = function (e, t, n, r) {
+                return new o(e, t, n, r);
+              }),
+              (o.ForText = function (e, t, n, r) {
+                return new o(
+                  v.createElement(
+                    "div",
+                    { className: l.a.TextToolTip },
+                    Object(a.f)(e)
+                  ),
+                  t,
+                  n,
+                  r
+                );
+              }),
+              (o.prototype.ShowToolTip = function (e) {
+                var t = this,
+                  n = e.currentTarget || e,
+                  r = { target: n };
+                o.sm_embeddedElements.ShowElementDelayed(
+                  n.ownerDocument,
+                  this.m_nDelayShowMS,
+                  v.createElement(
+                    i.a,
+                    Object(f.a)({}, r, this.m_hoverPositionProps),
+                    this.m_rctContent
+                  ),
+                  this.m_strKey
                 ),
-                t,
-                n,
-                r
-              );
-            }),
-            (o.prototype.ShowToolTip = function(e) {
-              var t = this,
-                n = e.currentTarget || e,
-                r = { target: n };
-              o.sm_embeddedElements.ShowElementDelayed(
-                n.ownerDocument,
-                this.m_nDelayShowMS,
-                v.createElement(
-                  i.a,
-                  Object(f.a)({}, r, this.m_hoverPositionProps),
-                  this.m_rctContent
-                ),
-                this.m_strKey
-              ),
-                this.m_fnOnShow &&
-                  this.m_fnOnShow(function() {
-                    return t.HideToolTip(n);
-                  });
-            }),
-            (o.prototype.HideToolTip = function(e) {
-              var t = e.currentTarget || e;
-              o.sm_embeddedElements.HideElement(t.ownerDocument, this.m_strKey);
-            }),
-            (o.sm_embeddedElements = new r.a("ignored-id-tooltip-map")),
-            Object(f.c)([s.a], o.prototype, "ShowToolTip", null),
-            Object(f.c)([s.a], o.prototype, "HideToolTip", null),
-            o
-          );
-        })());
+                  this.m_fnOnShow &&
+                    this.m_fnOnShow(function () {
+                      return t.HideToolTip(n);
+                    });
+              }),
+              (o.prototype.HideToolTip = function (e) {
+                var t = e.currentTarget || e;
+                o.sm_embeddedElements.HideElement(
+                  t.ownerDocument,
+                  this.m_strKey
+                );
+              }),
+              (o.sm_embeddedElements = new r.a("ignored-id-tooltip-map")),
+              Object(f.c)([s.a], o.prototype, "ShowToolTip", null),
+              Object(f.c)([s.a], o.prototype, "HideToolTip", null),
+              o
+            );
+          })());
     },
-    "5izx": function(e, t, n) {
+    "5izx": function (e, t, n) {
       "use strict";
-      n.d(t, "a", function() {
+      n.d(t, "a", function () {
         return c;
       });
       var r = n("wd/R"),
@@ -385,7 +389,7 @@ var CLSTAMP = "6296065";
         i = n("s4NR"),
         a = n.n(i),
         s = n("lkRc"),
-        c = new ((function() {
+        c = new ((function () {
           function e() {
             (this.bOpenEventLandingPage = !1),
               (this.bIncludeFeaturedAsGameSource = !0),
@@ -396,41 +400,41 @@ var CLSTAMP = "6296065";
               e.prototype,
               "bRequireAllEventsLoadedInTimeBlock",
               {
-                get: function() {
+                get: function () {
                   return !1;
                 },
                 enumerable: !1,
-                configurable: !0
+                configurable: !0,
               }
             ),
             Object.defineProperty(e.prototype, "bInSteamLabs", {
-              get: function() {
+              get: function () {
                 return !1;
               },
               enumerable: !1,
-              configurable: !0
+              configurable: !0,
             }),
             Object.defineProperty(e.prototype, "bUseSlashNews", {
-              get: function() {
+              get: function () {
                 return !0;
               },
               enumerable: !1,
-              configurable: !0
+              configurable: !0,
             }),
-            (e.prototype.GetTimeNowWithOverride = function() {
+            (e.prototype.GetTimeNowWithOverride = function () {
               return this.nOverrideDateNow
                 ? this.nOverrideDateNow
                 : Math.floor(Date.now() / 1e3);
             }),
-            (e.prototype.GetTimeNowWithOverrideAsDate = function() {
+            (e.prototype.GetTimeNowWithOverrideAsDate = function () {
               return this.nOverrideDateNow
                 ? new Date(1e3 * this.nOverrideDateNow)
                 : new Date();
             }),
-            (e.prototype.BHasTimeOverride = function() {
+            (e.prototype.BHasTimeOverride = function () {
               return Boolean(this.nOverrideDateNow);
             }),
-            (e.prototype.ParseDevOverrides = function(e) {
+            (e.prototype.ParseDevOverrides = function (e) {
               var t, n;
               e &&
                 0 != e.length &&
@@ -453,189 +457,189 @@ var CLSTAMP = "6296065";
         })())();
       window.g_EventCalendarDevFeatures = c;
     },
-    "6+2x": function(e, t, n) {
+    "6+2x": function (e, t, n) {
       e.exports = {
         HoverPosition: "hoverposition_HoverPosition_3vg1v",
         Ready: "hoverposition_Ready_1Ye_0",
         NoSpace: "hoverposition_NoSpace_pxVZH",
         EnablePointerEvents: "hoverposition_EnablePointerEvents_2b9OE",
-        HoverAboveModal: "hoverposition_HoverAboveModal_EQqOx"
+        HoverAboveModal: "hoverposition_HoverAboveModal_EQqOx",
       };
     },
-    "6Y59": function(e, t, n) {
+    "6Y59": function (e, t, n) {
       "use strict";
-      n.d(t, "R", function() {
+      n.d(t, "R", function () {
         return c;
       }),
-        n.d(t, "p", function() {
+        n.d(t, "p", function () {
           return l;
         }),
-        n.d(t, "t", function() {
+        n.d(t, "t", function () {
           return u;
         }),
-        n.d(t, "D", function() {
+        n.d(t, "D", function () {
           return p;
         }),
-        n.d(t, "r", function() {
+        n.d(t, "r", function () {
           return m;
         }),
-        n.d(t, "U", function() {
+        n.d(t, "U", function () {
           return d;
         }),
-        n.d(t, "z", function() {
+        n.d(t, "z", function () {
           return h;
         }),
-        n.d(t, "eb", function() {
+        n.d(t, "eb", function () {
           return f;
         }),
-        n.d(t, "fb", function() {
+        n.d(t, "fb", function () {
           return v;
         }),
-        n.d(t, "J", function() {
+        n.d(t, "J", function () {
           return g;
         }),
-        n.d(t, "cb", function() {
+        n.d(t, "cb", function () {
           return b;
         }),
-        n.d(t, "ab", function() {
+        n.d(t, "ab", function () {
           return _;
         }),
-        n.d(t, "M", function() {
+        n.d(t, "M", function () {
           return y;
         }),
-        n.d(t, "L", function() {
+        n.d(t, "L", function () {
           return w;
         }),
-        n.d(t, "j", function() {
+        n.d(t, "j", function () {
           return E;
         }),
-        n.d(t, "n", function() {
+        n.d(t, "n", function () {
           return O;
         }),
-        n.d(t, "B", function() {
+        n.d(t, "B", function () {
           return S;
         }),
-        n.d(t, "V", function() {
+        n.d(t, "V", function () {
           return C;
         }),
-        n.d(t, "c", function() {
+        n.d(t, "c", function () {
           return D;
         }),
-        n.d(t, "b", function() {
+        n.d(t, "b", function () {
           return x;
         }),
-        n.d(t, "m", function() {
+        n.d(t, "m", function () {
           return M;
         }),
-        n.d(t, "o", function() {
+        n.d(t, "o", function () {
           return A;
         }),
-        n.d(t, "E", function() {
+        n.d(t, "E", function () {
           return j;
         }),
-        n.d(t, "H", function() {
+        n.d(t, "H", function () {
           return k;
         }),
-        n.d(t, "O", function() {
+        n.d(t, "O", function () {
           return T;
         }),
-        n.d(t, "w", function() {
+        n.d(t, "w", function () {
           return I;
         }),
-        n.d(t, "F", function() {
+        n.d(t, "F", function () {
           return N;
         }),
-        n.d(t, "T", function() {
+        n.d(t, "T", function () {
           return L;
         }),
-        n.d(t, "bb", function() {
+        n.d(t, "bb", function () {
           return R;
         }),
-        n.d(t, "i", function() {
+        n.d(t, "i", function () {
           return B;
         }),
-        n.d(t, "S", function() {
+        n.d(t, "S", function () {
           return F;
         }),
-        n.d(t, "P", function() {
+        n.d(t, "P", function () {
           return P;
         }),
-        n.d(t, "Q", function() {
+        n.d(t, "Q", function () {
           return G;
         }),
-        n.d(t, "d", function() {
+        n.d(t, "d", function () {
           return H;
         }),
-        n.d(t, "I", function() {
+        n.d(t, "I", function () {
           return U;
         }),
-        n.d(t, "Z", function() {
+        n.d(t, "Z", function () {
           return W;
         }),
-        n.d(t, "A", function() {
+        n.d(t, "A", function () {
           return z;
         }),
-        n.d(t, "s", function() {
+        n.d(t, "s", function () {
           return V;
         }),
-        n.d(t, "Y", function() {
+        n.d(t, "Y", function () {
           return Y;
         }),
-        n.d(t, "X", function() {
+        n.d(t, "X", function () {
           return K;
         }),
-        n.d(t, "h", function() {
+        n.d(t, "h", function () {
           return X;
         }),
-        n.d(t, "k", function() {
+        n.d(t, "k", function () {
           return q;
         }),
-        n.d(t, "u", function() {
+        n.d(t, "u", function () {
           return J;
         }),
-        n.d(t, "q", function() {
+        n.d(t, "q", function () {
           return Z;
         }),
-        n.d(t, "y", function() {
+        n.d(t, "y", function () {
           return Q;
         }),
-        n.d(t, "v", function() {
+        n.d(t, "v", function () {
           return $;
         }),
-        n.d(t, "K", function() {
+        n.d(t, "K", function () {
           return ee;
         }),
-        n.d(t, "a", function() {
+        n.d(t, "a", function () {
           return te;
         }),
-        n.d(t, "G", function() {
+        n.d(t, "G", function () {
           return ne;
         }),
-        n.d(t, "x", function() {
+        n.d(t, "x", function () {
           return re;
         }),
-        n.d(t, "l", function() {
+        n.d(t, "l", function () {
           return oe;
         }),
-        n.d(t, "W", function() {
+        n.d(t, "W", function () {
           return ie;
         }),
-        n.d(t, "C", function() {
+        n.d(t, "C", function () {
           return ae;
         }),
-        n.d(t, "N", function() {
+        n.d(t, "N", function () {
           return se;
         }),
-        n.d(t, "db", function() {
+        n.d(t, "db", function () {
           return ce;
         }),
-        n.d(t, "g", function() {
+        n.d(t, "g", function () {
           return le;
         }),
-        n.d(t, "f", function() {
+        n.d(t, "f", function () {
           return ue;
         }),
-        n.d(t, "e", function() {
+        n.d(t, "e", function () {
           return pe;
         });
       var r = n("mrSG"),
@@ -657,11 +661,11 @@ var CLSTAMP = "6296065";
             width: "256px",
             height: "256px",
             viewBox: "-305.5 396.5 256 256",
-            enableBackground: "new -305.5 396.5 256 256"
+            enableBackground: "new -305.5 396.5 256 256",
           },
           o.createElement("path", {
             d:
-              "M-232.755,589.942l3.103,2.408c5.78,4.492,11.973,8.18,18.409,10.959l3.581,1.547l2.276,33.783 c0.089,1.33,1.385,2.54,2.715,2.54h48.62c1.355,0,2.745-1.273,2.852-2.621l2.74-33.284l3.602-1.496 c6.406-2.656,12.646-6.262,18.554-10.707l3.137-2.366l30.578,15.009c1.155,0.571,2.924,0.017,3.563-1.087l24.303-42.1 c0.674-1.173,0.265-3.014-0.852-3.785l-27.872-19.309l0.469-3.832c0.495-4.032,0.725-7.395,0.725-10.57 c0-3.129-0.227-6.5-0.687-10.307l-0.469-3.896l28.699-19.253c1.112-0.741,1.509-2.473,0.84-3.627l-24.3-42.104 c-0.657-1.139-2.502-1.727-3.7-1.155l-31.208,14.748l-3.091-2.341c-5.571-4.224-11.466-7.688-17.522-10.306l-3.58-1.548 l-2.34-34.887c-0.089-1.33-1.381-2.536-2.715-2.536h-48.617c-1.355,0-2.74,1.274-2.851,2.626l-2.834,34.371l-3.593,1.501 c-6.082,2.535-12.028,5.924-17.667,10.071l-3.124,2.302l-31.392-15.413c-1.168-0.575-2.924-0.025-3.559,1.074l-24.309,42.107 c-0.678,1.172-0.264,3.014,0.848,3.781l28.068,19.444l-0.524,3.883c-0.592,4.378-0.865,8.018-0.865,11.462 c0,2.988,0.179,6.065,0.55,9.403l0.431,3.853l-28.528,19.125c-1.108,0.742-1.509,2.468-0.84,3.632l24.308,42.1 c0.656,1.142,2.489,1.726,3.7,1.154L-232.755,589.942z M-177.498,560.051c-19.311,0-35.02-15.709-35.02-35.02 s15.709-35.02,35.02-35.02s35.02,15.709,35.02,35.02S-158.188,560.051-177.498,560.051z"
+              "M-232.755,589.942l3.103,2.408c5.78,4.492,11.973,8.18,18.409,10.959l3.581,1.547l2.276,33.783 c0.089,1.33,1.385,2.54,2.715,2.54h48.62c1.355,0,2.745-1.273,2.852-2.621l2.74-33.284l3.602-1.496 c6.406-2.656,12.646-6.262,18.554-10.707l3.137-2.366l30.578,15.009c1.155,0.571,2.924,0.017,3.563-1.087l24.303-42.1 c0.674-1.173,0.265-3.014-0.852-3.785l-27.872-19.309l0.469-3.832c0.495-4.032,0.725-7.395,0.725-10.57 c0-3.129-0.227-6.5-0.687-10.307l-0.469-3.896l28.699-19.253c1.112-0.741,1.509-2.473,0.84-3.627l-24.3-42.104 c-0.657-1.139-2.502-1.727-3.7-1.155l-31.208,14.748l-3.091-2.341c-5.571-4.224-11.466-7.688-17.522-10.306l-3.58-1.548 l-2.34-34.887c-0.089-1.33-1.381-2.536-2.715-2.536h-48.617c-1.355,0-2.74,1.274-2.851,2.626l-2.834,34.371l-3.593,1.501 c-6.082,2.535-12.028,5.924-17.667,10.071l-3.124,2.302l-31.392-15.413c-1.168-0.575-2.924-0.025-3.559,1.074l-24.309,42.107 c-0.678,1.172-0.264,3.014,0.848,3.781l28.068,19.444l-0.524,3.883c-0.592,4.378-0.865,8.018-0.865,11.462 c0,2.988,0.179,6.065,0.55,9.403l0.431,3.853l-28.528,19.125c-1.108,0.742-1.509,2.468-0.84,3.632l24.308,42.1 c0.656,1.142,2.489,1.726,3.7,1.154L-232.755,589.942z M-177.498,560.051c-19.311,0-35.02-15.709-35.02-35.02 s15.709-35.02,35.02-35.02s35.02,15.709,35.02,35.02S-158.188,560.051-177.498,560.051z",
           })
         );
       }
@@ -674,11 +678,11 @@ var CLSTAMP = "6296065";
             "data-name": "Layer 1",
             viewBox: "0 0 128 128",
             x: "0px",
-            y: "0px"
+            y: "0px",
           },
           o.createElement("polygon", {
             points:
-              "50 59.49 13.21 22.89 4.74 31.39 50 76.41 95.26 31.39 86.79 22.89 50 59.49"
+              "50 59.49 13.21 22.89 4.74 31.39 50 76.41 95.26 31.39 86.79 22.89 50 59.49",
           })
         );
       }
@@ -693,11 +697,11 @@ var CLSTAMP = "6296065";
             y: "0px",
             width: "24.833px",
             height: "21.917px",
-            viewBox: "0 0 24.833 21.917"
+            viewBox: "0 0 24.833 21.917",
           },
           o.createElement("polygon", {
             points:
-              "12.5,14.873 3.302,5.723 1.185,7.848 12.5,19.103 23.814,7.848 21.697,5.723 "
+              "12.5,14.873 3.302,5.723 1.185,7.848 12.5,19.103 23.814,7.848 21.697,5.723 ",
           })
         );
       }
@@ -713,7 +717,7 @@ var CLSTAMP = "6296065";
               version: "1.1",
               x: "0px",
               y: "0px",
-              viewBox: "0 0 100 100"
+              viewBox: "0 0 100 100",
             },
             o.createElement(
               "g",
@@ -727,7 +731,7 @@ var CLSTAMP = "6296065";
                 stroke: "none",
                 visibility: "visible",
                 display: "inline",
-                overflow: "visible"
+                overflow: "visible",
               })
             )
           )
@@ -745,7 +749,7 @@ var CLSTAMP = "6296065";
             y: "0px",
             width: "256px",
             height: "256px",
-            viewBox: "0 0 256 256"
+            viewBox: "0 0 256 256",
           },
           o.createElement("circle", {
             fill: "none",
@@ -754,7 +758,7 @@ var CLSTAMP = "6296065";
             strokeMiterlimit: "10",
             cx: "128",
             cy: "128",
-            r: "107.5"
+            r: "107.5",
           }),
           o.createElement("path", {
             fill: "none",
@@ -763,7 +767,7 @@ var CLSTAMP = "6296065";
             strokeLinecap: "round",
             strokeMiterlimit: "10",
             d:
-              "M74.484,145.945 c0,0,12.996,37.533,53.514,37.533c38.084,0,53.499-37.533,53.499-37.533"
+              "M74.484,145.945 c0,0,12.996,37.533,53.514,37.533c38.084,0,53.499-37.533,53.499-37.533",
           }),
           o.createElement("line", {
             fill: "none",
@@ -774,7 +778,7 @@ var CLSTAMP = "6296065";
             x1: "94.5",
             y1: "97.5",
             x2: "94.5",
-            y2: "109.5"
+            y2: "109.5",
           }),
           o.createElement("line", {
             fill: "none",
@@ -785,7 +789,7 @@ var CLSTAMP = "6296065";
             x1: "160.5",
             y1: "97.5",
             x2: "160.5",
-            y2: "109.5"
+            y2: "109.5",
           })
         );
       }
@@ -799,7 +803,7 @@ var CLSTAMP = "6296065";
             version: "1.1",
             x: "0px",
             y: "0px",
-            viewBox: "0 0 100 100"
+            viewBox: "0 0 100 100",
           },
           o.createElement(
             "g",
@@ -813,7 +817,7 @@ var CLSTAMP = "6296065";
               stroke: "none",
               visibility: "visible",
               display: "inline",
-              overflow: "visible"
+              overflow: "visible",
             })
           )
         );
@@ -830,7 +834,7 @@ var CLSTAMP = "6296065";
             width: "100px",
             height: "91.582px",
             viewBox: "0 0 100 91.582",
-            enableBackground: "new 0 0 100 91.582"
+            enableBackground: "new 0 0 100 91.582",
           },
           o.createElement(
             "g",
@@ -838,7 +842,7 @@ var CLSTAMP = "6296065";
             o.createElement("path", {
               clipPath: "url(#SVGID_2_)",
               d:
-                "M88.853,29.724H62.271V11.351C62.262,5.18,57.26,0.179,51.089,0.169H11.255\r\n\t\t\t\tC5.085,0.179,0.085,5.18,0.074,11.351v24.908c-0.001,2.207,0.657,4.36,1.888,6.19c3.942,7.586,22.118,18.799,22.314,18.916\r\n\t\t\t\tc0.389,0.229,0.83,0.354,1.281,0.361c1.351,0.01,2.455-1.074,2.468-2.426c0.003-0.329-0.062-0.654-0.187-0.958\r\n\t\t\t\tc-1.319-3.565-2.341-7.233-3.053-10.968h13.135v18.389C37.93,71.9,42.882,76.882,49.02,76.928H75.29\r\n\t\t\t\tc-0.715,3.724-1.737,7.379-3.054,10.936c-0.517,1.248,0.076,2.678,1.323,3.196c0.303,0.125,0.63,0.188,0.959,0.186\r\n\t\t\t\tc0.451-0.006,0.894-0.13,1.279-0.361c0.197-0.115,18.373-11.329,22.314-18.914c1.235-1.834,1.894-3.997,1.888-6.207V40.906\r\n\t\t\t\tC99.99,34.746,95.01,29.751,88.853,29.724 M32.797,42.449H21.831c-0.721,0.01-1.4,0.327-1.873,0.869\r\n\t\t\t\tc-0.464,0.544-0.669,1.265-0.558,1.973c0,0.228,0.59,3.79,1.641,8.028c-5.517-3.842-12.773-9.425-14.776-13.136\r\n\t\t\t\tc-0.067-0.162-0.149-0.314-0.247-0.46c-0.738-1.033-1.13-2.276-1.116-3.546V11.351c0.008-3.463,2.825-6.264,6.288-6.255h0.065\r\n\t\t\t\th39.833c3.45,0.007,6.246,2.804,6.255,6.255v18.373H49.02c-3.223,0.005-6.286,1.399-8.406,3.825\r\n\t\t\t\tc-1.744-0.054-3.464-0.427-5.074-1.101c2.588-3.257,4.169-7.2,4.548-11.345h1.33c1.359,0,2.463-1.103,2.463-2.463\r\n\t\t\t\tc0-1.361-1.104-2.461-2.463-2.461h-7.784v-4.384c0-1.36-1.102-2.464-2.461-2.464c-1.361,0-2.463,1.104-2.463,2.464v4.384h-7.668\r\n\t\t\t\tc-1.361,0-2.462,1.1-2.462,2.461c0,1.36,1.102,2.463,2.462,2.463H35.13c-0.348,3.137-1.604,6.104-3.613,8.538\r\n\t\t\t\tc-1.439-1.598-2.553-3.46-3.284-5.482c-0.489-1.271-1.916-1.903-3.185-1.414c-1.27,0.489-1.902,1.917-1.412,3.185\r\n\t\t\t\tc0.892,2.395,2.192,4.619,3.841,6.57c-2.017,0.812-4.178,1.208-6.354,1.165c-1.359,0-2.463,1.102-2.463,2.461\r\n\t\t\t\tc0,1.362,1.104,2.465,2.463,2.465c3.647,0.07,7.244-0.868,10.393-2.71c2.032,1.239,4.293,2.049,6.649,2.38\r\n\t\t\t\tc-0.218,0.859-0.327,1.741-0.327,2.627v1.641L32.797,42.449z M95.19,65.763c0.013,1.271-0.379,2.514-1.117,3.547\r\n\t\t\t\tc-0.097,0.138-0.181,0.287-0.246,0.443c-1.938,3.678-9.211,9.277-14.776,13.135c1.099-4.236,1.64-7.799,1.64-8.03\r\n\t\t\t\tc0.111-0.704-0.091-1.425-0.558-1.969c-0.462-0.548-1.138-0.871-1.854-0.887H49.02c-3.447,0-6.246-2.791-6.255-6.239V40.906\r\n\t\t\t\tc0.009-3.452,2.805-6.249,6.255-6.257h39.833c3.449,0.008,6.246,2.805,6.256,6.257L95.19,65.763z M77.834,56.635L77.834,56.635\r\n\t\t\t\tl-6.564-16.42c-0.037-0.092-0.081-0.18-0.133-0.262l-0.099-0.165c-0.047-0.078-0.102-0.15-0.164-0.214l-0.132-0.164l-0.182-0.147\r\n\t\t\t\tl-0.195-0.099c-0.056-0.043-0.116-0.076-0.182-0.098l-0.246-0.132c-0.06-0.009-0.121-0.009-0.18,0l-0.248-0.082h-0.245h-0.231\r\n\t\t\t\th-0.261h-0.214l-0.279,0.082c-0.055-0.007-0.109-0.007-0.164,0l-0.246,0.132l-0.247,0.098c-0.064,0.044-0.124,0.095-0.18,0.147\r\n\t\t\t\tl-0.182,0.148l-0.149,0.166c-0.056,0.066-0.113,0.138-0.161,0.211v0.166l-0.149,0.263l-6.567,16.418l-3.282,8.21\r\n\t\t\t\tc-0.546,1.246,0.026,2.697,1.272,3.24c0.036,0.016,0.072,0.029,0.105,0.042c0.29,0.127,0.604,0.189,0.919,0.182\r\n\t\t\t\tc1.005-0.006,1.905-0.616,2.283-1.544l2.657-6.665h9.854l2.66,6.665c0.383,0.931,1.291,1.54,2.298,1.544\r\n\t\t\t\tc0.31,0.003,0.619-0.059,0.904-0.182c1.269-0.485,1.906-1.907,1.422-3.18c-0.014-0.034-0.028-0.069-0.044-0.103L77.834,56.635z\r\n\t\t\t\tM66.062,55.123l2.939-7.323l2.923,7.323H66.062z"
+                "M88.853,29.724H62.271V11.351C62.262,5.18,57.26,0.179,51.089,0.169H11.255\r\n\t\t\t\tC5.085,0.179,0.085,5.18,0.074,11.351v24.908c-0.001,2.207,0.657,4.36,1.888,6.19c3.942,7.586,22.118,18.799,22.314,18.916\r\n\t\t\t\tc0.389,0.229,0.83,0.354,1.281,0.361c1.351,0.01,2.455-1.074,2.468-2.426c0.003-0.329-0.062-0.654-0.187-0.958\r\n\t\t\t\tc-1.319-3.565-2.341-7.233-3.053-10.968h13.135v18.389C37.93,71.9,42.882,76.882,49.02,76.928H75.29\r\n\t\t\t\tc-0.715,3.724-1.737,7.379-3.054,10.936c-0.517,1.248,0.076,2.678,1.323,3.196c0.303,0.125,0.63,0.188,0.959,0.186\r\n\t\t\t\tc0.451-0.006,0.894-0.13,1.279-0.361c0.197-0.115,18.373-11.329,22.314-18.914c1.235-1.834,1.894-3.997,1.888-6.207V40.906\r\n\t\t\t\tC99.99,34.746,95.01,29.751,88.853,29.724 M32.797,42.449H21.831c-0.721,0.01-1.4,0.327-1.873,0.869\r\n\t\t\t\tc-0.464,0.544-0.669,1.265-0.558,1.973c0,0.228,0.59,3.79,1.641,8.028c-5.517-3.842-12.773-9.425-14.776-13.136\r\n\t\t\t\tc-0.067-0.162-0.149-0.314-0.247-0.46c-0.738-1.033-1.13-2.276-1.116-3.546V11.351c0.008-3.463,2.825-6.264,6.288-6.255h0.065\r\n\t\t\t\th39.833c3.45,0.007,6.246,2.804,6.255,6.255v18.373H49.02c-3.223,0.005-6.286,1.399-8.406,3.825\r\n\t\t\t\tc-1.744-0.054-3.464-0.427-5.074-1.101c2.588-3.257,4.169-7.2,4.548-11.345h1.33c1.359,0,2.463-1.103,2.463-2.463\r\n\t\t\t\tc0-1.361-1.104-2.461-2.463-2.461h-7.784v-4.384c0-1.36-1.102-2.464-2.461-2.464c-1.361,0-2.463,1.104-2.463,2.464v4.384h-7.668\r\n\t\t\t\tc-1.361,0-2.462,1.1-2.462,2.461c0,1.36,1.102,2.463,2.462,2.463H35.13c-0.348,3.137-1.604,6.104-3.613,8.538\r\n\t\t\t\tc-1.439-1.598-2.553-3.46-3.284-5.482c-0.489-1.271-1.916-1.903-3.185-1.414c-1.27,0.489-1.902,1.917-1.412,3.185\r\n\t\t\t\tc0.892,2.395,2.192,4.619,3.841,6.57c-2.017,0.812-4.178,1.208-6.354,1.165c-1.359,0-2.463,1.102-2.463,2.461\r\n\t\t\t\tc0,1.362,1.104,2.465,2.463,2.465c3.647,0.07,7.244-0.868,10.393-2.71c2.032,1.239,4.293,2.049,6.649,2.38\r\n\t\t\t\tc-0.218,0.859-0.327,1.741-0.327,2.627v1.641L32.797,42.449z M95.19,65.763c0.013,1.271-0.379,2.514-1.117,3.547\r\n\t\t\t\tc-0.097,0.138-0.181,0.287-0.246,0.443c-1.938,3.678-9.211,9.277-14.776,13.135c1.099-4.236,1.64-7.799,1.64-8.03\r\n\t\t\t\tc0.111-0.704-0.091-1.425-0.558-1.969c-0.462-0.548-1.138-0.871-1.854-0.887H49.02c-3.447,0-6.246-2.791-6.255-6.239V40.906\r\n\t\t\t\tc0.009-3.452,2.805-6.249,6.255-6.257h39.833c3.449,0.008,6.246,2.805,6.256,6.257L95.19,65.763z M77.834,56.635L77.834,56.635\r\n\t\t\t\tl-6.564-16.42c-0.037-0.092-0.081-0.18-0.133-0.262l-0.099-0.165c-0.047-0.078-0.102-0.15-0.164-0.214l-0.132-0.164l-0.182-0.147\r\n\t\t\t\tl-0.195-0.099c-0.056-0.043-0.116-0.076-0.182-0.098l-0.246-0.132c-0.06-0.009-0.121-0.009-0.18,0l-0.248-0.082h-0.245h-0.231\r\n\t\t\t\th-0.261h-0.214l-0.279,0.082c-0.055-0.007-0.109-0.007-0.164,0l-0.246,0.132l-0.247,0.098c-0.064,0.044-0.124,0.095-0.18,0.147\r\n\t\t\t\tl-0.182,0.148l-0.149,0.166c-0.056,0.066-0.113,0.138-0.161,0.211v0.166l-0.149,0.263l-6.567,16.418l-3.282,8.21\r\n\t\t\t\tc-0.546,1.246,0.026,2.697,1.272,3.24c0.036,0.016,0.072,0.029,0.105,0.042c0.29,0.127,0.604,0.189,0.919,0.182\r\n\t\t\t\tc1.005-0.006,1.905-0.616,2.283-1.544l2.657-6.665h9.854l2.66,6.665c0.383,0.931,1.291,1.54,2.298,1.544\r\n\t\t\t\tc0.31,0.003,0.619-0.059,0.904-0.182c1.269-0.485,1.906-1.907,1.422-3.18c-0.014-0.034-0.028-0.069-0.044-0.103L77.834,56.635z\r\n\t\t\t\tM66.062,55.123l2.939-7.323l2.923,7.323H66.062z",
             })
           )
         );
@@ -854,7 +858,7 @@ var CLSTAMP = "6296065";
               version: "1.1",
               x: "0px",
               y: "0px",
-              viewBox: "-165 95 100 100"
+              viewBox: "-165 95 100 100",
             },
             e
           ),
@@ -863,7 +867,7 @@ var CLSTAMP = "6296065";
             null,
             o.createElement("polygon", {
               points:
-                "-74.9,117.2 -102.2,145 -74.9,172.8 -89.1,186.8 -116.2,159.3 -143.2,186.8 -157.5,172.8 -130.2,145 -157.5,117.2 -143.2,103.2 -116.2,130.7 -89.1,103.2"
+                "-74.9,117.2 -102.2,145 -74.9,172.8 -89.1,186.8 -116.2,159.3 -143.2,186.8 -157.5,172.8 -130.2,145 -157.5,117.2 -143.2,103.2 -116.2,130.7 -89.1,103.2",
             })
           )
         );
@@ -880,7 +884,7 @@ var CLSTAMP = "6296065";
             y: "0px",
             width: "256px",
             height: "256px",
-            viewBox: "0 0 256 256"
+            viewBox: "0 0 256 256",
           },
           o.createElement("line", {
             fill: "none",
@@ -890,7 +894,7 @@ var CLSTAMP = "6296065";
             x1: "212",
             y1: "212",
             x2: "44",
-            y2: "44"
+            y2: "44",
           }),
           o.createElement("line", {
             fill: "none",
@@ -900,7 +904,7 @@ var CLSTAMP = "6296065";
             x1: "44",
             y1: "212",
             x2: "212",
-            y2: "44"
+            y2: "44",
           })
         );
       }
@@ -916,7 +920,7 @@ var CLSTAMP = "6296065";
             y: "0px",
             width: "256px",
             height: "256px",
-            viewBox: "0 0 256 256"
+            viewBox: "0 0 256 256",
           },
           o.createElement("path", {
             fill: "none",
@@ -924,7 +928,7 @@ var CLSTAMP = "6296065";
             strokeLinecap: "round",
             strokeMiterlimit: "10",
             d:
-              "M167.768,62.647 l-0.012,123.052c0,24.729-19.334,44.856-43.096,44.866c-23.765-0.006-43.099-20.134-43.096-44.872L81.557,48.851 c0-15.345,14.483-27.827,29.83-27.83c15.342,0.003,27.827,12.488,27.833,27.833l-0.002,139.245 c0.003,6.376-8.546,12.925-14.925,12.925c0,0-13.929-0.166-13.929-12.928l0.003-124.839"
+              "M167.768,62.647 l-0.012,123.052c0,24.729-19.334,44.856-43.096,44.866c-23.765-0.006-43.099-20.134-43.096-44.872L81.557,48.851 c0-15.345,14.483-27.827,29.83-27.83c15.342,0.003,27.827,12.488,27.833,27.833l-0.002,139.245 c0.003,6.376-8.546,12.925-14.925,12.925c0,0-13.929-0.166-13.929-12.928l0.003-124.839",
           })
         );
       }
@@ -939,14 +943,14 @@ var CLSTAMP = "6296065";
             y: "0px",
             width: "256px",
             height: "255.999px",
-            viewBox: "0 0 256 255.999"
+            viewBox: "0 0 256 255.999",
           },
           o.createElement(
             "g",
             { className: "Speaker" },
             o.createElement("path", {
               d:
-                "M93.785,52.265c-0.946,0-2.357,0.63-3.304,1.577L40.284,98.022c-0.947,0.789-2.831,1.578-4.093,1.578H9.367 C8.104,99.6,7,100.706,7,101.967v52.069c0,1.264,1.104,2.367,2.367,2.367H36.19c1.262,0,3.146,0.632,4.093,1.578l50.197,44.181 c0.947,0.789,2.516,1.578,3.304,1.578s1.578-1.104,1.578-2.367V54.631C95.363,53.369,94.731,52.265,93.785,52.265z"
+                "M93.785,52.265c-0.946,0-2.357,0.63-3.304,1.577L40.284,98.022c-0.947,0.789-2.831,1.578-4.093,1.578H9.367 C8.104,99.6,7,100.706,7,101.967v52.069c0,1.264,1.104,2.367,2.367,2.367H36.19c1.262,0,3.146,0.632,4.093,1.578l50.197,44.181 c0.947,0.789,2.516,1.578,3.304,1.578s1.578-1.104,1.578-2.367V54.631C95.363,53.369,94.731,52.265,93.785,52.265z",
             })
           ),
           !e.muted &&
@@ -956,22 +960,22 @@ var CLSTAMP = "6296065";
               o.createElement("path", {
                 className: "SoundWavesHighest",
                 d:
-                  "M193.826,30.402c24.959,24.958,40.349,59.403,40.349,97.604c0,38.199-15.388,72.645-40.349,97.603l9.916,9.916 c28.067-28.067,44.263-64.673,44.263-107.521c0-42.847-16.196-79.455-44.263-107.521"
+                  "M193.826,30.402c24.959,24.958,40.349,59.403,40.349,97.604c0,38.199-15.388,72.645-40.349,97.603l9.916,9.916 c28.067-28.067,44.263-64.673,44.263-107.521c0-42.847-16.196-79.455-44.263-107.521",
               }),
               o.createElement("path", {
                 className: "SoundWavesHigh",
                 d:
-                  "M175.737,47.628l-8.924,8.924c18.271,18.27,29.536,43.484,29.536,71.448s-11.264,53.178-29.536,71.448l8.924,8.924 c20.546-20.546,33.234-49.008,33.234-80.374c0-31.366-12.688-59.829-33.234-80.374V47.628z"
+                  "M175.737,47.628l-8.924,8.924c18.271,18.27,29.536,43.484,29.536,71.448s-11.264,53.178-29.536,71.448l8.924,8.924 c20.546-20.546,33.234-49.008,33.234-80.374c0-31.366-12.688-59.829-33.234-80.374V47.628z",
               }),
               o.createElement("path", {
                 className: "SoundWavesMed",
                 d:
-                  "M148.913,74.454l-8.925,8.925c11.488,11.488,18.491,27.236,18.491,44.624c0,17.388-7.054,33.281-18.491,44.575l8.875,8.975 c13.811-13.635,22.239-32.753,22.239-53.55c0-20.797-8.432-39.793-22.189-53.55V74.454z"
+                  "M148.913,74.454l-8.925,8.925c11.488,11.488,18.491,27.236,18.491,44.624c0,17.388-7.054,33.281-18.491,44.575l8.875,8.975 c13.811-13.635,22.239-32.753,22.239-53.55c0-20.797-8.432-39.793-22.189-53.55V74.454z",
               }),
               o.createElement("path", {
                 className: "SoundWavesLow",
                 d:
-                  "M121.989,101.229l-8.778,9.073c4.641,4.516,7.397,10.706,7.397,17.702c0,6.995-2.755,13.186-7.397,17.702l8.778,9.073 c7.035-6.844,11.243-16.413,11.243-26.775C133.232,117.643,129.024,108.075,121.989,101.229z"
+                  "M121.989,101.229l-8.778,9.073c4.641,4.516,7.397,10.706,7.397,17.702c0,6.995-2.755,13.186-7.397,17.702l8.778,9.073 c7.035-6.844,11.243-16.413,11.243-26.775C133.232,117.643,129.024,108.075,121.989,101.229z",
               })
             ),
           o.createElement(
@@ -985,7 +989,7 @@ var CLSTAMP = "6296065";
               x1: "137",
               y1: "170.667",
               x2: "223.167",
-              y2: "84.5"
+              y2: "84.5",
             }),
             o.createElement("line", {
               fill: "none",
@@ -995,7 +999,7 @@ var CLSTAMP = "6296065";
               x1: "137",
               y1: "84.5",
               x2: "223.167",
-              y2: "170.667"
+              y2: "170.667",
             })
           )
         );
@@ -1006,7 +1010,7 @@ var CLSTAMP = "6296065";
           { width: "50px", height: "25px", viewBox: "0 0 50 25" },
           o.createElement("path", {
             d:
-              "M46 0H4C1.8 0 0 1.8 0 4v17c0 2.2 1.8 4 4 4h42c2.2 0 4-1.8 4-4V4c0-2.2-1.8-4-4-4zM21 18.916V5.084L32.805 12 21 18.916z"
+              "M46 0H4C1.8 0 0 1.8 0 4v17c0 2.2 1.8 4 4 4h42c2.2 0 4-1.8 4-4V4c0-2.2-1.8-4-4-4zM21 18.916V5.084L32.805 12 21 18.916z",
           })
         );
       }
@@ -1022,12 +1026,12 @@ var CLSTAMP = "6296065";
             y: "0px",
             width: "256px",
             height: "256px",
-            viewBox: "0 0 256 256"
+            viewBox: "0 0 256 256",
           },
           o.createElement("path", {
             className: "playTriangle",
             d:
-              "M65.321,33.521c-11.274-6.615-20.342-1.471-20.342,11.52V210.96c0,12.989,9.068,18.135,20.342,11.521l137.244-82.348 c11.274-6.618,11.274-17.646,0-24.509L65.321,33.521z"
+              "M65.321,33.521c-11.274-6.615-20.342-1.471-20.342,11.52V210.96c0,12.989,9.068,18.135,20.342,11.521l137.244-82.348 c11.274-6.618,11.274-17.646,0-24.509L65.321,33.521z",
           })
         );
       }
@@ -1043,15 +1047,15 @@ var CLSTAMP = "6296065";
             y: "0px",
             width: "256px",
             height: "256px",
-            viewBox: "0 0 256 256"
+            viewBox: "0 0 256 256",
           },
           o.createElement("path", {
             d:
-              "M44.979,219.364c0,3.3,2.7,6,6,6h49.753c3.3,0,6-2.7,6-6V36.5c0-3.3-2.7-6-6-6H50.979c-3.3,0-6,2.7-6,6V219.364z"
+              "M44.979,219.364c0,3.3,2.7,6,6,6h49.753c3.3,0,6-2.7,6-6V36.5c0-3.3-2.7-6-6-6H50.979c-3.3,0-6,2.7-6,6V219.364z",
           }),
           o.createElement("path", {
             d:
-              "M149.267,219.364c0,3.3,2.7,6,6,6h49.753c3.3,0,6-2.7,6-6V36.5c0-3.3-2.7-6-6-6h-49.753c-3.3,0-6,2.7-6,6V219.364z"
+              "M149.267,219.364c0,3.3,2.7,6,6,6h49.753c3.3,0,6-2.7,6-6V36.5c0-3.3-2.7-6-6-6h-49.753c-3.3,0-6,2.7-6,6V219.364z",
           })
         );
       }
@@ -1067,7 +1071,7 @@ var CLSTAMP = "6296065";
             y: "0px",
             width: "256px",
             height: "256px",
-            viewBox: "0 0 256 256"
+            viewBox: "0 0 256 256",
           },
           o.createElement("polyline", {
             fill: "none",
@@ -1076,7 +1080,7 @@ var CLSTAMP = "6296065";
             strokeLinecap: "round",
             strokeLinejoin: "round",
             strokeMiterlimit: "10",
-            points: "49.5,147.75 95,210.75 206.5,45.25 "
+            points: "49.5,147.75 95,210.75 206.5,45.25 ",
           })
         );
       }
@@ -1094,7 +1098,7 @@ var CLSTAMP = "6296065";
             y: "0px",
             width: "256px",
             height: "256px",
-            viewBox: "0 0 256 256"
+            viewBox: "0 0 256 256",
           },
           o.createElement(
             "defs",
@@ -1105,12 +1109,12 @@ var CLSTAMP = "6296065";
               o.createElement("stop", {
                 id: "stop0",
                 offset: "0%",
-                stopColor: t
+                stopColor: t,
               }),
               o.createElement("stop", {
                 id: "stop1",
                 offset: "100%",
-                stopColor: n
+                stopColor: n,
               })
             ),
             o.createElement(
@@ -1120,17 +1124,17 @@ var CLSTAMP = "6296065";
                 result: "offOut",
                 in: "SourceAlpha",
                 dx: "20",
-                dy: "20"
+                dy: "20",
               }),
               o.createElement("feGaussianBlur", {
                 result: "blurOut",
                 in: "offOut",
-                stdDeviation: "10"
+                stdDeviation: "10",
               }),
               o.createElement("feBlend", {
                 in: "SourceGraphic",
                 in2: "blurOut",
-                mode: "normal"
+                mode: "normal",
               })
             )
           ),
@@ -1143,7 +1147,7 @@ var CLSTAMP = "6296065";
             strokeMiterlimit: "10",
             d: "M206.5,45.25L95,210.75l-45.5-63",
             strokeDasharray: "365.19 365.19",
-            strokeDashoffset: "0.00"
+            strokeDashoffset: "0.00",
           }),
           o.createElement("path", {
             fill: "none",
@@ -1156,7 +1160,7 @@ var CLSTAMP = "6296065";
             strokeMiterlimit: "10",
             d: "M206.5,45.25L95,210.75l-45.5-63",
             strokeDasharray: "365.19 365.19",
-            strokeDashoffset: "0.00"
+            strokeDashoffset: "0.00",
           })
         );
       }
@@ -1172,12 +1176,12 @@ var CLSTAMP = "6296065";
             y: "0px",
             width: "256px",
             height: "256px",
-            viewBox: "0 0 256 256"
+            viewBox: "0 0 256 256",
           },
           o.createElement("path", {
             className: "topLock",
             d:
-              "M203.553,197.794c0,21.929-17.778,39.706-39.706,39.706H92.154c-21.929,0-39.706-17.777-39.706-39.706v-71.693 c0-21.928,17.778-39.706,39.706-39.706h71.692c21.928,0,39.706,17.778,39.706,39.706V197.794z M128.001,129.664 c-8.941,0-16.19,7.248-16.19,16.189c0,5.589,2.833,10.518,7.137,13.427c2.066,1.395,0.318,23.508,0.318,32.842 c0,2.292-0.078,3.65,8.734,3.65c8.676,0,8.75-1.221,8.75-3.654c0-9.348-1.708-31.469,0.368-32.886 c4.269-2.916,7.071-7.821,7.071-13.38C144.191,136.912,136.941,129.664,128.001,129.664z"
+              "M203.553,197.794c0,21.929-17.778,39.706-39.706,39.706H92.154c-21.929,0-39.706-17.777-39.706-39.706v-71.693 c0-21.928,17.778-39.706,39.706-39.706h71.692c21.928,0,39.706,17.778,39.706,39.706V197.794z M128.001,129.664 c-8.941,0-16.19,7.248-16.19,16.189c0,5.589,2.833,10.518,7.137,13.427c2.066,1.395,0.318,23.508,0.318,32.842 c0,2.292-0.078,3.65,8.734,3.65c8.676,0,8.75-1.221,8.75-3.654c0-9.348-1.708-31.469,0.368-32.886 c4.269-2.916,7.071-7.821,7.071-13.38C144.191,136.912,136.941,129.664,128.001,129.664z",
           }),
           o.createElement("path", {
             className: "baseLock",
@@ -1186,7 +1190,7 @@ var CLSTAMP = "6296065";
             strokeWidth: "22",
             strokeMiterlimit: "10",
             d:
-              "M84.813,172.74V73.688l0,0 c0-23.85,19.335-43.188,43.187-43.188l0,0c23.852,0,43.188,19.337,43.188,43.188l0,0v23.885"
+              "M84.813,172.74V73.688l0,0 c0-23.85,19.335-43.188,43.187-43.188l0,0c23.852,0,43.188,19.337,43.188,43.188l0,0v23.885",
           })
         );
       }
@@ -1205,7 +1209,7 @@ var CLSTAMP = "6296065";
               y: "0px",
               width: "256px",
               height: "256px",
-              viewBox: "0 0 256 256"
+              viewBox: "0 0 256 256",
             },
             o.createElement(
               "g",
@@ -1217,7 +1221,7 @@ var CLSTAMP = "6296065";
                 strokeWidth: "6",
                 strokeMiterlimit: "10",
                 d:
-                  "M27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895"
+                  "M27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895",
               }),
               o.createElement("path", {
                 className: a.a.roundOuter,
@@ -1225,7 +1229,7 @@ var CLSTAMP = "6296065";
                 stroke: "#ffffff",
                 strokeWidth: "6",
                 strokeMiterlimit: "10",
-                d: "M201.432,101.166"
+                d: "M201.432,101.166",
               }),
               o.createElement("path", {
                 className: a.a.roundOuter,
@@ -1233,7 +1237,7 @@ var CLSTAMP = "6296065";
                 stroke: "#ffffff",
                 strokeWidth: "6",
                 strokeMiterlimit: "10",
-                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754"
+                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754",
               })
             ),
             o.createElement(
@@ -1246,7 +1250,7 @@ var CLSTAMP = "6296065";
                 strokeWidth: "6",
                 strokeMiterlimit: "10",
                 d:
-                  "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
+                  "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               o.createElement("path", {
                 className: a.a.roundOuterOutline,
@@ -1256,7 +1260,7 @@ var CLSTAMP = "6296065";
                 strokeWidth: "6",
                 strokeMiterlimit: "10",
                 d:
-                  "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
+                  "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               o.createElement("path", {
                 className: a.a.roundThrobber01,
@@ -1266,7 +1270,7 @@ var CLSTAMP = "6296065";
                 strokeWidth: "6",
                 strokeMiterlimit: "10",
                 d:
-                  "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
+                  "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               o.createElement("path", {
                 className: a.a.roundThrobber02,
@@ -1276,7 +1280,7 @@ var CLSTAMP = "6296065";
                 strokeWidth: "6",
                 strokeMiterlimit: "10",
                 d:
-                  "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
+                  "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               o.createElement("path", {
                 className: a.a.roundThrobber03,
@@ -1286,7 +1290,7 @@ var CLSTAMP = "6296065";
                 strokeWidth: "6",
                 strokeMiterlimit: "10",
                 d:
-                  "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
+                  "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               o.createElement("path", {
                 className: a.a.roundThrobber04,
@@ -1296,7 +1300,7 @@ var CLSTAMP = "6296065";
                 strokeWidth: "6",
                 strokeMiterlimit: "10",
                 d:
-                  "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
+                  "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               o.createElement("path", {
                 className: a.a.roundThrobber05,
@@ -1306,7 +1310,7 @@ var CLSTAMP = "6296065";
                 strokeWidth: "6",
                 strokeMiterlimit: "10",
                 d:
-                  "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
+                  "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               o.createElement("path", {
                 className: a.a.roundThrobber06,
@@ -1316,7 +1320,7 @@ var CLSTAMP = "6296065";
                 strokeWidth: "6",
                 strokeMiterlimit: "10",
                 d:
-                  "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
+                  "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               o.createElement("path", {
                 className: a.a.roundThrobber07,
@@ -1326,7 +1330,7 @@ var CLSTAMP = "6296065";
                 strokeWidth: "6",
                 strokeMiterlimit: "10",
                 d:
-                  "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
+                  "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               o.createElement("path", {
                 className: a.a.roundThrobber08,
@@ -1336,7 +1340,7 @@ var CLSTAMP = "6296065";
                 strokeWidth: "6",
                 strokeMiterlimit: "10",
                 d:
-                  "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
+                  "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               o.createElement("path", {
                 className: a.a.roundThrobber09,
@@ -1346,7 +1350,7 @@ var CLSTAMP = "6296065";
                 strokeWidth: "6",
                 strokeMiterlimit: "10",
                 d:
-                  "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
+                  "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               o.createElement("path", {
                 className: a.a.roundThrobber10,
@@ -1356,7 +1360,7 @@ var CLSTAMP = "6296065";
                 strokeWidth: "6",
                 strokeMiterlimit: "10",
                 d:
-                  "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
+                  "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               o.createElement("path", {
                 className: a.a.roundThrobber11,
@@ -1366,7 +1370,7 @@ var CLSTAMP = "6296065";
                 strokeWidth: "6",
                 strokeMiterlimit: "10",
                 d:
-                  "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
+                  "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               o.createElement("path", {
                 className: a.a.roundThrobber12,
@@ -1376,7 +1380,7 @@ var CLSTAMP = "6296065";
                 strokeWidth: "6",
                 strokeMiterlimit: "10",
                 d:
-                  "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
+                  "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               o.createElement("path", {
                 className: a.a.roundThrobber13,
@@ -1386,7 +1390,7 @@ var CLSTAMP = "6296065";
                 strokeWidth: "6",
                 strokeMiterlimit: "10",
                 d:
-                  "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
+                  "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               o.createElement("path", {
                 className: a.a.roundThrobber14,
@@ -1396,7 +1400,7 @@ var CLSTAMP = "6296065";
                 strokeWidth: "6",
                 strokeMiterlimit: "10",
                 d:
-                  "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
+                  "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               o.createElement("path", {
                 className: a.a.roundThrobber15,
@@ -1406,7 +1410,7 @@ var CLSTAMP = "6296065";
                 strokeWidth: "6",
                 strokeMiterlimit: "10",
                 d:
-                  "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
+                  "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               })
             ),
             o.createElement(
@@ -1415,7 +1419,7 @@ var CLSTAMP = "6296065";
               o.createElement("path", {
                 fill: "#ffffff",
                 d:
-                  "M89.226,181.579L76.5,176.321c2.256,4.696,6.159,8.628,11.339,10.786 c11.197,4.668,24.11-0.647,28.779-11.854c2.259-5.425,2.274-11.405,0.033-16.841c-2.237-5.436-6.46-9.675-11.886-11.938 c-5.384-2.24-11.151-2.156-16.22-0.244l13.146,5.436c8.261,3.443,12.166,12.93,8.725,21.189 C106.976,181.115,97.486,185.022,89.226,181.579"
+                  "M89.226,181.579L76.5,176.321c2.256,4.696,6.159,8.628,11.339,10.786 c11.197,4.668,24.11-0.647,28.779-11.854c2.259-5.425,2.274-11.405,0.033-16.841c-2.237-5.436-6.46-9.675-11.886-11.938 c-5.384-2.24-11.151-2.156-16.22-0.244l13.146,5.436c8.261,3.443,12.166,12.93,8.725,21.189 C106.976,181.115,97.486,185.022,89.226,181.579",
               })
             ),
             o.createElement(
@@ -1428,7 +1432,7 @@ var CLSTAMP = "6296065";
                 strokeMiterlimit: "10",
                 cx: "161.731",
                 cy: "101.274",
-                r: "23.019"
+                r: "23.019",
               })
             )
           )
@@ -1446,11 +1450,11 @@ var CLSTAMP = "6296065";
             y: "0px",
             width: "256px",
             height: "256px",
-            viewBox: "0 0 256 256"
+            viewBox: "0 0 256 256",
           },
           o.createElement("path", {
             d:
-              "M107.785,33.965c-34.875,8.972-60.644,40.618-60.644,78.308v53.903c0,4.965-4.035,8.99-8.975,8.99 c-9.929,0-17.978,8.066-17.978,17.971c0,9.924,8.059,17.969,18.013,17.969h179.598c9.948,0,18.014-8.066,18.014-17.969 c0-9.926-8.087-17.971-17.979-17.971c-4.956,0-8.975-3.993-8.975-8.99v-53.903c0-37.676-25.763-69.333-60.644-78.308v-9.281 c0-11.193-9.052-20.219-20.215-20.219c-11.143,0-20.215,9.052-20.215,20.219V33.965L107.785,33.965z M96.554,220.09h62.891 c0,17.366-14.079,31.445-31.445,31.445C110.633,251.535,96.554,237.458,96.554,220.09z"
+              "M107.785,33.965c-34.875,8.972-60.644,40.618-60.644,78.308v53.903c0,4.965-4.035,8.99-8.975,8.99 c-9.929,0-17.978,8.066-17.978,17.971c0,9.924,8.059,17.969,18.013,17.969h179.598c9.948,0,18.014-8.066,18.014-17.969 c0-9.926-8.087-17.971-17.979-17.971c-4.956,0-8.975-3.993-8.975-8.99v-53.903c0-37.676-25.763-69.333-60.644-78.308v-9.281 c0-11.193-9.052-20.219-20.215-20.219c-11.143,0-20.215,9.052-20.215,20.219V33.965L107.785,33.965z M96.554,220.09h62.891 c0,17.366-14.079,31.445-31.445,31.445C110.633,251.535,96.554,237.458,96.554,220.09z",
           })
         );
       }
@@ -1467,7 +1471,7 @@ var CLSTAMP = "6296065";
             y: "0px",
             width: "256px",
             height: "256px",
-            viewBox: "0 0 256 256"
+            viewBox: "0 0 256 256",
           },
           o.createElement("polyline", {
             fill: "none",
@@ -1476,7 +1480,7 @@ var CLSTAMP = "6296065";
             strokeLinecap: "round",
             strokeLinejoin: "round",
             strokeMiterlimit: "10",
-            points: "128,247.688 128,8.313 181.061,61.674 "
+            points: "128,247.688 128,8.313 181.061,61.674 ",
           }),
           o.createElement("polyline", {
             fill: "none",
@@ -1485,7 +1489,7 @@ var CLSTAMP = "6296065";
             strokeLinecap: "round",
             strokeLinejoin: "round",
             strokeMiterlimit: "10",
-            points: "128,247.688 128,8.313 74.939,61.674 "
+            points: "128,247.688 128,8.313 74.939,61.674 ",
           })
         );
       }
@@ -1500,12 +1504,12 @@ var CLSTAMP = "6296065";
             y: "0px",
             width: "50px",
             height: "100px",
-            viewBox: "0 0 50 100"
+            viewBox: "0 0 50 100",
           },
           o.createElement("polygon", {
             fill: "#ffffff",
             points:
-              "0,0.093 0,25.702 24.323,50.026 0,74.349 0,99.955 49.929,50.026 "
+              "0,0.093 0,25.702 24.323,50.026 0,74.349 0,99.955 49.929,50.026 ",
           })
         );
       }
@@ -1522,7 +1526,7 @@ var CLSTAMP = "6296065";
             y: "0px",
             width: "256px",
             height: "256px",
-            viewBox: "0 0 256 256"
+            viewBox: "0 0 256 256",
           },
           o.createElement("polyline", {
             className: "Arrow1",
@@ -1531,7 +1535,7 @@ var CLSTAMP = "6296065";
             strokeWidth: "23",
             strokeLinecap: "round",
             strokeMiterlimit: "10",
-            points: "135.65,21.667 30.081,127.235 137.18,234.333 "
+            points: "135.65,21.667 30.081,127.235 137.18,234.333 ",
           }),
           !e.singlearrow &&
             o.createElement("polyline", {
@@ -1541,7 +1545,7 @@ var CLSTAMP = "6296065";
               strokeWidth: "23",
               strokeLinecap: "round",
               strokeMiterlimit: "10",
-              points: "224.389,21.667 118.821,127.235 225.92,234.333 "
+              points: "224.389,21.667 118.821,127.235 225.92,234.333 ",
             })
         );
       }
@@ -1557,7 +1561,7 @@ var CLSTAMP = "6296065";
             y: "0px",
             width: "256px",
             height: "256px",
-            viewBox: "0 0 256 256"
+            viewBox: "0 0 256 256",
           },
           o.createElement("rect", {
             x: "24",
@@ -1567,7 +1571,7 @@ var CLSTAMP = "6296065";
             strokeWidth: "18",
             strokeMiterlimit: "10",
             width: "208",
-            height: "171.667"
+            height: "171.667",
           }),
           o.createElement("line", {
             fill: "none",
@@ -1577,7 +1581,7 @@ var CLSTAMP = "6296065";
             x1: "24",
             y1: "54.01",
             x2: "232",
-            y2: "54.01"
+            y2: "54.01",
           })
         );
       }
@@ -1593,7 +1597,7 @@ var CLSTAMP = "6296065";
             y: "0px",
             width: "256px",
             height: "256px",
-            viewBox: "0 0 256 256"
+            viewBox: "0 0 256 256",
           },
           o.createElement("line", {
             fill: "none",
@@ -1603,7 +1607,7 @@ var CLSTAMP = "6296065";
             x1: "24",
             y1: "209.01",
             x2: "232",
-            y2: "209.01"
+            y2: "209.01",
           })
         );
       }
@@ -1619,14 +1623,14 @@ var CLSTAMP = "6296065";
             y: "0px",
             width: "256px",
             height: "256px",
-            viewBox: "0 0 256 256"
+            viewBox: "0 0 256 256",
           },
           o.createElement("polyline", {
             fill: "none",
             stroke: "rgb(120, 138, 146)",
             strokeWidth: "12",
             strokeMiterlimit: "10",
-            points: "83,90.861 83,42.167 232,42.167 232,165.14 173,165.14 "
+            points: "83,90.861 83,42.167 232,42.167 232,165.14 173,165.14 ",
           }),
           o.createElement("rect", {
             x: "24",
@@ -1636,7 +1640,7 @@ var CLSTAMP = "6296065";
             strokeWidth: "18",
             strokeMiterlimit: "10",
             width: "149",
-            height: "122.973"
+            height: "122.973",
           })
         );
       }
@@ -1653,11 +1657,11 @@ var CLSTAMP = "6296065";
             y: "0px",
             width: "256px",
             height: "256px",
-            viewBox: "0 0 256 256"
+            viewBox: "0 0 256 256",
           },
           o.createElement("polygon", {
             points: "13.913,141 128,59 242.087,141 ",
-            fill: "#ffffff"
+            fill: "#ffffff",
           })
         );
       }
@@ -1669,35 +1673,36 @@ var CLSTAMP = "6296065";
             id: "Layer_1",
             xmlns: "http://www.w3.org/2000/svg",
             style: {
-              transform: "scaleX(" + (e.bFlipHorizontal ? -1 : 1) + ")"
+              transform: "scaleX(" + (e.bFlipHorizontal ? -1 : 1) + ")",
             },
             className: "SVGIcon_Button SVGIcon_MediaControls",
             x: "0px",
             y: "0px",
             width: "256px",
             height: "256px",
-            viewBox: "0 0 256 256"
+            viewBox: "0 0 256 256",
           },
           o.createElement("path", {
             className: "Arrow",
             d:
-              "M77.003,54.763h32.784c3.794,0,9.113,2.181,11.814,4.848l63.604,62.773c2.703,2.667,2.727,7.054,0.05,9.748 l-63.705,64.206c-2.674,2.693-7.968,4.898-11.763,4.898H77.003"
+              "M77.003,54.763h32.784c3.794,0,9.113,2.181,11.814,4.848l63.604,62.773c2.703,2.667,2.727,7.054,0.05,9.748 l-63.705,64.206c-2.674,2.693-7.968,4.898-11.763,4.898H77.003",
           }),
           o.createElement("polyline", {
             className: "preArrowBox",
             opacity: e.bHidePreArrow ? "0" : "1",
-            points: "6.833,54.763 46.71,54.763 46.71,201.236 6.833,201.236 \t"
+            points: "6.833,54.763 46.71,54.763 46.71,201.236 6.833,201.236 \t",
           }),
           o.createElement("polyline", {
             className: "jumpAheadBox",
             opacity: e.bShowJumpAheadBox ? "1" : "0",
-            points: "6.833,54.764 86.386,54.764 86.386,201.236 6.833,201.236 \t"
+            points:
+              "6.833,54.764 86.386,54.764 86.386,201.236 6.833,201.236 \t",
           }),
           o.createElement("polyline", {
             className: "postArrowBox",
             opacity: e.bHidePostArrow ? "0" : "1",
             points:
-              "209.29,54.763 249.167,54.763 249.167,201.236 209.29,201.236 \t"
+              "209.29,54.763 249.167,54.763 249.167,201.236 209.29,201.236 \t",
           })
         );
       }
@@ -1716,22 +1721,22 @@ var CLSTAMP = "6296065";
             className: t,
             x: "0px",
             y: "0px",
-            viewBox: "0 0 256 256"
+            viewBox: "0 0 256 256",
           },
           o.createElement("path", {
             fill: "#ffffff",
             d:
-              "M127.374,5.355c-64.404,0-117.167,49.661-122.18,112.77l65.712,27.171 c5.567-3.808,12.293-6.032,19.53-6.032c0.649,0,1.294,0.017,1.934,0.051l29.226-42.354c0-0.202-0.005-0.399-0.005-0.598 c0-25.496,20.74-46.241,46.237-46.241c25.498,0,46.238,20.745,46.238,46.241c0,25.494-20.74,46.242-46.238,46.242 c-0.352,0-0.698-0.011-1.047-0.021l-41.68,29.741c0.022,0.546,0.041,1.095,0.041,1.644c0,19.141-15.569,34.707-34.706,34.707 c-16.796,0-30.843-11.99-34.026-27.869l-46.993-19.43c14.55,51.464,61.831,89.189,117.957,89.189 c67.713,0,122.604-54.893,122.604-122.604C249.979,60.244,195.086,5.355,127.374,5.355"
+              "M127.374,5.355c-64.404,0-117.167,49.661-122.18,112.77l65.712,27.171 c5.567-3.808,12.293-6.032,19.53-6.032c0.649,0,1.294,0.017,1.934,0.051l29.226-42.354c0-0.202-0.005-0.399-0.005-0.598 c0-25.496,20.74-46.241,46.237-46.241c25.498,0,46.238,20.745,46.238,46.241c0,25.494-20.74,46.242-46.238,46.242 c-0.352,0-0.698-0.011-1.047-0.021l-41.68,29.741c0.022,0.546,0.041,1.095,0.041,1.644c0,19.141-15.569,34.707-34.706,34.707 c-16.796,0-30.843-11.99-34.026-27.869l-46.993-19.43c14.55,51.464,61.831,89.189,117.957,89.189 c67.713,0,122.604-54.893,122.604-122.604C249.979,60.244,195.086,5.355,127.374,5.355",
           }),
           o.createElement("path", {
             fill: "#ffffff",
             d:
-              "M82.026,191.387l-15.061-6.22c2.67,5.56,7.285,10.208,13.418,12.767 c13.25,5.521,28.531-0.771,34.054-14.027c2.674-6.416,2.694-13.5,0.04-19.93c-2.646-6.431-7.64-11.451-14.063-14.129 c-6.371-2.647-13.196-2.552-19.198-0.291l15.561,6.437c9.776,4.073,14.396,15.299,10.324,25.071 C103.031,190.841,91.801,195.464,82.026,191.387"
+              "M82.026,191.387l-15.061-6.22c2.67,5.56,7.285,10.208,13.418,12.767 c13.25,5.521,28.531-0.771,34.054-14.027c2.674-6.416,2.694-13.5,0.04-19.93c-2.646-6.431-7.64-11.451-14.063-14.129 c-6.371-2.647-13.196-2.552-19.198-0.291l15.561,6.437c9.776,4.073,14.396,15.299,10.324,25.071 C103.031,190.841,91.801,195.464,82.026,191.387",
           }),
           o.createElement("path", {
             fill: "#ffffff",
             d:
-              "M198.639,96.359c0-16.987-13.82-30.809-30.809-30.809c-16.987,0-30.813,13.821-30.813,30.809 c0,16.988,13.824,30.806,30.813,30.806S198.639,113.347,198.639,96.359 M144.736,96.306c0-12.783,10.363-23.142,23.145-23.142 c12.783,0,23.145,10.359,23.145,23.142c0,12.783-10.36,23.142-23.145,23.142C155.1,119.447,144.736,109.089,144.736,96.306"
+              "M198.639,96.359c0-16.987-13.82-30.809-30.809-30.809c-16.987,0-30.813,13.821-30.813,30.809 c0,16.988,13.824,30.806,30.813,30.806S198.639,113.347,198.639,96.359 M144.736,96.306c0-12.783,10.363-23.142,23.145-23.142 c12.783,0,23.145,10.359,23.145,23.142c0,12.783-10.36,23.142-23.145,23.142C155.1,119.447,144.736,109.089,144.736,96.306",
           })
         );
       }
@@ -1747,19 +1752,19 @@ var CLSTAMP = "6296065";
             y: "0px",
             width: "256px",
             height: "256px",
-            viewBox: "0 0 256 256"
+            viewBox: "0 0 256 256",
           },
           o.createElement("path", {
             className: "frontGuy",
             fill: "#666666",
             d:
-              "M181.732,53.151c-17.255,0-31.321,13.316-31.321,32.634v25.132 c0,18.005,24.006,21.006,24.382,21.381c-10.691,2.813-30.947,8.252-40.888,15.566c-8.252,6.003-11.44,18.005-13.128,22.882 c-0.75,2.063-1.688,5.064-1.688,7.127c0,0,0,9.94,0,19.881s12.941,16.505,18.005,16.505h89.65c4.877,0,18.006-5.627,18.006-16.505 s0-19.881,0-19.881c0-2.251-0.938-5.627-1.688-7.689c-4.313-10.878-4.688-16.316-13.315-22.319 c-9.941-6.939-30.009-12.19-40.512-15.004c0.374-0.563,24.193-4.127,24.193-22.131V85.785 C213.053,66.467,198.986,53.151,181.732,53.151L181.732,53.151z"
+              "M181.732,53.151c-17.255,0-31.321,13.316-31.321,32.634v25.132 c0,18.005,24.006,21.006,24.382,21.381c-10.691,2.813-30.947,8.252-40.888,15.566c-8.252,6.003-11.44,18.005-13.128,22.882 c-0.75,2.063-1.688,5.064-1.688,7.127c0,0,0,9.94,0,19.881s12.941,16.505,18.005,16.505h89.65c4.877,0,18.006-5.627,18.006-16.505 s0-19.881,0-19.881c0-2.251-0.938-5.627-1.688-7.689c-4.313-10.878-4.688-16.316-13.315-22.319 c-9.941-6.939-30.009-12.19-40.512-15.004c0.374-0.563,24.193-4.127,24.193-22.131V85.785 C213.053,66.467,198.986,53.151,181.732,53.151L181.732,53.151z",
           }),
           o.createElement("path", {
             className: "backGuy",
             fill: "rgb(144, 153, 161)",
             d:
-              "M84.204,34.396c-20.068,0-36.385,15.38-36.385,38.074v29.258c0,20.818,27.945,24.382,28.32,24.944 c-12.378,3.189-36.01,9.565-47.638,18.006c-9.753,7.127-13.504,21.006-15.379,26.632c-0.75,2.251-1.876,6.002-1.876,8.253  c0,0,0,11.44,0,23.257c0,11.815,15.004,19.13,20.819,19.13h104.279c5.814,0,20.818-6.564,20.818-19.13c0-12.566,0-23.257,0-23.257 c0-2.438-1.125-6.564-2.063-8.815c-5.063-12.566-5.438-18.942-15.566-26.069c-11.628-8.065-34.885-14.067-47.076-17.443 c0.375-0.563,28.133-4.876,28.133-25.695V72.469C120.59,49.775,104.272,34.396,84.204,34.396L84.204,34.396z"
+              "M84.204,34.396c-20.068,0-36.385,15.38-36.385,38.074v29.258c0,20.818,27.945,24.382,28.32,24.944 c-12.378,3.189-36.01,9.565-47.638,18.006c-9.753,7.127-13.504,21.006-15.379,26.632c-0.75,2.251-1.876,6.002-1.876,8.253  c0,0,0,11.44,0,23.257c0,11.815,15.004,19.13,20.819,19.13h104.279c5.814,0,20.818-6.564,20.818-19.13c0-12.566,0-23.257,0-23.257 c0-2.438-1.125-6.564-2.063-8.815c-5.063-12.566-5.438-18.942-15.566-26.069c-11.628-8.065-34.885-14.067-47.076-17.443 c0.375-0.563,28.133-4.876,28.133-25.695V72.469C120.59,49.775,104.272,34.396,84.204,34.396L84.204,34.396z",
           })
         );
       }
@@ -1773,14 +1778,14 @@ var CLSTAMP = "6296065";
             xmlns: "http://www.w3.org/2000/svg",
             x: "0px",
             y: "0px",
-            viewBox: "0 0 64 64"
+            viewBox: "0 0 64 64",
           },
           o.createElement(
             "g",
             null,
             o.createElement("path", {
               d:
-                "M33,5C18.7,5,7.1,16.6,7.1,30.9c0,5.2,1.5,10.1,4.2,14.1c-0.6,3.7-4.5,10.5-6.2,13.5c-1.3,2.2,11.4-3.8,16.3-4.5c3.5,1.8,7.5,2.8,11.7,2.8c14.3,0,25.9-11.6,25.9-25.9S47.3,5,33,5z"
+                "M33,5C18.7,5,7.1,16.6,7.1,30.9c0,5.2,1.5,10.1,4.2,14.1c-0.6,3.7-4.5,10.5-6.2,13.5c-1.3,2.2,11.4-3.8,16.3-4.5c3.5,1.8,7.5,2.8,11.7,2.8c14.3,0,25.9-11.6,25.9-25.9S47.3,5,33,5z",
             })
           )
         );
@@ -1794,14 +1799,14 @@ var CLSTAMP = "6296065";
             xmlns: "http://www.w3.org/2000/svg",
             x: "0px",
             y: "0px",
-            viewBox: "0 0 64 64"
+            viewBox: "0 0 64 64",
           },
           o.createElement(
             "g",
             null,
             o.createElement("path", {
               d:
-                "M40.6,32.7l15.1-15.1c2.6-2.6,2.6-6.7,0-9.3c-2.6-2.6-6.7-2.6-9.3,0L31.3,23.4L16.2,8.3c-2.6-2.6-6.7-2.6-9.3,0c-2.6,2.6-2.6,6.7,0,9.3L22,32.7L6.9,47.8c-2.6,2.6-2.6,6.7,0,9.3c1.3,1.3,3,1.9,4.7,1.9s3.4-0.6,4.7-1.9L31.3,42l15.1,15.1c1.3,1.3,3,1.9,4.7,1.9s3.4-0.6,4.7-1.9c2.6-2.6,2.6-6.7,0-9.3L40.6,32.7z"
+                "M40.6,32.7l15.1-15.1c2.6-2.6,2.6-6.7,0-9.3c-2.6-2.6-6.7-2.6-9.3,0L31.3,23.4L16.2,8.3c-2.6-2.6-6.7-2.6-9.3,0c-2.6,2.6-2.6,6.7,0,9.3L22,32.7L6.9,47.8c-2.6,2.6-2.6,6.7,0,9.3c1.3,1.3,3,1.9,4.7,1.9s3.4-0.6,4.7-1.9L31.3,42l15.1,15.1c1.3,1.3,3,1.9,4.7,1.9s3.4-0.6,4.7-1.9c2.6-2.6,2.6-6.7,0-9.3L40.6,32.7z",
             })
           )
         );
@@ -1817,20 +1822,20 @@ var CLSTAMP = "6296065";
             y: "0px",
             width: "256px",
             height: "256px",
-            viewBox: "0 0 256 256"
+            viewBox: "0 0 256 256",
           },
           o.createElement(
             "g",
             { className: "leftarrow", opacity: "0" },
             o.createElement("polygon", {
-              points: "127.817,4.403 4,128 127.817,251.598"
+              points: "127.817,4.403 4,128 127.817,251.598",
             })
           ),
           o.createElement(
             "g",
             { className: "rightarrow", opacity: "0" },
             o.createElement("polygon", {
-              points: "127.816,4.403 251.633,128 127.816,251.598"
+              points: "127.816,4.403 251.633,128 127.816,251.598",
             })
           ),
           o.createElement(
@@ -1838,7 +1843,7 @@ var CLSTAMP = "6296065";
             { className: "grabber" },
             o.createElement("polygon", {
               points:
-                "145.692,22.132 145.692,234.361 127.817,251.598 110.307,234.361 110.307,22.132 127.817,4.403"
+                "145.692,22.132 145.692,234.361 127.817,251.598 110.307,234.361 110.307,22.132 127.817,4.403",
             })
           )
         );
@@ -1855,19 +1860,19 @@ var CLSTAMP = "6296065";
             y: "0px",
             width: "256px",
             height: "256px",
-            viewBox: "0 0 256 256"
+            viewBox: "0 0 256 256",
           },
           o.createElement("polygon", {
             className: "pointer",
             points:
-              "128,154.979 46.374,230.548 46.374,253.333 209.626,253.333 209.626,230.548 \t"
+              "128,154.979 46.374,230.548 46.374,253.333 209.626,253.333 209.626,230.548 \t",
           }),
           o.createElement("rect", {
             className: "line",
             x: "116.271",
             y: "3.168",
             width: "23.459",
-            height: "137.332"
+            height: "137.332",
           })
         );
       }
@@ -1883,12 +1888,12 @@ var CLSTAMP = "6296065";
             y: "0px",
             width: "256px",
             height: "256px",
-            viewBox: "0 0 256 256"
+            viewBox: "0 0 256 256",
           },
           o.createElement("path", {
             fill: "#ffffff",
             d:
-              "M213.771,68.659c-4.108-7.066-46.007-7.231-49.293-7.231H128H91.522c-3.286,0-45.186,0.165-49.293,7.231 c-19.555,29.248-27.385,100.263-27.276,104.01c0.238,8.294,2.11,24.583,16.595,35.162c9.201,6.72,22.183,8.709,29.083,3.614 c4.989-3.682,11.995-19.224,19.061-32.204c7.064-12.981,9.202-11.174,12.98-12.159c3.78-0.986,36.066-0.74,36.066-0.74 s30.809-0.247,34.588,0.74c3.777,0.985,5.915-0.822,12.98,12.159c7.064,12.98,14.07,28.522,19.061,32.204 c6.9,5.095,19.882,3.106,29.083-3.614c14.485-10.58,16.356-26.868,16.595-35.162C241.154,168.922,233.325,97.906,213.771,68.659z M67.251,128.14c-14.974,0-27.112-12.137-27.112-27.111c0-14.975,12.137-27.112,27.112-27.112 c14.973,0,27.111,12.137,27.111,27.112C94.362,116.003,82.224,128.14,67.251,128.14z M188.749,128.14 c-14.974,0-27.111-12.137-27.111-27.111c0-14.975,12.138-27.112,27.111-27.112c14.973,0,27.111,12.137,27.111,27.112 C215.86,116.003,203.722,128.14,188.749,128.14z"
+              "M213.771,68.659c-4.108-7.066-46.007-7.231-49.293-7.231H128H91.522c-3.286,0-45.186,0.165-49.293,7.231 c-19.555,29.248-27.385,100.263-27.276,104.01c0.238,8.294,2.11,24.583,16.595,35.162c9.201,6.72,22.183,8.709,29.083,3.614 c4.989-3.682,11.995-19.224,19.061-32.204c7.064-12.981,9.202-11.174,12.98-12.159c3.78-0.986,36.066-0.74,36.066-0.74 s30.809-0.247,34.588,0.74c3.777,0.985,5.915-0.822,12.98,12.159c7.064,12.98,14.07,28.522,19.061,32.204 c6.9,5.095,19.882,3.106,29.083-3.614c14.485-10.58,16.356-26.868,16.595-35.162C241.154,168.922,233.325,97.906,213.771,68.659z M67.251,128.14c-14.974,0-27.112-12.137-27.112-27.111c0-14.975,12.137-27.112,27.112-27.112 c14.973,0,27.111,12.137,27.111,27.112C94.362,116.003,82.224,128.14,67.251,128.14z M188.749,128.14 c-14.974,0-27.111-12.137-27.111-27.111c0-14.975,12.138-27.112,27.111-27.112c14.973,0,27.111,12.137,27.111,27.112 C215.86,116.003,203.722,128.14,188.749,128.14z",
           })
         );
       }
@@ -1904,11 +1909,11 @@ var CLSTAMP = "6296065";
             y: "0px",
             width: "256px",
             height: "256px",
-            viewBox: "0 0 256 256"
+            viewBox: "0 0 256 256",
           },
           o.createElement("path", {
             d:
-              "M165.693,45.186H91.368c-7.963,0-14.41,6.447-14.41,14.41V210.9c0,7.964,6.447,14.41,14.41,14.41h74.134 c7.965,0,14.41-6.447,14.41-14.41V59.596C180.102,51.633,173.657,45.186,165.693,45.186z M113.172,57.509h30.717 c1.707,0,3.223,1.327,3.223,3.224c0,1.896-1.328,3.223-3.223,3.223h-30.717c-1.707,0-3.223-1.328-3.223-3.223 C109.949,58.837,111.465,57.509,113.172,57.509z M128.529,213.554c-4.551,0-8.152-3.603-8.152-8.153c0-4.55,3.604-8.152,8.152-8.152 s8.151,3.603,8.151,8.152C136.682,209.761,133.081,213.554,128.529,213.554z M169.105,186.819h-81.15V74.384h81.15V186.819 L169.105,186.819z"
+              "M165.693,45.186H91.368c-7.963,0-14.41,6.447-14.41,14.41V210.9c0,7.964,6.447,14.41,14.41,14.41h74.134 c7.965,0,14.41-6.447,14.41-14.41V59.596C180.102,51.633,173.657,45.186,165.693,45.186z M113.172,57.509h30.717 c1.707,0,3.223,1.327,3.223,3.224c0,1.896-1.328,3.223-3.223,3.223h-30.717c-1.707,0-3.223-1.328-3.223-3.223 C109.949,58.837,111.465,57.509,113.172,57.509z M128.529,213.554c-4.551,0-8.152-3.603-8.152-8.153c0-4.55,3.604-8.152,8.152-8.152 s8.151,3.603,8.151,8.152C136.682,209.761,133.081,213.554,128.529,213.554z M169.105,186.819h-81.15V74.384h81.15V186.819 L169.105,186.819z",
           })
         );
       }
@@ -1924,15 +1929,15 @@ var CLSTAMP = "6296065";
             y: "0px",
             width: "256px",
             height: "256px",
-            viewBox: "0 0 256 256"
+            viewBox: "0 0 256 256",
           },
           o.createElement("path", {
             d:
-              "M224.389,62.411H31.613c-10.147,0-18.36,8.214-18.36,18.36v94.453c0,10.147,8.215,18.359,18.36,18.359h192.775 c10.146,0.241,18.358-7.968,18.358-18.116V80.771C242.747,70.625,234.534,62.411,224.389,62.411z M92.317,175.026H71.646 L35.472,79.832h21.895l25.022,72.484l24.343-72.484h21.895L92.317,175.026z M195.264,175.026l-19.175-32.095h-2.176h-14.279 v32.095h-19.991V79.832h35.63c13.056,0,22.664,2.607,28.831,7.819c6.164,5.215,9.247,12.49,9.247,21.827 c0,7.343-1.61,13.463-4.828,18.359c-3.219,4.896-7.729,8.614-13.531,11.151l22.575,36.038H195.264z"
+              "M224.389,62.411H31.613c-10.147,0-18.36,8.214-18.36,18.36v94.453c0,10.147,8.215,18.359,18.36,18.359h192.775 c10.146,0.241,18.358-7.968,18.358-18.116V80.771C242.747,70.625,234.534,62.411,224.389,62.411z M92.317,175.026H71.646 L35.472,79.832h21.895l25.022,72.484l24.343-72.484h21.895L92.317,175.026z M195.264,175.026l-19.175-32.095h-2.176h-14.279 v32.095h-19.991V79.832h35.63c13.056,0,22.664,2.607,28.831,7.819c6.164,5.215,9.247,12.49,9.247,21.827 c0,7.343-1.61,13.463-4.828,18.359c-3.219,4.896-7.729,8.614-13.531,11.151l22.575,36.038H195.264z",
           }),
           o.createElement("path", {
             d:
-              "M187.784,100.298c-2.812-2.312-7.391-3.468-13.735-3.468h-14.415v28.966h15.639c5.257,0,9.36-1.336,12.308-4.012 c2.945-2.673,4.42-6.368,4.42-11.083C192,106.078,190.593,102.61,187.784,100.298z"
+              "M187.784,100.298c-2.812-2.312-7.391-3.468-13.735-3.468h-14.415v28.966h15.639c5.257,0,9.36-1.336,12.308-4.012 c2.945-2.673,4.42-6.368,4.42-11.083C192,106.078,190.593,102.61,187.784,100.298z",
           })
         );
       }
@@ -1948,7 +1953,7 @@ var CLSTAMP = "6296065";
             y: "0px",
             width: "128px",
             height: "255px",
-            viewBox: "0 0 128 255"
+            viewBox: "0 0 128 255",
           },
           o.createElement("rect", {
             className: "screen",
@@ -1956,33 +1961,33 @@ var CLSTAMP = "6296065";
             y: "5.518",
             fill: "#292D33",
             width: "112.144",
-            height: "234.357"
+            height: "234.357",
           }),
           o.createElement("path", {
             className: "frame",
             fill: "#3C414B",
             d:
-              "M40.334,15.72h47.237c3.957,0,7.164-3.259,7.164-7.28c0-1.113,0.889-2.017,1.984-2.017h9.746 c7.417,0,13.432,6.108,13.432,13.646v206.156c0,7.538-6.015,13.647-13.431,13.647H21.459c-7.417,0-13.429-6.109-13.429-13.647 V20.071c0-7.536,6.013-13.646,13.429-13.646h9.728c1.096,0,1.983,0.903,1.983,2.017C33.17,12.461,36.377,15.72,40.334,15.72 M107.057,0.001H20.87c-9.922,0-17.965,8.174-17.965,18.256v217.505c0,10.082,8.043,18.256,17.965,18.256h86.188 c9.923,0,17.966-8.174,17.966-18.256V18.257C125.022,8.175,116.979,0.001,107.057,0.001"
+              "M40.334,15.72h47.237c3.957,0,7.164-3.259,7.164-7.28c0-1.113,0.889-2.017,1.984-2.017h9.746 c7.417,0,13.432,6.108,13.432,13.646v206.156c0,7.538-6.015,13.647-13.431,13.647H21.459c-7.417,0-13.429-6.109-13.429-13.647 V20.071c0-7.536,6.013-13.646,13.429-13.646h9.728c1.096,0,1.983,0.903,1.983,2.017C33.17,12.461,36.377,15.72,40.334,15.72 M107.057,0.001H20.87c-9.922,0-17.965,8.174-17.965,18.256v217.505c0,10.082,8.043,18.256,17.965,18.256h86.188 c9.923,0,17.966-8.174,17.966-18.256V18.257C125.022,8.175,116.979,0.001,107.057,0.001",
           }),
           o.createElement("path", {
             fill: "#3C414B",
             d:
-              "M0.826,33.349C0.369,33.349,0,33.725,0,34.189v7.616c0,0.464,0.37,0.84,0.826,0.84s0.827-0.376,0.827-0.84 v-7.617C1.653,33.725,1.283,33.349,0.826,33.349"
+              "M0.826,33.349C0.369,33.349,0,33.725,0,34.189v7.616c0,0.464,0.37,0.84,0.826,0.84s0.827-0.376,0.827-0.84 v-7.617C1.653,33.725,1.283,33.349,0.826,33.349",
           }),
           o.createElement("path", {
             fill: "#3C414B",
             d:
-              "M0.826,51.56C0.369,51.56,0,51.936,0,52.4v16.8c0,0.465,0.37,0.841,0.826,0.841s0.827-0.376,0.827-0.841 V52.4C1.653,51.936,1.283,51.56,0.826,51.56"
+              "M0.826,51.56C0.369,51.56,0,51.936,0,52.4v16.8c0,0.465,0.37,0.841,0.826,0.841s0.827-0.376,0.827-0.841 V52.4C1.653,51.936,1.283,51.56,0.826,51.56",
           }),
           o.createElement("path", {
             fill: "#3C414B",
             d:
-              "M0.826,75.304C0.369,75.304,0,75.68,0,76.144v15.904c0,0.464,0.37,0.84,0.826,0.84s0.827-0.376,0.827-0.84 V76.144C1.653,75.68,1.283,75.304,0.826,75.304"
+              "M0.826,75.304C0.369,75.304,0,75.68,0,76.144v15.904c0,0.464,0.37,0.84,0.826,0.84s0.827-0.376,0.827-0.84 V76.144C1.653,75.68,1.283,75.304,0.826,75.304",
           }),
           o.createElement("path", {
             fill: "#3C414B",
             d:
-              "M127.617,58.056c-0.457,0-0.827,0.376-0.827,0.84v27.328c0,0.464,0.37,0.84,0.827,0.84 c0.456,0,0.826-0.376,0.826-0.84V58.896C128.443,58.432,128.073,58.056,127.617,58.056"
+              "M127.617,58.056c-0.457,0-0.827,0.376-0.827,0.84v27.328c0,0.464,0.37,0.84,0.827,0.84 c0.456,0,0.826-0.376,0.826-0.84V58.896C128.443,58.432,128.073,58.056,127.617,58.056",
           })
         );
       }
@@ -1998,24 +2003,24 @@ var CLSTAMP = "6296065";
             y: "0px",
             width: "256px",
             height: "256px",
-            viewBox: "0 0 256 256"
+            viewBox: "0 0 256 256",
           },
           o.createElement("polygon", {
             fill: "#3C414B",
-            points: "3.167,48.809 127.22,128 252.833,48.809 "
+            points: "3.167,48.809 127.22,128 252.833,48.809 ",
           }),
           o.createElement("polygon", {
             fill: "#3C414B",
-            points: "252.833,203.68 252.833,55.439 185.151,99.131 "
+            points: "252.833,203.68 252.833,55.439 185.151,99.131 ",
           }),
           o.createElement("polygon", {
             fill: "#3C414B",
             points:
-              "247.958,207.191 180.47,101.472 128.001,134.24 75.142,101.472 7.849,207.191 "
+              "247.958,207.191 180.47,101.472 128.001,134.24 75.142,101.472 7.849,207.191 ",
           }),
           o.createElement("polygon", {
             fill: "#3C414B",
-            points: "3.167,203.682 3.167,55.441 70.851,99.132 "
+            points: "3.167,203.682 3.167,55.441 70.851,99.132 ",
           })
         );
       }
@@ -2031,11 +2036,11 @@ var CLSTAMP = "6296065";
             y: "0px",
             width: "256px",
             height: "256px",
-            viewBox: "0 0 256 256"
+            viewBox: "0 0 256 256",
           },
           o.createElement("path", {
             d:
-              "M250.151,128.021c0,67.418-54.604,122.022-122.022,122.022S6.107,195.439,6.107,128.021C6.107,60.604,60.712,6,128.129,6 S250.151,60.604,250.151,128.021z M105.799,192.389c54.117,0,83.707-44.842,83.707-83.707c0-1.282,0-2.563-0.062-3.783 c5.736-4.148,10.739-9.335,14.705-15.252c-5.247,2.318-10.922,3.905-16.901,4.637c6.103-3.661,10.738-9.396,12.936-16.29 c-5.675,3.355-11.959,5.796-18.67,7.138c-5.369-5.734-12.995-9.273-21.477-9.273c-16.228,0-29.406,13.179-29.406,29.407 c0,2.318,0.243,4.576,0.793,6.711c-24.466-1.22-46.125-12.934-60.646-30.75c-2.501,4.332-3.965,9.396-3.965,14.765 c0,10.189,5.186,19.218,13.117,24.465c-4.819-0.122-9.334-1.464-13.3-3.661c0,0.122,0,0.244,0,0.366 c0,14.275,10.128,26.113,23.611,28.857c-2.44,0.672-5.064,1.039-7.748,1.039c-1.892,0-3.723-0.184-5.553-0.551 c3.722,11.714,14.581,20.195,27.455,20.44c-10.067,7.868-22.757,12.566-36.546,12.566c-2.379,0-4.697-0.122-7.016-0.427 C73.707,187.507,89.204,192.389,105.799,192.389"
+              "M250.151,128.021c0,67.418-54.604,122.022-122.022,122.022S6.107,195.439,6.107,128.021C6.107,60.604,60.712,6,128.129,6 S250.151,60.604,250.151,128.021z M105.799,192.389c54.117,0,83.707-44.842,83.707-83.707c0-1.282,0-2.563-0.062-3.783 c5.736-4.148,10.739-9.335,14.705-15.252c-5.247,2.318-10.922,3.905-16.901,4.637c6.103-3.661,10.738-9.396,12.936-16.29 c-5.675,3.355-11.959,5.796-18.67,7.138c-5.369-5.734-12.995-9.273-21.477-9.273c-16.228,0-29.406,13.179-29.406,29.407 c0,2.318,0.243,4.576,0.793,6.711c-24.466-1.22-46.125-12.934-60.646-30.75c-2.501,4.332-3.965,9.396-3.965,14.765 c0,10.189,5.186,19.218,13.117,24.465c-4.819-0.122-9.334-1.464-13.3-3.661c0,0.122,0,0.244,0,0.366 c0,14.275,10.128,26.113,23.611,28.857c-2.44,0.672-5.064,1.039-7.748,1.039c-1.892,0-3.723-0.184-5.553-0.551 c3.722,11.714,14.581,20.195,27.455,20.44c-10.067,7.868-22.757,12.566-36.546,12.566c-2.379,0-4.697-0.122-7.016-0.427 C73.707,187.507,89.204,192.389,105.799,192.389",
           })
         );
       }
@@ -2051,11 +2056,11 @@ var CLSTAMP = "6296065";
             y: "0px",
             width: "256px",
             height: "256px",
-            viewBox: "0 0 256 256"
+            viewBox: "0 0 256 256",
           },
           o.createElement("path", {
             d:
-              "M28.176,8.026L11.763,49.97v171.427h58.358v31.003h32.826l31.003-31.003h47.414l63.829-63.829V8.026H28.176z M223.311,146.625l-36.474,36.474h-58.359l-31.002,31.003v-31.003H48.237V29.91h175.074V146.625z M186.837,71.855v63.829h-21.885 V71.855H186.837z M128.478,71.855v63.829h-21.883V71.855H128.478z"
+              "M28.176,8.026L11.763,49.97v171.427h58.358v31.003h32.826l31.003-31.003h47.414l63.829-63.829V8.026H28.176z M223.311,146.625l-36.474,36.474h-58.359l-31.002,31.003v-31.003H48.237V29.91h175.074V146.625z M186.837,71.855v63.829h-21.885 V71.855H186.837z M128.478,71.855v63.829h-21.883V71.855H128.478z",
           })
         );
       }
@@ -2071,13 +2076,13 @@ var CLSTAMP = "6296065";
             y: "0px",
             width: "256px",
             height: "256px",
-            viewBox: "0 0 256 256"
+            viewBox: "0 0 256 256",
           },
           o.createElement("path", {
             fillRule: "evenodd",
             clipRule: "evenodd",
             d:
-              "M236.979,138.059c0.548,0.078,6.91,0.101,7.772,0.032 c1.215-0.095,1.396,0.068,1.388,0.708c-0.01,0.397,0.012,3.039-2.365,7.32c-3.301,5.948-12.079,10.436-12.55,10.672 c-0.47,0.233-0.53,0.484-0.136,0.75c0.434,0.295,8.068,1.454,9.084,1.611c1.017,0.154,0.637,1.001,0.637,1.001 s-0.704,2.621-2.895,5.36c-2.189,2.738-9.311,6.123-8.583,6.123c0.731,0,7.187,0.159,6.181,1.422 c-3.019,3.786-13.603,9.528-18.43,13.813c-13.388,11.885-13.217,12.864-15.52,15.09c-0.983-3.298-3.02-12.658-3.02-12.658 l-6.105-11.467c4.413,0.18,6.364,0.081,8.952,0.081c9.214,0,17.525-2.185,22.234-5.841l2.371-1.843l-2.911-0.728 c-2.131-0.528-7.121-1.782-11.896-2.979c2.184-0.104,10.803-1.299,14.413-5.339c0.136-0.151,0.276-0.321,0.406-0.494l1.245-1.664 l-2.404-0.735c-2.607-0.799-5.948-1.682-8.517-2.335c3.173-1.572,7.585-3.942,10.048-6.088c4.83-4.203,7.226-9.709,7.322-9.943 l0.9-2.098l-10.772,0.318c1.503-1.483,3.218-3.197,3.939-3.991c1.43-1.571,4.053-6.221,4.198-9.896l0.072-1.787l-1.763,0.288 c-1.979,0.322-5.301,1.279-8.179,2.173c2.025-2.193,4.296-4.767,5.46-6.484c2.687-3.964,2.76-8.371,2.597-12.916l-0.104-2.881 l-2.261,1.79c-2.559,2.028-7.595,5.031-11.097,7.047c1.538-3.644,3.54-8.752,3.813-11.276c0.5-4.681-0.248-10.196-0.248-10.196 l-10.76,9.394c0.885-1.953,1.684-4.013,2.117-5.832c1.735-7.29,0.055-17.892-0.021-18.338l-0.452-2.807l-7.777,7.739 c0.722-3.535,1.465-8.253,1.23-11.789c-0.426-6.321-2.278-10.517-2.359-10.694l-1.01-2.251l-6.465,8.577 c0.231-4.285,0.27-10.24-0.948-13.547c-1.934-5.262-3.651-8.007-3.723-8.121l-1.232-1.958l-3.057,4.85 c0.018-2.967-0.11-6.475-0.69-8.68c-1.202-4.543-2.825-6.396-3.002-6.592l-1.325-1.433l-1.623,2.705 c-0.278-3.19-1.112-7.084-3.343-9.478l-0.814-0.872l-1.012,0.623c-0.327,0.201-0.714,0.497-1.104,0.823 c-0.154-1.135-0.365-2.451-0.639-3.691c0.563-4.733,1.186-10.03,1.206-10.452c0.027-0.547,0.274-0.767,1.017-0.391 c0.898,0.452,3.156,2.064,5.187,6.133c2.036,4.067,3.132,11.324,3.117,12.044c-0.009,0.383,0.291,0.757,0.438,0.151 c0.145-0.607,0.478-7.591,0.623-8.312c0.081-0.383,0.199-0.484,0.737-0.212c0.496,0.249,2.959,2.181,4.899,6.463 c1.179,2.599,1.634,11.946,1.574,12.653c-0.106,1.278,0.313,0.891,0.339,0.883c-0.009,0.013-0.025,0.04-0.03,0.049 c0.03-0.041,0.036-0.049,0.03-0.049c0.573-0.841,4.21-8.99,4.519-9.377c0.313-0.39,0.521-0.395,0.835,0.002 c0.262,0.33,2.095,1.717,4.049,10.088c1.902,8.135,1.949,11.542,1.848,12.682c-0.08,0.86,0.339,0.993,0.731,0.524 c0.389-0.47,5.104-9.201,5.497-9.515c0.389-0.313,0.613-0.309,0.927,0.161c0.312,0.469,2.718,4.762,3.684,11.448 c0.861,5.947,0.608,13.599,0.375,14.381c-0.235,0.782-0.135,1.077,0.493,0.53c0.623-0.548,10.299-8.412,11.004-9.038 c0.703-0.627,1.18-0.65,1.34-0.046c0.172,0.654,0.822,8.654,0.275,15.225c-0.549,6.571-2.626,12.752-2.94,13.145 c-0.312,0.391,0.087,0.712,0.478,0.555c0.394-0.157,11.902-10.018,12.645-10.402c0.711-0.367,1.043,0.005,1.105,0.507 c0.068,0.544,0.966,3.098-0.419,11.269c-0.959,5.65-3.54,11.876-3.855,12.033c-0.313,0.157-0.077,0.336,0.234,0.259 c0.315-0.079,8.324-3.488,8.872-3.567c0.546-0.079,0.671,0.339,0.514,0.808c-0.158,0.469-0.458,6.273-2.534,11.639 c-2.603,6.732-6.056,11.001-6.056,11.001s-0.252,0.519,0.217,0.519s9.266-0.186,9.813-0.263c0.547-0.079,0.627,0.156,0.547,0.704 c-0.077,0.547,0.858,9.116-8.624,14.601C236.524,137.734,236.432,137.979,236.979,138.059z M174.473,24.823 c1.981,3.34,2.018,9.248,1.836,11.469l-0.52,6.238l5.25-8.744c0.395,0.843,0.85,2.003,1.25,3.524 c1.02,3.877,0.422,13.082,0.417,13.173l-0.384,5.752l6.435-10.212c0.628,1.27,1.45,3.097,2.32,5.459 c1.466,3.983,0.772,13.806,0.381,17.257l-0.602,5.308l9.568-12.69c0.493,1.707,1.058,4.21,1.259,7.227 c0.39,5.821-2.272,15.731-2.299,15.83l-1.428,5.26l11.125-11.068c0.377,3.586,0.772,9.774-0.304,14.302 c-1.2,5.057-5.778,12.588-5.823,12.664l-1.806,3.992l16.878-14.09c-0.116,1.366-0.262,2.944-0.423,4.435 c-0.312,2.935-3.954,11.389-5.335,14.399l-1.827,4.002l3.856-2.115c0.381-0.208,8.027-4.41,12.979-7.778 c-0.039,3.484-0.537,6.042-2.139,8.4c-2.189,3.234-9.05,10.198-9.118,10.268l-4.352,4.408l5.861-2.004 c0.08-0.025,6.868-2.34,11.188-3.41c-0.675,2.445-2.208,5.125-3.11,6.118c-1.319,1.449-6.429,6.429-6.48,6.482l-2.682,2.614 l13.475-0.404c-1.06,1.837-2.89,4.549-5.457,6.783c-3.727,3.244-12.956,7.341-13.048,7.383l-3.952,1.746l4.201,1.008 c0.062,0.015,5.637,1.354,10.266,2.67c-3.412,2.191-9.291,3.081-10.948,3.138c-2.06,0.072-11.075,0.125-11.075,0.125l-11.51,0.069 l11.162,2.804c0,0,12.587,3.164,19.486,4.894c-4.398,2.216-10.717,3.493-17.657,3.493c-3.102,0-10.335-0.284-15.048-0.483 c4.064,6.069,7.041,11.004,7.992,13.681c2.813,7.915,6.777,28.269,6.889,48.907c0.039,6.572-1.081,11.649-9.022,11.649 c-0.288,0-0.597-0.038-0.908-0.092c-1.846,0.339-4.351,0.595-5.438-0.095c-1.805-1.149-3.163-2.627-3.544-3.957 c-0.383-1.334-1.146-9.374-3.106-20.675c-1.92-11.046-4.038-19.431-4.237-19.525c-1.535-0.731-9.358-18.45-9.358-18.45 l-37.23-47.615c0,0-20.737,23.917-37.455,47.8c-0.867,1.235-5.994,11.251-9.275,17.989c-0.212,0.437-0.181,0.475-0.281,0.808 c-0.604,2.015-2.396,9.525-4.039,18.994c-1.962,11.301-2.725,19.341-3.105,20.675c-0.384,1.33-1.74,2.808-3.546,3.957 c-1.085,0.689-3.592,0.434-5.437,0.095c-0.313,0.054-0.621,0.092-0.909,0.092c-7.941,0-9.061-5.077-9.024-11.649 c0.114-20.639,4.078-40.992,6.892-48.907c0.95-2.677,3.926-7.611,7.993-13.681c-4.714,0.199-11.946,0.483-15.051,0.483 c-6.939,0-13.26-1.277-17.653-3.493c6.896-1.729,19.486-4.894,19.486-4.894l11.159-2.804l-11.508-0.069 c0,0-9.019-0.053-11.076-0.125c-1.66-0.057-7.537-0.946-10.949-3.138c4.629-1.315,10.202-2.655,10.264-2.67l4.201-1.008l-3.95-1.746 c-0.094-0.042-9.324-4.139-13.049-7.383c-2.566-2.234-4.397-4.946-5.458-6.783l13.477,0.404l-2.684-2.614 c-0.05-0.054-5.16-5.033-6.48-6.482c-0.9-0.993-2.436-3.673-3.108-6.118c4.319,1.069,11.108,3.384,11.188,3.41l5.861,2.004 l-4.352-4.408c-0.069-0.069-6.928-7.033-9.12-10.268c-1.601-2.358-2.099-4.916-2.139-8.4c4.953,3.368,12.601,7.57,12.98,7.778 l3.858,2.115l-1.829-4.002c-1.379-3.011-5.022-11.465-5.334-14.399c-0.161-1.491-0.305-3.068-0.421-4.435l16.877,14.09l-1.806-3.992 c-0.046-0.076-4.622-7.607-5.821-12.664c-1.078-4.528-0.682-10.716-0.307-14.302L58.57,89.672l-1.426-5.26 c-0.025-0.098-2.688-10.008-2.3-15.83c0.203-3.017,0.767-5.52,1.26-7.227l9.566,12.69l-0.601-5.308 c-0.391-3.451-1.083-13.274,0.381-17.257c0.871-2.362,1.693-4.189,2.32-5.459l6.435,10.212l-0.382-5.752 c-0.006-0.091-0.604-9.295,0.416-13.173c0.401-1.521,0.854-2.681,1.251-3.524l5.249,8.744l-0.52-6.238 c-0.181-2.221-0.144-8.129,1.836-11.469c0.596,0.522,1.248,1.148,1.67,1.575l2.215,2.245l0.276-3.142 c0.162-1.838,0.783-7.003,1.703-8.813c1.342-2.635,4.69-3.91,7.104-4.505c-6.691,13.614-36.889,77.59-36.889,122.937 c0,23.658,16.206,23.931,16.368,23.931c4.881,0,6.947-7.914,6.947-11.063V133.45c0-2.744,1.148-2.744,1.835-2.744 c5.807,0,10.48,3.196,13.855,6.69c8.813-11.615,15.81-20.526,15.81-20.526s0.16-0.182,0.248-0.345 c-1.03-2.443-7.165-16.995-7.165-16.995l1.708-43.717c0,0-0.278-3.797,1.044-6.052c1.314-2.245,4.247-3.175,4.247-3.175 l13.307,41.443c0,0-4.107,0.866-4.107,5.585c0,2.982,2.658,4.99,6.227,5.013c3.572-0.022,6.227-2.031,6.227-5.013 c0-4.719-4.109-5.585-4.109-5.585l13.311-41.443c0,0,2.93,0.93,4.245,3.175c1.322,2.255,1.043,6.052,1.043,6.052l1.709,43.717 l-7.309,17.34c0,0,6.997,8.911,15.809,20.526c3.375-3.494,8.048-6.69,13.855-6.69c0.687,0,1.833,0,1.833,2.744v14.538 c0,3.148,2.068,11.063,6.95,11.063c0.159,0,16.367-0.272,16.367-23.931c0-45.347-30.197-109.322-36.888-122.937 c2.412,0.595,5.761,1.87,7.104,4.505c0.92,1.809,1.541,6.975,1.705,8.813l0.275,3.142l2.213-2.245 C173.226,25.972,173.875,25.345,174.473,24.823z M176.157,181.396c-1.644-2.189-41.07-55.856-41.07-55.856l-6.723,8.809 l-0.946-1.233l-0.829-1.082l-5.053-6.594l-0.095,0.101c0,0-39.427,53.667-41.07,55.856c-1.643,2.191-4.777,6.708-6.058,9.322 c-1.279,2.614-8.946,39.306-8.946,42.592c0,2.005,0.041,8.618,0.071,13.47c1.536,0.2,3.411,0.761,4.357,0.125 c1.624-1.093,2.363-2.323,2.491-3.372c0.128-1.048,1.367-12.969,2.69-20.812c1.779-10.547,4.571-19.005,4.415-18.97 c3.213-6.672,8.966-17.938,9.887-19.252c17.808-25.439,38.994-49.947,38.994-49.947s21.166,24.502,38.978,49.947 c0.921,1.313,6.672,12.58,9.888,19.252c-0.158-0.035,2.635,8.423,4.414,18.97c1.322,7.843,2.562,19.764,2.688,20.812 c0.131,1.049,0.87,2.279,2.493,3.372c0.944,0.636,2.818,0.075,4.355-0.125c0.032-4.852,0.073-11.465,0.073-13.47 c0-3.286-7.667-39.978-8.948-42.592C180.936,188.104,177.801,183.588,176.157,181.396z M82.538,21.517l-1.014-0.623l-0.813,0.872 c-2.231,2.394-3.063,6.287-3.342,9.478l-1.624-2.705l-1.323,1.433c-0.179,0.197-1.801,2.049-3.004,6.592 c-0.581,2.205-0.709,5.712-0.689,8.68l-3.057-4.85l-1.234,1.958c-0.072,0.114-1.787,2.859-3.722,8.121 c-1.22,3.307-1.179,9.262-0.949,13.547l-6.463-8.577l-1.012,2.251c-0.08,0.177-1.934,4.373-2.359,10.694 c-0.234,3.536,0.51,8.253,1.231,11.789l-7.778-7.739l-0.453,2.807c-0.073,0.446-1.754,11.048-0.02,18.338 c0.433,1.819,1.231,3.879,2.117,5.832l-10.759-9.394c0,0-0.749,5.515-0.248,10.196c0.271,2.523,2.272,7.632,3.813,11.276 c-3.503-2.016-8.539-5.019-11.099-7.047l-2.259-1.79l-0.106,2.881c-0.162,4.545-0.087,8.952,2.6,12.916 c1.161,1.717,3.433,4.291,5.459,6.484c-2.877-0.894-6.201-1.851-8.179-2.173l-1.763-0.288l0.071,1.787 c0.148,3.675,2.771,8.324,4.198,9.896c0.723,0.794,2.436,2.508,3.941,3.991L21.93,137.83l0.896,2.098 c0.1,0.234,2.493,5.74,7.324,9.943c2.464,2.146,6.876,4.516,10.047,6.088c-2.57,0.653-5.908,1.536-8.518,2.335l-2.402,0.735 l1.246,1.664c0.13,0.173,0.27,0.343,0.407,0.494c3.608,4.04,12.229,5.234,14.412,5.339c-4.774,1.197-9.767,2.451-11.896,2.979 l-2.911,0.728l2.371,1.843c4.708,3.656,13.02,5.841,22.233,5.841c2.588,0,4.539,0.099,8.954-0.081l-6.105,11.467 c0,0-2.038,9.36-3.02,12.658c-2.304-2.226-2.133-3.205-15.52-15.09c-4.829-4.284-15.411-10.026-18.429-13.813 c-1.005-1.263,5.449-1.422,6.179-1.422c0.73,0-6.393-3.385-8.582-6.123c-2.191-2.739-2.895-5.36-2.895-5.36s-0.38-0.847,0.637-1.001 c1.018-0.157,8.65-1.316,9.084-1.611c0.395-0.266,0.332-0.517-0.137-0.75c-0.469-0.236-9.248-4.724-12.548-10.672 c-2.375-4.281-2.357-6.923-2.364-7.32c-0.01-0.64,0.17-0.803,1.385-0.708c0.862,0.068,7.226,0.046,7.774-0.032 c0.546-0.08,0.453-0.324,0.019-0.576c-9.483-5.484-8.546-14.054-8.624-14.601c-0.079-0.548,0-0.783,0.548-0.704 c0.546,0.077,9.342,0.263,9.812,0.263c0.469,0,0.218-0.519,0.218-0.519s-3.452-4.27-6.056-11.001 c-2.077-5.366-2.377-11.169-2.533-11.639c-0.157-0.469-0.034-0.887,0.514-0.808c0.549,0.079,8.558,3.488,8.87,3.567 c0.313,0.077,0.548-0.103,0.235-0.259c-0.314-0.157-2.896-6.383-3.855-12.033c-1.384-8.17-0.488-10.725-0.42-11.269 c0.063-0.502,0.397-0.874,1.105-0.507c0.743,0.385,12.255,10.245,12.646,10.402c0.391,0.157,0.79-0.164,0.477-0.555 c-0.313-0.392-2.392-6.574-2.938-13.145c-0.548-6.571,0.1-14.571,0.274-15.225c0.161-0.604,0.635-0.581,1.339,0.046 c0.704,0.626,10.381,8.489,11.006,9.038c0.625,0.547,0.727,0.252,0.492-0.53c-0.235-0.782-0.484-8.435,0.375-14.381 c0.965-6.686,3.372-10.979,3.685-11.448s0.536-0.474,0.927-0.161c0.391,0.313,5.106,9.045,5.497,9.515 c0.391,0.469,0.809,0.336,0.732-0.524c-0.104-1.14-0.057-4.547,1.845-12.682c1.956-8.371,3.789-9.758,4.052-10.088 c0.313-0.396,0.521-0.392,0.833-0.002c0.309,0.387,3.945,8.536,4.519,9.377c-0.005,0,0,0.008,0.031,0.049 c-0.007-0.009-0.022-0.036-0.031-0.049c0.025,0.008,0.446,0.395,0.34-0.883c-0.058-0.707,0.396-10.055,1.574-12.653 c1.941-4.282,4.404-6.214,4.899-6.463c0.54-0.272,0.658-0.171,0.737,0.212c0.146,0.721,0.478,7.705,0.625,8.312 c0.146,0.606,0.444,0.232,0.437-0.151c-0.015-0.72,1.081-7.977,3.115-12.044c2.033-4.069,4.292-5.681,5.188-6.133 c0.742-0.376,0.989-0.156,1.018,0.391c0.022,0.422,0.645,5.719,1.206,10.452c-0.272,1.24-0.484,2.556-0.639,3.691 C83.251,22.014,82.866,21.718,82.538,21.517z M127.35,141.814c-1.158,12.032-4.978,23.045-6.326,29.486 c-1.643,7.849-4.788,18.061-6.793,20.931c-4.433,6.343-18.036,18.547-20.403,19.732c-1.094,0.547-6.376-4.115-6.56-4.846 c-0.182-0.728,2.883-3.993,2.154-3.627c-0.731,0.364-4.104,0.906-5.06,0.87c-0.753-0.026,0.633-2.728,0.633-2.728 s-1.484,2.217-3.021,2.947c-0.03,0.015,9.433-18.119,9.433-18.119S127.52,140.043,127.35,141.814z M119.7,169.39l3.104-10.647 l-1.869-0.559l-3.152,10.656L119.7,169.39z M114.072,167.242l4.687-10.051l-1.764-0.838l-4.735,10.055L114.072,167.242z  M126.961,159.319l-0.82,11.06l-1.991-0.139l0.867-11.079L126.961,159.319z M131.727,170.391l-1.986,0.167l-0.828-11.078 l1.944-0.144L131.727,170.391z M164.422,186.462c0,0,9.463,18.134,9.434,18.119c-1.54-0.73-3.021-2.947-3.021-2.947 s1.384,2.701,0.633,2.728c-0.957,0.036-4.33-0.506-5.06-0.87c-0.731-0.366,2.334,2.899,2.153,3.627 c-0.185,0.73-5.467,5.393-6.56,4.846c-2.368-1.186-15.973-13.39-20.404-19.732c-2.007-2.87-5.149-13.082-6.792-20.931 c-1.349-6.441-4.621-17.127-5.778-29.16C128.854,140.373,164.422,186.462,164.422,186.462z M142.029,167.242l1.813-0.834 l-4.735-10.055l-1.762,0.838L142.029,167.242z M136.402,169.39l1.917-0.55l-3.152-10.656l-1.868,0.559L136.402,169.39z"
+              "M236.979,138.059c0.548,0.078,6.91,0.101,7.772,0.032 c1.215-0.095,1.396,0.068,1.388,0.708c-0.01,0.397,0.012,3.039-2.365,7.32c-3.301,5.948-12.079,10.436-12.55,10.672 c-0.47,0.233-0.53,0.484-0.136,0.75c0.434,0.295,8.068,1.454,9.084,1.611c1.017,0.154,0.637,1.001,0.637,1.001 s-0.704,2.621-2.895,5.36c-2.189,2.738-9.311,6.123-8.583,6.123c0.731,0,7.187,0.159,6.181,1.422 c-3.019,3.786-13.603,9.528-18.43,13.813c-13.388,11.885-13.217,12.864-15.52,15.09c-0.983-3.298-3.02-12.658-3.02-12.658 l-6.105-11.467c4.413,0.18,6.364,0.081,8.952,0.081c9.214,0,17.525-2.185,22.234-5.841l2.371-1.843l-2.911-0.728 c-2.131-0.528-7.121-1.782-11.896-2.979c2.184-0.104,10.803-1.299,14.413-5.339c0.136-0.151,0.276-0.321,0.406-0.494l1.245-1.664 l-2.404-0.735c-2.607-0.799-5.948-1.682-8.517-2.335c3.173-1.572,7.585-3.942,10.048-6.088c4.83-4.203,7.226-9.709,7.322-9.943 l0.9-2.098l-10.772,0.318c1.503-1.483,3.218-3.197,3.939-3.991c1.43-1.571,4.053-6.221,4.198-9.896l0.072-1.787l-1.763,0.288 c-1.979,0.322-5.301,1.279-8.179,2.173c2.025-2.193,4.296-4.767,5.46-6.484c2.687-3.964,2.76-8.371,2.597-12.916l-0.104-2.881 l-2.261,1.79c-2.559,2.028-7.595,5.031-11.097,7.047c1.538-3.644,3.54-8.752,3.813-11.276c0.5-4.681-0.248-10.196-0.248-10.196 l-10.76,9.394c0.885-1.953,1.684-4.013,2.117-5.832c1.735-7.29,0.055-17.892-0.021-18.338l-0.452-2.807l-7.777,7.739 c0.722-3.535,1.465-8.253,1.23-11.789c-0.426-6.321-2.278-10.517-2.359-10.694l-1.01-2.251l-6.465,8.577 c0.231-4.285,0.27-10.24-0.948-13.547c-1.934-5.262-3.651-8.007-3.723-8.121l-1.232-1.958l-3.057,4.85 c0.018-2.967-0.11-6.475-0.69-8.68c-1.202-4.543-2.825-6.396-3.002-6.592l-1.325-1.433l-1.623,2.705 c-0.278-3.19-1.112-7.084-3.343-9.478l-0.814-0.872l-1.012,0.623c-0.327,0.201-0.714,0.497-1.104,0.823 c-0.154-1.135-0.365-2.451-0.639-3.691c0.563-4.733,1.186-10.03,1.206-10.452c0.027-0.547,0.274-0.767,1.017-0.391 c0.898,0.452,3.156,2.064,5.187,6.133c2.036,4.067,3.132,11.324,3.117,12.044c-0.009,0.383,0.291,0.757,0.438,0.151 c0.145-0.607,0.478-7.591,0.623-8.312c0.081-0.383,0.199-0.484,0.737-0.212c0.496,0.249,2.959,2.181,4.899,6.463 c1.179,2.599,1.634,11.946,1.574,12.653c-0.106,1.278,0.313,0.891,0.339,0.883c-0.009,0.013-0.025,0.04-0.03,0.049 c0.03-0.041,0.036-0.049,0.03-0.049c0.573-0.841,4.21-8.99,4.519-9.377c0.313-0.39,0.521-0.395,0.835,0.002 c0.262,0.33,2.095,1.717,4.049,10.088c1.902,8.135,1.949,11.542,1.848,12.682c-0.08,0.86,0.339,0.993,0.731,0.524 c0.389-0.47,5.104-9.201,5.497-9.515c0.389-0.313,0.613-0.309,0.927,0.161c0.312,0.469,2.718,4.762,3.684,11.448 c0.861,5.947,0.608,13.599,0.375,14.381c-0.235,0.782-0.135,1.077,0.493,0.53c0.623-0.548,10.299-8.412,11.004-9.038 c0.703-0.627,1.18-0.65,1.34-0.046c0.172,0.654,0.822,8.654,0.275,15.225c-0.549,6.571-2.626,12.752-2.94,13.145 c-0.312,0.391,0.087,0.712,0.478,0.555c0.394-0.157,11.902-10.018,12.645-10.402c0.711-0.367,1.043,0.005,1.105,0.507 c0.068,0.544,0.966,3.098-0.419,11.269c-0.959,5.65-3.54,11.876-3.855,12.033c-0.313,0.157-0.077,0.336,0.234,0.259 c0.315-0.079,8.324-3.488,8.872-3.567c0.546-0.079,0.671,0.339,0.514,0.808c-0.158,0.469-0.458,6.273-2.534,11.639 c-2.603,6.732-6.056,11.001-6.056,11.001s-0.252,0.519,0.217,0.519s9.266-0.186,9.813-0.263c0.547-0.079,0.627,0.156,0.547,0.704 c-0.077,0.547,0.858,9.116-8.624,14.601C236.524,137.734,236.432,137.979,236.979,138.059z M174.473,24.823 c1.981,3.34,2.018,9.248,1.836,11.469l-0.52,6.238l5.25-8.744c0.395,0.843,0.85,2.003,1.25,3.524 c1.02,3.877,0.422,13.082,0.417,13.173l-0.384,5.752l6.435-10.212c0.628,1.27,1.45,3.097,2.32,5.459 c1.466,3.983,0.772,13.806,0.381,17.257l-0.602,5.308l9.568-12.69c0.493,1.707,1.058,4.21,1.259,7.227 c0.39,5.821-2.272,15.731-2.299,15.83l-1.428,5.26l11.125-11.068c0.377,3.586,0.772,9.774-0.304,14.302 c-1.2,5.057-5.778,12.588-5.823,12.664l-1.806,3.992l16.878-14.09c-0.116,1.366-0.262,2.944-0.423,4.435 c-0.312,2.935-3.954,11.389-5.335,14.399l-1.827,4.002l3.856-2.115c0.381-0.208,8.027-4.41,12.979-7.778 c-0.039,3.484-0.537,6.042-2.139,8.4c-2.189,3.234-9.05,10.198-9.118,10.268l-4.352,4.408l5.861-2.004 c0.08-0.025,6.868-2.34,11.188-3.41c-0.675,2.445-2.208,5.125-3.11,6.118c-1.319,1.449-6.429,6.429-6.48,6.482l-2.682,2.614 l13.475-0.404c-1.06,1.837-2.89,4.549-5.457,6.783c-3.727,3.244-12.956,7.341-13.048,7.383l-3.952,1.746l4.201,1.008 c0.062,0.015,5.637,1.354,10.266,2.67c-3.412,2.191-9.291,3.081-10.948,3.138c-2.06,0.072-11.075,0.125-11.075,0.125l-11.51,0.069 l11.162,2.804c0,0,12.587,3.164,19.486,4.894c-4.398,2.216-10.717,3.493-17.657,3.493c-3.102,0-10.335-0.284-15.048-0.483 c4.064,6.069,7.041,11.004,7.992,13.681c2.813,7.915,6.777,28.269,6.889,48.907c0.039,6.572-1.081,11.649-9.022,11.649 c-0.288,0-0.597-0.038-0.908-0.092c-1.846,0.339-4.351,0.595-5.438-0.095c-1.805-1.149-3.163-2.627-3.544-3.957 c-0.383-1.334-1.146-9.374-3.106-20.675c-1.92-11.046-4.038-19.431-4.237-19.525c-1.535-0.731-9.358-18.45-9.358-18.45 l-37.23-47.615c0,0-20.737,23.917-37.455,47.8c-0.867,1.235-5.994,11.251-9.275,17.989c-0.212,0.437-0.181,0.475-0.281,0.808 c-0.604,2.015-2.396,9.525-4.039,18.994c-1.962,11.301-2.725,19.341-3.105,20.675c-0.384,1.33-1.74,2.808-3.546,3.957 c-1.085,0.689-3.592,0.434-5.437,0.095c-0.313,0.054-0.621,0.092-0.909,0.092c-7.941,0-9.061-5.077-9.024-11.649 c0.114-20.639,4.078-40.992,6.892-48.907c0.95-2.677,3.926-7.611,7.993-13.681c-4.714,0.199-11.946,0.483-15.051,0.483 c-6.939,0-13.26-1.277-17.653-3.493c6.896-1.729,19.486-4.894,19.486-4.894l11.159-2.804l-11.508-0.069 c0,0-9.019-0.053-11.076-0.125c-1.66-0.057-7.537-0.946-10.949-3.138c4.629-1.315,10.202-2.655,10.264-2.67l4.201-1.008l-3.95-1.746 c-0.094-0.042-9.324-4.139-13.049-7.383c-2.566-2.234-4.397-4.946-5.458-6.783l13.477,0.404l-2.684-2.614 c-0.05-0.054-5.16-5.033-6.48-6.482c-0.9-0.993-2.436-3.673-3.108-6.118c4.319,1.069,11.108,3.384,11.188,3.41l5.861,2.004 l-4.352-4.408c-0.069-0.069-6.928-7.033-9.12-10.268c-1.601-2.358-2.099-4.916-2.139-8.4c4.953,3.368,12.601,7.57,12.98,7.778 l3.858,2.115l-1.829-4.002c-1.379-3.011-5.022-11.465-5.334-14.399c-0.161-1.491-0.305-3.068-0.421-4.435l16.877,14.09l-1.806-3.992 c-0.046-0.076-4.622-7.607-5.821-12.664c-1.078-4.528-0.682-10.716-0.307-14.302L58.57,89.672l-1.426-5.26 c-0.025-0.098-2.688-10.008-2.3-15.83c0.203-3.017,0.767-5.52,1.26-7.227l9.566,12.69l-0.601-5.308 c-0.391-3.451-1.083-13.274,0.381-17.257c0.871-2.362,1.693-4.189,2.32-5.459l6.435,10.212l-0.382-5.752 c-0.006-0.091-0.604-9.295,0.416-13.173c0.401-1.521,0.854-2.681,1.251-3.524l5.249,8.744l-0.52-6.238 c-0.181-2.221-0.144-8.129,1.836-11.469c0.596,0.522,1.248,1.148,1.67,1.575l2.215,2.245l0.276-3.142 c0.162-1.838,0.783-7.003,1.703-8.813c1.342-2.635,4.69-3.91,7.104-4.505c-6.691,13.614-36.889,77.59-36.889,122.937 c0,23.658,16.206,23.931,16.368,23.931c4.881,0,6.947-7.914,6.947-11.063V133.45c0-2.744,1.148-2.744,1.835-2.744 c5.807,0,10.48,3.196,13.855,6.69c8.813-11.615,15.81-20.526,15.81-20.526s0.16-0.182,0.248-0.345 c-1.03-2.443-7.165-16.995-7.165-16.995l1.708-43.717c0,0-0.278-3.797,1.044-6.052c1.314-2.245,4.247-3.175,4.247-3.175 l13.307,41.443c0,0-4.107,0.866-4.107,5.585c0,2.982,2.658,4.99,6.227,5.013c3.572-0.022,6.227-2.031,6.227-5.013 c0-4.719-4.109-5.585-4.109-5.585l13.311-41.443c0,0,2.93,0.93,4.245,3.175c1.322,2.255,1.043,6.052,1.043,6.052l1.709,43.717 l-7.309,17.34c0,0,6.997,8.911,15.809,20.526c3.375-3.494,8.048-6.69,13.855-6.69c0.687,0,1.833,0,1.833,2.744v14.538 c0,3.148,2.068,11.063,6.95,11.063c0.159,0,16.367-0.272,16.367-23.931c0-45.347-30.197-109.322-36.888-122.937 c2.412,0.595,5.761,1.87,7.104,4.505c0.92,1.809,1.541,6.975,1.705,8.813l0.275,3.142l2.213-2.245 C173.226,25.972,173.875,25.345,174.473,24.823z M176.157,181.396c-1.644-2.189-41.07-55.856-41.07-55.856l-6.723,8.809 l-0.946-1.233l-0.829-1.082l-5.053-6.594l-0.095,0.101c0,0-39.427,53.667-41.07,55.856c-1.643,2.191-4.777,6.708-6.058,9.322 c-1.279,2.614-8.946,39.306-8.946,42.592c0,2.005,0.041,8.618,0.071,13.47c1.536,0.2,3.411,0.761,4.357,0.125 c1.624-1.093,2.363-2.323,2.491-3.372c0.128-1.048,1.367-12.969,2.69-20.812c1.779-10.547,4.571-19.005,4.415-18.97 c3.213-6.672,8.966-17.938,9.887-19.252c17.808-25.439,38.994-49.947,38.994-49.947s21.166,24.502,38.978,49.947 c0.921,1.313,6.672,12.58,9.888,19.252c-0.158-0.035,2.635,8.423,4.414,18.97c1.322,7.843,2.562,19.764,2.688,20.812 c0.131,1.049,0.87,2.279,2.493,3.372c0.944,0.636,2.818,0.075,4.355-0.125c0.032-4.852,0.073-11.465,0.073-13.47 c0-3.286-7.667-39.978-8.948-42.592C180.936,188.104,177.801,183.588,176.157,181.396z M82.538,21.517l-1.014-0.623l-0.813,0.872 c-2.231,2.394-3.063,6.287-3.342,9.478l-1.624-2.705l-1.323,1.433c-0.179,0.197-1.801,2.049-3.004,6.592 c-0.581,2.205-0.709,5.712-0.689,8.68l-3.057-4.85l-1.234,1.958c-0.072,0.114-1.787,2.859-3.722,8.121 c-1.22,3.307-1.179,9.262-0.949,13.547l-6.463-8.577l-1.012,2.251c-0.08,0.177-1.934,4.373-2.359,10.694 c-0.234,3.536,0.51,8.253,1.231,11.789l-7.778-7.739l-0.453,2.807c-0.073,0.446-1.754,11.048-0.02,18.338 c0.433,1.819,1.231,3.879,2.117,5.832l-10.759-9.394c0,0-0.749,5.515-0.248,10.196c0.271,2.523,2.272,7.632,3.813,11.276 c-3.503-2.016-8.539-5.019-11.099-7.047l-2.259-1.79l-0.106,2.881c-0.162,4.545-0.087,8.952,2.6,12.916 c1.161,1.717,3.433,4.291,5.459,6.484c-2.877-0.894-6.201-1.851-8.179-2.173l-1.763-0.288l0.071,1.787 c0.148,3.675,2.771,8.324,4.198,9.896c0.723,0.794,2.436,2.508,3.941,3.991L21.93,137.83l0.896,2.098 c0.1,0.234,2.493,5.74,7.324,9.943c2.464,2.146,6.876,4.516,10.047,6.088c-2.57,0.653-5.908,1.536-8.518,2.335l-2.402,0.735 l1.246,1.664c0.13,0.173,0.27,0.343,0.407,0.494c3.608,4.04,12.229,5.234,14.412,5.339c-4.774,1.197-9.767,2.451-11.896,2.979 l-2.911,0.728l2.371,1.843c4.708,3.656,13.02,5.841,22.233,5.841c2.588,0,4.539,0.099,8.954-0.081l-6.105,11.467 c0,0-2.038,9.36-3.02,12.658c-2.304-2.226-2.133-3.205-15.52-15.09c-4.829-4.284-15.411-10.026-18.429-13.813 c-1.005-1.263,5.449-1.422,6.179-1.422c0.73,0-6.393-3.385-8.582-6.123c-2.191-2.739-2.895-5.36-2.895-5.36s-0.38-0.847,0.637-1.001 c1.018-0.157,8.65-1.316,9.084-1.611c0.395-0.266,0.332-0.517-0.137-0.75c-0.469-0.236-9.248-4.724-12.548-10.672 c-2.375-4.281-2.357-6.923-2.364-7.32c-0.01-0.64,0.17-0.803,1.385-0.708c0.862,0.068,7.226,0.046,7.774-0.032 c0.546-0.08,0.453-0.324,0.019-0.576c-9.483-5.484-8.546-14.054-8.624-14.601c-0.079-0.548,0-0.783,0.548-0.704 c0.546,0.077,9.342,0.263,9.812,0.263c0.469,0,0.218-0.519,0.218-0.519s-3.452-4.27-6.056-11.001 c-2.077-5.366-2.377-11.169-2.533-11.639c-0.157-0.469-0.034-0.887,0.514-0.808c0.549,0.079,8.558,3.488,8.87,3.567 c0.313,0.077,0.548-0.103,0.235-0.259c-0.314-0.157-2.896-6.383-3.855-12.033c-1.384-8.17-0.488-10.725-0.42-11.269 c0.063-0.502,0.397-0.874,1.105-0.507c0.743,0.385,12.255,10.245,12.646,10.402c0.391,0.157,0.79-0.164,0.477-0.555 c-0.313-0.392-2.392-6.574-2.938-13.145c-0.548-6.571,0.1-14.571,0.274-15.225c0.161-0.604,0.635-0.581,1.339,0.046 c0.704,0.626,10.381,8.489,11.006,9.038c0.625,0.547,0.727,0.252,0.492-0.53c-0.235-0.782-0.484-8.435,0.375-14.381 c0.965-6.686,3.372-10.979,3.685-11.448s0.536-0.474,0.927-0.161c0.391,0.313,5.106,9.045,5.497,9.515 c0.391,0.469,0.809,0.336,0.732-0.524c-0.104-1.14-0.057-4.547,1.845-12.682c1.956-8.371,3.789-9.758,4.052-10.088 c0.313-0.396,0.521-0.392,0.833-0.002c0.309,0.387,3.945,8.536,4.519,9.377c-0.005,0,0,0.008,0.031,0.049 c-0.007-0.009-0.022-0.036-0.031-0.049c0.025,0.008,0.446,0.395,0.34-0.883c-0.058-0.707,0.396-10.055,1.574-12.653 c1.941-4.282,4.404-6.214,4.899-6.463c0.54-0.272,0.658-0.171,0.737,0.212c0.146,0.721,0.478,7.705,0.625,8.312 c0.146,0.606,0.444,0.232,0.437-0.151c-0.015-0.72,1.081-7.977,3.115-12.044c2.033-4.069,4.292-5.681,5.188-6.133 c0.742-0.376,0.989-0.156,1.018,0.391c0.022,0.422,0.645,5.719,1.206,10.452c-0.272,1.24-0.484,2.556-0.639,3.691 C83.251,22.014,82.866,21.718,82.538,21.517z M127.35,141.814c-1.158,12.032-4.978,23.045-6.326,29.486 c-1.643,7.849-4.788,18.061-6.793,20.931c-4.433,6.343-18.036,18.547-20.403,19.732c-1.094,0.547-6.376-4.115-6.56-4.846 c-0.182-0.728,2.883-3.993,2.154-3.627c-0.731,0.364-4.104,0.906-5.06,0.87c-0.753-0.026,0.633-2.728,0.633-2.728 s-1.484,2.217-3.021,2.947c-0.03,0.015,9.433-18.119,9.433-18.119S127.52,140.043,127.35,141.814z M119.7,169.39l3.104-10.647 l-1.869-0.559l-3.152,10.656L119.7,169.39z M114.072,167.242l4.687-10.051l-1.764-0.838l-4.735,10.055L114.072,167.242z  M126.961,159.319l-0.82,11.06l-1.991-0.139l0.867-11.079L126.961,159.319z M131.727,170.391l-1.986,0.167l-0.828-11.078 l1.944-0.144L131.727,170.391z M164.422,186.462c0,0,9.463,18.134,9.434,18.119c-1.54-0.73-3.021-2.947-3.021-2.947 s1.384,2.701,0.633,2.728c-0.957,0.036-4.33-0.506-5.06-0.87c-0.731-0.366,2.334,2.899,2.153,3.627 c-0.185,0.73-5.467,5.393-6.56,4.846c-2.368-1.186-15.973-13.39-20.404-19.732c-2.007-2.87-5.149-13.082-6.792-20.931 c-1.349-6.441-4.621-17.127-5.778-29.16C128.854,140.373,164.422,186.462,164.422,186.462z M142.029,167.242l1.813-0.834 l-4.735-10.055l-1.762,0.838L142.029,167.242z M136.402,169.39l1.917-0.55l-3.152-10.656l-1.868,0.559L136.402,169.39z",
           })
         );
       }
@@ -2092,7 +2097,7 @@ var CLSTAMP = "6296065";
             y: "0px",
             width: "256px",
             height: "256px",
-            viewBox: "0 0 256 256"
+            viewBox: "0 0 256 256",
           },
           o.createElement("path", {
             className: "CCBox",
@@ -2101,17 +2106,17 @@ var CLSTAMP = "6296065";
             strokeWidth: "10",
             strokeMiterlimit: "10",
             d:
-              "M238,210c0,6.627-5.373,12-12,12H30 c-6.627,0-12-5.373-12-12V46c0-6.627,5.373-12,12-12h196c6.627,0,12,5.373,12,12V210z"
+              "M238,210c0,6.627-5.373,12-12,12H30 c-6.627,0-12-5.373-12-12V46c0-6.627,5.373-12,12-12h196c6.627,0,12,5.373,12,12V210z",
           }),
           o.createElement("path", {
             className: "C1",
             d:
-              "M90.505,173.207c11.431,0,22.338-4.276,30.72-12.036c2.6-2.407,2.753-6.47,0.347-9.068c-2.41-2.604-6.47-2.757-9.072-0.349 c-5.998,5.559-13.811,8.62-21.995,8.62c-17.852,0-32.373-14.524-32.373-32.372c0-17.849,14.521-32.373,32.373-32.373 c8.177,0,15.981,3.055,21.979,8.603c2.603,2.407,6.662,2.25,9.072-0.353c2.407-2.602,2.249-6.662-0.353-9.068 c-8.375-7.751-19.276-12.019-30.694-12.019c-24.931,0-45.209,20.281-45.209,45.209C45.3,152.93,65.574,173.207,90.505,173.207z"
+              "M90.505,173.207c11.431,0,22.338-4.276,30.72-12.036c2.6-2.407,2.753-6.47,0.347-9.068c-2.41-2.604-6.47-2.757-9.072-0.349 c-5.998,5.559-13.811,8.62-21.995,8.62c-17.852,0-32.373-14.524-32.373-32.372c0-17.849,14.521-32.373,32.373-32.373 c8.177,0,15.981,3.055,21.979,8.603c2.603,2.407,6.662,2.25,9.072-0.353c2.407-2.602,2.249-6.662-0.353-9.068 c-8.375-7.751-19.276-12.019-30.694-12.019c-24.931,0-45.209,20.281-45.209,45.209C45.3,152.93,65.574,173.207,90.505,173.207z",
           }),
           o.createElement("path", {
             className: "C1",
             d:
-              "M177.926,173.207c11.431,0,22.338-4.276,30.721-12.036c2.6-2.407,2.754-6.47,0.347-9.068 c-2.41-2.604-6.47-2.757-9.072-0.349c-5.998,5.559-13.812,8.62-21.995,8.62c-17.852,0-32.372-14.524-32.372-32.372 c0-17.849,14.521-32.373,32.372-32.373c8.178,0,15.981,3.055,21.979,8.603c2.604,2.407,6.663,2.25,9.072-0.353 c2.407-2.602,2.25-6.662-0.353-9.068c-8.375-7.751-19.277-12.019-30.694-12.019c-24.932,0-45.209,20.281-45.209,45.209 C132.721,152.93,152.996,173.207,177.926,173.207z"
+              "M177.926,173.207c11.431,0,22.338-4.276,30.721-12.036c2.6-2.407,2.754-6.47,0.347-9.068 c-2.41-2.604-6.47-2.757-9.072-0.349c-5.998,5.559-13.812,8.62-21.995,8.62c-17.852,0-32.372-14.524-32.372-32.372 c0-17.849,14.521-32.373,32.372-32.373c8.178,0,15.981,3.055,21.979,8.603c2.604,2.407,6.663,2.25,9.072-0.353 c2.407-2.602,2.25-6.662-0.353-9.068c-8.375-7.751-19.277-12.019-30.694-12.019c-24.932,0-45.209,20.281-45.209,45.209 C132.721,152.93,152.996,173.207,177.926,173.207z",
           })
         );
       }
@@ -2127,11 +2132,11 @@ var CLSTAMP = "6296065";
             y: "0px",
             width: "256px",
             height: "256px",
-            viewBox: "0 0 256 256"
+            viewBox: "0 0 256 256",
           },
           o.createElement("path", {
             d:
-              "M236.445,23.522c-1.085-2.35-3.438-3.855-6.025-3.855H25.58c-2.586,0-4.936,1.501-6.024,3.855 c-1.08,2.349-0.698,5.112,0.983,7.083l80.328,94.039v104.181c0,2.74,1.682,5.194,4.237,6.188c0.778,0.3,1.588,0.445,2.392,0.445 c1.832,0,3.626-0.762,4.91-2.17l41.012-45.13c1.111-1.219,1.724-2.811,1.724-4.459v-59.054l80.325-94.04 C237.144,28.634,237.526,25.867,236.445,23.522z"
+              "M236.445,23.522c-1.085-2.35-3.438-3.855-6.025-3.855H25.58c-2.586,0-4.936,1.501-6.024,3.855 c-1.08,2.349-0.698,5.112,0.983,7.083l80.328,94.039v104.181c0,2.74,1.682,5.194,4.237,6.188c0.778,0.3,1.588,0.445,2.392,0.445 c1.832,0,3.626-0.762,4.91-2.17l41.012-45.13c1.111-1.219,1.724-2.811,1.724-4.459v-59.054l80.325-94.04 C237.144,28.634,237.526,25.867,236.445,23.522z",
           })
         );
       }
@@ -2147,11 +2152,11 @@ var CLSTAMP = "6296065";
             y: "0px",
             width: "256px",
             height: "256px",
-            viewBox: "0 0 256 256"
+            viewBox: "0 0 256 256",
           },
           o.createElement("path", {
             d:
-              "M16.757,233.795c-1.324,3.973,2.455,7.752,6.427,6.428l50.912-16.971l-40.368-40.367L16.757,233.795z"
+              "M16.757,233.795c-1.324,3.973,2.455,7.752,6.427,6.428l50.912-16.971l-40.368-40.367L16.757,233.795z",
           }),
           o.createElement("rect", {
             x: "83.614",
@@ -2159,7 +2164,7 @@ var CLSTAMP = "6296065";
             transform:
               "matrix(-0.7071 -0.7071 0.7071 -0.7071 93.7468 324.5916)",
             width: "60.971",
-            height: "134.827"
+            height: "134.827",
           }),
           o.createElement("rect", {
             x: "149.28",
@@ -2167,11 +2172,11 @@ var CLSTAMP = "6296065";
             transform:
               "matrix(-0.7071 -0.7071 0.7071 -0.7071 252.0431 259.4951)",
             width: "60.971",
-            height: "18.862"
+            height: "18.862",
           }),
           o.createElement("path", {
             d:
-              "M233.545,37.803l-14.368-14.369c-7.928-7.928-20.846-7.897-28.809,0.064l-14.305,14.307l43.112,43.111l14.306-14.305 C241.511,58.582,241.513,45.771,233.545,37.803z"
+              "M233.545,37.803l-14.368-14.369c-7.928-7.928-20.846-7.897-28.809,0.064l-14.305,14.307l43.112,43.111l14.306-14.305 C241.511,58.582,241.513,45.771,233.545,37.803z",
           })
         );
       }
@@ -2187,18 +2192,18 @@ var CLSTAMP = "6296065";
             y: "0px",
             width: "256px",
             height: "256px",
-            viewBox: "0 0 256 256"
+            viewBox: "0 0 256 256",
           },
           o.createElement("polyline", {
             className: "I",
             points:
-              "86.883,110.957 152.894,110.957 152.894,181.406 177.117,181.406 177.117,202.485 86.883,202.485 86.883,181.775 109.441,181.775 109.441,130.372 86.883,130.372 "
+              "86.883,110.957 152.894,110.957 152.894,181.406 177.117,181.406 177.117,202.485 86.883,202.485 86.883,181.775 109.441,181.775 109.441,130.372 86.883,130.372 ",
           }),
           o.createElement("circle", {
             className: "I",
             cx: "128.47",
             cy: "67.607",
-            r: "25.517"
+            r: "25.517",
           }),
           o.createElement("circle", {
             fill: "none",
@@ -2207,7 +2212,7 @@ var CLSTAMP = "6296065";
             strokeMiterlimit: "10",
             cx: "128",
             cy: "128",
-            r: "116.833"
+            r: "116.833",
           })
         );
       }
@@ -2223,11 +2228,11 @@ var CLSTAMP = "6296065";
             width: "100px",
             x: "0px",
             y: "0px",
-            viewBox: "0 0 100 100"
+            viewBox: "0 0 100 100",
           },
           o.createElement("path", {
             d:
-              "M82.5,10.8c-0.8-0.7-1.9-0.8-2.9-0.7l-7.2,1.8c-7.3,1.8-15.1,1.4-22.3-1.2h-0.1c-7.8-2.9-16.2-3.5-24.2-1.9l-2.8,0.6V8.5  c0-1.9-1.5-3.5-3.5-3.5S16,6.5,16,8.5v5.1v38.8v39.2c0,1.9,1.5,3.5,3.5,3.5s3.5-1.5,3.5-3.5V55.1l4-0.8c6.9-1.4,14-0.8,20.5,1.7  l0.3,0.1c5,1.8,10.2,2.8,15.5,2.8c3.6,0,7.3-0.4,10.9-1.4l7.2-1.8c1.5-0.4,2.6-1.8,2.6-3.3V13.6C83.9,12.5,83.3,11.5,82.5,10.8z"
+              "M82.5,10.8c-0.8-0.7-1.9-0.8-2.9-0.7l-7.2,1.8c-7.3,1.8-15.1,1.4-22.3-1.2h-0.1c-7.8-2.9-16.2-3.5-24.2-1.9l-2.8,0.6V8.5  c0-1.9-1.5-3.5-3.5-3.5S16,6.5,16,8.5v5.1v38.8v39.2c0,1.9,1.5,3.5,3.5,3.5s3.5-1.5,3.5-3.5V55.1l4-0.8c6.9-1.4,14-0.8,20.5,1.7  l0.3,0.1c5,1.8,10.2,2.8,15.5,2.8c3.6,0,7.3-0.4,10.9-1.4l7.2-1.8c1.5-0.4,2.6-1.8,2.6-3.3V13.6C83.9,12.5,83.3,11.5,82.5,10.8z",
           })
         );
       }
@@ -2243,19 +2248,19 @@ var CLSTAMP = "6296065";
             y: "0px",
             width: "256px",
             height: "256px",
-            viewBox: "0 0 256 256"
+            viewBox: "0 0 256 256",
           },
           o.createElement("path", {
             d:
-              "M171.176,136.219c-5.516-5.516-14.166-5.948-20.223-1.406L92.125,75.984l-8.002-29.738c-0.324-1.406-1.73-3.027-3.028-3.785 L46.49,24.186c-1.298-0.648-3.136-0.433-4.218,0.648L25.295,41.813c-0.974,0.973-1.298,2.92-0.649,4.217l18.276,34.605 c0.648,1.297,2.379,2.596,3.785,3.027l29.739,8.003l58.828,58.828c-4.542,6.056-4.109,14.707,1.405,20.222l56.882,56.882 c6.056,6.056,15.896,6.056,21.845,0l12.544-12.544c6.056-6.056,6.056-15.788,0-21.845L171.176,136.219z"
+              "M171.176,136.219c-5.516-5.516-14.166-5.948-20.223-1.406L92.125,75.984l-8.002-29.738c-0.324-1.406-1.73-3.027-3.028-3.785 L46.49,24.186c-1.298-0.648-3.136-0.433-4.218,0.648L25.295,41.813c-0.974,0.973-1.298,2.92-0.649,4.217l18.276,34.605 c0.648,1.297,2.379,2.596,3.785,3.027l29.739,8.003l58.828,58.828c-4.542,6.056-4.109,14.707,1.405,20.222l56.882,56.882 c6.056,6.056,15.896,6.056,21.845,0l12.544-12.544c6.056-6.056,6.056-15.788,0-21.845L171.176,136.219z",
           }),
           o.createElement("path", {
             d:
-              "M153.116,122.16c2.271-0.648,4.65-0.973,7.138-0.973c0.865,0,1.622,0,2.486,0.107l26.928-26.927 c12.328,2.92,25.846-0.324,35.361-9.948c9.517-9.625,12.869-23.034,9.949-35.254l-20.33,20.33l-21.845-5.84l-5.84-21.952 l20.331-20.33c-12.221-2.92-25.738,0.324-35.254,9.948c-9.625,9.625-12.869,23.143-9.949,35.362L129.866,98.91L153.116,122.16z"
+              "M153.116,122.16c2.271-0.648,4.65-0.973,7.138-0.973c0.865,0,1.622,0,2.486,0.107l26.928-26.927 c12.328,2.92,25.846-0.324,35.361-9.948c9.517-9.625,12.869-23.034,9.949-35.254l-20.33,20.33l-21.845-5.84l-5.84-21.952 l20.331-20.33c-12.221-2.92-25.738,0.324-35.254,9.948c-9.625,9.625-12.869,23.143-9.949,35.362L129.866,98.91L153.116,122.16z",
           }),
           o.createElement("path", {
             d:
-              "M99.371,129.406l-32.226,32.226c-12.328-2.92-25.845,0.324-35.362,9.948c-9.517,9.625-12.869,23.034-9.949,35.254 l20.331-20.33l21.953,5.84l5.839,21.952l-20.331,20.33c12.22,2.92,25.737-0.324,35.254-9.949 c9.625-9.624,12.869-23.142,9.949-35.361l27.035-27.035c-0.325-3.136,0-6.38,0.865-9.517L99.371,129.406z"
+              "M99.371,129.406l-32.226,32.226c-12.328-2.92-25.845,0.324-35.362,9.948c-9.517,9.625-12.869,23.034-9.949,35.254 l20.331-20.33l21.953,5.84l5.839,21.952l-20.331,20.33c12.22,2.92,25.737-0.324,35.254-9.949 c9.625-9.624,12.869-23.142,9.949-35.361l27.035-27.035c-0.325-3.136,0-6.38,0.865-9.517L99.371,129.406z",
           })
         );
       }
@@ -2268,7 +2273,7 @@ var CLSTAMP = "6296065";
             xmlns: "http://www.w3.org/2000/svg",
             x: "0px",
             y: "0px",
-            viewBox: "0 0 256 256"
+            viewBox: "0 0 256 256",
           },
           o.createElement(
             "g",
@@ -2280,11 +2285,11 @@ var CLSTAMP = "6296065";
             ),
             o.createElement("path", {
               d:
-                "M206.3,36.6c-19.4,0-35.8,14.1-40.3,33H24.8c-6,0-10.8,4.8-10.8,10.8s4.8,10.8,10.8,10.8h141.3\r\n\t\t\t\tc4.7,18.6,20.9,32.4,40.2,32.4c22.9,0,41.5-19.5,41.5-43.5C247.9,56.2,229.2,36.6,206.3,36.6z M206.3,109.7\r\n\t\t\t\tc-15.2,0-27.5-13.2-27.5-29.5c0-16.3,12.4-29.5,27.5-29.5s27.5,13.2,27.5,29.5C233.9,96.4,221.5,109.7,206.3,109.7z"
+                "M206.3,36.6c-19.4,0-35.8,14.1-40.3,33H24.8c-6,0-10.8,4.8-10.8,10.8s4.8,10.8,10.8,10.8h141.3\r\n\t\t\t\tc4.7,18.6,20.9,32.4,40.2,32.4c22.9,0,41.5-19.5,41.5-43.5C247.9,56.2,229.2,36.6,206.3,36.6z M206.3,109.7\r\n\t\t\t\tc-15.2,0-27.5-13.2-27.5-29.5c0-16.3,12.4-29.5,27.5-29.5s27.5,13.2,27.5,29.5C233.9,96.4,221.5,109.7,206.3,109.7z",
             }),
             o.createElement("path", {
               d:
-                "M230.4,157.3H107.9c-4.6-14.6-18.3-25.2-34.3-25.2s-29.7,10.6-34.3,25.2H24.8c-6,0-10.8,4.8-10.8,10.8\r\n\t\t\t\tS18.9,179,24.8,179h14.3c4.6,14.6,18.3,25.2,34.3,25.2s29.7-10.6,34.3-25.2h122.5c6,0,10.8-4.8,10.8-10.8S236.4,157.3,230.4,157.3z\r\n\t\t\t\tM73.5,189.8c-8,0-14.9-4.3-18.7-10.8l0,0c-0.7-1.2-1.3-2.4-1.7-3.7c0,0,0-0.1,0-0.1c-0.1-0.4-0.2-0.8-0.4-1.2c0-0.1,0-0.1,0-0.2\r\n\t\t\t\tc-0.2-0.8-0.4-1.7-0.5-2.6c0-0.1,0-0.2,0-0.3c0-0.3-0.1-0.7-0.1-1c0-0.1,0-0.2,0-0.4c0-0.4,0-0.9,0-1.3s0-0.9,0-1.3\r\n\t\t\t\tc0-0.1,0-0.2,0-0.4c0-0.3,0.1-0.7,0.1-1c0-0.1,0-0.2,0-0.3c0.1-0.9,0.3-1.8,0.5-2.6c0-0.1,0-0.1,0-0.2c0.1-0.4,0.2-0.8,0.4-1.2\r\n\t\t\t\tc0,0,0-0.1,0-0.1c0.5-1.3,1-2.6,1.7-3.7c3.7-6.4,10.7-10.8,18.7-10.8c8,0,14.9,4.3,18.7,10.8c0.7,1.2,1.3,2.4,1.7,3.7\r\n\t\t\t\tc0,0,0,0.1,0,0.1c0.1,0.4,0.3,0.8,0.4,1.2c0,0.1,0,0.1,0,0.2c0.2,0.8,0.4,1.7,0.5,2.6c0,0.1,0,0.2,0,0.3c0,0.3,0.1,0.7,0.1,1\r\n\t\t\t\tc0,0.1,0,0.2,0,0.4c0,0.4,0,0.9,0,1.3s0,0.9,0,1.3c0,0.1,0,0.2,0,0.4c0,0.3-0.1,0.7-0.1,1c0,0.1,0,0.2,0,0.3\r\n\t\t\t\tc-0.1,0.9-0.3,1.8-0.5,2.6c0,0.1,0,0.1,0,0.2c-0.1,0.4-0.2,0.8-0.4,1.2c0,0,0,0.1,0,0.1c-0.5,1.3-1,2.6-1.7,3.7l0,0\r\n\t\t\t\tC88.5,185.4,81.5,189.8,73.5,189.8z"
+                "M230.4,157.3H107.9c-4.6-14.6-18.3-25.2-34.3-25.2s-29.7,10.6-34.3,25.2H24.8c-6,0-10.8,4.8-10.8,10.8\r\n\t\t\t\tS18.9,179,24.8,179h14.3c4.6,14.6,18.3,25.2,34.3,25.2s29.7-10.6,34.3-25.2h122.5c6,0,10.8-4.8,10.8-10.8S236.4,157.3,230.4,157.3z\r\n\t\t\t\tM73.5,189.8c-8,0-14.9-4.3-18.7-10.8l0,0c-0.7-1.2-1.3-2.4-1.7-3.7c0,0,0-0.1,0-0.1c-0.1-0.4-0.2-0.8-0.4-1.2c0-0.1,0-0.1,0-0.2\r\n\t\t\t\tc-0.2-0.8-0.4-1.7-0.5-2.6c0-0.1,0-0.2,0-0.3c0-0.3-0.1-0.7-0.1-1c0-0.1,0-0.2,0-0.4c0-0.4,0-0.9,0-1.3s0-0.9,0-1.3\r\n\t\t\t\tc0-0.1,0-0.2,0-0.4c0-0.3,0.1-0.7,0.1-1c0-0.1,0-0.2,0-0.3c0.1-0.9,0.3-1.8,0.5-2.6c0-0.1,0-0.1,0-0.2c0.1-0.4,0.2-0.8,0.4-1.2\r\n\t\t\t\tc0,0,0-0.1,0-0.1c0.5-1.3,1-2.6,1.7-3.7c3.7-6.4,10.7-10.8,18.7-10.8c8,0,14.9,4.3,18.7,10.8c0.7,1.2,1.3,2.4,1.7,3.7\r\n\t\t\t\tc0,0,0,0.1,0,0.1c0.1,0.4,0.3,0.8,0.4,1.2c0,0.1,0,0.1,0,0.2c0.2,0.8,0.4,1.7,0.5,2.6c0,0.1,0,0.2,0,0.3c0,0.3,0.1,0.7,0.1,1\r\n\t\t\t\tc0,0.1,0,0.2,0,0.4c0,0.4,0,0.9,0,1.3s0,0.9,0,1.3c0,0.1,0,0.2,0,0.4c0,0.3-0.1,0.7-0.1,1c0,0.1,0,0.2,0,0.3\r\n\t\t\t\tc-0.1,0.9-0.3,1.8-0.5,2.6c0,0.1,0,0.1,0,0.2c-0.1,0.4-0.2,0.8-0.4,1.2c0,0,0,0.1,0,0.1c-0.5,1.3-1,2.6-1.7,3.7l0,0\r\n\t\t\t\tC88.5,185.4,81.5,189.8,73.5,189.8z",
             })
           )
         );
@@ -2298,7 +2303,7 @@ var CLSTAMP = "6296065";
             xmlns: "http://www.w3.org/2000/svg",
             x: "0px",
             y: "0px",
-            viewBox: "0 0 256 256"
+            viewBox: "0 0 256 256",
           },
           o.createElement("circle", { cx: "126", cy: "134", r: "20.6" }),
           o.createElement("circle", { cx: "189.4", cy: "134", r: "20.6" }),
@@ -2312,20 +2317,20 @@ var CLSTAMP = "6296065";
             xmlns: "http://www.w3.org/2000/svg",
             viewBox: "0 0 100 100",
             x: "0px",
-            y: "0px"
+            y: "0px",
           },
           o.createElement("title", null, "help and info"),
           o.createElement("path", {
             d:
-              "M50,7A43,43,0,1,1,7,50,43,43,0,0,1,50,7m0-7a50,50,0,1,0,50,50A50,50,0,0,0,50,0h0Z"
+              "M50,7A43,43,0,1,1,7,50,43,43,0,0,1,50,7m0-7a50,50,0,1,0,50,50A50,50,0,0,0,50,0h0Z",
           }),
           o.createElement("path", {
             d:
-              "M50.79,25a45.51,45.51,0,0,1,5.29.87c5.33,1.51,8.5,5.77,8.9,11.43a10.4,10.4,0,0,1-4.21,9.5c-1.42,1.1-2.91,2.1-4.34,3.18a7.06,7.06,0,0,0-3.18,6.3,4,4,0,0,1-2.88,4,4.42,4.42,0,0,1-5.18-1.55,4.19,4.19,0,0,1-.59-2.07A13.89,13.89,0,0,1,50.3,45,41.55,41.55,0,0,0,54.83,41,5,5,0,0,0,56,38.19c0.23-2.83-1.59-4.65-4.52-4.84-3.54-.23-6.52.69-8.6,3.82a4.19,4.19,0,0,1-4.35,2c-3-.5-4.29-2.94-3.06-5.75a12.84,12.84,0,0,1,6.25-6.2A21.71,21.71,0,0,1,50.79,25Z"
+              "M50.79,25a45.51,45.51,0,0,1,5.29.87c5.33,1.51,8.5,5.77,8.9,11.43a10.4,10.4,0,0,1-4.21,9.5c-1.42,1.1-2.91,2.1-4.34,3.18a7.06,7.06,0,0,0-3.18,6.3,4,4,0,0,1-2.88,4,4.42,4.42,0,0,1-5.18-1.55,4.19,4.19,0,0,1-.59-2.07A13.89,13.89,0,0,1,50.3,45,41.55,41.55,0,0,0,54.83,41,5,5,0,0,0,56,38.19c0.23-2.83-1.59-4.65-4.52-4.84-3.54-.23-6.52.69-8.6,3.82a4.19,4.19,0,0,1-4.35,2c-3-.5-4.29-2.94-3.06-5.75a12.84,12.84,0,0,1,6.25-6.2A21.71,21.71,0,0,1,50.79,25Z",
           }),
           o.createElement("path", {
             d:
-              "M53.78,69.88C53.8,73.09,52,75,48.85,75s-5.25-1.84-5.26-4.53c0-3.73,1.67-5.59,5-5.69C51.3,64.7,54.12,66.36,53.78,69.88Z"
+              "M53.78,69.88C53.8,73.09,52,75,48.85,75s-5.25-1.84-5.26-4.53c0-3.73,1.67-5.59,5-5.69C51.3,64.7,54.12,66.36,53.78,69.88Z",
           })
         );
       }
@@ -2341,11 +2346,11 @@ var CLSTAMP = "6296065";
             y: "0px",
             width: "256px",
             height: "256px",
-            viewBox: "0 0 409.6 409.6"
+            viewBox: "0 0 409.6 409.6",
           },
           o.createElement("path", {
             d:
-              "M109.9,96.2H302c16.3,0,29.6,13,29.6,29v101.4c0,16-13.2,29-29.6,29h-90.1l-57.6,57.9L138,255.6h-28.1\r\n\t\t\t\tc-16.3,0-29.6-13-29.6-29V125.2C80.4,109.2,93.6,96.2,109.9,96.2z"
+              "M109.9,96.2H302c16.3,0,29.6,13,29.6,29v101.4c0,16-13.2,29-29.6,29h-90.1l-57.6,57.9L138,255.6h-28.1\r\n\t\t\t\tc-16.3,0-29.6-13-29.6-29V125.2C80.4,109.2,93.6,96.2,109.9,96.2z",
           })
         );
       }
@@ -2361,11 +2366,11 @@ var CLSTAMP = "6296065";
             y: "0px",
             width: "256px",
             height: "256px",
-            viewBox: "0 0 409.6 409.6"
+            viewBox: "0 0 409.6 409.6",
           },
           o.createElement("path", {
             d:
-              "M225.1,328.8c-12.6,0-15.3-1.9-29.5-5.3c-18.7-4.8-35.3-6.3-51-5.3c-3.5,0.5-7.1,0.5-10.6,1l-7.6,1\r\n\t\t\t\tc-2.5,0.5-4.5-1-5.6-3.4c-12.6-36.2-16.6-74.7-11.6-117.6c0-2.4,2-3.9,4.5-4.3l4.5-0.5c3.5-0.5,6.6-1,10.1-1c5-0.5,9.6-2.9,13.1-7.2\r\n\t\t\t\tl0.5-1c0.5-0.5,1-1.4,1.5-2.4c9.1-14.5,22.2-25.6,36.8-37.6c7.6-6.3,14.1-12.5,20.2-18.3c6.6-7.2,10.1-16.4,10.6-27\r\n\t\t\t\tc0-9.6,5.6-15.4,16.1-16.4c13.6-1,22.7,3.9,27.8,15.9c7.6,16.4-4.4,33.3-13.9,50.6c-2,3.9-4.5,7.2-7.1,10.6c-1,1.4-2,2.9-3,4.3\r\n\t\t\t\tl-3.5,4.8c-1.5,1.9-3,3.9-4.5,6.3c4,0,7.6,0,11.6,0c11.1-0.5,34.6-0.5,46.7,1.4c7.6,1,13.6,4.8,17.7,10.1c3.5,4.8,4.5,11.1,3,17.8\r\n\t\t\t\tc-0.5,2.9-2,5.8-5,9.2c-1.5,1.9-14.4,3.9-16.5,5.3h10.9c2.5,1.9,5,3.9,7.1,6.3c4,4.3,5.6,9.2,5,14.9c-0.5,5.3-3,10.6-7.6,14\r\n\t\t\t\tc-2.5,1.9-16,3.9-18.5,5.3c5,5.3,18,12.1,16.5,19.3c-2,9.6-7.6,15.4-18.2,17.8c2.5,3.9,3,8.7,1.5,13.5c-0.5,2.4-1.5,4.3-2.5,6.3\r\n\t\t\t\tc-2.5,5.3-6.6,8.2-13.1,9.6C253.2,327.8,233.7,328.8,225.1,328.8z"
+              "M225.1,328.8c-12.6,0-15.3-1.9-29.5-5.3c-18.7-4.8-35.3-6.3-51-5.3c-3.5,0.5-7.1,0.5-10.6,1l-7.6,1\r\n\t\t\t\tc-2.5,0.5-4.5-1-5.6-3.4c-12.6-36.2-16.6-74.7-11.6-117.6c0-2.4,2-3.9,4.5-4.3l4.5-0.5c3.5-0.5,6.6-1,10.1-1c5-0.5,9.6-2.9,13.1-7.2\r\n\t\t\t\tl0.5-1c0.5-0.5,1-1.4,1.5-2.4c9.1-14.5,22.2-25.6,36.8-37.6c7.6-6.3,14.1-12.5,20.2-18.3c6.6-7.2,10.1-16.4,10.6-27\r\n\t\t\t\tc0-9.6,5.6-15.4,16.1-16.4c13.6-1,22.7,3.9,27.8,15.9c7.6,16.4-4.4,33.3-13.9,50.6c-2,3.9-4.5,7.2-7.1,10.6c-1,1.4-2,2.9-3,4.3\r\n\t\t\t\tl-3.5,4.8c-1.5,1.9-3,3.9-4.5,6.3c4,0,7.6,0,11.6,0c11.1-0.5,34.6-0.5,46.7,1.4c7.6,1,13.6,4.8,17.7,10.1c3.5,4.8,4.5,11.1,3,17.8\r\n\t\t\t\tc-0.5,2.9-2,5.8-5,9.2c-1.5,1.9-14.4,3.9-16.5,5.3h10.9c2.5,1.9,5,3.9,7.1,6.3c4,4.3,5.6,9.2,5,14.9c-0.5,5.3-3,10.6-7.6,14\r\n\t\t\t\tc-2.5,1.9-16,3.9-18.5,5.3c5,5.3,18,12.1,16.5,19.3c-2,9.6-7.6,15.4-18.2,17.8c2.5,3.9,3,8.7,1.5,13.5c-0.5,2.4-1.5,4.3-2.5,6.3\r\n\t\t\t\tc-2.5,5.3-6.6,8.2-13.1,9.6C253.2,327.8,233.7,328.8,225.1,328.8z",
           })
         );
       }
@@ -2380,75 +2385,75 @@ var CLSTAMP = "6296065";
             height: "32",
             viewBox: "0 0 32 32",
             fill: "none",
-            xmlns: "http://www.w3.org/2000/svg"
+            xmlns: "http://www.w3.org/2000/svg",
           },
           o.createElement("circle", {
             cx: "16",
             cy: "16",
             r: "16",
-            fill: "#BDCCDB"
+            fill: "#BDCCDB",
           }),
           o.createElement("circle", {
             cx: "16",
             cy: "16",
             r: "16",
-            fill: "url(#paint0_linear)"
+            fill: "url(#paint0_linear)",
           }),
           o.createElement("circle", {
             cx: "16",
             cy: "16",
             r: "14.2745",
-            fill: "#98A8B7"
+            fill: "#98A8B7",
           }),
           o.createElement("circle", {
             cx: "16",
             cy: "16",
             r: "14.2745",
-            fill: "url(#paint1_linear)"
+            fill: "url(#paint1_linear)",
           }),
           o.createElement("circle", {
             cx: "16",
             cy: "16",
             r: "14.2745",
-            stroke: "#7A92A9"
+            stroke: "#7A92A9",
           }),
           o.createElement("circle", {
             cx: "16",
             cy: "16",
             r: "11.1309",
-            fill: "#BDCCDB"
+            fill: "#BDCCDB",
           }),
           o.createElement("circle", {
             cx: "16",
             cy: "16",
             r: "11.1309",
-            fill: "url(#paint2_linear)"
+            fill: "url(#paint2_linear)",
           }),
           o.createElement("circle", {
             cx: "16",
             cy: "16",
             r: "10.2107",
-            fill: "#5792C8"
+            fill: "#5792C8",
           }),
           o.createElement("circle", {
             cx: "16",
             cy: "16",
             r: "10.2107",
-            fill: "url(#paint3_linear)"
+            fill: "url(#paint3_linear)",
           }),
           o.createElement("path", {
             fillRule: "evenodd",
             clipRule: "evenodd",
             d:
               "M20.6016 17.9523C22.8425 17.9523 24.6591 16.1357 24.6591 13.8948C24.6591 11.6539 22.8425 9.83727 20.6016 9.83727C18.3607 9.83727 16.5441 11.6539 16.5441 13.8948C16.5441 13.9609 16.5457 14.0266 16.5488 14.0919L14.0477 17.6314C14.0205 17.6306 13.9933 17.6303 13.966 17.6303C13.2606 17.6303 12.6127 17.8767 12.1038 18.2882L6.33398 15.9235C6.33398 17.4638 6.62381 19.1438 6.97803 19.5302C7.16531 19.7345 9.1256 20.4564 11.0502 21.127C11.3013 22.5093 12.5112 23.5574 13.966 23.5574C15.6027 23.5574 16.9296 22.2306 16.9296 20.5939C16.9296 20.5326 16.9277 20.4717 16.924 20.4113L20.2613 17.9382C20.3735 17.9475 20.487 17.9523 20.6016 17.9523ZM12.1995 21.5232C12.5338 22.1572 13.1994 22.5894 13.966 22.5894C15.0681 22.5894 15.9615 21.696 15.9615 20.5939C15.9615 19.4917 15.0681 18.5983 13.966 18.5983C13.7007 18.5983 13.4475 18.65 13.216 18.744L14.1914 19.1438L14.1886 19.1617C14.8832 19.2688 15.4151 19.8692 15.4151 20.5939C15.4151 21.3942 14.7663 22.043 13.966 22.043C13.8901 22.043 13.8157 22.0371 13.743 22.0259L13.7405 22.042L13.6136 21.9998C13.5414 21.9818 13.4713 21.9583 13.4038 21.9299C13.0402 21.8084 12.6309 21.6704 12.1995 21.5232ZM20.6016 16.5998C22.0956 16.5998 23.3066 15.3887 23.3066 13.8948C23.3066 12.4008 22.0956 11.1898 20.6016 11.1898C19.1077 11.1898 17.8966 12.4008 17.8966 13.8948C17.8966 15.3887 19.1077 16.5998 20.6016 16.5998ZM22.4 13.8948C22.4 14.888 21.5948 15.6932 20.6016 15.6932C19.6083 15.6932 18.8032 14.888 18.8032 13.8948C18.8032 12.9015 19.6083 12.0964 20.6016 12.0964C21.5948 12.0964 22.4 12.9015 22.4 13.8948Z",
-            fill: "#BDCCDB"
+            fill: "#BDCCDB",
           }),
           o.createElement("path", {
             fillRule: "evenodd",
             clipRule: "evenodd",
             d:
               "M20.6016 17.9523C22.8425 17.9523 24.6591 16.1357 24.6591 13.8948C24.6591 11.6539 22.8425 9.83727 20.6016 9.83727C18.3607 9.83727 16.5441 11.6539 16.5441 13.8948C16.5441 13.9609 16.5457 14.0266 16.5488 14.0919L14.0477 17.6314C14.0205 17.6306 13.9933 17.6303 13.966 17.6303C13.2606 17.6303 12.6127 17.8767 12.1038 18.2882L6.33398 15.9235C6.33398 17.4638 6.62381 19.1438 6.97803 19.5302C7.16531 19.7345 9.1256 20.4564 11.0502 21.127C11.3013 22.5093 12.5112 23.5574 13.966 23.5574C15.6027 23.5574 16.9296 22.2306 16.9296 20.5939C16.9296 20.5326 16.9277 20.4717 16.924 20.4113L20.2613 17.9382C20.3735 17.9475 20.487 17.9523 20.6016 17.9523ZM12.1995 21.5232C12.5338 22.1572 13.1994 22.5894 13.966 22.5894C15.0681 22.5894 15.9615 21.696 15.9615 20.5939C15.9615 19.4917 15.0681 18.5983 13.966 18.5983C13.7007 18.5983 13.4475 18.65 13.216 18.744L14.1914 19.1438L14.1886 19.1617C14.8832 19.2688 15.4151 19.8692 15.4151 20.5939C15.4151 21.3942 14.7663 22.043 13.966 22.043C13.8901 22.043 13.8157 22.0371 13.743 22.0259L13.7405 22.042L13.6136 21.9998C13.5414 21.9818 13.4713 21.9583 13.4038 21.9299C13.0402 21.8084 12.6309 21.6704 12.1995 21.5232ZM20.6016 16.5998C22.0956 16.5998 23.3066 15.3887 23.3066 13.8948C23.3066 12.4008 22.0956 11.1898 20.6016 11.1898C19.1077 11.1898 17.8966 12.4008 17.8966 13.8948C17.8966 15.3887 19.1077 16.5998 20.6016 16.5998ZM22.4 13.8948C22.4 14.888 21.5948 15.6932 20.6016 15.6932C19.6083 15.6932 18.8032 14.888 18.8032 13.8948C18.8032 12.9015 19.6083 12.0964 20.6016 12.0964C21.5948 12.0964 22.4 12.9015 22.4 13.8948Z",
-            fill: "url(#paint4_linear)"
+            fill: "url(#paint4_linear)",
           }),
           o.createElement(
             "defs",
@@ -2461,16 +2466,16 @@ var CLSTAMP = "6296065";
                 y1: "1.75",
                 x2: "23.1875",
                 y2: "22.9375",
-                gradientUnits: "userSpaceOnUse"
+                gradientUnits: "userSpaceOnUse",
               },
               o.createElement("stop", {
                 stopColor: "white",
-                stopOpacity: "0.54"
+                stopOpacity: "0.54",
               }),
               o.createElement("stop", {
                 offset: "1",
                 stopColor: "white",
-                stopOpacity: "0"
+                stopOpacity: "0",
               })
             ),
             o.createElement(
@@ -2481,16 +2486,16 @@ var CLSTAMP = "6296065";
                 y1: "3.125",
                 x2: "22.4375",
                 y2: "24.625",
-                gradientUnits: "userSpaceOnUse"
+                gradientUnits: "userSpaceOnUse",
               },
               o.createElement("stop", {
                 stopColor: "white",
-                stopOpacity: "0.25"
+                stopOpacity: "0.25",
               }),
               o.createElement("stop", {
                 offset: "1",
                 stopColor: "white",
-                stopOpacity: "0"
+                stopOpacity: "0",
               })
             ),
             o.createElement(
@@ -2501,16 +2506,16 @@ var CLSTAMP = "6296065";
                 y1: "6.375",
                 x2: "19.6875",
                 y2: "23.125",
-                gradientUnits: "userSpaceOnUse"
+                gradientUnits: "userSpaceOnUse",
               },
               o.createElement("stop", {
                 stopColor: "white",
-                stopOpacity: "0.65"
+                stopOpacity: "0.65",
               }),
               o.createElement("stop", {
                 offset: "1",
                 stopColor: "white",
-                stopOpacity: "0"
+                stopOpacity: "0",
               })
             ),
             o.createElement(
@@ -2521,7 +2526,7 @@ var CLSTAMP = "6296065";
                 y1: "8",
                 x2: "20.5",
                 y2: "26.2107",
-                gradientUnits: "userSpaceOnUse"
+                gradientUnits: "userSpaceOnUse",
               },
               o.createElement("stop", { stopColor: "#72A5D3" }),
               o.createElement("stop", { offset: "1", stopColor: "#4F7294" })
@@ -2534,16 +2539,16 @@ var CLSTAMP = "6296065";
                 y1: "13.5625",
                 x2: "18.5625",
                 y2: "23.5574",
-                gradientUnits: "userSpaceOnUse"
+                gradientUnits: "userSpaceOnUse",
               },
               o.createElement("stop", {
                 stopColor: "white",
-                stopOpacity: "0.44"
+                stopOpacity: "0.44",
               }),
               o.createElement("stop", {
                 offset: "1",
                 stopColor: "white",
-                stopOpacity: "0"
+                stopOpacity: "0",
               })
             )
           )
@@ -2561,23 +2566,23 @@ var CLSTAMP = "6296065";
             viewBox: "0 0 101 101",
             enableBackground: "new 0 0 101 101",
             xmlns: "http://www.w3.org/2000/svg",
-            version: "1.1"
+            version: "1.1",
           },
           o.createElement(
             "g",
             null,
             o.createElement("path", {
               d:
-                "M16.929,30.115 M84.446,84.262c0-37.271-30.323-67.613-67.587-67.613l0,0l0.069,13.467   c29.777,0.039,53.995,24.256,54.051,54.042L84.446,84.262z"
+                "M16.929,30.115 M84.446,84.262c0-37.271-30.323-67.613-67.587-67.613l0,0l0.069,13.467   c29.777,0.039,53.995,24.256,54.051,54.042L84.446,84.262z",
             }),
             o.createElement("path", {
               d:
-                "M16.843,53.089 M61.472,84.262c0-24.616-20.026-44.639-44.628-44.639l0,0v13.466c17.182,0,31.161,13.984,31.161,31.173   H61.472z"
+                "M16.843,53.089 M61.472,84.262c0-24.616-20.026-44.639-44.628-44.639l0,0v13.466c17.182,0,31.161,13.984,31.161,31.173   H61.472z",
             }),
             o.createElement("circle", {
               cx: "26.695",
               cy: "74.305",
-              r: "9.812"
+              r: "9.812",
             })
           )
         );
@@ -2590,12 +2595,12 @@ var CLSTAMP = "6296065";
             width: "24px",
             viewBox: "0 0 24 24",
             x: "0px",
-            y: "0px"
+            y: "0px",
           }),
           o.createElement("path", {
             fill: "white",
             d:
-              "M3.3,0.5v23h17.5v-23H3.3z M10.2,9.6l-3-2.2h3.7L12,3.9l1.2,3.6H17l-3,2.2l1.2,3.6L12,11l-3,2.2L10.2,9.6z M17.3,16.1 M17.4,18H6.6v-1.2h10.7L17.4,18L17.4,18z M17.3,19.9"
+              "M3.3,0.5v23h17.5v-23H3.3z M10.2,9.6l-3-2.2h3.7L12,3.9l1.2,3.6H17l-3,2.2l1.2,3.6L12,11l-3,2.2L10.2,9.6z M17.3,16.1 M17.4,18H6.6v-1.2h10.7L17.4,18L17.4,18z M17.3,19.9",
           })
         );
       }
@@ -2609,12 +2614,12 @@ var CLSTAMP = "6296065";
             x: "0px",
             y: "0px",
             viewBox: "0 0 32 32",
-            enableBackground: "new 0 0 32 32"
+            enableBackground: "new 0 0 32 32",
           },
           o.createElement("path", {
             fill: "white",
             d:
-              "M24.68,19.53l6.9-5.69c0.98-0.81,0.47-2.39-0.81-2.46l-8.89-0.54c-0.54-0.03-1.01-0.37-1.21-0.88L17.4,1.61\r\n\t\t\tc-0.47-1.18-2.12-1.18-2.59,0l-3.27,8.32c-0.2,0.51-0.67,0.84-1.21,0.88l-8.92,0.54c-1.28,0.07-1.78,1.65-0.81,2.46l6.9,5.66\r\n\t\t\tc0.4,0.34,0.61,0.91,0.47,1.41l-2.26,8.65c-0.3,1.21,1.01,2.19,2.09,1.52l7.51-4.81c0.47-0.3,1.04-0.3,1.48,0l7.54,4.81\r\n\t\t\tc1.08,0.67,2.39-0.3,2.09-1.52l-2.26-8.62C24.07,20.4,24.24,19.86,24.68,19.53z"
+              "M24.68,19.53l6.9-5.69c0.98-0.81,0.47-2.39-0.81-2.46l-8.89-0.54c-0.54-0.03-1.01-0.37-1.21-0.88L17.4,1.61\r\n\t\t\tc-0.47-1.18-2.12-1.18-2.59,0l-3.27,8.32c-0.2,0.51-0.67,0.84-1.21,0.88l-8.92,0.54c-1.28,0.07-1.78,1.65-0.81,2.46l6.9,5.66\r\n\t\t\tc0.4,0.34,0.61,0.91,0.47,1.41l-2.26,8.65c-0.3,1.21,1.01,2.19,2.09,1.52l7.51-4.81c0.47-0.3,1.04-0.3,1.48,0l7.54,4.81\r\n\t\t\tc1.08,0.67,2.39-0.3,2.09-1.52l-2.26-8.62C24.07,20.4,24.24,19.86,24.68,19.53z",
           })
         );
       }
@@ -2628,7 +2633,7 @@ var CLSTAMP = "6296065";
             x: "0px",
             y: "0px",
             viewBox: "0 0 32 32",
-            enableBackground: "new 0 0 32 32"
+            enableBackground: "new 0 0 32 32",
           },
           o.createElement(
             "g",
@@ -2636,7 +2641,7 @@ var CLSTAMP = "6296065";
             o.createElement("path", {
               fill: "white",
               d:
-                "M28.4,1.49H3.79c-1.99,0-3.6,1.61-3.6,3.6v14.88c0,1.99,1.61,3.6,3.6,3.6h2.37c0,1.61-0.38,3.7-1.51,5.88\r\n\t\t\tc-0.28,0.57-0.19,1.33,0.19,1.8c0.28,0.38,0.76,0.47,1.14,0.47c0.19,0,0.38,0,0.57-0.09c4.07-1.61,7.57-5.59,9.47-8.05h12.4\r\n\t\t\tc1.99,0,3.6-1.61,3.6-3.6V5.1C31.91,3.11,30.3,1.49,28.4,1.49z M8.23,14.97c-1.33,0-2.37-1.04-2.37-2.37s1.04-2.37,2.37-2.37\r\n\t\t\ts2.37,1.04,2.37,2.37S9.56,14.97,8.23,14.97z M15.99,14.97c-1.33,0-2.37-1.04-2.37-2.37s1.04-2.37,2.37-2.37\r\n\t\t\tc1.33,0,2.37,1.04,2.37,2.37S17.32,14.97,15.99,14.97z M23.85,14.97c-1.33,0-2.37-1.04-2.37-2.37s1.04-2.37,2.37-2.37\r\n\t\t\tc1.33,0,2.37,1.04,2.37,2.37S25.18,14.97,23.85,14.97z"
+                "M28.4,1.49H3.79c-1.99,0-3.6,1.61-3.6,3.6v14.88c0,1.99,1.61,3.6,3.6,3.6h2.37c0,1.61-0.38,3.7-1.51,5.88\r\n\t\t\tc-0.28,0.57-0.19,1.33,0.19,1.8c0.28,0.38,0.76,0.47,1.14,0.47c0.19,0,0.38,0,0.57-0.09c4.07-1.61,7.57-5.59,9.47-8.05h12.4\r\n\t\t\tc1.99,0,3.6-1.61,3.6-3.6V5.1C31.91,3.11,30.3,1.49,28.4,1.49z M8.23,14.97c-1.33,0-2.37-1.04-2.37-2.37s1.04-2.37,2.37-2.37\r\n\t\t\ts2.37,1.04,2.37,2.37S9.56,14.97,8.23,14.97z M15.99,14.97c-1.33,0-2.37-1.04-2.37-2.37s1.04-2.37,2.37-2.37\r\n\t\t\tc1.33,0,2.37,1.04,2.37,2.37S17.32,14.97,15.99,14.97z M23.85,14.97c-1.33,0-2.37-1.04-2.37-2.37s1.04-2.37,2.37-2.37\r\n\t\t\tc1.33,0,2.37,1.04,2.37,2.37S25.18,14.97,23.85,14.97z",
             })
           )
         );
@@ -2651,7 +2656,7 @@ var CLSTAMP = "6296065";
             x: "0px",
             y: "0px",
             viewBox: "0 0 32 32",
-            enableBackground: "new 0 0 32 32"
+            enableBackground: "new 0 0 32 32",
           },
           o.createElement(
             "g",
@@ -2659,12 +2664,12 @@ var CLSTAMP = "6296065";
             o.createElement("path", {
               fill: "white",
               d:
-                "M23.32,28.28C23,25.55,20.68,23.52,18,23.52h-3.78c-2.73,0-5,2.03-5.33,4.76L8.56,30.8h15.09L23.32,28.28z"
+                "M23.32,28.28C23,25.55,20.68,23.52,18,23.52h-3.78c-2.73,0-5,2.03-5.33,4.76L8.56,30.8h15.09L23.32,28.28z",
             }),
             o.createElement("path", {
               fill: "white",
               d:
-                "M16.08,22.15c2.82,0,5.1-2.28,5.1-5.1c0-2.82-2.28-5.1-5.1-5.1s-5.1,2.28-5.1,5.1\r\n\t\t\tC10.98,19.86,13.27,22.15,16.08,22.15z"
+                "M16.08,22.15c2.82,0,5.1-2.28,5.1-5.1c0-2.82-2.28-5.1-5.1-5.1s-5.1,2.28-5.1,5.1\r\n\t\t\tC10.98,19.86,13.27,22.15,16.08,22.15z",
             }),
             o.createElement(
               "g",
@@ -2672,19 +2677,19 @@ var CLSTAMP = "6296065";
               o.createElement("path", {
                 fill: "white",
                 d:
-                  "M24.09,10.21c-0.94-1.22-2.18-2.23-3.57-2.9c-1.39-0.68-2.94-1.02-4.48-1.01l-0.02,0L16,6.3\r\n\t\t\t\tc-0.03,0-0.05,0-0.08,0c-1.52,0-3.04,0.35-4.4,1.01c-1.39,0.68-2.62,1.68-3.57,2.9c-0.94,1.22-1.6,2.67-1.91,4.18\r\n\t\t\t\tc-0.3,1.51-0.25,3.1,0.15,4.59c0.14,0.55,0.62,0.92,1.18,0.92c0.01,0,0.02,0,0.04,0h0.27l0.03-0.01c0.32-0.08,0.59-0.29,0.76-0.57\r\n\t\t\t\tl0.07-0.1c0.14-0.21,0.18-0.46,0.11-0.7L8.6,18.38c-0.18-0.62-0.27-1.27-0.29-1.92c0-4.24,3.45-7.68,7.69-7.68h0.04\r\n\t\t\t\tc4.24,0,7.69,3.45,7.69,7.68c-0.02,0.65-0.11,1.3-0.29,1.92l-0.04,0.15c-0.07,0.24-0.03,0.49,0.11,0.7l0.07,0.1\r\n\t\t\t\tc0.17,0.28,0.44,0.49,0.76,0.57l0.03,0.01l0.26,0c0.01,0,0.02,0,0.04,0c0.56,0,1.04-0.37,1.18-0.92c0.4-1.49,0.46-3.08,0.15-4.59\r\n\t\t\t\tC25.69,12.88,25.04,11.44,24.09,10.21z"
+                  "M24.09,10.21c-0.94-1.22-2.18-2.23-3.57-2.9c-1.39-0.68-2.94-1.02-4.48-1.01l-0.02,0L16,6.3\r\n\t\t\t\tc-0.03,0-0.05,0-0.08,0c-1.52,0-3.04,0.35-4.4,1.01c-1.39,0.68-2.62,1.68-3.57,2.9c-0.94,1.22-1.6,2.67-1.91,4.18\r\n\t\t\t\tc-0.3,1.51-0.25,3.1,0.15,4.59c0.14,0.55,0.62,0.92,1.18,0.92c0.01,0,0.02,0,0.04,0h0.27l0.03-0.01c0.32-0.08,0.59-0.29,0.76-0.57\r\n\t\t\t\tl0.07-0.1c0.14-0.21,0.18-0.46,0.11-0.7L8.6,18.38c-0.18-0.62-0.27-1.27-0.29-1.92c0-4.24,3.45-7.68,7.69-7.68h0.04\r\n\t\t\t\tc4.24,0,7.69,3.45,7.69,7.68c-0.02,0.65-0.11,1.3-0.29,1.92l-0.04,0.15c-0.07,0.24-0.03,0.49,0.11,0.7l0.07,0.1\r\n\t\t\t\tc0.17,0.28,0.44,0.49,0.76,0.57l0.03,0.01l0.26,0c0.01,0,0.02,0,0.04,0c0.56,0,1.04-0.37,1.18-0.92c0.4-1.49,0.46-3.08,0.15-4.59\r\n\t\t\t\tC25.69,12.88,25.04,11.44,24.09,10.21z",
               }),
               o.createElement("path", {
                 fill: "white",
                 d:
-                  "M16.02,0.68c-8.83,0-15.99,7.16-16,15.99h0.01c-0.02,2.68,0.74,5.31,2.18,7.57l0,0.01l0.01,0.01\r\n\t\t\t\tc0.37,0.43,1,0.51,1.47,0.19c0.47-0.32,0.62-0.94,0.36-1.44l0,0l0,0c-1.19-1.89-1.81-4.09-1.79-6.32v0v0\r\n\t\t\t\tc0-7.6,6.16-13.76,13.76-13.76c7.6,0,13.76,6.16,13.76,13.76v0v0c0.03,2.24-0.59,4.43-1.79,6.32l0,0l0,0\r\n\t\t\t\tc-0.26,0.5-0.11,1.12,0.36,1.44c0.47,0.32,1.1,0.24,1.47-0.19l0.01-0.01l0-0.01c1.45-2.26,2.2-4.89,2.18-7.57h0.01\r\n\t\t\t\tC32.02,7.84,24.86,0.68,16.02,0.68"
+                  "M16.02,0.68c-8.83,0-15.99,7.16-16,15.99h0.01c-0.02,2.68,0.74,5.31,2.18,7.57l0,0.01l0.01,0.01\r\n\t\t\t\tc0.37,0.43,1,0.51,1.47,0.19c0.47-0.32,0.62-0.94,0.36-1.44l0,0l0,0c-1.19-1.89-1.81-4.09-1.79-6.32v0v0\r\n\t\t\t\tc0-7.6,6.16-13.76,13.76-13.76c7.6,0,13.76,6.16,13.76,13.76v0v0c0.03,2.24-0.59,4.43-1.79,6.32l0,0l0,0\r\n\t\t\t\tc-0.26,0.5-0.11,1.12,0.36,1.44c0.47,0.32,1.1,0.24,1.47-0.19l0.01-0.01l0-0.01c1.45-2.26,2.2-4.89,2.18-7.57h0.01\r\n\t\t\t\tC32.02,7.84,24.86,0.68,16.02,0.68",
               })
             )
           )
         );
       }
     },
-    AvbV: function(e, t, r) {
+    AvbV: function (e, t, r) {
       var o = {
         "./main_brazilian.json": ["TFAN", 9],
         "./main_bulgarian.json": ["c2SO", 10],
@@ -2714,47 +2719,47 @@ var CLSTAMP = "6296065";
         "./main_thai.json": ["87dp", 34],
         "./main_turkish.json": ["yMpO", 35],
         "./main_ukrainian.json": ["zTWm", 36],
-        "./main_vietnamese.json": ["wqiy", 37]
+        "./main_vietnamese.json": ["wqiy", 37],
       };
       function n(t) {
         var n = o[t];
         return n
-          ? r.e(n[1]).then(function() {
+          ? r.e(n[1]).then(function () {
               var e = n[0];
               return r.t(e, 3);
             })
-          : Promise.resolve().then(function() {
+          : Promise.resolve().then(function () {
               var e = new Error("Cannot find module '" + t + "'");
               throw ((e.code = "MODULE_NOT_FOUND"), e);
             });
       }
-      (n.keys = function() {
+      (n.keys = function () {
         return Object.keys(o);
       }),
         (n.id = "AvbV"),
         (e.exports = n);
     },
-    CdLH: function(e, t, n) {
+    CdLH: function (e, t, n) {
       "use strict";
-      n.d(t, "f", function() {
+      n.d(t, "f", function () {
         return r;
       }),
-        n.d(t, "b", function() {
+        n.d(t, "b", function () {
           return o;
         }),
-        n.d(t, "c", function() {
+        n.d(t, "c", function () {
           return i;
         }),
-        n.d(t, "d", function() {
+        n.d(t, "d", function () {
           return a;
         }),
-        n.d(t, "e", function() {
+        n.d(t, "e", function () {
           return s;
         }),
-        n.d(t, "g", function() {
+        n.d(t, "g", function () {
           return c;
         }),
-        n.d(t, "a", function() {
+        n.d(t, "a", function () {
           return l;
         });
       var r = {
@@ -2763,7 +2768,7 @@ var CLSTAMP = "6296065";
         PerWeek: 604800,
         PerDay: 86400,
         PerHour: 3600,
-        PerMinute: 60
+        PerMinute: 60,
       };
       function o(e, t) {
         return (
@@ -2790,7 +2795,7 @@ var CLSTAMP = "6296065";
         return new Date(e.getFullYear(), e.getMonth(), 1, 0, 0, 0, 0);
       }
       function c(t) {
-        return new Promise(function(e) {
+        return new Promise(function (e) {
           return setTimeout(e, t);
         });
       }
@@ -2798,23 +2803,23 @@ var CLSTAMP = "6296065";
         return Math.floor(Date.now() / 1e3);
       }
     },
-    D4wO: function(e, t, n) {
+    D4wO: function (e, t, n) {
       "use strict";
       function r(a) {
-        return function(e, o, t) {
+        return function (e, o, t) {
           var i = t.value;
-          t.value = function() {
+          t.value = function () {
             for (var e = this, t = [], n = 0; n < arguments.length; n++)
               t[n] = arguments[n];
             var r = this[o + "_DebounceProperties"];
             void 0 === r &&
               (r = this[o + "_DebounceProperties"] = {
                 hTimer: void 0,
-                nPending: 0
+                nPending: 0,
               }),
               void 0 === r.hTimer
                 ? (i.apply(this, t),
-                  (r.hTimer = window.setInterval(function() {
+                  (r.hTimer = window.setInterval(function () {
                     0 < r.nPending
                       ? (i.apply(e, t), (r.nPending = 0))
                       : (window.clearInterval(r.hTimer), (r.hTimer = void 0));
@@ -2823,13 +2828,13 @@ var CLSTAMP = "6296065";
           };
         };
       }
-      n.d(t, "a", function() {
+      n.d(t, "a", function () {
         return r;
       });
     },
-    DWPT: function(e, t, n) {
+    DWPT: function (e, t, n) {
       "use strict";
-      n.d(t, "a", function() {
+      n.d(t, "a", function () {
         return s;
       });
       var l = n("mrSG"),
@@ -2840,7 +2845,7 @@ var CLSTAMP = "6296065";
         p = n("exH9"),
         a = n("6+2x"),
         m = n.n(a),
-        s = (function(t) {
+        s = (function (t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (
@@ -2852,54 +2857,56 @@ var CLSTAMP = "6296065";
           }
           return (
             Object(l.d)(e, t),
-            (e.prototype.bindHover = function(e) {
+            (e.prototype.bindHover = function (e) {
               (this.m_elHover = e || void 0), this.positionHover();
             }),
-            (e.prototype.componentDidMount = function() {
+            (e.prototype.componentDidMount = function () {
               this.m_listeners.AddEventListener(
                 window,
                 "blur",
                 this.OnWindowBlur
               );
             }),
-            (e.prototype.componentDidUpdate = function() {
+            (e.prototype.componentDidUpdate = function () {
               this.positionHover();
             }),
-            (e.prototype.componentWillUnmount = function() {
+            (e.prototype.componentWillUnmount = function () {
               this.m_listeners.Unregister();
             }),
-            (e.prototype.OnWindowBlur = function(e) {
+            (e.prototype.OnWindowBlur = function (e) {
               this.props.onWindowBlur && this.props.onWindowBlur(e);
             }),
-            (e.prototype.render = function() {
+            (e.prototype.render = function () {
               var e = this.props,
                 t = (e.target, e.visibilityObserver),
                 n = e.className,
                 r = e.style,
                 o = e.bEnablePointerEvents,
-                i = (e.direction,
-                e.nBodyAlignment,
-                e.nBodyDistance,
-                e.nAllowOffscreenPx,
-                e.nMaxLateralMoveOnScreen,
-                e.children),
-                a = (e.onNoSpace,
-                e.onWindowBlur,
-                Object(l.f)(e, [
-                  "target",
-                  "visibilityObserver",
-                  "className",
-                  "style",
-                  "bEnablePointerEvents",
-                  "direction",
-                  "nBodyAlignment",
-                  "nBodyDistance",
-                  "nAllowOffscreenPx",
-                  "nMaxLateralMoveOnScreen",
-                  "children",
-                  "onNoSpace",
-                  "onWindowBlur"
-                ])),
+                i =
+                  (e.direction,
+                  e.nBodyAlignment,
+                  e.nBodyDistance,
+                  e.nAllowOffscreenPx,
+                  e.nMaxLateralMoveOnScreen,
+                  e.children),
+                a =
+                  (e.onNoSpace,
+                  e.onWindowBlur,
+                  Object(l.f)(e, [
+                    "target",
+                    "visibilityObserver",
+                    "className",
+                    "style",
+                    "bEnablePointerEvents",
+                    "direction",
+                    "nBodyAlignment",
+                    "nBodyDistance",
+                    "nAllowOffscreenPx",
+                    "nMaxLateralMoveOnScreen",
+                    "children",
+                    "onNoSpace",
+                    "onWindowBlur",
+                  ])),
                 s = Object.assign({ left: this.state.x, top: this.state.y }, r),
                 c = !t || t.visible;
               return u.createElement(
@@ -2913,12 +2920,12 @@ var CLSTAMP = "6296065";
                     o && m.a.EnablePointerEvents
                   ),
                   style: s,
-                  ref: this.bindHover
+                  ref: this.bindHover,
                 }),
                 i
               );
             }),
-            (e.prototype.positionHover = function() {
+            (e.prototype.positionHover = function () {
               var e,
                 t = this.m_elHover,
                 n = this.props.target;
@@ -2959,7 +2966,7 @@ var CLSTAMP = "6296065";
                     f = m.nOverflow,
                     v = m.nLateralOverflow;
                   if (f > this.props.nAllowOffscreenPx && !u) {
-                    var g = (function(e) {
+                    var g = (function (e) {
                         switch (e) {
                           case "right":
                             return "left";
@@ -3000,7 +3007,7 @@ var CLSTAMP = "6296065";
                   }
                   0 === this.props.nMaxLateralMoveOnScreen ||
                     u ||
-                    ((h = (e = (function(e, t, n, r, o) {
+                    ((h = (e = (function (e, t, n, r, o) {
                       var i = Math.max(t[0], t[1]);
                       void 0 !== e && (i = Math.min(e, i));
                       i = Math.max(0, i);
@@ -3036,7 +3043,7 @@ var CLSTAMP = "6296065";
               nBodyAlignment: 0.5,
               nAllowOffscreenPx: 10,
               nBodyDistance: 8,
-              nMaxLateralMoveOnScreen: void 0
+              nMaxLateralMoveOnScreen: void 0,
             }),
             Object(l.c)([r.a], e.prototype, "bindHover", null),
             Object(l.c)([r.a], e.prototype, "OnWindowBlur", null),
@@ -3089,29 +3096,29 @@ var CLSTAMP = "6296065";
         return Math.max(0, Math.min(1, r)) * (t - n) + e;
       }
     },
-    "IjL/": function(e, t, n) {
+    "IjL/": function (e, t, n) {
       "use strict";
-      n.d(t, "a", function() {
+      n.d(t, "a", function () {
         return i;
       });
       var r = n("mrSG"),
         s = n("q1tI"),
         o = n("bxiW"),
-        i = (function(t) {
+        i = (function (t) {
           function a() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (e.state = {}), e;
           }
           return (
             Object(r.d)(a, t),
-            (a.InstallErrorReportingStore = function(e) {
+            (a.InstallErrorReportingStore = function (e) {
               this.sm_ErrorReportingStore = e;
             }),
-            (a.prototype.componentDidCatch = function(e, t) {
+            (a.prototype.componentDidCatch = function (e, t) {
               var n = this,
                 r = a.sm_ErrorReportingStore;
               r
-                ? r.ReportError(e).then(function(e) {
+                ? r.ReportError(e).then(function (e) {
                     return (
                       e && n.setState({ identifierHash: e.identifierHash })
                     );
@@ -3121,10 +3128,10 @@ var CLSTAMP = "6296065";
                   ),
                 this.setState({ error: { error: e, info: t } });
             }),
-            (a.prototype.Reset = function() {
+            (a.prototype.Reset = function () {
               this.setState({ error: null });
             }),
-            (a.prototype.render = function() {
+            (a.prototype.render = function () {
               var e = this.props,
                 t = e.children,
                 n = e.fallback,
@@ -3142,7 +3149,7 @@ var CLSTAMP = "6296065";
                       error: o,
                       identifierHash: i,
                       store: a.sm_ErrorReportingStore,
-                      onRefresh: this.Reset
+                      onRefresh: this.Reset,
                     })
                   : s.createElement(c, { error: o, onDismiss: this.Reset })
                 : t;
@@ -3151,7 +3158,7 @@ var CLSTAMP = "6296065";
             a
           );
         })(s.Component),
-        c = function(e) {
+        c = function (e) {
           var t = e.error,
             n = e.onDismiss,
             r = t.error ? t.error.stack : "Stack missing",
@@ -3166,7 +3173,7 @@ var CLSTAMP = "6296065";
               "span",
               {
                 style: { textDecoration: "underline", cursor: "pointer" },
-                onClick: n
+                onClick: n,
               },
               "(x) Dismiss"
             ),
@@ -3175,7 +3182,7 @@ var CLSTAMP = "6296065";
             s.createElement(m, null, "The error occurred while rendering:", o)
           );
         },
-        l = function(e) {
+        l = function (e) {
           var t = e.error,
             n = e.onRefresh,
             r = e.identifierHash,
@@ -3193,7 +3200,7 @@ var CLSTAMP = "6296065";
                 "span",
                 {
                   style: { textDecoration: "underline", cursor: "pointer" },
-                  onClick: n
+                  onClick: n,
                 },
                 "Refresh"
               )
@@ -3202,7 +3209,7 @@ var CLSTAMP = "6296065";
             s.createElement(m, null, i)
           );
         },
-        u = function(e) {
+        u = function (e) {
           var t = e.children;
           return s.createElement(
             "div",
@@ -3211,13 +3218,13 @@ var CLSTAMP = "6296065";
                 overflow: "auto",
                 marginLeft: "15px",
                 color: "white",
-                fontSize: "16px"
-              }
+                fontSize: "16px",
+              },
             },
             t
           );
         },
-        p = function(e) {
+        p = function (e) {
           var t = e.children;
           return s.createElement(
             "h1",
@@ -3225,13 +3232,13 @@ var CLSTAMP = "6296065";
               style: {
                 fontSize: "20px",
                 display: "inline-block",
-                marginTop: "15px"
-              }
+                marginTop: "15px",
+              },
             },
             t
           );
         },
-        m = function(e) {
+        m = function (e) {
           var t = e.children;
           return s.createElement(
             "pre",
@@ -3240,19 +3247,19 @@ var CLSTAMP = "6296065";
           );
         };
     },
-    "JJA/": function(e, t, n) {
+    "JJA/": function (e, t, n) {
       e.exports = {
         BodyNoScroll: "modals_BodyNoScroll_32ZiC",
         BodyNoScrollDialog: "modals_BodyNoScrollDialog_105OB",
-        OverlayModal: "modals_OverlayModal_1yDps"
+        OverlayModal: "modals_OverlayModal_1yDps",
       };
     },
-    JMS6: function(e, t, n) {
+    JMS6: function (e, t, n) {
       "use strict";
-      n.d(t, "b", function() {
+      n.d(t, "b", function () {
         return c;
       }),
-        n.d(t, "a", function() {
+        n.d(t, "a", function () {
           return v;
         });
       var c,
@@ -3272,7 +3279,7 @@ var CLSTAMP = "6296065";
         (r[(r.Tooltip = 4)] = "Tooltip"),
         (r[(r.ContextMenu = 8)] = "ContextMenu"),
         (r[(r.Resizable = 16)] = "Resizable");
-      var f = (function() {
+      var f = (function () {
           function e(e, t) {
             (this.m_rgLoadingLinks = []), (this.m_rgLoadingLinks = []);
             for (
@@ -3286,12 +3293,12 @@ var CLSTAMP = "6296065";
             }
           }
           return (
-            (e.prototype.SetTarget = function(e) {
+            (e.prototype.SetTarget = function (e) {
               (this.m_fnRender = e),
                 0 == this.m_rgLoadingLinks.length &&
                   (this.m_fnRender(), (this.m_fnRender = void 0));
             }),
-            (e.prototype.OnLinkLoad = function(e) {
+            (e.prototype.OnLinkLoad = function (e) {
               e.currentTarget.removeEventListener("load", this.OnLinkLoad),
                 s.c(this.m_rgLoadingLinks, e.currentTarget),
                 0 == this.m_rgLoadingLinks.length &&
@@ -3301,7 +3308,7 @@ var CLSTAMP = "6296065";
             e
           );
         })(),
-        v = (function() {
+        v = (function () {
           function e(e, t) {
             (this.m_bFocused = !1),
               (this.m_strName = e),
@@ -3313,23 +3320,23 @@ var CLSTAMP = "6296065";
               delete this.m_rgParams.title;
           }
           return (
-            (e.prototype.UpdateParamsBeforeShow = function(e) {
+            (e.prototype.UpdateParamsBeforeShow = function (e) {
               return e;
             }),
-            (e.prototype.OnDrop = function(e) {
+            (e.prototype.OnDrop = function (e) {
               console.log("Ignoring drop onto toplevel window", e),
                 e.preventDefault(),
                 e.stopPropagation();
             }),
-            (e.prototype.OnDragOver = function(e) {
+            (e.prototype.OnDragOver = function (e) {
               e.preventDefault(),
                 (e.dataTransfer.dropEffect = "none"),
                 e.stopPropagation();
             }),
-            (e.prototype.OnMessage = function(e) {
+            (e.prototype.OnMessage = function (e) {
               "window_moved" == e.data && this.OnResize();
             }),
-            (e.prototype.Show = function(e, t) {
+            (e.prototype.Show = function (e, t) {
               var n,
                 r = this;
               void 0 === e && (e = !0),
@@ -3389,13 +3396,13 @@ var CLSTAMP = "6296065";
                   (this.m_popup = o),
                   (this.m_element = i),
                   (this.m_renderWhenReady = a),
-                  this.m_renderWhenReady.SetTarget(function() {
+                  this.m_renderWhenReady.SetTarget(function () {
                     return r.RenderInternal(r.m_popup, r.m_element, e);
                   })),
                 _.AddTrackedPopup(this),
                 s && e && this.Focus());
             }),
-            (e.prototype.RemoveEventListeners = function() {
+            (e.prototype.RemoveEventListeners = function () {
               this.window.removeEventListener(
                 "beforeunload",
                 this.OnBeforeUnloadEvent
@@ -3408,7 +3415,7 @@ var CLSTAMP = "6296065";
                 this.window.removeEventListener("dragover", this.OnDragOver),
                 this.window.removeEventListener("message", this.OnMessage);
             }),
-            (e.prototype.RenderInternal = function(e, t, n) {
+            (e.prototype.RenderInternal = function (e, t, n) {
               var r;
               !this.browser_info ||
                 ((r = this.browser_info).m_eBrowserType !=
@@ -3423,52 +3430,52 @@ var CLSTAMP = "6296065";
                     ? e.SteamClient.Window.BringToFront()
                     : e.SteamClient.Window.ShowWindow());
             }),
-            (e.prototype.OnResizeEvent = function() {
+            (e.prototype.OnResizeEvent = function () {
               this.OnResize();
             }),
-            (e.prototype.OnBeforeUnloadEvent = function() {
+            (e.prototype.OnBeforeUnloadEvent = function () {
               this.OnBeforeUnload();
             }),
-            (e.prototype.OnUnload = function() {
+            (e.prototype.OnUnload = function () {
               this.RemoveEventListeners(),
                 _.RemoveTrackedPopup(this),
                 this.OnClose(),
                 a.unmountComponentAtNode(this.m_element);
             }),
             Object.defineProperty(e.prototype, "browser_info", {
-              get: function() {
+              get: function () {
                 return this.m_rgParams.target_browser;
               },
               enumerable: !1,
-              configurable: !0
+              configurable: !0,
             }),
             Object.defineProperty(e.prototype, "window", {
-              get: function() {
+              get: function () {
                 return this.m_popup;
               },
               enumerable: !1,
-              configurable: !0
+              configurable: !0,
             }),
             Object.defineProperty(e.prototype, "root_element", {
-              get: function() {
+              get: function () {
                 return this.m_element;
               },
               enumerable: !1,
-              configurable: !0
+              configurable: !0,
             }),
             Object.defineProperty(e.prototype, "title", {
-              get: function() {
+              get: function () {
                 return this.m_strTitle;
               },
-              set: function(e) {
+              set: function (e) {
                 (this.m_strTitle = e),
                   this.m_popup &&
                     (this.m_popup.document.title = this.m_strTitle);
               },
               enumerable: !1,
-              configurable: !0
+              configurable: !0,
             }),
-            (e.prototype.Focus = function(e) {
+            (e.prototype.Focus = function (e) {
               void 0 === e && (e = !1),
                 this.m_popup &&
                 void 0 !== this.m_popup.SteamClient &&
@@ -3478,75 +3485,77 @@ var CLSTAMP = "6296065";
                     : this.m_popup.SteamClient.Window.BringToFront()
                   : this.m_popup && this.m_popup.focus();
             }),
-            (e.prototype.Close = function() {
+            (e.prototype.Close = function () {
               this.m_popup && this.m_popup.close();
             }),
-            (e.prototype.GetName = function() {
+            (e.prototype.GetName = function () {
               return this.m_strName;
             }),
-            (e.prototype.BIsValid = function() {
+            (e.prototype.BIsValid = function () {
               return !!this.m_popup;
             }),
-            (e.prototype.BIsClosed = function() {
+            (e.prototype.BIsClosed = function () {
               return !this.m_popup || this.m_popup.closed;
             }),
-            (e.prototype.BIsVisible = function() {
+            (e.prototype.BIsVisible = function () {
               return (
                 this.m_popup &&
                 !this.m_popup.closed &&
                 "visible" == this.m_popup.document.visibilityState
               );
             }),
-            (e.prototype.BIsFocused = function() {
+            (e.prototype.BIsFocused = function () {
               return this.BIsVisible() && this.m_popup.document.hasFocus();
             }),
-            (e.prototype.OnFocusInternal = function() {
+            (e.prototype.OnFocusInternal = function () {
               (this.m_bFocused = !0), this.OnFocus();
             }),
-            (e.prototype.OnBlurInternal = function() {
+            (e.prototype.OnBlurInternal = function () {
               (this.m_bFocused = !1), this.OnBlur();
             }),
             Object.defineProperty(e.prototype, "focused", {
-              get: function() {
+              get: function () {
                 return this.m_bFocused;
               },
               enumerable: !1,
-              configurable: !0
+              configurable: !0,
             }),
-            (e.prototype.GetWindowRestoreDetails = function() {
+            (e.prototype.GetWindowRestoreDetails = function () {
               var n = this;
               return this.m_popup &&
                 !this.m_popup.closed &&
                 this.m_popup.SteamClient
-                ? new Promise(function(t, e) {
+                ? new Promise(function (t, e) {
                     n.m_popup.SteamClient.Window.GetWindowRestoreDetails(
-                      function(e) {
+                      function (e) {
                         t(e);
                       }
                     );
                   })
                 : Promise.resolve("");
             }),
-            (e.prototype.IsMinimized = function() {
+            (e.prototype.IsMinimized = function () {
               var n = this;
               return this.m_popup &&
                 !this.m_popup.closed &&
                 this.m_popup.SteamClient &&
                 this.m_popup.SteamClient.Window &&
                 this.m_popup.SteamClient.Window.IsWindowMinimized
-                ? new Promise(function(t, e) {
-                    n.m_popup.SteamClient.Window.IsWindowMinimized(function(e) {
+                ? new Promise(function (t, e) {
+                    n.m_popup.SteamClient.Window.IsWindowMinimized(function (
+                      e
+                    ) {
                       t(e);
                     });
                   })
                 : Promise.resolve(!1);
             }),
-            (e.prototype.ReleasePopup = function() {
+            (e.prototype.ReleasePopup = function () {
               this.OnClose(), (this.m_popup = null);
             }),
-            (e.prototype.OnBeforeUnload = function() {}),
-            (e.prototype.OnFocus = function() {}),
-            (e.prototype.OnBlur = function() {}),
+            (e.prototype.OnBeforeUnload = function () {}),
+            (e.prototype.OnFocus = function () {}),
+            (e.prototype.OnBlur = function () {}),
             Object(o.c)([i.C], e.prototype, "m_bFocused", void 0),
             Object(o.c)([u.a], e.prototype, "OnMessage", null),
             Object(o.c)([u.a], e.prototype, "OnResizeEvent", null),
@@ -3557,7 +3566,7 @@ var CLSTAMP = "6296065";
             e
           );
         })(),
-        g = (function() {
+        g = (function () {
           function d() {
             var e,
               a = this;
@@ -3570,7 +3579,7 @@ var CLSTAMP = "6296065";
               (this.m_bSaveRequired = !1),
               Object({ NODE_ENV: "production", STEAM_BUILD: "buildbot" })
                 .MOBILE_BUILD ||
-                (window.addEventListener("beforeunload", function(e) {
+                (window.addEventListener("beforeunload", function (e) {
                   a.m_bShuttingDown = !0;
                   for (
                     var t = 0, n = a.m_rgShutdownCallbacks;
@@ -3580,7 +3589,7 @@ var CLSTAMP = "6296065";
                     (0, n[t])();
                   }
                   var r = [];
-                  a.m_mapPopups.forEach(function(e) {
+                  a.m_mapPopups.forEach(function (e) {
                     e.BIsValid() && !e.BIsClosed() && r.push(e);
                   });
                   for (var o = 0, i = r; o < i.length; o++) {
@@ -3593,9 +3602,9 @@ var CLSTAMP = "6296065";
                 Object(h.a)(e, "Couldn't find head element"),
                 e &&
                   ((this.m_DynamicCSSObserver = new MutationObserver(
-                    function() {
+                    function () {
                       var t = b(e);
-                      a.m_mapPopups.forEach(function(e) {
+                      a.m_mapPopups.forEach(function (e) {
                         d.SetStylesheetsForPopup(e.window, t);
                       });
                     }
@@ -3603,18 +3612,18 @@ var CLSTAMP = "6296065";
                   this.m_DynamicCSSObserver.observe(e, { childList: !0 })));
           }
           return (
-            (d.prototype.SetCurrentLoggedInAccountID = function(e) {
+            (d.prototype.SetCurrentLoggedInAccountID = function (e) {
               (this.m_unCurrentAccountID = e)
                 ? this.LoadSavedDimensionStore()
                 : this.ClearSavedDimensionStore();
             }),
-            (d.prototype.AddShutdownCallback = function(e) {
+            (d.prototype.AddShutdownCallback = function (e) {
               this.m_rgShutdownCallbacks.push(e);
             }),
-            (d.prototype.AddPopupCreatedCallback = function(e) {
+            (d.prototype.AddPopupCreatedCallback = function (e) {
               this.m_rgPopupCreatedCallbacks.push(e);
             }),
-            (d.prototype.AddTrackedPopup = function(e) {
+            (d.prototype.AddTrackedPopup = function (e) {
               this.m_mapPopups.set(e.GetName(), e);
               for (
                 var t = 0, n = this.m_rgPopupCreatedCallbacks;
@@ -3624,24 +3633,24 @@ var CLSTAMP = "6296065";
                 (0, n[t])(e);
               }
             }),
-            (d.prototype.RemoveTrackedPopup = function(e) {
+            (d.prototype.RemoveTrackedPopup = function (e) {
               this.m_mapPopups.delete(e.GetName());
             }),
-            (d.prototype.GetExistingPopup = function(e) {
+            (d.prototype.GetExistingPopup = function (e) {
               return this.m_mapPopups.get(e);
             }),
-            (d.prototype.GetPopups = function() {
+            (d.prototype.GetPopups = function () {
               return this.m_mapPopups.values();
             }),
-            (d.prototype.ClosePopupsOwnedByBrowser = function(t) {
-              this.m_mapPopups.forEach(function(e) {
+            (d.prototype.ClosePopupsOwnedByBrowser = function (t) {
+              this.m_mapPopups.forEach(function (e) {
                 e.browser_info &&
                   e.browser_info.m_nBrowserID == t.m_nBrowserID &&
                   e.browser_info.m_unPID == t.m_unPID &&
                   e.Close();
               });
             }),
-            (d.CreatePopup = function(e, t) {
+            (d.CreatePopup = function (e, t) {
               var n = t.dimensions || {},
                 r = n.width || 300,
                 o = n.height || 300,
@@ -3693,7 +3702,7 @@ var CLSTAMP = "6296065";
                 { popup: l, element: l.document.getElementById("popup_target") }
               );
             }),
-            (d.SetStylesheetsForPopup = function(e, t) {
+            (d.SetStylesheetsForPopup = function (e, t) {
               for (
                 var n = Object.assign({}, t),
                   r = e.document.getElementsByTagName("head")[0],
@@ -3718,13 +3727,13 @@ var CLSTAMP = "6296065";
                 r.appendChild(u);
               }
             }),
-            (d.prototype.BShuttingDown = function() {
+            (d.prototype.BShuttingDown = function () {
               return this.m_bShuttingDown;
             }),
-            (d.prototype.GetLocalStorageKey = function() {
+            (d.prototype.GetLocalStorageKey = function () {
               return "PopupSavedDimensions_" + this.m_unCurrentAccountID;
             }),
-            (d.prototype.LoadSavedDimensionStore = function() {
+            (d.prototype.LoadSavedDimensionStore = function () {
               if (this.m_unCurrentAccountID) {
                 var e = this.GetLocalStorageKey();
                 this.m_mapRestoreDetails = void 0;
@@ -3738,7 +3747,7 @@ var CLSTAMP = "6296065";
                   (this.m_mapRestoreDetails = new Map());
               }
             }),
-            (d.prototype.SaveSavedDimensionStore = function() {
+            (d.prototype.SaveSavedDimensionStore = function () {
               var e, t;
               this.m_unCurrentAccountID &&
                 this.m_bSaveRequired &&
@@ -3747,13 +3756,13 @@ var CLSTAMP = "6296065";
                 window.localStorage.setItem(e, t),
                 (this.m_bSaveRequired = !1));
             }),
-            (d.prototype.DebouncedSaveSavedDimensionStore = function() {
+            (d.prototype.DebouncedSaveSavedDimensionStore = function () {
               this.SaveSavedDimensionStore();
             }),
-            (d.prototype.ClearSavedDimensionStore = function() {
+            (d.prototype.ClearSavedDimensionStore = function () {
               this.m_mapRestoreDetails.clear(), (this.m_bSaveRequired = !1);
             }),
-            (d.prototype.GetRestoreDetails = function(e) {
+            (d.prototype.GetRestoreDetails = function (e) {
               if (!this.m_mapRestoreDetails.has(e)) return "";
               var t = this.m_mapRestoreDetails.get(e);
               return (
@@ -3762,7 +3771,7 @@ var CLSTAMP = "6296065";
                 t.strRestoreDetails
               );
             }),
-            (d.prototype.SetRestoreDetails = function(e, t, n) {
+            (d.prototype.SetRestoreDetails = function (e, t, n) {
               if (e) {
                 if (t) {
                   if (50 < this.m_mapRestoreDetails.size) {
@@ -3785,7 +3794,7 @@ var CLSTAMP = "6296065";
                   var l = {
                     strRestoreDetails: t,
                     last_used: Date.now(),
-                    bExpires: n
+                    bExpires: n,
                   };
                   this.m_mapRestoreDetails.set(e, l);
                 } else this.m_mapRestoreDetails.delete(e);
@@ -3818,7 +3827,7 @@ var CLSTAMP = "6296065";
       var _ = new g();
       window.g_PopupManager = _;
     },
-    Jnrd: function(e, t, n) {
+    Jnrd: function (e, t, n) {
       "use strict";
       function r(e) {
         if (!a() || !window.document.cookie) return null;
@@ -3845,40 +3854,40 @@ var CLSTAMP = "6296065";
       function a() {
         return !!window.document;
       }
-      n.d(t, "b", function() {
+      n.d(t, "b", function () {
         return r;
       }),
-        n.d(t, "c", function() {
+        n.d(t, "c", function () {
           return o;
         }),
-        n.d(t, "a", function() {
+        n.d(t, "a", function () {
           return a;
         });
     },
-    "Jqb/": function(e, t, n) {
+    "Jqb/": function (e, t, n) {
       "use strict";
-      n.d(t, "a", function() {
+      n.d(t, "a", function () {
         return y;
       }),
-        n.d(t, "g", function() {
+        n.d(t, "g", function () {
           return w;
         }),
-        n.d(t, "h", function() {
+        n.d(t, "h", function () {
           return O;
         }),
-        n.d(t, "c", function() {
+        n.d(t, "c", function () {
           return S;
         }),
-        n.d(t, "d", function() {
+        n.d(t, "d", function () {
           return C;
         }),
-        n.d(t, "e", function() {
+        n.d(t, "e", function () {
           return D;
         }),
-        n.d(t, "b", function() {
+        n.d(t, "b", function () {
           return x;
         }),
-        n.d(t, "f", function() {
+        n.d(t, "f", function () {
           return A;
         });
       var l = n("mrSG"),
@@ -3896,23 +3905,23 @@ var CLSTAMP = "6296065";
         f = n("r64O"),
         v = n("+d9t"),
         g = u.createContext({}),
-        b = function() {
+        b = function () {
           return u.useContext(g);
         };
-      var _ = (function(e) {
+      var _ = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
           return (
             Object(l.d)(t, e),
-            (t.prototype.componentWillUnmount = function() {
+            (t.prototype.componentWillUnmount = function () {
               this.HideModal();
             }),
-            (t.prototype.HideModal = function() {
+            (t.prototype.HideModal = function () {
               this.m_ModalHandle && this.m_ModalHandle.Close(),
                 (this.m_ModalHandle = null);
             }),
-            (t.prototype.render = function() {
+            (t.prototype.render = function () {
               var e = this.props,
                 t = e.active,
                 n = e.children;
@@ -3928,7 +3937,7 @@ var CLSTAMP = "6296065";
             t
           );
         })(u.Component),
-        y = function(e) {
+        y = function (e) {
           var t = e.active,
             n = e.onDismiss,
             r = e.className,
@@ -3956,15 +3965,15 @@ var CLSTAMP = "6296065";
           n = {};
         t.onEscKeypress &&
           ((n.tabIndex = 0),
-          (n.onKeyDown = function(e) {
+          (n.onKeyDown = function (e) {
             27 == e.keyCode && t.onEscKeypress();
           }),
-          (n.onMouseDown = function(e) {
+          (n.onMouseDown = function (e) {
             e.currentTarget !== e.target ||
               t.bDisableBackgroundDismiss ||
               t.onEscKeypress();
           }),
-          (e = function(e) {
+          (e = function (e) {
             e && (o.c(e, e.ownerDocument.activeElement) || e.focus());
           }));
         var r = ["ModalPosition"];
@@ -3995,7 +4004,7 @@ var CLSTAMP = "6296065";
           )
         );
       }
-      var O = (function(t) {
+      var O = (function (t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (
@@ -4004,25 +4013,28 @@ var CLSTAMP = "6296065";
           }
           return (
             Object(l.d)(e, t),
-            (e.prototype.componentDidMount = function() {
+            (e.prototype.componentDidMount = function () {
               var e = this.GetBodyElement();
               e && e.classList.add(h.a.BodyNoScroll);
             }),
-            (e.prototype.componentWillUnmount = function() {
+            (e.prototype.componentWillUnmount = function () {
               var e = this.GetBodyElement();
               e && e.classList.remove(h.a.BodyNoScroll);
             }),
-            (e.prototype.GetBodyElement = function() {
+            (e.prototype.GetBodyElement = function () {
               return this.m_refParent.current
                 ? this.m_refParent.current.closest("body")
                 : null;
             }),
-            (e.prototype.render = function() {
+            (e.prototype.render = function () {
               return u.createElement(
                 "div",
                 {
                   ref: this.m_refParent,
-                  className: Object(c.a)(h.a.OverlayModal, this.props.className)
+                  className: Object(c.a)(
+                    h.a.OverlayModal,
+                    this.props.className
+                  ),
                 },
                 this.props.children
               );
@@ -4030,17 +4042,17 @@ var CLSTAMP = "6296065";
             e
           );
         })(u.Component),
-        S = (function(e) {
+        S = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
           return (
             Object(l.d)(t, e),
-            (t.prototype.Cancel = function() {
+            (t.prototype.Cancel = function () {
               this.props.onCancel && this.props.onCancel(),
                 this.props.closeModal && this.props.closeModal();
             }),
-            (t.prototype.render = function() {
+            (t.prototype.render = function () {
               var e = this.props,
                 t = e.strTitle,
                 n = e.strDescription,
@@ -4054,7 +4066,7 @@ var CLSTAMP = "6296065";
                   "strOKButtonText",
                   "strCancelButtonText",
                   "bAlertDialog",
-                  "children"
+                  "children",
                 ]),
                 c = r || Object(p.f)("#Button_Close");
               return u.createElement(
@@ -4074,7 +4086,7 @@ var CLSTAMP = "6296065";
                           bOKDisabled: this.props.bOKDisabled,
                           strOKText: r,
                           onCancel: this.Cancel,
-                          strCancelText: o
+                          strCancelText: o,
                         })
                   )
                 )
@@ -4084,22 +4096,22 @@ var CLSTAMP = "6296065";
             (t = Object(l.c)([s.a], t))
           );
         })(u.Component),
-        C = (function(e) {
+        C = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
           return (
             Object(l.d)(t, e),
-            (t.prototype.Cancel = function() {
+            (t.prototype.Cancel = function () {
               this.props.onCancel && this.props.onCancel(),
                 this.props.closeModal && this.props.closeModal();
             }),
-            (t.prototype.OK = function() {
+            (t.prototype.OK = function () {
               this.props.bOKDisabled ||
                 (this.props.onOK && this.props.onOK(),
                 this.props.closeModal && this.props.closeModal());
             }),
-            (t.prototype.render = function() {
+            (t.prototype.render = function () {
               return u.createElement(
                 w,
                 {
@@ -4107,7 +4119,7 @@ var CLSTAMP = "6296065";
                   bDestructiveWarning: this.props.bDestructiveWarning,
                   bDisableBackgroundDismiss: this.props
                     .bDisableBackgroundDismiss,
-                  bHideCloseIcon: this.props.bHideCloseIcon
+                  bHideCloseIcon: this.props.bHideCloseIcon,
                 },
                 u.createElement(
                   m.g,
@@ -4118,7 +4130,7 @@ var CLSTAMP = "6296065";
                       this.props.className
                     ),
                     onSubmit: this.OK,
-                    bCenterVertically: !0
+                    bCenterVertically: !0,
                   },
                   this.props.children
                 )
@@ -4129,13 +4141,13 @@ var CLSTAMP = "6296065";
             (t = Object(l.c)([s.a], t))
           );
         })(u.Component),
-        D = (function(e) {
+        D = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
           return (
             Object(l.d)(t, e),
-            (t.prototype.render = function() {
+            (t.prototype.render = function () {
               var e = Object(l.a)(
                 {
                   strTitle: Object(p.f)("#Error_FailureNotice"),
@@ -4144,8 +4156,8 @@ var CLSTAMP = "6296065";
                   ),
                   bAlertDialog: !0,
                   bDestructiveWarning: !0,
-                  onOK: function() {},
-                  onCancel: function() {}
+                  onOK: function () {},
+                  onCancel: function () {},
                 },
                 this.props
               );
@@ -4154,29 +4166,29 @@ var CLSTAMP = "6296065";
             (t = Object(l.c)([s.a], t))
           );
         })(u.Component),
-        x = (function(e) {
+        x = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
           return (
             Object(l.d)(t, e),
-            (t.prototype.componentDidUpdate = function() {
+            (t.prototype.componentDidUpdate = function () {
               var e = this.props.ModalManager.modals;
               e && e.length
                 ? document.body.classList.add(h.a.BodyNoScrollDialog)
                 : document.body.classList.remove(h.a.BodyNoScrollDialog);
             }),
-            (t.prototype.componentDidMount = function() {
+            (t.prototype.componentDidMount = function () {
               this.props.ModalManager.RegisterOverlay(this);
             }),
-            (t.prototype.componentWillUnmount = function() {
+            (t.prototype.componentWillUnmount = function () {
               this.props.ModalManager.UnregisterOverlay(this);
             }),
-            (t.prototype.OnActiveRef = function(e) {
+            (t.prototype.OnActiveRef = function (e) {
               var t;
               !e || ((t = e.firstChild) && t.focus && t.focus());
             }),
-            (t.prototype.render = function() {
+            (t.prototype.render = function () {
               var o = this,
                 e = this.props,
                 t = e.ModalManager,
@@ -4184,7 +4196,7 @@ var CLSTAMP = "6296065";
                 r = t.modals;
               if (!r || !r.length) return null;
               var i = t.active_modal,
-                a = r.map(function(e, t) {
+                a = r.map(function (e, t) {
                   var n = e == i,
                     r = n ? "active" : "inactive";
                   return u.createElement(
@@ -4193,7 +4205,7 @@ var CLSTAMP = "6296065";
                       className: Object(c.a)("ModalOverlayContent", r),
                       key: "modal-" + t,
                       ref: n ? o.OnActiveRef : null,
-                      tabIndex: -1
+                      tabIndex: -1,
                     },
                     e.element
                   );
@@ -4201,10 +4213,10 @@ var CLSTAMP = "6296065";
               return u.createElement(
                 "div",
                 Object(l.a)({}, n, {
-                  className: Object(c.a)(n.className, "FullModalOverlay")
+                  className: Object(c.a)(n.className, "FullModalOverlay"),
                 }),
                 u.createElement("div", {
-                  className: "ModalOverlayContent ModalOverlayBackground"
+                  className: "ModalOverlayContent ModalOverlayBackground",
                 }),
                 a
               );
@@ -4212,25 +4224,25 @@ var CLSTAMP = "6296065";
             t
           );
         })(u.Component),
-        M = (function() {
+        M = (function () {
           function e() {
             (this.m_bUsePopups = !0),
               (this.m_rgModals = []),
               (this.m_ActiveOverlay = null);
           }
           return (
-            (e.prototype.RegisterOverlay = function(e) {
+            (e.prototype.RegisterOverlay = function (e) {
               Object(f.a)(!this.m_ActiveOverlay, "Registering second overlay"),
                 (this.m_ActiveOverlay = e);
             }),
-            (e.prototype.UnregisterOverlay = function(e) {
+            (e.prototype.UnregisterOverlay = function (e) {
               Object(f.a)(this.m_ActiveOverlay == e, "Active overlay mismatch"),
                 this.m_ActiveOverlay == e && (this.m_ActiveOverlay = null);
             }),
-            (e.prototype.ForceUpdate = function() {
+            (e.prototype.ForceUpdate = function () {
               var e = this;
               this.m_ActiveOverlay
-                ? window.setTimeout(function() {
+                ? window.setTimeout(function () {
                     return e.m_ActiveOverlay.forceUpdate();
                   }, 1)
                 : Object(f.a)(
@@ -4239,42 +4251,42 @@ var CLSTAMP = "6296065";
                   );
             }),
             Object.defineProperty(e.prototype, "modals", {
-              get: function() {
+              get: function () {
                 return this.m_rgModals;
               },
               enumerable: !1,
-              configurable: !0
+              configurable: !0,
             }),
             Object.defineProperty(e.prototype, "active_modal", {
-              get: function() {
+              get: function () {
                 return this.m_rgModals.length
                   ? this.m_rgModals[this.m_rgModals.length - 1]
                   : void 0;
               },
               enumerable: !1,
-              configurable: !0
+              configurable: !0,
             }),
-            (e.prototype.ShowModal = function(e) {
+            (e.prototype.ShowModal = function (e) {
               var t = this,
                 n = { element: e };
               return (
                 this.m_rgModals.push(n),
                 this.ForceUpdate(),
                 {
-                  Close: function() {
+                  Close: function () {
                     var e = t.m_rgModals.indexOf(n);
                     -1 != e && t.m_rgModals.splice(e, 1), t.ForceUpdate();
                   },
-                  Update: function(e) {
+                  Update: function (e) {
                     (n.element = e), t.ForceUpdate();
-                  }
+                  },
                 }
               );
             }),
-            (e.prototype.SetUsePopups = function(e) {
+            (e.prototype.SetUsePopups = function (e) {
               this.m_bUsePopups = e;
             }),
-            (e.prototype.BUsePopups = function() {
+            (e.prototype.BUsePopups = function () {
               return this.m_bUsePopups;
             }),
             e
@@ -4286,33 +4298,33 @@ var CLSTAMP = "6296065";
       }
       var j = new WeakMap();
     },
-    Kw0F: function(e, t, n) {
+    Kw0F: function (e, t, n) {
       "use strict";
-      n.d(t, "h", function() {
+      n.d(t, "h", function () {
         return r;
       }),
-        n.d(t, "f", function() {
+        n.d(t, "f", function () {
           return o;
         }),
-        n.d(t, "a", function() {
+        n.d(t, "a", function () {
           return i;
         }),
-        n.d(t, "c", function() {
+        n.d(t, "c", function () {
           return a;
         }),
-        n.d(t, "d", function() {
+        n.d(t, "d", function () {
           return s;
         }),
-        n.d(t, "b", function() {
+        n.d(t, "b", function () {
           return c;
         }),
-        n.d(t, "i", function() {
+        n.d(t, "i", function () {
           return l;
         }),
-        n.d(t, "g", function() {
+        n.d(t, "g", function () {
           return u;
         }),
-        n.d(t, "e", function() {
+        n.d(t, "e", function () {
           return p;
         });
       n("r64O");
@@ -4336,7 +4348,7 @@ var CLSTAMP = "6296065";
         return !0;
       }
       function a(e, t) {
-        return s(e, function(e) {
+        return s(e, function (e) {
           return t == e;
         });
       }
@@ -4345,7 +4357,7 @@ var CLSTAMP = "6296065";
         return 0 <= n && (e.splice(n, 1), !0);
       }
       function c(e, t) {
-        return e.filter(function(e) {
+        return e.filter(function (e) {
           return t !== e;
         });
       }
@@ -4380,16 +4392,16 @@ var CLSTAMP = "6296065";
           }
       }
     },
-    LY6W: function(e, t, n) {
+    LY6W: function (e, t, n) {
       e.exports = {
         TextToolTip: "tooltip_TextToolTip_2FxbH",
         ToolTipCustom: "tooltip_ToolTipCustom_3XGRk",
         ToolTipTitle: "tooltip_ToolTipTitle_1LhVf",
         Center: "tooltip_Center_2ZDqE",
-        ToolTipInsetContent: "tooltip_ToolTipInsetContent_i4LuY"
+        ToolTipInsetContent: "tooltip_ToolTipInsetContent_i4LuY",
       };
     },
-    Mgs7: function(e, t, n) {
+    Mgs7: function (e, t, n) {
       "use strict";
       function r(e) {
         var t = e.value,
@@ -4399,9 +4411,9 @@ var CLSTAMP = "6296065";
           "div",
           {
             className: Object(y.a)(s.a.Toggle, r && s.a.Disabled),
-            onClick: function() {
+            onClick: function () {
               return !r && n(!t);
-            }
+            },
           },
           o.a.createElement("div", { className: s.a.ToggleRail }),
           o.a.createElement("div", {
@@ -4409,10 +4421,10 @@ var CLSTAMP = "6296065";
               s.a.ToggleRail,
               s.a.Highlight,
               t ? s.a.On : s.a.Off
-            )
+            ),
           }),
           o.a.createElement("div", {
-            className: Object(y.a)(s.a.ToggleSwitch, t ? s.a.On : s.a.Off)
+            className: Object(y.a)(s.a.ToggleSwitch, t ? s.a.On : s.a.Off),
           })
         );
       }
@@ -4426,7 +4438,7 @@ var CLSTAMP = "6296065";
         a = n("umRa"),
         s = n.n(a),
         c = g.createContext({}),
-        l = function() {
+        l = function () {
           return g.useContext(c);
         },
         w = n("+d9t"),
@@ -4436,10 +4448,11 @@ var CLSTAMP = "6296065";
         m = Object(w.c)("DialogLabel _DialogLayout"),
         d = Object(w.c)("DialogBodyText"),
         f = Object(w.c)("DialogBody"),
-        O = (Object(w.c)("DialogInnerBody"),
-        Object(w.c)("DialogControlsSection"),
-        Object(w.c)("DialogControlsSectionHeader"),
-        Object(w.c)("DialogBodyNotificationBar")),
+        O =
+          (Object(w.c)("DialogInnerBody"),
+          Object(w.c)("DialogControlsSection"),
+          Object(w.c)("DialogControlsSectionHeader"),
+          Object(w.c)("DialogBodyNotificationBar")),
         v = Object(w.c)("DialogTwoColLayout _DialogColLayout"),
         S = Object(w.c)("DialogThreeColLayout _DialogColLayout");
       Object(w.c)("DialogTwoThirdColLayout _DialogColLayout"),
@@ -4460,7 +4473,7 @@ var CLSTAMP = "6296065";
             "children",
             "bCenterVertically",
             "renderDialogContentDiv",
-            "renderDialogContentInnerDiv"
+            "renderDialogContentInnerDiv",
           ]),
           a =
             "DialogContent _DialogLayout" +
@@ -4475,23 +4488,23 @@ var CLSTAMP = "6296065";
               {
                 component: o,
                 fallback: "div",
-                className: "DialogContent_InnerWidth"
+                className: "DialogContent_InnerWidth",
               },
               t
             )
           )
         );
       }
-      var x = (function(e) {
+      var x = (function (e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
           Object(h.d)(t, e),
-          (t.prototype.OnSubmit = function(e) {
+          (t.prototype.OnSubmit = function (e) {
             e.preventDefault(), this.props.onSubmit && this.props.onSubmit(e);
           }),
-          (t.prototype.render = function() {
+          (t.prototype.render = function () {
             return g.createElement(
               "form",
               Object(h.a)({}, this.props, { onSubmit: this.OnSubmit })
@@ -4526,7 +4539,7 @@ var CLSTAMP = "6296065";
         return g.createElement(
           w.f,
           Object(h.a)({ component: n, fallback: "button" }, r, {
-            className: o
+            className: o,
           }),
           t && t(),
           e.children
@@ -4544,7 +4557,7 @@ var CLSTAMP = "6296065";
                 "DialogButton",
                 "_DialogLayout",
                 "Primary"
-              )
+              ),
             }
           )
         );
@@ -4558,7 +4571,7 @@ var CLSTAMP = "6296065";
               "DialogButton",
               "_DialogLayout",
               "Secondary"
-            )
+            ),
           })
         );
       }
@@ -4569,7 +4582,7 @@ var CLSTAMP = "6296065";
             className: Object(y.a)(
               e.className,
               "DialogButton _DialogLayout Small"
-            )
+            ),
           })
         );
       }
@@ -4620,14 +4633,14 @@ var CLSTAMP = "6296065";
           Object(h.a)({ component: t.OnOffToggle, fallback: G }, e)
         );
       }
-      var B = (function(n) {
+      var B = (function (n) {
           function e(e) {
             var t = n.call(this, e) || this;
             return (t.state = { checked: e.checked, disabled: e.disabled }), t;
           }
           return (
             Object(h.d)(e, n),
-            (e.prototype.componentDidUpdate = function(e) {
+            (e.prototype.componentDidUpdate = function (e) {
               e.checked != this.props.checked &&
                 this.props.checked != this.state.checked &&
                 this.setState({ checked: this.props.checked }),
@@ -4635,7 +4648,7 @@ var CLSTAMP = "6296065";
                   this.props.disabled != this.state.disabled &&
                   this.setState({ disabled: this.props.disabled });
             }),
-            (e.prototype.shouldComponentUpdate = function(e, t) {
+            (e.prototype.shouldComponentUpdate = function (e, t) {
               return (
                 e.label != this.props.label ||
                 e.description != this.props.description ||
@@ -4646,27 +4659,27 @@ var CLSTAMP = "6296065";
               );
             }),
             Object.defineProperty(e.prototype, "checked", {
-              get: function() {
+              get: function () {
                 return this.state.checked;
               },
               enumerable: !1,
-              configurable: !0
+              configurable: !0,
             }),
-            (e.prototype.GetElementProps = function() {
+            (e.prototype.GetElementProps = function () {
               return {
                 tabIndex: this.props.tabIndex || 0,
                 onClick: this.Toggle,
-                onKeyDown: this.KeyDown
+                onKeyDown: this.KeyDown,
               };
             }),
-            (e.prototype.Toggle = function() {
+            (e.prototype.Toggle = function () {
               var e;
               this.props.disabled ||
                 ((e = !this.state.checked),
                 this.setState({ checked: e }),
                 this.props.onChange && this.props.onChange(e));
             }),
-            (e.prototype.KeyDown = function(e) {
+            (e.prototype.KeyDown = function (e) {
               32 == e.keyCode &&
                 (this.Toggle(), e.preventDefault(), e.stopPropagation());
             }),
@@ -4675,13 +4688,13 @@ var CLSTAMP = "6296065";
             e
           );
         })(g.Component),
-        F = (function(e) {
+        F = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
           return (
             Object(h.d)(t, e),
-            (t.prototype.render = function() {
+            (t.prototype.render = function () {
               var e = "DialogCheckbox" + (this.state.checked ? " Active" : "");
               return (
                 1 == this.state.disabled && (e += " Disabled"),
@@ -4692,7 +4705,7 @@ var CLSTAMP = "6296065";
                         {
                           className:
                             "DialogCheckbox_Container _DialogLayout " +
-                            (this.props.classname ? this.props.classname : "")
+                            (this.props.classname ? this.props.classname : ""),
                         },
                         this.GetElementProps()
                       ),
@@ -4701,7 +4714,7 @@ var CLSTAMP = "6296065";
                         { className: e },
                         g.createElement(b.n, {
                           color: this.props.color,
-                          highlightColor: this.props.highlightColor
+                          highlightColor: this.props.highlightColor,
                         })
                       ),
                       g.createElement(
@@ -4733,13 +4746,13 @@ var CLSTAMP = "6296065";
             t
           );
         })(B),
-        P = (function(e) {
+        P = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
           return (
             Object(h.d)(t, e),
-            (t.prototype.render = function() {
+            (t.prototype.render = function () {
               var e = this.state.checked ? " Active" : "";
               return g.createElement(
                 "div",
@@ -4749,7 +4762,7 @@ var CLSTAMP = "6296065";
                       "DialogRoundCheckbox_Container",
                       this.props.classname,
                       this.props.label ? "WithLabel" : ""
-                    )
+                    ),
                   },
                   this.GetElementProps()
                 ),
@@ -4763,7 +4776,7 @@ var CLSTAMP = "6296065";
                       "div",
                       { className: "DialogRoundCheckbox_OuterCircle" },
                       g.createElement("div", {
-                        className: "DialogRoundCheckbox_InnerCircle"
+                        className: "DialogRoundCheckbox_InnerCircle",
                       })
                     )
                   )
@@ -4785,22 +4798,22 @@ var CLSTAMP = "6296065";
             t
           );
         })(B),
-        G = (function(e) {
+        G = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
           return (
             Object(h.d)(t, e),
-            (t.prototype.OnOffKeyDown = function(e) {
+            (t.prototype.OnOffKeyDown = function (e) {
               (37 == e.keyCode && this.state.checked) ||
               (39 == e.keyCode && !this.state.checked)
                 ? (this.Toggle(), e.preventDefault(), e.stopPropagation())
                 : this.KeyDown(e);
             }),
-            (t.prototype.OnNewUIToggle = function(e) {
+            (t.prototype.OnNewUIToggle = function (e) {
               e !== this.state.checked && this.Toggle();
             }),
-            (t.prototype.render = function() {
+            (t.prototype.render = function () {
               var e =
                 "DialogOnOffToggle _DialogInputContainer _DialogLayout " +
                 (this.props.classname ? this.props.classname : "");
@@ -4811,7 +4824,7 @@ var CLSTAMP = "6296065";
                   {
                     className: e,
                     tabIndex: this.props.tabIndex || 0,
-                    onKeyDown: this.OnOffKeyDown
+                    onKeyDown: this.OnOffKeyDown,
                   },
                   g.createElement(
                     "div",
@@ -4841,21 +4854,21 @@ var CLSTAMP = "6296065";
                         { className: "DialogOnOffToggle_NewUIContainer" },
                         g.createElement(r, {
                           onChange: this.OnNewUIToggle,
-                          value: this.state.checked
+                          value: this.state.checked,
                         })
                       )
                     : g.createElement(
                         "div",
                         {
                           className: "DialogOnOffToggle_Control",
-                          onClick: this.Toggle
+                          onClick: this.Toggle,
                         },
                         g.createElement(
                           "div",
                           {
                             className:
                               "DialogOnOffToggle_Option Off" +
-                              (this.state.checked ? "" : " Active")
+                              (this.state.checked ? "" : " Active"),
                           },
                           Object(_.f)("#Dialog_Off")
                         ),
@@ -4864,7 +4877,7 @@ var CLSTAMP = "6296065";
                           {
                             className:
                               "DialogOnOffToggle_Option On" +
-                              (this.state.checked ? " Active" : "")
+                              (this.state.checked ? " Active" : ""),
                           },
                           Object(_.f)("#Dialog_On")
                         )
@@ -4894,7 +4907,7 @@ var CLSTAMP = "6296065";
           )
         );
       }
-      var V = (function(n) {
+      var V = (function (n) {
           function e(e) {
             var t = n.call(this, e) || this;
             return (
@@ -4907,47 +4920,47 @@ var CLSTAMP = "6296065";
                 m_bNumberAboveMaxRange: !1,
                 m_bIsNotNumeric: !1,
                 m_bIsInvalidURL: !1,
-                m_bIsInvalidEmail: !1
+                m_bIsInvalidEmail: !1,
               }),
               t
             );
           }
           return (
             Object(h.d)(e, n),
-            (e.prototype.componentDidUpdate = function(e) {
+            (e.prototype.componentDidUpdate = function (e) {
               this.CheckProps(this.props);
             }),
-            (e.prototype.OnInputRef = function(e) {
+            (e.prototype.OnInputRef = function (e) {
               (this.m_elInput = e),
                 this.m_elInput &&
                   this.props.focusOnMount &&
                   this.m_elInput.focus();
             }),
             Object.defineProperty(e.prototype, "element", {
-              get: function() {
+              get: function () {
                 return this.m_elInput;
               },
               enumerable: !1,
-              configurable: !0
+              configurable: !0,
             }),
             Object.defineProperty(e.prototype, "value", {
-              get: function() {
+              get: function () {
                 return this.m_elInput && this.m_elInput.value;
               },
               enumerable: !1,
-              configurable: !0
+              configurable: !0,
             }),
-            (e.validateUrl = function(e) {
+            (e.validateUrl = function (e) {
               return /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/i.test(
                 e
               );
             }),
-            (e.validateEmail = function(e) {
+            (e.validateEmail = function (e) {
               return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
                 e.toLowerCase()
               );
             }),
-            (e.prototype.Validate = function() {
+            (e.prototype.Validate = function () {
               this.setState({
                 m_bNumberBelowMinRange:
                   null !== this.props.rangeMin &&
@@ -4965,13 +4978,13 @@ var CLSTAMP = "6296065";
                   !e.validateUrl(this.m_elInput.value),
                 m_bIsInvalidEmail:
                   1 == this.props.mustBeEmail &&
-                  !e.validateEmail(this.m_elInput.value)
+                  !e.validateEmail(this.m_elInput.value),
               });
             }),
-            (e.prototype.OnChanged = function(e) {
+            (e.prototype.OnChanged = function (e) {
               this.props.onChange && this.props.onChange(e), this.Validate();
             }),
-            (e.prototype.OnCopyClick = function(e) {
+            (e.prototype.OnCopyClick = function (e) {
               var t,
                 n = this;
               this.m_elInput &&
@@ -4983,20 +4996,20 @@ var CLSTAMP = "6296065";
                   e.currentTarget.focus(),
                   this.m_CopiedAnimation && this.m_CopiedAnimation.Cancel(),
                   this.setState({ m_bCompletedCopiedAnimation: !1 }),
-                  this.setState({ m_CopiedYPos: -4 }, function() {
+                  this.setState({ m_CopiedYPos: -4 }, function () {
                     (n.m_CopiedAnimation = new H.b(
                       n,
                       { m_CopiedYPos: -24 },
                       {
                         msDuration: 300,
                         timing: "sine",
-                        setStateOnComplete: { m_bCompletedCopiedAnimation: !0 }
+                        setStateOnComplete: { m_bCompletedCopiedAnimation: !0 },
                       }
                     )),
                       n.m_CopiedAnimation.Start();
                   })));
             }),
-            (e.prototype.OnClearClick = function(e) {
+            (e.prototype.OnClearClick = function (e) {
               this.m_elInput &&
                 this.m_elInput.value &&
                 (Object.getOwnPropertyDescriptor(
@@ -5007,13 +5020,13 @@ var CLSTAMP = "6296065";
                   new Event("input", { bubbles: !0 })
                 ));
             }),
-            (e.prototype.CheckProps = function(e) {
+            (e.prototype.CheckProps = function (e) {
               Object(U.a)(
                 !(e.bShowClearAction || e.bAlwaysShowClearAction) || e.onChange,
                 "In order for bShowClearAction to work correctly, you should be handling onChange and passing value to the Dialog.Input."
               );
             }),
-            (e.prototype.render = function() {
+            (e.prototype.render = function () {
               var e = this.props,
                 t = e.label,
                 n = e.explainer,
@@ -5021,29 +5034,30 @@ var CLSTAMP = "6296065";
                 o = e.bShowClearAction,
                 i = e.bAlwaysShowClearAction,
                 a = e.bIsPassword,
-                s = (e.rangeMin,
-                e.rangeMax,
-                e.mustBeNumeric,
-                e.mustBeURL,
-                e.mustBeEmail,
-                e.focusOnMount,
-                e.tooltip,
-                Object(h.f)(e, [
-                  "label",
-                  "explainer",
-                  "requiredLabel",
-                  "bShowCopyAction",
-                  "bShowClearAction",
-                  "bAlwaysShowClearAction",
-                  "bIsPassword",
-                  "rangeMin",
-                  "rangeMax",
-                  "mustBeNumeric",
-                  "mustBeURL",
-                  "mustBeEmail",
-                  "focusOnMount",
-                  "tooltip"
-                ])),
+                s =
+                  (e.rangeMin,
+                  e.rangeMax,
+                  e.mustBeNumeric,
+                  e.mustBeURL,
+                  e.mustBeEmail,
+                  e.focusOnMount,
+                  e.tooltip,
+                  Object(h.f)(e, [
+                    "label",
+                    "explainer",
+                    "requiredLabel",
+                    "bShowCopyAction",
+                    "bShowClearAction",
+                    "bAlwaysShowClearAction",
+                    "bIsPassword",
+                    "rangeMin",
+                    "rangeMax",
+                    "mustBeNumeric",
+                    "mustBeURL",
+                    "mustBeEmail",
+                    "focusOnMount",
+                    "tooltip",
+                  ])),
                 c =
                   "DialogInput DialogInputPlaceholder DialogTextInputBase" +
                   (s.className ? " " + s.className : ""),
@@ -5073,7 +5087,7 @@ var CLSTAMP = "6296065";
                     Object(h.a)({ type: a ? "password" : "text" }, s, {
                       className: c,
                       htmlElementRef: this.OnInputRef,
-                      onChange: this.OnChanged
+                      onChange: this.OnChanged,
                     })
                   ),
                   r &&
@@ -5084,7 +5098,7 @@ var CLSTAMP = "6296065";
                         T,
                         {
                           className: "DialogInput_CopyAction Primary",
-                          onClick: this.OnCopyClick
+                          onClick: this.OnCopyClick,
                         },
                         Object(_.f)("#Button_CopyLink")
                       ),
@@ -5099,7 +5113,7 @@ var CLSTAMP = "6296065";
                       "div",
                       {
                         className: "DialogInput_ClearAction",
-                        onClick: this.OnClearClick
+                        onClick: this.OnClearClick,
                       },
                       g.createElement(b.fb, null)
                     )
@@ -5188,7 +5202,7 @@ var CLSTAMP = "6296065";
             e
           );
         })(g.PureComponent),
-        Y = (function(n) {
+        Y = (function (n) {
           function e(e) {
             var t = n.call(this, e) || this;
             return (t.state = { value: t.ClampValue(e.value) }), t;
@@ -5196,37 +5210,37 @@ var CLSTAMP = "6296065";
           return (
             Object(h.d)(e, n),
             Object.defineProperty(e.prototype, "value", {
-              get: function() {
+              get: function () {
                 return this.state.value;
               },
               enumerable: !1,
-              configurable: !0
+              configurable: !0,
             }),
-            (e.prototype.ClampValue = function(e) {
+            (e.prototype.ClampValue = function (e) {
               return void 0 === e || isNaN(e) || e < this.props.min
                 ? this.props.min
                 : e > this.props.max
                 ? this.props.max
                 : e;
             }),
-            (e.prototype.BPropsValid = function() {
+            (e.prototype.BPropsValid = function () {
               return this.props.max > this.props.min;
             }),
-            (e.prototype.shouldComponentUpdate = function(e, t) {
+            (e.prototype.shouldComponentUpdate = function (e, t) {
               return (
                 t.value != this.state.value ||
-                (e.max !== this.props.max ||
-                  e.min !== this.props.min ||
-                  (e.value !== this.state.value &&
-                    e.value !== this.props.value) ||
-                  e.onChange !== this.props.onChange)
+                e.max !== this.props.max ||
+                e.min !== this.props.min ||
+                (e.value !== this.state.value &&
+                  e.value !== this.props.value) ||
+                e.onChange !== this.props.onChange
               );
             }),
-            (e.prototype.componentDidUpdate = function(e) {
+            (e.prototype.componentDidUpdate = function (e) {
               e.value != this.props.value &&
                 this.setState({ value: this.props.value });
             }),
-            (e.prototype.OnMouseDown = function(e) {
+            (e.prototype.OnMouseDown = function (e) {
               (this.m_elSlider = e.currentTarget),
                 (this.m_rectSlider = this.m_elSlider.getBoundingClientRect()),
                 this.AdjustSliderForClientX(e.clientX),
@@ -5239,10 +5253,10 @@ var CLSTAMP = "6296065";
                   this.OnMouseUp
                 );
             }),
-            (e.prototype.OnMouseMove = function(e) {
+            (e.prototype.OnMouseMove = function (e) {
               this.AdjustSliderForClientX(e.clientX);
             }),
-            (e.prototype.OnMouseUp = function(e) {
+            (e.prototype.OnMouseUp = function (e) {
               this.m_elSlider.ownerDocument.defaultView.removeEventListener(
                 "mousemove",
                 this.OnMouseMove
@@ -5252,7 +5266,7 @@ var CLSTAMP = "6296065";
                   this.OnMouseUp
                 );
             }),
-            (e.prototype.OnTouchStart = function(e) {
+            (e.prototype.OnTouchStart = function (e) {
               (this.m_elSlider = e.currentTarget),
                 (this.m_rectSlider = this.m_elSlider.getBoundingClientRect()),
                 this.AdjustSliderForClientX(e.touches[0].clientX),
@@ -5265,10 +5279,10 @@ var CLSTAMP = "6296065";
                   this.OnTouchEnd
                 );
             }),
-            (e.prototype.OnTouchMove = function(e) {
+            (e.prototype.OnTouchMove = function (e) {
               this.AdjustSliderForClientX(e.touches[0].clientX);
             }),
-            (e.prototype.OnTouchEnd = function(e) {
+            (e.prototype.OnTouchEnd = function (e) {
               this.m_elSlider.ownerDocument.defaultView.removeEventListener(
                 "touchmove",
                 this.OnTouchMove
@@ -5278,7 +5292,7 @@ var CLSTAMP = "6296065";
                   this.OnTouchEnd
                 );
             }),
-            (e.prototype.OnKeyDown = function(e) {
+            (e.prototype.OnKeyDown = function (e) {
               var t = 1;
               e.ctrlKey &&
                 (t = Math.max(
@@ -5290,7 +5304,7 @@ var CLSTAMP = "6296065";
                   : 39 == e.keyCode &&
                     (this.IncrementValue(+t), e.preventDefault());
             }),
-            (e.prototype.AdjustSliderForClientX = function(e) {
+            (e.prototype.AdjustSliderForClientX = function (e) {
               var t =
                   ((e - this.m_rectSlider.left) /
                     (this.m_rectSlider.right - this.m_rectSlider.left)) *
@@ -5302,13 +5316,13 @@ var CLSTAMP = "6296065";
                 (this.setState({ value: n }),
                 this.props.onChange && this.props.onChange(n));
             }),
-            (e.prototype.IncrementValue = function(e) {
+            (e.prototype.IncrementValue = function (e) {
               var t = this.ClampValue(this.state.value + e);
               t != this.state.value &&
                 (this.setState({ value: t }),
                 this.props.onChange && this.props.onChange(t));
             }),
-            (e.prototype.render = function() {
+            (e.prototype.render = function () {
               var e,
                 t = {},
                 n = {};
@@ -5338,7 +5352,7 @@ var CLSTAMP = "6296065";
                       "DialogSlider_Container _DialogInputContainer _DialogLayout" +
                       (this.props.classname ? " " + this.props.classname : ""),
                     onKeyDown: this.OnKeyDown,
-                    tabIndex: this.props.tabIndex || 0
+                    tabIndex: this.props.tabIndex || 0,
                   },
                   o &&
                     g.createElement(
@@ -5357,15 +5371,15 @@ var CLSTAMP = "6296065";
                     {
                       className: "DialogSlider_Slider",
                       onMouseDown: this.OnMouseDown,
-                      onTouchStart: this.OnTouchStart
+                      onTouchStart: this.OnTouchStart,
                     },
                     g.createElement("div", {
                       className: "DialogSlider_Value",
-                      style: t
+                      style: t,
                     }),
                     g.createElement("div", {
                       className: "DialogSlider_Grabber",
-                      style: n
+                      style: n,
                     })
                   ),
                   this.props.bShowValue
@@ -5395,44 +5409,44 @@ var CLSTAMP = "6296065";
         J = n("5E+2"),
         Z = n("6+2x"),
         Q = n.n(Z),
-        $ = (function(n) {
+        $ = (function (n) {
           function e(e) {
             var t = n.call(this, e) || this;
             return (
               (t.m_bRebuildMenu = !1),
               (t.state = {
                 iSelectedOption: t.FindActiveOptionIndex(e.selectedOption),
-                bOpened: !1
+                bOpened: !1,
               }),
               t
             );
           }
           return (
             Object(h.d)(e, n),
-            (e.prototype.FindAndSetActiveOption = function(e) {
+            (e.prototype.FindAndSetActiveOption = function (e) {
               var t = this.FindActiveOptionIndex(e);
               t !== this.state.iSelectedOption &&
                 this.setState({ iSelectedOption: t });
             }),
-            (e.prototype.FindActiveOptionIndex = function(e) {
+            (e.prototype.FindActiveOptionIndex = function (e) {
               for (var t = 0; t < this.props.rgOptions.length; t++)
                 if (this.props.rgOptions[t].data === e) return t;
             }),
             Object.defineProperty(e.prototype, "value", {
-              get: function() {
+              get: function () {
                 return void 0 !== this.state.iSelectedOption
                   ? this.props.rgOptions[this.state.iSelectedOption]
                   : void 0;
               },
               enumerable: !1,
-              configurable: !0
+              configurable: !0,
             }),
-            (e.prototype.SetSelectedOption = function(e) {
+            (e.prototype.SetSelectedOption = function (e) {
               null != e
                 ? this.FindAndSetActiveOption(e)
                 : this.setState({ iSelectedOption: void 0 });
             }),
-            (e.prototype.shouldComponentUpdate = function(e, t, n) {
+            (e.prototype.shouldComponentUpdate = function (e, t, n) {
               if (e.selectedOption != this.props.selectedOption) {
                 this.FindActiveOptionIndex(e.selectedOption);
                 if (this.state.iSelectedOption !== t.iSelectedOption) return !0;
@@ -5455,7 +5469,7 @@ var CLSTAMP = "6296065";
                     "selectedOption",
                     "tabIndex",
                     "onChange",
-                    "strDefaultLabel"
+                    "strDefaultLabel",
                   ];
                 r < o.length;
                 r++
@@ -5467,13 +5481,13 @@ var CLSTAMP = "6296065";
                 !this.state.bOpened || !this.DoOptionsDiffer(e.rgOptions)
               );
             }),
-            (e.prototype.DoOptionsDiffer = function(e) {
+            (e.prototype.DoOptionsDiffer = function (e) {
               if (e.length != this.props.rgOptions.length) return !0;
               for (var t = 0; t < e.length; t++)
                 if (e[t].label !== this.props.rgOptions[t].label) return !0;
               return !1;
             }),
-            (e.prototype.componentDidUpdate = function(e) {
+            (e.prototype.componentDidUpdate = function (e) {
               var t;
               this.DoOptionsDiffer(e.rgOptions)
                 ? (void 0 === this.state.iSelectedOption ||
@@ -5490,13 +5504,13 @@ var CLSTAMP = "6296065";
                 : e.selectedOption !== this.props.selectedOption &&
                   this.FindAndSetActiveOption(this.props.selectedOption);
             }),
-            (e.prototype.OnInputRef = function(e) {
+            (e.prototype.OnInputRef = function (e) {
               this.m_elInput = e;
             }),
-            (e.prototype.ToggleMenu = function() {
+            (e.prototype.ToggleMenu = function () {
               this.state.bOpened ? this.HideMenu() : this.ShowMenu();
             }),
-            (e.prototype.OnItemSelected = function(e, t) {
+            (e.prototype.OnItemSelected = function (e, t) {
               this.HideMenu(),
                 this.setState({ iSelectedOption: e }),
                 this.props.onChange &&
@@ -5505,7 +5519,7 @@ var CLSTAMP = "6296065";
                     this
                   );
             }),
-            (e.prototype.BuildMenu = function() {
+            (e.prototype.BuildMenu = function () {
               var e,
                 t,
                 n = "DialogMenuPosition";
@@ -5517,7 +5531,7 @@ var CLSTAMP = "6296065";
                   bMatchWidth: !0,
                   bFitToWindow: !0,
                   strClassName: n,
-                  bDisableMouseOverlay: this.props.bDisableMouseOverlay
+                  bDisableMouseOverlay: this.props.bDisableMouseOverlay,
                 },
                 this.props.contextMenuPositionOptions
               );
@@ -5529,7 +5543,7 @@ var CLSTAMP = "6296065";
                     rgOptions: this.props.rgOptions,
                     fnOnItemSelected: this.OnItemSelected,
                     strDropDownItemClassName: this.props
-                      .strDropDownItemClassName
+                      .strDropDownItemClassName,
                   })
                 ),
                 this.m_elInput,
@@ -5547,18 +5561,18 @@ var CLSTAMP = "6296065";
                 ),
                 this.m_iMenuInstance.SetOnHideCallback(this.HideMenu);
             }),
-            (e.prototype.ShowMenu = function() {
+            (e.prototype.ShowMenu = function () {
               this.m_iMenuInstance
                 ? this.m_iMenuInstance.Show()
                 : this.BuildMenu(),
                 this.props.onMenuOpened && this.props.onMenuOpened(),
                 this.setState({ bOpened: !0 });
             }),
-            (e.prototype.HideMenu = function() {
+            (e.prototype.HideMenu = function () {
               this.m_iMenuInstance && this.m_iMenuInstance.Hide(),
                 this.setState({ bOpened: !1 });
             }),
-            (e.prototype.render = function() {
+            (e.prototype.render = function () {
               var e =
                   void 0 !== this.state.iSelectedOption &&
                   this.props.rgOptions[this.state.iSelectedOption],
@@ -5606,7 +5620,7 @@ var CLSTAMP = "6296065";
                       tabIndex: this.props.tabIndex || 0,
                       onClick: this.props.disabled ? void 0 : this.ToggleMenu,
                       htmlElementRef: this.OnInputRef,
-                      children: o
+                      children: o,
                     })
                   : g.createElement(
                       "div",
@@ -5614,7 +5628,7 @@ var CLSTAMP = "6296065";
                         className: n,
                         tabIndex: this.props.tabIndex || 0,
                         onClick: this.props.disabled ? void 0 : this.ToggleMenu,
-                        ref: this.OnInputRef
+                        ref: this.OnInputRef,
                       },
                       o
                     )
@@ -5648,7 +5662,7 @@ var CLSTAMP = "6296065";
             q.a.DialogDropDownMenu_Item,
             n.strDropDownItemClassName
           ),
-          e = n.rgOptions.map(function(e, t) {
+          e = n.rgOptions.map(function (e, t) {
             return g.createElement(
               w.f,
               {
@@ -5657,14 +5671,14 @@ var CLSTAMP = "6296065";
                 key: t,
                 className: Object(y.a)(o, e.strOptionClass),
                 "data-dropdown-index": t,
-                onClick: r
+                onClick: r,
               },
               Boolean(e.tooltip)
                 ? g.createElement(
                     J.a,
                     {
                       toolTipContent: e.tooltip,
-                      strTooltipClassname: Q.a.HoverAboveModal
+                      strTooltipClassname: Q.a.HoverAboveModal,
                     },
                     e.label
                   )
@@ -5679,22 +5693,22 @@ var CLSTAMP = "6296065";
             className: Object(y.a)(
               q.a.DialogDropDownMenu,
               "_DialogInputContainer"
-            )
+            ),
           },
           e
         );
       }
-      var ne = (function(t) {
+      var ne = (function (t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (e.state = { rgOptions: void 0 }), e;
           }
           return (
             Object(h.d)(e, t),
-            (e.prototype.OnMenuOpened = function() {
-              return Object(h.b)(this, void 0, void 0, function() {
+            (e.prototype.OnMenuOpened = function () {
+              return Object(h.b)(this, void 0, void 0, function () {
                 var t;
-                return Object(h.e)(this, function(e) {
+                return Object(h.e)(this, function (e) {
                   switch (e.label) {
                     case 0:
                       return this.state.rgOptions
@@ -5710,15 +5724,15 @@ var CLSTAMP = "6296065";
                 });
               });
             }),
-            (e.prototype.componentDidMount = function() {}),
-            (e.prototype.render = function() {
+            (e.prototype.componentDidMount = function () {}),
+            (e.prototype.render = function () {
               var e = this.props,
                 t = (e.fnLoadOptions, e.strInitialDisplay),
                 n = e.initialValue,
                 r = Object(h.f)(e, [
                   "fnLoadOptions",
                   "strInitialDisplay",
-                  "initialValue"
+                  "initialValue",
                 ]),
                 o = this.state.rgOptions;
               return (
@@ -5730,7 +5744,7 @@ var CLSTAMP = "6296065";
                   $,
                   Object(h.a)({}, r, {
                     rgOptions: o,
-                    onMenuOpened: this.OnMenuOpened
+                    onMenuOpened: this.OnMenuOpened,
                   })
                 )
               );
@@ -5750,31 +5764,31 @@ var CLSTAMP = "6296065";
           ? n && e > n.left && e < n.right && t > n.top && t < n.bottom
           : n && e >= n.left && e <= n.right && t >= n.top && t <= n.bottom;
       }
-      var le = (function() {
+      var le = (function () {
           function e() {
             (this.m_embeddedElement = new oe.a("DragGhosts")),
               (this.m_rgDropRegions = []),
               (this.m_rgActiveDropRegions = []);
           }
           return (
-            (e.prototype.RegisterDropRegion = function(e) {
+            (e.prototype.RegisterDropRegion = function (e) {
               this.m_rgDropRegions.push(e),
                 this.m_activeDraggable &&
                   e.BAcceptDraggable(this.m_activeDraggable) &&
                   (e.OnDragStarted(this.m_activeDraggable),
                   this.m_rgActiveDropRegions.push(e));
             }),
-            (e.prototype.UnregisterDropRegion = function(e) {
+            (e.prototype.UnregisterDropRegion = function (e) {
               ie.c(this.m_rgDropRegions, e),
                 ie.c(this.m_rgActiveDropRegions, e),
                 this.m_activeDropRegion == e &&
                   ((this.m_activeDropRegion = void 0),
                   this.m_activeDraggable && this.ShowDragGhost());
             }),
-            (e.prototype.OnDragGhostRef = function(e) {
+            (e.prototype.OnDragGhostRef = function (e) {
               this.m_dragGhost = e;
             }),
-            (e.prototype.ShowDragGhost = function() {
+            (e.prototype.ShowDragGhost = function () {
               var e = this.m_activeDraggable.renderDragGhost(),
                 t = Object(y.a)(
                   e.props.className,
@@ -5782,7 +5796,7 @@ var CLSTAMP = "6296065";
                 ),
                 n = g.cloneElement(e, {
                   ref: this.OnDragGhostRef,
-                  className: t
+                  className: t,
                 });
               this.m_embeddedElement.ShowElement(
                 this.m_activeDraggable.GetDragDocument(),
@@ -5790,13 +5804,13 @@ var CLSTAMP = "6296065";
                 this.m_activeDraggable
               );
             }),
-            (e.prototype.HideDragGhost = function() {
+            (e.prototype.HideDragGhost = function () {
               this.m_embeddedElement.HideElement(
                 this.m_activeDraggable.GetDragDocument(),
                 this.m_activeDraggable
               );
             }),
-            (e.prototype.OnDragStart = function(e) {
+            (e.prototype.OnDragStart = function (e) {
               (this.m_activeDraggable = e), (this.m_rgActiveDropRegions = []);
               for (var t = 0, n = this.m_rgDropRegions; t < n.length; t++) {
                 var r = n[t];
@@ -5805,7 +5819,7 @@ var CLSTAMP = "6296065";
               }
               this.ShowDragGhost();
             }),
-            (e.prototype.EndDrag = function() {
+            (e.prototype.EndDrag = function () {
               if (this.m_activeDraggable) {
                 this.HideDragGhost(),
                   this.m_activeDropRegion &&
@@ -5822,7 +5836,7 @@ var CLSTAMP = "6296065";
                   (this.m_rgActiveDropRegions = []);
               }
             }),
-            (e.prototype.FindBestActiveDropRegionForPoint = function(e, t) {
+            (e.prototype.FindBestActiveDropRegionForPoint = function (e, t) {
               var n,
                 r,
                 o = this.m_activeDraggable.GetDragDocument();
@@ -5834,7 +5848,7 @@ var CLSTAMP = "6296065";
                 r)
               ) {
                 var i = new Map();
-                this.m_rgActiveDropRegions.forEach(function(e) {
+                this.m_rgActiveDropRegions.forEach(function (e) {
                   return i.set(e.GetElement(), e);
                 });
                 for (var a = 0, s = r; a < s.length; a++) {
@@ -5864,7 +5878,7 @@ var CLSTAMP = "6296065";
               }
               return null;
             }),
-            (e.prototype.OnDrag = function(e, t, n) {
+            (e.prototype.OnDrag = function (e, t, n) {
               var r,
                 o,
                 i,
@@ -5882,7 +5896,7 @@ var CLSTAMP = "6296065";
                     clientY: n,
                     clientXDelta: l,
                     clientYDelta: u,
-                    bVisible: !0
+                    bVisible: !0,
                   }),
                   e.props.bEnableHTMLDrag &&
                     (l || u) &&
@@ -5909,7 +5923,7 @@ var CLSTAMP = "6296065";
                         i.bottom + 100
                       )),
                       (this.m_dragOffWindowTimer = window.setTimeout(
-                        function() {
+                        function () {
                           e == c.m_activeDraggable && c.OnDrag(e, a, s);
                         },
                         50
@@ -5937,7 +5951,7 @@ var CLSTAMP = "6296065";
             e
           );
         })(),
-        ue = (function(t) {
+        ue = (function (t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (
@@ -5949,7 +5963,7 @@ var CLSTAMP = "6296065";
                 startOffsetY: void 0,
                 startWidth: void 0,
                 startHeight: void 0,
-                ownerWin: void 0
+                ownerWin: void 0,
               }),
               (e.m_divRef = g.createRef()),
               e
@@ -5957,12 +5971,12 @@ var CLSTAMP = "6296065";
           }
           return (
             Object(h.d)(e, t),
-            (e.prototype.GetDragDocument = function() {
+            (e.prototype.GetDragDocument = function () {
               return (
                 this.m_DragInfo.ownerWin && this.m_DragInfo.ownerWin.document
               );
             }),
-            (e.prototype.RecordDragStart = function(e, t, n) {
+            (e.prototype.RecordDragStart = function (e, t, n) {
               (this.m_DragInfo.startClientX = t),
                 (this.m_DragInfo.startClientY = n);
               var r = e.getBoundingClientRect();
@@ -5972,7 +5986,7 @@ var CLSTAMP = "6296065";
                 (this.m_DragInfo.startHeight = r.height),
                 (this.m_DragInfo.ownerWin = e.ownerDocument.defaultView);
             }),
-            (e.prototype.ProcessDragMove = function(e) {
+            (e.prototype.ProcessDragMove = function (e) {
               var t,
                 n =
                   "touches" in (t = e)
@@ -5993,7 +6007,7 @@ var CLSTAMP = "6296065";
                   this.props.coordinator.OnDragStart(this),
                   this.props.coordinator.OnDrag(this, r, o));
             }),
-            (e.prototype.OnMouseDown = function(e) {
+            (e.prototype.OnMouseDown = function (e) {
               this.m_DragInfo.bStarted ||
                 0 != e.button ||
                 (this.RecordDragStart(e.currentTarget, e.clientX, e.clientY),
@@ -6006,7 +6020,7 @@ var CLSTAMP = "6296065";
                   this.OnMouseUp
                 ));
             }),
-            (e.prototype.OnMouseUp = function(e) {
+            (e.prototype.OnMouseUp = function (e) {
               this.m_DragInfo.ownerWin.removeEventListener(
                 "mousemove",
                 this.ProcessDragMove
@@ -6017,7 +6031,7 @@ var CLSTAMP = "6296065";
                 ),
                 this.ResetDragState();
             }),
-            (e.prototype.OnTouchStart = function(e) {
+            (e.prototype.OnTouchStart = function (e) {
               this.m_DragInfo.bStarted ||
                 (this.RecordDragStart(
                   e.currentTarget,
@@ -6033,7 +6047,7 @@ var CLSTAMP = "6296065";
                   this.OnTouchEnd
                 ));
             }),
-            (e.prototype.OnTouchEnd = function(e) {
+            (e.prototype.OnTouchEnd = function (e) {
               this.m_DragInfo.ownerWin.removeEventListener(
                 "touchmove",
                 this.ProcessDragMove
@@ -6044,7 +6058,7 @@ var CLSTAMP = "6296065";
                 ),
                 this.ResetDragState();
             }),
-            (e.prototype.ResetDragState = function() {
+            (e.prototype.ResetDragState = function () {
               this.m_DragInfo.bStarted &&
                 (this.props.coordinator.EndDrag(),
                 this.props.fnOnDragEnd && this.props.fnOnDragEnd()),
@@ -6056,10 +6070,10 @@ var CLSTAMP = "6296065";
                 (this.m_DragInfo.ownerWin = void 0),
                 this.forceUpdate();
             }),
-            (e.prototype.OnHTMLDragStart = function(n) {
+            (e.prototype.OnHTMLDragStart = function (n) {
               (n.dataTransfer.effectAllowed = "copyMove"),
                 this.props.strHTMLDragData &&
-                  this.props.strHTMLDragData.forEach(function(e, t) {
+                  this.props.strHTMLDragData.forEach(function (e, t) {
                     return n.dataTransfer.setData(t, e);
                   }),
                 n.dataTransfer.getData("text/plain") ||
@@ -6071,18 +6085,19 @@ var CLSTAMP = "6296065";
               n.dataTransfer.setDragImage(e, 0, 0),
                 this.RecordDragStart(n.currentTarget, n.clientX, n.clientY);
             }),
-            (e.prototype.OnHTMLDragEnd = function() {
+            (e.prototype.OnHTMLDragEnd = function () {
               this.ResetDragState();
             }),
-            (e.prototype.render = function() {
+            (e.prototype.render = function () {
               var e = this.props,
                 t = (e.coordinator, e.data, e.bEnableHTMLDrag),
-                n = (e.strHTMLDragData,
-                e.fnOnDragStart,
-                e.fnOnDragEnd,
-                e.fnRenderDragGhost,
-                e.fnRenderDropGhost,
-                e.className),
+                n =
+                  (e.strHTMLDragData,
+                  e.fnOnDragStart,
+                  e.fnOnDragEnd,
+                  e.fnRenderDragGhost,
+                  e.fnRenderDropGhost,
+                  e.className),
                 r = e.strActiveClassName,
                 o = e.children,
                 i = Object(h.f)(e, [
@@ -6096,7 +6111,7 @@ var CLSTAMP = "6296065";
                   "fnRenderDropGhost",
                   "className",
                   "strActiveClassName",
-                  "children"
+                  "children",
                 ]),
                 a = {},
                 s = n || "DialogDraggable";
@@ -6106,33 +6121,33 @@ var CLSTAMP = "6296065";
                     t &&
                       (a = {
                         onDrag: this.ProcessDragMove,
-                        onDragEnd: this.OnHTMLDragEnd
+                        onDragEnd: this.OnHTMLDragEnd,
                       }))
                   : (a = t
                       ? {
                           onDragStart: this.OnHTMLDragStart,
                           onDrag: this.ProcessDragMove,
-                          onDragEnd: this.OnHTMLDragEnd
+                          onDragEnd: this.OnHTMLDragEnd,
                         }
                       : {
                           onMouseDown: this.OnMouseDown,
-                          onTouchStart: this.OnTouchStart
+                          onTouchStart: this.OnTouchStart,
                         }),
                 g.createElement(
                   "div",
                   Object(h.a)({ ref: this.m_divRef, className: s }, a, i, {
-                    draggable: t
+                    draggable: t,
                   }),
                   o
                 )
               );
             }),
-            (e.prototype.renderDropGhost = function() {
+            (e.prototype.renderDropGhost = function () {
               return this.props.fnRenderDropGhost
                 ? this.props.fnRenderDropGhost()
                 : g.createElement(pe, { elContent: this.GetClone() });
             }),
-            (e.prototype.renderDragGhost = function() {
+            (e.prototype.renderDragGhost = function () {
               return this.props.fnRenderDragGhost
                 ? this.props.fnRenderDragGhost()
                 : g.createElement(me, {
@@ -6140,10 +6155,10 @@ var CLSTAMP = "6296065";
                     offsetX: this.m_DragInfo.startOffsetX,
                     offsetY: this.m_DragInfo.startOffsetY,
                     width: this.m_DragInfo.startWidth,
-                    height: this.m_DragInfo.startHeight
+                    height: this.m_DragInfo.startHeight,
                   });
             }),
-            (e.prototype.GetClone = function() {
+            (e.prototype.GetClone = function () {
               var e,
                 t = this.m_divRef.current;
               if (t && t.childElementCount)
@@ -6167,26 +6182,26 @@ var CLSTAMP = "6296065";
             e
           );
         })(g.Component),
-        pe = (function(e) {
+        pe = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
           return (
             Object(h.d)(t, e),
-            (t.prototype.OnRef = function(e) {
+            (t.prototype.OnRef = function (e) {
               e && e.appendChild(this.props.elContent);
             }),
-            (t.prototype.render = function() {
+            (t.prototype.render = function () {
               return g.createElement("div", {
                 className: "DialogDraggable_DropGhost",
-                ref: this.OnRef
+                ref: this.OnRef,
               });
             }),
             Object(h.c)([i.a], t.prototype, "OnRef", null),
             t
           );
         })(g.Component),
-        me = (function(t) {
+        me = (function (t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (
@@ -6195,22 +6210,22 @@ var CLSTAMP = "6296065";
                 clientY: void 0,
                 bVisible: !0,
                 clientXDelta: void 0,
-                clientYDelta: void 0
+                clientYDelta: void 0,
               }),
               e
             );
           }
           return (
             Object(h.d)(e, t),
-            (e.prototype.OnRef = function(e) {
+            (e.prototype.OnRef = function (e) {
               e && e.appendChild(this.props.elContent);
             }),
-            (e.prototype.CalculateRotationDegrees = function(e) {
+            (e.prototype.CalculateRotationDegrees = function (e) {
               return !e || Math.abs(e) < 4
                 ? 0
                 : (0 < e ? 7.5 : -7.5) * Math.sqrt(Math.abs(e));
             }),
-            (e.prototype.render = function() {
+            (e.prototype.render = function () {
               if (
                 !this.state.bVisible ||
                 void 0 === this.state.clientX ||
@@ -6222,7 +6237,7 @@ var CLSTAMP = "6296065";
                   top: this.state.clientY - (this.props.offsetY || 0),
                   width: this.props.width || "auto",
                   height: this.props.height || "auto",
-                  perspective: "600px"
+                  perspective: "600px",
                 },
                 t = ae.c(
                   this.CalculateRotationDegrees(this.state.clientYDelta),
@@ -6241,7 +6256,7 @@ var CLSTAMP = "6296065";
                     this.CalculateRotationDegrees(this.state.clientXDelta) +
                     "deg)",
                   transition: "transform .16s ease-out, filter .16s ease-out",
-                  filter: "brightness(" + t + ")"
+                  filter: "brightness(" + t + ")",
                 },
                 r = this.props.className || "DialogDraggable_DragGhost";
               return g.createElement(
@@ -6254,82 +6269,83 @@ var CLSTAMP = "6296065";
             e
           );
         })(g.Component),
-        de = (function(e) {
+        de = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
           return (
             Object(h.d)(t, e),
-            (t.prototype.BDraggableInRegion = function(e, t, n) {
+            (t.prototype.BDraggableInRegion = function (e, t, n) {
               var r = this.GetClientRect();
               return (
                 !!r &&
-                (e >= r.left &&
-                  e <= r.right &&
-                  t >= r.top - 20 &&
-                  t <= r.bottom + 20)
+                e >= r.left &&
+                e <= r.right &&
+                t >= r.top - 20 &&
+                t <= r.bottom + 20
               );
             }),
             t
           );
         })(
-          (function(n) {
+          (function (n) {
             function e(e) {
               var t = n.call(this, e) || this;
               return (t.m_divRef = g.createRef()), (t.state = {}), t;
             }
             return (
               Object(h.d)(e, n),
-              (e.prototype.componentDidMount = function() {
+              (e.prototype.componentDidMount = function () {
                 this.props.coordinator.RegisterDropRegion(this);
               }),
-              (e.prototype.componentWillUnmount = function() {
+              (e.prototype.componentWillUnmount = function () {
                 this.props.coordinator.UnregisterDropRegion(this);
               }),
-              (e.prototype.OnDragStarted = function(e) {
+              (e.prototype.OnDragStarted = function (e) {
                 this.setState({ bDraggableActive: !0 });
               }),
-              (e.prototype.OnDragEnded = function(e) {
+              (e.prototype.OnDragEnded = function (e) {
                 this.setState({ bDraggableActive: !1 });
               }),
-              (e.prototype.OnDragEnter = function(e, t) {
+              (e.prototype.OnDragEnter = function (e, t) {
                 this.setState({ dropGhost: t }),
                   this.props.fnOnDragEnter && this.props.fnOnDragEnter(e);
               }),
-              (e.prototype.OnDragLeave = function(e) {
+              (e.prototype.OnDragLeave = function (e) {
                 this.setState({ dropGhost: void 0 }),
                   this.props.fnOnDragLeave && this.props.fnOnDragLeave(e);
               }),
-              (e.prototype.OnDragMove = function(e, t, n) {}),
-              (e.prototype.OnDrop = function(e) {
+              (e.prototype.OnDragMove = function (e, t, n) {}),
+              (e.prototype.OnDrop = function (e) {
                 this.setState({ dropGhost: void 0 }), this.props.fnOnDrop(e);
               }),
-              (e.prototype.BAcceptDraggable = function(e) {
+              (e.prototype.BAcceptDraggable = function (e) {
                 return (
                   !this.props.fnBAcceptDraggable ||
                   this.props.fnBAcceptDraggable(e)
                 );
               }),
-              (e.prototype.BDraggableInRegion = function(e, t, n) {
+              (e.prototype.BDraggableInRegion = function (e, t, n) {
                 return ce(e, t, this.GetClientRect());
               }),
-              (e.prototype.GetElement = function() {
+              (e.prototype.GetElement = function () {
                 return this.m_divRef.current;
               }),
-              (e.prototype.GetClientRect = function() {
+              (e.prototype.GetClientRect = function () {
                 return (
                   this.m_divRef.current &&
                   this.m_divRef.current.getBoundingClientRect()
                 );
               }),
-              (e.prototype.render = function() {
+              (e.prototype.render = function () {
                 var e = this.props,
-                  t = (e.coordinator,
-                  e.fnBAcceptDraggable,
-                  e.fnOnDrop,
-                  e.fnOnDragEnter,
-                  e.fnOnDragLeave,
-                  e.className),
+                  t =
+                    (e.coordinator,
+                    e.fnBAcceptDraggable,
+                    e.fnOnDrop,
+                    e.fnOnDragEnter,
+                    e.fnOnDragLeave,
+                    e.className),
                   n = e.strActiveClassName,
                   r = e.children,
                   o = Object(h.f)(e, [
@@ -6340,7 +6356,7 @@ var CLSTAMP = "6296065";
                     "fnOnDragLeave",
                     "className",
                     "strActiveClassName",
-                    "children"
+                    "children",
                   ]),
                   i = Object(y.a)(
                     t || "DialogDropRegion",
@@ -6371,14 +6387,14 @@ var CLSTAMP = "6296065";
           n = (e.active, Object(h.f)(e, ["title", "active"]));
         return g.createElement("div", Object(h.a)({}, n), t);
       }
-      g.forwardRef(function(o, e) {
+      g.forwardRef(function (o, e) {
         var t,
           n,
           i = null !== (t = o.stylesheet) && void 0 !== t ? t : fe.a,
           r =
             null != o.startingPage
               ? o.pages
-                  .map(function(e) {
+                  .map(function (e) {
                     return e.identifier;
                   })
                   .indexOf(o.startingPage)
@@ -6389,12 +6405,12 @@ var CLSTAMP = "6296065";
           l = s[1],
           u = a
             ? c
-            : o.pages.findIndex(function(e) {
+            : o.pages.findIndex(function (e) {
                 return e.identifier === o.page;
               }),
           p = u < 0 || u >= o.pages.length ? 0 : u,
           m = o.pages[p],
-          d = o.pages.map(function(e, t) {
+          d = o.pages.map(function (e, t) {
             var n,
               r = e == m;
             return g.createElement(w.f, {
@@ -6405,12 +6421,12 @@ var CLSTAMP = "6296065";
                 (((n = {})[i.Active] = r), n)
               ),
               key: e.title,
-              onClick: function() {
+              onClick: function () {
                 o.onPageRequested && o.onPageRequested(e.identifier),
                   e.click ? e.click() : a && t != c && l(t);
               },
               title: e.title,
-              active: r
+              active: r,
             });
           }),
           h = m.hideTitle,
@@ -6420,7 +6436,7 @@ var CLSTAMP = "6296065";
           "div",
           {
             className: Object(y.a)(i.PagedSettingsDialog, o.className),
-            ref: e
+            ref: e,
           },
           g.createElement(
             "div",
@@ -6436,7 +6452,7 @@ var CLSTAMP = "6296065";
               {
                 component: o.renderPageList,
                 fallback: ve,
-                className: i.PagedSettingsDialog_PageList
+                className: i.PagedSettingsDialog_PageList,
               },
               d
             )
@@ -6452,7 +6468,7 @@ var CLSTAMP = "6296065";
                     i.PagedSettingsDialog_PageContent,
                     m.pageClassName,
                     { noPermission: !f }
-                  )
+                  ),
                 },
                 !h &&
                   g.createElement(
@@ -6476,7 +6492,7 @@ var CLSTAMP = "6296065";
           )
         );
       });
-      var be = (function(t) {
+      var be = (function (t) {
         function e() {
           var e = (null !== t && t.apply(this, arguments)) || this;
           return (
@@ -6488,25 +6504,25 @@ var CLSTAMP = "6296065";
         return (
           Object(h.d)(e, t),
           Object.defineProperty(e.prototype, "textarea", {
-            get: function() {
+            get: function () {
               return this.m_refTextArea.current;
             },
             enumerable: !1,
-            configurable: !0
+            configurable: !0,
           }),
           Object.defineProperty(e.prototype, "value", {
-            get: function() {
+            get: function () {
               return (
                 this.m_refTextArea.current && this.m_refTextArea.current.value
               );
             },
             enumerable: !1,
-            configurable: !0
+            configurable: !0,
           }),
-          (e.prototype.focus = function() {
+          (e.prototype.focus = function () {
             this.m_refTextArea.current.focus();
           }),
-          (e.prototype.InternalOnInput = function() {
+          (e.prototype.InternalOnInput = function () {
             var e,
               t,
               n = this.m_refTextArea.current,
@@ -6525,54 +6541,55 @@ var CLSTAMP = "6296065";
               void 0 !== e && window.scrollTo(window.scrollX, e),
               (this.m_cEntryLength = i);
           }),
-          (e.prototype.CalculatePadding = function() {
+          (e.prototype.CalculatePadding = function () {
             var e = getComputedStyle(this.m_refTextArea.current);
             this.m_nTextAreaPadding =
               parseFloat(e.paddingTop) + parseFloat(e.paddingBottom);
           }),
-          (e.prototype.GetMinHeight = function() {
+          (e.prototype.GetMinHeight = function () {
             return this.props.nMinHeight || 20;
           }),
-          (e.prototype.GetMaxHeight = function() {
+          (e.prototype.GetMaxHeight = function () {
             return this.props.nMaxHeight || 500;
           }),
-          (e.prototype.DeferredInternalOnInput = function() {
+          (e.prototype.DeferredInternalOnInput = function () {
             window.setTimeout(this.InternalOnInput, 1);
           }),
-          (e.prototype.OnKeyUp = function(e) {
+          (e.prototype.OnKeyUp = function (e) {
             this.InternalOnInput(), this.props.onKeyUp && this.props.onKeyUp(e);
           }),
-          (e.prototype.OnBlur = function(e) {
+          (e.prototype.OnBlur = function (e) {
             this.DeferredInternalOnInput(),
               this.props.onBlur && this.props.onBlur(e);
           }),
-          (e.prototype.OnClick = function(e) {
+          (e.prototype.OnClick = function (e) {
             this.InternalOnInput(), this.props.onClick && this.props.onClick(e);
           }),
-          (e.prototype.OnPaste = function(e) {
+          (e.prototype.OnPaste = function (e) {
             this.DeferredInternalOnInput(),
               this.props.onPaste && this.props.onPaste(e);
           }),
-          (e.prototype.OnCut = function(e) {
+          (e.prototype.OnCut = function (e) {
             this.InternalOnInput(), this.props.onCut && this.props.onCut(e);
           }),
-          (e.prototype.componentDidMount = function() {
+          (e.prototype.componentDidMount = function () {
             (this.m_refTextArea.current.style.overflow = "hidden"),
               (this.m_refTextArea.current.style.resize = "none"),
               this.InternalOnInput();
           }),
-          (e.prototype.componentDidUpdate = function(e) {
+          (e.prototype.componentDidUpdate = function (e) {
             (e.nMinHeight == this.props.nMinHeight &&
               e.nMaxHeight == this.props.nMaxHeight) ||
               (this.m_cEntryLength = Number.MAX_VALUE),
               this.m_refTextArea.current.value.length != this.m_cEntryLength &&
                 this.InternalOnInput();
           }),
-          (e.prototype.render = function() {
+          (e.prototype.render = function () {
             var e = this.props,
-              t = (e.nMinHeight,
-              e.nMaxHeight,
-              Object(h.f)(e, ["nMinHeight", "nMaxHeight"]));
+              t =
+                (e.nMinHeight,
+                e.nMaxHeight,
+                Object(h.f)(e, ["nMinHeight", "nMaxHeight"]));
             return g.createElement(
               "textarea",
               Object(h.a)({}, t, {
@@ -6581,7 +6598,7 @@ var CLSTAMP = "6296065";
                 onBlur: this.OnBlur,
                 onClick: this.OnClick,
                 onPaste: this.OnPaste,
-                onCut: this.OnCut
+                onCut: this.OnCut,
               })
             );
           }),
@@ -6594,97 +6611,97 @@ var CLSTAMP = "6296065";
           e
         );
       })(g.Component);
-      n.d(t, "k", function() {
+      n.d(t, "k", function () {
         return E;
       }),
-        n.d(t, "u", function() {
+        n.d(t, "u", function () {
           return u;
         }),
-        n.d(t, "j", function() {
+        n.d(t, "j", function () {
           return p;
         }),
-        n.d(t, "m", function() {
+        n.d(t, "m", function () {
           return m;
         }),
-        n.d(t, "c", function() {
+        n.d(t, "c", function () {
           return d;
         }),
-        n.d(t, "b", function() {
+        n.d(t, "b", function () {
           return f;
         }),
-        n.d(t, "v", function() {
+        n.d(t, "v", function () {
           return v;
         }),
-        n.d(t, "f", function() {
+        n.d(t, "f", function () {
           return C;
         }),
-        n.d(t, "g", function() {
+        n.d(t, "g", function () {
           return M;
         }),
-        n.d(t, "q", function() {
+        n.d(t, "q", function () {
           return k;
         }),
-        n.d(t, "d", function() {
+        n.d(t, "d", function () {
           return T;
         }),
-        n.d(t, "t", function() {
+        n.d(t, "t", function () {
           return I;
         }),
-        n.d(t, "n", function() {
+        n.d(t, "n", function () {
           return N;
         }),
-        n.d(t, "o", function() {
+        n.d(t, "o", function () {
           return L;
         }),
-        n.d(t, "e", function() {
+        n.d(t, "e", function () {
           return F;
         }),
-        n.d(t, "r", function() {
+        n.d(t, "r", function () {
           return P;
         }),
-        n.d(t, "p", function() {
+        n.d(t, "p", function () {
           return R;
         }),
-        n.d(t, "l", function() {
+        n.d(t, "l", function () {
           return V;
         }),
-        n.d(t, "s", function() {
+        n.d(t, "s", function () {
           return Y;
         }),
-        n.d(t, "h", function() {
+        n.d(t, "h", function () {
           return $;
         }),
-        n.d(t, "i", function() {
+        n.d(t, "i", function () {
           return ne;
         }),
-        n.d(t, "a", function() {
+        n.d(t, "a", function () {
           return be;
         });
     },
-    OS8t: function(e, t, n) {
+    OS8t: function (e, t, n) {
       "use strict";
-      n.d(t, "d", function() {
+      n.d(t, "d", function () {
         return o;
       }),
-        n.d(t, "h", function() {
+        n.d(t, "h", function () {
           return i;
         }),
-        n.d(t, "e", function() {
+        n.d(t, "e", function () {
           return a;
         }),
-        n.d(t, "c", function() {
+        n.d(t, "c", function () {
           return s;
         }),
-        n.d(t, "g", function() {
+        n.d(t, "g", function () {
           return c;
         }),
-        n.d(t, "b", function() {
+        n.d(t, "b", function () {
           return l;
         }),
-        n.d(t, "f", function() {
+        n.d(t, "f", function () {
           return u;
         }),
-        n.d(t, "a", function() {
+        n.d(t, "a", function () {
           return p;
         });
       var r = n("mrSG"),
@@ -6705,7 +6722,7 @@ var CLSTAMP = "6296065";
           s = e.fields,
           c = new t();
         for (var n in s)
-          !(function(e) {
+          !(function (e) {
             var t = s[e],
               n = t.n,
               r = t.c,
@@ -6719,7 +6736,7 @@ var CLSTAMP = "6296065";
                     c,
                     n,
                     Array.isArray(i)
-                      ? i.map(function(e) {
+                      ? i.map(function (e) {
                           return r.fromObject(e);
                         })
                       : []
@@ -6840,8 +6857,8 @@ var CLSTAMP = "6296065";
             : (t.prototype[n] = i
                 ? a
                   ? m(h.Message.getRepeatedWrapperField, i, o)
-                  : (function(t, n) {
-                      return function(e) {
+                  : (function (t, n) {
+                      return function (e) {
                         return (
                           void 0 === e && (e = !0),
                           h.Message.getWrapperField(this, t, n, e ? 1 : 0)
@@ -6858,9 +6875,9 @@ var CLSTAMP = "6296065";
               o
             )),
             a &&
-              (t.prototype["add_" + n] = (function(n, r) {
+              (t.prototype["add_" + n] = (function (n, r) {
                 return r
-                  ? function(e, t) {
+                  ? function (e, t) {
                       return h.Message.addToRepeatedWrapperField(
                         this,
                         n,
@@ -6869,7 +6886,7 @@ var CLSTAMP = "6296065";
                         t
                       );
                     }
-                  : function(e, t) {
+                  : function (e, t) {
                       h.Message.addToRepeatedField(this, n, e, t);
                     };
               })(o, i));
@@ -6878,41 +6895,41 @@ var CLSTAMP = "6296065";
       function m(e) {
         for (var t = [], n = 1; n < arguments.length; n++)
           t[n - 1] = arguments[n];
-        return function() {
+        return function () {
           return e.apply(void 0, Object(r.g)([this], t));
         };
       }
       function d(t, n) {
-        return function(e) {
+        return function (e) {
           return t(this, n, e);
         };
       }
     },
-    "P++D": function(e, t, n) {
+    "P++D": function (e, t, n) {
       e.exports = {
         DialogDropDownMenu_Item: "dropdown_DialogDropDownMenu_Item_2oAiZ",
-        DialogDropDownMenu: "dropdown_DialogDropDownMenu_30wJO"
+        DialogDropDownMenu: "dropdown_DialogDropDownMenu_30wJO",
       };
     },
-    "RD/U": function(e, t, n) {
+    "RD/U": function (e, t, n) {
       "use strict";
-      n.d(t, "c", function() {
+      n.d(t, "c", function () {
         return r;
       }),
-        n.d(t, "d", function() {
+        n.d(t, "d", function () {
           return c;
         }),
-        n.d(t, "a", function() {
+        n.d(t, "a", function () {
           return l;
         }),
-        n.d(t, "b", function() {
+        n.d(t, "b", function () {
           return p;
         });
       var o = n("mrSG"),
         i = n("hRO2"),
         a = n("OS8t"),
         s = i.Message;
-      var r = (function(n) {
+      var r = (function (n) {
           function r(e) {
             void 0 === e && (e = null);
             var t = n.call(this) || this;
@@ -6924,53 +6941,53 @@ var CLSTAMP = "6296065";
           }
           return (
             Object(o.d)(r, n),
-            (r.M = function() {
+            (r.M = function () {
               return (
                 r.sm_m ||
                   (r.sm_m = {
                     proto: r,
                     fields: {
                       v4: { n: 1, br: a.d.readFixed32, bw: a.h.writeFixed32 },
-                      v6: { n: 2, br: a.d.readBytes, bw: a.h.writeBytes }
-                    }
+                      v6: { n: 2, br: a.d.readBytes, bw: a.h.writeBytes },
+                    },
                   }),
                 r.sm_m
               );
             }),
-            (r.MBF = function() {
+            (r.MBF = function () {
               return r.sm_mbf || (r.sm_mbf = a.e(r.M())), r.sm_mbf;
             }),
-            (r.prototype.toObject = function(e) {
+            (r.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
-            (r.toObject = function(e, t) {
+            (r.toObject = function (e, t) {
               return a.g(r.M(), e, t);
             }),
-            (r.fromObject = function(e) {
+            (r.fromObject = function (e) {
               return a.c(r.M(), e);
             }),
-            (r.deserializeBinary = function(e) {
+            (r.deserializeBinary = function (e) {
               var t = new i.BinaryReader(e),
                 n = new r();
               return r.deserializeBinaryFromReader(n, t);
             }),
-            (r.deserializeBinaryFromReader = function(e, t) {
+            (r.deserializeBinaryFromReader = function (e, t) {
               return a.b(r.MBF(), e, t);
             }),
-            (r.prototype.serializeBinary = function() {
+            (r.prototype.serializeBinary = function () {
               var e = new i.BinaryWriter();
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
-            (r.serializeBinaryToWriter = function(e, t) {
+            (r.serializeBinaryToWriter = function (e, t) {
               a.f(r.M(), e, t);
             }),
-            (r.prototype.getClassName = function() {
+            (r.prototype.getClassName = function () {
               return "CMsgIPAddress";
             }),
             r
           );
         })(s),
-        c = (function(n) {
+        c = (function (n) {
           function r(e) {
             void 0 === e && (e = null);
             var t = n.call(this) || this;
@@ -6982,7 +6999,7 @@ var CLSTAMP = "6296065";
           }
           return (
             Object(o.d)(r, n),
-            (r.M = function() {
+            (r.M = function () {
               return (
                 r.sm_m ||
                   (r.sm_m = {
@@ -6991,165 +7008,165 @@ var CLSTAMP = "6296065";
                       steamid: {
                         n: 1,
                         br: a.d.readFixed64String,
-                        bw: a.h.writeFixed64String
+                        bw: a.h.writeFixed64String,
                       },
                       client_sessionid: {
                         n: 2,
                         br: a.d.readInt32,
-                        bw: a.h.writeInt32
+                        bw: a.h.writeInt32,
                       },
                       routing_appid: {
                         n: 3,
                         br: a.d.readUint32,
-                        bw: a.h.writeUint32
+                        bw: a.h.writeUint32,
                       },
                       jobid_source: {
                         n: 10,
                         d: "18446744073709551615",
                         br: a.d.readFixed64String,
-                        bw: a.h.writeFixed64String
+                        bw: a.h.writeFixed64String,
                       },
                       jobid_target: {
                         n: 11,
                         d: "18446744073709551615",
                         br: a.d.readFixed64String,
-                        bw: a.h.writeFixed64String
+                        bw: a.h.writeFixed64String,
                       },
                       target_job_name: {
                         n: 12,
                         br: a.d.readString,
-                        bw: a.h.writeString
+                        bw: a.h.writeString,
                       },
                       seq_num: { n: 24, br: a.d.readInt32, bw: a.h.writeInt32 },
                       eresult: {
                         n: 13,
                         d: 2,
                         br: a.d.readInt32,
-                        bw: a.h.writeInt32
+                        bw: a.h.writeInt32,
                       },
                       error_message: {
                         n: 14,
                         br: a.d.readString,
-                        bw: a.h.writeString
+                        bw: a.h.writeString,
                       },
                       ip: { n: 15, br: a.d.readUint32, bw: a.h.writeUint32 },
                       ip_v6: { n: 29, br: a.d.readBytes, bw: a.h.writeBytes },
                       auth_account_flags: {
                         n: 16,
                         br: a.d.readUint32,
-                        bw: a.h.writeUint32
+                        bw: a.h.writeUint32,
                       },
                       token_source: {
                         n: 22,
                         br: a.d.readUint32,
-                        bw: a.h.writeUint32
+                        bw: a.h.writeUint32,
                       },
                       admin_spoofing_user: {
                         n: 23,
                         br: a.d.readBool,
-                        bw: a.h.writeBool
+                        bw: a.h.writeBool,
                       },
                       transport_error: {
                         n: 17,
                         d: 1,
                         br: a.d.readInt32,
-                        bw: a.h.writeInt32
+                        bw: a.h.writeInt32,
                       },
                       messageid: {
                         n: 18,
                         d: "18446744073709551615",
                         br: a.d.readUint64String,
-                        bw: a.h.writeUint64String
+                        bw: a.h.writeUint64String,
                       },
                       publisher_group_id: {
                         n: 19,
                         br: a.d.readUint32,
-                        bw: a.h.writeUint32
+                        bw: a.h.writeUint32,
                       },
                       sysid: { n: 20, br: a.d.readUint32, bw: a.h.writeUint32 },
                       trace_tag: {
                         n: 21,
                         br: a.d.readUint64String,
-                        bw: a.h.writeUint64String
+                        bw: a.h.writeUint64String,
                       },
                       webapi_key_id: {
                         n: 25,
                         br: a.d.readUint32,
-                        bw: a.h.writeUint32
+                        bw: a.h.writeUint32,
                       },
                       is_from_external_source: {
                         n: 26,
                         br: a.d.readBool,
-                        bw: a.h.writeBool
+                        bw: a.h.writeBool,
                       },
                       forward_to_sysid: {
                         n: 27,
                         r: !0,
                         q: !0,
                         br: a.d.readUint32,
-                        bw: a.h.writeRepeatedUint32
+                        bw: a.h.writeRepeatedUint32,
                       },
                       cm_sysid: {
                         n: 28,
                         br: a.d.readUint32,
-                        bw: a.h.writeUint32
+                        bw: a.h.writeUint32,
                       },
                       wg_token: {
                         n: 30,
                         br: a.d.readString,
-                        bw: a.h.writeString
+                        bw: a.h.writeString,
                       },
                       launcher_type: {
                         n: 31,
                         d: 0,
                         br: a.d.readUint32,
-                        bw: a.h.writeUint32
+                        bw: a.h.writeUint32,
                       },
                       realm: {
                         n: 32,
                         d: 0,
                         br: a.d.readUint32,
-                        bw: a.h.writeUint32
-                      }
-                    }
+                        bw: a.h.writeUint32,
+                      },
+                    },
                   }),
                 r.sm_m
               );
             }),
-            (r.MBF = function() {
+            (r.MBF = function () {
               return r.sm_mbf || (r.sm_mbf = a.e(r.M())), r.sm_mbf;
             }),
-            (r.prototype.toObject = function(e) {
+            (r.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
-            (r.toObject = function(e, t) {
+            (r.toObject = function (e, t) {
               return a.g(r.M(), e, t);
             }),
-            (r.fromObject = function(e) {
+            (r.fromObject = function (e) {
               return a.c(r.M(), e);
             }),
-            (r.deserializeBinary = function(e) {
+            (r.deserializeBinary = function (e) {
               var t = new i.BinaryReader(e),
                 n = new r();
               return r.deserializeBinaryFromReader(n, t);
             }),
-            (r.deserializeBinaryFromReader = function(e, t) {
+            (r.deserializeBinaryFromReader = function (e, t) {
               return a.b(r.MBF(), e, t);
             }),
-            (r.prototype.serializeBinary = function() {
+            (r.prototype.serializeBinary = function () {
               var e = new i.BinaryWriter();
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
-            (r.serializeBinaryToWriter = function(e, t) {
+            (r.serializeBinaryToWriter = function (e, t) {
               a.f(r.M(), e, t);
             }),
-            (r.prototype.getClassName = function() {
+            (r.prototype.getClassName = function () {
               return "CMsgProtoBufHeader";
             }),
             r
           );
         })(s),
-        l = (function(n) {
+        l = (function (n) {
           function r(e) {
             void 0 === e && (e = null);
             var t = n.call(this) || this;
@@ -7161,7 +7178,7 @@ var CLSTAMP = "6296065";
           }
           return (
             Object(o.d)(r, n),
-            (r.M = function() {
+            (r.M = function () {
               return (
                 r.sm_m ||
                   (r.sm_m = {
@@ -7174,7 +7191,7 @@ var CLSTAMP = "6296065";
                       logo_small: {
                         n: 5,
                         br: a.d.readString,
-                        bw: a.h.writeString
+                        bw: a.h.writeString,
                       },
                       tool: { n: 6, br: a.d.readBool, bw: a.h.writeBool },
                       demo: { n: 7, br: a.d.readBool, bw: a.h.writeBool },
@@ -7182,67 +7199,67 @@ var CLSTAMP = "6296065";
                       community_visible_stats: {
                         n: 9,
                         br: a.d.readBool,
-                        bw: a.h.writeBool
+                        bw: a.h.writeBool,
                       },
                       friendly_name: {
                         n: 10,
                         br: a.d.readString,
-                        bw: a.h.writeString
+                        bw: a.h.writeString,
                       },
                       propagation: {
                         n: 11,
                         br: a.d.readString,
-                        bw: a.h.writeString
+                        bw: a.h.writeString,
                       },
                       has_adult_content: {
                         n: 12,
                         br: a.d.readBool,
-                        bw: a.h.writeBool
+                        bw: a.h.writeBool,
                       },
                       is_visible_in_steam_china: {
                         n: 13,
                         br: a.d.readBool,
-                        bw: a.h.writeBool
-                      }
-                    }
+                        bw: a.h.writeBool,
+                      },
+                    },
                   }),
                 r.sm_m
               );
             }),
-            (r.MBF = function() {
+            (r.MBF = function () {
               return r.sm_mbf || (r.sm_mbf = a.e(r.M())), r.sm_mbf;
             }),
-            (r.prototype.toObject = function(e) {
+            (r.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
-            (r.toObject = function(e, t) {
+            (r.toObject = function (e, t) {
               return a.g(r.M(), e, t);
             }),
-            (r.fromObject = function(e) {
+            (r.fromObject = function (e) {
               return a.c(r.M(), e);
             }),
-            (r.deserializeBinary = function(e) {
+            (r.deserializeBinary = function (e) {
               var t = new i.BinaryReader(e),
                 n = new r();
               return r.deserializeBinaryFromReader(n, t);
             }),
-            (r.deserializeBinaryFromReader = function(e, t) {
+            (r.deserializeBinaryFromReader = function (e, t) {
               return a.b(r.MBF(), e, t);
             }),
-            (r.prototype.serializeBinary = function() {
+            (r.prototype.serializeBinary = function () {
               var e = new i.BinaryWriter();
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
-            (r.serializeBinaryToWriter = function(e, t) {
+            (r.serializeBinaryToWriter = function (e, t) {
               a.f(r.M(), e, t);
             }),
-            (r.prototype.getClassName = function() {
+            (r.prototype.getClassName = function () {
               return "CCDDBAppDetailCommon";
             }),
             r
           );
         })(s),
-        u = (function(n) {
+        u = (function (n) {
           function r(e) {
             void 0 === e && (e = null);
             var t = n.call(this) || this;
@@ -7254,7 +7271,7 @@ var CLSTAMP = "6296065";
           }
           return (
             Object(o.d)(r, n),
-            (r.M = function() {
+            (r.M = function () {
               return (
                 r.sm_m ||
                   (r.sm_m = {
@@ -7264,79 +7281,79 @@ var CLSTAMP = "6296065";
                       event_gid: {
                         n: 2,
                         br: a.d.readFixed64String,
-                        bw: a.h.writeFixed64String
+                        bw: a.h.writeFixed64String,
                       },
                       announcement_gid: {
                         n: 3,
                         br: a.d.readFixed64String,
-                        bw: a.h.writeFixed64String
+                        bw: a.h.writeFixed64String,
                       },
                       rtime_start: {
                         n: 4,
                         br: a.d.readUint32,
-                        bw: a.h.writeUint32
+                        bw: a.h.writeUint32,
                       },
                       rtime_end: {
                         n: 5,
                         br: a.d.readUint32,
-                        bw: a.h.writeUint32
+                        bw: a.h.writeUint32,
                       },
                       priority_score: {
                         n: 6,
                         br: a.d.readUint32,
-                        bw: a.h.writeUint32
+                        bw: a.h.writeUint32,
                       },
                       type: { n: 7, br: a.d.readUint32, bw: a.h.writeUint32 },
                       clamp_range_slot: {
                         n: 8,
                         br: a.d.readUint32,
-                        bw: a.h.writeUint32
+                        bw: a.h.writeUint32,
                       },
                       appid: { n: 9, br: a.d.readUint32, bw: a.h.writeUint32 },
                       rtime32_last_modified: {
                         n: 10,
                         br: a.d.readUint32,
-                        bw: a.h.writeUint32
-                      }
-                    }
+                        bw: a.h.writeUint32,
+                      },
+                    },
                   }),
                 r.sm_m
               );
             }),
-            (r.MBF = function() {
+            (r.MBF = function () {
               return r.sm_mbf || (r.sm_mbf = a.e(r.M())), r.sm_mbf;
             }),
-            (r.prototype.toObject = function(e) {
+            (r.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
-            (r.toObject = function(e, t) {
+            (r.toObject = function (e, t) {
               return a.g(r.M(), e, t);
             }),
-            (r.fromObject = function(e) {
+            (r.fromObject = function (e) {
               return a.c(r.M(), e);
             }),
-            (r.deserializeBinary = function(e) {
+            (r.deserializeBinary = function (e) {
               var t = new i.BinaryReader(e),
                 n = new r();
               return r.deserializeBinaryFromReader(n, t);
             }),
-            (r.deserializeBinaryFromReader = function(e, t) {
+            (r.deserializeBinaryFromReader = function (e, t) {
               return a.b(r.MBF(), e, t);
             }),
-            (r.prototype.serializeBinary = function() {
+            (r.prototype.serializeBinary = function () {
               var e = new i.BinaryWriter();
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
-            (r.serializeBinaryToWriter = function(e, t) {
+            (r.serializeBinaryToWriter = function (e, t) {
               a.f(r.M(), e, t);
             }),
-            (r.prototype.getClassName = function() {
+            (r.prototype.getClassName = function () {
               return "CClanEventUserNewsTuple";
             }),
             r
           );
         })(s),
-        p = (function(n) {
+        p = (function (n) {
           function r(e) {
             void 0 === e && (e = null);
             var t = n.call(this) || this;
@@ -7348,7 +7365,7 @@ var CLSTAMP = "6296065";
           }
           return (
             Object(o.d)(r, n),
-            (r.M = function() {
+            (r.M = function () {
               return (
                 r.sm_m ||
                   (r.sm_m = {
@@ -7357,59 +7374,59 @@ var CLSTAMP = "6296065";
                       rtime_before: {
                         n: 1,
                         br: a.d.readUint32,
-                        bw: a.h.writeUint32
+                        bw: a.h.writeUint32,
                       },
                       rtime_after: {
                         n: 2,
                         br: a.d.readUint32,
-                        bw: a.h.writeUint32
+                        bw: a.h.writeUint32,
                       },
                       qualified: {
                         n: 3,
                         br: a.d.readUint32,
-                        bw: a.h.writeUint32
+                        bw: a.h.writeUint32,
                       },
-                      events: { n: 4, c: u, r: !0, q: !0 }
-                    }
+                      events: { n: 4, c: u, r: !0, q: !0 },
+                    },
                   }),
                 r.sm_m
               );
             }),
-            (r.MBF = function() {
+            (r.MBF = function () {
               return r.sm_mbf || (r.sm_mbf = a.e(r.M())), r.sm_mbf;
             }),
-            (r.prototype.toObject = function(e) {
+            (r.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
-            (r.toObject = function(e, t) {
+            (r.toObject = function (e, t) {
               return a.g(r.M(), e, t);
             }),
-            (r.fromObject = function(e) {
+            (r.fromObject = function (e) {
               return a.c(r.M(), e);
             }),
-            (r.deserializeBinary = function(e) {
+            (r.deserializeBinary = function (e) {
               var t = new i.BinaryReader(e),
                 n = new r();
               return r.deserializeBinaryFromReader(n, t);
             }),
-            (r.deserializeBinaryFromReader = function(e, t) {
+            (r.deserializeBinaryFromReader = function (e, t) {
               return a.b(r.MBF(), e, t);
             }),
-            (r.prototype.serializeBinary = function() {
+            (r.prototype.serializeBinary = function () {
               var e = new i.BinaryWriter();
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
-            (r.serializeBinaryToWriter = function(e, t) {
+            (r.serializeBinaryToWriter = function (e, t) {
               a.f(r.M(), e, t);
             }),
-            (r.prototype.getClassName = function() {
+            (r.prototype.getClassName = function () {
               return "CClanMatchEventByRange";
             }),
             r
           );
         })(s);
     },
-    RnhZ: function(e, t, n) {
+    RnhZ: function (e, t, n) {
       var r = {
         "./af": "K/tc",
         "./af.js": "K/tc",
@@ -7674,7 +7691,7 @@ var CLSTAMP = "6296065";
         "./zh-mo": "OmwH",
         "./zh-mo.js": "OmwH",
         "./zh-tw": "kOpN",
-        "./zh-tw.js": "kOpN"
+        "./zh-tw.js": "kOpN",
       };
       function o(e) {
         var t = i(e);
@@ -7686,13 +7703,13 @@ var CLSTAMP = "6296065";
         var n = new Error("Cannot find module '" + e + "'");
         throw ((n.code = "MODULE_NOT_FOUND"), n);
       }
-      (o.keys = function() {
+      (o.keys = function () {
         return Object.keys(r);
       }),
         (o.resolve = i),
         ((e.exports = o).id = "RnhZ");
     },
-    SQr7: function(e, t, n) {
+    SQr7: function (e, t, n) {
       "use strict";
       "VALVE_PUBLIC_PATH" in window
         ? (n.p = window.VALVE_PUBLIC_PATH)
@@ -7700,25 +7717,25 @@ var CLSTAMP = "6296065";
             "VALVE_PUBLIC_PATH not defined; check for a call to CHTMLHelpers::WebpackConfigScriptlet"
           );
     },
-    SxtR: function(e, t, n) {
+    SxtR: function (e, t, n) {
       "use strict";
       var o = n("mrSG"),
         i = n("hRO2"),
         a = n("OS8t");
       i.Message;
-      n.d(t, "a", function() {
+      n.d(t, "a", function () {
         return l;
       }),
-        n.d(t, "b", function() {
+        n.d(t, "b", function () {
           return u;
         }),
-        n.d(t, "c", function() {
+        n.d(t, "c", function () {
           return r;
         });
       var s = i.Message;
       var r,
         c,
-        l = (function(n) {
+        l = (function (n) {
           function r(e) {
             void 0 === e && (e = null);
             var t = n.call(this) || this;
@@ -7730,7 +7747,7 @@ var CLSTAMP = "6296065";
           }
           return (
             Object(o.d)(r, n),
-            (r.M = function() {
+            (r.M = function () {
               return (
                 r.sm_m ||
                   (r.sm_m = {
@@ -7739,53 +7756,53 @@ var CLSTAMP = "6296065";
                       product: {
                         n: 1,
                         br: a.d.readString,
-                        bw: a.h.writeString
+                        bw: a.h.writeString,
                       },
                       version: {
                         n: 2,
                         br: a.d.readString,
-                        bw: a.h.writeString
+                        bw: a.h.writeString,
                       },
-                      errors: { n: 3, c: u, r: !0, q: !0 }
-                    }
+                      errors: { n: 3, c: u, r: !0, q: !0 },
+                    },
                   }),
                 r.sm_m
               );
             }),
-            (r.MBF = function() {
+            (r.MBF = function () {
               return r.sm_mbf || (r.sm_mbf = a.e(r.M())), r.sm_mbf;
             }),
-            (r.prototype.toObject = function(e) {
+            (r.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
-            (r.toObject = function(e, t) {
+            (r.toObject = function (e, t) {
               return a.g(r.M(), e, t);
             }),
-            (r.fromObject = function(e) {
+            (r.fromObject = function (e) {
               return a.c(r.M(), e);
             }),
-            (r.deserializeBinary = function(e) {
+            (r.deserializeBinary = function (e) {
               var t = new i.BinaryReader(e),
                 n = new r();
               return r.deserializeBinaryFromReader(n, t);
             }),
-            (r.deserializeBinaryFromReader = function(e, t) {
+            (r.deserializeBinaryFromReader = function (e, t) {
               return a.b(r.MBF(), e, t);
             }),
-            (r.prototype.serializeBinary = function() {
+            (r.prototype.serializeBinary = function () {
               var e = new i.BinaryWriter();
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
-            (r.serializeBinaryToWriter = function(e, t) {
+            (r.serializeBinaryToWriter = function (e, t) {
               a.f(r.M(), e, t);
             }),
-            (r.prototype.getClassName = function() {
+            (r.prototype.getClassName = function () {
               return "CClientMetrics_ReportClientError_Notification";
             }),
             r
           );
         })(s),
-        u = (function(n) {
+        u = (function (n) {
           function r(e) {
             void 0 === e && (e = null);
             var t = n.call(this) || this;
@@ -7797,7 +7814,7 @@ var CLSTAMP = "6296065";
           }
           return (
             Object(o.d)(r, n),
-            (r.M = function() {
+            (r.M = function () {
               return (
                 r.sm_m ||
                   (r.sm_m = {
@@ -7806,80 +7823,80 @@ var CLSTAMP = "6296065";
                       identifier: {
                         n: 1,
                         br: a.d.readString,
-                        bw: a.h.writeString
+                        bw: a.h.writeString,
                       },
                       message: {
                         n: 2,
                         br: a.d.readString,
-                        bw: a.h.writeString
+                        bw: a.h.writeString,
                       },
-                      count: { n: 3, br: a.d.readUint32, bw: a.h.writeUint32 }
-                    }
+                      count: { n: 3, br: a.d.readUint32, bw: a.h.writeUint32 },
+                    },
                   }),
                 r.sm_m
               );
             }),
-            (r.MBF = function() {
+            (r.MBF = function () {
               return r.sm_mbf || (r.sm_mbf = a.e(r.M())), r.sm_mbf;
             }),
-            (r.prototype.toObject = function(e) {
+            (r.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
-            (r.toObject = function(e, t) {
+            (r.toObject = function (e, t) {
               return a.g(r.M(), e, t);
             }),
-            (r.fromObject = function(e) {
+            (r.fromObject = function (e) {
               return a.c(r.M(), e);
             }),
-            (r.deserializeBinary = function(e) {
+            (r.deserializeBinary = function (e) {
               var t = new i.BinaryReader(e),
                 n = new r();
               return r.deserializeBinaryFromReader(n, t);
             }),
-            (r.deserializeBinaryFromReader = function(e, t) {
+            (r.deserializeBinaryFromReader = function (e, t) {
               return a.b(r.MBF(), e, t);
             }),
-            (r.prototype.serializeBinary = function() {
+            (r.prototype.serializeBinary = function () {
               var e = new i.BinaryWriter();
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
-            (r.serializeBinaryToWriter = function(e, t) {
+            (r.serializeBinaryToWriter = function (e, t) {
               a.f(r.M(), e, t);
             }),
-            (r.prototype.getClassName = function() {
+            (r.prototype.getClassName = function () {
               return "CClientMetrics_ReportClientError_Notification_Error";
             }),
             r
           );
         })(s);
-      ((c = r = r || {}).ClientAppInterfaceStatsReport = function(e, t) {
+      ((c = r = r || {}).ClientAppInterfaceStatsReport = function (e, t) {
         return e.SendNotification(
           "ClientMetrics.ClientAppInterfaceStatsReport#1",
           t,
           { ePrivilege: 1 }
         );
       }),
-        (c.ClientIPv6ConnectivityReport = function(e, t) {
+        (c.ClientIPv6ConnectivityReport = function (e, t) {
           return e.SendNotification(
             "ClientMetrics.ClientIPv6ConnectivityReport#1",
             t,
             { ePrivilege: 1 }
           );
         }),
-        (c.SteamPipeWorkStatsReport = function(e, t) {
+        (c.SteamPipeWorkStatsReport = function (e, t) {
           return e.SendNotification(
             "ClientMetrics.SteamPipeWorkStatsReport#1",
             t,
             { ePrivilege: 1 }
           );
         }),
-        (c.ReportClientError = function(e, t) {
+        (c.ReportClientError = function (e, t) {
           return e.SendNotification("ClientMetrics.ReportClientError#1", t, {
             ePrivilege: 2,
-            eWebAPIKeyRequirement: 1
+            eWebAPIKeyRequirement: 1,
           });
         }),
-        (c.ClientBootstrapReport = function(e, t) {
+        (c.ClientBootstrapReport = function (e, t) {
           return e.SendNotification(
             "ClientMetrics.ClientBootstrapReport#1",
             t,
@@ -7887,30 +7904,30 @@ var CLSTAMP = "6296065";
           );
         });
     },
-    TLQK: function(e, t, n) {
+    TLQK: function (e, t, n) {
       "use strict";
-      n.d(t, "b", function() {
+      n.d(t, "b", function () {
         return c;
       }),
-        n.d(t, "f", function() {
+        n.d(t, "f", function () {
           return p;
         }),
-        n.d(t, "n", function() {
+        n.d(t, "n", function () {
           return m;
         }),
-        n.d(t, "l", function() {
+        n.d(t, "l", function () {
           return d;
         }),
-        n.d(t, "a", function() {
+        n.d(t, "a", function () {
           return h;
         }),
-        n.d(t, "d", function() {
+        n.d(t, "d", function () {
           return v;
         }),
-        n.d(t, "c", function() {
+        n.d(t, "c", function () {
           return g;
         }),
-        n.d(t, "e", function() {
+        n.d(t, "e", function () {
           return b;
         });
       var l = n("mrSG"),
@@ -7920,52 +7937,52 @@ var CLSTAMP = "6296065";
         i = n("lkRc"),
         a = n("Kw0F"),
         s = (n("r64O"), n("Z1oF"));
-      n.d(t, "g", function() {
+      n.d(t, "g", function () {
         return s.a;
       }),
-        n.d(t, "h", function() {
+        n.d(t, "h", function () {
           return s.b;
         }),
-        n.d(t, "j", function() {
+        n.d(t, "j", function () {
           return s.d;
         }),
-        n.d(t, "k", function() {
+        n.d(t, "k", function () {
           return s.e;
         }),
-        n.d(t, "m", function() {
+        n.d(t, "m", function () {
           return s.f;
         }),
-        n.d(t, "o", function() {
+        n.d(t, "o", function () {
           return s.h;
         }),
-        n.d(t, "p", function() {
+        n.d(t, "p", function () {
           return s.i;
         }),
-        n.d(t, "q", function() {
+        n.d(t, "q", function () {
           return s.j;
         }),
-        n.d(t, "i", function() {
+        n.d(t, "i", function () {
           return s.c;
         });
-      var c = (function() {
+      var c = (function () {
         function n() {
           (this.m_mapTokens = new Map()),
             (this.m_mapFallbackTokens = new Map());
         }
         return (
-          (n.GetLanguageFallback = function(e) {
+          (n.GetLanguageFallback = function (e) {
             return "sc_schinese" === e ? "schinese" : "english";
           }),
-          (n.GetELanguageFallback = function(e) {
+          (n.GetELanguageFallback = function (e) {
             return 29 === e ? 6 : 0;
           }),
-          (n.IsELanguageValidInRealm = function(e, t) {
+          (n.IsELanguageValidInRealm = function (e, t) {
             return (
               t ===
               (29 === e ? o.d.k_ESteamRealmChina : o.d.k_ESteamRealmGlobal)
             );
           }),
-          (n.GetLanguageListForRealms = function(e) {
+          (n.GetLanguageListForRealms = function (e) {
             for (var t = new Array(), n = 0; n < 30; n++)
               for (var r = 0, o = e; r < o.length; r++) {
                 var i = o[r];
@@ -7976,60 +7993,60 @@ var CLSTAMP = "6296065";
               }
             return t;
           }),
-          (n.prototype.InitFromObjects = function(e, t, n, r, o) {
+          (n.prototype.InitFromObjects = function (e, t, n, r, o) {
             o || this.m_mapTokens.clear();
             var i = Object(l.a)(Object(l.a)({}, n || {}), e),
               a = Object(l.a)(Object(l.a)({}, r || {}), t || {});
             this.AddTokens(i, a);
           }),
-          (n.prototype.InitDirect = function(e, t) {
+          (n.prototype.InitDirect = function (e, t) {
             this.m_mapTokens.clear(),
               this.m_mapFallbackTokens.clear(),
               this.AddTokens(e, t);
           }),
-          (n.prototype.AddTokens = function(t, n) {
+          (n.prototype.AddTokens = function (t, n) {
             var r = this;
-            Object.keys(t).forEach(function(e) {
+            Object.keys(t).forEach(function (e) {
               r.m_mapTokens.set(e, t[e]);
             }),
               n &&
-                Object.keys(n).forEach(function(e) {
+                Object.keys(n).forEach(function (e) {
                   r.m_mapTokens.has(e) || r.m_mapTokens.set(e, n[e]),
                     r.m_mapFallbackTokens.set(e, n[e]);
                 });
           }),
-          (n.prototype.GetPreferredLocales = function() {
+          (n.prototype.GetPreferredLocales = function () {
             return this.m_rgLocalesToUse
               ? this.m_rgLocalesToUse
               : navigator && navigator.languages
               ? navigator.languages
               : ["en-US"];
           }),
-          (n.prototype.GetELanguageFallbackOrder = function(e) {
+          (n.prototype.GetELanguageFallbackOrder = function (e) {
             void 0 === e && (e = null);
             var t = new Array();
             return (
               t.push(Object(r.d)(i.b.LANGUAGE)),
-              (i.b.SUPPORTED_LANGUAGES || []).forEach(function(e) {
+              (i.b.SUPPORTED_LANGUAGES || []).forEach(function (e) {
                 e.value != i.b.LANGUAGE && t.push(Object(r.d)(e.value));
               }),
               e &&
-                n.GetLanguageListForRealms(e).forEach(function(e) {
+                n.GetLanguageListForRealms(e).forEach(function (e) {
                   -1 == t.indexOf(e) && t.push(e);
                 }),
               t
             );
           }),
-          (n.prototype.SetPreferredLocales = function(e) {
+          (n.prototype.SetPreferredLocales = function (e) {
             this.m_rgLocalesToUse = e;
           }),
-          (n.prototype.LocalizeString = function(e) {
+          (n.prototype.LocalizeString = function (e) {
             if ((0, e && 0 != e.length && "#" == e.charAt(0))) {
               var t = this.m_mapTokens.get(e.substring(1));
               if (void 0 !== t) return t;
             }
           }),
-          (n.prototype.LocalizeStringFromFallback = function(e) {
+          (n.prototype.LocalizeStringFromFallback = function (e) {
             if (e && 0 != e.length && "#" == e.charAt(0)) {
               var t = this.m_mapFallbackTokens.get(e.substring(1));
               if (void 0 !== t) return t;
@@ -8045,7 +8062,7 @@ var CLSTAMP = "6296065";
         return void 0 === n
           ? e
           : (0 < r.length &&
-              (n = n.replace(/%(?:(\d+)\$)?s/g, function(e, t) {
+              (n = n.replace(/%(?:(\d+)\$)?s/g, function (e, t) {
                 if (t <= r.length && 1 <= t) {
                   var n = r[t - 1];
                   return String(null == n ? "" : n);
@@ -8079,20 +8096,20 @@ var CLSTAMP = "6296065";
             : Object(l.g)([e + "_Plural", t], n)
         );
       }
-      var h = (function() {
+      var h = (function () {
           function n() {}
           return (
-            (n.Set = function(e, t, n) {
+            (n.Set = function (e, t, n) {
               if (e.length <= t) {
                 if (30 <= t) return e;
                 e = Object(a.g)(e, t + 1, null);
               }
               return (e[t] = n), e;
             }),
-            (n.Get = function(e, t) {
+            (n.Get = function (e, t) {
               return (e && e.length > t && e[t]) || "";
             }),
-            (n.GetWithFallback = function(e, t) {
+            (n.GetWithFallback = function (e, t) {
               return n.Get(e, t) || n.Get(e, c.GetELanguageFallback(t));
             }),
             n
@@ -8129,7 +8146,7 @@ var CLSTAMP = "6296065";
           ukrainian: "uk",
           vietnamese: "vn",
           sc_schinese: "zh-cn",
-          koreana: "ko"
+          koreana: "ko",
         },
         v = {
           "en-US": 0,
@@ -8160,7 +8177,7 @@ var CLSTAMP = "6296065";
           "ar-SA": 25,
           "uk-UA": 26,
           "es-419": 27,
-          "vi-VN": 28
+          "vi-VN": 28,
         };
       function g() {
         return f[i.b.LANGUAGE] || null;
@@ -8168,9 +8185,9 @@ var CLSTAMP = "6296065";
       var b = new c();
       window.LocalizationManager = b;
     },
-    TtDX: function(e, t, n) {
+    TtDX: function (e, t, n) {
       "use strict";
-      n.d(t, "a", function() {
+      n.d(t, "a", function () {
         return d;
       });
       var r = n("mrSG"),
@@ -8181,23 +8198,23 @@ var CLSTAMP = "6296065";
         s = n("2vnA"),
         l = n("+jbA"),
         u = n.n(l),
-        p = (function() {
+        p = (function () {
           function e() {}
           return (
-            (e.GetBrowserInfoForPopup = function(e) {
+            (e.GetBrowserInfoForPopup = function (e) {
               return null;
             }),
-            (e.prototype.SetTakeFocus = function(e) {
+            (e.prototype.SetTakeFocus = function (e) {
               this.m_fnTakeFocus = e;
             }),
             Object(r.c)([s.C], e.prototype, "m_refContextMenu", void 0),
             e
           );
         })(),
-        m = (function() {
+        m = (function () {
           function e() {}
           return (
-            (e.CreateContextMenuInstance = function(e, t, n, r, o) {
+            (e.CreateContextMenuInstance = function (e, t, n, r, o) {
               return new f(e, t, n, r, o);
             }),
             e
@@ -8219,7 +8236,7 @@ var CLSTAMP = "6296065";
         var s = m.CreateContextMenuInstance(e, r, o, i, n);
         return s.Show(), s;
       }
-      var h = (function(n) {
+      var h = (function (n) {
           function e(e) {
             var t = n.call(this) || this;
             return (
@@ -8232,7 +8249,7 @@ var CLSTAMP = "6296065";
           }
           return (
             Object(r.d)(e, n),
-            (e.prototype.RenderElements = function(e, t) {
+            (e.prototype.RenderElements = function (e, t) {
               0 == this.presentation &&
               (e.options.bForcePopup || this.m_ownerWindow.innerWidth) < 400 &&
               this.m_ownerWindow.SteamClient &&
@@ -8247,24 +8264,24 @@ var CLSTAMP = "6296065";
                   )),
                   (this.m_rctElement = o.createElement(a.f, e, t)));
             }),
-            (e.prototype.SetOnHideCallback = function(e) {
+            (e.prototype.SetOnHideCallback = function (e) {
               this.m_fnOnHideCallback = e;
             }),
-            (e.prototype.Show = function() {
+            (e.prototype.Show = function () {
               this.m_rctElement
                 ? this.m_embeddedElementInstance.Show(this.m_rctElement)
                 : this.m_popupContextMenu.Show(),
                 (this.m_bVisible = !0);
             }),
-            (e.prototype.Hide = function() {
+            (e.prototype.Hide = function () {
               this.InternalHide();
             }),
-            (e.prototype.HideIfNotInFocus = function() {
+            (e.prototype.HideIfNotInFocus = function () {
               this.BHasFocus() ||
                 this.BIsFocusInChildHierarchy() ||
                 this.Hide();
             }),
-            (e.prototype.InternalHide = function() {
+            (e.prototype.InternalHide = function () {
               this.m_bVisible &&
                 ((this.m_bVisible = !1),
                 this.InternalHideSubMenu(),
@@ -8274,41 +8291,41 @@ var CLSTAMP = "6296065";
                   : this.m_popupContextMenu.Close());
             }),
             Object.defineProperty(e.prototype, "visible", {
-              get: function() {
+              get: function () {
                 return this.m_bVisible;
               },
               enumerable: !1,
-              configurable: !0
+              configurable: !0,
             }),
             Object.defineProperty(e.prototype, "options", {
-              get: function() {
+              get: function () {
                 return this.m_options;
               },
               enumerable: !1,
-              configurable: !0
+              configurable: !0,
             }),
             Object.defineProperty(e.prototype, "presentation", {
-              get: function() {
+              get: function () {
                 return 0;
               },
               enumerable: !1,
-              configurable: !0
+              configurable: !0,
             }),
             Object.defineProperty(e.prototype, "styles", {
-              get: function() {
+              get: function () {
                 return u.a;
               },
               enumerable: !1,
-              configurable: !0
+              configurable: !0,
             }),
             Object.defineProperty(e.prototype, "owner_window", {
-              get: function() {
+              get: function () {
                 return this.m_ownerWindow;
               },
               enumerable: !1,
-              configurable: !0
+              configurable: !0,
             }),
-            (e.prototype.ShowSubMenu = function(e, t) {
+            (e.prototype.ShowSubMenu = function (e, t) {
               return this.m_elSubmenuItem == e
                 ? (this.CancelHideSubMenuTimer(),
                   this.m_submenu.TakeFocus(),
@@ -8319,24 +8336,24 @@ var CLSTAMP = "6296065";
                   this.m_submenu.Show(),
                   this.m_submenu);
             }),
-            (e.prototype.CancelHideSubMenuTimer = function() {
+            (e.prototype.CancelHideSubMenuTimer = function () {
               0 < this.m_timerHideSubMenu &&
                 (clearTimeout(this.m_timerHideSubMenu),
                 (this.m_timerHideSubMenu = 0));
             }),
-            (e.prototype.HideSubMenu = function() {
+            (e.prototype.HideSubMenu = function () {
               var e = this;
               this.m_submenu
                 ? 0 < this.m_timerHideSubMenu ||
-                  (this.m_timerHideSubMenu = window.setTimeout(function() {
+                  (this.m_timerHideSubMenu = window.setTimeout(function () {
                     e.InternalHideSubMenu(), (e.m_timerHideSubMenu = 0);
                   }, 150))
                 : this.CancelHideSubMenuTimer();
             }),
-            (e.prototype.HideSelf = function() {
+            (e.prototype.HideSelf = function () {
               this.InternalHide();
             }),
-            (e.prototype.InternalHideSubMenu = function() {
+            (e.prototype.InternalHideSubMenu = function () {
               this.CancelHideSubMenuTimer(),
                 this.m_submenu &&
                   (this.BIsFocusInChildHierarchy() && this.TakeFocus(),
@@ -8344,58 +8361,58 @@ var CLSTAMP = "6296065";
                   this.m_submenu.InternalHide(),
                   (this.m_submenu = null));
             }),
-            (e.prototype.TakeFocus = function() {
+            (e.prototype.TakeFocus = function () {
               this.m_popupContextMenu && this.m_popupContextMenu.Focus(),
                 this.m_fnTakeFocus && this.m_fnTakeFocus();
             }),
-            (e.prototype.BInternalElementInParentHierarchy = function(e) {
+            (e.prototype.BInternalElementInParentHierarchy = function (e) {
               return (
                 this.m_parentInstance &&
                 (this.m_parentInstance.BIsChildElement(e) ||
                   this.m_parentInstance.BInternalElementInParentHierarchy(e))
               );
             }),
-            (e.prototype.BInternalElementInChildHierarchy = function(e) {
+            (e.prototype.BInternalElementInChildHierarchy = function (e) {
               return (
                 this.m_submenu &&
                 (this.m_submenu.BIsChildElement(e) ||
                   this.m_submenu.BInternalElementInChildHierarchy(e))
               );
             }),
-            (e.prototype.BIsChildElement = function(e) {
+            (e.prototype.BIsChildElement = function (e) {
               return this.m_embeddedElementInstance
                 ? this.m_embeddedElementInstance.BIsChildElement(e)
                 : i.c(this.m_popupContextMenu.root_element, e);
             }),
-            (e.prototype.BHasFocus = function() {
+            (e.prototype.BHasFocus = function () {
               return this.m_embeddedElementInstance
                 ? this.m_embeddedElementInstance.BIsChildElement(
                     this.m_ownerWindow.document.activeElement
                   )
                 : this.m_popupContextMenu.focused;
             }),
-            (e.prototype.BIsFocusInChildHierarchy = function() {
+            (e.prototype.BIsFocusInChildHierarchy = function () {
               return (
                 this.m_submenu &&
                 (this.m_submenu.BHasFocus() ||
                   this.m_submenu.BIsFocusInChildHierarchy())
               );
             }),
-            (e.prototype.BIsElementInMenuHierarchy = function(e) {
+            (e.prototype.BIsElementInMenuHierarchy = function (e) {
               return (
                 this.BInternalElementInParentHierarchy(e) ||
                 this.BInternalElementInChildHierarchy(e)
               );
             }),
-            (e.prototype.BIsSubMenuVisible = function() {
+            (e.prototype.BIsSubMenuVisible = function () {
               return !!this.m_submenu;
             }),
-            (e.prototype.SetLabel = function(e) {}),
+            (e.prototype.SetLabel = function (e) {}),
             Object(r.c)([s.C], e.prototype, "m_bVisible", void 0),
             e
           );
         })(p),
-        f = (function(s) {
+        f = (function (s) {
           function e(e, t, n, r, o) {
             var i = s.call(this, t.ownerDocument.defaultView) || this;
             p.sm_iActiveContextMenuInstance &&
@@ -8407,15 +8424,15 @@ var CLSTAMP = "6296065";
               clientY: r,
               instance: i,
               options: i.m_options,
-              fnOnMenuItemSelected: function() {
+              fnOnMenuItemSelected: function () {
                 i.Hide();
-              }
+              },
             };
             return i.RenderElements(a, e), i;
           }
           return (
             Object(r.d)(e, s),
-            (e.prototype.Show = function() {
+            (e.prototype.Show = function () {
               this.m_options.bDisableMouseOverlay ||
                 ((this.m_embeddedElementInstanceOverlay = Object(c.b)(
                   this.m_ownerWindow.document
@@ -8425,18 +8442,18 @@ var CLSTAMP = "6296065";
                 )),
                 s.prototype.Show.call(this);
             }),
-            (e.prototype.Hide = function() {
+            (e.prototype.Hide = function () {
               this.m_embeddedElementInstanceOverlay &&
                 this.m_embeddedElementInstanceOverlay.Hide(0),
                 s.prototype.Hide.call(this);
             }),
-            (e.prototype.BIsSubMenu = function() {
+            (e.prototype.BIsSubMenu = function () {
               return !1;
             }),
             e
           );
         })(h),
-        v = (function(i) {
+        v = (function (i) {
           function e(e, t, n) {
             var r = i.call(this, n.ownerDocument.defaultView) || this;
             (r.m_parentInstance = e),
@@ -8445,7 +8462,7 @@ var CLSTAMP = "6296065";
                 bUseWebStyles: e.options.bUseWebStyles,
                 strClassName: e.options.strClassName,
                 bFitToWindow: e.options.bFitToWindow,
-                bShiftToFitWindow: e.options.bShiftToFitWindow
+                bShiftToFitWindow: e.options.bShiftToFitWindow,
               });
             var o = {
               element: n,
@@ -8453,31 +8470,31 @@ var CLSTAMP = "6296065";
               clientY: null,
               instance: r,
               options: r.m_options,
-              fnOnMenuItemSelected: function() {
+              fnOnMenuItemSelected: function () {
                 r.Hide();
               },
-              bSubmenu: !0
+              bSubmenu: !0,
             };
             return r.RenderElements(o, t), r;
           }
           return (
             Object(r.d)(e, i),
-            (e.prototype.Hide = function() {
+            (e.prototype.Hide = function () {
               var e = this;
               this.m_popupContextMenu
-                ? window.setTimeout(function() {
+                ? window.setTimeout(function () {
                     e.m_parentInstance.HideIfNotInFocus();
                   }, 10)
                 : this.m_parentInstance.Hide();
             }),
-            (e.prototype.BIsSubMenu = function() {
+            (e.prototype.BIsSubMenu = function () {
               return !0;
             }),
             e
           );
         })(h);
     },
-    UPxs: function(e, t, n) {
+    UPxs: function (e, t, n) {
       "use strict";
       var u = n("mrSG"),
         p = n("q1tI"),
@@ -8510,20 +8527,20 @@ var CLSTAMP = "6296065";
         Q = n("X3Ds");
       var $,
         i,
-        a = (function() {
+        a = (function () {
           function e() {
             (this.m_itemCounts = new Map()), (this.m_nSize = 0);
           }
           return (
-            (e.prototype.add = function(e) {
+            (e.prototype.add = function (e) {
               var t = this.m_itemCounts.get(e),
                 n = null == t ? 1 : t + 1;
               return this.m_itemCounts.set(e, n), ++this.m_nSize, this;
             }),
-            (e.prototype.clear = function() {
+            (e.prototype.clear = function () {
               this.m_itemCounts.clear(), (this.m_nSize = 0);
             }),
-            (e.prototype.delete = function(e) {
+            (e.prototype.delete = function (e) {
               var t = this.m_itemCounts.get(e);
               return (
                 0 == (null == t ? 0 : t - 1) && this.m_itemCounts.delete(e),
@@ -8531,27 +8548,27 @@ var CLSTAMP = "6296065";
                 void 0 !== t
               );
             }),
-            (e.prototype.has = function(e) {
+            (e.prototype.has = function (e) {
               return this.m_itemCounts.has(e);
             }),
             Object.defineProperty(e.prototype, "size", {
-              get: function() {
+              get: function () {
                 return this.m_nSize;
               },
               enumerable: !1,
-              configurable: !0
+              configurable: !0,
             }),
-            (e.prototype.entries = function() {
+            (e.prototype.entries = function () {
               return this.m_itemCounts.entries();
             }),
-            (e.prototype.keys = function() {
+            (e.prototype.keys = function () {
               return this.m_itemCounts.keys();
             }),
             e
           );
         })(),
         g = n("w9XT");
-      n.d(t, "a", function() {
+      n.d(t, "a", function () {
         return le;
       }),
         ((i = $ = $ || {}).Type = "data-nav-type"),
@@ -8582,67 +8599,67 @@ var CLSTAMP = "6296065";
         v = "Focusable",
         b = "FocusGroup",
         _ = "NavArea",
-        y = (function() {
+        y = (function () {
           function t() {}
           return (
             Object.defineProperty(t, "IsNavEnabled", {
-              get: function() {
+              get: function () {
                 return t.s_bIsNavEnabled;
               },
-              set: function(e) {
+              set: function (e) {
                 t.s_bIsNavEnabled = e;
               },
               enumerable: !1,
-              configurable: !0
+              configurable: !0,
             }),
             Object.defineProperty(t, "IsLoggingToConsole", {
-              get: function() {
+              get: function () {
                 return !1;
               },
               enumerable: !1,
-              configurable: !0
+              configurable: !0,
             }),
             Object.defineProperty(t, "IsNotSettingFocus", {
-              get: function() {
+              get: function () {
                 return !1;
               },
               enumerable: !1,
-              configurable: !0
+              configurable: !0,
             }),
             Object.defineProperty(t, "IsDebuggingNavAddresses", {
-              get: function() {
+              get: function () {
                 return !1;
               },
               enumerable: !1,
-              configurable: !0
+              configurable: !0,
             }),
             Object.defineProperty(t, "IsPointerVisible", {
-              get: function() {
+              get: function () {
                 return !1;
               },
               enumerable: !1,
-              configurable: !0
+              configurable: !0,
             }),
             Object.defineProperty(t, "IsFocusMarkerAlwaysVisible", {
-              get: function() {
+              get: function () {
                 return !1;
               },
               enumerable: !1,
-              configurable: !0
+              configurable: !0,
             }),
             Object.defineProperty(t, "IsDefaultFocusMarkerVisible", {
-              get: function() {
+              get: function () {
                 return !1;
               },
               enumerable: !1,
-              configurable: !0
+              configurable: !0,
             }),
             Object.defineProperty(t, "IsDocumentUsingZoom", {
-              get: function() {
+              get: function () {
                 return !0;
               },
               enumerable: !1,
-              configurable: !0
+              configurable: !0,
             }),
             (t.s_bIsNavEnabled = !1),
             t
@@ -8662,7 +8679,7 @@ var CLSTAMP = "6296065";
         if (!y.IsLoggingToConsole) return n;
         var r = n.value;
         return (
-          (n.value = function() {
+          (n.value = function () {
             for (var e = [], t = 0; t < arguments.length; t++)
               e[t] = arguments[t];
             ++w;
@@ -8702,12 +8719,12 @@ var CLSTAMP = "6296065";
             n = e.getBoundingClientRect();
           return {
             x: { min: n.left * t, max: n.right * t },
-            y: { min: n.top * t, max: n.bottom * t }
+            y: { min: n.top * t, max: n.bottom * t },
           };
         }
         return {
           x: { min: (r = e.getBoundingClientRect()).left, max: r.right },
-          y: { min: r.top, max: r.bottom }
+          y: { min: r.top, max: r.bottom },
         };
         var r;
       }
@@ -8760,9 +8777,9 @@ var CLSTAMP = "6296065";
       function T(e, o, i) {
         var a = null != e.navKey ? e.navKey : void 0;
         return null != a && y.IsNavEnabled
-          ? p.createElement(j.Consumer, null, function(r) {
-              return p.createElement(k.Consumer, null, function(n) {
-                return p.createElement(A.Consumer, null, function(e) {
+          ? p.createElement(j.Consumer, null, function (r) {
+              return p.createElement(k.Consumer, null, function (n) {
+                return p.createElement(A.Consumer, null, function (e) {
                   var t = { parent: e, key: a };
                   return (
                     "function" == typeof i && i(t, r, n),
@@ -8778,18 +8795,18 @@ var CLSTAMP = "6296065";
         (M.Center = "center"),
         (M.End = "end"),
         (M.Nearest = "nearest");
-      var I = (function(t) {
+      var I = (function (t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (e.m_containerRef = p.createRef()), e;
           }
           return (
             Object(u.d)(e, t),
-            (e.prototype.IsEventSource = function(e) {
+            (e.prototype.IsEventSource = function (e) {
               var t = this.m_containerRef.current;
               return null != t && t.contains(e.target);
             }),
-            (e.prototype.HandleOnFocusChanged = function(e, t, n, r) {
+            (e.prototype.HandleOnFocusChanged = function (e, t, n, r) {
               var o,
                 i,
                 a = this.m_containerRef.current;
@@ -8811,7 +8828,7 @@ var CLSTAMP = "6296065";
                     : (a.style.opacity = "33%"))
                 : (a.style.display = "none");
             }),
-            (e.prototype.render = function() {
+            (e.prototype.render = function () {
               var e = this.props,
                 t = e.children,
                 n = e.style,
@@ -8823,8 +8840,8 @@ var CLSTAMP = "6296065";
                     ref: this.m_containerRef,
                     style: Object(u.a)(Object(u.a)({}, n), {
                       position: "absolute",
-                      willChange: "left, top"
-                    })
+                      willChange: "left, top",
+                    }),
                   },
                   r
                 ),
@@ -8835,18 +8852,18 @@ var CLSTAMP = "6296065";
             e
           );
         })(p.Component),
-        N = (function() {
+        N = (function () {
           function e(e, t) {
             (this.m_bNeedsUpdate = !1),
               (this.m_containerRef = e),
               (this.m_nPaddingPx = t || 0);
           }
           return (
-            (e.prototype.IsEventSource = function(e) {
+            (e.prototype.IsEventSource = function (e) {
               var t = this.m_containerRef.current;
               return null != t && t.contains(e.target);
             }),
-            (e.prototype.HandleOnFocusChanged = function(e, t, n) {
+            (e.prototype.HandleOnFocusChanged = function (e, t, n) {
               var r;
               (!0 !== e &&
                 this.m_focusedElement == t &&
@@ -8860,7 +8877,7 @@ var CLSTAMP = "6296065";
                   (this.m_bNeedsUpdate = !0),
                   r && r.requestAnimationFrame(this.HandleOnAnimationFrame)));
             }),
-            (e.prototype.HandleOnAnimationFrame = function() {
+            (e.prototype.HandleOnAnimationFrame = function () {
               var e,
                 t,
                 n = "BoxFM.HandleOnAnimationFrame",
@@ -8901,10 +8918,10 @@ var CLSTAMP = "6296065";
             e
           );
         })(),
-        L = (function() {
+        L = (function () {
           function e() {}
           return (
-            (e.prototype.FocusableElementAttributes = function(e) {
+            (e.prototype.FocusableElementAttributes = function (e) {
               var t = {};
               return (
                 y.IsNavEnabled && e.navStop && (t.tabIndex = -2),
@@ -8916,7 +8933,7 @@ var CLSTAMP = "6296065";
             e
           );
         })(),
-        R = (function(r) {
+        R = (function (r) {
           function e(e) {
             var t = r.call(this) || this;
             (t.m_focusListeners = new Map()),
@@ -8928,12 +8945,12 @@ var CLSTAMP = "6296065";
           }
           return (
             Object(u.d)(e, r),
-            (e.prototype.GetFocus = function() {
+            (e.prototype.GetFocus = function () {
               return void 0 !== this.m_doc && oe(this.m_doc.activeElement)
                 ? this.m_doc.activeElement
                 : null;
             }),
-            (e.prototype.Focus = function(e, t) {
+            (e.prototype.Focus = function (e, t) {
               null != e
                 ? (te("HDFC Focus e.focus {", e), e.focus(t), te("+ }"))
                 : oe(this.m_doc.activeElement) &&
@@ -8944,10 +8961,10 @@ var CLSTAMP = "6296065";
                   this.m_doc.activeElement.blur(),
                   te("+ }"));
             }),
-            (e.prototype.Click = function(e) {
+            (e.prototype.Click = function (e) {
               te("HDFC Click: e.click {"), e.click(), te("+ }");
             }),
-            (e.prototype.AddFocusListener = function(t) {
+            (e.prototype.AddFocusListener = function (t) {
               te("CHtmlDomFocusController AddFocusListener");
               function e(e) {
                 oe(e.target) &&
@@ -8956,13 +8973,13 @@ var CLSTAMP = "6296065";
               this.m_focusListeners.set(t, e),
                 this.m_win.addEventListener("focus", e, !0);
             }),
-            (e.prototype.RemoveFocusListener = function(e) {
+            (e.prototype.RemoveFocusListener = function (e) {
               te("CHtmlDomFocusController RemoveFocusListener");
               var t = this.m_focusListeners.get(e);
               this.m_doc.removeEventListener("focus", t, !0),
                 this.m_focusListeners.delete(e);
             }),
-            (e.prototype.AddBlurListener = function(t) {
+            (e.prototype.AddBlurListener = function (t) {
               te("CHtmlDomFocusController AddBlurListener");
               function e(e) {
                 oe(e.target) &&
@@ -8971,7 +8988,7 @@ var CLSTAMP = "6296065";
               this.m_blurListeners.set(t, e),
                 this.m_win.addEventListener("blur", e, !0);
             }),
-            (e.prototype.RemoveBlurListener = function(e) {
+            (e.prototype.RemoveBlurListener = function (e) {
               te("CHtmlDomFocusController RemoveBlurListener");
               var t = this.m_blurListeners.get(e);
               this.m_doc.removeEventListener("blur", t, !0),
@@ -9004,10 +9021,10 @@ var CLSTAMP = "6296065";
       }
       var se,
         z,
-        V = (function() {
+        V = (function () {
           function e() {}
           return (
-            (e.Attributes = function(e, t) {
+            (e.Attributes = function (e, t) {
               var n,
                 r,
                 o,
@@ -9031,32 +9048,32 @@ var CLSTAMP = "6296065";
               return s ? Object(u.a)(Object(u.a)({}, a), s) : a;
             }),
             Object.defineProperty(e, "targetClass", {
-              get: function() {
+              get: function () {
                 return y.IsNavEnabled ? v : void 0;
               },
               enumerable: !1,
-              configurable: !0
+              configurable: !0,
             }),
             e
           );
         })(),
-        ce = (function(e) {
+        ce = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
           return (
             Object(u.d)(t, e),
-            (t.prototype.NeedsComponentFromElement = function() {
+            (t.prototype.NeedsComponentFromElement = function () {
               return !0;
             }),
-            (t.prototype.SetRef = function(e) {
+            (t.prototype.SetRef = function (e) {
               null == e
                 ? U(this.m_htmlElement)
                 : ((this.m_htmlElement = e),
                   this.NeedsComponentFromElement && H(this.m_htmlElement, this),
                   Object(r.c)(this.props.htmlElementRef, e));
             }),
-            (t.prototype.assembleAttributes = function(e) {
+            (t.prototype.assembleAttributes = function (e) {
               e.navKey,
                 e.navStop,
                 e.noPrimaryAction,
@@ -9065,30 +9082,32 @@ var CLSTAMP = "6296065";
                 e.tabStop,
                 e.navClick;
               var t = e.startFocused,
-                n = (e.navScrollX,
-                e.navScrollY,
-                e.navScrollMarginX,
-                e.navScrollMarginY,
-                e.htmlElementRef),
+                n =
+                  (e.navScrollX,
+                  e.navScrollY,
+                  e.navScrollMarginX,
+                  e.navScrollMarginY,
+                  e.htmlElementRef),
                 r = e.className,
-                o = (e.children,
-                Object(u.f)(e, [
-                  "navKey",
-                  "navStop",
-                  "noPrimaryAction",
-                  "noFocusMarker",
-                  "preferredNavStop",
-                  "tabStop",
-                  "navClick",
-                  "startFocused",
-                  "navScrollX",
-                  "navScrollY",
-                  "navScrollMarginX",
-                  "navScrollMarginY",
-                  "htmlElementRef",
-                  "className",
-                  "children"
-                ]));
+                o =
+                  (e.children,
+                  Object(u.f)(e, [
+                    "navKey",
+                    "navStop",
+                    "noPrimaryAction",
+                    "noFocusMarker",
+                    "preferredNavStop",
+                    "tabStop",
+                    "navClick",
+                    "startFocused",
+                    "navScrollX",
+                    "navScrollY",
+                    "navScrollMarginX",
+                    "navScrollMarginY",
+                    "htmlElementRef",
+                    "className",
+                    "children",
+                  ]));
               return null != this.context && y.IsNavEnabled
                 ? Object(u.a)(
                     Object(u.a)(
@@ -9102,19 +9121,19 @@ var CLSTAMP = "6296065";
                       {
                         className: Object(m.a)(V.targetClass, r),
                         ref:
-                          t || this.NeedsComponentFromElement ? this.SetRef : n
+                          t || this.NeedsComponentFromElement ? this.SetRef : n,
                       }
                     ),
                     o
                   )
                 : Object(u.a)({ className: r, ref: n }, o);
             }),
-            (t.prototype.GotFocus = function() {
+            (t.prototype.GotFocus = function () {
               null != this.m_navAddress &&
                 null != this.m_currentNavEpoch &&
                 this.m_currentNavEpoch.SetFocusAddress(this.m_navAddress);
             }),
-            (t.prototype.componentDidMount = function() {
+            (t.prototype.componentDidMount = function () {
               var e, t, n;
               y.IsDebuggingNavAddresses &&
                 null != this.m_htmlElement &&
@@ -9132,7 +9151,7 @@ var CLSTAMP = "6296065";
                     null === (t = this.m_recalledNavEpoch) || void 0 === t
                       ? void 0
                       : t.GetFocusAddress())
-                    ? (function(e, t) {
+                    ? (function (e, t) {
                         for (
                           var n = [e, t], r = n[0], o = n[1];
                           ;
@@ -9147,9 +9166,9 @@ var CLSTAMP = "6296065";
                       this.context) &&
                     this.context.ClaimFocus(this.m_htmlElement));
             }),
-            (t.prototype.render = function() {
+            (t.prototype.render = function () {
               var r = this;
-              return p.createElement(g.a.Consumer, null, function(e) {
+              return p.createElement(g.a.Consumer, null, function (e) {
                 return (
                   (r.m_actionDescriptionContext = e),
                   T(
@@ -9159,7 +9178,7 @@ var CLSTAMP = "6296065";
                       r.assembleAttributes(r.props),
                       r.props.children
                     ),
-                    function(e, t, n) {
+                    function (e, t, n) {
                       (r.m_navAddress = e),
                         (r.m_recalledNavEpoch = t),
                         (r.m_currentNavEpoch = n);
@@ -9174,7 +9193,7 @@ var CLSTAMP = "6296065";
             t
           );
         })(p.Component),
-        le = (function(t) {
+        le = (function (t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (e.m_elementType = "div"), e;
@@ -9184,17 +9203,17 @@ var CLSTAMP = "6296065";
       ((z = se = se || {}).Geometry = "Geometry"),
         (z.DomOrder = "DomOrder"),
         (z.ReverseDomOrder = "ReverseDomOrder");
-      var ue = (function(e) {
+      var ue = (function (e) {
         function a() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
           Object(u.d)(a, e),
-          (a.GetOnNavOut = function(e) {
+          (a.GetOnNavOut = function (e) {
             var t = W(e);
             if (t && t instanceof a) return t.props.onNavOut;
           }),
-          (a.Attributes = function(e) {
+          (a.Attributes = function (e) {
             var t;
             if (!y.IsNavEnabled) return {};
             var n = (((t = {})[$.Type] = ee.Group), t);
@@ -9210,17 +9229,17 @@ var CLSTAMP = "6296065";
               n
             );
           }),
-          (a.prototype.NeedsComponentFromElement = function() {
+          (a.prototype.NeedsComponentFromElement = function () {
             return !!this.props.onNavOut || null != this.props.navKey;
           }),
-          (a.prototype.SetRef = function(e) {
+          (a.prototype.SetRef = function (e) {
             null == e
               ? U(this.m_htmlElement)
               : ((this.m_htmlElement = e),
                 this.NeedsComponentFromElement && H(this.m_htmlElement, this),
                 Object(r.c)(this.props.htmlElementRef, e));
           }),
-          (a.prototype.HasFocusWithin = function() {
+          (a.prototype.HasFocusWithin = function () {
             var e, t;
             return (
               null !==
@@ -9234,13 +9253,13 @@ var CLSTAMP = "6296065";
               t
             );
           }),
-          (a.prototype.FocusWithin = function() {
+          (a.prototype.FocusWithin = function () {
             this.m_htmlElement && me.FocusWithin(this.m_htmlElement);
           }),
-          (a.prototype.BlurWithin = function(e) {
+          (a.prototype.BlurWithin = function (e) {
             this.m_htmlElement && me.BlurWithin(this.m_htmlElement, e);
           }),
-          (a.prototype.UpdateScrollPos = function() {
+          (a.prototype.UpdateScrollPos = function () {
             var e,
               t = this.m_htmlElement;
             null != t &&
@@ -9249,7 +9268,7 @@ var CLSTAMP = "6296065";
               ((e = { x: t.scrollLeft, y: t.scrollTop }),
               this.m_currentNavEpoch.SetNavAddressScroll(this.m_navAddress, e));
           }),
-          (a.prototype.componentDidMount = function() {
+          (a.prototype.componentDidMount = function () {
             var e, t, n;
             y.IsDebuggingNavAddresses &&
               null != this.m_htmlElement &&
@@ -9269,29 +9288,30 @@ var CLSTAMP = "6296065";
                   ((this.m_htmlElement.scrollLeft = n.x),
                   (this.m_htmlElement.scrollTop = n.y)));
           }),
-          (a.prototype.componentWillUnmount = function() {
+          (a.prototype.componentWillUnmount = function () {
             this.m_currentNavEpoch &&
               this.m_currentNavEpoch.SetNavAddressScroll(
                 this.m_navAddress,
                 void 0
               );
           }),
-          (a.prototype.render = function() {
+          (a.prototype.render = function () {
             var r = this,
               e = this.props,
-              t = (e.navKey,
-              e.xOrder,
-              e.yOrder,
-              e.preferFirstNavStop,
-              e.preferredNavStopWithin,
-              e.scrollAxes,
-              e.enterAsScrolledAxes,
-              e.navScrollX,
-              e.navScrollY,
-              e.navScrollMarginX,
-              e.navScrollMarginY,
-              e.onNavOut,
-              e.htmlElementRef),
+              t =
+                (e.navKey,
+                e.xOrder,
+                e.yOrder,
+                e.preferFirstNavStop,
+                e.preferredNavStopWithin,
+                e.scrollAxes,
+                e.enterAsScrolledAxes,
+                e.navScrollX,
+                e.navScrollY,
+                e.navScrollMarginX,
+                e.navScrollMarginY,
+                e.onNavOut,
+                e.htmlElementRef),
               n = e.className,
               o = e.children,
               i = Object(u.f)(e, [
@@ -9309,7 +9329,7 @@ var CLSTAMP = "6296065";
                 "onNavOut",
                 "htmlElementRef",
                 "className",
-                "children"
+                "children",
               ]);
             return null != this.context && y.IsNavEnabled
               ? T(
@@ -9324,7 +9344,7 @@ var CLSTAMP = "6296065";
                     ),
                     o
                   ),
-                  function(e, t, n) {
+                  function (e, t, n) {
                     (r.m_navAddress = e),
                       (r.m_recalledNavEpoch = t),
                       (r.m_currentNavEpoch = n);
@@ -9342,7 +9362,7 @@ var CLSTAMP = "6296065";
           a
         );
       })(p.Component);
-      var pe = (function() {
+      var pe = (function () {
           function e(e) {
             (this.m_navAreaStack = []),
               (this.m_elementNavAreaMap = new Map()),
@@ -9352,7 +9372,7 @@ var CLSTAMP = "6296065";
           }
           return (
             Object.defineProperty(e.prototype, "isEmpty", {
-              get: function() {
+              get: function () {
                 return (
                   0 === this.m_navAreaStack.length &&
                   0 === this.m_elementNavAreaMap.size &&
@@ -9361,12 +9381,12 @@ var CLSTAMP = "6296065";
                 );
               },
               enumerable: !1,
-              configurable: !0
+              configurable: !0,
             }),
             e
           );
         })(),
-        me = (function(n) {
+        me = (function (n) {
           function V(e) {
             var t = n.call(this, e) || this;
             return (
@@ -9388,15 +9408,15 @@ var CLSTAMP = "6296065";
           }
           return (
             Object(u.d)(V, n),
-            (V.DocumentElementHasFocus = function(e) {
+            (V.DocumentElementHasFocus = function (e) {
               return e && null != e.activeElement && e.activeElement !== e.body;
             }),
-            (V.FocusWithin = function(e) {
+            (V.FocusWithin = function (e) {
               var t,
                 n = V.GetNavAreaObjects(e, "NavArea.FocusWithin", {
                   target: !0,
                   navArea: !0,
-                  activeNavArea: !1
+                  activeNavArea: !1,
                 }),
                 r = n.navArea,
                 o = n.navAreaElement,
@@ -9417,24 +9437,24 @@ var CLSTAMP = "6296065";
                   (te("+ focusing:", t.htmlElement, t.pos),
                   r.NavigateTo(t.htmlElement, t.pos, !1)));
             }),
-            (V.BlurWithin = function(e, t) {
+            (V.BlurWithin = function (e, t) {
               var n,
                 r = V.GetNavAreaObjects(e, "NavArea.FocusWithin", {
                   target: !0,
-                  navArea: !0
+                  navArea: !0,
                 }).navArea;
               null != r &&
                 (te("NavArea.BlurWithin", e),
                 (n = r.GetFocusController().GetFocus()),
                 e.contains(n) && r.Blur(t));
             }),
-            (V.HandleKeyDown = function(t) {
+            (V.HandleKeyDown = function (t) {
               var e,
                 n = "NavArea.HandleKeyDown",
                 r = this.GetNavAreaObjects(t.target, n, {
                   target: !1,
                   navArea: !1,
-                  activeNavArea: !1
+                  activeNavArea: !1,
                 }),
                 o = r.navArea,
                 i = r.activeNavArea,
@@ -9452,7 +9472,7 @@ var CLSTAMP = "6296065";
                       ")"
                   ),
                   this.SetIsDoingKeyNav(a, !0);
-                var s = function() {
+                var s = function () {
                     null != t.preventDefault && t.preventDefault(),
                       null != t.stopPropagation && t.stopPropagation();
                   },
@@ -9463,10 +9483,10 @@ var CLSTAMP = "6296065";
                     null === (e = null == u ? void 0 : u.currentActions) ||
                     void 0 === e
                       ? void 0
-                      : e.find(function(e) {
+                      : e.find(function (e) {
                           return (
                             e.button ===
-                            (function(e) {
+                            (function (e) {
                               if ((console.info("pressed " + e.key), e.ctrlKey))
                                 switch (e.key) {
                                   case "1":
@@ -9528,23 +9548,23 @@ var CLSTAMP = "6296065";
                   (i.NavigateTo(v.htmlElement, v.pos, !1), s());
               } else te(n + ": no active nav area.");
             }),
-            (V.SetDefaultFocusMarker = function(e) {
+            (V.SetDefaultFocusMarker = function (e) {
               V.sm_defaultFocusMarker = e;
             }),
-            (V.GetDocumentNavState = function(e) {
+            (V.GetDocumentNavState = function (e) {
               return V.sm_documentStates.get(e);
             }),
-            (V.GetActiveNavArea = function(e) {
+            (V.GetActiveNavArea = function (e) {
               var t = e.m_navAreaStack;
               if (0 !== t.length) return t[t.length - 1];
             }),
-            (V.SetIsDoingKeyNav = function(e, t) {
+            (V.SetIsDoingKeyNav = function (e, t) {
               V.sm_bIsDoingKeyNav = t;
             }),
-            (V.GetIsDoingKeyNav = function(e) {
+            (V.GetIsDoingKeyNav = function (e) {
               return V.sm_bIsDoingKeyNav;
             }),
-            (V.GetNavAreaObjects = function(r, o, i) {
+            (V.GetNavAreaObjects = function (r, o, i) {
               if (!y.IsNavEnabled) return {};
               if (!oe(r))
                 return (
@@ -9581,7 +9601,7 @@ var CLSTAMP = "6296065";
               var t =
                   null == i.navArea
                     ? {}
-                    : (function() {
+                    : (function () {
                         var e = V.FindAncestorNavAreaElement(r);
                         if (null == e)
                           return (
@@ -9633,7 +9653,7 @@ var CLSTAMP = "6296065";
                 p =
                   null == i.activeNavArea
                     ? {}
-                    : (function() {
+                    : (function () {
                         var e = V.GetActiveNavArea(s);
                         if (null == e)
                           return (
@@ -9675,33 +9695,33 @@ var CLSTAMP = "6296065";
                 activeNavArea: d,
                 activeNavAreaElement: void 0 === h ? void 0 : h,
                 doc: a,
-                dn: s
+                dn: s,
               };
             }),
-            (V.FindAncestorNavAreaElement = function(e) {
-              return Object(Q.j)(e, function(e) {
+            (V.FindAncestorNavAreaElement = function (e) {
+              return Object(Q.j)(e, function (e) {
                 return e.getAttribute($.Type) === ee.Area;
               });
             }),
-            (V.IsElementTarget = function(e) {
+            (V.IsElementTarget = function (e) {
               return (null == e ? void 0 : e.getAttribute($.Type)) == ee.Target;
             }),
-            (V.IsElementTargetThatFocuses = function(e) {
+            (V.IsElementTargetThatFocuses = function (e) {
               return (
                 this.IsElementTarget(e) &&
                 "true" == (null == e ? void 0 : e.getAttribute($.TargetFocuses))
               );
             }),
-            (V.IsElementTargetThatClicks = function(e) {
+            (V.IsElementTargetThatClicks = function (e) {
               return (
                 this.IsElementTarget(e) &&
                 "true" == (null == e ? void 0 : e.getAttribute($.TargetClicks))
               );
             }),
-            (V.FindAnchorElement = function(e) {
+            (V.FindAnchorElement = function (e) {
               return e;
             }),
-            (V.GetScrollOffset = function(e, t, n) {
+            (V.GetScrollOffset = function (e, t, n) {
               var r = e,
                 o = r.getAttribute($.EnterAsScrolledAxes);
               if (o === h.XY || o === t) return null;
@@ -9713,7 +9733,7 @@ var CLSTAMP = "6296065";
                 ? { x: r.scrollLeft, y: 0 }
                 : { x: 0, y: r.scrollTop };
             }),
-            (V.UpdateFocusPosAfterLayoutChange = function(e, t) {
+            (V.UpdateFocusPosAfterLayoutChange = function (e, t) {
               for (
                 var n = e;
                 null != n;
@@ -9725,7 +9745,7 @@ var CLSTAMP = "6296065";
                 o !== i && ((r.m_focusPos = i), r.UpdateFocusMarker(!0));
               }
             }),
-            (V.FindNextNavTargetInContainer = function(s, e, c, l, u, t, n) {
+            (V.FindNextNavTargetInContainer = function (s, e, c, l, u, t, n) {
               var r;
               te(
                 "NavArea.FindNextTargetInContainer c:" +
@@ -9757,7 +9777,7 @@ var CLSTAMP = "6296065";
                       (i = ie(e)[b]),
                       {
                         min: o.min < i.min ? o.min : i.min,
-                        max: o.max > i.max ? o.max : i.max
+                        max: o.max > i.max ? o.max : i.max,
                       })
                     : y,
                 E = null,
@@ -9836,7 +9856,7 @@ var CLSTAMP = "6296065";
                 return H;
               if (O) {
                 if ((H = G(O))) return H;
-                D.sort(function(e, t) {
+                D.sort(function (e, t) {
                   return e.score - t.score;
                 });
                 for (var U, W = 0; W < D.length; ++W) {
@@ -9848,7 +9868,7 @@ var CLSTAMP = "6296065";
               }
               return null;
             }),
-            (V.FindNextNavTargetWithinAndAcrossContainers = function(
+            (V.FindNextNavTargetWithinAndAcrossContainers = function (
               e,
               t,
               n,
@@ -9888,7 +9908,7 @@ var CLSTAMP = "6296065";
                 i = a;
               }
             }),
-            (V.AddEventListeners = function(e) {
+            (V.AddEventListeners = function (e) {
               for (var t = 0, n = V.k_EventListeners; t < n.length; t++) {
                 var r = n[t],
                   o = r[0],
@@ -9896,7 +9916,7 @@ var CLSTAMP = "6296065";
                 e.addEventListener(o, i, !0);
               }
             }),
-            (V.RemoveEventListeners = function(e) {
+            (V.RemoveEventListeners = function (e) {
               for (var t = 0, n = this.k_EventListeners; t < n.length; t++) {
                 var r = n[t],
                   o = r[0],
@@ -9904,26 +9924,26 @@ var CLSTAMP = "6296065";
                 e.removeEventListener(o, i, !0);
               }
             }),
-            (V.HandleAllOnKeyDown = function(e) {
+            (V.HandleAllOnKeyDown = function (e) {
               te("NavArea.HandleAllOnKeyDown " + e.key),
                 V.HandleKeyDown({
                   target: e.target,
                   key: e.key,
                   ctrlKey: e.ctrlKey,
-                  stopPropagation: function() {
+                  stopPropagation: function () {
                     return e.stopImmediatePropagation();
                   },
-                  preventDefault: function() {
+                  preventDefault: function () {
                     return e.preventDefault();
-                  }
+                  },
                 });
             }),
-            (V.HandleAllOnScroll = function(e) {
+            (V.HandleAllOnScroll = function (e) {
               var t,
                 n = "NavArea.HandleAllOnScroll",
                 r = V.GetNavAreaObjects(e.target, n, {
                   target: !0,
-                  navArea: !1
+                  navArea: !1,
                 }),
                 o = r.navArea,
                 i = r.navAreaElement,
@@ -9935,8 +9955,8 @@ var CLSTAMP = "6296065";
                   t.UpdateScrollPos(),
                 V.UpdateFocusPosAfterLayoutChange(i, a));
             }),
-            (V.HandleAllOnAnimationStart = function(e) {}),
-            (V.HandleAllOnAnimationEnd = function(e) {
+            (V.HandleAllOnAnimationStart = function (e) {}),
+            (V.HandleAllOnAnimationEnd = function (e) {
               var t = V.GetNavAreaObjects(
                   e.target,
                   "NavArea.HandleAllOnAnimationEnd",
@@ -9947,8 +9967,8 @@ var CLSTAMP = "6296065";
                 o = t.dn;
               null != n && V.UpdateFocusPosAfterLayoutChange(r, o);
             }),
-            (V.HandleAllOnTransitionStart = function(e) {}),
-            (V.HandleAllOnTransitionEnd = function(e) {
+            (V.HandleAllOnTransitionStart = function (e) {}),
+            (V.HandleAllOnTransitionEnd = function (e) {
               var t,
                 n = V.GetNavAreaObjects(
                   e.target,
@@ -9964,12 +9984,12 @@ var CLSTAMP = "6296065";
                   t.IsEventSource(e)) ||
                   V.UpdateFocusPosAfterLayoutChange(o, i));
             }),
-            (V.HandleAllOnMouseDown = function(e) {
+            (V.HandleAllOnMouseDown = function (e) {
               var t,
                 n = "NavArea.HandleAllOnMouseDown",
                 r = V.GetNavAreaObjects(e.target, n, {
                   target: !0,
-                  navArea: !1
+                  navArea: !1,
                 }),
                 o = r.navArea,
                 i = r.dn;
@@ -9982,14 +10002,14 @@ var CLSTAMP = "6296065";
                     : t.HandleNavStopClick) &&
                   (te("+ preventDefault"), e.preventDefault()));
             }),
-            (V.HandleAllOnClick = function(e) {
+            (V.HandleAllOnClick = function (e) {
               var t,
                 n,
                 r,
                 o = "NavArea.HandleAllOnClick",
                 i = V.GetNavAreaObjects(e.target, o, {
                   target: !0,
-                  navArea: !1
+                  navArea: !1,
                 }).navArea;
               null != i &&
                 (te(o + " (" + i.props.id + "):", e.target),
@@ -10003,7 +10023,7 @@ var CLSTAMP = "6296065";
                       (te("+ handleNavStopClick {"), n(e, r), te("+ }")))
                   : te("+ nop."));
             }),
-            (V.HandleFocusControllerOnFocus = function(e) {
+            (V.HandleFocusControllerOnFocus = function (e) {
               var t,
                 n,
                 r,
@@ -10015,7 +10035,7 @@ var CLSTAMP = "6296065";
                   ((n = (t = V.GetNavAreaObjects(e, o, {
                     target: !0,
                     navArea: !1,
-                    activeNavArea: !1
+                    activeNavArea: !1,
                   })).navArea),
                   (r = t.activeNavArea),
                   t.dn,
@@ -10028,7 +10048,7 @@ var CLSTAMP = "6296065";
                       n.Activate(e)),
                     n.UpdateFocus(e)));
             }),
-            (V.HandleFocusControllerOnBlur = function(e) {
+            (V.HandleFocusControllerOnBlur = function (e) {
               var t,
                 n = "NavArea.HandleFocusControllerOnBlur",
                 r = W(e),
@@ -10040,20 +10060,20 @@ var CLSTAMP = "6296065";
                       .navArea) &&
                     (te(n + " (" + t.props.id + ")", e), t.UpdateFocus(null)));
             }),
-            (V.prototype.HandleKeyDown = function(e) {
+            (V.prototype.HandleKeyDown = function (e) {
               V.HandleKeyDown({
                 target: this.m_navAreaDivRef.current,
                 key: e.key,
                 ctrlKey: e.ctrlKey,
-                stopPropagation: function() {
+                stopPropagation: function () {
                   return e.stopPropagation();
                 },
-                preventDefault: function() {
+                preventDefault: function () {
                   return e.preventDefault();
-                }
+                },
               });
             }),
-            (V.prototype.GetFocusedElement = function() {
+            (V.prototype.GetFocusedElement = function () {
               var e = "NavArea.GetFocusedElement";
               if (
                 (te(e + " (" + this.props.id + ")"),
@@ -10061,12 +10081,12 @@ var CLSTAMP = "6296065";
               )
                 return this.GetFocusController().GetFocus();
             }),
-            (V.prototype.ClickFocusedElement = function() {
+            (V.prototype.ClickFocusedElement = function () {
               te("NavArea.ClickFocusedElement (" + this.props.id + ")");
               var e = this.GetFocusedElement();
               return null != e && (this.GetFocusController().Click(e), !0);
             }),
-            (V.prototype.Blur = function(e) {
+            (V.prototype.Blur = function (e) {
               var t = "NavArea.Blur";
               te(t + " (" + this.props.id + ")");
               var n,
@@ -10085,7 +10105,7 @@ var CLSTAMP = "6296065";
                   this.GetFocusController().Focus(null)),
                 (this.m_inFocusCallType = n));
             }),
-            (V.prototype.Activate = function(e) {
+            (V.prototype.Activate = function (e) {
               var t = "NavArea.Activate";
               te(
                 t +
@@ -10144,7 +10164,7 @@ var CLSTAMP = "6296065";
                 null != (s = this.props.onActivate) &&
                   (te("+ onActivate {"), s(), te("+ }")));
             }),
-            (V.prototype.Deactivate = function() {
+            (V.prototype.Deactivate = function () {
               var e = "NavArea.Deactivate";
               te(
                 e +
@@ -10172,15 +10192,15 @@ var CLSTAMP = "6296065";
                       (te("+ onDeactivate {"), r(), te("+ }")))
                   : te("+ nop; not actually active."));
             }),
-            (V.prototype.GetFocusControllerDomIntegrator = function() {
+            (V.prototype.GetFocusControllerDomIntegrator = function () {
               return null != this.props.focusController
                 ? this.props.focusController
                 : V.sm_htmlDomFocusControllerDomIntegrator;
             }),
-            (V.prototype.GetFocusController = function() {
+            (V.prototype.GetFocusController = function () {
               return this.m_focusController;
             }),
-            (V.prototype.ClaimFocus = function(e) {
+            (V.prototype.ClaimFocus = function (e) {
               var t = "NavArea.ClaimFocus";
               y.IsNotSettingFocus
                 ? te(t + " NOT claiming focus.", e)
@@ -10195,7 +10215,7 @@ var CLSTAMP = "6296065";
                   (this.m_focusClaimElement = e))
                 : te(t + " already claimed delay, ignored.");
             }),
-            (V.prototype.GetElementDoc = function(e) {
+            (V.prototype.GetElementDoc = function (e) {
               if (!y.IsNavEnabled) return {};
               var t = this.m_navAreaDivRef.current;
               if (null == t)
@@ -10208,7 +10228,7 @@ var CLSTAMP = "6296065";
                 : (Object(f.a)(!1, e + " expects nav area to be in document."),
                   {});
             }),
-            (V.prototype.GetElementDocState = function(e) {
+            (V.prototype.GetElementDocState = function (e) {
               var t = this.GetElementDoc(e),
                 n = t.thisElement,
                 r = t.doc;
@@ -10218,7 +10238,7 @@ var CLSTAMP = "6296065";
                 ? (Object(f.a)(!1, e + " expects document nav state."), {})
                 : { thisElement: n, doc: r, dn: o };
             }),
-            (V.prototype.NavigateTo = function(r, e, t) {
+            (V.prototype.NavigateTo = function (r, e, t) {
               var n, o, i, a, s, c, l, u, p, m, d, g, h;
               y.IsNotSettingFocus
                 ? te(
@@ -10241,8 +10261,8 @@ var CLSTAMP = "6296065";
                       r
                     ),
                     this.UpdateFocus(r, e),
-                    (s = (a = (i = function(t, e) {
-                      var n = Object(Q.j)(r, function(e) {
+                    (s = (a = (i = function (t, e) {
+                      var n = Object(Q.j)(r, function (e) {
                         return null != e.getAttribute(t);
                       });
                       return null == n
@@ -10250,7 +10270,7 @@ var CLSTAMP = "6296065";
                         : [
                             n,
                             n.getAttribute(t),
-                            parseFloat(n.getAttribute(e) || "0")
+                            parseFloat(n.getAttribute(e) || "0"),
                           ];
                     })($.ScrollSnapTypeX, $.ScrollSnapMarginX))[0]),
                     (c = a[1]),
@@ -10262,7 +10282,7 @@ var CLSTAMP = "6296065";
                       ? (te("+ scroll-snapping (" + c + ", " + m + ")"),
                         n.Focus(r, { preventScroll: !0 }),
                         (g = r.ownerDocument.defaultView),
-                        (h = function(e, t, n, r) {
+                        (h = function (e, t, n, r) {
                           if (null != t)
                             for (
                               var o = ie(t),
@@ -10279,7 +10299,7 @@ var CLSTAMP = "6296065";
                                   : [
                                       c.scrollTop,
                                       c.scrollHeight,
-                                      c.clientHeight
+                                      c.clientHeight,
                                     ];
                               if (!(l[1] <= l[2])) {
                                 var u = g.getComputedStyle(c),
@@ -10294,7 +10314,7 @@ var CLSTAMP = "6296065";
                                     return;
                                   var d = {
                                       min: a - m[e].min,
-                                      max: s - m[e].max
+                                      max: s - m[e].max,
                                     },
                                     h =
                                       n === x.Start
@@ -10349,7 +10369,7 @@ var CLSTAMP = "6296065";
                     r
                   );
             }),
-            (V.prototype.UpdateFocus = function(e, t) {
+            (V.prototype.UpdateFocus = function (e, t) {
               var n, r;
               null == t &&
                 null != e &&
@@ -10367,7 +10387,7 @@ var CLSTAMP = "6296065";
               var o = W(e);
               o instanceof ce && o.GotFocus(), this.UpdateFocusMarker(!1);
             }),
-            (V.prototype.UpdateFocusMarker = function(e) {
+            (V.prototype.UpdateFocusMarker = function (e) {
               var t, n;
               te(
                 "NavArea.UpdateFocusMarker " + ne(this.m_navAreaDivRef.current)
@@ -10393,7 +10413,7 @@ var CLSTAMP = "6296065";
                       this.GetFocusPos()
                     ));
             }),
-            (V.prototype.GetFocusPos = function() {
+            (V.prototype.GetFocusPos = function () {
               var e = this.m_navAreaDivRef.current,
                 t = this.m_focusedHtmlElement,
                 n = this.m_focusPosOffsetFromAnchorElement;
@@ -10403,7 +10423,7 @@ var CLSTAMP = "6296065";
               }
               return this.m_focusPos;
             }),
-            (V.prototype.FindBestFocusableTarget = function(e, t, n) {
+            (V.prototype.FindBestFocusableTarget = function (e, t, n) {
               var r = "NavArea.FindBestNavStopFocus";
               if (!e) return null;
               var o = e.ownerDocument;
@@ -10427,7 +10447,7 @@ var CLSTAMP = "6296065";
                 V.IsElementTargetThatFocuses(a)
               )
                 return { htmlElement: a, pos: s || ae(a) };
-              var c = Object(Q.k)(e, $.Type).filter(function(e) {
+              var c = Object(Q.k)(e, $.Type).filter(function (e) {
                 return (
                   oe(e) &&
                   "true" === e.getAttribute($.Preferred) &&
@@ -10461,7 +10481,7 @@ var CLSTAMP = "6296065";
               if (!m || 0 === m.length) return null;
               var d = V.GetNavAreaObjects(e, r, {
                   target: !0,
-                  activeNavArea: !0
+                  activeNavArea: !0,
                 }),
                 h = d.activeNavArea,
                 f = (d.activeNavAreaElement, d.dn);
@@ -10493,7 +10513,7 @@ var CLSTAMP = "6296065";
               }
               var D,
                 x = f.m_navAreaStack,
-                M = Object(P.e)(x, function(e) {
+                M = Object(P.e)(x, function (e) {
                   return null !== e.m_focusPos;
                 });
               if (M) {
@@ -10518,7 +10538,7 @@ var CLSTAMP = "6296065";
                 ? { htmlElement: B, pos: ae(B) }
                 : (te("+ found no nav target."), null);
             }),
-            (V.prototype.FindNextNavTarget = function(e, t) {
+            (V.prototype.FindNextNavTarget = function (e, t) {
               var n = "NavArea.FindNextNavStop";
               te(n + " (" + this.props.id + ")");
               var r = this.m_navAreaDivRef.current;
@@ -10572,14 +10592,14 @@ var CLSTAMP = "6296065";
                     1,
                   h = {
                     x: { min: -40 * d, max: (m.innerWidth + 40) * d },
-                    y: { min: -40 * d, max: (m.innerHeight + 40) * d }
+                    y: { min: -40 * d, max: (m.innerHeight + 40) * d },
                   },
                   f = ie(u.onscreenTestElement || u.htmlElement);
                 if (Z((c = h).x, (l = f).x) && Z(c.y, l.y)) return u;
               }
               return null;
             }),
-            (V.prototype.Register = function() {
+            (V.prototype.Register = function () {
               var e,
                 t,
                 n,
@@ -10592,7 +10612,7 @@ var CLSTAMP = "6296065";
                 c = s.thisElement,
                 l = s.doc;
               null != l &&
-                ((o = (function() {
+                ((o = (function () {
                   var e = V.GetDocumentNavState(l);
                   if (null != e) return e;
                   te("+ creating new DocumentNavState");
@@ -10633,7 +10653,7 @@ var CLSTAMP = "6296065";
                 o.m_elementNavAreaMap.set(c, this),
                 this.props.startInactive || this.Activate());
             }),
-            (V.prototype.Unregister = function() {
+            (V.prototype.Unregister = function () {
               var e = "NavArea.Unregister";
               te(e + " (" + this.props.id + ")");
               var t,
@@ -10654,30 +10674,31 @@ var CLSTAMP = "6296065";
                 a.isEmpty &&
                   (V.RemoveEventListeners(i), V.sm_documentStates.delete(i)));
             }),
-            (V.prototype.componentDidMount = function() {
+            (V.prototype.componentDidMount = function () {
               te("NavArea.componentDidMount (" + this.props.id + ")"),
                 this.Register();
             }),
-            (V.prototype.componentDidUpdate = function() {
+            (V.prototype.componentDidUpdate = function () {
               te("NavArea.componentDidUpdate (" + this.props.id + ")");
             }),
-            (V.prototype.componentWillUnmount = function() {
+            (V.prototype.componentWillUnmount = function () {
               te("NavArea.componentWillUnmount (" + this.props.id + ")"),
                 this.Unregister();
             }),
-            (V.prototype.render = function() {
+            (V.prototype.render = function () {
               var e,
                 t = this.props,
                 n = t.className,
                 r = t.children,
-                o = (t.initFromBoundary,
-                t.onActivate,
-                t.onDeactivate,
-                t.onGoBack,
-                t.onHome,
-                t.focusController,
-                t.focusMarker,
-                t.startInactive),
+                o =
+                  (t.initFromBoundary,
+                  t.onActivate,
+                  t.onDeactivate,
+                  t.onGoBack,
+                  t.onHome,
+                  t.focusController,
+                  t.focusMarker,
+                  t.startInactive),
                 i = Object(u.f)(t, [
                   "className",
                   "children",
@@ -10688,7 +10709,7 @@ var CLSTAMP = "6296065";
                   "onHome",
                   "focusController",
                   "focusMarker",
-                  "startInactive"
+                  "startInactive",
                 ]),
                 a = y.IsNavEnabled;
               if (!a)
@@ -10699,10 +10720,11 @@ var CLSTAMP = "6296065";
                 );
               var s = y.IsPointerVisible,
                 c = y.IsDefaultFocusMarkerVisible,
-                l = (((e = {})[$.Type] = ee.Area),
-                (e[$.AreaActive] = "false"),
-                (e[$.AreaPass] = o ? "true" : void 0),
-                e);
+                l =
+                  (((e = {})[$.Type] = ee.Area),
+                  (e[$.AreaActive] = "false"),
+                  (e[$.AreaPass] = o ? "true" : void 0),
+                  e);
               return p.createElement(
                 C.Provider,
                 { value: this },
@@ -10727,8 +10749,8 @@ var CLSTAMP = "6296065";
                         borderLeft: "3px solid black",
                         width: "30px",
                         height: "30px",
-                        zIndex: 1e6
-                      }
+                        zIndex: 1e6,
+                      },
                     }),
                   a &&
                     c &&
@@ -10745,8 +10767,8 @@ var CLSTAMP = "6296065";
                         width: "10px",
                         height: "10px",
                         zIndex: 1e5,
-                        willChange: "left, top, width, height"
-                      }
+                        willChange: "left, top, width, height",
+                      },
                     }),
                   r
                 )
@@ -10762,13 +10784,13 @@ var CLSTAMP = "6296065";
               ["animationstart", V.HandleAllOnAnimationStart],
               ["animationend", V.HandleAllOnAnimationEnd],
               ["transitionstart", V.HandleAllOnTransitionStart],
-              ["transitionend", V.HandleAllOnTransitionEnd]
+              ["transitionend", V.HandleAllOnTransitionEnd],
             ]),
             (V.k_KeyNavigationDirections = {
               ArrowLeft: ["x", -1],
               ArrowRight: ["x", 1],
               ArrowUp: ["y", -1],
-              ArrowDown: ["y", 1]
+              ArrowDown: ["y", 1],
             }),
             Object(u.c)([E], V.prototype, "HandleKeyDown", null),
             Object(u.c)([E], V.prototype, "GetFocusedElement", null),
@@ -10813,9 +10835,9 @@ var CLSTAMP = "6296065";
           );
         })(p.Component);
     },
-    WBba: function(e, t, n) {
+    WBba: function (e, t, n) {
       "use strict";
-      n.d(t, "a", function() {
+      n.d(t, "a", function () {
         return a;
       });
       var p = n("mrSG"),
@@ -10827,7 +10849,7 @@ var CLSTAMP = "6296065";
         h = n.n(o),
         f = n("mC9v"),
         i = n("kLLr"),
-        a = (function() {
+        a = (function () {
           function e(e, t, n) {
             void 0 === n && (n = !1),
               (this.m_webApiAccessToken = ""),
@@ -10838,50 +10860,50 @@ var CLSTAMP = "6296065";
               this.ConstructServiceTransport();
           }
           return (
-            (e.prototype.WaitUntilLoggedOn = function() {
+            (e.prototype.WaitUntilLoggedOn = function () {
               return Promise.resolve();
             }),
-            (e.prototype.GetServerRTime32 = function() {
+            (e.prototype.GetServerRTime32 = function () {
               return Number(new Date());
             }),
             Object.defineProperty(e.prototype, "steamid", {
-              get: function() {
+              get: function () {
                 return new i.a();
               },
               enumerable: !1,
-              configurable: !0
+              configurable: !0,
             }),
-            (e.prototype.RTime32ToDate = function(e) {
+            (e.prototype.RTime32ToDate = function (e) {
               return new Date(1e3 * e);
             }),
-            (e.prototype.GetServiceTransport = function() {
+            (e.prototype.GetServiceTransport = function () {
               return this.m_ServiceTransport;
             }),
-            (e.prototype.GetAnonymousServiceTransport = function() {
+            (e.prototype.GetAnonymousServiceTransport = function () {
               return this.m_AnonymousServiceTransport;
             }),
-            (e.prototype.ConstructServiceTransport = function() {
+            (e.prototype.ConstructServiceTransport = function () {
               (this.m_ServiceTransport = {
                 SendMsg: this.SendMsgAndAwaitResponse.bind(this, {
-                  bSendAuth: !0
+                  bSendAuth: !0,
                 }),
                 SendNotification: this.SendNotification.bind(this, {
-                  bSendAuth: !0
-                })
+                  bSendAuth: !0,
+                }),
               }),
                 (this.m_AnonymousServiceTransport = {
                   SendMsg: this.SendMsgAndAwaitResponse.bind(this, {
-                    bSendAuth: !1
+                    bSendAuth: !1,
                   }),
                   SendNotification: this.SendNotification.bind(this, {
-                    bSendAuth: !1
-                  })
+                    bSendAuth: !1,
+                  }),
                 });
             }),
-            (e.prototype.SendMsgAndAwaitResponse = function(i, a, s, c, l) {
-              return Object(p.b)(this, void 0, void 0, function() {
+            (e.prototype.SendMsgAndAwaitResponse = function (i, a, s, c, l) {
+              return Object(p.b)(this, void 0, void 0, function () {
                 var t, n, r, o;
-                return Object(p.e)(this, function(e) {
+                return Object(p.e)(this, function (e) {
                   switch (e.label) {
                     case 0:
                       (t = null), (e.label = 1);
@@ -10926,10 +10948,10 @@ var CLSTAMP = "6296065";
                 });
               });
             }),
-            (e.prototype.SendNotification = function(e, t, n, r) {
+            (e.prototype.SendNotification = function (e, t, n, r) {
               return this.Send(e, t, n, r), !0;
             }),
-            (e.prototype.Send = function(e, t, n, r) {
+            (e.prototype.Send = function (e, t, n, r) {
               var o = this.CreateWebAPIURL(t),
                 i = n.SerializeBody(),
                 a = m.fromByteArray(i),
@@ -10937,7 +10959,7 @@ var CLSTAMP = "6296065";
                 c = 0 == r.ePrivilege && 1 == s,
                 l = {
                   responseType: this.m_bJsonMode ? "json" : "arraybuffer",
-                  params: {}
+                  params: {},
                 };
               if (
                 (e.bSendAuth ||
@@ -10956,10 +10978,10 @@ var CLSTAMP = "6296065";
                 return (
                   this.m_bJsonMode
                     ? (l.params = Object(p.a)(Object(p.a)({}, l.params), {
-                        input_json: JSON.stringify(n.Body().toObject())
+                        input_json: JSON.stringify(n.Body().toObject()),
                       }))
                     : (l.params = Object(p.a)(Object(p.a)({}, l.params), {
-                        input_protobuf_encoded: a
+                        input_protobuf_encoded: a,
                       })),
                   h.a.get(o, l)
                 );
@@ -10971,7 +10993,7 @@ var CLSTAMP = "6296065";
                 h.a.post(o, u, l)
               );
             }),
-            (e.prototype.CreateWebAPIURL = function(e) {
+            (e.prototype.CreateWebAPIURL = function (e) {
               var t = e.match(/([^\.]+)\.(.+)#(\d+)/);
               return t && 4 == t.length
                 ? this.m_strWebAPIBaseURL +
@@ -10983,7 +11005,7 @@ var CLSTAMP = "6296065";
                     t[3]
                 : null;
             }),
-            (e.prototype.CreateFailedMsgProtobuf = function(e, t, n) {
+            (e.prototype.CreateFailedMsgProtobuf = function (e, t, n) {
               var r = d.a.Init(e);
               return (
                 r.Hdr().set_eresult(2),
@@ -10999,24 +11021,24 @@ var CLSTAMP = "6296065";
           );
         })();
     },
-    WplJ: function(e, t, n) {
+    WplJ: function (e, t, n) {
       "use strict";
-      n.d(t, "a", function() {
+      n.d(t, "a", function () {
         return o;
       });
       var r = n("q1tI"),
         i = n.n(r),
         a = n("i8i4"),
-        o = function(e) {
+        o = function (e) {
           var o = e.config;
           return i.a.createElement(
             i.a.Fragment,
             null,
-            Object.keys(o || {}).map(function(r) {
+            Object.keys(o || {}).map(function (r) {
               var e = document.querySelectorAll("[data-featuretarget=" + r);
               return e.length
-                ? Array.from(e).map(function(e, t) {
-                    var n = (function(e, t) {
+                ? Array.from(e).map(function (e, t) {
+                    var n = (function (e, t) {
                       if (!e) return {};
                       try {
                         var n = JSON.parse(e);
@@ -11041,54 +11063,54 @@ var CLSTAMP = "6296065";
           );
         };
     },
-    X3Ds: function(e, t, n) {
+    X3Ds: function (e, t, n) {
       "use strict";
-      n.d(t, "c", function() {
+      n.d(t, "c", function () {
         return r;
       }),
-        n.d(t, "b", function() {
+        n.d(t, "b", function () {
           return o;
         }),
-        n.d(t, "f", function() {
+        n.d(t, "f", function () {
           return a;
         }),
-        n.d(t, "m", function() {
+        n.d(t, "m", function () {
           return s;
         }),
-        n.d(t, "l", function() {
+        n.d(t, "l", function () {
           return c;
         }),
-        n.d(t, "g", function() {
+        n.d(t, "g", function () {
           return l;
         }),
-        n.d(t, "h", function() {
+        n.d(t, "h", function () {
           return u;
         }),
-        n.d(t, "a", function() {
+        n.d(t, "a", function () {
           return p;
         }),
-        n.d(t, "n", function() {
+        n.d(t, "n", function () {
           return m;
         }),
-        n.d(t, "e", function() {
+        n.d(t, "e", function () {
           return d;
         }),
-        n.d(t, "o", function() {
+        n.d(t, "o", function () {
           return h;
         }),
-        n.d(t, "d", function() {
+        n.d(t, "d", function () {
           return f;
         }),
-        n.d(t, "i", function() {
+        n.d(t, "i", function () {
           return v;
         }),
-        n.d(t, "k", function() {
+        n.d(t, "k", function () {
           return g;
         }),
-        n.d(t, "j", function() {
+        n.d(t, "j", function () {
           return b;
         }),
-        n.d(t, "p", function() {
+        n.d(t, "p", function () {
           return _;
         });
       var i = n("mrSG");
@@ -11116,7 +11138,7 @@ var CLSTAMP = "6296065";
           top: e.screenTop + t.top,
           bottom: e.screenTop + t.bottom,
           left: e.screenLeft + t.left,
-          right: e.screenLeft + t.right
+          right: e.screenLeft + t.right,
         };
       }
       function s(e) {
@@ -11219,16 +11241,16 @@ var CLSTAMP = "6296065";
         }
       }
       function _(r, o) {
-        return Object(i.b)(this, void 0, void 0, function() {
+        return Object(i.b)(this, void 0, void 0, function () {
           var t, n;
-          return Object(i.e)(this, function(e) {
+          return Object(i.e)(this, function (e) {
             switch (e.label) {
               case 0:
                 return [
                   4,
-                  new Promise(function(e) {
+                  new Promise(function (e) {
                     (t = e), r.addEventListener(o, e);
-                  })
+                  }),
                 ];
               case 1:
                 return (n = e.sent()), r.removeEventListener(o, t), [2, n];
@@ -11237,7 +11259,7 @@ var CLSTAMP = "6296065";
         });
       }
     },
-    YyVH: function(e, t, n) {
+    YyVH: function (e, t, n) {
       "use strict";
       function r(e, t) {
         return (
@@ -11252,46 +11274,46 @@ var CLSTAMP = "6296065";
       function i(e, t, n, r, o) {
         return r + ((o - r) * (e - t)) / (n - t);
       }
-      n.d(t, "b", function() {
+      n.d(t, "b", function () {
         return r;
       }),
-        n.d(t, "a", function() {
+        n.d(t, "a", function () {
           return o;
         }),
-        n.d(t, "c", function() {
+        n.d(t, "c", function () {
           return i;
         });
     },
-    Z1oF: function(e, t, n) {
+    Z1oF: function (e, t, n) {
       "use strict";
-      n.d(t, "j", function() {
+      n.d(t, "j", function () {
         return r;
       }),
-        n.d(t, "e", function() {
+        n.d(t, "e", function () {
           return d;
         }),
-        n.d(t, "h", function() {
+        n.d(t, "h", function () {
           return c;
         }),
-        n.d(t, "f", function() {
+        n.d(t, "f", function () {
           return h;
         }),
-        n.d(t, "g", function() {
+        n.d(t, "g", function () {
           return i;
         }),
-        n.d(t, "i", function() {
+        n.d(t, "i", function () {
           return s;
         }),
-        n.d(t, "a", function() {
+        n.d(t, "a", function () {
           return v;
         }),
-        n.d(t, "c", function() {
+        n.d(t, "c", function () {
           return E;
         }),
-        n.d(t, "b", function() {
+        n.d(t, "b", function () {
           return O;
         }),
-        n.d(t, "d", function() {
+        n.d(t, "d", function () {
           return C;
         });
       var l = n("mrSG"),
@@ -11306,7 +11328,7 @@ var CLSTAMP = "6296065";
                   {
                     bExcludeAgo: !1,
                     bForceSingleUnits: !1,
-                    bHighGranularity: !1
+                    bHighGranularity: !1,
                   },
                   t
                 ),
@@ -11363,7 +11385,7 @@ var CLSTAMP = "6296065";
           weekday: "short",
           month: "long",
           day: "numeric",
-          year: t ? void 0 : "numeric"
+          year: t ? void 0 : "numeric",
         };
         return new Date(1e3 * e).toLocaleDateString(
           u.e.GetPreferredLocales(),
@@ -11377,21 +11399,21 @@ var CLSTAMP = "6296065";
         var r = t.toLocaleDateString(u.e.GetPreferredLocales(), {
           year: "numeric",
           month: "short",
-          day: "numeric"
+          day: "numeric",
         });
         return a.set(n, r), r;
       }
       function h(e) {
         return new Date(1e3 * e).toLocaleTimeString(u.e.GetPreferredLocales(), {
           hour: "numeric",
-          minute: "numeric"
+          minute: "numeric",
         });
       }
       var o = new Map();
       function i(e) {
         var t = new Date(1e3 * e),
           n = u.e.GetPreferredLocales(),
-          r = (function(e) {
+          r = (function (e) {
             if (!0 === (n = o.get(e)) || !1 === n) return n;
             var t = new Date();
             t.setHours(15);
@@ -11440,7 +11462,7 @@ var CLSTAMP = "6296065";
               bGranularFutureTime: !1,
               bGranularToday: !1,
               bGranularYesterday: !1,
-              bGranularPast: !1
+              bGranularPast: !1,
             },
             t
           );
@@ -11506,7 +11528,7 @@ var CLSTAMP = "6296065";
           ((r = e.toLocaleDateString(u.e.GetPreferredLocales(), {
             weekday: "long",
             day: "numeric",
-            month: t ? "long" : "short"
+            month: t ? "long" : "short",
           })),
           w.set(n, r),
           r)
@@ -11517,7 +11539,7 @@ var CLSTAMP = "6296065";
         return (
           t ||
           ((t = e.toLocaleDateString(u.e.GetPreferredLocales(), {
-            weekday: "long"
+            weekday: "long",
           })),
           g.set(e.getDay(), t),
           t)
@@ -11528,7 +11550,7 @@ var CLSTAMP = "6296065";
         return (
           t ||
           ((t = e.toLocaleDateString(u.e.GetPreferredLocales(), {
-            month: "long"
+            month: "long",
           })),
           b.set(e.getMonth(), t),
           t)
@@ -11539,7 +11561,7 @@ var CLSTAMP = "6296065";
         return (
           t ||
           ((t = e.toLocaleDateString(u.e.GetPreferredLocales(), {
-            year: "numeric"
+            year: "numeric",
           })),
           _.set(e.getFullYear(), t),
           t)
@@ -11552,21 +11574,21 @@ var CLSTAMP = "6296065";
           n ||
           ((n = e.toLocaleDateString(u.e.GetPreferredLocales(), {
             month: "long",
-            year: "numeric"
+            year: "numeric",
           })),
           y.set(t, n),
           n)
         );
       }
     },
-    Z7Ow: function(e, t, n) {
+    Z7Ow: function (e, t, n) {
       e.exports = {
         EmoticonBow: "shared_svg_library_EmoticonBow_2Llzt",
         EmoticonBow_st0: "shared_svg_library_EmoticonBow_st0_Fw2WG",
-        EmoticonBow_st1: "shared_svg_library_EmoticonBow_st1_luj0t"
+        EmoticonBow_st1: "shared_svg_library_EmoticonBow_st1_luj0t",
       };
     },
-    bxBv: function(e, t, n) {
+    bxBv: function (e, t, n) {
       "use strict";
       var r = n("mrSG"),
         i = n("mC9v"),
@@ -11574,35 +11596,35 @@ var CLSTAMP = "6296065";
       a.Message;
       var s = n("RD/U");
       n("kLLr");
-      n.d(t, "a", function() {
+      n.d(t, "a", function () {
         return o;
       });
-      var o = (function(o) {
+      var o = (function (o) {
         function n(e, t, n, r) {
           return void 0 === t && (t = 0), o.call(this, t, n, e, r) || this;
         }
         return (
           Object(r.d)(n, o),
-          (n.InitFromPacket = function(e, t) {
+          (n.InitFromPacket = function (e, t) {
             return new n(e, 0, t);
           }),
-          (n.InitFromMsg = function(e, t) {
+          (n.InitFromMsg = function (e, t) {
             return new n(e, void 0, void 0, t);
           }),
-          (n.Init = function(e, t) {
+          (n.Init = function (e, t) {
             return new n(e, t);
           }),
-          (n.prototype.Body = function() {
+          (n.prototype.Body = function () {
             return o.prototype.Body.call(this);
           }),
-          (n.prototype.SetBodyFields = function(e) {
+          (n.prototype.SetBodyFields = function (e) {
             var n = this,
               r = this;
             for (var t in e)
-              !(function(t) {
+              !(function (t) {
                 Array.isArray(e[t])
                   ? r.Body()["add_" + t] &&
-                    e[t].forEach(function(e) {
+                    e[t].forEach(function (e) {
                       n.Body()["add_" + t](e);
                     })
                   : r.Body()["set_" + t] && r.Body()["set_" + t](e[t]);
@@ -11611,7 +11633,7 @@ var CLSTAMP = "6296065";
           n
         );
       })(
-        (function() {
+        (function () {
           function t(e, t, n, r, o) {
             if (r)
               (this.m_eMsg = r.m_eMsg),
@@ -11652,10 +11674,10 @@ var CLSTAMP = "6296065";
             }
           }
           return (
-            (t.InitHeaderFromPacket = function(e) {
+            (t.InitHeaderFromPacket = function (e) {
               return new t(void 0, e);
             }),
-            (t.prototype.InitForType = function(e) {
+            (t.prototype.InitForType = function (e) {
               if (((this.m_body = new e()), this.m_netPacket)) {
                 this.m_netPacket.SeekGetHead(8 + this.m_cubHeader);
                 try {
@@ -11676,31 +11698,31 @@ var CLSTAMP = "6296065";
                 }
               }
             }),
-            (t.prototype.BIsValid = function() {
+            (t.prototype.BIsValid = function () {
               return this.m_bValid;
             }),
-            (t.prototype.Body = function() {
+            (t.prototype.Body = function () {
               return this.m_body;
             }),
-            (t.prototype.SetBodyJSON = function(e) {
-              (e.toObject = function() {
+            (t.prototype.SetBodyJSON = function (e) {
+              (e.toObject = function () {
                 return e;
               }),
                 (this.m_body = e);
             }),
-            (t.prototype.Hdr = function() {
+            (t.prototype.Hdr = function () {
               return this.m_header;
             }),
-            (t.prototype.GetEMsg = function() {
+            (t.prototype.GetEMsg = function () {
               return this.m_eMsg;
             }),
-            (t.prototype.SetEMsg = function(e) {
+            (t.prototype.SetEMsg = function (e) {
               this.m_eMsg = e;
             }),
-            (t.prototype.GetEResult = function() {
+            (t.prototype.GetEResult = function () {
               return this.Hdr().eresult();
             }),
-            (t.prototype.Serialize = function() {
+            (t.prototype.Serialize = function () {
               var e = this.m_header.serializeBinary(),
                 t = this.m_body.serializeBinary(),
                 n = 2147483648 | this.m_eMsg,
@@ -11714,42 +11736,42 @@ var CLSTAMP = "6296065";
                 r
               );
             }),
-            (t.prototype.SerializeBody = function() {
+            (t.prototype.SerializeBody = function () {
               var e = this.m_body.serializeBinary(),
                 t = new Uint8Array(e.length);
               return new i.a(t).PutBytes(e), t;
             }),
-            (t.prototype.DEBUG_ToObject = function() {
+            (t.prototype.DEBUG_ToObject = function () {
               return {};
             }),
-            (t.prototype.DEBUG_LogToConsole = function() {}),
+            (t.prototype.DEBUG_LogToConsole = function () {}),
             t
           );
         })()
       );
     },
-    bxiW: function(e, t, n) {
+    bxiW: function (e, t, n) {
       "use strict";
-      n.d(t, "a", function() {
+      n.d(t, "a", function () {
         return r;
       }),
-        n.d(t, "b", function() {
+        n.d(t, "b", function () {
           return o;
         }),
-        n.d(t, "c", function() {
+        n.d(t, "c", function () {
           return i;
         });
       n("Gp1o"), n("q1tI");
       function r(e, t, n) {
         return {
-          get: function() {
+          get: function () {
             var e = n.value.bind(this);
             return (
               this.hasOwnProperty(t) ||
                 Object.defineProperty(this, t, { value: e }),
               e
             );
-          }
+          },
         };
       }
       function o(e, t, n) {
@@ -11759,36 +11781,36 @@ var CLSTAMP = "6296065";
         null != e && ("function" == typeof e ? e(t) : (e.current = t));
       }
     },
-    eDP5: function(e, t, n) {
+    eDP5: function (e, t, n) {
       "use strict";
-      n.d(t, "a", function() {
+      n.d(t, "a", function () {
         return a;
       }),
-        n.d(t, "b", function() {
+        n.d(t, "b", function () {
           return s;
         });
       var r = n("mrSG"),
         o = n("q1tI"),
         i = n("lkRc"),
-        a = (function(e) {
+        a = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
           return (
             Object(r.d)(t, e),
-            (t.prototype.render = function() {
+            (t.prototype.render = function () {
               if ("dev" !== i.b.WEB_UNIVERSE) return null;
               var t = document.getElementById(this.props.strConfigID);
               if (!t) return null;
               var n = new Array();
               return (
-                t.getAttributeNames().forEach(function(e) {
+                t.getAttributeNames().forEach(function (e) {
                   e.toLocaleLowerCase().startsWith("data-") &&
                     (n.push(o.createElement("h1", { key: "header-" + e }, e)),
                     n.push(
                       o.createElement(s, {
                         key: "body-" + e,
-                        data: JSON.parse(t.getAttribute(e))
+                        data: JSON.parse(t.getAttribute(e)),
                       })
                     ));
                 }),
@@ -11798,13 +11820,13 @@ var CLSTAMP = "6296065";
             t
           );
         })(o.Component),
-        s = (function(e) {
+        s = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
           return (
             Object(r.d)(t, e),
-            (t.prototype.render = function() {
+            (t.prototype.render = function () {
               return o.createElement(
                 "div",
                 null,
@@ -11819,16 +11841,16 @@ var CLSTAMP = "6296065";
           );
         })(o.Component);
     },
-    exH9: function(e, t, n) {
+    exH9: function (e, t, n) {
       "use strict";
       function r(n) {
-        return Object.keys(n).reduce(function(e, t) {
+        return Object.keys(n).reduce(function (e, t) {
           return n[t] ? (e ? e + " " + t : t) : e;
         }, "");
       }
-      t.a = function() {
+      t.a = function () {
         for (var e = [], t = 0; t < arguments.length; t++) e[t] = arguments[t];
-        return e.reduce(function(e, t) {
+        return e.reduce(function (e, t) {
           return t
             ? "string" == typeof t
               ? e
@@ -11843,7 +11865,7 @@ var CLSTAMP = "6296065";
         }, "");
       };
     },
-    gfbn: function(e, t, m) {
+    gfbn: function (e, t, m) {
       "use strict";
       m.r(t);
       var d = m("mrSG"),
@@ -11860,9 +11882,9 @@ var CLSTAMP = "6296065";
         u = m("uobO"),
         p = (m("5izx"), m("X3Ds"));
       m("xnZ7"), m("idvb");
-      Object(p.o)(function() {
-        return Object(d.b)(void 0, void 0, void 0, function() {
-          return Object(d.e)(this, function(e) {
+      Object(p.o)(function () {
+        return Object(d.b)(void 0, void 0, void 0, function () {
+          return Object(d.e)(this, function (e) {
             switch (e.label) {
               case 0:
                 return (
@@ -11876,10 +11898,10 @@ var CLSTAMP = "6296065";
                   ),
                   [
                     4,
-                    (function(p) {
-                      return Object(d.b)(this, void 0, void 0, function() {
+                    (function (p) {
+                      return Object(d.b)(this, void 0, void 0, function () {
                         var t, n, r, o, i, a, s, c, l, u;
-                        return Object(d.e)(this, function(e) {
+                        return Object(d.e)(this, function (e) {
                           switch (e.label) {
                             case 0:
                               return [3, 2];
@@ -11893,12 +11915,12 @@ var CLSTAMP = "6296065";
                                   4,
                                   Promise.all([
                                     m("rCDf")("./shared_" + p + ".json").then(
-                                      function(e) {
+                                      function (e) {
                                         return e.default;
                                       }
                                     ),
                                     m("AvbV")("./main_" + p + ".json").then(
-                                      function(e) {
+                                      function (e) {
                                         return e.default;
                                       }
                                     ),
@@ -11906,17 +11928,17 @@ var CLSTAMP = "6296065";
                                       ? {}
                                       : m("rCDf")(
                                           "./shared_" + t + ".json"
-                                        ).then(function(e) {
+                                        ).then(function (e) {
                                           return e.default;
                                         }),
                                     n
                                       ? {}
                                       : m("AvbV")("./main_" + t + ".json").then(
-                                          function(e) {
+                                          function (e) {
                                             return e.default;
                                           }
-                                        )
-                                  ])
+                                        ),
+                                  ]),
                                 ]
                               );
                             case 3:
@@ -11934,7 +11956,7 @@ var CLSTAMP = "6296065";
                           }
                         });
                       });
-                    })(s.b.LANGUAGE)
+                    })(s.b.LANGUAGE),
                   ]
                 );
               case 1:
@@ -11952,23 +11974,23 @@ var CLSTAMP = "6296065";
         });
       });
       var f = [];
-      window.LocalizationManifestReady = function(e, t, n) {
+      window.LocalizationManifestReady = function (e, t, n) {
         Object(c.a)("manifest" === t, 'Expected manifest not "' + t + '"'),
           void 0 !== f ? f.push(n) : h.e.AddTokens(n);
       };
     },
-    hJxo: function(e, t, n) {
+    hJxo: function (e, t, n) {
       "use strict";
-      n.d(t, "a", function() {
+      n.d(t, "a", function () {
         return s;
       }),
-        n.d(t, "b", function() {
+        n.d(t, "b", function () {
           return c;
         });
       var r = n("mrSG"),
         i = n("i8i4"),
         a = n("X3Ds"),
-        o = (function() {
+        o = (function () {
           function e(e, t) {
             (this.m_bActive = !1),
               (this.m_fnBoundAnimationFunc = void 0),
@@ -11976,7 +11998,7 @@ var CLSTAMP = "6296065";
               (this.m_options = Object.assign({ timing: "sine" }, t));
           }
           return (
-            (e.prototype.Start = function() {
+            (e.prototype.Start = function () {
               var e;
               switch (
                 ((this.m_msStart = performance.now()),
@@ -11984,12 +12006,12 @@ var CLSTAMP = "6296065";
                 this.m_options.timing)
               ) {
                 case "linear":
-                  e = function(e) {
+                  e = function (e) {
                     return e;
                   };
                   break;
                 case "cubic-in-out":
-                  e = function(e) {
+                  e = function (e) {
                     return e < 0.5
                       ? 4 * e * e * e
                       : (e - 1) * (2 * e - 2) * (2 * e - 2) + 1;
@@ -11997,7 +12019,7 @@ var CLSTAMP = "6296065";
                   break;
                 case "sine":
                 default:
-                  e = function(e) {
+                  e = function (e) {
                     return 0.5 - Math.cos(e * Math.PI) / 2;
                   };
               }
@@ -12007,20 +12029,20 @@ var CLSTAMP = "6296065";
                   this.m_fnBoundAnimationFunc
                 );
             }),
-            (e.prototype.BIsActive = function() {
+            (e.prototype.BIsActive = function () {
               return this.m_bActive;
             }),
-            (e.prototype.End = function() {
+            (e.prototype.End = function () {
               this.m_bActive &&
                 (this.Update(1), this.ClearInterval(), this.FireOnComplete());
             }),
-            (e.prototype.FireOnComplete = function() {
+            (e.prototype.FireOnComplete = function () {
               this.m_options.onComplete && this.m_options.onComplete();
             }),
-            (e.prototype.Cancel = function() {
+            (e.prototype.Cancel = function () {
               this.m_bActive = !1;
             }),
-            (e.prototype.OnInterval = function(e) {
+            (e.prototype.OnInterval = function (e) {
               var t, n;
               this.m_bActive &&
                 ((t = performance.now() - this.m_msStart) >=
@@ -12032,20 +12054,20 @@ var CLSTAMP = "6296065";
                       this.m_fnBoundAnimationFunc
                     )));
             }),
-            (e.prototype.ClearInterval = function() {
+            (e.prototype.ClearInterval = function () {
               this.m_bActive = !1;
             }),
             e
           );
         })(),
-        s = (function(o) {
+        s = (function (o) {
           function e(e, t, n) {
             var r = o.call(this, a.l(e), n) || this;
             return (r.m_props = {}), (r.m_object = e), (r.m_propTargets = t), r;
           }
           return (
             Object(r.d)(e, o),
-            (e.prototype.Start = function() {
+            (e.prototype.Start = function () {
               for (var e in ((this.m_props = {}), this.m_propTargets)) {
                 var t = parseFloat(this.m_object[e]) || 0,
                   n = this.m_propTargets[e];
@@ -12053,7 +12075,7 @@ var CLSTAMP = "6296065";
               }
               o.prototype.Start.call(this);
             }),
-            (e.prototype.Update = function(e) {
+            (e.prototype.Update = function (e) {
               for (var t in this.m_props) {
                 var n = this.m_props[t],
                   r = n.start + (n.end - n.start) * e;
@@ -12063,7 +12085,7 @@ var CLSTAMP = "6296065";
             e
           );
         })(o),
-        c = (function(o) {
+        c = (function (o) {
           function e(e, t, n) {
             var r = o.call(this, a.l(i.findDOMNode(e)), n) || this;
             return (
@@ -12076,7 +12098,7 @@ var CLSTAMP = "6296065";
           }
           return (
             Object(r.d)(e, o),
-            (e.prototype.Start = function() {
+            (e.prototype.Start = function () {
               for (var e in ((this.m_props = {}), this.m_propTargets)) {
                 var t = parseFloat(this.m_component.state[e]) || 0,
                   n = this.m_propTargets[e];
@@ -12084,7 +12106,7 @@ var CLSTAMP = "6296065";
               }
               o.prototype.Start.call(this);
             }),
-            (e.prototype.Update = function(e) {
+            (e.prototype.Update = function (e) {
               var t = {};
               for (var n in this.m_props) {
                 var r = this.m_props[n],
@@ -12093,7 +12115,7 @@ var CLSTAMP = "6296065";
               }
               this.m_component.setState(t);
             }),
-            (e.prototype.FireOnComplete = function() {
+            (e.prototype.FireOnComplete = function () {
               o.prototype.FireOnComplete.call(this),
                 this.m_setStateOnComplete &&
                   this.m_component.setState(this.m_setStateOnComplete);
@@ -12102,17 +12124,17 @@ var CLSTAMP = "6296065";
           );
         })(o);
     },
-    idvb: function(e, t, n) {},
-    kLLr: function(e, t, n) {
+    idvb: function (e, t, n) {},
+    kLLr: function (e, t, n) {
       "use strict";
-      n.d(t, "a", function() {
+      n.d(t, "a", function () {
         return o;
       });
       var r = n("2lpH"),
         a = n.n(r),
         i = n("mgoM"),
         s = n("lkRc"),
-        o = (function() {
+        o = (function () {
           function o(e, t, n, r) {
             void 0 === e && (e = 0),
               e instanceof o
@@ -12124,28 +12146,28 @@ var CLSTAMP = "6296065";
                 : (this.m_ulSteamID = e ? a.a.fromNumber(e, !0) : a.a.UZERO);
           }
           return (
-            (o.InitFromAccountID = function(e) {
+            (o.InitFromAccountID = function (e) {
               return new o(Number(e), s.b.EUNIVERSE, 1, i.f);
             }),
-            (o.InitFromClanID = function(e) {
+            (o.InitFromClanID = function (e) {
               return new o(Number(e), s.b.EUNIVERSE, 7, 0);
             }),
-            (o.prototype.GetAccountID = function() {
+            (o.prototype.GetAccountID = function () {
               return this.m_ulSteamID.getLowBitsUnsigned();
             }),
-            (o.prototype.GetInstance = function() {
+            (o.prototype.GetInstance = function () {
               return 1048575 & this.m_ulSteamID.getHighBitsUnsigned();
             }),
-            (o.prototype.GetAccountType = function() {
+            (o.prototype.GetAccountType = function () {
               return (this.m_ulSteamID.getHighBitsUnsigned() >> 20) & 15;
             }),
-            (o.prototype.GetUniverse = function() {
+            (o.prototype.GetUniverse = function () {
               return (this.m_ulSteamID.getHighBitsUnsigned() >> 24) & 255;
             }),
-            (o.prototype.ConvertTo64BitString = function() {
+            (o.prototype.ConvertTo64BitString = function () {
               return this.m_ulSteamID.toString();
             }),
-            (o.prototype.Render = function() {
+            (o.prototype.Render = function () {
               switch (this.GetAccountType()) {
                 case 0:
                   return (
@@ -12193,7 +12215,7 @@ var CLSTAMP = "6296065";
                   );
               }
             }),
-            (o.prototype.BIsValid = function() {
+            (o.prototype.BIsValid = function () {
               var e = this.GetAccountType();
               if (e <= 0 || 11 <= e) return !1;
               var t = this.GetUniverse();
@@ -12207,20 +12229,20 @@ var CLSTAMP = "6296065";
               } else if (3 == e && 0 == this.GetAccountID()) return !1;
               return !0;
             }),
-            (o.prototype.BIsIndividualAccount = function() {
+            (o.prototype.BIsIndividualAccount = function () {
               return 1 == this.GetAccountType();
             }),
-            (o.prototype.BIsClanAccount = function() {
+            (o.prototype.BIsClanAccount = function () {
               return 7 == this.GetAccountType();
             }),
-            (o.prototype.SetAccountID = function(e) {
+            (o.prototype.SetAccountID = function (e) {
               this.m_ulSteamID = new a.a(
                 e,
                 this.m_ulSteamID.getHighBitsUnsigned(),
                 !0
               );
             }),
-            (o.prototype.SetInstance = function(e) {
+            (o.prototype.SetInstance = function (e) {
               this.SetFromComponents(
                 this.GetAccountID(),
                 e,
@@ -12228,7 +12250,7 @@ var CLSTAMP = "6296065";
                 this.GetUniverse()
               );
             }),
-            (o.prototype.SetAccountType = function(e) {
+            (o.prototype.SetAccountType = function (e) {
               this.SetFromComponents(
                 this.GetAccountID(),
                 this.GetInstance(),
@@ -12236,7 +12258,7 @@ var CLSTAMP = "6296065";
                 this.GetUniverse()
               );
             }),
-            (o.prototype.SetUniverse = function(e) {
+            (o.prototype.SetUniverse = function (e) {
               this.SetFromComponents(
                 this.GetAccountID(),
                 this.GetInstance(),
@@ -12244,7 +12266,7 @@ var CLSTAMP = "6296065";
                 e
               );
             }),
-            (o.prototype.SetFromComponents = function(e, t, n, r) {
+            (o.prototype.SetFromComponents = function (e, t, n, r) {
               var o = ((255 & r) << 24) + ((15 & n) << 20) + (1048575 & t),
                 i = 4294967295 & e;
               this.m_ulSteamID = new a.a(i, o, !0);
@@ -12253,26 +12275,26 @@ var CLSTAMP = "6296065";
           );
         })();
     },
-    kyHq: function(e, t, n) {
+    kyHq: function (e, t, n) {
       "use strict";
-      n.d(t, "c", function() {
+      n.d(t, "c", function () {
         return o;
       }),
-        n.d(t, "f", function() {
+        n.d(t, "f", function () {
           return m;
         }),
-        n.d(t, "b", function() {
+        n.d(t, "b", function () {
           return d;
         }),
-        n.d(t, "d", function() {
+        n.d(t, "d", function () {
           return b;
         }),
-        n.d(t, "a", function() {
+        n.d(t, "a", function () {
           return y;
         });
       n("mrSG");
       var r = n("mgoM");
-      n.d(t, "e", function() {
+      n.d(t, "e", function () {
         return r.d;
       });
       n("2vnA");
@@ -12314,8 +12336,8 @@ var CLSTAMP = "6296065";
         (l[(l.k_EComputerActiveStateIdle = 2)] = "k_EComputerActiveStateIdle");
       var u,
         p,
-        m = (function() {
-          return function() {};
+        m = (function () {
+          return function () {};
         })();
       ((p = u = u || {})[(p.k_EPending = 0)] = "k_EPending"),
         (p[(p.k_EAccepted = 1)] = "k_EAccepted"),
@@ -12432,27 +12454,27 @@ var CLSTAMP = "6296065";
         (T[(T.Overlay = 2)] = "Overlay"),
         (T[(T.Opaque = 3)] = "Opaque");
     },
-    lkRc: function(e, t, n) {
+    lkRc: function (e, t, n) {
       "use strict";
-      n.d(t, "b", function() {
+      n.d(t, "b", function () {
         return a;
       }),
-        n.d(t, "g", function() {
+        n.d(t, "g", function () {
           return s;
         }),
-        n.d(t, "a", function() {
+        n.d(t, "a", function () {
           return l;
         }),
-        n.d(t, "f", function() {
+        n.d(t, "f", function () {
           return m;
         }),
-        n.d(t, "e", function() {
+        n.d(t, "e", function () {
           return d;
         }),
-        n.d(t, "c", function() {
+        n.d(t, "c", function () {
           return h;
         }),
-        n.d(t, "d", function() {
+        n.d(t, "d", function () {
           return f;
         });
       n("mrSG");
@@ -12496,7 +12518,7 @@ var CLSTAMP = "6296065";
           BUILD_TIMESTAMP: 0,
           PAGE_TIMESTAMP: 0,
           get SESSIONID() {
-            return (function() {
+            return (function () {
               if (!Object(i.a)()) return (r = r || p());
               var e = Object(i.b)("sessionid");
               e = e || p();
@@ -12507,7 +12529,7 @@ var CLSTAMP = "6296065";
           STEAM_TV: !1,
           DEV_MODE: !1,
           OFFLINE_MODE: !1,
-          IN_LIBRARY: !1
+          IN_LIBRARY: !1,
         },
         s = {
           logged_in: !1,
@@ -12521,7 +12543,7 @@ var CLSTAMP = "6296065";
           is_support: !1,
           is_limited: !1,
           short_url: "",
-          country_code: ""
+          country_code: "",
         },
         c = { steamid: "", clanid: 0, listid: 0 },
         l = {
@@ -12539,11 +12561,11 @@ var CLSTAMP = "6296065";
           APP_NAME: "",
           HAS_ADULT_CONTENT: !1,
           HAS_ADULT_CONTENT_SEX: !1,
-          HAS_ADULT_CONTENT_VIOLENCE: !1
+          HAS_ADULT_CONTENT_VIOLENCE: !1,
         },
         u = "webui_config";
       function p() {
-        var e = (function() {
+        var e = (function () {
           for (var e = "", t = 0; t < 24; t++)
             e += Object(o.b)(0, 35).toString(36);
           return e;
@@ -12617,12 +12639,12 @@ var CLSTAMP = "6296065";
           : "";
       }
     },
-    mC9v: function(e, t, n) {
+    mC9v: function (e, t, n) {
       "use strict";
-      n.d(t, "a", function() {
+      n.d(t, "a", function () {
         return r;
       });
-      var r = (function() {
+      var r = (function () {
         function e(e, t, n) {
           void 0 === t && (t = 0),
             (this.m_nOffset = t || 0),
@@ -12649,78 +12671,78 @@ var CLSTAMP = "6296065";
             (this.m_iPut = 0);
         }
         return (
-          (e.prototype.TellGet = function() {
+          (e.prototype.TellGet = function () {
             return this.m_iGet + this.m_viewPacket.byteOffset;
           }),
-          (e.prototype.GetPacket = function() {
+          (e.prototype.GetPacket = function () {
             return this.m_viewPacket.buffer;
           }),
-          (e.prototype.GetUint8 = function() {
+          (e.prototype.GetUint8 = function () {
             return this.m_viewPacket.getUint8(this.m_iGet++);
           }),
-          (e.prototype.GetUint32 = function(e) {
+          (e.prototype.GetUint32 = function (e) {
             void 0 === e && (e = !0);
             var t = this.m_viewPacket.getUint32(this.m_iGet, e);
             return (this.m_iGet += 4), t;
           }),
-          (e.prototype.SeekGetHead = function(e) {
+          (e.prototype.SeekGetHead = function (e) {
             void 0 === e && (e = 0), (this.m_iGet = e || 0);
           }),
-          (e.prototype.SeekGetCurrent = function(e) {
+          (e.prototype.SeekGetCurrent = function (e) {
             this.m_iGet += e;
           }),
-          (e.prototype.TellPut = function() {
+          (e.prototype.TellPut = function () {
             return this.m_iPut + this.m_viewPacket.byteOffset;
           }),
-          (e.prototype.TellMaxPut = function() {
+          (e.prototype.TellMaxPut = function () {
             return this.m_viewPacket.byteLength;
           }),
-          (e.prototype.PutUint8 = function(e) {
+          (e.prototype.PutUint8 = function (e) {
             this.m_viewPacket.setUint8(this.m_iPut++, e);
           }),
-          (e.prototype.PutUint32 = function(e, t) {
+          (e.prototype.PutUint32 = function (e, t) {
             void 0 === t && (t = !0),
               this.m_viewPacket.setUint32(this.m_iPut, e, t),
               (this.m_iPut += 4);
           }),
-          (e.prototype.PutBytes = function(e) {
+          (e.prototype.PutBytes = function (e) {
             this.m_rgubPacket.set(e, this.m_iPut), (this.m_iPut += e.length);
           }),
-          (e.prototype.SeekPut = function(e) {
+          (e.prototype.SeekPut = function (e) {
             this.m_iPut += e;
           }),
-          (e.prototype.GetCountBytesRemaining = function() {
+          (e.prototype.GetCountBytesRemaining = function () {
             return this.m_viewPacket.byteLength - this.m_iGet;
           }),
           e
         );
       })();
     },
-    "mRR+": function(e, t, n) {
+    "mRR+": function (e, t, n) {
       "use strict";
       n("vDqi");
     },
-    mgoM: function(e, t, n) {
+    mgoM: function (e, t, n) {
       "use strict";
-      n.d(t, "f", function() {
+      n.d(t, "f", function () {
         return r;
       }),
-        n.d(t, "g", function() {
+        n.d(t, "g", function () {
           return o;
         }),
-        n.d(t, "e", function() {
+        n.d(t, "e", function () {
           return i;
         }),
-        n.d(t, "b", function() {
+        n.d(t, "b", function () {
           return a;
         }),
-        n.d(t, "c", function() {
+        n.d(t, "c", function () {
           return s;
         }),
-        n.d(t, "a", function() {
+        n.d(t, "a", function () {
           return c;
         }),
-        n.d(t, "d", function() {
+        n.d(t, "d", function () {
           return l;
         });
       var r = 1,
@@ -12792,7 +12814,7 @@ var CLSTAMP = "6296065";
             return t;
         }
       }
-      var s = function(e) {
+      var s = function (e) {
         return "koreana" === e ? "korean" : e;
       };
       function c(e, t) {
@@ -12929,12 +12951,12 @@ var CLSTAMP = "6296065";
         }
       }
     },
-    nmPn: function(e, t, n) {
+    nmPn: function (e, t, n) {
       "use strict";
-      n.d(t, "a", function() {
+      n.d(t, "a", function () {
         return P;
       }),
-        n.d(t, "b", function() {
+        n.d(t, "b", function () {
           return G;
         });
       function r() {
@@ -12951,107 +12973,107 @@ var CLSTAMP = "6296065";
         m = n("Jqb/"),
         d = n("WplJ"),
         h = n("lkRc"),
-        f = s.a.lazy(function() {
+        f = s.a.lazy(function () {
           return Promise.all([n.e(0), n.e(3), n.e(1), n.e(2), n.e(100)]).then(
             n.bind(null, "GEPe")
           );
         }),
-        v = s.a.lazy(function() {
+        v = s.a.lazy(function () {
           return Promise.all([n.e(0), n.e(3), n.e(1), n.e(8)]).then(
             n.bind(null, "IY+y")
           );
         }),
-        g = s.a.lazy(function() {
+        g = s.a.lazy(function () {
           return Promise.all([n.e(0), n.e(7)]).then(n.bind(null, "/u7D"));
         }),
-        b = s.a.lazy(function() {
+        b = s.a.lazy(function () {
           return Promise.all([n.e(0), n.e(3), n.e(1), n.e(2), n.e(6)]).then(
             n.bind(null, "8zUZ")
           );
         }),
-        _ = s.a.lazy(function() {
+        _ = s.a.lazy(function () {
           return n.e(69).then(n.bind(null, "rt5e"));
         }),
-        y = function() {
+        y = function () {
           return "/" + r() + "/:anything*/diagdata";
         },
-        w = function() {
+        w = function () {
           return "/(migrateevents|migrate)";
         },
-        E = function(e) {
+        E = function (e) {
           return "/" + r() + "/" + e + "/(partnerevents|events|announcements)";
         },
-        O = function(e) {
+        O = function (e) {
           return "/app/" + e + "(/workshop/)?";
         },
-        S = function(e) {
+        S = function (e) {
           return "/groups/" + e + "/";
         },
-        C = function(e) {
+        C = function (e) {
           return "/id/" + e;
         },
-        D = function(e) {
+        D = function (e) {
           return "/profiles/" + e;
         },
-        x = function() {
+        x = function () {
           return "/:anything/filedetails";
         },
-        M = function() {
+        M = function () {
           return "/id/:vanity_url/recommended/:appid/";
         },
-        A = function() {
+        A = function () {
           return "/profiles/:steamid/recommended/:appid/";
         },
-        j = function() {
+        j = function () {
           return "/profiles/:steamid/recommended/";
         },
-        k = function() {
+        k = function () {
           return "/id/:vanity_url/recommended/";
         },
-        T = function() {
+        T = function () {
           return "/id/:vanity_url/friends/add";
         },
-        I = function() {
+        I = function () {
           return "/profiles/:id/friends/add";
         },
-        N = function() {
+        N = function () {
           return "/broadcast";
         },
-        L = function() {
+        L = function () {
           return "/workshop/discussions";
         },
-        R = function() {
+        R = function () {
           return "/sharedfiles/filedetails/discussions";
         },
-        B = function() {
+        B = function () {
           return "/discussions/forum";
         },
-        F = function() {
+        F = function () {
           return "/";
         },
-        P = (function(e) {
+        P = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
           return (
             Object(i.d)(t, e),
-            (t.prototype.componentDidMount = function() {
+            (t.prototype.componentDidMount = function () {
               o ||
                 (o = Object(u.b)(document)).Show(
                   s.a.createElement(m.b, { ModalManager: Object(m.f)(window) })
                 );
             }),
-            (t.prototype.render = function() {
+            (t.prototype.render = function () {
               return s.a.createElement(
                 c.a,
                 {
-                  basename: (function() {
+                  basename: (function () {
                     var e = document.createElement("a");
                     e.href = h.b.COMMUNITY_BASE_URL;
                     var t = e.pathname;
                     t.endsWith("/") || (t += "/");
                     return t;
-                  })()
+                  })(),
                 },
                 s.a.createElement(
                   s.a.Suspense,
@@ -13062,90 +13084,90 @@ var CLSTAMP = "6296065";
                     s.a.createElement(l.c, {
                       exact: !0,
                       path: y(),
-                      render: function(e) {
+                      render: function (e) {
                         return s.a.createElement(
                           p.a,
                           Object(i.a)({}, e, {
                             key: e.match.params.gid,
-                            strConfigID: "application_config"
+                            strConfigID: "application_config",
                           })
                         );
-                      }
+                      },
                     }),
                     s.a.createElement(l.c, {
                       path: E(":appid_or_vanity_str"),
-                      component: v
+                      component: v,
                     }),
                     s.a.createElement(l.c, { path: w(), component: v }),
                     s.a.createElement(l.c, { path: N(), component: b }),
                     s.a.createElement(l.c, {
                       path: O(":appid"),
-                      render: function(e) {
+                      render: function (e) {
                         return s.a.createElement(d.a, {
                           config: {
-                            "apphub-events": function() {
+                            "apphub-events": function () {
                               return s.a.createElement(v, null);
                             },
-                            "apphub-ugcrewards": function() {
+                            "apphub-ugcrewards": function () {
                               return s.a.createElement(g, Object(i.a)({}, e));
                             },
-                            "community-awards": function() {
+                            "community-awards": function () {
                               return s.a.createElement(g, Object(i.a)({}, e));
-                            }
-                          }
+                            },
+                          },
                         });
-                      }
+                      },
                     }),
                     s.a.createElement(l.c, {
                       path: S(":groupid_or_vanity_str"),
-                      render: function(e) {
+                      render: function (e) {
                         return s.a.createElement(d.a, {
                           config: {
-                            "apphub-events": function() {
+                            "apphub-events": function () {
                               return s.a.createElement(v, null);
                             },
-                            "community-awards": function() {
+                            "community-awards": function () {
                               return s.a.createElement(g, Object(i.a)({}, e));
-                            }
-                          }
+                            },
+                          },
                         });
-                      }
+                      },
                     }),
                     s.a.createElement(l.c, {
                       path: M(),
-                      render: function(e) {
+                      render: function (e) {
                         return s.a.createElement(g, Object(i.a)({}, e));
-                      }
+                      },
                     }),
                     s.a.createElement(l.c, {
                       path: A(),
-                      render: function(e) {
+                      render: function (e) {
                         return s.a.createElement(g, Object(i.a)({}, e));
-                      }
+                      },
                     }),
                     s.a.createElement(l.c, {
                       path: k(),
-                      render: function(e) {
+                      render: function (e) {
                         return s.a.createElement(g, Object(i.a)({}, e));
-                      }
+                      },
                     }),
                     s.a.createElement(l.c, {
                       path: j(),
-                      render: function(e) {
+                      render: function (e) {
                         return s.a.createElement(g, Object(i.a)({}, e));
-                      }
+                      },
                     }),
                     s.a.createElement(l.c, {
                       path: [B(), L(), R()],
-                      render: function(e) {
+                      render: function (e) {
                         return s.a.createElement(d.a, {
                           config: {
-                            "community-awards": function() {
+                            "community-awards": function () {
                               return s.a.createElement(g, Object(i.a)({}, e));
-                            }
-                          }
+                            },
+                          },
                         });
-                      }
+                      },
                     }),
                     s.a.createElement(
                       l.c,
@@ -13154,36 +13176,36 @@ var CLSTAMP = "6296065";
                     ),
                     s.a.createElement(l.c, {
                       path: C(":vanity_url"),
-                      render: function(e) {
+                      render: function (e) {
                         return s.a.createElement(f, Object(i.a)({}, e));
-                      }
+                      },
                     }),
                     s.a.createElement(l.c, {
                       path: D(":steamid"),
-                      render: function(e) {
+                      render: function (e) {
                         return s.a.createElement(f, Object(i.a)({}, e));
-                      }
+                      },
                     }),
                     s.a.createElement(l.c, {
                       path: x(),
-                      render: function(e) {
+                      render: function (e) {
                         return s.a.createElement(g, Object(i.a)({}, e));
-                      }
+                      },
                     }),
                     s.a.createElement(l.c, {
                       path: F(),
-                      render: function(e) {
+                      render: function (e) {
                         return s.a.createElement(d.a, {
                           config: {
-                            "apphub-events": function() {
+                            "apphub-events": function () {
                               return s.a.createElement(v, null);
                             },
-                            "apphub-ugcrewards": function() {
+                            "apphub-ugcrewards": function () {
                               return s.a.createElement(g, Object(i.a)({}, e));
-                            }
-                          }
+                            },
+                          },
                         });
-                      }
+                      },
                     }),
                     s.a.createElement(l.c, { component: G })
                   )
@@ -13199,54 +13221,54 @@ var CLSTAMP = "6296065";
           : s.a.createElement(l.b, { push: !0, to: h.b.COMMUNITY_BASE_URL });
       }
     },
-    qiKp: function(e, t, n) {
+    qiKp: function (e, t, n) {
       "use strict";
-      n.d(t, "a", function() {
+      n.d(t, "a", function () {
         return i;
       }),
-        n.d(t, "b", function() {
+        n.d(t, "b", function () {
           return s;
         }),
-        n.d(t, "c", function() {
+        n.d(t, "c", function () {
           return c;
         }),
-        n.d(t, "d", function() {
+        n.d(t, "d", function () {
           return l;
         });
       var a = n("mrSG"),
         r = n("Kw0F"),
         o = n("bxiW"),
-        i = (function() {
+        i = (function () {
           function e() {
             this.m_vecCallbacks = [];
           }
           return (
-            (e.prototype.Register = function(e) {
+            (e.prototype.Register = function (e) {
               var t = this;
               this.m_vecCallbacks.push(e);
               return {
-                Unregister: function() {
+                Unregister: function () {
                   r.c(t.m_vecCallbacks, e);
-                }
+                },
               };
             }),
-            (e.prototype.Dispatch = function() {
+            (e.prototype.Dispatch = function () {
               for (var e = [], t = 0; t < arguments.length; t++)
                 e[t] = arguments[t];
               for (var n = 0, r = this.m_vecCallbacks; n < r.length; n++) {
                 r[n].apply(void 0, e);
               }
             }),
-            (e.prototype.ClearAllCallbacks = function() {
+            (e.prototype.ClearAllCallbacks = function () {
               this.m_vecCallbacks = [];
             }),
             e
           );
         })(),
-        s = (function() {
+        s = (function () {
           function e() {}
           return (
-            (e.prototype.Schedule = function(e, t) {
+            (e.prototype.Schedule = function (e, t) {
               this.IsScheduled() && this.Cancel(),
                 (this.m_fnCallback = t),
                 (this.m_schTimer = window.setTimeout(
@@ -13254,14 +13276,14 @@ var CLSTAMP = "6296065";
                   e
                 ));
             }),
-            (e.prototype.IsScheduled = function() {
+            (e.prototype.IsScheduled = function () {
               return void 0 !== this.m_schTimer;
             }),
-            (e.prototype.Cancel = function() {
+            (e.prototype.Cancel = function () {
               this.m_schTimer &&
                 (clearTimeout(this.m_schTimer), (this.m_schTimer = void 0));
             }),
-            (e.prototype.ScheduledInternal = function() {
+            (e.prototype.ScheduledInternal = function () {
               this.m_schTimer = void 0;
               var e = this.m_fnCallback;
               (this.m_fnCallback = void 0), e();
@@ -13270,16 +13292,16 @@ var CLSTAMP = "6296065";
             e
           );
         })(),
-        c = (function() {
+        c = (function () {
           function e() {
             this.m_rgListeners = [];
           }
           return (
-            (e.prototype.AddEventListener = function(e, t, n) {
+            (e.prototype.AddEventListener = function (e, t, n) {
               e.addEventListener(t, n),
                 this.m_rgListeners.push({ element: e, type: t, listener: n });
             }),
-            (e.prototype.Unregister = function() {
+            (e.prototype.Unregister = function () {
               for (var e = 0, t = this.m_rgListeners; e < t.length; e++) {
                 var n = t[e];
                 n.element.removeEventListener(n.type, n.listener);
@@ -13290,14 +13312,14 @@ var CLSTAMP = "6296065";
           );
         })();
       function l(i) {
-        return Object(a.b)(this, void 0, void 0, function() {
+        return Object(a.b)(this, void 0, void 0, function () {
           var t, r, n, o;
-          return Object(a.e)(this, function(e) {
+          return Object(a.e)(this, function (e) {
             switch (e.label) {
               case 0:
                 return (
                   (t = []),
-                  (r = Object.keys(i)).forEach(function(e) {
+                  (r = Object.keys(i)).forEach(function (e) {
                     return t.push(i[e]);
                   }),
                   [4, Promise.all(t)]
@@ -13308,9 +13330,9 @@ var CLSTAMP = "6296065";
                   (o = {}),
                   [
                     2,
-                    n.reduce(function(e, t, n) {
+                    n.reduce(function (e, t, n) {
                       return (e[r[n]] = t), e;
-                    }, o)
+                    }, o),
                   ]
                 );
             }
@@ -13318,9 +13340,9 @@ var CLSTAMP = "6296065";
         });
       }
     },
-    r64O: function(e, t, n) {
+    r64O: function (e, t, n) {
       "use strict";
-      n.d(t, "a", function() {
+      n.d(t, "a", function () {
         return r;
       });
       var o = n("mrSG");
@@ -13334,7 +13356,7 @@ var CLSTAMP = "6296065";
           : e || console.warn.apply(console, Object(o.g)([t], n));
       }
     },
-    rCDf: function(e, t, r) {
+    rCDf: function (e, t, r) {
       var o = {
         "./shared_arabic.json": ["d1TB", 38],
         "./shared_brazilian.json": ["Pg9r", 39],
@@ -13365,45 +13387,45 @@ var CLSTAMP = "6296065";
         "./shared_thai.json": ["lhAZ", 64],
         "./shared_turkish.json": ["RSoU", 65],
         "./shared_ukrainian.json": ["lNXI", 66],
-        "./shared_vietnamese.json": ["RSmC", 67]
+        "./shared_vietnamese.json": ["RSmC", 67],
       };
       function n(t) {
         var n = o[t];
         return n
-          ? r.e(n[1]).then(function() {
+          ? r.e(n[1]).then(function () {
               var e = n[0];
               return r.t(e, 3);
             })
-          : Promise.resolve().then(function() {
+          : Promise.resolve().then(function () {
               var e = new Error("Cannot find module '" + t + "'");
               throw ((e.code = "MODULE_NOT_FOUND"), e);
             });
       }
-      (n.keys = function() {
+      (n.keys = function () {
         return Object.keys(o);
       }),
         (n.id = "rCDf"),
         (e.exports = n);
     },
-    sUmc: function(e, t, n) {
+    sUmc: function (e, t, n) {
       "use strict";
-      n.d(t, "b", function() {
+      n.d(t, "b", function () {
         return a;
       }),
-        n.d(t, "a", function() {
+        n.d(t, "a", function () {
           return c;
         });
       var r = n("i8i4"),
         o = n("X3Ds"),
-        i = (function() {
-          return function(e) {
+        i = (function () {
+          return function (e) {
             this.instance = new s(e, !1);
           };
         })();
       function a(e) {
         return new s(e.body, !0);
       }
-      var s = (function() {
+      var s = (function () {
           function e(e, t) {
             void 0 === t && (t = !0),
               (this.m_parent = e),
@@ -13411,13 +13433,13 @@ var CLSTAMP = "6296065";
               (this.m_bRemoveOnHide = t);
           }
           return (
-            (e.prototype.Show = function(n, r) {
+            (e.prototype.Show = function (n, r) {
               var o = this;
               return (
                 this.CancelShowInterval(),
                 r
-                  ? new Promise(function(t, e) {
-                      o.iIntervalShow = o.m_window.setTimeout(function() {
+                  ? new Promise(function (t, e) {
+                      o.iIntervalShow = o.m_window.setTimeout(function () {
                         var e = o.m_parent.ownerDocument;
                         e.defaultView &&
                           !e.defaultView.closed &&
@@ -13427,7 +13449,7 @@ var CLSTAMP = "6296065";
                   : (this.InternalShow(n), Promise.resolve())
               );
             }),
-            (e.prototype.InternalShow = function(e) {
+            (e.prototype.InternalShow = function (e) {
               this.m_container ||
                 ((this.m_container = this.m_parent.ownerDocument.createElement(
                   "div"
@@ -13435,53 +13457,53 @@ var CLSTAMP = "6296065";
                 this.m_parent.appendChild(this.m_container)),
                 r.render(e, this.m_container);
             }),
-            (e.prototype.Hide = function(e) {
+            (e.prototype.Hide = function (e) {
               var t = this;
               this.CancelShowInterval(),
                 e
-                  ? (this.iIntervalShow = this.m_window.setTimeout(function() {
+                  ? (this.iIntervalShow = this.m_window.setTimeout(function () {
                       t.InternalHide();
                     }, e))
                   : this.InternalHide();
             }),
-            (e.prototype.InternalHide = function() {
+            (e.prototype.InternalHide = function () {
               this.m_container &&
                 (r.unmountComponentAtNode(this.m_container),
                 this.m_bRemoveOnHide &&
                   (this.m_parent.removeChild(this.m_container),
                   (this.m_container = null)));
             }),
-            (e.prototype.CancelShowInterval = function() {
+            (e.prototype.CancelShowInterval = function () {
               void 0 !== this.iIntervalShow &&
                 (this.m_window.clearInterval(this.iIntervalShow),
                 (this.iIntervalShow = void 0));
             }),
-            (e.prototype.BIsChildElement = function(e) {
+            (e.prototype.BIsChildElement = function (e) {
               return this.m_container && o.c(this.m_container, e);
             }),
             e
           );
         })(),
-        c = (function() {
+        c = (function () {
           function e(e) {
             (this.m_mapEmbeddedHovers = new WeakMap()),
               (this.m_strUniqueID = e);
           }
           return (
-            (e.prototype.ShowElementDelayed = function(e, t, n, r) {
+            (e.prototype.ShowElementDelayed = function (e, t, n, r) {
               var o = this.GetEmbeddedElement(e);
               return (o.activeObject = r), o.instance.Show(n, t);
             }),
-            (e.prototype.ShowElement = function(e, t, n) {
+            (e.prototype.ShowElement = function (e, t, n) {
               var r = this.GetEmbeddedElement(e);
               (r.activeObject = n), r.instance.Show(t);
             }),
-            (e.prototype.HideElement = function(e, t, n) {
+            (e.prototype.HideElement = function (e, t, n) {
               var r = this.GetEmbeddedElement(e);
               r.activeObject == t &&
                 ((r.activeObject = void 0), r.instance.Hide(n));
             }),
-            (e.prototype.GetEmbeddedElement = function(e) {
+            (e.prototype.GetEmbeddedElement = function (e) {
               var t = this.m_mapEmbeddedHovers.get(e);
               return (
                 t || ((t = new i(e.body)), this.m_mapEmbeddedHovers.set(e, t)),
@@ -13492,7 +13514,7 @@ var CLSTAMP = "6296065";
           );
         })();
     },
-    umRa: function(e, t, n) {
+    umRa: function (e, t, n) {
       e.exports = {
         Toggle: "toggle_Toggle_3POJz",
         Disabled: "toggle_Disabled_1jIKG",
@@ -13502,13 +13524,13 @@ var CLSTAMP = "6296065";
         Off: "toggle_Off_1Qa-r",
         ToggleSwitch: "toggle_ToggleSwitch_21X4K",
         ToggleRow: "toggle_ToggleRow_NnxzA",
-        Label: "toggle_Label_xK7Vv"
+        Label: "toggle_Label_xK7Vv",
       };
     },
-    uobO: function(e, b, _) {
+    uobO: function (e, b, _) {
       "use strict";
-      (function(e) {
-        _.d(b, "a", function() {
+      (function (e) {
+        _.d(b, "a", function () {
           return v;
         });
         var t,
@@ -13519,32 +13541,32 @@ var CLSTAMP = "6296065";
           o =
             window.addEventListener ||
             (e && e.addEventListener) ||
-            function() {},
+            function () {},
           i = [],
-          s = function(e, t) {
+          s = function (e, t) {
             return i.push({ error: e, cCallsitesToIgnore: t });
           },
           c = console.assert;
-        console.assert = function(e, t) {
+        console.assert = function (e, t) {
           for (var n = [], r = 2; r < arguments.length; r++)
             n[r - 2] = arguments[r];
           e || s(new Error(m.apply(void 0, Object(l.g)([t], n))), 2),
             c.apply(console, Object(l.g)([e, t], n));
         };
         var u = console.error;
-        (console.error = function(e) {
+        (console.error = function (e) {
           for (var t = [], n = 1; n < arguments.length; n++)
             t[n - 1] = arguments[n];
           s(new Error(m.apply(void 0, Object(l.g)([e], t))), 1),
             u.apply(console, Object(l.g)([e], t));
         }),
-          o("error", function(e) {
+          o("error", function (e) {
             s(e.error, 0);
           }),
-          (t = window.setTimeout(function() {
-            (i = []), (s = function() {});
+          (t = window.setTimeout(function () {
+            (i = []), (s = function () {});
           }, 3e4));
-        var p = (function() {
+        var p = (function () {
           function e(e) {
             var r = this;
             void 0 === e && (e = !0),
@@ -13553,24 +13575,24 @@ var CLSTAMP = "6296065";
               (this.m_bEnabled = !0),
               (this.m_bInitialized = !1),
               (s = e
-                ? (i.forEach(function(e) {
+                ? (i.forEach(function (e) {
                     var t = e.error,
                       n = e.cCallsitesToIgnore;
                     return r.ReportError(t, n);
                   }),
-                  function(e, t) {
+                  function (e, t) {
                     return r.ReportError(e, t);
                   })
-                : function() {}),
+                : function () {}),
               (i = []),
               clearTimeout(t),
-              window.setTimeout(function() {
+              window.setTimeout(function () {
                 r.m_bInitialized ||
                   ((r.m_bEnabled = !1), (r.m_rgErrorQueue = []));
               }, 3e4);
           }
           return (
-            (e.prototype.Init = function(e, t, n) {
+            (e.prototype.Init = function (e, t, n) {
               (this.m_bInitialized = !0),
                 (this.m_strProduct = e),
                 (this.m_strVersion = t),
@@ -13584,227 +13606,243 @@ var CLSTAMP = "6296065";
                   (this.SendErrorReports(this.m_rgErrorQueue),
                   (this.m_rgErrorQueue = []));
             }),
-            (e.prototype.ReportError = function(r, o) {
+            (e.prototype.ReportError = function (r, o) {
               return (
                 void 0 === o && (o = 0),
-                Object(l.b)(this, void 0, void 0, function() {
+                Object(l.b)(this, void 0, void 0, function () {
                   var t, n;
-                  return Object(l.e)(this, function(e) {
+                  return Object(l.e)(this, function (e) {
                     switch (e.label) {
                       case 0:
                         return (e.trys.push([0, 2, , 3]), this.m_bEnabled)
                           ? [
                               4,
-                              (function(e, t) {
+                              (function (e, t) {
                                 void 0 === t && (t = 0);
                                 try {
                                   return e.stack && e.stack.match(h)
-                                    ? (function(s, c) {
+                                    ? (function (s, c) {
                                         void 0 === c && (c = 0);
                                         return Object(l.b)(
                                           this,
                                           void 0,
                                           void 0,
-                                          function() {
+                                          function () {
                                             var n, r, o, i, a;
-                                            return Object(l.e)(this, function(
-                                              e
-                                            ) {
-                                              switch (e.label) {
-                                                case 0:
-                                                  return (
-                                                    (n = s.stack.split("\n")),
-                                                    (r = n.filter(function(e) {
-                                                      return !!e.match(h);
-                                                    })),
-                                                    (t = r[c]),
-                                                    (o = (function(e) {
-                                                      var t = e.indexOf(
-                                                        "https://"
-                                                      );
-                                                      if (-1 === t) return e;
-                                                      var n = e.indexOf(
-                                                        "/",
-                                                        t + "https://".length
-                                                      );
-                                                      return -1 === n
-                                                        ? e
-                                                        : e.slice(0, t) +
-                                                            e.slice(n);
-                                                    })(
-                                                      (function(e) {
-                                                        var t = e.lastIndexOf(
-                                                          "?"
+                                            return Object(l.e)(
+                                              this,
+                                              function (e) {
+                                                switch (e.label) {
+                                                  case 0:
+                                                    return (
+                                                      (n = s.stack.split("\n")),
+                                                      (r = n.filter(function (
+                                                        e
+                                                      ) {
+                                                        return !!e.match(h);
+                                                      })),
+                                                      (t = r[c]),
+                                                      (o = (function (e) {
+                                                        var t = e.indexOf(
+                                                          "https://"
                                                         );
                                                         if (-1 === t) return e;
                                                         var n = e.indexOf(
-                                                          ":",
-                                                          t
+                                                          "/",
+                                                          t + "https://".length
                                                         );
                                                         return -1 === n
                                                           ? e
                                                           : e.slice(0, t) +
                                                               e.slice(n);
-                                                      })(t)
-                                                    )),
-                                                    (i = n
-                                                      .map(function(e) {
-                                                        var t = e.match(
-                                                          /(.*)\((.*):(\d+):(\d+)\)/
-                                                        );
-                                                        if (!t) return e;
-                                                        if (5 === t.length) {
-                                                          t[0];
-                                                          var n = t[1],
-                                                            r = t[2],
-                                                            o = t[3],
-                                                            i = t[4],
-                                                            a = parseInt(o),
-                                                            s = parseInt(i);
-                                                          if (
-                                                            !isNaN(a) &&
-                                                            !isNaN(s)
-                                                          )
-                                                            return [n, r, a, s];
-                                                        }
-                                                        return e;
-                                                      })
-                                                      .filter(function(e) {
-                                                        return !!e;
-                                                      })),
-                                                    (a = { identifier: o }),
-                                                    [
-                                                      4,
-                                                      (function(r) {
-                                                        return Object(l.b)(
-                                                          this,
-                                                          void 0,
-                                                          void 0,
-                                                          function() {
-                                                            var n;
-                                                            return Object(l.e)(
-                                                              this,
-                                                              function(e) {
-                                                                switch (
-                                                                  e.label
-                                                                ) {
-                                                                  case 0:
-                                                                    return (
-                                                                      e.trys.push(
+                                                      })(
+                                                        (function (e) {
+                                                          var t = e.lastIndexOf(
+                                                            "?"
+                                                          );
+                                                          if (-1 === t)
+                                                            return e;
+                                                          var n = e.indexOf(
+                                                            ":",
+                                                            t
+                                                          );
+                                                          return -1 === n
+                                                            ? e
+                                                            : e.slice(0, t) +
+                                                                e.slice(n);
+                                                        })(t)
+                                                      )),
+                                                      (i = n
+                                                        .map(function (e) {
+                                                          var t = e.match(
+                                                            /(.*)\((.*):(\d+):(\d+)\)/
+                                                          );
+                                                          if (!t) return e;
+                                                          if (5 === t.length) {
+                                                            t[0];
+                                                            var n = t[1],
+                                                              r = t[2],
+                                                              o = t[3],
+                                                              i = t[4],
+                                                              a = parseInt(o),
+                                                              s = parseInt(i);
+                                                            if (
+                                                              !isNaN(a) &&
+                                                              !isNaN(s)
+                                                            )
+                                                              return [
+                                                                n,
+                                                                r,
+                                                                a,
+                                                                s,
+                                                              ];
+                                                          }
+                                                          return e;
+                                                        })
+                                                        .filter(function (e) {
+                                                          return !!e;
+                                                        })),
+                                                      (a = { identifier: o }),
+                                                      [
+                                                        4,
+                                                        (function (r) {
+                                                          return Object(l.b)(
+                                                            this,
+                                                            void 0,
+                                                            void 0,
+                                                            function () {
+                                                              var n;
+                                                              return Object(
+                                                                l.e
+                                                              )(
+                                                                this,
+                                                                function (e) {
+                                                                  switch (
+                                                                    e.label
+                                                                  ) {
+                                                                    case 0:
+                                                                      return (
+                                                                        e.trys.push(
+                                                                          [
+                                                                            0,
+                                                                            2,
+                                                                            ,
+                                                                            3,
+                                                                          ]
+                                                                        ),
                                                                         [
-                                                                          0,
-                                                                          2,
-                                                                          ,
-                                                                          3
-                                                                        ]
-                                                                      ),
-                                                                      [
-                                                                        4,
-                                                                        window.crypto.subtle.digest(
-                                                                          "SHA-256",
-                                                                          (function(
-                                                                            e
-                                                                          ) {
-                                                                            for (
-                                                                              var t = new ArrayBuffer(
-                                                                                  2 *
-                                                                                    e.length
-                                                                                ),
-                                                                                n = new Uint16Array(
-                                                                                  t
-                                                                                ),
-                                                                                r = 0,
-                                                                                o =
-                                                                                  e.length;
-                                                                              r <
-                                                                              o;
-                                                                              r++
-                                                                            )
-                                                                              n[
-                                                                                r
-                                                                              ] = e.charCodeAt(
-                                                                                r
-                                                                              );
-                                                                            return t;
-                                                                          })(r)
-                                                                        )
-                                                                      ]
-                                                                    );
-                                                                  case 1:
-                                                                    return (
-                                                                      (n = e.sent()),
-                                                                      (t = n),
-                                                                      [
-                                                                        2,
-                                                                        Array.prototype.map
-                                                                          .call(
-                                                                            new Uint8Array(
-                                                                              t
-                                                                            ),
-                                                                            function(
+                                                                          4,
+                                                                          window.crypto.subtle.digest(
+                                                                            "SHA-256",
+                                                                            (function (
                                                                               e
                                                                             ) {
-                                                                              return (
-                                                                                "00" +
-                                                                                e.toString(
-                                                                                  16
-                                                                                )
-                                                                              ).slice(
-                                                                                -2
-                                                                              );
-                                                                            }
-                                                                          )
-                                                                          .join(
-                                                                            ""
-                                                                          )
-                                                                          .slice(
-                                                                            0,
-                                                                            16
-                                                                          )
-                                                                      ]
-                                                                    );
-                                                                  case 2:
-                                                                    return (
-                                                                      e.sent(),
-                                                                      [2, ""]
-                                                                    );
-                                                                  case 3:
-                                                                    return [2];
+                                                                              for (
+                                                                                var t = new ArrayBuffer(
+                                                                                    2 *
+                                                                                      e.length
+                                                                                  ),
+                                                                                  n = new Uint16Array(
+                                                                                    t
+                                                                                  ),
+                                                                                  r = 0,
+                                                                                  o =
+                                                                                    e.length;
+                                                                                r <
+                                                                                o;
+                                                                                r++
+                                                                              )
+                                                                                n[
+                                                                                  r
+                                                                                ] = e.charCodeAt(
+                                                                                  r
+                                                                                );
+                                                                              return t;
+                                                                            })(
+                                                                              r
+                                                                            )
+                                                                          ),
+                                                                        ]
+                                                                      );
+                                                                    case 1:
+                                                                      return (
+                                                                        (n = e.sent()),
+                                                                        (t = n),
+                                                                        [
+                                                                          2,
+                                                                          Array.prototype.map
+                                                                            .call(
+                                                                              new Uint8Array(
+                                                                                t
+                                                                              ),
+                                                                              function (
+                                                                                e
+                                                                              ) {
+                                                                                return (
+                                                                                  "00" +
+                                                                                  e.toString(
+                                                                                    16
+                                                                                  )
+                                                                                ).slice(
+                                                                                  -2
+                                                                                );
+                                                                              }
+                                                                            )
+                                                                            .join(
+                                                                              ""
+                                                                            )
+                                                                            .slice(
+                                                                              0,
+                                                                              16
+                                                                            ),
+                                                                        ]
+                                                                      );
+                                                                    case 2:
+                                                                      return (
+                                                                        e.sent(),
+                                                                        [2, ""]
+                                                                      );
+                                                                    case 3:
+                                                                      return [
+                                                                        2,
+                                                                      ];
+                                                                  }
+                                                                  var t;
                                                                 }
-                                                                var t;
-                                                              }
-                                                            );
-                                                          }
-                                                        );
-                                                      })(o)
-                                                    ]
-                                                  );
-                                                case 1:
-                                                  return [
-                                                    2,
-                                                    ((a.identifierHash = e.sent()),
-                                                    (a.message = i),
-                                                    a)
-                                                  ];
+                                                              );
+                                                            }
+                                                          );
+                                                        })(o),
+                                                      ]
+                                                    );
+                                                  case 1:
+                                                    return [
+                                                      2,
+                                                      ((a.identifierHash = e.sent()),
+                                                      (a.message = i),
+                                                      a),
+                                                    ];
+                                                }
+                                                var t;
                                               }
-                                              var t;
-                                            });
+                                            );
                                           }
                                         );
                                       })(e, t)
                                     : e.stack && e.stack.match(f)
-                                    ? (function(e) {
+                                    ? (function (e) {
                                         void 0 === e && (e = 0);
                                         return Object(l.b)(
                                           this,
                                           void 0,
                                           void 0,
-                                          function() {
-                                            return Object(l.e)(this, function(
-                                              e
-                                            ) {
-                                              return [2, null];
-                                            });
+                                          function () {
+                                            return Object(l.e)(
+                                              this,
+                                              function (e) {
+                                                return [2, null];
+                                              }
+                                            );
                                           }
                                         );
                                       })(t)
@@ -13817,7 +13855,7 @@ var CLSTAMP = "6296065";
                                     null
                                   );
                                 }
-                              })(r, o)
+                              })(r, o),
                             ]
                           : [2, null];
                       case 1:
@@ -13837,17 +13875,17 @@ var CLSTAMP = "6296065";
                 })
               );
             }),
-            (e.prototype.SendErrorReport = function(e) {
+            (e.prototype.SendErrorReport = function (e) {
               this.m_transport
                 ? this.SendErrorReports([e])
                 : this.m_rgErrorQueue.push(e);
             }),
-            (e.prototype.SendErrorReports = function(e) {
+            (e.prototype.SendErrorReports = function (e) {
               var t, i, n;
               e &&
                 e.length &&
                 ((t = r.a.Init(a.a)),
-                (i = e.reduce(function(e, t) {
+                (i = e.reduce(function (e, t) {
                   return (
                     e[t.identifier]
                       ? e[t.identifier].count++
@@ -13855,7 +13893,7 @@ var CLSTAMP = "6296065";
                     e
                   );
                 }, {})),
-                (n = Object.keys(i).map(function(e) {
+                (n = Object.keys(i).map(function (e) {
                   var t = i[e],
                     n = t.report,
                     r = t.count,
@@ -13873,25 +13911,25 @@ var CLSTAMP = "6296065";
                 a.c.ReportClientError(this.m_transport, t));
             }),
             Object.defineProperty(e.prototype, "version", {
-              get: function() {
+              get: function () {
                 return this.m_strVersion;
               },
               enumerable: !1,
-              configurable: !0
+              configurable: !0,
             }),
             Object.defineProperty(e.prototype, "product", {
-              get: function() {
+              get: function () {
                 return this.m_strProduct;
               },
               enumerable: !1,
-              configurable: !0
+              configurable: !0,
             }),
             Object.defineProperty(e.prototype, "reporting_enabled", {
-              get: function() {
+              get: function () {
                 return !0;
               },
               enumerable: !1,
-              configurable: !0
+              configurable: !0,
             }),
             e
           );
@@ -13902,7 +13940,7 @@ var CLSTAMP = "6296065";
           return "string" == typeof e && 0 === t.length
             ? e
             : Object(l.g)([e], t)
-                .map(function(e) {
+                .map(function (e) {
                   try {
                     return String(e);
                   } catch (e) {
@@ -13914,23 +13952,23 @@ var CLSTAMP = "6296065";
         var d,
           h = /^\s*at .*(\S+:\d+|\(native\))/m,
           f = /(^|@)\S+:\d+/;
-        var v = function() {
+        var v = function () {
             return d || g(new p()), d;
           },
-          g = function(e) {
+          g = function (e) {
             (d = e), n.a.InstallErrorReportingStore(d);
           };
       }.call(this, _("yLpj")));
     },
-    w9XT: function(e, t, n) {
+    w9XT: function (e, t, n) {
       "use strict";
-      n.d(t, "c", function() {
+      n.d(t, "c", function () {
         return r;
       }),
-        n.d(t, "a", function() {
+        n.d(t, "a", function () {
           return s;
         }),
-        n.d(t, "b", function() {
+        n.d(t, "b", function () {
           return c;
         });
       var r,
@@ -13953,12 +13991,12 @@ var CLSTAMP = "6296065";
           return a.a.createElement(a.a.Fragment, null, e.children);
         var n = [];
         if (e.boundActions) {
-          e.boundActions.forEach(function(e) {
+          e.boundActions.forEach(function (e) {
             return n.push(e);
           });
           for (var r = 0, o = t.focusActions; r < o.length; r++) {
-            !(function(t) {
-              var e = n.find(function(e) {
+            !(function (t) {
+              var e = n.find(function (e) {
                 return e.button === t.button;
               });
               e
@@ -13970,7 +14008,7 @@ var CLSTAMP = "6296065";
             })(o[r]);
           }
         } else
-          t.focusActions.forEach(function(e) {
+          t.focusActions.forEach(function (e) {
             return n.push(e);
           });
         return a.a.createElement(
@@ -13979,14 +14017,14 @@ var CLSTAMP = "6296065";
             value: {
               focusActions: n,
               setCurrentActions: t.setCurrentActions,
-              currentActions: t.currentActions
-            }
+              currentActions: t.currentActions,
+            },
           },
           e.children
         );
       }
     },
-    xnZ7: function(e, t, n) {
+    xnZ7: function (e, t, n) {
       e.exports = {
         v6: "shared_common_v6_2Lxgd",
         SubText: "shared_common_SubText_vg0EO",
@@ -14002,30 +14040,30 @@ var CLSTAMP = "6296065";
         ThrobberCtn: "shared_common_ThrobberCtn_3m7p6",
         MarkdownLink: "shared_common_MarkdownLink_1Wqum",
         SummaryTextArea: "shared_common_SummaryTextArea_cNMZ-",
-        RemoveIcon: "shared_common_RemoveIcon_3NeLW"
+        RemoveIcon: "shared_common_RemoveIcon_3NeLW",
       };
     },
-    "y+6m": function(e, t, n) {
+    "y+6m": function (e, t, n) {
       "use strict";
-      n.d(t, "c", function() {
+      n.d(t, "c", function () {
         return _;
       }),
-        n.d(t, "d", function() {
+        n.d(t, "d", function () {
           return y;
         }),
-        n.d(t, "b", function() {
+        n.d(t, "b", function () {
           return w;
         }),
-        n.d(t, "f", function() {
+        n.d(t, "f", function () {
           return E;
         }),
-        n.d(t, "a", function() {
+        n.d(t, "a", function () {
           return O;
         }),
-        n.d(t, "e", function() {
+        n.d(t, "e", function () {
           return S;
         }),
-        n.d(t, "g", function() {
+        n.d(t, "g", function () {
           return C;
         });
       var l = n("mrSG"),
@@ -14045,33 +14083,39 @@ var CLSTAMP = "6296065";
         v = n("exH9"),
         g = n("w9XT"),
         b = (n("UPxs"), u.createContext(null)),
-        _ = (function(e) {
+        _ = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
           return (
             Object(l.d)(t, e),
-            (t.prototype.componentDidMount = function() {
+            (t.prototype.componentDidMount = function () {
               this.context &&
                 (this.context.m_refContextMenu = this).context.SetLabel(
                   this.props.label
                 );
             }),
-            (t.prototype.componentDidUpdate = function(e) {
+            (t.prototype.componentDidUpdate = function (e) {
               e.label !== this.props.label &&
                 this.context &&
                 this.context.SetLabel(this.props.label);
             }),
-            (t.prototype.render = function() {
+            (t.prototype.render = function () {
               var e,
                 t,
                 n,
                 r = this.props,
                 o = r.children,
                 i = r.className,
-                a = (r.label,
-                r.onCancel,
-                Object(l.f)(r, ["children", "className", "label", "onCancel"])),
+                a =
+                  (r.label,
+                  r.onCancel,
+                  Object(l.f)(r, [
+                    "children",
+                    "className",
+                    "label",
+                    "onCancel",
+                  ])),
                 s =
                   null !==
                     (n =
@@ -14095,7 +14139,7 @@ var CLSTAMP = "6296065";
                       this.context && this.context.BIsSubMenuVisible()),
                     e),
                     i
-                  )
+                  ),
                 }),
                 o
               );
@@ -14104,7 +14148,7 @@ var CLSTAMP = "6296065";
             (t = Object(l.c)([r.a], t))
           );
         })(u.Component),
-        y = (function(t) {
+        y = (function (t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (e.m_ref = u.createRef()), e;
@@ -14112,35 +14156,36 @@ var CLSTAMP = "6296065";
           return (
             Object(l.d)(e, t),
             Object.defineProperty(e.prototype, "element", {
-              get: function() {
+              get: function () {
                 return this.m_ref.current;
               },
               enumerable: !1,
-              configurable: !0
+              configurable: !0,
             }),
-            (e.prototype.OnClick = function(e) {
+            (e.prototype.OnClick = function (e) {
               this.props.disabled ||
                 (this.props.onClick && this.props.onClick(e),
                 this.props.bInteractableItem ||
                   (this.props.onSelected && this.props.onSelected(e),
                   this.context && this.context.Hide()));
             }),
-            (e.prototype.OnMouseEnter = function(e) {
+            (e.prototype.OnMouseEnter = function (e) {
               this.context &&
                 0 == this.context.presentation &&
                 this.context.HideSubMenu();
             }),
-            (e.prototype.Focus = function() {
+            (e.prototype.Focus = function () {
               this.m_ref.current && this.m_ref.current.focus();
             }),
-            (e.prototype.render = function() {
+            (e.prototype.render = function () {
               var e,
                 t,
                 n,
                 r = this.props,
-                o = (r.onSelected,
-                r.bInteractableItem,
-                Object(l.f)(r, ["onSelected", "bInteractableItem"])),
+                o =
+                  (r.onSelected,
+                  r.bInteractableItem,
+                  Object(l.f)(r, ["onSelected", "bInteractableItem"])),
                 i =
                   null !==
                     (n =
@@ -14167,7 +14212,7 @@ var CLSTAMP = "6296065";
                       (e.contextMenuItem = !a),
                       (e.disabled = !!this.props.disabled),
                       e)
-                    )
+                    ),
                   }
                 ),
                 this.props.children
@@ -14180,13 +14225,13 @@ var CLSTAMP = "6296065";
             e
           );
         })(u.PureComponent),
-        w = (function(e) {
+        w = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
           return (
             Object(l.d)(t, e),
-            (t.prototype.render = function() {
+            (t.prototype.render = function () {
               var e = this.props,
                 t = e.bChecked,
                 n = e.children,
@@ -14195,7 +14240,7 @@ var CLSTAMP = "6296065";
               return u.createElement(
                 y,
                 Object(l.a)({}, o, {
-                  className: Object(v.a)(r, t && "menuChecked")
+                  className: Object(v.a)(r, t && "menuChecked"),
                 }),
                 u.createElement("div", { className: "contextMenuCheckMark" }),
                 n
@@ -14204,137 +14249,141 @@ var CLSTAMP = "6296065";
             t
           );
         })(u.PureComponent),
-        E = (u.PureComponent,
-        (function(n) {
-          function e(e) {
-            var t = n.call(this, e) || this;
+        E =
+          (u.PureComponent,
+          (function (n) {
+            function e(e) {
+              var t = n.call(this, e) || this;
+              return (
+                (t.m_elMenu = void 0),
+                (t.m_cReenteranceGuard = 1),
+                (t.state = {
+                  ready: !1,
+                  menuLeft: void 0,
+                  menuTop: void 0,
+                  menuRight: void 0,
+                  menuBottom: void 0,
+                  menuWidth: void 0,
+                  menuHeight: void 0,
+                }),
+                (t.m_mutationObserver = new MutationObserver(t.OnMenuMutation)),
+                t
+              );
+            }
             return (
-              (t.m_elMenu = void 0),
-              (t.m_cReenteranceGuard = 1),
-              (t.state = {
-                ready: !1,
-                menuLeft: void 0,
-                menuTop: void 0,
-                menuRight: void 0,
-                menuBottom: void 0,
-                menuWidth: void 0,
-                menuHeight: void 0
-              }),
-              (t.m_mutationObserver = new MutationObserver(t.OnMenuMutation)),
-              t
-            );
-          }
-          return (
-            Object(l.d)(e, n),
-            (e.prototype.BindMenuElement = function(e) {
-              var t = this;
-              this.m_elMenu &&
-                (this.m_mutationObserver.disconnect(),
-                this.props.popup ||
-                  this.m_elMenu.ownerDocument.defaultView.removeEventListener(
-                    "resize",
-                    this.OnWindowResize
-                  )),
-                e &&
-                  (this.m_mutationObserver.observe(e, {
-                    childList: !0,
-                    subtree: !0
-                  }),
+              Object(l.d)(e, n),
+              (e.prototype.BindMenuElement = function (e) {
+                var t = this;
+                this.m_elMenu &&
+                  (this.m_mutationObserver.disconnect(),
                   this.props.popup ||
-                    e.ownerDocument.defaultView.addEventListener(
+                    this.m_elMenu.ownerDocument.defaultView.removeEventListener(
                       "resize",
                       this.OnWindowResize
                     )),
-                (this.m_elMenu = e || void 0),
-                this.PositionMenu(),
-                this.state.ready ||
-                  (this.props.instance.SetTakeFocus(this.TakeFocus.bind(this)),
-                  this.setState({ ready: !0 }, function() {
-                    t.TakeFocus();
-                  }));
-            }),
-            (e.prototype.OnMenuMutation = function(e, t) {
-              this.PositionMenu();
-            }),
-            (e.prototype.OnWindowResize = function() {
-              this.PositionMenu();
-            }),
-            (e.prototype.OnBlur = function(e) {
-              (e.relatedTarget && T.c(e.currentTarget, e.relatedTarget)) ||
-                (e.relatedTarget &&
-                  this.props.instance.BIsElementInMenuHierarchy(
-                    e.relatedTarget
-                  )) ||
-                this.props.instance.BIsSubMenuVisible() ||
-                (this.state.ready &&
+                  e &&
+                    (this.m_mutationObserver.observe(e, {
+                      childList: !0,
+                      subtree: !0,
+                    }),
+                    this.props.popup ||
+                      e.ownerDocument.defaultView.addEventListener(
+                        "resize",
+                        this.OnWindowResize
+                      )),
+                  (this.m_elMenu = e || void 0),
+                  this.PositionMenu(),
+                  this.state.ready ||
+                    (this.props.instance.SetTakeFocus(
+                      this.TakeFocus.bind(this)
+                    ),
+                    this.setState({ ready: !0 }, function () {
+                      t.TakeFocus();
+                    }));
+              }),
+              (e.prototype.OnMenuMutation = function (e, t) {
+                this.PositionMenu();
+              }),
+              (e.prototype.OnWindowResize = function () {
+                this.PositionMenu();
+              }),
+              (e.prototype.OnBlur = function (e) {
+                (e.relatedTarget && T.c(e.currentTarget, e.relatedTarget)) ||
+                  (e.relatedTarget &&
+                    this.props.instance.BIsElementInMenuHierarchy(
+                      e.relatedTarget
+                    )) ||
+                  this.props.instance.BIsSubMenuVisible() ||
+                  (this.state.ready &&
+                    this.props.instance.visible &&
+                    this.props.instance.Hide());
+              }),
+              (e.prototype.OnKeyDown = function (e) {
+                27 == e.keyCode &&
+                  this.state.ready &&
+                  (this.props.instance.Hide(),
+                  e.preventDefault(),
+                  e.stopPropagation());
+              }),
+              (e.prototype.componentDidUpdate = function () {
+                0 < this.m_cReenteranceGuard--
+                  ? this.PositionMenu()
+                  : (this.m_cReenteranceGuard = 2);
+              }),
+              (e.prototype.TakeFocus = function () {
+                var e;
+                this.m_elMenu &&
+                  this.state.ready &&
                   this.props.instance.visible &&
-                  this.props.instance.Hide());
-            }),
-            (e.prototype.OnKeyDown = function(e) {
-              27 == e.keyCode &&
-                this.state.ready &&
-                (this.props.instance.Hide(),
-                e.preventDefault(),
-                e.stopPropagation());
-            }),
-            (e.prototype.componentDidUpdate = function() {
-              0 < this.m_cReenteranceGuard--
-                ? this.PositionMenu()
-                : (this.m_cReenteranceGuard = 2);
-            }),
-            (e.prototype.TakeFocus = function() {
-              var e;
-              this.m_elMenu &&
-                this.state.ready &&
-                this.props.instance.visible &&
-                ((!this.props.popup &&
-                  T.c(
-                    this.m_elMenu,
-                    this.m_elMenu.ownerDocument.activeElement
-                  )) ||
-                  ((e = this.m_elMenu.querySelector(".ContextMenuAutoFocus")) &&
-                  e.focus
-                    ? e.focus()
-                    : this.m_elMenu.focus()));
-            }),
-            (e.prototype.PositionMenu = function() {
-              var e,
-                t,
-                n,
-                r,
-                o,
-                i,
-                a,
-                s,
-                c,
-                l,
-                u,
-                p,
-                m,
-                d,
-                h,
-                f,
-                v,
-                g,
-                b,
-                _,
-                y,
-                w,
-                E,
-                O,
-                S,
-                C,
-                D,
-                x,
-                M,
-                A,
-                j = this.m_elMenu,
-                k = this.props.element;
-              j &&
-                k &&
-                ("none" !==
-                  (e = k.ownerDocument.defaultView).getComputedStyle(k)
-                    .display &&
+                  ((!this.props.popup &&
+                    T.c(
+                      this.m_elMenu,
+                      this.m_elMenu.ownerDocument.activeElement
+                    )) ||
+                    ((e = this.m_elMenu.querySelector(
+                      ".ContextMenuAutoFocus"
+                    )) && e.focus
+                      ? e.focus()
+                      : this.m_elMenu.focus()));
+              }),
+              (e.prototype.PositionMenu = function () {
+                var e,
+                  t,
+                  n,
+                  r,
+                  o,
+                  i,
+                  a,
+                  s,
+                  c,
+                  l,
+                  u,
+                  p,
+                  m,
+                  d,
+                  h,
+                  f,
+                  v,
+                  g,
+                  b,
+                  _,
+                  y,
+                  w,
+                  E,
+                  O,
+                  S,
+                  C,
+                  D,
+                  x,
+                  M,
+                  A,
+                  j = this.m_elMenu,
+                  k = this.props.element;
+                j &&
+                  k &&
+                  "none" !==
+                    (e = k.ownerDocument.defaultView).getComputedStyle(k)
+                      .display &&
                   ((t = k.getBoundingClientRect()),
                   (n = j.getBoundingClientRect()),
                   (r = null != this.props.popup),
@@ -14345,7 +14394,7 @@ var CLSTAMP = "6296065";
                     menuTop: void 0,
                     menuBottom: void 0,
                     menuWidth: void 0,
-                    menuHeight: void 0
+                    menuHeight: void 0,
                   }),
                   (a = this.props.clientX),
                   (s = this.props.clientY),
@@ -14429,88 +14478,90 @@ var CLSTAMP = "6296065";
                     i.menuBottom === this.state.menuBottom &&
                     i.menuWidth === this.state.menuWidth &&
                     i.menuHeight === this.state.menuHeight) ||
-                    this.setState(i)));
-            }),
-            (e.prototype.render = function() {
-              var o,
-                i = this,
-                e = { visibility: this.state.ready ? "visible" : "hidden" };
-              this.props.popup
-                ? ((o = this.props.element.ownerDocument.defaultView),
-                  void 0 !== this.state.menuLeft &&
-                    void 0 !== this.state.menuTop &&
-                    void 0 !== this.state.menuWidth &&
+                    this.setState(i));
+              }),
+              (e.prototype.render = function () {
+                var o,
+                  i = this,
+                  e = { visibility: this.state.ready ? "visible" : "hidden" };
+                this.props.popup
+                  ? ((o = this.props.element.ownerDocument.defaultView),
+                    void 0 !== this.state.menuLeft &&
+                      void 0 !== this.state.menuTop &&
+                      void 0 !== this.state.menuWidth &&
+                      void 0 !== this.state.menuHeight &&
+                      o.SteamClient.Window.GetWindowRestoreDetails(function (
+                        e
+                      ) {
+                        var t = i.props.popup.window,
+                          n = i.state.menuLeft - o.screenX,
+                          r = i.state.menuTop - o.screenY;
+                        try {
+                          t.SteamClient.Window.PositionWindowRelative(
+                            e,
+                            n,
+                            r,
+                            i.state.menuWidth,
+                            i.state.menuHeight
+                          );
+                        } catch (e) {
+                          console.error(e);
+                        }
+                      }))
+                  : (void 0 !== this.state.menuTop
+                      ? (e.top = this.state.menuTop)
+                      : void 0 !== this.state.menuBottom &&
+                        (e.bottom = this.state.menuBottom),
+                    void 0 !== this.state.menuLeft
+                      ? (e.left = this.state.menuLeft)
+                      : void 0 !== this.state.menuRight &&
+                        (e.right = this.state.menuRight),
                     void 0 !== this.state.menuHeight &&
-                    o.SteamClient.Window.GetWindowRestoreDetails(function(e) {
-                      var t = i.props.popup.window,
-                        n = i.state.menuLeft - o.screenX,
-                        r = i.state.menuTop - o.screenY;
-                      try {
-                        t.SteamClient.Window.PositionWindowRelative(
-                          e,
-                          n,
-                          r,
-                          i.state.menuWidth,
-                          i.state.menuHeight
-                        );
-                      } catch (e) {
-                        console.error(e);
-                      }
-                    }))
-                : (void 0 !== this.state.menuTop
-                    ? (e.top = this.state.menuTop)
-                    : void 0 !== this.state.menuBottom &&
-                      (e.bottom = this.state.menuBottom),
-                  void 0 !== this.state.menuLeft
-                    ? (e.left = this.state.menuLeft)
-                    : void 0 !== this.state.menuRight &&
-                      (e.right = this.state.menuRight),
-                  void 0 !== this.state.menuHeight &&
-                    (e.height = this.state.menuHeight),
-                  void 0 !== this.state.menuWidth &&
-                    (e.width = this.state.menuWidth));
-              var t =
-                this.props.options.strClassName ||
-                (this.props.options.bUseWebStyles
-                  ? "popup_block_new popup_block_hidden_until_visible"
-                  : f.a.contextMenu);
-              return (
-                this.props.instance.visible &&
-                  this.state.ready &&
-                  (t += " visible"),
-                (t += " " + f.a.ContextMenuFocusContainer),
-                u.createElement(
-                  b.Provider,
-                  { value: this.props.instance },
+                      (e.height = this.state.menuHeight),
+                    void 0 !== this.state.menuWidth &&
+                      (e.width = this.state.menuWidth));
+                var t =
+                  this.props.options.strClassName ||
+                  (this.props.options.bUseWebStyles
+                    ? "popup_block_new popup_block_hidden_until_visible"
+                    : f.a.contextMenu);
+                return (
+                  this.props.instance.visible &&
+                    this.state.ready &&
+                    (t += " visible"),
+                  (t += " " + f.a.ContextMenuFocusContainer),
                   u.createElement(
-                    "div",
-                    {
-                      className: t,
-                      ref: this.BindMenuElement,
-                      style: e,
-                      onBlur: this.OnBlur,
-                      onKeyDown: this.OnKeyDown,
-                      tabIndex: 0
-                    },
-                    this.props.children
+                    b.Provider,
+                    { value: this.props.instance },
+                    u.createElement(
+                      "div",
+                      {
+                        className: t,
+                        ref: this.BindMenuElement,
+                        style: e,
+                        onBlur: this.OnBlur,
+                        onKeyDown: this.OnKeyDown,
+                        tabIndex: 0,
+                      },
+                      this.props.children
+                    )
                   )
-                )
-              );
-            }),
-            Object(l.c)([o.a], e.prototype, "BindMenuElement", null),
-            Object(l.c)(
-              [o.a, Object(p.a)(100)],
-              e.prototype,
-              "OnMenuMutation",
-              null
-            ),
-            Object(l.c)([o.a], e.prototype, "OnWindowResize", null),
-            Object(l.c)([o.a], e.prototype, "OnBlur", null),
-            Object(l.c)([o.a], e.prototype, "OnKeyDown", null),
-            (e = Object(l.c)([r.a], e))
-          );
-        })(u.Component)),
-        O = (function(o) {
+                );
+              }),
+              Object(l.c)([o.a], e.prototype, "BindMenuElement", null),
+              Object(l.c)(
+                [o.a, Object(p.a)(100)],
+                e.prototype,
+                "OnMenuMutation",
+                null
+              ),
+              Object(l.c)([o.a], e.prototype, "OnWindowResize", null),
+              Object(l.c)([o.a], e.prototype, "OnBlur", null),
+              Object(l.c)([o.a], e.prototype, "OnKeyDown", null),
+              (e = Object(l.c)([r.a], e))
+            );
+          })(u.Component)),
+        O = (function (o) {
           function i(e, t, n) {
             var r =
               o.call(this, "contextmenu_" + i.sm_iContextMenuInstance++, {
@@ -14519,13 +14570,13 @@ var CLSTAMP = "6296065";
                 body_class: "ContextMenuPopupBody",
                 replace_existing_popup: !1,
                 target_browser: n,
-                eCreationFlags: c.b.ContextMenu
+                eCreationFlags: c.b.ContextMenu,
               }) || this;
             return (r.m_menuProps = e), (r.m_children = t), r;
           }
           return (
             Object(l.d)(i, o),
-            (i.prototype.UpdateParamsBeforeShow = function(e) {
+            (i.prototype.UpdateParamsBeforeShow = function (e) {
               var t;
               return (
                 this.m_menuProps.options.bScreenCoordinates
@@ -14533,7 +14584,7 @@ var CLSTAMP = "6296065";
                       left: this.m_menuProps.clientX,
                       top: this.m_menuProps.clientY,
                       width: 350,
-                      height: 1
+                      height: 1,
                     })
                   : ((t = T.f(
                       this.m_menuProps.element.ownerDocument.defaultView,
@@ -14543,14 +14594,14 @@ var CLSTAMP = "6296065";
                       left: t.right,
                       top: t.top,
                       width: 350,
-                      height: 1
+                      height: 1,
                     })),
                 (e.availscreenwidth = this.m_menuProps.element.ownerDocument.defaultView.screen.availWidth),
                 (e.availscreenheight = this.m_menuProps.element.ownerDocument.defaultView.screen.availHeight),
                 e
               );
             }),
-            (i.prototype.Render = function(e, t) {
+            (i.prototype.Render = function (e, t) {
               a.render(
                 u.createElement(
                   E,
@@ -14560,18 +14611,18 @@ var CLSTAMP = "6296065";
                 t
               );
             }),
-            (i.prototype.OnBlur = function() {}),
-            (i.prototype.OnFocus = function() {}),
-            (i.prototype.OnLoad = function() {}),
-            (i.prototype.OnResize = function() {}),
-            (i.prototype.OnClose = function() {}),
+            (i.prototype.OnBlur = function () {}),
+            (i.prototype.OnFocus = function () {}),
+            (i.prototype.OnLoad = function () {}),
+            (i.prototype.OnResize = function () {}),
+            (i.prototype.OnClose = function () {}),
             (i.sm_iContextMenuInstance = 0),
             i
           );
         })(c.a);
       function S(e) {
         return u.createElement("div", {
-          className: f.a.ContextMenuMouseOverlay
+          className: f.a.ContextMenuMouseOverlay,
         });
       }
       function C(e) {
@@ -14591,9 +14642,9 @@ var CLSTAMP = "6296065";
                 y,
                 {
                   key: "cut",
-                  onSelected: function() {
+                  onSelected: function () {
                     n.document.execCommand("cut");
-                  }
+                  },
                 },
                 Object(m.f)("#ContextMenu_Cut")
               )
@@ -14604,9 +14655,9 @@ var CLSTAMP = "6296065";
                 y,
                 {
                   key: "copy",
-                  onSelected: function() {
+                  onSelected: function () {
                     n.document.execCommand("copy");
-                  }
+                  },
                 },
                 Object(m.f)("#ContextMenu_Copy")
               )
@@ -14618,9 +14669,9 @@ var CLSTAMP = "6296065";
                 y,
                 {
                   key: "paste",
-                  onSelected: function() {
+                  onSelected: function () {
                     i.focus(), n.SteamClient._internal.Paste();
-                  }
+                  },
                 },
                 Object(m.f)("#ContextMenu_Paste")
               )
@@ -14634,7 +14685,7 @@ var CLSTAMP = "6296065";
         }
       }
     },
-    zBSo: function(e, t, n) {
+    zBSo: function (e, t, n) {
       e.exports = {
         PagedSettingsDialog: "pagedsettings_PagedSettingsDialog_2sssI",
         PagedSettingsDialog_PageContent:
@@ -14648,9 +14699,9 @@ var CLSTAMP = "6296065";
         PagedSettingsDialog_PageListItem:
           "pagedsettings_PagedSettingsDialog_PageListItem_1-vlr",
         DisabledItem: "pagedsettings_DisabledItem_oUzYn",
-        Active: "pagedsettings_Active_2DpXj"
+        Active: "pagedsettings_Active_2DpXj",
       };
-    }
+    },
   },
-  [["gfbn", 99, 0]]
+  [["gfbn", 99, 0]],
 ]);

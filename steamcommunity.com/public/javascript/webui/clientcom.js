@@ -3,7 +3,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 var CLSTAMP = "6296065";
-!(function(t) {
+!(function (t) {
   var e = {};
   function n(r) {
     if (e[r]) return e[r].exports;
@@ -12,16 +12,16 @@ var CLSTAMP = "6296065";
   }
   (n.m = t),
     (n.c = e),
-    (n.d = function(t, e, r) {
+    (n.d = function (t, e, r) {
       n.o(t, e) || Object.defineProperty(t, e, { enumerable: !0, get: r });
     }),
-    (n.r = function(t) {
+    (n.r = function (t) {
       "undefined" != typeof Symbol &&
         Symbol.toStringTag &&
         Object.defineProperty(t, Symbol.toStringTag, { value: "Module" }),
         Object.defineProperty(t, "__esModule", { value: !0 });
     }),
-    (n.t = function(t, e) {
+    (n.t = function (t, e) {
       if ((1 & e && (t = n(t)), 8 & e)) return t;
       if (4 & e && "object" == typeof t && t && t.__esModule) return t;
       var r = Object.create(null);
@@ -34,30 +34,30 @@ var CLSTAMP = "6296065";
           n.d(
             r,
             o,
-            function(e) {
+            function (e) {
               return t[e];
             }.bind(null, o)
           );
       return r;
     }),
-    (n.n = function(t) {
+    (n.n = function (t) {
       var e =
         t && t.__esModule
-          ? function() {
+          ? function () {
               return t.default;
             }
-          : function() {
+          : function () {
               return t;
             };
       return n.d(e, "a", e), e;
     }),
-    (n.o = function(t, e) {
+    (n.o = function (t, e) {
       return Object.prototype.hasOwnProperty.call(t, e);
     }),
     (n.p = ""),
     n((n.s = "x0hG"));
 })({
-  "/7KC": function(t, e, n) {
+  "/7KC": function (t, e, n) {
     "use strict";
     function r(t, e) {
       return (
@@ -72,43 +72,43 @@ var CLSTAMP = "6296065";
     function i(t, e, n, r, o) {
       return r + ((o - r) * (t - e)) / (n - e);
     }
-    n.d(e, "b", function() {
+    n.d(e, "b", function () {
       return r;
     }),
-      n.d(e, "a", function() {
+      n.d(e, "a", function () {
         return o;
       }),
-      n.d(e, "c", function() {
+      n.d(e, "c", function () {
         return i;
       });
   },
-  "1n9R": function(t, e, n) {
+  "1n9R": function (t, e, n) {
     "use strict";
-    n.d(e, "c", function() {
+    n.d(e, "c", function () {
       return c;
     }),
-      n.d(e, "i", function() {
+      n.d(e, "i", function () {
         return u;
       }),
-      n.d(e, "a", function() {
+      n.d(e, "a", function () {
         return s;
       }),
-      n.d(e, "b", function() {
+      n.d(e, "b", function () {
         return a;
       }),
-      n.d(e, "f", function() {
+      n.d(e, "f", function () {
         return l;
       }),
-      n.d(e, "h", function() {
+      n.d(e, "h", function () {
         return f;
       }),
-      n.d(e, "g", function() {
+      n.d(e, "g", function () {
         return _;
       }),
-      n.d(e, "d", function() {
+      n.d(e, "d", function () {
         return p;
       }),
-      n.d(e, "e", function() {
+      n.d(e, "e", function () {
         return d;
       });
     n("mrSG");
@@ -152,7 +152,7 @@ var CLSTAMP = "6296065";
         BUILD_TIMESTAMP: 0,
         PAGE_TIMESTAMP: 0,
         get SESSIONID() {
-          return (function() {
+          return (function () {
             if (!Object(i.a)()) return r || (r = l()), r;
             var t = Object(i.b)("sessionid");
             t || (t = l());
@@ -163,7 +163,7 @@ var CLSTAMP = "6296065";
         STEAM_TV: !1,
         DEV_MODE: !1,
         OFFLINE_MODE: !1,
-        IN_LIBRARY: !1
+        IN_LIBRARY: !1,
       },
       u = {
         logged_in: !1,
@@ -177,7 +177,7 @@ var CLSTAMP = "6296065";
         is_support: !1,
         is_limited: !1,
         short_url: "",
-        country_code: ""
+        country_code: "",
       },
       s = { steamid: "", clanid: 0, listid: 0 },
       a = {
@@ -195,10 +195,10 @@ var CLSTAMP = "6296065";
         APP_NAME: "",
         HAS_ADULT_CONTENT: !1,
         HAS_ADULT_CONTENT_SEX: !1,
-        HAS_ADULT_CONTENT_VIOLENCE: !1
+        HAS_ADULT_CONTENT_VIOLENCE: !1,
       };
     function l() {
-      var t = (function() {
+      var t = (function () {
         for (var t = "", e = 0; e < 24; e++)
           t += Object(o.b)(0, 35).toString(36);
         return t;
@@ -272,24 +272,24 @@ var CLSTAMP = "6296065";
         : "";
     }
   },
-  Ezvv: function(t, e, n) {
+  Ezvv: function (t, e, n) {
     "use strict";
-    n.d(e, "a", function() {
+    n.d(e, "a", function () {
       return i;
     }),
-      n.d(e, "b", function() {
+      n.d(e, "b", function () {
         return u;
       });
     var r = n("1n9R"),
       o = { success: !0, result: 1 },
-      i = (function() {
+      i = (function () {
         function t() {
           (this.m_connection = new c()),
             (this.m_bAllowAccountMismatch = !1),
             (this.m_mapCacheSubscribedApp = new Map());
         }
         return (
-          (t.prototype.FailureResult = function(t) {
+          (t.prototype.FailureResult = function (t) {
             void 0 === t && (t = 2);
             var e = { success: !1, result: t };
             return (
@@ -303,21 +303,21 @@ var CLSTAMP = "6296065";
               e
             );
           }),
-          (t.prototype.SetAllowAccountMismatch = function(t) {
+          (t.prototype.SetAllowAccountMismatch = function (t) {
             this.m_bAllowAccountMismatch = t;
           }),
-          (t.prototype.BClientConnected = function() {
+          (t.prototype.BClientConnected = function () {
             var t = this;
             return this.m_connection.Connect().then(
-              function() {
+              function () {
                 return o;
               },
-              function() {
+              function () {
                 return t.FailureResult();
               }
             );
           }),
-          (t.prototype.BClientSupportsMessage = function(t) {
+          (t.prototype.BClientSupportsMessage = function (t) {
             return (
               !(
                 !this.m_connection.connected_to_client ||
@@ -326,66 +326,68 @@ var CLSTAMP = "6296065";
               -1 !== this.m_connection.ClientInfo.rgSupportedMessages.indexOf(t)
             );
           }),
-          (t.prototype.OpenFriendChatDialog = function(t) {
+          (t.prototype.OpenFriendChatDialog = function (t) {
             var e = { message: "ShowFriendChatDialog", steamid: t };
             return this.GenericEResultCall(e);
           }),
-          (t.prototype.OpenChatRoomGroupDialog = function(t, e) {
+          (t.prototype.OpenChatRoomGroupDialog = function (t, e) {
             var n = { message: "ShowChatRoomGroupDialog", chat_group_id: t };
             return e && (n.chat_room_id = e), this.GenericEResultCall(n);
           }),
-          (t.prototype.ShowChatRoomGroupInvite = function(t) {
+          (t.prototype.ShowChatRoomGroupInvite = function (t) {
             var e = { message: "ShowChatRoomGroupInvite", invite_code: t };
             return this.GenericEResultCall(e);
           }),
-          (t.prototype.OpenJoinGameDialog = function(t) {
+          (t.prototype.OpenJoinGameDialog = function (t) {
             var e = { message: "ShowJoinGameDialog", friend_id: t };
             return this.GenericEResultCall(e);
           }),
-          (t.prototype.BIsSubscribedApp = function(t) {
+          (t.prototype.BIsSubscribedApp = function (t) {
             var e = this;
             if (this.m_mapCacheSubscribedApp.has(t))
               return Promise.resolve(this.m_mapCacheSubscribedApp.get(t));
             var n = { message: "IsSubscribedApp", appid: t };
-            return this.GenericEResultCall(n).then(function(n) {
+            return this.GenericEResultCall(n).then(function (n) {
               if (!n.connect_failed) {
                 var r = 1 == n.result;
                 return e.m_mapCacheSubscribedApp.set(t, r), r;
               }
             });
           }),
-          (t.prototype.ViewGameInfoForSteamID = function(t) {
+          (t.prototype.ViewGameInfoForSteamID = function (t) {
             var e = { message: "ViewGameInfoForSteamID", steamid: t };
             return this.GenericEResultCall(e);
           }),
-          (t.prototype.OpenFriendsDialog = function() {
+          (t.prototype.OpenFriendsDialog = function () {
             return this.GenericEResultCall({ message: "OpenFriendsDialog" });
           }),
-          (t.prototype.BClientAccountMatches = function() {
+          (t.prototype.BClientAccountMatches = function () {
             return (
               !r.i.logged_in ||
               r.i.accountid == this.m_connection.ClientInfo.unAccountID
             );
           }),
-          (t.prototype.GenericEResultCall = function(t) {
+          (t.prototype.GenericEResultCall = function (t) {
             var e = this;
             return this.m_connection
               .Connect()
-              .then(function() {
+              .then(function () {
                 return e.m_bAllowAccountMismatch || e.BClientAccountMatches()
-                  ? e.m_connection.SendMsgAndAwaitResponse(t).then(function(t) {
-                      return 1 === t.success ? o : e.FailureResult(t.success);
-                    })
+                  ? e.m_connection
+                      .SendMsgAndAwaitResponse(t)
+                      .then(function (t) {
+                        return 1 === t.success ? o : e.FailureResult(t.success);
+                      })
                   : { success: !1, result: 19, account_mismatch: !0 };
               })
-              .catch(function() {
+              .catch(function () {
                 return e.FailureResult();
               });
           }),
           t
         );
       })(),
-      c = (function() {
+      c = (function () {
         function t() {
           (this.m_mapWaitingCallbacks = new Map()),
             (this.m_iCallSeq = 1),
@@ -396,59 +398,59 @@ var CLSTAMP = "6296065";
               ulVersion: "",
               bFriendsUIEnabled: !1,
               unAccountID: 0,
-              rgSupportedMessages: []
+              rgSupportedMessages: [],
             });
         }
         return (
           Object.defineProperty(t.prototype, "ClientInfo", {
-            get: function() {
+            get: function () {
               return this.m_ClientInfo;
             },
             enumerable: !1,
-            configurable: !0
+            configurable: !0,
           }),
           Object.defineProperty(t.prototype, "ready", {
-            get: function() {
+            get: function () {
               return this.m_bReady;
             },
             enumerable: !1,
-            configurable: !0
+            configurable: !0,
           }),
           Object.defineProperty(t.prototype, "browser_supported", {
-            get: function() {
+            get: function () {
               return !this.m_bSecurityException;
             },
             enumerable: !1,
-            configurable: !0
+            configurable: !0,
           }),
           Object.defineProperty(t.prototype, "connected_to_client", {
-            get: function() {
+            get: function () {
               return (
                 this.m_socket && this.m_socket.readyState == WebSocket.OPEN
               );
             },
             enumerable: !1,
-            configurable: !0
+            configurable: !0,
           }),
-          (t.prototype.SendMsgAndAwaitResponse = function(t) {
+          (t.prototype.SendMsgAndAwaitResponse = function (t) {
             var e = this;
-            return new Promise(function(n, r) {
+            return new Promise(function (n, r) {
               var o = e.m_iCallSeq++;
               e.BSendMsg(t, o)
                 ? e.m_mapWaitingCallbacks.set(o, {
                     iSeq: o,
                     fnCallback: n,
-                    fnError: r
+                    fnError: r,
                   })
                 : r();
             });
           }),
-          (t.prototype.BSendMsg = function(t, e) {
+          (t.prototype.BSendMsg = function (t, e) {
             if (!this.m_socket || this.m_socket.readyState != WebSocket.OPEN)
               return !1;
             var n = Object.assign({}, t, {
               universe: r.c.EUNIVERSE,
-              accountid: r.i.accountid
+              accountid: r.i.accountid,
             });
             void 0 !== e && (n.sequenceid = e);
             try {
@@ -457,7 +459,7 @@ var CLSTAMP = "6296065";
               return !1;
             }
           }),
-          (t.prototype.OnSocketMessage = function(t) {
+          (t.prototype.OnSocketMessage = function (t) {
             try {
               var e = JSON.parse(t.data);
               if (e.sequenceid) {
@@ -472,12 +474,12 @@ var CLSTAMP = "6296065";
               console.error("exception parsing response", t);
             }
           }),
-          (t.prototype.Connect = function() {
+          (t.prototype.Connect = function () {
             var t = this;
             if (this.m_bReady && this.m_socket.readyState == WebSocket.OPEN)
               return Promise.resolve();
             if (this.m_promiseConnect) return this.m_promiseConnect;
-            var e = new Promise(function(e, n) {
+            var e = new Promise(function (e, n) {
               try {
                 t.m_socket = new WebSocket(
                   "ws://127.0.0.1:27060/clientsocket/"
@@ -485,13 +487,13 @@ var CLSTAMP = "6296065";
               } catch (e) {
                 return (t.m_bSecurityException = !0), void n(e);
               }
-              (t.m_socket.onerror = function(t) {
+              (t.m_socket.onerror = function (t) {
                 n();
               }),
                 (t.m_socket.onmessage = t.OnSocketMessage.bind(t)),
-                (t.m_socket.onopen = function() {
+                (t.m_socket.onopen = function () {
                   t.SendMsgAndAwaitResponse({ message: "GetClientInfo" })
-                    .then(function(r) {
+                    .then(function (r) {
                       1 == r.success
                         ? ((t.m_ClientInfo.ulVersion = r.clientversion),
                           (t.m_ClientInfo.bFriendsUIEnabled = !!r.friendsui),
@@ -508,10 +510,10 @@ var CLSTAMP = "6296065";
             return (
               (this.m_promiseConnect = e),
               this.m_promiseConnect
-                .then(function() {
+                .then(function () {
                   (t.m_bReady = !0), (t.m_promiseConnect = void 0);
                 })
-                .catch(function() {
+                .catch(function () {
                   (t.m_bClientConnectionFailed = !0),
                     (t.m_promiseConnect = void 0);
                 }),
@@ -524,7 +526,7 @@ var CLSTAMP = "6296065";
       u = new i();
     window.ClientConnectionAPI = u;
   },
-  YlSc: function(t, e, n) {
+  YlSc: function (t, e, n) {
     "use strict";
     function r(t) {
       if (!i() || !window.document.cookie) return null;
@@ -552,37 +554,37 @@ var CLSTAMP = "6296065";
     function i() {
       return !!window.document;
     }
-    n.d(e, "b", function() {
+    n.d(e, "b", function () {
       return r;
     }),
-      n.d(e, "c", function() {
+      n.d(e, "c", function () {
         return o;
       }),
-      n.d(e, "a", function() {
+      n.d(e, "a", function () {
         return i;
       });
   },
-  mrSG: function(t, e, n) {
+  mrSG: function (t, e, n) {
     "use strict";
-    n.d(e, "d", function() {
+    n.d(e, "d", function () {
       return o;
     }),
-      n.d(e, "a", function() {
+      n.d(e, "a", function () {
         return i;
       }),
-      n.d(e, "f", function() {
+      n.d(e, "f", function () {
         return c;
       }),
-      n.d(e, "c", function() {
+      n.d(e, "c", function () {
         return u;
       }),
-      n.d(e, "b", function() {
+      n.d(e, "b", function () {
         return s;
       }),
-      n.d(e, "e", function() {
+      n.d(e, "e", function () {
         return a;
       }),
-      n.d(e, "g", function() {
+      n.d(e, "g", function () {
         return l;
       });
     /*! *****************************************************************************
@@ -599,14 +601,14 @@ LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
 OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
 PERFORMANCE OF THIS SOFTWARE.
 ***************************************************************************** */
-    var r = function(t, e) {
+    var r = function (t, e) {
       return (r =
         Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array &&
-          function(t, e) {
+          function (t, e) {
             t.__proto__ = e;
           }) ||
-        function(t, e) {
+        function (t, e) {
           for (var n in e) e.hasOwnProperty(n) && (t[n] = e[n]);
         })(t, e);
     };
@@ -620,10 +622,10 @@ PERFORMANCE OF THIS SOFTWARE.
             ? Object.create(e)
             : ((n.prototype = e.prototype), new n()));
     }
-    var i = function() {
+    var i = function () {
       return (i =
         Object.assign ||
-        function(t) {
+        function (t) {
           for (var e, n = 1, r = arguments.length; n < r; n++)
             for (var o in (e = arguments[n]))
               Object.prototype.hasOwnProperty.call(e, o) && (t[o] = e[o]);
@@ -663,7 +665,7 @@ PERFORMANCE OF THIS SOFTWARE.
       return i > 3 && c && Object.defineProperty(e, n, c), c;
     }
     function s(t, e, n, r) {
-      return new (n || (n = Promise))(function(o, i) {
+      return new (n || (n = Promise))(function (o, i) {
         function c(t) {
           try {
             s(r.next(t));
@@ -685,7 +687,7 @@ PERFORMANCE OF THIS SOFTWARE.
             : ((e = t.value),
               e instanceof n
                 ? e
-                : new n(function(t) {
+                : new n(function (t) {
                     t(e);
                   })).then(c, u);
         }
@@ -699,24 +701,24 @@ PERFORMANCE OF THIS SOFTWARE.
         i,
         c = {
           label: 0,
-          sent: function() {
+          sent: function () {
             if (1 & o[0]) throw o[1];
             return o[1];
           },
           trys: [],
-          ops: []
+          ops: [],
         };
       return (
         (i = { next: u(0), throw: u(1), return: u(2) }),
         "function" == typeof Symbol &&
-          (i[Symbol.iterator] = function() {
+          (i[Symbol.iterator] = function () {
             return this;
           }),
         i
       );
       function u(i) {
-        return function(u) {
-          return (function(i) {
+        return function (u) {
+          return (function (i) {
             if (n) throw new TypeError("Generator is already executing.");
             for (; c; )
               try {
@@ -792,26 +794,26 @@ PERFORMANCE OF THIS SOFTWARE.
       return r;
     }
   },
-  tkkQ: function(t, e, n) {
+  tkkQ: function (t, e, n) {
     "use strict";
     var r = n("1n9R");
-    n.d(e, "a", function() {
+    n.d(e, "a", function () {
       return r.c;
     }),
-      n.d(e, "c", function() {
+      n.d(e, "c", function () {
         return r.i;
       }),
-      n.d(e, "b", function() {
+      n.d(e, "b", function () {
         return r.h;
       });
   },
-  x0hG: function(t, e, n) {
+  x0hG: function (t, e, n) {
     "use strict";
     n.r(e);
     var r = n("tkkQ"),
       o = n("Ezvv");
-    document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function () {
       Object(r.b)(), (window.ClientConnectionAPI = o.b);
     });
-  }
+  },
 });

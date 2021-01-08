@@ -3,7 +3,7 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [2],
   {
-    "2l+k": function(e, t, n) {
+    "2l+k": function (e, t, n) {
       "use strict";
       var u = n("mrSG"),
         r = n("vDqi"),
@@ -17,7 +17,7 @@
         c = i.Message;
       var l,
         _,
-        f = (function(n) {
+        f = (function (n) {
           function r(e) {
             void 0 === e && (e = null);
             var t = n.call(this) || this;
@@ -29,7 +29,7 @@
           }
           return (
             Object(u.d)(r, n),
-            (r.M = function() {
+            (r.M = function () {
               return (
                 r.sm_m ||
                   (r.sm_m = {
@@ -38,14 +38,14 @@
                       gid: {
                         n: 1,
                         br: o.d.readFixed64String,
-                        bw: o.h.writeFixed64String
+                        bw: o.h.writeFixed64String,
                       },
                       name: { n: 2, br: o.d.readString, bw: o.h.writeString },
                       type: {
                         n: 3,
                         d: 0,
                         br: o.d.readUint32,
-                        bw: o.h.writeUint32
+                        bw: o.h.writeUint32,
                       },
                       url: { n: 4, br: o.d.readString, bw: o.h.writeString },
                       associated_apps: {
@@ -53,88 +53,88 @@
                         r: !0,
                         q: !0,
                         br: o.d.readUint32,
-                        bw: o.h.writeRepeatedUint32
+                        bw: o.h.writeRepeatedUint32,
                       },
                       poll_interval: {
                         n: 6,
                         d: 300,
                         br: o.d.readUint32,
-                        bw: o.h.writeUint32
+                        bw: o.h.writeUint32,
                       },
                       kv_description: {
                         n: 7,
                         br: o.d.readString,
-                        bw: o.h.writeString
+                        bw: o.h.writeString,
                       },
                       kv_filter: {
                         n: 8,
                         br: o.d.readString,
-                        bw: o.h.writeString
+                        bw: o.h.writeString,
                       },
                       publish_to_clan_account_id: {
                         n: 9,
                         br: o.d.readUint32,
-                        bw: o.h.writeUint32
+                        bw: o.h.writeUint32,
                       },
                       language: {
                         n: 10,
                         br: o.d.readUint32,
-                        bw: o.h.writeUint32
+                        bw: o.h.writeUint32,
                       },
                       last_error: {
                         n: 11,
                         br: o.d.readUint32,
-                        bw: o.h.writeUint32
+                        bw: o.h.writeUint32,
                       },
                       last_update: {
                         n: 12,
                         br: o.d.readUint32,
-                        bw: o.h.writeUint32
+                        bw: o.h.writeUint32,
                       },
                       last_checked: {
                         n: 13,
                         br: o.d.readUint32,
-                        bw: o.h.writeUint32
-                      }
-                    }
+                        bw: o.h.writeUint32,
+                      },
+                    },
                   }),
                 r.sm_m
               );
             }),
-            (r.MBF = function() {
+            (r.MBF = function () {
               return r.sm_mbf || (r.sm_mbf = o.e(r.M())), r.sm_mbf;
             }),
-            (r.prototype.toObject = function(e) {
+            (r.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
-            (r.toObject = function(e, t) {
+            (r.toObject = function (e, t) {
               return o.g(r.M(), e, t);
             }),
-            (r.fromObject = function(e) {
+            (r.fromObject = function (e) {
               return o.c(r.M(), e);
             }),
-            (r.deserializeBinary = function(e) {
+            (r.deserializeBinary = function (e) {
               var t = new i.BinaryReader(e),
                 n = new r();
               return r.deserializeBinaryFromReader(n, t);
             }),
-            (r.deserializeBinaryFromReader = function(e, t) {
+            (r.deserializeBinaryFromReader = function (e, t) {
               return o.b(r.MBF(), e, t);
             }),
-            (r.prototype.serializeBinary = function() {
+            (r.prototype.serializeBinary = function () {
               var e = new i.BinaryWriter();
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
-            (r.serializeBinaryToWriter = function(e, t) {
+            (r.serializeBinaryToWriter = function (e, t) {
               o.f(r.M(), e, t);
             }),
-            (r.prototype.getClassName = function() {
+            (r.prototype.getClassName = function () {
               return "CNewsFeedDef";
             }),
             r
           );
         })(c),
-        h = (function(n) {
+        h = (function (n) {
           function r(e) {
             void 0 === e && (e = null);
             var t = n.call(this) || this;
@@ -146,7 +146,7 @@
           }
           return (
             Object(u.d)(r, n),
-            (r.M = function() {
+            (r.M = function () {
               return (
                 r.sm_m ||
                   (r.sm_m = {
@@ -155,12 +155,12 @@
                       gid: {
                         n: 1,
                         br: o.d.readFixed64String,
-                        bw: o.h.writeFixed64String
+                        bw: o.h.writeFixed64String,
                       },
                       news_feed_gid: {
                         n: 2,
                         br: o.d.readFixed64String,
-                        bw: o.h.writeFixed64String
+                        bw: o.h.writeFixed64String,
                       },
                       title: { n: 3, br: o.d.readString, bw: o.h.writeString },
                       url: { n: 4, br: o.d.readString, bw: o.h.writeString },
@@ -168,12 +168,12 @@
                       rtime_date: {
                         n: 6,
                         br: o.d.readUint32,
-                        bw: o.h.writeUint32
+                        bw: o.h.writeUint32,
                       },
                       contents: {
                         n: 7,
                         br: o.d.readString,
-                        bw: o.h.writeString
+                        bw: o.h.writeString,
                       },
                       commited: { n: 8, br: o.d.readBool, bw: o.h.writeBool },
                       deleted: { n: 9, br: o.d.readBool, bw: o.h.writeBool },
@@ -183,73 +183,73 @@
                         r: !0,
                         q: !0,
                         br: o.d.readUint32,
-                        bw: o.h.writeRepeatedUint32
+                        bw: o.h.writeRepeatedUint32,
                       },
                       recommendation_state: {
                         n: 12,
                         br: o.d.readEnum,
-                        bw: o.h.writeEnum
+                        bw: o.h.writeEnum,
                       },
                       received_compensation: {
                         n: 13,
                         br: o.d.readBool,
-                        bw: o.h.writeBool
+                        bw: o.h.writeBool,
                       },
                       received_for_free: {
                         n: 14,
                         br: o.d.readBool,
-                        bw: o.h.writeBool
+                        bw: o.h.writeBool,
                       },
                       blurb: { n: 15, br: o.d.readString, bw: o.h.writeString },
                       event_subtitle: {
                         n: 16,
                         br: o.d.readString,
-                        bw: o.h.writeString
+                        bw: o.h.writeString,
                       },
                       event_summary: {
                         n: 17,
                         br: o.d.readString,
-                        bw: o.h.writeString
-                      }
-                    }
+                        bw: o.h.writeString,
+                      },
+                    },
                   }),
                 r.sm_m
               );
             }),
-            (r.MBF = function() {
+            (r.MBF = function () {
               return r.sm_mbf || (r.sm_mbf = o.e(r.M())), r.sm_mbf;
             }),
-            (r.prototype.toObject = function(e) {
+            (r.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
-            (r.toObject = function(e, t) {
+            (r.toObject = function (e, t) {
               return o.g(r.M(), e, t);
             }),
-            (r.fromObject = function(e) {
+            (r.fromObject = function (e) {
               return o.c(r.M(), e);
             }),
-            (r.deserializeBinary = function(e) {
+            (r.deserializeBinary = function (e) {
               var t = new i.BinaryReader(e),
                 n = new r();
               return r.deserializeBinaryFromReader(n, t);
             }),
-            (r.deserializeBinaryFromReader = function(e, t) {
+            (r.deserializeBinaryFromReader = function (e, t) {
               return o.b(r.MBF(), e, t);
             }),
-            (r.prototype.serializeBinary = function() {
+            (r.prototype.serializeBinary = function () {
               var e = new i.BinaryWriter();
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
-            (r.serializeBinaryToWriter = function(e, t) {
+            (r.serializeBinaryToWriter = function (e, t) {
               o.f(r.M(), e, t);
             }),
-            (r.prototype.getClassName = function() {
+            (r.prototype.getClassName = function () {
               return "CNewsFeedPostDef";
             }),
             r
           );
         })(c),
-        b = (function(n) {
+        b = (function (n) {
           function r(e) {
             void 0 === e && (e = null);
             var t = n.call(this) || this;
@@ -261,7 +261,7 @@
           }
           return (
             Object(u.d)(r, n),
-            (r.M = function() {
+            (r.M = function () {
               return (
                 r.sm_m ||
                   (r.sm_m = {
@@ -270,48 +270,48 @@
                       converted_content: {
                         n: 1,
                         br: o.d.readString,
-                        bw: o.h.writeString
+                        bw: o.h.writeString,
                       },
-                      found_html: { n: 2, br: o.d.readBool, bw: o.h.writeBool }
-                    }
+                      found_html: { n: 2, br: o.d.readBool, bw: o.h.writeBool },
+                    },
                   }),
                 r.sm_m
               );
             }),
-            (r.MBF = function() {
+            (r.MBF = function () {
               return r.sm_mbf || (r.sm_mbf = o.e(r.M())), r.sm_mbf;
             }),
-            (r.prototype.toObject = function(e) {
+            (r.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
-            (r.toObject = function(e, t) {
+            (r.toObject = function (e, t) {
               return o.g(r.M(), e, t);
             }),
-            (r.fromObject = function(e) {
+            (r.fromObject = function (e) {
               return o.c(r.M(), e);
             }),
-            (r.deserializeBinary = function(e) {
+            (r.deserializeBinary = function (e) {
               var t = new i.BinaryReader(e),
                 n = new r();
               return r.deserializeBinaryFromReader(n, t);
             }),
-            (r.deserializeBinaryFromReader = function(e, t) {
+            (r.deserializeBinaryFromReader = function (e, t) {
               return o.b(r.MBF(), e, t);
             }),
-            (r.prototype.serializeBinary = function() {
+            (r.prototype.serializeBinary = function () {
               var e = new i.BinaryWriter();
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
-            (r.serializeBinaryToWriter = function(e, t) {
+            (r.serializeBinaryToWriter = function (e, t) {
               o.f(r.M(), e, t);
             }),
-            (r.prototype.getClassName = function() {
+            (r.prototype.getClassName = function () {
               return "CNews_ConvertHTMLToBBCode_Response";
             }),
             r
           );
         })(c),
-        v = (function(n) {
+        v = (function (n) {
           function r(e) {
             void 0 === e && (e = null);
             var t = n.call(this) || this;
@@ -323,7 +323,7 @@
           }
           return (
             Object(u.d)(r, n),
-            (r.M = function() {
+            (r.M = function () {
               return (
                 r.sm_m ||
                   (r.sm_m = {
@@ -332,66 +332,66 @@
                       rss_message: {
                         n: 1,
                         br: o.d.readString,
-                        bw: o.h.writeString
+                        bw: o.h.writeString,
                       },
                       unique_id: {
                         n: 2,
                         br: o.d.readString,
-                        bw: o.h.writeString
+                        bw: o.h.writeString,
                       },
                       title: { n: 3, br: o.d.readString, bw: o.h.writeString },
                       desc: { n: 4, br: o.d.readString, bw: o.h.writeString },
                       jsondata: {
                         n: 5,
                         br: o.d.readString,
-                        bw: o.h.writeString
+                        bw: o.h.writeString,
                       },
                       post: { n: 6, c: h },
                       valid_post: { n: 7, br: o.d.readBool, bw: o.h.writeBool },
                       post_error_msg: {
                         n: 8,
                         br: o.d.readString,
-                        bw: o.h.writeString
-                      }
-                    }
+                        bw: o.h.writeString,
+                      },
+                    },
                   }),
                 r.sm_m
               );
             }),
-            (r.MBF = function() {
+            (r.MBF = function () {
               return r.sm_mbf || (r.sm_mbf = o.e(r.M())), r.sm_mbf;
             }),
-            (r.prototype.toObject = function(e) {
+            (r.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
-            (r.toObject = function(e, t) {
+            (r.toObject = function (e, t) {
               return o.g(r.M(), e, t);
             }),
-            (r.fromObject = function(e) {
+            (r.fromObject = function (e) {
               return o.c(r.M(), e);
             }),
-            (r.deserializeBinary = function(e) {
+            (r.deserializeBinary = function (e) {
               var t = new i.BinaryReader(e),
                 n = new r();
               return r.deserializeBinaryFromReader(n, t);
             }),
-            (r.deserializeBinaryFromReader = function(e, t) {
+            (r.deserializeBinaryFromReader = function (e, t) {
               return o.b(r.MBF(), e, t);
             }),
-            (r.prototype.serializeBinary = function() {
+            (r.prototype.serializeBinary = function () {
               var e = new i.BinaryWriter();
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
-            (r.serializeBinaryToWriter = function(e, t) {
+            (r.serializeBinaryToWriter = function (e, t) {
               o.f(r.M(), e, t);
             }),
-            (r.prototype.getClassName = function() {
+            (r.prototype.getClassName = function () {
               return "CNewsPartnerEventPreview";
             }),
             r
           );
         })(c),
-        S = (function(n) {
+        S = (function (n) {
           function r(e) {
             void 0 === e && (e = null);
             var t = n.call(this) || this;
@@ -403,7 +403,7 @@
           }
           return (
             Object(u.d)(r, n),
-            (r.M = function() {
+            (r.M = function () {
               return (
                 r.sm_m ||
                   (r.sm_m = {
@@ -412,48 +412,48 @@
                       rss_url: {
                         n: 1,
                         br: o.d.readString,
-                        bw: o.h.writeString
+                        bw: o.h.writeString,
                       },
-                      lang: { n: 2, br: o.d.readUint32, bw: o.h.writeUint32 }
-                    }
+                      lang: { n: 2, br: o.d.readUint32, bw: o.h.writeUint32 },
+                    },
                   }),
                 r.sm_m
               );
             }),
-            (r.MBF = function() {
+            (r.MBF = function () {
               return r.sm_mbf || (r.sm_mbf = o.e(r.M())), r.sm_mbf;
             }),
-            (r.prototype.toObject = function(e) {
+            (r.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
-            (r.toObject = function(e, t) {
+            (r.toObject = function (e, t) {
               return o.g(r.M(), e, t);
             }),
-            (r.fromObject = function(e) {
+            (r.fromObject = function (e) {
               return o.c(r.M(), e);
             }),
-            (r.deserializeBinary = function(e) {
+            (r.deserializeBinary = function (e) {
               var t = new i.BinaryReader(e),
                 n = new r();
               return r.deserializeBinaryFromReader(n, t);
             }),
-            (r.deserializeBinaryFromReader = function(e, t) {
+            (r.deserializeBinaryFromReader = function (e, t) {
               return o.b(r.MBF(), e, t);
             }),
-            (r.prototype.serializeBinary = function() {
+            (r.prototype.serializeBinary = function () {
               var e = new i.BinaryWriter();
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
-            (r.serializeBinaryToWriter = function(e, t) {
+            (r.serializeBinaryToWriter = function (e, t) {
               o.f(r.M(), e, t);
             }),
-            (r.prototype.getClassName = function() {
+            (r.prototype.getClassName = function () {
               return "CNews_PreviewPartnerEvents_Request";
             }),
             r
           );
         })(c),
-        g = (function(n) {
+        g = (function (n) {
           function r(e) {
             void 0 === e && (e = null);
             var t = n.call(this) || this;
@@ -465,7 +465,7 @@
           }
           return (
             Object(u.d)(r, n),
-            (r.M = function() {
+            (r.M = function () {
               return (
                 r.sm_m ||
                   (r.sm_m = {
@@ -474,53 +474,53 @@
                       rss_url: {
                         n: 1,
                         br: o.d.readString,
-                        bw: o.h.writeString
+                        bw: o.h.writeString,
                       },
                       results: { n: 2, c: v, r: !0, q: !0 },
                       error_msg: {
                         n: 3,
                         br: o.d.readString,
-                        bw: o.h.writeString
-                      }
-                    }
+                        bw: o.h.writeString,
+                      },
+                    },
                   }),
                 r.sm_m
               );
             }),
-            (r.MBF = function() {
+            (r.MBF = function () {
               return r.sm_mbf || (r.sm_mbf = o.e(r.M())), r.sm_mbf;
             }),
-            (r.prototype.toObject = function(e) {
+            (r.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
-            (r.toObject = function(e, t) {
+            (r.toObject = function (e, t) {
               return o.g(r.M(), e, t);
             }),
-            (r.fromObject = function(e) {
+            (r.fromObject = function (e) {
               return o.c(r.M(), e);
             }),
-            (r.deserializeBinary = function(e) {
+            (r.deserializeBinary = function (e) {
               var t = new i.BinaryReader(e),
                 n = new r();
               return r.deserializeBinaryFromReader(n, t);
             }),
-            (r.deserializeBinaryFromReader = function(e, t) {
+            (r.deserializeBinaryFromReader = function (e, t) {
               return o.b(r.MBF(), e, t);
             }),
-            (r.prototype.serializeBinary = function() {
+            (r.prototype.serializeBinary = function () {
               var e = new i.BinaryWriter();
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
-            (r.serializeBinaryToWriter = function(e, t) {
+            (r.serializeBinaryToWriter = function (e, t) {
               o.f(r.M(), e, t);
             }),
-            (r.prototype.getClassName = function() {
+            (r.prototype.getClassName = function () {
               return "CNews_PreviewPartnerEvents_Response";
             }),
             r
           );
         })(c),
-        w = (function(n) {
+        w = (function (n) {
           function r(e) {
             void 0 === e && (e = null);
             var t = n.call(this) || this;
@@ -532,50 +532,50 @@
           }
           return (
             Object(u.d)(r, n),
-            (r.M = function() {
+            (r.M = function () {
               return (
                 r.sm_m ||
                   (r.sm_m = {
                     proto: r,
-                    fields: { feeds: { n: 1, c: f, r: !0, q: !0 } }
+                    fields: { feeds: { n: 1, c: f, r: !0, q: !0 } },
                   }),
                 r.sm_m
               );
             }),
-            (r.MBF = function() {
+            (r.MBF = function () {
               return r.sm_mbf || (r.sm_mbf = o.e(r.M())), r.sm_mbf;
             }),
-            (r.prototype.toObject = function(e) {
+            (r.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
-            (r.toObject = function(e, t) {
+            (r.toObject = function (e, t) {
               return o.g(r.M(), e, t);
             }),
-            (r.fromObject = function(e) {
+            (r.fromObject = function (e) {
               return o.c(r.M(), e);
             }),
-            (r.deserializeBinary = function(e) {
+            (r.deserializeBinary = function (e) {
               var t = new i.BinaryReader(e),
                 n = new r();
               return r.deserializeBinaryFromReader(n, t);
             }),
-            (r.deserializeBinaryFromReader = function(e, t) {
+            (r.deserializeBinaryFromReader = function (e, t) {
               return o.b(r.MBF(), e, t);
             }),
-            (r.prototype.serializeBinary = function() {
+            (r.prototype.serializeBinary = function () {
               var e = new i.BinaryWriter();
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
-            (r.serializeBinaryToWriter = function(e, t) {
+            (r.serializeBinaryToWriter = function (e, t) {
               o.f(r.M(), e, t);
             }),
-            (r.prototype.getClassName = function() {
+            (r.prototype.getClassName = function () {
               return "CNews_GetNewsFeedByRepublishClan_Response";
             }),
             r
           );
         })(c),
-        R = (function(n) {
+        R = (function (n) {
           function r(e) {
             void 0 === e && (e = null);
             var t = n.call(this) || this;
@@ -587,53 +587,53 @@
           }
           return (
             Object(u.d)(r, n),
-            (r.M = function() {
+            (r.M = function () {
               return (
                 r.sm_m ||
                   (r.sm_m = {
                     proto: r,
                     fields: {
                       post: { n: 1, c: h },
-                      draft: { n: 2, br: o.d.readBool, bw: o.h.writeBool }
-                    }
+                      draft: { n: 2, br: o.d.readBool, bw: o.h.writeBool },
+                    },
                   }),
                 r.sm_m
               );
             }),
-            (r.MBF = function() {
+            (r.MBF = function () {
               return r.sm_mbf || (r.sm_mbf = o.e(r.M())), r.sm_mbf;
             }),
-            (r.prototype.toObject = function(e) {
+            (r.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
-            (r.toObject = function(e, t) {
+            (r.toObject = function (e, t) {
               return o.g(r.M(), e, t);
             }),
-            (r.fromObject = function(e) {
+            (r.fromObject = function (e) {
               return o.c(r.M(), e);
             }),
-            (r.deserializeBinary = function(e) {
+            (r.deserializeBinary = function (e) {
               var t = new i.BinaryReader(e),
                 n = new r();
               return r.deserializeBinaryFromReader(n, t);
             }),
-            (r.deserializeBinaryFromReader = function(e, t) {
+            (r.deserializeBinaryFromReader = function (e, t) {
               return o.b(r.MBF(), e, t);
             }),
-            (r.prototype.serializeBinary = function() {
+            (r.prototype.serializeBinary = function () {
               var e = new i.BinaryWriter();
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
-            (r.serializeBinaryToWriter = function(e, t) {
+            (r.serializeBinaryToWriter = function (e, t) {
               o.f(r.M(), e, t);
             }),
-            (r.prototype.getClassName = function() {
+            (r.prototype.getClassName = function () {
               return "CNews_PublishPartnerEvent_Request";
             }),
             r
           );
         })(c),
-        O = (function(n) {
+        O = (function (n) {
           function r(e) {
             void 0 === e && (e = null);
             var t = n.call(this) || this;
@@ -645,7 +645,7 @@
           }
           return (
             Object(u.d)(r, n),
-            (r.M = function() {
+            (r.M = function () {
               return (
                 r.sm_m ||
                   (r.sm_m = {
@@ -654,52 +654,52 @@
                       clan_event_gid: {
                         n: 1,
                         br: o.d.readFixed64String,
-                        bw: o.h.writeFixed64String
+                        bw: o.h.writeFixed64String,
                       },
                       news_post_gid: {
                         n: 2,
                         br: o.d.readFixed64String,
-                        bw: o.h.writeFixed64String
-                      }
-                    }
+                        bw: o.h.writeFixed64String,
+                      },
+                    },
                   }),
                 r.sm_m
               );
             }),
-            (r.MBF = function() {
+            (r.MBF = function () {
               return r.sm_mbf || (r.sm_mbf = o.e(r.M())), r.sm_mbf;
             }),
-            (r.prototype.toObject = function(e) {
+            (r.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
-            (r.toObject = function(e, t) {
+            (r.toObject = function (e, t) {
               return o.g(r.M(), e, t);
             }),
-            (r.fromObject = function(e) {
+            (r.fromObject = function (e) {
               return o.c(r.M(), e);
             }),
-            (r.deserializeBinary = function(e) {
+            (r.deserializeBinary = function (e) {
               var t = new i.BinaryReader(e),
                 n = new r();
               return r.deserializeBinaryFromReader(n, t);
             }),
-            (r.deserializeBinaryFromReader = function(e, t) {
+            (r.deserializeBinaryFromReader = function (e, t) {
               return o.b(r.MBF(), e, t);
             }),
-            (r.prototype.serializeBinary = function() {
+            (r.prototype.serializeBinary = function () {
               var e = new i.BinaryWriter();
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
-            (r.serializeBinaryToWriter = function(e, t) {
+            (r.serializeBinaryToWriter = function (e, t) {
               o.f(r.M(), e, t);
             }),
-            (r.prototype.getClassName = function() {
+            (r.prototype.getClassName = function () {
               return "CNews_PublishPartnerEvent_Response";
             }),
             r
           );
         })(c),
-        y = (function(n) {
+        y = (function (n) {
           function r(e) {
             void 0 === e && (e = null);
             var t = n.call(this) || this;
@@ -711,7 +711,7 @@
           }
           return (
             Object(u.d)(r, n),
-            (r.M = function() {
+            (r.M = function () {
               return (
                 r.sm_m ||
                   (r.sm_m = {
@@ -720,59 +720,59 @@
                       news_feed_gid: {
                         n: 1,
                         br: o.d.readFixed64String,
-                        bw: o.h.writeFixed64String
+                        bw: o.h.writeFixed64String,
                       },
                       start_index: {
                         n: 2,
                         d: 0,
                         br: o.d.readUint32,
-                        bw: o.h.writeUint32
+                        bw: o.h.writeUint32,
                       },
                       amount: {
                         n: 3,
                         d: 100,
                         br: o.d.readUint32,
-                        bw: o.h.writeUint32
-                      }
-                    }
+                        bw: o.h.writeUint32,
+                      },
+                    },
                   }),
                 r.sm_m
               );
             }),
-            (r.MBF = function() {
+            (r.MBF = function () {
               return r.sm_mbf || (r.sm_mbf = o.e(r.M())), r.sm_mbf;
             }),
-            (r.prototype.toObject = function(e) {
+            (r.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
-            (r.toObject = function(e, t) {
+            (r.toObject = function (e, t) {
               return o.g(r.M(), e, t);
             }),
-            (r.fromObject = function(e) {
+            (r.fromObject = function (e) {
               return o.c(r.M(), e);
             }),
-            (r.deserializeBinary = function(e) {
+            (r.deserializeBinary = function (e) {
               var t = new i.BinaryReader(e),
                 n = new r();
               return r.deserializeBinaryFromReader(n, t);
             }),
-            (r.deserializeBinaryFromReader = function(e, t) {
+            (r.deserializeBinaryFromReader = function (e, t) {
               return o.b(r.MBF(), e, t);
             }),
-            (r.prototype.serializeBinary = function() {
+            (r.prototype.serializeBinary = function () {
               var e = new i.BinaryWriter();
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
-            (r.serializeBinaryToWriter = function(e, t) {
+            (r.serializeBinaryToWriter = function (e, t) {
               o.f(r.M(), e, t);
             }),
-            (r.prototype.getClassName = function() {
+            (r.prototype.getClassName = function () {
               return "CNews_GetBatchPublishedPartnerEvent_Request";
             }),
             r
           );
         })(c),
-        E = (function(n) {
+        E = (function (n) {
           function r(e) {
             void 0 === e && (e = null);
             var t = n.call(this) || this;
@@ -784,7 +784,7 @@
           }
           return (
             Object(u.d)(r, n),
-            (r.M = function() {
+            (r.M = function () {
               return (
                 r.sm_m ||
                   (r.sm_m = {
@@ -793,100 +793,100 @@
                       clan_account_id: {
                         n: 1,
                         br: o.d.readUint32,
-                        bw: o.h.writeUint32
+                        bw: o.h.writeUint32,
                       },
                       news_feed_gid: {
                         n: 2,
                         br: o.d.readFixed64String,
-                        bw: o.h.writeFixed64String
+                        bw: o.h.writeFixed64String,
                       },
                       clan_event_gid: {
                         n: 3,
                         r: !0,
                         q: !0,
                         br: o.d.readFixed64String,
-                        bw: o.h.writeRepeatedFixed64String
+                        bw: o.h.writeRepeatedFixed64String,
                       },
                       news_post_gid: {
                         n: 4,
                         r: !0,
                         q: !0,
                         br: o.d.readFixed64String,
-                        bw: o.h.writeRepeatedFixed64String
+                        bw: o.h.writeRepeatedFixed64String,
                       },
                       news_url: {
                         n: 5,
                         r: !0,
                         q: !0,
                         br: o.d.readString,
-                        bw: o.h.writeRepeatedString
-                      }
-                    }
+                        bw: o.h.writeRepeatedString,
+                      },
+                    },
                   }),
                 r.sm_m
               );
             }),
-            (r.MBF = function() {
+            (r.MBF = function () {
               return r.sm_mbf || (r.sm_mbf = o.e(r.M())), r.sm_mbf;
             }),
-            (r.prototype.toObject = function(e) {
+            (r.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
-            (r.toObject = function(e, t) {
+            (r.toObject = function (e, t) {
               return o.g(r.M(), e, t);
             }),
-            (r.fromObject = function(e) {
+            (r.fromObject = function (e) {
               return o.c(r.M(), e);
             }),
-            (r.deserializeBinary = function(e) {
+            (r.deserializeBinary = function (e) {
               var t = new i.BinaryReader(e),
                 n = new r();
               return r.deserializeBinaryFromReader(n, t);
             }),
-            (r.deserializeBinaryFromReader = function(e, t) {
+            (r.deserializeBinaryFromReader = function (e, t) {
               return o.b(r.MBF(), e, t);
             }),
-            (r.prototype.serializeBinary = function() {
+            (r.prototype.serializeBinary = function () {
               var e = new i.BinaryWriter();
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
-            (r.serializeBinaryToWriter = function(e, t) {
+            (r.serializeBinaryToWriter = function (e, t) {
               o.f(r.M(), e, t);
             }),
-            (r.prototype.getClassName = function() {
+            (r.prototype.getClassName = function () {
               return "CNews_GetBatchPublishedPartnerEvent_Response";
             }),
             r
           );
         })(c);
-      ((_ = l = l || {}).ConvertHTMLToBBCode = function(e, t) {
+      ((_ = l = l || {}).ConvertHTMLToBBCode = function (e, t) {
         return e.SendMsg("News.ConvertHTMLToBBCode#1", t, b, {
           bConstMethod: !0,
           ePrivilege: 0,
-          eWebAPIKeyRequirement: 1
+          eWebAPIKeyRequirement: 1,
         });
       }),
-        (_.PreviewPartnerEvents = function(e, t) {
+        (_.PreviewPartnerEvents = function (e, t) {
           return e.SendMsg("News.PreviewPartnerEvents#1", t, g, {
             bConstMethod: !0,
-            ePrivilege: 1
+            ePrivilege: 1,
           });
         }),
-        (_.GetNewsFeedByRepublishClan = function(e, t) {
+        (_.GetNewsFeedByRepublishClan = function (e, t) {
           return e.SendMsg("News.GetNewsFeedByRepublishClan#1", t, w, {
             bConstMethod: !0,
-            ePrivilege: 1
+            ePrivilege: 1,
           });
         }),
-        (_.PublishPartnerEvent = function(e, t) {
+        (_.PublishPartnerEvent = function (e, t) {
           return e.SendMsg("News.PublishPartnerEvent#1", t, O, {
-            ePrivilege: 1
+            ePrivilege: 1,
           });
         }),
-        (_.GetBatchPublishedPartnerEvent = function(e, t) {
+        (_.GetBatchPublishedPartnerEvent = function (e, t) {
           return e.SendMsg("News.GetBatchPublishedPartnerEvent#1", t, E, {
             bConstMethod: !0,
-            ePrivilege: 1
+            ePrivilege: 1,
           });
         });
       var C = n("kLLr"),
@@ -894,13 +894,13 @@
         j = n("NtSG"),
         P = n("r64O"),
         M = n("bDQf"),
-        F = (function() {
+        F = (function () {
           function e(e) {
             var t = this;
             (this.m_mapURLToPosted = new Map()),
               (this.m_clanAccountID = e.clanid),
               (this.m_clanSteamID = C.a.InitFromClanID(this.m_clanAccountID)),
-              Object(m.G)(function() {
+              Object(m.G)(function () {
                 (t.m_strRSSFeedURL = e.rss_feed_url),
                   (t.m_strRSSGID = e.rss_feed_gid),
                   (t.m_eRSSFeedLanguage = e.rss_feed_language),
@@ -910,46 +910,46 @@
               });
           }
           return (
-            (e.prototype.GetFeedLanguageHandleUnset = function() {
+            (e.prototype.GetFeedLanguageHandleUnset = function () {
               return -1 == this.m_eRSSFeedLanguage
                 ? -1 == this.m_eCuratorLanguage
                   ? 0
                   : this.m_eCuratorLanguage
                 : this.m_eRSSFeedLanguage;
             }),
-            (e.prototype.GetCuratorLanguage = function() {
+            (e.prototype.GetCuratorLanguage = function () {
               return -1 == this.m_eCuratorLanguage
                 ? 0
                 : this.m_eCuratorLanguage;
             }),
-            (e.prototype.BHasSavedRSSURL = function() {
+            (e.prototype.BHasSavedRSSURL = function () {
               return Boolean(this.m_strRSSFeedURL);
             }),
-            (e.prototype.GetRSSUrl = function() {
+            (e.prototype.GetRSSUrl = function () {
               return this.m_strRSSFeedURL ? this.m_strRSSFeedURL : "";
             }),
-            (e.prototype.GetRSSLastRtimeChecked = function() {
+            (e.prototype.GetRSSLastRtimeChecked = function () {
               return this.m_rtimeRSSLastChecked;
             }),
-            (e.prototype.GetClanSteamID = function() {
+            (e.prototype.GetClanSteamID = function () {
               return this.m_clanSteamID;
             }),
-            (e.prototype.GetClanAccountID = function() {
+            (e.prototype.GetClanAccountID = function () {
               return this.m_clanAccountID;
             }),
-            (e.prototype.BHasSetupFeed = function(e) {
+            (e.prototype.BHasSetupFeed = function (e) {
               return Boolean(this.m_strRSSGID) && this.m_strRSSFeedURL === e;
             }),
-            (e.prototype.BIsAutomationEnabled = function() {
+            (e.prototype.BIsAutomationEnabled = function () {
               return Boolean(0 < this.m_nPollIntervalSeconds);
             }),
-            (e.prototype.BHasFeedGID = function() {
+            (e.prototype.BHasFeedGID = function () {
               return Boolean(this.m_strRSSGID);
             }),
-            (e.prototype.PreviewPartnerEventsFromRSSFeed = function(r) {
-              return Object(u.b)(this, void 0, void 0, function() {
+            (e.prototype.PreviewPartnerEventsFromRSSFeed = function (r) {
+              return Object(u.b)(this, void 0, void 0, function () {
                 var t, n;
-                return Object(u.e)(this, function(e) {
+                return Object(u.e)(this, function (e) {
                   switch (e.label) {
                     case 0:
                       return this.BIsLoggedIn()
@@ -960,7 +960,7 @@
                             l.PreviewPartnerEvents(
                               D.Get().GetCuratorTransport(),
                               t
-                            )
+                            ),
                           ])
                         : (console.error(
                             "PreviewPartnerEventsFromRSSFeed: User not logged in"
@@ -981,14 +981,14 @@
                 });
               });
             }),
-            (e.prototype.FetchPublishedEvents = function(a) {
+            (e.prototype.FetchPublishedEvents = function (a) {
               return (
                 void 0 === a && (a = 100),
-                Object(u.b)(this, void 0, void 0, function() {
+                Object(u.b)(this, void 0, void 0, function () {
                   var t,
                     n,
                     r = this;
-                  return Object(u.e)(this, function(e) {
+                  return Object(u.e)(this, function (e) {
                     switch (e.label) {
                       case 0:
                         return this.BIsLoggedIn()
@@ -1002,7 +1002,7 @@
                                 l.GetBatchPublishedPartnerEvent(
                                   D.Get().GetCuratorTransport(),
                                   t
-                                )
+                                ),
                               ])
                             : (console.error(
                                 "FetchPublishedEvents: Need to create a news feed first"
@@ -1023,7 +1023,7 @@
                                   " msg:" +
                                   n.Hdr().error_message()
                               )
-                            : Object(m.G)(function() {
+                            : Object(m.G)(function () {
                                 for (
                                   var e = 0;
                                   e < n.Body().clan_event_gid().length;
@@ -1034,7 +1034,7 @@
                                     clan_event_gid: n.Body().clan_event_gid()[
                                       e
                                     ],
-                                    news_post_gid: n.Body().news_post_gid()[e]
+                                    news_post_gid: n.Body().news_post_gid()[e],
                                   };
                                   r.m_mapURLToPosted.set(t.url, t);
                                 }
@@ -1046,22 +1046,22 @@
                 })
               );
             }),
-            (e.prototype.MapArticleURLToClanEventGID = function(e) {
+            (e.prototype.MapArticleURLToClanEventGID = function (e) {
               var t = this.m_mapURLToPosted.get(e);
               if (t) return t.clan_event_gid;
             }),
-            (e.prototype.BIsLoggedIn = function() {
+            (e.prototype.BIsLoggedIn = function () {
               return p.i.logged_in;
             }),
-            (e.prototype.CreateOrUpdateRSSNewFeed = function(i, o) {
+            (e.prototype.CreateOrUpdateRSSNewFeed = function (i, o) {
               return (
                 void 0 === o && (o = 0),
-                Object(u.b)(this, void 0, void 0, function() {
+                Object(u.b)(this, void 0, void 0, function () {
                   var t,
                     n,
                     r,
                     a = this;
-                  return Object(u.e)(this, function(e) {
+                  return Object(u.e)(this, function (e) {
                     switch (e.label) {
                       case 0:
                         return (
@@ -1083,7 +1083,7 @@
                       case 1:
                         return (
                           1 == (r = e.sent()).data.success &&
-                            Object(m.G)(function() {
+                            Object(m.G)(function () {
                               (a.m_strRSSGID = r.data.gid),
                                 (a.m_strRSSFeedURL = i),
                                 (a.m_nPollIntervalSeconds = o);
@@ -1095,23 +1095,23 @@
                 })
               );
             }),
-            (e.prototype.UpdateAutomation = function(t) {
-              return Object(u.b)(this, void 0, void 0, function() {
-                return Object(u.e)(this, function(e) {
+            (e.prototype.UpdateAutomation = function (t) {
+              return Object(u.b)(this, void 0, void 0, function () {
+                return Object(u.e)(this, function (e) {
                   return [
                     2,
                     this.CreateOrUpdateRSSNewFeed(
                       this.m_strRSSFeedURL,
                       t ? 300 : 0
-                    )
+                    ),
                   ];
                 });
               });
             }),
-            (e.prototype.CheckForNewUpdate = function() {
-              return Object(u.b)(this, void 0, void 0, function() {
+            (e.prototype.CheckForNewUpdate = function () {
+              return Object(u.b)(this, void 0, void 0, function () {
                 var t, n;
-                return Object(u.e)(this, function(e) {
+                return Object(u.e)(this, function (e) {
                   switch (e.label) {
                     case 0:
                       return this.m_strRSSGID
@@ -1135,13 +1135,13 @@
                 });
               });
             }),
-            (e.prototype.CreatePost = function(i, o) {
-              return Object(u.b)(this, void 0, void 0, function() {
+            (e.prototype.CreatePost = function (i, o) {
+              return Object(u.b)(this, void 0, void 0, function () {
                 var t,
                   n,
                   r,
                   a = this;
-                return Object(u.e)(this, function(e) {
+                return Object(u.e)(this, function (e) {
                   switch (e.label) {
                     case 0:
                       return this.BIsLoggedIn()
@@ -1172,7 +1172,7 @@
                               l.PublishPartnerEvent(
                                 D.Get().GetCuratorTransport(),
                                 n
-                              )
+                              ),
                             ])
                           : (console.error(
                               "CreatePartnerFromPreviewPost: Need to create a news feed first"
@@ -1191,11 +1191,11 @@
                                 " " +
                                 r.GetEResult()
                             )
-                          : (Object(m.G)(function() {
+                          : (Object(m.G)(function () {
                               var e = {
                                 url: i.post.url,
                                 clan_event_gid: r.Body().clan_event_gid(),
-                                news_post_gid: r.Body().news_post_gid()
+                                news_post_gid: r.Body().news_post_gid(),
                               };
                               a.m_mapURLToPosted.set(i.post.url, e);
                             }),
@@ -1220,7 +1220,7 @@
             e
           );
         })(),
-        D = (function() {
+        D = (function () {
           function e() {
             (this.m_mapClanAccountToAdmin = new Map()),
               (this.m_defaultAdmin = void 0),
@@ -1229,7 +1229,7 @@
               (this.m_cClanInfoRequestsInFlight = 0);
           }
           return (
-            (e.prototype.GetCuratorTransport = function() {
+            (e.prototype.GetCuratorTransport = function () {
               return (
                 Object(P.a)(
                   this.m_transport,
@@ -1238,13 +1238,13 @@
                 this.m_transport
               );
             }),
-            (e.prototype.GetDefaultAdmin = function() {
+            (e.prototype.GetDefaultAdmin = function () {
               return this.m_defaultAdmin;
             }),
-            (e.prototype.GetRSSAdminStats = function(e) {
+            (e.prototype.GetRSSAdminStats = function (e) {
               return this.m_mapClanToEventRSSStats.get(e);
             }),
-            (e.Get = function() {
+            (e.Get = function () {
               return (
                 e.s_CuratorAdminStore ||
                   ((e.s_CuratorAdminStore = new e()).Init(),
@@ -1253,7 +1253,7 @@
                 e.s_CuratorAdminStore
               );
             }),
-            (e.prototype.Init = function() {
+            (e.prototype.Init = function () {
               var e = Object(p.f)("curatoradmin", "application_config");
               this.ValidateStoreDefault(e) &&
                 ((this.m_defaultAdmin = new F(e)),
@@ -1267,44 +1267,44 @@
                     e.webapi_token
                   ).GetServiceTransport());
             }),
-            (e.prototype.ValidateStoreDefault = function(e) {
+            (e.prototype.ValidateStoreDefault = function (e) {
               return e && "object" == typeof e && "number" == typeof e.clanid;
             }),
-            (e.prototype.ValidateWebAPI = function(e) {
+            (e.prototype.ValidateWebAPI = function (e) {
               return e && "string" == typeof e.webapi_token;
             }),
-            (e.prototype.BIsLoggedIn = function() {
+            (e.prototype.BIsLoggedIn = function () {
               return p.i.logged_in;
             }),
-            (e.prototype.BHavePendingInfoRequests = function() {
+            (e.prototype.BHavePendingInfoRequests = function () {
               return (
                 0 < this.m_setPendingClanInfo.size ||
                 0 < this.m_cClanInfoRequestsInFlight
               );
             }),
-            (e.prototype.BIsLoadingClanID = function(e) {
+            (e.prototype.BIsLoadingClanID = function (e) {
               return this.m_setPendingClanInfo.has(e);
             }),
-            (e.prototype.BHasClanIDLoaded = function(e) {
+            (e.prototype.BHasClanIDLoaded = function (e) {
               return this.m_mapClanAccountToAdmin.has(e);
             }),
-            (e.prototype.GetRSSAdminForClanAccountID = function(e) {
+            (e.prototype.GetRSSAdminForClanAccountID = function (e) {
               return this.m_mapClanAccountToAdmin.get(e);
             }),
-            (e.prototype.QueueCuratorAdminInfoLoad = function(n) {
-              return Object(u.b)(this, void 0, void 0, function() {
+            (e.prototype.QueueCuratorAdminInfoLoad = function (n) {
+              return Object(u.b)(this, void 0, void 0, function () {
                 var t = this;
-                return Object(u.e)(this, function(e) {
+                return Object(u.e)(this, function (e) {
                   return n
                     ? this.m_mapClanAccountToAdmin.has(n)
                       ? [2, Promise.resolve()]
                       : (this.m_setPendingClanInfo.size ||
                           ((this.m_PendingClanInfoPromise = new Promise(
-                            function(e) {
+                            function (e) {
                               return (t.m_PendingClanInfoResolve = e);
                             }
                           )),
-                          window.setTimeout(function() {
+                          window.setTimeout(function () {
                             return t.FlushPendingClanInfo();
                           }, 25)),
                         this.m_setPendingClanInfo.add(n),
@@ -1317,10 +1317,10 @@
                 });
               });
             }),
-            (e.prototype.FlushPendingClanInfo = function() {
-              return Object(u.b)(this, void 0, void 0, function() {
+            (e.prototype.FlushPendingClanInfo = function () {
+              return Object(u.b)(this, void 0, void 0, function () {
                 var t, n;
-                return Object(u.e)(this, function(e) {
+                return Object(u.e)(this, function (e) {
                   switch (e.label) {
                     case 0:
                       return (
@@ -1337,16 +1337,16 @@
                 });
               });
             }),
-            (e.prototype.EnsureClanInfoLoaded = function(e) {
+            (e.prototype.EnsureClanInfoLoaded = function (e) {
               var t = this,
-                n = e.filter(function(e) {
+                n = e.filter(function (e) {
                   return (
                     !t.m_mapClanAccountToAdmin.has(e) &&
                     t.m_setPendingClanInfo.has(e)
                   );
                 });
               return (
-                n.forEach(function(e) {
+                n.forEach(function (e) {
                   return t.QueueCuratorAdminInfoLoad(e);
                 }),
                 0 < n.length && this.m_PendingClanInfoPromise
@@ -1354,21 +1354,21 @@
                   : Promise.resolve()
               );
             }),
-            (e.prototype.LoadBatchedClanRSSAdminInfo = function(l) {
-              return Object(u.b)(this, void 0, void 0, function() {
+            (e.prototype.LoadBatchedClanRSSAdminInfo = function (l) {
+              return Object(u.b)(this, void 0, void 0, function () {
                 var s,
                   t,
                   c = this;
-                return Object(u.e)(this, function(e) {
+                return Object(u.e)(this, function (e) {
                   switch (e.label) {
                     case 0:
                       this.m_cClanInfoRequestsInFlight++,
-                        (s = l.filter(function(e) {
+                        (s = l.filter(function (e) {
                           return !c.m_mapClanAccountToAdmin.has(e);
                         })),
-                        (t = function() {
+                        (t = function () {
                           var t, n, r, a, i, o;
-                          return Object(u.e)(this, function(e) {
+                          return Object(u.e)(this, function (e) {
                             switch (e.label) {
                               case 0:
                                 (t = Math.min(50, s.length)),
@@ -1386,8 +1386,8 @@
                                     4,
                                     d.a.get(n, {
                                       params: r,
-                                      withCredentials: !0
-                                    })
+                                      withCredentials: !0,
+                                    }),
                                   ]
                                 );
                               case 2:
@@ -1397,17 +1397,17 @@
                                   1 == a.data.success &&
                                   a.data.rss_admin_infos &&
                                   Array.isArray(a.data.rss_admin_infos)
-                                    ? Object(m.G)(function() {
-                                        a.data.rss_admin_infos.forEach(function(
-                                          e
-                                        ) {
-                                          c.m_mapClanAccountToAdmin.set(
-                                            e.clanid,
-                                            new F(e)
-                                          );
-                                        }),
+                                    ? Object(m.G)(function () {
+                                        a.data.rss_admin_infos.forEach(
+                                          function (e) {
+                                            c.m_mapClanAccountToAdmin.set(
+                                              e.clanid,
+                                              new F(e)
+                                            );
+                                          }
+                                        ),
                                           a.data.rss_event_stats.forEach(
-                                            function(e) {
+                                            function (e) {
                                               c.m_mapClanToEventRSSStats.set(
                                                 e.clan_account_id,
                                                 e
@@ -1467,7 +1467,7 @@
         })();
       t.a = D;
     },
-    A2AY: function(e, t, n) {
+    A2AY: function (e, t, n) {
       e.exports = {
         Ctn: "managerss_Ctn_1cSpO",
         RssInput: "managerss_RssInput_8NQ9L",
@@ -1491,21 +1491,21 @@
         ViewRaw: "managerss_ViewRaw_2jvHr",
         LanguageRow: "managerss_LanguageRow_g_9tL",
         LanguageTitle: "managerss_LanguageTitle_2jkBi",
-        LanguageSet: "managerss_LanguageSet_2zsMr"
+        LanguageSet: "managerss_LanguageSet_2zsMr",
       };
     },
-    "r+ba": function(e, t, n) {
+    "r+ba": function (e, t, n) {
       e.exports = {
         Container: "partnereventwebrowembed_Container_2Jd3M",
         StoreHeaderAdjust: "partnereventwebrowembed_StoreHeaderAdjust_3YyCp",
         SectionButtonCtn: "partnereventwebrowembed_SectionButtonCtn_1HP0y",
         SectionButton: "partnereventwebrowembed_SectionButton_3n8sw",
-        EventsSummariesCtn: "partnereventwebrowembed_EventsSummariesCtn_1snIw"
+        EventsSummariesCtn: "partnereventwebrowembed_EventsSummariesCtn_1snIw",
       };
     },
-    wjMc: function(e, t, n) {
+    wjMc: function (e, t, n) {
       "use strict";
-      n.d(t, "a", function() {
+      n.d(t, "a", function () {
         return G;
       });
       var c = n("mrSG"),
@@ -1514,12 +1514,12 @@
         a = n("2l+k"),
         m = n("lkRc"),
         i = n("kLLr"),
-        p = (function() {
+        p = (function () {
           function e() {
             this.m_mapClanToRecommendation = new Map();
           }
           return (
-            (e.Get = function() {
+            (e.Get = function () {
               return (
                 e.s_CuratorStore ||
                   ((e.s_CuratorStore = new e()).Init(),
@@ -1527,24 +1527,24 @@
                 e.s_CuratorStore
               );
             }),
-            (e.prototype.Init = function() {}),
-            (e.prototype.GetReviewForApp = function(e, t) {
+            (e.prototype.Init = function () {}),
+            (e.prototype.GetReviewForApp = function (e, t) {
               if (this.m_mapClanToRecommendation.has(e.GetAccountID()))
                 return this.m_mapClanToRecommendation
                   .get(e.GetAccountID())
                   .get(t);
             }),
-            (e.prototype.BHasReviewForApp = function(e, t) {
+            (e.prototype.BHasReviewForApp = function (e, t) {
               return Boolean(this.GetReviewForApp(e, t));
             }),
-            (e.prototype.BHasReviewForAppByClanAccount = function(e, t) {
+            (e.prototype.BHasReviewForAppByClanAccount = function (e, t) {
               var n = i.a.InitFromClanID(e);
               return Boolean(this.GetReviewForApp(n, t));
             }),
-            (e.prototype.LoadAppRecommendation = function(o, s) {
-              return Object(c.b)(this, void 0, void 0, function() {
+            (e.prototype.LoadAppRecommendation = function (o, s) {
+              return Object(c.b)(this, void 0, void 0, function () {
                 var t, n, r, a, i;
-                return Object(c.e)(this, function(e) {
+                return Object(c.e)(this, function (e) {
                   switch (e.label) {
                     case 0:
                       return (this.m_mapClanToRecommendation.has(
@@ -1558,7 +1558,7 @@
                         o.GetAccountID()
                       )),
                       (n = []),
-                      s.forEach(function(e) {
+                      s.forEach(function (e) {
                         t.has(e) || n.push(e);
                       }),
                       0 < n.length)
@@ -1573,16 +1573,16 @@
                               params: {
                                 appids: n,
                                 cc: m.c.COUNTRY || "US",
-                                l: m.c.LANGUAGE
-                              }
-                            })
+                                l: m.c.LANGUAGE,
+                              },
+                            }),
                           ])
                         : [3, 2];
                     case 1:
                       (a = e.sent()),
                         (i = a && a.data) &&
                           i.rec_app &&
-                          i.rec_app.forEach(function(e) {
+                          i.rec_app.forEach(function (e) {
                             t.set(Number(e.appid), e);
                           }),
                         (e.label = 2);
@@ -1621,15 +1621,12 @@
         A = n("qP7j"),
         L = n.n(A),
         I = n("IzPI"),
-        U = (function(t) {
+        U = (function (t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (
               (e.state = {
-                strRssURL: a.a
-                  .Get()
-                  .GetDefaultAdmin()
-                  .GetRSSUrl()
+                strRssURL: a.a.Get().GetDefaultAdmin().GetRSSUrl(),
               }),
               (e.m_Admin = a.a.Get().GetDefaultAdmin()),
               e
@@ -1637,24 +1634,24 @@
           }
           return (
             Object(c.d)(e, t),
-            (e.prototype.OnChangeActualRSSURL = function(e) {
+            (e.prototype.OnChangeActualRSSURL = function (e) {
               this.setState({ strRssURL: e.target.value });
             }),
-            (e.prototype.OnCreateOrSaveFeed = function(e) {
+            (e.prototype.OnCreateOrSaveFeed = function (e) {
               e.preventDefault(),
                 Object(R.d)(
                   _.a.createElement(z, {
                     strRSSUrl: this.state.strRssURL,
-                    admin: this.m_Admin
+                    admin: this.m_Admin,
                   }),
                   Object(C.m)(e)
                 );
             }),
-            (e.prototype.OnRevert = function(e) {
+            (e.prototype.OnRevert = function (e) {
               e.preventDefault(),
                 this.setState({ strRssURL: this.m_Admin.GetRSSUrl() });
             }),
-            (e.prototype.render = function() {
+            (e.prototype.render = function () {
               var e = Boolean(
                 this.state.strRssURL === this.m_Admin.GetRSSUrl()
               );
@@ -1690,7 +1687,7 @@
                         {
                           href:
                             "https://partner.steamgames.com/doc/store/news/rss",
-                          target: "_blank"
+                          target: "_blank",
                         },
                         Object(B.f)("#CuratorAdmin_RSSFeed_doc_link_text")
                       )
@@ -1707,7 +1704,7 @@
                           "gid/" +
                           this.m_Admin.GetClanSteamID().ConvertTo64BitString() +
                           "/partnerevents/",
-                        className: Object(E.a)(S.a.Button, S.a.Primary)
+                        className: Object(E.a)(S.a.Button, S.a.Primary),
                       },
                       Object(B.f)("#RSSManager_EventDashBoard")
                     )
@@ -1734,7 +1731,7 @@
                           this.m_Admin.GetClanSteamID().ConvertTo64BitString() +
                           "/edit ",
                         target: "_blank",
-                        className: Object(E.a)(S.a.Button, M.PreviewBtn)
+                        className: Object(E.a)(S.a.Button, M.PreviewBtn),
                       },
                       Object(B.f)("#CuratorAdmin_RSSFeed_edit_language")
                     )
@@ -1749,7 +1746,7 @@
                         className: Object(E.a)(
                           M.LanguageRow,
                           L.a.WarningIconLayout
-                        )
+                        ),
                       },
                       _.a.createElement(
                         "span",
@@ -1770,7 +1767,7 @@
                       className: Object(E.a)(
                         S.a.FlexRowContainer,
                         M.UrlSettingCtn
-                      )
+                      ),
                     },
                     _.a.createElement(h.k, {
                       className: M.RssInpu,
@@ -1783,13 +1780,13 @@
                         "#CuratorAdmin_RSSFeed_placeholder"
                       ),
                       onChange: this.OnChangeActualRSSURL,
-                      mustBeURL: !0
+                      mustBeURL: !0,
                     }),
                     _.a.createElement(
                       "a",
                       {
                         className: "btn_green_white_innerfade btn_medium",
-                        onClick: this.OnCreateOrSaveFeed
+                        onClick: this.OnCreateOrSaveFeed,
                       },
                       _.a.createElement(
                         "span",
@@ -1802,7 +1799,7 @@
                         "a",
                         {
                           onClick: this.OnRevert,
-                          className: "btn_grey_white_innerfade btn_medium"
+                          className: "btn_grey_white_innerfade btn_medium",
                         },
                         Object(B.f)("#Button_Revert")
                       )
@@ -1811,7 +1808,7 @@
                   _.a.createElement("br", null),
                   _.a.createElement(G, {
                     strRssURL: this.state.strRssURL,
-                    admin: n
+                    admin: n,
                   })
                 )
               );
@@ -1822,307 +1819,313 @@
             (e = Object(c.c)([o.a], e))
           );
         })(_.a.Component),
-        G = ((t.b = U),
-        (function(t) {
-          function e() {
-            var e = (null !== t && t.apply(this, arguments)) || this;
-            return (
-              (e.state = {
-                strParseRssURL: e.props.strRssURL,
-                bLoadingPreview: !1
-              }),
-              (e.m_cancelSignal = l.a.CancelToken.source()),
-              e
-            );
-          }
-          return (
-            Object(c.d)(e, t),
-            (e.prototype.componentDidMount = function() {
-              var e = this.props.admin;
-              e.BHasFeedGID() &&
-                e.BHasSavedRSSURL() &&
-                e.GetRSSUrl() == this.props.strRssURL &&
-                this.OnLoadPreview();
-            }),
-            (e.prototype.componentWillUnmount = function() {
-              this.m_cancelSignal.cancel(
-                "PreviewRSSViewAndControl component unmounted"
-              );
-            }),
-            (e.prototype.RenderPreviews = function() {
-              var t = this,
-                o = this.props.admin,
-                n = new Array();
+        G =
+          ((t.b = U),
+          (function (t) {
+            function e() {
+              var e = (null !== t && t.apply(this, arguments)) || this;
               return (
-                this.state.previews &&
-                  this.state.previews
-                    .sort(function(e, t) {
-                      var n = o.MapArticleURLToClanEventGID(e.post.url),
-                        r = o.MapArticleURLToClanEventGID(t.post.url),
-                        a = n ? f.c.GetClanEventModel(n) : null,
-                        i = r ? f.c.GetClanEventModel(r) : null;
-                      return a && i
-                        ? i.postTime - a.postTime
-                        : a
-                        ? -1
-                        : i
-                        ? 1
-                        : t.post.rtime_date - e.post.rtime_date;
-                    })
-                    .forEach(function(e) {
-                      n.push(
-                        _.a.createElement(N, {
-                          newsData: e,
-                          admin: o,
-                          key: "id: " + e.unique_id,
-                          clanSteamID: o.GetClanSteamID(),
-                          fnGetRSSUrl: t.GetRSSPreviewURL
-                        })
-                      );
-                    }),
-                n
+                (e.state = {
+                  strParseRssURL: e.props.strRssURL,
+                  bLoadingPreview: !1,
+                }),
+                (e.m_cancelSignal = l.a.CancelToken.source()),
+                e
               );
-            }),
-            (e.prototype.GetRSSPreviewURL = function() {
-              return this.state.strParseRssURL;
-            }),
-            (e.prototype.OnLoadPreview = function() {
-              this.setState(
-                {
-                  bLoadingPreview: !0,
-                  previews: void 0,
-                  strPreviewURL: this.props.strRssURL,
-                  strPreviewErrorMsg: void 0
-                },
-                this.DoLoadPreview
-              );
-            }),
-            (e.prototype.DoLoadPreview = function() {
-              return Object(c.b)(this, void 0, void 0, function() {
-                var a,
-                  t,
-                  i,
-                  n = this;
-                return Object(c.e)(this, function(e) {
-                  switch (e.label) {
-                    case 0:
-                      return [
-                        4,
-                        (a = this.props.admin).PreviewPartnerEventsFromRSSFeed(
-                          this.props.strRssURL
-                        )
-                      ];
-                    case 1:
-                      return (
-                        (t = e.sent()) && 1 == t.GetEResult()
-                          ? ((i = t.Body().toObject()),
-                            this.setState(
-                              {
-                                strParseRssURL: i.rss_url,
-                                bLoadingPreview: !0
-                              },
-                              function() {
-                                return Object(c.b)(
-                                  n,
-                                  void 0,
-                                  void 0,
-                                  function() {
-                                    var n, r, t;
-                                    return Object(c.e)(this, function(e) {
-                                      switch (e.label) {
-                                        case 0:
-                                          return [
-                                            4,
-                                            a.FetchPublishedEvents(
-                                              Math.max(100, i.results.length)
-                                            )
-                                          ];
-                                        case 1:
-                                          return (
-                                            e.sent(),
-                                            (n = new Array()),
-                                            (r = new Array()),
-                                            i.results.forEach(function(e) {
-                                              var t = a.MapArticleURLToClanEventGID(
-                                                e.post.url
-                                              );
-                                              t && n.push(t),
-                                                e.post.appids &&
-                                                  1 === e.post.appids.length &&
-                                                  0 !==
-                                                    e.post
-                                                      .recommendation_state &&
-                                                  r.push(e.post.appids[0]);
-                                            }),
-                                            0 < n.length
-                                              ? [
+            }
+            return (
+              Object(c.d)(e, t),
+              (e.prototype.componentDidMount = function () {
+                var e = this.props.admin;
+                e.BHasFeedGID() &&
+                  e.BHasSavedRSSURL() &&
+                  e.GetRSSUrl() == this.props.strRssURL &&
+                  this.OnLoadPreview();
+              }),
+              (e.prototype.componentWillUnmount = function () {
+                this.m_cancelSignal.cancel(
+                  "PreviewRSSViewAndControl component unmounted"
+                );
+              }),
+              (e.prototype.RenderPreviews = function () {
+                var t = this,
+                  o = this.props.admin,
+                  n = new Array();
+                return (
+                  this.state.previews &&
+                    this.state.previews
+                      .sort(function (e, t) {
+                        var n = o.MapArticleURLToClanEventGID(e.post.url),
+                          r = o.MapArticleURLToClanEventGID(t.post.url),
+                          a = n ? f.c.GetClanEventModel(n) : null,
+                          i = r ? f.c.GetClanEventModel(r) : null;
+                        return a && i
+                          ? i.postTime - a.postTime
+                          : a
+                          ? -1
+                          : i
+                          ? 1
+                          : t.post.rtime_date - e.post.rtime_date;
+                      })
+                      .forEach(function (e) {
+                        n.push(
+                          _.a.createElement(N, {
+                            newsData: e,
+                            admin: o,
+                            key: "id: " + e.unique_id,
+                            clanSteamID: o.GetClanSteamID(),
+                            fnGetRSSUrl: t.GetRSSPreviewURL,
+                          })
+                        );
+                      }),
+                  n
+                );
+              }),
+              (e.prototype.GetRSSPreviewURL = function () {
+                return this.state.strParseRssURL;
+              }),
+              (e.prototype.OnLoadPreview = function () {
+                this.setState(
+                  {
+                    bLoadingPreview: !0,
+                    previews: void 0,
+                    strPreviewURL: this.props.strRssURL,
+                    strPreviewErrorMsg: void 0,
+                  },
+                  this.DoLoadPreview
+                );
+              }),
+              (e.prototype.DoLoadPreview = function () {
+                return Object(c.b)(this, void 0, void 0, function () {
+                  var a,
+                    t,
+                    i,
+                    n = this;
+                  return Object(c.e)(this, function (e) {
+                    switch (e.label) {
+                      case 0:
+                        return [
+                          4,
+                          (a = this.props
+                            .admin).PreviewPartnerEventsFromRSSFeed(
+                            this.props.strRssURL
+                          ),
+                        ];
+                      case 1:
+                        return (
+                          (t = e.sent()) && 1 == t.GetEResult()
+                            ? ((i = t.Body().toObject()),
+                              this.setState(
+                                {
+                                  strParseRssURL: i.rss_url,
+                                  bLoadingPreview: !0,
+                                },
+                                function () {
+                                  return Object(c.b)(
+                                    n,
+                                    void 0,
+                                    void 0,
+                                    function () {
+                                      var n, r, t;
+                                      return Object(c.e)(this, function (e) {
+                                        switch (e.label) {
+                                          case 0:
+                                            return [
+                                              4,
+                                              a.FetchPublishedEvents(
+                                                Math.max(100, i.results.length)
+                                              ),
+                                            ];
+                                          case 1:
+                                            return (
+                                              e.sent(),
+                                              (n = new Array()),
+                                              (r = new Array()),
+                                              i.results.forEach(function (e) {
+                                                var t = a.MapArticleURLToClanEventGID(
+                                                  e.post.url
+                                                );
+                                                t && n.push(t),
+                                                  e.post.appids &&
+                                                    1 ===
+                                                      e.post.appids.length &&
+                                                    0 !==
+                                                      e.post
+                                                        .recommendation_state &&
+                                                    r.push(e.post.appids[0]);
+                                              }),
+                                              0 < n.length
+                                                ? [
+                                                    4,
+                                                    f.c.LoadBatchPartnerEventsByAnnouncementGID(
+                                                      n,
+                                                      null,
+                                                      this.m_cancelSignal
+                                                    ),
+                                                  ]
+                                                : [3, 3]
+                                            );
+                                          case 2:
+                                            e.sent(), (e.label = 3);
+                                          case 3:
+                                            return 0 < r.length
+                                              ? ((t = a.GetClanSteamID()),
+                                                [
                                                   4,
-                                                  f.c.LoadBatchPartnerEventsByAnnouncementGID(
-                                                    n,
-                                                    null,
-                                                    this.m_cancelSignal
-                                                  )
-                                                ]
-                                              : [3, 3]
-                                          );
-                                        case 2:
-                                          e.sent(), (e.label = 3);
-                                        case 3:
-                                          return 0 < r.length
-                                            ? ((t = a.GetClanSteamID()),
-                                              [
-                                                4,
-                                                p
-                                                  .Get()
-                                                  .LoadAppRecommendation(t, r)
-                                              ])
-                                            : [3, 5];
-                                        case 4:
-                                          e.sent(), (e.label = 5);
-                                        case 5:
-                                          return (
-                                            this.setState({
-                                              previews: i.results,
-                                              bLoadingPreview: void 0
-                                            }),
-                                            [2]
-                                          );
-                                      }
-                                    });
-                                  }
-                                );
-                              }
-                            ))
-                          : this.setState({
-                              bLoadingPreview: void 0,
-                              strPreviewErrorMsg: Object(B.f)(
-                                "#Error_Description",
-                                t.GetEResult(),
-                                t.Hdr().error_message()
-                              )
-                            }),
-                        [2]
-                      );
-                  }
+                                                  p
+                                                    .Get()
+                                                    .LoadAppRecommendation(
+                                                      t,
+                                                      r
+                                                    ),
+                                                ])
+                                              : [3, 5];
+                                          case 4:
+                                            e.sent(), (e.label = 5);
+                                          case 5:
+                                            return (
+                                              this.setState({
+                                                previews: i.results,
+                                                bLoadingPreview: void 0,
+                                              }),
+                                              [2]
+                                            );
+                                        }
+                                      });
+                                    }
+                                  );
+                                }
+                              ))
+                            : this.setState({
+                                bLoadingPreview: void 0,
+                                strPreviewErrorMsg: Object(B.f)(
+                                  "#Error_Description",
+                                  t.GetEResult(),
+                                  t.Hdr().error_message()
+                                ),
+                              }),
+                          [2]
+                        );
+                    }
+                  });
                 });
-              });
-            }),
-            (e.prototype.render = function() {
-              var e = this.RenderPreviews(),
-                t = this.props.admin;
-              return _.a.createElement(
-                "div",
-                null,
-                Boolean(
-                  !this.state.bLoadingPreview &&
-                    this.state.strPreviewURL !== this.props.strRssURL
-                ) &&
-                  _.a.createElement(
-                    "div",
-                    { className: M.PreviewListBtn },
-                    _.a.createElement(
-                      h.d,
-                      {
-                        disabled: !h.k.validateUrl(this.props.strRssURL),
-                        onClick: this.OnLoadPreview
-                      },
-                      Object(B.f)("#CuratorAdmin_RSSFeed_preview")
-                    )
-                  ),
-                this.state.bLoadingPreview &&
-                  _.a.createElement(O.a, {
-                    string: Object(B.f)("#Loading"),
-                    size: "medium",
-                    position: "center"
-                  }),
-                this.state.strPreviewErrorMsg &&
-                  _.a.createElement(
-                    "div",
-                    { className: S.a.ErrorMsg },
-                    this.state.strPreviewErrorMsg
-                  ),
-                Boolean(0 < e.length) &&
-                  _.a.createElement(
-                    "div",
-                    null,
-                    _.a.createElement(
-                      "p",
-                      null,
-                      Object(B.f)(
-                        "#RSSManager_PreviewInfo",
-                        this.state.strPreviewURL
-                      )
-                    ),
+              }),
+              (e.prototype.render = function () {
+                var e = this.RenderPreviews(),
+                  t = this.props.admin;
+                return _.a.createElement(
+                  "div",
+                  null,
+                  Boolean(
+                    !this.state.bLoadingPreview &&
+                      this.state.strPreviewURL !== this.props.strRssURL
+                  ) &&
                     _.a.createElement(
                       "div",
-                      { className: M.PreviewListCtn },
-                      e
-                    ),
-                    _.a.createElement(
-                      "p",
-                      { className: M.DashboardBtn },
+                      { className: M.PreviewListBtn },
                       _.a.createElement(
-                        y.a,
+                        h.d,
                         {
-                          href:
-                            m.c.COMMUNITY_BASE_URL +
-                            "gid/" +
-                            t.GetClanSteamID().ConvertTo64BitString() +
-                            "/partnerevents/",
-                          className: Object(E.a)(S.a.Button, S.a.Primary)
+                          disabled: !h.k.validateUrl(this.props.strRssURL),
+                          onClick: this.OnLoadPreview,
                         },
-                        Object(B.f)("#RSSManager_EventDashBoard")
+                        Object(B.f)("#CuratorAdmin_RSSFeed_preview")
+                      )
+                    ),
+                  this.state.bLoadingPreview &&
+                    _.a.createElement(O.a, {
+                      string: Object(B.f)("#Loading"),
+                      size: "medium",
+                      position: "center",
+                    }),
+                  this.state.strPreviewErrorMsg &&
+                    _.a.createElement(
+                      "div",
+                      { className: S.a.ErrorMsg },
+                      this.state.strPreviewErrorMsg
+                    ),
+                  Boolean(0 < e.length) &&
+                    _.a.createElement(
+                      "div",
+                      null,
+                      _.a.createElement(
+                        "p",
+                        null,
+                        Object(B.f)(
+                          "#RSSManager_PreviewInfo",
+                          this.state.strPreviewURL
+                        )
+                      ),
+                      _.a.createElement(
+                        "div",
+                        { className: M.PreviewListCtn },
+                        e
+                      ),
+                      _.a.createElement(
+                        "p",
+                        { className: M.DashboardBtn },
+                        _.a.createElement(
+                          y.a,
+                          {
+                            href:
+                              m.c.COMMUNITY_BASE_URL +
+                              "gid/" +
+                              t.GetClanSteamID().ConvertTo64BitString() +
+                              "/partnerevents/",
+                            className: Object(E.a)(S.a.Button, S.a.Primary),
+                          },
+                          Object(B.f)("#RSSManager_EventDashBoard")
+                        )
                       )
                     )
-                  )
-              );
-            }),
-            Object(c.c)([P.a], e.prototype, "GetRSSPreviewURL", null),
-            Object(c.c)([P.a], e.prototype, "OnLoadPreview", null),
-            (e = Object(c.c)([o.a], e))
-          );
-        })(_.a.Component)),
-        T = (function(t) {
+                );
+              }),
+              Object(c.c)([P.a], e.prototype, "GetRSSPreviewURL", null),
+              Object(c.c)([P.a], e.prototype, "OnLoadPreview", null),
+              (e = Object(c.c)([o.a], e))
+            );
+          })(_.a.Component)),
+        T = (function (t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (e.state = {}), e;
           }
           return (
             Object(c.d)(e, t),
-            (e.prototype.OnToggleChannelAutomation = function(e) {
+            (e.prototype.OnToggleChannelAutomation = function (e) {
               e
                 ? (this.setState({ strErrorMessage: void 0 }),
                   Object(R.d)(
                     _.a.createElement(z, {
                       strRSSUrl: this.props.admin.GetRSSUrl(),
                       admin: this.props.admin,
-                      bActivatePooling: !0
+                      bActivatePooling: !0,
                     }),
                     window
                   ))
                 : this.setState(
                     {
                       strErrorMessage: void 0,
-                      strReasonWaiting: Object(B.f)("#Saving")
+                      strReasonWaiting: Object(B.f)("#Saving"),
                     },
                     this.BDisableAutomation
                   );
             }),
-            (e.prototype.BDisableAutomation = function() {
-              return Object(c.b)(this, void 0, void 0, function() {
+            (e.prototype.BDisableAutomation = function () {
+              return Object(c.b)(this, void 0, void 0, function () {
                 var t = this;
-                return Object(c.e)(this, function(e) {
+                return Object(c.e)(this, function (e) {
                   return (
                     this.props.admin
                       .UpdateAutomation(!1)
-                      .catch(function() {
+                      .catch(function () {
                         return t.setState({
                           strErrorMessage: Object(B.f)(
                             "#RSSManager_Status_Automation_DisableFailed"
-                          )
+                          ),
                         });
                       })
-                      .finally(function() {
+                      .finally(function () {
                         return t.setState({ strReasonWaiting: void 0 });
                       }),
                     [2]
@@ -2130,29 +2133,43 @@
                 });
               });
             }),
-            (e.prototype.OnQueueScan = function(n) {
-              return Object(c.b)(this, void 0, void 0, function() {
+            (e.prototype.OnQueueScan = function (n) {
+              return Object(c.b)(this, void 0, void 0, function () {
                 var t = this;
-                return Object(c.e)(this, function(e) {
+                return Object(c.e)(this, function (e) {
                   return (
                     this.setState({
                       strReasonWaiting: Object(B.f)(
                         "#CuratorAdmin_RSSFeed_scannow"
-                      )
+                      ),
                     }),
                     this.props.admin
                       .CheckForNewUpdate()
-                      .then(function() {
-                        return Object(
-                          R.d
-                        )(_.a.createElement(w.c, { strTitle: Object(B.f)("#CuratorAdmin_RSSFeed_scannow"), strDescription: Object(B.f)("#CuratorAdmin_RSSFeed_queued") }), Object(C.m)(n));
+                      .then(function () {
+                        return Object(R.d)(
+                          _.a.createElement(w.c, {
+                            strTitle: Object(B.f)(
+                              "#CuratorAdmin_RSSFeed_scannow"
+                            ),
+                            strDescription: Object(B.f)(
+                              "#CuratorAdmin_RSSFeed_queued"
+                            ),
+                          }),
+                          Object(C.m)(n)
+                        );
                       })
-                      .catch(function(e) {
-                        return Object(
-                          R.d
-                        )(_.a.createElement(w.e, { strTitle: Object(B.f)("#CuratorAdmin_RSSFeed_scannow"), strDescription: Object(j.a)(e) }), Object(C.m)(n));
+                      .catch(function (e) {
+                        return Object(R.d)(
+                          _.a.createElement(w.e, {
+                            strTitle: Object(B.f)(
+                              "#CuratorAdmin_RSSFeed_scannow"
+                            ),
+                            strDescription: Object(j.a)(e),
+                          }),
+                          Object(C.m)(n)
+                        );
                       })
-                      .finally(function() {
+                      .finally(function () {
                         return t.setState({ strReasonWaiting: void 0 });
                       }),
                     [2]
@@ -2160,7 +2177,7 @@
                 });
               });
             }),
-            (e.prototype.render = function() {
+            (e.prototype.render = function () {
               return this.props.admin.BHasSavedRSSURL()
                 ? _.a.createElement(
                     "div",
@@ -2168,7 +2185,7 @@
                     Boolean(this.state.strReasonWaiting) &&
                       _.a.createElement(O.a, {
                         size: "medium",
-                        string: this.state.strReasonWaiting
+                        string: this.state.strReasonWaiting,
                       }),
                     Boolean(this.state.strErrorMessage) &&
                       _.a.createElement(
@@ -2180,7 +2197,7 @@
                       onChange: this.OnToggleChannelAutomation,
                       label: Object(B.f)("#RSSManager_Status_Automation_Desc"),
                       checked: this.props.admin.BIsAutomationEnabled(),
-                      description: ""
+                      description: "",
                     }),
                     this.props.admin.BIsAutomationEnabled() &&
                       _.a.createElement(
@@ -2213,7 +2230,7 @@
             (e = Object(c.c)([o.a], e))
           );
         })(_.a.Component),
-        N = (function(t) {
+        N = (function (t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (
@@ -2225,20 +2242,20 @@
                   e.props.admin.MapArticleURLToClanEventGID(
                     e.props.newsData.post.url
                   )
-                )
+                ),
               }),
               e
             );
           }
           return (
             Object(c.d)(e, t),
-            (e.prototype.componentDidMount = function() {
+            (e.prototype.componentDidMount = function () {
               this.DoPartnerEventLoad();
             }),
-            (e.prototype.DoPartnerEventLoad = function() {
-              return Object(c.b)(this, void 0, void 0, function() {
+            (e.prototype.DoPartnerEventLoad = function () {
+              return Object(c.b)(this, void 0, void 0, function () {
                 var t, n;
-                return Object(c.e)(this, function(e) {
+                return Object(c.e)(this, function (e) {
                   switch (e.label) {
                     case 0:
                       return this.state.clan_event_gid
@@ -2250,7 +2267,7 @@
                                 f.c.LoadHiddenPartnerEvent(
                                   t,
                                   this.state.clan_event_gid
-                                )
+                                ),
                               ])
                         : [3, 3];
                     case 1:
@@ -2258,7 +2275,7 @@
                     case 2:
                       this.setState({
                         bLoadingPartnerEvent: !1,
-                        existingEventModel: n
+                        existingEventModel: n,
                       }),
                         (e.label = 3);
                     case 3:
@@ -2267,7 +2284,7 @@
                 });
               });
             }),
-            (e.prototype.OnOpenPreviewAsPartnerEvent = function(e) {
+            (e.prototype.OnOpenPreviewAsPartnerEvent = function (e) {
               var t = this.props,
                 n = t.newsData,
                 r = t.clanSteamID,
@@ -2309,12 +2326,12 @@
                     (a.jsondata.localized_subtitle[i] = n.post.event_subtitle)),
                 this.ShowModalEvent(a);
             }),
-            (e.prototype.OnViewEvent = function() {
+            (e.prototype.OnViewEvent = function () {
               this.ShowModalEvent(
                 f.c.GetClanEventModel(this.state.clan_event_gid)
               );
             }),
-            (e.prototype.ShowModalEvent = function(e) {
+            (e.prototype.ShowModalEvent = function (e) {
               var t = document.getElementById("curator_header_area_ctn_id");
               t &&
                 (e
@@ -2322,11 +2339,11 @@
                   : t.classList.remove("curator_header_area_ctn_hideme")),
                 this.setState({ eventModelForPreviewNow: e });
             }),
-            (e.prototype.ValidateJSONDefault = function(e) {
+            (e.prototype.ValidateJSONDefault = function (e) {
               var t = e;
               return !(!t || Array.isArray(t) || "object" != typeof t);
             }),
-            (e.prototype.OnPostNewsEvent = function(e) {
+            (e.prototype.OnPostNewsEvent = function (e) {
               var t = this.props,
                 n = t.newsData,
                 r = t.fnGetRSSUrl;
@@ -2335,12 +2352,12 @@
                   newsData: n,
                   admin: this.props.admin,
                   strRSSUrl: r(),
-                  fnClanEventGID: this.OnClanEventCreateSuccess
+                  fnClanEventGID: this.OnClanEventCreateSuccess,
                 }),
                 Object(C.m)(e)
               );
             }),
-            (e.prototype.OnUpdateNewsEvent = function(e) {
+            (e.prototype.OnUpdateNewsEvent = function (e) {
               var t = this.props,
                 n = t.newsData,
                 r = t.fnGetRSSUrl;
@@ -2350,23 +2367,23 @@
                   strRSSUrl: r(),
                   admin: this.props.admin,
                   fnClanEventGID: this.OnClanEventCreateSuccess,
-                  bUpdatePost: !0
+                  bUpdatePost: !0,
                 }),
                 Object(C.m)(e)
               );
             }),
-            (e.prototype.HideModalEvent = function() {
+            (e.prototype.HideModalEvent = function () {
               this.state.eventModelForPreviewNow && this.ShowModalEvent(void 0);
             }),
-            (e.prototype.OnClanEventCreateSuccess = function(e) {
+            (e.prototype.OnClanEventCreateSuccess = function (e) {
               this.setState(
                 { clan_event_gid: e, bLoadingPartnerEvent: !0 },
                 this.DoPartnerEventLoad
               );
             }),
-            (e.prototype.OnShowRawRSS = function(e) {
+            (e.prototype.OnShowRawRSS = function (e) {
               var n = this.props.newsData.rss_message,
-                t = (function() {
+                t = (function () {
                   var e = n.match(/<entry[^>]*>([\s\S]*)<\/entry>/m);
                   if (!e) return n;
                   var t = e[1].match(/<content[^>]*>[\s\S]*<\/content>/m);
@@ -2377,18 +2394,18 @@
                   w.c,
                   {
                     bAlertDialog: !0,
-                    strTitle: Object(B.f)("#RSSManager_PostEvent_ViewRaw")
+                    strTitle: Object(B.f)("#RSSManager_PostEvent_ViewRaw"),
                   },
                   _.a.createElement("textarea", {
                     className: M.RawRSS,
                     value: t,
-                    disabled: !0
+                    disabled: !0,
                   })
                 ),
                 Object(C.m)(e)
               );
             }),
-            (e.prototype.render = function() {
+            (e.prototype.render = function () {
               var e,
                 t = this.props.newsData,
                 n = this.state,
@@ -2420,7 +2437,7 @@
                       M.PostCtn,
                       Boolean(r) ? M.ActivePost : "",
                       Boolean(t.valid_post) ? "" : M.ErrorPost
-                    )
+                    ),
                   },
                   _.a.createElement(
                     "span",
@@ -2445,7 +2462,7 @@
                             className: Object(E.a)(
                               M.PostDraft,
                               c ? M.PostStaged : ""
-                            )
+                            ),
                           },
                           Object(B.f)(
                             c
@@ -2474,7 +2491,7 @@
                             ? _.a.createElement(O.a, {
                                 string: Object(B.f)("#Loading"),
                                 size: "small",
-                                position: "center"
+                                position: "center",
                               })
                             : _.a.createElement(
                                 "div",
@@ -2483,7 +2500,7 @@
                                   className: Object(E.a)(
                                     S.a.Button,
                                     M.PreviewBtn
-                                  )
+                                  ),
                                 },
                                 Object(B.f)("#RSSManager_PostEvent_ViewEvent")
                               ),
@@ -2496,7 +2513,7 @@
                                 "gid/" +
                                 o.GetClanSteamID().ConvertTo64BitString() +
                                 "/partnerevents/edit/" +
-                                this.state.clan_event_gid
+                                this.state.clan_event_gid,
                             },
                             Object(B.f)("#RSSManager_PostEvent_EditEvent")
                           ),
@@ -2504,7 +2521,7 @@
                             "div",
                             {
                               onClick: this.OnUpdateNewsEvent,
-                              className: Object(E.a)(S.a.Button, M.PreviewBtn)
+                              className: Object(E.a)(S.a.Button, M.PreviewBtn),
                             },
                             Object(B.f)("#RSSManager_PostEvent_UpdateEvent")
                           ),
@@ -2522,7 +2539,7 @@
                                     t.post.appids[0] +
                                     "/?curator_clanid=" +
                                     s.GetAccountID()
-                                )
+                                ),
                               },
                               Object(B.f)("#RSSManager_SeeReview")
                             )
@@ -2534,7 +2551,7 @@
                             "div",
                             {
                               onClick: this.OnOpenPreviewAsPartnerEvent,
-                              className: Object(E.a)(S.a.Button, M.PreviewBtn)
+                              className: Object(E.a)(S.a.Button, M.PreviewBtn),
                             },
                             Object(B.f)(
                               "#CuratorAdmin_RSSFeed_col_preview_event"
@@ -2544,7 +2561,7 @@
                             "div",
                             {
                               onClick: this.OnPostNewsEvent,
-                              className: Object(E.a)(S.a.Button, M.PreviewBtn)
+                              className: Object(E.a)(S.a.Button, M.PreviewBtn),
                             },
                             Object(B.f)(
                               "#CuratorAdmin_RSSFeed_col_create_event"
@@ -2566,7 +2583,7 @@
                           null,
                           _.a.createElement(b.b, {
                             event: this.state.eventModelForPreviewNow,
-                            fnClose: this.HideModalEvent
+                            fnClose: this.HideModalEvent,
                           })
                         )
                       )
@@ -2590,21 +2607,21 @@
             (e = Object(c.c)([o.a], e))
           );
         })(_.a.Component),
-        z = (function(t) {
+        z = (function (t) {
           function n() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (
               (e.state = {
                 initialState: n.DetermineStartState(e.props),
                 step: n.DetermineStartState(e.props),
-                bDraftMode: !0
+                bDraftMode: !0,
               }),
               e
             );
           }
           return (
             Object(c.d)(n, t),
-            (n.DetermineStartState = function(e) {
+            (n.DetermineStartState = function (e) {
               var t = e.admin.BHasSetupFeed(e.strRSSUrl);
               return e.newsData && t
                 ? e.bUpdatePost
@@ -2616,13 +2633,13 @@
                 ? "update_feed"
                 : "feed_missing";
             }),
-            (n.prototype.OnCreateNewsFeed = function() {
+            (n.prototype.OnCreateNewsFeed = function () {
               this.setState({ step: "creating_feed" }, this.DoCreateNewsFeed);
             }),
-            (n.prototype.DoCreateNewsFeed = function() {
-              return Object(c.b)(this, void 0, void 0, function() {
+            (n.prototype.DoCreateNewsFeed = function () {
+              return Object(c.b)(this, void 0, void 0, function () {
                 var t;
-                return Object(c.e)(this, function(e) {
+                return Object(c.e)(this, function (e) {
                   switch (e.label) {
                     case 0:
                       return [
@@ -2630,7 +2647,7 @@
                         this.props.admin.CreateOrUpdateRSSNewFeed(
                           this.props.strRSSUrl,
                           this.props.bActivatePooling ? 300 : 0
-                        )
+                        ),
                       ];
                     case 1:
                       return (
@@ -2640,12 +2657,12 @@
                               eResult: t.success,
                               strErrorMessage: Object(B.f)(
                                 "#RSSManager_PostEvent_Failure"
-                              )
+                              ),
                             })
                           : this.setState({
                               step: this.props.newsData
                                 ? "create_post"
-                                : "success"
+                                : "success",
                             }),
                         [2]
                       );
@@ -2653,13 +2670,13 @@
                 });
               });
             }),
-            (n.prototype.OnCreatePost = function() {
+            (n.prototype.OnCreatePost = function () {
               this.setState({ step: "waiting_post" }, this.DoCreatePost);
             }),
-            (n.prototype.DoCreatePost = function() {
-              return Object(c.b)(this, void 0, void 0, function() {
+            (n.prototype.DoCreatePost = function () {
+              return Object(c.b)(this, void 0, void 0, function () {
                 var t;
-                return Object(c.e)(this, function(e) {
+                return Object(c.e)(this, function (e) {
                   switch (e.label) {
                     case 0:
                       return [
@@ -2667,7 +2684,7 @@
                         this.props.admin.CreatePost(
                           this.props.newsData,
                           Boolean(this.state.bDraftMode)
-                        )
+                        ),
                       ];
                     case 1:
                       return (
@@ -2677,7 +2694,7 @@
                               eResult: t.GetEResult(),
                               strErrorMessage: Object(B.f)(
                                 "#RSSManager_PostEvent_Failure"
-                              )
+                              ),
                             })
                           : (this.props.fnClanEventGID &&
                               this.props.fnClanEventGID(
@@ -2685,7 +2702,7 @@
                               ),
                             this.setState({
                               step: "success",
-                              eventGID: t.Body().clan_event_gid()
+                              eventGID: t.Body().clan_event_gid(),
                             })),
                         [2]
                       );
@@ -2693,16 +2710,16 @@
                 });
               });
             }),
-            (n.prototype.OnChangeDraftMode = function(e) {
+            (n.prototype.OnChangeDraftMode = function (e) {
               this.setState({ bDraftMode: e });
             }),
-            (n.prototype.OnChangePermissionsCreateFeed = function(e) {
+            (n.prototype.OnChangePermissionsCreateFeed = function (e) {
               this.setState({ bPermissions: e });
             }),
-            (n.prototype.OnChangeConductCreateFeed = function(e) {
+            (n.prototype.OnChangeConductCreateFeed = function (e) {
               this.setState({ bConduct: e });
             }),
-            (n.prototype.GetStrTitle = function() {
+            (n.prototype.GetStrTitle = function () {
               if (this.props.newsData)
                 return Object(B.f)(
                   this.props.bUpdatePost
@@ -2719,7 +2736,7 @@
                   return Object(B.f)("#RSSManager_Status_Automation_Activate");
               }
             }),
-            (n.prototype.render = function() {
+            (n.prototype.render = function () {
               var e = this.props.strRSSUrl;
               switch (this.state.step) {
                 case "feed_missing":
@@ -2766,7 +2783,7 @@
                               "#RSSManager_CreateFeed_Permissions_v1"
                             ),
                             onChange: this.OnChangePermissionsCreateFeed,
-                            checked: Boolean(this.state.bPermissions)
+                            checked: Boolean(this.state.bPermissions),
                           })
                         ),
                         _.a.createElement(
@@ -2777,7 +2794,7 @@
                               "#RSSManager_CreateFeed_Conduct_v1"
                             ),
                             onChange: this.OnChangeConductCreateFeed,
-                            checked: Boolean(this.state.bConduct)
+                            checked: Boolean(this.state.bConduct),
                           }),
                           _.a.createElement(
                             y.a,
@@ -2794,7 +2811,7 @@
                             this.state.bPermissions && this.state.bConduct
                           ),
                           onOK: this.OnCreateNewsFeed,
-                          onCancel: this.props.closeModal
+                          onCancel: this.props.closeModal,
                         })
                       )
                     )
@@ -2806,7 +2823,7 @@
                       strDescription: Object(B.f)(
                         "#RSSManager_PostEvent_Failure"
                       ),
-                      closeModal: this.props.closeModal
+                      closeModal: this.props.closeModal,
                     },
                     _.a.createElement(
                       "div",
@@ -2827,7 +2844,7 @@
                       strDescription: Object(B.f)(
                         "#RSSManager_PostEvent_InFlight"
                       ),
-                      closeModal: this.props.closeModal
+                      closeModal: this.props.closeModal,
                     },
                     _.a.createElement(O.a, { position: "center" })
                   );
@@ -2864,7 +2881,7 @@
                                 "#RSSManager_PostEvent_CreatePost_Draft"
                               ),
                               onChange: this.OnChangeDraftMode,
-                              checked: Boolean(this.state.bDraftMode)
+                              checked: Boolean(this.state.bDraftMode),
                             })
                           )
                         )
@@ -2874,7 +2891,7 @@
                         null,
                         _.a.createElement(h.m, {
                           onOK: this.OnCreatePost,
-                          onCancel: this.props.closeModal
+                          onCancel: this.props.closeModal,
                         })
                       )
                     )
@@ -2912,7 +2929,7 @@
                         null,
                         _.a.createElement(h.m, {
                           onOK: this.OnCreatePost,
-                          onCancel: this.props.closeModal
+                          onCancel: this.props.closeModal,
                         })
                       )
                     )
@@ -2928,7 +2945,7 @@
                           : "#RSSManager_PostEvent_Success_feed"
                       ),
                       closeModal: this.props.closeModal,
-                      bAlertDialog: !0
+                      bAlertDialog: !0,
                     },
                     Boolean(this.state.eventGID) &&
                       _.a.createElement(
@@ -2941,7 +2958,7 @@
                               .GetClanSteamID()
                               .ConvertTo64BitString() +
                             "/partnerevents/edit/" +
-                            this.state.eventGID
+                            this.state.eventGID,
                         },
                         Object(B.f)("#RSSManager_PostEvent_EventLink")
                       )
@@ -2964,6 +2981,6 @@
             n
           );
         })(_.a.Component);
-    }
-  }
+    },
+  },
 ]);

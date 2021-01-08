@@ -3,7 +3,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 var CLSTAMP = "6296065";
-!(function(e) {
+!(function (e) {
   function t(t) {
     for (
       var r, a, s = t[0], c = t[1], u = t[2], f = 0, d = [];
@@ -35,13 +35,13 @@ var CLSTAMP = "6296065";
     var n = (r[t] = { i: t, l: !1, exports: {} });
     return e[t].call(n.exports, n, n.exports, a), (n.l = !0), n.exports;
   }
-  (a.e = function(e) {
+  (a.e = function (e) {
     var t = [],
       n = i[e];
     if (0 !== n)
       if (n) t.push(n[2]);
       else {
-        var r = new Promise(function(t, r) {
+        var r = new Promise(function (t, r) {
           n = i[e] = [t, r];
         });
         t.push((n[2] = r));
@@ -50,7 +50,7 @@ var CLSTAMP = "6296065";
         (s.charset = "utf-8"),
           (s.timeout = 120),
           a.nc && s.setAttribute("nonce", a.nc),
-          (s.src = (function(e) {
+          (s.src = (function (e) {
             return (
               a.p +
               "javascript/webui/" +
@@ -114,7 +114,7 @@ var CLSTAMP = "6296065";
                 65: "shared_thai-json",
                 66: "shared_turkish-json",
                 67: "shared_ukrainian-json",
-                68: "shared_vietnamese-json"
+                68: "shared_vietnamese-json",
               }[e] || e) +
               ".js?contenthash=" +
               {
@@ -177,12 +177,12 @@ var CLSTAMP = "6296065";
                 65: "f9dc78413afa60ec1d62",
                 66: "f816240637beb5da40f8",
                 67: "260e98d0f60215c8f806",
-                68: "731b09d1e71f6e43c5e8"
+                68: "731b09d1e71f6e43c5e8",
               }[e]
             );
           })(e));
         var c = new Error();
-        o = function(t) {
+        o = function (t) {
           (s.onerror = s.onload = null), clearTimeout(u);
           var n = i[e];
           if (0 !== n) {
@@ -199,7 +199,7 @@ var CLSTAMP = "6296065";
             i[e] = void 0;
           }
         };
-        var u = setTimeout(function() {
+        var u = setTimeout(function () {
           o({ type: "timeout", target: s });
         }, 12e4);
         (s.onerror = s.onload = o), document.head.appendChild(s);
@@ -208,16 +208,16 @@ var CLSTAMP = "6296065";
   }),
     (a.m = e),
     (a.c = r),
-    (a.d = function(e, t, n) {
+    (a.d = function (e, t, n) {
       a.o(e, t) || Object.defineProperty(e, t, { enumerable: !0, get: n });
     }),
-    (a.r = function(e) {
+    (a.r = function (e) {
       "undefined" != typeof Symbol &&
         Symbol.toStringTag &&
         Object.defineProperty(e, Symbol.toStringTag, { value: "Module" }),
         Object.defineProperty(e, "__esModule", { value: !0 });
     }),
-    (a.t = function(e, t) {
+    (a.t = function (e, t) {
       if ((1 & t && (e = a(e)), 8 & t)) return e;
       if (4 & t && "object" == typeof e && e && e.__esModule) return e;
       var n = Object.create(null);
@@ -230,28 +230,28 @@ var CLSTAMP = "6296065";
           a.d(
             n,
             r,
-            function(t) {
+            function (t) {
               return e[t];
             }.bind(null, r)
           );
       return n;
     }),
-    (a.n = function(e) {
+    (a.n = function (e) {
       var t =
         e && e.__esModule
-          ? function() {
+          ? function () {
               return e.default;
             }
-          : function() {
+          : function () {
               return e;
             };
       return a.d(t, "a", t), t;
     }),
-    (a.o = function(e, t) {
+    (a.o = function (e, t) {
       return Object.prototype.hasOwnProperty.call(e, t);
     }),
     (a.p = ""),
-    (a.oe = function(e) {
+    (a.oe = function (e) {
       throw (console.error(e), e);
     });
   var s = (window.webpackJsonp = window.webpackJsonp || []),
@@ -261,7 +261,7 @@ var CLSTAMP = "6296065";
   var l = c;
   o.push(["qM/t", 0]), n();
 })({
-  "/7KC": function(e, t, n) {
+  "/7KC": function (e, t, n) {
     "use strict";
     function r(e, t) {
       return (
@@ -276,17 +276,17 @@ var CLSTAMP = "6296065";
     function o(e, t, n, r, i) {
       return r + ((i - r) * (e - t)) / (n - t);
     }
-    n.d(t, "b", function() {
+    n.d(t, "b", function () {
       return r;
     }),
-      n.d(t, "a", function() {
+      n.d(t, "a", function () {
         return i;
       }),
-      n.d(t, "c", function() {
+      n.d(t, "c", function () {
         return o;
       });
   },
-  "0N1H": function(e, t, n) {
+  "0N1H": function (e, t, n) {
     "use strict";
     function r(e) {
       return 3 == e || 6 == e;
@@ -294,58 +294,58 @@ var CLSTAMP = "6296065";
     function i(e) {
       return 5 == e || 6 == e;
     }
-    n.d(t, "b", function() {
+    n.d(t, "b", function () {
       return r;
     }),
-      n.d(t, "a", function() {
+      n.d(t, "a", function () {
         return i;
       }),
-      n.d(t, "q", function() {
+      n.d(t, "q", function () {
         return o;
       }),
-      n.d(t, "r", function() {
+      n.d(t, "r", function () {
         return a;
       }),
-      n.d(t, "p", function() {
+      n.d(t, "p", function () {
         return s;
       }),
-      n.d(t, "j", function() {
+      n.d(t, "j", function () {
         return c;
       }),
-      n.d(t, "k", function() {
+      n.d(t, "k", function () {
         return u;
       }),
-      n.d(t, "l", function() {
+      n.d(t, "l", function () {
         return l;
       }),
-      n.d(t, "m", function() {
+      n.d(t, "m", function () {
         return f;
       }),
-      n.d(t, "o", function() {
+      n.d(t, "o", function () {
         return d;
       }),
-      n.d(t, "n", function() {
+      n.d(t, "n", function () {
         return h;
       }),
-      n.d(t, "g", function() {
+      n.d(t, "g", function () {
         return p;
       }),
-      n.d(t, "i", function() {
+      n.d(t, "i", function () {
         return _;
       }),
-      n.d(t, "h", function() {
+      n.d(t, "h", function () {
         return m;
       }),
-      n.d(t, "d", function() {
+      n.d(t, "d", function () {
         return b;
       }),
-      n.d(t, "e", function() {
+      n.d(t, "e", function () {
         return g;
       }),
-      n.d(t, "c", function() {
+      n.d(t, "c", function () {
         return v;
       }),
-      n.d(t, "f", function() {
+      n.d(t, "f", function () {
         return E;
       });
     var o = 1,
@@ -426,7 +426,7 @@ var CLSTAMP = "6296065";
           return t;
       }
     }
-    var g = function(e) {
+    var g = function (e) {
       return "koreana" === e ? "korean" : e;
     };
     function v(e, t) {
@@ -563,28 +563,28 @@ var CLSTAMP = "6296065";
       }
     }
   },
-  "1VtQ": function(e, t, n) {
+  "1VtQ": function (e, t, n) {
     "use strict";
-    n.d(t, "a", function() {
+    n.d(t, "a", function () {
       return r;
     }),
-      n.d(t, "b", function() {
+      n.d(t, "b", function () {
         return i;
       }),
-      n.d(t, "c", function() {
+      n.d(t, "c", function () {
         return o;
       });
     n("Gp1o"), n("q1tI");
     function r(e, t, n) {
       return {
-        get: function() {
+        get: function () {
           var e = n.value.bind(this);
           return (
             this.hasOwnProperty(t) ||
               Object.defineProperty(this, t, { value: e }),
             e
           );
-        }
+        },
       };
     }
     function i(e, t, n) {
@@ -594,33 +594,33 @@ var CLSTAMP = "6296065";
       null != e && ("function" == typeof e ? e(t) : (e.current = t));
     }
   },
-  "1n9R": function(e, t, n) {
+  "1n9R": function (e, t, n) {
     "use strict";
-    n.d(t, "c", function() {
+    n.d(t, "c", function () {
       return a;
     }),
-      n.d(t, "i", function() {
+      n.d(t, "i", function () {
         return s;
       }),
-      n.d(t, "a", function() {
+      n.d(t, "a", function () {
         return c;
       }),
-      n.d(t, "b", function() {
+      n.d(t, "b", function () {
         return u;
       }),
-      n.d(t, "f", function() {
+      n.d(t, "f", function () {
         return l;
       }),
-      n.d(t, "h", function() {
+      n.d(t, "h", function () {
         return f;
       }),
-      n.d(t, "g", function() {
+      n.d(t, "g", function () {
         return d;
       }),
-      n.d(t, "d", function() {
+      n.d(t, "d", function () {
         return h;
       }),
-      n.d(t, "e", function() {
+      n.d(t, "e", function () {
         return p;
       });
     n("mrSG");
@@ -664,7 +664,7 @@ var CLSTAMP = "6296065";
         BUILD_TIMESTAMP: 0,
         PAGE_TIMESTAMP: 0,
         get SESSIONID() {
-          return (function() {
+          return (function () {
             if (!Object(o.a)()) return r || (r = l()), r;
             var e = Object(o.b)("sessionid");
             e || (e = l());
@@ -675,7 +675,7 @@ var CLSTAMP = "6296065";
         STEAM_TV: !1,
         DEV_MODE: !1,
         OFFLINE_MODE: !1,
-        IN_LIBRARY: !1
+        IN_LIBRARY: !1,
       },
       s = {
         logged_in: !1,
@@ -689,7 +689,7 @@ var CLSTAMP = "6296065";
         is_support: !1,
         is_limited: !1,
         short_url: "",
-        country_code: ""
+        country_code: "",
       },
       c = { steamid: "", clanid: 0, listid: 0 },
       u = {
@@ -707,10 +707,10 @@ var CLSTAMP = "6296065";
         APP_NAME: "",
         HAS_ADULT_CONTENT: !1,
         HAS_ADULT_CONTENT_SEX: !1,
-        HAS_ADULT_CONTENT_VIOLENCE: !1
+        HAS_ADULT_CONTENT_VIOLENCE: !1,
       };
     function l() {
-      var e = (function() {
+      var e = (function () {
         for (var e = "", t = 0; t < 24; t++)
           e += Object(i.b)(0, 35).toString(36);
         return e;
@@ -784,7 +784,7 @@ var CLSTAMP = "6296065";
         : "";
     }
   },
-  "79S0": function(e, t, n) {
+  "79S0": function (e, t, n) {
     var r = {
       "./friendsui_arabic.json": ["C1RR", 9],
       "./friendsui_brazilian.json": ["s2l5", 10],
@@ -815,27 +815,27 @@ var CLSTAMP = "6296065";
       "./friendsui_thai.json": ["5Ip8", 35],
       "./friendsui_turkish.json": ["1E74", 36],
       "./friendsui_ukrainian.json": ["JXOb", 37],
-      "./friendsui_vietnamese.json": ["bFjG", 38]
+      "./friendsui_vietnamese.json": ["bFjG", 38],
     };
     function i(e) {
       if (!n.o(r, e))
-        return Promise.resolve().then(function() {
+        return Promise.resolve().then(function () {
           var t = new Error("Cannot find module '" + e + "'");
           throw ((t.code = "MODULE_NOT_FOUND"), t);
         });
       var t = r[e],
         i = t[0];
-      return n.e(t[1]).then(function() {
+      return n.e(t[1]).then(function () {
         return n.t(i, 3);
       });
     }
-    (i.keys = function() {
+    (i.keys = function () {
       return Object.keys(r);
     }),
       (i.id = "79S0"),
       (e.exports = i);
   },
-  "9Lmx": function(e, t, n) {
+  "9Lmx": function (e, t, n) {
     var r = {
       "./shared_arabic.json": ["nqme", 39],
       "./shared_brazilian.json": ["f72x", 40],
@@ -866,44 +866,44 @@ var CLSTAMP = "6296065";
       "./shared_thai.json": ["4+X1", 65],
       "./shared_turkish.json": ["w87n", 66],
       "./shared_ukrainian.json": ["6eLe", 67],
-      "./shared_vietnamese.json": ["AKAV", 68]
+      "./shared_vietnamese.json": ["AKAV", 68],
     };
     function i(e) {
       if (!n.o(r, e))
-        return Promise.resolve().then(function() {
+        return Promise.resolve().then(function () {
           var t = new Error("Cannot find module '" + e + "'");
           throw ((t.code = "MODULE_NOT_FOUND"), t);
         });
       var t = r[e],
         i = t[0];
-      return n.e(t[1]).then(function() {
+      return n.e(t[1]).then(function () {
         return n.t(i, 3);
       });
     }
-    (i.keys = function() {
+    (i.keys = function () {
       return Object.keys(r);
     }),
       (i.id = "9Lmx"),
       (e.exports = i);
   },
-  Ezvv: function(e, t, n) {
+  Ezvv: function (e, t, n) {
     "use strict";
-    n.d(t, "a", function() {
+    n.d(t, "a", function () {
       return o;
     }),
-      n.d(t, "b", function() {
+      n.d(t, "b", function () {
         return s;
       });
     var r = n("1n9R"),
       i = { success: !0, result: 1 },
-      o = (function() {
+      o = (function () {
         function e() {
           (this.m_connection = new a()),
             (this.m_bAllowAccountMismatch = !1),
             (this.m_mapCacheSubscribedApp = new Map());
         }
         return (
-          (e.prototype.FailureResult = function(e) {
+          (e.prototype.FailureResult = function (e) {
             void 0 === e && (e = 2);
             var t = { success: !1, result: e };
             return (
@@ -917,21 +917,21 @@ var CLSTAMP = "6296065";
               t
             );
           }),
-          (e.prototype.SetAllowAccountMismatch = function(e) {
+          (e.prototype.SetAllowAccountMismatch = function (e) {
             this.m_bAllowAccountMismatch = e;
           }),
-          (e.prototype.BClientConnected = function() {
+          (e.prototype.BClientConnected = function () {
             var e = this;
             return this.m_connection.Connect().then(
-              function() {
+              function () {
                 return i;
               },
-              function() {
+              function () {
                 return e.FailureResult();
               }
             );
           }),
-          (e.prototype.BClientSupportsMessage = function(e) {
+          (e.prototype.BClientSupportsMessage = function (e) {
             return (
               !(
                 !this.m_connection.connected_to_client ||
@@ -940,66 +940,68 @@ var CLSTAMP = "6296065";
               -1 !== this.m_connection.ClientInfo.rgSupportedMessages.indexOf(e)
             );
           }),
-          (e.prototype.OpenFriendChatDialog = function(e) {
+          (e.prototype.OpenFriendChatDialog = function (e) {
             var t = { message: "ShowFriendChatDialog", steamid: e };
             return this.GenericEResultCall(t);
           }),
-          (e.prototype.OpenChatRoomGroupDialog = function(e, t) {
+          (e.prototype.OpenChatRoomGroupDialog = function (e, t) {
             var n = { message: "ShowChatRoomGroupDialog", chat_group_id: e };
             return t && (n.chat_room_id = t), this.GenericEResultCall(n);
           }),
-          (e.prototype.ShowChatRoomGroupInvite = function(e) {
+          (e.prototype.ShowChatRoomGroupInvite = function (e) {
             var t = { message: "ShowChatRoomGroupInvite", invite_code: e };
             return this.GenericEResultCall(t);
           }),
-          (e.prototype.OpenJoinGameDialog = function(e) {
+          (e.prototype.OpenJoinGameDialog = function (e) {
             var t = { message: "ShowJoinGameDialog", friend_id: e };
             return this.GenericEResultCall(t);
           }),
-          (e.prototype.BIsSubscribedApp = function(e) {
+          (e.prototype.BIsSubscribedApp = function (e) {
             var t = this;
             if (this.m_mapCacheSubscribedApp.has(e))
               return Promise.resolve(this.m_mapCacheSubscribedApp.get(e));
             var n = { message: "IsSubscribedApp", appid: e };
-            return this.GenericEResultCall(n).then(function(n) {
+            return this.GenericEResultCall(n).then(function (n) {
               if (!n.connect_failed) {
                 var r = 1 == n.result;
                 return t.m_mapCacheSubscribedApp.set(e, r), r;
               }
             });
           }),
-          (e.prototype.ViewGameInfoForSteamID = function(e) {
+          (e.prototype.ViewGameInfoForSteamID = function (e) {
             var t = { message: "ViewGameInfoForSteamID", steamid: e };
             return this.GenericEResultCall(t);
           }),
-          (e.prototype.OpenFriendsDialog = function() {
+          (e.prototype.OpenFriendsDialog = function () {
             return this.GenericEResultCall({ message: "OpenFriendsDialog" });
           }),
-          (e.prototype.BClientAccountMatches = function() {
+          (e.prototype.BClientAccountMatches = function () {
             return (
               !r.i.logged_in ||
               r.i.accountid == this.m_connection.ClientInfo.unAccountID
             );
           }),
-          (e.prototype.GenericEResultCall = function(e) {
+          (e.prototype.GenericEResultCall = function (e) {
             var t = this;
             return this.m_connection
               .Connect()
-              .then(function() {
+              .then(function () {
                 return t.m_bAllowAccountMismatch || t.BClientAccountMatches()
-                  ? t.m_connection.SendMsgAndAwaitResponse(e).then(function(e) {
-                      return 1 === e.success ? i : t.FailureResult(e.success);
-                    })
+                  ? t.m_connection
+                      .SendMsgAndAwaitResponse(e)
+                      .then(function (e) {
+                        return 1 === e.success ? i : t.FailureResult(e.success);
+                      })
                   : { success: !1, result: 19, account_mismatch: !0 };
               })
-              .catch(function() {
+              .catch(function () {
                 return t.FailureResult();
               });
           }),
           e
         );
       })(),
-      a = (function() {
+      a = (function () {
         function e() {
           (this.m_mapWaitingCallbacks = new Map()),
             (this.m_iCallSeq = 1),
@@ -1010,59 +1012,59 @@ var CLSTAMP = "6296065";
               ulVersion: "",
               bFriendsUIEnabled: !1,
               unAccountID: 0,
-              rgSupportedMessages: []
+              rgSupportedMessages: [],
             });
         }
         return (
           Object.defineProperty(e.prototype, "ClientInfo", {
-            get: function() {
+            get: function () {
               return this.m_ClientInfo;
             },
             enumerable: !1,
-            configurable: !0
+            configurable: !0,
           }),
           Object.defineProperty(e.prototype, "ready", {
-            get: function() {
+            get: function () {
               return this.m_bReady;
             },
             enumerable: !1,
-            configurable: !0
+            configurable: !0,
           }),
           Object.defineProperty(e.prototype, "browser_supported", {
-            get: function() {
+            get: function () {
               return !this.m_bSecurityException;
             },
             enumerable: !1,
-            configurable: !0
+            configurable: !0,
           }),
           Object.defineProperty(e.prototype, "connected_to_client", {
-            get: function() {
+            get: function () {
               return (
                 this.m_socket && this.m_socket.readyState == WebSocket.OPEN
               );
             },
             enumerable: !1,
-            configurable: !0
+            configurable: !0,
           }),
-          (e.prototype.SendMsgAndAwaitResponse = function(e) {
+          (e.prototype.SendMsgAndAwaitResponse = function (e) {
             var t = this;
-            return new Promise(function(n, r) {
+            return new Promise(function (n, r) {
               var i = t.m_iCallSeq++;
               t.BSendMsg(e, i)
                 ? t.m_mapWaitingCallbacks.set(i, {
                     iSeq: i,
                     fnCallback: n,
-                    fnError: r
+                    fnError: r,
                   })
                 : r();
             });
           }),
-          (e.prototype.BSendMsg = function(e, t) {
+          (e.prototype.BSendMsg = function (e, t) {
             if (!this.m_socket || this.m_socket.readyState != WebSocket.OPEN)
               return !1;
             var n = Object.assign({}, e, {
               universe: r.c.EUNIVERSE,
-              accountid: r.i.accountid
+              accountid: r.i.accountid,
             });
             void 0 !== t && (n.sequenceid = t);
             try {
@@ -1071,7 +1073,7 @@ var CLSTAMP = "6296065";
               return !1;
             }
           }),
-          (e.prototype.OnSocketMessage = function(e) {
+          (e.prototype.OnSocketMessage = function (e) {
             try {
               var t = JSON.parse(e.data);
               if (t.sequenceid) {
@@ -1086,12 +1088,12 @@ var CLSTAMP = "6296065";
               console.error("exception parsing response", e);
             }
           }),
-          (e.prototype.Connect = function() {
+          (e.prototype.Connect = function () {
             var e = this;
             if (this.m_bReady && this.m_socket.readyState == WebSocket.OPEN)
               return Promise.resolve();
             if (this.m_promiseConnect) return this.m_promiseConnect;
-            var t = new Promise(function(t, n) {
+            var t = new Promise(function (t, n) {
               try {
                 e.m_socket = new WebSocket(
                   "ws://127.0.0.1:27060/clientsocket/"
@@ -1099,13 +1101,13 @@ var CLSTAMP = "6296065";
               } catch (t) {
                 return (e.m_bSecurityException = !0), void n(t);
               }
-              (e.m_socket.onerror = function(e) {
+              (e.m_socket.onerror = function (e) {
                 n();
               }),
                 (e.m_socket.onmessage = e.OnSocketMessage.bind(e)),
-                (e.m_socket.onopen = function() {
+                (e.m_socket.onopen = function () {
                   e.SendMsgAndAwaitResponse({ message: "GetClientInfo" })
-                    .then(function(r) {
+                    .then(function (r) {
                       1 == r.success
                         ? ((e.m_ClientInfo.ulVersion = r.clientversion),
                           (e.m_ClientInfo.bFriendsUIEnabled = !!r.friendsui),
@@ -1122,10 +1124,10 @@ var CLSTAMP = "6296065";
             return (
               (this.m_promiseConnect = t),
               this.m_promiseConnect
-                .then(function() {
+                .then(function () {
                   (e.m_bReady = !0), (e.m_promiseConnect = void 0);
                 })
-                .catch(function() {
+                .catch(function () {
                   (e.m_bClientConnectionFailed = !0),
                     (e.m_promiseConnect = void 0);
                 }),
@@ -1138,69 +1140,69 @@ var CLSTAMP = "6296065";
       s = new o();
     window.ClientConnectionAPI = s;
   },
-  J0bI: function(e, t, n) {
+  J0bI: function (e, t, n) {
     "use strict";
-    n.d(t, "b", function() {
+    n.d(t, "b", function () {
       return s;
     }),
-      n.d(t, "a", function() {
+      n.d(t, "a", function () {
         return c;
       });
     var r = n("mrSG"),
       i = n("2vnA"),
       o = n("0N1H"),
       a = n("tkkQ"),
-      s = (function() {
+      s = (function () {
         function e(e) {
           (this.m_bReady = !1),
             (this.m_bValid = !1),
             (this.m_strInviteCode = e);
         }
         return (
-          (e.prototype.BIsReady = function() {
+          (e.prototype.BIsReady = function () {
             return this.m_bReady;
           }),
-          (e.prototype.BIsValid = function() {
+          (e.prototype.BIsValid = function () {
             return this.m_bValid;
           }),
-          (e.prototype.BIsInviteLink = function() {
+          (e.prototype.BIsInviteLink = function () {
             return !!this.m_strInviteCode;
           }),
-          (e.prototype.GetInviteCode = function() {
+          (e.prototype.GetInviteCode = function () {
             return this.m_strInviteCode;
           }),
-          (e.prototype.BNeverExpires = function() {
+          (e.prototype.BNeverExpires = function () {
             return this.m_rtTimeExpires == o.h;
           }),
-          (e.prototype.GetChatRoomGroupID = function() {
+          (e.prototype.GetChatRoomGroupID = function () {
             return this.m_ulChatRoomGroupID;
           }),
-          (e.prototype.BIsVoiceChatInvite = function() {
+          (e.prototype.BIsVoiceChatInvite = function () {
             return !!this.m_ulChatID;
           }),
-          (e.prototype.GetChatID = function() {
+          (e.prototype.GetChatID = function () {
             return this.m_ulChatID;
           }),
-          (e.prototype.GetURL = function() {
+          (e.prototype.GetURL = function () {
             return this.m_strInviteCode ? c(this.m_strInviteCode) : null;
           }),
-          (e.prototype.BIsUserBanned = function() {
+          (e.prototype.BIsUserBanned = function () {
             return this.m_bIsBanned;
           }),
-          (e.prototype.GetTimeKickExpires = function() {
+          (e.prototype.GetTimeKickExpires = function () {
             return this.m_rtKickExpires;
           }),
           Object.defineProperty(e.prototype, "time_expires", {
-            get: function() {
+            get: function () {
               return this.m_rtTimeExpires;
             },
             enumerable: !1,
-            configurable: !0
+            configurable: !0,
           }),
-          (e.prototype.InitInvalid = function() {
+          (e.prototype.InitInvalid = function () {
             (this.m_bValid = !1), (this.m_bReady = !0);
           }),
-          (e.prototype.InitDirectInvite = function(e, t, n, r) {
+          (e.prototype.InitDirectInvite = function (e, t, n, r) {
             void 0 === n && (n = !1),
               void 0 === r && (r = void 0),
               (this.m_ulChatRoomGroupID = e),
@@ -1223,36 +1225,36 @@ var CLSTAMP = "6296065";
         : a.a.COMMUNITY_BASE_URL + "chat/invite/" + e;
     }
   },
-  Kcgk: function(e, t, n) {
+  Kcgk: function (e, t, n) {
     "use strict";
-    n.d(t, "j", function() {
+    n.d(t, "j", function () {
       return s;
     }),
-      n.d(t, "e", function() {
+      n.d(t, "e", function () {
         return c;
       }),
-      n.d(t, "h", function() {
+      n.d(t, "h", function () {
         return u;
       }),
-      n.d(t, "f", function() {
+      n.d(t, "f", function () {
         return l;
       }),
-      n.d(t, "g", function() {
+      n.d(t, "g", function () {
         return d;
       }),
-      n.d(t, "i", function() {
+      n.d(t, "i", function () {
         return _;
       }),
-      n.d(t, "a", function() {
+      n.d(t, "a", function () {
         return m;
       }),
-      n.d(t, "c", function() {
+      n.d(t, "c", function () {
         return y;
       }),
-      n.d(t, "b", function() {
+      n.d(t, "b", function () {
         return S;
       }),
-      n.d(t, "d", function() {
+      n.d(t, "d", function () {
         return j;
       });
     var r = n("mrSG"),
@@ -1268,7 +1270,7 @@ var CLSTAMP = "6296065";
                 {
                   bExcludeAgo: !1,
                   bForceSingleUnits: !1,
-                  bHighGranularity: !1
+                  bHighGranularity: !1,
                 },
                 t
               )).bExcludeAgo
@@ -1326,7 +1328,7 @@ var CLSTAMP = "6296065";
         weekday: "short",
         month: "long",
         day: "numeric",
-        year: t ? void 0 : "numeric"
+        year: t ? void 0 : "numeric",
       };
       return new Date(1e3 * e).toLocaleDateString(i.e.GetPreferredLocales(), n);
     }
@@ -1339,7 +1341,7 @@ var CLSTAMP = "6296065";
         (r = t.toLocaleDateString(i.e.GetPreferredLocales(), {
           year: "numeric",
           month: "short",
-          day: "numeric"
+          day: "numeric",
         })),
         h.set(n, r),
         r
@@ -1348,14 +1350,14 @@ var CLSTAMP = "6296065";
     function l(e) {
       return new Date(1e3 * e).toLocaleTimeString(i.e.GetPreferredLocales(), {
         hour: "numeric",
-        minute: "numeric"
+        minute: "numeric",
       });
     }
     var f = new Map();
     function d(e) {
       var t = new Date(1e3 * e),
         n = i.e.GetPreferredLocales(),
-        r = (function(e) {
+        r = (function (e) {
           var t = f.get(e);
           if (!0 === t || !1 === t) return t;
           var n = new Date();
@@ -1408,7 +1410,7 @@ var CLSTAMP = "6296065";
             bGranularFutureTime: !1,
             bGranularToday: !1,
             bGranularYesterday: !1,
-            bGranularPast: !1
+            bGranularPast: !1,
           },
           t
         );
@@ -1477,7 +1479,7 @@ var CLSTAMP = "6296065";
         ((r = e.toLocaleDateString(i.e.GetPreferredLocales(), {
           weekday: "long",
           day: "numeric",
-          month: t ? "long" : "short"
+          month: t ? "long" : "short",
         })),
         C.set(n, r),
         r)
@@ -1488,7 +1490,7 @@ var CLSTAMP = "6296065";
       return (
         t ||
         ((t = e.toLocaleDateString(i.e.GetPreferredLocales(), {
-          weekday: "long"
+          weekday: "long",
         })),
         b.set(e.getDay(), t),
         t)
@@ -1499,7 +1501,7 @@ var CLSTAMP = "6296065";
       return (
         t ||
         ((t = e.toLocaleDateString(i.e.GetPreferredLocales(), {
-          month: "long"
+          month: "long",
         })),
         g.set(e.getMonth(), t),
         t)
@@ -1510,7 +1512,7 @@ var CLSTAMP = "6296065";
       return (
         t ||
         ((t = e.toLocaleDateString(i.e.GetPreferredLocales(), {
-          year: "numeric"
+          year: "numeric",
         })),
         v.set(e.getFullYear(), t),
         t)
@@ -1523,14 +1525,14 @@ var CLSTAMP = "6296065";
         n ||
         ((n = e.toLocaleDateString(i.e.GetPreferredLocales(), {
           month: "long",
-          year: "numeric"
+          year: "numeric",
         })),
         E.set(t, n),
         n)
       );
     }
   },
-  O0sN: function(e, t, n) {
+  O0sN: function (e, t, n) {
     "use strict";
     "VALVE_PUBLIC_PATH" in window
       ? (n.p = window.VALVE_PUBLIC_PATH)
@@ -1538,39 +1540,39 @@ var CLSTAMP = "6296065";
           "VALVE_PUBLIC_PATH not defined; check for a call to CHTMLHelpers::WebpackConfigScriptlet"
         );
   },
-  UqDm: function(e, t, n) {
+  UqDm: function (e, t, n) {
     "use strict";
-    n.d(t, "i", function() {
+    n.d(t, "i", function () {
       return r;
     }),
-      n.d(t, "g", function() {
+      n.d(t, "g", function () {
         return i;
       }),
-      n.d(t, "a", function() {
+      n.d(t, "a", function () {
         return o;
       }),
-      n.d(t, "d", function() {
+      n.d(t, "d", function () {
         return a;
       }),
-      n.d(t, "e", function() {
+      n.d(t, "e", function () {
         return s;
       }),
-      n.d(t, "c", function() {
+      n.d(t, "c", function () {
         return c;
       }),
-      n.d(t, "b", function() {
+      n.d(t, "b", function () {
         return u;
       }),
-      n.d(t, "j", function() {
+      n.d(t, "j", function () {
         return l;
       }),
-      n.d(t, "k", function() {
+      n.d(t, "k", function () {
         return f;
       }),
-      n.d(t, "h", function() {
+      n.d(t, "h", function () {
         return d;
       }),
-      n.d(t, "f", function() {
+      n.d(t, "f", function () {
         return h;
       });
     n("XaMz");
@@ -1594,7 +1596,7 @@ var CLSTAMP = "6296065";
       return !0;
     }
     function a(e, t) {
-      return s(e, function(e) {
+      return s(e, function (e) {
         return t == e;
       });
     }
@@ -1603,12 +1605,12 @@ var CLSTAMP = "6296065";
       return n >= 0 && (e.splice(n, 1), !0);
     }
     function c(e, t) {
-      return e.reduce(function(e, n, r, i) {
+      return e.reduce(function (e, n, r, i) {
         return e + (t(n, r, i) ? 1 : 0);
       }, 0);
     }
     function u(e, t) {
-      return e.filter(function(e) {
+      return e.filter(function (e) {
         return t !== e;
       });
     }
@@ -1647,9 +1649,9 @@ var CLSTAMP = "6296065";
         }
     }
   },
-  XaMz: function(e, t, n) {
+  XaMz: function (e, t, n) {
     "use strict";
-    n.d(t, "a", function() {
+    n.d(t, "a", function () {
       return i;
     });
     var r = n("mrSG");
@@ -1663,11 +1665,11 @@ var CLSTAMP = "6296065";
         : e || console.warn.apply(console, Object(r.g)([t], n));
     }
   },
-  Y3TG: function(e, t, n) {
+  Y3TG: function (e, t, n) {
     "use strict";
     n("vDqi");
   },
-  YlSc: function(e, t, n) {
+  YlSc: function (e, t, n) {
     "use strict";
     function r(e) {
       if (!o() || !window.document.cookie) return null;
@@ -1695,70 +1697,70 @@ var CLSTAMP = "6296065";
     function o() {
       return !!window.document;
     }
-    n.d(t, "b", function() {
+    n.d(t, "b", function () {
       return r;
     }),
-      n.d(t, "c", function() {
+      n.d(t, "c", function () {
         return i;
       }),
-      n.d(t, "a", function() {
+      n.d(t, "a", function () {
         return o;
       });
   },
-  hEDq: function(e, t, n) {
+  hEDq: function (e, t, n) {
     "use strict";
-    n.d(t, "n", function() {
+    n.d(t, "n", function () {
       return a;
     }),
-      n.d(t, "d", function() {
+      n.d(t, "d", function () {
         return s;
       }),
-      n.d(t, "f", function() {
+      n.d(t, "f", function () {
         return c;
       }),
-      n.d(t, "h", function() {
+      n.d(t, "h", function () {
         return u;
       }),
-      n.d(t, "c", function() {
+      n.d(t, "c", function () {
         return l;
       }),
-      n.d(t, "i", function() {
+      n.d(t, "i", function () {
         return f;
       }),
-      n.d(t, "k", function() {
+      n.d(t, "k", function () {
         return d;
       }),
-      n.d(t, "e", function() {
+      n.d(t, "e", function () {
         return p;
       }),
-      n.d(t, "p", function() {
+      n.d(t, "p", function () {
         return _;
       }),
-      n.d(t, "g", function() {
+      n.d(t, "g", function () {
         return h;
       }),
-      n.d(t, "b", function() {
+      n.d(t, "b", function () {
         return m;
       }),
-      n.d(t, "j", function() {
+      n.d(t, "j", function () {
         return b;
       }),
-      n.d(t, "l", function() {
+      n.d(t, "l", function () {
         return g;
       }),
-      n.d(t, "m", function() {
+      n.d(t, "m", function () {
         return v;
       }),
-      n.d(t, "a", function() {
+      n.d(t, "a", function () {
         return E;
       });
     var r = n("mrSG"),
       i = n("0N1H");
-    n.d(t, "o", function() {
+    n.d(t, "o", function () {
       return i.f;
     });
     var o = n("2vnA"),
-      a = (function() {
+      a = (function () {
         function e() {
           (this.enabled = !1),
             (this.locked = !1),
@@ -1777,8 +1779,8 @@ var CLSTAMP = "6296065";
           e
         );
       })(),
-      s = (function() {
-        return function() {
+      s = (function () {
+        return function () {
           (this.broadcastid = "0"),
             (this.nViewers = 0),
             (this.nRequests = 0),
@@ -1816,7 +1818,7 @@ var CLSTAMP = "6296065";
         bDisableSpellcheck: !1,
         bDisableRoomEffects: !1,
         bAnimatedAvatars: !0,
-        featuresEnabled: {}
+        featuresEnabled: {},
       };
     }
     var u;
@@ -1826,7 +1828,7 @@ var CLSTAMP = "6296065";
         e == u.EBrowserType_OpenVROverlay_Dashboard
       );
     }
-    !(function(e) {
+    !(function (e) {
       (e[(e.EBrowserType_OffScreen = 0)] = "EBrowserType_OffScreen"),
         (e[(e.EBrowserType_OpenVROverlay = 1)] = "EBrowserType_OpenVROverlay"),
         (e[(e.EBrowserType_OpenVROverlay_Dashboard = 2)] =
@@ -1851,7 +1853,7 @@ var CLSTAMP = "6296065";
         (e[(e.EBrowserType_MAX = 12)] = "EBrowserType_MAX");
     })(u || (u = {}));
     var f, d;
-    !(function(e) {
+    !(function (e) {
       (e[(e.k_EClientUINotificationGroupChatMessage = 1)] =
         "k_EClientUINotificationGroupChatMessage"),
         (e[(e.k_EClientUINotificationFriendChatMessage = 2)] =
@@ -1859,7 +1861,7 @@ var CLSTAMP = "6296065";
         (e[(e.k_EClientUINotificationFriendPersonaState = 3)] =
           "k_EClientUINotificationFriendPersonaState");
     })(f || (f = {})),
-      (function(e) {
+      (function (e) {
         (e[(e.k_EComputerActiveStateInvalid = 0)] =
           "k_EComputerActiveStateInvalid"),
           (e[(e.k_EComputerActiveStateActive = 1)] =
@@ -1868,13 +1870,13 @@ var CLSTAMP = "6296065";
             "k_EComputerActiveStateIdle");
       })(d || (d = {}));
     var h,
-      p = (function() {
-        return function() {};
+      p = (function () {
+        return function () {};
       })(),
-      _ = (function() {
-        return function() {};
+      _ = (function () {
+        return function () {};
       })();
-    !(function(e) {
+    !(function (e) {
       (e[(e.k_EPending = 0)] = "k_EPending"),
         (e[(e.k_EAccepted = 1)] = "k_EAccepted"),
         (e[(e.k_ERejected = 2)] = "k_ERejected");
@@ -1891,7 +1893,7 @@ var CLSTAMP = "6296065";
       );
     }
     var b, g;
-    !(function(e) {
+    !(function (e) {
       (e[(e.k_EClientUsedInputTypeKeyboard = 0)] =
         "k_EClientUsedInputTypeKeyboard"),
         (e[(e.k_EClientUsedInputTypeMouse = 1)] =
@@ -1900,7 +1902,7 @@ var CLSTAMP = "6296065";
           "k_EClientUsedInputTypeController"),
         (e[(e.k_EClientUsedInputTypeMax = 3)] = "k_EClientUsedInputTypeMax");
     })(b || (b = {})),
-      (function(e) {
+      (function (e) {
         (e[(e.k_ERemoteClientLaunchOK = 1)] = "k_ERemoteClientLaunchOK"),
           (e[(e.k_ERemoteClientLaunchFail = 2)] = "k_ERemoteClientLaunchFail"),
           (e[(e.k_ERemoteClientLaunchRequiresUI = 3)] =
@@ -1959,18 +1961,18 @@ var CLSTAMP = "6296065";
     function E(e) {
       return e === v.k_ESteamRealmChina;
     }
-    !(function(e) {
+    !(function (e) {
       (e[(e.k_ESteamRealmUnknown = 0)] = "k_ESteamRealmUnknown"),
         (e[(e.k_ESteamRealmGlobal = 1)] = "k_ESteamRealmGlobal"),
         (e[(e.k_ESteamRealmChina = 2)] = "k_ESteamRealmChina");
     })(v || (v = {}));
     var C, y, S, I, j, O;
-    !(function(e) {
+    !(function (e) {
       (e[(e.Unknown = 0)] = "Unknown"),
         (e[(e.Wired = 1)] = "Wired"),
         (e[(e.Wireless = 2)] = "Wireless");
     })(C || (C = {})),
-      (function(e) {
+      (function (e) {
         (e[(e.NotPresent = 0)] = "NotPresent"),
           (e[(e.Failed = 1)] = "Failed"),
           (e[(e.Disconnected = 2)] = "Disconnected"),
@@ -1979,14 +1981,14 @@ var CLSTAMP = "6296065";
           (e[(e.Connected = 5)] = "Connected"),
           (e[(e.Retrying = 6)] = "Retrying");
       })(y || (y = {})),
-      (function(e) {
+      (function (e) {
         (e[(e.None = 0)] = "None"),
           (e[(e.Weak = 1)] = "Weak"),
           (e[(e.Ok = 2)] = "Ok"),
           (e[(e.Good = 3)] = "Good"),
           (e[(e.Excellent = 4)] = "Excellent");
       })(S || (S = {})),
-      (function(e) {
+      (function (e) {
         (e[(e.None = 0)] = "None"),
           (e[(e.StaticWep = 1)] = "StaticWep"),
           (e[(e.DynamicWep = 2)] = "DynamicWep"),
@@ -1996,38 +1998,38 @@ var CLSTAMP = "6296065";
           (e[(e.Wpa2Enterprise = 32)] = "Wpa2Enterprise"),
           (e[(e.Unsupported = 32768)] = "Unsupported");
       })(I || (I = {})),
-      (function(e) {
+      (function (e) {
         (e[(e.SystemKey0 = 0)] = "SystemKey0"),
           (e[(e.SystemKey1 = 1)] = "SystemKey1");
       })(j || (j = {})),
-      (function(e) {
+      (function (e) {
         (e[(e.Hidden = 0)] = "Hidden"),
           (e[(e.Notification = 1)] = "Notification"),
           (e[(e.Overlay = 2)] = "Overlay"),
           (e[(e.Opaque = 3)] = "Opaque");
       })(O || (O = {}));
   },
-  mrSG: function(e, t, n) {
+  mrSG: function (e, t, n) {
     "use strict";
-    n.d(t, "d", function() {
+    n.d(t, "d", function () {
       return i;
     }),
-      n.d(t, "a", function() {
+      n.d(t, "a", function () {
         return o;
       }),
-      n.d(t, "f", function() {
+      n.d(t, "f", function () {
         return a;
       }),
-      n.d(t, "c", function() {
+      n.d(t, "c", function () {
         return s;
       }),
-      n.d(t, "b", function() {
+      n.d(t, "b", function () {
         return c;
       }),
-      n.d(t, "e", function() {
+      n.d(t, "e", function () {
         return u;
       }),
-      n.d(t, "g", function() {
+      n.d(t, "g", function () {
         return l;
       });
     /*! *****************************************************************************
@@ -2044,14 +2046,14 @@ LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
 OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
 PERFORMANCE OF THIS SOFTWARE.
 ***************************************************************************** */
-    var r = function(e, t) {
+    var r = function (e, t) {
       return (r =
         Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array &&
-          function(e, t) {
+          function (e, t) {
             e.__proto__ = t;
           }) ||
-        function(e, t) {
+        function (e, t) {
           for (var n in t) t.hasOwnProperty(n) && (e[n] = t[n]);
         })(e, t);
     };
@@ -2065,10 +2067,10 @@ PERFORMANCE OF THIS SOFTWARE.
             ? Object.create(t)
             : ((n.prototype = t.prototype), new n()));
     }
-    var o = function() {
+    var o = function () {
       return (o =
         Object.assign ||
-        function(e) {
+        function (e) {
           for (var t, n = 1, r = arguments.length; n < r; n++)
             for (var i in (t = arguments[n]))
               Object.prototype.hasOwnProperty.call(t, i) && (e[i] = t[i]);
@@ -2108,7 +2110,7 @@ PERFORMANCE OF THIS SOFTWARE.
       return o > 3 && a && Object.defineProperty(t, n, a), a;
     }
     function c(e, t, n, r) {
-      return new (n || (n = Promise))(function(i, o) {
+      return new (n || (n = Promise))(function (i, o) {
         function a(e) {
           try {
             c(r.next(e));
@@ -2130,7 +2132,7 @@ PERFORMANCE OF THIS SOFTWARE.
             : ((t = e.value),
               t instanceof n
                 ? t
-                : new n(function(e) {
+                : new n(function (e) {
                     e(t);
                   })).then(a, s);
         }
@@ -2144,24 +2146,24 @@ PERFORMANCE OF THIS SOFTWARE.
         o,
         a = {
           label: 0,
-          sent: function() {
+          sent: function () {
             if (1 & i[0]) throw i[1];
             return i[1];
           },
           trys: [],
-          ops: []
+          ops: [],
         };
       return (
         (o = { next: s(0), throw: s(1), return: s(2) }),
         "function" == typeof Symbol &&
-          (o[Symbol.iterator] = function() {
+          (o[Symbol.iterator] = function () {
             return this;
           }),
         o
       );
       function s(o) {
-        return function(s) {
-          return (function(o) {
+        return function (s) {
+          return (function (o) {
             if (n) throw new TypeError("Generator is already executing.");
             for (; a; )
               try {
@@ -2237,30 +2239,30 @@ PERFORMANCE OF THIS SOFTWARE.
       return r;
     }
   },
-  oh5H: function(e, t, n) {
+  oh5H: function (e, t, n) {
     "use strict";
-    n.d(t, "b", function() {
+    n.d(t, "b", function () {
       return l;
     }),
-      n.d(t, "f", function() {
+      n.d(t, "f", function () {
         return f;
       }),
-      n.d(t, "n", function() {
+      n.d(t, "n", function () {
         return d;
       }),
-      n.d(t, "l", function() {
+      n.d(t, "l", function () {
         return h;
       }),
-      n.d(t, "a", function() {
+      n.d(t, "a", function () {
         return p;
       }),
-      n.d(t, "d", function() {
+      n.d(t, "d", function () {
         return m;
       }),
-      n.d(t, "c", function() {
+      n.d(t, "c", function () {
         return b;
       }),
-      n.d(t, "e", function() {
+      n.d(t, "e", function () {
         return g;
       });
     var r = n("mrSG"),
@@ -2270,50 +2272,50 @@ PERFORMANCE OF THIS SOFTWARE.
       s = n("1n9R"),
       c = n("UqDm"),
       u = (n("XaMz"), n("Kcgk"));
-    n.d(t, "g", function() {
+    n.d(t, "g", function () {
       return u.a;
     }),
-      n.d(t, "h", function() {
+      n.d(t, "h", function () {
         return u.b;
       }),
-      n.d(t, "j", function() {
+      n.d(t, "j", function () {
         return u.d;
       }),
-      n.d(t, "k", function() {
+      n.d(t, "k", function () {
         return u.e;
       }),
-      n.d(t, "m", function() {
+      n.d(t, "m", function () {
         return u.f;
       }),
-      n.d(t, "o", function() {
+      n.d(t, "o", function () {
         return u.h;
       }),
-      n.d(t, "p", function() {
+      n.d(t, "p", function () {
         return u.i;
       }),
-      n.d(t, "q", function() {
+      n.d(t, "q", function () {
         return u.j;
       }),
-      n.d(t, "i", function() {
+      n.d(t, "i", function () {
         return u.c;
       });
-    var l = (function() {
+    var l = (function () {
       function e() {
         (this.m_mapTokens = new Map()), (this.m_mapFallbackTokens = new Map());
       }
       return (
-        (e.GetLanguageFallback = function(e) {
+        (e.GetLanguageFallback = function (e) {
           return "sc_schinese" === e ? "schinese" : "english";
         }),
-        (e.GetELanguageFallback = function(e) {
+        (e.GetELanguageFallback = function (e) {
           return 29 === e ? 6 : 0;
         }),
-        (e.IsELanguageValidInRealm = function(e, t) {
+        (e.IsELanguageValidInRealm = function (e, t) {
           return (
             t === (29 === e ? a.m.k_ESteamRealmChina : a.m.k_ESteamRealmGlobal)
           );
         }),
-        (e.GetLanguageListForRealms = function(e) {
+        (e.GetLanguageListForRealms = function (e) {
           for (var t = new Array(), n = 0; n < 30; n++)
             for (var r = 0, i = e; r < i.length; r++) {
               var o = i[r];
@@ -2324,58 +2326,58 @@ PERFORMANCE OF THIS SOFTWARE.
             }
           return t;
         }),
-        (e.prototype.InitFromObjects = function(e, t, n, i, o) {
+        (e.prototype.InitFromObjects = function (e, t, n, i, o) {
           o || this.m_mapTokens.clear();
           var a = Object(r.a)(Object(r.a)({}, n || {}), e),
             s = Object(r.a)(Object(r.a)({}, i || {}), t || {});
           this.AddTokens(a, s);
         }),
-        (e.prototype.InitDirect = function(e, t) {
+        (e.prototype.InitDirect = function (e, t) {
           this.m_mapTokens.clear(),
             this.m_mapFallbackTokens.clear(),
             this.AddTokens(e, t);
         }),
-        (e.prototype.AddTokens = function(e, t) {
+        (e.prototype.AddTokens = function (e, t) {
           var n = this;
-          Object.keys(e).forEach(function(t) {
+          Object.keys(e).forEach(function (t) {
             n.m_mapTokens.set(t, e[t]);
           }),
             t &&
-              Object.keys(t).forEach(function(e) {
+              Object.keys(t).forEach(function (e) {
                 n.m_mapTokens.has(e) || n.m_mapTokens.set(e, t[e]),
                   n.m_mapFallbackTokens.set(e, t[e]);
               });
         }),
-        (e.prototype.GetPreferredLocales = function() {
+        (e.prototype.GetPreferredLocales = function () {
           return this.m_rgLocalesToUse
             ? this.m_rgLocalesToUse
             : navigator && navigator.languages
             ? navigator.languages
             : ["en-US"];
         }),
-        (e.prototype.GetELanguageFallbackOrder = function(t) {
+        (e.prototype.GetELanguageFallbackOrder = function (t) {
           void 0 === t && (t = null);
           var n = new Array();
           (n.push(Object(o.f)(s.c.LANGUAGE)),
-          (s.c.SUPPORTED_LANGUAGES || []).forEach(function(e) {
+          (s.c.SUPPORTED_LANGUAGES || []).forEach(function (e) {
             e.value != s.c.LANGUAGE && n.push(Object(o.f)(e.value));
           }),
           t) &&
-            e.GetLanguageListForRealms(t).forEach(function(e) {
+            e.GetLanguageListForRealms(t).forEach(function (e) {
               -1 == n.indexOf(e) && n.push(e);
             });
           return n;
         }),
-        (e.prototype.SetPreferredLocales = function(e) {
+        (e.prototype.SetPreferredLocales = function (e) {
           this.m_rgLocalesToUse = e;
         }),
-        (e.prototype.LocalizeString = function(e) {
+        (e.prototype.LocalizeString = function (e) {
           if (e && 0 != e.length && "#" == e.charAt(0)) {
             var t = this.m_mapTokens.get(e.substring(1));
             if (void 0 !== t) return t;
           }
         }),
-        (e.prototype.LocalizeStringFromFallback = function(e) {
+        (e.prototype.LocalizeStringFromFallback = function (e) {
           if (e && 0 != e.length && "#" == e.charAt(0)) {
             var t = this.m_mapFallbackTokens.get(e.substring(1));
             if (void 0 !== t) return t;
@@ -2391,7 +2393,7 @@ PERFORMANCE OF THIS SOFTWARE.
       return void 0 === r
         ? e
         : (t.length > 0 &&
-            (r = r.replace(/%(?:(\d+)\$)?s/g, function(e, n) {
+            (r = r.replace(/%(?:(\d+)\$)?s/g, function (e, n) {
               if (n <= t.length && n >= 1) {
                 var r = t[n - 1];
                 return String(null == r ? "" : r);
@@ -2422,20 +2424,20 @@ PERFORMANCE OF THIS SOFTWARE.
         ? f.apply(void 0, Object(r.g)([e, t], n))
         : f.apply(void 0, Object(r.g)([e + "_Plural", t], n));
     }
-    var p = (function() {
+    var p = (function () {
         function e() {}
         return (
-          (e.Set = function(e, t, n) {
+          (e.Set = function (e, t, n) {
             if (e.length <= t) {
               if (t >= 30) return e;
               e = Object(c.h)(e, t + 1, null);
             }
             return (e[t] = n), e;
           }),
-          (e.Get = function(e, t) {
+          (e.Get = function (e, t) {
             return (e && e.length > t && e[t]) || "";
           }),
-          (e.GetWithFallback = function(t, n) {
+          (e.GetWithFallback = function (t, n) {
             return e.Get(t, n) || e.Get(t, l.GetELanguageFallback(n));
           }),
           e
@@ -2472,7 +2474,7 @@ PERFORMANCE OF THIS SOFTWARE.
         ukrainian: "uk",
         vietnamese: "vn",
         sc_schinese: "zh-cn",
-        koreana: "ko"
+        koreana: "ko",
       },
       m = {
         "en-US": 0,
@@ -2503,7 +2505,7 @@ PERFORMANCE OF THIS SOFTWARE.
         "ar-SA": 25,
         "uk-UA": 26,
         "es-419": 27,
-        "vi-VN": 28
+        "vi-VN": 28,
       };
     function b() {
       return _[s.c.LANGUAGE] || null;
@@ -2511,7 +2513,7 @@ PERFORMANCE OF THIS SOFTWARE.
     var g = new l();
     window.LocalizationManager = g;
   },
-  "qM/t": function(e, t, n) {
+  "qM/t": function (e, t, n) {
     "use strict";
     n.r(t);
     var r = n("mrSG"),
@@ -2527,16 +2529,16 @@ PERFORMANCE OF THIS SOFTWARE.
       h = n("s+DT");
     var p = n("1VtQ"),
       _ = n("K4CH"),
-      m = (function(e) {
+      m = (function (e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
           Object(r.d)(t, e),
-          (t.prototype.BIsExpired = function() {
+          (t.prototype.BIsExpired = function () {
             return b.sm_rtTimeCur >= this.m_rtTimeExpires;
           }),
-          (t.prototype.InitFromPHPInviteLinkInfo = function(e) {
+          (t.prototype.InitFromPHPInviteLinkInfo = function (e) {
             this.m_ulChatID = e.chat_id;
             var t = new h.a(e.steamid_sender);
             t.BIsIndividualAccount() &&
@@ -2553,7 +2555,7 @@ PERFORMANCE OF THIS SOFTWARE.
           t
         );
       })(d.b),
-      b = (function() {
+      b = (function () {
         function e(e) {
           (this.m_bConnectingToClient = !1),
             (this.m_invite = new m(e.strInviteCode)),
@@ -2564,23 +2566,23 @@ PERFORMANCE OF THIS SOFTWARE.
             this.SendInviteToClient();
         }
         return (
-          (e.prototype.BIsInviteValid = function() {
+          (e.prototype.BIsInviteValid = function () {
             return this.m_invite.BIsValid() && !this.m_invite.BIsExpired();
           }),
-          (e.prototype.GetInvite = function() {
+          (e.prototype.GetInvite = function () {
             return this.m_invite;
           }),
-          (e.prototype.BIsConnectingToClient = function() {
+          (e.prototype.BIsConnectingToClient = function () {
             return this.m_bConnectingToClient;
           }),
-          (e.prototype.GetConnectResults = function() {
+          (e.prototype.GetConnectResults = function () {
             return this.m_connectResult;
           }),
-          (e.prototype.GetPreRenderedHTML = function() {
+          (e.prototype.GetPreRenderedHTML = function () {
             return this.m_htmlPreRendered;
           }),
-          (e.prototype.LaunchWebChat = function() {
-            !(function(e) {
+          (e.prototype.LaunchWebChat = function () {
+            !(function (e) {
               var t = window.open("", "SteamWebChat", "");
               if (t) {
                 var n = !1;
@@ -2591,7 +2593,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 }
                 if (n) {
                   if (e) {
-                    var r = function(n) {
+                    var r = function (n) {
                       var i = a.a.COMMUNITY_BASE_URL.replace(
                         /(https?:\/\/[^/]*).*$/,
                         "$1"
@@ -2610,26 +2612,26 @@ PERFORMANCE OF THIS SOFTWARE.
               }
             })({
               command: "ShowChatRoomGroupInvite",
-              invite_code: this.m_invite.GetInviteCode()
+              invite_code: this.m_invite.GetInviteCode(),
             });
           }),
-          (e.prototype.LaunchSteamIgnoreAccount = function() {
+          (e.prototype.LaunchSteamIgnoreAccount = function () {
             s.b.SetAllowAccountMismatch(!0), this.SendInviteToClient();
           }),
-          (e.prototype.ForceLaunchSteamClient = function() {
+          (e.prototype.ForceLaunchSteamClient = function () {
             window.location.href =
               "steam://friends/ShowChatRoomGroupInvite/" +
               this.m_invite.GetInviteCode();
           }),
-          (e.prototype.SendInviteToClient = function() {
+          (e.prototype.SendInviteToClient = function () {
             var e = this;
             this.m_invite.BIsValid() &&
               !this.m_invite.BIsExpired() &&
               ((this.m_bConnectingToClient = !0),
               s.b
                 .ShowChatRoomGroupInvite(this.m_invite.GetInviteCode())
-                .then(function(t) {
-                  Object(l.G)(function() {
+                .then(function (t) {
+                  Object(l.G)(function () {
                     (e.m_bConnectingToClient = !1),
                       (e.m_connectResult = t),
                       console.log(t);
@@ -2641,13 +2643,13 @@ PERFORMANCE OF THIS SOFTWARE.
           e
         );
       })(),
-      g = (function(e) {
+      g = (function (e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
           Object(r.d)(t, e),
-          (t.prototype.render = function() {
+          (t.prototype.render = function () {
             return i.createElement(
               "div",
               { className: "InviteLandingRoot" },
@@ -2659,27 +2661,27 @@ PERFORMANCE OF THIS SOFTWARE.
           (t = Object(r.c)([f.a], t))
         );
       })(i.Component),
-      v = (function(e) {
+      v = (function (e) {
         function t() {
           var t = (null !== e && e.apply(this, arguments)) || this;
           return (t.m_bTriedToLaunchSteam = !1), t;
         }
         return (
           Object(r.d)(t, e),
-          (t.prototype.LaunchWebChat = function() {
+          (t.prototype.LaunchWebChat = function () {
             this.props.controller.LaunchWebChat();
           }),
-          (t.prototype.OpenInSteamIgnoreAccount = function() {
+          (t.prototype.OpenInSteamIgnoreAccount = function () {
             this.props.controller.LaunchSteamIgnoreAccount();
           }),
-          (t.prototype.LaunchSteamClient = function() {
+          (t.prototype.LaunchSteamClient = function () {
             var e = this;
             this.props.controller.ForceLaunchSteamClient(),
-              window.setTimeout(function() {
+              window.setTimeout(function () {
                 e.m_bTriedToLaunchSteam = !0;
               }, 1e3);
           }),
-          (t.prototype.IsMobileDevice = function() {
+          (t.prototype.IsMobileDevice = function () {
             switch (new _.UAParser(navigator.userAgent).getResult().os.name) {
               case "iOS":
               case "Android":
@@ -2688,7 +2690,7 @@ PERFORMANCE OF THIS SOFTWARE.
             }
             return !1;
           }),
-          (t.prototype.render = function() {
+          (t.prototype.render = function () {
             if (this.props.controller.BIsConnectingToClient())
               return i.createElement(
                 "div",
@@ -2723,7 +2725,7 @@ PERFORMANCE OF THIS SOFTWARE.
                           "a",
                           {
                             href: "javascript:void(0);",
-                            onClick: this.LaunchWebChat
+                            onClick: this.LaunchWebChat,
                           },
                           Object(c.f)(
                             "#InviteLanding_SentToSteam_Desc_LaunchWebChat"
@@ -2749,7 +2751,7 @@ PERFORMANCE OF THIS SOFTWARE.
                         {
                           className: r,
                           type: "button",
-                          onClick: this.OpenInSteamIgnoreAccount
+                          onClick: this.OpenInSteamIgnoreAccount,
                         },
                         Object(c.f)("#InviteLanding_OpenInSteam")
                       ),
@@ -2758,7 +2760,7 @@ PERFORMANCE OF THIS SOFTWARE.
                         {
                           className: r,
                           type: "button",
-                          onClick: this.LaunchWebChat
+                          onClick: this.LaunchWebChat,
                         },
                         Object(c.f)("#InviteLanding_OpenInWebChat")
                       )
@@ -2782,7 +2784,7 @@ PERFORMANCE OF THIS SOFTWARE.
                           "a",
                           {
                             href: "javascript:void(0);",
-                            onClick: this.LaunchWebChat
+                            onClick: this.LaunchWebChat,
                           },
                           Object(c.f)(
                             "#InviteLanding_SentToSteam_Desc_LaunchWebChat"
@@ -2803,7 +2805,7 @@ PERFORMANCE OF THIS SOFTWARE.
                           {
                             className: r,
                             type: "button",
-                            onClick: this.LaunchSteamClient
+                            onClick: this.LaunchSteamClient,
                           },
                           Object(c.f)("#InviteLanding_OpenInSteam")
                         ),
@@ -2812,7 +2814,7 @@ PERFORMANCE OF THIS SOFTWARE.
                         {
                           className: r,
                           type: "button",
-                          onClick: this.LaunchWebChat
+                          onClick: this.LaunchWebChat,
                         },
                         Object(c.f)("#InviteLanding_OpenInWebChat")
                       )
@@ -2833,13 +2835,13 @@ PERFORMANCE OF THIS SOFTWARE.
           (t = Object(r.c)([f.a], t))
         );
       })(i.Component),
-      E = (function(e) {
+      E = (function (e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
           Object(r.d)(t, e),
-          (t.prototype.render = function() {
+          (t.prototype.render = function () {
             return i.createElement(
               "div",
               { className: "ChatMessageInvite" },
@@ -2859,7 +2861,7 @@ PERFORMANCE OF THIS SOFTWARE.
         { className: "ChatMessageInvite" },
         i.createElement("div", {
           className: "leftInviteContainer",
-          dangerouslySetInnerHTML: { __html: e.render.strAvatarHTML }
+          dangerouslySetInnerHTML: { __html: e.render.strAvatarHTML },
         }),
         i.createElement(
           "div",
@@ -2871,8 +2873,8 @@ PERFORMANCE OF THIS SOFTWARE.
               "#bbcode_invite_description",
               i.createElement("span", {
                 dangerouslySetInnerHTML: {
-                  __html: e.render.strInviterNameLinkHTML
-                }
+                  __html: e.render.strInviterNameLinkHTML,
+                },
               })
             )
           ),
@@ -2897,9 +2899,9 @@ PERFORMANCE OF THIS SOFTWARE.
       o.render(i.createElement(g, { controller: n }), e);
     }
     function I(e) {
-      return Object(r.b)(this, void 0, void 0, function() {
+      return Object(r.b)(this, void 0, void 0, function () {
         var t, i, o, a, s, u, l;
-        return Object(r.e)(this, function(f) {
+        return Object(r.e)(this, function (f) {
           switch (f.label) {
             case 0:
               return (
@@ -2911,8 +2913,8 @@ PERFORMANCE OF THIS SOFTWARE.
                     n("9Lmx")("./shared_" + e + ".json"),
                     n("79S0")("./friendsui_" + e + ".json"),
                     i ? {} : n("9Lmx")("./shared_" + t + ".json"),
-                    i ? {} : n("79S0")("./friendsui_" + t + ".json")
-                  ])
+                    i ? {} : n("79S0")("./friendsui_" + t + ".json"),
+                  ]),
                 ]
               );
             case 1:
@@ -2933,16 +2935,16 @@ PERFORMANCE OF THIS SOFTWARE.
       });
     }
     (window.ClientConnectionAPI = y),
-      document.addEventListener("DOMContentLoaded", function() {
-        return Object(r.b)(this, void 0, void 0, function() {
-          return Object(r.e)(this, function(e) {
+      document.addEventListener("DOMContentLoaded", function () {
+        return Object(r.b)(this, void 0, void 0, function () {
+          return Object(r.e)(this, function (e) {
             switch (e.label) {
               case 0:
                 return Object(a.b)(), [4, I(a.a.LANGUAGE)];
               case 1:
                 return (
                   e.sent(),
-                  (function() {
+                  (function () {
                     for (
                       var e = document.querySelectorAll(".ChatReactRoot"),
                         t = 0;
@@ -2967,16 +2969,16 @@ PERFORMANCE OF THIS SOFTWARE.
         });
       });
   },
-  "s+DT": function(e, t, n) {
+  "s+DT": function (e, t, n) {
     "use strict";
-    n.d(t, "a", function() {
+    n.d(t, "a", function () {
       return s;
     });
     var r = n("2lpH"),
       i = n.n(r),
       o = n("0N1H"),
       a = n("1n9R"),
-      s = (function() {
+      s = (function () {
         function e(t, n, r, o) {
           void 0 === t && (t = 0),
             t instanceof e
@@ -2988,28 +2990,28 @@ PERFORMANCE OF THIS SOFTWARE.
               : (this.m_ulSteamID = t ? i.a.fromNumber(t, !0) : i.a.UZERO);
         }
         return (
-          (e.InitFromAccountID = function(t) {
+          (e.InitFromAccountID = function (t) {
             return new e(Number(t), a.c.EUNIVERSE, 1, o.q);
           }),
-          (e.InitFromClanID = function(t) {
+          (e.InitFromClanID = function (t) {
             return new e(Number(t), a.c.EUNIVERSE, 7, 0);
           }),
-          (e.prototype.GetAccountID = function() {
+          (e.prototype.GetAccountID = function () {
             return this.m_ulSteamID.getLowBitsUnsigned();
           }),
-          (e.prototype.GetInstance = function() {
+          (e.prototype.GetInstance = function () {
             return 1048575 & this.m_ulSteamID.getHighBitsUnsigned();
           }),
-          (e.prototype.GetAccountType = function() {
+          (e.prototype.GetAccountType = function () {
             return (this.m_ulSteamID.getHighBitsUnsigned() >> 20) & 15;
           }),
-          (e.prototype.GetUniverse = function() {
+          (e.prototype.GetUniverse = function () {
             return (this.m_ulSteamID.getHighBitsUnsigned() >> 24) & 255;
           }),
-          (e.prototype.ConvertTo64BitString = function() {
+          (e.prototype.ConvertTo64BitString = function () {
             return this.m_ulSteamID.toString();
           }),
-          (e.prototype.Render = function() {
+          (e.prototype.Render = function () {
             switch (this.GetAccountType()) {
               case 0:
                 return (
@@ -3057,7 +3059,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 );
             }
           }),
-          (e.prototype.BIsValid = function() {
+          (e.prototype.BIsValid = function () {
             var e = this.GetAccountType();
             if (e <= 0 || e >= 11) return !1;
             var t = this.GetUniverse();
@@ -3071,20 +3073,20 @@ PERFORMANCE OF THIS SOFTWARE.
             } else if (3 == e && 0 == this.GetAccountID()) return !1;
             return !0;
           }),
-          (e.prototype.BIsIndividualAccount = function() {
+          (e.prototype.BIsIndividualAccount = function () {
             return 1 == this.GetAccountType();
           }),
-          (e.prototype.BIsClanAccount = function() {
+          (e.prototype.BIsClanAccount = function () {
             return 7 == this.GetAccountType();
           }),
-          (e.prototype.SetAccountID = function(e) {
+          (e.prototype.SetAccountID = function (e) {
             this.m_ulSteamID = new i.a(
               e,
               this.m_ulSteamID.getHighBitsUnsigned(),
               !0
             );
           }),
-          (e.prototype.SetInstance = function(e) {
+          (e.prototype.SetInstance = function (e) {
             this.SetFromComponents(
               this.GetAccountID(),
               e,
@@ -3092,7 +3094,7 @@ PERFORMANCE OF THIS SOFTWARE.
               this.GetUniverse()
             );
           }),
-          (e.prototype.SetAccountType = function(e) {
+          (e.prototype.SetAccountType = function (e) {
             this.SetFromComponents(
               this.GetAccountID(),
               this.GetInstance(),
@@ -3100,7 +3102,7 @@ PERFORMANCE OF THIS SOFTWARE.
               this.GetUniverse()
             );
           }),
-          (e.prototype.SetUniverse = function(e) {
+          (e.prototype.SetUniverse = function (e) {
             this.SetFromComponents(
               this.GetAccountID(),
               this.GetInstance(),
@@ -3108,7 +3110,7 @@ PERFORMANCE OF THIS SOFTWARE.
               e
             );
           }),
-          (e.prototype.SetFromComponents = function(e, t, n, r) {
+          (e.prototype.SetFromComponents = function (e, t, n, r) {
             var o = ((255 & r) << 24) + ((15 & n) << 20) + (1048575 & t),
               a = 4294967295 & e;
             this.m_ulSteamID = new i.a(a, o, !0);
@@ -3117,37 +3119,37 @@ PERFORMANCE OF THIS SOFTWARE.
         );
       })();
   },
-  tkkQ: function(e, t, n) {
+  tkkQ: function (e, t, n) {
     "use strict";
     var r = n("1n9R");
-    n.d(t, "a", function() {
+    n.d(t, "a", function () {
       return r.c;
     }),
-      n.d(t, "c", function() {
+      n.d(t, "c", function () {
         return r.i;
       }),
-      n.d(t, "b", function() {
+      n.d(t, "b", function () {
         return r.h;
       });
   },
-  ujHl: function(e, t, n) {
+  ujHl: function (e, t, n) {
     "use strict";
-    n.d(t, "e", function() {
+    n.d(t, "e", function () {
       return r;
     }),
-      n.d(t, "a", function() {
+      n.d(t, "a", function () {
         return i;
       }),
-      n.d(t, "b", function() {
+      n.d(t, "b", function () {
         return o;
       }),
-      n.d(t, "c", function() {
+      n.d(t, "c", function () {
         return a;
       }),
-      n.d(t, "d", function() {
+      n.d(t, "d", function () {
         return s;
       }),
-      n.d(t, "f", function() {
+      n.d(t, "f", function () {
         return c;
       });
     var r = {
@@ -3156,7 +3158,7 @@ PERFORMANCE OF THIS SOFTWARE.
       PerWeek: 604800,
       PerDay: 86400,
       PerHour: 3600,
-      PerMinute: 60
+      PerMinute: 60,
     };
     function i(e, t) {
       return (
@@ -3183,9 +3185,9 @@ PERFORMANCE OF THIS SOFTWARE.
       return new Date(e.getFullYear(), e.getMonth(), 1, 0, 0, 0, 0);
     }
     function c(e) {
-      return new Promise(function(t) {
+      return new Promise(function (t) {
         return setTimeout(t, e);
       });
     }
-  }
+  },
 });

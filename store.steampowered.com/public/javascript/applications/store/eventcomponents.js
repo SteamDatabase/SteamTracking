@@ -3,7 +3,7 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [6],
   {
-    E9gz: function(e, t, n) {
+    E9gz: function (e, t, n) {
       e.exports = {
         AnalysisCtn: "eventmoderation_AnalysisCtn_1YGfW",
         AnalysisMissing: "eventmoderation_AnalysisMissing_rH1Dt",
@@ -32,44 +32,44 @@
         Button: "eventmoderation_Button_wu9Kr",
         RightSideTitles: "eventmoderation_RightSideTitles_XDAwD",
         DateAndTime: "eventmoderation_DateAndTime_2cW9N",
-        StoreHeaderAdjust: "eventmoderation_StoreHeaderAdjust_3U7ja"
+        StoreHeaderAdjust: "eventmoderation_StoreHeaderAdjust_3U7ja",
       };
     },
-    WGPV: function(e, t, n) {
+    WGPV: function (e, t, n) {
       e.exports = {
         SectionContainer: "rss_moderation_SectionContainer_3P-ff",
         ModSectionTitle: "rss_moderation_ModSectionTitle_2lc8m",
         ResizeButton: "rss_moderation_ResizeButton_29RNN",
         TileContainer: "rss_moderation_TileContainer_2D4XH",
         CreatorCtn: "rss_moderation_CreatorCtn_GKust",
-        TileSpread: "rss_moderation_TileSpread_1s_El"
+        TileSpread: "rss_moderation_TileSpread_1s_El",
       };
     },
-    Wym2: function(e, t, n) {
+    Wym2: function (e, t, n) {
       "use strict";
       n.r(t),
-        n.d(t, "EventModerationLanding", function() {
+        n.d(t, "EventModerationLanding", function () {
           return lt;
         }),
-        n.d(t, "EventBackfillLanding", function() {
+        n.d(t, "EventBackfillLanding", function () {
           return ct;
         }),
-        n.d(t, "EventSaleDisplay", function() {
+        n.d(t, "EventSaleDisplay", function () {
           return st;
         }),
-        n.d(t, "EventCalendar", function() {
+        n.d(t, "EventCalendar", function () {
           return ut;
         }),
-        n.d(t, "EventDetailView", function() {
+        n.d(t, "EventDetailView", function () {
           return dt;
         }),
-        n.d(t, "Events", function() {
+        n.d(t, "Events", function () {
           return pt;
         }),
-        n.d(t, "EventSteamGameFestivalDebug", function() {
+        n.d(t, "EventSteamGameFestivalDebug", function () {
           return mt;
         }),
-        n.d(t, "RssEnabledAccountDashboard", function() {
+        n.d(t, "RssEnabledAccountDashboard", function () {
           return vt;
         });
       var d,
@@ -95,7 +95,7 @@
         T = n("N0Ye"),
         O = n("f0Wu"),
         C = ["mod_reviewed", "auto_migrated"],
-        A = (function() {
+        A = (function () {
           function e() {
             (this.selectedTags = void 0),
               (this.excludedTags = void 0),
@@ -106,10 +106,10 @@
               (this.bUseCustomQuery = !1);
           }
           return (
-            (e.Get = function() {
+            (e.Get = function () {
               return e.s_Singleton || (e.s_Singleton = new e()), e.s_Singleton;
             }),
-            (e.prototype.Init = function(e) {
+            (e.prototype.Init = function (e) {
               var t = this,
                 n = u.a.parse(e.substring(1)),
                 a = void 0;
@@ -118,11 +118,11 @@
                   (a = [{ label: n.selectedTags, value: n.selectedTags }])
                 : n.selectedTags &&
                   ((a = []),
-                  n.selectedTags.forEach(function(e) {
+                  n.selectedTags.forEach(function (e) {
                     return a.push({ label: e, value: e });
                   }));
               var r = !1,
-                o = C.map(function(e) {
+                o = C.map(function (e) {
                   return { label: e, value: e };
                 });
               "string" == typeof n.excludedTags
@@ -131,7 +131,7 @@
                   (o = [{ label: n.excludedTags, value: n.excludedTags }]))
                 : n.excludedTags &&
                   ((o = []),
-                  n.excludedTags.forEach(function(e) {
+                  n.excludedTags.forEach(function (e) {
                     return o.push({ label: e, value: e });
                   }),
                   (r = o && 0 < o.length));
@@ -143,7 +143,7 @@
                   (l = [{ label: Object(T.b)(i), value: i }]))
                 : n.eventtype &&
                   ((l = []),
-                  n.eventtype.forEach(function(e) {
+                  n.eventtype.forEach(function (e) {
                     var t = Number.parseInt(e);
                     l.push({ label: Object(T.b)(t), value: t });
                   }));
@@ -155,7 +155,7 @@
               "string" == typeof n.orderByVisibility &&
                 0 < n.orderByVisibility.length &&
                 (s = Boolean(n.orderByVisibility)),
-                Object(m.G)(function() {
+                Object(m.G)(function () {
                   (t.selectedTags = a),
                     (t.excludedTags = o),
                     (t.filterEventTypes = l),
@@ -192,7 +192,7 @@
         var t = v.useState(!0),
           n = t[0],
           a = t[1],
-          r = e.eventModel.GetAllTags().filter(function(e) {
+          r = e.eventModel.GetAllTags().filter(function (e) {
             return w.IsAuditAction(e);
           }),
           o = r.length,
@@ -202,80 +202,81 @@
         var l,
           c,
           s,
-          u = ((l = r),
-          (c = new Array()),
-          (s = e.eventModel),
-          l.forEach(function(e) {
-            var t = new w();
-            t.FromString(e),
-              c.push(
-                v.createElement(
-                  "div",
-                  { key: s.GID + e },
-                  (function(e) {
-                    var t =
-                        Object(N.k)(e.m_rtWhen) +
-                        " @ " +
-                        Object(N.m)(e.m_rtWhen),
-                      n = v.createElement(U, {
-                        locToken: "#EventModTile_Moderator",
-                        accountID: e.m_moderator
-                      });
-                    switch (e.m_action) {
-                      case d.k_ModReviewed:
-                        return v.createElement(
-                          "div",
-                          { className: H.ModeratorAuditActionCtn },
-                          Object(N.n)(
-                            "#EventModTile_Action_Reviewed",
-                            v.createElement("span", null, t),
-                            n
-                          )
-                        );
-                      case d.k_ModUnreviewed:
-                        return v.createElement(
-                          "div",
-                          { className: H.ModeratorAuditActionCtn },
-                          Object(N.n)(
-                            "#EventModTile_Action_UnReviewed",
-                            v.createElement("span", null, t),
-                            n
-                          )
-                        );
-                      case d.k_ChangeEventType:
-                        return v.createElement(
-                          "div",
-                          { className: H.ModeratorAuditActionCtn },
-                          Object(N.n)(
-                            "#EventModTile_Action_NewEventType",
-                            v.createElement("span", null, t),
-                            n,
-                            Object(T.b)(e.m_newEventType)
-                          )
-                        );
-                      case d.k_UpdateSeasonTags:
-                        return v.createElement(
-                          "div",
-                          { className: H.ModeratorAuditActionCtn },
-                          Object(N.n)(
-                            "#EventModTile_Action_SeasonTagUpdate",
-                            v.createElement("span", null, t),
-                            n,
-                            e.m_newTagAdded
-                          )
-                        );
-                      default:
-                        return v.createElement(
-                          "div",
-                          { className: H.ModeratorAuditActionCtn },
-                          e.ToModString
-                        );
-                    }
-                  })(t)
-                )
-              );
-          }),
-          c);
+          u =
+            ((l = r),
+            (c = new Array()),
+            (s = e.eventModel),
+            l.forEach(function (e) {
+              var t = new w();
+              t.FromString(e),
+                c.push(
+                  v.createElement(
+                    "div",
+                    { key: s.GID + e },
+                    (function (e) {
+                      var t =
+                          Object(N.k)(e.m_rtWhen) +
+                          " @ " +
+                          Object(N.m)(e.m_rtWhen),
+                        n = v.createElement(U, {
+                          locToken: "#EventModTile_Moderator",
+                          accountID: e.m_moderator,
+                        });
+                      switch (e.m_action) {
+                        case d.k_ModReviewed:
+                          return v.createElement(
+                            "div",
+                            { className: H.ModeratorAuditActionCtn },
+                            Object(N.n)(
+                              "#EventModTile_Action_Reviewed",
+                              v.createElement("span", null, t),
+                              n
+                            )
+                          );
+                        case d.k_ModUnreviewed:
+                          return v.createElement(
+                            "div",
+                            { className: H.ModeratorAuditActionCtn },
+                            Object(N.n)(
+                              "#EventModTile_Action_UnReviewed",
+                              v.createElement("span", null, t),
+                              n
+                            )
+                          );
+                        case d.k_ChangeEventType:
+                          return v.createElement(
+                            "div",
+                            { className: H.ModeratorAuditActionCtn },
+                            Object(N.n)(
+                              "#EventModTile_Action_NewEventType",
+                              v.createElement("span", null, t),
+                              n,
+                              Object(T.b)(e.m_newEventType)
+                            )
+                          );
+                        case d.k_UpdateSeasonTags:
+                          return v.createElement(
+                            "div",
+                            { className: H.ModeratorAuditActionCtn },
+                            Object(N.n)(
+                              "#EventModTile_Action_SeasonTagUpdate",
+                              v.createElement("span", null, t),
+                              n,
+                              e.m_newTagAdded
+                            )
+                          );
+                        default:
+                          return v.createElement(
+                            "div",
+                            { className: H.ModeratorAuditActionCtn },
+                            e.ToModString
+                          );
+                      }
+                    })(t)
+                  )
+                );
+            }),
+            c);
         return v.createElement(
           "div",
           null,
@@ -289,9 +290,9 @@
             v.createElement(
               "a",
               {
-                onClick: function() {
+                onClick: function () {
                   return a(!1);
-                }
+                },
               },
               Object(N.f)("#EventModTile_Action_More", o - 3)
             ),
@@ -299,19 +300,19 @@
             v.createElement(
               "a",
               {
-                onClick: function() {
+                onClick: function () {
                   return a(!0);
-                }
+                },
               },
               Object(N.f)("#EventModTile_Action_Hide")
             )
         );
       }
       var M = "ModAct",
-        w = (function() {
+        w = (function () {
           function e() {}
           return (
-            (e.prototype.ToModString = function() {
+            (e.prototype.ToModString = function () {
               var e =
                 M +
                 "_" +
@@ -329,7 +330,7 @@
               }
               return e;
             }),
-            (e.prototype.FromString = function(e) {
+            (e.prototype.FromString = function (e) {
               var t = e.split("_");
               if (!t || t[0] !== M) return !1;
               switch (
@@ -346,7 +347,7 @@
               }
               return !0;
             }),
-            (e.prototype.SetActionChangeEvent = function(e) {
+            (e.prototype.SetActionChangeEvent = function (e) {
               return (
                 (this.m_moderator = I.i.accountid),
                 (this.m_rtWhen = Date.now() / 1e3),
@@ -355,7 +356,7 @@
                 this
               );
             }),
-            (e.prototype.SetReviewAction = function(e) {
+            (e.prototype.SetReviewAction = function (e) {
               return (
                 (this.m_moderator = I.i.accountid),
                 (this.m_rtWhen = Date.now() / 1e3),
@@ -363,7 +364,7 @@
                 this
               );
             }),
-            (e.prototype.SetReReviewAction = function(e) {
+            (e.prototype.SetReReviewAction = function (e) {
               return (
                 (this.m_moderator = I.i.accountid),
                 (this.m_rtWhen = Date.now() / 1e3),
@@ -371,10 +372,10 @@
                 this
               );
             }),
-            (e.IsAuditAction = function(e) {
+            (e.IsAuditAction = function (e) {
               return e.startsWith(M);
             }),
-            (e.prototype.SetUpdateSeasonalTags = function(e) {
+            (e.prototype.SetUpdateSeasonalTags = function (e) {
               return (
                 (this.m_moderator = I.i.accountid),
                 (this.m_rtWhen = Date.now() / 1e3),
@@ -386,26 +387,26 @@
             e
           );
         })(),
-        G = (function() {
+        G = (function () {
           function e() {
             (this.m_mapEventGIDToSolrData = new Map()),
               (this.m_listEvents = new Array());
           }
           return (
-            (e.prototype.BHasSolrEvent = function(e) {
+            (e.prototype.BHasSolrEvent = function (e) {
               return this.m_mapEventGIDToSolrData.has(e);
             }),
-            (e.prototype.GetAllSolrEvents = function() {
+            (e.prototype.GetAllSolrEvents = function () {
               return this.m_listEvents;
             }),
-            (e.Get = function() {
+            (e.Get = function () {
               return e.s_Singleton || (e.s_Singleton = new e()), e.s_Singleton;
             }),
-            (e.prototype.ClearAllSolrEvents = function() {
+            (e.prototype.ClearAllSolrEvents = function () {
               (this.m_mapEventGIDToSolrData = new Map()),
                 (this.m_listEvents = new Array());
             }),
-            (e.prototype.LoadPartnerEventForModerationIncremental = function(
+            (e.prototype.LoadPartnerEventForModerationIncremental = function (
               c,
               s,
               u
@@ -413,7 +414,7 @@
               return (
                 void 0 === s && (s = 0),
                 void 0 === u && (u = 10),
-                Object(E.b)(this, void 0, void 0, function() {
+                Object(E.b)(this, void 0, void 0, function () {
                   var t,
                     n,
                     a,
@@ -421,7 +422,7 @@
                     o,
                     i,
                     l = this;
-                  return Object(E.e)(this, function(e) {
+                  return Object(E.e)(this, function (e) {
                     switch (e.label) {
                       case 0:
                         (t =
@@ -437,8 +438,8 @@
                             b.a.get(t, {
                               params: n,
                               withCredentials: !0,
-                              cancelToken: c ? c.token : void 0
-                            })
+                              cancelToken: c ? c.token : void 0,
+                            }),
                           ]
                         );
                       case 2:
@@ -448,8 +449,8 @@
                             ? [2, []]
                             : a && a.data
                             ? ((r = new Array()),
-                              Object(m.G)(function() {
-                                a.data.docs.forEach(function(e) {
+                              Object(m.G)(function () {
+                                a.data.docs.forEach(function (e) {
                                   l.m_mapEventGIDToSolrData.has(e.unique_id) ||
                                     (r.push(e),
                                     l.m_mapEventGIDToSolrData.set(
@@ -480,10 +481,17 @@
                 })
               );
             }),
-            (e.prototype.UpdateTagsOnPartnerEvent = function(r, o, i, l, c, s) {
-              return Object(E.b)(this, void 0, void 0, function() {
+            (e.prototype.UpdateTagsOnPartnerEvent = function (
+              r,
+              o,
+              i,
+              l,
+              c,
+              s
+            ) {
+              return Object(E.b)(this, void 0, void 0, function () {
                 var t, n, a;
-                return Object(E.e)(this, function(e) {
+                return Object(E.e)(this, function (e) {
                   switch (e.label) {
                     case 0:
                       return (
@@ -501,8 +509,8 @@
                           4,
                           b.a.post(t, a, {
                             withCredentials: !0,
-                            cancelToken: r.token
-                          })
+                            cancelToken: r.token,
+                          }),
                         ]
                       );
                     case 1:
@@ -511,10 +519,10 @@
                 });
               });
             }),
-            (e.prototype.UpdatePartnerEventType = function(a, r, o, i) {
-              return Object(E.b)(this, void 0, void 0, function() {
+            (e.prototype.UpdatePartnerEventType = function (a, r, o, i) {
+              return Object(E.b)(this, void 0, void 0, function () {
                 var t, n;
-                return Object(E.e)(this, function(e) {
+                return Object(E.e)(this, function (e) {
                   switch (e.label) {
                     case 0:
                       return (
@@ -529,8 +537,8 @@
                           4,
                           b.a.post(t, n, {
                             withCredentials: !0,
-                            cancelToken: a.token
-                          })
+                            cancelToken: a.token,
+                          }),
                         ]
                       );
                     case 1:
@@ -545,26 +553,26 @@
             e
           );
         })(),
-        k = (function() {
+        k = (function () {
           function e() {
             (this.m_mapEventGIDToSolrData = new Map()),
               (this.m_listEvents = new Array());
           }
           return (
-            (e.prototype.BHasSolrEvent = function(e) {
+            (e.prototype.BHasSolrEvent = function (e) {
               return this.m_mapEventGIDToSolrData.has(e);
             }),
-            (e.prototype.GetAllSolrEvents = function() {
+            (e.prototype.GetAllSolrEvents = function () {
               return this.m_listEvents;
             }),
-            (e.Get = function() {
+            (e.Get = function () {
               return e.s_Singleton || (e.s_Singleton = new e()), e.s_Singleton;
             }),
-            (e.prototype.ClearAllSolrEvents = function() {
+            (e.prototype.ClearAllSolrEvents = function () {
               (this.m_mapEventGIDToSolrData = new Map()),
                 (this.m_listEvents = new Array());
             }),
-            (e.prototype.LoadPartnerEventForQueryIncremental = function(
+            (e.prototype.LoadPartnerEventForQueryIncremental = function (
               r,
               o,
               i,
@@ -578,23 +586,33 @@
               return (
                 void 0 === o && (o = 0),
                 void 0 === i && (i = 10),
-                Object(E.b)(this, void 0, void 0, function() {
+                Object(E.b)(this, void 0, void 0, function () {
                   var t,
                     n,
                     a = this;
-                  return Object(E.e)(this, function(e) {
+                  return Object(E.e)(this, function (e) {
                     switch (e.label) {
                       case 0:
                         return [
                           4,
-                          this.GetLatestPartnerEvents(r, o, i, l, c, s, u, d, p)
+                          this.GetLatestPartnerEvents(
+                            r,
+                            o,
+                            i,
+                            l,
+                            c,
+                            s,
+                            u,
+                            d,
+                            p
+                          ),
                         ];
                       case 1:
                         return (
                           (t = e.sent()),
                           (n = new Array()),
-                          Object(m.G)(function() {
-                            t.forEach(function(e) {
+                          Object(m.G)(function () {
+                            t.forEach(function (e) {
                               a.m_mapEventGIDToSolrData.has(e.unique_id) ||
                                 (n.push(e),
                                 a.m_mapEventGIDToSolrData.set(e.unique_id, e),
@@ -608,7 +626,7 @@
                 })
               );
             }),
-            (e.prototype.GetLatestPartnerEvents = function(
+            (e.prototype.GetLatestPartnerEvents = function (
               r,
               o,
               i,
@@ -625,9 +643,9 @@
               return (
                 void 0 === o && (o = 0),
                 void 0 === i && (i = 10),
-                Object(E.b)(this, void 0, void 0, function() {
+                Object(E.b)(this, void 0, void 0, function () {
                   var t, n, a;
-                  return Object(E.e)(this, function(e) {
+                  return Object(E.e)(this, function (e) {
                     switch (e.label) {
                       case 0:
                         return (
@@ -647,15 +665,15 @@
                             creator_home_clan_id:
                               void 0 === m ? void 0 : m.join(","),
                             showUnpublished: void 0 === h ? void 0 : h,
-                            term: void 0 === v ? void 0 : v
+                            term: void 0 === v ? void 0 : v,
                           }),
                           [
                             4,
                             b.a.get(t, {
                               params: n,
                               withCredentials: !0,
-                              cancelToken: r ? r.token : void 0
-                            })
+                              cancelToken: r ? r.token : void 0,
+                            }),
                           ]
                         );
                       case 1:
@@ -678,7 +696,7 @@
         F = n("0OaU"),
         N = n("TLQK"),
         H = n("zrk3"),
-        U = Object(i.a)(function(e) {
+        U = Object(i.a)(function (e) {
           var t = e.accountID,
             n = e.locToken,
             a = _.a.InitFromAccountID(t).ConvertTo64BitString(),
@@ -690,14 +708,14 @@
             s = c[0],
             u = c[1];
           v.useEffect(
-            function() {
+            function () {
               var r = _.a.InitFromAccountID(t).ConvertTo64BitString();
               return (
                 P.a.BHasProfile(r) ||
                   (u(!0),
-                  Object(E.b)(void 0, void 0, void 0, function() {
+                  Object(E.b)(void 0, void 0, void 0, function () {
                     var t, n, a;
-                    return Object(E.e)(this, function(e) {
+                    return Object(E.e)(this, function (e) {
                       switch (e.label) {
                         case 0:
                           (t = b.a.CancelToken.source()),
@@ -727,7 +745,7 @@
                       }
                     });
                   })),
-                function() {
+                function () {
                   o.current && o.current("ModEventUserProfile: unmounting");
                 }
               );
@@ -775,9 +793,9 @@
         re = {
           bExhaustedEventList: !1,
           bInfiniteScrollLoading: !0,
-          nLastFetchCompletedMS: 0
+          nLastFetchCompletedMS: 0,
         },
-        oe = (function(t) {
+        oe = (function (t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (
@@ -787,7 +805,7 @@
               (e.state = {
                 bInfiniteScrollLoading: !1,
                 bExhaustedEventList: !1,
-                nLastFetchCompletedMS: 0
+                nLastFetchCompletedMS: 0,
               }),
               (e.m_nPage = 0),
               e
@@ -795,7 +813,7 @@
           }
           return (
             Object(E.d)(e, t),
-            (e.prototype.componentDidMount = function() {
+            (e.prototype.componentDidMount = function () {
               this.setState(
                 { bInfiniteScrollLoading: !0 },
                 this.LoadMoreModerationEvents
@@ -803,14 +821,14 @@
                 window.addEventListener("scroll", this.OnScroll, !0),
                 A.Get().Init(this.props.history.location.search);
             }),
-            (e.prototype.componentWillUnmount = function() {
+            (e.prototype.componentWillUnmount = function () {
               this.m_cancelSignal.cancel(
                 "EventModerationLanding component unmounted"
               ),
                 window.removeEventListener("scroll", this.OnScroll),
                 this.ClearTimer();
             }),
-            (e.prototype.HandleUpdateQueryParameter = function() {
+            (e.prototype.HandleUpdateQueryParameter = function () {
               var e,
                 t,
                 n,
@@ -830,34 +848,34 @@
                         u.a.stringify({
                           selectedTags:
                             e && 0 < e.length
-                              ? e.map(function(e) {
+                              ? e.map(function (e) {
                                   return e.value;
                                 })
                               : null,
                           excludedTags:
                             t && 0 < t.length
-                              ? t.map(function(e) {
+                              ? t.map(function (e) {
                                   return e.value;
                                 })
                               : null,
                           eventtype:
                             n && 0 < n.length
-                              ? n.map(function(e) {
+                              ? n.map(function (e) {
                                   return "" + e.value;
                                 })
                               : null,
                           filterDate: a && 0 < a.unix() ? "" + a.unix() : null,
-                          orderByVisibility: r ? "1" : null
+                          orderByVisibility: r ? "1" : null,
                         })
                     )
                   : this.props.history.push("?"));
             }),
-            (e.prototype.ClearTimer = function() {
+            (e.prototype.ClearTimer = function () {
               this.m_IntervalTimer &&
                 (window.clearInterval(this.m_IntervalTimer),
                 (this.m_IntervalTimer = void 0));
             }),
-            (e.prototype.HandleError = function(e) {
+            (e.prototype.HandleError = function (e) {
               var t = Object(j.a)(e);
               console.error(
                 "EventModerationLanding error: " + t.strErrorMsg,
@@ -866,12 +884,12 @@
                 this.setState({
                   bInfiniteScrollLoading: !1,
                   bExhaustedEventList: !0,
-                  nLastFetchCompletedMS: Date.now()
+                  nLastFetchCompletedMS: Date.now(),
                 });
             }),
-            (e.prototype.LoadMorePublicEventWithDelay = function() {
-              return Object(E.b)(this, void 0, void 0, function() {
-                return Object(E.e)(this, function(e) {
+            (e.prototype.LoadMorePublicEventWithDelay = function () {
+              return Object(E.b)(this, void 0, void 0, function () {
+                return Object(E.e)(this, function (e) {
                   return (
                     (this.m_IntervalTimer = window.setInterval(
                       this.LoadMoreModerationEvents,
@@ -882,7 +900,7 @@
                 });
               });
             }),
-            (e.prototype.LoadMoreModerationEvents = function() {
+            (e.prototype.LoadMoreModerationEvents = function () {
               var t,
                 e,
                 n,
@@ -892,17 +910,17 @@
                 this.state.bInfiniteScrollLoading &&
                   ((t = A.Get()).bUseCustomQuery
                     ? ((e = t.filterEventTypes
-                        ? t.filterEventTypes.map(function(e) {
+                        ? t.filterEventTypes.map(function (e) {
                             return e.value;
                           })
                         : void 0),
                       (n = t.selectedTags
-                        ? t.selectedTags.map(function(e) {
+                        ? t.selectedTags.map(function (e) {
                             return e.value;
                           })
                         : void 0),
                       (a = t.excludedTags
-                        ? t.excludedTags.map(function(e) {
+                        ? t.excludedTags.map(function (e) {
                             return e.value;
                           })
                         : void 0),
@@ -925,29 +943,29 @@
                         t.eventsToLoadPerPaging
                       )
                   )
-                    .then(function(e) {
+                    .then(function (e) {
                       (r.m_nPage += t.eventsToLoadPerPaging),
                         r.setState({
                           bInfiniteScrollLoading: !1,
                           bExhaustedEventList: 0 == e.length,
-                          nLastFetchCompletedMS: Date.now()
+                          nLastFetchCompletedMS: Date.now(),
                         });
                     })
-                    .catch(function(e) {
+                    .catch(function (e) {
                       return r.HandleError(e);
                     });
             }),
-            (e.prototype.UpdateQueryParametersAndLoadMoreEvents = function() {
+            (e.prototype.UpdateQueryParametersAndLoadMoreEvents = function () {
               this.HandleUpdateQueryParameter(),
                 this.LoadMoreModerationEvents();
             }),
-            (e.prototype.RenderTiles = function() {
+            (e.prototype.RenderTiles = function () {
               var t = new Array();
               return (
                 (A.Get().bUseCustomQuery
                   ? k.Get().GetAllSolrEvents()
                   : G.Get().GetAllSolrEvents()
-                ).forEach(function(e) {
+                ).forEach(function (e) {
                   t.push(
                     p.a.createElement(se, { solrData: e, key: e.unique_id })
                   );
@@ -955,26 +973,26 @@
                 t
               );
             }),
-            (e.prototype.OnScroll = function() {
+            (e.prototype.OnScroll = function () {
               var e;
               this.m_refScroll &&
                 this.m_refScroll.current &&
-                ((e = this.m_refScroll.current) &&
-                  (this.state.bExhaustedEventList ||
-                    this.state.bInfiniteScrollLoading ||
-                    (e.getBoundingClientRect().bottom <=
-                      window.innerHeight + 50 &&
-                      (this.state.nLastFetchCompletedMS + 500 < Date.now()
-                        ? this.setState(
-                            { bInfiniteScrollLoading: !0 },
-                            this.LoadMorePublicEventWithDelay
-                          )
-                        : this.setState(
-                            { bInfiniteScrollLoading: !0 },
-                            this.LoadMoreModerationEvents
-                          )))));
+                (e = this.m_refScroll.current) &&
+                (this.state.bExhaustedEventList ||
+                  this.state.bInfiniteScrollLoading ||
+                  (e.getBoundingClientRect().bottom <=
+                    window.innerHeight + 50 &&
+                    (this.state.nLastFetchCompletedMS + 500 < Date.now()
+                      ? this.setState(
+                          { bInfiniteScrollLoading: !0 },
+                          this.LoadMorePublicEventWithDelay
+                        )
+                      : this.setState(
+                          { bInfiniteScrollLoading: !0 },
+                          this.LoadMoreModerationEvents
+                        ))));
             }),
-            (e.prototype.RefetchAllEventTiles = function() {
+            (e.prototype.RefetchAllEventTiles = function () {
               (this.m_nPage = 0),
                 G.Get().ClearAllSolrEvents(),
                 k.Get().ClearAllSolrEvents(),
@@ -983,7 +1001,7 @@
                   this.UpdateQueryParametersAndLoadMoreEvents
                 );
             }),
-            (e.prototype.render = function() {
+            (e.prototype.render = function () {
               var e = this.RenderTiles(),
                 t = A.Get();
               return p.a.createElement(
@@ -1004,11 +1022,11 @@
                       "div",
                       { className: Object(K.a)(W.a.FlexRowContainer) },
                       p.a.createElement(le, {
-                        fnRequireRefetchEvents: this.RefetchAllEventTiles
+                        fnRequireRefetchEvents: this.RefetchAllEventTiles,
                       }),
                       Boolean(t.bUseCustomQuery) &&
                         p.a.createElement(ce, {
-                          fnRequireRefetchEvents: this.RefetchAllEventTiles
+                          fnRequireRefetchEvents: this.RefetchAllEventTiles,
                         })
                     )
                   )
@@ -1018,7 +1036,7 @@
                   p.a.createElement(F.a, {
                     position: "center",
                     size: "medium",
-                    string: Object(N.f)("#Loading")
+                    string: Object(N.f)("#Loading"),
                   })
               );
             }),
@@ -1042,7 +1060,7 @@
           );
         })(p.a.Component),
         ie = Object(s.i)(oe),
-        le = Object(i.a)(function(e) {
+        le = Object(i.a)(function (e) {
           var n = A.Get(),
             t = e.fnRequireRefetchEvents;
           return p.a.createElement(
@@ -1056,14 +1074,14 @@
                 {
                   toolTipContent: Object(N.f)(
                     "#EventModeration_ShowCustomFilter_ttip"
-                  )
+                  ),
                 },
                 p.a.createElement($.e, {
                   label: Object(N.f)("#EventModeration_ShowCustomFilter"),
                   checked: n.bUseCustomQuery,
-                  onChange: function(e) {
+                  onChange: function (e) {
                     (n.bUseCustomQuery = e), t();
-                  }
+                  },
                 })
               )
             ),
@@ -1084,31 +1102,31 @@
                   min: "10",
                   max: "200",
                   value: n.eventsToLoadPerPaging,
-                  onChange: function(e) {
+                  onChange: function (e) {
                     var t = Number.parseInt(e.currentTarget.value);
                     t &&
                       0 < t &&
                       t != n.eventsToLoadPerPaging &&
                       (n.eventsToLoadPerPaging = t);
-                  }
+                  },
                 })
               )
             )
           );
         }),
-        ce = Object(i.a)(function(e) {
+        ce = Object(i.a)(function (e) {
           var n = A.Get(),
             a = e.fnRequireRefetchEvents,
-            t = g.d.map(function(e) {
+            t = g.d.map(function (e) {
               return { value: e, label: Object(T.b)(e) };
             }),
-            r = f.a.map(function(e) {
+            r = f.a.map(function (e) {
               return { value: e, label: e };
             }),
             o = {
-              option: function(e) {
+              option: function (e) {
                 return Object(E.a)(Object(E.a)({}, e), { color: "#444444" });
-              }
+              },
             };
           return p.a.createElement(
             p.a.Fragment,
@@ -1124,12 +1142,12 @@
               p.a.createElement(h.a, {
                 isSearchable: !0,
                 isMulti: !0,
-                onChange: function(e) {
+                onChange: function (e) {
                   (n.selectedTags = e), a();
                 },
                 value: n.selectedTags,
                 options: r,
-                styles: o
+                styles: o,
               })
             ),
             p.a.createElement(
@@ -1143,12 +1161,12 @@
               p.a.createElement(h.a, {
                 isSearchable: !0,
                 isMulti: !0,
-                onChange: function(e) {
+                onChange: function (e) {
                   (n.excludedTags = e), a();
                 },
                 value: n.excludedTags,
                 options: r,
-                styles: o
+                styles: o,
               })
             ),
             p.a.createElement(
@@ -1162,12 +1180,12 @@
               p.a.createElement(h.a, {
                 isSearchable: !0,
                 isMulti: !0,
-                onChange: function(e) {
+                onChange: function (e) {
                   (n.filterEventTypes = e), a();
                 },
                 value: n.filterEventTypes,
                 options: t,
-                styles: o
+                styles: o,
               })
             ),
             p.a.createElement(
@@ -1180,7 +1198,7 @@
               ),
               p.a.createElement(c, {
                 timeFormat: !1,
-                onChange: function(e) {
+                onChange: function (e) {
                   if ("string" == typeof e) {
                     var t = ae(e, "M/D/YYYY", !0);
                     if (!t.isValid()) return void (n.filterDateAsString = e);
@@ -1190,7 +1208,7 @@
                     ((n.filterDateAsString = void 0), (n.filterDate = e), a());
                 },
                 value: n.filterDate,
-                isValidDate: function(e) {
+                isValidDate: function (e) {
                   var t = new Date();
                   return (
                     e.unix() <
@@ -1204,8 +1222,8 @@
                 },
                 inputProps: {
                   placeholder: Object(N.f)("#EventModeration_PickDatee"),
-                  className: Z.TimeWidth
-                }
+                  className: Z.TimeWidth,
+                },
               })
             ),
             p.a.createElement(
@@ -1215,10 +1233,10 @@
                 type: "checkbox",
                 id: "VisibilityStart",
                 checked: n.bOrderByVisibilityStartTime,
-                onChange: function(e) {
+                onChange: function (e) {
                   (n.bOrderByVisibilityStartTime = e.currentTarget.checked),
                     a();
-                }
+                },
               }),
               p.a.createElement(
                 "label",
@@ -1228,7 +1246,7 @@
             )
           );
         }),
-        se = (function(t) {
+        se = (function (t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (
@@ -1237,7 +1255,7 @@
                   e.props.solrData.unique_id
                 ),
                 bShowAsModal: !1,
-                bSavingModeration: !1
+                bSavingModeration: !1,
               }),
               (e.m_cancelSignal = b.a.CancelToken.source()),
               e
@@ -1245,7 +1263,7 @@
           }
           return (
             Object(E.d)(e, t),
-            (e.prototype.componentDidMount = function() {
+            (e.prototype.componentDidMount = function () {
               var e,
                 n = this,
                 t = this.props.solrData,
@@ -1258,10 +1276,10 @@
                     a,
                     e
                   )
-                  .then(function() {
+                  .then(function () {
                     return n.setState({ bLoadingEvent: !1 });
                   })
-                  .catch(function(e) {
+                  .catch(function (e) {
                     var t = Object(j.a)(e);
                     console.error(
                       "EventModerationTile: Event Load: " + t.strErrorMsg,
@@ -1270,21 +1288,21 @@
                       n.setState({ bLoadingEvent: !1 });
                   }));
             }),
-            (e.prototype.componentWillUnmount = function() {
+            (e.prototype.componentWillUnmount = function () {
               this.m_cancelSignal.cancel(
                 "EventModerationTile component unmounted"
               );
             }),
-            (e.prototype.ShowModalEvent = function() {
+            (e.prototype.ShowModalEvent = function () {
               var e = this.props.solrData.unique_id;
               !this.state.bLoadingEvent &&
                 L.c.BHasClanEventModel(e) &&
                 this.setState({ bShowAsModal: !0 });
             }),
-            (e.prototype.HideModalEvent = function() {
+            (e.prototype.HideModalEvent = function () {
               this.state.bShowAsModal && this.setState({ bShowAsModal: !1 });
             }),
-            (e.prototype.OnModeratedChanged = function(e) {
+            (e.prototype.OnModeratedChanged = function (e) {
               var t, n, a, r;
               this.state.bSavingModeration ||
                 ((t = this.props.solrData.unique_id),
@@ -1300,10 +1318,10 @@
                     this.ApplyModerationToggle
                   ));
             }),
-            (e.prototype.ApplyModerationToggle = function() {
-              return Object(E.b)(this, void 0, void 0, function() {
+            (e.prototype.ApplyModerationToggle = function () {
+              return Object(E.b)(this, void 0, void 0, function () {
                 var t, n, a, r, o, i, l, c, s, u;
-                return Object(E.e)(this, function(e) {
+                return Object(E.e)(this, function (e) {
                   switch (e.label) {
                     case 0:
                       (t = this.props.solrData),
@@ -1334,7 +1352,7 @@
                             r,
                             o,
                             l
-                          )
+                          ),
                         ]
                       );
                     case 2:
@@ -1355,7 +1373,7 @@
                 });
               });
             }),
-            (e.prototype.OnChangeCategory = function(e) {
+            (e.prototype.OnChangeCategory = function (e) {
               var t = this.props.solrData,
                 n = L.c.GetClanEventModel(t.unique_id);
               Object(Q.d)(
@@ -1363,7 +1381,7 @@
                 Object(J.m)(e)
               );
             }),
-            (e.prototype.OnUpdateSeasonalTag = function(e) {
+            (e.prototype.OnUpdateSeasonalTag = function (e) {
               var t = this.props.solrData,
                 n = L.c.GetClanEventModel(t.unique_id);
               Object(Q.d)(
@@ -1371,7 +1389,7 @@
                 Object(J.m)(e)
               );
             }),
-            (e.prototype.render = function() {
+            (e.prototype.render = function () {
               var e = this.props.solrData,
                 t = e.unique_id,
                 n = Number(e.appid),
@@ -1387,7 +1405,7 @@
                       null,
                       p.a.createElement(B.b, {
                         event: r,
-                        fnClose: this.HideModalEvent
+                        fnClose: this.HideModalEvent,
                       })
                     )
                   );
@@ -1450,7 +1468,7 @@
                             "/announcements/detail/" +
                             e.announcement_gid,
                           target: I.c.IN_CLIENT ? void 0 : "_blank",
-                          className: Z.EventTitle
+                          className: Z.EventTitle,
                         },
                         e.event_name
                       ),
@@ -1459,18 +1477,18 @@
                         {
                           className: Object(K.a)(
                             1 == s ? Z.TileEventOtherType : ""
-                          )
+                          ),
                         },
                         r ? r.GetCategoryAsString() : e.event_type
                       ),
                       this.state.bLoadingEvent &&
                         p.a.createElement(F.a, {
                           size: "small",
-                          string: Object(N.f)("#Loading")
+                          string: Object(N.f)("#Loading"),
                         }),
                       p.a.createElement(U, {
                         accountID: Number(e.creator_accountid),
-                        locToken: "#EventModTile_Author"
+                        locToken: "#EventModTile_Author",
                       }),
                       Boolean(
                         e.updator_accountid &&
@@ -1479,11 +1497,11 @@
                       ) &&
                         p.a.createElement(U, {
                           accountID: Number(e.updator_accountid),
-                          locToken: "#EventModTile_Updator"
+                          locToken: "#EventModTile_Updator",
                         }),
                       p.a.createElement(de, {
                         appid: n,
-                        clanSteamID: new _.a(e.clan_steamid)
+                        clanSteamID: new _.a(e.clan_steamid),
                       })
                     ),
                     r &&
@@ -1503,7 +1521,7 @@
                                 r.BHasTag("mod_reviewed") &&
                                   !r.BHasTag("mod_require_rereview")
                               ),
-                              onChange: this.OnModeratedChanged
+                              onChange: this.OnModeratedChanged,
                             }),
                             p.a.createElement(
                               "label",
@@ -1524,7 +1542,7 @@
                             "button",
                             {
                               className: Object(K.a)(W.a.Button, Z.Button),
-                              onClick: this.OnChangeCategory
+                              onClick: this.OnChangeCategory,
                             },
                             Object(N.f)("#EventModTile_ChangeEventType")
                           ),
@@ -1533,7 +1551,7 @@
                               "button",
                               {
                                 className: Object(K.a)(W.a.Button),
-                                onClick: this.OnUpdateSeasonalTag
+                                onClick: this.OnUpdateSeasonalTag,
                               },
                               Object(N.f)("#EventModTile_SeasonalTag")
                             ),
@@ -1546,7 +1564,7 @@
                             event: r,
                             stylesmodule: Z,
                             nOverrideEndTime: r.GetEndTimeAndDateUnixSeconds(),
-                            nOverrideStartTime: r.GetStartTimeAndDateUnixSeconds()
+                            nOverrideStartTime: r.GetStartTimeAndDateUnixSeconds(),
                           }),
                           p.a.createElement(ue, { event: r }),
                           p.a.createElement(pe, { event: r })
@@ -1565,7 +1583,7 @@
             (e = Object(E.c)([i.a], e))
           );
         })(p.a.Component);
-      var ue = (function(t) {
+      var ue = (function (t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (
@@ -1576,19 +1594,19 @@
           }
           return (
             Object(E.d)(e, t),
-            (e.prototype.componentWillUnmount = function() {
+            (e.prototype.componentWillUnmount = function () {
               this.m_cancelSignal.cancel(
                 "ChangeEventTypeDialog component unmounted"
               );
             }),
-            (e.prototype.CountLanguages = function(e) {
+            (e.prototype.CountLanguages = function (e) {
               var t = 0;
               if (e && 0 < e.length)
                 for (var n = 0; n < e.length && n < 30; ++n)
                   e[n] && 0 < e[n].length && (t += 1);
               return t;
             }),
-            (e.prototype.componentDidMount = function() {
+            (e.prototype.componentDidMount = function () {
               var n = this,
                 e = this.props.event;
               L.c
@@ -1596,11 +1614,11 @@
                   e.clanSteamID,
                   e.AnnouncementGID
                 )
-                .then(function(e) {
+                .then(function (e) {
                   n.m_cancelSignal.token.reason ||
                     n.setState({ nLocLanguages: e.length });
                 })
-                .catch(function(e) {
+                .catch(function (e) {
                   var t = Object(j.a)(e);
                   console.error(
                     "EventInspection.LoadLoc : error " + t.strErrorMsg,
@@ -1610,7 +1628,7 @@
                       n.setState({ nLocLanguages: -1 });
                 });
             }),
-            (e.prototype.render = function() {
+            (e.prototype.render = function () {
               var e = this.props.event,
                 t = this.CountLanguages(e.jsondata.localized_title_image),
                 n = this.CountLanguages(e.jsondata.localized_capsule_image),
@@ -1687,7 +1705,7 @@
                 0 == this.state.nLocLanguages &&
                   p.a.createElement(F.a, {
                     size: "small",
-                    string: Object(N.f)("#EventModTile_LoadingLocs")
+                    string: Object(N.f)("#EventModTile_LoadingLocs"),
                   }),
                 0 < this.state.nLocLanguages &&
                   p.a.createElement(
@@ -1717,28 +1735,28 @@
             (e = Object(E.c)([i.a], e))
           );
         })(p.a.Component),
-        de = Object(i.a)(function(e) {
+        de = Object(i.a)(function (e) {
           var t = Object(v.useState)(!ne.a.Get().BHasApp(e.appid)),
             n = t[0],
             o = t[1],
             i = p.a.useRef(b.a.CancelToken.source());
           if (
-            (Object(v.useEffect)(function() {
-              return function() {
+            (Object(v.useEffect)(function () {
+              return function () {
                 return i.current.cancel(
                   "EventModerationChannelInfo component unmounted"
                 );
               };
             }, []),
             Object(v.useEffect)(
-              function() {
+              function () {
                 var a = e.appid,
                   r = e.clanSteamID;
                 ((a && !ne.a.Get().BHasApp(a)) ||
                   (r && !y.a.BHasClanInfoLoaded(r))) &&
-                  Object(E.b)(void 0, void 0, void 0, function() {
+                  Object(E.b)(void 0, void 0, void 0, function () {
                     var t, n;
-                    return Object(E.e)(this, function(e) {
+                    return Object(E.e)(this, function (e) {
                       switch (e.label) {
                         case 0:
                           return (
@@ -1750,10 +1768,10 @@
                                   .Get()
                                   .QueueAppRequest(a, {
                                     include_assets: !0,
-                                    include_release: !0
+                                    include_release: !0,
                                   }),
-                                r ? y.a.LoadClanInfoForClanSteamID(r) : void 0
-                              ])
+                                r ? y.a.LoadClanInfoForClanSteamID(r) : void 0,
+                              ]),
                             ]
                           );
                         case 1:
@@ -1783,7 +1801,7 @@
           )
             return p.a.createElement(F.a, {
               size: "small",
-              string: Object(N.f)("#EventModTile_AppInfoLoading")
+              string: Object(N.f)("#EventModTile_AppInfoLoading"),
             });
           var a = e.appid,
             r = e.clanSteamID;
@@ -1801,7 +1819,7 @@
                       { href: Object(te.e)(l.GetStorePageURL()) },
                       p.a.createElement("img", {
                         className: Z.TileAppInfoImage,
-                        src: l.assets.GetMainCapsuleURL()
+                        src: l.assets.GetMainCapsuleURL(),
                       }),
                       p.a.createElement(
                         "div",
@@ -1836,11 +1854,11 @@
                     {
                       href: Object(te.e)(
                         I.c.STORE_BASE_URL + "/curator/" + c + "/"
-                      )
+                      ),
                     },
                     p.a.createElement("img", {
                       className: Z.TileAppInfoImage,
-                      src: s.avatar_full_url
+                      src: s.avatar_full_url,
                     }),
                     p.a.createElement(
                       "div",
@@ -1853,14 +1871,14 @@
           }
           return null;
         }),
-        pe = (function(t) {
+        pe = (function (t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (e.state = {}), e;
           }
           return (
             Object(E.d)(e, t),
-            (e.prototype.render = function() {
+            (e.prototype.render = function () {
               var e = this.props.event,
                 t = Object(f.d)(e),
                 n = Object(f.c)(e),
@@ -1948,7 +1966,7 @@
             (e = Object(E.c)([i.a], e))
           );
         })(p.a.Component),
-        me = (function(t) {
+        me = (function (t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (
@@ -1956,8 +1974,8 @@
                 bUpdating: !1,
                 newCategoryOption: {
                   label: Object(T.b)(34),
-                  value: { eventType: 34 }
-                }
+                  value: { eventType: 34 },
+                },
               }),
               (e.m_cancelSignal = b.a.CancelToken.source()),
               e
@@ -1965,15 +1983,15 @@
           }
           return (
             Object(E.d)(e, t),
-            (e.prototype.componentWillUnmount = function() {
+            (e.prototype.componentWillUnmount = function () {
               this.m_cancelSignal.cancel(
                 "ChangeEventTypeDialog component unmounted"
               );
             }),
-            (e.prototype.ChangeCategoryForEvent = function() {
-              return Object(E.b)(this, void 0, void 0, function() {
+            (e.prototype.ChangeCategoryForEvent = function () {
+              return Object(E.b)(this, void 0, void 0, function () {
                 var t, n, a, r, o, i, l, c, s, u;
-                return Object(E.e)(this, function(e) {
+                return Object(E.e)(this, function (e) {
                   switch (e.label) {
                     case 0:
                       (t = this.props),
@@ -1992,7 +2010,7 @@
                             n.clanSteamID,
                             n.GID,
                             o
-                          )
+                          ),
                         ]
                       );
                     case 2:
@@ -2001,7 +2019,7 @@
                         (i = f.o),
                         (l = []),
                         r.value.tags &&
-                          r.value.tags.forEach(function(e) {
+                          r.value.tags.forEach(function (e) {
                             l.push(e);
                             var t = new w()
                               .SetUpdateSeasonalTags(e)
@@ -2017,13 +2035,13 @@
                             l,
                             i,
                             new w().SetActionChangeEvent(o)
-                          )
+                          ),
                         ]
                       );
                     case 3:
                       return (
                         (c = e.sent()),
-                        Object(m.G)(function() {
+                        Object(m.G)(function () {
                           (n.type = o), (n.vecTags = c);
                         }),
                         this.setState({ bUpdating: !1 }, a),
@@ -2039,7 +2057,7 @@
                         ),
                         this.setState({
                           bUpdating: !1,
-                          strErrorMsg: u.strErrorMsg
+                          strErrorMsg: u.strErrorMsg,
                         }),
                         [3, 5]
                       );
@@ -2049,19 +2067,19 @@
                 });
               });
             }),
-            (e.prototype.OnChangeSelection = function(e) {
+            (e.prototype.OnChangeSelection = function (e) {
               this.setState({ newCategoryOption: e });
             }),
-            (e.prototype.render = function() {
+            (e.prototype.render = function () {
               var e = this,
                 t = this.props,
                 n = t.eventModel,
                 a = t.closeModal,
                 r = g.d
-                  .filter(function(e) {
+                  .filter(function (e) {
                     return 1 == e || 4 == e || 9 <= e;
                   })
-                  .map(function(e) {
+                  .map(function (e) {
                     var t = { eventType: e };
                     return (
                       12 == e && (t.tags = ["patchnotes"]),
@@ -2073,32 +2091,32 @@
                   label: Object(N.f)("#PartnerEvent_Curator_Group_Members"),
                   value: {
                     eventType: 28,
-                    tags: ["curator", "curator_group_members"]
-                  }
+                    tags: ["curator", "curator_group_members"],
+                  },
                 }),
                 r.push({
                   label: Object(N.f)("#PartnerEvent_Curator_Public"),
-                  value: { eventType: 28, tags: ["curator", "curator_public"] }
+                  value: { eventType: 28, tags: ["curator", "curator_public"] },
                 }),
                 r.unshift({
                   value: { eventType: 15, tags: ["halloween"] },
-                  label: Object(N.f)("#EventEditor_Category_DLC_Halloween")
+                  label: Object(N.f)("#EventEditor_Category_DLC_Halloween"),
                 }),
                 r.unshift({
                   value: { eventType: 22, tags: ["halloween"] },
-                  label: Object(N.f)("#PartnerEvent_22")
+                  label: Object(N.f)("#PartnerEvent_22"),
                 }),
                 r.unshift({
                   value: { eventType: 23, tags: ["halloween"] },
-                  label: Object(N.f)("#PartnerEvent_23")
+                  label: Object(N.f)("#PartnerEvent_23"),
                 }),
                 r.unshift({
                   value: { eventType: 24, tags: ["halloween"] },
-                  label: Object(N.f)("#PartnerEvent_24")
+                  label: Object(N.f)("#PartnerEvent_24"),
                 }),
                 r.unshift({
                   value: { eventType: 35, tags: ["halloween"] },
-                  label: Object(N.f)("#PartnerEvent_35")
+                  label: Object(N.f)("#PartnerEvent_35"),
                 }),
                 p.a.createElement(
                   V.c,
@@ -2109,12 +2127,12 @@
                       n.GetEventTypeAsString()
                     ),
                     onCancel: a,
-                    onOK: function() {
+                    onOK: function () {
                       return e.setState(
                         { bUpdating: !0 },
                         e.ChangeCategoryForEvent
                       );
-                    }
+                    },
                   },
                   p.a.createElement(
                     p.a.Fragment,
@@ -2137,7 +2155,7 @@
                         isSearchable: !0,
                         onChange: this.OnChangeSelection,
                         value: this.state.newCategoryOption,
-                        options: r
+                        options: r,
                       })
                     )
                   )
@@ -2149,7 +2167,7 @@
             (e = Object(E.c)([i.a], e))
           );
         })(p.a.Component),
-        ve = (function(t) {
+        ve = (function (t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (
@@ -2157,7 +2175,7 @@
                 bUpdating: !1,
                 bAccept: e.props.eventModel.BHasTag("halloween2019"),
                 bHorror: e.props.eventModel.BHasTag("horror"),
-                bCute: e.props.eventModel.BHasTag("cute")
+                bCute: e.props.eventModel.BHasTag("cute"),
               }),
               (e.m_cancelSignal = b.a.CancelToken.source()),
               e
@@ -2165,24 +2183,24 @@
           }
           return (
             Object(E.d)(e, t),
-            (e.prototype.componentWillUnmount = function() {
+            (e.prototype.componentWillUnmount = function () {
               this.m_cancelSignal.cancel(
                 "UpdateSeasonalTagDialog component unmounted"
               );
             }),
-            (e.prototype.ChangeAcceptance = function() {
+            (e.prototype.ChangeAcceptance = function () {
               this.setState({ bAccept: !this.state.bAccept });
             }),
-            (e.prototype.ChangeHorror = function() {
+            (e.prototype.ChangeHorror = function () {
               this.setState({ bHorror: !this.state.bHorror });
             }),
-            (e.prototype.ChangeCute = function() {
+            (e.prototype.ChangeCute = function () {
               this.setState({ bCute: !this.state.bCute });
             }),
-            (e.prototype.ApplyAction = function() {
-              return Object(E.b)(this, void 0, void 0, function() {
+            (e.prototype.ApplyAction = function () {
+              return Object(E.b)(this, void 0, void 0, function () {
                 var t, n, a, r, o, i;
-                return Object(E.e)(this, function(e) {
+                return Object(E.e)(this, function (e) {
                   switch (e.label) {
                     case 0:
                       (t = new Array()),
@@ -2214,7 +2232,7 @@
                                 ? "halloween2019"
                                 : "halloween2019reviewed"
                             )
-                          )
+                          ),
                         ]
                       );
                     case 2:
@@ -2241,7 +2259,7 @@
                 });
               });
             }),
-            (e.prototype.render = function() {
+            (e.prototype.render = function () {
               var e = this,
                 t = this.props,
                 n = (t.eventModel, t.closeModal);
@@ -2250,9 +2268,9 @@
                 {
                   strTitle: Object(N.f)("#EventModTile_SeasonalTag"),
                   onCancel: n,
-                  onOK: function() {
+                  onOK: function () {
                     return e.setState({ bUpdating: !0 }, e.ApplyAction);
-                  }
+                  },
                 },
                 p.a.createElement(
                   p.a.Fragment,
@@ -2264,7 +2282,7 @@
                       id: "Acceptance",
                       type: "checkbox",
                       checked: this.state.bAccept,
-                      onChange: this.ChangeAcceptance
+                      onChange: this.ChangeAcceptance,
                     }),
                     p.a.createElement(
                       "label",
@@ -2280,7 +2298,7 @@
                       id: "Horror",
                       type: "checkbox",
                       checked: this.state.bHorror,
-                      onChange: this.ChangeHorror
+                      onChange: this.ChangeHorror,
                     }),
                     p.a.createElement(
                       "label",
@@ -2291,7 +2309,7 @@
                       id: "Cute",
                       type: "checkbox",
                       checked: this.state.bCute,
-                      onChange: this.ChangeCute
+                      onChange: this.ChangeCute,
                     }),
                     p.a.createElement("label", { htmlFor: "Cute" }, "Cute Tag"),
                     this.state.bUpdating &&
@@ -2318,7 +2336,7 @@
         he = n("5eAM"),
         Ee = n("ir+G"),
         be = n("gOcu"),
-        ge = (function(t) {
+        ge = (function (t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (
@@ -2329,15 +2347,15 @@
           }
           return (
             Object(E.d)(e, t),
-            (e.prototype.componentWillUnmount = function() {
+            (e.prototype.componentWillUnmount = function () {
               this.m_cancelSignal.cancel(
                 "SteamGameFestivalStoreDebug to unload "
               );
             }),
-            (e.prototype.componentDidMount = function() {
-              return Object(E.b)(this, void 0, void 0, function() {
+            (e.prototype.componentDidMount = function () {
+              return Object(E.b)(this, void 0, void 0, function () {
                 var t, n, a, r, o, i, l, c, s;
-                return Object(E.e)(this, function(e) {
+                return Object(E.e)(this, function (e) {
                   switch (e.label) {
                     case 0:
                       return ((t = this.props),
@@ -2353,7 +2371,7 @@
                               r,
                               n,
                               0
-                            )
+                            ),
                           ]);
                     case 1:
                       return ((o = e.sent()),
@@ -2365,13 +2383,13 @@
                             bLoadingEvent: !1,
                             bLoadingApps: !0,
                             bLoadingDemos: !0,
-                            bLoadingAssociatedDemoInfo: !0
+                            bLoadingAssociatedDemoInfo: !0,
                           }),
                           (c = new Map()),
-                          o.jsondata.sale_sections.forEach(function(e) {
+                          o.jsondata.sale_sections.forEach(function (e) {
                             "tabs" == e.section_type &&
-                              e.tabs.forEach(function(e) {
-                                e.capsules.forEach(function(e) {
+                              e.tabs.forEach(function (e) {
+                                e.capsules.forEach(function (e) {
                                   "game" == e.type ||
                                   "application" == e.type ||
                                   "software" == e.type
@@ -2390,7 +2408,7 @@
                         this.setState({
                           rgAppIDs: i,
                           rgUnknownTypeAppIDs: l,
-                          bLoadingApps: !1
+                          bLoadingApps: !1,
                         }),
                         [4, Ee.a.BatchLoadAppCapsules(i)]
                       );
@@ -2407,7 +2425,7 @@
                         be.a
                           .Get()
                           .GetAllDemoInfo()
-                          .forEach(function(e) {
+                          .forEach(function (e) {
                             return s.push(e.demo_appid);
                           }),
                         [4, he.a.LoadAppLinkInfo(s)]
@@ -2431,7 +2449,7 @@
                 });
               });
             }),
-            (e.prototype.render = function() {
+            (e.prototype.render = function () {
               if (
                 this.state.bLoadingEvent ||
                 this.state.bLoadingDemos ||
@@ -2450,7 +2468,7 @@
                       : this.state.bLoadingDemos
                       ? " Demos"
                       : "done"),
-                  position: "center"
+                  position: "center",
                 });
               if (!this.state.event)
                 return v.createElement("div", null, " Failed to load event");
@@ -2458,12 +2476,12 @@
               if (!e.jsondata.bSaleEnabled)
                 return v.createElement("div", null, "Not a sale evnet");
               var a = new Map();
-              this.state.rgDemoIDs.forEach(function(e) {
+              this.state.rgDemoIDs.forEach(function (e) {
                 return a.set(e, !0);
               });
               var n = new Array(),
                 r = new Array();
-              he.a.GetMissingAppIDs().forEach(function(e, t) {
+              he.a.GetMissingAppIDs().forEach(function (e, t) {
                 n.push(
                   v.createElement(
                     "div",
@@ -2472,7 +2490,7 @@
                       "a",
                       {
                         href: I.c.STORE_BASE_URL + "app/" + t + "/?beta=1",
-                        target: "_blank"
+                        target: "_blank",
                       },
                       t
                     )
@@ -2481,7 +2499,7 @@
                   r.push(t);
               });
               var o = new Array();
-              he.a.GetAllLoadedAppLinks().forEach(function(e, t) {
+              he.a.GetAllLoadedAppLinks().forEach(function (e, t) {
                 var n;
                 a.has(t) ||
                   be.a.Get().BHasDemoAppID(t) ||
@@ -2506,7 +2524,7 @@
                           href: Object(te.e)(
                             I.c.STORE_BASE_URL + "app/" + t + "/?beta=0"
                           ),
-                          target: "_blank"
+                          target: "_blank",
                         },
                         "Store Page"
                       ),
@@ -2515,7 +2533,7 @@
                         "a",
                         {
                           href: I.c.PARTNER_BASE_URL + "apps/landing/" + t,
-                          target: "_blank"
+                          target: "_blank",
                         },
                         "App Landing Page"
                       )
@@ -2529,7 +2547,7 @@
                 u = 0,
                 d = 0,
                 p = 0;
-              Ee.a.GetAllAppInfos().forEach(function(e, t) {
+              Ee.a.GetAllAppInfos().forEach(function (e, t) {
                 var n,
                   a = !1;
                 e.BIsLoaded() &&
@@ -2543,12 +2561,12 @@
                     : e.BIsLoaded() && be.a.Get().BHasDemoAppID(t)
                     ? ((l += 1), a || (p += 1))
                     : -1 ==
-                        r.findIndex(function(e) {
+                        r.findIndex(function (e) {
                           return e == t;
                         }) && c.push(e.GetAppStoreData());
               });
               var t = new Array();
-              c.forEach(function(e) {
+              c.forEach(function (e) {
                 t.push(
                   v.createElement(
                     "div",
@@ -2558,7 +2576,7 @@
                       {
                         href:
                           I.c.STORE_BASE_URL + "app/" + e.appid + "/?beta=1",
-                        target: "_blank"
+                        target: "_blank",
                       },
                       e.name,
                       " (",
@@ -2570,7 +2588,7 @@
               });
               var m = 0;
               return (
-                he.a.GetAllLoadedAppLinks().forEach(function(e) {
+                he.a.GetAllLoadedAppLinks().forEach(function (e) {
                   "demo" != e.type && (m += 1);
                 }),
                 v.createElement(
@@ -2738,7 +2756,7 @@
             (e = Object(E.c)([i.a], e))
           );
         })(v.Component),
-        fe = new ((function() {
+        fe = new ((function () {
           function e() {
             (this.m_backfill = void 0),
               (this.m_mapEventGIDProcessed = new Map()),
@@ -2751,25 +2769,25 @@
               (this.m_nSkipped = 0);
           }
           return (
-            (e.prototype.GetBackfill = function() {
+            (e.prototype.GetBackfill = function () {
               return this.m_backfill;
             }),
-            (e.prototype.SetBackfill = function(e) {
+            (e.prototype.SetBackfill = function (e) {
               this.m_backfill = e;
             }),
-            (e.prototype.StartBackfill = function(e) {
+            (e.prototype.StartBackfill = function (e) {
               (this.m_backfill = e), (this.m_bBackfillInProgress = !0);
             }),
-            (e.prototype.CompleteBackfill = function(e) {
+            (e.prototype.CompleteBackfill = function (e) {
               (this.m_backfill = void 0), (this.m_bBackfillInProgress = !1);
             }),
-            (e.prototype.BIsBackkFillInProgress = function() {
+            (e.prototype.BIsBackkFillInProgress = function () {
               return this.m_bBackfillInProgress;
             }),
-            (e.prototype.GetEventBackfillProgress = function() {
+            (e.prototype.GetEventBackfillProgress = function () {
               return this.m_mapEventGIDProcessed;
             }),
-            (e.prototype.CreateOrGetBackfillProgess = function(e) {
+            (e.prototype.CreateOrGetBackfillProgess = function (e) {
               return (
                 this.m_mapEventGIDProcessed.has(e) ||
                   (this.m_mapEventGIDProcessed.set(e, { bProcessing: !1 }),
@@ -2777,13 +2795,13 @@
                 this.m_mapEventGIDProcessed.get(e)
               );
             }),
-            (e.prototype.BHasProgress = function(e) {
+            (e.prototype.BHasProgress = function (e) {
               return this.m_mapEventGIDProcessed.has(e);
             }),
-            (e.prototype.GetBackfillGIDs = function() {
+            (e.prototype.GetBackfillGIDs = function () {
               return this.m_vecEventGID;
             }),
-            (e.prototype.CloseProgress = function(e, t) {
+            (e.prototype.CloseProgress = function (e, t) {
               (this.m_nProcessed += 1),
                 t.bAlreadyProcessed || t.bSkipped
                   ? (this.m_nSkipped += 1)
@@ -2809,7 +2827,7 @@
         })())(),
         _e = n("vNkc"),
         Se = n("mB/g"),
-        ye = (function(t) {
+        ye = (function (t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (
@@ -2822,28 +2840,28 @@
           }
           return (
             Object(E.d)(e, t),
-            (e.prototype.componentWillUnmount = function() {
+            (e.prototype.componentWillUnmount = function () {
               this.m_cancelSignal.cancel(
                 "EventBackfillLanding component unmounted"
               );
             }),
-            (e.prototype.OnArtworkResizeBackfill = function() {
+            (e.prototype.OnArtworkResizeBackfill = function () {
               null == this.state.eBackfillState &&
                 this.setState(
                   { eBackfillState: "started" },
                   this.BeginArtworkResize
                 );
             }),
-            (e.prototype.BeginArtworkResize = function() {
+            (e.prototype.BeginArtworkResize = function () {
               var n = this;
               this.m_mapArtworkResizeSuccess.set("capsule", 0),
                 this.m_mapArtworkResizeSuccess.set("spotlight", 0),
                 this.m_mapArtworkResizeSuccess.set("background", 0),
                 this.RunArtworkResizeBackfill()
-                  .then(function() {
+                  .then(function () {
                     return n.setState({ eBackfillState: "success" });
                   })
-                  .catch(function(e) {
+                  .catch(function (e) {
                     var t = Object(j.a)(e);
                     console.error(
                       "EventBackfillLanding: error " + t.strErrorMsg,
@@ -2852,12 +2870,12 @@
                       n.setState({ eBackfillState: "error" });
                   });
             }),
-            (e.prototype.GetImageInfo = function(a, r, o) {
+            (e.prototype.GetImageInfo = function (a, r, o) {
               return (
                 void 0 === o && (o = ""),
-                Object(E.b)(this, void 0, void 0, function() {
+                Object(E.b)(this, void 0, void 0, function () {
                   var t, n;
-                  return Object(E.e)(this, function(e) {
+                  return Object(E.e)(this, function (e) {
                     return (
                       (t = S.a.GetExtensionTypeFromURL(r)),
                       (n = S.a.GetHashFromHashAndExt(r) + o),
@@ -2869,14 +2887,14 @@
                           t,
                           this.m_cancelSignal,
                           !0
-                        )
+                        ),
                       ]
                     );
                   });
                 })
               );
             }),
-            (e.prototype.HandleErrorFatal = function(e, t, n, a) {
+            (e.prototype.HandleErrorFatal = function (e, t, n, a) {
               var r = Object(j.a)(t),
                 o =
                   "EventBackfillLanding: " +
@@ -2892,18 +2910,18 @@
                     fe.CloseProgress(e, a))
                   : fe.CompleteBackfill("resize_image");
             }),
-            (e.prototype.HandleResizeForImageType = function(d, p, m, v, h) {
-              return Object(E.b)(this, void 0, void 0, function() {
+            (e.prototype.HandleResizeForImageType = function (d, p, m, v, h) {
+              return Object(E.b)(this, void 0, void 0, function () {
                 var t,
                   s,
                   n,
                   u = this;
-                return Object(E.e)(this, function(e) {
+                return Object(E.e)(this, function (e) {
                   switch (e.label) {
                     case 0:
-                      (t = function(t) {
+                      (t = function (t) {
                         var n, a, r, o, i, l, c;
-                        return Object(E.e)(this, function(e) {
+                        return Object(E.e)(this, function (e) {
                           switch (e.label) {
                             case 0:
                               return d[t] && 0 < d[t].length
@@ -2913,17 +2931,23 @@
                                   a
                                     ? [
                                         4,
-                                        s.GetImageInfo(r, n).catch(function(e) {
-                                          return (
-                                            u.HandleErrorFatal(
-                                              null,
-                                              e,
-                                              "GetImageInfo Original",
-                                              m
-                                            ),
-                                            { height: 0, width: 0, success: 2 }
-                                          );
-                                        })
+                                        s
+                                          .GetImageInfo(r, n)
+                                          .catch(function (e) {
+                                            return (
+                                              u.HandleErrorFatal(
+                                                null,
+                                                e,
+                                                "GetImageInfo Original",
+                                                m
+                                              ),
+                                              {
+                                                height: 0,
+                                                width: 0,
+                                                success: 2,
+                                              }
+                                            );
+                                          }),
                                       ]
                                     : [3, 8])
                                 : [3, 9];
@@ -2932,7 +2956,7 @@
                                 Object(f.j)(o.width, o.height, v)
                                 ? [
                                     4,
-                                    s.GetImageInfo(r, n, h).catch(function(e) {
+                                    s.GetImageInfo(r, n, h).catch(function (e) {
                                       return (
                                         u.HandleErrorFatal(
                                           null,
@@ -2942,7 +2966,7 @@
                                         ),
                                         { height: 0, width: 0, success: 2 }
                                       );
-                                    })
+                                    }),
                                   ]
                                 : [3, 6];
                             case 2:
@@ -2965,7 +2989,7 @@
                                       l,
                                       c
                                     )
-                                    .then(function(e) {
+                                    .then(function (e) {
                                       console.log(
                                         "success on the resize request"
                                       ),
@@ -2986,7 +3010,7 @@
                                               " / " +
                                               c.length));
                                     })
-                                    .catch(function(e) {
+                                    .catch(function (e) {
                                       m.bFailed = !0;
                                       var t = Object(j.a)(e);
                                       (m.strMessage = t.strErrorMsg),
@@ -2994,7 +3018,7 @@
                                           "Resize: " + t.strErrorMsg,
                                           t
                                         );
-                                    })
+                                    }),
                                 ]
                               );
                             case 4:
@@ -3027,15 +3051,15 @@
                 });
               });
             }),
-            (e.prototype.RunArtworkResizeBackfill = function() {
-              return Object(E.b)(this, void 0, void 0, function() {
+            (e.prototype.RunArtworkResizeBackfill = function () {
+              return Object(E.b)(this, void 0, void 0, function () {
                 var t,
                   i,
                   n,
                   l,
                   a,
                   c = this;
-                return Object(E.e)(this, function(e) {
+                return Object(E.e)(this, function (e) {
                   switch (e.label) {
                     case 0:
                       fe.StartBackfill("resize_image"), (t = 0), (e.label = 1);
@@ -3050,13 +3074,13 @@
                                 t,
                                 25
                               )
-                              .catch(function(e) {
+                              .catch(function (e) {
                                 return c.HandleErrorFatal(
                                   null,
                                   e,
                                   "LoadPartnerEventForQueryIncremental"
                                 );
-                              })
+                              }),
                           ]
                         : [3, 7];
                     case 2:
@@ -3067,9 +3091,9 @@
                           [3, 7]
                         );
                       (t += i.length),
-                        (n = function(t) {
+                        (n = function (t) {
                           var n, a, r, o;
-                          return Object(E.e)(this, function(e) {
+                          return Object(E.e)(this, function (e) {
                             switch (e.label) {
                               case 0:
                                 return (
@@ -3087,14 +3111,14 @@
                                             n.announcement_gid,
                                             100
                                           )
-                                          .catch(function(e) {
+                                          .catch(function (e) {
                                             c.HandleErrorFatal(
                                               n.announcement_gid,
                                               e,
                                               "LoadPartnerEventFromAnnoucementGID",
                                               a
                                             );
-                                          })
+                                          }),
                                       ]
                                     : ((a.bSkipped = !0),
                                       (a.bWarning = !0),
@@ -3123,7 +3147,7 @@
                                           " Event " +
                                           r.GID +
                                           " Title: " +
-                                          r.GetNameWithFallback(0)
+                                          r.GetNameWithFallback(0),
                                       }),
                                       r.jsondata &&
                                       r.jsondata.localized_capsule_image
@@ -3139,14 +3163,14 @@
                                                 "capsule",
                                                 S.c.capsule_main
                                               )
-                                              .catch(function(e) {
+                                              .catch(function (e) {
                                                 return c.HandleErrorFatal(
                                                   null,
                                                   e,
                                                   "HandleResizeForImageType capsule",
                                                   a
                                                 );
-                                              })
+                                              }),
                                           ])
                                         : [3, 3])
                                   : ((a.bFailed = !0),
@@ -3171,14 +3195,14 @@
                                           "background",
                                           S.c.background_mini
                                         )
-                                        .catch(function(e) {
+                                        .catch(function (e) {
                                           return c.HandleErrorFatal(
                                             null,
                                             e,
                                             "HandleResizeForImageType background",
                                             a
                                           );
-                                        })
+                                        }),
                                     ])
                                   : [3, 5];
                               case 4:
@@ -3197,14 +3221,14 @@
                                           "spotlight",
                                           S.c.spotlight_main
                                         )
-                                        .catch(function(e) {
+                                        .catch(function (e) {
                                           return c.HandleErrorFatal(
                                             null,
                                             e,
                                             "HandleResizeForImageType spotlight",
                                             a
                                           );
-                                        })
+                                        }),
                                     ])
                                   : [3, 7];
                               case 6:
@@ -3242,41 +3266,41 @@
                 });
               });
             }),
-            (e.prototype.RenderFailure = function() {
+            (e.prototype.RenderFailure = function () {
               var a = new Array();
               return (
                 0 < fe.m_nFailures &&
-                  fe.GetBackfillGIDs().forEach(function(e) {
+                  fe.GetBackfillGIDs().forEach(function (e) {
                     var t,
                       n = fe.GetEventBackfillProgress().get(e);
                     n &&
                       n.bFailed &&
-                      ((t = L.c.GetClanEventModel(e)) &&
-                        a.push(
+                      (t = L.c.GetClanEventModel(e)) &&
+                      a.push(
+                        v.createElement(
+                          "div",
+                          { key: e },
+                          v.createElement(
+                            Se.c,
+                            {
+                              eventModel: t,
+                              route: Se.a.k_eView,
+                              openNewWindow: !0,
+                            },
+                            t.GetNameWithFallback(0)
+                          ),
                           v.createElement(
                             "div",
-                            { key: e },
-                            v.createElement(
-                              Se.c,
-                              {
-                                eventModel: t,
-                                route: Se.a.k_eView,
-                                openNewWindow: !0
-                              },
-                              t.GetNameWithFallback(0)
-                            ),
-                            v.createElement(
-                              "div",
-                              { className: _e.Error },
-                              n.strMessage
-                            )
+                            { className: _e.Error },
+                            n.strMessage
                           )
-                        ));
+                        )
+                      );
                   }),
                 a
               );
             }),
-            (e.prototype.RenderResizeProgress = function() {
+            (e.prototype.RenderResizeProgress = function () {
               var e = new Array();
               return (
                 e.push(
@@ -3309,7 +3333,7 @@
                 e
               );
             }),
-            (e.prototype.render = function() {
+            (e.prototype.render = function () {
               var e = this.RenderFailure(),
                 t = this.m_mapArtworkResizeSuccess.has("capsule")
                   ? this.RenderResizeProgress()
@@ -3338,9 +3362,9 @@
                   v.createElement(
                     "button",
                     {
-                      onClick: function() {
+                      onClick: function () {
                         return fe.CompleteBackfill("resize_image");
-                      }
+                      },
                     },
                     "Stop Backfill"
                   )
@@ -3385,7 +3409,7 @@
                   v.createElement(F.a, {
                     size: "medium",
                     position: "center",
-                    string: "Backfill In Progress"
+                    string: "Backfill In Progress",
                   })
               );
             }),
@@ -3403,7 +3427,7 @@
         De = n("SdTr"),
         Me = n("YNty"),
         we = Ae.a.Get(),
-        Ge = (function(n) {
+        Ge = (function (n) {
           function e(e) {
             var t = n.call(this, e) || this;
             return (
@@ -3412,18 +3436,18 @@
                   ? t.props.event_gid
                   : we.GetClanEventGIDFromAnnouncementGID(
                       t.props.announcement_gid
-                    )
+                    ),
               }),
               t
             );
           }
           return (
             Object(E.d)(e, n),
-            (e.prototype.LoadEvent = function() {
-              return Object(E.b)(this, void 0, void 0, function() {
+            (e.prototype.LoadEvent = function () {
+              return Object(E.b)(this, void 0, void 0, function () {
                 var t,
                   n = this;
-                return Object(E.e)(this, function(e) {
+                return Object(E.e)(this, function (e) {
                   switch (e.label) {
                     case 0:
                       if (
@@ -3443,7 +3467,7 @@
                             this.props.event_gid,
                             void 0,
                             0
-                          )
+                          ),
                         ]
                       );
                     case 2:
@@ -3463,10 +3487,10 @@
                             this.props.event_gid,
                             0
                           )
-                          .then(function(e) {
+                          .then(function (e) {
                             return n.setState({ lookupGID: e.GID });
                           })
-                          .catch(function(e) {
+                          .catch(function (e) {
                             return console.error(
                               "StoreEventDetailView failed " +
                                 Object(j.a)(e).strErrorMsg
@@ -3489,10 +3513,10 @@
                             this.props.announcement_gid,
                             0
                           )
-                          .then(function(e) {
+                          .then(function (e) {
                             return n.setState({ lookupGID: e.GID });
                           })
-                          .catch(function(e) {
+                          .catch(function (e) {
                             return console.error(
                               "StoreEventDetailView failed " +
                                 Object(j.a)(e).strErrorMsg
@@ -3505,13 +3529,13 @@
                 });
               });
             }),
-            (e.prototype.componentDidMount = function() {
+            (e.prototype.componentDidMount = function () {
               this.LoadEvent(), this.UpdateDocumentUI();
             }),
-            (e.prototype.componentDidUpdate = function() {
+            (e.prototype.componentDidUpdate = function () {
               this.UpdateDocumentUI();
             }),
-            (e.prototype.UpdateDocumentUI = function() {
+            (e.prototype.UpdateDocumentUI = function () {
               var e,
                 t,
                 n,
@@ -3542,14 +3566,14 @@
                 document.body.classList.contains("events_hub") &&
                   document.body.classList.remove("events_hub");
             }),
-            (e.prototype.InfiniteScrollCloseModal = function() {
+            (e.prototype.InfiniteScrollCloseModal = function () {
               var e,
                 t = we.GetClanEventModel(this.state.lookupGID);
               t &&
                 ((e = Object(Se.d)(t, Se.a.k_eStoreNewsHub, "allowRelative")),
                 this.props.history.push(e));
             }),
-            (e.prototype.render = function() {
+            (e.prototype.render = function () {
               var e = we.GetClanEventModel(this.state.lookupGID);
               return e
                 ? this.props.bInfiniteScroll
@@ -3563,7 +3587,7 @@
                         partnerEventStore: we,
                         eventModel: e,
                         showAppHeader: !0,
-                        closeModal: this.InfiniteScrollCloseModal
+                        closeModal: this.InfiniteScrollCloseModal,
                       })
                     )
                   : p.a.createElement(
@@ -3575,13 +3599,13 @@
                         event: e,
                         adminPanel: p.a.createElement(je.a, {
                           eventModel: e,
-                          partnerEventStore: we
+                          partnerEventStore: we,
                         }),
                         otherEventRow: p.a.createElement(De.a, {
                           clanAccountID: e.clanSteamID.GetAccountID(),
                           gidAnnouncement: e.AnnouncementGID,
-                          partnerEventStore: we
-                        })
+                          partnerEventStore: we,
+                        }),
                       })
                     )
                 : p.a.createElement(F.a, null);
@@ -3597,7 +3621,7 @@
         Pe = n.n(Be),
         Fe = n("r+ba"),
         Ne = n("apHd"),
-        He = (function(a) {
+        He = (function (a) {
           function e(e) {
             var n = a.call(this, e) || this;
             n.state = {
@@ -3605,7 +3629,7 @@
               bShowModal: !1,
               modalInitialEvent: null,
               bPreLoaded: !1,
-              announcementGIDList: []
+              announcementGIDList: [],
             };
             var t = Object(Ne.a)("EventWebRowEmbed");
             return (
@@ -3613,7 +3637,7 @@
                 ((n.state.bPreLoaded = t.bPreLoaded),
                 (n.state.announcementGIDList = t.announcementGIDList),
                 (n.state.events = []),
-                n.state.announcementGIDList.forEach(function(e) {
+                n.state.announcementGIDList.forEach(function (e) {
                   var t = L.c.GetClanEventFromAnnouncementGID(e);
                   t && n.state.events.push(t);
                 })),
@@ -3622,8 +3646,8 @@
           }
           return (
             Object(E.d)(e, a),
-            (e.prototype.componentDidMount = function() {
-              return Object(E.b)(this, void 0, void 0, function() {
+            (e.prototype.componentDidMount = function () {
+              return Object(E.b)(this, void 0, void 0, function () {
                 var t,
                   n,
                   a,
@@ -3632,7 +3656,7 @@
                   i,
                   l,
                   c = this;
-                return Object(E.e)(this, function(e) {
+                return Object(E.e)(this, function (e) {
                   switch (e.label) {
                     case 0:
                       return (
@@ -3652,7 +3676,7 @@
                                 0,
                                 2,
                                 a
-                              )
+                              ),
                             ]
                       );
                     case 1:
@@ -3663,10 +3687,10 @@
                           0 < i.length &&
                           ((l = Oe.a.Get().GetTracker()),
                           this.state.events
-                            .filter(function(e) {
+                            .filter(function (e) {
                               return e.BIsPartnerEvent();
                             })
-                            .forEach(function(e) {
+                            .forEach(function (e) {
                               return l.MarkEventShown(
                                 e.GID,
                                 e.clanSteamID.GetAccountID(),
@@ -3677,7 +3701,7 @@
                         (e.label = 2);
                     case 2:
                       return (
-                        (window.fnPartnerEvent_ShowInfiniteScroll = function(
+                        (window.fnPartnerEvent_ShowInfiniteScroll = function (
                           e,
                           t
                         ) {
@@ -3685,7 +3709,7 @@
                             c.setState({
                               bShowModal: !0,
                               announcementGID: t,
-                              modalInitialEvent: void 0
+                              modalInitialEvent: void 0,
                             });
                         }),
                         [2]
@@ -3694,30 +3718,30 @@
                 });
               });
             }),
-            (e.prototype.ValidateStoreDefault = function(e) {
+            (e.prototype.ValidateStoreDefault = function (e) {
               return (
                 !(!e || "object" != typeof e) &&
-                (void 0 !== e.bPreLoaded &&
-                  "boolean" == typeof e.bPreLoaded &&
-                  Array.isArray(e.announcementGIDList))
+                void 0 !== e.bPreLoaded &&
+                "boolean" == typeof e.bPreLoaded &&
+                Array.isArray(e.announcementGIDList)
               );
             }),
-            (e.prototype.ShowModal = function(e) {
+            (e.prototype.ShowModal = function (e) {
               var t = this.props.trackingLocation;
               this.setState({
                 bShowModal: !0,
                 modalInitialEvent: e,
-                announcementGID: void 0
+                announcementGID: void 0,
               });
               var n = Oe.a.Get().GetTracker();
               e.BIsPartnerEvent() &&
                 n.MarkEventRead(e.GID, e.clanSteamID.GetAccountID(), t) &&
                 n.Flush();
             }),
-            (e.prototype.CloseModal = function() {
+            (e.prototype.CloseModal = function () {
               this.setState({ bShowModal: !1, modalInitialEvent: null });
             }),
-            (e.prototype.render = function() {
+            (e.prototype.render = function () {
               var n = this,
                 a = this.state.events;
               if (!a)
@@ -3746,7 +3770,7 @@
                       : this.state.modalInitialEvent.AnnouncementGID,
                     partnerEventStore: r,
                     eventModel: this.state.modalInitialEvent,
-                    closeModal: this.CloseModal
+                    closeModal: this.CloseModal,
                   }),
                 p.a.createElement(
                   "h2",
@@ -3761,9 +3785,9 @@
                         "div",
                         {
                           className: Fe.SectionButton,
-                          onClick: function() {
+                          onClick: function () {
                             return n.ShowModal(a[0]);
-                          }
+                          },
                         },
                         Object(N.f)("#EventBrowse_MoreEventsBtn")
                       )
@@ -3773,7 +3797,7 @@
                           eventModel: a[0],
                           route: Se.a.k_eViewWebSiteHub,
                           forceAnchor: !0,
-                          className: Fe.SectionButton
+                          className: Fe.SectionButton,
                         },
                         Object(N.f)("#EventBrowse_MoreEventsBtn")
                       )
@@ -3781,15 +3805,15 @@
                 p.a.createElement(
                   "div",
                   { className: Fe.EventsSummariesCtn },
-                  a.slice(0, e).map(function(t) {
+                  a.slice(0, e).map(function (t) {
                     var e =
                       1 === a.length && 500 < window.screen.width ? De.c : De.b;
                     return p.a.createElement(e, {
                       key: t.GID,
                       event: t,
-                      onClick: function(e) {
+                      onClick: function (e) {
                         n.ShowModal(t), e.stopPropagation(), e.preventDefault();
-                      }
+                      },
                     });
                   })
                 )
@@ -3801,7 +3825,7 @@
           );
         })(p.a.Component),
         Ue = n("5izx"),
-        ze = (function(r) {
+        ze = (function (r) {
           function e(e) {
             var t = r.call(this, e) || this;
             t.m_rtimeOldest = 0;
@@ -3811,7 +3835,7 @@
           }
           return (
             Object(E.d)(e, r),
-            (e.prototype.render = function() {
+            (e.prototype.render = function () {
               var e = this.props.appid;
               return p.a.createElement(He, {
                 appid: e,
@@ -3819,44 +3843,44 @@
                 event_customization: {
                   rtime_oldestevent: this.m_rtimeOldest,
                   exclude_tags: ["patchnotes", "hide_store", "mod_hide_store"],
-                  exclude_event_types: [34]
+                  exclude_event_types: [34],
                 },
                 strClassName: "early_access_announcements",
-                trackingLocation: 3
+                trackingLocation: 3,
               });
             }),
             e
           );
         })(p.a.Component),
         xe = n("2l+k"),
-        We = (function() {
+        We = (function () {
           function e() {
             this.m_rgRSSEnabledClans = [];
           }
           return (
-            (e.prototype.GetAllRSSEnabledClans = function() {
+            (e.prototype.GetAllRSSEnabledClans = function () {
               return this.m_rgRSSEnabledClans;
             }),
-            (e.prototype.GetTrustedEnabledClans = function(t) {
+            (e.prototype.GetTrustedEnabledClans = function (t) {
               return this.m_rgRSSEnabledClans
-                .filter(function(e) {
+                .filter(function (e) {
                   return e.is_trusted_press == t;
                 })
-                .map(function(e) {
+                .map(function (e) {
                   return e.clan_accoundid;
                 });
             }),
-            (e.Get = function() {
+            (e.Get = function () {
               return (
                 e.s_Singleton || (e.s_Singleton = new e()).Init(), e.s_Singleton
               );
             }),
-            (e.prototype.Init = function() {
+            (e.prototype.Init = function () {
               var e = Object(I.f)("rssaccountinfo", "application_config");
               this.ValidateRSSAccountConfig(e) &&
                 (this.m_rgRSSEnabledClans = e);
             }),
-            (e.prototype.ValidateRSSAccountConfig = function(e) {
+            (e.prototype.ValidateRSSAccountConfig = function (e) {
               var t = e;
               return (
                 t &&
@@ -3866,16 +3890,16 @@
                 "number" == typeof t[0].clan_accoundid
               );
             }),
-            (e.prototype.LoadKnownAllRSSInfo = function() {
-              return Object(E.b)(this, void 0, void 0, function() {
+            (e.prototype.LoadKnownAllRSSInfo = function () {
+              return Object(E.b)(this, void 0, void 0, function () {
                 var t, n;
-                return Object(E.e)(this, function(e) {
+                return Object(E.e)(this, function (e) {
                   switch (e.label) {
                     case 0:
                       return (
                         (t = new Array()),
                         (n = xe.a.Get()),
-                        this.m_rgRSSEnabledClans.forEach(function(e) {
+                        this.m_rgRSSEnabledClans.forEach(function (e) {
                           n.BHasClanIDLoaded(e.clan_accoundid) ||
                             t.push(
                               n.QueueCuratorAdminInfoLoad(e.clan_accoundid)
@@ -3889,29 +3913,29 @@
                 });
               });
             }),
-            (e.prototype.ExtractWithoutRSSAutomation = function() {
+            (e.prototype.ExtractWithoutRSSAutomation = function () {
               var n = [],
                 a = xe.a.Get();
               return (
-                this.m_rgRSSEnabledClans.forEach(function(e) {
+                this.m_rgRSSEnabledClans.forEach(function (e) {
                   var t = a.GetRSSAdminForClanAccountID(e.clan_accoundid);
                   t && !t.BIsAutomationEnabled() && n.push(e.clan_accoundid);
                 }),
                 n
               );
             }),
-            (e.prototype.HintLoadAccounts = function() {
-              return Object(E.b)(this, void 0, void 0, function() {
-                return Object(E.e)(this, function(e) {
+            (e.prototype.HintLoadAccounts = function () {
+              return Object(E.b)(this, void 0, void 0, function () {
+                return Object(E.e)(this, function (e) {
                   return [2];
                 });
               });
             }),
-            (e.prototype.ReindexClanEventsAndReloadAccount = function(i) {
+            (e.prototype.ReindexClanEventsAndReloadAccount = function (i) {
               var l;
-              return Object(E.b)(this, void 0, void 0, function() {
+              return Object(E.b)(this, void 0, void 0, function () {
                 var t, n, a, r, o;
-                return Object(E.e)(this, function(e) {
+                return Object(E.e)(this, function (e) {
                   switch (e.label) {
                     case 0:
                       (t =
@@ -3962,14 +3986,14 @@
         Ye = n("d+Me"),
         Ke = n("WGPV"),
         Je = n.n(Ke),
-        Xe = Object(s.i)(function(e) {
+        Xe = Object(s.i)(function (e) {
           var t = Object(v.useState)(!0),
             n = t[0],
             a = t[1];
           if (
-            (Object(v.useEffect)(function() {
-              Object(E.b)(void 0, void 0, void 0, function() {
-                return Object(E.e)(this, function(e) {
+            (Object(v.useEffect)(function () {
+              Object(E.b)(void 0, void 0, void 0, function () {
+                return Object(E.e)(this, function (e) {
                   switch (e.label) {
                     case 0:
                       return y.a.Init(), [4, We.Get().HintLoadAccounts()];
@@ -3983,7 +4007,7 @@
           )
             return p.a.createElement(F.a, {
               string: Object(N.f)("#Loading"),
-              size: "medium"
+              size: "medium",
             });
           var r = We.Get().GetTrustedEnabledClans(!0),
             o = We.Get().GetTrustedEnabledClans(!1);
@@ -4002,22 +4026,22 @@
               p.a.createElement(at, {
                 rgClanIDs: We.Get()
                   .GetAllRSSEnabledClans()
-                  .map(function(e) {
+                  .map(function (e) {
                     return e.clan_accoundid;
-                  })
+                  }),
               }),
               p.a.createElement($e, {
                 rgClanIDs: r,
-                strTitle: Object(N.f)("#RSSModeration_TrustTitle")
+                strTitle: Object(N.f)("#RSSModeration_TrustTitle"),
               }),
               p.a.createElement($e, {
                 rgClanIDs: o,
-                strTitle: Object(N.f)("#RSSModeration_RestTitle")
+                strTitle: Object(N.f)("#RSSModeration_RestTitle"),
               })
             )
           );
         }),
-        Ze = Object(i.a)(function(e) {
+        Ze = Object(i.a)(function (e) {
           var t = Object(v.useState)(!1),
             n = t[0],
             a = t[1],
@@ -4027,13 +4051,13 @@
           return n
             ? p.a.createElement(F.a, {
                 string: Object(N.f)("#Loading"),
-                size: "medium"
+                size: "medium",
               })
             : void 0 !== o
             ? Boolean(0 < o.length)
               ? p.a.createElement($e, {
                   rgClanIDs: o,
-                  strTitle: Object(N.f)("#RSSModeration_InactiveAutomation")
+                  strTitle: Object(N.f)("#RSSModeration_InactiveAutomation"),
                 })
               : p.a.createElement(
                   "div",
@@ -4043,9 +4067,9 @@
             : p.a.createElement(
                 $.d,
                 {
-                  onClick: function() {
-                    return Object(E.b)(void 0, void 0, void 0, function() {
-                      return Object(E.e)(this, function(e) {
+                  onClick: function () {
+                    return Object(E.b)(void 0, void 0, void 0, function () {
+                      return Object(E.e)(this, function (e) {
                         switch (e.label) {
                           case 0:
                             return a(!0), [4, We.Get().LoadKnownAllRSSInfo()];
@@ -4059,13 +4083,13 @@
                         }
                       });
                     });
-                  }
+                  },
                 },
                 Object(N.f)("#RSSModeration_FindInActive"),
                 " "
               );
         }),
-        $e = function(e) {
+        $e = function (e) {
           var t = e.rgClanIDs,
             n = e.strTitle,
             a = Object(v.useState)(!1),
@@ -4074,7 +4098,7 @@
             i = null;
           return (
             r ||
-              (i = t.map(function(e) {
+              (i = t.map(function (e) {
                 return p.a.createElement(et, { key: e, clanAccountID: e });
               })),
             p.a.createElement(
@@ -4084,9 +4108,9 @@
                 "h2",
                 {
                   className: Object(K.a)(Je.a.ModSectionTitle),
-                  onDoubleClick: function() {
+                  onDoubleClick: function () {
                     return o(!r);
-                  }
+                  },
                 },
                 n,
                 p.a.createElement("span", null, " "),
@@ -4094,9 +4118,9 @@
                   $.d,
                   {
                     className: Je.a.ResizeButton,
-                    onClick: function() {
+                    onClick: function () {
                       return o(!r);
-                    }
+                    },
                   },
                   r
                     ? p.a.createElement(Qe.H, null)
@@ -4107,9 +4131,9 @@
                 p.a.createElement(
                   $.d,
                   {
-                    onClick: function() {
+                    onClick: function () {
                       return o(!1);
-                    }
+                    },
                   },
                   Object(N.f)("#Sale_ShowContents")
                 ),
@@ -4117,25 +4141,25 @@
             )
           );
         },
-        et = Object(i.a)(function(e) {
+        et = Object(i.a)(function (e) {
           var t = e.clanAccountID;
           return y.a.BHasClanInfoLoadedByAccountID(t) &&
             xe.a.Get().BHasClanIDLoaded(t)
             ? p.a.createElement(nt, {
                 clanInfo: y.a.GetClanInfoByClanAccountID(t),
-                rssAdminInfo: xe.a.Get().GetRSSAdminForClanAccountID(t)
+                rssAdminInfo: xe.a.Get().GetRSSAdminForClanAccountID(t),
               })
             : p.a.createElement(tt, { clanAccountID: t });
         }),
-        tt = function(e) {
+        tt = function (e) {
           var n = e.clanAccountID;
           return p.a.createElement(
             Ye.a,
             {
-              onEnter: function() {
-                return Object(E.b)(void 0, void 0, void 0, function() {
+              onEnter: function () {
+                return Object(E.b)(void 0, void 0, void 0, function () {
                   var t;
-                  return Object(E.e)(this, function(e) {
+                  return Object(E.e)(this, function (e) {
                     switch (e.label) {
                       case 0:
                         return (
@@ -4144,8 +4168,8 @@
                             4,
                             Promise.all([
                               y.a.LoadClanInfoForClanSteamID(t),
-                              xe.a.Get().QueueCuratorAdminInfoLoad(n)
-                            ])
+                              xe.a.Get().QueueCuratorAdminInfoLoad(n),
+                            ]),
                           ]
                         );
                       case 1:
@@ -4155,7 +4179,7 @@
                 });
               },
               topOffset: "-500px",
-              bottomOffset: "-500px"
+              bottomOffset: "-500px",
             },
             p.a.createElement(
               "div",
@@ -4164,7 +4188,7 @@
             )
           );
         },
-        nt = function(e) {
+        nt = function (e) {
           var t = e.clanInfo,
             n = e.rssAdminInfo,
             a = Object(v.useState)(!1),
@@ -4232,9 +4256,9 @@
                 p.a.createElement(
                   $.d,
                   {
-                    onClick: function() {
+                    onClick: function () {
                       return o(!r);
-                    }
+                    },
                   },
                   Object(N.f)(
                     r
@@ -4300,9 +4324,9 @@
                   creatorID: {
                     name: null,
                     clan_account_id: t.clanAccountID,
-                    type: "developer"
+                    type: "developer",
                   },
-                  bSmallFormat: !0
+                  bSmallFormat: !0,
                 })
               )
             ),
@@ -4313,7 +4337,7 @@
                 Boolean(n.BHasSavedRSSURL())
                   ? p.a.createElement(Ve.a, {
                       strRssURL: n.GetRSSUrl(),
-                      admin: n
+                      admin: n,
                     })
                   : p.a.createElement(
                       "div",
@@ -4323,29 +4347,29 @@
               )
           );
         },
-        at = function(t) {
+        at = function (t) {
           return p.a.createElement(
             ee.a,
             {
               toolTipContent: Object(N.f)(
                 "#RSSModeration_ReindexAndReload_ttip"
-              )
+              ),
             },
             p.a.createElement(
               $.d,
               {
-                onClick: function(e) {
+                onClick: function (e) {
                   Object(Q.d)(
                     p.a.createElement(rt, Object(E.a)({}, t)),
                     Object(J.m)(e)
                   );
-                }
+                },
               },
               Object(N.f)("#RSSModeration_ReindexAndReload")
             )
           );
         },
-        rt = function(r) {
+        rt = function (r) {
           function e() {
             return r.closeModal && r.closeModal();
           }
@@ -4392,14 +4416,14 @@
                         p.a.createElement(
                           $.p,
                           {
-                            onClick: function() {
+                            onClick: function () {
                               return Object(E.b)(
                                 void 0,
                                 void 0,
                                 void 0,
-                                function() {
+                                function () {
                                   var t, n, a;
-                                  return Object(E.e)(this, function(e) {
+                                  return Object(E.e)(this, function (e) {
                                     switch (e.label) {
                                       case 0:
                                         o((t = 0)), (n = 0), (e.label = 1);
@@ -4410,7 +4434,7 @@
                                               4,
                                               We.Get().ReindexClanEventsAndReloadAccount(
                                                 a
-                                              )
+                                              ),
                                             ])
                                           : [3, 4];
                                       case 2:
@@ -4432,7 +4456,7 @@
                                   });
                                 }
                               );
-                            }
+                            },
                           },
                           Object(N.f)("#Button_Continue")
                         )
@@ -4459,7 +4483,7 @@
                             )
                           : p.a.createElement(F.a, {
                               size: "small",
-                              string: Object(N.f)("#Updating")
+                              string: Object(N.f)("#Updating"),
                             })
                       ),
                   Boolean(s) && p.a.createElement("span", null, s, " ")
@@ -4485,13 +4509,13 @@
           r = n[1];
         return a
           ? p.a.createElement(p.a.Fragment, null, t)
-          : (Oe.a.InitGlobal().then(function() {
+          : (Oe.a.InitGlobal().then(function () {
               return r(!0);
             }),
             null);
       }
       function it(t) {
-        return function(e) {
+        return function (e) {
           return p.a.createElement(ot, null, p.a.createElement(t, e));
         };
       }
@@ -4504,14 +4528,14 @@
         mt = it(ge),
         vt = it(Xe);
     },
-    vNkc: function(e, t, n) {
+    vNkc: function (e, t, n) {
       e.exports = { Error: "eventbackfill_Error_1eWgI" };
     },
-    zrk3: function(e, t, n) {
+    zrk3: function (e, t, n) {
       e.exports = {
         ModeratorAuditActionCtn:
-          "eventmoderationaudit_ModeratorAuditActionCtn_f6z__"
+          "eventmoderationaudit_ModeratorAuditActionCtn_f6z__",
       };
-    }
-  }
+    },
+  },
 ]);

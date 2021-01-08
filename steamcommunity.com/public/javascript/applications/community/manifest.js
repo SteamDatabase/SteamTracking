@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 var CLSTAMP = "6296065";
-!(function(r) {
+!(function (r) {
   function a(a) {
     for (
       var e, n, i = a[0], o = a[1], c = a[2], d = 0, s = [];
@@ -32,14 +32,14 @@ var CLSTAMP = "6296065";
     var e = (n[a] = { i: a, l: !1, exports: {} });
     return r[a].call(e.exports, e, e.exports, j), (e.l = !0), e.exports;
   }
-  (j.e = function(t) {
+  (j.e = function (t) {
     var a = [];
     l[t]
       ? a.push(l[t])
       : 0 !== l[t] &&
         { 1: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 69: 1, 100: 1 }[t] &&
         a.push(
-          (l[t] = new Promise(function(a, i) {
+          (l[t] = new Promise(function (a, i) {
             for (
               var e =
                   "css/applications/community/" +
@@ -141,7 +141,7 @@ var CLSTAMP = "6296065";
                     96: "managefriends_turkish-json",
                     97: "managefriends_ukrainian-json",
                     98: "managefriends_vietnamese-json",
-                    100: "profile"
+                    100: "profile",
                   }[t] || t) +
                   ".css?contenthash=" +
                   {
@@ -242,7 +242,7 @@ var CLSTAMP = "6296065";
                     96: "31d6cfe0d16ae931b73c",
                     97: "31d6cfe0d16ae931b73c",
                     98: "31d6cfe0d16ae931b73c",
-                    100: "37ca51b8058d28f6a854"
+                    100: "37ca51b8058d28f6a854",
                   }[t],
                 o = j.p + e,
                 n = document.getElementsByTagName("link"),
@@ -266,7 +266,7 @@ var CLSTAMP = "6296065";
             (f.rel = "stylesheet"),
               (f.type = "text/css"),
               (f.onload = a),
-              (f.onerror = function(a) {
+              (f.onerror = function (a) {
                 var e = (a && a.target && a.target.src) || o,
                   n = new Error(
                     "Loading CSS chunk " + t + " failed.\n(" + e + ")"
@@ -279,7 +279,7 @@ var CLSTAMP = "6296065";
               }),
               (f.href = o),
               document.getElementsByTagName("head")[0].appendChild(f);
-          }).then(function() {
+          }).then(function () {
             l[t] = 0;
           }))
         );
@@ -293,7 +293,7 @@ var CLSTAMP = "6296065";
       0 !== o &&
         (o
           ? a.push(o[2])
-          : ((e = new Promise(function(a, e) {
+          : ((e = new Promise(function (a, e) {
               o = b[t] = [a, e];
             })),
             a.push((o[2] = e)),
@@ -401,7 +401,7 @@ var CLSTAMP = "6296065";
                 96: "managefriends_turkish-json",
                 97: "managefriends_ukrainian-json",
                 98: "managefriends_vietnamese-json",
-                100: "profile"
+                100: "profile",
               }[(i = t)] || i) +
               ".js?contenthash=" +
               {
@@ -502,9 +502,9 @@ var CLSTAMP = "6296065";
                 96: "2abd7757f9bf4b9a1d92",
                 97: "c0630d0c20f10a624a1e",
                 98: "9706f0980018573a9dca",
-                100: "7ad8afe53624a1b304f3"
+                100: "7ad8afe53624a1b304f3",
               }[i]),
-            (n = function(a) {
+            (n = function (a) {
               (c.onerror = c.onload = null), clearTimeout(d);
               var e,
                 n,
@@ -521,7 +521,7 @@ var CLSTAMP = "6296065";
                   o[1](i)),
                 (b[t] = void 0));
             }),
-            (d = setTimeout(function() {
+            (d = setTimeout(function () {
               n({ type: "timeout", target: c });
             }, 12e4)),
             (c.onerror = c.onload = n),
@@ -531,16 +531,16 @@ var CLSTAMP = "6296065";
   }),
     (j.m = r),
     (j.c = n),
-    (j.d = function(a, e, n) {
+    (j.d = function (a, e, n) {
       j.o(a, e) || Object.defineProperty(a, e, { enumerable: !0, get: n });
     }),
-    (j.r = function(a) {
+    (j.r = function (a) {
       "undefined" != typeof Symbol &&
         Symbol.toStringTag &&
         Object.defineProperty(a, Symbol.toStringTag, { value: "Module" }),
         Object.defineProperty(a, "__esModule", { value: !0 });
     }),
-    (j.t = function(e, a) {
+    (j.t = function (e, a) {
       if ((1 & a && (e = j(e)), 8 & a)) return e;
       if (4 & a && "object" == typeof e && e && e.__esModule) return e;
       var n = Object.create(null);
@@ -553,28 +553,28 @@ var CLSTAMP = "6296065";
           j.d(
             n,
             i,
-            function(a) {
+            function (a) {
               return e[a];
             }.bind(null, i)
           );
       return n;
     }),
-    (j.n = function(a) {
+    (j.n = function (a) {
       var e =
         a && a.__esModule
-          ? function() {
+          ? function () {
               return a.default;
             }
-          : function() {
+          : function () {
               return a;
             };
       return j.d(e, "a", e), e;
     }),
-    (j.o = function(a, e) {
+    (j.o = function (a, e) {
       return Object.prototype.hasOwnProperty.call(a, e);
     }),
     (j.p = ""),
-    (j.oe = function(a) {
+    (j.oe = function (a) {
       throw (console.error(a), a);
     });
   var e = (window.webpackJsonp = window.webpackJsonp || []),

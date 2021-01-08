@@ -3,7 +3,7 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [41],
   {
-    ARGL: function(e, t, a) {
+    ARGL: function (e, t, a) {
       e.exports = {
         GrantAwardModal: "awardmodal_GrantAwardModal_2ilpH",
         Header: "awardmodal_Header_2_vbZ",
@@ -41,16 +41,16 @@
         ErrorText: "awardmodal_ErrorText_ok8mo",
         PointsAmount: "awardmodal_PointsAmount_1WCEA",
         PointsAmountIcon: "awardmodal_PointsAmountIcon_3-jpV",
-        NotEnoughPoints: "awardmodal_NotEnoughPoints_2VkAe"
+        NotEnoughPoints: "awardmodal_NotEnoughPoints_2VkAe",
       };
     },
-    tPo2: function(e, t, a) {
+    tPo2: function (e, t, a) {
       "use strict";
       a.r(t),
-        a.d(t, "CheckmarkCircle", function() {
+        a.d(t, "CheckmarkCircle", function () {
           return h;
         }),
-        a.d(t, "LibraryLoyaltyAwardModal", function() {
+        a.d(t, "LibraryLoyaltyAwardModal", function () {
           return w;
         });
       var s = a("mrSG"),
@@ -67,7 +67,7 @@
         l = a("2vnA"),
         d = a("bxBv"),
         u = a("OU48"),
-        m = (function() {
+        m = (function () {
           function e(e) {
             (this.m_lPointsAvailable = null),
               (this.m_bPointsBalanceLoadedOrInFlight = !1),
@@ -77,18 +77,18 @@
               (this.m_transport = e);
           }
           return (
-            (e.prototype.BIsLoggedIn = function() {
+            (e.prototype.BIsLoggedIn = function () {
               return L.i.logged_in;
             }),
-            (e.prototype.SetTarget = function(e, t) {
+            (e.prototype.SetTarget = function (e, t) {
               (this.m_targetID = e),
                 (this.m_eTargetType = t),
                 this.LoadExistingReactions();
             }),
-            (e.prototype.AddReaction = function(n) {
-              return Object(s.b)(this, void 0, void 0, function() {
+            (e.prototype.AddReaction = function (n) {
+              return Object(s.b)(this, void 0, void 0, function () {
                 var t, a;
-                return Object(s.e)(this, function(e) {
+                return Object(s.e)(this, function (e) {
                   switch (e.label) {
                     case 0:
                       return this.BIsLoggedIn()
@@ -116,23 +116,23 @@
                 });
               });
             }),
-            (e.prototype.GetUserPointBalance = function() {
+            (e.prototype.GetUserPointBalance = function () {
               return this.BIsLoggedIn()
                 ? (this.m_bPointsBalanceLoadedOrInFlight ||
                     this.LoadUserPointBalance(),
                   this.m_lPointsAvailable)
                 : null;
             }),
-            (e.prototype.LoadUserPointBalance = function() {
-              return Object(s.b)(this, void 0, void 0, function() {
+            (e.prototype.LoadUserPointBalance = function () {
+              return Object(s.b)(this, void 0, void 0, function () {
                 var t, a;
-                return Object(s.e)(this, function(e) {
+                return Object(s.e)(this, function (e) {
                   switch (e.label) {
                     case 0:
                       return this.BIsLoggedIn()
                         ? ((this.m_bPointsBalanceLoadedOrInFlight = !0),
                           (t = d.a.Init(u.g)).SetBodyFields({
-                            steamid: L.i.steamid
+                            steamid: L.i.steamid,
                           }),
                           [4, u.o.GetSummary(this.m_transport, t)])
                         : [2, Promise.resolve(null)];
@@ -140,10 +140,7 @@
                       return (
                         1 == (a = e.sent()).GetEResult()
                           ? (this.m_lPointsAvailable = c.a.fromString(
-                              a
-                                .Body()
-                                .summary()
-                                .points()
+                              a.Body().summary().points()
                             ))
                           : console.error(
                               "Error when calling LoyaltyRewardsService.GetSummary: EResult=" +
@@ -155,17 +152,17 @@
                 });
               });
             }),
-            (e.prototype.GetAwardConfigurations = function() {
+            (e.prototype.GetAwardConfigurations = function () {
               return (
                 this.m_bReactionConfigurationLoadedOrInFlight ||
                   this.LoadAwardsConfiguration(),
                 this.m_mapReactionConfiguration
               );
             }),
-            (e.prototype.LoadAwardsConfiguration = function() {
-              return Object(s.b)(this, void 0, void 0, function() {
+            (e.prototype.LoadAwardsConfiguration = function () {
+              return Object(s.b)(this, void 0, void 0, function () {
                 var t, a, n, r, o, i;
-                return Object(s.e)(this, function(e) {
+                return Object(s.e)(this, function (e) {
                   switch (e.label) {
                     case 0:
                       return (
@@ -195,15 +192,15 @@
                 });
               });
             }),
-            (e.prototype.GetExistingReactions = function() {
+            (e.prototype.GetExistingReactions = function () {
               return this.m_mapExistingReactions;
             }),
-            (e.prototype.LoadExistingReactions = function() {
-              return Object(s.b)(this, void 0, void 0, function() {
+            (e.prototype.LoadExistingReactions = function () {
+              return Object(s.b)(this, void 0, void 0, function () {
                 var t,
                   a,
                   n = this;
-                return Object(s.e)(this, function(e) {
+                return Object(s.e)(this, function (e) {
                   switch (e.label) {
                     case 0:
                       return (
@@ -220,7 +217,7 @@
                           ? a
                               .Body()
                               .reactionids()
-                              .map(function(e) {
+                              .map(function (e) {
                                 return n.m_mapExistingReactions.set(e, !0);
                               })
                           : console.error(
@@ -266,14 +263,14 @@
         (b[(b.SUBMITTING = 2)] = "SUBMITTING"),
         (b[(b.DONE = 3)] = "DONE"),
         (b[(b.ERROR = 4)] = "ERROR");
-      var h = function(e) {
+      var h = function (e) {
           return S.createElement(
             "svg",
             Object(s.a)(
               {
                 viewBox: "0 0 24 24",
                 fill: "none",
-                xmlns: "http://www.w3.org/2000/svg"
+                xmlns: "http://www.w3.org/2000/svg",
               },
               e
             ),
@@ -282,41 +279,42 @@
               fillRule: "evenodd",
               clipRule: "evenodd",
               d:
-                "M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24ZM10.9577 17.254L18.8038 10.0384L16.773 7.83022L10.0706 13.9941L7.71092 11.2399L5.43271 13.1918L8.80323 17.1259C9.06802 17.4349 9.44701 17.6231 9.85327 17.6473C10.2595 17.6715 10.6582 17.5295 10.9577 17.254Z"
+                "M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24ZM10.9577 17.254L18.8038 10.0384L16.773 7.83022L10.0706 13.9941L7.71092 11.2399L5.43271 13.1918L8.80323 17.1259C9.06802 17.4349 9.44701 17.6231 9.85327 17.6473C10.2595 17.6715 10.6582 17.5295 10.9577 17.254Z",
             })
           );
         },
-        P = (function(a) {
+        P = (function (a) {
           function e(e) {
             var t = a.call(this, e) || this;
             return (t.state = { bHovered: !1 }), t;
           }
           return (
             Object(s.d)(e, a),
-            (e.prototype.handleMouseOver = function(e) {
+            (e.prototype.handleMouseOver = function (e) {
               this.setState({ bHovered: !0 });
             }),
-            (e.prototype.handleMouseOut = function() {
+            (e.prototype.handleMouseOut = function () {
               this.setState({ bHovered: !1 });
             }),
-            (e.prototype.render = function() {
+            (e.prototype.render = function () {
               var e,
                 t,
-                a = ((e = this.props.reactionType),
-                (t =
-                  !this.props.bDisableAnimation &&
-                  (this.state.bHovered || this.props.bForceAnimated)),
-                L.c.STORE_CDN_URL +
-                  "public/images/loyalty/reactions/" +
-                  (t ? "animated" : "still") +
-                  "/" +
-                  e +
-                  ".png");
+                a =
+                  ((e = this.props.reactionType),
+                  (t =
+                    !this.props.bDisableAnimation &&
+                    (this.state.bHovered || this.props.bForceAnimated)),
+                  L.c.STORE_CDN_URL +
+                    "public/images/loyalty/reactions/" +
+                    (t ? "animated" : "still") +
+                    "/" +
+                    e +
+                    ".png");
               return S.createElement("img", {
                 className: this.props.className,
                 src: a,
                 onMouseEnter: this.handleMouseOver,
-                onMouseLeave: this.handleMouseOut
+                onMouseLeave: this.handleMouseOut,
               });
             }),
             Object(s.c)([r.a], e.prototype, "handleMouseOver", null),
@@ -324,13 +322,13 @@
             e
           );
         })(S.PureComponent);
-      var E = (function(t) {
+      var E = (function (t) {
           function e(e) {
             var o = t.call(this, e) || this;
             return (
               (o.state = { targetType: e.targetType }),
               o.Init(e.serviceTransport),
-              (window.fnLoyalty_ShowAwardModal = function(e, t, a, n, r) {
+              (window.fnLoyalty_ShowAwardModal = function (e, t, a, n, r) {
                 (r = r || 0),
                   o.setState({
                     bShowModal: !0,
@@ -338,7 +336,7 @@
                     targetid: e,
                     ugcType: n,
                     initialSelectedReaction: r,
-                    targetType: t
+                    targetType: t,
                   });
               }),
               (o.state = {}),
@@ -348,7 +346,7 @@
           var l;
           return (
             Object(s.d)(e, t),
-            ((l = e).prototype.Init = function(e) {
+            ((l = e).prototype.Init = function (e) {
               var t, a;
               l.s_LoyaltyAwardModalStore ||
                 (e
@@ -359,7 +357,7 @@
                       a.GetServiceTransport()
                     ))));
             }),
-            (e.prototype.render = function() {
+            (e.prototype.render = function () {
               var e = this,
                 t = this.state,
                 a = t.bShowModal,
@@ -377,75 +375,76 @@
                 active: a,
                 targetType: n,
                 ugcType: i,
-                onDismiss: function() {
+                onDismiss: function () {
                   return e.setState({ bShowModal: !1 });
                 },
                 onSuccess: r,
                 store: l.s_LoyaltyAwardModalStore,
-                initialSelectedReaction: s
+                initialSelectedReaction: s,
               });
             }),
             (e.defaultProps = { targetType: 1 }),
             (e = l = Object(s.c)([n.a], e))
           );
         })(S.Component),
-        w = ((t.default = E),
-        (function(t) {
-          function e(e) {
-            return t.call(this, e) || this;
-          }
-          var c;
-          return (
-            Object(s.d)(e, t),
-            ((c = e).Initialize = function(e) {
-              null === this.s_LoyaltyAwardModalStore &&
-                (this.s_LoyaltyAwardModalStore = new m(
-                  e.GetServiceTransport()
-                ));
-            }),
-            (e.prototype.render = function() {
-              var e = this.props,
-                t = e.targetType,
-                a = e.targetid,
-                n = e.bShowModal,
-                r = e.ugcType,
-                o = e.initialSelectedReaction,
-                i = e.onDismiss,
-                s = c.s_LoyaltyAwardModalStore;
-              if (null === s)
-                return console.log("Store not initialized yet."), null;
-              s.GetAwardConfigurations();
-              return S.createElement(g, {
-                key: a,
-                targetid: a,
-                active: n,
-                targetType: t,
-                ugcType: r,
-                onDismiss: i,
-                onSuccess: i,
-                store: c.s_LoyaltyAwardModalStore,
-                initialSelectedReaction: o
-              });
-            }),
-            (e.s_LoyaltyAwardModalStore = null),
-            (e = c = Object(s.c)([n.a], e))
-          );
-        })(S.Component)),
-        g = (function(a) {
+        w =
+          ((t.default = E),
+          (function (t) {
+            function e(e) {
+              return t.call(this, e) || this;
+            }
+            var c;
+            return (
+              Object(s.d)(e, t),
+              ((c = e).Initialize = function (e) {
+                null === this.s_LoyaltyAwardModalStore &&
+                  (this.s_LoyaltyAwardModalStore = new m(
+                    e.GetServiceTransport()
+                  ));
+              }),
+              (e.prototype.render = function () {
+                var e = this.props,
+                  t = e.targetType,
+                  a = e.targetid,
+                  n = e.bShowModal,
+                  r = e.ugcType,
+                  o = e.initialSelectedReaction,
+                  i = e.onDismiss,
+                  s = c.s_LoyaltyAwardModalStore;
+                if (null === s)
+                  return console.log("Store not initialized yet."), null;
+                s.GetAwardConfigurations();
+                return S.createElement(g, {
+                  key: a,
+                  targetid: a,
+                  active: n,
+                  targetType: t,
+                  ugcType: r,
+                  onDismiss: i,
+                  onSuccess: i,
+                  store: c.s_LoyaltyAwardModalStore,
+                  initialSelectedReaction: o,
+                });
+              }),
+              (e.s_LoyaltyAwardModalStore = null),
+              (e = c = Object(s.c)([n.a], e))
+            );
+          })(S.Component)),
+        g = (function (a) {
           function e(e) {
             var t = a.call(this, e) || this;
             return (
               e.store.SetTarget(e.targetid, e.targetType),
               (t.state = {
                 selectedReaction: e.initialSelectedReaction || 0,
-                ePhase: B.SELECTING
+                ePhase: B.SELECTING,
               }),
               t
             );
           }
           return (
             Object(s.d)(e, a),
-            (e.prototype.render = function() {
+            (e.prototype.render = function () {
               var t = this,
                 e = this.props,
                 a = e.active,
@@ -464,25 +463,26 @@
                 _ = o.GetExistingReactions(),
                 f = o.GetAwardConfigurations(),
                 b = o.GetUserPointBalance(),
-                h = ((u = n),
-                (m = r),
-                (p = []),
-                f.forEach(function(e) {
-                  if (e.valid_target_types.includes(u))
-                    switch (u) {
-                      case 1:
-                        p.push(e.reactionid);
-                        break;
-                      case 2:
-                        e.valid_ugc_types.includes(m) && p.push(e.reactionid);
-                        break;
-                      case 3:
-                      case 4:
-                      case 5:
-                        p.push(e.reactionid);
-                    }
-                }),
-                p),
+                h =
+                  ((u = n),
+                  (m = r),
+                  (p = []),
+                  f.forEach(function (e) {
+                    if (e.valid_target_types.includes(u))
+                      switch (u) {
+                        case 1:
+                          p.push(e.reactionid);
+                          break;
+                        case 2:
+                          e.valid_ugc_types.includes(m) && p.push(e.reactionid);
+                          break;
+                        case 3:
+                        case 4:
+                        case 5:
+                          p.push(e.reactionid);
+                      }
+                  }),
+                  p),
                 E = 0 === c ? null : f.get(c),
                 w = E ? E.points_cost : 0,
                 g = E ? E.points_transferred : 0,
@@ -510,7 +510,7 @@
                     A = S.createElement(
                       k.p,
                       {
-                        onClick: function() {
+                        onClick: function () {
                           return t.setState({ ePhase: B.CONFIRM });
                         },
                         disabled: v,
@@ -518,7 +518,7 @@
                           v
                             ? "#GrantAward_PromptTooltip"
                             : "#GrantAward_SubmitTooltip"
-                        )
+                        ),
                       },
                       Object(N.f)(
                         v ? "#GrantAward_SelectAward" : "#GrantAward_Next"
@@ -532,19 +532,19 @@
                       S.createElement(
                         "div",
                         { className: G.ButtonContainer },
-                        h.map(function(e) {
+                        h.map(function (e) {
                           return S.createElement(U, {
                             key: e,
                             reaction: e,
                             selected: e === c && !_.get(e),
                             cost: f.get(e).points_cost,
                             alreadyAwarded: _.get(e),
-                            onClick: function() {
+                            onClick: function () {
                               _.get(e) ||
                                 t.setState({
-                                  selectedReaction: e === c ? 0 : e
+                                  selectedReaction: e === c ? 0 : e,
                                 });
-                            }
+                            },
                           });
                         })
                       ),
@@ -560,25 +560,22 @@
                                 { key: "msg", className: G.NotEnoughPoints },
                                 Object(N.f)(
                                   "#GrantAward_CantAfford",
-                                  b
-                                    .negate()
-                                    .add(w)
-                                    .toNumber()
-                                    .toLocaleString()
+                                  b.negate().add(w).toNumber().toLocaleString()
                                 )
                               ),
                               S.createElement(
                                 "a",
                                 {
                                   key: "button",
-                                  href: L.c.STORE_BASE_URL + "points/howitworks"
+                                  href:
+                                    L.c.STORE_BASE_URL + "points/howitworks",
                                 },
                                 S.createElement(
                                   k.d,
                                   { key: "button" },
                                   Object(N.f)("#GrantAward_HowToGetPoints")
                                 )
-                              )
+                              ),
                             ]
                       )
                     );
@@ -600,11 +597,11 @@
                           className: Object(j.a)(
                             G.ConfirmContainer,
                             l === B.CONFIRM && G.Visible
-                          )
+                          ),
                         },
                         S.createElement(P, {
                           className: G.ConfirmAwardImage,
-                          reactionType: c
+                          reactionType: c,
                         }),
                         S.createElement(
                           "div",
@@ -641,7 +638,7 @@
                           className: Object(j.a)(
                             G.LoadingContainer,
                             l === B.SUBMITTING && G.Visible
-                          )
+                          ),
                         },
                         S.createElement(H, null)
                       ),
@@ -651,11 +648,11 @@
                           className: Object(j.a)(
                             G.SuccessContainer,
                             l === B.DONE && G.Visible
-                          )
+                          ),
                         },
                         S.createElement(P, {
                           className: G.ConfirmAwardImage,
-                          reactionType: c
+                          reactionType: c,
                         }),
                         S.createElement(
                           "div",
@@ -671,10 +668,10 @@
                       S.createElement(
                         k.d,
                         {
-                          onClick: function() {
+                          onClick: function () {
                             return t.setState({ ePhase: B.SELECTING });
                           },
-                          disabled: l !== B.CONFIRM
+                          disabled: l !== B.CONFIRM,
                         },
                         Object(N.f)("#GrantAward_Back")
                       ),
@@ -683,7 +680,7 @@
                         {
                           onClick: this.GrantAward,
                           title: Object(N.f)("#GrantAward_SubmitTooltip"),
-                          disabled: l !== B.CONFIRM
+                          disabled: l !== B.CONFIRM,
                         },
                         Object(N.f)("#GrantAwardNowButton")
                       )
@@ -738,9 +735,9 @@
                       S.createElement(
                         k.d,
                         {
-                          onClick: function() {
+                          onClick: function () {
                             return t.setState({ ePhase: B.SELECTING });
-                          }
+                          },
                         },
                         Object(N.f)("#GrantAward_Back")
                       )
@@ -754,7 +751,7 @@
                 R
               );
             }),
-            (e.prototype.GrantAward = function() {
+            (e.prototype.GrantAward = function () {
               var a = this,
                 e = this.props,
                 n = e.targetid,
@@ -764,15 +761,18 @@
               null !== o &&
                 0 != o &&
                 (this.setState({ ePhase: B.SUBMITTING }),
-                t.AddReaction(o).then(function(e) {
+                t.AddReaction(o).then(function (e) {
                   var t = e.eResult;
                   e.strMessage;
                   1 == t
-                    ? a.setState({ ePhase: B.DONE, celebrate: !0 }, function() {
-                        return setTimeout(function() {
-                          r && r(n, o);
-                        }, 2e3);
-                      })
+                    ? a.setState(
+                        { ePhase: B.DONE, celebrate: !0 },
+                        function () {
+                          return setTimeout(function () {
+                            r && r(n, o);
+                          }, 2e3);
+                        }
+                      )
                     : a.setState({ ePhase: B.ERROR, eResult: t });
                 }));
             }),
@@ -780,7 +780,7 @@
             (e = Object(s.c)([n.a], e))
           );
         })(S.Component),
-        D = function(e) {
+        D = function (e) {
           var t = e.description;
           return S.createElement(
             "div",
@@ -793,7 +793,7 @@
             S.createElement("div", { className: G.Description }, t)
           );
         },
-        F = Object(n.a)(function(e) {
+        F = Object(n.a)(function (e) {
           var t = e.store,
             a = e.children,
             n = t.GetUserPointBalance(),
@@ -822,7 +822,7 @@
               S.createElement(
                 "div",
                 { className: G.Actions },
-                S.Children.map(a, function(e) {
+                S.Children.map(a, function (e) {
                   return S.createElement("div", { className: G.Action }, e);
                 })
               ),
@@ -830,30 +830,30 @@
                 "a",
                 {
                   className: G.FooterLink,
-                  href: L.c.STORE_BASE_URL + "points/howitworks"
+                  href: L.c.STORE_BASE_URL + "points/howitworks",
                 },
                 Object(N.f)("#GrantAward_PointsLink")
               )
             )
           );
         }),
-        x = function() {
+        x = function () {
           return S.createElement("div", { className: G.Divider });
         },
-        U = (function(a) {
+        U = (function (a) {
           function e(e) {
             var t = a.call(this, e) || this;
             return (t.state = { bHovered: !1 }), t;
           }
           return (
             Object(s.d)(e, a),
-            (e.prototype.handleMouseOver = function(e) {
+            (e.prototype.handleMouseOver = function (e) {
               this.setState({ bHovered: !0 });
             }),
-            (e.prototype.handleMouseOut = function() {
+            (e.prototype.handleMouseOut = function () {
               this.setState({ bHovered: !1 });
             }),
-            (e.prototype.render = function() {
+            (e.prototype.render = function () {
               var e = this.props,
                 t = e.reaction,
                 a = e.selected,
@@ -863,7 +863,7 @@
                   "reaction",
                   "selected",
                   "alreadyAwarded",
-                  "cost"
+                  "cost",
                 ]);
               return S.createElement(
                 p.a,
@@ -876,7 +876,7 @@
                       G.Button,
                       a && G.Selected,
                       n && G.Disabled
-                    )
+                    ),
                   },
                   o
                 ),
@@ -886,7 +886,7 @@
                   S.createElement(P, {
                     reactionType: t,
                     bForceAnimated: this.state.bHovered,
-                    bDisableAnimation: n
+                    bDisableAnimation: n,
                   })
                 ),
                 S.createElement("div", { className: G.Label }, I(t)),
@@ -899,10 +899,10 @@
             e
           );
         })(S.PureComponent),
-        H = function() {
+        H = function () {
           return S.createElement(_.a, { size: "large", className: G.Loading });
         },
-        V = function(e) {
+        V = function (e) {
           var t = e.children,
             a = e.className,
             n = Object(s.f)(e, ["children", "className"]);
@@ -913,6 +913,6 @@
             t
           );
         };
-    }
-  }
+    },
+  },
 ]);

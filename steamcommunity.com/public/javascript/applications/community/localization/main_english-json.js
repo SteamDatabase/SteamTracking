@@ -3,7 +3,7 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [14],
   {
-    "/rNK": function(e) {
+    "/rNK": function (e) {
       e.exports = {
         language: "english",
         Hello_Friend: "Hello, %1$s! Glad to meet you!",
@@ -2080,8 +2080,8 @@
           'Within each facet, sort facet values in descending order of the number of items that match them. For example, under a facet called "Genre", "RPG" will appear before "Strategy" if there are more RPG games in this section than Strategy games.',
         FacetedBrowseEditor_Tooltip_SortFacetValues_Manual:
           "Don't sort facet values. They will be shown in the order defined in the lists below.",
-        FacetedBrowseEditor_HighlightedFacetColor: "Highlighted Facet Color"
+        FacetedBrowseEditor_HighlightedFacetColor: "Highlighted Facet Color",
       };
-    }
-  }
+    },
+  },
 ]);

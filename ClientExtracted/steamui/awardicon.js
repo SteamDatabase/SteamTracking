@@ -2,23 +2,23 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [1],
   {
-    Jbdm: function(n, t, o) {
+    Jbdm: function (n, t, o) {
       n.exports = {
         IconContainer: "awardicon_IconContainer__6f_B",
         ButtonContainer: "awardicon_ButtonContainer_1ShXa",
         InfoContainer: "awardicon_InfoContainer_20mER",
         IconImg: "awardicon_IconImg_RP1Up",
         ReactionCount: "awardicon_ReactionCount_18GX_",
-        IconList: "awardicon_IconList_2cI0L"
+        IconList: "awardicon_IconList_2cI0L",
       };
     },
-    RsgW: function(n, t, o) {
+    RsgW: function (n, t, o) {
       "use strict";
       o.r(t),
-        o.d(t, "AwardIcon", function() {
+        o.d(t, "AwardIcon", function () {
           return m;
         }),
-        o.d(t, "AwardIconList", function() {
+        o.d(t, "AwardIconList", function () {
           return I;
         });
       var e = o("mrSG"),
@@ -30,13 +30,13 @@
         p = o.n(s),
         u = o("TLQK"),
         d = o("exH9"),
-        m = (function(n) {
+        m = (function (n) {
           function t() {
             return (null !== n && n.apply(this, arguments)) || this;
           }
           return (
             Object(e.d)(t, n),
-            (t.prototype.render = function() {
+            (t.prototype.render = function () {
               var n = Object(u.m)(
                 "#RewardsReaction_Tooltip",
                 this.props.reaction.count || 0,
@@ -46,11 +46,11 @@
                 i.d,
                 {
                   className: Object(d.a)(p.a.InfoContainer, p.a.IconContainer),
-                  toolTipContent: n
+                  toolTipContent: n,
                 },
                 r.a.createElement("img", {
                   className: p.a.IconImg,
-                  src: Object(c.b)(this.props.reaction.reaction_type, !1)
+                  src: Object(c.b)(this.props.reaction.reaction_type, !1),
                 }),
                 this.props.reaction.count &&
                   r.a.createElement(
@@ -63,13 +63,13 @@
             t
           );
         })(r.a.PureComponent),
-        I = (function(n) {
+        I = (function (n) {
           function t() {
             return (null !== n && n.apply(this, arguments)) || this;
           }
           return (
             Object(e.d)(t, n),
-            (t.prototype.render = function() {
+            (t.prototype.render = function () {
               for (
                 var n = [], t = 0, o = this.props.reactions;
                 t < o.length;
@@ -85,7 +85,7 @@
             t
           );
         })(r.a.PureComponent);
-    }
-  }
+    },
+  },
 ]);
 //# sourceMappingURL=awardicon.js.map

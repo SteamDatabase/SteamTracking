@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 var CLSTAMP = "6296356";
-!(function(o) {
+!(function (o) {
   function e(e) {
     for (
       var a, d, n = e[0], c = e[1], s = e[2], f = 0, r = [];
@@ -34,14 +34,14 @@ var CLSTAMP = "6296356";
     var a = (d[e] = { i: e, l: !1, exports: {} });
     return o[e].call(a.exports, a, a.exports, _), (a.l = !0), a.exports;
   }
-  (_.e = function(i) {
+  (_.e = function (i) {
     var e = [];
     t[i]
       ? e.push(t[i])
       : 0 !== t[i] &&
         { 2: 1, 3: 1, 4: 1, 6: 1, 7: 1, 8: 1, 40: 1, 41: 1 }[i] &&
         e.push(
-          (t[i] = new Promise(function(e, n) {
+          (t[i] = new Promise(function (e, n) {
             for (
               var a =
                   "css/applications/store/" +
@@ -114,7 +114,7 @@ var CLSTAMP = "6296356";
                     68: "shared_thai-json",
                     69: "shared_turkish-json",
                     70: "shared_ukrainian-json",
-                    71: "shared_vietnamese-json"
+                    71: "shared_vietnamese-json",
                   }[i] || i) +
                   ".css?contenthash=" +
                   {
@@ -215,7 +215,7 @@ var CLSTAMP = "6296356";
                     97: "31d6cfe0d16ae931b73c",
                     98: "31d6cfe0d16ae931b73c",
                     99: "31d6cfe0d16ae931b73c",
-                    100: "31d6cfe0d16ae931b73c"
+                    100: "31d6cfe0d16ae931b73c",
                   }[i],
                 c = _.p + a,
                 d = document.getElementsByTagName("link"),
@@ -239,7 +239,7 @@ var CLSTAMP = "6296356";
             (b.rel = "stylesheet"),
               (b.type = "text/css"),
               (b.onload = e),
-              (b.onerror = function(e) {
+              (b.onerror = function (e) {
                 var a = (e && e.target && e.target.src) || c,
                   d = new Error(
                     "Loading CSS chunk " + i + " failed.\n(" + a + ")"
@@ -252,7 +252,7 @@ var CLSTAMP = "6296356";
               }),
               (b.href = c),
               document.getElementsByTagName("head")[0].appendChild(b);
-          }).then(function() {
+          }).then(function () {
             t[i] = 0;
           }))
         );
@@ -267,7 +267,7 @@ var CLSTAMP = "6296356";
       0 !== r &&
         (r
           ? e.push(r[2])
-          : ((a = new Promise(function(e, a) {
+          : ((a = new Promise(function (e, a) {
               r = h[i] = [e, a];
             })),
             e.push((r[2] = a)),
@@ -346,7 +346,7 @@ var CLSTAMP = "6296356";
                 68: "shared_thai-json",
                 69: "shared_turkish-json",
                 70: "shared_ukrainian-json",
-                71: "shared_vietnamese-json"
+                71: "shared_vietnamese-json",
               }[(n = i)] || n) +
               ".js?contenthash=" +
               {
@@ -447,10 +447,10 @@ var CLSTAMP = "6296356";
                 97: "cc21fed3637657fda4bf",
                 98: "1465efabe0003eff6c3d",
                 99: "feaf8f2cd3b2d89fd66a",
-                100: "95218dba6bee6d22b4e1"
+                100: "95218dba6bee6d22b4e1",
               }[n]),
             (s = new Error()),
-            (d = function(e) {
+            (d = function (e) {
               (c.onerror = c.onload = null), clearTimeout(f);
               var a,
                 d,
@@ -467,7 +467,7 @@ var CLSTAMP = "6296356";
                   n[1](s)),
                 (h[i] = void 0));
             }),
-            (f = setTimeout(function() {
+            (f = setTimeout(function () {
               d({ type: "timeout", target: c });
             }, 12e4)),
             (c.onerror = c.onload = d),
@@ -477,16 +477,16 @@ var CLSTAMP = "6296356";
   }),
     (_.m = o),
     (_.c = d),
-    (_.d = function(e, a, d) {
+    (_.d = function (e, a, d) {
       _.o(e, a) || Object.defineProperty(e, a, { enumerable: !0, get: d });
     }),
-    (_.r = function(e) {
+    (_.r = function (e) {
       "undefined" != typeof Symbol &&
         Symbol.toStringTag &&
         Object.defineProperty(e, Symbol.toStringTag, { value: "Module" }),
         Object.defineProperty(e, "__esModule", { value: !0 });
     }),
-    (_.t = function(a, e) {
+    (_.t = function (a, e) {
       if ((1 & e && (a = _(a)), 8 & e)) return a;
       if (4 & e && "object" == typeof a && a && a.__esModule) return a;
       var d = Object.create(null);
@@ -499,28 +499,28 @@ var CLSTAMP = "6296356";
           _.d(
             d,
             n,
-            function(e) {
+            function (e) {
               return a[e];
             }.bind(null, n)
           );
       return d;
     }),
-    (_.n = function(e) {
+    (_.n = function (e) {
       var a =
         e && e.__esModule
-          ? function() {
+          ? function () {
               return e.default;
             }
-          : function() {
+          : function () {
               return e;
             };
       return _.d(a, "a", a), a;
     }),
-    (_.o = function(e, a) {
+    (_.o = function (e, a) {
       return Object.prototype.hasOwnProperty.call(e, a);
     }),
     (_.p = ""),
-    (_.oe = function(e) {
+    (_.oe = function (e) {
       throw (console.error(e), e);
     });
   var a = (window.webpackJsonp = window.webpackJsonp || []),

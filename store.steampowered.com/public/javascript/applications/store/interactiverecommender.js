@@ -3,7 +3,7 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [7],
   {
-    "3WEt": function(e, t, a) {
+    "3WEt": function (e, t, a) {
       "use strict";
       a.r(t);
       var o,
@@ -31,12 +31,12 @@
         (i[(i.Rerequest = 4)] = "Rerequest");
       var h,
         g,
-        v = (function() {
+        v = (function () {
           function e() {
             (this.eState = o.Unrequested), (this.nExpirationTime = 0);
           }
           return (
-            (e.prototype.getData = function(t, a, i) {
+            (e.prototype.getData = function (t, a, i) {
               var n = this,
                 r = Date.now() / 1e3,
                 e = this.eState == o.Pending || this.eState == o.Rerequest;
@@ -44,7 +44,7 @@
                 r >= this.nExpirationTime &&
                   !e &&
                   ((this.eState = o.Pending),
-                  a().then(function(e) {
+                  a().then(function (e) {
                     return n.eState == o.Rerequest
                       ? (n.expireData(), void n.getData(t, a, i))
                       : void (e
@@ -56,25 +56,25 @@
                 this.data
               );
             }),
-            (e.prototype.clearData = function() {
+            (e.prototype.clearData = function () {
               var e = Date.now() / 1e3;
               (this.eState = o.Unrequested),
                 (this.data = null),
                 (this.nExpirationTime = e);
             }),
-            (e.prototype.expireData = function() {
+            (e.prototype.expireData = function () {
               var e = Date.now() / 1e3;
               this.nExpirationTime = e;
             }),
-            (e.prototype.isExpired = function() {
+            (e.prototype.isExpired = function () {
               var e = Date.now() / 1e3;
               return this.nExpirationTime < e;
             }),
-            (e.prototype.delayNewData = function(e) {
+            (e.prototype.delayNewData = function (e) {
               var t = Date.now() / 1e3;
               this.nExpirationTime = t + e;
             }),
-            (e.prototype.rerequestDataIfPending = function() {
+            (e.prototype.rerequestDataIfPending = function () {
               this.eState == o.Pending && (this.eState = o.Rerequest);
             }),
             Object(u.c)([s.C], e.prototype, "data", void 0),
@@ -117,12 +117,12 @@
           DEFAULT_EXCLUDED_TAGS: [],
           DEFAULT_IGNORED_PLAYED_APPS: [],
           EXCLUDE_WISHLIST: !1,
-          USE_MICROTRAILERS: !1
+          USE_MICROTRAILERS: !1,
         };
       ((g = h = h || {})[(g.ClickThrough = 1)] = "ClickThrough"),
         (g[(g.AddToWishlist = 2)] = "AddToWishlist"),
         (g[(g.AddToCart = 3)] = "AddToCart");
-      var V = new ((function() {
+      var V = new ((function () {
         function e() {
           var e = this;
           (this.m_rgFilterTags = []),
@@ -148,19 +148,19 @@
             (this.m_bShouldMute = !0),
             (this.m_bIgnoredEdited = !1),
             (this.m_bUseMicrotrailers = !1),
-            setInterval(function() {
+            setInterval(function () {
               e.m_bStateUpdated &&
                 (window.history.replaceState(
                   {
                     popularity: e.m_fPopularityValue,
                     recency: e.m_fRecencyValue,
-                    excludewishlisted: e.m_bExcludeWishlisted
+                    excludewishlisted: e.m_bExcludeWishlisted,
                   },
                   ""
                 ),
                 (e.m_bStateUpdated = !1));
             }, 1e3),
-            setInterval(function() {
+            setInterval(function () {
               (e.m_fPopularityValue == e.m_fQueuedPopularityValue &&
                 e.m_fQueuedRecencyValue == e.m_fRecencyValue) ||
                 ((e.m_fPopularityValue = e.m_fQueuedPopularityValue),
@@ -169,7 +169,7 @@
             }, 400);
         }
         return (
-          (e.prototype.Init = function() {
+          (e.prototype.Init = function () {
             (this.m_fPopularityValue = k.DEFAULT_POPULARITY_SLIDER),
               (this.m_fRecencyValue = k.DEFAULT_RECENCY_SLIDER),
               (this.m_rgSavedExcludeTags = Object(u.g)(
@@ -185,16 +185,16 @@
               (this.m_bExcludeWishlisted = k.EXCLUDE_WISHLIST),
               (this.m_bUseMicrotrailers = k.USE_MICROTRAILERS);
           }),
-          (e.prototype.getDetails = function(t) {
+          (e.prototype.getDetails = function (t) {
             var e = this;
             return (
               this.m_mapAppDetailsCache.has(t) ||
                 this.m_mapAppDetailsCache.set(t, new v()),
               this.m_mapAppDetailsCache.get(t).getData(
                 60,
-                function() {
-                  return Object(u.b)(e, void 0, void 0, function() {
-                    return Object(u.e)(this, function(e) {
+                function () {
+                  return Object(u.b)(e, void 0, void 0, function () {
+                    return Object(u.e)(this, function (e) {
                       switch (e.label) {
                         case 0:
                           return [
@@ -207,7 +207,7 @@
                                 t +
                                 "&sessionid=" +
                                 k.SESSION_ID
-                            )
+                            ),
                           ];
                         case 1:
                           return [2, e.sent()];
@@ -215,13 +215,13 @@
                     });
                   });
                 },
-                function(e) {
+                function (e) {
                   return e.data;
                 }
               )
             );
           }),
-          (e.prototype.getResults = function(e, t, a, i) {
+          (e.prototype.getResults = function (e, t, a, i) {
             var n = this,
               r = e ? "1" : "0",
               o = t ? "" + t : "0",
@@ -232,15 +232,15 @@
             if (d) {
               var m = [];
               return (
-                Object.keys(d).map(function(e) {
+                Object.keys(d).map(function (e) {
                   (d[e].i || d[e].ip) && m.push(d[e].a);
                 }),
                 0 < m.length && (l = "&ignored=" + m.join()),
                 this.m_ResultDataCache.getData(
                   9999999,
-                  function() {
-                    return Object(u.b)(n, void 0, void 0, function() {
-                      return Object(u.e)(this, function(e) {
+                  function () {
+                    return Object(u.b)(n, void 0, void 0, function () {
+                      return Object(u.e)(this, function (e) {
                         switch (e.label) {
                           case 0:
                             return [
@@ -262,7 +262,7 @@
                                   "&model_version=" +
                                   c +
                                   l
-                              )
+                              ),
                             ];
                           case 1:
                             return [2, e.sent()];
@@ -270,17 +270,17 @@
                       });
                     });
                   },
-                  function(e) {
+                  function (e) {
                     return e.data;
                   }
                 )
               );
             }
           }),
-          (e.prototype.areResultsExpired = function() {
+          (e.prototype.areResultsExpired = function () {
             return this.m_ResultDataCache.isExpired();
           }),
-          (e.prototype.getRecommendations = function() {
+          (e.prototype.getRecommendations = function () {
             var e = V.getResults(
               k.INCLUDE_PLAYED,
               k.ALGORITHM,
@@ -289,13 +289,13 @@
             );
             return e ? e.recommendations : void 0;
           }),
-          (e.prototype.getInputApps = function() {
+          (e.prototype.getInputApps = function () {
             var e = this;
             return this.m_InputAppsCache.getData(
               9999999,
-              function() {
-                return Object(u.b)(e, void 0, void 0, function() {
-                  return Object(u.e)(this, function(e) {
+              function () {
+                return Object(u.b)(e, void 0, void 0, function () {
+                  return Object(u.e)(this, function (e) {
                     switch (e.label) {
                       case 0:
                         return [
@@ -308,7 +308,7 @@
                               k.SESSION_ID +
                               "&steamid=" +
                               k.STEAM_ID
-                          )
+                          ),
                         ];
                       case 1:
                         return [2, e.sent()];
@@ -316,12 +316,12 @@
                   });
                 });
               },
-              function(e) {
+              function (e) {
                 return e.data;
               }
             );
           }),
-          (e.prototype.getAppInfo = function() {
+          (e.prototype.getAppInfo = function () {
             var e = V.getResults(
               k.INCLUDE_PLAYED,
               k.ALGORITHM,
@@ -330,13 +330,13 @@
             );
             return e ? e.app_info : void 0;
           }),
-          (e.prototype.getTags = function() {
+          (e.prototype.getTags = function () {
             var n = this;
             return this.m_TagsCache.getData(
               9999999,
-              function() {
-                return Object(u.b)(n, void 0, void 0, function() {
-                  return Object(u.e)(this, function(e) {
+              function () {
+                return Object(u.b)(n, void 0, void 0, function () {
+                  return Object(u.e)(this, function (e) {
                     switch (e.label) {
                       case 0:
                         return [
@@ -347,7 +347,7 @@
                               k.STEAM_ID +
                               "/tags?sessionid=" +
                               k.SESSION_ID
-                          )
+                          ),
                         ];
                       case 1:
                         return [2, e.sent()];
@@ -355,7 +355,7 @@
                   });
                 });
               },
-              function(e) {
+              function (e) {
                 n.m_TagNameMap.clear();
                 for (var t = 0, a = e.data; t < a.length; t++) {
                   var i = a[t];
@@ -365,25 +365,25 @@
               }
             );
           }),
-          (e.prototype.getTagName = function(e) {
+          (e.prototype.getTagName = function (e) {
             return this.getTags(), this.m_TagNameMap.get(e);
           }),
-          (e.prototype.getTagHeight = function() {
+          (e.prototype.getTagHeight = function () {
             return Math.max(
               this.m_rgFilterTags.length,
               this.m_rgExcludeTags.length
             );
           }),
-          (e.prototype.onPopularityChanged = function(e) {
+          (e.prototype.onPopularityChanged = function (e) {
             this.m_fQueuedPopularityValue = Number(e.target.value);
           }),
-          (e.prototype.onRecencyChanged = function(e) {
+          (e.prototype.onRecencyChanged = function (e) {
             this.m_fQueuedRecencyValue = Number(e.target.value);
           }),
-          (e.prototype.onTagFilterAdd = function(e) {
+          (e.prototype.onTagFilterAdd = function (e) {
             this.m_rgFilterTags.push(e), (this.m_bStateUpdated = !0);
           }),
-          (e.prototype.onTagFilterRemove = function(e) {
+          (e.prototype.onTagFilterRemove = function (e) {
             for (var t = 0; t < this.m_rgFilterTags.length; t++)
               if (this.m_rgFilterTags[t] == e) {
                 this.m_rgFilterTags.splice(t, 1);
@@ -391,10 +391,10 @@
               }
             this.m_bStateUpdated = !0;
           }),
-          (e.prototype.onTagExcludeAdd = function(e) {
+          (e.prototype.onTagExcludeAdd = function (e) {
             this.m_rgExcludeTags.push(e), (this.m_bStateUpdated = !0);
           }),
-          (e.prototype.onTagExcludeRemove = function(e) {
+          (e.prototype.onTagExcludeRemove = function (e) {
             for (var t = 0; t < this.m_rgExcludeTags.length; t++)
               if (this.m_rgExcludeTags[t] == e) {
                 this.m_rgExcludeTags.splice(t, 1);
@@ -402,28 +402,28 @@
               }
             this.m_bStateUpdated = !0;
           }),
-          (e.prototype.doTagsPassFilter = function(e) {
+          (e.prototype.doTagsPassFilter = function (e) {
             for (var t = 0, a = this.m_rgFilterTags; t < a.length; t++) {
               var i = a[t];
               if (-1 == e.indexOf(i)) return !1;
             }
             return !0;
           }),
-          (e.prototype.doTagsFailExclusion = function(e) {
+          (e.prototype.doTagsFailExclusion = function (e) {
             for (var t = 0, a = this.m_rgExcludeTags; t < a.length; t++) {
               var i = a[t];
               if (-1 != e.indexOf(i)) return !0;
             }
             return !1;
           }),
-          (e.prototype.onExcludeWishlistedToggled = function(e) {
+          (e.prototype.onExcludeWishlistedToggled = function (e) {
             (this.m_bExcludeWishlisted = !this.m_bExcludeWishlisted),
               (this.m_bStateUpdated = !0);
           }),
-          (e.prototype.onSaveUserSettings = function(e) {
-            return Object(u.b)(this, void 0, void 0, function() {
+          (e.prototype.onSaveUserSettings = function (e) {
+            return Object(u.b)(this, void 0, void 0, function () {
               var t, a, i, n, r, o;
-              return Object(u.e)(this, function(e) {
+              return Object(u.e)(this, function (e) {
                 switch (e.label) {
                   case 0:
                     for (
@@ -434,20 +434,11 @@
                       ((r = n[i]).i || r.ip) && t.push(r.a);
                     return this.m_fRecencyValue != k.DEFAULT_RECENCY_SLIDER ||
                       this.m_fPopularityValue != k.DEFAULT_POPULARITY_SLIDER ||
-                      this.m_rgFilterTags
-                        .slice()
-                        .sort()
-                        .join(",") !==
+                      this.m_rgFilterTags.slice().sort().join(",") !==
                         this.m_rgSavedFilterTags.sort().join(",") ||
-                      this.m_rgExcludeTags
-                        .slice()
-                        .sort()
-                        .join(",") !==
+                      this.m_rgExcludeTags.slice().sort().join(",") !==
                         this.m_rgSavedExcludeTags.sort().join(",") ||
-                      t
-                        .slice()
-                        .sort()
-                        .join(",") !==
+                      t.slice().sort().join(",") !==
                         k.DEFAULT_IGNORED_PLAYED_APPS.sort().join(",") ||
                       this.m_bExcludeWishlisted != k.EXCLUDE_WISHLIST
                       ? [3, 1]
@@ -461,7 +452,7 @@
                         included_tags: this.m_rgFilterTags,
                         excluded_tags: this.m_rgExcludeTags,
                         ignored_played_apps: t,
-                        exclude_wishlist: this.m_bExcludeWishlisted
+                        exclude_wishlist: this.m_bExcludeWishlisted,
                       }),
                       (k.DEFAULT_RECENCY_SLIDER = this.m_fRecencyValue),
                       (k.DEFAULT_POPULARITY_SLIDER = this.m_fPopularityValue),
@@ -487,7 +478,7 @@
                             k.STEAM_ID +
                             "/savesettings",
                           o
-                        )
+                        ),
                       ]
                     );
                   case 2:
@@ -498,10 +489,10 @@
               });
             });
           }),
-          (e.prototype.onToggleIgnore = function(r) {
-            return Object(u.b)(this, void 0, void 0, function() {
+          (e.prototype.onToggleIgnore = function (r) {
+            return Object(u.b)(this, void 0, void 0, function () {
               var t, a, i, n;
-              return Object(u.e)(this, function(e) {
+              return Object(u.e)(this, function (e) {
                 for (t = this.getInputApps(), a = 0, i = t; a < i.length; a++)
                   if ((n = i[a]).a == r) {
                     n.i || n.ip ? ((n.i = !1), (n.ip = !1)) : (n.ip = !0);
@@ -515,13 +506,13 @@
               });
             });
           }),
-          (e.prototype.onUpdateWithIgnored = function() {
+          (e.prototype.onUpdateWithIgnored = function () {
             this.m_ResultDataCache.expireData(), (this.m_bIgnoredEdited = !1);
           }),
-          (e.prototype.onAppClicked = function(a, i) {
-            return Object(u.b)(this, void 0, void 0, function() {
+          (e.prototype.onAppClicked = function (a, i) {
+            return Object(u.b)(this, void 0, void 0, function () {
               var t;
-              return Object(u.e)(this, function(e) {
+              return Object(u.e)(this, function (e) {
                 switch (e.label) {
                   case 0:
                     return (
@@ -533,14 +524,14 @@
                         action: h.ClickThrough,
                         algorithm: 1,
                         setting_1: 100 * this.m_fPopularityValue,
-                        setting_2: 100 * this.m_fRecencyValue
+                        setting_2: 100 * this.m_fRecencyValue,
                       }),
                       [
                         4,
                         _.a.post(
                           k.BASE_URL + "recommender/" + k.STEAM_ID + "/stats",
                           t
-                        )
+                        ),
                       ]
                     );
                   case 1:
@@ -549,10 +540,10 @@
               });
             });
           }),
-          (e.prototype.onAddToWishlist = function(n, r) {
-            return Object(u.b)(this, void 0, void 0, function() {
+          (e.prototype.onAddToWishlist = function (n, r) {
+            return Object(u.b)(this, void 0, void 0, function () {
               var t, a, i;
-              return Object(u.e)(this, function(e) {
+              return Object(u.e)(this, function (e) {
                 switch (e.label) {
                   case 0:
                     return (
@@ -567,7 +558,7 @@
                             "/wishlist?snr=" +
                             k.LINK_PARAM,
                           t
-                        )
+                        ),
                       ]
                     );
                   case 1:
@@ -581,14 +572,14 @@
                         action: h.AddToWishlist,
                         algorithm: 1,
                         setting_1: 100 * this.m_fPopularityValue,
-                        setting_2: 100 * this.m_fRecencyValue
+                        setting_2: 100 * this.m_fRecencyValue,
                       }),
                       [
                         4,
                         _.a.post(
                           k.BASE_URL + "recommender/" + k.STEAM_ID + "/stats",
                           i
-                        )
+                        ),
                       ]
                     );
                   case 2:
@@ -597,14 +588,14 @@
               });
             });
           }),
-          (e.prototype.onGoToWishlist = function() {
+          (e.prototype.onGoToWishlist = function () {
             window.location.href =
               k.COMMUNITY_BASE_URL + "profiles/" + k.STEAM_ID + "/wishlist";
           }),
-          (e.prototype.onAddToCart = function(i, n) {
-            return Object(u.b)(this, void 0, void 0, function() {
+          (e.prototype.onAddToCart = function (i, n) {
+            return Object(u.b)(this, void 0, void 0, function () {
               var t, a;
-              return Object(u.e)(this, function(e) {
+              return Object(u.e)(this, function (e) {
                 switch (e.label) {
                   case 0:
                     return (
@@ -618,7 +609,7 @@
                             "/cart?snr=" +
                             k.LINK_PARAM,
                           t
-                        )
+                        ),
                       ]
                     );
                   case 1:
@@ -632,14 +623,14 @@
                         action: h.AddToCart,
                         algorithm: 1,
                         setting_1: 100 * this.m_fPopularityValue,
-                        setting_2: 100 * this.m_fRecencyValue
+                        setting_2: 100 * this.m_fRecencyValue,
                       }),
                       [
                         4,
                         _.a.post(
                           k.BASE_URL + "recommender/" + k.STEAM_ID + "/stats",
                           a
-                        )
+                        ),
                       ]
                     );
                   case 2:
@@ -652,16 +643,16 @@
               });
             });
           }),
-          (e.prototype.onMuteClicked = function() {
+          (e.prototype.onMuteClicked = function () {
             this.m_bShouldMute = !0;
           }),
-          (e.prototype.onUnMuteClicked = function() {
+          (e.prototype.onUnMuteClicked = function () {
             this.m_bShouldMute = !1;
           }),
-          (e.prototype.shouldMute = function() {
+          (e.prototype.shouldMute = function () {
             return this.m_bShouldMute;
           }),
-          (e.prototype.shouldUseMicrotrailers = function() {
+          (e.prototype.shouldUseMicrotrailers = function () {
             return this.m_bUseMicrotrailers;
           }),
           Object(u.c)([s.C], e.prototype, "m_fPopularityValue", void 0),
@@ -709,7 +700,7 @@
           a = Object.keys(t).length,
           i = 0;
         return (
-          Object.keys(t).map(function(e) {
+          Object.keys(t).map(function (e) {
             i += t[e].p;
           }),
           P.a.createElement(
@@ -717,7 +708,7 @@
             { className: F.IdentityBlock },
             P.a.createElement("img", {
               className: F.Avatar,
-              src: k.AVATAR_URL
+              src: k.AVATAR_URL,
             }),
             P.a.createElement(
               "div",
@@ -778,9 +769,9 @@
               "div",
               {
                 className: F.IgnoreToggle,
-                onClick: function() {
+                onClick: function () {
                   return V.onToggleIgnore(t);
-                }
+                },
               },
               Object(x.f)(r ? "#PlaytimeList_UnIgnore" : "#PlaytimeList_Ignore")
             )
@@ -814,7 +805,7 @@
             max: r,
             step: (r - n) / 100,
             value: o,
-            onChange: s
+            onChange: s,
           }),
           P.a.createElement("div", { className: F.OptionalLabel }, d)
         );
@@ -831,19 +822,19 @@
             type: "checkbox",
             className: F.Checkbox,
             checked: i,
-            onChange: n
+            onChange: n,
           }),
           a
         );
       }
-      var O = (function(a) {
+      var O = (function (a) {
           function e(e) {
             var t = a.call(this, e) || this;
             return (t.state = {}), t;
           }
           return (
             Object(u.d)(e, a),
-            (e.prototype.render = function() {
+            (e.prototype.render = function () {
               var e = V.getInputApps(),
                 a = [];
               if (!e)
@@ -858,11 +849,11 @@
                   P.a.createElement("div", { className: F.Loading })
                 );
               V.getAppInfo();
-              var i = e.slice().sort(function(e, t) {
+              var i = e.slice().sort(function (e, t) {
                 return t.l - e.l;
               });
               return (
-                Object.keys(i).map(function(e) {
+                Object.keys(i).map(function (e) {
                   var t = i[e];
                   a.push(
                     P.a.createElement(S, {
@@ -871,7 +862,7 @@
                       name: t.t,
                       hours: t.p,
                       lastPlayed: t.l,
-                      ignored: t.i || t.ip
+                      ignored: t.i || t.ip,
                     })
                   );
                 }),
@@ -891,7 +882,7 @@
             (e = Object(u.c)([n.a], e))
           );
         })(P.a.Component),
-        R = (function(a) {
+        R = (function (a) {
           function e(e) {
             var t = a.call(this, e) || this;
             return (
@@ -904,7 +895,7 @@
           }
           return (
             Object(u.d)(e, a),
-            (e.prototype.componentDidMount = function() {
+            (e.prototype.componentDidMount = function () {
               var e = V.getTags();
               if (e)
                 for (var t = 0, a = e; t < a.length; t++) {
@@ -912,22 +903,22 @@
                   this.rgTags.push({ id: parseInt(i.tagid), name: i.name });
                 }
             }),
-            (e.prototype.onFetchRequested = function(e) {
+            (e.prototype.onFetchRequested = function (e) {
               var t = e.value.trim().toLowerCase(),
                 a = t.length,
                 i =
                   0 === a
                     ? this.props.tagoptions.slice(0, 10)
-                    : this.props.tagoptions.filter(function(e) {
+                    : this.props.tagoptions.filter(function (e) {
                         return e.name.toLowerCase().slice(0, a) === t;
                       });
               this.setState({ suggestions: i });
             }),
-            (e.prototype.onClearRequested = function() {}),
-            (e.prototype.onChange = function(e, t) {
+            (e.prototype.onClearRequested = function () {}),
+            (e.prototype.onChange = function (e, t) {
               this.setState({ value: t.newValue });
             }),
-            (e.prototype.onKeyDown = function(e) {
+            (e.prototype.onKeyDown = function (e) {
               if (13 == e.keyCode)
                 for (var t = 0, a = this.props.tagoptions; t < a.length; t++) {
                   var i = a[t];
@@ -937,24 +928,24 @@
                       suggestionValue: i.name,
                       suggestionIndex: 0,
                       sectionIndex: 0,
-                      method: "enter"
+                      method: "enter",
                     };
                     this.onSuggestionSelected(e, n);
                     break;
                   }
                 }
             }),
-            (e.prototype.shouldRenderSuggestions = function(e) {
+            (e.prototype.shouldRenderSuggestions = function (e) {
               return !0;
             }),
-            (e.prototype.onSuggestionSelected = function(e, t) {
+            (e.prototype.onSuggestionSelected = function (e, t) {
               for (var a = 0, i = this.selectedtags; a < i.length; a++) {
                 if (i[a] == t.suggestion.id) return;
               }
               this.selectedtags.push(t.suggestion.id),
                 this.props.onAddTag(t.suggestion.id);
             }),
-            (e.prototype.onRemoveSelectedTag = function(e) {
+            (e.prototype.onRemoveSelectedTag = function (e) {
               for (var t = 0; t < this.selectedtags.length; t++)
                 if (this.selectedtags[t] == e) {
                   this.props.onRemoveTag(this.selectedtags[t]),
@@ -962,14 +953,14 @@
                   break;
                 }
             }),
-            (e.prototype.render = function() {
+            (e.prototype.render = function () {
               for (
                 var a = this,
                   e = {
                     placeholder: Object(x.f)("#TagSelect"),
                     value: this.state.value,
                     onChange: this.onChange,
-                    onKeyDown: this.onKeyDown
+                    onKeyDown: this.onKeyDown,
                   },
                   i = [],
                   t = 0,
@@ -977,7 +968,7 @@
                 t < n.length;
                 t++
               ) {
-                !(function(t) {
+                !(function (t) {
                   var e = V.m_TagNameMap.get(t);
                   i.push(
                     P.a.createElement(
@@ -985,9 +976,9 @@
                       {
                         key: t,
                         className: F.SelectedTag,
-                        onClick: function(e) {
+                        onClick: function (e) {
                           return a.onRemoveSelectedTag(t);
-                        }
+                        },
                       },
                       P.a.createElement("div", null, e),
                       P.a.createElement("div", { className: F.Close }, "X")
@@ -1009,10 +1000,10 @@
                   onSuggestionsClearRequested: this.onClearRequested,
                   onSuggestionSelected: this.onSuggestionSelected,
                   shouldRenderSuggestions: this.shouldRenderSuggestions,
-                  getSuggestionValue: function(e) {
+                  getSuggestionValue: function (e) {
                     return e.name;
                   },
-                  renderSuggestion: function(e) {
+                  renderSuggestion: function (e) {
                     return P.a.createElement("div", null, e.name);
                   },
                   inputProps: e,
@@ -1020,8 +1011,8 @@
                     input: F.SuggestionInput,
                     suggestion: F.OptionSuggestion,
                     suggestionsList: F.SuggestionsList,
-                    suggestionsContainerOpen: F.SuggestionContainerOpen
-                  }
+                    suggestionsContainerOpen: F.SuggestionContainerOpen,
+                  },
                 }),
                 i
               );
@@ -1037,7 +1028,7 @@
             (e = Object(u.c)([n.a], e))
           );
         })(P.a.Component),
-        j = Object(n.a)(function() {
+        j = Object(n.a)(function () {
           var e = V.getTags(),
             t = [];
           if (e)
@@ -1051,7 +1042,7 @@
               Object(x.f)("#FilterAge_36"),
               Object(x.f)("#FilterAge_24"),
               Object(x.f)("#FilterAge_12"),
-              Object(x.f)("#FilterAge_6")
+              Object(x.f)("#FilterAge_6"),
             ],
             o = V.m_rgSavedExcludeTags,
             s = V.m_rgSavedFilterTags;
@@ -1068,7 +1059,7 @@
                 minValue: 0,
                 maxValue: 1,
                 value: V.m_fQueuedPopularityValue,
-                onChange: V.onPopularityChanged
+                onChange: V.onPopularityChanged,
               }),
               P.a.createElement(y, {
                 minLabel: Object(x.f)("#Recency_Older"),
@@ -1078,7 +1069,7 @@
                 maxValue: 1,
                 value: V.m_fQueuedRecencyValue,
                 onChange: V.onRecencyChanged,
-                sliderLabels: r
+                sliderLabels: r,
               })
             ),
             P.a.createElement(
@@ -1090,7 +1081,7 @@
                 selectedtags: s,
                 key: "Filter" + s.toString(),
                 onAddTag: V.onTagFilterAdd,
-                onRemoveTag: V.onTagFilterRemove
+                onRemoveTag: V.onTagFilterRemove,
               }),
               P.a.createElement(R, {
                 title: Object(x.f)("#TagExcludeMultiple_Title"),
@@ -1098,63 +1089,66 @@
                 selectedtags: o,
                 key: "Exclude" + o.toString(),
                 onAddTag: V.onTagExcludeAdd,
-                onRemoveTag: V.onTagExcludeRemove
+                onRemoveTag: V.onTagExcludeRemove,
               }),
               P.a.createElement(T, {
                 className: F.WishlistCheckbox,
                 titleLabel: Object(x.f)("#ExcludeWishlisted"),
                 checked: V.m_bExcludeWishlisted,
-                onChange: V.onExcludeWishlistedToggled
+                onChange: V.onExcludeWishlistedToggled,
               }),
               P.a.createElement(
                 "button",
                 {
                   className: F.SaveUserSettingsButton,
                   onClick: V.onSaveUserSettings,
-                  title: Object(x.f)("#SaveUserSettingsTooltip")
+                  title: Object(x.f)("#SaveUserSettingsTooltip"),
                 },
                 Object(x.f)("#SaveUserSettings")
               )
             )
           );
         }),
-        D = (function(a) {
+        D = (function (a) {
           function e(e) {
             var t = a.call(this, e) || this;
             return (
               (t.m_videoRef = P.a.createRef()),
               (t.state = {
                 hovered: !1,
-                wishlisted: V.getAppInfo()[e.appID].w
+                wishlisted: V.getAppInfo()[e.appID].w,
               }),
               t
             );
           }
           return (
             Object(u.d)(e, a),
-            (e.prototype.componentDidMount = function() {
+            (e.prototype.componentDidMount = function () {
               this.m_videoRef.current.defaultMuted = !0;
             }),
-            (e.prototype.componentDidUpdate = function() {
+            (e.prototype.componentDidUpdate = function () {
               var e;
               this.state.hovered &&
                 this.m_videoRef &&
                 this.m_videoRef.current &&
                 0 == this.m_videoRef.current.currentTime &&
-                ((e = this.m_videoRef.current.play()) &&
-                  e.then(function() {}, function() {}));
+                (e = this.m_videoRef.current.play()) &&
+                e.then(
+                  function () {},
+                  function () {}
+                );
             }),
-            (e.prototype.OnHover = function() {
+            (e.prototype.OnHover = function () {
               this.setState({ hovered: !0 });
             }),
-            (e.prototype.OnUnHover = function() {
+            (e.prototype.OnUnHover = function () {
               this.setState({ hovered: !1 }),
                 this.m_videoRef &&
                   this.m_videoRef.current &&
                   ((this.m_videoRef.current.currentTime = 0),
                   this.m_videoRef.current.pause());
             }),
-            (e.prototype.onMuteToggle = function(e) {
+            (e.prototype.onMuteToggle = function (e) {
               V.shouldMute()
                 ? (V.onUnMuteClicked(),
                   this.m_videoRef &&
@@ -1167,21 +1161,21 @@
                 e.preventDefault(),
                 e.stopPropagation();
             }),
-            (e.prototype.onAddToWishlist = function(e) {
+            (e.prototype.onAddToWishlist = function (e) {
               V.onAddToWishlist(this.props.appID, this.props.rank),
                 this.setState({ wishlisted: !0 }),
                 e.preventDefault(),
                 e.stopPropagation();
             }),
-            (e.prototype.onGoToWishlist = function(e) {
+            (e.prototype.onGoToWishlist = function (e) {
               V.onGoToWishlist(), e.preventDefault(), e.stopPropagation();
             }),
-            (e.prototype.onAddToCart = function(e) {
+            (e.prototype.onAddToCart = function (e) {
               V.onAddToCart(this.props.appID, this.props.rank),
                 e.preventDefault(),
                 e.stopPropagation();
             }),
-            (e.prototype.render = function() {
+            (e.prototype.render = function () {
               var t = this,
                 e = this.props,
                 a = e.appID,
@@ -1263,7 +1257,7 @@
                   "a",
                   {
                     href: k.BASE_URL + "app/" + a + "?snr=" + k.LINK_PARAM,
-                    onClick: function() {
+                    onClick: function () {
                       return V.onAppClicked(a, n);
                     },
                     className: Object(M.a)(
@@ -1275,7 +1269,7 @@
                     ),
                     style: { top: Math.min(31, n) * v },
                     onMouseEnter: this.OnHover,
-                    onMouseLeave: this.OnUnHover
+                    onMouseLeave: this.OnUnHover,
                   },
                   P.a.createElement(
                     "div",
@@ -1288,7 +1282,7 @@
                           F.Logo,
                           (!D || !b) && F.Revealed
                         ),
-                        src: o
+                        src: o,
                       }),
                       P.a.createElement("video", {
                         ref: this.m_videoRef,
@@ -1302,16 +1296,16 @@
                         autoPlay: !0,
                         muted: j && V.shouldMute(),
                         src: I,
-                        loop: A
+                        loop: A,
                       }),
                       j &&
                         P.a.createElement(
                           "div",
                           {
                             className: Object(M.a)(F.UnMute, D && F.Revealed),
-                            onClick: function(e) {
+                            onClick: function (e) {
                               return t.onMuteToggle(e);
-                            }
+                            },
                           },
                           P.a.createElement(w.hb, { muted: V.shouldMute() })
                         ),
@@ -1323,7 +1317,7 @@
                               "ds_flag",
                               "ds_wishlist_flag",
                               F.WishlistFlag
-                            )
+                            ),
                           },
                           Object(x.f)("#Recommendation_OnWishlist") + "  "
                         )
@@ -1342,7 +1336,7 @@
                               F.CenterOption,
                               F.CenterDefault,
                               b && F.Hidden
-                            )
+                            ),
                           },
                           P.a.createElement(
                             "div",
@@ -1354,7 +1348,7 @@
                             { className: F.BarContainer },
                             P.a.createElement("div", {
                               className: F.Bar,
-                              style: { width: S + "%" }
+                              style: { width: S + "%" },
                             })
                           ),
                           P.a.createElement("div", { className: F.Tags }, d)
@@ -1366,7 +1360,7 @@
                               F.CenterOption,
                               F.CenterHovered,
                               !b && F.Hidden
-                            )
+                            ),
                           },
                           C
                         )
@@ -1381,7 +1375,7 @@
                               className: Object(M.a)(
                                 "game_purchase_action",
                                 F.PurchaseSection
-                              )
+                              ),
                             },
                             P.a.createElement(
                               "div",
@@ -1389,14 +1383,14 @@
                                 className: Object(M.a)(
                                   "game_purchase_action_bg",
                                   F.PurchaseBG
-                                )
+                                ),
                               },
                               T &&
                                 P.a.createElement(
                                   "div",
                                   {
                                     className:
-                                      "discount_block game_purchase_discount"
+                                      "discount_block game_purchase_discount",
                                   },
                                   P.a.createElement(
                                     "div",
@@ -1426,7 +1420,7 @@
                                       "game_purchase_price",
                                       "price",
                                       F.Price
-                                    )
+                                    ),
                                   },
                                   L
                                 ),
@@ -1435,15 +1429,15 @@
                                   "div",
                                   {
                                     className: "btn_addtocart",
-                                    onClick: function(e) {
+                                    onClick: function (e) {
                                       return t.onAddToCart(e);
-                                    }
+                                    },
                                   },
                                   P.a.createElement(
                                     "span",
                                     {
                                       className:
-                                        "btnv6_green_white_innerfade btn_medium"
+                                        "btnv6_green_white_innerfade btn_medium",
                                     },
                                     P.a.createElement(
                                       "span",
@@ -1461,14 +1455,14 @@
                               {
                                 id: "add_to_wishlist_area",
                                 className: F.WishlistSection,
-                                onClick: function(e) {
+                                onClick: function (e) {
                                   return t.onAddToWishlist(e);
-                                }
+                                },
                               },
                               P.a.createElement(
                                 "div",
                                 {
-                                  className: "btnv6_blue_hoverfade btn_medium"
+                                  className: "btnv6_blue_hoverfade btn_medium",
                                 },
                                 P.a.createElement(
                                   "span",
@@ -1491,16 +1485,16 @@
                                 "data-tooltip-text": Object(x.f)(
                                   "#OnWishlistTooltip"
                                 ),
-                                onClick: function(e) {
+                                onClick: function (e) {
                                   return t.onGoToWishlist(e);
-                                }
+                                },
                               },
                               P.a.createElement(
                                 "span",
                                 null,
                                 P.a.createElement("img", {
                                   src:
-                                    k.IMG_URL_BASE + "/v6/ico/ico_selected.png"
+                                    k.IMG_URL_BASE + "/v6/ico/ico_selected.png",
                                 }),
                                 "  " + Object(x.f)("#OnWishlist")
                               )
@@ -1520,14 +1514,14 @@
             (e = Object(u.c)([n.a], e))
           );
         })(P.a.Component),
-        N = (function(a) {
+        N = (function (a) {
           function e(e) {
             var t = a.call(this, e) || this;
             return (t.state = { sortedRecommendedApps: [] }), t;
           }
           return (
             Object(u.d)(e, a),
-            (e.prototype.render = function() {
+            (e.prototype.render = function () {
               var e = V.m_fRecencyValue * (k.NUM_RECENCY_STEPS - 1 - 0.001),
                 t = Math.floor(e),
                 a = t + 1,
@@ -1568,20 +1562,20 @@
                         m.set(y, S));
                     }
                 }
-                m.forEach(function(e, t) {
+                m.forEach(function (e, t) {
                   return m.set(t, e / u);
                 });
                 var T = [];
-                m.forEach(function(e, t) {
+                m.forEach(function (e, t) {
                   return T.push({ appid: t, score: e });
                 });
-                var O = (T = (T = (T = T.filter(function(e) {
+                var O = (T = (T = (T = T.filter(function (e) {
                   return _[e.appid].t && V.doTagsPassFilter(_[e.appid].t);
-                })).filter(function(e) {
+                })).filter(function (e) {
                   return _[e.appid].t && !V.doTagsFailExclusion(_[e.appid].t);
-                })).filter(function(e) {
+                })).filter(function (e) {
                   return 0 < e.score;
-                })).sort(function(e, t) {
+                })).sort(function (e, t) {
                   return t.score - e.score;
                 });
                 if (0 < O.length) {
@@ -1600,7 +1594,7 @@
                         appID: A.appid,
                         score: A.score,
                         rank: A.rank,
-                        width: this.props.width
+                        width: this.props.width,
                       })
                     );
                   }
@@ -1610,7 +1604,7 @@
                       "div",
                       {
                         key: "no_recommedations_due_to_filter",
-                        className: F.NoRecommendationsMessage
+                        className: F.NoRecommendationsMessage,
                       },
                       Object(x.f)("#NoRecommendationsDueToFilter")
                     )
@@ -1619,7 +1613,7 @@
                 h.push(
                   P.a.createElement("div", {
                     key: "recommendations_loading",
-                    className: F.RecommendationsLoading
+                    className: F.RecommendationsLoading,
                   })
                 );
               return P.a.createElement(
@@ -1637,7 +1631,7 @@
                     className: Object(M.a)(
                       F.List,
                       V.areResultsExpired() && F.Updating
-                    )
+                    ),
                   },
                   h
                 )
@@ -1646,29 +1640,29 @@
             (e = Object(u.c)([n.a], e))
           );
         })(P.a.Component),
-        L = (function(t) {
+        L = (function (t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (e.state = { width: window.innerWidth }), e;
           }
           return (
             Object(u.d)(e, t),
-            (e.prototype.updateDimensions = function() {
+            (e.prototype.updateDimensions = function () {
               this.setState({ width: window.innerWidth });
             }),
-            (e.prototype.componentDidMount = function() {
+            (e.prototype.componentDidMount = function () {
               window.addEventListener("resize", this.updateDimensions);
             }),
-            (e.prototype.ShowLoginDialog = function() {
+            (e.prototype.ShowLoginDialog = function () {
               Object(f.a)();
             }),
-            (e.prototype.render = function() {
+            (e.prototype.render = function () {
               return r.i.logged_in
                 ? P.a.createElement(
                     "div",
                     {
                       className: F.App,
-                      style: { height: 3840 + 26 * V.getTagHeight() }
+                      style: { height: 3840 + 26 * V.getTagHeight() },
                     },
                     P.a.createElement(
                       "div",
@@ -1714,7 +1708,7 @@
                             "btn_green_white_innerfade",
                             " btn_medium"
                           ),
-                          onClick: this.ShowLoginDialog
+                          onClick: this.ShowLoginDialog,
                         },
                         P.a.createElement(
                           "span",
@@ -1732,7 +1726,7 @@
         })(P.a.Component);
       t.default = L;
     },
-    Asqs: function(e, t, a) {
+    Asqs: function (e, t, a) {
       e.exports = {
         smallentrywidth: "600px",
         optionswrapwidth: "777px",
@@ -1819,8 +1813,8 @@
         SuggestionContainerOpen:
           "interactiverecommender_SuggestionContainerOpen_2NTkL",
         SuggestionsList: "interactiverecommender_SuggestionsList_2zgal",
-        OptionSuggestion: "interactiverecommender_OptionSuggestion_3VKY5"
+        OptionSuggestion: "interactiverecommender_OptionSuggestion_3VKY5",
       };
-    }
-  }
+    },
+  },
 ]);

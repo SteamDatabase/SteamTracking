@@ -140,5 +140,5 @@ LocalizationManifestReady("profile", "manifest", {
   Profile_AvatarUploadingBanned:
     "This account has been banned from changing its avatar for:",
   Profile_AvatarUploadingBanned_Desc:
-    'In most cases, this can occur if you have uploaded an avatar that was deemed inappropriate. Please see the <a href="%s" target="_blank" >Community Rules and Guidelines</a> for more information.'
+    'In most cases, this can occur if you have uploaded an avatar that was deemed inappropriate. Please see the <a href="%s" target="_blank" >Community Rules and Guidelines</a> for more information.',
 });

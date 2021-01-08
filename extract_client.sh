@@ -89,7 +89,7 @@ while IFS= read -r -d '' file
 do
 	echo "Prettifying $file"
 
-	npm run prettier "$file"
+	npm run prettier "$(pwd)/$file"
 done <   <(find steamui/ clientui/ -maxdepth 1 -name '*.js' -print0)
 
 #
