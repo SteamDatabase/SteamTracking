@@ -15437,7 +15437,8 @@
           );
         })(),
         I = n("0OaU"),
-        A = (function (n) {
+        A = n("lkRc"),
+        D = (function (n) {
           function e(e) {
             var t = n.call(this, e) || this;
             return (
@@ -15470,16 +15471,16 @@
                 o.a.createElement(
                   "div",
                   { className: d.a.LoginPanelContent },
-                  i && o.a.createElement(D, { text: i }),
+                  i && o.a.createElement(B, { text: i }),
                   a == y.AccountName &&
-                    o.a.createElement(B, { manager: this.m_manager }),
+                    o.a.createElement(T, { manager: this.m_manager }),
                   a == y.TwoFactorCode &&
-                    o.a.createElement(j, {
+                    o.a.createElement(L, {
                       manager: this.m_manager,
                       authtype: y.TwoFactorCode,
                     }),
                   a == y.EmailCode &&
-                    o.a.createElement(j, {
+                    o.a.createElement(L, {
                       manager: this.m_manager,
                       authtype: y.EmailCode,
                     }),
@@ -15495,14 +15496,14 @@
             (e = Object(m.c)([a.a], e))
           );
         })(o.a.Component);
-      function D(e) {
+      function B(e) {
         return o.a.createElement(
           "div",
           { className: d.a.ErrorMessage },
           e.text
         );
       }
-      var B = (function (n) {
+      var T = (function (n) {
           function e(e) {
             var t = n.call(this, e) || this;
             return (t.state = { nNameSize: 0, nPassSize: 0 }), t;
@@ -15591,7 +15592,7 @@
                     },
                     checked: t.GetRememberPassword(),
                   }),
-                  t.GetCaptchaURL() && o.a.createElement(T, { manager: t }),
+                  t.GetCaptchaURL() && o.a.createElement(j, { manager: t }),
                   o.a.createElement(
                     s.q,
                     { disabled: this.props.manager.IsRequestInFlight() },
@@ -15600,10 +15601,7 @@
                 ),
                 o.a.createElement(
                   "a",
-                  {
-                    className: d.a.NeedHelpLink,
-                    href: "http://help.steampowered.com/",
-                  },
+                  { className: d.a.NeedHelpLink, href: A.b.HELP_BASE_URL },
                   Object(O.f)("#Login_ForgotPassword")
                 ),
                 o.a.createElement("div", {
@@ -15622,7 +15620,7 @@
                     { className: d.a.CreateAccountLink },
                     o.a.createElement(
                       "a",
-                      { href: "https://store.steampowered.com/join/" },
+                      { href: A.b.STORE_BASE_URL + "join/" },
                       Object(O.f)("#Login_CreateAccount")
                     )
                   )
@@ -15636,7 +15634,7 @@
             (e = Object(m.c)([a.a], e))
           );
         })(o.a.Component),
-        T = (function (e) {
+        j = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -15701,7 +15699,7 @@
             (t = Object(m.c)([a.a], t))
           );
         })(o.a.Component),
-        j = (function (e) {
+        L = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -15798,8 +15796,7 @@
             (t = Object(m.c)([a.a], t))
           );
         })(o.a.Component),
-        L = n("ka0M"),
-        k = n("lkRc");
+        k = n("ka0M");
       n.d(t, "a", function () {
         return R;
       });
@@ -15812,18 +15809,18 @@
             (t.prototype.OnLoginComplete = function (e) {
               window.location.href =
                 this.props.redirectURL &&
-                this.props.redirectURL !== Object(k.c)() + "login"
+                this.props.redirectURL !== Object(A.c)() + "login"
                   ? this.props.redirectURL
-                  : k.b.COMMUNITY_BASE_URL;
+                  : A.b.COMMUNITY_BASE_URL;
             }),
             (t.prototype.render = function () {
-              return k.g && k.g.logged_in
+              return A.g && A.g.logged_in
                 ? (this.OnLoginComplete(), null)
                 : o.a.createElement(
                     "div",
                     null,
-                    o.a.createElement(A, {
-                      baseURL: Object(k.c)(),
+                    o.a.createElement(D, {
+                      baseURL: Object(A.c)(),
                       onLoginComplete: this.OnLoginComplete,
                     })
                   );
@@ -15840,7 +15837,7 @@
             Object(m.d)(t, e),
             (t.prototype.render = function () {
               return o.a.createElement(
-                L.a,
+                k.a,
                 {
                   onEscKeypress: this.props.closeModal,
                   bDisableBackgroundDismiss: !0,
@@ -15852,7 +15849,7 @@
           );
         })(o.a.Component);
       function R() {
-        Object(L.d)(
+        Object(k.d)(
           o.a.createElement(N, {
             ownerWin: window,
             redirectURL: window.location.href,

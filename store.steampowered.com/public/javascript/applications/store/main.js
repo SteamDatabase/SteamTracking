@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6296356";
+var CLSTAMP = "6302032";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [9],
   {
@@ -19608,7 +19608,8 @@ var CLSTAMP = "6296356";
           );
         })(),
         C = n("0OaU"),
-        w = (function (n) {
+        w = n("lkRc"),
+        L = (function (n) {
           function e(e) {
             var t = n.call(this, e) || this;
             return (
@@ -19641,16 +19642,16 @@ var CLSTAMP = "6296356";
                 i.a.createElement(
                   "div",
                   { className: p.a.LoginPanelContent },
-                  o && i.a.createElement(L, { text: o }),
+                  o && i.a.createElement(T, { text: o }),
                   a == M.AccountName &&
-                    i.a.createElement(T, { manager: this.m_manager }),
+                    i.a.createElement(I, { manager: this.m_manager }),
                   a == M.TwoFactorCode &&
-                    i.a.createElement(B, {
+                    i.a.createElement(D, {
                       manager: this.m_manager,
                       authtype: M.TwoFactorCode,
                     }),
                   a == M.EmailCode &&
-                    i.a.createElement(B, {
+                    i.a.createElement(D, {
                       manager: this.m_manager,
                       authtype: M.EmailCode,
                     }),
@@ -19666,14 +19667,14 @@ var CLSTAMP = "6296356";
             (e = Object(m.c)([a.a], e))
           );
         })(i.a.Component);
-      function L(e) {
+      function T(e) {
         return i.a.createElement(
           "div",
           { className: p.a.ErrorMessage },
           e.text
         );
       }
-      var T = (function (n) {
+      var I = (function (n) {
           function e(e) {
             var t = n.call(this, e) || this;
             return (t.state = { nNameSize: 0, nPassSize: 0 }), t;
@@ -19762,7 +19763,7 @@ var CLSTAMP = "6296356";
                     },
                     checked: t.GetRememberPassword(),
                   }),
-                  t.GetCaptchaURL() && i.a.createElement(I, { manager: t }),
+                  t.GetCaptchaURL() && i.a.createElement(B, { manager: t }),
                   i.a.createElement(
                     s.p,
                     { disabled: this.props.manager.IsRequestInFlight() },
@@ -19771,10 +19772,7 @@ var CLSTAMP = "6296356";
                 ),
                 i.a.createElement(
                   "a",
-                  {
-                    className: p.a.NeedHelpLink,
-                    href: "http://help.steampowered.com/",
-                  },
+                  { className: p.a.NeedHelpLink, href: w.c.HELP_BASE_URL },
                   Object(E.f)("#Login_ForgotPassword")
                 ),
                 i.a.createElement("div", {
@@ -19793,7 +19791,7 @@ var CLSTAMP = "6296356";
                     { className: p.a.CreateAccountLink },
                     i.a.createElement(
                       "a",
-                      { href: "https://store.steampowered.com/join/" },
+                      { href: w.c.STORE_BASE_URL + "join/" },
                       Object(E.f)("#Login_CreateAccount")
                     )
                   )
@@ -19807,7 +19805,7 @@ var CLSTAMP = "6296356";
             (e = Object(m.c)([a.a], e))
           );
         })(i.a.Component),
-        I = (function (e) {
+        B = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -19872,7 +19870,7 @@ var CLSTAMP = "6296356";
             (t = Object(m.c)([a.a], t))
           );
         })(i.a.Component),
-        B = (function (e) {
+        D = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -19969,8 +19967,7 @@ var CLSTAMP = "6296356";
             (t = Object(m.c)([a.a], t))
           );
         })(i.a.Component),
-        D = n("ka0M"),
-        N = n("lkRc"),
+        N = n("ka0M"),
         j = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
@@ -19980,18 +19977,18 @@ var CLSTAMP = "6296356";
             (t.prototype.OnLoginComplete = function (e) {
               window.location.href =
                 this.props.redirectURL &&
-                this.props.redirectURL !== Object(N.d)() + "login"
+                this.props.redirectURL !== Object(w.d)() + "login"
                   ? this.props.redirectURL
-                  : N.c.COMMUNITY_BASE_URL;
+                  : w.c.COMMUNITY_BASE_URL;
             }),
             (t.prototype.render = function () {
-              return N.i && N.i.logged_in
+              return w.i && w.i.logged_in
                 ? (this.OnLoginComplete(), null)
                 : i.a.createElement(
                     "div",
                     null,
-                    i.a.createElement(w, {
-                      baseURL: Object(N.d)(),
+                    i.a.createElement(L, {
+                      baseURL: Object(w.d)(),
                       onLoginComplete: this.OnLoginComplete,
                     })
                   );
@@ -20008,7 +20005,7 @@ var CLSTAMP = "6296356";
             Object(m.d)(t, e),
             (t.prototype.render = function () {
               return i.a.createElement(
-                D.a,
+                N.a,
                 {
                   onEscKeypress: this.props.closeModal,
                   bDisableBackgroundDismiss: !0,
@@ -20020,7 +20017,7 @@ var CLSTAMP = "6296356";
           );
         })(i.a.Component);
       function z() {
-        Object(D.d)(
+        Object(N.d)(
           i.a.createElement(k, {
             ownerWin: window,
             redirectURL: window.location.href,
@@ -20030,7 +20027,7 @@ var CLSTAMP = "6296356";
         );
       }
       function R(e) {
-        Object(D.d)(
+        Object(N.d)(
           i.a.createElement(k, { ownerWin: window, redirectURL: e }),
           window,
           { strTitle: Object(E.f)("#Login_SignIn") }
