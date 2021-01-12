@@ -17,6 +17,12 @@
                     "type": "uint64",
                     "optional": true,
                     "description": "Only show matches of the specified match id"
+                },
+                {
+                    "name": "dpc",
+                    "type": "bool",
+                    "optional": true,
+                    "description": "Only show matches that are part of the DPC"
                 }
             ]
         },
