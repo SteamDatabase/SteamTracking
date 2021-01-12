@@ -184,6 +184,7 @@
 	"GameList_View_Platform_Apple": "仅显示可在 macOS 上运行的游戏",
 	"GameList_View_MyOwnGames": "我的游戏",
 	"GameList_View_GamesSharedByOther": "%1$s 的游戏",
+	"GameList_View_GamesProvidedByNamedCafe": "来自 %1$s",
 	"GameList_View_NothingSelected": "无",
 	"GameList_View_NothingSelected_HelpText": "此视图筛选条件无匹配结果。",
 	"GameList_Search_GamesCheckbox_Link": "显示游戏",
@@ -997,6 +998,8 @@
 	"AppProperties_BetasPage": "测试版",
 	"AppProperties_ControllerPage": "控制器",
 	"AppProperties_DLCPage": "DLC",
+	"AppProperties_ShortcutPage": "快捷方式",
+	"AppProperties_AppID": "App ID: %1$s",
 	"AppProperties_EnableOverlay": "在游戏中启用 Steam 界面",
 	"AppProperties_UseTheatreWhileVR": "SteamVR 在使用中时，使用桌面游乐剧院",
 	"AppProperties_SharingNotSupported": "此作品目前不支持 Steam 家庭共享。",
@@ -1059,5 +1062,14 @@
 	"AppProperties_SteamInput_ReasonGameOverride": ", 按游戏先决替代",
 	"AppProperties_SteamInput_ReasonGeneralSetting": "，通用设置",
 	"AppProperties_SteamInput_ReasonDeveloperSetting": ", 由开发者设置",
-	"AppProperties_SteamInput_ReasonRequired": ", 始终需要"
+	"AppProperties_SteamInput_ReasonRequired": ", 始终需要",
+	"AppProperties_Dlc_ViewInStore": "在商店中查看更多",
+	"AppProperties_Dlc_Search": "搜索…",
+	"AppProperties_Dlc_Installed": "安装",
+	"AppProperties_Dlc_Name": "名称",
+	"AppProperties_Dlc_DateAdded": "已添加",
+	"AppProperties_Shortcut_TargetExecutable": "目标",
+	"AppProperties_Shortcut_StartInFolder": "起始位置",
+	"AppProperties_Shortcut_BrowseFiles": "浏览…",
+	"AppProperties_Shortcut_InVR": "纳入虚拟现实库"
 }
