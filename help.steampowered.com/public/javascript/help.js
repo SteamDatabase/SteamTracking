@@ -2227,13 +2227,19 @@ HelpRequestPage = {
 		if ( typeof bScrollIntoView == 'undefined' )
 			bScrollIntoView = true;
 
-		if ( !HelpWizard.m_steamid && !$J( '#create_help_request_form' ).data( 'allow-anonymous' ) )
+		if ( !HelpWizard.m_steamid )
 		{
-			HelpWizard.PromptLogin();
-			return;
+			if ( $J( '#create_help_request_form' ).data( 'allow-anonymous' ) )
+			{
+				// Initialize the captcha for anonymous tickets.
+				HelpWizard.RefreshCaptcha(3);
+			}
+			else
+			{
+				HelpWizard.PromptLogin();
+				return;
+			}
 		}
-
-		HelpWizard.RefreshCaptcha(3);
 
 		HelpRequestPage.InitHelpRequestAttachmentUpload( $J('#create_help_request_form') );
 

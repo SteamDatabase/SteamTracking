@@ -539,7 +539,7 @@
         EventEditor_Options_ShowInSteamChina: "Show In Steam China",
         EventEditor_Options_ShowInSteamChina_Desc:
           "Events by default will not show up to users in Steam China unless this is enabled",
-        EventEditor_Options_ShowInSteamGlobal: "Also Show In Steam Global",
+        EventEditor_Options_ShowInSteamGlobal: "Hide in Steam",
         EventEditor_Options_ShowInSteamGlobal_Desc:
           "For events shown in Steam China, this can be used to disable the event from showing up to global users",
         EventEditor_Clone_MultiLanguages:

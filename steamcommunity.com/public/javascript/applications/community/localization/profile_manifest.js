@@ -60,10 +60,12 @@ LocalizationManifestReady("profile", "manifest", {
   Profile_Edit_SelectBackground: "Select Background...",
   Profile_Edit_ChooseBackground: "Profile Background",
   Profile_LinkWithFacebook: "Link with Facebook",
+  Profile_Preferences_HideProfileAwards: "Hide Community Awards on my profile",
   Profile_Edit_UnsavedChangesWarning:
     "You have unsaved changes.  Are you sure you want to leave this page?",
   Profile_Edit_BasicInfo: "General",
   Profile_Edit_Location: "Location",
+  Profile_Edit_Preferences: "Profile Preferences",
   Profile_Edit_Social: "Social",
   Profile_Edit_MiniProfile: "Mini Profile",
   Profile_Edit_Theme: "Theme",

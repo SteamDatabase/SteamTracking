@@ -1839,12 +1839,12 @@ function OnGetFinalPriceSuccess( result )
 				}
 				else if ( method.value == 'wechat' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = '#wechat_authorization_explanation';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'WeChat transactions are authorized through the WeChat website.  Click the button below to open a new web browser to initiate the transaction.';
 					$('purchase_button_bottom_text').innerHTML = 'Continue to WeChat';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for WeChat customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = '#wechat_payment_tips_text';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the WeChat website by scanning the QR code with your WeChat application.  Please be aware that your WeChat account must be linked to a valid Chinese bank issued card or the payment may be rejected.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'molpoints' )
@@ -3252,7 +3252,7 @@ function UpdatePaymentInfoForm()
 			bShowCountryVerification = true;
 			bShowBankSelection = true;
 		}
-		else if ( method.value == 'paysafe' || method.value == 'sofort' || method.value == 'webmoney' || method.value == 'moneybookers'	|| method.value == 'alipay' || method.value == 'unionpay' || method.value == 'yandex'
+		else if ( method.value == 'paysafe' || method.value == 'sofort' || method.value == 'webmoney' || method.value == 'moneybookers' || method.value == 'unionpay' || method.value == 'yandex'
 			|| method.value == 'boacompragold' || method.value == 'pagseguro' || method.value == 'visabrazil'
 			|| method.value == 'amexbrazil' || method.value == 'aura' || method.value == 'hipercard' || method.value == 'mastercardbrazil' || method.value == 'dinerscardbrazil'
 			|| method.value == 'multibanco' || method.value == 'payshop' || method.value == 'maestroboacompra' || method.value == 'visaelectronboacompra'
@@ -3279,6 +3279,10 @@ function UpdatePaymentInfoForm()
 			|| method.value == 'nanaco' || method.value == 'culturevoucher' || method.value == 'happymoneyvoucher' || method.value == 'toss'
 			|| method.value == 'payco' || method.value == 'mobile_wallet_japan'
 		)
+		{
+			bShowCountryVerification = true;
+		}
+		else if ( method.value == 'alipay' && true )
 		{
 			bShowCountryVerification = true;
 		}
@@ -3314,8 +3318,8 @@ function UpdatePaymentInfoForm()
 			g_bShowAddressForm = false;
 			bShowCountryVerification = true;
 			bShowCafeFundedInstructions = true;
-		}	
-		else if ( method.value == 'wechat' )
+		}
+		else if ( method.value == 'wechat' && true )
 		{
 			bShowCountryVerification = true;
 			bShowPaymentSpecificNote = true;

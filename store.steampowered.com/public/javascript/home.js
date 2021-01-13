@@ -717,7 +717,7 @@ GHomepage = {
 		}
 
 		if ( rgAppInfo && rgAppInfo.has_live_broadcast )
-		{		
+		{
 			$ImgCtn.append( $J('<div/>', {'class': 'broadcast_live_stream_icon' } ).append( 'Live') );
 		}
 
@@ -1076,6 +1076,9 @@ GHomepage = {
 						if ( !rgLookup.bundleid && !rgLookup.packageid && rgScreenshots && rgScreenshots.length > 0 )
 							bMissingScreenshotsMayBeMature = false;
 
+						// However, for SteamChina, we need to disable this functionality since we don't have 'mature' screenshots, so we'd rather not
+						// have images than show mature content blocks
+						
 						for( var i=0; i < 4; i++ )
 						{
 							if ( rgScreenshots && i < rgScreenshots.length )
@@ -1152,8 +1155,8 @@ GHomepage = {
 
 
 	},
-	
-	
+
+
 	RenderRecommendedCreatorApps: function()
 	{
 		var $RecommendedCreators =  $J('.recommended_creators_ctn' );
@@ -1162,7 +1165,7 @@ GHomepage = {
         var rgCapsules = GHomepage.FilterItemsForDisplay(
 			GHomepage.rgRecommendedAppsByCreators, 'home', 4, 100, { games_already_in_library: false, dlc: false, localized: true, displayed_elsewhere: false }
 		);
-		
+
 		rgCapsulesToRender = [];
 		rgDisplayedCreators = [];
 		rgDisplayedAppIds = [];
@@ -1187,11 +1190,11 @@ GHomepage = {
 				{
 					rgCapsulesToRender.push( rgCapsules[i] );
 				}
-				
+
 				if ( rgCapsulesToRender.length == 4 )
 					break;
 			}
-			
+
 		}
 		if ( rgCapsulesToRender.length >= 4 )
 			$RecommendedCreators.show();
@@ -1209,15 +1212,15 @@ GHomepage = {
 			},	'creator_recommendations', 4
 		);
 	},
-	
+
 	RenderRecommendedByDeepDiveCarousel: function()
 	{
 		var focusedAppID = GHomepage.recommendedByDeepDiveFocusedApp;
-		
+
 		//If we don't have a focused app id, we're either not logged in or have
 		//no play time, either way, bail out now:
 		if(focusedAppID < 0) return;
-		
+
 		var $DeepDive =  $J('.deep_dive_block' );
 
 		if ( $DeepDive.length == 0 )
@@ -1226,7 +1229,7 @@ GHomepage = {
 		}
 
 		var $RecommendedByDeepDiveTitle = $J('.recommended_by_deep_dive_title');
-		
+
 		var rgOptions = $J.extend({
 			'class': 'store_capsule',
 			'include_title': false,
@@ -1235,30 +1238,30 @@ GHomepage = {
 			'html_before_price': '',
 			'lazy': false
 		}, rgOptions ? rgOptions : {} );
-		
+
 		//Get the id of the similarity algorithm we used and use it to build the
 		//proper SNR code
 		var focusedMethod = GHomepage.recommendedByDeepDiveMethod;
 		var snrCode = "recommended_by_deep_dive_carousel_"+focusedMethod;
-		
+
 		var getItemData = function(appid,rgOptions){
 			var nDepth = 0;
 			var params = { 'class': 'store_capsule deepdive_capsule' };
 			var rgItemData = GStoreItemData.GetCapParams( snrCode , appid, null, null, params, nDepth );
 			return rgItemData;
 		};
-		
+
 		//Get the focused app, its title, its tags, and the tags of the apps
 		var focusedApp = getItemData(focusedAppID,rgOptions);
 		var focusedAppTitle = (focusedApp !== null ? focusedApp.name : "");
 		var keyTags = GHomepage.rgRecommendedByDeepDiveKeyTags.key;
 		var appTags = GHomepage.rgRecommendedByDeepDiveAppTags;
-		
+
 		//TODO: Make double-plus sure to check this for XSS vulns
 		focusedAppTitle = 'Because You Played <strong>%s</strong>'.replace( "%s", focusedAppTitle);
-		
+
 		$RecommendedByDeepDiveTitle.html(focusedAppTitle);
-		
+
 		var rgCapsules = GHomepage.FilterItemsForDisplay(
 			GHomepage.rgRecommendedByDeepDiveApps, 'home', 4, 12,
 			{
@@ -1269,14 +1272,14 @@ GHomepage = {
 				displayed_elsewhere: false
 			}
 		);
-		
+
 		GHomepage.FillPagedCapsuleCarousel( rgCapsules, $DeepDive,
 			function( oItem, strFeature, rgOptions, nDepth )
 			{
 				var strKeyTags = "";
 				var appid = oItem.appid;
 				var appKeyTags = appTags[appid];
-				
+
 				//Build the tag block
 				for(var i = 0; i < appKeyTags.length; i++)
 				{
@@ -1284,20 +1287,20 @@ GHomepage = {
 					strKeyTags += "<span class='deep_dive_tag'>"+tag.name + "</span><br>";
 					if(i >= 3) break; //only show 4
 				}
-				
+
 				var $CapCtn = GHomepage.BuildHomePageGenericCap ( strFeature, oItem.appid, null, null, rgOptions, nDepth );
 				$CapCtn.append ( $J ( '<div/>', { 'class': 'deep_dive_key_tags' } ).html ( strKeyTags ) );
-				
+
 				return $CapCtn;
 			},	snrCode, 4
 		);
-		
+
 		//Save the focusedAppID and method, try for a different one next time.
 		//If Deep Dive logic in homepage_loaders.php is set to random for either
-		//focusedAppID or method, it will read this cookie and try not to return 
+		//focusedAppID or method, it will read this cookie and try not to return
 		//the same result for either field twice in a row. This should help keep
 		//the homepage feeling fresh.
-		
+
 		V_SetCookie ( 'deep_dive_carousel_focused_app', focusedAppID );
 		V_SetCookie ( 'deep_dive_carousel_method', focusedMethod );
 	},
@@ -1374,7 +1377,7 @@ GHomepage = {
 
 		$Ctn.show();
 	},
-	
+
 	RenderTopVRApps: function()
 	{
 		var $TopVRTitles =  $J('.best_selling_vr_ctn' );
@@ -1382,7 +1385,7 @@ GHomepage = {
 		var rgCapsules = GHomepage.FilterItemsForDisplay(
 			GHomepage.oDisplayLists.top_vr, 'home', 4, 100, { games_already_in_library: false, dlc: false, localized: true, displayed_elsewhere: false }
 		);
-		
+
 		if ( rgCapsules.length < 4 )
 		{
 			$TopVRTitles.hide();
@@ -1395,7 +1398,7 @@ GHomepage = {
 				return GHomepage.BuildHomePageGenericCap(strFeature, oItem.appid, oItem.packageid, oItem.bundleid, rgOptions, nDepth );
 			},	'best_selling_vr', 4
 		);
-	},		
+	},
 
 
 
@@ -1811,7 +1814,7 @@ GHomepage = {
 		var rgAppInfo = GStoreItemData.rgAppData[ unAppID ];
 		if ( rgAppInfo && rgAppInfo.has_live_broadcast )
 		{
-			$CapCtn.append( 
+			$CapCtn.append(
 					$J('<div/>', {'class': 'broadcast_live_stream_icon' } ).append( 'Live')
 			);
 		}
@@ -2004,7 +2007,7 @@ GHomepage = {
 		return $Item;
 	},
 
-	
+
 	FilterItemsForDisplay: function( rgItems, strSettingsName, cMinItemsToDisplay, cMaxItemsToDisplay, rgAdditionalSettings )
 	{
 
@@ -2286,7 +2289,7 @@ GHomepage = {
 			GStoreItemData.BindHoverEvents( $MessageCtn, message.appid, message.packageid );
 
 			GDynamicStore.DecorateDynamicItems( $MessageCtn );
-			
+
 			return $MessageCtn;
 		};
 

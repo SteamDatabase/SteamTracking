@@ -119,8 +119,11 @@
           "Follow this creator to to be notified via e-mail and in your Steam store when they release a new game. Email notifications can be turned off at any time.",
         EventBrowse_MoreEventsTitle: "More events from %1$s",
         EventBrowse_MoreEventsBtn: "View All",
+        EventBrowse_ViewLatestUpdate: "View",
+        EventBrowse_LatestUpdateTime_Button: "See last game update (%1$s)",
         EventBrowse_RecentUpdates: "Recent Updates",
         EventBrowse_RecentEvents: "Recent Events & Announcements",
+        EventBrowse_LastUpdateDate: "Last Update: %1$s",
         EventCurator_BrowseDialog_Title: "News from Steam curators",
         EventCurator_BrowseDialog_Desc:
           "Follow your favorite Steam Curators to get gaming news right in your Steam News Hub!",
@@ -577,6 +580,19 @@
         EventDashBoard_Location_CommunityDetail: "Community App Hub",
         EventDashBoard_Location_PopUpViews: "Views of event pop-up",
         EventDashBoard_Location_NewsHubDetail: "News Hub",
+        EventRepost_Dialog_Title: "Repost Event",
+        EventRepost_Dialog_OK: "Repost",
+        EventRepost_Dialog_Desc:
+          "Reposting is referencing the event in the news hub in the timeline of the chosen groups below. The following are other community groups or apps which this event can be reposted to. Choose one or more groups to be posted.",
+        EventRepost_Dialog_Existing: "%1$s - Group already reposting",
+        EventRepost_Dialog_Action_Desc:
+          "On clicking OK, we will do the following:",
+        EventRepost_Dialog_Action_Add: "Repost on %1$s group(s)",
+        EventRepost_Dialog_Action_Remove: "Remove the repost on %1$s group(s)",
+        EventRepost_Dialog_Progress: "Reposting %1$s of %2$s items",
+        EventRepost_Dialog_ResultFail:
+          "Reposting fail. Please try again later.",
+        EventRepost_Dialog_ResultSuccess: "Reposting successfully completed.",
         EventDashBoard_Location_ModerationTitle: "About Event Moderation",
         EventDashBoard_Location_WaitingModeraion:
           "Visibility pending moderation",

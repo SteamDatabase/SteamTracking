@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6302028";
+var CLSTAMP = "6307323";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [68],
   {
@@ -483,25 +483,25 @@ var CLSTAMP = "6302028";
         n.d(t, "r", function () {
           return m;
         }),
-        n.d(t, "U", function () {
+        n.d(t, "V", function () {
           return d;
         }),
         n.d(t, "z", function () {
           return h;
         }),
-        n.d(t, "eb", function () {
+        n.d(t, "gb", function () {
           return f;
         }),
-        n.d(t, "fb", function () {
+        n.d(t, "hb", function () {
           return v;
         }),
         n.d(t, "J", function () {
           return g;
         }),
-        n.d(t, "cb", function () {
+        n.d(t, "eb", function () {
           return b;
         }),
-        n.d(t, "ab", function () {
+        n.d(t, "cb", function () {
           return _;
         }),
         n.d(t, "M", function () {
@@ -519,7 +519,7 @@ var CLSTAMP = "6302028";
         n.d(t, "B", function () {
           return S;
         }),
-        n.d(t, "V", function () {
+        n.d(t, "W", function () {
           return C;
         }),
         n.d(t, "c", function () {
@@ -549,16 +549,16 @@ var CLSTAMP = "6302028";
         n.d(t, "F", function () {
           return N;
         }),
-        n.d(t, "T", function () {
+        n.d(t, "U", function () {
           return L;
         }),
-        n.d(t, "bb", function () {
+        n.d(t, "db", function () {
           return R;
         }),
         n.d(t, "i", function () {
           return B;
         }),
-        n.d(t, "S", function () {
+        n.d(t, "T", function () {
           return F;
         }),
         n.d(t, "P", function () {
@@ -573,7 +573,7 @@ var CLSTAMP = "6302028";
         n.d(t, "I", function () {
           return U;
         }),
-        n.d(t, "Z", function () {
+        n.d(t, "bb", function () {
           return W;
         }),
         n.d(t, "A", function () {
@@ -582,10 +582,10 @@ var CLSTAMP = "6302028";
         n.d(t, "s", function () {
           return V;
         }),
-        n.d(t, "Y", function () {
+        n.d(t, "Z", function () {
           return Y;
         }),
-        n.d(t, "X", function () {
+        n.d(t, "Y", function () {
           return K;
         }),
         n.d(t, "h", function () {
@@ -621,26 +621,32 @@ var CLSTAMP = "6302028";
         n.d(t, "l", function () {
           return oe;
         }),
-        n.d(t, "W", function () {
+        n.d(t, "X", function () {
           return ie;
         }),
-        n.d(t, "C", function () {
+        n.d(t, "ab", function () {
           return ae;
         }),
-        n.d(t, "N", function () {
+        n.d(t, "C", function () {
           return se;
         }),
-        n.d(t, "db", function () {
+        n.d(t, "N", function () {
           return ce;
         }),
-        n.d(t, "g", function () {
+        n.d(t, "fb", function () {
           return le;
         }),
-        n.d(t, "f", function () {
+        n.d(t, "g", function () {
           return ue;
         }),
-        n.d(t, "e", function () {
+        n.d(t, "f", function () {
           return pe;
+        }),
+        n.d(t, "e", function () {
+          return me;
+        }),
+        n.d(t, "S", function () {
+          return de;
         });
       var r = n("mrSG"),
         o = n("q1tI"),
@@ -2375,6 +2381,44 @@ var CLSTAMP = "6302028";
         );
       }
       function ae(e) {
+        return o.createElement(
+          "svg",
+          {
+            className: e.className,
+            height: "100px",
+            width: "100px",
+            version: "1.1",
+            x: "0px",
+            y: "0px",
+            viewBox: "0 0 100 100",
+            enableBackground: "new 0 0 100 100",
+          },
+          o.createElement(
+            "g",
+            { display: "none" },
+            o.createElement("rect", {
+              x: "-660.877",
+              y: "-37.172",
+              display: "inline",
+              width: "1370.931",
+              height: "1263.231",
+            })
+          ),
+          o.createElement(
+            "g",
+            null,
+            o.createElement("path", {
+              d:
+                "M34.367,31.803c0.49,0.443,1.228,0.404,1.698-0.06c3.869-3.823,8.894-6.045,14.425-6.337   c11.044-0.495,20.558,7.281,22.518,17.866c0.133,0.717-0.429,1.379-1.157,1.413l-4.83,0.223c-1.092,0.05-1.578,1.397-0.769,2.133   l13.999,12.733c0.502,0.456,1.279,0.419,1.734-0.084L94.68,45.676c0.733-0.809,0.123-2.1-0.967-2.048l-6.486,0.309   c-1.82-18.94-18.238-33.327-37.455-32.439c-9.122,0.484-17.619,4.28-23.984,10.844c-0.48,0.495-0.439,1.299,0.072,1.762   L34.367,31.803z",
+            }),
+            o.createElement("path", {
+              d:
+                "M6.229,53.869h6.11c0.622,0,1.132,0.468,1.207,1.085c1.029,8.437,4.787,16.288,10.854,22.357   c7.249,7.217,16.85,11.23,27.047,11.23c9.778,0.07,19.009-3.568,26.131-10.258c0.502-0.471,0.502-1.276,0.015-1.763l-9.587-9.587   c-4.379,4.389-10.288,6.838-16.559,6.838c-6.224,0-12.068-2.506-16.541-6.934c-3.179-3.179-5.282-7.178-6.168-11.481   c-0.154-0.746,0.447-1.436,1.209-1.436h5.183c1.092,0,1.639-1.319,0.869-2.092L21.572,37.352c-0.478-0.48-1.255-0.481-1.734-0.003   L5.363,51.773C4.589,52.545,5.135,53.869,6.229,53.869z",
+            })
+          )
+        );
+      }
+      function se(e) {
         var t = e.className;
         Object(r.f)(e, ["className"]);
         return o.createElement(
@@ -2554,7 +2598,7 @@ var CLSTAMP = "6302028";
           )
         );
       }
-      function se() {
+      function ce() {
         return o.createElement(
           "svg",
           {
@@ -2587,7 +2631,7 @@ var CLSTAMP = "6302028";
           )
         );
       }
-      function ce(e) {
+      function le(e) {
         return o.createElement(
           "svg",
           Object(r.a)({}, e, {
@@ -2604,7 +2648,7 @@ var CLSTAMP = "6302028";
           })
         );
       }
-      function le() {
+      function ue() {
         return o.createElement(
           "svg",
           {
@@ -2623,7 +2667,7 @@ var CLSTAMP = "6302028";
           })
         );
       }
-      function ue() {
+      function pe() {
         return o.createElement(
           "svg",
           {
@@ -2646,7 +2690,7 @@ var CLSTAMP = "6302028";
           )
         );
       }
-      function pe() {
+      function me() {
         return o.createElement(
           "svg",
           {
@@ -2686,6 +2730,25 @@ var CLSTAMP = "6302028";
               })
             )
           )
+        );
+      }
+      function de(e) {
+        return o.createElement(
+          "svg",
+          Object(r.a)({}, e, {
+            height: "100px",
+            width: "100px",
+            fill: "#000000",
+            xmlns: "http://www.w3.org/2000/svg",
+            version: "1.1",
+            viewBox: "0 0 32 32",
+            x: "0px",
+            y: "0px",
+          }),
+          o.createElement("path", {
+            d:
+              "M26.286 0c-3.142 0-5.714 2.572-5.714 5.714 0 0.512 0.074 1.006 0.202 1.479l-10.573 5.287c-1.049-1.332-2.67-2.194-4.487-2.194-3.142 0-5.714 2.572-5.714 5.714s2.572 5.714 5.714 5.714c1.815 0 3.437-0.862 4.486-2.193l10.574 5.287c-0.127 0.473-0.202 0.966-0.202 1.478 0 3.142 2.572 5.714 5.714 5.714s5.714-2.572 5.714-5.714c0-3.142-2.572-5.714-5.714-5.714-1.817 0-3.438 0.862-4.487 2.194l-10.573-5.287c0.128-0.473 0.202-0.967 0.202-1.479s-0.074-1.005-0.202-1.478l10.574-5.287c1.049 1.331 2.67 2.193 4.486 2.193 3.142 0 5.714-2.572 5.714-5.714s-2.572-5.714-5.714-5.714zM26.286 2.286c1.907 0 3.429 1.522 3.429 3.429s-1.522 3.429-3.429 3.429c-1.907 0-3.429-1.522-3.429-3.429s1.522-3.429 3.429-3.429zM5.714 12.571c1.907 0 3.429 1.522 3.429 3.429s-1.522 3.429-3.429 3.429c-1.907 0-3.429-1.522-3.429-3.429s1.522-3.429 3.429-3.429zM26.286 22.857c1.907 0 3.429 1.522 3.429 3.429s-1.522 3.429-3.429 3.429c-1.907 0-3.429-1.522-3.429-3.429s1.522-3.429 3.429-3.429z",
+          })
         );
       }
     },
@@ -3996,7 +4059,7 @@ var CLSTAMP = "6302028";
                   u.createElement(
                     "div",
                     { className: "closeButton", onClick: t.onEscKeypress },
-                    u.createElement(a.fb, null)
+                    u.createElement(a.hb, null)
                   )
                 ),
               u.createElement(i.a, null, t.children)
@@ -4893,9 +4956,9 @@ var CLSTAMP = "6302028";
         H = n("hJxo"),
         U = n("r64O");
       function W(e) {
-        var t = e.htmlElementRef;
-        Object(h.f)(e, ["htmlElementRef"]);
-        return g.createElement("input", Object(h.a)({}, e, { ref: t }));
+        var t = e.htmlElementRef,
+          n = Object(h.f)(e, ["htmlElementRef"]);
+        return g.createElement("input", Object(h.a)({}, n, { ref: t }));
       }
       function z(e) {
         var t = l();
@@ -5115,7 +5178,7 @@ var CLSTAMP = "6302028";
                         className: "DialogInput_ClearAction",
                         onClick: this.OnClearClick,
                       },
-                      g.createElement(b.fb, null)
+                      g.createElement(b.hb, null)
                     )
                 ),
                 m
@@ -14000,9 +14063,11 @@ var CLSTAMP = "6302028";
                 return e.button === t.button;
               });
               e
-                ? (!e.action && t.action && (e.action = t.action),
-                  !e.description &&
-                    t.description &&
+                ? (void 0 === e.action &&
+                    void 0 !== t.action &&
+                    (e.action = t.action),
+                  void 0 === e.description &&
+                    void 0 !== t.description &&
                     (e.description = t.description))
                 : n.push(t);
             })(o[r]);

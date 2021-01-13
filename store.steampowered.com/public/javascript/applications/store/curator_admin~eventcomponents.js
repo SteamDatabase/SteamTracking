@@ -134,7 +134,7 @@
             r
           );
         })(c),
-        h = (function (n) {
+        b = (function (n) {
           function r(e) {
             void 0 === e && (e = null);
             var t = n.call(this) || this;
@@ -249,7 +249,7 @@
             r
           );
         })(c),
-        b = (function (n) {
+        h = (function (n) {
           function r(e) {
             void 0 === e && (e = null);
             var t = n.call(this) || this;
@@ -346,7 +346,7 @@
                         br: o.d.readString,
                         bw: o.h.writeString,
                       },
-                      post: { n: 6, c: h },
+                      post: { n: 6, c: b },
                       valid_post: { n: 7, br: o.d.readBool, bw: o.h.writeBool },
                       post_error_msg: {
                         n: 8,
@@ -593,7 +593,7 @@
                   (r.sm_m = {
                     proto: r,
                     fields: {
-                      post: { n: 1, c: h },
+                      post: { n: 1, c: b },
                       draft: { n: 2, br: o.d.readBool, bw: o.h.writeBool },
                     },
                   }),
@@ -699,7 +699,7 @@
             r
           );
         })(c),
-        y = (function (n) {
+        C = (function (n) {
           function r(e) {
             void 0 === e && (e = null);
             var t = n.call(this) || this;
@@ -860,7 +860,7 @@
           );
         })(c);
       ((_ = l = l || {}).ConvertHTMLToBBCode = function (e, t) {
-        return e.SendMsg("News.ConvertHTMLToBBCode#1", t, b, {
+        return e.SendMsg("News.ConvertHTMLToBBCode#1", t, h, {
           bConstMethod: !0,
           ePrivilege: 0,
           eWebAPIKeyRequirement: 1,
@@ -889,7 +889,7 @@
             ePrivilege: 1,
           });
         });
-      var C = n("kLLr"),
+      var y = n("kLLr"),
         B = n("6oCP"),
         j = n("NtSG"),
         P = n("r64O"),
@@ -899,7 +899,7 @@
             var t = this;
             (this.m_mapURLToPosted = new Map()),
               (this.m_clanAccountID = e.clanid),
-              (this.m_clanSteamID = C.a.InitFromClanID(this.m_clanAccountID)),
+              (this.m_clanSteamID = y.a.InitFromClanID(this.m_clanAccountID)),
               Object(m.G)(function () {
                 (t.m_strRSSFeedURL = e.rss_feed_url),
                   (t.m_strRSSGID = e.rss_feed_gid),
@@ -958,7 +958,7 @@
                           [
                             4,
                             l.PreviewPartnerEvents(
-                              D.Get().GetCuratorTransport(),
+                              L.Get().GetCuratorTransport(),
                               t
                             ),
                           ])
@@ -993,14 +993,14 @@
                       case 0:
                         return this.BIsLoggedIn()
                           ? this.m_strRSSGID
-                            ? ((t = s.a.Init(y))
+                            ? ((t = s.a.Init(C))
                                 .Body()
                                 .set_news_feed_gid(this.m_strRSSGID),
                               t.Body().set_amount(a),
                               [
                                 4,
                                 l.GetBatchPublishedPartnerEvent(
-                                  D.Get().GetCuratorTransport(),
+                                  L.Get().GetCuratorTransport(),
                                   t
                                 ),
                               ])
@@ -1146,7 +1146,7 @@
                     case 0:
                       return this.BIsLoggedIn()
                         ? this.m_strRSSGID
-                          ? ((t = new h()).set_gid(i.post.gid),
+                          ? ((t = new b()).set_gid(i.post.gid),
                             t.set_news_feed_gid(this.m_strRSSGID),
                             t.set_title(i.post.title),
                             t.set_url(i.post.url),
@@ -1170,7 +1170,7 @@
                             [
                               4,
                               l.PublishPartnerEvent(
-                                D.Get().GetCuratorTransport(),
+                                L.Get().GetCuratorTransport(),
                                 n
                               ),
                             ])
@@ -1220,7 +1220,7 @@
             e
           );
         })(),
-        D = (function () {
+        L = (function () {
           function e() {
             (this.m_mapClanAccountToAdmin = new Map()),
               (this.m_defaultAdmin = void 0),
@@ -1465,7 +1465,7 @@
             e
           );
         })();
-      t.a = D;
+      t.a = L;
     },
     A2AY: function (e, t, n) {
       e.exports = {
@@ -1501,6 +1501,10 @@
         SectionButtonCtn: "partnereventwebrowembed_SectionButtonCtn_1HP0y",
         SectionButton: "partnereventwebrowembed_SectionButton_3n8sw",
         EventsSummariesCtn: "partnereventwebrowembed_EventsSummariesCtn_1snIw",
+        LatestUpdateButtonCtn:
+          "partnereventwebrowembed_LatestUpdateButtonCtn_2vEwZ",
+        LatestUpdateIcon: "partnereventwebrowembed_LatestUpdateIcon_mq3RO",
+        LatestUpdateButton: "partnereventwebrowembed_LatestUpdateButton_1TRFt",
       };
     },
     wjMc: function (e, t, n) {
@@ -1601,25 +1605,25 @@
         u = n("mgoM"),
         d = n("3+zv"),
         f = n("6oCP"),
-        h = n("Mgs7"),
-        b = n("T27q"),
+        b = n("Mgs7"),
+        h = n("T27q"),
         v = n("fpVW"),
         S = n.n(v),
         g = n("r+ba"),
         w = n("Jqb/"),
         R = n("ka0M"),
         O = n("0OaU"),
-        y = n("+d9t"),
+        C = n("+d9t"),
         E = n("exH9"),
-        C = n("X3Ds"),
+        y = n("X3Ds"),
         B = n("TLQK"),
         j = n("bDQf"),
         P = n("bxiW"),
         M = n("A2AY"),
         F = n("Kw0F"),
-        D = n("bS9Q"),
-        A = n("qP7j"),
-        L = n.n(A),
+        L = n("bS9Q"),
+        D = n("qP7j"),
+        A = n.n(D),
         I = n("IzPI"),
         U = (function (t) {
           function e() {
@@ -1644,7 +1648,7 @@
                     strRSSUrl: this.state.strRssURL,
                     admin: this.m_Admin,
                   }),
-                  Object(C.m)(e)
+                  Object(y.m)(e)
                 );
             }),
             (e.prototype.OnRevert = function (e) {
@@ -1697,7 +1701,7 @@
                     "p",
                     { className: M.DashboardBtn },
                     _.a.createElement(
-                      y.a,
+                      C.a,
                       {
                         href:
                           m.c.COMMUNITY_BASE_URL +
@@ -1745,7 +1749,7 @@
                       {
                         className: Object(E.a)(
                           M.LanguageRow,
-                          L.a.WarningIconLayout
+                          A.a.WarningIconLayout
                         ),
                       },
                       _.a.createElement(
@@ -1769,7 +1773,7 @@
                         M.UrlSettingCtn
                       ),
                     },
-                    _.a.createElement(h.k, {
+                    _.a.createElement(b.k, {
                       className: M.RssInpu,
                       type: "text",
                       name: "link_url",
@@ -2024,9 +2028,9 @@
                       "div",
                       { className: M.PreviewListBtn },
                       _.a.createElement(
-                        h.d,
+                        b.d,
                         {
-                          disabled: !h.k.validateUrl(this.props.strRssURL),
+                          disabled: !b.k.validateUrl(this.props.strRssURL),
                           onClick: this.OnLoadPreview,
                         },
                         Object(B.f)("#CuratorAdmin_RSSFeed_preview")
@@ -2065,7 +2069,7 @@
                         "p",
                         { className: M.DashboardBtn },
                         _.a.createElement(
-                          y.a,
+                          C.a,
                           {
                             href:
                               m.c.COMMUNITY_BASE_URL +
@@ -2155,7 +2159,7 @@
                               "#CuratorAdmin_RSSFeed_queued"
                             ),
                           }),
-                          Object(C.m)(n)
+                          Object(y.m)(n)
                         );
                       })
                       .catch(function (e) {
@@ -2166,7 +2170,7 @@
                             ),
                             strDescription: Object(j.a)(e),
                           }),
-                          Object(C.m)(n)
+                          Object(y.m)(n)
                         );
                       })
                       .finally(function () {
@@ -2193,7 +2197,7 @@
                         { className: M.Error },
                         this.state.strErrorMessage
                       ),
-                    _.a.createElement(h.o, {
+                    _.a.createElement(b.o, {
                       onChange: this.OnToggleChannelAutomation,
                       label: Object(B.f)("#RSSManager_Status_Automation_Desc"),
                       checked: this.props.admin.BIsAutomationEnabled(),
@@ -2354,7 +2358,7 @@
                   strRSSUrl: r(),
                   fnClanEventGID: this.OnClanEventCreateSuccess,
                 }),
-                Object(C.m)(e)
+                Object(y.m)(e)
               );
             }),
             (e.prototype.OnUpdateNewsEvent = function (e) {
@@ -2369,7 +2373,7 @@
                   fnClanEventGID: this.OnClanEventCreateSuccess,
                   bUpdatePost: !0,
                 }),
-                Object(C.m)(e)
+                Object(y.m)(e)
               );
             }),
             (e.prototype.HideModalEvent = function () {
@@ -2387,7 +2391,7 @@
                   var e = n.match(/<entry[^>]*>([\s\S]*)<\/entry>/m);
                   if (!e) return n;
                   var t = e[1].match(/<content[^>]*>[\s\S]*<\/content>/m);
-                  return t ? Object(D.b)(t[0]) : e[0];
+                  return t ? Object(L.b)(t[0]) : e[0];
                 })();
               Object(R.d)(
                 _.a.createElement(
@@ -2402,7 +2406,7 @@
                     disabled: !0,
                   })
                 ),
-                Object(C.m)(e)
+                Object(y.m)(e)
               );
             }),
             (e.prototype.render = function () {
@@ -2475,7 +2479,7 @@
                   Boolean(!t.valid_post && t.post_error_msg) &&
                     _.a.createElement(
                       "div",
-                      { className: L.a.ErrorStylesBackground },
+                      { className: A.a.ErrorStylesBackground },
                       Object(B.f)("#Error_Generic_Label"),
                       " ",
                       Object(B.f)(t.post_error_msg)
@@ -2581,7 +2585,7 @@
                         _.a.createElement(
                           "div",
                           null,
-                          _.a.createElement(b.b, {
+                          _.a.createElement(h.b, {
                             event: this.state.eventModelForPreviewNow,
                             fnClose: this.HideModalEvent,
                           })
@@ -2746,12 +2750,12 @@
                   return _.a.createElement(
                     w.d,
                     null,
-                    _.a.createElement(h.j, null, " ", this.GetStrTitle(), " "),
+                    _.a.createElement(b.j, null, " ", this.GetStrTitle(), " "),
                     _.a.createElement(
-                      h.b,
+                      b.b,
                       null,
                       _.a.createElement(
-                        h.c,
+                        b.c,
                         null,
                         this.props.newsData &&
                           _.a.createElement(
@@ -2778,7 +2782,7 @@
                         _.a.createElement(
                           "div",
                           null,
-                          _.a.createElement(h.e, {
+                          _.a.createElement(b.e, {
                             label: Object(B.f)(
                               "#RSSManager_CreateFeed_Permissions_v1"
                             ),
@@ -2789,7 +2793,7 @@
                         _.a.createElement(
                           "div",
                           null,
-                          _.a.createElement(h.e, {
+                          _.a.createElement(b.e, {
                             label: Object(B.f)(
                               "#RSSManager_CreateFeed_Conduct_v1"
                             ),
@@ -2797,16 +2801,16 @@
                             checked: Boolean(this.state.bConduct),
                           }),
                           _.a.createElement(
-                            y.a,
+                            C.a,
                             { href: m.c.STORE_BASE_URL + "online_conduct/" },
                             Object(B.f)("#RSSManager_CreateFeed_Conduct_Link")
                           )
                         )
                       ),
                       _.a.createElement(
-                        h.i,
+                        b.i,
                         null,
-                        _.a.createElement(h.m, {
+                        _.a.createElement(b.m, {
                           bOKDisabled: !Boolean(
                             this.state.bPermissions && this.state.bConduct
                           ),
@@ -2852,12 +2856,12 @@
                   return _.a.createElement(
                     w.d,
                     null,
-                    _.a.createElement(h.j, null, " ", this.GetStrTitle(), " "),
+                    _.a.createElement(b.j, null, " ", this.GetStrTitle(), " "),
                     _.a.createElement(
-                      h.b,
+                      b.b,
                       null,
                       _.a.createElement(
-                        h.c,
+                        b.c,
                         null,
                         _.a.createElement(
                           "div",
@@ -2876,7 +2880,7 @@
                           _.a.createElement(
                             "div",
                             null,
-                            _.a.createElement(h.e, {
+                            _.a.createElement(b.e, {
                               label: Object(B.f)(
                                 "#RSSManager_PostEvent_CreatePost_Draft"
                               ),
@@ -2887,9 +2891,9 @@
                         )
                       ),
                       _.a.createElement(
-                        h.i,
+                        b.i,
                         null,
-                        _.a.createElement(h.m, {
+                        _.a.createElement(b.m, {
                           onOK: this.OnCreatePost,
                           onCancel: this.props.closeModal,
                         })
@@ -2900,12 +2904,12 @@
                   return _.a.createElement(
                     w.d,
                     null,
-                    _.a.createElement(h.j, null, " ", this.GetStrTitle(), " "),
+                    _.a.createElement(b.j, null, " ", this.GetStrTitle(), " "),
                     _.a.createElement(
-                      h.b,
+                      b.b,
                       null,
                       _.a.createElement(
-                        h.c,
+                        b.c,
                         null,
                         _.a.createElement(
                           "div",
@@ -2925,9 +2929,9 @@
                         )
                       ),
                       _.a.createElement(
-                        h.i,
+                        b.i,
                         null,
-                        _.a.createElement(h.m, {
+                        _.a.createElement(b.m, {
                           onOK: this.OnCreatePost,
                           onCancel: this.props.closeModal,
                         })
