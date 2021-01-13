@@ -3997,34 +3997,7 @@ input.partnereventemails_HeadlineInput_2lHX9 {
 
 .partnereventwebrowembed_EventsSummariesCtn_1snIw {
   display: flex;
-  margin-bottom: 5px; }
-
-.partnereventwebrowembed_LatestUpdateButtonCtn_2vEwZ {
-  display: flex;
-  flex-direction: row;
-  align-items: center; }
-
-.partnereventwebrowembed_LatestUpdateIcon_mq3RO {
-  width: 20px;
-  height: 20px;
-  margin-right: 10px; }
-  .partnereventwebrowembed_LatestUpdateIcon_mq3RO svg {
-    height: 20px;
-    width: 20px;
-    fill: white; }
-
-.partnereventwebrowembed_LatestUpdateButton_1TRFt {
-  background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  border-radius: 2px;
-  color: #ffffff;
-  font-size: 11px;
-  padding: 5px 15px;
-  line-height: normal;
-  width: fit-content;
-  cursor: pointer; }
-  .partnereventwebrowembed_LatestUpdateButton_1TRFt:hover {
-    border: 1px solid white; }
+  margin-bottom: 20px; }
 
 .migratetool_MigrateToolCtn_fGggy {
   padding: 20px;
