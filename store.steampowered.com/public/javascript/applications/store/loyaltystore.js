@@ -10403,22 +10403,22 @@
     ehaW: function (e, t, r) {
       "use strict";
       r.d(t, "a", function () {
-        return A;
+        return z;
       }),
         r.d(t, "e", function () {
-          return x;
+          return G;
         }),
         r.d(t, "b", function () {
-          return L;
+          return U;
         }),
         r.d(t, "d", function () {
-          return B;
+          return H;
         }),
         r.d(t, "c", function () {
-          return R;
+          return W;
         }),
         r.d(t, "f", function () {
-          return z;
+          return Q;
         });
       var n,
         h = r("mrSG"),
@@ -10501,9 +10501,6 @@
         );
       }
       function g(e) {
-        return b.a.createElement(A, Object(h.a)({}, _(e)));
-      }
-      function j(e) {
         var t = e.appName,
           n = e.appIcon,
           r = e.attributes,
@@ -10550,7 +10547,7 @@
               C.b,
               { className: v.Body, style: _ },
               b.a.createElement("div", { className: v.Attributes }, r),
-              b.a.createElement(T, { src: n, title: t }),
+              b.a.createElement(Z, { src: n, title: t }),
               a
             ),
             b.a.createElement(
@@ -10591,9 +10588,57 @@
           )
         );
       }
-      var N = function (e) {
+      var j = Object(i.a)(function (e) {
+          return b.a.createElement(z, Object(h.a)({}, _(e)));
+        }),
+        N = Object(i.a)(function (c) {
           return b.a.createElement(
-            S,
+            T,
+            Object(h.a)({}, _(c), { iconComponent: o.m }),
+            function (e) {
+              var t = c.definition,
+                n = t.appid,
+                r = t.community_item_data,
+                a = r.item_image_large,
+                i = r.item_image_small,
+                o = e ? i : a,
+                s = l.c.MEDIA_CDN_COMMUNITY_URL + "images/items/" + n + "/" + o;
+              return b.a.createElement("img", {
+                className: v.ImageMedium,
+                src: s,
+              });
+            }
+          );
+        }),
+        E = Object(i.a)(function (e) {
+          return b.a.createElement(
+            z,
+            Object(h.a)({}, _(e), { iconComponent: o.l }),
+            b.a.createElement("img", {
+              className: v.ImageSmall,
+              src:
+                l.c.MEDIA_CDN_COMMUNITY_URL +
+                "images/items/" +
+                e.definition.appid +
+                "/" +
+                e.definition.community_item_data.item_image_large,
+            })
+          );
+        }),
+        S = Object(i.a)(function (e) {
+          return b.a.createElement(
+            z,
+            Object(h.a)({}, _(e), { iconComponent: o.k })
+          );
+        }),
+        O = Object(i.a)(function (e) {
+          return e.definition.community_item_data.animated
+            ? b.a.createElement(A, Object(h.a)({}, e))
+            : b.a.createElement(D, Object(h.a)({}, e));
+        }),
+        A = Object(i.a)(function (e) {
+          return b.a.createElement(
+            R,
             Object(h.a)({ className: v.HasAnimation }, _(e), {
               iconComponent: o.b,
               styleOverride: v.BackgroundOverride,
@@ -10635,10 +10680,10 @@
               })
             )
           );
-        },
-        E = function (e) {
+        }),
+        D = Object(i.a)(function (e) {
           return b.a.createElement(
-            A,
+            z,
             Object(h.a)({}, _(e), {
               iconComponent: o.b,
               styleOverride: v.BackgroundOverride,
@@ -10654,8 +10699,95 @@
                 "?size=320x200",
             })
           );
-        },
-        S = (function (t) {
+        }),
+        x = Object(i.a)(function (e) {
+          return b.a.createElement(
+            R,
+            Object(h.a)({}, _(e), {
+              iconComponent: I.r,
+              videoProps: {
+                className: v.ImageMiniBackground,
+                poster:
+                  l.c.MEDIA_CDN_COMMUNITY_URL +
+                  "images/items/" +
+                  e.definition.appid +
+                  "/" +
+                  e.definition.community_item_data.item_image_large,
+              },
+            }),
+            b.a.createElement(
+              b.a.Fragment,
+              null,
+              b.a.createElement("source", {
+                src:
+                  l.c.MEDIA_CDN_COMMUNITY_URL +
+                  "images/items/" +
+                  e.definition.appid +
+                  "/" +
+                  (e.definition.community_item_data.item_movie_webm_small
+                    ? e.definition.community_item_data.item_movie_webm_small
+                    : e.definition.community_item_data.item_movie_webm),
+                type: "video/webm",
+              }),
+              b.a.createElement("source", {
+                src:
+                  l.c.MEDIA_CDN_COMMUNITY_URL +
+                  "images/items/" +
+                  e.definition.appid +
+                  "/" +
+                  (e.definition.community_item_data.item_movie_mp4_small
+                    ? e.definition.community_item_data.item_movie_mp4_small
+                    : e.definition.community_item_data.item_movie_mp4),
+                type: "video/mp4",
+              })
+            )
+          );
+        }),
+        P = Object(i.a)(function (c) {
+          return b.a.createElement(
+            T,
+            Object(h.a)({}, _(c), { iconComponent: I.f }),
+            function (e) {
+              var t = c.definition,
+                n = t.appid,
+                r = t.community_item_data,
+                a = r.item_image_large,
+                i = r.item_image_small,
+                o = e ? i : a,
+                s = l.c.MEDIA_CDN_COMMUNITY_URL + "images/items/" + n + "/" + o;
+              return b.a.createElement("img", {
+                className: v.ImageFrames,
+                src: s,
+              });
+            }
+          );
+        }),
+        L = Object(i.a)(function (c) {
+          return b.a.createElement(
+            T,
+            Object(h.a)({}, _(c), { iconComponent: I.b }),
+            function (e) {
+              var t = c.definition,
+                n = t.appid,
+                r = t.community_item_data,
+                a = r.item_image_large,
+                i = r.item_image_small,
+                o = e ? i : a,
+                s = l.c.MEDIA_CDN_COMMUNITY_URL + "images/items/" + n + "/" + o;
+              return b.a.createElement("img", {
+                className: v.ImageAnimatedAvatar,
+                src: s,
+              });
+            }
+          );
+        }),
+        B = Object(i.a)(function (e) {
+          return b.a.createElement(
+            z,
+            Object(h.a)({}, _(e), { iconComponent: I.k, desc: Object(d.d)(8) })
+          );
+        }),
+        R = (function (t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (
@@ -10675,7 +10807,7 @@
                 r = e.videoProps,
                 a = Object(h.f)(e, ["children", "videoProps"]);
               return b.a.createElement(
-                A,
+                z,
                 Object(h.a)({}, a),
                 b.a.createElement(c.a, {
                   trigger: "repeated",
@@ -10722,7 +10854,7 @@
             e
           );
         })(b.a.Component),
-        O = (function (t) {
+        T = (function (t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (e.state = { bHover: !1 }), e;
@@ -10735,7 +10867,7 @@
                 n = t.children,
                 r = Object(h.f)(t, ["children"]);
               return b.a.createElement(
-                A,
+                z,
                 Object(h.a)({}, r, {
                   onMouseEnter: function () {
                     return e.setState({ bHover: !0 });
@@ -10750,7 +10882,7 @@
             e
           );
         })(b.a.Component),
-        A = function (e) {
+        z = function (e) {
           var t = e.appName,
             n = e.appIcon,
             r = e.attributes,
@@ -10797,7 +10929,7 @@
                 C.b,
                 { className: v.Body, style: _ },
                 b.a.createElement("div", { className: v.Attributes }, r),
-                b.a.createElement(T, { src: n, title: t }),
+                b.a.createElement(Z, { src: n, title: t }),
                 a
               ),
               b.a.createElement(
@@ -10843,150 +10975,20 @@
             )
           );
         },
-        D =
-          (((n = {})[11] = function (c) {
-            return b.a.createElement(
-              O,
-              Object(h.a)({}, _(c), { iconComponent: o.m }),
-              function (e) {
-                var t = c.definition,
-                  n = t.appid,
-                  r = t.community_item_data,
-                  a = r.item_image_large,
-                  i = r.item_image_small,
-                  o = e ? i : a,
-                  s =
-                    l.c.MEDIA_CDN_COMMUNITY_URL + "images/items/" + n + "/" + o;
-                return b.a.createElement("img", {
-                  className: v.ImageMedium,
-                  src: s,
-                });
-              }
-            );
-          }),
-          (n[4] = function (e) {
-            return b.a.createElement(
-              A,
-              Object(h.a)({}, _(e), { iconComponent: o.l }),
-              b.a.createElement("img", {
-                className: v.ImageSmall,
-                src:
-                  l.c.MEDIA_CDN_COMMUNITY_URL +
-                  "images/items/" +
-                  e.definition.appid +
-                  "/" +
-                  e.definition.community_item_data.item_image_large,
-              })
-            );
-          }),
-          (n[12] = function (e) {
-            return b.a.createElement(
-              A,
-              Object(h.a)({}, _(e), { iconComponent: o.k })
-            );
-          }),
-          (n[3] = function (e) {
-            return e.definition.community_item_data.animated
-              ? b.a.createElement(N, Object(h.a)({}, e))
-              : b.a.createElement(E, Object(h.a)({}, e));
-          }),
-          (n[13] = function (e) {
-            return b.a.createElement(
-              S,
-              Object(h.a)({}, _(e), {
-                iconComponent: I.r,
-                videoProps: {
-                  className: v.ImageMiniBackground,
-                  poster:
-                    l.c.MEDIA_CDN_COMMUNITY_URL +
-                    "images/items/" +
-                    e.definition.appid +
-                    "/" +
-                    e.definition.community_item_data.item_image_large,
-                },
-              }),
-              b.a.createElement(
-                b.a.Fragment,
-                null,
-                b.a.createElement("source", {
-                  src:
-                    l.c.MEDIA_CDN_COMMUNITY_URL +
-                    "images/items/" +
-                    e.definition.appid +
-                    "/" +
-                    (e.definition.community_item_data.item_movie_webm_small
-                      ? e.definition.community_item_data.item_movie_webm_small
-                      : e.definition.community_item_data.item_movie_webm),
-                  type: "video/webm",
-                }),
-                b.a.createElement("source", {
-                  src:
-                    l.c.MEDIA_CDN_COMMUNITY_URL +
-                    "images/items/" +
-                    e.definition.appid +
-                    "/" +
-                    (e.definition.community_item_data.item_movie_mp4_small
-                      ? e.definition.community_item_data.item_movie_mp4_small
-                      : e.definition.community_item_data.item_movie_mp4),
-                  type: "video/mp4",
-                })
-              )
-            );
-          }),
-          (n[8] = function (e) {
-            return b.a.createElement(
-              A,
-              Object(h.a)({}, _(e), {
-                iconComponent: I.k,
-                desc: Object(d.d)(8),
-              })
-            );
-          }),
-          (n[14] = function (c) {
-            return b.a.createElement(
-              O,
-              Object(h.a)({}, _(c), { iconComponent: I.f }),
-              function (e) {
-                var t = c.definition,
-                  n = t.appid,
-                  r = t.community_item_data,
-                  a = r.item_image_large,
-                  i = r.item_image_small,
-                  o = e ? i : a,
-                  s =
-                    l.c.MEDIA_CDN_COMMUNITY_URL + "images/items/" + n + "/" + o;
-                return b.a.createElement("img", {
-                  className: v.ImageFrames,
-                  src: s,
-                });
-              }
-            );
-          }),
-          (n[15] = function (c) {
-            return b.a.createElement(
-              O,
-              Object(h.a)({}, _(c), { iconComponent: I.b }),
-              function (e) {
-                var t = c.definition,
-                  n = t.appid,
-                  r = t.community_item_data,
-                  a = r.item_image_large,
-                  i = r.item_image_small,
-                  o = e ? i : a,
-                  s =
-                    l.c.MEDIA_CDN_COMMUNITY_URL + "images/items/" + n + "/" + o;
-                return b.a.createElement("img", {
-                  className: v.ImageAnimatedAvatar,
-                  src: s,
-                });
-              }
-            );
-          }),
+        k =
+          (((n = {})[11] = N),
+          (n[4] = E),
+          (n[12] = S),
+          (n[3] = O),
+          (n[13] = x),
+          (n[8] = B),
+          (n[14] = P),
+          (n[15] = L),
           n),
-        x = Object(i.a)(function (e) {
+        G = Object(i.a)(function (e) {
           var t = e.className,
             n = Object(h.f)(e, ["className"]),
-            r = D[e.definition.community_item_class],
+            r = k[e.definition.community_item_class],
             a = d.b.Get().BRewardOwnedByUser(e.definition),
             i = Object(w.a)(t, a && v.OwnedItem);
           return r
@@ -11002,26 +11004,26 @@
                 s.a,
                 { fallback: null },
                 b.a.createElement(
-                  g,
+                  j,
                   Object(h.a)({}, n, { className: i, onClick: e.onClick })
                 )
               );
         }),
-        P = {};
-      function L(e) {
+        F = {};
+      function U(e) {
         var n;
         return (
-          0 == Object.keys(P).length &&
+          0 == Object.keys(F).length &&
             ((n = r("5351")),
-            (P = n.keys().reduce(function (e, t) {
+            (F = n.keys().reduce(function (e, t) {
               return (e[t] = n(t)), e;
             }, {}))),
-          P["./icon_showcase_" + e + ".svg"]
+          F["./icon_showcase_" + e + ".svg"]
         );
       }
-      var B = function (e) {
+      var H = function (e) {
         return b.a.createElement(
-          j,
+          g,
           Object(h.a)(
             {},
             ((n = (t = e).customization_type),
@@ -11032,7 +11034,7 @@
               "current_level",
               "point_cost",
             ])),
-            (o = L(n)),
+            (o = U(n)),
             (s = Object(u.f)("#ProfileShowcases_Type_" + n)),
             (c = r >= d.b.Get().GetMaxProfileShowcaseUpgradeLevel()),
             (l = 1 < r),
@@ -11057,9 +11059,9 @@
         );
         var t, n, r, a, i, o, s, c, l, m;
       };
-      var R = function (e) {
+      var W = function (e) {
           return b.a.createElement(
-            j,
+            g,
             Object(h.a)(
               {},
               ((n = (t = e).customization_type),
@@ -11072,7 +11074,7 @@
                 "purchased_count",
                 "current_level",
               ])),
-              (o = L(n)),
+              (o = U(n)),
               (s = Object(u.f)("#ProfileShowcases_Type_" + n)),
               (c = a >= d.b.Get().GetMaxProfileShowcaseSlots()),
               (l = Object(w.a)(c && v.OwnedItem)),
@@ -11095,7 +11097,7 @@
           );
           var t, n, r, a, i, o, s, c, l;
         },
-        T = (function (t) {
+        Z = (function (t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (e.state = { bLoadComplete: !1 }), e;
@@ -11128,7 +11130,7 @@
             e
           );
         })(b.a.Component);
-      function z() {
+      function Q() {
         return b.a.createElement(
           f,
           { className: v.ItemContainer },
