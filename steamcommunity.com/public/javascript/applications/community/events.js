@@ -3610,7 +3610,7 @@
                       return n(i);
                     },
                   },
-                  We.createElement(tt.hb, null)
+                  We.createElement(tt.fb, null)
                 ),
                 We.createElement(
                   "div",
@@ -9289,11 +9289,11 @@
           );
         })(),
         Ca = (function () {
-          function r() {
+          function e() {
             this.m_DummyValueForQuestionHack = 0;
           }
           return (
-            (r.prototype.DetectAndFormatCSV = function (e) {
+            (e.prototype.DetectAndFormatCSV = function (e) {
               var t,
                 n,
                 a,
@@ -9340,7 +9340,7 @@
                 l
               );
             }),
-            (r.WriteFile = function (e, t) {
+            (e.prototype.WriteFile = function (e, t) {
               var n,
                 a = document.createElement("a");
               navigator.msSaveBlob
@@ -9352,7 +9352,7 @@
                 document.removeChild(a);
               } catch (e) {}
             }),
-            (r.prototype.ReadFile = function (a) {
+            (e.prototype.ReadFile = function (a) {
               return new Promise(function (t, e) {
                 var n = new FileReader();
                 (n.onload = function (e) {
@@ -9361,14 +9361,14 @@
                   n.readAsText(a);
               });
             }),
-            (r.prototype.WriteCSVToFile = function (e, t) {
+            (e.prototype.WriteCSVToFile = function (e, t) {
               var n = Oa.a.unparse(e, { header: !0 });
-              r.WriteFile(
+              this.WriteFile(
                 new Blob([n], { type: "text/csv:charset=utf-8;" }),
                 t
               );
             }),
-            (r.prototype.WriteXMLToFile = function (e, t) {
+            (e.prototype.WriteXMLToFile = function (e, t) {
               function n() {
                 return a.m_DummyValueForQuestionHack ? "never returned" : "?";
               }
@@ -9380,12 +9380,12 @@
                   n() +
                   ">\n";
               (i += new XMLSerializer().serializeToString(e)),
-                r.WriteFile(
+                this.WriteFile(
                   new Blob([i], { type: "application/xml:charset=utf-8;" }),
                   t
                 );
             }),
-            (r.prototype.ReadLocalizationData_XML_SingleLanguage = function (
+            (e.prototype.ReadLocalizationData_XML_SingleLanguage = function (
               c,
               d
             ) {
@@ -9419,7 +9419,7 @@
                 });
               });
             }),
-            (r.prototype.ReadLocalizationData_CSV_TokenLanguageList = function (
+            (e.prototype.ReadLocalizationData_CSV_TokenLanguageList = function (
               e
             ) {
               var a = new ya();
@@ -9432,7 +9432,7 @@
                 a
               );
             }),
-            (r.prototype.ReadLocalizationData_CSV_LanguageColumns = function (
+            (e.prototype.ReadLocalizationData_CSV_LanguageColumns = function (
               e
             ) {
               var i = new ya();
@@ -9446,7 +9446,7 @@
                 i
               );
             }),
-            (r.prototype.ReadLocalizationData_CSV_LanguageRows = function (e) {
+            (e.prototype.ReadLocalizationData_CSV_LanguageRows = function (e) {
               var l = new ya();
               return (
                 e.data.forEach(function (e) {
@@ -9464,10 +9464,10 @@
                 l
               );
             }),
-            (r.prototype.GetExportLanguages = function () {
+            (e.prototype.GetExportLanguages = function () {
               return M.b.GetLanguageListForRealms([P.d.k_ESteamRealmGlobal]);
             }),
-            (r.prototype.WriteLocalizationData_CSV_TokenAndLanguageColumns = function (
+            (e.prototype.WriteLocalizationData_CSV_TokenAndLanguageColumns = function (
               r,
               e
             ) {
@@ -9484,7 +9484,7 @@
               }),
                 this.WriteCSVToFile(l, e);
             }),
-            (r.prototype.WriteLocalizationData_CSV_LanguageColumns = function (
+            (e.prototype.WriteLocalizationData_CSV_LanguageColumns = function (
               r,
               e
             ) {
@@ -9503,7 +9503,7 @@
               }),
                 this.WriteCSVToFile(l, e);
             }),
-            (r.prototype.WriteLocalizationData_CSV_LanguageRows = function (
+            (e.prototype.WriteLocalizationData_CSV_LanguageRows = function (
               i,
               e
             ) {
@@ -9526,7 +9526,7 @@
               }),
                 this.WriteCSVToFile(o, e);
             }),
-            (r.prototype.WriteLocalizationData_XML_SingleLanguage = function (
+            (e.prototype.WriteLocalizationData_XML_SingleLanguage = function (
               n,
               a,
               e
@@ -9546,7 +9546,7 @@
               }),
                 this.WriteXMLToFile(i, e);
             }),
-            r
+            e
           );
         })(),
         Ta = n("KmXr"),
@@ -17041,7 +17041,7 @@
                           return t.RemoveSection(t.props.index);
                         },
                       },
-                      We.createElement(tt.hb, null)
+                      We.createElement(tt.fb, null)
                     )
                   )
                 )
@@ -20967,6 +20967,7 @@
                           (t = l.capsules.filter(function (e) {
                             return Object(P.b)(e.type);
                           })),
+                          console.log(t),
                           (n = t.map(function (e) {
                             return e.id;
                           })),
@@ -21211,64 +21212,26 @@
                                                               }
                                                               return n;
                                                             })(n)),
-                                                            (o = (function (n) {
+                                                            (o = (function (e) {
                                                               for (
-                                                                var r = Array.from(
-                                                                    n.rgLanguages
-                                                                  ),
-                                                                  o = new Map(),
-                                                                  e = 0,
-                                                                  t = Object.keys(
-                                                                    n.rgLocalizedTagNames
+                                                                var t = new Map(),
+                                                                  n = 0,
+                                                                  a = Object.keys(
+                                                                    e.rgLocalizedTagNames
                                                                   );
-                                                                e < t.length;
-                                                                e++
+                                                                n < a.length;
+                                                                n++
                                                               ) {
-                                                                !(function (e) {
-                                                                  var t = Number(
-                                                                      e
-                                                                    ),
-                                                                    a =
-                                                                      n
-                                                                        .rgLocalizedTagNames[
-                                                                        e
-                                                                      ],
-                                                                    i = new Array(
-                                                                      30
-                                                                    );
-                                                                  i.fill(""),
-                                                                    r.forEach(
-                                                                      function (
-                                                                        e,
-                                                                        t
-                                                                      ) {
-                                                                        var n = Object(
-                                                                          A.d
-                                                                        )(
-                                                                          e,
-                                                                          -1
-                                                                        );
-                                                                        -1 === n
-                                                                          ? console.log(
-                                                                              "WARNING: Unrecognized language: " +
-                                                                                e
-                                                                            )
-                                                                          : 0 <=
-                                                                              n &&
-                                                                            n <
-                                                                              30 &&
-                                                                            (i[
-                                                                              n
-                                                                            ] =
-                                                                              a[
-                                                                                t
-                                                                              ]);
-                                                                      }
-                                                                    ),
-                                                                    o.set(t, i);
-                                                                })(t[e]);
+                                                                var i = a[n];
+                                                                t.set(
+                                                                  Number(i),
+                                                                  e
+                                                                    .rgLocalizedTagNames[
+                                                                    i
+                                                                  ]
+                                                                );
                                                               }
-                                                              return o;
+                                                              return t;
                                                             })(n)),
                                                             (u = (function (e) {
                                                               for (
@@ -22105,7 +22068,6 @@
                         "sessionid",
                         D.b.SESSIONID
                       ),
-                      i.append("authwgtoken", D.g.authwgtoken),
                       g && i.append("fake_error", "" + g),
                       this.m_editModel
                         .GetEventModel()
@@ -22210,7 +22172,7 @@
                     (o = this.m_editModel.GetAppID()),
                       (l =
                         D.b.COMMUNITY_BASE_URL +
-                        "gid/" +
+                        "/gid/" +
                         m.ConvertTo64BitString() +
                         "/ajaxcreateupdatedeletepartnerevents/"),
                       (e.label = 3);
@@ -34002,8 +33964,8 @@
             (e = Object(I.c)([Ze.a], e))
           );
         })(We.Component),
-        Ss = n("apHd"),
-        Os = n("r+ba"),
+        Ss = n("r+ba"),
+        Os = n("apHd"),
         ys = (function (a) {
           function e(e) {
             var n = a.call(this, e) || this;
@@ -34013,14 +33975,12 @@
               modalInitialEvent: null,
               bPreLoaded: !1,
               announcementGIDList: [],
-              last_update_event: null,
             };
-            var t = Object(Ss.a)("EventWebRowEmbed");
+            var t = Object(Os.a)("EventWebRowEmbed");
             return (
               n.ValidateStoreDefault(t) &&
                 ((n.state.bPreLoaded = t.bPreLoaded),
                 (n.state.announcementGIDList = t.announcementGIDList),
-                (n.state.last_update_event = t.last_update_event),
                 (n.state.events = []),
                 n.state.announcementGIDList.forEach(function (e) {
                   var t = R.d.GetClanEventFromAnnouncementGID(e);
@@ -34090,11 +34050,12 @@
                           e,
                           t
                         ) {
-                          s.setState({
-                            bShowModal: !0,
-                            announcementGID: t,
-                            modalInitialEvent: void 0,
-                          });
+                          console.log("appid: " + e + " gid: " + t),
+                            s.setState({
+                              bShowModal: !0,
+                              announcementGID: t,
+                              modalInitialEvent: void 0,
+                            });
                         }),
                         [2]
                       );
@@ -34118,52 +34079,15 @@
                 announcementGID: void 0,
               });
               var n = ze.a.Get().GetTracker();
-              e &&
-                e.BIsPartnerEvent() &&
+              e.BIsPartnerEvent() &&
                 n.MarkEventRead(e.GID, e.clanSteamID.GetAccountID(), t) &&
                 n.Flush();
-            }),
-            (e.prototype.ShowLatestUpdateModal = function () {
-              var e = this.state.last_update_event,
-                t = e.event_gid,
-                n = e.announcement_gid,
-                a = e.clan_account_id,
-                i = this.props.trackingLocation;
-              this.setState({
-                bShowModal: !0,
-                modalInitialEvent: void 0,
-                announcementGID: n,
-              });
-              var r = ze.a.Get().GetTracker();
-              t && r.MarkEventRead(t, a, i) && r.Flush();
             }),
             (e.prototype.CloseModal = function () {
               this.setState({ bShowModal: !1, modalInitialEvent: null });
             }),
-            (e.prototype.BHasLastUpdateEvent = function () {
-              var e;
-              return Boolean(
-                null === (e = this.state.last_update_event) || void 0 === e
-                  ? void 0
-                  : e.rtime
-              );
-            }),
-            (e.prototype.BShouldShowLastUpdateEvent = function () {
-              var e = this.state,
-                t = e.last_update_event,
-                n = e.events;
-              return (
-                !(
-                  !this.BHasLastUpdateEvent() ||
-                  null == t ||
-                  !t.announcement_gid
-                ) &&
-                (null == n || !n.length)
-              );
-            }),
             (e.prototype.render = function () {
-              var e,
-                n = this,
+              var n = this,
                 a = this.state.events;
               if (!a)
                 return Ye.a.createElement(
@@ -34174,161 +34098,81 @@
                     position: "center",
                   })
                 );
-              var t = window.screen.width <= 500 ? 1 : 2,
-                i = Boolean(null == a ? void 0 : a.length),
-                r = this.BHasLastUpdateEvent(),
-                o = this.BShouldShowLastUpdateEvent()
-                  ? this.state.last_update_event.announcement_gid
-                  : void 0,
-                l = this.props,
-                s = l.partnerEventStore,
-                c = l.strClassName,
-                d = l.appid,
-                p = l.trackingLocation;
+              if (a && 0 === a.length) return null;
+              var e = window.screen.width <= 500 ? 1 : 2,
+                t = this.props,
+                i = t.partnerEventStore,
+                r = t.strClassName,
+                o = t.appid,
+                l = t.trackingLocation;
               return Ye.a.createElement(
                 "div",
-                { className: c },
+                { className: r },
                 this.state.bShowModal &&
                   Ye.a.createElement(vs.a, {
-                    classname: Os.StoreHeaderAdjust,
-                    appid: d,
-                    trackingLocation: p,
-                    announcementGID:
-                      this.state.announcementGID ||
-                      (null === (e = this.state.modalInitialEvent) ||
-                      void 0 === e
-                        ? void 0
-                        : e.AnnouncementGID),
-                    partnerEventStore: s,
+                    classname: Ss.StoreHeaderAdjust,
+                    appid: o,
+                    trackingLocation: l,
+                    announcementGID: this.state.announcementGID
+                      ? this.state.announcementGID
+                      : this.state.modalInitialEvent.AnnouncementGID,
+                    partnerEventStore: i,
                     eventModel: this.state.modalInitialEvent,
                     closeModal: this.CloseModal,
                   }),
-                i &&
-                  Ye.a.createElement(
-                    "div",
-                    null,
-                    Ye.a.createElement(
-                      "h2",
-                      null,
-                      Object(M.f)("#EventBrowse_RecentEvents")
-                    ),
-                    Ye.a.createElement(
-                      "div",
-                      { className: Os.SectionButtonCtn },
-                      this.props.bViewAllShowInfiniteScroll
-                        ? Ye.a.createElement(
-                            "div",
-                            {
-                              className: Os.SectionButton,
-                              onClick: function () {
-                                return n.ShowModal(a[0]);
-                              },
-                            },
-                            Object(M.f)("#EventBrowse_MoreEventsBtn")
-                          )
-                        : Ye.a.createElement(
-                            Bn.c,
-                            {
-                              eventModel: a[0],
-                              route: Bn.a.k_eViewWebSiteHub,
-                              forceAnchor: !0,
-                              className: Os.SectionButton,
-                            },
-                            Object(M.f)("#EventBrowse_MoreEventsBtn")
-                          )
-                    ),
-                    Ye.a.createElement(
-                      "div",
-                      { className: Os.EventsSummariesCtn },
-                      a.slice(0, t).map(function (t) {
-                        var e =
-                          1 === a.length && 500 < window.screen.width
-                            ? Mt.c
-                            : Mt.b;
-                        return Ye.a.createElement(e, {
-                          key: t.GID,
-                          event: t,
-                          onClick: function (e) {
-                            n.ShowModal(t),
-                              e.stopPropagation(),
-                              e.preventDefault();
+                Ye.a.createElement(
+                  "h2",
+                  null,
+                  Object(M.f)("#EventBrowse_RecentEvents")
+                ),
+                Ye.a.createElement(
+                  "div",
+                  { className: Ss.SectionButtonCtn },
+                  this.props.bViewAllShowInfiniteScroll
+                    ? Ye.a.createElement(
+                        "div",
+                        {
+                          className: Ss.SectionButton,
+                          onClick: function () {
+                            return n.ShowModal(a[0]);
                           },
-                        });
-                      })
-                    )
-                  ),
-                Boolean(r && o) &&
-                  Ye.a.createElement(Ts, {
-                    nUpdateTime: this.state.last_update_event.rtime,
-                    announcementGID: o,
-                    onClick: this.ShowLatestUpdateModal,
-                  }),
-                Boolean(r && !o) &&
-                  Ye.a.createElement(Cs, {
-                    nUpdateTime: this.state.last_update_event.rtime,
-                    onClick: this.ShowLatestUpdateModal,
+                        },
+                        Object(M.f)("#EventBrowse_MoreEventsBtn")
+                      )
+                    : Ye.a.createElement(
+                        Bn.c,
+                        {
+                          eventModel: a[0],
+                          route: Bn.a.k_eViewWebSiteHub,
+                          forceAnchor: !0,
+                          className: Ss.SectionButton,
+                        },
+                        Object(M.f)("#EventBrowse_MoreEventsBtn")
+                      )
+                ),
+                Ye.a.createElement(
+                  "div",
+                  { className: Ss.EventsSummariesCtn },
+                  a.slice(0, e).map(function (t) {
+                    var e =
+                      1 === a.length && 500 < window.screen.width ? Mt.c : Mt.b;
+                    return Ye.a.createElement(e, {
+                      key: t.GID,
+                      event: t,
+                      onClick: function (e) {
+                        n.ShowModal(t), e.stopPropagation(), e.preventDefault();
+                      },
+                    });
                   })
+                )
               );
             }),
             Object(I.c)([V.a], e.prototype, "ShowModal", null),
-            Object(I.c)([V.a], e.prototype, "ShowLatestUpdateModal", null),
             Object(I.c)([V.a], e.prototype, "CloseModal", null),
             e
           );
         })(Ye.a.Component),
-        Cs = function (e) {
-          return Ye.a.createElement(
-            "div",
-            { className: Os.LatestUpdateButtonCtn },
-            Ye.a.createElement(
-              "div",
-              { className: Os.LatestUpdateIcon },
-              Ye.a.createElement(tt.ab, null)
-            ),
-            Ye.a.createElement(
-              "div",
-              { className: Os.LatestUpdateButton, onClick: e.onClick },
-              Object(M.f)(
-                "#EventBrowse_LatestUpdateTime_Button",
-                Object(M.p)(e.nUpdateTime)
-              )
-            )
-          );
-        },
-        Ts = function (e) {
-          function t(e) {
-            null != i && i(), e.stopPropagation(), e.preventDefault();
-          }
-          var n = e.nUpdateTime,
-            a = e.announcementGID,
-            i = e.onClick,
-            r = a ? R.d.GetClanEventFromAnnouncementGID(a) : null;
-          return Ye.a.createElement(
-            "div",
-            null,
-            Ye.a.createElement(
-              "h2",
-              null,
-              Object(M.f)("#EventBrowse_LastUpdateDate", Object(M.p)(n))
-            ),
-            Ye.a.createElement(
-              "div",
-              { className: Os.SectionButtonCtn },
-              Ye.a.createElement(
-                "div",
-                { className: Os.SectionButton, onClick: t },
-                Object(M.f)("#EventBrowse_ViewLatestUpdate")
-              )
-            ),
-            Boolean(r) &&
-              Ye.a.createElement(
-                "div",
-                { className: Os.EventsSummariesCtn },
-                Ye.a.createElement(Mt.c, { event: r, onClick: t })
-              )
-          );
-        },
-        js = (function (e) {
+        Cs = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -34346,7 +34190,7 @@
                   appid: e,
                   partnerEventStore: yr,
                   event_customization: { require_tags: ["workshop"] },
-                  strClassName: Os.Container,
+                  strClassName: Ss.Container,
                   trackingLocation: 6,
                   bViewAllShowInfiniteScroll: !0,
                 })
@@ -34355,7 +34199,7 @@
             t
           );
         })(Ye.a.Component),
-        Is = (function () {
+        Ts = (function () {
           function e() {
             (this.m_rgApps = []),
               (this.m_rgClanAccountIDs = []),
@@ -34553,9 +34397,9 @@
             e
           );
         })(),
-        Ds = n("Tgxo"),
-        ws = n.n(Ds),
-        Ms = Object(Ze.a)(function (e) {
+        js = n("Tgxo"),
+        Is = n.n(js),
+        Ds = Object(Ze.a)(function (e) {
           var t = Object(We.useState)(!0),
             n = t[0],
             a = t[1];
@@ -34593,7 +34437,7 @@
             C = y[0],
             T = y[1],
             j = Object(We.useRef)(0),
-            I = Is.Get().GetApps(o, p, c),
+            I = Ts.Get().GetApps(o, p, c),
             D =
               0 == O
                 ? I
@@ -34602,14 +34446,14 @@
                   }).slice(0, O);
           return Ye.a.createElement(
             "div",
-            { className: ws.a.MigrateToolCtn },
+            { className: Is.a.MigrateToolCtn },
             Ye.a.createElement(
               "div",
-              { className: ws.a.ToolHeader },
+              { className: Is.a.ToolHeader },
               "Partner Events Migration Tools"
             ),
             D.map(function (e) {
-              return Ye.a.createElement(As, {
+              return Ye.a.createElement(ws, {
                 key: e.id,
                 app: e,
                 bAutoLoad: m,
@@ -34633,7 +34477,7 @@
             Ye.a.createElement(
               "div",
               {
-                className: ws.a.LoadEventsButton,
+                className: Is.a.LoadEventsButton,
                 onClick: function () {
                   f(!1), T(new Set()), l(o + p);
                 },
@@ -34644,7 +34488,7 @@
               Ye.a.createElement(
                 "div",
                 {
-                  className: ws.a.LoadEventsButton,
+                  className: Is.a.LoadEventsButton,
                   onClick: function () {
                     return f(!0);
                   },
@@ -34653,7 +34497,7 @@
               ),
             Ye.a.createElement(
               "div",
-              { className: ws.a.StatusMessage },
+              { className: Is.a.StatusMessage },
               C.size +
                 " OF " +
                 I.length +
@@ -34662,7 +34506,7 @@
             )
           );
         }),
-        As = Object(Ze.a)(function (t) {
+        ws = Object(Ze.a)(function (t) {
           var a = Number(t.app.id),
             e = Object(We.useState)(0),
             i = e[0],
@@ -34841,24 +34685,24 @@
             }),
             Ye.a.createElement(
               "div",
-              { className: ws.a.ClanRow },
-              Ye.a.createElement("div", { className: ws.a.ID }, a),
-              Ye.a.createElement("a", { className: ws.a.ClanName, href: h }, g),
+              { className: Is.a.ClanRow },
+              Ye.a.createElement("div", { className: Is.a.ID }, a),
+              Ye.a.createElement("a", { className: Is.a.ClanName, href: h }, g),
               Ye.a.createElement(
                 "div",
-                { className: ws.a.Counts },
+                { className: Is.a.Counts },
                 "Loaded: " + E + "\tVisible: " + f + "\tOld: " + y,
                 0 < S &&
                   Ye.a.createElement(
                     "span",
-                    { className: ws.a.LinkedAnnouncements },
+                    { className: Is.a.LinkedAnnouncements },
                     "Linked: " + S
                   )
               ),
               b
                 ? Ye.a.createElement(
                     "div",
-                    { className: ws.a.LoadEventsButton, onClick: m },
+                    { className: Is.a.LoadEventsButton, onClick: m },
                     "LOAD EVENTS"
                   )
                 : c
@@ -34866,18 +34710,18 @@
                 : C
                 ? Ye.a.createElement(
                     "div",
-                    { className: ws.a.MigrateEventsButton, onClick: j },
+                    { className: Is.a.MigrateEventsButton, onClick: j },
                     "MIGRATE EVENTS"
                   )
                 : Ye.a.createElement(
                     "div",
-                    { className: ws.a.CompleteMessage },
+                    { className: Is.a.CompleteMessage },
                     "NOTHING TO MIGRATE"
                   )
             )
           );
         });
-      var Gs = (function (t) {
+      var Ms = (function (t) {
         function e() {
           var e = (null !== t && t.apply(this, arguments)) || this;
           return (e.state = { bIsLoading: !0 }), e;
@@ -35102,7 +34946,7 @@
                       path: y(":appid(\\d+)"),
                       render: function (e) {
                         return Ye.a.createElement(
-                          js,
+                          Cs,
                           Object(I.a)({}, e, {
                             appid: +e.match.params.appid,
                             key: "Workshop" + e.match.params.appid,
@@ -35134,16 +34978,16 @@
                         );
                       },
                     }),
-                    Ye.a.createElement(Ot.c, { path: O(), component: Ms }),
-                    Ye.a.createElement(Ot.c, { component: ks })
+                    Ye.a.createElement(Ot.c, { path: O(), component: Ds }),
+                    Ye.a.createElement(Ot.c, { component: As })
                   )
                 );
           }),
           e
         );
       })(Ye.a.Component);
-      t.default = Gs;
-      function ks(e) {
+      t.default = Ms;
+      function As(e) {
         return "dev" !== D.b.WEB_UNIVERSE
           ? Ye.a.createElement(Ot.b, { push: !0, to: D.b.COMMUNITY_BASE_URL })
           : Ye.a.createElement("div", null, "Unknown route");
@@ -36129,10 +35973,6 @@
         SectionButtonCtn: "partnereventwebrowembed_SectionButtonCtn_1HP0y",
         SectionButton: "partnereventwebrowembed_SectionButton_3n8sw",
         EventsSummariesCtn: "partnereventwebrowembed_EventsSummariesCtn_1snIw",
-        LatestUpdateButtonCtn:
-          "partnereventwebrowembed_LatestUpdateButtonCtn_2vEwZ",
-        LatestUpdateIcon: "partnereventwebrowembed_LatestUpdateIcon_mq3RO",
-        LatestUpdateButton: "partnereventwebrowembed_LatestUpdateButton_1TRFt",
       };
     },
     rerp: function (e, t, n) {
