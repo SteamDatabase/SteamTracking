@@ -4776,6 +4776,6 @@ Set a category for these games to help you find them quickly and organize your L
 
 "Steam_XboxDriverInstall_Title"		"Xbox Driver Installation"
 "Steam_XboxDriverInstall_Success"	"Driver successfully updated, and will be active after you restart your computer."
-"Steam_XboxDriverInstall_Failure"	"Driver update failed, is the Steam service running and up to date?"
+"Steam_XboxDriverInstall_ServiceFailure"	"Driver update failed, is Steam running as a normal user and is the Steam service running and up to date?"
 "Steam_XboxDriverInstall_Failure"	"Driver update failed, error = %error%"
 }

@@ -65,7 +65,6 @@ __LINKEDIT
 hoK
 P
 _
-M$
 
 8
 @loader_path/libtier0_s.dylib
@@ -9601,8 +9600,8 @@ developer
 Steam pid that launched us
 VGUI_Application_001
 OK
-Jan 11 2021
-17:46:04
+Jan 13 2021
+16:12:44
 crashhandler003
 gameoverlayui
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/overlay/gameoverlayui/main.cpp

@@ -989,7 +989,7 @@ ManageGiftsPage
 }
 PendingGift
 {
-	url		"%community%/gifts/"
+	url		"%store%/gifts/"
 	method		"internal"
 	filter		"profile"
 }

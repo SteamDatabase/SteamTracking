@@ -684,6 +684,7 @@
 	"language_selection_koreana": "한국어 (Korean)",
 	"language_selection_korean": "한국어 (Korean)",
 	"language_selection_schinese": "简体中文 (Simplified Chinese)",
+	"language_selection_sc_schinese": "简体中文 (Simplified Chinese)",
 	"language_selection_tchinese": "繁體中文 (Traditional Chinese)",
 	"language_selection_russian": "Русский (Russian)",
 	"language_selection_thai": "ไทย (Thai)",
