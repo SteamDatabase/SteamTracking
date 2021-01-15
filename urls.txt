@@ -517,6 +517,6 @@ Random/NetworkDatagramConfig.json               @ https://steamcdn-a.akamaihd.ne
 //Random/People.html                              @ https://www.valvesoftware.com/en/people
 //Random/About.html                               @ https://www.valvesoftware.com/en/about
 //Random/Jobs.json                                @ https://www.valvesoftware.com/en/jobs/job-search
-Random/ValveGroup.json                          @ https://steamcommunity.com/groups/valve/memberslistxml?xml=1
-Random/SteamModerators.json                     @ https://steamcommunity.com/groups/SUFMods/memberslistxml?xml=1
-Random/SteamDevs.json                           @ https://steamcommunity.com/groups/steam/memberslistxml?xml=1
+Random/ValveGroup.json                          @ https://steamcommunity.com/gid/103582791429521412/memberslistxml?xml=1
+Random/SteamModerators.json                     @ https://steamcommunity.com/gid/103582791429521614/memberslistxml?xml=1
+Random/SteamDevs.json                           @ https://steamcommunity.com/gid/103582791429521413/memberslistxml?xml=1
