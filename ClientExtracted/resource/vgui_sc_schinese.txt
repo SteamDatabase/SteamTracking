@@ -1,7 +1,7 @@
 ﻿"lang"
 {
-"Language" "sc_schinese" 
-"Tokens"
-{
-}
+	"Language" "sc_schinese"
+	"Tokens"
+	{
+	}
 }

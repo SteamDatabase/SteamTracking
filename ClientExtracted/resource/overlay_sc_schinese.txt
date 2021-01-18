@@ -1,7 +1,32 @@
 ﻿"lang"
 {
-"Language" "sc_schinese" 
-"Tokens"
-{
+	"Language" "sc_schinese"
+	"Tokens"
+	{
+		"Overlay_Splash_Message" "在进行游戏时访问蒸汽平台社区。"
+		"Overlay_SettingsDescription" "蒸汽平台可以在您游戏中时保持活动状态，在您进行游戏时同样可以访问蒸汽平台社区的功能。"
+		"Overlay_SettingsDescriptionApp" "蒸汽平台可以保持活动状态并为您提供“应用程序中”的蒸汽平台社区消息通知以及应用程序内完整的好友界面。"
+		"Overlay_SettingsEnable" "在游戏中启用蒸汽平台界面"
+		"Overlay_SettingsEnableApp" "启用“应用程序中”的蒸汽平台社区"
+		"Overlay_SettingsSCTenfootEnable" "通过桌面使用启用了蒸汽平台输入的控制器时开启大屏幕界面"
+		"Overlay_Settings_Title" "蒸汽平台 - 设置"
+		"friends_searchOnline" "搜索蒸汽平台社区成员"
+		"Overlay_CDKeyNotification_Message" "如下所示，该蒸汽平台游戏需要一个特殊的产品序列号。当游戏要求输入时，请将其按此处所示键入。"
+		"Overlay_CDKeyNotification_Message_MultipleKey" "该蒸汽平台游戏需要多个产品序列号。当游戏要求要求输入时，可以按 %hotkey% 来查看您的产品序列号。"
+		"Overlay_CDKeyNotification_MessageApp" "此蒸汽平台应用程序需要专门的产品序列号，如下所示。当程序向您索要它时，请键入下方显示的序列号。"
+		"Overlay_CDKeyNotification_Message_MultipleKeyApp" "此蒸汽平台应用程序需要多个产品序列号。当程序向您索要它们时，您可以按 %hotkey% 查看您的产品序列号。"
+		"Overlay_MicroTxnAuth_Title" "蒸汽平台交易"
+		"Overlay_MicroTxnAuth_PayWithWallet" "使用蒸汽平台钱包续订"
+		"Overlay_MicroTxnAuth_SubscriptionText" "蒸汽平台会在您的订阅更新时，自动使用您保存的支付方式结算。如果您没有存档的账单信息，蒸汽平台会尝试从您钱包的资金中扣款。"
+		"Overlay_MicroTxnAuth_RefundPeriod" "在购买后的 48 小时内，蒸汽平台可以在您未消耗、修改或转让这些物品的情况下提供退款。<a href=http://store.steamchina.com/steam_refunds>了解更多</a>"
+		"Overlay_MicroTxnAuth_NotRefundable" "这些物品不符合退款要求。<a href=http://store.steamchina.com/steam_refunds>了解更多</a>"
+		"Overlay_MicroTxnAuth_ConnectionError_Info" "由于和蒸汽平台通讯时出现问题，您的交易无法完成。"
+		"Overlay_MicroTxnAuth_Insufficient_Funds_Info" "您的蒸汽平台钱包中资金不足，无法完成购买。您想要充值以继续吗？"
+		"Overlay_Publish_NeedWorkshopLegalAgreementAcceptance_Title" "《蒸汽平台创意工坊法律协议》"
+		"Overlay_Publish_NeedWorkshopLegalAgreementAcceptance_Desc" "在您的物品被完整发布之前，您必须接受最新的《蒸汽平台创意工坊法律协议》。"
+		"Overlay_PrivateScreenshot" "此应用程序尚未公开。截图不能在蒸汽平台社区上公开，也不能分享到 Facebook。"
+		"Overlay_ScreenshotOnSteam" "在蒸汽平台上查看此截图"
+		"Overlay_ScreenshotOnSteamNamed" "在蒸汽平台上查看 %gamename% 的截图"
+		"Overlay_AsyncNotificatoinsRequestedDialog_Desc" "此游戏支持异步游戏，允许您在回合之间关闭游戏。您是否想要在轮到您的回合时在蒸汽平台客户端接受通知？"
+	}
 }
-}  

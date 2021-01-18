@@ -43,7 +43,6 @@
 		}
 		
 		AutoUpdateTimeRestrictCheckbox { controlname=checkbutton labeltext=#Steam_AutoUpdateTimeRestrictionLabel }
-		AutoUpdateTimeRestrictStartLabel { controlname=label labeltext=#Steam_AutoUpdateTimeRestrictionStart style=padded }
 		AutoUpdateTimeRestrictEndLabel { controlname=label labeltext=#Steam_AutoUpdateTimeRestrictionEnd style=padded }
 		AutoUpdateTimeRestrictStart { controlname=combobox }
 		AutoUpdateTimeRestrictEnd { controlname=combobox }
@@ -93,8 +92,7 @@
 		place { controls="RestrictionsLabel" region=box start=Divider2 dir=down margin-top=15 }
 		
 		place { controls="AutoUpdateTimeRestrictCheckbox" region=box start=RestrictionsLabel dir=down margin-top=4 }
-		place { controls="AutoUpdateTimeRestrictStartLabel" region=box start=AutoUpdateTimeRestrictCheckbox dir=down margin-top=4 }
-		place { controls="AutoUpdateTimeRestrictStart" region=box start=AutoUpdateTimeRestrictStartLabel dir=right margin-left=10 width=78 }
+		place { controls="AutoUpdateTimeRestrictStart" region=box start=AutoUpdateTimeRestrictCheckbox dir=down margin-top=4 width=78 margin-left=10 }
 		place { controls="AutoUpdateTimeRestrictEndLabel" region=box start=AutoUpdateTimeRestrictStart dir=right margin-left=20 }
 		place { controls="AutoUpdateTimeRestrictEnd" region=box start=AutoUpdateTimeRestrictEndLabel dir=right margin-left=10 width=78 }
 		
@@ -105,7 +103,7 @@
 		place { controls="ThrottleRateEditSuffix" region=box start=ThrottleRateEdit dir=right margin-left=4 margin-top=5 }
 		place { controls="ThrottleRateApply" region=box start=ThrottleRateEdit dir=down width=70 height=25 margin-top=4 }
 		
-		place { controls="AllowDownloadsDuringGameplayCheckbox" region=box start=AutoUpdateTimeRestrictStartLabel dir=down margin-top=10 }
+		place { controls="AllowDownloadsDuringGameplayCheckbox" region=box start=AutoUpdateTimeRestrictStart dir=down margin-top=10 margin-left=-10 }
 		place { controls="ThrottleDownloadsWhileStreamingCheckbox" region=box start=AllowDownloadsDuringGameplayCheckbox dir=down }
 		place { controls="DownloadRatesInBitsCheckbox" region=box start=ThrottleDownloadsWhileStreamingCheckbox dir=down }
 		

@@ -1,7 +1,25 @@
 ﻿"lang"
 {
-"Language" "sc_chinese" 
-"Tokens"
-{
-}
+	"Language" "sc_schinese"
+	"Tokens"
+	{
+		"app_task_friend_status" "蒸汽平台状态"
+		"app_task_exit_steam" "退出蒸汽平台"
+		"Steam_AccountAlreadyLoggedInNeedShutdown" "您的帐户“%account%”当前正在其他电脑上使用。\n您需要在其他电脑上关闭蒸汽平台后，才能在本电脑上登录。"
+		"Steam_NeverConnectedNoConnection" "该帐户 \'%account%\' 之前从未在本机器登录过，并且不能连接到蒸汽平台服务器。\n部分服务将不可用。蒸汽平台将继续尝试连接，服务将在连接成功时变为可用。"
+		"Steam_RefreshEnterTwoFactorCode" "请输入来自您蒸汽平台令牌验证器上的最新认证码。"
+		"Steam_RefreshLogin_Title" "蒸汽平台 - 刷新登录"
+		"Steam_RefreshLogin_InfoTicketExpired" "您的蒸汽平台许可已过期。\n请重新输入您的密码以继续。"
+		"Steam_Login_ErrorTitle" "蒸汽平台 - 错误"
+		"Steam_Login_NeedTwoFactorTitle" "蒸汽平台 - 验证码"
+		"Steam_Login_TwoFactorErrorTitle" "蒸汽平台 - 错误的验证码"
+		"Steam_ErrorLoginFailed" "登录蒸汽平台失败。\n帐户可能不存在，或者密码错误。\n请检查您的帐户名称和密码并重试。"
+		"Steam_Login_CloseSteam" "退出蒸汽平台"
+		"Steam_Twofactor_Code" "蒸汽平台令牌验证码"
+		"Steam_ErrorLoginNeedTwoFactor" "请输入您最新的蒸汽平台令牌验证码。"
+		"Steam_ErrorLoginBadTwoFactor" "该双重身份验证码无效。\n请输入您最新的蒸汽平台令牌验证码。"
+		"SteamGuardBanner" "带有英特尔® 身份保护技术（简称 IPT）的蒸汽平台令牌"
+		"LoginIPTAuthenticatingWithSteam" "正在通过蒸汽平台验证 IPT..."
+		"LoginIPTConnectFailed" "无法连接蒸汽平台服务器。\n请稍后重试。"
+	}
 }
