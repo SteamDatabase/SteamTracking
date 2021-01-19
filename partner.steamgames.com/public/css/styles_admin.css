@@ -3749,3 +3749,22 @@ img.category_icon {
 #achievementTable tbody tr td {
     padding: 6px 4px;
 }
+
+
+.msglist .optionRow {
+    display: flex;
+    flex-direction: row;
+    margin-top: 5px;
+    align-items: center;
+}
+
+.msglist .optionRow > div {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+}
+
+.msglist .optionRow input {
+    flex-grow: 1;
+    margin-left: 10px;
+}
