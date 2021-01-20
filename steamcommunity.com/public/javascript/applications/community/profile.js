@@ -304,7 +304,7 @@
                   },
                   i
                 ),
-                g.createElement(_.I, null)
+                g.createElement(_.J, null)
               ),
             a &&
               g.createElement(
@@ -321,7 +321,7 @@
                   },
                   i
                 ),
-                g.createElement(_.bb, null)
+                g.createElement(_.cb, null)
               ),
             o &&
               g.createElement(
@@ -338,7 +338,7 @@
                   },
                   i
                 ),
-                g.createElement(_.d, null)
+                g.createElement(_.e, null)
               )
           );
         }),
@@ -10658,6 +10658,11 @@
                         br: p.d.readUint32,
                         bw: p.h.writeUint32,
                       },
+                      bundle_discount: {
+                        n: 17,
+                        br: p.d.readUint32,
+                        bw: p.h.writeUint32,
+                      },
                     },
                   }),
                 i.sm_m
@@ -12633,7 +12638,7 @@
             B.createElement(
               "div",
               { className: A.Left },
-              B.createElement(ne.C, { className: A.BalanceIcon }),
+              B.createElement(ne.D, { className: A.BalanceIcon }),
               B.createElement(
                 "div",
                 { className: A.BalanceDetails },
@@ -12742,7 +12747,7 @@
           return B.createElement(
             "span",
             Object(s.a)({}, i, { className: Object(te.a)(r, A.PointsAmount) }),
-            B.createElement(ne.C, { className: A.PointsAmountIcon }),
+            B.createElement(ne.D, { className: A.PointsAmountIcon }),
             t
           );
         };

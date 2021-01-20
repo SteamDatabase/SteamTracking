@@ -292,3 +292,9 @@ input.phone_input_number {
 	font-size: 14px;
 	margin: 20px 0 25px;
 }
+
+.phone_edit_china_iframe {
+	border: none;
+	width: 100%;
+	min-height: 800px;
+}

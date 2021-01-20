@@ -25,6 +25,7 @@
         Button_Publish: "Publish",
         Button_Post: "Post",
         Button_OK: "OK",
+        Button_Done: "Done",
         Button_Overwrite: "Overwrite",
         Button_Retry: "Retry",
         Button_Remove: "Remove",
@@ -774,6 +775,7 @@
         language_selection_koreana: "한국어 (Korean)",
         language_selection_korean: "한국어 (Korean)",
         language_selection_schinese: "简体中文 (Simplified Chinese)",
+        language_selection_sc_schinese: "简体中文 (Simplified Chinese)",
         language_selection_tchinese: "繁體中文 (Traditional Chinese)",
         language_selection_russian: "Русский (Russian)",
         language_selection_thai: "ไทย (Thai)",
@@ -1349,12 +1351,15 @@
         Sale_EventSchedule_NoUpcomingEvents: "No upcoming events",
         Sale_EventSchedule_NoEventsScheduled:
           "No events scheduled yet in this section",
+        Sale_CuratorRecommendation_title: "Curator Recommendations",
         Sale_MeetDev: "Meet the Developers",
         Sale_Preferences: "Preferences",
         Sale_PlaceHolder:
           "Preview Mode: This section has no capsules. Will not appear on user page if it is empty.",
         Sale_EventSchedulePlaceHolder:
           "Preview Mode: There are currently no events associated with this schedule, this will not appear in the current state on the sale",
+        Sale_EventSchedulePlaceHolder_Tab:
+          "Preview Mode: For the currently select TAB there are no events associated with this schedule. Other tabs may show events in the schedule. This will not appear in the current state on the sale",
         Sale_SmartPlaceHolder:
           "Preview Mode: This smart section has no apps for you. This would not appear on user page if it is empty.",
         Sale_default_label: "(no title)",
@@ -1676,17 +1681,21 @@
         Sale_Subscription_AlreadyOwnedApp: "Already a member",
         Sale_Subscription_Save: "Save %2$s",
         Sale_Subscription_Annual_Price: "%1$s/year",
+        Sale_Subscription_Annual_Price_Discount: "%1$s for the first year",
         Sale_Subscription_Annual_Body:
           "Pay for one year of access and save %2$s off your subscription",
+        Sale_Subscription_Annual_Body_Discount:
+          "%1$s billed annually thereafter, cancel anytime",
         Sale_Subscription_Annual_Button: "Subscribe Annually",
         Sale_Subscription_Monthly_Price: "%1$s/month",
+        Sale_Subscription_Monthly_Price_Discount: "%1$s for the first month",
         Sale_Subscription_Monthly_Body:
           "Pay month-to-month and cancel any time",
+        Sale_Subscription_Monthly_Body_Discount:
+          "%1$s billed monthly thereafter, cancel anytime",
         Sale_Subscription_Monthly_Button: "Subscribe Monthly",
-        Sale_Subscription_Quarterly_Price: "%1$s/quarter",
-        Sale_Subscription_Quarterly_Body:
-          "Pay every three months and cancel any time",
-        Sale_Subscription_Quarterly_Button: "Subscribe Quarterly",
+        Sale_Subscription_DiscountEnd: "*Save %2$s when you sign up by %1$s",
+        Sale_Subscription_Asterisk: "*",
         GotSteam_Title: "Got Steam?",
         GotSteam_PromptWithDownloadLink:
           "You need to have the %1$s installed before you can install and launch %2$s. Do you have Steam installed on this computer?",

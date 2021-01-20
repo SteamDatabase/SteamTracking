@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6315450";
+var CLSTAMP = "6319374";
 !(function (t) {
   var e = {};
   function n(r) {
@@ -97,10 +97,10 @@ var CLSTAMP = "6315450";
         return a;
       }),
       n.d(e, "f", function () {
-        return l;
+        return f;
       }),
       n.d(e, "h", function () {
-        return f;
+        return l;
       }),
       n.d(e, "g", function () {
         return _;
@@ -153,9 +153,9 @@ var CLSTAMP = "6315450";
         PAGE_TIMESTAMP: 0,
         get SESSIONID() {
           return (function () {
-            if (!Object(i.a)()) return r || (r = l()), r;
+            if (!Object(i.a)()) return r || (r = f()), r;
             var t = Object(i.b)("sessionid");
-            t || (t = l());
+            t || (t = f());
             return t;
           })();
         },
@@ -197,7 +197,7 @@ var CLSTAMP = "6315450";
         HAS_ADULT_CONTENT_SEX: !1,
         HAS_ADULT_CONTENT_VIOLENCE: !1,
       };
-    function l() {
+    function f() {
       var t = (function () {
         for (var t = "", e = 0; e < 24; e++)
           t += Object(o.b)(0, 35).toString(36);
@@ -205,7 +205,7 @@ var CLSTAMP = "6315450";
       })();
       return Object(i.c)("sessionid", t, 0), t;
     }
-    function f(t) {
+    function l(t) {
       void 0 === t && (t = "webui_config");
       var e = {},
         n = _("config", t);
@@ -585,7 +585,7 @@ var CLSTAMP = "6315450";
         return a;
       }),
       n.d(e, "g", function () {
-        return l;
+        return f;
       });
     /*! *****************************************************************************
 Copyright (c) Microsoft Corporation.
@@ -783,7 +783,7 @@ PERFORMANCE OF THIS SOFTWARE.
         };
       }
     }
-    function l() {
+    function f() {
       for (var t = 0, e = 0, n = arguments.length; e < n; e++)
         t += arguments[e].length;
       var r = Array(t),
@@ -800,11 +800,14 @@ PERFORMANCE OF THIS SOFTWARE.
     n.d(e, "a", function () {
       return r.c;
     }),
-      n.d(e, "c", function () {
+      n.d(e, "d", function () {
         return r.i;
       }),
-      n.d(e, "b", function () {
+      n.d(e, "c", function () {
         return r.h;
+      }),
+      n.d(e, "b", function () {
+        return r.d;
       });
   },
   x0hG: function (t, e, n) {
@@ -813,7 +816,7 @@ PERFORMANCE OF THIS SOFTWARE.
     var r = n("tkkQ"),
       o = n("Ezvv");
     document.addEventListener("DOMContentLoaded", function () {
-      Object(r.b)(), (window.ClientConnectionAPI = o.b);
+      Object(r.c)(), (window.ClientConnectionAPI = o.b);
     });
   },
 });

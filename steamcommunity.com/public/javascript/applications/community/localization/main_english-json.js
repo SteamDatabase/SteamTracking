@@ -704,7 +704,9 @@
         EventEdit_Warning_EnglishMissing:
           "Missing either an English language event description and/or English language event name. The English language is the primary or fallback language for many Steam users. Without it the event visibility to Steam customers is much limited.",
         EventEdit_Warning_ArtworkMissing:
-          "Artwork is missing. Events permit custom artwork which help brand the event and make it more catchy to Steam users.  Without artwork we fallback to a game capsule.",
+          "Artwork is missing. Events permit custom artwork which help brand the event and make it more catchy to Steam users.  Without artwork we fall back to a game capsule.",
+        EventEdit_Warning_ArtworkMissing_clan:
+          "Artwork is missing. Events permit custom artwork which help brand the event and make it more catchy to Steam users.  Without artwork we fall back to the group's avatar.",
         EventEdit_Warning_Other:
           "Event Category set to Other, which will severely reduce the visibility of this event. Steam uses the event categories to help direct the events to Steam customers. Other is assumed to be least impactful and will show up to the least number of users.",
         EventEdit_Warnign_SubTitle:
@@ -1417,6 +1419,10 @@
           "Non-owners will be redirected to this page",
         Sale_Enable_Warning:
           "Warning: This event does not have the Sale Feature enabled by Valve. Only Valve can enable the sale feature in the closed beta. Please reach out to your Valve contact to request that they enable the sale page for this event.",
+        Sale_PartnerAppEditRestrictions:
+          "(VO) Restrict this page to App Editors?",
+        Sale_PartnerAppEditRestrictions_ttip:
+          "Locks this page behind a Partner AppEdit check for some game featured on this page.",
         Sale_Broadcast: "Broadcast / Live Streams",
         Sale_Broadcast_TabLink:
           "Use the broadcast tab to configure other broadcasting settings for this sale event.",
@@ -1432,6 +1438,9 @@
         Sale_ShowCreatorHome: "Show creator capsule for this event?",
         Sale_ShowCreatorHome_ttip:
           "When enabled, information about the creator will be shown at the top of the sale, allowing users to follow and see information there",
+        Sale_SortingTiersSection: "Sorting Tiers - %1$s",
+        Sale_SortingTiers_SectionTooltip:
+          "This allows for configuring sorting priorities of items within the sale when randomizing sections. Higher tiers will be appear before lower tiers. An empty tier will denote where the default items should appear if not found in any other tier",
         Sale_TaggedItemsSection: "Tagged Items - %1$s",
         Sale_TaggedItemsCount: "Items - %1$s",
         Sale_TaggedItemsCountFiltered: "Items - %1$s (%2$s filtered)",
@@ -1441,6 +1450,10 @@
         Sale_TaggedItemsFilter_Placeholder: "Search by name",
         Sale_TaggedItemsFilter_ttip:
           "Limits the list of tagged items below to only items that match this string",
+        Sale_SortTier_Add: "Add Sorting Tier",
+        Sale_SortTier_Enable: "Enable Sorting Tiers",
+        Sale_SortTier_EnableInfo:
+          "This section can be used to configure the random sorting order of capsules across the sale. This is done by configuring sorting tiers populated with items, where items in higher tiers will be shown before items within lower tiers.",
         Sale_EditTags_BatchItemText: "Enter Items to Edit",
         Sale_EditTags_BatchItemText_ttip:
           "Here a listing of IDs can be provided to control which items will be edited when adding and removing tags. This is generally designed for copy/paste of item lists.",
@@ -1610,16 +1623,43 @@
         Sale_SectionTypeTTip_sale_item_browser:
           "A tabbed browsing control that allows for showing top sellers, recently released, etc for the items on the sale",
         Sale_Items: "Items",
+        Sale_Items_ttip:
+          "This is the primary sale section which allows insert of games, packages and bundles onto the sale page. Create as many as needed.",
         Sale_Events: "Events",
+        Sale_Events_ttip:
+          "Allows insertion of specifically chosen Steam Events and Announcements onto the page. The users can click to open the content inline on top of the sale page.",
         Sale_Links: "Links",
+        Sale_Links_ttip: "Allows linking to other parts of the Steam store.",
         Sale_BroadcastPlayerSection: "Broadcast Player",
+        Sale_BroadcastPlayerSection_ttip:
+          "If broadcast is enabled on this sale page, then by default the video players will appear at the top of the sale page. Using this widget, you can control where you want the broadcast player to appear within the sale page.",
         Sale_EventDescriptionSection: "Event Description",
+        Sale_EventDescriptionSection_ttip:
+          "Adds the text found in the 'Description tab' to appear here on the sale page.",
         Sale_AdventCalendarDoorSection: "Daily Rewards",
         Sale_EventDescriptionTabLink:
           "Use the Description tab to edit the description for this sale event.",
         Sale_TextSection: "Text Section",
+        Sale_TextSection_ttip:
+          "Creates a bbcode widget that allows any text, images or video to appear at this point of the sale page.",
         Sale_CuratorSection: "Curator or Creator Home Section",
+        Sale_CuratorSection_ttip:
+          "Allows inclusion of a Curator or Creator Home widget. The widget will lets Steam users easily follow the list creator home or curator. There can be more than one of these sections.",
         Sale_CuratorSection_Name: "Curator: %1$s",
+        Sale_CuratorRecommendation: "Curator Recommendations and Lists",
+        Sale_CuratorRecommendation_ttip:
+          "Controls where the curator recommendations or feature list appear on the sale page. By defaults, users following Steam curators will see the followed curator's recommendation about games featured in the sale at the bottom of the sale page. This lets you control where this section may appear.",
+        Sale_CuratorRecommendation_desc:
+          "Displays Curator Recommendations and Curator Lists.",
+        Sale_CuratorRecommendation_FeaturedList:
+          "Feature Curator Recommendation List:",
+        Sale_CuratorRecommendation_FeaturedList_ttip:
+          "Optionally choose curator's lists that have been created for this sale. Curators can only create these list after the sale as has started.",
+        Sale_CuratorRecommendation_ChooseList: "Select Curator List to Feature",
+        Sale_CuratorRecommendation_ChooseDesc:
+          "Curators can create a list of games featured on this sale. This dialog lets you optionally choose one or more list to feature on the sale page. Featured list will be presented to all Steam users visiting the page.",
+        Sale_CuratorRecommendation_ChooseInvalid:
+          "Cannot choose curator, sale is required to be visible and have started.",
         Sale_Tabs: "Tabs",
         Sale_TabButtons: "Tab Buttons",
         Sale_VOInternalSection:
@@ -1675,6 +1715,8 @@
         Sale_CapsulesPerRow_Pattern_5t: "5 Tall",
         Sale_VOInternalSection_SubscriptionPricing: "Subscription - Pricing",
         Sale_SectionType_EventSchedule: "Event Schedule",
+        Sale_SectionType_EventSchedule_ttip:
+          "Event Schedule automatically pulls and displays events from featured games to appear on the sales page order by their event start time. Useful for showing broadcasts that occur during the sale.",
         Sale_VOInternalSection_TabContents: "Tab Contents",
         Sale_VOInternalSection_TabReferences: "Tab References",
         Sale_VOInternalSection_SaleItemBrowser: "Sale Item Browser",
@@ -1986,6 +2028,8 @@
           "Are you sure you want to remove this section from this sales page?",
         Sale_UsingEventBodyElsewhere:
           "Another section already will display the event description. Are you sure you want to enable it to appear here as well?",
+        Sale_UsingCuratorRecommendationElsewhere:
+          "Another section already will display the Curator Recommendations. Are you sure you want to enable it to appear here as well?",
         Sale_ShowingBroadcastElsewhere:
           "An earlier section is also configured to show the live broadcast. This section will be ignored.",
         Sale_VisibilityIndex_Default: "Always visible",

@@ -6,11 +6,12 @@ var g_rgAppsInLists = [];
 
 function CreateListFromForm( elForm, fnOnComplete )
 {
-	CallFunctionFromForm( elForm, [ 'listid', 'title', 'description', 'visibility', 'appids', 'type', 'background', 'listtileimage', 'order', 'page_bg_offset' ], EditList, fnOnComplete);
+	CallFunctionFromForm( elForm, [ 'listid', 'title', 'description', 'visibility', 'appids', 'type', 'background',
+		'listtileimage', 'order', 'page_bg_offset', 'sale_event_gid', 'article_link', 'video_link' ], EditList, fnOnComplete);
 }
 
 
-function EditList( listid, title, blurb, state, appids, type, background, listtileimage, order, page_bg_offset, fnOnComplete )
+function EditList( listid, title, blurb, state, appids, type, background, listtileimage, order, page_bg_offset, sale_event_gid, article_link, video_link, fnOnComplete )
 {
 	var rgTitleAndBlurbsLocs = {};
 	$J( 'input[type=hidden][name^="language"]').each( function() {
@@ -37,6 +38,9 @@ function EditList( listid, title, blurb, state, appids, type, background, listti
 			showtitleanddesc: showtitleanddesc,
 			page_bg_offset: page_bg_offset,
 			title_blurb_locs: JSON.stringify( rgTitleAndBlurbsLocs ),
+			sale_event_gid: sale_event_gid,
+			article_link: article_link,
+			video_link: video_link,
 			sessionid: g_sessionID
 		},
 		dataType: 'json',

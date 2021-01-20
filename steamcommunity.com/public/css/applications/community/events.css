@@ -2832,6 +2832,16 @@ p a:hover {
     .tableofcontents_TableOfContentsContainer_2VyHw .tableofcontents_TableOfContents_3-gNE .tableofcontents_TOCEntry_2fked.tableofcontents_TOCIndent_mtCjw.tableofcontents_SectionOnScreen_1ZlX0 {
       margin-left: calc( $indentWidth - $selectedWidth); }
 
+.partnereventsalesorttiers_SortTierControls_1_f_6 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 10px; }
+
+.saleeditorlocationcontrolwidget_DisplayWarning_162UW {
+  padding: 5px;
+  font-weight: bolder; }
+
 .partnereventspecialcategories_EventCategory_SteamAwardsNomination_3QxOk {
   background-image: linear-gradient(to right, rgba(255, 140, 0, 0.5) 0%, rgba(57, 61, 71, 0.5) 20%);
   margin-bottom: 20px; }
@@ -3226,70 +3236,6 @@ p a:hover {
 
 .tabbar_StatusCaution_E9t9j {
   color: #e76e34; }
-
-.partnereventdates_EventTimeSection_O7lDS:first-child {
-  margin-bottom: 12px; }
-
-.partnereventdates_EventTimeSection_O7lDS:last-child {
-  margin-bottom: 0px; }
-
-.partnereventdates_EventTimeTitle_1-4F8 {
-  font-size: 11px;
-  color: #ffffff;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 3px; }
-
-.partnereventdates_EventVisibilityItem_Z5DNw {
-  line-height: 24px; }
-
-.partnereventdates_EventEditorInputPaneContainer_3Fhef input.partnereventdates_TimeWidth_3_7ku {
-  font-size: 15px; }
-
-.partnereventdates_EventPublishTimeCtn_3mtSl {
-  margin-left: 20px;
-  margin-top: 8px; }
-
-.partnereventdates_TimeWidth_3_7ku {
-  max-width: 200px; }
-
-.partnereventdates_InputBorder_2-wu6.partnereventdates_TimeBlock_9q9ZA {
-  margin-right: 8px; }
-
-.partnereventdates_TimeRowContainer_2cnMo {
-  justify-content: flex-start;
-  padding: 10px;
-  border-radius: 3px;
-  background-color: rgba(57, 61, 71, 0.5); }
-
-.partnereventdates_TimeRowDropDown_VlpIL {
-  margin-top: 5px;
-  padding-top: 10px;
-  margin-bottom: 15px;
-  margin-left: 10px;
-  padding-left: 20px;
-  border-left: #399aec 1px solid; }
-
-.partnereventdates_TimeRowDropDown_VlpIL > .partnereventdates_EndDateAmountCtn_1Xbr7 {
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 8px;
-  width: 50%; }
-
-.partnereventdates_TimeRowDropDown_VlpIL > .partnereventdates_EndRound_1ppi6 > span {
-  margin-bottom: 0px; }
-
-.partnereventdates_VisibilityItemList_1Cnd3 {
-  display: flex;
-  flex-direction: column; }
-
-.partnereventdates_VisibilityItems_1m6k3 {
-  padding: 10px;
-  border-radius: 3px;
-  background: rgba(57, 61, 71, 0.5); }
-
-.partnereventdates_EventEditorVisibilityCtn_3hqZR {
-  margin-top: 12px; }
 
 .managefriends_Heading_3kTQI {
   font-size: 17px;
@@ -3851,6 +3797,70 @@ input.partnereventemails_HeadlineInput_2lHX9 {
 .progressutils_UpdatingMessage_3baPw {
   color: white;
   font-weight: bold; }
+
+.partnereventdates_EventTimeSection_O7lDS:first-child {
+  margin-bottom: 12px; }
+
+.partnereventdates_EventTimeSection_O7lDS:last-child {
+  margin-bottom: 0px; }
+
+.partnereventdates_EventTimeTitle_1-4F8 {
+  font-size: 11px;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 3px; }
+
+.partnereventdates_EventVisibilityItem_Z5DNw {
+  line-height: 24px; }
+
+.partnereventdates_EventEditorInputPaneContainer_3Fhef input.partnereventdates_TimeWidth_3_7ku {
+  font-size: 15px; }
+
+.partnereventdates_EventPublishTimeCtn_3mtSl {
+  margin-left: 20px;
+  margin-top: 8px; }
+
+.partnereventdates_TimeWidth_3_7ku {
+  max-width: 200px; }
+
+.partnereventdates_InputBorder_2-wu6.partnereventdates_TimeBlock_9q9ZA {
+  margin-right: 8px; }
+
+.partnereventdates_TimeRowContainer_2cnMo {
+  justify-content: flex-start;
+  padding: 10px;
+  border-radius: 3px;
+  background-color: rgba(57, 61, 71, 0.5); }
+
+.partnereventdates_TimeRowDropDown_VlpIL {
+  margin-top: 5px;
+  padding-top: 10px;
+  margin-bottom: 15px;
+  margin-left: 10px;
+  padding-left: 20px;
+  border-left: #399aec 1px solid; }
+
+.partnereventdates_TimeRowDropDown_VlpIL > .partnereventdates_EndDateAmountCtn_1Xbr7 {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 8px;
+  width: 50%; }
+
+.partnereventdates_TimeRowDropDown_VlpIL > .partnereventdates_EndRound_1ppi6 > span {
+  margin-bottom: 0px; }
+
+.partnereventdates_VisibilityItemList_1Cnd3 {
+  display: flex;
+  flex-direction: column; }
+
+.partnereventdates_VisibilityItems_1m6k3 {
+  padding: 10px;
+  border-radius: 3px;
+  background: rgba(57, 61, 71, 0.5); }
+
+.partnereventdates_EventEditorVisibilityCtn_3hqZR {
+  margin-top: 12px; }
 
 .partnereventoptions_ThemedCtn_3JuTN {
   background-image: url(https://community.cloudflare.steamstatic.com/public/images//events/halloween_art_tile.png); }

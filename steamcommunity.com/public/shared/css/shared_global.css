@@ -2727,3 +2727,8 @@ body.v6 #footer_nav .popup_menu .hr{
 .china_footer_legal_ctn {
     margin-top: 20px;
 }
+
+.china_footer_logos img  {
+    width: 96px;
+    vertical-align: top;
+}

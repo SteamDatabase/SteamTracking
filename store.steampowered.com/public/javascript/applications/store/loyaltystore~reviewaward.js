@@ -1653,6 +1653,11 @@
                         br: a.d.readUint32,
                         bw: a.h.writeUint32,
                       },
+                      bundle_discount: {
+                        n: 17,
+                        br: a.d.readUint32,
+                        bw: a.h.writeUint32,
+                      },
                     },
                   }),
                 n.sm_m

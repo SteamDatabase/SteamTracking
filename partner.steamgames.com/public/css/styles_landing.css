@@ -760,6 +760,15 @@ p {
 	vertical-align: middle;
 }
 
+.landingTable.blueish {
+    color: #dfe3e6;
+}
+.landingTable.blueish .th {
+    background-color: #464953;
+    font-weight: 600;
+    color: #dfe3e6;
+}
+
 .landingInfoTable {
 	width: 100%;
 }

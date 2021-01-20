@@ -1770,7 +1770,7 @@
                         m.createElement(
                           "div",
                           { className: u.PointsContainer },
-                          m.createElement(C.F, { className: u.Icon }),
+                          m.createElement(C.G, { className: u.Icon }),
                           m.createElement(
                             "div",
                             { className: u.BalanceColumn },
@@ -3014,7 +3014,7 @@
               { className: Object(M.a)(u.WarningTextContainer, e.className) },
               t
             ),
-            m.createElement(C.cb, { className: u.TimeWarning }),
+            m.createElement(C.db, { className: u.TimeWarning }),
             e.children
           );
         },
@@ -3746,7 +3746,7 @@
                   alignItems: "center",
                   className: f.Header,
                 },
-                h.a.createElement(u.S, { className: f.Icon }),
+                h.a.createElement(u.T, { className: f.Icon }),
                 h.a.createElement(
                   "div",
                   { className: f.Title },
@@ -3824,7 +3824,7 @@
             h.a.createElement(
               "div",
               null,
-              h.a.createElement(u.S, { className: f.Icon }),
+              h.a.createElement(u.T, { className: f.Icon }),
               h.a.createElement("div", null, "+", i)
             )
           );
@@ -3940,22 +3940,22 @@
             h.a.createElement(D.e, {
               className: Object(x.a)($.UsePointsSvg, $.UsePointsAnim1),
             }),
-            h.a.createElement(u.b, {
+            h.a.createElement(u.c, {
               className: Object(x.a)($.UsePointsSvg, $.UsePointsAnim2),
             }),
-            h.a.createElement(u.c, {
+            h.a.createElement(u.d, {
               className: Object(x.a)($.UsePointsSvg, $.UsePointsAnim3),
             }),
             h.a.createElement(D.k, {
               className: Object(x.a)($.UsePointsSvg, $.UsePointsAnim4),
             }),
-            h.a.createElement(u.m, {
+            h.a.createElement(u.n, {
               className: Object(x.a)($.UsePointsSvg, $.UsePointsAnim5),
             }),
-            h.a.createElement(u.k, {
+            h.a.createElement(u.l, {
               className: Object(x.a)($.UsePointsSvg, $.UsePointsAnim6),
             }),
-            h.a.createElement(u.l, {
+            h.a.createElement(u.m, {
               className: Object(x.a)($.UsePointsSvg, $.UsePointsAnim7),
             }),
             h.a.createElement(D.v, {
@@ -3964,22 +3964,22 @@
             h.a.createElement(D.e, {
               className: Object(x.a)($.UsePointsSvg, $.UsePointsAnim1),
             }),
-            h.a.createElement(u.b, {
+            h.a.createElement(u.c, {
               className: Object(x.a)($.UsePointsSvg, $.UsePointsAnim2),
             }),
-            h.a.createElement(u.c, {
+            h.a.createElement(u.d, {
               className: Object(x.a)($.UsePointsSvg, $.UsePointsAnim3),
             }),
             h.a.createElement(D.k, {
               className: Object(x.a)($.UsePointsSvg, $.UsePointsAnim4),
             }),
-            h.a.createElement(u.m, {
+            h.a.createElement(u.n, {
               className: Object(x.a)($.UsePointsSvg, $.UsePointsAnim5),
             }),
-            h.a.createElement(u.k, {
+            h.a.createElement(u.l, {
               className: Object(x.a)($.UsePointsSvg, $.UsePointsAnim6),
             }),
-            h.a.createElement(u.l, {
+            h.a.createElement(u.m, {
               className: Object(x.a)($.UsePointsSvg, $.UsePointsAnim7),
             }),
             h.a.createElement(D.v, {
@@ -3988,22 +3988,22 @@
             h.a.createElement(D.e, {
               className: Object(x.a)($.UsePointsSvg, $.UsePointsAnim1),
             }),
-            h.a.createElement(u.b, {
+            h.a.createElement(u.c, {
               className: Object(x.a)($.UsePointsSvg, $.UsePointsAnim2),
             }),
-            h.a.createElement(u.c, {
+            h.a.createElement(u.d, {
               className: Object(x.a)($.UsePointsSvg, $.UsePointsAnim3),
             }),
             h.a.createElement(D.k, {
               className: Object(x.a)($.UsePointsSvg, $.UsePointsAnim4),
             }),
-            h.a.createElement(u.m, {
+            h.a.createElement(u.n, {
               className: Object(x.a)($.UsePointsSvg, $.UsePointsAnim5),
             }),
-            h.a.createElement(u.k, {
+            h.a.createElement(u.l, {
               className: Object(x.a)($.UsePointsSvg, $.UsePointsAnim6),
             }),
-            h.a.createElement(u.l, {
+            h.a.createElement(u.m, {
               className: Object(x.a)($.UsePointsSvg, $.UsePointsAnim7),
             }),
             h.a.createElement(D.v, {
@@ -5073,7 +5073,7 @@
               },
               {
                 props: {
-                  iconComponent: u.b,
+                  iconComponent: u.c,
                   children: Object(b.f)("#ShopNav_BackgroundsLink"),
                   to: r.b.LoyaltyBackgrounds(),
                 },
@@ -5085,21 +5085,21 @@
             items: [
               {
                 props: {
-                  iconComponent: u.m,
+                  iconComponent: u.n,
                   children: Object(b.f)("#ShopNav_StickersLink"),
                   to: r.b.LoyaltyStickers(),
                 },
               },
               {
                 props: {
-                  iconComponent: u.k,
+                  iconComponent: u.l,
                   children: Object(b.f)("#ShopNav_ChatEffectsLink"),
                   to: r.b.LoyaltyChatEffects(),
                 },
               },
               {
                 props: {
-                  iconComponent: u.l,
+                  iconComponent: u.m,
                   children: Object(b.f)("#ShopNav_EmoticonsLink"),
                   to: r.b.LoyaltyEmoticons(),
                 },
@@ -5119,7 +5119,7 @@
             }),
           e[1].items.push({
             props: {
-              iconComponent: u.c,
+              iconComponent: u.d,
               children: Object(b.f)("#ShopNav_SeasonalBadgeLink"),
               to: r.b.LoyaltySteamBadge(),
             },
@@ -5478,7 +5478,7 @@
                 alignItems: "center",
                 className: Me.PointsContainer,
               },
-              h.a.createElement(u.F, { className: Me.Icon }),
+              h.a.createElement(u.G, { className: Me.Icon }),
               h.a.createElement(
                 m.a,
                 {
@@ -7259,7 +7259,7 @@
                   },
                   r
                 ),
-                A.createElement(se.L, null)
+                A.createElement(se.M, null)
               ),
             i &&
               A.createElement(
@@ -7276,7 +7276,7 @@
                   },
                   r
                 ),
-                A.createElement(se.gb, null)
+                A.createElement(se.hb, null)
               ),
             o &&
               A.createElement(
@@ -7293,7 +7293,7 @@
                   },
                   r
                 ),
-                A.createElement(se.e, null)
+                A.createElement(se.f, null)
               )
           );
         }),
@@ -7397,7 +7397,7 @@
                 ? (j = A.createElement(
                     "div",
                     { className: "ContextMenuButton", onClick: n },
-                    A.createElement(se.v, null)
+                    A.createElement(se.w, null)
                   ))
                 : I.push(de.a.noContextMenu),
                 f && I.push(de.a.hidePersona),
@@ -7441,7 +7441,7 @@
                         className: de.a.DNDContainer,
                         title: Object(D.f)("#User_ToggleDoNotDisturb"),
                       },
-                      A.createElement(se.t, null)
+                      A.createElement(se.u, null)
                     ),
                   N &&
                     A.createElement(
@@ -7461,7 +7461,7 @@
                         className: de.a.PendingPersona,
                         title: Object(D.f)("#SteamChina_PendingPersonaName"),
                       },
-                      A.createElement(se.o, null)
+                      A.createElement(se.p, null)
                     ),
                   j
                 ),
@@ -7486,7 +7486,7 @@
                               className: de.a.gameIsPrivateIcon,
                               title: Object(D.f)("#User_GameInfoHidden"),
                             },
-                            A.createElement(se.B, null)
+                            A.createElement(se.C, null)
                           ),
                         w
                       ),
@@ -7804,7 +7804,7 @@
                           key: "animated",
                         }),
                       ],
-                      iconComponent: se.m,
+                      iconComponent: se.n,
                       styleOverride: a,
                       desc: Object(D.f)("#CommunityItemClass_Sticker"),
                       strPriceOverride: i,
@@ -9421,7 +9421,7 @@
           return s.a.createElement(
             "div",
             Object(o.a)({ className: Object(c.a)(l.Container, n) }, a),
-            s.a.createElement(u.F, { className: l.Icon }),
+            s.a.createElement(u.G, { className: l.Icon }),
             s.a.createElement(
               "div",
               {
@@ -10594,7 +10594,7 @@
         N = Object(i.a)(function (c) {
           return b.a.createElement(
             T,
-            Object(h.a)({}, _(c), { iconComponent: o.m }),
+            Object(h.a)({}, _(c), { iconComponent: o.n }),
             function (e) {
               var t = c.definition,
                 n = t.appid,
@@ -10613,7 +10613,7 @@
         E = Object(i.a)(function (e) {
           return b.a.createElement(
             z,
-            Object(h.a)({}, _(e), { iconComponent: o.l }),
+            Object(h.a)({}, _(e), { iconComponent: o.m }),
             b.a.createElement("img", {
               className: v.ImageSmall,
               src:
@@ -10628,7 +10628,7 @@
         S = Object(i.a)(function (e) {
           return b.a.createElement(
             z,
-            Object(h.a)({}, _(e), { iconComponent: o.k })
+            Object(h.a)({}, _(e), { iconComponent: o.l })
           );
         }),
         O = Object(i.a)(function (e) {
@@ -10640,7 +10640,7 @@
           return b.a.createElement(
             R,
             Object(h.a)({ className: v.HasAnimation }, _(e), {
-              iconComponent: o.b,
+              iconComponent: o.c,
               styleOverride: v.BackgroundOverride,
               videoProps: {
                 className: v.ImageBackground,
@@ -10685,7 +10685,7 @@
           return b.a.createElement(
             z,
             Object(h.a)({}, _(e), {
-              iconComponent: o.b,
+              iconComponent: o.c,
               styleOverride: v.BackgroundOverride,
             }),
             b.a.createElement("img", {
