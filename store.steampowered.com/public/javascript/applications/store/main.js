@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6321276";
+var CLSTAMP = "6323149";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [9],
   {
@@ -11483,38 +11483,37 @@ var CLSTAMP = "6321276";
               if (!u.formatted_final_price) return null;
               var d = u.formatted_final_price,
                 m = u.discount_end_rtime,
-                h = u.discount_percent,
-                f = Object(Pe.a)(u, p),
-                b = [d, f || ""],
-                _ = I.f.apply(void 0, Object(R.g)([o], b)),
-                v = I.f.apply(
+                h = (u.discount_percent, Object(Pe.a)(u, p)),
+                f = [d, h || ""],
+                b = I.f.apply(void 0, Object(R.g)([o], f)),
+                _ = I.f.apply(
                   void 0,
-                  Object(R.g)(["#Sale_Subscription_Save"], b)
+                  Object(R.g)(["#Sale_Subscription_Save"], f)
                 ),
-                g = I.f.apply(void 0, Object(R.g)([s], b));
+                v = I.f.apply(void 0, Object(R.g)([s], f));
               u.renewal_formatted_final_price &&
                 d != u.renewal_formatted_final_price &&
-                ((_ = Object(I.f)(i, d)),
-                (g = Object(I.f)(c, u.renewal_formatted_final_price)));
-              var M,
-                y,
-                S = null;
+                ((b = Object(I.f)(i, d)),
+                (v = Object(I.f)(c, u.renewal_formatted_final_price)));
+              var g,
+                M,
+                y = null;
               n &&
-                ((y = null),
-                (y =
-                  "string" == typeof (M = Object(Y.a)(n, t))
-                    ? D.createElement("img", { src: M })
-                    : D.createElement(Ge.a, { rgSources: M })),
-                (S = D.createElement("div", { className: xe.a.LogoImg }, y)));
-              var E = (function (e) {
+                ((M = null),
+                (M =
+                  "string" == typeof (g = Object(Y.a)(n, t))
+                    ? D.createElement("img", { src: g })
+                    : D.createElement(Ge.a, { rgSources: g })),
+                (y = D.createElement("div", { className: xe.a.LogoImg }, M)));
+              var S = (function (e) {
                   for (var t = 0, n = e.appids; t < n.length; t++) {
                     var r = n[t];
                     if (W.a.BOwnsApp(r)) return !0;
                   }
                   return !1;
                 })(u),
-                O = null,
-                O = W.a.BOwnsPackage(r)
+                E = null,
+                E = W.a.BOwnsPackage(r)
                   ? D.createElement(
                       "div",
                       {
@@ -11525,7 +11524,7 @@ var CLSTAMP = "6321276";
                       },
                       Object(I.f)("#Sale_Subscription_AlreadyOwnedPackage")
                     )
-                  : E
+                  : S
                   ? D.createElement(
                       "div",
                       {
@@ -11550,7 +11549,7 @@ var CLSTAMP = "6321276";
               return D.createElement(
                 "div",
                 { className: xe.a.SubscriptionBlock },
-                S,
+                y,
                 D.createElement(
                   "div",
                   { className: xe.a.PriceBlock },
@@ -11562,43 +11561,30 @@ var CLSTAMP = "6321276";
                         Boolean(m) ? xe.a.LimitedDiscount : ""
                       ),
                     },
-                    _
+                    b
                   ),
-                  Boolean(f) &&
+                  Boolean(h) &&
                     D.createElement(
                       "span",
                       { className: xe.a.SavingsDisplay },
-                      v
-                    ),
-                  Boolean(m) &&
-                    D.createElement(
-                      "span",
-                      {
-                        className: Object(N.a)(
-                          xe.a.PriceDisplay,
-                          xe.a.LimitedDiscount
-                        ),
-                      },
-                      Object(I.f)("#Sale_Subscription_Asterisk")
+                      _
                     )
                 ),
-                D.createElement("div", { className: xe.a.BodyTextBlock }, g),
-                O,
-                Boolean(m) &&
-                  D.createElement(
-                    "div",
-                    { className: xe.a.ExpirationTextBlock },
-                    Object(I.n)(
-                      "#Sale_Subscription_DiscountEnd",
-                      Object(I.o)(m),
-                      D.createElement(
-                        "span",
-                        { className: xe.a.DiscountPriceBlock },
-                        h + "%",
-                        " "
+                D.createElement(
+                  "div",
+                  { className: xe.a.BodyTextBlock },
+                  v,
+                  Boolean(m) &&
+                    D.createElement(
+                      "div",
+                      { className: xe.a.ExpirationTextBlock },
+                      Object(I.n)(
+                        "#Sale_Subscription_NewSubsOfferEnds",
+                        Object(I.o)(m)
                       )
                     )
-                  )
+                ),
+                E
               );
             }),
             Object(R.c)([B.a], t.prototype, "OnClickPurchase", null),
