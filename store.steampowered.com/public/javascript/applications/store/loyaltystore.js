@@ -4961,13 +4961,14 @@
                 isActive: ve(!0),
               },
             }),
-          e[1].items.push({
-            props: {
-              iconComponent: u.d,
-              children: Object(b.f)("#ShopNav_SeasonalBadgeLink"),
-              to: r.b.LoyaltySteamBadge(),
-            },
-          }),
+          t ||
+            e[1].items.push({
+              props: {
+                iconComponent: u.d,
+                children: Object(b.f)("#ShopNav_SeasonalBadgeLink"),
+                to: r.b.LoyaltySteamBadge(),
+              },
+            }),
           p.b.Get().BHasAutumnSaleStarted(),
           t ||
             e[1].items.push({
