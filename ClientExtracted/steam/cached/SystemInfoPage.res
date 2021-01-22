@@ -88,10 +88,10 @@
 		"textAlignment"		"west"
 		"wrap"		"1"
 	}
-	"URLLabel1"
+	"SurveyLink"
 	{
 		"ControlName"		"URLLabel"
-		"fieldName"		"URLLabel1"
+		"fieldName"		"SurveyLink"
 		"xpos"		"11"
 		"ypos"		"290"
 		"wide"		"396"

@@ -63,6 +63,8 @@ public:
     virtual unknown_ret GetRemotePlaySessionID(unsigned long long) = 0;
     virtual unknown_ret CursorVisibilityChanged(bool) = 0;
     virtual unknown_ret SetInputGenerated(bool, int) = 0;
+    virtual unknown_ret GetControllerVirtualCursor(unsigned int, GroupId, ControllerAnalogCursorData_t*) = 0;
+    virtual unknown_ret UpdateControllerVirtualCursor() = 0;
     virtual unknown_ret Validate(CValidator&, char const*) = 0;
     virtual unknown_ret GetNumConnectedControllers() = 0;
     virtual unknown_ret GetControllerDetails(unsigned int) = 0;

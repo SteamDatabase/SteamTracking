@@ -121,4 +121,5 @@ typedef enum EControllerSetting
     k_EControllerSettingActivate_stick_or_trackpad, // activate_stick_or_trackpad
     k_EControllerSettingFrame_time, // frame_time
     k_EControllerSettingTransition_time, // transition_time
+    k_EControllerSettingActivation_button, // activation_button
 } EControllerSetting;

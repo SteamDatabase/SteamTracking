@@ -19,4 +19,5 @@ typedef enum EControllerSourceMode
     k_EControllerSourceModeSwitches, // switches
     k_EControllerSourceModeFlickstick, // flickstick
     k_EControllerSourceMode2dscroll, // 2dscroll
+    k_EControllerSourceModeHotbar, // hotbar
 } EControllerSourceMode;
