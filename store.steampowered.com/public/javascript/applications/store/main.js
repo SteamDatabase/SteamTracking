@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6323149";
+var CLSTAMP = "6324737";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [9],
   {
@@ -47587,24 +47587,24 @@ var CLSTAMP = "6323149";
         return T;
       });
       var l = n("mrSG"),
-        f = n("q1tI"),
         r = n("TyAF"),
-        b = n("TLQK"),
+        f = n("q1tI"),
+        b = n("9w6b"),
         _ = n("6oCP"),
-        a = n("bxiW"),
-        v = n("9w6b"),
-        o = n("ka0M"),
-        i = n("X3Ds"),
+        v = n("Mgs7"),
+        g = n("IjL/"),
         c = n("Jqb/"),
-        s = n("qP7j"),
-        u = n.n(s),
+        M = n("TLQK"),
+        a = n("bxiW"),
+        o = n("qP7j"),
+        u = n.n(o),
         p = n("mgoM"),
         d = n("0OaU"),
-        g = n("lkRc"),
-        m = n("bDQf"),
-        h = n("vDqi"),
-        M = n.n(h),
-        y = new ((function () {
+        y = n("lkRc"),
+        i = n("bDQf"),
+        s = n("vDqi"),
+        m = n.n(s),
+        h = new ((function () {
           function e() {}
           return (
             (e.prototype.DeleteForumTopic = function (a, o, i, s, c) {
@@ -47615,18 +47615,18 @@ var CLSTAMP = "6323149";
                     case 0:
                       return (
                         (t =
-                          g.c.COMMUNITY_BASE_URL +
+                          y.c.COMMUNITY_BASE_URL +
                           "forum/" +
                           a.GetAccountID() +
                           "/" +
                           o +
                           "/deletetopic/"),
                         null != i && "" != i && (t += i + "/"),
-                        (n = new FormData()).append("sessionid", g.c.SESSIONID),
+                        (n = new FormData()).append("sessionid", y.c.SESSIONID),
                         n.append("gidforumtopic", s),
                         [
                           4,
-                          M.a.post(t, n, {
+                          m.a.post(t, n, {
                             withCredentials: !0,
                             cancelToken: c.token,
                           }),
@@ -47646,7 +47646,7 @@ var CLSTAMP = "6323149";
           function s(e) {
             var t = n.call(this, e) || this;
             return (
-              (t.m_cancelSignal = M.a.CancelToken.source()),
+              (t.m_cancelSignal = m.a.CancelToken.source()),
               (t.state = {
                 dialogState: t.props.bNoConfirmationNeeded
                   ? "waiting"
@@ -47664,7 +47664,7 @@ var CLSTAMP = "6323149";
             (s.prototype.OnDeleteEventSuccessCallback = function () {
               this.props.partnerEventStore.ResetModel(),
                 this.state.bDeleteCommentThread
-                  ? y
+                  ? h
                       .DeleteForumTopic(
                         this.m_clanSteamID,
                         "Event",
@@ -47684,14 +47684,14 @@ var CLSTAMP = "6323149";
             }),
             (s.prototype.OnDeleteEventFailureCallback = function (e) {
               this.setState(
-                Object(l.a)({ dialogState: "error" }, Object(m.a)(e))
+                Object(l.a)({ dialogState: "error" }, Object(i.a)(e))
               );
             }),
             (s.prototype.OnDeleteForumTopicFailureCallback = function (e) {
               this.setState(
                 Object(l.a)(
                   { dialogState: "failed_thread_delete" },
-                  Object(m.a)(e)
+                  Object(i.a)(e)
                 )
               );
             }),
@@ -47738,11 +47738,11 @@ var CLSTAMP = "6323149";
                 a = new Array();
               switch (this.state.dialogState) {
                 case "confirmation":
-                  var o = t.GetNameWithFallback(Object(p.g)(g.c.LANGUAGE)),
+                  var o = t.GetNameWithFallback(Object(p.g)(y.c.LANGUAGE)),
                     i = t.BIsVisibleEvent()
                       ? "#EventDisplay_AreYouSure_Visible"
                       : "#EventDisplay_AreYouSure",
-                    r = Object(b.f)(i, o),
+                    r = Object(M.f)(i, o),
                     n = this.OnDelete;
                   t.BHasForumTopicGID() &&
                     a.push(
@@ -47762,17 +47762,17 @@ var CLSTAMP = "6323149";
                         f.createElement(
                           "label",
                           { htmlFor: "del_cmt_post" },
-                          Object(b.f)("#EventDisplay_DeleteEvent_Comment")
+                          Object(M.f)("#EventDisplay_DeleteEvent_Comment")
                         )
                       )
                     );
                   break;
                 case "waiting":
-                  (r = Object(b.f)("#EventDisplay_DeleteEvent_InProgress")),
+                  (r = Object(M.f)("#EventDisplay_DeleteEvent_InProgress")),
                     a.push(f.createElement(d.a, { key: "throbber" }));
                   break;
                 case "error":
-                  (r = Object(b.f)("#EventDisplay_DeleteEvent_Error")),
+                  (r = Object(M.f)("#EventDisplay_DeleteEvent_Error")),
                     a.push(
                       f.createElement(
                         "div",
@@ -47785,7 +47785,7 @@ var CLSTAMP = "6323149";
                     );
                   break;
                 case "failed_thread_delete":
-                  (r = Object(b.f)(
+                  (r = Object(M.f)(
                     "#EventDisplay_DeleteEvent_ForumTopicError"
                   )),
                     a.push(
@@ -47805,7 +47805,7 @@ var CLSTAMP = "6323149";
                       });
                   break;
                 case "success":
-                  (r = Object(b.f)("#EventDisplay_DeleteEvent_Success")),
+                  (r = Object(M.f)("#EventDisplay_DeleteEvent_Success")),
                     this.props.onDeleteSuccessAndCloseDialog &&
                       (n = function () {
                         e.props.onDeleteSuccessAndCloseDialog(),
@@ -47815,7 +47815,7 @@ var CLSTAMP = "6323149";
               return f.createElement(
                 c.c,
                 {
-                  strTitle: Object(b.f)("#EventDisplay_DeleteEvent"),
+                  strTitle: Object(M.f)("#EventDisplay_DeleteEvent"),
                   strDescription: r,
                   onCancel: this.props.closeModal,
                   onOK: n,
@@ -47857,11 +47857,11 @@ var CLSTAMP = "6323149";
             s
           );
         })(f.Component),
-        E = n("IjL/"),
-        O = n("Mgs7"),
-        A = n("mB/g"),
+        E = n("mB/g"),
+        O = n("fpVW"),
+        A = n("ka0M"),
         C = n("exH9"),
-        w = n("fpVW"),
+        w = n("X3Ds"),
         L = n("6eA3"),
         T = (function (t) {
           function e() {
@@ -47895,14 +47895,14 @@ var CLSTAMP = "6323149";
           return (
             Object(l.d)(e, t),
             (e.prototype.OnDeleteVerifyRequest = function (e) {
-              Object(o.c)(
+              Object(A.c)(
                 f.createElement(S, {
                   eventModel: this.props.eventModel,
                   onDeleteSuccessAndCloseDialog: this
                     .OnDeleteSuccessAndComplete,
                   partnerEventStore: this.props.partnerEventStore,
                 }),
-                Object(i.m)(e)
+                Object(w.m)(e)
               );
             }),
             (e.prototype.OnDeleteSuccessAndComplete = function () {
@@ -47921,8 +47921,8 @@ var CLSTAMP = "6323149";
                 o = e.partnerEventStore,
                 i = e.useAnchors;
               if (this.state.bRedirectToHome)
-                return Object(A.i)(r, A.a.k_eCommunityAdminPage);
-              var s = v.a.Get().GetPartnerEventPermissions(r.clanSteamID),
+                return Object(E.i)(r, E.a.k_eCommunityAdminPage);
+              var s = b.a.Get().GetPartnerEventPermissions(r.clanSteamID),
                 c = r.visibility_state == _.b.k_EEventStateVisible,
                 l = r.visibility_state == _.b.k_EEventStateStaged;
               if (s.can_edit || s.support_user) {
@@ -47930,14 +47930,14 @@ var CLSTAMP = "6323149";
                 if (void 0 !== this.state.nMaxSaleDayIndex)
                   for (var p = 0; p <= this.state.nMaxSaleDayIndex; ++p)
                     u.push({
-                      label: Object(b.f)("#SalePage_Admin_SaleEventDay", p + 1),
+                      label: Object(M.f)("#SalePage_Admin_SaleEventDay", p + 1),
                       data: p,
                     });
-                var d = Object(g.e)(),
+                var d = Object(y.e)(),
                   m = "community" == d,
                   h = "store" == d;
                 return f.createElement(
-                  E.a,
+                  g.a,
                   null,
                   f.createElement(
                     "div",
@@ -47945,7 +47945,7 @@ var CLSTAMP = "6323149";
                     f.createElement(
                       "span",
                       { className: L.DisplayAdminPanel_Title },
-                      Object(b.f)("#EventDisplay_Admin_Title")
+                      Object(M.f)("#EventDisplay_Admin_Title")
                     ),
                     f.createElement(
                       "div",
@@ -47958,37 +47958,37 @@ var CLSTAMP = "6323149";
                           " "
                         ),
                       f.createElement(
-                        A.c,
+                        E.c,
                         {
                           eventModel: r,
-                          route: A.a.k_eCommunityEdit,
+                          route: E.a.k_eCommunityEdit,
                           openNewWindow: i,
-                          className: Object(C.a)(w.Button, L.AdminButton),
+                          className: Object(C.a)(O.Button, L.AdminButton),
                         },
-                        Object(b.f)("#EventEditor_Edit")
+                        Object(M.f)("#EventEditor_Edit")
                       ),
                       o &&
                         f.createElement(
                           "span",
                           {
-                            className: w.Button + " " + L.AdminButton,
+                            className: O.Button + " " + L.AdminButton,
                             onClick: this.OnDeleteVerifyRequest,
                           },
-                          Object(b.f)("#EventDisplay_DeleteEvent")
+                          Object(M.f)("#EventDisplay_DeleteEvent")
                         ),
                       !c &&
                         f.createElement(
                           f.Fragment,
                           null,
                           f.createElement(
-                            A.c,
+                            E.c,
                             {
                               eventModel: r,
-                              route: A.a.k_eCommunityPublish,
+                              route: E.a.k_eCommunityPublish,
                               openNewWindow: i,
-                              className: Object(C.a)(w.Button, L.AdminButton),
+                              className: Object(C.a)(O.Button, L.AdminButton),
                             },
-                            Object(b.f)(
+                            Object(M.f)(
                               l
                                 ? "#EventEditor_Publish_VisibleNow"
                                 : "#Button_Publish"
@@ -47996,20 +47996,20 @@ var CLSTAMP = "6323149";
                           )
                         ),
                       f.createElement(
-                        A.c,
+                        E.c,
                         {
                           eventModel: r,
-                          route: A.a.k_eCommunityAdminPage,
+                          route: E.a.k_eCommunityAdminPage,
                           openNewWindow: i,
-                          className: Object(C.a)(w.Button, L.AdminButton),
+                          className: Object(C.a)(O.Button, L.AdminButton),
                         },
-                        Object(b.f)("#EventDisplay_Events")
+                        Object(M.f)("#EventDisplay_Events")
                       ),
                       Boolean(
                         void 0 !== this.state.nMaxSaleDayIndex && 0 < u.length
                       ) &&
-                        f.createElement(O.h, {
-                          strDropDownClassName: w.DropDownScroll,
+                        f.createElement(v.h, {
+                          strDropDownClassName: O.DropDownScroll,
                           rgOptions: u,
                           selectedOption: Math.min(
                             this.state.nMaxSaleDayIndex,
@@ -48027,57 +48027,57 @@ var CLSTAMP = "6323149";
                         r.jsondata.bSaleEnabled && this.props.bPreviewMode
                       ) &&
                         f.createElement(
-                          A.c,
+                          E.c,
                           {
                             eventModel: r,
-                            route: A.a.k_eStoreSalePage,
+                            route: E.a.k_eStoreSalePage,
                             openNewWindow: i,
-                            className: Object(C.a)(w.Button, L.AdminButton),
+                            className: Object(C.a)(O.Button, L.AdminButton),
                           },
-                          Object(b.f)("#EventDisplay_SalesPage")
+                          Object(M.f)("#EventDisplay_SalesPage")
                         ),
                       Boolean(
-                        r.jsondata.bSaleEnabled && g.i.is_support && r.GID
+                        r.jsondata.bSaleEnabled && y.i.is_support && r.GID
                       ) &&
                         f.createElement(
                           "a",
                           {
                             href:
-                              g.c.STATS_BASE_URL +
+                              y.c.STATS_BASE_URL +
                               "sales/details/?gid=" +
                               r.GID +
                               "&clanid=" +
                               r.clanSteamID.GetAccountID(),
-                            target: g.c.IN_CLIENT ? "" : "_blank",
+                            target: y.c.IN_CLIENT ? "" : "_blank",
                             className: Object(C.a)(
-                              w.Button,
+                              O.Button,
                               L.AdminButton,
-                              w.ValveOnlyBackground
+                              O.ValveOnlyBackground
                             ),
                           },
-                          Object(b.f)("#EventDisplay_StatsPage")
+                          Object(M.f)("#EventDisplay_StatsPage")
                         ),
                       Boolean(c && (h || a)) &&
                         f.createElement(
-                          A.c,
+                          E.c,
                           {
                             eventModel: r,
-                            route: A.a.k_eCommunityView,
+                            route: E.a.k_eCommunityView,
                             openNewWindow: i,
-                            className: Object(C.a)(w.Button, L.AdminButton),
+                            className: Object(C.a)(O.Button, L.AdminButton),
                           },
-                          Object(b.f)("#EventDisplay_ViewOnCommunity")
+                          Object(M.f)("#EventDisplay_ViewOnCommunity")
                         ),
                       Boolean(c && m) &&
                         f.createElement(
-                          A.c,
+                          E.c,
                           {
                             eventModel: r,
-                            route: A.a.k_eStoreView,
+                            route: E.a.k_eStoreView,
                             openNewWindow: i,
-                            className: Object(C.a)(w.Button, L.AdminButton),
+                            className: Object(C.a)(O.Button, L.AdminButton),
                           },
-                          Object(b.f)("#EventDisplay_ViewOnStore")
+                          Object(M.f)("#EventDisplay_ViewOnStore")
                         )
                     )
                   )
