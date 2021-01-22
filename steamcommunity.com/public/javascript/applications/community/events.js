@@ -15014,191 +15014,7 @@
               );
         }),
         Gi = n("BRUS"),
-        ki = (function () {
-          function e() {
-            var t = this;
-            (this.m_mapList = new Map()),
-              (this.m_mapEventGIDToLists = new Map()),
-              (this.m_mapListIDToClanAccount = new Map()),
-              "dev" == D.b.WEB_UNIVERSE && (window.g_curatorListStore = this);
-            var e = Object(D.e)("curatorlistdata", "application_config");
-            ("dev" != D.b.WEB_UNIVERSE && "beta" != D.b.WEB_UNIVERSE) ||
-              console.log(
-                "DEV_DEBUG: CCuratorListStore loading list payload: " +
-                  (null == e ? void 0 : e.length),
-                e
-              ),
-              this.ValidateStoreDefault(e) &&
-                Object(k.G)(function () {
-                  e.forEach(function (e) {
-                    t.m_mapList.set(e.listid, e);
-                  });
-                });
-          }
-          return (
-            (e.prototype.GetListDetails = function (e) {
-              return this.m_mapList.get(e);
-            }),
-            (e.prototype.GetAllSaleCurationLists = function (e) {
-              return this.m_mapEventGIDToLists.get(e) || [];
-            }),
-            (e.prototype.GetClanAccountFromListID = function (e) {
-              return this.m_mapListIDToClanAccount.get(e);
-            }),
-            (e.prototype.LoadListDetails = function (o, l, s) {
-              var c;
-              return Object(I.b)(this, void 0, void 0, function () {
-                var t, n, a, i, r;
-                return Object(I.e)(this, function (e) {
-                  switch (e.label) {
-                    case 0:
-                      if (this.m_mapList.has(l))
-                        return [2, this.m_mapList.get(l)];
-                      (t =
-                        D.b.STORE_BASE_URL +
-                        "curator/" +
-                        o.GetAccountID() +
-                        "/admin/ajaxgetlistdetails"),
-                        (n = { listid: l }),
-                        (e.label = 1);
-                    case 1:
-                      return (
-                        e.trys.push([1, 3, , 4]),
-                        [
-                          4,
-                          L.a.get(t, {
-                            params: n,
-                            cancelToken: null == s ? void 0 : s.token,
-                          }),
-                        ]
-                      );
-                    case 2:
-                      return (
-                        (a = e.sent()),
-                        1 ==
-                        (null === (c = null == a ? void 0 : a.data) ||
-                        void 0 === c
-                          ? void 0
-                          : c.success)
-                          ? (this.m_mapList.set(l, a.data.list_details),
-                            this.m_mapListIDToClanAccount.set(
-                              a.data.list_details.listid,
-                              o.GetAccountID()
-                            ),
-                            [2, a.data.list_details])
-                          : [3, 4]
-                      );
-                    case 3:
-                      return (
-                        (i = e.sent()),
-                        (r = Object(ue.a)(i)),
-                        console.error(
-                          "CCuratorListStore.LoadListDetails: error on load: " +
-                            r.strErrorMsg,
-                          r
-                        ),
-                        [3, 4]
-                      );
-                    case 4:
-                      return [2, null];
-                  }
-                });
-              });
-            }),
-            (e.prototype.LoadAllSaleCurationLists = function (l, s, c) {
-              var d;
-              return Object(I.b)(this, void 0, void 0, function () {
-                var t,
-                  n,
-                  a,
-                  i,
-                  r,
-                  o = this;
-                return Object(I.e)(this, function (e) {
-                  switch (e.label) {
-                    case 0:
-                      if (this.m_mapEventGIDToLists.has(s))
-                        return [2, this.m_mapEventGIDToLists.get(s)];
-                      (t =
-                        D.b.STORE_BASE_URL + "curators/ajaxfindcuratorlists"),
-                        (n = {
-                          clan_account_id: l.GetAccountID(),
-                          clan_event_gid: s,
-                        }),
-                        (e.label = 1);
-                    case 1:
-                      return (
-                        e.trys.push([1, 3, , 4]),
-                        [
-                          4,
-                          L.a.get(t, {
-                            params: n,
-                            cancelToken: null == c ? void 0 : c.token,
-                          }),
-                        ]
-                      );
-                    case 2:
-                      return (
-                        (a = e.sent()),
-                        1 ==
-                        (null === (d = null == a ? void 0 : a.data) ||
-                        void 0 === d
-                          ? void 0
-                          : d.success)
-                          ? (Object(k.G)(function () {
-                              o.m_mapEventGIDToLists.set(
-                                s,
-                                a.data.matches || []
-                              ),
-                                a.data.matches &&
-                                  a.data.matches.forEach(function (t) {
-                                    t.multi_detail_lists.forEach(function (e) {
-                                      o.m_mapListIDToClanAccount.set(
-                                        e.listid,
-                                        t.clan_account_id
-                                      ),
-                                        o.m_mapList.set(e.listid, e);
-                                    });
-                                  });
-                            }),
-                            [2, a.data.matches])
-                          : [3, 4]
-                      );
-                    case 3:
-                      return (
-                        (i = e.sent()),
-                        (r = Object(ue.a)(i)),
-                        console.error(
-                          "CCuratorListStore.LoadAllSaleCurationLists: error on load: " +
-                            r.strErrorMsg,
-                          r
-                        ),
-                        [3, 4]
-                      );
-                    case 4:
-                      return [2, null];
-                  }
-                });
-              });
-            }),
-            (e.Get = function () {
-              return e.s_Singleton || (e.s_Singleton = new e()), e.s_Singleton;
-            }),
-            (e.prototype.ValidateStoreDefault = function (e) {
-              var t = e;
-              return t &&
-                Array.isArray(t) &&
-                0 < t.length &&
-                "object" == typeof t[0]
-                ? "string" == typeof t[0].listid &&
-                    "number" == typeof t[0].list_type &&
-                    "number" == typeof t[0].list_state
-                : t && Array.isArray(t) && 0 == t.length;
-            }),
-            Object(I.c)([k.C], e.prototype, "m_mapList", void 0),
-            e
-          );
-        })(),
+        ki = n("UCyf"),
         Ni = n("66At"),
         Li = (function (e) {
           function t() {
@@ -15479,7 +15295,7 @@
                       ? ((n = new Array()),
                         i.featured_curator_list.forEach(function (e) {
                           var t = G.a.InitFromClanID(e.clanAccountID);
-                          n.push(ki.Get().LoadListDetails(t, e.listID, a));
+                          n.push(ki.a.Get().LoadListDetails(t, e.listID, a));
                         }),
                         Promise.all(n).then(function () {
                           return l(!1);
@@ -15544,7 +15360,7 @@
                 )
                   return We.createElement("div", null, Object(M.f)("#Error"));
                 var t,
-                  n = ki.Get().GetListDetails(e.listID);
+                  n = ki.a.Get().GetListDetails(e.listID);
                 return n
                   ? We.createElement("div", null, n.title)
                   : We.createElement(mt.a, {
@@ -15599,7 +15415,7 @@
               return (
                 u
                   ? ((e = L.a.CancelToken.source()),
-                    ki
+                    ki.a
                       .Get()
                       .LoadAllSaleCurationLists(i, r, e)
                       .then(function (e) {
@@ -15630,7 +15446,8 @@
               },
             },
             _ = new Array();
-          ki.Get()
+          ki.a
+            .Get()
             .GetAllSaleCurationLists(a.GetGID())
             .forEach(function (e) {
               e.multi_detail_lists.forEach(function (t) {
@@ -15709,7 +15526,7 @@
                     onOK: function () {
                       var e = d.value;
                       n.featured_curator_list.push({
-                        clanAccountID: ki.Get().GetClanAccountFromListID(e),
+                        clanAccountID: ki.a.Get().GetClanAccountFromListID(e),
                         listID: e,
                       }),
                         a.SetDirty(J.jsondata_sales),
@@ -15787,7 +15604,7 @@
       function Vi(e, t) {
         return e.disable_background
           ? { background: "transparent" }
-          : Object(fa.f)(e, t);
+          : Object(fa.g)(e, t);
       }
       var zi = (function (n) {
           function e(e) {
@@ -17022,7 +16839,7 @@
                             },
                             Object(M.f)("#Sale_Section_Background_Color")
                           ),
-                          We.createElement(fa.a, {
+                          We.createElement(fa.b, {
                             text: Object(M.f)("#Sale_SeeAllSpecials"),
                             url: "",
                             color: l,
@@ -17360,7 +17177,7 @@
               onChange: function (e) {
                 e ? o.add(t.unique_id) : o.delete(t.unique_id);
               },
-              label: Object(fa.h)(t, i.GetCurEditLanguage()) + a,
+              label: Object(fa.i)(t, i.GetCurEditLanguage()) + a,
               checked: o.has(t.unique_id),
             });
           })),
@@ -17401,7 +17218,7 @@
                         return e.unique_id === t;
                       })
                     : null;
-                  e && i.push(Object(fa.h)(e, a));
+                  e && i.push(Object(fa.i)(e, a));
                 })(o[r]);
               }
               return 0 === i.length
@@ -17502,7 +17319,7 @@
           );
         };
       function Ji(e, t, n, a, i) {
-        var r = Object(fa.e)(e, t, n.GetClanSteamID().GetAccountID(), i);
+        var r = Object(fa.f)(e, t, n.GetClanSteamID().GetAccountID(), i);
         if (r) return r;
         var o = Object(M.f)("#Sale_Section_Header", a + 1),
           l = "#Sale_Section_Type_" + e.section_type,
@@ -17875,7 +17692,7 @@
               l = o.sale_font,
               s = o.sale_section_font_size,
               c = o.sale_section_disable_capitalize,
-              d = Object(fa.d)(a),
+              d = Object(fa.e)(a),
               p = this.props.saleSection.section_type || r[0].data,
               u = Boolean(M.a.GetWithFallback(a.localized_label, i)),
               m =
@@ -18318,7 +18135,7 @@
                             return e.unique_id == t;
                           });
                           a += e
-                            ? Object(fa.h)(e, Object(P.e)(D.b.LANGUAGE))
+                            ? Object(fa.i)(e, Object(P.e)(D.b.LANGUAGE))
                             : Object(M.f)("#EventCalendar_MuteApp_Unknown");
                         })
                       : (a = Object(M.f)("#Sale_Section_ShowOnTabs_All")),
@@ -18507,10 +18324,10 @@
                             h.a.FlexCenter,
                             Rn.UploadLinkRow
                           ),
-                          href: Object(fa.g)(t.url),
+                          href: Object(fa.h)(t.url),
                           target: D.b.IN_CLIENT ? void 0 : "_blank",
                         },
-                        Object(fa.g)(t.url),
+                        Object(fa.h)(t.url),
                         We.createElement(
                           "div",
                           { className: Rn.UploadLinkImageButton },
@@ -19003,7 +18820,7 @@
         })(We.Component);
       function lr(e, t) {
         return (
-          Object(fa.h)(e, t) ||
+          Object(fa.i)(e, t) ||
           Object(M.f)("#Sale_Tabs_UnnamedTab", e.unique_id)
         );
       }
@@ -20792,7 +20609,7 @@
                 {
                   className: h.a.FlexCenter,
                   bDisableContextMenu: !0,
-                  href: Object(fa.g)(i),
+                  href: Object(fa.h)(i),
                 },
                 a
                   ? We.createElement("img", {
@@ -21795,6 +21612,7 @@
                           ],
                         },
                         rgStoreTagFilter: null,
+                        matchingCapsules: null,
                       };
                     n.facetValues.push(o);
                   }
@@ -21939,6 +21757,7 @@
                         subtitle: [],
                         filter: { clauses: [] },
                         rgStoreTagFilter: null,
+                        matchingCapsules: null,
                       }),
                         r();
                     },
@@ -22401,28 +22220,28 @@
             )
           );
         });
-      function kr(l) {
+      function kr(o) {
         return Object(I.b)(this, void 0, void 0, function () {
-          var t, n, a, i, r, o;
+          var t, n, a, i, r;
           return Object(I.e)(this, function (e) {
             switch (e.label) {
               case 0:
-                (t = l.GetEventModel().GetTaggedItems()),
+                (t = o.GetEventModel().GetTaggedItems()),
                   (n = t.map(function (e) {
                     return e.capsule;
                   })),
                   (a = 0),
-                  (i = l.GetSaleSections()),
+                  (i = o.GetSaleSections()),
                   (e.label = 1);
               case 1:
                 return a < i.length
                   ? (r = i[a]).enable_faceted_browsing
-                    ? ((o = r), [4, jr.a.GenerateMetadata(r, n)])
+                    ? [4, jr.a.GenerateMetadata(r, n)]
                     : [3, 4]
                   : [3, 5];
               case 2:
                 return (
-                  (o.metadata_matching_capsules = e.sent()),
+                  e.sent(),
                   [
                     4,
                     (function (v) {
@@ -26094,7 +25913,7 @@
                         { className: Io.a.StoreNavigationPlaceholder },
                         Object(M.f)("#Sale_ReservedStoreNavigation")
                       ),
-                      We.createElement(fa.c, {
+                      We.createElement(fa.d, {
                         eventModel: a,
                         bIsPreview: !0,
                         language: e.GetCurEditLanguage(),
@@ -34297,7 +34116,7 @@
                   ? We.createElement(
                       En.a,
                       null,
-                      We.createElement(fa.c, {
+                      We.createElement(fa.d, {
                         eventModel: t,
                         bIsPreview: !0,
                         language: n,

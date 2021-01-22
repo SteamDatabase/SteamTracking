@@ -1352,6 +1352,10 @@
         Sale_EventSchedule_NoEventsScheduled:
           "No events scheduled yet in this section",
         Sale_CuratorRecommendation_title: "Curator Recommendations",
+        Sale_CuratorDisplay_Explore: "Explore",
+        Sale_CuratorDisplay_ListDefaultTitle: "Curator Recommendation List",
+        Sale_CuratorDisplay_ListDefaultDesc:
+          "See the %1$s's recommendation of games listed on this event.",
         Sale_MeetDev: "Meet the Developers",
         Sale_Preferences: "Preferences",
         Sale_PlaceHolder:
