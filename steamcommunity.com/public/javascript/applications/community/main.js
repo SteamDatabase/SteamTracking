@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6325515";
+var CLSTAMP = "6329373";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [68],
   {
@@ -13165,10 +13165,10 @@ var CLSTAMP = "6325515";
           return "/profiles/:steamid/recommended/:appid/";
         },
         j = function () {
-          return "/profiles/:steamid/recommended/";
+          return "/profiles/:steamid/recommended";
         },
         k = function () {
-          return "/id/:vanity_url/recommended/";
+          return "/id/:vanity_url/recommended";
         },
         T = function () {
           return "/id/:vanity_url/friends/add";
