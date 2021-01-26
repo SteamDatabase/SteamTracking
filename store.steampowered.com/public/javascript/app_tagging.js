@@ -1,7 +1,7 @@
 
 function TagLink( tag, language )
 {
-	var url = 'https://store.steampowered.com/tag/';
+	var url = 'https://store.steampowered.com/tags/';
 	if ( language )
 		url += language + '/';
 	else
