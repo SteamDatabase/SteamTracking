@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6332440";
+var CLSTAMP = "6333446";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [9],
   {
@@ -12111,7 +12111,7 @@ var CLSTAMP = "6332440";
           var u =
             x.d.STORE_BASE_URL +
             "curator/" +
-            t.vanity_url +
+            t.clanAccountID +
             "/list/" +
             a.listid;
           D.useEffect(
@@ -41075,10 +41075,13 @@ var CLSTAMP = "6332440";
                 return !_.j.logged_in ||
                   (s.a.BIsLoaded() && 0 == s.a.GetFollowedCuratorCount())
                   ? [2, []]
-                  : ((t = _.d.STORE_BASE_URL + "curators/ajaxfindcuratorlists"),
+                  : ((t =
+                      _.d.STORE_BASE_URL +
+                      "curators/ajaxgetmycuratorsalelists"),
                     (n = {
                       clan_account_id: r.GetAccountID(),
                       clan_event_gid: a,
+                      origin: self.origin,
                       curator_clan_account_followed: s.a.BIsLoaded()
                         ? s.a.GetFollowedCuratorsAccountID().join(",")
                         : void 0,
@@ -41107,6 +41110,7 @@ var CLSTAMP = "6332440";
                     (n = {
                       clan_account_id: r.GetAccountID(),
                       clan_event_gid: a,
+                      origin: self.origin,
                     }),
                     [
                       2,

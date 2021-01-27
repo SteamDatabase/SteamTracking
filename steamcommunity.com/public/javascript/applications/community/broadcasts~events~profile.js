@@ -31456,10 +31456,13 @@
                 return !f.h.logged_in ||
                   (o.a.BIsLoaded() && 0 == o.a.GetFollowedCuratorCount())
                   ? [2, []]
-                  : ((t = f.c.STORE_BASE_URL + "curators/ajaxfindcuratorlists"),
+                  : ((t =
+                      f.c.STORE_BASE_URL +
+                      "curators/ajaxgetmycuratorsalelists"),
                     (n = {
                       clan_account_id: r.GetAccountID(),
                       clan_event_gid: a,
+                      origin: self.origin,
                       curator_clan_account_followed: o.a.BIsLoaded()
                         ? o.a.GetFollowedCuratorsAccountID().join(",")
                         : void 0,
@@ -31488,6 +31491,7 @@
                     (n = {
                       clan_account_id: r.GetAccountID(),
                       clan_event_gid: a,
+                      origin: self.origin,
                     }),
                     [
                       2,
