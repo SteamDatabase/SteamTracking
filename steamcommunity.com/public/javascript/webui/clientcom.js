@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6325515";
+var CLSTAMP = "6332441";
 !(function (t) {
   var e = {};
   function n(r) {
@@ -84,32 +84,35 @@ var CLSTAMP = "6325515";
   },
   "1n9R": function (t, e, n) {
     "use strict";
-    n.d(e, "c", function () {
+    n.d(e, "d", function () {
       return c;
     }),
-      n.d(e, "i", function () {
+      n.d(e, "j", function () {
         return u;
       }),
-      n.d(e, "a", function () {
+      n.d(e, "b", function () {
         return s;
       }),
-      n.d(e, "b", function () {
+      n.d(e, "c", function () {
         return a;
       }),
-      n.d(e, "f", function () {
-        return f;
-      }),
-      n.d(e, "h", function () {
+      n.d(e, "g", function () {
         return l;
       }),
-      n.d(e, "g", function () {
+      n.d(e, "a", function () {
+        return f;
+      }),
+      n.d(e, "i", function () {
         return _;
       }),
-      n.d(e, "d", function () {
+      n.d(e, "h", function () {
         return p;
       }),
       n.d(e, "e", function () {
         return d;
+      }),
+      n.d(e, "f", function () {
+        return m;
       });
     n("mrSG");
     var r,
@@ -153,9 +156,9 @@ var CLSTAMP = "6325515";
         PAGE_TIMESTAMP: 0,
         get SESSIONID() {
           return (function () {
-            if (!Object(i.a)()) return r || (r = f()), r;
+            if (!Object(i.a)()) return r || (r = l()), r;
             var t = Object(i.b)("sessionid");
-            t || (t = f());
+            t || (t = l());
             return t;
           })();
         },
@@ -197,7 +200,7 @@ var CLSTAMP = "6325515";
         HAS_ADULT_CONTENT_SEX: !1,
         HAS_ADULT_CONTENT_VIOLENCE: !1,
       };
-    function f() {
+    function l() {
       var t = (function () {
         for (var t = "", e = 0; e < 24; e++)
           t += Object(o.b)(0, 35).toString(36);
@@ -205,19 +208,29 @@ var CLSTAMP = "6325515";
       })();
       return Object(i.c)("sessionid", t, 0), t;
     }
-    function l(t) {
+    function f() {
+      var t = null;
+      return (
+        Object(i.a)() && (t = Object(i.b)("presentation_mode")),
+        Boolean(t && 1 === Number.parseInt(t))
+      );
+    }
+    function _(t) {
       void 0 === t && (t = "webui_config");
       var e = {},
-        n = _("config", t);
+        n = p("config", t);
       n && (delete n.SESSIONID, Object.assign(c, n), (e.config = !0));
-      var r = _("userinfo", t);
-      r && (Object.assign(u, r), (e.userConfig = !0));
-      var o = _("broadcast", t);
+      var r = p("userinfo", t);
+      r &&
+        (Object.assign(u, r),
+        (e.userConfig = !0),
+        u.is_support && f() && (u.is_support = !1));
+      var o = p("broadcast", t);
       o && (Object.assign(s, o), (e.broadcastConfig = !0));
-      var i = _("community", t);
+      var i = p("community", t);
       return i && (Object.assign(a, i), (e.communityConfig = !0)), e;
     }
-    function _(t, e) {
+    function p(t, e) {
       var n;
       if (
         (void 0 === e && (e = "webui_config"),
@@ -232,7 +245,7 @@ var CLSTAMP = "6325515";
         }
       else console.error("Missing config element #", e);
     }
-    function p() {
+    function d() {
       if (!window || !window.location || !window.location.href)
         return console.warn("Unable to determine base url!"), "unknown";
       var t = window.location.href;
@@ -254,7 +267,7 @@ var CLSTAMP = "6325515";
         ? c.INTERNAL_STATS_BASE_URL
         : "";
     }
-    function d() {
+    function m() {
       var t = window.location.href;
       return t.startsWith(c.STORE_BASE_URL)
         ? "store"
@@ -363,8 +376,8 @@ var CLSTAMP = "6325515";
           }),
           (t.prototype.BClientAccountMatches = function () {
             return (
-              !r.i.logged_in ||
-              r.i.accountid == this.m_connection.ClientInfo.unAccountID
+              !r.j.logged_in ||
+              r.j.accountid == this.m_connection.ClientInfo.unAccountID
             );
           }),
           (t.prototype.GenericEResultCall = function (t) {
@@ -449,8 +462,8 @@ var CLSTAMP = "6325515";
             if (!this.m_socket || this.m_socket.readyState != WebSocket.OPEN)
               return !1;
             var n = Object.assign({}, t, {
-              universe: r.c.EUNIVERSE,
-              accountid: r.i.accountid,
+              universe: r.d.EUNIVERSE,
+              accountid: r.j.accountid,
             });
             void 0 !== e && (n.sequenceid = e);
             try {
@@ -585,7 +598,7 @@ var CLSTAMP = "6325515";
         return a;
       }),
       n.d(e, "g", function () {
-        return f;
+        return l;
       });
     /*! *****************************************************************************
 Copyright (c) Microsoft Corporation.
@@ -783,7 +796,7 @@ PERFORMANCE OF THIS SOFTWARE.
         };
       }
     }
-    function f() {
+    function l() {
       for (var t = 0, e = 0, n = arguments.length; e < n; e++)
         t += arguments[e].length;
       var r = Array(t),
@@ -798,16 +811,16 @@ PERFORMANCE OF THIS SOFTWARE.
     "use strict";
     var r = n("1n9R");
     n.d(e, "a", function () {
-      return r.c;
+      return r.d;
     }),
       n.d(e, "d", function () {
-        return r.i;
+        return r.j;
       }),
       n.d(e, "c", function () {
-        return r.h;
+        return r.i;
       }),
       n.d(e, "b", function () {
-        return r.d;
+        return r.e;
       });
   },
   x0hG: function (t, e, n) {

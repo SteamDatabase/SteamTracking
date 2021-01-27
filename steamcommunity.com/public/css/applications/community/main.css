@@ -361,61 +361,6 @@
 .shared_svg_library_EmoticonBow_st1_luj0t {
   fill: #E41E25; }
 
-.toggle_Toggle_3POJz {
-  width: 40px;
-  height: 16px;
-  position: relative;
-  cursor: pointer;
-  transition: opacity .2s ease-in-out; }
-  .toggle_Toggle_3POJz.toggle_Disabled_1jIKG {
-    cursor: default;
-    opacity: 0.6; }
-  .toggle_Toggle_3POJz .toggle_ToggleRail_3DiLY {
-    height: 10.66667px;
-    width: 36px;
-    border-radius: 5.33333px;
-    box-shadow: inset 1px 1px 1px #0007;
-    position: absolute;
-    left: 2.66667px;
-    top: 2.66667px;
-    background-color: #26292e; }
-    .toggle_Toggle_3POJz .toggle_ToggleRail_3DiLY.toggle_Highlight_2FNJu {
-      background-color: #2d5a81;
-      transition: width .2s ease-in-out; }
-      .toggle_Toggle_3POJz .toggle_ToggleRail_3DiLY.toggle_Highlight_2FNJu.toggle_On_3N31m {
-        width: 36px; }
-      .toggle_Toggle_3POJz .toggle_ToggleRail_3DiLY.toggle_Highlight_2FNJu.toggle_Off_1Qa-r {
-        width: 0; }
-  .toggle_Toggle_3POJz .toggle_ToggleSwitch_21X4K {
-    width: 16px;
-    height: 16px;
-    border-radius: 8px;
-    box-shadow: 0px 0px 3px #000a;
-    position: absolute;
-    left: 0;
-    transition: transform .2s ease-in-out, background-color .2s ease-in-out; }
-    .toggle_Toggle_3POJz .toggle_ToggleSwitch_21X4K.toggle_On_3N31m {
-      background-color: #16a1e1;
-      background-image: linear-gradient(to bottom, #01c7f9, #3066f5);
-      transform: translateX(25.33333px); }
-    .toggle_Toggle_3POJz .toggle_ToggleSwitch_21X4K.toggle_Off_1Qa-r {
-      background-color: #4b525d; }
-
-.toggle_ToggleRow_NnxzA {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px;
-  border-radius: 3px;
-  background-color: rgba(59, 63, 72, 0.5); }
-  .toggle_ToggleRow_NnxzA .toggle_Label_xK7Vv {
-    color: #dfe3e6;
-    font-size: 14px;
-    font-weight: 300; }
-    .toggle_ToggleRow_NnxzA .toggle_Label_xK7Vv.toggle_Disabled_1jIKG {
-      opacity: 0.3; }
-
 .contextmenu_ContextMenuMouseOverlay_3Knd7 {
   position: fixed;
   top: 0;
@@ -557,6 +502,61 @@ html.contextmenu_ContextMenuPopup_14wqd .contextmenu_contextMenuItem_1n7Wl {
     box-shadow: 0 10px 32px 0px #000000ab;
     opacity: 1.0;
     word-wrap: break-word; }
+
+.toggle_Toggle_3POJz {
+  width: 40px;
+  height: 16px;
+  position: relative;
+  cursor: pointer;
+  transition: opacity .2s ease-in-out; }
+  .toggle_Toggle_3POJz.toggle_Disabled_1jIKG {
+    cursor: default;
+    opacity: 0.6; }
+  .toggle_Toggle_3POJz .toggle_ToggleRail_3DiLY {
+    height: 10.66667px;
+    width: 36px;
+    border-radius: 5.33333px;
+    box-shadow: inset 1px 1px 1px #0007;
+    position: absolute;
+    left: 2.66667px;
+    top: 2.66667px;
+    background-color: #26292e; }
+    .toggle_Toggle_3POJz .toggle_ToggleRail_3DiLY.toggle_Highlight_2FNJu {
+      background-color: #2d5a81;
+      transition: width .2s ease-in-out; }
+      .toggle_Toggle_3POJz .toggle_ToggleRail_3DiLY.toggle_Highlight_2FNJu.toggle_On_3N31m {
+        width: 36px; }
+      .toggle_Toggle_3POJz .toggle_ToggleRail_3DiLY.toggle_Highlight_2FNJu.toggle_Off_1Qa-r {
+        width: 0; }
+  .toggle_Toggle_3POJz .toggle_ToggleSwitch_21X4K {
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 3px #000a;
+    position: absolute;
+    left: 0;
+    transition: transform .2s ease-in-out, background-color .2s ease-in-out; }
+    .toggle_Toggle_3POJz .toggle_ToggleSwitch_21X4K.toggle_On_3N31m {
+      background-color: #16a1e1;
+      background-image: linear-gradient(to bottom, #01c7f9, #3066f5);
+      transform: translateX(25.33333px); }
+    .toggle_Toggle_3POJz .toggle_ToggleSwitch_21X4K.toggle_Off_1Qa-r {
+      background-color: #4b525d; }
+
+.toggle_ToggleRow_NnxzA {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border-radius: 3px;
+  background-color: rgba(59, 63, 72, 0.5); }
+  .toggle_ToggleRow_NnxzA .toggle_Label_xK7Vv {
+    color: #dfe3e6;
+    font-size: 14px;
+    font-weight: 300; }
+    .toggle_ToggleRow_NnxzA .toggle_Label_xK7Vv.toggle_Disabled_1jIKG {
+      opacity: 0.3; }
 
 .dropdown_DialogDropDownMenu_Item_2oAiZ {
   padding: 10px 15px;

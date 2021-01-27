@@ -78,7 +78,7 @@
           }
           return (
             (e.prototype.BIsLoggedIn = function () {
-              return L.i.logged_in;
+              return L.j.logged_in;
             }),
             (e.prototype.SetTarget = function (e, t) {
               (this.m_targetID = e),
@@ -132,7 +132,7 @@
                       return this.BIsLoggedIn()
                         ? ((this.m_bPointsBalanceLoadedOrInFlight = !0),
                           (t = d.a.Init(u.g)).SetBodyFields({
-                            steamid: L.i.steamid,
+                            steamid: L.j.steamid,
                           }),
                           [4, u.o.GetSummary(this.m_transport, t)])
                         : [2, Promise.resolve(null)];
@@ -249,20 +249,20 @@
         j = a("exH9"),
         p = a("qbgq"),
         _ = a("0OaU"),
-        f = a("6Y59");
+        b = a("6Y59");
       function I(e) {
         return Object(N.f)("#RewardsReaction_" + e);
       }
       var B,
-        b,
+        f,
         M = a("oet2"),
         k = a("Mgs7");
       a("idvb");
-      ((b = B = B || {})[(b.SELECTING = 0)] = "SELECTING"),
-        (b[(b.CONFIRM = 1)] = "CONFIRM"),
-        (b[(b.SUBMITTING = 2)] = "SUBMITTING"),
-        (b[(b.DONE = 3)] = "DONE"),
-        (b[(b.ERROR = 4)] = "ERROR");
+      ((f = B = B || {})[(f.SELECTING = 0)] = "SELECTING"),
+        (f[(f.CONFIRM = 1)] = "CONFIRM"),
+        (f[(f.SUBMITTING = 2)] = "SUBMITTING"),
+        (f[(f.DONE = 3)] = "DONE"),
+        (f[(f.ERROR = 4)] = "ERROR");
       var h = function (e) {
           return S.createElement(
             "svg",
@@ -304,7 +304,7 @@
                   (t =
                     !this.props.bDisableAnimation &&
                     (this.state.bHovered || this.props.bForceAnimated)),
-                  L.c.STORE_CDN_URL +
+                  L.d.STORE_CDN_URL +
                     "public/images/loyalty/reactions/" +
                     (t ? "animated" : "still") +
                     "/" +
@@ -351,8 +351,8 @@
               l.s_LoyaltyAwardModalStore ||
                 (e
                   ? (l.s_LoyaltyAwardModalStore = new m(e))
-                  : ((t = Object(L.f)("loyaltystore", "application_config")),
-                    (a = new o.a(L.c.WEBAPI_BASE_URL, t.webapi_token)),
+                  : ((t = Object(L.g)("loyaltystore", "application_config")),
+                    (a = new o.a(L.d.WEBAPI_BASE_URL, t.webapi_token)),
                     (l.s_LoyaltyAwardModalStore = new m(
                       a.GetServiceTransport()
                     ))));
@@ -461,13 +461,13 @@
                 m,
                 p,
                 _ = o.GetExistingReactions(),
-                f = o.GetAwardConfigurations(),
-                b = o.GetUserPointBalance(),
+                b = o.GetAwardConfigurations(),
+                f = o.GetUserPointBalance(),
                 h =
                   ((u = n),
                   (m = r),
                   (p = []),
-                  f.forEach(function (e) {
+                  b.forEach(function (e) {
                     if (e.valid_target_types.includes(u))
                       switch (u) {
                         case 1:
@@ -483,7 +483,7 @@
                       }
                   }),
                   p),
-                E = 0 === c ? null : f.get(c),
+                E = 0 === c ? null : b.get(c),
                 w = E ? E.points_cost : 0,
                 g = E ? E.points_transferred : 0,
                 y = "";
@@ -506,7 +506,7 @@
               switch (l) {
                 case B.SELECTING:
                   var v = 0 === c || _.get(c),
-                    O = !b || b.greaterThanOrEqual(w),
+                    O = !f || f.greaterThanOrEqual(w),
                     A = S.createElement(
                       k.p,
                       {
@@ -537,7 +537,7 @@
                             key: e,
                             reaction: e,
                             selected: e === c && !_.get(e),
-                            cost: f.get(e).points_cost,
+                            cost: b.get(e).points_cost,
                             alreadyAwarded: _.get(e),
                             onClick: function () {
                               _.get(e) ||
@@ -560,7 +560,7 @@
                                 { key: "msg", className: T.NotEnoughPoints },
                                 Object(N.f)(
                                   "#GrantAward_CantAfford",
-                                  b.negate().add(w).toNumber().toLocaleString()
+                                  f.negate().add(w).toNumber().toLocaleString()
                                 )
                               ),
                               S.createElement(
@@ -568,7 +568,7 @@
                                 {
                                   key: "button",
                                   href:
-                                    L.c.STORE_BASE_URL + "points/howitworks",
+                                    L.d.STORE_BASE_URL + "points/howitworks",
                                 },
                                 S.createElement(
                                   k.d,
@@ -804,7 +804,7 @@
             S.createElement(
               "div",
               { className: T.Left },
-              S.createElement(f.G, { className: T.BalanceIcon }),
+              S.createElement(b.G, { className: T.BalanceIcon }),
               S.createElement(
                 "div",
                 { className: T.BalanceDetails },
@@ -830,7 +830,7 @@
                 "a",
                 {
                   className: T.FooterLink,
-                  href: L.c.STORE_BASE_URL + "points/howitworks",
+                  href: L.d.STORE_BASE_URL + "points/howitworks",
                 },
                 Object(N.f)("#GrantAward_PointsLink")
               )
@@ -909,7 +909,7 @@
           return S.createElement(
             "span",
             Object(s.a)({}, n, { className: Object(j.a)(a, T.PointsAmount) }),
-            S.createElement(f.G, { className: T.PointsAmountIcon }),
+            S.createElement(b.G, { className: T.PointsAmountIcon }),
             t
           );
         };

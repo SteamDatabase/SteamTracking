@@ -321,7 +321,7 @@
                   },
                   i
                 ),
-                g.createElement(_.cb, null)
+                g.createElement(_.db, null)
               ),
             o &&
               g.createElement(
@@ -410,7 +410,7 @@
                 ((this.m_bLoadingData = !0),
                 c.a
                   .get(
-                    p.b.CHAT_BASE_URL +
+                    p.c.CHAT_BASE_URL +
                       "miniprofile/" +
                       this.m_accountid +
                       "/json"
@@ -1689,7 +1689,7 @@
           (i = 160),
           (t = e)
             ? t.image_large
-              ? p.b.COMMUNITY_CDN_URL +
+              ? p.c.COMMUNITY_CDN_URL +
                 "economy/profilebackground/" +
                 t.image_large +
                 "?size=" +
@@ -1697,7 +1697,7 @@
                 "x" +
                 i
               : null
-            : p.b.COMMUNITY_CDN_URL + "public/images/profile/2020/bg_dots.png"
+            : p.c.COMMUNITY_CDN_URL + "public/images/profile/2020/bg_dots.png"
         );
         var t, r, i;
       }
@@ -1716,7 +1716,7 @@
         return o && (i["video/mp4"] = o), i;
       }
       function me(e) {
-        return e ? p.b.MEDIA_CDN_COMMUNITY_URL + "images/" + e : null;
+        return e ? p.c.MEDIA_CDN_COMMUNITY_URL + "images/" + e : null;
       }
       var ue = (function () {
           function e(e, t, r) {
@@ -2357,13 +2357,13 @@
                 var t, r;
                 return Object(y.e)(this, function (e) {
                   return (
-                    (t = z.a.Init(x.d)).Body().set_language(p.b.LANGUAGE),
+                    (t = z.a.Init(x.d)).Body().set_language(p.c.LANGUAGE),
                     (this.m_promiseOwned = x.n.GetProfileItemsOwned(
                       this.m_SteamInterface.GetServiceTransport(),
                       t
                     )),
-                    (r = z.a.Init(x.c)).Body().set_steamid(p.g.steamid),
-                    r.Body().set_language(p.b.LANGUAGE),
+                    (r = z.a.Init(x.c)).Body().set_steamid(p.h.steamid),
+                    r.Body().set_language(p.c.LANGUAGE),
                     (this.m_promiseEquipped = x.n.GetProfileItemsEquipped(
                       this.m_SteamInterface.GetServiceTransport(),
                       r
@@ -2607,7 +2607,7 @@
                     : (this.m_promiseLoadCountries ||
                         ((this.m_promiseLoadCountries = c.a
                           .get(
-                            p.b.COMMUNITY_BASE_URL + "/actions/QueryLocations/"
+                            p.c.COMMUNITY_BASE_URL + "/actions/QueryLocations/"
                           )
                           .then(function (e) {
                             return e.data;
@@ -2655,7 +2655,7 @@
                           : (t.stateloader ||
                               ((t.stateloader = c.a
                                 .get(
-                                  p.b.COMMUNITY_BASE_URL +
+                                  p.c.COMMUNITY_BASE_URL +
                                     ("/actions/QueryLocations/" +
                                       t.countrycode) +
                                     "/"
@@ -2707,7 +2707,7 @@
                           : (t.cityloader ||
                               ((t.cityloader = c.a
                                 .get(
-                                  p.b.COMMUNITY_BASE_URL +
+                                  p.c.COMMUNITY_BASE_URL +
                                     ("/actions/QueryLocations/" +
                                       t.countrycode +
                                       "/" +
@@ -3056,9 +3056,9 @@
                       return [
                         4,
                         c.a.get(
-                          p.b.COMMUNITY_BASE_URL +
+                          p.c.COMMUNITY_BASE_URL +
                             "actions/GameAvatars/?json=1&l=" +
-                            p.b.LANGUAGE
+                            p.c.LANGUAGE
                         ),
                       ];
                     case 1:
@@ -3125,13 +3125,13 @@
                   switch (e.label) {
                     case 0:
                       return (
-                        (t = new FormData()).append("sessionid", p.b.SESSIONID),
+                        (t = new FormData()).append("sessionid", p.c.SESSIONID),
                         t.append("json", "1"),
                         t.append("selectedAvatar", "" + o),
                         [
                           4,
                           c.a.post(
-                            p.b.COMMUNITY_BASE_URL +
+                            p.c.COMMUNITY_BASE_URL +
                               "ogg/" +
                               a +
                               "/selectAvatar",
@@ -3163,7 +3163,7 @@
                 if (o instanceof FormData) t = o;
                 else for (r in ((t = new FormData()), o)) t.append(r, o[r]);
                 t.append("type", a),
-                  t.append("sessionID", p.b.SESSIONID),
+                  t.append("sessionID", p.c.SESSIONID),
                   t.append("json", "1"),
                   (i = s.ProfileURL + "edit/"),
                   (e.label = 1);
@@ -3372,7 +3372,7 @@
                     case 0:
                       return (
                         (t = z.a.Init(Ee.c)).SetBodyFields({
-                          steamid: p.g.steamid,
+                          steamid: p.h.steamid,
                           filter_user_uploaded_only: !0,
                         }),
                         [
@@ -3427,13 +3427,13 @@
                   switch (e.label) {
                     case 0:
                       return (
-                        (t = new FormData()).append("sessionid", p.b.SESSIONID),
+                        (t = new FormData()).append("sessionid", p.c.SESSIONID),
                         t.append("json", "1"),
                         t.append("sha", a),
                         [
                           4,
                           c.a.post(
-                            p.b.COMMUNITY_BASE_URL +
+                            p.c.COMMUNITY_BASE_URL +
                               "actions/selectPreviousAvatar",
                             t
                           ),
@@ -3580,7 +3580,7 @@
               var i = this,
                 e = new FormData();
               return (
-                e.append("sessionid", p.b.SESSIONID),
+                e.append("sessionid", p.c.SESSIONID),
                 e.append("Privacy", JSON.stringify(this.m_PrivacySettings)),
                 e.append(
                   "eCommentPermission",
@@ -3635,7 +3635,7 @@
               (this.m_EmoticonStore = new U.a()),
               (this.m_EmoticonHoverStore = new D.a()),
               (this.m_Profile = new Ie(e)),
-              (this.m_WebAPI = new o.a(p.b.WEBAPI_BASE_URL, e.webapi_token)),
+              (this.m_WebAPI = new o.a(p.c.WEBAPI_BASE_URL, e.webapi_token)),
               (this.m_AppInfoStore = new l.b()),
               this.m_AppInfoStore.Init(this.m_WebAPI),
               this.m_AppInfoStore.SetCacheStorage(new a.a()),
@@ -3769,7 +3769,7 @@
               c = r.locCityCode;
             (this.m_Location = new pe(i, n, a, o, s, c)),
               (this.m_GroupList = new Oe(e.PrimaryGroup));
-            var l = new T.a(p.g.steamid);
+            var l = new T.a(p.h.steamid);
             (this.m_MiniProfileData = new R(l.GetAccountID())),
               (this.m_persona = new P.b(l)),
               Object(m.l)(function () {
@@ -3817,8 +3817,8 @@
             }),
             (e.prototype.GetConstructedURL = function () {
               return this.m_strCustomURL
-                ? p.b.COMMUNITY_BASE_URL + "id/" + this.m_strCustomURL + "/"
-                : p.b.COMMUNITY_BASE_URL + "profiles/" + p.g.steamid + "/";
+                ? p.c.COMMUNITY_BASE_URL + "id/" + this.m_strCustomURL + "/"
+                : p.c.COMMUNITY_BASE_URL + "profiles/" + p.h.steamid + "/";
             }),
             (e.prototype.GetAvatarHash = function () {
               return this.m_strAvatarHash;
@@ -3888,8 +3888,8 @@
                     case 0:
                       (t = new FormData()).append("avatar", o),
                         t.append("type", "player_avatar_image"),
-                        t.append("sId", p.g.steamid),
-                        t.append("sessionid", p.b.SESSIONID),
+                        t.append("sId", p.h.steamid),
+                        t.append("sessionid", p.c.SESSIONID),
                         t.append("doSub", "1"),
                         t.append("json", "1"),
                         (r = !1),
@@ -3901,7 +3901,7 @@
                         [
                           4,
                           c.a.post(
-                            p.b.COMMUNITY_BASE_URL + "actions/FileUploader/",
+                            p.c.COMMUNITY_BASE_URL + "actions/FileUploader/",
                             t
                           ),
                         ]
@@ -5865,7 +5865,7 @@
                 g.createElement("input", {
                   type: "hidden",
                   name: "sessionID",
-                  value: p.b.SESSIONID,
+                  value: p.c.SESSIONID,
                 }),
                 g.createElement("input", {
                   type: "hidden",
@@ -5909,16 +5909,16 @@
                   je,
                   { title: Object(O.f)("#Profile_Edit_BasicInfo") },
                   g.createElement(Mt, { Profile: t }),
-                  !Object(Ge.a)(p.b.EREALM) &&
+                  !Object(Ge.a)(p.c.EREALM) &&
                     g.createElement(Lt, { Profile: t })
                 ),
-                !Object(Ge.a)(p.b.EREALM) &&
+                !Object(Ge.a)(p.c.EREALM) &&
                   g.createElement(
                     je,
                     { title: Object(O.f)("#Profile_Edit_Location") },
                     g.createElement(gt, { Profile: t })
                   ),
-                !Object(Ge.a)(p.b.EREALM) &&
+                !Object(Ge.a)(p.c.EREALM) &&
                   g.createElement(
                     je,
                     { title: Object(O.f)("#Profile_FieldSummary") },
@@ -5928,7 +5928,7 @@
                       EmoticonHoverStore: i,
                     })
                   ),
-                !Object(Ge.a)(p.b.EREALM) &&
+                !Object(Ge.a)(p.c.EREALM) &&
                   g.createElement(
                     je,
                     { title: Object(O.f)("#Profile_Edit_Preferences") },
@@ -5957,7 +5957,7 @@
                 { style: { display: "block" } },
                 g.createElement(yt.b, {
                   text: Object(O.f)(
-                    Object(Ge.a)(p.b.EREALM)
+                    Object(Ge.a)(p.c.EREALM)
                       ? "#Profile_Edit_About_Instructions_SteamChina"
                       : "#Profile_Edit_About_Instructions"
                   ),
@@ -5995,7 +5995,7 @@
                     onChange: this.OnPersonaNameChange,
                   })
                 ),
-                !Object(Ge.a)(p.b.EREALM) &&
+                !Object(Ge.a)(p.c.EREALM) &&
                   g.createElement(
                     Gt,
                     { Profile: e },
@@ -6271,7 +6271,7 @@
             { className: Object(C.a)(kt.Badge, kt.FavoriteBadge) },
             g.createElement("img", {
               className: kt.BadgeImage,
-              src: p.b.COMMUNITY_CDN_URL + "public/images/trans.gif",
+              src: p.c.COMMUNITY_CDN_URL + "public/images/trans.gif",
             }),
             g.createElement(
               "div",
@@ -6640,7 +6640,7 @@
                   "div",
                   { className: Object(C.a)(Vt.Preview, Vt.BlankBackground) },
                   g.createElement("img", {
-                    src: p.b.COMMUNITY_CDN_URL + "public/images/trans.gif",
+                    src: p.c.COMMUNITY_CDN_URL + "public/images/trans.gif",
                     loading: "lazy",
                   })
                 ),
@@ -6777,9 +6777,9 @@
                     ":",
                     g.createElement(dr, { PrivacyStore: e })
                   ),
-                  !Object(Ge.a)(p.b.EREALM) &&
+                  !Object(Ge.a)(p.c.EREALM) &&
                     g.createElement("div", { className: "ProfilePrivacyHR" }),
-                  !Object(Ge.a)(p.b.EREALM) &&
+                  !Object(Ge.a)(p.c.EREALM) &&
                     g.createElement(
                       or,
                       {
@@ -6882,7 +6882,7 @@
                 g.createElement("img", {
                   className: "ProfilePrivacyDropDown_Arrow",
                   src:
-                    p.b.COMMUNITY_CDN_URL +
+                    p.c.COMMUNITY_CDN_URL +
                     "public/images/skin_1/actionArrowDnWhite.gif",
                 })
               ),
@@ -7021,7 +7021,7 @@
                   g.createElement("img", {
                     className: "ProfilePrivacyDropDown_Arrow",
                     src:
-                      p.b.COMMUNITY_CDN_URL +
+                      p.c.COMMUNITY_CDN_URL +
                       "public/images/skin_1/actionArrowDnWhite.gif",
                   })
                 ),
@@ -7465,7 +7465,7 @@
       }
       function _r(e) {
         var t = e.ProfileModifier,
-          r = t ? se(t) : p.b.COMMUNITY_CDN_URL + "public/images/trans.gif",
+          r = t ? se(t) : p.c.COMMUNITY_CDN_URL + "public/images/trans.gif",
           i = t
             ? t.item_title
             : Object(O.f)("#Profile_Edit_DefaultBlankBackground"),
@@ -7965,7 +7965,7 @@
                 "a",
                 {
                   className: Object(C.a)(Lr.ExternalLink),
-                  href: p.b.STORE_BASE_URL + "points/",
+                  href: p.c.STORE_BASE_URL + "points/",
                 },
                 Object(O.f)("#SteamPointsShop")
               )
@@ -8146,7 +8146,7 @@
               "div",
               { className: Object(C.a)(Tr.Preview, Tr.BlankBackground) },
               g.createElement("img", {
-                src: p.b.COMMUNITY_CDN_URL + "public/images/trans.gif",
+                src: p.c.COMMUNITY_CDN_URL + "public/images/trans.gif",
                 loading: "lazy",
               })
             ),
@@ -8485,13 +8485,13 @@
                   },
                   BadgesAvailable: function () {
                     return (
-                      !Object(Ge.a)(p.b.EREALM) &&
+                      !Object(Ge.a)(p.c.EREALM) &&
                       0 < t.ProfileBadges.Badges.length
                     );
                   },
                   GroupsAvailable: function () {
                     return (
-                      !Object(Ge.a)(p.b.EREALM) &&
+                      !Object(Ge.a)(p.c.EREALM) &&
                       (!r.GroupList.BGroupsLoaded() ||
                         r.GroupList.BHasAnyGroups())
                     );
@@ -8561,13 +8561,13 @@
                       { path: "" + e + s.ProfileModifier() },
                       g.createElement(Dr, { ProfileItems: i })
                     ),
-                    !Object(Ge.a)(p.b.EREALM) &&
+                    !Object(Ge.a)(p.c.EREALM) &&
                       g.createElement(
                         u.c,
                         { path: "" + e + s.FavoriteBadge() },
                         g.createElement(Tt, { Badges: t.ProfileBadges })
                       ),
-                    !Object(Ge.a)(p.b.EREALM) &&
+                    !Object(Ge.a)(p.c.EREALM) &&
                       g.createElement(
                         u.c,
                         { path: "" + e + s.FavoriteGroup() },
@@ -8601,13 +8601,13 @@
                     var t;
                     return Object(y.e)(this, function (e) {
                       return (
-                        (t = Object(p.e)("config", "profile_config")) &&
+                        (t = Object(p.f)("config", "profile_config")) &&
                           Object.assign(s, t),
                         (yr = new Me(
-                          Object(p.e)("profile-edit", "profile_edit_config"),
-                          Object(p.e)("profile-badges", "profile_edit_config")
+                          Object(p.f)("profile-edit", "profile_edit_config"),
+                          Object(p.f)("profile-badges", "profile_edit_config")
                         )),
-                        Object(Ge.a)(p.b.EREALM) ||
+                        Object(Ge.a)(p.c.EREALM) ||
                           yr.Profile.GroupList.GetUserGroups(),
                         (gr = document.getElementById("showcases")),
                         [2]
@@ -8801,7 +8801,7 @@
               return (
                 i && i.image_small && 0 != i.image_small.length
                   ? (o =
-                      d.b.MEDIA_CDN_COMMUNITY_URL + "images/" + i.image_small)
+                      d.c.MEDIA_CDN_COMMUNITY_URL + "images/" + i.image_small)
                   : t
                   ? ((o = t.avatar_url_medium),
                     "Small" == r || "X-Small" == r
@@ -8809,15 +8809,15 @@
                       : ("Large" != r && "X-Large" != r && "FillArea" != r) ||
                         (o = t.avatar_url_full))
                   : ((o =
-                      d.b.MEDIA_CDN_COMMUNITY_URL +
+                      d.c.MEDIA_CDN_COMMUNITY_URL +
                       "images/avatars/fe/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_medium.jpg"),
                     "Small" == r || "X-Small" == r
                       ? (o =
-                          d.b.MEDIA_CDN_COMMUNITY_URL +
+                          d.c.MEDIA_CDN_COMMUNITY_URL +
                           "images/avatars/fe/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb.jpg")
                       : ("Large" != r && "X-Large" != r && "FillArea" != r) ||
                         (o =
-                          d.b.MEDIA_CDN_COMMUNITY_URL +
+                          d.c.MEDIA_CDN_COMMUNITY_URL +
                           "images/avatars/fe/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_full.jpg")),
                 l.createElement(
                   p,
@@ -8848,7 +8848,7 @@
           var a = i ? t.image_large : t.image_small;
           return (
             (a = a || t.image_small).startsWith("https://") ||
-              (a = d.b.MEDIA_CDN_COMMUNITY_URL + "images/" + a),
+              (a = d.c.MEDIA_CDN_COMMUNITY_URL + "images/" + a),
             l.createElement(
               "div",
               Object(c.a)(
@@ -9194,7 +9194,7 @@
             if (0 == this.last_seen_online)
               return Object(s.f)("#PersonaStateOffline");
             var e = this.GetOfflineStatusUpdateRate();
-            (!c.b.IN_MOBILE || e <= 60) && Object(a.c)(e);
+            (!c.c.IN_MOBILE || e <= 60) && Object(a.c)(e);
             var t = o.a.CMInterface.GetServerRTime32() - this.last_seen_online;
             return t < 60
               ? Object(s.f)("#PersonaStateLastSeen_JustNow")
@@ -9325,6 +9325,7 @@
           Object(i.c)([n.C], e.prototype, "m_broadcastAppId", void 0),
           Object(i.c)([n.C], e.prototype, "m_broadcastViewerCount", void 0),
           Object(i.c)([n.C], e.prototype, "m_strBroadcastTitle", void 0),
+          Object(i.c)([n.C], e.prototype, "m_bCommunityBanned", void 0),
           e
         );
       })();
@@ -11443,7 +11444,7 @@
           }
           return (
             (e.prototype.BIsLoggedIn = function () {
-              return M.g.logged_in;
+              return M.h.logged_in;
             }),
             (e.prototype.SetTarget = function (e, t) {
               (this.m_targetID = e),
@@ -11497,7 +11498,7 @@
                       return this.BIsLoggedIn()
                         ? ((this.m_bPointsBalanceLoadedOrInFlight = !0),
                           (t = m.a.Init(y)).SetBodyFields({
-                            steamid: M.g.steamid,
+                            steamid: M.h.steamid,
                           }),
                           [4, h.GetSummary(this.m_transport, t)])
                         : [2, Promise.resolve(null)];
@@ -12173,7 +12174,7 @@
                 (t =
                   !this.props.bDisableAnimation &&
                   (this.state.bHovered || this.props.bForceAnimated)),
-                M.b.STORE_CDN_URL +
+                M.c.STORE_CDN_URL +
                   "public/images/loyalty/reactions/" +
                   (t ? "animated" : "still") +
                   "/" +
@@ -12220,8 +12221,8 @@
               l.s_LoyaltyAwardModalStore ||
                 (e
                   ? (l.s_LoyaltyAwardModalStore = new ee(e))
-                  : ((t = Object(M.e)("loyaltystore", "application_config")),
-                    (r = new a.a(M.b.WEBAPI_BASE_URL, t.webapi_token)),
+                  : ((t = Object(M.f)("loyaltystore", "application_config")),
+                    (r = new a.a(M.c.WEBAPI_BASE_URL, t.webapi_token)),
                     (l.s_LoyaltyAwardModalStore = new ee(
                       r.GetServiceTransport()
                     ))));
@@ -12402,7 +12403,7 @@
                                   {
                                     key: "button",
                                     href:
-                                      M.b.STORE_BASE_URL + "points/howitworks",
+                                      M.c.STORE_BASE_URL + "points/howitworks",
                                   },
                                   B.createElement(
                                     Ee.d,
@@ -12664,7 +12665,7 @@
                 "a",
                 {
                   className: A.FooterLink,
-                  href: M.b.STORE_BASE_URL + "points/howitworks",
+                  href: M.c.STORE_BASE_URL + "points/howitworks",
                 },
                 Object(R.f)("#GrantAward_PointsLink")
               )

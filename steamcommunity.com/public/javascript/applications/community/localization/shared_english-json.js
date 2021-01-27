@@ -121,7 +121,7 @@
         EventBrowse_MoreEventsTitle: "More events from %1$s",
         EventBrowse_MoreEventsBtn: "View All",
         EventBrowse_ViewLatestUpdate: "View",
-        EventBrowse_LatestUpdateTime_Button: "See last game update (%1$s)",
+        EventBrowse_LatestUpdateTime_Button: "See all updates (latest: %1$s)",
         EventBrowse_RecentUpdates: "Recent Updates",
         EventBrowse_RecentEvents: "Recent Events & Announcements",
         EventBrowse_LastUpdateDate: "Last Update: %1$s",
@@ -195,10 +195,13 @@
         EventCalendar_WatchLiveBroadcast: "Watch Live Broadcast",
         EventModTile_Moderator: "Moderator: %1$s",
         EventModTile_Action_Reviewed: "%1$s %2$s marked reviewed",
+        EventModTile_Action_ReReviewed: "%1$s %2$s marked Re-Reviewed",
         EventModTile_Action_UnReviewed: "%1$s %2$s cleared reviewed flag",
         EventModTile_Action_NewEventType: "%1$s %2$s changed to category %3$s",
         EventModTile_Action_SeasonTagUpdate:
           "%1$s %2$s updated seasonal tag %3$s",
+        EventModTile_Action_RemoveFromSC:
+          "%1$s %2$s removed event from Steam China",
         EventModTile_Action_Title: "Moderation Audit Trail",
         EventModTile_Action_More: "There are %1$s audit hidden",
         EventModTile_Action_Hide: "Hide some audit actions",
@@ -695,6 +698,8 @@
         ContextMenu_OpenImageInNewWindow: "Open Image in New Window",
         Tooltip_Settings: "Manage friends list settings",
         Tooltip_VoiceSettings: "Manage voice settings",
+        Tooltip_CopyRemotePlayTogetherInviteURL:
+          "Copy Remote Play Together invite URL",
         Tooltip_SearchFriends: "Search my friends list",
         Tooltip_AddFriend: "Add a friend",
         Tooltip_FriendRequest: "%1$s incoming request",
@@ -1698,7 +1703,10 @@
         Sale_Subscription_Monthly_Body_Discount:
           "%1$s billed monthly thereafter, cancel anytime",
         Sale_Subscription_Monthly_Button: "Subscribe Monthly",
-        Sale_Subscription_DiscountEnd: "*Save %2$s when you sign up by %1$s",
+        Sale_Subscription_DiscountEnd: "Save %2$s when you sign up by %1$s",
+        Sale_Subscription_OfferEnds: "Offer ends %1$s",
+        Sale_Subscription_NewSubsOfferEnds:
+          "Offer only for new subscribers. Ends %1$s",
         Sale_Subscription_Asterisk: "*",
         GotSteam_Title: "Got Steam?",
         GotSteam_PromptWithDownloadLink:

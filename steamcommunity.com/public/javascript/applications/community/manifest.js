@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6329373";
+var CLSTAMP = "6332441";
 !(function (r) {
   function a(a) {
     for (
@@ -11,35 +11,35 @@ var CLSTAMP = "6329373";
       (n = i[d]), b[n] && s.push(b[n][0]), (b[n] = 0);
     for (e in o) Object.prototype.hasOwnProperty.call(o, e) && (r[e] = o[e]);
     for (_ && _(a); s.length; ) s.shift()();
-    return l.push.apply(l, c || []), t();
+    return f.push.apply(f, c || []), t();
   }
   function t() {
-    for (var a, e = 0; e < l.length; e++) {
-      for (var n = l[e], i = !0, o = 1; o < n.length; o++) {
+    for (var a, e = 0; e < f.length; e++) {
+      for (var n = f[e], i = !0, o = 1; o < n.length; o++) {
         var c = n[o];
         0 !== b[c] && (i = !1);
       }
-      i && (l.splice(e--, 1), (a = j((j.s = n[0]))));
+      i && (f.splice(e--, 1), (a = j((j.s = n[0]))));
     }
     return a;
   }
   var n = {},
-    f = { 99: 0 },
+    l = { 99: 0 },
     b = { 99: 0 },
-    l = [];
+    f = [];
   function j(a) {
     if (n[a]) return n[a].exports;
     var e = (n[a] = { i: a, l: !1, exports: {} });
     return r[a].call(e.exports, e, e.exports, j), (e.l = !0), e.exports;
   }
-  (j.e = function (l) {
+  (j.e = function (f) {
     var a = [];
-    f[l]
-      ? a.push(f[l])
-      : 0 !== f[l] &&
-        { 1: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 69: 1, 100: 1 }[l] &&
+    l[f]
+      ? a.push(l[f])
+      : 0 !== l[f] &&
+        { 1: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 69: 1, 100: 1 }[f] &&
         a.push(
-          (f[l] = new Promise(function (a, i) {
+          (l[f] = new Promise(function (a, i) {
             for (
               var e =
                   "css/applications/community/" +
@@ -142,17 +142,17 @@ var CLSTAMP = "6329373";
                     97: "managefriends_ukrainian-json",
                     98: "managefriends_vietnamese-json",
                     100: "profile",
-                  }[l] || l) +
+                  }[f] || f) +
                   ".css?contenthash=" +
                   {
-                    1: "dd180d2bd8b9d8140a20",
+                    1: "d059d527aabfcb7dede9",
                     2: "31d6cfe0d16ae931b73c",
                     3: "9017a8b662c4b5200d9b",
                     4: "809fe643725703fdacbf",
                     5: "ad52a7a810a876587a99",
                     6: "a4a741bc6558c1d86ad5",
                     7: "926bc9edb5c63a0b31da",
-                    8: "572a645adea541c6a818",
+                    8: "69903f4a9a3dd14c7c22",
                     9: "31d6cfe0d16ae931b73c",
                     10: "31d6cfe0d16ae931b73c",
                     11: "31d6cfe0d16ae931b73c",
@@ -243,7 +243,7 @@ var CLSTAMP = "6329373";
                     97: "31d6cfe0d16ae931b73c",
                     98: "31d6cfe0d16ae931b73c",
                     100: "37ca51b8058d28f6a854",
-                  }[l],
+                  }[f],
                 o = j.p + e,
                 n = document.getElementsByTagName("link"),
                 c = 0;
@@ -269,18 +269,18 @@ var CLSTAMP = "6329373";
               (t.onerror = function (a) {
                 var e = (a && a.target && a.target.src) || o,
                   n = new Error(
-                    "Loading CSS chunk " + l + " failed.\n(" + e + ")"
+                    "Loading CSS chunk " + f + " failed.\n(" + e + ")"
                   );
                 (n.code = "CSS_CHUNK_LOAD_FAILED"),
                   (n.request = e),
-                  delete f[l],
+                  delete l[f],
                   t.parentNode.removeChild(t),
                   i(n);
               }),
               (t.href = o),
               document.getElementsByTagName("head")[0].appendChild(t);
           }).then(function () {
-            f[l] = 0;
+            l[f] = 0;
           }))
         );
     var e,
@@ -288,13 +288,13 @@ var CLSTAMP = "6329373";
       n,
       d,
       i,
-      o = b[l];
+      o = b[f];
     return (
       0 !== o &&
         (o
           ? a.push(o[2])
           : ((e = new Promise(function (a, e) {
-              o = b[l] = [a, e];
+              o = b[f] = [a, e];
             })),
             a.push((o[2] = e)),
             ((c = document.createElement("script")).charset = "utf-8"),
@@ -402,77 +402,77 @@ var CLSTAMP = "6329373";
                 97: "managefriends_ukrainian-json",
                 98: "managefriends_vietnamese-json",
                 100: "profile",
-              }[(i = l)] || i) +
+              }[(i = f)] || i) +
               ".js?contenthash=" +
               {
-                1: "062f0d37387b34248b69",
+                1: "82f33ea47121e1866aad",
                 2: "6f83caf91e4a63e96e7d",
                 3: "85fdfb00f0ca14627a9a",
                 4: "cc565d1d9aba78fc0a2d",
-                5: "94a87f610cc11b4153c5",
-                6: "edc5f275ce5add53ad42",
-                7: "f352db30465a187d50fe",
-                8: "d61a161c1d5ff8d70cb4",
-                9: "640fcc5c197b06108e13",
-                10: "2815dccf075b5f8d956e",
-                11: "bd8523b03d594ea58a70",
-                12: "d36616f84002021311bd",
-                13: "02d3c10f4e128bb17884",
-                14: "d061a7867634730cfa2a",
-                15: "ce70b1d1f486580a7bb1",
-                16: "b37f1d56772d5073e40a",
-                17: "fe57f1e0a2eea527d240",
-                18: "111d6eddc1b31f51be6a",
-                19: "1e6804ccd21b3915b023",
-                20: "abc4855dacd215ff5e1d",
-                21: "0b60f4a3584cc11013ad",
-                22: "01630c85be1b394afe82",
-                23: "4a5274e0025313fa4e8f",
-                24: "83753e742562b0133092",
-                25: "0db37ac660593a3c0933",
-                26: "8d3814409ac7f07832dd",
-                27: "72b0d01b04c8725ff59f",
-                28: "c5edf45f7bb03625bf1b",
-                29: "b28f7752fda787120e59",
-                30: "d71154fb02e169531fa4",
-                31: "263948671b0a4c3fe173",
-                32: "83f5da2fe2bf320239b3",
-                33: "6464197cd069abe229bf",
-                34: "fd65b390f59d06b9286e",
-                35: "971ec83da85ba4148201",
-                36: "407b69405e8a1665e6f0",
-                37: "0548bf723aa7de981d4a",
+                5: "8f6c2f0750e010e1618f",
+                6: "47effc6a90f511e84a87",
+                7: "30c4242c28ead0b061a9",
+                8: "0e1221961667fc372227",
+                9: "0ed68ce546be46ed17c1",
+                10: "b64fd60fec0167413517",
+                11: "80624ee7e411488f045d",
+                12: "f8e5e03228e812a11394",
+                13: "0712cc7805061201e20a",
+                14: "0107909fe2f7f90fe4a8",
+                15: "55223f27dac7021f61e3",
+                16: "b60554e90b536cefdc5d",
+                17: "f296b8ea8fbe6c087b64",
+                18: "7467e4baf6ac12909302",
+                19: "9269bce1d6d74c042e13",
+                20: "0480db31f5805e48bc6d",
+                21: "5f8003f0e2e0cdf047e5",
+                22: "dd4c6bc4f82d326fec77",
+                23: "7886fa78f9440253f02e",
+                24: "61b1083837833c235054",
+                25: "cc28ee31e228bce87e24",
+                26: "117939299bd201af4c16",
+                27: "e6531a28b4c6bb8fd821",
+                28: "9870dbdd5b077a8d1d56",
+                29: "693250d68d08e655f247",
+                30: "79537db55eef1b07628a",
+                31: "7b3a95a382684fe0a1c6",
+                32: "659df83a154a65b0d35b",
+                33: "6e26674b639ec4c62ca3",
+                34: "abce49e60b8828715f9c",
+                35: "e1f3256372ad55668c3e",
+                36: "909c8d00b7973626e3b1",
+                37: "8a3a1f006a4a07fb14fe",
                 38: "a6d946656629a57704bf",
-                39: "8738bbc9d7c668594ebb",
-                40: "ca5f5781a13c8aede37a",
-                41: "2f4f6b930e17634e7ed6",
-                42: "caaec904c7db0268dcaa",
-                43: "bd08252d58364855ae1c",
-                44: "b093a9493d1693d6b5a5",
-                45: "1c45e90dac7d9de40dc7",
-                46: "0dcfcfbc6f0a7976c8bc",
-                47: "48d7447a23da0e2729f6",
-                48: "3baae0a039bd93701556",
-                49: "d631d9362f749545b1d0",
-                50: "3aaeaf06061e25058a5f",
-                51: "c6fe3cf820e299cec96e",
-                52: "73a68b482e7d0c8d1d65",
-                53: "4dae2e4a5bf4751e3191",
-                54: "82392de5a14881eb9f94",
-                55: "fd5c4b38fe59dbea8028",
-                56: "989c237bd1403196730b",
-                57: "002646bd6e226b2fb1fa",
-                58: "fb71892b8bec5c56d073",
-                59: "8b54d8cc6e0a4c8fb89c",
-                60: "13b9888276ed99ca7758",
-                61: "ed63dc73e494bb365912",
-                62: "4d6cc92a36474a4d308d",
-                63: "da25cbbced71c82dd924",
-                64: "f0a6508a69ae0becbe66",
-                65: "0af7daa0b4b14cb1094f",
-                66: "aa0c2e398b322321f6e1",
-                67: "0c404fbe150853bbc015",
-                69: "10d93be8a42624a3c2f0",
+                39: "df5ca7da3bbc18ec9427",
+                40: "6b6086c0da40f3c48656",
+                41: "196c3fa9a3ef54b23654",
+                42: "b0f80a00ef68a0877ffe",
+                43: "dc2612cae5fb138c4a2f",
+                44: "13fd46c65382d833cafa",
+                45: "563e7c477865caf999f1",
+                46: "b9dcd1f525f194310f81",
+                47: "79409ff5428a32e3f01c",
+                48: "45e8bf3ee7377d7b57e2",
+                49: "7af6ab6869b6a76de0ee",
+                50: "8a603691add6a61f6661",
+                51: "139500ea3e6680dff5c2",
+                52: "f40d04baa07bacd0ded6",
+                53: "995eaafb82c0b9fb630a",
+                54: "0925870a2053a31a60e0",
+                55: "be3ecf96c717bc495f78",
+                56: "24a3dddbd67edf4aefb2",
+                57: "097cb17dbeb942844654",
+                58: "03056cadb44768a324c3",
+                59: "3a961ad6ff3cf3b91a59",
+                60: "396cfe53a52049950ac6",
+                61: "5bc7a10fd946ea057094",
+                62: "d649a84249f5e4a4f6d8",
+                63: "d645055f009e6bb37e4b",
+                64: "660da79a1ea064b2b283",
+                65: "03cc4806ce1d6d8d1b7f",
+                66: "9a6b878d56998107f967",
+                67: "50e4f20b4be9181fb25e",
+                69: "b42a7f7b17bfff230909",
                 70: "6a5e770e774eb586bdca",
                 71: "4b55a60dada504086da4",
                 72: "55d9b664e339a6d19d8a",
@@ -502,24 +502,24 @@ var CLSTAMP = "6329373";
                 96: "23a8bfbabbf601c1878a",
                 97: "994d99ca937953a3b922",
                 98: "2657b8e5c2b2cab2c27b",
-                100: "e8571d955cc9da6d04e4",
+                100: "084cb05956bc8a99cb00",
               }[i]),
             (n = function (a) {
               (c.onerror = c.onload = null), clearTimeout(d);
               var e,
                 n,
                 i,
-                o = b[l];
+                o = b[f];
               0 !== o &&
                 (o &&
                   ((e = a && ("load" === a.type ? "missing" : a.type)),
                   (n = a && a.target && a.target.src),
                   ((i = new Error(
-                    "Loading chunk " + l + " failed.\n(" + e + ": " + n + ")"
+                    "Loading chunk " + f + " failed.\n(" + e + ": " + n + ")"
                   )).type = e),
                   (i.request = n),
                   o[1](i)),
-                (b[l] = void 0));
+                (b[f] = void 0));
             }),
             (d = setTimeout(function () {
               n({ type: "timeout", target: c });

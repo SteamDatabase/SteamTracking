@@ -5,9 +5,9 @@
   {
     "2l+k": function (e, t, n) {
       "use strict";
-      var u = n("mrSG"),
+      var d = n("mrSG"),
         r = n("vDqi"),
-        d = n.n(r),
+        u = n.n(r),
         m = n("2vnA"),
         p = n("lkRc"),
         a = n("WBba"),
@@ -28,7 +28,7 @@
             );
           }
           return (
-            Object(u.d)(r, n),
+            Object(d.d)(r, n),
             (r.M = function () {
               return (
                 r.sm_m ||
@@ -145,7 +145,7 @@
             );
           }
           return (
-            Object(u.d)(r, n),
+            Object(d.d)(r, n),
             (r.M = function () {
               return (
                 r.sm_m ||
@@ -260,7 +260,7 @@
             );
           }
           return (
-            Object(u.d)(r, n),
+            Object(d.d)(r, n),
             (r.M = function () {
               return (
                 r.sm_m ||
@@ -322,7 +322,7 @@
             );
           }
           return (
-            Object(u.d)(r, n),
+            Object(d.d)(r, n),
             (r.M = function () {
               return (
                 r.sm_m ||
@@ -402,7 +402,7 @@
             );
           }
           return (
-            Object(u.d)(r, n),
+            Object(d.d)(r, n),
             (r.M = function () {
               return (
                 r.sm_m ||
@@ -464,7 +464,7 @@
             );
           }
           return (
-            Object(u.d)(r, n),
+            Object(d.d)(r, n),
             (r.M = function () {
               return (
                 r.sm_m ||
@@ -531,7 +531,7 @@
             );
           }
           return (
-            Object(u.d)(r, n),
+            Object(d.d)(r, n),
             (r.M = function () {
               return (
                 r.sm_m ||
@@ -586,7 +586,7 @@
             );
           }
           return (
-            Object(u.d)(r, n),
+            Object(d.d)(r, n),
             (r.M = function () {
               return (
                 r.sm_m ||
@@ -644,7 +644,7 @@
             );
           }
           return (
-            Object(u.d)(r, n),
+            Object(d.d)(r, n),
             (r.M = function () {
               return (
                 r.sm_m ||
@@ -699,7 +699,7 @@
             r
           );
         })(c),
-        C = (function (n) {
+        E = (function (n) {
           function r(e) {
             void 0 === e && (e = null);
             var t = n.call(this) || this;
@@ -710,7 +710,7 @@
             );
           }
           return (
-            Object(u.d)(r, n),
+            Object(d.d)(r, n),
             (r.M = function () {
               return (
                 r.sm_m ||
@@ -772,7 +772,7 @@
             r
           );
         })(c),
-        E = (function (n) {
+        C = (function (n) {
           function r(e) {
             void 0 === e && (e = null);
             var t = n.call(this) || this;
@@ -783,7 +783,7 @@
             );
           }
           return (
-            Object(u.d)(r, n),
+            Object(d.d)(r, n),
             (r.M = function () {
               return (
                 r.sm_m ||
@@ -884,7 +884,7 @@
           });
         }),
         (_.GetBatchPublishedPartnerEvent = function (e, t) {
-          return e.SendMsg("News.GetBatchPublishedPartnerEvent#1", t, E, {
+          return e.SendMsg("News.GetBatchPublishedPartnerEvent#1", t, C, {
             bConstMethod: !0,
             ePrivilege: 1,
           });
@@ -947,9 +947,9 @@
               return Boolean(this.m_strRSSGID);
             }),
             (e.prototype.PreviewPartnerEventsFromRSSFeed = function (r) {
-              return Object(u.b)(this, void 0, void 0, function () {
+              return Object(d.b)(this, void 0, void 0, function () {
                 var t, n;
-                return Object(u.e)(this, function (e) {
+                return Object(d.e)(this, function (e) {
                   switch (e.label) {
                     case 0:
                       return this.BIsLoggedIn()
@@ -984,16 +984,16 @@
             (e.prototype.FetchPublishedEvents = function (a) {
               return (
                 void 0 === a && (a = 100),
-                Object(u.b)(this, void 0, void 0, function () {
+                Object(d.b)(this, void 0, void 0, function () {
                   var t,
                     n,
                     r = this;
-                  return Object(u.e)(this, function (e) {
+                  return Object(d.e)(this, function (e) {
                     switch (e.label) {
                       case 0:
                         return this.BIsLoggedIn()
                           ? this.m_strRSSGID
-                            ? ((t = s.a.Init(C))
+                            ? ((t = s.a.Init(E))
                                 .Body()
                                 .set_news_feed_gid(this.m_strRSSGID),
                               t.Body().set_amount(a),
@@ -1051,34 +1051,34 @@
               if (t) return t.clan_event_gid;
             }),
             (e.prototype.BIsLoggedIn = function () {
-              return p.i.logged_in;
+              return p.j.logged_in;
             }),
             (e.prototype.CreateOrUpdateRSSNewFeed = function (i, o) {
               return (
                 void 0 === o && (o = 0),
-                Object(u.b)(this, void 0, void 0, function () {
+                Object(d.b)(this, void 0, void 0, function () {
                   var t,
                     n,
                     r,
                     a = this;
-                  return Object(u.e)(this, function (e) {
+                  return Object(d.e)(this, function (e) {
                     switch (e.label) {
                       case 0:
                         return (
                           (t = new FormData()).append(
                             "sessionid",
-                            p.c.SESSIONID
+                            p.d.SESSIONID
                           ),
                           t.append("gid", this.m_strRSSGID),
                           t.append("lang", "" + this.GetCuratorLanguage()),
                           t.append("rss_url", i),
                           t.append("polling_interval", "" + o),
                           (n =
-                            p.c.STORE_BASE_URL +
+                            p.d.STORE_BASE_URL +
                             "curator/" +
                             this.m_clanAccountID +
                             "/admin/ajaxmanagerssfeed"),
-                          [4, d.a.post(n, t, { withCredentials: !0 })]
+                          [4, u.a.post(n, t, { withCredentials: !0 })]
                         );
                       case 1:
                         return (
@@ -1096,8 +1096,8 @@
               );
             }),
             (e.prototype.UpdateAutomation = function (t) {
-              return Object(u.b)(this, void 0, void 0, function () {
-                return Object(u.e)(this, function (e) {
+              return Object(d.b)(this, void 0, void 0, function () {
+                return Object(d.e)(this, function (e) {
                   return [
                     2,
                     this.CreateOrUpdateRSSNewFeed(
@@ -1109,23 +1109,23 @@
               });
             }),
             (e.prototype.CheckForNewUpdate = function () {
-              return Object(u.b)(this, void 0, void 0, function () {
+              return Object(d.b)(this, void 0, void 0, function () {
                 var t, n;
-                return Object(u.e)(this, function (e) {
+                return Object(d.e)(this, function (e) {
                   switch (e.label) {
                     case 0:
                       return this.m_strRSSGID
                         ? ((t = new FormData()).append(
                             "sessionid",
-                            p.c.SESSIONID
+                            p.d.SESSIONID
                           ),
                           t.append("gid", this.m_strRSSGID),
                           (n =
-                            p.c.STORE_BASE_URL +
+                            p.d.STORE_BASE_URL +
                             "curator/" +
                             this.m_clanAccountID +
                             "/admin/ajaxcheckfornews"),
-                          [4, d.a.post(n, t, { withCredentials: !0 })])
+                          [4, u.a.post(n, t, { withCredentials: !0 })])
                         : [3, 2];
                     case 1:
                       e.sent(), (e.label = 2);
@@ -1136,12 +1136,12 @@
               });
             }),
             (e.prototype.CreatePost = function (i, o) {
-              return Object(u.b)(this, void 0, void 0, function () {
+              return Object(d.b)(this, void 0, void 0, function () {
                 var t,
                   n,
                   r,
                   a = this;
-                return Object(u.e)(this, function (e) {
+                return Object(d.e)(this, function (e) {
                   switch (e.label) {
                     case 0:
                       return this.BIsLoggedIn()
@@ -1210,13 +1210,13 @@
                 });
               });
             }),
-            Object(u.c)([m.C], e.prototype, "m_strRSSFeedURL", void 0),
-            Object(u.c)([m.C], e.prototype, "m_strRSSGID", void 0),
-            Object(u.c)([m.C], e.prototype, "m_rtimeRSSLastChecked", void 0),
-            Object(u.c)([m.C], e.prototype, "m_nPollIntervalSeconds", void 0),
-            Object(u.c)([m.C], e.prototype, "m_eRSSFeedLanguage", void 0),
-            Object(u.c)([m.C], e.prototype, "m_eCuratorLanguage", void 0),
-            Object(u.c)([m.C], e.prototype, "m_mapURLToPosted", void 0),
+            Object(d.c)([m.C], e.prototype, "m_strRSSFeedURL", void 0),
+            Object(d.c)([m.C], e.prototype, "m_strRSSGID", void 0),
+            Object(d.c)([m.C], e.prototype, "m_rtimeRSSLastChecked", void 0),
+            Object(d.c)([m.C], e.prototype, "m_nPollIntervalSeconds", void 0),
+            Object(d.c)([m.C], e.prototype, "m_eRSSFeedLanguage", void 0),
+            Object(d.c)([m.C], e.prototype, "m_eCuratorLanguage", void 0),
+            Object(d.c)([m.C], e.prototype, "m_mapURLToPosted", void 0),
             e
           );
         })(),
@@ -1248,13 +1248,13 @@
               return (
                 e.s_CuratorAdminStore ||
                   ((e.s_CuratorAdminStore = new e()).Init(),
-                  "dev" === p.c.WEB_UNIVERSE &&
+                  "dev" === p.d.WEB_UNIVERSE &&
                     (window.g_CuratorAdminStore = e.s_CuratorAdminStore)),
                 e.s_CuratorAdminStore
               );
             }),
             (e.prototype.Init = function () {
-              var e = Object(p.f)("curatoradmin", "application_config");
+              var e = Object(p.g)("curatoradmin", "application_config");
               this.ValidateStoreDefault(e) &&
                 ((this.m_defaultAdmin = new F(e)),
                 this.m_mapClanAccountToAdmin.set(
@@ -1263,7 +1263,7 @@
                 )),
                 this.ValidateWebAPI(e) &&
                   (this.m_transport = new a.a(
-                    p.c.WEBAPI_BASE_URL,
+                    p.d.WEBAPI_BASE_URL,
                     e.webapi_token
                   ).GetServiceTransport());
             }),
@@ -1274,7 +1274,7 @@
               return e && "string" == typeof e.webapi_token;
             }),
             (e.prototype.BIsLoggedIn = function () {
-              return p.i.logged_in;
+              return p.j.logged_in;
             }),
             (e.prototype.BHavePendingInfoRequests = function () {
               return (
@@ -1292,9 +1292,9 @@
               return this.m_mapClanAccountToAdmin.get(e);
             }),
             (e.prototype.QueueCuratorAdminInfoLoad = function (n) {
-              return Object(u.b)(this, void 0, void 0, function () {
+              return Object(d.b)(this, void 0, void 0, function () {
                 var t = this;
-                return Object(u.e)(this, function (e) {
+                return Object(d.e)(this, function (e) {
                   return n
                     ? this.m_mapClanAccountToAdmin.has(n)
                       ? [2, Promise.resolve()]
@@ -1318,9 +1318,9 @@
               });
             }),
             (e.prototype.FlushPendingClanInfo = function () {
-              return Object(u.b)(this, void 0, void 0, function () {
+              return Object(d.b)(this, void 0, void 0, function () {
                 var t, n;
-                return Object(u.e)(this, function (e) {
+                return Object(d.e)(this, function (e) {
                   switch (e.label) {
                     case 0:
                       return (
@@ -1355,11 +1355,11 @@
               );
             }),
             (e.prototype.LoadBatchedClanRSSAdminInfo = function (l) {
-              return Object(u.b)(this, void 0, void 0, function () {
+              return Object(d.b)(this, void 0, void 0, function () {
                 var s,
                   t,
                   c = this;
-                return Object(u.e)(this, function (e) {
+                return Object(d.e)(this, function (e) {
                   switch (e.label) {
                     case 0:
                       this.m_cClanInfoRequestsInFlight++,
@@ -1368,7 +1368,7 @@
                         })),
                         (t = function () {
                           var t, n, r, a, i, o;
-                          return Object(u.e)(this, function (e) {
+                          return Object(d.e)(this, function (e) {
                             switch (e.label) {
                               case 0:
                                 (t = Math.min(50, s.length)),
@@ -1379,12 +1379,12 @@
                                 return (
                                   e.trys.push([1, 3, , 4]),
                                   (n =
-                                    p.c.STORE_BASE_URL +
+                                    p.d.STORE_BASE_URL +
                                     "events_admin/ajaxgetrssadmininfo"),
                                   (r = { clanids: l }),
                                   [
                                     4,
-                                    d.a.get(n, {
+                                    u.a.get(n, {
                                       params: r,
                                       withCredentials: !0,
                                     }),
@@ -1450,13 +1450,13 @@
                 });
               });
             }),
-            Object(u.c)(
+            Object(d.c)(
               [m.C.shallow],
               e.prototype,
               "m_mapClanAccountToAdmin",
               void 0
             ),
-            Object(u.c)(
+            Object(d.c)(
               [m.C.shallow],
               e.prototype,
               "m_mapClanToEventRSSStats",
@@ -1567,7 +1567,7 @@
                       }),
                       0 < n.length)
                         ? ((r =
-                            m.c.STORE_BASE_URL +
+                            m.d.STORE_BASE_URL +
                             "curator/" +
                             o.GetAccountID() +
                             "/admin/ajaxgetrecbyapps"),
@@ -1576,8 +1576,8 @@
                             l.a.get(r, {
                               params: {
                                 appids: n,
-                                cc: m.c.COUNTRY || "US",
-                                l: m.c.LANGUAGE,
+                                cc: m.d.COUNTRY || "US",
+                                l: m.d.LANGUAGE,
                               },
                             }),
                           ])
@@ -1602,8 +1602,8 @@
         o = n("TyAF"),
         s = n("q1tI"),
         _ = n.n(s),
-        u = n("mgoM"),
-        d = n("3+zv"),
+        d = n("mgoM"),
+        u = n("3+zv"),
         f = n("6oCP"),
         b = n("Mgs7"),
         h = n("T27q"),
@@ -1613,8 +1613,8 @@
         w = n("Jqb/"),
         R = n("ka0M"),
         O = n("0OaU"),
-        C = n("+d9t"),
-        E = n("exH9"),
+        E = n("+d9t"),
+        C = n("exH9"),
         y = n("X3Ds"),
         B = n("TLQK"),
         j = n("bDQf"),
@@ -1661,13 +1661,13 @@
               );
               if (void 0 !== window.Prototype)
                 return window.location.reload(), null;
-              var t = Object(u.f)(
-                  Object(u.d)(this.m_Admin.GetFeedLanguageHandleUnset())
+              var t = Object(d.f)(
+                  Object(d.d)(this.m_Admin.GetFeedLanguageHandleUnset())
                 ),
                 n = a.a.Get().GetDefaultAdmin();
               return _.a.createElement(
                 "div",
-                { className: Object(E.a)(M.Ctn) },
+                { className: Object(C.a)(M.Ctn) },
                 _.a.createElement(
                   "div",
                   { className: "titleframe" },
@@ -1701,14 +1701,14 @@
                     "p",
                     { className: M.DashboardBtn },
                     _.a.createElement(
-                      C.a,
+                      E.a,
                       {
                         href:
-                          m.c.COMMUNITY_BASE_URL +
+                          m.d.COMMUNITY_BASE_URL +
                           "gid/" +
                           this.m_Admin.GetClanSteamID().ConvertTo64BitString() +
                           "/partnerevents/",
-                        className: Object(E.a)(S.a.Button, S.a.Primary),
+                        className: Object(C.a)(S.a.Button, S.a.Primary),
                       },
                       Object(B.f)("#RSSManager_EventDashBoard")
                     )
@@ -1730,12 +1730,12 @@
                       "a",
                       {
                         href:
-                          m.c.COMMUNITY_BASE_URL +
+                          m.d.COMMUNITY_BASE_URL +
                           "gid/" +
                           this.m_Admin.GetClanSteamID().ConvertTo64BitString() +
                           "/edit ",
                         target: "_blank",
-                        className: Object(E.a)(S.a.Button, M.PreviewBtn),
+                        className: Object(C.a)(S.a.Button, M.PreviewBtn),
                       },
                       Object(B.f)("#CuratorAdmin_RSSFeed_edit_language")
                     )
@@ -1747,7 +1747,7 @@
                     _.a.createElement(
                       "div",
                       {
-                        className: Object(E.a)(
+                        className: Object(C.a)(
                           M.LanguageRow,
                           A.a.WarningIconLayout
                         ),
@@ -1759,7 +1759,7 @@
                           "#CuratorAdmin_Curator_lang_only",
                           Object(B.f)(
                             "#Language_" +
-                              Object(u.d)(this.m_Admin.GetCuratorLanguage())
+                              Object(d.d)(this.m_Admin.GetCuratorLanguage())
                           ),
                           t
                         )
@@ -1768,7 +1768,7 @@
                   _.a.createElement(
                     "div",
                     {
-                      className: Object(E.a)(
+                      className: Object(C.a)(
                         S.a.FlexRowContainer,
                         M.UrlSettingCtn
                       ),
@@ -1961,7 +1961,7 @@
                                               0 < n.length
                                                 ? [
                                                     4,
-                                                    f.c.LoadBatchPartnerEventsByAnnouncementGID(
+                                                    f.c.LoadBatchPartnerEventsByEventGIDsOrAnnouncementGIDs(
                                                       n,
                                                       null,
                                                       this.m_cancelSignal
@@ -2069,14 +2069,14 @@
                         "p",
                         { className: M.DashboardBtn },
                         _.a.createElement(
-                          C.a,
+                          E.a,
                           {
                             href:
-                              m.c.COMMUNITY_BASE_URL +
+                              m.d.COMMUNITY_BASE_URL +
                               "gid/" +
                               t.GetClanSteamID().ConvertTo64BitString() +
                               "/partnerevents/",
-                            className: Object(E.a)(S.a.Button, S.a.Primary),
+                            className: Object(C.a)(S.a.Button, S.a.Primary),
                           },
                           Object(B.f)("#RSSManager_EventDashBoard")
                         )
@@ -2292,7 +2292,7 @@
               var t = this.props,
                 n = t.newsData,
                 r = t.clanSteamID,
-                a = new d.p();
+                a = new u.p();
               (a.GID = "PreviewPartnerEventRow_0"),
                 (a.clanSteamID = r),
                 (a.postTime = Date.now() / 1e3),
@@ -2423,21 +2423,21 @@
                   t.post.appids &&
                   1 == t.post.appids.length &&
                   t.post.appids[0],
-                u =
+                d =
                   0 !== t.post.recommendation_state &&
                   l &&
                   p.Get().BHasReviewForApp(s, l),
-                d = "";
+                u = "";
               return (
                 a &&
                   ((e =
                     a.GetVisibilityStartTimeAndDateUnixSeconds() ||
                     a.GetPostTimeAndDateUnixSeconds()),
-                  (d = Object(B.o)(e) + " @ " + Object(B.m)(e))),
+                  (u = Object(B.o)(e) + " @ " + Object(B.m)(e))),
                 _.a.createElement(
                   "div",
                   {
-                    className: Object(E.a)(
+                    className: Object(C.a)(
                       M.PostCtn,
                       Boolean(r) ? M.ActivePost : "",
                       Boolean(t.valid_post) ? "" : M.ErrorPost
@@ -2457,13 +2457,13 @@
                         _.a.createElement(
                           "span",
                           { className: M.PostDate },
-                          Object(B.f)("#RSSManager_PostEvent_PostedDate", d)
+                          Object(B.f)("#RSSManager_PostEvent_PostedDate", u)
                         ),
                       Boolean(!a.BIsVisibleEvent()) &&
                         _.a.createElement(
                           "span",
                           {
-                            className: Object(E.a)(
+                            className: Object(C.a)(
                               M.PostDraft,
                               c ? M.PostStaged : ""
                             ),
@@ -2472,7 +2472,7 @@
                             c
                               ? "#RSSManager_PostEvent_Staged"
                               : "#RSSManager_PostEvent_Draft",
-                            d
+                            u
                           )
                         )
                     ),
@@ -2501,7 +2501,7 @@
                                 "div",
                                 {
                                   onClick: this.OnViewEvent,
-                                  className: Object(E.a)(
+                                  className: Object(C.a)(
                                     S.a.Button,
                                     M.PreviewBtn
                                   ),
@@ -2511,9 +2511,9 @@
                           _.a.createElement(
                             "a",
                             {
-                              className: Object(E.a)(S.a.Button, M.PreviewBtn),
+                              className: Object(C.a)(S.a.Button, M.PreviewBtn),
                               href:
-                                m.c.COMMUNITY_BASE_URL +
+                                m.d.COMMUNITY_BASE_URL +
                                 "gid/" +
                                 o.GetClanSteamID().ConvertTo64BitString() +
                                 "/partnerevents/edit/" +
@@ -2525,20 +2525,20 @@
                             "div",
                             {
                               onClick: this.OnUpdateNewsEvent,
-                              className: Object(E.a)(S.a.Button, M.PreviewBtn),
+                              className: Object(C.a)(S.a.Button, M.PreviewBtn),
                             },
                             Object(B.f)("#RSSManager_PostEvent_UpdateEvent")
                           ),
-                          u &&
+                          d &&
                             _.a.createElement(
                               "a",
                               {
-                                className: Object(E.a)(
+                                className: Object(C.a)(
                                   S.a.Button,
                                   M.PreviewBtn
                                 ),
                                 href: Object(I.e)(
-                                  m.c.STORE_BASE_URL +
+                                  m.d.STORE_BASE_URL +
                                     "app/" +
                                     t.post.appids[0] +
                                     "/?curator_clanid=" +
@@ -2555,7 +2555,7 @@
                             "div",
                             {
                               onClick: this.OnOpenPreviewAsPartnerEvent,
-                              className: Object(E.a)(S.a.Button, M.PreviewBtn),
+                              className: Object(C.a)(S.a.Button, M.PreviewBtn),
                             },
                             Object(B.f)(
                               "#CuratorAdmin_RSSFeed_col_preview_event"
@@ -2565,7 +2565,7 @@
                             "div",
                             {
                               onClick: this.OnPostNewsEvent,
-                              className: Object(E.a)(S.a.Button, M.PreviewBtn),
+                              className: Object(C.a)(S.a.Button, M.PreviewBtn),
                             },
                             Object(B.f)(
                               "#CuratorAdmin_RSSFeed_col_create_event"
@@ -2801,8 +2801,8 @@
                             checked: Boolean(this.state.bConduct),
                           }),
                           _.a.createElement(
-                            C.a,
-                            { href: m.c.STORE_BASE_URL + "online_conduct/" },
+                            E.a,
+                            { href: m.d.STORE_BASE_URL + "online_conduct/" },
                             Object(B.f)("#RSSManager_CreateFeed_Conduct_Link")
                           )
                         )
@@ -2956,7 +2956,7 @@
                         "a",
                         {
                           href:
-                            m.c.COMMUNITY_BASE_URL +
+                            m.d.COMMUNITY_BASE_URL +
                             "gid/" +
                             this.props.admin
                               .GetClanSteamID()

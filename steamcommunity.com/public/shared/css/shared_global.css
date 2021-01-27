@@ -2663,6 +2663,10 @@ body.v6 #footer_nav .popup_menu .hr{
 
 /* China Desktop Footer */
 
+body.v6 #footer.china_footer {
+    padding: 16px 16px 60px 16px;
+}
+
 .china_footer_content a, #footer .china_footer_content a {
     color: #8F8E93;
 }
@@ -2673,10 +2677,11 @@ body.v6 #footer_nav .popup_menu .hr{
 
 .china_footer_navlinks {
     user-select: none;
+    margin-left: 50px;
 }
 
 .china_footer_content {
-    width: 940px;
+    max-width: calc( 910px - 16px);
     margin: 0px auto;
     padding-top: 16px;
     color: #8F8E93;

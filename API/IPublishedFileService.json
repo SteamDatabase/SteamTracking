@@ -770,6 +770,40 @@
                     "optional": false
                 }
             ]
+        },
+        {
+            "name": "UpdateAppUGCBan",
+            "version": 1,
+            "httpmethod": "POST",
+            "description": "Adds/updates/removes a UGC ban in the app",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Access key"
+                },
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false
+                },
+                {
+                    "name": "expiration_time",
+                    "type": "uint32",
+                    "optional": false
+                },
+                {
+                    "name": "reason",
+                    "type": "string",
+                    "optional": false
+                }
+            ]
         }
     ]
 }

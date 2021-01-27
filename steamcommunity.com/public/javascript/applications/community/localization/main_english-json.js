@@ -1279,6 +1279,12 @@
           "If this is an important event or announcement, you can upload a special Spotlight image to show the event large on your game’s detail page and on the Library homepage.",
         selectimage_tip_spotlight_2:
           "By default, your event's title and subtitle will be laid on top of the right half of your spotlight image. You can choose to turn off the text and use the entire banner space to show off your event or announcement.",
+        selectimage_tip_spotlight_3:
+          "Plan to include a short, catchy description of your event clearly on your spotlight banner so players can, at a glance, tell what is exciting about your event.",
+        selectimage_tip_spotlight_4:
+          "Toggle the setting near the spotlight preview to automatically display your event's title and short description on top of your artwork.",
+        selectimage_tip_spotlight_5:
+          "Or you can use the whole image space and include your own description of your update or event within your image.",
         selectimage_tip_sale_header_1:
           "This image will appear as the background of your sale page.",
         selectimage_tip_sale_header_2:
@@ -1308,6 +1314,7 @@
         selectimage_uploaded_languages: "Uploaded Languages",
         selectimage_reassign_image_ttip:
           "Reassign this image to a different language",
+        selectimage_viewimage_ttip: "Open this image in a new window",
         selectimage_delete_image_ttip:
           "Delete this image for just this language",
         selectimage_no_image: "No image chosen",
@@ -1650,7 +1657,10 @@
         Sale_CuratorRecommendation_ttip:
           "Controls where the curator recommendations or feature list appear on the sale page. By defaults, users following Steam curators will see the followed curator's recommendation about games featured in the sale at the bottom of the sale page. This lets you control where this section may appear.",
         Sale_CuratorRecommendation_desc:
-          "Displays Curator Recommendations and Curator Lists.",
+          "Displays Curator Recommendations and Curator Lists. Automatically pulling lists from Steam user's followed curators and your featured curator list in the Steam users language that the Steam users follow.",
+        Sale_CuratorRecommendation_StartTime: "Optional: Display start time",
+        Sale_CuratorRecommendation_StartTime_ttip:
+          "Optionally specify a start time when recommendation would start appearing, potentially giving curators some time to build their lists before they become visible. This time is bound between the event start and end time.",
         Sale_CuratorRecommendation_FeaturedList:
           "Feature Curator Recommendation List:",
         Sale_CuratorRecommendation_FeaturedList_ttip:
@@ -1713,6 +1723,7 @@
         Sale_CapsulesPerRow_Pattern_2343: "Vary per row: 2/3/4/3",
         Sale_CapsulesPerRow_Pattern_3t23: "Vary per row: 3 Tall/2/3",
         Sale_CapsulesPerRow_Pattern_5t: "5 Tall",
+        Sale_CapsulesPerRow_Pattern_3t: "3 Tall",
         Sale_VOInternalSection_SubscriptionPricing: "Subscription - Pricing",
         Sale_SectionType_EventSchedule: "Event Schedule",
         Sale_SectionType_EventSchedule_ttip:
@@ -1841,6 +1852,10 @@
         Sale_Section_UseRandomOrder: "Randomize order of Top Items",
         Sale_Section_UseRandomOrder_hint:
           "Randomizes the order of display for the items chosen",
+        Sale_Section_FeaturedCurator_UseRandomOrder:
+          "Randomize order of Featured Curators",
+        Sale_Section_FeaturedCurator_UseRandomOrder_hint:
+          "Randomizes the order of display for the Featured curators chosen",
         Sale_Section_UseRandomOrder_smart_hint:
           "Randomizes the order of display for top selling items in this smart section",
         Sale_Section_RandomFromSmartSet:

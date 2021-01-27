@@ -3,6 +3,19 @@ body.v6.game_bg.creatorhome {
 	background: #2e3138;
 }
 
+body.v6.game_bg.grayscale {
+	background: black;
+}
+
+.page_content_ctn.grayscale {
+	background: linear-gradient( transparent, black );
+	padding-bottom: 80px;
+}
+
+body.v6.game_bg.grayscale #footer_spacer {
+	height: 210px;
+}
+
 body.v6.game_bg.creatorhome .page_background.curator_recommendations {
 	background-color: #2e3138;
 	background-blend-mode: lighten;

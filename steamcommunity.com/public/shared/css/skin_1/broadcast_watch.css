@@ -275,6 +275,8 @@ body:not(.iframe) #PageContents
 
 body.iframe #PageContents
 {
+	/* prevent margins after this from bubbling up and offsetting the video */
+	display: flow-root;
 }
 
 #LoadingContent .BottomFade
