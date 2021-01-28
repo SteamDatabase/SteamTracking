@@ -25,6 +25,11 @@ body.v6.game_bg.creatorhome .page_background.curator_recommendations.notint {
 	background-color: #2e3138;
 	background-blend-mode: unset;
 }
+
+body.v6.game_bg.grayscale.creatorhome .page_background.curator_recommendations {
+	background-color: transparent;
+}
+
 /* header */
 .list_header_area {
 	display: flex;

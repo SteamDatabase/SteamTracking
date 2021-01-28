@@ -1,18 +1,18 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6336006";
+var CLSTAMP = "6338109";
 !(function (o) {
   function e(e) {
     for (
-      var a, c, d = e[0], n = e[1], s = e[2], f = 0, r = [];
-      f < d.length;
-      f++
+      var a, c, d = e[0], n = e[1], s = e[2], r = 0, f = [];
+      r < d.length;
+      r++
     )
-      (c = d[f]),
-        Object.prototype.hasOwnProperty.call(h, c) && h[c] && r.push(h[c][0]),
+      (c = d[r]),
+        Object.prototype.hasOwnProperty.call(h, c) && h[c] && f.push(h[c][0]),
         (h[c] = 0);
     for (a in n) Object.prototype.hasOwnProperty.call(n, a) && (o[a] = n[a]);
-    for (j && j(e); r.length; ) r.shift()();
+    for (j && j(e); f.length; ) f.shift()();
     return b.push.apply(b, s || []), i();
   }
   function i() {
@@ -125,7 +125,7 @@ var CLSTAMP = "6336006";
                     5: "31d6cfe0d16ae931b73c",
                     6: "e4171283abcc22c90f98",
                     7: "ec433dd8cfb12ab117d0",
-                    8: "8fb2e1e7f771a1327aae",
+                    8: "1b6e4adcf9cd23792c76",
                     10: "31d6cfe0d16ae931b73c",
                     11: "31d6cfe0d16ae931b73c",
                     12: "31d6cfe0d16ae931b73c",
@@ -223,16 +223,16 @@ var CLSTAMP = "6336006";
               s < c.length;
               s++
             ) {
-              var f =
-                (r = c[s]).getAttribute("data-href") || r.getAttribute("href");
-              if ("stylesheet" === r.rel && (f === a || f === n)) return e();
+              var r =
+                (f = c[s]).getAttribute("data-href") || f.getAttribute("href");
+              if ("stylesheet" === f.rel && (r === a || r === n)) return e();
             }
             for (
-              var r, o = document.getElementsByTagName("style"), s = 0;
+              var f, o = document.getElementsByTagName("style"), s = 0;
               s < o.length;
               s++
             ) {
-              if ((f = (r = o[s]).getAttribute("data-href")) === a || f === n)
+              if ((r = (f = o[s]).getAttribute("data-href")) === a || r === n)
                 return e();
             }
             var i = document.createElement("link");
@@ -260,17 +260,17 @@ var CLSTAMP = "6336006";
       n,
       s,
       c,
-      f,
+      r,
       d,
-      r = h[b];
+      f = h[b];
     return (
-      0 !== r &&
-        (r
-          ? e.push(r[2])
+      0 !== f &&
+        (f
+          ? e.push(f[2])
           : ((a = new Promise(function (e, a) {
-              r = h[b] = [e, a];
+              f = h[b] = [e, a];
             })),
-            e.push((r[2] = a)),
+            e.push((f[2] = a)),
             ((n = document.createElement("script")).charset = "utf-8"),
             (n.timeout = 120),
             _.nc && n.setAttribute("nonce", _.nc),
@@ -451,7 +451,7 @@ var CLSTAMP = "6336006";
               }[d]),
             (s = new Error()),
             (c = function (e) {
-              (n.onerror = n.onload = null), clearTimeout(f);
+              (n.onerror = n.onload = null), clearTimeout(r);
               var a,
                 c,
                 d = h[b];
@@ -467,7 +467,7 @@ var CLSTAMP = "6336006";
                   d[1](s)),
                 (h[b] = void 0));
             }),
-            (f = setTimeout(function () {
+            (r = setTimeout(function () {
               c({ type: "timeout", target: n });
             }, 12e4)),
             (n.onerror = n.onload = c),

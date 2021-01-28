@@ -2324,13 +2324,13 @@ body.modals_BodyNoScrollDialog_105OB {
   .bbcodeeditor_InsertSpeakerCtn_2f-6Y .bbcodeeditor_PreviewCtn__VCRy {
     margin-top: 16px; }
 
-textarea {
+.bbcodeeditor_BBCodeEditorInputStyles_F506h textarea {
   color: #909090;
   background-color: rgba(0, 0, 0, 0.2);
   border: 1px solid #000;
   border-radius: 3px; }
 
-input {
+.bbcodeeditor_BBCodeEditorInputStyles_F506h input {
   color: #909090;
   background-color: rgba(0, 0, 0, 0.2);
   border: 1px solid #000;

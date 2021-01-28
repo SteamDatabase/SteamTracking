@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6336006";
+var CLSTAMP = "6338109";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [9],
   {
@@ -4722,6 +4722,7 @@ var CLSTAMP = "6336006";
                   {
                     className: Object(h.a)(
                       Z.a.DescriptionCtn,
+                      Z.a.BBCodeEditorInputStyles,
                       this.state.bShowDragTarget ? Z.a.DragTarget : ""
                     ),
                   },
@@ -5272,6 +5273,7 @@ var CLSTAMP = "6336006";
                   onCancel: this.props.closeModal,
                   onOK: this.OnYoutubeInsertLink,
                   strOKButtonText: Object(R.f)("#EventEditor_InsertYouTube"),
+                  className: Z.a.BBCodeEditorInputStyles,
                 },
                 B.createElement(
                   "div",
@@ -5466,6 +5468,7 @@ var CLSTAMP = "6336006";
                   onOK: this.onInsertLink,
                   onCancel: this.props.closeModal,
                   strOKButtonText: Object(R.f)("#EventEditor_InsertLinkURL"),
+                  className: Z.a.BBCodeEditorInputStyles,
                 },
                 B.createElement(
                   "div",
@@ -5572,6 +5575,7 @@ var CLSTAMP = "6336006";
                   strOKButtonText: Object(R.f)(
                     "#EventEditor_InsertImage_Title"
                   ),
+                  className: Z.a.BBCodeEditorInputStyles,
                 },
                 B.createElement(
                   "div",
@@ -5768,6 +5772,7 @@ var CLSTAMP = "6336006";
                   (e += "]" + d + "[/speaker]"),
                   fe.replaceSelection(t.textareaRef.current, e);
               },
+              className: Z.a.BBCodeEditorInputStyles,
             },
             B.createElement(
               "div",
@@ -6049,7 +6054,11 @@ var CLSTAMP = "6336006";
                   })
                 : B.createElement(
                     P.d,
-                    { onOK: this.OnConvertAndOverriteHTML, onCancel: e },
+                    {
+                      onOK: this.OnConvertAndOverriteHTML,
+                      onCancel: e,
+                      className: Z.a.BBCodeEditorInputStyles,
+                    },
                     B.createElement(
                       G.j,
                       null,
@@ -18607,6 +18616,7 @@ var CLSTAMP = "6336006";
         PhotoCtn: "bbcodeeditor_PhotoCtn_2-f4C",
         AboutCtn: "bbcodeeditor_AboutCtn_3hF9c",
         PreviewCtn: "bbcodeeditor_PreviewCtn__VCRy",
+        BBCodeEditorInputStyles: "bbcodeeditor_BBCodeEditorInputStyles_F506h",
       };
     },
     "7C/M": function (e, t, n) {
