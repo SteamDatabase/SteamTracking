@@ -10,6 +10,11 @@
         ModerationContainer: "eventmoderation_ModerationContainer_4HRKp",
         FilterContainer: "eventmoderation_FilterContainer_qY07T",
         Tile: "eventmoderation_Tile_3oU1y",
+        DetailsMiddle: "eventmoderation_DetailsMiddle_VcJpZ",
+        EventModerateMarkReview:
+          "eventmoderation_EventModerateMarkReview_1RqKA",
+        EventModerateMarkReReview:
+          "eventmoderation_EventModerateMarkReReview_qd-K7",
         TileEventOtherType: "eventmoderation_TileEventOtherType_3LUrW",
         TileCapsule: "eventmoderation_TileCapsule_36tP8",
         NoCapsule: "eventmoderation_NoCapsule_1onVF",
@@ -19,7 +24,6 @@
         DetailsRight: "eventmoderation_DetailsRight_2BaxW",
         ArtHeader: "eventmoderation_ArtHeader_38IkF",
         ArtSpotlight: "eventmoderation_ArtSpotlight_2oUPY",
-        DetailsMiddle: "eventmoderation_DetailsMiddle_VcJpZ",
         ModeratedFlagCtn: "eventmoderation_ModeratedFlagCtn_2JGGc",
         TitleLink: "eventmoderation_TitleLink_1OG__",
         TileAppInfo: "eventmoderation_TileAppInfo_2IJ__",
@@ -189,7 +193,7 @@
         (a[(a.k_UpdateSeasonTags = 3)] = "k_UpdateSeasonTags"),
         (a[(a.k_ModReReviewed = 4)] = "k_ModReReviewed"),
         (a[(a.k_ModRemovedFromSteamChina = 5)] = "k_ModRemovedFromSteamChina");
-      function D(e) {
+      function M(e) {
         var t = v.useState(!0),
           n = t[0],
           a = t[1],
@@ -329,13 +333,13 @@
             )
         );
       }
-      var M = "ModAct",
+      var D = "ModAct",
         w = (function () {
           function e() {}
           return (
             (e.prototype.ToModString = function () {
               var e =
-                M +
+                D +
                 "_" +
                 this.m_moderator +
                 "_" +
@@ -353,7 +357,7 @@
             }),
             (e.prototype.FromString = function (e) {
               var t = e.split("_");
-              if (!t || t[0] !== M) return !1;
+              if (!t || t[0] !== D) return !1;
               switch (
                 ((this.m_moderator = Number(t[1])),
                 (this.m_rtWhen = Number(t[2])),
@@ -394,7 +398,7 @@
               );
             }),
             (e.IsAuditAction = function (e) {
-              return e.startsWith(M);
+              return e.startsWith(D);
             }),
             (e.prototype.SetUpdateSeasonalTags = function (e) {
               return (
@@ -408,7 +412,7 @@
             e
           );
         })(),
-        G = (function () {
+        k = (function () {
           function e() {
             (this.m_mapEventGIDToSolrData = new Map()),
               (this.m_listEvents = new Array());
@@ -574,7 +578,7 @@
             e
           );
         })(),
-        k = (function () {
+        G = (function () {
           function e() {
             (this.m_mapEventGIDToSolrData = new Map()),
               (this.m_listEvents = new Array());
@@ -711,8 +715,8 @@
           );
         })(),
         L = n("6oCP"),
-        B = n("IjL/"),
-        R = n("T27q"),
+        R = n("IjL/"),
+        B = n("T27q"),
         P = n("Qcoi"),
         F = n("0OaU"),
         H = n("TLQK"),
@@ -946,24 +950,24 @@
                             return e.value;
                           })
                         : void 0),
-                      k
-                        .Get()
-                        .LoadPartnerEventForQueryIncremental(
-                          this.m_cancelSignal,
-                          this.m_nPage,
-                          t.eventsToLoadPerPaging,
-                          [this.props.appid],
-                          n,
-                          a,
-                          t.filterDate,
-                          e,
-                          t.bOrderByVisibilityStartTime
-                        ))
-                    : G.Get().LoadPartnerEventForModerationIncremental(
+                      G.Get().LoadPartnerEventForQueryIncremental(
                         this.m_cancelSignal,
                         this.m_nPage,
-                        t.eventsToLoadPerPaging
-                      )
+                        t.eventsToLoadPerPaging,
+                        [this.props.appid],
+                        n,
+                        a,
+                        t.filterDate,
+                        e,
+                        t.bOrderByVisibilityStartTime
+                      ))
+                    : k
+                        .Get()
+                        .LoadPartnerEventForModerationIncremental(
+                          this.m_cancelSignal,
+                          this.m_nPage,
+                          t.eventsToLoadPerPaging
+                        )
                   )
                     .then(function (e) {
                       (r.m_nPage += t.eventsToLoadPerPaging),
@@ -985,8 +989,8 @@
               var t = new Array();
               return (
                 (j.Get().bUseCustomQuery
-                  ? k.Get().GetAllSolrEvents()
-                  : G.Get().GetAllSolrEvents()
+                  ? G.Get().GetAllSolrEvents()
+                  : k.Get().GetAllSolrEvents()
                 ).forEach(function (e) {
                   t.push(
                     p.a.createElement(de, { solrData: e, key: e.unique_id })
@@ -1016,8 +1020,8 @@
             }),
             (e.prototype.RefetchAllEventTiles = function () {
               (this.m_nPage = 0),
-                G.Get().ClearAllSolrEvents(),
                 k.Get().ClearAllSolrEvents(),
+                G.Get().ClearAllSolrEvents(),
                 this.setState(
                   Object(E.a)({}, oe),
                   this.UpdateQueryParametersAndLoadMoreEvents
@@ -1038,7 +1042,7 @@
                     Object(H.f)("#EventModeration_Title")
                   ),
                   p.a.createElement(
-                    B.a,
+                    R.a,
                     null,
                     p.a.createElement(
                       "div",
@@ -1053,7 +1057,7 @@
                     )
                   )
                 ),
-                p.a.createElement(B.a, null, e),
+                p.a.createElement(R.a, null, e),
                 this.state.bInfiniteScrollLoading &&
                   p.a.createElement(F.a, {
                     position: "center",
@@ -1369,14 +1373,16 @@
                               l.SetReReviewAction(!i)),
                         [
                           4,
-                          G.Get().UpdateTagsOnPartnerEvent(
-                            this.m_cancelSignal,
-                            a.clanSteamID,
-                            a.AnnouncementGID,
-                            r,
-                            o,
-                            l
-                          ),
+                          k
+                            .Get()
+                            .UpdateTagsOnPartnerEvent(
+                              this.m_cancelSignal,
+                              a.clanSteamID,
+                              a.AnnouncementGID,
+                              r,
+                              o,
+                              l
+                            ),
                         ]
                       );
                     case 2:
@@ -1431,7 +1437,7 @@
                       p.a.createElement(
                         "div",
                         null,
-                        p.a.createElement(R.b, {
+                        p.a.createElement(B.b, {
                           event: l,
                           fnClose: this.HideModalEvent,
                         })
@@ -1468,7 +1474,7 @@
                   : Object(H.f)("#EVentModTile_State_Published"),
                 d = l ? l.type : Number(a.event_type);
               return p.a.createElement(
-                B.a,
+                R.a,
                 null,
                 s,
                 p.a.createElement(
@@ -1592,7 +1598,7 @@
                               },
                               Object(H.f)("#EventModTile_SeasonalTag")
                             ),
-                          p.a.createElement(D, { eventModel: l })
+                          p.a.createElement(M, { eventModel: l })
                         ),
                         p.a.createElement(
                           "div",
@@ -2050,12 +2056,14 @@
                         (o = r.value.eventType),
                         [
                           4,
-                          G.Get().UpdatePartnerEventType(
-                            this.m_cancelSignal,
-                            n.clanSteamID,
-                            n.GID,
-                            o
-                          ),
+                          k
+                            .Get()
+                            .UpdatePartnerEventType(
+                              this.m_cancelSignal,
+                              n.clanSteamID,
+                              n.GID,
+                              o
+                            ),
                         ]
                       );
                     case 2:
@@ -2073,14 +2081,16 @@
                           }),
                         [
                           4,
-                          G.Get().UpdateTagsOnPartnerEvent(
-                            this.m_cancelSignal,
-                            n.clanSteamID,
-                            n.GetAnnouncementGID(),
-                            l,
-                            i,
-                            new w().SetActionChangeEvent(o)
-                          ),
+                          k
+                            .Get()
+                            .UpdateTagsOnPartnerEvent(
+                              this.m_cancelSignal,
+                              n.clanSteamID,
+                              n.GetAnnouncementGID(),
+                              l,
+                              i,
+                              new w().SetActionChangeEvent(o)
+                            ),
                         ]
                       );
                     case 3:
@@ -2266,18 +2276,20 @@
                         (a = this.props.eventModel),
                         [
                           4,
-                          G.Get().UpdateTagsOnPartnerEvent(
-                            this.m_cancelSignal,
-                            a.clanSteamID,
-                            a.AnnouncementGID,
-                            t,
-                            n,
-                            new w().SetUpdateSeasonalTags(
-                              this.state.bAccept
-                                ? "halloween2019"
-                                : "halloween2019reviewed"
-                            )
-                          ),
+                          k
+                            .Get()
+                            .UpdateTagsOnPartnerEvent(
+                              this.m_cancelSignal,
+                              a.clanSteamID,
+                              a.AnnouncementGID,
+                              t,
+                              n,
+                              new w().SetUpdateSeasonalTags(
+                                this.state.bAccept
+                                  ? "halloween2019"
+                                  : "halloween2019reviewed"
+                              )
+                            ),
                         ]
                       );
                     case 2:
@@ -2637,7 +2649,7 @@
                   "demo" != e.type && (m += 1);
                 }),
                 v.createElement(
-                  B.a,
+                  R.a,
                   null,
                   v.createElement(
                     "h1",
@@ -3112,8 +3124,7 @@
                       return fe.BIsBackkFillInProgress()
                         ? [
                             4,
-                            k
-                              .Get()
+                            G.Get()
                               .LoadPartnerEventForQueryIncremental(
                                 this.m_cancelSignal,
                                 t,
@@ -3468,10 +3479,10 @@
         je = n("mgoM"),
         Ce = n("BVKn"),
         Ie = n("YWVM"),
-        De = n("r3N9"),
-        Me = n("SdTr"),
+        Me = n("r3N9"),
+        De = n("SdTr"),
         we = n("YNty"),
-        Ge = (function () {
+        ke = (function () {
           function e() {
             (this.m_objApprovalPriviledge = null),
               (this.m_LoadingPriviledgePromise = null);
@@ -3564,7 +3575,7 @@
             e
           );
         })(),
-        ke = n("6eA3"),
+        Ge = n("6eA3"),
         Le = Object(i.a)(function (e) {
           var t = v.useState(null),
             n = t[0],
@@ -3587,7 +3598,7 @@
                       case 1:
                         return (
                           (n = e.sent()),
-                          [4, Ge.Get().HintLoadAppApprovalPriviledge()]
+                          [4, ke.Get().HintLoadAppApprovalPriviledge()]
                         );
                       case 2:
                         return (
@@ -3614,34 +3625,34 @@
                 partnerEventStore: e.partnerEventStore,
                 addtionalAdminButtons: n
                   ? [
-                      v.createElement(Be, {
+                      v.createElement(Re, {
                         key: "removesteamchina",
                         eventModel: a,
                       }),
                     ]
                   : void 0,
               })
-            : Ge.Get().BHasSteamChinaAppApprovalPriviledge()
+            : ke.Get().BHasSteamChinaAppApprovalPriviledge()
             ? v.createElement(
                 "div",
-                { className: ke.DisplayAdminPanel },
+                { className: Ge.DisplayAdminPanel },
                 v.createElement(
                   "span",
-                  { className: ke.DisplayAdminPanel_Title },
+                  { className: Ge.DisplayAdminPanel_Title },
                   Object(H.f)("#EventDisplay_Admin_Title")
                 ),
-                v.createElement(Be, { key: "removesteamchina", eventModel: a })
+                v.createElement(Re, { key: "removesteamchina", eventModel: a })
               )
             : null;
         }),
-        Be = function (p) {
+        Re = function (p) {
           var m = p.eventModel;
           return v.createElement(
             "div",
             {
               className: Object(K.a)(
                 x.Button,
-                ke.AdminButton,
+                Ge.AdminButton,
                 x.ValveOnlyBackground
               ),
               onClick: function (e) {
@@ -3777,7 +3788,7 @@
             Object(H.f)("#EventAdmin_Moderation_HideEventInSC")
           );
         },
-        Re = Ce.a.Get(),
+        Be = Ce.a.Get(),
         Pe = (function (n) {
           function e(e) {
             var t = n.call(this, e) || this;
@@ -3785,7 +3796,7 @@
               (t.state = {
                 lookupGID: t.props.event_gid
                   ? t.props.event_gid
-                  : Re.GetClanEventGIDFromAnnouncementGID(
+                  : Be.GetClanEventGIDFromAnnouncementGID(
                       t.props.announcement_gid
                     ),
               }),
@@ -3803,7 +3814,7 @@
                     case 0:
                       if (
                         !this.props.event_gid ||
-                        Re.GetClanEventModel(this.props.event_gid)
+                        Be.GetClanEventModel(this.props.event_gid)
                       )
                         return [3, 5];
                       e.label = 1;
@@ -3812,7 +3823,7 @@
                         e.trys.push([1, 3, , 4]),
                         [
                           4,
-                          Re.LoadPartnerEventGeneric(
+                          Be.LoadPartnerEventGeneric(
                             this.props.clansteamid,
                             this.props.appid,
                             this.props.event_gid,
@@ -3830,7 +3841,7 @@
                     case 3:
                       return (
                         e.sent(),
-                        Re.LoadPartnerEventGeneric(
+                        Be.LoadPartnerEventGeneric(
                           this.props.clansteamid,
                           this.props.appid,
                           void 0,
@@ -3852,10 +3863,10 @@
                       return [3, 6];
                     case 5:
                       this.props.announcement_gid &&
-                        !Re.GetClanEventGIDFromAnnouncementGID(
+                        !Be.GetClanEventGIDFromAnnouncementGID(
                           this.props.announcement_gid
                         ) &&
-                        Re.LoadPartnerEventGeneric(
+                        Be.LoadPartnerEventGeneric(
                           this.props.clansteamid,
                           this.props.appid,
                           void 0,
@@ -3890,7 +3901,7 @@
                 n,
                 a =
                   this.state.lookupGID &&
-                  Re.GetClanEventModel(this.state.lookupGID);
+                  Be.GetClanEventModel(this.state.lookupGID);
               a && a.appid
                 ? (t =
                     (e = be.a.GetStoreCapsuleInfo(a.appid).GetAppStoreData()) &&
@@ -3917,46 +3928,46 @@
             }),
             (e.prototype.InfiniteScrollCloseModal = function () {
               var e,
-                t = Re.GetClanEventModel(this.state.lookupGID);
+                t = Be.GetClanEventModel(this.state.lookupGID);
               t &&
                 ((e = Object(ye.d)(t, ye.a.k_eStoreNewsHub, "allowRelative")),
                 this.props.history.push(e));
             }),
             (e.prototype.render = function () {
-              var e = Re.GetClanEventModel(this.state.lookupGID);
+              var e = Be.GetClanEventModel(this.state.lookupGID);
               return e
                 ? this.props.bInfiniteScroll
                   ? p.a.createElement(
-                      B.a,
+                      R.a,
                       null,
-                      p.a.createElement(De.a, {
+                      p.a.createElement(Me.a, {
                         appid: e.appid,
                         trackingLocation: 7,
                         announcementGID: e.GetAnnouncementGID(),
-                        partnerEventStore: Re,
+                        partnerEventStore: Be,
                         eventModel: e,
                         showAppHeader: !0,
                         closeModal: this.InfiniteScrollCloseModal,
                       })
                     )
                   : p.a.createElement(
-                      B.a,
+                      R.a,
                       null,
                       p.a.createElement(we.a, {
                         lang: Object(je.g)(I.d.LANGUAGE),
-                        partnerEventStore: Re,
+                        partnerEventStore: Be,
                         event: e,
                         adminPanel:
                           I.d.EREALM === _.e.k_ESteamRealmChina
                             ? p.a.createElement(Le, { eventModel: e })
                             : p.a.createElement(Ie.a, {
                                 eventModel: e,
-                                partnerEventStore: Re,
+                                partnerEventStore: Be,
                               }),
-                        otherEventRow: p.a.createElement(Me.a, {
+                        otherEventRow: p.a.createElement(De.a, {
                           clanAccountID: e.clanSteamID.GetAccountID(),
                           gidAnnouncement: e.AnnouncementGID,
-                          partnerEventStore: Re,
+                          partnerEventStore: Be,
                         }),
                       })
                     )
@@ -4156,7 +4167,7 @@
                 "div",
                 { className: c },
                 this.state.bShowModal &&
-                  p.a.createElement(De.a, {
+                  p.a.createElement(Me.a, {
                     classname: Ve.StoreHeaderAdjust,
                     appid: d,
                     trackingLocation: u,
@@ -4210,8 +4221,8 @@
                       a.slice(0, t).map(function (t) {
                         var e =
                           1 === a.length && 500 < window.screen.width
-                            ? Me.c
-                            : Me.b;
+                            ? De.c
+                            : De.b;
                         return p.a.createElement(e, {
                           key: t.GID,
                           event: t,
@@ -4291,7 +4302,7 @@
               p.a.createElement(
                 "div",
                 { className: Ve.EventsSummariesCtn },
-                p.a.createElement(Me.c, { event: o, onClick: t })
+                p.a.createElement(De.c, { event: o, onClick: t })
               )
           );
         },
@@ -4485,7 +4496,7 @@
             "div",
             null,
             p.a.createElement(
-              B.a,
+              R.a,
               null,
               p.a.createElement(
                 "h1",

@@ -12326,12 +12326,14 @@ img.broadcastplayer_BroadcastPlaceholderImg_3hxn9 {
     display: grid;
     grid-auto-flow: row;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 10px 10px; }
+    grid-gap: 16px 16px; }
 
 .curatorlist_CuratorReview_31hoQ {
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   display: flex;
-  margin: 4px 0px;
-  background: linear-gradient(180deg, #292d33, #15161a); }
+  margin: 0px;
+  background: linear-gradient(180deg, #323C41, #15161a);
+  box-shadow: 1px 1px 8px black; }
   .curatorlist_CuratorReview_31hoQ .curatorlist_CapsuleCtn_MY9Lk {
     width: 350px;
     flex: none; }
@@ -12340,10 +12342,21 @@ img.broadcastplayer_BroadcastPlaceholderImg_3hxn9 {
     .curatorlist_CuratorListGrid_qJM6j .curatorlist_CuratorReview_31hoQ .curatorlist_CapsuleCtn_MY9Lk {
       width: 100%; }
 
-.curatorlist_YouTubeCapsule_1siEs .curatorlist_YouTubePreviewImage_eObSf {
-  height: unset; }
+.curatorlist_YouTubeCapsule_1siEs .curatorlist_YouTubeCtn_1uz1W {
+  position: relative;
+  height: 0;
+  padding: 46.73913% 0 0 0;
+  overflow: hidden; }
+  .curatorlist_YouTubeCapsule_1siEs .curatorlist_YouTubeCtn_1uz1W:hover {
+    overflow: unset; }
+  .curatorlist_YouTubeCapsule_1siEs .curatorlist_YouTubeCtn_1uz1W .curatorlist_YouTubePreviewImage_eObSf, .curatorlist_YouTubeCapsule_1siEs .curatorlist_YouTubeCtn_1uz1W .YoutubePlayer {
+    position: absolute;
+    top: 0; }
+    .curatorlist_YouTubeCapsule_1siEs .curatorlist_YouTubeCtn_1uz1W .curatorlist_YouTubePreviewImage_eObSf:hover, .curatorlist_YouTubeCapsule_1siEs .curatorlist_YouTubeCtn_1uz1W .YoutubePlayer:hover {
+      z-index: 3; }
 
 .curatorlist_YouTubeCapsule_1siEs .curatorlist_YouTubeCapsuleBottomBar_1d9Mp {
+  position: relative;
   display: flex;
   padding-left: 12px;
   height: 30px;
@@ -12354,7 +12367,7 @@ img.broadcastplayer_BroadcastPlaceholderImg_3hxn9 {
     margin-right: 4px; }
     .curatorlist_YouTubeCapsule_1siEs .curatorlist_YouTubeCapsuleBottomBar_1d9Mp .curatorlist_GameImageCtn_220F7 .curatorlist_GameImage_7gTF4 {
       position: absolute;
-      bottom: 0;
+      bottom: -12px;
       width: 100%;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.7); }
   .curatorlist_YouTubeCapsule_1siEs .curatorlist_YouTubeCapsuleBottomBar_1d9Mp .curatorlist_FullWidth_3ditF {
@@ -12364,20 +12377,21 @@ img.broadcastplayer_BroadcastPlaceholderImg_3hxn9 {
   display: flex;
   flex-direction: column;
   color: rgba(255, 255, 255, 0.9);
-  padding: 12px;
+  padding: 20px 12px 12px 12px;
   flex-shrink: 1;
   margin-left: 8px; }
   .curatorlist_CuratorListGrid_qJM6j .curatorlist_ReviewTextSection_1597W {
     margin-left: 0;
     margin-bottom: 16px; }
   .curatorlist_ReviewTextSection_1597W .curatorlist_GameTitle_nl2T_ {
-    text-transform: uppercase;
-    font-size: 1.5em; }
+    font-size: 22px;
+    font-weight: 500; }
   .curatorlist_ReviewTextSection_1597W .curatorlist_RecommendationTypeAndDate_2lz6u {
     display: flex;
-    font-size: 0.8em;
+    font-size: 11px;
     text-transform: uppercase;
-    letter-spacing: 1px; }
+    letter-spacing: 1px;
+    margin-top: 4px; }
     .curatorlist_ReviewTextSection_1597W .curatorlist_RecommendationTypeAndDate_2lz6u .curatorlist_Recommended_3v9Qi {
       color: #66c0f4; }
     .curatorlist_ReviewTextSection_1597W .curatorlist_RecommendationTypeAndDate_2lz6u .curatorlist_NotRecommended_3iOGo {
@@ -12390,11 +12404,14 @@ img.broadcastplayer_BroadcastPlaceholderImg_3hxn9 {
       text-transform: none;
       color: rgba(255, 255, 255, 0.7); }
   .curatorlist_ReviewTextSection_1597W .curatorlist_ReviewBlurb_1y_bx {
-    margin: 10px 0; }
+    margin: 10px 0;
+    font-size: 15px;
+    line-height: 19px;
+    color: #bdc1ca; }
 
 .curatorlist_FullReviewLink_3_8G- {
   display: flex;
-  font-size: 0.8em; }
+  font-size: 11px; }
   .curatorlist_FullReviewLink_3_8G- .curatorlist_FullReviewAnchor_3pWCN {
     text-decoration: underline; }
   .curatorlist_FullReviewLink_3_8G- .curatorlist_FullReviewDomain_2R37N {

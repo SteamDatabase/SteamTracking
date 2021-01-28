@@ -4,11 +4,11 @@ body.v6.game_bg.creatorhome {
 }
 
 body.v6.game_bg.grayscale {
-	background: black;
+	background: #262D33;
 }
 
 .page_content_ctn.grayscale {
-	background: linear-gradient( transparent, black );
+	background: linear-gradient( transparent, #262D33 );
 	padding-bottom: 80px;
 }
 

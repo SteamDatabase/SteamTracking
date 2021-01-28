@@ -1,18 +1,18 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6333446";
+var CLSTAMP = "6336006";
 !(function (o) {
   function e(e) {
     for (
-      var a, c, d = e[0], n = e[1], s = e[2], r = 0, f = [];
-      r < d.length;
-      r++
+      var a, c, d = e[0], n = e[1], s = e[2], f = 0, r = [];
+      f < d.length;
+      f++
     )
-      (c = d[r]),
-        Object.prototype.hasOwnProperty.call(h, c) && h[c] && f.push(h[c][0]),
+      (c = d[f]),
+        Object.prototype.hasOwnProperty.call(h, c) && h[c] && r.push(h[c][0]),
         (h[c] = 0);
     for (a in n) Object.prototype.hasOwnProperty.call(n, a) && (o[a] = n[a]);
-    for (j && j(e); f.length; ) f.shift()();
+    for (j && j(e); r.length; ) r.shift()();
     return b.push.apply(b, s || []), i();
   }
   function i() {
@@ -123,9 +123,9 @@ var CLSTAMP = "6333446";
                     3: "c1b1393101b771edb342",
                     4: "7519aa0f0b9541392132",
                     5: "31d6cfe0d16ae931b73c",
-                    6: "2b5198e44c897d5677dc",
+                    6: "e4171283abcc22c90f98",
                     7: "ec433dd8cfb12ab117d0",
-                    8: "3341268374cda62d6b66",
+                    8: "8fb2e1e7f771a1327aae",
                     10: "31d6cfe0d16ae931b73c",
                     11: "31d6cfe0d16ae931b73c",
                     12: "31d6cfe0d16ae931b73c",
@@ -223,16 +223,16 @@ var CLSTAMP = "6333446";
               s < c.length;
               s++
             ) {
-              var r =
-                (f = c[s]).getAttribute("data-href") || f.getAttribute("href");
-              if ("stylesheet" === f.rel && (r === a || r === n)) return e();
+              var f =
+                (r = c[s]).getAttribute("data-href") || r.getAttribute("href");
+              if ("stylesheet" === r.rel && (f === a || f === n)) return e();
             }
             for (
-              var f, o = document.getElementsByTagName("style"), s = 0;
+              var r, o = document.getElementsByTagName("style"), s = 0;
               s < o.length;
               s++
             ) {
-              if ((r = (f = o[s]).getAttribute("data-href")) === a || r === n)
+              if ((f = (r = o[s]).getAttribute("data-href")) === a || f === n)
                 return e();
             }
             var i = document.createElement("link");
@@ -260,17 +260,17 @@ var CLSTAMP = "6333446";
       n,
       s,
       c,
-      r,
+      f,
       d,
-      f = h[b];
+      r = h[b];
     return (
-      0 !== f &&
-        (f
-          ? e.push(f[2])
+      0 !== r &&
+        (r
+          ? e.push(r[2])
           : ((a = new Promise(function (e, a) {
-              f = h[b] = [e, a];
+              r = h[b] = [e, a];
             })),
-            e.push((f[2] = a)),
+            e.push((r[2] = a)),
             ((n = document.createElement("script")).charset = "utf-8"),
             (n.timeout = 120),
             _.nc && n.setAttribute("nonce", _.nc),
@@ -355,7 +355,7 @@ var CLSTAMP = "6333446";
                 3: "002b6be8257a6c3c0bfb",
                 4: "36748c67c3d4eb067ae5",
                 5: "060555050458ceadd2b9",
-                6: "295c2bc0a712eebaa8c5",
+                6: "fabdc18ad78e1da7e3e2",
                 7: "21a3c6b74992cd919ed0",
                 8: "d693ed225d0c97ff3e73",
                 10: "72b564a53d1b51448d17",
@@ -451,7 +451,7 @@ var CLSTAMP = "6333446";
               }[d]),
             (s = new Error()),
             (c = function (e) {
-              (n.onerror = n.onload = null), clearTimeout(r);
+              (n.onerror = n.onload = null), clearTimeout(f);
               var a,
                 c,
                 d = h[b];
@@ -467,7 +467,7 @@ var CLSTAMP = "6333446";
                   d[1](s)),
                 (h[b] = void 0));
             }),
-            (r = setTimeout(function () {
+            (f = setTimeout(function () {
               c({ type: "timeout", target: n });
             }, 12e4)),
             (n.onerror = n.onload = c),
