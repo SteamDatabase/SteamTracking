@@ -1624,7 +1624,7 @@
                     case 0:
                       return (this.m_Backgrounds.SetEquipped(i),
                       this.m_Backgrounds.BIsUncomitted())
-                        ? ((t = z.a.Init(x.k))
+                        ? ((t = z.b.Init(x.k))
                             .Body()
                             .set_communityitemid(
                               this.m_Backgrounds.m_EquippedItem &&
@@ -1644,7 +1644,7 @@
                         ? [2, r.GetEResult()]
                         : this.m_Backgrounds.m_EquippedItem &&
                           this.m_Backgrounds.m_EquippedItem.communityitemid
-                        ? ((t = z.a.Init(x.h))
+                        ? ((t = z.b.Init(x.h))
                             .Body()
                             .set_communityitemid(
                               this.m_Backgrounds.m_EquippedItem.communityitemid
@@ -1739,7 +1739,7 @@
                   switch (e.label) {
                     case 0:
                       return this.m_MiniProfileBackgrounds.BIsUncomitted()
-                        ? ((t = z.a.Init(x.j))
+                        ? ((t = z.b.Init(x.j))
                             .Body()
                             .set_communityitemid(
                               this.m_MiniProfileBackgrounds.m_EquippedItem &&
@@ -1785,7 +1785,7 @@
                     case 0:
                       return (
                         this.m_Avatars.BIsUncomitted() &&
-                          ((i = z.a.Init(x.f))
+                          ((i = z.b.Init(x.f))
                             .Body()
                             .set_communityitemid(
                               this.m_Avatars.m_EquippedItem &&
@@ -1796,7 +1796,7 @@
                             i
                           ))),
                         this.m_AvatarFrames.BIsUncomitted() &&
-                          ((i = z.a.Init(x.g))
+                          ((i = z.b.Init(x.g))
                             .Body()
                             .set_communityitemid(
                               this.m_AvatarFrames.m_EquippedItem &&
@@ -2074,7 +2074,7 @@
                         ? this.m_ProfileModifiers.m_CommittedEquippedItem &&
                           this.m_ProfileModifiers.m_CommittedEquippedItem !=
                             this.m_ProfileModifiers.m_EquippedItem
-                          ? ((r = z.a.Init($))
+                          ? ((r = z.b.Init($))
                               .Body()
                               .set_communityitemid(
                                 this.m_ProfileModifiers.m_CommittedEquippedItem
@@ -2103,7 +2103,7 @@
                     case 2:
                       return ((t = !!this.m_ProfileModifiers.m_EquippedItem),
                       this.m_ProfileModifiers.m_EquippedItem)
-                        ? ((r = z.a.Init($))
+                        ? ((r = z.b.Init($))
                             .Body()
                             .set_communityitemid(
                               this.m_ProfileModifiers.m_EquippedItem
@@ -2169,12 +2169,12 @@
                 var t, r;
                 return Object(y.e)(this, function (e) {
                   return (
-                    (t = z.a.Init(x.d)).Body().set_language(p.c.LANGUAGE),
+                    (t = z.b.Init(x.d)).Body().set_language(p.c.LANGUAGE),
                     (this.m_promiseOwned = x.n.GetProfileItemsOwned(
                       this.m_SteamInterface.GetServiceTransport(),
                       t
                     )),
-                    (r = z.a.Init(x.c)).Body().set_steamid(p.h.steamid),
+                    (r = z.b.Init(x.c)).Body().set_steamid(p.h.steamid),
                     r.Body().set_language(p.c.LANGUAGE),
                     (this.m_promiseEquipped = x.n.GetProfileItemsEquipped(
                       this.m_SteamInterface.GetServiceTransport(),
@@ -2621,7 +2621,7 @@
                   switch (e.label) {
                     case 0:
                       return (
-                        (t = z.a.Init(x.l))
+                        (t = z.b.Init(x.l))
                           .Body()
                           .set_theme_id(
                             "Default" == this.ActiveTheme.theme_id
@@ -2715,7 +2715,7 @@
                         this.m_CommittedFavoriteBadge
                         ? [2, 1]
                         : ((t = this.FavoriteBadgeID),
-                          (r = z.a.Init(x.i)),
+                          (r = z.b.Init(x.i)),
                           t.badgeid
                             ? r.Body().set_badgeid(t.badgeid)
                             : t.communityitemid &&
@@ -3183,7 +3183,7 @@
                   switch (e.label) {
                     case 0:
                       return (
-                        (t = z.a.Init(ge.c)).SetBodyFields({
+                        (t = z.b.Init(ge.c)).SetBodyFields({
                           steamid: p.h.steamid,
                           filter_user_uploaded_only: !0,
                         }),
@@ -11270,7 +11270,7 @@
                   switch (e.label) {
                     case 0:
                       return this.BIsLoggedIn()
-                        ? ((t = m.a.Init(w))
+                        ? ((t = m.b.Init(w))
                             .Body()
                             .set_target_type(this.m_eTargetType),
                           t.Body().set_targetid(this.m_targetID),
@@ -11309,7 +11309,7 @@
                     case 0:
                       return this.BIsLoggedIn()
                         ? ((this.m_bPointsBalanceLoadedOrInFlight = !0),
-                          (t = m.a.Init(y)).SetBodyFields({
+                          (t = m.b.Init(y)).SetBodyFields({
                             steamid: M.h.steamid,
                           }),
                           [4, h.GetSummary(this.m_transport, t)])
@@ -11345,7 +11345,7 @@
                     case 0:
                       return (
                         (this.m_bReactionConfigurationLoadedOrInFlight = !0),
-                        (t = m.a.Init(k)),
+                        (t = m.b.Init(k)),
                         [4, h.GetReactionConfig(this.m_transport, t)]
                       );
                     case 1:
@@ -11383,7 +11383,7 @@
                     case 0:
                       return (
                         this.m_mapExistingReactions.clear(),
-                        (t = m.a.Init(G))
+                        (t = m.b.Init(G))
                           .Body()
                           .set_target_type(this.m_eTargetType),
                         t.Body().set_targetid(this.m_targetID),

@@ -1297,7 +1297,7 @@
                       e.label = 2;
                     case 2:
                       return (
-                        (t = u.a.Init(b)),
+                        (t = u.b.Init(b)),
                         this.m_mapBookmarks.has(a) &&
                           ((n = this.m_mapBookmarks.get(a)),
                           (r = !1),
@@ -14596,7 +14596,7 @@
                       )
                         return [2];
                       if (((n = !1), !this.m_CMInterface)) return [3, 2];
-                      for (r = b.a.Init(v.e), a = 0, i = t; a < i.length; a++)
+                      for (r = b.b.Init(v.e), a = 0, i = t; a < i.length; a++)
                         (o = i[a]), r.Body().add_markings(o);
                       return (
                         (this.m_bUploading = !0),
@@ -15095,7 +15095,7 @@
                               !1 === s && o.UpdateVoteCount("down", 1);
                           }),
                           this.m_cm
-                            ? ((n = b.a.Init(v.g))
+                            ? ((n = b.b.Init(v.g))
                                 .Body()
                                 .set_announcementid(o.AnnouncementGID),
                               n.Body().set_vote_up(!!s),
@@ -15163,7 +15163,7 @@
                           ])
                         : ((t = void 0),
                           this.m_cm
-                            ? ((n = b.a.Init(v.d))
+                            ? ((n = b.b.Init(v.d))
                                 .Body()
                                 .set_announcementid(i.AnnouncementGID),
                               [
@@ -19524,7 +19524,7 @@
                             f.c.WEBAPI_BASE_URL
                           )),
                         (u = this.m_WebAPIFallback)),
-                        V((i = U.a.Init(N))),
+                        V((i = U.b.Init(N))),
                         (t = h),
                         i.Body().set_data_request(M.fromObject(t)),
                         0 < n.length &&
@@ -53006,7 +53006,7 @@
                         : [3, 5];
                     case 2:
                       e.sent(),
-                        (n = u.a.Init(f.b))
+                        (n = u.b.Init(f.b))
                           .Body()
                           .set_language(Object(l.e)(d.c.LANGUAGE)),
                         (r = 50),
@@ -53259,7 +53259,7 @@
                   ((t.m_fetching = this.m_CMInterface
                     .WaitUntilLoggedOn()
                     .then(function () {
-                      var e = u.a.Init(f.a);
+                      var e = u.b.Init(f.a);
                       return (
                         e.Body().set_appid(t.GetAppID()),
                         e.Body().set_language(d.c.LANGUAGE),

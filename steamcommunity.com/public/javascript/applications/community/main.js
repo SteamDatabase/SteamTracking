@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6333386";
+var CLSTAMP = "6335537";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [68],
   {
@@ -547,10 +547,10 @@ var CLSTAMP = "6333386";
           return A;
         }),
         n.d(t, "p", function () {
-          return k;
+          return j;
         }),
         n.d(t, "F", function () {
-          return j;
+          return k;
         }),
         n.d(t, "I", function () {
           return T;
@@ -1557,7 +1557,7 @@ var CLSTAMP = "6333386";
           })
         );
       }
-      function k(e) {
+      function j(e) {
         return o.createElement(
           "svg",
           {
@@ -1593,7 +1593,7 @@ var CLSTAMP = "6333386";
             })
         );
       }
-      function j() {
+      function k() {
         return o.createElement(
           "svg",
           {
@@ -4437,10 +4437,10 @@ var CLSTAMP = "6333386";
           );
         })();
       function A(e) {
-        var t = k.get(e);
-        return t || ((t = new M()), k.set(e, t)), t;
+        var t = j.get(e);
+        return t || ((t = new M()), j.set(e, t)), t;
       }
-      var k = new WeakMap();
+      var j = new WeakMap();
     },
     Kw0F: function (e, t, n) {
       "use strict";
@@ -4679,14 +4679,14 @@ var CLSTAMP = "6333386";
           g.createElement(M, Object(h.a)({}, r))
         );
       }
-      function k(e) {
+      function j(e) {
         var t = s();
         return g.createElement(
           w.f,
-          Object(h.a)({ component: t.BaseButton, fallback: j }, e)
+          Object(h.a)({ component: t.BaseButton, fallback: k }, e)
         );
       }
-      function j(e) {
+      function k(e) {
         var t = e.svgicon,
           n = (e.primary, e.renderButtonElement),
           r = Object(h.f)(e, ["svgicon", "primary", "renderButtonElement"]),
@@ -4702,7 +4702,7 @@ var CLSTAMP = "6333386";
       }
       function T(e) {
         return g.createElement(
-          k,
+          j,
           Object(h.a)(
             { primary: !0, type: e.onClick ? "button" : "submit" },
             e,
@@ -4719,7 +4719,7 @@ var CLSTAMP = "6333386";
       }
       function I(e) {
         return g.createElement(
-          k,
+          j,
           Object(h.a)({ type: "button" }, e, {
             className: Object(y.a)(
               e.className,
@@ -4732,7 +4732,7 @@ var CLSTAMP = "6333386";
       }
       function N(e) {
         return g.createElement(
-          k,
+          j,
           Object(h.a)({ type: "button" }, e, {
             className: Object(y.a)(
               e.className,
@@ -8933,13 +8933,13 @@ var CLSTAMP = "6333386";
       var x,
         M,
         A = p.createContext(void 0),
-        k = p.createContext(void 0),
-        j = p.createContext(void 0);
+        j = p.createContext(void 0),
+        k = p.createContext(void 0);
       function T(e, o, i) {
         var a = null != e.navKey ? e.navKey : void 0;
         return null != a && y.IsNavEnabled
-          ? p.createElement(k.Consumer, null, function (r) {
-              return p.createElement(j.Consumer, null, function (n) {
+          ? p.createElement(j.Consumer, null, function (r) {
+              return p.createElement(k.Consumer, null, function (n) {
                 return p.createElement(A.Consumer, null, function (e) {
                   var t = { parent: e, key: a };
                   return (
@@ -9986,27 +9986,27 @@ var CLSTAMP = "6333386";
                         (m && 0 == x)) &&
                       (E = U),
                       null !== x && ++x;
-                    var k = 0;
+                    var j = 0;
                     if (a) {
-                      var j = ie(U),
+                      var k = ie(U),
                         T = f[l],
-                        I = u * (j[l][_] - T);
+                        I = u * (k[l][_] - T);
                       if (I < 0) continue;
                       var N = f[b],
-                        L = j[b].min,
-                        R = j[b].max,
+                        L = k[b].min,
+                        R = k[b].max,
                         B = N < L ? N - L : R < N ? N - R : 0;
                       if (t) if (!Z(w, { min: L, max: R })) continue;
                       var F = { x: 0, y: 0 };
-                      (F[l] = j[l][_]), (F[b] = N + B);
+                      (F[l] = k[l][_]), (F[b] = N + B);
                       var P = X(f, F),
-                        k = (I * I + B * B) / Math.abs(P[l]);
+                        j = (I * I + B * B) / Math.abs(P[l]);
                     } else {
                       if (null == x) continue;
-                      k = x;
+                      j = x;
                     }
-                    k < S && ((S = k), (O = U)),
-                      D.push({ score: k, element: U });
+                    j < S && ((S = j), (O = U)),
+                      D.push({ score: j, element: U });
                   }
                 } else x = 0;
               }
@@ -10707,8 +10707,8 @@ var CLSTAMP = "6333386";
               if (M) {
                 for (
                   var A = M.GetFocusPos(),
-                    k = Number.POSITIVE_INFINITY,
-                    j = null,
+                    j = Number.POSITIVE_INFINITY,
+                    k = null,
                     T = 0,
                     I = m;
                   T < I.length;
@@ -10717,9 +10717,9 @@ var CLSTAMP = "6333386";
                   var N = I[T],
                     L = ae(N),
                     R = ((D = X(A, L)), Math.sqrt(F(D, D)));
-                  R < k && ((k = R), (j = N));
+                  R < j && ((j = R), (k = N));
                 }
-                if (j) return { htmlElement: j, pos: ae(j) };
+                if (k) return { htmlElement: k, pos: ae(k) };
               }
               var B = m[0];
               return B
@@ -11103,7 +11103,7 @@ var CLSTAMP = "6333386";
                       if (200 != (n = e.sent()).status || !n.data)
                         throw new Error("Request Error");
                       return (
-                        (t = d.a.Init(c, 147)),
+                        (t = d.b.Init(c, 147)),
                         n.headers &&
                           (n.headers["x-eresult"] &&
                             t
@@ -11194,7 +11194,7 @@ var CLSTAMP = "6333386";
                 : null;
             }),
             (e.prototype.CreateFailedMsgProtobuf = function (e, t, n) {
-              var r = d.a.Init(e);
+              var r = d.b.Init(e);
               return (
                 r.Hdr().set_eresult(2),
                 r.Hdr().set_transport_error(t),
@@ -11786,43 +11786,12 @@ var CLSTAMP = "6333386";
       n("kLLr");
       n.d(t, "a", function () {
         return o;
-      });
-      var o = (function (o) {
-        function n(e, t, n, r) {
-          return void 0 === t && (t = 0), o.call(this, t, n, e, r) || this;
-        }
-        return (
-          Object(r.d)(n, o),
-          (n.InitFromPacket = function (e, t) {
-            return new n(e, 0, t);
-          }),
-          (n.InitFromMsg = function (e, t) {
-            return new n(e, void 0, void 0, t);
-          }),
-          (n.Init = function (e, t) {
-            return new n(e, t);
-          }),
-          (n.prototype.Body = function () {
-            return o.prototype.Body.call(this);
-          }),
-          (n.prototype.SetBodyFields = function (e) {
-            var n = this,
-              r = this;
-            for (var t in e)
-              !(function (t) {
-                Array.isArray(e[t])
-                  ? r.Body()["add_" + t] &&
-                    e[t].forEach(function (e) {
-                      n.Body()["add_" + t](e);
-                    })
-                  : r.Body()["set_" + t] && r.Body()["set_" + t](e[t]);
-              })(t);
-          }),
-          n
-        );
-      })(
-        (function () {
-          function t(e, t, n, r, o) {
+      }),
+        n.d(t, "b", function () {
+          return c;
+        });
+      var o = (function () {
+          function r(e, t, n, r, o) {
             if (r)
               (this.m_eMsg = r.m_eMsg),
                 (this.m_bValid = r.m_bValid),
@@ -11862,10 +11831,13 @@ var CLSTAMP = "6333386";
             }
           }
           return (
-            (t.InitHeaderFromPacket = function (e) {
-              return new t(void 0, e);
+            (r.InstallErrorReportingStore = function (e) {
+              this.sm_ErrorReportingStore = e;
             }),
-            (t.prototype.InitForType = function (e) {
+            (r.InitHeaderFromPacket = function (e) {
+              return new r(void 0, e);
+            }),
+            (r.prototype.InitForType = function (e) {
               if (((this.m_body = new e()), this.m_netPacket)) {
                 this.m_netPacket.SeekGetHead(8 + this.m_cubHeader);
                 try {
@@ -11878,39 +11850,46 @@ var CLSTAMP = "6333386";
                     )
                   );
                 } catch (e) {
-                  (this.m_bValid = !1),
-                    console.error(
-                      "Exception parsing protobuf message body.  Definitions may be out of sync with server version."
-                    ),
+                  this.m_bValid = !1;
+                  var t = r.sm_ErrorReportingStore,
+                    n =
+                      "Exception parsing protobuf message body of type " +
+                      this.m_eMsg +
+                      ".  Definitions may be out of sync with server version.";
+                  t &&
+                    t.ReportError(new Error(n), {
+                      bIncludeMessageInIdentifier: !0,
+                    }),
+                    console.warn(n),
                     console.log(e.stack || e);
                 }
               }
             }),
-            (t.prototype.BIsValid = function () {
+            (r.prototype.BIsValid = function () {
               return this.m_bValid;
             }),
-            (t.prototype.Body = function () {
+            (r.prototype.Body = function () {
               return this.m_body;
             }),
-            (t.prototype.SetBodyJSON = function (e) {
+            (r.prototype.SetBodyJSON = function (e) {
               (e.toObject = function () {
                 return e;
               }),
                 (this.m_body = e);
             }),
-            (t.prototype.Hdr = function () {
+            (r.prototype.Hdr = function () {
               return this.m_header;
             }),
-            (t.prototype.GetEMsg = function () {
+            (r.prototype.GetEMsg = function () {
               return this.m_eMsg;
             }),
-            (t.prototype.SetEMsg = function (e) {
+            (r.prototype.SetEMsg = function (e) {
               this.m_eMsg = e;
             }),
-            (t.prototype.GetEResult = function () {
+            (r.prototype.GetEResult = function () {
               return this.Hdr().eresult();
             }),
-            (t.prototype.Serialize = function () {
+            (r.prototype.Serialize = function () {
               var e = this.m_header.serializeBinary(),
                 t = this.m_body.serializeBinary(),
                 n = 2147483648 | this.m_eMsg,
@@ -11924,19 +11903,52 @@ var CLSTAMP = "6333386";
                 r
               );
             }),
-            (t.prototype.SerializeBody = function () {
+            (r.prototype.SerializeBody = function () {
               var e = this.m_body.serializeBinary(),
                 t = new Uint8Array(e.length);
               return new i.a(t).PutBytes(e), t;
             }),
-            (t.prototype.DEBUG_ToObject = function () {
+            (r.prototype.DEBUG_ToObject = function () {
               return {};
             }),
-            (t.prototype.DEBUG_LogToConsole = function () {}),
-            t
+            (r.prototype.DEBUG_LogToConsole = function () {}),
+            r
           );
-        })()
-      );
+        })(),
+        c = (function (o) {
+          function n(e, t, n, r) {
+            return void 0 === t && (t = 0), o.call(this, t, n, e, r) || this;
+          }
+          return (
+            Object(r.d)(n, o),
+            (n.InitFromPacket = function (e, t) {
+              return new n(e, 0, t);
+            }),
+            (n.InitFromMsg = function (e, t) {
+              return new n(e, void 0, void 0, t);
+            }),
+            (n.Init = function (e, t) {
+              return new n(e, t);
+            }),
+            (n.prototype.Body = function () {
+              return o.prototype.Body.call(this);
+            }),
+            (n.prototype.SetBodyFields = function (e) {
+              var n = this,
+                r = this;
+              for (var t in e)
+                !(function (t) {
+                  Array.isArray(e[t])
+                    ? r.Body()["add_" + t] &&
+                      e[t].forEach(function (e) {
+                        n.Body()["add_" + t](e);
+                      })
+                    : r.Body()["set_" + t] && r.Body()["set_" + t](e[t]);
+                })(t);
+            }),
+            n
+          );
+        })(o);
     },
     bxiW: function (e, t, n) {
       "use strict";
@@ -12611,7 +12623,7 @@ var CLSTAMP = "6333386";
         "k_ESteamRealmUnknown"),
         (_[(_.k_ESteamRealmGlobal = 1)] = "k_ESteamRealmGlobal"),
         (_[(_.k_ESteamRealmChina = 2)] = "k_ESteamRealmChina");
-      var w, E, O, S, C, D, x, M, A, k, j, T;
+      var w, E, O, S, C, D, x, M, A, j, k, T;
       ((E = w = w || {})[(E.Unknown = 0)] = "Unknown"),
         (E[(E.Wired = 1)] = "Wired"),
         (E[(E.Wireless = 2)] = "Wireless"),
@@ -12635,9 +12647,9 @@ var CLSTAMP = "6333386";
         (M[(M.Wpa2 = 16)] = "Wpa2"),
         (M[(M.Wpa2Enterprise = 32)] = "Wpa2Enterprise"),
         (M[(M.Unsupported = 32768)] = "Unsupported"),
-        ((k = A = A || {})[(k.SystemKey0 = 0)] = "SystemKey0"),
-        (k[(k.SystemKey1 = 1)] = "SystemKey1"),
-        ((T = j = j || {})[(T.Hidden = 0)] = "Hidden"),
+        ((j = A = A || {})[(j.SystemKey0 = 0)] = "SystemKey0"),
+        (j[(j.SystemKey1 = 1)] = "SystemKey1"),
+        ((T = k = k || {})[(T.Hidden = 0)] = "Hidden"),
         (T[(T.Notification = 1)] = "Notification"),
         (T[(T.Overlay = 2)] = "Overlay"),
         (T[(T.Opaque = 3)] = "Opaque");
@@ -13226,10 +13238,10 @@ var CLSTAMP = "6333386";
         A = function () {
           return "/profiles/:steamid/recommended/:appid/";
         },
-        k = function () {
+        j = function () {
           return "/profiles/:steamid/recommended";
         },
-        j = function () {
+        k = function () {
           return "/id/:vanity_url/recommended";
         },
         T = function () {
@@ -13348,13 +13360,13 @@ var CLSTAMP = "6333386";
                       },
                     }),
                     s.a.createElement(l.c, {
-                      path: j(),
+                      path: k(),
                       render: function (e) {
                         return s.a.createElement(g, Object(i.a)({}, e));
                       },
                     }),
                     s.a.createElement(l.c, {
-                      path: k(),
+                      path: j(),
                       render: function (e) {
                         return s.a.createElement(g, Object(i.a)({}, e));
                       },
@@ -13729,17 +13741,17 @@ var CLSTAMP = "6333386";
         Label: "toggle_Label_xK7Vv",
       };
     },
-    uobO: function (e, b, _) {
+    uobO: function (e, _, y) {
       "use strict";
       (function (e) {
-        _.d(b, "a", function () {
-          return v;
+        y.d(_, "a", function () {
+          return g;
         });
         var t,
-          l = _("mrSG"),
-          r = _("bxBv"),
-          a = _("SxtR"),
-          n = _("IjL/"),
+          p = y("mrSG"),
+          r = y("bxBv"),
+          a = y("SxtR"),
+          n = y("IjL/"),
           o =
             window.addEventListener ||
             (e && e.addEventListener) ||
@@ -13752,15 +13764,15 @@ var CLSTAMP = "6333386";
         console.assert = function (e, t) {
           for (var n = [], r = 2; r < arguments.length; r++)
             n[r - 2] = arguments[r];
-          e || s(new Error(m.apply(void 0, Object(l.g)([t], n))), 2),
-            c.apply(console, Object(l.g)([e, t], n));
+          e || s(new Error(d.apply(void 0, Object(p.g)([t], n))), 2),
+            c.apply(console, Object(p.g)([e, t], n));
         };
-        var u = console.error;
+        var l = console.error;
         (console.error = function (e) {
           for (var t = [], n = 1; n < arguments.length; n++)
             t[n - 1] = arguments[n];
-          s(new Error(m.apply(void 0, Object(l.g)([e], t))), 1),
-            u.apply(console, Object(l.g)([e], t));
+          s(new Error(d.apply(void 0, Object(p.g)([e], t))), 1),
+            l.apply(console, Object(p.g)([e], t));
         }),
           o("error", function (e) {
             s(e.error, 0);
@@ -13768,83 +13780,86 @@ var CLSTAMP = "6333386";
           (t = window.setTimeout(function () {
             (i = []), (s = function () {});
           }, 3e4));
-        var p = (function () {
-          function e(e) {
-            var r = this;
-            void 0 === e && (e = !0),
-              (this.m_transport = null),
-              (this.m_rgErrorQueue = []),
-              (this.m_bEnabled = !0),
-              (this.m_bInitialized = !1),
-              (s = e
-                ? (i.forEach(function (e) {
-                    var t = e.error,
-                      n = e.cCallsitesToIgnore;
-                    return r.ReportError(t, n);
-                  }),
-                  function (e, t) {
-                    return r.ReportError(e, t);
-                  })
-                : function () {}),
-              (i = []),
-              clearTimeout(t),
-              window.setTimeout(function () {
-                r.m_bInitialized ||
-                  ((r.m_bEnabled = !1), (r.m_rgErrorQueue = []));
-              }, 3e4);
-          }
-          return (
-            (e.prototype.Init = function (e, t, n) {
-              (this.m_bInitialized = !0),
-                (this.m_strProduct = e),
-                (this.m_strVersion = t),
-                (this.m_transport = n),
-                this.m_bEnabled ||
-                  (console.error(
-                    "Error reporting was initialized after being disabled, possibly dropping errors."
-                  ),
-                  (this.m_bEnabled = !0)),
-                this.m_rgErrorQueue.length &&
-                  (this.SendErrorReports(this.m_rgErrorQueue),
-                  (this.m_rgErrorQueue = []));
-            }),
-            (e.prototype.ReportError = function (r, o) {
-              return (
-                void 0 === o && (o = 0),
-                Object(l.b)(this, void 0, void 0, function () {
-                  var t, n;
-                  return Object(l.e)(this, function (e) {
+        var u = { cCallsitesToIgnore: 0, bIncludeMessageInIdentifier: !1 },
+          m = (function () {
+            function e(e) {
+              var r = this;
+              void 0 === e && (e = !0),
+                (this.m_transport = null),
+                (this.m_rgErrorQueue = []),
+                (this.m_bEnabled = !0),
+                (this.m_bInitialized = !1),
+                (s = e
+                  ? (i.forEach(function (e) {
+                      var t = e.error,
+                        n = e.cCallsitesToIgnore;
+                      return r.ReportError(t, { cCallsitesToIgnore: n });
+                    }),
+                    function (e, t) {
+                      return r.ReportError(e, { cCallsitesToIgnore: t });
+                    })
+                  : function () {}),
+                (i = []),
+                clearTimeout(t),
+                window.setTimeout(function () {
+                  r.m_bInitialized ||
+                    ((r.m_bEnabled = !1), (r.m_rgErrorQueue = []));
+                }, 3e4);
+            }
+            return (
+              (e.prototype.Init = function (e, t, n) {
+                (this.m_bInitialized = !0),
+                  (this.m_strProduct = e),
+                  (this.m_strVersion = t),
+                  (this.m_transport = n),
+                  this.m_bEnabled ||
+                    (console.error(
+                      "Error reporting was initialized after being disabled, possibly dropping errors."
+                    ),
+                    (this.m_bEnabled = !0)),
+                  this.m_rgErrorQueue.length &&
+                    (this.SendErrorReports(this.m_rgErrorQueue),
+                    (this.m_rgErrorQueue = []));
+              }),
+              (e.prototype.ReportError = function (o, i) {
+                return Object(p.b)(this, void 0, void 0, function () {
+                  var t, n, r;
+                  return Object(p.e)(this, function (e) {
                     switch (e.label) {
                       case 0:
-                        return (e.trys.push([0, 2, , 3]), this.m_bEnabled)
+                        return (e.trys.push([0, 2, , 3]),
+                        (t = Object(p.a)(Object(p.a)({}, i), u)),
+                        this.m_bEnabled)
                           ? [
                               4,
                               (function (e, t) {
-                                void 0 === t && (t = 0);
                                 try {
-                                  return e.stack && e.stack.match(h)
-                                    ? (function (s, c) {
-                                        void 0 === c && (c = 0);
-                                        return Object(l.b)(
+                                  return e.stack && e.stack.match(f)
+                                    ? (function (l, u) {
+                                        return Object(p.b)(
                                           this,
                                           void 0,
                                           void 0,
                                           function () {
-                                            var n, r, o, i, a;
-                                            return Object(l.e)(
+                                            var n, r, o, i, a, s, c;
+                                            return Object(p.e)(
                                               this,
                                               function (e) {
                                                 switch (e.label) {
                                                   case 0:
                                                     return (
-                                                      (n = s.stack.split("\n")),
-                                                      (r = n.filter(function (
+                                                      (n =
+                                                        u.cCallsitesToIgnore),
+                                                      (r =
+                                                        u.bIncludeMessageInIdentifier),
+                                                      (o = l.stack.split("\n")),
+                                                      (i = o.filter(function (
                                                         e
                                                       ) {
-                                                        return !!e.match(h);
+                                                        return !!e.match(f);
                                                       })),
-                                                      (t = r[c]),
-                                                      (o = (function (e) {
+                                                      (t = i[n]),
+                                                      (a = (function (e) {
                                                         var t = e.indexOf(
                                                           "https://"
                                                         );
@@ -13874,7 +13889,10 @@ var CLSTAMP = "6333386";
                                                                 e.slice(n);
                                                         })(t)
                                                       )),
-                                                      (i = n
+                                                      r &&
+                                                        (a =
+                                                          a + " " + l.message),
+                                                      (s = o
                                                         .map(function (e) {
                                                           var t = e.match(
                                                             /(.*)\((.*):(\d+):(\d+)\)/
@@ -13904,18 +13922,18 @@ var CLSTAMP = "6333386";
                                                         .filter(function (e) {
                                                           return !!e;
                                                         })),
-                                                      (a = { identifier: o }),
+                                                      (c = { identifier: a }),
                                                       [
                                                         4,
                                                         (function (r) {
-                                                          return Object(l.b)(
+                                                          return Object(p.b)(
                                                             this,
                                                             void 0,
                                                             void 0,
                                                             function () {
                                                               var n;
                                                               return Object(
-                                                                l.e
+                                                                p.e
                                                               )(
                                                                 this,
                                                                 function (e) {
@@ -14014,15 +14032,15 @@ var CLSTAMP = "6333386";
                                                               );
                                                             }
                                                           );
-                                                        })(o),
+                                                        })(a),
                                                       ]
                                                     );
                                                   case 1:
                                                     return [
                                                       2,
-                                                      ((a.identifierHash = e.sent()),
-                                                      (a.message = i),
-                                                      a),
+                                                      ((c.identifierHash = e.sent()),
+                                                      (c.message = s),
+                                                      c),
                                                     ];
                                                 }
                                                 var t;
@@ -14031,15 +14049,14 @@ var CLSTAMP = "6333386";
                                           }
                                         );
                                       })(e, t)
-                                    : e.stack && e.stack.match(f)
-                                    ? (function (e) {
-                                        void 0 === e && (e = 0);
-                                        return Object(l.b)(
+                                    : e.stack && e.stack.match(v)
+                                    ? (function () {
+                                        return Object(p.b)(
                                           this,
                                           void 0,
                                           void 0,
                                           function () {
-                                            return Object(l.e)(
+                                            return Object(p.e)(
                                               this,
                                               function (e) {
                                                 return [2, null];
@@ -14047,7 +14064,7 @@ var CLSTAMP = "6333386";
                                             );
                                           }
                                         );
-                                      })(t)
+                                      })()
                                     : null;
                                 } catch (e) {
                                   return (
@@ -14057,91 +14074,90 @@ var CLSTAMP = "6333386";
                                     null
                                   );
                                 }
-                              })(r, o),
+                              })(o, t),
                             ]
                           : [2, null];
                       case 1:
-                        return (t = e.sent())
-                          ? (this.SendErrorReport(t), [2, t])
+                        return (n = e.sent())
+                          ? (this.SendErrorReport(n), [2, n])
                           : [2, null];
                       case 2:
                         return (
-                          (n = e.sent()),
-                          console.log("Failed to report error: " + n),
+                          (r = e.sent()),
+                          console.log("Failed to report error: " + r),
                           [2, null]
                         );
                       case 3:
                         return [2];
                     }
                   });
-                })
-              );
-            }),
-            (e.prototype.SendErrorReport = function (e) {
-              this.m_transport
-                ? this.SendErrorReports([e])
-                : this.m_rgErrorQueue.push(e);
-            }),
-            (e.prototype.SendErrorReports = function (e) {
-              var t, i, n;
-              e &&
-                e.length &&
-                ((t = r.a.Init(a.a)),
-                (i = e.reduce(function (e, t) {
-                  return (
-                    e[t.identifier]
-                      ? e[t.identifier].count++
-                      : (e[t.identifier] = { report: t, count: 1 }),
-                    e
-                  );
-                }, {})),
-                (n = Object.keys(i).map(function (e) {
-                  var t = i[e],
-                    n = t.report,
-                    r = t.count,
-                    o = new a.b();
-                  return (
-                    o.set_count(r),
-                    o.set_identifier(n.identifier + " " + n.identifierHash),
-                    o.set_message(JSON.stringify(n.message)),
-                    o
-                  );
-                })),
-                t.Body().set_product(this.m_strProduct),
-                t.Body().set_version(this.m_strVersion),
-                t.Body().set_errors(n),
-                a.c.ReportClientError(this.m_transport, t));
-            }),
-            Object.defineProperty(e.prototype, "version", {
-              get: function () {
-                return this.m_strVersion;
-              },
-              enumerable: !1,
-              configurable: !0,
-            }),
-            Object.defineProperty(e.prototype, "product", {
-              get: function () {
-                return this.m_strProduct;
-              },
-              enumerable: !1,
-              configurable: !0,
-            }),
-            Object.defineProperty(e.prototype, "reporting_enabled", {
-              get: function () {
-                return !0;
-              },
-              enumerable: !1,
-              configurable: !0,
-            }),
-            e
-          );
-        })();
-        function m(e) {
+                });
+              }),
+              (e.prototype.SendErrorReport = function (e) {
+                this.m_transport
+                  ? this.SendErrorReports([e])
+                  : this.m_rgErrorQueue.push(e);
+              }),
+              (e.prototype.SendErrorReports = function (e) {
+                var t, i, n;
+                e &&
+                  e.length &&
+                  ((t = r.b.Init(a.a)),
+                  (i = e.reduce(function (e, t) {
+                    return (
+                      e[t.identifier]
+                        ? e[t.identifier].count++
+                        : (e[t.identifier] = { report: t, count: 1 }),
+                      e
+                    );
+                  }, {})),
+                  (n = Object.keys(i).map(function (e) {
+                    var t = i[e],
+                      n = t.report,
+                      r = t.count,
+                      o = new a.b();
+                    return (
+                      o.set_count(r),
+                      o.set_identifier(n.identifier + " " + n.identifierHash),
+                      o.set_message(JSON.stringify(n.message)),
+                      o
+                    );
+                  })),
+                  t.Body().set_product(this.m_strProduct),
+                  t.Body().set_version(this.m_strVersion),
+                  t.Body().set_errors(n),
+                  a.c.ReportClientError(this.m_transport, t));
+              }),
+              Object.defineProperty(e.prototype, "version", {
+                get: function () {
+                  return this.m_strVersion;
+                },
+                enumerable: !1,
+                configurable: !0,
+              }),
+              Object.defineProperty(e.prototype, "product", {
+                get: function () {
+                  return this.m_strProduct;
+                },
+                enumerable: !1,
+                configurable: !0,
+              }),
+              Object.defineProperty(e.prototype, "reporting_enabled", {
+                get: function () {
+                  return !0;
+                },
+                enumerable: !1,
+                configurable: !0,
+              }),
+              e
+            );
+          })();
+        function d(e) {
           for (var t = [], n = 1; n < arguments.length; n++)
             t[n - 1] = arguments[n];
           return "string" == typeof e && 0 === t.length
             ? e
-            : Object(l.g)([e], t)
+            : Object(p.g)([e], t)
                 .map(function (e) {
                   try {
                     return String(e);
@@ -14151,16 +14167,18 @@ var CLSTAMP = "6333386";
                 })
                 .join(", ");
         }
-        var d,
-          h = /^\s*at .*(\S+:\d+|\(native\))/m,
-          f = /(^|@)\S+:\d+/;
-        var v = function () {
-            return d || g(new p()), d;
+        var h,
+          f = /^\s*at .*(\S+:\d+|\(native\))/m,
+          v = /(^|@)\S+:\d+/;
+        var g = function () {
+            return h || b(new m()), h;
           },
-          g = function (e) {
-            (d = e), n.a.InstallErrorReportingStore(d);
+          b = function (e) {
+            (h = e),
+              n.a.InstallErrorReportingStore(h),
+              r.a.InstallErrorReportingStore(h);
           };
-      }.call(this, _("yLpj")));
+      }.call(this, y("yLpj")));
     },
     w9XT: function (e, t, n) {
       "use strict";
@@ -14581,15 +14599,15 @@ var CLSTAMP = "6333386";
                   x,
                   M,
                   A,
-                  k = this.m_elMenu,
-                  j = this.props.element;
-                k &&
-                  j &&
+                  j = this.m_elMenu,
+                  k = this.props.element;
+                j &&
+                  k &&
                   "none" !==
-                    (e = j.ownerDocument.defaultView).getComputedStyle(j)
+                    (e = k.ownerDocument.defaultView).getComputedStyle(k)
                       .display &&
-                  ((t = j.getBoundingClientRect()),
-                  (n = k.getBoundingClientRect()),
+                  ((t = k.getBoundingClientRect()),
+                  (n = j.getBoundingClientRect()),
                   (r = null != this.props.popup),
                   (o = this.props.options),
                   (i = {
@@ -14632,7 +14650,7 @@ var CLSTAMP = "6333386";
                     : (i.menuRight = c - (o.bOverlapHorizontal ? h : d)),
                   (w = s || t.top),
                   (E = s || t.bottom),
-                  (O = k.scrollHeight),
+                  (O = j.scrollHeight),
                   o.bMatchHeight && ((O = E - w), (i.menuHeight = O)),
                   (C = 0 < (S = (o.bOverlapVertical ? E : w) - O)),
                   (x = 0 < (D = l - (o.bOverlapVertical ? w : E) - O)),
