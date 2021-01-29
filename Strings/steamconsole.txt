@@ -79,7 +79,6 @@ anonymous
 13CCallbackImplILi16EE
 15CCallbackManualI12CCallbackMgr23SteamAPICallCompleted_tLb1EE
 9CCallbackI12CCallbackMgr23SteamAPICallCompleted_tLb1EE
-Y@
 N@
 0C
 0E
