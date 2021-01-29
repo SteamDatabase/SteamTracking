@@ -1024,6 +1024,10 @@
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_TouchMenuButtonType" />
 					<DropDown id="TouchMenuButtonType" />
 				</Panel>
+				<Panel class="FieldWrapper" modes="hotbar" advanced="off">
+					<Label class="FieldLabelSmall" text="#Library_Details_FieldLabel_ScrollWrap" />
+					<DropDown id="HotbarScrollWrap" />
+				</Panel>
 				<Panel class="FieldWrapper" modes="touchmenu hotbar" advanced="off">
 					<Label class="FieldLabelSmall" text="#Library_Details_FieldLabel_TouchMenuButton0" />
 					<ControllerBindingButton class="BindingButtonPropertiesModeSmall" id="TouchMenuButton0" />
@@ -1510,7 +1514,15 @@
 						<Label class="FieldLabelSmall" text="#Library_Details_FieldLabel_TouchMenuButton15" />
 						<ControllerBindingButton class="BindingButtonPropertiesModeSmall" id="TouchMenuButton15" />
 					</Panel>
-
+					<Panel class="FieldWrapper" modes="hotbar" advanced="on">
+						<Label class="FieldLabelSmall" text="#Library_Details_FieldLabel_DismissAfterActivation" />
+						<DropDown id="HotbarDismissAfterActivation" />
+					</Panel>
+					<Panel class="FieldWrapper" modes="hotbar" advanced="on">
+						<Label class="FieldLabelSmall" text="#Library_Details_FieldLabel_RecenterEachTime" />
+						<DropDown id="HotbarRecenterEachTime" />
+					</Panel>
+					
 					<!-- Radial Menu Mode -->
 					<Panel class="FieldWrapper" modes="radialmenu" advanced="off">
 						<Label class="FieldLabelSmall" text="#Library_Details_FieldLabel_ShowLabels" />

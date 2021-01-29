@@ -158,7 +158,7 @@ ControllerBindingsGordon.ScreenSaverMode
     font-size: 48px;
     overflow: squish squish;     
     flow-children: down;
-    height: 100px;
+    height: 100px; 
 }
 
 #PreviewWaterMark.Preview
@@ -166,13 +166,13 @@ ControllerBindingsGordon.ScreenSaverMode
     visibility: visible;
     opacity: 1%;
     font-family: platformfont;
-    font-size: 200px;
+    font-size: 180px;
     z-index: 1000;
     color: #75c7fd85;
     blur: gaussian( 0.25 );
     horizontal-align: center;
     vertical-align: top;
-    padding-top: 220px;
+    padding-top: 100px;
 }
 
 #BindingPreviewContainer.Preview
@@ -259,6 +259,11 @@ ControllerConfigBrowser.Preview
     width: 1880px;
 }
 
+.controller_xboxelite #SwitchContainer
+{
+    padding-top: 64px;
+}
+
 SelectMousePosition
 {
     opacity: 1.0;
@@ -284,10 +289,16 @@ SelectMousePosition
 	transition-timing-function: ease-out;
 }
 
-.HasMultipleActionSets #Left,
-.HasMultipleActionSets #Right
+#Left,
+#Right
 {
-	margin-top: 44px;
+	margin-top: 32px;
+}
+
+.controller_xboxelite #Left,
+.controller_xboxelite #Right
+{
+	margin-top: 8px;
 }
 
 .HasMultipleActionSets #GameActionSets,
@@ -315,12 +326,14 @@ SelectMousePosition
 	flow-children: right;
 	horizontal-align: middle;
     overflow: scroll;
+    min-height: 44px;
 }
 
 #SetLayerContainer
 {
 	flow-children: down;
 	horizontal-align: middle;
+	min-height: 110px;
 }
 
 #ActivatorCoontainer
@@ -1313,7 +1326,7 @@ SelectMousePosition
 	height: fit-children;
 	flow-children: right;
 	vertical-align: bottom;
-	margin-bottom: 120px;
+	margin-bottom: 100px;
 }
 
 #PS4TrackpadContainer
@@ -1383,6 +1396,17 @@ SelectMousePosition
 	width: 417px;
 	height: fit-children;
 	vertical-align: bottom;
+	margin-bottom: 20px;
+}
+
+.ModeWrapper .ControllerMode
+{
+    margin-bottom: 5px;
+}
+
+.ModeWrapper .RequiresMiddleButton.Unassigned
+{
+    margin-bottom: 20px;
 }
 
 .ModeWrapper.TouchBumper
@@ -1934,8 +1958,14 @@ ControllerBindingButton.BindingButton
 
 .controller_xboxelite.cap_additonal_buttons  ControllerBindingButton.BindingButton
 {
-    height: 80px;
+    height: 72px;
     margin-top: 0px;
+}
+
+.controller_xboxelite.cap_additonal_buttons  #LeftBumperButton.BindingButton,
+.controller_xboxelite.cap_additonal_buttons  #RightBumperButton.BindingButton
+{
+    margin-top: 20px;
 }
 
 .controller_steamcontroller_headcrab ControllerBindingButton.BindingButton

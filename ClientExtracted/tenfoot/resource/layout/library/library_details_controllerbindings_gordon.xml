@@ -26,7 +26,7 @@
 				<Label id="BindingsCreator" text="#SettingsController_BindingCreator" />
 				<Panel id="SetLayerContainer">
 					<Panel id="GameActionSets" selectionpos="auto" onmovedown="SetSwitchInputFocus( Default GameActionSetLayers );" onmoveright="None();"/>
-					<Panel id="GameActionSetLayers" selectionpos="auto" onmovedown="SetSwitchInputFocus( CenterSplit SwapCenterPadModeToUnified MobileTouch SwapCenterPadModeToSplit PS4 SwapCenterPadModeToSplit PS RightJoystick XBox RightJoystick Apple RightJoystick Default Gyro );" onmoveright="None();"/>
+					<Panel id="GameActionSetLayers" selectionpos="auto" onmovedown="SetSwitchInputFocus( MobileTouch SwapCenterPadModeToSplit PS4 SwapCenterPadModeToSplit PS RightJoystick XBox RightJoystick Apple RightJoystick CenterSplit SwapCenterPadModeToUnified Default Gyro );" onmoveright="None();"/>
 				</Panel>
 				<Panel id="TopHalfContainer" selectionpos="auto">
 					<Panel class="Background" id="BackgroundController" >

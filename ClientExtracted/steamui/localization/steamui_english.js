@@ -1141,6 +1141,7 @@
 	"AppProperties_AutoUpdateOnLaunch_Description": "Updated content will be acquired only when launching this game.",
 	"AppProperties_AutoUpdateHighPriority": "High Priority - Always auto-update this game before others",
 	"AppProperties_AutoUpdateHighPriority_Description": "This game and its updates will be automatically acquired as soon as they are available. Steam will prioritize this game over other downloads.",
+	"AppProperties_AutoUpdateBuild": "Build ID: %1$s",
 	"AppProperties_AutoUpdateDate": "Installed content release date: %1$s at %2$s",
 	"AppProperties_BackgroundDownloadsSection": "Background Downloads",
 	"AppProperties_BackgroundDownloadsDescription": "While playing %1$s, should Steam be allowed to download other updates?",

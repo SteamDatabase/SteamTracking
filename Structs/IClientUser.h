@@ -243,6 +243,7 @@ public:
     virtual unknown_ret UpdateSteamAnnouncementLastRead(unsigned long long, unsigned int) = 0;
     virtual unknown_ret GetMarketEligibility() = 0;
     virtual unknown_ret UpdateGameVrDllState(CGameID, bool, bool) = 0;
+    virtual unknown_ret KillVRTheaterPancakeGame(CGameID) = 0;
     virtual unknown_ret BIsAnyGameOrServiceAppRunning() = 0;
     virtual unknown_ret BGetAppArrayMinutesPlayed(unsigned int*, int, int*, int*) = 0;
     virtual unknown_ret BGetAppsLastPlayedTime(unsigned int*, int, unsigned int*) = 0;

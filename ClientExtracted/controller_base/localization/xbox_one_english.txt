@@ -33,3 +33,5 @@
 	"origin_xboxone_button_paddle_2"				"P2 Paddle"
 	"origin_xboxone_button_paddle_3"				"P3 Paddle"
 	"origin_xboxone_button_paddle_4"				"P4 Paddle"
+	"origin_xboxone_button_share"					"Share Button"
+}

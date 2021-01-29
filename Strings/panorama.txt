@@ -5059,8 +5059,8 @@ linux
 Linux;tenfoot
 X-ValveUserAgent
 panorama %s %s
-Jan 21 2021
-18:45:01
+Jan 28 2021
+15:30:10
 X-SteamClientVersion
 Assertion Failed: hostName
 Assertion Failed: pchRemoteHost

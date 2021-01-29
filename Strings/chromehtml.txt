@@ -872,6 +872,8 @@ Draws html perf data
 -steamuniverse=Beta
 -steamuniverse=Internal
 -steamuniverse=Public
+-realm=China
+-realm=Global
 SteamBootstrapper_GetInstallDir
 clientui
 -clientui=%s
@@ -1785,15 +1787,14 @@ sc_schinese
 
 
 
-u
 "
-:
+B
 3
 D
 @
 
-
 7
+E
 Hi
 `
 $
@@ -1807,7 +1808,9 @@ $
 A
 Hc
 =
-L95uq
+y
+L95
+"
 Hc
 ?
 ?

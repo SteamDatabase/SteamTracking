@@ -3362,7 +3362,7 @@ Make a new Friend on Steam by emailing a gift to someone you know."
 "Steam_InstallAborted_InfoAppNoDemo"		"%game% cannot be installed, because it is is a demo, and you own the full version of the product. Please install the full version of the game."
 
 "Steam_Startup_SteamChinaRequiredTitle"					"Steam China Required"
-"Steam_Startup_GetSteamChina"						"%gamename% is now available via Steam China, please follow the link below to install that client."
+"Steam_Startup_GetSteamChina"						"%gamename% must now be launched via the new Steam China client.\n\nYou can log in with your %gamename% game account and transfer your game progress, items, character level, and points.\n\n"
 "Steam_Startup_RunSteamChina"						"%gamename% is now available via Steam China, please start Steam China to import your game."
 "Steam_Startup_SteamChinaImportedUninstall"			"%gamename% has been imported into Steam China, you are now safe to uninstall this launcher."
 "Steam_Startup_LauncherDeprecated"					"%gamename% is now run via Steam China, this install is no longer supported and will exit."
@@ -3370,6 +3370,7 @@ Make a new Friend on Steam by emailing a gift to someone you know."
 "Steam_Startup_ImportGameFromLauncherMsg"			"Do you want to import %gamename% into Steam China, then you will be safe to uninstall the legacy launcher."
 
 "Steam_Download_SteamChina"							"Download Steam China"
+"Steam_Get_SteamChina"								"Get Steam China"
 
 "Steam_ValidateGame_GameRunning"	"Please exit any running games or tools before attempting to verify your local files."
 

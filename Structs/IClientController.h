@@ -43,6 +43,7 @@ public:
     virtual unknown_ret TriggerHapticPulseOnHandle(unsigned long long, ESteamControllerPad, unsigned short) = 0;
     virtual unknown_ret TriggerRepeatedHapticPulseOnHandle(unsigned long long, ESteamControllerPad, unsigned short, unsigned short, unsigned short, unsigned int) = 0;
     virtual unknown_ret TriggerVibrationOnHandle(unsigned int, unsigned long long, unsigned short, unsigned short) = 0;
+    virtual unknown_ret TriggerVibrationExtendedOnHandle(unsigned int, unsigned long long, unsigned short, unsigned short, unsigned short, unsigned short) = 0;
     virtual unknown_ret SetLEDColorOnHandle(unsigned int, unsigned long long, unsigned char, unsigned char, unsigned char, unsigned int) = 0;
     virtual unknown_ret HasGameMapping(unsigned int) = 0;
     virtual unknown_ret FindControllerByAPIHandle(unsigned long long) = 0;
@@ -52,6 +53,7 @@ public:
     virtual unknown_ret GetStringForXboxOrigin(EXboxOrigin) = 0;
     virtual unknown_ret GetActionOriginFromXboxOrigin(unsigned long long, EXboxOrigin) = 0;
     virtual unknown_ret TranslateActionOrigin(ESteamInputType, EControllerActionOrigin) = 0;
+    virtual unknown_ret GetControllerTypeFromOrigin(EControllerActionOrigin) = 0;
     virtual unknown_ret GetInputTypeForHandle(unsigned long long, int) = 0;
     virtual unknown_ret TranslateSteamInputOriginToSteamControllerOrigin(EInputActionOrigin) = 0;
     virtual unknown_ret TranslateSteamControllerOriginToSteamInputOrigin(EControllerActionOrigin) = 0;
@@ -150,6 +152,7 @@ public:
     virtual unknown_ret GetConfigFeatures(unsigned int, CUtlVector<EControllerConfigFeature, CUtlMemory<EControllerConfigFeature> >*) = 0;
     virtual unknown_ret GetAllBindings(unsigned int, CUtlVector<BindingAction_t, CUtlMemory<BindingAction_t> >*, CUtlVector<CUtlString, CUtlMemory<CUtlString> >*) = 0;
     virtual unknown_ret TriggerVibration(unsigned int, unsigned short, unsigned short) = 0;
+    virtual unknown_ret TriggerVibrationExtended(unsigned int, unsigned short, unsigned short, unsigned short, unsigned short) = 0;
     virtual unknown_ret SetLEDColor(unsigned int, unsigned char, unsigned char, unsigned char, unsigned int) = 0;
     virtual unknown_ret SetDonglePairingMode(bool, int) = 0;
     virtual unknown_ret SetControllerPairingConnectionState(unsigned int, bool) = 0;
