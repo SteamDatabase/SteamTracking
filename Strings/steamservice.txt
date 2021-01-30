@@ -3,8 +3,8 @@ __TEXT
 @%
 __text
 __TEXT
-A
-A
+?
+?
 __stubs
 __TEXT
 __stub_helper
@@ -21,8 +21,6 @@ __unwind_info
 __TEXT
 __eh_frame
 __TEXT
-0\!
-0\!
 __DATA
 @%
 @%
@@ -91,11 +89,14 @@ h
 /usr/lib/libobjc.A.dylib
 &
 )
-50
+`50
+'
+%
 Hi
+&
 H=
 ?
-;$
+=$
 10CUtlString
 10CIPCServer
 11CPipeWaiter
@@ -6127,8 +6128,8 @@ crashhandler.dylib
 CreateInterface
 %u
 1.0
-Jan 28 2021
-15:24:23
+Jan 29 2021
+16:59:48
 Jan
 Feb
 Mar
@@ -6569,6 +6570,7 @@ AsyncSocketWrite
 Assertion Failed: pCompletion->type == IOTYPE_SEND || pCompletion->type == IOTYPE_UNBUFFEREDSEND
 /Steam3PosixRegistryManager
 SteamBootstrapper_GetEUniverse
+GetClientLauncherType
 /registry.vdf
 registry
 Failed loading registry KV.
@@ -6598,6 +6600,8 @@ HOME
 Unable to get home directory
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/clientdirectories.h
 SteamUniverse
+SteamRealm
+China
 CBaseScheduledFunction
 Assertion Failed: nMicroSeconds >= 0
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/scheduledfunction.cpp
@@ -6682,10 +6686,13 @@ CWorkThreadPool::BTryDeleteExitedWorkerThreads
 Work thread '%s' is marked exited, but we could not immediately join prior to deleting -- proceeding without join
 CWorkItem::DispatchCompletedWorkItem: got a work item with no job ID
 Assertion Failed: m_cCurrentDepth > 0
+'
+%
 Hi
+&
 H=
 ?
-;$
+=$
 @
 @
 =
@@ -6696,11 +6703,10 @@ H=
 A
 Hc
 =
-"
 N
-6
+8
 Hc
-Z!
+\!
 
 ?
 ?
@@ -7026,14 +7032,10 @@ AES-NI GCM module for x86_64, CRYPTOGAMS by <appro@openssl.org>
 =
 Montgomery Multiplication with scatter/gather for x86_64, CRYPTOGAMS by <appro@openssl.org>
 =
-)
-
-
-3
-3
-m
 /
-*
+3
+3
+S
 IcE
 I;E
 ,
@@ -7096,7 +7098,6 @@ i
 @
 @
 @
-u
 @
 @
 @
@@ -7107,5 +7108,6 @@ u
 @
 @
 @
+
 Hi
 

@@ -1,21 +1,19 @@
 __TEXT
 __text
 __TEXT
-q
-q
 __stubs
 __TEXT
 __stub_helper
 __TEXT
 __const
 __TEXT
+:
 __objc_methname
 __TEXT
-="
 __cstring
 __TEXT
 __gcc_except_tab__TEXT
-\S
+<V
 __objc_classname__TEXT
 __objc_methtype
 __TEXT
@@ -52,10 +50,11 @@ __objc_data
 __DATA
 __data
 __DATA
-__bss
-__DATA
 __common
 __DATA
+__bss
+__DATA
+@N
 H
 __LINKEDIT
 
@@ -65,10 +64,9 @@ __LINKEDIT
 "
 
 p
-X-
-M
+`-
 p
-(Y
+8Y
 P
 
 8
@@ -115,9 +113,10 @@ h
 8
 /usr/lib/libobjc.A.dylib
 &
-pM
+xM
 )
 H
+0{
 `5
 10CUtlString
 10CUtlVectorIN12CFontAmalgam10TFontRangeE10CUtlMemoryIS1_EE
@@ -358,7 +357,6 @@ d
 19CUtlNoEscConversion
 14CUtlMemoryBase
 12CIMENullImpl
-Steam
 STEAM_APP_BUNDLE_PATH
 en_US
 HOME
@@ -1008,17 +1006,24 @@ fsPathMakeRef: Status %ld
 $$$: Status %ld
 steambeta
 steam
-%@ %@
-About
+#steam_about
+About Steam
+#steam_menu_preferences
 Preferences...
 ,
+#steam_menu_checkforupdates_osx
 Check For Updates...
+#steam_menu_services
 Services
-Hide
+#steam_menu_hidesteam
+Hide Steam
 h
+#steam_menu_hideothers
 Hide Others
+#steam_menu_showall
 Show All
-Quit
+#steam_menu_quitsteam
+Quit Steam
 q
 URLCommand
 cmd
@@ -1160,6 +1165,7 @@ Platform Error: bad module '%s', not loading
 interface
 Platform Error: module version ('%s, %s) invalid, not loading
 Command
+Quit
 MenuName
 < unknown >
 m_Modules
@@ -1789,6 +1795,8 @@ Library/Application Support/Steam
 Unable to get home directory
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/clientdirectories.h
 SteamUniverse
+SteamRealm
+China
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/timeutils.cpp
 vars
 days
@@ -1856,11 +1864,12 @@ P
 @
 @
 @
-t
-V
+u
+W
 @
 @
 @
 @
 @
 @
+

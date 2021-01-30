@@ -10500,6 +10500,7 @@
  T SteamThreadTools::CThreadSpinLock::~CThreadSpinLock()
  T SteamThreadTools::CValidatableThread::SleepForValidate()
  T SteamThreadTools::CValidatableThread::WakeFromValidate()
+ T Steam_GetBaseUserFolder(EUniverse, ESteamRealm, char*, int)
  T Sys_GetFactory(CSysModule*)
  T Sys_GetProcAddress(CSysModule*, char const*)
  T Sys_LoadModule(char const*, Sys_Flags)

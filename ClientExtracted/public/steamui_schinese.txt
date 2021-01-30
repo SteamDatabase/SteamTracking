@@ -1497,6 +1497,7 @@
 
 "Steam_AgreeToTheTerms"		"我同意"
 "Steam_SteamSubscriberAgreement"	"Steam 订户协议"
+"Steam_SteamSubscriberAgreement_china"	"蒸汽平台软件许可及服务协议"
 "Steam_ComplianceRequired_Title"	"Steam - 警告"
 "Steam_ComplianceRequired_Info"		"必须同意《Steam 订户协议》中的所有条款才能继续。"
 

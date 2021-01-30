@@ -8,6 +8,7 @@ public:
     virtual unknown_ret GetSecondsSinceComputerActive() = 0;
     virtual unknown_ret SetComputerActive() = 0;
     virtual unknown_ret GetConnectedUniverse() = 0;
+    virtual unknown_ret GetSteamRealm() = 0;
     virtual unknown_ret GetServerRealTime() = 0;
     virtual unknown_ret GetIPCountry() = 0;
     virtual unknown_ret GetImageSize(int, unsigned int*, unsigned int*) = 0;
@@ -76,7 +77,7 @@ public:
     virtual unknown_ret DispatchClientSettingsChanged() = 0;
     virtual unknown_ret DispatchClientPostMessage(char const*, char const*, char const*) = 0;
     virtual unknown_ret IsSteamChina() = 0;
-    virtual unknown_ret NeedsSteamChinaWorkshop() = 0;
+    virtual unknown_ret NeedsSteamChinaWorkshop(unsigned int) = 0;
     virtual unknown_ret InitFilterText(unsigned int, unsigned int) = 0;
     virtual unknown_ret FilterText(unsigned int, ETextFilteringContext, CSteamID, char const*, char*, unsigned int) = 0;
     virtual unknown_ret GetIPv6ConnectivityState(ESteamIPv6ConnectivityProtocol) = 0;

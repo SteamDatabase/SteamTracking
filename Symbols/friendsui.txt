@@ -15976,6 +15976,7 @@
  T vgui::Menu::SetFont(unsigned long)
  T vgui::Menu::SetItemEnabled(char const*, bool)
  T vgui::Menu::SetItemEnabled(int, bool)
+ T vgui::Menu::SetItemText(char const*, char const*)
  T vgui::Menu::SetItemVisible(char const*, bool)
  T vgui::Menu::SetItemVisible(int, bool)
  T vgui::Menu::SetMenuItemAutoToggleCheck(int, bool)

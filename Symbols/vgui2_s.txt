@@ -1919,6 +1919,7 @@
  T MouseCode_VGUIToVirtualKey(vgui::MouseCode)
  T MouseCode_VirtualKeyToVGUI(int)
  T MurmurHash3_32(void const*, unsigned long, unsigned int, bool)
+ T NSStringForLoc(CUtlString, CUtlString)
  T OSXHelpers::BIsNSWindowOnActiveSpace(void*)
  T OSXHelpers::GetMainBundle()
  T OSXHelpers::GetNSFontDisplayName(CUtlString)
@@ -1938,6 +1939,7 @@
  T RegistryEmulatorManager()
  T SaveBufferToFile(IBaseFileSystem*, StringView, CUtlBuffer const&, StringView)
  T SetScissorRect(int, int, int, int)
+ T Steam_GetBaseUserFolder(EUniverse, ESteamRealm, char*, int)
  T Sys_GetFactory(CSysModule*)
  T Sys_GetFactoryThis()
  T Sys_GetProcAddress(CSysModule*, char const*)
@@ -2595,15 +2597,15 @@
  d CBaseSurface::CreateNewTextureID(bool)::staticBindIndex
  d CScheme::GetAdjustedFontHeightForCurrentLanguage(int)::language
  d __block_descriptor_tmp
- d __block_descriptor_tmp553
- d __block_descriptor_tmp556
- d __block_descriptor_tmp558
- d __block_descriptor_tmp597
- d __block_descriptor_tmp618
+ d __block_descriptor_tmp544
+ d __block_descriptor_tmp547
+ d __block_descriptor_tmp549
+ d __block_descriptor_tmp588
+ d __block_descriptor_tmp610
  d __block_literal_global
- d __block_literal_global557
- d __block_literal_global559
- d __block_literal_global619
+ d __block_literal_global548
+ d __block_literal_global550
+ d __block_literal_global611
  d g_FontMetricTweaks
  d g_bScissor
  d g_rgBorderColor
@@ -2852,9 +2854,9 @@
  t ___ZN4vgui15CBaseOSXSurfaceI12CBaseSurfaceEC2Ev_block_invoke_2
  t ___ZN4vgui15CBaseOSXSurfaceI12CBaseSurfaceEC2Ev_block_invoke_3
  t __copy_helper_block_
- t __copy_helper_block_595
+ t __copy_helper_block_586
  t __destroy_helper_block_
- t __destroy_helper_block_596
+ t __destroy_helper_block_587
  t fsevents_callback(__FSEventStream const*, void*, unsigned long, void*, unsigned int const*, unsigned long long const*)
  t png_build_16bit_table
  t png_format_buffer

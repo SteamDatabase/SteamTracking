@@ -3328,6 +3328,7 @@
  T SteamVProf::CVProfileThreadEntry::DeleteProfile()
  T SteamVProf::CVProfileThreadEntry::OnFrameCompleted()
  T SteamVProf::CVProfileThreadEntry::OnNewFrameEntered()
+ T Steam_GetBaseUserFolder(EUniverse, ESteamRealm, char*, int)
  T StringAfterPrefix
  T StringFindSuffix
  T Sys_GetProcAddress(CSysModule*, char const*)

@@ -942,8 +942,8 @@
  D ListPanelDragger::GetKBMap()::s_pMap
  D ListPanelDragger::GetMessageMap()::s_pMap
  D ListPanelDragger::KB_ChainToMap()::chained
- D Steam_GetBaseUserFolder(EUniverse)::nCanary
- D Steam_GetBaseUserFolder(EUniverse)::rgchFolder
+ D Steam_GetBaseUserFolder(EUniverse, ESteamRealm)::nCanary
+ D Steam_GetBaseUserFolder(EUniverse, ESteamRealm)::rgchFolder
  D VTT for AppModalQueryBox
  D VTT for CAchievementImagePanel
  D VTT for CAchievementInfoPanel
@@ -10897,6 +10897,7 @@
  T SteamThreadTools::CThreadLocalStackCounter<long long>::CThreadLocalStackCounter(SteamThreadTools::CThreadLocal<long long>&)
  T SteamThreadTools::CThreadLocalStackCounter<long long>::~CThreadLocalStackCounter()
  T SteamThreadTools::CThreadSpinLock::~CThreadSpinLock()
+ T Steam_GetBaseUserFolder(EUniverse, ESteamRealm, char*, int)
  T Sys_GetFactory(CSysModule*)
  T Sys_GetFactoryThis()
  T Sys_GetProcAddress(CSysModule*, char const*)
@@ -13209,6 +13210,7 @@
  T vgui::Menu::SetFont(unsigned long)
  T vgui::Menu::SetItemEnabled(char const*, bool)
  T vgui::Menu::SetItemEnabled(int, bool)
+ T vgui::Menu::SetItemText(char const*, char const*)
  T vgui::Menu::SetItemVisible(char const*, bool)
  T vgui::Menu::SetItemVisible(int, bool)
  T vgui::Menu::SetMenuItemAutoToggleCheck(int, bool)
