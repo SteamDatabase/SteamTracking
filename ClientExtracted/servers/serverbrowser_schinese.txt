@@ -145,7 +145,7 @@
 "VAC_ConnectionRefusedTitle"	"拒绝连接 - VAC"
 "VAC_ConnectionRefusedDetail"	"您无法连接至选定的服务器，因为该服务器运行于 VAC（Valve 反作弊）安全模式下。\n\n由于作弊违规，该 Steam 帐户已被安全服务器封禁。"
 "VAC_ConnectionRefusedByServer"	"服务器拒绝您的连接，因为该服务器运行于 VAC（Valve 反作弊）安全模式下。\n\n由于作弊违规，该 Steam 帐户已被安全服务器封禁。"
-"VAC_BanSupportURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=370"
+"VAC_BanSupportURL"	"https://support.steampowered.com/kb/7849-RADZ-6869/"
 "VAC_SecureServerToolTip"	"Valve 反作弊 - 安全"
 "VAC_BannedFromServerToolTip"	"您无法连接到此安全服务器"
 "VAC_Secure"	"安全"
@@ -160,7 +160,7 @@
 "Steam_ValidLoginRequired"	"无法连接至 Steam VAC 服务器。  有关网络问题的疑难解答，请单击下面的链接。"
 "VAC_ConnectionIssuesSupport_Title"	"安全连接失败"
 "VAC_ConnectionIssuesSupportSite"	"单击此处以访问 Steam 客服页面"
-"VAC_ConnectionIssuesSupportURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=374"
+"VAC_ConnectionIssuesSupportURL"	"https://support.steampowered.com/kb/7579-RPSX-6098/"
 "VAC_LoggedInElsewhere_Title"		"帐户已在其它位置使用"
 "VAC_LoggedInElsewhereReason"		"该 Steam 帐户曾从另一台电脑使用登录。若要继续使用Steam，您必须重新登录。"
 

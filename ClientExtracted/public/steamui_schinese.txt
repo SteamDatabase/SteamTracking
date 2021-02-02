@@ -1150,7 +1150,7 @@
 "Steam_SubscriptionApprovalCode" "认证"
 "Steam_SubscriptionConfirmation" "确认代码"
 
-"Steam_TroubleshooterURL_CDKey" "http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=276"
+"Steam_TroubleshooterURL_CDKey" "https://support.steampowered.com/kb/1968-HKLX-7538/"
 
 "Steam_SubscriptionSuccess_CDKey_Headline" "成功激活！"
 "Steam_SubscriptionSuccess_CDKey" "您的产品代码已被成功激活。此产品现在已与您的 Steam 帐户永久关联。您必须登录此帐户才能访问您的游戏。\n\n打印此次交易的收据以便记住您的帐户以供将来使用。"
@@ -1220,7 +1220,7 @@
 "Steam_Subscription_HardwarePromo_Used_Headline" "重复注册"
 "Steam_Subscription_HardwarePromo_Used" "此特惠已经被其它 Steam 帐户激活。"
 "Steam_PurchaseError_HardwarePromoIneligible" "抱歉，此计算机未能满足 %subscription% 特惠的系统需求。"
-"Steam_HardwarePromo_SupportURL" "http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=628"
+"Steam_HardwarePromo_SupportURL" "https://support.steampowered.com/kb/2734-UDFX-1098/"
 
 "Steam_Subscription_HardwarePromo_AlreadyPurchased_Headline" "已有产品"
 "Steam_Subscription_HardwarePromo_AlreadyPurchased" "该 Steam 帐户已拥有此特惠中包含的产品。\n请访问您的库进行使用。"
@@ -1616,7 +1616,7 @@
 "Steam_ConnectionFailureTitle"	"连接失败"
 "Steam_ConnectionFailureDetail"	"Steam 无法连接到网络。 这可能是由于您的互联网连接有问题。"
 "Steam_ConnectionSupportLink"	"调试我的连接"
-"Steam_ConnectionSupportURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=11"
+"Steam_ConnectionSupportURL"	"https://support.steampowered.com/kb/1456-EUDN-2493/"
 
 "SteamUI_NetworkTroubleshootingTips"	"网络故障排除提示"
 
@@ -2386,16 +2386,16 @@
 "Steam_RegionRestricted_Title"			"Steam - 游戏不可用"
 "Steam_RegionRestrictedPurchase_Info"				"此游戏由一个仅在特定地区有效的产品代码激活。 由于您目前不在该地区，因此将无法运行 %game%。"
 "Steam_RegionRestricted_SupportLink"		"访问 Steam 客服网站获取更多信息"
-"Steam_RegionRestrictedPurchase_SupportURL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=461"
+"Steam_RegionRestrictedPurchase_SupportURL"		"https://support.steampowered.com/kb/1266-QFZC-2141/"
 "Steam_RegionRestricted_Info"				"《%game%》无法在您所在的地区使用。"
-"Steam_RegionRestricted_SupportURL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=461"
+"Steam_RegionRestricted_SupportURL"		"https://support.steampowered.com/kb/1266-QFZC-2141/"
 
 "Steam_CountryRestricted_Info"				"您所在的国家和地区尚无法购买此预订。"
-"Steam_CountryRestricted_SupportURL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=488"
+"Steam_CountryRestricted_SupportURL"		"https://support.steampowered.com/kb/1266-QFZC-2141/"
 
 "Steam_RegionRestrictedCode_Title"		"Steam - 产品不可用"
 "Steam_RegionRestrictedCode_Info"			"此产品代码无法在您所在地区进行激活。"
-"Steam_RegionRestrictedCode_SupportURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=463"
+"Steam_RegionRestrictedCode_SupportURL"	"https://support.steampowered.com/kb/1266-QFZC-2141/"
 
 "Steam_FragmentationBad_Title"			"Steam - 磁盘碎片整理警告"
 "Steam_FragmentationBad_Info"				"您的磁盘上游戏文件碎片水平过高。 这会导致加载时间变慢，游戏性能变低。  \n\nSteam 现在可以为您优化游戏文件。\n"
@@ -2766,7 +2766,7 @@
 "Steam_GuestPassAccept_HeadlineServiceUnavailable$type=guestpass"	"玩家通行证接受失败"
 "Steam_GuestPassAccept_TextServiceUnavailable"	"您的电脑当前无法访问 Steam 服务器，或暂时无法使用服务。请稍后再试。"
 "Steam_GuestPassAccept_LinkTextServiceUnavailable" 	"有关礼物的故障排除信息，请参见此客服页面。"
-"Steam_GuestPassAccept_LinkURLServiceUnavailable"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=550"
+"Steam_GuestPassAccept_LinkURLServiceUnavailable"	"https://support.steampowered.com/kb/6262-QXCN-0755/"
 
 "Steam_GuestPassAccept_HeadlineRevoked$type=guestpass"	"此玩家通行证已被撤销"
 "Steam_GuestPassAccept_TextRevoked$type=guestpass"	"给您发送此玩家通行证的好友已取消此通行证，并重新发送了一个赎回代码。 如果给您发送了新的版本，您将会收到另一封带有已更新代码的电子邮件。"
@@ -2785,7 +2785,7 @@
 "Steam_GuestPassRedeemed_HeadlineServiceUnavailable$type=guestpass"	"玩家通行证激活失败"
 "Steam_GuestPassRedeemed_TextServiceUnavailable"	"您的电脑当前无法访问 Steam 服务器，或暂时无法使用服务。请稍后再试。"
 "Steam_GuestPassRedeemed_LinkTextServiceUnavailable"	"有关玩家通行证的故障排除信息，请参见此客服页面。"
-"Steam_GuestPassRedeemed_LinkURLServiceUnavailable"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=550"
+"Steam_GuestPassRedeemed_LinkURLServiceUnavailable"	"https://support.steampowered.com/kb/6262-QXCN-0755/"
 
 "Steam_GuestPassRedeemed_HeadlineLimitExceeded"	"您已使用了此产品的玩家通行证。"
 "Steam_GuestPassRedeemed_TextLimitExceeded"	"由于您已接受了一个 %package% 玩家通行证，所以您不能再接受第二个通行证。 如果您希望继续游戏，请考虑购买。"
@@ -2863,8 +2863,6 @@
 "Steam_SubscriptionCancelled_PuchaseDeclined_ContactProvider"	"您对 %subscription% 的购买尚未完成。\n\n%provider% 报告显示，您的 %provider% 账户存在问题。请联系 %provider% 支持部分或单击“返回”选择其它支付方式。"
 "Steam_SubscriptionCancelled_PuchaseDeclined_AcctNotVerified"	"您对 %subscription% 的购买尚未完成。\n\n%provider% 报告显示，您的 %provider% 账户需要验证或添加足够的资金才能完成购买。请联系 %provider% 客服或单击“返回”选择其它支付方式。"
 
-"Steam_TroubleshooterURL_VfyAcct" "http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=687"
-
 "Steam_PaymentMethodNotAvailable_Generic" "抱歉，该支付方式目前不可用。"
 
 "Steam_LaunchEULA_Title"			"%game%"
@@ -2874,7 +2872,7 @@
 "Steam_LaunchEULA_Text"			"请完整阅读此协议。您必须同意 EULA 中的条款才能开始 %game% 游戏。"
 
 "Steam_GuestPasses_LinkText"		"有关礼物和玩家通行证的更多信息"
-"Steam_GuestPasses_LinkURL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=549"
+"Steam_GuestPasses_LinkURL"		"https://support.steampowered.com/kb/6262-QXCN-0755/"
 
 "Steam_AlreadyRunningError_Title"			"Steam - 无法启动"
 "Steam_AlreadyRunningError_Info"			"Steam 实例已在此计算机上以其它用户帐户运行。请在尝试重新启动之前关闭其它用户帐户下的 Steam。"

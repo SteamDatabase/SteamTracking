@@ -170,7 +170,7 @@
 "Friends_InvitationBlocking"		"您将屏蔽与此用户的所有通讯。在与对方进行通讯之前，请先访问对方的“Steam 社区”页面取消对其的屏蔽。"
 
 "Friends_DontGiveOutPassword"			"请不要将您的密码透露给任何人。\n"
-"Friends_DontGiveOutPassword_URL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=301"
+"Friends_DontGiveOutPassword_URL"		"https://support.steampowered.com/kb/1266-OAFV-8478/"
 
 "Friends_ChatFilterBlockWarning"		"为保证您的安全下列消息中的一个链接已删除。"
 

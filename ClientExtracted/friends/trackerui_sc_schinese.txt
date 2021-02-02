@@ -17,6 +17,7 @@
 		"Friends_UnableToFindFriendByThatNameInvitePrompt" "没有找到电子邮件地址为 %search% 的蒸汽平台用户。\n\n如果您想邀请 %search% 加入蒸汽平台并将其添加至您的好友列表，请单击“下一步”或“返回”以再次搜索。"
 		"Friends_InvitationPending" "%search% 最近已被邀请加入蒸汽平台；一旦他们作出响应，就会被添加至您的好友列表。\n"
 		"Friends_InvitationBlocking" "您将屏蔽与此用户的所有通讯。在与对方进行通讯之前，请先访问对方的“蒸汽平台社区”页面取消对其的屏蔽。"
+		"Friends_DontGiveOutPassword_URL" "https://help.steamchina.com/zh/kb/1266-OAFV-8478/"
 		"Friends_invalidname_info" "您的个人资料名称不能是“[未知]”或包含“Valve”、“蒸汽平台”或“Support”。请选择其他名称。"
 		"Friends_ViewSteamIDPage" "查看蒸汽平台资料"
 		"Friends_Chat_InviteToChatRoom_Title" "蒸汽平台社区 - 聊天室邀请"

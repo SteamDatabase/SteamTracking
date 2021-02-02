@@ -145,7 +145,7 @@
 "VAC_ConnectionRefusedTitle"	"Connection Refused - VAC"
 "VAC_ConnectionRefusedDetail"	"You cannot connect to the selected server, because it is running in VAC (Valve Anti-Cheat) secure mode.\n\nThis Steam account has been banned from secure servers due to a cheating infraction."
 "VAC_ConnectionRefusedByServer"	"The server denied your connection because it is running in VAC (Valve Anti-Cheat) secure mode.\n\nThis Steam account has been banned from secure servers due to a cheating infraction."
-"VAC_BanSupportURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=370"
+"VAC_BanSupportURL"	"https://support.steampowered.com/kb/7849-RADZ-6869/"
 "VAC_SecureServerToolTip"	"Valve Anti-Cheat - Secure"
 "VAC_BannedFromServerToolTip"	"You cannot connect to this secure server"
 "VAC_Secure"	"Secure"
@@ -160,7 +160,7 @@
 "Steam_ValidLoginRequired"	"A connection to the Steam VAC servers could not be made.  For troubleshooting network issues, please click the link below."
 "VAC_ConnectionIssuesSupport_Title"	"Secure Connection Failed"
 "VAC_ConnectionIssuesSupportSite"	"Click here to visit Steam support"
-"VAC_ConnectionIssuesSupportURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=374"
+"VAC_ConnectionIssuesSupportURL"	"https://support.steampowered.com/kb/7579-RPSX-6098/"
 "VAC_LoggedInElsewhere_Title"		"Account Used Elsewhere"
 "VAC_LoggedInElsewhereReason"		"This Steam account has been used to log in from another computer. To continue using Steam, you need to log in again."
 

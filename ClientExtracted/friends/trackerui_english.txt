@@ -170,7 +170,7 @@
 "Friends_InvitationBlocking"		"You are blocking all communication with this user. Before communicating with this user, you must unblock them by visiting their Steam Community Profile."
 
 "Friends_DontGiveOutPassword"			"Never tell your password to anyone.\n"
-"Friends_DontGiveOutPassword_URL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=301"
+"Friends_DontGiveOutPassword_URL"		"https://support.steampowered.com/kb/1266-OAFV-8478/"
 
 "Friends_ChatFilterBlockWarning"		"A link was removed from the following message for your security."
 
