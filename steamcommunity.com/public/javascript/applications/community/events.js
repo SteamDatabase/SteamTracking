@@ -35869,8 +35869,9 @@
                           ? this.setState({
                               searchResult: n,
                               disable_send_invite:
-                                this.props.bDisableForSelfAndFriends &&
-                                (n.is_friend || n.steamid === m.h.steamid),
+                                m.h.is_limited ||
+                                (this.props.bDisableForSelfAndFriends &&
+                                  (n.is_friend || n.steamid === m.h.steamid)),
                             })
                           : this.setState({ searchResult: null }),
                         [3, 3]
