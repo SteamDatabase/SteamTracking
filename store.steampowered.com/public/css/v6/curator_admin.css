@@ -1124,3 +1124,7 @@ blockquote#managemygame_default_text p {
 #creator_tagline_localization_label{
 	display: inline-block;
 }
+
+.sale_event_dropdown {
+	width: 100%;
+}
