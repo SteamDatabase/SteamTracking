@@ -3807,12 +3807,15 @@ textarea:-webkit-autofill:focus,
   overflow: hidden;
   flex: 1;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  justify-content: flex-start; }
   .salepreviewwidgets_StoreSaleBroadcastWidgetRight_9VjYX .salepreviewwidgets_StoreActionWidgetContainer_kW6m4 {
     width: 100%;
     justify-self: end;
     align-items: stretch;
-    flex-direction: column; }
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: unset; }
     .salepreviewwidgets_StoreSaleBroadcastWidgetRight_9VjYX .salepreviewwidgets_StoreActionWidgetContainer_kW6m4 .salepreviewwidgets_StoreSalePriceActionWidgetContainer_1JuIp {
       width: 100%; }
     .salepreviewwidgets_StoreSaleBroadcastWidgetRight_9VjYX .salepreviewwidgets_StoreActionWidgetContainer_kW6m4 .salepreviewwidgets_StoreSaleDiscountBox_cnkoF {
@@ -3824,7 +3827,8 @@ textarea:-webkit-autofill:focus,
     height: auto;
     width: 100%;
     white-space: pre-wrap;
-    line-height: normal; }
+    line-height: normal;
+    flex: none; }
 
 .salepreviewwidgets_StoreActionWidgetContainer_kW6m4 {
   display: flex;
@@ -10259,6 +10263,107 @@ div.curatorfeedbrowse_CuratorHoverToolTip_rSTyU {
 
 /* Tombstone: Don't use typekit font; often blocked by users via ublock */
 
+.salecuratorrecommendations_CuratorCtn_3dOtc {
+  position: relative;
+  background: #1f2225;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+  height: 324px;
+  margin: 8px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; }
+  .salecuratorrecommendations_CuratorCtn_3dOtc .salecuratorrecommendations_CuratorBackgroundCtn_3tptJ {
+    position: relative;
+    width: 100%;
+    height: 100%; }
+    .salecuratorrecommendations_CuratorCtn_3dOtc .salecuratorrecommendations_CuratorBackgroundCtn_3tptJ .salecuratorrecommendations_BackgroundGamesCtn_1ZYuQ {
+      perspective: 1000px;
+      perspective-origin: left top;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      -webkit-mask-image: linear-gradient(-90deg, rgba(0, 0, 0, 0.2) 5%, black 50%, rgba(0, 0, 0, 0.2) 100%);
+      mask-image: linear-gradient(-90deg, rgba(0, 0, 0, 0.2) 5%, black 50%, rgba(0, 0, 0, 0.1) 100%); }
+      .salecuratorrecommendations_CuratorCtn_3dOtc .salecuratorrecommendations_CuratorBackgroundCtn_3tptJ .salecuratorrecommendations_BackgroundGamesCtn_1ZYuQ .salecuratorrecommendations_BackgroundGames_3ugev {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transform: scale(1.3) rotateY(21deg) translateX(71px);
+        opacity: 0.2;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap; }
+        .salecuratorrecommendations_CuratorCtn_3dOtc .salecuratorrecommendations_CuratorBackgroundCtn_3tptJ .salecuratorrecommendations_BackgroundGamesCtn_1ZYuQ .salecuratorrecommendations_BackgroundGames_3ugev img {
+          width: 302px;
+          height: auto;
+          display: block;
+          filter: blur(1px) saturate(0); }
+    .salecuratorrecommendations_CuratorCtn_3dOtc .salecuratorrecommendations_CuratorBackgroundCtn_3tptJ .salecuratorrecommendations_BackgroundTintCtn_1NZf0 {
+      position: absolute;
+      width: 100%;
+      height: 100%; }
+      .salecuratorrecommendations_CuratorCtn_3dOtc .salecuratorrecommendations_CuratorBackgroundCtn_3tptJ .salecuratorrecommendations_BackgroundTintCtn_1NZf0 img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        filter: blur(60px) saturate(10);
+        opacity: 0.2; }
+  .salecuratorrecommendations_CuratorCtn_3dOtc .salecuratorrecommendations_CuratorContentCtn_2VHpn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; }
+  .salecuratorrecommendations_CuratorCtn_3dOtc .salecuratorrecommendations_CuratorFollowCtn_2P9zO {
+    width: 200px;
+    margin: 8px; }
+  .salecuratorrecommendations_CuratorCtn_3dOtc .salecuratorrecommendations_CuratorMiddleCtn_2BGAD {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    padding-left: 76px;
+    padding-top: 5%; }
+    .salecuratorrecommendations_CuratorCtn_3dOtc .salecuratorrecommendations_CuratorMiddleCtn_2BGAD .salecuratorrecommendations_CuratorAvatar_1A-vZ {
+      height: 120px;
+      width: 120px;
+      border-radius: 3px;
+      overflow: hidden;
+      background: rgba(0, 0, 0, 0.2);
+      box-sizing: border-box;
+      display: block;
+      grid-row-end: span 2;
+      box-shadow: 2px 2px 8px black; }
+    .salecuratorrecommendations_CuratorCtn_3dOtc .salecuratorrecommendations_CuratorMiddleCtn_2BGAD .salecuratorrecommendations_ListDescCtn_3g04q {
+      padding-left: 50px;
+      color: white; }
+      .salecuratorrecommendations_CuratorCtn_3dOtc .salecuratorrecommendations_CuratorMiddleCtn_2BGAD .salecuratorrecommendations_ListDescCtn_3g04q .salecuratorrecommendations_SmallText_2NrNg {
+        font-size: 14px;
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: 1px; }
+      .salecuratorrecommendations_CuratorCtn_3dOtc .salecuratorrecommendations_CuratorMiddleCtn_2BGAD .salecuratorrecommendations_ListDescCtn_3g04q .salecuratorrecommendations_ListTitle_Y5WM5 {
+        font-size: 32px;
+        font-weight: 500;
+        text-shadow: 1px 1px 4px black; }
+      .salecuratorrecommendations_CuratorCtn_3dOtc .salecuratorrecommendations_CuratorMiddleCtn_2BGAD .salecuratorrecommendations_ListDescCtn_3g04q .salecuratorrecommendations_ListDesc_2hKcg {
+        font-size: 16px;
+        font-weight: 400;
+        text-shadow: 1px 1px 4px black; }
+      .salecuratorrecommendations_CuratorCtn_3dOtc .salecuratorrecommendations_CuratorMiddleCtn_2BGAD .salecuratorrecommendations_ListDescCtn_3g04q .salecuratorrecommendations_ListLink_Bg57P {
+        display: inline-block;
+        margin-top: 12px;
+        background: rgba(255, 255, 255, 0.4);
+        padding: 4px 30px;
+        border-radius: 3px; }
+        .salecuratorrecommendations_CuratorCtn_3dOtc .salecuratorrecommendations_CuratorMiddleCtn_2BGAD .salecuratorrecommendations_ListDescCtn_3g04q .salecuratorrecommendations_ListLink_Bg57P:hover {
+          background: white;
+          color: black; }
+
 .saleitembrowser_SaleItemBrowserContainer_18byE {
   display: flex;
   flex-direction: column; }
@@ -10454,107 +10559,6 @@ div.curatorfeedbrowse_CuratorHoverToolTip_rSTyU {
 
 .salesectionsubscription_DiscountPriceBlock_z8OZz {
   display: inline-block; }
-
-.salecuratorrecommendations_CuratorCtn_3dOtc {
-  position: relative;
-  background: #1f2225;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
-  height: 324px;
-  margin: 8px;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden; }
-  .salecuratorrecommendations_CuratorCtn_3dOtc .salecuratorrecommendations_CuratorBackgroundCtn_3tptJ {
-    position: relative;
-    width: 100%;
-    height: 100%; }
-    .salecuratorrecommendations_CuratorCtn_3dOtc .salecuratorrecommendations_CuratorBackgroundCtn_3tptJ .salecuratorrecommendations_BackgroundGamesCtn_1ZYuQ {
-      perspective: 1000px;
-      perspective-origin: left top;
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      -webkit-mask-image: linear-gradient(-90deg, rgba(0, 0, 0, 0.2) 5%, black 50%, rgba(0, 0, 0, 0.2) 100%);
-      mask-image: linear-gradient(-90deg, rgba(0, 0, 0, 0.2) 5%, black 50%, rgba(0, 0, 0, 0.1) 100%); }
-      .salecuratorrecommendations_CuratorCtn_3dOtc .salecuratorrecommendations_CuratorBackgroundCtn_3tptJ .salecuratorrecommendations_BackgroundGamesCtn_1ZYuQ .salecuratorrecommendations_BackgroundGames_3ugev {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        transform: scale(1.3) rotateY(21deg) translateX(71px);
-        opacity: 0.2;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap; }
-        .salecuratorrecommendations_CuratorCtn_3dOtc .salecuratorrecommendations_CuratorBackgroundCtn_3tptJ .salecuratorrecommendations_BackgroundGamesCtn_1ZYuQ .salecuratorrecommendations_BackgroundGames_3ugev img {
-          width: 302px;
-          height: auto;
-          display: block;
-          filter: blur(1px) saturate(0); }
-    .salecuratorrecommendations_CuratorCtn_3dOtc .salecuratorrecommendations_CuratorBackgroundCtn_3tptJ .salecuratorrecommendations_BackgroundTintCtn_1NZf0 {
-      position: absolute;
-      width: 100%;
-      height: 100%; }
-      .salecuratorrecommendations_CuratorCtn_3dOtc .salecuratorrecommendations_CuratorBackgroundCtn_3tptJ .salecuratorrecommendations_BackgroundTintCtn_1NZf0 img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        filter: blur(60px) saturate(10);
-        opacity: 0.2; }
-  .salecuratorrecommendations_CuratorCtn_3dOtc .salecuratorrecommendations_CuratorContentCtn_2VHpn {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0; }
-  .salecuratorrecommendations_CuratorCtn_3dOtc .salecuratorrecommendations_CuratorFollowCtn_2P9zO {
-    width: 200px;
-    margin: 8px; }
-  .salecuratorrecommendations_CuratorCtn_3dOtc .salecuratorrecommendations_CuratorMiddleCtn_2BGAD {
-    display: flex;
-    flex-direction: row;
-    flex-grow: 1;
-    padding-left: 76px;
-    padding-top: 5%; }
-    .salecuratorrecommendations_CuratorCtn_3dOtc .salecuratorrecommendations_CuratorMiddleCtn_2BGAD .salecuratorrecommendations_CuratorAvatar_1A-vZ {
-      height: 120px;
-      width: 120px;
-      border-radius: 3px;
-      overflow: hidden;
-      background: rgba(0, 0, 0, 0.2);
-      box-sizing: border-box;
-      display: block;
-      grid-row-end: span 2;
-      box-shadow: 2px 2px 8px black; }
-    .salecuratorrecommendations_CuratorCtn_3dOtc .salecuratorrecommendations_CuratorMiddleCtn_2BGAD .salecuratorrecommendations_ListDescCtn_3g04q {
-      padding-left: 50px;
-      color: white; }
-      .salecuratorrecommendations_CuratorCtn_3dOtc .salecuratorrecommendations_CuratorMiddleCtn_2BGAD .salecuratorrecommendations_ListDescCtn_3g04q .salecuratorrecommendations_SmallText_2NrNg {
-        font-size: 14px;
-        font-weight: 300;
-        text-transform: uppercase;
-        letter-spacing: 1px; }
-      .salecuratorrecommendations_CuratorCtn_3dOtc .salecuratorrecommendations_CuratorMiddleCtn_2BGAD .salecuratorrecommendations_ListDescCtn_3g04q .salecuratorrecommendations_ListTitle_Y5WM5 {
-        font-size: 32px;
-        font-weight: 500;
-        text-shadow: 1px 1px 4px black; }
-      .salecuratorrecommendations_CuratorCtn_3dOtc .salecuratorrecommendations_CuratorMiddleCtn_2BGAD .salecuratorrecommendations_ListDescCtn_3g04q .salecuratorrecommendations_ListDesc_2hKcg {
-        font-size: 16px;
-        font-weight: 400;
-        text-shadow: 1px 1px 4px black; }
-      .salecuratorrecommendations_CuratorCtn_3dOtc .salecuratorrecommendations_CuratorMiddleCtn_2BGAD .salecuratorrecommendations_ListDescCtn_3g04q .salecuratorrecommendations_ListLink_Bg57P {
-        display: inline-block;
-        margin-top: 12px;
-        background: rgba(255, 255, 255, 0.4);
-        padding: 4px 30px;
-        border-radius: 3px; }
-        .salecuratorrecommendations_CuratorCtn_3dOtc .salecuratorrecommendations_CuratorMiddleCtn_2BGAD .salecuratorrecommendations_ListDescCtn_3g04q .salecuratorrecommendations_ListLink_Bg57P:hover {
-          background: white;
-          color: black; }
 
 .BroadcastView {
   width: 100%;

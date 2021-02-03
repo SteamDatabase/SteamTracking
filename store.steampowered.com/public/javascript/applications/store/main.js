@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6347818";
+var CLSTAMP = "6348485";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [9],
   {
@@ -9348,31 +9348,31 @@ var CLSTAMP = "6347818";
     "6AJf": function (e, t, n) {
       "use strict";
       n.d(t, "c", function () {
-        return ht;
+        return mt;
       }),
         n.d(t, "h", function () {
-          return gt;
+          return vt;
         }),
         n.d(t, "a", function () {
-          return At;
+          return Ot;
         }),
         n.d(t, "b", function () {
-          return wt;
+          return Ct;
         }),
         n.d(t, "f", function () {
-          return Tt;
+          return It;
         }),
         n.d(t, "g", function () {
-          return Bt;
+          return Tt;
         }),
         n.d(t, "d", function () {
-          return Dt;
+          return Bt;
         }),
         n.d(t, "e", function () {
-          return jt;
+          return Nt;
         });
       function d() {
-        return window.innerWidth < parseInt(J.strWidescreenWidth);
+        return window.innerWidth < parseInt(Z.strWidescreenWidth);
       }
       var F = n("mrSG"),
         r = n("TyAF"),
@@ -9383,12 +9383,12 @@ var CLSTAMP = "6347818";
         P = n("3+zv"),
         x = n("5eAM"),
         f = n("kLLr"),
-        l = n("ir+G"),
-        u = n("nWbB"),
-        i = n("U+Q5"),
-        c = n("uIWk"),
-        s = n("vDqi"),
-        w = n.n(s),
+        i = n("boaH"),
+        s = n("nWbB"),
+        c = n("U+Q5"),
+        l = n("uIWk"),
+        u = n("vDqi"),
+        w = n.n(u),
         W = n("lkRc"),
         m = n("bDQf"),
         U = new ((function () {
@@ -10222,29 +10222,30 @@ var CLSTAMP = "6347818";
         T = n("TLQK"),
         B = n("bxiW"),
         D = n("bS9Q"),
-        k = n("0OaU"),
-        z = n("BRUS"),
-        R = n("TOXn"),
-        G = n("6Y59"),
-        Q = n("k5ES"),
-        J = n("FhLd"),
-        Z = Object(r.a)(function (e) {
+        k = n("dfs5"),
+        z = n("0OaU"),
+        R = n("BRUS"),
+        G = n("TOXn"),
+        Q = n("6Y59"),
+        J = n("k5ES"),
+        Z = n("FhLd"),
+        $ = Object(r.a)(function (e) {
           var t = e.section,
             n = e.bShowControls,
             r = e.fnOnToggleControls;
           return N.createElement(
             "div",
             {
-              className: J.FacetedBrowsePopup,
+              className: Z.FacetedBrowsePopup,
               style: { color: t.label_color },
               onClick: function () {
                 return r();
               },
             },
-            n ? N.createElement(G.Z, null) : N.createElement(G.B, null)
+            n ? N.createElement(Q.Z, null) : N.createElement(Q.B, null)
           );
         }),
-        $ = (function () {
+        ee = (function () {
           function a() {
             (this.m_rgFacets = new Array()),
               (this.m_rgPrunedFacets = new Array()),
@@ -10643,7 +10644,7 @@ var CLSTAMP = "6347818";
                 e.facetValues.forEach(function (t) {
                   t.matchingCapsules = n
                     .filter(function (e) {
-                      return wt(e.tags, t.filter);
+                      return Ct(e.tags, t.filter);
                     })
                     .map(function (e) {
                       return e.capsule;
@@ -10678,7 +10679,7 @@ var CLSTAMP = "6347818";
             a
           );
         })(),
-        ee = Object(r.a)(function (e) {
+        te = Object(r.a)(function (e) {
           var t = e.language,
             n = e.section,
             r = e.facetCapsuleFilter,
@@ -10692,9 +10693,9 @@ var CLSTAMP = "6347818";
             p = !a && 0 < r.GetPrunedFacets().length;
           return N.createElement(
             "div",
-            { className: J.FacetedBrowseCtn },
+            { className: Z.FacetedBrowseCtn },
             p
-              ? N.createElement(te, {
+              ? N.createElement(ne, {
                   language: t,
                   section: n,
                   rgFacets: r.GetPrunedFacets(),
@@ -10711,12 +10712,12 @@ var CLSTAMP = "6347818";
             (!d() || !l) &&
               N.createElement(
                 "div",
-                { className: J.FacetedBrowseItems },
-                o ? N.createElement(k.a, null) : e.children
+                { className: Z.FacetedBrowseItems },
+                o ? N.createElement(z.a, null) : e.children
               )
           );
         }),
-        te = Object(r.a)(function (e) {
+        ne = Object(r.a)(function (e) {
           var n = e.language,
             r = e.section,
             t = e.rgFacets,
@@ -10732,7 +10733,7 @@ var CLSTAMP = "6347818";
             N.Fragment,
             null,
             d() &&
-              N.createElement(Z, {
+              N.createElement($, {
                 section: r,
                 bShowControls: o,
                 fnOnToggleControls: l,
@@ -10740,14 +10741,14 @@ var CLSTAMP = "6347818";
             (!d() || o) &&
               N.createElement(
                 "div",
-                { className: J.FacetedBrowseControls, style: u },
+                { className: Z.FacetedBrowseControls, style: u },
                 N.createElement(
                   "h1",
                   { style: p },
                   Object(T.f)("#FacetedBrowse_Heading")
                 ),
                 t.map(function (e, t) {
-                  return N.createElement(ne, {
+                  return N.createElement(re, {
                     language: n,
                     key:
                       "facet_" +
@@ -10763,8 +10764,8 @@ var CLSTAMP = "6347818";
                 }),
                 N.createElement(
                   "div",
-                  { className: J.FacetedBrowseFeedbackLink },
-                  N.createElement(Q.e, {
+                  { className: Z.FacetedBrowseFeedbackLink },
+                  N.createElement(J.e, {
                     strLabNumber: "012",
                     strForumURL:
                       W.d.COMMUNITY_BASE_URL +
@@ -10774,7 +10775,7 @@ var CLSTAMP = "6347818";
               )
           );
         }),
-        ne = Object(r.a)(function (e) {
+        re = Object(r.a)(function (e) {
           var n = e.language,
             r = e.section,
             t = e.rgFacet,
@@ -10807,7 +10808,7 @@ var CLSTAMP = "6347818";
               N.Fragment,
               null,
               h.map(function (e, t) {
-                return N.createElement(re, {
+                return N.createElement(ae, {
                   language: n,
                   key: "facet_" + u + "_value_" + t,
                   section: r,
@@ -10820,7 +10821,7 @@ var CLSTAMP = "6347818";
                 N.createElement(
                   "div",
                   {
-                    className: J.FacetValueShowMore,
+                    className: Z.FacetValueShowMore,
                     onClick: function () {
                       return c(!s);
                     },
@@ -10832,7 +10833,7 @@ var CLSTAMP = "6347818";
             )
           );
         }),
-        re = Object(r.a)(function (e) {
+        ae = Object(r.a)(function (e) {
           var t = e.language,
             n = e.section,
             r = e.rgFacetValue,
@@ -10854,16 +10855,16 @@ var CLSTAMP = "6347818";
             "div",
             {
               className: o
-                ? J.FacetValueEnabled
+                ? Z.FacetValueEnabled
                 : i
-                ? J.FacetValueDeactivated
-                : J.FacetValue,
+                ? Z.FacetValueDeactivated
+                : Z.FacetValue,
               style: c,
             },
             N.createElement(
               "a",
               {
-                className: J.FacetValueName,
+                className: Z.FacetValueName,
                 style: l,
                 onClick: function (e) {
                   e.preventDefault(),
@@ -10876,19 +10877,18 @@ var CLSTAMP = "6347818";
               u
             ),
             Boolean(p) &&
-              N.createElement("div", { className: J.FacetValueDescription }, p)
+              N.createElement("div", { className: Z.FacetValueDescription }, p)
           );
         }),
-        ae = n("GiuM"),
-        oe = n("YNty"),
-        ie = n("BFsE"),
-        se = n("ZlHF"),
-        ce = n.n(se),
-        le = n("xVl9"),
-        ue = n("XsxU"),
-        pe = n.n(ue),
-        de = n("X3Ds"),
-        me = n("dfs5"),
+        oe = n("GiuM"),
+        ie = n("YNty"),
+        se = n("BFsE"),
+        ce = n("ZlHF"),
+        le = n.n(ce),
+        ue = n("xVl9"),
+        pe = n("XsxU"),
+        de = n.n(pe),
+        me = n("X3Ds"),
         he = n("T27q"),
         fe = n("XmAN"),
         be = n("SdTr"),
@@ -10930,7 +10930,7 @@ var CLSTAMP = "6347818";
                         {
                           key: n.unique_id + "_" + t.GID,
                           style: {},
-                          className: pe.a.OtherEvents,
+                          className: de.a.OtherEvents,
                         },
                         N.createElement(fe.a, { event: t }),
                         N.createElement(be.b, {
@@ -10941,7 +10941,7 @@ var CLSTAMP = "6347818";
                             : x.a.GetAppLinkInfo(t.appid),
                           onClick: function (e) {
                             E.a.Get().RecordEventRead(t, 8),
-                              Object(he.a)(t, de.m(e)),
+                              Object(he.a)(t, me.m(e)),
                               e.stopPropagation(),
                               e.preventDefault();
                           },
@@ -10970,7 +10970,7 @@ var CLSTAMP = "6347818";
                         link: t,
                         language: a,
                         clanAccountID: r.clanSteamID.GetAccountID(),
-                        strClassName: ce.a.LinkCapsule,
+                        strClassName: le.a.LinkCapsule,
                       })
                     );
                     var t, n, r, a, o, i;
@@ -11011,7 +11011,7 @@ var CLSTAMP = "6347818";
                       {
                         key: l,
                         className: Object(j.a)(
-                          "bordered" == p && ce.a.AppSummaryWidgetCtn,
+                          "bordered" == p && le.a.AppSummaryWidgetCtn,
                           0 === r && _e.m + r
                         ),
                       },
@@ -11071,7 +11071,7 @@ var CLSTAMP = "6347818";
           _ = Math.min(d[0], Ee(b, t));
         if (f && a.length > _)
           i = N.createElement(
-            le.a,
+            ue.a,
             {
               hideArrows: !n,
               visibleElements: _,
@@ -11127,8 +11127,8 @@ var CLSTAMP = "6347818";
             S.push(
               N.createElement(
                 "div",
-                { className: ce.a.CarouselPage, key: "Page_" + A },
-                N.createElement(me.b, { depth: D }, E)
+                { className: le.a.CarouselPage, key: "Page_" + A },
+                N.createElement(k.b, { depth: D }, E)
               )
             ),
               (E = []);
@@ -11137,7 +11137,7 @@ var CLSTAMP = "6347818";
             0 == S.length
               ? ((s = a.length > O), N.createElement(N.Fragment, null, E))
               : N.createElement(
-                  le.a,
+                  ue.a,
                   {
                     hideArrows: !n,
                     visibleElements: 1,
@@ -11177,7 +11177,7 @@ var CLSTAMP = "6347818";
           {
             className: Object(j.a)(
               S.a.SaleSectionContainer,
-              ce.a.SaleSectionContainer
+              le.a.SaleSectionContainer
             ),
             style: { gridTemplateColumns: 1 < t ? r : null },
           },
@@ -11187,16 +11187,313 @@ var CLSTAMP = "6347818";
         );
       }
       var Ce = n("gyoR"),
-        we = n("5E+2"),
-        Le = n("U9Ih"),
-        Ie = n.n(Le),
-        Te = n("NKJh"),
-        Be = n.n(Te),
-        De = n("7G5R"),
-        Ne = n("Mgs7"),
-        je = n("qiKp"),
+        we = n("kyHq"),
+        Le = n("TQGK"),
+        Ie = n("UCyf"),
+        Te = n("IzPI"),
+        Be = n("5E+2"),
+        De = n("2aEQ"),
+        Ne = n("IGe8"),
+        je = n("C4Nl"),
         ke = n("5izx"),
-        ze = (function (t) {
+        ze = n("mgoM"),
+        Re = Object(r.a)(function (e) {
+          var t,
+            d = e.saleSection,
+            m = e.event,
+            n = e.bPreviewMode;
+          if (W.d.EREALM === we.e.k_ESteamRealmChina) return null;
+          if (
+            !n &&
+            d.featured_curator_list_rtime_start &&
+            d.featured_curator_list_rtime_start > ke.a.GetTimeNowWithOverride()
+          )
+            return null;
+          var r = N.useState(null),
+            a = r[0],
+            h = r[1];
+          return (
+            N.useEffect(
+              function () {
+                var p = w.a.CancelToken.source();
+                return (
+                  Object(F.b)(void 0, void 0, void 0, function () {
+                    var r, n, t, a, o, i, s, c, l, u;
+                    return Object(F.e)(this, function (e) {
+                      switch (e.label) {
+                        case 0:
+                          return (
+                            (r = new Array()),
+                            (n = new Array()),
+                            (t = null),
+                            W.j.logged_in ? [4, q.a.HintLoad()] : [3, 2]
+                          );
+                        case 1:
+                          e.sent(),
+                            0 < q.a.GetFollowedCuratorCount() &&
+                              !p.token.reason &&
+                              (t = Ie.b
+                                .Get()
+                                .LoadMyFollowedSaleCurationLists(
+                                  m.clanSteamID,
+                                  m.GID,
+                                  p
+                                )),
+                            (e.label = 2);
+                        case 2:
+                          return (
+                            0 <
+                              (null ===
+                                (u =
+                                  null == d
+                                    ? void 0
+                                    : d.featured_curator_list) || void 0 === u
+                                ? void 0
+                                : u.length) &&
+                              !p.token.reason &&
+                              d.featured_curator_list.forEach(function (e) {
+                                var t = f.a.InitFromClanID(e.clanAccountID);
+                                n.push(
+                                  Ie.b.Get().LoadListDetails(t, e.listID, p)
+                                );
+                              }),
+                            [4, Promise.all(n)]
+                          );
+                        case 3:
+                          return (a = e.sent() || []), [4, t];
+                        case 4:
+                          return (
+                            (o = e.sent() || []),
+                            (i = new Set()),
+                            (s = new Set()),
+                            (c = new Array()),
+                            (l = a.filter(function (n) {
+                              return T.e
+                                .GetELanguageFallbackOrder()
+                                .some(function (e) {
+                                  var t;
+                                  return (
+                                    0 <
+                                    (null === (t = n.localized_flat_title[e]) ||
+                                    void 0 === t
+                                      ? void 0
+                                      : t.length)
+                                  );
+                                });
+                            })),
+                            Object(F.g)(o, l).forEach(function (e) {
+                              var t, n;
+                              i.has(e.listid) ||
+                                (i.add(e.listid),
+                                r.push(e),
+                                (t = Ie.b
+                                  .Get()
+                                  .GetClanAccountFromListID(e.listid)),
+                                s.has(t) ||
+                                  (s.add(t),
+                                  (n = f.a.InitFromClanID(t)),
+                                  c.push(Le.a.LoadClanInfoForClanSteamID(n))));
+                            }),
+                            [4, Promise.all(c)]
+                          );
+                        case 5:
+                          return e.sent(), p.token.reason || h(r), [2];
+                      }
+                    });
+                  }),
+                  function () {
+                    return null == p
+                      ? void 0
+                      : p.cancel("CuratorRecommendationSaleWidget: unmounting");
+                  }
+                );
+              },
+              [
+                m.GID,
+                m.clanSteamID,
+                d.featured_curator_list,
+                null === (t = d.featured_curator_list) || void 0 === t
+                  ? void 0
+                  : t.length,
+              ]
+            ),
+            a && 0 != a.length
+              ? N.createElement(
+                  k.b,
+                  { feature: "salecuratorrec" },
+                  N.createElement(
+                    ue.a,
+                    {
+                      hideArrows: !Ot(),
+                      visibleElements: 1,
+                      useTestScrollbar: !0,
+                      bLazyRenderChildren: !0,
+                      className: Object(j.a)(
+                        "SaleSectionCarousel",
+                        "SaleSectionCarouselPadding",
+                        ce.SaleSection,
+                        ce.CarouselDisplay
+                      ),
+                    },
+                    a.map(function (e) {
+                      return N.createElement(Fe, {
+                        key: e.listid,
+                        list: e,
+                        event: m,
+                      });
+                    })
+                  )
+                )
+              : null
+          );
+        }),
+        Ge = (function () {
+          function e() {
+            this.m_mapSaleEventToFeatureAppSet = new Map();
+          }
+          return (
+            (e.prototype.GetFeaturedAppSet = function (e) {
+              return (
+                this.m_mapSaleEventToFeatureAppSet.has(e.GID) ||
+                  this.m_mapSaleEventToFeatureAppSet.set(
+                    e.GID,
+                    e.GetSaleFeaturedApps()
+                  ),
+                this.m_mapSaleEventToFeatureAppSet.get(e.GID)
+              );
+            }),
+            (e.Get = function () {
+              return e.s_Singleton || (e.s_Singleton = new e()), e.s_Singleton;
+            }),
+            e
+          );
+        })(),
+        Fe = function (e) {
+          var a = e.list,
+            o = e.event,
+            t = Le.a.GetClanInfoByClanAccountID(
+              Ie.b.Get().GetClanAccountFromListID(a.listid)
+            ),
+            n = N.useState(null),
+            r = n[0],
+            i = n[1],
+            s = Object(ze.g)(W.d.LANGUAGE),
+            c = T.a.GetWithFallback(a.localized_flat_title, s);
+          0 == c.length &&
+            (c = Object(T.f)("#Sale_CuratorDisplay_ListDefaultTitle"));
+          var l = T.a.GetWithFallback(a.localized_flat_blurb, s);
+          0 == l.length &&
+            (l = Object(T.f)(
+              "#Sale_CuratorDisplay_ListDefaultDesc",
+              t.group_name
+            ));
+          var u =
+            W.d.STORE_BASE_URL +
+            "curator/" +
+            t.clanAccountID +
+            "/list/" +
+            a.listid;
+          N.useEffect(
+            function () {
+              var t = new Array(),
+                n = Ge.Get().GetFeaturedAppSet(o);
+              a.apps.forEach(function (e) {
+                n.has(e.recommended_app.appid) &&
+                  t.push(
+                    je.a
+                      .Get()
+                      .QueueAppRequest(e.recommended_app.appid, {
+                        include_assets: !0,
+                      })
+                  );
+              });
+              var r = new Array();
+              Promise.all(t).then(function () {
+                a.apps.forEach(function (e) {
+                  var t = je.a.Get().GetApp(e.recommended_app.appid);
+                  r.length < 12 &&
+                    null != t &&
+                    t.BIsVisible() &&
+                    t.assets &&
+                    r.push(t.assets.GetHeaderURL());
+                });
+                for (var e = 0; 0 < r.length && r.length < 6; ) r.push(r[e++]);
+                i(r);
+              });
+            },
+            [o, a.apps, 12]
+          );
+          var p = (r || []).map(function (e, t) {
+            return N.createElement("img", { key: e + t, src: e });
+          });
+          return N.createElement(
+            "div",
+            { className: Ne.CuratorCtn },
+            Boolean(r) &&
+              N.createElement(
+                "div",
+                { className: Ne.CuratorBackgroundCtn },
+                N.createElement(
+                  "div",
+                  { className: Ne.BackgroundTintCtn },
+                  N.createElement("img", {
+                    className: Ne.CuratorAvatar,
+                    src: t.avatar_full_url,
+                  })
+                ),
+                N.createElement(
+                  "div",
+                  { className: Ne.BackgroundGamesCtn },
+                  N.createElement("div", { className: Ne.BackgroundGames }, p)
+                )
+              ),
+            N.createElement(
+              "div",
+              { className: Ne.CuratorContentCtn },
+              N.createElement(
+                "div",
+                { className: Ne.CuratorFollowCtn },
+                N.createElement(De.b, { clanAccountID: t.clanAccountID })
+              ),
+              N.createElement(
+                "div",
+                { className: Ne.CuratorMiddleCtn },
+                N.createElement(
+                  Be.a,
+                  { toolTipContent: t.group_name },
+                  N.createElement("img", {
+                    className: Ne.CuratorAvatar,
+                    src: t.avatar_full_url,
+                  })
+                ),
+                N.createElement(
+                  "div",
+                  { className: Ne.ListDescCtn },
+                  N.createElement(
+                    "div",
+                    { className: Ne.SmallText },
+                    Object(T.f)("#Sale_CuratorDisplay_Explore")
+                  ),
+                  N.createElement("div", { className: Ne.ListTitle }, c),
+                  N.createElement("div", { className: Ne.ListDesc }, l),
+                  N.createElement(
+                    "a",
+                    { className: Ne.ListLink, href: Object(Te.f)(u) },
+                    Object(T.f)("#Sale_CuratorDisplay_Explore")
+                  )
+                )
+              )
+            )
+          );
+        },
+        Pe = n("U9Ih"),
+        xe = n.n(Pe),
+        We = n("NKJh"),
+        Ue = n.n(We),
+        qe = n("7G5R"),
+        He = n("Mgs7"),
+        Ve = n("qiKp"),
+        Xe = (function (t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (
@@ -11213,7 +11510,7 @@ var CLSTAMP = "6347818";
                 strSearchQuery: "",
                 strRawSearch: "",
               }),
-              (e.m_timerForChange = new je.b()),
+              (e.m_timerForChange = new Ve.b()),
               (e.m_cancelSignal = w.a.CancelToken.source()),
               (e.m_nHighestSentRequestID = 0),
               (e.m_nHighestReceivedRequestID = 0),
@@ -11457,7 +11754,7 @@ var CLSTAMP = "6347818";
                 })
                 .map(function (e) {
                   return p.a.createElement(
-                    we.a,
+                    Be.a,
                     {
                       key: e.flavor,
                       toolTipContent: Object(T.f)(e.tooltip),
@@ -11465,8 +11762,8 @@ var CLSTAMP = "6347818";
                         return t.OnFlavorLabelClick(e.flavor);
                       },
                       className: Object(j.a)(
-                        Ie.a.FlavorLabel,
-                        o == e.flavor && Ie.a.SelectedFlavor
+                        xe.a.FlavorLabel,
+                        o == e.flavor && xe.a.SelectedFlavor
                       ),
                     },
                     Object(T.f)(e.label)
@@ -11521,20 +11818,20 @@ var CLSTAMP = "6347818";
               if (!l || 0 == l.length) return null;
               var u = p.a.createElement(
                 "div",
-                { className: Ie.a.SaleItemBrowserContainer },
+                { className: xe.a.SaleItemBrowserContainer },
                 p.a.createElement(
-                  De.a,
-                  { className: Ie.a.SaleItemBrowserHeaderContainer },
+                  qe.a,
+                  { className: xe.a.SaleItemBrowserHeaderContainer },
                   p.a.createElement(
                     "div",
-                    { className: Ie.a.SaleItemBrowserHeader },
+                    { className: xe.a.SaleItemBrowserHeader },
                     l,
                     s.enable_search &&
                       p.a.createElement(
                         "div",
-                        { className: Ie.a.SuggestContainer },
-                        p.a.createElement(G.I, null),
-                        p.a.createElement(Ne.k, {
+                        { className: xe.a.SuggestContainer },
+                        p.a.createElement(Q.I, null),
+                        p.a.createElement(He.k, {
                           type: "text",
                           onChange: this.OnUpdateSearch,
                           bAlwaysShowClearAction: c,
@@ -11547,7 +11844,7 @@ var CLSTAMP = "6347818";
                   n.slice(0, r).map(function (e) {
                     return p.a.createElement(
                       "div",
-                      { key: e.id, className: Be.a.SaleItemBrowserRow },
+                      { key: e.id, className: Ue.a.SaleItemBrowserRow },
                       p.a.createElement(_e.i, {
                         id: e.id,
                         type: e.type || "game",
@@ -11560,7 +11857,7 @@ var CLSTAMP = "6347818";
                   0 == n.length &&
                   p.a.createElement(
                     "div",
-                    { className: Ie.a.EmptyResults },
+                    { className: xe.a.EmptyResults },
                     Object(T.f)("#Sale_EmptySearchResultsOrLoadFailure")
                   ),
                 (!t || a) &&
@@ -11568,23 +11865,23 @@ var CLSTAMP = "6347818";
                     "div",
                     {
                       className: Object(j.a)(
-                        Ie.a.ShowContentsContainer,
-                        !t && Ie.a.Loading
+                        xe.a.ShowContentsContainer,
+                        !t && xe.a.Loading
                       ),
                     },
                     !t || o
-                      ? p.a.createElement(k.a, { size: "medium" })
+                      ? p.a.createElement(z.a, { size: "medium" })
                       : p.a.createElement(
                           "button",
                           {
                             onClick: this.ShowMoreRows,
-                            className: Ie.a.ShowContentsButton,
+                            className: xe.a.ShowContentsButton,
                           },
                           Object(T.f)("#Sale_ShowMore")
                         )
                   )
               );
-              jt(this.props.section, this.props.event).background;
+              Nt(this.props.section, this.props.event).background;
               return u;
             }),
             Object(F.c)([B.a], e.prototype, "ShowMoreRows", null),
@@ -11593,31 +11890,31 @@ var CLSTAMP = "6347818";
             (e = Object(F.c)([r.a], e))
           );
         })(p.a.Component),
-        Re = n("onkS"),
-        Ge = n("oVVc"),
-        Fe = n("VQ2A"),
-        Pe = n("UxvL"),
-        xe = n("l2mU"),
-        We = n("31dG"),
-        Ue = n.n(We);
-      function qe(e, t) {
+        Ye = n("onkS"),
+        Ke = n("oVVc"),
+        Qe = n("VQ2A"),
+        Je = n("UxvL"),
+        Ze = n("l2mU"),
+        $e = n("31dG"),
+        et = n.n($e);
+      function tt(e, t) {
         for (var n = [], r = 0, a = e.capsules; r < a.length; r++) {
           var o = a[r];
           if ("sub" === o.type) {
-            var i = Ge.b.GetPackageInfo(o.id);
+            var i = Ke.b.GetPackageInfo(o.id);
             if (i) {
               if (i.renewal_time_amount === t) return i.packageid;
             } else n.push(o.id);
           }
         }
-        0 < n.length && Ge.b.LoadPackageInfo(n);
+        0 < n.length && Ke.b.LoadPackageInfo(n);
       }
-      function He(e, t, n, r) {
+      function nt(e, t, n, r) {
         var a = e.createElement("input");
         (a.type = "hidden"), (a.name = n), (a.value = r), t.appendChild(a);
       }
-      var Ve = Object(r.a)(function (o) {
-          var i = Object(me.c)(),
+      var rt = Object(r.a)(function (o) {
+          var i = Object(k.c)(),
             e = o.language,
             t = o.logo_image,
             n = o.sub_package_id,
@@ -11627,13 +11924,13 @@ var CLSTAMP = "6347818";
             c = o.body_loc_token,
             l = o.body_discount_loc_token,
             u = o.button_text,
-            p = Ge.b.GetPackageInfo(n),
-            d = Ge.b.GetPackageInfo(r);
-          if (!p || (!d && r)) return Ge.b.LoadPackageInfo([n, r]), null;
+            p = Ke.b.GetPackageInfo(n),
+            d = Ke.b.GetPackageInfo(r);
+          if (!p || (!d && r)) return Ke.b.LoadPackageInfo([n, r]), null;
           if (!p.formatted_final_price) return null;
           var m = p.formatted_final_price,
             h = p.discount_end_rtime,
-            f = (p.discount_percent, Object(xe.a)(p, d)),
+            f = (p.discount_percent, Object(Ze.a)(p, d)),
             b = [m, f || ""],
             _ = T.f.apply(void 0, Object(F.g)([a], b)),
             v = T.f.apply(void 0, Object(F.g)(["#Sale_Subscription_Save"], b)),
@@ -11648,10 +11945,10 @@ var CLSTAMP = "6347818";
           t &&
             ((M = null),
             (M =
-              "string" == typeof (y = Object(R.a)(t, e))
+              "string" == typeof (y = Object(G.a)(t, e))
                 ? N.createElement("img", { src: y })
-                : N.createElement(Pe.a, { rgSources: y })),
-            (S = N.createElement("div", { className: Ue.a.LogoImg }, M)));
+                : N.createElement(Je.a, { rgSources: y })),
+            (S = N.createElement("div", { className: et.a.LogoImg }, M)));
           var E = (function (e) {
               for (var t = 0, n = e.appids; t < n.length; t++) {
                 var r = n[t];
@@ -11665,8 +11962,8 @@ var CLSTAMP = "6347818";
                   "div",
                   {
                     className: Object(j.a)(
-                      Ue.a.PurchaseButton,
-                      Ue.a.AlreadyOwnedPackage
+                      et.a.PurchaseButton,
+                      et.a.AlreadyOwnedPackage
                     ),
                   },
                   Object(T.f)("#Sale_Subscription_AlreadyOwnedPackage")
@@ -11676,8 +11973,8 @@ var CLSTAMP = "6347818";
                   "div",
                   {
                     className: Object(j.a)(
-                      Ue.a.PurchaseButton,
-                      Ue.a.AlreadyOwnedApp
+                      et.a.PurchaseButton,
+                      et.a.AlreadyOwnedApp
                     ),
                   },
                   Object(T.f)("#Sale_Subscription_AlreadyOwnedApp")
@@ -11685,21 +11982,21 @@ var CLSTAMP = "6347818";
               : N.createElement(
                   "div",
                   {
-                    className: Object(j.a)(Ue.a.PurchaseButton, Ue.a.UnOwned),
+                    className: Object(j.a)(et.a.PurchaseButton, et.a.UnOwned),
                     onClick: function (e) {
                       var t, n, r, a;
-                      Object(Fe.c)(i);
+                      Object(Qe.c)(i);
                       (t = e),
                         (n = o.sub_package_id),
-                        (r = Object(de.m)(t)),
+                        (r = Object(me.m)(t)),
                         ((a = r.document.createElement("form")).action =
                           W.d.STORE_BASE_URL + "cart/"),
                         (a.method = "POST"),
                         (a.style.display = "none"),
-                        He(document, a, "action", "add_to_cart"),
-                        He(document, a, "subid", n.toString()),
-                        He(document, a, "sessionid", W.d.SESSIONID),
-                        He(document, a, "snr", W.d.SNR),
+                        nt(document, a, "action", "add_to_cart"),
+                        nt(document, a, "subid", n.toString()),
+                        nt(document, a, "sessionid", W.d.SESSIONID),
+                        nt(document, a, "snr", W.d.SNR),
                         r.document.documentElement.append(a),
                         a.submit(),
                         e.preventDefault();
@@ -11709,32 +12006,32 @@ var CLSTAMP = "6347818";
                 );
           return N.createElement(
             "div",
-            { className: Ue.a.SubscriptionBlock },
+            { className: et.a.SubscriptionBlock },
             S,
             N.createElement(
               "div",
-              { className: Ue.a.PriceBlock },
+              { className: et.a.PriceBlock },
               N.createElement(
                 "span",
                 {
                   className: Object(j.a)(
-                    Ue.a.PriceDisplay,
-                    Boolean(h) ? Ue.a.LimitedDiscount : ""
+                    et.a.PriceDisplay,
+                    Boolean(h) ? et.a.LimitedDiscount : ""
                   ),
                 },
                 _
               ),
               Boolean(f) &&
-                N.createElement("span", { className: Ue.a.SavingsDisplay }, v)
+                N.createElement("span", { className: et.a.SavingsDisplay }, v)
             ),
             N.createElement(
               "div",
-              { className: Ue.a.BodyTextBlock },
+              { className: et.a.BodyTextBlock },
               g,
               Boolean(h) &&
                 N.createElement(
                   "div",
-                  { className: Ue.a.ExpirationTextBlock },
+                  { className: et.a.ExpirationTextBlock },
                   Object(T.n)(
                     "#Sale_Subscription_NewSubsOfferEnds",
                     Object(T.o)(h)
@@ -11744,7 +12041,7 @@ var CLSTAMP = "6347818";
             O
           );
         }),
-        Xe = (function (e) {
+        at = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -11755,27 +12052,27 @@ var CLSTAMP = "6347818";
                 t = this.props,
                 n = t.section,
                 r = t.language,
-                a = qe(n, 12),
-                o = qe(n, 1),
+                a = tt(n, 12),
+                o = tt(n, 1),
                 i =
                   null === (e = n.internal_section_data) || void 0 === e
                     ? void 0
                     : e.subscription_logo_image;
               return N.createElement(
-                me.b,
+                k.b,
                 { feature: "salesubscription" },
                 N.createElement(
                   "div",
-                  { className: Ue.a.MainBlock },
+                  { className: et.a.MainBlock },
                   N.createElement(
                     "span",
-                    { className: Ue.a.SelectAPlan },
+                    { className: et.a.SelectAPlan },
                     Object(T.f)("#Sale_Subscription_SelectPlan")
                   ),
                   N.createElement(
                     "div",
-                    { className: Ue.a.SubscriptionListBlock },
-                    N.createElement(Ve, {
+                    { className: et.a.SubscriptionListBlock },
+                    N.createElement(rt, {
                       sub_package_id: a,
                       logo_image: i,
                       language: r,
@@ -11790,7 +12087,7 @@ var CLSTAMP = "6347818";
                         "#Sale_Subscription_Annual_Button"
                       ),
                     }),
-                    N.createElement(Ve, {
+                    N.createElement(rt, {
                       sub_package_id: o,
                       logo_image: i,
                       language: r,
@@ -11811,9 +12108,9 @@ var CLSTAMP = "6347818";
             (t = Object(F.c)([r.a], t))
           );
         })(N.Component),
-        Ye = n("qD+2"),
-        Ke = n("R+8l");
-      function Qe(e, t, n) {
+        ot = n("qD+2"),
+        it = n("R+8l");
+      function st(e, t, n) {
         return {
           color: e,
           background:
@@ -11824,25 +12121,25 @@ var CLSTAMP = "6347818";
             " 100%)",
         };
       }
-      function Je(e) {
+      function ct(e) {
         var t = e.tab,
           n = e.language,
           r = e.onTabSelected,
           a = e.classNames,
           o = e.section,
           i = e.selected,
-          s = Bt(t, n);
+          s = Tt(t, n);
         if (!s) return null;
         var c,
           l = o
             ? ((c = o),
               i
-                ? Qe(
+                ? st(
                     c.tab_active_label_color,
                     c.tab_active_background_gradient_top,
                     c.tab_active_background_gradient_bottom
                   )
-                : Qe(
+                : st(
                     c.tab_inactive_label_color,
                     c.tab_inactive_background_gradient_top,
                     c.tab_inactive_background_gradient_bottom
@@ -11851,7 +12148,7 @@ var CLSTAMP = "6347818";
         return N.createElement(
           "div",
           {
-            className: Object(j.a)(ce.a.SaleTab, a, "SaleTab", i && "Selected"),
+            className: Object(j.a)(le.a.SaleTab, a, "SaleTab", i && "Selected"),
             onClick: function () {
               return r(t);
             },
@@ -11859,12 +12156,12 @@ var CLSTAMP = "6347818";
           },
           N.createElement(
             "div",
-            { className: Object(j.a)(ce.a.SaleTabLabel) },
+            { className: Object(j.a)(le.a.SaleTabLabel) },
             s
           )
         );
       }
-      function Ze(e) {
+      function lt(e) {
         var r = e.section,
           a = e.activeTab,
           o = e.onTabSelected,
@@ -11884,14 +12181,14 @@ var CLSTAMP = "6347818";
             (null == a ? void 0 : a.GetActiveTabUniqueID()) === e.unique_id;
           if (t && s) return null;
           var n = r.unique_id + "_tab_button_" + e.unique_id;
-          return N.createElement(Je, {
+          return N.createElement(ct, {
             key: n,
             selected: t,
             tab: e,
             language: i,
             classNames: Object(j.a)(
-              ce.a.TabButton,
-              t && ce.a.TabButtonSelected
+              le.a.TabButton,
+              t && le.a.TabButtonSelected
             ),
             onTabSelected: function (e) {
               return o(r, e);
@@ -11900,12 +12197,12 @@ var CLSTAMP = "6347818";
         });
         return N.createElement(
           "div",
-          { className: ce.a.SaleSection, style: jt(r, t) },
-          N.createElement(gt, Object(F.a)({}, e)),
-          N.createElement("div", { className: ce.a.TabButtonsCtn }, c)
+          { className: le.a.SaleSection, style: Nt(r, t) },
+          N.createElement(vt, Object(F.a)({}, e)),
+          N.createElement("div", { className: le.a.TabButtonsCtn }, c)
         );
       }
-      var $e = (function (e) {
+      var ut = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -11932,7 +12229,7 @@ var CLSTAMP = "6347818";
                       return e.type === t.type && e.id === t.id;
                     }) &&
                       (e && (e += "; "),
-                      (e += Dt(
+                      (e += Bt(
                         o,
                         this.props.language,
                         this.props.event.clanSteamID.GetAccountID(),
@@ -11946,7 +12243,7 @@ var CLSTAMP = "6347818";
               if (!e || !e.capsules || !e.capsules.length)
                 return N.createElement(
                   "div",
-                  { className: ce.a.TabContentsElement },
+                  { className: le.a.TabContentsElement },
                   Object(T.f)("#SalePage_Tabs_AllContents")
                 );
               for (
@@ -11966,10 +12263,10 @@ var CLSTAMP = "6347818";
                   (i =
                     (o =
                       "bundle" === l.type
-                        ? Ke.a.GetBundleInfo(l.id)
+                        ? it.a.GetBundleInfo(l.id)
                         : "sub" === l.type
-                        ? Ge.b.GetPackageInfo(l.id)
-                        : Ye.a.GetAppInfo(l.id)) && o.name
+                        ? Ke.b.GetPackageInfo(l.id)
+                        : ot.a.GetAppInfo(l.id)) && o.name
                       ? o.name
                       : u),
                   (s = void 0 === l.visibility_index ? -1 : l.visibility_index),
@@ -11998,7 +12295,7 @@ var CLSTAMP = "6347818";
                   t.map(function (e) {
                     return N.createElement(
                       "div",
-                      { key: e.sKey, className: ce.a.TabContentsElement },
+                      { key: e.sKey, className: le.a.TabContentsElement },
                       e.sDisplay
                     );
                   })
@@ -12011,11 +12308,11 @@ var CLSTAMP = "6347818";
                 n = e.event;
               return N.createElement(
                 "div",
-                { className: Object(j.a)(ce.a.SaleSection), style: jt(t, n) },
-                N.createElement(gt, Object(F.a)({}, this.props)),
+                { className: Object(j.a)(le.a.SaleSection), style: Nt(t, n) },
+                N.createElement(vt, Object(F.a)({}, this.props)),
                 N.createElement(
                   "div",
-                  { className: ce.a.TabContentsContainer },
+                  { className: le.a.TabContentsContainer },
                   this.RenderTabCapsules()
                 )
               );
@@ -12023,7 +12320,7 @@ var CLSTAMP = "6347818";
             (t = Object(F.c)([r.a], t))
           );
         })(N.Component),
-        et = (function (t) {
+        pt = (function (t) {
           function n() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (e.state = { nMaxTabsPerRow: n.GetMaxTabsPerRow() }), e;
@@ -12041,10 +12338,10 @@ var CLSTAMP = "6347818";
                 a = e.language,
                 o = e.activeTab;
               if (r.tabs.length < 2) return null;
-              var i = Object(j.a)(ce.a.SaleSectionTabsTab),
+              var i = Object(j.a)(le.a.SaleSectionTabsTab),
                 s = r.tabs.map(function (e) {
                   var t = "Tab_" + e.unique_id;
-                  return N.createElement(Je, {
+                  return N.createElement(ct, {
                     key: t,
                     section: r,
                     selected: e === o,
@@ -12052,7 +12349,7 @@ var CLSTAMP = "6347818";
                     language: a,
                     classNames: Object(j.a)(
                       i,
-                      e === o && ce.a.SaleSectionTabsSelected
+                      e === o && le.a.SaleSectionTabsSelected
                     ),
                     onTabSelected: function (e) {
                       return n.props.onTabSelected(r, e);
@@ -12066,21 +12363,21 @@ var CLSTAMP = "6347818";
                   "div",
                   {
                     className: Object(j.a)(
-                      ce.a.SaleSection,
-                      ce.a.SaleSectionTabs,
+                      le.a.SaleSection,
+                      le.a.SaleSectionTabs,
                       "SaleSectionTabs"
                     ),
-                    style: jt(r, t),
+                    style: Nt(r, t),
                   },
                   N.createElement(
-                    De.a,
-                    { className: ce.a.SaleSectionTabContainer },
+                    qe.a,
+                    { className: le.a.SaleSectionTabContainer },
                     N.createElement(
                       "div",
                       {
                         className: Object(j.a)(
                           S.a.SaleSectionContainer,
-                          ce.a.SaleSectionTabsRow
+                          le.a.SaleSectionTabsRow
                         ),
                       },
                       s
@@ -12092,308 +12389,10 @@ var CLSTAMP = "6347818";
             n
           );
         })(N.Component),
-        tt = n("kyHq"),
-        nt = n("TQGK"),
-        rt = n("UCyf"),
-        at = n("IzPI"),
-        ot = n("2aEQ"),
-        it = n("IGe8"),
-        st = n("C4Nl"),
-        ct = n("mgoM"),
-        lt = Object(r.a)(function (e) {
-          var t,
-            d = e.saleSection,
-            m = e.event,
-            n = e.bPreviewMode;
-          if (W.d.EREALM === tt.e.k_ESteamRealmChina) return null;
-          if (
-            !n &&
-            d.featured_curator_list_rtime_start &&
-            d.featured_curator_list_rtime_start > ke.a.GetTimeNowWithOverride()
-          )
-            return null;
-          var r = N.useState(null),
-            a = r[0],
-            h = r[1];
-          return (
-            N.useEffect(
-              function () {
-                var p = w.a.CancelToken.source();
-                return (
-                  Object(F.b)(void 0, void 0, void 0, function () {
-                    var r, n, t, a, o, i, s, c, l, u;
-                    return Object(F.e)(this, function (e) {
-                      switch (e.label) {
-                        case 0:
-                          return (
-                            (r = new Array()),
-                            (n = new Array()),
-                            (t = null),
-                            W.j.logged_in ? [4, q.a.HintLoad()] : [3, 2]
-                          );
-                        case 1:
-                          e.sent(),
-                            0 < q.a.GetFollowedCuratorCount() &&
-                              !p.token.reason &&
-                              (t = rt.b
-                                .Get()
-                                .LoadMyFollowedSaleCurationLists(
-                                  m.clanSteamID,
-                                  m.GID,
-                                  p
-                                )),
-                            (e.label = 2);
-                        case 2:
-                          return (
-                            0 <
-                              (null ===
-                                (u =
-                                  null == d
-                                    ? void 0
-                                    : d.featured_curator_list) || void 0 === u
-                                ? void 0
-                                : u.length) &&
-                              !p.token.reason &&
-                              d.featured_curator_list.forEach(function (e) {
-                                var t = f.a.InitFromClanID(e.clanAccountID);
-                                n.push(
-                                  rt.b.Get().LoadListDetails(t, e.listID, p)
-                                );
-                              }),
-                            [4, Promise.all(n)]
-                          );
-                        case 3:
-                          return (a = e.sent() || []), [4, t];
-                        case 4:
-                          return (
-                            (o = e.sent() || []),
-                            (i = new Set()),
-                            (s = new Set()),
-                            (c = new Array()),
-                            (l = a.filter(function (n) {
-                              return T.e
-                                .GetELanguageFallbackOrder()
-                                .some(function (e) {
-                                  var t;
-                                  return (
-                                    0 <
-                                    (null === (t = n.localized_flat_title[e]) ||
-                                    void 0 === t
-                                      ? void 0
-                                      : t.length)
-                                  );
-                                });
-                            })),
-                            Object(F.g)(o, l).forEach(function (e) {
-                              var t, n;
-                              i.has(e.listid) ||
-                                (i.add(e.listid),
-                                r.push(e),
-                                (t = rt.b
-                                  .Get()
-                                  .GetClanAccountFromListID(e.listid)),
-                                s.has(t) ||
-                                  (s.add(t),
-                                  (n = f.a.InitFromClanID(t)),
-                                  c.push(nt.a.LoadClanInfoForClanSteamID(n))));
-                            }),
-                            [4, Promise.all(c)]
-                          );
-                        case 5:
-                          return e.sent(), p.token.reason || h(r), [2];
-                      }
-                    });
-                  }),
-                  function () {
-                    return null == p
-                      ? void 0
-                      : p.cancel("CuratorRecommendationSaleWidget: unmounting");
-                  }
-                );
-              },
-              [
-                m.GID,
-                m.clanSteamID,
-                d.featured_curator_list,
-                null === (t = d.featured_curator_list) || void 0 === t
-                  ? void 0
-                  : t.length,
-              ]
-            ),
-            a && 0 != a.length
-              ? N.createElement(
-                  me.b,
-                  { feature: "salecuratorrec" },
-                  N.createElement(
-                    le.a,
-                    {
-                      hideArrows: !At(),
-                      visibleElements: 1,
-                      useTestScrollbar: !0,
-                      bLazyRenderChildren: !0,
-                      className: Object(j.a)(
-                        "SaleSectionCarousel",
-                        "SaleSectionCarouselPadding",
-                        se.SaleSection,
-                        se.CarouselDisplay
-                      ),
-                    },
-                    a.map(function (e) {
-                      return N.createElement(pt, {
-                        key: e.listid,
-                        list: e,
-                        event: m,
-                      });
-                    })
-                  )
-                )
-              : null
-          );
-        }),
-        ut = (function () {
-          function e() {
-            this.m_mapSaleEventToFeatureAppSet = new Map();
-          }
-          return (
-            (e.prototype.GetFeaturedAppSet = function (e) {
-              return (
-                this.m_mapSaleEventToFeatureAppSet.has(e.GID) ||
-                  this.m_mapSaleEventToFeatureAppSet.set(
-                    e.GID,
-                    e.GetSaleFeaturedApps()
-                  ),
-                this.m_mapSaleEventToFeatureAppSet.get(e.GID)
-              );
-            }),
-            (e.Get = function () {
-              return e.s_Singleton || (e.s_Singleton = new e()), e.s_Singleton;
-            }),
-            e
-          );
-        })(),
-        pt = function (e) {
-          var a = e.list,
-            o = e.event,
-            t = nt.a.GetClanInfoByClanAccountID(
-              rt.b.Get().GetClanAccountFromListID(a.listid)
-            ),
-            n = N.useState(null),
-            r = n[0],
-            i = n[1],
-            s = Object(ct.g)(W.d.LANGUAGE),
-            c = T.a.GetWithFallback(a.localized_flat_title, s);
-          0 == c.length &&
-            (c = Object(T.f)("#Sale_CuratorDisplay_ListDefaultTitle"));
-          var l = T.a.GetWithFallback(a.localized_flat_blurb, s);
-          0 == l.length &&
-            (l = Object(T.f)(
-              "#Sale_CuratorDisplay_ListDefaultDesc",
-              t.group_name
-            ));
-          var u =
-            W.d.STORE_BASE_URL +
-            "curator/" +
-            t.clanAccountID +
-            "/list/" +
-            a.listid;
-          N.useEffect(
-            function () {
-              var t = new Array(),
-                n = ut.Get().GetFeaturedAppSet(o);
-              a.apps.forEach(function (e) {
-                n.has(e.recommended_app.appid) &&
-                  t.push(
-                    st.a
-                      .Get()
-                      .QueueAppRequest(e.recommended_app.appid, {
-                        include_assets: !0,
-                      })
-                  );
-              });
-              var r = new Array();
-              Promise.all(t).then(function () {
-                a.apps.forEach(function (e) {
-                  var t = st.a.Get().GetApp(e.recommended_app.appid);
-                  r.length < 12 &&
-                    null != t &&
-                    t.BIsVisible() &&
-                    t.assets &&
-                    r.push(t.assets.GetHeaderURL());
-                });
-                for (var e = 0; 0 < r.length && r.length < 6; ) r.push(r[e++]);
-                i(r);
-              });
-            },
-            [o, a.apps, 12]
-          );
-          var p = (r || []).map(function (e, t) {
-            return N.createElement("img", { key: e + t, src: e });
-          });
-          return N.createElement(
-            "div",
-            { className: it.CuratorCtn },
-            Boolean(r) &&
-              N.createElement(
-                "div",
-                { className: it.CuratorBackgroundCtn },
-                N.createElement(
-                  "div",
-                  { className: it.BackgroundTintCtn },
-                  N.createElement("img", {
-                    className: it.CuratorAvatar,
-                    src: t.avatar_full_url,
-                  })
-                ),
-                N.createElement(
-                  "div",
-                  { className: it.BackgroundGamesCtn },
-                  N.createElement("div", { className: it.BackgroundGames }, p)
-                )
-              ),
-            N.createElement(
-              "div",
-              { className: it.CuratorContentCtn },
-              N.createElement(
-                "div",
-                { className: it.CuratorFollowCtn },
-                N.createElement(ot.b, { clanAccountID: t.clanAccountID })
-              ),
-              N.createElement(
-                "div",
-                { className: it.CuratorMiddleCtn },
-                N.createElement(
-                  we.a,
-                  { toolTipContent: t.group_name },
-                  N.createElement("img", {
-                    className: it.CuratorAvatar,
-                    src: t.avatar_full_url,
-                  })
-                ),
-                N.createElement(
-                  "div",
-                  { className: it.ListDescCtn },
-                  N.createElement(
-                    "div",
-                    { className: it.SmallText },
-                    Object(T.f)("#Sale_CuratorDisplay_Explore")
-                  ),
-                  N.createElement("div", { className: it.ListTitle }, c),
-                  N.createElement("div", { className: it.ListDesc }, l),
-                  N.createElement(
-                    "a",
-                    { className: it.ListLink, href: Object(at.f)(u) },
-                    Object(T.f)("#Sale_CuratorDisplay_Explore")
-                  )
-                )
-              )
-            )
-          );
-        },
-        dt = n("boaH"),
-        mt = N.lazy(function () {
+        dt = N.lazy(function () {
           return Promise.all([n.e(1), n.e(4)]).then(n.bind(null, "NIbt"));
         });
-      var ht = (function (n) {
+      var mt = (function (n) {
           function e(e) {
             var t = n.call(this, e) || this;
             return (
@@ -12403,7 +12402,7 @@ var CLSTAMP = "6347818";
                   ? t.props.eventModel.GetDayIndexFromEventStart()
                   : void 0,
               }),
-              u.a.Get().AddStreamsLoadedListener(t.OnBroadcastStreamsLoaded),
+              s.a.Get().AddStreamsLoadedListener(t.OnBroadcastStreamsLoaded),
               t.props.eventModel && t.OnSaleDataLoaded(),
               t
             );
@@ -12442,7 +12441,7 @@ var CLSTAMP = "6347818";
               });
             }),
             (e.prototype.componentWillUnmount = function () {
-              u.a
+              s.a
                 .Get()
                 .RemoveStreamsLoadedListener(this.OnBroadcastStreamsLoaded),
                 this.m_customCSSNode &&
@@ -12466,13 +12465,13 @@ var CLSTAMP = "6347818";
                     ((a = (function (e) {
                       switch (e) {
                         case "primary":
-                          return u.b.k_ePrimary;
+                          return s.b.k_ePrimary;
                         case "featured":
-                          return u.b.k_eFeatured;
+                          return s.b.k_eFeatured;
                         case "default_featured":
-                          return u.b.k_eDefaultFeatured;
+                          return s.b.k_eDefaultFeatured;
                         default:
-                          return u.b.k_eGeneral;
+                          return s.b.k_eGeneral;
                       }
                     })(i)),
                     (o.default_selection_priority = a),
@@ -12505,7 +12504,7 @@ var CLSTAMP = "6347818";
                 e.appendChild(this.m_customCSSNode));
               for (var n = 0, r = t.GetSaleSections(); n < r.length; n++) {
                 if ("event_schedule" === r[n].section_type) {
-                  u.a.Get().DisableAutoPlay();
+                  s.a.Get().DisableAutoPlay();
                   break;
                 }
               }
@@ -12545,22 +12544,18 @@ var CLSTAMP = "6347818";
                       ? e.jsondata.broadcast_whitelist
                       : void 0,
                   },
-                  i =
-                    e.BEventCanShowBroadcastWidget() &&
-                    ("1688220857098505775" == e.GID ||
-                      "1590261853006818581" == e.GID),
-                  s = E.a.Get().GetPartnerEventPermissions(e.clanSteamID);
+                  i = E.a.Get().GetPartnerEventPermissions(e.clanSteamID);
                 return N.createElement(
                   v.a,
                   null,
                   N.createElement(
-                    me.a,
+                    k.a,
                     null,
                     N.createElement(
-                      ft,
+                      ht,
                       {
                         className: Object(j.a)(
-                          ce.a["CustomStyle_" + e.jsondata.sale_vanity_id],
+                          le.a["CustomStyle_" + e.jsondata.sale_vanity_id],
                           "SaleCustomCSS"
                         ),
                         backgroundImage: n,
@@ -12569,7 +12564,7 @@ var CLSTAMP = "6347818";
                       Boolean(a || r) &&
                         N.createElement(
                           "div",
-                          { className: ce.a.fullscreen_bg },
+                          { className: le.a.fullscreen_bg },
                           N.createElement(
                             "video",
                             {
@@ -12581,12 +12576,12 @@ var CLSTAMP = "6347818";
                                 e && (e.playbackRate = 0.9);
                               },
                               className: Object(j.a)(
-                                ce.a.SaleBackground,
-                                ce.a[
+                                le.a.SaleBackground,
+                                le.a[
                                   "CustomStyle_" + e.jsondata.sale_vanity_id
                                 ],
                                 "SaleBackground",
-                                ce.a.fullscreen_bg__video
+                                le.a.fullscreen_bg__video
                               ),
                               style: {
                                 display: "flex",
@@ -12612,9 +12607,9 @@ var CLSTAMP = "6347818";
                         "div",
                         {
                           className:
-                            ce.a.SaleOuterContainer +
+                            le.a.SaleOuterContainer +
                             " " +
-                            ce.a["CustomStyle_" + e.jsondata.sale_vanity_id] +
+                            le.a["CustomStyle_" + e.jsondata.sale_vanity_id] +
                             " SaleOuterContainer",
                           style: {
                             marginTop: e.jsondata.sale_header_offset + "px",
@@ -12629,22 +12624,13 @@ var CLSTAMP = "6347818";
                             null,
                             N.createElement(
                               "div",
-                              { className: ce.a.SaleBroadcastCtn },
+                              { className: le.a.SaleBroadcastCtn },
                               N.createElement(
                                 N.Suspense,
                                 { fallback: N.createElement("div", null) },
                                 N.createElement(
-                                  mt,
-                                  Object(F.a)({}, o, {
-                                    bShowCapsuleArt: !0,
-                                    fnRenderBroadcastContext: i
-                                      ? function () {
-                                          return N.createElement(Rt, {
-                                            broadcastContext: o,
-                                          });
-                                        }
-                                      : null,
-                                  })
+                                  dt,
+                                  Object(F.a)({}, o, { bShowCapsuleArt: !0 })
                                 )
                               )
                             )
@@ -12662,7 +12648,7 @@ var CLSTAMP = "6347818";
                                   maxWidth: "940px",
                                 },
                               },
-                              N.createElement(z.a, {
+                              N.createElement(R.a, {
                                 creatorID: {
                                   name: null,
                                   clan_account_id: e.clanSteamID.GetAccountID(),
@@ -12673,7 +12659,7 @@ var CLSTAMP = "6347818";
                               })
                             )
                           ),
-                        N.createElement(vt, {
+                        N.createElement(_t, {
                           bIsPreview: t,
                           event: e,
                           language: this.props.language,
@@ -12684,7 +12670,7 @@ var CLSTAMP = "6347818";
                         Boolean(
                           e.BSaleShowCuratorRecommendationAtBottomOfPage()
                         ) &&
-                          N.createElement(lt, {
+                          N.createElement(Re, {
                             bPreviewMode: t,
                             saleSection: Object(F.a)(Object(F.a)({}, P.l), {
                               section_type: "curator_recommendation",
@@ -12701,14 +12687,14 @@ var CLSTAMP = "6347818";
                                 marginTop: "14px",
                               },
                             },
-                            N.createElement(It, {
+                            N.createElement(Lt, {
                               text: Object(T.f)("#Sale_SeeAllSpecials"),
                               url: e.jsondata.sale_browsemore_url,
                               color: e.jsondata.sale_browsemore_color,
                               bgcolor: e.jsondata.sale_browsemore_bgcolor,
                             })
                           ),
-                        s.can_edit &&
+                        i.can_edit &&
                           N.createElement(g.a, {
                             eventModel: e,
                             bPreviewMode: this.props.bIsPreview,
@@ -12723,7 +12709,7 @@ var CLSTAMP = "6347818";
               return N.createElement(
                 "div",
                 { className: L.a.FlexCenter, style: { height: "500px" } },
-                N.createElement(k.a, {
+                N.createElement(z.a, {
                   size: "medium",
                   string: Object(T.f)("#Loading"),
                 })
@@ -12734,7 +12720,7 @@ var CLSTAMP = "6347818";
             (e = Object(F.c)([r.a], e))
           );
         })(N.Component),
-        ft = (function (t) {
+        ht = (function (t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (e.m_refBackgroundPanel = N.createRef()), e;
@@ -12764,7 +12750,7 @@ var CLSTAMP = "6347818";
                 {
                   className: Object(j.a)(
                     this.props.className,
-                    ce.a.SaleBackground,
+                    le.a.SaleBackground,
                     "SaleBackground"
                   ),
                   style: {
@@ -12782,7 +12768,7 @@ var CLSTAMP = "6347818";
             e
           );
         })(N.Component),
-        bt = (function () {
+        ft = (function () {
           function e(e, t, n) {
             var r = this;
             void 0 === n && (n = !0),
@@ -12794,7 +12780,7 @@ var CLSTAMP = "6347818";
                 (this.m_bDefaultTab = n),
                 e.capsules && 0 !== e.capsules.length
                   ? ((this.m_capsuleFilter = new Set()),
-                    Lt(e.capsules, t).forEach(function (e) {
+                    wt(e.capsules, t).forEach(function (e) {
                       r.m_capsuleFilter.add(Number(e.id));
                     }))
                   : (this.m_capsuleFilter = null));
@@ -12845,7 +12831,7 @@ var CLSTAMP = "6347818";
             e
           );
         })(),
-        _t = (function (t) {
+        bt = (function (t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (e.m_refTabSection = N.createRef()), e;
@@ -12865,12 +12851,12 @@ var CLSTAMP = "6347818";
                       (n =
                         (n =
                           0 <
-                          (t = Number(Object(ae.a)(a.props.location, "tab")))
+                          (t = Number(Object(oe.a)(a.props.location, "tab")))
                             ? e.tabs.find(function (e) {
                                 return e.unique_id === t;
                               })
                             : void 0) || e.tabs[0]) === e.tabs[0]),
-                    o.set(e, new bt(n, a.props.nSaleDayIndex, r)));
+                    o.set(e, new ft(n, a.props.nSaleDayIndex, r)));
                 }),
                 o
               );
@@ -12884,8 +12870,8 @@ var CLSTAMP = "6347818";
                     this.m_refTabSection.current.getBoundingClientRect().top +
                     window.scrollY),
                   window.scrollY > n && window.scrollTo(0, n)),
-                Object(ae.b)(this.props.history, "tab", String(t.unique_id)),
-                Object(ae.b)(this.props.history, "facets", null));
+                Object(oe.b)(this.props.history, "tab", String(t.unique_id)),
+                Object(oe.b)(this.props.history, "facets", null));
             }),
             (e.prototype.render = function () {
               var c = this,
@@ -12896,7 +12882,7 @@ var CLSTAMP = "6347818";
                 d = (e.nSaleDayIndex, this.GetTabSelectionsFromURL()),
                 m = !1,
                 h = !1,
-                f = new bt(null, this.props.nSaleDayIndex),
+                f = new ft(null, this.props.nSaleDayIndex),
                 b = [{ elements: [], activeTab: f }];
               l.GetSaleSections().forEach(function (e, t) {
                 var n = b[b.length - 1].activeTab;
@@ -12922,7 +12908,7 @@ var CLSTAMP = "6347818";
                     !W.j.logged_in
                   )
                     m ||
-                      ((i = N.createElement(yt, {
+                      ((i = N.createElement(gt, {
                         section: e,
                         event: l,
                         language: u,
@@ -12934,14 +12920,14 @@ var CLSTAMP = "6347818";
                       case "events":
                       case "links":
                         i = N.createElement(
-                          Ct,
+                          At,
                           Object(F.a)({ section: e, activeTab: a }, c.props)
                         );
                         break;
                       case "broadcast":
                         l.BEventCanShowBroadcastWidget() &&
                           !h &&
-                          ((i = N.createElement(zt, {
+                          ((i = N.createElement(kt, {
                             broadcastEmbedContext:
                               c.props.broadcastEmbedContext,
                             activeTab: a,
@@ -12950,18 +12936,18 @@ var CLSTAMP = "6347818";
                         break;
                       case "event_description":
                         i = N.createElement(
-                          Mt,
+                          yt,
                           Object(F.a)({ section: e }, c.props)
                         );
                         break;
                       case "doors":
-                        i = N.createElement(oe.b, {
-                          strFontFamily: kt(l.jsondata.sale_font, u),
+                        i = N.createElement(ie.b, {
+                          strFontFamily: jt(l.jsondata.sale_font, u),
                         });
                         break;
                       case "text_section":
                         i = N.createElement(
-                          St,
+                          Mt,
                           Object(F.a)({ section: e }, c.props)
                         );
                         break;
@@ -12973,7 +12959,7 @@ var CLSTAMP = "6347818";
                             null,
                             N.createElement("div", { ref: c.m_refTabSection }),
                             N.createElement(
-                              et,
+                              pt,
                               Object(F.a)({ section: e }, c.props, {
                                 activeTab: s.GetTab(),
                                 onTabSelected: c.OnTabSelected,
@@ -12984,7 +12970,7 @@ var CLSTAMP = "6347818";
                         break;
                       case "tab_buttons":
                         i = N.createElement(
-                          Ze,
+                          lt,
                           Object(F.a)({ section: e }, c.props, {
                             activeTab: a,
                             onTabSelected: c.OnTabSelected,
@@ -13003,7 +12989,7 @@ var CLSTAMP = "6347818";
                                 maxWidth: "940px",
                               },
                             },
-                            N.createElement(z.a, {
+                            N.createElement(R.a, {
                               creatorID: {
                                 name: null,
                                 clan_account_id: e.curator_clan_id,
@@ -13015,7 +13001,7 @@ var CLSTAMP = "6347818";
                           ));
                         break;
                       case "curator_recommendation":
-                        i = N.createElement(lt, {
+                        i = N.createElement(Re, {
                           bPreviewMode: p,
                           saleSection: e,
                           event: l,
@@ -13023,7 +13009,7 @@ var CLSTAMP = "6347818";
                         break;
                       case "event_schedule":
                         i = N.createElement(
-                          Re.c,
+                          Ye.c,
                           Object(F.a)({ section: e }, c.props, { activeTab: a })
                         );
                         break;
@@ -13032,13 +13018,13 @@ var CLSTAMP = "6347818";
                           switch (e.internal_section_data.internal_type) {
                             case "subscription_pricing":
                               i = N.createElement(
-                                Xe,
+                                at,
                                 Object(F.a)({ section: e }, c.props)
                               );
                               break;
                             case "tab_contents":
                               i = N.createElement(
-                                $e,
+                                ut,
                                 Object(F.a)({ section: e }, c.props, {
                                   tab: n.GetTab(),
                                   showReferences: !1,
@@ -13047,7 +13033,7 @@ var CLSTAMP = "6347818";
                               break;
                             case "tab_references":
                               i = N.createElement(
-                                $e,
+                                ut,
                                 Object(F.a)({ section: e }, c.props, {
                                   tab: n.GetTab(),
                                   showReferences: !0,
@@ -13057,7 +13043,7 @@ var CLSTAMP = "6347818";
                         break;
                       case "sale_item_browser":
                         i = N.createElement(
-                          Ot,
+                          Et,
                           Object(F.a)({ section: e }, c.props, { activeTab: a })
                         );
                     }
@@ -13085,7 +13071,7 @@ var CLSTAMP = "6347818";
                   {
                     key: "TabSection_" + t,
                     className: Object(j.a)(
-                      ce.a.SaleSectionTabListContainer,
+                      le.a.SaleSectionTabListContainer,
                       "SaleSectionTabListContainer"
                     ),
                   },
@@ -13094,7 +13080,7 @@ var CLSTAMP = "6347818";
               });
               return N.createElement(
                 "div",
-                { className: ce.a.SaleSectionListContainer },
+                { className: le.a.SaleSectionListContainer },
                 t
               );
             }),
@@ -13102,12 +13088,12 @@ var CLSTAMP = "6347818";
             (e = Object(F.c)([r.a], e))
           );
         })(N.Component),
-        vt = Object(a.i)(_t);
-      var gt = function (e) {
+        _t = Object(a.i)(bt);
+      var vt = function (e) {
           var t = e.section,
             n = e.event,
             r = e.language;
-          if (!Dt(t, r, n.clanSteamID.GetAccountID())) return null;
+          if (!Bt(t, r, n.clanSteamID.GetAccountID())) return null;
           var a,
             o,
             i,
@@ -13122,7 +13108,7 @@ var CLSTAMP = "6347818";
                   ((a = t),
                   (i = r),
                   {
-                    fontFamily: kt((o = n).jsondata.sale_font, i),
+                    fontFamily: jt((o = n).jsondata.sale_font, i),
                     fontWeight: o.jsondata.sale_font_weight,
                     fontSize: o.jsondata.sale_section_font_size,
                     textTransform: o.jsondata.sale_section_disable_capitalize
@@ -13131,14 +13117,14 @@ var CLSTAMP = "6347818";
                     color: a.label_color,
                   }),
               },
-              Dt(t, r, n.clanSteamID.GetAccountID())
+              Bt(t, r, n.clanSteamID.GetAccountID())
             );
           return (
             t.label_link &&
               (s = N.createElement(
                 "a",
                 {
-                  href: Tt(t.label_link),
+                  href: It(t.label_link),
                   target: W.d.IN_CLIENT ? void 0 : "_blank",
                 },
                 s
@@ -13146,27 +13132,27 @@ var CLSTAMP = "6347818";
             s
           );
         },
-        yt = function (e) {
+        gt = function (e) {
           var t = e.section,
             n = e.event;
           e.language;
           return N.createElement(
             "div",
-            { className: ce.a.SaleSection, style: jt(t, n) },
-            N.createElement(gt, Object(F.a)({}, e)),
+            { className: le.a.SaleSection, style: Nt(t, n) },
+            N.createElement(vt, Object(F.a)({}, e)),
             N.createElement(
               "div",
-              { className: ce.a.SaleSectionLoginPrompt },
+              { className: le.a.SaleSectionLoginPrompt },
               Object(T.f)("#SalePage_LoginPrompt"),
               N.createElement(
                 "button",
-                { onClick: ie.a, className: ce.a.LoginButton },
+                { onClick: se.a, className: le.a.LoginButton },
                 Object(T.f)("#Login_SignIn")
               )
             )
           );
         },
-        Mt = function (e) {
+        yt = function (e) {
           var t = e.section,
             n = e.event,
             r = e.language,
@@ -13175,19 +13161,19 @@ var CLSTAMP = "6347818";
             "div",
             {
               className: Object(j.a)(
-                ce.a.SaleSection,
+                le.a.SaleSection,
                 O.a.SaleSectionCtn,
                 "SaleSectionForCustomCSS"
               ),
-              style: jt(t, n),
+              style: Nt(t, n),
             },
-            N.createElement(gt, Object(F.a)({}, e)),
+            N.createElement(vt, Object(F.a)({}, e)),
             N.createElement(
               "div",
               {
                 className: Object(j.a)(S.a.SaleSectionContainer, "SaleTextCtn"),
               },
-              N.createElement(R.b, {
+              N.createElement(G.b, {
                 text: n.GetDescriptionWithFallback(r),
                 partnerEventStore: H.c,
                 showErrorInfo: a,
@@ -13197,7 +13183,7 @@ var CLSTAMP = "6347818";
             )
           );
         },
-        St = function (e) {
+        Mt = function (e) {
           var t = e.section,
             n = e.event,
             r = e.language,
@@ -13207,19 +13193,19 @@ var CLSTAMP = "6347818";
             "div",
             {
               className: Object(j.a)(
-                ce.a.SaleSection,
+                le.a.SaleSection,
                 O.a.SaleSectionCtn,
                 "SaleSectionForCustomCSS"
               ),
-              style: jt(t, n),
+              style: Nt(t, n),
             },
-            N.createElement(gt, Object(F.a)({}, e)),
+            N.createElement(vt, Object(F.a)({}, e)),
             N.createElement(
               "div",
               {
                 className: Object(j.a)(S.a.SaleSectionContainer, "SaleTextCtn"),
               },
-              N.createElement(R.b, {
+              N.createElement(G.b, {
                 text: o,
                 partnerEventStore: H.c,
                 showErrorInfo: a,
@@ -13229,7 +13215,7 @@ var CLSTAMP = "6347818";
             )
           );
         },
-        Et = (function () {
+        St = (function () {
           function e(e) {
             (this.m_nMaxTiers = 0),
               (this.m_nDefaultTier = 0),
@@ -13274,7 +13260,7 @@ var CLSTAMP = "6347818";
             e
           );
         })(),
-        Ot = Object(r.a)(function (e) {
+        Et = Object(r.a)(function (e) {
           var t = e.section,
             n = e.event,
             r = e.activeTab,
@@ -13285,7 +13271,7 @@ var CLSTAMP = "6347818";
                 ? "_" + r.GetActiveTabUniqueID()
                 : "");
           return N.createElement(
-            me.b,
+            k.b,
             { feature: "saleitembrowse" },
             N.createElement(
               A.a,
@@ -13294,21 +13280,21 @@ var CLSTAMP = "6347818";
                 rootMargin: "0px 0px 100% 0px",
                 mode: "LoadAndUnload",
                 className: Object(j.a)(
-                  ce.a.SaleSection,
+                  le.a.SaleSection,
                   O.a.SaleSectionCtn,
                   "SaleSectionForCustomCSS"
                 ),
-                style: jt(t, n),
+                style: Nt(t, n),
               },
-              N.createElement(gt, Object(F.a)({}, e)),
-              N.createElement(ze, Object(F.a)({ key: a }, e))
+              N.createElement(vt, Object(F.a)({}, e)),
+              N.createElement(Xe, Object(F.a)({ key: a }, e))
             )
           );
         });
-      function At() {
+      function Ot() {
         return 940 <= window.innerWidth;
       }
-      var Ct = (function (t) {
+      var At = (function (t) {
         function e() {
           var e = (null !== t && t.apply(this, arguments)) || this;
           return (
@@ -13322,7 +13308,7 @@ var CLSTAMP = "6347818";
               bPruningFacets: !0,
               bApplyingFilter: !1,
               strFacetUrlParam: null,
-              bScreenIsWide: At(),
+              bScreenIsWide: Ot(),
               nMaxCapsulesPerRow: e.GetMaxCapsulesPerRow(),
             }),
             e
@@ -13340,7 +13326,7 @@ var CLSTAMP = "6347818";
               r,
               a,
               o = this,
-              i = Object(ae.a)(
+              i = Object(oe.a)(
                 this.props.history,
                 "facets" + this.props.section.unique_id
               );
@@ -13377,7 +13363,7 @@ var CLSTAMP = "6347818";
           }),
           (e.prototype.GetMaxCapsulesPerRow = function () {
             var e = Object(P.u)(this.props.section.section_type);
-            return At()
+            return Ot()
               ? e.nMaxItemsPerRow
               : Math.min(
                   Math.max(
@@ -13434,7 +13420,7 @@ var CLSTAMP = "6347818";
             );
           }),
           (e.prototype.RandomizeCapsuleList = function (e) {
-            new Et(this.props.event).RandomizeCapsules(e);
+            new St(this.props.event).RandomizeCapsules(e);
           }),
           (e.prototype.GetCachedRandomizedOrder = function (e, t, n) {
             var r = this.props,
@@ -13957,7 +13943,7 @@ var CLSTAMP = "6347818";
                       (l = n.capsules), (e.label = 4);
                     case 4:
                       return (
-                        (l = Lt(
+                        (l = wt(
                           (l = l.filter(function (e) {
                             return s.ShouldShowCapsule(e);
                           })),
@@ -13967,14 +13953,14 @@ var CLSTAMP = "6347818";
                         n.enable_faceted_browsing &&
                           n.facets &&
                           (this.state.facetCapsuleFilter ||
-                            (d = new $()).SetFacets(n.facets),
+                            (d = new ee()).SetFacets(n.facets),
                           d.UpdateSelectionsFromUrlParam(
-                            Object(ae.a)(
+                            Object(oe.a)(
                               this.props.location,
                               "facets" + n.unique_id
                             )
                           ),
-                          (m = $.GetReferencedCapsules(n.facets)),
+                          (m = ee.GetReferencedCapsules(n.facets)),
                           (h = new Set(
                             l.map(function (e) {
                               return e.id;
@@ -13997,12 +13983,12 @@ var CLSTAMP = "6347818";
                           d.SortFacetValues(b, this.props.language, _, v)),
                         (g = !1),
                         (y = this.GetRowsToShow(G)),
-                        (M = Nt(n, y)),
+                        (M = Dt(n, y)),
                         (S = l.length),
                         0 < y &&
                           !i &&
                           "store" === Object(W.f)() &&
-                          (E = Nt(n, y) + 4) + 4 < S &&
+                          (E = Dt(n, y) + 4) + 4 < S &&
                           ((S = E), (g = !0)),
                         0 < (I = Object(P.t)(n)) &&
                           ((O = Math.max(I + 5, Math.floor(1.1 * I))),
@@ -14136,7 +14122,7 @@ var CLSTAMP = "6347818";
           }),
           (e.prototype.OnResize = function () {
             this.setState({
-              bScreenIsWide: At(),
+              bScreenIsWide: Ot(),
               nMaxCapsulesPerRow: this.GetMaxCapsulesPerRow(),
             });
           }),
@@ -14178,7 +14164,7 @@ var CLSTAMP = "6347818";
           }),
           (e.prototype.UpdateFacetFilter = function () {
             this.state.facetCapsuleFilter.UpdateFilterFlags(),
-              Object(ae.b)(
+              Object(oe.b)(
                 this.props.history,
                 "facets" + this.props.section.unique_id,
                 this.state.facetCapsuleFilter.GetUrlParam()
@@ -14200,7 +14186,7 @@ var CLSTAMP = "6347818";
               d = a.nMaxCapsulesPerRow,
               m = a.bAwaitingShowContentLoading,
               h = this.GetSectionForSession(),
-              f = jt(h, t).background,
+              f = Nt(h, t).background,
               b = null;
             if (o) {
               var _ = Oe({
@@ -14224,9 +14210,9 @@ var CLSTAMP = "6347818";
                     b,
                     N.createElement(
                       "div",
-                      { className: ce.a.ShowContentsContainer },
+                      { className: le.a.ShowContentsContainer },
                       m
-                        ? N.createElement(k.a, {
+                        ? N.createElement(z.a, {
                             size: "small",
                             string: Object(T.f)("#Loading"),
                           })
@@ -14234,7 +14220,7 @@ var CLSTAMP = "6347818";
                             "button",
                             {
                               onClick: this.ShowMoreContents,
-                              className: ce.a.ShowContentsButton,
+                              className: le.a.ShowContentsButton,
                             },
                             Object(T.f)("#Sale_ShowMore")
                           )
@@ -14246,12 +14232,12 @@ var CLSTAMP = "6347818";
                 b = h.enable_faceted_browsing
                   ? N.createElement(
                       "div",
-                      { className: ce.a.preview_placeholder_section },
+                      { className: le.a.preview_placeholder_section },
                       Object(T.f)("#FacetedBrowse_NoMatches")
                     )
                   : N.createElement(
                       "div",
-                      { className: ce.a.preview_placeholder_section },
+                      { className: le.a.preview_placeholder_section },
                       Object(T.f)(
                         h.smart_section
                           ? "#Sale_SmartPlaceHolder"
@@ -14263,16 +14249,16 @@ var CLSTAMP = "6347818";
               if (!h.enable_faceted_browsing) return null;
               b = N.createElement(
                 "div",
-                { className: ce.a.FacetedBrowseLoadThrobber },
-                N.createElement(k.a, null)
+                { className: le.a.FacetedBrowseLoadThrobber },
+                N.createElement(z.a, null)
               );
             }
             var y = this.GetSNRData(),
               M = y.feature,
               S = y.depth,
-              E = h.label_link ? Tt(h.label_link) : void 0;
+              E = h.label_link ? It(h.label_link) : void 0;
             return N.createElement(
-              me.b,
+              k.b,
               { feature: M, depth: S },
               N.createElement(
                 A.a,
@@ -14280,22 +14266,22 @@ var CLSTAMP = "6347818";
                   placeholderHeight: this.EstimateComponentHeight(h),
                   rootMargin: "0px 0px 100% 0px",
                   className: Object(j.a)(
-                    ce.a.SaleSection,
-                    h.show_as_carousel && ce.a.CarouselDisplay,
+                    le.a.SaleSection,
+                    h.show_as_carousel && le.a.CarouselDisplay,
                     O.a.SaleSectionCtn,
                     "SaleSectionForCustomCSS"
                   ),
-                  style: jt(h, t),
+                  style: Nt(h, t),
                 },
                 N.createElement(
                   "div",
-                  { className: ce.a.SaleSectionTitleCtn },
-                  N.createElement(gt, Object(F.a)({}, this.props)),
+                  { className: le.a.SaleSectionTitleCtn },
+                  N.createElement(vt, Object(F.a)({}, this.props)),
                   0 < s &&
                     N.createElement(
                       "div",
                       {
-                        className: ce.a.SaleSectionSubtext,
+                        className: le.a.SaleSectionSubtext,
                         "data-tooltip-text": Object(T.f)(
                           "#Sale_HiddenItem_Tooltip"
                         ),
@@ -14314,7 +14300,7 @@ var CLSTAMP = "6347818";
                 ),
                 h.enable_faceted_browsing
                   ? N.createElement(
-                      ee,
+                      te,
                       {
                         language: r,
                         section: h,
@@ -14330,7 +14316,7 @@ var CLSTAMP = "6347818";
                 Boolean(E) &&
                   N.createElement(
                     "div",
-                    { className: ce.a.SaleViewAll },
+                    { className: le.a.SaleViewAll },
                     N.createElement(
                       "a",
                       { href: E, target: W.d.IN_CLIENT ? void 0 : "_blank" },
@@ -14347,7 +14333,7 @@ var CLSTAMP = "6347818";
           (e = Object(F.c)([r.a], e))
         );
       })(N.Component);
-      function wt(e, t) {
+      function Ct(e, t) {
         if (t && t.clauses) {
           var n = new Set();
           e.forEach(function (e) {
@@ -14366,12 +14352,12 @@ var CLSTAMP = "6347818";
         }
         return !0;
       }
-      function Lt(e, t) {
+      function wt(e, t) {
         return e.filter(function (e) {
           return null == e.visibility_index || e.visibility_index == t;
         });
       }
-      var It = function (e) {
+      var Lt = function (e) {
         var t = e.text,
           n = e.url,
           r = e.color,
@@ -14380,14 +14366,14 @@ var CLSTAMP = "6347818";
           "a",
           {
             className: S.a.BrowseMoreButton,
-            href: Tt(n),
+            href: It(n),
             target: "_blank",
             style: { backgroundColor: a, color: r },
           },
           t || Object(T.f)("#Sale_BrowseMore_Text_Default")
         );
       };
-      function Tt(t) {
+      function It(t) {
         var e = "",
           n = "";
         if (t && (0 <= t.indexOf("/") || 0 <= t.indexOf("?")))
@@ -14402,7 +14388,7 @@ var CLSTAMP = "6347818";
           }
         return W.d.STORE_BASE_URL + e + n;
       }
-      function Bt(e, t) {
+      function Tt(e, t) {
         return (
           T.a.GetWithFallback(e.localized_label, t) ||
           ("#Sale_default_label" === e.default_label
@@ -14410,7 +14396,7 @@ var CLSTAMP = "6347818";
             : Object(T.f)(e.default_label))
         );
       }
-      function Dt(e, t, n, r) {
+      function Bt(e, t, n, r) {
         var a = (function (e) {
           if ("items" === e.section_type)
             switch (e.smart_section_type) {
@@ -14429,7 +14415,7 @@ var CLSTAMP = "6347818";
               : null;
           if (e.curator_clan_id) {
             var t = f.a.InitFromClanID(e.curator_clan_id),
-              n = c.a.GetCreatorHome(t);
+              n = l.a.GetCreatorHome(t);
             if (n) return Object(T.f)("#Sale_CuratorSection_Name", n.GetName());
           }
           return "#Sale_CuratorSection";
@@ -14445,18 +14431,18 @@ var CLSTAMP = "6347818";
         var s = W.d.MEDIA_CDN_COMMUNITY_URL + "images/clans/" + n + "/" + i;
         return N.createElement("img", { loading: "lazy", src: s, alt: o });
       }
-      function Nt(e, t) {
+      function Dt(e, t) {
         for (var n = ge(e), r = 0, a = 0; a < t; a++) r += n[a % n.length];
         return r;
       }
-      function jt(e, t) {
+      function Nt(e, t) {
         if (e.disable_background) return { paddingLeft: 0, paddingRight: 0 };
         var n = "";
         return (
           e.background_image &&
             (n +=
               ",url(" +
-              i.a.GenerateArtworkURLFromHashAndExtensions(
+              c.a.GenerateArtworkURLFromHashAndExtensions(
                 t.clanSteamID,
                 e.background_image
               ) +
@@ -14472,7 +14458,7 @@ var CLSTAMP = "6347818";
           }
         );
       }
-      function kt(e, t) {
+      function jt(e, t) {
         return 12 === t
           ? e.replace("Jolly Lodger", "New Rocker")
           : 23 === t || 19 === t || 24 === t || 18 === t || 8 === t || 26 === t
@@ -14489,92 +14475,57 @@ var CLSTAMP = "6347818";
           ? e.replace("Sigmar One", "Prompt")
           : e;
       }
-      var zt = (function (t) {
-          function e() {
-            var e = (null !== t && t.apply(this, arguments)) || this;
-            return (e.state = {}), e;
-          }
-          return (
-            Object(F.d)(e, t),
-            (e.prototype.OnEnter = function () {
-              this.state.bOnceVisible || this.setState({ bOnceVisible: !0 });
-            }),
-            (e.prototype.render = function () {
-              var n = this.props.activeTab;
-              return N.createElement(
-                v.a,
-                null,
+      var kt = (function (t) {
+        function e() {
+          var e = (null !== t && t.apply(this, arguments)) || this;
+          return (e.state = {}), e;
+        }
+        return (
+          Object(F.d)(e, t),
+          (e.prototype.OnEnter = function () {
+            this.state.bOnceVisible || this.setState({ bOnceVisible: !0 });
+          }),
+          (e.prototype.render = function () {
+            var n = this.props.activeTab;
+            return N.createElement(
+              v.a,
+              null,
+              N.createElement(
+                k.b,
+                { feature: "salebroadcast" },
                 N.createElement(
-                  me.b,
-                  { feature: "salebroadcast" },
+                  N.Suspense,
+                  { fallback: N.createElement("div", null) },
                   N.createElement(
-                    N.Suspense,
-                    { fallback: N.createElement("div", null) },
+                    o.a,
+                    { onEnter: this.OnEnter },
                     N.createElement(
-                      o.a,
-                      { onEnter: this.OnEnter },
-                      N.createElement(
-                        "div",
-                        { className: ce.a.SaleBroadcastSection },
-                        Boolean(this.state.bOnceVisible) &&
-                          N.createElement(
-                            mt,
-                            Object(F.a)({}, this.props.broadcastEmbedContext, {
-                              bShowCapsuleArt: !0,
-                              fnFilterStreams: function (e) {
-                                var t = dt.a.GetOrCreateBroadcastInfo(e.steamid)
-                                  .m_nAppID;
-                                return n.ShouldShowOnTab(t);
-                              },
-                            })
-                          ),
-                        Boolean(!this.state.bOnceVisible) &&
-                          N.createElement("span", null, Object(T.f)("#Loading"))
-                      )
+                      "div",
+                      { className: le.a.SaleBroadcastSection },
+                      Boolean(this.state.bOnceVisible) &&
+                        N.createElement(
+                          dt,
+                          Object(F.a)({}, this.props.broadcastEmbedContext, {
+                            bShowCapsuleArt: !0,
+                            fnFilterStreams: function (e) {
+                              var t = i.a.GetOrCreateBroadcastInfo(e.steamid)
+                                .m_nAppID;
+                              return n.ShouldShowOnTab(t);
+                            },
+                          })
+                        ),
+                      Boolean(!this.state.bOnceVisible) &&
+                        N.createElement("span", null, Object(T.f)("#Loading"))
                     )
                   )
                 )
-              );
-            }),
-            Object(F.c)([B.a], e.prototype, "OnEnter", null),
-            e
-          );
-        })(N.Component),
-        Rt = Object(r.a)(function (e) {
-          var t = u.a.Get().GetPlayReadyStream(e.broadcastContext),
-            n = dt.a.GetOrCreateBroadcastInfo(null == t ? void 0 : t.steamid)
-              .m_nAppID,
-            r = t && n;
-          l.a.EnsureStoreCapsuleInfoLoaded(r);
-          var a = l.a.GetStoreCapsuleInfo(r),
-            o = a && a.GetAppStoreData(),
-            i = o && o.title;
-          if (!i) return null;
-          function s() {
-            return window.open(o.capsule_link, "_blank");
-          }
-          var c =
-            "https://steamcdn-a.akamaihd.net/steamcommunity/public/" +
-            (o.cover_image_asset_url
-              ? "images/apps/" + r + "/" + o.cover_image_asset_url + ".jpg"
-              : "images/apps/1195650/246e7e2a24c0aa965e505ac510d4e8e952f9a88a.jpg");
-          return N.createElement(
-            "div",
-            { className: ce.a.SalePageBroadcastContextHover },
-            N.createElement("img", {
-              src: c,
-              className: ce.a.AlbumCoverImage,
-              onClick: s,
-            }),
-            N.createElement(
-              "div",
-              { className: ce.a.AlbumTitle, onClick: s },
-              " ",
-              i,
-              " "
-            )
-          );
-        });
+              )
+            );
+          }),
+          Object(F.c)([B.a], e.prototype, "OnEnter", null),
+          e
+        );
+      })(N.Component);
     },
     "6TF7": function (e, t, n) {
       e.exports = { App: "app_App_2uHYt" };
@@ -22598,19 +22549,23 @@ var CLSTAMP = "6347818";
             u = c[1];
           _.useEffect(
             function () {
-              r ||
-                Object(b.b)(void 0, void 0, void 0, function () {
-                  return Object(b.e)(this, function (e) {
-                    switch (e.label) {
-                      case 0:
-                        return [4, v.Get().LoadTrailersForApp(n.appid)];
-                      case 1:
-                        return e.sent(), a(!0), [2];
-                    }
+              var e = v.Get().BHasTrailerForApp(n.appid);
+              a(e),
+                s(!1),
+                u(void 0),
+                e ||
+                  Object(b.b)(void 0, void 0, void 0, function () {
+                    return Object(b.e)(this, function (e) {
+                      switch (e.label) {
+                        case 0:
+                          return [4, v.Get().LoadTrailersForApp(n.appid)];
+                        case 1:
+                          return e.sent(), a(!0), [2];
+                      }
+                    });
                   });
-                });
             },
-            [n.appid, r]
+            [n.appid]
           );
           function p() {
             var e = v.Get().GetTrailersForApp(n.appid),
@@ -66143,10 +66098,9 @@ var CLSTAMP = "6347818";
             }),
             Object.defineProperty(e.prototype, "cachedUpcomingCalenderEvents", {
               get: function () {
-                return Object(S.b)().GetCalendarItemsInTimeRange(
-                  this.rtTopOfHour,
-                  void 0
-                );
+                var e = Object(S.b)().GetStoreInitializationTimestamp(),
+                  t = Object(z.c)(e).getTime() / 1e3;
+                return Object(S.b)().GetCalendarItemsInTimeRange(t, void 0);
               },
               enumerable: !1,
               configurable: !0,
