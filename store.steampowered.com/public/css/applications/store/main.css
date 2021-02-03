@@ -6920,6 +6920,12 @@ span.partnersaledisplay_vr_required_1P__h {
       font-weight: bold;
       color: white; }
 
+.partnersaledisplay_FacetedBrowseLoadThrobber_3ThUF {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
 /* stylelint-disable */
 
 .salesectioneventschedule_SaleSchedCtn_2g7il {
