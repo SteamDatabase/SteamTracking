@@ -1,6 +1,8 @@
 __TEXT
 __text
 __TEXT
+K
+K
 __stubs
 __TEXT
 __stub_helper
@@ -1793,8 +1795,8 @@ B
 D
 @
 
+,
 7
-E
 Hi
 `
 $
@@ -1808,9 +1810,6 @@ $
 A
 Hc
 =
-y
-L95
-"
 Hc
 ?
 ?

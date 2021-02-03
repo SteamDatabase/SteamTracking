@@ -64,9 +64,10 @@ __LINKEDIT
 "
 
 p
-`-
+X-
+M
 p
-8Y
+0Y
 P
 
 8
@@ -113,10 +114,10 @@ h
 8
 /usr/lib/libobjc.A.dylib
 &
-xM
+pM
 )
 H
-0{
+{
 `5
 10CUtlString
 10CUtlVectorIN12CFontAmalgam10TFontRangeE10CUtlMemoryIS1_EE
@@ -364,7 +365,6 @@ Assertion Failed: !"Unable to get home directory"
 %s/Desktop
 %s/Applications
 r
-%s/%s
 Assertion Failed: (&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlvector.h
 1.5.26
@@ -1440,6 +1440,7 @@ LOCK_EX
 LOCK_SH
 fcntl failed to set F_NOCACHE
 rb
+%s/%s
 unReadAheadChunkSize should be zero when using bUnbuffered = true
 Assertion Failed: unReadAheadChunkSize < INT32_MAX/2
 unsupported flags 0x%x passed to CFileReader::BOpenFile

@@ -2,6 +2,8 @@
 __TEXT
 __text
 __TEXT
+@q
+@q
 __stubs
 __TEXT
 __stub_helper
@@ -15,8 +17,8 @@ __objc_methname
 __TEXT
 __unwind_info
 __TEXT
-Tc,
-Tc,
+$c,
+$c,
 __eh_frame
 __TEXT
 __DATA
@@ -41,6 +43,8 @@ __DATA
 __objc_classrefs__DATA
 __data
 __DATA
+fB
+fB
 __thread_vars
 __DATA
 __thread_bss
@@ -7944,7 +7948,6 @@ Steam
 en_US
 HOME
 r
-%s/%s
 com.valvesoftware.steam.ipctool
 ipcserver restart: expected: %d, got: %d
 StopJob
@@ -9509,6 +9512,7 @@ TimedTrialNotification
 GameImage
 resource/TimedTrialNotification.res
 common/master_sub/notification_icon
+%s/%s
 common/icon
 %simages/apps/%d/%s.jpg
 .png
@@ -9595,8 +9599,8 @@ developer
 Steam pid that launched us
 VGUI_Application_001
 OK
-Feb  1 2021
-16:03:10
+Feb  2 2021
+15:59:12
 crashhandler003
 gameoverlayui
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/overlay/gameoverlayui/main.cpp
@@ -13260,35 +13264,33 @@ Dec
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 d#
+8$
+N$
 0
 p
 p
 0
 $
-IA
+TA
 6
 6
+5
 A
 3"
 6
-6
-_#
 "
 "
-|I
 0
 p
-5I
+t@
 !
 !
 !
-{"
 "
 "
 @
 !
 f
-/"
 d!
 G!
 .!
@@ -13298,7 +13300,8 @@ G!
 I
 k
 d
-R!
+#!
+0G
 
 
 
@@ -13341,9 +13344,17 @@ p
 0
 @
 =
+c
 0
-,
+f>
+P@
 Hi
+TE
+E
+E
+E
+E
+E
 E
 E
 E
@@ -13351,8 +13362,7 @@ E
 E
 0
 
-<
-<
+l@
 a@
 0
 p
@@ -13377,6 +13387,12 @@ A
 A
 A
 A
+A
+A
+A
+A
+4A
+2
 Hc
 ?
 ?
@@ -13393,7 +13409,6 @@ Hc
 ?
 ?
 ?
-w=
 SHA1 block transform for x86_64, CRYPTOGAMS by <appro@openssl.org>
 i[
 i[
@@ -13573,36 +13588,49 @@ P
 "
 3
 D
+~7
+x7
 7
 7
 @
 (
-56
-'
-6
+_'
+g5
+:5
 &
 &
 &
+~4
+&
+64
 4
 4
+y%
+$%
 
 %
-L95Pz3
+v3
 d
 
 
 
 2
+2
 
 
 
+l1
+w-
+f-
+-
 
 
 
-60
+>
 
-:-
 
+w-
+.#
 d
 &
 &
@@ -13611,18 +13639,21 @@ d
 =
 =
 @
-,
-"
+C,
 uV%
 
 
+"
+"
++
++
+f+
 E
-f!
+'!
 >
 
 
 
-*
 @
 @
 @
@@ -13673,7 +13704,6 @@ d
 d
 d
 =
-Z(
 
 =
 =
@@ -13690,10 +13720,11 @@ Z(
 @
 @
 0
+|'
 E
+Hc50{'
 }
-h'
+Hc5Kg'
 $
 p
-'
 '
