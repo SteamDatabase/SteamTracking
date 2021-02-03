@@ -16,6 +16,9 @@
   .eventmoderationaudit_ModeratorAuditActionCtn_f6z__ > span {
     display: block; }
 
+.eventmoderationaudit_ExpandModActions_3nNMe {
+  cursor: pointer; }
+
 .eventmoderation_AnalysisCtn_1YGfW {
   padding: 10px;
   background: rgba(255, 255, 255, 0.2);
@@ -47,6 +50,7 @@
   color: darkred; }
 
 .eventmoderation_TileCapsule_36tP8 {
+  height: fit-content;
   position: relative;
   cursor: pointer;
   margin-left: 8px;
@@ -58,19 +62,37 @@
   .eventmoderation_TileCapsule_36tP8:hover {
     box-shadow: 0 0 12px black; }
 
-.eventmoderation_NoCapsule_1onVF {
+.eventmoderation_NoCapsuleFallback_16oQL {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  padding: 100px 20px;
   font-size: 28px;
   font-weight: 700;
   color: #eeaaaa;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  text-shadow: 0 0 20px black; }
+
+.eventmoderation_NoCapsule_1onVF {
+  box-sizing: border-box;
+  width: 400px;
+  height: 255px;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  color: #eeaaaa;
+  text-transform: uppercase;
+  text-shadow: 0 0 20px black; }
 
 .eventmoderation_TileDetails_2mRup {
   display: flex;
@@ -86,7 +108,11 @@
   width: 33%; }
   .eventmoderation_DetailsLeft_1O0y5 .eventmoderation_EventTitle_3ahHd {
     font-size: 21px;
-    display: inline-block; }
+    display: inline-block;
+    margin-bottom: 6px;
+    color: #000; }
+    .eventmoderation_DetailsLeft_1O0y5 .eventmoderation_EventTitle_3ahHd:hover {
+      color: #008; }
 
 .eventmoderation_DetailsRight_2BaxW {
   display: flex;
@@ -105,33 +131,42 @@
   flex-grow: 0;
   width: 33%;
   padding-left: 10px; }
-  .eventmoderation_DetailsMiddle_VcJpZ .eventmoderation_ModeratedFlagCtn_2JGGc {
-    margin-bottom: 30px; }
-    .eventmoderation_DetailsMiddle_VcJpZ .eventmoderation_ModeratedFlagCtn_2JGGc input[type=checkbox] + label {
-      background-color: tan;
-      padding: 4px;
-      color: black; }
-    .eventmoderation_DetailsMiddle_VcJpZ .eventmoderation_ModeratedFlagCtn_2JGGc input[type=checkbox]:checked + label {
-      background-color: green;
-      padding: 4px;
-      color: white; }
   .eventmoderation_DetailsMiddle_VcJpZ button {
     margin-bottom: 10px; }
+
+.eventmoderation_ModeratedFlagCtn_2JGGc {
+  margin-top: 15px; }
+  .eventmoderation_ModeratedFlagCtn_2JGGc input[type=checkbox] + label {
+    background-color: tan;
+    padding: 4px;
+    color: black; }
+  .eventmoderation_ModeratedFlagCtn_2JGGc input[type=checkbox]:checked + label {
+    background-color: green;
+    padding: 4px;
+    color: white; }
 
 .eventmoderation_TitleLink_1OG__ {
   font-size: 25px; }
 
 .eventmoderation_TileAppInfo_2IJ__ {
-  padding: 10px; }
+  padding: 0px; }
 
 .eventmoderation_TileAppInfoTitle_2X75q {
   font-weight: bolder; }
-  .eventmoderation_TileAppInfoTitle_2X75q > a {
+  .eventmoderation_TileAppInfoTitle_2X75q div {
+    width: fit-content; }
+  .eventmoderation_TileAppInfoTitle_2X75q a {
+    color: #000;
+    font-size: 14px;
     display: inline-block; }
+    .eventmoderation_TileAppInfoTitle_2X75q a:hover {
+      color: #008; }
 
 .eventmoderation_TileAppInfoImage_1rVmL {
   width: 150px;
   height: auto; }
+  .eventmoderation_TileAppInfoImage_1rVmL:hover {
+    box-shadow: 0 0 12px black; }
 
 .eventmoderation_TileSplit_aaFuC {
   display: flex;
@@ -152,7 +187,11 @@ h4 {
   margin-bottom: 5px; }
 
 .eventmoderation_Button_wu9Kr {
-  border: 1px gray outset; }
+  border: 1px gray outset;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center; }
 
 .eventmoderation_RightSideTitles_XDAwD {
   text-transform: uppercase; }
@@ -163,6 +202,32 @@ h4 {
 @media screen and (max-width: 910px) {
   .eventmoderation_StoreHeaderAdjust_3U7ja {
     margin-top: 58px; } }
+
+.eventmoderation_LastUpdateTime_2x7zH {
+  font-size: 16px;
+  margin-bottom: 4px; }
+
+.eventmoderation_EventTimingBlock_31d_R {
+  padding: 8px;
+  padding-bottom: 0px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: auto;
+  background-color: #888; }
+
+.eventmoderation_TileEventType_1z1xt {
+  font-size: 16px; }
+
+.eventmoderation_ChannelInfo_H__RK {
+  margin-top: auto; }
+
+.eventmoderation_HasAdultContent_2PcmC {
+  background-color: #400;
+  color: white;
+  font-size: 14px;
+  margin-top: 4px;
+  padding: 6px;
+  width: fit-content; }
 
 .eventbackfill_Error_1eWgI {
   color: darkred; }

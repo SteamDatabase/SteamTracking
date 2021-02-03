@@ -529,6 +529,10 @@
         EventEditor_Options_Show_WarningLink: "Steam’s general content rules",
         EventEditor_Options_Hide_Library_Overview:
           "Hide from the Library Home page?",
+        EventEditor_Options_Has_Adult_Only_Content:
+          "Contains Adult Only Content",
+        EventEditor_Options_Has_Adult_Only_Content_Desc:
+          "Set this if the post contains any explicit images or other content. This is only available to apps that are marked as adult only",
         EventEditor_Options_Hide_Library_Detail:
           "Hide from Library Game Detail page?",
         EventEditor_Options_Hide_Store: "Hide from Steam Store Product page?",

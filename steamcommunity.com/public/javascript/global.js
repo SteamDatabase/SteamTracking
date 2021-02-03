@@ -2703,17 +2703,21 @@ CGameSelectorOwnedGames = Class.create( CGameSelector, {
 				var rgRegex = [];
 				for ( var iTerm = 0; iTerm < rgTerms.length; iTerm++ )
 				{
-					var term = V_EscapeRegExp( rgTerms[iTerm] );
+					var term = V_EscapeRegExp( rgTerms[iTerm], 'i' );
 					rgRegex.push( new RegExp( term ) );
 				}
 				var rgMatchingGames = [];
 				for ( var i = 0; i < CGameSelectorOwnedGames.s_rgOwnedGames.length; i++ )
 				{
 					var game = CGameSelectorOwnedGames.s_rgOwnedGames[i];
+					if ( !game.name || !game.name_normalized )
+						continue;
+
 					var bMatch = true;
 					for ( var iRegex = 0; iRegex < rgRegex.length; iRegex++ )
 					{
-						if ( !rgRegex[iRegex].match( game.name_normalized ) )
+						var regex = rgRegex[iRegex];
+						if ( !game.name_normalized.match( regex ) && !game.name.match(regex) )
 						{
 							bMatch = false;
 							break;
@@ -2758,7 +2762,7 @@ CGameSelectorOwnedGames.AreOwnedGamesLoaded = function()
 };
 CGameSelectorOwnedGames.NormalizeGameNames = function( rgOwnedGames )
 {
-	var regexNormalize = new RegExp( /[^0-9a-zA-Z]/g );
+	var regexNormalize = new RegExp( /[\s.-:!?,']+/g );
 	for( var i=0; i < rgOwnedGames.length; i++ )
 	{
 		var game = rgOwnedGames[i];

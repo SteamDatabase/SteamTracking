@@ -5065,12 +5065,7 @@ function OnPurchaseSuccess( result )
 		$('receipt_track_img').innerHTML = result.strReceiptPageHTML;
 					
 		$('reward_points_balance').innerHTML = result.purchasereceipt.rewardPointsBalance;
-				if ( result.purchasereceipt.points_earned )
-		{
-			$('lny_tokens').style.display = 'block';
-			$('lny_tokens_points').innerHTML = result.purchasereceipt.points_earned;
-		}
-	
+			
 		DisplayReceiptPage();
 		
 		if ( result.purchaseresultdetail == 29 )

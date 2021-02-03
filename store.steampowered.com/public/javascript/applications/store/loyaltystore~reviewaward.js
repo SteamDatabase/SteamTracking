@@ -343,6 +343,11 @@
                     proto: n,
                     fields: {
                       defid: { n: 1, br: a.d.readUint32, bw: a.h.writeUint32 },
+                      expected_points_cost: {
+                        n: 2,
+                        br: a.d.readInt64String,
+                        bw: a.h.writeInt64String,
+                      },
                     },
                   }),
                 n.sm_m
@@ -2033,7 +2038,14 @@
             var t = r.call(this) || this;
             return (
               n.prototype.appids || a.a(n.M()),
-              u.initialize(t, e, 0, -1, [1, 3, 9, 10, 11, 12, 13, 14], null),
+              u.initialize(
+                t,
+                e,
+                0,
+                -1,
+                [1, 3, 9, 10, 11, 12, 13, 14, 15],
+                null
+              ),
               t
             );
           }
@@ -2119,6 +2131,13 @@
                         q: !0,
                         br: a.d.readString,
                         bw: a.h.writeRepeatedString,
+                      },
+                      contains_definitionids: {
+                        n: 15,
+                        r: !0,
+                        q: !0,
+                        br: a.d.readUint32,
+                        bw: a.h.writeRepeatedUint32,
                       },
                     },
                   }),

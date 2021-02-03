@@ -227,7 +227,7 @@ function ShowConfirmDialog( strTitle, strDescription, strOKButton, strCancelButt
  * @param strOKButton		Text on the OK button ("OK" by default)
  * @returns CModal
  */
-function ShowAlertDialog( strTitle, strDescription, strOKButton )
+function ShowAlertDialog( strTitle, strDescription, strOKButton, rgModalParams )
 {
 	if ( !strOKButton )
 		strOKButton = 'OK';
@@ -238,7 +238,7 @@ function ShowAlertDialog( strTitle, strDescription, strOKButton )
 	var $OKButton = _BuildDialogButton( strOKButton );
 	$OKButton.click( function() { fnOK( true ); } );
 
-	var Modal = _BuildDialog( strTitle, strDescription, [ $OKButton ], fnOK );
+	var Modal = _BuildDialog( strTitle, strDescription, [ $OKButton ], fnOK, rgModalParams );
 	deferred.always( function() { Modal.Dismiss(); } );
 	Modal.Show();
 

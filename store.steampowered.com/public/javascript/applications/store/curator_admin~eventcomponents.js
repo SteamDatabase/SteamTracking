@@ -953,7 +953,7 @@
                   switch (e.label) {
                     case 0:
                       return this.BIsLoggedIn()
-                        ? ((t = s.a.Init(S)).Body().set_rss_url(r),
+                        ? ((t = s.b.Init(S)).Body().set_rss_url(r),
                           t.Body().set_lang(this.GetFeedLanguageHandleUnset()),
                           [
                             4,
@@ -993,7 +993,7 @@
                       case 0:
                         return this.BIsLoggedIn()
                           ? this.m_strRSSGID
-                            ? ((t = s.a.Init(E))
+                            ? ((t = s.b.Init(E))
                                 .Body()
                                 .set_news_feed_gid(this.m_strRSSGID),
                               t.Body().set_amount(a),
@@ -1165,7 +1165,7 @@
                               i.post.received_compensation
                             ),
                             t.set_blurb(i.post.blurb),
-                            (n = s.a.Init(R)).Body().set_post(t),
+                            (n = s.b.Init(R)).Body().set_post(t),
                             n.Body().set_draft(o),
                             [
                               4,
@@ -2292,7 +2292,7 @@
               var t = this.props,
                 n = t.newsData,
                 r = t.clanSteamID,
-                a = new u.p();
+                a = new u.q();
               (a.GID = "PreviewPartnerEventRow_0"),
                 (a.clanSteamID = r),
                 (a.postTime = Date.now() / 1e3),

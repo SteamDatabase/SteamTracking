@@ -304,7 +304,7 @@
                   },
                   i
                 ),
-                g.createElement(_.J, null)
+                g.createElement(_.K, null)
               ),
             a &&
               g.createElement(
@@ -321,7 +321,7 @@
                   },
                   i
                 ),
-                g.createElement(_.db, null)
+                g.createElement(_.eb, null)
               ),
             o &&
               g.createElement(
@@ -12451,7 +12451,7 @@
             j.createElement(
               "div",
               { className: A.Left },
-              j.createElement(ne.D, { className: A.BalanceIcon }),
+              j.createElement(ne.E, { className: A.BalanceIcon }),
               j.createElement(
                 "div",
                 { className: A.BalanceDetails },
@@ -12560,7 +12560,7 @@
           return j.createElement(
             "span",
             Object(s.a)({}, i, { className: Object(te.a)(r, A.PointsAmount) }),
-            j.createElement(ne.D, { className: A.PointsAmountIcon }),
+            j.createElement(ne.E, { className: A.PointsAmountIcon }),
             t
           );
         };

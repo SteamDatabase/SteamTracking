@@ -3203,6 +3203,9 @@ p a:hover {
   .eventmoderationaudit_ModeratorAuditActionCtn_f6z__ > span {
     display: block; }
 
+.eventmoderationaudit_ExpandModActions_3nNMe {
+  cursor: pointer; }
+
 .tabbar_GraphicalAssetsTabs_3oSHT {
   display: flex;
   margin-bottom: 16px;
@@ -4005,6 +4008,15 @@ input.partnereventemails_HeadlineInput_2lHX9 {
 
 .partnereventwebrowembed_Container_2Jd3M {
   padding-top: 5px; }
+  .partnereventwebrowembed_Container_2Jd3M h2 {
+    font-family: "Motiva Sans", Arial, Sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 0 0 10px;
+    letter-spacing: 2px;
+    font-weight: normal;
+    padding-top: 2px; }
 
 @media screen and (max-width: 910px) {
   .partnereventwebrowembed_StoreHeaderAdjust_3YyCp {
@@ -4032,8 +4044,10 @@ input.partnereventemails_HeadlineInput_2lHX9 {
     border: 1px solid white; }
 
 .partnereventwebrowembed_EventsSummariesCtn_1snIw {
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   display: flex;
-  margin-bottom: 5px; }
+  margin-bottom: 5px;
+  margin-top: 5px; }
 
 .partnereventwebrowembed_LatestUpdateButtonCtn_2vEwZ {
   display: flex;
@@ -4050,11 +4064,12 @@ input.partnereventemails_HeadlineInput_2lHX9 {
     fill: white; }
 
 .partnereventwebrowembed_LatestUpdateButton_1TRFt {
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 2px;
   color: #ffffff;
-  font-size: 11px;
+  font-size: 12px;
   padding: 5px 15px;
   line-height: normal;
   width: fit-content;

@@ -1307,7 +1307,7 @@
                               return t.onMuteToggle(e);
                             },
                           },
-                          P.a.createElement(w.kb, { muted: V.shouldMute() })
+                          P.a.createElement(w.lb, { muted: V.shouldMute() })
                         ),
                       this.state.wishlisted &&
                         P.a.createElement(
