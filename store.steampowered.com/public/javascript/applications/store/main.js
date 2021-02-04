@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6350583";
+var CLSTAMP = "6351067";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [9],
   {
@@ -11689,14 +11689,14 @@ var CLSTAMP = "6350583";
                     case 5:
                       return (
                         (g = e.sent()),
-                        console.error(
-                          "Failed to load games for browser;" + g.message
-                        ),
                         this.m_cancelSignal.token.reason ||
+                          (console.error(
+                            "Failed to load games for browser;" + g.message
+                          ),
                           this.setState({
                             bInitialLoadComplete: !0,
                             bAwaitingMoreRowsLoading: !1,
-                          }),
+                          })),
                         [2]
                       );
                     case 6:

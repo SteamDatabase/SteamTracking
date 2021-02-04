@@ -7830,8 +7830,9 @@ div.curatorfeedbrowse_CuratorHoverToolTip_rSTyU {
   .eventcalendar_SideSteamLabsBannerCtn_1UOp4 .eventcalendar_SteamLabsIdentifiers_3SWqw {
     letter-spacing: 2px;
     text-transform: uppercase;
-    flex: none;
-    color: white; }
+    color: white;
+    padding-top: 4px;
+    padding-bottom: 4px; }
     .eventcalendar_SideSteamLabsBannerCtn_1UOp4 .eventcalendar_SteamLabsIdentifiers_3SWqw .eventcalendar_SteamLabsName_1wILk {
       font-size: 16px; }
       .eventcalendar_SideSteamLabsBannerCtn_1UOp4 .eventcalendar_SteamLabsIdentifiers_3SWqw .eventcalendar_SteamLabsName_1wILk:hover {
@@ -7842,6 +7843,8 @@ div.curatorfeedbrowse_CuratorHoverToolTip_rSTyU {
   .eventcalendar_SideSteamLabsBannerCtn_1UOp4 .eventcalendar_SteamLabsButton_3YoSz {
     border-left: 2px solid #3d424c;
     padding: 8px 20px;
+    padding-left: 12px;
+    margin-left: 8px;
     flex-shrink: 1;
     font-weight: 300; }
     .eventcalendar_SideSteamLabsBannerCtn_1UOp4 .eventcalendar_SteamLabsButton_3YoSz svg {
