@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6349956";
+var CLSTAMP = "6350583";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [9],
   {
@@ -9380,7 +9380,7 @@ var CLSTAMP = "6349956";
       var F = n("mrSG"),
         r = n("TyAF"),
         N = n("q1tI"),
-        p = n.n(N),
+        u = n.n(N),
         o = n("Ty5D"),
         i = n("uuth"),
         P = n("3+zv"),
@@ -9389,7 +9389,7 @@ var CLSTAMP = "6349956";
         s = n("boaH"),
         c = n("nWbB"),
         l = n("U+Q5"),
-        u = n("uIWk"),
+        p = n("uIWk"),
         d = n("vDqi"),
         w = n.n(d),
         W = n("lkRc"),
@@ -11793,7 +11793,7 @@ var CLSTAMP = "6349956";
                   return !!e;
                 })
                 .map(function (e) {
-                  return p.a.createElement(
+                  return u.a.createElement(
                     De.a,
                     {
                       key: e.flavor,
@@ -11841,8 +11841,12 @@ var CLSTAMP = "6349956";
                   return n.OnApplySearch(t);
                 }));
             }),
-            (e.prototype.SetFilteredCapsules = function (e) {
-              this.setState({ rgCapsules: e });
+            (e.prototype.GetSNRFeature = function () {
+              return this.state.strRawSearch
+                ? "saleitemsearch"
+                : this.state.currentFlavor
+                ? "salebrowse" + this.state.currentFlavor
+                : "saleitembrowse";
             }),
             (e.prototype.render = function () {
               var e = this.state,
@@ -11855,81 +11859,83 @@ var CLSTAMP = "6349956";
                 s = this.props.section.item_browse_section_data || {},
                 c = Boolean(i),
                 l = this.RenderTabHeaders();
-              if (!l || 0 == l.length) return null;
-              var u = p.a.createElement(
-                "div",
-                { className: We.a.SaleItemBrowserContainer },
-                p.a.createElement(
-                  He.a,
-                  { className: We.a.SaleItemBrowserHeaderContainer },
-                  p.a.createElement(
+              return l && 0 != l.length
+                ? u.a.createElement(
                     "div",
-                    { className: We.a.SaleItemBrowserHeader },
-                    l,
-                    s.enable_search &&
-                      p.a.createElement(
+                    { className: We.a.SaleItemBrowserContainer },
+                    u.a.createElement(
+                      He.a,
+                      { className: We.a.SaleItemBrowserHeaderContainer },
+                      u.a.createElement(
                         "div",
-                        { className: We.a.SuggestContainer },
-                        p.a.createElement(J.I, null),
-                        p.a.createElement(Ve.k, {
-                          type: "text",
-                          onChange: this.OnUpdateSearch,
-                          bAlwaysShowClearAction: c,
-                          value: i,
+                        { className: We.a.SaleItemBrowserHeader },
+                        l,
+                        s.enable_search &&
+                          u.a.createElement(
+                            "div",
+                            { className: We.a.SuggestContainer },
+                            u.a.createElement(J.I, null),
+                            u.a.createElement(Ve.k, {
+                              type: "text",
+                              onChange: this.OnUpdateSearch,
+                              bAlwaysShowClearAction: c,
+                              value: i,
+                            })
+                          )
+                      )
+                    ),
+                    t &&
+                      u.a.createElement(
+                        z.b,
+                        { feature: this.GetSNRFeature() },
+                        n.slice(0, r).map(function (e) {
+                          return u.a.createElement(
+                            "div",
+                            { key: e.id, className: qe.a.SaleItemBrowserRow },
+                            u.a.createElement(ve.i, {
+                              id: e.id,
+                              type: e.type || "game",
+                              bShowDemoButton: Boolean(s.show_as_demos),
+                              bLoadShortDescription: !1,
+                            })
+                          );
                         })
+                      ),
+                    t &&
+                      0 == n.length &&
+                      u.a.createElement(
+                        "div",
+                        { className: We.a.EmptyResults },
+                        Object(B.f)("#Sale_EmptySearchResultsOrLoadFailure")
+                      ),
+                    (!t || a) &&
+                      u.a.createElement(
+                        "div",
+                        {
+                          className: Object(j.a)(
+                            We.a.ShowContentsContainer,
+                            !t && We.a.Loading
+                          ),
+                        },
+                        !t || o
+                          ? u.a.createElement(R.a, { size: "medium" })
+                          : u.a.createElement(
+                              "button",
+                              {
+                                onClick: this.ShowMoreRows,
+                                className: We.a.ShowContentsButton,
+                              },
+                              Object(B.f)("#Sale_ShowMore")
+                            )
                       )
                   )
-                ),
-                t &&
-                  n.slice(0, r).map(function (e) {
-                    return p.a.createElement(
-                      "div",
-                      { key: e.id, className: qe.a.SaleItemBrowserRow },
-                      p.a.createElement(ve.i, {
-                        id: e.id,
-                        type: e.type || "game",
-                        bShowDemoButton: Boolean(s.show_as_demos),
-                        bLoadShortDescription: !1,
-                      })
-                    );
-                  }),
-                t &&
-                  0 == n.length &&
-                  p.a.createElement(
-                    "div",
-                    { className: We.a.EmptyResults },
-                    Object(B.f)("#Sale_EmptySearchResultsOrLoadFailure")
-                  ),
-                (!t || a) &&
-                  p.a.createElement(
-                    "div",
-                    {
-                      className: Object(j.a)(
-                        We.a.ShowContentsContainer,
-                        !t && We.a.Loading
-                      ),
-                    },
-                    !t || o
-                      ? p.a.createElement(R.a, { size: "medium" })
-                      : p.a.createElement(
-                          "button",
-                          {
-                            onClick: this.ShowMoreRows,
-                            className: We.a.ShowContentsButton,
-                          },
-                          Object(B.f)("#Sale_ShowMore")
-                        )
-                  )
-              );
-              jt(this.props.section, this.props.event).background;
-              return u;
+                : null;
             }),
             Object(F.c)([D.a], e.prototype, "ShowMoreRows", null),
             Object(F.c)([D.a], e.prototype, "OnUpdateSearch", null),
-            Object(F.c)([D.a], e.prototype, "SetFilteredCapsules", null),
             (e = Object(F.c)([r.a], e))
           );
-        })(p.a.Component),
+        })(u.a.Component),
         Ke = n("onkS"),
         Qe = n("oVVc"),
         Je = n("VQ2A"),
@@ -13311,24 +13317,20 @@ var CLSTAMP = "6349956";
                 ? "_" + r.GetActiveTabUniqueID()
                 : "");
           return N.createElement(
-            z.b,
-            { feature: "saleitembrowse" },
-            N.createElement(
-              C.a,
-              {
-                placeholderHeight: "100vh",
-                rootMargin: "0px 0px 100% 0px",
-                mode: "LoadAndUnload",
-                className: Object(j.a)(
-                  ue.a.SaleSection,
-                  O.a.SaleSectionCtn,
-                  "SaleSectionForCustomCSS"
-                ),
-                style: jt(t, n),
-              },
-              N.createElement(gt, Object(F.a)({}, e)),
-              N.createElement(Ye, Object(F.a)({ key: a }, e))
-            )
+            C.a,
+            {
+              placeholderHeight: "100vh",
+              rootMargin: "0px 0px 100% 0px",
+              mode: "LoadAndUnload",
+              className: Object(j.a)(
+                ue.a.SaleSection,
+                O.a.SaleSectionCtn,
+                "SaleSectionForCustomCSS"
+              ),
+              style: jt(t, n),
+            },
+            N.createElement(gt, Object(F.a)({}, e)),
+            N.createElement(Ye, Object(F.a)({ key: a }, e))
           );
         });
       function At() {
@@ -14189,14 +14191,30 @@ var CLSTAMP = "6349956";
           (e.prototype.GetSNRData = function () {
             var e,
               t = this.props,
-              n = t.activeTab;
-            if (t.section.enable_faceted_browsing) {
-              var r =
+              n = t.activeTab,
+              r = t.section;
+            if (r.enable_faceted_browsing) {
+              var a =
                 null === (e = this.state.facetCapsuleFilter) || void 0 === e
                   ? void 0
                   : e.GetSelectedOptions();
-              if (r) return { feature: "salefacetbrowse", depth: r };
+              if (a) return { feature: "salefacetbrowse", depth: a };
             }
+            if (r.smart_section && r.smart_section_type)
+              switch (r.smart_section_type) {
+                case "wishlist":
+                case "wishlist_onsale":
+                  return { feature: "salesmartwishlist" };
+                case "interactive_recommender":
+                case "interactive_recommender_onsale":
+                  return { feature: "salesmartir" };
+                case "dlc":
+                case "dlc_onsale":
+                case "dlc_music_onsale":
+                  return { feature: "salesmartdlc" };
+                case "tag_recommender":
+                  return { feature: "salesmarttagrec" };
+              }
             return {
               feature:
                 !n || n.BIsDefaultTab() ? "salesection" : "saletabsection",
@@ -14455,7 +14473,7 @@ var CLSTAMP = "6349956";
               : null;
           if (e.curator_clan_id) {
             var t = f.a.InitFromClanID(e.curator_clan_id),
-              n = u.a.GetCreatorHome(t);
+              n = p.a.GetCreatorHome(t);
             if (n) return Object(B.f)("#Sale_CuratorSection_Name", n.GetName());
           }
           return "#Sale_CuratorSection";
@@ -79005,7 +79023,7 @@ var CLSTAMP = "6349956";
     },
     zZkr: function (e) {
       e.exports = JSON.parse(
-        '{"store.steampowered.com":1,"steamtv":2200,"steamclient":5000,"library":5100,"friendsui":5200,"friendcontextmenu":5201,"topsellers":7000,"salecreatorhome":100700,"saleitembrowse":100701,"salefacetbrowse":100702,"salesection":100703,"saletabsection":100704,"salebroadcast":100705,"salecuratorrec":100706,"saleeventsched":100707,"salesubscription":100708}'
+        '{"store.steampowered.com":1,"steamtv":2200,"steamclient":5000,"library":5100,"friendsui":5200,"friendcontextmenu":5201,"topsellers":7000,"salecreatorhome":100700,"saleitembrowse":100701,"salefacetbrowse":100702,"salesection":100703,"saletabsection":100704,"salebroadcast":100705,"salecuratorrec":100706,"saleeventsched":100707,"salesubscription":100708,"saleitemsearch":100709,"salesmartwishlist":100710,"salesmartir":100711,"salesmartdlc":100712,"salesmarttagrec":100713,"salebrowsetopwishlisted":100714,"salebrowsetrendingwishlisted":100715,"salebrowsepopularcomingsoon":100716,"salebrowsemostplayeddemo":100717,"salebrowsedailyactiveuserdemo":100718,"salebrowseplayednowdemo":100719,"salebrowserecentlyreleased":100720,"salebrowsepopularpurchased":100721,"salebrowsepopularpurchaseddiscounted":100722,"salebrowsediscounted":100723,"salebrowseprice":100724}'
       );
     },
     zvcZ: function (e, t, n) {
