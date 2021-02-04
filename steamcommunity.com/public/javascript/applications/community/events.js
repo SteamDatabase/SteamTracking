@@ -770,7 +770,7 @@
               return Object(U.a)(this.m_section.video_link);
             }),
             (e.prototype.GetYouTubeVideoID = function () {
-              return Object(U.b)(this.m_section.video_link);
+              return Object(U.c)(this.m_section.video_link);
             }),
             (e.prototype.GetYouTubeImageURL = function () {
               if (this.BHasValidVideoURL())
@@ -10437,14 +10437,14 @@
         })(We.Component);
       function Ja(e, t, n) {
         var a = "",
-          i = U.c + "/" + t.clanAccountID + "/" + H.a.GetHashAndExt(t);
+          i = U.d + "/" + t.clanAccountID + "/" + H.a.GetHashAndExt(t);
         (a =
           n == Jt.k_eInsertFullImage
             ? "[img]" + i + "[/img]"
             : "[url=" +
               i +
               "][img]" +
-              (U.c + "/" + t.clanAccountID + "/" + H.a.GetThumbHashAndExt(t)) +
+              (U.d + "/" + t.clanAccountID + "/" + H.a.GetThumbHashAndExt(t)) +
               "[/img][/url]"),
           e.InsertText(a);
       }

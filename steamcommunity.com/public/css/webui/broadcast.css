@@ -27,7 +27,8 @@
     margin-top: 2px; }
   .broadcastwidgets_StoreSaleWidgetContainer_mini_1ROIM .StoreSaleWidgetTitle {
     font-size: 16px;
-    line-height: 18px; }
+    line-height: 20px;
+    margin-top: 4px; }
   @media screen and (max-width: 620px) {
     .broadcastwidgets_StoreSaleWidgetContainer_mini_1ROIM {
       max-width: unset;
@@ -281,14 +282,15 @@
 .broadcast_embeddable_stream_icon_and_viewer_container_-BWHa {
   display: grid;
   grid-template-columns: 136px 8px;
-  grid-template-rows: 69px 22px;
+  grid-template-rows: 68px 22px;
   grid-template-areas: "icon arrow" "viewbar viewbar";
   /* Give each stream a fixed height so that the auto-scrolling logic can scroll the container correctly down when changing streams */
   height: 90px;
   padding-bottom: 12px;
-  position: relative; }
+  position: relative;
+  box-sizing: border-box; }
   .broadcast_embeddable_stream_icon_and_viewer_container_-BWHa.broadcast_embeddable_display_capsule_art_wO_Iu {
-    height: 78px; }
+    height: 90px; }
   .broadcast_embeddable_stream_icon_and_viewer_container_-BWHa > div {
     grid-area: icon; }
   .broadcast_embeddable_stream_icon_and_viewer_container_-BWHa .broadcast_embeddable_viewer_count_3B4t7 {
@@ -318,6 +320,11 @@
 .broadcast_embeddable_stream_icon_m5W4c,
 .broadcast_embeddable_stream_icon_selected_32ZZr {
   max-width: 136px;
+  max-height: 64px;
+  overflow: hidden;
+  display: block;
+  height: auto;
+  width: 100%;
   border-width: 0px;
   border-style: solid;
   transition: transform 0.1s ease-out; }
@@ -334,9 +341,6 @@
     max-width: calc(100% - 8px);
     padding-left: 3px;
     box-sizing: border-box; }
-  .broadcast_embeddable_multistream_3WfHi .broadcast_embeddable_stream_icon_m5W4c,
-  .broadcast_embeddable_multistream_3WfHi .broadcast_embeddable_stream_icon_selected_32ZZr {
-    max-width: 147px; }
 
 .broadcast_embeddable_scrollingstreams_2VhFE {
   overflow: scroll;
@@ -529,6 +533,8 @@
     grid-template-columns: calc(100% - 316px) 316px;
     grid-template-rows: auto 30px;
     grid-template-areas: "livestream store-chat" "viewbar viewbar"; }
+  .broadcast_embeddable_bordered_container_2W1jH.broadcast_embeddable_Event_3dSbs .broadcast_embeddable_container_22S3K.broadcast_right_panel_simple {
+    grid-template-areas: "left-panel livestream right-panel" "left-panel viewbar right-panel"; }
   .broadcast_embeddable_bordered_container_2W1jH.broadcast_embeddable_Event_3dSbs .broadcast_embeddable_container_22S3K .broadcast_embeddable_side_panels_uTHiO {
     /*left panel*/
     grid-area: left-panel;
@@ -546,6 +552,8 @@
   .broadcast_embeddable_bordered_container_2W1jH.broadcast_embeddable_Event_3dSbs .broadcast_embeddable_container_22S3K .broadcast_embeddable_store_chat_ctn_3Lzy_ {
     grid-area: store-chat;
     max-width: 316px; }
+  .broadcast_embeddable_bordered_container_2W1jH.broadcast_embeddable_Event_3dSbs .broadcast_embeddable_container_22S3K .broadcast_embeddable_ChatContainer_32sDM .ChatEntry {
+    padding: 4px; }
   @media screen and (max-width: 768px) {
     .broadcast_embeddable_bordered_container_2W1jH.broadcast_embeddable_Event_3dSbs .broadcast_embeddable_container_22S3K {
       display: grid;

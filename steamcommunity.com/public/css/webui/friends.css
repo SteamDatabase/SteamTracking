@@ -8239,6 +8239,12 @@ span.partnersaledisplay_vr_required_3b4Dk {
       font-weight: bold;
       color: white; }
 
+.partnersaledisplay_FacetedBrowseLoadThrobber_GGha- {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
 /* stylelint-disable */
 
 .salesectioneventschedule_SaleSchedCtn_WualW {
@@ -11430,6 +11436,107 @@ div.curatorfeedbrowse_CuratorHoverToolTip_bx7tC {
 
 /* Tombstone: Don't use typekit font; often blocked by users via ublock */
 
+.salecuratorrecommendations_CuratorCtn_CSKvi {
+  position: relative;
+  background: #1f2225;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+  height: 324px;
+  margin: 8px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; }
+  .salecuratorrecommendations_CuratorCtn_CSKvi .salecuratorrecommendations_CuratorBackgroundCtn_2Z3pP {
+    position: relative;
+    width: 100%;
+    height: 100%; }
+    .salecuratorrecommendations_CuratorCtn_CSKvi .salecuratorrecommendations_CuratorBackgroundCtn_2Z3pP .salecuratorrecommendations_BackgroundGamesCtn_1VFwt {
+      perspective: 1000px;
+      perspective-origin: left top;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      -webkit-mask-image: linear-gradient(-90deg, rgba(0, 0, 0, 0.2) 5%, black 50%, rgba(0, 0, 0, 0.2) 100%);
+      mask-image: linear-gradient(-90deg, rgba(0, 0, 0, 0.2) 5%, black 50%, rgba(0, 0, 0, 0.1) 100%); }
+      .salecuratorrecommendations_CuratorCtn_CSKvi .salecuratorrecommendations_CuratorBackgroundCtn_2Z3pP .salecuratorrecommendations_BackgroundGamesCtn_1VFwt .salecuratorrecommendations_BackgroundGames_ulnf4 {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transform: scale(1.3) rotateY(21deg) translateX(71px);
+        opacity: 0.2;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap; }
+        .salecuratorrecommendations_CuratorCtn_CSKvi .salecuratorrecommendations_CuratorBackgroundCtn_2Z3pP .salecuratorrecommendations_BackgroundGamesCtn_1VFwt .salecuratorrecommendations_BackgroundGames_ulnf4 img {
+          width: 302px;
+          height: auto;
+          display: block;
+          filter: blur(1px) saturate(0); }
+    .salecuratorrecommendations_CuratorCtn_CSKvi .salecuratorrecommendations_CuratorBackgroundCtn_2Z3pP .salecuratorrecommendations_BackgroundTintCtn_38Hsp {
+      position: absolute;
+      width: 100%;
+      height: 100%; }
+      .salecuratorrecommendations_CuratorCtn_CSKvi .salecuratorrecommendations_CuratorBackgroundCtn_2Z3pP .salecuratorrecommendations_BackgroundTintCtn_38Hsp img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        filter: blur(60px) saturate(10);
+        opacity: 0.2; }
+  .salecuratorrecommendations_CuratorCtn_CSKvi .salecuratorrecommendations_CuratorContentCtn_28-AO {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; }
+  .salecuratorrecommendations_CuratorCtn_CSKvi .salecuratorrecommendations_CuratorFollowCtn_1E67b {
+    width: 200px;
+    margin: 8px; }
+  .salecuratorrecommendations_CuratorCtn_CSKvi .salecuratorrecommendations_CuratorMiddleCtn_3unkH {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    padding-left: 76px;
+    padding-top: 5%; }
+    .salecuratorrecommendations_CuratorCtn_CSKvi .salecuratorrecommendations_CuratorMiddleCtn_3unkH .salecuratorrecommendations_CuratorAvatar_1uzEw {
+      height: 120px;
+      width: 120px;
+      border-radius: 3px;
+      overflow: hidden;
+      background: rgba(0, 0, 0, 0.2);
+      box-sizing: border-box;
+      display: block;
+      grid-row-end: span 2;
+      box-shadow: 2px 2px 8px black; }
+    .salecuratorrecommendations_CuratorCtn_CSKvi .salecuratorrecommendations_CuratorMiddleCtn_3unkH .salecuratorrecommendations_ListDescCtn_2TSHi {
+      padding-left: 50px;
+      color: white; }
+      .salecuratorrecommendations_CuratorCtn_CSKvi .salecuratorrecommendations_CuratorMiddleCtn_3unkH .salecuratorrecommendations_ListDescCtn_2TSHi .salecuratorrecommendations_SmallText_3uQrG {
+        font-size: 14px;
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: 1px; }
+      .salecuratorrecommendations_CuratorCtn_CSKvi .salecuratorrecommendations_CuratorMiddleCtn_3unkH .salecuratorrecommendations_ListDescCtn_2TSHi .salecuratorrecommendations_ListTitle_NcnN3 {
+        font-size: 32px;
+        font-weight: 500;
+        text-shadow: 1px 1px 4px black; }
+      .salecuratorrecommendations_CuratorCtn_CSKvi .salecuratorrecommendations_CuratorMiddleCtn_3unkH .salecuratorrecommendations_ListDescCtn_2TSHi .salecuratorrecommendations_ListDesc_1UN9D {
+        font-size: 16px;
+        font-weight: 400;
+        text-shadow: 1px 1px 4px black; }
+      .salecuratorrecommendations_CuratorCtn_CSKvi .salecuratorrecommendations_CuratorMiddleCtn_3unkH .salecuratorrecommendations_ListDescCtn_2TSHi .salecuratorrecommendations_ListLink_o9XWl {
+        display: inline-block;
+        margin-top: 12px;
+        background: rgba(255, 255, 255, 0.4);
+        padding: 4px 30px;
+        border-radius: 3px; }
+        .salecuratorrecommendations_CuratorCtn_CSKvi .salecuratorrecommendations_CuratorMiddleCtn_3unkH .salecuratorrecommendations_ListDescCtn_2TSHi .salecuratorrecommendations_ListLink_o9XWl:hover {
+          background: white;
+          color: black; }
+
 .saleitembrowser_SaleItemBrowserContainer_3NX2A {
   display: flex;
   flex-direction: column; }
@@ -11625,107 +11732,6 @@ div.curatorfeedbrowse_CuratorHoverToolTip_bx7tC {
 
 .salesectionsubscription_DiscountPriceBlock_2dC3j {
   display: inline-block; }
-
-.salecuratorrecommendations_CuratorCtn_CSKvi {
-  position: relative;
-  background: #1f2225;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
-  height: 324px;
-  margin: 8px;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden; }
-  .salecuratorrecommendations_CuratorCtn_CSKvi .salecuratorrecommendations_CuratorBackgroundCtn_2Z3pP {
-    position: relative;
-    width: 100%;
-    height: 100%; }
-    .salecuratorrecommendations_CuratorCtn_CSKvi .salecuratorrecommendations_CuratorBackgroundCtn_2Z3pP .salecuratorrecommendations_BackgroundGamesCtn_1VFwt {
-      perspective: 1000px;
-      perspective-origin: left top;
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      -webkit-mask-image: linear-gradient(-90deg, rgba(0, 0, 0, 0.2) 5%, black 50%, rgba(0, 0, 0, 0.2) 100%);
-      mask-image: linear-gradient(-90deg, rgba(0, 0, 0, 0.2) 5%, black 50%, rgba(0, 0, 0, 0.1) 100%); }
-      .salecuratorrecommendations_CuratorCtn_CSKvi .salecuratorrecommendations_CuratorBackgroundCtn_2Z3pP .salecuratorrecommendations_BackgroundGamesCtn_1VFwt .salecuratorrecommendations_BackgroundGames_ulnf4 {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        transform: scale(1.3) rotateY(21deg) translateX(71px);
-        opacity: 0.2;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap; }
-        .salecuratorrecommendations_CuratorCtn_CSKvi .salecuratorrecommendations_CuratorBackgroundCtn_2Z3pP .salecuratorrecommendations_BackgroundGamesCtn_1VFwt .salecuratorrecommendations_BackgroundGames_ulnf4 img {
-          width: 302px;
-          height: auto;
-          display: block;
-          filter: blur(1px) saturate(0); }
-    .salecuratorrecommendations_CuratorCtn_CSKvi .salecuratorrecommendations_CuratorBackgroundCtn_2Z3pP .salecuratorrecommendations_BackgroundTintCtn_38Hsp {
-      position: absolute;
-      width: 100%;
-      height: 100%; }
-      .salecuratorrecommendations_CuratorCtn_CSKvi .salecuratorrecommendations_CuratorBackgroundCtn_2Z3pP .salecuratorrecommendations_BackgroundTintCtn_38Hsp img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        filter: blur(60px) saturate(10);
-        opacity: 0.2; }
-  .salecuratorrecommendations_CuratorCtn_CSKvi .salecuratorrecommendations_CuratorContentCtn_28-AO {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0; }
-  .salecuratorrecommendations_CuratorCtn_CSKvi .salecuratorrecommendations_CuratorFollowCtn_1E67b {
-    width: 200px;
-    margin: 8px; }
-  .salecuratorrecommendations_CuratorCtn_CSKvi .salecuratorrecommendations_CuratorMiddleCtn_3unkH {
-    display: flex;
-    flex-direction: row;
-    flex-grow: 1;
-    padding-left: 76px;
-    padding-top: 5%; }
-    .salecuratorrecommendations_CuratorCtn_CSKvi .salecuratorrecommendations_CuratorMiddleCtn_3unkH .salecuratorrecommendations_CuratorAvatar_1uzEw {
-      height: 120px;
-      width: 120px;
-      border-radius: 3px;
-      overflow: hidden;
-      background: rgba(0, 0, 0, 0.2);
-      box-sizing: border-box;
-      display: block;
-      grid-row-end: span 2;
-      box-shadow: 2px 2px 8px black; }
-    .salecuratorrecommendations_CuratorCtn_CSKvi .salecuratorrecommendations_CuratorMiddleCtn_3unkH .salecuratorrecommendations_ListDescCtn_2TSHi {
-      padding-left: 50px;
-      color: white; }
-      .salecuratorrecommendations_CuratorCtn_CSKvi .salecuratorrecommendations_CuratorMiddleCtn_3unkH .salecuratorrecommendations_ListDescCtn_2TSHi .salecuratorrecommendations_SmallText_3uQrG {
-        font-size: 14px;
-        font-weight: 300;
-        text-transform: uppercase;
-        letter-spacing: 1px; }
-      .salecuratorrecommendations_CuratorCtn_CSKvi .salecuratorrecommendations_CuratorMiddleCtn_3unkH .salecuratorrecommendations_ListDescCtn_2TSHi .salecuratorrecommendations_ListTitle_NcnN3 {
-        font-size: 32px;
-        font-weight: 500;
-        text-shadow: 1px 1px 4px black; }
-      .salecuratorrecommendations_CuratorCtn_CSKvi .salecuratorrecommendations_CuratorMiddleCtn_3unkH .salecuratorrecommendations_ListDescCtn_2TSHi .salecuratorrecommendations_ListDesc_1UN9D {
-        font-size: 16px;
-        font-weight: 400;
-        text-shadow: 1px 1px 4px black; }
-      .salecuratorrecommendations_CuratorCtn_CSKvi .salecuratorrecommendations_CuratorMiddleCtn_3unkH .salecuratorrecommendations_ListDescCtn_2TSHi .salecuratorrecommendations_ListLink_o9XWl {
-        display: inline-block;
-        margin-top: 12px;
-        background: rgba(255, 255, 255, 0.4);
-        padding: 4px 30px;
-        border-radius: 3px; }
-        .salecuratorrecommendations_CuratorCtn_CSKvi .salecuratorrecommendations_CuratorMiddleCtn_3unkH .salecuratorrecommendations_ListDescCtn_2TSHi .salecuratorrecommendations_ListLink_o9XWl:hover {
-          background: white;
-          color: black; }
 
 .BroadcastView {
   width: 100%;
@@ -13931,7 +13937,7 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
   from {
     transform: translate(0, 0) rotate(0deg); }
   to {
-    transform: translate(36px, 110vh) rotate(-394deg); } }
+    transform: translate(65px, 110vh) rotate(-199deg); } }
 
 .chatroomeffects_Snowflake-1_1V9Hw {
   animation-name: chatroomeffects_snowflake-1_3m9UI; }
@@ -13940,7 +13946,7 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
   from {
     transform: translate(0, 0) rotate(0deg); }
   to {
-    transform: translate(-82px, 110vh) rotate(185deg); } }
+    transform: translate(45px, 110vh) rotate(32deg); } }
 
 .chatroomeffects_Snowflake-2_Zf0dx {
   animation-name: chatroomeffects_snowflake-2_1R-Nx; }
@@ -13949,7 +13955,7 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
   from {
     transform: translate(0, 0) rotate(0deg); }
   to {
-    transform: translate(-7px, 110vh) rotate(-294deg); } }
+    transform: translate(-164px, 110vh) rotate(-64deg); } }
 
 .chatroomeffects_Snowflake-3_2pvie {
   animation-name: chatroomeffects_snowflake-3_1yqJU; }
@@ -13958,7 +13964,7 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
   from {
     transform: translate(0, 0) rotate(0deg); }
   to {
-    transform: translate(177px, 110vh) rotate(-439deg); } }
+    transform: translate(186px, 110vh) rotate(144deg); } }
 
 .chatroomeffects_Snowflake-4_3-k2Z {
   animation-name: chatroomeffects_snowflake-4_3I-Zz; }
@@ -13967,7 +13973,7 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
   from {
     transform: translate(0, 0) rotate(0deg); }
   to {
-    transform: translate(5px, 110vh) rotate(447deg); } }
+    transform: translate(-153px, 110vh) rotate(-74deg); } }
 
 .chatroomeffects_Snowflake-5_26vNm {
   animation-name: chatroomeffects_snowflake-5_2zXei; }
@@ -13976,7 +13982,7 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
   from {
     transform: translate(0, 0) rotate(0deg); }
   to {
-    transform: translate(122px, 110vh) rotate(115deg); } }
+    transform: translate(165px, 110vh) rotate(-45deg); } }
 
 .chatroomeffects_Snowflake-6_hXlKB {
   animation-name: chatroomeffects_snowflake-6_24IuH; }
@@ -13985,7 +13991,7 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
   from {
     transform: translate(0, 0) rotate(0deg); }
   to {
-    transform: translate(17px, 110vh) rotate(-130deg); } }
+    transform: translate(10px, 110vh) rotate(-180deg); } }
 
 .chatroomeffects_Snowflake-7_1qo33 {
   animation-name: chatroomeffects_snowflake-7_1lDP2; }
@@ -13994,7 +14000,7 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
   from {
     transform: translate(0, 0) rotate(0deg); }
   to {
-    transform: translate(-67px, 110vh) rotate(90deg); } }
+    transform: translate(-141px, 110vh) rotate(-81deg); } }
 
 .chatroomeffects_Snowflake-8_2tBVf {
   animation-name: chatroomeffects_snowflake-8_2bssC; }
@@ -14003,7 +14009,7 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
   from {
     transform: translate(0, 0) rotate(0deg); }
   to {
-    transform: translate(163px, 110vh) rotate(181deg); } }
+    transform: translate(-176px, 110vh) rotate(19deg); } }
 
 .chatroomeffects_Snowflake-9_2FSmF {
   animation-name: chatroomeffects_snowflake-9_3aKmJ; }
@@ -14012,7 +14018,7 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
   from {
     transform: translate(0, 0) rotate(0deg); }
   to {
-    transform: translate(-182px, 110vh) rotate(-23deg); } }
+    transform: translate(-55px, 110vh) rotate(432deg); } }
 
 .chatroomeffects_Snowflake-10_1-IwG {
   animation-name: chatroomeffects_snowflake-10_2uX53; }
@@ -14021,7 +14027,7 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
   from {
     transform: translate(0, 0) rotate(0deg); }
   to {
-    transform: translate(62px, 110vh) rotate(322deg); } }
+    transform: translate(36px, 110vh) rotate(293deg); } }
 
 .chatroomeffects_Snowflake-11_3QUh4 {
   animation-name: chatroomeffects_snowflake-11_XehvX; }
@@ -14030,7 +14036,7 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
   from {
     transform: translate(0, 0) rotate(0deg); }
   to {
-    transform: translate(92px, 110vh) rotate(-180deg); } }
+    transform: translate(-65px, 110vh) rotate(380deg); } }
 
 .chatroomeffects_Snowflake-12_88fjm {
   animation-name: chatroomeffects_snowflake-12_Bm1M7; }
@@ -14039,7 +14045,7 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
   from {
     transform: translate(0, 0) rotate(0deg); }
   to {
-    transform: translate(-20px, 110vh) rotate(-297deg); } }
+    transform: translate(-25px, 110vh) rotate(-52deg); } }
 
 .chatroomeffects_Snowflake-13_gNVZT {
   animation-name: chatroomeffects_snowflake-13_3D5LS; }
@@ -14048,7 +14054,7 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
   from {
     transform: translate(0, 0) rotate(0deg); }
   to {
-    transform: translate(108px, 110vh) rotate(-139deg); } }
+    transform: translate(78px, 110vh) rotate(192deg); } }
 
 .chatroomeffects_Snowflake-14_15TAT {
   animation-name: chatroomeffects_snowflake-14_35TG1; }
@@ -14057,7 +14063,7 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
   from {
     transform: translate(0, 0) rotate(0deg); }
   to {
-    transform: translate(-64px, 110vh) rotate(-231deg); } }
+    transform: translate(-1px, 110vh) rotate(331deg); } }
 
 .chatroomeffects_Snowflake-15_1WPlw {
   animation-name: chatroomeffects_snowflake-15_29ZkS; }
@@ -14066,7 +14072,7 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
   from {
     transform: translate(0, 0) rotate(0deg); }
   to {
-    transform: translate(82px, 110vh) rotate(414deg); } }
+    transform: translate(75px, 110vh) rotate(-226deg); } }
 
 .chatroomeffects_Snowflake-16_2yae0 {
   animation-name: chatroomeffects_snowflake-16_13TgF; }
@@ -14075,7 +14081,7 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
   from {
     transform: translate(0, 0) rotate(0deg); }
   to {
-    transform: translate(-32px, 110vh) rotate(-254deg); } }
+    transform: translate(-111px, 110vh) rotate(-316deg); } }
 
 .chatroomeffects_Snowflake-17_28v5b {
   animation-name: chatroomeffects_snowflake-17_peNL_; }
@@ -14084,7 +14090,7 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
   from {
     transform: translate(0, 0) rotate(0deg); }
   to {
-    transform: translate(3px, 110vh) rotate(-11deg); } }
+    transform: translate(19px, 110vh) rotate(-417deg); } }
 
 .chatroomeffects_Snowflake-18_3by0S {
   animation-name: chatroomeffects_snowflake-18_2NR9A; }
@@ -14093,7 +14099,7 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
   from {
     transform: translate(0, 0) rotate(0deg); }
   to {
-    transform: translate(148px, 110vh) rotate(-414deg); } }
+    transform: translate(-10px, 110vh) rotate(149deg); } }
 
 .chatroomeffects_Snowflake-19_I6DR9 {
   animation-name: chatroomeffects_snowflake-19_2-HH_; }
@@ -14102,7 +14108,7 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
   from {
     transform: translate(0, 0) rotate(0deg); }
   to {
-    transform: translate(118px, 110vh) rotate(-130deg); } }
+    transform: translate(46px, 110vh) rotate(266deg); } }
 
 .chatroomeffects_Snowflake-20_1YTf- {
   animation-name: chatroomeffects_snowflake-20_xzmzB; }
@@ -14111,23 +14117,23 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
   from {
     transform: translate(0, 0) rotate(0deg); }
   to {
-    transform: translate(-198px, 110vh) rotate(8deg); } }
+    transform: translate(4px, 110vh) rotate(411deg); } }
 
 /* Confetti effect */
 .chatroomeffects_confetti_xBcJ8 {
   position: absolute; }
 
 .chatroomeffects_confetti-0_2F-oM {
-  width: 4px;
-  height: 1.6px;
+  width: 15px;
+  height: 6px;
   background-color: #d13447;
   top: -10%;
-  left: 99%;
-  opacity: 0.79448;
-  transform: rotate(175.81921deg);
+  left: 14%;
+  opacity: 1.45158;
+  transform: rotate(156.65889deg);
   animation: chatroomeffects_drop-0_1W9pG;
-  animation-duration: 4.27145s;
-  animation-delay: 0.98728s;
+  animation-duration: 5.56009s;
+  animation-delay: 0.48534s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-0_1W9pG {
@@ -14138,19 +14144,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 100%; } }
+    left: 18%; } }
 
 .chatroomeffects_confetti-1_3Fmhc {
-  width: 6px;
-  height: 2.4px;
-  background-color: #ffbf00;
+  width: 13px;
+  height: 5.2px;
+  background-color: #263672;
   top: -10%;
-  left: 23%;
-  opacity: 1.23104;
-  transform: rotate(68.10153deg);
+  left: 95%;
+  opacity: 0.56749;
+  transform: rotate(351.23472deg);
   animation: chatroomeffects_drop-1_3XOOX;
-  animation-duration: 4.58764s;
-  animation-delay: 0.33887s;
+  animation-duration: 5.29667s;
+  animation-delay: 0.06511s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-1_3XOOX {
@@ -14161,19 +14167,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 24%; } }
+    left: 106%; } }
 
 .chatroomeffects_confetti-2_1_1xd {
-  width: 1px;
-  height: 0.4px;
-  background-color: #263672;
+  width: 14px;
+  height: 5.6px;
+  background-color: #ffbf00;
   top: -10%;
-  left: 98%;
-  opacity: 1.0958;
-  transform: rotate(86.30347deg);
+  left: 36%;
+  opacity: 1.27436;
+  transform: rotate(193.22196deg);
   animation: chatroomeffects_drop-2_1Dvco;
-  animation-duration: 5.5715s;
-  animation-delay: 0.42539s;
+  animation-duration: 4.99154s;
+  animation-delay: 0.3261s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-2_1Dvco {
@@ -14184,19 +14190,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 111%; } }
+    left: 49%; } }
 
 .chatroomeffects_confetti-3_10_aJ {
-  width: 11px;
-  height: 4.4px;
+  width: 9px;
+  height: 3.6px;
   background-color: #d13447;
   top: -10%;
-  left: 44%;
-  opacity: 1.0786;
-  transform: rotate(294.70723deg);
+  left: 92%;
+  opacity: 0.7125;
+  transform: rotate(10.93876deg);
   animation: chatroomeffects_drop-3_1rzLI;
-  animation-duration: 4.45978s;
-  animation-delay: 0.36722s;
+  animation-duration: 5.59855s;
+  animation-delay: 0.72425s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-3_1rzLI {
@@ -14207,19 +14213,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 52%; } }
+    left: 100%; } }
 
 .chatroomeffects_confetti-4_29B0B {
-  width: 11px;
-  height: 4.4px;
+  width: 4px;
+  height: 1.6px;
   background-color: #d13447;
   top: -10%;
-  left: 49%;
-  opacity: 0.99734;
-  transform: rotate(320.89541deg);
+  left: 64%;
+  opacity: 0.57585;
+  transform: rotate(219.19543deg);
   animation: chatroomeffects_drop-4_2Cr4h;
-  animation-duration: 5.60622s;
-  animation-delay: 0.08454s;
+  animation-duration: 5.46163s;
+  animation-delay: 0.70954s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-4_2Cr4h {
@@ -14230,19 +14236,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 56%; } }
+    left: 65%; } }
 
 .chatroomeffects_confetti-5_bEirD {
-  width: 2px;
-  height: 0.8px;
-  background-color: #ffbf00;
+  width: 18px;
+  height: 7.2px;
+  background-color: #d13447;
   top: -10%;
-  left: 33%;
-  opacity: 0.78323;
-  transform: rotate(255.31379deg);
+  left: 5%;
+  opacity: 0.66904;
+  transform: rotate(100.60822deg);
   animation: chatroomeffects_drop-5_1N6Aj;
-  animation-duration: 4.51982s;
-  animation-delay: 0.28005s;
+  animation-duration: 5.07459s;
+  animation-delay: 0.99369s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-5_1N6Aj {
@@ -14253,19 +14259,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 47%; } }
+    left: 17%; } }
 
 .chatroomeffects_confetti-6_XSnHt {
-  width: 15px;
-  height: 6px;
-  background-color: #ffbf00;
+  width: 7px;
+  height: 2.8px;
+  background-color: #263672;
   top: -10%;
-  left: 20%;
-  opacity: 1.28056;
-  transform: rotate(358.30874deg);
+  left: 53%;
+  opacity: 0.96038;
+  transform: rotate(139.68731deg);
   animation: chatroomeffects_drop-6_Kq9Zc;
-  animation-duration: 4.83536s;
-  animation-delay: 0.93145s;
+  animation-duration: 4.53879s;
+  animation-delay: 0.85238s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-6_Kq9Zc {
@@ -14276,19 +14282,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 35%; } }
+    left: 62%; } }
 
 .chatroomeffects_confetti-7_1DuD_ {
-  width: 7px;
-  height: 2.8px;
-  background-color: #ffbf00;
+  width: 20px;
+  height: 8px;
+  background-color: #263672;
   top: -10%;
-  left: 62%;
-  opacity: 1.22025;
-  transform: rotate(104.94813deg);
+  left: 40%;
+  opacity: 0.55481;
+  transform: rotate(232.28821deg);
   animation: chatroomeffects_drop-7_1LxHl;
-  animation-duration: 5.22672s;
-  animation-delay: 0.00716s;
+  animation-duration: 4.25473s;
+  animation-delay: 0.41174s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-7_1LxHl {
@@ -14299,19 +14305,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 71%; } }
+    left: 50%; } }
 
 .chatroomeffects_confetti-8_3Cr1a {
-  width: 6px;
-  height: 2.4px;
-  background-color: #263672;
+  width: 15px;
+  height: 6px;
+  background-color: #ffbf00;
   top: -10%;
-  left: 51%;
-  opacity: 1.05955;
-  transform: rotate(348.77949deg);
+  left: 37%;
+  opacity: 0.69934;
+  transform: rotate(195.36474deg);
   animation: chatroomeffects_drop-8_2ngUs;
-  animation-duration: 5.59621s;
-  animation-delay: 0.95036s;
+  animation-duration: 5.93157s;
+  animation-delay: 0.98185s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-8_2ngUs {
@@ -14322,19 +14328,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 64%; } }
+    left: 42%; } }
 
 .chatroomeffects_confetti-9_FgZVZ {
-  width: 17px;
-  height: 6.8px;
-  background-color: #ffbf00;
+  width: 6px;
+  height: 2.4px;
+  background-color: #d13447;
   top: -10%;
-  left: 34%;
-  opacity: 1.21138;
-  transform: rotate(348.04401deg);
+  left: 76%;
+  opacity: 1.12675;
+  transform: rotate(134.41349deg);
   animation: chatroomeffects_drop-9_1TgvT;
-  animation-duration: 5.23492s;
-  animation-delay: 0.87518s;
+  animation-duration: 5.22679s;
+  animation-delay: 0.8982s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-9_1TgvT {
@@ -14345,19 +14351,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 49%; } }
+    left: 87%; } }
 
 .chatroomeffects_confetti-10_3yAHZ {
-  width: 6px;
-  height: 2.4px;
-  background-color: #ffbf00;
+  width: 14px;
+  height: 5.6px;
+  background-color: #263672;
   top: -10%;
-  left: 35%;
-  opacity: 0.7495;
-  transform: rotate(221.37402deg);
+  left: 23%;
+  opacity: 1.33537;
+  transform: rotate(226.4666deg);
   animation: chatroomeffects_drop-10_nzMAv;
-  animation-duration: 4.22786s;
-  animation-delay: 0.37749s;
+  animation-duration: 5.79954s;
+  animation-delay: 0.06251s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-10_nzMAv {
@@ -14368,19 +14374,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 50%; } }
+    left: 37%; } }
 
 .chatroomeffects_confetti-11_29QZR {
-  width: 15px;
-  height: 6px;
+  width: 8px;
+  height: 3.2px;
   background-color: #d13447;
   top: -10%;
-  left: 85%;
-  opacity: 0.82011;
-  transform: rotate(289.88959deg);
+  left: 60%;
+  opacity: 0.88065;
+  transform: rotate(227.33318deg);
   animation: chatroomeffects_drop-11_20tsQ;
-  animation-duration: 5.37264s;
-  animation-delay: 0.49924s;
+  animation-duration: 4.00944s;
+  animation-delay: 0.03609s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-11_20tsQ {
@@ -14391,19 +14397,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 87%; } }
+    left: 67%; } }
 
 .chatroomeffects_confetti-12_1CisS {
-  width: 11px;
-  height: 4.4px;
-  background-color: #263672;
+  width: 9px;
+  height: 3.6px;
+  background-color: #ffbf00;
   top: -10%;
-  left: 14%;
-  opacity: 0.69013;
-  transform: rotate(67.76716deg);
+  left: 2%;
+  opacity: 0.57174;
+  transform: rotate(153.49467deg);
   animation: chatroomeffects_drop-12_1e8Hg;
-  animation-duration: 5.25091s;
-  animation-delay: 0.43774s;
+  animation-duration: 4.26243s;
+  animation-delay: 0.68883s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-12_1e8Hg {
@@ -14414,19 +14420,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 24%; } }
+    left: 3%; } }
 
 .chatroomeffects_confetti-13_3mYsu {
-  width: 12px;
-  height: 4.8px;
-  background-color: #ffbf00;
+  width: 6px;
+  height: 2.4px;
+  background-color: #d13447;
   top: -10%;
-  left: 17%;
-  opacity: 1.2573;
-  transform: rotate(266.05972deg);
+  left: 4%;
+  opacity: 1.28311;
+  transform: rotate(234.10148deg);
   animation: chatroomeffects_drop-13_2NyAt;
-  animation-duration: 4.53759s;
-  animation-delay: 0.97687s;
+  animation-duration: 5.79682s;
+  animation-delay: 0.14246s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-13_2NyAt {
@@ -14437,19 +14443,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 24%; } }
+    left: 10%; } }
 
 .chatroomeffects_confetti-14_1Irfx {
-  width: 17px;
-  height: 6.8px;
-  background-color: #ffbf00;
+  width: 18px;
+  height: 7.2px;
+  background-color: #263672;
   top: -10%;
   left: 19%;
-  opacity: 1.41218;
-  transform: rotate(158.07285deg);
+  opacity: 1.48899;
+  transform: rotate(285.63502deg);
   animation: chatroomeffects_drop-14_1WaXA;
-  animation-duration: 5.68275s;
-  animation-delay: 0.906s;
+  animation-duration: 5.63754s;
+  animation-delay: 0.38589s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-14_1WaXA {
@@ -14460,19 +14466,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 25%; } }
+    left: 20%; } }
 
 .chatroomeffects_confetti-15_3A1TP {
-  width: 15px;
-  height: 6px;
+  width: 12px;
+  height: 4.8px;
   background-color: #ffbf00;
   top: -10%;
-  left: 36%;
-  opacity: 0.52678;
-  transform: rotate(113.30016deg);
+  left: 49%;
+  opacity: 0.83563;
+  transform: rotate(345.11771deg);
   animation: chatroomeffects_drop-15_MvVcE;
-  animation-duration: 5.95299s;
-  animation-delay: 0.89289s;
+  animation-duration: 4.33679s;
+  animation-delay: 0.81099s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-15_MvVcE {
@@ -14483,19 +14489,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 45%; } }
+    left: 64%; } }
 
 .chatroomeffects_confetti-16_2knki {
-  width: 4px;
-  height: 1.6px;
-  background-color: #ffbf00;
+  width: 3px;
+  height: 1.2px;
+  background-color: #d13447;
   top: -10%;
-  left: 31%;
-  opacity: 0.77994;
-  transform: rotate(147.59604deg);
+  left: 38%;
+  opacity: 1.46143;
+  transform: rotate(0.19148deg);
   animation: chatroomeffects_drop-16_3SXnD;
-  animation-duration: 5.78837s;
-  animation-delay: 0.95546s;
+  animation-duration: 5.31298s;
+  animation-delay: 0.01303s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-16_3SXnD {
@@ -14506,19 +14512,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 46%; } }
+    left: 53%; } }
 
 .chatroomeffects_confetti-17_2jbjN {
   width: 4px;
   height: 1.6px;
-  background-color: #ffbf00;
+  background-color: #d13447;
   top: -10%;
-  left: 87%;
-  opacity: 1.21094;
-  transform: rotate(246.60744deg);
+  left: 64%;
+  opacity: 1.20578;
+  transform: rotate(200.76709deg);
   animation: chatroomeffects_drop-17_2Pd0j;
-  animation-duration: 4.89129s;
-  animation-delay: 0.64799s;
+  animation-duration: 4.63442s;
+  animation-delay: 0.51246s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-17_2Pd0j {
@@ -14529,19 +14535,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 88%; } }
+    left: 72%; } }
 
 .chatroomeffects_confetti-18_1CYGW {
-  width: 11px;
-  height: 4.4px;
-  background-color: #ffbf00;
+  width: 4px;
+  height: 1.6px;
+  background-color: #263672;
   top: -10%;
-  left: 79%;
-  opacity: 0.97304;
-  transform: rotate(280.67134deg);
+  left: 61%;
+  opacity: 1.07672;
+  transform: rotate(208.92566deg);
   animation: chatroomeffects_drop-18_3wODP;
-  animation-duration: 5.75231s;
-  animation-delay: 0.84341s;
+  animation-duration: 4.53974s;
+  animation-delay: 0.52339s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-18_3wODP {
@@ -14552,19 +14558,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 81%; } }
+    left: 76%; } }
 
 .chatroomeffects_confetti-19_2q68o {
-  width: 20px;
-  height: 8px;
-  background-color: #ffbf00;
+  width: 2px;
+  height: 0.8px;
+  background-color: #263672;
   top: -10%;
-  left: 53%;
-  opacity: 1.27152;
-  transform: rotate(144.85135deg);
+  left: 71%;
+  opacity: 0.87157;
+  transform: rotate(270.98237deg);
   animation: chatroomeffects_drop-19_2Gwlj;
-  animation-duration: 4.57354s;
-  animation-delay: 0.30427s;
+  animation-duration: 5.96744s;
+  animation-delay: 0.39616s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-19_2Gwlj {
@@ -14575,19 +14581,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 54%; } }
+    left: 84%; } }
 
 .chatroomeffects_confetti-20_26ULU {
-  width: 5px;
-  height: 2px;
+  width: 8px;
+  height: 3.2px;
   background-color: #d13447;
   top: -10%;
-  left: 55%;
-  opacity: 0.60567;
-  transform: rotate(68.70395deg);
+  left: 9%;
+  opacity: 0.52425;
+  transform: rotate(154.97898deg);
   animation: chatroomeffects_drop-20_1-T_W;
-  animation-duration: 5.85519s;
-  animation-delay: 0.36736s;
+  animation-duration: 4.53075s;
+  animation-delay: 0.50984s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-20_1-T_W {
@@ -14598,19 +14604,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 58%; } }
+    left: 18%; } }
 
 .chatroomeffects_confetti-21_3A3te {
-  width: 9px;
-  height: 3.6px;
-  background-color: #ffbf00;
+  width: 15px;
+  height: 6px;
+  background-color: #263672;
   top: -10%;
-  left: 54%;
-  opacity: 0.955;
-  transform: rotate(310.05008deg);
+  left: 22%;
+  opacity: 1.41209;
+  transform: rotate(173.51903deg);
   animation: chatroomeffects_drop-21_G8MLf;
-  animation-duration: 5.96188s;
-  animation-delay: 0.99064s;
+  animation-duration: 4.71345s;
+  animation-delay: 0.53215s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-21_G8MLf {
@@ -14621,19 +14627,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 59%; } }
+    left: 31%; } }
 
 .chatroomeffects_confetti-22_3pQ9h {
-  width: 16px;
-  height: 6.4px;
+  width: 18px;
+  height: 7.2px;
   background-color: #d13447;
   top: -10%;
-  left: 84%;
-  opacity: 1.19467;
-  transform: rotate(125.58231deg);
+  left: 45%;
+  opacity: 0.56361;
+  transform: rotate(351.1543deg);
   animation: chatroomeffects_drop-22_2Ehak;
-  animation-duration: 5.28012s;
-  animation-delay: 0.43869s;
+  animation-duration: 5.46252s;
+  animation-delay: 0.35247s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-22_2Ehak {
@@ -14644,19 +14650,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 87%; } }
+    left: 56%; } }
 
 .chatroomeffects_confetti-23_3_ehR {
-  width: 16px;
-  height: 6.4px;
-  background-color: #ffbf00;
+  width: 6px;
+  height: 2.4px;
+  background-color: #d13447;
   top: -10%;
-  left: 58%;
-  opacity: 0.72542;
-  transform: rotate(215.37402deg);
+  left: 10%;
+  opacity: 1.38428;
+  transform: rotate(218.98463deg);
   animation: chatroomeffects_drop-23_2Sysf;
-  animation-duration: 4.29805s;
-  animation-delay: 0.34515s;
+  animation-duration: 4.66522s;
+  animation-delay: 0.02103s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-23_2Sysf {
@@ -14667,19 +14673,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 59%; } }
+    left: 15%; } }
 
 .chatroomeffects_confetti-24_1xw0l {
-  width: 17px;
-  height: 6.8px;
-  background-color: #ffbf00;
+  width: 14px;
+  height: 5.6px;
+  background-color: #263672;
   top: -10%;
-  left: 28%;
-  opacity: 0.66256;
-  transform: rotate(118.89524deg);
+  left: 5%;
+  opacity: 1.27852;
+  transform: rotate(69.53549deg);
   animation: chatroomeffects_drop-24_3m8Uu;
-  animation-duration: 4.3531s;
-  animation-delay: 0.78097s;
+  animation-duration: 4.15494s;
+  animation-delay: 0.10705s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-24_3m8Uu {
@@ -14690,19 +14696,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 37%; } }
+    left: 20%; } }
 
 .chatroomeffects_confetti-25_2Hjhb {
-  width: 18px;
-  height: 7.2px;
-  background-color: #ffbf00;
+  width: 6px;
+  height: 2.4px;
+  background-color: #d13447;
   top: -10%;
-  left: 27%;
-  opacity: 1.37441;
-  transform: rotate(156.29174deg);
+  left: 40%;
+  opacity: 1.14922;
+  transform: rotate(239.30794deg);
   animation: chatroomeffects_drop-25_39w79;
-  animation-duration: 5.09021s;
-  animation-delay: 0.80162s;
+  animation-duration: 4.97081s;
+  animation-delay: 0.17149s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-25_39w79 {
@@ -14713,19 +14719,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 31%; } }
+    left: 51%; } }
 
 .chatroomeffects_confetti-26_3CQ5O {
-  width: 2px;
-  height: 0.8px;
+  width: 3px;
+  height: 1.2px;
   background-color: #263672;
   top: -10%;
-  left: 8%;
-  opacity: 1.26464;
-  transform: rotate(217.22036deg);
+  left: 88%;
+  opacity: 1.33561;
+  transform: rotate(94.71854deg);
   animation: chatroomeffects_drop-26_7u4KH;
-  animation-duration: 4.4419s;
-  animation-delay: 0.74599s;
+  animation-duration: 4.50134s;
+  animation-delay: 0.24702s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-26_7u4KH {
@@ -14736,19 +14742,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 21%; } }
+    left: 92%; } }
 
 .chatroomeffects_confetti-27_1qGrW {
-  width: 8px;
-  height: 3.2px;
-  background-color: #263672;
+  width: 10px;
+  height: 4px;
+  background-color: #d13447;
   top: -10%;
-  left: 41%;
-  opacity: 1.43088;
-  transform: rotate(291.52766deg);
+  left: 98%;
+  opacity: 0.94573;
+  transform: rotate(322.42206deg);
   animation: chatroomeffects_drop-27_ARiKf;
-  animation-duration: 5.53956s;
-  animation-delay: 0.37042s;
+  animation-duration: 5.26886s;
+  animation-delay: 0.82399s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-27_ARiKf {
@@ -14759,19 +14765,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 55%; } }
+    left: 104%; } }
 
 .chatroomeffects_confetti-28_VvrP_ {
-  width: 20px;
-  height: 8px;
-  background-color: #263672;
+  width: 13px;
+  height: 5.2px;
+  background-color: #ffbf00;
   top: -10%;
-  left: 28%;
-  opacity: 0.93039;
-  transform: rotate(299.49806deg);
+  left: 31%;
+  opacity: 0.85779;
+  transform: rotate(239.10379deg);
   animation: chatroomeffects_drop-28_2r-kr;
-  animation-duration: 4.75019s;
-  animation-delay: 0.28471s;
+  animation-duration: 5.62763s;
+  animation-delay: 0.2495s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-28_2r-kr {
@@ -14782,19 +14788,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 43%; } }
+    left: 37%; } }
 
 .chatroomeffects_confetti-29_27yoO {
-  width: 11px;
-  height: 4.4px;
+  width: 8px;
+  height: 3.2px;
   background-color: #ffbf00;
   top: -10%;
-  left: 38%;
-  opacity: 0.70723;
-  transform: rotate(305.90306deg);
+  left: 74%;
+  opacity: 0.64473;
+  transform: rotate(357.38248deg);
   animation: chatroomeffects_drop-29_36ts_;
-  animation-duration: 5.72636s;
-  animation-delay: 0.07572s;
+  animation-duration: 5.19577s;
+  animation-delay: 0.98629s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-29_36ts_ {
@@ -14805,19 +14811,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 46%; } }
+    left: 76%; } }
 
 .chatroomeffects_confetti-30_35KJJ {
-  width: 15px;
-  height: 6px;
+  width: 13px;
+  height: 5.2px;
   background-color: #ffbf00;
   top: -10%;
-  left: 91%;
-  opacity: 0.82902;
-  transform: rotate(71.9036deg);
+  left: 89%;
+  opacity: 1.18657;
+  transform: rotate(159.81326deg);
   animation: chatroomeffects_drop-30_FSEAN;
-  animation-duration: 5.99925s;
-  animation-delay: 0.46752s;
+  animation-duration: 4.30577s;
+  animation-delay: 0.2695s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-30_FSEAN {
@@ -14828,19 +14834,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 100%; } }
+    left: 96%; } }
 
 .chatroomeffects_confetti-31_xfOuc {
-  width: 8px;
-  height: 3.2px;
+  width: 17px;
+  height: 6.8px;
   background-color: #d13447;
   top: -10%;
-  left: 37%;
-  opacity: 0.97512;
-  transform: rotate(168.39064deg);
+  left: 31%;
+  opacity: 1.31045;
+  transform: rotate(51.52167deg);
   animation: chatroomeffects_drop-31_117A8;
-  animation-duration: 4.26082s;
-  animation-delay: 0.59953s;
+  animation-duration: 4.28584s;
+  animation-delay: 0.50856s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-31_117A8 {
@@ -14854,16 +14860,16 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     left: 38%; } }
 
 .chatroomeffects_confetti-32_3oB1Q {
-  width: 6px;
-  height: 2.4px;
-  background-color: #ffbf00;
+  width: 15px;
+  height: 6px;
+  background-color: #d13447;
   top: -10%;
-  left: 89%;
-  opacity: 1.36288;
-  transform: rotate(167.27556deg);
+  left: 39%;
+  opacity: 0.59916;
+  transform: rotate(239.35331deg);
   animation: chatroomeffects_drop-32_3d-5w;
-  animation-duration: 5.28293s;
-  animation-delay: 0.50385s;
+  animation-duration: 4.90751s;
+  animation-delay: 0.49703s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-32_3d-5w {
@@ -14874,19 +14880,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 94%; } }
+    left: 43%; } }
 
 .chatroomeffects_confetti-33_2GQ8X {
-  width: 9px;
-  height: 3.6px;
+  width: 18px;
+  height: 7.2px;
   background-color: #d13447;
   top: -10%;
-  left: 99%;
-  opacity: 0.81808;
-  transform: rotate(102.02527deg);
+  left: 67%;
+  opacity: 0.89972;
+  transform: rotate(284.61352deg);
   animation: chatroomeffects_drop-33_2McHh;
-  animation-duration: 5.71314s;
-  animation-delay: 0.54532s;
+  animation-duration: 5.1713s;
+  animation-delay: 0.44528s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-33_2McHh {
@@ -14897,19 +14903,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 106%; } }
+    left: 79%; } }
 
 .chatroomeffects_confetti-34_2cxZi {
-  width: 15px;
-  height: 6px;
-  background-color: #d13447;
+  width: 7px;
+  height: 2.8px;
+  background-color: #263672;
   top: -10%;
-  left: 39%;
-  opacity: 0.56781;
-  transform: rotate(272.46478deg);
+  left: 20%;
+  opacity: 0.68509;
+  transform: rotate(359.89381deg);
   animation: chatroomeffects_drop-34_v5OOo;
-  animation-duration: 5.08098s;
-  animation-delay: 0.76986s;
+  animation-duration: 5.78837s;
+  animation-delay: 0.59457s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-34_v5OOo {
@@ -14920,19 +14926,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 52%; } }
+    left: 22%; } }
 
 .chatroomeffects_confetti-35_18Xj3 {
-  width: 7px;
-  height: 2.8px;
-  background-color: #d13447;
+  width: 9px;
+  height: 3.6px;
+  background-color: #263672;
   top: -10%;
-  left: 47%;
-  opacity: 1.47367;
-  transform: rotate(121.93566deg);
+  left: 33%;
+  opacity: 1.16915;
+  transform: rotate(278.3431deg);
   animation: chatroomeffects_drop-35_2HJ6r;
-  animation-duration: 4.7395s;
-  animation-delay: 0.33581s;
+  animation-duration: 5.57703s;
+  animation-delay: 0.57396s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-35_2HJ6r {
@@ -14943,19 +14949,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 62%; } }
+    left: 40%; } }
 
 .chatroomeffects_confetti-36_160B4 {
-  width: 5px;
-  height: 2px;
-  background-color: #d13447;
+  width: 4px;
+  height: 1.6px;
+  background-color: #263672;
   top: -10%;
-  left: 36%;
-  opacity: 0.62089;
-  transform: rotate(52.70394deg);
+  left: 61%;
+  opacity: 1.30216;
+  transform: rotate(164.15082deg);
   animation: chatroomeffects_drop-36_1pmmZ;
-  animation-duration: 5.0885s;
-  animation-delay: 0.23171s;
+  animation-duration: 4.01226s;
+  animation-delay: 0.01766s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-36_1pmmZ {
@@ -14966,19 +14972,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 41%; } }
+    left: 73%; } }
 
 .chatroomeffects_confetti-37_lV1lT {
-  width: 1px;
-  height: 0.4px;
-  background-color: #263672;
+  width: 11px;
+  height: 4.4px;
+  background-color: #d13447;
   top: -10%;
-  left: 10%;
-  opacity: 0.6388;
-  transform: rotate(0.44529deg);
+  left: 32%;
+  opacity: 1.08966;
+  transform: rotate(132.39105deg);
   animation: chatroomeffects_drop-37_9BWaH;
-  animation-duration: 5.07997s;
-  animation-delay: 0.74482s;
+  animation-duration: 5.43606s;
+  animation-delay: 0.92754s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-37_9BWaH {
@@ -14989,19 +14995,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 14%; } }
+    left: 36%; } }
 
 .chatroomeffects_confetti-38_10VGf {
-  width: 11px;
-  height: 4.4px;
-  background-color: #ffbf00;
+  width: 16px;
+  height: 6.4px;
+  background-color: #263672;
   top: -10%;
-  left: 66%;
-  opacity: 1.11784;
-  transform: rotate(112.18905deg);
+  left: 17%;
+  opacity: 1.43067;
+  transform: rotate(144.64927deg);
   animation: chatroomeffects_drop-38_24S4k;
-  animation-duration: 4.98229s;
-  animation-delay: 0.92585s;
+  animation-duration: 4.28181s;
+  animation-delay: 0.22016s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-38_24S4k {
@@ -15012,19 +15018,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 76%; } }
+    left: 20%; } }
 
 .chatroomeffects_confetti-39_TLnN1 {
-  width: 8px;
-  height: 3.2px;
-  background-color: #ffbf00;
+  width: 12px;
+  height: 4.8px;
+  background-color: #d13447;
   top: -10%;
-  left: 13%;
-  opacity: 0.96302;
-  transform: rotate(354.85876deg);
+  left: 59%;
+  opacity: 1.001;
+  transform: rotate(46.64265deg);
   animation: chatroomeffects_drop-39_256KJ;
-  animation-duration: 5.32396s;
-  animation-delay: 0.14995s;
+  animation-duration: 4.97285s;
+  animation-delay: 0.84931s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-39_256KJ {
@@ -15035,19 +15041,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 25%; } }
+    left: 66%; } }
 
 .chatroomeffects_confetti-40_tilKd {
-  width: 19px;
-  height: 7.6px;
+  width: 14px;
+  height: 5.6px;
   background-color: #d13447;
   top: -10%;
-  left: 9%;
-  opacity: 0.5927;
-  transform: rotate(74.87287deg);
+  left: 1%;
+  opacity: 1.39536;
+  transform: rotate(279.7165deg);
   animation: chatroomeffects_drop-40_2Ni2Z;
-  animation-duration: 5.16045s;
-  animation-delay: 0.56939s;
+  animation-duration: 4.14152s;
+  animation-delay: 0.13157s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-40_2Ni2Z {
@@ -15058,19 +15064,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 22%; } }
+    left: 15%; } }
 
 .chatroomeffects_confetti-41_2Efi5 {
-  width: 11px;
-  height: 4.4px;
+  width: 5px;
+  height: 2px;
   background-color: #d13447;
   top: -10%;
-  left: 52%;
-  opacity: 1.45507;
-  transform: rotate(330.66897deg);
+  left: 59%;
+  opacity: 0.64637;
+  transform: rotate(345.79244deg);
   animation: chatroomeffects_drop-41_Lsk2P;
-  animation-duration: 5.35941s;
-  animation-delay: 0.30808s;
+  animation-duration: 5.97374s;
+  animation-delay: 0.6481s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-41_Lsk2P {
@@ -15081,19 +15087,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 63%; } }
+    left: 61%; } }
 
 .chatroomeffects_confetti-42_3bVPd {
-  width: 20px;
-  height: 8px;
-  background-color: #263672;
+  width: 17px;
+  height: 6.8px;
+  background-color: #ffbf00;
   top: -10%;
-  left: 81%;
-  opacity: 0.50424;
-  transform: rotate(142.71589deg);
+  left: 12%;
+  opacity: 0.63747;
+  transform: rotate(30.29629deg);
   animation: chatroomeffects_drop-42_22u-9;
-  animation-duration: 5.18464s;
-  animation-delay: 0.49682s;
+  animation-duration: 5.252s;
+  animation-delay: 0.2355s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-42_22u-9 {
@@ -15104,19 +15110,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 86%; } }
+    left: 15%; } }
 
 .chatroomeffects_confetti-43_1IRJJ {
-  width: 18px;
-  height: 7.2px;
-  background-color: #263672;
+  width: 6px;
+  height: 2.4px;
+  background-color: #d13447;
   top: -10%;
-  left: 16%;
-  opacity: 0.83273;
-  transform: rotate(147.81955deg);
+  left: 8%;
+  opacity: 0.85388;
+  transform: rotate(117.17792deg);
   animation: chatroomeffects_drop-43_2Hj1F;
-  animation-duration: 5.07239s;
-  animation-delay: 0.5934s;
+  animation-duration: 4.39633s;
+  animation-delay: 0.21069s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-43_2Hj1F {
@@ -15127,19 +15133,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 17%; } }
+    left: 9%; } }
 
 .chatroomeffects_confetti-44_3yunT {
-  width: 10px;
-  height: 4px;
+  width: 8px;
+  height: 3.2px;
   background-color: #d13447;
   top: -10%;
-  left: 78%;
-  opacity: 0.76465;
-  transform: rotate(311.17711deg);
+  left: 86%;
+  opacity: 0.55507;
+  transform: rotate(36.58578deg);
   animation: chatroomeffects_drop-44_1KWVx;
-  animation-duration: 4.13964s;
-  animation-delay: 0.75456s;
+  animation-duration: 4.35857s;
+  animation-delay: 0.78308s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-44_1KWVx {
@@ -15150,19 +15156,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 88%; } }
+    left: 101%; } }
 
 .chatroomeffects_confetti-45_2ZNp_ {
-  width: 19px;
-  height: 7.6px;
-  background-color: #d13447;
+  width: 4px;
+  height: 1.6px;
+  background-color: #263672;
   top: -10%;
-  left: 50%;
-  opacity: 0.61499;
-  transform: rotate(294.45028deg);
+  left: 80%;
+  opacity: 1.38023;
+  transform: rotate(308.59508deg);
   animation: chatroomeffects_drop-45_2odi4;
-  animation-duration: 5.06176s;
-  animation-delay: 0.35324s;
+  animation-duration: 5.41796s;
+  animation-delay: 0.06462s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-45_2odi4 {
@@ -15173,19 +15179,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 61%; } }
+    left: 82%; } }
 
 .chatroomeffects_confetti-46_1RSJV {
-  width: 8px;
-  height: 3.2px;
+  width: 10px;
+  height: 4px;
   background-color: #263672;
   top: -10%;
-  left: 43%;
-  opacity: 0.79952;
-  transform: rotate(56.40571deg);
+  left: 18%;
+  opacity: 1.27416;
+  transform: rotate(45.27778deg);
   animation: chatroomeffects_drop-46_cOJFG;
-  animation-duration: 5.69583s;
-  animation-delay: 0.91561s;
+  animation-duration: 5.11529s;
+  animation-delay: 0.90007s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-46_cOJFG {
@@ -15196,19 +15202,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 54%; } }
+    left: 24%; } }
 
 .chatroomeffects_confetti-47_26ps7 {
-  width: 15px;
-  height: 6px;
+  width: 18px;
+  height: 7.2px;
   background-color: #263672;
   top: -10%;
-  left: 8%;
-  opacity: 0.85877;
-  transform: rotate(268.0729deg);
+  left: 71%;
+  opacity: 0.92022;
+  transform: rotate(179.00763deg);
   animation: chatroomeffects_drop-47_TnJCO;
-  animation-duration: 5.73074s;
-  animation-delay: 0.17125s;
+  animation-duration: 5.02984s;
+  animation-delay: 0.17835s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-47_TnJCO {
@@ -15219,19 +15225,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 11%; } }
+    left: 75%; } }
 
 .chatroomeffects_confetti-48_r6QAl {
-  width: 4px;
-  height: 1.6px;
-  background-color: #263672;
+  width: 2px;
+  height: 0.8px;
+  background-color: #d13447;
   top: -10%;
-  left: 61%;
-  opacity: 1.45208;
-  transform: rotate(184.86538deg);
+  left: 1%;
+  opacity: 0.94521;
+  transform: rotate(69.45375deg);
   animation: chatroomeffects_drop-48__Kyg4;
-  animation-duration: 4.92362s;
-  animation-delay: 0.07939s;
+  animation-duration: 5.70415s;
+  animation-delay: 0.4064s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-48__Kyg4 {
@@ -15242,19 +15248,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 65%; } }
+    left: 6%; } }
 
 .chatroomeffects_confetti-49_1UOP6 {
-  width: 19px;
-  height: 7.6px;
+  width: 5px;
+  height: 2px;
   background-color: #d13447;
   top: -10%;
-  left: 95%;
-  opacity: 1.45077;
-  transform: rotate(259.41942deg);
+  left: 91%;
+  opacity: 0.63161;
+  transform: rotate(132.15668deg);
   animation: chatroomeffects_drop-49_d5ECV;
-  animation-duration: 5.16983s;
-  animation-delay: 0.94565s;
+  animation-duration: 4.88578s;
+  animation-delay: 0.03231s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-49_d5ECV {
@@ -15265,19 +15271,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 110%; } }
+    left: 92%; } }
 
 .chatroomeffects_confetti-50_1pxIz {
-  width: 4px;
-  height: 1.6px;
+  width: 2px;
+  height: 0.8px;
   background-color: #d13447;
   top: -10%;
-  left: 79%;
-  opacity: 0.82882;
-  transform: rotate(169.88813deg);
+  left: 3%;
+  opacity: 0.55543;
+  transform: rotate(9.99097deg);
   animation: chatroomeffects_drop-50__gmkT;
-  animation-duration: 4.59338s;
-  animation-delay: 0.60157s;
+  animation-duration: 5.50288s;
+  animation-delay: 0.21575s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-50__gmkT {
@@ -15288,19 +15294,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 80%; } }
+    left: 17%; } }
 
 .chatroomeffects_confetti-51_1S-2Z {
-  width: 16px;
-  height: 6.4px;
-  background-color: #ffbf00;
+  width: 4px;
+  height: 1.6px;
+  background-color: #263672;
   top: -10%;
-  left: 86%;
-  opacity: 0.5144;
-  transform: rotate(289.64135deg);
+  left: 7%;
+  opacity: 1.30938;
+  transform: rotate(191.41099deg);
   animation: chatroomeffects_drop-51_o0Cab;
-  animation-duration: 5.17171s;
-  animation-delay: 0.38719s;
+  animation-duration: 5.77836s;
+  animation-delay: 0.82372s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-51_o0Cab {
@@ -15311,19 +15317,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 99%; } }
+    left: 15%; } }
 
 .chatroomeffects_confetti-52_1X63X {
-  width: 17px;
-  height: 6.8px;
-  background-color: #ffbf00;
+  width: 11px;
+  height: 4.4px;
+  background-color: #d13447;
   top: -10%;
-  left: 77%;
-  opacity: 0.88108;
-  transform: rotate(97.09221deg);
+  left: 75%;
+  opacity: 1.06602;
+  transform: rotate(109.93223deg);
   animation: chatroomeffects_drop-52_3RgGH;
-  animation-duration: 5.62146s;
-  animation-delay: 0.33235s;
+  animation-duration: 5.86802s;
+  animation-delay: 0.17405s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-52_3RgGH {
@@ -15334,19 +15340,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 84%; } }
+    left: 80%; } }
 
 .chatroomeffects_confetti-53_3_lQV {
-  width: 18px;
-  height: 7.2px;
-  background-color: #d13447;
+  width: 6px;
+  height: 2.4px;
+  background-color: #ffbf00;
   top: -10%;
-  left: 42%;
-  opacity: 1.38592;
-  transform: rotate(326.87827deg);
+  left: 19%;
+  opacity: 1.21506;
+  transform: rotate(346.34397deg);
   animation: chatroomeffects_drop-53_3pj6j;
-  animation-duration: 4.69174s;
-  animation-delay: 0.76935s;
+  animation-duration: 5.55912s;
+  animation-delay: 0.30999s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-53_3pj6j {
@@ -15357,19 +15363,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 49%; } }
+    left: 32%; } }
 
 .chatroomeffects_confetti-54_8uNQ7 {
-  width: 6px;
-  height: 2.4px;
-  background-color: #263672;
+  width: 19px;
+  height: 7.6px;
+  background-color: #ffbf00;
   top: -10%;
-  left: 82%;
-  opacity: 0.90438;
-  transform: rotate(205.51043deg);
+  left: 80%;
+  opacity: 1.11056;
+  transform: rotate(260.10268deg);
   animation: chatroomeffects_drop-54_3O0xH;
-  animation-duration: 5.65274s;
-  animation-delay: 0.85108s;
+  animation-duration: 5.01503s;
+  animation-delay: 0.61525s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-54_3O0xH {
@@ -15380,19 +15386,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 87%; } }
+    left: 95%; } }
 
 .chatroomeffects_confetti-55_iDjUQ {
-  width: 5px;
-  height: 2px;
+  width: 9px;
+  height: 3.6px;
   background-color: #d13447;
   top: -10%;
-  left: 55%;
-  opacity: 1.46764;
-  transform: rotate(269.52373deg);
+  left: 21%;
+  opacity: 0.8883;
+  transform: rotate(167.69665deg);
   animation: chatroomeffects_drop-55_ulKDw;
-  animation-duration: 5.86988s;
-  animation-delay: 0.36405s;
+  animation-duration: 4.84466s;
+  animation-delay: 0.25198s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-55_ulKDw {
@@ -15403,19 +15409,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 56%; } }
+    left: 32%; } }
 
 .chatroomeffects_confetti-56_1SWO1 {
-  width: 3px;
-  height: 1.2px;
+  width: 20px;
+  height: 8px;
   background-color: #263672;
   top: -10%;
-  left: 68%;
-  opacity: 1.48584;
-  transform: rotate(296.16467deg);
+  left: 47%;
+  opacity: 0.57528;
+  transform: rotate(190.99725deg);
   animation: chatroomeffects_drop-56_3TLY-;
-  animation-duration: 4.88373s;
-  animation-delay: 0.80775s;
+  animation-duration: 4.36541s;
+  animation-delay: 0.1181s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-56_3TLY- {
@@ -15426,19 +15432,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 73%; } }
+    left: 60%; } }
 
 .chatroomeffects_confetti-57_2L1qw {
-  width: 19px;
-  height: 7.6px;
+  width: 14px;
+  height: 5.6px;
   background-color: #ffbf00;
   top: -10%;
-  left: 89%;
-  opacity: 0.7981;
-  transform: rotate(321.33711deg);
+  left: 99%;
+  opacity: 1.49345;
+  transform: rotate(99.71355deg);
   animation: chatroomeffects_drop-57_2SlUH;
-  animation-duration: 5.9926s;
-  animation-delay: 0.7944s;
+  animation-duration: 5.89924s;
+  animation-delay: 0.17873s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-57_2SlUH {
@@ -15449,19 +15455,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 102%; } }
+    left: 106%; } }
 
 .chatroomeffects_confetti-58_2VUcK {
-  width: 18px;
-  height: 7.2px;
-  background-color: #d13447;
+  width: 2px;
+  height: 0.8px;
+  background-color: #263672;
   top: -10%;
-  left: 50%;
-  opacity: 0.53546;
-  transform: rotate(134.1227deg);
+  left: 18%;
+  opacity: 0.80662;
+  transform: rotate(248.85445deg);
   animation: chatroomeffects_drop-58_3Sm6B;
-  animation-duration: 4.0221s;
-  animation-delay: 0.56171s;
+  animation-duration: 5.91206s;
+  animation-delay: 0.27984s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-58_3Sm6B {
@@ -15472,19 +15478,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 64%; } }
+    left: 30%; } }
 
 .chatroomeffects_confetti-59__Lqss {
-  width: 11px;
-  height: 4.4px;
-  background-color: #ffbf00;
+  width: 18px;
+  height: 7.2px;
+  background-color: #263672;
   top: -10%;
-  left: 71%;
-  opacity: 1.16565;
-  transform: rotate(224.68575deg);
+  left: 87%;
+  opacity: 0.92573;
+  transform: rotate(343.88309deg);
   animation: chatroomeffects_drop-59_XLkcN;
-  animation-duration: 5.49227s;
-  animation-delay: 0.81281s;
+  animation-duration: 4.00804s;
+  animation-delay: 0.7189s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-59_XLkcN {
@@ -15495,19 +15501,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 78%; } }
+    left: 90%; } }
 
 .chatroomeffects_confetti-60_2JKQ5 {
-  width: 18px;
-  height: 7.2px;
-  background-color: #ffbf00;
+  width: 15px;
+  height: 6px;
+  background-color: #d13447;
   top: -10%;
-  left: 52%;
-  opacity: 0.82037;
-  transform: rotate(310.97987deg);
+  left: 58%;
+  opacity: 0.81349;
+  transform: rotate(100.61522deg);
   animation: chatroomeffects_drop-60_yV0os;
-  animation-duration: 4.61195s;
-  animation-delay: 0.72028s;
+  animation-duration: 5.68926s;
+  animation-delay: 0.7417s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-60_yV0os {
@@ -15518,19 +15524,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 56%; } }
+    left: 65%; } }
 
 .chatroomeffects_confetti-61_3rVuN {
-  width: 1px;
-  height: 0.4px;
+  width: 4px;
+  height: 1.6px;
   background-color: #263672;
   top: -10%;
-  left: 68%;
-  opacity: 1.10812;
-  transform: rotate(85.51709deg);
+  left: 83%;
+  opacity: 1.45929;
+  transform: rotate(148.69927deg);
   animation: chatroomeffects_drop-61__NqSc;
-  animation-duration: 4.22278s;
-  animation-delay: 0.35029s;
+  animation-duration: 5.68415s;
+  animation-delay: 0.49386s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-61__NqSc {
@@ -15541,19 +15547,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 74%; } }
+    left: 85%; } }
 
 .chatroomeffects_confetti-62_2rpoF {
-  width: 13px;
-  height: 5.2px;
-  background-color: #263672;
+  width: 15px;
+  height: 6px;
+  background-color: #d13447;
   top: -10%;
-  left: 22%;
-  opacity: 0.63716;
-  transform: rotate(17.99158deg);
+  left: 82%;
+  opacity: 1.2438;
+  transform: rotate(112.91112deg);
   animation: chatroomeffects_drop-62_1FDCV;
-  animation-duration: 4.80214s;
-  animation-delay: 0.97482s;
+  animation-duration: 4.85674s;
+  animation-delay: 0.92537s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-62_1FDCV {
@@ -15564,19 +15570,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 28%; } }
+    left: 91%; } }
 
 .chatroomeffects_confetti-63_3198h {
-  width: 9px;
-  height: 3.6px;
-  background-color: #263672;
+  width: 20px;
+  height: 8px;
+  background-color: #ffbf00;
   top: -10%;
-  left: 72%;
-  opacity: 0.69699;
-  transform: rotate(337.66879deg);
+  left: 81%;
+  opacity: 0.64107;
+  transform: rotate(89.83557deg);
   animation: chatroomeffects_drop-63_1zZ-Y;
-  animation-duration: 4.51802s;
-  animation-delay: 0.48109s;
+  animation-duration: 4.97611s;
+  animation-delay: 0.48972s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-63_1zZ-Y {
@@ -15587,19 +15593,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 84%; } }
+    left: 87%; } }
 
 .chatroomeffects_confetti-64_3OK0y {
-  width: 14px;
-  height: 5.6px;
+  width: 9px;
+  height: 3.6px;
   background-color: #d13447;
   top: -10%;
-  left: 18%;
-  opacity: 1.01094;
-  transform: rotate(349.91496deg);
+  left: 83%;
+  opacity: 0.59398;
+  transform: rotate(26.66724deg);
   animation: chatroomeffects_drop-64_lNsSV;
-  animation-duration: 5.10312s;
-  animation-delay: 0.16683s;
+  animation-duration: 4.89317s;
+  animation-delay: 0.77419s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-64_lNsSV {
@@ -15610,19 +15616,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 30%; } }
+    left: 97%; } }
 
 .chatroomeffects_confetti-65_VmehB {
-  width: 18px;
-  height: 7.2px;
+  width: 1px;
+  height: 0.4px;
   background-color: #ffbf00;
   top: -10%;
-  left: 94%;
-  opacity: 1.25065;
-  transform: rotate(311.33382deg);
+  left: 90%;
+  opacity: 1.47284;
+  transform: rotate(253.03198deg);
   animation: chatroomeffects_drop-65_1NvQE;
-  animation-duration: 4.99697s;
-  animation-delay: 0.8013s;
+  animation-duration: 5.71845s;
+  animation-delay: 0.13165s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-65_1NvQE {
@@ -15633,19 +15639,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 100%; } }
+    left: 102%; } }
 
 .chatroomeffects_confetti-66_3QLBl {
-  width: 8px;
-  height: 3.2px;
-  background-color: #d13447;
+  width: 3px;
+  height: 1.2px;
+  background-color: #263672;
   top: -10%;
-  left: 87%;
-  opacity: 1.39767;
-  transform: rotate(129.85111deg);
+  left: 89%;
+  opacity: 0.85236;
+  transform: rotate(106.87256deg);
   animation: chatroomeffects_drop-66_p72jM;
-  animation-duration: 5.62359s;
-  animation-delay: 0.95499s;
+  animation-duration: 4.81759s;
+  animation-delay: 0.98604s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-66_p72jM {
@@ -15656,19 +15662,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 89%; } }
+    left: 104%; } }
 
 .chatroomeffects_confetti-67_3o-7O {
-  width: 5px;
-  height: 2px;
+  width: 6px;
+  height: 2.4px;
   background-color: #d13447;
   top: -10%;
-  left: 96%;
-  opacity: 0.69119;
-  transform: rotate(1.00833deg);
+  left: 62%;
+  opacity: 1.05009;
+  transform: rotate(316.47059deg);
   animation: chatroomeffects_drop-67_1oTTl;
-  animation-duration: 4.82325s;
-  animation-delay: 0.13845s;
+  animation-duration: 5.04795s;
+  animation-delay: 0.00904s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-67_1oTTl {
@@ -15679,19 +15685,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 108%; } }
+    left: 68%; } }
 
 .chatroomeffects_confetti-68_3jyKO {
-  width: 13px;
-  height: 5.2px;
-  background-color: #ffbf00;
+  width: 4px;
+  height: 1.6px;
+  background-color: #d13447;
   top: -10%;
-  left: 28%;
-  opacity: 0.99099;
-  transform: rotate(278.49911deg);
+  left: 37%;
+  opacity: 1.45529;
+  transform: rotate(303.16366deg);
   animation: chatroomeffects_drop-68_1_tiE;
-  animation-duration: 5.45411s;
-  animation-delay: 0.24508s;
+  animation-duration: 4.00106s;
+  animation-delay: 0.62388s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-68_1_tiE {
@@ -15702,19 +15708,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 37%; } }
+    left: 50%; } }
 
 .chatroomeffects_confetti-69_3kU59 {
-  width: 3px;
-  height: 1.2px;
-  background-color: #d13447;
+  width: 2px;
+  height: 0.8px;
+  background-color: #263672;
   top: -10%;
-  left: 68%;
-  opacity: 1.4028;
-  transform: rotate(145.63293deg);
+  left: 27%;
+  opacity: 1.39953;
+  transform: rotate(51.51deg);
   animation: chatroomeffects_drop-69_3phaK;
-  animation-duration: 4.18337s;
-  animation-delay: 0.96713s;
+  animation-duration: 5.28106s;
+  animation-delay: 0.86801s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-69_3phaK {
@@ -15725,19 +15731,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 70%; } }
+    left: 42%; } }
 
 .chatroomeffects_confetti-70_1hU6u {
-  width: 4px;
-  height: 1.6px;
-  background-color: #d13447;
+  width: 1px;
+  height: 0.4px;
+  background-color: #263672;
   top: -10%;
-  left: 15%;
-  opacity: 0.60681;
-  transform: rotate(179.94778deg);
+  left: 77%;
+  opacity: 0.53373;
+  transform: rotate(337.53012deg);
   animation: chatroomeffects_drop-70_DNtpd;
-  animation-duration: 4.4418s;
-  animation-delay: 0.86858s;
+  animation-duration: 4.33999s;
+  animation-delay: 0.88647s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-70_DNtpd {
@@ -15748,19 +15754,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 22%; } }
+    left: 92%; } }
 
 .chatroomeffects_confetti-71_WsoNj {
-  width: 12px;
-  height: 4.8px;
+  width: 14px;
+  height: 5.6px;
   background-color: #263672;
   top: -10%;
-  left: 26%;
-  opacity: 1.1653;
-  transform: rotate(78.10363deg);
+  left: 30%;
+  opacity: 1.42168;
+  transform: rotate(45.92305deg);
   animation: chatroomeffects_drop-71_Uy1vN;
-  animation-duration: 5.01988s;
-  animation-delay: 0.74167s;
+  animation-duration: 4.02842s;
+  animation-delay: 0.72089s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-71_Uy1vN {
@@ -15771,19 +15777,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 33%; } }
+    left: 38%; } }
 
 .chatroomeffects_confetti-72_2_6hF {
-  width: 10px;
-  height: 4px;
-  background-color: #263672;
+  width: 8px;
+  height: 3.2px;
+  background-color: #d13447;
   top: -10%;
-  left: 34%;
-  opacity: 0.81768;
-  transform: rotate(251.73607deg);
+  left: 44%;
+  opacity: 1.17888;
+  transform: rotate(7.7488deg);
   animation: chatroomeffects_drop-72_1rGGz;
-  animation-duration: 4.39082s;
-  animation-delay: 0.99237s;
+  animation-duration: 4.91011s;
+  animation-delay: 0.91979s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-72_1rGGz {
@@ -15794,19 +15800,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 35%; } }
+    left: 55%; } }
 
 .chatroomeffects_confetti-73_3JGM4 {
-  width: 7px;
-  height: 2.8px;
-  background-color: #d13447;
+  width: 1px;
+  height: 0.4px;
+  background-color: #263672;
   top: -10%;
-  left: 40%;
-  opacity: 1.4822;
-  transform: rotate(133.94574deg);
+  left: 66%;
+  opacity: 1.21879;
+  transform: rotate(54.70737deg);
   animation: chatroomeffects_drop-73_3D0xh;
-  animation-duration: 4.99361s;
-  animation-delay: 0.58875s;
+  animation-duration: 5.51539s;
+  animation-delay: 0.77803s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-73_3D0xh {
@@ -15817,19 +15823,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 42%; } }
+    left: 77%; } }
 
 .chatroomeffects_confetti-74_TEwzu {
-  width: 7px;
-  height: 2.8px;
-  background-color: #ffbf00;
+  width: 13px;
+  height: 5.2px;
+  background-color: #d13447;
   top: -10%;
-  left: 20%;
-  opacity: 1.31939;
-  transform: rotate(351.43727deg);
+  left: 87%;
+  opacity: 0.89763;
+  transform: rotate(92.6241deg);
   animation: chatroomeffects_drop-74_1V64l;
-  animation-duration: 5.9873s;
-  animation-delay: 0.52352s;
+  animation-duration: 4.58237s;
+  animation-delay: 0.20125s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-74_1V64l {
@@ -15840,19 +15846,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 27%; } }
+    left: 101%; } }
 
 .chatroomeffects_confetti-75_3FJ-J {
-  width: 19px;
-  height: 7.6px;
+  width: 2px;
+  height: 0.8px;
   background-color: #ffbf00;
   top: -10%;
-  left: 61%;
-  opacity: 0.61895;
-  transform: rotate(36.36622deg);
+  left: 40%;
+  opacity: 0.81837;
+  transform: rotate(120.25925deg);
   animation: chatroomeffects_drop-75_3TKfF;
-  animation-duration: 5.23887s;
-  animation-delay: 0.56325s;
+  animation-duration: 5.94881s;
+  animation-delay: 0.00868s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-75_3TKfF {
@@ -15863,19 +15869,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 70%; } }
+    left: 52%; } }
 
 .chatroomeffects_confetti-76_3O4-7 {
-  width: 3px;
-  height: 1.2px;
-  background-color: #263672;
+  width: 10px;
+  height: 4px;
+  background-color: #d13447;
   top: -10%;
-  left: 68%;
-  opacity: 1.43281;
-  transform: rotate(138.08354deg);
+  left: 37%;
+  opacity: 1.03582;
+  transform: rotate(301.89348deg);
   animation: chatroomeffects_drop-76_pAbUN;
-  animation-duration: 5.92656s;
-  animation-delay: 0.18297s;
+  animation-duration: 4.72795s;
+  animation-delay: 0.30509s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-76_pAbUN {
@@ -15886,19 +15892,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 72%; } }
+    left: 52%; } }
 
 .chatroomeffects_confetti-77_36qDl {
-  width: 14px;
-  height: 5.6px;
+  width: 12px;
+  height: 4.8px;
   background-color: #263672;
   top: -10%;
-  left: 67%;
-  opacity: 1.02652;
-  transform: rotate(159.45072deg);
+  left: 57%;
+  opacity: 1.21391;
+  transform: rotate(244.41583deg);
   animation: chatroomeffects_drop-77_3YEWs;
-  animation-duration: 4.98568s;
-  animation-delay: 0.50609s;
+  animation-duration: 4.05624s;
+  animation-delay: 0.63242s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-77_3YEWs {
@@ -15909,19 +15915,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 76%; } }
+    left: 62%; } }
 
 .chatroomeffects_confetti-78_2Cduh {
-  width: 1px;
-  height: 0.4px;
+  width: 15px;
+  height: 6px;
   background-color: #d13447;
   top: -10%;
-  left: 85%;
-  opacity: 1.00576;
-  transform: rotate(84.20784deg);
+  left: 80%;
+  opacity: 0.69538;
+  transform: rotate(211.33614deg);
   animation: chatroomeffects_drop-78_U6rKn;
-  animation-duration: 4.7363s;
-  animation-delay: 0.19886s;
+  animation-duration: 5.20905s;
+  animation-delay: 0.7006s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-78_U6rKn {
@@ -15932,19 +15938,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 92%; } }
+    left: 89%; } }
 
 .chatroomeffects_confetti-79_2yo7J {
-  width: 3px;
-  height: 1.2px;
-  background-color: #ffbf00;
+  width: 5px;
+  height: 2px;
+  background-color: #263672;
   top: -10%;
-  left: 12%;
-  opacity: 1.33177;
-  transform: rotate(349.08603deg);
+  left: 55%;
+  opacity: 1.4319;
+  transform: rotate(233.84089deg);
   animation: chatroomeffects_drop-79_IlFOy;
-  animation-duration: 4.93723s;
-  animation-delay: 0.9339s;
+  animation-duration: 4.46491s;
+  animation-delay: 0.50228s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-79_IlFOy {
@@ -15955,19 +15961,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 16%; } }
+    left: 61%; } }
 
 .chatroomeffects_confetti-80_1qzcm {
-  width: 13px;
-  height: 5.2px;
-  background-color: #d13447;
+  width: 10px;
+  height: 4px;
+  background-color: #263672;
   top: -10%;
-  left: 57%;
-  opacity: 1.36383;
-  transform: rotate(327.76889deg);
+  left: 49%;
+  opacity: 0.62345;
+  transform: rotate(159.62136deg);
   animation: chatroomeffects_drop-80_lvPWU;
-  animation-duration: 4.10778s;
-  animation-delay: 0.33757s;
+  animation-duration: 4.85569s;
+  animation-delay: 0.16874s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-80_lvPWU {
@@ -15978,19 +15984,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 58%; } }
+    left: 59%; } }
 
 .chatroomeffects_confetti-81_1Z0zS {
-  width: 19px;
-  height: 7.6px;
-  background-color: #d13447;
+  width: 10px;
+  height: 4px;
+  background-color: #263672;
   top: -10%;
-  left: 64%;
-  opacity: 1.20324;
-  transform: rotate(10.9102deg);
+  left: 31%;
+  opacity: 1.21352;
+  transform: rotate(75.40653deg);
   animation: chatroomeffects_drop-81_2Y9tP;
-  animation-duration: 4.504s;
-  animation-delay: 0.58867s;
+  animation-duration: 5.9262s;
+  animation-delay: 0.04779s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-81_2Y9tP {
@@ -16001,19 +16007,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 69%; } }
+    left: 44%; } }
 
 .chatroomeffects_confetti-82_1yyK6 {
-  width: 7px;
-  height: 2.8px;
+  width: 20px;
+  height: 8px;
   background-color: #d13447;
   top: -10%;
-  left: 25%;
-  opacity: 0.86376;
-  transform: rotate(84.81497deg);
+  left: 12%;
+  opacity: 0.52562;
+  transform: rotate(164.45404deg);
   animation: chatroomeffects_drop-82_110Dq;
-  animation-duration: 5.69159s;
-  animation-delay: 0.67298s;
+  animation-duration: 4.73466s;
+  animation-delay: 0.30771s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-82_110Dq {
@@ -16024,19 +16030,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 35%; } }
+    left: 27%; } }
 
 .chatroomeffects_confetti-83_uGuyr {
-  width: 16px;
-  height: 6.4px;
+  width: 5px;
+  height: 2px;
   background-color: #ffbf00;
   top: -10%;
-  left: 16%;
-  opacity: 1.28671;
-  transform: rotate(80.6662deg);
+  left: 33%;
+  opacity: 1.00746;
+  transform: rotate(207.228deg);
   animation: chatroomeffects_drop-83_1uGH6;
-  animation-duration: 5.01091s;
-  animation-delay: 0.26045s;
+  animation-duration: 4.11239s;
+  animation-delay: 0.7624s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-83_1uGH6 {
@@ -16047,19 +16053,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 19%; } }
+    left: 44%; } }
 
 .chatroomeffects_confetti-84_2H7gi {
-  width: 4px;
-  height: 1.6px;
-  background-color: #d13447;
+  width: 5px;
+  height: 2px;
+  background-color: #ffbf00;
   top: -10%;
-  left: 98%;
-  opacity: 1.27989;
-  transform: rotate(268.93693deg);
+  left: 9%;
+  opacity: 0.59731;
+  transform: rotate(50.00685deg);
   animation: chatroomeffects_drop-84_2E38H;
-  animation-duration: 4.84384s;
-  animation-delay: 0.56689s;
+  animation-duration: 5.86135s;
+  animation-delay: 0.34203s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-84_2E38H {
@@ -16070,19 +16076,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 103%; } }
+    left: 23%; } }
 
 .chatroomeffects_confetti-85_X_KES {
-  width: 11px;
-  height: 4.4px;
-  background-color: #ffbf00;
+  width: 1px;
+  height: 0.4px;
+  background-color: #263672;
   top: -10%;
-  left: 54%;
-  opacity: 1.06678;
-  transform: rotate(264.28575deg);
+  left: 88%;
+  opacity: 0.66044;
+  transform: rotate(18.2443deg);
   animation: chatroomeffects_drop-85_3iBnQ;
-  animation-duration: 4.10945s;
-  animation-delay: 0.69486s;
+  animation-duration: 4.87596s;
+  animation-delay: 0.97158s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-85_3iBnQ {
@@ -16093,19 +16099,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 65%; } }
+    left: 96%; } }
 
 .chatroomeffects_confetti-86_1pK17 {
   width: 13px;
   height: 5.2px;
-  background-color: #263672;
+  background-color: #d13447;
   top: -10%;
-  left: 31%;
-  opacity: 1.41964;
-  transform: rotate(245.90888deg);
+  left: 15%;
+  opacity: 0.94891;
+  transform: rotate(46.83973deg);
   animation: chatroomeffects_drop-86_3vgAf;
-  animation-duration: 4.81851s;
-  animation-delay: 0.84554s;
+  animation-duration: 5.02967s;
+  animation-delay: 0.49156s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-86_3vgAf {
@@ -16116,19 +16122,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 38%; } }
+    left: 18%; } }
 
 .chatroomeffects_confetti-87_2YGan {
-  width: 6px;
-  height: 2.4px;
-  background-color: #ffbf00;
+  width: 3px;
+  height: 1.2px;
+  background-color: #d13447;
   top: -10%;
-  left: 81%;
-  opacity: 0.9179;
-  transform: rotate(187.28304deg);
+  left: 88%;
+  opacity: 1.41603;
+  transform: rotate(283.04193deg);
   animation: chatroomeffects_drop-87_3-UwQ;
-  animation-duration: 4.41463s;
-  animation-delay: 0.2269s;
+  animation-duration: 5.7806s;
+  animation-delay: 0.55471s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-87_3-UwQ {
@@ -16139,19 +16145,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 95%; } }
+    left: 94%; } }
 
 .chatroomeffects_confetti-88_QE13h {
-  width: 14px;
-  height: 5.6px;
-  background-color: #d13447;
+  width: 20px;
+  height: 8px;
+  background-color: #263672;
   top: -10%;
-  left: 27%;
-  opacity: 0.86069;
-  transform: rotate(101.22489deg);
+  left: 18%;
+  opacity: 0.70472;
+  transform: rotate(340.42584deg);
   animation: chatroomeffects_drop-88_L7KWP;
-  animation-duration: 5.00868s;
-  animation-delay: 0.0678s;
+  animation-duration: 4.61083s;
+  animation-delay: 0.87676s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-88_L7KWP {
@@ -16165,16 +16171,16 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     left: 31%; } }
 
 .chatroomeffects_confetti-89_3Ifdp {
-  width: 12px;
-  height: 4.8px;
-  background-color: #ffbf00;
+  width: 16px;
+  height: 6.4px;
+  background-color: #263672;
   top: -10%;
-  left: 60%;
-  opacity: 1.27982;
-  transform: rotate(252.8288deg);
+  left: 69%;
+  opacity: 0.88821;
+  transform: rotate(153.06499deg);
   animation: chatroomeffects_drop-89_20o_P;
-  animation-duration: 5.83341s;
-  animation-delay: 0.69962s;
+  animation-duration: 4.63691s;
+  animation-delay: 0.00992s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-89_20o_P {
@@ -16185,19 +16191,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 66%; } }
+    left: 75%; } }
 
 .chatroomeffects_confetti-90_1UuuG {
-  width: 10px;
-  height: 4px;
-  background-color: #d13447;
+  width: 18px;
+  height: 7.2px;
+  background-color: #263672;
   top: -10%;
-  left: 10%;
-  opacity: 1.01936;
-  transform: rotate(153.39684deg);
+  left: 84%;
+  opacity: 0.7045;
+  transform: rotate(6.11909deg);
   animation: chatroomeffects_drop-90_3Gftj;
-  animation-duration: 5.54904s;
-  animation-delay: 0.17832s;
+  animation-duration: 5.06458s;
+  animation-delay: 0.23589s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-90_3Gftj {
@@ -16208,19 +16214,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 25%; } }
+    left: 93%; } }
 
 .chatroomeffects_confetti-91_2gAfr {
-  width: 6px;
-  height: 2.4px;
+  width: 10px;
+  height: 4px;
   background-color: #d13447;
   top: -10%;
-  left: 81%;
-  opacity: 0.61937;
-  transform: rotate(226.72826deg);
+  left: 51%;
+  opacity: 0.82363;
+  transform: rotate(346.50378deg);
   animation: chatroomeffects_drop-91_30C4q;
-  animation-duration: 4.53407s;
-  animation-delay: 0.50221s;
+  animation-duration: 5.1917s;
+  animation-delay: 0.71354s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-91_30C4q {
@@ -16231,19 +16237,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 83%; } }
+    left: 60%; } }
 
 .chatroomeffects_confetti-92_DP0t2 {
-  width: 3px;
-  height: 1.2px;
+  width: 9px;
+  height: 3.6px;
   background-color: #d13447;
   top: -10%;
-  left: 34%;
-  opacity: 1.42106;
-  transform: rotate(3.53574deg);
+  left: 42%;
+  opacity: 0.61516;
+  transform: rotate(226.43399deg);
   animation: chatroomeffects_drop-92_faGzG;
-  animation-duration: 4.10973s;
-  animation-delay: 0.71341s;
+  animation-duration: 5.37236s;
+  animation-delay: 0.43883s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-92_faGzG {
@@ -16254,19 +16260,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 49%; } }
+    left: 52%; } }
 
 .chatroomeffects_confetti-93_25s5z {
-  width: 18px;
-  height: 7.2px;
-  background-color: #ffbf00;
+  width: 17px;
+  height: 6.8px;
+  background-color: #263672;
   top: -10%;
-  left: 41%;
-  opacity: 0.58606;
-  transform: rotate(356.838deg);
+  left: 4%;
+  opacity: 1.15144;
+  transform: rotate(166.05434deg);
   animation: chatroomeffects_drop-93_11JA9;
-  animation-duration: 5.84699s;
-  animation-delay: 0.34296s;
+  animation-duration: 4.13758s;
+  animation-delay: 0.24996s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-93_11JA9 {
@@ -16277,19 +16283,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 48%; } }
+    left: 16%; } }
 
 .chatroomeffects_confetti-94_3vlxE {
-  width: 9px;
-  height: 3.6px;
-  background-color: #263672;
+  width: 5px;
+  height: 2px;
+  background-color: #ffbf00;
   top: -10%;
-  left: 7%;
-  opacity: 1.00967;
-  transform: rotate(203.86216deg);
+  left: 73%;
+  opacity: 0.55451;
+  transform: rotate(313.25254deg);
   animation: chatroomeffects_drop-94_2QK9y;
-  animation-duration: 4.00119s;
-  animation-delay: 0.91797s;
+  animation-duration: 4.85905s;
+  animation-delay: 0.61528s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-94_2QK9y {
@@ -16300,19 +16306,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 10%; } }
+    left: 82%; } }
 
 .chatroomeffects_confetti-95_CxrYj {
-  width: 18px;
-  height: 7.2px;
-  background-color: #263672;
+  width: 2px;
+  height: 0.8px;
+  background-color: #ffbf00;
   top: -10%;
-  left: 90%;
-  opacity: 0.85593;
-  transform: rotate(190.35472deg);
+  left: 41%;
+  opacity: 1.11117;
+  transform: rotate(91.84463deg);
   animation: chatroomeffects_drop-95_3z0ru;
-  animation-duration: 5.30972s;
-  animation-delay: 0.69431s;
+  animation-duration: 5.61889s;
+  animation-delay: 0.74641s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-95_3z0ru {
@@ -16323,19 +16329,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 103%; } }
+    left: 43%; } }
 
 .chatroomeffects_confetti-96_ItjuO {
-  width: 9px;
-  height: 3.6px;
-  background-color: #263672;
+  width: 10px;
+  height: 4px;
+  background-color: #d13447;
   top: -10%;
-  left: 23%;
-  opacity: 0.5685;
-  transform: rotate(275.58458deg);
+  left: 88%;
+  opacity: 1.01065;
+  transform: rotate(350.67504deg);
   animation: chatroomeffects_drop-96_1Kyjs;
-  animation-duration: 4.82276s;
-  animation-delay: 0.1446s;
+  animation-duration: 5.66016s;
+  animation-delay: 0.63015s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-96_1Kyjs {
@@ -16346,19 +16352,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 34%; } }
+    left: 100%; } }
 
 .chatroomeffects_confetti-97_13B6G {
-  width: 10px;
-  height: 4px;
+  width: 1px;
+  height: 0.4px;
   background-color: #d13447;
   top: -10%;
-  left: 22%;
-  opacity: 0.6289;
-  transform: rotate(177.25565deg);
+  left: 58%;
+  opacity: 1.36327;
+  transform: rotate(203.67638deg);
   animation: chatroomeffects_drop-97__bMmq;
-  animation-duration: 5.04571s;
-  animation-delay: 0.85321s;
+  animation-duration: 4.2199s;
+  animation-delay: 0.34994s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-97__bMmq {
@@ -16369,19 +16375,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 27%; } }
+    left: 64%; } }
 
 .chatroomeffects_confetti-98_RpTo3 {
   width: 9px;
   height: 3.6px;
-  background-color: #ffbf00;
+  background-color: #263672;
   top: -10%;
-  left: 40%;
-  opacity: 1.2579;
-  transform: rotate(351.56132deg);
+  left: 90%;
+  opacity: 1.13679;
+  transform: rotate(293.56605deg);
   animation: chatroomeffects_drop-98_fvQ8c;
-  animation-duration: 5.18661s;
-  animation-delay: 0.74337s;
+  animation-duration: 5.56672s;
+  animation-delay: 0.39539s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-98_fvQ8c {
@@ -16392,19 +16398,19 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 43%; } }
+    left: 99%; } }
 
 .chatroomeffects_confetti-99_3P9qj {
-  width: 20px;
-  height: 8px;
+  width: 4px;
+  height: 1.6px;
   background-color: #ffbf00;
   top: -10%;
-  left: 18%;
-  opacity: 1.25726;
-  transform: rotate(82.20633deg);
+  left: 54%;
+  opacity: 1.43918;
+  transform: rotate(311.42511deg);
   animation: chatroomeffects_drop-99_19pOX;
-  animation-duration: 4.64446s;
-  animation-delay: 0.75853s;
+  animation-duration: 4.39027s;
+  animation-delay: 0.13593s;
   animation-iteration-count: 1; }
 
 @keyframes chatroomeffects_drop-99_19pOX {
@@ -16415,7 +16421,7 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
     top: 0%; }
   100% {
     top: 110%;
-    left: 29%; } }
+    left: 64%; } }
 
 /* Golden Confetti - Goldfetti */
 
@@ -16909,7 +16915,7 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
 
 @keyframes chatroomeffects_bang_KjYNV {
   to {
-    box-shadow: -196px -81.66667px #6f00ff, -226px -112.66667px #ff001a, 192px -144.66667px red, 220px -144.66667px #00ff48, 217px -117.66667px #00ff2f, 223px -28.66667px #00fbff, 34px -117.66667px #ff0055, -160px -22.66667px #00ff15, -77px 13.33333px #a6ff00, -168px -125.66667px #00ffb3, 35px 53.33333px #3cff00, -181px -152.66667px #6aff00, 76px 34.33333px #0dff00, 81px -363.66667px #00ff33, 8px -176.66667px #ff0062, -248px -168.66667px #d5ff00, -151px -329.66667px #59ff00, -137px -350.66667px #008cff, 114px -164.66667px #ff3c00, 82px -148.66667px #fbff00, 154px -319.66667px #ff7300, 45px -230.66667px #ff00e6, -53px -286.66667px #00ffc8, 97px -247.66667px #0d00ff, -113px -229.66667px #7300ff, -178px 22.33333px #0037ff, -54px -41.66667px #6f00ff, -61px -142.66667px #ff0066, 28px -119.66667px #ff003c, -78px -145.66667px #00ff8c, -42px 78.33333px #ff1e00, 148px -235.66667px #00a2ff, -104px -164.66667px #d5ff00, -200px -361.66667px #6aff00, 243px -275.66667px #9d00ff, 57px -290.66667px #c4ff00, -136px -51.66667px #6600ff, 3px -61.66667px #eaff00, 121px -186.66667px #00fff7, -171px -407.66667px #008cff, 154px -410.66667px #ff3300, 159px 69.33333px #ffae00, -230px 4.33333px #f7ff00, 155px 62.33333px #6aff00, -38px -381.66667px #ff0d00, 33px -288.66667px #ddff00, -15px 73.33333px #00ff2f, 206px -244.66667px #8800ff, -182px -246.66667px #ffea00, 201px -69.66667px #59ff00, -181px -338.66667px #ff8800; } }
+    box-shadow: 119px -282.66667px #e6ff00, 154px 37.33333px #aaff00, -207px -77.66667px #ff0037, -223px -367.66667px #ff0022, -138px 13.33333px #00f7ff, 123px 53.33333px #ffd000, 232px 83.33333px #eeff00, -6px -116.66667px #ff0026, 116px 31.33333px #d0ff00, -130px -299.66667px #00bbff, 127px -64.66667px #ffd000, -53px -205.66667px #0062ff, 79px -111.66667px #ff0084, -202px -209.66667px #00ffcc, 150px -36.66667px #0095ff, -113px 83.33333px #002bff, 110px -69.66667px #ff006f, 93px -409.66667px #ff7300, 116px -159.66667px #00ff44, -46px -246.66667px #ea00ff, -58px -338.66667px #00eaff, -50px -19.66667px #9dff00, 241px 33.33333px #ffcc00, 10px -388.66667px #00ff15, -95px 54.33333px #ff0091, -136px -77.66667px #00d0ff, 195px -356.66667px #8000ff, 78px -50.66667px #ff003c, -74px -397.66667px #0051ff, -180px -140.66667px #0088ff, 149px -357.66667px #ffb700, 58px 47.33333px #0048ff, 88px 38.33333px #ff002b, -200px -130.66667px #0d00ff, 237px -204.66667px #001aff, 84px -173.66667px #8c00ff, 188px -83.66667px #ff00d9, -178px -129.66667px #ffaa00, 166px -54.66667px #8cff00, -67px -77.66667px #00eeff, -126px 26.33333px #ff4800, -92px -248.66667px #ff0d00, -167px -274.66667px #00ffcc, 202px -122.66667px #0095ff, 203px -361.66667px #ff001a, -153px -26.66667px #3300ff, -160px 50.33333px #f2ff00, 148px -179.66667px #00ffe6, -16px -195.66667px #48ff00, -235px -392.66667px #00ccff, -16px -333.66667px #00a2ff; } }
 
 @keyframes chatroomeffects_gravity_273Ze {
   to {
@@ -17563,6 +17569,78 @@ img.broadcastplayer_BroadcastPlaceholderImg_BjxiF {
 
 .singleWindowFocusBar.chatSingleWindowFocusBar {
   -webkit-mask: linear-gradient(to bottom, black 0px, black 1px, rgba(0, 0, 0, 0.4) 1px, rgba(0, 0, 0, 0.1) 1px, rgba(0, 0, 0, 0) 100%); }
+
+.messages_PreMessage_1jeo-,
+.messages_CodeMessage_1Fe4I,
+.messages_QuoteMessage_33jrq {
+  padding: 1em;
+  white-space: pre-wrap;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 4px; }
+
+.messages_PreMessage_1jeo-,
+.messages_CodeMessage_1Fe4I {
+  background: linear-gradient(to right, rgba(7, 10, 14, 0.4) 30%, rgba(7, 10, 14, 0.3) 40%, rgba(7, 10, 14, 0.05) 60%, rgba(7, 10, 14, 0) 80%);
+  margin: 0;
+  margin-bottom: 16px;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  border-left-style: dashed;
+  border-left-width: 1px; }
+
+.messages_CodeMessage_1Fe4I {
+  border-left-color: #080; }
+  .messages_CodeMessage_1Fe4I {
+    color: #FFFFFF;
+    /* default - before we've prettified */ }
+    .messages_CodeMessage_1Fe4I .str {
+      color: #65B042;
+      /* string  - green */ }
+    .messages_CodeMessage_1Fe4I .kwd {
+      color: #E28964;
+      /* keyword - dark pink */ }
+    .messages_CodeMessage_1Fe4I .com {
+      color: #AEAEAE;
+      font-style: italic;
+      /* comment - gray */ }
+    .messages_CodeMessage_1Fe4I .typ {
+      color: #89BDFF;
+      /* type - light blue */ }
+    .messages_CodeMessage_1Fe4I .lit {
+      color: #3387CC;
+      /* literal - blue */ }
+    .messages_CodeMessage_1Fe4I .pun {
+      color: #FFFFFF;
+      /* punctuation - white */ }
+    .messages_CodeMessage_1Fe4I .pln {
+      color: #FFFFFF;
+      /* plaintext - white */ }
+    .messages_CodeMessage_1Fe4I .tag {
+      color: #89BDFF;
+      /* html/xml tag - light blue */ }
+    .messages_CodeMessage_1Fe4I .atn {
+      color: #BDB76B;
+      /* html/xml attribute name - khaki */ }
+    .messages_CodeMessage_1Fe4I .atv {
+      color: #65B042;
+      /* html/xml attribute value - green */ }
+    .messages_CodeMessage_1Fe4I .dec {
+      color: #3387CC;
+      /* decimal - blue */ }
+
+.messages_PreMessage_1jeo- {
+  color: #FFFFFF;
+  border-left-color: #068; }
+
+.messages_QuoteMessage_33jrq {
+  color: #bcc3cf;
+  background: linear-gradient(to bottom, rgba(64, 72, 83, 0.8) 0%, rgba(64, 72, 83, 0.5) 40%, rgba(64, 72, 83, 0.2) 100%);
+  border-left: 1px solid #737a86;
+  max-width: fit-content;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  font-style: italic; }
 
 .bbcode_ChatMessageSteamStore_Failed_2wa0X,
 .bbcode_ChatMessageSteamStore_gwzSZ {
@@ -19266,78 +19344,6 @@ div:hover > .BBCodeCollapseControl {
   line-height: 30px;
   font-size: 26px;
   margin-right: 8px; }
-
-.messages_PreMessage_1jeo-,
-.messages_CodeMessage_1Fe4I,
-.messages_QuoteMessage_33jrq {
-  padding: 1em;
-  white-space: pre-wrap;
-  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 4px; }
-
-.messages_PreMessage_1jeo-,
-.messages_CodeMessage_1Fe4I {
-  background: linear-gradient(to right, rgba(7, 10, 14, 0.4) 30%, rgba(7, 10, 14, 0.3) 40%, rgba(7, 10, 14, 0.05) 60%, rgba(7, 10, 14, 0) 80%);
-  margin: 0;
-  margin-bottom: 16px;
-  -moz-tab-size: 4;
-  -o-tab-size: 4;
-  tab-size: 4;
-  border-left-style: dashed;
-  border-left-width: 1px; }
-
-.messages_CodeMessage_1Fe4I {
-  border-left-color: #080; }
-  .messages_CodeMessage_1Fe4I {
-    color: #FFFFFF;
-    /* default - before we've prettified */ }
-    .messages_CodeMessage_1Fe4I .str {
-      color: #65B042;
-      /* string  - green */ }
-    .messages_CodeMessage_1Fe4I .kwd {
-      color: #E28964;
-      /* keyword - dark pink */ }
-    .messages_CodeMessage_1Fe4I .com {
-      color: #AEAEAE;
-      font-style: italic;
-      /* comment - gray */ }
-    .messages_CodeMessage_1Fe4I .typ {
-      color: #89BDFF;
-      /* type - light blue */ }
-    .messages_CodeMessage_1Fe4I .lit {
-      color: #3387CC;
-      /* literal - blue */ }
-    .messages_CodeMessage_1Fe4I .pun {
-      color: #FFFFFF;
-      /* punctuation - white */ }
-    .messages_CodeMessage_1Fe4I .pln {
-      color: #FFFFFF;
-      /* plaintext - white */ }
-    .messages_CodeMessage_1Fe4I .tag {
-      color: #89BDFF;
-      /* html/xml tag - light blue */ }
-    .messages_CodeMessage_1Fe4I .atn {
-      color: #BDB76B;
-      /* html/xml attribute name - khaki */ }
-    .messages_CodeMessage_1Fe4I .atv {
-      color: #65B042;
-      /* html/xml attribute value - green */ }
-    .messages_CodeMessage_1Fe4I .dec {
-      color: #3387CC;
-      /* decimal - blue */ }
-
-.messages_PreMessage_1jeo- {
-  color: #FFFFFF;
-  border-left-color: #068; }
-
-.messages_QuoteMessage_33jrq {
-  color: #bcc3cf;
-  background: linear-gradient(to bottom, rgba(64, 72, 83, 0.8) 0%, rgba(64, 72, 83, 0.5) 40%, rgba(64, 72, 83, 0.2) 100%);
-  border-left: 1px solid #737a86;
-  max-width: fit-content;
-  margin-top: 4px;
-  margin-bottom: 4px;
-  font-style: italic; }
 
 .remoteplay_Separator_HudB6 {
   width: 444px;
