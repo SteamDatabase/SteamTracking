@@ -1619,6 +1619,7 @@
 "Steam_ConnectionSupportURL"	"https://support.steampowered.com/kb/1456-EUDN-2493/"
 
 "SteamUI_NetworkTroubleshootingTips"	"网络故障排除提示"
+"SteamUI_NetworkTroubleshootingTips_URL"	"https://support.steampowered.com/kb_article.php?ref=1456-EUDN-2493"
 
 
 "SteamUI_SSA_Agree"				"请完整阅读此协议。 您必须同意《Steam 订户协议》中的所有条款才能继续。"
@@ -2877,6 +2878,7 @@
 "Steam_AlreadyRunningError_Title"			"Steam - 无法启动"
 "Steam_AlreadyRunningError_Info"			"Steam 实例已在此计算机上以其它用户帐户运行。请在尝试重新启动之前关闭其它用户帐户下的 Steam。"
 "Steam_AlreadyRunningError_SupportLink"	"详情请参见 Steam 客服站点"
+"Steam_AlreadyRunningError_SupportLink_URL"	"http://support.steampowered.com/kb_article.php?ref=8787-WYIL-1543"
 "Steam_AlreadyRunningError_SupportTicket"	"请尽快联系 Steam 客服"
 
 "Steam_LoggedInElsewhere_Title"		"Steam - 已在其它位置登录"
@@ -3348,7 +3350,7 @@ Mac OS X 版本升级至 10.7 或更高版本。"
 "Steam_InstallAborted_InfoAppNoDemo"		"无法安装 %game%，因为它是试玩版，而您拥有该产品的完整版本。 请安装游戏的完整版本。"
 
 "Steam_Startup_SteamChinaRequiredTitle"					"需要蒸汽平台"
-"Steam_Startup_GetSteamChina"						"现在可以通过蒸汽平台游玩 %gamename%，请按照以下链接安装该客户端"
+"Steam_Startup_GetSteamChina"						"%gamename% 现在必须通过新的蒸汽平台客户端启动。\n\n您可使用自己的 %gamename% 游戏帐户登录，并转移游戏进度、物品、角色等级、点数等等。\n\n"
 "Steam_Startup_RunSteamChina"						"现在可以通过蒸汽平台游玩 %gamename%，请开启蒸汽平台以导入您的游戏。"
 "Steam_Startup_SteamChinaImportedUninstall"			"%gamename% 已导入蒸汽平台，现在您可以安全卸载此启动器。"
 "Steam_Startup_LauncherDeprecated"					"%gamename% 现已通过蒸汽平台运行，该安装不再受支持并将退出。"
@@ -3356,6 +3358,7 @@ Mac OS X 版本升级至 10.7 或更高版本。"
 "Steam_Startup_ImportGameFromLauncherMsg"			"您想将 %gamename% 导入蒸汽平台吗？然后您可以安全卸载传统启动器。"
 
 "Steam_Download_SteamChina"							"下载蒸汽平台"
+"Steam_Get_SteamChina"								"下载蒸汽平台"
 
 "Steam_ValidateGame_GameRunning"	"在尝试验证您的本地文件前，请退出所有正在运行的游戏和工具。"
 
@@ -3487,6 +3490,7 @@ Mac OS X 版本升级至 10.7 或更高版本。"
 "Steam_RecoverLocked_UseCode" "我已经收到来自 Steam 客服的消息并且准备输入我的特殊验证码了。"
 "Steam_RecoverLocked_MustRecover" "什么电邮消息？我没收到…"
 "Steam_RecoverLocked_WhyIsThisHappening" "为什么会这样？"
+"Steam_RecoverLocked_WhyIsThisHappening_URL" "https://support.steampowered.com/kb_article.php?ref=4020-ALZM-5519"
 "Steam_RecoverLocked_EnterCode" "我的特殊验证码是："
 "Steam_RecoverLocked_EnterCodeDetails" "一旦您验证了代码，Steam 令牌将把此电脑加入允许访问您 Steam 帐户的设备列表。"
 "Steam_RecoverLocked_WrongCode" "抱歉，您所输入的验证码不正确。"
@@ -3500,7 +3504,9 @@ Mac OS X 版本升级至 10.7 或更高版本。"
 "Steam_RecoverLocked_StartRecovery2" "我们很清楚 Steam 帐户对您来说很重要，我们也一直致力于保护您的帐户安全。"
 "Steam_RecoverLocked_StartRecovery3" "请联系 Steam 客服来获得我们工作人员的帮助。解决合法用户的帐户登录问题是我们的第一要务。"
 "Steam_RecoverLocked_RecoverySupportLink" "联系 Steam 客服"
+"Steam_RecoverLocked_RecoverySupportLink_URL" "https://support.steampowered.com"
 "Steam_RecoverLocked_LearnMore" "了解更多有关 英特尔® ID 保护技术 的内容"
+"Steam_RecoverLocked_LearnMore_URL" "https://support.steampowered.com/kb_article.php?ref=9400-IPAX-9398&auth=e39b5c227cffc8ae65414aba013e5fef"
 "Steam_RecoverLocked_CannotAccess" "抱歉，在没有进一步授权的情况下此帐户无法在此电脑上登录。"
 "Steam_RecoverLocked_Success" "成功！"
 "Steam_RecoverLocked_SuccessDetails" "您现在可以通过此电脑来访问您的 Steam 帐户了。Steam 令牌已经把此电脑列入了在将来准许访问您 Steam 帐户的设备列表。"

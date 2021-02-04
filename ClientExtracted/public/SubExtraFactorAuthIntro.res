@@ -142,7 +142,7 @@
 		"labelText"		"#Steam_RecoverLocked_WhyIsThisHappening"
 		"textAlignment"		"west"
 		"wrap"		"0"
-		"URLText"		"https://support.steampowered.com/kb_article.php?ref=4020-ALZM-5519"
+		"URLText"		"#Steam_RecoverLocked_WhyIsThisHappening_URL"
 		"zpos"			"2"
 	}
 	"IconKey"

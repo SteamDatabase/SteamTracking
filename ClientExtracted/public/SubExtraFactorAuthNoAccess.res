@@ -77,7 +77,7 @@
 		"labelText"		"#Steam_RecoverLocked_LearnMore"
 		"textAlignment"		"west"
 		"wrap"		"0"
-		"URLText"		"https://support.steampowered.com/kb_article.php?ref=9400-IPAX-9398&auth=e39b5c227cffc8ae65414aba013e5fef"
+		"URLText"		"#Steam_RecoverLocked_LearnMore_URL"
 		"zpos"			"2"
 	}
 	
@@ -97,7 +97,7 @@
 		"labelText"		"#Steam_RecoverLocked_RecoverySupportLink"
 		"textAlignment"		"west"
 		"wrap"		"0"
-		"URLText"		"https://support.steampowered.com"
+		"URLText"		"#Steam_RecoverLocked_RecoverySupportLink_URL"
 		"zpos"			"2"
 	}
 	

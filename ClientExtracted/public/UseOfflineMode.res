@@ -152,6 +152,6 @@
 		"labelText"		"#SteamUI_NetworkTroubleshootingTips"
 		"textAlignment"		"west"
 		"wrap"		"0"
-		"URLtext"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=11"
+		"URLtext"		"#SteamUI_NetworkTroubleshootingTips_URL"
 	}
 }
