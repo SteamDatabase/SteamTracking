@@ -5708,7 +5708,7 @@ html:not(.client) .partner_events .apppartnereventspage_AppPartnerEventsBody_1XL
   box-sizing: border-box;
   display: grid;
   grid-auto-flow: row;
-  grid-template-columns: 134px 1fr;
+  grid-template-columns: 142px 1fr;
   grid-template-rows: 38px 28px;
   grid-column-gap: 15px; }
   @media screen and (max-width: 500px) {
@@ -5717,7 +5717,7 @@ html:not(.client) .partner_events .apppartnereventspage_AppPartnerEventsBody_1XL
   .apppartnereventspage_AppBannerGroup_qexk-.apppartnereventspage_ClanBanner_161DW {
     grid-template-columns: 66px 1fr; }
   .apppartnereventspage_TallBanner_KBixg .apppartnereventspage_AppBannerGroup_qexk- {
-    grid-template-columns: 284px 1fr;
+    grid-template-columns: 290px 1fr;
     grid-template-rows: 100px 36px; }
     .apppartnereventspage_TallBanner_KBixg .apppartnereventspage_AppBannerGroup_qexk-.apppartnereventspage_ClanBanner_161DW {
       grid-template-columns: 136px 1fr; }
@@ -6865,7 +6865,7 @@ span.partnersaledisplay_vr_required_1P__h {
     display: flex;
     width: 100%;
     overflow-y: hidden;
-    overflow-x: scroll; }
+    overflow-x: auto; }
   .partnersaledisplay_SaleSectionTabs_1FPIV .partnersaledisplay_SaleSectionTabsRow_30oGT {
     margin: 0px auto;
     display: flex;
@@ -6973,7 +6973,8 @@ span.partnersaledisplay_vr_required_1P__h {
     overflow-x: hidden;
     margin-bottom: 12px;
     margin-right: 12px;
-    -webkit-mask-image: -webkit-gradient(linear, left 94%, left bottom, from(black), to(rgba(0, 0, 0, 0))); }
+    -webkit-mask-image: linear-gradient(to bottom, black 95%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 95%, transparent 100%); }
   .salesectioneventschedule_SaleSchedListCtn_1THwn .salesectioneventschedule_NoEventsYet_1ZTMP {
     min-height: 100px;
     width: 100%;
@@ -7074,6 +7075,11 @@ span.partnersaledisplay_vr_required_1P__h {
     min-width: 55px;
     margin-right: 4px;
     word-break: keep-all; }
+  .salesectioneventschedule_SaleSchedRow_3l83c.salesectioneventschedule_LiveNow_3vE3k .salesectioneventschedule_Time_3qoMb {
+    transform: scale(0.8);
+    color: white; }
+    .salesectioneventschedule_SaleSchedRow_3l83c.salesectioneventschedule_LiveNow_3vE3k .salesectioneventschedule_Time_3qoMb div {
+      margin-right: 0px; }
   .salesectioneventschedule_SaleSchedRow_3l83c .salesectioneventschedule_DetailsCtn_3deMj {
     display: flex;
     flex-direction: column;
@@ -7203,9 +7209,15 @@ span.partnersaledisplay_vr_required_1P__h {
   .salesectioneventschedule_EventWideCtn_3ebd7 .salesectioneventschedule_EventOptionsCtn_3O1DS {
     flex: none; }
   .salesectioneventschedule_EventWideCtn_3ebd7 .salesectioneventschedule_EventDetailsBtn_1yVMk {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
     box-sizing: border-box;
     padding-left: 10px;
     padding-right: 10px; }
+    .salesectioneventschedule_EventWideCtn_3ebd7 .salesectioneventschedule_EventDetailsBtn_1yVMk div {
+      margin-right: 5px; }
   .salesectioneventschedule_EventWideCtn_3ebd7 .salesectioneventschedule_EventIcon_1qfgw {
     width: 50px; }
 
@@ -7374,8 +7386,9 @@ span.partnersaledisplay_vr_required_1P__h {
 
 .salehilightplayerembed_PopupScreenshotContainer_3ezhP {
   width: 80vw;
-  height: auto;
-  margin: 5px; }
+  height: auto; }
+  .PopupFullWindow .salehilightplayerembed_PopupScreenshotContainer_3ezhP {
+    width: calc( 100vw - 48px); }
 
 .salehilightplayerembed_PopupScreenshot_2XVyT {
   width: 100%;
@@ -10019,6 +10032,13 @@ div.curatorfeedbrowse_CuratorHoverToolTip_rSTyU {
   letter-spacing: 2px;
   padding-bottom: 4px; }
 
+.facetedbrowse_FacetedBrowseMatchCount_3_OwR {
+  text-transform: uppercase;
+  font-size: 13px;
+  opacity: 80%;
+  margin-top: 8px;
+  margin-bottom: 4px; }
+
 .facetedbrowse_FacetedBrowseControls_1JM3A h2 {
   text-transform: uppercase;
   font-size: 15px;
@@ -10080,11 +10100,20 @@ div.curatorfeedbrowse_CuratorHoverToolTip_rSTyU {
       flex-shrink: 0;
       flex-basis: 100%; } }
 
-.facetedbrowse_FacetedBrowsePopup_2FEDs {
+.facetedbrowse_FacetedBrowsePopupCtn_24dqX {
   height: 24px;
-  width: 24px;
-  margin-left: auto;
   margin-bottom: 16px;
+  margin-left: auto;
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer; }
+
+.facetedbrowse_FacetedBrowsePopupLabel_zux_u {
+  margin-right: 8px;
+  text-transform: uppercase; }
+
+.facetedbrowse_FacetedBrowsePopup_2FEDs {
+  width: 24px;
   filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.3)); }
 
 .facetedbrowse_FacetedBrowsePopup_2FEDs svg {

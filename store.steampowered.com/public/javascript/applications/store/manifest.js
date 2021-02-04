@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6348485";
+var CLSTAMP = "6349956";
 !(function (o) {
   function e(e) {
     for (
@@ -13,35 +13,35 @@ var CLSTAMP = "6348485";
         (h[d] = 0);
     for (a in n) Object.prototype.hasOwnProperty.call(n, a) && (o[a] = n[a]);
     for (j && j(e); r.length; ) r.shift()();
-    return i.push.apply(i, s || []), b();
+    return b.push.apply(b, s || []), i();
   }
-  function b() {
-    for (var e, a = 0; a < i.length; a++) {
-      for (var d = i[a], c = !0, n = 1; n < d.length; n++) {
+  function i() {
+    for (var e, a = 0; a < b.length; a++) {
+      for (var d = b[a], c = !0, n = 1; n < d.length; n++) {
         var s = d[n];
         0 !== h[s] && (c = !1);
       }
-      c && (i.splice(a--, 1), (e = _((_.s = d[0]))));
+      c && (b.splice(a--, 1), (e = _((_.s = d[0]))));
     }
     return e;
   }
   var d = {},
     t = { 39: 0 },
     h = { 39: 0 },
-    i = [];
+    b = [];
   function _(e) {
     if (d[e]) return d[e].exports;
     var a = (d[e] = { i: e, l: !1, exports: {} });
     return o[e].call(a.exports, a, a.exports, _), (a.l = !0), a.exports;
   }
-  (_.e = function (i) {
+  (_.e = function (b) {
     var e = [];
-    t[i]
-      ? e.push(t[i])
-      : 0 !== t[i] &&
-        { 2: 1, 3: 1, 4: 1, 6: 1, 7: 1, 8: 1, 40: 1, 41: 1 }[i] &&
+    t[b]
+      ? e.push(t[b])
+      : 0 !== t[b] &&
+        { 2: 1, 3: 1, 4: 1, 6: 1, 7: 1, 8: 1, 40: 1, 41: 1 }[b] &&
         e.push(
-          (t[i] = new Promise(function (e, c) {
+          (t[b] = new Promise(function (e, c) {
             for (
               var a =
                   "css/applications/store/" +
@@ -115,17 +115,17 @@ var CLSTAMP = "6348485";
                     69: "shared_turkish-json",
                     70: "shared_ukrainian-json",
                     71: "shared_vietnamese-json",
-                  }[i] || i) +
+                  }[b] || b) +
                   ".css?contenthash=" +
                   {
                     1: "31d6cfe0d16ae931b73c",
                     2: "93c5357de809b2edc04b",
                     3: "c1b1393101b771edb342",
-                    4: "66609bf020fa4c0ab7a1",
+                    4: "3421a2bda9766a495865",
                     5: "31d6cfe0d16ae931b73c",
                     6: "c8a936d7304217f28c47",
                     7: "ec433dd8cfb12ab117d0",
-                    8: "ca35dd27dd3272630055",
+                    8: "62fd5f3801064fe187ea",
                     10: "31d6cfe0d16ae931b73c",
                     11: "31d6cfe0d16ae931b73c",
                     12: "31d6cfe0d16ae931b73c",
@@ -216,7 +216,7 @@ var CLSTAMP = "6348485";
                     98: "31d6cfe0d16ae931b73c",
                     99: "31d6cfe0d16ae931b73c",
                     100: "31d6cfe0d16ae931b73c",
-                  }[i],
+                  }[b],
                 n = _.p + a,
                 d = document.getElementsByTagName("link"),
                 s = 0;
@@ -235,25 +235,25 @@ var CLSTAMP = "6348485";
               if ((f = (r = o[s]).getAttribute("data-href")) === a || f === n)
                 return e();
             }
-            var b = document.createElement("link");
-            (b.rel = "stylesheet"),
-              (b.type = "text/css"),
-              (b.onload = e),
-              (b.onerror = function (e) {
+            var i = document.createElement("link");
+            (i.rel = "stylesheet"),
+              (i.type = "text/css"),
+              (i.onload = e),
+              (i.onerror = function (e) {
                 var a = (e && e.target && e.target.src) || n,
                   d = new Error(
-                    "Loading CSS chunk " + i + " failed.\n(" + a + ")"
+                    "Loading CSS chunk " + b + " failed.\n(" + a + ")"
                   );
                 (d.code = "CSS_CHUNK_LOAD_FAILED"),
                   (d.request = a),
-                  delete t[i],
-                  b.parentNode.removeChild(b),
+                  delete t[b],
+                  i.parentNode.removeChild(i),
                   c(d);
               }),
-              (b.href = n),
-              document.getElementsByTagName("head")[0].appendChild(b);
+              (i.href = n),
+              document.getElementsByTagName("head")[0].appendChild(i);
           }).then(function () {
-            t[i] = 0;
+            t[b] = 0;
           }))
         );
     var a,
@@ -262,13 +262,13 @@ var CLSTAMP = "6348485";
       d,
       f,
       c,
-      r = h[i];
+      r = h[b];
     return (
       0 !== r &&
         (r
           ? e.push(r[2])
           : ((a = new Promise(function (e, a) {
-              r = h[i] = [e, a];
+              r = h[b] = [e, a];
             })),
             e.push((r[2] = a)),
             ((n = document.createElement("script")).charset = "utf-8"),
@@ -347,13 +347,13 @@ var CLSTAMP = "6348485";
                 69: "shared_turkish-json",
                 70: "shared_ukrainian-json",
                 71: "shared_vietnamese-json",
-              }[(c = i)] || c) +
+              }[(c = b)] || c) +
               ".js?contenthash=" +
               {
                 1: "df11d24a080d96519fb7",
                 2: "7760fad32a03c40d7eb3",
                 3: "c64257ff8c6737f9bd3d",
-                4: "b4df9cbca70028a5820d",
+                4: "5f5f6efb30a9f53d9878",
                 5: "060555050458ceadd2b9",
                 6: "4feb17cfb86a3f409dd7",
                 7: "9ce7f3c5b146b18a1880",
@@ -395,7 +395,7 @@ var CLSTAMP = "6348485";
                 45: "36e26da1b458a527f293",
                 46: "2f1f513a31357bc2f59f",
                 47: "855294e7d88b1073e118",
-                48: "663a4f587558fb424cfc",
+                48: "a1623b1c79f230a79fec",
                 49: "acd2f83fcc8d78b84ec6",
                 50: "5e2944affda3daa2abd7",
                 51: "3f1b0d6bc8cb974084c4",
@@ -454,18 +454,18 @@ var CLSTAMP = "6348485";
               (n.onerror = n.onload = null), clearTimeout(f);
               var a,
                 d,
-                c = h[i];
+                c = h[b];
               0 !== c &&
                 (c &&
                   ((a = e && ("load" === e.type ? "missing" : e.type)),
                   (d = e && e.target && e.target.src),
                   (s.message =
-                    "Loading chunk " + i + " failed.\n(" + a + ": " + d + ")"),
+                    "Loading chunk " + b + " failed.\n(" + a + ": " + d + ")"),
                   (s.name = "ChunkLoadError"),
                   (s.type = a),
                   (s.request = d),
                   c[1](s)),
-                (h[i] = void 0));
+                (h[b] = void 0));
             }),
             (f = setTimeout(function () {
               d({ type: "timeout", target: n });
@@ -528,5 +528,5 @@ var CLSTAMP = "6348485";
   (a.push = e), (a = a.slice());
   for (var n = 0; n < a.length; n++) e(a[n]);
   var j = c;
-  b();
+  i();
 })([]);
