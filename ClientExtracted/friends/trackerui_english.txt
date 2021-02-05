@@ -557,6 +557,7 @@
 "Friends_SteamCommunity"	"Steam Community"
 "Limited_Explanation"	"Your account does not meet the requirements to use this feature."
 "Limited_ForDetails"	"Visit Steam Support for more information."
+"Limited_ForDetails_URL"	"https://help.steampowered.com/wizard/HelpWithLimitedAccount"
 
 "Friends_Chat_RoomModerated_Entry"		"The chat room has been set to officers-only chat by %member_making_change%.\n"
 "Friends_Chat_RoomUnmoderated_Entry"		"The chat room has been set to all-users chat by %member_making_change%.\n"

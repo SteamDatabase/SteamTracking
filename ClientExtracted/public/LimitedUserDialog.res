@@ -111,6 +111,6 @@
 		"labelText"		"#Limited_ForDetails"
 		"textAlignment"		"west"
 		"wrap"		"0"
-		"URLText"		"https://help.steampowered.com/wizard/HelpWithLimitedAccount"
+		"URLText"		"#Limited_ForDetails_URL"
 	}
 }

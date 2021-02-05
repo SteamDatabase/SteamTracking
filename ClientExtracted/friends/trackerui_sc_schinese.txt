@@ -48,6 +48,7 @@
 		"controller_mobile_touch" "蒸汽平台流式 Touch 控制器"
 		"Friends_SteamCommunity" "蒸汽平台社区"
 		"Limited_ForDetails" "访问蒸汽平台客服页面以了解更多信息。"
+		"Limited_ForDetails_URL" "https://help.steamchina.com/wizard/HelpWithLimitedAccount"
 		"friends_trade_you_have_steam_guard_disabled" "在您可以进行交易之前，您必须先启用蒸汽平台令牌。在“设置”窗口里启用蒸汽平台令牌。"
 		"friends_trade_you_havent_had_steam_guard_enabled_long_enough" "您必须启用蒸汽平台令牌至少 %days% 天才能参与交易。"
 		"friends_trade_you_recently_changed_email" "您最近更改了与蒸汽平台帐户关联的电子邮件地址。在更改电子邮件地址后接下来的五天内您将无法交易物品。"

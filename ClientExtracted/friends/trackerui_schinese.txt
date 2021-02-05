@@ -556,6 +556,7 @@
 "Friends_SteamCommunity"	"Steam 社区"
 "Limited_Explanation"	"您的帐户不符合使用此功能的要求。"
 "Limited_ForDetails"	"访问 Steam 客服页面以了解更多信息。"
+"Limited_ForDetails_URL"	"https://help.steampowered.com/wizard/HelpWithLimitedAccount"
 
 "Friends_Chat_RoomModerated_Entry"		"%member_making_change% 将聊天室设置为仅管理员参与聊天模式。\n"
 "Friends_Chat_RoomUnmoderated_Entry"		"%member_making_change% 将聊天室设置为所有用户参与聊天模式。\n"
