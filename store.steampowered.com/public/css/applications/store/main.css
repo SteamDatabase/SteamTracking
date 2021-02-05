@@ -7158,12 +7158,16 @@ span.partnersaledisplay_vr_required_1P__h {
     font-size: 14px;
     padding: 6px 0;
     margin-right: 7px; }
+    .salesectioneventschedule_SaleAppWideCtn_3QOgi .salesectioneventschedule_GameButtons_nZS28 .salesectioneventschedule_GameButton_ExiOL {
+      margin: 2px 3px; }
     .salesectioneventschedule_SaleAppWideCtn_3QOgi .salesectioneventschedule_GameButtons_nZS28 .DialogButton {
       margin: 2px 3px;
       padding: 0 10px;
       white-space: nowrap;
       width: auto;
       flex-basis: 50%; }
+      .salesectioneventschedule_SaleAppWideCtn_3QOgi .salesectioneventschedule_GameButtons_nZS28 .DialogButton:disabled {
+        color: lightgray; }
       .salesectioneventschedule_SaleAppWideCtn_3QOgi .salesectioneventschedule_GameButtons_nZS28 .DialogButton:hover {
         background: linear-gradient(to right, #8ed629 5%, #6aa621 95%);
         color: white;

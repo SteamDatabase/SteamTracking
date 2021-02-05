@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6351067";
+var CLSTAMP = "6352342";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [9],
   {
@@ -47074,6 +47074,7 @@ var CLSTAMP = "6351067";
         WideDetailCtn: "salesectioneventschedule_WideDetailCtn_2UUN8",
         ReleaseDate: "salesectioneventschedule_ReleaseDate_3pYbY",
         GameButtons: "salesectioneventschedule_GameButtons_nZS28",
+        GameButton: "salesectioneventschedule_GameButton_ExiOL",
         WideActionCtn: "salesectioneventschedule_WideActionCtn_mZEz5",
         EventWideCtn: "salesectioneventschedule_EventWideCtn_3ebd7",
         Title: "salesectioneventschedule_Title_J6ivk",
@@ -67034,7 +67035,11 @@ var CLSTAMP = "6351067";
                         { disabled: !0 },
                         Object(N.f)("#Sale_InLibrary")
                       )
-                    : d.createElement(ce.l, { info: t }),
+                    : d.createElement(
+                        "div",
+                        { className: Z.a.GameButton },
+                        d.createElement(ce.l, { info: t })
+                      ),
                   n && d.createElement(q.a, { appLinkInfo: t })
                 )
               )
