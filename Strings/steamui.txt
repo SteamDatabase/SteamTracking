@@ -20082,7 +20082,7 @@ file://{resources}/layout/settings/settings_about.xml
 build_date
 Feb  4 2021
 build_time
-17:02:58
+18:31:49
 package_version
 local
 SteamClient020
@@ -28044,7 +28044,7 @@ https://steamchina.com
 https://www.steampowered.com
 WebsiteURL
 steam/cached/aboutdialog.res
-17:05:08
+18:33:48
 CAboutDialog
 ValveSurveySummarizeData
 #steam_systeminfo_title
@@ -39611,7 +39611,7 @@ H=
 `
 @
 @
-G8
+^8
 d
 e
 8
