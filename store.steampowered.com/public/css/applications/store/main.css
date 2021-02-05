@@ -7151,19 +7151,27 @@ span.partnersaledisplay_vr_required_1P__h {
       color: #CECECE; }
   .salesectioneventschedule_SaleAppWideCtn_3QOgi .salesectioneventschedule_GameButtons_nZS28 {
     flex: 1;
-    min-width: 150px;
+    min-width: 160px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     font-size: 14px;
-    padding: 6px 0;
     margin-right: 7px; }
     .salesectioneventschedule_SaleAppWideCtn_3QOgi .salesectioneventschedule_GameButtons_nZS28 .salesectioneventschedule_GameButton_ExiOL {
       margin: 2px 3px; }
+      .salesectioneventschedule_SaleAppWideCtn_3QOgi .salesectioneventschedule_GameButtons_nZS28 .salesectioneventschedule_GameButton_ExiOL div {
+        margin: 0;
+        white-space: normal;
+        height: auto;
+        padding: 6px 12px; }
+    .salesectioneventschedule_SaleAppWideCtn_3QOgi .salesectioneventschedule_GameButtons_nZS28 .salesectioneventschedule_DemoButton_20uhj {
+      margin: 2px 3px;
+      white-space: normal;
+      line-height: normal;
+      padding: 6px 12px; }
     .salesectioneventschedule_SaleAppWideCtn_3QOgi .salesectioneventschedule_GameButtons_nZS28 .DialogButton {
       margin: 2px 3px;
       padding: 0 10px;
-      white-space: nowrap;
       width: auto;
       flex-basis: 50%; }
       .salesectioneventschedule_SaleAppWideCtn_3QOgi .salesectioneventschedule_GameButtons_nZS28 .DialogButton:disabled {
