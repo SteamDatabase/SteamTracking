@@ -10,6 +10,7 @@ __TEXT
 :
 __objc_methname
 __TEXT
+G"
 __cstring
 __TEXT
 __gcc_except_tab__TEXT
@@ -54,7 +55,6 @@ __common
 __DATA
 __bss
 __DATA
-@N
 H
 __LINKEDIT
 
@@ -64,10 +64,9 @@ __LINKEDIT
 "
 
 p
-X-
-M
+`-
 p
-0Y
+8Y
 P
 
 8
@@ -114,10 +113,9 @@ h
 8
 /usr/lib/libobjc.A.dylib
 &
-pM
+xM
 )
 H
-{
 `5
 10CUtlString
 10CUtlVectorIN12CFontAmalgam10TFontRangeE10CUtlMemoryIS1_EE
@@ -1004,8 +1002,6 @@ MainMenu
 Apple
 fsPathMakeRef: Status %ld
 $$$: Status %ld
-steambeta
-steam
 #steam_about
 About Steam
 #steam_menu_preferences
@@ -1025,6 +1021,9 @@ Show All
 #steam_menu_quitsteam
 Quit Steam
 q
+steambeta
+steamchina
+steam
 URLCommand
 cmd
 ForceQuit
@@ -1816,6 +1815,7 @@ Seconds
 %sToday
 %sYesterday
 %sTomorrow
+
 
 
 @
