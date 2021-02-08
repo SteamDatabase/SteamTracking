@@ -1051,7 +1051,7 @@ img.movie_thumb {
 }*/
 
 .blotter_gamepurchase_content {
-	padding: 10px 0px 2px 6px;
+	padding: 10px 4px 2px 6px;
 	overflow: hidden;
 	position: relative; /* since we are overlapping it with extras */
 }
@@ -1062,7 +1062,6 @@ img.movie_thumb {
 }
 
 .blotter_gamepurchase_text {
-	margin: 8px;
 	overflow: hidden;
 }
 
