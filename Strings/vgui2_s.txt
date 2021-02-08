@@ -68,7 +68,6 @@ p
 p
 8Y
 P
-$
 
 8
 @loader_path/libtier0_s.dylib
