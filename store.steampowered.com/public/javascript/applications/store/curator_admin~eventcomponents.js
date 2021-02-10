@@ -1051,7 +1051,7 @@
               if (t) return t.clan_event_gid;
             }),
             (e.prototype.BIsLoggedIn = function () {
-              return p.j.logged_in;
+              return p.k.logged_in;
             }),
             (e.prototype.CreateOrUpdateRSSNewFeed = function (i, o) {
               return (
@@ -1254,7 +1254,7 @@
               );
             }),
             (e.prototype.Init = function () {
-              var e = Object(p.g)("curatoradmin", "application_config");
+              var e = Object(p.h)("curatoradmin", "application_config");
               this.ValidateStoreDefault(e) &&
                 ((this.m_defaultAdmin = new F(e)),
                 this.m_mapClanAccountToAdmin.set(
@@ -1274,7 +1274,7 @@
               return e && "string" == typeof e.webapi_token;
             }),
             (e.prototype.BIsLoggedIn = function () {
-              return p.j.logged_in;
+              return p.k.logged_in;
             }),
             (e.prototype.BHavePendingInfoRequests = function () {
               return (
@@ -2292,7 +2292,7 @@
               var t = this.props,
                 n = t.newsData,
                 r = t.clanSteamID,
-                a = new u.q();
+                a = new u.p();
               (a.GID = "PreviewPartnerEventRow_0"),
                 (a.clanSteamID = r),
                 (a.postTime = Date.now() / 1e3),

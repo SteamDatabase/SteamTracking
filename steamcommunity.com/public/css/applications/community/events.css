@@ -2849,6 +2849,13 @@ p a:hover {
   padding: 5px;
   font-weight: bolder; }
 
+.saleeditorlocationcontrolwidget_SelectArea_3hAkB {
+  min-height: 100px; }
+  .saleeditorlocationcontrolwidget_SelectArea_3hAkB .saleeditorlocationcontrolwidget_dropDown_a8hfO {
+    margin-top: 12px;
+    position: absolute;
+    width: 90%; }
+
 .partnereventspecialcategories_EventCategory_SteamAwardsNomination_3QxOk {
   background-image: linear-gradient(to right, rgba(255, 140, 0, 0.5) 0%, rgba(57, 61, 71, 0.5) 20%);
   margin-bottom: 20px; }

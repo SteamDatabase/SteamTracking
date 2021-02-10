@@ -610,8 +610,9 @@
         EventDisplay_ReferencedApps_Joiner: ", ",
         EventDisplay_ReferencedApps: "Referenced content: %2$s.",
         EventDisplay_ReferencedApps_Plural: "Referenced content: %2$s.",
-        AddToWishlist: "Add to your Wishlist",
+        AddToWishlist_short: "+ Wishlist",
         Wishlisted: "On your Wishlist",
+        Wishlisted_short: "Wishlist",
         AddToWishlist_ttip:
           "Get notified by email when your wishlisted items get released or are on sale",
         Wishlist_Error: "Update Wishlist Error",
@@ -1358,8 +1359,10 @@
         Sale_RemoveFromWishlist: "Remove from wishlist",
         Sale_AddToLibrary: "+ Add to Library",
         Sale_SeeEventDetails: "See Event Details",
+        Sale_WatchNow: "Watch Now",
         Sale_PlayNow: "Play Now",
         Sale_EventSchedule: "Event Schedule",
+        Sale_BroadcastSchedule: "Broadcast Schedule",
         Sale_EventSchedule_NoUpcomingEvents: "No upcoming events",
         Sale_EventSchedule_NoEventsScheduled:
           "No events scheduled yet in this section",
@@ -1368,6 +1371,7 @@
         Sale_CuratorDisplay_ListDefaultTitle: "Curator Recommendation List",
         Sale_CuratorDisplay_ListDefaultDesc:
           "See the %1$s's recommendation of games listed on this event.",
+        Sale_SectionLink_BrowseAll: "Browse All",
         Sale_MeetDev: "Meet the Developers",
         Sale_Preferences: "Preferences",
         Sale_PlaceHolder:
@@ -1838,6 +1842,10 @@
           "Please use a browser that supports HTML videos to watch this trailer.",
         FacetedBrowse_Heading: "Narrow By",
         FacetedBrowse_NoMatches: "No matches found.",
+        FacetedBrowse_MatchCount: "%1$s match",
+        FacetedBrowse_MatchCount_Plural: "%1$s matches",
+        FacetedBrowse_Reset: "Reset",
+        FacetedBrowse_ReturnToTop: "Return to Top",
         App_Taxonomy_Survey_QSuperGenreTitle: "Top-Level Genres",
         App_Taxonomy_Survey_QGenreTitle: "Genres",
         App_Taxonomy_Survey_QSubGenreTitle: "Sub-Genres",

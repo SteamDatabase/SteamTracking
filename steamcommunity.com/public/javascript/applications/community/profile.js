@@ -2174,7 +2174,7 @@
                       this.m_SteamInterface.GetServiceTransport(),
                       t
                     )),
-                    (r = z.b.Init(x.c)).Body().set_steamid(p.h.steamid),
+                    (r = z.b.Init(x.c)).Body().set_steamid(p.i.steamid),
                     r.Body().set_language(p.c.LANGUAGE),
                     (this.m_promiseEquipped = x.n.GetProfileItemsEquipped(
                       this.m_SteamInterface.GetServiceTransport(),
@@ -3184,7 +3184,7 @@
                     case 0:
                       return (
                         (t = z.b.Init(ge.c)).SetBodyFields({
-                          steamid: p.h.steamid,
+                          steamid: p.i.steamid,
                           filter_user_uploaded_only: !0,
                         }),
                         [
@@ -3581,7 +3581,7 @@
               c = r.locCityCode;
             (this.m_Location = new le(i, n, a, o, s, c)),
               (this.m_GroupList = new be(e.PrimaryGroup));
-            var l = new T.a(p.h.steamid);
+            var l = new T.a(p.i.steamid);
             (this.m_MiniProfileData = new R(l.GetAccountID())),
               (this.m_persona = new P.b(l)),
               Object(m.l)(function () {
@@ -3630,7 +3630,7 @@
             (e.prototype.GetConstructedURL = function () {
               return this.m_strCustomURL
                 ? p.c.COMMUNITY_BASE_URL + "id/" + this.m_strCustomURL + "/"
-                : p.c.COMMUNITY_BASE_URL + "profiles/" + p.h.steamid + "/";
+                : p.c.COMMUNITY_BASE_URL + "profiles/" + p.i.steamid + "/";
             }),
             (e.prototype.GetAvatarHash = function () {
               return this.m_strAvatarHash;
@@ -3700,7 +3700,7 @@
                     case 0:
                       (t = new FormData()).append("avatar", o),
                         t.append("type", "player_avatar_image"),
-                        t.append("sId", p.h.steamid),
+                        t.append("sId", p.i.steamid),
                         t.append("sessionid", p.c.SESSIONID),
                         t.append("doSub", "1"),
                         t.append("json", "1"),
@@ -8413,11 +8413,11 @@
                     var t;
                     return Object(y.e)(this, function (e) {
                       return (
-                        (t = Object(p.f)("config", "profile_config")) &&
+                        (t = Object(p.g)("config", "profile_config")) &&
                           Object.assign(s, t),
                         (hr = new je(
-                          Object(p.f)("profile-edit", "profile_edit_config"),
-                          Object(p.f)("profile-badges", "profile_edit_config")
+                          Object(p.g)("profile-edit", "profile_edit_config"),
+                          Object(p.g)("profile-badges", "profile_edit_config")
                         )),
                         Object(Ae.a)(p.c.EREALM) ||
                           hr.Profile.GroupList.GetUserGroups(),
@@ -11256,7 +11256,7 @@
           }
           return (
             (e.prototype.BIsLoggedIn = function () {
-              return M.h.logged_in;
+              return M.i.logged_in;
             }),
             (e.prototype.SetTarget = function (e, t) {
               (this.m_targetID = e),
@@ -11310,7 +11310,7 @@
                       return this.BIsLoggedIn()
                         ? ((this.m_bPointsBalanceLoadedOrInFlight = !0),
                           (t = m.b.Init(y)).SetBodyFields({
-                            steamid: M.h.steamid,
+                            steamid: M.i.steamid,
                           }),
                           [4, h.GetSummary(this.m_transport, t)])
                         : [2, Promise.resolve(null)];
@@ -12033,7 +12033,7 @@
               l.s_LoyaltyAwardModalStore ||
                 (e
                   ? (l.s_LoyaltyAwardModalStore = new ee(e))
-                  : ((t = Object(M.f)("loyaltystore", "application_config")),
+                  : ((t = Object(M.g)("loyaltystore", "application_config")),
                     (r = new a.a(M.c.WEBAPI_BASE_URL, t.webapi_token)),
                     (l.s_LoyaltyAwardModalStore = new ee(
                       r.GetServiceTransport()

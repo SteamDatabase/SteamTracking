@@ -5185,10 +5185,6 @@ textarea:-webkit-autofill:focus,
   overflow-wrap: break-word;
   word-wrap: break-word;
   word-break: break-word;
-  -ms-hyphens: auto;
-  -moz-hyphens: auto;
-  -webkit-hyphens: auto;
-  hyphens: auto;
   max-width: 688px; }
 
 .partnereventdisplay_LibraryEventBodyContainer_32mHv .partnereventdisplay_EventDetailsBody_A_A2B {
@@ -6954,6 +6950,23 @@ span.partnersaledisplay_vr_required_1P__h {
   display: flex;
   align-items: center;
   justify-content: center; }
+
+.partnersaledisplay_SectionLabelCtn_9so3K {
+  display: flex;
+  flex-direction: row;
+  width: 100%; }
+  .partnersaledisplay_SectionLabelCtn_9so3K .partnersaledisplay_SectionLabelLinkButton_1tTSn {
+    margin-left: auto;
+    background: #4a2a3c;
+    padding: 4px 10px;
+    border-radius: 3px;
+    border: 1px solid #50484c;
+    height: fit-content;
+    text-transform: uppercase;
+    font-weight: bold; }
+    .partnersaledisplay_SectionLabelCtn_9so3K .partnersaledisplay_SectionLabelLinkButton_1tTSn:hover {
+      background: #7a5a6c;
+      border-color: white; }
 
 /* stylelint-disable */
 
@@ -10056,6 +10069,10 @@ div.curatorfeedbrowse_CuratorHoverToolTip_rSTyU {
     flex-wrap: nowrap;
     justify-content: flex-end; } }
 
+@media only screen and (max-width: 1420px) {
+  .facetedbrowse_FacetedBrowseCtn_1Drr- {
+    display: grid; } }
+
 @media only screen and (min-width: 1420px) {
   .facetedbrowse_FacetedBrowseControls_1JM3A {
     padding: 10px;
@@ -10067,7 +10084,13 @@ div.curatorfeedbrowse_CuratorHoverToolTip_rSTyU {
 
 @media only screen and (max-width: 1420px) {
   .facetedbrowse_FacetedBrowseControls_1JM3A {
-    width: 100%; } }
+    width: 200px;
+    padding: 20px;
+    grid-row-start: 2;
+    grid-column-start: 1;
+    z-index: 10;
+    opacity: 95%;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.75); } }
 
 .facetedbrowse_FacetedBrowseControls_1JM3A h1 {
   text-transform: uppercase;
@@ -10081,6 +10104,9 @@ div.curatorfeedbrowse_CuratorHoverToolTip_rSTyU {
   opacity: 80%;
   margin-top: 8px;
   margin-bottom: 4px; }
+
+.facetedbrowse_FacetedBrowseMatchCount_3_OwR a {
+  cursor: pointer; }
 
 .facetedbrowse_FacetedBrowseControls_1JM3A h2 {
   text-transform: uppercase;
@@ -10142,6 +10168,10 @@ div.curatorfeedbrowse_CuratorHoverToolTip_rSTyU {
     .facetedbrowse_FacetedBrowseItems_3EdZT {
       flex-shrink: 0;
       flex-basis: 100%; } }
+  @media only screen and (max-width: 1420px) {
+    .facetedbrowse_FacetedBrowseItems_3EdZT {
+      grid-row-start: 2;
+      grid-column-start: 1; } }
 
 .facetedbrowse_FacetedBrowsePopupCtn_24dqX {
   height: 24px;
@@ -12435,7 +12465,13 @@ img.broadcastplayer_BroadcastPlaceholderImg_3hxn9 {
 
 .curatorlist_CuratorListCtn_2gWFd {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  margin-bottom: 100px; }
+  .curatorlist_CuratorListCtn_2gWFd .curatorlist_CuratorMoreCtn_16t3P {
+    margin-top: 60px; }
+    .curatorlist_CuratorListCtn_2gWFd .curatorlist_CuratorMoreCtn_16t3P a {
+      text-decoration: underline;
+      font-size: 14px; }
 
 .curatorlist_TopReviewInfo_3SZBz {
   font-size: 25px;
@@ -12456,8 +12492,10 @@ img.broadcastplayer_BroadcastPlaceholderImg_3hxn9 {
 
 .curatorlist_Title_1MhFd {
   font-size: 46px;
+  line-height: 49px;
   font-weight: bold;
-  margin-top: 20px; }
+  margin-top: 20px;
+  margin-bottom: 14px; }
 
 .curatorlist_Blurb_rrcHS {
   font-size: 20px;
@@ -12474,8 +12512,10 @@ img.broadcastplayer_BroadcastPlaceholderImg_3hxn9 {
       width: 15%; }
 
 .curatorlist_CuratorList_1VI6G {
-  display: flex;
-  flex-direction: column; }
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: 1fr;
+  grid-gap: 16px; }
   .curatorlist_CuratorList_1VI6G.curatorlist_CuratorListGrid_qJM6j {
     display: grid;
     grid-auto-flow: row;
@@ -12486,8 +12526,8 @@ img.broadcastplayer_BroadcastPlaceholderImg_3hxn9 {
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   display: flex;
   margin: 0px;
-  background: linear-gradient(180deg, #323C41, #15161a);
-  box-shadow: 1px 1px 8px black; }
+  background: linear-gradient(195deg, #323C41, #15161a);
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.4); }
   .curatorlist_CuratorReview_31hoQ .curatorlist_CapsuleCtn_MY9Lk {
     width: 350px;
     flex: none; }

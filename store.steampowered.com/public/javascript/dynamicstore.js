@@ -1776,6 +1776,10 @@ GStoreItemData = {
 	{
 		var rgStrictItems = [], rgGoodItems = [], rgOtherItems = [], rgBadItems = [];
 
+		var fnAnnotatePriority = function ( item, priority ) { return item; };
+		if ( Settings.include_priority )
+			fnAnnotatePriority = function ( item, priority ) { item.priority = priority; return item; };
+
 		if ( !cMaxItemsToDisplay )
 			cMaxItemsToDisplay = rgItems.length;
 
@@ -1829,18 +1833,23 @@ GStoreItemData = {
 				break;
 		}
 
+		if ( Settings.include_priority )
+			rgStrictItems.forEach( function( item ) { fnAnnotatePriority( item , 1 ); } );
+
 		if ( cMinItemsToDisplay )
 		{
 			for ( i = 0; rgStrictItems.length < cMinItemsToDisplay && i < rgGoodItems.length; i++ )
-				rgStrictItems.push( rgGoodItems[i] );
+			{
+				rgStrictItems.push( fnAnnotatePriority( rgGoodItems[i], 2 ) );
+			}
 
 			if ( Settings.enforce_minimum )
 			{
 				for ( i = 0; rgStrictItems.length < cMinItemsToDisplay && i < rgOtherItems.length; i++ )
-					rgStrictItems.push( rgOtherItems[i] );
+					rgStrictItems.push( fnAnnotatePriority( rgOtherItems[i], 3 ) );
 
 				for ( i = 0; rgStrictItems.length < cMinItemsToDisplay && i < rgBadItems.length; i++ )
-					rgStrictItems.push( rgBadItems[i] );
+					rgStrictItems.push( fnAnnotatePriority( rgBadItems[i], 4 ) );
 			}
 		}
 
@@ -2198,70 +2207,102 @@ GDynamicStorePage = {
 		} catch( e ) { OnDynamicStorePageException(e); }
 	},
 
-	FilterCapsules: function( nMin, nMax, $elElements, $elContainer, rgFilterParams)
+	ItemIDFromCapsule: function( $capsule )
+	{
+		var unPackageId = $capsule.data('ds-packageid');
+		var unBundleId = $capsule.data('ds-bundleid');
+		var unAppId = $capsule.data('ds-appid');
+
+		// bundles set package and appids, packages set appids, so start from the outside and work down.
+		if ( unBundleId )
+			return { bundleid: unBundleId };
+		else if ( unPackageId)
+			return { packageid: unPackageId };
+		else if ( unAppId )
+			return { appid: unAppId };
+
+		return null;
+	},
+
+	BItemValid: function( item, oShownItems, opts )
+	{
+		var unAppId = item.appid;
+
+		if( unAppId )
+		{
+			var rgAppIds = [ unAppId ];
+			if( unAppId.toString().indexOf(',') !== -1 )
+			{
+				rgAppIds = unAppId.toString().split( ',' );
+				unAppId = rgAppIds[0];
+			}
+
+			for ( var i = 0; i < rgAppIds.length; i++ )
+			{
+				if ( oShownItems.rgAppIds.indexOf( rgAppIds[i] ) !== -1 )
+				{
+					return false;
+				}
+			}
+
+			if ( opts && opts.filter_dlc )
+			{
+				var rgAppData = GStoreItemData.rgAppData[unAppId];
+
+				// Treat DLC as the base app; so we either show the DLC or the base game; but only one (and whichever is in top position).
+				// If the user owns the base game already, only show the DLC
+				if ( rgAppData && rgAppData.dlc_for_app )
+				{
+					if ( !GDynamicStore.BIsAppOwned( rgAppData.dlc_for_app, false ) )
+					{
+						return false;
+					}
+
+					oShownItems.rgAppIds.push( rgAppData.dlc_for_app );
+				}
+			}
+
+			for ( var i = 0; i < rgAppIds.length; i++ )
+				oShownItems.rgAppIds.push( rgAppIds[i] );
+		}
+
+		if ( item.packageid )
+		{
+			if ( oShownItems.rgPackageIds.indexOf( item.packageid ) !== -1 )
+				return false;
+
+			oShownItems.rgPackageIds.push( item.packageid );
+		}
+
+		if ( item.bundleid )
+		{
+			if ( oShownItems.rgBundleIds.indexOf( item.bundleid ) !== -1 )
+				return false;
+
+			oShownItems.rgBundleIds.push( item.bundleid );
+		}
+
+		return true;
+	},
+
+	FilterCapsules: function( nMin, nMax, $elElements, $elContainer, rgFilterParams )
 	{
 		// Get a list of appids to filter
 		var rgItems = [];
-		var rgAppIds = [];
-
-		var fnItemFromCapsule = function( $capsule )
-		{
-			var unPackageId = $capsule.data('ds-packageid');
-			var unBundleId = $capsule.data('ds-bundleid');
-			var unAppId = $capsule.data('ds-appid');
-
-			// bundles set package and appids, packages set appids, so start from the outside and work down.
-			if ( unBundleId )
-				return { bundleid: unBundleId };
-			else if ( unPackageId)
-				return { packageid: unPackageId };
-			else if ( unAppId )
-				return { appid: unAppId };
-
-			return null;
-		}
+		var oShownItems = { rgAppIds: [], rgPackageIds: [], rgBundleIds: [] };
 
 		// Remove duplicates or DLC from the list
 		for( var i = 0; i < $elElements.length; i++ )
 		{
 			var $capsule = $J( $elElements[i] );
-			var item = fnItemFromCapsule( $capsule );
+			var item = GDynamicStorePage.ItemIDFromCapsule( $capsule );
 			if ( !item )
 				continue;
 
-			var unAppId = item.appid;
-
-			if( unAppId )
-			{
-				if( unAppId.toString().indexOf(',') !== -1 )
-					unAppId = unAppId.toString().split(',')[0];
-
-				if( rgAppIds.indexOf( unAppId ) !== -1 )
-				{
-					$capsule.remove();
-					continue;
-				}
-
-				var rgAppData = GStoreItemData.rgAppData[unAppId];
-
-				// Treat DLC as the base app; so we either show the DLC or the base game; but only one (and whichever is in top position).
-				// If the user owns the base game already, only show the DLC
-				if( rgAppData && rgAppData.dlc_for_app )
-				{
-					if( !GDynamicStore.BIsAppOwned( rgAppData.dlc_for_app, false ) )
-					{
-						$capsule.remove();
-						continue;
-					}
-
-					rgAppIds.push( rgAppData.dlc_for_app );
-				}
-
-
-				rgAppIds.push( unAppId );
-			}
-
-			rgItems.push( item );
+			if ( GDynamicStorePage.BItemValid( item, oShownItems, { filter_dlc: true } ) )
+				rgItems.push( item );
+			else
+				$capsule.remove();
 		}
 
 		// Filter
@@ -2273,7 +2314,7 @@ GDynamicStorePage = {
 		for( var i = 0; i < $elElements.length; i++ )
 		{
 			var $capsule = $J( $elElements[i] );
-			var item = fnItemFromCapsule( $capsule );
+			var item = GDynamicStorePage.ItemIDFromCapsule( $capsule );
 			if ( !item )
 				continue;
 
@@ -2303,7 +2344,6 @@ GDynamicStorePage = {
 	{
 		if( rgList )
 		{
-
 			for ( var i = 0; i < rgList.length; i++ )
 			{
 				if ( oItem.bundleid && rgList[i].bundleid == oItem.bundleid )
@@ -2325,7 +2365,6 @@ GDynamicStorePage = {
 
 	FilterItemsForDisplay: function( rgItems, strSettingsName, cMinItemsToDisplay, cMaxItemsToDisplay, rgAdditionalSettings )
 	{
-
 		var Settings = this.oSettings[strSettingsName] || {};
 		var ApplicableSettings = this.oApplicableSettings[strSettingsName] || {};
 
@@ -2348,7 +2387,131 @@ GDynamicStorePage = {
 		return GStoreItemData.FilterItemsForDisplay( rgItems, Settings, ApplicableSettings, cMaxItemsToDisplay, cMinItemsToDisplay )
 	},
 
+	FilterAndPrioritizeCapsules: function( rgCapsules, strPriorityListKey, strSettingsName, AdditionalSettings, oShownItems, cMinItemsToDisplay )
+	{
+		// initialize the shown item list
+		if ( !oShownItems.rgAppIds )
+			Object.assign( oShownItems, { rgAppIds: [], rgPackageIds: [], rgBundleIds: [] }, oShownItems );
+
+		var rgPriorityList = g_rgAppPriorityLists[strPriorityListKey] || [];
+		var rgItems = [];
+		var rgUnidentifiedCaps = [];
+
+		for ( var i = 0; i < rgCapsules.length; i++ )
+		{
+			var $capsule = $J( rgCapsules[i] );
+			var itemid = GDynamicStorePage.ItemIDFromCapsule( $capsule );
+
+			if ( !itemid )
+			{
+				// if there's no item associated, preseve it; it's probably a sale page or event
+				rgUnidentifiedCaps.push( $capsule );
+				continue;
+			}
+			else if ( !GDynamicStorePage.BItemValid( itemid, oShownItems ) )
+			{
+				// duplicate
+				continue;
+			}
+
+			itemid.capsule = $capsule;
+			rgItems.push( itemid );
+		}
+
+		rgItems =  SortItemListByPriorityList( rgItems, strPriorityListKey );
+		var rgItems = GDynamicStorePage.FilterItemsForDisplay( rgItems, strSettingsName, cMinItemsToDisplay, rgItems.length, AdditionalSettings );
+
+		// put anything we didn't understand at the front
+		while ( rgUnidentifiedCaps.length )
+			rgItems.unshift( { capsule: rgUnidentifiedCaps.shift(), priority: 1 } );
+
+		return rgItems;
+	},
+
+	FilterAndPrioritizeItems: function( rgItems, strPriorityListKey, strSettingsName, AdditionalSettings, oShownItems, cMinItemsToDisplay )
+	{
+		// initialize the shown item list
+		if ( !oShownItems.rgAppIds )
+			Object.assign( oShownItems, { rgAppIds: [], rgPackageIds: [], rgBundleIds: [] }, oShownItems );
+
+		// first filter out items that are dupes of ones we've already been asked to list
+		var rgItemsNoDupes = [];
+		for( var i = 0; i < rgItems.length; i++ )
+		{
+			if ( GDynamicStorePage.BItemValid( rgItems[i], oShownItems ) )
+				rgItemsNoDupes.push( rgItems[i] );
+		}
+		rgItemsNoDupes = SortItemListByPriorityList( rgItemsNoDupes, strPriorityListKey );
+		return GDynamicStorePage.FilterItemsForDisplay( rgItemsNoDupes, strSettingsName, cMinItemsToDisplay, rgItemsNoDupes.length, AdditionalSettings );
+	},
 };
+
+var g_rgAppPriorityLists = {};
+var g_rgAppPriorityListMaps = {};
+function InitAppPriorityLists( rgAppPriorityLists )
+{
+	Object.assign( g_rgAppPriorityLists, rgAppPriorityLists );
+}
+
+function GetAppPriorityListMap( strPriorityListName )
+{
+	if ( !g_rgAppPriorityListMaps[strPriorityListName] )
+	{
+		var rgAppPriorityList = g_rgAppPriorityLists[strPriorityListName] || [];
+
+		var rgPositionByApp = {};
+		for ( var i = 0; i < rgAppPriorityList.length; i++ )
+			rgPositionByApp[ ItemKey( rgAppPriorityList[i] ) ] = i;
+
+		g_rgAppPriorityListMaps[strPriorityListName] = rgPositionByApp;
+	}
+
+	return g_rgAppPriorityListMaps[strPriorityListName];
+}
+
+function ItemKey( rgItem )
+{
+	if ( rgItem.appid )
+		return 'a' + rgItem.appid;
+	else if ( rgItem.packageid )
+		return 'p' + rgItem.packageid;
+	else if ( rgItem.bundleid )
+		return 'b' + rgItem.bundleid;
+
+	return 'unknown';
+}
+
+function SortItemListByPriorityList( rgItemList, strPriorityListName )
+{
+	var rgPositionByApp = GetAppPriorityListMap( strPriorityListName );
+	if ( !rgPositionByApp )
+		return rgItemList.slice();
+
+	/*
+	javascript sort is stable (except in IE), so this shouldn't be needed
+	for ( var i = 0; i < rgItemList.length; i++ )
+	{
+		var key = ItemKey( rgItemList[i] );
+		if ( key && rgPositionByApp[key] === undefined )
+			rgPositionByApp[key] = i + 1000;
+	}
+	 */
+
+	var rgItemListSorted = rgItemList.slice();
+	rgItemListSorted.sort( function( a, b ) {
+		var posA = rgPositionByApp[ ItemKey( a ) ];
+		var posB = rgPositionByApp[ ItemKey( b ) ];
+		return ( posA !== undefined ? posA : 1000 ) - ( posB !== undefined ? posB : 1000 );
+	});
+
+	DEBUG_LogItemList( strPriorityListName, rgItemListSorted );
+
+	return rgItemListSorted;
+}
+
+function DEBUG_LogItemList( strListName, rgItems )
+{
+	}
 
 function ShowHowDoDiscoveryQueuesWorkDialog()
 {

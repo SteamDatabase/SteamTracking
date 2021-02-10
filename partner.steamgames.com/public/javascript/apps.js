@@ -3163,7 +3163,7 @@ function GetLeaderboardEntries( target, template, onReceivedEntries, appid, lead
 				var personaname = results['entries'][i]['personaname'];
 				var details = results['entries'][i]['details'];
 
-				var deletename = EscapeHTML( personaname );
+				var deletename = EscapeHTML( personaname.replace( /'/g, "\\'" ) ); // Escape any HTML and any single-quotes in the personaname
 				var html = template.evaluate( { score: score, steamid: steamid, rank: rank, leaderboardid: leaderboardid, personaname: personaname, details: details, deletename: deletename } );
 				element.insert( html );
 			}

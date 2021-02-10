@@ -297,19 +297,7 @@ GHomepage = {
 
 	OnDynamicStoreReady: function()
 	{
-		var HomeSettings;
 		var bHaveUser = ( g_AccountID != 0 );
-
-
-		// RECOMMENDED SPOTLIGHTS
-		try {
-			// we render this first, it may "steal" some recommendations from the main cap to show here instead.
-			if ( bHaveUser )
-			{
-				GHomepage.RenderRecommendedForYouSpotlight();
-			}
-		} catch( e ) { OnHomepageException(e); }
-
 
 		GHomepage.oDisplayLists.main_cluster_legacy = GHomepage.oDisplayListsRaw.main_cluster_legacy || [];
 		GHomepage.oDisplayLists.main_cluster = GHomepage.oDisplayListsRaw.main_cluster || [];
@@ -1401,9 +1389,130 @@ GHomepage = {
 	},
 
 
+	RenderPrioritizedSpotlightsAndSpecials: function()
+	{
+		var $Spotlights = $J('#spotlight_carousel');
+		var $Pages = $J('#spotlight_carousel > .carousel_items').children();
+
+		var oShownItems = {};
+		var Settings = {
+			games_already_in_library: false, localized: true, displayed_elsewhere: false, only_current_platform: true,
+			dlc_for_you: true,
+			enforce_minimum: true, include_priority: true };
+		var rgSpotlights = GDynamicStorePage.FilterAndPrioritizeCapsules( $J('.home_area_spotlight', $Pages), 'spotlights', 'home', Settings, oShownItems, 3 );
+		var rgDailyDeals = GDynamicStorePage.FilterAndPrioritizeCapsules( $J('.store_capsule.daily_deal', $Pages), 'spotlights', 'home', Settings, oShownItems, 2 );
+		var rgSpecials = GDynamicStorePage.FilterAndPrioritizeItems( GHomepage.oDisplayLists.specials, 'spotlights', 'home', Settings, oShownItems, 16 );
+
+		// rebuild pages one at a time
+		$Pages.empty();
+
+		for ( var iPage = 0; iPage < $Pages.length; iPage++ )
+		{
+			var cColumnsUsed = 0;
+			var cItemsInCol = 0;
+			var $Col = null;
+			var $Page = $J($Pages[iPage]);
+			var rgItemsShown = [];
+
+			var fnSetSNRDepth = function( snr ) {
+				var rgParts = snr.split('_');
+				rgParts[5] = iPage + 1;
+				return rgParts.join('_');
+			};
+
+			// put in one or two spotlights
+			while ( rgSpotlights.length && cColumnsUsed < 2 )
+			{
+				// a high priority indicates we wanted to filter it (eg, already owned).  Show at most 1 on first page.
+				//if ( cColumnsUsed >= 1 && rgSpotlights[0].priority >= 3 )
+				//	break;
+
+				var spotlight = rgSpotlights.shift();
+
+				// never show ignored spotlights
+				if ( spotlight.priority >= 4 )
+					continue;
+
+				$J( spotlight.capsule ).find( 'a' ).each( function() { ModifyLinkSNR( $J(this), fnSetSNRDepth ); } );
+				rgItemsShown.push( spotlight );
+				$Page.append( spotlight.capsule );
+				cColumnsUsed++;
+			}
+
+			// next prefer daily deals
+			while ( rgDailyDeals.length && cColumnsUsed < 3 )
+			{
+				var dailydeal = rgDailyDeals.shift();
+
+				// never show ignored daily deals
+				if ( dailydeal.priority >= 4 )
+					continue;
+
+				if ( !$Col )
+				{
+					$Col = $J('<div/>');
+					$Page.append( $Col );
+				}
+
+				$J( dailydeal.capsule ).find( 'a' ).each( function() { ModifyLinkSNR( $J(this), fnSetSNRDepth ); } );
+				$Col.append( dailydeal.capsule );
+				rgItemsShown.push( dailydeal );
+
+				if ( ++cItemsInCol >= 2 )
+				{
+					$Col = null;
+					cItemsInCol = 0;
+					cColumnsUsed++;
+
+					// if we don't have many good daily deals to show on front page, stop now
+					if ( iPage == 0 && rgDailyDeals.length && rgDailyDeals[0].priority >= 3 )
+						break;
+				}
+			}
+
+			while ( rgSpecials.length && cColumnsUsed < 3 )
+			{
+				var oItem = rgSpecials.shift();
+
+				if ( !$Col )
+				{
+					$Col = $J('<div/>');
+					$Page.append( $Col );
+				}
+
+				var $Target = $J( '<div/>', {'class': 'specials_target' });
+				$Target.append ( GHomepage.BuildHomePageGenericCap ( 'spotlight_specials', oItem.appid, oItem.packageid, oItem.bundleid, {
+					'discount_class': 'daily_deal_discount discount_block_large',
+					'capsule_size': 'header'
+				}, iPage + 1 ) );
+				rgItemsShown.push( oItem );
+
+				$Col.append( $Target );
+
+				if ( ++cItemsInCol >= 2 )
+				{
+					$Col = null;
+					cItemsInCol = 0;
+					cColumnsUsed++;
+				}
+			}
+
+			if ( iPage == 0 )
+				GDynamicStore.MarkAppDisplayed( rgItemsShown );
+		}
+
+		$Spotlights.css( 'visibility', '' );
+	},
+
 
 	RenderSpotlightSection: function()
 	{
+		if ( g_rgAppPriorityLists && g_rgAppPriorityLists['spotlights'] )
+		{
+			GHomepage.RenderPrioritizedSpotlightsAndSpecials();
+			return;
+		}
+
 		var Settings = GHomepage.oSettings['home'] || {};
 		var ApplicableSettings = GHomepage.oApplicableSettings['home'] || {};
 
@@ -1489,7 +1598,7 @@ GHomepage = {
 			$Target.append ( GHomepage.BuildHomePageGenericCap ( 'spotlight_specials', oItem.appid, oItem.packageid, oItem.bundleid, {
 					'discount_class': 'daily_deal_discount discount_block_large',
 					'capsule_size': 'header'
-			}, $Target.data('depth') ) );
+			}, $Target.data('depth') + 1 ) );
 
 			$J( function() {
 				InitDailyDealTimer( $J('#'+strHTMLID),oItem.discount_end);
@@ -1499,6 +1608,7 @@ GHomepage = {
 		});
 
 		GDynamicStore.DecorateDynamicItems( $J('.specials_target') );
+		$J('#spotlight_carousel').css( 'visibility', '' );
 
 	},
 
@@ -2074,147 +2184,6 @@ GHomepage = {
 			$TagBlock.show();
 		}
 	},
-
-	RenderRecommendedForYouSpotlight: function()
-	{
-		var $Element = $J('#home_recommended_spotlight');
-
-		if ( $Element.length == 0 )
-			return;
-
-		var rgGamesShown = [];
-		var nGamesToShow = 1;
-
-		var rgRecommendedSpotlightOptions = [];
-
-		// prefer recommended things that have a discount and passes filter
-		for ( var i = 0; i < GHomepage.rgRecommendedGames.length && rgRecommendedSpotlightOptions.length < nGamesToShow; i++ )
-		{
-			var unAppID = GHomepage.rgRecommendedGames[i].appid;
-			if ( GStoreItemData.BAppPassesFilters( unAppID, GHomepage.oSettings.main_cluster, GHomepage.oApplicableSettings.main_cluster ) &&
-				 GStoreItemData.rgAppData[unAppID] && GStoreItemData.rgAppData[unAppID].discount )
-				rgRecommendedSpotlightOptions.push( unAppID );
-		}
-
-		// then recommended items that pass the filter
-		for ( var i = 0; i < GHomepage.rgRecommendedGames.length && rgRecommendedSpotlightOptions.length < nGamesToShow; i++ )
-		{
-			var unAppID = GHomepage.rgRecommendedGames[i].appid;
-			if ( GStoreItemData.BAppPassesFilters( unAppID, GHomepage.oSettings.main_cluster, GHomepage.oApplicableSettings.main_cluster ) )
-				rgRecommendedSpotlightOptions.push( unAppID );
-		}
-
-		if ( rgRecommendedSpotlightOptions.length > 0 )
-		{
-			var $Spotlight = GHomepage.RenderRecommendedSpotlight( rgRecommendedSpotlightOptions[0], 'Similar to games you play' );
-			if ( $Spotlight )
-			{
-				$Element.append( $Spotlight );
-				rgGamesShown.push( rgRecommendedSpotlightOptions[0] );
-			}
-		}
-
-		if ( rgGamesShown.length < nGamesToShow )
-		{
-			// try and find something onsale from wishlist that we have data for
-			var rgWishlistItemsOnSale = [];
-			for ( var unAppID in GDynamicStore.s_rgWishlist )
-			{
-				if ( GStoreItemData.rgAppData[unAppID] && GStoreItemData.rgAppData[unAppID].discount &&
-					rgGamesShown.indexOf( unAppID ) == -1 )
-					rgWishlistItemsOnSale.push( unAppID );
-			}
-
-			v_shuffle( rgWishlistItemsOnSale );
-			for ( var i = 0; i < rgWishlistItemsOnSale.length; i++ )
-			{
-				// game from wishlist on sale
-				var $Spotlight = GHomepage.RenderRecommendedSpotlight( rgWishlistItemsOnSale[i], 'From your wishlist' );
-				if ( $Spotlight )
-				{
-					$Spotlight.children( 'a.recommended_spotlight' ).addClass( 'wishlist_recommendation' );
-					$Element.append( $Spotlight );
-					rgGamesShown.push( rgWishlistItemsOnSale[i] );
-					break;
-				}
-			}
-		}
-
-		if ( rgGamesShown.length < nGamesToShow && GHomepage.rgFriendRecommendations )
-		{
-			for ( var i = 0; i < GHomepage.rgFriendRecommendations.length; i++ )
-			{
-				var unAppID = GHomepage.rgFriendRecommendations[i].appid;
-				if ( rgGamesShown.indexOf( unAppID ) == -1 )
-				{
-					var $Spotlight = GHomepage.RenderRecommendedSpotlight( unAppID, 'Recommended by friends' );
-					if ( $Spotlight )
-					{
-						$Element.append( $Spotlight );
-						rgGamesShown.push( unAppID );
-						GHomepage.rgFriendRecommendations.splice( i, 1 );
-						break;
-					}
-				}
-			}
-		}
-
-		if ( rgGamesShown.length < nGamesToShow && rgRecommendedSpotlightOptions.length > 1 && rgGamesShown.indexOf( rgRecommendedSpotlightOptions[1] ) == -1 )
-		{
-			var $Spotlight = GHomepage.RenderRecommendedSpotlight( rgRecommendedSpotlightOptions[1], 'Similar to games you play' );
-			if ( $Spotlight )
-			{
-				$Element.append( $Spotlight );
-				rgGamesShown.push( rgRecommendedSpotlightOptions[1] );
-			}
-		}
-
-		$Element.append( $J('<div/>', {'style': 'clear: both;' } ) );
-
-		// remove anything we showed here from the main cluster rotation
-		for ( var i = GHomepage.rgRecommendedGames.length - 1; i >= 0; i-- )
-		{
-			if ( rgGamesShown.indexOf( GHomepage.rgRecommendedGames[i].appid ) != -1 )
-			{
-				GHomepage.rgRecommendedGames.splice( i, 1 );
-			}
-		}
-
-		GDynamicStore.DecorateDynamicItems( $Element );
-	},
-
-	RenderRecommendedSpotlight: function( unAppID, strDescription, bNoDSFlag )
-	{
-		var $SpotlightCtn = $J('<div/>', {'class': 'recommended_spotlight_ctn' } );
-
-		var params = { 'class': 'recommended_spotlight broadcast_capsule' };
-		var rgItemData = GStoreItemData.GetCapParams( 'recommended_spotlight', unAppID, null, null, params );
-
-		if ( !rgItemData )
-			return null;
-
-		var strHeaderURL = rgItemData.header;
-		if ( !strHeaderURL )	// wishlist items may not have a header loaded
-			strHeaderURL = 'https://cdn.cloudflare.steamstatic.com/steam/apps/' + unAppID + '/header.jpg';
-
-		var $Spotlight = $J('<a/>', params );
-		GStoreItemData.BindHoverEvents( $Spotlight, unAppID );
-		$Spotlight.append( $J('<div/>', {'class': 'recommended_spotlight_cap'}).append( $J('<img/>', {src: strHeaderURL } ) ) );
-		$Spotlight.append( $J('<div/>', {'class': 'recommended_spotlight_desc'} ).text( strDescription ) );
-		$Spotlight.append( $J('<div/>', {'class': 'recommended_spotlight_price' }).html( rgItemData.discount_block ? $J(rgItemData.discount_block).addClass('discount_block_spotlight discount_block_large') : '&nbsp;' ) );
-
-		var rgAppInfo = GStoreItemData.rgAppData[ unAppID ];
-		if ( rgAppInfo && rgAppInfo.has_live_broadcast )
-			$Spotlight.append( $J('<div/>', {'class': 'broadcast_live_stream_icon' } ).append( 'Live') );
-		$Spotlight.append( $J('<div/>', {'style': 'clear: both;' } ) );
-
-		$SpotlightCtn.append(
-			$Spotlight
-		);
-		return $SpotlightCtn;
-	},
-
-
 
 	RenderMarketingMessages: function(  )
 	{

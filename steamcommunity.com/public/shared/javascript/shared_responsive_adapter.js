@@ -444,6 +444,21 @@ function Responsive_BuildChangeLanguageOption( $MenuItem )
 			$J('<option/>', {value: "english"} ).text( 'English' )
 		);
 					$SelectBox.append(
+				$J('<option/>', {value: "schinese"} ).text( '简体中文 (Simplified Chinese)' )
+			);
+					$SelectBox.append(
+				$J('<option/>', {value: "tchinese"} ).text( '繁體中文 (Traditional Chinese)' )
+			);
+					$SelectBox.append(
+				$J('<option/>', {value: "japanese"} ).text( '日本語 (Japanese)' )
+			);
+					$SelectBox.append(
+				$J('<option/>', {value: "koreana"} ).text( '한국어 (Korean)' )
+			);
+					$SelectBox.append(
+				$J('<option/>', {value: "thai"} ).text( 'ไทย (Thai)' )
+			);
+					$SelectBox.append(
 				$J('<option/>', {value: "bulgarian"} ).text( 'Български (Bulgarian)' )
 			);
 					$SelectBox.append(
@@ -453,31 +468,28 @@ function Responsive_BuildChangeLanguageOption( $MenuItem )
 				$J('<option/>', {value: "danish"} ).text( 'Dansk (Danish)' )
 			);
 					$SelectBox.append(
-				$J('<option/>', {value: "dutch"} ).text( 'Nederlands (Dutch)' )
+				$J('<option/>', {value: "german"} ).text( 'Deutsch (German)' )
 			);
 					$SelectBox.append(
-				$J('<option/>', {value: "finnish"} ).text( 'Suomi (Finnish)' )
+				$J('<option/>', {value: "spanish"} ).text( 'Español - España (Spanish - Spain)' )
 			);
 					$SelectBox.append(
-				$J('<option/>', {value: "french"} ).text( 'Français (French)' )
+				$J('<option/>', {value: "latam"} ).text( 'Español - Latinoamérica (Spanish - Latin America)' )
 			);
 					$SelectBox.append(
 				$J('<option/>', {value: "greek"} ).text( 'Ελληνικά (Greek)' )
 			);
 					$SelectBox.append(
-				$J('<option/>', {value: "german"} ).text( 'Deutsch (German)' )
-			);
-					$SelectBox.append(
-				$J('<option/>', {value: "hungarian"} ).text( 'Magyar (Hungarian)' )
+				$J('<option/>', {value: "french"} ).text( 'Français (French)' )
 			);
 					$SelectBox.append(
 				$J('<option/>', {value: "italian"} ).text( 'Italiano (Italian)' )
 			);
 					$SelectBox.append(
-				$J('<option/>', {value: "japanese"} ).text( '日本語 (Japanese)' )
+				$J('<option/>', {value: "hungarian"} ).text( 'Magyar (Hungarian)' )
 			);
 					$SelectBox.append(
-				$J('<option/>', {value: "koreana"} ).text( '한국어 (Korean)' )
+				$J('<option/>', {value: "dutch"} ).text( 'Nederlands (Dutch)' )
 			);
 					$SelectBox.append(
 				$J('<option/>', {value: "norwegian"} ).text( 'Norsk (Norwegian)' )
@@ -492,28 +504,25 @@ function Responsive_BuildChangeLanguageOption( $MenuItem )
 				$J('<option/>', {value: "brazilian"} ).text( 'Português - Brasil (Portuguese - Brazil)' )
 			);
 					$SelectBox.append(
-				$J('<option/>', {value: "russian"} ).text( 'Русский (Russian)' )
-			);
-					$SelectBox.append(
 				$J('<option/>', {value: "romanian"} ).text( 'Română (Romanian)' )
 			);
 					$SelectBox.append(
-				$J('<option/>', {value: "schinese"} ).text( '简体中文 (Simplified Chinese)' )
+				$J('<option/>', {value: "russian"} ).text( 'Русский (Russian)' )
 			);
 					$SelectBox.append(
-				$J('<option/>', {value: "spanish"} ).text( 'Español - España (Spanish - Spain)' )
+				$J('<option/>', {value: "finnish"} ).text( 'Suomi (Finnish)' )
 			);
 					$SelectBox.append(
 				$J('<option/>', {value: "swedish"} ).text( 'Svenska (Swedish)' )
 			);
 					$SelectBox.append(
-				$J('<option/>', {value: "tchinese"} ).text( '繁體中文 (Traditional Chinese)' )
-			);
-					$SelectBox.append(
-				$J('<option/>', {value: "thai"} ).text( 'ไทย (Thai)' )
-			);
-					$SelectBox.append(
 				$J('<option/>', {value: "turkish"} ).text( 'Türkçe (Turkish)' )
+			);
+					$SelectBox.append(
+				$J('<option/>', {value: "vietnamese"} ).text( 'Tiếng Việt (Vietnamese)' )
+			);
+					$SelectBox.append(
+				$J('<option/>', {value: "ukrainian"} ).text( 'Українська (Ukrainian)' )
 			);
 		
 		var Modal = null;

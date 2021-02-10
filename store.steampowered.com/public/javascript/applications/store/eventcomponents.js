@@ -399,7 +399,7 @@
             }),
             (e.prototype.SetActionChangeEvent = function (e) {
               return (
-                (this.m_moderator = M.j.accountid),
+                (this.m_moderator = M.k.accountid),
                 (this.m_rtWhen = Date.now() / 1e3),
                 (this.m_action = r.k_ChangeEventType),
                 (this.m_newEventType = e),
@@ -408,7 +408,7 @@
             }),
             (e.prototype.SetReviewAction = function (e) {
               return (
-                (this.m_moderator = M.j.accountid),
+                (this.m_moderator = M.k.accountid),
                 (this.m_rtWhen = Date.now() / 1e3),
                 (this.m_action = e ? r.k_ModReviewed : r.k_ModUnreviewed),
                 this
@@ -416,7 +416,7 @@
             }),
             (e.prototype.SetAdultOnlyContentAction = function (e) {
               return (
-                (this.m_moderator = M.j.accountid),
+                (this.m_moderator = M.k.accountid),
                 (this.m_rtWhen = Date.now() / 1e3),
                 (this.m_action = e
                   ? r.k_ModFlagAdultOnlyContent
@@ -426,7 +426,7 @@
             }),
             (e.prototype.SetReReviewAction = function (e) {
               return (
-                (this.m_moderator = M.j.accountid),
+                (this.m_moderator = M.k.accountid),
                 (this.m_rtWhen = Date.now() / 1e3),
                 (this.m_action = e ? r.k_ModReReviewed : r.k_ModUnreviewed),
                 this
@@ -437,7 +437,7 @@
             }),
             (e.prototype.SetUpdateSeasonalTags = function (e) {
               return (
-                (this.m_moderator = M.j.accountid),
+                (this.m_moderator = M.k.accountid),
                 (this.m_rtWhen = Date.now() / 1e3),
                 (this.m_action = r.k_UpdateSeasonTags),
                 (this.m_newTagAdded = e),
@@ -2028,7 +2028,7 @@
                     case 2:
                       return (
                         e.sent(),
-                        (i = f.p),
+                        (i = f.o),
                         (l = []),
                         r.value.tags &&
                           r.value.tags.forEach(function (e) {
@@ -2965,7 +2965,7 @@
                                 : [3, 9];
                             case 1:
                               return 1 == (o = e.sent()).success &&
-                                Object(f.j)(o.width, o.height, v)
+                                Object(f.i)(o.width, o.height, v)
                                 ? [
                                     4,
                                     c.GetImageInfo(r, n, h).catch(function (e) {
@@ -3441,7 +3441,7 @@
           function e() {
             (this.m_objApprovalPriviledge = null),
               (this.m_LoadingPriviledgePromise = null);
-            var e = Object(M.g)("sc_app_privildge", "application_config");
+            var e = Object(M.h)("sc_app_privildge", "application_config");
             this.ValidateStoreDefault(e)
               ? ("dev" === M.d.WEB_UNIVERSE &&
                   console.log(
@@ -3450,7 +3450,7 @@
                   ),
                 (this.m_objApprovalPriviledge = e),
                 (this.m_LoadingPriviledgePromise = null))
-              : (M.j.logged_in && M.d.EREALM === _.e.k_ESteamRealmChina) ||
+              : (M.k.logged_in && M.d.EREALM === _.e.k_ESteamRealmChina) ||
                 (this.m_objApprovalPriviledge = { bHasAccess: !1 });
           }
           return (
@@ -3559,7 +3559,7 @@
                         return (
                           (a = e.sent()),
                           r.token.reason ||
-                            o(M.j.is_support || n.can_edit || a.bHasAccess),
+                            o(M.k.is_support || n.can_edit || a.bHasAccess),
                           [2]
                         );
                     }
@@ -3573,7 +3573,7 @@
             [i]
           );
           var r = g.a.InitFromClanID(i);
-          return M.j.is_support ||
+          return M.k.is_support ||
             je.a.Get().GetPartnerEventPermissions(r).can_edit
             ? v.createElement(De.a, {
                 eventModel: a,
@@ -4313,7 +4313,7 @@
               );
             }),
             (e.prototype.Init = function () {
-              var e = Object(M.g)("rssaccountinfo", "application_config");
+              var e = Object(M.h)("rssaccountinfo", "application_config");
               this.ValidateRSSAccountConfig(e) &&
                 (this.m_rgRSSEnabledClans = e);
             }),

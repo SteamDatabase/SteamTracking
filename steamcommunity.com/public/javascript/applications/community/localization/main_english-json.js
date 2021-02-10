@@ -1580,6 +1580,9 @@
         Sale_Section_TabSettings_Title: "Tab Settings",
         Sale_Section_TabSettings_Title_ttip:
           "Control which tabs this section should appear on",
+        Sale_Section_TitleLink_BrowseAll: "Show Browse All Button",
+        Sale_Section_TitleLink_BrowseAll_ttip:
+          "By default the provided link will make the title a link, but setting this will also add a 'browse all' button to the title region",
         Sale_Section_TabSettings_DisableIDFiltering: "Disable Tab ID Filtering",
         Sale_Section_TabSettings_DisableIDFiltering_ttip:
           "When checked, the normal ID filtering that is done by the active tab will be skipped. This can be used if you want a section on several tabs to show all apps, such as everything on a user's wishlist.",

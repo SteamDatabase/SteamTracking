@@ -2,12 +2,6 @@
 var k_nTier1Max = 15;
 var k_nTier2Max = 18;
 
-var g_rgAppPriorityLists = {};
-function InitAppPriorityLists( rgAppPriorityLists )
-{
-	Object.assign( g_rgAppPriorityLists, rgAppPriorityLists );
-}
-
 function BIsSameItem( rgItem1, rgItem2 )
 {
 	return ( rgItem1.appid && rgItem1.appid == rgItem2.appid ) ||
@@ -237,47 +231,7 @@ function HomeSaleFilterHeroes( $Parent )
 
 
 
-function ItemKey( rgItem )
-{
-	if ( rgItem.appid )
-		return 'a' + rgItem.appid;
-	else if ( rgItem.packageid )
-		return 'p' + rgItem.packageid;
-	else if ( rgItem.bundleid )
-		return 'b' + rgItem.bundleid;
 
-	return 'unknown';
-}
-
-
-function SortItemListByPriorityList( rgItemList, strPriorityListName )
-{
-	var rgAppPriorityList = g_rgAppPriorityLists[strPriorityListName] || [];
-
-	if ( !rgAppPriorityList )
-		return;
-
-	var rgPositionByApp = {};
-	for ( var i = 0; i < rgAppPriorityList.length; i++ )
-		rgPositionByApp[ ItemKey( rgAppPriorityList[i] ) ] = i;
-
-	for ( var i = 0; i < rgItemList.length; i++ )
-	{
-		var key = ItemKey( rgItemList[i] );
-		if ( key && rgPositionByApp[key] === undefined )
-			rgPositionByApp[key] = i + 1000;
-	}
-
-	var rgItemListSorted = rgItemList.slice();
-	rgItemListSorted.sort( function( a, b ) {
-		var posA = rgPositionByApp[ ItemKey( a ) ];
-		var posB = rgPositionByApp[ ItemKey( b ) ];
-		return ( posA !== undefined ? posA : 1000 ) - ( posB !== undefined ? posB : 1000 );
-	});
-
-	
-	return rgItemListSorted;
-}
 
 function HomeRenderFeaturedItems( rgDisplayLists, rgTagData, rgFranchiseData, rgTagGenres = null )
 {

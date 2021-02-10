@@ -78,7 +78,7 @@
           }
           return (
             (e.prototype.BIsLoggedIn = function () {
-              return L.j.logged_in;
+              return L.k.logged_in;
             }),
             (e.prototype.SetTarget = function (e, t) {
               (this.m_targetID = e),
@@ -132,7 +132,7 @@
                       return this.BIsLoggedIn()
                         ? ((this.m_bPointsBalanceLoadedOrInFlight = !0),
                           (t = d.b.Init(u.g)).SetBodyFields({
-                            steamid: L.j.steamid,
+                            steamid: L.k.steamid,
                           }),
                           [4, u.o.GetSummary(this.m_transport, t)])
                         : [2, Promise.resolve(null)];
@@ -351,7 +351,7 @@
               l.s_LoyaltyAwardModalStore ||
                 (e
                   ? (l.s_LoyaltyAwardModalStore = new m(e))
-                  : ((t = Object(L.g)("loyaltystore", "application_config")),
+                  : ((t = Object(L.h)("loyaltystore", "application_config")),
                     (a = new o.a(L.d.WEBAPI_BASE_URL, t.webapi_token)),
                     (l.s_LoyaltyAwardModalStore = new m(
                       a.GetServiceTransport()

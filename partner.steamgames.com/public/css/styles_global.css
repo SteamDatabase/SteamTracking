@@ -503,6 +503,18 @@ input, select , textarea, button, .likeButton {
 	box-shadow: 1px 1px 0px #39393a;
 	padding: 3px;
 }
+input:disabled, select:disabled, textarea:disabled {
+    background-color: rgba(0,0,0,0.5);
+		font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		    color:#e1e1e1;
+    font-size:13px;
+    border: none;
+    border-radius: 3px;
+    box-shadow: none;
+    padding: 3px;
+}
 
 
 input:not([type="radio"]).xtra_padding {

@@ -692,7 +692,7 @@
       window.g_InteractiveRecommender = V;
       var E,
         f = a("BFsE");
-      (E = Object(r.g)("ir_config", "application_config")) &&
+      (E = Object(r.h)("ir_config", "application_config")) &&
         (Object.assign(k, E), V.Init());
       function b(e) {
         e.accountID;
@@ -1657,7 +1657,7 @@
               Object(f.a)();
             }),
             (e.prototype.render = function () {
-              return r.j.logged_in
+              return r.k.logged_in
                 ? P.a.createElement(
                     "div",
                     {
@@ -1684,7 +1684,7 @@
                       P.a.createElement(
                         "div",
                         { className: F.BottomSection },
-                        P.a.createElement(O, { accountID: r.j.accountid }),
+                        P.a.createElement(O, { accountID: r.k.accountid }),
                         P.a.createElement("div", { className: F.VerticalBar }),
                         P.a.createElement(N, { width: this.state.width })
                       )

@@ -343,7 +343,8 @@
     box-sizing: border-box; }
 
 .broadcast_embeddable_scrollingstreams_2VhFE {
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
   max-width: 136px;
   -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, black 16px);
   mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, black 16px); }
