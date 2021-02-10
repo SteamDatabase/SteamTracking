@@ -68,10 +68,10 @@
         return ve;
       }),
         n.d(t, "a", function () {
-          return Ie;
+          return Ce;
         }),
         n.d(t, "b", function () {
-          return Ce;
+          return Ie;
         });
       var d = n("mrSG"),
         p = n("q1tI"),
@@ -91,8 +91,8 @@
         b = n("pQ8y"),
         y = n("r64O"),
         v = n("StxQ"),
-        I = n("n4wG"),
-        C = n("1fPh"),
+        C = n("n4wG"),
+        I = n("1fPh"),
         w = n("6Y59"),
         M = n("exH9"),
         j = { success: !0, result: 1 },
@@ -1210,7 +1210,7 @@
           e ? Object(m.m)(e) : window
         );
       }
-      function Ie(e, t, n, r) {
+      function Ce(e, t, n, r) {
         var a = {
           type: 3,
           profileCustomizationType: t,
@@ -1223,7 +1223,7 @@
           e ? Object(m.m)(e) : window
         );
       }
-      function Ce(e, t, n, r) {
+      function Ie(e, t, n, r) {
         var a = {
           type: 2,
           profileCustomizationType: t,
@@ -1296,7 +1296,7 @@
           null,
           p.createElement(
             o.b,
-            { to: C.b.LoyaltyHowItWorks(), component: ge, onClick: t },
+            { to: I.b.LoyaltyHowItWorks(), component: ge, onClick: t },
             Object(_.f)("#Redeem_NeedToOwnApp")
           ),
           p.createElement(_e, { onClick: t }, Object(_.f)("#Button_Cancel"))
@@ -1309,7 +1309,7 @@
           null,
           p.createElement(
             o.b,
-            { to: C.b.LoyaltyHowItWorks(), component: ge, onClick: t },
+            { to: I.b.LoyaltyHowItWorks(), component: ge, onClick: t },
             Object(_.f)("#Redeem_HowToGetPoints")
           ),
           p.createElement(_e, { onClick: t }, Object(_.f)("#Button_Cancel"))
@@ -1791,7 +1791,7 @@
               a &&
                 p.createElement(
                   o.b,
-                  { to: C.b.LoyaltyStore() + "/app/" + a.appid, onClick: i },
+                  { to: I.b.LoyaltyStore() + "/app/" + a.appid, onClick: i },
                   p.createElement(
                     "div",
                     { className: f.SubHeaderAppContainer },
@@ -3330,19 +3330,41 @@
               : "redeem" == i
               ? ((t = Me(o)),
                 (r = (n = (function (e) {
-                  if (
-                    1 != e.type ||
-                    (5 != e.rewardDefinition.type &&
-                      6 != e.rewardDefinition.type)
-                  )
-                    return {
-                      discount: 0,
-                      originalCost: parseInt(e.rewardDefinition.point_cost),
-                    };
-                  var t = g.b.Get().GetBundleOfferForUser(e.rewardDefinition);
+                  switch (e.type) {
+                    case 1:
+                      if (
+                        5 != e.rewardDefinition.type &&
+                        6 != e.rewardDefinition.type
+                      )
+                        return {
+                          discount: 0,
+                          originalCost: parseInt(e.rewardDefinition.point_cost),
+                        };
+                      var t = g.b
+                        .Get()
+                        .GetBundleOfferForUser(e.rewardDefinition);
+                      return {
+                        discount: t.discount,
+                        originalCost: t.original_point_cost,
+                      };
+                    case 2:
+                      return {
+                        discount: 0,
+                        originalCost: g.b
+                          .Get()
+                          .GetUpgradableProfileShowcaseCost(),
+                      };
+                    case 3:
+                      return {
+                        discount: 0,
+                        originalCost: g.b
+                          .Get()
+                          .GetPurchasableProfileShowcaseSlotCost(),
+                      };
+                  }
                   return {
-                    discount: t.discount,
-                    originalCost: t.original_point_cost,
+                    discount: 0,
+                    originalCost: parseInt(e.rewardDefinition.point_cost),
                   };
                 })(o)).discount),
                 (a = n.originalCost),
@@ -3441,7 +3463,7 @@
                   p.createElement("div", {
                     className: f.BadgeImage,
                     style: {
-                      backgroundImage: "url( " + Object(I.a)(t.appid, a) + " )",
+                      backgroundImage: "url( " + Object(C.a)(t.appid, a) + " )",
                     },
                   })
                 ),
@@ -3916,7 +3938,7 @@
         i = s("qbgq"),
         c = s("li8c"),
         h = s("prdU"),
-        I = s("RV7a"),
+        C = s("RV7a"),
         D = s("TLQK"),
         l = s("/maY"),
         P = s("exH9"),
@@ -3933,7 +3955,7 @@
         });
       }
       var f = s("lypr"),
-        C = "none";
+        I = "none";
       function p(e, t, n) {
         void 0 === n && (n = {});
         var r = n.cInitialItems,
@@ -3965,8 +3987,8 @@
             c = w(),
             m = c[0],
             u = c[1],
-            d = Object(I.i)("padding-right", C),
-            p = Object(I.g)().spacing[C],
+            d = Object(C.i)("padding-right", I),
+            p = Object(C.g)().spacing[I],
             f = 1;
           l.width &&
             void 0 !== u.width &&
@@ -4199,7 +4221,7 @@
             v.a.Fragment,
             null,
             v.a.createElement(
-              I.c,
+              C.c,
               Object(O.a)({ verticalSpacing: "large" }, i),
               p,
               d &&
@@ -4250,9 +4272,9 @@
               "style",
             ]),
             u = "url(" + s + ")",
-            d = "mobile" === Object(I.f)();
+            d = "mobile" === Object(C.f)();
           return v.a.createElement(
-            I.a,
+            C.a,
             Object(O.a)(
               {
                 padding: ["small", "large"],
@@ -4266,7 +4288,7 @@
             ),
             !l && v.a.createElement(T, { src: s }),
             v.a.createElement(
-              I.a,
+              C.a,
               {
                 marginBottom: "medium",
                 display: "flex",
@@ -4276,10 +4298,10 @@
                 style: { zIndex: 1 },
               },
               v.a.createElement(
-                I.a,
+                C.a,
                 { display: "flex", flexDirection: "column", flexGrow: 1 },
                 v.a.createElement(
-                  I.a,
+                  C.a,
                   {
                     display: "flex",
                     flexDirection: d ? "column" : "row",
@@ -4300,7 +4322,7 @@
               )
             ),
             v.a.createElement(
-              I.c,
+              C.c,
               {
                 spacing: ["xsmall", "small"],
                 style: { alignSelf: d ? "flex-start" : "flex-end" },
@@ -4333,7 +4355,7 @@
           case 0:
             return v.a.createElement(Z, Object(O.a)({}, t));
           case 2:
-            return v.a.createElement(I.b, null, function (e) {
+            return v.a.createElement(C.b, null, function (e) {
               return "mobile" === e
                 ? v.a.createElement(Y, Object(O.a)({}, t))
                 : v.a.createElement(V, Object(O.a)({}, t));
@@ -4372,7 +4394,7 @@
                   subtitle: s || a,
                   route: l ? Object(h.e)(l) : void 0,
                 };
-              return v.a.createElement(I.b, null, function (e) {
+              return v.a.createElement(C.b, null, function (e) {
                 return "mobile" === e
                   ? v.a.createElement(U, Object(O.a)({}, m))
                   : v.a.createElement(W, Object(O.a)({}, m));
@@ -4881,8 +4903,8 @@
                   "bNoMask",
                 ]),
                 v = null,
-                I = null,
                 C = null,
+                I = null,
                 w = [
                   t,
                   fe.a.personaNameAndStatusLabel,
@@ -4891,25 +4913,25 @@
                   b && fe.a.NoMask,
                 ];
               d
-                ? (I = d())
+                ? (C = d())
                 : g || r.has_public_party_beacon
-                ? (I = A.createElement(_e, { persona: r }))
+                ? (C = A.createElement(_e, { persona: r }))
                 : Object(ae.a)(a)
-                ? ((I = Object(D.f)("#PersonaStateBlocked")),
+                ? ((C = Object(D.f)("#PersonaStateBlocked")),
                   w.push(fe.a.blocked))
                 : r.is_ingame
-                ? ((I =
+                ? ((C =
                     !r.is_in_nonsteam_game || i || Object(ae.b)(a)
                       ? r.GetCurrentGameName()
                       : Object(D.f)("#PersonaStateInNonSteamGame")),
                   i || f
                     ? i &&
                       r.is_awayOrSnooze &&
-                      (C = Object(D.f)("#PersonaStateAway"))
-                    : (C = r.GetCurrentGameRichPresence()))
+                      (I = Object(D.f)("#PersonaStateAway"))
+                    : (I = r.GetCurrentGameRichPresence()))
                 : r.m_broadcastAccountId &&
-                  (I = Object(D.f)("#PersonaStateWatchingBroadcast")),
-                (I = I || r.GetLocalizedOnlineStatus());
+                  (C = Object(D.f)("#PersonaStateWatchingBroadcast")),
+                (C = C || r.GetLocalizedOnlineStatus());
               var M = !1 === u ? !0 : !f && !u;
               r.is_awayOrSnooze &&
                 M &&
@@ -4923,11 +4945,11 @@
                   ))
                 : w.push(fe.a.noContextMenu),
                 f && w.push(fe.a.hidePersona),
-                p && (C = p()),
-                (!c && C) || w.push(fe.a.twoLine);
+                p && (I = p()),
+                (!c && I) || w.push(fe.a.twoLine);
               var N = s && !o,
                 E = N ? s : r.m_strPlayerName,
-                S = !f && (!c || !C) && !m && C;
+                S = !f && (!c || !I) && !m && I;
               return A.createElement(
                 "div",
                 Object(O.a)({}, y, {
@@ -4991,7 +5013,7 @@
                   A.createElement(
                     "div",
                     { className: fe.a.richPresenceContainer },
-                    (!c || !C) &&
+                    (!c || !I) &&
                       A.createElement(
                         "div",
                         {
@@ -5010,10 +5032,10 @@
                             },
                             A.createElement(ce.D, null)
                           ),
-                        I
+                        C
                       ),
                     !m &&
-                      C &&
+                      I &&
                       A.createElement(
                         "div",
                         {
@@ -5022,7 +5044,7 @@
                             "no-drag"
                           ),
                         },
-                        C,
+                        I,
                         " "
                       )
                   )
@@ -5078,7 +5100,7 @@
             te.e,
             { background: re },
             v.a.createElement(
-              I.a,
+              C.a,
               {
                 paddingY: "xlarge",
                 display: "flex",
@@ -5086,7 +5108,7 @@
                 alignItems: "center",
               },
               v.a.createElement(
-                I.a,
+                C.a,
                 {
                   className: $.GoldenProfileHeaderContainer,
                   paddingY: "large",
@@ -5098,7 +5120,7 @@
                   { className: $.PersonaPreviewContainer },
                   r
                     ? v.a.createElement(
-                        I.a,
+                        C.a,
                         {
                           className: $.PersonaPreviewContainer,
                           paddingY: "none",
@@ -5132,7 +5154,7 @@
                     : null
                 ),
                 v.a.createElement(
-                  I.a,
+                  C.a,
                   {
                     display: "flex",
                     flexDirection: "column",
@@ -5210,8 +5232,8 @@
         }),
         ye = s("/SGo"),
         ve = s.n(ye),
-        Ie = s("eOCM"),
-        Ce = s("HJR3"),
+        Ce = s("eOCM"),
+        Ie = s("HJR3"),
         we = s("DtjR"),
         Me = s("TBZS"),
         je = s("+m6q"),
@@ -5266,7 +5288,7 @@
                   "/" +
                   t.community_item_data.item_image_small))),
             v.a.createElement(
-              I.a,
+              C.a,
               {
                 padding: "large",
                 display: "flex",
@@ -5274,10 +5296,10 @@
                 className: Se.SaleRewardContainer,
               },
               v.a.createElement(
-                I.a,
+                C.a,
                 { className: Se.SaleRewardContainerFlex },
                 v.a.createElement(
-                  I.a,
+                  C.a,
                   { display: "flex", flexDirection: "column" },
                   v.a.createElement(
                     "div",
@@ -5479,7 +5501,7 @@
                       }),
                       v.a.createElement("img", {
                         className: c.PageHomeBannerBored,
-                        src: Ie,
+                        src: Ce,
                       }),
                       v.a.createElement("img", {
                         className: c.PageHomeBannerHugs,
@@ -5487,7 +5509,7 @@
                       }),
                       v.a.createElement("img", {
                         className: c.PageHomeBannerHappy,
-                        src: Ce,
+                        src: Ie,
                       }),
                       v.a.createElement("img", {
                         className: c.PageHomeBannerBoombox,
@@ -5651,10 +5673,10 @@
                 s = e.additionalFilter,
                 l = o || v.a.createElement(te.f, { title: r, subtitle: a });
               return v.a.createElement(
-                I.a,
+                C.a,
                 { paddingX: "none" },
                 v.a.createElement(
-                  I.e,
+                  C.e,
                   {
                     className: c.PageItemsContainer,
                     itemClassName: c.PageItemsContainerChildren,
@@ -5741,7 +5763,7 @@
                 te.e,
                 null,
                 v.a.createElement(
-                  I.a,
+                  C.a,
                   {
                     paddingY: "xlarge",
                     display: "flex",
@@ -5910,7 +5932,7 @@
             te.d,
             null,
             v.a.createElement(
-              I.a,
+              C.a,
               {
                 marginX: "xlarge",
                 display: "flex",
@@ -5918,7 +5940,7 @@
                 alignItems: "center",
               },
               v.a.createElement(
-                I.a,
+                C.a,
                 {
                   marginY: "xlarge",
                   display: "flex",
@@ -5939,7 +5961,7 @@
                 )
               ),
               v.a.createElement(
-                I.e,
+                C.e,
                 { spacing: "small" },
                 h.b.Get().active_bonuses.map(function (e) {
                   return v.a.createElement(et, { key: e.bonusid, bonus: e });
@@ -5980,7 +6002,7 @@
             i = e.pointValue,
             o = Object(D.q)(r - Date.now() / 1e3, !0);
           return v.a.createElement(
-            I.a,
+            C.a,
             {
               paddingX: "small",
               paddingY: "xsmall",
@@ -5990,7 +6012,7 @@
             },
             v.a.createElement("img", { className: Ke.Img, src: t }),
             v.a.createElement(
-              I.a,
+              C.a,
               {
                 paddingX: "xsmall",
                 display: "flex",
@@ -6033,7 +6055,7 @@
       }
       function at(e) {
         return v.a.createElement(
-          I.a,
+          C.a,
           {
             display: "flex",
             flexDirection: "column",
@@ -6051,7 +6073,7 @@
             { className: jt.SubHeaderText },
             Object(D.f)("#HowItWorks_SteamPoints_Desc1")
           ),
-          v.a.createElement("img", { src: It, className: jt.HeaderImage }),
+          v.a.createElement("img", { src: Ct, className: jt.HeaderImage }),
           v.a.createElement(
             "div",
             { className: jt.SubHeaderText },
@@ -6074,7 +6096,7 @@
             )
           );
         return v.a.createElement(
-          I.a,
+          C.a,
           {
             display: "flex",
             flexDirection: "row",
@@ -6101,7 +6123,7 @@
           Object(D.f)("#ShopNamePost")
         );
         return v.a.createElement(
-          I.a,
+          C.a,
           {
             display: "flex",
             flexDirection: "column",
@@ -6109,7 +6131,7 @@
             paddingTop: "xxlarge",
           },
           v.a.createElement(
-            I.a,
+            C.a,
             {
               display: "flex",
               flexDirection: "row",
@@ -6193,7 +6215,7 @@
             })
           ),
           v.a.createElement(
-            I.a,
+            C.a,
             {
               display: "flex",
               flexDirection: "column",
@@ -6208,7 +6230,7 @@
               Object(D.f)("#HowItWorks_UsePoints_Desc1")
             ),
             v.a.createElement(
-              I.a,
+              C.a,
               { display: "flex", flexDirection: "column", paddingTop: "large" },
               v.a.createElement(rt, {
                 iconComponent: Ae.n,
@@ -6224,17 +6246,17 @@
               })
             ),
             v.a.createElement(
-              I.a,
+              C.a,
               { className: jt.CollectionItemsContainer },
               v.a.createElement("img", { className: jt.ItemLeft, src: ct }),
-              v.a.createElement("img", { className: jt.ItemLeftMid, src: Ie }),
+              v.a.createElement("img", { className: jt.ItemLeftMid, src: Ce }),
               v.a.createElement(
                 "div",
                 { className: jt.ItemMiddle },
                 v.a.createElement("img", { className: jt.ItemFrame, src: ut }),
                 v.a.createElement("img", { className: jt.ItemAvatar, src: mt })
               ),
-              v.a.createElement("img", { className: jt.ItemRightMid, src: Ce }),
+              v.a.createElement("img", { className: jt.ItemRightMid, src: Ie }),
               v.a.createElement("img", { className: jt.ItemRight, src: we })
             )
           )
@@ -6249,7 +6271,7 @@
             style: { backgroundImage: "url(" + lt + ")" },
           },
           v.a.createElement(
-            I.a,
+            C.a,
             {
               display: "flex",
               flexDirection: "column",
@@ -6275,7 +6297,7 @@
               Object(D.f)("#HowItWorks_YourGames_Desc1")
             ),
             v.a.createElement(
-              I.a,
+              C.a,
               {
                 display: "flex",
                 flexDirection: "column",
@@ -6304,8 +6326,8 @@
         bt = s("nu2M"),
         yt = s("FfFA"),
         vt = s("bFVC"),
-        It = s("Wl4Y"),
-        Ct = s("BK9T"),
+        Ct = s("Wl4Y"),
+        It = s("BK9T"),
         wt = s("mpVu"),
         Mt = s("px4M"),
         jt = s("uOv9"),
@@ -6314,7 +6336,7 @@
             t = u.d.STORE_BASE_URL + "labs/trendingreviews/",
             n = u.d.COMMUNITY_BASE_URL + "?subsection=workshop";
           return v.a.createElement(
-            I.a,
+            C.a,
             {
               id: "CommunityAwards",
               display: "flex",
@@ -6323,7 +6345,7 @@
               paddingTop: "xxlarge",
             },
             v.a.createElement(
-              I.a,
+              C.a,
               {
                 display: "flex",
                 flexDirection: "row",
@@ -6353,7 +6375,7 @@
             ),
             !1,
             v.a.createElement(
-              I.a,
+              C.a,
               {
                 display: "flex",
                 flexDirection: "column",
@@ -6374,7 +6396,7 @@
               v.a.createElement("img", { src: vt, className: jt.AwardsUiImg })
             ),
             v.a.createElement(
-              I.a,
+              C.a,
               {
                 display: "flex",
                 flexDirection: "column",
@@ -6383,7 +6405,7 @@
                 className: jt.PageContainer,
               },
               v.a.createElement(
-                I.a,
+                C.a,
                 {
                   display: "flex",
                   flexDirection: "row",
@@ -6395,7 +6417,7 @@
                   className: jt.AwardsHotTakeApng,
                 }),
                 v.a.createElement(
-                  I.a,
+                  C.a,
                   { display: "flex", flexDirection: "column" },
                   v.a.createElement(
                     "div",
@@ -6419,7 +6441,7 @@
                 )
               ),
               v.a.createElement(
-                I.a,
+                C.a,
                 {
                   display: "flex",
                   flexDirection: "row",
@@ -6427,9 +6449,9 @@
                   justifyContent: "center",
                   paddingTop: "large",
                 },
-                v.a.createElement("img", { src: Ct, className: jt.AwardsApng }),
+                v.a.createElement("img", { src: It, className: jt.AwardsApng }),
                 v.a.createElement(
-                  I.a,
+                  C.a,
                   { display: "flex", flexDirection: "column" },
                   v.a.createElement(
                     "div",
@@ -6453,7 +6475,7 @@
                 )
               ),
               v.a.createElement(
-                I.a,
+                C.a,
                 {
                   display: "flex",
                   flexDirection: "row",
@@ -6466,7 +6488,7 @@
                   className: jt.AwardsHotTakeApng,
                 }),
                 v.a.createElement(
-                  I.a,
+                  C.a,
                   { display: "flex", flexDirection: "column" },
                   v.a.createElement(
                     "div",
@@ -6482,7 +6504,7 @@
               )
             ),
             v.a.createElement(
-              I.a,
+              C.a,
               {
                 display: "flex",
                 flexDirection: "row",
@@ -6492,7 +6514,7 @@
                 className: jt.PageContainer,
               },
               v.a.createElement(
-                I.a,
+                C.a,
                 {
                   display: "flex",
                   flexDirection: "column",
@@ -6517,7 +6539,7 @@
                 )
               ),
               v.a.createElement(
-                I.a,
+                C.a,
                 {
                   display: "flex",
                   flexDirection: "column",
@@ -6576,7 +6598,7 @@
             },
           ].filter(Boolean);
         return v.a.createElement(
-          I.a,
+          C.a,
           {
             display: "flex",
             flexDirection: "row",
@@ -6585,7 +6607,7 @@
             className: jt.FaqContainer,
           },
           v.a.createElement(
-            I.a,
+            C.a,
             { display: "flex", flexDirection: "column" },
             v.a.createElement(
               "div",
@@ -6613,7 +6635,7 @@
             te.b,
             null,
             v.a.createElement(
-              I.a,
+              C.a,
               {
                 display: "flex",
                 flexDirection: "column",
@@ -6637,7 +6659,7 @@
             r = Array.isArray(t) ? t : [t],
             a = Array.isArray(n) ? n : [n];
           return v.a.createElement(
-            I.a,
+            C.a,
             {
               display: "flex",
               flexDirection: "column",
@@ -6674,7 +6696,7 @@
                 te.e,
                 null,
                 v.a.createElement(
-                  I.a,
+                  C.a,
                   {
                     className: Pt.PageContainer,
                     marginX: "xlarge",
@@ -6682,14 +6704,14 @@
                     flexDirection: "column",
                   },
                   v.a.createElement(
-                    I.a,
+                    C.a,
                     {
                       marginY: "large",
                       display: "flex",
                       flexDirection: "column",
                     },
                     v.a.createElement(
-                      I.a,
+                      C.a,
                       {
                         marginY: "xsmall",
                         display: "flex",
@@ -6699,7 +6721,7 @@
                       Object(D.f)("#WinterSale2020_Rules_Header")
                     ),
                     v.a.createElement(
-                      I.a,
+                      C.a,
                       {
                         marginY: "xsmall",
                         display: "flex",
@@ -6710,7 +6732,7 @@
                     )
                   ),
                   v.a.createElement(
-                    I.a,
+                    C.a,
                     {
                       marginY: "medium",
                       display: "flex",
@@ -6718,7 +6740,7 @@
                       className: Pt.Section,
                     },
                     v.a.createElement(
-                      I.a,
+                      C.a,
                       {
                         marginY: "small",
                         display: "flex",
@@ -6728,7 +6750,7 @@
                       Object(D.f)("#WinterSale2020_Rules_1_Title")
                     ),
                     v.a.createElement(
-                      I.a,
+                      C.a,
                       {
                         marginY: "xsmall",
                         display: "flex",
@@ -6739,7 +6761,7 @@
                     )
                   ),
                   v.a.createElement(
-                    I.a,
+                    C.a,
                     {
                       marginY: "medium",
                       display: "flex",
@@ -6747,7 +6769,7 @@
                       className: Pt.Section,
                     },
                     v.a.createElement(
-                      I.a,
+                      C.a,
                       {
                         marginY: "small",
                         display: "flex",
@@ -6757,7 +6779,7 @@
                       Object(D.f)("#WinterSale2020_Rules_2_Title")
                     ),
                     v.a.createElement(
-                      I.a,
+                      C.a,
                       {
                         marginY: "xsmall",
                         display: "flex",
@@ -6767,7 +6789,7 @@
                       Object(D.f)("#WinterSale2020_Rules_2_Desc")
                     ),
                     v.a.createElement(
-                      I.a,
+                      C.a,
                       {
                         marginY: "xsmall",
                         display: "flex",
@@ -6778,7 +6800,7 @@
                     )
                   ),
                   v.a.createElement(
-                    I.a,
+                    C.a,
                     {
                       marginY: "medium",
                       display: "flex",
@@ -6786,7 +6808,7 @@
                       className: Pt.Section,
                     },
                     v.a.createElement(
-                      I.a,
+                      C.a,
                       {
                         marginY: "small",
                         display: "flex",
@@ -6796,7 +6818,7 @@
                       Object(D.f)("#WinterSale2020_Rules_3_Title")
                     ),
                     v.a.createElement(
-                      I.a,
+                      C.a,
                       {
                         marginY: "xsmall",
                         display: "flex",
@@ -6806,7 +6828,7 @@
                       Object(D.f)("#WinterSale2020_Rules_3_Desc")
                     ),
                     v.a.createElement(
-                      I.a,
+                      C.a,
                       {
                         marginY: "xsmall",
                         display: "flex",
@@ -6817,7 +6839,7 @@
                     )
                   ),
                   v.a.createElement(
-                    I.a,
+                    C.a,
                     {
                       marginY: "medium",
                       display: "flex",
@@ -6825,7 +6847,7 @@
                       className: Pt.Section,
                     },
                     v.a.createElement(
-                      I.a,
+                      C.a,
                       {
                         marginY: "small",
                         display: "flex",
@@ -6835,7 +6857,7 @@
                       Object(D.f)("#WinterSale2020_Rules_4_Title")
                     ),
                     v.a.createElement(
-                      I.a,
+                      C.a,
                       { marginY: "xsmall", className: Pt.SectionContent },
                       Object(D.n)(
                         "#WinterSale2020_Rules_4_Desc",
@@ -7179,10 +7201,10 @@
       function Jt() {
         var n = qt();
         return v.a.createElement(
-          I.a,
+          C.a,
           { padding: "none", className: Zt.PrimaryNav },
           v.a.createElement(
-            I.e,
+            C.e,
             { spacing: "none" },
             n.map(function (e, t) {
               return v.a.createElement(
@@ -7461,9 +7483,9 @@
       })(A.Component);
       function cn(e) {
         var t = e.children,
-          n = Object(I.h)("(max-width: 965px)");
+          n = Object(C.h)("(max-width: 965px)");
         return v.a.createElement(
-          I.d,
+          C.d,
           null,
           v.a.createElement(
             "div",
@@ -7471,7 +7493,7 @@
             v.a.createElement(mn, null),
             n && v.a.createElement(Xt, null),
             v.a.createElement(
-              I.a,
+              C.a,
               {
                 display: "flex",
                 flexDirection: "row",
@@ -7479,7 +7501,7 @@
               },
               !n && v.a.createElement(Jt, null),
               v.a.createElement(
-                I.a,
+                C.a,
                 { flex: "1", className: tn.ShellScroll },
                 t
               )
@@ -7491,7 +7513,7 @@
           var e = null;
           h.b.Get().BIsLoggedIn() &&
             (e = v.a.createElement(
-              I.a,
+              C.a,
               {
                 display: "flex",
                 flexDirection: "row",
@@ -7500,7 +7522,7 @@
               },
               v.a.createElement(ce.H, { className: tn.Icon }),
               v.a.createElement(
-                I.a,
+                C.a,
                 {
                   display: "flex",
                   flexDirection: "column",
@@ -7533,7 +7555,7 @@
               h.b.Get().GetIsUsingAppIDFilters() &&
               ((t = !!h.b.Get().GetAppIDFilters().size),
               (n = v.a.createElement(
-                I.a,
+                C.a,
                 {
                   display: "flex",
                   flexDirection: "row",
@@ -7577,7 +7599,7 @@
                 )
               ))),
             v.a.createElement(
-              I.a,
+              C.a,
               {
                 paddingY: "small",
                 paddingX: ["xsmall", "medium"],
@@ -7596,7 +7618,7 @@
                   " "
                 )
               ),
-              v.a.createElement(I.b, null, function (e) {
+              v.a.createElement(C.b, null, function (e) {
                 return "mobile" !== e && n;
               }),
               e
@@ -7970,7 +7992,7 @@
             r
           );
         })(pn),
-        In = (function (n) {
+        Cn = (function (n) {
           function r(e) {
             void 0 === e && (e = null);
             var t = n.call(this) || this;
@@ -8038,7 +8060,7 @@
             r
           );
         })(pn),
-        Cn = (function (n) {
+        In = (function (n) {
           function r(e) {
             void 0 === e && (e = null);
             var t = n.call(this) || this;
@@ -8210,14 +8232,14 @@
           });
         }),
         (_n.GetBidsForItem = function (e, t) {
-          return e.SendMsg("Auction.GetBidsForItem#1", t, In, {
+          return e.SendMsg("Auction.GetBidsForItem#1", t, Cn, {
             bConstMethod: !0,
             ePrivilege: 2,
             eWebAPIKeyRequirement: 1,
           });
         }),
         (_n.GetUserBidForItem = function (e, t) {
-          return e.SendMsg("Auction.GetUserBidForItem#1", t, Cn, {
+          return e.SendMsg("Auction.GetUserBidForItem#1", t, In, {
             bConstMethod: !0,
             ePrivilege: 1,
           });
@@ -9133,8 +9155,8 @@
             b = e.flexWrap,
             y = e.justifyContent,
             v = e.alignItems,
-            I = e.flexGrow,
-            C = e.flexShrink,
+            C = e.flexGrow,
+            I = e.flexShrink,
             w = e.flexBasis,
             M = e.flex,
             j = e.className,
@@ -9184,8 +9206,8 @@
                 flexWrap: b,
                 justifyContent: y,
                 alignItems: v,
-                flexGrow: I,
-                flexShrink: C,
+                flexGrow: C,
+                flexShrink: I,
                 flexBasis: w,
                 flex: M,
               },
@@ -9749,10 +9771,10 @@
           return v;
         }),
         n.d(t, "s", function () {
-          return I;
+          return C;
         }),
         n.d(t, "n", function () {
-          return C;
+          return I;
         }),
         n.d(t, "o", function () {
           return w;
@@ -10166,7 +10188,7 @@
           })
         );
       }
-      function I(e) {
+      function C(e) {
         var t = e.className;
         Object(r.f)(e, ["className"]);
         return i.a.createElement(
@@ -10186,7 +10208,7 @@
           })
         );
       }
-      function C(e) {
+      function I(e) {
         var t = e.className;
         Object(r.f)(e, ["className"]);
         return i.a.createElement(
@@ -10426,9 +10448,9 @@
         n = r("q1tI"),
         v = r.n(n),
         a = r("TyAF"),
-        I = r("StxQ"),
+        C = r("StxQ"),
         i = r("6Y59"),
-        C = r("Vlb1"),
+        I = r("Vlb1"),
         w = r("exH9"),
         c = r("lkRc"),
         u = r("TLQK"),
@@ -10619,7 +10641,7 @@
                     value: n,
                     className: N.BundleDiscount,
                   }),
-                  v.a.createElement(I.a, { amount: t })
+                  v.a.createElement(C.a, { amount: t })
                 )
           );
         };
@@ -10711,8 +10733,8 @@
         };
       var B = {
         colors: {
-          bodygradient: C.strDefaultBodyGradient,
-          background: C.strDefaultBodyBackground,
+          bodygradient: I.strDefaultBodyGradient,
+          background: I.strDefaultBodyBackground,
         },
       };
       function x(e) {
@@ -10732,7 +10754,7 @@
         t.community_item_data.animated &&
           a.push(
             v.a.createElement(j.a, {
-              className: C.IconAnimated,
+              className: I.IconAnimated,
               key: "animated",
             })
           );
@@ -10747,7 +10769,7 @@
             cost: parseInt(t.point_cost),
             name: l,
             children: v.a.createElement("div", {
-              className: C.Image,
+              className: I.Image,
               style: { backgroundImage: "url(" + r + ")" },
             }),
             attributes: a,
@@ -10794,55 +10816,55 @@
           g = { background: (m || B).colors.background };
         return v.a.createElement(
           "div",
-          { className: C.ItemWideContainer },
+          { className: I.ItemWideContainer },
           v.a.createElement(
             M.a,
             Object(y.a)({}, p, {
-              className: Object(w.a)(c, C.Item, u),
+              className: Object(w.a)(c, I.Item, u),
               style: g,
             }),
             v.a.createElement(
               M.b,
-              { className: C.Body, style: _ },
-              v.a.createElement("div", { className: C.Attributes }, r),
+              { className: I.Body, style: _ },
+              v.a.createElement("div", { className: I.Attributes }, r),
               v.a.createElement(ne, { src: n, title: t }),
               a
             ),
             v.a.createElement(
               M.c,
-              { className: C.Footer },
+              { className: I.Footer },
               v.a.createElement(
                 "div",
                 { style: { flex: 1 } },
                 v.a.createElement(
                   "div",
                   null,
-                  v.a.createElement("div", { className: C.Name }, s),
+                  v.a.createElement("div", { className: I.Name }, s),
                   v.a.createElement(
                     "div",
-                    { className: C.ItemTypeContainer },
+                    { className: I.ItemTypeContainer },
                     f &&
                       v.a.createElement(f, {
-                        className: C.Icon,
+                        className: I.Icon,
                         style: { fill: "" },
                       }),
-                    v.a.createElement("div", { className: C.Subtitle }, l, " ")
+                    v.a.createElement("div", { className: I.Subtitle }, l, " ")
                   )
                 )
               ),
               v.a.createElement(
                 "div",
-                { className: C.CostRow },
-                v.a.createElement(j.i, { className: C.IconPartialCheckMark }),
-                v.a.createElement(j.h, { className: C.IconCheckMark }),
+                { className: I.CostRow },
+                v.a.createElement(j.i, { className: I.IconPartialCheckMark }),
+                v.a.createElement(j.h, { className: I.IconCheckMark }),
                 v.a.createElement(
                   "div",
-                  { className: C.Cost },
-                  null != d ? d : v.a.createElement(I.a, { amount: i })
+                  { className: I.Cost },
+                  null != d ? d : v.a.createElement(C.a, { amount: i })
                 )
               )
             ),
-            v.a.createElement("div", { className: C.ItemContainerShine })
+            v.a.createElement("div", { className: I.ItemContainerShine })
           )
         );
       }
@@ -10862,7 +10884,7 @@
                 o = e ? i : a,
                 s = Object(b.a)(n, o);
               return v.a.createElement("img", {
-                className: C.ImageMedium,
+                className: I.ImageMedium,
                 src: s,
               });
             }
@@ -10873,7 +10895,7 @@
             q,
             Object(y.a)({}, x(e), { iconComponent: i.m }),
             v.a.createElement("img", {
-              className: C.ImageSmall,
+              className: I.ImageSmall,
               src: Object(b.a)(
                 e.definition.appid,
                 e.definition.community_item_data.item_image_large
@@ -10895,11 +10917,11 @@
         F = Object(a.a)(function (e) {
           return v.a.createElement(
             Y,
-            Object(y.a)({ className: C.HasAnimation }, x(e), {
+            Object(y.a)({ className: I.HasAnimation }, x(e), {
               iconComponent: i.c,
-              styleOverride: C.BackgroundOverride,
+              styleOverride: I.BackgroundOverride,
               videoProps: {
-                className: C.ImageBackground,
+                className: I.ImageBackground,
                 poster:
                   c.d.COMMUNITY_BASE_URL +
                   "economy/profilebackground/items/" +
@@ -10938,10 +10960,10 @@
             q,
             Object(y.a)({}, x(e), {
               iconComponent: i.c,
-              styleOverride: C.BackgroundOverride,
+              styleOverride: I.BackgroundOverride,
             }),
             v.a.createElement("img", {
-              className: C.ImageBackground,
+              className: I.ImageBackground,
               src:
                 c.d.COMMUNITY_BASE_URL +
                 "economy/profilebackground/items/" +
@@ -10958,7 +10980,7 @@
             Object(y.a)({}, x(e), {
               iconComponent: j.r,
               videoProps: {
-                className: C.ImageMiniBackground,
+                className: I.ImageMiniBackground,
                 poster: Object(b.a)(
                   e.definition.appid,
                   e.definition.community_item_data.item_image_large
@@ -11002,7 +11024,7 @@
                 o = e ? i : a,
                 s = Object(b.a)(n, o);
               return v.a.createElement("img", {
-                className: C.ImageFrames,
+                className: I.ImageFrames,
                 src: s,
               });
             }
@@ -11021,7 +11043,7 @@
                 o = e ? i : a,
                 s = Object(b.a)(n, o);
               return v.a.createElement("img", {
-                className: C.ImageAnimatedAvatar,
+                className: I.ImageAnimatedAvatar,
                 src: s,
               });
             }
@@ -11060,7 +11082,7 @@
                   onVisibiltyChange: function (e) {
                     return t.HandleVisibilityChange(e);
                   },
-                  className: C.VisibilityTracker,
+                  className: I.VisibilityTracker,
                 }),
                 v.a.createElement(
                   "video",
@@ -11165,50 +11187,50 @@
             b = { background: (m || B).colors.background };
           return v.a.createElement(
             "div",
-            { className: C.ItemContainer },
+            { className: I.ItemContainer },
             v.a.createElement(
               M.a,
               Object(y.a)({}, _, {
-                className: Object(w.a)(c, C.Item, u),
+                className: Object(w.a)(c, I.Item, u),
                 style: b,
               }),
               v.a.createElement(
                 M.b,
-                { className: C.Body, style: h },
-                v.a.createElement("div", { className: C.Attributes }, r),
+                { className: I.Body, style: h },
+                v.a.createElement("div", { className: I.Attributes }, r),
                 v.a.createElement(ne, { src: n, title: t }),
                 !f &&
                   v.a.createElement(
                     "div",
-                    { className: C.BodyTopRight },
+                    { className: I.BodyTopRight },
                     v.a.createElement(j.i, {
-                      className: C.IconPartialCheckMark,
+                      className: I.IconPartialCheckMark,
                     }),
-                    v.a.createElement(j.h, { className: C.IconCheckMark })
+                    v.a.createElement(j.h, { className: I.IconCheckMark })
                   ),
                 a
               ),
               v.a.createElement(
                 M.c,
-                { className: C.Footer },
+                { className: I.Footer },
                 v.a.createElement(
                   "div",
                   { style: { flex: 1, paddingBottom: "10px" } },
                   v.a.createElement(
                     "div",
                     null,
-                    v.a.createElement("div", { className: C.Name }, s),
+                    v.a.createElement("div", { className: I.Name }, s),
                     v.a.createElement(
                       "div",
-                      { className: C.ItemTypeContainer },
+                      { className: I.ItemTypeContainer },
                       g &&
                         v.a.createElement(g, {
-                          className: C.Icon,
+                          className: I.Icon,
                           style: { fill: "" },
                         }),
                       v.a.createElement(
                         "div",
-                        { className: C.Subtitle },
+                        { className: I.Subtitle },
                         l,
                         " "
                       )
@@ -11218,19 +11240,19 @@
                 f &&
                   v.a.createElement(
                     "div",
-                    { className: C.CostRow },
+                    { className: I.CostRow },
                     v.a.createElement(j.i, {
-                      className: C.IconPartialCheckMark,
+                      className: I.IconPartialCheckMark,
                     }),
-                    v.a.createElement(j.h, { className: C.IconCheckMark }),
+                    v.a.createElement(j.h, { className: I.IconCheckMark }),
                     v.a.createElement(
                       "div",
-                      { className: C.Cost },
-                      null != d ? d : v.a.createElement(I.a, { amount: i })
+                      { className: I.Cost },
+                      null != d ? d : v.a.createElement(C.a, { amount: i })
                     )
                   )
               ),
-              v.a.createElement("div", { className: C.ItemContainerShine })
+              v.a.createElement("div", { className: I.ItemContainerShine })
             )
           );
         },
@@ -11248,7 +11270,7 @@
           var t = e.className,
             n = Object(y.f)(e, ["className"]),
             r = d.b.Get().BRewardOwnedByUser(e.definition),
-            a = Object(w.a)(t, r && C.OwnedItem);
+            a = Object(w.a)(t, r && I.OwnedItem);
           if (5 == e.definition.type || 6 == e.definition.type)
             return v.a.createElement(
               o.a,
@@ -11306,14 +11328,14 @@
             (s = Object(u.f)("#ProfileShowcases_Type_" + n)),
             (l = r >= d.b.Get().GetMaxProfileShowcaseUpgradeLevel()),
             (c = 1 < r),
-            (m = Object(w.a)(l && C.OwnedItem, !l && c && C.OwnedItemProgress)),
+            (m = Object(w.a)(l && I.OwnedItem, !l && c && I.OwnedItemProgress)),
             Object(y.a)(
               {
                 cost: a,
                 name: s,
                 itemLevel: r,
                 children: v.a.createElement("img", {
-                  className: C.ImageProfileShowcase,
+                  className: I.ImageProfileShowcase,
                   src: o,
                 }),
                 desc: Object(u.f)("#ProfileShowcases_Upgrade"),
@@ -11345,13 +11367,13 @@
               (o = $(n)),
               (s = Object(u.f)("#ProfileShowcases_Type_" + n)),
               (l = a >= d.b.Get().GetMaxProfileShowcaseSlots()),
-              (c = Object(w.a)(l && C.OwnedItem)),
+              (c = Object(w.a)(l && I.OwnedItem)),
               Object(y.a)(
                 {
                   cost: r,
                   name: s,
                   children: v.a.createElement("img", {
-                    className: C.ImageProfileShowcase,
+                    className: I.ImageProfileShowcase,
                     src: o,
                   }),
                   desc: Object(u.f)("#ProfileShowcases_AdditionalSlot"),
@@ -11381,9 +11403,9 @@
               return n
                 ? v.a.createElement(
                     "div",
-                    { className: C.AppIconContainer },
+                    { className: I.AppIconContainer },
                     v.a.createElement("img", {
-                      className: C.AppIcon,
+                      className: I.AppIcon,
                       src: n,
                       onLoad: function () {
                         return e.setState({ bLoadComplete: !0 });
@@ -11401,22 +11423,22 @@
       function re() {
         return v.a.createElement(
           p,
-          { className: C.ItemContainer },
+          { className: I.ItemContainer },
           v.a.createElement(
             M.a,
-            { className: Object(w.a)(C.Item, C.ItemSkeleton) },
-            v.a.createElement(M.b, { className: C.Body }),
+            { className: Object(w.a)(I.Item, I.ItemSkeleton) },
+            v.a.createElement(M.b, { className: I.Body }),
             v.a.createElement(
               M.c,
-              { className: C.Footer },
+              { className: I.Footer },
               v.a.createElement(
                 "div",
                 { style: { flex: 1 } },
                 v.a.createElement(
                   "div",
                   null,
-                  v.a.createElement("div", { className: C.SkeletonName }),
-                  v.a.createElement("div", { className: C.SkeletonSubtitle })
+                  v.a.createElement("div", { className: I.SkeletonName }),
+                  v.a.createElement("div", { className: I.SkeletonSubtitle })
                 )
               )
             )
@@ -11982,11 +12004,11 @@
                   ),
                 },
                 l.a.createElement(
-                  I,
+                  C,
                   null,
                   e.map(function (t) {
                     return l.a.createElement(
-                      C,
+                      I,
                       Object(s.a)({ key: t.level }, t, {
                         onClick: function (e) {
                           return Object(h.c)(e, r, t.level);
@@ -11999,7 +12021,7 @@
             )
           );
         }),
-        I = function (e) {
+        C = function (e) {
           var t = e.children;
           return l.a.createElement(
             b.c,
@@ -12007,7 +12029,7 @@
             t
           );
         },
-        C = function (e) {
+        I = function (e) {
           var t = e.level,
             n = e.owned,
             r = e.cost,
@@ -12177,11 +12199,11 @@
             Object(a.a)({ className: Object(f.a)(m.StandardBackground, t) }, n)
           );
         },
-        I = function (e) {
+        C = function (e) {
           var t = e.children;
           return c.a.createElement(y, { className: m.ParallaxRoot }, t);
         },
-        C = function (e) {
+        I = function (e) {
           var t = e.children;
           return c.a.createElement(
             s.a,
@@ -12205,17 +12227,17 @@
             n = e.children,
             r = t ? t : _;
           return c.a.createElement(
-            I,
+            C,
             null,
-            c.a.createElement(l, { src: r }, c.a.createElement(C, null, n))
+            c.a.createElement(l, { src: r }, c.a.createElement(I, null, n))
           );
         },
         M = function (e) {
           var t = e.children;
           return c.a.createElement(
-            I,
+            C,
             null,
-            c.a.createElement(r, null, c.a.createElement(C, null, t))
+            c.a.createElement(r, null, c.a.createElement(I, null, t))
           );
         },
         j = Object(o.a)(function (e) {
@@ -12274,7 +12296,7 @@
               style: { backgroundImage: 'url("' + r + '")' },
               className: m.CustomAppBackground,
             },
-            c.a.createElement(C, null, t)
+            c.a.createElement(I, null, t)
           )
         );
       }
@@ -12282,9 +12304,9 @@
         var t = e.children,
           n = e.appid;
         return c.a.createElement(
-          I,
+          C,
           null,
-          c.a.createElement(j, { appid: n }, c.a.createElement(C, null, t))
+          c.a.createElement(j, { appid: n }, c.a.createElement(I, null, t))
         );
       }
       var A = function (e) {
@@ -12489,7 +12511,7 @@
           return fe;
         }),
         n.d(t, "c", function () {
-          return Ie;
+          return Ce;
         });
       var j = n("mrSG"),
         r = n("2lpH"),
@@ -12790,7 +12812,7 @@
                 r.sm_m ||
                   (r.sm_m = {
                     proto: r,
-                    fields: { item_definitions: { n: 1, c: I, r: !0, q: !0 } },
+                    fields: { item_definitions: { n: 1, c: C, r: !0, q: !0 } },
                   }),
                 r.sm_m
               );
@@ -12828,7 +12850,7 @@
             r
           );
         })(d),
-        I = (function (n) {
+        C = (function (n) {
           function r(e) {
             void 0 === e && (e = null);
             var t = n.call(this) || this;
@@ -12977,7 +12999,7 @@
             r
           );
         })(d),
-        C = (function (n) {
+        I = (function (n) {
           function r(e) {
             void 0 === e && (e = null);
             var t = n.call(this) || this;
@@ -14263,7 +14285,7 @@
                 t.golden_profiles &&
                   (this.m_goldenProfileConfigs = t.golden_profiles || []),
                 t.can_claim_sale_reward &&
-                  Ie.Get().InitFreeItemReward(t.can_claim_sale_reward),
+                  Ce.Get().InitFreeItemReward(t.can_claim_sale_reward),
                 t.is_sale_active && (this.m_bIsSaleActive = t.is_sale_active),
                 t.free_item_header &&
                   (this.m_strFreeItemHeader = t.free_item_header),
@@ -15171,7 +15193,7 @@
                     case 0:
                       return ((t = { eResult: 2, strMessage: "" }),
                       this.BIsLoggedIn())
-                        ? ((n = c.b.Init(C))
+                        ? ((n = c.b.Init(I))
                             .Body()
                             .set_communityitemid(
                               this.GetOwnedCommunityItemID(a)
@@ -16083,14 +16105,14 @@
                   Object(E.f)("#RewardCluster_Backgrounds_Subtitle"),
                   { itemclass: [3], maxToReturn: 120, queryFilter: [1] }
                 ),
-                I = e(
+                C = e(
                   Object(E.f)(
                     "#RewardCluster_AnimatedMiniProfileBackgrounds_Title"
                   ),
                   Object(E.f)("#RewardCluster_MiniProfileBackgrounds_Subtitle"),
                   { itemclass: [13], maxToReturn: 120, queryFilter: [1] }
                 ),
-                C = e(
+                I = e(
                   Object(E.f)("#RewardCluster_StillProfileBackgrounds_Title"),
                   Object(E.f)("#RewardCluster_Backgrounds_Subtitle"),
                   { itemclass: [3], maxToReturn: 120, queryFilter: [2] }
@@ -16107,8 +16129,8 @@
                   "backgrounds",
                   [
                     { cluster: v, type: 1 },
-                    { cluster: I, type: 1 },
                     { cluster: C, type: 1 },
+                    { cluster: I, type: 1 },
                     { cluster: w, type: 1 },
                   ],
                   Object(E.f)("#ShopPageTitle_Backgrounds")
@@ -16649,7 +16671,7 @@
           e
         );
       })();
-      var Ie = (function () {
+      var Ce = (function () {
         function e() {
           this.m_bCanClaimFreeItem = !1;
         }
