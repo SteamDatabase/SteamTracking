@@ -636,6 +636,39 @@ td.rdtYear:hover {
   left: 50%;
   transform: translateX(-50%) translateY(-50%); }
 
+.facetedbrowseeditor_FacetValueName_3wruf {
+  color: white;
+  padding: 8px;
+  margin-bottom: 8px;
+  background: rgba(1, 1, 1, 0.1);
+  cursor: pointer; }
+
+.facetedbrowseeditor_FacetValueCtn_btRSv {
+  display: flex; }
+
+.facetedbrowseeditor_FacetValueCtn_btRSv div {
+  flex-grow: 1;
+  margin-left: 4px;
+  margin-right: 4px; }
+
+.facetedbrowseeditor_FacetValueFilterDisplayCtn_2Xo5C {
+  flex-grow: 1;
+  margin-bottom: 0;
+  margin-top: 0; }
+
+.facetedbrowseeditor_FacetName_39gQo {
+  color: white;
+  text-transform: uppercase;
+  padding: 8px;
+  margin-bottom: 8px;
+  background: rgba(1, 1, 1, 0.1);
+  cursor: pointer; }
+
+.facetedbrowseeditor_FacetFilterDisplayCtn_3_YHd {
+  flex-grow: 1;
+  margin-bottom: 0;
+  margin-top: 0; }
+
 :root {
   --main-text-color: #dbe2e6;
   --main-light-blue-background: #93b3c8;
@@ -1270,39 +1303,6 @@ span.partnereventeditor_RequiredFieldLabel_11TnL {
   color: #aaa; }
   .partnereventeditor_ShowInTabsList_1slxi:hover {
     color: white; }
-
-.facetedbrowseeditor_FacetValueName_3wruf {
-  color: white;
-  padding: 8px;
-  margin-bottom: 8px;
-  background: rgba(1, 1, 1, 0.1);
-  cursor: pointer; }
-
-.facetedbrowseeditor_FacetValueCtn_btRSv {
-  display: flex; }
-
-.facetedbrowseeditor_FacetValueCtn_btRSv div {
-  flex-grow: 1;
-  margin-left: 4px;
-  margin-right: 4px; }
-
-.facetedbrowseeditor_FacetValueFilterDisplayCtn_2Xo5C {
-  flex-grow: 1;
-  margin-bottom: 0;
-  margin-top: 0; }
-
-.facetedbrowseeditor_FacetName_39gQo {
-  color: white;
-  text-transform: uppercase;
-  padding: 8px;
-  margin-bottom: 8px;
-  background: rgba(1, 1, 1, 0.1);
-  cursor: pointer; }
-
-.facetedbrowseeditor_FacetFilterDisplayCtn_3_YHd {
-  flex-grow: 1;
-  margin-bottom: 0;
-  margin-top: 0; }
 
 /**
  * Font Mixins.

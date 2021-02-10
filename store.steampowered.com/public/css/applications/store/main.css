@@ -6775,10 +6775,8 @@ iframe.eventbbcodeparser_MedalTVWidget_1j2vi {
   flex-direction: row;
   align-items: center; }
   .partnersaledisplay_SaleSectionTitleCtn_bE2EA .partnersaledisplay_SaleSectionSubtext_17Fnl {
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    margin-bottom: 10px;
+    margin: 5px 8px;
+    height: fit-content;
     opacity: 0.7;
     background: rgba(255, 255, 255, 0.2);
     padding: 2px 6px;
@@ -6955,8 +6953,10 @@ span.partnersaledisplay_vr_required_1P__h {
   display: flex;
   flex-direction: row;
   width: 100%; }
-  .partnersaledisplay_SectionLabelCtn_9so3K .partnersaledisplay_SectionLabelLinkButton_1tTSn {
+  .partnersaledisplay_SectionLabelCtn_9so3K .partnersaledisplay_SectionLabelRight_19YHY {
     margin-left: auto;
+    display: flex; }
+  .partnersaledisplay_SectionLabelCtn_9so3K .partnersaledisplay_SectionLabelLinkButton_1tTSn {
     background: #4a2a3c;
     padding: 4px 10px;
     border-radius: 3px;
