@@ -1,9 +1,12 @@
 !
 __TEXT
+p6
+p6
 __text
 __TEXT
-@q
-@q
+@n
+TW$
+@n
 __stubs
 __TEXT
 __stub_helper
@@ -17,51 +20,58 @@ __objc_methname
 __TEXT
 __unwind_info
 __TEXT
-$c,
-$c,
 __eh_frame
 __TEXT
 __DATA
+p6
+p6
 __nl_symbol_ptr
 __DATA
+p6
+p6
 __got
 __DATA
 __la_symbol_ptr
 __DATA
+Pq6
 8
+Pq6
 __mod_init_func
 __DATA
 __const
 __DATA
 __cfstring
 __DATA
-cB
-cB
+0SB
+0SB
 __objc_imageinfo__DATA
 __objc_selrefs
 __DATA
 __objc_classrefs__DATA
 __data
 __DATA
-fB
-fB
+`VB
+`VB
 __thread_vars
 __DATA
 __thread_bss
 __DATA
+0,K
 __bss
 __DATA
+00K
 __common
 __DATA
+nK
 H
 __LINKEDIT
-@K
+0K
 
 @
 @loader_path/gameoverlayui.dylib
 "
-@K
-hoK
+0K
+p_K
 P
 _
 
@@ -111,7 +121,7 @@ h
 8
 /usr/lib/libobjc.A.dylib
 &
-8E
+@E
 )
 C
 14CParentalCache
@@ -9305,6 +9315,7 @@ Steam_Language
 #Overlay_MicroTxnCancelDlgOK
 CancelMicroTxn
 #Overlay_MicroTxnCancelDlgCancel
+RetryMicroTxn
 CloseImmediately
 resource/steamchina_logo_overlay
 resource/steam_logo_big
@@ -9599,8 +9610,8 @@ developer
 Steam pid that launched us
 VGUI_Application_001
 OK
-Feb  7 2021
-21:20:33
+Feb  9 2021
+15:37:14
 crashhandler003
 gameoverlayui
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/overlay/gameoverlayui/main.cpp
@@ -13263,56 +13274,77 @@ Nov
 Dec
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
-d#
-8$
-N$
-0
-p
-p
-0
+Ie&
+6a&
+be&
+6
+Y$
 $
-TA
-6
-6
+0
+p
+p
+0
 5
 A
-3"
+"
+A
+A
+A
+A
+A
 6
+)"
+#
+#
+#
 "
 "
+oI
 0
 p
-t@
+#
+#
+#
+#
+#
+#
 !
-!
-!
-"
-"
+~"
 @
-!
-f
-d!
-G!
-.!
-"!
-!
-;
+@
+@
+@
+"
+"
+"
+"
+["
+"
+"
+"
+%!
 I
 k
+!
 d
-#!
-0G
+!
+!
+>?
+!
+!
+)?
+v
 
 
 
 
-b
 
 
-2
+5
 p
 0
 0
+,
 p
 0
 0
@@ -13344,30 +13376,23 @@ p
 0
 @
 =
-c
+?
+?
 0
-f>
-P@
+P>
+G@
 Hi
-TE
-E
-E
-E
-E
-E
-E
-E
-E
-E
-E
-0
+8E
+4
+4
+4
 
-l@
-a@
 0
 p
 I
 I
+@
+@
 $
 @
 @
@@ -13378,21 +13403,10 @@ $
 ?
 A
 Hc
-,!
 =
 -
 !
--
-A
-A
-A
-A
-A
-A
-A
-A
-4A
-2
+2A
 Hc
 ?
 ?
@@ -13527,6 +13541,7 @@ G
 @
 >
 0
+:9
 p
 =
 0
@@ -13583,78 +13598,65 @@ P
 @
 |
 |
-#
-#
 "
 3
 D
-~7
-x7
-7
-7
+=7
+?(
 @
 (
-_'
-g5
-:5
-&
-&
-&
-~4
-&
-64
+6
+'
+55
 4
-4
-y%
-$%
 
-%
-v3
+L95`l3
+3
+3
 d
 
 
 
-2
-2
 
 
 
-l1
-w-
-f-
--
+l-
 
 
 
 >
 
 
-w-
-.#
 d
 &
 &
 d
+#
+-
+-
 t=
 =
 =
 @
-C,
+Q,
+,
+,
+,
+"
+"
 uV%
+"
 
 
-"
-"
-+
-+
-f+
+o+
 E
-'!
 >
 
 
 
 @
+*
+*
 @
 @
 &
@@ -13699,6 +13701,7 @@ E
 .
 .
 .
+e)
 d
 
 d
@@ -13708,6 +13711,8 @@ d
 =
 =
 @
+(
+(
 =
 @
 
@@ -13720,11 +13725,8 @@ d
 @
 @
 0
-|'
 E
-Hc50{'
+i'
 }
-Hc5Kg'
 $
 p
-'

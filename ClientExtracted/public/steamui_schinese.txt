@@ -436,7 +436,7 @@
 "Steam_DPIScaling_Option"				"按照显示器大小放大文本和图标（需要重启）"
 "Steam_LaunchSteamOnStartup_Option"		"在电脑开机时运行 Steam"
 "Steam_BPMOnStartup_Option"				"以大屏幕模式启动 Steam"
-"Steam_ShowUrlBar_Option"				"当可用时显示 Steam URL 地址栏"
+"Steam_ShowUrlBar_Option"				"当可用时显示网站地址栏"
 "Steam_UseDirectWrite_Option"			"启用 DirectWrite 以改进字体平滑和间距"
 "Steam_UseH264HWAccel_Option"			"如果支持，启用硬件视频解码（需要重启）"
 

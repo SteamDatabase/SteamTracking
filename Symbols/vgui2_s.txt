@@ -257,13 +257,10 @@
  FSEventStreamStart
  FSEventStreamStop
  FSPathMakeRef
- FSRefMakePath
  Fix2X
  GetCurrentProcess
  GetFrontProcess
  GetOSType
- GetProcessBundleLocation
- GetProcessForPID
  KeyValuesSystemSteam
  LSRegisterFSRef
  LSSetDefaultHandlerForURLScheme
@@ -325,6 +322,7 @@
  PasteboardSynchronize
  Plat_CommandLineParamExists
  Plat_FloatTime
+ Plat_GetExecutablePath
  Plat_MSTime
  Plat_localtime
  R typeinfo name for CBaseSurface
@@ -944,7 +942,9 @@
  T COSXFont::~COSXFont()
  T CPathString::CPathString(StringView, StringView)
  T CPathString::Clear()
+ T CPathString::GetUTF8Path() const
  T CPathString::Validate(CValidator&, char const*)
+ T CPathString::~CPathString()
  T CPlainAutoPtr<CUtlMap<CUtlString, bool, int, CDefLess<CUtlString> > >::RecursiveValidate(CValidator&, char const*)
  T CPlainAutoPtr<CUtlMap<unsigned long long, bool, int, CDefLess<unsigned long long> > >::RecursiveValidate(CValidator&, char const*)
  T CRC32_ProcessSingleBuffer(void const*, int)
@@ -1921,12 +1921,13 @@
  T MurmurHash3_32(void const*, unsigned long, unsigned int, bool)
  T NSStringForLoc(CUtlString, CUtlString)
  T OSXHelpers::BIsNSWindowOnActiveSpace(void*)
+ T OSXHelpers::GetBundlePathForExecutablePath(char const*)
  T OSXHelpers::GetMainBundle()
  T OSXHelpers::GetNSFontDisplayName(CUtlString)
  T OSXHelpers::GetScreenResolution(int&, int&, char const*)
+ T OSXHelpers::GetSteamBundlePath(bool)
  T OSXHelpers::OSX_MyAudioServicesSystemSoundCompletionProc(unsigned int, void*)
  T OSXHelpers::PlaySoundFile(char const*)
- T OSXHelpers::_internalBGetSteamBundleOrPath(char*, int)
  T OSX_GetIconImageForFullPath(char const*, bool, bool)
  T ParseFile(char const*, char*, bool*, characterset_s*)
  T PchGetRegPath(ERegKeyRoot, char const*, StringView)
@@ -2431,6 +2432,7 @@
  V_RemoveDotSlashes
  V_SplitStringInternal(char const*, char const* const*, char const**, int, CUtlVector<CUtlString, CUtlMemory<CUtlString> >&, bool)
  V_StripExtension
+ V_StripFilename
  V_StripTrailingSlash
  V_UTF16ToUTF32
  V_UTF16ToUTF8
@@ -2492,7 +2494,6 @@
  _objc_empty_vtable
  abort
  accept
- access
  atoi
  b (anonymous namespace)::_CLEANUP
  b -[VGUI_NSView unmarkText]::fAsserted
@@ -2634,7 +2635,6 @@
  g_pMemAllocSteam
  getcwd
  getenv
- getpid
  getpwuid
  gettimeofday
  getuid
@@ -2694,7 +2694,6 @@
  readdir$INODE64
  realpath$DARWIN_EXTSN
  recvmsg
- rindex
  round
  sendmsg
  setjmp
@@ -2710,7 +2709,6 @@
  strcmp
  strcpy
  strlen
- strncpy
  strrchr
  strstr
  strtol

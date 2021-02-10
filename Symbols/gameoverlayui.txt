@@ -394,6 +394,7 @@
  D CBasePanel::PanelMessageFunc_OnGameOverlaySettingsChanged::InitVar()::bAdded
  D CBasePanel::PanelMessageFunc_OnMouseClick::InitVar()::bAdded
  D CBasePanel::PanelMessageFunc_OnOpenFriendsDialog::InitVar()::bAdded
+ D CBasePanel::PanelMessageFunc_OnRetryMicroTxn::InitVar()::bAdded
  D CBasePanel::PanelMessageFunc_OnViewGuide::InitVar()::bAdded
  D CBasePanel::PanelMessageFunc_OnWebSteamURL::InitVar()::bAdded
  D CBasePanel::PanelMessageFunc_OpenBroadcastChatDialog::InitVar()::bAdded
@@ -5004,6 +5005,7 @@
  T CBasePanel::OnOpenFriendsDialog()
  T CBasePanel::OnPersonaStateChange(PersonaStateChange_t*)
  T CBasePanel::OnPublishedFileUpdated(RemoteStorageUpdatePublishedFileResult_t*)
+ T CBasePanel::OnRetryMicroTxn()
  T CBasePanel::OnScreenshotHotKeyChanged()
  T CBasePanel::OnScreenshotWritten(ScreenshotWritten_t*)
  T CBasePanel::OnTimedTrialStatus(TimedTrialStatus_t*)
@@ -5033,6 +5035,7 @@
  T CBasePanel::PanelMessageFunc_OnGameOverlaySettingsChanged::InitVar()
  T CBasePanel::PanelMessageFunc_OnMouseClick::InitVar()
  T CBasePanel::PanelMessageFunc_OnOpenFriendsDialog::InitVar()
+ T CBasePanel::PanelMessageFunc_OnRetryMicroTxn::InitVar()
  T CBasePanel::PanelMessageFunc_OnViewGuide::InitVar()
  T CBasePanel::PanelMessageFunc_OnWebSteamURL::InitVar()
  T CBasePanel::PanelMessageFunc_OpenBroadcastChatDialog::InitVar()
@@ -6140,6 +6143,7 @@
  T CMicroTxnAuthorizeBase::GetPanelClassName()
  T CMicroTxnAuthorizeBase::GetPanelTopClassName() const
  T CMicroTxnAuthorizeBase::KB_ChainToMap()
+ T CMicroTxnAuthorizeBase::Reload()
  T CMicroTxnAuthorizeBase::~CMicroTxnAuthorizeBase()
  T CMicroTxnAuthorizeDialog::AuthorizeTransaction()
  T CMicroTxnAuthorizeDialog::BAddFunds()
@@ -6208,6 +6212,7 @@
  T CMicroTxnAuthorizeHandler::PanelMessageFunc_OnAddFunds::InitVar()
  T CMicroTxnAuthorizeHandler::PanelMessageFunc_OnCustomURL::InitVar()
  T CMicroTxnAuthorizeHandler::PanelMessageFunc_OnWebBrowserClose::InitVar()
+ T CMicroTxnAuthorizeHandler::Reload()
  T CMicroTxnAuthorizeHandler::~CMicroTxnAuthorizeHandler()
  T CMsgAckPIDShuttingDown::ByteSize() const
  T CMsgAckPIDShuttingDown::CMsgAckPIDShuttingDown()

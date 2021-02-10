@@ -5,21 +5,21 @@ __stubs
 __TEXT
 __stub_helper
 __TEXT
+__gcc_except_tab__TEXT
 __const
 __TEXT
 :
 __objc_methname
 __TEXT
-G"
+R"
 __cstring
 __TEXT
-__gcc_except_tab__TEXT
-<V
 __objc_classname__TEXT
 __objc_methtype
 __TEXT
 __unwind_info
 __TEXT
+)
 __eh_frame
 __TEXT
 __DATA
@@ -55,18 +55,18 @@ __common
 __DATA
 __bss
 __DATA
+`^
 H
 __LINKEDIT
-
+0
 
 8
 @loader_path/vgui2_s.dylib
 "
-
+0
 p
-`-
+`=
 p
-8Y
 P
 
 8
@@ -113,10 +113,8 @@ h
 8
 /usr/lib/libobjc.A.dylib
 &
-xM
 )
 H
-`5
 10CUtlString
 10CUtlVectorIN12CFontAmalgam10TFontRangeE10CUtlMemoryIS1_EE
 10CUtlVectorI12CFontAmalgam10CUtlMemoryIS0_EE
@@ -363,6 +361,8 @@ Assertion Failed: !"Unable to get home directory"
 %s/Desktop
 %s/Applications
 r
+../Info.plist
+../..
 Assertion Failed: (&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlvector.h
 1.5.26
@@ -1863,14 +1863,12 @@ P
 
 =
 @
-@
-@
-u
-W
+w
 @
 @
 @
 @
 @
 @
-
+@
+@

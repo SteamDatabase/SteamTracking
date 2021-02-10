@@ -440,7 +440,7 @@ This should take less than a minute."
 "Steam_DPIScaling_Option"				"Enlarge text and icons based on monitor size (requires restart)"
 "Steam_LaunchSteamOnStartup_Option"		"Run Steam when my computer starts"
 "Steam_BPMOnStartup_Option"				"Start Steam in Big Picture Mode"
-"Steam_ShowUrlBar_Option"				"Display Steam URL address bar when available"
+"Steam_ShowUrlBar_Option"				"Display web address bars when available"
 "Steam_UseDirectWrite_Option"			"Enable DirectWrite for improved font smoothing and kerning"
 "Steam_UseH264HWAccel_Option"			"Enable hardware video decoding, if supported (requires restart)"
 
