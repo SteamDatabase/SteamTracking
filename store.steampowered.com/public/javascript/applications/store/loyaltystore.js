@@ -14441,23 +14441,30 @@
                   !t.m_inflightRewardItemRequestsByID[e]
                 );
               });
-              return (
-                0 < r.length &&
-                  (r.forEach(function (e) {
-                    return (t.m_inflightRewardItemRequestsByID[e] = !0);
-                  }),
-                  this.LoadRewardDefinitions.apply(this, r).then(function (e) {
+              if (0 < r.length) {
+                r.forEach(function (e) {
+                  return (t.m_inflightRewardItemRequestsByID[e] = !0);
+                });
+                for (var a = [], i = 0; i < Math.ceil(r.length / 100); i++) {
+                  var o = r.slice(100 * i, 100 * i + 100);
+                  a.push(this.LoadRewardDefinitions.apply(this, o));
+                }
+                Promise.all(a).then(
+                  Object(N.k)(function (e) {
                     e.forEach(function (e) {
-                      delete t.m_inflightRewardItemRequestsByID[e.defid],
-                        t.m_mapLoyaltyRewardDefs.set(e.defid, e);
+                      e.forEach(function (e) {
+                        delete t.m_inflightRewardItemRequestsByID[e.defid],
+                          t.m_mapLoyaltyRewardDefs.set(e.defid, e);
+                      });
                     });
-                  })),
-                e
-                  .map(function (e) {
-                    return t.m_mapLoyaltyRewardDefs.get(e);
                   })
-                  .filter(Boolean)
-              );
+                );
+              }
+              return e
+                .map(function (e) {
+                  return t.m_mapLoyaltyRewardDefs.get(e);
+                })
+                .filter(Boolean);
             }),
             (M.prototype.LoadRewardDefinitions = function () {
               for (var r = [], e = 0; e < arguments.length; e++)
@@ -14476,7 +14483,11 @@
                       );
                     case 1:
                       return 1 == (n = e.sent()).eresult
-                        ? [2, n.response.definitions]
+                        ? (n.response.count !== n.response.total_count &&
+                            console.error(
+                              "LoadRewardDefinitions did not receive all expected definitions (likely to due server-side limiting). The calling code should be paging/batching the request into multiple."
+                            ),
+                          [2, n.response.definitions])
                         : (console.error(
                             "Error loading reward definitions by ID: EResult=" +
                               n.eresult
