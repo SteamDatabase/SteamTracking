@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6363364";
+var CLSTAMP = "6364058";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [9],
   {
@@ -1520,7 +1520,14 @@ var CLSTAMP = "6363364";
             return "/points/shop/profileshowcases";
           },
         },
-        s = {},
+        s = {
+          LoyaltyItemBundles: function () {
+            return "/points/shop/c/itembundles";
+          },
+          LoyaltyItemBundle: function (e) {
+            return "/points/shop/bundle/" + e;
+          },
+        },
         c = {},
         l = Object(r.a)(
           Object(r.a)(
@@ -60518,7 +60525,7 @@ var CLSTAMP = "6363364";
           );
         }),
         me = b.a.lazy(function () {
-          return Promise.all([l.e(0), l.e(3), l.e(41)]).then(
+          return Promise.all([l.e(0), l.e(3), l.e(42)]).then(
             l.bind(null, "tPo2")
           );
         }),
@@ -70023,36 +70030,36 @@ var CLSTAMP = "6363364";
     },
     rCDf: function (e, t, r) {
       var a = {
-        "./shared_arabic.json": ["d1TB", 42],
-        "./shared_brazilian.json": ["Pg9r", 43],
-        "./shared_bulgarian.json": ["ENge", 44],
-        "./shared_czech.json": ["Ts6V", 45],
-        "./shared_danish.json": ["9oiU", 46],
-        "./shared_dutch.json": ["nxN4", 47],
-        "./shared_english.json": ["TYjx", 48],
-        "./shared_finnish.json": ["NuB8", 49],
-        "./shared_french.json": ["bOPj", 50],
-        "./shared_german.json": ["svuF", 51],
-        "./shared_greek.json": ["eJKB", 52],
-        "./shared_hungarian.json": ["T7i2", 53],
-        "./shared_italian.json": ["w96W", 54],
-        "./shared_japanese.json": ["XQ4S", 55],
-        "./shared_koreana.json": ["4hyI", 56],
-        "./shared_latam.json": ["3qrw", 57],
-        "./shared_norwegian.json": ["XA4Q", 58],
-        "./shared_polish.json": ["TpXn", 59],
-        "./shared_portuguese.json": ["Q8UV", 60],
-        "./shared_romanian.json": ["Eme1", 61],
-        "./shared_russian.json": ["BUiO", 62],
-        "./shared_sc_schinese.json": ["O0N/", 63],
-        "./shared_schinese.json": ["3UpY", 64],
-        "./shared_spanish.json": ["4Fxc", 65],
-        "./shared_swedish.json": ["0JhB", 66],
-        "./shared_tchinese.json": ["OYRc", 67],
-        "./shared_thai.json": ["lhAZ", 68],
-        "./shared_turkish.json": ["RSoU", 69],
-        "./shared_ukrainian.json": ["lNXI", 70],
-        "./shared_vietnamese.json": ["RSmC", 71],
+        "./shared_arabic.json": ["d1TB", 43],
+        "./shared_brazilian.json": ["Pg9r", 44],
+        "./shared_bulgarian.json": ["ENge", 45],
+        "./shared_czech.json": ["Ts6V", 46],
+        "./shared_danish.json": ["9oiU", 47],
+        "./shared_dutch.json": ["nxN4", 48],
+        "./shared_english.json": ["TYjx", 49],
+        "./shared_finnish.json": ["NuB8", 50],
+        "./shared_french.json": ["bOPj", 51],
+        "./shared_german.json": ["svuF", 52],
+        "./shared_greek.json": ["eJKB", 53],
+        "./shared_hungarian.json": ["T7i2", 54],
+        "./shared_italian.json": ["w96W", 55],
+        "./shared_japanese.json": ["XQ4S", 56],
+        "./shared_koreana.json": ["4hyI", 57],
+        "./shared_latam.json": ["3qrw", 58],
+        "./shared_norwegian.json": ["XA4Q", 59],
+        "./shared_polish.json": ["TpXn", 60],
+        "./shared_portuguese.json": ["Q8UV", 61],
+        "./shared_romanian.json": ["Eme1", 62],
+        "./shared_russian.json": ["BUiO", 63],
+        "./shared_sc_schinese.json": ["O0N/", 64],
+        "./shared_schinese.json": ["3UpY", 65],
+        "./shared_spanish.json": ["4Fxc", 66],
+        "./shared_swedish.json": ["0JhB", 67],
+        "./shared_tchinese.json": ["OYRc", 68],
+        "./shared_thai.json": ["lhAZ", 69],
+        "./shared_turkish.json": ["RSoU", 70],
+        "./shared_ukrainian.json": ["lNXI", 71],
+        "./shared_vietnamese.json": ["RSmC", 72],
       };
       function n(t) {
         if (!r.o(a, t))
