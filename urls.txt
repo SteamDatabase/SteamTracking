@@ -409,6 +409,7 @@ https://store.steampowered.com/public/javascript/applications/store/main.js?__TI
 https://store.steampowered.com/public/javascript/applications/store/main_english-json.js?__TIME__&l=english
 https://store.steampowered.com/public/javascript/applications/store/manifest.js?__TIME__&l=english
 https://store.steampowered.com/public/javascript/applications/store/reviewaward.js?__TIME__&l=english
+https://store.steampowered.com/public/javascript/applications/store/shared_english-json.js?__TIME__&l=english
 https://store.steampowered.com/public/javascript/bigpicture/home.js?__TIME__&l=english
 https://store.steampowered.com/public/javascript/broadcast_carousel.js?__TIME__&l=english
 https://store.steampowered.com/public/javascript/cart.js?__TIME__&l=english
