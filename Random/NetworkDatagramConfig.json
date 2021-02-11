@@ -1365,6 +1365,19 @@
         }
       ]
     },
+    "svo": {
+      "desc": "Moscow, Russia",
+      "geo": [ 37.62, 55.76 ],
+      "relay_addresses": [
+        "46.46.134.129:27015-27045"
+      ],
+      "relays": [
+        {
+          "ipv4": "46.46.134.129",
+          "port_range": [ 27015, 27045 ]
+        }
+      ]
+    },
     "syd": {
       "desc": "Sydney",
       "geo": [ 151.21, 33.86 ],
@@ -1683,7 +1696,7 @@
     }
   },
   "relay_public_key": "5AC884C1045BA0FF44142AC8DCA51B8A98C8F1CB4FEE36284AFBE92FCF594932",
-  "revision": 298,
+  "revision": 299,
   "revoked_keys": [
     "123456789"
   ]
