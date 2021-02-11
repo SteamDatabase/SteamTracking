@@ -3080,56 +3080,60 @@
                 : null;
             }),
             (e.prototype.render = function () {
-              var e = g.b
-                .Get()
-                .GetBundleOfferForUser(this.props.definition.rewardDefinition)
-                .items.map(function (e) {
-                  var t = e.community_item_data.item_image_large,
-                    n = Object(be.a)(e.appid, t);
-                  3 == e.community_item_class &&
-                    (n =
-                      u.d.COMMUNITY_BASE_URL +
-                      "economy/profilebackground/items/" +
-                      e.appid +
-                      "/" +
-                      e.community_item_data.item_image_large +
-                      "?size=320x200");
-                  var r = g.b.Get().BRewardOwnedByUser(e);
-                  return p.createElement(
-                    ye.a,
-                    {
-                      key: e.defid,
-                      padding: "xxsmall",
-                      className: f.BundleItemPreview,
-                    },
-                    p.createElement(
-                      "div",
-                      { className: f.BundleItemPreviewImage },
-                      p.createElement("img", { src: n })
-                    ),
-                    p.createElement(
-                      "div",
-                      null,
+              var a = this,
+                e = g.b
+                  .Get()
+                  .GetBundleOfferForUser(this.props.definition.rewardDefinition)
+                  .items.map(function (e) {
+                    var t = e.community_item_data.item_image_large,
+                      n = Object(be.a)(e.appid, t);
+                    3 == e.community_item_class &&
+                      (n =
+                        u.d.COMMUNITY_BASE_URL +
+                        "economy/profilebackground/items/" +
+                        e.appid +
+                        "/" +
+                        e.community_item_data.item_image_large +
+                        "?size=320x200");
+                    var r = g.b.Get().BRewardOwnedByUser(e);
+                    return p.createElement(
+                      ye.a,
+                      {
+                        key: e.defid,
+                        padding: "xxsmall",
+                        className: f.BundleItemPreview,
+                      },
                       p.createElement(
                         "div",
-                        { className: f.BundleChildItemName },
-                        e.community_item_data.item_title
+                        { className: f.BundleItemPreviewImage },
+                        p.createElement("img", { src: n })
                       ),
                       p.createElement(
                         "div",
-                        { className: f.BundleChildItemClass },
-                        Object(g.d)(e.community_item_class)
-                      )
-                    ),
-                    r &&
-                      p.createElement(
-                        "div",
-                        { className: f.BundleChildItemOwned },
-                        p.createElement(ae.h, { className: f.OwnedCheckmark }),
-                        Object(_.f)("#Redeem_BundleItemOwned")
-                      )
-                  );
-                });
+                        null,
+                        p.createElement(
+                          "div",
+                          { className: f.BundleChildItemName },
+                          e.community_item_data.item_title
+                        ),
+                        p.createElement(
+                          "div",
+                          { className: f.BundleChildItemClass },
+                          Object(g.d)(e.community_item_class)
+                        )
+                      ),
+                      r &&
+                        p.createElement(
+                          "div",
+                          { className: f.BundleChildItemOwned },
+                          p.createElement(ae.h, {
+                            className: f.OwnedCheckmark,
+                          }),
+                          "redeem" == a.props.step &&
+                            Object(_.f)("#Redeem_BundleItemOwned")
+                        )
+                    );
+                  });
               return p.createElement(
                 ot,
                 { className: f.BundleItemContainer },
