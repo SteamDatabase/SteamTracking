@@ -545,7 +545,7 @@ GHomepage = {
 
 		var rgDisplayListCombined = false;
 
-		var oMainCapFilterOpts = { games_already_in_library: false, localized: true, displayed_elsewhere: false, only_current_platform: true };
+		var oMainCapFilterOpts = { games_already_in_library: false, localized: true, displayed_elsewhere: false, only_current_platform: true, dlc_for_you: true };
 		var fnPreFilterList = function( list, shuffle ) {
 			if ( shuffle )
 				list = v_shuffle( list.slice() );

@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6364281";
+var CLSTAMP = "6364620";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [9],
   {
@@ -14584,23 +14584,24 @@ var CLSTAMP = "6364281";
                     N.Fragment,
                     null,
                     b,
-                    N.createElement(
-                      "div",
-                      { className: me.a.ShowContentsContainer },
-                      m
-                        ? N.createElement(B.a, {
-                            size: "small",
-                            string: Object(R.f)("#Loading"),
-                          })
-                        : N.createElement(
-                            "button",
-                            {
-                              onClick: this.ShowMoreContents,
-                              className: me.a.ShowContentsButton,
-                            },
-                            Object(R.f)("#Sale_ShowMore")
-                          )
-                    )
+                    !Boolean(h.show_as_carousel) &&
+                      N.createElement(
+                        "div",
+                        { className: me.a.ShowContentsContainer },
+                        m
+                          ? N.createElement(B.a, {
+                              size: "small",
+                              string: Object(R.f)("#Loading"),
+                            })
+                          : N.createElement(
+                              "button",
+                              {
+                                onClick: this.ShowMoreContents,
+                                className: me.a.ShowContentsButton,
+                              },
+                              Object(R.f)("#Sale_ShowMore")
+                            )
+                      )
                   )),
                 !b)
               ) {
