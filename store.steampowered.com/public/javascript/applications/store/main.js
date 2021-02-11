@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6362167";
+var CLSTAMP = "6362928";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [9],
   {
@@ -35926,8 +35926,8 @@ var CLSTAMP = "6362167";
         c = n("zvcZ"),
         f = n("mgoM"),
         d = n("kyHq"),
-        l = n("+VX6"),
-        m = n("kLLr"),
+        m = n("+VX6"),
+        l = n("kLLr"),
         b = n("U+Q5"),
         _ = n("4P4B"),
         v = n("TyAF"),
@@ -37325,28 +37325,31 @@ var CLSTAMP = "6362167";
         var r = Oe(e, t);
         return void 0 === r || null == r ? n : Number.parseInt(r);
       }
-      function Ae(e, t) {
-        if (void 0 !== e && e.startsWith(l.c))
+      function Ae(e, t, n) {
+        var r = (null == n ? void 0 : n.rtime32_last_modified) || 0;
+        if (void 0 !== e && e.startsWith(m.c))
           return (
-            (a = E.d.MEDIA_CDN_COMMUNITY_URL + "images/clans/") +
-            e.substr(l.c.length + 1)
+            (i = E.d.MEDIA_CDN_COMMUNITY_URL + "images/clans/") +
+            e.substr(m.c.length + 1) +
+            "?t=" +
+            r
           );
         if (void 0 !== e && e.startsWith(_.b)) {
-          var n,
-            r = new Array(),
-            a = E.d.MEDIA_CDN_COMMUNITY_URL + "images/clans/",
-            o = e.substr(_.b.length + 1),
-            i = b.a.GetHashFromHashAndExt(o),
-            s = b.a.GetExtensionStringFromHashAndExt(o);
+          var a,
+            o = new Array(),
+            i = E.d.MEDIA_CDN_COMMUNITY_URL + "images/clans/",
+            s = e.substr(_.b.length + 1),
+            c = b.a.GetHashFromHashAndExt(s),
+            l = b.a.GetExtensionStringFromHashAndExt(s);
           return (
             null != t &&
-              ((n = Object(f.d)(t)),
-              r.push(a + i + "/" + n + s),
+              ((a = Object(f.d)(t)),
+              o.push(i + c + "/" + a + l),
               4 == t &&
-                ((n = Object(f.f)(Object(f.d)(t))),
-                r.push(a + i + "/" + n + s))),
-            r.push(a + o),
-            r
+                ((a = Object(f.f)(Object(f.d)(t))),
+                o.push(i + c + "/" + a + l + "?t=" + r))),
+            o.push(i + s + "?t=" + r),
+            o
           );
         }
         return e;
@@ -37411,7 +37414,10 @@ var CLSTAMP = "6362167";
           ? e.children
           : ("string" == typeof n &&
               0 < n.length &&
-              (n = "string" == typeof (t = Ae(n, e.language)) ? t : t[1]),
+              (n =
+                "string" == typeof (t = Ae(n, e.language, e.context.event))
+                  ? t
+                  : t[1]),
             "string" == typeof n && 0 < n.length && "#" == n[0]
               ? h.createElement("a", { className: r, href: n }, e.children)
               : "steam://settings/account" == n
@@ -37487,7 +37493,7 @@ var CLSTAMP = "6362167";
           )
         )
           return "";
-        var r = Ae(n, e.language);
+        var r = Ae(n, e.language, e.context.event);
         if ("string" != typeof r) return h.createElement(H.a, { rgSources: r });
         n = r;
         var a,
@@ -37861,7 +37867,7 @@ var CLSTAMP = "6362167";
               o = void 0,
               i = void 0;
             "gid" == n[1]
-              ? (a = new m.a(n[2]))
+              ? (a = new l.a(n[2]))
               : "groups" == n[1]
               ? (i = n[2])
               : isNaN(+n[2])
@@ -37903,9 +37909,9 @@ var CLSTAMP = "6362167";
               i = void 0,
               s = void 0;
             "gid" == r[1]
-              ? (o = new m.a(r[2]))
+              ? (o = new l.a(r[2]))
               : "group" == r[1]
-              ? (o = m.a.InitFromClanID(Number.parseInt(r[2])))
+              ? (o = l.a.InitFromClanID(Number.parseInt(r[2])))
               : "groups" == r[1]
               ? (s = r[2])
               : isNaN(+r[2])

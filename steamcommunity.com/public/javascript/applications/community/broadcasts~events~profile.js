@@ -26114,8 +26114,8 @@
         c = n("zvcZ"),
         _ = n("mgoM"),
         p = n("kyHq"),
-        l = n("+VX6"),
-        m = n("kLLr"),
+        m = n("+VX6"),
+        l = n("kLLr"),
         f = n("U+Q5"),
         v = n("4P4B"),
         b = n("TyAF"),
@@ -27523,28 +27523,31 @@
         var r = Oe(e, t);
         return void 0 === r || null == r ? n : Number.parseInt(r);
       }
-      function Ie(e, t) {
-        if (void 0 !== e && e.startsWith(l.d))
+      function Ie(e, t, n) {
+        var r = (null == n ? void 0 : n.rtime32_last_modified) || 0;
+        if (void 0 !== e && e.startsWith(m.d))
           return (
-            (a = C.c.MEDIA_CDN_COMMUNITY_URL + "images/clans/") +
-            e.substr(l.d.length + 1)
+            (i = C.c.MEDIA_CDN_COMMUNITY_URL + "images/clans/") +
+            e.substr(m.d.length + 1) +
+            "?t=" +
+            r
           );
         if (void 0 !== e && e.startsWith(v.b)) {
-          var n,
-            r = new Array(),
-            a = C.c.MEDIA_CDN_COMMUNITY_URL + "images/clans/",
-            o = e.substr(v.b.length + 1),
-            i = f.a.GetHashFromHashAndExt(o),
-            s = f.a.GetExtensionStringFromHashAndExt(o);
+          var a,
+            o = new Array(),
+            i = C.c.MEDIA_CDN_COMMUNITY_URL + "images/clans/",
+            s = e.substr(v.b.length + 1),
+            c = f.a.GetHashFromHashAndExt(s),
+            l = f.a.GetExtensionStringFromHashAndExt(s);
           return (
             null != t &&
-              ((n = Object(_.a)(t)),
-              r.push(a + i + "/" + n + s),
+              ((a = Object(_.a)(t)),
+              o.push(i + c + "/" + a + l),
               4 == t &&
-                ((n = Object(_.c)(Object(_.a)(t))),
-                r.push(a + i + "/" + n + s))),
-            r.push(a + o),
-            r
+                ((a = Object(_.c)(Object(_.a)(t))),
+                o.push(i + c + "/" + a + l + "?t=" + r))),
+            o.push(i + s + "?t=" + r),
+            o
           );
         }
         return e;
@@ -27609,7 +27612,10 @@
           ? e.children
           : ("string" == typeof n &&
               0 < n.length &&
-              (n = "string" == typeof (t = Ie(n, e.language)) ? t : t[1]),
+              (n =
+                "string" == typeof (t = Ie(n, e.language, e.context.event))
+                  ? t
+                  : t[1]),
             "string" == typeof n && 0 < n.length && "#" == n[0]
               ? h.createElement("a", { className: r, href: n }, e.children)
               : "steam://settings/account" == n
@@ -27685,7 +27691,7 @@
           )
         )
           return "";
-        var r = Ie(n, e.language);
+        var r = Ie(n, e.language, e.context.event);
         if ("string" != typeof r) return h.createElement(W.a, { rgSources: r });
         n = r;
         var a,
@@ -28059,7 +28065,7 @@
               o = void 0,
               i = void 0;
             "gid" == n[1]
-              ? (a = new m.a(n[2]))
+              ? (a = new l.a(n[2]))
               : "groups" == n[1]
               ? (i = n[2])
               : isNaN(+n[2])
@@ -28101,9 +28107,9 @@
               i = void 0,
               s = void 0;
             "gid" == r[1]
-              ? (o = new m.a(r[2]))
+              ? (o = new l.a(r[2]))
               : "group" == r[1]
-              ? (o = m.a.InitFromClanID(Number.parseInt(r[2])))
+              ? (o = l.a.InitFromClanID(Number.parseInt(r[2])))
               : "groups" == r[1]
               ? (s = r[2])
               : isNaN(+r[2])
