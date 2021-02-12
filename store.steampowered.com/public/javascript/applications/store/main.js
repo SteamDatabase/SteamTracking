@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6364984";
+var CLSTAMP = "6366704";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [9],
   {
@@ -10794,7 +10794,8 @@ var CLSTAMP = "6364984";
                   e.rgFacetValues.forEach(function (e) {
                     var t = e.rgFacetValue.nAtomicStoreTagID,
                       n = t ? r.rgFacetCounts.get(t) : 1;
-                    e.rgFacetValue.bDeactivated = 0 === n;
+                    e.rgFacetValue.bDeactivated =
+                      !e.rgFacetValue.bEnabled && !n;
                   });
                 });
               }
@@ -13854,6 +13855,15 @@ var CLSTAMP = "6364984";
                         (l = void 0),
                         (u = !1),
                         (p = re(n)),
+                        (d = this.state.facetCapsuleFilter),
+                        n.enable_faceted_browsing &&
+                          d &&
+                          d.UpdateSelectionsFromUrlParam(
+                            Object(le.a)(
+                              this.props.location,
+                              "facets" + n.unique_id
+                            )
+                          ),
                         n.smart_section
                           ? [
                               4,
@@ -14281,10 +14291,10 @@ var CLSTAMP = "6364984";
                       );
                     case 2:
                       return (
-                        (d = e.sent()),
-                        (l = d.capsules),
+                        (m = e.sent()),
+                        (l = m.capsules),
                         (u =
-                          d.bMoreRemaining &&
+                          m.bMoreRemaining &&
                           l.length < n.smart_section_max_apps),
                         n.enable_faceted_browsing ||
                           (l = this.GetCachedRandomizedOrder(
@@ -14305,18 +14315,11 @@ var CLSTAMP = "6364984";
                             })),
                             c
                           )),
-                        (m = this.state.facetCapsuleFilter),
                         n.enable_faceted_browsing &&
                           n.facets &&
                           (this.state.facetCapsuleFilter ||
-                            ((m = new ae()).SetFacets(n.facets),
-                            m.SetSection(n)),
-                          m.UpdateSelectionsFromUrlParam(
-                            Object(le.a)(
-                              this.props.location,
-                              "facets" + n.unique_id
-                            )
-                          ),
+                            ((d = new ae()).SetFacets(n.facets),
+                            d.SetSection(n)),
                           (h = ae.GetReferencedCapsules(n.facets)),
                           (h = n.smart_section
                             ? It(
@@ -14335,16 +14338,16 @@ var CLSTAMP = "6364984";
                               }))),
                           this.state.bPruningFacets &&
                             ((b = n.min_capsule_matches_for_facet_values || 1),
-                            m.PruneFacets(h, b)),
-                          m.UpdateFilters(h),
+                            d.PruneFacets(h, b)),
+                          d.UpdateFilters(h),
                           n.smart_section ||
-                            ((l = m.FilterCapsules(l)),
+                            ((l = d.FilterCapsules(l)),
                             n.use_random_order && this.RandomizeCapsuleList(l)),
-                          (_ = n.smart_section ? l : m.FilterCapsules(h)),
-                          m.DeactivateFacetValues(),
+                          (_ = n.smart_section ? l : d.FilterCapsules(h)),
+                          d.DeactivateFacetValues(),
                           (v = n.facet_sort_order),
                           (g = n.max_facet_values_for_facet || 100),
-                          m.SortFacetValues(_, this.props.language, v, g)),
+                          d.SortFacetValues(_, this.props.language, v, g)),
                         (y = !1),
                         (M = this.GetRowsToShow(x)),
                         (S = jt(n, M)),
@@ -14380,7 +14383,7 @@ var CLSTAMP = "6364984";
                             capsules: T,
                             bIsCapsuleArrayTruncated: y,
                             bInitialLoadComplete: !0,
-                            facetCapsuleFilter: m,
+                            facetCapsuleFilter: d,
                             bPruningFacets: !1,
                             bApplyingFilter: !1,
                             bAwaitingShowContentLoading: N,
