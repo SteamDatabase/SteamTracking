@@ -4,9 +4,7 @@ p6
 p6
 __text
 __TEXT
-@n
-TW$
-@n
+TX$
 __stubs
 __TEXT
 __stub_helper
@@ -18,10 +16,17 @@ __const
 __TEXT
 __objc_methname
 __TEXT
+__objc_classname__TEXT
+__objc_methtype
+__TEXT
+(
 __unwind_info
 __TEXT
 __eh_frame
 __TEXT
+xo-
+x
+xo-
 __DATA
 p6
 p6
@@ -34,7 +39,7 @@ __DATA
 __la_symbol_ptr
 __DATA
 Pq6
-8
+@
 Pq6
 __mod_init_func
 __DATA
@@ -44,25 +49,42 @@ __cfstring
 __DATA
 0SB
 0SB
+__objc_classlist__DATA
 __objc_imageinfo__DATA
+__objc_const
+__DATA
 __objc_selrefs
 __DATA
 __objc_classrefs__DATA
+xWB
+xWB
+__objc_superrefs__DATA
+XB
+XB
+__objc_ivar
+__DATA
+(XB
+(XB
+__objc_data
+__DATA
+0XB
+P
+0XB
 __data
 __DATA
-`VB
-`VB
 __thread_vars
 __DATA
+0.K
+0.K
 __thread_bss
 __DATA
-0,K
+P.K
 __bss
 __DATA
-00K
+P2K
 __common
 __DATA
-nK
+pK
 H
 __LINKEDIT
 0K
@@ -71,7 +93,6 @@ __LINKEDIT
 @loader_path/gameoverlayui.dylib
 "
 0K
-p_K
 P
 _
 
@@ -7954,6 +7975,8 @@ Assertion Failed: bufRGBA.TellPut() == nWidth*nHeight * 4
 log_files_always_flush
 0
 %s
+arrURLs
+T@"NSArray",R,N,V_arrURLs
 Steam
 en_US
 HOME
@@ -9610,8 +9633,8 @@ developer
 Steam pid that launched us
 VGUI_Application_001
 OK
-Feb 10 2021
-16:42:43
+Feb 11 2021
+16:24:08
 crashhandler003
 gameoverlayui
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/overlay/gameoverlayui/main.cpp
@@ -13274,32 +13297,23 @@ Nov
 Dec
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
-Ie&
-6a&
-be&
+Z$
 6
-Y$
+J$
+$
+$
 $
 0
 p
 p
 0
+A
 5
-A
-"
-A
-A
-A
-A
-A
-6
-)"
-#
+C#
+n#
 #
 #
 "
-"
-oI
 0
 p
 #
@@ -13308,18 +13322,20 @@ p
 #
 #
 #
+!4
+"
+E"
+@
+@
+@
+@
+"
+"
+"
 !
-~"
-@
-@
-@
-@
-"
-"
-"
-"
-["
-"
+!
+a3
+-"
 "
 "
 %!
@@ -13329,10 +13345,10 @@ k
 d
 !
 !
->?
 !
 !
-)?
+J!
+`?
 v
 
 
@@ -13376,23 +13392,35 @@ p
 0
 @
 =
-?
-?
 0
-P>
-G@
+}?
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+D>
+f@
 Hi
-8E
-4
-4
-4
+E
 
+X@
 0
 p
 I
 I
-@
-@
+E/
+JD
+;
+D
 $
 @
 @
@@ -13404,9 +13432,7 @@ $
 A
 Hc
 =
--
-!
-2A
+1
 Hc
 ?
 ?
@@ -13448,6 +13474,8 @@ HcU
 #
 i[
 ~
+'
+'
 B
 ?
 U
@@ -13541,7 +13569,6 @@ G
 @
 >
 0
-:9
 p
 =
 0
@@ -13601,62 +13628,61 @@ P
 "
 3
 D
-=7
-?(
+?7
+7
 @
-(
-6
+='
+!'
 '
-55
-4
+'
 
-L95`l3
-3
-3
+w$
+L95@q3
+5$
+43
 d
+.
+.
+
+
+
+2
 
 
 
 
 
 
-l-
-
-
-
->
+/0
 
 
 d
 &
 &
 d
-#
 -
 -
 t=
 =
 =
+l,
 @
-Q,
-,
-,
+Y,
+"
 ,
 "
 "
 uV%
-"
 
 
-o+
+]+
 E
 >
 
 
 
 @
-*
-*
+"
 @
 @
 &
@@ -13701,18 +13727,16 @@ E
 .
 .
 .
-e)
 d
 
 d
 d
 =
+M(
 
 =
 =
 @
-(
-(
 =
 @
 
@@ -13724,9 +13748,14 @@ d
 @
 @
 @
+1'
 0
+s'
 E
-i'
 }
+d'
+^'
+'
+'
 $
 p

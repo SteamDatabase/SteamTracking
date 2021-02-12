@@ -154,13 +154,16 @@
  CValidator::Push(char const*, void*, char const*)
  D CFontTextureCache::s_pStringPageSize
  D CUtlSymbol::s_bAllowStaticSymbolTable
+ D OBJC_CLASS_$_GURLHelper
  D OBJC_CLASS_$_VGUIApplicationDelegate
  D OBJC_CLASS_$_VGUI_NSView
  D OBJC_CLASS_$_VGUI_NSWindow
  D OBJC_CLASS_$_VGUI_NSWindowDelegate
+ D OBJC_IVAR_$_GURLHelper._arrURLs
  D OBJC_IVAR_$_VGUIApplicationDelegate.m_HiddenWindows
  D OBJC_IVAR_$_VGUIApplicationDelegate.m_submenu
  D OBJC_IVAR_$_VGUI_NSWindow._bActivateAppOnNextResize
+ D OBJC_METACLASS_$_GURLHelper
  D OBJC_METACLASS_$_VGUIApplicationDelegate
  D OBJC_METACLASS_$_VGUI_NSView
  D OBJC_METACLASS_$_VGUI_NSWindow
@@ -295,6 +298,7 @@
  OBJC_CLASS_$_NSLocale
  OBJC_CLASS_$_NSMenu
  OBJC_CLASS_$_NSMenuItem
+ OBJC_CLASS_$_NSMutableArray
  OBJC_CLASS_$_NSNull
  OBJC_CLASS_$_NSObject
  OBJC_CLASS_$_NSOpenPanel
@@ -2715,6 +2719,9 @@
  swprintf
  system
  t (anonymous namespace)::CLEANUP::~CLEANUP()
+ t -[GURLHelper arrURLs]
+ t -[GURLHelper handleGetURLEvent:withReplyEvent:]
+ t -[GURLHelper init]
  t -[VGUIApplicationDelegate .cxx_construct]
  t -[VGUIApplicationDelegate .cxx_destruct]
  t -[VGUIApplicationDelegate applicationDidChangeOcclusionState:]

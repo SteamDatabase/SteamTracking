@@ -169,6 +169,9 @@
  CValidator::Pop()
  CValidator::Push(char const*, void*, char const*)
  CreateSimpleProcess
+ D OBJC_CLASS_$_GURLHelper
+ D OBJC_IVAR_$_GURLHelper._arrURLs
+ D OBJC_METACLASS_$_GURLHelper
  D typeinfo for CCookie
  D typeinfo for CHTMLBaseProtoBufMsg
  D typeinfo for CHTMLController
@@ -654,14 +657,19 @@
  GetMiniDumpSteamID
  GetOSType
  Log
+ OBJC_CLASS_$_NSAppleEventManager
+ OBJC_CLASS_$_NSApplication
  OBJC_CLASS_$_NSArray
  OBJC_CLASS_$_NSAutoreleasePool
  OBJC_CLASS_$_NSBundle
  OBJC_CLASS_$_NSColorSpace
+ OBJC_CLASS_$_NSDate
  OBJC_CLASS_$_NSEvent
  OBJC_CLASS_$_NSFileManager
  OBJC_CLASS_$_NSFont
  OBJC_CLASS_$_NSLocale
+ OBJC_CLASS_$_NSMutableArray
+ OBJC_CLASS_$_NSObject
  OBJC_CLASS_$_NSProcessInfo
  OBJC_CLASS_$_NSRunningApplication
  OBJC_CLASS_$_NSScreen
@@ -670,6 +678,7 @@
  OBJC_CLASS_$_NSUserDefaults
  OBJC_CLASS_$_NSWindow
  OBJC_CLASS_$_NSWorkspace
+ OBJC_METACLASS_$_NSObject
  OSAtomicCompareAndSwap64Barrier
  OSMemoryBarrier
  Plat_AbsoluteTime
@@ -3473,6 +3482,8 @@
  __stack_chk_fail
  __stack_chk_guard
  __stderrp
+ _objc_empty_cache
+ _objc_empty_vtable
  b (anonymous namespace)::CCookie_descriptor_
  b (anonymous namespace)::CCookie_reflection_
  b (anonymous namespace)::CHTMLHeader_descriptor_
@@ -3862,6 +3873,8 @@
  mkdir
  mmap
  munmap
+ objc_msgSend
+ objc_msgSendSuper2
  open
  operator delete(void*)
  operator delete[](void*)
@@ -4087,6 +4100,9 @@
  strtoull
  sysctlbyname
  t (anonymous namespace)::protobuf_RegisterTypes(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ t -[GURLHelper arrURLs]
+ t -[GURLHelper handleGetURLEvent:withReplyEvent:]
+ t -[GURLHelper init]
  t BlockingWait(int*, unsigned int, int*)
  t GetNetAdrResolveCacheMutex()
  t IPC::crc32(unsigned int, void const*, unsigned long)

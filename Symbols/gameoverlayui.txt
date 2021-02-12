@@ -943,6 +943,9 @@
  D ListPanelDragger::GetKBMap()::s_pMap
  D ListPanelDragger::GetMessageMap()::s_pMap
  D ListPanelDragger::KB_ChainToMap()::chained
+ D OBJC_CLASS_$_GURLHelper
+ D OBJC_IVAR_$_GURLHelper._arrURLs
+ D OBJC_METACLASS_$_GURLHelper
  D Steam_GetBaseUserFolder(EUniverse, ESteamRealm)::nCanary
  D Steam_GetBaseUserFolder(EUniverse, ESteamRealm)::rgchFolder
  D VTT for AppModalQueryBox
@@ -3939,14 +3942,19 @@
  Log
  Msg
  NSSearchPathForDirectoriesInDomains
+ OBJC_CLASS_$_NSAppleEventManager
+ OBJC_CLASS_$_NSApplication
  OBJC_CLASS_$_NSArray
  OBJC_CLASS_$_NSAutoreleasePool
  OBJC_CLASS_$_NSBundle
  OBJC_CLASS_$_NSColorSpace
+ OBJC_CLASS_$_NSDate
  OBJC_CLASS_$_NSEvent
  OBJC_CLASS_$_NSFileManager
  OBJC_CLASS_$_NSFont
  OBJC_CLASS_$_NSLocale
+ OBJC_CLASS_$_NSMutableArray
+ OBJC_CLASS_$_NSObject
  OBJC_CLASS_$_NSProcessInfo
  OBJC_CLASS_$_NSRunningApplication
  OBJC_CLASS_$_NSScreen
@@ -3955,6 +3963,7 @@
  OBJC_CLASS_$_NSUserDefaults
  OBJC_CLASS_$_NSWindow
  OBJC_CLASS_$_NSWorkspace
+ OBJC_METACLASS_$_NSObject
  OSAtomicCompareAndSwap64Barrier
  OSMemoryBarrier
  Plat_CommandLineParamExists
@@ -14968,6 +14977,8 @@
  __stack_chk_guard
  __stderrp
  __tolower
+ _objc_empty_cache
+ _objc_empty_vtable
  _tlv_bootstrap
  abort
  alphasort$INODE64
@@ -15700,6 +15711,7 @@
  mmap
  munmap
  objc_msgSend
+ objc_msgSendSuper2
  open
  opendir$INODE64
  operator delete(void*)
@@ -16065,6 +16077,9 @@
  t (anonymous namespace)::ScrollBarButton::ScrollBarButton(vgui::Panel*, char const*, char const*)
  t (anonymous namespace)::ScrollBarButton::~ScrollBarButton()
  t (anonymous namespace)::protobuf_RegisterTypes(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ t -[GURLHelper arrURLs]
+ t -[GURLHelper handleGetURLEvent:withReplyEvent:]
+ t -[GURLHelper init]
  t AddFromIter(vgui::CFileOpenListPanel*, char const*, CDirIterator&, KeyValues*)
  t AddModifierToString(char const*, char*, unsigned long)
  t BBeginsWithProtocol(char const*)

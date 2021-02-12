@@ -961,6 +961,9 @@
  D FragSource_FancyQuadTextureType
  D FragSource_FancyQuadTextureVersion
  D ImageUnreferenced::pchEvent
+ D OBJC_CLASS_$_GURLHelper
+ D OBJC_IVAR_$_GURLHelper._arrURLs
+ D OBJC_METACLASS_$_GURLHelper
  D TRexternalID
  D VMatrix::GetIdentityMatrix()::identityMatrix
  D VTT for std::__1::basic_ostringstream<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >
@@ -2640,14 +2643,19 @@
  Msg
  NSApp
  NSSelectorFromString
+ OBJC_CLASS_$_NSAppleEventManager
+ OBJC_CLASS_$_NSApplication
  OBJC_CLASS_$_NSArray
  OBJC_CLASS_$_NSAutoreleasePool
  OBJC_CLASS_$_NSBundle
  OBJC_CLASS_$_NSColorSpace
+ OBJC_CLASS_$_NSDate
  OBJC_CLASS_$_NSEvent
  OBJC_CLASS_$_NSFileManager
  OBJC_CLASS_$_NSFont
  OBJC_CLASS_$_NSLocale
+ OBJC_CLASS_$_NSMutableArray
+ OBJC_CLASS_$_NSObject
  OBJC_CLASS_$_NSProcessInfo
  OBJC_CLASS_$_NSRunningApplication
  OBJC_CLASS_$_NSScreen
@@ -2656,6 +2664,7 @@
  OBJC_CLASS_$_NSUserDefaults
  OBJC_CLASS_$_NSWindow
  OBJC_CLASS_$_NSWorkspace
+ OBJC_METACLASS_$_NSObject
  OSAtomicCompareAndSwap64Barrier
  OSMemoryBarrier
  Plat_FloatTime
@@ -16754,6 +16763,8 @@
  __vsnprintf_chk
  _dispatch_source_type_read
  _exit
+ _objc_empty_cache
+ _objc_empty_vtable
  _tlv_bootstrap
  abort
  acos
@@ -18130,6 +18141,7 @@
  objc_autoreleasePoolPop
  objc_autoreleasePoolPush
  objc_msgSend
+ objc_msgSendSuper2
  open
  opendir$INODE64
  operator delete(void*)
@@ -18720,6 +18732,9 @@
  t $_4::__invoke(ConVar*, char const*)
  t (anonymous namespace)::CLEANUP::~CLEANUP()
  t (anonymous namespace)::protobuf_RegisterTypes(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ t -[GURLHelper arrURLs]
+ t -[GURLHelper handleGetURLEvent:withReplyEvent:]
+ t -[GURLHelper init]
  t BDecryptAESUsingOpenSSL(unsigned char const*, unsigned int, unsigned char*, unsigned int*, aes_key_st*, unsigned char const*, bool)
  t BExtractAESRoundKeys(aes_key_st const*, bool, unsigned int (&) [60], int*)
  t BlockingWait(int*, unsigned int, int*)

@@ -5,15 +5,20 @@ __stubs
 __TEXT
 __stub_helper
 __TEXT
+__gcc_except_tab__TEXT
 __objc_methname
 __TEXT
+__objc_classname__TEXT
+__objc_methtype
+__TEXT
+(
 __cstring
 __TEXT
-__gcc_except_tab__TEXT
 __const
 __TEXT
 __unwind_info
 __TEXT
+8~
 __eh_frame
 __TEXT
 __DATA
@@ -21,7 +26,6 @@ __nl_symbol_ptr
 __DATA
 __got
 __DATA
-x
 __la_symbol_ptr
 __DATA
 __mod_init_func
@@ -29,17 +33,26 @@ __DATA
 X
 __const
 __DATA
+__objc_classlist__DATA
 __objc_imageinfo__DATA
+__objc_const
+__DATA
 __objc_selrefs
 __DATA
 __objc_classrefs__DATA
+__objc_superrefs__DATA
+__objc_ivar
+__DATA
+__objc_data
+__DATA
+P
 __data
+__DATA
+__bss
 __DATA
 __common
 __DATA
 p*
-__bss
-__DATA
 H
 __LINKEDIT
 
@@ -82,7 +95,7 @@ h
 /usr/lib/libobjc.A.dylib
 &
 )
-@J
+PJ
 N3IPC15BinarySemaphoreE
 N3IPC10PosixMutexE
 N3IPC6IMutexE
@@ -649,6 +662,8 @@ N6google8protobuf2io14ErrorCollectorE
 18CUtlCharConversion
 19CUtlNoEscConversion
 14CUtlMemoryBase
+arrURLs
+T@"NSArray",R,N,V_arrURLs
 en_US
 r
 hw.optional.arm64
@@ -1787,11 +1802,21 @@ sc_schinese
 
 
 
+W
 "
-B
 3
 D
+&
+
 @
+9
+
+
+
+y
+M
+
+
 
 7
 Hi
@@ -1807,6 +1832,7 @@ $
 A
 Hc
 =
+
 Hc
 ?
 ?

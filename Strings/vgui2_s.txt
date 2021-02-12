@@ -1,6 +1,8 @@
 __TEXT
 __text
 __TEXT
+o
+o
 __stubs
 __TEXT
 __stub_helper
@@ -11,15 +13,13 @@ __TEXT
 :
 __objc_methname
 __TEXT
-R"
-__cstring
-__TEXT
 __objc_classname__TEXT
 __objc_methtype
 __TEXT
+__cstring
+__TEXT
 __unwind_info
 __TEXT
-)
 __eh_frame
 __TEXT
 __DATA
@@ -37,6 +37,7 @@ x1
 __cfstring
 __DATA
 __objc_classlist__DATA
+(
 __objc_protolist__DATA
 __objc_imageinfo__DATA
 __objc_const
@@ -51,11 +52,12 @@ __objc_data
 __DATA
 __data
 __DATA
-__common
-__DATA
 __bss
 __DATA
-`^
+`#
+__common
+__DATA
+P^
 H
 __LINKEDIT
 0
@@ -64,8 +66,8 @@ __LINKEDIT
 @loader_path/vgui2_s.dylib
 "
 0
-p
-`=
+3
+P>
 p
 P
 
@@ -113,6 +115,7 @@ h
 8
 /usr/lib/libobjc.A.dylib
 &
+P]
 )
 H
 10CUtlString
@@ -354,6 +357,8 @@ d
 19CUtlNoEscConversion
 14CUtlMemoryBase
 12CIMENullImpl
+arrURLs
+T@"NSArray",R,N,V_arrURLs
 STEAM_APP_BUNDLE_PATH
 en_US
 HOME
@@ -1822,6 +1827,8 @@ Seconds
 @
 @
 @
+/
+*
 =
 0
 
