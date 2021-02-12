@@ -1,7 +1,7 @@
 <root>
 	<styles>
 		<include src="file://{resources}/styles/steamstyles.css" />
-					<include src="https://store.akamai.steamstatic.com/public/css/bigpicture/eventbackground_empty.css?v=b6365306&amp;l=english" />
+					<include src="https://store.akamai.steamstatic.com/public/css/bigpicture/eventbackground_empty.css?v=KvtD7dCW09Zq&amp;l=english" />
 			</styles>
 
 	
