@@ -22513,76 +22513,102 @@
                         e.sale_tag_filter &&
                           (e.store_filter = xr(e.sale_tag_filter, a));
                       }),
-                      [3, 7])
+                      [3, 5])
                     : [3, 3]
-                  : [3, 8];
+                  : [3, 6];
               case 3:
-                if (!o.enable_faceted_browsing) return [3, 7];
-                Qe.b.GenerateMetadata(t, o.facets), (e.label = 4);
-              case 4:
-                return (
-                  e.trys.push([4, 6, , 7]),
-                  [
-                    4,
-                    (function (s, c) {
-                      return Object(I.b)(this, void 0, void 0, function () {
-                        var t, n, a, i, r, o, l;
-                        return Object(I.e)(this, function (e) {
-                          for (t = 0, n = s.facets; t < n.length; t++)
+                return o.enable_faceted_browsing
+                  ? (Qe.b.GenerateMetadata(t, o.facets),
+                    [
+                      4,
+                      (function (r, c) {
+                        return Object(I.b)(this, void 0, void 0, function () {
+                          var t, n, a, i;
+                          return Object(I.e)(this, function (e) {
                             for (
-                              a = n[t], i = 0, r = a.facetValues;
-                              i < r.length;
-                              i++
-                            )
-                              ((o = r[i]).rgStoreTagFilter = xr(o.filter, c)),
-                                0 <
-                                  (l = (function (e, t) {
-                                    for (
-                                      var n = 0, a = e.clauses;
-                                      n < a.length;
-                                      n++
-                                    )
-                                      for (
-                                        var i = a[n], r = 0, o = i.or_tags;
-                                        r < o.length;
-                                        r++
-                                      ) {
-                                        var l = o[r],
-                                          s = Te(l),
-                                          c = Ce(l).toLocaleLowerCase();
-                                        if (s === R.Store) {
-                                          if (!t.has(c)) {
-                                            console.error(
-                                              "No matching categorized store tag found for sale tag: " +
-                                                l
-                                            );
-                                            continue;
+                              t = function (e) {
+                                for (
+                                  var t = new Map(),
+                                    n = new Map(),
+                                    a = 0,
+                                    i = e.facetValues;
+                                  a < i.length;
+                                  a++
+                                ) {
+                                  var r = i[a];
+                                  t.set(r, xr(r.filter, c)),
+                                    n.set(
+                                      r,
+                                      (function (e, t) {
+                                        for (
+                                          var n = 0, a = e.clauses;
+                                          n < a.length;
+                                          n++
+                                        )
+                                          for (
+                                            var i = a[n], r = 0, o = i.or_tags;
+                                            r < o.length;
+                                            r++
+                                          ) {
+                                            var l = o[r],
+                                              s = Te(l),
+                                              c = Ce(l).toLocaleLowerCase();
+                                            if (s === R.Store) {
+                                              if (!t.has(c)) {
+                                                console.error(
+                                                  "No matching categorized store tag found for sale tag: " +
+                                                    l
+                                                );
+                                                continue;
+                                              }
+                                              var d = t.get(c);
+                                              if (He.BIsTagAtomic(d)) return d;
+                                            }
                                           }
-                                          var d = t.get(c);
-                                          if (He.BIsTagAtomic(d)) return d;
-                                        }
-                                      }
-                                    return 0;
-                                  })(o.filter, c)) && (o.nAtomicStoreTagID = l);
-                          return [2];
+                                        return 0;
+                                      })(r.filter, c)
+                                    );
+                                }
+                                if (
+                                  e.facetValues.every(function (e) {
+                                    return null === t.get(e);
+                                  })
+                                )
+                                  return (
+                                    console.error(
+                                      "Couldn't look up store tag names for any facet value in facet " +
+                                        e.name[0] +
+                                        ", skipping."
+                                    ),
+                                    "continue"
+                                  );
+                                for (
+                                  var o = 0, l = e.facetValues;
+                                  o < l.length;
+                                  o++
+                                ) {
+                                  (r = l[o]).rgStoreTagFilter = t.get(r);
+                                  var s = n.get(r);
+                                  0 < s && (r.nAtomicStoreTagID = s);
+                                }
+                              },
+                                n = 0,
+                                a = r.facets;
+                              n < a.length;
+                              n++
+                            )
+                              (i = a[n]), t(i);
+                            return [2];
+                          });
                         });
-                      });
-                    })(o, a),
-                  ]
-                );
+                      })(o, a),
+                    ])
+                  : [3, 5];
+              case 4:
+                e.sent(), (e.label = 5);
               case 5:
-                return e.sent(), [3, 7];
-              case 6:
-                return (
-                  e.sent(),
-                  console.error(
-                    "Store filter generation resulted in invalid data, skipping."
-                  ),
-                  [3, 7]
-                );
-              case 7:
                 return i++, [3, 2];
-              case 8:
+              case 6:
                 return [2];
             }
           });
@@ -22627,14 +22653,14 @@
                 value: u,
               });
             } else
-              d == R.Feature &&
-                o.rgSubexpressions.push({
-                  type: ne.o.k_EStoreFilterClauseTypeFeatureTag,
-                  value: p,
-                });
+              d == R.Feature
+                ? o.rgSubexpressions.push({
+                    type: ne.o.k_EStoreFilterClauseTypeFeatureTag,
+                    value: p,
+                  })
+                : console.warn("Sale tag not implemented for faceting: " + c);
           }
-          if (0 === o.rgSubexpressions.length)
-            throw new Error("Invalid store filter generated!");
+          if (0 === o.rgSubexpressions.length) return null;
           n.rgSubexpressions.push(o);
         }
         return n;

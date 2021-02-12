@@ -11918,6 +11918,15 @@
                         (l = void 0),
                         (u = !1),
                         (d = Object(J.a)(n)),
+                        (p = this.state.facetCapsuleFilter),
+                        n.enable_faceted_browsing &&
+                          p &&
+                          p.UpdateSelectionsFromUrlParam(
+                            Object(X.a)(
+                              this.props.location,
+                              "facets" + n.unique_id
+                            )
+                          ),
                         n.smart_section
                           ? [
                               4,
@@ -12345,10 +12354,10 @@
                       );
                     case 2:
                       return (
-                        (p = e.sent()),
-                        (l = p.capsules),
+                        (m = e.sent()),
+                        (l = m.capsules),
                         (u =
-                          p.bMoreRemaining &&
+                          m.bMoreRemaining &&
                           l.length < n.smart_section_max_apps),
                         n.enable_faceted_browsing ||
                           (l = this.GetCachedRandomizedOrder(
@@ -12369,18 +12378,11 @@
                             })),
                             c
                           )),
-                        (m = this.state.facetCapsuleFilter),
                         n.enable_faceted_browsing &&
                           n.facets &&
                           (this.state.facetCapsuleFilter ||
-                            ((m = new J.b()).SetFacets(n.facets),
-                            m.SetSection(n)),
-                          m.UpdateSelectionsFromUrlParam(
-                            Object(X.a)(
-                              this.props.location,
-                              "facets" + n.unique_id
-                            )
-                          ),
+                            ((p = new J.b()).SetFacets(n.facets),
+                            p.SetSection(n)),
                           (h = J.b.GetReferencedCapsules(n.facets)),
                           (h = n.smart_section
                             ? nt(
@@ -12399,16 +12401,16 @@
                               }))),
                           this.state.bPruningFacets &&
                             ((f = n.min_capsule_matches_for_facet_values || 1),
-                            m.PruneFacets(h, f)),
-                          m.UpdateFilters(h),
+                            p.PruneFacets(h, f)),
+                          p.UpdateFilters(h),
                           n.smart_section ||
-                            ((l = m.FilterCapsules(l)),
+                            ((l = p.FilterCapsules(l)),
                             n.use_random_order && this.RandomizeCapsuleList(l)),
-                          (v = n.smart_section ? l : m.FilterCapsules(h)),
-                          m.DeactivateFacetValues(),
+                          (v = n.smart_section ? l : p.FilterCapsules(h)),
+                          p.DeactivateFacetValues(),
                           (b = n.facet_sort_order),
                           (g = n.max_facet_values_for_facet || 100),
-                          m.SortFacetValues(v, this.props.language, b, g)),
+                          p.SortFacetValues(v, this.props.language, b, g)),
                         (y = !1),
                         (S = this.GetRowsToShow(P)),
                         (E = st(n, S)),
@@ -12441,7 +12443,7 @@
                             capsules: B,
                             bIsCapsuleArrayTruncated: y,
                             bInitialLoadComplete: !0,
-                            facetCapsuleFilter: m,
+                            facetCapsuleFilter: p,
                             bPruningFacets: !1,
                             bApplyingFilter: !1,
                             bAwaitingShowContentLoading: A,
