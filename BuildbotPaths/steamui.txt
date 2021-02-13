@@ -20,7 +20,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/gid.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/html_jstypes.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/imageloadwrapper.cpp
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/interfacemap_service.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/iopollinghelpers_osx.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/ipcclient.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/jpegloader.cpp

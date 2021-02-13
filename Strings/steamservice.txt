@@ -3,8 +3,8 @@ __TEXT
 @%
 __text
 __TEXT
-?
-?
+C
+C
 __stubs
 __TEXT
 __stub_helper
@@ -64,6 +64,8 @@ HZ'
 ['
 (r'
 P
+_!
+_!
 g
 
 `
@@ -89,14 +91,13 @@ h
 /usr/lib/libobjc.A.dylib
 &
 )
-`50
-'
-%
+P"0
 Hi
-&
 H=
 ?
-=$
+$
+$
+$
 10CUtlString
 10CIPCServer
 11CPipeWaiter
@@ -112,47 +113,6 @@ H=
 12IProcessPipe
 24CPipeEventCallbackHelper
 N10OSXHelpers16CIOPollingHelper15IHelperCallbackE
-IClientInstallUtils
-SetUniverse
-AddShortcut
-RemoveShortcut
-AddUninstallEntry
-RemoveUninstallEntry
-AddToFirewall
-RemoveFromFirewall
-RegisterSteamProtocolHandler
-AddInstallScriptToWhiteList
-RunInstallScript
-GetInstallScriptExitCode
-ConfigureNetworDeviceIPAddresses
-IClientModuleManager
-LoadModule
-UnloadModule
-CallFunction
-CallFunctionAsync
-PollResponseAsync
-IRegistryInterface
-BGetValueStr
-BGetValueUint
-BGetValueBin
-BSetValueStr
-BSetValueUint
-BSetValueBin
-BDeleteValue
-BDeleteKey
-BKeyExists
-BGetSubKeys
-BGetValues
-BEnumerateKey
-BEnumerateValue
-IClientProcessMonitor
-RegisterProcess
-UnregisterProcess
-TerminateProcess
-IClientSecureDesktop
-BStartStreaming
-StopStreaming
-SendSAS
 14CServiceEngine
 25CClientModuleManagerAsync
 21CWorkItemFunctionCall
@@ -1132,11 +1092,51 @@ Unknown
 Assertion Failed: hSteamUser == 0
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/SteamServiceClient/serviceengine.cpp
 Assertion Failed: !"Interface type not found"
-Fencepost deserialize mismatch in %s::%s
+IClientInstallUtils
+SetUniverse
+Fencepost deserialize mismatch (%u vs %u)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/interfacemap_service.h
 )
+AddShortcut
 ) =
-Unknown IPC call %s::0x%x
+RemoveShortcut
+AddUninstallEntry
+RemoveUninstallEntry
+AddToFirewall
+RemoveFromFirewall
+RegisterSteamProtocolHandler
+AddInstallScriptToWhiteList
+RunInstallScript
+GetInstallScriptExitCode
+ConfigureNetworDeviceIPAddresses
+IClientModuleManager
+LoadModule
+UnloadModule
+CallFunction
+CallFunctionAsync
+PollResponseAsync
+IRegistryInterface
+BGetValueStr
+BGetValueUint
+BGetValueBin
+BSetValueStr
+BSetValueUint
+BSetValueBin
+BDeleteValue
+BDeleteKey
+BKeyExists
+BGetSubKeys
+BGetValues
+BEnumerateKey
+BEnumerateValue
+IClientProcessMonitor
+RegisterProcess
+UnregisterProcess
+TerminateProcess
+IClientSecureDesktop
+BStartStreaming
+StopStreaming
+SendSAS
 %u,
 0x%llX,
 ClientModuleManagerPool
@@ -6128,8 +6128,8 @@ crashhandler.dylib
 CreateInterface
 %u
 1.0
-Feb 11 2021
-16:19:56
+Feb 12 2021
+15:21:44
 Jan
 Feb
 Mar
@@ -6686,13 +6686,12 @@ CWorkThreadPool::BTryDeleteExitedWorkerThreads
 Work thread '%s' is marked exited, but we could not immediately join prior to deleting -- proceeding without join
 CWorkItem::DispatchCompletedWorkItem: got a work item with no job ID
 Assertion Failed: m_cCurrentDepth > 0
-'
-%
 Hi
-&
 H=
 ?
-=$
+$
+$
+$
 @
 @
 =
@@ -6703,10 +6702,13 @@ H=
 A
 Hc
 =
+"
 N
-8
+=#
+#
+#
+#
 Hc
-\!
 
 ?
 ?
@@ -7032,11 +7034,13 @@ AES-NI GCM module for x86_64, CRYPTOGAMS by <appro@openssl.org>
 =
 Montgomery Multiplication with scatter/gather for x86_64, CRYPTOGAMS by <appro@openssl.org>
 =
-/
+0
 3
 3
-S
+D
+*
 IcE
+
 I;E
 ,
 H
@@ -7108,6 +7112,5 @@ i
 @
 @
 @
-
 Hi
 
