@@ -309,6 +309,11 @@
 				$Data = preg_replace( '/[&\?]v=[a-zA-Z0-9\.\-\_]{3,}/', '?v=valveisgoodatcaching', $Data );
 			}
 
+			if( $File === 'store.steampowered.com/public/javascript/applications/store/78.js' ) // Valve???????
+			{
+				$File = 'store.steampowered.com/public/javascript/applications/store/pointsshop_english-json.js';
+			}
+
 			$OriginalFile = $File;
 			$File = __DIR__ . DIRECTORY_SEPARATOR . $File;
 
@@ -336,11 +341,6 @@
 				}
 
 				$this->ETags[ $HashPath ] = $Hash;
-
-				if( $File === 'store.steampowered.com/public/javascript/applications/store/78.js' ) // Valve???????
-				{
-					$File = 'store.steampowered.com/public/javascript/applications/store/pointsshop_english-json.js';
-				}
 
 				// Extract json so it gets pretty printed from the json.parse
 				if( str_ends_with( $File, 'english-json.js' ) && preg_match( "/exports=JSON\.parse\('(.+)'\)}}]\);$/", $Data, $Matches ) )
