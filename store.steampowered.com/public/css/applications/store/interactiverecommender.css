@@ -1,0 +1,714 @@
+
+
+
+
+
+
+
+
+
+
+
+/* stylelint-disable */
+
+/* stylelint-enable */
+a:link {
+  text-decoration: none; }
+
+.interactiverecommender_App_u3SD8 {
+  margin: 0px auto;
+  height: 3840px;
+  font-family: "Motiva Sans", Sans-serif;
+  background-image: linear-gradient(#1B2838, #1B2838 400px, #1B2838 100%);
+  color: white;
+  padding: 40px;
+  position: relative; }
+  @media (max-width: 414px) {
+    .interactiverecommender_App_u3SD8 {
+      padding: 10px; } }
+  .interactiverecommender_App_u3SD8 .interactiverecommender_Login_3wfCR {
+    width: 600px;
+    margin: 20px auto;
+    text-align: center; }
+    .interactiverecommender_App_u3SD8 .interactiverecommender_Login_3wfCR .interactiverecommender_Text_1PXPv {
+      font-size: 24px;
+      color: #DDD;
+      margin-bottom: 20px; }
+  .interactiverecommender_App_u3SD8 .interactiverecommender_Container_2g8SX {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto; }
+    .interactiverecommender_App_u3SD8 .interactiverecommender_Container_2g8SX .interactiverecommender_TopSection_fR3i6 {
+      color: #FBFCFC;
+      margin-bottom: 60px;
+      min-width: 300px; }
+      @media (max-width: 414px) {
+        .interactiverecommender_App_u3SD8 .interactiverecommender_Container_2g8SX .interactiverecommender_TopSection_fR3i6 {
+          margin-bottom: 20px; } }
+      .interactiverecommender_App_u3SD8 .interactiverecommender_Container_2g8SX .interactiverecommender_TopSection_fR3i6 .interactiverecommender_Header_2CDNs {
+        font-size: 24px;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+        color: #40AEE5;
+        margin-bottom: 20px; }
+        @media (max-width: 414px) {
+          .interactiverecommender_App_u3SD8 .interactiverecommender_Container_2g8SX .interactiverecommender_TopSection_fR3i6 .interactiverecommender_Header_2CDNs {
+            font-size: 24px;
+            text-align: center; } }
+      .interactiverecommender_App_u3SD8 .interactiverecommender_Container_2g8SX .interactiverecommender_TopSection_fR3i6 .interactiverecommender_Body_174-d {
+        font-size: 16px;
+        font-weight: 100;
+        line-height: 22px;
+        letter-spacing: 0px;
+        color: #c6d4df; }
+        @media screen and (max-width: 414px) {
+          .interactiverecommender_App_u3SD8 .interactiverecommender_Container_2g8SX .interactiverecommender_TopSection_fR3i6 .interactiverecommender_Body_174-d {
+            font-size: 10px;
+            line-height: 16px;
+            text-align: center; } }
+      .interactiverecommender_App_u3SD8 .interactiverecommender_Container_2g8SX .interactiverecommender_TopSection_fR3i6 .interactiverecommender_Spacer_1f2cz {
+        height: 20px;
+        min-height: 20px; }
+    .interactiverecommender_App_u3SD8 .interactiverecommender_Container_2g8SX .interactiverecommender_BottomSection_3A60h {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: row;
+      overflow: clip; }
+      .interactiverecommender_App_u3SD8 .interactiverecommender_Container_2g8SX .interactiverecommender_BottomSection_3A60h .interactiverecommender_VerticalBar_2qL2p {
+        width: 0px;
+        height: 100%;
+        border-left: 1px solid #30455A; }
+
+.interactiverecommender_PlaytimeList_3qtYu {
+  width: 300px;
+  min-width: 300px; }
+  @media screen and (max-width: 1000px) {
+    .interactiverecommender_PlaytimeList_3qtYu {
+      display: none; } }
+  .interactiverecommender_PlaytimeList_3qtYu .interactiverecommender_Header_2CDNs {
+    font-size: 16px;
+    color: #40AEE5;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 100;
+    margin-bottom: 20px; }
+  .interactiverecommender_PlaytimeList_3qtYu .interactiverecommender_Loading_3pjYy {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+    color: #355D79; }
+
+.interactiverecommender_IdentityBlock_qLWcn {
+  width: 100%;
+  color: #CCC;
+  display: flex;
+  flex-direction: row; }
+  .interactiverecommender_IdentityBlock_qLWcn .interactiverecommender_Avatar_VmdbP {
+    width: 48px;
+    height: 48px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px; }
+  .interactiverecommender_IdentityBlock_qLWcn .interactiverecommender_PersonalInfo_2oJXF {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0px;
+    justify-content: center; }
+    .interactiverecommender_IdentityBlock_qLWcn .interactiverecommender_PersonalInfo_2oJXF .interactiverecommender_Persona_2vp7F {
+      font-size: 10px; }
+    .interactiverecommender_IdentityBlock_qLWcn .interactiverecommender_PersonalInfo_2oJXF .interactiverecommender_GameCount_1AIEP {
+      font-size: 10px; }
+    .interactiverecommender_IdentityBlock_qLWcn .interactiverecommender_PersonalInfo_2oJXF .interactiverecommender_TotalTime_1tOWe {
+      font-size: 10px; }
+
+.interactiverecommender_PlayedGame_sNb81 {
+  display: flex;
+  flex-direction: row;
+  background-color: #00000000;
+  margin-right: 20px;
+  margin-bottom: 4px;
+  transition-property: filter;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out; }
+  .interactiverecommender_PlayedGame_sNb81.interactiverecommender_Ignored_30mws {
+    filter: opacity(40%) saturate(30%) brightness(60%) blur(1px); }
+    .interactiverecommender_PlayedGame_sNb81.interactiverecommender_Ignored_30mws .interactiverecommender_PlaytimeInfo_1UkGo .interactiverecommender_IgnoreToggle_3hXvg {
+      margin-top: 2px;
+      height: 15px; }
+  .interactiverecommender_PlayedGame_sNb81 .interactiverecommender_Logo_26qua {
+    width: 100px;
+    height: 48px;
+    background-color: black;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    margin-left: 5px;
+    margin-right: 10px; }
+  .interactiverecommender_PlayedGame_sNb81 .interactiverecommender_PlaytimeInfo_1UkGo {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0px;
+    justify-content: center;
+    color: #BBB; }
+    .interactiverecommender_PlayedGame_sNb81 .interactiverecommender_PlaytimeInfo_1UkGo .interactiverecommender_HoursPlayed_3Ye_W {
+      font-size: 10px; }
+    .interactiverecommender_PlayedGame_sNb81 .interactiverecommender_PlaytimeInfo_1UkGo .interactiverecommender_Title_Eucai {
+      font-size: 10px;
+      display: none; }
+    .interactiverecommender_PlayedGame_sNb81 .interactiverecommender_PlaytimeInfo_1UkGo .interactiverecommender_LastPlayed_1DwCl {
+      font-size: 10px;
+      padding-right: 4px;
+      color: #ABABAB; }
+    .interactiverecommender_PlayedGame_sNb81 .interactiverecommender_PlaytimeInfo_1UkGo .interactiverecommender_IgnoreToggle_3hXvg {
+      background-color: #355D79;
+      width: 80px;
+      border-radius: 2px;
+      overflow: hidden;
+      font-size: 10px;
+      text-align: center;
+      height: 0px;
+      transition-property: height, margin;
+      transition-duration: 0.1s;
+      transition-timing-function: ease-in-out;
+      cursor: pointer; }
+      .interactiverecommender_PlayedGame_sNb81 .interactiverecommender_PlaytimeInfo_1UkGo .interactiverecommender_IgnoreToggle_3hXvg:hover {
+        background-color: #406986;
+        color: #FFF; }
+  .interactiverecommender_PlayedGame_sNb81:hover {
+    filter: blur(0px); }
+    .interactiverecommender_PlayedGame_sNb81:hover .interactiverecommender_PlaytimeInfo_1UkGo .interactiverecommender_Title_Eucai {
+      display: block; }
+    .interactiverecommender_PlayedGame_sNb81:hover .interactiverecommender_PlaytimeInfo_1UkGo .interactiverecommender_HoursPlayed_3Ye_W {
+      display: none; }
+    .interactiverecommender_PlayedGame_sNb81:hover .interactiverecommender_PlaytimeInfo_1UkGo .interactiverecommender_IgnoreToggle_3hXvg {
+      margin-top: 2px;
+      height: 15px; }
+
+.interactiverecommender_UpdateSaveBlock_iaGmJ .interactiverecommender_UpdateButton_wcFtI {
+  max-width: 200px;
+  margin-right: auto;
+  padding: 10px;
+  cursor: default;
+  border-radius: 3px;
+  text-align: center;
+  margin-left: 6px;
+  margin-bottom: 15px;
+  background-color: #353535;
+  color: #AAA;
+  transition-property: background-color, color;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out; }
+  .interactiverecommender_UpdateSaveBlock_iaGmJ .interactiverecommender_UpdateButton_wcFtI.interactiverecommender_Enabled_3QyVu {
+    background-color: #355D79;
+    color: #FFF;
+    cursor: pointer; }
+    .interactiverecommender_UpdateSaveBlock_iaGmJ .interactiverecommender_UpdateButton_wcFtI.interactiverecommender_Enabled_3QyVu:hover {
+      background-color: #406f91; }
+
+.interactiverecommender_RecommendationList_1krh3 {
+  flex-grow: 1;
+  margin-left: 20px;
+  margin-right: 20px; }
+  @media screen and (max-width: 414px) {
+    .interactiverecommender_RecommendationList_1krh3 {
+      margin-left: 10px;
+      margin-right: 10px; } }
+  .interactiverecommender_RecommendationList_1krh3 .interactiverecommender_Header_2CDNs {
+    font-size: 16px;
+    color: #40AEE5;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 100;
+    margin-bottom: 20px; }
+    @media screen and (max-width: 777px) {
+      .interactiverecommender_RecommendationList_1krh3 .interactiverecommender_Header_2CDNs {
+        text-align: center; } }
+  .interactiverecommender_RecommendationList_1krh3 .interactiverecommender_List_C6mYR {
+    transition-property: filter;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+    position: relative; }
+    .interactiverecommender_RecommendationList_1krh3 .interactiverecommender_List_C6mYR.interactiverecommender_Updating_1m954 {
+      filter: saturate(50%) brightness(90%); }
+  .interactiverecommender_RecommendationList_1krh3 .interactiverecommender_NoRecommendationsMessage_1Ps6j {
+    font-size: 14px; }
+
+.interactiverecommender_RecommendationOptions_2F61j .interactiverecommender_Row_1sYIz {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 10px;
+  margin-left: -10px;
+  margin-right: -10px; }
+
+.interactiverecommender_RecommendationOptions_2F61j .interactiverecommender_SecondRow_K-rzA {
+  margin-bottom: 36px; }
+  @media screen and (max-width: 777px) {
+    .interactiverecommender_RecommendationOptions_2F61j .interactiverecommender_SecondRow_K-rzA {
+      margin-bottom: 40px; } }
+
+.interactiverecommender_OptionCheckbox_2Cb6n {
+  color: #CCC;
+  margin-top: 10px;
+  font-size: 11px;
+  width: 180px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center; }
+  .interactiverecommender_OptionCheckbox_2Cb6n .interactiverecommender_Checkbox_29uP5 {
+    margin-right: 4px;
+    margin-top: 2px; }
+  .interactiverecommender_OptionCheckbox_2Cb6n.interactiverecommender_WishlistCheckbox_1cnxU {
+    height: 40px; }
+
+.interactiverecommender_SaveUserSettingsButton_1VRgd {
+  height: 40px;
+  margin-left: 4px;
+  margin-right: 8px;
+  margin-top: 10px;
+  padding: 8px;
+  justify-content: center;
+  background-color: #355D79;
+  border-color: #355D79;
+  border-style: solid;
+  border-width: 0px;
+  border-radius: 4px;
+  color: #DDD; }
+  .interactiverecommender_SaveUserSettingsButton_1VRgd:hover {
+    border-color: #406986;
+    background-color: #406986;
+    color: #eee; }
+  .interactiverecommender_SaveUserSettingsButton_1VRgd:active {
+    border-color: #406986;
+    background-color: #406986;
+    color: #eee; }
+
+.interactiverecommender_OptionSlider_26ek6 {
+  display: flex;
+  flex-direction: column;
+  min-height: 0px;
+  width: 300px;
+  margin-left: 10px;
+  margin-right: 10px; }
+  @media screen and (max-width: 777px) {
+    .interactiverecommender_OptionSlider_26ek6 {
+      margin-bottom: 20px; } }
+  .interactiverecommender_OptionSlider_26ek6 .interactiverecommender_Title_Eucai {
+    font-size: 11px;
+    color: #CCC;
+    margin-bottom: 12px; }
+  .interactiverecommender_OptionSlider_26ek6 .interactiverecommender_Labels_22UxF {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #CCC;
+    font-size: 11px;
+    text-transform: uppercase;
+    margin-bottom: 8px; }
+    .interactiverecommender_OptionSlider_26ek6 .interactiverecommender_Labels_22UxF .interactiverecommender_Min_1uiM2 {
+      text-align: left; }
+    .interactiverecommender_OptionSlider_26ek6 .interactiverecommender_Labels_22UxF .interactiverecommender_Max_17wCM {
+      text-align: right; }
+  .interactiverecommender_OptionSlider_26ek6 .interactiverecommender_OptionalLabel_1JIe5 {
+    width: 100%;
+    text-align: center;
+    margin-top: 4px;
+    color: #CCC; }
+
+.interactiverecommender_OptionDropdown_1dKx5 {
+  display: flex;
+  flex-direction: column;
+  min-height: 0px;
+  width: 200px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 8px; }
+  .interactiverecommender_OptionDropdown_1dKx5 .interactiverecommender_Label_XPFnC {
+    color: #CCC;
+    margin-bottom: 4px; }
+
+.interactiverecommender_OptionTagList_uNxeG {
+  margin-left: 12px; }
+  .interactiverecommender_OptionTagList_uNxeG .interactiverecommender_Label_XPFnC {
+    color: #CCC;
+    margin-bottom: 4px;
+    font-size: 11px; }
+  .interactiverecommender_OptionTagList_uNxeG .interactiverecommender_SelectedTag_2uInW {
+    background-color: #29455C;
+    color: #CCC;
+    border-radius: 4px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    padding: 2px 6px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    cursor: pointer; }
+    .interactiverecommender_OptionTagList_uNxeG .interactiverecommender_SelectedTag_2uInW .interactiverecommender_Close_2bZrr {
+      font-weight: bold;
+      transform: scale(0);
+      color: #fad9d9;
+      transition: transform 0.1s ease-in-out; }
+    .interactiverecommender_OptionTagList_uNxeG .interactiverecommender_SelectedTag_2uInW:hover {
+      background-color: #406986; }
+      .interactiverecommender_OptionTagList_uNxeG .interactiverecommender_SelectedTag_2uInW:hover .interactiverecommender_Close_2bZrr {
+        transform: scale(1); }
+
+.interactiverecommender_RecommendationEntry_3opuX {
+  width: 100%;
+  height: 106px;
+  max-width: 667px;
+  background-color: #151f2b;
+  overflow: hidden;
+  cursor: pointer;
+  background-image: radial-gradient(101.49% 168.36% at 1.01% 0%, #313D53 0%, #282E39 100%);
+  border-radius: 4px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  padding: 4px;
+  padding-bottom: 0px;
+  margin-bottom: 4px;
+  position: absolute;
+  transition: all 0.1s ease-in-out, top 0.3s ease-in-out; }
+  .interactiverecommender_RecommendationEntry_3opuX .interactiverecommender_BottomEntrySection_2U08C {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    height: 0px;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.1s ease-in-out; }
+    .interactiverecommender_RecommendationEntry_3opuX .interactiverecommender_BottomEntrySection_2U08C .interactiverecommender_WishlistSection_dS7Rz {
+      margin-right: 39px; }
+  .interactiverecommender_RecommendationEntry_3opuX.interactiverecommender_Hidden_2teee {
+    opacity: 0; }
+  @media screen and (max-width: 777px) {
+    .interactiverecommender_RecommendationEntry_3opuX {
+      height: 80px; } }
+  @media screen and (max-width: 600px) {
+    .interactiverecommender_RecommendationEntry_3opuX {
+      height: 60px; } }
+  .interactiverecommender_RecommendationEntry_3opuX .interactiverecommender_TopEntrySection_1IvHp {
+    display: flex;
+    flex-direction: row; }
+    .interactiverecommender_RecommendationEntry_3opuX .interactiverecommender_TopEntrySection_1IvHp .interactiverecommender_LeftSection_1shxg {
+      position: relative; }
+      .interactiverecommender_RecommendationEntry_3opuX .interactiverecommender_TopEntrySection_1IvHp .interactiverecommender_LeftSection_1shxg .interactiverecommender_Logo_26qua, .interactiverecommender_RecommendationEntry_3opuX .interactiverecommender_TopEntrySection_1IvHp .interactiverecommender_LeftSection_1shxg .interactiverecommender_Video_3oNv9 {
+        width: 200px;
+        height: 100px;
+        position: absolute;
+        background: black;
+        transition: opacity 0.2s ease-in-out, width 0.1s ease-in-out, height 0.1s ease-in-out;
+        opacity: 0; }
+        @media screen and (max-width: 777px) {
+          .interactiverecommender_RecommendationEntry_3opuX .interactiverecommender_TopEntrySection_1IvHp .interactiverecommender_LeftSection_1shxg .interactiverecommender_Logo_26qua, .interactiverecommender_RecommendationEntry_3opuX .interactiverecommender_TopEntrySection_1IvHp .interactiverecommender_LeftSection_1shxg .interactiverecommender_Video_3oNv9 {
+            width: 150px;
+            height: 75px; } }
+        @media screen and (max-width: 600px) {
+          .interactiverecommender_RecommendationEntry_3opuX .interactiverecommender_TopEntrySection_1IvHp .interactiverecommender_LeftSection_1shxg .interactiverecommender_Logo_26qua, .interactiverecommender_RecommendationEntry_3opuX .interactiverecommender_TopEntrySection_1IvHp .interactiverecommender_LeftSection_1shxg .interactiverecommender_Video_3oNv9 {
+            width: 108px;
+            height: 54px; } }
+        .interactiverecommender_RecommendationEntry_3opuX .interactiverecommender_TopEntrySection_1IvHp .interactiverecommender_LeftSection_1shxg .interactiverecommender_Logo_26qua.interactiverecommender_Revealed_3aiFy, .interactiverecommender_RecommendationEntry_3opuX .interactiverecommender_TopEntrySection_1IvHp .interactiverecommender_LeftSection_1shxg .interactiverecommender_Video_3oNv9.interactiverecommender_Revealed_3aiFy {
+          opacity: 1; }
+      .interactiverecommender_RecommendationEntry_3opuX .interactiverecommender_TopEntrySection_1IvHp .interactiverecommender_LeftSection_1shxg .interactiverecommender_UnMute_21t3_ {
+        width: 20px;
+        height: 20px;
+        margin: 4px;
+        position: absolute;
+        opacity: 0;
+        transition: opacity 0.1s ease-in-out; }
+        .interactiverecommender_RecommendationEntry_3opuX .interactiverecommender_TopEntrySection_1IvHp .interactiverecommender_LeftSection_1shxg .interactiverecommender_UnMute_21t3_.interactiverecommender_Revealed_3aiFy {
+          opacity: 0.5; }
+    .interactiverecommender_RecommendationEntry_3opuX .interactiverecommender_TopEntrySection_1IvHp .interactiverecommender_RightSection_27p3s {
+      position: relative;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      min-height: 0px;
+      padding: 4px;
+      margin-left: 210px;
+      line-height: 135%;
+      transition: all 0.1s ease-in-out; }
+      @media screen and (max-width: 777px) {
+        .interactiverecommender_RecommendationEntry_3opuX .interactiverecommender_TopEntrySection_1IvHp .interactiverecommender_RightSection_27p3s {
+          margin-left: 150px; } }
+      @media screen and (max-width: 600px) {
+        .interactiverecommender_RecommendationEntry_3opuX .interactiverecommender_TopEntrySection_1IvHp .interactiverecommender_RightSection_27p3s {
+          padding-bottom: 0px;
+          margin-left: 110px; } }
+      .interactiverecommender_RecommendationEntry_3opuX .interactiverecommender_TopEntrySection_1IvHp .interactiverecommender_RightSection_27p3s .interactiverecommender_CenterSection_M9CWJ {
+        position: relative;
+        height: 66px;
+        min-height: 66px;
+        margin-top: 8px; }
+        .interactiverecommender_RecommendationEntry_3opuX .interactiverecommender_TopEntrySection_1IvHp .interactiverecommender_RightSection_27p3s .interactiverecommender_CenterSection_M9CWJ .interactiverecommender_CenterOption_3mXMY {
+          position: absolute;
+          color: #9099A1;
+          margin-right: 6px; }
+          .interactiverecommender_RecommendationEntry_3opuX .interactiverecommender_TopEntrySection_1IvHp .interactiverecommender_RightSection_27p3s .interactiverecommender_CenterSection_M9CWJ .interactiverecommender_CenterOption_3mXMY.interactiverecommender_Hidden_2teee {
+            opacity: 0; }
+      .interactiverecommender_RecommendationEntry_3opuX .interactiverecommender_TopEntrySection_1IvHp .interactiverecommender_RightSection_27p3s .interactiverecommender_Name_2FQXD {
+        font-weight: 100;
+        font-size: 18px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        line-height: 100%;
+        max-height: 100%;
+        max-width: 440px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        margin-right: 20px;
+        color: #FFF; }
+        @media screen and (max-width: 600px) {
+          .interactiverecommender_RecommendationEntry_3opuX .interactiverecommender_TopEntrySection_1IvHp .interactiverecommender_RightSection_27p3s .interactiverecommender_Name_2FQXD {
+            font-size: 9px; } }
+      .interactiverecommender_RecommendationEntry_3opuX .interactiverecommender_TopEntrySection_1IvHp .interactiverecommender_RightSection_27p3s .interactiverecommender_Released_3EvdK {
+        font-size: 11px;
+        color: #9099A1;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        min-height: 15.5px; }
+        @media screen and (max-width: 600px) {
+          .interactiverecommender_RecommendationEntry_3opuX .interactiverecommender_TopEntrySection_1IvHp .interactiverecommender_RightSection_27p3s .interactiverecommender_Released_3EvdK {
+            font-size: 7px;
+            min-height: 8px;
+            margin-bottom: 4px; } }
+      .interactiverecommender_RecommendationEntry_3opuX .interactiverecommender_TopEntrySection_1IvHp .interactiverecommender_RightSection_27p3s .interactiverecommender_BarContainer_3qWin {
+        width: 440px; }
+        @media screen and (max-width: 777px) {
+          .interactiverecommender_RecommendationEntry_3opuX .interactiverecommender_TopEntrySection_1IvHp .interactiverecommender_RightSection_27p3s .interactiverecommender_BarContainer_3qWin {
+            width: 380px; } }
+        @media screen and (max-width: 600px) {
+          .interactiverecommender_RecommendationEntry_3opuX .interactiverecommender_TopEntrySection_1IvHp .interactiverecommender_RightSection_27p3s .interactiverecommender_BarContainer_3qWin {
+            width: 200px; } }
+        .interactiverecommender_RecommendationEntry_3opuX .interactiverecommender_TopEntrySection_1IvHp .interactiverecommender_RightSection_27p3s .interactiverecommender_BarContainer_3qWin .interactiverecommender_Bar_16q7Q {
+          background-color: #355D79;
+          height: 8px;
+          margin-top: 4px;
+          margin-bottom: 22px;
+          border-radius: 2px;
+          transition: width 0.5s ease-in-out; }
+          @media screen and (max-width: 600px) {
+            .interactiverecommender_RecommendationEntry_3opuX .interactiverecommender_TopEntrySection_1IvHp .interactiverecommender_RightSection_27p3s .interactiverecommender_BarContainer_3qWin .interactiverecommender_Bar_16q7Q {
+              margin-top: 2px;
+              margin-bottom: 2px; } }
+      .interactiverecommender_RecommendationEntry_3opuX .interactiverecommender_TopEntrySection_1IvHp .interactiverecommender_RightSection_27p3s .interactiverecommender_Score_17yr_ {
+        font-size: 11px;
+        color: #9099A1;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 8px; }
+        @media screen and (max-width: 600px) {
+          .interactiverecommender_RecommendationEntry_3opuX .interactiverecommender_TopEntrySection_1IvHp .interactiverecommender_RightSection_27p3s .interactiverecommender_Score_17yr_ {
+            font-size: 6px;
+            margin-bottom: 4px; } }
+        @media screen and (max-width: 777px) {
+          .interactiverecommender_RecommendationEntry_3opuX .interactiverecommender_TopEntrySection_1IvHp .interactiverecommender_RightSection_27p3s .interactiverecommender_Score_17yr_ {
+            margin-bottom: 4px; } }
+      .interactiverecommender_RecommendationEntry_3opuX .interactiverecommender_TopEntrySection_1IvHp .interactiverecommender_RightSection_27p3s .interactiverecommender_Tags_3KlI0 {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start; }
+        .interactiverecommender_RecommendationEntry_3opuX .interactiverecommender_TopEntrySection_1IvHp .interactiverecommender_RightSection_27p3s .interactiverecommender_Tags_3KlI0 .interactiverecommender_Tag_1rNtz {
+          color: #6ab5e0;
+          font-size: 10px;
+          background-color: none;
+          border-radius: 1px;
+          padding-top: 2px;
+          padding-bottom: 2px;
+          padding-left: 4px;
+          padding-right: 4px;
+          margin-right: 4px; }
+          @media screen and (max-width: 777px) {
+            .interactiverecommender_RecommendationEntry_3opuX .interactiverecommender_TopEntrySection_1IvHp .interactiverecommender_RightSection_27p3s .interactiverecommender_Tags_3KlI0 .interactiverecommender_Tag_1rNtz {
+              display: none; } }
+  .interactiverecommender_RecommendationEntry_3opuX.interactiverecommender_Hovered_3b9wG {
+    background-color: #121b25;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+    z-index: 4;
+    width: 740px;
+    height: 144px;
+    margin-left: -40px;
+    margin-top: -34px;
+    max-width: 740px; }
+    .interactiverecommender_RecommendationEntry_3opuX.interactiverecommender_Hovered_3b9wG .interactiverecommender_RightSection_27p3s {
+      margin-left: 260px; }
+      .interactiverecommender_RecommendationEntry_3opuX.interactiverecommender_Hovered_3b9wG .interactiverecommender_RightSection_27p3s .interactiverecommender_BottomEntrySection_2U08C {
+        height: 40px;
+        opacity: 1; }
+        .interactiverecommender_RecommendationEntry_3opuX.interactiverecommender_Hovered_3b9wG .interactiverecommender_RightSection_27p3s .interactiverecommender_BottomEntrySection_2U08C .interactiverecommender_WishlistSection_dS7Rz {
+          margin-top: 8px; }
+          .interactiverecommender_RecommendationEntry_3opuX.interactiverecommender_Hovered_3b9wG .interactiverecommender_RightSection_27p3s .interactiverecommender_BottomEntrySection_2U08C .interactiverecommender_WishlistSection_dS7Rz.interactiverecommender_Wishlisted_2uh0O {
+            padding-top: 2px;
+            line-height: 26px; }
+        .interactiverecommender_RecommendationEntry_3opuX.interactiverecommender_Hovered_3b9wG .interactiverecommender_RightSection_27p3s .interactiverecommender_BottomEntrySection_2U08C .interactiverecommender_PurchaseSection_mjTZM {
+          margin-top: 8px;
+          margin-right: 8px; }
+          .interactiverecommender_RecommendationEntry_3opuX.interactiverecommender_Hovered_3b9wG .interactiverecommender_RightSection_27p3s .interactiverecommender_BottomEntrySection_2U08C .interactiverecommender_PurchaseSection_mjTZM .interactiverecommender_PurchaseBG_2UHKw {
+            padding: 0px;
+            background-color: transparent;
+            border-radius: 0px; }
+            .interactiverecommender_RecommendationEntry_3opuX.interactiverecommender_Hovered_3b9wG .interactiverecommender_RightSection_27p3s .interactiverecommender_BottomEntrySection_2U08C .interactiverecommender_PurchaseSection_mjTZM .interactiverecommender_PurchaseBG_2UHKw .interactiverecommender_Price_18mm0 {
+              padding-top: 5px; }
+    .interactiverecommender_RecommendationEntry_3opuX.interactiverecommender_Hovered_3b9wG .interactiverecommender_TopEntrySection_1IvHp .interactiverecommender_LeftSection_1shxg .interactiverecommender_WishlistFlag_2TuuQ {
+      opacity: 0; }
+    .interactiverecommender_RecommendationEntry_3opuX.interactiverecommender_Hovered_3b9wG .interactiverecommender_TopEntrySection_1IvHp .interactiverecommender_LeftSection_1shxg .interactiverecommender_Logo_26qua, .interactiverecommender_RecommendationEntry_3opuX.interactiverecommender_Hovered_3b9wG .interactiverecommender_TopEntrySection_1IvHp .interactiverecommender_LeftSection_1shxg .interactiverecommender_Video_3oNv9 {
+      width: 250px;
+      height: 141px; }
+
+input[type=range] {
+  -webkit-appearance: none;
+  width: 100%;
+  margin: 4.45px 0;
+  background-color: rgba(0, 0, 0, 0);
+  max-height: 5px; }
+
+input[type=range]:focus {
+  outline: none; }
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 3.1px;
+  cursor: pointer;
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  background: #67c1f5;
+  border-radius: 1.5px;
+  border: 0px solid #67c1f5; }
+
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 0px 0px 8px #000000, 0px 0px 3px #0d0d0d;
+  border: 0px solid #ffffff;
+  height: 12px;
+  width: 12px;
+  border-radius: 6px;
+  background: #ffffff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -4.45px; }
+  @media (max-width: 414px) {
+    input[type=range]::-webkit-slider-thumb {
+      height: 18px;
+      width: 18px;
+      border-radius: 9px;
+      margin-top: -7.75px; } }
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #7fcbf7; }
+
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 3.1px;
+  cursor: pointer;
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  background: #67c1f5;
+  border-radius: 1.5px;
+  border: 0px solid #67c1f5; }
+
+input[type=range]::-moz-range-thumb {
+  box-shadow: 0px 0px 8px #000000, 0px 0px 3px #0d0d0d;
+  border: 0px solid #ffffff;
+  height: 12px;
+  width: 12px;
+  border-radius: 6px;
+  background: #ffffff;
+  cursor: pointer; }
+
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 3.1px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent; }
+
+input[type=range]::-ms-fill-lower {
+  background: #4fb7f3;
+  border: 0px solid #67c1f5;
+  border-radius: 3px;
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d; }
+
+input[type=range]::-ms-fill-upper {
+  background: #67c1f5;
+  border: 0px solid #67c1f5;
+  border-radius: 3px;
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d; }
+
+input[type=range]::-ms-thumb {
+  box-shadow: 0px 0px 8px #000000, 0px 0px 3px #0d0d0d;
+  border: 0px solid #ffffff;
+  height: 12px;
+  width: 12px;
+  border-radius: 6px;
+  background: #ffffff;
+  cursor: pointer; }
+
+input[type=range]:focus::-ms-fill-lower {
+  background: #67c1f5; }
+
+input[type=range]:focus::-ms-fill-upper {
+  background: #7fcbf7; }
+
+.interactiverecommender_SelectionBox_2W7pR {
+  display: block;
+  font-size: 12px;
+  font-weight: 100;
+  color: #DDD;
+  line-height: 1.3;
+  width: 100%;
+  max-width: 100%;
+  padding-top: 4px;
+  padding-left: 6px;
+  padding-bottom: 4px;
+  box-sizing: border-box;
+  margin: 0;
+  background-color: #355D79;
+  border: 0px; }
+  .interactiverecommender_SelectionBox_2W7pR::-ms-expand {
+    display: none; }
+  .interactiverecommender_SelectionBox_2W7pR:hover {
+    border-color: #888; }
+  .interactiverecommender_SelectionBox_2W7pR:focus {
+    outline: none; }
+  .interactiverecommender_SelectionBox_2W7pR option {
+    font-weight: normal; }
+
+.interactiverecommender_SuggestionInput_3OdNp {
+  background-color: #355D79;
+  border: 1px solid #3d6a8a;
+  padding: 2px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  color: white;
+  font-size: 12px; }
+  .interactiverecommender_SuggestionInput_3OdNp:hover {
+    background-color: #406986; }
+  .interactiverecommender_SuggestionInput_3OdNp:active {
+    background-color: #406986; }
+  .interactiverecommender_SuggestionInput_3OdNp::placeholder {
+    color: #1E3242; }
+
+.interactiverecommender_SuggestionContainerOpen_2NTkL {
+  background-color: #1E3242;
+  border: 1px solid #355D79;
+  position: absolute;
+  z-index: 200;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  width: 150px; }
+  .interactiverecommender_SuggestionContainerOpen_2NTkL .interactiverecommender_SuggestionsList_2zgal {
+    list-style-type: none;
+    margin-left: 0px; }
+    .interactiverecommender_SuggestionContainerOpen_2NTkL .interactiverecommender_SuggestionsList_2zgal .interactiverecommender_OptionSuggestion_3VKY5 {
+      color: #67C1F5;
+      padding-left: 12px;
+      padding-right: 12px;
+      padding-top: 2px;
+      padding-bottom: 4px;
+      font-size: 13px;
+      cursor: pointer; }
+      .interactiverecommender_SuggestionContainerOpen_2NTkL .interactiverecommender_SuggestionsList_2zgal .interactiverecommender_OptionSuggestion_3VKY5:hover {
+        background-color: #29445a; }
+

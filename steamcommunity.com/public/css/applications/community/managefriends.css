@@ -1,0 +1,131 @@
+
+
+
+
+
+
+
+
+
+
+
+.managefriends_Heading_3kTQI {
+  font-size: 17px;
+  font-weight: normal;
+  line-height: 20px;
+  color: whitesmoke;
+  margin-bottom: -7px;
+  max-width: 620px; }
+
+.managefriends_Body_2s393 {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: normal;
+  color: #8F98A0;
+  letter-spacing: 0.02em;
+  max-width: 620px; }
+
+.managefriends_HeaderBlock_X9bYN {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  /* identical to box height */
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #015E80;
+  padding: 10px 20px 10px 20px; }
+
+.managefriends_Background_1xwi0 {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 20px 20px 20px 20px; }
+
+.managefriends_DimBackground_2N55H {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 20px; }
+
+.managefriends_Input_1BUty {
+  max-width: 598px; }
+
+.managefriends_CopyContainer_1HjkZ {
+  background-color: rgba(144, 144, 144, 0.1);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  min-width: 320px;
+  max-width: 620px; }
+  .managefriends_CopyContainer_1HjkZ .managefriends_Text_1ehqR {
+    font-size: 32px;
+    line-height: 30px;
+    font-weight: normal;
+    color: whitesmoke;
+    letter-spacing: 0.02em;
+    padding: 14px; }
+  .managefriends_CopyContainer_1HjkZ .managefriends_Link_18Sc0 {
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: normal;
+    color: whitesmoke;
+    letter-spacing: 0.02em;
+    padding: 14px;
+    overflow-wrap: break-word;
+    overflow: hidden; }
+  .managefriends_CopyContainer_1HjkZ .managefriends_Button_2772E {
+    background-color: rgba(144, 144, 144, 0.2);
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: normal;
+    color: whitesmoke;
+    letter-spacing: 0.02em;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin: 7px 7px 7px auto;
+    text-transform: uppercase;
+    width: fit-content; }
+
+.managefriends_ProfileCard_28a_C {
+  background: #2C3842;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+  padding: 15px;
+  border-radius: 4px;
+  max-width: 590px; }
+  .managefriends_ProfileCard_28a_C .managefriends_UserContainer_29w-2 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative; }
+  .managefriends_ProfileCard_28a_C .managefriends_Image_1n4lD {
+    width: 80px;
+    height: 80px;
+    border-radius: 2px;
+    min-width: 80px; }
+  .managefriends_ProfileCard_28a_C .managefriends_ProfileContent_1qz9x {
+    margin-left: 20px; }
+
+.managefriends_ProfileLink_1tEt0 {
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: normal;
+  letter-spacing: 0.02em;
+  color: #fff; }
+  .managefriends_ProfileLink_1tEt0 a {
+    color: #09B9FF; }
+  .managefriends_ProfileLink_1tEt0 .managefriends_Failure_UoMCo {
+    color: #c44848; }
+  .managefriends_ProfileLink_1tEt0 .managefriends_Success_zNkyw {
+    color: #95D83B; }
+
+/* TODO: temporary, this is overwriting a global style on .SVGIcon_Button that's set in shared_common.scss. Can remove when SVGIcon_Button is made a module style */
+.friends_nav .SVGIcon_Button {
+  width: 24px;
+  height: 24px; }
+
+#searchIcon svg {
+  width: 24px;
+  height: 24px; }
+
