@@ -216,7 +216,7 @@
 				$Data = json_encode( $Data, JSON_PRETTY_PRINT );
 			}
 			// Unzip it
-			else if( SubStr( $File, -4 ) === '.zip' )
+			else if( str_ends_with( $File, '.zip' ) )
 			{
 				$File = __DIR__ . '/' . $File;
 
@@ -236,7 +236,7 @@
 				return true;
 			}
 			// Make sure we received everything
-			else if( SubStr( $File, -5 ) === '.html' )
+			else if( str_ends_with( $File, '.html' ) )
 			{
 				if( StrrPos( $Data, '</html>' ) === false )
 				{
@@ -304,7 +304,7 @@
 					}
 				}
 			}
-			else if( SubStr( $File, -4 ) === '.css' ||  SubStr( $File, -3 ) === '.js' )
+			else if( str_ends_with( $File, '.css' ) || str_ends_with( $File, '.js' ) )
 			{
 				$Data = preg_replace( '/[&\?]v=[a-zA-Z0-9\.\-\_]{3,}/', '?v=valveisgoodatcaching', $Data );
 			}
@@ -321,7 +321,7 @@
 				mkdir( $Folder, 0755, true );
 			}
 
-			if( substr( $File, -3 ) === '.js' && ( stripos( $OriginalFile, '/webui/' ) !== false || strpos( $OriginalFile, '/applications/' ) !== false ) )
+			if( str_ends_with( $File, '.js' ) && ( str_contains( $OriginalFile, '/webui/' ) || str_contains( $OriginalFile, '/applications/' ) ) )
 			{
 				$HashPath = $OriginalFile . '.unmodified';
 				$Hash = hash( 'sha256', $Data );
@@ -329,6 +329,20 @@
 				if( ( $this->ETags[ $HashPath ] ?? '' ) === $Hash )
 				{
 					return false;
+				}
+
+				$this->ETags[ $HashPath ] = $Hash;
+
+				// Extract json so it gets pretty printed from the json.parse
+				if( str_ends_with( $File, 'english-json.js' ) && preg_match( "/exports=JSON\.parse\('(.+)'\)}}]\);$/", $Data, $Matches ) )
+				{
+					$Data = stripcslashes( $Matches[ 1 ] );
+					$Data = json_decode( $Data, true );
+					$Data = json_encode( $Data, JSON_PRETTY_PRINT );
+
+					file_put_contents( str_replace( '-json.js', '.json', $File ), $Data );
+
+					return true;
 				}
 
 				file_put_contents( $File, $Data );
@@ -339,8 +353,6 @@
 					$this->DumpWebProtobufs = true;
 				}
 				
-				$this->ETags[ $HashPath ] = $Hash;
-
 				if( $OriginalFile === 'Scripts/WebUI/steammobile_android.js' )
 				{
 					$this->SyncProtobufs = true;
@@ -552,7 +564,7 @@
 					continue;
 				}
 
-				if( strpos( $Line, '@' ) !== false )
+				if( str_contains( $Line, '@' ) )
 				{
 					$Line = explode( '@', $Line );
 					$File = trim( $Line[ 0 ] );
