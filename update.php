@@ -321,7 +321,11 @@
 				mkdir( $Folder, 0755, true );
 			}
 
-			if( str_ends_with( $File, '.js' ) && ( str_contains( $OriginalFile, '/webui/' ) || str_contains( $OriginalFile, '/applications/' ) ) )
+			if( str_ends_with( $File, '.js' ) && (
+				$OriginalFile === 'Scripts/WebUI/steammobile_android.js' ||
+				str_contains( $OriginalFile, '/webui/' ) ||
+				str_contains( $OriginalFile, '/applications/' )
+			) )
 			{
 				$HashPath = $OriginalFile . '.unmodified';
 				$Hash = hash( 'sha256', $Data );
@@ -332,6 +336,11 @@
 				}
 
 				$this->ETags[ $HashPath ] = $Hash;
+
+				if( $File === 'store.steampowered.com/public/javascript/applications/store/78.js' ) // Valve???????
+				{
+					$File = 'store.steampowered.com/public/javascript/applications/store/pointsshop_english-json.js';
+				}
 
 				// Extract json so it gets pretty printed from the json.parse
 				if( str_ends_with( $File, 'english-json.js' ) && preg_match( "/exports=JSON\.parse\('(.+)'\)}}]\);$/", $Data, $Matches ) )
