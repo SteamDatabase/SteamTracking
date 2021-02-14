@@ -1,4 +1,3 @@
-partner.steamgames.com/public/javascript/webui/storeadmin/storeadmin.js
 steamcommunity.com/public/javascript/applications/community/broadcast~broadcasts~profile.js
 steamcommunity.com/public/javascript/applications/community/broadcasts~events~profile.js
 steamcommunity.com/public/javascript/applications/community/communityawardsapp.js
