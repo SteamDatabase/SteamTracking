@@ -1,5 +1,5 @@
 <?php
-	new SteamTracker( Count( $argv ) === 2 ? $argv[ 1 ] : '' );
+	new SteamTracker( count( $argv ) === 2 ? $argv[ 1 ] : '' );
 
 	class SteamTracker
 	{
@@ -40,7 +40,7 @@
 
 		public function __construct( string $Option )
 		{
-			$this->AppStart = MicroTime( true );
+			$this->AppStart = microtime( true );
 
 			if( $Option === 'force' )
 			{
@@ -50,20 +50,20 @@
 			$ApiKeyPath = __DIR__ . '/.support/apikey.txt';
 			$ETagsPath  = __DIR__ . '/.support/etags.txt';
 
-			if( !File_Exists( $ApiKeyPath ) )
+			if( !file_exists( $ApiKeyPath ) )
 			{
 				$this->Log( '{lightred}Missing ' . $ApiKeyPath );
 
 				Exit;
 			}
 
-			if( $this->UseCache && File_Exists( $ETagsPath ) )
+			if( $this->UseCache && file_exists( $ETagsPath ) )
 			{
-				$this->ETags = JSON_Decode( File_Get_Contents( $ETagsPath ), true );
+				$this->ETags = json_decode( file_get_contents( $ETagsPath ), true );
 			}
 
-			$this->APIKey = Trim( File_Get_Contents( $ApiKeyPath ) );
-			$this->CurrentTime = Time( );
+			$this->APIKey = trim( file_get_contents( $ApiKeyPath ) );
+			$this->CurrentTime = time( );
 
 			$this->URLsToFetch = $this->ParseUrls( );
 			$this->URLsToProtoDump = $this->GetUrlsToProtoDump( );
@@ -74,15 +74,15 @@
 			{
 				$URLs = $this->URLsToFetch;
 
-				$this->Log( '{yellow}' . Count( $URLs ) . ' urls to be fetched...' );
+				$this->Log( '{yellow}' . count( $URLs ) . ' urls to be fetched...' );
 
-				$this->URLsToFetch = Array( );
+				$this->URLsToFetch = [];
 
 				$this->Fetch( $URLs );
 			}
-			while( !Empty( $this->URLsToFetch ) && $Tries-- > 0 );
+			while( !empty( $this->URLsToFetch ) && $Tries-- > 0 );
 
-			File_Put_Contents( $ETagsPath, JSON_Encode( $this->ETags, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT ) );
+			file_put_contents( $ETagsPath, json_encode( $this->ETags, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT ) );
 
 			if( $this->ExtractClientArchives )
 			{
@@ -114,9 +114,9 @@
 
 		private function GenerateURL( string $URL ) : string
 		{
-			return Str_Replace(
-				Array( '__KEY__', '__TIME__' ),
-				Array( 'key=' . $this->APIKey, '_=' . $this->CurrentTime ),
+			return str_replace(
+				[ '__KEY__', '__TIME__' ],
+				[ 'key=' . $this->APIKey, '_=' . $this->CurrentTime ],
 				$URL
 			);
 		}
@@ -125,7 +125,7 @@
 		{
 			if( $File === 'API/SupportedAPIList.json' )
 			{
-				$Data = JSON_Decode( $Data, true );
+				$Data = json_decode( $Data, true );
 
 				if( !isset( $Data[ 'apilist' ][ 'interfaces' ] ) )
 				{
@@ -136,11 +136,11 @@
 				{
 					$File = __DIR__ . '/API/' . $Interface[ 'name' ] . '.json';
 
-					$Interface = JSON_Encode( $Interface, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES ) . PHP_EOL;
+					$Interface = json_encode( $Interface, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES ) . PHP_EOL;
 
-					if( !File_Exists( $File ) || StrCmp( File_Get_Contents( $File ), $Interface ) !== 0 )
+					if( !file_exists( $File ) || $Interface !== file_get_contents( $File ) )
 					{
-						File_Put_Contents( $File, $Interface );
+						file_put_contents( $File, $Interface );
 					}
 				}
 
@@ -149,7 +149,7 @@
 			// Get archives from beta manifest
 			else if( $File === 'ClientManifest/steam_client_publicbeta_osx' || $File === 'ClientManifest/steam_cmd_publicbeta_osx' )
 			{
-				if( Preg_Match_All( '/"([a-z0-9_]+\.zip)\.([a-f0-9]{40})"/', $Data, $Test ) > 0 )
+				if( preg_match_all( '/"([a-z0-9_]+\.zip)\.([a-f0-9]{40})"/', $Data, $Test ) > 0 )
 				{
 					foreach( $Test[ 1 ] as $Index => $Archive )
 					{
@@ -161,10 +161,11 @@
 
 							$this->ETags[ $Archive ] = $Hash;
 
-							$this->URLsToFetch[ ] = Array(
+							$this->URLsToFetch[ ] =
+							[
 								'URL'  => 'https://steamcdn-a.akamaihd.net/client/' . $Archive . '.' . $Hash,
 								'File' => '.support/archives/' . $Archive
-							);
+							];
 						}
 						else
 						{
@@ -182,26 +183,26 @@
 			// Convert group members to JSON
 			else if( $File === 'Random/ValveGroup.json' || $File === 'Random/SteamModerators.json' || $File === 'Random/SteamDevs.json' )
 			{
-				LibXML_Use_Internal_Errors( true );
+				libxml_use_internal_errors( true );
 
-				$Data = SimpleXML_Load_String( $Data );
+				$Data = simplexml_load_string( $Data );
 
-				if( $Data === false || Empty( $Data->members->steamID64 ) )
+				if( $Data === false || empty( $Data->members->steamID64 ) )
 				{
 					return false;
 				}
 
-				$Data = Array_Values( (Array)$Data->members->steamID64 );
+				$Data = array_values( (array)$Data->members->steamID64 );
 
-				Sort( $Data );
+				sort( $Data );
 
-				$Data = JSON_Encode( $Data, JSON_PRETTY_PRINT );
+				$Data = json_encode( $Data, JSON_PRETTY_PRINT );
 			}
 			// Prettify
 			else if( $File === 'Random/Jobs.json' )
 			{
-				$Data = JSON_Decode( $Data, true );
-				$Data = JSON_Encode( $Data, JSON_PRETTY_PRINT );
+				$Data = json_decode( $Data, true );
+				$Data = json_encode( $Data, JSON_PRETTY_PRINT );
 			}
 			else if( $File === 'ClientManifest/steammobile_android.json' )
 			{
@@ -220,11 +221,11 @@
 			{
 				$File = __DIR__ . '/' . $File;
 
-				File_Put_Contents( $File, $Data );
+				file_put_contents( $File, $Data );
 
-				$Archive = SubStr( StrrChr( $File, '/' ), 1 );
+				$Archive = substr( strrchr( $File, '/' ), 1 );
 
-				if( SHA1_File( $File ) !== $this->ETags[ $Archive ] )
+				if( sha1_file( $File ) !== $this->ETags[ $Archive ] )
 				{
 					$this->Log( '{lightred}Checksum mismatch for ' . $Archive );
 
@@ -238,7 +239,7 @@
 			// Make sure we received everything
 			else if( str_ends_with( $File, '.html' ) )
 			{
-				if( StrrPos( $Data, '</html>' ) === false )
+				if( strrpos( $Data, '</html>' ) === false )
 				{
 					return false;
 				}
@@ -361,7 +362,7 @@
 					file_put_contents( __DIR__ . '/.support/original_js/' . md5( $OriginalFile ) . '.js', $Data );
 					$this->DumpWebProtobufs = true;
 				}
-				
+
 				if( $OriginalFile === 'Scripts/WebUI/steammobile_android.js' )
 				{
 					$this->SyncProtobufs = true;
@@ -378,12 +379,12 @@
 				return true;
 			}
 
-			if( File_Exists( $File ) && StrCmp( File_Get_Contents( $File ), $Data ) === 0 )
+			if( file_exists( $File ) && $Data === file_get_contents( $File ) )
 			{
 				return false;
 			}
 
-			File_Put_Contents( $File, $Data );
+			file_put_contents( $File, $Data );
 
 			return true;
 		}
@@ -391,20 +392,20 @@
 		/** @param array<int, array{URL: string, File: string}> $URLs */
 		private function Fetch( array $URLs ) : void
 		{
-			$this->Requests = Array( );
+			$this->Requests = [];
 
-			$Master = cURL_Multi_Init( );
+			$Master = curl_multi_init( );
 
 			$WindowSize = 10;
 
-			if( $WindowSize > Count( $URLs ) )
+			if( $WindowSize > count( $URLs ) )
 			{
-				$WindowSize = Count( $URLs );
+				$WindowSize = count( $URLs );
 			}
 
 			for( $i = 0; $i < $WindowSize; $i++ )
 			{
-				$URL = Array_Shift( $URLs );
+				$URL = array_shift( $URLs );
 
 				$this->CreateHandle( $Master, $URL );
 			}
@@ -413,35 +414,36 @@
 
 			do
 			{
-				while( ( $Exec = cURL_Multi_Exec( $Master, $Running ) ) === CURLM_CALL_MULTI_PERFORM );
+				while( ( $Exec = curl_multi_exec( $Master, $Running ) ) === CURLM_CALL_MULTI_PERFORM );
 
 				if( $Exec !== CURLM_OK )
 				{
 					break;
 				}
 
-				while( $Done = cURL_Multi_Info_Read( $Master ) )
+				while( $Done = curl_multi_info_read( $Master ) )
 				{
 					$Handle = $Done[ 'handle' ];
-					$URL   = cURL_GetInfo( $Handle, CURLINFO_EFFECTIVE_URL );
-					$Code  = cURL_GetInfo( $Handle, CURLINFO_HTTP_CODE );
-					$Data  = cURL_Multi_GetContent( $Handle );
+					$URL   = curl_getinfo( $Handle, CURLINFO_EFFECTIVE_URL );
+					$Code  = curl_getinfo( $Handle, CURLINFO_HTTP_CODE );
+					$Data  = curl_multi_getcontent( $Handle );
 
 					$Request = $this->Requests[ (int)$Handle ];
 
-					$HeaderSize = cURL_GetInfo( $Handle, CURLINFO_HEADER_SIZE );
+					$HeaderSize = curl_getinfo( $Handle, CURLINFO_HEADER_SIZE );
 
-					$Header = SubStr( $Data, 0, $HeaderSize );
-					$Data   = SubStr( $Data, $HeaderSize );
+					$Header = substr( $Data, 0, $HeaderSize );
+					$Data   = substr( $Data, $HeaderSize );
 
 					if( isset( $Done[ 'error' ] ) )
 					{
 						$this->Log( '{yellow}cURL Error: {yellow}' . $Done[ 'error' ] . '{normal} - ' . $URL );
 
-						$this->URLsToFetch[ ] = Array(
+						$this->URLsToFetch[ ] =
+						[
 							'URL'  => $URL,
 							'File' => $Request
-						);
+						];
 					}
 					else if( $Code === 304 )
 					{
@@ -453,31 +455,33 @@
 
 						if( $Code !== 404 )
 						{
-							$this->URLsToFetch[ ] = Array(
+							$this->URLsToFetch[ ] =
+							[
 								'URL'  => $URL,
 								'File' => $Request
-							);
+							];
 						}
 					}
 					else
 					{
-						$LengthExpected = cURL_GetInfo( $Handle, CURLINFO_CONTENT_LENGTH_DOWNLOAD );
-						$LengthDownload = cURL_GetInfo( $Handle, CURLINFO_SIZE_DOWNLOAD );
+						$LengthExpected = curl_getinfo( $Handle, CURLINFO_CONTENT_LENGTH_DOWNLOAD );
+						$LengthDownload = curl_getinfo( $Handle, CURLINFO_SIZE_DOWNLOAD );
 
 						if( $LengthExpected !== $LengthDownload && $Request !== 'Scripts/WebUI/steammobile_android.js' )
 						{
 							$this->Log( '{lightred}Wrong Length {normal}(' . $LengthDownload . ' != ' . $LengthExpected . '){normal} - ' . $URL );
 
-							$this->URLsToFetch[ ] = Array(
+							$this->URLsToFetch[ ] =
+							[
 								'URL'  => $URL,
 								'File' => $Request
-							);
+							];
 						}
 						else
 						{
-							if( Preg_Match( '/^ETag: (.+)$/m', $Header, $Test ) === 1 )
+							if( preg_match( '/^ETag: (.+)$/m', $Header, $Test ) === 1 )
 							{
-								$this->ETags[ $Request ] = Trim( $Test[ 1 ] );
+								$this->ETags[ $Request ] = trim( $Test[ 1 ] );
 							}
 
 							if( $this->HandleResponse( $Request, $Data ) === true )
@@ -491,33 +495,33 @@
 						}
 					}
 
-					if( Count( $URLs ) )
+					if( !empty( $URLs ) )
 					{
-						$URL = Array_Shift( $URLs );
+						$URL = array_shift( $URLs );
 
 						$this->CreateHandle( $Master, $URL );
 					}
 
-					cURL_Multi_Remove_Handle( $Master, $Handle );
-					cURL_Close( $Handle );
+					curl_multi_remove_handle( $Master, $Handle );
+					curl_close( $Handle );
 
 					unset( $Request, $Handle );
 				}
 
 				if( $Running )
 				{
-					cURL_Multi_Select( $Master, 5 );
+					curl_multi_select( $Master, 5 );
 				}
 			}
 			while( $Running );
 
-			cURL_Multi_Close( $Master );
+			curl_multi_close( $Master );
 		}
 
 		/** @param array{URL: string, File: string} $URL */
-		private function CreateHandle( $Master, array $URL )
+		private function CreateHandle( CurlMultiHandle $Master, array $URL ) : CurlHandle
 		{
-			$Handle = cURL_Init( );
+			$Handle = curl_init( );
 			$File  = $URL[ 'File' ];
 
 			$Options = $this->Options;
@@ -529,21 +533,27 @@
 			if( $this->UseCache )
 			{
 				// If we have an ETag saved, add If-None-Match header
-				if( Array_Key_Exists( $File, $this->ETags ) )
+				if( array_key_exists( $File, $this->ETags ) )
 				{
-					$Options[ CURLOPT_HTTPHEADER ] = Array( 'If-None-Match: ' . $this->ETags[ $File ] );
+					$Options[ CURLOPT_HTTPHEADER ] =
+					[
+						'If-None-Match: ' . $this->ETags[ $File ],
+					];
 				}
 
 				// Valve appears to have broken ETags, so always supply the timestamp
-				if( File_Exists( $File ) )
+				if( file_exists( $File ) )
 				{
-					$Options[ CURLOPT_HTTPHEADER ] = Array( 'If-Modified-Since: ' . GMDate( 'D, d M Y H:i:s \G\M\T', FileMTime( $File ) ) );
+					$Options[ CURLOPT_HTTPHEADER ] =
+					[
+						'If-Modified-Since: ' . gmdate( 'D, d M Y H:i:s \G\M\T', filemtime( $File ) ),
+					];
 				}
 			}
 
-			cURL_SetOpt_Array( $Handle, $Options );
+			curl_setopt_array( $Handle, $Options );
 
-			cURL_Multi_Add_Handle( $Master, $Handle );
+			curl_multi_add_handle( $Master, $Handle );
 
 			return $Handle;
 		}
@@ -646,29 +656,29 @@
 		private function Log( string $String ) : void
 		{
 			$Log  = '[';
-			$Log .= Number_Format( MicroTime( true ) - $this->AppStart, 2 );
+			$Log .= number_format( microtime( true ) - $this->AppStart, 2 );
 			$Log .= 's] ';
 			$Log .= $String;
 			$Log .= '{normal}';
 			$Log .= PHP_EOL;
 
-			$Log = Str_Replace( $this->APIKey, '{lightred}*APIKEY*{normal}', $Log );
+			$Log = str_replace( $this->APIKey, '{lightred}*APIKEY*{normal}', $Log );
 
-			$Log = Str_Replace(
-				Array(
+			$Log = str_replace(
+				[
 					'{normal}',
 					'{green}',
 					'{yellow}',
 					'{lightred}',
 					'{lightblue}'
-				),
-				Array(
+				],
+				[
 					"\033[0m",
 					"\033[0;32m",
 					"\033[1;33m",
 					"\033[1;31m",
 					"\033[1;34m"
-				),
+				],
 			$Log );
 
 			echo $Log;
