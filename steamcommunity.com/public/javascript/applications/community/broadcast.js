@@ -857,55 +857,44 @@
             t
           );
         })(m.Component),
-        V = (function (r) {
-          function e(e) {
-            var t = r.call(this, e) || this;
-            return (t.state = {}), t;
-          }
-          return (
-            Object(l.d)(e, r),
-            (e.prototype.render = function () {
-              var e = this.props.stream,
-                t = j.a.GetOrCreateBroadcastInfo(e.steamid).m_nAppID,
-                r = b.a.GetAppLinkInfo(t),
-                n = r
-                  ? m.createElement(
-                      y.a,
-                      {
-                        type: "app",
-                        id: t,
-                        strURL: r.capsule_link,
-                        className: E.a.PopOutVideoTitleText,
-                      },
-                      Object(W.f)("#StoreBroadcast_Detault_popout_Title")
-                    )
-                  : m.createElement(
-                      "div",
-                      { className: E.a.PopOutVideoTitleText },
-                      Object(W.f)("#StoreBroadcast_Detault_popout_Title")
-                    );
-              return m.createElement(
-                "div",
-                {
-                  className: [E.a.PopOutVideoTitleBar, E.a.NoSeslect].join(" "),
-                },
-                n,
-                m.createElement(
-                  "button",
+        V = Object(i.a)(function (e) {
+          var t = e.stream,
+            r = Object(g.c)(),
+            n = j.a.GetOrCreateBroadcastInfo(t.steamid).m_nAppID,
+            i = b.a.GetAppLinkInfo(n),
+            a = i
+              ? m.createElement(
+                  y.a,
                   {
-                    className: E.a.PopOutVideoCloseButton,
-                    "data-tooltip-text": Object(W.f)(
-                      "#StoreBroadcast_close_broadcast_popup"
-                    ),
-                    onClick: this.props.OnPreventPopup,
+                    type: "app",
+                    id: n,
+                    strURL: Object(p.b)(i.capsule_link, r),
+                    className: E.a.PopOutVideoTitleText,
                   },
-                  m.createElement(R.kb, null)
+                  Object(W.f)("#StoreBroadcast_Detault_popout_Title")
                 )
-              );
-            }),
-            (e = Object(l.c)([i.a], e))
+              : m.createElement(
+                  "div",
+                  { className: E.a.PopOutVideoTitleText },
+                  Object(W.f)("#StoreBroadcast_Detault_popout_Title")
+                );
+          return m.createElement(
+            "div",
+            { className: [E.a.PopOutVideoTitleBar, E.a.NoSeslect].join(" ") },
+            a,
+            m.createElement(
+              "button",
+              {
+                className: E.a.PopOutVideoCloseButton,
+                "data-tooltip-text": Object(W.f)(
+                  "#StoreBroadcast_close_broadcast_popup"
+                ),
+                onClick: e.OnPreventPopup,
+              },
+              m.createElement(R.kb, null)
+            )
           );
-        })(m.Component),
+        }),
         q = (function (t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;

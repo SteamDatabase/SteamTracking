@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [8],
+  [9],
   {
     "++az": function (e, t, n) {
       e.exports =
@@ -4175,35 +4175,35 @@
     },
     Aqke: function (e, t, r) {
       var a = {
-        "./loyalty_brazilian.json": ["jJTi", 73],
-        "./loyalty_bulgarian.json": ["YXmX", 74],
-        "./loyalty_czech.json": ["Yw6T", 75],
-        "./loyalty_danish.json": ["LeJ7", 76],
-        "./loyalty_dutch.json": ["3s9e", 77],
-        "./loyalty_english.json": ["nz6u", 78],
-        "./loyalty_finnish.json": ["cCRj", 79],
-        "./loyalty_french.json": ["WjZg", 80],
-        "./loyalty_german.json": ["2HFY", 81],
-        "./loyalty_greek.json": ["puzw", 82],
-        "./loyalty_hungarian.json": ["h+vV", 83],
-        "./loyalty_italian.json": ["1xjJ", 84],
-        "./loyalty_japanese.json": ["KhFN", 85],
-        "./loyalty_koreana.json": ["0T2E", 86],
-        "./loyalty_latam.json": ["SFVQ", 87],
-        "./loyalty_norwegian.json": ["6qpk", 88],
-        "./loyalty_polish.json": ["c9AW", 89],
-        "./loyalty_portuguese.json": ["H3eu", 90],
-        "./loyalty_romanian.json": ["gt0D", 91],
-        "./loyalty_russian.json": ["4nQk", 92],
-        "./loyalty_sc_schinese.json": ["0Z0/", 93],
-        "./loyalty_schinese.json": ["svug", 94],
-        "./loyalty_spanish.json": ["x/nm", 95],
-        "./loyalty_swedish.json": ["d/hP", 96],
-        "./loyalty_tchinese.json": ["EWje", 97],
-        "./loyalty_thai.json": ["SnkP", 98],
-        "./loyalty_turkish.json": ["cD82", 99],
-        "./loyalty_ukrainian.json": ["jV8j", 100],
-        "./loyalty_vietnamese.json": ["TxFk", 101],
+        "./loyalty_brazilian.json": ["jJTi", 74],
+        "./loyalty_bulgarian.json": ["YXmX", 75],
+        "./loyalty_czech.json": ["Yw6T", 76],
+        "./loyalty_danish.json": ["LeJ7", 77],
+        "./loyalty_dutch.json": ["3s9e", 78],
+        "./loyalty_english.json": ["nz6u", 79],
+        "./loyalty_finnish.json": ["cCRj", 80],
+        "./loyalty_french.json": ["WjZg", 81],
+        "./loyalty_german.json": ["2HFY", 82],
+        "./loyalty_greek.json": ["puzw", 83],
+        "./loyalty_hungarian.json": ["h+vV", 84],
+        "./loyalty_italian.json": ["1xjJ", 85],
+        "./loyalty_japanese.json": ["KhFN", 86],
+        "./loyalty_koreana.json": ["0T2E", 87],
+        "./loyalty_latam.json": ["SFVQ", 88],
+        "./loyalty_norwegian.json": ["6qpk", 89],
+        "./loyalty_polish.json": ["c9AW", 90],
+        "./loyalty_portuguese.json": ["H3eu", 91],
+        "./loyalty_romanian.json": ["gt0D", 92],
+        "./loyalty_russian.json": ["4nQk", 93],
+        "./loyalty_sc_schinese.json": ["0Z0/", 94],
+        "./loyalty_schinese.json": ["svug", 95],
+        "./loyalty_spanish.json": ["x/nm", 96],
+        "./loyalty_swedish.json": ["d/hP", 97],
+        "./loyalty_tchinese.json": ["EWje", 98],
+        "./loyalty_thai.json": ["SnkP", 99],
+        "./loyalty_turkish.json": ["cD82", 100],
+        "./loyalty_ukrainian.json": ["jV8j", 101],
+        "./loyalty_vietnamese.json": ["TxFk", 102],
       };
       function n(t) {
         if (!r.o(a, t))
@@ -5274,7 +5274,7 @@
                     ),
                   A.createElement(de, { persona: r }),
                   v,
-                  r.m_bPlayerNamePending &&
+                  (r.m_bPlayerNamePending || r.m_bAvatarPending) &&
                     A.createElement(
                       "div",
                       {
@@ -5679,10 +5679,10 @@
           return e.toString().padStart(2, "0");
         },
         Te = v.a.lazy(function () {
-          return s.e(41).then(s.bind(null, "yDev"));
+          return s.e(42).then(s.bind(null, "yDev"));
         }),
         ze = v.a.lazy(function () {
-          return s.e(40).then(s.bind(null, "f4w8"));
+          return s.e(41).then(s.bind(null, "f4w8"));
         }),
         Ge = (function (e) {
           function t() {
@@ -11784,6 +11784,7 @@
             (this.m_unGameServerPort = 0),
             (this.m_game_lobby_id = ""),
             (this.m_bPlayerNamePending = !1),
+            (this.m_bAvatarPending = !1),
             (this.m_mapRichPresence = a.C.map()),
             (this.m_bNameInitialized = !1),
             (this.m_bStatusInitialized = !1),
@@ -12083,6 +12084,7 @@
           Object(r.c)([a.C], e.prototype, "m_unGameServerPort", void 0),
           Object(r.c)([a.C], e.prototype, "m_game_lobby_id", void 0),
           Object(r.c)([a.C], e.prototype, "m_bPlayerNamePending", void 0),
+          Object(r.c)([a.C], e.prototype, "m_bAvatarPending", void 0),
           Object(r.c)([a.C], e.prototype, "m_broadcastId", void 0),
           Object(r.c)([a.C], e.prototype, "m_broadcastAccountId", void 0),
           Object(r.c)([a.C], e.prototype, "m_broadcastAppId", void 0),
@@ -12537,12 +12539,12 @@
               c.a.useEffect(
                 function () {
                   var e = !0,
-                    t = Object(b.b)(r);
+                    t = Object(b.c)(r);
                   a(t);
                   var n = new Image();
                   return (
                     (n.onerror = function () {
-                      return e && a(Object(b.a)(r));
+                      return e && a(Object(b.b)(r));
                     }),
                     (n.src = t),
                     function () {
@@ -16466,7 +16468,10 @@
                       void 0,
                       {
                         get appid() {
-                          return j.Get().GetSortedGamesWithRewards();
+                          return j
+                            .Get()
+                            .GetSortedGamesWithRewards()
+                            .slice(0, 10);
                         },
                         grouping: 2,
                       }

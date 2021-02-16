@@ -1135,7 +1135,7 @@
                 h.a.createElement(
                   "a",
                   {
-                    href: Object(ee.d)(
+                    href: Object(ee.e)(
                       _.c.STORE_BASE_URL + (a ? "app/" + a.appid : "")
                     ),
                     className: te.GameCapsule,
@@ -1207,7 +1207,7 @@
               h.a.createElement(
                 "a",
                 {
-                  href: Object(ee.d)(
+                  href: Object(ee.e)(
                     _.c.STORE_BASE_URL + (i ? "app/" + i.appid : "")
                   ),
                 },
@@ -11876,6 +11876,7 @@
             (this.m_unGameServerPort = 0),
             (this.m_game_lobby_id = ""),
             (this.m_bPlayerNamePending = !1),
+            (this.m_bAvatarPending = !1),
             (this.m_mapRichPresence = i.C.map()),
             (this.m_bNameInitialized = !1),
             (this.m_bStatusInitialized = !1),
@@ -12175,6 +12176,7 @@
           Object(n.c)([i.C], e.prototype, "m_unGameServerPort", void 0),
           Object(n.c)([i.C], e.prototype, "m_game_lobby_id", void 0),
           Object(n.c)([i.C], e.prototype, "m_bPlayerNamePending", void 0),
+          Object(n.c)([i.C], e.prototype, "m_bAvatarPending", void 0),
           Object(n.c)([i.C], e.prototype, "m_broadcastId", void 0),
           Object(n.c)([i.C], e.prototype, "m_broadcastAccountId", void 0),
           Object(n.c)([i.C], e.prototype, "m_broadcastAppId", void 0),

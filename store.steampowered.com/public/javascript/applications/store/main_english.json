@@ -165,5 +165,6 @@
     "Loading": "Loading...",
     "SaveUserSettings": "Save settings",
     "SaveUserSettingsTooltip": "Save these as your default recommendation settings",
+    "ContentHub_Paging": "Showing %1$s-%2$s of %3$s results",
     "dummy": "dummy"
 }

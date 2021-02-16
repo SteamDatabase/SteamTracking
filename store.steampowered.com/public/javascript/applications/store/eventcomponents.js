@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [6],
+  [7],
   {
     E9gz: function (e, t, n) {
       e.exports = {
@@ -1816,7 +1816,7 @@
                       { type: "app", id: l.GetAppID() },
                       h.a.createElement(
                         $.a,
-                        { href: Object(ae.e)(l.GetStorePageURL()) },
+                        { href: Object(ae.f)(l.GetStorePageURL()) },
                         h.a.createElement("img", {
                           className: re.TileAppInfoImage,
                           src: l.assets.GetMainCapsuleURL(),
@@ -1828,7 +1828,7 @@
                       { type: "app", id: l.GetAppID() },
                       h.a.createElement(
                         $.a,
-                        { href: Object(ae.e)(l.GetStorePageURL()) },
+                        { href: Object(ae.f)(l.GetStorePageURL()) },
                         h.a.createElement("div", null, l.GetName())
                       )
                     )
@@ -1849,7 +1849,7 @@
                   h.a.createElement(
                     $.a,
                     {
-                      href: Object(ae.e)(
+                      href: Object(ae.f)(
                         M.d.STORE_BASE_URL + "/curator/" + s + "/"
                       ),
                     },
@@ -2533,7 +2533,7 @@
                       v.createElement(
                         "a",
                         {
-                          href: Object(ae.e)(
+                          href: Object(ae.f)(
                             M.d.STORE_BASE_URL + "app/" + t + "/?beta=0"
                           ),
                           target: "_blank",

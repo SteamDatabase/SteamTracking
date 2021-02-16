@@ -38,7 +38,6 @@ GHomepage = {
 	rgCreatorFollowedAppData: [],
 	rgRecentAppsByCreator: [],
 	rgAppsRecommendedByCurators: [],
-	rgUserNewsFriendsPurchased: {},
 	rgTopSteamCurators: [],
 
     rgShuffleModules: [],
@@ -194,7 +193,6 @@ GHomepage = {
 			}
 
 			GHomepage.rgAppsRecommendedByCurators = rgParams.rgAppsRecommendedByCurators || [];
-			GHomepage.rgUserNewsFriendsPurchased = rgParams.rgUserNewsFriendsPurchased || {};
 			GHomepage.rgFriendRecommendations = v_shuffle(rgParams.rgFriendRecommendations) || [];
 			GHomepage.rgRecommendedAppsByCreators = v_shuffle(rgParams.rgRecommendedAppsByCreators) || [];
 			GHomepage.rgRecommendedBySteamLabsApps = rgParams.rgRecommendedBySteamLabsApps || [];
@@ -255,7 +253,11 @@ GHomepage = {
 					type: 'GET'
 				}).done(function( data ) {
 
-					GStoreItemData.AddStoreItemDataSet( data.item_data )
+					GStoreItemData.AddStoreItemDataSet( data.item_data );
+					delete data.item_data;
+
+					GStoreItemData.AddStoreAccountData( data.account_data );
+					delete data.account_data;
 
 					GHomepage.oAdditionalData = data;
 					GHomepage.OnAdditionalDataReady();
@@ -268,6 +270,12 @@ GHomepage = {
 
 	OnAdditionalDataReady: function()
 	{
+		// FRIENDS RECENTLY PURCHASED
+		try {
+			GHomepage.RenderFriendsRecentlyPurchased();
+		} catch( e ) { OnHomepageException(e); }
+
+
 		try {
 			GHomepage.RenderRecentlyUpdatedV2();
 		} catch( e ) { OnHomepageException(e); }
@@ -370,10 +378,6 @@ GHomepage = {
 		} catch( e ) { OnHomepageException(e); }
 
 		// Logged in
-		// FRIENDS RECENTLY PURCHASED
-		try {
-			GHomepage.RenderFriendsRecentlyPurchased();
-		} catch( e ) { OnHomepageException(e); }
 
 		// under10
 		try {
@@ -1098,15 +1102,15 @@ GHomepage = {
 	{
 
 		var $RecentlyUpdated =  $J('.friends_recently_purchased' );
-
+		var rgData = GHomepage.oAdditionalData.rgUserNewsFriendsPurchased;
 
 		var rgCapsules = GHomepage.FilterItemsForDisplay(
-			GHomepage.rgUserNewsFriendsPurchased, 'home', 4, 8, { games_already_in_library: false, dlc: false, localized: true, displayed_elsewhere: false, only_current_platform: true }
+			rgData, 'home', 4, 8, { games_already_in_library: false, dlc: false, localized: true, displayed_elsewhere: false, only_current_platform: true }
 		);
 		if( rgCapsules.length < 4 )
 		{
 			rgCapsules = GHomepage.FilterItemsForDisplay(
-				GHomepage.rgUserNewsFriendsPurchased, 'home', 4, 8, { games_already_in_library: false, localized: true, only_current_platform: true }
+				rgData, 'home', 4, 8, { games_already_in_library: false, localized: true, only_current_platform: true }
 			);
 		}
 

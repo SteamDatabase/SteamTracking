@@ -20,9 +20,37 @@ function GetElemSNR( $Elem )
 			break;
 		}
 	}
-	
+
 	$Elem.data( 'snr', snr );
 	return snr;
+}
+
+// given an array of impressions as strings, this will handle joining them all together into a singular string, but enforcing that it doesn't
+// go above the cookie size limit which can otherwise cause users to become stuck since the page requests will start failing
+function JoinImpressionsUpToLimit( rgImpressions )
+{
+	//cookies generally can go up to 4k bytes, but we can have problems when we start getting that close, so cut it off earlier
+	var nRemainingLen = 3200;
+	var result = '';
+	for ( var i = 0; i < rgImpressions.length; i++ )
+	{
+		var impression = String( rgImpressions[ i ] );
+		var nImpressionLen = impression.length + 1;	//+1 is for the | separator
+
+		//did we run out of room in our list?
+		if ( nRemainingLen < nImpressionLen )
+			break;
+
+		//add the separator if not the first entry
+		if ( result !== '' )
+			result += '|';
+
+		//add our impresison and remove that space from what is available
+		result += impression;
+		nRemainingLen -= nImpressionLen;
+	}
+
+	return result;
 }
 
 GDynamicStore = {
@@ -353,7 +381,7 @@ GDynamicStore = {
 
 			GDynamicStore.s_ImpressionTracker.RegisterElement( elTarget )
 		});
-		
+
 		// find our horizontal scrollers and add tracking to them
 
 		$J('.store_horizontal_autoslider' ).each(function(i, elTarget ){
@@ -419,7 +447,7 @@ GDynamicStore = {
 			return;
 
 		rgImpressions.push( rgAppIDsToReport.join( ':' ) + '@' + snr );
-		V_SetCookie( "app_impressions", rgImpressions.join( '|' ) );
+		V_SetCookie( "app_impressions", JoinImpressionsUpToLimit( rgImpressions ) );
 	},
 
 	AddImpression: function( $Elem, appID, strLink )
@@ -439,7 +467,7 @@ GDynamicStore = {
 			var rgImpressions = strImpressions && strImpressions.length != 0 ? strImpressions.split( "|" ) : [];
 			var strImpressionData = appID + '@' + snr;
 			rgImpressions.push( strImpressionData );
-			V_SetCookie( "app_impressions", rgImpressions.join( '|' ) );
+			V_SetCookie( "app_impressions", JoinImpressionsUpToLimit( rgImpressions ) );
 		}
 	},
 
@@ -510,7 +538,7 @@ GDynamicStore = {
 		{
 			UpdatePricesForAdditionalCartDiscount($Selector, GDynamicStore.s_nRemainingCartDiscount);
 		}
-		
+
 		var bBannerShown = false;
 		if ( GDynamicStore.s_nTotalCartDiscount != 'undefined ')
 		{
@@ -871,7 +899,6 @@ GDynamicStore = {
 	},
 
 
-	
 	ToggleClientsideFilter: function( elControl, strToggleClass, elResults, strFilterClass )
 	{
 		$Control = $J(elControl);
@@ -1282,7 +1309,7 @@ GDynamicStore = {
 	{
 		return ( packageid in GDynamicStore.s_rgIgnoredPackages );
 	},
-	
+
 	GetCuratorForApp: function( unAppID, bOnlyPositive )
 	{
 		var curator = null;
@@ -1705,7 +1732,7 @@ GStoreItemData = {
 		// override with item-specific URL
 		if ( rgItemData.url )
 			params['href'] = GStoreItemData.AddNavEventParamsToURL( rgItemData.url, strFeatureContext, nDepth, params['curator_clanid'] );
-		
+
 		return rgItemData;
 	},
 
@@ -2391,7 +2418,7 @@ GDynamicStorePage = {
 	{
 		// initialize the shown item list
 		if ( !oShownItems.rgAppIds )
-			Object.assign( oShownItems, { rgAppIds: [], rgPackageIds: [], rgBundleIds: [] }, oShownItems );
+			$J.extend( oShownItems, { rgAppIds: [], rgPackageIds: [], rgBundleIds: [] }, oShownItems );
 
 		var rgPriorityList = g_rgAppPriorityLists[strPriorityListKey] || [];
 		var rgItems = [];
@@ -2432,7 +2459,7 @@ GDynamicStorePage = {
 	{
 		// initialize the shown item list
 		if ( !oShownItems.rgAppIds )
-			Object.assign( oShownItems, { rgAppIds: [], rgPackageIds: [], rgBundleIds: [] }, oShownItems );
+			$J.extend( oShownItems, { rgAppIds: [], rgPackageIds: [], rgBundleIds: [] }, oShownItems );
 
 		// first filter out items that are dupes of ones we've already been asked to list
 		var rgItemsNoDupes = [];
@@ -2450,7 +2477,7 @@ var g_rgAppPriorityLists = {};
 var g_rgAppPriorityListMaps = {};
 function InitAppPriorityLists( rgAppPriorityLists )
 {
-	Object.assign( g_rgAppPriorityLists, rgAppPriorityLists );
+	$J.extend( g_rgAppPriorityLists, rgAppPriorityLists );
 }
 
 function GetAppPriorityListMap( strPriorityListName )

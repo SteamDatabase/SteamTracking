@@ -2917,7 +2917,7 @@ iframe.eventbbcodeyoutubeembed_PreviewYouTubeVideo_2sJoC.eventbbcodeyoutubeembed
       text-overflow: ellipsis;
       white-space: nowrap;
       overflow: hidden;
-      max-height: 24px; }
+      max-height: 27px; }
     .gamehover_BottomShelf_oAqlZ .gamehover_TextContent_2VvFL .gamehover_TagRow_2SWQM {
       color: #88aacc;
       display: flex;
@@ -5701,6 +5701,12 @@ html:not(.client) .partner_events .apppartnereventspage_AppPartnerEventsBody_1XL
   overflow-x: hidden;
   flex: 1;
   outline: none; }
+  .apppartnereventspage_AppPartnerEventsBody_1XLRr .apppartnereventspage_NoEvents_2xyx9 {
+    padding: 30px;
+    font-size: 2em;
+    text-transform: uppercase;
+    width: fit-content;
+    margin: auto; }
 
 .apppartnereventspage_AppBannerCtn_wavRt {
   position: relative;
@@ -10064,14 +10070,39 @@ div.curatorfeedbrowse_CuratorHoverToolTip_rSTyU {
 
 @media only screen and (min-width: 1420px) {
   .facetedbrowse_FacetedBrowseCtn_1Drr- {
+    margin-top: 40px; } }
+
+@media only screen and (max-width: 768px) {
+  .facetedbrowse_FacetedBrowseInnerCtn_3vjDu {
+    display: grid; } }
+
+@media only screen and (min-width: 768px) {
+  .facetedbrowse_FacetedBrowseInnerCtn_3vjDu {
+    display: flex; } }
+
+@media only screen and (min-width: 1420px) {
+  .facetedbrowse_FacetedBrowseInnerCtn_3vjDu {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: flex-end; } }
 
-@media only screen and (max-width: 1420px) {
-  .facetedbrowse_FacetedBrowseCtn_1Drr- {
-    display: grid; } }
+@media only screen and (max-width: 768px) {
+  .facetedbrowse_FacetedBrowseControls_1JM3A {
+    width: 200px;
+    padding: 20px;
+    grid-row-start: 2;
+    grid-column-start: 1;
+    z-index: 10;
+    opacity: 95%;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.75); } }
+
+@media only screen and (min-width: 768px) {
+  .facetedbrowse_FacetedBrowseControls_1JM3A {
+    width: 200px;
+    padding: 20px;
+    margin-right: 20px;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.75); } }
 
 @media only screen and (min-width: 1420px) {
   .facetedbrowse_FacetedBrowseControls_1JM3A {
@@ -10081,16 +10112,6 @@ div.curatorfeedbrowse_CuratorHoverToolTip_rSTyU {
     flex-basis: 200px;
     padding-right: 20px;
     margin-right: 16px; } }
-
-@media only screen and (max-width: 1420px) {
-  .facetedbrowse_FacetedBrowseControls_1JM3A {
-    width: 200px;
-    padding: 20px;
-    grid-row-start: 2;
-    grid-column-start: 1;
-    z-index: 10;
-    opacity: 95%;
-    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.75); } }
 
 .facetedbrowse_FacetedBrowseControls_1JM3A h1 {
   text-transform: uppercase;
@@ -10164,26 +10185,26 @@ div.curatorfeedbrowse_CuratorHoverToolTip_rSTyU {
 .facetedbrowse_FacetedBrowseItems_3EdZT {
   display: block;
   width: 100%; }
+  @media only screen and (max-width: 768px) {
+    .facetedbrowse_FacetedBrowseItems_3EdZT {
+      grid-row-start: 2;
+      grid-column-start: 1; } }
   @media only screen and (min-width: 1420px) {
     .facetedbrowse_FacetedBrowseItems_3EdZT {
       flex-shrink: 0;
       flex-basis: 100%; } }
-  @media only screen and (max-width: 1420px) {
-    .facetedbrowse_FacetedBrowseItems_3EdZT {
-      grid-row-start: 2;
-      grid-column-start: 1; } }
 
 .facetedbrowse_FacetedBrowsePopupCtn_24dqX {
   height: 24px;
   margin-bottom: 16px;
-  margin-left: auto;
   display: flex;
-  justify-content: flex-end;
   cursor: pointer; }
 
 .facetedbrowse_FacetedBrowsePopupLabel_zux_u {
   margin-right: 8px;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  padding-top: 3px;
+  padding-left: 6px; }
 
 .facetedbrowse_FacetedBrowsePopup_2FEDs {
   width: 24px;

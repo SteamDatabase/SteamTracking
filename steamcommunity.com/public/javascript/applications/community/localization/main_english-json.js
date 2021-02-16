@@ -1560,7 +1560,7 @@
           "A URL that is the same as what would be inserted into BB code that will be used for the logo on the subscription boxes",
         Sale_VanityID: "Sale Page Vanity ID/URL",
         Sale_VanityID_ttip:
-          "This will be used at the end of the URL for your sales page when access by your customers from your creator home page.  Do not include spaces as URL encoding make the URL harder to read, prefer that you use _ instead. Example: Halloween2019, Valentines, BestSaleEver",
+          "This will be used at the end of the URL for your sales page when access by your customers from your creator home page.  Do not include spaces as URL encoding make the URL harder to read, prefer that you use _ instead.  Only accepts characters, numbers, _ and - in this field. Example: Halloween2019, Valentines, BestSaleEver",
         Sale_VanityID_Link: "Link when Event is Live",
         Sale_VanityID_ValveLink: "Featured on Steam Store when Event is Live",
         Sale_DontCapitalizeSectionTitles: "Don't capitalize section titles",

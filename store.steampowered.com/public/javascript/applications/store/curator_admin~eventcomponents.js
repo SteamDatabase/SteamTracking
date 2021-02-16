@@ -2537,7 +2537,7 @@
                                   S.a.Button,
                                   M.PreviewBtn
                                 ),
-                                href: Object(I.e)(
+                                href: Object(I.f)(
                                   m.d.STORE_BASE_URL +
                                     "app/" +
                                     t.post.appids[0] +

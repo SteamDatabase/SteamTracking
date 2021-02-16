@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6367773";
+var CLSTAMP = "6372203";
 !(function (e) {
   function t(t) {
     for (
@@ -128,10 +128,10 @@ var CLSTAMP = "6367773";
                 16: "05865899e8ce91411027",
                 17: "f0c07a77fa6beffe154b",
                 18: "35d53af0db233d0a54dc",
-                19: "d0c19a3078e75cc6a8d6",
+                19: "2c55c82285002336a55c",
                 20: "ae8949f52a8487420e1c",
                 21: "aac3f48160ac78604039",
-                22: "eed2db0dc3e6f6289037",
+                22: "f586ea5714e0de0847a5",
                 23: "234a25fc143becf1781a",
                 24: "6f1b94a4db50aa63a23a",
                 25: "72492ed6dd39c44af590",
@@ -145,39 +145,39 @@ var CLSTAMP = "6367773";
                 33: "66b602709849a840fc8c",
                 34: "1e0e6da714b6968c62c3",
                 35: "7bd488080efd64e4f10f",
-                36: "4a366c3d8d8fe90149a6",
-                37: "a1b9d9f3bf1caca691dd",
+                36: "d553f861b0ab22c9a6ed",
+                37: "ecf93b9a3f15bb26373a",
                 38: "e7e3cbb17fafca833049",
                 39: "dd555942eeebcf691e37",
-                40: "ba8d3a718639a4b8683a",
-                41: "e782e83d826c3edb85fe",
-                42: "521355f8860efec19cbe",
-                43: "818d145b8fe9927866df",
-                44: "bd91dde43ca828e399ec",
-                45: "c9d6d39521eb47767c10",
-                46: "9f6dcb62ea42dd7e9cce",
-                47: "bd1bb9ef38598714a366",
-                48: "499bae74b8a810e9c6bc",
-                49: "de296d6a86ed2353147d",
-                50: "044af109f75917a367d1",
-                51: "b6c0b70a357d25fbda77",
-                52: "51fca0fbb7f5cd6ae132",
-                53: "310370217cae4ff2dcff",
-                54: "c8fbace0431756340a2f",
-                55: "0ad035e8355729f8c737",
-                56: "c269fd1e95000682339b",
-                57: "095b6e5d4310677a2f79",
-                58: "681b3af54bb3347e77ad",
-                59: "d74d96451dc9e8bc05fb",
+                40: "86b10dd3a801a460f387",
+                41: "6c1807d3bbc4be4381d0",
+                42: "2ed89069d3a821c95caa",
+                43: "b8b1e1d19f855861d426",
+                44: "29ba275bf2bd962918bf",
+                45: "6bc55b62ed235c0623c5",
+                46: "cf07e39bb46b89967316",
+                47: "6290bd6ca9c65cf4b29e",
+                48: "e7d02853fd3718b06bf2",
+                49: "2d86d30cec327408bf5b",
+                50: "583ec23df50a8623da80",
+                51: "7b49e0d1c2928366d660",
+                52: "6cb6b4b20f2c185264cc",
+                53: "6cae6200c72bb71dfdfe",
+                54: "9a2b5886c7c4a08f5dc7",
+                55: "c9adeb4074682673c2aa",
+                56: "0c2fb4779cb22e542ac9",
+                57: "104afde131829c58223e",
+                58: "7e4b20e3f1d9b277f4b3",
+                59: "c31dc3d53e7af378beff",
                 60: "af887dfdca6cad098c67",
-                61: "b2719248644e2e3d4211",
-                62: "4bfd5b5455d28401d263",
-                63: "545b8880c3fe5bab708c",
-                64: "72fa2fa0ea3da497d16e",
-                65: "3ee7361af9bfe16c430d",
-                66: "a749b9f287819ec2b197",
-                67: "c28a5a0f5dc1df5a6b4a",
-                68: "438617949caf50a72b90",
+                61: "6dfa59d758fe453e4951",
+                62: "f0dd95fe5770d3085a1b",
+                63: "3020f3236f5e698cf39b",
+                64: "e1964d9bf046722396c0",
+                65: "e930b8c4c728e4895ac6",
+                66: "00119aa9823b8f83d7d5",
+                67: "2ba5dba92120283cbf4d",
+                68: "78525149442b16fdcdc9",
               }[e]
             );
           })(e));
@@ -2340,6 +2340,9 @@ PERFORMANCE OF THIS SOFTWARE.
         (this.m_mapTokens = new Map()), (this.m_mapFallbackTokens = new Map());
       }
       return (
+        (e.InstallErrorReportingStore = function (e) {
+          this.sm_ErrorReportingStore = e;
+        }),
         (e.GetLanguageFallback = function (e) {
           return "sc_schinese" === e ? "schinese" : "english";
         }),
@@ -2407,10 +2410,21 @@ PERFORMANCE OF THIS SOFTWARE.
         (e.prototype.SetPreferredLocales = function (e) {
           this.m_rgLocalesToUse = e;
         }),
-        (e.prototype.LocalizeString = function (e) {
-          if (e && 0 != e.length && "#" == e.charAt(0)) {
-            var t = this.m_mapTokens.get(e.substring(1));
-            if (void 0 !== t) return t;
+        (e.prototype.LocalizeString = function (t) {
+          if (t && 0 != t.length && "#" == t.charAt(0)) {
+            var n = this.m_mapTokens.get(t.substring(1));
+            if (void 0 !== n) return n;
+            e.sm_ErrorReportingStore &&
+              e.sm_ErrorReportingStore.ReportError(
+                new Error(
+                  "Unable to find localization token '" +
+                    t +
+                    "' for language '" +
+                    s.d.LANGUAGE +
+                    "'"
+                ),
+                { bIncludeMessageInIdentifier: !0 }
+              );
           }
         }),
         (e.prototype.LocalizeStringFromFallback = function (e) {

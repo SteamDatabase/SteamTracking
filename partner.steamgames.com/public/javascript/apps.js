@@ -3438,7 +3438,7 @@ function ShowBanAppDialog( appid, callbackFunc )
 	ban_label.htmlFor = "retireapp_mark_banned";
 	ban_label.textContent = 'Mark as banned internally - ignored in game count, hidden for non-owners in community profile.';
 
-	text_area.before( $J( "<div/>", { html: "This will ban the appID from Steam. This includes the following actions:<br><br><ul><li>Hide the store page<li>Hide all store packages that the appID is in<li>Diable key requests<li>Set free on-demand packages to not available<li>Remove the appID from the trading card coupon program<li>Mark any trading cards or Inventory Service items as unmarketable<\/ul><br>Please leave a note below on why this app is being banned, which will be saved in the internal notes field.", style: "font-size: 16px; padding-bottom: 10px" } ),
+	text_area.before( $J( "<div/>", { html: "This will ban the appID from Steam. This includes the following actions:<br><br><ul><li>Hide the store page<li>Hide all store packages that the appID is in<li>Diable key requests<li>Disable in-game transactions<li>Set free on-demand packages to not available<li>Remove the appID from the trading card coupon program<li>Mark any trading cards or Inventory Service items as unmarketable<\/ul><br>Please leave a note below on why this app is being banned, which will be saved in the internal notes field.", style: "font-size: 16px; padding-bottom: 10px" } ),
 		ban_checkbox,
 		ban_label);
 	text_area.css({ height: '200px' });

@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6365924";
+var CLSTAMP = "6372203";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [68],
   {
@@ -8164,6 +8164,9 @@ var CLSTAMP = "6365924";
             (this.m_mapFallbackTokens = new Map());
         }
         return (
+          (n.InstallErrorReportingStore = function (e) {
+            this.sm_ErrorReportingStore = e;
+          }),
           (n.GetLanguageFallback = function (e) {
             return "sc_schinese" === e ? "schinese" : "english";
           }),
@@ -8238,6 +8241,17 @@ var CLSTAMP = "6365924";
             if ((0, e && 0 != e.length && "#" == e.charAt(0))) {
               var t = this.m_mapTokens.get(e.substring(1));
               if (void 0 !== t) return t;
+              n.sm_ErrorReportingStore &&
+                n.sm_ErrorReportingStore.ReportError(
+                  new Error(
+                    "Unable to find localization token '" +
+                      e +
+                      "' for language '" +
+                      i.c.LANGUAGE +
+                      "'"
+                  ),
+                  { bIncludeMessageInIdentifier: !0 }
+                );
             }
           }),
           (n.prototype.LocalizeStringFromFallback = function (e) {
@@ -13792,47 +13806,48 @@ var CLSTAMP = "6365924";
         Label: "toggle_Label_xK7Vv",
       };
     },
-    uobO: function (e, _, y) {
+    uobO: function (e, y, w) {
       "use strict";
       (function (e) {
-        y.d(_, "a", function () {
-          return g;
+        w.d(y, "a", function () {
+          return b;
         });
         var t,
-          p = y("mrSG"),
-          r = y("bxBv"),
-          a = y("SxtR"),
-          n = y("IjL/"),
-          o =
+          p = w("mrSG"),
+          r = w("bxBv"),
+          a = w("SxtR"),
+          n = w("IjL/"),
+          o = w("TLQK"),
+          i =
             window.addEventListener ||
             (e && e.addEventListener) ||
             function () {},
-          i = [],
-          s = function (e, t) {
-            return i.push({ error: e, cCallsitesToIgnore: t });
+          s = [],
+          c = function (e, t) {
+            return s.push({ error: e, cCallsitesToIgnore: t });
           },
-          c = console.assert;
+          l = console.assert;
         console.assert = function (e, t) {
           for (var n = [], r = 2; r < arguments.length; r++)
             n[r - 2] = arguments[r];
-          e || s(new Error(d.apply(void 0, Object(p.g)([t], n))), 2),
-            c.apply(console, Object(p.g)([e, t], n));
+          e || c(new Error(h.apply(void 0, Object(p.g)([t], n))), 2),
+            l.apply(console, Object(p.g)([e, t], n));
         };
-        var l = console.error;
+        var u = console.error;
         (console.error = function (e) {
           for (var t = [], n = 1; n < arguments.length; n++)
             t[n - 1] = arguments[n];
-          s(new Error(d.apply(void 0, Object(p.g)([e], t))), 1),
-            l.apply(console, Object(p.g)([e], t));
+          c(new Error(h.apply(void 0, Object(p.g)([e], t))), 1),
+            u.apply(console, Object(p.g)([e], t));
         }),
-          o("error", function (e) {
-            s(e.error, 0);
+          i("error", function (e) {
+            c(e.error, 0);
           }),
           (t = window.setTimeout(function () {
-            (i = []), (s = function () {});
+            (s = []), (c = function () {});
           }, 3e4));
-        var u = { cCallsitesToIgnore: 0, bIncludeMessageInIdentifier: !1 },
-          m = (function () {
+        var m = { cCallsitesToIgnore: 0, bIncludeMessageInIdentifier: !1 },
+          d = (function () {
             function e(e) {
               var r = this;
               void 0 === e && (e = !0),
@@ -13840,8 +13855,8 @@ var CLSTAMP = "6365924";
                 (this.m_rgErrorQueue = []),
                 (this.m_bEnabled = !0),
                 (this.m_bInitialized = !1),
-                (s = e
-                  ? (i.forEach(function (e) {
+                (c = e
+                  ? (s.forEach(function (e) {
                       var t = e.error,
                         n = e.cCallsitesToIgnore;
                       return r.ReportError(t, { cCallsitesToIgnore: n });
@@ -13850,7 +13865,7 @@ var CLSTAMP = "6365924";
                       return r.ReportError(e, { cCallsitesToIgnore: t });
                     })
                   : function () {}),
-                (i = []),
+                (s = []),
                 clearTimeout(t),
                 window.setTimeout(function () {
                   r.m_bInitialized ||
@@ -13879,13 +13894,13 @@ var CLSTAMP = "6365924";
                     switch (e.label) {
                       case 0:
                         return (e.trys.push([0, 2, , 3]),
-                        (t = Object(p.a)(Object(p.a)({}, u), i)),
+                        (t = Object(p.a)(Object(p.a)({}, m), i)),
                         this.m_bEnabled)
                           ? [
                               4,
                               (function (e, t) {
                                 try {
-                                  return e.stack && e.stack.match(f)
+                                  return e.stack && e.stack.match(v)
                                     ? (function (l, u) {
                                         return Object(p.b)(
                                           this,
@@ -13907,7 +13922,7 @@ var CLSTAMP = "6365924";
                                                       (i = o.filter(function (
                                                         e
                                                       ) {
-                                                        return !!e.match(f);
+                                                        return !!e.match(v);
                                                       })),
                                                       (t = i[n]),
                                                       (a = (function (e) {
@@ -14100,7 +14115,7 @@ var CLSTAMP = "6365924";
                                           }
                                         );
                                       })(e, t)
-                                    : e.stack && e.stack.match(v)
+                                    : e.stack && e.stack.match(g)
                                     ? (function () {
                                         return Object(p.b)(
                                           this,
@@ -14203,7 +14218,7 @@ var CLSTAMP = "6365924";
               e
             );
           })();
-        function d(e) {
+        function h(e) {
           for (var t = [], n = 1; n < arguments.length; n++)
             t[n - 1] = arguments[n];
           return "string" == typeof e && 0 === t.length
@@ -14218,18 +14233,19 @@ var CLSTAMP = "6365924";
                 })
                 .join(", ");
         }
-        var h,
-          f = /^\s*at .*(\S+:\d+|\(native\))/m,
-          v = /(^|@)\S+:\d+/;
-        var g = function () {
-            return h || b(new m()), h;
+        var f,
+          v = /^\s*at .*(\S+:\d+|\(native\))/m,
+          g = /(^|@)\S+:\d+/;
+        var b = function () {
+            return f || _(new d()), f;
           },
-          b = function (e) {
-            (h = e),
-              n.a.InstallErrorReportingStore(h),
-              r.a.InstallErrorReportingStore(h);
+          _ = function (e) {
+            (f = e),
+              n.a.InstallErrorReportingStore(f),
+              r.a.InstallErrorReportingStore(f),
+              o.b.InstallErrorReportingStore(f);
           };
-      }.call(this, y("yLpj")));
+      }.call(this, w("yLpj")));
     },
     w9XT: function (e, t, n) {
       "use strict";
