@@ -209,4 +209,15 @@
             "bootloadertimestamp"    "581cfc7e"
         }
     }
+    "4612"
+    {
+        "0"
+        {
+                "firmwarebinary"        "/firmware/firmware_4612_6026E73F.bin"
+                "firmwaretimestamp"     "6026E73F"
+                "minclientpackage"      ""
+                "crc128"                "26eef08a000000000000000000000000"
+                "bootloadertimestamp"   "6026E73F"
+        }
+    }
 }
