@@ -1428,8 +1428,8 @@ GHomepage = {
 			while ( rgSpotlights.length && cColumnsUsed < 2 )
 			{
 				// a high priority indicates we wanted to filter it (eg, already owned).  Show at most 1 on first page.
-				//if ( cColumnsUsed >= 1 && rgSpotlights[0].priority >= 3 )
-				//	break;
+				if ( cColumnsUsed >= 1 && rgSpotlights[0].priority >= 3 )
+					break;
 
 				var spotlight = rgSpotlights.shift();
 
@@ -1446,8 +1446,11 @@ GHomepage = {
 			// next prefer daily deals
 			while ( rgDailyDeals.length && cColumnsUsed < 3 )
 			{
-				var dailydeal = rgDailyDeals.shift();
+				// don't show bad matches on the first couple of pages
+				if (  iPage < 2 && rgDailyDeals[0].priority >= 3 )
+					break;
 
+				var dailydeal = rgDailyDeals.shift();
 				// never show ignored daily deals
 				if ( dailydeal.priority >= 4 )
 					continue;

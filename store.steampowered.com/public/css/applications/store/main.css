@@ -7842,7 +7842,8 @@ div.curatorfeedbrowse_CuratorHoverToolTip_rSTyU {
   width: 100%;
   background-color: #3d424c;
   background-image: radial-gradient(ellipse at bottom center, rgba(255, 255, 255, 0.1) 10%, rgba(255, 255, 255, 0) 80%);
-  transition: transform 0.15s ease-in-out; }
+  transition: transform 0.15s ease-in-out;
+  will-change: transform; }
   @media screen and (max-height: 360px) {
     .eventcalendar_HubBanner_2zTu0 {
       position: absolute; } }
@@ -7928,7 +7929,8 @@ div.curatorfeedbrowse_CuratorHoverToolTip_rSTyU {
   align-items: center;
   justify-content: space-between;
   background-color: #9d4848;
-  transition: transform 0.15s ease-in-out; }
+  transition: transform 0.15s ease-in-out;
+  will-change: transform; }
   html.responsive.touch .eventcalendar_SteamLabsBanner_8sQfl {
     height: 42px; }
     @media screen and (max-height: 360px) {
@@ -7993,7 +7995,8 @@ div.curatorfeedbrowse_CuratorHoverToolTip_rSTyU {
   background-color: #30343b;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   overflow: auto;
-  transition: transform 0.15s ease-in-out; }
+  transition: transform 0.15s ease-in-out;
+  will-change: transform; }
   .eventcalendar_SidebarContainer_15YLD.eventcalendar_SidebarCollapsed_3x2Ig {
     transform: translateX(-264px);
     height: 100%; }
@@ -8222,7 +8225,8 @@ div.curatorfeedbrowse_CuratorHoverToolTip_rSTyU {
   width: 48px;
   height: 62px;
   padding: 10px 8px 20px;
-  transition: transform 0.15s ease-in-out; }
+  transition: transform 0.15s ease-in-out;
+  will-change: transform; }
   .eventcalendar_MobileButton_3cMvc path {
     fill: rgba(255, 255, 255, 0.8); }
   .eventcalendar_MobileButton_3cMvc:hover path {
@@ -8266,6 +8270,7 @@ div.curatorfeedbrowse_CuratorHoverToolTip_rSTyU {
           width: 100%; } }
   .eventcalendar_EventCalendarContainer_1e3Wb .eventcalendar_RowContainer_3yqpP {
     transition: transform 0.15s ease-in-out;
+    will-change: transform;
     min-height: 100vh;
     width: 100%; }
     .eventcalendar_EventCalendarContainer_1e3Wb .eventcalendar_RowContainer_3yqpP .eventcalendar_Loading_2XF_g {
@@ -8583,6 +8588,7 @@ div.curatorfeedbrowse_CuratorHoverToolTip_rSTyU {
   width: 100%;
   background-color: #33373f;
   transition: transform 0.15s ease-in-out;
+  will-change: transform;
   display: flex;
   align-items: center; }
   @media screen and (max-height: 360px) {
@@ -8602,6 +8608,7 @@ div.curatorfeedbrowse_CuratorHoverToolTip_rSTyU {
     background-color: #33373f;
     opacity: 0;
     transition: opacity 0.15s ease-in-out;
+    will-change: transform;
     z-index: 51;
     width: 100%;
     padding: 4px;
@@ -8672,7 +8679,8 @@ div.curatorfeedbrowse_CuratorHoverToolTip_rSTyU {
   padding: 60px 0px;
   background: linear-gradient(90deg, #10a2d7, #2b74fe);
   color: white;
-  transition: transform 0.15s ease-in-out; }
+  transition: transform 0.15s ease-in-out;
+  will-change: transform; }
   .eventcalendar_LogInFeedRow_nydHE.eventcalendar_LogInSmallMode_21ANY {
     height: 70px;
     padding: 20px 0px;
