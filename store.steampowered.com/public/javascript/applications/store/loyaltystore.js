@@ -352,8 +352,8 @@
         A = n("bS9Q"),
         D = n("POwH"),
         P = n.n(D),
-        x = n("YyVH");
-      function B(e, t, n) {
+        B = n("YyVH");
+      function x(e, t, n) {
         return u.d.COMMUNITY_CDN_ASSET_URL + e + "/roomeffects/" + t + "/" + n;
       }
       var R = (function (n) {
@@ -364,7 +364,7 @@
         return (
           Object(d.d)(e, n),
           (e.prototype.getAsset = function (e) {
-            return B(this.m_strSaleId, this.props.effect.name, e);
+            return x(this.m_strSaleId, this.props.effect.name, e);
           }),
           e
         );
@@ -430,7 +430,7 @@
               this.AddCluster(e);
           }),
           (e.prototype.TestRender = function (e) {
-            Object(x.b)(0, 70), Object(x.b)(0, 70);
+            Object(B.b)(0, 70), Object(B.b)(0, 70);
             for (var t = 0; t < 1; t++)
               this.m_rgFireworks.push({
                 x: "20%",
@@ -460,12 +460,12 @@
           }),
           (e.prototype.CalcHueRotation = function () {
             return "lny2020" == this.props.sale
-              ? 360 + Object(x.b)(-30, 10)
-              : Object(x.b)(0, 360);
+              ? 360 + Object(B.b)(-30, 10)
+              : Object(B.b)(0, 360);
           }),
           (e.prototype.AddCluster = function (e) {
-            var t = Object(x.b)(-5, 50),
-              n = Object(x.b)(-10, 50),
+            var t = Object(B.b)(-5, 50),
+              n = Object(B.b)(-10, 50),
               r = this.CalcHueRotation();
             this.m_rgFireworks.push({
               x: t + "%",
@@ -507,8 +507,8 @@
             }
           }),
           (e.prototype.RenderLong = function (e) {
-            var t = Object(x.b)(20, 60),
-              n = Object(x.b)(-5, 50),
+            var t = Object(B.b)(20, 60),
+              n = Object(B.b)(-5, 50),
               r = this.CalcHueRotation();
             this.m_rgFireworks.push({
               x: t + "%",
@@ -525,8 +525,8 @@
               0 < this.m_rgFireworks.length ||
               ((t = (e = this.m_refContainer.current).offsetWidth),
               (n = e.offsetHeight),
-              (r = Object(x.c)(t, 400, 1080, 0.5, 2)),
-              (r = Object(x.a)(r, 0.5, 2)),
+              (r = Object(B.c)(t, 400, 1080, 0.5, 2)),
+              (r = Object(B.a)(r, 0.5, 2)),
               console.log(t, n, r),
               this.CreateFireworks(r),
               this.setState({ bReady: !0 }));
@@ -564,7 +564,7 @@
         );
       })(s.a.Component);
       function z(e) {
-        var t = B(e.sale, "fireworks", "long_sheet.png"),
+        var t = x(e.sale, "fireworks", "long_sheet.png"),
           n = e.style;
         return (
           (n.backgroundImage = "url(" + t + ")"),
@@ -588,7 +588,7 @@
         );
       }
       function G(e) {
-        var t = B(e.sale, "fireworks", "big_sheet.png"),
+        var t = x(e.sale, "fireworks", "big_sheet.png"),
           n = e.style;
         return (
           (n.backgroundImage = "url(" + t + ")"),
@@ -612,7 +612,7 @@
         );
       }
       function F(e) {
-        var t = B(e.sale, "fireworks", "small_sheet.png"),
+        var t = x(e.sale, "fireworks", "small_sheet.png"),
           n = e.style;
         return (
           (n.backgroundImage = "url(" + t + ")"),
@@ -640,15 +640,15 @@
           function r(e) {
             var t = this;
             return (
-              ((t = n.call(this, e) || this).m_x = x.b(0, 70) + "%"),
-              (t.m_y = x.b(0, 70) + "%"),
+              ((t = n.call(this, e) || this).m_x = B.b(0, 70) + "%"),
+              (t.m_y = B.b(0, 70) + "%"),
               (t.m_nRotate = Math.floor(90 * Math.random()) - 45),
               (t.m_splatRots = [
                 360 * Math.random(),
                 360 * Math.random(),
                 360 * Math.random(),
               ]),
-              (t.m_nPathAnimation = x.b(1, 6)),
+              (t.m_nPathAnimation = B.b(1, 6)),
               (t.m_nKeyID = r.sm_nUnique++),
               (t.m_strSaleId = "winter2019"),
               t
@@ -784,11 +784,11 @@
         var t,
           n,
           r = e.data,
-          a = B(e.sale, e.effect.name, r.strImage + ".png"),
+          a = x(e.sale, e.effect.name, r.strImage + ".png"),
           i = null;
         r.SOverlay &&
           ((t = r.SOverlay
-            ? B(e.sale, e.effect.name, r.SOverlay.strImage + ".png")
+            ? x(e.sale, e.effect.name, r.SOverlay.strImage + ".png")
             : null),
           (n = { animationDuration: r.SOverlay.nDuration + "s" }),
           (i = p.createElement("img", {
@@ -853,7 +853,7 @@
                 e++
               ) {
                 var n = t[e],
-                  r = x.b(-10, 10);
+                  r = B.b(-10, 10);
                 this.m_rgBalloons.push(this.GenerateSingleBalloon(n, r));
               }
               var a = [70, 20];
@@ -866,12 +866,12 @@
                 o++
               ) {
                 var n = s[o],
-                  l = x.b(-10, 10) + a.pop();
+                  l = B.b(-10, 10) + a.pop();
                 this.m_rgBalloons.push(this.GenerateSingleBalloon(n, l));
               }
-              var c = ["balloon_move_left", "balloon_move_right"][x.b(0, 1)];
+              var c = ["balloon_move_left", "balloon_move_right"][B.b(0, 1)];
               i && (c = "balloon_move_left");
-              var m = x.b(-10, 10);
+              var m = B.b(-10, 10);
               this.m_rgBalloons.push(this.GenerateSingleBalloon(c, m));
             }),
             (e.prototype.GenerateSingleBalloon = function (e, t) {
@@ -1704,7 +1704,7 @@
                 };
               if ("loading" == this.state.step) return null;
               var n = Pe(this.props.definition),
-                r = Be(this.props.definition),
+                r = xe(this.props.definition),
                 a = this.props.definition.rewardDefinition
                   ? oe.a.GetAppInfo(
                       this.props.definition.rewardDefinition.appid
@@ -1799,7 +1799,7 @@
                 { className: f.ModalContainer },
                 p.createElement(De, {
                   itemName: Pe(n),
-                  itemClassName: Be(n),
+                  itemClassName: xe(n),
                   appInfo: a,
                   onRequestClose: r,
                 }),
@@ -1890,9 +1890,9 @@
                   "#ProfileShowcases_Type_" + e.profileCustomizationType
                 )
               )
-            : xe(e.rewardDefinition);
+            : Be(e.rewardDefinition);
         },
-        xe = function (e) {
+        Be = function (e) {
           if (1 == e.type)
             return (
               Object(y.a)(
@@ -1907,7 +1907,7 @@
           var t = oe.a.GetAppInfo(e.appid).name || "";
           return Object(_.f)("#RewardBundle_AutoGeneratedBundleName", t);
         },
-        Be = function (e) {
+        xe = function (e) {
           var t = e.type,
             n = e.itemLevel,
             r = e.desiredItemLevel,
@@ -3562,7 +3562,7 @@
               : (t = p.createElement(
                   "div",
                   { className: f.Bold },
-                  Object(_.f)("#Redeem_YoursToOwn", xe(a.rewardDefinition))
+                  Object(_.f)("#Redeem_YoursToOwn", Be(a.rewardDefinition))
                 )),
             p.createElement(
               "div",
@@ -4518,12 +4518,12 @@
         var t = e.style,
           n = Object(O.f)(e, ["theme", "style"]);
         return v.a.createElement(
-          x.a,
+          B.a,
           Object(O.a)({}, n, { style: Object(O.a)({}, t) })
         );
       }
-      var x = s("+9fn"),
-        B = s("ehaW"),
+      var B = s("+9fn"),
+        x = s("ehaW"),
         R = s("t0PL"),
         L = s("DPOp"),
         k = function (e) {
@@ -4692,7 +4692,7 @@
           return 0 === s.cTotalMatching
             ? null
             : v.a.createElement(
-                x.b,
+                B.b,
                 {
                   title: t,
                   rightActions: n
@@ -4700,7 +4700,7 @@
                         g.b,
                         { to: n },
                         v.a.createElement(
-                          x.a,
+                          B.a,
                           null,
                           Object(D.f)("#SeeAllButton")
                         )
@@ -4738,7 +4738,7 @@
               {
                 itemClassName: F.ItemHover,
                 fnRenderItemSkeleton: function () {
-                  return v.a.createElement(B.f, null);
+                  return v.a.createElement(x.f, null);
                 },
               }
             ),
@@ -4754,7 +4754,7 @@
           if (0 === i.cTotalMatching && !i.bLoadingMore) return null;
           var c = !s;
           return v.a.createElement(
-            x.b,
+            B.b,
             {
               title: t,
               subtitle: n,
@@ -4763,7 +4763,7 @@
                   ? v.a.createElement(
                       g.b,
                       { to: r },
-                      v.a.createElement(x.a, null, l)
+                      v.a.createElement(B.a, null, l)
                     )
                   : void 0,
               rightActions: s && v.a.createElement(b, Object(O.a)({}, o)),
@@ -4785,7 +4785,7 @@
             l = a.GetRewards,
             c = e.additionalFilter;
           return v.a.createElement(
-            x.b,
+            B.b,
             { title: n || o, subtitle: r || s },
             v.a.createElement(R.a, {
               style: { width: "100%" },
@@ -4797,7 +4797,7 @@
                 return v.a.createElement(Q, { definition: e, key: e.defid });
               },
               renderItemSkeleton: function () {
-                return v.a.createElement(B.f, null);
+                return v.a.createElement(x.f, null);
               },
               key: i + "||" + JSON.stringify(c),
             })
@@ -4829,9 +4829,9 @@
             _ =
               f.bLoadingMore && 0 === f.rewards.length
                 ? [
-                    v.a.createElement(B.f, { key: "0" }),
-                    v.a.createElement(B.f, { key: "1" }),
-                    v.a.createElement(B.f, { key: "2" }),
+                    v.a.createElement(x.f, { key: "0" }),
+                    v.a.createElement(x.f, { key: "1" }),
+                    v.a.createElement(x.f, { key: "2" }),
                   ]
                 : f.rewards.map(function (e) {
                     return v.a.createElement(Q, {
@@ -4841,7 +4841,7 @@
                     });
                   });
           return v.a.createElement(
-            x.b,
+            B.b,
             null,
             v.a.createElement(
               k,
@@ -4887,7 +4887,7 @@
             m = (l.subtitle, l.GetRewards),
             u = r ? Object(h.e)(r) : void 0;
           return v.a.createElement(
-            x.b,
+            B.b,
             null,
             v.a.createElement(
               k,
@@ -4926,7 +4926,7 @@
           var t = e.definition,
             n = e.theme,
             r = Object(o.g)();
-          return v.a.createElement(B.e, {
+          return v.a.createElement(x.e, {
             definition: t,
             onClick: function (e) {
               5 === t.type || 6 === t.type
@@ -4945,7 +4945,7 @@
           i = e.link_text,
           o = "string" == typeof a ? a : Object(h.e)(a);
         return v.a.createElement(
-          x.b,
+          B.b,
           null,
           v.a.createElement(
             "div",
@@ -5520,8 +5520,8 @@
         Ae = s("cOvF"),
         De = s("Vlb1"),
         Pe = s("Gp1o"),
-        xe = s("CdLH"),
-        Be = Object(a.a)(function (e) {
+        Be = s("CdLH"),
+        xe = Object(a.a)(function (e) {
           var t,
             n = {
               item_name: "Free Item",
@@ -5614,7 +5614,7 @@
                   "div",
                   { className: Se.FreeItemContainer },
                   v.a.createElement(
-                    B.a,
+                    x.a,
                     {
                       name: l,
                       cost: 0,
@@ -5662,9 +5662,9 @@
           var t = e.time,
             n = Object(O.f)(e, ["time"]),
             r = Math.floor(Math.max(0, t - Pe.c()) / 1e3),
-            a = Math.floor(r / xe.e.PerHour),
-            i = Math.floor((r - a * xe.e.PerHour) / xe.e.PerMinute),
-            o = Math.floor(r - (a * xe.e.PerHour + i * xe.e.PerMinute));
+            a = Math.floor(r / Be.e.PerHour),
+            i = Math.floor((r - a * Be.e.PerHour) / Be.e.PerMinute),
+            o = Math.floor(r - (a * Be.e.PerHour + i * Be.e.PerMinute));
           return v.a.createElement(
             "span",
             Object(O.a)({ style: { fontFamily: "monospace" } }, n),
@@ -5833,7 +5833,7 @@
                     Qe,
                     { header: n, descriptor: e },
                     h.b.Get().BIsSaleActive() &&
-                      v.a.createElement(x.b, null, v.a.createElement(Be, null))
+                      v.a.createElement(B.b, null, v.a.createElement(xe, null))
                   )
               );
             }),
@@ -6966,8 +6966,8 @@
           var t = e.children;
           return v.a.createElement("div", { className: Nt.FaqAnswer }, t);
         },
-        xt = s("8j16"),
-        Bt = s("+d9t"),
+        Bt = s("8j16"),
+        xt = s("+d9t"),
         Rt = (function (n) {
           function e(e) {
             var t = n.call(this, e) || this;
@@ -6983,7 +6983,7 @@
                     v.a.createElement(
                       C.a,
                       {
-                        className: xt.PageContainer,
+                        className: Bt.PageContainer,
                         marginX: "xlarge",
                         display: "flex",
                         flexDirection: "column",
@@ -7001,7 +7001,7 @@
                             marginY: "xsmall",
                             display: "flex",
                             flexDirection: "column",
-                            className: xt.PageHeader,
+                            className: Bt.PageHeader,
                           },
                           Object(D.f)("#LNYSale2020_Rules_Header")
                         ),
@@ -7011,7 +7011,7 @@
                             marginY: "xsmall",
                             display: "flex",
                             flexDirection: "column",
-                            className: xt.SectionContent,
+                            className: Bt.SectionContent,
                           },
                           Object(D.f)("#LNYSale2020_Rules_Intro_China")
                         )
@@ -7022,7 +7022,7 @@
                           marginY: "medium",
                           display: "flex",
                           flexDirection: "column",
-                          className: xt.Section,
+                          className: Bt.Section,
                         },
                         v.a.createElement(
                           C.a,
@@ -7030,7 +7030,7 @@
                             marginY: "small",
                             display: "flex",
                             flexDirection: "column",
-                            className: xt.SectionHeader,
+                            className: Bt.SectionHeader,
                           },
                           Object(D.f)("#LNYSale2020_Rules_1_Title")
                         ),
@@ -7040,7 +7040,7 @@
                             marginY: "xsmall",
                             display: "flex",
                             flexDirection: "column",
-                            className: xt.SectionContent,
+                            className: Bt.SectionContent,
                           },
                           Object(D.f)("#LNYSale2020_Rules_1_Desc_China")
                         )
@@ -7051,7 +7051,7 @@
                           marginY: "medium",
                           display: "flex",
                           flexDirection: "column",
-                          className: xt.Section,
+                          className: Bt.Section,
                         },
                         v.a.createElement(
                           C.a,
@@ -7059,7 +7059,7 @@
                             marginY: "small",
                             display: "flex",
                             flexDirection: "column",
-                            className: xt.SectionHeader,
+                            className: Bt.SectionHeader,
                           },
                           Object(D.f)("#LNYSale2020_Rules_2_Title")
                         ),
@@ -7069,7 +7069,7 @@
                             marginY: "xsmall",
                             display: "flex",
                             flexDirection: "column",
-                            className: xt.SectionContent,
+                            className: Bt.SectionContent,
                           },
                           Object(D.f)("#LNYSale2020_Rules_2_Desc_China")
                         ),
@@ -7079,7 +7079,7 @@
                             marginY: "xsmall",
                             display: "flex",
                             flexDirection: "column",
-                            className: xt.SectionContent,
+                            className: Bt.SectionContent,
                           },
                           Object(D.f)("#LNYSale2020_Rules_2_Desc2_China")
                         )
@@ -7090,7 +7090,7 @@
                           marginY: "medium",
                           display: "flex",
                           flexDirection: "column",
-                          className: xt.Section,
+                          className: Bt.Section,
                         },
                         v.a.createElement(
                           C.a,
@@ -7098,7 +7098,7 @@
                             marginY: "small",
                             display: "flex",
                             flexDirection: "column",
-                            className: xt.SectionHeader,
+                            className: Bt.SectionHeader,
                           },
                           Object(D.f)("#LNYSale2020_Rules_3_Title")
                         ),
@@ -7108,7 +7108,7 @@
                             marginY: "xsmall",
                             display: "flex",
                             flexDirection: "column",
-                            className: xt.SectionContent,
+                            className: Bt.SectionContent,
                           },
                           Object(D.f)("#LNYSale2020_Rules_3_Desc_China")
                         ),
@@ -7118,7 +7118,7 @@
                             marginY: "xsmall",
                             display: "flex",
                             flexDirection: "column",
-                            className: xt.SectionContent,
+                            className: Bt.SectionContent,
                           },
                           Object(D.f)("#LNYSale2020_Rules_3_Desc2_China")
                         )
@@ -7129,7 +7129,7 @@
                           marginY: "medium",
                           display: "flex",
                           flexDirection: "column",
-                          className: xt.Section,
+                          className: Bt.Section,
                         },
                         v.a.createElement(
                           C.a,
@@ -7137,17 +7137,17 @@
                             marginY: "small",
                             display: "flex",
                             flexDirection: "column",
-                            className: xt.SectionHeader,
+                            className: Bt.SectionHeader,
                           },
                           Object(D.f)("#LNYSale2020_Rules_4_Title")
                         ),
                         v.a.createElement(
                           C.a,
-                          { marginY: "xsmall", className: xt.SectionContent },
+                          { marginY: "xsmall", className: Bt.SectionContent },
                           Object(D.n)(
                             "#LNYSale2020_Rules_4_Desc_China",
                             v.a.createElement(
-                              Bt.a,
+                              xt.a,
                               {
                                 href: u.d.STORE_BASE_URL + "privacy_agreement",
                               },
@@ -7164,7 +7164,7 @@
                     v.a.createElement(
                       C.a,
                       {
-                        className: xt.PageContainer,
+                        className: Bt.PageContainer,
                         marginX: "xlarge",
                         display: "flex",
                         flexDirection: "column",
@@ -7182,7 +7182,7 @@
                             marginY: "xsmall",
                             display: "flex",
                             flexDirection: "column",
-                            className: xt.PageHeader,
+                            className: Bt.PageHeader,
                           },
                           Object(D.f)("#LNYSale2020_Rules_Header")
                         ),
@@ -7192,7 +7192,7 @@
                             marginY: "xsmall",
                             display: "flex",
                             flexDirection: "column",
-                            className: xt.SectionContent,
+                            className: Bt.SectionContent,
                           },
                           Object(D.f)("#LNYSale2020_Rules_Intro")
                         )
@@ -7203,7 +7203,7 @@
                           marginY: "medium",
                           display: "flex",
                           flexDirection: "column",
-                          className: xt.Section,
+                          className: Bt.Section,
                         },
                         v.a.createElement(
                           C.a,
@@ -7211,7 +7211,7 @@
                             marginY: "small",
                             display: "flex",
                             flexDirection: "column",
-                            className: xt.SectionHeader,
+                            className: Bt.SectionHeader,
                           },
                           Object(D.f)("#LNYSale2020_Rules_1_Title")
                         ),
@@ -7221,7 +7221,7 @@
                             marginY: "xsmall",
                             display: "flex",
                             flexDirection: "column",
-                            className: xt.SectionContent,
+                            className: Bt.SectionContent,
                           },
                           Object(D.f)("#LNYSale2020_Rules_1_Desc")
                         )
@@ -7232,7 +7232,7 @@
                           marginY: "medium",
                           display: "flex",
                           flexDirection: "column",
-                          className: xt.Section,
+                          className: Bt.Section,
                         },
                         v.a.createElement(
                           C.a,
@@ -7240,7 +7240,7 @@
                             marginY: "small",
                             display: "flex",
                             flexDirection: "column",
-                            className: xt.SectionHeader,
+                            className: Bt.SectionHeader,
                           },
                           Object(D.f)("#LNYSale2020_Rules_2_Title")
                         ),
@@ -7250,7 +7250,7 @@
                             marginY: "xsmall",
                             display: "flex",
                             flexDirection: "column",
-                            className: xt.SectionContent,
+                            className: Bt.SectionContent,
                           },
                           Object(D.f)("#LNYSale2020_Rules_2_Desc")
                         ),
@@ -7260,7 +7260,7 @@
                             marginY: "xsmall",
                             display: "flex",
                             flexDirection: "column",
-                            className: xt.SectionContent,
+                            className: Bt.SectionContent,
                           },
                           Object(D.f)("#LNYSale2020_Rules_2_Desc2")
                         )
@@ -7271,7 +7271,7 @@
                           marginY: "medium",
                           display: "flex",
                           flexDirection: "column",
-                          className: xt.Section,
+                          className: Bt.Section,
                         },
                         v.a.createElement(
                           C.a,
@@ -7279,7 +7279,7 @@
                             marginY: "small",
                             display: "flex",
                             flexDirection: "column",
-                            className: xt.SectionHeader,
+                            className: Bt.SectionHeader,
                           },
                           Object(D.f)("#LNYSale2020_Rules_3_Title")
                         ),
@@ -7289,7 +7289,7 @@
                             marginY: "xsmall",
                             display: "flex",
                             flexDirection: "column",
-                            className: xt.SectionContent,
+                            className: Bt.SectionContent,
                           },
                           Object(D.f)("#LNYSale2020_Rules_3_Desc")
                         ),
@@ -7299,7 +7299,7 @@
                             marginY: "xsmall",
                             display: "flex",
                             flexDirection: "column",
-                            className: xt.SectionContent,
+                            className: Bt.SectionContent,
                           },
                           Object(D.f)("#LNYSale2020_Rules_3_Desc2")
                         )
@@ -7310,7 +7310,7 @@
                           marginY: "medium",
                           display: "flex",
                           flexDirection: "column",
-                          className: xt.Section,
+                          className: Bt.Section,
                         },
                         v.a.createElement(
                           C.a,
@@ -7318,17 +7318,17 @@
                             marginY: "small",
                             display: "flex",
                             flexDirection: "column",
-                            className: xt.SectionHeader,
+                            className: Bt.SectionHeader,
                           },
                           Object(D.f)("#LNYSale2020_Rules_4_Title")
                         ),
                         v.a.createElement(
                           C.a,
-                          { marginY: "xsmall", className: xt.SectionContent },
+                          { marginY: "xsmall", className: Bt.SectionContent },
                           Object(D.n)(
                             "#LNYSale2020_Rules_4_Desc",
                             v.a.createElement(
-                              Bt.a,
+                              xt.a,
                               {
                                 href: u.d.STORE_BASE_URL + "privacy_agreement",
                               },
@@ -9599,7 +9599,7 @@
           return o;
         }),
         n.d(t, "i", function () {
-          return x;
+          return B;
         }),
         n.d(t, "f", function () {
           return m;
@@ -9669,14 +9669,14 @@
               "style",
             ]),
             S = Object(P.a)(
-              x("padding-left", o || r || n),
-              x("padding-top", s || a || n),
-              x("padding-right", i || r || n),
-              x("padding-bottom", l || a || n),
-              x("margin-left", d || m || c),
-              x("margin-top", p || u || c),
-              x("margin-right", f || m || c),
-              x("margin-bottom", _ || u || c),
+              B("padding-left", o || r || n),
+              B("padding-top", s || a || n),
+              B("padding-right", i || r || n),
+              B("padding-bottom", l || a || n),
+              B("margin-left", d || m || c),
+              B("margin-top", p || u || c),
+              B("margin-right", f || m || c),
+              B("margin-bottom", _ || u || c),
               j
             ),
             O = Object(A.a)(
@@ -9850,7 +9850,7 @@
       var c = function (e, t, n) {
           return "." + l(e, t) + " { " + e + ": " + n + "px; }";
         },
-        x = function (e, t) {
+        B = function (e, t) {
           var n = h(t);
           return t ? l(e, n) : "";
         };
@@ -11194,7 +11194,7 @@
         D = Object(a.a)(function (e) {
           return e.definition.community_item_data.animated
             ? v.a.createElement(P, Object(y.a)({}, e))
-            : v.a.createElement(x, Object(y.a)({}, e));
+            : v.a.createElement(B, Object(y.a)({}, e));
         }),
         P = Object(a.a)(function (e) {
           return v.a.createElement(
@@ -11237,7 +11237,7 @@
             )
           );
         }),
-        x = Object(a.a)(function (e) {
+        B = Object(a.a)(function (e) {
           return v.a.createElement(
             G,
             Object(y.a)({}, h(e), {
@@ -11256,7 +11256,7 @@
             })
           );
         }),
-        B = Object(a.a)(function (e) {
+        x = Object(a.a)(function (e) {
           return v.a.createElement(
             T,
             Object(y.a)({}, h(e), {
@@ -11543,7 +11543,7 @@
           (f[4] = O),
           (f[12] = A),
           (f[3] = D),
-          (f[13] = B),
+          (f[13] = x),
           (f[8] = k),
           (f[14] = R),
           (f[15] = L),
@@ -13404,8 +13404,8 @@
         j = m.Message;
       var D,
         P,
-        x,
         B,
+        x,
         R = (function (n) {
           function r(e) {
             void 0 === e && (e = null);
@@ -14363,14 +14363,14 @@
             ePrivilege: 1,
           });
         }),
-        ((x || (x = {})).GetLinkedAccountInfo = function (e, t) {
+        ((B || (B = {})).GetLinkedAccountInfo = function (e, t) {
           return e.SendMsg("AccountLinking.GetLinkedAccountInfo#1", t, Z, {
             bConstMethod: !0,
             ePrivilege: 0,
             eWebAPIKeyRequirement: 1,
           });
         }),
-        ((B || (B = {})).AuthorizeCurrentDevice = function (e, t) {
+        ((x || (x = {})).AuthorizeCurrentDevice = function (e, t) {
           return e.SendMsg("EmbeddedClient.AuthorizeCurrentDevice#1", t, q, {
             ePrivilege: 1,
           });
@@ -16267,8 +16267,7 @@
                     "#RewardCluster_Popular_Title",
                     Object(S.f)("#RewardCluster_Popular_RewardItems")
                   ),
-                  Object(S.f)("#RewardCluster_Popular_Subtitle"),
-                  { maxToReturn: 120 }
+                  Object(S.f)("#RewardCluster_Popular_Subtitle")
                 ),
                 r = e(
                   ie(13, !0),
@@ -16408,26 +16407,26 @@
                     "#RewardCluster_AnimatedProfileBackgrounds_Title"
                   ),
                   Object(S.f)("#RewardCluster_Backgrounds_Subtitle"),
-                  { itemclass: [3], maxToReturn: 120, queryFilter: [1] }
+                  { itemclass: [3], queryFilter: [1] }
                 ),
                 I = e(
                   Object(S.f)(
                     "#RewardCluster_AnimatedMiniProfileBackgrounds_Title"
                   ),
                   Object(S.f)("#RewardCluster_MiniProfileBackgrounds_Subtitle"),
-                  { itemclass: [13], maxToReturn: 120, queryFilter: [1] }
+                  { itemclass: [13], queryFilter: [1] }
                 ),
                 w = e(
                   Object(S.f)("#RewardCluster_StillProfileBackgrounds_Title"),
                   Object(S.f)("#RewardCluster_Backgrounds_Subtitle"),
-                  { itemclass: [3], maxToReturn: 120, queryFilter: [2] }
+                  { itemclass: [3], queryFilter: [2] }
                 ),
                 M = e(
                   Object(S.f)(
                     "#RewardCluster_StillMiniProfileBackgrounds_Title"
                   ),
                   Object(S.f)("#RewardCluster_MiniProfileBackgrounds_Subtitle"),
-                  { itemclass: [13], maxToReturn: 120, queryFilter: [2] }
+                  { itemclass: [13], queryFilter: [2] }
                 );
               t(
                 new he(

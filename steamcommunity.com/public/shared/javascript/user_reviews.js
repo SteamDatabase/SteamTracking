@@ -14,6 +14,13 @@ function UserReview_Award( bLoggedIn, loginURL, recommendationID, callbackFunc, 
 	}
 }
 
+function UserReview_ShowMoreAwards( elem )
+{
+	elem = $J( elem );
+	var container = elem.closest( ".review_award_ctn" );
+	container.addClass( "show_all_awards" );
+}
+
 function UserReview_Rate( recommendationID, bRateUp, baseURL, callback )
 {
 	$J.post( baseURL + '/userreviews/rate/' + recommendationID,{

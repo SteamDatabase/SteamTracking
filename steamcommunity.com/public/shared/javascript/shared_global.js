@@ -3039,12 +3039,19 @@ function FlyoutMenu( elemLink, elemPopup, align, valign, bLinkHasBorder, elemAlt
 
 	if ( !$Popup.is(':visible') || $Popup.css('opacity') < 1.0 )
 	{
-		AlignMenu( $Link, $Popup, align, valign, bLinkHasBorder, elemAlternateAlignTo || null );
-
 		if ( $Popup.hasClass( 'responsive_slidedown') && window.UseSmallScreenMode && window.UseSmallScreenMode() )
+		{
 			$Popup.stop().slideDown();
+		}
 		else
+		{
+			// Responsive mode calls slideDown, which applies position: relative to the element and we need to clear it.
+			// This will only happen if the user interacted with the menu in the responsive mode, then resized
+			// their window to be large and hovered the elements.
+			$Popup.css( { position: '' } );
+			AlignMenu( $Link, $Popup, align, valign, bLinkHasBorder, elemAlternateAlignTo || null );
 			ShowWithFade( $Popup );
+		}
 
 		$Link.addClass('focus');
 	}
@@ -3185,13 +3192,13 @@ function AlignMenu( elemLink, elemPopup, align, valign, bLinkHasBorder, elemAlte
 
 function BindAutoFlyoutEvents()
 {
-	$J(document).on( 'mouseenter.Flyout click.Flyout', '.flyout_tab', function(e) {
-		var $Tab = $J(this);
+	var fnShowFlyout = function( $Tab, bIsHover )
+	{
 		var $Content = $J('#' + $Tab.data('flyout') );
 		var bResponsiveSlidedownMenu = window.UseSmallScreenMode && window.UseSmallScreenMode() && $Content.hasClass('responsive_slidedown');
 
 		if ( !$Content.length || $Content.data('flyout-event-running') ||
-			( e.type == 'mouseenter' && bResponsiveSlidedownMenu ) )
+			(bIsHover && bResponsiveSlidedownMenu ) )
 			return;
 
 		$Content.data( 'flyout-event-running', true );
@@ -3199,7 +3206,7 @@ function BindAutoFlyoutEvents()
 
 		if ( $Content.is(':visible') )
 		{
-			if ( e.type == 'click' )
+			if ( !bIsHover )
 				HideFlyoutMenu( null, $Tab, $Content );
 
 			return;
@@ -3235,6 +3242,35 @@ function BindAutoFlyoutEvents()
 				});
 			}, 1 );
 		}
+	};
+
+
+	$J(document).on( 'mouseenter.Flyout click.Flyout', '.flyout_tab', function(e) {
+		var $Tab = $J(this);
+		var msDelay = $Tab.data('flyout-delay');
+
+		var bIsHover = e.type == 'mouseenter';
+
+		if ( !bIsHover || !msDelay )
+		{
+			fnShowFlyout( $Tab, bIsHover );
+		}
+		else if ( !$Tab.data( 'iFlyoutInterval' ) )
+		{
+			var fnCleanupFlyoutInterval = function() {
+				$Tab.removeData( 'iFlyoutInterval' );
+				$Tab.off( 'mouseleave.FlyoutCancel' );
+			}
+			$Tab.on( 'mouseleave.FlyoutCancel', function(e) {
+				window.clearTimeout( $Tab.data('iFlyoutInterval') );
+				fnCleanupFlyoutInterval();
+			});
+			$Tab.data( 'iFlyoutInterval', window.setTimeout( function() {
+				fnCleanupFlyoutInterval();
+				fnShowFlyout( $Tab, bIsHover );
+			}, msDelay ) );
+		}
+
 	});
 
 	$J(document).on('mouseleave.Flyout', '.flyout_tab', function(e) {

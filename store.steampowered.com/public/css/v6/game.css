@@ -2284,21 +2284,22 @@ a.game_area_demo_btn:hover, a.game_area_wishlist_btn:hover {
 }
 
 /* queue flyout menu */
+#view_wishlist_btn.btnv6_blue_hoverfade,
 .queue_btn_ignore > .btnv6_blue_hoverfade {
 	border-top-right-radius: 0px;
 	border-bottom-right-radius: 0px;
 }
-.queue_btn_ignore_menu {
+.queue_btn_menu {
 	margin-left: -2px;
 }
-.queue_btn_ignore_menu .btn_medium > span {
+.queue_btn_menu .btn_medium > span {
 	padding: 0px;
 }
-.queue_btn_ignore_menu:hover {
+.queue_btn_menu:hover {
 	border-top-right-radius: 2px;
 	border-bottom-right-radius: 0px;
 }
-.queue_btn_ignore_menu > .queue_ignore_menu_arrow {
+.queue_btn_menu > .queue_menu_arrow {
 	border-top-right-radius: 2px;
 	border-bottom-right-radius: 2px;
 	border: none;
@@ -2310,17 +2311,17 @@ a.game_area_demo_btn:hover, a.game_area_wishlist_btn:hover {
 	background: rgba(103, 193, 245, 0.2);
 }
 
-.queue_btn_ignore_menu > .queue_ignore_menu_arrow.queue_btn_active {
+.queue_btn_menu > .queue_menu_arrow.queue_btn_active {
 	background: rgba( 103, 193, 245, 0.2 );
 	background-color: rgba( 103, 193, 245, 0.6 );
 }
-.queue_btn_ignore_menu:hover > .queue_ignore_menu_arrow,
-.queue_btn_ignore_menu > .queue_ignore_menu_arrow:hover {
+.queue_btn_menu:hover > .queue_menu_arrow,
+.queue_btn_menu > .queue_menu_arrow:hover {
 	border-top-right-radius: 2px;
 	border-bottom-right-radius: 0px;
 	background-color: #2e323a;
 }
-.queue_ignore_menu_flyout {
+.queue_menu_flyout {
 	position: absolute;
 	display: none;
 	width: 300px;
@@ -2332,45 +2333,42 @@ a.game_area_demo_btn:hover, a.game_area_wishlist_btn:hover {
 	margin-top: -4px;
 	box-shadow: 0px 0px 10px rgba(0,0,0,0.75);
 }
-.queue_btn_ignore_menu:hover .queue_ignore_menu_flyout,
-.queue_ignore_menu_flyout:hover {
+.queue_btn_menu:hover .queue_menu_flyout,
+.queue_menu_flyout:hover {
 	display: block;
     background: radial-gradient(circle at top left, rgba(74, 81, 92, 0.4) 0%, rgba(75, 81, 92, 0) 60%), #25282e;
 }
-.queue_ignore_menu_flyout_content {
+.queue_menu_flyout_content {
 	position: relative;
 }
 
-.queue_ignore_menu_option {
+.queue_menu_option {
 	display: flex;
 	cursor: pointer;
     padding: 12px;
 }
-.queue_ignore_menu_option:first-child {
-
-}
-.queue_ignore_menu_option:hover {
+.queue_menu_option:hover {
     background: #3b404a;
 }
 
-.queue_ignore_menu_option_label {
+.queue_menu_option_label {
 	margin-left: 5px;
 }
-.queue_ignore_menu_option_label > .option_title {
+.queue_menu_option_label > .option_title {
 	color: #fff;
 	font-size: 14px;
     line-height: 17px;
     padding-bottom: 4px;
 }
-.queue_ignore_menu_option_label > .option_subtitle {
+.queue_menu_option_label > .option_subtitle {
     line-height: 14px;
     color: #687882;
 }
-.queue_ignore_menu_option:hover .queue_ignore_menu_option_label > .option_subtitle {
+.queue_menu_option:hover .queue_menu_option_label > .option_subtitle {
     color: #85949d;
 }
 
-.queue_btn_ignore_menu .btnv6_blue_hoverfade img {
+.queue_btn_menu .btnv6_blue_hoverfade img {
 	vertical-align: middle;
 	margin: 0px;
 }
@@ -2381,16 +2379,16 @@ a.game_area_demo_btn:hover, a.game_area_wishlist_btn:hover {
 .queue_ignore_menu_option_image.unselected {
 }
 
-.queue_btn_ignore_menu.not_interested #queue_ignore_menu_option_not_interested .queue_ignore_menu_option_image.selected {
+.queue_btn_menu.not_interested #queue_ignore_menu_option_not_interested .queue_ignore_menu_option_image.selected {
 	display: inline-block;
 }
-.queue_btn_ignore_menu.not_interested #queue_ignore_menu_option_not_interested .queue_ignore_menu_option_image.unselected {
+.queue_btn_menu.not_interested #queue_ignore_menu_option_not_interested .queue_ignore_menu_option_image.unselected {
 	display: none;
 }
-.queue_btn_ignore_menu.owned_elsewhere #queue_ignore_menu_option_owned_elsewhere .queue_ignore_menu_option_image.selected {
+.queue_btn_menu.owned_elsewhere #queue_ignore_menu_option_owned_elsewhere .queue_ignore_menu_option_image.selected {
 	display: inline-block;
 }
-.queue_btn_ignore_menu.owned_elsewhere #queue_ignore_menu_option_owned_elsewhere .queue_ignore_menu_option_image.unselected {
+.queue_btn_menu.owned_elsewhere #queue_ignore_menu_option_owned_elsewhere .queue_ignore_menu_option_image.unselected {
 	display: none;
 }
 

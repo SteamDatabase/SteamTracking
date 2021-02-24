@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6375949";
+var CLSTAMP = "6383276";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [10],
   {
@@ -1734,7 +1734,7 @@ var CLSTAMP = "6375949";
             ),
             {
               ContentHubHome: function () {
-                return "/(tags|category|videos|vr|software|macos|linux|freetoplay|earlyaccess|pccafe|demos|specials|remoteplay_phone|remoteplay_tablet|remoteplay_tv|remoteplay_together|games|adultonly)";
+                return "/(tags|category|videos|weekly|vr|software|macos|linux|freetoplay|earlyaccess|pccafe|demos|specials|remoteplay_phone|remoteplay_tablet|remoteplay_tv|remoteplay_together|games|adultonly)";
               },
             }
           ),
@@ -2534,6 +2534,7 @@ var CLSTAMP = "6375949";
               (n.gidfeature = this.gidfeature),
               (n.gidfeature2 = this.gidfeature2),
               (n.featured_app_tagid = this.featured_app_tagid),
+              (n.creator_steamid = this.creator_steamid),
               (n.last_update_steamid = this.last_update_steamid),
               (n.rtime32_last_modified = this.rtime32_last_modified),
               (n.rtime32_last_solr_search_col_updated = this.rtime32_last_solr_search_col_updated),
@@ -3058,12 +3059,18 @@ var CLSTAMP = "6375949";
             );
           }),
           (i.prototype.GetBroadcastChatVisibility = function () {
-            return this.jsondata.broadcastChatSetting;
+            return this.jsondata.broadcastChatSetting || "hide";
           }),
           (i.prototype.GetBroadcastTitle = function (e) {
+            var t;
             return (
               b.a.GetWithFallback(this.jsondata.localized_broadcast_title, e) ||
-              Object(b.f)(this.jsondata.default_broadcast_title)
+              Object(b.f)(
+                null !== (t = this.jsondata.default_broadcast_title) &&
+                  void 0 !== t
+                  ? t
+                  : "#Broadcast_default_title_dev"
+              )
             );
           }),
           (i.prototype.GetBroadcastWhitelist = function () {
@@ -3276,6 +3283,8 @@ var CLSTAMP = "6375949";
           Object(r.c)([a.C], i.prototype, "endTime", void 0),
           Object(r.c)([a.C], i.prototype, "visibilityStartTime", void 0),
           Object(r.c)([a.C], i.prototype, "visibilityEndTime", void 0),
+          Object(r.c)([a.C], i.prototype, "build_id", void 0),
+          Object(r.c)([a.C], i.prototype, "build_branch", void 0),
           Object(r.c)([a.C], i.prototype, "postTime", void 0),
           Object(r.c)([a.C], i.prototype, "visibility_state", void 0),
           Object(r.c)([a.C], i.prototype, "broadcaster", void 0),
@@ -3358,9 +3367,18 @@ var CLSTAMP = "6375949";
           return (
             Object(r.d)(t, e),
             (t.prototype.render = function () {
-              if (0 == this.props.event.jsondata.referenced_appids.length)
+              var e, t;
+              if (
+                null ===
+                  (t =
+                    null === (e = this.props.event.jsondata) || void 0 === e
+                      ? void 0
+                      : e.referenced_appids) ||
+                void 0 === t ||
+                !t.length
+              )
                 return null;
-              var e = this.props.event.jsondata.referenced_appids
+              var n = this.props.event.jsondata.referenced_appids
                   .filter(function (e) {
                     return i.a.GetAppInfo(e) && i.a.GetAppInfo(e).name;
                   })
@@ -3376,15 +3394,15 @@ var CLSTAMP = "6375949";
                     );
                   })
                   .join(Object(p.f)("#EventDisplay_ReferencedApps_Joiner")),
-                t = Object(p.l)(
+                r = Object(p.l)(
                   "#EventDisplay_ReferencedApps",
                   this.props.event.jsondata.referenced_appids.length,
-                  e
+                  n
                 );
               return o.createElement(
                 "div",
                 { className: c.a.ReferencedApps },
-                o.createElement(l.b, { text: t })
+                o.createElement(l.b, { text: r })
               );
             }),
             (t = Object(r.c)([a.a], t))
@@ -8672,7 +8690,7 @@ var CLSTAMP = "6375949";
             e.language
           );
           return T.a.createElement(
-            Q.h,
+            Q.g,
             {
               url: e.link.url,
               className: e.strClassName ? e.strClassName : void 0,
@@ -9351,29 +9369,26 @@ var CLSTAMP = "6375949";
     },
     "6AJf": function (e, t, n) {
       "use strict";
-      n.d(t, "c", function () {
+      n.d(t, "b", function () {
         return ft;
       }),
-        n.d(t, "g", function () {
+        n.d(t, "f", function () {
           return yt;
         }),
         n.d(t, "a", function () {
           return At;
         }),
-        n.d(t, "b", function () {
-          return It;
+        n.d(t, "g", function () {
+          return Bt;
         }),
-        n.d(t, "h", function () {
+        n.d(t, "e", function () {
           return Dt;
         }),
-        n.d(t, "f", function () {
+        n.d(t, "c", function () {
           return Nt;
         }),
         n.d(t, "d", function () {
-          return jt;
-        }),
-        n.d(t, "e", function () {
-          return zt;
+          return kt;
         });
       function m() {
         return window.innerWidth < parseInt(re.strWidescreenWidth);
@@ -9964,14 +9979,16 @@ var CLSTAMP = "6375949";
                               return Object(W.e)(this, function (e) {
                                 switch (e.label) {
                                   case 0:
-                                    return e.trys.push([0, , 2, 3]), [4, r];
+                                    return e.trys.push([0, 2, 3, 4]), [4, r];
                                   case 1:
-                                    return e.sent(), [3, 3];
+                                    return e.sent(), [3, 4];
                                   case 2:
+                                    return e.sent(), [3, 4];
+                                  case 3:
                                     return (
                                       this.m_mapPromisesByFlavor.delete(n), [7]
                                     );
-                                  case 3:
+                                  case 4:
                                     return [2];
                                 }
                               });
@@ -10853,19 +10870,6 @@ var CLSTAMP = "6375949";
                     }
                 }
               return t;
-            }),
-            (a.GenerateMetadata = function (n, e) {
-              e.forEach(function (e) {
-                e.facetValues.forEach(function (t) {
-                  t.matchingCapsules = n
-                    .filter(function (e) {
-                      return It(e.tags, t.filter);
-                    })
-                    .map(function (e) {
-                      return e.capsule;
-                    });
-                });
-              });
             }),
             Object(W.c)([_.C], a.prototype, "m_rgFacets", void 0),
             Object(W.c)([_.C], a.prototype, "m_rgSection", void 0),
@@ -12378,7 +12382,7 @@ var CLSTAMP = "6375949";
           a = e.classNames,
           o = e.section,
           i = e.selected,
-          s = Nt(t, n);
+          s = Dt(t, n);
         if (!s) return null;
         var c,
           l = o
@@ -12447,7 +12451,7 @@ var CLSTAMP = "6375949";
         });
         return N.createElement(
           "div",
-          { className: fe.a.SaleSection, style: zt(r, t) },
+          { className: fe.a.SaleSection, style: kt(r, t) },
           N.createElement(yt, Object(W.a)({}, e)),
           N.createElement("div", { className: fe.a.TabButtonsCtn }, c)
         );
@@ -12479,7 +12483,7 @@ var CLSTAMP = "6375949";
                       return e.type === t.type && e.id === t.id;
                     }) &&
                       (e && (e += "; "),
-                      (e += jt(
+                      (e += Nt(
                         o,
                         this.props.language,
                         this.props.event.clanSteamID.GetAccountID(),
@@ -12558,7 +12562,7 @@ var CLSTAMP = "6375949";
                 n = e.event;
               return N.createElement(
                 "div",
-                { className: Object(R.a)(fe.a.SaleSection), style: zt(t, n) },
+                { className: Object(R.a)(fe.a.SaleSection), style: kt(t, n) },
                 N.createElement(yt, Object(W.a)({}, this.props)),
                 N.createElement(
                   "div",
@@ -12617,7 +12621,7 @@ var CLSTAMP = "6375949";
                       fe.a.SaleSectionTabs,
                       "SaleSectionTabs"
                     ),
-                    style: zt(r, t),
+                    style: kt(r, t),
                   },
                   N.createElement(
                     He.a,
@@ -12870,7 +12874,8 @@ var CLSTAMP = "6375949";
                             fe.a["CustomStyle_" + e.jsondata.sale_vanity_id] +
                             " SaleOuterContainer",
                           style: {
-                            marginTop: e.jsondata.sale_header_offset + "px",
+                            marginTop:
+                              (e.jsondata.sale_header_offset || 0) + "px",
                           },
                         },
                         Boolean(
@@ -12945,7 +12950,7 @@ var CLSTAMP = "6375949";
                                 marginTop: "14px",
                               },
                             },
-                            N.createElement(Bt, {
+                            N.createElement(Tt, {
                               text: Object(G.f)("#Sale_SeeAllSpecials"),
                               url: e.jsondata.sale_browsemore_url,
                               color: e.jsondata.sale_browsemore_color,
@@ -13038,7 +13043,7 @@ var CLSTAMP = "6375949";
                 (this.m_bDefaultTab = n),
                 e.capsules && 0 !== e.capsules.length
                   ? ((this.m_capsuleFilter = new Set()),
-                    Tt(e.capsules, t).forEach(function (e) {
+                    It(e.capsules, t).forEach(function (e) {
                       r.m_capsuleFilter.add(Number(e.id));
                     }))
                   : (this.m_capsuleFilter = null));
@@ -13198,7 +13203,7 @@ var CLSTAMP = "6375949";
                       case "broadcast":
                         l.BEventCanShowBroadcastWidget() &&
                           !h &&
-                          ((i = N.createElement(Gt, {
+                          ((i = N.createElement(Rt, {
                             broadcastEmbedContext:
                               c.props.broadcastEmbedContext,
                             activeTab: a,
@@ -13213,7 +13218,7 @@ var CLSTAMP = "6375949";
                         break;
                       case "doors":
                         i = N.createElement(de.b, {
-                          strFontFamily: Rt(l.jsondata.sale_font, u),
+                          strFontFamily: zt(l.jsondata.sale_font, u),
                         });
                         break;
                       case "text_section":
@@ -13368,7 +13373,7 @@ var CLSTAMP = "6375949";
             n = e.event,
             r = e.language,
             a = e.nHiddenCapsules,
-            o = jt(t, r, n.clanSteamID.GetAccountID());
+            o = Nt(t, r, n.clanSteamID.GetAccountID());
           if (!o) return null;
           var i,
             s,
@@ -13385,7 +13390,7 @@ var CLSTAMP = "6375949";
                   ((i = t),
                   (c = r),
                   {
-                    fontFamily: Rt((s = n).jsondata.sale_font, c),
+                    fontFamily: zt((s = n).jsondata.sale_font, c),
                     fontWeight: s.jsondata.sale_font_weight,
                     fontSize: s.jsondata.sale_section_font_size,
                     textTransform: s.jsondata.sale_section_disable_capitalize
@@ -13399,11 +13404,11 @@ var CLSTAMP = "6375949";
             p = null;
           return (
             t.label_link &&
-              ((u = N.createElement(Dt, { url: t.label_link }, u)),
+              ((u = N.createElement(Bt, { url: t.label_link }, u)),
               "browseall" === t.label_link_style &&
                 ((l = Object(G.f)("#Sale_SectionLink_BrowseAll")),
                 (p = N.createElement(
-                  Dt,
+                  Bt,
                   {
                     className: Object(R.a)(
                       fe.a.SectionLabelLinkButton,
@@ -13454,7 +13459,7 @@ var CLSTAMP = "6375949";
           e.language;
           return N.createElement(
             "div",
-            { className: fe.a.SaleSection, style: zt(t, n) },
+            { className: fe.a.SaleSection, style: kt(t, n) },
             N.createElement(yt, Object(W.a)({}, e)),
             N.createElement(
               "div",
@@ -13481,7 +13486,7 @@ var CLSTAMP = "6375949";
                 O.a.SaleSectionCtn,
                 "SaleSectionForCustomCSS"
               ),
-              style: zt(t, n),
+              style: kt(t, n),
             },
             N.createElement(yt, Object(W.a)({}, e)),
             N.createElement(
@@ -13513,7 +13518,7 @@ var CLSTAMP = "6375949";
                 O.a.SaleSectionCtn,
                 "SaleSectionForCustomCSS"
               ),
-              style: zt(t, n),
+              style: kt(t, n),
             },
             N.createElement(yt, Object(W.a)({}, e)),
             N.createElement(
@@ -13597,7 +13602,7 @@ var CLSTAMP = "6375949";
                 O.a.SaleSectionCtn,
                 "SaleSectionForCustomCSS"
               ),
-              style: zt(t, n),
+              style: kt(t, n),
             },
             N.createElement(yt, Object(W.a)({}, e)),
             N.createElement(
@@ -14315,7 +14320,7 @@ var CLSTAMP = "6375949";
                       case 4:
                         return (
                           p &&
-                            (l = Tt(
+                            (l = It(
                               (l = l.filter(function (e) {
                                 return s.ShouldShowCapsule(e);
                               })),
@@ -14328,7 +14333,7 @@ var CLSTAMP = "6375949";
                               d.SetSection(n)),
                             (h = ie.GetReferencedCapsules(n.facets)),
                             (h = n.smart_section
-                              ? Tt(
+                              ? It(
                                   (h = h.filter(function (e) {
                                     return s.ShouldShowCapsule(e);
                                   })),
@@ -14358,13 +14363,13 @@ var CLSTAMP = "6375949";
                             d.SortFacetValues(_, this.props.language, v, g)),
                           (y = !1),
                           (M = this.GetRowsToShow(x)),
-                          (S = kt(n, M)),
+                          (S = jt(n, M)),
                           (E = l.length),
                           (O = !i && "store" === Object(H.g)()),
                           (C = (0 < M && O) || !p),
                           !n.show_as_carousel &&
                             C &&
-                            (A = kt(n, M) + 4) + 4 < E &&
+                            (A = jt(n, M) + 4) + 4 < E &&
                             ((E = A), (y = !0)),
                           0 < (D = Object(U.s)(n)) &&
                             ((w = Math.max(D + 5, Math.floor(1.1 * D))),
@@ -14587,7 +14592,7 @@ var CLSTAMP = "6375949";
                 d = a.nMaxCapsulesPerRow,
                 m = a.bAwaitingShowContentLoading,
                 h = this.GetSectionForSession(),
-                f = zt(h, t).background,
+                f = kt(h, t).background,
                 b = null;
               if (o) {
                 var _ = Te({
@@ -14671,7 +14676,7 @@ var CLSTAMP = "6375949";
                       O.a.SaleSectionCtn,
                       "SaleSectionForCustomCSS"
                     ),
-                    style: zt(h, t),
+                    style: kt(h, t),
                   },
                   N.createElement(
                     "div",
@@ -14715,7 +14720,7 @@ var CLSTAMP = "6375949";
                 "div",
                 { className: fe.a.SaleViewAll },
                 N.createElement(
-                  Dt,
+                  Bt,
                   { url: t.label_link },
                   Object(G.f)("#btn_live_streams_all")
                 )
@@ -14723,36 +14728,17 @@ var CLSTAMP = "6375949";
             : null;
         };
       function It(e, t) {
-        if (t && t.clauses) {
-          var n = new Set();
-          e.forEach(function (e) {
-            return n.add(e.toLocaleLowerCase());
-          });
-          for (var r = 0, a = t.clauses; r < a.length; r++) {
-            var o = a[r];
-            if (o.or_tags) {
-              for (var i = !1, s = 0, c = 0, l = o.or_tags; c < l.length; c++) {
-                var u = l[c];
-                if (u && (s++, (i = n.has(u.toLocaleLowerCase())))) break;
-              }
-              if (0 !== s) if (!("Must have" === o.type ? i : !i)) return !1;
-            }
-          }
-        }
-        return !0;
-      }
-      function Tt(e, t) {
         return e.filter(function (e) {
           return null == e.visibility_index || e.visibility_index == t;
         });
       }
-      var Bt = function (e) {
+      var Tt = function (e) {
           var t = e.text,
             n = e.url,
             r = e.color,
             a = e.bgcolor;
           return N.createElement(
-            Dt,
+            Bt,
             {
               url: n,
               className: L.a.BrowseMoreButton,
@@ -14761,7 +14747,7 @@ var CLSTAMP = "6375949";
             t || Object(G.f)("#Sale_BrowseMore_Text_Default")
           );
         },
-        Dt = function (e) {
+        Bt = function (e) {
           var t = Object(j.c)(),
             n = Object(x.a)(e.url, H.d.STORE_BASE_URL);
           if (n) {
@@ -14779,7 +14765,7 @@ var CLSTAMP = "6375949";
           }
           return N.createElement(N.Fragment, null, e.children);
         };
-      function Nt(e, t) {
+      function Dt(e, t) {
         return (
           G.a.GetWithFallback(e.localized_label, t) ||
           ("#Sale_default_label" === e.default_label
@@ -14787,7 +14773,7 @@ var CLSTAMP = "6375949";
             : Object(G.f)(e.default_label))
         );
       }
-      function jt(e, t, n, r) {
+      function Nt(e, t, n, r) {
         var a = (function (e) {
           if ("items" === e.section_type)
             switch (e.smart_section_type) {
@@ -14822,11 +14808,11 @@ var CLSTAMP = "6375949";
         var s = H.d.MEDIA_CDN_COMMUNITY_URL + "images/clans/" + n + "/" + i;
         return N.createElement("img", { loading: "lazy", src: s, alt: o });
       }
-      function kt(e, t) {
+      function jt(e, t) {
         for (var n = Ce(e), r = 0, a = 0; a < t; a++) r += n[a % n.length];
         return r;
       }
-      function zt(e, t) {
+      function kt(e, t) {
         if (e.disable_background) return { paddingLeft: 0, paddingRight: 0 };
         var n = "";
         return (
@@ -14849,24 +14835,32 @@ var CLSTAMP = "6375949";
           }
         );
       }
-      function Rt(e, t) {
-        return 12 === t
-          ? e.replace("Jolly Lodger", "New Rocker")
-          : 23 === t || 19 === t || 24 === t || 18 === t || 8 === t || 26 === t
-          ? e.replace("Sigmar One", "Play")
-          : 6 === t
-          ? e.replace("Sigmar One", "Noto Serif SC")
-          : 7 === t
-          ? e.replace("Sigmar One", "Noto Serif TC")
-          : 10 === t
-          ? e.replace("Sigmar One", "M PLUS Rounded 1c")
-          : 4 === t
-          ? e.replace("Sigmar One", "Black Han Sans")
-          : 9 === t
-          ? e.replace("Sigmar One", "Prompt")
-          : e;
+      function zt(e, t) {
+        return (
+          (e = e || ""),
+          12 === t
+            ? e.replace("Jolly Lodger", "New Rocker")
+            : 23 === t ||
+              19 === t ||
+              24 === t ||
+              18 === t ||
+              8 === t ||
+              26 === t
+            ? e.replace("Sigmar One", "Play")
+            : 6 === t
+            ? e.replace("Sigmar One", "Noto Serif SC")
+            : 7 === t
+            ? e.replace("Sigmar One", "Noto Serif TC")
+            : 10 === t
+            ? e.replace("Sigmar One", "M PLUS Rounded 1c")
+            : 4 === t
+            ? e.replace("Sigmar One", "Black Han Sans")
+            : 9 === t
+            ? e.replace("Sigmar One", "Prompt")
+            : e
+        );
       }
-      var Gt = (function (t) {
+      var Rt = (function (t) {
         function e() {
           var e = (null !== t && t.apply(this, arguments)) || this;
           return (e.state = {}), e;
@@ -17978,6 +17972,7 @@ var CLSTAMP = "6375949";
                 (a.gidfeature2 = t.gidfeature2),
                 (a.featured_app_tagid = t.featured_app_tagid),
                 (a.vecTags = new Array()),
+                (a.creator_steamid = t.creator_steamid),
                 (a.last_update_steamid = t.last_update_steamid),
                 (a.rtime32_last_modified = t.rtime32_last_modified),
                 (a.rtime32_moderator_reviewed = t.rtime_mod_reviewed),
@@ -17985,6 +17980,8 @@ var CLSTAMP = "6375949";
                 (a.video_preview_id = t.video_preview_id),
                 (a.has_live_stream = t.has_live_stream),
                 (a.live_stream_viewer_count = t.live_stream_viewer_count),
+                (a.build_id = t.build_id),
+                (a.build_branch = t.build_branch),
                 t.announcement_body
                   ? ((n = t.announcement_body),
                     (a.AnnouncementGID = n.gid),
@@ -18038,62 +18035,62 @@ var CLSTAMP = "6375949";
               }
               if (
                 ((a.jsondata.localized_capsule_image = Object(c.f)(
-                  a.jsondata.localized_capsule_image,
+                  a.jsondata.localized_capsule_image || [],
                   30,
                   null
                 )),
                 (a.jsondata.localized_title_image = Object(c.f)(
-                  a.jsondata.localized_title_image,
+                  a.jsondata.localized_title_image || [],
                   30,
                   null
                 )),
                 (a.jsondata.localized_spotlight_image = Object(c.f)(
-                  a.jsondata.localized_spotlight_image,
+                  a.jsondata.localized_spotlight_image || [],
                   30,
                   null
                 )),
                 (a.jsondata.localized_subtitle = Object(c.f)(
-                  a.jsondata.localized_subtitle,
+                  a.jsondata.localized_subtitle || [],
                   30,
                   null
                 )),
                 (a.jsondata.localized_summary = Object(c.f)(
-                  a.jsondata.localized_summary,
+                  a.jsondata.localized_summary || [],
                   30,
                   null
                 )),
                 (a.jsondata.localized_broadcast_title = Object(c.f)(
-                  a.jsondata.localized_broadcast_title,
+                  a.jsondata.localized_broadcast_title || [],
                   30,
                   null
                 )),
                 (a.jsondata.localized_broadcast_left_image = Object(c.f)(
-                  a.jsondata.localized_broadcast_left_image,
+                  a.jsondata.localized_broadcast_left_image || [],
                   30,
                   null
                 )),
                 (a.jsondata.localized_broadcast_right_image = Object(c.f)(
-                  a.jsondata.localized_broadcast_right_image,
+                  a.jsondata.localized_broadcast_right_image || [],
                   30,
                   null
                 )),
                 (a.jsondata.localized_sale_header = Object(c.f)(
-                  a.jsondata.localized_sale_header,
+                  a.jsondata.localized_sale_header || [],
                   30,
                   null
                 )),
                 (a.jsondata.localized_sale_overlay = Object(c.f)(
-                  a.jsondata.localized_sale_overlay,
+                  a.jsondata.localized_sale_overlay || [],
                   30,
                   null
                 )),
                 (a.jsondata.localized_sale_product_banner = Object(c.f)(
-                  a.jsondata.localized_sale_product_banner,
+                  a.jsondata.localized_sale_product_banner || [],
                   30,
                   null
                 )),
                 (a.jsondata.localized_sale_product_mobile_banner = Object(c.f)(
-                  a.jsondata.localized_sale_product_mobile_banner,
+                  a.jsondata.localized_sale_product_mobile_banner || [],
                   30,
                   null
                 )),
@@ -37834,8 +37831,8 @@ var CLSTAMP = "6375949";
             o),
           Object(c.a)(o) && (t = "noopener nofollow");
         var i =
-          "string" == typeof e.children && 0 < e.children.length && o
-            ? Object(N.e)(o)
+          "string" == typeof e.children && 0 < e.children.length && n
+            ? Object(N.e)(n)
             : void 0;
         return h.createElement(
           "a",

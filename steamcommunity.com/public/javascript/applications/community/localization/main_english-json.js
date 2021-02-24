@@ -338,6 +338,23 @@
         EventEditor_StreamLoc: "Live-Stream Location",
         EventEditor_Description: "Event Description",
         EventEditor_DescriptionNews: "Announcement Content",
+        EventEditor_AssociateBuild: "Link To Build",
+        EventEditor_AssociateBuild_ttip:
+          "Click the Link To Build button to link this event to a specific build and have this event be displayed as patchnotes for that build",
+        EventEditor_AssociateBuildBlank:
+          "This event is not linked to any build",
+        EventEditor_AssociatedBuild_Default:
+          "This event is linked to build %1$s",
+        EventEditor_AssociatedBuild:
+          "This event is linked to build %1$s for the branch %2$s",
+        EventEditor_AssociateBuildDialog: "Select Branch",
+        EventEditor_AssociateBuildDialogDesc:
+          "Choose which branch you want to associate this event with, and it will associate this event with the current build of that branch. You can also unlink an event from a build by selecting the 'Don't associated this event with a build' option.",
+        EventEditor_AssociateBuildDefaultBranch:
+          "Default Branch - Build %1$s (%2$s)",
+        EventEditor_AssociateBuildBranch: "%1$s - Build %2$s (%3$s)",
+        EventEditor_AssociateBuildClear:
+          "Don't associate this event with a build",
         EventEditor_Images: "Images",
         EventEditor_SearchImages: "Search Images",
         EventEditor_UploadFile: "Upload Image",

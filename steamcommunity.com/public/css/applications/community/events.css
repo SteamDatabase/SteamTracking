@@ -2446,6 +2446,26 @@ p a:hover {
     font-family: monospace;
     padding: 6px; }
 
+.partnereventassociatedbuild_AssociatedBuildBody_1rnVU {
+  margin-top: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+  .partnereventassociatedbuild_AssociatedBuildBody_1rnVU button.DialogButton {
+    margin-left: auto;
+    max-width: 200px; }
+
+.partnereventassociatedbuild_BuildDisplay_1HwK4 {
+  font-size: 16px; }
+
+.partnereventassociatedbuild_BuildUnlinked_1cg3t {
+  color: yellow; }
+
+.partnereventassociatedbuild_BuildLinkedBranch_2ssXJ,
+.partnereventassociatedbuild_BuildLinkedDefault_fHJYY {
+  color: white; }
+
 .partnereventsalesorttiers_SortTierControls_1_f_6 {
   display: flex;
   flex-direction: column;

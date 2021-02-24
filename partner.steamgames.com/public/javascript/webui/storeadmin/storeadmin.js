@@ -3396,6 +3396,7 @@
               (r.gidfeature2 = t.gidfeature2),
               (r.featured_app_tagid = t.featured_app_tagid),
               (r.vecTags = new Array()),
+              (r.creator_steamid = t.creator_steamid),
               (r.last_update_steamid = t.last_update_steamid),
               (r.rtime32_last_modified = t.rtime32_last_modified),
               (r.rtime32_moderator_reviewed = t.rtime_mod_reviewed),
@@ -3403,6 +3404,8 @@
               (r.video_preview_id = t.video_preview_id),
               (r.has_live_stream = t.has_live_stream),
               (r.live_stream_viewer_count = t.live_stream_viewer_count),
+              (r.build_id = t.build_id),
+              (r.build_branch = t.build_branch),
               t.announcement_body
                 ? ((n = t.announcement_body),
                   (r.AnnouncementGID = n.gid),
@@ -3454,62 +3457,62 @@
             }
             if (
               ((r.jsondata.localized_capsule_image = Object(c.g)(
-                r.jsondata.localized_capsule_image,
+                r.jsondata.localized_capsule_image || [],
                 30,
                 null
               )),
               (r.jsondata.localized_title_image = Object(c.g)(
-                r.jsondata.localized_title_image,
+                r.jsondata.localized_title_image || [],
                 30,
                 null
               )),
               (r.jsondata.localized_spotlight_image = Object(c.g)(
-                r.jsondata.localized_spotlight_image,
+                r.jsondata.localized_spotlight_image || [],
                 30,
                 null
               )),
               (r.jsondata.localized_subtitle = Object(c.g)(
-                r.jsondata.localized_subtitle,
+                r.jsondata.localized_subtitle || [],
                 30,
                 null
               )),
               (r.jsondata.localized_summary = Object(c.g)(
-                r.jsondata.localized_summary,
+                r.jsondata.localized_summary || [],
                 30,
                 null
               )),
               (r.jsondata.localized_broadcast_title = Object(c.g)(
-                r.jsondata.localized_broadcast_title,
+                r.jsondata.localized_broadcast_title || [],
                 30,
                 null
               )),
               (r.jsondata.localized_broadcast_left_image = Object(c.g)(
-                r.jsondata.localized_broadcast_left_image,
+                r.jsondata.localized_broadcast_left_image || [],
                 30,
                 null
               )),
               (r.jsondata.localized_broadcast_right_image = Object(c.g)(
-                r.jsondata.localized_broadcast_right_image,
+                r.jsondata.localized_broadcast_right_image || [],
                 30,
                 null
               )),
               (r.jsondata.localized_sale_header = Object(c.g)(
-                r.jsondata.localized_sale_header,
+                r.jsondata.localized_sale_header || [],
                 30,
                 null
               )),
               (r.jsondata.localized_sale_overlay = Object(c.g)(
-                r.jsondata.localized_sale_overlay,
+                r.jsondata.localized_sale_overlay || [],
                 30,
                 null
               )),
               (r.jsondata.localized_sale_product_banner = Object(c.g)(
-                r.jsondata.localized_sale_product_banner,
+                r.jsondata.localized_sale_product_banner || [],
                 30,
                 null
               )),
               (r.jsondata.localized_sale_product_mobile_banner = Object(c.g)(
-                r.jsondata.localized_sale_product_mobile_banner,
+                r.jsondata.localized_sale_product_mobile_banner || [],
                 30,
                 null
               )),
@@ -7394,7 +7397,7 @@
       De = Object(r.a)(function (e) {
         var t = q.a.GetWithFallback(e.link.localized_link_capsule, e.language);
         return B.a.createElement(
-          $.g,
+          $.f,
           {
             url: e.link.url,
             className: e.strClassName ? e.strClassName : void 0,
@@ -8759,6 +8762,7 @@
             (n.gidfeature = this.gidfeature),
             (n.gidfeature2 = this.gidfeature2),
             (n.featured_app_tagid = this.featured_app_tagid),
+            (n.creator_steamid = this.creator_steamid),
             (n.last_update_steamid = this.last_update_steamid),
             (n.rtime32_last_modified = this.rtime32_last_modified),
             (n.rtime32_last_solr_search_col_updated = this.rtime32_last_solr_search_col_updated),
@@ -9275,12 +9279,18 @@
           );
         }),
         (i.prototype.GetBroadcastChatVisibility = function () {
-          return this.jsondata.broadcastChatSetting;
+          return this.jsondata.broadcastChatSetting || "hide";
         }),
         (i.prototype.GetBroadcastTitle = function (e) {
+          var t;
           return (
             _.a.GetWithFallback(this.jsondata.localized_broadcast_title, e) ||
-            Object(_.f)(this.jsondata.default_broadcast_title)
+            Object(_.f)(
+              null !== (t = this.jsondata.default_broadcast_title) &&
+                void 0 !== t
+                ? t
+                : "#Broadcast_default_title_dev"
+            )
           );
         }),
         (i.prototype.GetBroadcastWhitelist = function () {
@@ -9492,6 +9502,8 @@
         Object(a.c)([r.C], i.prototype, "endTime", void 0),
         Object(a.c)([r.C], i.prototype, "visibilityStartTime", void 0),
         Object(a.c)([r.C], i.prototype, "visibilityEndTime", void 0),
+        Object(a.c)([r.C], i.prototype, "build_id", void 0),
+        Object(a.c)([r.C], i.prototype, "build_branch", void 0),
         Object(a.c)([r.C], i.prototype, "postTime", void 0),
         Object(a.c)([r.C], i.prototype, "visibility_state", void 0),
         Object(a.c)([r.C], i.prototype, "broadcaster", void 0),
@@ -13613,8 +13625,8 @@
           o),
         Object(c.a)(o) && (t = "noopener nofollow");
       var i =
-        "string" == typeof e.children && 0 < e.children.length && o
-          ? Object(k.c)(o)
+        "string" == typeof e.children && 0 < e.children.length && n
+          ? Object(k.c)(n)
           : void 0;
       return h.createElement(
         "a",
@@ -28063,14 +28075,16 @@
                             return Object(D.e)(this, function (e) {
                               switch (e.label) {
                                 case 0:
-                                  return e.trys.push([0, , 2, 3]), [4, a];
+                                  return e.trys.push([0, 2, 3, 4]), [4, a];
                                 case 1:
-                                  return e.sent(), [3, 3];
+                                  return e.sent(), [3, 4];
                                 case 2:
+                                  return e.sent(), [3, 4];
+                                case 3:
                                   return (
                                     this.m_mapPromisesByFlavor.delete(n), [7]
                                   );
-                                case 3:
+                                case 4:
                                   return [2];
                               }
                             });
@@ -28626,9 +28640,18 @@
         return (
           Object(a.d)(t, e),
           (t.prototype.render = function () {
-            if (0 == this.props.event.jsondata.referenced_appids.length)
+            var e, t;
+            if (
+              null ===
+                (t =
+                  null === (e = this.props.event.jsondata) || void 0 === e
+                    ? void 0
+                    : e.referenced_appids) ||
+              void 0 === t ||
+              !t.length
+            )
               return null;
-            var e = this.props.event.jsondata.referenced_appids
+            var n = this.props.event.jsondata.referenced_appids
                 .filter(function (e) {
                   return i.a.GetAppInfo(e) && i.a.GetAppInfo(e).name;
                 })
@@ -28644,15 +28667,15 @@
                   );
                 })
                 .join(Object(d.f)("#EventDisplay_ReferencedApps_Joiner")),
-              t = Object(d.l)(
+              a = Object(d.l)(
                 "#EventDisplay_ReferencedApps",
                 this.props.event.jsondata.referenced_appids.length,
-                e
+                n
               );
             return o.createElement(
               "div",
               { className: c.a.ReferencedApps },
-              o.createElement(l.b, { text: t })
+              o.createElement(l.b, { text: a })
             );
           }),
           (t = Object(a.c)([r.a], t))
@@ -55368,6 +55391,17 @@
               ? this.m_model.pageid
               : "";
           }),
+          (t.prototype.BRequiresRemotePlayTogether = function () {
+            return (
+              this.m_model.required_app_features.remote_play_together || !1
+            );
+          }),
+          (t.prototype.SetRequiresRemotePlayTogether = function (e) {
+            e !==
+              (this.m_model.required_app_features.remote_play_together || !1) &&
+              ((this.m_model.required_app_features.remote_play_together = e),
+              this.SetDirty(!0));
+          }),
           (t.prototype.GetCurEventTitle = function () {
             return this.GetEventTitle(this.m_editLang);
           }),
@@ -55451,11 +55485,7 @@
               this.SetDirty(!0));
           }),
           (t.prototype.GetCooldownGroupType = function () {
-            return (
-              (this.m_model.cooldown_group &&
-                this.m_model.cooldown_group.group_id) ||
-              0
-            );
+            return this.m_model.cooldown_group.group_id || 0;
           }),
           (t.prototype.SetCooldownGroupType = function (e) {
             (this.m_model.cooldown_group &&
@@ -55466,10 +55496,7 @@
               this.SetDirty(!0));
           }),
           (t.prototype.GetCooldownRequired = function () {
-            return (
-              this.m_model.cooldown_group &&
-              this.m_model.cooldown_group.cooldown_required
-            );
+            return this.m_model.cooldown_group.cooldown_required || !1;
           }),
           (t.prototype.SetCooldownRequired = function (e) {
             (this.m_model.cooldown_group &&
@@ -55480,11 +55507,7 @@
               this.SetDirty(!0));
           }),
           (t.prototype.GetCooldownDays = function () {
-            return (
-              (this.m_model.cooldown_group &&
-                this.m_model.cooldown_group.cooldown_time) ||
-              0
-            );
+            return this.m_model.cooldown_group.cooldown_time || 0;
           }),
           (t.prototype.SetCooldownDays = function (e) {
             e !== this.m_model.cooldown_group.cooldown_time &&
@@ -55973,7 +55996,10 @@
                   (this.m_model.help_text = {}),
                 (this.m_model.event_title &&
                   !Array.isArray(this.m_model.event_title)) ||
-                  (this.m_model.event_title = {})),
+                  (this.m_model.event_title = {}),
+                (this.m_model.required_app_features &&
+                  !Array.isArray(this.m_model.required_app_features)) ||
+                  (this.m_model.required_app_features = {})),
               this.m_model &&
                 !this.m_model.event_start_date &&
                 ((n = new Date()).setHours(10),
@@ -56229,6 +56255,13 @@
           Object(B.c)([w.C], t.prototype, "rgInProgressStats", void 0),
           Object(B.c)([w.C], t.prototype, "rgActiveStats", void 0),
           Object(B.c)([w.C], t.prototype, "m_dynamicSections", void 0),
+          Object(B.c)([a.a], t.prototype, "BRequiresRemotePlayTogether", null),
+          Object(B.c)(
+            [w.k.bound],
+            t.prototype,
+            "SetRequiresRemotePlayTogether",
+            null
+          ),
           Object(B.c)([a.a], t.prototype, "GetCurEventTitle", null),
           Object(B.c)([a.a], t.prototype, "GetEventTitle", null),
           Object(B.c)([a.a], t.prototype, "SetCurEventTitle", null),
@@ -58194,6 +58227,20 @@
                   bShowTimeZone: !0,
                 })
               )
+          ),
+          A.a.createElement(
+            "div",
+            { className: ct.a.Section },
+            A.a.createElement(
+              "h3",
+              null,
+              "RESTRICT ELIGIBILITY BY APP FEATURES"
+            ),
+            A.a.createElement(J.e, {
+              label: "Remote Play Together",
+              checked: t.BRequiresRemotePlayTogether(),
+              onChange: t.SetRequiresRemotePlayTogether,
+            })
           )
         );
       }),
@@ -60083,7 +60130,7 @@
                 c = [];
                 for (var p = 0, m = v.tabs; p < m.length; p++) {
                   var h = m[p];
-                  c.push({ id: h.unique_id, label: Object(Ln.e)(h, i) }),
+                  c.push({ id: h.unique_id, label: Object(Ln.d)(h, i) }),
                     (null !== (a = h.capsules) &&
                       void 0 !== a &&
                       a.length &&
@@ -60105,7 +60152,7 @@
                   (v.smart_section && v.enable_faceted_browsing && (b = !0), !b)
                 )
                   continue;
-                var y = Object(Ln.c)(v, i, 0, !0);
+                var y = Object(Ln.b)(v, i, 0, !0);
                 if (null === c)
                   s.push(
                     A.a.createElement(Fn, { key: y, section: y, tab: "" })
@@ -62894,10 +62941,7 @@
           : [He.e.k_ESteamRealmGlobal],
         E = qa(u, p),
         O =
-          L.c.COMMUNITY_BASE_URL +
-          "games/" +
-          n.appId +
-          "/partnerevents/create/";
+          L.c.COMMUNITY_BASE_URL + "ogg/" + n.appId + "/partnerevents/create/";
       return A.a.createElement(
         te.a,
         null,
@@ -62910,7 +62954,7 @@
             Object(q.f)(
               "#BuildNotes_Title",
               Ja.Get().GetPostedBuildVersion(),
-              "default"
+              Ja.Get().GetBuildBranch() || "default"
             )
           ),
           A.a.createElement(
@@ -63048,6 +63092,14 @@
                                           "descriptions",
                                           JSON.stringify(l)
                                         ),
+                                        n.append(
+                                          "build_id",
+                                          "" + Ja.Get().GetPostedBuildVersion()
+                                        ),
+                                        n.append(
+                                          "build_branch",
+                                          Ja.Get().GetBuildBranch()
+                                        ),
                                         (a =
                                           L.c.PARTNER_BASE_URL +
                                           "partnerevents/ajaxpublishpatchnotes"),
@@ -63118,12 +63170,15 @@
                               var e = new URLSearchParams(
                                 window.location.search
                               );
-                              e.delete("submittedbuild");
-                              var t =
-                                window.location.origin +
-                                window.location.pathname +
-                                e.toString();
-                              window.history.replaceState({}, "", t);
+                              e.delete("submittedbuild"),
+                                e.delete("buildbranch");
+                              var t = e.toString(),
+                                n =
+                                  window.location.origin +
+                                  window.location.pathname +
+                                  (t ? "?" + t : "") +
+                                  window.location.hash;
+                              window.history.replaceState({}, "", n);
                             })(),
                             f("submitted"))
                           : f("failed"),
@@ -63152,7 +63207,14 @@
             var e = Object(L.g)("build_notes", "application_config");
             (this.m_nBuildVersion =
               (null == e ? void 0 : e.build_version) || 0),
-              (this.m_bSteamChina = (null == e ? void 0 : e.steam_china) || !1);
+              (this.m_bSteamChina = (null == e ? void 0 : e.steam_china) || !1),
+              (this.m_strBuildBranch =
+                (null == e ? void 0 : e.build_branch) || ""),
+              (this.m_strBuildBranch = this.m_strBuildBranch
+                .trim()
+                .toLocaleLowerCase()),
+              "default" === this.m_strBuildBranch &&
+                (this.m_strBuildBranch = "");
           }),
           (e.prototype.GetPostedBuildVersion = function () {
             return this.m_nBuildVersion;
@@ -63162,6 +63224,9 @@
           }),
           (e.prototype.BCanSubmitSteamChinaPatchNotes = function () {
             return this.m_bSteamChina;
+          }),
+          (e.prototype.GetBuildBranch = function () {
+            return this.m_strBuildBranch;
           }),
           e
         );
@@ -71127,26 +71192,23 @@
   },
   uEub: function (e, t, n) {
     "use strict";
-    n.d(t, "f", function () {
+    n.d(t, "e", function () {
       return Sr;
     }),
       n.d(t, "a", function () {
         return Dr;
       }),
-      n.d(t, "b", function () {
-        return jr;
+      n.d(t, "f", function () {
+        return Lr;
       }),
-      n.d(t, "g", function () {
+      n.d(t, "d", function () {
         return kr;
       }),
-      n.d(t, "e", function () {
+      n.d(t, "b", function () {
         return Mr;
       }),
       n.d(t, "c", function () {
-        return Nr;
-      }),
-      n.d(t, "d", function () {
-        return Gr;
+        return Rr;
       });
     var V = n("mrSG"),
       a = n("TyAF"),
@@ -77979,19 +78041,6 @@
               }
             return t;
           }),
-          (r.GenerateMetadata = function (n, e) {
-            e.forEach(function (e) {
-              e.facetValues.forEach(function (t) {
-                t.matchingCapsules = n
-                  .filter(function (e) {
-                    return jr(e.tags, t.filter);
-                  })
-                  .map(function (e) {
-                    return e.capsule;
-                  });
-              });
-            });
-          }),
           Object(V.c)([p.C], r.prototype, "m_rgFacets", void 0),
           Object(V.c)([p.C], r.prototype, "m_rgSection", void 0),
           Object(V.c)([p.C], r.prototype, "m_rgSolrFaceting", void 0),
@@ -81118,7 +81167,7 @@
         r = e.classNames,
         o = e.section,
         i = e.selected,
-        s = Mr(t, n);
+        s = kr(t, n);
       if (!s) return null;
       var c,
         l = o
@@ -81179,7 +81228,7 @@
       });
       return k.createElement(
         "div",
-        { className: Da.a.SaleSection, style: Gr(a, t) },
+        { className: Da.a.SaleSection, style: Rr(a, t) },
         k.createElement(Sr, Object(V.a)({}, e)),
         k.createElement("div", { className: Da.a.TabButtonsCtn }, c)
       );
@@ -81211,7 +81260,7 @@
                     return e.type === t.type && e.id === t.id;
                   }) &&
                     (e && (e += "; "),
-                    (e += Nr(
+                    (e += Mr(
                       o,
                       this.props.language,
                       this.props.event.clanSteamID.GetAccountID(),
@@ -81290,7 +81339,7 @@
               n = e.event;
             return k.createElement(
               "div",
-              { className: Object(F.a)(Da.a.SaleSection), style: Gr(t, n) },
+              { className: Object(F.a)(Da.a.SaleSection), style: Rr(t, n) },
               k.createElement(Sr, Object(V.a)({}, this.props)),
               k.createElement(
                 "div",
@@ -81349,7 +81398,7 @@
                     Da.a.SaleSectionTabs,
                     "SaleSectionTabs"
                   ),
-                  style: Gr(a, t),
+                  style: Rr(a, t),
                 },
                 k.createElement(
                   Cn.a,
@@ -81435,7 +81484,7 @@
               (this.m_bDefaultTab = n),
               e.capsules && 0 !== e.capsules.length
                 ? ((this.m_capsuleFilter = new Set()),
-                  Ar(e.capsules, t).forEach(function (e) {
+                  jr(e.capsules, t).forEach(function (e) {
                     a.m_capsuleFilter.add(Number(e.id));
                   }))
                 : (this.m_capsuleFilter = null));
@@ -81590,7 +81639,7 @@
                     case "broadcast":
                       l.BEventCanShowBroadcastWidget() &&
                         !h &&
-                        ((i = k.createElement(Fr, {
+                        ((i = k.createElement(Pr, {
                           broadcastEmbedContext: c.props.broadcastEmbedContext,
                           activeTab: r,
                         })),
@@ -81604,7 +81653,7 @@
                       break;
                     case "doors":
                       i = k.createElement(ya, {
-                        strFontFamily: Pr(l.jsondata.sale_font, u),
+                        strFontFamily: Gr(l.jsondata.sale_font, u),
                       });
                       break;
                     case "text_section":
@@ -81759,7 +81808,7 @@
           n = e.event,
           a = e.language,
           r = e.nHiddenCapsules,
-          o = Nr(t, a, n.clanSteamID.GetAccountID());
+          o = Mr(t, a, n.clanSteamID.GetAccountID());
         if (!o) return null;
         var i,
           s,
@@ -81776,7 +81825,7 @@
                 ((i = t),
                 (c = a),
                 {
-                  fontFamily: Pr((s = n).jsondata.sale_font, c),
+                  fontFamily: Gr((s = n).jsondata.sale_font, c),
                   fontWeight: s.jsondata.sale_font_weight,
                   fontSize: s.jsondata.sale_section_font_size,
                   textTransform: s.jsondata.sale_section_disable_capitalize
@@ -81790,11 +81839,11 @@
           d = null;
         return (
           t.label_link &&
-            ((u = k.createElement(kr, { url: t.label_link }, u)),
+            ((u = k.createElement(Lr, { url: t.label_link }, u)),
             "browseall" === t.label_link_style &&
               ((l = Object(R.f)("#Sale_SectionLink_BrowseAll")),
               (d = k.createElement(
-                kr,
+                Lr,
                 {
                   className: Object(F.a)(
                     Da.a.SectionLabelLinkButton,
@@ -81845,7 +81894,7 @@
         e.language;
         return k.createElement(
           "div",
-          { className: Da.a.SaleSection, style: Gr(t, n) },
+          { className: Da.a.SaleSection, style: Rr(t, n) },
           k.createElement(Sr, Object(V.a)({}, e)),
           k.createElement(
             "div",
@@ -81872,7 +81921,7 @@
               ee.a.SaleSectionCtn,
               "SaleSectionForCustomCSS"
             ),
-            style: Gr(t, n),
+            style: Rr(t, n),
           },
           k.createElement(Sr, Object(V.a)({}, e)),
           k.createElement(
@@ -81902,7 +81951,7 @@
               ee.a.SaleSectionCtn,
               "SaleSectionForCustomCSS"
             ),
-            style: Gr(t, n),
+            style: Rr(t, n),
           },
           k.createElement(Sr, Object(V.a)({}, e)),
           k.createElement(
@@ -81982,7 +82031,7 @@
               ee.a.SaleSectionCtn,
               "SaleSectionForCustomCSS"
             ),
-            style: Gr(t, n),
+            style: Rr(t, n),
           },
           k.createElement(Sr, Object(V.a)({}, e)),
           k.createElement(
@@ -82692,7 +82741,7 @@
                     case 4:
                       return (
                         d &&
-                          (l = Ar(
+                          (l = jr(
                             (l = l.filter(function (e) {
                               return s.ShouldShowCapsule(e);
                             })),
@@ -82705,7 +82754,7 @@
                             p.SetSection(n)),
                           (h = Xn.GetReferencedCapsules(n.facets)),
                           (h = n.smart_section
-                            ? Ar(
+                            ? jr(
                                 (h = h.filter(function (e) {
                                   return s.ShouldShowCapsule(e);
                                 })),
@@ -82733,13 +82782,13 @@
                           p.SortFacetValues(g, this.props.language, v, b)),
                         (y = !1),
                         (S = this.GetRowsToShow(U)),
-                        (E = Rr(n, S)),
+                        (E = Nr(n, S)),
                         (O = l.length),
                         (C = !i && "store" === Object(Y.f)()),
                         (w = (0 < S && C) || !d),
                         !n.show_as_carousel &&
                           w &&
-                          (I = Rr(n, S) + 4) + 4 < O &&
+                          (I = Nr(n, S) + 4) + 4 < O &&
                           ((O = I), (y = !0)),
                         0 < (L = Object(H.m)(n)) &&
                           ((D = Math.max(L + 5, Math.floor(1.1 * L))),
@@ -82953,7 +83002,7 @@
               p = r.nMaxCapsulesPerRow,
               m = r.bAwaitingShowContentLoading,
               h = this.GetSectionForSession(),
-              f = Gr(h, t).background,
+              f = Rr(h, t).background,
               _ = null;
             if (o) {
               var g = Ua({
@@ -83037,7 +83086,7 @@
                     ee.a.SaleSectionCtn,
                     "SaleSectionForCustomCSS"
                   ),
-                  style: Gr(h, t),
+                  style: Rr(h, t),
                 },
                 k.createElement(
                   "div",
@@ -83081,7 +83130,7 @@
               "div",
               { className: Da.a.SaleViewAll },
               k.createElement(
-                kr,
+                Lr,
                 { url: t.label_link },
                 Object(R.f)("#btn_live_streams_all")
               )
@@ -83089,36 +83138,17 @@
           : null;
       };
     function jr(e, t) {
-      if (t && t.clauses) {
-        var n = new Set();
-        e.forEach(function (e) {
-          return n.add(e.toLocaleLowerCase());
-        });
-        for (var a = 0, r = t.clauses; a < r.length; a++) {
-          var o = r[a];
-          if (o.or_tags) {
-            for (var i = !1, s = 0, c = 0, l = o.or_tags; c < l.length; c++) {
-              var u = l[c];
-              if (u && (s++, (i = n.has(u.toLocaleLowerCase())))) break;
-            }
-            if (0 !== s) if (!("Must have" === o.type ? i : !i)) return !1;
-          }
-        }
-      }
-      return !0;
-    }
-    function Ar(e, t) {
       return e.filter(function (e) {
         return null == e.visibility_index || e.visibility_index == t;
       });
     }
-    var Lr = function (e) {
+    var Ar = function (e) {
         var t = e.text,
           n = e.url,
           a = e.color,
           r = e.bgcolor;
         return k.createElement(
-          kr,
+          Lr,
           {
             url: n,
             className: B.a.BrowseMoreButton,
@@ -83127,7 +83157,7 @@
           t || Object(R.f)("#Sale_BrowseMore_Text_Default")
         );
       },
-      kr = function (e) {
+      Lr = function (e) {
         var t = Object(re.c)(),
           n = Object(le.a)(e.url, Y.c.STORE_BASE_URL);
         if (n) {
@@ -83145,7 +83175,7 @@
         }
         return k.createElement(k.Fragment, null, e.children);
       };
-    function Mr(e, t) {
+    function kr(e, t) {
       return (
         R.a.GetWithFallback(e.localized_label, t) ||
         ("#Sale_default_label" === e.default_label
@@ -83153,7 +83183,7 @@
           : Object(R.f)(e.default_label))
       );
     }
-    function Nr(e, t, n, a) {
+    function Mr(e, t, n, a) {
       var r = (function (e) {
         if ("items" === e.section_type)
           switch (e.smart_section_type) {
@@ -83188,11 +83218,11 @@
       var s = Y.c.MEDIA_CDN_COMMUNITY_URL + "images/clans/" + n + "/" + i;
       return k.createElement("img", { loading: "lazy", src: s, alt: o });
     }
-    function Rr(e, t) {
+    function Nr(e, t) {
       for (var n = Ra(e), a = 0, r = 0; r < t; r++) a += n[r % n.length];
       return a;
     }
-    function Gr(e, t) {
+    function Rr(e, t) {
       if (e.disable_background) return { paddingLeft: 0, paddingRight: 0 };
       var n = "";
       return (
@@ -83215,24 +83245,27 @@
         }
       );
     }
-    function Pr(e, t) {
-      return 12 === t
-        ? e.replace("Jolly Lodger", "New Rocker")
-        : 23 === t || 19 === t || 24 === t || 18 === t || 8 === t || 26 === t
-        ? e.replace("Sigmar One", "Play")
-        : 6 === t
-        ? e.replace("Sigmar One", "Noto Serif SC")
-        : 7 === t
-        ? e.replace("Sigmar One", "Noto Serif TC")
-        : 10 === t
-        ? e.replace("Sigmar One", "M PLUS Rounded 1c")
-        : 4 === t
-        ? e.replace("Sigmar One", "Black Han Sans")
-        : 9 === t
-        ? e.replace("Sigmar One", "Prompt")
-        : e;
+    function Gr(e, t) {
+      return (
+        (e = e || ""),
+        12 === t
+          ? e.replace("Jolly Lodger", "New Rocker")
+          : 23 === t || 19 === t || 24 === t || 18 === t || 8 === t || 26 === t
+          ? e.replace("Sigmar One", "Play")
+          : 6 === t
+          ? e.replace("Sigmar One", "Noto Serif SC")
+          : 7 === t
+          ? e.replace("Sigmar One", "Noto Serif TC")
+          : 10 === t
+          ? e.replace("Sigmar One", "M PLUS Rounded 1c")
+          : 4 === t
+          ? e.replace("Sigmar One", "Black Han Sans")
+          : 9 === t
+          ? e.replace("Sigmar One", "Prompt")
+          : e
+      );
     }
-    var Fr = (function (t) {
+    var Pr = (function (t) {
       function e() {
         var e = (null !== t && t.apply(this, arguments)) || this;
         return (e.state = {}), e;

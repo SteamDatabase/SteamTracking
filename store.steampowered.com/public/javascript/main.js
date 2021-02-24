@@ -573,6 +573,35 @@ function AddToWishlist( appid, divToHide, divToShowSuccess, divToShowError, navr
 		});
 }
 
+function RemoveFromWishlist( appid, divToHide, divToShowSuccess, divToShowError, navref, divToHide2 )
+{
+	var url = 'https://store.steampowered.com/api/removefromwishlist';
+	if ( navref )
+	{
+		MakeNavCookie( navref, url );
+	}
+
+	$J.post( url, {sessionid: g_sessionID, appid: appid} )
+		.done( function( data ) {
+			$JFromIDOrElement(divToHide).hide();
+
+			if ( divToHide2 )
+				$JFromIDOrElement(divToHide2).hide();
+
+			if ( data && data.success ) {
+				$JFromIDOrElement(divToShowSuccess).show();
+			}
+			else {
+				$JFromIDOrElement(divToShowError).show();
+			}
+
+			if ( typeof GDynamicStore != 'undefined' )
+				GDynamicStore.InvalidateCache();
+		}).fail( function() {
+			$JFromIDOrElement(divToShowError).show();
+		});
+}
+
 function AddToWishlistButton( button, appid, navref )
 {
 	var url = 'https://store.steampowered.com/api/addtowishlist';

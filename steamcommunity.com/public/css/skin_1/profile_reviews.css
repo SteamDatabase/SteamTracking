@@ -56,13 +56,16 @@ background: -webkit-linear-gradient( 30deg, rgba(97,100,101,0.3) 5%,rgba(226,244
 .review_box .header .review_award_ctn {
 	margin-left: 10px;
 	display: flex;
+	flex-wrap: wrap;
 }
 .review_box .header .review_award {
 	background-color: rgba(0, 0, 0, 0.2);
 	border-radius: 5px;
-	padding: 5px;
+	padding: 0px 2px 0px 2px;
 	margin: 0 2px;
 	cursor: pointer;
+	line-height: 30px;
+	height: 30px;
 }
 .review_box .header .review_award:hover {
 	background-color: rgba(255, 255, 255, 0.2);

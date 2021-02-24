@@ -82,8 +82,8 @@ function InitQueueControls( store_appid, steamworks_appid, next_in_queue_appid, 
 	var $IgnoreBtn = $J('.queue_control_button.queue_btn_ignore .queue_btn_inactive');
 	var $UnIgnoreBtn = $J('.queue_control_button.queue_btn_ignore .queue_btn_active');
 
-	var $IgnoreMenuBtn = $J('.queue_control_button.queue_btn_ignore_menu .queue_ignore_menu_arrow');
-	var $IgnoreMenu = $J('.queue_control_button.queue_btn_ignore_menu');
+	var $IgnoreMenuBtn = $J('#queue_ignore_menu_arrow');
+	var $IgnoreMenu = $J('#queue_btn_ignore_menu');
 	var $IgnoreMenuOption_NotInterested = $J('#queue_ignore_menu_option_not_interested' );
 	var $IgnoreMenuOption_OwnedElsewhere = $J('#queue_ignore_menu_option_owned_elsewhere' );
 

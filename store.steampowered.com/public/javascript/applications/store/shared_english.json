@@ -167,6 +167,8 @@
     "EventCalendar_WatchYouTubeVideo": "Watch YouTube Video",
     "EventCalendar_WatchLiveBroadcast": "Watch Live Broadcast",
     "EventModTile_Moderator": "Moderator: %1$s",
+    "EventModTile_EventCreator": "Original Poster: %1$s",
+    "EventModTile_EventLastUpdator": "Last Updater: %1$s",
     "EventModTile_Action_Reviewed": "%1$s %2$s marked reviewed",
     "EventModTile_Action_ReReviewed": "%1$s %2$s marked Re-Reviewed",
     "EventModTile_Action_UnReviewed": "%1$s %2$s cleared reviewed flag",

@@ -123,6 +123,21 @@ select {
 	background-color: rgba(255, 255, 255, 0.2);
 }
 
+/* hide some awards */
+.review_award_ctn > .review_award:nth-child(n+4) {
+	display: none;
+}
+.review_award_ctn > .review_award.more_btn {
+	display: inline-block;
+}
+/* unless force shown */
+.review_award_ctn.show_all_awards > .review_award {
+	display: inline-block;
+}
+.review_award_ctn.show_all_awards > .review_award.more_btn {
+	display: none;
+}
+
 .ratingSummary {
 	font-size: 16px;
 	color: #D6D7D8;
