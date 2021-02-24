@@ -219,5 +219,13 @@
                 "crc128"                "26eef08a000000000000000000000000"
                 "bootloadertimestamp"   "6026E73F"
         }
+        "1"
+        {
+                "firmwarebinary"        "/firmware/firmware_4612_60359657.bin"
+                "firmwaretimestamp"     "60359657"
+                "minclientpackage"      ""
+                "crc128"                "f114f160000000000000000000000000"
+                "bootloadertimestamp"   "60359657"
+        }
     }
 }
