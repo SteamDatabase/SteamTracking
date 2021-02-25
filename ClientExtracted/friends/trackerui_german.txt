@@ -57,30 +57,30 @@
 "Friends_InShortcut"		"In Steam-fremdem Spiel"
 "Friends_Blocked"		"Geblockt"
 
-"Friends_AddFriend"		"Freund hinzufügen..."
-"Friends_Edit_Profile"	"Profil bearbeiten..."
+"Friends_AddFriend"		"Freund hinzufügen …"
+"Friends_Edit_Profile"	"Profil bearbeiten …"
 
 "Friends_FriendList_CurrentGame"	"AKTUELLES SPIEL"
 "Friends_FriendList_InGame"		"IM SPIEL"
 "Friends_FriendList_Online"		"ONLINE"
 "Friends_FriendList_Offline"		"OFFLINE"
 
-"Friends_SendInstantMessage"		"Nachricht senden..."
-"Friends_Ignore"			"Kommunikation blockieren..."
+"Friends_SendInstantMessage"		"Nachricht senden …"
+"Friends_Ignore"			"Kommunikation blockieren …"
 "Friends_UnIgnore"			"Entblocken"
 "Friends_InviteFriendToGame"		"Zu Spiel einladen"
 "Friends_JoinGame"				"Spiel betreten"
 "Friends_LaunchGame"				"Spiel starten"
 "Friends_ViewGameInfo"			"Spielinfo ansehen"
 "Friends_UserDetails"				"Benutzerdetails ansehen"
-"Friends_RemoveUser"				"Freund entfernen..."
+"Friends_RemoveUser"				"Freund entfernen …"
 
 "Friends_RemoveFriend_Title"			"Freunde - Benutzer entfernen"
-"Friends_RemoveFriend_Info"				"Möchten Sie %friend% wirklich aus Ihrer Freundesliste entfernen?\n\n(Sie können die Person später über \"Freund hinzufügen...\" wieder hinzufügen.)\n"
+"Friends_RemoveFriend_Info"				"Möchten Sie %friend% wirklich aus Ihrer Freundesliste entfernen?\n\n(Sie können die Person später über „Freund hinzufügen …“ wieder hinzufügen.)\n"
 "Friends_RemoveFriend_Button"			"%friend% entfernen"
 
 "Friends_HideFriend_Title"				"Freunde - Benutzer ignorieren"
-"Friends_HideFriend_Info"				"Sind Sie sicher, dass Sie %friend% ignorieren und von der Liste der vorgeschlagenen Freunde löschen möchten?\n\n(Sie können die Person später mithilfe der Schaltfläche 'Freund hinzufügen...' wieder hinzufügen.)\n"
+"Friends_HideFriend_Info"				"Möchten Sie %friend% wirklich ignorieren und von der Liste der vorgeschlagenen Freunde entfernen?\n\n(Sie können die Person später mithilfe der Schaltfläche „Freund hinzufügen …“ wieder hinzufügen.)\n"
 "Friends_HideFriend_Button"				"%friend% ignorieren"
 "Friends_HideFriend_Failed"				"%friend% konnte nicht ignoriert werden"
 
@@ -93,7 +93,7 @@
 
 
 "Friends_EnterAccountNameOrEmailAddress"	"Geben Sie den Steam-Accountnamen ODER die E-Mail-Adresse der Person ein, die der Freundesliste hinzugefügt werden soll."
-"Friends_SearchingForFriend"				"Suche nach: %search%..."
+"Friends_SearchingForFriend"				"Suche nach: %search% …"
 "Friends_FriendHasBeenAddedToYourListUnderName" "%search% wurde unter dem Namen '%friend%' zur Freundesliste hinzugefügt."
 "Friends_FriendHasBeenAddedToYourList"		"%friend% wurde Ihrer Freundesliste hinzugefügt."
 "Friends_UnableToFindFriendByThatName"		"%search% nicht gefunden.  Klicken Sie auf 'Zurück', wenn Sie eine neue Suche ausführen möchten."
@@ -103,10 +103,10 @@
 "Friends_ConnectedButOffline"					"Sie werden Ihren Freunden derzeit als offline angezeigt."
 "Friends_NoFriendsInList"						"Sie haben Ihrer Liste noch niemanden hinzugefügt."
 "Friends_GoOnline"							"Anmelden"
-"Friends_SignIn_RefreshPassword"				"Anmeldung..."
-"Friends_SignIn_ActivateFriends"				"Zu Freunden einklinken (Beta)"
-"Friends_ConnectingToFriendsNetwork"			"Verbindung zum Freundenetzwerk..."
-"Friends_ScanningForFriends"					"Herunterladen der Freundesliste..."
+"Friends_SignIn_RefreshPassword"				"Anmeldung …"
+"Friends_SignIn_ActivateFriends"				"An Freunde-Beta teilnehmen …"
+"Friends_ConnectingToFriendsNetwork"			"Verbindung zum Freunde-Netzwerk …"
+"Friends_ScanningForFriends"					"Freundesliste wird heruntergeladen …"
 
 "Friends_NotConnectedToFriendsNetwork"		"Keine Verbindung zum Freundenetzwerk möglich. Steam versucht so lange eine Verbindung aufzubauen, bis der Dienst verfügbar ist."
 "Friends_NotConnectedToFriendsNetwork_InvalidPassword"	"Steam-Anmeldung erforderlich, um 'Freunde' zu nutzen."
@@ -154,7 +154,7 @@
 "Friends_BetaHomePage"				"Die Informationswebsite 'Freunde (Beta)'"
 
 "Friends_PleaseSetFriendsName"		"Der Name Ihres Freundes wurde nicht festgelegt."
-"Friends_SetFriendsName"				"Profilnamen ändern..."
+"Friends_SetFriendsName"				"Profilnamen ändern …"
 
 "Friends_TargetBlocked"				"Die Profileinstellungen des Benutzers verhindern momentan eine Kontaktaufnahme."
 "Friends_TargetIgnored"				"%search% ignoriert Sie."
@@ -162,15 +162,15 @@
 "Friends_TargetHasTooManyFriends"		"Die Freundesliste von %search% ist voll."
 "Friends_DefaultAddError"	 			"%search% konnte nicht zu Ihrer Freundesliste hinzugefügt werden."
 "Friends_UnableToFindFriendByThatNameInvitePrompt"		"Es wurde kein Steam-Nutzer mit der E-Mail-Adresse %search% gefunden.\n\nWenn Sie %search% zur Registrierung bei Steam einladen und zu Ihrer Freundesliste hinzufügen möchten, klicken Sie auf \"Weiter\" oder auf \"Zurück\", um nochmals zu suchen."
-"Friends_InvitingFriend"				"Einladung an %search% senden..."
+"Friends_InvitingFriend"				"%search% wird eine Anfrage gesendet …"
 "Friends_InvitationPending"			"%search% wurde eingeladen, sich bei Steam zu registrieren. Sobald eine Antwort eingetroffen ist, wird er/sie zu Ihrer Freundesliste hinzugefügt."
 "Friends_InvitationSent"				"Sie haben %search% eine E-Mail-Einladung gesendet. Sobald eine Antwort eingetroffen ist, wird er/sie zu Ihrer Freundesliste hinzugefügt."
 "Friends_DefaultInviteError"			"Beim Senden einer Einladung an %search% ist ein Fehler aufgetreten." 
 "Friends_TooManyPendingInvitations"   "Sie haben in letzter Zeit zu viele Einladungen verschickt.  Versuchen Sie, %search% morgen oder übermorgen einzuladen."
-"Friends_InvitationBlocking"		"Sie blockieren jegliche Kommunikation mit diesem Benutzer. Die Kommunikation ist erst möglich, wenn Sie die Blockierung aufgehoben haben. Besuchen Sie hierfür die Steam-Communityseite des Benutzers."
+"Friends_InvitationBlocking"		"Sie blockieren jegliche Kommunikation mit diesem Nutzer. Die Kommunikation ist erst möglich, wenn Sie die Blockierung aufgehoben haben. Besuchen Sie hierfür das Steam-Communityprofil des Nutzers."
 
 "Friends_DontGiveOutPassword"			"Halten Sie Ihr Passwort geheim.\n"
-"Friends_DontGiveOutPassword_URL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=301"
+"Friends_DontGiveOutPassword_URL"		"https://support.steampowered.com/kb/1266-OAFV-8478/"
 
 "Friends_ChatFilterBlockWarning"		"Zu Ihrer Sicherheit wurde aus der folgenden Nachricht ein Link entfernt."
 
@@ -202,7 +202,7 @@
 "Friends_menu_view_showsteamids"		"Account-IDs anzeigen"
 "Friends_menu_view_sortbyname"			"Nach Name sortieren"
 "Friends_menu_view_onlineonly"			"Nur Online-Benutzer anzeigen"
-"Friends_menu_view_settings"			"Einstellungen..."
+"Friends_menu_view_settings"			"Einstellungen …"
 "Friends_menu_players_current"			"Spielerliste – aktuelles Spiel"
 "Friends_menu_players_recent"			"Spielerliste - kürzlich gespielte Spiele"
 
@@ -305,8 +305,8 @@
 "Friends_MsgNotification_Sender"		"%name% sagt"
 "Friends_MsgNotification_Body"		"%message%"
 
-"Friends_AddUser"				"Zu Freunden hinzufügen..."
-"Friends_HideUser"				"Benutzer ignorieren..."
+"Friends_AddUser"				"Zur Freundesliste hinzufügen …"
+"Friends_HideUser"				"Nutzer ignorieren …"
 
 "Friends_Voice_Call"				"Sprachchat beginnen"
 "Friends_Voice_EndCall"			"Sprachchat beenden"
@@ -317,7 +317,7 @@
 "Friends_Voice_AudioSettings"		"Einstellungen"
 "Friends_Voice_Answer"			"Antwort"
 "Friends_Voice_IncomingStatus"	"%friend% schlägt Sprachchat vor."
-"Friends_Voice_OutgoingStatus"	"%friend% anrufen..."
+"Friends_Voice_OutgoingStatus"	"%friend% wird angerufen …"
 "Friends_Voice_Resume"			"Fortsetzen"
 "Friends_Voice_ResumeStatusLocalHold"		"Pausiert"
 "Friends_Voice_ResumeStatusRemoteHold"	"%friend% hat diesen Sprachchat pausiert."
@@ -355,7 +355,7 @@
 "Friends_LeaveThisGroup"				"Diese Gruppe verlassen"
 
 "Friends_SteamIDLink"					"Profil anzeigen"
-"Friends_EditAlias"						"Alias bearbeiten..."
+"Friends_EditAlias"						"Alias bearbeiten …"
 "Friends_UnsetAlias"					"Zurücksetzen"
 "Friends_ViewAliases"					"Pseudonyme anzeigen"
 "Friends_NotificationOptions"			"Benachrichtigungsoptionen"
@@ -409,7 +409,7 @@
 "Friends_PlayersDialog_Title"				"Spieler"
 "Friends_CurrentPlayers_TabTitle"			"Aktuelles Spiel"
 "Friends_RecentPlayers_TabTitle"			"Vorherige Spiele"
-"Friends_AddPlayerAsFriend"				"Zur Freundesliste hinzufügen..."
+"Friends_AddPlayerAsFriend"				"Freund hinzufügen …"
 "Friends_NoRecentlyPlayedWithUsers"		"Sie haben in letzter Zeit keine Steam-Spiele mit Ihren Freunden gespielt."
 "Friends_NoCurrentlyPlayedWithUsers"		"Keine Steam-Nutzer vom Spielserver gemeldet."
 "Friends_PlayerName"						"Profilname"
@@ -481,9 +481,9 @@
 "Friends_ChatPasswordWarning_Continue"		"Ja, mein Accountpasswort senden"
 "Friends_ChatPasswordWarning_DontSend"		"Nein, nicht senden"
 
-"Friends_BlockCommunicationWarning_Title"	"Jegliche Interaktion mit %username% blockieren"
-"Friends_BlockCommunicationWarning_Info"	"Sie unterbinden hiermit jegliche Kommunikation mit %username%.\n\nDiese Maßnahme wird auch verhindern, dass Sie beide durch die Steamworks-Spielsuche im selben Spiel landen."
-"Friends_BlockCommunicationWarning_Info2"	"Sie unterbinden hiermit jegliche Kommunikation mit %username%.\n\nSie werden keine Nachrichten oder Einladungen von diesem Spieler mehr erhalten oder an diesen versenden können.\n\nSie können die Blockierung rückgängig machen, indem Sie das Steam-Profil des Spielers besuchen oder die Blockierung über Ihre Freundesliste aufheben."
+"Friends_BlockCommunicationWarning_Title"	"Kommunikation mit %username% blockieren"
+"Friends_BlockCommunicationWarning_Info"	"Sie blockieren hiermit jegliche Kommunikation mit %username%.\n\nDiese Maßnahme verhindert auch, dass Sie beide durch die Steamworks-Spielsuche im selben Spiel landen."
+"Friends_BlockCommunicationWarning_Info2"	"Sie blockieren hiermit jegliche Kommunikation mit %username%.\n\nSie werden keine Nachrichten oder Einladungen von diesem Spieler mehr erhalten oder an diesen versenden können.\n\nSie können die Blockierung rückgängig machen, indem Sie das Steam-Profil des Spielers besuchen oder die Blockierung über Ihre Freundesliste aufheben."
 "Friends_BlockCommunicationWarning_LinkInfo"	"Weitere Informationen zu Steamworks Matchmaking."
 "Friends_BlockCommunicationWarning_DontAskAgainCheck"	"Diese Meldung nicht mehr anzeigen."
 "Friends_BlockCommunicationWarning_Block"	"Spieler blockieren"
@@ -507,7 +507,7 @@
 "Friends_ChatIntro_WarningInfo" "Hinweis: Der Steam-Support wird Sie niemals nach Ihrem Accountpasswort fragen. Ignorieren Sie bitte jegliche Anfragen zu Ihrem Passwort."
 
 "Friends_Voice_MicrophoneDeviceLabel"	"Aufnahmegerät (Audio)"
-"Friends_Voice_ChangeDevice"			"Gerät ändern..."
+"Friends_Voice_ChangeDevice"			"Gerät ändern …"
 "Friends_Voice_ChangeDeviceNote"		"(dadurch wird die Sprachsteuerung von Windows geöffnet)"
 "Friends_Voice_ChangingDevice_Title"	"Steam – Ändern des Aufnahmegeräts"
 "Friends_Voice_ChangingDevice_Info"		"Die Audiosteuerung von Windows ist jetzt geöffnet. Klicken Sie auf \"OK\", wenn Sie die Einstellungen geändert haben."
@@ -556,6 +556,7 @@
 "Friends_SteamCommunity"	"Steam Community"
 "Limited_Explanation"	"Ihr Account erfüllt nicht die Voraussetzungen, um diese Funktion zu nutzen."
 "Limited_ForDetails"	"Besuchen Sie den Steam-Support, um weitere Informationen zu erhalten."
+"Limited_ForDetails_URL"	"https://help.steampowered.com/wizard/HelpWithLimitedAccount"
 
 "Friends_Chat_RoomModerated_Entry"		"Dieser Chat wurde von %member_making_change% so eingestellt, dass nur Gruppenleiter schreiben können.\n"
 "Friends_Chat_RoomUnmoderated_Entry"		"Dieser Chatraum ist für alle zugänglich und wurde von %member_making_change% so eingerichtet.\n"
@@ -587,7 +588,7 @@
 "friends_inviterequest" "Einladen"
 "friends_acceptgrouprequest" "Annehmen"
 "friends_ignoregrouprequest" "Ignorieren"
-"friends_tooltip_voicesettings" "Spracheinstellungen ansehen"
+"friends_tooltip_voicesettings" "Sprachchat-Einstellungen anzeigen"
 "Friends_ViewGameStorePage"		"Spiel im Shop anzeigen"
 "Friends_ViewGameHub"		"Zum Spiel-Hub"
 "Friends_WatchGame"			"Zuschauen"
@@ -601,7 +602,7 @@
 "friends_trade_invite_action"		"HIER KLICKEN, UM ZU HANDELN"
 
 "friends_trade_invite_sent"	"Eine Handelsanfrage wurde an %friend% geschickt"
-"friends_trade_invite_sent_waiting"	"Warte auf Antwort..."
+"friends_trade_invite_sent_waiting"	"Warten auf Antwort …"
 
 "friends_trade_generic_failure"		"Sie können nicht mit %friend% handeln."
 "friends_trade_declined"		"%friend% hat Ihre Handelsanfrage abgelehnt."
@@ -648,12 +649,12 @@
 
 "friends_voice_usedbygame"			"Mikrofon wird vom Spiel benutzt"
 
-"friends_group_tag_as"			"Markieren als..."
+"friends_group_tag_as"			"Markieren als …"
 "friends_group_edit_categories" 	"Ordnen Sie Ihren Freunden Schlagwörter zu, um sie schneller finden zu können. Gekennzeichnete Freunde werden in Gruppen in Ihrer Freundesliste angezeigt."
 "friends_group_addtag"			"SCHLAGWORT HINZUFÜGEN"
 "friends_group_edittags_title"		"%friend% - Schlagwörter"
 
-"friends_insertitem"			"Einen Gegenstand aus Ihrem Inventar anzeigen..."
+"friends_insertitem"			"Einen Gegenstand aus Ihrem Inventar anzeigen …"
 "group_enterchatroom"			"Chat betreten"
 
 "friends_giftreceived_info"		"hat Ihnen ein Geschenk gesendet"
@@ -684,9 +685,10 @@
 "Friends_BroadcastApprove_Ignore" "IGNORIEREN"
 
 "Broadcast_FirstTime_Header" "Willkommen bei Steam Broadcasting! Jetzt können Sie anderen Spielern zuschauen und Ihre eigenen Spiele über Steam übertragen."
-"Broadcast_FirstTime_PermissionHeader" "Nehmen Sie sich kurz Zeit, um Ihre Einstellungen anzupassen..."
+"Broadcast_FirstTime_PermissionHeader" "Nehmen Sie sich kurz Zeit, um Ihre Einstellungen anzupassen …"
 "Broadcast_FirstTime_DesktopOnly" "Standardmäßig kann nur Ihr Spiel gesehen werden. Ihr Desktop wird nicht übertragen."
 "Broadcast_FirstTime_FAQ" "Lesen Sie häufig gestellte Fragen zu Steam Broadcasting"
+"Broadcast_FirstTime_FAQLink" "https://support.steampowered.com/kb_article.php?ref=6730-TOAK-6497"
 "Broadcast_FirstTime_Title" "Steam Broadcasting"
 "Broadcast_FirstTime_OK" "OK"
 "Broadcast_FirstTime_Cancel" "Abbrechen"

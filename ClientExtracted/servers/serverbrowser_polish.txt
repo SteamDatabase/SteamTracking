@@ -145,7 +145,7 @@
 "VAC_ConnectionRefusedTitle"	"Połączenie odrzucone — VAC"
 "VAC_ConnectionRefusedDetail"	"Nie można połączyć się z wybranym serwerem, ponieważ ma on włączony bezpieczny tryb VAC (Valve Anti-Cheat).\n\nTo konto Steam zostało zablokowane na zabezpieczonych serwerach z powodu oszustwa."
 "VAC_ConnectionRefusedByServer"	"Serwer odrzucił twoje połączenie, ponieważ ma włączony bezpieczny tryb VAC (Valve Anti-Cheat).\n\nTo konto Steam zostało zablokowane na zabezpieczonych serwerach z powodu oszustwa."
-"VAC_BanSupportURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=370"
+"VAC_BanSupportURL"	"https://support.steampowered.com/kb/7849-RADZ-6869&l=polish/"
 "VAC_SecureServerToolTip"	"Valve Anti-Cheat — Zabezpieczony"
 "VAC_BannedFromServerToolTip"	"Nie możesz połączyć się z tym bezpiecznym serwerem"
 "VAC_Secure"	"Zabezpieczony"
@@ -160,7 +160,7 @@
 "Steam_ValidLoginRequired"	"Nie można połączyć z serwerami VAC. Aby zapoznać się z poradami dotyczącymi problemów z siecią, kliknij link poniżej."
 "VAC_ConnectionIssuesSupport_Title"	"Bezpieczne połączenie nie powiodło się"
 "VAC_ConnectionIssuesSupportSite"	"Kliknij tutaj, by odwiedzić Pomoc techniczną Steam"
-"VAC_ConnectionIssuesSupportURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=374"
+"VAC_ConnectionIssuesSupportURL"	"https://support.steampowered.com/kb/7579-RPSX-6098&l=polish/"
 "VAC_LoggedInElsewhere_Title"		"Konto wykorzystane w innym miejscu"
 "VAC_LoggedInElsewhereReason"		"To konto Steam było używane do logowania z innego komputera. Aby dalej używać Steam, należy się ponownie zalogować."
 

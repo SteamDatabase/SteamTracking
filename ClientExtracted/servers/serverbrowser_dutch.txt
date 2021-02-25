@@ -145,7 +145,7 @@
 "VAC_ConnectionRefusedTitle"	"Verbinding geweigerd - VAC"
 "VAC_ConnectionRefusedDetail"	"Je kunt geen verbinding maken met de geselecteerde server, want deze server draait in de door VAC (Valve Anti-Cheat) beveiligde modus.\n\nDit Steam-account is verbannen van beveiligde servers vanwege vals spel."
 "VAC_ConnectionRefusedByServer"	"De server heeft de verbinding geweigerd omdat deze server draait in de door VAC (Valve Anti-Cheat) beveiligde modus.\n\nDit Steam-account is verbannen van beveiligde servers vanwege vals spel."
-"VAC_BanSupportURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=370"
+"VAC_BanSupportURL"	"https://support.steampowered.com/kb/7849-RADZ-6869/"
 "VAC_SecureServerToolTip"	"Valve Anti-Cheat - beveiligd"
 "VAC_BannedFromServerToolTip"	"Je kunt geen verbinding maken met deze beveiligde server"
 "VAC_Secure"	"Beveiligd"
@@ -160,7 +160,7 @@
 "Steam_ValidLoginRequired"	"Er kan geen verbinding worden gemaakt met de VAC-servers van Steam.  Klik op de onderstaande koppeling voor het oplossen van netwerkproblemen."
 "VAC_ConnectionIssuesSupport_Title"	"Beveiligde verbinding mislukt"
 "VAC_ConnectionIssuesSupportSite"	"Klik hier om naar de ondersteuning van Steam te gaan"
-"VAC_ConnectionIssuesSupportURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=374"
+"VAC_ConnectionIssuesSupportURL"	"https://support.steampowered.com/kb/7579-RPSX-6098/"
 "VAC_LoggedInElsewhere_Title"		"Account elders in gebruik"
 "VAC_LoggedInElsewhereReason"		"Er is ergens anders ingelogd op dit Steam-account. Je moet opnieuw inloggen als je Steam wilt blijven gebruiken."
 

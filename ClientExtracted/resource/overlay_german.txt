@@ -12,13 +12,13 @@
 "Overlay_SettingsDescriptionApp"	"Steam bleibt während der Nutzung der Anwendung aktiv. Sie erhalten Nachrichten der Steam Community und können in der Anwendung auf eine Benutzeroberfläche zugreifen, über die Sie mit all Ihren Freunden in Kontakt bleiben."
 "Overlay_SettingsEnable"	"Steam Overlay im Spiel aktivieren"
 "Overlay_SettingsEnableApp"	"Aktivierung der Steam Community in Anwendungen"
-"Overlay_SettingsSCTenfootEnable"	"Das Big-Picture-Overlay verwenden, wenn eine Steam-Eingabe am Desktop benutzt wird"
+"Overlay_SettingsSCTenfootEnable"	"Big-Picture-Overlay beim Verwenden eines Steam-Eingabe-Controllers vom Desktop"
 "Overlay_SettingsHotKeyLabel"	"Overlay-Tastenkombination"
 "Overlay_SettingsScreenshotHotKeyLabel"	"Screenshot-Tastenkombination"
 "Overlay_SettingsScreenshotActionLabel" "Beim Aufnehmen eines Screenshots"
-"Overlay_SettingsEnableVRDesktopGameTheaterCheck" "Beim Start von nicht-VR-Spielen den VR-Kinomodus verwenden, während SteamVR aktiv ist"
-"Overlay_SettingsDesktopGameTheaterCheck" "Den VR-Kinomodus verwenden, während SteamVR aktiv ist"
-"Overlay_SettingsIsVRShortcut"			"In VR-Bibliothek aufnehmen"
+"Overlay_SettingsEnableVRDesktopGameTheaterCheck" "VR-Kinomodus beim Start von nicht-VR-Spielen verwenden, wenn SteamVR aktiv ist"
+"Overlay_SettingsDesktopGameTheaterCheck" "VR-Kinomodus verwenden, wenn SteamVR aktiv ist"
+"Overlay_SettingsIsVRShortcut"			"In VR-Bibliothek anzeigen"
 
 "Steam_Settings_Ingame_ShowFPS_Title"	"FPS-Anzeige im Spiel"
 "Steam_Settings_Ingame_ShowFPS_Off" "Aus"
@@ -42,7 +42,7 @@
 "Steam_Settings_Library_DisableCommunityContent_Title" "Communityinhalte deaktivieren"
 "Steam_Settings_Library_DisableCommunityContent_Desc" "Verhindert das automatische Laden von Community-Inhalten beim Anzeigen von Spieldetails."
 "Steam_Settings_Library_DisableCommunityContent_Disabled_Desc" "Aktiviert durch den Modus mit niedriger Bandbreite.\n\nVerhindert das automatische Laden von Community-Inhalten beim Anzeigen von Spieldetails."
-"Steam_Settings_Library_IconInGameList_Title" "Spielsymbole in der linken Spalte anzeigen"
+"Steam_Settings_Library_IconInGameList_Title" "Spielsymbole links anzeigen"
 
 
 "Overlay_WebBrowserTitle"	"Webbrowser im Spiel"
@@ -115,7 +115,7 @@
 "steam_menu_friends_hideoffline"	 "Nur Freunde anzeigen, die online sind"
 "steam_menu_friends_players"			 "Spieler"
 "steam_menu_friends_tools"         "Werkzeuge"
-"steam_menu_friends_add"					 "Freund hinzufügen..."
+"steam_menu_friends_add"					 "Freund hinzufügen …"
 "steam_menu_friends_settings"      "Einstellungen"
 
 "friends_searchOnline"				 "Mitglieder der Steam Community suchen"

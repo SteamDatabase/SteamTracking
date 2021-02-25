@@ -434,7 +434,7 @@ Công đoạn này nên hoàn thành dưới một phút."
 "Steam_DPIScaling_Option"				"Phóng to chữ và biểu tượng dựa trên kích thước màn hình (yêu cầu khởi động lại)"
 "Steam_LaunchSteamOnStartup_Option"		"Bật Steam khi máy tính khởi động"
 "Steam_BPMOnStartup_Option"				"Khởi động Steam trong chế độ Big Picture"
-"Steam_ShowUrlBar_Option"				"Hiện Steam URL trên thanh địa chỉ nếu có"
+"Steam_ShowUrlBar_Option"				"Hiện thanh địa chỉ web nếu có"
 "Steam_UseDirectWrite_Option"			"Bật DirectWrite để cải thiện độ mượt và co giãn của phông chữ"
 "Steam_UseH264HWAccel_Option"			"Xử lý video qua GPU, nếu hỗ trợ (cần khởi động lại)"
 
@@ -1148,7 +1148,7 @@ Công đoạn này nên hoàn thành dưới một phút."
 "Steam_SubscriptionApprovalCode" "Sự cấp phép"
 "Steam_SubscriptionConfirmation" "Mã xác nhận"
 
-"Steam_TroubleshooterURL_CDKey" "http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=276"
+"Steam_TroubleshooterURL_CDKey" "https://support.steampowered.com/kb/1968-HKLX-7538/"
 
 "Steam_SubscriptionSuccess_CDKey_Headline" "Kích hoạt thành công!"
 "Steam_SubscriptionSuccess_CDKey" "Mã sản phẩm của bạn đã được kích hoạt thành công. Sản phẩm (hoặc các sản phẩm) được liệt kê bên dưới giờ đây đã liên kết vĩnh viễn với tài khoản Steam của bạn. Bạn phải đăng nhập vào tài khoản này để truy cập các sản phẩm mà bạn đã kích hoạt trên Steam.\n\nHãy in biên lai giao dịch này để ghi nhớ tài khoản của mình trong tương lai."
@@ -1218,7 +1218,7 @@ Công đoạn này nên hoàn thành dưới một phút."
 "Steam_Subscription_HardwarePromo_Used_Headline" "Đăng kí trùng lặp"
 "Steam_Subscription_HardwarePromo_Used" "Khuyến mãi này đã được kích hoạt bằng tài khoản Steam khác."
 "Steam_PurchaseError_HardwarePromoIneligible" "Xin thứ lỗi, nhưng máy tính này không đáp ứng được cấu hình yêu cầu cho ưu đãi từ %subscription%."
-"Steam_HardwarePromo_SupportURL" "http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=628"
+"Steam_HardwarePromo_SupportURL" "https://support.steampowered.com/kb/2734-UDFX-1098/"
 
 "Steam_Subscription_HardwarePromo_AlreadyPurchased_Headline" "Đã sở hữu sản phẩm này"
 "Steam_Subscription_HardwarePromo_AlreadyPurchased" "Tài khoản Steam này đã sở hữu (những) sản phẩm có trong\ntrong ưu đãi này. Để sử dụng chúng, xin vui lòng đến thư viện trò chơi của bạn."
@@ -1495,7 +1495,8 @@ Bạn cần phải đăng xuất khỏi OSX để thay đổi này có hiệu l�
 "Steam_DutyNote"	"Sản phẩm sẽ được giao hàng từ Hoa Kỳ. Bạn phải chịu trách nhiệm cho mọi khoản phí thuế."
 
 "Steam_AgreeToTheTerms"		"Tôi đồng ý với các điều khoản của"
-"Steam_SteamSubscriberAgreement"	"Điều khoản người đăng ký Steam"
+"Steam_SteamSubscriberAgreement"	    "Điều khoản người đăng ký Steam"
+"Steam_SteamSubscriberAgreement_china"	"Thỏa thuận giấy phép Steam China"
 "Steam_ComplianceRequired_Title"	"Steam - Cảnh báo"
 "Steam_ComplianceRequired_Info"		"Bạn phải đồng ý với điều khoản người đăng ký Steam để tiếp tục"
 
@@ -1614,9 +1615,10 @@ Bạn cần phải đăng xuất khỏi OSX để thay đổi này có hiệu l�
 "Steam_ConnectionFailureTitle"	"Kết nối thất bại"
 "Steam_ConnectionFailureDetail"	"Steam không thể kết nối đến mạng lưới. Điều này có thể do vấn đề với kết nối internet của bạn."
 "Steam_ConnectionSupportLink"	"Xử lý sự cố kết nối của tôi"
-"Steam_ConnectionSupportURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=11"
+"Steam_ConnectionSupportURL"	"https://support.steampowered.com/kb/1456-EUDN-2493/"
 
 "SteamUI_NetworkTroubleshootingTips"	"Mẹo xử lý sự cố mạng"
+"SteamUI_NetworkTroubleshootingTips_URL"	"https://support.steampowered.com/kb_article.php?ref=1456-EUDN-2493"
 
 
 "SteamUI_SSA_Agree"				"Xin vui lòng đọc toàn bộ điều khoản này. Bạn phải đồng ý với mọi điều khoản trong điều khoản người đăng ký Steam để tiếp tục."
@@ -1680,6 +1682,16 @@ Bạn cần phải đăng xuất khỏi OSX để thay đổi này có hiệu l�
 "steam_menu_downloads"	"Tải về"
 "steam_menu_account"	"Steam"
 "steam_menu_window" "Cửa sổ"
+"steam_menu_preferences"	"Tùy chọn..."
+"steam_menu_services"	"Dịch vụ"
+"steam_menu_hidesteam"	"Ẩn Steam"
+"steam_menu_hideothers"	"Ẩn cửa sổ khác"
+"steam_menu_showall"	"Hiện tất cả"
+"steam_menu_quitsteam"	"Thoát Steam"
+"steam_menu_window_close"	"Đóng"
+"steam_menu_window_minimize"	"Thu nhỏ"
+"steam_menu_window_zoom"	"Phóng to"
+"steam_menu_window_bringalltofront"	"Mang tất cả lên trước"
 "steam_menu_games_details"	"Chi tiết trò chơi"
 "steam_menu_games_list"		"Danh sách trò chơi"
 "steam_menu_games_grid"		"Lưới trò chơi"
@@ -1983,21 +1995,21 @@ Bạn cần phải đăng xuất khỏi OSX để thay đổi này có hiệu l�
 "Steam_AlwaysKeepThisGameUpToDate$appType=game"		"Luôn đảm bảo trò chơi này được cập nhật"
 "Steam_AlwaysKeepThisGameUpToDate$appType=demo"		"Luôn đảm bảo demo này được cập nhật"
 "Steam_AlwaysKeepThisGameUpToDate$appType=media"	"Luôn đảm bảo tệp media này được cập nhật"
-"Steam_AlwaysKeepThisGameUpToDate$appType=music"	"Luôn đảm bảo nhạc phẩm này được cập nhật"
+"Steam_AlwaysKeepThisGameUpToDate$appType=music"	"Luôn đảm bảo bản nhạc này được cập nhật"
 "Steam_AlwaysKeepThisGameUpToDate$appType=tool"		"Luôn đảm bảo công cụ này được cập nhật"
 
 "Steam_DoNotUpdateThisGame$appType=application"			"Chỉ cập nhật ứng dụng này khi tôi khởi động nó"
 "Steam_DoNotUpdateThisGame$appType=game"			"Chỉ cập nhật trò chơi này khi tôi khởi động nó"
 "Steam_DoNotUpdateThisGame$appType=demo"			"Chỉ cập nhật demo này khi tôi khởi động nó"
 "Steam_DoNotUpdateThisGame$appType=media"			"Chỉ cập nhật media này khi tôi khởi động nó"
-"Steam_DoNotUpdateThisGame$appType=music"			"Đừng tự động cập nhật nhạc phẩm này"
+"Steam_DoNotUpdateThisGame$appType=music"			"Đừng tự động cập nhật bản nhạc này"
 "Steam_DoNotUpdateThisGame$appType=tool"			"Chỉ cập nhật công cụ này khi tôi khởi động nó"
 
 "Steam_AutoUpdateBehaviorHighPriority$appType=application"			"Ưu tiên cao - Luôn luôn tự động cập nhật ứng dụng này trước"
 "Steam_AutoUpdateBehaviorHighPriority$appType=game"			"Ưu tiên cao - Luôn luôn tự động cập nhật trò chơi này trước"
 "Steam_AutoUpdateBehaviorHighPriority$appType=demo"			"Ưu tiên cao - Luôn luôn tự động cập nhật demo này trước"
 "Steam_AutoUpdateBehaviorHighPriority$appType=media"			"Ưu tiên cao - Luôn luôn tự động cập nhật media này trước"
-"Steam_AutoUpdateBehaviorHighPriority$appType=music"			"Ưu tiên cao - Luôn luôn tự động cập nhật nhạc phẩm này trước"
+"Steam_AutoUpdateBehaviorHighPriority$appType=music"			"Ưu tiên cao - Luôn luôn tự động cập nhật bản nhạc này trước"
 "Steam_AutoUpdateBehaviorHighPriority$appType=tool"			"Ưu tiên cao - Luôn luôn tự động cập nhật công cụ này trước"
 
 "Steam_GameProperties_AlwaysUpToDateInfo$appType=application" 	"Ứng dụng này và các bản cập nhật của nó sẽ được tự động tải xuống ngay khi ra mắt."
@@ -2011,7 +2023,7 @@ Bạn cần phải đăng xuất khỏi OSX để thay đổi này có hiệu l�
 "Steam_GameProperties_NeverUpdateInfo$appType=game"		"Chỉ cập nhật nội dung cho trò chơi này khi chạy nó."
 "Steam_GameProperties_NeverUpdateInfo$appType=demo"		"Chỉ cập nhật nội dung cho demo này khi chạy nó."
 "Steam_GameProperties_NeverUpdateInfo$appType=media"	"Chỉ cập nhật nội dung cho media này khi chạy nó."
-"Steam_GameProperties_NeverUpdateInfo$appType=music"	"Đừng tự động cập nhật nhạc phẩm này."
+"Steam_GameProperties_NeverUpdateInfo$appType=music"	"Đừng tự động cập nhật bản nhạc này."
 "Steam_GameProperties_NeverUpdateInfo$appType=tool"		"Chỉ cập nhật nội dung cho công cụ này khi chạy nó."
 
 "Steam_GameProperties_BackgroundDownloadsWhilePlaying"	"Tải xuống ngầm"
@@ -2053,7 +2065,7 @@ Bạn cần phải đăng xuất khỏi OSX để thay đổi này có hiệu l�
 "Steam_GameProperties_HighPriorityAutoUpdateInfo$appType=game"		"Trò chơi này và các bản cập nhật của nó sẽ được tự động tải xuống ngay khi ra mắt. Steam sẽ ưu tiên trò chơi này hơn các bản tải về khác."
 "Steam_GameProperties_HighPriorityAutoUpdateInfo$appType=demo"		"Demo này và các bản cập nhật của nó sẽ được tự động tải xuống ngay khi ra mắt. Steam sẽ ưu tiên demo này trước các yêu cầu tải về khác."
 "Steam_GameProperties_HighPriorityAutoUpdateInfo$appType=media"		"Media này và các bản cập nhật của nó sẽ được tự động tải xuống ngay khi ra mắt. Steam sẽ ưu tiên media này trước các yêu cầu tải về khác."
-"Steam_GameProperties_HighPriorityAutoUpdateInfo$appType=music"		"Nhạc phẩm này và các bản cập nhật của nó sẽ được tự động tải xuống ngay khi ra mắt. Steam sẽ ưu tiên nó hơn các yêu cầu tải về khác."
+"Steam_GameProperties_HighPriorityAutoUpdateInfo$appType=music"		"Bản nhạc này và các bản cập nhật của nó sẽ được tự động tải xuống ngay khi ra mắt. Steam sẽ ưu tiên nó hơn các yêu cầu tải về khác."
 "Steam_GameProperties_HighPriorityAutoUpdateInfo$appType=tool"		"Công cụ này và các bản cập nhật của nó sẽ được tự động tải xuống ngay khi ra mắt. Steam sẽ ưu tiên công cụ này hơn các bản tải về khác."
 
 "Steam_Game_VerifyGameFiles$appType=application"				"Kiểm tra lại dữ liệu ứng dụng..."
@@ -2067,21 +2079,21 @@ Bạn cần phải đăng xuất khỏi OSX để thay đổi này có hiệu l�
 "Steam_DeleteLocalGameContent$appType=game"		"Gỡ cài đặt trò chơi..."
 "Steam_DeleteLocalGameContent$appType=demo"		"Gỡ cài đặt demo..."
 "Steam_DeleteLocalGameContent$appType=media"	"Gỡ cài đặt media..."
-"Steam_DeleteLocalGameContent$appType=music"	"Gỡ cài đặt nhạc phẩm..."
+"Steam_DeleteLocalGameContent$appType=music"	"Gỡ cài đặt bản nhạc..."
 "Steam_DeleteLocalGameContent$appType=tool"		"Gỡ cài đặt công cụ..."
 
 "Steam_BackupGameFiles$appType=application"		"Sao lưu các tệp ứng dụng..."
 "Steam_BackupGameFiles$appType=game"			"Sao lưu tệp trò chơi..."
 "Steam_BackupGameFiles$appType=demo"			"Sao lưu các tệp demo..."
 "Steam_BackupGameFiles$appType=media"			"Sao lưu các tệp media..."
-"Steam_BackupGameFiles$appType=music"			"Sao lưu các tệp nhạc phẩm..."
+"Steam_BackupGameFiles$appType=music"			"Sao lưu tệp bản nhạc..."
 "Steam_BackupGameFiles$appType=tool"			"Sao lưu các tệp công cụ..."
 
 "Steam_Install_WillDownloadAllFiles$appType=application"	"Mọi tệp cho ứng dụng này giờ đây sẽ được tải qua Steam."
 "Steam_Install_WillDownloadAllFiles$appType=game"	"Mọi tệp cho trò chơi này giờ đây sẽ được tải qua Steam."
 "Steam_Install_WillDownloadAllFiles$appType=demo"	"Mọi tệp cho demo này giờ đây sẽ được tải qua Steam."
 "Steam_Install_WillDownloadAllFiles$appType=media"	"Mọi tệp cho media này giờ đây sẽ được tải qua Steam."
-"Steam_Install_WillDownloadAllFiles$appType=music"	"Mọi tệp cho nhạc phẩm này giờ đây sẽ được tải qua Steam."
+"Steam_Install_WillDownloadAllFiles$appType=music"	"Mọi tệp cho bản nhạc này giờ đây sẽ được tải qua Steam."
 "Steam_Install_WillDownloadAllFiles$appType=tool"	"Mọi tệp cho công cụ này giờ đây sẽ được tải qua Steam."
 
 "Steam_Install_StartCacheLoading$appType=application"		"Đang tạo các tệp của ứng dụng tại máy..."
@@ -2095,7 +2107,7 @@ Bạn cần phải đăng xuất khỏi OSX để thay đổi này có hiệu l�
 "Steam_PreparingGamesList$appType=game"	 			"Đang chuẩn bị danh sách trò chơi Steam%progress%"
 "Steam_PreparingGamesList$appType=demo"	 			"Đang chuẩn bị danh sách demo Steam%progress%"
 "Steam_PreparingGamesList$appType=media" 			"Đang chuẩn bị danh sách media Steam%progress%"
-"Steam_PreparingGamesList$appType=music" 			"Đang chuẩn bị danh sách nhạc phẩm Steam%progress%"
+"Steam_PreparingGamesList$appType=music" 			"Đang chuẩn bị danh sách bản nhạc Steam%progress%"
 "Steam_PreparingGamesList$appType=tool"	 			"Đang chuẩn bị danh sách công cụ Steam%progress%"
 "Steam_PreparingGamesList$appType=license"		"Đang chuẩn bị danh sách giấy phép Steam%progress%"
 
@@ -2103,7 +2115,7 @@ Bạn cần phải đăng xuất khỏi OSX để thay đổi này có hiệu l�
 "Steam_ScanningForUpdates$appType=game"				"Đang quét cập nhật cho trò chơi Steam%progress%"
 "Steam_ScanningForUpdates$appType=demo"				"Đang quét cập nhật cho demo Steam%progress%"
 "Steam_ScanningForUpdates$appType=media"			"Đang quét cập nhật cho media Steam%progress%"
-"Steam_ScanningForUpdates$appType=music"			"Đang quét cập nhật cho nhạc phẩm Steam%progress%"
+"Steam_ScanningForUpdates$appType=music"			"Đang quét cập nhật cho bản nhạc Steam%progress%"
 "Steam_ScanningForUpdates$appType=tool"				"Đang quét cập nhật cho công cụ Steam%progress%"
 "Steam_ScanningForUpdates$appType=license"		"Đang quét cập nhật cho giấy phép Steam%progress%"
 
@@ -2111,7 +2123,7 @@ Bạn cần phải đăng xuất khỏi OSX để thay đổi này có hiệu l�
 "SteamUI_NoGamesOfThisType$appType=game"	"Không có trò chơi Steam để hiển thị."
 "SteamUI_NoGamesOfThisType$appType=demo"	"Không có demo Steam để hiển thị."
 "SteamUI_NoGamesOfThisType$appType=media"	"Không có media Steam để hiển thị."
-"SteamUI_NoGamesOfThisType$appType=music"	"Không có nhạc phẩm Steam để hiển thị."
+"SteamUI_NoGamesOfThisType$appType=music"	"Không có bản nhạc Steam để hiển thị."
 "SteamUI_NoGamesOfThisType$appType=tool"	"Không có công cụ Steam để hiển thị."
 
 "Steam_ValidatingSteamCaches_Label$appType=application"	"Xin vui lòng đợi trong khi Steam xác thực các tệp ứng dụng."
@@ -2384,16 +2396,16 @@ Bạn cần phải đăng xuất khỏi OSX để thay đổi này có hiệu l�
 "Steam_RegionRestricted_Title"			"Steam - Trò chơi không khả dụng"
 "Steam_RegionRestrictedPurchase_Info"				"Trò chơi này đã được kích hoạt với một mã sản phẩm chỉ có giá trị trong một vùng địa lý cố định. Vì hiện tại bạn không ở trong vùng đó, %game% không thể chơi được."
 "Steam_RegionRestricted_SupportLink"		"Ghé thăm trang hỗ trợ Steam để biết thêm chi tiết"
-"Steam_RegionRestrictedPurchase_SupportURL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=461"
+"Steam_RegionRestrictedPurchase_SupportURL"		"https://support.steampowered.com/kb/1266-QFZC-2141/"
 "Steam_RegionRestricted_Info"				"%game% không hiện hữu cho vùng lãnh thổ của bạn."
-"Steam_RegionRestricted_SupportURL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=461"
+"Steam_RegionRestricted_SupportURL"		"https://support.steampowered.com/kb/1266-QFZC-2141/"
 
 "Steam_CountryRestricted_Info"				"Bạn không thể đăng ký sản phẩm này tại đất nước của mình."
-"Steam_CountryRestricted_SupportURL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=488"
+"Steam_CountryRestricted_SupportURL"		"https://support.steampowered.com/kb/1266-QFZC-2141/"
 
 "Steam_RegionRestrictedCode_Title"		"Steam - Sản phẩm không có sẵn"
 "Steam_RegionRestrictedCode_Info"			"Mã sản phẩm này không thể được kích hoạt trong vùng của bạn."
-"Steam_RegionRestrictedCode_SupportURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=463"
+"Steam_RegionRestrictedCode_SupportURL"	"https://support.steampowered.com/kb/1266-QFZC-2141/"
 
 "Steam_FragmentationBad_Title"			"Steam - Cảnh báo ổ cứng phân mảnh"
 "Steam_FragmentationBad_Info"				"Các tệp trò chơi của bạn có tỷ lệ phân mảnh cao trên ổ cứng. Việc này có thể gây ra thời gian tải chậm và hiệu suất kém trong trò chơi. \n\nSteam có thể tối ưu hóa các tệp trò chơi của bạn ngay bây giờ.\n"
@@ -2764,7 +2776,7 @@ Hãy kiếm một người bạn bằng cách gửi món quà đến một ai đ
 "Steam_GuestPassAccept_HeadlineServiceUnavailable$type=guestpass"	"Không thể chấp nhận vé khách"
 "Steam_GuestPassAccept_TextServiceUnavailable"	"Máy tính của bạn hoặc đang không thể kết nối đến các máy chủ Steam, hoặc do dịch vụ liên quan đang tạm thời bị vô hiệu hóa. Xin vui lòng thử lại sau."
 "Steam_GuestPassAccept_LinkTextServiceUnavailable" 	"Để biết thông tin xử lý sự cố về quà tặng, xin hãy tham khảo trang hỗ trợ này."
-"Steam_GuestPassAccept_LinkURLServiceUnavailable"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=550"
+"Steam_GuestPassAccept_LinkURLServiceUnavailable"	"https://support.steampowered.com/kb/6262-QXCN-0755/"
 
 "Steam_GuestPassAccept_HeadlineRevoked$type=guestpass"	"Vé khách này đã bị thu hồi"
 "Steam_GuestPassAccept_TextRevoked$type=guestpass"	"Người bạn đã cho bạn vé khách này đã hủy nó và đã gửi lại một mã kích hoạt mới. Nếu phiên bản mới hơn đã được gửi cho bạn, bạn sẽ nhận một thư điện tử khác với mã cập nhật mới."
@@ -2783,7 +2795,7 @@ Hãy kiếm một người bạn bằng cách gửi món quà đến một ai đ
 "Steam_GuestPassRedeemed_HeadlineServiceUnavailable$type=guestpass"	"Không thể kích hoạt vé khách"
 "Steam_GuestPassRedeemed_TextServiceUnavailable"	"Máy tính của bạn hoặc đang không thể kết nối đến các máy chủ Steam, hoặc do dịch vụ liên quan đang tạm thời bị vô hiệu hóa. Xin vui lòng thử lại sau."
 "Steam_GuestPassRedeemed_LinkTextServiceUnavailable"	"Để biết thông tin xử lý sự cố về vé khách, xin vui lòng xem trang hỗ trợ."
-"Steam_GuestPassRedeemed_LinkURLServiceUnavailable"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=550"
+"Steam_GuestPassRedeemed_LinkURLServiceUnavailable"	"https://support.steampowered.com/kb/6262-QXCN-0755/"
 
 "Steam_GuestPassRedeemed_HeadlineLimitExceeded"	"Bạn đã dùng một vé khách cho sản phẩm này rồi"
 "Steam_GuestPassRedeemed_TextLimitExceeded"	"Bởi vì bạn đã nhận một vé khách cho %package%, bạn không thể nhận thêm một vé khác. Nếu bạn muốn tiếp tục chơi trò chơi, xin vui lòng mua sản phẩm."
@@ -2861,8 +2873,6 @@ Hãy kiếm một người bạn bằng cách gửi món quà đến một ai đ
 "Steam_SubscriptionCancelled_PuchaseDeclined_ContactProvider"	"Việc mua %subscription% không hoàn thành.\n\n%provider% đã thông báo một vấn đề với tài khoản %provider% của bạn. Xin vui lòng liên hệ đội hỗ trợ %provider% hoặc nhấp \"Quay lại\" để chọn hình thức thanh toán thay thế."
 "Steam_SubscriptionCancelled_PuchaseDeclined_AcctNotVerified"	"Việc mua %subscription% không hoàn thành.\n\n%provider% thông báo rằng tài khoản %provider% của bạn cần phải được xác nhận hoặc nạp tiền để hoàn thành việc mua bán. Xin vui lòng liên hệ đội hỗ trợ %provider% hoặc nhấp \"Quay lại\" để chọn hình thức thanh toán thay thế."
 
-"Steam_TroubleshooterURL_VfyAcct" "http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=687"
-
 "Steam_PaymentMethodNotAvailable_Generic" "Rất tiếc, nhưng hình thức thanh toán này hiện tại không có."
 
 "Steam_LaunchEULA_Title"			"%game%"
@@ -2872,11 +2882,12 @@ Hãy kiếm một người bạn bằng cách gửi món quà đến một ai đ
 "Steam_LaunchEULA_Text"			"Xin vui lòng đọc toàn bộ thỏa thuận này. Bạn phải đồng ý với thỏa thuận giấy phép người dùng cuối để chơi %game%."
 
 "Steam_GuestPasses_LinkText"		"Thông tin thêm về quà tặng và vé khách"
-"Steam_GuestPasses_LinkURL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=549"
+"Steam_GuestPasses_LinkURL"		"https://support.steampowered.com/kb/6262-QXCN-0755/"
 
 "Steam_AlreadyRunningError_Title"			"Steam - Không thể chạy"
 "Steam_AlreadyRunningError_Info"			"Steam hiện đang chạy trên máy tính này dưới tên người dùng khác. Xin vui lòng tắt Steam trên tài khoản người dùng khác trước khi thử chạy lại lần nữa."
 "Steam_AlreadyRunningError_SupportLink"	"Xem trang hỗ trợ Steam để biết thêm thông tin"
+"Steam_AlreadyRunningError_SupportLink_URL"	"http://support.steampowered.com/kb_article.php?ref=8787-WYIL-1543"
 "Steam_AlreadyRunningError_SupportTicket"	"Xin vui lòng liên lạc đội hỗ trợ Steam ngay khi có thể"
 
 "Steam_LoggedInElsewhere_Title"		"Steam - Được đăng nhập tại nơi khác"
@@ -2908,6 +2919,7 @@ Hãy kiếm một người bạn bằng cách gửi món quà đến một ai đ
 "Steam_GamesDialog_RightClick_RemoveFromUnblockedGames"		"Bỏ khỏi trò chơi gia đình"
 
 "steam_menu_checkforupdates"						"Kiểm tra cập nhật phần mềm Steam..."
+"steam_menu_checkforupdates_osx"					"Kiểm tra cập nhật..."
 "steam_checkforupdates_title"						"Steam - Tự cập nhật"
 "steam_ClientUpdateAvailableDownloading"			"Một bản cập nhật Steam đã có, và hiện đang được tải về."
 "steam_ClientUpdateAvailableDownloaded"			"Một bản cập nhật Steam đã được tải về."
@@ -3351,7 +3363,7 @@ Cuộc thử nghiệm beta đã kết thúc - xin vui lòng khởi động lại
 "Steam_InstallAborted_InfoAppNoDemo"		"Không thể cài %game% , vì đây là demo, và bạn hiện sở hữu bản đầy đủ của sản phẩm này. Xin vui lòng cài bản đầy đủ của trò chơi."
 
 "Steam_Startup_SteamChinaRequiredTitle"					"Yêu cầu Steam China"
-"Steam_Startup_GetSteamChina"						"%gamename% hiện đã có mặt qua Steam China, vui lòng truy cập đường dẫn phía dưới để cài phiên bản đó."
+"Steam_Startup_GetSteamChina"						"%gamename% nay phải được khởi chạy qua phần mềm Steam China mới.\n\nBạn có thể đăng nhập bằng tài khoản trò chơi %gamename% của mình và chuyển tiến trình, vật phẩm, cấp độ nhân vật, cũng như điểm theo.\n\n"
 "Steam_Startup_RunSteamChina"						"%gamename% hiện đã có mặt qua Steam China, vui lòng khởi động Steam China để nạp trò chơi."
 "Steam_Startup_SteamChinaImportedUninstall"			"%gamename% đã được nạp vào Steam China, bạn giờ có thể thoải mái gỡ cài đặt trình khởi chạy này."
 "Steam_Startup_LauncherDeprecated"					"%gamename% giờ được vận hành qua Steam China, phiên bản này không còn được hỗ trợ và sẽ thoát."
@@ -3359,6 +3371,7 @@ Cuộc thử nghiệm beta đã kết thúc - xin vui lòng khởi động lại
 "Steam_Startup_ImportGameFromLauncherMsg"			"Bạn có muốn nạp %gamename% vào Steam China? Sau đó, bạn có thể thoải mái gỡ cài đặt trình khởi chạy cũ."
 
 "Steam_Download_SteamChina"							"Tải Steam China"
+"Steam_Get_SteamChina"								"Cài đặt Steam China ngay"
 
 "Steam_ValidateGame_GameRunning"	"Xin vui lòng thoát bất kỳ trò chơi hoặc công cụ nào đang chạy trước khi thử xác thực các tệp lưu trên máy."
 
@@ -3367,8 +3380,8 @@ Cuộc thử nghiệm beta đã kết thúc - xin vui lòng khởi động lại
 "Steam_LibrariesLabel"	"Nội dung thư viện"
 "Steam_DownloadRestrictionsLabel"	"Hạn chế tải về"
 
-"Steam_ServerBrowserPingRateLabel"	"Tìm máy chủ trong trò chơi: ping tối đa / phút"
-"Steam_ServerBrowserPingRateInfo"	"Nếu bạn gặp vấn đề kết nối khi đang tìm máy chủ trò chơi, hãy thử giảm giá trị này."
+"Steam_ServerBrowserPingRateLabel"	"Tìm máy chủ: Ping/phút"
+"Steam_ServerBrowserPingRateInfo"	"Gặp vấn đề kết nối khi đang tìm máy chủ trò chơi? Hãy thử giảm giá trị này."
 "Steam_ServerBrowserPingRateDefault"	"Tự động (%PingsPerMin%)"
 
 "Steam_TextFilterSettingLabel"									"Lọc ẩn từ ngữ"
@@ -3490,6 +3503,7 @@ Cuộc thử nghiệm beta đã kết thúc - xin vui lòng khởi động lại
 "Steam_RecoverLocked_UseCode" "Tôi vừa nhận tin nhắn từ đội hỗ trợ Steam và đã sẵn sàng điền mã truy cập đặc biệt."
 "Steam_RecoverLocked_MustRecover" "Email nào thế? Tôi không nhận được..."
 "Steam_RecoverLocked_WhyIsThisHappening" "Tại sao chuyện này xảy ra?"
+"Steam_RecoverLocked_WhyIsThisHappening_URL" "https://support.steampowered.com/kb_article.php?ref=4020-ALZM-5519"
 "Steam_RecoverLocked_EnterCode" "Mã đăng nhập đặc biệt của tôi là:"
 "Steam_RecoverLocked_EnterCodeDetails" "Một khi mã của bạn được kiểm tra, Steam Guard sẽ thêm máy tính này vào danh sách các máy được phép truy cập tài khoản Steam của bạn."
 "Steam_RecoverLocked_WrongCode" "Xin lỗi, mã không đúng."
@@ -3503,7 +3517,9 @@ Cuộc thử nghiệm beta đã kết thúc - xin vui lòng khởi động lại
 "Steam_RecoverLocked_StartRecovery2" "Chúng tôi biết tài khoản Steam rất quý giá với bạn, và chúng tôi sẽ cố gắng hết sức để ngăn chặn kẻ xấu truy cập vào tài khoản của bạn."
 "Steam_RecoverLocked_StartRecovery3" "Xin hãy liên hệ đội hỗ trợ Steam để được một nhân viên của chúng tôi hỗ trợ. Các yêu cầu hỗ trợ về truy cập tài khoản là ưu tiên số một của chúng tôi."
 "Steam_RecoverLocked_RecoverySupportLink" "Liên hệ đội hỗ trợ Steam"
+"Steam_RecoverLocked_RecoverySupportLink_URL" "https://support.steampowered.com"
 "Steam_RecoverLocked_LearnMore" "Xem thêm về Intel® Identity Protection Technology"
+"Steam_RecoverLocked_LearnMore_URL" "https://support.steampowered.com/kb_article.php?ref=9400-IPAX-9398&auth=e39b5c227cffc8ae65414aba013e5fef"
 "Steam_RecoverLocked_CannotAccess" "Rất tiếc, bạn không thể truy cập vào tài khoản trên máy tính này nếu không được cấp phép."
 "Steam_RecoverLocked_Success" "Thành công!"
 "Steam_RecoverLocked_SuccessDetails" "Bạn đã có thể truy cập vào tài khoản Steam của mình từ máy tính này. Steam Guard đã thêm máy tính này vào danh sách những máy được phép truy cập vào tài khoản Steam của bạn trong tương lai."
@@ -3826,7 +3842,6 @@ Cuộc thử nghiệm beta đã kết thúc - xin vui lòng khởi động lại
 "steam_menu_friends" "Bạn bè"
 "steam_menu_servers" "Máy chủ"
 "steam_menu_settings" "Thiết lập"
-"steam_menu_preferences" "Tùy chỉnh"
 "steam_menu_view_friends" "Xem danh sách bạn bè (%friends_online% người trên mạng)"
 "steam_menu_view_players" "Người chơi"
 "steam_menu_add_friend" "Thêm bạn..."
@@ -4568,6 +4583,7 @@ Cuộc thử nghiệm beta đã kết thúc - xin vui lòng khởi động lại
 "Steam_Settings_Streaming_SoftwareEncodingThreads_7"	"7"
 "Steam_Settings_Streaming_SoftwareEncodingThreads_8"	"8"
 "Steam_Settings_Streaming_P2PScope_Description"	"Cho phép kết nối trực tiếp (chia sẻ IP)"
+"Steam_Settings_Streaming_P2PScopeAutomatic"	"Tự động (bật)"
 "Steam_Settings_Streaming_P2PScopeDisabled"	"Tắt"
 "Steam_Settings_Streaming_P2PScopeOnlyMe" "Thiết bị của tôi"
 "Steam_Settings_Streaming_P2PScopeEveryone" "Mọi thiết bị"
@@ -4592,6 +4608,7 @@ Cuộc thử nghiệm beta đã kết thúc - xin vui lòng khởi động lại
 "Steam_Settings_Streaming_EnableTouchController"	"Bật điều khiển cảm ứng"
 
 "Steam_Settings_Streaming_StreamingSupport"	"Xem thông tin hỗ trợ"
+"Steam_Settings_Streaming_StreamingSupportLink"	"https://support.steampowered.com/kb_article.php?ref=3629-RIAV-1617"
 
 "Steam_Settings_Streaming_Connected" "Máy tính đã kết nối"
 "Steam_Settings_Streaming_Paired" "Thiết bị đã bắt cặp"
@@ -4602,6 +4619,15 @@ Cuộc thử nghiệm beta đã kết thúc - xin vui lòng khởi động lại
 
 "Steam_Settings_Streaming_PIN_Title" "Đặt mã an ninh cho Steam Link"
 "Steam_Settings_Streaming_PIN_Text" "Đặt một mã PIN dạng số nguyên. Mã PIN này phải được nhập vào Steam Link mỗi lần muốn phát sóng từ máy tính này:"
+
+"Steam_Settings_ShareIPNetworking_Label" "Steam Networking"
+"Steam_Settings_ShareIPNetworking_Info" "Cho phép các trò chơi sử dụng Steam Networking chia sẻ địa chỉ IP của tôi để kết nối nhanh hơn"
+"Steam_Settings_ShareIPNetworking_Default" "Mặc định"
+"Steam_Settings_ShareIPNetworking_Always" "Luôn luôn"
+"Steam_Settings_ShareIPNetworking_FriendsOnly" "Chỉ bạn bè"
+"Steam_Settings_ShareIPNetworking_Never" "Không bao giờ"
+"Steam_Settings_ShareIPNetworking_URL" "Tìm hiểu thêm"
+"Steam_Settings_ShareIPNetworking_URLText" "https://support.steampowered.com/kb_article.php?ref=9929-UAFN-9329"
 
 "SteamUI_StreamingIntro_Title"		"Chào mừng tới Steam Remote Play"
 "SteamUI_StreamingIntro"			"Bạn sắp sửa chạy trò chơi này từ một máy tính khác và chơi nó tại đây bằng Steam Remote Play."
@@ -4744,4 +4770,9 @@ Cuộc thử nghiệm beta đã kết thúc - xin vui lòng khởi động lại
 
 "SteamUI_RunningConflictingSoftware" "Phát hiện phần mềm gây mâu thuẫn"
 "SteamUI_RunningIncompatibleTcpService" "Phiên bản không tương thích của %incompatdll% (thuộc về %incompatname%)\nđã được tìm thấy trong ứng dụng Steam.\n\nChúng tôi khuyên bạn nên cập nhật hoặc gỡ bỏ phần mềm này nếu bạn cảm thấy\nphần mềm tự động đóng hoặc kết nối bị chậm khi dùng Steam hoặc mở các trò chơi."
+
+"Steam_XboxDriverInstall_Title"		"Cài đặt driver Xbox"
+"Steam_XboxDriverInstall_Success"	"Cập nhật driver thành công, và sẽ kích hoạt sau khi bạn khởi động lại máy tính."
+"Steam_XboxDriverInstall_ServiceFailure"	"Cập nhật driver không thành công, Steam có đang được chạy dưới quyền người dùng bình thường và dịch vụ Steam có đang chạy với cập nhật hiện hành?"
+"Steam_XboxDriverInstall_Failure"	"Không thể cập nhật driver, lỗi = %error%"
 }

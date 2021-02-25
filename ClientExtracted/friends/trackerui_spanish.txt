@@ -170,7 +170,7 @@
 "Friends_InvitationBlocking"		"Estás bloqueando toda comunicación con este usuario. Antes de poder comunicarte con él, debes desbloquearlo visitando su perfil de la Comunidad Steam."
 
 "Friends_DontGiveOutPassword"			"Nunca reveles tu contraseña a nadie.\n"
-"Friends_DontGiveOutPassword_URL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=301"
+"Friends_DontGiveOutPassword_URL"		"https://support.steampowered.com/kb/1266-OAFV-8478&l=spanish/"
 
 "Friends_ChatFilterBlockWarning"		"Por tu seguridad, se eliminó un enlace del siguiente mensaje."
 
@@ -556,6 +556,7 @@
 "Friends_SteamCommunity"	"Comunidad Steam"
 "Limited_Explanation"	"Tu cuenta no cumple los requisitos necesarios para utilizar esta característica."
 "Limited_ForDetails"	"Visita el Soporte de Steam para más información."
+"Limited_ForDetails_URL"	"https://help.steampowered.com/es/wizard/HelpWithLimitedAccount"
 
 "Friends_Chat_RoomModerated_Entry"		"La sala de chat ha sido establecida exclusivamente para chat de oficiales por %member_making_change%.\n"
 "Friends_Chat_RoomUnmoderated_Entry"		"La sala de chat ha sido establecida para chat de todos los usuarios por %member_making_change%.\n"
@@ -687,6 +688,7 @@
 "Broadcast_FirstTime_PermissionHeader" "Tómate un minuto para configurar tus preferencias..."
 "Broadcast_FirstTime_DesktopOnly" "Por defecto, solo puede retransmitirse el contenido de tu juego. El escritorio no puede ser retransmitido."
 "Broadcast_FirstTime_FAQ" "Leer el FAQ sobre la Retransmisión de Steam"
+"Broadcast_FirstTime_FAQLink" "https://support.steampowered.com/kb_article.php?ref=6730-TOAK-6497"
 "Broadcast_FirstTime_Title" "Retransmisión de Steam"
 "Broadcast_FirstTime_OK" "Aceptar"
 "Broadcast_FirstTime_Cancel" "Cancelar"

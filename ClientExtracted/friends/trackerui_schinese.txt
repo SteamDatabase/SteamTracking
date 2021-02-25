@@ -688,6 +688,7 @@
 "Broadcast_FirstTime_PermissionHeader" "请花少许时间来设置您的偏好…"
 "Broadcast_FirstTime_DesktopOnly" "默认设置下，观众只能看到您的游戏内容。您的桌面不在直播范围内。"
 "Broadcast_FirstTime_FAQ" "阅读 Steam  实况直播的常见问题"
+"Broadcast_FirstTime_FAQLink" "https://support.steampowered.com/kb_article.php?ref=6730-TOAK-6497"
 "Broadcast_FirstTime_Title" "Steam 实况直播"
 "Broadcast_FirstTime_OK" "确定"
 "Broadcast_FirstTime_Cancel" "取消"

@@ -145,7 +145,7 @@
 "VAC_ConnectionRefusedTitle"	"Spojení bylo odmítnuto – Ochrana VAC"
 "VAC_ConnectionRefusedDetail"	"Nelze se připojit k vybranému serveru, protože je spuštěn v zabezpečeném režimu ochrany VAC (Valve Anti-Cheat).\n\nTento účet služby Steam má zakázaný přístup na zabezpečené herní servery kvůli podvádění."
 "VAC_ConnectionRefusedByServer"	"Server odmítl připojení, protože je spuštěn v zabezpečeném režimu ochrany VAC (Valve Anti-Cheat).\n\nTento účet služby Steam má zakázaný přístup na zabezpečené herní servery kvůli podvádění."
-"VAC_BanSupportURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=370"
+"VAC_BanSupportURL"	"https://support.steampowered.com/kb/7849-RADZ-6869&l=czech/"
 "VAC_SecureServerToolTip"	"Ochrana Valve Anti-cheat – zabezpečeno"
 "VAC_BannedFromServerToolTip"	"K tomuto zabezpečenému serveru se nelze připojit"
 "VAC_Secure"	"Zabezpečené"
@@ -160,7 +160,7 @@
 "Steam_ValidLoginRequired"	"Nelze se připojit k serverům služby Steam s ochranou VAC.  Chcete-li řešit potíže se sítí, klepněte na odkaz dole."
 "VAC_ConnectionIssuesSupport_Title"	"Nepodařilo se vytvořit zabezpečené připojení"
 "VAC_ConnectionIssuesSupportSite"	"Klikněte zde pro navštívení podpory služby Steam"
-"VAC_ConnectionIssuesSupportURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=374"
+"VAC_ConnectionIssuesSupportURL"	"https://support.steampowered.com/kb/7579-RPSX-6098&l=czech/"
 "VAC_LoggedInElsewhere_Title"		"Účet se používá z jiného místa"
 "VAC_LoggedInElsewhereReason"		"Tento účet služby Steam byl přihlášen na jiném počítači. Chcete-li pokračovat v používání služby Steam, musíte se přihlásit znovu."
 

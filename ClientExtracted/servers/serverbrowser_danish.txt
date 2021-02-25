@@ -145,7 +145,7 @@
 "VAC_ConnectionRefusedTitle"	"Forbindelse afvist – VAC"
 "VAC_ConnectionRefusedDetail"	"Du kan ikke oprette forbindelse til den valgte server, da den kører i VAC (Valve Anti-Cheat)-sikret tilstand.\n\nDenne Steam-konto er på grund af snyd blevet udelukket fra sikre spilservere."
 "VAC_ConnectionRefusedByServer"	"Serveren har nægtet dig forbindelse, fordi den kører i VAC (Valve Anti-Cheat)-sikret tilstand.\n\nDenne Steam-konto er på grund af snyd blevet udelukket fra sikre spilservere."
-"VAC_BanSupportURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=370"
+"VAC_BanSupportURL"	"https://support.steampowered.com/kb/7849-RADZ-6869/"
 "VAC_SecureServerToolTip"	"Valve Anti-Cheat – Sikker"
 "VAC_BannedFromServerToolTip"	"Du kan ikke oprette forbindelse til denne sikre server"
 "VAC_Secure"	"Sikker"
@@ -160,7 +160,7 @@
 "Steam_ValidLoginRequired"	"Der kunne ikke oprettes forbindelse til Steam VAC-serverne. Klik venligst på linket nedenfor for at få hjælp til netværksfejlfinding."
 "VAC_ConnectionIssuesSupport_Title"	"Sikker tilslutning mislykkedes"
 "VAC_ConnectionIssuesSupportSite"	"Klik her for at besøge Steam Support"
-"VAC_ConnectionIssuesSupportURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=374"
+"VAC_ConnectionIssuesSupportURL"	"https://support.steampowered.com/kb/7579-RPSX-6098/"
 "VAC_LoggedInElsewhere_Title"		"Konto i brug andetsteds"
 "VAC_LoggedInElsewhereReason"		"Denne Steam-konto er blevet brugt til at logge ind fra en anden computer. Hvis du vil fortsætte med at bruge Steam, skal du logge ind igen."
 

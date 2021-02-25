@@ -206,11 +206,11 @@
 "FileOpenDialog_NewFolder_DefaultName" "Νέος φάκελος"
 
 "vgui_Webkit_error_title" "Σφάλμα"
-"vgui_Webkit_error_header" "Κωδικός σφάλματος:"
+"vgui_Webkit_error_header" "Κωδικός σφάλματος: "
 "vgui_Webkit_pagetypeunsupported" "Αδυναμία φόρτωσης σελίδας, μη υποστηριζόμενος τύπος σελίδας"
 "vgui_Webkit_cachemiss" "Το αίτημα φόρμας έληξε. Πατήστε ανανέωση για να επανυποβάλετε τα δεδομένα της φόρμας."
 "vgui_Webkit_badurl" "Αδυναμία φόρτωσης URL, εσφαλμένο όνομα διακομιστή ή διάταξης"
-"vgui_Webkit_connectionproblem" "Η σύνδεση με τον διακομιστή είναι αδύνατη. Ο διακομιστής μπορεί να είναι εκτός σύνδεσης ή μπορεί να μην είστε συνδεδεμένος στο διαδίκτυο."
+"vgui_Webkit_connectionproblem" "Αδυναμία σύνδεσης με τον διακομιστή. Ο διακομιστής μπορεί να είναι εκτός σύνδεσης ή μπορεί να μην είστε συνδεδεμένοι στο διαδίκτυο."
 "vgui_Webkit_proxyconnectionproblem" "Αδυναμία σύνδεσης στο HTTP Proxy. Ο proxy σας μπορεί να μην έχει τις σωστές ρυθμίσεις ή να είναι εκτός σύνδεσης."
 "vgui_Webkit_unknown" "Αδυναμία φόρτωσης ιστοσελίδας (άγνωστο σφάλμα)."
 "vgui_HTMLBack" "Πίσω"

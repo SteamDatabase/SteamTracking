@@ -73,13 +73,13 @@
 "Friends_LaunchGame"				"Lancer le jeu"
 "Friends_ViewGameInfo"			"Voir les infos de la partie"
 "Friends_UserDetails"				"Voir infos utilisateur"
-"Friends_RemoveUser"				"Supprimer cet ami..."
+"Friends_RemoveUser"				"Supprimer ce contact..."
 
-"Friends_RemoveFriend_Title"			"Amis - Supprimer l'utilisateur"
+"Friends_RemoveFriend_Title"			"Contacts - Supprimer l'utilisateur"
 "Friends_RemoveFriend_Info"				"Voulez-vous vraiment supprimer %friend% de votre liste de contacts ?\n\n(Vous pourrez rajouter cette personne plus tard grâce au bouton « Ajouter un contact... ».)\n"
 "Friends_RemoveFriend_Button"			"Supprimer %friend%"
 
-"Friends_HideFriend_Title"				"Amis - Ignorer l'Utilisateur"
+"Friends_HideFriend_Title"				"Contacts - Ignorer l'Utilisateur"
 "Friends_HideFriend_Info"				"Voulez-vous vraiment ignorer et supprimer %friend% de votre liste de contacts suggérés ?\n\n(Vous pourrez rajouter cette personne plus tard grâce au bouton « Ajouter un contact... ».)\n"
 "Friends_HideFriend_Button"				"Ignorer %friend%"
 "Friends_HideFriend_Failed"				"Impossible d'ignorer %friend%"
@@ -100,29 +100,29 @@
 "Friends_CannotAddSelfToList"				"Vous ne pouvez pas vous ajouter à votre liste de contacts."
 "Friends_CannotAddFriendWhoIsAlreadyInList" "%search% fait déjà partie de votre liste de contacts, sous le nom « %friend% »."
 
-"Friends_ConnectedButOffline"					"Vous apparaissez actuellement hors-ligne pour vos amis."
+"Friends_ConnectedButOffline"					"Vous apparaissez actuellement hors-ligne pour vos contacts."
 "Friends_NoFriendsInList"						"Vous n'avez ajouté personne à votre liste de contacts."
 "Friends_GoOnline"							"Se connecter"
 "Friends_SignIn_RefreshPassword"				"Se connecter..."
-"Friends_SignIn_ActivateFriends"				"Rejoindre Amis Bêta..."
-"Friends_ConnectingToFriendsNetwork"			"Connexion au réseau d'amis..."
+"Friends_SignIn_ActivateFriends"				"Rejoindre Contacts Bêta..."
+"Friends_ConnectingToFriendsNetwork"			"Connexion au réseau de contacts..."
 "Friends_ScanningForFriends"					"Téléchargement de la liste de contacts..."
 
-"Friends_NotConnectedToFriendsNetwork"		"Une connexion au réseau d'amis ne peut pas être établie. Steam essaiera automatiquement de se reconnecter jusqu'à la reprise du service."
-"Friends_NotConnectedToFriendsNetwork_InvalidPassword"	"Vous devez vous reconnecter à Steam pour utiliser le Réseau d'amis."
-"Friends_NotConnectedToFriendsNetwork_LoggedInElsewhere"	"Vous avez été déconnecté du réseau d'Amis car ce compte est utilisé depuis un autre emplacement.\n"
-"Friends_NotConnectedToFriendsNetwork_InvalidVersion"		"Cette version de Steam est trop ancienne pour se connecter au réseau d'amis. Redémarrez Steam pour recevoir la dernière mise à jour."
-"Friends_NotConnectedToFriendsNetwork_ServersBusy"		"Les serveurs Steam sont actuellement en maintenance. Le réseau d'amis se reconnectera automatiquement dès qu'il sera disponible."
+"Friends_NotConnectedToFriendsNetwork"		"Une connexion au réseau de contacts ne peut pas être établie. Steam essaiera automatiquement de se reconnecter jusqu'à la reprise du service."
+"Friends_NotConnectedToFriendsNetwork_InvalidPassword"	"Vous devez vous reconnecter à Steam pour utiliser le Réseau de contacts."
+"Friends_NotConnectedToFriendsNetwork_LoggedInElsewhere"	"Vous avez été déconnecté du réseau de contacts car ce compte est utilisé depuis un autre emplacement.\n"
+"Friends_NotConnectedToFriendsNetwork_InvalidVersion"		"Cette version de Steam est trop ancienne pour se connecter au réseau de contacts. Redémarrez Steam pour recevoir la dernière mise à jour."
+"Friends_NotConnectedToFriendsNetwork_ServersBusy"		"Les serveurs Steam sont actuellement en maintenance. Le réseau de contacts se reconnectera automatiquement dès qu'il sera disponible."
 "Friends_NotConnectedToFriendsNetwork_NoConnection"		"Aucune connexion réseau ne peut être établie vers les serveurs Steam. Steam essaiera automatiquement de se reconnecter jusqu'à la reprise du service."
-"Friends_NotAvailableInOfflineMode"			"La fonction Amis n'est pas disponible en mode hors-ligne."
+"Friends_NotAvailableInOfflineMode"			"La fonction Contacts n'est pas disponible en mode hors-ligne."
 
 
-"Friends_UserRequestingFriendship_Title"		"Amis - %friend%"
+"Friends_UserRequestingFriendship_Title"		"Contacts - %friend%"
 "Friends_UserRequestingFriendship_Info"		"Vous faites maintenant partie de la liste de contacts de %friend%."
 "Friends_AllowUserToSeeMeOnline"				"Autoriser %friend% à voir quand vous êtes connecté et à vous contacter."
 "Friends_BlockUserFromSeeingMeOnline"			"Empêcher cette personne de vous voir et de vous contacter quand vous êtes en ligne."
 
-"Friends_AddFriend_Title"			"Ajouter un ami - Steam"
+"Friends_AddFriend_Title"			"Ajouter un contact - Steam"
 
 "Friends_FriendInfoDialog_DetailsTab"		"Informations"
 "Friends_FriendInfoDialog_StatusTab"		"État"
@@ -130,30 +130,30 @@
 "Friends_FriendlyName"				"Nom"
 "Friends_RecentlyUsedNames"			"Noms utilisés dernièrement :"
 
-"Friends_PlaySoundWhenFriendJoins"			"Émettre un son lorsqu'un ami rejoint une partie"
-"Friends_PlaySoundWhenFriendComesOnline"		"Émettre un signal lorsqu'un ami se connecte"
+"Friends_PlaySoundWhenFriendJoins"			"Émettre un son lorsqu'un contact rejoint une partie"
+"Friends_PlaySoundWhenFriendComesOnline"		"Émettre un signal lorsqu'un contact se connecte"
 "Friends_PlaySoundWhenReceiveAMessage"		"Émettre un signal lorsque vous recevez un message"
 "Friends_NotifyMeWhenUserComesOnline"			"M'avertir quand cet utilisateur se connecte"
 "Friends_PlaySoundWhenUserComesOnline"		"Toujours émettre un signal lorsque cet utilisateur se connecte"
 "Friends_PlaySoundWhenUserJoinsGame"			"Toujours émettre un signal lorsque cet utilisateur joue"
 
-"Friends_RemoveUserExplanation"	"Si vous supprimez cet ami de votre liste, il ne pourra pas voir lorsque vous êtes en ligne, ni vous envoyer de message."
+"Friends_RemoveUserExplanation"	"Si vous supprimez ce contact de votre liste, il ne pourra pas voir lorsque vous êtes en ligne, ni vous envoyer de message."
 
 "Friends_FriendInvitedToGame_Title"	"INVITER - %friend%"
 "Friends_FriendInvitedToGame_Info"	"Une invitation à jouer a été envoyée à %friend%."
 
-"Friends_NotifyFriendOnline_Title"	"%friend% - notification amis en ligne"
+"Friends_NotifyFriendOnline_Title"	"%friend% - notification contacts en ligne"
 "Friends_NotifyFriendOnline_Info"		"%friend% est en ligne."
 
 "Friends_RefreshLogin_Title"			"Steam - Relancer la connexion"
-"Friends_RefreshLogin"				"Ressaisissez vos coordonnées Steam pour vous inscrire à Réseau d'amis."
+"Friends_RefreshLogin"				"Ressaisissez vos coordonnées Steam pour vous inscrire à Réseau de contacts."
 "Friends_AccountName"					"Compte"
 "Friends_Login_Btn"					"Connexion"
 "Friends_Login_Password"				"Mot de passe"
 
 "Friends_BetaHomePage"				"Page d'informations Amis Bêta"
 
-"Friends_PleaseSetFriendsName"		"Vous n'avez pas défini le nom de vos amis."
+"Friends_PleaseSetFriendsName"		"Vous n'avez pas défini le nom de vos contacts."
 "Friends_SetFriendsName"				"Changer de nom de profil..."
 
 "Friends_TargetBlocked"				"Les paramètres de profil de cet utilisateur vous empêchent de le contacter pour le moment."
@@ -170,12 +170,12 @@
 "Friends_InvitationBlocking"		"Toute communication entre cette personne et vous a été bloquée. Débloquez-la depuis son profil Steam pour communiquer avec elle à nouveau."
 
 "Friends_DontGiveOutPassword"			"Ne divulguez jamais votre mot de passe à qui que ce soit.\n"
-"Friends_DontGiveOutPassword_URL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=301"
+"Friends_DontGiveOutPassword_URL"		"https://support.steampowered.com/kb/1266-OAFV-8478/?l=french"
 
 "Friends_ChatFilterBlockWarning"		"Un lien a été retiré du message suivant pour des raisons de sécurité."
 
-"Friends_invalidname_title"			"Amis - Nom réservé"
-"Friends_invalidname_info"			"Le nom de vos amis ne peut pas être [inconnu] ou contenir les mots Valve, Steam ou Support. Veuillez en choisir un autre."
+"Friends_invalidname_title"			"Contacts - Nom réservé"
+"Friends_invalidname_info"			"Le nom de vos contacts ne peut pas être [inconnu] ou contenir les mots Valve, Steam ou Support. Veuillez en choisir un autre."
 
 "Friends_JoinGame_Dialog"				"Impossible de trouver un jeu pour %friend%"
 "Friends_Friendlist_Friends"			"CONTACTS"
@@ -192,7 +192,7 @@
 "Friends_Tooltip_GroupModerator"		"Modérateur du groupe"
 
 "Friends_InviteFriendToGroup"			"Inviter dans le groupe"
-"Friends_InviteToGroupConfirmation_Title"	"Amis - invitation envoyée"
+"Friends_InviteToGroupConfirmation_Title"	"Contacts - invitation envoyée"
 "Friends_InviteToGroupConfirmation_Info"	"Votre invitation à rejoindre le groupe %group% a été envoyée à %friend%."
 
 "Friends_menu_status"				"État"
@@ -305,7 +305,7 @@
 "Friends_MsgNotification_Sender"		"%name% dit :"
 "Friends_MsgNotification_Body"		"%message%"
 
-"Friends_AddUser"				"Ajouter à vos amis..."
+"Friends_AddUser"				"Ajouter à vos contacts..."
 "Friends_HideUser"				"Ignorer l'utilisateur..."
 
 "Friends_Voice_Call"				"Lancer le chat vocal"
@@ -361,7 +361,7 @@
 "Friends_NotificationOptions"			"Options des notifications"
 "Friends_FriendList_Suggested"			"AMIS SUGGÉRÉS"
 
-"Friends_FriendAliases_Title"			"Amis - %FriendName%"
+"Friends_FriendAliases_Title"			"Contacts - %FriendName%"
 "Friends_FriendAliasesInfo"			"Vous avez vu %FriendName% avec les noms suivants :"
 "Friends_FriendAliases_None"			"Ce joueur n'a pas utilisé d'autres noms."
 
@@ -369,12 +369,12 @@
 "Friends_Settings_TabTitle"			"Contacts"
 "Friends_Nickname"					"Surnom"
 "Friends_Avatar"						"Avatar"
-"Friends_AutoSignIntoFriendsOnStartup"	"Se connecter automatiquement aux amis au démarrage de Steam"
+"Friends_AutoSignIntoFriendsOnStartup"	"Se connecter automatiquement aux contacts au démarrage de Steam"
 "Friends_ShowTimeInChatLog"	"Afficher l'horodatage dans le chat"
 "Friends_AlwaysNewChatCheck" "Toujours ouvrir les conversations dans une nouvelle fenêtre au lieu d'un onglet"
 "Friends_NotificationsAndSounds"		"Notifications & Sons"
-"Friends_WhenFriendJoinsGame"			"Lorsqu'un ami rejoint une partie"
-"Friends_WhenFriendComesOnline"		"Lorsqu'un ami se connecte"
+"Friends_WhenFriendJoinsGame"			"Lorsqu'un contact rejoint une partie"
+"Friends_WhenFriendComesOnline"		"Lorsqu'un contact se connecte"
 "Friends_WhenReceiveMessage"			"Lorsque je reçois un message"
 "Friends_WhenGroupEventsOrAnnouncementsHappen"	"Annonces et évènements de groupe"
 "Friends_DisplayNotification"			"Afficher une notification"
@@ -385,9 +385,9 @@
 "Friends_FlashWindowNever"		"Jamais"
 "Friends_ViewSteamCommunityProfile"	"Voir mon profil sur la communauté Steam"
 "Friends_ChangeAvatar"				"Changer"
-"Friends_NameTooShort_Title"			"Amis - Surnom trop court"
+"Friends_NameTooShort_Title"			"Contacts - Surnom trop court"
 "Friends_NameTooShort_Info"			"Le champ Surnom doit contenir au moins deux caractères."
-"Friends_NameChangeFailed_Title"		"Amis - Échec du changement du nom du profil"
+"Friends_NameChangeFailed_Title"		"Contacts - Échec du changement du nom du profil"
 "Friends_NameChangeFailed_Info"		"Échec du changement du nom du profil. Veuillez réessayer dans quelques minutes."
 "Friends_NameChangeThrottled_Info"		"Des changements très fréquents de noms de profil ne sont pas autorisés. Veuillez réessayer dans quelques minutes."
 
@@ -410,7 +410,7 @@
 "Friends_CurrentPlayers_TabTitle"			"Partie actuelle"
 "Friends_RecentPlayers_TabTitle"			"Parties précédentes"
 "Friends_AddPlayerAsFriend"				"Ajouter un contact..."
-"Friends_NoRecentlyPlayedWithUsers"		"Vous n'avez joué à aucun jeu Steam avec vos amis récemment."
+"Friends_NoRecentlyPlayedWithUsers"		"Vous n'avez joué à aucun jeu Steam avec vos contacts récemment."
 "Friends_NoCurrentlyPlayedWithUsers"		"Aucun utilisateur Steam signalé par le serveur de jeux."
 "Friends_PlayerName"						"Surnom"
 "Friends_SteamIDURLHeader"				"Profil Steam"
@@ -420,12 +420,12 @@
 "Friends_PlayerFriend"					"CONTACT"
 "Friends_SteamIDPage"						"Profil"
 
-"Friends_InvitesAvailable_Title"			"Amis - invitations"
+"Friends_InvitesAvailable_Title"			"Contacts - invitations"
 "Friends_InvitesAvailable_Info"			"Vous avez %groups% invitation de groupe en attente."
 "Friends_InvitesAvailable_InfoPlural"		"Vous avez %groups% invitations de groupes en attente."
 "Friends_InvitesAvailable_Info2"			"Vous avez %friends% demande de contact en attente."
-"Friends_InvitesAvailable_Info2Plural"	"Vous avez %friends% invitations d'amis en attente."
-"Friends_InvitesAvailable_Info3"			"Vous avez %friends% invitation(s) d'ami et %groups% invitation(s) de groupe en attente."
+"Friends_InvitesAvailable_Info2Plural"	"Vous avez %friends% invitations de contacts en attente."
+"Friends_InvitesAvailable_Info3"			"Vous avez %friends% invitation(s) de contact et %groups% invitation(s) de groupe en attente."
 "Friends_InvitesAvailable_View"			"Afficher les invitations"
 
 
@@ -556,6 +556,7 @@
 "Friends_SteamCommunity"	"Communauté Steam"
 "Limited_Explanation"	"Votre compte ne répond pas aux conditions requises pour utiliser cette fonctionnalité."
 "Limited_ForDetails"	"Consultez le Support Steam pour plus d'informations."
+"Limited_ForDetails_URL"	"https://help.steampowered.com/fr/wizard/HelpWithLimitedAccount"
 
 "Friends_Chat_RoomModerated_Entry"		"La salle de discussion a été réservée aux officiers par %member_making_change%.\n"
 "Friends_Chat_RoomUnmoderated_Entry"		"%member_making_change% a passé la salle de discussion en mode ouvert : tous les utilisateurs peuvent parler.\n"
@@ -579,8 +580,8 @@
 "Friends_ViewInvitesOnCommunityPage" "Voir les invitations sur la communauté"
 "friends_ignoreallinvites"	"Ignorer toutes les invitations"
 "friends_acceptallinvites"	"Accepter toutes les invitations"
-"friends_ignoreallsuggestedfriends"	"Ignorer tous les amis suggérés"
-"friends_inviteallsuggestedfriends"	"Inviter tous les amis suggérés"
+"friends_ignoreallsuggestedfriends"	"Ignorer tous les contacts suggérés"
+"friends_inviteallsuggestedfriends"	"Inviter tous les contacts suggérés"
 "friends_acceptrequest"	"Accepter"
 "friends_ignorerequest"	"Ignorer"
 "friends_blockrequest"	"Bloquer"
@@ -660,7 +661,7 @@
 "friends_itemreceived_info"		"Vous avez un nouvel item dans votre inventaire"
 "friends_itemsreceived_info"	"Vous avez %items% nouveaux items dans votre inventaire"
 "friends_setnickname"			"Ajouter un surnom"
-"friends_setnickname_title"		"Amis - %friend%"
+"friends_setnickname_title"		"Contacts - %friend%"
 "friends_setnickname_info"		"Donnez un surnom à cette personne afin de pouvoir l'identifier facilement dans votre liste de contacts."
 "friends_managefriends"			"Gérer les contacts"
 "Friends_WebStatus_Tooltip"		"En ligne via un navigateur"
@@ -687,6 +688,7 @@
 "Broadcast_FirstTime_PermissionHeader" "Prenez une minute pour configurer vos préférences..."
 "Broadcast_FirstTime_DesktopOnly" "Par défaut, seul le contenu de votre jeu peut être regardé. Votre bureau ne sera pas diffusé."
 "Broadcast_FirstTime_FAQ" "Lire la FAQ Steam Broadcasting"
+"Broadcast_FirstTime_FAQLink" "https://support.steampowered.com/kb_article.php?ref=6730-TOAK-6497&l=french"
 "Broadcast_FirstTime_Title" "Steam Broadcasting"
 "Broadcast_FirstTime_OK" "OK"
 "Broadcast_FirstTime_Cancel" "Annuler"
@@ -706,12 +708,12 @@
 "Broadcast_Notification_Stopped_Public" "Tous les utilisateurs ont arrêté de regarder votre diffusion publique"
 "Broadcast_Notification_Is_Watching" "regarde votre diffusion"
 "Broadcast_Notification_AvailableToWatch_Title" "La diffusion est activée !"
-"Broadcast_Notification_AvailableToWatch_Friends" "Vos amis peuvent rejoindre votre diffusion à tout moment."
+"Broadcast_Notification_AvailableToWatch_Friends" "Vos contacts peuvent rejoindre votre diffusion à tout moment."
 "Broadcast_Notification_AvailableToWatch_Public" "Tous les utilisateurs de Steam peuvent rejoindre votre diffusion à tout moment."
 
 "Steam_Settings_BroadcastTitle" "Diffusion"
 "Steam_Settings_Broadcast_Disabled" "Diffusion désactivée"
-"Steam_Settings_Broadcast_InviteOnly" "Seul les amis que j'invite"
+"Steam_Settings_Broadcast_InviteOnly" "Seuls les contacts que j'invite"
 "Steam_Settings_Broadcast_FriendsApprove" "Mes contacts peuvent demander à me regarder jouer"
 "Steam_Settings_Broadcast_FriendsAllowed" "Mes contacts peuvent regarder"
 "Steam_Settings_Broadcast_FriendsPublic" "Tout le monde peut regarder"

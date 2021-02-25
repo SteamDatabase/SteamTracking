@@ -21,7 +21,7 @@
 "SteamUI_ConvertExistingInfo" "Převádění stávající instalace hry. Tato operace může trvat několik minut."
 "SteamUI_ConversionCompleteInfo" "Předběžné stahování ve službě Steam bylo dokončeno."
 
-"SteamUI_ConvertExistingStatus1" "Předběžné stahování %s1 souborů z disku."
+"SteamUI_ConvertExistingStatus1" "Předběžné stahování souborů hry %s1 z disku."
 "SteamUI_ConvertExistingStatus2" "Předběžné stahování %s1 souborů z disku.."
 "SteamUI_ConvertExistingStatus3" "Předběžné stahování %s1 souborů z disku…"
 
@@ -51,7 +51,7 @@ rohu obrazovky. Chcete-li použít službu Steam, klepněte na její ikonu prav�
 "SteamRootAccount" 	"Účet"
 "SteamRootSettings"	"Nastavení"
 "SteamRootMonitor"	"Sledování"
-"SteamRootNews"		"Zprávy"
+"SteamRootNews"		"Novinky"
 "SteamRootClose" 		"Zavřít"
 "SteamRootLabel1" "Vyberte hru a začněte hrát!"
 "SteamRootLabel2" "Nalezněte přátele, konverzujte, hrajte společně"
@@ -1152,7 +1152,7 @@ Tato operace zabere jenom okamžik."
 "Steam_SubscriptionApprovalCode" "Ověření"
 "Steam_SubscriptionConfirmation" "Potvrzovací kód"
 
-"Steam_TroubleshooterURL_CDKey" "http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=276"
+"Steam_TroubleshooterURL_CDKey" "https://support.steampowered.com/kb/1968-HKLX-7538&l=czech/"
 
 "Steam_SubscriptionSuccess_CDKey_Headline" "Aktivace byla úspěšná!"
 "Steam_SubscriptionSuccess_CDKey" "Váš kód produktu byl úspěšně aktivován. Produkty vypsané níže jsou nyní trvale propojeny s Vaším účtem služby Steam. Chcete-li k aktivovaným produktům získat přístup, musíte se přihlásit k tomuto účtu.\n\nPro případné budoucí užití si vytiskněte potvrzení této transakce."
@@ -1222,7 +1222,7 @@ Tato operace zabere jenom okamžik."
 "Steam_Subscription_HardwarePromo_Used_Headline" "Duplicitní registrace"
 "Steam_Subscription_HardwarePromo_Used" "Tato nabídka již byla využita jiným účtem služby Steam."
 "Steam_PurchaseError_HardwarePromoIneligible" "Omlouváme se, ale váš počítač nesplňuje systémové požadavky na hru %subscription%."
-"Steam_HardwarePromo_SupportURL" "http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=628"
+"Steam_HardwarePromo_SupportURL" "https://support.steampowered.com/kb/2734-UDFX-1098&l=czech/"
 
 "Steam_Subscription_HardwarePromo_AlreadyPurchased_Headline" "Produkt již vlastníte"
 "Steam_Subscription_HardwarePromo_AlreadyPurchased" "Tento účet služby Steam již disponuje produkty obsaženými \nv této nabídce. Abyste je nalezli, přejděte do svojí knihovny."
@@ -1498,7 +1498,8 @@ Změna se projeví až po odhlášení z OSX."
 "Steam_DutyNote"	"Zboží bude dopraveno z USA. Jste povinni zaplatit všechny příslušné celní poplatky."
 
 "Steam_AgreeToTheTerms"		"Souhlasím s podmínkami"
-"Steam_SteamSubscriberAgreement"	"Smlouva o užívání služby Steam"
+"Steam_SteamSubscriberAgreement"	    "Smlouva o užívání služby Steam"
+"Steam_SteamSubscriberAgreement_china"	"Smlouva o užívání služby Steam China"
 "Steam_ComplianceRequired_Title"	"Steam – Upozornění"
 "Steam_ComplianceRequired_Info"		"Před pokračováním je vyžadováno odsouhlasení podmínek Smlouvy o užívání služby Steam."
 
@@ -1549,7 +1550,7 @@ Změna se projeví až po odhlášení z OSX."
 "Steam_BackupFileSize"			"Velikost souboru"
 "Steam_BackupSize_CD"			"CD [640 MB]"
 "Steam_BackupSize_DVD"			"DVD [4,7 GB]"
-"Steam_BackupFileName"			"Jméno souboru se zálohou"
+"Steam_BackupFileName"			"Název souboru se zálohou"
 "Steam_SelectBackupDirectory_Title"	"Vyberte složku se zálohou"
 "Steam_DisksRequiredApprox"		"Přibližné množství komprimovaných\nsouborů, které budou zapsány:"
 "Steam_BackupWizard_OpenFolder"	"Otevřít složku se zálohou"
@@ -1617,9 +1618,10 @@ Změna se projeví až po odhlášení z OSX."
 "Steam_ConnectionFailureTitle"	"Chyba připojení"
 "Steam_ConnectionFailureDetail"	"Služba Steam se nemůže připojit k síti. Může se jednat o potíže s připojením k Internetu."
 "Steam_ConnectionSupportLink"	"Řešení problémů s připojením"
-"Steam_ConnectionSupportURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=11"
+"Steam_ConnectionSupportURL"	"https://support.steampowered.com/kb/1456-EUDN-2493&l=czech/"
 
 "SteamUI_NetworkTroubleshootingTips"	"Tipy pro řešení problémů se sítí"
+"SteamUI_NetworkTroubleshootingTips_URL"	"https://support.steampowered.com/kb_article.php?ref=1456-EUDN-2493&l=czech"
 
 
 "SteamUI_SSA_Agree"				"Přečtěte si pozorně celou smlouvu. Chcete-li pokračovat, musíte souhlasit s podmínkami Smlouvy o užívání služby Steam."
@@ -1648,13 +1650,13 @@ Změna se projeví až po odhlášení z OSX."
 
 "Steam_Universe_Internal" 	"[%universe%]"
 
-"Steam_News"		"Zprávy"
+"Steam_News"		"Novinky"
 "Steam_Friends"		"Přátelé"
 "Steam_Servers"		"Servery"
 "Steam_Settings"	"Nastavení"
 "Steam_Support"	"Podpora"
 
-"Steam_News_Upper"	"ZPRÁVY"
+"Steam_News_Upper"	"NOVINKY"
 "Steam_Friends_Upper"	"PŘÁTELÉ"
 "Steam_Servers_Upper"	"SERVERY"
 "Steam_Settings_Upper"	"NASTAVENÍ"
@@ -1683,6 +1685,16 @@ Změna se projeví až po odhlášení z OSX."
 "steam_menu_downloads"	"Stahování"
 "steam_menu_account"	"Steam"
 "steam_menu_window" "Okno"
+"steam_menu_preferences"	"Možnosti..."
+"steam_menu_services"	"Služby"
+"steam_menu_hidesteam"	"Skrýt Steam"
+"steam_menu_hideothers"	"Skrýt ostatní"
+"steam_menu_showall"	"Zobrazovat vše"
+"steam_menu_quitsteam"	"Ukončit Steam"
+"steam_menu_window_close"	"Zavřít"
+"steam_menu_window_minimize"	"Minimalizovat"
+"steam_menu_window_zoom"	"Přiblížit"
+"steam_menu_window_bringalltofront"	"Vše zobrazit navrchu"
 "steam_menu_games_details"	"Hry s podrobnostmi"
 "steam_menu_games_list"		"Seznam her"
 "steam_menu_games_grid"		"Mřížka her"
@@ -2387,16 +2399,16 @@ Změna se projeví až po odhlášení z OSX."
 "Steam_RegionRestricted_Title"			"Steam – Hra je nedostupná"
 "Steam_RegionRestrictedPurchase_Info"				"Hra byla aktivována kódem produktu, který je platný pouze v určité geografické oblasti. Protože se nenacházíte v dané oblasti, není možné hrát hru %game%."
 "Steam_RegionRestricted_SupportLink"		"Další informace naleznete na webové stránce podpory služby Steam"
-"Steam_RegionRestrictedPurchase_SupportURL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=461"
+"Steam_RegionRestrictedPurchase_SupportURL"		"https://support.steampowered.com/kb/1266-QFZC-2141&l=czech/"
 "Steam_RegionRestricted_Info"				"Hra %game% není dostupná ve vaší oblasti."
-"Steam_RegionRestricted_SupportURL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=461"
+"Steam_RegionRestricted_SupportURL"		"https://support.steampowered.com/kb/1266-QFZC-2141&l=czech/"
 
 "Steam_CountryRestricted_Info"				"Tento titul nelze ve vaší zemi zakoupit."
-"Steam_CountryRestricted_SupportURL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=488"
+"Steam_CountryRestricted_SupportURL"		"https://support.steampowered.com/kb/1266-QFZC-2141&l=czech/"
 
 "Steam_RegionRestrictedCode_Title"		"Steam – Produkt je nedostupný"
 "Steam_RegionRestrictedCode_Info"			"Tento kód produktu nemůže být aktivován ve vaší oblasti."
-"Steam_RegionRestrictedCode_SupportURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=463"
+"Steam_RegionRestrictedCode_SupportURL"	"https://support.steampowered.com/kb/1266-QFZC-2141&l=czech/"
 
 "Steam_FragmentationBad_Title"			"Steam – Varování fragmentace disku"
 "Steam_FragmentationBad_Info"				"Soubory hry vykazují vysokou úroveň fragmentace. Fragmentace způsobuje pomalé nahrávání a snižuje rychlost hry.  \n\nSlužba Steam pro vás nyní může optimalizovat soubory hry.\n"
@@ -2767,7 +2779,7 @@ Vytvořte si nového přítele tím, že někomu známému pošlete e-mailem dá
 "Steam_GuestPassAccept_HeadlineServiceUnavailable$type=guestpass"	"Přijetí zkušební nabídky se nezdařilo"
 "Steam_GuestPassAccept_TextServiceUnavailable"	"Tato služba je dočasně nedostupná nebo se Váš počítač nemůže spojit se servery služby Steam. Zkuste to znovu později."
 "Steam_GuestPassAccept_LinkTextServiceUnavailable" 	"Chcete-li vyřešit potíže s dárky, navštivte tuto stránku s podporou."
-"Steam_GuestPassAccept_LinkURLServiceUnavailable"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=550"
+"Steam_GuestPassAccept_LinkURLServiceUnavailable"	"https://support.steampowered.com/kb/6262-QXCN-0755&l=czech/"
 
 "Steam_GuestPassAccept_HeadlineRevoked$type=guestpass"	"Tato zkušební nabídka byla zrušena"
 "Steam_GuestPassAccept_TextRevoked$type=guestpass"	"Přítel, který vám poslal zkušební nabídku, se rozhodl ji zrušit a poslal nový aktivační kód. Pokud byla nová nabídka odeslána vám, obdržíte nový e-mail s aktualizovaným kódem."
@@ -2786,7 +2798,7 @@ Vytvořte si nového přítele tím, že někomu známému pošlete e-mailem dá
 "Steam_GuestPassRedeemed_HeadlineServiceUnavailable$type=guestpass"	"Aktivace zkušební nabídky se nezdařila"
 "Steam_GuestPassRedeemed_TextServiceUnavailable"	"Tato služba je dočasně nedostupná nebo se Váš počítač nemůže spojit se servery služby Steam. Zkuste to znovu později."
 "Steam_GuestPassRedeemed_LinkTextServiceUnavailable"	"Chcete-li vyřešit potíže se zkušebními nabídkami, navštivte tuto stránku s podporou."
-"Steam_GuestPassRedeemed_LinkURLServiceUnavailable"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=550"
+"Steam_GuestPassRedeemed_LinkURLServiceUnavailable"	"https://support.steampowered.com/kb/6262-QXCN-0755&l=czech/"
 
 "Steam_GuestPassRedeemed_HeadlineLimitExceeded"	"Již jste využili zkušební nabídku tohoto produktu"
 "Steam_GuestPassRedeemed_TextLimitExceeded"	"Protože jste již jednou využili zkušební nabídku titulu %package%, nemůžete přijmout další. Pokud chcete pokračovat v hraní této hry, zvažte její zakoupení."
@@ -2864,8 +2876,6 @@ Vytvořte si nového přítele tím, že někomu známému pošlete e-mailem dá
 "Steam_SubscriptionCancelled_PuchaseDeclined_ContactProvider"	"Nákup titulu %subscription% nebyl dokončen.\n\nSpolečnost %provider% hlásí problém s vaším účtem společnosti %provider%. Kontaktujte podporu společnosti %provider%, nebo klepněte na tlačítko „Zpět“ a zvolte jiný způsob platby."
 "Steam_SubscriptionCancelled_PuchaseDeclined_AcctNotVerified"	"Nákup titulu %subscription% nebyl dokončen.\n\nSpolečnost %provider% hlásí, že před dokončením nákupu musí být váš účet u společnosti %provider% ověřen, nebo musí být navýšen zůstatek na účtu. Kontaktujte podporu společnosti %provider%, nebo klepněte na tlačítko „Zpět“ a zvolte jiný způsob platby."
 
-"Steam_TroubleshooterURL_VfyAcct" "http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=687"
-
 "Steam_PaymentMethodNotAvailable_Generic" "Je nám líto, ale tento způsob platby není v tuto chvíli dostupný."
 
 "Steam_LaunchEULA_Title"			"%game%"
@@ -2875,11 +2885,12 @@ Vytvořte si nového přítele tím, že někomu známému pošlete e-mailem dá
 "Steam_LaunchEULA_Text"			"Přečtěte si pozorně celou smlouvu. Chcete-li hrát hru %game%, musíte souhlasit s podmínkami licenční smlouvy pro koncového uživatele."
 
 "Steam_GuestPasses_LinkText"		"Další informace o dárcích a zkušebních nabídkách"
-"Steam_GuestPasses_LinkURL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=549"
+"Steam_GuestPasses_LinkURL"		"https://support.steampowered.com/kb/6262-QXCN-0755&l=czech/"
 
 "Steam_AlreadyRunningError_Title"			"Steam – Nelze spustit"
 "Steam_AlreadyRunningError_Info"			"Klient služby Steam je na tomto počítači již spuštěn pod jiným uživatelským účtem. Chcete-li spustit klienta služby Steam, musíte se nejprve odhlásit z druhého účtu."
 "Steam_AlreadyRunningError_SupportLink"	"Další informace naleznete na stránkách podpory služby Steam."
+"Steam_AlreadyRunningError_SupportLink_URL"	"http://support.steampowered.com/kb_article.php?ref=8787-WYIL-1543&l=czech"
 "Steam_AlreadyRunningError_SupportTicket"	"Prosím, co nejdříve kontaktujte podporu služby Steam."
 
 "Steam_LoggedInElsewhere_Title"		"Steam – Přihlášení na jiném místě"
@@ -2911,6 +2922,7 @@ Vytvořte si nového přítele tím, že někomu známému pošlete e-mailem dá
 "Steam_GamesDialog_RightClick_RemoveFromUnblockedGames"		"Odebrat z rodinných her"
 
 "steam_menu_checkforupdates"						"Vyhledat aktualizace klienta služby Steam..."
+"steam_menu_checkforupdates_osx"					"Zkontrolovat aktualizace..."
 "steam_checkforupdates_title"						"Steam – aktualizace klienta"
 "steam_ClientUpdateAvailableDownloading"			"Probíhá stahování nové aktualizace klienta služby Steam."
 "steam_ClientUpdateAvailableDownloaded"			"Byla stažena aktualizace klienta služby Steam."
@@ -3352,7 +3364,7 @@ Odešlete dárek někomu z vašich známých a vytvořte tak nového přítele.
 "Steam_InstallAborted_InfoAppNoDemo"		"Hru %game% není možné nainstalovat, protože jde o demoverzi a vy vlastníte plnou verzi tohoto produktu. Nainstalujte prosím plnou verzi této hry."
 
 "Steam_Startup_SteamChinaRequiredTitle"					"Je vyžadován klient služby Steam China"
-"Steam_Startup_GetSteamChina"						"Hra %gamename% je nyní dostupná skrze klienta služby Steam China. Kliknutím na odkaz níže ho nainstalujte."
+"Steam_Startup_GetSteamChina"						"Hra %gamename% musí být spuštěna z nového klienta služby Steam China.\n\nAle nebojte, když se do klienta přihlásíte pomocí svého účtu hry %gamename%, bude přenesen Váš postup, položky, body a úroveň postavy.\n\n"
 "Steam_Startup_RunSteamChina"						"Hra %gamename% je nyní dostupná skrze klienta služby Steam China. Spusťte ho a hru importujte."
 "Steam_Startup_SteamChinaImportedUninstall"			"Hra %gamename% byla importována do klienta služby Steam China. Tento spouštěč můžete nyní bezpečně odinstalovat."
 "Steam_Startup_LauncherDeprecated"					"Hra %gamename% je nyní spouštěna skrze klienta služby Steam China. Tento spouštěč již není podporován a bude ukončen."
@@ -3360,6 +3372,7 @@ Odešlete dárek někomu z vašich známých a vytvořte tak nového přítele.
 "Steam_Startup_ImportGameFromLauncherMsg"			"Jakmile importujete hru %gamename% do klienta služby Steam China, budete moci bezpečně odinstalovat její zastaralý spouštěč."
 
 "Steam_Download_SteamChina"							"Stáhnout službu Steam China"
+"Steam_Get_SteamChina"								"Stáhnout Steam China"
 
 "Steam_ValidateGame_GameRunning"	"Před pokusem o ověření místních souborů hry ukončete všechny spuštěné hry a nástroje."
 
@@ -3368,8 +3381,8 @@ Odešlete dárek někomu z vašich známých a vytvořte tak nového přítele.
 "Steam_LibrariesLabel"	"Umístění knihovny"
 "Steam_DownloadRestrictionsLabel"	"Omezení stahování"
 
-"Steam_ServerBrowserPingRateLabel"	"Prohlížeč herních serverů: max. odezva za minutu"
-"Steam_ServerBrowserPingRateInfo"	"Pokud budete mít při procházení herních serverů problémy s připojením, zkuste snížit tuto hodnotu."
+"Steam_ServerBrowserPingRateLabel"	"Počet obnovení serverů za minutu"
+"Steam_ServerBrowserPingRateInfo"	"Máte při procházení herních serverů problémy s připojením? Zkuste snížit tuto hodnotu."
 "Steam_ServerBrowserPingRateDefault"	"Automaticky (%PingsPerMin%)"
 
 "Steam_TextFilterSettingLabel"									"Filtrování konverzací"
@@ -3381,7 +3394,7 @@ Odešlete dárek někomu z vašich známých a vytvořte tak nového přítele.
 "Steam_TextFilterSettingURL"									"Změnit nastavení filtrování konverzací"
 
 "Steam_SettingsInGameScreenshotFolder"	"Složka se snímky obrazovky"
-"Steam_SettingsInGameTitle"	"Překrytí služby Steam ve hře"
+"Steam_SettingsInGameTitle"	"Překrytí služby Steam"
 
 "SteamUI_JoinDialog_PreparingToPlay" 	"Připravuje se spuštění hry %game%%dots%"
 "SteamUI_JoinDialog_Title"		"Hra %game% – Steam"
@@ -3491,6 +3504,7 @@ Odešlete dárek někomu z vašich známých a vytvořte tak nového přítele.
 "Steam_RecoverLocked_UseCode" "Obdržel jsem zprávu od Podpory služby Steam a jsem připraven zadat můj speciální přístupový kód."
 "Steam_RecoverLocked_MustRecover" "Jaká emailová zpráva? Žádnou nemám..."
 "Steam_RecoverLocked_WhyIsThisHappening" "Proč se toto děje?"
+"Steam_RecoverLocked_WhyIsThisHappening_URL" "https://support.steampowered.com/kb_article.php?ref=4020-ALZM-5519&l=czech"
 "Steam_RecoverLocked_EnterCode" "Můj speciální přístupový kód je:"
 "Steam_RecoverLocked_EnterCodeDetails" "Jakmile bude Váš kód ověřen, funkce Steam Guard přidá tento počítač na seznam zařízení, která se mohou přihlásit k Vašemu účtu služby Steam."
 "Steam_RecoverLocked_WrongCode" "Je nám líto, ale zadaný kód nesouhlasí."
@@ -3504,7 +3518,9 @@ Odešlete dárek někomu z vašich známých a vytvořte tak nového přítele.
 "Steam_RecoverLocked_StartRecovery2" "Víme, že váš účet služby Steam je vám cenný, a proto jsme se zavázali pomoci Vám ho udržet ve správných rukou."
 "Steam_RecoverLocked_StartRecovery3" "Prosíme kontaktujte podporu služby Steam, naši zaměstnanci se Vám budou rádi věnovat. Oprávněné žádosti o pomoc s přístupem k účtu jsou naší hlavní prioritou."
 "Steam_RecoverLocked_RecoverySupportLink" "Kontaktovat Podporu služby Steam"
+"Steam_RecoverLocked_RecoverySupportLink_URL" "https://support.steampowered.com"
 "Steam_RecoverLocked_LearnMore" "Dozvědět se více o Intel® Identity Protection Technology"
+"Steam_RecoverLocked_LearnMore_URL" "https://support.steampowered.com/kb_article.php?ref=9400-IPAX-9398&auth=e39b5c227cffc8ae65414aba013e5fef"
 "Steam_RecoverLocked_CannotAccess" "Je nám líto, ale bez dodatečné autorizace se k tomuto účtu nelze z tohoto počítače přihlásit."
 "Steam_RecoverLocked_Success" "Povedlo se!"
 "Steam_RecoverLocked_SuccessDetails" "Nyní se můžete přihlásit z tohoto počítače k Vašemu účtu služby Steam. Počítač byl funkcí Steam Guard přidán do seznamu zařízení, ze kterých je povoleno k Vašemu účtu přistupovat."
@@ -3713,7 +3729,7 @@ Odešlete dárek někomu z vašich známých a vytvořte tak nového přítele.
 "Steam_MoreAchievements"	"+%moreachievements_notshown%"
 "Steam_AchievementsNeeded"	"Stále musíte odemknout %moreachievements% achievementů!"
 "Steam_MoreFriends"		"+%morefriends_notshown%"
-"steam_viewallnews"		"Zobrazit všechny zprávy"
+"steam_viewallnews"		"Zobrazit všechny novinky"
 "steam_newscontinued"		"Zjistěte více"
 "steam_NonSteam"		"Modifikace nebo zástupce nepatřící do služby Steam"
 "steam_NonSteam_OpenVR"		"Aplikace pro OpenVR"
@@ -3827,7 +3843,6 @@ Odešlete dárek někomu z vašich známých a vytvořte tak nového přítele.
 "steam_menu_friends" "Přátelé"
 "steam_menu_servers" "Servery"
 "steam_menu_settings" "Nastavení"
-"steam_menu_preferences" "Možnosti"
 "steam_menu_view_friends" "Zobrazit seznam přátel (%friends_online% Online)"
 "steam_menu_view_players" "Hráči"
 "steam_menu_add_friend" "Přidat přítele..."
@@ -3860,7 +3875,7 @@ Odešlete dárek někomu z vašich známých a vytvořte tak nového přítele.
 "tooltip_view_list"			"Zobrazit seznam"
 "tooltip_view_grid"			"Zobrazit mřížku"
 "tooltip_view_fullscreen"	"Režim Big Picture"
-"tooltip_view_vr_start"	"Spustit režim SteamVR "
+"tooltip_view_vr_start"	"Režim SteamVR "
 "tooltip_view_vr_exit"	"Ukončit režim SteamVR "
 "tooltip_sharedlibrary" 	"Začnete-li nyní hrát, obdrží uživatel %borrower% upozornění, že je načase skončit."
 "tooltip_sharedlibrary2"	"Zkuste hru zapnout později nebo si ji kupte do své vlastní knihovny a budete ji moci hrát ihned."
@@ -3894,14 +3909,14 @@ Odešlete dárek někomu z vašich známých a vytvořte tak nového přítele.
 "steam_menu_minimode"		"Kompaktní režim"
 "steam_menu_largemode"	"Standardní režim"
 "steam_menu_bigpicturemode"	"Režim Big Picture"
-"steam_menu_startvr"		"Spustit režim SteamVR (BETA)"
+"steam_menu_startvr"		"Režim SteamVR (BETA)"
 "steam_menu_exitvr"		"Ukončit režim SteamVR (BETA)"
 
 "steam_ClosedBeta_Title"	 "Neoprávněný"
 "steam_ClosedBeta_Message" "Tato verze služby Steam je nyní v uzavřené betě.\nPro pokračování se přihlaste se schváleným účtem."
 
 "Overlay_GlobalSettingDisabled_Title" 	"Chyba"
-"Overlay_GlobalSettingDisabled_Body"	"Zdá se, že jste v nastavení klienta služby Steam (které se vztahuje na všechny hry) zakázali překrytí služby Steam ve hře.\n\nPokud chcete toto nastavení měnit pro jednotlivé hry, musíte překrytí opět povolit."
+"Overlay_GlobalSettingDisabled_Body"	"Zdá se, že jste v nastavení klienta služby Steam (které se vztahuje na všechny hry) zakázali překrytí služby Steam.\n\nPokud chcete toto nastavení měnit pro jednotlivé hry, musíte překrytí opět povolit."
 
 "steam_voice_unknowncodec"	"Neznámy hlasový kodek na druhém konci – probíhá zavěšování. Druhá strana pravděpodobně používá novější verzi klienta služby Steam."
 "steam_voice_datacorrupted"	"Na druhém konci byla přijata poškozená hlasová data – probíhá zavěšování."
@@ -3968,16 +3983,16 @@ Odešlete dárek někomu z vašich známých a vytvořte tak nového přítele.
 
 "Steam_SupportAlert"	"Máte upozornění od podpory"
 "steam_inventory"	"Inventář"
-"steam_inbox_item"	"1 nová položka ve Vašem inventáři"
-"steam_inbox_items"	"%items% nových položek ve Vašem inventáři"
+"steam_inbox_item"	"1 nová položka"
+"steam_inbox_items"	"%items% nových položek"
 "steam_inbox_invite"	"1 nová žádost"
 "steam_inbox_invites"	"%invites% nových žádostí"
 "steam_inbox_gift"	"1 nový dárek"
 "steam_inbox_gifts"	"%gifts% nových dárků"
 "steam_inbox_commentnotification"	"1 nový komentář"
 "steam_inbox_commentnotifications"	"%comments% nových komentářů"
-"steam_inbox_offlinemessage"	"1 nepřečtená zpráva z konverzace"
-"steam_inbox_offlinemessages"	"%offlinemessages% nepřečtených zpráv z konverzace"
+"steam_inbox_offlinemessage"	"1 nepřečtená zpráva"
+"steam_inbox_offlinemessages"	"%offlinemessages% nepřečtených zpráv"
 
 "SteamUI_ContentMgr_ManageInstalledApps" "Steam – složky knihovny"
 "SteamUI_ContentMgr_ManageInstalledAppsInfo" "Spravujte umístění obsahu na více discích"
@@ -4124,7 +4139,7 @@ Odešlete dárek někomu z vašich známých a vytvořte tak nového přítele.
 
 
 "steam_subnav_featured"		"Zajímavé položky"
-"steam_subnav_news"			"Zprávy"
+"steam_subnav_news"			"Novinky"
 "steam_subnav_recommended"	"Doporučené"
 "steam_subnav_discovery_queue"		"Fronta doporučení"
 "steam_subnav_points_shop"		"Věrnostní obchod"
@@ -4463,7 +4478,7 @@ Odešlete dárek někomu z vašich známých a vytvořte tak nového přítele.
 "Steam_Settings_Controller"					"Ovladač"
 "Steam_SettingsControllerTitle"				"Vlastnosti ovladače"
 "Steam_SettingsControllerDescription"		"Ve vlastnostech ovladače můžete povolit podporu nastavení určitých ovladačů, přizpůsobit si vybraný ovladač či provést další změny."
-"Steam_SettingsControllerGeneralSettings"	"Vlastnosti ovladače"
+"Steam_SettingsControllerGeneralSettings"	"Obecná nastavení ovladače"
 "Steam_SettingsControllerBindingDescription"		"Pomocí nastavení ovladače můžete určit, jak a kdy se bude chovat mimo hru."
 "Steam_SettingsControllerBigPictureConfig"	"Nastavení pro režim Big Picture"
 "Steam_SettingsControllerDesktopConfig"		"Nastavení pro plochu systému"
@@ -4568,6 +4583,7 @@ Odešlete dárek někomu z vašich známých a vytvořte tak nového přítele.
 "Steam_Settings_Streaming_SoftwareEncodingThreads_7"	"7"
 "Steam_Settings_Streaming_SoftwareEncodingThreads_8"	"8"
 "Steam_Settings_Streaming_P2PScope_Description"	"Povolit přímé spojení (sdílení IP)"
+"Steam_Settings_Streaming_P2PScopeAutomatic"	"Automaticky (povoleno)"
 "Steam_Settings_Streaming_P2PScopeDisabled"	"Zakázáno"
 "Steam_Settings_Streaming_P2PScopeOnlyMe" "Moje zařízení"
 "Steam_Settings_Streaming_P2PScopeEveryone" "Všechna zařízení"
@@ -4592,6 +4608,7 @@ Odešlete dárek někomu z vašich známých a vytvořte tak nového přítele.
 "Steam_Settings_Streaming_EnableTouchController"	"Povolit dotykový ovladač"
 
 "Steam_Settings_Streaming_StreamingSupport"	"Zobrazit časté dotazy"
+"Steam_Settings_Streaming_StreamingSupportLink"	"https://support.steampowered.com/kb_article.php?ref=3629-RIAV-1617&l=czech"
 
 "Steam_Settings_Streaming_Connected" "Počítač připojen"
 "Steam_Settings_Streaming_Paired" "Zařízení spárováno"
@@ -4602,6 +4619,15 @@ Odešlete dárek někomu z vašich známých a vytvořte tak nového přítele.
 
 "Steam_Settings_Streaming_PIN_Title" "Nastavit bezpečnostní kód pro Steam Link"
 "Steam_Settings_Streaming_PIN_Text" "Nastavte numerický kód PIN, který musí být na zařízení/v aplikaci Steam Link zadán před každým streamováním z tohoto počítače:"
+
+"Steam_Settings_ShareIPNetworking_Label" "Steam Networking"
+"Steam_Settings_ShareIPNetworking_Info" "Povoluje hrám využívajícím funkci Steam Networking sdílet Vaši IP adresu pro zrychlení spojení"
+"Steam_Settings_ShareIPNetworking_Default" "Výchozí"
+"Steam_Settings_ShareIPNetworking_Always" "Vždy"
+"Steam_Settings_ShareIPNetworking_FriendsOnly" "Pouze s přáteli"
+"Steam_Settings_ShareIPNetworking_Never" "Nikdy"
+"Steam_Settings_ShareIPNetworking_URL" "Zjistit více"
+"Steam_Settings_ShareIPNetworking_URLText" "https://support.steampowered.com/kb_article.php?ref=9929-UAFN-9329&l=czech"
 
 "SteamUI_StreamingIntro_Title"		"Vítá Vás funkce Steam Remote Play"
 "SteamUI_StreamingIntro"			"Chystáte se spustit tuto hru na vzdáleném počítači a hrát ji zde prostřednictvím funkce Steam Remote Play."
@@ -4744,4 +4770,9 @@ Odešlete dárek někomu z vašich známých a vytvořte tak nového přítele.
 
 "SteamUI_RunningConflictingSoftware" "Byl zjištěn konfliktní software"
 "SteamUI_RunningIncompatibleTcpService" "V procesu klienta služby Steam byla zjištěna nekompatibilní verze \nknihovny %incompatdll% (související se softwarem %incompatname%). \n\nPokud se při používání klienta služby Steam nebo hraní her \npotýkáte s pády nebo chybami připojení, doporučujeme aktualizovat či odinstalovat tento software."
+
+"Steam_XboxDriverInstall_Title"		"Instalace rozšíření ovladače Xbox"
+"Steam_XboxDriverInstall_Success"	"Rozšíření bylo úspěšně aktualizováno a bude aktivní po restartu počítače."
+"Steam_XboxDriverInstall_ServiceFailure"	"Aktualizace rozšíření se nezdařila. Instalace rozšíření se nezdařila. Je spuštěn aktualizovaný klient služby Steam a jste v něm přihlášeni?"
+"Steam_XboxDriverInstall_Failure"	"Aktualizace rozšíření se nezdařila, chyba = %error%"
 }

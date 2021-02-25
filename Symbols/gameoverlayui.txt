@@ -5761,7 +5761,7 @@
  T CDirIterator::CDirIterator(StringView, StringView)
  T CDirIterator::CurrentFileCreateTime() const
  T CDirIterator::CurrentFileLength() const
- T CDirIterator::CurrentFileName() const
+ T CDirIterator::CurrentFileName()
  T CDirIterator::CurrentFileWriteTime() const
  T CDirIterator::Init(StringView)
  T CDirIterator::IsValid() const
@@ -9121,6 +9121,7 @@
  T CRTime::RTime32ToString(unsigned int, bool, bool)
  T CRTime::Render(unsigned int)
  T CRTime::UpdateRealTime()
+ T CRYPTO_memcmp
  T CRefCountServiceBase<true, CRefMT>::DoAddRef() const
  T CRefCountServiceBase<true, CRefMT>::DoRelease() const
  T CRefreshLoginDialog::Activate(EResult)
@@ -10856,8 +10857,10 @@
  T OPENSSL_cleanse
  T OPENSSL_cpuid_setup
  T OPENSSL_ia32_cpuid
- T OPENSSL_ia32_rdrand
- T OPENSSL_ia32_rdseed
+ T OPENSSL_ia32_rdrand_bytes
+ T OPENSSL_ia32_rdseed_bytes
+ T OPENSSL_instrument_bus
+ T OPENSSL_instrument_bus2
  T OPENSSL_rdtsc
  T OPENSSL_wipe_cpu
  T OSOverlay()
@@ -11193,6 +11196,8 @@
  T non-virtual thunk to vgui::ListPanel::GetJumpStart()
  T non-virtual thunk to vgui::ListPanel::JumpToItem(int)
  T non-virtual thunk to vgui::ToolPanel::InstanceToolWindow(vgui::Panel*, bool, vgui::ToolPanel*, char const*, bool, bool)
+ T ossl_ctype_check
+ T ossl_tolower
  T pcre_compile
  T pcre_compile2
  T pcre_config
@@ -15737,6 +15742,7 @@
  r base_dither_matrix
  r bmask
  r catposstab
+ r ctype_char_map
  r digitab
  r error_texts
  r escapes

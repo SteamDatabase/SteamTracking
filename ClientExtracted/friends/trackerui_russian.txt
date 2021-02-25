@@ -170,7 +170,7 @@
 "Friends_InvitationBlocking"		"Вы заблокировали этого пользователя. Чтобы снова связаться с ним, откройте профиль пользователя в сообществе Steam и разблокируйте его."
 
 "Friends_DontGiveOutPassword"			"Никому не сообщайте свой пароль.\n"
-"Friends_DontGiveOutPassword_URL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=301"
+"Friends_DontGiveOutPassword_URL"		"https://support.steampowered.com/kb/1266-OAFV-8478&l=russian/"
 
 "Friends_ChatFilterBlockWarning"		"Ради вашей безопасности ссылка из сообщения ниже была удалена."
 
@@ -556,6 +556,7 @@
 "Friends_SteamCommunity"	"Сообщество Steam"
 "Limited_Explanation"	"Ваш аккаунт не отвечает необходимым требованиям для использования этой функции."
 "Limited_ForDetails"	"Узнайте больше на сайте службы поддержки Steam."
+"Limited_ForDetails_URL"	"https://help.steampowered.com/ru/wizard/HelpWithLimitedAccount"
 
 "Friends_Chat_RoomModerated_Entry"		"Теперь чат только для управляющих этой группы, изменения внёс пользователь %member_making_change%.\n"
 "Friends_Chat_RoomUnmoderated_Entry"		"Этот чат теперь для всех, изменения внёс пользователь %member_making_change%.\n"
@@ -687,6 +688,7 @@
 "Broadcast_FirstTime_PermissionHeader" "Уделите минуту настройкам…"
 "Broadcast_FirstTime_DesktopOnly" "По умолчанию транслироваться будет только окно игры. Ваш рабочий стол не попадет в вещание."
 "Broadcast_FirstTime_FAQ" "ЧаВо о трансляциях Steam"
+"Broadcast_FirstTime_FAQLink" "https://support.steampowered.com/kb_article.php?ref=6730-TOAK-6497&l=russian"
 "Broadcast_FirstTime_Title" "Трансляции Steam"
 "Broadcast_FirstTime_OK" "OK"
 "Broadcast_FirstTime_Cancel" "Отмена"

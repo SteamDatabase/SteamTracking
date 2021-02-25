@@ -397,6 +397,8 @@
  T GetPlatformName
  T GetPlatformNameFromEPlatformType
  T GetPortableOsVersionInformation
+ T GetReal1016Version(int*, int*, int*)
+ T GetReal1016Version(long*, long*, long*)
  T HashStringCaseless(char const*, unsigned long)
  T InstallUniformRandomStream
  T InterfaceReg::InterfaceReg(void* (*)(), char const*)
@@ -639,6 +641,7 @@
  T __clang_call_terminate
  T _strlwr
  T _strupr
+ T bool UsingWcharBufferFor<bool>(char*, bool (*)(char*, wchar_t*, int, int))
  T cIntToHexDigit(int)
  T int CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless, char const*>::FindOrInsert_Internal<char const* const&, bool>(char const* const&, bool&&, CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless, char const*>::ReplaceExisting)
  T int CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless, char const*>::InsertUnconstructed<char const* const&>(char const* const&, int*, bool)
@@ -693,6 +696,7 @@
  __stderrp
  __tolower
  __toupper
+ atoi
  b CFileReader::Read(void*, unsigned int, unsigned int*)::fAsserted
  b CStringNormalization::Initialize()::threadonce_1176_20
  b CStringNormalization::Normalize(bool, char const*, char*, int)::fAsserted
@@ -746,6 +750,7 @@
  dyld_stub_binder
  fcntl
  fcntl$UNIX2003
+ fgets
  flock
  fprintf
  free
@@ -770,6 +775,9 @@
  operator delete[](void*)
  operator new(unsigned long)
  operator new[](unsigned long)
+ pclose
+ popen
+ popen$UNIX2003
  pthread_mutex_lock
  pthread_mutex_unlock
  r (anonymous namespace)::UChar32ToLower(wchar_t, wchar_t (&) [3])::k_SpecialLowerCaseLookup1
@@ -830,11 +838,14 @@
  t (anonymous namespace)::UChar32ToLower(wchar_t, wchar_t (&) [3])
  t (anonymous namespace)::UChar32ToUpper(wchar_t, wchar_t (&) [3])
  t (anonymous namespace)::WrapSimpleCaseMapFunctor<wchar_t, &(anonymous namespace)::V_UTF32ToUChar32, V_towupper32>::operator()(wchar_t const*, wchar_t&, bool&)
+ t AggressiveStripPrecedingAndTrailingWhitespace(char*, wchar_t*, int, int)
  t CopyToMaxChars(char*, int, char const*, int)
  t GetNetAdrResolveCacheMutex()
  t GetStackPtr()
  t KeyValuesSystem()
  t LoadFileRangeIntoBuffer_Internal(StringView, unsigned long long, unsigned long long, CUtlBuffer&, bool, EFioModifiers)
+ t StripPrecedingAndTrailingWhitespace(char*, wchar_t*, int, int)
+ t StripUnprintable(char*, wchar_t*, int, int)
  t StripWhitespaceWorker(int, wchar_t*, bool*, bool)
  t _GLOBAL__sub_I_checksum_crc.cpp
  t _GLOBAL__sub_I_coroutine.cpp

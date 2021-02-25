@@ -38,7 +38,7 @@ vähintään 8 merkkiä."
 "WelcomeToSteamRetypePassword" "Kirjoita salasana uudelleen"
 "WelcomeAccountCreateComplete" "Olet valmis pelaamaan! Kiitos, että käytät Steamiä. Ohjelmakuvake
 näkyy tehtäväpalkissa – tavallisesti näytön oikeassa 
-alakulmassa. Kun haluat käyttää Steamiä, napsauta ohjelman kuvaketta hiiren kakkospainikkeella."
+alakulmassa. Kun haluat käyttää Steamiä, klikkaa ohjelman kuvaketta hiiren kakkospainikkeella."
 
 "SteamApp_Description"	"Steamin pelien hallintaan ja pelaamiseen tarkoitettu sovellus"
 
@@ -61,7 +61,7 @@ alakulmassa. Kun haluat käyttää Steamiä, napsauta ohjelman kuvaketta hiiren 
 "SteamRootLabel7" "Etsi ja pelaa uusia pelejä"
 
 "Steam_trayHint" "Steamin kuvake näkyy tehtäväpalkissa. Jos
-haluat käyttää Steamiä tai lopettaa sen käytön, napsauta ohjelman kuvaketta hiiren kakkospainikkeella."
+haluat käyttää Steamiä tai lopettaa sen käytön, klikkaa ohjelman kuvaketta hiiren kakkospainikkeella."
 
 "Steam_SubscribeUserInfo" "Kirjoita etunimesi ja sukunimesi täsmälleen siinä muodossa kuin ne näkyvät luottokortissasi."
 "Steam_EmailAddress" "Sähköpostiosoite"
@@ -336,8 +336,8 @@ Tämä kestää alle minuutin."
 "Steam_LogoutDialogOKButton"			"Kirjaudu ulos"
 "Steam_LogoutDialogLabel"			"Tilin nimi:"
 
-"Steam_FlushConfigDialogTitle"			"Steam - Tyhjennä latausten väliaikaistiedostot"
-"Steam_FlushConfigDialogMsg"			"Tämä tyhjentää paikalliset latausten väliaikaistiedostot ja sinun on kirjauduttava sisään uudelleen.\n\nHaluatko varmasti jatkaa?"
+"Steam_FlushConfigDialogTitle"			"Steam – tyhjennä latausvälimuisti"
+"Steam_FlushConfigDialogMsg"			"Tämä tyhjentää paikallisen latausvälimuistin, ja sinun on kirjauduttava Steamiin uudelleen.\n\nHaluatko varmasti jatkaa?"
 
 "Steam_AccountDialog_Logout"			"Kirjaudutaan ulos..."
 "Steam_RunGame_Title_Error"			"Steam - Virhe"
@@ -436,7 +436,7 @@ Tämä kestää alle minuutin."
 "Steam_DPIScaling_Option"				"Teksti- ja kuvakekoot näytön mukaan (uudelleenkäynnistettävä)"
 "Steam_LaunchSteamOnStartup_Option"		"Käynnistä Steam, kun tietokone käynnistyy"
 "Steam_BPMOnStartup_Option"				"Käynnistä Steam TV-tilassa"
-"Steam_ShowUrlBar_Option"				"Näytä Steamin URL-osoiterivi, kun se on käytettävissä"
+"Steam_ShowUrlBar_Option"				"Näytä verkko-osoiterivi, kun se on käytettävissä"
 "Steam_UseDirectWrite_Option"			"Käytä DirectWriteä fonttien pehmennykseen ja tasaukseen"
 "Steam_UseH264HWAccel_Option"			"Ota laitteistopohjainen videopurku käyttöön, jos tuettu (uudelleenkäynnistettävä)"
 
@@ -754,7 +754,7 @@ Tämä kestää alle minuutin."
 "SteamUI_Thai"			"thai"
 "SteamUI_Japanese"		"japani"
 "SteamUI_Portuguese"	"portugali"
-"SteamUI_Brazilian"	 	"brasilianportugali"
+"SteamUI_Brazilian"	 	"portugali – Brasilia"
 "SteamUI_Polish"		"puola"
 "SteamUI_Danish"		"tanska"
 "SteamUI_Dutch"			"hollanti"
@@ -771,7 +771,7 @@ Tämä kestää alle minuutin."
 // selection strings, pre-localized
 // do not localize these strings!
 "SteamUI_Selection_English"			"English (englanti)"
-"SteamUI_Selection_Spanish"			"Español-España (euroopanespanja)"
+"SteamUI_Selection_Spanish"			"Español – España (espanja – Espanja)"
 "SteamUI_Selection_French"			"Français (ranska)"
 "SteamUI_Selection_Italian"			"Italiano (italia)"
 "SteamUI_Selection_German"			"Deutsch (saksa)"
@@ -783,7 +783,7 @@ Tämä kestää alle minuutin."
 "SteamUI_Selection_Thai"			"ไทย (thai)"
 "SteamUI_Selection_Japanese"		"日本語 (japani)"
 "SteamUI_Selection_Portuguese"		"Português (portugali)"
-"SteamUI_Selection_Brazilian"	 "Português-Brasil (brasilianportugali)"
+"SteamUI_Selection_Brazilian"	 "Português – Brasil (portugali – Brasilia)"
 "SteamUI_Selection_Polish"		"Polski (puola)"
 "SteamUI_Selection_Danish"		"Dansk (tanska)"
 "SteamUI_Selection_Dutch"			"Nederlands (hollanti)"
@@ -797,7 +797,7 @@ Tämä kestää alle minuutin."
 "SteamUI_Selection_Turkish"			"Türkçe (turkki)"
 "SteamUI_Selection_Arabic"			"العربية (arabia)"
 "SteamUI_Selection_Ukrainian"			"Українська (ukraina)"
-"SteamUI_Selection_Latam_Spanish"	"Español-Latinoamérica (latinalaisenamerikanespanja)"
+"SteamUI_Selection_Latam_Spanish"	"Español – Latinoamérica (espanja – Lat. Am.)"
 "SteamUI_Selection_Vietnamese"		"Tiếng Việt (vietnam)"
 
 
@@ -1150,7 +1150,7 @@ Tämä kestää alle minuutin."
 "Steam_SubscriptionApprovalCode" "Valtuutus"
 "Steam_SubscriptionConfirmation" "Vahvistustunnus"
 
-"Steam_TroubleshooterURL_CDKey" "http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=276"
+"Steam_TroubleshooterURL_CDKey" "https://support.steampowered.com/kb_article.php?ref=7480-WUSF-3601&l=finnish"
 
 "Steam_SubscriptionSuccess_CDKey_Headline" "Aktivointi onnistui!"
 "Steam_SubscriptionSuccess_CDKey" "Tuotetunnuksesi on aktivoitu onnistuneesti. Alla oleva tuote, tai tuotteet, on nyt pysyvästi liitetty Steam-tiliisi. Jatkossa sinun tulee kirjautua tälle Steam-tilille käyttääksesi juuri aktivoimiasi tuotteita Steamissä.\n\nTulosta tapahtuman kuitti, jotta muistat tilisi tulevan käytön varalta."
@@ -1220,7 +1220,7 @@ Tämä kestää alle minuutin."
 "Steam_Subscription_HardwarePromo_Used_Headline" "Käytössä oleva rekisteröinti"
 "Steam_Subscription_HardwarePromo_Used" "Tämä tarjous on jo aktivoitu toisella Steam-tilillä."
 "Steam_PurchaseError_HardwarePromoIneligible" "Valitettavasti tämä tietokone ei täytä tarjouksen %subscription% järjestelmävaatimuksia."
-"Steam_HardwarePromo_SupportURL" "http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=628"
+"Steam_HardwarePromo_SupportURL" "https://support.steampowered.com/kb/2734-UDFX-1098/?l=finnish"
 
 "Steam_Subscription_HardwarePromo_AlreadyPurchased_Headline" "Tuote omistetaan jo"
 "Steam_Subscription_HardwarePromo_AlreadyPurchased" "Tämä Steam-tili omistaa jo tähän tarjoukseen\nsisältyvät tuotteet. Löydät ne pelikirjastostasi."
@@ -1294,8 +1294,8 @@ Tämä kestää alle minuutin."
 "Steam_InstallGameInfo_Preload"		"Olet esilataamassa peliä %game%.\n"
 
 "Steam_App_Install_Failed_Title"	"Steam - Virhe"
-"Steam_App_Install_Failed_Text"		"Tapahtui virhe asentaessa peliä %game% (%reason%)"
-"Steam_App_Install_Failed_Text_Long"	"Sovelluksen %game% asentamisessa tapahtui virhe (%reason%) :\n\n%detail%"
+"Steam_App_Install_Failed_Text"		"Tapahtui virhe asennettaessa sovellusta %game% (%reason%)"
+"Steam_App_Install_Failed_Text_Long"	"Tapahtui virhe asennettaessa sovellusta %game% (%reason%) :\n\n%detail%"
 
 "Steam_App_LegacyKey_Denied_Title" "Steam - Varoitus"
 
@@ -1307,8 +1307,8 @@ Tämä kestää alle minuutin."
 "Steam_App_LegacyKey_OutOfKeys_Text" "Steamin tuotetunnukset pelille %game% ovat väliaikaisesti loppu.\n\nVoimme myöntää sinulle tunnuksen, kun saamme niitä lisää julkaisijalta.\nYritä myöhemmin uudelleen tai pyydä hyvitystä."
 
 "Steam_App_Update_Failed_Title"	"Steam - Virhe"
-"Steam_App_Update_Failed_Text" "Tapahtui virhe päivitettäessä peliä %game% (%reason%)"
-"Steam_App_Update_Failed_Text_Long" "Sovelluksen %game% päivittämisessä tapahtui virhe (%reason%) :\n\n%detail%"
+"Steam_App_Update_Failed_Text" "Tapahtui virhe päivitettäessä sovellusta %game% (%reason%)"
+"Steam_App_Update_Failed_Text_Long" "Tapahtui virhe päivitettäessä sovellusta %game% (%reason%) :\n\n%detail%"
 "Steam_App_Update_NotEnoughDiskSpace" "Ei riittävästi kiintolevytilaa sovelluksen %game% päivittämiseen (%detail% puuttuu)"
 "Steam_App_Update_NotEnoughDiskQuota" "Ei riittävästi levykiintiötä sovelluksen %game% päivittämiseen (%detail% puuttuu)"
 "Steam_App_Update_LockedByProcess" "%program% lukitsi sovelluksen %game% tiedoston eikä sitä voi päivittää. Sulje kyseinen ohjelma ja yritä uudelleen.\n\n Ohjelma: %executable%\n Tiedosto: %detail%"
@@ -1384,13 +1384,13 @@ Tämä kestää alle minuutin."
 "SteamUI_VidDriverVersion"		"Versio:"
 
 "SteamUI_DriverOutdated_Title"		"Näytönohjaimen ajuri vanhentunut"
-"SteamUI_DriverOutdated_Info"		"Näytönohjaimen ajurit ovat vanhentuneet ja voivat aiheuttaa ongelmia, jos jatkat pelin suorittamista.  Suosittelemme, että napsautat alla olevaa linkkiä ja päivität näytönohjaimen ajurit näytönohjaimen valmistajan uusimpaan versioon."
+"SteamUI_DriverOutdated_Info"		"Näytönohjaimen ajurit ovat vanhentuneet ja voivat aiheuttaa ongelmia, jos jatkat pelin suorittamista.  Suosittelemme, että klikkaat alla olevaa linkkiä ja päivität näytönohjaimen ajurit näytönohjaimen valmistajan uusimpaan versioon."
 "SteamUI_OutdatedUrlLabel"		"Siirry ajurien päivityssivulle..."
 "SteamUI_ContinueOutdated"		"Jatka siitä huolimatta"
 "SteamUI_SuppressOutdated"		"Älä näytä tätä varoitusta uudelleen"
 
 "SteamUI_DriverUnsupported_Title"	"Ei tuettu näytönohjain"
-"SteamUI_DriverUnsupported_Info"	"Näytönohjaimesi ei täytä pelin minimivaatimuksia.  Jos päätät jatkaa pelin suorittamista siitä huolimatta, pelin vakaudessa tai suorituskyvyssä voi esiintyä ongelmia.  Suosittelemme, että napsautat alla olevaa linkkiä ja päivität näytönohjaimen ajurit näytönohjaimen valmistajan uusimpaan versioon."
+"SteamUI_DriverUnsupported_Info"	"Näytönohjaimesi ei täytä pelin minimivaatimuksia. Jos päätät siitä huolimatta jatkaa pelin suorittamista, pelin vakaudessa tai suorituskyvyssä voi esiintyä ongelmia.  Suosittelemme, että klikkaat alla olevaa linkkiä ja päivität näytönohjaimen ajurit uusimpaan versioon valmistajan tarjoamasta lähteestä."
 "SteamUI_DriverDenied_Info"		"Videolaitteistosi ei vastaa tälle pelille asetettuja vähimmäisvaatimuksia. Tätä peliä ei voida suorittaa tällä laitteistolla."
 "SteamUI_UnsupportedUrlLabel"		"Näytä minimivaatimukset..."
 "SteamUI_ContinueUnsupported"		"Jatka siitä huolimatta"
@@ -1454,7 +1454,7 @@ Sinun täytyy kirjautua ulos OS X:stä ottaaksesi asetukset käyttöön."
 "SteamUI_No_Throttle"							"Rajoittamaton"
 "SteamUI_ThrottleEditLabel"				"Syötä uusi arvo alle:"
 "SteamUI_ThrottleApplyChange"			"Käytä"
-"Steam_AutoUpdateTimeRestrictionLabel"	"Rajoita päivitysten aikataulua"
+"Steam_AutoUpdateTimeRestrictionLabel"	"Rajoita päivitysten aikataulu:"
 "Steam_AutoUpdateTimeRestrictionEnd"		"–"
 "Steam_AllowDownloadsDuringGameplay"	"Salli lataukset pelin ollessa käynnissä"
 "Steam_AllowDownloadsDuringGameplayDetails"	"Jos tämä asetus on valittu, Steam voi aloittaa tai jatkaa päivitysten lataamista pelin tai muun Steam-sovelluksen ollessa käynnissä. Voit myös ohittaa tämän asetuksen pelikohtaisesti jokaisen pelin ominaisuuksista."
@@ -1495,7 +1495,8 @@ Sinun täytyy kirjautua ulos OS X:stä ottaaksesi asetukset käyttöön."
 "Steam_DutyNote"	"Paketti toimitetaan Yhdysvalloista. Asiakas on vastuussa mahdollisista tullimaksuista."
 
 "Steam_AgreeToTheTerms"		"Hyväksyn Steam-tilaussopimuksen"
-"Steam_SteamSubscriberAgreement"	"Steam-tilaussopimus"
+"Steam_SteamSubscriberAgreement"	    "Steam-tilaussopimus"
+"Steam_SteamSubscriberAgreement_china"	"Steam China -lisenssisopimus"
 "Steam_ComplianceRequired_Title"	"Steam - Varoitus"
 "Steam_ComplianceRequired_Info"		"Steam-tilaussopimuksen ehdot on hyväksyttävä, ennen kuin voit jatkaa."
 
@@ -1614,9 +1615,10 @@ Sinun täytyy kirjautua ulos OS X:stä ottaaksesi asetukset käyttöön."
 "Steam_ConnectionFailureTitle"	"Yhteys katkesi"
 "Steam_ConnectionFailureDetail"	"Steam ei pysty muodostamaan yhteyttä verkkoon. Tämä voi johtua Internet-yhteyden viasta."
 "Steam_ConnectionSupportLink"	"Internet-yhteyden tarkistus"
-"Steam_ConnectionSupportURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=11"
+"Steam_ConnectionSupportURL"	"https://support.steampowered.com/kb/1456-EUDN-2493/?l=finnish"
 
 "SteamUI_NetworkTroubleshootingTips"	"Verkon vianmääritysvinkkejä"
+"SteamUI_NetworkTroubleshootingTips_URL"	"https://support.steampowered.com/kb_article.php?ref=1456-EUDN-2493&l=finnish"
 
 
 "SteamUI_SSA_Agree"				"Lue sopimus kokonaan. Sinun on hyväksyttävä Steam-tilaussopimuksen ehdot jatkaaksesi."
@@ -1680,6 +1682,16 @@ Sinun täytyy kirjautua ulos OS X:stä ottaaksesi asetukset käyttöön."
 "steam_menu_downloads"	"Lataukset"
 "steam_menu_account"	"Steam"
 "steam_menu_window" "Ikkuna"
+"steam_menu_preferences"	"Asetukset..."
+"steam_menu_services"	"Palvelut"
+"steam_menu_hidesteam"	"Piilota Steam"
+"steam_menu_hideothers"	"Piilota muut"
+"steam_menu_showall"	"Näytä kaikki"
+"steam_menu_quitsteam"	"Lopeta Steam"
+"steam_menu_window_close"	"Sulje"
+"steam_menu_window_minimize"	"Pienennä"
+"steam_menu_window_zoom"	"Zoomaa"
+"steam_menu_window_bringalltofront"	"Tuo kaikki eteen"
 "steam_menu_games_details"	"Pelitiedot"
 "steam_menu_games_list"		"Peliluettelo"
 "steam_menu_games_grid"		"Peliruudukko"
@@ -1987,18 +1999,18 @@ Sinun täytyy kirjautua ulos OS X:stä ottaaksesi asetukset käyttöön."
 "Steam_AlwaysKeepThisGameUpToDate$appType=tool"		"Pidä tämä työkalu aina ajan tasalla"
 
 "Steam_DoNotUpdateThisGame$appType=application"			"Päivitä tämä sovellus vasta kun käynnistän sen"
-"Steam_DoNotUpdateThisGame$appType=game"			"Päivitä tämä peli vasta kun käynnistän sen"
+"Steam_DoNotUpdateThisGame$appType=game"			"Päivitä peli vain käynnistyksen yhteydessä"
 "Steam_DoNotUpdateThisGame$appType=demo"			"Päivitä tämä demo vasta kun käynnistän sen"
 "Steam_DoNotUpdateThisGame$appType=media"			"Päivitä tämä media vasta kun käynnistän sen"
 "Steam_DoNotUpdateThisGame$appType=music"			"Älä päivitä tätä ääniraitaa automaattisesti"
 "Steam_DoNotUpdateThisGame$appType=tool"			"Päivitä tämä työkalu vasta kun käynnistän sen"
 
-"Steam_AutoUpdateBehaviorHighPriority$appType=application"			"Korkea prioriteetti - Päivitä tämä ohjelma aina ennen muita"
-"Steam_AutoUpdateBehaviorHighPriority$appType=game"			"Korkea prioriteetti - Päivitä tämä peli aina ennen muita"
-"Steam_AutoUpdateBehaviorHighPriority$appType=demo"			"Korkea prioriteetti - Päivitä tämä demo aina ennen muita"
-"Steam_AutoUpdateBehaviorHighPriority$appType=media"			"Korkea prioriteetti - Päivitä automaattisesti mahdollisimman pian"
-"Steam_AutoUpdateBehaviorHighPriority$appType=music"			"Korkea prioriteetti – Päivitä tämä ääniraita aina ennen muita"
-"Steam_AutoUpdateBehaviorHighPriority$appType=tool"			"Korkea prioriteetti - Päivitä tämä työkalu aina ennen muita"
+"Steam_AutoUpdateBehaviorHighPriority$appType=application"			"Korkea prioriteetti – päivitä tämä sovellus aina ennen muita päivityksiä"
+"Steam_AutoUpdateBehaviorHighPriority$appType=game"			"Korkea prioriteetti – päivitä tämä peli aina ennen muita pelejä"
+"Steam_AutoUpdateBehaviorHighPriority$appType=demo"			"Korkea prioriteetti – päivitä tämä demo aina ennen muita päivityksiä"
+"Steam_AutoUpdateBehaviorHighPriority$appType=media"			"Korkea prioriteetti – päivitä tämä media aina ennen muita päivityksiä"
+"Steam_AutoUpdateBehaviorHighPriority$appType=music"			"Korkea prioriteetti – päivitä tämä ääniraita aina ennen muita päivityksiä"
+"Steam_AutoUpdateBehaviorHighPriority$appType=tool"			"Korkea prioriteetti – päivitä tämä työkalu aina ennen muita päivityksiä"
 
 "Steam_GameProperties_AlwaysUpToDateInfo$appType=application" 	"Tämä sovellus ja sen päivitykset haetaan automaattisesti, kun ne ovat saatavilla."
 "Steam_GameProperties_AlwaysUpToDateInfo$appType=game" 	"Tämä peli ja sen päivitykset haetaan automaattisesti, kun ne ovat saatavilla."
@@ -2384,16 +2396,16 @@ Sinun täytyy kirjautua ulos OS X:stä ottaaksesi asetukset käyttöön."
 "Steam_RegionRestricted_Title"			"Steam - Peli ei käytettävissä"
 "Steam_RegionRestrictedPurchase_Info"				"Tämä peli aktivoitiin tuotetunnuksella, joka on voimassa vain tietyllä maantieteellisellä alueella. Koska et ole tällä hetkellä kyseisellä alueella, %game% ei ole pelattavissa."
 "Steam_RegionRestricted_SupportLink"		"Lisätietoja on saatavilla Steamin tukisivustossa"
-"Steam_RegionRestrictedPurchase_SupportURL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=461"
+"Steam_RegionRestrictedPurchase_SupportURL"		"https://support.steampowered.com/kb/1266-QFZC-2141/?l=finnish"
 "Steam_RegionRestricted_Info"				"%game% ei ole saatavilla alueellasi."
-"Steam_RegionRestricted_SupportURL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=461"
+"Steam_RegionRestricted_SupportURL"		"https://support.steampowered.com/kb/1266-QFZC-2141/?l=finnish"
 
 "Steam_CountryRestricted_Info"				"Tätä tilausta ei voi ostaa maassasi."
-"Steam_CountryRestricted_SupportURL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=488"
+"Steam_CountryRestricted_SupportURL"		"https://support.steampowered.com/kb/1266-QFZC-2141/?l=finnish"
 
 "Steam_RegionRestrictedCode_Title"		"Steam - Tuote ei käytettävissä"
 "Steam_RegionRestrictedCode_Info"			"Tätä tuotetunnusta ei voi aktivoida alueellasi."
-"Steam_RegionRestrictedCode_SupportURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=463"
+"Steam_RegionRestrictedCode_SupportURL"	"https://support.steampowered.com/kb/1266-QFZC-2141/?l=finnish"
 
 "Steam_FragmentationBad_Title"			"Steam - Levyn pirstoutumisvaroitus"
 "Steam_FragmentationBad_Info"				"Pelitiedostojen pirstoutuneisuusaste on erittäin suuri levyllä. Tämä voi pidentää pelin latausaikoja ja heikentää sen suorituskykyä.  \n\nSteam voi nyt optimoida pelitiedostot puolestasi.\n"
@@ -2743,7 +2755,7 @@ Sinun täytyy kirjautua ulos OS X:stä ottaaksesi asetukset käyttöön."
 "Steam_SendGuestPass_DuplicateNameError$type=guestpass"	"Yritit lähettää vierailuluvan itsellesi. Vierailulupien avulla pelin voi jakaa kaverien kanssa. Kutsu jokin tuttusi pelaamaan peliä %package% ilmaiseksi."
 
 "Steam_SendGuestPass_PendingErrorHeadline$type=guestpass" "Vierailulupa on jo lähetetty"
-"Steam_SendGuestPass_PendingError$type=guestpass"	"Olet jo lähettänyt vierailuluvan vastaanottajalle %search% edellisen 24 tunnin aikana. Samaan osoitteeseen ei voi lähettää vierailulupaa, ennen kuin edellisestä yrityksestä on kulunut 24 tuntia.\n\nNapsauta alla olevaa Takaisin-painiketta, jos haluat kokeilla toista vastaanottajaa."
+"Steam_SendGuestPass_PendingError$type=guestpass"	"Olet jo lähettänyt vierailuluvan vastaanottajalle %search% edellisen 24 tunnin aikana. Samaan osoitteeseen ei voi lähettää vierailulupaa, ennen kuin edellisestä yrityksestä on kulunut 24 tuntia.\n\\Klikkaa alla olevaa Takaisin-painiketta, jos haluat kokeilla toista vastaanottajaa."
 
 "Steam_SendGuestPass_InvitingFriendHeadline$type=guestpass" "Vierailulupaa lähetetään..."
 "Steam_SendGuestPass_InvitingFriend$type=guestpass"	"Vierailulupaasi lähetetään vastaanottajalle %search%.\nOdota..."
@@ -2764,7 +2776,7 @@ Voit saada kaverin nyt lähettämällä sähköpostitse lahjan jollekin tutulles
 "Steam_GuestPassAccept_HeadlineServiceUnavailable$type=guestpass"	"Vierailuluvan hyväksyminen epäonnistui"
 "Steam_GuestPassAccept_TextServiceUnavailable"	"Tietokoneesi ei voi tällä hetkellä luoda yhteyttä Steam-palvelimiin, tai palvelu on poistettu käytöstä väliaikaisesti. Yritä myöhemmin uudelleen."
 "Steam_GuestPassAccept_LinkTextServiceUnavailable" 	"Tietoja lahjojen vianmäärityksestä on tällä tukisivulla."
-"Steam_GuestPassAccept_LinkURLServiceUnavailable"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=550"
+"Steam_GuestPassAccept_LinkURLServiceUnavailable"	"https://support.steampowered.com/kb/6262-QXCN-0755/?l=finnish"
 
 "Steam_GuestPassAccept_HeadlineRevoked$type=guestpass"	"Tämä vierailulupa on peruutettu"
 "Steam_GuestPassAccept_TextRevoked$type=guestpass"	"Vierailuluvan sinulle lähettänyt henkilö on peruuttanut sen ja lähettänyt uudemman lunastuskoodin. Jos uusi koodi lähetettiin sinulle, saat sen pian sähköpostitse."
@@ -2783,7 +2795,7 @@ Voit saada kaverin nyt lähettämällä sähköpostitse lahjan jollekin tutulles
 "Steam_GuestPassRedeemed_HeadlineServiceUnavailable$type=guestpass"	"Vierailuluvan aktivoiminen epäonnistui"
 "Steam_GuestPassRedeemed_TextServiceUnavailable"	"Tietokoneesi ei voi tällä hetkellä luoda yhteyttä Steam-palvelimiin, tai palvelu on poistettu käytöstä väliaikaisesti. Yritä myöhemmin uudelleen."
 "Steam_GuestPassRedeemed_LinkTextServiceUnavailable"	"Tietoja vierailulupien vianmäärityksestä on tällä tukisivulla."
-"Steam_GuestPassRedeemed_LinkURLServiceUnavailable"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=550"
+"Steam_GuestPassRedeemed_LinkURLServiceUnavailable"	"https://support.steampowered.com/kb/6262-QXCN-0755/?l=finnish"
 
 "Steam_GuestPassRedeemed_HeadlineLimitExceeded"	"Olet jo käyttänyt tämän tuotteen vierailuluvan"
 "Steam_GuestPassRedeemed_TextLimitExceeded"	"Et voi hyväksyä pelin %package% vierailulupaa, koska olet aiemmin hyväksynyt sellaisen. Jos haluat jatkaa pelin pelaamista, voit ostaa sen."
@@ -2849,19 +2861,17 @@ Voit saada kaverin nyt lähettämällä sähköpostitse lahjan jollekin tutulles
 
 "Steam_SubscriptionCancelled_PayPalDeclined_InvalidShippingAddress"	"Pelin %subscription% ostoa ei ole suoritettu loppuun.\n\n%provider% on ilmoittanut ongelmasta, joka koskee %provider%-tiliisi liittyvää osoitetta. Voit ratkaista ongelman %provider%-palveluntarjoajan kanssa tai napsauttaa Takaisin-painiketta ja valita toisen maksutavan."
 "Steam_SubscriptionCancelled_PayPalDeclined_UseOtherFundingSource"	"Pelin %subscription% ostoa ei ole suoritettu loppuun.\n\n%provider% on ilmoittanut ongelmasta, joka koskee %provider%-tiliisi liittyvää rahoituslähdettä. Voit ratkaista ongelman %provider%-palveluntarjoajan kanssa tai napsauttaa Takaisin-painiketta ja valita toisen maksutavan."
-"Steam_SubscriptionCancelled_PayPalDeclined_UseOtherPaymentMethod"	"Pelin %subscription% ostoa ei ole suoritettu loppuun.\n\n%provider% on ilmoittanut valtuutusvirheestä. Napsauta Takaisin-painiketta ja valitse toinen maksutapa."
+"Steam_SubscriptionCancelled_PayPalDeclined_UseOtherPaymentMethod"	"Pelin %subscription% ostoa ei ole suoritettu loppuun.\n\n%provider% on ilmoittanut valtuutusvirheestä. Klikkaa Takaisin-painiketta ja valitse toinen maksutapa."
 "Steam_PayPalDeclined_SupportLink"									"Lisätietoja on saatavilla Steamin tukisivustossa."
 
 "Steam_SubscriptionCancelled_RegionNotSupported_Headline" "Maksutapaa ei tueta"
-"Steam_SubscriptionCancelled_RegionNotSupported" "Pelin %subscription% ostoa ei ole suoritettu loppuun.\n\nValitsemaasi maksutapaa ei voi tällä hetkellä käyttää asuinmaassasi. Napsauta Takaisin-painiketta ja valitse toinen maksutapa."
+"Steam_SubscriptionCancelled_RegionNotSupported" "Pelin %subscription% ostoa ei ole suoritettu loppuun.\n\nValitsemaasi maksutapaa ei voi tällä hetkellä käyttää asuinmaassasi. Klikkaa Takaisin-painiketta ja valitse toinen maksutapa."
 
 "Steam_SubscriptionCancelled_PayPalDeclined_Headline" "%provider%-valtuutus epäonnistui"
-"Steam_SubscriptionCancelled_PayPalDeclined" "Pelin %subscription% ostoa ei ole suoritettu loppuun.\n\n%provider% on ilmoittanut valtuutusvirheestä. Napsauta Takaisin-painiketta ja valitse toinen maksutapa."
+"Steam_SubscriptionCancelled_PayPalDeclined" "Pelin %subscription% ostoa ei ole suoritettu loppuun.\n\n%provider% on ilmoittanut valtuutusvirheestä. Klikkaa Takaisin-painiketta ja valitse toinen maksutapa."
 
 "Steam_SubscriptionCancelled_PuchaseDeclined_ContactProvider"	"Pelin %subscription% ostotapahtumaa ei voitu suorittaa loppuun.\n\n%provider% on ilmoittanut %provider%-tiliisi liittyvästä ongelmasta. Ota yhteyttä %provider%-tukeen tai vaihda maksutapaa klikkaamalla Takaisin-painiketta."
 "Steam_SubscriptionCancelled_PuchaseDeclined_AcctNotVerified"	"Pelin %subscription% ostotapahtumaa ei voitu suorittaa loppuun.\n\n%provider% on ilmoittanut, että oston suorittaminen vaatii %provider%-tilisi vahvistamista tai rahan siirtämistä tilille. Ota yhteyttä %provider%-tukeen tai vaihda maksutapaa valitsemalla Takaisin."
-
-"Steam_TroubleshooterURL_VfyAcct" "http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=687"
 
 "Steam_PaymentMethodNotAvailable_Generic" "Valitettavasti tämä maksutapa ei ole juuri nyt käytettävissä."
 
@@ -2872,11 +2882,12 @@ Voit saada kaverin nyt lähettämällä sähköpostitse lahjan jollekin tutulles
 "Steam_LaunchEULA_Text"			"Lue sopimus kokonaisuudessaan. Sinun on hyväksyttävä käyttöoikeussopimus voidaksesi pelata peliä %game%."
 
 "Steam_GuestPasses_LinkText"		"Lisätietoja lahjoista ja vierailuluvista"
-"Steam_GuestPasses_LinkURL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=549"
+"Steam_GuestPasses_LinkURL"		"https://support.steampowered.com/kb/6262-QXCN-0755/?l=finnish"
 
 "Steam_AlreadyRunningError_Title"			"Steam - käynnistäminen ei onnistu"
 "Steam_AlreadyRunningError_Info"			"Steam on jo käynnissä tällä koneella eri käyttäjätilillä. Lopeta Steam toisella käyttäjätilillä ja yritä käynnistää uudelleen."
 "Steam_AlreadyRunningError_SupportLink"	"Lisätietoja on saatavilla Steamin tukisivustossa"
+"Steam_AlreadyRunningError_SupportLink_URL"	"http://support.steampowered.com/kb_article.php?ref=8787-WYIL-1543&l=finnish"
 "Steam_AlreadyRunningError_SupportTicket"	"Ota yhteyttä Steamin tukeen niin pian kuin mahdollista"
 
 "Steam_LoggedInElsewhere_Title"		"Steam - Päällekkäinen sisäänkirjautuminen"
@@ -2908,6 +2919,7 @@ Voit saada kaverin nyt lähettämällä sähköpostitse lahjan jollekin tutulles
 "Steam_GamesDialog_RightClick_RemoveFromUnblockedGames"		"Poista perhepeleistä"
 
 "steam_menu_checkforupdates"						"Tarkista Steam-ohjelmiston päivitykset..."
+"steam_menu_checkforupdates_osx"					"Tarkista päivitykset..."
 "steam_checkforupdates_title"						"Steam – itsepäivitys"
 "steam_ClientUpdateAvailableDownloading"			"Steam-ohjelmiston päivitys on saatavilla ja sitä ladataan."
 "steam_ClientUpdateAvailableDownloaded"			"Steam-ohjelmiston päivitys on ladattu."
@@ -3113,7 +3125,7 @@ Betaversio on päättynyt - palaa nykyiseen versioon käynnistämällä Steam uu
 "Steam_Root_Title" 	"Steam"
 "Steam_Root_Title_Internal" 	"Steam"
 
-"Steam_CDKeyDisplayReason" "Tämä on tuotetunnus sovellusta %game% varten. Sinun on syötettävä tämä, kun sovellus on käynnistetty. Kirjoita tunnus muistiin tai napsauta Kopioi leikepöydälle -painiketta nyt."
+"Steam_CDKeyDisplayReason" "Tämä on tuotetunnus sovellusta %game% varten. Sinun on syötettävä tämä, kun sovellus on käynnistetty. Kirjoita tunnus muistiin tai klikkaa Kopioi leikepöydälle -painiketta nyt."
 "Steam_CDKeyDisplayReasonNoCopy" "Tämä on tuotetunnus sovellusta %game% varten. Sinun on syötettävä tämä, kun sovellus on käynnistetty. Kirjoita tunnus muistiin, jotta voit käyttää sitä myöhemmin sovelluksessa."
 
 "Steam_RequestingLegacyKey" "Pyydetään tunnusta..."
@@ -3149,7 +3161,7 @@ Betaversio on päättynyt - palaa nykyiseen versioon käynnistämällä Steam uu
 "Steam_SendGuestPass_DuplicateNameError$type=gift"	"Yritit lähettää lahjan itsellesi. Lahjojen avulla pelin voi jakaa kaverien kanssa. Kutsu jokin tuttusi pelaamaan peliä %package% ilmaiseksi."
 
 "Steam_SendGuestPass_PendingErrorHeadline$type=gift" "Lahja on jo lähetetty"
-"Steam_SendGuestPass_PendingError$type=gift"	"Olet jo lähettänyt lahjan vastaanottajalle %search% edellisen 24 tunnin aikana. Samaan osoitteeseen ei voi lähettää lahjaa, ennen kuin edellisestä yrityksestä on kulunut 24 tuntia.\n\nNapsauta alla olevaa Takaisin-painiketta, jos haluat kokeilla toista vastaanottajaa."
+"Steam_SendGuestPass_PendingError$type=gift"	"Olet jo lähettänyt lahjan vastaanottajalle %search% edellisen 24 tunnin aikana. Samaan osoitteeseen ei voi lähettää lahjaa, ennen kuin edellisestä yrityksestä on kulunut 24 tuntia.\n\\Klikkaa alla olevaa Takaisin-painiketta, jos haluat kokeilla toista vastaanottajaa."
 
 "Steam_SendGuestPass_InvitingFriendHeadline$type=gift" "Lähetetään lahjaa..."
 "Steam_SendGuestPass_InvitingFriend$type=gift"	"Lahjaasi lähetetään vastaanottajalle %search%.\nOdota..."
@@ -3211,7 +3223,7 @@ Saat uuden Steam-kaverin lähettämällä sähköpostitse lahjan jollekin tutull
 
 "Steam_ForcedGiftPurchase_Next"	"Jos haluat ostaa tämän kohteen lahjaksi, jatka valitsemalla Seuraava."
 
-"Steam_Gift_Sentiment_BestWishes"	"Toivoo"
+"Steam_Gift_Sentiment_BestWishes"	"Terveisin"
 "Steam_Gift_Sentiment_BuckleUp"		"Vyöt kiinni ja menoksi"
 "Steam_Gift_Sentiment_Enjoy"		"Nauti lahjastasi"
 "Steam_Gift_Sentiment_GameOn"		"Peli käyntiin"
@@ -3349,7 +3361,7 @@ Saat uuden Steam-kaverin lähettämällä sähköpostitse lahjan jollekin tutull
 "Steam_InstallAborted_InfoAppNoDemo"		"%game% -peliä ei voi asentaa, koska se on demo ja omistat tuotteen täyden version. Asenna pelin täysi versio."
 
 "Steam_Startup_SteamChinaRequiredTitle"					"Steam China vaaditaan"
-"Steam_Startup_GetSteamChina"						"%gamename% on nyt saatavilla Steam Chinassa. Asenna asiakasohjelma tästä linkistä."
+"Steam_Startup_GetSteamChina"						"%gamename% pitää käynnistää nyt uuden Steam China -asiakasohjelman kautta.\n\nVoit kirjautua sisään pelin %gamename% tunnuksellasi ja siirtää pelin edistymisen, esineet, hahmojen tasot ja pisteet.\n\n"
 "Steam_Startup_RunSteamChina"						"%gamename% on nyt saatavilla Steam Chinassa. Käynnistä Steam China tuodaksesi pelin."
 "Steam_Startup_SteamChinaImportedUninstall"			"%gamename% on tuotu Steam Chinaan. Voit nyt turvallisesti poistaa tämän käynnistysohjelman."
 "Steam_Startup_LauncherDeprecated"					"Peli %gamename% käynnistetään nyt Steam Chinasta. Tätä asennusta ei enää tueta ja se suljetaan."
@@ -3357,6 +3369,7 @@ Saat uuden Steam-kaverin lähettämällä sähköpostitse lahjan jollekin tutull
 "Steam_Startup_ImportGameFromLauncherMsg"			"Haluatko tuoda pelin %gamename% Steam Chinaan? Voit sen jälkeen poistaa vanhan käynnistysohjelman turvallisesti."
 
 "Steam_Download_SteamChina"							"Lataa Steam China"
+"Steam_Get_SteamChina"								"Lataa Steam China"
 
 "Steam_ValidateGame_GameRunning"	"Sulje kaikki käynnissä olevat pelit ja työkalut ennen tiedostojen tarkistamista."
 
@@ -3365,7 +3378,7 @@ Saat uuden Steam-kaverin lähettämällä sähköpostitse lahjan jollekin tutull
 "Steam_LibrariesLabel"	"Sisältökokoelmat"
 "Steam_DownloadRestrictionsLabel"	"Latausrajoitukset"
 
-"Steam_ServerBrowserPingRateLabel"	"Pelinsisäinen palvelinselain: pingiä / minuutti (enintään)"
+"Steam_ServerBrowserPingRateLabel"	"Palvelinselaimen pingiä / minuutti"
 "Steam_ServerBrowserPingRateInfo"	"Jos havaitset yhteysongelmia pelipalvelimia selatessasi, kokeile pienentää tätä arvoa."
 "Steam_ServerBrowserPingRateDefault"	"Automaattinen (%PingsPerMin%)"
 
@@ -3488,6 +3501,7 @@ Saat uuden Steam-kaverin lähettämällä sähköpostitse lahjan jollekin tutull
 "Steam_RecoverLocked_UseCode" "Sain viestin Steamin tuelta ja olen valmis syöttämään pääsykoodini."
 "Steam_RecoverLocked_MustRecover" "Mikä sähköpostiviesti? Ei minulla semmoista ole..."
 "Steam_RecoverLocked_WhyIsThisHappening" "Miksi tämä tapahtuu?"
+"Steam_RecoverLocked_WhyIsThisHappening_URL" "https://support.steampowered.com/kb_article.php?ref=4020-ALZM-5519&l=finnish"
 "Steam_RecoverLocked_EnterCode" "Salainen turvakoodini on:"
 "Steam_RecoverLocked_EnterCodeDetails" "Kun koodisi on vahvistettu, Steam lisää tämän tietokoneen listaan tietokoneista, joiden sallitaan pääsy Steam-tiliisi."
 "Steam_RecoverLocked_WrongCode" "Anteeksi, tuo ei ole aivan oikein."
@@ -3501,7 +3515,9 @@ Saat uuden Steam-kaverin lähettämällä sähköpostitse lahjan jollekin tutull
 "Steam_RecoverLocked_StartRecovery2" "Tiedämme Steam-tilisi olevan sinulle arvokas, ja olemme sitoutuneet auttamaan sinua pitämään oikeudet siihen oikeissa käsissä."
 "Steam_RecoverLocked_StartRecovery3" "Ota yhteyttä Steamin tukeen saadaksesi apua henkilökuntamme jäseneltä. Aidot avunpyynnöt tiliin pääsyyn liittyvissä ongelmissa ovat meille erityisen tärkeitä."
 "Steam_RecoverLocked_RecoverySupportLink" "Ota yhteyttä Steamin tukeen"
+"Steam_RecoverLocked_RecoverySupportLink_URL" "https://support.steampowered.com"
 "Steam_RecoverLocked_LearnMore" "Lue lisää Intel® Identity Protection -teknologiasta"
+"Steam_RecoverLocked_LearnMore_URL" "https://support.steampowered.com/kb_article.php?ref=9400-IPAX-9398&auth=e39b5c227cffc8ae65414aba013e5fef&l=finnish"
 "Steam_RecoverLocked_CannotAccess" "Valitettavasti tätä tiliä ei voida käyttää tältä tietokoneelta ilman erillistä valtuutusta."
 "Steam_RecoverLocked_Success" "Onnistui!"
 "Steam_RecoverLocked_SuccessDetails" "Pääset nyt Steam-tilillesi tältä tietokoneelta. Steam Guard on lisännyt tämän tietokoneen sallituihin tietokoneisiin, joilta voit vastedes kirjautua Steam-tilillesi."
@@ -3826,7 +3842,6 @@ Luo ja valitse luokkia tälle pelille alla, minkä jälkeen voit kokoelman Näyt
 "steam_menu_friends" "Kaverit"
 "steam_menu_servers" "Palvelimet"
 "steam_menu_settings" "Asetukset"
-"steam_menu_preferences" "Asetukset"
 "steam_menu_view_friends" "Näytä kaverilista (%friends_online% paikalla)"
 "steam_menu_view_players" "Pelaajat"
 "steam_menu_add_friend" "Lisää kaveri..."
@@ -4008,7 +4023,7 @@ Luo ja valitse luokkia tälle pelille alla, minkä jälkeen voit kokoelman Näyt
 "SteamUI_ContentMgr_RemoveFailedDefaultFolder" "Oletusasennuskansiota ei voida poistaa."
 "SteamUI_ContentMgr_RemoveFailedUsedFolder" "Vain tyhjän Steam-kirjastokansion voi poistaa."
 "SteamUI_ContentMgr_FlushDownloadConfig" "Tyhjennä latausvälimuisti"
-"SteamUI_ContentMgr_FlushDownloadConfigInfo" "Lataustiedostojen poisto voi auttaa lataus- tai käynnistysongelmiin"
+"SteamUI_ContentMgr_FlushDownloadConfigInfo" "Latausvälimuistin tyhjennys voi auttaa lataus- tai käynnistysongelmiin"
 "SteamUI_ContentMgr_FlushDownloadConfigTip" "Tämä ei vaikuta jo asennettuihin tai tallennettuihin peleihin"
 
 "SteamUI_ContentMgr_Repair_Title" "Steam-kirjaston korjaaminen"
@@ -4199,7 +4214,7 @@ Luo ja valitse luokkia tälle pelille alla, minkä jälkeen voit kokoelman Näyt
 "Steam_Settings_Family_Sharing_Accounts" "Soveltuvat tilit"
 "Steam_Settings_Family_Sharing_Checked" "Jaa"
 "Steam_Settings_Family_Sharing_List_Empty" "Muita paikallistilejä ei löytynyt."
-"Steam_Settings_Family_Sharing_Borrowers" "Ole hyvä ja valitse enintään %maxborrowers% tiliä, jotka voivat käyttää kirjastoasi valtuuttamillasi tietokoneilla:"
+"Steam_Settings_Family_Sharing_Borrowers" "Valitse enintään %maxborrowers% tiliä, jotka voivat käyttää kirjastoasi valtuuttamillasi tietokoneilla:"
 "Steam_Settings_Family_Show_Notifications" "Näytä ilmoitus, kun jaetut kokoelmat ovat taas käytettävissä"
 
 "Steam_Settings_Family_Options_Title" "Perhenäkymä"
@@ -4207,7 +4222,7 @@ Luo ja valitse luokkia tälle pelille alla, minkä jälkeen voit kokoelman Näyt
 
 "Steam_Game_Family_Sharing_Unsupported" "Tämä tuote ei tällä hetkellä tue Steam-Lainaamoa."
 
-"Steam_AccountPage_ManageDeviceAuth"	"Hallitse Lainaamoa..."
+"Steam_AccountPage_ManageDeviceAuth"	"Hallinnoi Lainaamoa..."
 
 
 "Steam_DeviceAuth_Authorized_Notification" "Käyttäjän %owner% pelit ovat nyt saatavilla sinulle pelattavaksi tällä tietokoneella."
@@ -4568,6 +4583,7 @@ Luo ja valitse luokkia tälle pelille alla, minkä jälkeen voit kokoelman Näyt
 "Steam_Settings_Streaming_SoftwareEncodingThreads_7"	"7"
 "Steam_Settings_Streaming_SoftwareEncodingThreads_8"	"8"
 "Steam_Settings_Streaming_P2PScope_Description"	"Salli suora yhteys (jakaa IP-osoitteen)"
+"Steam_Settings_Streaming_P2PScopeAutomatic"	"Automaattinen (käytössä)"
 "Steam_Settings_Streaming_P2PScopeDisabled"	"Pois päältä"
 "Steam_Settings_Streaming_P2PScopeOnlyMe" "Laitteeni"
 "Steam_Settings_Streaming_P2PScopeEveryone" "Kaikki laitteet"
@@ -4592,6 +4608,7 @@ Luo ja valitse luokkia tälle pelille alla, minkä jälkeen voit kokoelman Näyt
 "Steam_Settings_Streaming_EnableTouchController"	"Ota kosketusohjaimet käyttöön"
 
 "Steam_Settings_Streaming_StreamingSupport"	"Näytä tukitiedot"
+"Steam_Settings_Streaming_StreamingSupportLink"	"https://support.steampowered.com/kb_article.php?ref=3629-RIAV-1617"
 
 "Steam_Settings_Streaming_Connected" "Tietokone yhdistetty"
 "Steam_Settings_Streaming_Paired" "Laitepari muodostettu"
@@ -4602,6 +4619,15 @@ Luo ja valitse luokkia tälle pelille alla, minkä jälkeen voit kokoelman Näyt
 
 "Steam_Settings_Streaming_PIN_Title" "Määritä Steam Linkin suojakoodi"
 "Steam_Settings_Streaming_PIN_Text" "Määritä numeromuotoinen PIN-tunnus, joka on syötettävä joka kerta Steam Linkiin tältä tietokoneelta striimatessa:"
+
+"Steam_Settings_ShareIPNetworking_Label" "Steam-verkkoyhteys"
+"Steam_Settings_ShareIPNetworking_Info" "Salli Steam-verkkoa käyttävien pelien jakaa IP-osoitteeni, jotta yhteyteni on nopeampi."
+"Steam_Settings_ShareIPNetworking_Default" "Oletus"
+"Steam_Settings_ShareIPNetworking_Always" "Aina"
+"Steam_Settings_ShareIPNetworking_FriendsOnly" "Vain kaverit"
+"Steam_Settings_ShareIPNetworking_Never" "Ei koskaan"
+"Steam_Settings_ShareIPNetworking_URL" "Lisätietoja"
+"Steam_Settings_ShareIPNetworking_URLText" "https://support.steampowered.com/kb_article.php?ref=9929-UAFN-9329"
 
 "SteamUI_StreamingIntro_Title"		"Tervetuloa – Steam Remote Play"
 "SteamUI_StreamingIntro"			"Olet käynnistämässä peliä toisella tietokoneella ja pelaamassa sitä Steam Remote Playn kautta täällä."
@@ -4744,4 +4770,9 @@ Luo ja valitse luokkia tälle pelille alla, minkä jälkeen voit kokoelman Näyt
 
 "SteamUI_RunningConflictingSoftware" "Ohjelmistoristiriita havaittu"
 "SteamUI_RunningIncompatibleTcpService" "Steamin prosessissa on tunnistettu yhteensopimaton\n%incompatdll% -versio (liittyy ohjelmaan %incompatname%).\n\nSuosittelemme päivittämään tämän ohjelman tai poistamaan sen asennuksen,\njos Steam tai yksittäiset pelit kaatuvat tai koet verkkoyhteyden hidastumista niitä käyttäessäsi."
+
+"Steam_XboxDriverInstall_Title"		"Xbox-ajurin asennus"
+"Steam_XboxDriverInstall_Success"	"Ajuri päivitetty ja käytössä, kun tietokone käynnistetään uudelleen."
+"Steam_XboxDriverInstall_ServiceFailure"	"Ajurin päivitys epäonnistui. Käytätkö Steamiä normaalina käyttäjänä? Onko Steam-palvelu käytössä ja ajan tasalla?"
+"Steam_XboxDriverInstall_Failure"	"Ajurin päivitys epäonnistui. Virhe: %error%"
 }

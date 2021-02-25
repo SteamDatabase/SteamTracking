@@ -40,7 +40,7 @@
 "vgui_no"			"いいえ"
 "vgui_CreateDirectoryFail_Title"	"フォルダー作成－エラー"
 "vgui_CreateDirectoryFail_Info"		"フォルダーの作成に失敗しました。このドライブは読み取り専用です。"
-"vgui_CreateDirectoryFail_AlreadyExists" "そのフォルダーは既に存在します。"
+"vgui_CreateDirectoryFail_AlreadyExists" "そのフォルダーはすでに存在します。"
 "vgui_ShuttingDown"		"シャットダウン中..."
 
 "TextEntry_Language"		"言語"

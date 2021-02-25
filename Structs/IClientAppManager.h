@@ -6,10 +6,8 @@ public:
     virtual unknown_ret LaunchApp(CGameID, unsigned int, unsigned int, char const*) = 0;
     virtual unknown_ret ShutdownApp(unsigned int, bool) = 0;
     virtual unknown_ret GetAppInstallState(unsigned int) = 0;
-    virtual unknown_ret GetAppBuildID(unsigned int) = 0;
-    virtual unknown_ret GetCurrentAppSizeOnDisk(unsigned int) = 0;
-    virtual unknown_ret GetRequiredAppsSizeOnDisk(unsigned int const*, int) = 0;
     virtual unknown_ret GetAppInstallDir(unsigned int, char*, unsigned int) = 0;
+    virtual unknown_ret GetAppContentInfo(unsigned int, bool, unsigned int*, unsigned int*, unsigned long long*) = 0;
     virtual unknown_ret IsAppDlcInstalled(unsigned int, unsigned int) = 0;
     virtual unknown_ret GetDlcDownloadProgress(unsigned int, unsigned int, unsigned long long*, unsigned long long*) = 0;
     virtual unknown_ret GetDlcSizeOnDisk(unsigned int, unsigned int) = 0;
@@ -81,7 +79,7 @@ public:
     virtual unknown_ret GetNumInstallBaseFolders() = 0;
     virtual unknown_ret GetInstallBaseFolder(int, char*, int) = 0;
     virtual unknown_ret AddInstallBaseFolder(char const*) = 0;
-    virtual unknown_ret RemoveInstallBaseFolder(int) = 0;
+    virtual unknown_ret RemoveInstallBaseFolder(int, bool) = 0;
     virtual unknown_ret GetFreeDiskSpace(int) = 0;
     virtual unknown_ret BGetDiskSpaceStats(int, unsigned long long*, unsigned long long*) = 0;
     virtual unknown_ret GetAppInstallBaseFolder(unsigned int) = 0;

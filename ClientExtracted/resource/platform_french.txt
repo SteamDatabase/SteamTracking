@@ -24,7 +24,7 @@
 "app_task_friend_status" "État de Steam"
 "app_task_exit_steam"	"Quitter Steam"
 "app_task_screenshots"	"Captures d'écran"
-"app_task_friend_activity" "Activité des amis"
+"app_task_friend_activity" "Activité des contacts"
 "app_task_console"	"Console"
 "app_task_musicplayer"	"Lecteur de musique"
 "app_task_steamvr"	"SteamVR"

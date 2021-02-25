@@ -66,7 +66,7 @@
 "Friends_FriendList_Offline"		"НЕ В МЕРЕЖІ"
 
 "Friends_SendInstantMessage"		"Надіслати повідомлення…"
-"Friends_Ignore"			"Заблокувати всі зв’язки..."
+"Friends_Ignore"			"Заблокувати всі зв’язки…"
 "Friends_UnIgnore"			"Розблокувати"
 "Friends_InviteFriendToGame"		"Запросити у гру"
 "Friends_JoinGame"				"Приєднатися до гри"
@@ -162,7 +162,7 @@
 "Friends_TargetHasTooManyFriends"		"Список друзів %search% переповнений!"
 "Friends_DefaultAddError"	 			"Виникла проблема під час додавання %search% до вашого списку друзів."
 "Friends_UnableToFindFriendByThatNameInvitePrompt"		"Не вдалося знайти користувача з адресою електронної пошти %search%.\n\nЯкщо ви хочете запросити %search% до Steam і списку своїх друзів, натисніть «Далі», або натисніть «Назад», щоби продовжити пошук."
-"Friends_InvitingFriend"				"Надсилання запрошення %search%..."
+"Friends_InvitingFriend"				"Надсилання запрошення %search%…"
 "Friends_InvitationPending"			"%search% нещодавно було запрошено приєднатися до Steam; якщо він погодиться, то буде доданий до ваших друзів.\n"
 "Friends_InvitationSent"				"%search% отримає запрошення електронною поштою і буде доданий до вашого списку друзів, якщо прийме запрошення.\n"
 "Friends_DefaultInviteError"			"Виникла проблема під час надсилання запрошення до %search%." 
@@ -170,7 +170,7 @@
 "Friends_InvitationBlocking"		"Ви заблокували всі зв’язки з цим користувачем. Спочатку розблокуйте його, відвідавши профіль користувача в спільноті Steam."
 
 "Friends_DontGiveOutPassword"			"Ніколи і нікому не кажіть свій пароль.\n"
-"Friends_DontGiveOutPassword_URL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=301"
+"Friends_DontGiveOutPassword_URL"		"https://support.steampowered.com/kb/1266-OAFV-8478/"
 
 "Friends_ChatFilterBlockWarning"		"Задля вашої безпеки посилання з повідомлення нижче було видалене."
 
@@ -556,6 +556,7 @@
 "Friends_SteamCommunity"	"Спільнота Steam"
 "Limited_Explanation"	"Ваш акаунт не відповідає вимогам для використання цієї функції."
 "Limited_ForDetails"	"Щоби дізнатися більше, відвідайте сайт технічної підтримки Steam."
+"Limited_ForDetails_URL"	"https://help.steampowered.com/wizard/HelpWithLimitedAccount"
 
 "Friends_Chat_RoomModerated_Entry"		"%member_making_change% змінив чат на адміністраторський.\n"
 "Friends_Chat_RoomUnmoderated_Entry"		"%member_making_change% зробив чат доступним для всіх.\n"
@@ -687,6 +688,7 @@
 "Broadcast_FirstTime_PermissionHeader" "Витратьте хвилинку для особистих налаштувань…"
 "Broadcast_FirstTime_DesktopOnly" "Стандартно можна дивитися лише саму гру. Ваш робочий стіл не буде транслюватися."
 "Broadcast_FirstTime_FAQ" "Прочитайте ЧаПи Трансляцій Steam"
+"Broadcast_FirstTime_FAQLink" "https://support.steampowered.com/kb_article.php?ref=6730-TOAK-6497"
 "Broadcast_FirstTime_Title" "Трансляції Steam"
 "Broadcast_FirstTime_OK" "Гаразд"
 "Broadcast_FirstTime_Cancel" "Скасувати"

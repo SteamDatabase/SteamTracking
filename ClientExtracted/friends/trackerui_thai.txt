@@ -170,7 +170,7 @@
 "Friends_InvitationBlocking"		"คุณกำลังบล็อคการติดต่อทั้งหมดกับผู้ใช้นี้ ก่อนที่จะติดต่อสื่อสารกัน คุณต้องเลิกบล็อคก่อนโดยเข้าไปที่หน้าโปรไฟล์ชุมชน Steam ของผู้ใช้นี้"
 
 "Friends_DontGiveOutPassword"			"อย่าบอกรหัสผ่านของคุณให้ผู้อื่นทราบ\n"
-"Friends_DontGiveOutPassword_URL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=301"
+"Friends_DontGiveOutPassword_URL"		"https://support.steampowered.com/kb/1266-OAFV-8478&l=thai/"
 
 "Friends_ChatFilterBlockWarning"		"ลิงก์ถูกลบออกจากข้อความต่อไปนี้เพื่อรักษาความปลอดภัยของคุณ"
 
@@ -556,6 +556,7 @@
 "Friends_SteamCommunity"	"ชุมชน Steam"
 "Limited_Explanation"	"บัญชีของคุณไม่ผ่านความต้องการขั้นต่ำที่จะใช้คุณสมบัตินี้"
 "Limited_ForDetails"	"เยี่ยมชมฝ่ายสนับสนุน Steam สำหรับข้อมูลเพิ่มเติม"
+"Limited_ForDetails_URL"	"https://help.steampowered.com/wizard/HelpWithLimitedAccount"
 
 "Friends_Chat_RoomModerated_Entry"		"ห้องแช็ตได้ถูกกำหนดเป็นการแช็ตแบบเจ้าหน้าที่เท่านั้นโดย %member_making_change% \n"
 "Friends_Chat_RoomUnmoderated_Entry"		"ห้องแช็ตได้ถูกกำหนดเป็นการแช็ตแบบผู้ใช้ทั้งหมดโดย %member_making_change% \n"
@@ -687,6 +688,7 @@
 "Broadcast_FirstTime_PermissionHeader" "ใช้เวลาสักครู่ในการเริ่มตั้งค่าการปรับแต่งของคุณ..."
 "Broadcast_FirstTime_DesktopOnly" "ตามค่าเริ่มต้น มีเพียงเนื้อหาเกมของคุณเท่านั้นที่สามารถรับชมได้ เดสก์ทอปของคุณจะไม่ถูกถ่ายทอดสด"
 "Broadcast_FirstTime_FAQ" "อ่านคำถามที่พบบ่อยของการถ่ายทอดสดบน Steam"
+"Broadcast_FirstTime_FAQLink" "https://support.steampowered.com/kb_article.php?ref=6730-TOAK-6497&l=thai"
 "Broadcast_FirstTime_Title" "การถ่ายทอดสดบน Steam"
 "Broadcast_FirstTime_OK" "ตกลง"
 "Broadcast_FirstTime_Cancel" "ยกเลิก"

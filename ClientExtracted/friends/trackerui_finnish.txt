@@ -170,7 +170,7 @@
 "Friends_InvitationBlocking"		"Olet estänyt kaiken viestinnän tämän käyttäjän kanssa. Ennen yhteydenottoa sinun on poistettava esto käymällä käyttäjän Steam-yhteisöt-sivulla."
 
 "Friends_DontGiveOutPassword"			"Älä koskaan paljasta salasanaasi kenellekään.\n"
-"Friends_DontGiveOutPassword_URL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=301"
+"Friends_DontGiveOutPassword_URL"		"https://support.steampowered.com/kb/1266-OAFV-8478/?l=finnish"
 
 "Friends_ChatFilterBlockWarning"		"Linkki poistettiin seuraavasta viestistä turvallisuussyistä."
 
@@ -556,6 +556,7 @@
 "Friends_SteamCommunity"	"Steam-yhteisö"
 "Limited_Explanation"	"Tilisi ei täytä vaatimuksia, joita tämän toiminnon käyttämiseen vaaditaan."
 "Limited_ForDetails"	"Lisätietoja saat Steamin tuelta."
+"Limited_ForDetails_URL"	"https://help.steampowered.com/fi/wizard/HelpWithLimitedAccount"
 
 "Friends_Chat_RoomModerated_Entry"		"%member_making_change% on asettanut keskustelun vain valvojille.\n"
 "Friends_Chat_RoomUnmoderated_Entry"		"%member_making_change% on asettanut keskustelun kaikille avoimeksi.\n"
@@ -687,6 +688,7 @@
 "Broadcast_FirstTime_PermissionHeader" "Määritä asetuksesi..."
 "Broadcast_FirstTime_DesktopOnly" "Ainoastaan pelaamaasi peliä voidaan oletusarvoisesti katsoa. Työpöytääsi ei näytetä."
 "Broadcast_FirstTime_FAQ" "Lue Steamin suoratoiston UKK"
+"Broadcast_FirstTime_FAQLink" "https://support.steampowered.com/kb_article.php?ref=6730-TOAK-6497"
 "Broadcast_FirstTime_Title" "Steamin suoratoisto"
 "Broadcast_FirstTime_OK" "OK"
 "Broadcast_FirstTime_Cancel" "Peruuta"

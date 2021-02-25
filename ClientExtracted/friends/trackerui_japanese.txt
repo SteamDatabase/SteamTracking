@@ -98,7 +98,7 @@
 "Friends_FriendHasBeenAddedToYourList"		"%friend% がフレンドリストに追加されました。"
 "Friends_UnableToFindFriendByThatName"		"%search% が見つかりません。  もう一度検索する場合は［戻る］を押してください。"
 "Friends_CannotAddSelfToList"				"自分をフレンドリストに追加することはできません。"
-"Friends_CannotAddFriendWhoIsAlreadyInList" "%search% は「%friend%」という名前で、既にフレンドリストに追加されています。"
+"Friends_CannotAddFriendWhoIsAlreadyInList" "%search% は「%friend%」という名前で、すでにフレンドリストに追加されています。"
 
 "Friends_ConnectedButOffline"					"現在、すべてのフレンドに対して、オフラインと表示されるよう設定されています。"
 "Friends_NoFriendsInList"						"フレンドリストにはまだ誰も登録されていません。"
@@ -170,7 +170,7 @@
 "Friends_InvitationBlocking"		"このユーザーとのすべてのコミュニケーションをブロックしています。 ブロックしているユーザーとコミュニケーションを取る場合は、Steam コミュニティページにアクセスして対象ユーザーのブロックを解除してください。"
 
 "Friends_DontGiveOutPassword"			"パスワードは誰にも教えないでください。\n"
-"Friends_DontGiveOutPassword_URL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=301"
+"Friends_DontGiveOutPassword_URL"		"https://support.steampowered.com/kb/1266-OAFV-8478/"
 
 "Friends_ChatFilterBlockWarning"		"安全のためにリンクは次のメッセージから削除されました。"
 
@@ -236,7 +236,7 @@
 "Friends_Chat_OpenRoom"               "このルームをロック解除 (オープンにする)"
 
 "Friends_Chat_DeniedChat_Title"		"Steam - チャットルームに入ることができません"
-"Friends_Chat_DeniedChat_DoesntExist" "%chat% チャットは既に終了しています."
+"Friends_Chat_DeniedChat_DoesntExist" "%chat%チャットはすでに終了しています。"
 "Friends_Chat_DeniedChat_NotAllowed"  "%chat% チャットに入るために必要な権限がありません."
 "Friends_Chat_DeniedChat_Full"        "%chat% チャットは満員です."
 "Friends_Chat_DeniedChat_Error"       "%chat% チャットに参加しようとしましたが、エラーになりました."
@@ -269,7 +269,7 @@
 "Friends_Chat_ActionResultManageBans"					"チャットルーム禁止リストを管理します。"
 "Friends_Chat_ActionResultNotAllowedOnChatOwner"      "チャットのオーナーに対する操作は実行できません。"
 "Friends_Chat_ActionResultNotAllowedOnSelf"           "自分自身に対する操作は実行できません。"
-"Friends_Chat_ActionResultChatDoesntExist"			"チャットは既に終了しています。"
+"Friends_Chat_ActionResultChatDoesntExist"			"チャットはすでに終了しています。"
 "Friends_Chat_ActionResultChatFull  "					"チャットは満員です。"
 "Friends_Chat_ActionResultNotOnline"                  "オンラインでない場合、操作を実行できません。"
 
@@ -557,6 +557,7 @@
 "Friends_SteamCommunity"	"Steam コミュニティ"
 "Limited_Explanation"	"あなたのアカウントはこの機能を制限するための要件を満たしていません。"
 "Limited_ForDetails"	"詳細については Steam サポートをご覧ください。"
+"Limited_ForDetails_URL"	"https://help.steampowered.com/wizard/HelpWithLimitedAccount"
 
 "Friends_Chat_RoomModerated_Entry"		"このチャットルームの設定は、%member_making_change%により上級メンバー専用に変更されました。\n"
 "Friends_Chat_RoomUnmoderated_Entry"		"このチャットルームの設定は、%member_making_change%により公開チャットに変更されました。\n"
@@ -688,6 +689,7 @@
 "Broadcast_FirstTime_PermissionHeader" "設定のため少々お時間を頂きます..."
 "Broadcast_FirstTime_DesktopOnly" "デフォルトでは、ゲームコンテンツのみ視聴可能です。デスクトップは配信されません。"
 "Broadcast_FirstTime_FAQ" "Steam ブロードキャストに関してよくある質問をお読みください"
+"Broadcast_FirstTime_FAQLink" "https://support.steampowered.com/kb_article.php?ref=6730-TOAK-6497"
 "Broadcast_FirstTime_Title" "Steam ブロードキャスト"
 "Broadcast_FirstTime_OK" "OK"
 "Broadcast_FirstTime_Cancel" "キャンセル"

@@ -120,41 +120,6 @@ message CMsgClientUCMDeletePublishedFileResponse {
 	optional int32 eresult = 1 [default = 2];
 }
 
-message CMsgClientUCMEnumerateUserPublishedFiles {
-	optional uint32 app_id = 1;
-	optional uint32 start_index = 2;
-	optional uint32 sort_order = 3;
-}
-
-message CMsgClientUCMEnumerateUserPublishedFilesResponse {
-	message PublishedFileId {
-		optional fixed64 published_file_id = 1;
-	}
-
-	optional int32 eresult = 1 [default = 2];
-	repeated .CMsgClientUCMEnumerateUserPublishedFilesResponse.PublishedFileId published_files = 2;
-	optional uint32 total_results = 3;
-}
-
-message CMsgClientUCMEnumerateUserSubscribedFiles {
-	optional uint32 app_id = 1;
-	optional uint32 start_index = 2;
-	optional uint32 list_type = 3 [default = 1];
-	optional uint32 matching_file_type = 4 [default = 0];
-	optional uint32 count = 5 [default = 50];
-}
-
-message CMsgClientUCMEnumerateUserSubscribedFilesResponse {
-	message PublishedFileId {
-		optional fixed64 published_file_id = 1;
-		optional fixed32 rtime32_subscribed = 2 [default = 0];
-	}
-
-	optional int32 eresult = 1 [default = 2];
-	repeated .CMsgClientUCMEnumerateUserSubscribedFilesResponse.PublishedFileId subscribed_files = 2;
-	optional uint32 total_results = 3;
-}
-
 message CMsgClientUCMEnumerateUserSubscribedFilesWithUpdates {
 	optional uint32 app_id = 1;
 	optional uint32 start_index = 2;
@@ -204,49 +169,6 @@ message CMsgClientWorkshopItemChangesResponse {
 	optional int32 eresult = 1 [default = 2];
 	optional uint32 update_time = 2;
 	repeated .CMsgClientWorkshopItemChangesResponse.WorkshopItemInfo workshop_items = 5;
-}
-
-message CMsgClientWorkshopItemInfoRequest {
-	message WorkshopItem {
-		optional fixed64 published_file_id = 1;
-		optional uint32 time_updated = 2;
-	}
-
-	optional uint32 app_id = 1;
-	optional uint32 last_time_updated = 2;
-	repeated .CMsgClientWorkshopItemInfoRequest.WorkshopItem workshop_items = 3;
-}
-
-message CMsgClientWorkshopItemInfoResponse {
-	message WorkshopItemInfo {
-		optional fixed64 published_file_id = 1;
-		optional uint32 time_updated = 2;
-		optional fixed64 manifest_id = 3;
-		optional bool is_legacy = 4;
-	}
-
-	optional int32 eresult = 1 [default = 2];
-	optional uint32 update_time = 2;
-	repeated .CMsgClientWorkshopItemInfoResponse.WorkshopItemInfo workshop_items = 3;
-	repeated fixed64 private_items = 4;
-}
-
-message CMsgClientUCMGetPublishedFilesForUser {
-	optional uint32 app_id = 1;
-	optional fixed64 creator_steam_id = 2;
-	repeated string required_tags = 3;
-	repeated string excluded_tags = 4;
-	optional uint32 start_index = 5;
-}
-
-message CMsgClientUCMGetPublishedFilesForUserResponse {
-	message PublishedFileId {
-		optional fixed64 published_file_id = 1;
-	}
-
-	optional int32 eresult = 1 [default = 2];
-	repeated .CMsgClientUCMGetPublishedFilesForUserResponse.PublishedFileId published_files = 2;
-	optional uint32 total_results = 3;
 }
 
 message CMsgClientUCMSetUserPublishedFileAction {
@@ -573,69 +495,6 @@ message CMsgClientUGSGetGlobalStatsResponse {
 	repeated .CMsgClientUGSGetGlobalStatsResponse.Day days = 4;
 }
 
-message CMsgGameServerData {
-	message Player {
-		optional fixed64 steam_id = 1;
-	}
-
-	optional uint32 revision = 24;
-	optional fixed64 steam_id_gs = 1;
-	optional uint32 query_port = 3;
-	optional uint32 game_port = 4;
-	optional uint32 spectator_port = 5;
-	optional string server_name = 22;
-	optional string game_description = 29;
-	optional string spectator_server_name = 27;
-	optional fixed32 fake_ip = 28;
-	optional bytes sdr_login = 26;
-	optional uint32 app_id = 6;
-	optional string gamedir = 7;
-	optional string version = 8;
-	optional string product = 9;
-	optional string region = 10;
-	repeated .CMsgGameServerData.Player players = 11;
-	optional uint32 max_players = 12;
-	optional uint32 bot_count = 13;
-	optional bool password = 14;
-	optional bool secure = 15;
-	optional bool dedicated = 16;
-	optional string os = 17;
-	optional string game_data = 18;
-	optional string game_type = 20;
-	optional string map = 21;
-}
-
-message CMsgGameServerRemove {
-	optional fixed64 legacy_steam_id_gs = 1;
-	optional uint32 legacy_query_port = 3;
-}
-
-message CMsgClientGMSServerQuery {
-	optional uint32 app_id = 1;
-	optional uint32 geo_location_ip = 2;
-	optional uint32 region_code = 3;
-	optional string filter_text = 4;
-	optional uint32 max_servers = 5;
-}
-
-message CMsgGMSClientServerQueryResponse {
-	message Server {
-		optional uint32 deprecated_server_ip = 1;
-		optional uint32 query_port = 2;
-		optional uint32 auth_players = 3;
-		optional .CMsgIPAddress server_ip = 4;
-	}
-
-	repeated .CMsgGMSClientServerQueryResponse.Server servers = 1;
-	optional string error = 2;
-}
-
-message CMsgGameServerOutOfDate {
-	optional fixed64 steam_id_gs = 1;
-	optional bool reject = 2;
-	optional string message = 3;
-}
-
 message CMsgClientRedeemGuestPass {
 	optional fixed64 guest_pass_id = 1;
 }
@@ -666,28 +525,6 @@ message CMsgClientOGSReportBug {
 	optional uint64 sessionid = 1;
 	optional string bugtext = 2;
 	optional bytes screenshot = 3;
-}
-
-message CMsgGSAssociateWithClan {
-	optional fixed64 steam_id_clan = 1;
-}
-
-message CMsgGSAssociateWithClanResponse {
-	optional fixed64 steam_id_clan = 1;
-	optional uint32 eresult = 2 [default = 2];
-}
-
-message CMsgGSComputeNewPlayerCompatibility {
-	optional fixed64 steam_id_candidate = 1;
-}
-
-message CMsgGSComputeNewPlayerCompatibilityResponse {
-	optional fixed64 steam_id_candidate = 1;
-	optional uint32 eresult = 2 [default = 2];
-	optional bool is_clan_member = 3;
-	optional int32 ct_dont_like_you = 4;
-	optional int32 ct_you_dont_like = 5;
-	optional int32 ct_clanmembers_dont_like_you = 6;
 }
 
 message CMsgClientSentLogs {
@@ -909,18 +746,6 @@ message CMsgCREGetUserPublishedItemVoteDetailsResponse {
 
 	optional int32 eresult = 1 [default = 2];
 	repeated .CMsgCREGetUserPublishedItemVoteDetailsResponse.UserItemVoteDetail user_item_vote_details = 2;
-}
-
-message CMsgGameServerPingSample {
-	message Sample {
-		optional fixed32 ip = 1;
-		optional uint32 avg_ping_ms = 2;
-		optional uint32 stddev_ping_ms_x10 = 3;
-	}
-
-	optional fixed32 my_ip = 1;
-	optional int32 gs_app_id = 2;
-	repeated .CMsgGameServerPingSample.Sample gs_samples = 3;
 }
 
 message CMsgFSGetFollowerCount {

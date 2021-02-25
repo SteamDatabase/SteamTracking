@@ -1,4 +1,3 @@
- AES_decrypt
  AssertMsgImplementation
  B AutoReloadFailedLayoutReloads::symbol
  B CBilling_Address::default_instance_
@@ -399,6 +398,7 @@
  B ImageUnreferenced::symbol
  B InterfaceReg::s_pInterfaceRegs
  B KeyValues::sm_pchKeyNameBase
+ B OPENSSL_ia32cap_P
  B SinCosTable
  B VideoPlayerFreeAudio::symbol
  B VideoPlayerInitAudio::symbol
@@ -3797,6 +3797,7 @@
  SteamThreadTools::CThreadSyncObject::~CThreadSyncObject()
  SteamVProf::CVProfile::MarkFrame(char const*)
  StringAfterPrefix
+ T AES_decrypt
  T AES_set_decrypt_key
  T AES_set_encrypt_key
  T AngleQuaternion(QAngle const&, Quaternion&)
@@ -4208,7 +4209,7 @@
  T CDirIterator::BNextFile()
  T CDirIterator::CDirIterator(StringView)
  T CDirIterator::CDirIterator(StringView, StringView)
- T CDirIterator::CurrentFileName() const
+ T CDirIterator::CurrentFileName()
  T CDirIterator::Init(StringView)
  T CDirIterator::IsValid() const
  T CDirIterator::~CDirIterator()
@@ -4423,7 +4424,6 @@
  T CMetrics::Validate(CValidator&, char const*)
  T CMetrics::~CMetrics()
  T CMetricsSymbol::CMetricsSymbol(char const*)
- T CMetricsTimer::CMetricsTimer<char const (&) [10]>(char const (&) [10], CMetrics&)
  T CMetricsTimer::Stop()
  T CMetricsTimer::Validate(CValidator&, char const*)
  T CMetricsTimer::~CMetricsTimer()
@@ -8064,6 +8064,7 @@
  T CRTime::RTime32BeginningOfDay(unsigned int)
  T CRTime::RTime32ToString(unsigned int, bool, bool)
  T CRTime::UpdateRealTime()
+ T CRYPTO_memcmp
  T CRadialClipData::ByteSize() const
  T CRadialClipData::CRadialClipData()
  T CRadialClipData::Clear()
@@ -8202,8 +8203,7 @@
  T CStdMemAlloc::GetFirstMemBlock()
  T CStdMemAlloc::GetNextMemBlock(void*)
  T CStdMemAlloc::GetSize(void*)
- T CStdMemAlloc::GetSize(void*, bool)
- T CStdMemAlloc::InitVirtualHeap(EVirtualHeapSize)
+ T CStdMemAlloc::InitVirtualHeap(EVirtualHeapType)
  T CStdMemAlloc::InternalAlloc(unsigned long, bool)
  T CStdMemAlloc::InternalAllocFromPools(unsigned long)
  T CStdMemAlloc::InternalFree(void*)
@@ -10442,6 +10442,16 @@
  T MurmurHash3_32(void const*, unsigned long, unsigned int, bool)
  T NormalizeLinearGradientBrushes(CMsgFillBrush*, CMsgFillBrush*)
  T NormalizeRadialGradientBrushes(CMsgFillBrush*, CMsgFillBrush*)
+ T OPENSSL_atomic_add
+ T OPENSSL_cleanse
+ T OPENSSL_cpuid_setup
+ T OPENSSL_ia32_cpuid
+ T OPENSSL_ia32_rdrand_bytes
+ T OPENSSL_ia32_rdseed_bytes
+ T OPENSSL_instrument_bus
+ T OPENSSL_instrument_bus2
+ T OPENSSL_rdtsc
+ T OPENSSL_wipe_cpu
  T OSXHelpers::BGetGPUInformation(char*, unsigned int, unsigned long long*, unsigned long long*, unsigned long long*)
  T OSXHelpers::BIsNSWindowOnActiveSpace(void*)
  T OSXHelpers::CCompatThread::CCompatThread(OSXHelpers::IOPollingHelperState_t*)
@@ -11015,6 +11025,8 @@
  T non-virtual thunk to panorama::CUISoundSystem::SinkAdded(int)
  T non-virtual thunk to panorama::CUISoundSystem::SinkRemoved(int)
  T non-virtual thunk to panorama::CUISoundSystem::~CUISoundSystem()
+ T ossl_ctype_check
+ T ossl_tolower
  T panorama::ActionInput_t::ActionInput_t(panorama::EInputType, panorama::GamePadCode, char const*)
  T panorama::ActionInput_t::ActionInput_t(panorama::EInputType, panorama::KeyCode, unsigned int, char const*)
  T panorama::ActionInput_t::ActionInput_t(panorama::EInputType, panorama::MouseCode, char const*)
@@ -15986,6 +15998,9 @@
  T png_warning_parameter_unsigned
  T png_zalloc
  T png_zfree
+ T poly1305_blocks
+ T poly1305_emit
+ T poly1305_init
  T protobuf_AddDesc_enums_5fclientserver_2eproto()
  T protobuf_AddDesc_htmlmessages_2eproto()
  T protobuf_AddDesc_renderer_2frendermessages_2eproto()
@@ -16647,6 +16662,8 @@
  T vrapi::VROverlay()
  T vrapi::VRSystem()
  T xmlMemdup
+ T xor128_decrypt_n_pad
+ T xor128_encrypt_n_pad
  TSListBase_Init
  TSListBase_Pop
  TSListBase_Push
@@ -17386,6 +17403,7 @@
  b IMetricsFactory::NullMetrics()::$_7::operator()() const::sym
  b InitializeCharacterSets()::s_CharacterSetInitialized
  b MapLocalRegisteredEvents()::s_mapRegisteredEvents
+ b OPENSSL_cpuid_setup.trigger
  b OSXHelpers::BIsNSWindowOnActiveSpace(void*)::supported
  b OSXHelpers::s_bUseLibDispatch
  b OSXHelpers::s_pPollingHelperSingleton
@@ -18233,8 +18251,6 @@
  pow
  powf
  printf
- private_AES_set_decrypt_key
- private_AES_set_encrypt_key
  pthread_attr_destroy
  pthread_attr_init
  pthread_attr_setstacksize
@@ -18257,9 +18273,19 @@
  r CCrypto::Base64Decode(char const*, unsigned int, void*, unsigned int*, bool)::rgchInvBase64
  r IPC::crc32(unsigned int, void const*, unsigned long)::s_crc32
  r IPv6IPToString.hexdigits
+ r Td0
+ r Td1
+ r Td2
+ r Td3
+ r Td4
+ r Te0
+ r Te1
+ r Te2
+ r Te3
  r ascii_class
  r base_dither_matrix
  r bmask
+ r ctype_char_map
  r extra_pool_slop
  r first_pool_slop
  r fourbppswaptable
@@ -18606,6 +18632,7 @@
  r protobuf_AssignDesc_uifontfile_5fformat_2eproto()::CUIFontFilePackagePB_CUIEncryptedFontFilePB_offsets_
  r protobuf_AssignDesc_uifontfile_5fformat_2eproto()::CUIFontFilePackagePB_offsets_
  r rand8
+ r rcon
  r s_nSDLJoyButtonMapping
  r s_rgCRCTable_Standard
  r s_tdefl_packed_code_size_syms_swizzle
@@ -18837,6 +18864,7 @@
  t _GLOBAL__sub_I_ipcposix.cpp
  t _GLOBAL__sub_I_iprangelist.cpp
  t _GLOBAL__sub_I_job.cpp
+ t _GLOBAL__sub_I_jobfuture.cpp
  t _GLOBAL__sub_I_jobmgr.cpp
  t _GLOBAL__sub_I_jpegloader.cpp
  t _GLOBAL__sub_I_keypair.cpp
@@ -18940,6 +18968,8 @@
  t _GLOBAL__sub_I_workthreadpool.cpp
  t _GLOBAL__sub_I_zip_helpers.cpp
  t __cxx_global_array_dtor
+ t _poly1305_block
+ t _poly1305_init_avx
  t access_virt_barray
  t access_virt_sarray
  t alloc_barray
@@ -19242,6 +19272,9 @@
  t png_read_filter_row_paeth_multibyte_pixel
  t png_read_filter_row_sub
  t png_read_filter_row_up
+ t poly1305_blocks_avx
+ t poly1305_blocks_avx2
+ t poly1305_emit_avx
  t post_process_1pass
  t post_process_2pass
  t post_process_prepass

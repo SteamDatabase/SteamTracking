@@ -1020,16 +1020,6 @@
         "server_type": -1
     },
     {
-        "emsg": 5454,
-        "flags": 2,
-        "server_type": -1
-    },
-    {
-        "emsg": 5455,
-        "flags": 2,
-        "server_type": -1
-    },
-    {
         "emsg": 5456,
         "flags": 2,
         "server_type": -1
@@ -1960,42 +1950,12 @@
         "server_type": 45
     },
     {
-        "emsg": 7317,
-        "flags": 6,
-        "server_type": 45
-    },
-    {
-        "emsg": 7318,
-        "flags": 6,
-        "server_type": 45
-    },
-    {
-        "emsg": 7321,
-        "flags": 6,
-        "server_type": 45
-    },
-    {
-        "emsg": 7322,
-        "flags": 6,
-        "server_type": 45
-    },
-    {
         "emsg": 7325,
         "flags": 6,
         "server_type": 45
     },
     {
         "emsg": 7326,
-        "flags": 6,
-        "server_type": 45
-    },
-    {
-        "emsg": 7360,
-        "flags": 6,
-        "server_type": 45
-    },
-    {
-        "emsg": 7361,
         "flags": 6,
         "server_type": 45
     },
@@ -2041,16 +2001,6 @@
     },
     {
         "emsg": 7383,
-        "flags": 6,
-        "server_type": 45
-    },
-    {
-        "emsg": 7384,
-        "flags": 6,
-        "server_type": 45
-    },
-    {
-        "emsg": 7385,
         "flags": 6,
         "server_type": 45
     },

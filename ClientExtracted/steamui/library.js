@@ -1,5 +1,5 @@
 /* Third-party software licenses can be found at licenses.txt */
-var CLSTAMP = "6363350";
+var CLSTAMP = "6371797";
 !(function (l) {
   function e(e) {
     for (
@@ -231,8 +231,8 @@ var CLSTAMP = "6363350";
               o.a.createElement(
                 "div",
                 { className: l.a.Throbber },
-                o.a.createElement(i.nb, { className: l.a.base }),
-                o.a.createElement(i.nb, { className: l.a.blur })
+                o.a.createElement(i.ub, { className: l.a.base }),
+                o.a.createElement(i.ub, { className: l.a.blur })
               )
             );
             return o.a.createElement(
@@ -301,245 +301,272 @@ var CLSTAMP = "6363350";
   },
   "6Y59": function (e, t, n) {
     "use strict";
-    n.d(t, "gb", function () {
+    n.d(t, "lb", function () {
       return s;
     }),
-      n.d(t, "u", function () {
+      n.d(t, "w", function () {
         return u;
       }),
-      n.d(t, "A", function () {
+      n.d(t, "C", function () {
         return f;
       }),
-      n.d(t, "M", function () {
+      n.d(t, "R", function () {
         return h;
       }),
-      n.d(t, "n", function () {
+      n.d(t, "o", function () {
         return d;
       }),
-      n.d(t, "y", function () {
+      n.d(t, "A", function () {
         return m;
       }),
-      n.d(t, "mb", function () {
+      n.d(t, "tb", function () {
         return p;
       }),
-      n.d(t, "zb", function () {
+      n.d(t, "M", function () {
         return g;
       }),
-      n.d(t, "Ab", function () {
+      n.d(t, "Ib", function () {
         return w;
       }),
-      n.d(t, "X", function () {
-        return _;
-      }),
-      n.d(t, "S", function () {
+      n.d(t, "Jb", function () {
         return x;
       }),
-      n.d(t, "wb", function () {
+      n.d(t, "cb", function () {
+        return _;
+      }),
+      n.d(t, "X", function () {
         return v;
       }),
-      n.d(t, "V", function () {
+      n.d(t, "Eb", function () {
         return E;
       }),
-      n.d(t, "U", function () {
+      n.d(t, "Cb", function () {
         return b;
       }),
-      n.d(t, "ib", function () {
+      n.d(t, "ab", function () {
         return k;
       }),
-      n.d(t, "m", function () {
+      n.d(t, "Z", function () {
         return y;
       }),
-      n.d(t, "r", function () {
+      n.d(t, "pb", function () {
         return L;
       }),
-      n.d(t, "K", function () {
-        return C;
-      }),
-      n.d(t, "nb", function () {
+      n.d(t, "n", function () {
         return M;
       }),
-      n.d(t, "f", function () {
+      n.d(t, "t", function () {
         return S;
       }),
-      n.d(t, "d", function () {
-        return T;
-      }),
-      n.d(t, "t", function () {
-        return N;
-      }),
-      n.d(t, "N", function () {
-        return B;
-      }),
-      n.d(t, "Q", function () {
-        return I;
-      }),
-      n.d(t, "cb", function () {
-        return O;
-      }),
-      n.d(t, "bb", function () {
-        return G;
-      }),
-      n.d(t, "rb", function () {
-        return R;
-      }),
-      n.d(t, "C", function () {
-        return V;
-      }),
-      n.d(t, "D", function () {
-        return A;
-      }),
-      n.d(t, "s", function () {
-        return D;
-      }),
-      n.d(t, "O", function () {
-        return z;
-      }),
-      n.d(t, "kb", function () {
-        return F;
-      }),
-      n.d(t, "vb", function () {
-        return W;
-      }),
-      n.d(t, "E", function () {
-        return j;
-      }),
-      n.d(t, "eb", function () {
-        return U;
-      }),
-      n.d(t, "fb", function () {
-        return P;
-      }),
-      n.d(t, "g", function () {
-        return H;
-      }),
-      n.d(t, "R", function () {
-        return Y;
+      n.d(t, "P", function () {
+        return C;
       }),
       n.d(t, "ub", function () {
-        return q;
+        return T;
+      }),
+      n.d(t, "f", function () {
+        return N;
+      }),
+      n.d(t, "d", function () {
+        return B;
+      }),
+      n.d(t, "r", function () {
+        return I;
+      }),
+      n.d(t, "v", function () {
+        return O;
+      }),
+      n.d(t, "S", function () {
+        return G;
+      }),
+      n.d(t, "V", function () {
+        return R;
+      }),
+      n.d(t, "hb", function () {
+        return V;
+      }),
+      n.d(t, "gb", function () {
+        return A;
+      }),
+      n.d(t, "yb", function () {
+        return z;
+      }),
+      n.d(t, "G", function () {
+        return D;
+      }),
+      n.d(t, "H", function () {
+        return F;
+      }),
+      n.d(t, "u", function () {
+        return j;
+      }),
+      n.d(t, "T", function () {
+        return W;
+      }),
+      n.d(t, "rb", function () {
+        return U;
+      }),
+      n.d(t, "Db", function () {
+        return H;
+      }),
+      n.d(t, "m", function () {
+        return P;
       }),
       n.d(t, "I", function () {
+        return Y;
+      }),
+      n.d(t, "ob", function () {
+        return q;
+      }),
+      n.d(t, "jb", function () {
         return X;
       }),
-      n.d(t, "z", function () {
-        return K;
-      }),
-      n.d(t, "B", function () {
+      n.d(t, "kb", function () {
         return Z;
       }),
-      n.d(t, "tb", function () {
+      n.d(t, "g", function () {
+        return K;
+      }),
+      n.d(t, "W", function () {
         return J;
       }),
       n.d(t, "Bb", function () {
         return Q;
       }),
-      n.d(t, "sb", function () {
+      n.d(t, "N", function () {
         return $;
       }),
-      n.d(t, "l", function () {
+      n.d(t, "B", function () {
         return ee;
       }),
-      n.d(t, "o", function () {
+      n.d(t, "E", function () {
         return te;
       }),
-      n.d(t, "F", function () {
+      n.d(t, "Ab", function () {
         return ne;
       }),
-      n.d(t, "jb", function () {
+      n.d(t, "Kb", function () {
         return re;
       }),
-      n.d(t, "v", function () {
+      n.d(t, "zb", function () {
         return ce;
       }),
-      n.d(t, "a", function () {
+      n.d(t, "l", function () {
         return oe;
       }),
-      n.d(t, "W", function () {
+      n.d(t, "p", function () {
         return ie;
       }),
-      n.d(t, "Y", function () {
+      n.d(t, "J", function () {
         return ae;
       }),
-      n.d(t, "ab", function () {
+      n.d(t, "qb", function () {
         return le;
       }),
       n.d(t, "x", function () {
         return se;
       }),
-      n.d(t, "G", function () {
+      n.d(t, "a", function () {
         return ue;
       }),
-      n.d(t, "w", function () {
+      n.d(t, "bb", function () {
         return fe;
       }),
-      n.d(t, "hb", function () {
+      n.d(t, "F", function () {
         return he;
       }),
-      n.d(t, "T", function () {
+      n.d(t, "db", function () {
         return de;
       }),
-      n.d(t, "c", function () {
+      n.d(t, "fb", function () {
         return me;
       }),
-      n.d(t, "J", function () {
+      n.d(t, "z", function () {
         return pe;
       }),
-      n.d(t, "b", function () {
+      n.d(t, "K", function () {
         return ge;
       }),
-      n.d(t, "lb", function () {
+      n.d(t, "y", function () {
         return we;
       }),
-      n.d(t, "P", function () {
-        return _e;
-      }),
-      n.d(t, "H", function () {
+      n.d(t, "nb", function () {
         return xe;
       }),
-      n.d(t, "p", function () {
+      n.d(t, "Y", function () {
+        return _e;
+      }),
+      n.d(t, "c", function () {
         return ve;
       }),
-      n.d(t, "q", function () {
+      n.d(t, "O", function () {
         return Ee;
       }),
-      n.d(t, "pb", function () {
+      n.d(t, "Fb", function () {
         return be;
       }),
-      n.d(t, "ob", function () {
+      n.d(t, "b", function () {
         return ke;
       }),
-      n.d(t, "db", function () {
+      n.d(t, "sb", function () {
         return ye;
       }),
-      n.d(t, "yb", function () {
+      n.d(t, "U", function () {
         return Le;
       }),
-      n.d(t, "k", function () {
-        return Ce;
-      }),
-      n.d(t, "qb", function () {
+      n.d(t, "L", function () {
         return Me;
       }),
-      n.d(t, "e", function () {
+      n.d(t, "D", function () {
         return Se;
       }),
-      n.d(t, "L", function () {
+      n.d(t, "q", function () {
+        return Ce;
+      }),
+      n.d(t, "s", function () {
         return Te;
       }),
-      n.d(t, "Z", function () {
+      n.d(t, "wb", function () {
         return Ne;
       }),
-      n.d(t, "xb", function () {
+      n.d(t, "vb", function () {
         return Be;
       }),
-      n.d(t, "j", function () {
+      n.d(t, "ib", function () {
         return Ie;
       }),
-      n.d(t, "i", function () {
+      n.d(t, "Hb", function () {
         return Oe;
       }),
-      n.d(t, "h", function () {
+      n.d(t, "k", function () {
         return Ge;
+      }),
+      n.d(t, "xb", function () {
+        return Re;
+      }),
+      n.d(t, "e", function () {
+        return Ve;
+      }),
+      n.d(t, "Q", function () {
+        return Ae;
+      }),
+      n.d(t, "eb", function () {
+        return ze;
+      }),
+      n.d(t, "Gb", function () {
+        return De;
+      }),
+      n.d(t, "j", function () {
+        return Fe;
+      }),
+      n.d(t, "i", function () {
+        return je;
+      }),
+      n.d(t, "h", function () {
+        return We;
+      }),
+      n.d(t, "mb", function () {
+        return Ue;
       });
     var r = n("mrSG"),
       o = n("q1tI"),
@@ -740,7 +767,32 @@ var CLSTAMP = "6363350";
         )
       );
     }
-    function g(e) {
+    function g() {
+      return o.createElement(
+        "svg",
+        {
+          version: "1.1",
+          id: "Layer_1",
+          xmlns: "http://www.w3.org/2000/svg",
+          x: "0px",
+          y: "0px",
+          width: "100px",
+          height: "91.582px",
+          viewBox: "0 0 100 91.582",
+          enableBackground: "new 0 0 100 91.582",
+        },
+        o.createElement(
+          "g",
+          null,
+          o.createElement("path", {
+            clipPath: "url(#SVGID_2_)",
+            d:
+              "M88.853,29.724H62.271V11.351C62.262,5.18,57.26,0.179,51.089,0.169H11.255\r\n\t\t\t\tC5.085,0.179,0.085,5.18,0.074,11.351v24.908c-0.001,2.207,0.657,4.36,1.888,6.19c3.942,7.586,22.118,18.799,22.314,18.916\r\n\t\t\t\tc0.389,0.229,0.83,0.354,1.281,0.361c1.351,0.01,2.455-1.074,2.468-2.426c0.003-0.329-0.062-0.654-0.187-0.958\r\n\t\t\t\tc-1.319-3.565-2.341-7.233-3.053-10.968h13.135v18.389C37.93,71.9,42.882,76.882,49.02,76.928H75.29\r\n\t\t\t\tc-0.715,3.724-1.737,7.379-3.054,10.936c-0.517,1.248,0.076,2.678,1.323,3.196c0.303,0.125,0.63,0.188,0.959,0.186\r\n\t\t\t\tc0.451-0.006,0.894-0.13,1.279-0.361c0.197-0.115,18.373-11.329,22.314-18.914c1.235-1.834,1.894-3.997,1.888-6.207V40.906\r\n\t\t\t\tC99.99,34.746,95.01,29.751,88.853,29.724 M32.797,42.449H21.831c-0.721,0.01-1.4,0.327-1.873,0.869\r\n\t\t\t\tc-0.464,0.544-0.669,1.265-0.558,1.973c0,0.228,0.59,3.79,1.641,8.028c-5.517-3.842-12.773-9.425-14.776-13.136\r\n\t\t\t\tc-0.067-0.162-0.149-0.314-0.247-0.46c-0.738-1.033-1.13-2.276-1.116-3.546V11.351c0.008-3.463,2.825-6.264,6.288-6.255h0.065\r\n\t\t\t\th39.833c3.45,0.007,6.246,2.804,6.255,6.255v18.373H49.02c-3.223,0.005-6.286,1.399-8.406,3.825\r\n\t\t\t\tc-1.744-0.054-3.464-0.427-5.074-1.101c2.588-3.257,4.169-7.2,4.548-11.345h1.33c1.359,0,2.463-1.103,2.463-2.463\r\n\t\t\t\tc0-1.361-1.104-2.461-2.463-2.461h-7.784v-4.384c0-1.36-1.102-2.464-2.461-2.464c-1.361,0-2.463,1.104-2.463,2.464v4.384h-7.668\r\n\t\t\t\tc-1.361,0-2.462,1.1-2.462,2.461c0,1.36,1.102,2.463,2.462,2.463H35.13c-0.348,3.137-1.604,6.104-3.613,8.538\r\n\t\t\t\tc-1.439-1.598-2.553-3.46-3.284-5.482c-0.489-1.271-1.916-1.903-3.185-1.414c-1.27,0.489-1.902,1.917-1.412,3.185\r\n\t\t\t\tc0.892,2.395,2.192,4.619,3.841,6.57c-2.017,0.812-4.178,1.208-6.354,1.165c-1.359,0-2.463,1.102-2.463,2.461\r\n\t\t\t\tc0,1.362,1.104,2.465,2.463,2.465c3.647,0.07,7.244-0.868,10.393-2.71c2.032,1.239,4.293,2.049,6.649,2.38\r\n\t\t\t\tc-0.218,0.859-0.327,1.741-0.327,2.627v1.641L32.797,42.449z M95.19,65.763c0.013,1.271-0.379,2.514-1.117,3.547\r\n\t\t\t\tc-0.097,0.138-0.181,0.287-0.246,0.443c-1.938,3.678-9.211,9.277-14.776,13.135c1.099-4.236,1.64-7.799,1.64-8.03\r\n\t\t\t\tc0.111-0.704-0.091-1.425-0.558-1.969c-0.462-0.548-1.138-0.871-1.854-0.887H49.02c-3.447,0-6.246-2.791-6.255-6.239V40.906\r\n\t\t\t\tc0.009-3.452,2.805-6.249,6.255-6.257h39.833c3.449,0.008,6.246,2.805,6.256,6.257L95.19,65.763z M77.834,56.635L77.834,56.635\r\n\t\t\t\tl-6.564-16.42c-0.037-0.092-0.081-0.18-0.133-0.262l-0.099-0.165c-0.047-0.078-0.102-0.15-0.164-0.214l-0.132-0.164l-0.182-0.147\r\n\t\t\t\tl-0.195-0.099c-0.056-0.043-0.116-0.076-0.182-0.098l-0.246-0.132c-0.06-0.009-0.121-0.009-0.18,0l-0.248-0.082h-0.245h-0.231\r\n\t\t\t\th-0.261h-0.214l-0.279,0.082c-0.055-0.007-0.109-0.007-0.164,0l-0.246,0.132l-0.247,0.098c-0.064,0.044-0.124,0.095-0.18,0.147\r\n\t\t\t\tl-0.182,0.148l-0.149,0.166c-0.056,0.066-0.113,0.138-0.161,0.211v0.166l-0.149,0.263l-6.567,16.418l-3.282,8.21\r\n\t\t\t\tc-0.546,1.246,0.026,2.697,1.272,3.24c0.036,0.016,0.072,0.029,0.105,0.042c0.29,0.127,0.604,0.189,0.919,0.182\r\n\t\t\t\tc1.005-0.006,1.905-0.616,2.283-1.544l2.657-6.665h9.854l2.66,6.665c0.383,0.931,1.291,1.54,2.298,1.544\r\n\t\t\t\tc0.31,0.003,0.619-0.059,0.904-0.182c1.269-0.485,1.906-1.907,1.422-3.18c-0.014-0.034-0.028-0.069-0.044-0.103L77.834,56.635z\r\n\t\t\t\tM66.062,55.123l2.939-7.323l2.923,7.323H66.062z",
+          })
+        )
+      );
+    }
+    function w(e) {
       return o.createElement(
         "svg",
         Object(r.a)(
@@ -765,7 +817,7 @@ var CLSTAMP = "6363350";
         )
       );
     }
-    function w() {
+    function x() {
       return o.createElement(
         "svg",
         {
@@ -849,7 +901,7 @@ var CLSTAMP = "6363350";
           })
       );
     }
-    function x() {
+    function v() {
       return o.createElement(
         "svg",
         {
@@ -873,7 +925,7 @@ var CLSTAMP = "6363350";
         })
       );
     }
-    function v(e) {
+    function E(e) {
       return o.createElement(
         "svg",
         {
@@ -945,7 +997,17 @@ var CLSTAMP = "6363350";
         )
       );
     }
-    function E() {
+    function b() {
+      return o.createElement(
+        "svg",
+        { width: "50px", height: "25px", viewBox: "0 0 50 25" },
+        o.createElement("path", {
+          d:
+            "M46 0H4C1.8 0 0 1.8 0 4v17c0 2.2 1.8 4 4 4h42c2.2 0 4-1.8 4-4V4c0-2.2-1.8-4-4-4zM21 18.916V5.084L32.805 12 21 18.916z",
+        })
+      );
+    }
+    function k() {
       return o.createElement(
         "svg",
         {
@@ -966,7 +1028,7 @@ var CLSTAMP = "6363350";
         })
       );
     }
-    function b() {
+    function y() {
       return o.createElement(
         "svg",
         {
@@ -990,7 +1052,7 @@ var CLSTAMP = "6363350";
         })
       );
     }
-    function k(e) {
+    function L(e) {
       return o.createElement(
         "svg",
         {
@@ -1078,7 +1140,7 @@ var CLSTAMP = "6363350";
         )
       );
     }
-    function y() {
+    function M() {
       return o.createElement(
         "svg",
         {
@@ -1103,7 +1165,7 @@ var CLSTAMP = "6363350";
         })
       );
     }
-    function L(e) {
+    function S(e) {
       var t = e.highlightColor || "#00ccff",
         n = e.color || "#2d73ff";
       return o.createElement(
@@ -1213,7 +1275,7 @@ var CLSTAMP = "6363350";
         })
       );
     }
-    function M(e) {
+    function T(e) {
       var t = "SVGIcon_Button SVGIcon_Throbber ";
       return (
         e.className && (t += e.className),
@@ -1457,7 +1519,7 @@ var CLSTAMP = "6363350";
         )
       );
     }
-    function S() {
+    function N() {
       return o.createElement(
         "svg",
         {
@@ -1477,7 +1539,7 @@ var CLSTAMP = "6363350";
         })
       );
     }
-    function T(e) {
+    function B(e) {
       return o.createElement(
         "svg",
         {
@@ -1512,7 +1574,27 @@ var CLSTAMP = "6363350";
         })
       );
     }
-    function N(e) {
+    function I() {
+      return o.createElement(
+        "svg",
+        {
+          version: "1.1",
+          id: "Layer_1",
+          xmlns: "http://www.w3.org/2000/svg",
+          x: "0px",
+          y: "0px",
+          width: "50px",
+          height: "100px",
+          viewBox: "0 0 50 100",
+        },
+        o.createElement("polygon", {
+          fill: "#ffffff",
+          points:
+            "0,0.093 0,25.702 24.323,50.026 0,74.349 0,99.955 49.929,50.026 ",
+        })
+      );
+    }
+    function O(e) {
       return o.createElement(
         "svg",
         {
@@ -1548,7 +1630,7 @@ var CLSTAMP = "6363350";
           })
       );
     }
-    function B() {
+    function G() {
       return o.createElement(
         "svg",
         {
@@ -1584,7 +1666,7 @@ var CLSTAMP = "6363350";
         })
       );
     }
-    function I() {
+    function R() {
       return o.createElement(
         "svg",
         {
@@ -1610,7 +1692,7 @@ var CLSTAMP = "6363350";
         })
       );
     }
-    function O() {
+    function V() {
       return o.createElement(
         "svg",
         {
@@ -1643,7 +1725,7 @@ var CLSTAMP = "6363350";
         })
       );
     }
-    function G() {
+    function A() {
       return o.createElement(
         "svg",
         {
@@ -1671,7 +1753,7 @@ var CLSTAMP = "6363350";
         })
       );
     }
-    function R() {
+    function z() {
       return o.createElement(
         "svg",
         {
@@ -1750,7 +1832,7 @@ var CLSTAMP = "6363350";
         )
       );
     }
-    function V(e) {
+    function D(e) {
       return o.createElement(
         "svg",
         {
@@ -1771,7 +1853,7 @@ var CLSTAMP = "6363350";
         })
       );
     }
-    function A(e) {
+    function F(e) {
       return o.createElement(
         "svg",
         {
@@ -1835,7 +1917,7 @@ var CLSTAMP = "6363350";
         )
       );
     }
-    function D() {
+    function j() {
       return o.createElement(
         "svg",
         {
@@ -1870,7 +1952,7 @@ var CLSTAMP = "6363350";
         })
       );
     }
-    function z(e) {
+    function W(e) {
       return o.createElement(
         "svg",
         {
@@ -1908,7 +1990,7 @@ var CLSTAMP = "6363350";
         })
       );
     }
-    function F(e) {
+    function U(e) {
       var t = Object(a.a)(
         "SVGIcon_Button",
         "SVGIcon_SteamLogo",
@@ -1942,7 +2024,7 @@ var CLSTAMP = "6363350";
         })
       );
     }
-    function W() {
+    function H() {
       return o.createElement(
         "svg",
         {
@@ -1970,7 +2052,29 @@ var CLSTAMP = "6363350";
         })
       );
     }
-    function j() {
+    function P() {
+      return o.createElement(
+        "svg",
+        {
+          version: "1.1",
+          id: "Layer_5",
+          className: "SVGIcon_Button SVGIcon_ChatBubble",
+          xmlns: "http://www.w3.org/2000/svg",
+          x: "0px",
+          y: "0px",
+          viewBox: "0 0 64 64",
+        },
+        o.createElement(
+          "g",
+          null,
+          o.createElement("path", {
+            d:
+              "M33,5C18.7,5,7.1,16.6,7.1,30.9c0,5.2,1.5,10.1,4.2,14.1c-0.6,3.7-4.5,10.5-6.2,13.5c-1.3,2.2,11.4-3.8,16.3-4.5c3.5,1.8,7.5,2.8,11.7,2.8c14.3,0,25.9-11.6,25.9-25.9S47.3,5,33,5z",
+          })
+        )
+      );
+    }
+    function Y() {
       return o.createElement(
         "svg",
         {
@@ -1992,7 +2096,28 @@ var CLSTAMP = "6363350";
         )
       );
     }
-    function U() {
+    function q() {
+      return o.createElement(
+        "svg",
+        {
+          version: "1.1",
+          id: "Layer_5",
+          xmlns: "http://www.w3.org/2000/svg",
+          x: "0px",
+          y: "0px",
+          viewBox: "0 0 64 64",
+        },
+        o.createElement(
+          "g",
+          null,
+          o.createElement("path", {
+            d:
+              "M40.6,32.7l15.1-15.1c2.6-2.6,2.6-6.7,0-9.3c-2.6-2.6-6.7-2.6-9.3,0L31.3,23.4L16.2,8.3c-2.6-2.6-6.7-2.6-9.3,0c-2.6,2.6-2.6,6.7,0,9.3L22,32.7L6.9,47.8c-2.6,2.6-2.6,6.7,0,9.3c1.3,1.3,3,1.9,4.7,1.9s3.4-0.6,4.7-1.9L31.3,42l15.1,15.1c1.3,1.3,3,1.9,4.7,1.9s3.4-0.6,4.7-1.9c2.6-2.6,2.6-6.7,0-9.3L40.6,32.7z",
+          })
+        )
+      );
+    }
+    function X() {
       return o.createElement(
         "svg",
         {
@@ -2029,7 +2154,7 @@ var CLSTAMP = "6363350";
         )
       );
     }
-    function P() {
+    function Z() {
       return o.createElement(
         "svg",
         {
@@ -2057,7 +2182,7 @@ var CLSTAMP = "6363350";
         })
       );
     }
-    function H() {
+    function K() {
       return o.createElement(
         "svg",
         {
@@ -2078,7 +2203,7 @@ var CLSTAMP = "6363350";
         })
       );
     }
-    function Y() {
+    function J() {
       return o.createElement(
         "svg",
         {
@@ -2098,7 +2223,7 @@ var CLSTAMP = "6363350";
         })
       );
     }
-    function q() {
+    function Q() {
       return o.createElement(
         "svg",
         {
@@ -2122,7 +2247,7 @@ var CLSTAMP = "6363350";
         })
       );
     }
-    function X() {
+    function $() {
       return o.createElement(
         "svg",
         {
@@ -2172,7 +2297,7 @@ var CLSTAMP = "6363350";
         })
       );
     }
-    function K() {
+    function ee() {
       return o.createElement(
         "svg",
         {
@@ -2205,7 +2330,7 @@ var CLSTAMP = "6363350";
         })
       );
     }
-    function Z() {
+    function te() {
       return o.createElement(
         "svg",
         {
@@ -2225,7 +2350,7 @@ var CLSTAMP = "6363350";
         })
       );
     }
-    function J() {
+    function ne() {
       return o.createElement(
         "svg",
         {
@@ -2245,7 +2370,7 @@ var CLSTAMP = "6363350";
         })
       );
     }
-    function Q() {
+    function re() {
       return o.createElement(
         "svg",
         {
@@ -2265,7 +2390,7 @@ var CLSTAMP = "6363350";
         })
       );
     }
-    function $() {
+    function ce() {
       return o.createElement(
         "svg",
         {
@@ -2285,7 +2410,7 @@ var CLSTAMP = "6363350";
         })
       );
     }
-    function ee() {
+    function oe() {
       return o.createElement(
         "svg",
         {
@@ -2307,7 +2432,7 @@ var CLSTAMP = "6363350";
         })
       );
     }
-    function te() {
+    function ie() {
       return o.createElement(
         "svg",
         {
@@ -2341,7 +2466,7 @@ var CLSTAMP = "6363350";
         })
       );
     }
-    function ne() {
+    function ae() {
       return o.createElement(
         "svg",
         {
@@ -2411,7 +2536,7 @@ var CLSTAMP = "6363350";
         })
       );
     }
-    function re(e) {
+    function le(e) {
       var t = Object(a.a)(
         "SVGIcon_Button",
         e.filled ? "SVGIcon_Star_Filled" : "SVGIcon_Star_Unfilled"
@@ -2438,7 +2563,7 @@ var CLSTAMP = "6363350";
         })
       );
     }
-    function ce() {
+    function se() {
       return o.createElement(
         "svg",
         {
@@ -2488,7 +2613,7 @@ var CLSTAMP = "6363350";
         )
       );
     }
-    function oe(e) {
+    function ue(e) {
       var t = e.fullcolor ? "rgb(102, 185, 255)" : "none",
         n = e.fullcolor ? "rgb(255, 208, 0)" : "none",
         r = e.fullcolor ? "rgb(255, 145, 0)" : "rgba(255, 255, 255, .2)",
@@ -2542,7 +2667,7 @@ var CLSTAMP = "6363350";
         })
       );
     }
-    function ie() {
+    function fe() {
       return o.createElement(
         "svg",
         {
@@ -2607,7 +2732,27 @@ var CLSTAMP = "6363350";
         })
       );
     }
-    function ae(e) {
+    function he() {
+      return o.createElement(
+        "svg",
+        {
+          version: "1.1",
+          id: "Layer_3",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: "SVGIcon_Button SVGIcon_Filter",
+          x: "0px",
+          y: "0px",
+          width: "256px",
+          height: "256px",
+          viewBox: "0 0 256 256",
+        },
+        o.createElement("path", {
+          d:
+            "M236.445,23.522c-1.085-2.35-3.438-3.855-6.025-3.855H25.58c-2.586,0-4.936,1.501-6.024,3.855 c-1.08,2.349-0.698,5.112,0.983,7.083l80.328,94.039v104.181c0,2.74,1.682,5.194,4.237,6.188c0.778,0.3,1.588,0.445,2.392,0.445 c1.832,0,3.626-0.762,4.91-2.17l41.012-45.13c1.111-1.219,1.724-2.811,1.724-4.459v-59.054l80.325-94.04 C237.144,28.634,237.526,25.867,236.445,23.522z",
+        })
+      );
+    }
+    function de(e) {
       var t = l.c(e.percentComplete, 0, 100, 800, 0);
       return o.createElement(
         "svg",
@@ -2635,7 +2780,7 @@ var CLSTAMP = "6363350";
         })
       );
     }
-    function le() {
+    function me() {
       return o.createElement(
         "svg",
         {
@@ -2663,7 +2808,7 @@ var CLSTAMP = "6363350";
         })
       );
     }
-    function se() {
+    function pe() {
       return o.createElement(
         "svg",
         {
@@ -2701,7 +2846,7 @@ var CLSTAMP = "6363350";
         })
       );
     }
-    function ue() {
+    function ge() {
       return o.createElement(
         "svg",
         {
@@ -2737,7 +2882,7 @@ var CLSTAMP = "6363350";
         })
       );
     }
-    function fe(e) {
+    function we(e) {
       return o.createElement(
         "svg",
         {
@@ -2767,7 +2912,7 @@ var CLSTAMP = "6363350";
         })
       );
     }
-    function he() {
+    function xe() {
       return o.createElement(
         "svg",
         {
@@ -2803,7 +2948,7 @@ var CLSTAMP = "6363350";
         })
       );
     }
-    function de() {
+    function _e() {
       return o.createElement(
         "svg",
         {
@@ -2831,7 +2976,7 @@ var CLSTAMP = "6363350";
         })
       );
     }
-    function me() {
+    function ve() {
       return o.createElement(
         "svg",
         {
@@ -2855,7 +3000,7 @@ var CLSTAMP = "6363350";
         })
       );
     }
-    function pe() {
+    function Ee() {
       return o.createElement(
         "svg",
         {
@@ -2878,7 +3023,26 @@ var CLSTAMP = "6363350";
         })
       );
     }
-    function ge() {
+    function be() {
+      return o.createElement(
+        "svg",
+        {
+          xmlns: "http://www.w3.org/2000/svg",
+          version: "1.1",
+          className: "SVGIcon_Button SVGIcon_WindowsLogo",
+          x: "0px",
+          y: "0px",
+          width: "100%",
+          height: "100%",
+          viewBox: "0 0 88 88",
+        },
+        o.createElement("path", {
+          d:
+            "m0,12.402,35.687-4.8602,0.0156,34.423-35.67,0.20313zm35.67,33.529,0.0277,34.453-35.67-4.9041-0.002-29.78zm4.3261-39.025,47.318-6.906,0,41.527-47.318,0.37565zm47.329,39.349-0.0111,41.34-47.318-6.6784-0.0663-34.739z",
+        })
+      );
+    }
+    function ke() {
       return o.createElement(
         "svg",
         {
@@ -2908,7 +3072,7 @@ var CLSTAMP = "6363350";
         )
       );
     }
-    function we() {
+    function ye() {
       return o.createElement(
         "svg",
         {
@@ -2929,7 +3093,7 @@ var CLSTAMP = "6363350";
         )
       );
     }
-    function _e() {
+    function Le() {
       return o.createElement(
         "svg",
         {
@@ -2945,7 +3109,7 @@ var CLSTAMP = "6363350";
         o.createElement("circle", { cx: "62.6", cy: "134", r: "20.6" })
       );
     }
-    function xe() {
+    function Me() {
       return o.createElement(
         "svg",
         {
@@ -2965,7 +3129,27 @@ var CLSTAMP = "6363350";
         })
       );
     }
-    function ve(e) {
+    function Se() {
+      return o.createElement(
+        "svg",
+        {
+          xmlns: "http://www.w3.org/2000/svg",
+          viewBox: "0 0 18 18",
+          version: "1.1",
+          x: "0px",
+          y: "0px",
+          fillRule: "evenodd",
+          clipRule: "evenodd",
+          strokeLinejoin: "round",
+          strokeMiterlimit: "1.41421",
+        },
+        o.createElement("path", {
+          d:
+            "M12.621,2.491c-0.021,0.019 -0.042,0.039 -0.063,0.06l-5.125,5.201c-0.579,0.587 -0.575,1.527 -0.001,2.109l0.691,0.702c0.576,0.584 1.505,0.582 2.079,-0.001l5.126,-5.201c0.021,-0.021 0.04,-0.042 0.059,-0.063l1.573,1.595c0.573,0.582 1.04,0.386 1.04,-0.439l0,-5.957c0,-0.276 -0.219,-0.497 -0.49,-0.497l-5.87,0c-0.82,0 -1.008,0.473 -0.434,1.056l1.415,1.435Zm-9.618,-2.491c-1.665,0 -3.003,1.344 -3.003,3.003l0,11.994c0,1.665 1.344,3.003 3.003,3.003l11.994,0c1.665,0 3.003,-1.344 3.003,-3.003l0,-7.746l0,4.249l-3,-2.488l0,4.492c0,0.826 -0.671,1.496 -1.496,1.496l-9.008,0c-0.826,0 -1.496,-0.671 -1.496,-1.496l0,-9.008c0,-0.826 0.671,-1.496 1.496,-1.496l4.504,0l-2.5,-3l4.249,0l-7.746,0Z",
+        })
+      );
+    }
+    function Ce(e) {
       return o.createElement(
         "svg",
         {
@@ -2985,7 +3169,7 @@ var CLSTAMP = "6363350";
         })
       );
     }
-    function Ee(e) {
+    function Te(e) {
       return o.createElement(
         "svg",
         {
@@ -3005,7 +3189,7 @@ var CLSTAMP = "6363350";
         })
       );
     }
-    function be(e) {
+    function Ne(e) {
       return o.createElement(
         "svg",
         {
@@ -3025,7 +3209,7 @@ var CLSTAMP = "6363350";
         })
       );
     }
-    function ke(e) {
+    function Be(e) {
       return o.createElement(
         "svg",
         {
@@ -3046,7 +3230,7 @@ var CLSTAMP = "6363350";
         })
       );
     }
-    function ye(e) {
+    function Ie(e) {
       return o.createElement(
         "svg",
         {
@@ -3071,7 +3255,7 @@ var CLSTAMP = "6363350";
         })
       );
     }
-    function Le(e) {
+    function Oe(e) {
       return o.createElement(
         "svg",
         {
@@ -3096,7 +3280,7 @@ var CLSTAMP = "6363350";
         })
       );
     }
-    function Ce(e) {
+    function Ge(e) {
       return o.createElement(
         "svg",
         { width: "100%", height: "100%", viewBox: "0 0 50 50" },
@@ -3123,7 +3307,7 @@ var CLSTAMP = "6363350";
         })
       );
     }
-    function Me(e) {
+    function Re(e) {
       return o.createElement(
         "svg",
         Object(r.a)(
@@ -3178,7 +3362,7 @@ var CLSTAMP = "6363350";
         )
       );
     }
-    function Se(e) {
+    function Ve(e) {
       var t = e.className,
         n = e.color;
       return o.createElement(
@@ -3207,7 +3391,7 @@ var CLSTAMP = "6363350";
         })
       );
     }
-    function Te(e) {
+    function Ae(e) {
       var t = e.className;
       Object(r.f)(e, ["className"]);
       return o.createElement(
@@ -3387,7 +3571,7 @@ var CLSTAMP = "6363350";
         )
       );
     }
-    function Ne() {
+    function ze() {
       return o.createElement(
         "svg",
         {
@@ -3416,7 +3600,7 @@ var CLSTAMP = "6363350";
         )
       );
     }
-    function Be(e) {
+    function De(e) {
       return o.createElement(
         "svg",
         Object(r.a)({}, e, {
@@ -3433,7 +3617,7 @@ var CLSTAMP = "6363350";
         })
       );
     }
-    function Ie() {
+    function Fe() {
       return o.createElement(
         "svg",
         {
@@ -3452,7 +3636,7 @@ var CLSTAMP = "6363350";
         })
       );
     }
-    function Oe() {
+    function je() {
       return o.createElement(
         "svg",
         {
@@ -3475,7 +3659,7 @@ var CLSTAMP = "6363350";
         )
       );
     }
-    function Ge() {
+    function We() {
       return o.createElement(
         "svg",
         {
@@ -3515,6 +3699,25 @@ var CLSTAMP = "6363350";
             })
           )
         )
+      );
+    }
+    function Ue(e) {
+      return o.createElement(
+        "svg",
+        Object(r.a)({}, e, {
+          height: "100px",
+          width: "100px",
+          fill: "#000000",
+          xmlns: "http://www.w3.org/2000/svg",
+          version: "1.1",
+          viewBox: "0 0 32 32",
+          x: "0px",
+          y: "0px",
+        }),
+        o.createElement("path", {
+          d:
+            "M26.286 0c-3.142 0-5.714 2.572-5.714 5.714 0 0.512 0.074 1.006 0.202 1.479l-10.573 5.287c-1.049-1.332-2.67-2.194-4.487-2.194-3.142 0-5.714 2.572-5.714 5.714s2.572 5.714 5.714 5.714c1.815 0 3.437-0.862 4.486-2.193l10.574 5.287c-0.127 0.473-0.202 0.966-0.202 1.478 0 3.142 2.572 5.714 5.714 5.714s5.714-2.572 5.714-5.714c0-3.142-2.572-5.714-5.714-5.714-1.817 0-3.438 0.862-4.487 2.194l-10.573-5.287c0.128-0.473 0.202-0.967 0.202-1.479s-0.074-1.005-0.202-1.478l10.574-5.287c1.049 1.331 2.67 2.193 4.486 2.193 3.142 0 5.714-2.572 5.714-5.714s-2.572-5.714-5.714-5.714zM26.286 2.286c1.907 0 3.429 1.522 3.429 3.429s-1.522 3.429-3.429 3.429c-1.907 0-3.429-1.522-3.429-3.429s1.522-3.429 3.429-3.429zM5.714 12.571c1.907 0 3.429 1.522 3.429 3.429s-1.522 3.429-3.429 3.429c-1.907 0-3.429-1.522-3.429-3.429s1.522-3.429 3.429-3.429zM26.286 22.857c1.907 0 3.429 1.522 3.429 3.429s-1.522 3.429-3.429 3.429c-1.907 0-3.429-1.522-3.429-3.429s1.522-3.429 3.429-3.429z",
+        })
       );
     }
   },
@@ -3830,11 +4033,12 @@ var CLSTAMP = "6363350";
       });
     n("r64O");
     function r(e) {
-      for (var t = e.length; 0 !== t; ) {
-        var n = Math.floor(Math.random() * t),
-          r = e[--t];
-        (e[t] = e[n]), (e[n] = r);
-      }
+      if (1 < (null == e ? void 0 : e.length))
+        for (var t = e.length; 0 !== t; ) {
+          var n = Math.floor(Math.random() * t),
+            r = e[--t];
+          (e[t] = e[n]), (e[n] = r);
+        }
     }
     function c(e, t) {
       if (!e && !t) return !0;
@@ -3912,7 +4116,7 @@ var CLSTAMP = "6363350";
         return w;
       }),
       n.d(t, "e", function () {
-        return _;
+        return x;
       });
     var s = n("mrSG"),
       u = n("q1tI"),
@@ -3956,6 +4160,9 @@ var CLSTAMP = "6363350";
         (this.m_mapTokens = new Map()), (this.m_mapFallbackTokens = new Map());
       }
       return (
+        (n.InstallErrorReportingStore = function (e) {
+          this.sm_ErrorReportingStore = e;
+        }),
         (n.GetLanguageFallback = function (e) {
           return "sc_schinese" === e ? "schinese" : "english";
         }),
@@ -3964,7 +4171,7 @@ var CLSTAMP = "6363350";
         }),
         (n.IsELanguageValidInRealm = function (e, t) {
           return (
-            t === (29 === e ? c.o.k_ESteamRealmChina : c.o.k_ESteamRealmGlobal)
+            t === (29 === e ? c.p.k_ESteamRealmChina : c.p.k_ESteamRealmGlobal)
           );
         }),
         (n.GetLanguageListForRealms = function (e) {
@@ -4011,9 +4218,9 @@ var CLSTAMP = "6363350";
           void 0 === e && (e = null);
           var t = new Array();
           return (
-            t.push(Object(r.h)(o.b.LANGUAGE)),
-            (o.b.SUPPORTED_LANGUAGES || []).forEach(function (e) {
-              e.value != o.b.LANGUAGE && t.push(Object(r.h)(e.value));
+            t.push(Object(r.h)(o.c.LANGUAGE)),
+            (o.c.SUPPORTED_LANGUAGES || []).forEach(function (e) {
+              e.value != o.c.LANGUAGE && t.push(Object(r.h)(e.value));
             }),
             e &&
               n.GetLanguageListForRealms(e).forEach(function (e) {
@@ -4029,6 +4236,17 @@ var CLSTAMP = "6363350";
           if ((0, e && 0 != e.length && "#" == e.charAt(0))) {
             var t = this.m_mapTokens.get(e.substring(1));
             if (void 0 !== t) return t;
+            n.sm_ErrorReportingStore &&
+              n.sm_ErrorReportingStore.ReportError(
+                new Error(
+                  "Unable to find localization token '" +
+                    e +
+                    "' for language '" +
+                    o.c.LANGUAGE +
+                    "'"
+                ),
+                { bIncludeMessageInIdentifier: !0 }
+              );
           }
         }),
         (n.prototype.LocalizeStringFromFallback = function (e) {
@@ -4043,7 +4261,7 @@ var CLSTAMP = "6363350";
     function f(e) {
       for (var r = [], t = 1; t < arguments.length; t++)
         r[t - 1] = arguments[t];
-      var n = _.LocalizeString(e);
+      var n = x.LocalizeString(e);
       return void 0 === n
         ? e
         : (0 < r.length &&
@@ -4059,7 +4277,7 @@ var CLSTAMP = "6363350";
     function h(e) {
       for (var t = [], n = 1; n < arguments.length; n++)
         t[n - 1] = arguments[n];
-      var r = _.LocalizeString(e);
+      var r = x.LocalizeString(e);
       if (void 0 === r) return e;
       for (var c, o = [], i = /(.*?)%(\d+)\$s/g, a = 0; (c = i.exec(r)); ) {
         (a += c[0].length), o.push(c[1]);
@@ -4165,10 +4383,10 @@ var CLSTAMP = "6363350";
         "vi-VN": 28,
       };
     function w() {
-      return p[o.b.LANGUAGE] || null;
+      return p[o.c.LANGUAGE] || null;
     }
-    var _ = new l();
-    window.LocalizationManager = _;
+    var x = new l();
+    window.LocalizationManager = x;
   },
   YyVH: function (e, t, n) {
     "use strict";
@@ -4180,7 +4398,7 @@ var CLSTAMP = "6363350";
       );
     }
     function c(e, t, n) {
-      return Math.max(t, Math.min(n, e));
+      return null == e || isNaN(e) ? e : Math.max(t, Math.min(n, e));
     }
     function o(e, t, n, r, c) {
       return r + ((c - r) * (e - t)) / (n - t);
@@ -4201,19 +4419,19 @@ var CLSTAMP = "6363350";
       return r;
     }),
       n.d(t, "f", function () {
-        return c;
+        return d;
       }),
       n.d(t, "i", function () {
         return l;
       }),
       n.d(t, "g", function () {
-        return o;
+        return m;
       }),
       n.d(t, "h", function () {
-        return a;
+        return o;
       }),
       n.d(t, "j", function () {
-        return p;
+        return a;
       }),
       n.d(t, "a", function () {
         return g;
@@ -4228,7 +4446,7 @@ var CLSTAMP = "6363350";
         return y;
       }),
       n.d(t, "e", function () {
-        return C;
+        return M;
       });
     var s = n("mrSG"),
       u = n("TLQK"),
@@ -4294,7 +4512,7 @@ var CLSTAMP = "6363350";
           : Object(u.f)(c + "XSeconds", e)
         : Object(u.f)(c + "LessThanAMinute");
     }
-    function c(e, t) {
+    function d(e, t) {
       var n = {
         weekday: "short",
         month: "long",
@@ -4306,32 +4524,32 @@ var CLSTAMP = "6363350";
     function l(e) {
       var t = new Date(1e3 * e),
         n = t.setHours(0, 0, 0, 0);
-      if ((r = d.get(n))) return r;
+      if ((r = i.get(n))) return r;
       var r = t.toLocaleDateString(u.e.GetPreferredLocales(), {
         year: "numeric",
         month: "short",
         day: "numeric",
       });
-      return d.set(n, r), r;
+      return i.set(n, r), r;
     }
-    function o(e) {
+    function m(e) {
       return new Date(1e3 * e).toLocaleTimeString(u.e.GetPreferredLocales(), {
         hour: "numeric",
         minute: "numeric",
       });
     }
-    var i = new Map();
-    function a(e) {
+    var c = new Map();
+    function o(e) {
       var t = new Date(1e3 * e),
         n = u.e.GetPreferredLocales(),
         r = (function (e) {
-          if (!0 === (n = i.get(e)) || !1 === n) return n;
+          if (!0 === (n = c.get(e)) || !1 === n) return n;
           var t = new Date();
           t.setHours(15);
           var n =
             t.toLocaleTimeString(e, { hour: "numeric" }) ==
             t.toLocaleTimeString(e, { hour: "numeric", hour12: !1 });
-          return i.set(e, n), n;
+          return c.set(e, n), n;
         })(n[0]);
       return t.toLocaleTimeString(
         n,
@@ -4340,13 +4558,13 @@ var CLSTAMP = "6363350";
           : { hour: "numeric", hour12: !0 }
       );
     }
-    var d = new Map(),
-      m = new Map();
-    function p(e, t) {
+    var i = new Map(),
+      p = new Map();
+    function a(e, t) {
       var n = new Date(),
         r = new Date(1e3 * e);
       if (r.getFullYear() != n.getFullYear()) return l(e);
-      h.c(new Date().setHours(24, 0, 0, 0) - n.getTime());
+      h.d(new Date().setHours(24, 0, 0, 0) - n.getTime());
       var c = new Date();
       if ((c.setHours(0, 0, 0, 0), c <= r)) {
         if ((c.setDate(c.getDate() + 1), r < c))
@@ -4357,25 +4575,33 @@ var CLSTAMP = "6363350";
         return Object(u.f)("#Time_Yesterday");
       var o = { month: t ? "long" : "short", day: "numeric" },
         i = r.setHours(0, 0, 0, 0) + o.month,
-        a = m.get(i);
+        a = p.get(i);
       return (
         a ||
         ((a = r.toLocaleDateString(u.e.GetPreferredLocales(), o)),
-        m.set(i, a),
+        p.set(i, a),
         a)
       );
     }
     function g(e, t) {
       var n = new Date(1e3 * e),
         r = new Date(),
-        c = Object(s.a)({ bGranularFutureTime: !1 }, t);
+        c = Object(s.a)(
+          {
+            bGranularFutureTime: !1,
+            bGranularToday: !1,
+            bGranularYesterday: !1,
+            bGranularPast: !1,
+          },
+          t
+        );
       if (r < n) {
         if (!c.bGranularFutureTime)
           return (
-            h.c(n.getTime() - r.getTime()),
-            (n.getFullYear() == r.getFullYear() ? L : M)(n)
+            h.d(n.getTime() - r.getTime()),
+            (n.getFullYear() == r.getFullYear() ? L : S)(n)
           );
-        h.c(new Date().setHours(24, 0, 0, 0) - r.getTime());
+        h.d(new Date().setHours(24, 0, 0, 0) - r.getTime());
         var o = new Date();
         return (o.setHours(0, 0, 0, 0), o.setDate(o.getDate() + 1), n < o)
           ? Object(u.f)("#Time_Today")
@@ -4384,11 +4610,22 @@ var CLSTAMP = "6363350";
               ? Object(u.f)("#Time_Tomorrow")
               : (o.setDate(o.getDate() + 5), n < o ? y(n) : k(n, !0)));
       }
-      h.c(new Date().setHours(24, 0, 0, 0) - r.getTime());
+      h.d(new Date().setHours(24, 0, 0, 0) - r.getTime());
       var i = new Date();
-      if ((i.setHours(0, 0, 0, 0), i <= n)) return Object(u.f)("#Time_Today");
+      if ((i.setHours(0, 0, 0, 0), i <= n))
+        return c.bGranularToday
+          ? Object(u.f)("#Time_Today_At", m(e))
+          : Object(u.f)("#Time_Today");
       if ((i.setDate(i.getDate() - 1), i <= n))
-        return Object(u.f)("#Time_Yesterday");
+        return c.bGranularYesterday
+          ? Object(u.f)("#Time_Yesterday_At", m(e))
+          : Object(u.f)("#Time_Yesterday");
+      if (c.bGranularPast)
+        return Object(u.f)(
+          "#Time_Past_At",
+          d(e, n.getFullYear() == r.getFullYear()),
+          m(e)
+        );
       if ((i.setDate(i.getDate() - 5), i <= n))
         return Object(u.f)("#TimeSince_ThisWeek");
       var a = new Date(i);
@@ -4403,12 +4640,12 @@ var CLSTAMP = "6363350";
           ? Object(u.f)("#TimeSince_1Week")
           : Object(u.f)("#TimeSince_XWeeks", l);
       }
-      return (n.getFullYear() == r.getFullYear() ? L : M)(n);
+      return (n.getFullYear() == r.getFullYear() ? L : S)(n);
     }
     function w(e) {
       var t = new Date(1e3 * e),
         n = new Date();
-      h.c(new Date().setHours(24, 0, 0, 0) - n.getTime());
+      h.d(new Date().setHours(24, 0, 0, 0) - n.getTime());
       var r = new Date();
       return (
         r.getDate() < 15 && r.setMonth(r.getMonth() - 1),
@@ -4417,12 +4654,12 @@ var CLSTAMP = "6363350";
           : (t.getFullYear() == n.getFullYear()
               ? L
               : n.getMonth() < 6 && t.getFullYear() == n.getFullYear() - 1
-              ? M
-              : C)(t)
+              ? S
+              : M)(t)
       );
     }
-    var _ = new Map(),
-      x = new Map(),
+    var x = new Map(),
+      _ = new Map(),
       v = new Map(),
       E = new Map(),
       b = new Map();
@@ -4442,28 +4679,28 @@ var CLSTAMP = "6363350";
       );
     }
     function y(e) {
-      var t = _.get(e.getDay());
+      var t = x.get(e.getDay());
       return (
         t ||
         ((t = e.toLocaleDateString(u.e.GetPreferredLocales(), {
           weekday: "long",
         })),
-        _.set(e.getDay(), t),
+        x.set(e.getDay(), t),
         t)
       );
     }
     function L(e) {
-      var t = x.get(e.getMonth());
+      var t = _.get(e.getMonth());
       return (
         t ||
         ((t = e.toLocaleDateString(u.e.GetPreferredLocales(), {
           month: "long",
         })),
-        x.set(e.getMonth(), t),
+        _.set(e.getMonth(), t),
         t)
       );
     }
-    function C(e) {
+    function M(e) {
       var t = v.get(e.getFullYear());
       return (
         t ||
@@ -4474,7 +4711,7 @@ var CLSTAMP = "6363350";
         t)
       );
     }
-    function M(e) {
+    function S(e) {
       var t = e.getMonth() + 12 * e.getFullYear(),
         n = E.get(t);
       return (
@@ -4521,72 +4758,78 @@ var CLSTAMP = "6363350";
   },
   kyHq: function (e, t, n) {
     "use strict";
-    n.d(t, "j", function () {
+    n.d(t, "k", function () {
       return i;
     }),
       n.d(t, "b", function () {
         return a;
       }),
-      n.d(t, "u", function () {
+      n.d(t, "w", function () {
         return l;
       }),
-      n.d(t, "p", function () {
+      n.d(t, "r", function () {
         return s;
       }),
-      n.d(t, "i", function () {
+      n.d(t, "j", function () {
         return u;
       }),
-      n.d(t, "r", function () {
+      n.d(t, "t", function () {
         return d;
       }),
       n.d(t, "a", function () {
         return m;
       }),
-      n.d(t, "k", function () {
+      n.d(t, "l", function () {
         return f;
       }),
-      n.d(t, "g", function () {
-        return _;
-      }),
-      n.d(t, "t", function () {
+      n.d(t, "h", function () {
         return x;
       }),
-      n.d(t, "h", function () {
+      n.d(t, "v", function () {
+        return _;
+      }),
+      n.d(t, "i", function () {
         return v;
       }),
-      n.d(t, "s", function () {
+      n.d(t, "u", function () {
         return E;
       }),
-      n.d(t, "e", function () {
+      n.d(t, "c", function () {
         return b;
       }),
       n.d(t, "f", function () {
+        return k;
+      }),
+      n.d(t, "g", function () {
+        return C;
+      }),
+      n.d(t, "p", function () {
         return M;
       }),
-      n.d(t, "o", function () {
-        return L;
-      }),
-      n.d(t, "d", function () {
-        return S;
-      }),
-      n.d(t, "n", function () {
+      n.d(t, "e", function () {
         return T;
       }),
-      n.d(t, "m", function () {
-        return B;
+      n.d(t, "o", function () {
+        return N;
+      }),
+      n.d(t, "n", function () {
+        return I;
+      }),
+      n.d(t, "q", function () {
+        return G;
       });
     var r = n("mrSG"),
       c = n("mgoM");
-    n.d(t, "c", function () {
+    n.d(t, "d", function () {
       return c.a;
     }),
-      n.d(t, "l", function () {
+      n.d(t, "m", function () {
         return c.e;
       }),
-      n.d(t, "q", function () {
+      n.d(t, "s", function () {
         return c.h;
       }),
-      n.d(t, "v", function () {
+      n.d(t, "x", function () {
         return c.j;
       });
     var o = n("2vnA"),
@@ -4714,10 +4957,10 @@ var CLSTAMP = "6363350";
         "k_EComputerActiveStateActive"),
       (g[(g.k_EComputerActiveStateIdle = 2)] = "k_EComputerActiveStateIdle");
     var w,
-      _ = (function () {
+      x = (function () {
         return function () {};
       })(),
-      x = (function () {
+      _ = (function () {
         return function () {};
       })();
     ((w = {})[(w.k_EPending = 0)] = "k_EPending"),
@@ -4730,6 +4973,31 @@ var CLSTAMP = "6363350";
         return function () {};
       })();
     function b(e) {
+      switch (e) {
+        case 1:
+          return "game";
+        case 2:
+          return "software";
+        case 4:
+          return "tool";
+        case 8:
+          return "demo";
+        case 32:
+          return "dlc";
+        case 128:
+          return "driver";
+        case 256:
+          return "config";
+        case 2048:
+          return "video";
+        case 8192:
+          return "music";
+        case 65536:
+          return "beta";
+      }
+      return "invalid";
+    }
+    function k(e) {
       return (
         "game" === e ||
         "dlc" === e ||
@@ -4740,69 +5008,69 @@ var CLSTAMP = "6363350";
         "hardware" === e
       );
     }
-    var k, y;
-    ((k = {})[(k.k_EClientUsedInputTypeKeyboard = 0)] =
+    var y, L;
+    ((y = {})[(y.k_EClientUsedInputTypeKeyboard = 0)] =
       "k_EClientUsedInputTypeKeyboard"),
-      (k[(k.k_EClientUsedInputTypeMouse = 1)] = "k_EClientUsedInputTypeMouse"),
-      (k[(k.k_EClientUsedInputTypeController = 2)] =
+      (y[(y.k_EClientUsedInputTypeMouse = 1)] = "k_EClientUsedInputTypeMouse"),
+      (y[(y.k_EClientUsedInputTypeController = 2)] =
         "k_EClientUsedInputTypeController"),
-      (k[(k.k_EClientUsedInputTypeMax = 3)] = "k_EClientUsedInputTypeMax"),
-      ((y = {})[(y.k_ERemoteClientLaunchOK = 1)] = "k_ERemoteClientLaunchOK"),
-      (y[(y.k_ERemoteClientLaunchFail = 2)] = "k_ERemoteClientLaunchFail"),
-      (y[(y.k_ERemoteClientLaunchRequiresUI = 3)] =
+      (y[(y.k_EClientUsedInputTypeMax = 3)] = "k_EClientUsedInputTypeMax"),
+      ((L = {})[(L.k_ERemoteClientLaunchOK = 1)] = "k_ERemoteClientLaunchOK"),
+      (L[(L.k_ERemoteClientLaunchFail = 2)] = "k_ERemoteClientLaunchFail"),
+      (L[(L.k_ERemoteClientLaunchRequiresUI = 3)] =
         "k_ERemoteClientLaunchRequiresUI"),
-      (y[(y.k_ERemoteClientLaunchRequiresLaunchOption = 4)] =
+      (L[(L.k_ERemoteClientLaunchRequiresLaunchOption = 4)] =
         "k_ERemoteClientLaunchRequiresLaunchOption"),
-      (y[(y.k_ERemoteClientLaunchRequiresEULA = 5)] =
+      (L[(L.k_ERemoteClientLaunchRequiresEULA = 5)] =
         "k_ERemoteClientLaunchRequiresEULA"),
-      (y[(y.k_ERemoteClientLaunchTimeout = 6)] =
+      (L[(L.k_ERemoteClientLaunchTimeout = 6)] =
         "k_ERemoteClientLaunchTimeout"),
-      (y[(y.k_ERemoteClientLaunchStreamTimeout = 7)] =
+      (L[(L.k_ERemoteClientLaunchStreamTimeout = 7)] =
         "k_ERemoteClientLaunchStreamTimeout"),
-      (y[(y.k_ERemoteClientLaunchStreamClientFail = 8)] =
+      (L[(L.k_ERemoteClientLaunchStreamClientFail = 8)] =
         "k_ERemoteClientLaunchStreamClientFail"),
-      (y[(y.k_ERemoteClientLaunchOtherGameRunning = 9)] =
+      (L[(L.k_ERemoteClientLaunchOtherGameRunning = 9)] =
         "k_ERemoteClientLaunchOtherGameRunning"),
-      (y[(y.k_ERemoteClientLaunchDownloadStarted = 10)] =
+      (L[(L.k_ERemoteClientLaunchDownloadStarted = 10)] =
         "k_ERemoteClientLaunchDownloadStarted"),
-      (y[(y.k_ERemoteClientLaunchDownloadNoSpace = 11)] =
+      (L[(L.k_ERemoteClientLaunchDownloadNoSpace = 11)] =
         "k_ERemoteClientLaunchDownloadNoSpace"),
-      (y[(y.k_ERemoteClientLaunchDownloadFiltered = 12)] =
+      (L[(L.k_ERemoteClientLaunchDownloadFiltered = 12)] =
         "k_ERemoteClientLaunchDownloadFiltered"),
-      (y[(y.k_ERemoteClientLaunchDownloadRequiresUI = 13)] =
+      (L[(L.k_ERemoteClientLaunchDownloadRequiresUI = 13)] =
         "k_ERemoteClientLaunchDownloadRequiresUI"),
-      (y[(y.k_ERemoteClientLaunchAccessDenied = 14)] =
+      (L[(L.k_ERemoteClientLaunchAccessDenied = 14)] =
         "k_ERemoteClientLaunchAccessDenied"),
-      (y[(y.k_ERemoteClientLaunchNetworkError = 15)] =
+      (L[(L.k_ERemoteClientLaunchNetworkError = 15)] =
         "k_ERemoteClientLaunchNetworkError"),
-      (y[(y.k_ERemoteClientLaunchProgress = 16)] =
+      (L[(L.k_ERemoteClientLaunchProgress = 16)] =
         "k_ERemoteClientLaunchProgress"),
-      (y[(y.k_ERemoteClientLaunchParentalUnlockFailed = 17)] =
+      (L[(L.k_ERemoteClientLaunchParentalUnlockFailed = 17)] =
         "k_ERemoteClientLaunchParentalUnlockFailed"),
-      (y[(y.k_ERemoteClientLaunchScreenLocked = 18)] =
+      (L[(L.k_ERemoteClientLaunchScreenLocked = 18)] =
         "k_ERemoteClientLaunchScreenLocked"),
-      (y[(y.k_ERemoteClientLaunchUnsupported = 19)] =
+      (L[(L.k_ERemoteClientLaunchUnsupported = 19)] =
         "k_ERemoteClientLaunchUnsupported"),
-      (y[(y.k_ERemoteClientLaunchDisabledLocal = 20)] =
+      (L[(L.k_ERemoteClientLaunchDisabledLocal = 20)] =
         "k_ERemoteClientLaunchDisabledLocal"),
-      (y[(y.k_ERemoteClientLaunchDisabledRemote = 21)] =
+      (L[(L.k_ERemoteClientLaunchDisabledRemote = 21)] =
         "k_ERemoteClientLaunchDisabledRemote"),
-      (y[(y.k_ERemoteClientLaunchBroadcasting = 22)] =
+      (L[(L.k_ERemoteClientLaunchBroadcasting = 22)] =
         "k_ERemoteClientLaunchBroadcasting"),
-      (y[(y.k_ERemoteClientLaunchBusy = 23)] = "k_ERemoteClientLaunchBusy"),
-      (y[(y.k_ERemoteClientLaunchDriversNotInstalled = 24)] =
+      (L[(L.k_ERemoteClientLaunchBusy = 23)] = "k_ERemoteClientLaunchBusy"),
+      (L[(L.k_ERemoteClientLaunchDriversNotInstalled = 24)] =
         "k_ERemoteClientLaunchDriversNotInstalled"),
-      (y[(y.k_ERemoteClientLaunchTransportUnavailable = 25)] =
+      (L[(L.k_ERemoteClientLaunchTransportUnavailable = 25)] =
         "k_ERemoteClientLaunchTransportUnavailable"),
-      (y[(y.k_ERemoteClientLaunchCanceled = 26)] =
+      (L[(L.k_ERemoteClientLaunchCanceled = 26)] =
         "k_ERemoteClientLaunchCanceled"),
-      (y[(y.k_ERemoteClientLaunchInvisible = 27)] =
+      (L[(L.k_ERemoteClientLaunchInvisible = 27)] =
         "k_ERemoteClientLaunchInvisible"),
-      (y[(y.k_ERemoteClientLaunchRestrictedCountry = 28)] =
+      (L[(L.k_ERemoteClientLaunchRestrictedCountry = 28)] =
         "k_ERemoteClientLaunchRestrictedCountry");
-    var L,
-      C,
-      M = (function () {
+    var M,
+      S,
+      C = (function () {
         function e() {
           this.m_rgHandles = [];
         }
@@ -4821,57 +5089,68 @@ var CLSTAMP = "6363350";
           e
         );
       })();
-    function S(e) {
-      return e === L.k_ESteamRealmChina;
+    function T(e) {
+      return e === M.k_ESteamRealmChina;
     }
-    ((C = L = L || {})[(C.k_ESteamRealmUnknown = 0)] = "k_ESteamRealmUnknown"),
-      (C[(C.k_ESteamRealmGlobal = 1)] = "k_ESteamRealmGlobal"),
-      (C[(C.k_ESteamRealmChina = 2)] = "k_ESteamRealmChina");
-    var T, N, B, I, O, G, R;
-    ((N = T = T || {})[(N.Unknown = 0)] = "Unknown"),
-      (N[(N.Wired = 1)] = "Wired"),
-      (N[(N.Wireless = 2)] = "Wireless"),
-      ((I = B = B || {})[(I.NotPresent = 0)] = "NotPresent"),
-      (I[(I.Failed = 1)] = "Failed"),
-      (I[(I.Disconnected = 2)] = "Disconnected"),
-      (I[(I.Disconnecting = 3)] = "Disconnecting"),
-      (I[(I.Connecting = 4)] = "Connecting"),
-      (I[(I.Connected = 5)] = "Connected"),
-      (I[(I.Retrying = 6)] = "Retrying"),
-      ((O = {})[(O.None = 0)] = "None"),
-      (O[(O.StaticWep = 1)] = "StaticWep"),
-      (O[(O.DynamicWep = 2)] = "DynamicWep"),
-      (O[(O.Wpa = 4)] = "Wpa"),
-      (O[(O.WpaEnterprise = 8)] = "WpaEnterprise"),
-      (O[(O.Wpa2 = 16)] = "Wpa2"),
-      (O[(O.Wpa2Enterprise = 32)] = "Wpa2Enterprise"),
-      (O[(O.Unsupported = 32768)] = "Unsupported"),
-      ((G = {})[(G.SystemKey0 = 0)] = "SystemKey0"),
-      (G[(G.SystemKey1 = 1)] = "SystemKey1"),
-      ((R = {})[(R.Hidden = 0)] = "Hidden"),
-      (R[(R.Notification = 1)] = "Notification"),
-      (R[(R.Overlay = 2)] = "Overlay"),
-      (R[(R.Opaque = 3)] = "Opaque");
+    ((S = M = M || {})[(S.k_ESteamRealmUnknown = 0)] = "k_ESteamRealmUnknown"),
+      (S[(S.k_ESteamRealmGlobal = 1)] = "k_ESteamRealmGlobal"),
+      (S[(S.k_ESteamRealmChina = 2)] = "k_ESteamRealmChina");
+    var N, B, I, O, G, R, V, A, z;
+    ((B = N = N || {})[(B.Unknown = 0)] = "Unknown"),
+      (B[(B.Wired = 1)] = "Wired"),
+      (B[(B.Wireless = 2)] = "Wireless"),
+      ((O = I = I || {})[(O.NotPresent = 0)] = "NotPresent"),
+      (O[(O.Failed = 1)] = "Failed"),
+      (O[(O.Disconnected = 2)] = "Disconnected"),
+      (O[(O.Disconnecting = 3)] = "Disconnecting"),
+      (O[(O.Connecting = 4)] = "Connecting"),
+      (O[(O.Connected = 5)] = "Connected"),
+      (O[(O.Retrying = 6)] = "Retrying"),
+      ((R = G = G || {})[(R.None = 0)] = "None"),
+      (R[(R.Weak = 1)] = "Weak"),
+      (R[(R.Ok = 2)] = "Ok"),
+      (R[(R.Good = 3)] = "Good"),
+      (R[(R.Excellent = 4)] = "Excellent"),
+      ((V = {})[(V.None = 0)] = "None"),
+      (V[(V.StaticWep = 1)] = "StaticWep"),
+      (V[(V.DynamicWep = 2)] = "DynamicWep"),
+      (V[(V.Wpa = 4)] = "Wpa"),
+      (V[(V.WpaEnterprise = 8)] = "WpaEnterprise"),
+      (V[(V.Wpa2 = 16)] = "Wpa2"),
+      (V[(V.Wpa2Enterprise = 32)] = "Wpa2Enterprise"),
+      (V[(V.Unsupported = 32768)] = "Unsupported"),
+      ((A = {})[(A.SystemKey0 = 0)] = "SystemKey0"),
+      (A[(A.SystemKey1 = 1)] = "SystemKey1"),
+      ((z = {})[(z.Hidden = 0)] = "Hidden"),
+      (z[(z.Notification = 1)] = "Notification"),
+      (z[(z.Overlay = 2)] = "Overlay"),
+      (z[(z.Opaque = 3)] = "Opaque");
   },
   lkRc: function (e, t, n) {
     "use strict";
-    n.d(t, "b", function () {
+    n.d(t, "c", function () {
       return i;
     }),
-      n.d(t, "f", function () {
+      n.d(t, "h", function () {
         return a;
       }),
-      n.d(t, "a", function () {
+      n.d(t, "b", function () {
         return l;
       }),
-      n.d(t, "e", function () {
-        return f;
-      }),
-      n.d(t, "c", function () {
-        return h;
-      }),
       n.d(t, "d", function () {
+        return s;
+      }),
+      n.d(t, "a", function () {
         return d;
+      }),
+      n.d(t, "g", function () {
+        return m;
+      }),
+      n.d(t, "e", function () {
+        return p;
+      }),
+      n.d(t, "f", function () {
+        return g;
       });
     n("mrSG");
     var r,
@@ -4915,9 +5194,9 @@ var CLSTAMP = "6363350";
         PAGE_TIMESTAMP: 0,
         get SESSIONID() {
           return (function () {
-            if (!Object(o.a)()) return (r = r || u());
+            if (!Object(o.a)()) return (r = r || f());
             var e = Object(o.b)("sessionid");
-            e = e || u();
+            e = e || f();
             return e;
           })();
         },
@@ -4944,22 +5223,23 @@ var CLSTAMP = "6363350";
       l = {
         CLANSTEAMID: "",
         CLANACCOUNTID: 0,
-        ANNOUNCEMENT_GID: "",
-        IMG_URL: "",
         APPID: 0,
         VANITY_ID: "",
         IS_CREATOR_HOME: !1,
         IS_CURATOR: !1,
         IS_OGG: !1,
         CAN_UPLOAD_IMAGES: !1,
-        HEADER_IMAGE: "",
         APP_NAME: "",
+        HEADER_IMAGE: "",
         HAS_ADULT_CONTENT: !1,
         HAS_ADULT_CONTENT_SEX: !1,
         HAS_ADULT_CONTENT_VIOLENCE: !1,
+        IS_VALVE_GROUP: !1,
+        IS_ALLOWED_SC: !1,
       },
-      s = "webui_config";
-    function u() {
+      s = { ANNOUNCEMENT_GID: "" },
+      u = "webui_config";
+    function f() {
       var e = (function () {
         for (var e = "", t = 0; t < 24; t++)
           e += Object(c.b)(0, 35).toString(36);
@@ -4967,10 +5247,18 @@ var CLSTAMP = "6363350";
       })();
       return Object(o.c)("sessionid", e, 0), e;
     }
-    function f(e, t) {
+    var h = "presentation_mode";
+    function d() {
+      var e = null;
+      return (
+        Object(o.a)() && (e = Object(o.b)(h)),
+        Boolean(e && 1 === Number.parseInt(e))
+      );
+    }
+    function m(e, t) {
       var n;
       if (
-        (void 0 === t && (t = s),
+        (void 0 === t && (t = u),
         (n = "string" == typeof t ? document.getElementById(t) : t))
       )
         try {
@@ -4982,7 +5270,7 @@ var CLSTAMP = "6363350";
         }
       else console.error("Missing config element #", t);
     }
-    function h() {
+    function p() {
       if (!window || !window.location || !window.location.href)
         return console.warn("Unable to determine base url!"), "unknown";
       var e = window.location.href;
@@ -5004,7 +5292,7 @@ var CLSTAMP = "6363350";
         ? i.INTERNAL_STATS_BASE_URL
         : "";
     }
-    function d() {
+    function g() {
       var e = window.location.href;
       return e.startsWith(i.STORE_BASE_URL)
         ? "store"
@@ -5076,10 +5364,10 @@ var CLSTAMP = "6363350";
         return w;
       }),
       n.d(t, "g", function () {
-        return _;
+        return x;
       }),
       n.d(t, "e", function () {
-        return x;
+        return _;
       }),
       n.d(t, "h", function () {
         return v;
@@ -5168,10 +5456,10 @@ var CLSTAMP = "6363350";
           return t;
       }
     }
-    var _ = function (e) {
+    var x = function (e) {
       return "koreana" === e ? "korean" : e;
     };
-    function x(e, t) {
+    function _(e, t) {
       switch ((void 0 === t && (t = ""), e)) {
         case 0:
           return "english";

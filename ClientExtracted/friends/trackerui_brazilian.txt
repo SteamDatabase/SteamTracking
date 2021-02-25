@@ -17,7 +17,7 @@
 "Friends_ChatToPlusInGame"			"Para: %friend% (jogando %game%)"
 "Friends_UserSays"					"%friend% diz:\n"
 "Friends_TypingMessage"				"%friend% está digitando uma mensagem."
-"Friends_LastMessageReceived"		"Última mensagem recebida: %date% às %time%"
+"Friends_LastMessageReceived"		"Última mensagem recebida: %date%, às %time%"
 "Friends_FriendInfoDialog_Title"	"%friend% - Informações do usuário"
 "Friends_Chat_FriendNameChanged"		"%old_name% mudou seu nome para %friend%.\n"
 "Friends_Chat_FriendStateChanged"		"%friend% agora está %status%.\n"
@@ -170,7 +170,7 @@
 "Friends_InvitationBlocking"		"Você está bloqueando a comunicação com esse usuário. Antes de se comunicar com ele(a), primeiro o(a) desbloqueie visitando o perfil na Comunidade Steam."
 
 "Friends_DontGiveOutPassword"			"Nunca revele a sua senha a ninguém.\n"
-"Friends_DontGiveOutPassword_URL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=301"
+"Friends_DontGiveOutPassword_URL"		"https://support.steampowered.com/kb/1266-OAFV-8478/"
 
 "Friends_ChatFilterBlockWarning"		"Para a sua segurança, um link foi removido da mensagem a seguir."
 
@@ -222,7 +222,7 @@
 "Friends_Chat_InviteToChatRoom_Title"					"Comunidade Steam — Convite para sala de conversa"
 "Friends_Chat_InviteToChatRoom_Info"					"%patron% convidou você para entrar na conversa %chat%."
 "Friends_Chat_InviteToPrivateChatRoom_Info"				"%patron% convidou você para uma conversa privada."
-"Friends_Chat_InviteReceivedTime"						"Convite recebido: %date% às %time%"
+"Friends_Chat_InviteReceivedTime"						"Convite recebido: %date%, às %time%"
 
 "Friends_Chat_KickFromChatRoom"       "Expulsar da sala de conversa"
 "Friends_Chat_BanFromChatRoom"        "Banir da sala de conversa"
@@ -556,6 +556,7 @@
 "Friends_SteamCommunity"	"Comunidade Steam"
 "Limited_Explanation"	"A sua conta não atende aos requisitos para usar este recurso."
 "Limited_ForDetails"	"Acesse o Suporte Steam para mais informações."
+"Limited_ForDetails_URL"	"https://help.steampowered.com/wizard/HelpWithLimitedAccount"
 
 "Friends_Chat_RoomModerated_Entry"		"O envio de mensagens na sala de conversa foi restringido para somente administradores por %member_making_change%.\n"
 "Friends_Chat_RoomUnmoderated_Entry"		"O envio de mensagens na sala de conversa foi liberado para todos por %member_making_change%.\n"
@@ -687,6 +688,7 @@
 "Broadcast_FirstTime_PermissionHeader" "Tome um minuto para definir as suas preferências..."
 "Broadcast_FirstTime_DesktopOnly" "Por padrão, apenas o conteúdo do seu jogo poderá ser assistido. A sua área de trabalho não será transmitida."
 "Broadcast_FirstTime_FAQ" "Leia as perguntas frequentes sobre a Transmissão Steam"
+"Broadcast_FirstTime_FAQLink" "https://support.steampowered.com/kb_article.php?ref=6730-TOAK-6497&l=brazilian"
 "Broadcast_FirstTime_Title" "Transmissão Steam"
 "Broadcast_FirstTime_OK" "OK"
 "Broadcast_FirstTime_Cancel" "Cancelar"

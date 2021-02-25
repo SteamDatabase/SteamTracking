@@ -5,6 +5,7 @@
 	"EventCurator_BrowseDialog_Desc": "关注您最喜爱的蒸汽平台鉴赏家，在您的蒸汽平台新闻中心即可获取游戏新闻！",
 	"EventCurator_FeedCaption_Long": "关注以下部分蒸汽平台鉴赏家，在您的蒸汽平台新闻中心即可获取游戏新闻！",
 	"EventCurator_DismissBody": "此操作将隐藏此设备上的新闻建议。您仍然可以前往新闻中心的蒸汽平台鉴赏家选项卡查找新闻。",
+	"EventCalendar_Title": "蒸汽平台%1$s新闻中心",
 	"EventCalendar_TabTitle_Global": "蒸汽平台新闻中心",
 	"EventCalendar_TabTitle_GroupHub": "%1$s - 蒸汽平台 新闻中心",
 	"EventCalendar_TabTitle_GroupNameAndEventDetail": "%1$s - %2$s - 蒸汽平台 新闻",

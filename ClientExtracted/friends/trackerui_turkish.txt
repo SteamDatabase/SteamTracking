@@ -95,7 +95,7 @@
 "Friends_EnterAccountNameOrEmailAddress"	"Arkadaş Listesine eklemek istediğiniz kişinin Steam hesap adını veya e-posta adresini girin."
 "Friends_SearchingForFriend"				"%search% aranıyor..."
 "Friends_FriendHasBeenAddedToYourListUnderName" "%search% Arkadaşlar listenize '%friend%' adıyla eklendi."
-"Friends_FriendHasBeenAddedToYourList"		"%friend% Arkadaşlar listenize eklendi."
+"Friends_FriendHasBeenAddedToYourList"		"%friend% arkadaş listenize eklendi."
 "Friends_UnableToFindFriendByThatName"		"%search% bulunamadı. Tekrar aramak istiyorsanız 'Geri'ye tıklayın."
 "Friends_CannotAddSelfToList"				"Kendinizi Arkadaşlar listenize ekleyemezsiniz."
 "Friends_CannotAddFriendWhoIsAlreadyInList" "%search% zaten Arkadaşlar listenizde '%friend%' adıyla yer alıyor."
@@ -170,7 +170,7 @@
 "Friends_InvitationBlocking"		"Bu kullanıcıyla olan tüm iletişimi engellediniz. Onunla iletişim kurmadan önce, Steam Topluluğu Profili sayfasını ziyaret ederek engeli kaldırmalısınız."
 
 "Friends_DontGiveOutPassword"			"Parolanızı kimseyle paylaşmayın.\n"
-"Friends_DontGiveOutPassword_URL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=301"
+"Friends_DontGiveOutPassword_URL"		"https://support.steampowered.com/kb/1266-OAFV-8478/"
 
 "Friends_ChatFilterBlockWarning"		"Güvenliğiniz için bu mesajda bulunan bir bağlantı silindi."
 
@@ -437,7 +437,7 @@
 "Friends_WhenThisFriendJoinsGame"				"%FriendName% oyuna katıldığında"
 "Friends_WhenThisFriendComesOnline"			"%FriendName% çevrimiçi olduğunda"
 "Friends_WhenReceiveMessageFromThisFriend"	"%FriendName% adlı kullanıcıdan ileti aldığımda"
-"Friends_InviteInfo_HasAdded"					"sizi Arkadaş Listesine"
+"Friends_InviteInfo_HasAdded"					"sizi arkadaş listesine"
 "Friends_InviteInfo_FriendsList"				"ekledi"
 "Friends_InviteInfo_BeenInvited"				"Steam grubuna katılmaya"
 "Friends_InviteInfo_JoinGroup"				"davet edildiniz"
@@ -556,6 +556,7 @@
 "Friends_SteamCommunity"	"Steam Topluluğu"
 "Limited_Explanation"	"Hesabınız bu özelliğin kullanılmasını sağlayacak gereksinimleri karşılamıyor."
 "Limited_ForDetails"	"Daha fazla bilgi için Steam Destek'i ziyaret edin."
+"Limited_ForDetails_URL"	"https://help.steampowered.com/wizard/HelpWithLimitedAccount"
 
 "Friends_Chat_RoomModerated_Entry"		"Bu sohbet odasının türü %member_making_change% tarafından görevlilere özel olarak ayarlandı.\n"
 "Friends_Chat_RoomUnmoderated_Entry"		"Bu sohbet odasının türü %member_making_change% tarafından tüm kullanıcılar olarak ayarlandı.\n"
@@ -687,6 +688,7 @@
 "Broadcast_FirstTime_PermissionHeader" "Tercihlerinizi ayarlamak için bir dakikanızı ayırın..."
 "Broadcast_FirstTime_DesktopOnly" "Varsayılan olarak, yalnızca oyun içeriği izlenebilir. Masaüstünün yayını olmayacaktır."
 "Broadcast_FirstTime_FAQ" "Steam Yayıncılığı SSS'ı okuyun"
+"Broadcast_FirstTime_FAQLink" "https://support.steampowered.com/kb_article.php?ref=6730-TOAK-6497"
 "Broadcast_FirstTime_Title" "Steam Yayıncılığı"
 "Broadcast_FirstTime_OK" "Tamam"
 "Broadcast_FirstTime_Cancel" "İptal"

@@ -431,7 +431,7 @@
 "Steam_DPIScaling_Option"				"Szöveg és ikonok nagyítása a monitorméret alapján (újraindítást igényel)"
 "Steam_LaunchSteamOnStartup_Option"		"Steam futtatása a számítógép indulásakor"
 "Steam_BPMOnStartup_Option"				"Steam indítása Nagy Kép módban"
-"Steam_ShowUrlBar_Option"				"A Steam URL címsorának mutatása, amikor lehet"
+"Steam_ShowUrlBar_Option"				"Webes címsáv mutatása, amikor lehet"
 "Steam_UseDirectWrite_Option"			"DirectWrite engedélyezése jobb karakter-simítás és -térközölés érdekében"
 "Steam_UseH264HWAccel_Option"			"Hardveres videó-dekódolás, ha támogatott (újraindítást igényel)"
 
@@ -1145,7 +1145,7 @@
 "Steam_SubscriptionApprovalCode" "Engedélyezés"
 "Steam_SubscriptionConfirmation" "Megerősítő kód"
 
-"Steam_TroubleshooterURL_CDKey" "http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=276"
+"Steam_TroubleshooterURL_CDKey" "https://support.steampowered.com/kb/1968-HKLX-7538&l=hungarian/"
 
 "Steam_SubscriptionSuccess_CDKey_Headline" "Sikeres aktiválás!"
 "Steam_SubscriptionSuccess_CDKey" "Termékaktiválási kódod sikeresen aktiválódott. Az alább felsorolt termék(ek) véglegesen összerendelésre került(ek) Steam fiókoddal. Az imént aktivált terméke(i)dhez való hozzáféréshez ebbe a fiókba kell bejelentkezned.\n\nFiókod adatainak megőrzése érdekében nyomtasd ki a tranzakció nyugtáját."
@@ -1215,7 +1215,7 @@
 "Steam_Subscription_HardwarePromo_Used_Headline" "Kettős regisztráció"
 "Steam_Subscription_HardwarePromo_Used" "Ezt az ajánlatot már aktiválták egy másik Steam fiók használatával."
 "Steam_PurchaseError_HardwarePromoIneligible" "Sajnáljuk, de ez a számítógép nem felel meg a(z) %subscription% ajánlat rendszerkövetelményeinek."
-"Steam_HardwarePromo_SupportURL" "http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=628"
+"Steam_HardwarePromo_SupportURL" "https://support.steampowered.com/kb/2734-UDFX-1098&l=hungarian/"
 
 "Steam_Subscription_HardwarePromo_AlreadyPurchased_Headline" "Már rendelkezel a termékkel"
 "Steam_Subscription_HardwarePromo_AlreadyPurchased" "Ez a Steam fiók már rendelkezik az ebben az ajánlatban szereplő termék(ek)kel. Ezek eléréséhez lépj be Játékkönyvtáradba."
@@ -1486,7 +1486,8 @@
 "Steam_DutyNote"	"A terméket az Amerikai Egyesült Államokból szállítjuk. A vonatkozó vámköltségek téged terhelnek."
 
 "Steam_AgreeToTheTerms"		"Elfogadom a Steam Előfizetői"
-"Steam_SteamSubscriberAgreement"	"Szerződés feltételeit"
+"Steam_SteamSubscriberAgreement"	    "Szerződés feltételeit"
+"Steam_SteamSubscriberAgreement_china"	"Steam China licencszerződés"
 "Steam_ComplianceRequired_Title"	"Steam - Figyelmeztetés"
 "Steam_ComplianceRequired_Info"		"A folytatáshoz el kell fogadnod a Steam előfizetői szerződés feltételeit."
 
@@ -1605,9 +1606,10 @@
 "Steam_ConnectionFailureTitle"	"Csatlakozási hiba"
 "Steam_ConnectionFailureDetail"	"A Steam nem tud csatlakozni a hálózathoz. Ezt az internetkapcsolatod hibája okozhatja."
 "Steam_ConnectionSupportLink"	"Csatlakozási hibaelhárítás"
-"Steam_ConnectionSupportURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=11"
+"Steam_ConnectionSupportURL"	"https://support.steampowered.com/kb/1456-EUDN-2493&l=hungarian/"
 
 "SteamUI_NetworkTroubleshootingTips"	"Hálózati hibaelhárítási tippek"
+"SteamUI_NetworkTroubleshootingTips_URL"	"https://support.steampowered.com/kb_article.php?ref=1456-EUDN-2493&l=hungarian"
 
 
 "SteamUI_SSA_Agree"				"Kérjük, olvasd végig ezt a megállapodást. A folytatáshoz el kell fogadnod a Steam előfizetői szerződés feltételeit."
@@ -1671,6 +1673,16 @@
 "steam_menu_downloads"	"Letöltések"
 "steam_menu_account"	"Steam"
 "steam_menu_window" "Ablak"
+"steam_menu_preferences"	"Beállítások..."
+"steam_menu_services"	"Szolgáltatások"
+"steam_menu_hidesteam"	"Steam elrejtése"
+"steam_menu_hideothers"	"Többi elrejtése"
+"steam_menu_showall"	"Összes megjelenítése"
+"steam_menu_quitsteam"	"Kilépés a Steamből"
+"steam_menu_window_close"	"Bezárás"
+"steam_menu_window_minimize"	"Kis méret"
+"steam_menu_window_zoom"	"Nagyítás"
+"steam_menu_window_bringalltofront"	"Összes előtérbe hozása"
 "steam_menu_games_details"	"Játékok - Részletes"
 "steam_menu_games_list"		"Játékok - Lista"
 "steam_menu_games_grid"		"Játékok - Rács"
@@ -2375,16 +2387,16 @@
 "Steam_RegionRestricted_Title"			"Steam - Játék nem elérhető"
 "Steam_RegionRestrictedPurchase_Info"				"Ezt a játékot egy csak egy bizonyos földrajzi régióban érvényes termékkóddal aktiválták. Mivel most nem abban a régióban vagy, a(z) %game% nem érhető el."
 "Steam_RegionRestricted_SupportLink"		"További információkért látogass el a Steam Támogatás weboldalára"
-"Steam_RegionRestrictedPurchase_SupportURL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=461"
+"Steam_RegionRestrictedPurchase_SupportURL"		"https://support.steampowered.com/kb/1266-QFZC-2141&l=hungarian/"
 "Steam_RegionRestricted_Info"				"A(z) %game% nem érhető el a régiódban."
-"Steam_RegionRestricted_SupportURL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=461"
+"Steam_RegionRestricted_SupportURL"		"https://support.steampowered.com/kb/1266-QFZC-2141&l=hungarian/"
 
 "Steam_CountryRestricted_Info"				"Ezt az előfizetést az országodban nem lehet megvásárolni."
-"Steam_CountryRestricted_SupportURL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=488"
+"Steam_CountryRestricted_SupportURL"		"https://support.steampowered.com/kb/1266-QFZC-2141&l=hungarian/"
 
 "Steam_RegionRestrictedCode_Title"		"Steam - Termék nem elérhető"
 "Steam_RegionRestrictedCode_Info"			"Ez a termékkód nem aktiválható a te régiódban."
-"Steam_RegionRestrictedCode_SupportURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=463"
+"Steam_RegionRestrictedCode_SupportURL"	"https://support.steampowered.com/kb/1266-QFZC-2141&l=hungarian/"
 
 "Steam_FragmentationBad_Title"			"Steam - Lemeztöredezettség-figyelmeztetés"
 "Steam_FragmentationBad_Info"				"Jelentős mértékű a játékfájljaid töredezettsége. Ez hosszú betöltési időt és gyenge játékteljesítményt okozhat.\n\nA Steam képes most optimalizálni a játékfájlokat."
@@ -2754,7 +2766,7 @@
 "Steam_GuestPassAccept_HeadlineServiceUnavailable$type=guestpass"	"A vendégbelépő elfogadása sikertelen"
 "Steam_GuestPassAccept_TextServiceUnavailable"	"A számítógéped jelenleg nem tudja elérni a Steam szervereket, vagy a szolgáltatást átmenetileg leállították. Kérjük, próbáld újra később."
 "Steam_GuestPassAccept_LinkTextServiceUnavailable" 	"Az ajándékokkal kapcsolatos hibaelhárításhoz tekintsd meg ezt a támogatási oldalt."
-"Steam_GuestPassAccept_LinkURLServiceUnavailable"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=550"
+"Steam_GuestPassAccept_LinkURLServiceUnavailable"	"https://support.steampowered.com/kb/6262-QXCN-0755&l=hungarian/"
 
 "Steam_GuestPassAccept_HeadlineRevoked$type=guestpass"	"Ezt a vendégbelépőt visszavonták"
 "Steam_GuestPassAccept_TextRevoked$type=guestpass"	"A barátod, aki ezt a vendégbelépőt küldte, visszavonta azt, és újraküldte új érvényesítő kóddal. Ha neked küldte az új változatot, akkor kapni fogsz egy másik e-mailt a frissített kóddal."
@@ -2773,7 +2785,7 @@
 "Steam_GuestPassRedeemed_HeadlineServiceUnavailable$type=guestpass"	"A vendégbelépő aktiválása sikertelen"
 "Steam_GuestPassRedeemed_TextServiceUnavailable"	"A számítógéped jelenleg nem tudja elérni a Steam szervereket, vagy a szolgáltatást átmenetileg leállították. Kérjük, próbáld újra később."
 "Steam_GuestPassRedeemed_LinkTextServiceUnavailable"	"A vendégbelépőkkel kapcsolatos hibaelhárításhoz tekintsd meg ezt a támogatási oldalt."
-"Steam_GuestPassRedeemed_LinkURLServiceUnavailable"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=550"
+"Steam_GuestPassRedeemed_LinkURLServiceUnavailable"	"https://support.steampowered.com/kb/6262-QXCN-0755&l=hungarian/"
 
 "Steam_GuestPassRedeemed_HeadlineLimitExceeded"	"Ehhez a termékhez már használtál vendégbelépőt"
 "Steam_GuestPassRedeemed_TextLimitExceeded"	"Mivel már fogadtál el vendégbelépőt a(z) %package% játékhoz, nem fogadhatsz el még egyet. Ha szeretnéd folytatni a játékot, kérjük, vedd fontolóra a megvásárlását."
@@ -2851,8 +2863,6 @@
 "Steam_SubscriptionCancelled_PuchaseDeclined_ContactProvider"	"A(z) %subscription% megvásárlása nem fejeződött be.\n\nA(z) %provider% hibát jelzett a(z) %provider% fiókoddal kapcsolatban. Kérjük, fordulj segítségért a(z) %provider% szolgáltatóhoz, vagy a „Vissza” gombra kattintva válassz másik fizetési módot."
 "Steam_SubscriptionCancelled_PuchaseDeclined_AcctNotVerified"	"A(z) %subscription% megvásárlása nem fejeződött be.\n\nA(z) %provider% azt jelezte, hogy a(z) %provider% fiókodat a vásárlés befejezéséhez ellenőrizni kell vagy fel kell tölteni. Kérjük, fordulj segítségért a(z) %provider% szolgáltatóhoz, vagy a „Vissza” gombra kattintva válassz másik fizetési módot."
 
-"Steam_TroubleshooterURL_VfyAcct" "http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=687"
-
 "Steam_PaymentMethodNotAvailable_Generic" "Sajnáljuk, de ez a fizetési mód jelenleg nem elérhető."
 
 "Steam_LaunchEULA_Title"			"%game%"
@@ -2862,11 +2872,12 @@
 "Steam_LaunchEULA_Text"			"Kérjük, olvasd végig ezt a megállapodást. Ha játszani akarsz a(z) %game% játékkal, el kell fogadnod az EULA feltételeit."
 
 "Steam_GuestPasses_LinkText"		"További információk az ajándékokról és vendégbelépőkről"
-"Steam_GuestPasses_LinkURL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=549"
+"Steam_GuestPasses_LinkURL"		"https://support.steampowered.com/kb/6262-QXCN-0755&l=hungarian/"
 
 "Steam_AlreadyRunningError_Title"			"Steam - Nem indítható"
 "Steam_AlreadyRunningError_Info"			"A Steam egy példánya már fut ezen a számítógépen, egy másik felhasználói fiók alatt. Kérjük, zárd be a Steamet a másik felhasználói fiókban, mielőtt megpróbálnád újra elindítani."
 "Steam_AlreadyRunningError_SupportLink"	"További információkért lásd a Steam Támogatás oldalát"
+"Steam_AlreadyRunningError_SupportLink_URL"	"http://support.steampowered.com/kb_article.php?ref=8787-WYIL-1543&l=hungarian"
 "Steam_AlreadyRunningError_SupportTicket"	"Amint lehet, vedd fel a kapcsolatot a Steam Támogatással"
 
 "Steam_LoggedInElsewhere_Title"		"Steam - Máshol bejelentkezve"
@@ -2898,6 +2909,7 @@
 "Steam_GamesDialog_RightClick_RemoveFromUnblockedGames"		"Eltávolítás a családi játékokból"
 
 "steam_menu_checkforupdates"						"Steam kliens frissítések keresése..."
+"steam_menu_checkforupdates_osx"					"Frissítések keresése..."
 "steam_checkforupdates_title"						"Steam - Automatikus frissítés"
 "steam_ClientUpdateAvailableDownloading"			"Van elérhető Steam kliens frissítés, és folyamatban van a letöltése."
 "steam_ClientUpdateAvailableDownloaded"			"A Steam kliens frissítése letöltődött."
@@ -3328,7 +3340,7 @@ kell Mac OS X 10.7 vagy magasabb verzióra."
 "Steam_InstallAborted_InfoAppNoDemo"		"A(z) %game% játékot nem lehet telepíteni, mert demó, neked pedig már megvan a termék teljes verziója. Telepítsd a játék teljes verzióját."
 
 "Steam_Startup_SteamChinaRequiredTitle"					"Steam China szükséges"
-"Steam_Startup_GetSteamChina"						"A(z) %gamename% mostantól elérhető a Steam Chinán, kérjük, kövesd az alábbi hivatkozást a kliens telepítéséhez."
+"Steam_Startup_GetSteamChina"						"A(z) %gamename% játékot mostantól az új Steam China klienssel kell elindítani.\n\nBeléphetsz a(z) %gamename% játékfiókoddal és átköltöztetheted játékhaladásodat, tárgyaidat, karakterszintedet és pontjaidat.\n\n"
 "Steam_Startup_RunSteamChina"						"A(z) %gamename% mostantól elérhető a Steam Chinán, játékod importálásához kérjük, indítsd el a Steam Chinát."
 "Steam_Startup_SteamChinaImportedUninstall"			"A(z) %gamename% importálva lett a Steam Chinára, most már biztonságosan eltávolíthatod ezt az indítóprogramot."
 "Steam_Startup_LauncherDeprecated"					"A(z) %gamename% játékot mostantól a Steam China futtatja. E telepítés többé nem támogatott, így ki fog lépni."
@@ -3336,6 +3348,7 @@ kell Mac OS X 10.7 vagy magasabb verzióra."
 "Steam_Startup_ImportGameFromLauncherMsg"			"Szeretnéd importálni a(z) %gamename% játékot a Steam Chinára? Utána biztonságosan eltávolíthatod a régi indítóprogramot."
 
 "Steam_Download_SteamChina"							"A Steam China letöltése"
+"Steam_Get_SteamChina"								"Szerezd be most a Steam Chinát"
 
 "Steam_ValidateGame_GameRunning"	"Kérjük, mielőtt megpróbálnád ellenőrizni a helyi fájlokat, lépj ki a futó játékokból vagy kellékekből."
 
@@ -3344,8 +3357,8 @@ kell Mac OS X 10.7 vagy magasabb verzióra."
 "Steam_LibrariesLabel"	"Tartalomkönyvtárak"
 "Steam_DownloadRestrictionsLabel"	"Letöltési korlátozások"
 
-"Steam_ServerBrowserPingRateLabel"	"Játékbeli szerver-böngésző: max. ping / perc"
-"Steam_ServerBrowserPingRateInfo"	"Ha kapcsolati problémákat tapasztalsz játékszerverek böngészése közben, próbáld csökkenteni ezt az értéket."
+"Steam_ServerBrowserPingRateLabel"	"Szerverböngésző ping / perc"
+"Steam_ServerBrowserPingRateInfo"	"Kapcsolati problémáid vannak játékszerverek böngészésekor? Próbáld csökkenteni ezt az értéket."
 "Steam_ServerBrowserPingRateDefault"	"Automatikus (%PingsPerMin%)"
 
 "Steam_TextFilterSettingLabel"									"Csevegésszűrés"
@@ -3467,6 +3480,7 @@ kell Mac OS X 10.7 vagy magasabb verzióra."
 "Steam_RecoverLocked_UseCode" "Megkaptam az üzenetet a Steam Támogatástól, készen állok a speciális hozzáférési kódom megadására."
 "Steam_RecoverLocked_MustRecover" "Milyen e-mail-üzenet? Nem kaptam olyat..."
 "Steam_RecoverLocked_WhyIsThisHappening" "Miért történik ez?"
+"Steam_RecoverLocked_WhyIsThisHappening_URL" "https://support.steampowered.com/kb_article.php?ref=4020-ALZM-5519&l=hungarian"
 "Steam_RecoverLocked_EnterCode" "A speciális hozzáférési kódom:"
 "Steam_RecoverLocked_EnterCodeDetails" "Kódod ellenőrzése után a Steam Guard felveszi ezt a számítógépet azon gépek listájára, melyek hozzáférhetnek Steam fiókodhoz."
 "Steam_RecoverLocked_WrongCode" "Sajnos ez nem igazán stimmel."
@@ -3480,7 +3494,9 @@ kell Mac OS X 10.7 vagy magasabb verzióra."
 "Steam_RecoverLocked_StartRecovery2" "Tudjuk, hogy Steam fiókod értéket képvisel számodra, és elköteleztük magunkat annak biztonságban tartása mellett."
 "Steam_RecoverLocked_StartRecovery3" "Vedd fel a kapcsolatot a Steam Támogatással, hogy egy munkatársunk segítsen. A jogosult fiókhozzáféréssel kapcsolatos segítségnyújtás a legmagasabb prioritást kapja."
 "Steam_RecoverLocked_RecoverySupportLink" "Kapcsolatfelvétel a Steam Támogatással"
+"Steam_RecoverLocked_RecoverySupportLink_URL" "https://help.steampowered.com/hu/"
 "Steam_RecoverLocked_LearnMore" "Tudj meg többet az Intel® Identity Protection technológiáról"
+"Steam_RecoverLocked_LearnMore_URL" "https://support.steampowered.com/kb_article.php?ref=9400-IPAX-9398&auth=e39b5c227cffc8ae65414aba013e5fef&l=hungarian"
 "Steam_RecoverLocked_CannotAccess" "Sajnos ez a fiók erről a számítógépről kiegészítő hitelesítés nélkül nem érhető el."
 "Steam_RecoverLocked_Success" "Siker!"
 "Steam_RecoverLocked_SuccessDetails" "Mostantól hozzáférsz Steam fiókodhoz erről a számítógépről. A Steam Guard hozzáadta ezt a számítógépet azon gépek listájához, melyek a jövőben hozzáférhetnek Steam fiókodhoz."
@@ -3803,7 +3819,6 @@ kell Mac OS X 10.7 vagy magasabb verzióra."
 "steam_menu_friends" "Barátok"
 "steam_menu_servers" "Szerverek"
 "steam_menu_settings" "Beállítások"
-"steam_menu_preferences" "Testreszabás"
 "steam_menu_view_friends" "Barátok listájának megnézése (%friends_online% online)"
 "steam_menu_view_players" "Játékosok"
 "steam_menu_add_friend" "Barát hozzáadása..."
@@ -4544,6 +4559,7 @@ kell Mac OS X 10.7 vagy magasabb verzióra."
 "Steam_Settings_Streaming_SoftwareEncodingThreads_7"	"7"
 "Steam_Settings_Streaming_SoftwareEncodingThreads_8"	"8"
 "Steam_Settings_Streaming_P2PScope_Description"	"Közvetlen kapcsolat engedélyezése (IP-megosztás)"
+"Steam_Settings_Streaming_P2PScopeAutomatic"	"Automatikus (bekapcsolva)"
 "Steam_Settings_Streaming_P2PScopeDisabled"	"Kikapcsolva"
 "Steam_Settings_Streaming_P2PScopeOnlyMe" "Eszközeim"
 "Steam_Settings_Streaming_P2PScopeEveryone" "Minden eszköz"
@@ -4568,6 +4584,7 @@ kell Mac OS X 10.7 vagy magasabb verzióra."
 "Steam_Settings_Streaming_EnableTouchController"	"Érintéses vezérlés engedélyezése"
 
 "Steam_Settings_Streaming_StreamingSupport"	"Támogatási információk megnézése"
+"Steam_Settings_Streaming_StreamingSupportLink"	"https://support.steampowered.com/kb_article.php?ref=3629-RIAV-1617&l=hungarian"
 
 "Steam_Settings_Streaming_Connected" "Számítógép csatlakoztatva"
 "Steam_Settings_Streaming_Paired" "Eszköz párosítva"
@@ -4578,6 +4595,15 @@ kell Mac OS X 10.7 vagy magasabb verzióra."
 
 "Steam_Settings_Streaming_PIN_Title" "Steam Link biztonsági kód beállítása"
 "Steam_Settings_Streaming_PIN_Text" "Állíts be egy számokból álló PIN-kódot, amit minden alkalommal be kell írni a Steam Linken, hogy továbbíthasson erről a számítógépről:"
+
+"Steam_Settings_ShareIPNetworking_Label" "Steam hálózatkezelés"
+"Steam_Settings_ShareIPNetworking_Info" "A Steam hálózatkezelést használó játékok megoszthatják IP-címemet a gyorsabb kapcsolatért."
+"Steam_Settings_ShareIPNetworking_Default" "Alapértelmezett"
+"Steam_Settings_ShareIPNetworking_Always" "Mindig"
+"Steam_Settings_ShareIPNetworking_FriendsOnly" "Csak barátok"
+"Steam_Settings_ShareIPNetworking_Never" "Soha"
+"Steam_Settings_ShareIPNetworking_URL" "Tudj meg többet"
+"Steam_Settings_ShareIPNetworking_URLText" "https://support.steampowered.com/kb_article.php?ref=9929-UAFN-9329&l=hungarian"
 
 "SteamUI_StreamingIntro_Title"		"Üdvözöl a Steam Remote Play"
 "SteamUI_StreamingIntro"			"Arra készülsz, hogy ezt a játékot más számítógépen futtatod, és itt játszol vele a Steam Remote Play használatával."
@@ -4720,4 +4746,9 @@ kell Mac OS X 10.7 vagy magasabb verzióra."
 
 "SteamUI_RunningConflictingSoftware" "Ütköző szoftver észlelve"
 "SteamUI_RunningIncompatibleTcpService" "A(z) %incompatdll% (ami a(z) %incompatname% része)\ninkompatibilis változatát észleltük a Steam folyamatban.\n\nAjánljuk a szoftver frissítését vagy eltávolítását, ha összeomlásokat vagy\nhálózati lassulást tapasztalsz a Steam vagy egyes játékok futtatása közben."
+
+"Steam_XboxDriverInstall_Title"		"Xbox illesztőprogram telepítése"
+"Steam_XboxDriverInstall_Success"	"Az illesztőprogram sikeresen frissült, és a számítógéped újraindítása után aktív lesz."
+"Steam_XboxDriverInstall_ServiceFailure"	"Az illesztőprogram frissítése sikertelen. A Steam normál felhasználóként van futtatva és a Steam szolgáltatás fut és frissítve van?"
+"Steam_XboxDriverInstall_Failure"	"Sikertelen illesztőprogram-frissítés, hiba = %error%"
 }

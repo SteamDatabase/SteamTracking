@@ -253,8 +253,7 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  max-width: 155px;
-  max-height: 337px;
+  max-width: 158px;
   background: #000; }
   .broadcastwidgets_StoreSaleWidgetContainer_mini_nacWp .broadcastwidgets_Action_2Xpw9,
   .broadcastwidgets_StoreSaleWidgetContainer_mini_nacWp .broadcastwidgets_WishList_3mTSE {
@@ -268,7 +267,8 @@
     margin-top: 2px; }
   .broadcastwidgets_StoreSaleWidgetContainer_mini_nacWp .StoreSaleWidgetTitle {
     font-size: 16px;
-    line-height: 18px; }
+    line-height: 20px;
+    margin-top: 4px; }
   @media screen and (max-width: 620px) {
     .broadcastwidgets_StoreSaleWidgetContainer_mini_nacWp {
       max-width: unset;
@@ -280,7 +280,9 @@
 
 .broadcastwidgets_StoreSaleImage_mini_1zSsm {
   cursor: pointer;
-  width: 155px;
+  width: 148px;
+  margin-top: 5px;
+  margin-left: 5px;
   display: block; }
 
 .broadcastwidgets_StoreSaleWidgetShortDesc_mini_2ZkfU {
@@ -407,8 +409,11 @@
   align-content: stretch;
   align-items: stretch;
   justify-content: space-between; }
+  .broadcast_embeddable_container_2yiy6 .broadcast_embeddable_viewer_bar_2Ygph {
+    display: none; }
   @media screen and (max-width: 620px) {
     .broadcast_embeddable_container_2yiy6 {
+      display: flex;
       flex-direction: column; } }
 
 .broadcast_embeddable_side_panels_T_zpR {
@@ -453,10 +458,39 @@
 .broadcast_embeddable_viewer_bar_2Ygph {
   display: flex;
   flex-direction: row;
-  justify-content: space-between; }
+  justify-content: space-between;
+  align-items: center; }
   .broadcast_embeddable_viewer_bar_2Ygph .broadcast_embeddable_viewer_links_2EQpO {
     padding: 5px;
-    color: rgba(255, 255, 255, 0.5); }
+    color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    flex-direction: row;
+    align-items: center; }
+    .broadcast_embeddable_viewer_bar_2Ygph .broadcast_embeddable_viewer_links_2EQpO .broadcast_embeddable_chat_link_3a0zX {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-right: 8px; }
+      .broadcast_embeddable_viewer_bar_2Ygph .broadcast_embeddable_viewer_links_2EQpO .broadcast_embeddable_chat_link_3a0zX svg {
+        width: 16px;
+        height: 16px;
+        margin-right: 4px; }
+    .broadcast_embeddable_viewer_bar_2Ygph .broadcast_embeddable_viewer_links_2EQpO .broadcast_embeddable_settings_link_1Thke {
+      margin-left: 8px;
+      margin-right: 8px;
+      display: flex; }
+      .broadcast_embeddable_viewer_bar_2Ygph .broadcast_embeddable_viewer_links_2EQpO .broadcast_embeddable_settings_link_1Thke svg {
+        width: 16px;
+        height: 16px;
+        fill: white; }
+    .broadcast_embeddable_viewer_bar_2Ygph .broadcast_embeddable_viewer_links_2EQpO .broadcast_embeddable_external_link_1n1BM {
+      margin-left: 8px;
+      margin-right: 8px;
+      display: flex; }
+      .broadcast_embeddable_viewer_bar_2Ygph .broadcast_embeddable_viewer_links_2EQpO .broadcast_embeddable_external_link_1n1BM svg {
+        width: 12px;
+        height: 12px;
+        fill: white; }
   .broadcast_embeddable_viewer_bar_2Ygph .broadcast_embeddable_viewer_links_2EQpO > a {
     color: rgba(255, 255, 255, 0.8);
     font-size: 11px;
@@ -466,16 +500,15 @@
 
 .broadcast_embeddable_viewer_count_1MrTW {
   font-size: 11px;
-  margin: 4px 0px 11px 0px;
   letter-spacing: 0px;
   pointer-events: none;
   background-repeat: no-repeat;
   background-position: 3px center;
-  line-height: 22px;
   text-decoration: none;
   max-width: 105px;
   display: flex;
   flex-direction: row;
+  align-items: center;
   color: rgba(255, 255, 255, 0.5); }
   .broadcast_embeddable_viewer_count_1MrTW svg {
     width: 16px;
@@ -487,15 +520,36 @@
       fill: white; }
 
 .broadcast_embeddable_stream_icon_and_viewer_container_2sbrG {
-  display: flex;
-  flex-direction: column;
-  max-width: 155px;
+  display: grid;
+  grid-template-columns: 136px 8px;
+  grid-template-rows: 68px 22px;
+  grid-template-areas: "icon arrow" "viewbar viewbar";
   /* Give each stream a fixed height so that the auto-scrolling logic can scroll the container correctly down when changing streams */
   height: 90px;
   padding-bottom: 12px;
-  position: relative; }
+  position: relative;
+  box-sizing: border-box; }
   .broadcast_embeddable_stream_icon_and_viewer_container_2sbrG.broadcast_embeddable_display_capsule_art_SsORV {
-    height: 78px; }
+    height: 90px; }
+  .broadcast_embeddable_stream_icon_and_viewer_container_2sbrG > div {
+    grid-area: icon; }
+  .broadcast_embeddable_stream_icon_and_viewer_container_2sbrG .broadcast_embeddable_viewer_count_1MrTW {
+    grid-area: viewbar; }
+  .broadcast_embeddable_stream_icon_and_viewer_container_2sbrG:hover {
+    cursor: pointer; }
+    .broadcast_embeddable_stream_icon_and_viewer_container_2sbrG:hover .broadcast_embeddable_stream_icon_container_2zBOi .broadcast_embeddable_stream_icon_hide_on_hover_qYFsG {
+      display: none; }
+    .broadcast_embeddable_stream_icon_and_viewer_container_2sbrG:hover .broadcast_embeddable_stream_icon_container_2zBOi .broadcast_embeddable_stream_icon_show_on_hover_29z3N {
+      display: block; }
+  .broadcast_embeddable_stream_icon_and_viewer_container_2sbrG .broadcast_embeddable_stream_icon_container_2zBOi {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    background: white;
+    position: relative; }
+    .broadcast_embeddable_stream_icon_and_viewer_container_2sbrG .broadcast_embeddable_stream_icon_container_2zBOi .broadcast_embeddable_stream_icon_show_on_hover_29z3N {
+      display: none; }
 
 .broadcast_embeddable_stream_icon_and_viewer_container_2sbrG .broadcast_embeddable_viewer_count_1MrTW {
   background-color: rgba(0, 0, 0, 0.4);
@@ -503,27 +557,14 @@
   border-bottom-right-radius: 3px;
   margin: 0px; }
 
-.broadcast_embeddable_stream_icon_container_2zBOi .broadcast_embeddable_stream_icon_show_on_hover_29z3N {
-  display: none; }
-
-.broadcast_embeddable_stream_icon_container_2zBOi:hover .broadcast_embeddable_stream_icon_hide_on_hover_qYFsG {
-  display: none; }
-
-.broadcast_embeddable_stream_icon_container_2zBOi:hover .broadcast_embeddable_stream_icon_show_on_hover_29z3N {
-  display: block; }
-
-.broadcast_embeddable_stream_icon_container_2zBOi {
-  display: flex;
-  flex-direction: row;
-  justify-content: left;
-  align-items: center;
-  background: white;
-  margin-right: 8px;
-  position: relative; }
-
 .broadcast_embeddable_stream_icon_1LBYs,
 .broadcast_embeddable_stream_icon_selected_mSpze {
   max-width: 136px;
+  max-height: 64px;
+  overflow: hidden;
+  display: block;
+  height: auto;
+  width: 100%;
   border-width: 0px;
   border-style: solid;
   transition: transform 0.1s ease-out; }
@@ -537,13 +578,13 @@
 .broadcast_embeddable_multistream_1DS-W {
   overflow: hidden; }
   .broadcast_embeddable_multistream_1DS-W .broadcast_embeddable_viewer_count_1MrTW {
-    max-width: 116px; }
-  .broadcast_embeddable_multistream_1DS-W .broadcast_embeddable_stream_icon_1LBYs,
-  .broadcast_embeddable_multistream_1DS-W .broadcast_embeddable_stream_icon_selected_mSpze {
-    max-width: 147px; }
+    max-width: calc(100% - 8px);
+    padding-left: 3px;
+    box-sizing: border-box; }
 
 .broadcast_embeddable_scrollingstreams_3aYWl {
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
   max-width: 136px;
   -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, black 16px);
   mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, black 16px); }
@@ -723,6 +764,47 @@
       height: calc( 100vw * (9 / 16)); }
     .broadcast_embeddable_BroadcastAndChat_1aJ9y .broadcast_embeddable_ChatEntry_Rs7El {
       padding: 6px; } }
+
+.broadcast_embeddable_bordered_container_3zXpF.broadcast_embeddable_Event_1A0NY .broadcast_embeddable_container_2yiy6 {
+  display: grid;
+  grid-template-columns: 158px calc(100% - 316px) 158px;
+  grid-template-rows: auto 30px;
+  grid-template-areas: "left-panel livestream right-panel" "left-panel viewbar viewbar"; }
+  .broadcast_embeddable_bordered_container_3zXpF.broadcast_embeddable_Event_1A0NY .broadcast_embeddable_container_2yiy6.broadcast_chat_expanded {
+    grid-template-columns: calc(100% - 316px) 316px;
+    grid-template-rows: auto 30px;
+    grid-template-areas: "livestream store-chat" "viewbar viewbar"; }
+  .broadcast_embeddable_bordered_container_3zXpF.broadcast_embeddable_Event_1A0NY .broadcast_embeddable_container_2yiy6.broadcast_right_panel_simple {
+    grid-template-areas: "left-panel livestream right-panel" "left-panel viewbar right-panel"; }
+  .broadcast_embeddable_bordered_container_3zXpF.broadcast_embeddable_Event_1A0NY .broadcast_embeddable_container_2yiy6 .broadcast_embeddable_side_panels_T_zpR {
+    /*left panel*/
+    grid-area: left-panel;
+    max-height: 367px; }
+  .broadcast_embeddable_bordered_container_3zXpF.broadcast_embeddable_Event_1A0NY .broadcast_embeddable_container_2yiy6 .broadcast_embeddable_wrapper_1mH-v {
+    /*livestream*/
+    grid-area: livestream; }
+  .broadcast_embeddable_bordered_container_3zXpF.broadcast_embeddable_Event_1A0NY .broadcast_embeddable_container_2yiy6 .broadcast_embeddable_viewer_bar_2Ygph {
+    display: flex;
+    grid-area: viewbar;
+    background: linear-gradient(to bottom, #2b2f36, #22252b);
+    padding-left: 8px; }
+  .broadcast_embeddable_bordered_container_3zXpF.broadcast_embeddable_Event_1A0NY .broadcast_embeddable_container_2yiy6 .broadcast_embeddable_rightPanel_16MsC {
+    grid-area: right-panel; }
+  .broadcast_embeddable_bordered_container_3zXpF.broadcast_embeddable_Event_1A0NY .broadcast_embeddable_container_2yiy6 .broadcast_embeddable_store_chat_ctn_21N-V {
+    grid-area: store-chat;
+    max-width: 316px; }
+  .broadcast_embeddable_bordered_container_3zXpF.broadcast_embeddable_Event_1A0NY .broadcast_embeddable_container_2yiy6 .broadcast_embeddable_ChatContainer_3kqwu .ChatEntry {
+    padding: 4px; }
+  @media screen and (max-width: 768px) {
+    .broadcast_embeddable_bordered_container_3zXpF.broadcast_embeddable_Event_1A0NY .broadcast_embeddable_container_2yiy6 {
+      display: grid;
+      grid-template-areas: "livestream livestream right-panel" "viewbar viewbar viewbar"; } }
+  @media screen and (max-width: 620px) {
+    .broadcast_embeddable_bordered_container_3zXpF.broadcast_embeddable_Event_1A0NY .broadcast_embeddable_container_2yiy6 {
+      display: flex; } }
+
+.broadcast_embeddable_Event_1A0NY .broadcast_embeddable_viewer_bar_2Ygph {
+  display: none; }
 
 
 /*# sourceMappingURL=2.css.map*/

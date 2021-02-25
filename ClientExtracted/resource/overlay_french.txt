@@ -90,10 +90,10 @@
 "Overlay_Playtime_Session"			"%minutes_session% minutes - session actuelle"
 "Overlay_Playtime_TimedTrial"		"Période d'essai : %hours_trial% heure(s) et %minutes_trial% minute(s) restante(s)"
 
-"Overlay_Friends_ThisManyOnline"	"Vous avez %numfriends% amis en ligne"
-"Overlay_Friends_ThisManyInThisGame"	"Vous avez %numfriends% amis sur ce serveur"
+"Overlay_Friends_ThisManyOnline"	"Vous avez %numfriends% contacts en ligne"
+"Overlay_Friends_ThisManyInThisGame"	"Vous avez %numfriends% contacts sur ce serveur"
 
-"Overlay_Friends_ViewAll"		"Afficher tous les amis"
+"Overlay_Friends_ViewAll"		"Afficher tous les contacts"
 "Overlay_Friends_ViewPlayers"	"Afficher les joueurs"
 "Overlay_Friends_ViewAchievements"	"Afficher tous les succès"
 "Overlay_Friends_ViewNews"	"Afficher toutes les actualités"
@@ -112,7 +112,7 @@
 "steam_menu_friends_view"  				 "Contacts"
 "steam_menu_friends_sortbyname"    "Trier par nom"
 "steam_menu_friends_showavatars"   "Afficher les avatars"
-"steam_menu_friends_hideoffline"	 "Afficher les amis en ligne uniquement"
+"steam_menu_friends_hideoffline"	 "Afficher les contacts en ligne uniquement"
 "steam_menu_friends_players"			 "Joueurs"
 "steam_menu_friends_tools"         "Outils"
 "steam_menu_friends_add"					 "Ajouter un contact..."
@@ -141,7 +141,7 @@
 "Overlay_FriendChangeConfirmation_Reason_Add"				"Voulez-vous vraiment ajouter %persona% à votre liste de contacts ?"
 "Overlay_FriendChangeConfirmation_Button_Add"				"Ajouter l'utilisateur"
 "Overlay_FriendChangeConfirmation_Reason_Remove"			"Voulez-vous vraiment supprimer %persona% de votre liste de contacts ?"
-"Overlay_FriendChangeConfirmation_Button_Remove"			"Supprimer cet ami"
+"Overlay_FriendChangeConfirmation_Button_Remove"			"Supprimer ce contact"
 "Overlay_FriendChangeConfirmation_Reason_RequestAccept"		"Voulez-vous vraiment accepter l'invitation de %persona% et l'ajouter à votre liste de contacts ?"
 "Overlay_FriendChangeConfirmation_Button_RequestAccept"		"Accepter l'invitation"
 "Overlay_FriendChangeConfirmation_Reason_RequestIgnore"		"Voulez-vous vraiment ignorer l'invitation de %persona% ?"
@@ -233,7 +233,7 @@
 "Overlay_View_CommunityDiscussions" "Afficher les discussions"
 "Overlay_CommunityDiscussions_Panel_NumDiscussions" "%num_discussions% discussions actives"
 
-"Overlay_SaveUncompressed" "Conserver une copie non compressée"
+"Overlay_SaveUncompressed" "Garder une copie non compressée"
 "Overlay_SetScreenshotFolder" "Sélectionnez un dossier externe"
 
 

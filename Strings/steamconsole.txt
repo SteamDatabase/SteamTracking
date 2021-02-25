@@ -11,6 +11,7 @@ __TEXT
 __cstring
 __TEXT
 __gcc_except_tab__TEXT
+|5
 __unwind_info
 __TEXT
 __eh_frame
@@ -37,7 +38,7 @@ __thread_bss
 __DATA
 __bss
 __DATA
-!3
+q3
 __common
 __DATA
 (D
@@ -474,6 +475,8 @@ verify_vpk
 verify_vpk <datafile> : verifies content of given VPK
 download_depot
 download_depot <appid> <depotid> [<target manifestid>] [<delta manifestid>] [<depot flags filter>]: download a single depot
+download_chunk
+download_chunk <appid> <depotid> <sha>: download a single chunk from a depot
 desc
 depotconfigpath
 %s/%u
@@ -528,6 +531,9 @@ Invalid number of parameters
 Empty VPK
 Failed reading %s
 Failed CRC for %s
+Invalid parameters
+Chunk download to "%s"
+Chunk download failed : %s
 ERROR! Failed to parse parameters
 -globaluser
 @ShutdownOnFailedCommand
@@ -1060,6 +1066,7 @@ Denied due to community cooldown
 No launcher specified
 Must agree to SSA
 Client no longer supported
+The current Steam realm does not match the requested resource
 Invalid
 Public
 Beta
@@ -1219,16 +1226,14 @@ Assertion Failed: (unsigned)elem <= (unsigned)m_Size
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/string_misc.cpp
 E
 @
-
-3
 @
 @
 
 =
-=
 @
 @
 @
+&
 @
 @
 @

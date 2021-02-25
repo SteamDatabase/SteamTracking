@@ -183,6 +183,6 @@ message CMsgSteamNetworkingICESessionSummary {
 	optional uint32 negotiation_ms = 5;
 	optional uint32 selected_seconds = 12;
 	optional uint32 user_settings = 13;
-	optional uint32 p2p_transport_ice_enabled_convar = 14;
-	optional uint32 local_candidates_types_allowed = 15;
+	optional uint32 ice_enable_var = 14;
+	optional uint32 local_candidate_types_allowed = 15;
 }

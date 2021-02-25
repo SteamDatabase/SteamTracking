@@ -145,7 +145,7 @@
 "VAC_ConnectionRefusedTitle"	"Connessione rifiutata - VAC"
 "VAC_ConnectionRefusedDetail"	"Non puoi connetterti al server selezionato poiché è in modalità protetta dal VAC (Valve Anti-Cheat).\n\nQuesto account di Steam è stato bandito dai server protetti a causa di un'infrazione relativa ai trucchi."
 "VAC_ConnectionRefusedByServer"	"Il server ha rifiutato la tua connessione poiché è in modalità protetta dal VAC (Valve Anti-Cheat).\n\nQuesto account di Steam è stato bandito dai server protetti a causa di un'infrazione relativa ai trucchi."
-"VAC_BanSupportURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=370"
+"VAC_BanSupportURL"	"https://support.steampowered.com/kb/7849-RADZ-6869/"
 "VAC_SecureServerToolTip"	"Valve Anti-Cheat - Protetto"
 "VAC_BannedFromServerToolTip"	"Non puoi connetterti a questo server protetto"
 "VAC_Secure"	"Protetto"
@@ -160,7 +160,7 @@
 "Steam_ValidLoginRequired"	"Impossibile connettersi ai server del VAC di Steam. Per domande relative alla risoluzione dei problemi di rete, fai clic sul collegamento sottostante."
 "VAC_ConnectionIssuesSupport_Title"	"Connessione protetta non riuscita"
 "VAC_ConnectionIssuesSupportSite"	"Clicca qui per visitare il sito dell'Assistenza di Steam"
-"VAC_ConnectionIssuesSupportURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=374"
+"VAC_ConnectionIssuesSupportURL"	"https://support.steampowered.com/kb/7579-RPSX-6098/"
 "VAC_LoggedInElsewhere_Title"		"Account già in uso altrove"
 "VAC_LoggedInElsewhereReason"		"Questo account di Steam è stato utilizzato per accedere da un altro computer. Per continuare a usare Steam, eseguire nuovamente l'accesso."
 

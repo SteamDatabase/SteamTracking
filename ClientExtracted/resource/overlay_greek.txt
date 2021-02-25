@@ -90,7 +90,7 @@
 "Overlay_Playtime_Session"			"%minutes_session% λεπτά - τρέχουσα συνεδρία"
 "Overlay_Playtime_TimedTrial"		"%hours_trial% ώρες και %minutes_trial% λεπτά στη δοκιμή"
 
-"Overlay_Friends_ThisManyOnline"	"Έχετε %numfriends% συνδεδεμένους φίλους"
+"Overlay_Friends_ThisManyOnline"	"Έχετε %numfriends% φίλους σε σύνδεση"
 "Overlay_Friends_ThisManyInThisGame"	"Έχετε %numfriends% φίλους σε αυτό τον διακομιστή"
 
 "Overlay_Friends_ViewAll"		"ΠΡΟΒΟΛΗ ΦΙΛΩΝ"
@@ -112,7 +112,7 @@
 "steam_menu_friends_view"  				 "Φίλοι"
 "steam_menu_friends_sortbyname"    "Ταξινόμηση ανά όνομα"
 "steam_menu_friends_showavatars"   "Εμφάνιση εικόνων"
-"steam_menu_friends_hideoffline"	 "Εμφάνιση συνδεδεμένων φίλων μόνο"
+"steam_menu_friends_hideoffline"	 "Εμφάνιση μόνο φίλων σε σύνδεση"
 "steam_menu_friends_players"			 "Παίκτες"
 "steam_menu_friends_tools"         "Εργαλεία"
 "steam_menu_friends_add"					 "Προσθήκη φίλου..."

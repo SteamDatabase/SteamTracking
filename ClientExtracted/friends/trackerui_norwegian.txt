@@ -170,7 +170,7 @@
 "Friends_InvitationBlocking"		"Du blokkerer all kommunikasjon med denne brukeren. Før du kan kommunisere med dem, må du oppheve blokkeringen ved å gå til Steam-samfunnsprofilen deres."
 
 "Friends_DontGiveOutPassword"			"Aldri oppgi passordet ditt til noen.\n"
-"Friends_DontGiveOutPassword_URL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=301"
+"Friends_DontGiveOutPassword_URL"		"https://support.steampowered.com/kb/1266-OAFV-8478/"
 
 "Friends_ChatFilterBlockWarning"		"En lenke ble fjernet fra den følgende meldingen for din sikkerhet."
 
@@ -556,6 +556,7 @@
 "Friends_SteamCommunity"	"Steam-samfunn"
 "Limited_Explanation"	"Kontoen din oppfyller ikke kravene for å bruke denne funksjonen."
 "Limited_ForDetails"	"Besøk Steams kundestøtte for mer informasjon."
+"Limited_ForDetails_URL"	"https://help.steampowered.com/wizard/HelpWithLimitedAccount"
 
 "Friends_Chat_RoomModerated_Entry"		"Samtalerommet er satt til \"samtale kun for offiserer\" av %member_making_change%."
 "Friends_Chat_RoomUnmoderated_Entry"		"Samtalerommet har blitt satt til \"samtale for alle\" av %member_making_change%.\n"
@@ -687,6 +688,7 @@
 "Broadcast_FirstTime_PermissionHeader" "Ta deg tid til å sette opp preferansene dine..."
 "Broadcast_FirstTime_DesktopOnly" "Som standard, vil det kun være mulig å se innholdet i spillet ditt. Skrivebordet ditt vil ikke bli sendt."
 "Broadcast_FirstTime_FAQ" "Les vanlige spørsmål om Steam-kringkasting"
+"Broadcast_FirstTime_FAQLink" "https://support.steampowered.com/kb_article.php?ref=6730-TOAK-6497"
 "Broadcast_FirstTime_Title" "Steam-kringkasting"
 "Broadcast_FirstTime_OK" "OK"
 "Broadcast_FirstTime_Cancel" "Avbryt"
@@ -787,7 +789,7 @@
 "Steam_Settings_Browser"	"Nettleser"
 "Overlay_SettingsBrowserDesc" "Følgende innstillinger gjelder for nettleseren tilgjengelig i Steam-klienten og -overlegget."
 "Steam_SettingsBrowserClearWebCache"	"Slett nettleserbuffer"
-"Steam_SettingsBrowserClearAllCookies"	"Slett alle informasjonskapsler i nettleseren"
+"Steam_SettingsBrowserClearAllCookies"	"Slett alle informasjonskapsler"
 "Steam_Settings_Browser_DeleteTitle"	"Slett informasjonskapsler"
 "Steam_Settings_Browser_DeleteMsg"	"Tøm Steam-nettleseren for informasjonskapsler?"
 "Steam_Settings_Browser_ClearWebCacheTitle"	"Tøm nettleserbuffer"

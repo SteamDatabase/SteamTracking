@@ -148,7 +148,7 @@ L'operazione dovrebbe richiedere meno di un minuto."
 "SteamUI_CreateAccount_Response"	"Tra pochi minuti, riceverai un messaggio e-mail\ndi risposta da Steam contenente un codice di convalida."
 "SteamUI_CreateAccount_SentTo"	"Un messaggio e-mail di conferma è stato inviato all'indirizzo:"
 "SteamUI_CreateAccount_EnterCodeAgain"	"Fai clic su \"Indietro\" per immettere di nuovo il \ncodice o per fornire un indirizzo e-mail diverso."
-"SteamUI_CreateAccount_DoesNotMatch"	"Questo codice non corrisponde a quello presente nei nostri registri.\nControlla nuovamente la email e assicurati di\naver digitato il codice correttamente.\nIl codice ti è stato inviato in un'e-mail dal titolo\n\"Account di Steam: verifica il tuo indirizzo e-mail\".\nIl codice è lungo 8 caratteri."
+"SteamUI_CreateAccount_DoesNotMatch"	"Questo codice non corrisponde a quello presente nei nostri registri.\nControlla nuovamente l'e-mail e assicurati di\naver digitato il codice correttamente.\nIl codice ti è stato inviato in un'e-mail dal titolo\n\"Account di Steam: verifica il tuo indirizzo e-mail\".\nIl codice è lungo 8 caratteri."
 
 "SteamUI_SteamProgress_Title"	"Steam - Elaborazione"
 "SteamUI_CreatingAccount"	"Creazione dell'account..."
@@ -436,7 +436,7 @@ L'operazione dovrebbe richiedere meno di un minuto."
 "Steam_DPIScaling_Option"				"Ingrandisci il testo e le icone in base alle dimensioni del monitor (richiede il riavvio)"
 "Steam_LaunchSteamOnStartup_Option"		"Avvia Steam all'avvio del computer"
 "Steam_BPMOnStartup_Option"				"Avvia Steam in modalità Big Picture"
-"Steam_ShowUrlBar_Option"				"Mostra la barra degli indirizzi di Steam se disponibile"
+"Steam_ShowUrlBar_Option"				"Mostre le barre degli indirizzi quando disponibili"
 "Steam_UseDirectWrite_Option"			"Abilita DirectWrite per avere font più rifiniti, con una spaziatura migliore"
 "Steam_UseH264HWAccel_Option"			"Abilita la decodifica hardware dei video, se supportata (richiede il riavvio)"
 
@@ -1150,7 +1150,7 @@ L'operazione dovrebbe richiedere meno di un minuto."
 "Steam_SubscriptionApprovalCode" "Autorizzazione"
 "Steam_SubscriptionConfirmation" "Codice di conferma"
 
-"Steam_TroubleshooterURL_CDKey" "http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=276"
+"Steam_TroubleshooterURL_CDKey" "https://support.steampowered.com/kb/1968-HKLX-7538/"
 
 "Steam_SubscriptionSuccess_CDKey_Headline" "Attivazione eseguita!"
 "Steam_SubscriptionSuccess_CDKey" "Il codice è stato attivato con successo. Il prodotto o i prodotti sottoelencati sono stati associati permanentemente al tuo account di Steam. Devi accedere a questo account per poter utilizzare i prodotti che hai appena attivato su Steam.\n\nAssicurati di stampare una ricevuta di questa transazione per ricordare il tuo account in futuro."
@@ -1220,7 +1220,7 @@ L'operazione dovrebbe richiedere meno di un minuto."
 "Steam_Subscription_HardwarePromo_Used_Headline" "Duplica registrazione"
 "Steam_Subscription_HardwarePromo_Used" "Questa offerta è già stata attivata con un account Steam diverso."
 "Steam_PurchaseError_HardwarePromoIneligible" "Questo computer non presenta i requisiti di sistema necessari per l'offerta %subscription%."
-"Steam_HardwarePromo_SupportURL" "http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=628"
+"Steam_HardwarePromo_SupportURL" "https://support.steampowered.com/kb/2734-UDFX-1098/"
 
 "Steam_Subscription_HardwarePromo_AlreadyPurchased_Headline" "Prodotto già posseduto"
 "Steam_Subscription_HardwarePromo_AlreadyPurchased" "Questo account di Steam possiede già i prodotti contenuti in questa offerta. Per accedervi, visita la tua Libreria."
@@ -1463,7 +1463,7 @@ Dovrai uscire dall'OSX affinché la modifica abbia effetto."
 "Steam_DownloadRatesInBits"			"Mostra la percentuale di download in bit al secondo"
 
 "Steam_CloudLabel"					"Steam Cloud"
-"Steam_CloudInfo"					"Steam Cloud conserva le informazioni che servono alla tua esperienza videoludica per continuare su diversi computer."
+"Steam_CloudInfo"					"Steam Cloud conserva le informazioni che consentono alla tua esperienza videoludica di proseguire su diversi computer."
 "Steam_EnableCloud"					"Abilita la sincronizzazione di Steam Cloud per le applicazioni che lo supportano"
 "Steam_EnableCloudForApp"			"Abilita la sincronizzazione di Steam Cloud per %game%"
 "Steam_EnableCloudScreenshots"		"Se ne sono stati scattati di nuovi, apri il gestore degli screenshot dopo aver chiuso un gioco"
@@ -1495,7 +1495,8 @@ Dovrai uscire dall'OSX affinché la modifica abbia effetto."
 "Steam_DutyNote"	"Il merchandise viene spedito dagli Stati Uniti. Il pagamento di eventuali tasse doganali spetta all'acquirente."
 
 "Steam_AgreeToTheTerms"		"Accetto i termini del"
-"Steam_SteamSubscriberAgreement"	"Contratto di sottoscrizione a Steam"
+"Steam_SteamSubscriberAgreement"	    "Contratto di sottoscrizione a Steam"
+"Steam_SteamSubscriberAgreement_china"	"Contratto di licenza di Steam China"
 "Steam_ComplianceRequired_Title"	"Steam - Attenzione"
 "Steam_ComplianceRequired_Info"		"Per continuare è necessario accettare i termini del Contratto di Sottoscrizione a Steam."
 
@@ -1614,9 +1615,10 @@ Dovrai uscire dall'OSX affinché la modifica abbia effetto."
 "Steam_ConnectionFailureTitle"	"Connessione fallita"
 "Steam_ConnectionFailureDetail"	"Steam non riesce a connettersi alla rete. Ciò potrebbe dipendere da un problema con la tua connessione Internet."
 "Steam_ConnectionSupportLink"	"Controlla la mia connessione"
-"Steam_ConnectionSupportURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=11"
+"Steam_ConnectionSupportURL"	"https://support.steampowered.com/kb/1456-EUDN-2493/"
 
 "SteamUI_NetworkTroubleshootingTips"	"Suggerimenti per la risoluzione dei problemi di rete"
+"SteamUI_NetworkTroubleshootingTips_URL"	"https://support.steampowered.com/kb_article.php?ref=1456-EUDN-2493"
 
 
 "SteamUI_SSA_Agree"				"Leggi completamente l'accordo. Dovrai accettare i termini del Contratto di Sottoscrizione a Steam per procedere."
@@ -1680,6 +1682,16 @@ Dovrai uscire dall'OSX affinché la modifica abbia effetto."
 "steam_menu_downloads"	"Download"
 "steam_menu_account"	"Steam"
 "steam_menu_window" "Finestra"
+"steam_menu_preferences"	"Preferenze..."
+"steam_menu_services"	"Servizi"
+"steam_menu_hidesteam"	"Nascondi Steam"
+"steam_menu_hideothers"	"Nascondi il resto"
+"steam_menu_showall"	"Mostra tutto"
+"steam_menu_quitsteam"	"Chiudi Steam"
+"steam_menu_window_close"	"Chiudi"
+"steam_menu_window_minimize"	"Riduci a icona"
+"steam_menu_window_zoom"	"Zoom"
+"steam_menu_window_bringalltofront"	"Porta in primo piano"
 "steam_menu_games_details"	"Dettagli dei giochi"
 "steam_menu_games_list"		"Elenco dei giochi"
 "steam_menu_games_grid"		"Griglia dei giochi"
@@ -2384,16 +2396,16 @@ Dovrai uscire dall'OSX affinché la modifica abbia effetto."
 "Steam_RegionRestricted_Title"			"Steam - Gioco non disponibile"
 "Steam_RegionRestrictedPurchase_Info"				"Questo gioco è stato attivato con un codice prodotto valido solo in una specifica regione geografica. Poiché attualmente non ti trovi in quella regione, non puoi giocare a %game%."
 "Steam_RegionRestricted_SupportLink"		"Per ulteriori informazioni, visita il sito web dell'Assistenza di Steam"
-"Steam_RegionRestrictedPurchase_SupportURL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=461"
+"Steam_RegionRestrictedPurchase_SupportURL"		"https://support.steampowered.com/kb/1266-QFZC-2141/"
 "Steam_RegionRestricted_Info"				"%game% non è disponibile nella tua nazione."
-"Steam_RegionRestricted_SupportURL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=461"
+"Steam_RegionRestricted_SupportURL"		"https://support.steampowered.com/kb/1266-QFZC-2141/"
 
 "Steam_CountryRestricted_Info"				"Questa sottoscrizione non può essere acquistata nel tuo paese."
-"Steam_CountryRestricted_SupportURL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=488"
+"Steam_CountryRestricted_SupportURL"		"https://support.steampowered.com/kb/1266-QFZC-2141/"
 
 "Steam_RegionRestrictedCode_Title"		"Steam - Prodotto non disponibile"
 "Steam_RegionRestrictedCode_Info"			"Questo codice prodotto non può essere attivato nella tua regione."
-"Steam_RegionRestrictedCode_SupportURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=463"
+"Steam_RegionRestrictedCode_SupportURL"	"https://support.steampowered.com/kb/1266-QFZC-2141/"
 
 "Steam_FragmentationBad_Title"			"Steam - Avviso frammentazione disco"
 "Steam_FragmentationBad_Info"				"Eccessiva frammentazione dei file di gioco sul disco. Ciò può rallentare il caricamento e ridurre le prestazioni del gioco.  \n\nAdesso Steam può ottimizzare i file di gioco.\n"
@@ -2764,7 +2776,7 @@ Fatti subito un nuovo amico inviando un dono a qualcuno che conosci via e-mail."
 "Steam_GuestPassAccept_HeadlineServiceUnavailable$type=guestpass"	"Accettazione pass ospite non riuscita"
 "Steam_GuestPassAccept_TextServiceUnavailable"	"Il computer non riesce a collegarsi ai server di Steam o il servizio è temporaneamente disattivato. Riprova più tardi."
 "Steam_GuestPassAccept_LinkTextServiceUnavailable" 	"Per informazioni sulla risoluzione dei problemi relativi ai doni, controlla la pagina dell'assistenza."
-"Steam_GuestPassAccept_LinkURLServiceUnavailable"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=550"
+"Steam_GuestPassAccept_LinkURLServiceUnavailable"	"https://support.steampowered.com/kb/6262-QXCN-0755/"
 
 "Steam_GuestPassAccept_HeadlineRevoked$type=guestpass"	"Questo pass ospite è stato revocato"
 "Steam_GuestPassAccept_TextRevoked$type=guestpass"	"L'amico che ti ha inviato questo pass ospite l'ha annullato e ha inviato un nuovo codice di recupero. Se ti è stata inviata una nuova versione, riceverai un'altra e-mail contenente il codice aggiornato."
@@ -2783,7 +2795,7 @@ Fatti subito un nuovo amico inviando un dono a qualcuno che conosci via e-mail."
 "Steam_GuestPassRedeemed_HeadlineServiceUnavailable$type=guestpass"	"Attivazione pass ospite non riuscita"
 "Steam_GuestPassRedeemed_TextServiceUnavailable"	"Il computer non riesce a collegarsi ai server di Steam o il servizio è temporaneamente disattivato. Riprova più tardi."
 "Steam_GuestPassRedeemed_LinkTextServiceUnavailable"	"Per informazioni sulla risoluzione dei problemi relativi ai pass ospite, controlla la pagina dell'assistenza."
-"Steam_GuestPassRedeemed_LinkURLServiceUnavailable"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=550"
+"Steam_GuestPassRedeemed_LinkURLServiceUnavailable"	"https://support.steampowered.com/kb/6262-QXCN-0755/"
 
 "Steam_GuestPassRedeemed_HeadlineLimitExceeded"	"Hai già utilizzato un pass ospite per questo prodotto"
 "Steam_GuestPassRedeemed_TextLimitExceeded"	"Hai già accettato un pass ospite per %package%, pertanto non puoi accettarne un altro. Se desideri continuare a giocare, acquista il gioco."
@@ -2861,8 +2873,6 @@ Fatti subito un nuovo amico inviando un dono a qualcuno che conosci via e-mail."
 "Steam_SubscriptionCancelled_PuchaseDeclined_ContactProvider"	"L'acquisto di %subscription% non è stato completato.\n\n%provider% ha rilevato un problema con il tuo conto %provider%. Contatta l'assistenza %provider% o fai clic su \"Indietro\" per scegliere un altro metodo di pagamento."
 "Steam_SubscriptionCancelled_PuchaseDeclined_AcctNotVerified"	"L'acquisto di %subscription% non è stato completato.\n\n%provider% ha rilevato che il tuo conto %provider% deve essere verificato o devono essere accreditati fondi per completare l'acquisto. Contatta l'assistenza %provider% o fai clic su \"Indietro\" per scegliere un altro metodo di pagamento."
 
-"Steam_TroubleshooterURL_VfyAcct" "http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=687"
-
 "Steam_PaymentMethodNotAvailable_Generic" "Spiacenti, questo metodo di pagamento non è attualmente disponibile."
 
 "Steam_LaunchEULA_Title"			"%game%"
@@ -2872,11 +2882,12 @@ Fatti subito un nuovo amico inviando un dono a qualcuno che conosci via e-mail."
 "Steam_LaunchEULA_Text"			"Leggi completamente l'accordo. Dovrai accettare i termini dell'EULA per giocare a %game%."
 
 "Steam_GuestPasses_LinkText"		"Altre informazioni su doni e pass ospite"
-"Steam_GuestPasses_LinkURL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=549"
+"Steam_GuestPasses_LinkURL"		"https://support.steampowered.com/kb/6262-QXCN-0755/"
 
 "Steam_AlreadyRunningError_Title"			"Steam - Impossibile avviare"
 "Steam_AlreadyRunningError_Info"			"Una richiesta di Steam è già in esecuzione su questo computer con un account utente diverso. Chiudi Steam sull'altro account utente prima di riprovare ad avviare."
 "Steam_AlreadyRunningError_SupportLink"	"Per maggiori informazioni, consulta il sito dell'Assistenza di Steam"
+"Steam_AlreadyRunningError_SupportLink_URL"	"https://support.steampowered.com/kb_article.php?ref=8787-WYIL-1543"
 "Steam_AlreadyRunningError_SupportTicket"	"Contatta l'Assistenza di Steam non appena possibile"
 
 "Steam_LoggedInElsewhere_Title"		"Steam - Accesso già effettuato"
@@ -2908,6 +2919,7 @@ Fatti subito un nuovo amico inviando un dono a qualcuno che conosci via e-mail."
 "Steam_GamesDialog_RightClick_RemoveFromUnblockedGames"		"Rimuovi dai Giochi per la famiglia"
 
 "steam_menu_checkforupdates"						"Ricerca aggiornamenti del client di Steam..."
+"steam_menu_checkforupdates_osx"					"Ricerca aggiornamenti..."
 "steam_checkforupdates_title"						"Steam - Aggiornamenti automatici"
 "steam_ClientUpdateAvailableDownloading"			"È disponibile un aggiornamento del client di Steam: download in corso."
 "steam_ClientUpdateAvailableDownloaded"			"È stato scaricato un aggiornamento del client di Steam."
@@ -3351,7 +3363,7 @@ Fatti un nuovo amico su Steam inviando un dono via e-mail a qualcuno che conosci
 "Steam_InstallAborted_InfoAppNoDemo"		"Impossibile installare %game% poiché è una demo e hai già la versione completa. Installa la versione completa del gioco."
 
 "Steam_Startup_SteamChinaRequiredTitle"					"È richiesto Steam China"
-"Steam_Startup_GetSteamChina"						"%gamename% è ora disponibile su Steam China. Segui il link in basso per installare il client."
+"Steam_Startup_GetSteamChina"						"%gamename% deve ora essere lanciato tramite il nuovo client Steam China.\n\nPuoi accedere con il tuo account di gioco% gamename% e trasferire i tuoi progressi di gioco, oggetti, livello del personaggio e punti.\n\n"
 "Steam_Startup_RunSteamChina"						"%gamename% è ora disponibile su Steam China. Avvia Steam China per importare il tuo gioco."
 "Steam_Startup_SteamChinaImportedUninstall"			"%gamename% è stato importato su Steam China. È ora possibile disinstallare questo launcher."
 "Steam_Startup_LauncherDeprecated"					"%gamename% ora si avvierà tramite Steam China. Questa installazione non è più supportata e verrà chiusa."
@@ -3359,6 +3371,7 @@ Fatti un nuovo amico su Steam inviando un dono via e-mail a qualcuno che conosci
 "Steam_Startup_ImportGameFromLauncherMsg"			"Vuoi importare %gamename% su Steam China? Una volta fatto, potrai disinstallare il launcher originale."
 
 "Steam_Download_SteamChina"							"Scarica Steam China"
+"Steam_Get_SteamChina"								"Scarica Steam China"
 
 "Steam_ValidateGame_GameRunning"	"Esci da eventuali giochi o strumenti in esecuzione prima di provare a verificare i tuoi file locali."
 
@@ -3367,7 +3380,7 @@ Fatti un nuovo amico su Steam inviando un dono via e-mail a qualcuno che conosci
 "Steam_LibrariesLabel"	"Librerie dei contenuti"
 "Steam_DownloadRestrictionsLabel"	"Restrizioni sui download"
 
-"Steam_ServerBrowserPingRateLabel"	"Browser dei server: limite di ping / minuto"
+"Steam_ServerBrowserPingRateLabel"	"Ping al minuto durante la ricerca di server di gioco"
 "Steam_ServerBrowserPingRateInfo"	"Riduci questo valore se hai problemi con la tua connessione durante la ricerca di server di gioco."
 "Steam_ServerBrowserPingRateDefault"	"Automatico (%PingsPerMin%)"
 
@@ -3490,6 +3503,7 @@ Fatti un nuovo amico su Steam inviando un dono via e-mail a qualcuno che conosci
 "Steam_RecoverLocked_UseCode" "Ho ricevuto il messaggio da parte dell'Assistenza di Steam e sono pronto ad inserire il mio codice d'accesso speciale."
 "Steam_RecoverLocked_MustRecover" "Quale e-mail? Non ho ricevuto nulla..."
 "Steam_RecoverLocked_WhyIsThisHappening" "Perché succede questo?"
+"Steam_RecoverLocked_WhyIsThisHappening_URL" "https://support.steampowered.com/kb_article.php?ref=4020-ALZM-5519"
 "Steam_RecoverLocked_EnterCode" "Il mio codice di accesso speciale è:"
 "Steam_RecoverLocked_EnterCodeDetails" "Una volta verificato il codice, Steam Guard aggiungerà questo computer alla lista dei dispositivi autorizzati ad accedere al tuo account di Steam."
 "Steam_RecoverLocked_WrongCode" "Spiacente, non sembra esatto."
@@ -3503,7 +3517,9 @@ Fatti un nuovo amico su Steam inviando un dono via e-mail a qualcuno che conosci
 "Steam_RecoverLocked_StartRecovery2" "Sappiamo quanto il tuo account di Steam sia importante, e faremo il possibile perché non finisca nelle mani sbagliate."
 "Steam_RecoverLocked_StartRecovery3" "Contatta l'Assistenza di Steam per ricevere aiuto da un membro del nostro staff. Le richieste di aiuto legittime per l'accesso all'account costituiscono la nostra priorità numero uno."
 "Steam_RecoverLocked_RecoverySupportLink" "Contatta l'Assistenza di Steam"
+"Steam_RecoverLocked_RecoverySupportLink_URL" "https://support.steampowered.com"
 "Steam_RecoverLocked_LearnMore" "Per saperne di più sulla Tecnologia Intel® Identity Protection"
+"Steam_RecoverLocked_LearnMore_URL" "https://support.steampowered.com/kb_article.php?ref=9400-IPAX-9398&auth=e39b5c227cffc8ae65414aba013e5fef"
 "Steam_RecoverLocked_CannotAccess" "Spiacente, non si può accedere a questo account da questo computer senza un'autorizzazione aggiuntiva."
 "Steam_RecoverLocked_Success" "È andata!"
 "Steam_RecoverLocked_SuccessDetails" "Ora hai accesso al tuo account di Steam da questo computer. Steam Guard ha aggiunto questo computer alla lista di dispositivi ai quali è permesso l'accesso al tuo account di Steam in futuro."
@@ -3646,7 +3662,7 @@ Fatti un nuovo amico su Steam inviando un dono via e-mail a qualcuno che conosci
 "steam_downloads_launch"		"Gioca a %name%      "
 "steam_downloads_launch_app"	"Avvia %app%   "
 "steam_downloads_updatenews"	"Mostra le notizie"
-"steam_downloads_showinlibrary"	"Visualizza nella libreria"
+"steam_downloads_showinlibrary"	"Visualizza nella Libreria"
 "steam_downloads_auto_update_high_priority" "Alta priorità"
 "steam_downloads_auto_update_default" "Aggiornamenti automatici attivati"
 "steam_downloads_auto_update_disabled" "Aggiornamenti automatici disattivati"
@@ -3826,7 +3842,6 @@ Fatti un nuovo amico su Steam inviando un dono via e-mail a qualcuno che conosci
 "steam_menu_friends" "Amici"
 "steam_menu_servers" "Server"
 "steam_menu_settings" "Impostazioni"
-"steam_menu_preferences" "Preferenze"
 "steam_menu_view_friends" "Mostra amici (%friends_online% online)"
 "steam_menu_view_players" "Giocatori"
 "steam_menu_add_friend" "Aggiungi un amico..."
@@ -4186,7 +4201,7 @@ Fatti un nuovo amico su Steam inviando un dono via e-mail a qualcuno che conosci
 
 "Steam_Settings_Family_Sharing_Title" "Condivisione familiare della libreria"
 "Steam_Settings_Family_Sharing_ManageSharing" "Gestisci gli altri computer"
-"Steam_Settings_Family_Sharing_Info" "La condivisione familiare di Steam ti permette di condividere i contenuti della tua libreria di Steam su questo computer. Se autorizzati, gli utenti che utilizzano Steam su dei computer condivisi potranno accedere, scaricare e avviare i titoli nella tua libreria di Steam mentre tu non stai giocando."
+"Steam_Settings_Family_Sharing_Info" "La Condivisione familiare di Steam ti permette di condividere i contenuti della tua libreria di Steam su questo computer. Se autorizzati, gli utenti che utilizzano Steam su dei computer condivisi potranno accedere, scaricare e avviare i titoli nella tua libreria di Steam mentre tu non stai giocando."
 "Steam_Settings_Family_Sharing_AuthorizedDevice" "Autorizza la condivisione su questo computer"
 "Steam_Settings_Family_Sharing_AuthorizedDevice_ToolTip" "Puoi autorizzare fino a dieci computer"
 
@@ -4205,9 +4220,9 @@ Fatti un nuovo amico su Steam inviando un dono via e-mail a qualcuno che conosci
 "Steam_Settings_Family_Options_Title" "Visuale per la famiglia"
 "Steam_Settings_Family_Options_Text" "Usa la visuale la famiglia per limitare l'accesso a contenuti e funzionalità quando l'account si trova nella visuale per la famiglia ed è protetto dal PIN."
 
-"Steam_Game_Family_Sharing_Unsupported" "La condivisione familiare di Steam non è attualmente supportata da questo titolo."
+"Steam_Game_Family_Sharing_Unsupported" "La Condivisione familiare di Steam non è attualmente supportata da questo titolo."
 
-"Steam_AccountPage_ManageDeviceAuth"	"Gestisci la condivisione familiare della libreria..."
+"Steam_AccountPage_ManageDeviceAuth"	"Gestisci la Condivisione familiare della libreria..."
 
 
 "Steam_DeviceAuth_Authorized_Notification" "Ora puoi utilizzare i giochi di %owner% su questo computer."
@@ -4568,6 +4583,7 @@ Fatti un nuovo amico su Steam inviando un dono via e-mail a qualcuno che conosci
 "Steam_Settings_Streaming_SoftwareEncodingThreads_7"	"7"
 "Steam_Settings_Streaming_SoftwareEncodingThreads_8"	"8"
 "Steam_Settings_Streaming_P2PScope_Description"	"Consenti connessione diretta (condivisione IP)"
+"Steam_Settings_Streaming_P2PScopeAutomatic"	"Automatico (abilitato)"
 "Steam_Settings_Streaming_P2PScopeDisabled"	"Disabilitato"
 "Steam_Settings_Streaming_P2PScopeOnlyMe" "I miei dispositivi"
 "Steam_Settings_Streaming_P2PScopeEveryone" "Tutti i dispositivi"
@@ -4592,6 +4608,7 @@ Fatti un nuovo amico su Steam inviando un dono via e-mail a qualcuno che conosci
 "Steam_Settings_Streaming_EnableTouchController"	"Abilita i controlli touch"
 
 "Steam_Settings_Streaming_StreamingSupport"	"Mostra le informazioni dell'Assistenza"
+"Steam_Settings_Streaming_StreamingSupportLink"	"https://support.steampowered.com/kb_article.php?ref=3629-RIAV-1617"
 
 "Steam_Settings_Streaming_Connected" "Computer connesso"
 "Steam_Settings_Streaming_Paired" "Dispositivo associato"
@@ -4602,6 +4619,15 @@ Fatti un nuovo amico su Steam inviando un dono via e-mail a qualcuno che conosci
 
 "Steam_Settings_Streaming_PIN_Title" "Imposta un codice di sicurezza per Steam Link"
 "Steam_Settings_Streaming_PIN_Text" "Imposta un codice PIN numerico da inserire su Steam Link ogni volta per poter trasmettere da questo computer:"
+
+"Steam_Settings_ShareIPNetworking_Label" "Rete di Steam"
+"Steam_Settings_ShareIPNetworking_Info" "Consenti ai giochi che usano la rete di Steam di condividere il mio indirizzo IP per una connessione più veloce."
+"Steam_Settings_ShareIPNetworking_Default" "Predefinito"
+"Steam_Settings_ShareIPNetworking_Always" "Sempre"
+"Steam_Settings_ShareIPNetworking_FriendsOnly" "Solo amici"
+"Steam_Settings_ShareIPNetworking_Never" "Mai"
+"Steam_Settings_ShareIPNetworking_URL" "Ulteriori informazioni"
+"Steam_Settings_ShareIPNetworking_URLText" "https://support.steampowered.com/kb_article.php?ref=9929-UAFN-9329"
 
 "SteamUI_StreamingIntro_Title"		"Benvenuto su Steam Remote Play"
 "SteamUI_StreamingIntro"			"Stai per avviare questo gioco su un altro computer per giocarci qui usando Steam Remote Play."
@@ -4744,4 +4770,9 @@ Fatti un nuovo amico su Steam inviando un dono via e-mail a qualcuno che conosci
 
 "SteamUI_RunningConflictingSoftware" "Rilevato software in conflitto"
 "SteamUI_RunningIncompatibleTcpService" "Una versione incompatibile di %incompatdll% (in riferimento a %incompatname%)\nè stata rilevata all'interno del processo di Steam.\n\nTi consigliamo di aggiornare o disinstallare questo software se hai problemi di crash o rallentamenti della rete mentre Steam o un gioco singolo è in esecuzione."
+
+"Steam_XboxDriverInstall_Title"		"Installazione driver Xbox"
+"Steam_XboxDriverInstall_Success"	"Il driver è stato aggiornato con successo e sarà attivo al riavvio del computer."
+"Steam_XboxDriverInstall_ServiceFailure"	"Aggiornamento del driver non riuscito. Steam è in uso da un utente normale e il servizio di Steam è in esecuzione e aggiornato?"
+"Steam_XboxDriverInstall_Failure"	"Aggiornamento del driver non riuscito. Errore %error%"
 }

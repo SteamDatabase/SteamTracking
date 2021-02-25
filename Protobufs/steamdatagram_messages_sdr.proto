@@ -36,6 +36,8 @@ enum ESteamDatagramMsgID {
 	k_ESteamDatagramMsg_P2PBadRoute = 28;
 	k_ESteamDatagramMsg_GameserverPingReply = 29;
 	k_ESteamDatagramMsg_GameserverRegistration = 30;
+	k_ESteamDatagramMsg_SetSecondaryAddressRequest = 31;
+	k_ESteamDatagramMsg_SetSecondaryAddressResult = 32;
 }
 
 message CMsgSteamDatagramRouterPingReply {
@@ -472,89 +474,15 @@ message CMsgSteamDatagramP2PRoutes {
 	optional uint32 revision = 3;
 }
 
-message CMsgSteamDatagramGameServerSample {
-	optional fixed32 ipv4 = 1;
-	optional uint32 port = 2;
+message CMsgSteamDatagramSetSecondaryAddressRequest {
+	optional fixed32 client_main_ip = 1;
+	optional fixed32 client_main_port = 2;
+	optional fixed32 client_connection_id = 3;
+	optional string client_identity = 4;
+	optional bytes kludge_pad = 99;
 }
 
-message CMsgSteamDatagramGameServerSampleDataCenter {
-	optional fixed32 datacenter_id = 1;
-	repeated .CMsgSteamDatagramGameServerSample servers = 3;
-}
-
-message CMsgSteamDatagramRelayToRelayPing {
-	optional fixed32 request_timestamp = 1;
-	optional fixed32 request_date = 2;
-	optional fixed32 my_pop_id = 3;
-	optional fixed32 your_pop_id = 4;
-	optional fixed32 checksum = 5;
-	repeated .CMsgSteamDatagramGameServerSampleDataCenter data_centers = 6;
-}
-
-message CMsgSteamDatagramDataCenterState {
-	message Server {
-		optional string address = 1;
-		optional uint32 ping_ms = 2;
-	}
-
-	message DataCenter {
-		optional string code = 1;
-		repeated .CMsgSteamDatagramDataCenterState.Server server_sample = 2;
-		repeated .CMsgSteamDatagramDataCenterState.Server relay_sample = 3;
-	}
-
-	repeated .CMsgSteamDatagramDataCenterState.DataCenter data_centers = 1;
-}
-
-message CMsgSteamDatagramRouterHealth {
-	message DataCenter {
-		optional fixed32 datacenter_id = 1;
-		optional uint32 state = 2;
-		repeated .CMsgSteamDatagramGameServerSample servers = 3;
-	}
-
-	optional float cpu_load = 1;
-	optional float cpu_load_raw = 10;
-	optional uint32 active_sessions = 2;
-	optional uint32 data_pkts_sec = 3;
-	optional uint32 other_pkts_sec = 4;
-	optional uint32 seconds_until_shutdown = 5;
-	optional float cpu_cost_per_user = 8;
-	optional float cpu_cost_per_packet = 9;
-	repeated .CMsgSteamDatagramRouterHealth.DataCenter data_centers = 6;
-	optional fixed64 magic = 7;
-}
-
-message CMsgSteamDatagramConnectionStatsP2PRouterToRouter {
-	enum Flags {
-		ACK_REQUEST_RELAY = 1;
-		ACK_REQUEST_E2E = 2;
-		ACK_REQUEST_IMMEDIATE = 4;
-		NOT_PRIMARY_TRANSPORT_E2E = 16;
-	}
-
-	optional .CMsgSteamDatagramConnectionQuality quality_relay = 1;
-	optional .CMsgSteamDatagramConnectionQuality quality_e2e = 2;
-	repeated fixed32 ack_relay = 3;
-	repeated fixed32 legacy_ack_e2e = 4;
-	optional uint32 flags = 5;
-	optional uint32 ack_forward_target_revision = 6;
-	optional bytes routes = 7;
-	optional uint32 ack_peer_routes_revision = 8;
-	optional fixed32 from_connection_id = 21;
-	optional fixed32 to_connection_id = 24;
-	optional fixed32 from_relay_session_id = 22;
-	optional uint32 seq_num_nonce = 28;
-	optional fixed32 to_relay_session_id = 25;
-	optional uint32 seq_num_r2r = 26;
-	optional uint32 seq_num_e2e = 27;
-}
-
-message CMsgSteamDatagramNetworkNextRouterPingRequestExtraData {
-	optional string client_id = 3;
-	optional uint32 app_id = 4;
-	optional uint32 protocol_ver = 5;
-}
-
-message CMsgSteamDatagramNetworkNextRouterPingReplyExtraData {
+message CMsgSteamDatagramSetSecondaryAddressResult {
+	optional bool success = 1;
+	optional string message = 2;
 }

@@ -170,7 +170,7 @@
 "Friends_InvitationBlocking"		"Blokujesz wszelką komunikację z tym użytkownikiem. Zanim nawiążesz z nim kontakt, musisz go odblokować, odwiedzając jego profil Społeczności Steam."
 
 "Friends_DontGiveOutPassword"			"Nigdy nie zdradzaj nikomu swojego hasła.\n"
-"Friends_DontGiveOutPassword_URL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=301"
+"Friends_DontGiveOutPassword_URL"		"https://support.steampowered.com/kb/1266-OAFV-8478&l=polish/"
 
 "Friends_ChatFilterBlockWarning"		"Hiperłącze zostało usunięte z tej wiadomości ze względów bezpieczeństwa."
 
@@ -556,6 +556,7 @@
 "Friends_SteamCommunity"	"Społeczność Steam"
 "Limited_Explanation"	"Twoje konto nie spełnia wymagań do korzystania z tej funkcji."
 "Limited_ForDetails"	"Odwiedź stronę Pomocy technicznej Steam, aby uzyskać więcej informacji."
+"Limited_ForDetails_URL"	"https://help.steampowered.com/wizard/HelpWithLimitedAccount"
 
 "Friends_Chat_RoomModerated_Entry"		"Status pokoju czatowego został ustawiony na „tylko dla oficerów” przez użytkownika %member_making_change%.\n"
 "Friends_Chat_RoomUnmoderated_Entry"		"Status pokoju czatowego został ustawiony na „dla wszystkich” przez użytkownika %member_making_change%.\n"
@@ -687,6 +688,7 @@
 "Broadcast_FirstTime_PermissionHeader" "Ustaw swoje preferencje, zajmie to tylko chwilę..."
 "Broadcast_FirstTime_DesktopOnly" "Domyślnie można oglądać tylko zawartość gry. Twój pulpit nie będzie transmitowany."
 "Broadcast_FirstTime_FAQ" "Przeczytaj FAQ Transmisji Steam"
+"Broadcast_FirstTime_FAQLink" "https://support.steampowered.com/kb_article.php?ref=6730-TOAK-6497&l=polish"
 "Broadcast_FirstTime_Title" "Transmisje Steam"
 "Broadcast_FirstTime_OK" "OK"
 "Broadcast_FirstTime_Cancel" "Anuluj"

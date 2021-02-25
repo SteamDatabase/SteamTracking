@@ -170,7 +170,7 @@
 "Friends_InvitationBlocking"		"Je blokkeert alle communicatie met deze gebruiker. Als je weer met een gebruiker wilt communiceren, moet je de blokkering voor deze gebruiker eerst opheffen door naar zijn of haar Steam-communitypagina te gaan."
 
 "Friends_DontGiveOutPassword"			"Vertel je wachtwoord aan niemand.\n"
-"Friends_DontGiveOutPassword_URL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=301"
+"Friends_DontGiveOutPassword_URL"		"https://support.steampowered.com/kb/1266-OAFV-8478/"
 
 "Friends_ChatFilterBlockWarning"		"Voor jouw veiligheid is er een link uit het volgende bericht verwijderd."
 
@@ -556,6 +556,7 @@
 "Friends_SteamCommunity"	"Steam Community"
 "Limited_Explanation"	"Je account voldoet niet aan de vereisten om deze functie te gebruiken."
 "Limited_ForDetails"	"Ga naar Steam Support voor meer informatie"
+"Limited_ForDetails_URL"	"https://help.steampowered.com/wizard/HelpWithLimitedAccount"
 
 "Friends_Chat_RoomModerated_Entry"		"%member_making_change% heeft ingesteld dat alleen beheerders kunnen chatten.\n"
 "Friends_Chat_RoomUnmoderated_Entry"		"%member_making_change% heeft ingesteld dat alle gebruikers kunnen chatten.\n"
@@ -683,10 +684,11 @@
 "Friends_BroadcastApprove_Or" "of"
 "Friends_BroadcastApprove_Ignore" "NEGEREN"
 
-"Broadcast_FirstTime_Header" "Welkom bij Steam Broadcasting! Je kunt nu naar andere spelers kijken en je eigen games uitzenden met Steam."
+"Broadcast_FirstTime_Header" "Welkom bij Steam Broadcasting! Je kunt nu naar andere spelers kijken en je eigen spellen uitzenden met Steam."
 "Broadcast_FirstTime_PermissionHeader" "Neem even de tijd om je voorkeuren in te stellen..."
 "Broadcast_FirstTime_DesktopOnly" "Standaard kan alleen je spelcontent worden bekeken. Je bureaublad zal niet worden uitgezonden."
 "Broadcast_FirstTime_FAQ" "Lees de veelgestelde vragen over Steam Broadcasting"
+"Broadcast_FirstTime_FAQLink" "https://support.steampowered.com/kb_article.php?ref=6730-TOAK-6497"
 "Broadcast_FirstTime_Title" "Steam Broadcasting"
 "Broadcast_FirstTime_OK" "OK"
 "Broadcast_FirstTime_Cancel" "Annuleren"

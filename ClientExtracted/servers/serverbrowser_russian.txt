@@ -145,7 +145,7 @@
 "VAC_ConnectionRefusedTitle"	"В подключении отказано — VAC"
 "VAC_ConnectionRefusedDetail"	"Вы не можете подключиться к выбранному серверу, поскольку он защищён VAC (Античит Valve).\n\nВаш аккаунт Steam был заблокирован по причине мошенничества."
 "VAC_ConnectionRefusedByServer"	"Сервер отказал в подключении, поскольку он функционирует в защищённом режиме VAC (Античит Valve).\n\nВаш аккаунт Steam заблокирован защищёнными серверами по причине использования читов."
-"VAC_BanSupportURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=370"
+"VAC_BanSupportURL"	"https://support.steampowered.com/kb/7849-RADZ-6869&l=russian/"
 "VAC_SecureServerToolTip"	"Античит Valve — Включён"
 "VAC_BannedFromServerToolTip"	"Подключение к этому серверу невозможно"
 "VAC_Secure"	"Защита"
@@ -160,7 +160,7 @@
 "Steam_ValidLoginRequired"	"Не удается установить соединение с серверами VAC. Для получения дополнительной информации перейдите по следующей ссылке."
 "VAC_ConnectionIssuesSupport_Title"	"Сбой безопасного соединения"
 "VAC_ConnectionIssuesSupportSite"	"Перейти в раздел поддержки Steam"
-"VAC_ConnectionIssuesSupportURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=374"
+"VAC_ConnectionIssuesSupportURL"	"https://support.steampowered.com/kb/7579-RPSX-6098&l=russian/"
 "VAC_LoggedInElsewhere_Title"		"Аккаунт уже используется"
 "VAC_LoggedInElsewhereReason"		"Этот аккаунт Steam используется на другом компьютере. Введите свои данные ещё раз, чтобы продолжить использование Steam."
 

@@ -170,7 +170,7 @@
 "Friends_InvitationBlocking"		"Blokkolsz minden kommunikációt ezzel a felhasználóval. Mielőtt kommunikálhatnál vele, fel kell oldanod a blokkolást, felkeresve Steam közösségi profilját."
 
 "Friends_DontGiveOutPassword"			"Soha ne mondd meg a jelszavadat senkinek.\n"
-"Friends_DontGiveOutPassword_URL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=301"
+"Friends_DontGiveOutPassword_URL"		"https://support.steampowered.com/kb/1266-OAFV-8478&l=hungarian/"
 
 "Friends_ChatFilterBlockWarning"		"A biztonságod érdekében a következő üzenetből eltávolítottunk egy hivatkozást."
 
@@ -556,6 +556,7 @@
 "Friends_SteamCommunity"	"Steam közösség"
 "Limited_Explanation"	"Fiókod nem felel meg e funkció használati követelményeinek."
 "Limited_ForDetails"	"További információért keresd fel a Steam Támogatást."
+"Limited_ForDetails_URL"	"https://help.steampowered.com/hu/wizard/HelpWithLimitedAccount"
 
 "Friends_Chat_RoomModerated_Entry"		"%member_making_change% „csevegés csak elöljáróknak” módúra állította a csevegőszobát."
 "Friends_Chat_RoomUnmoderated_Entry"		"%member_making_change% „csevegés mindenki számára” módúra állította a csevegőszobát."
@@ -687,6 +688,7 @@
 "Broadcast_FirstTime_PermissionHeader" "Szánj egy percet beállításaid megadására..."
 "Broadcast_FirstTime_DesktopOnly" "Alapesetben csak a játékmeneted lesz nézhető. Az asztalod nem kerül közvetítésre."
 "Broadcast_FirstTime_FAQ" "Olvasd el a Steam Közvetítés GYIK-et"
+"Broadcast_FirstTime_FAQLink" "https://support.steampowered.com/kb_article.php?ref=6730-TOAK-6497&l=hungarian"
 "Broadcast_FirstTime_Title" "Steam Közvetítés"
 "Broadcast_FirstTime_OK" "OK"
 "Broadcast_FirstTime_Cancel" "Mégse"

@@ -9,6 +9,8 @@
  .objc_class_name_NSMapTable
  .objc_class_name_NSNumber
  .objc_class_name_NSObject
+ .objc_class_name_NSOpenGLContext
+ .objc_class_name_NSOpenGLView
  .objc_class_name_NSString
  .objc_class_name_NSThread
  B SteamThreadTools::g_SuspendResumeLock
@@ -203,6 +205,7 @@
  MTLCopyAllDevices
  MTLCreateSystemDefaultDevice
  NSApp
+ NSClassFromString
  NSSelectorFromString
  NSStringFromSelector
  OBJC_CLASS_$_MTLRenderPassDescriptor
@@ -215,6 +218,8 @@
  OBJC_CLASS_$_NSMapTable
  OBJC_CLASS_$_NSNumber
  OBJC_CLASS_$_NSObject
+ OBJC_CLASS_$_NSOpenGLContext
+ OBJC_CLASS_$_NSOpenGLView
  OBJC_CLASS_$_NSString
  OBJC_CLASS_$_NSThread
  OBJC_METACLASS_$_NSObject
@@ -373,6 +378,7 @@
  T CMetalRenderer::HookMetalProtocols()
  T CMetalRenderer::OnCommandBufferCommit(objc_object objcproto16MTLCommandBuffer*)
  T CMetalRenderer::OnCommandBufferPresentDrawable(objc_object objcproto16MTLCommandBuffer*, objc_object objcproto11MTLDrawable*)
+ T CMetalRenderer::OnLayerNextDrawable(objc_object objcproto15CAMetalDrawable*)
  T CMetalRenderer::ValveCheckAsyncCapture()
  T CMetalRenderer::ValveDeleteAllTextures()
  T CMetalRenderer::ValveDeleteTexture(int)
@@ -386,6 +392,7 @@
  T CMetalRenderer::ValveGetScreenSize(int&, int&)
  T CMetalRenderer::ValveGetSharedTextureSupport()
  T CMetalRenderer::ValveIsFullScreen()
+ T CMetalRenderer::ValveIsTextureValid(int)
  T CMetalRenderer::ValveLoadOrUpdateTexture(int, bool, int, int, unsigned int, unsigned int, int, char*, ETextureFormat, unsigned int, bool*)
  T CMetalRenderer::ValveLockRenderResources()
  T CMetalRenderer::ValveRestoreRenderState()
@@ -430,6 +437,7 @@
  T COverlayGLRenderer::ValveGetScreenSize(int&, int&)
  T COverlayGLRenderer::ValveGetSharedTextureSupport()
  T COverlayGLRenderer::ValveIsFullScreen()
+ T COverlayGLRenderer::ValveIsTextureValid(int)
  T COverlayGLRenderer::ValveLoadOrUpdateTexture(int, bool, int, int, unsigned int, unsigned int, int, char*, ETextureFormat, unsigned int, bool*)
  T COverlayGLRenderer::ValveLoadOrUpdateTextureFromChromePaintBuffer(CChromePaintBufferClient*, int)
  T COverlayGLRenderer::ValveLoadOrUpdateTexture_Internal(int, bool, int, int, unsigned int, unsigned int, int, char*, ETextureFormat, unsigned int, bool*, bool)
@@ -807,29 +815,33 @@
  connect$UNIX2003
  d CBaseOverlayRenderer::UpdateNotificationToastPosition()::iLastPosition
  d __block_descriptor_tmp
- d __block_descriptor_tmp167
- d __block_descriptor_tmp169
- d __block_descriptor_tmp269
+ d __block_descriptor_tmp123
+ d __block_descriptor_tmp125
+ d __block_descriptor_tmp128
+ d __block_descriptor_tmp130
+ d __block_descriptor_tmp190
+ d __block_descriptor_tmp192
  d __block_descriptor_tmp278
- d __block_descriptor_tmp364
- d __block_descriptor_tmp377
+ d __block_descriptor_tmp287
+ d __block_descriptor_tmp373
+ d __block_descriptor_tmp386
  d __block_descriptor_tmp58
  d __block_descriptor_tmp61
  d __block_descriptor_tmp62
  d __block_descriptor_tmp65
- d __block_descriptor_tmp67
- d __block_descriptor_tmp70
  d __block_literal_global
- d __block_literal_global168
- d __block_literal_global170
- d __block_literal_global270
+ d __block_literal_global124
+ d __block_literal_global126
+ d __block_literal_global129
+ d __block_literal_global131
+ d __block_literal_global191
+ d __block_literal_global193
  d __block_literal_global279
+ d __block_literal_global288
  d __block_literal_global59
  d __block_literal_global62
  d __block_literal_global63
  d __block_literal_global66
- d __block_literal_global68
- d __block_literal_global71
  d _interpose_CFRunLoopRun
  d _interpose_CFRunLoopRunInMode
  d _interpose_CGAssociateMouseAndMouseCursorPosition
@@ -1030,6 +1042,7 @@
  t ___ZN14CMetalRenderer18HookMetalProtocolsEv_block_invoke_2
  t ___ZN14CMetalRenderer18HookMetalProtocolsEv_block_invoke_3
  t ___ZN14CMetalRenderer18HookMetalProtocolsEv_block_invoke_4
+ t ___ZN14CMetalRenderer18HookMetalProtocolsEv_block_invoke_5
  t ___ZN14CMetalRenderer19AsyncMainThreadPollEv_block_invoke
  t ___ZN14CMetalRenderer19ValveTakeScreenshotEbj_block_invoke
  t ___ZN14CMetalRenderer21OnCommandBufferCommitEPU27objcproto16MTLCommandBuffer11objc_object_block_invoke

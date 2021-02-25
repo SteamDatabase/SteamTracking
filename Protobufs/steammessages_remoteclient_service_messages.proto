@@ -118,6 +118,7 @@ message CRemotePlay_SessionStarted_Request {
 	optional uint32 client_account_id = 2;
 	optional uint32 appid = 3;
 	optional int32 device_form_factor = 4;
+	optional bool remote_play_together = 5;
 }
 
 message CRemotePlay_SessionStarted_Response {
@@ -150,4 +151,28 @@ message CRemotePlayTogether_Notification {
 	oneof Message {
 		.CRemotePlayTogether_Notification.GroupUpdated group_updated = 2;
 	}
+}
+
+message CRemoteClient_CreateRemotePlayTogetherInvitation_Request {
+	optional uint32 appid = 1;
+	optional string launch_parameters = 2;
+}
+
+message CRemoteClient_CreateRemotePlayTogetherInvitation_Response {
+	optional string invitation_code = 1;
+}
+
+message CRemoteClient_DeleteRemotePlayTogetherInvitation_Request {
+	optional string invitation_code = 1;
+}
+
+message CRemoteClient_DeleteRemotePlayTogetherInvitation_Response {
+}
+
+message CRemoteClient_LookupRemotePlayTogetherInvitation_Request {
+	optional string invitation_code = 1;
+}
+
+message CRemoteClient_LookupRemotePlayTogetherInvitation_Response {
+	optional string invitation_url = 1;
 }

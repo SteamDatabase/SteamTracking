@@ -62,7 +62,7 @@
 
 "Friends_FriendList_CurrentGame"	"ΤΡΕΧΟΝ ΠΑΙΧΝΙΔΙ"
 "Friends_FriendList_InGame"		"ΣΕ ΠΑΙΧΝΙΔΙ"
-"Friends_FriendList_Online"		"ΣΥΝΔΕΔΕΜΕΝΟΣ"
+"Friends_FriendList_Online"		"ΣΕ ΣΥΝΔΕΣΗ"
 "Friends_FriendList_Offline"		"ΕΚΤΟΣ ΣΥΝΔΕΣΗΣ"
 
 "Friends_SendInstantMessage"		"Αποστολή μηνύματος"
@@ -119,8 +119,8 @@
 
 "Friends_UserRequestingFriendship_Title"		"Φίλοι - %friend%"
 "Friends_UserRequestingFriendship_Info"		"Ο χρήστης %friend% σας πρόσθεσε στη λίστα φίλων του."
-"Friends_AllowUserToSeeMeOnline"				"Επιτρέψτε στον χρήστη %friend% να βλέπει πότε είστε συνδεδεμένος και να επικοινωνεί μαζί σας."
-"Friends_BlockUserFromSeeingMeOnline"			"Αποκλείστε αυτό το άτομο από το να βλέπει πότε είστε συνδεδεμένος και να επικοινωνεί μαζί σας."
+"Friends_AllowUserToSeeMeOnline"				"Επιτρέψτε στον χρήστη %friend% να βλέπει πότε είστε σε σύνδεση και να επικοινωνεί μαζί σας."
+"Friends_BlockUserFromSeeingMeOnline"			"Αποκλείστε αυτό το άτομο από το να βλέπει πότε είστε σε σύνδεση και να επικοινωνεί μαζί σας."
 
 "Friends_AddFriend_Title"			"ΠΡΟΣΘΗΚΗ ΦΙΛΟΥ"
 
@@ -137,12 +137,12 @@
 "Friends_PlaySoundWhenUserComesOnline"		"Αναπαραγωγή ήχου όταν αυτός ο χρήστης συνδέεται"
 "Friends_PlaySoundWhenUserJoinsGame"			"Αναπαραγωγή ενός ήχου όταν αυτός ο χρήστης παίζει ένα παιχνίδι"
 
-"Friends_RemoveUserExplanation"	"Αν αφαιρέσετε αυτό το φίλο από τη λίστα σας, δε θα μπορεί να βλέπει πότε είστε συνδεδεμένος ή να σας στείλνει μηνύματα."
+"Friends_RemoveUserExplanation"	"Αν αφαιρέσετε αυτόν τον φίλο από τη λίστα σας, δεν θα μπορεί να βλέπει πότε είστε σε σύνδεση ή να σας στέλνει μηνύματα."
 
 "Friends_FriendInvitedToGame_Title"	"ΠΡΟΣΚΛΗΣΗ - %friend%"
 "Friends_FriendInvitedToGame_Info"	"Μια πρόσκληση για να συνδεθεί στο παιχνίδι σας έχει σταλθεί στον χρήστη %friend%."
 
-"Friends_NotifyFriendOnline_Title"	"%friend% - Ειδοποιήσεις φίλων"
+"Friends_NotifyFriendOnline_Title"	"%friend% — Ειδοποίηση φίλων σε σύνδεση"
 "Friends_NotifyFriendOnline_Info"		"O χρήστης %friend% συνδέθηκε."
 
 "Friends_RefreshLogin_Title"			"Steam - Ανανέωση σύνδεσης"
@@ -170,7 +170,7 @@
 "Friends_InvitationBlocking"		"Έχετε αποκλείσει κάθε επικοινωνία με αυτόν τον χρήστη. Πριν επικοινωνήσετε μαζί του, καταργήστε τον αποκλεισμό πρώτα επισκεπτόμενος τη σελίδα της Κοινότητας Steam του."
 
 "Friends_DontGiveOutPassword"			"Ποτέ μη λέτε τον κωδικό σας σε κανέναν.\n"
-"Friends_DontGiveOutPassword_URL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=301"
+"Friends_DontGiveOutPassword_URL"		"https://support.steampowered.com/kb/1266-OAFV-8478/"
 
 "Friends_ChatFilterBlockWarning"		"Ένας σύνδεσμος αφαιρέθηκε από το ακόλουθο μήνυμα για την ασφάλειά σας."
 
@@ -201,7 +201,7 @@
 "Friends_menu_view_showavatars"			"Εμφάνιση εικόνων"
 "Friends_menu_view_showsteamids"		"Προβολή ID λογαριασμού"
 "Friends_menu_view_sortbyname"			"Ταξινόμηση ανά όνομα"
-"Friends_menu_view_onlineonly"			"Εμφάνιση μόνο συνδεδεμένων χρηστών"
+"Friends_menu_view_onlineonly"			"Εμφάνιση μόνο χρηστών σε σύνδεση"
 "Friends_menu_view_settings"			"Ρυθμίσεις..."
 "Friends_menu_players_current"			"Λίστα παικτών - Τρέχον παιχνίδι"
 "Friends_menu_players_recent"			"Λίστα παικτών - Πρόσφατα παιχνίδια"
@@ -287,7 +287,7 @@
 "Friends_Chat_Closed_Entry"           "Η συνομιλία έκλεισε.\n"
 
 "Friends_Chat_Offline_Entry"           "Η κατάστασή σας έχει τεθεί σε εκτός σύνδεσης.\n"
-"Friends_Chat_Offline_Rejoin_Entry"    "Συνδεδεμένος τώρα και επανασυνδεθήκατε στη συνομιλία.\n"
+"Friends_Chat_Offline_Rejoin_Entry"    "Σε σύνδεση τώρα και επανασυνδεθήκατε στη συνομιλία.\n"
 
 "Friends_Chat_FailedRejoin_Entry"			"Αποτυχία επανασύνδεσης στη συνομιλία.\n"
 "Friends_Chat_FailedRejoin_Rejoin_Entry"	"Επανασυνδεθήκατε στη συνομιλία.\n"
@@ -342,10 +342,10 @@
 "Friends_Chat_ActionResultVoiceSlotsFull" "Δεν μπορείτε να εκκινήσετε φωνητική συνομιλία στο %chat%, δεν υπάρχουν αρκετές ελεύθερες θέσεις για ομιλία."
 "Friends_Chat_VoiceStatus"		"%availslots% θέσεις διαθέσιμες [%maxslots% ολικές]."
 
-"Friends_GroupSectionInfo_Online"					"%online% ΣΥΝΔΕΔΕΜΕΝΟΙ"
-"Friends_GroupSectionInfo_OnlineInGame"			"%ingame% ΣΕ ΠΑΙΧΝΙΔΙ, %online% ΣΥΝΔΕΔΕΜΕΝΟΙ"
-"Friends_GroupSectionInfo_OnlineChatting"			"%inchat% ΣΕ ΣΥΝΟΜΙΛΙΑ, %online% ΣΥΝΔΕΔΕΜΕΝΟΙ"
-"Friends_GroupSectionInfo_OnlineInGameChatting"	"%inchat% ΣΕ ΣΥΝΟΜΙΛΙΑ, %ingame% ΣΕ ΠΑΙΧΝΙΔΙ, %online% ΣΥΝΔΕΔΕΜΕΝΟΙ"
+"Friends_GroupSectionInfo_Online"					"%online% ΣΕ ΣΥΝΔΕΣΗ"
+"Friends_GroupSectionInfo_OnlineInGame"			"%ingame% ΣΕ ΠΑΙΧΝΙΔΙ, %online% ΣΕ ΣΥΝΔΕΣΗ"
+"Friends_GroupSectionInfo_OnlineChatting"			"%inchat% ΣΕ ΣΥΝΟΜΙΛΙΑ, %online% ΣΕ ΣΥΝΔΕΣΗ"
+"Friends_GroupSectionInfo_OnlineInGameChatting"	"%inchat% ΣΕ ΣΥΝΟΜΙΛΙΑ, %ingame% ΣΕ ΠΑΙΧΝΙΔΙ, %online% ΣΕ ΣΥΝΔΕΣΗ"
 
 "Friends_GroupSectionInfo_PublicGroup"	"%groupname% (Δημόσια Ομάδα)"
 
@@ -368,7 +368,7 @@
 
 "Friends_Settings_TabTitle"			"Φίλοι"
 "Friends_Nickname"					"Όνομα προφίλ"
-"Friends_Avatar"						"Ενσάρκωση"
+"Friends_Avatar"						"Άβαταρ"
 "Friends_AutoSignIntoFriendsOnStartup"	"Αυτόματη είσοδος στους φίλους με την εκκίνηση του Steam"
 "Friends_ShowTimeInChatLog"	"Εμφάνιση χρονοσφραγίδας στη συνομιλία"
 "Friends_AlwaysNewChatCheck" "Πάντα άνοιγμα νέου παραθύρου συνομιλίας αντί για μια καρτέλα"
@@ -391,7 +391,7 @@
 "Friends_NameChangeFailed_Info"		"Αποτυχία αλλαγής ονόματος προφίλ. Παρακαλούμε δοκιμάστε ξανά σε λίγα λεπτά."
 "Friends_NameChangeThrottled_Info"		"Δεν επιτρέπονται πολύ συχνές αλλαγές στο όνομα προφίλ. Προσπαθήστε ξανά σε λίγα λεπτά."
 
-"Friends_OnlineNotification_Info"			"είναι τώρα συνδεδεμένος"
+"Friends_OnlineNotification_Info"			"είναι τώρα σε σύνδεση"
 "Friends_InGameNotification_Info"			"τώρα παίζει"
 "Friends_InAppNotification_Info"			"τώρα χρησιμοποιεί"
 "Friends_ChatInvitation_Info"				"σας προσκάλεσε να συνομιλήσετε"
@@ -556,6 +556,7 @@
 "Friends_SteamCommunity"	"Κοινότητα Steam"
 "Limited_Explanation"	"Ο λογαριασμός σας δεν πληροί τις προϋποθέσεις για να χρησιμοποιήσει αυτή τη λειτουργία."
 "Limited_ForDetails"	"Επισκεφθείτε την Υποστήριξη Steam για περισσότερες πληροφορίες."
+"Limited_ForDetails_URL"	"https://help.steampowered.com/wizard/HelpWithLimitedAccount"
 
 "Friends_Chat_RoomModerated_Entry"		"Το δωμάτιο συνομιλίας ορίστηκε σε διαχειριστές μόνο από τον χρήστη %member_making_change%.\n"
 "Friends_Chat_RoomUnmoderated_Entry"		"Αυτό το δωμάτιο συνομιλίας έχει τεθεί σε συνομιλία όλων των χρηστών από τον χρήστη %member_making_change%.\n"
@@ -663,10 +664,10 @@
 "friends_setnickname_title"		"Φίλοι - %friend%"
 "friends_setnickname_info"		"Προσθέστε ένα μόνιμο ψευδώνυμο σε αυτόν τον παίκτη για να θυμάστε ποιος είναι."
 "friends_managefriends"			"Διαχείριση φίλων"
-"Friends_WebStatus_Tooltip"		"Συνδεδεμένος από διαδίκτυο"
-"Friends_MobileStatus_Tooltip"	"Συνδεδεμένος από κινητό"
-"Friends_BigPictureStatus_Tooltip"	"Συνδεδεμένος από Big Picture"
-"Friends_VRStatusStatus_Tooltip" "Συνδεδεμένος σε VR"
+"Friends_WebStatus_Tooltip"		"Σε σύνδεση από διαδίκτυο"
+"Friends_MobileStatus_Tooltip"	"Σε σύνδεση από κινητό"
+"Friends_BigPictureStatus_Tooltip"	"Σε σύνδεση από Big Picture"
+"Friends_VRStatusStatus_Tooltip" "Σε σύνδεση σε VR"
 
 "friends_newturn_info" "1 νέα σειρά σε αναμονή"
 "friends_newturns_info" "%turns% νέες σειρές σε αναμονή"
@@ -687,6 +688,7 @@
 "Broadcast_FirstTime_PermissionHeader" "Αφιερώστε λίγο χρόνο για να ρυθμίσετε τις προτιμήσεις σας..."
 "Broadcast_FirstTime_DesktopOnly" "Από προεπιλογή, μόνο το περιεχόμενο παιχνιδιού σας μπορεί να προβληθεί. Η επιφάνεια εργασίας σας δεν θα μεταδίδεται."
 "Broadcast_FirstTime_FAQ" "Διαβάστε τις συχνές ερωτήσεις για τη Μετάδοση του Steam"
+"Broadcast_FirstTime_FAQLink" "https://support.steampowered.com/kb_article.php?ref=6730-TOAK-6497"
 "Broadcast_FirstTime_Title" "Μετάδοση Steam"
 "Broadcast_FirstTime_OK" "OK"
 "Broadcast_FirstTime_Cancel" "Άκυρο"

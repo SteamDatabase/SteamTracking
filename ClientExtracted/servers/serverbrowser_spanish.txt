@@ -145,7 +145,7 @@
 "VAC_ConnectionRefusedTitle"	"Solicitud de conexión rechazada - Sistema VAC"
 "VAC_ConnectionRefusedDetail"	"No puedes conectarte al servidor seleccionado porque se está ejecutando en el modo seguro VAC (del inglés Valve Anti-Cheat, sistema antitrampas de Valve).\n\nEl acceso de esta cuenta de Steam a los servidores seguros ha quedado bloqueado debido a una infracción del código antitrampas."
 "VAC_ConnectionRefusedByServer"	"El servidor ha rechazado la solicitud de conexión porque se está ejecutando en el modo seguro VAC.\n\nEl acceso de esta cuenta de Steam a los servidores seguros ha quedado bloqueado debido a una infracción del código antitrampas."
-"VAC_BanSupportURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=370"
+"VAC_BanSupportURL"	"https://support.steampowered.com/kb/7849-RADZ-6869&l=spanish/"
 "VAC_SecureServerToolTip"	"Sistema antitrampas de Valve (modo seguro)"
 "VAC_BannedFromServerToolTip"	"No puedes conectarte a este servidor seguro"
 "VAC_Secure"	"Modo seguro"
@@ -160,7 +160,7 @@
 "Steam_ValidLoginRequired"	"No se ha podido establecer una conexión con los servidores Steam VAC.  Para la resolución de problemas de red, haz clic en el siguiente vínculo."
 "VAC_ConnectionIssuesSupport_Title"	"Fallo en la conexión segura"
 "VAC_ConnectionIssuesSupportSite"	"Haz clic aquí para consultar el sitio de soporte de Steam."
-"VAC_ConnectionIssuesSupportURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=374"
+"VAC_ConnectionIssuesSupportURL"	"https://support.steampowered.com/kb/7579-RPSX-6098&l=spanish/"
 "VAC_LoggedInElsewhere_Title"		"Cuenta utilizada en otro sitio"
 "VAC_LoggedInElsewhereReason"		"Esta cuenta de Steam se ha utilizado para conectarse desde otro ordenador. Para continuar utilizando Steam, debes conectarte de nuevo."
 

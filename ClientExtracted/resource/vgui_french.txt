@@ -107,7 +107,7 @@
 "SMPStats_UserId"		"ID utilisateur :"
 "SMPStats_Filename"		"Nom du fichier :"
 
-"SMPStats_EventTitle"		"Événement"
+"SMPStats_EventTitle"		"Évènement"
 "SMPStats_TimeTitle"		"Temps (ms)"
 "SMPStats_PositionTitle"	"Position (ms)"
 "SMPStats_DialogTitle"		"Préférences de collecte de données"
@@ -223,8 +223,8 @@
 "vgui_HTMLSearchMatch" "%findactive% sur %findcount%"
 "vgui_HTMLSearchThisPage" "Rechercher :"
 "vgui_choosedirectoryname"	"Choisissez le nom du répertoire"
-"vgui_HTMLCloseDevTools"	"Fermer les outils développeur"
-"vgui_HTMLOpenDevTools"		"Ouvrir les outils développeur"
+"vgui_HTMLCloseDevTools"	"Fermer les outils de développement"
+"vgui_HTMLOpenDevTools"		"Ouvrir les outils de développement"
 "vgui_HTMLInspectElement"	"Inspecter l'élément"
 }
 }

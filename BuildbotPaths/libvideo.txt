@@ -79,7 +79,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlvector.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier0/memblockhdr.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier0/memstd.cpp
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier0/memstd.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier0/minidump.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier0/platform_posix.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier0/threadtools.cpp

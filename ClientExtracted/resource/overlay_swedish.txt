@@ -64,7 +64,7 @@
 "Overlay_Taskbar_Close"		"Klicka här för att återvända till spelet"
 "Overlay_Taskbar_CloseApp"		"Klicka här för att återvända till programmet"
 "Overlay_Taskbar_WebBrowser"	"Webbläsare"
-"Overlay_Taskbar_Screenshots"	"Skärmdumpar"
+"Overlay_Taskbar_Screenshots"	"Skärmbilder"
 "Overlay_Taskbar_DLC"		"DLC"
 "Overlay_Taskbar_Guide"		"Guide"
 "Overlay_Taskbar_legacycdkey"	"CD-Nyckel"
@@ -185,12 +185,12 @@
 "Overlay_MicroTxnAuth_Insufficient_Funds_Info" "Du har inte tillräckligt med pengar i din Steam-plånbok för att kunna slutföra köpet. Vill du lägga till mer pengar för att fortsätta?"
 
 "Overlay_Screenshots_Title" "Skärmdumpsuppladdaren"
-"Overlay_Screenshots_Panel_Title" "Skärmdumpar"
+"Overlay_Screenshots_Panel_Title" "Skärmbilder"
 "Overlay_Screenshots_Show" "Visa:"
 "Overlay_Screenshots_Size_Cloud" "%selected_ss_size%"
 "Overlay_Screenshots_Size_Original" " (%selected_ss_size_original% på hårddisk)"
 "Overlay_View_All_Screenshots" "Visa online-bibliotek"
-"Overlay_View_Screenshots" "Visa skärmdumpar"
+"Overlay_View_Screenshots" "Visa skärmbilder"
 "Overlay_View_Local" "Visa på hårddisken"
 "Overlay_Set_Shortcut" "Ange genväg"
 "Overlay_Publish" "Ladda upp"
@@ -200,7 +200,7 @@
 "Overlay_Last_Session" "Senaste session"
 "Overlay_Chars_Left" "%screenshot_caption_charsleft% tecken kvar"
 "Overlay_Add_Caption" "Lägg till en bildtext"
-"Overlay_Publish_Offline" "Kan inte publicera skärmdumpar i offlineläge"
+"Overlay_Publish_Offline" "Kan inte publicera skärmbilder i offlineläge"
 "Overlay_Screenshots_Press_Hotkey" "Tryck på %screenshot_hotkey% i ett spel för att ta skärmdumpar."
 "Overlay_Screenshots_Press_HotkeyApp" "Tryck på %screenshot_hotkey% i ett program för att ta skärmdumpar."
 "Overlay_Publish_Error_Title" "Fel"
@@ -234,7 +234,7 @@
 "Overlay_CommunityDiscussions_Panel_NumDiscussions" "%num_discussions% aktiva diskussioner"
 
 "Overlay_SaveUncompressed" "Spara en okomprimerad kopia"
-"Overlay_SetScreenshotFolder" "Välj extern mapp för skärmdumpar"
+"Overlay_SetScreenshotFolder" "Välj extern mapp för skärmbilder"
 
 
 "Overlay_SetScreenshotFolder_NoDriveRoot" "Du kan inte välja rotmappen på din hårddisk"

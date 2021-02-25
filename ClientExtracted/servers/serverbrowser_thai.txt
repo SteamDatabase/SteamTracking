@@ -145,7 +145,7 @@
 "VAC_ConnectionRefusedTitle"	"การเชื่อมต่อถูกปฏิเสธ - VAC"
 "VAC_ConnectionRefusedDetail"	"คุณไม่สามารถเชื่อมต่อกับเซิร์ฟเวอร์ที่เลือกได้เนื่องจากเซิร์ฟเวอร์รันในโหมดรักษาความปลอดภัย VAC (Valve Anti-Cheat)\n\nบัญชี Steam นี้ถูกแบนจากเซิร์ฟเวอร์ที่รักษาความปลอดภัยเนื่องจากการละเมิดกฎเกี่ยวกับการโกง"
 "VAC_ConnectionRefusedByServer"	"เซิร์ฟเวอร์ปฏิเสธการเชื่อมต่อของคุณเนื่องจากเซิร์ฟเวอร์กำลังรันในโหมดรักษาความปลอดภัย VAC (Valve Anti-Cheat)\n\nบัญชี Steam นี้ถูกแบนจากเซิร์ฟเวอร์ที่รักษาความปลอดภัยเนื่องจากการละเมิดกฎเกี่ยวกับการโกง"
-"VAC_BanSupportURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=370"
+"VAC_BanSupportURL"	"https://support.steampowered.com/kb/7849-RADZ-6869&l=thai/"
 "VAC_SecureServerToolTip"	"Valve Anti-Cheat - รักษาความปลอดภัย"
 "VAC_BannedFromServerToolTip"	"คุณเชื่อมต่อกับเซิร์ฟเวอร์ที่รักษาความปลอดภัยนี้ไม่ได้"
 "VAC_Secure"	"รักษาความปลอดภัย"
@@ -160,7 +160,7 @@
 "Steam_ValidLoginRequired"	"การเชื่อมต่อกับเซิร์ฟเวอร์ Steam VAC ไม่สามารถทำได้ สำหรับการแก้ไขปัญหาเครือข่าย โปรดคลิกที่ลิงก์ด้านล่าง"
 "VAC_ConnectionIssuesSupport_Title"	"การเชื่อมต่อแบบปลอดภัยล้มเหลว"
 "VAC_ConnectionIssuesSupportSite"	"คลิกที่นี่เพื่อเยี่ยมชมฝ่ายสนับสนุน Steam"
-"VAC_ConnectionIssuesSupportURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=374"
+"VAC_ConnectionIssuesSupportURL"	"https://support.steampowered.com/kb/7579-RPSX-6098&l=thai/"
 "VAC_LoggedInElsewhere_Title"		"บัญชีถูกใช้จากที่อื่น"
 "VAC_LoggedInElsewhereReason"		"บัญชี Steam นี้ถูกใช้ในการเข้าสู่ระบบจากคอมพิวเตอร์เครื่องอื่น หากต้องการใช้ Steam คุณต้องเข้าสู่ระบบอีกครั้ง"
 

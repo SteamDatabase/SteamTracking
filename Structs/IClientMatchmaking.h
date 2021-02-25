@@ -43,7 +43,7 @@ public:
     virtual unknown_ret SetLinkedLobby(CSteamID, CSteamID) = 0;
     virtual unknown_ret BeginGMSQuery(unsigned int, int, char const*) = 0;
     virtual unknown_ret PollGMSQuery(long long) = 0;
-    virtual unknown_ret GetGMSQueryResults(long long, IClientMatchmaking::GMSQueryResult_t*, int) = 0;
+    virtual unknown_ret GetGMSQueryResults(long long, CMsgGMSClientServerQueryResponse*) = 0;
     virtual unknown_ret ReleaseGMSQuery(long long) = 0;
     virtual unknown_ret EnsureFavoriteGameAccountsUpdated(bool) = 0;
 };

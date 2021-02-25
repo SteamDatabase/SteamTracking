@@ -170,7 +170,7 @@
 "Friends_InvitationBlocking"		"Du blokerer al kommunikation med denne bruger. Før du kan kommunikere med vedkommende skal du først fjerne blokeringen. Det gør du på deres Steam-fællesskabsprofil."
 
 "Friends_DontGiveOutPassword"			"Fortæl aldrig din adgangskode til nogen.\n"
-"Friends_DontGiveOutPassword_URL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=301"
+"Friends_DontGiveOutPassword_URL"		"https://support.steampowered.com/kb/1266-OAFV-8478/"
 
 "Friends_ChatFilterBlockWarning"		"Et link blev fjernet fra følgende besked for at beskytte din sikkerhed."
 
@@ -556,6 +556,7 @@
 "Friends_SteamCommunity"	"Steam-fællesskab"
 "Limited_Explanation"	"Din konto opfylder ikke kravene for at bruge denne funktion."
 "Limited_ForDetails"	"Besøg Steam Support for mere information."
+"Limited_ForDetails_URL"	"https://help.steampowered.com/wizard/HelpWithLimitedAccount"
 
 "Friends_Chat_RoomModerated_Entry"		"Chatrummet er blevet sat til kun chat mellem officerer af %member_making_change%.\n"
 "Friends_Chat_RoomUnmoderated_Entry"		"Chatrummet er blevet sat til chat mellem alle brugere af %member_making_change%.\n"
@@ -687,6 +688,7 @@
 "Broadcast_FirstTime_PermissionHeader" "Brug et øjeblik på at opsætte dine præferencer..."
 "Broadcast_FirstTime_DesktopOnly" "Som standard vil kun dit spil kunne ses. Dit skrivebord bliver ikke broadcastet."
 "Broadcast_FirstTime_FAQ" "Læs de ofte stillede spørgsmål om Steam-broadcasting"
+"Broadcast_FirstTime_FAQLink" "https://support.steampowered.com/kb_article.php?ref=6730-TOAK-6497"
 "Broadcast_FirstTime_Title" "Steam-broadcasting"
 "Broadcast_FirstTime_OK" "OK"
 "Broadcast_FirstTime_Cancel" "Annuller"
@@ -794,7 +796,7 @@
 "Steam_Settings_Browser_ClearWebCacheMsg"	"Slet alle filer i den indbyggede webbrowser-cache?"
 
 "RemotePlayTogether_Notification_AvailableToInvite_Title" "Remote Play Together"
-"RemotePlayTogether_Notification_AvailableToInvite" "Højreklik på en person på din venneliste for at invitere vedkommende til at spille."
+"RemotePlayTogether_Notification_AvailableToInvite" "Højreklik en ven på din venneliste for at invitere til at spille."
 
 } 
 }  

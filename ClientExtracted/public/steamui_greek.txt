@@ -13,7 +13,7 @@
 "WelcomeToSteamCreateAccount" "ΔΗΜΙΟΥΡΓΙΑ ΝΕΟΥ ΛΟΓΑΡΙΑΣΜΟΥ"
 "WelcomeToSteamLogin" "ΣΥΝΔΕΣΗ ΣΕ ΥΠΑΡΧΟΝΤΑ ΛΟΓΑΡΙΑΣΜΟ"
 "SteamUI_AccountNameInfo" "Εισάγετε την ηλεκτρονική σας διεύθυνση. Αν ξεχάσετε τον\nκωδικό πρόσβασής σας, θα ενημερωθείτε μέσω αυτής της διεύθυνσης για να\nεπιβεβαιωθεί η ταυτότητά σας."
-"SteamUI_WelcomeNameInfo" "Εισάγετε ένα όνομα προφίλ. Αυτό το όνομα θα βλέπουν οι φίλοι σας \nόταν είστε συνδεδεμένος. Μπορείτε επίσης να εισάγετε το πραγματικό σας \nόνομα για να διευκολύνετε τους φίλους σας στο να σας βρουν."
+"SteamUI_WelcomeNameInfo" "Εισαγάγετε ένα όνομα προφίλ. Αυτό το όνομα θα βλέπουν οι φίλοι σας \nόταν είστε σε σύνδεση. Μπορείτε επίσης να εισαγάγετε το πραγματικό σας \nόνομα για να διευκολύνετε τους φίλους σας να σας βρουν."
 "SteamUI_WelcomeNameOptional" "(προαιρετικό)"
 
 "SteamUI_ConvertExistingInfo" "Γίνεται μετατροπή της υπάρχουσας εγκατάστασης του παιχνιδιού. Αυτό μπορεί να διαρκέσει μερικά λεπτά."
@@ -33,8 +33,8 @@
 "Underline" "_________________"
 "Underline2" "_________________"
 "WelcomeToSteamPasswordInfo" "Παρακαλούμε εισάγετε έναν κωδικό πρόσβασης. Σιγουρευτείτε ότι θα επιλέξετε κάτι που είναι δύσκολο να μαντευθεί - χρησιμοποιήστε τουλάχιστον 8 χαρακτήρες."
-"WelcomeToSteamPassword" "Κωδικός πρόσβασης"
-"WelcomeToSteamRetypePassword" "Πληκτρολογήστε ξανά τον κωδικό πρόσβασης"
+"WelcomeToSteamPassword" "Συνθηματικό"
+"WelcomeToSteamRetypePassword" "Πληκτρολογήστε ξανά το συνθηματικό"
 "WelcomeAccountCreateComplete" "Είστε έτοιμος! Ευχαριστούμε που χρησιμοποιείτε το Steam. Το πρόγραμμα τρέχει στην περιοχή ειδοποιήσεων, συνήθως στην κάτω δεξιά γωνία της οθόνης σας. Για να αποκτήσετε πρόσβαση στο Steam, κάντε δεξί κλικ στο εικονίδιο του."
 
 "SteamApp_Description"	"Εφαρμογή διαχείρισης παιχνιδιών στο Steam"
@@ -101,16 +101,16 @@
 "Steam_ErrorPasswordTooLong" "Ο νέος σας κωδικός πρόσβασης πρέπει να έχει μέγιστο μήκος 64 χαρακτήρων."
 "Steam_ErrorPasswordTooLong2" "Ο κωδικός πρόσβασης σας πρέπει να έχει μέγιστο μήκος 64 χαρακτήρων."
 "Steam_ErrorPasswordTooShort3" "κωδικός πολύ μικρός"
-"Steam_ErrorPasswordsDontMatch2" "ο κωδικός δεν ταιριάζει"
-"Steam_ErrorPasswordTooWeak" "κωδικός πολύ απλός"
-"Steam_ErrorPasswordContainsAccountName" "ο κωδικός περιέχει όνομα λογαριασμού"
+"Steam_ErrorPasswordsDontMatch2" "το συνθηματικό δεν ταιριάζει"
+"Steam_ErrorPasswordTooWeak" "το συνθηματικό είναι πολύ απλό"
+"Steam_ErrorPasswordContainsAccountName" "το συνθηματικό περιέχει το όνομα λογαριασμού"
 
-"Steam_NewPassword_Enter" "Εισάγετε έναν νέο κωδικό πρόσβασης.\nΠρέπει να έχει ελάχιστο μήκος 8 χαρακτήρων."
-"Steam_NewPassword_Label" "Νέος κωδικός πρόσβασης"
-"Steam_NewPassword_Confirm" "Επιβεβαίωση κωδικού πρόσβασης"
+"Steam_NewPassword_Enter" "Εισαγάγετε ένα νέο συνθηματικό.\nΠρέπει να είναι τουλάχιστον 8 χαρακτήρες."
+"Steam_NewPassword_Label" "Νέο συνθηματικό"
+"Steam_NewPassword_Confirm" "Επιβεβαίωση συνθηματικού"
 
 "Steam_ForgottenPassword_Title" "Ανάκτηση πληροφοριών λογαριασμού - Steam"
-"Steam_ForgottenPassword_VerifyIdentity" "Πριν μπορέσετε να αλλάξετε τον κωδικό πρόσβασης σας, θα χρειαστεί να επιβεβαιώσουμε την ταυτότητα σας. Εισάγετε το όνομα του λογαριασμού σας."
+"Steam_ForgottenPassword_VerifyIdentity" "Προτού μπορέσετε να αλλάξετε το συνθηματικό σας, θα χρειαστεί να επιβεβαιώσουμε την ταυτότητα σας. Εισαγάγετε το όνομα του λογαριασμού σας."
 "Steam_ForgottenPassword_Incorrect" "Δεν έγινε δυνατό να αλλάξει ο κωδικός πρόσβασης σας.\nΕίτε απαντήσατε λάθος στη μυστική ερώτηση, είτε\nο νέος κωδικός πρόσβασης σας δεν είναι έγκυρος.\n\nΠαρακαλούμε πατήστε «Πίσω» και δοκιμάστε ξανά. \n"
 "Steam_ForgottenPassword_Success" "Ο κωδικός πρόσβασης σας άλλαξε.\n\nΠαρακαλούμε επιλέξτε «Τέλος» παρακάτω για να επιστρέψετε στην οθόνη εισόδου."
 "Steam_ForgottenPassword_SamePassword" "Ο νέος κωδικός πρόσβασης ταυτίζεται με τον τρέχοντα. Πατήστε πίσω για να επιλέξετε ένα νέο κωδικό ή άκυρο και και συνδεθείτε με αυτόν τον κωδικό\n"
@@ -125,9 +125,9 @@
 
 "Steam_Login_Title"		"Είσοδος στο Steam"
 "Steam_Login_CreateNewAccount"	"ΔΗΜΙΟΥΡΓΙΑ ΝΕΟΥ ΛΟΓΑΡΙΑΣΜΟΥ..."
-"Steam_Login_RetrievePassword"	"ΔΕΝ ΜΠΟΡΩ ΝΑ ΣΥΝΔΕΘΩ..."
+"Steam_Login_RetrievePassword"	"ΔΕΝ ΜΠΟΡΩ ΝΑ ΣΥΝΔΕΘΩ…"
 "Steam_Login_NoAccount"		"Δεν έχετε λογαριασμό Steam;"
-"Steam_Login_ForgotPassword"	"Χρειάζεστε βοήθεια με τη σύνδεσή σας;"
+"Steam_Login_ForgotPassword"	"Χρειάζεστε βοήθεια με τη σύνδεση;"
 "Steam_Login_CapsLockWarning"	"Caps Lock ενεργό"
 
 "SteamUI_CreateAccount_Title"	"Δημιουργία λογαριασμού Steam"
@@ -432,7 +432,7 @@
 "Steam_DPIScaling_Option"				"Μεγέθυνση κειμένου και εικονιδίων με βάση το μέγεθος της οθόνης (απαιτεί επανεκκίνηση)"
 "Steam_LaunchSteamOnStartup_Option"		"Εκτέλεση του Steam όποτε ξεκινάει ο υπολογιστής μου"
 "Steam_BPMOnStartup_Option"				"Εκκίνηση Steam σε Big Picture"
-"Steam_ShowUrlBar_Option"				"Προβολή της μπάρας διευθύνσεων URL του Steam"
+"Steam_ShowUrlBar_Option"				"Προβολή της μπάρας διευθύνσεων ιστού όταν είναι διαθέσιμη"
 "Steam_UseDirectWrite_Option"			"Ενεργοποίηση DirectWrite για βελτιωμένη εξομάλυνση γραμματοσειρών."
 "Steam_UseH264HWAccel_Option"			"Αποκωδικοποίηση υλικού, αν υποστηρίζεται (απαιτεί επανεκκίνηση)"
 
@@ -486,7 +486,7 @@
 "Steam_GetCDKeyError_Info"			"Ο κωδικός προϊόντος που εισαγάγατε δεν είναι έγκυρος. \n\nΠαρακαλούμε επανελέγξτε για να δείτε εάν πατήσατε λάθος πλήκτρο. Οι χαρακτήρες I, L και 1 μπορεί να μοιάζουν στην εμφάνιση, όπως επίσης και οι χαρακτήρες V με Y και 0 με O.\nΔείτε τη σελίδα http://www.steampowered.com για βοήθεια."
 "Steam_PasswordRequiredToContinue_Title"	"Steam - Εισαγωγή κωδικού"
 "Steam_PasswordRequiredToContinue"		"Ο κωδικός σας στο Steam είναι απαραίτητος για να συνεχίσετε."
-"Steam_InvalidPassword_Title"			"Steam - Σφάλμα"
+"Steam_InvalidPassword_Title"			"Steam — Σφάλμα"
 "Steam_InvalidPassword_Info"			"Ο κωδικός πρόσβασης που εισήγατε δεν είναι έγκυρος."
 "Steam_MonitorScanning"				"Γίνεται σάρωση..."
 
@@ -498,7 +498,7 @@
 
 "Steam_ChangePassword"				"ΑΛΛΑΓΗ ΚΩΔΙΚΟΥ ΠΡΟΣΒΑΣΗΣ..."
 "Steam_ChangePasswordWizard_Title"		"Steam - Οδηγός αλλαγής κωδικού εισόδου"
-"Steam_ChangePasswordError_Title"		"Steam - Σφάλμα"
+"Steam_ChangePasswordError_Title"		"Steam — Σφάλμα"
 "Steam_ChangePasswordOrSecret"		"Ποιο αντικείμενο επιθυμείτε να αλλάξετε;"
 "Steam_ChangePasswordOldPassword"		"Εισάγετε τον παλιό κωδικό πρόσβασης σας"
 "Steam_ChangePasswordNewPassword"		"Εισάγετε έναν νέο κωδικό πρόσβασης"
@@ -744,8 +744,8 @@
 "SteamUI_German"			"Γερμανικά"
 "SteamUI_Greek"				"Ελληνικά"
 "SteamUI_Korean"			"Κορεάτικα"
-"SteamUI_Simplified_Chinese"	"Απλοποιημένα Κινεζικά"
-"SteamUI_Traditional_Chinese"	"Παραδοσιακά Κινεζικά"
+"SteamUI_Simplified_Chinese"	"Απλοποιημένα κινεζικά"
+"SteamUI_Traditional_Chinese"	"Παραδοσιακά κινεζικά"
 "SteamUI_Russian"		"Ρωσικά"
 "SteamUI_Thai"			"Ταϊλανδικά"
 "SteamUI_Japanese"		"Ιαπωνικά"
@@ -1146,7 +1146,7 @@
 "Steam_SubscriptionApprovalCode" "Εξουσιοδότηση"
 "Steam_SubscriptionConfirmation" "Κωδικός επιβεβαίωσης"
 
-"Steam_TroubleshooterURL_CDKey" "http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=276"
+"Steam_TroubleshooterURL_CDKey" "https://support.steampowered.com/kb/1968-HKLX-7538/"
 
 "Steam_SubscriptionSuccess_CDKey_Headline" "Επιτυχής ενεργοποίηση!"
 "Steam_SubscriptionSuccess_CDKey" "Ο κωδικός προϊόντος σας ενεργοποιήθηκε επιτυχώς. Το προϊόν ή τα προϊόντα παρακάτω είναι πλέον μόνιμα συνδεδεμένα με τον λογαριασμό Steam σας. Θα πρέπει να συνδεθείτε σε αυτό τον λογαριασμό για να αποκτήσετε πρόσβαση στα αντικείμενα που μόλις ενεργοποιήσατε στο Steam.\n\nΕκτυπώστε μια απόδειξη αυτής της συναλλαγής για να θυμάστε τον λογαριασμό σας για μελλοντική χρήση."
@@ -1216,7 +1216,7 @@
 "Steam_Subscription_HardwarePromo_Used_Headline" "Διπλότυπη εγγραφή"
 "Steam_Subscription_HardwarePromo_Used" "Αυτή η προσφορά έχει ήδη ενεργοποιηθεί από κάποιον άλλο λογαριασμό Steam."
 "Steam_PurchaseError_HardwarePromoIneligible" "Συγγνώμη, αυτός ο υπολογιστής δεν πληροί τις απαιτήσεις συστήματος για τη προσφορά του %subscription%."
-"Steam_HardwarePromo_SupportURL" "http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=628"
+"Steam_HardwarePromo_SupportURL" "https://support.steampowered.com/kb/2734-UDFX-1098/"
 
 "Steam_Subscription_HardwarePromo_AlreadyPurchased_Headline" "Κατέχετε ήδη το προϊόν"
 "Steam_Subscription_HardwarePromo_AlreadyPurchased" "Αυτός ο λογαριασμός Steam έχει ήδη τα προϊόντα που περιέχονται σε αυτή\nτην προσφορά. Για να αποκτήσετε πρόσβαση σε αυτά, επισκεφθείτε τη συλλογή παιχνιδιών σας."
@@ -1492,7 +1492,8 @@
 "Steam_DutyNote"	"Τα εμπορεύματα θα αποσταλούν από τις Ηνωμένες Πολιτείες. Εσείς είστε υπεύθυνος για τυχόν έξοδα τελωνείων."
 
 "Steam_AgreeToTheTerms"		"Συμφωνώ στους όρους από το"
-"Steam_SteamSubscriberAgreement"	"Συμφωνητικό Συνδρομητή Steam"
+"Steam_SteamSubscriberAgreement"	    "Συμφωνητικό Συνδρομητή Steam"
+"Steam_SteamSubscriberAgreement_china"	"Συμφωνητικό Άδειας Steam China"
 "Steam_ComplianceRequired_Title"	"Steam - Προειδοποίηση"
 "Steam_ComplianceRequired_Info"		"Είναι απαραίτητο να συμφωνήσετε με τους όρους του Συμφωνητικού συνδρομητή Steam για να συνεχίσετε."
 
@@ -1611,9 +1612,10 @@
 "Steam_ConnectionFailureTitle"	"Αποτυχία σύνδεσης"
 "Steam_ConnectionFailureDetail"	"Το Steam δεν μπορεί να συνδεθεί στο δίκτυο. Αυτό μπορεί να οφείλεται σε κάποιο πρόβλημα με τη σύνδεσή σας στο Διαδίκτυο."
 "Steam_ConnectionSupportLink"	"Αντιμετώπιση προβλημάτων της σύνδεσής μου"
-"Steam_ConnectionSupportURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=11"
+"Steam_ConnectionSupportURL"	"https://support.steampowered.com/kb/1456-EUDN-2493/"
 
 "SteamUI_NetworkTroubleshootingTips"	"Συμβουλές αντιμετώπισης προβλημάτων δικτύου"
+"SteamUI_NetworkTroubleshootingTips_URL"	"https://support.steampowered.com/kb_article.php?ref=1456-EUDN-2493"
 
 
 "SteamUI_SSA_Agree"				"Διαβάστε ολόκληρο το συμφωνητικό. Πρέπει να συμφωνείτε με τους όρους του Συμφωνητικού συνδρομητή του Steam για να συνεχίσετε."
@@ -1677,6 +1679,16 @@
 "steam_menu_downloads"	"Λήψεις"
 "steam_menu_account"	"Steam"
 "steam_menu_window" "Παράθυρο"
+"steam_menu_preferences"	"Προτιμήσεις…"
+"steam_menu_services"	"Υπηρεσίες"
+"steam_menu_hidesteam"	"Απόκρυψη Steam"
+"steam_menu_hideothers"	"Απόκρυψη άλλων"
+"steam_menu_showall"	"Εμφάνιση όλων"
+"steam_menu_quitsteam"	"Τερματισμός Steam"
+"steam_menu_window_close"	"Κλείσιμο"
+"steam_menu_window_minimize"	"Ελαχιστοποίηση"
+"steam_menu_window_zoom"	"Ζουμ"
+"steam_menu_window_bringalltofront"	"Μεταφορά όλων σε πρώτο πλάνο"
 "steam_menu_games_details"	"Πληροφορίες παιχνιδιών"
 "steam_menu_games_list"		"Λίστα παιχνιδιών"
 "steam_menu_games_grid"		"Πλέγμα παιχνιδιών"
@@ -2381,16 +2393,16 @@
 "Steam_RegionRestricted_Title"			"Steam - Παιχνίδι μη διαθέσιμο"
 "Steam_RegionRestrictedPurchase_Info"				"Αυτό το παιχνίδι ενεργοποιήθηκε με ένα κωδικό προϊόντος που ισχύει μόνο σε συγκεκριμένη γεωγραφική περιοχή. Αφού δεν είστε αυτή τη στιγμή σε αυτή τη περιοχή, το %game% δε διατίθεται για παιχνίδι."
 "Steam_RegionRestricted_SupportLink"		"Επισκεφθείτε τη σελίδα υποστήριξης του Steam για περισσότερες πληροφορίες"
-"Steam_RegionRestrictedPurchase_SupportURL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=461"
+"Steam_RegionRestrictedPurchase_SupportURL"		"https://support.steampowered.com/kb/1266-QFZC-2141/"
 "Steam_RegionRestricted_Info"				"Το %game% δεν είναι διαθέσιμο στην περιοχή σας."
-"Steam_RegionRestricted_SupportURL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=461"
+"Steam_RegionRestricted_SupportURL"		"https://support.steampowered.com/kb/1266-QFZC-2141/"
 
 "Steam_CountryRestricted_Info"				"Αυτή η συνδρομή δεν είναι διαθέσιμη για αγορά στη χώρα σας."
-"Steam_CountryRestricted_SupportURL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=488"
+"Steam_CountryRestricted_SupportURL"		"https://support.steampowered.com/kb/1266-QFZC-2141/"
 
 "Steam_RegionRestrictedCode_Title"		"Steam - Προϊόν μη διαθέσιμο"
 "Steam_RegionRestrictedCode_Info"			"Αυτός ο κωδικός προϊόντος δεν μπορεί να ενεργοποιηθεί στην περιοχή σας."
-"Steam_RegionRestrictedCode_SupportURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=463"
+"Steam_RegionRestrictedCode_SupportURL"	"https://support.steampowered.com/kb/1266-QFZC-2141/"
 
 "Steam_FragmentationBad_Title"			"Steam - Προειδοποίηση κατακερματισμένου δίσκου"
 "Steam_FragmentationBad_Info"				"Τα αρχεία του παιχνιδιού σας έχουν μεγάλο ποσοστό κατακερματισμού στο δίσκο. Αυτό μπορεί να προκαλέσει μεγάλους χρόνους φόρτωσης και κακή επίδοση εντός παιχνιδιού. \n\nΤο Steam μπορεί να βελτιστοποιήσει τα αρχεία του παιχνιδιού σας για εσάς τώρα.\n"
@@ -2761,7 +2773,7 @@
 "Steam_GuestPassAccept_HeadlineServiceUnavailable$type=guestpass"	"Αποτυχία αποδοχής πάσου επισκέπτη"
 "Steam_GuestPassAccept_TextServiceUnavailable"	"Είτε ο υπολογιστής σας αδυνατεί να συνδεθεί με τους διακομιστές του Steam, είτε η υπηρεσία είναι προσωρινά απενεργοποιημένη. Παρακαλούμε δοκιμάστε ξανά αργότερα."
 "Steam_GuestPassAccept_LinkTextServiceUnavailable" 	"Για αντιμετώπιση προβλημάτων σχετικά με τα δώρα, δείτε αυτή τη σελίδα υποστήριξης."
-"Steam_GuestPassAccept_LinkURLServiceUnavailable"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=550"
+"Steam_GuestPassAccept_LinkURLServiceUnavailable"	"https://support.steampowered.com/kb/6262-QXCN-0755/"
 
 "Steam_GuestPassAccept_HeadlineRevoked$type=guestpass"	"Αυτό το πάσο επισκέπτη έχει ανακληθεί"
 "Steam_GuestPassAccept_TextRevoked$type=guestpass"	"Ο φίλος που σας έστειλε αυτό το πάσο επισκέπτη το ακύρωσε και έχει στείλε ένα νεότερο κωδικό εξαργύρωσης. Αν η νέα έκδοση στάλθηκε σε εσάς, θα λάβετε ένα άλλο μήνυμα ηλεκτρονικού ταχυδρομείου με τον ενημερωμένο κωδικό."
@@ -2780,7 +2792,7 @@
 "Steam_GuestPassRedeemed_HeadlineServiceUnavailable$type=guestpass"	"Αποτυχία ενεργοποίησης πάσου επισκέπτη"
 "Steam_GuestPassRedeemed_TextServiceUnavailable"	"Είτε ο υπολογιστής σας αδυνατεί να συνδεθεί με τους διακομιστές του Steam, είτε η υπηρεσία είναι προσωρινά απενεργοποιημένη. Παρακαλούμε δοκιμάστε ξανά αργότερα."
 "Steam_GuestPassRedeemed_LinkTextServiceUnavailable"	"Για αντιμετώπιση προβλημάτων σχετικά με τα πάσο επισκεπτών, δείτε αυτή τη σελίδα υποστήριξης."
-"Steam_GuestPassRedeemed_LinkURLServiceUnavailable"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=550"
+"Steam_GuestPassRedeemed_LinkURLServiceUnavailable"	"https://support.steampowered.com/kb/6262-QXCN-0755/"
 
 "Steam_GuestPassRedeemed_HeadlineLimitExceeded"	"Έχετε ήδη χρησιμοποιήσει ένα πάσο επισκεπτών για αυτό το προϊόν"
 "Steam_GuestPassRedeemed_TextLimitExceeded"	"Επειδή έχετε ήδη αποδεχθεί ένα πάσο επισκέπτη για το %package%, δεν μπορείτε να αποδεχθείτε ένα άλλο. Εάν θέλετε να συνεχίσετε να παίζετε το παιχνίδι, παρακαλούμε εξετάστε την επιλογή της αγοράς."
@@ -2858,8 +2870,6 @@
 "Steam_SubscriptionCancelled_PuchaseDeclined_ContactProvider"	"Η αγορά σας του %subscription% δεν ολοκληρώθηκε.\n\nΤο %provider% ανέφερε ένα πρόβλημα με τον %provider% λογαριασμό σας. Παρακαλούμε επικοινωνήστε με την υποστήριξη του %provider% ή να κάντε κλικ στο «Πίσω» και να επιλέξτε διαφορετική μέθοδο πληρωμής."
 "Steam_SubscriptionCancelled_PuchaseDeclined_AcctNotVerified"	"Η αγορά σας του %subscription% δεν ολοκληρώθηκε.\n\nΤο %provider% ανέφερε ότι ο %provider% λογαριασμός σας πρέπει να επιβεβαιωθεί ή να χρηματοδοτηθεί για να ολοκληρωθεί η αγορά. Παρακαλούμε επικοινωνήστε με την υποστήριξη του %provider% ή να κάντε κλικ στο «Πίσω» και να επιλέξτε διαφορετική μέθοδο πληρωμής.."
 
-"Steam_TroubleshooterURL_VfyAcct" "http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=687"
-
 "Steam_PaymentMethodNotAvailable_Generic" "Λυπούμαστε, αλλά αυτή η μέθοδος δεν είναι διαθέσιμη αυτή τη στιγμή."
 
 "Steam_LaunchEULA_Title"			"%game%"
@@ -2869,11 +2879,12 @@
 "Steam_LaunchEULA_Text"			"Διαβάστε αυτή τη συμφωνία στην πληρότητά της. Πρέπει να συμφωνήσετε με τους όρους του EULA για να παίξετε το %game%."
 
 "Steam_GuestPasses_LinkText"		"Περισσότερες πληροφορίες σχετικά με δώρα και πάσα επισκεπτών"
-"Steam_GuestPasses_LinkURL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=549"
+"Steam_GuestPasses_LinkURL"		"https://support.steampowered.com/kb/6262-QXCN-0755/"
 
 "Steam_AlreadyRunningError_Title"			"Steam - Αδυναμία εκκίνησης"
 "Steam_AlreadyRunningError_Info"			"Ένα αντίτυπο του Steam τρέχει ήδη σε αυτόν τον υπολογιστή, με διαφορετικό όνομα λογαριασμού. Παρακαλούμε κλείστε το Steam με το λογαριασμό του άλλου χρήστη πριν επιχειρήσετε να το εκκινήσετε ξανά."
 "Steam_AlreadyRunningError_SupportLink"	"Δείτε την ιστοσελίδα υποστήριξης του Steam για περισσότερες πληροφορίες"
+"Steam_AlreadyRunningError_SupportLink_URL"	"https://support.steampowered.com/kb_article.php?ref=8787-WYIL-1543"
 "Steam_AlreadyRunningError_SupportTicket"	"Επικοινωνήστε με την Υποστήριξη Steam το συντομότερο δυνατό"
 
 "Steam_LoggedInElsewhere_Title"		"Steam - Σύνδεση από αλλού"
@@ -2905,6 +2916,7 @@
 "Steam_GamesDialog_RightClick_RemoveFromUnblockedGames"		"Αφαίρεση από Παιχνίδια κοινής χρήσης"
 
 "steam_menu_checkforupdates"						"Έλεγχος για ενημερώσεις του Steam..."
+"steam_menu_checkforupdates_osx"					"Έλεγχος για ενημερώσεις…"
 "steam_checkforupdates_title"						"Steam - Αυτόματη ενημέρωση"
 "steam_ClientUpdateAvailableDownloading"			"Μια νέα έκδοση για το Steam είναι διαθέσιμη και λαμβάνεται αυτή τη στιγμή."
 "steam_ClientUpdateAvailableDownloaded"			"Λήφθηκε μια ενημέρωση για το Steam."
@@ -3346,7 +3358,7 @@
 "Steam_InstallAborted_InfoAppNoDemo"		"Το %game% δεν μπορεί να εγκατασταθεί, επειδή είναι demo, ενώ σας ανήκει η πλήρης έκδοση του προϊόντος. Εγκαταστήστε την πλήρη έκδοση του παιχνιδιού."
 
 "Steam_Startup_SteamChinaRequiredTitle"					"Απαιτείται Steam China"
-"Steam_Startup_GetSteamChina"						"Το %gamename% είναι τώρα διαθέσιμο στο Steam China, ακολουθήστε τον παρακάτω σύνδεσμο για να εγκαταστήσετε αυτήν την εφαρμογή."
+"Steam_Startup_GetSteamChina"						"Πρέπει να γίνεται εκκίνηση του %gamename% μέσω της νέας εφαρμογής Steam China.\n\nΜπορείτε να συνδεθείτε με τον λογαριασμό παιχνιδιού %gamename% σας και να μεταφέρετε την πρόοδο του παιχνιδιού, τα αντικείμενα, το επίπεδο χαρακτήρα και τους πόντους σας.\n\n"
 "Steam_Startup_RunSteamChina"						"Το %gamename% είναι τώρα διαθέσιμο στο Steam China, επανεκκινήστε το Steam China για να εισαγάγετε το παιχνίδι σας."
 "Steam_Startup_SteamChinaImportedUninstall"			"Το %gamename% εισήχθηκε στο Steam China, μπορείτε τώρα να απεγκαταστήσετε αυτό το πρόγραμμα εκκίνησης με ασφάλεια."
 "Steam_Startup_LauncherDeprecated"					"Το %gamename% τρέχει τώρα μέσω Steam China, αυτή η εγκατάσταση δεν υποστήριζεται πλέον και θα τερματιστεί."
@@ -3354,6 +3366,7 @@
 "Steam_Startup_ImportGameFromLauncherMsg"			"Θέλετε να εισαγάγετε το %gamename% στο Steam China, έπειτα θα μπορείτε να απεγκαταστήσετε το παραδοσιακό πρόγραμμα εκκίνησης με ασφάλεια."
 
 "Steam_Download_SteamChina"							"Λήψη Steam China"
+"Steam_Get_SteamChina"								"Αποκτήστε το Steam China"
 
 "Steam_ValidateGame_GameRunning"	"Τερματίστε όλα τα παιχνίδια ή εργαλεία που εκτελούνται αυτή στιγμή πριν επιχειρήσετε να επαληθεύσετε τα τοπικά αρχεία σας."
 
@@ -3362,8 +3375,8 @@
 "Steam_LibrariesLabel"	"Διαχείριση φακέλων"
 "Steam_DownloadRestrictionsLabel"	"Περιορισμοί λήψης"
 
-"Steam_ServerBrowserPingRateLabel"	"Περιηγητής διακομιστή εντός παιχνιδιού: μέγιστο ping / λεπτό"
-"Steam_ServerBrowserPingRateInfo"	"Αν παρατηρείτε προβλήματα στη σύνδεση ενώ ψάχνετε για διακομιστές παιχνιδιών, δοκιμάστε να μειώσετε αυτή τη τιμή."
+"Steam_ServerBrowserPingRateLabel"	"Ping / λεπτό σε περιηγητή διακομιστών"
+"Steam_ServerBrowserPingRateInfo"	"Προβλήματα σύνδεση κατά την περιήγηση διακομιστών παιχνιδιού; Δοκιμάστε να μειώσετε αυτή τη τιμή."
 "Steam_ServerBrowserPingRateDefault"	"Αυτόματο (%PingsPerMin%)"
 
 "Steam_TextFilterSettingLabel"									"Φιλτράρισμα συνομιλίας"
@@ -3485,6 +3498,7 @@
 "Steam_RecoverLocked_UseCode" "ΕΛΑΒΑ ΤΟ ΜΗΝΥΜΑ ΑΠΟ ΤΗΝ ΥΠΟΣΤΗΡΙΞΗ STEAM ΚΑΙ ΕΙΜΑΙ ΕΤΟΙΜΟΣ ΝΑ ΕΙΣΑΓΩ ΤΟΝ ΕΙΔΙΚΟ ΚΩΔΙΚΟ ΠΡΟΣΒΑΣΗΣ ΜΟΥ."
 "Steam_RecoverLocked_MustRecover" "ΔΕΝ ΕΧΩ ΚΑΝΕΝΑ ΜΗΝΥΜΑ ΗΛΕΚΤΡΟΝΙΚΟΥ ΤΑΧΥΔΡΟΜΕΙΟΥ..."
 "Steam_RecoverLocked_WhyIsThisHappening" "Γιατί συμβαίνει αυτό;"
+"Steam_RecoverLocked_WhyIsThisHappening_URL" "https://support.steampowered.com/kb_article.php?ref=4020-ALZM-5519"
 "Steam_RecoverLocked_EnterCode" "Ο ειδικός κωδικός πρόσβασής μου είναι:"
 "Steam_RecoverLocked_EnterCodeDetails" "Μόλις ο κωδικός σας επιβεβαιωθεί, το Steam Guard θα προσθέσει αυτόν τον υπολογιστή στη λίστα με τα συστήματα που μπορούν να συνδεθούν με το λογαριασμό Steam  σας."
 "Steam_RecoverLocked_WrongCode" "Συγγνώμη, αυτό δεν είναι και πολύ σωστό."
@@ -3498,7 +3512,9 @@
 "Steam_RecoverLocked_StartRecovery2" "Γνωρίζουμε πως ο λογαριασμός Steam σας είναι πολύτιμος για σας, και δεσμευόμαστε να σας βοηθήσουμε να τον διατηρήσετε στα κατάλληλα χέρια."
 "Steam_RecoverLocked_StartRecovery3" "Παρακαλούμε επικοινωνήστε με την Υποστήριξη Steam ώστε ένα μέλος από το προσωπικό μας να σας βοηθήσει. Οι δικαιολογημένοι ισχυρισμοί για βοήθεια σχετικά με την πρόσβαση λογαριασμού αποτελούν την πρώτη μας προτεραιότητα."
 "Steam_RecoverLocked_RecoverySupportLink" "Επικοινωνήστε με την Υποστήριξη Steam"
+"Steam_RecoverLocked_RecoverySupportLink_URL" "https://support.steampowered.com"
 "Steam_RecoverLocked_LearnMore" "Μάθετε περισσότερα για τη τεχνολογία Intel® Identity Protection"
+"Steam_RecoverLocked_LearnMore_URL" "https://support.steampowered.com/kb_article.php?ref=9400-IPAX-9398&auth=e39b5c227cffc8ae65414aba013e5fef"
 "Steam_RecoverLocked_CannotAccess" "Συγγνώμη, αυτός ο λογαριασμός δεν μπορεί να προσπελαστεί από αυτόν τον υπολογιστή χωρίς επιπλέον εξουσιοδότηση."
 "Steam_RecoverLocked_Success" "Επιτυχία!"
 "Steam_RecoverLocked_SuccessDetails" "Έχετε πλέον πρόσβαση στο λογαριασμό Steam σας από αυτόν τον υπολογιστή. Το Steam Guard πρόσθεσε αυτόν τον υπολογιστή στη λίστα με τα συστήματα που μπορούν να συνδεθούν μελλοντικά με το λογαριασμό Steam σας."
@@ -3821,13 +3837,12 @@
 "steam_menu_friends" "Φίλοι"
 "steam_menu_servers" "Διακομιστές"
 "steam_menu_settings" "Ρυθμίσεις"
-"steam_menu_preferences" "Προτιμήσεις"
 "steam_menu_view_friends" "Προβολή λίστας φίλων (%friends_online% σε σύνδεση)"
 "steam_menu_view_players" "Παίκτες"
 "steam_menu_add_friend" "Προσθήκη φίλου..."
 "steam_menu_friendsstatus" "Ορισμός κατάστασης φίλων"
 "steam_viewfriends"	"ΦΙΛΟΙ \n& ΣΥΝΟΜΙΛΙΑ"
-"steam_onlinefriends"	"%friends_online% συνδεδεμένοι"
+"steam_onlinefriends"	"%friends_online% σε σύνδεση"
 
 "Steam_Tooltip_Steam" "Steam"
 "Steam_Tooltip_Working" "Steam - σε λειτουργία"
@@ -3837,12 +3852,12 @@
 "Steam_Tooltip_VoiceActive" "Steam - σε φωνητική συνομιλία"
 "Steam_Tooltip_UnreadMessageS" "Steam - μη αναγνωσμένα μηνύματα"
 
-"Friends_online"			"Συνδεδεμένος"
-"Friends_away"			"Απών"
+"Friends_online"			"Σε σύνδεση"
+"Friends_away"			"Απουσιάζω"
 "Friends_busy"			"Απασχολημένος"
-"Friends_snooze"			"Αδρανής"
+"Friends_snooze"			"Σε αδράνεια"
 "Friends_offline"			"Εκτός σύνδεσης"
-"Friends_invisible"		"Αόρατος"
+"Friends_invisible"		"Απόκρυψη"
 "Friends_lookingtotrade"	"Αναζητεί ανταλλαγή"
 "Friends_lookingtoplay"		"Αναζητεί παιχνίδι"
 "Friends_mobile_device_only"	"%s1 από κινητό"
@@ -4562,6 +4577,7 @@
 "Steam_Settings_Streaming_SoftwareEncodingThreads_7"	"7"
 "Steam_Settings_Streaming_SoftwareEncodingThreads_8"	"8"
 "Steam_Settings_Streaming_P2PScope_Description"	"Να επιτρέπεται απευθείας σύνδεση (μοίρασμα IP)"
+"Steam_Settings_Streaming_P2PScopeAutomatic"	"Αυτόματα (ενεργοποιημένο)"
 "Steam_Settings_Streaming_P2PScopeDisabled"	"Ανενεργή"
 "Steam_Settings_Streaming_P2PScopeOnlyMe" "Οι συσκευές μου"
 "Steam_Settings_Streaming_P2PScopeEveryone" "Όλες οι συσκευές"
@@ -4586,6 +4602,7 @@
 "Steam_Settings_Streaming_EnableTouchController"	"Ενεργοποίηση ελέγχων αφής"
 
 "Steam_Settings_Streaming_StreamingSupport"	"Προβολή πληροφοριών υποστήριξης"
+"Steam_Settings_Streaming_StreamingSupportLink"	"https://support.steampowered.com/kb_article.php?ref=3629-RIAV-1617"
 
 "Steam_Settings_Streaming_Connected" "Συνδεδεμένος υπολογιστής"
 "Steam_Settings_Streaming_Paired" "Συζεύκτηκε συσκευή"
@@ -4596,6 +4613,15 @@
 
 "Steam_Settings_Streaming_PIN_Title" "Ορισμός κωδικού ασφαλείας Steam Link"
 "Steam_Settings_Streaming_PIN_Text" "Ορίστε έναν αριθμητικό κωδικό PIN που θα πρέπει να εισαχθεί στο Steam Link κάθε φορά για μετάδοση από αυτόν τον υπολογιστή:"
+
+"Steam_Settings_ShareIPNetworking_Label" "Δικτύωση Steam"
+"Steam_Settings_ShareIPNetworking_Info" "Να επιτρέπονται τα παιχνίδια να χρησιμοποιούν Δικτύωση Steam για να μοιράζονται τη διεύθυνση IP μου για ταχύτερη σύνδεση"
+"Steam_Settings_ShareIPNetworking_Default" "Προεπιλογή"
+"Steam_Settings_ShareIPNetworking_Always" "Πάντα"
+"Steam_Settings_ShareIPNetworking_FriendsOnly" "Φίλοι μόνο"
+"Steam_Settings_ShareIPNetworking_Never" "Ποτέ"
+"Steam_Settings_ShareIPNetworking_URL" "Μάθετε περισσότερα"
+"Steam_Settings_ShareIPNetworking_URLText" "https://support.steampowered.com/kb_article.php?ref=9929-UAFN-9329"
 
 "SteamUI_StreamingIntro_Title"		"Καλώς ορίσατε στο Steam Remote Play"
 "SteamUI_StreamingIntro"			"Πρόκειται να εκκινήσετε αυτό το παιχνίδι σε άλλον υπολογιστή και να το παίξετε χρησιμοποιώντας Steam Remote Play."
@@ -4738,4 +4764,9 @@
 
 "SteamUI_RunningConflictingSoftware" "Εντοπίστηκε ασύμβατο λογισμικό"
 "SteamUI_RunningIncompatibleTcpService" "Μια μη συμβατή έκδοση του %incompatdll% (που σχετίζεται με το %incompatname%)\nεντοπίστηκε εντός της διεργασίας Steam.\n\nΠροτείνουμε να ενημερώσετε ή να απεγκαταστήσετε αυτό το λογισμικό εάν αντιμετωπίζετε απροσδόκητους τερματισμούς\nή επιβράδυνση του δικτύου όταν εκτελείτε το Steam ή μεμονωμένα παιχνίδια."
+
+"Steam_XboxDriverInstall_Title"		"Εγκατάσταση οδηγού Xbox"
+"Steam_XboxDriverInstall_Success"	"Ο οδηγός ενημερώθηκε επιτυχώς και θα είναι ενεργός αφού επανεκκινήσετε τον υπολογιστή σας."
+"Steam_XboxDriverInstall_ServiceFailure"	"Αποτυχία ενημέρωσης οδηγού, εκτελείτε το Steam ως κανονικός χρήστης και εκτελείται η υπηρεσία Steam και είναι ενημερωμένη;"
+"Steam_XboxDriverInstall_Failure"	"Αποτυχία ενημέρωσης οδηγού (σφάλμα %error%)"
 }

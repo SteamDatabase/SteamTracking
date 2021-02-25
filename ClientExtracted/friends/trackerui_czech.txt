@@ -170,7 +170,7 @@
 "Friends_InvitationBlocking"		"Blokujete veškerou komunikaci s tímto uživatelem. Pokud s ním chcete komunikovat, musíte jej nejdříve odblokovat na jeho profilu v komunitě služby Steam."
 
 "Friends_DontGiveOutPassword"			"Nikdy nikomu neříkejte své heslo.\n"
-"Friends_DontGiveOutPassword_URL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=301"
+"Friends_DontGiveOutPassword_URL"		"https://support.steampowered.com/kb/1266-OAFV-8478&l=czech/"
 
 "Friends_ChatFilterBlockWarning"		"Z důvodu Vaší bezpečnosti byl z následující zprávy odstraněn odkaz."
 
@@ -556,6 +556,7 @@
 "Friends_SteamCommunity"	"Komunita služby Steam"
 "Limited_Explanation"	"Váš účet nesplňuje požadavky pro použití této funkce."
 "Limited_ForDetails"	"Pro více informací navštivte podporu služby Steam."
+"Limited_ForDetails_URL"	"https://help.steampowered.com/wizard/HelpWithLimitedAccount"
 
 "Friends_Chat_RoomModerated_Entry"		"Konverzační místnost byla uživatelem %member_making_change% nastavena na výhradní konverzaci správců.\n"
 "Friends_Chat_RoomUnmoderated_Entry"		"Konverzační místnost byla uživatelem %member_making_change% nastavena na konverzaci všech uživatelů.\n"
@@ -656,9 +657,9 @@
 "friends_insertitem"			"Ukázat položku z Vašeho inventáře..."
 "group_enterchatroom"			"Připojit se do skupinové konverzace"
 
-"friends_giftreceived_info"		"vám poslal dárek"
+"friends_giftreceived_info"		"Vám poslal dárek"
 "friends_itemreceived_info"		"Máte 1 novou položku ve svém inventáři"
-"friends_itemsreceived_info"	"Máte %items% nových položek ve Vašem inventáři"
+"friends_itemsreceived_info"	"Máte %items% nových položek ve svém inventáři"
 "friends_setnickname"			"Přidat přezdívku"
 "friends_setnickname_title"		"Přátelé – %friend%"
 "friends_setnickname_info"		"Přidejte tomuto hráči trvalou přezdívku, abyste o něm měli přehled."
@@ -687,6 +688,7 @@
 "Broadcast_FirstTime_PermissionHeader" "Věnujte prosím chvíli nastavení svých předvoleb…"
 "Broadcast_FirstTime_DesktopOnly" "Ve výchozím nastavení lze sledovat pouze Vaši hru. Vaše plocha nebude vysílána."
 "Broadcast_FirstTime_FAQ" "Přečtěte si časté dotazy k přenosům ve službě Steam"
+"Broadcast_FirstTime_FAQLink" "https://support.steampowered.com/kb_article.php?ref=6730-TOAK-6497&l=czech"
 "Broadcast_FirstTime_Title" "Přenosy ve službě Steam"
 "Broadcast_FirstTime_OK" "OK"
 "Broadcast_FirstTime_Cancel" "Zrušit"
@@ -752,7 +754,7 @@
 "Steam_Settings_Broadcast_ShowChat_RightBottom" "Vpravo dole"
 "Steam_Settings_Broadcast_ShowChat_LeftBottom" "Vlevo dole"
 "Steam_Settings_Broadcast_Disabled_System" "Přenosy ve službě Steam nejsou na tomto systému momentálně podporovány."
-"Steam_Settings_Broadcast_Disabled_Overlay" "Pro vysílání živých přenosů musí být povoleno překrytí služby Steam ve hře."
+"Steam_Settings_Broadcast_Disabled_Overlay" "Pro vysílání živých přenosů musí být povoleno překrytí služby Steam."
 "Steam_Settings_Broadcast_Disabled_User" "Váš účet nemá dostatečná oprávnění k vysílání živých přenosů."
 "Steam_Settings_Broadcast_Disabled_System_Windows_Compat_Enabled" "Služba Steam nemůže na tomto zařízení zahájit vysílání přenosu.\n\nSlužba Steam je momentálně spuštěna v režimu kompatibility. To může bránit správnému fungování a vysílání přenosů. Pokud máte na tomto zařízení nainstalován systém Windows 7 nebo novější, postupujte prosím podle pokynů v článku níže a režim kompatibility vypněte."
 "Steam_Settings_Broadcast_WindowsCompatSupportURL" "https://support.steampowered.com/kb_article.php?ref=7153-AHJV-4256"

@@ -145,7 +145,7 @@
 "VAC_ConnectionRefusedTitle"	"Conexiune refuzată - VAC"
 "VAC_ConnectionRefusedDetail"	"Nu te poţi conecta la serverul selectat, deoarece rulează în modul securizat VAC (Valve Anti-Cheat).\n\nAcest cont Steam a fost banat pe serverele securizate, din cauză ca ai trişat."
 "VAC_ConnectionRefusedByServer"	"Serverul a refuzat conexiunea, deoarece rulează în modul securizat VAC (Valve Anti-Cheat).\n\nAcest cont Steam a fost banat pe serverele securizate, din cauză ca ai trişat."
-"VAC_BanSupportURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=370"
+"VAC_BanSupportURL"	"https://support.steampowered.com/kb/7849-RADZ-6869/"
 "VAC_SecureServerToolTip"	"Valve Anti-Cheat - Securizat"
 "VAC_BannedFromServerToolTip"	"Nu te poţi conecta la acest server securizat"
 "VAC_Secure"	"Securizat"
@@ -160,7 +160,7 @@
 "Steam_ValidLoginRequired"	"Nu s-a putut realiza o conexiune cu serverele VAC Steam. Pentru depanarea problemelor de rețea, te rugăm să apeși pe linkul de mai jos."
 "VAC_ConnectionIssuesSupport_Title"	"Conexiunea securizată a eşuat"
 "VAC_ConnectionIssuesSupportSite"	"Clic aici pentru a vizita pagina de Asistenţă Steam"
-"VAC_ConnectionIssuesSupportURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=374"
+"VAC_ConnectionIssuesSupportURL"	"https://support.steampowered.com/kb/7579-RPSX-6098/"
 "VAC_LoggedInElsewhere_Title"		"Contul este folosit altundeva"
 "VAC_LoggedInElsewhereReason"		"Acest cont de Steam a fost folosit pentru autentificarea pe un alt calculator. Pentru a folosi Steam în continuare, trebuie să te autentifici din nou."
 

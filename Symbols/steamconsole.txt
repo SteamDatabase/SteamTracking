@@ -475,11 +475,10 @@
  T CControllerConfigUploader::OnSendQueryUGCRequestResult(SteamUGCQueryCompleted_t*, bool)
  T CControllerConfigUploader::Upload(unsigned int, char const*)
  T CDbgFmtMsg::CDbgFmtMsg(char const*, ...)
- T CDirIterator::BCurrentIsDir() const
  T CDirIterator::BNextFile()
  T CDirIterator::CDirIterator(StringView)
  T CDirIterator::CDirIterator(StringView, StringView)
- T CDirIterator::CurrentFileName() const
+ T CDirIterator::CurrentFileName()
  T CDirIterator::Init(StringView)
  T CDirIterator::IsValid() const
  T CDirIterator::~CDirIterator()
@@ -1220,6 +1219,7 @@
  V_atoi
  V_atoui64
  V_binarytohex
+ V_hextobinary
  V_isnumeric
  V_snprintf
  V_strcat
@@ -1297,6 +1297,7 @@
  b build_backup_command
  b build_installer_command
  b ceg_wrap_command
+ b download_chunk_command
  b download_depot_command
  b drm_wrap_command
  b exit_command
@@ -1557,6 +1558,7 @@
  t build_backup(void*, ConParams&, ConCommand&)
  t build_installer(void*, ConParams&, ConCommand&)
  t ceg_wrap(void*, ConParams&, ConCommand&)
+ t download_chunk(void*, ConParams&, ConCommand&)
  t download_depot(void*, ConParams&, ConCommand&)
  t drm_wrap(void*, ConParams&, ConCommand&)
  t exit(void*, ConParams&, ConCommand&)

@@ -4,8 +4,6 @@ __text
 __TEXT
 __stubs
 __TEXT
-x^3
-x^3
 __stub_helper
 __TEXT
 __cstring
@@ -13,8 +11,6 @@ __TEXT
 __const
 __TEXT
 __gcc_except_tab__TEXT
-h:9
-h:9
 __objc_methname
 __TEXT
 __objc_classname__TEXT
@@ -25,6 +21,8 @@ __unwind_info
 __TEXT
 __eh_frame
 __TEXT
+PK?
+PK?
 __DATA
 __nl_symbol_ptr
 __DATA
@@ -41,16 +39,10 @@ __DATA
 @
 __objc_classlist__DATA
 __objc_imageinfo__DATA
-BL
-BL
 __objc_const
 __DATA
-(BL
-(BL
 __objc_selrefs
 __DATA
-HCL
-HCL
 __objc_classrefs__DATA
 __objc_superrefs__DATA
 __objc_ivar
@@ -64,21 +56,24 @@ __thread_vars
 __DATA
 __thread_bss
 __DATA
+%M
 __common
 __DATA
+)M
 __bss
 __DATA
 H
 __LINKEDIT
-`O
+0M
 
 8
 @loader_path/panorama.dylib
 "
-M
-P`M
+0M
+8?M
+0]
+4n
 P
-
 
 8
 @loader_path/libtier0_s.dylib
@@ -148,29 +143,27 @@ h
 8
 /usr/lib/libobjc.A.dylib
 &
-HbM
 )
-M
+!m
+3
+3
+3
+3
+3
 
 
 
 
 
 
-R2
+n2
+b2
 '
 '
-32
 "
 3
-5
-5
 D
-2
-2
-eK
-`K
-UK
+-2
 @
 8
 HC
@@ -1896,6 +1889,39 @@ A
 1
 /
 N6google8protobuf2io14ErrorCollectorE
+@
+6
+@
+@
+@
+@
+@
+@
+@
+@
+h
+H
+H
+H
+H
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
 >!h
 ?"N
 #;
@@ -2591,6 +2617,7 @@ Failed to post that I was waiting for an event
 %s.BinSemLock
 Failed to force create PosixEvent: %s - %s, m_pLock:%p, m_pPending:%p
 Failed to create PosixAutoResetEvent: %s - %s, m_pLock:%p, m_pPending:%p
+true
 false
 Bad Access flag on shared mem create: %s: %u
 /Shm/%x
@@ -2822,7 +2849,8 @@ PDP Xbox One Cranblast
 PDP Xbox One Aqualime
 PDP Xbox One Red Camo
 PDP Xbox One RC Gamepad
-PowerA XBox One Controller
+PowerA Xbox One Series X Controller
+PowerA Xbox One Controller
 Xbox One Elite Controller
 Xbox One Elite 2 Controller
 HORI Fighting Commander
@@ -3463,7 +3491,6 @@ Unknown transform type
 ,
 particle-system( ... )
 gradient(
-,
 Unknown brush type
 color-stop( %s,
 url( %s )
@@ -3672,7 +3699,6 @@ CPanel2DFactory::CreatePanelInternal called on panel w/o a creation function
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/layout/panel2dfactory.cpp
 GetMapLocalPanel2DFactory()
 ***** Parsing error on %s(%u):
-
 Error parsing layout and style files
 Assertion Failed: buffer.IsText()
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/layout/stylefile.cpp
@@ -5081,8 +5107,8 @@ linux
 Linux;tenfoot
 X-ValveUserAgent
 panorama %s %s
-Feb 12 2021
-15:28:48
+Feb 24 2021
+10:08:32
 X-SteamClientVersion
 Assertion Failed: hostName
 Assertion Failed: pchRemoteHost
@@ -5220,6 +5246,8 @@ No
 CTopLevelWindowSDL::ValidateStatics
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/uievent.cpp
 p
+\
+\\
 '
 \'
 EPanelEventSource_t
@@ -6056,7 +6084,6 @@ set_type
 ::google::protobuf::FieldDescriptorProto_Type_IsValid(value)
 $0option $1;
 (.
-=
 ./google/protobuf/repeated_field.h
 CHECK failed: (index) >= (0):
 CHECK failed: (index) < (size()):
@@ -6077,6 +6104,7 @@ f == NULL || dynamic_cast<To>(f) != NULL
 length_delimited
 ./google/protobuf/unknown_field_set.h
 type() == TYPE_LENGTH_DELIMITED
+;
 operator->
 ptr_ != NULL
 operator*
@@ -6262,6 +6290,7 @@ CHECK failed: (field->type()) == (FieldDescriptor::TYPE_BYTES):
 : 0x
 : "
 Warning parsing text-format
+:
 Extension "
 " is not defined or is not an extension of "
 Message type "
@@ -6317,14 +6346,12 @@ Tokenizer::ParseInteger() passed text that could not have been tokenized as an i
 Tokenizer::ParseFloat() passed text that could not have been tokenized as a float:
 Tokenizer::ParseStringAppend() passed text that could not have been tokenized as a string:
 \U%08x
-:
-"
-\
-\\
-;
+
 ,
-true
-no
+,
+=
+=
+OPENSSL_ia32cap
 Bogus message code %d
 ALIGN_TYPE is wrong, please fix
 MAX_ALLOC_CHUNK is wrong, please fix
@@ -6494,7 +6521,6 @@ xml
 />
 xmlns
 ParseAttributes
-=
 preserve
 http://www.w3.org/XML/1998/namespace
 http://www.w3.org/2000/xmlns/
@@ -6527,6 +6553,7 @@ UTF-16
 EncodingDecl
 XML
 ParseXmlDecl
+no
 yes
 ISO-8859-1
 US-ASCII
@@ -6811,7 +6838,6 @@ Assertion Failed: !( m_nFlags & FCVAR_NEVER_AS_STRING )
 Assertion Failed: m_vecCallbacks.Count() == 0
 %lf
 Assertion Failed: pDefaultValue
-console
 Attempted to change replicated CVar when you are not the GM
 FCVAR_NEVER_AS_STRING
 Assertion Failed: m_p == NULL
@@ -6859,6 +6885,7 @@ Assertion Failed: g_VecLoadedModules[ iLoadedModules ].m_cRef > 0
 ]:%u
 ReadToken overflow
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/KeyValues.cpp
+"
 {
 }
 :
@@ -7617,13 +7644,12 @@ Compact is no longer supported
 OUT OF MEMORY
 Assertion Failed: (iub & (m_nSizeWithStack-1)) == 0
 Assertion Failed: pAllocTracker->m_uSentinel == 0xaa110ced
-InitVirtualHeap( %d ) called twice (%d)
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier0/memstd.h
 Assertion Failed: pLeft->m_iStackPC <= V_ARRAYSIZE(pLeft->m_StackPC)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/memblockhdr.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier0/validator.cpp
 CValidator : too many memory nodes to store, try again with a higher threshold value
 Assertion Failed: NULL != m_pValObjectCur
+console
 bytes
 GiB
 GB
@@ -7643,94 +7669,90 @@ Assertion Failed: q.IsValid()
 Assertion Failed: angles.IsValid()
 SSE and SSE2 are required.
 Assertion Failed: src.IsValid()
-M
+3
+3
+3
+3
+3
 
 
 
 
 
 
-R2
+n2
+b2
 '
 '
-32
 "
 3
-5
-5
 D
-2
-2
-eK
-`K
-UK
-NK
-GK
-&L
-/K
+-2
+Z'
+UL
+1'
+'
 @
-g'
-(1
-K"
-!
+L
+I
+1
+.'
+-!
 !
 !
 '
-'&
-H
-&
-^0
-%
+oK
+"I
+c!
+E&
+J&
+E!
+J
+J
+/!
 !
 !
-W%
 0
-0
-<I
-H
 %
-S/
-F%
-/
-eI
+v
+r/
 /
 /
-gG
+/
+W$
+kG
+/
+/
+rG
 F
-U.
-tH
-.
-VF
 $
-xG
-L95 8G
-E
--
-(#
+.
+.
+,.
+#
+#
+H
+H
+F
 #
 -
+-
 O
-N,
+:,
 ,
-E
-E
-,
-K/
-,
+%,
 2
 2
+,
 t1Mcu
-5E
 ?
-/
-/
+,
+.
 %
-1+
-t&
-XE
-2&
-&
+wD
 D
+K+
+X&
 r
 @
 @
@@ -7738,110 +7760,79 @@ r
 @
 @
 @
-DA
-H*
-*
-*
-$
-H
-B
-B
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-$
-*
-@
-@
-:(
-(
-H=
-(
-#
-#
-#
-P
-'
-'
-V"
-c@
-J@
-"
-.@
-+@
-)@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-$
-@
-@
-@
-@
-@
-@
-=
-=
-
-@
-@
-@
-@
-@
-@
-v=
-@
-@
-@
-@
-@
-@
-U>
+A
+,
 %
->
+~)
+H
+@
+@
+@
+@
+@
+@
+@
+@
+)
+)
+@
+@
+*
+@
+@
+)
+)
+)
+H=
+U?
+(
+(
+?
+?
+*
+*
+P
++
+n'
++"
+"
+"
+*
+'
+'
+"
+D@
+@
+ZA
+$
+@
+@
+@
+@
+@
+@
 =
-&?
-!?
-$
-$
+=
+
+@
+@
+@
+@
+@
+@
 ?
-?
-<
-V>
-E>
+q@
+@
+@
+@
+@
+@
+@
+4?
 $
-l#
+$
+$
+$
 @
 @
 @
@@ -7854,103 +7845,166 @@ l#
 @
 @
 @
-<
-<
-l"
-#
-"
-"
-"
-"
-"
-L95q;
+@
+y"
+P
+(
+(
+s!
+P
+N!
+S!
+A
+;
+A
+A
+A
+(
+@
+Q:
+@
+A
+A
+A
+A
+A
+A
+5!
+A
+A
 :
-@
-P
-(
-(
-P
-0!
-A
-!
-A
-A
-A
-(
 !
 !
-!
-!
-!
-!
-!
-!
-!
-!
-!
-!
-!
-!
-!
-!
-9$
-@
-g$
-@
-A
-A
-A
-A
-A
-A
-A
-A
-!
-.
-!
-!
-)#
-Z9
-8
-8
-Q"
-'"
-!
+F
 0
 p
 !
 !
 !
-!
-!
-!
-7
-7
+5
+5
 ]
-6
-+3
 @
 @
+;5
+45
 0
 p
 ?
-=
-Hi
-?1
-81
-11
-%1
-/
-/
-<.
+5
+5
+5
+5
 2
+2
+=
+1
+Hi
 @
 @
 
 
 0
-0
-/
+#/
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
 @
 @
 @
@@ -8041,8 +8095,6 @@ Hi
 @
 @
 @
--
--
 @
 @
 @
@@ -8055,7 +8107,6 @@ Hi
 @
 @
 @
-M-
 @
 @
 @
@@ -8192,122 +8243,24 @@ M-
 @
 @
 @
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-%,
-p,
-i-
-@
-
-E
 @
 @
 *
+@
+E
+@
+@
 @
 @
 =
 =
 @
 %
+*
+@
+@
+@
+V'
 @
 @
 @
@@ -8329,11 +8282,6 @@ E
 @
 @
 @
-'
-@
-@
-@
-'
 @
 @
 @
@@ -8343,6 +8291,7 @@ E
 @
 @
 @
+I'
 @
 @
 @
@@ -8366,6 +8315,8 @@ E
 @
 '
 (
+)
+)
 @
 @
 =
@@ -8373,43 +8324,54 @@ E
 @
 ?
 ?
-'
+*
+*
+*
+*
+*
+*
 A
 Hc
 =
-I
-5
+}
+s(
 
 
 
-&
-&
-&
+
+
+
+
+
+L95u<&
 &
 Hc
 
 
 
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
 
+@
+,
+*
+@
 
-
-
-
-?
-?
-?
-?
-?
-?
-?
-?
-?
-?
-?
-?
-?
-?
-?
+@
+Poly1305 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 i[
 i[
 Mc}
@@ -8472,13 +8434,11 @@ H=
 =
 
 =
-=
 @
 =
 @
 @
 @
-9
 P
 P
 @
@@ -8532,4 +8492,6 @@ i
 @
 @
 @
+=
+Z
 =

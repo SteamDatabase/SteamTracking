@@ -3,17 +3,17 @@
 {
 "WelcomeToSteamTitle" "BIENVENUE SUR STEAM"
 "WelcomeToSteamInfo" "» Jouez aux jeux les plus récents
-» Recherchez vos amis
+» Recherchez vos contacts
 » Recherchez les meilleurs serveurs
 » Téléchargez automatiquement les mises à jour
-» Discutez avec des amis, même en cours de partie
+» Discutez avec des contacts, même en cours de partie
 » Recevez des offres promotionnelles Steam"
 "SteamUI_Answer" "Réponse"
 "SteamUI_YourAnswer" "Votre réponse"
 "WelcomeToSteamCreateAccount" "Créer un nouveau compte"
 "WelcomeToSteamLogin" "Connexion à un compte"
 "SteamUI_AccountNameInfo" "Veuillez saisir votre adresse e-mail. Si vous oubliez votre\nmot de passe, un message sera envoyé à cette adresse afin \nde vérifier votre identité."
-"SteamUI_WelcomeNameInfo" "Veuillez saisir un nom de profil. C'est le nom que vos contacts \nverront lorsque vous serez en ligne. Vous pouvez aussi \nindiquer votre vrai nom pour aider vos amis et amies à vous trouver plus facilement."
+"SteamUI_WelcomeNameInfo" "Veuillez saisir un nom de profil. C'est le nom que vos contacts \nverront lorsque vous serez en ligne. Vous pouvez aussi \nindiquer votre vrai nom pour aider vos contacts à vous trouver plus facilement."
 "SteamUI_WelcomeNameOptional" "(facultatif)"
 
 "SteamUI_ConvertExistingInfo" "Conversion de l'installation existante du jeu. Cette opération peut prendre quelques minutes."
@@ -52,7 +52,7 @@ de l'écran). Pour accéder à Steam, cliquez sur son icône avec le bouton droi
 "SteamRootNews"		"Actualités"
 "SteamRootClose" 		"Fermer"
 "SteamRootLabel1" "Choisissez un jeu et commencez à jouer !"
-"SteamRootLabel2" "Trouvez des amis, discutez et jouez ensemble"
+"SteamRootLabel2" "Trouvez des contacts, discutez et jouez ensemble"
 "SteamRootLabel3" "Voir les parties multijoueurs en cours"
 "SteamRootLabel4" "Voir l'activité réseau Steam"
 "SteamRootLabel5" "Modifier les options de Steam"
@@ -297,7 +297,7 @@ Cela devrait prendre moins d'une minute."
 "SteamUI_GamePropertiesContent_Launching"	"Démarrage..."
 "SteamUI_GamePropertiesContent_CacheAcquired"	"%cache_usage%%%"
 "SteamUI_GamePropertiesContent_DiskUsageLabel"	"Utilisation disque :"
-"SteamUI_GamePropertiesContent_DeveloperLabel"	"Développeur :"
+"SteamUI_GamePropertiesContent_DeveloperLabel"	"Développement :"
 
 "SteamUI_GamePropertiesVersion_GameVersionLabel" "Informations sur la version du jeu"
 
@@ -436,7 +436,7 @@ Cela devrait prendre moins d'une minute."
 "Steam_DPIScaling_Option"				"Agrandir le texte et les icônes selon les paramètres de l'écran (redémarrage requis)"
 "Steam_LaunchSteamOnStartup_Option"		"Lancer Steam au démarrage de l'ordinateur"
 "Steam_BPMOnStartup_Option"				"Lancer Steam en mode Big Picture"
-"Steam_ShowUrlBar_Option"				"Afficher la barre d'adresse Steam lorsqu'elle est disponible"
+"Steam_ShowUrlBar_Option"				"Afficher les barres d'adresse Web quand elles sont disponibles"
 "Steam_UseDirectWrite_Option"			"Activer DirectWrite pour un lissage des polices et un crénage améliorés"
 "Steam_UseH264HWAccel_Option"			"Activer le décodage vidéo matériel si pris en charge (redémarrage requis)"
 
@@ -1150,7 +1150,7 @@ Cela devrait prendre moins d'une minute."
 "Steam_SubscriptionApprovalCode" "Autorisation"
 "Steam_SubscriptionConfirmation" "Code de confirmation"
 
-"Steam_TroubleshooterURL_CDKey" "http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=276"
+"Steam_TroubleshooterURL_CDKey" "https://support.steampowered.com/kb/1968-HKLX-7538/?l=french"
 
 "Steam_SubscriptionSuccess_CDKey_Headline" "Activation terminée !"
 "Steam_SubscriptionSuccess_CDKey" "Le code d'activation de votre produit a bien été activé. Ce ou ces produits sont désormais associés de façon permanente à votre compte Steam. Vous devez vous connecter à ce compte pour accéder aux articles que vous venez d'activer sur Steam.\n\nNous vous conseillons d'imprimer un reçu de cette transaction pour référence."
@@ -1220,7 +1220,7 @@ Cela devrait prendre moins d'une minute."
 "Steam_Subscription_HardwarePromo_Used_Headline" "Enregistrement dupliqué"
 "Steam_Subscription_HardwarePromo_Used" "Cette offre a déjà été activée sous un autre compte Steam."
 "Steam_PurchaseError_HardwarePromoIneligible" "La configuration de cet ordinateur ne permet pas de bénéficier de l'offre %subscription%."
-"Steam_HardwarePromo_SupportURL" "http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=628"
+"Steam_HardwarePromo_SupportURL" "https://support.steampowered.com/kb/2734-UDFX-1098/?l=french"
 
 "Steam_Subscription_HardwarePromo_AlreadyPurchased_Headline" "Produit déjà utilisé"
 "Steam_Subscription_HardwarePromo_AlreadyPurchased" "Ce compte Steam a déjà fait l'acquisition du ou des produits couverts par\ncette offre. Pour y accéder, consultez votre bibliothèque de jeux."
@@ -1495,7 +1495,8 @@ Vous devrez vous déconnecter de OSX pour que le changement prenne effet."
 "Steam_DutyNote"	"Les articles seront envoyés depuis les États-Unis. Vous êtes responsables des frais de douanes applicables."
 
 "Steam_AgreeToTheTerms"		"J'accepte les termes de"
-"Steam_SteamSubscriberAgreement"	"Accord de souscription Steam"
+"Steam_SteamSubscriberAgreement"	    "Accord de souscription Steam"
+"Steam_SteamSubscriberAgreement_china"	"Accord de licence Steam China"
 "Steam_ComplianceRequired_Title"	"Steam - Attention"
 "Steam_ComplianceRequired_Info"		"L'acceptation des termes de l'accord de souscription Steam est nécessaire pour continuer."
 
@@ -1614,9 +1615,10 @@ Vous devrez vous déconnecter de OSX pour que le changement prenne effet."
 "Steam_ConnectionFailureTitle"	"Échec de la connexion"
 "Steam_ConnectionFailureDetail"	"Steam ne peut pas vous connecter au réseau. Ceci peut être lié à un problème de connexion Internet."
 "Steam_ConnectionSupportLink"	"Réparer ma connexion"
-"Steam_ConnectionSupportURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=11"
+"Steam_ConnectionSupportURL"	"https://support.steampowered.com/kb/1456-EUDN-2493/?l=french"
 
 "SteamUI_NetworkTroubleshootingTips"	"Conseils pour le dépannage du réseau"
+"SteamUI_NetworkTroubleshootingTips_URL"	"https://support.steampowered.com/kb_article.php?ref=1456-EUDN-2493&l=french"
 
 
 "SteamUI_SSA_Agree"				"Veuillez lire cet accord entièrement. Vous devez accepter les termes de l'accord de souscription Steam pour continuer."
@@ -1634,7 +1636,7 @@ Vous devrez vous déconnecter de OSX pour que le changement prenne effet."
 "Steam_ToolsColumn"		"Titre"
 "Steam_StatusColumn"		"État"
 "Steam_UpdateColumn"		"Mise à jour"
-"Steam_DeveloperColumn"		"Développeur"
+"Steam_DeveloperColumn"		"Développement "
 "Steam_CloudColumn"		"Cloud"
 
 "Steam_MyGames_TabTitle"	"Mes jeux"
@@ -1680,6 +1682,16 @@ Vous devrez vous déconnecter de OSX pour que le changement prenne effet."
 "steam_menu_downloads"	"Téléchargements"
 "steam_menu_account"	"Steam"
 "steam_menu_window" "Fenêtre"
+"steam_menu_preferences"	"Préférences..."
+"steam_menu_services"	"Services"
+"steam_menu_hidesteam"	"Masquer Steam"
+"steam_menu_hideothers"	"Masquer les autres fenêtres"
+"steam_menu_showall"	"Tout afficher"
+"steam_menu_quitsteam"	"Quitter Steam"
+"steam_menu_window_close"	"Fermer"
+"steam_menu_window_minimize"	"Réduire"
+"steam_menu_window_zoom"	"Agrandir"
+"steam_menu_window_bringalltofront"	"Tout mettre au premier plan"
 "steam_menu_games_details"	"Détails des jeux"
 "steam_menu_games_list"		"Liste des jeux"
 "steam_menu_games_grid"		"Grille des jeux"
@@ -1806,7 +1818,7 @@ Vous devrez vous déconnecter de OSX pour que le changement prenne effet."
 "Steam_PublishFile_TargetAppLabel" "Publier pour :"
 "Steam_PublishFile_ConfirmButton"		"Envoyer"
 "Steam_PublishFile_Success_VisibilityPrivate"		"Félicitations ! Vous avez envoyé votre fichier dans le cloud. Vous pouvez maintenant partager le lien vers celui-ci, mais ce fichier ne sera pas partagé publiquement avec le reste de la Communauté Steam."
-"Steam_PublishFile_Success_VisibilityFriendsOnly"		"Félicitations ! Vous avez partagé votre fichier avec vos amis ainsi qu'avec tous ceux à qui vous avez donné le lien vers ce fichier."
+"Steam_PublishFile_Success_VisibilityFriendsOnly"		"Félicitations ! Vous avez partagé votre fichier avec vos contacts ainsi qu'avec tous ceux à qui vous avez donné le lien vers ce fichier."
 "Steam_PublishFile_Success_VisibilityPublic"		"Félicitations ! Vous avez partagé votre fichier avec le reste de la Communauté Steam."
 "Steam_PublishFile_Success"		"Remarque : si vous modifiez ce fichier et que vous souhaitez partager ces modifications, il vous faudra publier le fichier à nouveau. Si vous gardez le même titre, toute personne suivant ce fichier recevra automatiquement la dernière version."
 "Steam_PublishFile_Progress"  "Publication du fichier sur la Communauté Steam..."
@@ -1835,7 +1847,7 @@ Vous devrez vous déconnecter de OSX pour que le changement prenne effet."
 "Steam_GameProperties_DLCTab"		"DLC"
 
 "Steam_Game_Homepage"			"Page d'accueil"
-"Steam_Game_Developer"			"Développeur"
+"Steam_Game_Developer"			"Développement "
 "Steam_Game_Manual"				"Manuel"
 "Steam_Game_NoManual"			"[ non disponible ]"
 "Steam_Game_DefaultManual" 		"Manuel de %game%"
@@ -2036,7 +2048,7 @@ Vous devrez vous déconnecter de OSX pour que le changement prenne effet."
 
 "Steam_GameProperties_BPMOverlay_PerGameOptIn" "Utiliser l'overlay Big Picture quand Steam Input s'active spécifiquement pour un jeu (redémarrage du jeu nécessaire)"
 "Steam_GameProperties_BPMOverlay_PerGameOptIn_ForcedOff" "Désactivé"
-"Steam_GameProperties_BPMOverlay_PerGameOptIn_Global"	"Utiliser vos paramètres globaux ou ceux choisis par le développeur"
+"Steam_GameProperties_BPMOverlay_PerGameOptIn_Global"	"Utiliser vos paramètres globaux ou ceux choisis par l'équipe de développement"
 "Steam_GameProperties_BPMOverlay_PerGameOptIn_ForcedOn" "Activé"
 
 "Steam_GameProperties_SteamPlaySettings_Override" "Forcer l'utilisation d'un outil de compatibilité Steam Play en particulier"
@@ -2355,12 +2367,12 @@ Vous devrez vous déconnecter de OSX pour que le changement prenne effet."
 "Steam_SystemRebootRequired_Info"		"En raison de mises à jour récentes, vous devez redémarrer votre système pour lancer ce jeu."
 "Steam_SystemRebootRequired_Button"	"Redémarrer maintenant"
 
-"Steam_Game_Developer$appType=application"	"Développeur"
-"Steam_Game_Developer$appType=game"	"Développeur"
-"Steam_Game_Developer$appType=demo"	"Développeur"
+"Steam_Game_Developer$appType=application"	"Développement "
+"Steam_Game_Developer$appType=game"	"Développement "
+"Steam_Game_Developer$appType=demo"	"Développement "
 "Steam_Game_Developer$appType=media"	"Producteur"
 "Steam_Game_Developer$appType=music"	"Production"
-"Steam_Game_Developer$appType=tool"	"Développeur"
+"Steam_Game_Developer$appType=tool"	"Développement "
 
 "Steam_Forums"				"Discussions"
 "Steam_ForumsURL"				"http://steampowered.com/index.php?area=forums"
@@ -2384,16 +2396,16 @@ Vous devrez vous déconnecter de OSX pour que le changement prenne effet."
 "Steam_RegionRestricted_Title"			"Steam - Jeu non disponible"
 "Steam_RegionRestrictedPurchase_Info"				"Ce jeu a été activé avec un code produit qui n'est valide que pour une zone géographique spécifique. Étant donné que vous n'êtes pas situé dans cette région, %game% n'est pas disponible."
 "Steam_RegionRestricted_SupportLink"		"Pour en savoir plus, reportez-vous à la section Support du site Steam."
-"Steam_RegionRestrictedPurchase_SupportURL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=461"
+"Steam_RegionRestrictedPurchase_SupportURL"		"https://support.steampowered.com/kb/1266-QFZC-2141/?l=french"
 "Steam_RegionRestricted_Info"				"%game% n'est pas disponible pour votre pays/région."
-"Steam_RegionRestricted_SupportURL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=461"
+"Steam_RegionRestricted_SupportURL"		"https://support.steampowered.com/kb/1266-QFZC-2141/?l=french"
 
 "Steam_CountryRestricted_Info"				"Cet abonnement n'est pas disponible pour votre pays."
-"Steam_CountryRestricted_SupportURL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=488"
+"Steam_CountryRestricted_SupportURL"		"https://support.steampowered.com/kb/1266-QFZC-2141/?l=french"
 
 "Steam_RegionRestrictedCode_Title"		"Steam - Produit non disponible"
 "Steam_RegionRestrictedCode_Info"			"Ce code produit ne peut pas être activé dans votre région."
-"Steam_RegionRestrictedCode_SupportURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=463"
+"Steam_RegionRestrictedCode_SupportURL"	"https://support.steampowered.com/kb/1266-QFZC-2141/?l=french"
 
 "Steam_FragmentationBad_Title"			"Steam - Avertissement sur la fragmentation du disque"
 "Steam_FragmentationBad_Info"				"Vos fichiers de jeu ont un niveau de fragmentation sur le disque dur très élevé. Ceci peut allonger les durées de chargement et affecter les performances du jeu. \n\nSteam peut optimiser vos fichiers de jeu maintenant.\n"
@@ -2714,7 +2726,7 @@ Vous devrez vous déconnecter de OSX pour que le changement prenne effet."
 
 "Steam_ManageGuestPasses"		"Gérer les cadeaux et invitations..."
 "Steam_GuestPasses_Title"		"Cadeaux et invitations"
-"Steam_GuestPasses_Description"		"Un cadeau correspond à la version complète d'un jeu que vous offrez à un ami.\n\nLes invitations vous permettent d'envoyer des offres d'essai temporaires à vos amis pour qu'ils puissent essayer le jeu et vous rejoindre en ligne."
+"Steam_GuestPasses_Description"		"Un cadeau correspond à la version complète d'un jeu que vous offrez à un ami.\n\nLes invitations vous permettent d'envoyer des offres d'essai temporaires à vos contacts pour qu'ils puissent essayer le jeu et vous rejoindre en ligne."
 "Steam_GuestPasses_NoneAvailable"	"Vous n'avez actuellement aucune invitation ni aucun cadeau disponible."
 "Steam_GuestPasses_LoadingList"		"Steam charge votre liste de cadeaux. Veuillez patienter..."
 "Steam_GuestPasses_Offline"		"Les cadeaux ne sont pas disponibles en mode hors ligne."
@@ -2740,14 +2752,14 @@ Vous devrez vous déconnecter de OSX pour que le changement prenne effet."
 "Steam_SendGuestPass_AccountLockedError$type=guestpass"	"Votre compte est bloqué, et ne peut envoyer ou recevoir d'invitations."
 
 "Steam_SendGuestPass_DuplicateNameErrorHeadline$type=guestpass"	"Vous ne pouvez pas vous envoyer une invitation à vous-même !"
-"Steam_SendGuestPass_DuplicateNameError$type=guestpass"	"Il semble que vous essayiez de vous envoyer une invitation à vous-même. Les invitations sont conçues pour être partagées avec vos amis. Invitez une personne que vous connaissez à jouer gratuitement à %package% !"
+"Steam_SendGuestPass_DuplicateNameError$type=guestpass"	"Il semble que vous essayiez de vous envoyer une invitation à vous-même. Les invitations sont conçues pour être partagées avec vos contacts. Invitez une personne que vous connaissez à jouer gratuitement à %package% !"
 
 "Steam_SendGuestPass_PendingErrorHeadline$type=guestpass" "Invitation déjà envoyée"
 "Steam_SendGuestPass_PendingError$type=guestpass"	"Vous avez déjà envoyé une invitation à %search% dans les dernières 24 heures. Vous ne pouvez envoyer aucune autre invitation à cette adresse dans les 24 heures qui suivent votre tentative la plus récente.\n\nCliquez sur « précédent » ci-dessous pour désigner un autre destinataire."
 
 "Steam_SendGuestPass_InvitingFriendHeadline$type=guestpass" "Envoi de l'invitation en cours..."
 "Steam_SendGuestPass_InvitingFriend$type=guestpass"	"Votre invitation à %search% est en cours d'envoi.\nVeuillez patienter..."
-"Steam_SendGuestPass_NoFriends"			"Aucun de vos amis n'a rejoint la communauté Steam.
+"Steam_SendGuestPass_NoFriends"			"Aucun de vos contacts n'a rejoint la communauté Steam.
 Invitez sans plus attendre votre premier ami en lui envoyant un cadeau."
 
 "Steam_GuestPassAccept_TitleOK$type=guestpass"	"Invitation prête"
@@ -2764,16 +2776,16 @@ Invitez sans plus attendre votre premier ami en lui envoyant un cadeau."
 "Steam_GuestPassAccept_HeadlineServiceUnavailable$type=guestpass"	"Échec de l'acceptation de l'invitation"
 "Steam_GuestPassAccept_TextServiceUnavailable"	"Votre ordinateur est actuellement dans l'incapacité de se connecter aux serveurs Steam ou le service est momentanément désactivé. Veuillez réessayer ultérieurement."
 "Steam_GuestPassAccept_LinkTextServiceUnavailable" 	"Pour obtenir des informations de dépannage sur les cadeaux, reportez-vous à cette page d'assistance :"
-"Steam_GuestPassAccept_LinkURLServiceUnavailable"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=550"
+"Steam_GuestPassAccept_LinkURLServiceUnavailable"	"https://support.steampowered.com/kb/6262-QXCN-0755/?l=french"
 
 "Steam_GuestPassAccept_HeadlineRevoked$type=guestpass"	"Cette invitation a été annulée"
-"Steam_GuestPassAccept_TextRevoked$type=guestpass"	"L'ami qui vous a envoyé cette invitation l'a annulée et a renvoyé un code de retrait plus récent. Si la nouvelle version vous a été envoyée, vous recevrez un nouveau message électronique avec le nouveau code."
+"Steam_GuestPassAccept_TextRevoked$type=guestpass"	"Le contact qui vous a envoyé cette invitation l'a annulée et a renvoyé un code de retrait plus récent. Si la nouvelle version vous a été envoyée, vous recevrez un nouveau message électronique avec le nouveau code."
 
 "Steam_GuestPassAccept_HeadlineExpired"	"Cette invitation a expiré"
 "Steam_GuestPassAccept_TextExpired"	"Vous ne pouvez pas accepter cette invitation, car elle est arrivée à expiration."
 
 "Steam_GuestPassAccept_HeadlineSelfRedeem$type=guestpass"	"Vous ne pouvez pas vous envoyer une invitation à vous-même !"
-"Steam_GuestPassAccept_TextSelfRedeem$type=guestpass"	"Il semble que vous essayiez d'accepter une invitation que vous vous êtes envoyé à vous-même. Les invitations sont conçues pour être partagées avec vos amis. Invitez une personne que vous connaissez à jouer gratuitement à un nouveau jeu !"
+"Steam_GuestPassAccept_TextSelfRedeem$type=guestpass"	"Il semble que vous essayiez d'accepter une invitation que vous vous êtes envoyé à vous-même. Les invitations sont conçues pour être partagées avec vos contacts. Invitez une personne que vous connaissez à jouer gratuitement à un nouveau jeu !"
 
 "Steam_GuestPassRedeemed_TitleFailed$type=guestpass"	"Échec de l'activation de l'invitation"
 
@@ -2783,7 +2795,7 @@ Invitez sans plus attendre votre premier ami en lui envoyant un cadeau."
 "Steam_GuestPassRedeemed_HeadlineServiceUnavailable$type=guestpass"	"Échec de l'activation de l'invitation"
 "Steam_GuestPassRedeemed_TextServiceUnavailable"	"Votre ordinateur est actuellement dans l'incapacité de se connecter aux serveurs Steam ou le service est momentanément désactivé. Veuillez réessayer ultérieurement."
 "Steam_GuestPassRedeemed_LinkTextServiceUnavailable"	"Pour obtenir des informations de dépannage sur les invitations, reportez-vous à cette page d'assistance :"
-"Steam_GuestPassRedeemed_LinkURLServiceUnavailable"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=550"
+"Steam_GuestPassRedeemed_LinkURLServiceUnavailable"	"https://support.steampowered.com/kb/6262-QXCN-0755/?l=french"
 
 "Steam_GuestPassRedeemed_HeadlineLimitExceeded"	"Vous avez déjà utilisé une invitation pour ce produit"
 "Steam_GuestPassRedeemed_TextLimitExceeded"	"Étant donné que vous avez déjà accepté une invitation pour %package%, vous ne pouvez pas en accepter une autre. Si vous souhaitez continuer à jouer au jeu, nous vous conseillons de l'acheter."
@@ -2797,7 +2809,7 @@ Invitez sans plus attendre votre premier ami en lui envoyant un cadeau."
 "Steam_GuestPassRedeemed_TextMustOwnApp$type=guestpass"	"Avant d'utiliser une invitation pour %package%, vous devez posséder %appname%. Une fois que vous le possèderez, veuillez réessayer d'utiliser cette invitation."
 
 "Steam_GuestPassRedeemed_HeadlineRevoked$type=guestpass"	"Cette invitation a été annulée"
-"Steam_GuestPassRedeemed_TextRevoked$type=guestpass"	"L'ami qui vous a envoyé cette invitation l'a annulée et a renvoyé un code de retrait plus récent. Si la nouvelle version vous a été envoyée, vous recevrez un nouveau message électronique avec le nouveau code."
+"Steam_GuestPassRedeemed_TextRevoked$type=guestpass"	"Le contact qui vous a envoyé cette invitation l'a annulée et a renvoyé un code de retrait plus récent. Si la nouvelle version vous a été envoyée, vous recevrez un nouveau message électronique avec le nouveau code."
 
 "Steam_GuestPassRedeemed_HeadlineExpired"	"Cette invitation a expiré"
 "Steam_GuestPassRedeemed_TextExpired"	"Vous ne pouvez pas accepter cette invitation, car elle est arrivée à expiration."
@@ -2861,8 +2873,6 @@ Invitez sans plus attendre votre premier ami en lui envoyant un cadeau."
 "Steam_SubscriptionCancelled_PuchaseDeclined_ContactProvider"	"L'achat de %subscription% n'a pas pu être mené à terme.\n\n%provider% a signalé un problème avec votre compte %provider%. Veuillez contacter le support %provider% ou cliquez sur Précédent et choisissez un autre moyen de paiement."
 "Steam_SubscriptionCancelled_PuchaseDeclined_AcctNotVerified"	"L'achat de %subscription% n'a pas pu être mené à terme.\n\n%provider% a signalé que votre compte %provider% doit être vérifié ou alimenté pour pouvoir procéder à l'achat. Veuillez contacter le support %provider% ou cliquez sur Précédent et choisissez un autre moyen de paiement."
 
-"Steam_TroubleshooterURL_VfyAcct" "http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=687"
-
 "Steam_PaymentMethodNotAvailable_Generic" "Désolé, ce moyen de paiement n'est pas disponible actuellement."
 
 "Steam_LaunchEULA_Title"			"%game%"
@@ -2872,11 +2882,12 @@ Invitez sans plus attendre votre premier ami en lui envoyant un cadeau."
 "Steam_LaunchEULA_Text"			"Veuillez lire cet accord entièrement. Vous devez accepter les termes du CLUF pour jouer à %game%."
 
 "Steam_GuestPasses_LinkText"		"Plus d'informations sur les cadeaux et invitations"
-"Steam_GuestPasses_LinkURL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=549"
+"Steam_GuestPasses_LinkURL"		"https://support.steampowered.com/kb/6262-QXCN-0755/?l=french"
 
 "Steam_AlreadyRunningError_Title"			"Steam - Impossible de lancer"
 "Steam_AlreadyRunningError_Info"			"Steam est déjà en cours d'exécution sur cet ordinateur sous un compte d'utilisateur différent. Veuillez fermer cette autre session avant de relancer Steam."
 "Steam_AlreadyRunningError_SupportLink"	"Pour en savoir plus, consultez la section Support de Steam."
+"Steam_AlreadyRunningError_SupportLink_URL"	"http://support.steampowered.com/kb_article.php?ref=8787-WYIL-1543&l=french"
 "Steam_AlreadyRunningError_SupportTicket"	"Veuillez contacter le Support Steam dès que possible"
 
 "Steam_LoggedInElsewhere_Title"		"Steam - Connecté ailleurs"
@@ -2908,6 +2919,7 @@ Invitez sans plus attendre votre premier ami en lui envoyant un cadeau."
 "Steam_GamesDialog_RightClick_RemoveFromUnblockedGames"		"Supprimer des jeux familiaux"
 
 "steam_menu_checkforupdates"						"Rechercher des mises à jour du client Steam..."
+"steam_menu_checkforupdates_osx"					"Recherche de mises à jour..."
 "steam_checkforupdates_title"						"Steam - Mise à jour automatique"
 "steam_ClientUpdateAvailableDownloading"			"Une mise à jour du client Steam est en cours de téléchargement."
 "steam_ClientUpdateAvailableDownloaded"			"Une mise à jour du client Steam a été téléchargée."
@@ -3150,7 +3162,7 @@ Ce programme est maintenant terminé. Veuillez redémarrer Steam pour revenir à
 "Steam_SendGuestPass_AccountLockedError$type=gift"	"Votre compte est bloqué, et ne peut envoyer ou recevoir de cadeaux."
 
 "Steam_SendGuestPass_DuplicateNameErrorHeadline$type=gift"	"Vous ne pouvez pas vous faire un cadeau à vous-même !"
-"Steam_SendGuestPass_DuplicateNameError$type=gift"	"Il semble que vous essayiez de vous envoyer un cadeau à vous-même. Les cadeaux sont conçus pour être partagés avec vos amis. Invitez une personne que vous connaissez à jouer gratuitement à %package% !"
+"Steam_SendGuestPass_DuplicateNameError$type=gift"	"Il semble que vous essayiez de vous envoyer un cadeau à vous-même. Les cadeaux sont conçus pour être partagés avec vos contacts. Invitez une personne que vous connaissez à jouer gratuitement à %package% !"
 
 "Steam_SendGuestPass_PendingErrorHeadline$type=gift" "Cadeau déjà envoyé"
 "Steam_SendGuestPass_PendingError$type=gift"	"Vous avez déjà envoyé un cadeau à %search% dans les dernières 24 heures. Vous ne pouvez envoyer aucun autre cadeau à cette adresse dans les 24 heures qui suivent votre tentative la plus récente.\n\nCliquez sur « précédent » ci-dessous pour désigner un autre destinataire."
@@ -3167,10 +3179,10 @@ Ce programme est maintenant terminé. Veuillez redémarrer Steam pour revenir à
 "Steam_GuestPassAccept_HeadlineServiceUnavailable$type=gift"	"Échec de l'acceptation du cadeau"
 
 "Steam_GuestPassAccept_HeadlineRevoked$type=gift"	"Ce cadeau a été annulé"
-"Steam_GuestPassAccept_TextRevoked$type=gift"	"L'ami qui vous a envoyé ce cadeau l'a annulé et a renvoyé un code de retrait plus récent. Si la nouvelle version vous a été envoyée, vous recevrez un nouveau message électronique avec le nouveau code."
+"Steam_GuestPassAccept_TextRevoked$type=gift"	"Le contact qui vous a envoyé ce cadeau l'a annulé et a renvoyé un code de retrait plus récent. Si la nouvelle version vous a été envoyée, vous recevrez un nouveau message électronique avec le nouveau code."
 
 "Steam_GuestPassAccept_HeadlineSelfRedeem$type=gift"	"Vous ne pouvez pas vous faire un cadeau à vous-même !"
-"Steam_GuestPassAccept_TextSelfRedeem$type=gift"	"Il semble que vous essayiez d'accepter une invitation que vous vous êtes envoyé à vous-même. Les cadeaux sont conçus pour être partagés avec vos amis. Invitez une personne que vous connaissez à jouer gratuitement à un nouveau jeu !"
+"Steam_GuestPassAccept_TextSelfRedeem$type=gift"	"Il semble que vous essayiez d'accepter une invitation que vous vous êtes envoyé à vous-même. Les cadeaux sont conçus pour être partagés avec vos contacts. Invitez une personne que vous connaissez à jouer gratuitement à un nouveau jeu !"
 
 "Steam_GuestPassRedeemed_TitleFailed$type=gift"	"Échec de l'activation du cadeau"
 
@@ -3186,11 +3198,11 @@ Ce programme est maintenant terminé. Veuillez redémarrer Steam pour revenir à
 "Steam_GuestPassRedeemed_TextMustOwnApp$type=gift"		"Avant d'accepter un cadeau pour %package%, vous devez posséder %appname%. Une fois que vous le possèderez, veuillez réessayer d'accepter ce cadeau."
 
 "Steam_GuestPassRedeemed_HeadlineRevoked$type=gift"	"Ce cadeau a été annulé"
-"Steam_GuestPassRedeemed_TextRevoked$type=gift"	"L'ami qui vous a envoyé ce cadeau l'a annulé et a renvoyé un code de retrait plus récent. Si la nouvelle version vous a été envoyée, vous recevrez un nouveau message électronique avec le nouveau code."
+"Steam_GuestPassRedeemed_TextRevoked$type=gift"	"Le contact qui vous a envoyé ce cadeau l'a annulé et a renvoyé un code de retrait plus récent. Si la nouvelle version vous a été envoyée, vous recevrez un nouveau message électronique avec le nouveau code."
 
 "Steam_SendGuestPass_RefreshingList"	"Rafraîchissement de la liste..."
-"Steam_SendGuestPass_AllFriendsOwnProduct"	"Tous vous amis de la communauté Steam possèdent déjà ce produit.
-Faites-vous un nouvel ami Steam en envoyant un cadeau à une de vos connaissances."
+"Steam_SendGuestPass_AllFriendsOwnProduct"	"Tous vos contacts de la communauté Steam possèdent déjà ce produit.
+Ajoutez un nouveau contact Steam en envoyant un cadeau à une de vos connaissances."
 
 "Steam_GuestPass_GiftSection"	"CADEAUX"
 "Steam_GuestPasses_GuestPassesSection"	"INVITATIONS"
@@ -3340,8 +3352,8 @@ Faites-vous un nouvel ami Steam en envoyant un cadeau à une de vos connaissance
 
 "Steam_SendGuestPass_SendDirectRadio$type=gift"			"Envoyer mon cadeau directement via Steam"
 "Steam_SendGuestPass_SendDirectRadio$type=guestpass"	"Envoyer mon invitation directement via Steam"
-"Steam_SendGuestPass_SendDirectLabel$type=gift"			"Envoyer un message-cadeau à mon ami directement sur son compte Steam."
-"Steam_SendGuestPass_SendDirectLabel$type=guestpass"	"Envoyer un message-invitation à mon ami directement sur son compte Steam."
+"Steam_SendGuestPass_SendDirectLabel$type=gift"			"Envoyer un message-cadeau à mon contact directement sur son compte Steam."
+"Steam_SendGuestPass_SendDirectLabel$type=guestpass"	"Envoyer un message-invitation à mon contact directement sur son compte Steam."
 
 "Steam_GuestPasses_LeftGiftPlural"		"Copies supplémentaires"
 "Steam_GuestPasses_LeftGuestPassPlural"		"Invitations"
@@ -3353,7 +3365,7 @@ Faites-vous un nouvel ami Steam en envoyant un cadeau à une de vos connaissance
 "Steam_InstallAborted_InfoAppNoDemo"		"%game% ne peut pas être installé, car il s'agit d'une démo et vous possédez déjà la version complète de ce jeu. Veuillez installer la version complète du jeu."
 
 "Steam_Startup_SteamChinaRequiredTitle"					"Steam China est requis"
-"Steam_Startup_GetSteamChina"						"%gamename% est maintenant disponible via Steam China. Veuillez suivre le lien ci-dessous pour installer ce client."
+"Steam_Startup_GetSteamChina"						"%gamename% doit maintenant être lancé depuis le nouveau client Steam China.\n\nVous pouvez vous y connecter avec votre compte %gamename% et transférer votre progression en jeu, vos items, le niveau de votre personnage et vos points.\n\n"
 "Steam_Startup_RunSteamChina"						"%gamename% est maintenant disponible via Steam China. Veuillez lancer Steam China pour importer votre jeu."
 "Steam_Startup_SteamChinaImportedUninstall"			"%gamename% a été importé sur Steam China. Vous pouvez désinstaller ce lanceur en toute sécurité."
 "Steam_Startup_LauncherDeprecated"					"Vous devez maintenant lancer %gamename% via Steam China. Cette version n'est plus prise en charge et va s'arrêter."
@@ -3361,6 +3373,7 @@ Faites-vous un nouvel ami Steam en envoyant un cadeau à une de vos connaissance
 "Steam_Startup_ImportGameFromLauncherMsg"			"Voulez-vous importer %gamename% dans Steam China ? Vous pourrez alors désinstaller en toute sécurité le lanceur classique."
 
 "Steam_Download_SteamChina"							"Télécharger Steam China"
+"Steam_Get_SteamChina"								"Installer Steam China"
 
 "Steam_ValidateGame_GameRunning"	"Veuillez quitter tout jeu ou application en cours d'exécution avant de vérifier les fichiers locaux."
 
@@ -3369,8 +3382,8 @@ Faites-vous un nouvel ami Steam en envoyant un cadeau à une de vos connaissance
 "Steam_LibrariesLabel"	"Bibliothèques de contenu"
 "Steam_DownloadRestrictionsLabel"	"Restrictions des téléchargements"
 
-"Steam_ServerBrowserPingRateLabel"	"Navigateur des serveurs de jeu : ping max/minute"
-"Steam_ServerBrowserPingRateInfo"	"Si vous rencontrez des problèmes de connexion dans le navigateur des serveurs de jeu, essayez de diminuer cette valeur."
+"Steam_ServerBrowserPingRateLabel"	"Pings de navigateur de serveur/min"
+"Steam_ServerBrowserPingRateInfo"	"Vous avez des problèmes de connexion quand vous parcourez les serveurs de jeu ? Essayez de diminuer cette valeur."
 "Steam_ServerBrowserPingRateDefault"	"Automatique (%PingsPerMin%)"
 
 "Steam_TextFilterSettingLabel"									"Filtre de chat"
@@ -3492,6 +3505,7 @@ Faites-vous un nouvel ami Steam en envoyant un cadeau à une de vos connaissance
 "Steam_RecoverLocked_UseCode" "J'ai reçu le message du support Steam et je suis prêt à saisir mon code d'accès spécial."
 "Steam_RecoverLocked_MustRecover" "Quel message ? Je ne l'ai pas reçu..."
 "Steam_RecoverLocked_WhyIsThisHappening" "Pourquoi est-ce que cela arrive ?"
+"Steam_RecoverLocked_WhyIsThisHappening_URL" "https://support.steampowered.com/kb_article.php?ref=4020-ALZM-5519&l=french"
 "Steam_RecoverLocked_EnterCode" "Mon code d'accès spécial est :"
 "Steam_RecoverLocked_EnterCodeDetails" "Une fois votre code vérifié, Steam ajoutera cet ordinateur à la liste des ordinateurs autorisés à accéder à ce compte Steam."
 "Steam_RecoverLocked_WrongCode" "Désolé, mais ce n'est pas tout à fait exact."
@@ -3505,7 +3519,9 @@ Faites-vous un nouvel ami Steam en envoyant un cadeau à une de vos connaissance
 "Steam_RecoverLocked_StartRecovery2" "Nous savons combien votre compte Steam est important pour vous, et nous faisons tout notre possible pour vous aider à en garder le contrôle."
 "Steam_RecoverLocked_StartRecovery3" "Veuillez contacter le Support Steam pour recevoir de l'aide. Nous traitons en priorité les demandes légitimes d'accès à un compte."
 "Steam_RecoverLocked_RecoverySupportLink" "Contacter le Support Steam"
+"Steam_RecoverLocked_RecoverySupportLink_URL" "https://help.steampowered.com/fr/"
 "Steam_RecoverLocked_LearnMore" "En savoir plus sur la technologie Intel® Identity Protection"
+"Steam_RecoverLocked_LearnMore_URL" "https://support.steampowered.com/kb_article.php?ref=9400-IPAX-9398&auth=e39b5c227cffc8ae65414aba013e5fef&l=french"
 "Steam_RecoverLocked_CannotAccess" "Désolé, vous ne pouvez pas accéder à ce compte sur cet ordinateur sans autorisation supplémentaire."
 "Steam_RecoverLocked_Success" "Succès !"
 "Steam_RecoverLocked_SuccessDetails" "Vous avez maintenant accès à votre compte Steam depuis cet ordinateur. Steam a ajouté cet ordinateur à la liste des machines qui sont autorisées à accéder à votre compte Steam."
@@ -3687,23 +3703,23 @@ Faites-vous un nouvel ami Steam en envoyant un cadeau à une de vos connaissance
 "steam_details_lockedreason" "Toutes les licences sont actuellement utilisées. Veuillez réessayer plus tard."
 
 "steam_details_achievementsheader" "%achieved_achievements% succès sur %available_achievements%"
-"steam_friendsplayingnow"	"%friendsplayingnow% amis jouent à %gamename% en ce moment !"
-"steam_friendplayingnow"	"%friendsplayingnow% ami joue à %gamename% en ce moment !"
-"steam_morefriendswhoplay"		"%friendswhoplay% autres amis jouent à %gamename%"
-"steam_morefriendwhoplays"		"%friendswhoplay% autre ami joue à %gamename%"
-"steam_friendswhoplay"		"%friendswhoplay% amis jouent à %gamename%"
-"steam_friendwhoplays"		"%friendswhoplay% ami joue à %gamename%"
-"steam_nofriendswhoplay"	"Aucun de vos amis ne joue à %gamename%"
+"steam_friendsplayingnow"	"%friendsplayingnow% contacts jouent à %gamename% en ce moment !"
+"steam_friendplayingnow"	"%friendsplayingnow% contact joue à %gamename% en ce moment !"
+"steam_morefriendswhoplay"		"%friendswhoplay% autres contacts jouent à %gamename%"
+"steam_morefriendwhoplays"		"%friendswhoplay% autre contact joue à %gamename%"
+"steam_friendswhoplay"		"%friendswhoplay% contacts jouent à %gamename%"
+"steam_friendwhoplays"		"%friendswhoplay% contact joue à %gamename%"
+"steam_nofriendswhoplay"	"Aucun de vos contacts ne joue à %gamename%"
 "steam_openfriendslist"		"Ouvrir la liste de contacts"
-"steam_viewallfriends"		"Afficher tous les amis qui y jouent"
-"steam_friendsplayingnowapplication"	"%friendsplayingnow% amis utilisent %gamename% en ce moment !"
-"steam_friendplayingnowapplication"	"%friendsplayingnow% ami utilise %gamename% en ce moment !"
-"steam_morefriendswhoplayapplication"		"%friendswhoplay% autres amis utilisent %gamename%"
-"steam_morefriendwhoplaysapplication"		"%friendswhoplay% autre ami utilise %gamename%"
-"steam_friendswhoplayapplication"		"%friendswhoplay% amis utilisent %gamename%"
-"steam_friendwhoplaysapplication"		"%friendswhoplay% ami utilise %gamename%"
-"steam_nofriendswhoplayapplication"	"Aucun de vos amis n'utilise %gamename%"
-"steam_viewallfriendsapplication"		"Afficher tous les amis qui utilisent cette application"
+"steam_viewallfriends"		"Afficher tous les contacts qui y jouent"
+"steam_friendsplayingnowapplication"	"%friendsplayingnow% contacts utilisent %gamename% en ce moment !"
+"steam_friendplayingnowapplication"	"%friendsplayingnow% contact utilise %gamename% en ce moment !"
+"steam_morefriendswhoplayapplication"		"%friendswhoplay% autres contacts utilisent %gamename%"
+"steam_morefriendwhoplaysapplication"		"%friendswhoplay% autre contact utilise %gamename%"
+"steam_friendswhoplayapplication"		"%friendswhoplay% contacts utilisent %gamename%"
+"steam_friendwhoplaysapplication"		"%friendswhoplay% contact utilise %gamename%"
+"steam_nofriendswhoplayapplication"	"Aucun de vos contacts n'utilise %gamename%"
+"steam_viewallfriendsapplication"		"Afficher tous les contacts qui utilisent cette application"
 "steam_RecentNews"		"Actualités récentes"
 "Steam_Screenshots"		"Captures d'écran"
 "Steam_ViewAllScreenshots"	"Afficher la bibliothèque des captures d'écran"
@@ -3761,11 +3777,11 @@ Faites-vous un nouvel ami Steam en envoyant un cadeau à une de vos connaissance
 "steam_welcomeaction_comingsoon" "%gamename% sera bientôt disponible."
 "steam_welcomeaction_platformwrong" "%gamename% n'est pas disponible sur la plateforme actuelle."
 
-"steam_welcomemessage_nofriends$apptype=game" "Pour trouver d'autres personnes qui jouent à %gamename%, rejoignez <a href=steam://url/CommunityGroupSearch/%encodedsearch%>le groupe de la communauté Steam</a> du produit. Pour voir à quels jeux vos amis et amies jouent, <a href=steam://friends/add/>ajoutez-les</a> à votre liste de contacts Steam."
-"steam_welcomemessage_nofriends$apptype=application" "Pour trouver d'autres personnes qui utilisent %gamename%, rejoignez <a href=steam://url/CommunityGroupSearch/%encodedsearch%>le groupe de la communauté Steam</a> du produit. Pour voir quelles applications vos amis et amies utilisent, <a href=steam://friends/add/>ajoutez-les</a> à votre liste de contacts Steam."
-"steam_welcomemessage_nofriends$apptype=tool" "Pour trouver d'autres personnes qui utilisent %gamename%, rejoignez <a href=steam://url/CommunityGroupSearch/%encodedsearch%>le groupe de la communauté Steam</a> du produit. Pour voir quels outils vos amis et amies utilisent, <a href=steam://friends/add/>ajoutez-les</a> à votre liste de contacts Steam."
-"steam_welcomemessage_nofriends$apptype=video" "Pour trouver d'autres personnes qui regardent %gamename%, rejoignez <a href=steam://url/CommunityGroupSearch/%encodedsearch%>le groupe de la communauté Steam</a> du produit. Pour voir quelles vidéos vos amis et amies regardent, <a href=steam://friends/add/>ajoutez-les</a> à votre liste de contacts Steam."
-"steam_welcomemessage_nofriends$apptype=demo" "Pour trouver d'autres personnes qui jouent à %gamename%, rejoignez <a href=steam://url/CommunityGroupSearch/%encodedsearch%>le groupe de la communauté Steam</a> du produit. Pour voir à quels jeux vos amis et amies jouent, <a href=steam://friends/add/>ajoutez-les</a> à votre liste de contacts Steam."
+"steam_welcomemessage_nofriends$apptype=game" "Pour trouver d'autres personnes qui jouent à %gamename%, rejoignez <a href=steam://url/CommunityGroupSearch/%encodedsearch%>le groupe de la communauté Steam</a> du produit. Pour voir à quels jeux vos contacts jouent, <a href=steam://friends/add/>ajoutez-les</a> à votre liste de contacts Steam."
+"steam_welcomemessage_nofriends$apptype=application" "Pour trouver d'autres personnes qui utilisent %gamename%, rejoignez <a href=steam://url/CommunityGroupSearch/%encodedsearch%>le groupe de la communauté Steam</a> du produit. Pour voir quelles applications vos contacts utilisent, <a href=steam://friends/add/>ajoutez-les</a> à votre liste de contacts Steam."
+"steam_welcomemessage_nofriends$apptype=tool" "Pour trouver d'autres personnes qui utilisent %gamename%, rejoignez <a href=steam://url/CommunityGroupSearch/%encodedsearch%>le groupe de la communauté Steam</a> du produit. Pour voir quels outils vos contacts utilisent, <a href=steam://friends/add/>ajoutez-les</a> à votre liste de contacts Steam."
+"steam_welcomemessage_nofriends$apptype=video" "Pour trouver d'autres personnes qui regardent %gamename%, rejoignez <a href=steam://url/CommunityGroupSearch/%encodedsearch%>le groupe de la communauté Steam</a> du produit. Pour voir quelles vidéos vos contacts regardent, <a href=steam://friends/add/>ajoutez-les</a> à votre liste de contacts Steam."
+"steam_welcomemessage_nofriends$apptype=demo" "Pour trouver d'autres personnes qui jouent à %gamename%, rejoignez <a href=steam://url/CommunityGroupSearch/%encodedsearch%>le groupe de la communauté Steam</a> du produit. Pour voir à quels jeux vos contacts jouent, <a href=steam://friends/add/>ajoutez-les</a> à votre liste de contacts Steam."
 
 "steam_welcomemessage_help$apptype=game"	"Si vous avez besoin d'une assistance technique pour ce jeu, consultez les <a href=http://storefront.steampowered.com/v/forums.php?AppId=%appid%>forums Steam de %gamename%</a> ou visitez le site du <a href=http://support.steampowered.com/>support Steam</a>."
 "steam_welcomemessage_help$apptype=application"	"Si vous avez besoin d'une assistance technique pour cette application, consultez les <a href=http://storefront.steampowered.com/v/forums.php?AppId=%appid%>forums Steam de %gamename%</a> ou visitez le site du <a href=http://support.steampowered.com/>support Steam</a>."
@@ -3799,7 +3815,7 @@ Faites-vous un nouvel ami Steam en envoyant un cadeau à une de vos connaissance
 
 "steam_client_edit_categories_multi" "Définissez une catégorie pour ces jeux de manière à pouvoir les retrouver rapidement et organiser votre bibliothèque. Les jeux classés seront regroupés dans votre liste de jeux. "
 
-"steam_topmenu_friends"	"Amis (%friends_online%)"
+"steam_topmenu_friends"	"Contacts (%friends_online%)"
 "steam_menu_set_profile"	"Changer de nom de profil..."
 "steam_menu_set_avatar"	"Changer d'avatar..."
 "steam_menu_edit_profile_name_avatar"	"Modifier le nom de profil ou l'avatar..."
@@ -3807,7 +3823,7 @@ Faites-vous un nouvel ami Steam en envoyant un cadeau à une de vos connaissance
 "steam_menu_friends_tools" "Outils"
 "steam_menu_friends_sortbyname" "Trier par nom"
 "steam_menu_friends_showavatars" "Afficher les avatars"
-"steam_menu_friends_hideoffline" "Afficher les amis en ligne uniquement"
+"steam_menu_friends_hideoffline" "Afficher les contacts en ligne uniquement"
 "steam_menu_friends_showtagged" "Afficher tout le monde dans la section AMIS"
 "steam_menu_friends_add" "Ajouter un contact..."
 "steam_menu_friends_settings" "Afficher les paramètres"
@@ -3828,13 +3844,12 @@ Faites-vous un nouvel ami Steam en envoyant un cadeau à une de vos connaissance
 "steam_menu_friends" "Contacts"
 "steam_menu_servers" "Serveurs"
 "steam_menu_settings" "Paramètres"
-"steam_menu_preferences" "Préférences"
 "steam_menu_view_friends" "Voir la liste de contacts (%friends_online% en ligne)"
 "steam_menu_view_players" "Joueurs"
 "steam_menu_add_friend" "Ajouter un contact..."
-"steam_menu_friendsstatus" "Définir l'état des amis"
+"steam_menu_friendsstatus" "Définir l'état des contacts"
 "steam_viewfriends"	"CONTACTS \nET CHAT"
-"steam_onlinefriends"	"%friends_online% ami(s) connecté(s)"
+"steam_onlinefriends"	"%friends_online% contact(s) connecté(s)"
 
 "Steam_Tooltip_Steam" "Steam"
 "Steam_Tooltip_Working" "Steam - Opération en cours"
@@ -4569,6 +4584,7 @@ Faites-vous un nouvel ami Steam en envoyant un cadeau à une de vos connaissance
 "Steam_Settings_Streaming_SoftwareEncodingThreads_7"	"7"
 "Steam_Settings_Streaming_SoftwareEncodingThreads_8"	"8"
 "Steam_Settings_Streaming_P2PScope_Description"	"Autoriser la connexion directe (partage d'IP)"
+"Steam_Settings_Streaming_P2PScopeAutomatic"	"Automatique (activée)"
 "Steam_Settings_Streaming_P2PScopeDisabled"	"Désactivée"
 "Steam_Settings_Streaming_P2PScopeOnlyMe" "Mes périphériques"
 "Steam_Settings_Streaming_P2PScopeEveryone" "Tous les périphériques"
@@ -4593,6 +4609,7 @@ Faites-vous un nouvel ami Steam en envoyant un cadeau à une de vos connaissance
 "Steam_Settings_Streaming_EnableTouchController"	"Activer les commandes tactiles"
 
 "Steam_Settings_Streaming_StreamingSupport"	"Consulter la FAQ"
+"Steam_Settings_Streaming_StreamingSupportLink"	"https://support.steampowered.com/kb_article.php?ref=3629-RIAV-1617&l=french"
 
 "Steam_Settings_Streaming_Connected" "Ordinateur connecté"
 "Steam_Settings_Streaming_Paired" "Périphérique associé"
@@ -4603,6 +4620,15 @@ Faites-vous un nouvel ami Steam en envoyant un cadeau à une de vos connaissance
 
 "Steam_Settings_Streaming_PIN_Title" "Créer un code de sécurité pour Steam Link"
 "Steam_Settings_Streaming_PIN_Text" "Créez un code PIN composé de chiffres à saisir sur Steam Link à chaque fois que vous voudrez transférer le flux depuis cet ordinateur :"
+
+"Steam_Settings_ShareIPNetworking_Label" "Réseau Steam"
+"Steam_Settings_ShareIPNetworking_Info" "Permettre aux jeux qui utilisent le réseau Steam de partager mon adresse IP pour profiter d'une connexion plus rapide"
+"Steam_Settings_ShareIPNetworking_Default" "Par défaut"
+"Steam_Settings_ShareIPNetworking_Always" "Toujours"
+"Steam_Settings_ShareIPNetworking_FriendsOnly" "Contacts uniquement"
+"Steam_Settings_ShareIPNetworking_Never" "Jamais"
+"Steam_Settings_ShareIPNetworking_URL" "En savoir plus"
+"Steam_Settings_ShareIPNetworking_URLText" "https://support.steampowered.com/kb_article.php?ref=9929-UAFN-9329&l=french"
 
 "SteamUI_StreamingIntro_Title"		"Bienvenue dans Steam Remote Play"
 "SteamUI_StreamingIntro"			"Vous êtes sur le point de lancer ce jeu sur un autre ordinateur afin de jouer ici en utilisant Steam Remote Play."
@@ -4745,4 +4771,9 @@ Faites-vous un nouvel ami Steam en envoyant un cadeau à une de vos connaissance
 
 "SteamUI_RunningConflictingSoftware" "Logiciel conflictuel détecté"
 "SteamUI_RunningIncompatibleTcpService" "Une version incompatible de %incompatdll% (associée au programme %incompatname%)\na été détectée dans le processus Steam.\n\nIl est recommandé de mettre à jour ou de désinstaller ce programme si vous constatez des crashs\nou un ralentissement sur le réseau lorsque vous utilisez Steam ou des jeux Steam."
+
+"Steam_XboxDriverInstall_Title"		"Installation du pilote Xbox"
+"Steam_XboxDriverInstall_Success"	"Le pilote a bien été mis à jour. Redémarrez votre ordinateur pour l'activer."
+"Steam_XboxDriverInstall_ServiceFailure"	"Échec de la mise à jour du pilote. Vérifiez que Steam est lancé pour un compte normal. Vérifiez également que le service Steam est en cours d'exécution et mis à jour."
+"Steam_XboxDriverInstall_Failure"	"Échec de la mise à jour du pilote (erreur : %error%)"
 }

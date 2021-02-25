@@ -170,7 +170,7 @@
 "Friends_InvitationBlocking"		"Ai blocat comunicarea cu acest utilizator. Înainte de a comunica cu el, întâi deblochează-l vizitând pagina lui din Comunitatea Steam."
 
 "Friends_DontGiveOutPassword"			"Nu comunica parola ta niciodată, nimănui.\n"
-"Friends_DontGiveOutPassword_URL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=301"
+"Friends_DontGiveOutPassword_URL"		"https://support.steampowered.com/kb/1266-OAFV-8478/"
 
 "Friends_ChatFilterBlockWarning"		"O adresă a fost eliminată din mesajul următor din motive de securitate."
 
@@ -556,6 +556,7 @@
 "Friends_SteamCommunity"	"Comunitate Steam"
 "Limited_Explanation"	"Contul tău nu îndeplinește cerințele pentru a utiliza această facilitate."
 "Limited_ForDetails"	"Vizitează Asistenţa Steam pentru mai multe informaţii."
+"Limited_ForDetails_URL"	"https://help.steampowered.com/wizard/HelpWithLimitedAccount"
 
 "Friends_Chat_RoomModerated_Entry"		"%member_making_change% a stabilit că doar ofiţerii pot comunica.\n"
 "Friends_Chat_RoomUnmoderated_Entry"		"%member_making_change% a stabilit că toţi utilizatorii pot comunica.\n"
@@ -688,6 +689,7 @@ Nu poți face schimburi cu %friend% pentru că ți-ai anulat recent toate oferte
 "Broadcast_FirstTime_PermissionHeader" "Așteaptă un minut pentru a-ți seta preferințele..."
 "Broadcast_FirstTime_DesktopOnly" "În mod implicit, doar conţinutul jocului tău poate fi vizualizat. Desktop-ul tău nu va fi transmis."
 "Broadcast_FirstTime_FAQ" "Citește întrebările frecvente ale difuzării Steam"
+"Broadcast_FirstTime_FAQLink" "https://support.steampowered.com/kb_article.php?ref=6730-TOAK-6497"
 "Broadcast_FirstTime_Title" "Difuzare Steam"
 "Broadcast_FirstTime_OK" "OK"
 "Broadcast_FirstTime_Cancel" "Anulează"

@@ -415,10 +415,6 @@
 				}
 			}
 		}
-		"settings"
-		{
-			"deadzone_inner_radius"		"9600"
-		}
 	}
 	"group"
 	{

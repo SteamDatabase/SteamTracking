@@ -1,6 +1,8 @@
 __TEXT
 __text
 __TEXT
+0W
+0W
 __stubs
 __TEXT
 __stub_helper
@@ -18,7 +20,6 @@ __const
 __TEXT
 __unwind_info
 __TEXT
-8~
 __eh_frame
 __TEXT
 __DATA
@@ -666,7 +667,6 @@ arrURLs
 T@"NSArray",R,N,V_arrURLs
 en_US
 r
-hw.optional.arm64
 com.valvesoftware.steam.ipctool
 ipcserver restart: expected: %d, got: %d
 StopJob
@@ -738,8 +738,8 @@ Assertion Failed: eCmd > 0 && eCmd < eHTMLCommands_None
 Assertion Failed: pBuffer->TellPut() == 0
 CUIProtoBufMsg::BDeserialize
 Assertion Failed: 0
--fast-overlay-html
-Uses new faster overlay HTML path
+-toggle-overlay-html-mode
+Disables new faster overlay HTML path (or enables if on a branch it's not on by default for)
 ChromeHTML_Controller_003
 Assertion Failed: BOffScreenRendererBrowser( eBrowserType )
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/html/chromewrapper.cpp
@@ -881,6 +881,7 @@ wt
 -steampid=%u
 -buildid=%u
 -steamid=%llu
+Disables new faster overlay HTML path (or enables if on a bracnh it's not on by default for)
 -html-perf-monitor
 Draws html perf data
 -steamuniverse=Dev
@@ -1802,19 +1803,17 @@ sc_schinese
 
 
 
-W
 "
+F
 3
 D
-&
-
 @
-9
+z
 
 
 
-y
-M
+
+%
 
 
 
@@ -1850,6 +1849,7 @@ Hc
 ?
 ?
 
+1
 @
 @
 @

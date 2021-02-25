@@ -145,7 +145,7 @@
 "VAC_ConnectionRefusedTitle"	"Csatlakozás elutasítva - VAC"
 "VAC_ConnectionRefusedDetail"	"Nem csatlakozhatsz a kiválasztott szerverhez, mert az VAC (Valve Anti-Cheat) védett módban fut.\n\nEz a Steam fiók csalási szabálysértés miatt ki lett tiltva a védett szerverekről."
 "VAC_ConnectionRefusedByServer"	"A szerver elutasította a csatlakozásod, mert VAC (Valve Anti-Cheat) védett módban fut.\n\nEz a Steam fiók csalási szabálysértés miatt ki lett tiltva a védett szerverekről."
-"VAC_BanSupportURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=370"
+"VAC_BanSupportURL"	"https://support.steampowered.com/kb/7849-RADZ-6869&l=hungarian/"
 "VAC_SecureServerToolTip"	"Valve Anti-Cheat - Védett"
 "VAC_BannedFromServerToolTip"	"Nem csatlakozhatsz ehhez a védett szerverhez"
 "VAC_Secure"	"Védett"
@@ -160,7 +160,7 @@
 "Steam_ValidLoginRequired"	"Nem lehetett csatlakozni a Steam VAC szerverekhez. A hálózati hibaelhárításhoz kattints a lenti hivatkozásra."
 "VAC_ConnectionIssuesSupport_Title"	"Védett csatlakozás sikertelen"
 "VAC_ConnectionIssuesSupportSite"	"Kattints ide a Steam Támogatás eléréséhez"
-"VAC_ConnectionIssuesSupportURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=374"
+"VAC_ConnectionIssuesSupportURL"	"https://support.steampowered.com/kb/7579-RPSX-6098&l=hungarian/"
 "VAC_LoggedInElsewhere_Title"		"Fiók máshol használatban"
 "VAC_LoggedInElsewhereReason"		"Ezzel a Steam fiókkal bejelentkeztek egy másik számítógépről. A Steam használatának folytatásához újra be kell jelentkezned."
 

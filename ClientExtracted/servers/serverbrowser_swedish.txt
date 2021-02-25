@@ -145,7 +145,7 @@
 "VAC_ConnectionRefusedTitle"	"Anslutning nekades – VAC"
 "VAC_ConnectionRefusedDetail"	"Du kan inte ansluta till den valda servern eftersom den körs i säkert antifuskläge (Valve Anti-Cheat, VAC).\n\nDet här Steam-kontot har blivit avstängt från våra säkra spelservrar på grund av fusk."
 "VAC_ConnectionRefusedByServer"	"Servern nekade anslutningen eftersom den körs i säkert antifuskläge (Valve Anti-Cheat, VAC).\n\nDet här Steam-kontot har blivit avstängt från våra säkra spelservrar på grund av fusk."
-"VAC_BanSupportURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=370"
+"VAC_BanSupportURL"	"https://support.steampowered.com/kb/7849-RADZ-6869/"
 "VAC_SecureServerToolTip"	"Valve Antifuskläge - Säker"
 "VAC_BannedFromServerToolTip"	"Du kan inte ansluta till den här servern eftersom den kör i säkert antifuskläge."
 "VAC_Secure"	"Säker"
@@ -160,7 +160,7 @@
 "Steam_ValidLoginRequired"	"Det gick inte att skapa anslutning till Steam VAC-servrarna.  Om du vill felsöka problem med nätverket kan du klicka på länken nedan."
 "VAC_ConnectionIssuesSupport_Title"	"Den säkra anslutningen misslyckades"
 "VAC_ConnectionIssuesSupportSite"	"Klicka här för att gå till Steams support"
-"VAC_ConnectionIssuesSupportURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=374"
+"VAC_ConnectionIssuesSupportURL"	"https://support.steampowered.com/kb/7579-RPSX-6098/"
 "VAC_LoggedInElsewhere_Title"		"Kontot används från annan dator"
 "VAC_LoggedInElsewhereReason"		"Det här Steam-kontot har använts för inloggning från en annan dator. Om du vill fortsätta att använda Steam måste du logga in igen."
 

@@ -1,10 +1,10 @@
 !
 __TEXT
-p6
-p6
 __text
 __TEXT
-TX$
+@u
+d[$
+@u
 __stubs
 __TEXT
 __stub_helper
@@ -24,31 +24,22 @@ __unwind_info
 __TEXT
 __eh_frame
 __TEXT
-xo-
-x
-xo-
 __DATA
-p6
-p6
 __nl_symbol_ptr
 __DATA
-p6
-p6
 __got
 __DATA
 __la_symbol_ptr
 __DATA
-Pq6
 @
-Pq6
 __mod_init_func
 __DATA
 __const
 __DATA
 __cfstring
 __DATA
-0SB
-0SB
+@cB
+@cB
 __objc_classlist__DATA
 __objc_imageinfo__DATA
 __objc_const
@@ -56,45 +47,43 @@ __DATA
 __objc_selrefs
 __DATA
 __objc_classrefs__DATA
-xWB
-xWB
 __objc_superrefs__DATA
-XB
-XB
+0hB
+0hB
 __objc_ivar
 __DATA
-(XB
-(XB
+8hB
+8hB
 __objc_data
 __DATA
-0XB
+@hB
 P
-0XB
+@hB
 __data
 __DATA
 __thread_vars
 __DATA
-0.K
-0.K
+@>K
+@>K
 __thread_bss
 __DATA
-P.K
+`>K
 __bss
 __DATA
-P2K
+`BK
 __common
 __DATA
-pK
 H
 __LINKEDIT
-0K
+@K
 
 @
 @loader_path/gameoverlayui.dylib
 "
-0K
+@K
 P
-_
+b
+9$
 
 8
 @loader_path/libtier0_s.dylib
@@ -142,7 +131,7 @@ h
 8
 /usr/lib/libobjc.A.dylib
 &
-@E
+HE
 )
 C
 14CParentalCache
@@ -712,6 +701,38 @@ A
 1
 /
 N6google8protobuf2io14ErrorCollectorE
+@
+@
+@
+@
+@
+@
+@
+@
+@
+h
+H
+H
+H
+H
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
 >!h
 ?"N
 #;
@@ -8564,6 +8585,7 @@ https://media.st.dl.pinyuncloud.com/store
 https://steamcdn-a.akamaihd.net/store
 ://
 steam://
+steamlink://
 steamchina://
 steambeta://
 steamchinabeta://
@@ -9633,8 +9655,8 @@ developer
 Steam pid that launched us
 VGUI_Application_001
 OK
-Feb 12 2021
-15:26:24
+Feb 24 2021
+10:06:46
 crashhandler003
 gameoverlayui
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/overlay/gameoverlayui/main.cpp
@@ -10182,7 +10204,6 @@ uint64
 int32
 fixed64
 fixed32
-message
 bytes
 uint32
 enum
@@ -10613,7 +10634,6 @@ Tokenizer::ParseFloat() passed text that could not have been tokenized as a floa
 Tokenizer::ParseStringAppend() passed text that could not have been tokenized as a string:
 \U%08x
 OPENSSL_ia32cap
-%lli
 Bogus message code %d
 ALIGN_TYPE is wrong, please fix
 MAX_ALLOC_CHUNK is wrong, please fix
@@ -11013,6 +11033,8 @@ Out of Memory
 libpng error: %s
 undefined
 libpng warning: %s
+result
+message
 %lld
 Assertion Failed: !"enum ELanguage order mismatched from Language_t s_LanguageNames, fix it!"
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/language.cpp
@@ -11638,8 +11660,8 @@ Win
 HotKeyEntry
 resource/icon_clear_field
 HotkeyEntryClearButton
--fast-overlay-html
-Uses new faster overlay HTML path
+-toggle-overlay-html-mode
+Disables new faster overlay HTML path (or enables if on a branch it's not on by default)
 -html-perf-monitor
 Draws html perf data
 resource/webkit.css
@@ -11717,7 +11739,6 @@ isredirect
 findcount
 findactive
 DismissJSDialog
-result
 profile_on triggered by F1
 profile_off triggered by F2
 SDL_VIDEO_MINIMIZE_ON_FOCUS_LOSS
@@ -13029,6 +13050,7 @@ Denied due to community cooldown
 No launcher specified
 Must agree to SSA
 Client no longer supported
+The current Steam realm does not match the requested resource
 Invalid
 Public
 Beta
@@ -13297,9 +13319,8 @@ Nov
 Dec
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
-Z$
+ml&
 6
-J$
 $
 $
 $
@@ -13307,49 +13328,39 @@ $
 p
 p
 0
-A
-5
-C#
-n#
+#
+EA
+N#
+|I
+"
+#
 #
 #
 "
 0
 p
+N4
 #
 #
-#
-#
-#
-#
-!4
-"
-E"
-@
-@
-@
-@
-"
-"
-"
+4
 !
-!
-a3
--"
+G"
+@
+@
+@
 "
 "
-%!
+"
+J"
+'!
 I
 k
 !
+!
 d
 !
-!
-!
-!
-J!
-`?
-v
+.G
+x
 
 
 
@@ -13357,10 +13368,12 @@ v
 
 
 5
+5
+5
 p
 0
 0
-,
+.
 p
 0
 0
@@ -13393,34 +13406,40 @@ p
 @
 =
 0
-}?
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-D>
-f@
+F
+%
+%
+%
+U@
 Hi
+&E
+4
+4
+FE
 E
+E
+E
+E
+E
+E
+E
+E
+E
+E
+E
+E
+4
+4
+?<
 
-X@
+<
+<
+`@
 0
 p
 I
 I
-E/
-JD
-;
-D
+5
 $
 @
 @
@@ -13432,7 +13451,14 @@ $
 A
 Hc
 =
-1
+A
+A
+A
+A
+A
++A
+@
+@
 Hc
 ?
 ?
@@ -13474,8 +13500,6 @@ HcU
 #
 i[
 ~
-'
-'
 B
 ?
 U
@@ -13628,61 +13652,68 @@ P
 "
 3
 D
-?7
+q7
+:7
+7
 7
 @
-='
-!'
-'
-'
+f'
+G'
+J5
+&
+w4
+=
+8%
 
-w$
-L95@q3
-5$
-43
+
+m3
+%
+L95ps3
+#3
+{$
 d
-.
-.
 
 
 
+2
+2
 2
 
 
 
 
-
-
-/0
-
-
+'
+'
+'
+'
+-
+-
 d
 &
 &
 d
--
--
 t=
 =
 =
-l,
 @
-Y,
-"
-,
-"
-"
+:,
+T.
 uV%
+"
+"
+"
 
+"
 
-]+
 E
+e+
 >
 
+,
+,
 
 
 @
-"
 @
 @
 &
@@ -13699,6 +13730,7 @@ E
 @
 @
 =
+@*
 
 
 @
@@ -13728,14 +13760,13 @@ E
 .
 .
 d
-
 d
 d
+d(
 =
-M(
+HcKS(
 
 =
-=
 @
 =
 @
@@ -13748,14 +13779,10 @@ M(
 @
 @
 @
-1'
+n'
 0
-s'
 E
 }
-d'
-^'
-'
-'
+Hc5+`'
 $
 p

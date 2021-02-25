@@ -1444,7 +1444,6 @@ LOCK_EX
 LOCK_SH
 fcntl failed to set F_NOCACHE
 rb
-%s/%s
 unReadAheadChunkSize should be zero when using bUnbuffered = true
 Assertion Failed: unReadAheadChunkSize < INT32_MAX/2
 unsupported flags 0x%x passed to CFileReader::BOpenFile
@@ -1453,6 +1452,7 @@ Unbuffered read should be called with pvData buffer that is aligned to system pa
 Unbuffered read should be called with cubData length that is aligned to system page size (4kb)
 Seeking to a position which is not sector aligned will break unbuffered io
 ..
+%s/%s
 Assertion Failed: !"Failed to CFStringCreateWithCString watcher path"
 m_listChangedFiles
 Assertion Failed: cbActual < (uint32)nBufSizeWithTerminator

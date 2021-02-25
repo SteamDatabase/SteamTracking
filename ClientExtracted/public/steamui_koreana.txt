@@ -21,7 +21,7 @@
 "SteamUI_ConvertExistingInfo" "설치된 기존 게임을 변환합니다. 약간의 시간이 걸릴 수 있습니다."
 "SteamUI_ConversionCompleteInfo" "Steam 미리받기가 완료되었습니다."
 
-"SteamUI_ConvertExistingStatus1" "%s1 개의 파일을 미리받는 중"
+"SteamUI_ConvertExistingStatus1" "%s1 파일 미리받는 중"
 "SteamUI_ConvertExistingStatus2" "%s1 개의 파일을 미리받는 중.."
 "SteamUI_ConvertExistingStatus3" "%s1 개의 파일을 미리받는 중..."
 
@@ -438,7 +438,7 @@
 "Steam_DPIScaling_Option"				"텍스트와 아이콘을 모니터 크기에 맞게 확대하기 (다시 시작 필요)"
 "Steam_LaunchSteamOnStartup_Option"		"컴퓨터를 시작할 때 Steam 자동 실행"
 "Steam_BPMOnStartup_Option"				"Big Picture 모드로 Steam 시작"
-"Steam_ShowUrlBar_Option"				"Steam URL 주소 표시줄 보기"
+"Steam_ShowUrlBar_Option"				"웹 주소 표시줄 보기"
 "Steam_UseDirectWrite_Option"			"글자를 부드럽게 하고 자연스러운 간격 조절을 위해 DirectWrite 사용"
 "Steam_UseH264HWAccel_Option"			"지원 가능한 경우 하드웨어 디코딩 활성화 (다시 시작 필요)"
 
@@ -1152,7 +1152,7 @@
 "Steam_SubscriptionApprovalCode" "승인"
 "Steam_SubscriptionConfirmation" "확인 코드"
 
-"Steam_TroubleshooterURL_CDKey" "http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=276"
+"Steam_TroubleshooterURL_CDKey" "https://support.steampowered.com/kb/1968-HKLX-7538/"
 
 "Steam_SubscriptionSuccess_CDKey_Headline" "등록되었습니다!"
 "Steam_SubscriptionSuccess_CDKey" "제품 활성화 코드가 성공적으로 등록되었습니다. 하단에 기재된 제품들이 Steam 계정에 영구적으로 등록됩니다. 방금 Steam에 등록한 항목에 접근하려면 해당 계정으로 로그인해야 합니다.\n\n이후 참조할 수 있도록 거래 내역 영수증을 인쇄해 두십시오."
@@ -1222,7 +1222,7 @@
 "Steam_Subscription_HardwarePromo_Used_Headline" "중복 등록"
 "Steam_Subscription_HardwarePromo_Used" "이 요청은 다른 Steam 계정으로 이미 등록되어 있습니다."
 "Steam_PurchaseError_HardwarePromoIneligible" "죄송합니다. 이 컴퓨터는 %subscription% 요청에 적합한 시스템 요구 사항을 충족하지 못하였습니다."
-"Steam_HardwarePromo_SupportURL" "http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=628"
+"Steam_HardwarePromo_SupportURL" "https://support.steampowered.com/kb/2734-UDFX-1098/"
 
 "Steam_Subscription_HardwarePromo_AlreadyPurchased_Headline" "이미 소유한 제품"
 "Steam_Subscription_HardwarePromo_AlreadyPurchased" "이 Steam 계정은 이미 이 요청에 포함된 제품을 소유하고 있습니다.\n게임 라이브러리에서 해당 제품을 이용할 수 있습니다."
@@ -1498,7 +1498,8 @@
 "Steam_DutyNote"	"사은품은 미국에서 선적됩니다. 귀하는 이에 부과되는 모든 관세를 부담하게 됩니다."
 
 "Steam_AgreeToTheTerms"		"Steam 구독 동의서의"
-"Steam_SteamSubscriberAgreement"	"Steam 이용 약관"
+"Steam_SteamSubscriberAgreement"	    "Steam 이용 약관"
+"Steam_SteamSubscriberAgreement_china"	"Steam China 사용권 계약"
 "Steam_ComplianceRequired_Title"	"Steam - 주의"
 "Steam_ComplianceRequired_Info"		"계속 진행하려면 Steam 이용 약관의 모든 조항에 동의해야 합니다."
 
@@ -1617,9 +1618,10 @@
 "Steam_ConnectionFailureTitle"	"연결 실패"
 "Steam_ConnectionFailureDetail"	"네트워크에 연결할 수 없습니다. 인터넷 연결 문제가 원인일 수 있습니다."
 "Steam_ConnectionSupportLink"	"연결 문제 해결"
-"Steam_ConnectionSupportURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=11"
+"Steam_ConnectionSupportURL"	"https://support.steampowered.com/kb/1456-EUDN-2493/"
 
 "SteamUI_NetworkTroubleshootingTips"	"네트워크 문제 해결 팁"
+"SteamUI_NetworkTroubleshootingTips_URL"	"https://support.steampowered.com/kb_article.php?ref=1456-EUDN-2493"
 
 
 "SteamUI_SSA_Agree"				"이 약관를 처음부터 끝까지 숙독해 주십시오. 계속 진행하려면 Steam 이용 약관의 모든 조항에 동의해야 합니다."
@@ -1683,6 +1685,16 @@
 "steam_menu_downloads"	"다운로드"
 "steam_menu_account"	"Steam"
 "steam_menu_window" "창"
+"steam_menu_preferences"	"환경 설정..."
+"steam_menu_services"	"서비스"
+"steam_menu_hidesteam"	"Steam 숨기기"
+"steam_menu_hideothers"	"기타 숨기기"
+"steam_menu_showall"	"모두 보기"
+"steam_menu_quitsteam"	"Steam 종료"
+"steam_menu_window_close"	"닫기"
+"steam_menu_window_minimize"	"최소화"
+"steam_menu_window_zoom"	"확대"
+"steam_menu_window_bringalltofront"	"앞으로 모두 가져오기"
 "steam_menu_games_details"	"게임 정보"
 "steam_menu_games_list"		"게임 목록"
 "steam_menu_games_grid"		"게임 그리드"
@@ -2387,16 +2399,16 @@
 "Steam_RegionRestricted_Title"			"Steam - 이용할 수 없는 게임"
 "Steam_RegionRestrictedPurchase_Info"				"이 게임은 특정 지역에서만 유효한 제품 코드로 활성화되었습니다. 현재 사용자는 해당 지역에 있지 않으므로, %game% 게임을 실행 할 수 없습니다."
 "Steam_RegionRestricted_SupportLink"		"자세한 내용은 Steam 고객 지원 웹사이트를 방문하십시오."
-"Steam_RegionRestrictedPurchase_SupportURL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=461"
+"Steam_RegionRestrictedPurchase_SupportURL"		"https://support.steampowered.com/kb/1266-QFZC-2141/"
 "Steam_RegionRestricted_Info"				"%game% 게임은 사용자의 지역에서 사용할 수 없습니다."
-"Steam_RegionRestricted_SupportURL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=461"
+"Steam_RegionRestricted_SupportURL"		"https://support.steampowered.com/kb/1266-QFZC-2141/"
 
 "Steam_CountryRestricted_Info"				"사용자의 국가에서는 이 등록 코드를 사용할 수 없습니다."
-"Steam_CountryRestricted_SupportURL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=488"
+"Steam_CountryRestricted_SupportURL"		"https://support.steampowered.com/kb/1266-QFZC-2141/"
 
 "Steam_RegionRestrictedCode_Title"		"Steam - 이용할 수 없는 제품"
 "Steam_RegionRestrictedCode_Info"			"현재 지역에서 사용할 수 없는 제품 코드입니다."
-"Steam_RegionRestrictedCode_SupportURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=463"
+"Steam_RegionRestrictedCode_SupportURL"	"https://support.steampowered.com/kb/1266-QFZC-2141/"
 
 "Steam_FragmentationBad_Title"			"Steam - 디스크 조각 경고"
 "Steam_FragmentationBad_Info"				"게임 파일에 디스크 조각이 너무 많습니다. 불러오는 시간이 오래 걸리고 게임 성능이 저하될 수 있습니다. \n\nSteam에서 게임 파일을 최적화할 수 있습니다.\n"
@@ -2767,7 +2779,7 @@
 "Steam_GuestPassAccept_HeadlineServiceUnavailable$type=guestpass"	"게스트 패스 승인 실패"
 "Steam_GuestPassAccept_TextServiceUnavailable"	"사용 중인 컴퓨터가 Steam 서버에 접속할 수 없거나 일시적으로 서비스를 사용할 수 없는 상태입니다. 나중에 다시 시도하십시오."
 "Steam_GuestPassAccept_LinkTextServiceUnavailable" 	"선물에 관한 문제를 해결하려면 이 지원 페이지를 참조하십시오."
-"Steam_GuestPassAccept_LinkURLServiceUnavailable"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=550"
+"Steam_GuestPassAccept_LinkURLServiceUnavailable"	"https://support.steampowered.com/kb/6262-QXCN-0755/"
 
 "Steam_GuestPassAccept_HeadlineRevoked$type=guestpass"	"이 게스트 패스는 취소되었습니다."
 "Steam_GuestPassAccept_TextRevoked$type=guestpass"	"이 게스트 패스를 보낸 친구가 이를 취소하고 새로운 교환 코드를 다시 보냈습니다. 새 버전이 도착하지 않았다면 업데이트된 코드가 있는 다른 이메일을 받게 될 것입니다."
@@ -2786,7 +2798,7 @@
 "Steam_GuestPassRedeemed_HeadlineServiceUnavailable$type=guestpass"	"게스트 패스 활성화 실패"
 "Steam_GuestPassRedeemed_TextServiceUnavailable"	"사용 중인 컴퓨터가 Steam 서버에 접속할 수 없거나 일시적으로 서비스를 사용할 수 없는 상태입니다. 나중에 다시 시도하십시오."
 "Steam_GuestPassRedeemed_LinkTextServiceUnavailable"	"게스트 패스에 대한 문제를 해결하려면 이 지원 페이지를 참조하십시오."
-"Steam_GuestPassRedeemed_LinkURLServiceUnavailable"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=550"
+"Steam_GuestPassRedeemed_LinkURLServiceUnavailable"	"https://support.steampowered.com/kb/6262-QXCN-0755/"
 
 "Steam_GuestPassRedeemed_HeadlineLimitExceeded"	"이 제품에 대한 게스트 패스를 이미 사용했습니다."
 "Steam_GuestPassRedeemed_TextLimitExceeded"	"%package%의 게스트 패스를 이미 받았기 때문에 더 받을 수 없습니다. 이 게임을 계속 플레이하려면 정품을 구매해 주시기 바랍니다."
@@ -2864,8 +2876,6 @@
 "Steam_SubscriptionCancelled_PuchaseDeclined_ContactProvider"	"%subscription%에 대한 구매가 완료되지 않았습니다.\n\n%provider% 회사가 사용자의 %provider% 계정에 문제가 있다고 보고했습니다. %provider%에 연락하여 지원을 받거나 '뒤로'를 눌러 다른 결제 수단을 선택하세요."
 "Steam_SubscriptionCancelled_PuchaseDeclined_AcctNotVerified"	"%subscription%에 대한 구매가 완료되지 않았습니다.\n\n구매를 완료하기 위해서는 %provider% 계정이 확인되거나 잔액이 더 많아야 한다고 %provider% 회사에서 보고했습니다. %provider%에 연락하여 지원을 받거나 '뒤로'를 눌러 다른 결제 수단을 선택하세요."
 
-"Steam_TroubleshooterURL_VfyAcct" "http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=687"
-
 "Steam_PaymentMethodNotAvailable_Generic" "죄송합니다. 선택한 결제 수단은 현재 제공되지 않습니다."
 
 "Steam_LaunchEULA_Title"			"%game%"
@@ -2875,11 +2885,12 @@
 "Steam_LaunchEULA_Text"			"이 동의서를 처음부터 끝까지 숙독해 주십시오. %game% 최종 사용자 사용권 계약(EULA)의 내용에 동의해야 합니다."
 
 "Steam_GuestPasses_LinkText"		"선물 및 게스트 패스 상세 정보"
-"Steam_GuestPasses_LinkURL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=549"
+"Steam_GuestPasses_LinkURL"		"https://support.steampowered.com/kb/6262-QXCN-0755/"
 
 "Steam_AlreadyRunningError_Title"			"Steam - 시작할 수 없습니다."
 "Steam_AlreadyRunningError_Info"			"이 시스템에서 이미 다른 사용자 계정으로 Steam이 실행 중인 경우에는 다시 시작하기 전에 다른 사용자 계정의 Steam을 종료하십시오."
 "Steam_AlreadyRunningError_SupportLink"	"자세한 내용은 Steam 고객지원 사이트를 참조하십시오."
+"Steam_AlreadyRunningError_SupportLink_URL"	"http://support.steampowered.com/kb_article.php?ref=8787-WYIL-1543"
 "Steam_AlreadyRunningError_SupportTicket"	"가능한 한 빨리 Steam 고객지원으로 문의하십시오."
 
 "Steam_LoggedInElsewhere_Title"		"Steam - 다른 사용자가 로그인"
@@ -2911,6 +2922,7 @@
 "Steam_GamesDialog_RightClick_RemoveFromUnblockedGames"		"가족 게임에서 제거하기"
 
 "steam_menu_checkforupdates"						"Steam 클라이언트 업데이트 확인"
+"steam_menu_checkforupdates_osx"					"업데이트 확인..."
 "steam_checkforupdates_title"						"Steam - 자동 업데이트"
 "steam_ClientUpdateAvailableDownloading"			"Steam 클라이언트 업데이트가 있습니다. 파일을 다운로드하는 중입니다."
 "steam_ClientUpdateAvailableDownloaded"			"Steam 클라이언트 업데이트를 다운로드했습니다."
@@ -3353,7 +3365,7 @@ Windows에 관리자로 로그인해야 합니다.
 "Steam_InstallAborted_InfoAppNoDemo"		"%game% 게임은 체험판이므로 설치할 수 없으며 현재 정식판을 소유하고 있습니다. 정식판으로 게임을 설치하세요."
 
 "Steam_Startup_SteamChinaRequiredTitle"					"Steam China가 필요합니다"
-"Steam_Startup_GetSteamChina"						"%gamename% 게임은 Steam China를 통해서만 플레이 가능합니다. 아래 링크로 이동하여 클라이언트를 설치하세요."
+"Steam_Startup_GetSteamChina"						"%gamename% 게임은 이제 반드시 Steam China 클라이언트에서 실행해야 합니다.\n\n%gamename% 게임 계정으로 로그인하여 게임 진행률, 아이템, 캐릭터 등급, 포인트 등을 이전할 수 있습니다.\n\n"
 "Steam_Startup_RunSteamChina"						"이제 %gamename% 게임은 Steam China를 통해 플레이할 수 있습니다. 게임을 가져오려면 Steam China를 실행하세요."
 "Steam_Startup_SteamChinaImportedUninstall"			"%gamename% 게임을 Steam China로 가져왔습니다. 이제 시작 관리자를 제거해도 됩니다."
 "Steam_Startup_LauncherDeprecated"					"%gamename% 게임은 이제 Steam China에서 실행됩니다. 이 설치는 더 이상 지원되지 않으며 종료됩니다."
@@ -3361,6 +3373,7 @@ Windows에 관리자로 로그인해야 합니다.
 "Steam_Startup_ImportGameFromLauncherMsg"			"%gamename% 게임을 Steam China로 가져올까요? 가져오기가 끝나면 이전 시작 관리자를 제거할 수 있습니다."
 
 "Steam_Download_SteamChina"							"Steam China 다운로드"
+"Steam_Get_SteamChina"								"Steam China 다운로드"
 
 "Steam_ValidateGame_GameRunning"	"로컬 파일을 확인하기 전에 실행 중인 게임 또는 도구를 모두 종료하세요."
 
@@ -3369,7 +3382,7 @@ Windows에 관리자로 로그인해야 합니다.
 "Steam_LibrariesLabel"	"콘텐츠 라이브러리"
 "Steam_DownloadRestrictionsLabel"	"다운로드 제한"
 
-"Steam_ServerBrowserPingRateLabel"	"게임 내 서버 브라우저: 최대 핑 / 지연 시간"
+"Steam_ServerBrowserPingRateLabel"	"서버 브라우저 핑 및 지연 시간"
 "Steam_ServerBrowserPingRateInfo"	"게임 서버를 검색하는 도중 연결 관련 문제가 발생한다면 해당 값을 낮춘 후 다시 시도해 보십시오."
 "Steam_ServerBrowserPingRateDefault"	"자동(%PingsPerMin%)"
 
@@ -3492,6 +3505,7 @@ Windows에 관리자로 로그인해야 합니다.
 "Steam_RecoverLocked_UseCode" "Steam 고객지원에서 온 메일을 받았고 승인 코드를 입력할 준비가 되었습니다."
 "Steam_RecoverLocked_MustRecover" "무슨 이메일이요? 아무 것도 안 왔는데요...."
 "Steam_RecoverLocked_WhyIsThisHappening" "왜 이런 것을 하는 거죠?"
+"Steam_RecoverLocked_WhyIsThisHappening_URL" "https://support.steampowered.com/kb_article.php?ref=4020-ALZM-5519"
 "Steam_RecoverLocked_EnterCode" "내 승인 코드:"
 "Steam_RecoverLocked_EnterCodeDetails" "일단 코드가 확인되면, Steam Guard는 이 컴퓨터를 귀하의 계정에 접근할 수 있는 기기의 목록에 추가합니다."
 "Steam_RecoverLocked_WrongCode" "죄송합니다, 올바른 코드가 아닙니다."
@@ -3505,7 +3519,9 @@ Windows에 관리자로 로그인해야 합니다.
 "Steam_RecoverLocked_StartRecovery2" "귀하에게 Steam 계정이 얼마나 소중한지 알고 있기 때문에, 저희는 귀하의 계정이 다른 사람에게 넘어가지 않도록 최선을 다하겠습니다."
 "Steam_RecoverLocked_StartRecovery3" "문제를 해결하기 위해 Steam 고객지원으로 문의하십시오. 저희는 고객님의 계정 접속에 관련된 정당한 요청에 대하여 도움을 드리는 것을 최우선순위로 여기고 있습니다."
 "Steam_RecoverLocked_RecoverySupportLink" "Steam 고객지원에 문의"
+"Steam_RecoverLocked_RecoverySupportLink_URL" "https://support.steampowered.com"
 "Steam_RecoverLocked_LearnMore" "Intel® Identity Protection Technology에 대해 더 알아보기"
+"Steam_RecoverLocked_LearnMore_URL" "https://support.steampowered.com/kb_article.php?ref=9400-IPAX-9398&auth=e39b5c227cffc8ae65414aba013e5fef"
 "Steam_RecoverLocked_CannotAccess" "죄송합니다, 해당 계정은 인증되지 않은 컴퓨터에서는 사용할 수 없습니다."
 "Steam_RecoverLocked_Success" "성공!"
 "Steam_RecoverLocked_SuccessDetails" "Steam Guard가 이 컴퓨터를 귀하의 계정에 접근할 수 있는 기기의 목록에 추가했습니다. 이제 앞으로도 이 컴퓨터에서 귀하의 계정에 접근할 수 있습니다."
@@ -3828,7 +3844,6 @@ Windows에 관리자로 로그인해야 합니다.
 "steam_menu_friends" "친구"
 "steam_menu_servers" "서버"
 "steam_menu_settings" "설정"
-"steam_menu_preferences" "환경 설정"
 "steam_menu_view_friends" "친구 목록 보기(%friends_online% 온라인)"
 "steam_menu_view_players" "플레이어"
 "steam_menu_add_friend" "친구 추가"
@@ -4569,6 +4584,7 @@ Windows에 관리자로 로그인해야 합니다.
 "Steam_Settings_Streaming_SoftwareEncodingThreads_7"	"7"
 "Steam_Settings_Streaming_SoftwareEncodingThreads_8"	"8"
 "Steam_Settings_Streaming_P2PScope_Description"	"직접 연결 허용(IP 공유)"
+"Steam_Settings_Streaming_P2PScopeAutomatic"	"자동(활성화됨)"
 "Steam_Settings_Streaming_P2PScopeDisabled"	"사용 안 함"
 "Steam_Settings_Streaming_P2PScopeOnlyMe" "내 장치"
 "Steam_Settings_Streaming_P2PScopeEveryone" "모든 장치"
@@ -4593,6 +4609,7 @@ Windows에 관리자로 로그인해야 합니다.
 "Steam_Settings_Streaming_EnableTouchController"	"터치 컨트롤 사용"
 
 "Steam_Settings_Streaming_StreamingSupport"	"고객지원 정보 보기"
+"Steam_Settings_Streaming_StreamingSupportLink"	"https://support.steampowered.com/kb_article.php?ref=3629-RIAV-1617"
 
 "Steam_Settings_Streaming_Connected" "연결된 컴퓨터"
 "Steam_Settings_Streaming_Paired" "페어링된 기기"
@@ -4603,6 +4620,15 @@ Windows에 관리자로 로그인해야 합니다.
 
 "Steam_Settings_Streaming_PIN_Title" "Steam Link 보안 코드 설정"
 "Steam_Settings_Streaming_PIN_Text" "숫자로 된 PIN 코드를 설정하세요. 이 컴퓨터에서 스트리밍할 때마다 Steam Link에 PIN 코드를 입력해야 합니다."
+
+"Steam_Settings_ShareIPNetworking_Label" "Steam 네트워크"
+"Steam_Settings_ShareIPNetworking_Info" "더 빠른 연결을 위해 Steam 네트워크를 사용하는 게임이 내 IP 주소를 공유하도록 허용합니다"
+"Steam_Settings_ShareIPNetworking_Default" "기본값"
+"Steam_Settings_ShareIPNetworking_Always" "항상"
+"Steam_Settings_ShareIPNetworking_FriendsOnly" "친구만"
+"Steam_Settings_ShareIPNetworking_Never" "사용 안 함"
+"Steam_Settings_ShareIPNetworking_URL" "더 알아보기"
+"Steam_Settings_ShareIPNetworking_URLText" "https://support.steampowered.com/kb_article.php?ref=9929-UAFN-9329"
 
 "SteamUI_StreamingIntro_Title"		"Steam Remote Play에 오신 것을 환영합니다"
 "SteamUI_StreamingIntro"			"이 게임을 다른 컴퓨터에서 실행하고, 여기에서 Steam Remote Play를 통해 플레이하려고 합니다."
@@ -4745,4 +4771,9 @@ Windows에 관리자로 로그인해야 합니다.
 
 "SteamUI_RunningConflictingSoftware" "충돌하는 소프트웨어 발견됨"
 "SteamUI_RunningIncompatibleTcpService" "Steam 프로세스 안에서 호환되지 않는\n%incompatdll% 버전이 발견되었습니다.(%incompatname%와/과 관련)\n\nSteam 또는 게임을 실행하는데 크래시 또는 네트워크 느림 형상을\n경험하고 계시면 이 소프트웨어를 업데이트하시던가 삭제하시는 것을 추천합니다."
+
+"Steam_XboxDriverInstall_Title"		"Xbox 드라이버 설치"
+"Steam_XboxDriverInstall_Success"	"드라이버가 성공적으로 업데이트되었습니다. 컴퓨터를 다시 시작하면 활성화됩니다."
+"Steam_XboxDriverInstall_ServiceFailure"	"드라이버 업데이트에 실패했습니다. Steam이 일반 사용자 계정으로 실행되고 있으며, Steam 서비스가 최신 버전으로 실행 중입니까?"
+"Steam_XboxDriverInstall_Failure"	"드라이버 업데이트에 실패하였습니다. 오류 = %error%"
 }

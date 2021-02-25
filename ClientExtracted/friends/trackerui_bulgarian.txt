@@ -170,8 +170,6 @@
 "Friends_InvitationBlocking"		"Блокирате всякаква комуникация с този потребител. Преди да комуникирате с него, първо го деблокирайте, като посетите профила му в Steam общността."
 
 "Friends_DontGiveOutPassword"			"Никога не казвайте паролата си на никого.\n"
-"Friends_DontGiveOutPassword_URL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=301"
-
 "Friends_ChatFilterBlockWarning"		"Беше отстранена връзка от следното съобщение заради Вашата сигурност."
 
 "Friends_invalidname_title"			"Приятели — Резервирано име"
@@ -556,6 +554,7 @@
 "Friends_SteamCommunity"	"Steam общност"
 "Limited_Explanation"	"Акаунтът Ви не покрива изискванията, за да използвате тази функция."
 "Limited_ForDetails"	"Посетете Steam поддръжката за още информация."
+"Limited_ForDetails_URL"	"https://help.steampowered.com/wizard/HelpWithLimitedAccount"
 
 "Friends_Chat_RoomModerated_Entry"		"Чат стаята е в режим „само за офицери“. Променил: %member_making_change%.\n"
 "Friends_Chat_RoomUnmoderated_Entry"		"В чат стаята вече могат да пишат всички. Променил: %member_making_change%.\n"
@@ -687,6 +686,7 @@
 "Broadcast_FirstTime_PermissionHeader" "Отделете минутка, за да зададете предпочитанията си…"
 "Broadcast_FirstTime_DesktopOnly" "По подразбиране, само съдържанието от играта Ви може да бъде гледано. Работният Ви плот няма да бъде предаван."
 "Broadcast_FirstTime_FAQ" "Прочетете ЧЗВ за Steam „Предаване“"
+"Broadcast_FirstTime_FAQLink" "https://support.steampowered.com/kb_article.php?ref=6730-TOAK-6497"
 "Broadcast_FirstTime_Title" "Steam „Предаване“"
 "Broadcast_FirstTime_OK" "Добре"
 "Broadcast_FirstTime_Cancel" "Отказ"

@@ -432,7 +432,7 @@
 "Steam_DPIScaling_Option"				"Увеличить текст и значки в соответствии с размером монитора (требуется перезапуск)"
 "Steam_LaunchSteamOnStartup_Option"		"Автоматически запускать при включении компьютера"
 "Steam_BPMOnStartup_Option"				"Запускать Steam в режиме «Big Picture»"
-"Steam_ShowUrlBar_Option"				"По возможности отображать адресную строку"
+"Steam_ShowUrlBar_Option"				"По возможности отображать адресные строки"
 "Steam_UseDirectWrite_Option"			"Включить DirectWrite для улучшенного отображения шрифта"
 "Steam_UseH264HWAccel_Option"			"Аппаратное декодирование видео, если возможно (необходим перезапуск)"
 
@@ -1146,7 +1146,7 @@
 "Steam_SubscriptionApprovalCode" "Авторизация"
 "Steam_SubscriptionConfirmation" "Код подтверждения"
 
-"Steam_TroubleshooterURL_CDKey" "http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=276"
+"Steam_TroubleshooterURL_CDKey" "https://support.steampowered.com/kb/1968-HKLX-7538&l=russian/"
 
 "Steam_SubscriptionSuccess_CDKey_Headline" "Активация завершена!"
 "Steam_SubscriptionSuccess_CDKey" "Цифровой ключ вашего продукта был успешно активирован. Этот продукт или продукты, перечисленные ниже, теперь навсегда ассоциирован(ы) с вашим аккаунтом Steam. Вам нужно будет заходить в систему с этого аккаунта, чтобы получать доступ к продуктам, которые вы только что активировали.\n\nРаспечатайте квитанцию об операции, чтобы всегда иметь под рукой данные об аккаунте для использования в будущем."
@@ -1216,7 +1216,7 @@
 "Steam_Subscription_HardwarePromo_Used_Headline" "Двойная регистрация"
 "Steam_Subscription_HardwarePromo_Used" "Это предложение уже было активировано с другого аккаунта Steam."
 "Steam_PurchaseError_HardwarePromoIneligible" "Приносим свои извинения — этот компьютер не удовлетворяет требованиям, предъявляемым предложением %subscription%."
-"Steam_HardwarePromo_SupportURL" "http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=628"
+"Steam_HardwarePromo_SupportURL" "https://support.steampowered.com/kb/2734-UDFX-1098&l=russian/"
 
 "Steam_Subscription_HardwarePromo_AlreadyPurchased_Headline" "У вас уже есть этот продукт"
 "Steam_Subscription_HardwarePromo_AlreadyPurchased" "На текущем аккаунте Steam уже есть продукты из этого предложения.\nИх можно найти в вашей библиотеке клиента Steam."
@@ -1491,7 +1491,8 @@
 "Steam_DutyNote"	"Товары поставляются из США. Ответственность за выплату всех действующих таможенных пошлин возлагается на покупателя."
 
 "Steam_AgreeToTheTerms"		"Я принимаю условия соглашения"
-"Steam_SteamSubscriberAgreement"	"Соглашение подписчика Steam"
+"Steam_SteamSubscriberAgreement"	    "Соглашение подписчика Steam"
+"Steam_SteamSubscriberAgreement_china"	"Лицензионное соглашение Steam China"
 "Steam_ComplianceRequired_Title"	"Steam — Предупреждение"
 "Steam_ComplianceRequired_Info"		"Чтобы продолжить, необходимо принять условия соглашения подписчика Steam."
 
@@ -1610,9 +1611,10 @@
 "Steam_ConnectionFailureTitle"	"Сбой при подключении"
 "Steam_ConnectionFailureDetail"	"Steam не может подключиться к сети. Возможно, нарушено соединение с интернетом."
 "Steam_ConnectionSupportLink"	"Поиск и устранение неполадок при подключении"
-"Steam_ConnectionSupportURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=11"
+"Steam_ConnectionSupportURL"	"https://support.steampowered.com/kb/1456-EUDN-2493&l=russian/"
 
 "SteamUI_NetworkTroubleshootingTips"	"Советы по поиску и устранению неисправностей"
+"SteamUI_NetworkTroubleshootingTips_URL"	"https://support.steampowered.com/kb_article.php?ref=1456-EUDN-2493&l=russian"
 
 
 "SteamUI_SSA_Agree"				"Прочитайте данное соглашение полностью. Необходимо принять условия соглашения подписчика Steam, чтобы продолжить."
@@ -1676,6 +1678,16 @@
 "steam_menu_downloads"	"Загрузки"
 "steam_menu_account"	"Steam"
 "steam_menu_window" "Окно"
+"steam_menu_preferences"	"Настройки..."
+"steam_menu_services"	"Службы"
+"steam_menu_hidesteam"	"Скрыть Steam"
+"steam_menu_hideothers"	"Скрыть остальные"
+"steam_menu_showall"	"Показать все"
+"steam_menu_quitsteam"	"Выйти из Steam"
+"steam_menu_window_close"	"Закрыть"
+"steam_menu_window_minimize"	"Убрать в Dock"
+"steam_menu_window_zoom"	"Изменить масштаб"
+"steam_menu_window_bringalltofront"	"Все окна — на передний план"
 "steam_menu_games_details"	"Подробности об играх"
 "steam_menu_games_list"		"Список игр"
 "steam_menu_games_grid"		"Сетка игр"
@@ -2380,16 +2392,16 @@
 "Steam_RegionRestricted_Title"			"Steam — Игра недоступна"
 "Steam_RegionRestrictedPurchase_Info"				"Эта игра была активирована с помощью цифрового ключа продукта, который действует только для определенного географического региона. Поскольку вы находитесь в ином регионе, вы не сможете играть в %game%."
 "Steam_RegionRestricted_SupportLink"		"Подробности на сайте службы поддержки Steam"
-"Steam_RegionRestrictedPurchase_SupportURL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=461"
+"Steam_RegionRestrictedPurchase_SupportURL"		"https://support.steampowered.com/kb/1266-QFZC-2141&l=russian/"
 "Steam_RegionRestricted_Info"				"%game% не доступна для вашего региона."
-"Steam_RegionRestricted_SupportURL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=461"
+"Steam_RegionRestricted_SupportURL"		"https://support.steampowered.com/kb/1266-QFZC-2141&l=russian/"
 
 "Steam_CountryRestricted_Info"				"Эта игра недоступна для покупки в вашей стране."
-"Steam_CountryRestricted_SupportURL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=488"
+"Steam_CountryRestricted_SupportURL"		"https://support.steampowered.com/kb/1266-QFZC-2141&l=russian/"
 
 "Steam_RegionRestrictedCode_Title"		"Steam — Продукт недоступен"
 "Steam_RegionRestrictedCode_Info"			"Этот цифровой ключ продукта нельзя активировать в вашем регионе."
-"Steam_RegionRestrictedCode_SupportURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=463"
+"Steam_RegionRestrictedCode_SupportURL"	"https://support.steampowered.com/kb/1266-QFZC-2141&l=russian/"
 
 "Steam_FragmentationBad_Title"			"Steam — Предупреждение о дефрагментации"
 "Steam_FragmentationBad_Info"				"Уровень фрагментации игровых файлов слишком высок. Это может отразиться на скорости загрузки и производительности игры.  \n\nТеперь Steam может оптимизировать файлы вашей игры.\n"
@@ -2760,7 +2772,7 @@
 "Steam_GuestPassAccept_HeadlineServiceUnavailable$type=guestpass"	"При принятии гостевого пропуска произошел сбой"
 "Steam_GuestPassAccept_TextServiceUnavailable"	"Либо ваш компьютер не в состоянии связаться с серверами Steam, либо сервис Steam временно отключен. Повторите попытку позже."
 "Steam_GuestPassAccept_LinkTextServiceUnavailable" 	"Информация об устранении проблем, связанных с подарками, изложена на этой странице службы поддержки."
-"Steam_GuestPassAccept_LinkURLServiceUnavailable"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=550"
+"Steam_GuestPassAccept_LinkURLServiceUnavailable"	"https://support.steampowered.com/kb/6262-QXCN-0755&l=russian/"
 
 "Steam_GuestPassAccept_HeadlineRevoked$type=guestpass"	"Этот гостевой пропуск был отозван"
 "Steam_GuestPassAccept_TextRevoked$type=guestpass"	"Друг, приславший вам этот гостевой пропуск, отменил его и прислал повторно новый код получения. Если вам была отправлена новая версия, вы получите новое письмо по эл. почте с обновленным кодом."
@@ -2779,7 +2791,7 @@
 "Steam_GuestPassRedeemed_HeadlineServiceUnavailable$type=guestpass"	"При активации гостевого пропуска произошел сбой"
 "Steam_GuestPassRedeemed_TextServiceUnavailable"	"Либо ваш компьютер не в состоянии связаться с серверами Steam, либо сервис Steam временно отключен. Повторите попытку позже."
 "Steam_GuestPassRedeemed_LinkTextServiceUnavailable"	"Информация об устранении проблем, связанных с гостевыми пропусками изложена на этой странице службы поддержки."
-"Steam_GuestPassRedeemed_LinkURLServiceUnavailable"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=550"
+"Steam_GuestPassRedeemed_LinkURLServiceUnavailable"	"https://support.steampowered.com/kb/6262-QXCN-0755&l=russian/"
 
 "Steam_GuestPassRedeemed_HeadlineLimitExceeded"	"Вы уже использовали гостевой пропуск для этого продукта"
 "Steam_GuestPassRedeemed_TextLimitExceeded"	"Так как вы уже приняли гостевой пропуск для %package%, вы не можете принять еще один. Если вы хотите продолжать играть, рассмотрите возможность покупки игры."
@@ -2857,8 +2869,6 @@
 "Steam_SubscriptionCancelled_PuchaseDeclined_ContactProvider"	"Ваша покупка %subscription% не была завершена.\n\n%provider% сообщил о проблеме с вашим аккаунтом %provider%. Свяжитесь со службой поддержки %provider% или щелкните «Назад» для выбора другого способа оплаты."
 "Steam_SubscriptionCancelled_PuchaseDeclined_AcctNotVerified"	"Не удалось приобрести %subscription%.\n\n%provider% сообщает, что требуется подтвердить ваш аккаунт в системе %provider% или перечислить на него средства. Свяжитесь со службой поддержки %provider% или нажмите «Назад», чтобы выбрать другой способ оплаты."
 
-"Steam_TroubleshooterURL_VfyAcct" "http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=687"
-
 "Steam_PaymentMethodNotAvailable_Generic" "Извините, этот способ оплаты в данный момент недоступен."
 
 "Steam_LaunchEULA_Title"			"%game%"
@@ -2868,11 +2878,12 @@
 "Steam_LaunchEULA_Text"			"Прочитайте данное соглашение полностью. Необходимо принять все условия лицензионного соглашения с конечным пользователем, чтобы играть в %game%."
 
 "Steam_GuestPasses_LinkText"		"Подробная информация о подарках и гостевых пропусках"
-"Steam_GuestPasses_LinkURL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=549"
+"Steam_GuestPasses_LinkURL"		"https://support.steampowered.com/kb/6262-QXCN-0755&l=russian/"
 
 "Steam_AlreadyRunningError_Title"			"Steam — Не удается запустить"
 "Steam_AlreadyRunningError_Info"			"Сеанс Steam уже запущен на этом компьютере для учетной записи другого пользователя. Прежде чем попытаться запустить Steam повторно, закройте сеанс Steam для учетной записи другого пользователя."
 "Steam_AlreadyRunningError_SupportLink"	"Подробности на сайте службы поддержки Steam"
+"Steam_AlreadyRunningError_SupportLink_URL"	"http://support.steampowered.com/kb_article.php?ref=8787-WYIL-1543&l=russian"
 "Steam_AlreadyRunningError_SupportTicket"	"Пожалуйста, свяжитесь со службой поддержки Steam как можно скорее"
 
 "Steam_LoggedInElsewhere_Title"		"Steam — Осуществлен вход с другого компьютера"
@@ -2904,6 +2915,7 @@
 "Steam_GamesDialog_RightClick_RemoveFromUnblockedGames"		"Убрать из игр для семьи"
 
 "steam_menu_checkforupdates"						"Проверить наличие обновлений клиента Steam..."
+"steam_menu_checkforupdates_osx"					"Проверить обновления..."
 "steam_checkforupdates_title"						"Steam — Обновление клиента"
 "steam_ClientUpdateAvailableDownloading"			"Доступно обновление клиента Steam, идет его загрузка."
 "steam_ClientUpdateAvailableDownloaded"			"Загружено обновление клиента Steam."
@@ -3344,7 +3356,7 @@
 "Steam_InstallAborted_InfoAppNoDemo"		"Не удалось установить %game%, так как это демоверсия, а у вас уже есть полная версия. Установите полную версию игры."
 
 "Steam_Startup_SteamChinaRequiredTitle"					"Требуется Steam China"
-"Steam_Startup_GetSteamChina"						"%gamename% уже доступна в Steam China. Пожалуйста, перейдите по ссылке ниже, чтобы установить клиент игры."
+"Steam_Startup_GetSteamChina"						"Игра %gamename% теперь должна запускаться через новый клиент Steam China.\n\nВы можете войти со своего аккаунта %gamename% и перенести свой игровой процесс, предметы, уровень персонажа и очки.\n\n"
 "Steam_Startup_RunSteamChina"						"%gamename% уже доступна в Steam China. Пожалуйста, запустите Steam China, чтобы импортировать игру."
 "Steam_Startup_SteamChinaImportedUninstall"			"%gamename% импортирована в Steam China, вы можете спокойно удалить эту программу запуска."
 "Steam_Startup_LauncherDeprecated"					"%gamename% запущена в Steam China, эта установка больше не поддерживается и будет закрыта."
@@ -3352,6 +3364,7 @@
 "Steam_Startup_ImportGameFromLauncherMsg"			"Вы хотите импортировать %gamename% в Steam China? После этого вы спокойно сможете удалить устаревшую программу запуска."
 
 "Steam_Download_SteamChina"							"Загрузить Steam China"
+"Steam_Get_SteamChina"								"Загрузить Steam China"
 
 "Steam_ValidateGame_GameRunning"	"Закройте все запущенные игры и программы и только затем проверьте файлы игры."
 
@@ -3360,8 +3373,8 @@
 "Steam_LibrariesLabel"	"Библиотеки"
 "Steam_DownloadRestrictionsLabel"	"Ограничения на загрузку"
 
-"Steam_ServerBrowserPingRateLabel"	"Внутриигровой браузер серверов: макс. запросов в минуту"
-"Steam_ServerBrowserPingRateInfo"	"Если у вас возникают проблемы с соединением при просмотре игровых серверов, попробуйте уменьшить это значение."
+"Steam_ServerBrowserPingRateLabel"	"Запросов браузера серверов в минуту"
+"Steam_ServerBrowserPingRateInfo"	"Возникли проблемы с соединением при просмотре игровых серверов? Попробуйте уменьшить это значение."
 "Steam_ServerBrowserPingRateDefault"	"Автоматически (%PingsPerMin%)"
 
 "Steam_TextFilterSettingLabel"									"Фильтрация чата"
@@ -3483,6 +3496,7 @@
 "Steam_RecoverLocked_UseCode" "Я получил сообщение от службы поддержки Steam и готов ввести код допуска."
 "Steam_RecoverLocked_MustRecover" "Какое электронное сообщение? У меня его нет..."
 "Steam_RecoverLocked_WhyIsThisHappening" "Зачем это нужно?"
+"Steam_RecoverLocked_WhyIsThisHappening_URL" "https://support.steampowered.com/kb_article.php?ref=4020-ALZM-5519&l=russian"
 "Steam_RecoverLocked_EnterCode" "Мой код доступа:"
 "Steam_RecoverLocked_EnterCodeDetails" "После проверки кода ваш компьютер будет добавлен в список ПК, которым разрешен доступ к вашему аккаунту Steam."
 "Steam_RecoverLocked_WrongCode" "Извините, но он неверен."
@@ -3496,7 +3510,9 @@
 "Steam_RecoverLocked_StartRecovery2" "Мы знаем, что ваш аккаунт Steam важен для вас, и поэтому мы хотим помочь вам защитить его от посторонних лиц."
 "Steam_RecoverLocked_StartRecovery3" "Пожалуйста, обратитесь в службу поддержки Steam. Решение проблем с доступом к аккаунту — наша основная задача."
 "Steam_RecoverLocked_RecoverySupportLink" "Связаться со службой поддержки Steam"
+"Steam_RecoverLocked_RecoverySupportLink_URL" "https://help.steampowered.com/ru/"
 "Steam_RecoverLocked_LearnMore" "Узнать больше о технологии защиты личности Intel®"
+"Steam_RecoverLocked_LearnMore_URL" "https://support.steampowered.com/kb_article.php?ref=9400-IPAX-9398&auth=e39b5c227cffc8ae65414aba013e5fef&l=russian"
 "Steam_RecoverLocked_CannotAccess" "Извините, но для получения доступа к данному аккаунту с этого компьютера нужно дополнительное разрешение."
 "Steam_RecoverLocked_Success" "Готово!"
 "Steam_RecoverLocked_SuccessDetails" "Вы получили доступ к вашему аккаунту Steam с этого компьютера. Steam Guard добавил ваш компьютер в список ПК, которые могут в дальнейшем пользоваться данным аккаунтом."
@@ -3820,7 +3836,6 @@
 "steam_menu_friends" "Друзья"
 "steam_menu_servers" "Серверы"
 "steam_menu_settings" "Настройки"
-"steam_menu_preferences" "Настройки"
 "steam_menu_view_friends" "Список друзей (%friends_online% в сети)"
 "steam_menu_view_players" "Игроки"
 "steam_menu_add_friend" "Добавить друга..."
@@ -4561,6 +4576,7 @@
 "Steam_Settings_Streaming_SoftwareEncodingThreads_7"	"7"
 "Steam_Settings_Streaming_SoftwareEncodingThreads_8"	"8"
 "Steam_Settings_Streaming_P2PScope_Description"	"Прямое соединение (общий IP-адрес)"
+"Steam_Settings_Streaming_P2PScopeAutomatic"	"Автоматически (включено)"
 "Steam_Settings_Streaming_P2PScopeDisabled"	"Выключено"
 "Steam_Settings_Streaming_P2PScopeOnlyMe" "Мои устройства"
 "Steam_Settings_Streaming_P2PScopeEveryone" "Все устройства"
@@ -4585,6 +4601,7 @@
 "Steam_Settings_Streaming_EnableTouchController"	"Включить сенсорное управление"
 
 "Steam_Settings_Streaming_StreamingSupport"	"Просмотреть информацию о поддержке"
+"Steam_Settings_Streaming_StreamingSupportLink"	"https://support.steampowered.com/kb_article.php?ref=3629-RIAV-1617&l=russian"
 
 "Steam_Settings_Streaming_Connected" "Компьютер подключён"
 "Steam_Settings_Streaming_Paired" "Устройство привязано"
@@ -4595,6 +4612,15 @@
 
 "Steam_Settings_Streaming_PIN_Title" "Установка кода безопасности для Steam Link"
 "Steam_Settings_Streaming_PIN_Text" "Установите числовой ПИН-код, который необходимо будет ввести на Steam Link для трансляции с этого компьютера:"
+
+"Steam_Settings_ShareIPNetworking_Label" "Сетевые функции Steam"
+"Steam_Settings_ShareIPNetworking_Info" "Позволять играм, использующим сетевые функции Steam, делиться моим IP-адресом для более быстрого соединения"
+"Steam_Settings_ShareIPNetworking_Default" "По умолчанию"
+"Steam_Settings_ShareIPNetworking_Always" "Всегда"
+"Steam_Settings_ShareIPNetworking_FriendsOnly" "Только для друзей"
+"Steam_Settings_ShareIPNetworking_Never" "Никогда"
+"Steam_Settings_ShareIPNetworking_URL" "Узнать больше"
+"Steam_Settings_ShareIPNetworking_URLText" "https://support.steampowered.com/kb_article.php?ref=9929-UAFN-9329&l=russian"
 
 "SteamUI_StreamingIntro_Title"		"Добро пожаловать в Steam Remote Play"
 "SteamUI_StreamingIntro"			"Вы собираетесь запустить игру на удалённом компьютере и играть в неё здесь, используя Steam Remote Play."
@@ -4737,4 +4763,9 @@
 
 "SteamUI_RunningConflictingSoftware" "Обнаружены конфликтующие программы"
 "SteamUI_RunningIncompatibleTcpService" "В процессе Steam обнаружена несовместимая версия\nфайла %incompatdll% (связанного с %incompatname%).\n\nРекомендуем обновить или удалить эту программу,\nесли при запущенном клиенте Steam или в играх\nпроисходят сбои или замедляется работа сети."
+
+"Steam_XboxDriverInstall_Title"		"Установка драйвера Xbox"
+"Steam_XboxDriverInstall_Success"	"Драйвер обновлён и будет активен после перезагрузки компьютера."
+"Steam_XboxDriverInstall_ServiceFailure"	"Не удалось обновить драйвер. Проверьте, запущен ли Steam от имени обычного пользователя, а также запущена и обновлена ли служба Steam."
+"Steam_XboxDriverInstall_Failure"	"Не удалось обновить драйвер. Ошибка: %error%"
 }

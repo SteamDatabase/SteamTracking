@@ -145,7 +145,7 @@
 "VAC_ConnectionRefusedTitle"	"Ligação Recusada - VAC"
 "VAC_ConnectionRefusedDetail"	"Não podes efetuar a ligação ao servidor selecionado porque este está a funcionar no modo de segurança VAC (Antibatota da Valve).\n\nEsta conta Steam foi banida de servidores protegidos por ter usado \"cheats\"."
 "VAC_ConnectionRefusedByServer"	"O servidor recusou a ligação porque está a funcionar sob o modo VAC (Antibatota da Valve).\n\nEsta conta Steam foi banida de servidores protegidos por ter usado \"cheats\"."
-"VAC_BanSupportURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=370"
+"VAC_BanSupportURL"	"https://support.steampowered.com/kb/7849-RADZ-6869&l=portuguese/"
 "VAC_SecureServerToolTip"	"Antibatota da Valve - Protegido"
 "VAC_BannedFromServerToolTip"	"Não podes efetuar ligação a este servidor seguro"
 "VAC_Secure"	"Seguro"
@@ -160,7 +160,7 @@
 "Steam_ValidLoginRequired"	"Não foi possível efetuar uma ligação aos servidores VAC do Steam. Para solucionar problemas de rede, clica no link abaixo."
 "VAC_ConnectionIssuesSupport_Title"	"Falha na Ligação Segura"
 "VAC_ConnectionIssuesSupportSite"	"Clica aqui para visitares o Suporte Steam"
-"VAC_ConnectionIssuesSupportURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=374"
+"VAC_ConnectionIssuesSupportURL"	"https://support.steampowered.com/kb/7579-RPSX-6098&l=portuguese/"
 "VAC_LoggedInElsewhere_Title"		"Conta Utilizada Noutro Computador"
 "VAC_LoggedInElsewhereReason"		"Esta conta Steam foi utilizada para iniciar sessão a partir de outro computador. Para continuares a usar o Steam, deves iniciar a sessão outra vez."
 

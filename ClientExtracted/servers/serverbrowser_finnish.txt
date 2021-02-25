@@ -145,7 +145,7 @@
 "VAC_ConnectionRefusedTitle"	"Yhteys estettiin - Valven huijauksenesto"
 "VAC_ConnectionRefusedDetail"	"Et voi muodostaa yhteyttä valittuun palvelimeen, koska siinä käytetään Valven huijaukseneston suojattua tilaa.\n\nSteam-tilisi käyttö on kielletty suojatuissa pelipalvelimissa huijaamisen vuoksi."
 "VAC_ConnectionRefusedByServer"	"Palvelin esti yhteyden, koska siinä käytetään Valven huijaukseneston suojattua tilaa.\n\nSteam-tilisi käyttö on kielletty suojatuissa pelipalvelimissa huijaamisen vuoksi."
-"VAC_BanSupportURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=370"
+"VAC_BanSupportURL"	"https://support.steampowered.com/kb/7849-RADZ-6869/?l=finnish"
 "VAC_SecureServerToolTip"	"Valven huijauksenesto - suojattu"
 "VAC_BannedFromServerToolTip"	"Et voi muodostaa yhteyttä tähän suojattuun palvelimeen"
 "VAC_Secure"	"Suojattu"
@@ -160,7 +160,7 @@
 "Steam_ValidLoginRequired"	"Steamin huijauksenestopalvelimiin ei voitu muodostaa yhteyttä. Saat tietoja verkko-ongelmien vianmäärityksestä klikkaamalla alla olevaa linkkiä."
 "VAC_ConnectionIssuesSupport_Title"	"Suojatun yhteyden muodostaminen epäonnistui"
 "VAC_ConnectionIssuesSupportSite"	"Siirry Steamin tukisivulle klikkaamalla tätä"
-"VAC_ConnectionIssuesSupportURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=374"
+"VAC_ConnectionIssuesSupportURL"	"https://support.steampowered.com/kb/7579-RPSX-6098/?l=finnish"
 "VAC_LoggedInElsewhere_Title"		"Tili on käytössä muualla"
 "VAC_LoggedInElsewhereReason"		"Tämä Steam-tili on kirjautunut sisään toisesta tietokoneesta. Jos haluat jatkaa Steamin käyttämistä, kirjaudu sisään uudelleen."
 

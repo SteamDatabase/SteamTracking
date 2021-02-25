@@ -12,5 +12,5 @@ public:
     virtual unknown_ret GetDLCCount(unsigned int) = 0;
     virtual unknown_ret BGetDLCDataByIndex(unsigned int, int, unsigned int*, bool*, char*, int) = 0;
     virtual unknown_ret GetAppType(unsigned int) = 0;
-    virtual unknown_ret GetStoreTagLocalization(ELanguage, unsigned int*, int, unsigned char*, int) = 0;
+    virtual unknown_ret GetStoreTagLocalization(ELanguage, unsigned int const*, int, unsigned char*, int) = 0;
 };

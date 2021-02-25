@@ -3,15 +3,15 @@
 {
 "WelcomeToSteamTitle" "ДОБРЕ ДОШЛИ В STEAM"
 "WelcomeToSteamInfo" "» Пускайте новоизлезлите игри;
-» Намерете приятели от цял свят;
+» Открийте своите приятели;
 » Намерете най-добрите сървъри;
 » Получавайте автоматични обновления;
-» Ползвайте чата с приятели дори, когато сте в игра;
-» Получавайте специалните оферти само през Steam."
+» Ползвайте чата с приятели дори по време на игра;
+» Получавайте специалните оферти само за Steam."
 "SteamUI_Answer" "Отговор"
 "SteamUI_YourAnswer" "Вашият отговор"
 "WelcomeToSteamCreateAccount" "Създаване на нов акаунт"
-"WelcomeToSteamLogin" "Влезте в съществуващ акаунт"
+"WelcomeToSteamLogin" "Влизане в съществуващ акаунт"
 "SteamUI_AccountNameInfo" "Моля, въведете Вашата е-поща. Ако забравите\nпаролата си, ще се свържем с Вас чрез този адрес,\nза да потвърдите Вашата самоличност."
 "SteamUI_WelcomeNameInfo" "Моля, въведете профилно име. Това е името, което приятелите Ви\nще виждат, когато сте на линия. Също така можете да въведете истинското си име, \nза да помогнете на приятелите си да Ви намерят."
 "SteamUI_WelcomeNameOptional" "(незадължително)"
@@ -28,18 +28,18 @@
 "WelcomeToSteamEmailLabel1" "Е-поща"
 "WelcomeToSteamEmailLabel2" "(трябва да е валиден акаунт)"
 "WelcomeToSteamEmailRepeat"	"Въведете отново Вашата е-поща"
-"WelcomeToSteamPrivacyInfo1" "Вижте на Valve"
+"WelcomeToSteamPrivacyInfo1" "Вижте"
 "WelcomeToSteamPrivacyInfo2" "Декларация за поверителност"
 "WelcomeToSteamPrivacyInfo3" "за още информация."
 "Underline" "_________________"
 "Underline2" "_________________"
-"WelcomeToSteamPasswordInfo" "Моля, предоставете парола. Уверете се, че ще изберете нещо
+"WelcomeToSteamPasswordInfo" "Моля, задайте парола. Уверете се, че ще изберете нещо
 наистина трудно за отгатване — използвайте поне 8 знака."
 "WelcomeToSteamPassword" "Парола"
 "WelcomeToSteamRetypePassword" "Пренапишете паролата"
 "WelcomeAccountCreateComplete" "Готови сте! Благодарим Ви, че използвате Steam. Програмата
 се намира в системната лента — обикновено най-долу вдясно
-на екрана Ви. С цел да имате достъп до Steam, кликнете с
+на екрана Ви. За достъп до Steam кликнете с
 десния бутон на мишката върху иконата му."
 
 "SteamApp_Description"	"Приложение за ръководене и пускане на игри в Steam"
@@ -62,19 +62,18 @@
 "SteamRootBrowse" "Преглед на игри"
 "SteamRootLabel7" "Намиране на нови игри"
 
-"Steam_trayHint" "Steam работи в системната лента. С цел да
-имате достъп до Steam или да излезе от
-него, кликнете с десния бутон на мишката
-върху иконата му."
+"Steam_trayHint" "Steam работи в системната лента. За достъп или излизане от
+него кликнете с десния бутон на мишката
+върху Steam иконата."
 
 "Steam_SubscribeUserInfo" "Моля, въведете собственото и фамилното си име точно както са на кредитната Ви карта."
 "Steam_EmailAddress" "Е-поща"
 "Steam_EmailAddressVerification" "(за потвърждение на поръчката и квитанция)"
 "Steam_FirstName" "Собствено име"
 "Steam_LastName" "Фамилно име"
-"Steam_SubscribeCardInfo" "Моля, въведете номера и датата на изтичане на картата, както са показани на кредитната Ви карта."
+"Steam_SubscribeCardInfo" "Моля, въведете номера и датата на изтичане на кредитната карта така, както са показани на самата карта."
 "Steam_CreditCardType" "Тип на кредитната карта"
-"Steam_CreditCardNumber" "Номер на %cardtype% кредитната карта"
+"Steam_CreditCardNumber" "Номер на кредитна карта %cardtype%"
 "Steam_CreditCardExpiration" "Дата на изтичане на карата"
 "Steam_SubscribeBillingInfo" "Моля, въведете своя адрес, както е изписано на платежното извлечение за кредитната Ви карта."
 "Steam_City" "Град"
@@ -82,11 +81,11 @@
 "Steam_Country" "Държава"
 "Steam_PostCode" "Пощенски (или Zip) код"
 "Steam_CountryOfResidence"	"Понастоящем живея в държавата, която съм посочил"
-"Steam_SubscribeReviewInfo" "Моля, прегледайте своята покупка. Ако има някъде грешки, кликнете върху „Назад“, за да ги оправите. В противен случай кликнете върху „Закупуване“, за да завършите своята транзакция."
+"Steam_SubscribeReviewInfo" "Моля, прегледайте своята покупка. Ако някъде има грешки, кликнете върху „Назад“, за да ги оправите. В противен случай кликнете върху „Закупуване“, за да завършите своята транзакция."
 "Steam_ProductCostLabel"	"Цена"
 "Steam_TaxLabel"	"Приблизителен данък"
 "Steam_TotalLabel"	"Общо"
-"Steam_ProcessingSubscriptionInfo" "Обработване на абонамента Ви.
+"Steam_ProcessingSubscriptionInfo" "Обработваме абонамента Ви.
 Това трябва да отнеме по-малко от минута."
 "Steam_SubscribeCompleteInfo" "Благодарим Ви! Вашата покупка на %s1 е приключена. \n\nМоже да пуснете играта, като кликнете два пъти върху нея в раздела „Игри“ (или десен бутон върху името на играта и избирате „Играене“ в менюто.)"
 "Steam_PreorderCompleteInfo" "Благодарим Ви! Вашето предплащане за %s1 приключи. \n\nЩе може да пуснете играта веднага щом тя излезе официално!"
@@ -441,7 +440,6 @@
 "Steam_DPIScaling_Option"				"Увеличаване на текста и иконите спрямо мониторния размер (изисква рестартиране)"
 "Steam_LaunchSteamOnStartup_Option"		"Стартиране на Steam, когато компютърът ми се включи"
 "Steam_BPMOnStartup_Option"				"Стартиране на Steam в режим „Голям екран“"
-"Steam_ShowUrlBar_Option"				"Показване на адресната лента, когато е възможно"
 "Steam_UseDirectWrite_Option"			"Включване на DirectWrite за подобрено заглаждане и кърнинг на шрифтовете"
 "Steam_UseH264HWAccel_Option"			"Включване на хардуерното видео декодиране, ако се поддържа (изисква рестартиране)"
 
@@ -1155,8 +1153,6 @@
 "Steam_SubscriptionApprovalCode" "Упълномощаване"
 "Steam_SubscriptionConfirmation" "Потвърдителен код"
 
-"Steam_TroubleshooterURL_CDKey" "http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=276"
-
 "Steam_SubscriptionSuccess_CDKey_Headline" "Активацията е успешна!"
 "Steam_SubscriptionSuccess_CDKey" "Продуктовият Ви код беше активиран успешно. Този продукт или други такива, изброени по-долу, вече са перманентно асоциирани със Steam акаунта Ви. Трябва да влезете в него, за да имате достъп до артикулите, които току-що активирахте в Steam.\n\nРазпечатайте квитанция от тази транзакция, за да запомните акаунта си за бъдеща употреба."
 
@@ -1225,8 +1221,6 @@
 "Steam_Subscription_HardwarePromo_Used_Headline" "Дублирана регистрация"
 "Steam_Subscription_HardwarePromo_Used" "Тази оферта вече е била активирана  на друг Steam акаунт."
 "Steam_PurchaseError_HardwarePromoIneligible" "За съжаление този компютър не отговаря на системните изисквания за офертата „%subscription%”."
-"Steam_HardwarePromo_SupportURL" "http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=628"
-
 "Steam_Subscription_HardwarePromo_AlreadyPurchased_Headline" "Вече притежавате този продукт"
 "Steam_Subscription_HardwarePromo_AlreadyPurchased" "Този Steam акаунт вече притежава продукта(ите), съдържащ(и)\nсе в тази оферта. За достъп до тях посетете своята игрална библиотека."
 
@@ -1500,7 +1494,8 @@
 "Steam_DutyNote"	"Стоката ще бъде доставена от Съединените американски щати. Вие сте отговорни за плащането на всякакви приложени мита."
 
 "Steam_AgreeToTheTerms"		"Съгласявам се с условията на"
-"Steam_SteamSubscriberAgreement"	"Условия за ползване на Steam"
+"Steam_SteamSubscriberAgreement"	    "Условия за ползване на Steam"
+"Steam_SteamSubscriberAgreement_china"	"Лицензионно споразумение на „Steam China“ („Steam | Китай“)"
 "Steam_ComplianceRequired_Title"	"Steam — Предупреждение"
 "Steam_ComplianceRequired_Info"		"Изисква се съгласие с „Условията за ползване на Steam“, за да продължите."
 
@@ -1619,9 +1614,8 @@
 "Steam_ConnectionFailureTitle"	"Неуспешно свързване"
 "Steam_ConnectionFailureDetail"	"Steam не може да се свърже с мрежата. Това може да се дължи на проблем с Интернет връзката."
 "Steam_ConnectionSupportLink"	"Отстраняване на проблеми с връзката ми"
-"Steam_ConnectionSupportURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=11"
-
 "SteamUI_NetworkTroubleshootingTips"	"Съвети за отстраняване на проблеми с мрежата"
+"SteamUI_NetworkTroubleshootingTips_URL"	"https://support.steampowered.com/kb_article.php?ref=1456-EUDN-2493"
 
 
 "SteamUI_SSA_Agree"				"Моля, прочетете това споразумение изцяло. Трябва да се съгласите с „Условията за ползване на Steam“, за да продължите."
@@ -1685,6 +1679,16 @@
 "steam_menu_downloads"	"Сваляния"
 "steam_menu_account"	"Steam"
 "steam_menu_window" "Прозорец"
+"steam_menu_preferences"	"Предпочитания..."
+"steam_menu_services"	"Услуги"
+"steam_menu_hidesteam"	"Скриване на Steam"
+"steam_menu_hideothers"	"Скриване на други"
+"steam_menu_showall"	"Показване на всички"
+"steam_menu_quitsteam"	"Излизане от Steam"
+"steam_menu_window_close"	"Затваряне"
+"steam_menu_window_minimize"	"Минимизиране"
+"steam_menu_window_zoom"	"Приближаване"
+"steam_menu_window_bringalltofront"	"Изнасяне на всичко на преден план"
 "steam_menu_games_details"	"Подробности за игрите"
 "steam_menu_games_list"		"Списък с игри"
 "steam_menu_games_grid"		"Мрежа с игри"
@@ -2390,17 +2394,10 @@
 "Steam_RegionRestricted_Title"			"Steam — Играта е недостъпна"
 "Steam_RegionRestrictedPurchase_Info"				"Тази игра е била активирана с продуктов код, който е валиден само в определен географски регион. Тъй като понастоящем не сте в този регион, %game% не е достъпна за пускане."
 "Steam_RegionRestricted_SupportLink"		"Посетете уебсайта на Steam поддръжката за още информация"
-"Steam_RegionRestrictedPurchase_SupportURL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=461"
 "Steam_RegionRestricted_Info"				"%game% не е достъпна в територията Ви."
-"Steam_RegionRestricted_SupportURL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=461"
-
 "Steam_CountryRestricted_Info"				"Този абонамент не е достъпен за покупка в държавата Ви."
-"Steam_CountryRestricted_SupportURL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=488"
-
 "Steam_RegionRestrictedCode_Title"		"Steam — Недостъпен продукт"
 "Steam_RegionRestrictedCode_Info"			"Този продуктов код не може да бъде активиран от Вашия регион."
-"Steam_RegionRestrictedCode_SupportURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=463"
-
 "Steam_FragmentationBad_Title"			"Steam — Предупреждение за фрагментацията на диска"
 "Steam_FragmentationBad_Info"				"Игралните Ви файлове са достигнали високо ниво на фрагментация. Това може да причини бавно зареждане и влошена производителност. \n\nSteam може да оптимизира игралните файловете сега.\n"
 "Steam_FragmentationBad_RunDefrag"		"Дефрагментиране"
@@ -2770,8 +2767,6 @@
 "Steam_GuestPassAccept_HeadlineServiceUnavailable$type=guestpass"	"Неуспешно приемане на пробен пропуск"
 "Steam_GuestPassAccept_TextServiceUnavailable"	"Понастоящем компютърът Ви няма възможност да се свърже със Steam сървърите или услугата е временно преустановена. Моля, опитайте отново по-късно."
 "Steam_GuestPassAccept_LinkTextServiceUnavailable" 	"За отстраняване на проблеми, свързани с информацията за подаръци, вижте тази помощна страница."
-"Steam_GuestPassAccept_LinkURLServiceUnavailable"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=550"
-
 "Steam_GuestPassAccept_HeadlineRevoked$type=guestpass"	"Този пробен пропуск е бил анулиран"
 "Steam_GuestPassAccept_TextRevoked$type=guestpass"	"Приятелят, който е изпратил този пробен пропуск, го е отказал и Ви е препратил по-нов код за изпълняване. Ако новата версия Ви е била изпратена, ще получите друго е-писмо с обновения код."
 
@@ -2789,8 +2784,6 @@
 "Steam_GuestPassRedeemed_HeadlineServiceUnavailable$type=guestpass"	"Неуспешно активиране на пробен пропуск"
 "Steam_GuestPassRedeemed_TextServiceUnavailable"	"Понастоящем компютърът Ви няма възможност да се свърже със Steam сървърите или услугата е временно преустановена. Моля, опитайте отново по-късно."
 "Steam_GuestPassRedeemed_LinkTextServiceUnavailable"	"За информация по отстраняване на неизправности относно пробните пропуски вижте тази помощна страница."
-"Steam_GuestPassRedeemed_LinkURLServiceUnavailable"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=550"
-
 "Steam_GuestPassRedeemed_HeadlineLimitExceeded"	"Вече сте използвали пробен пропуск за този продукт"
 "Steam_GuestPassRedeemed_TextLimitExceeded"	"Защото вече сте приели пробен пропуск за %package%, не можете да приемате още един. Ако желаете да продължите да пускате играта, моля, помислете за закупуване."
 "Steam_GuestPassRedeemed_LinkTextLimitExceeded"	"Кликнете тук, за да посетите магазина на Steam."
@@ -2867,8 +2860,6 @@
 "Steam_SubscriptionCancelled_PuchaseDeclined_ContactProvider"	"Покупката Ви на %subscription% не беше завършена.\n\n%provider% е докладвал за проблем с %provider% акаунта Ви. Моля, свържете се с поддръжката на %provider% или кликнете върху бутона „Назад“, за да изберете алтернативен платежен метод."
 "Steam_SubscriptionCancelled_PuchaseDeclined_AcctNotVerified"	"Покупката Ви на %subscription% не беше завършена.\n\n%provider% е докладвал, че Вашият %provider% акаунт трябва да е проверен или финансиран, за да завършите покупката. Моля, свържете се с поддръжката на %provider% или кликнете върху бутона „Назад“, за да изберете алтернативен платежен метод."
 
-"Steam_TroubleshooterURL_VfyAcct" "http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=687"
-
 "Steam_PaymentMethodNotAvailable_Generic" "Съжаляваме, но понастоящем този платежен метод не е достъпен."
 
 "Steam_LaunchEULA_Title"			"%game%"
@@ -2878,11 +2869,10 @@
 "Steam_LaunchEULA_Text"			"Моля, прочетете това споразумение изцяло. Трябва да сте съгласи с условията на ЛСКП, за да играете %game%."
 
 "Steam_GuestPasses_LinkText"		"Още инф. относно подаръци и пробни пропуски"
-"Steam_GuestPasses_LinkURL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=549"
-
 "Steam_AlreadyRunningError_Title"			"Steam — Невъзможно пускане"
 "Steam_AlreadyRunningError_Info"			"Инстанция на Steam вече е пусната от този компютър, но под различен потребителски акаунт. Моля, изключете Steam от него, преди да опитате повторно пускане."
 "Steam_AlreadyRunningError_SupportLink"	"Вижте сайта на Steam поддръжката за още информация"
+"Steam_AlreadyRunningError_SupportLink_URL"	"http://support.steampowered.com/kb_article.php?ref=8787-WYIL-1543"
 "Steam_AlreadyRunningError_SupportTicket"	"Моля, свържете се със Steam поддръжката възможно най-скоро"
 
 "Steam_LoggedInElsewhere_Title"		"Steam — Влязъл от другаде"
@@ -2914,6 +2904,7 @@
 "Steam_GamesDialog_RightClick_RemoveFromUnblockedGames"		"Премахване от семейни игри"
 
 "steam_menu_checkforupdates"						"Проверка за обновления на Steam клиента…"
+"steam_menu_checkforupdates_osx"					"Проверяване за обновления..."
 "steam_checkforupdates_title"						"Steam — Автоматично обновяване"
 "steam_ClientUpdateAvailableDownloading"			"Достъпно е обновление на Steam, което в момента се сваля."
 "steam_ClientUpdateAvailableDownloaded"			"Свалено е обновлението на Steam клиента."
@@ -3359,7 +3350,7 @@ Windows до Windows XP Service Pack 2 или по-нов."
 "Steam_InstallAborted_InfoAppNoDemo"		"%game% не може да бъде инсталирана, защото това е демо и Вие притежавате пълната версия на продукта. Моля, инсталирайте пълната версия на играта."
 
 "Steam_Startup_SteamChinaRequiredTitle"					"Изисква се „Steam China“ („Steam | Китай“)"
-"Steam_Startup_GetSteamChina"						"%gamename% вече е достъпна в „Steam China“ („Steam | Китай“). Моля, последвайте връзката по-долу, за да инсталирате този клиент."
+"Steam_Startup_GetSteamChina"						"%gamename% сега трябва да бъде пусната през новия клиент „Steam China“ („Steam | Китай“).\n\nМожете да се впишете в своя акаунт в %gamename% и да прехвърлите игралния си прогрес, артикули, ниво на персонаж и точки.\n\n"
 "Steam_Startup_RunSteamChina"						"%gamename% вече е достъпна в „Steam China“ („Steam | Китай“). Моля, стартирайте „Steam China“ („Steam | Китай“), за да внесете Вашата игра."
 "Steam_Startup_SteamChinaImportedUninstall"			"%gamename% е внесена в „Steam China“ („Steam | Китай“). Вече можете безопасно да деинсталирате тази стартова програма."
 "Steam_Startup_LauncherDeprecated"					"%gamename% вече се пуска през „Steam China“ („Steam | Китай“). Тази инсталация вече не се поддържа и ще бъде затворена."
@@ -3367,6 +3358,7 @@ Windows до Windows XP Service Pack 2 или по-нов."
 "Steam_Startup_ImportGameFromLauncherMsg"			"Желаете ли да внесете %gamename% в „Steam China“ („Steam | Китай“)? След това ще можете безопасно да деинсталирате класическата стартова програма."
 
 "Steam_Download_SteamChina"							"Сваляне на „Steam China“ („Steam | Китай“)"
+"Steam_Get_SteamChina"								"Изтегляне на „Steam China“ („Steam | Китай“)"
 
 "Steam_ValidateGame_GameRunning"	"Моля, излезте от всички пуснати игри или инструменти, преди да опитате потвърждаване на локалните файлове."
 
@@ -3375,8 +3367,8 @@ Windows до Windows XP Service Pack 2 или по-нов."
 "Steam_LibrariesLabel"	"Библиотеки за съдържание"
 "Steam_DownloadRestrictionsLabel"	"Ограничения при сваляне"
 
-"Steam_ServerBrowserPingRateLabel"	"Сървърен браузър в игра: макс. пинг / минута"
-"Steam_ServerBrowserPingRateInfo"	"Ако имате проблеми с връзката, докато търсите сървъри за игра, опитайте да намалите тази стойност."
+"Steam_ServerBrowserPingRateLabel"	"Сървърен браузър: пинг(а) / минута"
+"Steam_ServerBrowserPingRateInfo"	"Проблеми с връзката, докато търсите сървъри за игра? Опитайте да намалите тази стойност."
 "Steam_ServerBrowserPingRateDefault"	"Автоматично (%PingsPerMin%)"
 
 "Steam_TextFilterSettingLabel"									"Филтриране в чата"
@@ -3498,6 +3490,7 @@ Windows до Windows XP Service Pack 2 или по-нов."
 "Steam_RecoverLocked_UseCode" "Получих съобщението от Steam поддръжката и съм готов(а) да въведа специалния си код."
 "Steam_RecoverLocked_MustRecover" "Каква е-поща? Не съм получил нищо…"
 "Steam_RecoverLocked_WhyIsThisHappening" "Защо се случва това?"
+"Steam_RecoverLocked_WhyIsThisHappening_URL" "https://support.steampowered.com/kb_article.php?ref=4020-ALZM-5519"
 "Steam_RecoverLocked_EnterCode" "Моят специален код за достъп е:"
 "Steam_RecoverLocked_EnterCodeDetails" "Веднъж когато е проверен Вашият код, Steam Guard ще добави този компютър към списъка с машините, които са с разрешен достъп до Steam акаунта Ви."
 "Steam_RecoverLocked_WrongCode" "За съжаление това не е верният код."
@@ -3511,7 +3504,9 @@ Windows до Windows XP Service Pack 2 или по-нов."
 "Steam_RecoverLocked_StartRecovery2" "Знаем, че Вашият Steam акаунт е доста ценен за Вас, затова ние сме отдадени да Ви помогнем да придобиете отново достъп до него."
 "Steam_RecoverLocked_StartRecovery3" "Моля, свържете се с член от персонала на Steam поддръжката, който да Ви помогне. Решаването на заявки за легитимни проблеми с достъпа до акаунтите е основният ни приоритет."
 "Steam_RecoverLocked_RecoverySupportLink" "Свързване със Steam поддръжката"
+"Steam_RecoverLocked_RecoverySupportLink_URL" "https://support.steampowered.com"
 "Steam_RecoverLocked_LearnMore" "Научете още относно Intel® технологията за защита на самоличността"
+"Steam_RecoverLocked_LearnMore_URL" "https://support.steampowered.com/kb_article.php?ref=9400-IPAX-9398&auth=e39b5c227cffc8ae65414aba013e5fef"
 "Steam_RecoverLocked_CannotAccess" "Съжаляваме, не може да влезете в този акаунт без допълнително упълномощаване."
 "Steam_RecoverLocked_Success" "Успешно!"
 "Steam_RecoverLocked_SuccessDetails" "Вече имате достъп до своя Steam акаунт от този компютър. Steam Guard го добави към списъка с машини, на които им е позволено да имат достъп до акаунта Ви за в бъдеще."
@@ -3834,7 +3829,6 @@ Windows до Windows XP Service Pack 2 или по-нов."
 "steam_menu_friends" "Приятели"
 "steam_menu_servers" "Сървъри"
 "steam_menu_settings" "Настройки"
-"steam_menu_preferences" "Предпочитания"
 "steam_menu_view_friends" "Списък с приятели (%friends_online% на линия)"
 "steam_menu_view_players" "Играчи"
 "steam_menu_add_friend" "Добавяне на приятел…"
@@ -4576,6 +4570,7 @@ Windows до Windows XP Service Pack 2 или по-нов."
 "Steam_Settings_Streaming_SoftwareEncodingThreads_7"	"7"
 "Steam_Settings_Streaming_SoftwareEncodingThreads_8"	"8"
 "Steam_Settings_Streaming_P2PScope_Description"	"Позволяване на директна връзка (споделяне на IP)"
+"Steam_Settings_Streaming_P2PScopeAutomatic"	"Автоматично (вкл.)"
 "Steam_Settings_Streaming_P2PScopeDisabled"	"Преустановено"
 "Steam_Settings_Streaming_P2PScopeOnlyMe" "Моите устройства"
 "Steam_Settings_Streaming_P2PScopeEveryone" "Всички устройства"
@@ -4600,6 +4595,7 @@ Windows до Windows XP Service Pack 2 или по-нов."
 "Steam_Settings_Streaming_EnableTouchController"	"Включване на сензорни контроли"
 
 "Steam_Settings_Streaming_StreamingSupport"	"Преглед на информацията за поддръжка"
+"Steam_Settings_Streaming_StreamingSupportLink"	"https://support.steampowered.com/kb_article.php?ref=3629-RIAV-1617"
 
 "Steam_Settings_Streaming_Connected" "Компютърът е свързан"
 "Steam_Settings_Streaming_Paired" "Устройството е сдвоено"
@@ -4610,6 +4606,15 @@ Windows до Windows XP Service Pack 2 или по-нов."
 
 "Steam_Settings_Streaming_PIN_Title" "Задаване на код за сигурност на Steam Link"
 "Steam_Settings_Streaming_PIN_Text" "Задайте цифров ПИН код, който трябва да бъде въвеждан в Steam Link всеки път, за да излъчвате от този компютър:"
+
+"Steam_Settings_ShareIPNetworking_Label" "Steam Networking"
+"Steam_Settings_ShareIPNetworking_Info" "Позволяване на игрите, използващи Steam Networking, да споделят моя IP адрес за по-бърза връзка"
+"Steam_Settings_ShareIPNetworking_Default" "По подразбиране"
+"Steam_Settings_ShareIPNetworking_Always" "Винаги"
+"Steam_Settings_ShareIPNetworking_FriendsOnly" "Само приятели"
+"Steam_Settings_ShareIPNetworking_Never" "Никога"
+"Steam_Settings_ShareIPNetworking_URL" "Повече информация"
+"Steam_Settings_ShareIPNetworking_URLText" "https://support.steampowered.com/kb_article.php?ref=9929-UAFN-9329"
 
 "SteamUI_StreamingIntro_Title"		"Добре дошли в Steam Remote Play"
 "SteamUI_StreamingIntro"			"На път сте да пуснете тази игра на друг компютър, но ще я играете тук, използвайки Steam Remote Play."
@@ -4752,4 +4757,9 @@ Windows до Windows XP Service Pack 2 или по-нов."
 
 "SteamUI_RunningConflictingSoftware" "Засечен е конфликтен софтуер"
 "SteamUI_RunningIncompatibleTcpService" "Засечена е несъвместима версия на %incompatdll% (свързана с %incompatname%)\nв Steam процеса.\n\nПрепоръчваме да обновите или деинсталирате този софтуер, ако се натъквате на сривове\nили мрежови забавяния, докато сте пуснали Steam или индивидуални игри."
+
+"Steam_XboxDriverInstall_Title"		"Инсталиране на Xbox драйвер"
+"Steam_XboxDriverInstall_Success"	"Драйверът е успешно обновен и ще бъде активен след рестартиране на компютъра Ви."
+"Steam_XboxDriverInstall_ServiceFailure"	"Неуспешно обновяване на драйвер. Моля, уверете се, че Steam е включен в режим „Нормален потребител“ и че Steam услугата е включена и обновена."
+"Steam_XboxDriverInstall_Failure"	"Неуспешно обновяване на драйвер. Грешка: %error%"
 }

@@ -170,8 +170,6 @@
 "Friends_InvitationBlocking"		"您封鎖了所有與此使用者通訊的管道。在和此使用者通訊前，請先前往其 Steam 社群個人檔案解除封鎖。"
 
 "Friends_DontGiveOutPassword"			"切勿將您的密碼告訴其他人。\n"
-"Friends_DontGiveOutPassword_URL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=301"
-
 "Friends_ChatFilterBlockWarning"		"為了您的安全，以下訊息中的連結已被移除。"
 
 "Friends_invalidname_title"			"好友 - 保留名稱"
@@ -557,6 +555,7 @@
 "Friends_SteamCommunity"	"Steam 社群"
 "Limited_Explanation"	"您的 Steam 帳戶並未達到使用此功能的需求。"
 "Limited_ForDetails"	"請造訪 Steam 客服部門以了解更多資訊。"
+"Limited_ForDetails_URL"	"https://help.steampowered.com/wizard/HelpWithLimitedAccount"
 
 "Friends_Chat_RoomModerated_Entry"		"%member_making_change% 已將聊天室設定為幹部專屬聊天。\n"
 "Friends_Chat_RoomUnmoderated_Entry"		"%member_making_change% 已將聊天室設定為所有使用者聊天。\n"
@@ -688,6 +687,7 @@
 "Broadcast_FirstTime_PermissionHeader" "請您花幾分鐘進行設定..."
 "Broadcast_FirstTime_DesktopOnly" "在 Steam 實況直播的預設設定中您的遊戲過程將可供他人點選觀看，且不會一併錄製您在遊戲之外的畫面。"
 "Broadcast_FirstTime_FAQ" "閱讀 Steam 實況直播問題集"
+"Broadcast_FirstTime_FAQLink" "https://support.steampowered.com/kb_article.php?ref=6730-TOAK-6497"
 "Broadcast_FirstTime_Title" "Steam 實況直播"
 "Broadcast_FirstTime_OK" "確定"
 "Broadcast_FirstTime_Cancel" "取消"
@@ -697,8 +697,8 @@
 "Broadcast_FirstTime_ConfigurationLink" "實況直播設定"
 
 "Broadcast_Chat_Show_Profile" "顯示個人檔案"
-"Broadcast_Chat_Mute_User" "靜音觀看者"
-"Broadcast_Chat_Muted" "%s1 已被靜音。"
+"Broadcast_Chat_Mute_User" "禁言觀看者"
+"Broadcast_Chat_Muted" "%s1 已被禁言。"
 "Broadcast_Chat_Joined" "%s1 已經加入聊天室。"
 "Broadcast_Chat_Left" "%s1 離開聊天室。"
 

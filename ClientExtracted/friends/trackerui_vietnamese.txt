@@ -170,7 +170,7 @@
 "Friends_InvitationBlocking"		"Bạn đã chặn toàn bộ liên lạc với người dùng này. Trước khi liên lạc với người dùng này, bạn phải bỏ chặn họ bằng cách tới thăm hồ sơ cộng đồng Steam của họ."
 
 "Friends_DontGiveOutPassword"			"Không bao giờ tiết lộ mật khẩu của bạn cho bất cứ ai.\n"
-"Friends_DontGiveOutPassword_URL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=301"
+"Friends_DontGiveOutPassword_URL"		"https://support.steampowered.com/kb/1266-OAFV-8478/"
 
 "Friends_ChatFilterBlockWarning"		"Một đường dẫn đã bị xóa từ tin nhắn này vì lý do bảo mật"
 
@@ -556,6 +556,7 @@
 "Friends_SteamCommunity"	"Cộng đồng Steam"
 "Limited_Explanation"	"Tài khoản của bạn không đạt đủ điều kiện để sử dụng tính năng này."
 "Limited_ForDetails"	"Thăm trang hỗ trợ Steam để biết thêm thông tin."
+"Limited_ForDetails_URL"	"https://help.steampowered.com/wizard/HelpWithLimitedAccount"
 
 "Friends_Chat_RoomModerated_Entry"		"Phòng trò chuyện đã được đặt ở chế độ chỉ dành cho ủy viên bởi %member_making_change%.\n"
 "Friends_Chat_RoomUnmoderated_Entry"		"Phòng trò chuyện đã được chuyển sang chế độ mọi thành viên bởi %member_making_change%.\n"
@@ -687,6 +688,7 @@
 "Broadcast_FirstTime_PermissionHeader" "Cần một phút để thiết lập tùy chỉnh của bạn..."
 "Broadcast_FirstTime_DesktopOnly" "Mặc định, chỉ có trò chơi của bạn có thể được xem. Màn hình desktop của bạn sẽ không lên sóng."
 "Broadcast_FirstTime_FAQ" "Đọc FAQ về phát sóng Steam"
+"Broadcast_FirstTime_FAQLink" "https://support.steampowered.com/kb_article.php?ref=6730-TOAK-6497"
 "Broadcast_FirstTime_Title" "Phát sóng Steam"
 "Broadcast_FirstTime_OK" "OK"
 "Broadcast_FirstTime_Cancel" "Hủy"

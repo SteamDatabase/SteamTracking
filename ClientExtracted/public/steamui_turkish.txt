@@ -21,7 +21,7 @@
 "SteamUI_ConvertExistingInfo" "Eski yüklemeniz dönüştürülüyor. Bu birkaç dakika sürebilir."
 "SteamUI_ConversionCompleteInfo" "Steam önyüklemesi tamamlandı."
 
-"SteamUI_ConvertExistingStatus1" "%s1 dosyaları diskten önyükleme yapılıyor."
+"SteamUI_ConvertExistingStatus1" "%s1 dosyaları diskten ön yükleniyor."
 "SteamUI_ConvertExistingStatus2" "%s1 dosyaları diskten önyükleme yapılıyor.."
 "SteamUI_ConvertExistingStatus3" "%s1 dosyaları diskten önyükleme yapılıyor..."
 
@@ -434,13 +434,13 @@ Oyunu açmak %borrower% adlı kullanıcıya oyunu bırakma zamanının geldiğin
 "Steam_WizardNext_Purchase"			"Satın Al"
 "Steam_PurchasingProgress_Title"		"Steam - çalışıyor"
 
-"Steam_DPIScaling_Option_Windows"		"Metin ve simgeleri ekran ayarlarına uyması için ölçekle (yeniden başlatma gerektirir)"
+"Steam_DPIScaling_Option_Windows"		"Metin ve simgeleri ekran ayarlarına göre ölçekle (yeniden başlatın)"
 "Steam_DPIScaling_Option"				"Ekran boyutuna göre metin ve simgeleri büyüt (yeniden başlatma gerektirir)"
 "Steam_LaunchSteamOnStartup_Option"		"Bilgisayarım başladığında Steam'i çalıştır"
 "Steam_BPMOnStartup_Option"				"Steam'i Geniş Ekran modunda başlat"
-"Steam_ShowUrlBar_Option"				"Mümkün olduğunda Steam adres çubuğunu göster"
+"Steam_ShowUrlBar_Option"				"Mümkün olduğunda web adres çubuklarını göster"
 "Steam_UseDirectWrite_Option"			"Yazı tipi kalitesini arttırmak için DirectWrite'ı etkinleştir"
-"Steam_UseH264HWAccel_Option"			"Destekleniyorsa, donanım video kod çözmeyi etkinleştir (yeniden başlatma gerektirir)"
+"Steam_UseH264HWAccel_Option"			"Destekleniyorsa, donanım video kod çözmeyi etkinleştir (yeniden başlatın)"
 
 "Steam_ErrorFilesystemNotExecutable_Title"	"Steam - Hata"
 "Steam_ErrorFilesystemNotExecutable"		"Seçilen dosya sistemi uygulama dosyalarına izin vermiyor.\nLütfen uygulama seçeneğini ayarlayın ve tekrar deneyin."
@@ -475,8 +475,8 @@ Oyunu açmak %borrower% adlı kullanıcıya oyunu bırakma zamanının geldiğin
 "Steam_ConversionNotEnoughDiskSpace_Info"	"Seçilen oyunları yüklemek için yeterli depolama alanı yok.\nLütfen biraz depolama alanı açın veya 'Geri'yi tıklayarak seçilenlerden birkaç tanesinin onayını kaldırın."
 "Steam_ConversionNotEnoughDiskSpaceForConversion_Info"	"Steam'in bu oyunu dönüştürmesi için gerekli depolama alanı yok.\nLütfen %s1 Mb boyutunda kullanılmayan depolama alanı açıp tekrar deneyin."
 "Steam_Interface"				"Arayüz"
-"Steam_EnableGPUWebViews_Option"		"İnternet görünümünde ekran kartı ile hızlandırılmış görüntü işlemeyi etkinleştir (yeniden başlatmayı gerektirir)"
-"Steam_SmoothScrollWebViews_Option"		"Web görünümlerinde pürüzsüz kaydırmayı etkinleştir (yeniden başlatma gerektirir)"
+"Steam_EnableGPUWebViews_Option"		"Web görünümünde GPU ile hızlandırılmış işlemeyi etkinleştir (yeniden başlatın)"
+"Steam_SmoothScrollWebViews_Option"		"Web görünümünde pürüzsüz kaydırmayı etkinleştir (yeniden başlatın)"
 "Steam_SetJumplistOptions"		"Görev Çubuğu Tercihlerini Ayarla"
 "Steam_ShowOnlineStatusOptions"	"Gösterilecek çevrimiçi seçenekleri seçin"
 "Steam_ShowDestinationOptions"	"Gösterilecek menüleri seçin"
@@ -1152,7 +1152,7 @@ Oyunu açmak %borrower% adlı kullanıcıya oyunu bırakma zamanının geldiğin
 "Steam_SubscriptionApprovalCode" "Onay"
 "Steam_SubscriptionConfirmation" "Onaylama kodu"
 
-"Steam_TroubleshooterURL_CDKey" "http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=276"
+"Steam_TroubleshooterURL_CDKey" "https://support.steampowered.com/kb/1968-HKLX-7538/"
 
 "Steam_SubscriptionSuccess_CDKey_Headline" "Etkinleştirme Başarılı!"
 "Steam_SubscriptionSuccess_CDKey" "Ürün etkinleştirme anahtarınız başarıyla etkinleştirildi. Bu ürün veya ürünler Steam hesabınıza kalıcı olarak eklendi. Steam üzerinden etkinleştirdiğiniz ürünlere bu hesapla giriş yaparak ulaşabilirsiniz.\n\nGelecekteki kullanımlarda hesabınızı hatırlamak için makbuzu yazdırabilirsiniz."
@@ -1222,7 +1222,7 @@ Oyunu açmak %borrower% adlı kullanıcıya oyunu bırakma zamanının geldiğin
 "Steam_Subscription_HardwarePromo_Used_Headline" "Tekrarlanan Kayıt"
 "Steam_Subscription_HardwarePromo_Used" "Bu teklif başka bir Steam hesabında etkinleştirilmiş."
 "Steam_PurchaseError_HardwarePromoIneligible" "Üzgünüz, bu bilgisayar %subscription% sistem gereksinimlerini karşılamıyor."
-"Steam_HardwarePromo_SupportURL" "http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=628"
+"Steam_HardwarePromo_SupportURL" "https://support.steampowered.com/kb/2734-UDFX-1098/"
 
 "Steam_Subscription_HardwarePromo_AlreadyPurchased_Headline" "Ürün Zaten Alınmış"
 "Steam_Subscription_HardwarePromo_AlreadyPurchased" "Bu Steam hesabı zaten bu ürün(ler)e sahip.\n Onlara ulaşmak için, Oyun Kütüphanenizi ziyaret edin."
@@ -1270,7 +1270,7 @@ Oyunu açmak %borrower% adlı kullanıcıya oyunu bırakma zamanının geldiğin
 "Steam_Storefront_Title"	"Steam - Oyunlara Göz at"
 "Steam_RegisterProductCode"	"Steam'de Ürün Etkinleştir..."
 "Steam_RedeemWalletVoucher"	"Steam Cüzdan Kodu Kullan..."
-"Steam_Wallet_PendingBalance" "%amount% (%amount_delayed% Bekleyen)"
+"Steam_Wallet_PendingBalance" "%amount% (Bekleyen: %amount_delayed%)"
 
 "Steam_PurchaseError_SubscriptionAlreadyOwned"	"Zaten %subscription% sahibisiniz."
 "Steam_UpdateNews_Title"	"Steam - Haberler"
@@ -1498,7 +1498,8 @@ Değişikliklerin etkili olması için OSX platformundan çıkış yapmalısın�
 "Steam_DutyNote"	"Eşyalar ABD'den yollanacaktır. Nakliye ücreti size aittir."
 
 "Steam_AgreeToTheTerms"		"Bunun anlaşma koşullarını kabul ediyorum:"
-"Steam_SteamSubscriberAgreement"	"Steam Abonelik Sözleşmesi"
+"Steam_SteamSubscriberAgreement"	    "Steam Abonelik Sözleşmesi"
+"Steam_SteamSubscriberAgreement_china"	"Steam China Lisans Sözleşmesi"
 "Steam_ComplianceRequired_Title"	"Steam - Uyarı"
 "Steam_ComplianceRequired_Info"		"Devam etmek için Steam abonelik sözleşmesinin koşullarını kabul etmelisiniz."
 
@@ -1617,9 +1618,10 @@ Değişikliklerin etkili olması için OSX platformundan çıkış yapmalısın�
 "Steam_ConnectionFailureTitle"	"Bağlantı Başarısız"
 "Steam_ConnectionFailureDetail"	"Steam ağa bağlanamıyor. Bu sorun internet bağlantınızdan kaynaklanıyor olabilir."
 "Steam_ConnectionSupportLink"	"Bağlantımın arızasını tespit et"
-"Steam_ConnectionSupportURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=11"
+"Steam_ConnectionSupportURL"	"https://support.steampowered.com/kb/1456-EUDN-2493/"
 
 "SteamUI_NetworkTroubleshootingTips"	"Ağ arızaları tespiti için öneriler"
+"SteamUI_NetworkTroubleshootingTips_URL"	"https://support.steampowered.com/kb_article.php?ref=1456-EUDN-2493"
 
 
 "SteamUI_SSA_Agree"				"Lütfen anlaşmanın içindeki bütün bölümleri okuyun. Devam etmek için Steam Abonelik Sözleşmesini kabul etmek zorundasınız."
@@ -1683,6 +1685,16 @@ Değişikliklerin etkili olması için OSX platformundan çıkış yapmalısın�
 "steam_menu_downloads"	"İndirmeler"
 "steam_menu_account"	"Steam"
 "steam_menu_window" "Pencere"
+"steam_menu_preferences"	"Tercihler..."
+"steam_menu_services"	"Hizmetler"
+"steam_menu_hidesteam"	"Steam'i Gizle"
+"steam_menu_hideothers"	"Diğerlerini Gizle"
+"steam_menu_showall"	"Tümünü Göster"
+"steam_menu_quitsteam"	"Steam'den Çık"
+"steam_menu_window_close"	"Kapat"
+"steam_menu_window_minimize"	"Küçült"
+"steam_menu_window_zoom"	"Yakınlaştır"
+"steam_menu_window_bringalltofront"	"Hepsini Öne Getir"
 "steam_menu_games_details"	"Oyun Detayları"
 "steam_menu_games_list"		"Oyun Listesi"
 "steam_menu_games_grid"		"Oyun Tablosu"
@@ -2387,16 +2399,16 @@ Değişikliklerin etkili olması için OSX platformundan çıkış yapmalısın�
 "Steam_RegionRestricted_Title"			"Steam - Oyun mevcut değil"
 "Steam_RegionRestrictedPurchase_Info"				"Bu oyun sadece belirli bir coğrafik konumda etkinleştirilebilir. Belirtilen bölgede olmadığınız için, %game% oyununa erişemezsiniz."
 "Steam_RegionRestricted_SupportLink"		"Daha fazla bilgi için Steam destek web sitesini ziyaret edin"
-"Steam_RegionRestrictedPurchase_SupportURL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=461"
+"Steam_RegionRestrictedPurchase_SupportURL"		"https://support.steampowered.com/kb/1266-QFZC-2141/"
 "Steam_RegionRestricted_Info"				"%game% sizin bölgenizde mevcut değil."
-"Steam_RegionRestricted_SupportURL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=461"
+"Steam_RegionRestricted_SupportURL"		"https://support.steampowered.com/kb/1266-QFZC-2141/"
 
 "Steam_CountryRestricted_Info"				"Bu abonelik sizin ülkenizde satın alınamaz."
-"Steam_CountryRestricted_SupportURL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=488"
+"Steam_CountryRestricted_SupportURL"		"https://support.steampowered.com/kb/1266-QFZC-2141/"
 
 "Steam_RegionRestrictedCode_Title"		"Steam - Ürün mevcut değil"
 "Steam_RegionRestrictedCode_Info"			"Bu ürün kodu bölgenizde etkinleştirilemez."
-"Steam_RegionRestrictedCode_SupportURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=463"
+"Steam_RegionRestrictedCode_SupportURL"	"https://support.steampowered.com/kb/1266-QFZC-2141/"
 
 "Steam_FragmentationBad_Title"			"Steam - Disk birleştirme uyarısı"
 "Steam_FragmentationBad_Info"				"Oyun dosyalarınız çok fazla parçalanmış. Bu yüzden oyun içinde performans sorunları ve yüklemelerde yavaşlıkla karşılaşabilirsiniz. \n\nSteam şimdi oyun dosyalarını sizin için optimize edecek.\n"
@@ -2767,7 +2779,7 @@ Tanıdığınız birine e-posta aracılığıyla bir hediye göndererek arkadaş
 "Steam_GuestPassAccept_HeadlineServiceUnavailable$type=guestpass"	"Deneme kuponu kabulü başarısız"
 "Steam_GuestPassAccept_TextServiceUnavailable"	"Bilgisayarınız geçici olarak Steam sunucularına ulaşamıyor veya servis geçici olarak devre dışı bırakılmış. Lütfen daha sonra tekrar deneyin."
 "Steam_GuestPassAccept_LinkTextServiceUnavailable" 	"Hediyelerin arıza tespiti bilgileri için, bu destek sayfasına bakın."
-"Steam_GuestPassAccept_LinkURLServiceUnavailable"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=550"
+"Steam_GuestPassAccept_LinkURLServiceUnavailable"	"https://support.steampowered.com/kb/6262-QXCN-0755/"
 
 "Steam_GuestPassAccept_HeadlineRevoked$type=guestpass"	"Bu deneme kuponu iptal edildi"
 "Steam_GuestPassAccept_TextRevoked$type=guestpass"	"Bu deneme kuponunu gönderen arkadaşınız kuponu iptal etti ve yeni bir onay kodu yolladı. Eğer yeni kod size yollandıysa, güncellenmiş kodu içeren başka bir e-posta alacaksınız."
@@ -2786,7 +2798,7 @@ Tanıdığınız birine e-posta aracılığıyla bir hediye göndererek arkadaş
 "Steam_GuestPassRedeemed_HeadlineServiceUnavailable$type=guestpass"	"Deneme kuponu etkinleştirme başarısız"
 "Steam_GuestPassRedeemed_TextServiceUnavailable"	"Bilgisayarınız geçici olarak Steam sunucularına ulaşamıyor veya servis geçici olarak devre dışı bırakılmış. Lütfen daha sonra tekrar deneyin."
 "Steam_GuestPassRedeemed_LinkTextServiceUnavailable"	"Deneme kuponlarınız ile yaşadığınız sorunlar hakkında bilgi edinmek için, bu destek sayfasına bakın."
-"Steam_GuestPassRedeemed_LinkURLServiceUnavailable"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=550"
+"Steam_GuestPassRedeemed_LinkURLServiceUnavailable"	"https://support.steampowered.com/kb/6262-QXCN-0755/"
 
 "Steam_GuestPassRedeemed_HeadlineLimitExceeded"	"Bu ürün için deneme kuponu kullanmışsınız"
 "Steam_GuestPassRedeemed_TextLimitExceeded"	"%package% için bir deneme kuponu kabul ettiğinizden dolayı başka bir kupon kabul edemezsiniz. Eğer oyunu oynamaya devam etmek istiyorsanız, satın almayı düşünün."
@@ -2864,8 +2876,6 @@ Tanıdığınız birine e-posta aracılığıyla bir hediye göndererek arkadaş
 "Steam_SubscriptionCancelled_PuchaseDeclined_ContactProvider"	"%subscription% satış işlemi tamamlanmadı.\n\n%provider%, %provider% hesabınızla ilgili bir sorun olduğunu raporladı. Lütfen %provider% desteği ile irtibata geçin ya da 'Geri'yi tıklayarak farklı bir ödeme yöntemi seçin."
 "Steam_SubscriptionCancelled_PuchaseDeclined_AcctNotVerified"	"%subscription% satışı tamamlanmadı.\n\n%provider%, satın alma için %provider% hesabınızın doğrulanması ya da bakiye eklenmesi gerektiğini raporladı. Lütfen %provider% destek ile irtibata geçin ya da 'Geri'yi tıklayarak farklı bir ödeme yöntemi seçin."
 
-"Steam_TroubleshooterURL_VfyAcct" "http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=687"
-
 "Steam_PaymentMethodNotAvailable_Generic" "Üzgünüz, bu ödeme yöntemi şu an kullanılabilir değil."
 
 "Steam_LaunchEULA_Title"			"%game%"
@@ -2875,11 +2885,12 @@ Tanıdığınız birine e-posta aracılığıyla bir hediye göndererek arkadaş
 "Steam_LaunchEULA_Text"			"Lütfen anlaşmanın tamamını okuyun. %game% oynamak için anlaşmanın tüm koşullarını kabul etmeniz gerekmektedir."
 
 "Steam_GuestPasses_LinkText"		"Hediyeler ve deneme kuponları hakkında daha fazla bilgi"
-"Steam_GuestPasses_LinkURL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=549"
+"Steam_GuestPasses_LinkURL"		"https://support.steampowered.com/kb/6262-QXCN-0755/"
 
 "Steam_AlreadyRunningError_Title"			"Steam - Başlatılamıyor"
 "Steam_AlreadyRunningError_Info"			"Steam bu bilgisayarda, farklı bir kullanıcı hesabıyla çalışıyor. Lütfen tekrar başlatmayı denemeden önce diğer hesabınızla çalıştığınız Steam'i kapatın."
 "Steam_AlreadyRunningError_SupportLink"	"Daha fazla bilgi için Steam destek sitesine bakın"
+"Steam_AlreadyRunningError_SupportLink_URL"	"http://support.steampowered.com/kb_article.php?ref=8787-WYIL-1543"
 "Steam_AlreadyRunningError_SupportTicket"	"Lütfen en kısa sürede Steam Destek ile irtibata geçin"
 
 "Steam_LoggedInElsewhere_Title"		"Steam - Başka Yerde Oturum Açılmış"
@@ -2911,6 +2922,7 @@ Tanıdığınız birine e-posta aracılığıyla bir hediye göndererek arkadaş
 "Steam_GamesDialog_RightClick_RemoveFromUnblockedGames"		"Aile Oyunlarından Kaldır"
 
 "steam_menu_checkforupdates"						"Steam Güncellemelerini Denetle..."
+"steam_menu_checkforupdates_osx"					"Güncellemeleri Kontrol Et..."
 "steam_checkforupdates_title"						"Steam - Güncelleyici"
 "steam_ClientUpdateAvailableDownloading"			"Steam güncellemesi mevcut ve şimdi indiriliyor."
 "steam_ClientUpdateAvailableDownloaded"			"Steam güncellemesi indirildi."
@@ -3353,7 +3365,7 @@ Steam üzerinden yeni bir arkadaş edinmek istiyorsanız tanıdığınız birine
 "Steam_InstallAborted_InfoAppNoDemo"		"%game% yüklenmedi, çünkü bu bir demo ve siz oyunun tam sürümüne sahipsiniz. Lütfen oyunun tam sürümünü yükleyin."
 
 "Steam_Startup_SteamChinaRequiredTitle"					"Steam China Gerekli"
-"Steam_Startup_GetSteamChina"						"%gamename% şimdi Steam China'da. Bu istemciyi yüklemek için lütfen aşağıdaki bağlantıyı takip edin."
+"Steam_Startup_GetSteamChina"						"%gamename% yeni Steam China istemcisi aracılığıyla başlatılmalıdır.\n\n %gamename% oyun hesabınızla giriş yapabilir ve oyununuzun ilerlemesini, öğelerini, karakter düzeyini ve puanlarını aktarabilirsiniz.\n\n"
 "Steam_Startup_RunSteamChina"						"%gamename% şimdi Steam China'da. Oyunu aktarmak için lütfen Steam China'yı başlatın."
 "Steam_Startup_SteamChinaImportedUninstall"			"%gamename%, Steam China'ya aktarıldı. Artık bu başlatıcıyı güvenle kaldırabilirsiniz."
 "Steam_Startup_LauncherDeprecated"					"%gamename% artık Steam China üzerinden çalıştırılıyor. Bu kurulum artık desteklenmiyor ve çıkış yapılacak."
@@ -3361,6 +3373,7 @@ Steam üzerinden yeni bir arkadaş edinmek istiyorsanız tanıdığınız birine
 "Steam_Startup_ImportGameFromLauncherMsg"			"%gamename% oyununu Steam China'ya aktarmak istediğinize emin misiniz? Bunu yaptıktan sonra eski başlatıcıyı silebilirsiniz."
 
 "Steam_Download_SteamChina"							"Steam China'yı İndir"
+"Steam_Get_SteamChina"								"Hemen Steam China'yı Edinin"
 
 "Steam_ValidateGame_GameRunning"	"Lütfen yerel oyun dosyalarınızı doğrulamadan önce çalışan oyunları veya araçları kapatın."
 
@@ -3369,8 +3382,8 @@ Steam üzerinden yeni bir arkadaş edinmek istiyorsanız tanıdığınız birine
 "Steam_LibrariesLabel"	"İçerik Kütüphaneleri"
 "Steam_DownloadRestrictionsLabel"	"İndirme Kısıtlamaları"
 
-"Steam_ServerBrowserPingRateLabel"	"Oyun içi sunucu tarayıcısı: azami ping / dakika"
-"Steam_ServerBrowserPingRateInfo"	"Oyun sunucularını taratırken bağlantı sorunları yaşıyorsanız, bu değeri düşürmeyi deneyin."
+"Steam_ServerBrowserPingRateLabel"	"Sunucu Tarayıcısı Ping/Dakika"
+"Steam_ServerBrowserPingRateInfo"	"Oyun sunucularını gezerken bağlantı sorunları mı yaşıyorsunuz? Bu değeri düşürmeyi deneyin."
 "Steam_ServerBrowserPingRateDefault"	"Otomatik (%PingsPerMin%)"
 
 "Steam_TextFilterSettingLabel"									"Sohbet Filtrelemesi"
@@ -3492,6 +3505,7 @@ Steam üzerinden yeni bir arkadaş edinmek istiyorsanız tanıdığınız birine
 "Steam_RecoverLocked_UseCode" "Steam Destek'ten ilgili iletiyi aldım ve özel kodu girmek için hazırım."
 "Steam_RecoverLocked_MustRecover" "Hangi e-posta iletisi? Bana e-posta gelmedi..."
 "Steam_RecoverLocked_WhyIsThisHappening" "Bunun sebebi nedir?"
+"Steam_RecoverLocked_WhyIsThisHappening_URL" "https://support.steampowered.com/kb_article.php?ref=4020-ALZM-5519"
 "Steam_RecoverLocked_EnterCode" "Özel erişim kodum:"
 "Steam_RecoverLocked_EnterCodeDetails" "Kodunuz doğrulandıktan sonra Steam Guard bu bilgisayarı Steam hesabınıza erişim hakkı tanınan makineler listesine ekleyecek."
 "Steam_RecoverLocked_WrongCode" "Üzgünüz, bu hiç de doğru bir şey değil."
@@ -3505,7 +3519,9 @@ Steam üzerinden yeni bir arkadaş edinmek istiyorsanız tanıdığınız birine
 "Steam_RecoverLocked_StartRecovery2" "Steam hesabınızın sizin için değerli olduğunu biliyoruz ve ona erişim sağlamanıza yardımcı olmak görevimizdir."
 "Steam_RecoverLocked_StartRecovery3" "Bir elemanımızın size yardımcı olması için lütfen Steam Destek ile iletişime geçin. Hesap erişimi yardımı için mantıklı talepler bir numaralı önceliğimizdir."
 "Steam_RecoverLocked_RecoverySupportLink" "Steam Desteğine Ulaşın"
+"Steam_RecoverLocked_RecoverySupportLink_URL" "https://support.steampowered.com"
 "Steam_RecoverLocked_LearnMore" "Intel® Kimlik Koruma Teknolojisi hakkında daha fazlasını öğrenin"
+"Steam_RecoverLocked_LearnMore_URL" "https://support.steampowered.com/kb_article.php?ref=9400-IPAX-9398&auth=e39b5c227cffc8ae65414aba013e5fef"
 "Steam_RecoverLocked_CannotAccess" "Üzgünüz, bu hesaba ek izin olmadan bu bilgisayardan erişilemez."
 "Steam_RecoverLocked_Success" "Tebrikler!"
 "Steam_RecoverLocked_SuccessDetails" "Artık bu bilgisayardan Steam hesabınıza erişebilirsiniz. Steam Guard bundan sonrası için bu bilgisayarı Steam hesabınıza erişim hakkı tanınan makineler listesine ekledi."
@@ -3829,7 +3845,6 @@ Bu oyun için bir kategori ayarlamanız, o oyunu çabuk bulmanıza ve Kütüphan
 "steam_menu_friends" "Arkadaşlar"
 "steam_menu_servers" "Sunucular"
 "steam_menu_settings" "Ayarlar"
-"steam_menu_preferences" "Tercihler"
 "steam_menu_view_friends" "Arkadaş Listesi (%friends_online% Çevrimiçi)"
 "steam_menu_view_players" "Oyuncular"
 "steam_menu_add_friend" "Arkadaş Ekle..."
@@ -4570,6 +4585,7 @@ Bu oyun için bir kategori ayarlamanız, o oyunu çabuk bulmanıza ve Kütüphan
 "Steam_Settings_Streaming_SoftwareEncodingThreads_7"	"7"
 "Steam_Settings_Streaming_SoftwareEncodingThreads_8"	"8"
 "Steam_Settings_Streaming_P2PScope_Description"	"Doğrudan Bağlantıya İzin Ver (IP paylaşımı)"
+"Steam_Settings_Streaming_P2PScopeAutomatic"	"Otomatik (etkin)"
 "Steam_Settings_Streaming_P2PScopeDisabled"	"Devre Dışı"
 "Steam_Settings_Streaming_P2PScopeOnlyMe" "Aygıtlarım"
 "Steam_Settings_Streaming_P2PScopeEveryone" "Bütün Aygıtlar"
@@ -4595,6 +4611,7 @@ Bu oyun için bir kategori ayarlamanız, o oyunu çabuk bulmanıza ve Kütüphan
 "Steam_Settings_Streaming_EnableTouchController"	"Dokunmatik kontrolleri etkinleştir"
 
 "Steam_Settings_Streaming_StreamingSupport"	"Destek bilgilerini görüntüle"
+"Steam_Settings_Streaming_StreamingSupportLink"	"https://support.steampowered.com/kb_article.php?ref=3629-RIAV-1617"
 
 "Steam_Settings_Streaming_Connected" "Bilgisayar bağlı"
 "Steam_Settings_Streaming_Paired" "Cihaz eşleşti"
@@ -4605,6 +4622,15 @@ Bu oyun için bir kategori ayarlamanız, o oyunu çabuk bulmanıza ve Kütüphan
 
 "Steam_Settings_Streaming_PIN_Title" "Steam Link Güvenlik Kodunu Belirle"
 "Steam_Settings_Streaming_PIN_Text" "Bu bilgisayardan yayın yapabilmek için her defasında Steam Link'e girilmesi gerekecek sayısal bir PIN kodu belirleyin:"
+
+"Steam_Settings_ShareIPNetworking_Label" "Steam Ağ Oluşturma"
+"Steam_Settings_ShareIPNetworking_Info" "Daha hızlı bağlantı için Steam Ağ Oluşturma kullanan oyunların IP adresimi paylaşmasına izin ver"
+"Steam_Settings_ShareIPNetworking_Default" "Varsayılan"
+"Steam_Settings_ShareIPNetworking_Always" "Her Zaman"
+"Steam_Settings_ShareIPNetworking_FriendsOnly" "Sadece Arkadaşlarla"
+"Steam_Settings_ShareIPNetworking_Never" "Asla"
+"Steam_Settings_ShareIPNetworking_URL" "Daha Fazlasını Öğrenin"
+"Steam_Settings_ShareIPNetworking_URLText" "https://support.steampowered.com/kb_article.php?ref=9929-UAFN-9329"
 
 "SteamUI_StreamingIntro_Title"		"Steam Remote Play'e Hoş Geldiniz"
 "SteamUI_StreamingIntro"			"Bu oyunu başka bir bilgisayar üzerinde çalıştırmak ve Steam Remote Play kullanarak buradan oynamak üzeresiniz."
@@ -4747,4 +4773,9 @@ Bu oyun için bir kategori ayarlamanız, o oyunu çabuk bulmanıza ve Kütüphan
 
 "SteamUI_RunningConflictingSoftware" "Çakışan Yazılım Algılandı"
 "SteamUI_RunningIncompatibleTcpService" "%incompatdll% öğesinin (%incompatname% ile ilişkilidir) uyumsuz bir sürümü \nSteam işleminde tespit edildi.\n\nSteam veya oyun çalışırken çökme veya ağ bağlantısı yavaşlaması yaşadığınız\nbu yazılımı güncelleştirmenizi veya kaldırmanızı tavsiye ediyoruz."
+
+"Steam_XboxDriverInstall_Title"		"Xbox Sürücü Yükleme"
+"Steam_XboxDriverInstall_Success"	"Sürücü başarıyla güncellendi, bilgisayarınızı yeniden başlattığınızda etkinleşecek."
+"Steam_XboxDriverInstall_ServiceFailure"	"Sürücü güncellemesi başarısız oldu. Steam normal kullanıcı hesabıyla mı açık ve Steam hizmeti çalışır durumda ve güncel mi?"
+"Steam_XboxDriverInstall_Failure"	"Sürücü güncelleme başarısız, hata = %error%"
 }

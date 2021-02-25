@@ -227,7 +227,7 @@ message CPublishedFile_GetItemInfo_Request {
 		optional .EPublishedFileRevision desired_revision = 3 [default = k_EPublishedFileRevision_Default, (description) = "Return the data for the specified revision."];
 	}
 
-	optional uint32 app_id = 1;
+	optional uint32 appid = 1;
 	optional uint32 last_time_updated = 2;
 	repeated .CPublishedFile_GetItemInfo_Request.WorkshopItem workshop_items = 3;
 }

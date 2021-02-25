@@ -264,7 +264,8 @@
  B __g_CreateCDLLValidateIValidate_reg
  B __g_CreateCFriendsUIModuleIFriendsUI_reg
  B __g_CreateCFriendsUIModuleIVGuiModule_reg
- B app_pkey_methods
+ B bio_lookup_lock
+ B bio_type_lock
  B g_AnimatingImagePanelLinkerHack
  B g_AnimatingImagePanelPullInModule
  B g_ButtonLinkerHack
@@ -340,7 +341,6 @@
  B g_pfnSteam_BGetCallback
  B g_pfnSteam_FreeLastCallback
  B g_pfnSteam_GetAPICallResult
- B obj_cleanup_defer
  B s_ClientNewVRChat
  B s_CmdLineParamDisableBrowser
  B s_NoEscConversion
@@ -348,8 +348,6 @@
  B s_StringCharConversion
  B s_cmdFriendsUI
  B s_cmdNoFriendsUI
- B sig_app
- B sigx_app
  B vgui::BuildGroup::m_HandleTable
  B vgui::CBuildFactoryHelper::m_sHelpers
  B vgui::HTML::m_staticLastThinkTraverseCounter
@@ -399,7 +397,6 @@
  D ASN1_NULL_it
  D ASN1_OBJECT_it
  D ASN1_OCTET_STRING_it
- D ASN1_SEQUENCE_ANY_it
  D BIGNUM_it
  D CAchievementNotification::ChainToAnimationMap()::chained
  D CAchievementNotification::ChainToMap()::chained
@@ -801,7 +798,6 @@
  D CLimitedUserDialog::GetKBMap()::s_pMap
  D CLimitedUserDialog::GetMessageMap()::s_pMap
  D CLimitedUserDialog::KB_ChainToMap()::chained
- D CMS_SharedInfo_it
  D CNewTurnsNotification::ChainToAnimationMap()::chained
  D CNewTurnsNotification::ChainToMap()::chained
  D CNewTurnsNotification::GetKBMap()::s_pMap
@@ -863,16 +859,8 @@
  D CVoiceTraffic::GetMessageMap()::s_pMap
  D CVoiceTraffic::KB_ChainToMap()::chained
  D DHparams_it
- D DHvparams_it
- D DHxparams_it
- D DSAPrivateKey_it
- D DSAPublicKey_it
- D DSA_SIG_it
- D DSAparams_it
- D ECDSA_SIG_it
  D ECPARAMETERS_it
  D ECPKPARAMETERS_it
- D EC_PRIVATEKEY_it
  D HTMLComboBoxHost::ChainToAnimationMap()::chained
  D HTMLComboBoxHost::ChainToMap()::chained
  D HTMLComboBoxHost::GetKBMap()::s_pMap
@@ -883,7 +871,7 @@
  D HTMLFramelessWrapper::GetKBMap()::s_pMap
  D HTMLFramelessWrapper::GetMessageMap()::s_pMap
  D HTMLFramelessWrapper::KB_ChainToMap()::chained
- D LONG_it
+ D INT32_it
  D ListPanelColumnSelectButton::ChainToAnimationMap()::chained
  D ListPanelColumnSelectButton::ChainToMap()::chained
  D ListPanelColumnSelectButton::GetKBMap()::s_pMap
@@ -897,7 +885,9 @@
  D RSAPrivateKey_it
  D RSAPublicKey_it
  D RSA_OAEP_PARAMS_it
+ D RSA_PRIME_INFO_it
  D RSA_PSS_PARAMS_it
+ D SM2_Ciphertext_it
  D SharedLibraryNotification::ChainToAnimationMap()::chained
  D SharedLibraryNotification::ChainToMap()::chained
  D SharedLibraryNotification::GetKBMap()::s_pMap
@@ -1066,15 +1056,25 @@
  D VTT for vgui::TreeViewSubPanel
  D VTT for vgui::URLLabel
  D X509_ALGOR_it
- D X509_ATTRIBUTE_SET_it
  D X509_ATTRIBUTE_it
  D X509_PUBKEY_it
  D X509_SIG_it
- D X9_62_CHARACTERISTIC_TWO_it
- D X9_62_CURVE_it
- D X9_62_FIELDID_it
- D X9_62_PENTANOMIAL_it
- D ZLONG_it
+ D ZINT32_it
+ D _bignum_const_2
+ D _bignum_dh1024_160_g
+ D _bignum_dh1024_160_p
+ D _bignum_dh1024_160_q
+ D _bignum_dh2048_224_g
+ D _bignum_dh2048_224_p
+ D _bignum_dh2048_224_q
+ D _bignum_dh2048_256_g
+ D _bignum_dh2048_256_p
+ D _bignum_dh2048_256_q
+ D _bignum_ffdhe2048_p
+ D _bignum_ffdhe3072_p
+ D _bignum_ffdhe4096_p
+ D _bignum_ffdhe6144_p
+ D _bignum_ffdhe8192_p
  D cmac_asn1_meth
  D cmac_pkey_meth
  D construction vtable for CFriendPanel-in-CClanPanel
@@ -1514,15 +1514,24 @@
  D construction vtable for vgui::ToggleButton-in-vgui::RadioButton
  D construction vtable for vgui::ToggleButton-in-vgui::SectionedListPanelCollapser
  D construction vtable for vgui::ToolPanel-in-CChatRoomDlg
+ D curve448_precomputed_base
+ D curve448_wnaf_base
  D dh_asn1_meth
  D dh_pkey_meth
  D dhx_asn1_meth
  D dhx_pkey_meth
  D dsa_asn1_meths
  D dsa_pkey_meth
- D dsa_pub_internal_it
  D ec_pkey_meth
  D eckey_asn1_meth
+ D ecx25519_asn1_meth
+ D ecx25519_pkey_meth
+ D ecx448_asn1_meth
+ D ecx448_pkey_meth
+ D ed25519_asn1_meth
+ D ed25519_pkey_meth
+ D ed448_asn1_meth
+ D ed448_pkey_meth
  D g_BitStringEndMasks
  D g_DLLValidate
  D g_pchValidatedEmoticonDelimiter
@@ -1843,6 +1852,7 @@
  D guard variable for vgui::TreeViewSubPanel::GetMessageMap()::s_pMap
  D guard variable for vgui::URLLabel::GetKBMap()::s_pMap
  D guard variable for vgui::URLLabel::GetMessageMap()::s_pMap
+ D hkdf_pkey_meth
  D hmac_asn1_meth
  D hmac_pkey_meth
  D jpeg_std_message_table
@@ -1851,9 +1861,18 @@
  D k_pszSteamClientModuleName
  D k_rgchCodeSignaturePublicKeys
  D pModuleExtension
- D rand_ssleay_meth
+ D poly1305_asn1_meth
+ D poly1305_pkey_meth
+ D rand_meth
  D rsa_asn1_meths
  D rsa_pkey_meth
+ D rsa_pss_asn1_meth
+ D rsa_pss_pkey_meth
+ D scrypt_pkey_meth
+ D siphash_asn1_meth
+ D siphash_pkey_meth
+ D sm2_pkey_meth
+ D tls1_prf_pkey_meth
  D typeinfo for BlankImage
  D typeinfo for CAchievementNotification
  D typeinfo for CAppDownloadNotificationManager
@@ -1976,6 +1995,7 @@
  D typeinfo for CCallback<CVoiceBar, VoiceEnabledStateChanged_t, false>
  D typeinfo for CCallbackBase
  D typeinfo for CCallbackImpl<1032>
+ D typeinfo for CCallbackImpl<1044>
  D typeinfo for CCallbackImpl<11>
  D typeinfo for CCallbackImpl<12>
  D typeinfo for CCallbackImpl<136>
@@ -3452,6 +3472,7 @@
  D vtable for CCallback<CVoiceBar, GameUsingVoice_t, false>
  D vtable for CCallback<CVoiceBar, VoiceEnabledStateChanged_t, false>
  D vtable for CCallbackImpl<1032>
+ D vtable for CCallbackImpl<1044>
  D vtable for CCallbackImpl<11>
  D vtable for CCallbackImpl<12>
  D vtable for CCallbackImpl<136>
@@ -4178,6 +4199,9 @@
  Plat_OutputDebugString
  Plat_localtime
  R DES_SPtrans
+ R curve448_point_identity
+ R curve448_scalar_one
+ R curve448_scalar_zero
  R jpeg_aritab
  R jpeg_natural_order
  R jpeg_natural_order2
@@ -4186,6 +4210,7 @@
  R jpeg_natural_order5
  R jpeg_natural_order6
  R jpeg_natural_order7
+ R sm2_asn1_meth
  R typeinfo name for BlankImage
  R typeinfo name for CAchievementNotification
  R typeinfo name for CAppDownloadNotificationManager
@@ -4309,6 +4334,7 @@
  R typeinfo name for CCallback<CVoiceBar, VoiceEnabledStateChanged_t, false>
  R typeinfo name for CCallbackBase
  R typeinfo name for CCallbackImpl<1032>
+ R typeinfo name for CCallbackImpl<1044>
  R typeinfo name for CCallbackImpl<11>
  R typeinfo name for CCallbackImpl<12>
  R typeinfo name for CCallbackImpl<136>
@@ -5201,17 +5227,21 @@
  T ASN1_INTEGER_new
  T ASN1_INTEGER_set
  T ASN1_INTEGER_to_BN
- T ASN1_NULL_new
  T ASN1_OBJECT_free
  T ASN1_OBJECT_new
+ T ASN1_OCTET_STRING_cmp
  T ASN1_OCTET_STRING_dup
  T ASN1_OCTET_STRING_free
  T ASN1_OCTET_STRING_new
  T ASN1_OCTET_STRING_set
+ T ASN1_STRING_TABLE_add
+ T ASN1_STRING_TABLE_cleanup
  T ASN1_STRING_clear_free
- T ASN1_STRING_data
+ T ASN1_STRING_cmp
+ T ASN1_STRING_copy
  T ASN1_STRING_dup
  T ASN1_STRING_free
+ T ASN1_STRING_get0_data
  T ASN1_STRING_length
  T ASN1_STRING_new
  T ASN1_STRING_set
@@ -5223,10 +5253,13 @@
  T ASN1_TYPE_new
  T ASN1_TYPE_set
  T ASN1_TYPE_set_octetstring
+ T ASN1_TYPE_unpack_sequence
+ T ASN1_add_oid_module
+ T ASN1_add_stable_module
  T ASN1_bn_print
+ T ASN1_buf_print
  T ASN1_get_object
  T ASN1_item_d2i
- T ASN1_item_ex_d2i
  T ASN1_item_ex_free
  T ASN1_item_ex_i2d
  T ASN1_item_ex_new
@@ -5234,12 +5267,12 @@
  T ASN1_item_i2d
  T ASN1_item_new
  T ASN1_item_pack
+ T ASN1_item_unpack
  T ASN1_object_size
- T ASN1_primitive_free
- T ASN1_primitive_new
  T ASN1_put_eoc
  T ASN1_put_object
- T ASN1_template_free
+ T ASN1_str2mask
+ T ASN1_tag2bit
  T BDrawHTMLPerfInfo()
  T BF_cbc_encrypt
  T BF_cfb64_encrypt
@@ -5255,28 +5288,51 @@
  T BGetLocalFormattedDateAndTime(long, char*, int, char*, int, bool, bool)
  T BGetURLFromCommandLine(CUtlString*, SteamStdLib::CCommandLineParam const&)
  T BHasNoBrowserCommandLineParam()
+ T BIO_clear_flags
+ T BIO_ctrl
+ T BIO_dump
+ T BIO_dump_indent_cb
+ T BIO_free
+ T BIO_gets
  T BIO_indent
+ T BIO_new
+ T BIO_new_file
  T BIO_printf
  T BIO_puts
  T BIO_snprintf
+ T BIO_vfree
  T BIO_vprintf
  T BIO_write
  T BInFriendsUI()
  T BIsFriendsDialogValid()
  T BIsValidDirectory(StringView)
+ T BLAKE2b_Final
+ T BLAKE2b_Init
+ T BLAKE2b_Update
+ T BLAKE2s_Final
+ T BLAKE2s_Init
+ T BLAKE2s_Update
  T BN_BLINDING_convert_ex
  T BN_BLINDING_create_param
  T BN_BLINDING_free
  T BN_BLINDING_invert_ex
+ T BN_BLINDING_is_current_thread
+ T BN_BLINDING_lock
  T BN_BLINDING_new
- T BN_BLINDING_thread_id
+ T BN_BLINDING_set_current_thread
+ T BN_BLINDING_unlock
  T BN_BLINDING_update
  T BN_CTX_end
  T BN_CTX_free
  T BN_CTX_get
  T BN_CTX_new
+ T BN_CTX_secure_new
  T BN_CTX_start
  T BN_GENCB_call
+ T BN_GENCB_free
+ T BN_GENCB_get_arg
+ T BN_GENCB_new
+ T BN_GENCB_set
  T BN_GF2m_add
  T BN_GF2m_mod
  T BN_GF2m_mod_arr
@@ -5297,12 +5353,16 @@
  T BN_RECP_CTX_free
  T BN_RECP_CTX_init
  T BN_RECP_CTX_set
+ T BN_abs_is_word
  T BN_add
  T BN_add_word
  T BN_asc2bn
  T BN_bin2bn
  T BN_bn2bin
+ T BN_bn2binpad
  T BN_bn2dec
+ T BN_bn2lebinpad
+ T BN_clear_bit
  T BN_clear_free
  T BN_cmp
  T BN_consttime_swap
@@ -5315,12 +5375,21 @@
  T BN_free
  T BN_from_montgomery
  T BN_gcd
+ T BN_generate_dsa_nonce
  T BN_generate_prime_ex
+ T BN_get_flags
+ T BN_get_word
  T BN_hex2bn
- T BN_init
  T BN_is_bit_set
+ T BN_is_negative
+ T BN_is_odd
+ T BN_is_one
+ T BN_is_prime_ex
  T BN_is_prime_fasttest_ex
+ T BN_is_word
+ T BN_is_zero
  T BN_kronecker
+ T BN_lebin2bn
  T BN_lshift
  T BN_lshift1
  T BN_mask_bits
@@ -5340,7 +5409,6 @@
  T BN_mod_mul_reciprocal
  T BN_mod_sqr
  T BN_mod_sqrt
- T BN_mod_sub
  T BN_mod_sub_quick
  T BN_mod_word
  T BN_mul
@@ -5352,32 +5420,36 @@
  T BN_num_bits
  T BN_num_bits_word
  T BN_print
- T BN_pseudo_rand
- T BN_pseudo_rand_range
+ T BN_priv_rand
+ T BN_priv_rand_range
  T BN_rand
- T BN_rand_range
  T BN_rshift
  T BN_rshift1
+ T BN_secure_new
+ T BN_security_bits
  T BN_set_bit
+ T BN_set_flags
  T BN_set_negative
  T BN_set_word
  T BN_sqr
  T BN_sub
  T BN_sub_word
  T BN_to_ASN1_INTEGER
+ T BN_to_montgomery
  T BN_uadd
  T BN_ucmp
  T BN_usub
  T BN_value_one
+ T BN_with_flags
  T BParseOpenDevTools(CUtlString*, unsigned int*, CUtlString*, char const*)
  T BParsePEMHeaderOrFooter(char const*&, char const*, char const*, char const*)
  T BResizeImageInternal(CUtlBuffer&, int, int, int&, int&, bool, bool)
  T BResizeImageRGBA(CUtlBuffer&, int, int, int&, int&, bool)
+ T BUF_MEM_free
+ T BUF_MEM_grow
  T BUF_MEM_grow_clean
- T BUF_memdup
+ T BUF_MEM_new
  T BUF_reverse
- T BUF_strlcat
- T BUF_strlcpy
  T BlankImage::GetContentSize(int&, int&)
  T BlankImage::GetSize(int&, int&)
  T BlankImage::Paint()
@@ -6016,6 +6088,9 @@
  T CCallbackImpl<1032>::GetCallbackSizeBytes()
  T CCallbackImpl<1032>::Run(void*, bool, unsigned long long)
  T CCallbackImpl<1032>::~CCallbackImpl()
+ T CCallbackImpl<1044>::GetCallbackSizeBytes()
+ T CCallbackImpl<1044>::Run(void*, bool, unsigned long long)
+ T CCallbackImpl<1044>::~CCallbackImpl()
  T CCallbackImpl<11>::GetCallbackSizeBytes()
  T CCallbackImpl<11>::Run(void*, bool, unsigned long long)
  T CCallbackImpl<11>::~CCallbackImpl()
@@ -6567,7 +6642,7 @@
  T CDirIterator::CDirIterator(StringView, StringView)
  T CDirIterator::CurrentFileCreateTime() const
  T CDirIterator::CurrentFileLength() const
- T CDirIterator::CurrentFileName() const
+ T CDirIterator::CurrentFileName()
  T CDirIterator::CurrentFileWriteTime() const
  T CDirIterator::Init(StringView)
  T CDirIterator::~CDirIterator()
@@ -8251,6 +8326,7 @@
  T CJSCallbackFunc_HTMLJS::OnFinalRelease()
  T CJSCallbackFunc_HTMLJS::~CJSCallbackFunc_HTMLJS()
  T CJSCallbackPromise::CJSCallbackPromise(CSmartPtr<CJSCallbackFunc>, CSmartPtr<CJSCallbackFunc>)
+ T CJSCallbackPromise::RejectWithReason(EResult, char const*)
  T CJSCallbackPromise::~CJSCallbackPromise()
  T CJSMethodArgs::AddArray()
  T CJSMethodArgs::AddBoolean(bool)
@@ -10410,12 +10486,16 @@
  T CNewTurnsNotification::UpdateCount(int)
  T CNewTurnsNotification::~CNewTurnsNotification()
  T CNumStr::CNumStr(unsigned char)
+ T CONF_free
+ T CONF_get1_default_config_file
+ T CONF_imodule_get_value
+ T CONF_module_add
+ T CONF_modules_finish
+ T CONF_modules_load
+ T CONF_modules_load_file
+ T CONF_modules_unload
+ T CONF_parse_list
  T COpenSSLWrapper::Initialize()
- T COpenSSLWrapper::OpenSSLDynLockCreateCallback(char const*, int)
- T COpenSSLWrapper::OpenSSLDynLockDestroyCallback(CRYPTO_dynlock_value*, char const*, int)
- T COpenSSLWrapper::OpenSSLDynLockLockCallback(int, CRYPTO_dynlock_value*, char const*, int)
- T COpenSSLWrapper::OpenSSLLockingCallback(int, int, char const*, int)
- T COpenSSLWrapper::OpenSSLThreadIDCallback()
  T COpenSSLWrapper::Shutdown()
  T COverlayEnabledMsg::ByteSize() const
  T COverlayEnabledMsg::COverlayEnabledMsg()
@@ -10560,12 +10640,22 @@
  T CRSAKeyBase::ParsePEM(char const*, unsigned long)
  T CRSAPublicKey::~CRSAPublicKey()
  T CRYPTO_128_unwrap
+ T CRYPTO_128_unwrap_pad
  T CRYPTO_128_wrap
- T CRYPTO_THREADID_cmp
- T CRYPTO_THREADID_cpy
- T CRYPTO_THREADID_current
- T CRYPTO_THREADID_hash
- T CRYPTO_add_lock
+ T CRYPTO_128_wrap_pad
+ T CRYPTO_THREAD_cleanup_local
+ T CRYPTO_THREAD_compare_id
+ T CRYPTO_THREAD_get_current_id
+ T CRYPTO_THREAD_get_local
+ T CRYPTO_THREAD_init_local
+ T CRYPTO_THREAD_lock_free
+ T CRYPTO_THREAD_lock_new
+ T CRYPTO_THREAD_read_lock
+ T CRYPTO_THREAD_run_once
+ T CRYPTO_THREAD_set_local
+ T CRYPTO_THREAD_unlock
+ T CRYPTO_THREAD_write_lock
+ T CRYPTO_atomic_add
  T CRYPTO_cbc128_decrypt
  T CRYPTO_cbc128_encrypt
  T CRYPTO_ccm128_aad
@@ -10579,13 +10669,13 @@
  T CRYPTO_cfb128_1_encrypt
  T CRYPTO_cfb128_8_encrypt
  T CRYPTO_cfb128_encrypt
- T CRYPTO_cleanup_all_ex_data
+ T CRYPTO_clear_free
+ T CRYPTO_clear_realloc
  T CRYPTO_ctr128_encrypt
  T CRYPTO_ctr128_encrypt_ctr32
- T CRYPTO_destroy_dynlockid
+ T CRYPTO_dup_ex_data
  T CRYPTO_free
  T CRYPTO_free_ex_data
- T CRYPTO_free_locked
  T CRYPTO_gcm128_aad
  T CRYPTO_gcm128_decrypt
  T CRYPTO_gcm128_decrypt_ctr32
@@ -10596,25 +10686,33 @@
  T CRYPTO_gcm128_setiv
  T CRYPTO_gcm128_tag
  T CRYPTO_get_ex_new_index
- T CRYPTO_lock
  T CRYPTO_malloc
  T CRYPTO_mem_ctrl
  T CRYPTO_memcmp
+ T CRYPTO_memdup
  T CRYPTO_new_ex_data
- T CRYPTO_num_locks
+ T CRYPTO_ocb128_aad
+ T CRYPTO_ocb128_cleanup
+ T CRYPTO_ocb128_copy_ctx
+ T CRYPTO_ocb128_decrypt
+ T CRYPTO_ocb128_encrypt
+ T CRYPTO_ocb128_finish
+ T CRYPTO_ocb128_init
+ T CRYPTO_ocb128_setiv
+ T CRYPTO_ocb128_tag
  T CRYPTO_ofb128_encrypt
- T CRYPTO_pop_info
- T CRYPTO_push_info_
  T CRYPTO_realloc
- T CRYPTO_realloc_clean
- T CRYPTO_set_dynlock_create_callback
- T CRYPTO_set_dynlock_destroy_callback
- T CRYPTO_set_dynlock_lock_callback
+ T CRYPTO_secure_allocated
+ T CRYPTO_secure_clear_free
+ T CRYPTO_secure_free
+ T CRYPTO_secure_malloc
+ T CRYPTO_secure_malloc_done
+ T CRYPTO_secure_zalloc
  T CRYPTO_set_ex_data
- T CRYPTO_set_id_callback
- T CRYPTO_set_locking_callback
- T CRYPTO_set_mem_ex_functions
+ T CRYPTO_set_mem_functions
+ T CRYPTO_strdup
  T CRYPTO_xts128_encrypt
+ T CRYPTO_zalloc
  T CRecordedInput::ByteSize() const
  T CRecordedInput::CRecordedInput()
  T CRecordedInput::Clear()
@@ -10672,6 +10770,7 @@
  T CRemotePlayController::BCanCreateInviteForGame(char const*, CSmartPtr<CJSCallbackPromise>)
  T CRemotePlayController::BCanHostIsolatedGameAudio(CSmartPtr<CJSCallbackPromise>)
  T CRemotePlayController::BEnabled(CSmartPtr<CJSCallbackPromise>)
+ T CRemotePlayController::BRemotePlayTogetherLinkSupported(CSmartPtr<CJSCallbackPromise>)
  T CRemotePlayController::CCallbackInternal_OnPlaceholderStateChange::CCallbackInternal_OnPlaceholderStateChange()
  T CRemotePlayController::CCallbackInternal_OnPlaceholderStateChange::Run(void*)
  T CRemotePlayController::CCallbackInternal_OnPlaceholderStateChange::~CCallbackInternal_OnPlaceholderStateChange()
@@ -10801,6 +10900,10 @@
  T CSetActivityMsg::New() const
  T CSetActivityMsg::SerializeWithCachedSizesToArray(unsigned char*) const
  T CSetActivityMsg::SetCachedSize(int) const
+ T CSetActivityMsg::SharedCtor()
+ T CSetActivityMsg::SharedDtor()
+ T CSetActivityMsg::mutable_game_name()
+ T CSetActivityMsg::set_game_name(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CSetActivityMsg::~CSetActivityMsg()
  T CSetCapslockMsg::ByteSize() const
  T CSetCapslockMsg::CSetCapslockMsg()
@@ -12515,6 +12618,7 @@
  T Camellia_decrypt
  T Camellia_encrypt
  T Camellia_set_key
+ T ChaCha20_ctr32
  T ChatIDFromClanID(CSteamID const&)
  T ChatIDFromSteamID(CSteamID const&)
  T CheckDirectoryForChanges(char const*, CDirWatcher*, bool)
@@ -12618,8 +12722,11 @@
  T DES_set_odd_parity
  T DES_xcbc_encrypt
  T DH_KDF_X9_42
- T DH_OpenSSL
+ T DH_check
+ T DH_check_ex
+ T DH_check_params
  T DH_check_pub_key
+ T DH_check_pub_key_ex
  T DH_compute_key
  T DH_compute_key_padded
  T DH_free
@@ -12628,75 +12735,91 @@
  T DH_get_1024_160
  T DH_get_2048_224
  T DH_get_2048_256
+ T DH_get_default_method
  T DH_new
+ T DH_new_by_nid
  T DH_new_method
+ T DH_security_bits
+ T DH_set0_key
+ T DH_set0_pqg
  T DH_size
- T DSA_OpenSSL
  T DSA_SIG_free
+ T DSA_SIG_get0
  T DSA_SIG_new
+ T DSA_bits
  T DSA_do_sign
  T DSA_do_verify
  T DSA_dup_DH
  T DSA_free
  T DSA_generate_key
+ T DSA_get_default_method
  T DSA_new
  T DSA_new_method
+ T DSA_security_bits
  T DSA_sign
- T DSA_sign_setup
  T DSA_size
  T DSA_verify
+ T DSO_METHOD_openssl
+ T DSO_bind_func
+ T DSO_free
+ T DSO_global_lookup
+ T DSO_load
+ T DSO_set_filename
  T DispatchOpenSSLErrors(char const*)
- T ECDH_KDF_X9_62
- T ECDH_OpenSSL
  T ECDH_compute_key
- T ECDSA_OpenSSL
  T ECDSA_SIG_free
+ T ECDSA_SIG_get0
  T ECDSA_SIG_new
+ T ECDSA_SIG_set0
+ T ECDSA_do_sign_ex
+ T ECDSA_do_verify
  T ECDSA_sign
- T ECDSA_sign_setup
  T ECDSA_size
  T ECDSA_verify
  T ECPKParameters_print
- T EC_EX_DATA_free_all_data
- T EC_EX_DATA_free_data
- T EC_EX_DATA_get_data
- T EC_EX_DATA_set_data
  T EC_GF2m_simple_method
  T EC_GFp_mont_method
  T EC_GFp_nistp224_method
  T EC_GFp_nistp521_method
  T EC_GFp_nistz256_method
+ T EC_GROUP_check
+ T EC_GROUP_check_discriminant
  T EC_GROUP_clear_free
  T EC_GROUP_cmp
  T EC_GROUP_copy
  T EC_GROUP_dup
  T EC_GROUP_free
+ T EC_GROUP_get0_cofactor
  T EC_GROUP_get0_generator
+ T EC_GROUP_get0_order
  T EC_GROUP_get0_seed
  T EC_GROUP_get_asn1_flag
  T EC_GROUP_get_basis_type
  T EC_GROUP_get_cofactor
- T EC_GROUP_get_curve_GF2m
- T EC_GROUP_get_curve_GFp
+ T EC_GROUP_get_curve
  T EC_GROUP_get_curve_name
  T EC_GROUP_get_degree
- T EC_GROUP_get_mont_data
+ T EC_GROUP_get_ecparameters
+ T EC_GROUP_get_ecpkparameters
  T EC_GROUP_get_order
  T EC_GROUP_get_point_conversion_form
  T EC_GROUP_get_seed_len
- T EC_GROUP_have_precompute_mult
  T EC_GROUP_method_of
  T EC_GROUP_new
  T EC_GROUP_new_by_curve_name
  T EC_GROUP_new_curve_GF2m
  T EC_GROUP_new_curve_GFp
+ T EC_GROUP_new_from_ecparameters
+ T EC_GROUP_new_from_ecpkparameters
+ T EC_GROUP_order_bits
  T EC_GROUP_set_asn1_flag
- T EC_GROUP_set_curve_GF2m
- T EC_GROUP_set_curve_GFp
+ T EC_GROUP_set_curve
  T EC_GROUP_set_curve_name
  T EC_GROUP_set_generator
  T EC_GROUP_set_point_conversion_form
  T EC_GROUP_set_seed
+ T EC_KEY_can_sign
+ T EC_KEY_check_key
  T EC_KEY_clear_flags
  T EC_KEY_copy
  T EC_KEY_dup
@@ -12708,13 +12831,15 @@
  T EC_KEY_get_conv_form
  T EC_KEY_get_enc_flags
  T EC_KEY_get_flags
- T EC_KEY_get_key_method_data
- T EC_KEY_insert_key_method_data
+ T EC_KEY_key2buf
  T EC_KEY_new
+ T EC_KEY_new_method
+ T EC_KEY_oct2key
+ T EC_KEY_oct2priv
+ T EC_KEY_priv2buf
  T EC_KEY_set_enc_flags
  T EC_KEY_set_flags
  T EC_KEY_set_group
- T EC_KEY_set_public_key
  T EC_KEY_up_ref
  T EC_METHOD_get_field_type
  T EC_POINT_add
@@ -12722,10 +12847,8 @@
  T EC_POINT_cmp
  T EC_POINT_copy
  T EC_POINT_dbl
- T EC_POINT_dup
  T EC_POINT_free
- T EC_POINT_get_affine_coordinates_GF2m
- T EC_POINT_get_affine_coordinates_GFp
+ T EC_POINT_get_affine_coordinates
  T EC_POINT_invert
  T EC_POINT_is_at_infinity
  T EC_POINT_is_on_curve
@@ -12734,41 +12857,59 @@
  T EC_POINT_new
  T EC_POINT_oct2point
  T EC_POINT_point2bn
+ T EC_POINT_point2buf
  T EC_POINT_point2oct
  T EC_POINT_set_Jprojective_coordinates_GFp
- T EC_POINT_set_affine_coordinates_GF2m
- T EC_POINT_set_affine_coordinates_GFp
- T EC_POINT_set_compressed_coordinates_GF2m
- T EC_POINT_set_compressed_coordinates_GFp
+ T EC_POINT_set_affine_coordinates
+ T EC_POINT_set_compressed_coordinates
  T EC_POINT_set_to_infinity
  T EC_POINTs_make_affine
+ T EC_POINTs_mul
  T EC_curve_nid2nist
  T EC_curve_nist2nid
+ T EC_ec_pre_comp_dup
+ T EC_ec_pre_comp_free
+ T EC_nistp224_pre_comp_dup
+ T EC_nistp224_pre_comp_free
+ T EC_nistp256_pre_comp_dup
+ T EC_nistp256_pre_comp_free
+ T EC_nistp521_pre_comp_dup
+ T EC_nistp521_pre_comp_free
+ T EC_nistz256_pre_comp_dup
+ T EC_nistz256_pre_comp_free
+ T EC_pre_comp_free
+ T ED25519_public_from_private
+ T ED25519_sign
+ T ED25519_verify
+ T ED448_public_from_private
+ T ED448_sign
+ T ED448_verify
  T ERR_add_error_data
  T ERR_add_error_vdata
  T ERR_clear_error
  T ERR_error_string_n
- T ERR_free_strings
  T ERR_func_error_string
  T ERR_get_error
  T ERR_get_state
  T ERR_load_ASN1_strings
+ T ERR_load_ASYNC_strings
  T ERR_load_BIO_strings
  T ERR_load_BN_strings
  T ERR_load_BUF_strings
  T ERR_load_CMS_strings
  T ERR_load_CONF_strings
  T ERR_load_CRYPTO_strings
+ T ERR_load_CT_strings
  T ERR_load_DH_strings
  T ERR_load_DSA_strings
  T ERR_load_DSO_strings
- T ERR_load_ECDH_strings
- T ERR_load_ECDSA_strings
  T ERR_load_EC_strings
  T ERR_load_ERR_strings
  T ERR_load_EVP_strings
+ T ERR_load_KDF_strings
  T ERR_load_OBJ_strings
  T ERR_load_OCSP_strings
+ T ERR_load_OSSL_STORE_strings
  T ERR_load_PEM_strings
  T ERR_load_PKCS12_strings
  T ERR_load_PKCS7_strings
@@ -12779,56 +12920,82 @@
  T ERR_load_UI_strings
  T ERR_load_X509V3_strings
  T ERR_load_X509_strings
- T ERR_load_crypto_strings
- T ERR_load_strings
+ T ERR_load_strings_const
  T ERR_peek_last_error
+ T ERR_pop_to_mark
  T ERR_put_error
- T ERR_remove_state
+ T ERR_reason_error_string
+ T ERR_set_mark
  T EStreamAudioCodec_IsValid(int)
  T EStreamVideoCodec_IsValid(int)
  T EVP_CIPHER_CTX_block_size
+ T EVP_CIPHER_CTX_buf_noconst
  T EVP_CIPHER_CTX_cipher
- T EVP_CIPHER_CTX_cleanup
  T EVP_CIPHER_CTX_copy
  T EVP_CIPHER_CTX_ctrl
- T EVP_CIPHER_CTX_flags
- T EVP_CIPHER_CTX_init
+ T EVP_CIPHER_CTX_encrypting
+ T EVP_CIPHER_CTX_free
+ T EVP_CIPHER_CTX_get_cipher_data
  T EVP_CIPHER_CTX_iv_length
+ T EVP_CIPHER_CTX_iv_noconst
  T EVP_CIPHER_CTX_key_length
+ T EVP_CIPHER_CTX_new
+ T EVP_CIPHER_CTX_num
+ T EVP_CIPHER_CTX_reset
  T EVP_CIPHER_CTX_set_key_length
+ T EVP_CIPHER_CTX_set_num
+ T EVP_CIPHER_CTX_test_flags
  T EVP_CIPHER_asn1_to_param
  T EVP_CIPHER_flags
  T EVP_CIPHER_get_asn1_iv
+ T EVP_CIPHER_iv_length
  T EVP_CIPHER_param_to_asn1
  T EVP_CIPHER_set_asn1_iv
  T EVP_CIPHER_type
  T EVP_Cipher
  T EVP_CipherInit_ex
+ T EVP_CipherUpdate
+ T EVP_DecryptUpdate
  T EVP_Digest
  T EVP_DigestFinal
+ T EVP_DigestFinalXOF
  T EVP_DigestFinal_ex
+ T EVP_DigestInit
  T EVP_DigestInit_ex
+ T EVP_DigestSignFinal
+ T EVP_DigestSignInit
  T EVP_DigestUpdate
  T EVP_DigestVerifyInit
  T EVP_EncryptInit_ex
- T EVP_MD_CTX_cleanup
  T EVP_MD_CTX_clear_flags
- T EVP_MD_CTX_copy
  T EVP_MD_CTX_copy_ex
- T EVP_MD_CTX_init
+ T EVP_MD_CTX_free
  T EVP_MD_CTX_md
+ T EVP_MD_CTX_md_data
+ T EVP_MD_CTX_new
+ T EVP_MD_CTX_pkey_ctx
+ T EVP_MD_CTX_reset
  T EVP_MD_CTX_set_flags
+ T EVP_MD_CTX_set_update_fn
  T EVP_MD_CTX_test_flags
  T EVP_MD_block_size
+ T EVP_MD_meth_get_flags
  T EVP_MD_size
  T EVP_MD_type
  T EVP_PBE_cleanup
+ T EVP_PBE_scrypt
  T EVP_PKEY_CTX_ctrl
  T EVP_PKEY_CTX_dup
  T EVP_PKEY_CTX_free
  T EVP_PKEY_CTX_get0_peerkey
  T EVP_PKEY_CTX_get0_pkey
+ T EVP_PKEY_CTX_get_data
+ T EVP_PKEY_CTX_hex2ctrl
+ T EVP_PKEY_CTX_md
  T EVP_PKEY_CTX_new
+ T EVP_PKEY_CTX_set0_keygen_info
+ T EVP_PKEY_CTX_set_data
+ T EVP_PKEY_CTX_str2ctrl
  T EVP_PKEY_asn1_find
  T EVP_PKEY_asn1_find_str
  T EVP_PKEY_asn1_get0_info
@@ -12838,16 +13005,25 @@
  T EVP_PKEY_copy_parameters
  T EVP_PKEY_derive_set_peer
  T EVP_PKEY_free
+ T EVP_PKEY_get0
+ T EVP_PKEY_get0_EC_KEY
+ T EVP_PKEY_get0_poly1305
+ T EVP_PKEY_get0_siphash
  T EVP_PKEY_get1_RSA
  T EVP_PKEY_get_default_digest_nid
  T EVP_PKEY_id
+ T EVP_PKEY_meth_free
  T EVP_PKEY_missing_parameters
  T EVP_PKEY_new
+ T EVP_PKEY_new_raw_private_key
  T EVP_PKEY_set1_EC_KEY
  T EVP_PKEY_set_type
+ T EVP_PKEY_sign
  T EVP_PKEY_sign_init
  T EVP_PKEY_size
+ T EVP_PKEY_up_ref
  T EVP_PKEY_verify_init
+ T EVP_add_alg_module
  T EVP_add_cipher
  T EVP_add_digest
  T EVP_aes_128_cbc
@@ -12860,8 +13036,10 @@
  T EVP_aes_128_ctr
  T EVP_aes_128_ecb
  T EVP_aes_128_gcm
+ T EVP_aes_128_ocb
  T EVP_aes_128_ofb
  T EVP_aes_128_wrap
+ T EVP_aes_128_wrap_pad
  T EVP_aes_128_xts
  T EVP_aes_192_cbc
  T EVP_aes_192_ccm
@@ -12871,8 +13049,10 @@
  T EVP_aes_192_ctr
  T EVP_aes_192_ecb
  T EVP_aes_192_gcm
+ T EVP_aes_192_ocb
  T EVP_aes_192_ofb
  T EVP_aes_192_wrap
+ T EVP_aes_192_wrap_pad
  T EVP_aes_256_cbc
  T EVP_aes_256_cbc_hmac_sha1
  T EVP_aes_256_cbc_hmac_sha256
@@ -12883,32 +13063,67 @@
  T EVP_aes_256_ctr
  T EVP_aes_256_ecb
  T EVP_aes_256_gcm
+ T EVP_aes_256_ocb
  T EVP_aes_256_ofb
  T EVP_aes_256_wrap
+ T EVP_aes_256_wrap_pad
  T EVP_aes_256_xts
+ T EVP_aria_128_cbc
+ T EVP_aria_128_ccm
+ T EVP_aria_128_cfb1
+ T EVP_aria_128_cfb128
+ T EVP_aria_128_cfb8
+ T EVP_aria_128_ctr
+ T EVP_aria_128_ecb
+ T EVP_aria_128_gcm
+ T EVP_aria_128_ofb
+ T EVP_aria_192_cbc
+ T EVP_aria_192_ccm
+ T EVP_aria_192_cfb1
+ T EVP_aria_192_cfb128
+ T EVP_aria_192_cfb8
+ T EVP_aria_192_ctr
+ T EVP_aria_192_ecb
+ T EVP_aria_192_gcm
+ T EVP_aria_192_ofb
+ T EVP_aria_256_cbc
+ T EVP_aria_256_ccm
+ T EVP_aria_256_cfb1
+ T EVP_aria_256_cfb128
+ T EVP_aria_256_cfb8
+ T EVP_aria_256_ctr
+ T EVP_aria_256_ecb
+ T EVP_aria_256_gcm
+ T EVP_aria_256_ofb
  T EVP_bf_cbc
  T EVP_bf_cfb64
  T EVP_bf_ecb
  T EVP_bf_ofb
+ T EVP_blake2b512
+ T EVP_blake2s256
  T EVP_camellia_128_cbc
  T EVP_camellia_128_cfb1
  T EVP_camellia_128_cfb128
  T EVP_camellia_128_cfb8
+ T EVP_camellia_128_ctr
  T EVP_camellia_128_ecb
  T EVP_camellia_128_ofb
  T EVP_camellia_192_cbc
  T EVP_camellia_192_cfb1
  T EVP_camellia_192_cfb128
  T EVP_camellia_192_cfb8
+ T EVP_camellia_192_ctr
  T EVP_camellia_192_ecb
  T EVP_camellia_192_ofb
  T EVP_camellia_256_cbc
  T EVP_camellia_256_cfb1
  T EVP_camellia_256_cfb128
  T EVP_camellia_256_cfb8
+ T EVP_camellia_256_ctr
  T EVP_camellia_256_ecb
  T EVP_camellia_256_ofb
- T EVP_cleanup
+ T EVP_chacha20
+ T EVP_chacha20_poly1305
  T EVP_des_cbc
  T EVP_des_cfb1
  T EVP_des_cfb64
@@ -12927,21 +13142,38 @@
  T EVP_des_ede_ofb
  T EVP_des_ofb
  T EVP_desx_cbc
- T EVP_dss
- T EVP_dss1
- T EVP_ecdsa
  T EVP_get_cipherbyname
  T EVP_get_digestbyname
  T EVP_md5
+ T EVP_md5_sha1
+ T EVP_md_null
  T EVP_rc4
  T EVP_rc4_40
  T EVP_rc4_hmac_md5
- T EVP_sha
+ T EVP_ripemd160
+ T EVP_seed_cbc
+ T EVP_seed_cfb128
+ T EVP_seed_ecb
+ T EVP_seed_ofb
  T EVP_sha1
  T EVP_sha224
  T EVP_sha256
  T EVP_sha384
+ T EVP_sha3_224
+ T EVP_sha3_256
+ T EVP_sha3_384
+ T EVP_sha3_512
  T EVP_sha512
+ T EVP_sha512_224
+ T EVP_sha512_256
+ T EVP_shake128
+ T EVP_shake256
+ T EVP_sm3
+ T EVP_sm4_cbc
+ T EVP_sm4_cfb128
+ T EVP_sm4_ctr
+ T EVP_sm4_ecb
+ T EVP_sm4_ofb
  T EmitJSONString(CUtlBuffer&, char const*, char const*, bool)
  T EvaluateExpression(bool&, char const*, bool (*)(char const*))
  T FillDataStruct(_finddata_t*)
@@ -12982,9 +13214,11 @@
  T GetPanelMessageMapDictionary()
  T GridMenu::PerformLayout()
  T GridMenu::~GridMenu()
- T HMAC_CTX_cleanup
+ T HMAC
  T HMAC_CTX_copy
- T HMAC_CTX_init
+ T HMAC_CTX_free
+ T HMAC_CTX_new
+ T HMAC_CTX_reset
  T HMAC_CTX_set_flags
  T HMAC_Final
  T HMAC_Init_ex
@@ -13115,6 +13349,7 @@
  T KeyValuesAD::KeyValuesAD(StringView)
  T KeyValuesAD::Validate(CValidator&, char const*, bool, bool)
  T KeyValuesAD::operator KeyValues*()
+ T KeyValuesAD::operator*()
  T KeyValuesAD::operator->()
  T KeyValuesAD::~KeyValuesAD()
  T KeyValuesTextParser::InitBuffer(int)
@@ -13160,15 +13395,25 @@
  T MD5_Update
  T MessageBox_Factory()
  T MurmurHash3_32(void const*, unsigned long, unsigned int, bool)
+ T NCONF_default
+ T NCONF_free
+ T NCONF_get_section
+ T NCONF_get_string
+ T NCONF_load
+ T NCONF_new
  T OBJ_NAME_add
  T OBJ_NAME_cleanup
  T OBJ_NAME_get
+ T OBJ_NAME_remove
+ T OBJ_add_object
  T OBJ_bsearch_
  T OBJ_bsearch_ex_
- T OBJ_cleanup
+ T OBJ_create
  T OBJ_dup
  T OBJ_find_sigid_algs
  T OBJ_find_sigid_by_algs
+ T OBJ_get0_data
+ T OBJ_length
  T OBJ_ln2nid
  T OBJ_nid2ln
  T OBJ_nid2obj
@@ -13177,22 +13422,63 @@
  T OBJ_obj2txt
  T OBJ_sigid_free
  T OBJ_sn2nid
- T OPENSSL_add_all_algorithms_noconf
+ T OBJ_txt2obj
+ T OPENSSL_DIR_end
+ T OPENSSL_DIR_read
+ T OPENSSL_LH_delete
+ T OPENSSL_LH_doall
+ T OPENSSL_LH_doall_arg
+ T OPENSSL_LH_error
+ T OPENSSL_LH_free
+ T OPENSSL_LH_get_down_load
+ T OPENSSL_LH_insert
+ T OPENSSL_LH_new
+ T OPENSSL_LH_retrieve
+ T OPENSSL_LH_set_down_load
+ T OPENSSL_LH_strhash
+ T OPENSSL_atexit
  T OPENSSL_atomic_add
  T OPENSSL_cleanse
+ T OPENSSL_cleanup
  T OPENSSL_cpuid_setup
+ T OPENSSL_die
+ T OPENSSL_fork_child
+ T OPENSSL_fork_parent
+ T OPENSSL_fork_prepare
+ T OPENSSL_hexchar2int
+ T OPENSSL_hexstr2buf
  T OPENSSL_ia32_cpuid
- T OPENSSL_ia32_rdrand
- T OPENSSL_ia32_rdseed
- T OPENSSL_init
+ T OPENSSL_ia32_rdrand_bytes
+ T OPENSSL_ia32_rdseed_bytes
+ T OPENSSL_init_crypto
+ T OPENSSL_init_ssl
+ T OPENSSL_instrument_bus
+ T OPENSSL_instrument_bus2
+ T OPENSSL_issetugid
+ T OPENSSL_load_builtin_modules
  T OPENSSL_rdtsc
  T OPENSSL_showfatal
+ T OPENSSL_sk_delete
+ T OPENSSL_sk_delete_ptr
+ T OPENSSL_sk_find
+ T OPENSSL_sk_free
+ T OPENSSL_sk_insert
+ T OPENSSL_sk_new
+ T OPENSSL_sk_new_null
+ T OPENSSL_sk_new_reserve
+ T OPENSSL_sk_num
+ T OPENSSL_sk_pop
+ T OPENSSL_sk_pop_free
+ T OPENSSL_sk_push
+ T OPENSSL_sk_set
+ T OPENSSL_sk_value
+ T OPENSSL_strlcat
+ T OPENSSL_strlcpy
+ T OPENSSL_strnlen
  T OPENSSL_wipe_cpu
  T OneTimeCryptoInitOpenSSL()
- T OpenSSLDie
- T OpenSSL_add_all_ciphers
- T OpenSSL_add_all_digests
  T PKCS1_MGF1
+ T PKCS5_PBKDF2_HMAC
  T PKCS7_RECIP_INFO_get0_alg
  T PKCS7_SIGNER_INFO_get0_algs
  T PKCS8_pkey_get0
@@ -13203,28 +13489,42 @@
  T PchNameFromEControllerType(int)
  T PchNameFromELauncherType(int)
  T PchPersonaState(EPersonaState)
+ T Poly1305_Final
+ T Poly1305_Init
+ T Poly1305_Update
+ T Poly1305_ctx_size
  T PreparePanelMessageMap(vgui::PanelMessageMap*)
- T RAND_SSLeay
- T RAND_add
+ T RAND_DRBG_bytes
+ T RAND_DRBG_generate
+ T RAND_DRBG_get0_private
+ T RAND_DRBG_get0_public
+ T RAND_DRBG_instantiate
+ T RAND_DRBG_reseed
+ T RAND_DRBG_set
+ T RAND_OpenSSL
  T RAND_bytes
- T RAND_poll
- T RAND_pseudo_bytes
- T RAND_query_egd_bytes
- T RAND_seed
+ T RAND_priv_bytes
  T RAND_set_rand_method
  T RAND_status
  T RC4
+ T RC4_options
  T RC4_set_key
+ T RIPEMD160_Final
+ T RIPEMD160_Init
+ T RIPEMD160_Update
  T RSAZ_1024_mod_exp_avx2
  T RSAZ_512_mod_exp
  T RSA_OAEP_PARAMS_free
  T RSA_OAEP_PARAMS_new
- T RSA_PKCS1_SSLeay
  T RSA_PSS_PARAMS_free
  T RSA_PSS_PARAMS_new
  T RSA_X931_hash_id
+ T RSA_bits
+ T RSA_check_key_ex
+ T RSA_flags
  T RSA_free
- T RSA_generate_key_ex
+ T RSA_generate_multi_prime_key
+ T RSA_get_default_method
  T RSA_new
  T RSA_new_method
  T RSA_padding_add_PKCS1_OAEP
@@ -13241,11 +13541,12 @@
  T RSA_padding_check_PKCS1_type_2
  T RSA_padding_check_SSLv23
  T RSA_padding_check_X931
- T RSA_padding_check_none
+ T RSA_pkey_ctx_ctrl
  T RSA_private_decrypt
  T RSA_private_encrypt
  T RSA_public_decrypt
  T RSA_public_encrypt
+ T RSA_security_bits
  T RSA_setup_blinding
  T RSA_sign
  T RSA_sign_ASN1_OCTET_STRING
@@ -13255,24 +13556,35 @@
  T RSA_verify_PKCS1_PSS_mgf1
  T ReadPNGData(png_struct_def*, unsigned char*, unsigned long)
  T RegisterForCallback(CUtlVector<CSmartPtr<CJSCallbackFunc>, CUtlMemory<CSmartPtr<CJSCallbackFunc> > >&, CSmartPtr<CJSCallbackFunc>&)
+ T SEED_cbc_encrypt
+ T SEED_cfb128_encrypt
+ T SEED_decrypt
+ T SEED_ecb_encrypt
+ T SEED_encrypt
+ T SEED_ofb128_encrypt
+ T SEED_set_key
  T SHA1
  T SHA1_Final
  T SHA1_Init
  T SHA1_Update
+ T SHA224_Final
  T SHA224_Init
+ T SHA224_Update
  T SHA256_Final
  T SHA256_Init
  T SHA256_Update
+ T SHA384_Final
  T SHA384_Init
+ T SHA384_Update
+ T SHA3_absorb
+ T SHA3_squeeze
+ T SHA512
  T SHA512_Final
  T SHA512_Init
  T SHA512_Update
- T SHA_Final
- T SHA_Init
- T SHA_Update
- T SSL_get_ex_new_index
- T SSL_library_init
- T SSL_load_error_strings
+ T SM4_decrypt
+ T SM4_encrypt
+ T SM4_set_key
  T ScrollBar_Horizontal_Factory()
  T ScrollBar_Vertical_Factory()
  T SharedLibraryNotification::ChainToAnimationMap()
@@ -13287,6 +13599,11 @@
  T SharedLibraryNotification::SharedLibraryNotification(char const*, char const*, CSteamID const&)
  T SharedLibraryNotification::~SharedLibraryNotification()
  T ShellExecuteURLOrLocalFile(char const*)
+ T SipHash_Final
+ T SipHash_Init
+ T SipHash_Update
+ T SipHash_hash_size
+ T SipHash_set_hash_size
  T SteamAPI_RegisterCallResult
  T SteamAPI_RegisterCallback
  T SteamAPI_UnregisterCallResult
@@ -13297,11 +13614,19 @@
  T Sys_ValidateModules(CValidator*, bool)
  T URLLabel_Factory()
  T UtlMemory_CalcNewAllocationCount(int, int, int, unsigned long)
- T VALVE_CRYPTO_dbg_free(void*)
+ T VALVE_CRYPTO_dbg_free(void*, char const*, int)
  T VALVE_CRYPTO_dbg_malloc(unsigned long, char const*, int)
  T VALVE_CRYPTO_dbg_realloc(void*, unsigned long, char const*, int)
  T V_strstr(char const*, char const*)
  T WritePNGDataToBuffer(png_struct_def*, unsigned char*, unsigned long)
+ T X25519
+ T X25519_public_from_private
+ T X448
+ T X448_public_from_private
+ T X509V3_add_value
+ T X509V3_conf_free
+ T X509V3_get_value_bool
+ T X509V3_parse_list
  T X509_ALGOR_free
  T X509_ALGOR_get0
  T X509_ALGOR_new
@@ -13311,14 +13636,23 @@
  T X509_PUBKEY_get
  T X509_PUBKEY_get0_param
  T X509_PUBKEY_set0_param
- T X509_SIG_free
+ T X509_SIG_INFO_set
+ T X509_get_default_cert_area
  T X509_signature_dump
+ T _CONF_add_string
+ T _CONF_free_data
+ T _CONF_get_section
+ T _CONF_get_section_values
+ T _CONF_get_string
+ T _CONF_new_data
+ T _CONF_new_section
  T __CreateCDLLValidateIValidate_interface()
  T __CreateCFriendsUIModuleIFriendsUI_interface()
  T __CreateCFriendsUIModuleIVGuiModule_interface()
  T __clang_call_terminate
  T _findfirst(char const*, _finddata_t*)
  T _findnext(long long, _finddata_t*)
+ T a2d_ASN1_OBJECT
  T aesni_cbc_encrypt
  T aesni_cbc_sha1_enc
  T aesni_cbc_sha256_enc
@@ -13332,53 +13666,83 @@
  T aesni_gcm_encrypt
  T aesni_multi_cbc_decrypt
  T aesni_multi_cbc_encrypt
+ T aesni_ocb_decrypt
+ T aesni_ocb_encrypt
  T aesni_set_decrypt_key
  T aesni_set_encrypt_key
  T aesni_xts_decrypt
  T aesni_xts_encrypt
- T asm_AES_cbc_encrypt
- T asm_AES_decrypt
- T asm_AES_encrypt
+ T aria_encrypt
+ T aria_set_decrypt_key
+ T aria_set_encrypt_key
  T asn1_do_adb
  T asn1_do_lock
  T asn1_enc_free
  T asn1_enc_init
  T asn1_enc_restore
  T asn1_enc_save
- T asn1_ex_c2i
- T asn1_ex_i2c
  T asn1_get_choice_selector
  T asn1_get_field_ptr
+ T asn1_item_embed_free
+ T asn1_primitive_free
  T asn1_set_choice_selector
+ T asn1_string_embed_free
+ T asn1_template_free
+ T async_deinit
+ T async_delete_thread_state
+ T async_fibre_free
+ T async_init
+ T async_local_cleanup
+ T bio_cleanup
+ T bio_sock_cleanup_int
  T bn_GF2m_mul_2x2
  T bn_add_words
  T bn_cmp_part_words
  T bn_cmp_words
+ T bn_compute_wNAF
+ T bn_copy_words
+ T bn_correct_top
+ T bn_div_fixed_top
  T bn_div_words
  T bn_expand2
+ T bn_from_mont_fixed_top
  T bn_from_montgomery
  T bn_gather5
  T bn_get_bits5
+ T bn_get_top
+ T bn_get_words
+ T bn_init
+ T bn_lshift_fixed_top
+ T bn_mod_add_fixed_top
+ T bn_mod_sub_fixed_top
  T bn_mul_add_words
  T bn_mul_comba4
  T bn_mul_comba8
+ T bn_mul_fixed_top
  T bn_mul_mont
+ T bn_mul_mont_fixed_top
  T bn_mul_mont_gather5
  T bn_mul_normal
  T bn_mul_part_recursive
  T bn_mul_recursive
  T bn_mul_words
  T bn_power5
+ T bn_rshift_fixed_top
  T bn_scatter5
+ T bn_set_all_zero
+ T bn_set_words
  T bn_sqr8x_internal
  T bn_sqr_comba4
  T bn_sqr_comba8
+ T bn_sqr_fixed_top
  T bn_sqr_normal
  T bn_sqr_recursive
  T bn_sqr_words
  T bn_sqrx8x_internal
  T bn_sub_part_words
  T bn_sub_words
+ T bn_to_mont_fixed_top
+ T bn_wexpand
  T bool BConvertMsgJSValue<CMsgJSValue const*>(IHTMLJS*, CMsgJSValue const*, CMsgJSValue const**)
  T bool BConvertMsgJSValue<CSmartPtr<CJSCallbackFunc> >(IHTMLJS*, CMsgJSValue const*, CSmartPtr<CJSCallbackFunc>*)
  T bool BConvertMsgJSValue<CSmartPtr<CJSCallbackPromise> >(IHTMLJS*, CMsgJSValue const*, CSmartPtr<CJSCallbackPromise>*)
@@ -13389,17 +13753,34 @@
  T bool BConvertMsgJSValue<unsigned int>(IHTMLJS*, CMsgJSValue const*, unsigned int*)
  T bool BConvertMsgJSValue<unsigned long long>(IHTMLJS*, CMsgJSValue const*, unsigned long long*)
  T bool std::__1::__insertion_sort_incomplete<CUtlVector<FriendAlias_t, CUtlMemory<FriendAlias_t> >::Sort_s(void*, int (*)(void*, FriendAlias_t const*, FriendAlias_t const*))::{lambda(FriendAlias_t const&, FriendAlias_t const&)#1}&, FriendAlias_t*>(FriendAlias_t*, FriendAlias_t*, CUtlVector<FriendAlias_t, CUtlMemory<FriendAlias_t> >::Sort_s(void*, int (*)(void*, FriendAlias_t const*, FriendAlias_t const*))::{lambda(FriendAlias_t const&, FriendAlias_t const&)#1}&)
- T bsaes_cbc_encrypt
- T bsaes_ctr32_encrypt_blocks
- T bsaes_xts_decrypt
- T bsaes_xts_encrypt
+ T bread_conv
+ T bwrite_conv
  T c2i_ASN1_BIT_STRING
  T c2i_ASN1_INTEGER
  T c2i_ASN1_OBJECT
- T check_defer
+ T c2i_uint64_int
+ T c448_ed448_derive_public_key
+ T c448_ed448_sign
+ T c448_ed448_verify
+ T conf_add_ssl_module
+ T conf_modules_free_int
+ T crypto_cleanup_all_ex_data_int
+ T curve448_base_double_scalarmul_non_secret
+ T curve448_point_decode_like_eddsa_and_mul_by_ratio
+ T curve448_point_destroy
+ T curve448_point_eq
+ T curve448_point_mul_by_ratio_and_encode_like_eddsa
+ T curve448_precomputed_scalarmul
+ T curve448_scalar_add
+ T curve448_scalar_decode_long
+ T curve448_scalar_destroy
+ T curve448_scalar_encode
+ T curve448_scalar_halve
+ T curve448_scalar_mul
+ T curve448_scalar_sub
  T d2i_ASN1_INTEGER
- T d2i_ASN1_SEQUENCE_ANY
- T d2i_ASN1_UINTEGER
+ T d2i_ASN1_OBJECT
+ T d2i_ASN1_OCTET_STRING
  T d2i_DHparams
  T d2i_DHxparams
  T d2i_DSAPrivateKey
@@ -13411,16 +13792,13 @@
  T d2i_ECPrivateKey
  T d2i_RSAPrivateKey
  T d2i_RSAPublicKey
- T d2i_RSA_OAEP_PARAMS
- T d2i_RSA_PSS_PARAMS
  T d2i_RSA_PUBKEY
  T d2i_X509_ALGOR
- T d2i_X509_SIG
  T delete_JSON_parser
+ T drbg_ctr_init
+ T drbg_delete_thread_state
  T dsa_builtin_paramgen
  T dsa_builtin_paramgen2
- T ec_GF2m_have_precompute_mult
- T ec_GF2m_precompute_mult
  T ec_GF2m_simple_add
  T ec_GF2m_simple_cmp
  T ec_GF2m_simple_dbl
@@ -13439,7 +13817,6 @@
  T ec_GF2m_simple_is_at_infinity
  T ec_GF2m_simple_is_on_curve
  T ec_GF2m_simple_make_affine
- T ec_GF2m_simple_mul
  T ec_GF2m_simple_oct2point
  T ec_GF2m_simple_point2oct
  T ec_GF2m_simple_point_clear_finish
@@ -13453,6 +13830,7 @@
  T ec_GF2m_simple_set_compressed_coordinates
  T ec_GFp_mont_field_decode
  T ec_GFp_mont_field_encode
+ T ec_GFp_mont_field_inv
  T ec_GFp_mont_field_mul
  T ec_GFp_mont_field_set_to_one
  T ec_GFp_mont_field_sqr
@@ -13479,8 +13857,10 @@
  T ec_GFp_nistp_points_make_affine_internal
  T ec_GFp_nistp_recode_scalar_bits
  T ec_GFp_simple_add
+ T ec_GFp_simple_blind_coordinates
  T ec_GFp_simple_cmp
  T ec_GFp_simple_dbl
+ T ec_GFp_simple_field_inv
  T ec_GFp_simple_get_Jprojective_coordinates_GFp
  T ec_GFp_simple_group_check_discriminant
  T ec_GFp_simple_group_clear_finish
@@ -13493,6 +13873,9 @@
  T ec_GFp_simple_invert
  T ec_GFp_simple_is_at_infinity
  T ec_GFp_simple_is_on_curve
+ T ec_GFp_simple_ladder_post
+ T ec_GFp_simple_ladder_pre
+ T ec_GFp_simple_ladder_step
  T ec_GFp_simple_make_affine
  T ec_GFp_simple_oct2point
  T ec_GFp_simple_point2oct
@@ -13506,28 +13889,47 @@
  T ec_GFp_simple_points_make_affine
  T ec_GFp_simple_set_Jprojective_coordinates_GFp
  T ec_GFp_simple_set_compressed_coordinates
- T ec_precompute_mont_data
- T ec_wNAF_have_precompute_mult
+ T ec_curve_nid_from_params
+ T ec_group_do_inverse_ord
+ T ec_group_simple_order_bits
+ T ec_key_simple_check_key
+ T ec_key_simple_generate_key
+ T ec_key_simple_generate_public_key
+ T ec_key_simple_oct2priv
+ T ec_key_simple_priv2oct
+ T ec_point_blind_coordinates
+ T ec_scalar_mul_ladder
  T ec_wNAF_mul
- T ec_wNAF_precompute_mult
- T ecdh_check
- T ecdsa_check
+ T ecdh_KDF_X9_63
+ T ecdh_simple_compute_key
  T ecp_nistz256_add
- T ecp_nistz256_avx2_select_w7
+ T ecp_nistz256_avx2_gather_w7
  T ecp_nistz256_div_by_2
  T ecp_nistz256_from_mont
+ T ecp_nistz256_gather_w5
+ T ecp_nistz256_gather_w7
  T ecp_nistz256_mul_by_2
  T ecp_nistz256_mul_by_3
  T ecp_nistz256_mul_mont
  T ecp_nistz256_neg
+ T ecp_nistz256_ord_mul_mont
+ T ecp_nistz256_ord_sqr_mont
  T ecp_nistz256_point_add
  T ecp_nistz256_point_add_affine
  T ecp_nistz256_point_double
- T ecp_nistz256_select_w5
- T ecp_nistz256_select_w7
+ T ecp_nistz256_precomputed
+ T ecp_nistz256_scatter_w5
+ T ecp_nistz256_scatter_w7
  T ecp_nistz256_sqr_mont
  T ecp_nistz256_sub
  T ecp_nistz256_to_mont
+ T err_cleanup
+ T err_clear_last_constant_time
+ T err_delete_thread_state
+ T err_free_strings_int
+ T err_load_crypto_strings_int
+ T evp_app_cleanup_int
+ T evp_cleanup_int
  T evp_pkey_set_cb_translate
  T gcm_ghash_4bit
  T gcm_ghash_avx
@@ -13537,16 +13939,27 @@
  T gcm_gmult_clmul
  T gcm_init_avx
  T gcm_init_clmul
+ T gf_add
+ T gf_deserialize
+ T gf_eq
+ T gf_isr
+ T gf_lobit
+ T gf_mul
+ T gf_mulw_unsigned
+ T gf_serialize
+ T gf_sqr
+ T gf_strong_reduce
+ T gf_sub
  T i2a_ASN1_INTEGER
  T i2a_ASN1_OBJECT
  T i2c_ASN1_BIT_STRING
  T i2c_ASN1_INTEGER
+ T i2c_uint64_int
  T i2d_ASN1_INTEGER
  T i2d_ASN1_OCTET_STRING
  T i2d_DHparams
  T i2d_DHxparams
  T i2d_DSAPrivateKey
- T i2d_DSAPublicKey
  T i2d_DSAparams
  T i2d_ECDSA_SIG
  T i2d_ECPKParameters
@@ -13608,7 +14021,9 @@
  T int V_sprintf_safe<1024ul>(char (&) [1024ul], char const*, ...)
  T int V_swprintf_safe<256ul>(wchar_t (&) [256ul], wchar_t const*, ...)
  T int* std::__1::__rotate_gcd<int*>(int*, int*, int*)
+ T int_bn_mod_inverse
  T int_rsa_verify
+ T is_partially_overlapping
  T jcopy_block_row
  T jcopy_sample_rows
  T jdiv_round_up
@@ -13686,14 +14101,6 @@
  T jpeg_std_error
  T jround_up
  T jzero_far
- T lh_delete
- T lh_doall
- T lh_free
- T lh_insert
- T lh_new
- T lh_num_items
- T lh_retrieve
- T lh_strhash
  T md5_block_asm_data_order
  T new_JSON_parser
  T non-virtual thunk to CChatRoomDlg::AppendContextMenuItems(CSteamID, vgui::Menu*, bool)
@@ -13936,6 +14343,29 @@
  T non-virtual thunk to vgui::SectionedListPanelItem::~SectionedListPanelItem()
  T non-virtual thunk to vgui::ToolPanel::InstanceToolWindow(vgui::Panel*, bool, vgui::ToolPanel*, char const*, bool, bool)
  T o2i_ECPublicKey
+ T obj_cleanup_int
+ T openssl_add_all_ciphers_int
+ T openssl_add_all_digests_int
+ T openssl_config_int
+ T openssl_fopen
+ T openssl_get_fork_id
+ T openssl_init_fork_handlers
+ T openssl_lh_strcasehash
+ T openssl_no_config_int
+ T openssl_strerror_r
+ T ossl_ctype_check
+ T ossl_ec_key_gen
+ T ossl_ecdh_compute_key
+ T ossl_ecdsa_sign
+ T ossl_ecdsa_sign_setup
+ T ossl_ecdsa_sign_sig
+ T ossl_ecdsa_verify
+ T ossl_ecdsa_verify_sig
+ T ossl_init_thread_start
+ T ossl_safe_getenv
+ T ossl_store_cleanup_int
+ T ossl_store_destroy_loaders_int
+ T ossl_tolower
  T png_XYZ_from_xy
  T png_XYZ_from_xy_checked
  T png_benign_error
@@ -14123,16 +14553,47 @@
  T png_write_zTXt
  T png_zalloc
  T png_zfree
- T private_AES_set_decrypt_key
- T private_AES_set_encrypt_key
- T private_Camellia_set_key
- T private_RC4_set_key
+ T poly1305_blocks
+ T poly1305_emit
+ T poly1305_init
  T protobuf_AddDesc_htmlmessages_2eproto()
  T protobuf_AddDesc_stream_2eproto()
  T protobuf_AssignDesc_htmlmessages_2eproto()
  T protobuf_AssignDesc_stream_2eproto()
  T protobuf_ShutdownFile_htmlmessages_2eproto()
  T protobuf_ShutdownFile_stream_2eproto()
+ T rand_cleanup_int
+ T rand_drbg_cleanup_additional_data
+ T rand_drbg_cleanup_entropy
+ T rand_drbg_cleanup_int
+ T rand_drbg_cleanup_nonce
+ T rand_drbg_get_additional_data
+ T rand_drbg_get_entropy
+ T rand_drbg_get_nonce
+ T rand_drbg_lock
+ T rand_drbg_restart
+ T rand_drbg_unlock
+ T rand_pool_acquire_entropy
+ T rand_pool_add
+ T rand_pool_add_additional_data
+ T rand_pool_add_begin
+ T rand_pool_add_end
+ T rand_pool_add_nonce_data
+ T rand_pool_attach
+ T rand_pool_bytes_needed
+ T rand_pool_cleanup
+ T rand_pool_entropy_available
+ T rand_pool_free
+ T rand_pool_init
+ T rand_pool_new
+ T rc4_md5_enc
+ T ripemd160_block_data_order
+ T rsa_multip_calc_product
+ T rsa_multip_cap
+ T rsa_multip_info_free
+ T rsa_multip_info_new
+ T rsa_pss_get_param
+ T rsa_pss_params_create
  T rsaz_1024_gather5_avx2
  T rsaz_1024_mul_avx2
  T rsaz_1024_norm2red_avx2
@@ -14151,19 +14612,23 @@
  T sha1_multi_block
  T sha256_block_data_order
  T sha256_multi_block
+ T sha512_224_init
+ T sha512_256_init
  T sha512_block_data_order
  T short CUtlRBTree<CUtlMap<unsigned int, bool, short, CDefLess<unsigned int> >::Node_t, short, CUtlMap<unsigned int, bool, short, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<short>, unsigned int>::Insert_Internal<CUtlMap<unsigned int, bool, short, CDefLess<unsigned int> >::Node_t>(CUtlMap<unsigned int, bool, short, CDefLess<unsigned int> >::Node_t&&, bool)
- T sk_find
- T sk_free
- T sk_new_null
- T sk_num
- T sk_pop
- T sk_pop_free
- T sk_push
- T sk_set
- T sk_value
+ T sm2_ciphertext_size
+ T sm2_compute_z_digest
+ T sm2_decrypt
+ T sm2_encrypt
+ T sm2_plaintext_size
+ T sm2_sign
+ T sm2_verify
+ T sm3_block_data_order
+ T sm3_final
+ T sm3_init
+ T sm3_update
  T ssl_load_ciphers
- T ssleay_rand_bytes
+ T ssl_sort_cipher_list
  T std::__1::__split_buffer<char const*, std::__1::allocator<char const*>&>::__split_buffer(unsigned long, unsigned long, std::__1::allocator<char const*>&)
  T std::__1::__split_buffer<int, std::__1::allocator<int>&>::__split_buffer(unsigned long, unsigned long, std::__1::allocator<int>&)
  T std::__1::__split_buffer<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*>&>::__split_buffer(unsigned long, unsigned long, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*>&)
@@ -14250,7 +14715,6 @@
  T std::__1::vector<void*, std::__1::allocator<void*> >::__swap_out_circular_buffer(std::__1::__split_buffer<void*, std::__1::allocator<void*>&>&)
  T std::__1::vector<void*, std::__1::allocator<void*> >::resize(unsigned long)
  T std::__1::vector<void*, std::__1::allocator<void*> >::~vector()
- T string_to_hex
  T unsigned int std::__1::__sort3<CUtlVector<FriendAlias_t, CUtlMemory<FriendAlias_t> >::Sort_s(void*, int (*)(void*, FriendAlias_t const*, FriendAlias_t const*))::{lambda(FriendAlias_t const&, FriendAlias_t const&)#1}&, FriendAlias_t*>(FriendAlias_t*, FriendAlias_t*, FriendAlias_t*, CUtlVector<FriendAlias_t, CUtlMemory<FriendAlias_t> >::Sort_s(void*, int (*)(void*, FriendAlias_t const*, FriendAlias_t const*))::{lambda(FriendAlias_t const&, FriendAlias_t const&)#1}&)
  T unsigned int std::__1::__sort4<CUtlVector<FriendAlias_t, CUtlMemory<FriendAlias_t> >::Sort_s(void*, int (*)(void*, FriendAlias_t const*, FriendAlias_t const*))::{lambda(FriendAlias_t const&, FriendAlias_t const&)#1}&, FriendAlias_t*>(FriendAlias_t*, FriendAlias_t*, FriendAlias_t*, FriendAlias_t*, CUtlVector<FriendAlias_t, CUtlMemory<FriendAlias_t> >::Sort_s(void*, int (*)(void*, FriendAlias_t const*, FriendAlias_t const*))::{lambda(FriendAlias_t const&, FriendAlias_t const&)#1}&)
  T unsigned int std::__1::__sort5<CUtlVector<FriendAlias_t, CUtlMemory<FriendAlias_t> >::Sort_s(void*, int (*)(void*, FriendAlias_t const*, FriendAlias_t const*))::{lambda(FriendAlias_t const&, FriendAlias_t const&)#1}&, FriendAlias_t*>(FriendAlias_t*, FriendAlias_t*, FriendAlias_t*, FriendAlias_t*, FriendAlias_t*, CUtlVector<FriendAlias_t, CUtlMemory<FriendAlias_t> >::Sort_s(void*, int (*)(void*, FriendAlias_t const*, FriendAlias_t const*))::{lambda(FriendAlias_t const&, FriendAlias_t const&)#1}&)
@@ -17769,7 +18233,20 @@
  T vrapi::ClearInterfaces()
  T vrapi::EnsureOpenVRAPILoaded(char const*)
  T vrapi::VRSettings()
- ThreadGetCurrentId
+ T x25519_fe51_mul
+ T x25519_fe51_mul121666
+ T x25519_fe51_sqr
+ T x25519_fe64_add
+ T x25519_fe64_eligible
+ T x25519_fe64_mul
+ T x25519_fe64_mul121666
+ T x25519_fe64_sqr
+ T x25519_fe64_sub
+ T x25519_fe64_tobytes
+ T x448_derive_public_key
+ T x448_int
+ T xor128_decrypt_n_pad
+ T xor128_encrypt_n_pad
  ThreadGetCurrentProcessId
  ThreadImplOneTimeInit
  ThreadInterlockedCompareExchange
@@ -18408,7 +18885,6 @@
  b BDrawHTMLPerfInfo()::s_CmdLineParam
  b BFastOverlayHTMLPathEnabled()::s_CmdLineParam
  b BHasNoBrowserCommandLineParam()::s_CmdLineParamDisableBrowser
- b BUF_str_reasons
  b CCallbackMgr::RunCallbacks(int, bool)::bRunningCallbacks
  b CEmoticonButton::OnShowMenu(vgui::Menu*)::eRealm
  b CEmoticonButton::OnShowMenu(vgui::Menu*)::eUniverse
@@ -18418,7 +18894,7 @@
  b CFriendsListSubPanel::ISectionFromMemberAndSource(CSteamID const&, CSteamID const&)::fAsserted
  b CItemImageManager::FindEmoticonImageString(char const*, CUtlString&, char const**, char const**, CItemImageManager::ItemIdentifier_t*)::eUniverse
  b CItemImageManager::FindImageString(char const*, CUtlString&, char const**, char const**, CItemImageManager::ItemIdentifier_t*)::s_bDisableAllImageStrings
- b CMAC_Init.zero_iv
+ b CRYPTO_128_unwrap_pad.zeros
  b CUtlSymbol::Initialize()::symbolsInitialized
  b ClientUIHTMLController()::s_ClientUIHTMLController
  b CommonKeyCode::InitKeyTranslation()::threadonce_538_36
@@ -18427,7 +18903,6 @@
  b CommonKeyCode::s_pVirtualKeyToKeyCode
  b CommonKeyCode::s_pWindowsVirtualKeyToKeyCode
  b DefaultSortFunc(unsigned int, vgui::ListPanelItem const&, vgui::ListPanelItem const&)::fAsserted
- b ERR_get_state.fallback
  b FriendsUIGetLauncherType()::s_eLauncherType
  b GCallbackMgr()::s_CallbackMgr
  b GetAttributesAsString(CDirIterator const&)::out
@@ -18437,38 +18912,43 @@
  b GetPanelAnimationDictionary()::dictionary
  b GetPanelKeyBindingMapDictionary()::dictionary
  b GetPanelMessageMapDictionary()::dictionary
+ b HMAC.m
  b InitializeCharacterSets()::s_CharacterSetInitialized
  b IsLocalizedUserTag(char const*)::pstrLocalizedNames
  b KeyValues::ReadAsBinary(CUtlBuffer&, int, bool)::fAsserted
  b OPENSSL_cpuid_setup.trigger
- b OPENSSL_init.done
+ b OPENSSL_init_ssl.stoperrset
  b OneTimeCryptoInitOpenSSL()::threadonce_324_36
  b SHA1.m
+ b SHA512.m
  b SYS_str_reasons
- b add_lock_callback
  b added
  b allow_customize
- b allow_customize_debug
- b amih
  b app_methods
+ b app_pkey_methods
+ b asn1_str2tag.tntmp
+ b async_inited
+ b base_inited
  b build_SYS_str_reasons.init
- b build_SYS_str_reasons.strerror_tab
- b crypto_lock_rand
- b default_DH_method
- b default_DSA_method
- b default_ECDH_method
- b default_ECDSA_method
+ b build_SYS_str_reasons.strerror_pool
+ b conf_settings
+ b ctxkey
+ b default_CONF_method
+ b default_DSO_meth
  b default_RAND_meth
- b default_RSA_meth
- b disabling_threadid
- b dyn_locks
- b dynlock_create_callback
- b dynlock_destroy_callback
- b dynlock_lock_callback
- b entropy
- b err_fns
+ b disabled_auth_mask
+ b disabled_enc_mask
+ b disabled_mac_mask
+ b disabled_mkey_mask
+ b do_err_strings_init_ossl_ret_
+ b do_ex_data_init_ossl_ret_
+ b do_rand_drbg_init_ossl_ret_
+ b do_rand_init_ossl_ret_
+ b err_do_init_ossl_ret_
+ b err_string_lock
+ b err_thread_local
  b ex_data
- b free_debug_func
+ b ex_data_lock
  b free_type
  b g_AnimatingImagePanel_Helper
  b g_AnimationPropertyConverters
@@ -18593,34 +19073,48 @@
  b guard variable for vgui::Panel::ApplySingleSetting(KeyValues*)::hToolTipDelay
  b guard variable for vgui::Panel::ApplySingleSetting(KeyValues*)::hToolTipText
  b guard variable for vgui::TreeNode::SetKeyValues(KeyValues*)::s_NoOverrideTextColor
- b id_callback
- b impl
- b initialized
+ b init_lock
+ b initialized_modules
  b int_error_hash
- b int_thread_hash
- b int_thread_hash_references
  b k_InvalidClientID
- b locking_callback
- b locking_threadid
+ b load_crypto_strings_inited
+ b loader_register
  b mCurPosition
  b mCurToken
  b mExprTree
  b mExpression
  b mIdentifier
- b malloc_debug_func
- b md
- b md_count.0
- b md_count.1
- b mh_mode
+ b master_drbg
  b name_funcs_stack
  b names_lh
- b num_disable
+ b o_names_init_ossl_ret_
+ b obj_lock
+ b openssl_configured
+ b ossl_init_add_all_ciphers_ossl_ret_
+ b ossl_init_add_all_digests_ossl_ret_
+ b ossl_init_async_ossl_ret_
+ b ossl_init_base_ossl_ret_
+ b ossl_init_config_ossl_ret_
+ b ossl_init_load_crypto_nodelete_ossl_ret_
+ b ossl_init_load_crypto_strings_ossl_ret_
+ b ossl_init_load_ssl_strings_ossl_ret_
+ b ossl_init_register_atexit_ossl_ret_
+ b ossl_init_ssl_base_ossl_ret_
  b pbe_algs
+ b poolkey
+ b private_drbg
  b protobuf_AddDesc_htmlmessages_2eproto()::already_here
  b protobuf_AddDesc_stream_2eproto()::already_here
  b protobuf_AssignDesc_stream_2eproto()::CRecordedInput_offsets_
  b protobuf_AssignDesc_stream_2eproto()::CTransportSignalMsg_WebRTCMessage_offsets_
- b realloc_debug_func
+ b public_drbg
+ b rand_drbg_flags
+ b rand_inited
+ b rand_meth_lock
+ b rand_nonce_count
+ b rand_nonce_lock
+ b random_devices
+ b registry_lock
  b s_BlankImage
  b s_BuildGroupFileCache
  b s_OpenOverlayDevToolsParam
@@ -18638,14 +19132,23 @@
  b s_netadrResolveCache
  b s_netadrResolveCacheMutexEnforceConstruction
  b s_pfnBootstrapperVersion
+ b sec_malloc_lock
+ b secure_mem_initialized
+ b secure_mem_used
+ b set_err_thread_local
+ b sh
+ b sig_app
+ b sigx_app
  b ssl_cipher_methods
  b ssl_digest_methods
  b ssl_mac_secret_size
- b ssleay_rand_bytes.stirred_pool
- b state
- b state_index
- b state_num
- b threadid_callback
+ b ssl_names
+ b ssl_names_count
+ b ssl_strings_inited
+ b stable
+ b stop_handlers
+ b stopped
+ b supported_modules
  b vec2_invalid
  b vec2_origin
  b vgui::EditablePanel::GetControlString(char const*, char const*)::buf
@@ -18710,12 +19213,12 @@
  ceilf
  close
  closedir
- connect
  cos
  crc32
- d ASN1_SEQUENCE_ANY_item_tt
  d ASN1_str_functs
  d ASN1_str_reasons
+ d ASYNC_str_functs
+ d ASYNC_str_reasons
  d BIO_str_functs
  d BIO_str_reasons
  d BN_nist_mod_224._bignum_nist_p_224_sqr
@@ -18724,6 +19227,7 @@
  d BN_str_reasons
  d BN_value_one.const_one
  d BUF_str_functs
+ d CMS_SharedInfo_it
  d CMS_SharedInfo_seq_tt
  d CMS_str_functs
  d CMS_str_reasons
@@ -18731,40 +19235,32 @@
  d CONF_str_reasons
  d CRYPTO_str_functs
  d CRYPTO_str_reasons
+ d CT_str_functs
+ d CT_str_reasons
  d CURLHelper::BIsTrustedURL(char const*)::rgpchDomains
  d CommonKeyCode::keyMap
- d DH_get_1024_160._bignum_dh1024_160_g
- d DH_get_1024_160._bignum_dh1024_160_p
- d DH_get_1024_160._bignum_dh1024_160_q
- d DH_get_2048_224._bignum_dh2048_224_g
- d DH_get_2048_224._bignum_dh2048_224_p
- d DH_get_2048_224._bignum_dh2048_224_q
- d DH_get_2048_256._bignum_dh2048_256_g
- d DH_get_2048_256._bignum_dh2048_256_p
- d DH_get_2048_256._bignum_dh2048_256_q
  d DH_str_functs
  d DH_str_reasons
  d DHparams_aux
  d DHparams_seq_tt
+ d DHvparams_it
  d DHvparams_seq_tt
+ d DHxparams_it
  d DHxparams_seq_tt
  d DSAPrivateKey_aux
+ d DSAPrivateKey_it
  d DSAPrivateKey_seq_tt
- d DSAPublicKey_aux
- d DSAPublicKey_ch_tt
- d DSA_SIG_aux
+ d DSA_SIG_it
  d DSA_SIG_seq_tt
  d DSA_str_functs
  d DSA_str_reasons
  d DSAparams_aux
+ d DSAparams_it
  d DSAparams_seq_tt
  d DSO_str_functs
  d DSO_str_reasons
- d ECDH_str_functs
- d ECDH_str_reasons
+ d ECDSA_SIG_it
  d ECDSA_SIG_seq_tt
- d ECDSA_str_functs
- d ECDSA_str_reasons
  d ECPARAMETERS_seq_tt
  d ECPKPARAMETERS_ch_tt
  d EC_GF2m_simple_method.ret
@@ -18772,18 +19268,29 @@
  d EC_GFp_nistp224_method.ret
  d EC_GFp_nistp521_method.ret
  d EC_GFp_nistz256_method.ret
+ d EC_PRIVATEKEY_it
  d EC_PRIVATEKEY_seq_tt
  d EC_str_functs
  d EC_str_reasons
  d ERR_str_functs
  d ERR_str_libraries
  d ERR_str_reasons
+ d EVP_sha3_224.sha3_224_md
+ d EVP_sha3_256.sha3_256_md
+ d EVP_sha3_384.sha3_384_md
+ d EVP_sha3_512.sha3_512_md
+ d EVP_shake128.shake128_md
+ d EVP_shake256.shake256_md
  d EVP_str_functs
  d EVP_str_reasons
+ d KDF_str_functs
+ d KDF_str_reasons
  d OBJ_str_functs
  d OBJ_str_reasons
  d OCSP_str_functs
  d OCSP_str_reasons
+ d OSSL_STORE_str_functs
+ d OSSL_STORE_str_reasons
  d PEM_str_functs
  d PEM_str_reasons
  d PKCS12_str_functs
@@ -18791,18 +19298,20 @@
  d PKCS7_str_functs
  d PKCS7_str_reasons
  d RAND_CryptoGenRandom
- d RAND_poll.egdsockets
- d RAND_poll.randomfiles
  d RAND_str_functs
  d RAND_str_reasons
  d RSAPrivateKey_aux
  d RSAPrivateKey_seq_tt
  d RSAPublicKey_aux
  d RSAPublicKey_seq_tt
+ d RSA_OAEP_PARAMS_aux
  d RSA_OAEP_PARAMS_seq_tt
+ d RSA_PRIME_INFO_seq_tt
+ d RSA_PSS_PARAMS_aux
  d RSA_PSS_PARAMS_seq_tt
  d RSA_str_functs
  d RSA_str_reasons
+ d SM2_Ciphertext_seq_tt
  d SSL_str_functs
  d SSL_str_reasons
  d TS_str_functs
@@ -18813,7 +19322,6 @@
  d X509V3_str_functs
  d X509V3_str_reasons
  d X509_ALGOR_seq_tt
- d X509_ATTRIBUTE_SET_ch_tt
  d X509_ATTRIBUTE_seq_tt
  d X509_PUBKEY_aux
  d X509_PUBKEY_seq_tt
@@ -18822,15 +19330,21 @@
  d X509_str_reasons
  d X9_62_CHARACTERISTIC_TWO_adb
  d X9_62_CHARACTERISTIC_TWO_adbtbl
+ d X9_62_CHARACTERISTIC_TWO_it
  d X9_62_CHARACTERISTIC_TWO_seq_tt
+ d X9_62_CURVE_it
  d X9_62_CURVE_seq_tt
  d X9_62_FIELDID_adb
  d X9_62_FIELDID_adbtbl
+ d X9_62_FIELDID_it
  d X9_62_FIELDID_seq_tt
+ d X9_62_PENTANOMIAL_it
  d X9_62_PENTANOMIAL_seq_tt
  d _ZL9selectBuf$tlv$init
  d _bignum_nist_p_224
  d _bignum_nist_p_521
+ d add_all_ciphers
+ d add_all_digests
  d aes_128_cbc
  d aes_128_ccm
  d aes_128_cfb
@@ -18839,8 +19353,10 @@
  d aes_128_ctr
  d aes_128_ecb
  d aes_128_gcm
+ d aes_128_ocb
  d aes_128_ofb
  d aes_128_wrap
+ d aes_128_wrap_pad
  d aes_128_xts
  d aes_192_cbc
  d aes_192_ccm
@@ -18850,8 +19366,10 @@
  d aes_192_ctr
  d aes_192_ecb
  d aes_192_gcm
+ d aes_192_ocb
  d aes_192_ofb
  d aes_192_wrap
+ d aes_192_wrap_pad
  d aes_256_cbc
  d aes_256_ccm
  d aes_256_cfb
@@ -18860,8 +19378,10 @@
  d aes_256_ctr
  d aes_256_ecb
  d aes_256_gcm
+ d aes_256_ocb
  d aes_256_ofb
  d aes_256_wrap
+ d aes_256_wrap_pad
  d aes_256_xts
  d aesni_128_cbc
  d aesni_128_cbc_hmac_sha1_cipher
@@ -18873,6 +19393,7 @@
  d aesni_128_ctr
  d aesni_128_ecb
  d aesni_128_gcm
+ d aesni_128_ocb
  d aesni_128_ofb
  d aesni_128_xts
  d aesni_192_cbc
@@ -18883,6 +19404,7 @@
  d aesni_192_ctr
  d aesni_192_ecb
  d aesni_192_gcm
+ d aesni_192_ocb
  d aesni_192_ofb
  d aesni_256_cbc
  d aesni_256_cbc_hmac_sha1_cipher
@@ -18894,38 +19416,84 @@
  d aesni_256_ctr
  d aesni_256_ecb
  d aesni_256_gcm
+ d aesni_256_ocb
  d aesni_256_ofb
  d aesni_256_xts
+ d aria_128_cbc
+ d aria_128_ccm
+ d aria_128_cfb1
+ d aria_128_cfb128
+ d aria_128_cfb8
+ d aria_128_ctr
+ d aria_128_ecb
+ d aria_128_gcm
+ d aria_128_ofb
+ d aria_192_cbc
+ d aria_192_ccm
+ d aria_192_cfb1
+ d aria_192_cfb128
+ d aria_192_cfb8
+ d aria_192_ctr
+ d aria_192_ecb
+ d aria_192_gcm
+ d aria_192_ofb
+ d aria_256_cbc
+ d aria_256_ccm
+ d aria_256_cfb1
+ d aria_256_cfb128
+ d aria_256_cfb8
+ d aria_256_ctr
+ d aria_256_ecb
+ d aria_256_gcm
+ d aria_256_ofb
+ d asn1_str2tag.tnst
+ d async
+ d base
  d bf_cbc
  d bf_cfb64
  d bf_ecb
  d bf_ofb
  d bignum_pf
+ d blake2b_md
+ d blake2s_md
  d boolconverter
  d camellia_128_cbc
  d camellia_128_cfb
  d camellia_128_cfb1
  d camellia_128_cfb8
+ d camellia_128_ctr
  d camellia_128_ecb
  d camellia_128_ofb
  d camellia_192_cbc
  d camellia_192_cfb
  d camellia_192_cfb1
  d camellia_192_cfb8
+ d camellia_192_ctr
  d camellia_192_ecb
  d camellia_192_ofb
  d camellia_256_cbc
  d camellia_256_cfb
  d camellia_256_cfb1
  d camellia_256_cfb8
+ d camellia_256_ctr
  d camellia_256_ecb
  d camellia_256_ofb
+ d cbignum_pf
+ d chacha20
+ d chacha20_poly1305
  d char_two_def_tt
  d colorconverter
+ d config
  d construction vtable for vgui::Button-in-(anonymous namespace)::ScrollBarButton
  d construction vtable for vgui::Label-in-(anonymous namespace)::ScrollBarButton
+ d ctr_df.c80
  d curve_list
  d d_xcbc_cipher
+ d default_DH_method
+ d default_DSA_method
+ d default_RSA_meth
+ d default_ec_key_meth
+ d default_method
  d des3_wrap
  d des_cbc
  d des_cfb1
@@ -18943,19 +19511,19 @@
  d des_ede_ecb
  d des_ede_ofb
  d des_ofb
+ d destructor_key
  d dh_ossl
  d dh_sharedinfo_encode.ctr
- d dsa_md
- d dsa_pub_internal_seq_tt
- d dss1_md
- d ecdsa_md
- d err_defaults
- d ex_class
+ d drbg_ctr_meth
+ d dso_meth_null
+ d err_init
+ d err_string_init
+ d ex_data_init
  d fieldID_def_tt
  d floatconverter
  d fontconverter
- d free_func
- d free_locked_func
+ d fork_once_control
+ d free_impl
  d g_ColInfo
  d g_KeyNames
  d g_MouseNames
@@ -18963,49 +19531,76 @@
  d g_bCatchExceptionsInCallbacks
  d g_prchEmoticons
  d g_rgCheckControlToRegKeys
- d impl_default
- d int_err_library_number
+ d init
  d intconverter
  d k_rgFeaturesEnabled
  d k_rgSettingsJSToClientUserMap
- d long_pf
- d malloc_ex_func
- d malloc_func
- d malloc_locked_ex_func
- d malloc_locked_func
+ d keep_random_devices_open
+ d load_crypto_nodelete
+ d load_crypto_strings
+ d malloc_impl
+ d master_reseed_interval
+ d master_reseed_time_interval
  d md5_md
+ d md5_sha1_md
+ d methods_filep
+ d new_nid
  d nid_objs
  d nist_curves
+ d null_md
  d openssl_dsa_meth
- d openssl_ecdh_meth
- d openssl_ecdsa_meth
+ d openssl_ec_key_method
  d p_floatconverter
  d p_intconverter
  d r4_40_cipher
  d r4_cipher
  d r4_hmac_md5_cipher
- d realloc_ex_func
- d realloc_func
- d rsa_pkcs1_eay_meth
+ d rand_drbg_init
+ d rand_drbg_type
+ d rand_init
+ d random_device_paths
+ d realloc_impl
+ d register_atexit
+ d ripemd160_md
+ d rsa_pkcs1_ossl_meth
  d s_EControllerType
  d s_ELauncherType
  d s_pConversionArrays_NoEscConversion
  d s_pConversionArrays_StringCharConversion
+ d seed_cbc
+ d seed_cfb128
+ d seed_ecb
+ d seed_ofb
  d selectBuf
  d sha1_md
  d sha224_md
  d sha256_md
  d sha384_md
+ d sha512_224_md
+ d sha512_256_md
  d sha512_md
- d sha_md
  d sigoid_srt_xref
+ d slave_reseed_interval
+ d slave_reseed_time_interval
+ d sm3_md
+ d sm4_cbc
+ d sm4_cfb128
+ d sm4_ctr_mode
+ d sm4_ecb
+ d sm4_ofb
+ d ssl3_ciphers
+ d ssl3_scsvs
+ d ssl_base
  d ssl_mac_pkey_id
+ d ssl_strings
  d standard_methods
  d stringconverter
  d textureidconverter
+ d tls13_ciphers
  d typeinfo for (anonymous namespace)::ScrollBarButton
  d typeinfo for CFriendsUIModule::EnterVRMode()::$_0
  d typeinfo for std::__1::__function::__func<CFriendsUIModule::EnterVRMode()::$_0, std::__1::allocator<CFriendsUIModule::EnterVRMode()::$_0>, void (IHTMLWindow*)>
+ d uint32_pf
  d vgui::Panel::OnOldMessage(KeyValues*, unsigned long long)::s_bDebugMessages
  d vgui::RichText::GetAppearanceForLocalStyle(int, int)::styleNameList3
  d vgui::RichText::InsertStringWithHTML(wchar_t const*)::rgTagToStyles
@@ -19024,7 +19619,10 @@
  exit
  fclose
  fcntl
+ feof
+ ferror
  fflush
+ fgets
  flock
  floor
  floorf
@@ -19044,7 +19642,10 @@
  g_VProfProfilesRunningCount
  g_pMemAllocSteam
  getcwd
+ getegid
  getenv
+ geteuid
+ getgid
  getpid
  gettimeofday
  getuid
@@ -19106,19 +19707,57 @@
  operator new(unsigned long, std::nothrow_t const&)
  operator new[](unsigned long)
  pow
+ pthread_atfork
+ pthread_equal
+ pthread_getspecific
+ pthread_key_create
+ pthread_key_delete
  pthread_mutex_destroy
  pthread_mutex_init
  pthread_mutex_lock
  pthread_mutex_unlock
+ pthread_once
+ pthread_rwlock_destroy
+ pthread_rwlock_init
+ pthread_rwlock_rdlock
+ pthread_rwlock_unlock
+ pthread_rwlock_wrlock
+ pthread_self
+ pthread_setspecific
  qsort
  r .memset_pattern
  r .memset_pattern1
  r BN_kronecker.tab
- r BN_num_bits_word.bits
  r BN_value_one.data_one
+ r BUF_str_reasons
+ r Bi
  r CCrypto::Base64Decode(char const*, unsigned int, void*, unsigned int*, bool)::rgchInvBase64
+ r CMAC_Init.zero_iv
+ r CONF_type_default
+ r HMAC.dummy_key
  r Hex
- r SQR_tb
+ r Key_RC
+ r MODULUS
+ r ONE
+ r S1
+ r S2
+ r SM4_S
+ r SM4_SBOX_T
+ r SM4_set_key.CK
+ r SS
+ r Td0
+ r Td1
+ r Td2
+ r Td3
+ r Td4
+ r Te0
+ r Te1
+ r Te2
+ r Te3
+ r X1
+ r X2
+ r X25519.kZeros
+ r ZERO
  r _EC_IPSEC_155_ID3
  r _EC_IPSEC_185_ID4
  r _EC_NIST_CHAR2_163B
@@ -19193,14 +19832,23 @@
  r _EC_brainpoolP384t1
  r _EC_brainpoolP512r1
  r _EC_brainpoolP512t1
+ r _EC_sm2p256v1
  r _nist_p_224
  r _nist_p_224_sqr
  r _nist_p_521
  r _nist_p_521_sqr
+ r allzeroes
  r ascii_class
  r base_dither_matrix
  r bf_init
  r bmask
+ r c448_ed448_verify.order
+ r ctype_char_map
+ r curve448_precomputed_base_table
+ r curve448_wnaf_base_table
+ r d
+ r d2
+ r default_aiv
  r default_iv
  r des_skb
  r dh1024_160_g
@@ -19212,13 +19860,23 @@
  r dh2048_256_g
  r dh2048_256_p
  r dh2048_256_q
+ r drbg_ctr_init.df_key
  r dsa_builtin_paramgen2.ggen
- r ecp_nistz256_precomputed
+ r ecp_nistz256_inv_mod_ord.RR
+ r ecp_nistz256_inv_mod_ord.chain
+ r ecp_nistz256_inv_mod_ord.one
  r extra_pool_slop
+ r fe_isnonzero.zero
+ r ffdhe2048_p
+ r ffdhe3072_p
+ r ffdhe4096_p
+ r ffdhe6144_p
+ r ffdhe8192_p
  r first_pool_slop
  r fourbppswaptable
  r g_rgubValidatedEmoticonDelimiter
  r gmul
+ r hash_init_with_dom.dom_s
  r jpeg_zigzag_order
  r jpeg_zigzag_order2
  r jpeg_zigzag_order3
@@ -19226,14 +19884,15 @@
  r jpeg_zigzag_order5
  r jpeg_zigzag_order6
  r jpeg_zigzag_order7
+ r k25519Precomp
  r ln_objs
- r lvalues
  r nistp224_curve_params
  r nistp521_curve_params
  r obj_objs
  r odd_parity
  r one
  r onebppswaptable
+ r ossl_pers_string
  r png_combine_row.display_mask
  r png_combine_row.row_mask
  r png_digit
@@ -19248,6 +19907,7 @@
  r png_read_start_row.png_pass_start
  r png_write_finish_row.png_pass_yinc
  r png_write_finish_row.png_pass_ystart
+ r precomputed_scalarmul_adjustment
  r primes
  r protobuf_AssignDesc_htmlmessages_2eproto()::CCookie_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CHTMLHeader_offsets_
@@ -19494,22 +20154,32 @@
  r protobuf_AssignDesc_stream_2eproto()::CVirtualHereReadyMsg_offsets_
  r protobuf_AssignDesc_stream_2eproto()::CVirtualHereRequestMsg_offsets_
  r protobuf_AssignDesc_stream_2eproto()::CVirtualHereShareDeviceMsg_offsets_
+ r rcon
  r s_szSignature2Name
  r s_szSignatureName
+ r sc_p
+ r sc_r2
  r select_ncolors.RGB_order
  r sigoid_srt
  r sn_objs
+ r so
+ r sqrtm1
+ r ssl_cipher_table_cipher
+ r ssl_cipher_table_mac
  r start_pass.aanscalefactor
  r start_pass.aanscales
  r state_transition_table
  r std::__1::piecewise_construct
  r tag2bit
+ r tbl_standard
  r two80
  r twobppswaptable
  r typeinfo name for (anonymous namespace)::ScrollBarButton
  r typeinfo name for CFriendsUIModule::EnterVRMode()::$_0
  r typeinfo name for std::__1::__function::__func<CFriendsUIModule::EnterVRMode()::$_0, std::__1::allocator<CFriendsUIModule::EnterVRMode()::$_0>, void (IHTMLWindow*)>
  r utf8_lead_bits
+ r value_2
+ r zero
  r zeroes
  read
  readdir$INODE64
@@ -19519,12 +20189,10 @@
  roundf
  scandir$INODE64
  sched_yield
- select$1050
  setjmp
  setlocale
  sin
  snprintf
- socket
  sprintf
  sscanf
  stat$INODE64
@@ -19559,6 +20227,7 @@
  std::logic_error::logic_error(char const*)
  std::nothrow
  std::terminate()
+ strcasecmp
  strcat
  strchr
  strcmp
@@ -19598,11 +20267,15 @@
  t BEndsWith(char const*, char const*, bool)
  t BFriendsNameCollisionCompare(CUtlString const&, CUtlString const&)
  t BIsMatchMore(char const*, char const*, int)
- t BN_from_montgomery_word
  t BN_to_felem
  t BuildSignatureBuffer_Insecure_BackwardsCompat(KeyValues*, CUtlBuffer&)
  t CScopeGuardLambdaImpl<OSX_GetTitleBarDblClickAction()::$_0>::~CScopeGuardLambdaImpl()
  t CScopeGuardLambdaImpl<OSX_GetTitleBarDblClickAction()::$_1>::~CScopeGuardLambdaImpl()
+ t ChaCha20_128
+ t ChaCha20_4x
+ t ChaCha20_4xop
+ t ChaCha20_8x
+ t ChaCha20_ssse3
  t CommonKeyCode::InitKeyTranslation()
  t ConvertJpegToRawInternal(unsigned char const*, int, CUtlBuffer&, int&, int&, int*, bool)
  t CopyString(char const*)
@@ -19629,23 +20302,27 @@
  t Create_TextEntry()
  t Create_ToggleButton()
  t Create_TreeView()
+ t DSO_new_method
  t DecimalToUint64(char const*, unsigned long long, unsigned long long*)
  t DecodeBase64ToBuf(char const*, unsigned int, CAutoWipeBuffer&)
  t DecodePEMBody(char const*, unsigned long, CAutoWipeBuffer&, char const*)
  t DefaultSortFunc(KeyValues*, KeyValues*)
  t DefaultSortFunc(unsigned int, vgui::ListPanelItem const&, vgui::ListPanelItem const&)
+ t ERR_STATE_free
  t FileSelect(dirent const*)
  t FindConverter(char const*)
  t FindSignaturePeer(KeyValues*, char const*, bool)
  t FreeTree(ExprNode*&)
  t GetNetAdrResolveCacheMutex()
  t GetRootPopup(unsigned long long)
+ t HKDF_Expand
  t K256
  t K256_shaext
  t K512
  t KVJSONParserCallback(void*, int, JSON_value_struct const*)
  t KVJSONParserCreateNewSubNode(KVJSONParserContext_t*, bool)
  t K_XX_XX
+ t KeccakF1600
  t ListBaseInteger64SortFunc(vgui::ListPanelItem const&, vgui::ListPanelItem const&, char const*)
  t ListBaseStringSortFunc(vgui::ListPanelItem const&, vgui::ListPanelItem const&, char const*)
  t ListFileAttributesSortFunc(vgui::ListPanelItem const&, vgui::ListPanelItem const&)
@@ -19663,13 +20340,6 @@
  t PNGWarningFunction(png_struct_def*, char const*)
  t RAND_CryptoGenRandom_bytes(unsigned char*, int)
  t RAND_CryptoGenRandom_status()
- t RSA_eay_finish
- t RSA_eay_init
- t RSA_eay_mod_exp
- t RSA_eay_private_decrypt
- t RSA_eay_private_encrypt
- t RSA_eay_public_decrypt
- t RSA_eay_public_encrypt
  t SimplifyNode(ExprNode*&)
  t _GLOBAL__sub_I_AnimatingImagePanel.cpp
  t _GLOBAL__sub_I_AnimationController.cpp
@@ -19789,6 +20459,7 @@
  t _GLOBAL__sub_I_validate_globals.cpp
  t _GLOBAL__sub_I_vgui_controls.cpp
  t _GLOBAL__sub_I_vrapi.cpp
+ t _KeccakF1600
  t _aesni_set_encrypt_key
  t _bn_post4x_internal
  t _bn_postx4x_internal
@@ -19809,6 +20480,14 @@
  t _ecp_nistz256_sub_fromx
  t _ecp_nistz256_subq
  t _ecp_nistz256_subx
+ t _ocb_decrypt1
+ t _ocb_decrypt4
+ t _ocb_decrypt6
+ t _ocb_encrypt1
+ t _ocb_encrypt4
+ t _ocb_encrypt6
+ t _poly1305_block
+ t _poly1305_init_avx
  t _rsaz_512_mul
  t _rsaz_512_mulx
  t _rsaz_512_reduce
@@ -19816,6 +20495,9 @@
  t _rsaz_512_subtract
  t access_virt_barray
  t access_virt_sarray
+ t add_niels_to_pt
+ t added_obj_cmp
+ t added_obj_hash
  t aes_cbc_cipher
  t aes_ccm_cipher
  t aes_ccm_ctrl
@@ -19830,6 +20512,10 @@
  t aes_gcm_ctrl
  t aes_gcm_init_key
  t aes_init_key
+ t aes_ocb_cipher
+ t aes_ocb_cleanup
+ t aes_ocb_ctrl
+ t aes_ocb_init_key
  t aes_ofb_cipher
  t aes_wrap_cipher
  t aes_wrap_init_key
@@ -19868,21 +20554,52 @@
  t aesni_init_key
  t aesni_multi_cbc_decrypt_avx
  t aesni_multi_cbc_encrypt_avx
+ t aesni_ocb_init_key
  t aesni_xts_init_key
+ t alg_module_init
  t alloc_barray
  t alloc_large
  t alloc_sarray
  t alloc_small
  t ameth_cmp_BSEARCH_CMP_FN
- t app_info_LHASH_COMP
- t app_info_LHASH_HASH
+ t aria_128_cbc_cipher
+ t aria_128_cfb128_cipher
+ t aria_128_cfb1_cipher
+ t aria_128_cfb8_cipher
+ t aria_128_ecb_cipher
+ t aria_128_ofb_cipher
+ t aria_192_cbc_cipher
+ t aria_192_cfb128_cipher
+ t aria_192_cfb1_cipher
+ t aria_192_cfb8_cipher
+ t aria_192_ecb_cipher
+ t aria_192_ofb_cipher
+ t aria_256_cbc_cipher
+ t aria_256_cfb128_cipher
+ t aria_256_cfb1_cipher
+ t aria_256_cfb8_cipher
+ t aria_256_ecb_cipher
+ t aria_256_ofb_cipher
+ t aria_ccm_cipher
+ t aria_ccm_ctrl
+ t aria_ccm_init_key
+ t aria_ctr_cipher
+ t aria_gcm_cipher
+ t aria_gcm_cleanup
+ t aria_gcm_ctrl
+ t aria_gcm_init_key
+ t aria_init_key
  t arith_decode
  t asn1_check_tlen
  t asn1_collect
  t asn1_d2i_ex_primitive
+ t asn1_ex_i2c
  t asn1_i2d_ex_primitive
- t asn1_item_combine_free
- t asn1_item_ex_combine_new
+ t asn1_item_embed_d2i
+ t asn1_item_embed_new
+ t asn1_item_flags_i2d
+ t asn1_primitive_new
+ t asn1_string_get_int64
  t asn1_template_clear
  t asn1_template_ex_d2i
  t asn1_template_ex_i2d
@@ -19897,10 +20614,14 @@
  t bf_ecb_cipher
  t bf_init_key
  t bf_ofb_cipher
+ t bio_write_intern
+ t blake2b_compress
+ t blake2s_compress
+ t bn2binpad
  t bn_c2i
- t bn_expand_internal
  t bn_free
  t bn_from_mont8x
+ t bn_from_montgomery_word
  t bn_i2c
  t bn_mul4x_mont
  t bn_mul4x_mont_gather5
@@ -19909,24 +20630,34 @@
  t bn_new
  t bn_powerx5
  t bn_print
- t bn_rand_range
+ t bn_secure_c2i
+ t bn_secure_new
  t bn_sqr8x_mont
+ t bn_to_asn1_string
  t bnrand
- t bsaes_const
- t bsaes_decrypt8
- t bsaes_encrypt8
- t bsaes_encrypt8_bitslice
- t bsaes_key_convert
+ t bnrand_range
+ t c2i_ibuf
  t camellia_cbc_cipher
  t camellia_cfb1_cipher
  t camellia_cfb8_cipher
  t camellia_cfb_cipher
+ t camellia_ctr_cipher
  t camellia_ecb_cipher
  t camellia_init_key
  t camellia_ofb_cipher
- t cleanup1_LHASH_DOALL
- t cleanup2_LHASH_DOALL
- t cleanup3_LHASH_DOALL
+ t cfbr_encrypt_block
+ t chacha20_poly1305_cipher
+ t chacha20_poly1305_cleanup
+ t chacha20_poly1305_ctrl
+ t chacha20_poly1305_init_key
+ t chacha_cipher
+ t chacha_init_key
+ t check_padding_md
+ t cipher_compare
+ t cleanup1_doall
+ t cleanup2_doall
+ t cleanup3_doall
+ t cleanup_cb
  t cmac_key_free
  t cmac_signctx
  t cmac_signctx_init
@@ -19934,10 +20665,15 @@
  t color_quantize
  t color_quantize3
  t compute_key
- t compute_wNAF
+ t conf_value_cmp
+ t conf_value_hash
  t consume_data
  t consume_markers
  t create_colorindex
+ t crypto_128_unwrap_raw
+ t ctr_BCC_update
+ t ctr_update
+ t ctrl
  t decode_mcu
  t decode_mcu_AC_first
  t decode_mcu_AC_refine
@@ -19947,12 +20683,15 @@
  t decompress_data
  t decompress_onepass
  t decompress_smooth_data
- t def_cleanup_cb
- t def_cleanup_util_cb
- t def_get_class
- t default_malloc_ex
- t default_malloc_locked_ex
- t default_realloc_ex
+ t def_create
+ t def_destroy
+ t def_destroy_data
+ t def_dump
+ t def_init_default
+ t def_is_number
+ t def_load
+ t def_load_bio
+ t def_to_int
  t der_cmp
  t des3_ctrl
  t des_cbc_cipher
@@ -19978,6 +20717,7 @@
  t dh_bn_mod_exp
  t dh_cb
  t dh_cmp_parameters
+ t dh_cms_set_shared_info
  t dh_copy_parameters
  t dh_finish
  t dh_init
@@ -19986,6 +20726,8 @@
  t dh_param_encode
  t dh_param_print
  t dh_pkey_ctrl
+ t dh_pkey_param_check
+ t dh_pkey_public_check
  t dh_priv_decode
  t dh_priv_encode
  t dh_private_print
@@ -19993,12 +20735,24 @@
  t dh_pub_decode
  t dh_pub_encode
  t dh_public_print
+ t dh_security_bits
  t do_EC_KEY_print
  t do_dh_print
  t do_dsa_print
- t do_rsa_print
+ t do_err_strings_init_ossl_
+ t do_ex_data_init_ossl_
+ t do_rand_drbg_init_ossl_
+ t do_rand_init_ossl_
  t do_sigver_init
  t doapr_outch
+ t drbg_add
+ t drbg_bytes
+ t drbg_ctr_generate
+ t drbg_ctr_instantiate
+ t drbg_ctr_reseed
+ t drbg_ctr_uninstantiate
+ t drbg_seed
+ t drbg_status
  t dsa_bits
  t dsa_cb
  t dsa_cmp_parameters
@@ -20019,27 +20773,36 @@
  t dsa_pub_decode
  t dsa_pub_encode
  t dsa_pub_print
+ t dsa_security_bits
  t dsa_sig_print
  t dsa_sign_setup
+ t dsa_sign_setup_no_digest
  t dummy_consume_data
- t ec_GF2m_montgomery_point_multiply
- t ec_asn1_group2pkparameters
- t ec_asn1_pkparameters2group
+ t dump_value_doall_arg
+ t ec_GF2m_simple_field_inv
+ t ec_GF2m_simple_ladder_post
+ t ec_GF2m_simple_ladder_pre
+ t ec_GF2m_simple_ladder_step
+ t ec_GF2m_simple_points_mul
  t ec_bits
  t ec_cmp_parameters
  t ec_copy_parameters
+ t ec_field_size
  t ec_missing_parameters
+ t ec_pkey_check
  t ec_pkey_ctrl
- t ec_pre_comp_clear_free
- t ec_pre_comp_dup
- t ec_pre_comp_free
- t ecdh_compute_key
- t ecdh_data_dup
- t ecdh_data_free
- t ecdsa_data_dup
- t ecdsa_data_free
- t ecdsa_do_sign
- t ecdsa_do_verify
+ t ec_pkey_param_check
+ t ec_pkey_public_check
+ t ec_security_bits
+ t ecd_ctrl
+ t ecd_item_sign25519
+ t ecd_item_sign448
+ t ecd_item_verify
+ t ecd_sig_info_set25519
+ t ecd_sig_info_set448
+ t ecd_size25519
+ t ecd_size448
+ t ecdh_cms_set_shared_info
  t ecdsa_sign_setup
  t eckey_param2type
  t eckey_param_decode
@@ -20053,26 +20816,50 @@
  t eckey_pub_encode
  t eckey_pub_print
  t eckey_type2param
- t ecp_nistz256_avx2_select_w5
+ t ecp_nistz256_avx2_gather_w5
  t ecp_nistz256_get_affine
+ t ecp_nistz256_inv_mod_ord
+ t ecp_nistz256_is_affine_G
  t ecp_nistz256_mult_precompute
+ t ecp_nistz256_ord_mul_montx
+ t ecp_nistz256_ord_sqr_montx
  t ecp_nistz256_point_add_affinex
  t ecp_nistz256_point_addx
  t ecp_nistz256_point_doublex
  t ecp_nistz256_points_mul
- t ecp_nistz256_pre_comp_clear_free
- t ecp_nistz256_pre_comp_dup
- t ecp_nistz256_pre_comp_free
  t ecp_nistz256_window_have_precompute_mult
+ t ecp_nistz256_windowed_mul
+ t ecx_bits
+ t ecx_cmp_parameters
+ t ecx_ctrl
+ t ecx_free
+ t ecx_get_priv_key
+ t ecx_get_pub_key
+ t ecx_key_op
+ t ecx_key_print
+ t ecx_priv_decode
+ t ecx_priv_encode
+ t ecx_priv_print
+ t ecx_pub_cmp
+ t ecx_pub_decode
+ t ecx_pub_encode
+ t ecx_pub_print
+ t ecx_security_bits
+ t ecx_set_priv_key
+ t ecx_set_pub_key
+ t ecx_size
  t emit_message
- t err_state_LHASH_COMP
- t err_state_LHASH_HASH
- t err_string_data_LHASH_COMP
- t err_string_data_LHASH_HASH
+ t encode_pkcs1
+ t err_do_init_ossl_
+ t err_string_data_cmp
+ t err_string_data_hash
  t error_exit
- t ex_class_item_LHASH_COMP
- t ex_class_item_LHASH_HASH
+ t evp_EncryptDecryptUpdate
  t examine_app0
+ t fe_invert
+ t fe_mul
+ t fe_sq
+ t fe_tobytes
  t felem_assign
  t felem_contract
  t felem_inv
@@ -20083,33 +20870,54 @@
  t felem_reduce
  t felem_square
  t felem_square_reduce
- t felem_to_BN
+ t file_ctrl
+ t file_free
+ t file_gets
+ t file_new
+ t file_puts
+ t file_read
+ t file_write
  t fill_inverse_cmap
  t final
+ t final224
  t final256
+ t final384
  t final512
  t finish_input_pass
  t finish_output_pass
  t finish_pass1
  t finish_pass2
  t finish_pass_1_quant
+ t fmtfp
  t fmtint
+ t fork_once_func
  t format_message
  t free_evp_pbe_ctl
  t free_pool
  t fsevents_callback(__FSEventStream const*, void*, unsigned long, void*, unsigned int const*, unsigned long long const*)
  t fullsize_upsample
+ t ge_add
+ t ge_madd
+ t ge_p2_dbl
+ t ge_scalarmult_base
  t generate_key
+ t get_error_values
  t get_interesting_appn
+ t get_next_file
  t get_sof
+ t gf_cond_neg
+ t gf_sub_nr
  t gray_rgb_convert
  t grayscale_convert
  t h2v1_merged_upsample
  t h2v1_upsample
  t h2v2_merged_upsample
  t h2v2_upsample
+ t hmac_get_priv_key
  t hmac_key_free
  t hmac_pkey_ctrl
+ t hmac_pkey_public_cmp
+ t hmac_set_priv_key
  t hmac_signctx
  t hmac_signctx_init
  t hmac_size
@@ -20118,71 +20926,68 @@
  t init256
  t init384
  t init512
- t int_cleanup
+ t init512_224
+ t init512_256
  t int_ctx_new
  t int_dh_free
  t int_dh_param_copy
  t int_dh_size
  t int_dsa_free
  t int_dsa_size
- t int_dup_ex_data
  t int_ec_free
  t int_ec_size
- t int_err_del
- t int_err_del_item
- t int_err_get
- t int_err_get_item
- t int_err_get_next_lib
- t int_err_set_item
- t int_free_ex_data
- t int_get_new_index
- t int_new_class
- t int_new_ex_data
  t int_rsa_free
  t int_rsa_size
- t int_thread_del_item
- t int_thread_get
- t int_thread_get_item
- t int_thread_release
- t int_thread_set_item
  t int_update
  t int_upsample
+ t iotas
  t jpeg_fill_bit_buffer
  t jpeg_huff_decode
  t jpeg_make_d_derived_tbl
- t long_c2i
- t long_free
- t long_i2c
- t long_new
- t long_print
+ t mask_cb
  t merged_1v_upsample
  t merged_2v_upsample
+ t module_add
  t mul4x_internal
  t mul_1x1
  t mulx4x_internal
  t name_funcs_free
- t names_lh_free_LHASH_DOALL
+ t names_lh_free_doall
  t new_color_map_1_quant
  t new_color_map_2_quant
  t next_marker
- t nistp224_pre_comp_clear_free
- t nistp224_pre_comp_dup
- t nistp224_pre_comp_free
- t nistp521_pre_comp_clear_free
- t nistp521_pre_comp_dup
- t nistp521_pre_comp_free
  t noop_upsample
  t null_convert
- t obj_name_LHASH_COMP
- t obj_name_LHASH_HASH
+ t o_names_init_ossl_
+ t obj_name_cmp
+ t obj_name_hash
+ t ocb_lookup_l
+ t oid_module_finish
+ t oid_module_init
  t old_dsa_priv_decode
  t old_dsa_priv_encode
  t old_ec_priv_decode
  t old_ec_priv_encode
- t old_hmac_decode
- t old_hmac_encode
  t old_rsa_priv_decode
  t old_rsa_priv_encode
+ t oneshot_hash
+ t ossl_init_add_all_ciphers_ossl_
+ t ossl_init_add_all_digests_ossl_
+ t ossl_init_async_ossl_
+ t ossl_init_base_ossl_
+ t ossl_init_config_ossl_
+ t ossl_init_load_crypto_nodelete_ossl_
+ t ossl_init_load_crypto_strings_ossl_
+ t ossl_init_load_ssl_strings_ossl_
+ t ossl_init_no_add_all_ciphers_ossl_
+ t ossl_init_no_add_all_digests_ossl_
+ t ossl_init_no_config_ossl_
+ t ossl_init_no_load_crypto_strings_ossl_
+ t ossl_init_no_load_ssl_strings_ossl_
+ t ossl_init_no_register_atexit_ossl_
+ t ossl_init_register_atexit_ossl_
+ t ossl_init_ssl_base_ossl_
+ t ossl_init_thread_destructor
  t output_message
  t parse_buffer_reserve_for
  t parse_parse_buffer
@@ -20215,19 +21020,40 @@
  t pkey_ec_copy
  t pkey_ec_ctrl
  t pkey_ec_ctrl_str
- t pkey_ec_derive
  t pkey_ec_init
  t pkey_ec_kdf_derive
  t pkey_ec_keygen
  t pkey_ec_paramgen
  t pkey_ec_sign
  t pkey_ec_verify
+ t pkey_ecd_ctrl
+ t pkey_ecd_digestsign25519
+ t pkey_ecd_digestsign448
+ t pkey_ecd_digestverify25519
+ t pkey_ecd_digestverify448
+ t pkey_ecx_ctrl
+ t pkey_ecx_derive25519
+ t pkey_ecx_derive448
+ t pkey_ecx_keygen
+ t pkey_hkdf_cleanup
+ t pkey_hkdf_ctrl
+ t pkey_hkdf_ctrl_str
+ t pkey_hkdf_derive
+ t pkey_hkdf_derive_init
+ t pkey_hkdf_init
  t pkey_hmac_cleanup
  t pkey_hmac_copy
  t pkey_hmac_ctrl
  t pkey_hmac_ctrl_str
  t pkey_hmac_init
  t pkey_hmac_keygen
+ t pkey_poly1305_cleanup
+ t pkey_poly1305_copy
+ t pkey_poly1305_ctrl
+ t pkey_poly1305_ctrl_str
+ t pkey_poly1305_init
+ t pkey_poly1305_keygen
+ t pkey_pss_init
  t pkey_rsa_cleanup
  t pkey_rsa_copy
  t pkey_rsa_ctrl
@@ -20236,9 +21062,36 @@
  t pkey_rsa_encrypt
  t pkey_rsa_init
  t pkey_rsa_keygen
+ t pkey_rsa_print
  t pkey_rsa_sign
  t pkey_rsa_verify
  t pkey_rsa_verifyrecover
+ t pkey_scrypt_cleanup
+ t pkey_scrypt_ctrl
+ t pkey_scrypt_ctrl_str
+ t pkey_scrypt_derive
+ t pkey_scrypt_init
+ t pkey_siphash_cleanup
+ t pkey_siphash_copy
+ t pkey_siphash_ctrl
+ t pkey_siphash_ctrl_str
+ t pkey_siphash_init
+ t pkey_siphash_keygen
+ t pkey_sm2_cleanup
+ t pkey_sm2_copy
+ t pkey_sm2_ctrl
+ t pkey_sm2_ctrl_str
+ t pkey_sm2_decrypt
+ t pkey_sm2_digest_custom
+ t pkey_sm2_encrypt
+ t pkey_sm2_init
+ t pkey_sm2_sign
+ t pkey_sm2_verify
+ t pkey_tls1_prf_cleanup
+ t pkey_tls1_prf_ctrl
+ t pkey_tls1_prf_ctrl_str
+ t pkey_tls1_prf_derive
+ t pkey_tls1_prf_init
  t pmeth_cmp_BSEARCH_CMP_FN
  t png_build_16bit_table
  t png_format_buffer
@@ -20254,6 +21107,18 @@
  t png_zlib_release
  t point_add
  t point_double
+ t point_double_internal
+ t poly1305_blocks_avx
+ t poly1305_blocks_avx2
+ t poly1305_emit_avx
+ t poly1305_get_priv_key
+ t poly1305_key_free
+ t poly1305_pkey_ctrl
+ t poly1305_pkey_public_cmp
+ t poly1305_set_priv_key
+ t poly1305_signctx
+ t poly1305_signctx_init
+ t poly1305_size
  t post_process_1pass
  t post_process_2pass
  t post_process_prepass
@@ -20268,6 +21133,8 @@
  t quantize3_ord_dither
  t quantize_fs_dither
  t quantize_ord_dither
+ t rand_drbg_new
+ t rand_pool_grow
  t rc4_cipher
  t rc4_hmac_md5_cipher
  t rc4_hmac_md5_ctrl
@@ -20283,26 +21150,50 @@
  t reset_marker_reader
  t rsa_bits
  t rsa_cb
- t rsa_ctx_to_pss
- t rsa_get_blinding
+ t rsa_ctx_to_pss_string
  t rsa_item_sign
  t rsa_item_verify
  t rsa_md_to_mgf1
- t rsa_mgf1_to_md
+ t rsa_oaep_cb
+ t rsa_ossl_finish
+ t rsa_ossl_init
+ t rsa_ossl_mod_exp
+ t rsa_ossl_private_decrypt
+ t rsa_ossl_private_encrypt
+ t rsa_ossl_public_decrypt
+ t rsa_ossl_public_encrypt
+ t rsa_pkey_check
  t rsa_pkey_ctrl
  t rsa_priv_decode
  t rsa_priv_encode
  t rsa_priv_print
+ t rsa_pss_cb
+ t rsa_pss_param_print
  t rsa_pss_to_ctx
  t rsa_pub_cmp
  t rsa_pub_decode
  t rsa_pub_encode
  t rsa_pub_print
+ t rsa_security_bits
+ t rsa_sig_info_set
  t rsa_sig_print
+ t sc_montmul
+ t sc_subx
+ t scalar_decode_short
+ t scryptBlockMix
+ t seed_cbc_cipher
+ t seed_cfb128_cipher
+ t seed_ecb_cipher
+ t seed_init_key
+ t seed_ofb_cipher
  t select_point
  t self_destruct
  t sep_upsample
  t set_error
+ t sh_add_to_list
+ t sh_clearbit
+ t sh_free
+ t sh_setbit
  t sha1_block_data_order_avx
  t sha1_block_data_order_avx2
  t sha1_block_data_order_shaext
@@ -20310,7 +21201,6 @@
  t sha1_multi_block_avx
  t sha1_multi_block_avx2
  t sha1_multi_block_shaext
- t sha1_update
  t sha256_block_data_order_avx
  t sha256_block_data_order_avx2
  t sha256_block_data_order_shaext
@@ -20318,24 +21208,42 @@
  t sha256_multi_block_avx
  t sha256_multi_block_avx2
  t sha256_multi_block_shaext
- t sha256_update
+ t sha3_final
+ t sha3_init
+ t sha3_update
  t sha512_block_data_order_avx
  t sha512_block_data_order_avx2
  t sha512_block_data_order_xop
- t sha_block_data_order
  t shaext_shortcut
+ t shake_ctrl
+ t shake_init
  t sid_free
- t sig_cb
  t sig_cmp_BSEARCH_CMP_FN
  t sigx_cmp_BSEARCH_CMP_FN
+ t siphash_get_priv_key
+ t siphash_key_free
+ t siphash_pkey_ctrl
+ t siphash_pkey_public_cmp
+ t siphash_set_priv_key
+ t siphash_signctx
+ t siphash_signctx_init
+ t siphash_size
+ t sk_table_cmp
  t skip_variable
- t ssleay_rand_add
- t ssleay_rand_cleanup
- t ssleay_rand_nopseudo_bytes
- t ssleay_rand_pseudo_bytes
- t ssleay_rand_seed
- t ssleay_rand_status
+ t slide
+ t sm2_sig_gen
+ t sm2_sig_verify
+ t sm4_cbc_cipher
+ t sm4_cfb128_cipher
+ t sm4_ctr_cipher
+ t sm4_ecb_cipher
+ t sm4_init_key
+ t sm4_ofb_cipher
+ t ssl_library_stop
+ t ssl_module_free
+ t ssl_module_init
  t ssse3_shortcut
+ t st_free
  t start_input_pass
  t start_output_pass
  t start_pass
@@ -20347,6 +21255,8 @@
  t start_pass_main
  t start_pass_merged_upsample
  t start_pass_upsample
+ t stbl_module_finish
+ t stbl_module_init
  t std::__1::__function::__func<CFriendsUIModule::EnterVRMode()::$_0, std::__1::allocator<CFriendsUIModule::EnterVRMode()::$_0>, void (IHTMLWindow*)>::__clone() const
  t std::__1::__function::__func<CFriendsUIModule::EnterVRMode()::$_0, std::__1::allocator<CFriendsUIModule::EnterVRMode()::$_0>, void (IHTMLWindow*)>::__clone(std::__1::__function::__base<void (IHTMLWindow*)>*) const
  t std::__1::__function::__func<CFriendsUIModule::EnterVRMode()::$_0, std::__1::allocator<CFriendsUIModule::EnterVRMode()::$_0>, void (IHTMLWindow*)>::destroy()
@@ -20355,12 +21265,27 @@
  t std::__1::__function::__func<CFriendsUIModule::EnterVRMode()::$_0, std::__1::allocator<CFriendsUIModule::EnterVRMode()::$_0>, void (IHTMLWindow*)>::target(std::type_info const&) const
  t std::__1::__function::__func<CFriendsUIModule::EnterVRMode()::$_0, std::__1::allocator<CFriendsUIModule::EnterVRMode()::$_0>, void (IHTMLWindow*)>::target_type() const
  t std::__1::__function::__func<CFriendsUIModule::EnterVRMode()::$_0, std::__1::allocator<CFriendsUIModule::EnterVRMode()::$_0>, void (IHTMLWindow*)>::~__func()
+ t str_copy
+ t sub_niels_from_pt
+ t table_cmp_BSEARCH_CMP_FN
+ t table_select
+ t tls1_prf_P_hash
  t trans_cb
+ t uint32_c2i
+ t uint32_clear
+ t uint32_free
+ t uint32_i2c
+ t uint32_new
+ t uint32_print
  t update
+ t update224
  t update256
+ t update384
  t update512
  t update_box
  t use_merged_upsample
+ t value_free_hash
+ t value_free_stack_doall
  t vgui::GetDroppingSheet(CUtlVector<KeyValues*, CUtlMemory<KeyValues*> >&)
  t void std::__1::__inplace_merge<vgui::ListPanel::SortList()::$_0&, int*>(int*, int*, int*, vgui::ListPanel::SortList()::$_0&, std::__1::iterator_traits<int*>::difference_type, std::__1::iterator_traits<int*>::difference_type, std::__1::iterator_traits<int*>::value_type*, long)
  t void std::__1::__stable_sort<vgui::ListPanel::SortList()::$_0&, int*>(int*, int*, vgui::ListPanel::SortList()::$_0&, std::__1::iterator_traits<int*>::difference_type, std::__1::iterator_traits<int*>::value_type*, long)
@@ -20375,11 +21300,10 @@
  t vpaes_schedule_mangle
  t vpaes_schedule_round
  t vpaes_schedule_transform
- t x86_64_AES_decrypt
- t x86_64_AES_decrypt_compact
- t x86_64_AES_encrypt
- t x86_64_AES_encrypt_compact
- t x86_64_AES_set_encrypt_key
+ t write_bio
+ t x25519_sc_reduce
+ t x25519_scalar_mult
+ t x509_pubkey_decode
  t x86_64_Camellia_decrypt
  t x86_64_Camellia_encrypt
  t ycc_rgb_convert
@@ -20404,4 +21328,3 @@
  wcslen
  wcstol
  wctob
- write

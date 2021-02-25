@@ -445,23 +445,21 @@ TenfootFooterPanel.WebFooter
 }
 
 .Linux #LegendRow Label.LegendButtonBox.CrossButtonBox {
-	font-size: 21px;
 	padding-top: .5px;
 	padding-left: -0.5px;
 }
 .Linux #LegendRow Label.LegendButtonBox.CircleButtonBox {
-	font-size: 26px;
-	padding-top: -2px;
+	font-size: 59px;
+	padding-top: -13.5px;
 	padding-left: -0.3px;
 }
 .Linux #LegendRow Label.LegendButtonBox.SquareButtonBox {
-	font-size: 24px;
-	padding-top: -0.8px;
-	padding-left: -0.3px;
+	font-size: 36px;
+	padding-top: -2px;
+	padding-left: -1px;
 }
 .Linux #LegendRow Label.LegendButtonBox.TriangleButtonBox {
-	font-size: 26px;
-	padding-top: -4px;
+	padding-top: -8px;
 	padding-left: -0.3px;
 }
 

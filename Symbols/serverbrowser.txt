@@ -2839,7 +2839,7 @@
  T CDirIterator::CDirIterator(StringView, StringView)
  T CDirIterator::CurrentFileCreateTime() const
  T CDirIterator::CurrentFileLength() const
- T CDirIterator::CurrentFileName() const
+ T CDirIterator::CurrentFileName()
  T CDirIterator::CurrentFileWriteTime() const
  T CDirIterator::Init(StringView)
  T CDirIterator::~CDirIterator()
@@ -5479,11 +5479,9 @@
  T CUtlRBTreeBase<unsigned short, CDefRBTreeBalanceListener<unsigned short> >::_RotateRight(unsigned short, unsigned long, void*)
  T CUtlSortVector<vgui::EditablePanel::LayoutPanel_t>::Insert(vgui::EditablePanel::LayoutPanel_t const&)
  T CUtlString::AssertStringTooLong()
- T CUtlString::Format(char const*, ...)
  T CUtlString::Replace(char const*, char const*)
  T CUtlString::ReplaceInternal(char const*, char const*, char const* (*)(char const*, char const*))
  T CUtlString::SetValue(char const*)
- T CUtlString::VFormat(char const*, __va_list_tag*)
  T CUtlStringBuilder::Data::MoveToHeap()
  T CUtlStringBuilder::Data::SetError(bool)
  T CUtlStringBuilder::Data::SetLength(unsigned long)
@@ -5885,6 +5883,7 @@
  T KeyValues::~KeyValues()
  T KeyValuesAD::KeyValuesAD(StringView)
  T KeyValuesAD::operator KeyValues*()
+ T KeyValuesAD::operator*()
  T KeyValuesAD::operator->()
  T KeyValuesAD::~KeyValuesAD()
  T KeyValuesTextParser::InitBuffer(int)
@@ -10189,7 +10188,6 @@
  typeinfo for std::exception
  typeinfo for std::length_error
  usleep
- vasprintf
  vsnprintf
  vstdlib_wcsicmp
  vstdlib_wcsnicmp

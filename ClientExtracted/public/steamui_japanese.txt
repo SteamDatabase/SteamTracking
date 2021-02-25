@@ -129,7 +129,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_ForgottenPassword_EmailCode" "メールコード"
 "Steam_ForgottenPassword_EmailCode_Incorrect" "入力されたメールコードが間違っています。"
 
-"Steam_Login_Title"		"Steam ログイン"
+"Steam_Login_Title"		"Steamログイン"
 "Steam_Login_CreateNewAccount"	"新しいアカウントの作成..."
 "Steam_Login_RetrievePassword"	"サインインできません..."
 "Steam_Login_NoAccount"		"アカウントを未登録ですか?"
@@ -334,12 +334,12 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "SteamUI_AccountDialog_Subscriptions"	"サブスクリプション"
 "SteamUI_AccountDialog_AccountDetails"	"アカウント"
 "Steam_LogoutDialogTitle"			"ログアウト"
-"Steam_LogoutDialogMsg"				"Steam　からログアウトします。 Steam\nを再び使用するには、\nアカウント名とパスワードを入力する必要があります。\nログアウトしますか?"
+"Steam_LogoutDialogMsg"				"Steamからログアウトします。\nSteamを再び使用するには、\nアカウント名とパスワードを入力する必要があります。\nログアウトしますか？"
 "Steam_LogoutDialogOKButton"			"ログアウト"
 "Steam_LogoutDialogLabel"			"アカウント名："
 
 "Steam_FlushConfigDialogTitle"			"Steam - ダウンロードキャッシュのクリア"
-"Steam_FlushConfigDialogMsg"			"ローカルダウンロードキャッシュがクリアされ、Steam に再度ログインする必要があります。\n\n続けてよろしいですか？"
+"Steam_FlushConfigDialogMsg"			"ローカルダウンロードキャッシュがクリアされ、Steamに再度ログインする必要があります。\n\n続けてよろしいですか？"
 
 "Steam_AccountDialog_Logout"			"ログアウト..."
 "Steam_RunGame_Title_Error"			"Steam - エラー"
@@ -362,7 +362,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_PaymentMethod"				"お支払い方法"
 "Steam_PayWithCreditCard"			"クレジットカード"
 "Steam_PayWithPayPal"				"PayPal"
-"Steam_IAlreadyOwnThisProduct"		"既にこの製品を持っています"
+"Steam_IAlreadyOwnThisProduct"		"すでにこの製品を持っています"
 "Steam_Working_PurchasingProduct"		"購入中..."
 "Steam_Working_PreorderingProduct"	"予約購入中..."
 "Steam_Working_InitTxn"				"購入を初期化中..."
@@ -438,7 +438,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_DPIScaling_Option"				"モニターのサイズを基にテキストとアイコンを大きくする (再起動が必要)"
 "Steam_LaunchSteamOnStartup_Option"		"コンピューターの起動時にSteamを実行する"
 "Steam_BPMOnStartup_Option"				"Big Picture モードで Steam を起動"
-"Steam_ShowUrlBar_Option"				"Steam上にURLアドレスバーを表示する"
+"Steam_ShowUrlBar_Option"				"可能な場合はWebアドレスバーを表示する"
 "Steam_UseDirectWrite_Option"			"DirectWrite を有効にしてフォントのスムージングと文字間距離の最適化を 行う"
 "Steam_UseH264HWAccel_Option"			"対応していれば、ハードウェアビデオデコーディングを有効にする (再起動が必要です)"
 
@@ -481,12 +481,12 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_ShowOnlineStatusOptions"	"表示するオンラインオプションを選択してください"
 "Steam_ShowDestinationOptions"	"表示する移動先を選択してください"
 "Steam_MustRestartToTakeEffect"			"この設定はSteam が再起動されるまで\n有効になりません。"
-"Steam_LanguageSelect"				"Steam で使用する言語を選択してください（Steam の再起動が必要です）"
+"Steam_LanguageSelect"				"Steamで使用する言語を選択してください（Steamの再起動が必要です）"
 "Steam_SteamChinaLanguageSelect"	"Steamは、簡体字中国語でのみ使用できます。"
-"Steam_SelectSkinToUse"				"Steam で使用するスキンを選択してください（Steam の再起動が必要です）"
+"Steam_SelectSkinToUse"				"Steamで使用するスキンを選択してください（Steamの再起動が必要です）"
 "Steam_CreateShortcut_Title"			"Steam - ショートカット作成"
 "Steam_CreateShortcut_Info"			"ショートカットがデスクトップ上に作成されました。"
-"Steam_CreateShortcut_FailedInfo"		"ショートカットの作成に失敗しました。\nショートカットは既にデスクトップに作成されています。"
+"Steam_CreateShortcut_FailedInfo"		"ショートカットの作成に失敗しました。\nショートカットはすでにデスクトップに作成されています。"
 "Steam_CDKeyLabel"				"製品コード"
 "Steam_GetCDKeyError_Title"			"Steam - 無効な製品コード"
 "Steam_GetCDKeyError_Info"			"入力した製品コードは無効です。  \n\n入力したキーが正しいかどうかを確認してください。「I」、「L」、「1」を見間違えていないか、「V」と「Y」、「0（ゼロ）」と「O」の入力間違いが無いかも確認してください。  \nhttp://www.steampowered.com でヘルプを見ることができます。"
@@ -522,7 +522,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 
 "Steam_MustRestart_Title"		"Steam - 再起動してください"
 "Steam_MustRestart_Info"		"最新のアップデートを取得するには、Steam を再起動する必要があります。\n再起動するまで Steam はご利用いただけません。"
-"Steam_MustRestart_Button"		"Steam の再起動"
+"Steam_MustRestart_Button"		"Steamの再起動"
 "Steam_MustRestart_Language"		"言語設定の変更を反映するには Steam を再起動する必要があります。"
 
 "Steam_ChangeBeta_Title"		"Steam - ベータへの参加"
@@ -546,7 +546,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_PurchaseProgress_Title"		"Steam - 作業中"
 "Steam_PurchaseProgress_Info"		"Steam でキーを有効化しています..."
 
-"Steam_PurchaseFailedBadCDKey"		"Steam は CD キーを登録できませんでした。\n\n既に弊社のデータベースに登録されているか、無効の CD キーです。 入力ミスをしていないかよく確かめてください。 I／L／1、V／Y、0／Oは似ているため十分な注意が必要です。"
+"Steam_PurchaseFailedBadCDKey"		"Steam は CD キーを登録できませんでした。\n\nすでに弊社のデータベースに登録されているか、無効の CD キーです。 入力ミスをしていないかよく確かめてください。 I／L／1、V／Y、0／Oは似ているため十分な注意が必要です。"
 
 "Steam_PleaseVisitSupportPage"		"サポートや製品については、以下でご確認ください："
 "Steam_SteamPoweredURL"			"http://www.steampowered.com"
@@ -568,7 +568,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_PreloadInProgress"		"プリロードしています"
 "Steam_PreloadPause"			"一時停止"
 "Steam_PreloadContinue"		"続ける"
-"Steam_PreloadCancel"		"プリロードをキャンセルします。\n既にダウンロードされたデータもすべて削除されます。\nキャンセルを確定するには「OK」を、キャンセルを中止するには「キャンセル」をクリックしてください。"
+"Steam_PreloadCancel"		"プリロードをキャンセルします。\nすでにダウンロードされたデータもすべて削除されます。\nキャンセルを確定するには「OK」を、キャンセルを中止するには「キャンセル」をクリックしてください。"
 "Steam_CancelPreloading"		"プリロードを中止"
 "Steam_PreloadProgressNotes"	"%game%を、お使いのコンピューターにプリロードしています。\n\n予約購入を完了すると、ゲームの公式発売日からプレイすることができます。"
 "Steam_PreloadProgressNotesPayed"	"「%game%」を、お使いのコンピューターにプリロードしています。\n\nプリロードには時間がかかる場合があります。このウィンドウは閉じてもかまいませんが、Steamは起動したままにしておき、後ほどプリロードの終了を確認してください。"
@@ -640,7 +640,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 
 "Steam_RequestingEmailVerificationFailed" "メールアドレスの確認に失敗しました。 後でもう一度お試しください。"
 "SteamUI_CreateAccount_TheName" "名前"
-"SteamUI_CreateAccount_AlreadyTaken" "は、既に別のSteam ユーザによって登録されています。"
+"SteamUI_CreateAccount_AlreadyTaken" "は、すでに別のSteam ユーザによって登録されています。"
 "SteamUI_CreateAccount_DifferentNames" "「戻る」をクリックして違う名前を入力するか、\n下に示された名前を選択して「次へ」をクリックしてください。"
 "SteamUI_CreateAccount_SuggestedNames" "アカウント名の例："
 "SteamUI_CreateAccount_Names" "名前"
@@ -1076,11 +1076,11 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "SteamUI_SpecialSurvey_Error_InvalidID"	"無効な調査 ID"
 "SteamUI_SpecialSurvey_Error_TryAgain"	"Steamサーバーとの接続に問題が発生しました。後ほど、再度お試しください。"
 "SteamUI_SpecialSurvey_Error_NotOnline"	"この調査に参加するためには、オンラインでなければなりません。"
-"SteamUI_SpecialSurvey_Error_SurveyUnavailable"	"参加しようとした調査は存在しないか、既に終了しています。"
+"SteamUI_SpecialSurvey_Error_SurveyUnavailable"	"参加しようとした調査は存在しないか、すでに終了しています。"
 "SteamUI_SpecialSurvey_Error_Denied"	"この調査に招待されていません。"
-"SteamUI_SpecialSurvey_Error_AlreadyComplete"	"既にこの調査に参加済みです。ご協力ありがとうございました。"
+"SteamUI_SpecialSurvey_Error_AlreadyComplete"	"すでにこの調査に参加済みです。ご協力ありがとうございました。"
 
-"SteamUI_SpecialSurvey_Welcome"			"%surveyname%\n\n調査参加に同意いただき、ありがとうございます。この調査は2部構成です。\n\nまずは、お使いのコンピューターの情報を収集します。本データは匿名ではなく、調査主と共有されます。\n\n次に、追加の統計データを収集する為のWebサイトにお進み頂きます。\n\n開始するには\"次へ\"をクリックしてください。"
+"SteamUI_SpecialSurvey_Welcome"			"%surveyname%\n\n調査参加に同意いただき、ありがとうございます。この調査は2部構成です。\n\nまずは、お使いのコンピューターの情報を収集します。本データは匿名ではなく、調査主と共有されます。\n\n次に、追加の統計データを収集する為のWebサイトにお進み頂きます。\n\n開始するには「次へ」をクリックしてください。"
 "SteamUI_SpecialSurvey_Welcome_No_Web"	"%surveyname%\n\nこの度は調査にご協力いただきありがとうございます。\n\nこの調査ではあなたのマシンに関する情報を収集します。このデータは非匿名なものとして、調査の立案者間で共有されます。\n\n開始するには\"Next\"をクリックしてください。"
 "SteamUI_SpecialSurvey_Welcome_HW_Complete"	"%surveyname%\n\nこの調査に同意いただきましてありがとうございます。\n\n早期段階にてこの調査を開始されたので、このマシンの情報を再び収集する必要が無いようです。 \"終了\"をクリックしてWebページを開き残りの調査を完了してください。"
 "SteamUI_SpecialSurvey_ForwardToWeb"	"パート1において、ハードウェア情報の収集を完了しました。\n\n\"完了\"をクリックしてパート2のためのWebページを開いてください。この調査はパート2の完了まで行って初めて完結します。"
@@ -1098,7 +1098,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 
 "Steam_CreditCardEncrypted"	"クレジットカード情報は、送受信の際暗号化されます。"
 
-"SteamUI_AccountNameInUse" "アカウント作成に失敗しました。\nそのアカウント名は既に使われています。\n別のアカウント名を使用してください。"
+"SteamUI_AccountNameInUse" "アカウント作成に失敗しました。\nそのアカウント名はすでに使われています。\n別のアカウント名を使用してください。"
 "Steam_ErrorValidEmailRequired" "有効なメールアドレスが必要です。"
 "Steam_ForgottenPassword_CouldNotFindEmail" "アカウントが見つかりませんでした。\nログインに使用する Steam アカウント名を入力してください。"
 "SteamUI_CreateAccountFailedPasswordIllegal" "アカウントを作成できませんでした。\nご指定のパスワードの複雑さは十分ではありません。もう一度選んでください。"
@@ -1131,7 +1131,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "SteamUI_ForgottenPasswordSentEmailCDKey" "入力された製品コードの所有者宛てに、メールを送信しました。 メールの受信が確認できたら［アカウント情報を再取得］ボタンをクリックしてパスワードを再設定してください。"
 "Steam_ForgottenPassword_RequestFailed" "実行できませんでした。 もう一度お試しください。"
 
-"Steam_CreateNewAccount_EmailAddrAlreadyInUse" "ご入力いただいたメールアドレスは、すでに他の Steam アカウントで使用されています。 既に Steam アカウントをお持ちの場合は、新しく作成する前に既存のアカウントをご利用ください。"
+"Steam_CreateNewAccount_EmailAddrAlreadyInUse" "ご入力いただいたメールアドレスは、すでに他の Steam アカウントで使用されています。 すでに Steam アカウントをお持ちの場合は、新しく作成する前に既存のアカウントをご利用ください。"
 
 "Steam_CreateNewAccount_AccountsFAQ" "Steam アカウントに関するよくある質問"
 "Steam_CreateNewAccount_CDFAQ" "Steam CD キーに関するよくある質問"
@@ -1152,7 +1152,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_SubscriptionApprovalCode" "認証"
 "Steam_SubscriptionConfirmation" "確認コード"
 
-"Steam_TroubleshooterURL_CDKey" "http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=276"
+"Steam_TroubleshooterURL_CDKey" "https://support.steampowered.com/kb/1968-HKLX-7538/"
 
 "Steam_SubscriptionSuccess_CDKey_Headline" "有効になりました!"
 "Steam_SubscriptionSuccess_CDKey" "%subscription%製品コードが有効化され、あなたの Steam アカウントに永久に登録されました。登録されたアカウントにログインすると、たった今登録したゲームにアクセスできます。\n\nアカウント情報を記録/保管するために、このトランザクションの領収書を印刷しておきましょう。"
@@ -1220,12 +1220,12 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_Subscription_Refunded" "%subscription%の購入料金は返金されました。 この内容は数営業日以内にアカウントで確認できます。"
 
 "Steam_Subscription_HardwarePromo_Used_Headline" "登録情報の重複"
-"Steam_Subscription_HardwarePromo_Used" "この製品は、別の Steam アカウントで既に有効化されています。"
+"Steam_Subscription_HardwarePromo_Used" "この製品は、別の Steam アカウントですでに有効化されています。"
 "Steam_PurchaseError_HardwarePromoIneligible" "このコンピューターは、%subscription%に必要なシステム要件を満たしていません。"
-"Steam_HardwarePromo_SupportURL" "http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=628"
+"Steam_HardwarePromo_SupportURL" "https://support.steampowered.com/kb/2734-UDFX-1098/"
 
-"Steam_Subscription_HardwarePromo_AlreadyPurchased_Headline" "既に持っています"
-"Steam_Subscription_HardwarePromo_AlreadyPurchased" "この Steam アカウントには、この製品に含まれるゲームが既にあります。\nゲームライブラリからアクセスしてください。"
+"Steam_Subscription_HardwarePromo_AlreadyPurchased_Headline" "すでに持っています"
+"Steam_Subscription_HardwarePromo_AlreadyPurchased" "この Steam アカウントには、この製品に含まれるゲームがすでにあります。\nゲームライブラリからアクセスしてください。"
 
 
 "Steam_PurchaseError_HardwarePromoNeedDirectX" "申し訳ございません。 %subscription%に必要な条件を満たすにはDirectX 9以上が必要です。"
@@ -1250,8 +1250,8 @@ Steam にアクセスするには、このアイコンを右クリックして�
 
 "Steam_Rejected_Cdkey_Recover_Feedback" "入力された製品コードの所有者宛てに、メールを送信しました。"
 
-"Steam_Receipt_AlreadyPurchased" "この Steam アカウントはそのコードで登録済みの製品を既に所有しています。[次へ]をクリックしてインストールに進んでください。"
-"Steam_Receipt_AlreadyPurchased_Headline" "既に所有している製品"
+"Steam_Receipt_AlreadyPurchased" "この Steam アカウントはそのコードで登録済みの製品をすでに所有しています。[次へ]をクリックしてインストールに進んでください。"
+"Steam_Receipt_AlreadyPurchased_Headline" "すでに所有している製品"
 
 "Steam_InstallAppWizard_Title"	"%game%のインストール"
 "Steam_InstallAppWizard_RestoreBackup_Title"	"バックアップを復元 - %game%"
@@ -1272,12 +1272,12 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_RedeemWalletVoucher"	"Steam ウォレットコードを有効化する..."
 "Steam_Wallet_PendingBalance" "%amount% (%amount_delayed% pending)"
 
-"Steam_PurchaseError_SubscriptionAlreadyOwned"	"%subscription%は既に持っています。"
+"Steam_PurchaseError_SubscriptionAlreadyOwned"	"%subscription%はすでに持っています。"
 "Steam_UpdateNews_Title"	"Steam - ニュース"
 "Steam_SettingsNotification_Info"	"次の項目に追加や変更があったら、通知する（Steam インスタントメッセージ使用）"
 "Steam_SettingsNotification_MyGames"	"マイゲーム"
 "Steam_SettingsNotification_UpcomingReleases"	"新作情報"
-"Steam_PurchaseError_HardwarePromoAlreadyOwned" "この Stream アカウントを使用して既に%subscription% 製品が有効化されています。"
+"Steam_PurchaseError_HardwarePromoAlreadyOwned" "この Stream アカウントを使用してすでに%subscription% 製品が有効化されています。"
 
 "Steam_GamesDialog_RightClick_UpdateNews"	"ニュースを表示"
 
@@ -1494,7 +1494,8 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_DutyNote"	"特典グッズは米国から発送されます。 購入の際に課される税は、お客様の負担となります。"
 
 "Steam_AgreeToTheTerms"		"Steam利用契約の"
-"Steam_SteamSubscriberAgreement"	"利用契約に同意します"
+"Steam_SteamSubscriberAgreement"	    "利用契約に同意します"
+"Steam_SteamSubscriberAgreement_china"	"Steam Chinaライセンス規約"
 "Steam_ComplianceRequired_Title"	"Steam - 注意"
 "Steam_ComplianceRequired_Info"		"先に進むにはSteam利用契約に同意する必要があります。"
 
@@ -1613,9 +1614,10 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_ConnectionFailureTitle"	"接続失敗"
 "Steam_ConnectionFailureDetail"	"Steamがネットワークに接続できません。 インターネット接続の問題が原因となっている可能性があります。"
 "Steam_ConnectionSupportLink"	"接続のトラブルシューティング"
-"Steam_ConnectionSupportURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=11"
+"Steam_ConnectionSupportURL"	"https://support.steampowered.com/kb/1456-EUDN-2493/"
 
 "SteamUI_NetworkTroubleshootingTips"	"ネットワークトラブル解決のヒント"
+"SteamUI_NetworkTroubleshootingTips_URL"	"https://support.steampowered.com/kb_article.php?ref=1456-EUDN-2493"
 
 
 "SteamUI_SSA_Agree"				"この利用規約を最後まで読んでください。 先に進むにはSteam利用契約にご同意いただく必要があります。"
@@ -1679,6 +1681,16 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "steam_menu_downloads"	"ダウンロード"
 "steam_menu_account"	"Steam"
 "steam_menu_window" "ウィンドウ"
+"steam_menu_preferences"	"個人設定..."
+"steam_menu_services"	"サービス"
+"steam_menu_hidesteam"	"Steamを非表示"
+"steam_menu_hideothers"	"その他を非表示"
+"steam_menu_showall"	"全て表示"
+"steam_menu_quitsteam"	"Steamを終了"
+"steam_menu_window_close"	"閉じる"
+"steam_menu_window_minimize"	"最小化"
+"steam_menu_window_zoom"	"ズーム"
+"steam_menu_window_bringalltofront"	"全てを前面に移動"
 "steam_menu_games_details"	"ゲーム詳細"
 "steam_menu_games_list"		"ゲームリスト"
 "steam_menu_games_grid"		"ゲームグリッド"
@@ -1810,7 +1822,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_PublishFile_Success"		"現時点でファイルが投稿されたことにご留意ください。新規の如何なる変更を共有するには再度公開する必要があります。同じタイトルを使用すれば、このファイルをフォローしているユーザーに対しては自動で新規のバージョンが提供されます。"
 "Steam_PublishFile_Progress"  "Steam コミュニティにファイルを公開中..."
 "Steam_PublishFile_Failed"		"Steam コミュニティにファイルを公開中に問題が発生しました。後ほど、もう一度お試しください。"
-"Steam_PublishFile_Failed_DuplicateName"	"指定されたファイル名は既に存在しています。別のタイトルをつけるか、公開オプションの「上書き」にチェックを入れてください。"
+"Steam_PublishFile_Failed_DuplicateName"	"指定されたファイル名はすでに存在しています。別のタイトルをつけるか、公開オプションの「上書き」にチェックを入れてください。"
 "Steam_PublishFile_Failed_AccessDenied"		"自身が所有していないプログラムに対するファイルを公開することはできません。ファイルを公開する前にこの製品をご購入ください。"
 "Steam_PublishFile_Failed_SyncError"	"Steam クラウドにファイルをアップデートする際、同期誤差が発生しました。再試行する前に、 ローカルコピーとSteam クラウドに保存されたコピーとの不一致を解決する必要があります。"
 
@@ -2139,7 +2151,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_HiDefPack_Title"				"Half-Lifeハイデフパック - Steam"
 "Steam_HiDefPack_Installed"			"Half-Lifeハイデフパックが有効になりました。\nHalf-Lifeを起動しますか?"
 "Steam_HiDefPack_Removed"			"Half-Lifeハイデフパックが無効になりました。"
-"Steam_HiDefPack_AlreadyInstalled"	"Half-Lifeハイデフパックは既に有効になっています。"
+"Steam_HiDefPack_AlreadyInstalled"	"Half-Lifeハイデフパックはすでに有効になっています。"
 "Steam_HiDefPack_AlreadyRemoved"		"Half-Lifeハイデフパックが有効になっていません。"
 "Steam_HiDefPack_LaunchHalfLifeNow"	"Half-Lifeを起動"
 
@@ -2289,10 +2301,10 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_FindContent$appType=music"			"サウンドトラックを閲覧..."
 "Steam_FindContent$appType=tool"			"ツールを閲覧..."
 
-"Steam_NoGamesOfThisType$appType=application"	"該当なし！検索フィールドをクリアするか、上のドロップダウンから別のカテゴリを選んでください。"
-"Steam_NoGamesOfThisType$appType=game"	"ヒット件数はゼロです！検索フィールドをクリアにするか、上のドロップダウンより別のカテゴリを選択してください。"
-"Steam_NoGamesOfThisTypeFiltered"	"ヒット件数はゼロです！検索フィールドをクリアにするか、上のドロップダウンより別のカテゴリを選択してください。"
-"Steam_NoGamesOfThisType"	"ヒット件数はゼロです！検索フィールドをクリアにするか、上のドロップダウンより別のカテゴリを選択してください。"
+"Steam_NoGamesOfThisType$appType=application"	"該当なし！検索フィールドをクリアするか、上のドロップダウンから別のカテゴリーを選んでください。"
+"Steam_NoGamesOfThisType$appType=game"	"ヒット件数はゼロです！検索フィールドをクリアにするか、上のドロップダウンより別のカテゴリーを選択してください。"
+"Steam_NoGamesOfThisTypeFiltered"	"ヒット件数はゼロです！検索フィールドをクリアにするか、上のドロップダウンより別のカテゴリーを選択してください。"
+"Steam_NoGamesOfThisType"	"ヒット件数はゼロです！検索フィールドをクリアにするか、上のドロップダウンより別のカテゴリーを選択してください。"
 "Steam_NoGamesOfThisType$appType=media"	"ヒット件数はゼロです！検索フィールドを変更するか、Steam ストア内で<a href=steam://browsemedia>閲覧可能なムービー</a>をご覧ください。"
 "Steam_NoGamesOfThisType$appType=music"	"ヒット件数はゼロです！検索条件を消去するか、上のドロップダウンから別のカテゴリーを選択してください。"
 "Steam_NoGamesOfThisType$appType=tool"	"ヒット数はゼロです！上の検索フィールドを変更してみてください。"
@@ -2376,23 +2388,23 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_BackupSize_Custom"				"カスタム..."
 
 "Steam_BackupFileAlreadyExists_Title"		"Steam - バックアップ"
-"Steam_BackupFileAlreadyExists_Info"		"Steamバックアップファイルを作成できません：\n\n%path%\n\n同じ名前のディレクトリが既に存在します。"
+"Steam_BackupFileAlreadyExists_Info"		"Steamバックアップファイルを作成できません：\n\n%path%\n\n同じ名前のディレクトリがすでに存在します。"
 
 "Steam_Games"								"ゲーム"
 
 "Steam_RegionRestricted_Title"			"Steam - プレイできません"
 "Steam_RegionRestrictedPurchase_Info"				"このゲームの有効化に使用されている製品コードは、特定の地域でのみ有効です。 お住まいの地域は対象外であるため、%game%を起動することができません。"
 "Steam_RegionRestricted_SupportLink"		"Steam サポートサイトにて詳細をご覧いただけます"
-"Steam_RegionRestrictedPurchase_SupportURL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=461"
+"Steam_RegionRestrictedPurchase_SupportURL"		"https://support.steampowered.com/kb/1266-QFZC-2141/"
 "Steam_RegionRestricted_Info"				"あなたの地域では%game%をプレイできません。"
-"Steam_RegionRestricted_SupportURL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=461"
+"Steam_RegionRestricted_SupportURL"		"https://support.steampowered.com/kb/1266-QFZC-2141/"
 
 "Steam_CountryRestricted_Info"				"あなたの国ではこちらを購入できません。"
-"Steam_CountryRestricted_SupportURL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=488"
+"Steam_CountryRestricted_SupportURL"		"https://support.steampowered.com/kb/1266-QFZC-2141/"
 
 "Steam_RegionRestrictedCode_Title"		"Steam - 製品利用不可"
 "Steam_RegionRestrictedCode_Info"			"お住まいの地域ではこの製品コードを有効化できません。"
-"Steam_RegionRestrictedCode_SupportURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=463"
+"Steam_RegionRestrictedCode_SupportURL"	"https://support.steampowered.com/kb/1266-QFZC-2141/"
 
 "Steam_FragmentationBad_Title"			"Steam - ディスク断片化の警告"
 "Steam_FragmentationBad_Info"				"ハードディスクのゲームファイルがかなり断片化されています。 そのため、ロード時間が長くなったり、ゲームのパフォーマンスが低下する場合があります。  \n\nSteamではゲームファイルを最適化することができます。\n"
@@ -2678,7 +2690,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_HL2Russian_Title"			"Half-Life 2ロシアパック - Steam"
 "Steam_HL2Russian_Installed"			"Half-Life 2ロシアパックが有効になりました。\nHalf-Life 2を起動しますか?"
 "Steam_HL2Russian_Removed"			"Half-Life 2ロシアパックが無効になりました。"
-"Steam_HL2Russian_AlreadyInstalled"	"Half-Life 2ロシアパックは既に有効になっています。"
+"Steam_HL2Russian_AlreadyInstalled"	"Half-Life 2ロシアパックはすでに有効になっています。"
 "Steam_HL2Russian_AlreadyRemoved"		"Half-Life 2ロシアパックが有効になっていません。"
 "Steam_HL2Russian_LaunchHalfLifeNow"	"Half-Life 2を起動"
 
@@ -2741,8 +2753,8 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_SendGuestPass_DuplicateNameErrorHeadline$type=guestpass"	"ゲストパスを自分自身に送信することはできません"
 "Steam_SendGuestPass_DuplicateNameError$type=guestpass"	"パスを自分自身に送信しようとしているようです。 ゲストパスは、自分のゲームをフレンドと共有するためのものです。 %package%を無料で一緒にプレイする他のプレイヤーを招待してみてください。"
 
-"Steam_SendGuestPass_PendingErrorHeadline$type=guestpass" "ゲストパスは既に送信されました"
-"Steam_SendGuestPass_PendingError$type=guestpass"	"%search%には24時間以内に既にゲストパスを送信しました。 24時間経過した後でないと、このアドレスにゲストパスを再び送信することはできません。\n\n別の受信者を指定するには［戻る］をクリックしてください。"
+"Steam_SendGuestPass_PendingErrorHeadline$type=guestpass" "ゲストパスはすでに送信されました"
+"Steam_SendGuestPass_PendingError$type=guestpass"	"%search%には24時間以内にすでにゲストパスを送信しました。 24時間経過した後でないと、このアドレスにゲストパスを再び送信することはできません。\n\n別の受信者を指定するには［戻る］をクリックしてください。"
 
 "Steam_SendGuestPass_InvitingFriendHeadline$type=guestpass" "ゲストパスを送信中..."
 "Steam_SendGuestPass_InvitingFriend$type=guestpass"	"%search%にゲストパスを送信しています。\nお待ちください..."
@@ -2753,9 +2765,9 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_GuestPassAccept_TitleFailed$type=guestpass"	"ゲストパス受け入れ失敗"
 
 "Steam_GuestPassAccept_HeadlineFailed$type=guestpass"	"無効なゲストパス"
-"Steam_GuestPassAccept_TextFailed$type=guestpass"	"受け入れようとしているゲストパスはもう有効ではありません。 このパスは、他のユーザーが既に使用しているか、有効期限が切れたか、または送信者により失効された可能性があります。"
+"Steam_GuestPassAccept_TextFailed$type=guestpass"	"受け入れようとしているゲストパスはもう有効ではありません。 このパスは、他のユーザーがすでに使用しているか、有効期限が切れたか、または送信者により失効された可能性があります。"
 
-"Steam_GuestPassAccept_HeadlineAlreadyRedeemed"	"このゲストパスは既に有効化されています"
+"Steam_GuestPassAccept_HeadlineAlreadyRedeemed"	"このゲストパスはすでに有効化されています"
 "Steam_GuestPassAccept_TextAlreadyRedeemed"	"パスの有効期限が切れた後、さらに%package%のプレイを続けたい場合は、購入を検討してください。"
 "Steam_GuestPassAccept_LinkTextAlreadyRedeemed"	"Steamショップにアクセスするにはここをクリックしてください。"
 "Steam_GuestPassAccept_LinkURLAlreadyRedeemed"	"steam://store"
@@ -2763,7 +2775,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_GuestPassAccept_HeadlineServiceUnavailable$type=guestpass"	"ゲストパス受け入れ失敗"
 "Steam_GuestPassAccept_TextServiceUnavailable"	"現在、お使いのコンピューターでSteamサーバーにアクセスできないか、またはサービスが一時的に無効になっている可能性があります。 しばらく待ってから、もう一度お試しください。"
 "Steam_GuestPassAccept_LinkTextServiceUnavailable" 	"ギフトのトラブルシューティングについては、次のサポートページをご覧ください。"
-"Steam_GuestPassAccept_LinkURLServiceUnavailable"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=550"
+"Steam_GuestPassAccept_LinkURLServiceUnavailable"	"https://support.steampowered.com/kb/6262-QXCN-0755/"
 
 "Steam_GuestPassAccept_HeadlineRevoked$type=guestpass"	"このゲストパスは失効されました"
 "Steam_GuestPassAccept_TextRevoked$type=guestpass"	"このゲストパスをあなたに送信したフレンドは、このパスを失効させ、新しいコードを再送信しました。 新しいパスがあなたに送信された場合は、更新されたコードが記載された別のメールを受信することになります。"
@@ -2777,20 +2789,20 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_GuestPassRedeemed_TitleFailed$type=guestpass"	"ゲストパス有効化失敗"
 
 "Steam_GuestPassRedeemed_HeadlineFailed$type=guestpass"	"無効なゲストパス"
-"Steam_GuestPassRedeemed_TextFailed$type=guestpass"	"使用しようとしているゲストパスはもう有効ではありません。 このパスは、他のユーザーが既に使用しているか、有効期限が切れたか、または送信者により失効された可能性があります。"
+"Steam_GuestPassRedeemed_TextFailed$type=guestpass"	"使用しようとしているゲストパスはもう有効ではありません。 このパスは、他のユーザーがすでに使用しているか、有効期限が切れたか、または送信者により失効された可能性があります。"
 
 "Steam_GuestPassRedeemed_HeadlineServiceUnavailable$type=guestpass"	"ゲストパス有効化失敗"
 "Steam_GuestPassRedeemed_TextServiceUnavailable"	"現在、お使いのコンピューターでSteamサーバーにアクセスできないか、またはサービスが一時的に無効になっている可能性があります。しばらく待ってから、もう一度お試しください。"
 "Steam_GuestPassRedeemed_LinkTextServiceUnavailable"	"ゲストパスのトラブルシューティングについては、次のサポートページをご覧ください。"
-"Steam_GuestPassRedeemed_LinkURLServiceUnavailable"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=550"
+"Steam_GuestPassRedeemed_LinkURLServiceUnavailable"	"https://support.steampowered.com/kb/6262-QXCN-0755/"
 
-"Steam_GuestPassRedeemed_HeadlineLimitExceeded"	"この製品のゲストパスは既に使用しています"
-"Steam_GuestPassRedeemed_TextLimitExceeded"	"%package%のゲストパスは既に受け入れているため、別のパスを受け入れることはできません。 さらにゲームのプレイを続けたい場合は、購入を検討してください。"
+"Steam_GuestPassRedeemed_HeadlineLimitExceeded"	"この製品のゲストパスはすでに使用しています"
+"Steam_GuestPassRedeemed_TextLimitExceeded"	"%package%のゲストパスはすでに受け入れているため、別のパスを受け入れることはできません。 さらにゲームのプレイを続けたい場合は、購入を検討してください。"
 "Steam_GuestPassRedeemed_LinkTextLimitExceeded"	"Steamショップにアクセスするにはここをクリックしてください。"
 "Steam_GuestPassRedeemed_LinkURLLimitExceeded"	"steam://store"
 
-"Steam_GuestPassRedeemed_HeadlineAlreadyOwned$type=guestpass"	"このゲームの完全版は既に持っています"
-"Steam_GuestPassRedeemed_TextAlreadyOwned$type=guestpass"	"%package%の完全版を既に持っているため、このゲームのゲストパスを受け入れることはできません。 完全版をプレイするには、インストールしてゲームライブラリから起動してください。"
+"Steam_GuestPassRedeemed_HeadlineAlreadyOwned$type=guestpass"	"このゲームの完全版をすでに持っています"
+"Steam_GuestPassRedeemed_TextAlreadyOwned$type=guestpass"	"%package%の完全版をすでに持っているため、このゲームのゲストパスを受け入れることはできません。 完全版をプレイするには、インストールしてゲームライブラリから起動してください。"
 
 "Steam_GuestPassRedeemed_HeadlineMustOwnApp$type=guestpass"	"このゲストパスには追加の用件があります"
 "Steam_GuestPassRedeemed_TextMustOwnApp$type=guestpass"	"%package% のゲストパスを有効化するには、 %appname% を所持していなければなりません。 先に所持してから、再度ゲストパスを有効化してください。"
@@ -2860,8 +2872,6 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_SubscriptionCancelled_PuchaseDeclined_ContactProvider"	"%subscription%の購入手続きが完了しませんでした。\n\n%provider%の報告によると、あなたの%provider%アカウントに問題があります。 %provider%に連絡するか、または［戻る］をクリックして別のお支払い方法を選択してください。"
 "Steam_SubscriptionCancelled_PuchaseDeclined_AcctNotVerified"	"%subscription%の購入手続きが完了しませんでした。\n\n%provider%の報告によると、購入を完了するには、あなたの%provider%アカウントを確認するか、またはアカウントに資金を入れる必要があります。 %provider%に連絡するか、または［戻る］をクリックして別のお支払い方法を選択してください。"
 
-"Steam_TroubleshooterURL_VfyAcct" "http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=687"
-
 "Steam_PaymentMethodNotAvailable_Generic" "申し訳ございませんが、この支払い方法は現在ご利用いただけません。"
 
 "Steam_LaunchEULA_Title"			"%game%"
@@ -2871,11 +2881,12 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_LaunchEULA_Text"			"この利用規約を最後まで読んでください。 %game%をプレイするには、EULAに記載されている条件に同意する必要があります。"
 
 "Steam_GuestPasses_LinkText"		"ギフトとゲストパスの詳細はこちらを参照してください。"
-"Steam_GuestPasses_LinkURL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=549"
+"Steam_GuestPasses_LinkURL"		"https://support.steampowered.com/kb/6262-QXCN-0755/"
 
 "Steam_AlreadyRunningError_Title"			"Steam - 起動できません"
-"Steam_AlreadyRunningError_Info"			"このコンピューターでは、既にSteamが別のユーザーアカウントで実行されています。再起動する前に、別のユーザーアカウントのSteamを終了してください。"
+"Steam_AlreadyRunningError_Info"			"このコンピューターでは、すでにSteamが別のユーザーアカウントで実行されています。再起動する前に、別のユーザーアカウントのSteamを終了してください。"
 "Steam_AlreadyRunningError_SupportLink"	"Steam サポートサイトにて詳細をご覧いただけます"
+"Steam_AlreadyRunningError_SupportLink_URL"	"http://support.steampowered.com/kb_article.php?ref=8787-WYIL-1543"
 "Steam_AlreadyRunningError_SupportTicket"	"できるだけ早くSteam サポートにご連絡くださいませ"
 
 "Steam_LoggedInElsewhere_Title"		"Steam - 別の場所でログインしています"
@@ -2907,11 +2918,12 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_GamesDialog_RightClick_RemoveFromUnblockedGames"		"ファミリーゲームから削除"
 
 "steam_menu_checkforupdates"						"Steamクライアントのアップデートをチェック..."
+"steam_menu_checkforupdates_osx"					"アップデートの確認..."
 "steam_checkforupdates_title"						"Steam - 自動アップデートプログラム"
 "steam_ClientUpdateAvailableDownloading"			"Steamクライアントアップデートを取得できます。現在ダウンロード中です。"
 "steam_ClientUpdateAvailableDownloaded"			"Steamクライアントアップデートがダウンロードされました。"
 "steam_ClientUpdateAvailableDownloadedInfo"		"今すぐSteamを再起動してアップデートを適用しますか?"
-"Steam_NoClientUpdateAvailable"					"Steam クライアントは既に最新の状態です。"
+"Steam_NoClientUpdateAvailable"					"Steam クライアントはすでに最新の状態です。"
 "Steam_NotEnoughDiskSpaceCheckingForUpdates"		"Steamでアップデートをチェックし、適用するにはディスクの空き容量が足りません。"
 "Steam_ClientUpdateSuppressed"						"Steamクライアントのアップデートは、コマンドラインスイッチまたは設定ファイルによって無効にされています。ブロックを解除してクライアントを再起動し、再度お試しください。"
 
@@ -3159,7 +3171,7 @@ Betaが終了しました。Steamを再起動し、現在のバージョンに�
 "Steam_GuestPassAccept_TitleFailed$type=gift"	"ギフトの受け取り失敗"
 
 "Steam_GuestPassAccept_HeadlineFailed$type=gift"	"無効なギフト"
-"Steam_GuestPassAccept_TextFailed$type=gift"	"受け取ろうとしているギフトは有効ではありません。 このパスは、他のユーザーが既に使用しているか、有効期限が切れたか、または送信者により失効された可能性があります。"
+"Steam_GuestPassAccept_TextFailed$type=gift"	"受け取ろうとしているギフトは有効ではありません。 このパスは、他のユーザーがすでに使用しているか、有効期限が切れたか、または送信者により失効された可能性があります。"
 
 "Steam_GuestPassAccept_HeadlineServiceUnavailable$type=gift"	"ギフトの受け取り失敗"
 
@@ -3176,8 +3188,8 @@ Betaが終了しました。Steamを再起動し、現在のバージョンに�
 
 "Steam_GuestPassRedeemed_HeadlineServiceUnavailable$type=gift"	"ギフト有効化失敗"
 
-"Steam_GuestPassRedeemed_HeadlineAlreadyOwned$type=gift"	"既にこのゲームの完全版を持っています"
-"Steam_GuestPassRedeemed_TextAlreadyOwned$type=gift"	"%package%の完全版を既に持っているため、このギフトを受け取ることはできません。 ゲームをプレイするには、インストールしてゲームライブラリから起動してください。"
+"Steam_GuestPassRedeemed_HeadlineAlreadyOwned$type=gift"	"すでにこのゲームの完全版を持っています"
+"Steam_GuestPassRedeemed_TextAlreadyOwned$type=gift"	"%package%の完全版をすでに持っているため、このギフトを受け取ることはできません。 ゲームをプレイするには、インストールしてゲームライブラリから起動してください。"
 
 "Steam_GuestPassRedeemed_HeadlineMustOwnApp$type=gift"	"このゲストパスには追加の要件があります"
 "Steam_GuestPassRedeemed_TextMustOwnApp$type=gift"		"%package% のギフトを受け取るためには、 %appname% を所持していなければなりません。  先に所持してから、再度ギフトを受け取ってください。"
@@ -3222,7 +3234,7 @@ Betaが終了しました。Steamを再起動し、現在のバージョンに�
 "Steam_Gift_Sentiment_YouOweMe"		"これ、貸しだからね!"
 "Steam_Gift_Sentiment_YourTurn"		"お返し待ってるよ!"
 "Steam_Gift_Sentiment_XOXOXO"		"愛をこめて"
-"Steam_Purchase_Gift_AlreadyOwn"	"このアイテムはお使いのSteamアカウントで既に有効です。 プレイ可能なゲームへは、Steamのゲームライブラリからアクセスできます。"
+"Steam_Purchase_Gift_AlreadyOwn"	"このアイテムはお使いのSteamアカウントですでに有効です。 プレイ可能なゲームへは、Steamのゲームライブラリからアクセスできます。"
 "Steam_SendGuestPass_RecipientQuestion$type=gift" "「%package%」を誰に贈りますか?"
 
 "Steam_SendGuestPass_RecipientQuestion$type=guestpass" "「%package%」のゲストパスを誰に送信しますか?"
@@ -3239,7 +3251,7 @@ Betaが終了しました。Steamを再起動し、現在のバージョンに�
 
 "Steam_PurchaseReview_IsGift"		"ギフト："
 "Steam_SendGuestPass_GiftMsgExplanation" 	"ギフトに添えるメッセージを入力してください。"
-"Steam_SendGuestPass_AlreadyOwnsGame"		"%s1さんはこのゲームを既に持っています"
+"Steam_SendGuestPass_AlreadyOwnsGame"		"%s1さんはこのゲームをすでに持っています"
 
 "Steam_GiftRevoked_Title"			"Steam - ギフトは失効しました"
 "Steam_GiftRevoked"					"%gifter%からのギフト%package%は、アイテムの支払いプロセスで問題が発生したため失効しました。\n\nこのため、ギフトに関連付けられていたゲームはプレイ不可となります。このアイテムの購入を希望される場合は、Steamストアにアクセスしてください。 購入を希望されない場合は、対象ゲームに関連するローカルコンテンツを削除することもできます。"
@@ -3254,9 +3266,9 @@ Betaが終了しました。Steamを再起動し、現在のバージョンに�
 "Steam_ExternalSignupPropertiesLabel"	"有効な%game%アカウントが必要です"
 "Steam_ExternalSignupPropertiesButton" "%game%アカウントWebサイトにアクセス"
 
-"Steam_GameAlreadyInAccount" "ゲームは既にアカウントに存在します"
-"Steam_FullGameAlreadyInAccount" "ゲームの完全版は既にアカウントに存在します"
-"Steam_AlreadyInAccountInfo" "お客様は既にすべてのゲームを所有しています。 所有しているゲームはSteamのゲームライブラリからプレイできます。"
+"Steam_GameAlreadyInAccount" "ゲームはすでにアカウントに存在します"
+"Steam_FullGameAlreadyInAccount" "ゲームの完全版はすでにアカウントに存在します"
+"Steam_AlreadyInAccountInfo" "お客様はすでにすべてのゲームを所有しています。 所有しているゲームはSteamのゲームライブラリからプレイできます。"
 "SteamUI_OldClient_Title" "Steamが最新バージョンではありません"
 "SteamUI_OldClient" "このゲームを起動するには、クライアントをアップデートする必要があります。"
 
@@ -3285,7 +3297,7 @@ Betaが終了しました。Steamを再起動し、現在のバージョンに�
 "Steam_ModNeedsFullGame_Button"	"詳細を表示"
 
 "Steam_AccountEmail_Title"		"Steamアカウント情報"
-"Steam_AccountEmail_Info"		"この情報は、印刷して保管しておくことをお奨めします。 Steamアカウント/ログイン情報は、今後ゲームをプレイしたりSteamの機能を利用したりする際に毎回必要になる重要な情報です。"
+"Steam_AccountEmail_Info"		"この情報は、印刷して保管しておくことをお奨めします。Steamアカウント／ログイン情報は、今後ゲームをプレイしたりSteamの機能を利用したりする際に毎回必要になる重要な情報です。"
 "Steam_AccountEmail_AccountName" "アカウント名："
 "Steam_AccountEmail_Password"	"パスワード："
 "Steam_AccountEmail_Email"		"連絡用メールアドレス："
@@ -3350,7 +3362,7 @@ Betaが終了しました。Steamを再起動し、現在のバージョンに�
 "Steam_InstallAborted_InfoAppNoDemo"		"すでに完全版を持っているので、%game% の体験版はインストールできません。ゲームの完全版をインストールしてください。"
 
 "Steam_Startup_SteamChinaRequiredTitle"					"Steam Chinaが必要です"
-"Steam_Startup_GetSteamChina"						"%gamename%が、Steam Chinaで利用可能になりました。ゲームのクライアントをインストールするには、以下のリンクに従ってください。"
+"Steam_Startup_GetSteamChina"						"%gamename%は、新しいSteam Chinaクライアントから起動する必要があります。\n\n%gamename%ゲームアカウントでログインして、ゲームの進捗状況、アイテム、キャラクターレベル、ポイントを移行できます。\n\n"
 "Steam_Startup_RunSteamChina"						"%gamename%が、Steam Chinaで利用可能になりました。インポートするにはSteam Chinaを起動してください。"
 "Steam_Startup_SteamChinaImportedUninstall"			"%gamename%がSteam Chinaにインポートされました。これで、このランチャーを安全にアンインストールできます。"
 "Steam_Startup_LauncherDeprecated"					"%gamename%は、Steam China経由で起動します。このインストールはサポートされないため終了します。"
@@ -3358,6 +3370,7 @@ Betaが終了しました。Steamを再起動し、現在のバージョンに�
 "Steam_Startup_ImportGameFromLauncherMsg"			"Steam Chinaに%gamename%をインポートしますか？レガシーランチャーを安全にアンインストールできるようになります。"
 
 "Steam_Download_SteamChina"							"Steam Chinaをダウンロード"
+"Steam_Get_SteamChina"								"Steam Chinaを今すぐ入手"
 
 "Steam_ValidateGame_GameRunning"	"実行中のゲームまたはツールを終了してから、ローカルファイルの確認処理を開始してください。"
 
@@ -3366,8 +3379,8 @@ Betaが終了しました。Steamを再起動し、現在のバージョンに�
 "Steam_LibrariesLabel"	"コンテンツライブラリ"
 "Steam_DownloadRestrictionsLabel"	"ダウンロード制限"
 
-"Steam_ServerBrowserPingRateLabel"	"ゲーム内サーバーブラウザー: 最高ping数 / 分"
-"Steam_ServerBrowserPingRateInfo"	"ゲームサーバーを閲覧する際にインターネット接続に問題が発生する場合は、この値を小さくして下さい。"
+"Steam_ServerBrowserPingRateLabel"	"サーバーブラウザー ping数 / 分"
+"Steam_ServerBrowserPingRateInfo"	"ゲームサーバーを閲覧する際にインターネット接続に問題が発生する場合は、この値を小さくしてください。"
 "Steam_ServerBrowserPingRateDefault"	"自動 (%PingsPerMin%)"
 
 "Steam_TextFilterSettingLabel"									"チャットフィルタリング"
@@ -3490,6 +3503,7 @@ Betaが終了しました。Steamを再起動し、現在のバージョンに�
 スペシャルアクセスコードを入力できます。"
 "Steam_RecoverLocked_MustRecover" "どんなEメールメッセージですか? 受け取っていません..."
 "Steam_RecoverLocked_WhyIsThisHappening" "原因は何ですか？"
+"Steam_RecoverLocked_WhyIsThisHappening_URL" "https://support.steampowered.com/kb_article.php?ref=4020-ALZM-5519"
 "Steam_RecoverLocked_EnterCode" "スペシャルアクセスコード:"
 "Steam_RecoverLocked_EnterCodeDetails" "コードが認証されると、SteamガードはこのコンピューターをあなたのSteamアカウントにアクセスする許可のあるコンピューターのリストに加えます。"
 "Steam_RecoverLocked_WrongCode" "申し訳ありませんが、 コードが正しくありません。"
@@ -3503,7 +3517,9 @@ Betaが終了しました。Steamを再起動し、現在のバージョンに�
 "Steam_RecoverLocked_StartRecovery2" "我々はあなたの Steam アカウントの重要性を理解しており、そして、あなたが再びアカウントにアクセスする事ができるよう、全力でサポートすることを約束します。"
 "Steam_RecoverLocked_StartRecovery3" "お手数ですが、Steam サポートにお問い合わせください。正当なアカウントアクセスに関するサポートは、最優先事項として対応いたします。"
 "Steam_RecoverLocked_RecoverySupportLink" "Steam サポートに連絡する"
+"Steam_RecoverLocked_RecoverySupportLink_URL" "https://support.steampowered.com"
 "Steam_RecoverLocked_LearnMore" "Intel® Identity Protection Technologyについてもっと学ぶ"
+"Steam_RecoverLocked_LearnMore_URL" "https://support.steampowered.com/kb_article.php?ref=9400-IPAX-9398&auth=e39b5c227cffc8ae65414aba013e5fef"
 "Steam_RecoverLocked_CannotAccess" "申し訳ございません。このコンピューターをまだ認証していないため、このアカウントではアクセスできません。"
 "Steam_RecoverLocked_Success" "成功!"
 "Steam_RecoverLocked_SuccessDetails" "これで、このコンピューターからあなたのSteamアカウントにアクセスすることが出来るようになりました。SteamガードはこのコンピューターをあなたのSteamアカウントにアクセスする許可のあるコンピューターリストに加えました。"
@@ -3569,13 +3585,13 @@ Betaが終了しました。Steamを再起動し、現在のバージョンに�
 "steam_library_filter_installedgames"	"インストール済み"
 "steam_library_filter_favorites"	"お気に入り"
 "steam_library_filter_installedlocallygames"	"ローカル"
-"steam_library_filter_addtag"	"新しいカテゴリを追加..."
+"steam_library_filter_addtag"	"新しいカテゴリーを追加..."
 "steam_library_filter_owner" "%owner%のゲーム"
 "steam_library_filter_unblocked"		"ファミリーゲーム"
 "steam_library_unknown_owner" "その他のゲーム"
 "steam_library_filter_mygames" "自分のゲーム"
 "steam_library_filter_screenshots"	"スクリーンショット"
-"steam_library_filter_uncategorized"	"カテゴリ未設定"
+"steam_library_filter_uncategorized"	"カテゴリー未設定"
 "steam_library_filter_hidden"	"非表示"
 "steam_library_filter_site" "%site% から"
 
@@ -3742,7 +3758,7 @@ Betaが終了しました。Steamを再起動し、現在のバージョンに�
 
 "steam_community_files"		"ワークショップ"
 "steam_community_files_info"		"コンテンツを作成したり、Steam コミュニティが作成したコンテンツを発見してプレイしよう。"
-"steam_community_files_info_error"		"現在 Steam ワークショップサーバに接続できません。"
+"steam_community_files_info_error"		"現在Steamワークショップサーバーに接続できません。"
 "steam_community_files_view_all"		"ワークショップを閲覧"
 "steam_paginationtext"	"%total%ファイル中%start%-%end%表示中"
 
@@ -3827,7 +3843,6 @@ Betaが終了しました。Steamを再起動し、現在のバージョンに�
 "steam_menu_friends" "フレンド"
 "steam_menu_servers" "サーバー"
 "steam_menu_settings" "設定"
-"steam_menu_preferences" "個人設定"
 "steam_menu_view_friends" "フレンドリストを表示 (オンラインのフレンド:%friends_online%人)"
 "steam_menu_view_players" "プレイヤー"
 "steam_menu_add_friend" "フレンドを追加..."
@@ -3999,7 +4014,7 @@ Betaが終了しました。Steamを再起動し、現在のバージョンに�
 "SteamUI_ContentMgr_NotWritableFolder" "新しい Steam ライブラリフォルダーは書き込み可能である必要があります"
 "SteamUI_ContentMgr_NotExecutableFolder" "新しい Steam ライブラリは、実行権限でマウントされたファイルシステム上にある必要があります。"
 "SteamUI_ContentMgr_NotWhileDownloading" "ダウンロード中は新しいSteamライブラリフォルダーを追加できません"
-"SteamUI_ContentMgr_DriveAlreadyHasLibrary" "選択したドライブにはSteamライブラリフォルダーが既にあります。Steamは複数のゲームのインストールを単一フォルダー内で管理します。"
+"SteamUI_ContentMgr_DriveAlreadyHasLibrary" "選択したドライブにはSteamライブラリフォルダーがすでにあります。Steamは複数のゲームのインストールを単一フォルダー内で管理します。"
 "SteamUI_ContentMgr_FailedToAdd" "新しいSteamライブラリフォルダーの追加に失敗しました"
 "SteamUI_ContentMgr_UninstallApp" "アプリケーションをアンインストール"
 "SteamUI_ContentMgr_Refresh" "更新"
@@ -4033,7 +4048,7 @@ Betaが終了しました。Steamを再起動し、現在のバージョンに�
 "Steam_MoveAppFolder_Info" "%game% はライブラリフォルダー「%folder%」の下にインストールされます。"
 "Steam_MoveAppFolder_Success" "%numfiles%個のファイルを新しいライブラリフォルダーへ移動しました。"
 "Steam_MoveAppFolder_Failure" "全てのファイルを新しいライブラリフォルダーへ移動できませんでした（%error%）。"
-"Steam_MoveAppFolder_FolderExists" "選択した Steam ライブラリ内には、ゲームインストールフォルダーが既にあります"
+"Steam_MoveAppFolder_FolderExists" "選択した Steam ライブラリ内には、ゲームインストールフォルダーがすでにあります"
 "Steam_MoveAppFolder_NoStart" "ファイルを新しいライブラリフォルダーへ移動できません（%error%）。"
 
 "Steam_HelpUsTranslate" "他の言語に精通していますか？ Steam の翻訳にご協力ください。"
@@ -4568,6 +4583,7 @@ Betaが終了しました。Steamを再起動し、現在のバージョンに�
 "Steam_Settings_Streaming_SoftwareEncodingThreads_7"	"7"
 "Steam_Settings_Streaming_SoftwareEncodingThreads_8"	"8"
 "Steam_Settings_Streaming_P2PScope_Description"	"直接接続を許可（IP共有）"
+"Steam_Settings_Streaming_P2PScopeAutomatic"	"自動（有効）"
 "Steam_Settings_Streaming_P2PScopeDisabled"	"無効"
 "Steam_Settings_Streaming_P2PScopeOnlyMe" "自分のデバイス"
 "Steam_Settings_Streaming_P2PScopeEveryone" "全てのデバイス"
@@ -4592,6 +4608,7 @@ Betaが終了しました。Steamを再起動し、現在のバージョンに�
 "Steam_Settings_Streaming_EnableTouchController"	"タッチコントロールを有効にする"
 
 "Steam_Settings_Streaming_StreamingSupport"	"サポート情報を表示"
+"Steam_Settings_Streaming_StreamingSupportLink"	"https://support.steampowered.com/kb_article.php?ref=3629-RIAV-1617"
 
 "Steam_Settings_Streaming_Connected" "接続先コンピューター"
 "Steam_Settings_Streaming_Paired" "ペアリング済みデバイス"
@@ -4602,6 +4619,15 @@ Betaが終了しました。Steamを再起動し、現在のバージョンに�
 
 "Steam_Settings_Streaming_PIN_Title" "Steamリンクのセキュリティコードを設定する"
 "Steam_Settings_Streaming_PIN_Text" "このコンピューターからSteamリンクへストリーミングする度に必要となるPINコード番号を設定してください："
+
+"Steam_Settings_ShareIPNetworking_Label" "Steamネットワーキング"
+"Steam_Settings_ShareIPNetworking_Info" "Steamネットワーキングを使用するゲームがIPアドレスを共有できるようにし、接続を高速化します"
+"Steam_Settings_ShareIPNetworking_Default" "デフォルト"
+"Steam_Settings_ShareIPNetworking_Always" "常時"
+"Steam_Settings_ShareIPNetworking_FriendsOnly" "フレンドのみ"
+"Steam_Settings_ShareIPNetworking_Never" "IP共有なし"
+"Steam_Settings_ShareIPNetworking_URL" "詳細"
+"Steam_Settings_ShareIPNetworking_URLText" "https://support.steampowered.com/kb_article.php?ref=9929-UAFN-9329"
 
 "SteamUI_StreamingIntro_Title"		"Steam Remote Playへようこそ"
 "SteamUI_StreamingIntro"			"Steam Remote Playを利用して、別のコンピューターでゲームを起動させて、このデバイスからプレイしようとしています。"
@@ -4745,4 +4771,9 @@ Betaが終了しました。Steamを再起動し、現在のバージョンに�
 
 "SteamUI_RunningConflictingSoftware" "競合するソフトウェアを検出しました"
 "SteamUI_RunningIncompatibleTcpService" "Steam プロセス内で %incompatdll% (%incompatname% 関連) \nの互換性のないバージョンを検出しました。Steam または個々のゲームの\n実行中にクラッシュやネットワークの遅延が発生した場合は、\nこのソフトウェアを更新またはアンインストールすることをお勧めします。"
+
+"Steam_XboxDriverInstall_Title"		"Xboxドライバーインストール"
+"Steam_XboxDriverInstall_Success"	"ドライバーが正常に更新されました。コンピューターを再起動すると有効になります。"
+"Steam_XboxDriverInstall_ServiceFailure"	"ドライバーの更新に失敗しました。最新のSteamを通常のユーザーとして実行中ですか？"
+"Steam_XboxDriverInstall_Failure"	"ドライバーの更新に失敗しました。エラー = %error%"
 }

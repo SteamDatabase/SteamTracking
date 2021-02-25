@@ -145,7 +145,7 @@
 "VAC_ConnectionRefusedTitle"	"연결 거부 - VAC"
 "VAC_ConnectionRefusedDetail"	"VAC(Valve Anti-Cheat) 보안 모드에서 작동 중이므로 선택한 서버에 연결할 수 없습니다.\n\n본 Steam 계정은 부정 행위로 인해 보안 서버에서 금지되었습니다."
 "VAC_ConnectionRefusedByServer"	"VAC(Valve Anti-Cheat) 보안 모드에서 작동 중이므로 서버에 연결할 수 없습니다.\n\n본 Steam 계정은 부정 행위로 인해 보안 서버에서 금지되었습니다."
-"VAC_BanSupportURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=370"
+"VAC_BanSupportURL"	"https://support.steampowered.com/kb/7849-RADZ-6869/"
 "VAC_SecureServerToolTip"	"VAC(Valve Anti-Cheat) - 보안"
 "VAC_BannedFromServerToolTip"	"본 보안 서버에 연결할 수 없습니다."
 "VAC_Secure"	"보안"
@@ -160,7 +160,7 @@
 "Steam_ValidLoginRequired"	"Steam VAC 서버에 연결할 수 없습니다. 네트워크 문제를 해결하려면 아래 링크를 클릭하십시오."
 "VAC_ConnectionIssuesSupport_Title"	"보안 연결 실패"
 "VAC_ConnectionIssuesSupportSite"	"Steam 고객지원으로 이동하려면 여기를 클릭"
-"VAC_ConnectionIssuesSupportURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=374"
+"VAC_ConnectionIssuesSupportURL"	"https://support.steampowered.com/kb/7579-RPSX-6098/"
 "VAC_LoggedInElsewhere_Title"		"계정이 이미 사용 중"
 "VAC_LoggedInElsewhereReason"		"다른 컴퓨터에서 이 Steam 계정으로 로그인했습니다. Steam을 계속 이용하려면 다시 로그인하십시오."
 

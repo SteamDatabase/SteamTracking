@@ -145,7 +145,7 @@
 "VAC_ConnectionRefusedTitle"	"Bağlantı Reddedildi - VAC"
 "VAC_ConnectionRefusedDetail"	"Seçtiğiniz sunucuya bağlanamazsınız, çünkü bu sunucu Valve Anti Hile (VAC) korumalıdır.\n\nBu Steam hesabı, hile tespiti nedeniyle korumalı sunuculardan yasaklanmıştır."
 "VAC_ConnectionRefusedByServer"	"Sunucu, Valve Anti Hile (VAC) korumalı olduğundan bağlanma isteğinizi reddetti.\n\nBu Steam hesabı, hile tespiti nedeniyle korumalı sunuculardan yasaklanmıştır."
-"VAC_BanSupportURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=370"
+"VAC_BanSupportURL"	"https://support.steampowered.com/kb/7849-RADZ-6869/"
 "VAC_SecureServerToolTip"	"Valve Anti Hile - Koruma"
 "VAC_BannedFromServerToolTip"	"Bu korumalı sunucuya bağlanamazsınız"
 "VAC_Secure"	"Korumalı"
@@ -160,7 +160,7 @@
 "Steam_ValidLoginRequired"	"Steam VAC sunucularına bağlanılamadı. Ağ sorunlarını tanımlamak için aşağıdaki bağlantıya tıklayın."
 "VAC_ConnectionIssuesSupport_Title"	"Güvenli Bağlantı Başarısız"
 "VAC_ConnectionIssuesSupportSite"	"Steam Destek'i ziyaret etmek için buraya tıklayın."
-"VAC_ConnectionIssuesSupportURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=374"
+"VAC_ConnectionIssuesSupportURL"	"https://support.steampowered.com/kb/7579-RPSX-6098/"
 "VAC_LoggedInElsewhere_Title"		"Hesap Başka Yerde Kullanımda"
 "VAC_LoggedInElsewhereReason"		"Bu Steam hesabının oturumu başka bilgisayarda açık durumda. Steam'i kullanmaya devam etmek için, tekrar giriş yapmalısınız."
 

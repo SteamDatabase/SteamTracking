@@ -157,7 +157,7 @@
  B g_VecLoadedModules
  B g_machClient
  B g_pFioAsyncFinalize
- B s_CmdLineParamFastOverlayHTML
+ B s_CmdLineParamToggleFastOverlayHTML
  B s_NoEscConversion
  B s_StringCharConversion
  CDbgFmtSafeImplT<false>::CDbgFmtSafeImplT(char const*, ...)
@@ -3335,7 +3335,6 @@
  T IPC::PosixSharedMemory::~PosixSharedMemory()
  T InterfaceReg::InterfaceReg(void* (*)(), char const*)
  T MakeFileWriteable(StringView)
- T OSXHelpers::BIsCPUArm64()
  T Sys_GetProcAddress(CSysModule*, char const*)
  T TSLNodeBase_t::operator delete(void*)
  T TSLNodeTemplate_t<HTMLCommandBuffer_t*>::operator delete(void*)
@@ -4098,7 +4097,6 @@
  strtoll
  strtoul
  strtoull
- sysctlbyname
  t (anonymous namespace)::protobuf_RegisterTypes(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  t -[GURLHelper arrURLs]
  t -[GURLHelper handleGetURLEvent:withReplyEvent:]

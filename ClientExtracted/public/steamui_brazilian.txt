@@ -13,7 +13,7 @@
 "WelcomeToSteamCreateAccount" "Criar nova conta"
 "WelcomeToSteamLogin" "Iniciar sessão com uma conta existente"
 "SteamUI_AccountNameInfo" "Insira o seu endereço de e-mail. Caso esqueça a sua\nsenha, contataremos você por esse endereço para\nverificar a sua identidade."
-"SteamUI_WelcomeNameInfo" "Informe um nome de perfil. Os seus amigos verão esse nome\nquando você estiver online. Você também pode informar o seu nome\nverdadeiro para que amigos possam achá-lo facilmente."
+"SteamUI_WelcomeNameInfo" "Informe um nome de perfil. Os seus amigos verão esse nome\nquando você estiver online. Você também pode informar o seu nome verdadeiro\npara que amigos possam achá-lo facilmente."
 "SteamUI_WelcomeNameOptional" "(opcional)"
 
 "SteamUI_ConvertExistingInfo" "Convertendo instalações de jogos existentes. Isso pode levar alguns minutos."
@@ -682,7 +682,7 @@ tela. Para acessar o Steam, clique com o botão direito no seu ícone."
 "Steam_Logout_TitleLogout" "Sair e finalizar sessão"
 "Steam_OptionsForAdvancedUsersOnly"		"Estas opções são apenas para usuários avançados."
 "Steam_Homepage"		"Página inicial:"
-"Steam_AccessToAllValvesContent"	"Parabéns! Agora você tem acesso a todo o conteúdo da VALVe."
+"Steam_AccessToAllValvesContent"	"Parabéns! Agora você tem acesso a todo o conteúdo da Valve."
 
 "SteamUI_OfflineMode_CouldNotConnect" "Não foi possível conectar-se à rede Steam."
 "SteamUI_OfflineMode_AppearOffline" "Parece que você não está conectado à Internet ou a sua conexão não está configurada corretamente para o Steam."
@@ -1147,7 +1147,7 @@ tela. Para acessar o Steam, clique com o botão direito no seu ícone."
 "Steam_SubscriptionApprovalCode" "Autorização"
 "Steam_SubscriptionConfirmation" "Código de confirmação"
 
-"Steam_TroubleshooterURL_CDKey" "http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=276"
+"Steam_TroubleshooterURL_CDKey" "https://support.steampowered.com/kb/1968-HKLX-7538&l=brazilian/"
 
 "Steam_SubscriptionSuccess_CDKey_Headline" "Ativação bem-sucedida!"
 "Steam_SubscriptionSuccess_CDKey" "O código de produto foi ativado com sucesso. Os produtos listados abaixo foram associados permanentemente à sua conta Steam e você deverá iniciar a sessão com a mesma para acessá-los.\n\nImprima um recibo desta transação para lembrar a sua conta para uso futuro."
@@ -1218,7 +1218,7 @@ A sua assinatura está registrada na seguinte conta Steam: %accountname%. No fut
 "Steam_Subscription_HardwarePromo_Used_Headline" "Cadastro duplicado"
 "Steam_Subscription_HardwarePromo_Used" "Esta oferta já foi ativada usando outra conta Steam."
 "Steam_PurchaseError_HardwarePromoIneligible" "Lamentamos, este computador não tem os requisitos de sistema necessários para ativar a oferta de %subscription%."
-"Steam_HardwarePromo_SupportURL" "http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=628"
+"Steam_HardwarePromo_SupportURL" "https://support.steampowered.com/kb/2734-UDFX-1098&l=brazilian/"
 
 "Steam_Subscription_HardwarePromo_AlreadyPurchased_Headline" "Produto já adquirido"
 "Steam_Subscription_HardwarePromo_AlreadyPurchased" "Esta conta Steam já possui o(s) produto(s) contido(s)\nnesta oferta. Para acessá-los, abra a Biblioteca Steam."
@@ -1494,7 +1494,8 @@ Você precisará finalizar a sessão no macOS para que a alteração surta efeit
 "Steam_DutyNote"	"As mercadorias serão enviadas dos Estados Unidos. Você será responsável pelo pagamento de quaisquer impostos e taxas alfandegárias."
 
 "Steam_AgreeToTheTerms"		"Aceito os termos do"
-"Steam_SteamSubscriberAgreement"	"Acordo de Assinatura do Steam"
+"Steam_SteamSubscriberAgreement"	    "Acordo de Assinatura do Steam"
+"Steam_SteamSubscriberAgreement_china"	"Contrato de licença do Steam China"
 "Steam_ComplianceRequired_Title"	"Steam — Aviso"
 "Steam_ComplianceRequired_Info"		"Você precisa concordar com os termos do acordo de assinatura do Steam para continuar."
 
@@ -1613,9 +1614,10 @@ Você precisará finalizar a sessão no macOS para que a alteração surta efeit
 "Steam_ConnectionFailureTitle"	"Falha na conexão"
 "Steam_ConnectionFailureDetail"	"O Steam não pode se conectar à rede. Isto pode ser devido a um problema com sua conexão à Internet."
 "Steam_ConnectionSupportLink"	"Solucionar problemas com minha conexão"
-"Steam_ConnectionSupportURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=11"
+"Steam_ConnectionSupportURL"	"https://support.steampowered.com/kb/1456-EUDN-2493&l=brazilian/"
 
 "SteamUI_NetworkTroubleshootingTips"	"Dicas para solucionar problemas de rede"
+"SteamUI_NetworkTroubleshootingTips_URL"	"https://support.steampowered.com/kb_article.php?ref=1456-EUDN-2493&l=brazilian"
 
 
 "SteamUI_SSA_Agree"				"Leia este acordo por completo. Você precisa aceitar os termos do Acordo de Assinatura do Steam para continuar."
@@ -1672,13 +1674,23 @@ Você precisará finalizar a sessão no macOS para que a alteração surta efeit
 "steam_menu_file"	"Steam"
 "steam_menu_view"	"Exibir"
 "steam_menu_games"	"Jogos"
-"steam_menu_view_games"		"Exibir Biblioteca de jogos"
+"steam_menu_view_games"		"Exibir biblioteca de jogos"
 "steam_menu_help"	"Ajuda"
 "steam_menu_library"	"Biblioteca"
 "steam_menu_hidden_games"	"Jogos ocultos"
 "steam_menu_downloads"	"Downloads"
 "steam_menu_account"	"Steam"
 "steam_menu_window" "Janela"
+"steam_menu_preferences"	"Preferências..."
+"steam_menu_services"	"Serviços"
+"steam_menu_hidesteam"	"Ocultar Steam"
+"steam_menu_hideothers"	"Ocultar outros"
+"steam_menu_showall"	"Exibir tudo"
+"steam_menu_quitsteam"	"Encerrar Steam"
+"steam_menu_window_close"	"Fechar"
+"steam_menu_window_minimize"	"Minimizar"
+"steam_menu_window_zoom"	"Maximizar"
+"steam_menu_window_bringalltofront"	"Trazer todas para a frente"
 "steam_menu_games_details"	"Detalhes dos jogos"
 "steam_menu_games_list"		"Lista de jogos"
 "steam_menu_games_grid"		"Grade de jogos"
@@ -1816,7 +1828,7 @@ Você precisará finalizar a sessão no macOS para que a alteração surta efeit
 
 "Steam_About_Title"				"Sobre o Steam"
 "Steam_About_Info"				"Aplicativo cliente Steam"
-"Steam_About_Build"				"Criado: %build_date% às %build_time%"
+"Steam_About_Build"				"Criado: %build_date%, às %build_time%"
 "Steam_About_InterfaceVer"			"API Steam: v%build_interface%"
 
 "Steam_DeveloperUnknownThirdParty"		"Terceiros"
@@ -2083,10 +2095,10 @@ Você precisará finalizar a sessão no macOS para que a alteração surta efeit
 "Steam_Install_WillDownloadAllFiles$appType=music"	"Agora todos os arquivos desta trilha sonora serão baixados pelo Steam."
 "Steam_Install_WillDownloadAllFiles$appType=tool"	"Agora todos os arquivos desta ferramenta serão baixados pelo Steam."
 
-"Steam_Install_StartCacheLoading$appType=application"		"Criando arquivos locais do aplicativo..."
-"Steam_Install_StartCacheLoading$appType=game"		"Criando arquivos locais do jogo..."
-"Steam_Install_StartCacheLoading$appType=demo"		"Criando arquivos locais da demonstração..."
-"Steam_Install_StartCacheLoading$appType=media"		"Criando arquivos locais da mídia..."
+"Steam_Install_StartCacheLoading$appType=application"		"Criando arquivos locais do(s) aplicativo(s)..."
+"Steam_Install_StartCacheLoading$appType=game"		"Criando arquivos locais do(s) jogo(s)..."
+"Steam_Install_StartCacheLoading$appType=demo"		"Criando arquivos locais da(s) demonstração(ões)..."
+"Steam_Install_StartCacheLoading$appType=media"		"Criando arquivos locais da(s) mídia(s)..."
 "Steam_Install_StartCacheLoading$appType=music"		"Criando arquivos locais..."
 "Steam_Install_StartCacheLoading$appType=tool"		"Criando arquivos locais da ferramenta..."
 
@@ -2383,16 +2395,16 @@ Você precisará finalizar a sessão no macOS para que a alteração surta efeit
 "Steam_RegionRestricted_Title"			"Steam — Jogo indisponível"
 "Steam_RegionRestrictedPurchase_Info"				"Este jogo foi ativado com um código de produto que é válido apenas em uma região geográfica específica. Já que você atualmente não está nessa região, %game% não está disponível para ser jogado."
 "Steam_RegionRestricted_SupportLink"		"Visite o site do Suporte Steam para mais informações"
-"Steam_RegionRestrictedPurchase_SupportURL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=461"
+"Steam_RegionRestrictedPurchase_SupportURL"		"https://support.steampowered.com/kb/1266-QFZC-2141&l=brazilian/"
 "Steam_RegionRestricted_Info"				"%game% indisponível no seu território."
-"Steam_RegionRestricted_SupportURL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=461"
+"Steam_RegionRestricted_SupportURL"		"https://support.steampowered.com/kb/1266-QFZC-2141&l=brazilian/"
 
 "Steam_CountryRestricted_Info"				"Essa assinatura não está disponível para compra no seu país."
-"Steam_CountryRestricted_SupportURL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=488"
+"Steam_CountryRestricted_SupportURL"		"https://support.steampowered.com/kb/1266-QFZC-2141&l=brazilian/"
 
 "Steam_RegionRestrictedCode_Title"		"Steam — Produto indisponível"
 "Steam_RegionRestrictedCode_Info"			"Este código de produto não pode ser ativado na sua região."
-"Steam_RegionRestrictedCode_SupportURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=463"
+"Steam_RegionRestrictedCode_SupportURL"	"https://support.steampowered.com/kb/1266-QFZC-2141&l=brazilian/"
 
 "Steam_FragmentationBad_Title"			"Steam — Aviso de fragmentação de disco"
 "Steam_FragmentationBad_Info"				"Seus arquivos de jogo possuem um alto nível de fragmentação em disco. Isso pode causar tempos de carregamento elevados e baixa performance no jogo. \n\nO Steam pode otimizar os arquivos de jogo para você agora.\n"
@@ -2763,7 +2775,7 @@ Faça um agora enviando um presente por e-mail para alguém que você conheça."
 "Steam_GuestPassAccept_HeadlineServiceUnavailable$type=guestpass"	"Falha ao aceitar passe de convidado"
 "Steam_GuestPassAccept_TextServiceUnavailable"	"O seu computador pode estar com problemas de conexão aos servidores Steam ou o serviço pode estar temporariamente desativado. Tente novamente mais tarde."
 "Steam_GuestPassAccept_LinkTextServiceUnavailable" 	"Para informações de solução de problemas sobre presentes, veja esta página de suporte."
-"Steam_GuestPassAccept_LinkURLServiceUnavailable"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=550"
+"Steam_GuestPassAccept_LinkURLServiceUnavailable"	"https://support.steampowered.com/kb/6262-QXCN-0755&l=brazilian/"
 
 "Steam_GuestPassAccept_HeadlineRevoked$type=guestpass"	"Este passe de convidado foi revogado"
 "Steam_GuestPassAccept_TextRevoked$type=guestpass"	"O amigo que lhe enviou este passe de convidado o cancelou e reenviou um código de resgate mais recente. Se a nova versão lhe foi enviada, você receberá outro e-mail com o código atualizado."
@@ -2782,7 +2794,7 @@ Faça um agora enviando um presente por e-mail para alguém que você conheça."
 "Steam_GuestPassRedeemed_HeadlineServiceUnavailable$type=guestpass"	"Falha ao ativar passe de convidado"
 "Steam_GuestPassRedeemed_TextServiceUnavailable"	"O seu computador pode estar com problemas de conexão aos servidores Steam ou o serviço pode estar temporariamente desativado. Tente novamente mais tarde."
 "Steam_GuestPassRedeemed_LinkTextServiceUnavailable"	"Para informações sobre solução de problemas relacionados a passes de convidado, veja esta página de suporte."
-"Steam_GuestPassRedeemed_LinkURLServiceUnavailable"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=550"
+"Steam_GuestPassRedeemed_LinkURLServiceUnavailable"	"https://support.steampowered.com/kb/6262-QXCN-0755&l=brazilian/"
 
 "Steam_GuestPassRedeemed_HeadlineLimitExceeded"	"Você já usou um passe de convidado deste produto"
 "Steam_GuestPassRedeemed_TextLimitExceeded"	"Como você já aceitou um passe de convidado de %package%, você não pode aceitar outro. Se deseja continuar a jogá-lo, que tal comprá-lo?"
@@ -2860,8 +2872,6 @@ Faça um agora enviando um presente por e-mail para alguém que você conheça."
 "Steam_SubscriptionCancelled_PuchaseDeclined_ContactProvider"	"A sua compra de %subscription% não foi concluída.\n\n%provider% comunicou um problema com a sua conta %provider%. Entre em contato com o suporte de %provider% ou clique em \"Voltar\" para escolher uma forma de pagamento diferente."
 "Steam_SubscriptionCancelled_PuchaseDeclined_AcctNotVerified"	"A sua compra de %subscription% não foi concluída.\n%provider% comunicou que a sua conta precisa estar verificada ou com saldo para realizar a compra. Entre em contato com o atendimento do %provider% ou clique em \"Voltar\" para escolher outra forma de pagamento."
 
-"Steam_TroubleshooterURL_VfyAcct" "http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=687"
-
 "Steam_PaymentMethodNotAvailable_Generic" "Lamentamos, mas esta forma de pagamento está indisponível no momento."
 
 "Steam_LaunchEULA_Title"			"%game%"
@@ -2871,11 +2881,12 @@ Faça um agora enviando um presente por e-mail para alguém que você conheça."
 "Steam_LaunchEULA_Text"			"Leia este contrato por completo. Você precisa aceitar os termos do contrato para jogar %game%."
 
 "Steam_GuestPasses_LinkText"		"Mais informações sobre presentes e passes de convidado"
-"Steam_GuestPasses_LinkURL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=549"
+"Steam_GuestPasses_LinkURL"		"https://support.steampowered.com/kb/6262-QXCN-0755&l=brazilian/"
 
 "Steam_AlreadyRunningError_Title"			"Steam — Não foi possível iniciar"
 "Steam_AlreadyRunningError_Info"			"Uma instância do Steam já está rodando neste computador em outra conta de usuário. Feche o Steam na outra conta de usuário antes de tentar iniciá-lo novamente."
 "Steam_AlreadyRunningError_SupportLink"	"Visite o site de suporte do Steam para mais informações"
+"Steam_AlreadyRunningError_SupportLink_URL"	"https://support.steampowered.com/kb_article.php?ref=8787-WYIL-1543&l=brazilian"
 "Steam_AlreadyRunningError_SupportTicket"	"Contate o Suporte Steam o mais cedo possível"
 
 "Steam_LoggedInElsewhere_Title"		"Steam — Sessão iniciada em outro local"
@@ -2907,6 +2918,7 @@ Faça um agora enviando um presente por e-mail para alguém que você conheça."
 "Steam_GamesDialog_RightClick_RemoveFromUnblockedGames"		"Remover dos jogos da família"
 
 "steam_menu_checkforupdates"						"Verificar atualizações do cliente Steam..."
+"steam_menu_checkforupdates_osx"					"Verificar atualizações..."
 "steam_checkforupdates_title"						"Steam — Atualização automática"
 "steam_ClientUpdateAvailableDownloading"			"Uma atualização do cliente Steam está disponível e está sendo baixada agora."
 "steam_ClientUpdateAvailableDownloaded"			"Uma atualização do cliente Steam foi baixada."
@@ -3347,7 +3359,7 @@ a partir de agora, você vai precisar deles pra ter acesso aos seus jogos e outr
 "Steam_InstallAborted_InfoAppNoDemo"		"%game% não pode ser instalado porque é uma demonstração e você possui a versão completa do produto. Instale a versão completa do jogo."
 
 "Steam_Startup_SteamChinaRequiredTitle"					"Requer Steam China"
-"Steam_Startup_GetSteamChina"						"%gamename% já está disponível no Steam China. Clique no link abaixo para instalar o cliente."
+"Steam_Startup_GetSteamChina"						"Agora, é necessário que %gamename% seja iniciado pelo novo cliente Steam China.\n\nVocê pode acessar a sua conta de jogo em %gamename% e transferir seu progresso, itens, níveis de personagens e pontos.\n\n"
 "Steam_Startup_RunSteamChina"						"%gamename% já está disponível no Steam China. Inicie o cliente para importar o jogo."
 "Steam_Startup_SteamChinaImportedUninstall"			"%gamename% foi importado para o Steam China. Você já pode desinstalar este inicializador."
 "Steam_Startup_LauncherDeprecated"					"%gamename% deve ser iniciado pelo Steam China. Esta instalação está obsoleta e será encerrada."
@@ -3355,6 +3367,7 @@ a partir de agora, você vai precisar deles pra ter acesso aos seus jogos e outr
 "Steam_Startup_ImportGameFromLauncherMsg"			"Deseja importar %gamename% para o Steam China? Após a importação, o inicializador dedicado poderá ser desinstalado."
 
 "Steam_Download_SteamChina"							"Baixar o Steam China"
+"Steam_Get_SteamChina"								"Baixar o Steam China"
 
 "Steam_ValidateGame_GameRunning"	"Feche quaisquer jogos ou ferramentas em execução antes de tentar verificar os arquivos locais."
 
@@ -3363,16 +3376,16 @@ a partir de agora, você vai precisar deles pra ter acesso aos seus jogos e outr
 "Steam_LibrariesLabel"	"Bibliotecas de conteúdo"
 "Steam_DownloadRestrictionsLabel"	"Restrições de download"
 
-"Steam_ServerBrowserPingRateLabel"	"Navegador de servidores: máx. pings / minuto"
-"Steam_ServerBrowserPingRateInfo"	"Caso tenha problemas com a conexão à internet enquanto busca servidores, tente diminuir este valor."
+"Steam_ServerBrowserPingRateLabel"	"Navegador de servidores: pings / minuto"
+"Steam_ServerBrowserPingRateInfo"	"Problemas de conexão ao buscar servidores? Tente diminuir este valor."
 "Steam_ServerBrowserPingRateDefault"	"Automática (%PingsPerMin%)"
 
 "Steam_TextFilterSettingLabel"									"Filtragem de mensagens"
-"Steam_TextFilterStatus_Enabled"								"Configurado para filtrar palavras de baixo calão e xingamentos"
-"Steam_TextFilterStatus_Enabled_IgnoreFriends"					"Configurado para filtrar palavras de baixo calão e xingamentos, menos de amigos(as)"
-"Steam_TextFilterStatus_EnabledAllowProfanity"					"Configurado para exibir palavras de baixo calão, mas filtrar xingamentos"
-"Steam_TextFilterStatus_EnabledAllowProfanity_IgnoreFriends"	"Configurado para exibir palavras de baixo calão, mas filtrar xingamentos, menos de amigos(as)"
-"Steam_TextFilterStatus_Disabled"								"Configurado para exibir palavras de baixo calão e xingamentos"
+"Steam_TextFilterStatus_Enabled"								"Config. para filtrar palavras de baixo calão e xingamentos"
+"Steam_TextFilterStatus_Enabled_IgnoreFriends"					"Config. para filtrar palavras de baixo calão e xingamentos, menos de amigos(as)"
+"Steam_TextFilterStatus_EnabledAllowProfanity"					"Config. para exibir palavras de baixo calão, mas filtrar xingamentos"
+"Steam_TextFilterStatus_EnabledAllowProfanity_IgnoreFriends"	"Config. para exibir palavras de baixo calão, mas filtrar xingamentos, menos de amigos(as)"
+"Steam_TextFilterStatus_Disabled"								"Config. para exibir palavras de baixo calão e xingamentos"
 "Steam_TextFilterSettingURL"									"Alterar preferências de filtragem de mensagens"
 
 "Steam_SettingsInGameScreenshotFolder"	"Pasta de capturas"
@@ -3486,6 +3499,7 @@ a partir de agora, você vai precisar deles pra ter acesso aos seus jogos e outr
 "Steam_RecoverLocked_UseCode" "Recebi a mensagem do Suporte Steam e estou pronto para inserir meu código especial de acesso."
 "Steam_RecoverLocked_MustRecover" "Que mensagem de e-mail? Não recebi..."
 "Steam_RecoverLocked_WhyIsThisHappening" "Por que isso está acontecendo?"
+"Steam_RecoverLocked_WhyIsThisHappening_URL" "https://support.steampowered.com/kb_article.php?ref=4020-ALZM-5519&l=brazilian"
 "Steam_RecoverLocked_EnterCode" "O meu código especial de acesso é:"
 "Steam_RecoverLocked_EnterCodeDetails" "Assim que o seu código for verificado, o Steam Guard adicionará este computador à lista de máquinas que têm permissão para acessar sua conta Steam."
 "Steam_RecoverLocked_WrongCode" "Lamentamos, código incorreto."
@@ -3499,7 +3513,9 @@ a partir de agora, você vai precisar deles pra ter acesso aos seus jogos e outr
 "Steam_RecoverLocked_StartRecovery2" "Nós sabemos que sua conta Steam é valiosa para você, e nos comprometemos em ajudá-lo a manter o acesso a ela nas mãos certas."
 "Steam_RecoverLocked_StartRecovery3" "Entre em contato com o Suporte Steam para que um membro da nossa equipe possa ajudá-lo. Pedidos legítimos de ajuda com acesso à conta são a nossa prioridade número um."
 "Steam_RecoverLocked_RecoverySupportLink" "Contatar o Suporte Steam"
+"Steam_RecoverLocked_RecoverySupportLink_URL" "https://help.steampowered.com/pt-br/"
 "Steam_RecoverLocked_LearnMore" "Saiba mais sobre a Tecnologia de Proteção de Identidade da Intel®"
+"Steam_RecoverLocked_LearnMore_URL" "https://support.steampowered.com/kb_article.php?ref=9400-IPAX-9398&l=brazilian"
 "Steam_RecoverLocked_CannotAccess" "Lamentamos, esta conta não pode ser acessada por este computador sem autorização adicional."
 "Steam_RecoverLocked_Success" "Sucesso!"
 "Steam_RecoverLocked_SuccessDetails" "Você agora possui acesso a sua conta Steam deste computador. O Steam Guard adicionou este computador à lista de máquinas que têm permissão para acessar sua conta Steam no futuro."
@@ -3822,7 +3838,6 @@ a partir de agora, você vai precisar deles pra ter acesso aos seus jogos e outr
 "steam_menu_friends" "Amigos"
 "steam_menu_servers" "Servidores"
 "steam_menu_settings" "Configurações"
-"steam_menu_preferences" "Preferências"
 "steam_menu_view_friends" "Ver lista de amigos (%friends_online% online)"
 "steam_menu_view_players" "Jogadores"
 "steam_menu_add_friend" "Adicionar um amigo..."
@@ -4563,6 +4578,7 @@ a partir de agora, você vai precisar deles pra ter acesso aos seus jogos e outr
 "Steam_Settings_Streaming_SoftwareEncodingThreads_7"	"7"
 "Steam_Settings_Streaming_SoftwareEncodingThreads_8"	"8"
 "Steam_Settings_Streaming_P2PScope_Description"	"Permitir conexão direta (compart. end. IP)"
+"Steam_Settings_Streaming_P2PScopeAutomatic"	"Automático (ativada)"
 "Steam_Settings_Streaming_P2PScopeDisabled"	"Desativada"
 "Steam_Settings_Streaming_P2PScopeOnlyMe" "Meus dispositivos"
 "Steam_Settings_Streaming_P2PScopeEveryone" "Todos os dispositivos"
@@ -4587,6 +4603,7 @@ a partir de agora, você vai precisar deles pra ter acesso aos seus jogos e outr
 "Steam_Settings_Streaming_EnableTouchController"	"Ativar controle por toque"
 
 "Steam_Settings_Streaming_StreamingSupport"	"Ver informações de suporte"
+"Steam_Settings_Streaming_StreamingSupportLink"	"https://support.steampowered.com/kb_article.php?ref=3629-RIAV-1617&l=brazilian"
 
 "Steam_Settings_Streaming_Connected" "Computador conectado"
 "Steam_Settings_Streaming_Paired" "Dispositivo pareado"
@@ -4597,6 +4614,15 @@ a partir de agora, você vai precisar deles pra ter acesso aos seus jogos e outr
 
 "Steam_Settings_Streaming_PIN_Title" "Configurar código de segurança do Steam Link"
 "Steam_Settings_Streaming_PIN_Text" "Crie um código numérico a ser inserido no Steam Link sempre que for transmitir deste computador:"
+
+"Steam_Settings_ShareIPNetworking_Label" "Rede Steam"
+"Steam_Settings_ShareIPNetworking_Info" "Permite que jogos que façam uso da Rede Steam compartilhem o meu endereço IP para conexões mais rápidas"
+"Steam_Settings_ShareIPNetworking_Default" "Padrão"
+"Steam_Settings_ShareIPNetworking_Always" "Sempre"
+"Steam_Settings_ShareIPNetworking_FriendsOnly" "Só amigos"
+"Steam_Settings_ShareIPNetworking_Never" "Nunca"
+"Steam_Settings_ShareIPNetworking_URL" "Saiba mais"
+"Steam_Settings_ShareIPNetworking_URLText" "https://support.steampowered.com/kb_article.php?ref=9929-UAFN-9329&l=brazilian"
 
 "SteamUI_StreamingIntro_Title"		"Bem-vindo ao Steam Remote Play"
 "SteamUI_StreamingIntro"			"Você está prestes a iniciar um jogo em um computador remoto e jogá-lo por aqui usando o Steam Remote Play."
@@ -4739,4 +4765,9 @@ a partir de agora, você vai precisar deles pra ter acesso aos seus jogos e outr
 
 "SteamUI_RunningConflictingSoftware" "Software conflitante detectado"
 "SteamUI_RunningIncompatibleTcpService" "Uma versão incompatível de %incompatdll% (relacionado a %incompatname%)\nfoi detectada dentro do processo Steam.\n\nSugerimos que atualize ou desinstale esse software caso esteja enfrentando erros\nou lentidão na rede enquanto usa o Steam ou jogos."
+
+"Steam_XboxDriverInstall_Title"		"Instalação do driver de Xbox"
+"Steam_XboxDriverInstall_Success"	"Driver atualizado com sucesso; ele será ativado após reiniciar o computador."
+"Steam_XboxDriverInstall_ServiceFailure"	"Falha ao atualizar o driver. O Steam está rodando sem privilégios de administrador e o serviço do Steam está rodando e atualizado?"
+"Steam_XboxDriverInstall_Failure"	"Falha ao atualizar o driver. Erro = %error%"
 }

@@ -34,7 +34,7 @@
 "Friends_Chat_ConvertedToMultiUser"	"Din chatt med %friend% har nu flera deltagare.\n"
 "Friends_Chat_AnonymousChatName"		"Anonym"
 "Friends_Chat_Settings"		"Chattinställningar"
-"Friends_Chat_InviteToWatch"		"Bjud in som tittare"
+"Friends_Chat_InviteToWatch"		"Bjud in att titta"
 
 "Friends_Chat_CreateFailed_Title"		"Chatt skapades inte"
 "Friends_Chat_CreateFailed_Generic"		"Chattrummet kunde inte skapas"
@@ -170,7 +170,7 @@
 "Friends_InvitationBlocking"		"Du blockerar all kommunikation med den här användaren. Innan du kan kommunicera med användaren, måste du ta bort blockeringen genom att gå till hens sida i Steams gemenskap."
 
 "Friends_DontGiveOutPassword"			"Avslöja aldrig ditt lösenord för någon.\n"
-"Friends_DontGiveOutPassword_URL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=301"
+"Friends_DontGiveOutPassword_URL"		"https://support.steampowered.com/kb/1266-OAFV-8478/"
 
 "Friends_ChatFilterBlockWarning"		"En länk togs bort från följande meddelande för din säkerhet."
 
@@ -556,6 +556,7 @@
 "Friends_SteamCommunity"	"Steams gemenskap"
 "Limited_Explanation"	"Ditt konto möter inte kraven för att använda denna funktion."
 "Limited_ForDetails"	"Besök Steams support för mer information."
+"Limited_ForDetails_URL"	"https://help.steampowered.com/wizard/HelpWithLimitedAccount"
 
 "Friends_Chat_RoomModerated_Entry"		"Chattrummet har ställts in som chatt för officerare av %member_making_change%.\n"
 "Friends_Chat_RoomUnmoderated_Entry"		"Chattrummet har ställts in som chatt för alla användare av %member_making_change%.\n"
@@ -672,10 +673,10 @@
 "friends_newturns_info" "%turns% nya rundor väntar"
 
 "Friends_FriendInvitedToBroadcast_Title" "BJUD IN - %friend%"
-"Friends_FriendInvitedToBroadcast_Info" "En inbjudan att åskåda ditt spel har skickats till %friend%."
-"Friends_BroadcastInvite" "%friend% har bjudit in dig till att åskåda dennes sändning"
-"Friends_BroadcastInviteNotification" "bjöd in dig till att åskåda dennes sändning"
-"Friends_Chat_InviteToBroadcast" "Bjud in som tittare"
+"Friends_FriendInvitedToBroadcast_Info" "En inbjudan att titta på när du spelar har skickats till %friend%."
+"Friends_BroadcastInvite" "%friend% har bjudit in dig att titta på deras sändning"
+"Friends_BroadcastInviteNotification" "bjöd in dig till att titta på deras sändning"
+"Friends_Chat_InviteToBroadcast" "Bjud in att titta"
 "Friends_BroadcastApproveNotification" "skulle vilja se på din sändning"
 "Friends_BroadcastCantStart_Streaming" "kan ej kolla på din sändning medan du hemmaströmmar"
 "Friends_BroadcastApprove" "%friend% skulle vilja se på din sändning"
@@ -687,6 +688,7 @@
 "Broadcast_FirstTime_PermissionHeader" "Ta en stund och ställ in dina preferenser..."
 "Broadcast_FirstTime_DesktopOnly" "Som standard kommer man bara kunna se på ditt spelinnehåll. Ditt skrivbord kommer inte sändas."
 "Broadcast_FirstTime_FAQ" "Läs vanliga frågor om Steam Broadcasting"
+"Broadcast_FirstTime_FAQLink" "https://support.steampowered.com/kb_article.php?ref=6730-TOAK-6497"
 "Broadcast_FirstTime_Title" "Steam Broadcasting"
 "Broadcast_FirstTime_OK" "OK"
 "Broadcast_FirstTime_Cancel" "Avbryt"
@@ -712,9 +714,9 @@
 "Steam_Settings_BroadcastTitle" "Sändning"
 "Steam_Settings_Broadcast_Disabled" "Sändning inaktiverad"
 "Steam_Settings_Broadcast_InviteOnly" "Endast vänner jag bjuder in"
-"Steam_Settings_Broadcast_FriendsApprove" "Vänner kan förfråga att titta på mina spel"
-"Steam_Settings_Broadcast_FriendsAllowed" "Vänner kan titta på mina spel"
-"Steam_Settings_Broadcast_FriendsPublic" "Alla kan titta på mina spel"
+"Steam_Settings_Broadcast_FriendsApprove" "Vänner kan be om att få titta på när jag spelar"
+"Steam_Settings_Broadcast_FriendsAllowed" "Vänner kan titta på när jag spelar"
+"Steam_Settings_Broadcast_FriendsPublic" "Alla kan titta på när jag spelar"
 "Steam_Settings_Broadcast_Bitrate3500" "3500 kbit/s"
 "Steam_Settings_Broadcast_Bitrate3000" "3000 kbit/s"
 "Steam_Settings_Broadcast_Bitrate2500" "2500 kbit/s"

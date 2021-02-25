@@ -1,6 +1,8 @@
 __TEXT
 __text
 __TEXT
+0D
+0D
 __stubs
 __TEXT
 __stub_helper
@@ -14,20 +16,20 @@ __unwind_info
 __TEXT
 __eh_frame
 __TEXT
-82
+@1
 __DATA
 @
 
 __nl_symbol_ptr
 __DATA
-]
+[
 __got
 __DATA
 8
-_
+]
 __la_symbol_ptr
 __DATA
-f
+d
 __
 15CBaseFileSystem
 11IFileSystem
@@ -236,7 +238,6 @@ V_RemoveDotSlashes failed for "%s".
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/fileio.cpp
 *
 %s%c%s
-%s/%s
 /
 ..
 *.*
@@ -268,10 +269,6 @@ Assertion Failed: nGrowSize >= 0
 Assertion Failed: m_nAllocationCount >= 0
 nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
 Assertion Failed: num > 0
-CUtlString::SetValue
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlstring.cpp
-CUtlString::VFormat
-Assertion failed: length > k_cchMaxString
 Assertion Failed: s_bAllowStaticSymbolTable
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlsymbol.cpp
 s_pSymbolTable
@@ -280,8 +277,11 @@ v
 @
 @
 
+j
+_
+
 =
 @
 =
-=
 @
++

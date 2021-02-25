@@ -1966,7 +1966,7 @@
     },
     {
         "id": 3311,
-        "size": 532,
+        "size": 536,
         "posted_in": "void CSteamEngine::PostCallbackToAllUsers<RemoteClientStartStreamSession_t>(RemoteClientStartStreamSession_t*)"
     },
     {
@@ -2046,7 +2046,7 @@
     },
     {
         "id": 3328,
-        "size": 20,
+        "size": 1044,
         "posted_in": "CRemoteClientJobRemotePlayInvite::SendInviteResult(ERemoteClientLaunchResult)"
     },
     {

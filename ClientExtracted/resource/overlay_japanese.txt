@@ -4,7 +4,7 @@
 "Tokens"
 {
 "Overlay_Splash_Hotkey"		"開始するには %hotkey% を押してください"
-"Overlay_Splash_Message"		"ゲームをプレイしながら Steam コミュニティにアクセス。"
+"Overlay_Splash_Message"		"ゲームをプレイしながらSteamコミュニティにアクセス。"
 
 "Overlay_SettingsTabTitle"	"ゲーム中"
 "Overlay_SettingsTabTitleApp"	"アプリ使用中"
@@ -209,8 +209,8 @@
 "Overlay_Publish_Error_Quota_Plural" "これらのスクリーンショットをアップロードするために十分な容量がクラウド上にありません"
 "Overlay_Delete_Screenshot_Error" "エラーによりスクリーンショットの削除ができませんでした。もう少ししてからお試しください。"
 "Overlay_Tag_As_Potential_Spoiler" "ネタバレの可能性があるタグ"
-"Overlay_Publish_NeedWorkshopLegalAgreementAcceptance_Title" "Steam ワークショップ法的契約"
-"Overlay_Publish_NeedWorkshopLegalAgreementAcceptance_Desc" "アイテムを公開する前に最新のSteam ワークショップ法的契約に同意する必要があります。"
+"Overlay_Publish_NeedWorkshopLegalAgreementAcceptance_Title" "Steamワークショップ法的契約"
+"Overlay_Publish_NeedWorkshopLegalAgreementAcceptance_Desc" "アイテムを公開する前に最新のSteamワークショップ法的契約に同意する必要があります。"
 "Overlay_Publish_NeedWorkshopLegalAgreementAcceptance_ViewItem" "アイテムを表示"
 
 "Overlay_Share"						"Facebook で共有"

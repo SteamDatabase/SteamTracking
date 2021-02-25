@@ -55,7 +55,7 @@
 "Steam_AccountName"	"Nume cont"
 "Steam_Twofactor_Code"			"Cod Steam Guard"
 "Steam_ErrorLoginNeedTwoFactor" "Te rugăm să introduci codul actual Steam Guard de autentificare."
-"Steam_ErrorLoginBadTwoFactor" "Codul de autentificare pentru autentificarea în doi pași a fost nevalid.\nTe rugăm să introduci codul actual Steam Guard de autentificare."
+"Steam_ErrorLoginBadTwoFactor" "Codul pentru conectarea în doi pași a fost nevalid.\nTe rugăm să introduci codul actual Steam Guard de conectare."
 
 "SteamGuardBanner"				"Steam Guard cu Tehnologia Intel® Identity Protection"
 "LoginIPTNotDetected"			"Nu a fost detectat un procesor Intel® Core™ 2nd gen.\nAcest cont nu poate fi folosit pe acest calculator."

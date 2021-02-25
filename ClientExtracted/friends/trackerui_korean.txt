@@ -170,7 +170,7 @@
 "Friends_InvitationBlocking"		"이 사용자의 모든 통신을 차단 중입니다. 다시 통신하려면 Steam 커뮤니티 페이지를 방문하여 차단을 해제하십시오."
 
 "Friends_DontGiveOutPassword"			"절대로 남에게 비밀번호를 알려주지 마세요.\n"
-"Friends_DontGiveOutPassword_URL"		"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=301"
+"Friends_DontGiveOutPassword_URL"		"https://support.steampowered.com/kb/1266-OAFV-8478/"
 
 "Friends_ChatFilterBlockWarning"		"보안을 위해 다음 메시지에서 링크가 제거되었습니다."
 
@@ -556,6 +556,7 @@
 "Friends_SteamCommunity"	"Steam 커뮤니티"
 "Limited_Explanation"	"귀하의 계정은 이 기능을 사용하기 위한 필요 조건을 만족하지 못합니다."
 "Limited_ForDetails"	"자세한 내용은 Steam 고객지원을 방문하십시오."
+"Limited_ForDetails_URL"	"https://help.steampowered.com/wizard/HelpWithLimitedAccount"
 
 "Friends_Chat_RoomModerated_Entry"		"%member_making_change% 님이 해당 대화방을 운영자 전용 채팅으로 설정했습니다.\n"
 "Friends_Chat_RoomUnmoderated_Entry"		"%member_making_change% 님이 해당 대화방을 모든 사용자 채팅으로 설정했습니다.\n"
@@ -687,6 +688,7 @@
 "Broadcast_FirstTime_PermissionHeader" "잠시 시간을 내셔서 귀하의 설정을 확인하세요."
 "Broadcast_FirstTime_DesktopOnly" "기본적으로 게임 콘텐츠만 보여집니다. 게임 이외의 화면은 방송되지 않습니다."
 "Broadcast_FirstTime_FAQ" "Steam 방송 FAQ를 읽어 보세요"
+"Broadcast_FirstTime_FAQLink" "https://support.steampowered.com/kb_article.php?ref=6730-TOAK-6497"
 "Broadcast_FirstTime_Title" "Steam 방송"
 "Broadcast_FirstTime_OK" "확인"
 "Broadcast_FirstTime_Cancel" "취소"

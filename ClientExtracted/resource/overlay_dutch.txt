@@ -237,7 +237,7 @@
 "Overlay_SetScreenshotFolder" "Kies een map voor opgeslagen screenshots"
 
 
-"Overlay_SetScreenshotFolder_NoDriveRoot" "Je mag de root van een schijf niet selecteren"
+"Overlay_SetScreenshotFolder_NoDriveRoot" "Je mag de hoofdmap van een schijf niet selecteren"
 "Overlay_SetScreenshotFolder_InvalidFolder" "Je moet een geldige screenshotmap kiezen"
 
 "Overlay_AsyncNotificatoinsRequestedDialog_Title" "Meldingen toestaan?"

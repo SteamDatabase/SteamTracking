@@ -145,7 +145,7 @@
 "VAC_ConnectionRefusedTitle"	"Từ chối kết nối - VAC"
 "VAC_ConnectionRefusedDetail"	"Bạn không thể kết nối đến máy chủ được chọn, bởi vì nó đang chạy dưới chế độ bảo mật VAC (Valve Anti-Cheat).\n\nTài khoản Steam này đã bị cấm khỏi các máy chủ an toàn vì vi phạm gian lận."
 "VAC_ConnectionRefusedByServer"	"Máy chủ từ chối kết nối của bạn bởi vì nó đang chạy trong chế độ bảo mật VAC (Valve Anti-Cheat).\n\nTài khoản này đã bị cấm khỏi các máy chủ an toàn vì vi phạm gian lận."
-"VAC_BanSupportURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=370"
+"VAC_BanSupportURL"	"https://support.steampowered.com/kb/7849-RADZ-6869/"
 "VAC_SecureServerToolTip"	"Valve Anti-Cheat - An toàn"
 "VAC_BannedFromServerToolTip"	"Bạn không thể kết nối đến máy chủ an toàn này"
 "VAC_Secure"	"An toàn"
@@ -160,7 +160,7 @@
 "Steam_ValidLoginRequired"	"Không thể thực hiện kết nối đến máy chủ Steam VAC. Để khắc phục sự cố đường mạng, xin vui lòng nhấp vào đường dẫn bên dưới."
 "VAC_ConnectionIssuesSupport_Title"	"Kết nối an toàn thất bại"
 "VAC_ConnectionIssuesSupportSite"	"Nhấp vào đây để ghé thăm trang hỗ trợ Steam"
-"VAC_ConnectionIssuesSupportURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=374"
+"VAC_ConnectionIssuesSupportURL"	"https://support.steampowered.com/kb/7579-RPSX-6098/"
 "VAC_LoggedInElsewhere_Title"		"Tài khoản đã dùng ở nơi khác"
 "VAC_LoggedInElsewhereReason"		"Tài khoản Steam này đang được sử dụng trên một máy khác. Để tiếp tục sử dụng Steam, bạn cần đăng nhập lại."
 

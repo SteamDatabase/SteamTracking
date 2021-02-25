@@ -145,7 +145,7 @@
 "VAC_ConnectionRefusedTitle"	"Conexão rejeitada - VAC"
 "VAC_ConnectionRefusedDetail"	"Você não pode se conectar ao servidor selecionado porque ele está rodando no modo protegido por VAC (Valve Antitrapaça).\n\nEsta conta Steam foi banida de servidores protegidos devido ao uso de trapaças."
 "VAC_ConnectionRefusedByServer"	"O servidor recusou a sua conexão por estar rodando no modo protegido por VAC (Valve Antitrapaça).\n\nEsta conta Steam foi banida de servidores protegidos devido ao uso de trapaças."
-"VAC_BanSupportURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=370"
+"VAC_BanSupportURL"	"https://support.steampowered.com/kb/7849-RADZ-6869/"
 "VAC_SecureServerToolTip"	"Valve Antitrapaça - Seguro"
 "VAC_BannedFromServerToolTip"	"Você não pode se conectar a este servidor seguro"
 "VAC_Secure"	"Protegido"
@@ -160,7 +160,7 @@
 "Steam_ValidLoginRequired"	"Não foi possível conectar-se aos servidores VAC do Steam. Para solucionar problemas de rede, clique no link abaixo."
 "VAC_ConnectionIssuesSupport_Title"	"Falha na conexão segura"
 "VAC_ConnectionIssuesSupportSite"	"Clique aqui para visitar o suporte Steam"
-"VAC_ConnectionIssuesSupportURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=374"
+"VAC_ConnectionIssuesSupportURL"	"https://support.steampowered.com/kb/7579-RPSX-6098/"
 "VAC_LoggedInElsewhere_Title"		"Conta sendo usada em outro local"
 "VAC_LoggedInElsewhereReason"		"Esta conta Steam foi usada para iniciar uma sessão em outro computador. Para continuar a usar o Steam, você precisa iniciar a sessão novamente."
 
