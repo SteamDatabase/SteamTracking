@@ -206,6 +206,8 @@ function InitImageTypes( type )
 		{ name: 'Library Hero', width: 1920, height: 620, path: 'library_hero|library_hero|assets|library_hero|image', localized: true, overrideable: false, supports2x: true },
 		{ name: 'Library Capsule', width: 600, height: 900, path: 'library_capsule|library_600x900|assets|library_capsule|image', localized: true, overrideable: false, supports2x: true },
 		{ name: 'Library Logo', width: 0, height: 0, path: 'library_logo|logo|assets|library_logo|image', localized: true, overrideable: false, supports2x: true },
+
+		{ name: 'Hero Capsule', width: 374, height: 448, path: 'hero_capsule|hero_capsule|assets|hero_capsule|image', localized: true, overrideable: true, supports2x: true },
 	];
 }
 
