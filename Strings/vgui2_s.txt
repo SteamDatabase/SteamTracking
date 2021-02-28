@@ -54,10 +54,8 @@ __data
 __DATA
 __bss
 __DATA
-`#
 __common
 __DATA
-P^
 H
 __LINKEDIT
 0
@@ -1026,9 +1024,11 @@ Show All
 #steam_menu_quitsteam
 Quit Steam
 q
-steambeta
-steamchina
 steam
+steamchinabeta
+steamchina
+steambeta
+steamlink
 URLCommand
 cmd
 ForceQuit

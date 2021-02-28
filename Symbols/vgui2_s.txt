@@ -2602,15 +2602,15 @@
  d CBaseSurface::CreateNewTextureID(bool)::staticBindIndex
  d CScheme::GetAdjustedFontHeightForCurrentLanguage(int)::language
  d __block_descriptor_tmp
- d __block_descriptor_tmp548
- d __block_descriptor_tmp551
- d __block_descriptor_tmp553
- d __block_descriptor_tmp592
- d __block_descriptor_tmp614
+ d __block_descriptor_tmp552
+ d __block_descriptor_tmp555
+ d __block_descriptor_tmp557
+ d __block_descriptor_tmp596
+ d __block_descriptor_tmp618
  d __block_literal_global
- d __block_literal_global552
- d __block_literal_global554
- d __block_literal_global615
+ d __block_literal_global556
+ d __block_literal_global558
+ d __block_literal_global619
  d g_FontMetricTweaks
  d g_bScissor
  d g_rgBorderColor
@@ -2860,9 +2860,9 @@
  t ___ZN4vgui15CBaseOSXSurfaceI12CBaseSurfaceEC2Ev_block_invoke_2
  t ___ZN4vgui15CBaseOSXSurfaceI12CBaseSurfaceEC2Ev_block_invoke_3
  t __copy_helper_block_
- t __copy_helper_block_590
+ t __copy_helper_block_594
  t __destroy_helper_block_
- t __destroy_helper_block_591
+ t __destroy_helper_block_595
  t fsevents_callback(__FSEventStream const*, void*, unsigned long, void*, unsigned int const*, unsigned long long const*)
  t png_build_16bit_table
  t png_format_buffer

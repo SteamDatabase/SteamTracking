@@ -18142,6 +18142,8 @@
  mach_msg
  mach_port_allocate
  mach_port_deallocate
+ mach_port_mod_refs
+ mach_port_type
  mach_task_self_
  mach_timebase_info
  malloc

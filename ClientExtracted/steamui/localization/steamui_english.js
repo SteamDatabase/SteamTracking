@@ -1202,6 +1202,7 @@
 	"AppProperties_Dlc_Installed": "Install",
 	"AppProperties_Dlc_Name": "Name",
 	"AppProperties_Dlc_DateAdded": "Added",
+	"AppProperties_Dlc_SizeDisk": "Size",
 	"AppProperties_Shortcut_TargetExecutable": "Target",
 	"AppProperties_Shortcut_StartInFolder": "Start In",
 	"AppProperties_Shortcut_BrowseFiles": "Browse...",

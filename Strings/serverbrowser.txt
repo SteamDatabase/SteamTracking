@@ -32,8 +32,8 @@ __mod_init_func
 __DATA
 __const
 __DATA
-@,"
-@,"
+P,"
+P,"
 __cfstring
 __DATA
 __data
@@ -3333,7 +3333,8 @@ Assertion Failed: !pszString || pszString[nChars] == '\0'
 Assertion Failed: s_bAllowStaticSymbolTable
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlsymbol.cpp
 s_pSymbolTable
-I(
+,
+(
 (
 (
 (
@@ -3356,12 +3357,10 @@ p
 p
 !
 "
-"
-{'
-%"
 0
 p
 
+`
 $
 @
 @
@@ -3382,7 +3381,7 @@ Hc
 (
 (
 (
-L95
+L95EX'
 '
 '
 Hc
@@ -3401,14 +3400,14 @@ Hc
 ?
 ?
 ?
-A$
 "
-_$
+8$
 3
-*$
 D
-3$
-.$
+6$
+1$
+,$
+$
 $
 $
 $
@@ -3427,12 +3426,15 @@ $
 $
 @
 (#
-#
+x"
 
-L95L"
+%"
+L"
+L95:L"
+2
+_
 
 
-)
 d
 :
 

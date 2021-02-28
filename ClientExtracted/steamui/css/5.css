@@ -2864,7 +2864,7 @@ button.appdetailsheader_ExitEditModeButton_i7jBC.appdetailsheader_ExitEditModeBu
       margin-left: 10px; }
   .appproperties_AppProperties_1FyBL .DialogBody .appproperties_DlcGrid_3sXdO {
     display: grid;
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns: auto 1fr auto auto;
     margin-top: 20px;
     overflow-y: auto; }
     .appproperties_AppProperties_1FyBL .DialogBody .appproperties_DlcGrid_3sXdO::-webkit-scrollbar-thumb {
@@ -2902,7 +2902,7 @@ button.appdetailsheader_ExitEditModeButton_i7jBC.appdetailsheader_ExitEditModeBu
       display: flex;
       align-items: center;
       justify-content: center;
-      margin: 8px 20px 8px 8px; }
+      margin: 8px; }
     .appproperties_AppProperties_1FyBL .DialogBody .appproperties_DlcGrid_3sXdO .appproperties_Name_bP2Ip {
       display: flex;
       flex-direction: row;
@@ -2916,9 +2916,14 @@ button.appdetailsheader_ExitEditModeButton_i7jBC.appdetailsheader_ExitEditModeBu
           overflow: hidden;
           text-overflow: ellipsis; }
       .appproperties_AppProperties_1FyBL .DialogBody .appproperties_DlcGrid_3sXdO .appproperties_Name_bP2Ip .appproperties_DlcArt_3vsfp {
-        flex: 0 0 130px;
+        flex: 0 0 90px;
         margin-right: 7px; }
     .appproperties_AppProperties_1FyBL .DialogBody .appproperties_DlcGrid_3sXdO .appproperties_Added_dR1gz {
+      display: flex;
+      align-items: center;
+      margin: 8px;
+      white-space: nowrap; }
+    .appproperties_AppProperties_1FyBL .DialogBody .appproperties_DlcGrid_3sXdO .appproperties_SizeDisk_2tvvL {
       display: flex;
       align-items: center;
       margin: 8px;
