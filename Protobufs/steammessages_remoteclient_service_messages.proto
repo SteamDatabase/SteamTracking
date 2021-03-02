@@ -119,6 +119,7 @@ message CRemotePlay_SessionStarted_Request {
 	optional uint32 appid = 3;
 	optional int32 device_form_factor = 4;
 	optional bool remote_play_together = 5;
+	optional bool guest_session = 6;
 }
 
 message CRemotePlay_SessionStarted_Response {
@@ -133,17 +134,30 @@ message CRemotePlay_SessionStopped_Notification {
 }
 
 message CRemotePlayTogether_Notification {
-	message ControllerSlots {
+	message Player {
+		optional fixed64 steamid = 1;
+		optional uint32 guestid = 2;
+	}
+
+	message ControllerSlot_obsolete {
 		optional uint32 slotid = 1;
 		optional fixed64 steamid = 2;
+	}
+
+	message ControllerSlot {
+		optional uint32 slotid = 1;
+		optional .CRemotePlayTogether_Notification.Player player = 2;
 	}
 
 	message GroupUpdated {
 		optional fixed64 host_steamid = 1;
 		optional fixed64 host_clientid = 2;
-		repeated fixed64 players = 3;
+		repeated fixed64 players_obsolete = 3;
 		optional fixed64 host_gameid = 4;
-		repeated .CRemotePlayTogether_Notification.ControllerSlots controller_slots = 5;
+		repeated .CRemotePlayTogether_Notification.ControllerSlot_obsolete controller_slots_obsolete = 5;
+		optional bool has_new_players = 6;
+		repeated .CRemotePlayTogether_Notification.Player player_slots = 7;
+		repeated .CRemotePlayTogether_Notification.ControllerSlot controller_slots = 8;
 	}
 
 	optional fixed64 steamid = 1;
