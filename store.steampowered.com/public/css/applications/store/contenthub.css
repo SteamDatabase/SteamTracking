@@ -1,0 +1,54 @@
+
+
+
+
+
+
+
+
+
+
+
+.contenthubtabs_TabCtn_2oMA1 {
+  display: flex;
+  flex-direction: column; }
+
+.contenthubtabs_TabHeaderCtn_2hDgH {
+  display: flex;
+  flex-direction: row; }
+
+.contenthubtabs_TabHeader_uLDXr {
+  font-size: 16px;
+  padding: 10px;
+  border-style: dotted; }
+
+.contenthubtabs_TabHeaderSelected_2lb5o {
+  font-weight: bold;
+  color: green; }
+
+.contenthubtabs_PagingCtn_1z4pT {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row; }
+
+.contenthubtabs_PagingNumCtn_2JUQr {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  align-items: center; }
+
+.contenthubtabs_PageNumCtn_sJmNK {
+  display: flex;
+  flex-direction: row; }
+
+.contenthubtabs_PageNumber_1QUSX {
+  padding: 5px; }
+
+.contenthubtabs_PageSelectedNumber_tJc_C {
+  font-weight: bold;
+  color: green; }
+
+.contenthubtabs_PagingButton_J9G7z {
+  padding-left: 10px;
+  padding-right: 10px; }
+
