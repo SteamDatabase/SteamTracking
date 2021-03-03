@@ -2,6 +2,7 @@
 __TEXT
 __text
 __TEXT
+4\$
 __stubs
 __TEXT
 __stub_helper
@@ -13,18 +14,20 @@ __const
 __TEXT
 __objc_methname
 __TEXT
-3i,
-3i,
+Ci,
+Ci,
 __objc_classname__TEXT
 __objc_methtype
 __TEXT
 (
 __unwind_info
 __TEXT
-4p,
-4p,
+Dp,
+Dp,
 __eh_frame
 __TEXT
+-
+-
 __DATA
 __nl_symbol_ptr
 __DATA
@@ -9657,8 +9660,8 @@ developer
 Steam pid that launched us
 VGUI_Application_001
 OK
-Mar  1 2021
-16:36:24
+Mar  2 2021
+12:35:50
 crashhandler003
 gameoverlayui
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/overlay/gameoverlayui/main.cpp
@@ -13321,61 +13324,56 @@ Nov
 Dec
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
-e$
-M$
-N$
-!$
+L$
+0
+p
+p
+0
 $
-0
-p
-p
-0
 6
-"#
-q#
+A
+/#
+#
+#
+#
 "
-#
-#
 "
 0
 p
-&4
-p@
+?!
 4
 !
 !
 !
-"
+8"
+@
 "
 @
 @
 "
-i"
 "
-j
-E"
-f3
+"
+I"
 "
 "
 "
-h!
-K!
-$!
+"
+k!
 I
 k
 !
-!
 d
-}!
 !
 !
-_?
 
 
 
 
 
+f
 
+[
+[
 5
 5
 p
@@ -13404,6 +13402,7 @@ p
 0
 p
 0
+w
 p
 p
 p
@@ -13413,17 +13412,13 @@ p
 @
 =
 0
-F
 %
 %
 %
-=
-a>
-4?
-o@
+WA
 Hi
+eE
 4
-4
 E
 E
 E
@@ -13434,19 +13429,17 @@ E
 E
 E
 E
-E
-E
-4
-s@
-w@
+34
 
 <
 <
+Y@
 0
 p
 I
 I
 5
+D
 $
 @
 @
@@ -13462,8 +13455,9 @@ A
 A
 A
 A
-@
-@
+A
+A
+A
 Hc
 ?
 ?
@@ -13598,6 +13592,7 @@ G
 @
 >
 0
+F9
 p
 =
 0
@@ -13657,39 +13652,31 @@ P
 "
 3
 D
-G7
-s7
-7
-7
+{7
+u7
 @
-D6
-g5
-=&
-&
-=
-
-
+46
+8'
+r&
+L&
+T4
+(%
 %
-73
 $
->2
-g2
 d
-
-
-
-2
 2
 2
 2
 
-X
+
+R
+T
 
 
+0
+10
 
-'
-'
-'
+
 '
 -
 -
@@ -13697,17 +13684,22 @@ d
 &
 &
 d
+/-
 t=
 =
 =
 @
+:,
+T.
 uV%
+"
 "
 "
 
 "
 
 E
+e+
 >
 
 ,
@@ -13731,6 +13723,7 @@ E
 @
 @
 =
+@*
 
 
 @
@@ -13760,11 +13753,11 @@ E
 .
 .
 d
-[)
 d
 d
+d(
 =
-Hc[S(
+HcKS(
 
 =
 @
@@ -13779,11 +13772,10 @@ Hc[S(
 @
 @
 @
+n'
 0
-u'
 E
-Hc5 t'
 }
-Hc5;`'
+Hc5+`'
 $
 p

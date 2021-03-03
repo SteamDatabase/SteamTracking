@@ -297,7 +297,7 @@
  T CBaseOverlayRenderer::UpdateChromePaintBufferRenderStats(unsigned long long)
  T CBaseOverlayRenderer::UpdateFPSCounter()
  T CBaseOverlayRenderer::UpdateNotificationToastPosition()
- T CBaseOverlayRenderer::UpdateOrCreateTextureForChromePaintBuffer(unsigned long long, int, int, int)
+ T CBaseOverlayRenderer::UpdateOrCreateTextureForChromePaintBuffer(unsigned long long, unsigned int, int, int, int)
  T CBaseOverlayRenderer::ValveCheckAsyncCapture()
  T CBaseOverlayRenderer::ValveDrawSharedHandleTexture(int, int, int, int, float, float, float, float, float, float, void*, int, int, ETextureFormat, bool)
  T CBaseOverlayRenderer::ValveGetAdapterId()

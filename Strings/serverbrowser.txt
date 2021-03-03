@@ -3,6 +3,8 @@ __TEXT
 "
 __text
 __TEXT
+0H
+0H
 __stubs
 __TEXT
 __stub_helper
@@ -3334,6 +3336,9 @@ Assertion Failed: s_bAllowStaticSymbolTable
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlsymbol.cpp
 s_pSymbolTable
 ,
+,
+,
+,
 (
 (
 (
@@ -3355,12 +3360,9 @@ p
 p
 0
 p
-!
-"
 0
 p
 
-`
 $
 @
 @
@@ -3370,6 +3372,7 @@ $
 ?
 ?
 A
+k)
 Hc
 =
 (
@@ -3381,9 +3384,10 @@ Hc
 (
 (
 (
-L95EX'
-'
-'
+(
+L95&u'
+L95
+h'
 Hc
 ?
 ?
@@ -3400,13 +3404,15 @@ Hc
 ?
 ?
 ?
+C$
 "
-8$
 3
+)$
 D
 6$
 1$
 ,$
+#$
 $
 $
 $
@@ -3425,14 +3431,13 @@ $
 $
 $
 @
-(#
-x"
+f#
 
-%"
-L"
-L95:L"
-2
+
+
 _
+x
+
 
 
 d
@@ -3443,10 +3448,11 @@ d
 &
 &
 d
+
 t=
 =
 =
-R
+D
 @
 "
 uV%
