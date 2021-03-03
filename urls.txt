@@ -140,6 +140,7 @@ https://steamcommunity.com/public/shared/css/store_game_shared.css?__TIME__
 https://steamcommunity.com/public/shared/css/user_reviews.css?__TIME__
 https://store.steampowered.com/public/css/applications/interactive_recommender/main.css?__TIME__
 https://store.steampowered.com/public/css/applications/store/broadcast.css?__TIME__
+https://store.steampowered.com/public/css/applications/store/contenthub.css?__TIME__
 https://store.steampowered.com/public/css/applications/store/curator_admin~eventcomponents.css?__TIME__
 https://store.steampowered.com/public/css/applications/store/eventcomponents.css?__TIME__
 https://store.steampowered.com/public/css/applications/store/interactiverecommender.css?__TIME__
