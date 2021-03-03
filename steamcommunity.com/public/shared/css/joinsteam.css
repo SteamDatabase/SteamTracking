@@ -1,101 +1,10 @@
 
-@media screen and (max-width: 910px) {
-	html.responsive .rightcol {
-		display: none;
-	}
-
-	html.responsive	.form_notes, html.responsive .joinsteam .form_area, html.responsive .join_form select#country  {
-		width: 100%;
-		margin-left: 0;
-	}
-
-	html.responsive .ssa_box {
-		line-height: normal;
-	}
-
-	html.responsive .joinsteam input[type="text"] {
-		width: 100%;
-	}
-
-	html.responsive .password_tag:before {
-		display: none;
-	}
-
-	html.responsive .password_tag {
-		margin: 0;
-	}
-
-	html.responsive #createAccountButton {
-		display: block;
-		width: 100%;
-		text-align: center;
-		float: none;
-	}
-
-	html.responsive .page_content, html.responsive .page_content_client {
-		max-width: 100%;
-		width: auto;
-		margin: 0 2%;
-	}
-
-	html.responsive #create_account input, #create_account select {
-		max-width: 100%;
-		padding: 8px 0 8px 6px;
-	}
-
-	html.responsive .joinsteam .password_tag {
-		max-width: 100%;
-	}
-
-	html.responsive .join_form_notes {
-		margin: 0;
-	}
-
-	html.responsive .joinsteam .row_flex {
-		display: block;
-	}
-
-	html.responsive .joinsteam_content_container {
-		padding: 20px;
-	}
-
-	html.responsive body.v6.joinsteam {
-		background-image: none;
-	}
-
-	html.responsive .joinsteam .form_notes {
-		margin: 10px 0 0 0;
-	}
-
-}
-
-@media screen and ( max-width: 800px ) {
-
-	html.responsive body.v6.joinsteam {
-		background-image: none;
-	}
-
-}
-
-@media screen and ( min-width: 1200px )
-{
-	html.responsive body.v6.joinsteam {
-		background-position: -40vw 0;
-	}
-}
-
-@media screen and (min-width: 1600px) {
-	html.responsive body.v6.joinsteam {
-		background-position: -20vw 0;
-	}
-}
-
-body.v6.joinsteam.csgo, body.v6.joinsteam.dota, body.v6.china.joinsteam {
+body.joinsteam.csgo, body.joinsteam.dota, body.china.joinsteam {
 	background: #212429;
 	background-image: none;
 }
 
-body.v6.global.joinsteam {
+body.global.joinsteam {
 	background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/joinsteam/acct_creation_bg.jpg' );
 }
 
@@ -642,4 +551,96 @@ body.joinsteam.verify_email {
 
 .parental_consent_requested_container {
 	max-width: 500px;
+}
+
+
+@media screen and (max-width: 910px) {
+    html.responsive .rightcol {
+        display: none;
+    }
+
+    html.responsive	.form_notes, html.responsive .joinsteam .form_area, html.responsive .join_form select#country  {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    html.responsive .ssa_box {
+        line-height: normal;
+    }
+
+    html.responsive .joinsteam input[type="text"] {
+        width: 100%;
+    }
+
+    html.responsive .password_tag:before {
+        display: none;
+    }
+
+    html.responsive .password_tag {
+        margin: 0;
+    }
+
+    html.responsive #createAccountButton {
+        display: block;
+        width: 100%;
+        text-align: center;
+        float: none;
+    }
+
+    html.responsive .page_content, html.responsive .page_content_client {
+        max-width: 100%;
+        width: auto;
+        margin: 0 2%;
+    }
+
+    html.responsive #create_account input, #create_account select {
+        max-width: 100%;
+        padding: 8px 0 8px 6px;
+    }
+
+    html.responsive .joinsteam .password_tag {
+        max-width: 100%;
+    }
+
+    html.responsive .join_form_notes {
+        margin: 0;
+    }
+
+    html.responsive .joinsteam .row_flex {
+        display: block;
+    }
+
+    html.responsive .joinsteam_content_container {
+        padding: 20px;
+    }
+
+    html body.v6.joinsteam {
+        background-image: none;
+    }
+
+    html.responsive .joinsteam .form_notes {
+        margin: 10px 0 0 0;
+    }
+
+}
+
+@media screen and ( max-width: 800px ) {
+
+    html body.v6.joinsteam {
+        background-image: none;
+    }
+
+}
+
+@media screen and ( min-width: 1200px )
+{
+    html.responsive body.v6.joinsteam {
+        background-position: -40vw 0;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    html.responsive body.v6.joinsteam {
+        background-position: -20vw 0;
+    }
 }

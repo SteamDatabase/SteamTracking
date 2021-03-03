@@ -2,26 +2,26 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6393160";
+var CLSTAMP = "6395488";
 !(function (e) {
   function t(t) {
     for (
-      var r, a, c = t[0], s = t[1], u = t[2], f = 0, d = [];
-      f < c.length;
+      var r, a, s = t[0], c = t[1], u = t[2], f = 0, d = [];
+      f < s.length;
       f++
     )
-      (a = c[f]),
+      (a = s[f]),
         Object.prototype.hasOwnProperty.call(i, a) && i[a] && d.push(i[a][0]),
         (i[a] = 0);
-    for (r in s) Object.prototype.hasOwnProperty.call(s, r) && (e[r] = s[r]);
+    for (r in c) Object.prototype.hasOwnProperty.call(c, r) && (e[r] = c[r]);
     for (l && l(t); d.length; ) d.shift()();
     return o.push.apply(o, u || []), n();
   }
   function n() {
     for (var e, t = 0; t < o.length; t++) {
-      for (var n = o[t], r = !0, c = 1; c < n.length; c++) {
-        var s = n[c];
-        0 !== i[s] && (r = !1);
+      for (var n = o[t], r = !0, s = 1; s < n.length; s++) {
+        var c = n[s];
+        0 !== i[c] && (r = !1);
       }
       r && (o.splice(t--, 1), (e = a((a.s = n[0]))));
     }
@@ -46,11 +46,11 @@ var CLSTAMP = "6393160";
         });
         t.push((n[2] = r));
         var o,
-          c = document.createElement("script");
-        (c.charset = "utf-8"),
-          (c.timeout = 120),
-          a.nc && c.setAttribute("nonce", a.nc),
-          (c.src = (function (e) {
+          s = document.createElement("script");
+        (s.charset = "utf-8"),
+          (s.timeout = 120),
+          a.nc && s.setAttribute("nonce", a.nc),
+          (s.src = (function (e) {
             return (
               a.p +
               "javascript/webui/" +
@@ -119,35 +119,35 @@ var CLSTAMP = "6393160";
               ".js?contenthash=" +
               {
                 9: "abd716bb6bb7cebbe238",
-                10: "f03ca51387325fc5080d",
-                11: "f8af0c1c3b4dfffed44d",
-                12: "7ca4891695396203db72",
-                13: "111d8131bf156903498b",
-                14: "3694df3a1665ecacd4e4",
+                10: "aa4e15d170b5a89a1cfc",
+                11: "36d16b35ffb787e40816",
+                12: "4a685b8539955ecd6577",
+                13: "66142deb2f64b15c492a",
+                14: "4322d311afa405dcbd1b",
                 15: "6c0c7e7b3921889cb7e7",
-                16: "9e9ca04d85301c964024",
-                17: "a3b5793f934b1aeacd0b",
-                18: "75ac53790280667df821",
-                19: "7cbf4e9fb2da8c8849be",
-                20: "9aea159003b928c9d28d",
-                21: "77cae437633ce1f6e24c",
-                22: "b6bc9c86a16946d8912a",
-                23: "0695f292e5f531a5343f",
-                24: "8595ae18877c32f99391",
-                25: "0866f36572a2185c2f85",
-                26: "1a0550034f6c558a8af6",
-                27: "8fba5bc27d851499b7ca",
-                28: "09a9f7236cf9778cd549",
-                29: "2008060b0779f3244a62",
+                16: "7afd82b69655e5169809",
+                17: "36f2058af9aee45a9c9f",
+                18: "0a858da7fbf6bf054ea6",
+                19: "9389084f39858c25dd5a",
+                20: "5e6625fa91791520d7d6",
+                21: "a55537eb5c5dd62692fc",
+                22: "4089202ab1f9696b7567",
+                23: "6aa239fa8962a0bb020f",
+                24: "fd53d0ca2ac5136bb557",
+                25: "f882a39282b0b3b431ce",
+                26: "4d5127540de75817b1e5",
+                27: "2de5e724a19ef63419c9",
+                28: "b40966cee199f6f21831",
+                29: "12d13e9be8521d24073e",
                 30: "463059d9001862988cbb",
-                31: "3c34c91dbade241bfc39",
-                32: "c8d366311d697dcfa119",
-                33: "ed5e2b0edebe7e78ad0d",
-                34: "79caa22d1d87b27ee550",
-                35: "4032bf40e35d39ef4440",
-                36: "9c6db91b36da766ee085",
-                37: "02a241ff2c92dfec83ea",
-                38: "289cc9d0b871312d94f5",
+                31: "f4a5300e3f3c0026aba9",
+                32: "1eca23de83ff53c3ddc4",
+                33: "cd01098857753292392d",
+                34: "fb24fbf4d36c47741ec2",
+                35: "7e87aab59e1f4cd4288a",
+                36: "7b6f1b66b5a52688b8fa",
+                37: "1c25750af75536ceb7f4",
+                38: "d83b9594cb2a47416e83",
                 39: "dd555942eeebcf691e37",
                 40: "c59549f8ed9427361620",
                 41: "0ce934618bab28cb4f98",
@@ -181,28 +181,28 @@ var CLSTAMP = "6393160";
               }[e]
             );
           })(e));
-        var s = new Error();
+        var c = new Error();
         o = function (t) {
-          (c.onerror = c.onload = null), clearTimeout(u);
+          (s.onerror = s.onload = null), clearTimeout(u);
           var n = i[e];
           if (0 !== n) {
             if (n) {
               var r = t && ("load" === t.type ? "missing" : t.type),
                 o = t && t.target && t.target.src;
-              (s.message =
+              (c.message =
                 "Loading chunk " + e + " failed.\n(" + r + ": " + o + ")"),
-                (s.name = "ChunkLoadError"),
-                (s.type = r),
-                (s.request = o),
-                n[1](s);
+                (c.name = "ChunkLoadError"),
+                (c.type = r),
+                (c.request = o),
+                n[1](c);
             }
             i[e] = void 0;
           }
         };
         var u = setTimeout(function () {
-          o({ type: "timeout", target: c });
+          o({ type: "timeout", target: s });
         }, 12e4);
-        (c.onerror = c.onload = o), document.head.appendChild(c);
+        (s.onerror = s.onload = o), document.head.appendChild(s);
       }
     return Promise.all(t);
   }),
@@ -254,11 +254,11 @@ var CLSTAMP = "6393160";
     (a.oe = function (e) {
       throw (console.error(e), e);
     });
-  var c = (window.webpackJsonp = window.webpackJsonp || []),
-    s = c.push.bind(c);
-  (c.push = t), (c = c.slice());
-  for (var u = 0; u < c.length; u++) t(c[u]);
-  var l = s;
+  var s = (window.webpackJsonp = window.webpackJsonp || []),
+    c = s.push.bind(s);
+  (s.push = t), (s = s.slice());
+  for (var u = 0; u < s.length; u++) t(s[u]);
+  var l = c;
   o.push(["qM/t", 0]), n();
 })({
   "/7KC": function (e, t, n) {
@@ -307,10 +307,10 @@ var CLSTAMP = "6393160";
         return a;
       }),
       n.d(t, "p", function () {
-        return c;
+        return s;
       }),
       n.d(t, "j", function () {
-        return s;
+        return c;
       }),
       n.d(t, "k", function () {
         return u;
@@ -350,8 +350,8 @@ var CLSTAMP = "6393160";
       });
     var o = 1,
       a = 4,
-      c = 7,
-      s = 750,
+      s = 7,
+      c = 750,
       u = 799,
       l = 250820,
       f = 330050,
@@ -575,7 +575,7 @@ var CLSTAMP = "6393160";
         return a;
       }),
       n.d(t, "d", function () {
-        return c;
+        return s;
       });
     n("mrSG"), n("Gp1o");
     var r = n("q1tI");
@@ -597,7 +597,7 @@ var CLSTAMP = "6393160";
     function a(e, t) {
       null != e && ("function" == typeof e ? e(t) : (e.current = t));
     }
-    function c() {
+    function s() {
       var e = r.useState(0),
         t = e[0],
         n = e[1];
@@ -612,10 +612,10 @@ var CLSTAMP = "6393160";
       return a;
     }),
       n.d(t, "k", function () {
-        return c;
+        return s;
       }),
       n.d(t, "b", function () {
-        return s;
+        return c;
       }),
       n.d(t, "c", function () {
         return u;
@@ -695,7 +695,7 @@ var CLSTAMP = "6393160";
         OFFLINE_MODE: !1,
         IN_LIBRARY: !1,
       },
-      c = {
+      s = {
         logged_in: !1,
         steamid: "",
         accountid: 0,
@@ -709,7 +709,7 @@ var CLSTAMP = "6393160";
         short_url: "",
         country_code: "",
       },
-      s = { steamid: "", clanid: 0, listid: 0 },
+      c = { steamid: "", clanid: 0, listid: 0 },
       u = {
         CLANSTEAMID: "",
         CLANACCOUNTID: 0,
@@ -750,11 +750,11 @@ var CLSTAMP = "6393160";
       n && (delete n.SESSIONID, Object.assign(a, n), (t.config = !0));
       var r = p("userinfo", e);
       r &&
-        (Object.assign(c, r),
+        (Object.assign(s, r),
         (t.userConfig = !0),
-        c.is_support && d() && (c.is_support = !1));
+        s.is_support && d() && (s.is_support = !1));
       var i = p("broadcast", e);
-      i && (Object.assign(s, i), (t.broadcastConfig = !0));
+      i && (Object.assign(c, i), (t.broadcastConfig = !0));
       var o = p("community", e);
       o && (Object.assign(u, o), (t.communityConfig = !0));
       var f = p("event", e);
@@ -923,7 +923,7 @@ var CLSTAMP = "6393160";
       return o;
     }),
       n.d(t, "b", function () {
-        return c;
+        return s;
       });
     var r = n("1n9R"),
       i = { success: !0, result: 1 },
@@ -1168,22 +1168,22 @@ var CLSTAMP = "6393160";
           e
         );
       })(),
-      c = new o();
-    window.ClientConnectionAPI = c;
+      s = new o();
+    window.ClientConnectionAPI = s;
   },
   J0bI: function (e, t, n) {
     "use strict";
     n.d(t, "b", function () {
-      return c;
+      return s;
     }),
       n.d(t, "a", function () {
-        return s;
+        return c;
       });
     var r = n("mrSG"),
       i = n("2vnA"),
       o = n("0N1H"),
       a = n("tkkQ"),
-      c = (function () {
+      s = (function () {
         function e(e) {
           (this.m_bReady = !1),
             (this.m_bValid = !1),
@@ -1215,7 +1215,7 @@ var CLSTAMP = "6393160";
             return this.m_ulChatID;
           }),
           (e.prototype.GetURL = function () {
-            return this.m_strInviteCode ? s(this.m_strInviteCode) : null;
+            return this.m_strInviteCode ? c(this.m_strInviteCode) : null;
           }),
           (e.prototype.BIsUserBanned = function () {
             return this.m_bIsBanned;
@@ -1250,7 +1250,7 @@ var CLSTAMP = "6393160";
           e
         );
       })();
-    function s(e) {
+    function c(e) {
       return "public" == a.a.WEB_UNIVERSE
         ? "https://s.team/chat/" + e
         : a.a.COMMUNITY_BASE_URL + "chat/invite/" + e;
@@ -1259,10 +1259,10 @@ var CLSTAMP = "6393160";
   Kcgk: function (e, t, n) {
     "use strict";
     n.d(t, "j", function () {
-      return c;
+      return s;
     }),
       n.d(t, "e", function () {
-        return s;
+        return c;
       }),
       n.d(t, "h", function () {
         return u;
@@ -1292,9 +1292,9 @@ var CLSTAMP = "6393160";
       i = n("oh5H"),
       o = n("ujHl"),
       a = n("Gp1o");
-    function c(e, t, n) {
+    function s(e, t, n) {
       var a,
-        c = (a =
+        s = (a =
           "boolean" == typeof t
             ? { bExcludeAgo: t, bForceSingleUnits: n, bHighGranularity: !1 }
             : Object(r.a)(
@@ -1308,53 +1308,53 @@ var CLSTAMP = "6393160";
           ? "#TimeInterval_"
           : "#TimeSince_";
       if (e >= 2 * o.e.PerYear)
-        return Object(i.f)(c + "XYears", Math.floor(e / o.e.PerYear));
+        return Object(i.f)(s + "XYears", Math.floor(e / o.e.PerYear));
       if (e >= o.e.PerYear)
         return (e -= o.e.PerYear) >= 2 * o.e.PerMonth && !a.bForceSingleUnits
-          ? Object(i.f)(c + "1YearXMonths", Math.floor(e / o.e.PerMonth))
-          : Object(i.f)(c + "1Year");
+          ? Object(i.f)(s + "1YearXMonths", Math.floor(e / o.e.PerMonth))
+          : Object(i.f)(s + "1Year");
       if (e >= 2 * o.e.PerMonth)
-        return Object(i.f)(c + "XMonths", Math.floor(e / o.e.PerMonth));
+        return Object(i.f)(s + "XMonths", Math.floor(e / o.e.PerMonth));
       if (e >= 2 * o.e.PerWeek)
-        return Object(i.f)(c + "XWeeks", Math.floor(e / o.e.PerWeek));
+        return Object(i.f)(s + "XWeeks", Math.floor(e / o.e.PerWeek));
       if (e >= o.e.PerWeek)
-        return Object(i.f)(c + "1Week", Math.floor(e / o.e.PerWeek));
+        return Object(i.f)(s + "1Week", Math.floor(e / o.e.PerWeek));
       if (e >= 2 * o.e.PerDay)
-        return Object(i.f)(c + "XDays", Math.floor(e / o.e.PerDay));
+        return Object(i.f)(s + "XDays", Math.floor(e / o.e.PerDay));
       if (e >= o.e.PerDay)
         return (e -= o.e.PerDay) >= 2 * o.e.PerHour && !a.bForceSingleUnits
-          ? Object(i.f)(c + "1DayXHours", Math.floor(e / o.e.PerHour))
-          : Object(i.f)(c + "1Day");
+          ? Object(i.f)(s + "1DayXHours", Math.floor(e / o.e.PerHour))
+          : Object(i.f)(s + "1Day");
       if (e >= 2 * o.e.PerHour)
-        return Object(i.f)(c + "XHours", Math.floor(e / o.e.PerHour));
+        return Object(i.f)(s + "XHours", Math.floor(e / o.e.PerHour));
       if (e >= o.e.PerHour)
         return (e -= o.e.PerHour) >= 2 * o.e.PerMinute && !a.bForceSingleUnits
-          ? Object(i.f)(c + "1HourXMinutes", Math.floor(e / o.e.PerMinute))
-          : Object(i.f)(c + "1Hour");
+          ? Object(i.f)(s + "1HourXMinutes", Math.floor(e / o.e.PerMinute))
+          : Object(i.f)(s + "1Hour");
       if (e >= 2 * o.e.PerMinute) {
-        var s = Math.floor(e / o.e.PerMinute),
+        var c = Math.floor(e / o.e.PerMinute),
           u = e % o.e.PerMinute;
         return a.bHighGranularity && 0 != u
           ? 1 == u
-            ? Object(i.f)(c + "XMinutes1Second", s)
-            : Object(i.f)(c + "XMinutesXSeconds", s, u)
-          : Object(i.f)(c + "XMinutes", s);
+            ? Object(i.f)(s + "XMinutes1Second", c)
+            : Object(i.f)(s + "XMinutesXSeconds", c, u)
+          : Object(i.f)(s + "XMinutes", c);
       }
       if (e >= o.e.PerMinute) {
         u = e % o.e.PerMinute;
         return a.bHighGranularity && 0 != u
           ? 1 == u
-            ? Object(i.f)(c + "1Minute1Second")
-            : Object(i.f)(c + "1MinuteXSeconds", u)
-          : Object(i.f)(c + "1Minute");
+            ? Object(i.f)(s + "1Minute1Second")
+            : Object(i.f)(s + "1MinuteXSeconds", u)
+          : Object(i.f)(s + "1Minute");
       }
       return a.bHighGranularity
         ? 1 == e
-          ? Object(i.f)(c + "1Second")
-          : Object(i.f)(c + "XSeconds", e)
-        : Object(i.f)(c + "LessThanAMinute");
+          ? Object(i.f)(s + "1Second")
+          : Object(i.f)(s + "XSeconds", e)
+        : Object(i.f)(s + "LessThanAMinute");
     }
-    function s(e, t) {
+    function c(e, t) {
       var n = {
         weekday: "short",
         month: "long",
@@ -1423,19 +1423,19 @@ var CLSTAMP = "6393160";
           return Object(i.f)("#Time_Tomorrow");
       } else if ((o.setDate(o.getDate() - 1), r >= o))
         return Object(i.f)("#Time_Yesterday");
-      var c = { month: t ? "long" : "short", day: "numeric" },
-        s = r.setHours(0, 0, 0, 0) + c.month,
-        l = p.get(s);
+      var s = { month: t ? "long" : "short", day: "numeric" },
+        c = r.setHours(0, 0, 0, 0) + s.month,
+        l = p.get(c);
       return (
         l ||
-        ((l = r.toLocaleDateString(i.e.GetPreferredLocales(), c)),
-        p.set(s, l),
+        ((l = r.toLocaleDateString(i.e.GetPreferredLocales(), s)),
+        p.set(c, l),
         l)
       );
     }
     function m(e, t) {
       var n = new Date(1e3 * e),
-        c = new Date(),
+        s = new Date(),
         u = Object(r.a)(
           {
             bGranularFutureTime: !1,
@@ -1445,13 +1445,13 @@ var CLSTAMP = "6393160";
           },
           t
         );
-      if (n > c) {
+      if (n > s) {
         if (!u.bGranularFutureTime)
           return (
-            a.c(n.getTime() - c.getTime()),
-            n.getFullYear() == c.getFullYear() ? I(n) : O(n)
+            a.c(n.getTime() - s.getTime()),
+            n.getFullYear() == s.getFullYear() ? I(n) : O(n)
           );
-        a.c(new Date().setHours(24, 0, 0, 0) - c.getTime());
+        a.c(new Date().setHours(24, 0, 0, 0) - s.getTime());
         var f = new Date();
         return (
           f.setHours(0, 0, 0, 0),
@@ -1464,7 +1464,7 @@ var CLSTAMP = "6393160";
                 : (f.setDate(f.getDate() + 5), n < f ? C(n) : y(n, !0)))
         );
       }
-      a.c(new Date().setHours(24, 0, 0, 0) - c.getTime());
+      a.c(new Date().setHours(24, 0, 0, 0) - s.getTime());
       var d = new Date();
       if ((d.setHours(0, 0, 0, 0), n >= d))
         return u.bGranularToday
@@ -1477,7 +1477,7 @@ var CLSTAMP = "6393160";
       if (u.bGranularPast)
         return Object(i.f)(
           "#Time_Past_At",
-          s(e, n.getFullYear() == c.getFullYear()),
+          c(e, n.getFullYear() == s.getFullYear()),
           l(e)
         );
       if ((d.setDate(d.getDate() - 5), n >= d))
@@ -1486,7 +1486,7 @@ var CLSTAMP = "6393160";
       if (
         (d.setDate(d.getDate() - 21),
         n >= d ||
-          (n.getMonth() == c.getMonth() && n.getFullYear() == c.getFullYear()))
+          (n.getMonth() == s.getMonth() && n.getFullYear() == s.getFullYear()))
       ) {
         var p =
           Math.floor((h.valueOf() - n.valueOf()) / (1e3 * o.e.PerWeek)) + 1;
@@ -1494,7 +1494,7 @@ var CLSTAMP = "6393160";
           ? Object(i.f)("#TimeSince_1Week")
           : Object(i.f)("#TimeSince_XWeeks", p);
       }
-      return n.getFullYear() == c.getFullYear() ? I(n) : O(n);
+      return n.getFullYear() == s.getFullYear() ? I(n) : O(n);
     }
     var b = new Map(),
       g = new Map(),
@@ -1590,10 +1590,10 @@ var CLSTAMP = "6393160";
         return a;
       }),
       n.d(t, "e", function () {
-        return c;
+        return s;
       }),
       n.d(t, "c", function () {
-        return s;
+        return c;
       }),
       n.d(t, "b", function () {
         return u;
@@ -1632,15 +1632,15 @@ var CLSTAMP = "6393160";
       return !0;
     }
     function a(e, t) {
-      return c(e, function (e) {
+      return s(e, function (e) {
         return t == e;
       });
     }
-    function c(e, t) {
+    function s(e, t) {
       var n = e.findIndex(t);
       return n >= 0 && (e.splice(n, 1), !0);
     }
-    function s(e, t) {
+    function c(e, t) {
       return e.reduce(function (e, n, r, i) {
         return e + (t(n, r, i) ? 1 : 0);
       }, 0);
@@ -1749,10 +1749,10 @@ var CLSTAMP = "6393160";
       return a;
     }),
       n.d(t, "d", function () {
-        return c;
+        return s;
       }),
       n.d(t, "f", function () {
-        return s;
+        return c;
       }),
       n.d(t, "h", function () {
         return u;
@@ -1815,7 +1815,7 @@ var CLSTAMP = "6393160";
           e
         );
       })(),
-      c = (function () {
+      s = (function () {
         return function () {
           (this.broadcastid = "0"),
             (this.nViewers = 0),
@@ -1825,7 +1825,7 @@ var CLSTAMP = "6393160";
             (this.bBroadcastCapable = !1);
         };
       })();
-    function s() {
+    function c() {
       return {
         bNotifications_ShowIngame: !0,
         bNotifications_ShowOnline: !1,
@@ -2057,10 +2057,10 @@ var CLSTAMP = "6393160";
         return a;
       }),
       n.d(t, "c", function () {
-        return c;
+        return s;
       }),
       n.d(t, "b", function () {
-        return s;
+        return c;
       }),
       n.d(t, "e", function () {
         return u;
@@ -2128,7 +2128,7 @@ PERFORMANCE OF THIS SOFTWARE.
       }
       return n;
     }
-    function c(e, t, n, r) {
+    function s(e, t, n, r) {
       var i,
         o = arguments.length,
         a =
@@ -2140,28 +2140,28 @@ PERFORMANCE OF THIS SOFTWARE.
       if ("object" == typeof Reflect && "function" == typeof Reflect.decorate)
         a = Reflect.decorate(e, t, n, r);
       else
-        for (var c = e.length - 1; c >= 0; c--)
-          (i = e[c]) &&
+        for (var s = e.length - 1; s >= 0; s--)
+          (i = e[s]) &&
             (a = (o < 3 ? i(a) : o > 3 ? i(t, n, a) : i(t, n)) || a);
       return o > 3 && a && Object.defineProperty(t, n, a), a;
     }
-    function s(e, t, n, r) {
+    function c(e, t, n, r) {
       return new (n || (n = Promise))(function (i, o) {
         function a(e) {
           try {
-            s(r.next(e));
-          } catch (e) {
-            o(e);
-          }
-        }
-        function c(e) {
-          try {
-            s(r.throw(e));
+            c(r.next(e));
           } catch (e) {
             o(e);
           }
         }
         function s(e) {
+          try {
+            c(r.throw(e));
+          } catch (e) {
+            o(e);
+          }
+        }
+        function c(e) {
           var t;
           e.done
             ? i(e.value)
@@ -2170,9 +2170,9 @@ PERFORMANCE OF THIS SOFTWARE.
                 ? t
                 : new n(function (e) {
                     e(t);
-                  })).then(a, c);
+                  })).then(a, s);
         }
-        s((r = r.apply(e, t || [])).next());
+        c((r = r.apply(e, t || [])).next());
       });
     }
     function u(e, t) {
@@ -2190,15 +2190,15 @@ PERFORMANCE OF THIS SOFTWARE.
           ops: [],
         };
       return (
-        (o = { next: c(0), throw: c(1), return: c(2) }),
+        (o = { next: s(0), throw: s(1), return: s(2) }),
         "function" == typeof Symbol &&
           (o[Symbol.iterator] = function () {
             return this;
           }),
         o
       );
-      function c(o) {
-        return function (c) {
+      function s(o) {
+        return function (s) {
           return (function (o) {
             if (n) throw new TypeError("Generator is already executing.");
             for (; a; )
@@ -2260,7 +2260,7 @@ PERFORMANCE OF THIS SOFTWARE.
               }
             if (5 & o[0]) throw o[1];
             return { value: o[0] ? o[1] : void 0, done: !0 };
-          })([o, c]);
+          })([o, s]);
         };
       }
     }
@@ -2270,7 +2270,7 @@ PERFORMANCE OF THIS SOFTWARE.
       var r = Array(e),
         i = 0;
       for (t = 0; t < n; t++)
-        for (var o = arguments[t], a = 0, c = o.length; a < c; a++, i++)
+        for (var o = arguments[t], a = 0, s = o.length; a < s; a++, i++)
           r[i] = o[a];
       return r;
     }
@@ -2305,8 +2305,8 @@ PERFORMANCE OF THIS SOFTWARE.
       i = n("q1tI"),
       o = n("0N1H"),
       a = n("hEDq"),
-      c = n("1n9R"),
-      s = n("UqDm"),
+      s = n("1n9R"),
+      c = n("UqDm"),
       u = (n("XaMz"), n("Kcgk"));
     n.d(t, "g", function () {
       return u.a;
@@ -2368,8 +2368,8 @@ PERFORMANCE OF THIS SOFTWARE.
         (e.prototype.InitFromObjects = function (e, t, n, i, o) {
           o || this.m_mapTokens.clear();
           var a = Object(r.a)(Object(r.a)({}, n || {}), e),
-            c = Object(r.a)(Object(r.a)({}, i || {}), t || {});
-          this.AddTokens(a, c);
+            s = Object(r.a)(Object(r.a)({}, i || {}), t || {});
+          this.AddTokens(a, s);
         }),
         (e.prototype.InitDirect = function (e, t) {
           this.m_mapTokens.clear(),
@@ -2397,9 +2397,9 @@ PERFORMANCE OF THIS SOFTWARE.
         (e.prototype.GetELanguageFallbackOrder = function (t) {
           void 0 === t && (t = null);
           var n = new Array();
-          (n.push(Object(o.f)(c.d.LANGUAGE)),
-          (c.d.SUPPORTED_LANGUAGES || []).forEach(function (e) {
-            e.value != c.d.LANGUAGE && n.push(Object(o.f)(e.value));
+          (n.push(Object(o.f)(s.d.LANGUAGE)),
+          (s.d.SUPPORTED_LANGUAGES || []).forEach(function (e) {
+            e.value != s.d.LANGUAGE && n.push(Object(o.f)(e.value));
           }),
           t) &&
             e.GetLanguageListForRealms(t).forEach(function (e) {
@@ -2420,7 +2420,7 @@ PERFORMANCE OF THIS SOFTWARE.
                   "Unable to find localization token '" +
                     t +
                     "' for language '" +
-                    c.d.LANGUAGE +
+                    s.d.LANGUAGE +
                     "'"
                 ),
                 { bIncludeMessageInIdentifier: !0 }
@@ -2457,14 +2457,14 @@ PERFORMANCE OF THIS SOFTWARE.
         t[n - 1] = arguments[n];
       var o = g.LocalizeString(e);
       if (void 0 === o) return e;
-      for (var a, c = [], s = /(.*?)%(\d+)\$s/g, u = 0; (a = s.exec(o)); ) {
-        (u += a[0].length), c.push(a[1]);
+      for (var a, s = [], c = /(.*?)%(\d+)\$s/g, u = 0; (a = c.exec(o)); ) {
+        (u += a[0].length), s.push(a[1]);
         var l = parseInt(a[2]);
-        l >= 1 && l <= t.length && c.push(t[l - 1]);
+        l >= 1 && l <= t.length && s.push(t[l - 1]);
       }
       return (
-        c.push(o.substr(u)),
-        i.createElement.apply(i, Object(r.g)([i.Fragment, null], c))
+        s.push(o.substr(u)),
+        i.createElement.apply(i, Object(r.g)([i.Fragment, null], s))
       );
     }
     function h(e, t) {
@@ -2480,7 +2480,7 @@ PERFORMANCE OF THIS SOFTWARE.
           (e.Set = function (e, t, n) {
             if (e.length <= t) {
               if (t >= 30) return e;
-              e = Object(s.h)(e, t + 1, null);
+              e = Object(c.h)(e, t + 1, null);
             }
             return (e[t] = n), e;
           }),
@@ -2558,7 +2558,7 @@ PERFORMANCE OF THIS SOFTWARE.
         "vi-VN": 28,
       };
     function b() {
-      return _[c.d.LANGUAGE] || null;
+      return _[s.d.LANGUAGE] || null;
     }
     var g = new l();
     window.LocalizationManager = g;
@@ -2570,8 +2570,8 @@ PERFORMANCE OF THIS SOFTWARE.
       i = (n("O0sN"), n("q1tI")),
       o = n("i8i4"),
       a = n("tkkQ"),
-      c = n("Ezvv"),
-      s = (n("Y3TG"), n("oh5H")),
+      s = n("Ezvv"),
+      c = (n("Y3TG"), n("oh5H")),
       u = n("XaMz"),
       l = n("2vnA"),
       f = n("TyAF"),
@@ -2666,7 +2666,7 @@ PERFORMANCE OF THIS SOFTWARE.
             });
           }),
           (e.prototype.LaunchSteamIgnoreAccount = function () {
-            c.b.SetAllowAccountMismatch(!0), this.SendInviteToClient();
+            s.b.SetAllowAccountMismatch(!0), this.SendInviteToClient();
           }),
           (e.prototype.ForceLaunchSteamClient = function () {
             window.location.href =
@@ -2678,7 +2678,7 @@ PERFORMANCE OF THIS SOFTWARE.
             this.m_invite.BIsValid() &&
               !this.m_invite.BIsExpired() &&
               ((this.m_bConnectingToClient = !0),
-              c.b
+              s.b
                 .ShowChatRoomGroupInvite(this.m_invite.GetInviteCode())
                 .then(function (t) {
                   Object(l.F)(function () {
@@ -2748,7 +2748,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 i.createElement(
                   "div",
                   { className: "postedExpiredInvite" },
-                  Object(s.f)("#bbcode_invite_requesting_info")
+                  Object(c.f)("#bbcode_invite_requesting_info")
                 )
               );
             var e = this.props.controller.GetConnectResults(),
@@ -2764,12 +2764,12 @@ PERFORMANCE OF THIS SOFTWARE.
                     i.createElement(
                       "div",
                       { className: "groupName" },
-                      Object(s.f)("#InviteLanding_SentToSteam")
+                      Object(c.f)("#InviteLanding_SentToSteam")
                     ),
                     i.createElement(
                       "div",
                       { className: "inviteLabel" },
-                      Object(s.n)(
+                      Object(c.n)(
                         "#InviteLanding_SentToSteam_Desc",
                         i.createElement(
                           "a",
@@ -2777,7 +2777,7 @@ PERFORMANCE OF THIS SOFTWARE.
                             href: "javascript:void(0);",
                             onClick: this.LaunchWebChat,
                           },
-                          Object(s.f)(
+                          Object(c.f)(
                             "#InviteLanding_SentToSteam_Desc_LaunchWebChat"
                           )
                         )
@@ -2791,7 +2791,7 @@ PERFORMANCE OF THIS SOFTWARE.
                     i.createElement(
                       "div",
                       { className: "inviteLabel" },
-                      Object(s.f)("#InviteLanding_AccountMismatch")
+                      Object(c.f)("#InviteLanding_AccountMismatch")
                     ),
                     i.createElement(
                       "div",
@@ -2803,7 +2803,7 @@ PERFORMANCE OF THIS SOFTWARE.
                           type: "button",
                           onClick: this.OpenInSteamIgnoreAccount,
                         },
-                        Object(s.f)("#InviteLanding_OpenInSteam")
+                        Object(c.f)("#InviteLanding_OpenInSteam")
                       ),
                       i.createElement(
                         "button",
@@ -2812,7 +2812,7 @@ PERFORMANCE OF THIS SOFTWARE.
                           type: "button",
                           onClick: this.LaunchWebChat,
                         },
-                        Object(s.f)("#InviteLanding_OpenInWebChat")
+                        Object(c.f)("#InviteLanding_OpenInWebChat")
                       )
                     )
                   )
@@ -2823,12 +2823,12 @@ PERFORMANCE OF THIS SOFTWARE.
                     i.createElement(
                       "div",
                       { className: "groupName" },
-                      Object(s.f)("#InviteLanding_SentToSteam")
+                      Object(c.f)("#InviteLanding_SentToSteam")
                     ),
                     i.createElement(
                       "div",
                       { className: "inviteLabel" },
-                      Object(s.n)(
+                      Object(c.n)(
                         "#InviteLanding_SentToSteam_Desc",
                         i.createElement(
                           "a",
@@ -2836,7 +2836,7 @@ PERFORMANCE OF THIS SOFTWARE.
                             href: "javascript:void(0);",
                             onClick: this.LaunchWebChat,
                           },
-                          Object(s.f)(
+                          Object(c.f)(
                             "#InviteLanding_SentToSteam_Desc_LaunchWebChat"
                           )
                         )
@@ -2857,7 +2857,7 @@ PERFORMANCE OF THIS SOFTWARE.
                             type: "button",
                             onClick: this.LaunchSteamClient,
                           },
-                          Object(s.f)("#InviteLanding_OpenInSteam")
+                          Object(c.f)("#InviteLanding_OpenInSteam")
                         ),
                       i.createElement(
                         "button",
@@ -2866,14 +2866,14 @@ PERFORMANCE OF THIS SOFTWARE.
                           type: "button",
                           onClick: this.LaunchWebChat,
                         },
-                        Object(s.f)("#InviteLanding_OpenInWebChat")
+                        Object(c.f)("#InviteLanding_OpenInWebChat")
                       )
                     ),
                     this.m_bTriedToLaunchSteam &&
                       i.createElement(
                         "div",
                         { className: "inviteLabel inviteLabelLaunchPrompt" },
-                        Object(s.f)("#InviteLanding_OpenInSteam_Help")
+                        Object(c.f)("#InviteLanding_OpenInSteam_Help")
                       )
                   )
             );
@@ -2898,7 +2898,7 @@ PERFORMANCE OF THIS SOFTWARE.
               i.createElement(
                 "div",
                 { className: "postedExpiredInvite" },
-                Object(s.f)("#InviteLanding_ExpiredOrInvalid")
+                Object(c.f)("#InviteLanding_ExpiredOrInvalid")
               )
             );
           }),
@@ -2919,7 +2919,7 @@ PERFORMANCE OF THIS SOFTWARE.
           i.createElement(
             "div",
             { className: "inviteLabel" },
-            Object(s.n)(
+            Object(c.n)(
               "#bbcode_invite_description",
               i.createElement("span", {
                 dangerouslySetInnerHTML: {
@@ -2938,7 +2938,7 @@ PERFORMANCE OF THIS SOFTWARE.
       );
     }
     window.AssertMsg = u.a;
-    var y = new c.a();
+    var y = new s.a();
     function C(e) {
       var t;
       try {
@@ -2950,12 +2950,12 @@ PERFORMANCE OF THIS SOFTWARE.
     }
     function I(e) {
       return Object(r.b)(this, void 0, void 0, function () {
-        var t, i, o, a, c, u, l;
+        var t, i, o, a, s, u, l;
         return Object(r.e)(this, function (f) {
           switch (f.label) {
             case 0:
               return (
-                (t = s.b.GetLanguageFallback(e)),
+                (t = c.b.GetLanguageFallback(e)),
                 (i = e === t),
                 [
                   4,
@@ -2971,11 +2971,11 @@ PERFORMANCE OF THIS SOFTWARE.
               return (
                 (o = f.sent()),
                 (a = o[0]),
-                (c = o[1]),
+                (s = o[1]),
                 (u = o[2]),
                 (l = o[3]),
-                s.e.AddTokens(
-                  Object(r.a)(Object(r.a)({}, a), c),
+                c.e.AddTokens(
+                  Object(r.a)(Object(r.a)({}, a), s),
                   Object(r.a)(Object(r.a)({}, u), l)
                 ),
                 [2]
@@ -3022,13 +3022,13 @@ PERFORMANCE OF THIS SOFTWARE.
   "s+DT": function (e, t, n) {
     "use strict";
     n.d(t, "a", function () {
-      return c;
+      return s;
     });
     var r = n("2lpH"),
       i = n.n(r),
       o = n("0N1H"),
       a = n("1n9R"),
-      c = (function () {
+      s = (function () {
         function e(t, n, r, o) {
           void 0 === t && (t = 0),
             t instanceof e
@@ -3200,10 +3200,10 @@ PERFORMANCE OF THIS SOFTWARE.
         return a;
       }),
       n.d(t, "d", function () {
-        return c;
+        return s;
       }),
       n.d(t, "f", function () {
-        return s;
+        return c;
       });
     var r = {
       PerYear: 31536e3,
@@ -3234,10 +3234,10 @@ PERFORMANCE OF THIS SOFTWARE.
         0
       );
     }
-    function c(e) {
+    function s(e) {
       return new Date(e.getFullYear(), e.getMonth(), 1, 0, 0, 0, 0);
     }
-    function s(e) {
+    function c(e) {
       return new Promise(function (t) {
         return setTimeout(t, e);
       });

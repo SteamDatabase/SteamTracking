@@ -355,6 +355,21 @@
         EventEditor_AssociateBuildBranch: "%1$s - Build %2$s (%3$s)",
         EventEditor_AssociateBuildClear:
           "Don't associate this event with a build",
+        EventEditor_Versions_View: "View Version History",
+        EventEditor_VersionsPrompt_Title: "Roll event back to this version",
+        EventEditor_VersionsPrompt_Body:
+          "Are you sure that you want to roll this event back to the selected version? This will discard any unsaved changes, and restore the event back to the previous state",
+        EventEditor_VersionsUser: "Modified by: %1$s",
+        EventEditor_VersionsDialog_RollingBack:
+          "Rolling event back to previous version",
+        EventEditor_VersionsDialog_RollingBackFailed:
+          "An error occurred rolling back, please try again later",
+        EventEditor_RollbackToVersion: "Rollback",
+        EventEditor_VersionsDialog_Title: "Event History",
+        EventEditor_VersionsDialog_Body:
+          "Below is a listing of the most recent changes made to this event. You can select a version to roll back to if you want to undo changes",
+        EventEditor_Versions_NoVersions:
+          "This event doesn't have any previous versions",
         EventEditor_Images: "Images",
         EventEditor_SearchImages: "Search Images",
         EventEditor_UploadFile: "Upload Image",

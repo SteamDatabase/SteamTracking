@@ -138,6 +138,10 @@ select {
 	display: none;
 }
 
+.ratingSummaryHeader {
+	background: rgba( 0, 0, 0, 0.2 );
+}
+
 .ratingSummary {
 	font-size: 16px;
 	color: #D6D7D8;
@@ -147,6 +151,15 @@ select {
 		font-weight: normal; /* normal */
 
 		}
+
+.ratingSummaryHeader .review_source {
+	float: right;
+	margin-right: 5px;
+	margin-top: 15px;
+	opacity: 0.5;
+	width: auto;
+	height: auto;
+}
 
 .playTime  {
 	font-size: 12px;

@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [7],
+  [8],
   {
     E9gz: function (e, t, n) {
       e.exports = {
@@ -783,15 +783,12 @@
             o = v.useRef(null),
             r = v.useState(U.a.GetProfile(a)),
             i = r[0],
-            l = r[1],
-            s = v.useState(!U.a.BHasProfile(a)),
-            c = (s[0], s[1]);
+            l = r[1];
           v.useEffect(
             function () {
               var r = g.a.InitFromAccountID(t).ConvertTo64BitString();
               return (
                 U.a.BHasProfile(r) ||
-                  (c(!0),
                   Object(E.b)(void 0, void 0, void 0, function () {
                     var t, n, a;
                     return Object(E.e)(this, function (e) {
@@ -818,12 +815,10 @@
                             [3, 4]
                           );
                         case 4:
-                          return (
-                            t.token.reason || (l(U.a.GetProfile(r)), c(!1)), [2]
-                          );
+                          return t.token.reason || l(U.a.GetProfile(r)), [2];
                       }
                     });
-                  })),
+                  }),
                 function () {
                   o.current && o.current("ModEventUserProfile: unmounting");
                 }
@@ -831,7 +826,7 @@
             },
             [t]
           );
-          var d =
+          var s =
             "https://steamsupport.valvesoftware.com/account/overview/" + a;
           return v.createElement(
             "div",
@@ -840,7 +835,7 @@
               n,
               v.createElement(
                 "a",
-                { href: d, target: M.d.IN_CLIENT ? void 0 : "_blank" },
+                { href: s, target: M.d.IN_CLIENT ? void 0 : "_blank" },
                 Boolean(i)
                   ? v.createElement(v.Fragment, null, i.persona_name)
                   : v.createElement(
@@ -1730,144 +1725,147 @@
             Object(E.c)([ne.a], e.prototype, "OnUpdateSeasonalTag", null),
             (e = Object(E.c)([l.a], e))
           );
-        })(h.a.Component);
-      h.a.Component;
-      var ve = Object(l.a)(function (e) {
-          var t = Object(v.useState)(!B.a.Get().BHasApp(e.appid)),
-            n = t[0],
-            o = t[1],
-            i = h.a.useRef(b.a.CancelToken.source());
-          if (
-            (Object(v.useEffect)(function () {
-              return function () {
-                return i.current.cancel(
-                  "EventModerationChannelInfo component unmounted"
-                );
-              };
-            }, []),
-            Object(v.useEffect)(
-              function () {
-                var a = e.appid,
-                  r = e.clanSteamID;
-                ((a && !B.a.Get().BHasApp(a)) ||
-                  (r && !y.a.BHasClanInfoLoaded(r))) &&
-                  Object(E.b)(void 0, void 0, void 0, function () {
-                    var t, n;
-                    return Object(E.e)(this, function (e) {
-                      switch (e.label) {
-                        case 0:
-                          return (
-                            e.trys.push([0, 2, 3, 4]),
-                            [
-                              4,
-                              Promise.all([
-                                B.a
-                                  .Get()
-                                  .QueueAppRequest(a, {
-                                    include_assets: !0,
-                                    include_release: !0,
-                                  }),
-                                r ? y.a.LoadClanInfoForClanSteamID(r) : void 0,
-                              ]),
-                            ]
-                          );
-                        case 1:
-                          return e.sent(), [3, 4];
-                        case 2:
-                          return (
-                            (t = e.sent()),
-                            (n = Object(j.a)(t)),
-                            console.error(
-                              "EventModerationChannelInfo: App Load: " +
-                                n.strErrorMsg,
-                              n
-                            ),
-                            [3, 4]
-                          );
-                        case 3:
-                          return i.current.token.reason || o(!1), [7];
-                        case 4:
-                          return [2];
-                      }
+        })(h.a.Component),
+        ve =
+          (h.a.Component,
+          Object(l.a)(function (e) {
+            var t = Object(v.useState)(!B.a.Get().BHasApp(e.appid)),
+              n = t[0],
+              o = t[1],
+              i = h.a.useRef(b.a.CancelToken.source());
+            if (
+              (Object(v.useEffect)(function () {
+                return function () {
+                  return i.current.cancel(
+                    "EventModerationChannelInfo component unmounted"
+                  );
+                };
+              }, []),
+              Object(v.useEffect)(
+                function () {
+                  var a = e.appid,
+                    r = e.clanSteamID;
+                  ((a && !B.a.Get().BHasApp(a)) ||
+                    (r && !y.a.BHasClanInfoLoaded(r))) &&
+                    Object(E.b)(void 0, void 0, void 0, function () {
+                      var t, n;
+                      return Object(E.e)(this, function (e) {
+                        switch (e.label) {
+                          case 0:
+                            return (
+                              e.trys.push([0, 2, 3, 4]),
+                              [
+                                4,
+                                Promise.all([
+                                  B.a
+                                    .Get()
+                                    .QueueAppRequest(a, {
+                                      include_assets: !0,
+                                      include_release: !0,
+                                    }),
+                                  r
+                                    ? y.a.LoadClanInfoForClanSteamID(r)
+                                    : void 0,
+                                ]),
+                              ]
+                            );
+                          case 1:
+                            return e.sent(), [3, 4];
+                          case 2:
+                            return (
+                              (t = e.sent()),
+                              (n = Object(j.a)(t)),
+                              console.error(
+                                "EventModerationChannelInfo: App Load: " +
+                                  n.strErrorMsg,
+                                n
+                              ),
+                              [3, 4]
+                            );
+                          case 3:
+                            return i.current.token.reason || o(!1), [7];
+                          case 4:
+                            return [2];
+                        }
+                      });
                     });
-                  });
-              },
-              [e]
-            ),
-            n)
-          )
-            return h.a.createElement(X.a, {
-              size: "small",
-              string: Object(N.f)("#EventModTile_AppInfoLoading"),
-            });
-          var a = e.appid,
-            r = e.clanSteamID;
-          if (a) {
-            var l = B.a.Get().GetApp(a);
-            return l
-              ? h.a.createElement(
+                },
+                [e]
+              ),
+              n)
+            )
+              return h.a.createElement(X.a, {
+                size: "small",
+                string: Object(N.f)("#EventModTile_AppInfoLoading"),
+              });
+            var a = e.appid,
+              r = e.clanSteamID;
+            if (a) {
+              var l = B.a.Get().GetApp(a);
+              return l
+                ? h.a.createElement(
+                    "div",
+                    { className: re.TileAppInfo },
+                    h.a.createElement(
+                      "div",
+                      { className: re.TileAppInfoTitle },
+                      h.a.createElement(
+                        Q.b,
+                        { type: "app", id: l.GetAppID() },
+                        h.a.createElement(
+                          $.a,
+                          { href: Object(ae.f)(l.GetStorePageURL()) },
+                          h.a.createElement("img", {
+                            className: re.TileAppInfoImage,
+                            src: l.assets.GetMainCapsuleURL(),
+                          })
+                        )
+                      ),
+                      h.a.createElement(
+                        Q.b,
+                        { type: "app", id: l.GetAppID() },
+                        h.a.createElement(
+                          $.a,
+                          { href: Object(ae.f)(l.GetStorePageURL()) },
+                          h.a.createElement("div", null, l.GetName())
+                        )
+                      )
+                    )
+                  )
+                : null;
+            }
+            if (r) {
+              var s = r.GetAccountID(),
+                c = y.a.GetClanInfoByClanAccountID(s);
+              if (c && c.is_curator)
+                return h.a.createElement(
                   "div",
                   { className: re.TileAppInfo },
                   h.a.createElement(
                     "div",
                     { className: re.TileAppInfoTitle },
                     h.a.createElement(
-                      Q.b,
-                      { type: "app", id: l.GetAppID() },
+                      $.a,
+                      {
+                        href: Object(ae.f)(
+                          M.d.STORE_BASE_URL + "/curator/" + s + "/"
+                        ),
+                      },
+                      h.a.createElement("img", {
+                        className: re.TileAppInfoImage,
+                        src: c.avatar_full_url,
+                      }),
                       h.a.createElement(
-                        $.a,
-                        { href: Object(ae.f)(l.GetStorePageURL()) },
-                        h.a.createElement("img", {
-                          className: re.TileAppInfoImage,
-                          src: l.assets.GetMainCapsuleURL(),
-                        })
-                      )
-                    ),
-                    h.a.createElement(
-                      Q.b,
-                      { type: "app", id: l.GetAppID() },
-                      h.a.createElement(
-                        $.a,
-                        { href: Object(ae.f)(l.GetStorePageURL()) },
-                        h.a.createElement("div", null, l.GetName())
+                        "div",
+                        null,
+                        Object(N.f)("#EventModTile_CuratorName", c.group_name)
                       )
                     )
                   )
-                )
-              : null;
-          }
-          if (r) {
-            var s = r.GetAccountID(),
-              c = y.a.GetClanInfoByClanAccountID(s);
-            if (c && c.is_curator)
-              return h.a.createElement(
-                "div",
-                { className: re.TileAppInfo },
-                h.a.createElement(
-                  "div",
-                  { className: re.TileAppInfoTitle },
-                  h.a.createElement(
-                    $.a,
-                    {
-                      href: Object(ae.f)(
-                        M.d.STORE_BASE_URL + "/curator/" + s + "/"
-                      ),
-                    },
-                    h.a.createElement("img", {
-                      className: re.TileAppInfoImage,
-                      src: c.avatar_full_url,
-                    }),
-                    h.a.createElement(
-                      "div",
-                      null,
-                      Object(N.f)("#EventModTile_CuratorName", c.group_name)
-                    )
-                  )
-                )
-              );
-          }
-          return null;
-        }),
+                );
+            }
+            return null;
+          })),
         he = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;

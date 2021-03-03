@@ -2741,3 +2741,9 @@ body.v6 #footer_spacer.china_spacer {
     width: 96px;
     vertical-align: top;
 }
+
+.gpnav:focus
+{
+    outline: 4px solid blue;
+    box-shadow: 0 0 2px inset #0000ff;
+}

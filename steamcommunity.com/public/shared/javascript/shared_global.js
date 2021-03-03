@@ -3063,6 +3063,9 @@ function HideFlyoutMenu( event, elemLink, elemPopup )
 	var $Link = $JFromIDOrElement(elemLink);
 	var $Popup = $JFromIDOrElement(elemPopup);
 
+	if ( !$Link.hasClass('focus') )
+		return;
+
 	if ( event )
 	{
 		var reltarget = $J( event.relatedTarget );
@@ -3080,6 +3083,7 @@ function HideFlyoutMenu( event, elemLink, elemPopup )
 		window.setTimeout( function() { HideWithFade( $Popup ); }, 33 );
 
 	$Link.removeClass('focus');
+	$J(document).off('.FlyoutDismiss');
 }
 
 function AlignMenu( elemLink, elemPopup, align, valign, bLinkHasBorder, elemAlternateAlignTo )
@@ -3192,7 +3196,7 @@ function AlignMenu( elemLink, elemPopup, align, valign, bLinkHasBorder, elemAlte
 
 function BindAutoFlyoutEvents()
 {
-	var fnShowFlyout = function( $Tab, bIsHover )
+	var fnShowFlyout = function( $Tab, bIsHover, bTakeFocus )
 	{
 		var $Content = $J('#' + $Tab.data('flyout') );
 		var bResponsiveSlidedownMenu = window.UseSmallScreenMode && window.UseSmallScreenMode() && $Content.hasClass('responsive_slidedown');
@@ -3212,7 +3216,7 @@ function BindAutoFlyoutEvents()
 			return;
 		}
 
-		if ( !$Content.data('flyout-mouseleave-bound') )
+		if ( !$Content.data('flyout-events-bound') )
 		{
 			$Content.on('mouseleave.Flyout', function( e ) {
 				if ( window.UseSmallScreenMode && window.UseSmallScreenMode() && $Content.hasClass('responsive_slidedown') )
@@ -3223,11 +3227,34 @@ function BindAutoFlyoutEvents()
 
 				HideFlyoutMenu( null, $Tab, $Content );
 			});
-			$Content.data('flyout-mouseleave-bound', true );
+
+			$Content.add($Tab).on('v_gamepadpress', function( e, button ) {
+				if ( button.button == 'CANCEL' )
+				{
+					HideFlyoutMenu( null, $Tab, $Content );
+					if ( typeof GPNavFocusChild != 'undefined' )
+						GPNavFocusChild( $Tab );
+				}
+			});
+
+			$Content.on('focusout', function( e ) {
+				if ( !e.relatedTarget || !$J.contains( e.currentTarget, e.relatedTarget ) )
+					HideFlyoutMenu( null, $Tab, $Content );
+			});
+
+			$Content.data('flyout-events-bound', true );
 		}
 
 
 		FlyoutMenu( $Tab, $Content, $Tab.data('flyout-align'), $Tab.data('flyout-valign'), false, $Tab.data('flyout-align-to-element' ) );
+
+		if ( bTakeFocus && typeof GPNavFocusChild !== 'undefined' )
+		{
+			window.setTimeout( function() {
+				console.log( 'Request focus in', $Content[0] );
+				GPNavFocusChild( $Content );
+			}, 5 );
+		}
 
 		if ( window.UseTouchFriendlyMode && window.UseTouchFriendlyMode() )
 		{
@@ -3237,13 +3264,11 @@ function BindAutoFlyoutEvents()
 						return;
 
 					HideFlyoutMenu( null, $Tab, $Content );
-					$J(document).off('click.FlyoutDismiss');
 					e.preventDefault();
 				});
 			}, 1 );
 		}
 	};
-
 
 	$J(document).on( 'mouseenter.Flyout click.Flyout', '.flyout_tab', function(e) {
 		var $Tab = $J(this);
@@ -3287,6 +3312,15 @@ function BindAutoFlyoutEvents()
 			HideFlyoutMenu( null, $Tab, $Content );
 
 			return;
+		}
+	});
+
+		$J('.flyout_tab').attr('data-gpfocus','manual');
+	$J(document).on('v_gamepadpress', '.flyout_tab', function( e, button ) {
+		if ( button.button == 'OK' )
+		{
+			fnShowFlyout( $J(this), false, true );
+			e.stopPropagation();
 		}
 	});
 }

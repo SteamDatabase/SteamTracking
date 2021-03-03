@@ -530,6 +530,8 @@ function DecorateFilterControls()
 		var $Control = $J(this);
 		var bClientSideOnly = $Control.data('clientside');
 
+		$Control.attr( 'data-gpfocus', 'item' );
+
 		// Skip client-side only fields.
 		if (bClientSideOnly)
 		    return;
@@ -954,6 +956,7 @@ function InitAutocollapse()
 	var prefs = GetCollapsePrefs();
 	$J('.search_collapse_block').each( function() {
 		var $Block = $J(this);
+		$Block.attr('data-gpnav','rows').attr('data-gpfocus','group');
 		var name = $Block.data('collapseName');
 		var bCollapsed;
 		if ( prefs[ name ] !== undefined )
@@ -985,6 +988,15 @@ function InitAutocollapse()
 
 			$Block.toggleClass('collapsed');
 			SaveCollapsePrefs( prefs );
+		});
+
+		$Block.on('v_gpfocus', function() {
+			if ( $Block.hasClass('collapsed') )
+			{
+				// show but don't modify preferences
+				$Block.children('.block_content').slideDown( 'fast' );
+				$Block.toggleClass('collapsed');
+			}
 		});
 	});
 }

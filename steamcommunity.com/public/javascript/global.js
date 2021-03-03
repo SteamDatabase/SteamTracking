@@ -261,6 +261,34 @@ function RecordAJAXPageView( url )
 var g_SNR = false;
 var g_strLanguage = 'english';
 
+// given an array of impressions as strings, this will handle joining them all together into a singular string, but enforcing that it doesn't
+// go above the cookie size limit which can otherwise cause users to become stuck since the page requests will start failing
+function JoinImpressionsUpToLimit( rgImpressions )
+{
+	//cookies generally can go up to 4k bytes, but we can have problems when we start getting that close, so cut it off earlier
+	var nRemainingLen = 3200;
+	var result = '';
+	for ( var i = 0; i < rgImpressions.length; i++ )
+	{
+		var impression = String( rgImpressions[ i ] );
+		var nImpressionLen = encodeURIComponent( impression + '|' ).length;
+
+		//did we run out of room in our list?
+		if ( nRemainingLen < nImpressionLen )
+			break;
+
+		//add the separator if not the first entry
+		if ( result !== '' )
+			result += '|';
+
+		//add our impression and remove that space from what is available
+		result += impression;
+		nRemainingLen -= nImpressionLen;
+	}
+
+	return result;
+}
+
 function RecordAppImpression( appid, snr )
 {
 	if ( appid == 0 || !snr )
@@ -269,10 +297,11 @@ function RecordAppImpression( appid, snr )
 	var strImpressions = V_GetCookie( "app_impressions" );
 	var rgImpressions = strImpressions && strImpressions.length != 0 ? strImpressions.split( "|" ) : [];
 
+
 	var strImpressionData = appid + '@' + snr;
 	rgImpressions.push( strImpressionData );
 
-	V_SetCookie( "app_impressions", rgImpressions.join( '|' ) );
+	V_SetCookie( "app_impressions", JoinImpressionsUpToLimit( rgImpressions ) );
 }
 
 
@@ -314,16 +343,16 @@ function v_currencyformat( valueInCents, currencyCode, countryCode )
 		{
 			currencyFormat = currencyFormat.replace( '.00', '' );
 		}
-		
+
 		if ( currencyData.strDecimalSymbol != '.' )
 		{
 			currencyFormat = currencyFormat.replace( '.', currencyData.strDecimalSymbol );
 		}
-		
+
 		var currencyReturn = IsCurrencySymbolBeforeValue( currencyCode ) ?
-			 GetCurrencySymbol( currencyCode ) + currencyData.strSymbolAndNumberSeparator + currencyFormat 
+			 GetCurrencySymbol( currencyCode ) + currencyData.strSymbolAndNumberSeparator + currencyFormat
 			 : currencyFormat + currencyData.strSymbolAndNumberSeparator + GetCurrencySymbol( currencyCode );
-		
+
 		if ( currencyCode == 'USD' && typeof(countryCode) != 'undefined' && countryCode != 'US' )
 		{
 			return currencyReturn + ' USD';
@@ -989,7 +1018,7 @@ function ApplyAdultContentPreferencesHelper( e, bGlobalHideAdultContentSex, bGlo
 	{
 		return;
 	}
-	
+
 	e.data( 'processed_adult_content', true );
 
 	var bHideAdultContentSex = bGlobalHideAdultContentSex;
@@ -1638,7 +1667,7 @@ var CCommentThread = Class.create( {
 		var params = this.ParametersWithDefaults( {
 			comment: this.m_elTextArea.value
 		} );
-		
+
 		this.m_bLoading = true;
 		new Ajax.Request( this.GetActionURL( 'post' ), {
 			method: 'post',
@@ -2291,7 +2320,7 @@ var CCommentThread = Class.create( {
 			el.addClassName( 'active' );
 		else
 			el.observe( 'click',  function(e) { e.stop(); fnGoToPage(); } );
-		
+
 		elPageLinks.insert( el );
 		elPageLinks.insert( ' ' );
 	},

@@ -35,7 +35,7 @@ function JoinImpressionsUpToLimit( rgImpressions )
 	for ( var i = 0; i < rgImpressions.length; i++ )
 	{
 		var impression = String( rgImpressions[ i ] );
-		var nImpressionLen = impression.length + 1;	//+1 is for the | separator
+		var nImpressionLen = encodeURIComponent( impression + '|' ).length;
 
 		//did we run out of room in our list?
 		if ( nRemainingLen < nImpressionLen )
@@ -45,7 +45,7 @@ function JoinImpressionsUpToLimit( rgImpressions )
 		if ( result !== '' )
 			result += '|';
 
-		//add our impresison and remove that space from what is available
+		//add our impression and remove that space from what is available
 		result += impression;
 		nRemainingLen -= nImpressionLen;
 	}

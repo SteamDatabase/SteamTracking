@@ -1457,7 +1457,7 @@ GHomepage = {
 
 				if ( !$Col )
 				{
-					$Col = $J('<div/>');
+					$Col = $J('<div/>', {'data-gpnav': 'rows'} );
 					$Page.append( $Col );
 				}
 
@@ -1483,7 +1483,7 @@ GHomepage = {
 
 				if ( !$Col )
 				{
-					$Col = $J('<div/>');
+					$Col = $J('<div/>', {'data-gpnav': 'rows'});
 					$Page.append( $Col );
 				}
 

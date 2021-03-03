@@ -113,9 +113,9 @@ background: -webkit-linear-gradient( 30deg, rgba(97,100,101,0.3) 5%,rgba(226,244
 
 .review_box .vote_header {
 	min-height: 44px;
-	margin: 0 8px 13px 8px;
+	margin: 8px 8px 13px 8px;
 	overflow: hidden;
-	padding-top: 8px;
+	background: rgba( 0, 0, 0, 0.2 );
 }
 
 .review_box .vote_header .title {
@@ -136,6 +136,19 @@ background: -webkit-linear-gradient( 30deg, rgba(97,100,101,0.3) 5%,rgba(226,244
 .review_box .vote_header .thumb {
 	float: left;
 	margin-right: 10px;
+	width: 44px;
+	height: 44px;
+}
+.review_box .vote_header .thumb > a > img {
+	width: 44px;
+	height: 44px;
+}
+
+.review_box .vote_header .review_source {
+	float: right;
+	margin-right: 5px;
+	margin-top: 15px;
+	opacity: 0.5;
 }
 
 .review_box .content {

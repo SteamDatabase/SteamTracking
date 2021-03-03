@@ -4721,3 +4721,9 @@ body.v6.infinite_scrolling #footer_spacer.small_footer {
 {
 	margin-top: 50px;
 }
+
+html.gpnav_active .maincap:focus-within
+{
+    outline: 4px solid blue;
+    box-shadow: 0 0 2px inset #0000ff;
+}

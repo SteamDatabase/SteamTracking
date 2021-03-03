@@ -2136,6 +2136,38 @@ var CGenericCarousel = function( $elContainer, nSpeed, fnOnFocus, fnOnBlur, fnCl
 	this.$elArrowLeft.click( function(e){ instance.Advance(-1); e.preventDefault(); return true; });
 	this.$elArrowRight.click( function(e){ instance.Advance(); e.preventDefault(); return true; });
 
+	this.$elContainer.attr('data-gpnav', 'columns' );//.attr('data-gpfocus',1);
+	this.$elContainer.on('v_gamepadpress', function( e, button ) {
+		if ( button.button == 'BUMPER_BACK' )
+		{
+			instance.Advance( -1, true );
+			e.stopPropagation();
+		}
+		else if ( button.button == 'BUMPER_FORWARD' )
+		{
+			// -1 means go back 1, any other number means "go to that index".
+			instance.Advance( undefined, true );
+			e.stopPropagation();
+		}
+	}).on('focusin', function( e ) {
+		if ( e.target != e.currentTarget )
+		{
+			// focus on a child element; make sure it's in view
+			instance.$elItems.each( function ( index ) {
+				// $elItems are caps in main cluster, but pages in others
+				if ( $J.contains( this, e.target ) || this == e.target )
+				{
+					if ( !$J(this).hasClass('focus') )
+						instance.Advance( index );
+					return false; // stop iterating
+				}
+			});
+		}
+		instance.fnMouseOver();
+	}).on('focusout', function() {
+		instance.fnMouseOut();
+	});
+
 	if( this.$elThumbs.length < 2 )
 	{
 		this.$elThumbs.parent().css({'visibility':'hidden'})
@@ -2252,7 +2284,7 @@ CGenericCarousel.prototype.bIsResponsive = function( )
 	return window.UseSmallScreenMode && window.UseSmallScreenMode();
 }
 
-CGenericCarousel.prototype.Advance = function( nNewIndex )
+CGenericCarousel.prototype.Advance = function( nNewIndex, bApplyFocus )
 {
 	if( this.bIsResponsive() )
 		return this.ResponsiveAdvance(nNewIndex);
@@ -2267,6 +2299,9 @@ CGenericCarousel.prototype.Advance = function( nNewIndex )
 	this.fnOnBlur( this.nIndex );
 	this.fnOnFocus( nNextIndex );
 	this.nIndex = nNextIndex;
+
+	if ( bApplyFocus && typeof GPNavFocusChild !== 'undefined' )
+		GPNavFocusChild( this.$elItems[this.nIndex] );
 
 	this.UpdateControls();
 	this.HintNearbyCapsules();
