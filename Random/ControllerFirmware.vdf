@@ -227,5 +227,13 @@
                 "crc128"                "f114f160000000000000000000000000"
                 "bootloadertimestamp"   "60359657"
         }
+        "2"
+        {
+                "firmwarebinary"        "/firmware/firmware_4612_603FDA60.bin"
+                "firmwaretimestamp"     "603FDA60"
+                "minclientpackage"      ""
+                "crc128"                "64f5a348000000000000000000000000"
+                "bootloadertimestamp"   "603FDA60"
+        }
     }
 }
