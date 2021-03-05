@@ -6971,36 +6971,38 @@
             function () {
               M.a.Get().HintLoad();
               var e = { id: E, type: C };
-              Object($.e)([e]).then(function () {
-                var n = Object($.d)(e),
-                  r = ie(e.type),
-                  a = n.id;
-                o.current.token.reason ||
-                  (n && r
-                    ? (c(n),
-                      d(r),
-                      h(a),
-                      Object($.c)(e).then(function (e) {
-                        var t;
-                        1 == e.length
-                          ? (t = L.a.GetAppLinkInfo(e[0])) &&
-                            !o.current.token.reason &&
-                            ((r = "app"), (a = t.appid), y(t), d(r), h(a))
-                          : "bundle" != r || o.current.token.reason
-                          ? "sub" != r ||
-                            o.current.token.reason ||
-                            v(
-                              n.appids.map(function (e) {
-                                return L.a.GetAppLinkInfo(e);
-                              })
-                            )
-                          : v(
-                              n.packageids.map(function (e) {
-                                return I.b.GetPackageInfo(e);
-                              })
-                            );
-                      }))
-                    : console.warn("Unsupported item:", e.type, E));
+              Object($.f)([e]).then(function () {
+                var n, r, a;
+                Object($.b)(e) ||
+                  ((n = Object($.e)(e)),
+                  (r = ie(e.type)),
+                  (a = n.id),
+                  o.current.token.reason ||
+                    (n && r
+                      ? (c(n),
+                        d(r),
+                        h(a),
+                        Object($.d)(e).then(function (e) {
+                          var t;
+                          1 == e.length
+                            ? (t = L.a.GetAppLinkInfo(e[0])) &&
+                              !o.current.token.reason &&
+                              ((r = "app"), (a = t.appid), y(t), d(r), h(a))
+                            : "bundle" != r || o.current.token.reason
+                            ? "sub" != r ||
+                              o.current.token.reason ||
+                              v(
+                                n.appids.map(function (e) {
+                                  return L.a.GetAppLinkInfo(e);
+                                })
+                              )
+                            : v(
+                                n.packageids.map(function (e) {
+                                  return I.b.GetPackageInfo(e);
+                                })
+                              );
+                        }))
+                      : console.warn("Unsupported item:", e.type, E)));
               });
             },
             [E, C]
@@ -7769,13 +7771,13 @@
                 t = this.props.capsule;
               (this.m_bIsMounted = !0),
                 M.a.Get().HintLoad(),
-                Object($.e)([t]).then(function () {
+                Object($.f)([t]).then(function () {
                   var e;
                   n.m_bIsMounted &&
-                    ((e = Object($.d)(t))
+                    ((e = Object($.e)(t))
                       ? n.setState({ info: e })
                       : console.warn("Unsupported item:", t.type, t.id),
-                    Object($.c)(n.props.capsule).then(function (e) {
+                    Object($.d)(n.props.capsule).then(function (e) {
                       var t;
                       n.m_bIsMounted &&
                         ((t = 1 == e.length ? L.a.GetAppLinkInfo(e[0]) : null),
@@ -8536,6 +8538,9 @@
             }),
             (e.prototype.GetAllLoadedAppLinks = function () {
               return this.m_mapAppLinkInfo;
+            }),
+            (e.prototype.BIsAppMissing = function (e) {
+              return this.m_mapMissingApps.has(e);
             }),
             (e.prototype.BHasAllAppLinksLoaded = function (e) {
               this.LazyInit();
@@ -15560,7 +15565,7 @@
                             (s = s.filter(function (e) {
                               return !a || a.ShouldShowCapsule(e);
                             })),
-                          [4, Object(Pn.e)(s)]);
+                          [4, Object(Pn.f)(s)]);
                     case 7:
                       return (
                         e.sent(), (v = new Array()), [4, Object(Pn.a)(s, !1, v)]
@@ -17804,7 +17809,7 @@
                             (C = Math.min(C, D))),
                           l.length > C && (l = l.slice(0, C)),
                           (B = Object(Fn.a)(n)),
-                          [4, Object(Pn.e)(l, B)]
+                          [4, Object(Pn.f)(l, B)]
                         );
                       case 5:
                         return (
@@ -24001,7 +24006,7 @@
                   switch (e.label) {
                     case 0:
                       return (
-                        (t = this.props.info), (n = []), [4, Object(M.c)(t)]
+                        (t = this.props.info), (n = []), [4, Object(M.d)(t)]
                       );
                     case 1:
                       if (
@@ -24371,16 +24376,16 @@
             (D.a.useEffect(
               function () {
                 var a = o;
-                Object(M.e)([a], !1, _.current).then(function () {
+                Object(M.f)([a], !1, _.current).then(function () {
                   return Object(O.b)(void 0, void 0, void 0, function () {
                     var t, n, r;
                     return Object(O.e)(this, function (e) {
                       switch (e.label) {
                         case 0:
-                          return [4, Object(M.c)(a)];
+                          return [4, Object(M.d)(a)];
                         case 1:
                           return ((t = e.sent()),
-                          (n = Object(M.d)(a)),
+                          (n = Object(M.e)(a)),
                           Object(A.a)(
                             !!n,
                             "Unsupported item: " + o.type + " " + o.id
@@ -30877,6 +30882,9 @@
                 "string" == typeof t[0].name
               );
             }),
+            (e.prototype.BIsBundleMissing = function (e) {
+              return this.m_mapMissingBundles.has(e);
+            }),
             (e.prototype.GetBundleInfo = function (e) {
               return this.LazyInit(), this.m_mapBundleInfo.get(e);
             }),
@@ -36886,7 +36894,7 @@
                       return !1;
                     if (
                       !t.m_bSkipStorePreferenceCheck &&
-                      Object(u.b)(c.a.GetAppLinkInfo(e.appid))
+                      Object(u.c)(c.a.GetAppLinkInfo(e.appid))
                     )
                       return !1;
                   } else if (!t.m_bAllowMutedAndIgnoredSources && (O.a.Get().BIsMutedClanID(e.clanid) || m.a.Get().BIsIgnoringCurator(a.a.InitFromClanID(e.clanid)))) return !1;
@@ -48085,20 +48093,23 @@
     },
     gyoR: function (e, t, n) {
       "use strict";
-      n.d(t, "d", function () {
+      n.d(t, "b", function () {
         return o;
       }),
         n.d(t, "e", function () {
           return i;
         }),
-        n.d(t, "c", function () {
+        n.d(t, "f", function () {
+          return s;
+        }),
+        n.d(t, "d", function () {
           return p;
         }),
-        n.d(t, "b", function () {
+        n.d(t, "c", function () {
           return m;
         }),
         n.d(t, "a", function () {
-          return s;
+          return c;
         });
       var v = n("mrSG"),
         b = n("kyHq"),
@@ -48108,6 +48119,19 @@
         r = n("ee7K"),
         a = n("r64O");
       function o(e) {
+        return "bundle" == e.type
+          ? y.a.BIsBundleMissing(e.id)
+          : "sub" == e.type
+          ? S.b.BIsPackageMissing(e.id)
+          : Object(b.b)(e.type)
+          ? g.a.BIsAppMissing(e.id)
+          : (Object(a.a)(
+              !1,
+              'Unsupported capsule type "' + e.type + '" with id ' + e.id
+            ),
+            !0);
+      }
+      function i(e) {
         return "bundle" == e.type
           ? y.a.GetBundleInfo(e.id)
           : "sub" == e.type
@@ -48120,7 +48144,7 @@
             ),
             null);
       }
-      function i(h, _, f) {
+      function s(h, _, f) {
         return Object(v.b)(this, void 0, void 0, function () {
           var t, n, r, a, o, i, s, c, l, u, d, p, m;
           return Object(v.e)(this, function (e) {
@@ -48236,7 +48260,7 @@
           r.a.Get().BIsGameIgnored(e.appid)
         );
       }
-      function s(l, u, d) {
+      function c(l, u, d) {
         return Object(v.b)(this, void 0, void 0, function () {
           var t, n, r, a, o, i, s, c;
           return Object(v.e)(this, function (e) {
@@ -50158,13 +50182,13 @@
     nxSy: function (e, t, n) {
       "use strict";
       n.d(t, "a", function () {
-        return _;
+        return f;
       }),
         n.d(t, "b", function () {
           return P;
         }),
         n.d(t, "c", function () {
-          return f;
+          return v;
         });
       var k = n("q1tI"),
         M = n("3+zv"),
@@ -50183,8 +50207,9 @@
         p = n("SdTr"),
         m = n("ZlHF"),
         F = n.n(m),
-        h = (n("bUNj"), n("5L1o"));
-      function _(e) {
+        h = n("gyoR"),
+        _ = (n("bUNj"), n("5L1o"));
+      function f(e) {
         return (
           "dlc" === e.smart_section_type ||
           "dlc_onsale" === e.smart_section_type ||
@@ -50256,7 +50281,7 @@
                       (a = n.language),
                       (o = n.index),
                       (i = n.section),
-                      k.createElement(h.c, {
+                      k.createElement(_.c, {
                         key: i.unique_id + "_" + o,
                         link: t,
                         language: a,
@@ -50278,13 +50303,14 @@
                       r = t.index,
                       a = t.section,
                       o = t.saleEvent,
-                      i = t.rowElements,
-                      s = _(a),
+                      i = t.rowElements;
+                    if (Object(h.b)(e)) return null;
+                    var s = f(a),
                       c = o.BIsLockedToAppOwners(),
                       l = a.unique_id + "_" + r + "_" + e.type + "_" + e.id;
                     if ("fullrow" !== n) {
                       var u = "tall" === n ? "library" : "header";
-                      return k.createElement(h.g, {
+                      return k.createElement(_.g, {
                         imageType: u,
                         key: l,
                         capsule: e,
@@ -50303,10 +50329,10 @@
                         key: l,
                         className: Object(R.a)(
                           "bordered" == d && F.a.AppSummaryWidgetCtn,
-                          0 === r && h.l + r
+                          0 === r && _.l + r
                         ),
                       },
-                      k.createElement(h.j, {
+                      k.createElement(_.j, {
                         id: e.id,
                         type: e.type,
                         displayStyle: d,
@@ -50327,7 +50353,7 @@
       function H(e, t) {
         return "tall" === e ? t + 1 : t;
       }
-      function f(e) {
+      function v(e) {
         var l = e.saleEvent,
           u = e.section,
           d = e.language,
@@ -50623,6 +50649,9 @@
                 "number" == typeof t[0].packageid &&
                 "string" == typeof t[0].name
               );
+            }),
+            (e.prototype.BIsPackageMissing = function (e) {
+              return this.m_mapMissingPackages.has(e);
             }),
             (e.prototype.GetPackageInfo = function (e) {
               return this.LazyInit(), this.m_mapPackageInfo.get(e);

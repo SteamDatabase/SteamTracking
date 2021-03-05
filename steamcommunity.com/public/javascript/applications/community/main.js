@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6395488";
+var CLSTAMP = "6401877";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [68],
   {
@@ -190,6 +190,7 @@ var CLSTAMP = "6395488";
         active: "contextmenu_active_18z-3",
         MenuSectionHeader: "contextmenu_MenuSectionHeader_2Bb4J",
         StrongerSeparation: "contextmenu_StrongerSeparation_1BNck",
+        NoSeparation: "contextmenu_NoSeparation_3hRb6",
         UpperCase: "contextmenu_UpperCase_uz1Xm",
         SubMenu: "contextmenu_SubMenu_2RlEO",
         Label: "contextmenu_Label_2qdHl",
@@ -14357,21 +14358,21 @@ var CLSTAMP = "6395488";
         });
       var l = n("mrSG"),
         r = n("TyAF"),
-        u = n("q1tI"),
+        p = n("q1tI"),
         a = n("i8i4"),
-        s = n("TtDX"),
-        c = n("JMS6"),
+        m = n("TtDX"),
+        s = n("JMS6"),
         T = n("X3Ds"),
         o = n("bxiW"),
         i = n("6Y59"),
-        p = n("D4wO"),
-        m = n("TLQK"),
-        d = n("lkRc"),
-        h = n("+jbA"),
-        f = n.n(h),
+        c = n("D4wO"),
+        d = n("TLQK"),
+        h = n("lkRc"),
+        u = n("+jbA"),
+        f = n.n(u),
         v = n("exH9"),
         g = n("w9XT"),
-        b = (n("UPxs"), u.createContext(null)),
+        b = (n("UPxs"), p.createContext(null)),
         _ = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
@@ -14417,7 +14418,7 @@ var CLSTAMP = "6395488";
                   this.context &&
                   this.context.options &&
                   this.context.options.bUseWebStyles;
-              return u.createElement(
+              return p.createElement(
                 "div",
                 Object(l.a)({}, a, {
                   className: Object(v.a)(
@@ -14436,11 +14437,11 @@ var CLSTAMP = "6395488";
             (t.contextType = b),
             (t = Object(l.c)([r.a], t))
           );
-        })(u.Component),
+        })(p.Component),
         y = (function (t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
-            return (e.m_ref = u.createRef()), e;
+            return (e.m_ref = p.createRef()), e;
           }
           return (
             Object(l.d)(e, t),
@@ -14487,7 +14488,7 @@ var CLSTAMP = "6395488";
                   this.context &&
                   this.context.options &&
                   this.context.options.bUseWebStyles;
-              return u.createElement(
+              return p.createElement(
                 "div",
                 Object(l.a)(
                   { ref: this.m_ref, onMouseEnter: this.OnMouseEnter },
@@ -14513,7 +14514,7 @@ var CLSTAMP = "6395488";
             Object(l.c)([o.a], e.prototype, "Focus", null),
             e
           );
-        })(u.PureComponent),
+        })(p.PureComponent),
         w = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
@@ -14526,20 +14527,20 @@ var CLSTAMP = "6395488";
                 n = e.children,
                 r = e.className,
                 o = Object(l.f)(e, ["bChecked", "children", "className"]);
-              return u.createElement(
+              return p.createElement(
                 y,
                 Object(l.a)({}, o, {
                   className: Object(v.a)(r, t && "menuChecked"),
                 }),
-                u.createElement("div", { className: "contextMenuCheckMark" }),
+                p.createElement("div", { className: "contextMenuCheckMark" }),
                 n
               );
             }),
             t
           );
-        })(u.PureComponent),
+        })(p.PureComponent),
         E =
-          (u.PureComponent,
+          (p.PureComponent,
           (function (n) {
             function e(e) {
               var t = n.call(this, e) || this;
@@ -14819,10 +14820,10 @@ var CLSTAMP = "6395488";
                     this.state.ready &&
                     (t += " visible"),
                   (t += " " + f.a.ContextMenuFocusContainer),
-                  u.createElement(
+                  p.createElement(
                     b.Provider,
                     { value: this.props.instance },
-                    u.createElement(
+                    p.createElement(
                       "div",
                       {
                         className: t,
@@ -14839,7 +14840,7 @@ var CLSTAMP = "6395488";
               }),
               Object(l.c)([o.a], e.prototype, "BindMenuElement", null),
               Object(l.c)(
-                [o.a, Object(p.a)(100)],
+                [o.a, Object(c.a)(100)],
                 e.prototype,
                 "OnMenuMutation",
                 null
@@ -14849,7 +14850,7 @@ var CLSTAMP = "6395488";
               Object(l.c)([o.a], e.prototype, "OnKeyDown", null),
               (e = Object(l.c)([r.a], e))
             );
-          })(u.Component)),
+          })(p.Component)),
         O = (function (o) {
           function i(e, t, n) {
             var r =
@@ -14859,7 +14860,7 @@ var CLSTAMP = "6395488";
                 body_class: "ContextMenuPopupBody",
                 replace_existing_popup: !1,
                 target_browser: n,
-                eCreationFlags: c.b.ContextMenu,
+                eCreationFlags: s.b.ContextMenu,
               }) || this;
             return (r.m_menuProps = e), (r.m_children = t), r;
           }
@@ -14892,7 +14893,7 @@ var CLSTAMP = "6395488";
             }),
             (i.prototype.Render = function (e, t) {
               a.render(
-                u.createElement(
+                p.createElement(
                   E,
                   Object(l.a)({}, this.m_menuProps, { popup: this }),
                   this.m_children
@@ -14908,66 +14909,117 @@ var CLSTAMP = "6395488";
             (i.sm_iContextMenuInstance = 0),
             i
           );
-        })(c.a);
+        })(s.a);
       function S(e) {
-        return u.createElement("div", {
+        return p.createElement("div", {
           className: f.a.ContextMenuMouseOverlay,
         });
       }
       function C(e) {
-        var t = [],
-          n = T.m(e),
-          r = n.getSelection(),
-          o = r && 0 < r.rangeCount && 0 < r.toString().length,
-          i = e.target,
-          a = !1;
+        var t,
+          n,
+          r,
+          o,
+          i = [],
+          a = T.m(e),
+          s = a.getSelection(),
+          c = s && 0 < s.rangeCount && 0 < s.toString().length,
+          l = e.target,
+          u = !1;
         if (
-          (i &&
-            "tagName" in i &&
-            (("INPUT" != i.tagName && "TEXTAREA" != i.tagName) || (a = !0)),
-          (n.document.queryCommandEnabled("cut") || (o && a)) &&
-            t.push(
-              u.createElement(
+          (l &&
+            "tagName" in l &&
+            (("INPUT" != l.tagName && "TEXTAREA" != l.tagName) || (u = !0)),
+          h.c.IN_CLIENT &&
+            u &&
+            a.SteamClient._internal &&
+            a.SteamClient._internal.GetSpellingSuggestions &&
+            a.SteamClient._internal.AddWordToDictionary &&
+            ((t = a.SteamClient._internal.GetSpellingSuggestions()),
+            (o = t[0]),
+            (n = t.slice(1)),
+            (r = l) &&
+              n.forEach(function (e, t) {
+                i.push(
+                  p.createElement(
+                    y,
+                    {
+                      key: "spelling_" + t + "_" + e,
+                      onSelected: function () {
+                        r.setRangeText(e),
+                          r.setSelectionRange(r.selectionEnd, r.selectionEnd),
+                          l.focus();
+                      },
+                      className: f.a.NoSeparation,
+                    },
+                    e
+                  )
+                );
+              }),
+            o &&
+              ((o = o.trim()),
+              i.push(
+                p.createElement(
+                  y,
+                  {
+                    key: "addtodictionary_" + o,
+                    onSelected: function () {
+                      return a.SteamClient._internal.AddWordToDictionary(o);
+                    },
+                  },
+                  Object(d.f)(
+                    "#ContextMenu_AddToDictionary",
+                    o.length < 30 ? o : o.substring(0, 30) + "..."
+                  )
+                )
+              ))),
+          (a.document.queryCommandEnabled("cut") || (c && u)) &&
+            i.push(
+              p.createElement(
                 y,
                 {
                   key: "cut",
                   onSelected: function () {
-                    n.document.execCommand("cut");
+                    a.document.execCommand("cut");
                   },
                 },
-                Object(m.f)("#ContextMenu_Cut")
+                Object(d.f)("#ContextMenu_Cut")
               )
             ),
-          (document.queryCommandEnabled("copy") || o) &&
-            t.push(
-              u.createElement(
+          (document.queryCommandEnabled("copy") || c) &&
+            i.push(
+              p.createElement(
                 y,
                 {
                   key: "copy",
                   onSelected: function () {
-                    n.document.execCommand("copy");
+                    a.document.execCommand("copy");
                   },
+                  className: f.a.NoSeparation,
                 },
-                Object(m.f)("#ContextMenu_Copy")
+                Object(d.f)("#ContextMenu_Copy")
               )
             ),
-          d.c.IN_CLIENT &&
-            a &&
-            t.push(
-              u.createElement(
+          h.c.IN_CLIENT &&
+            u &&
+            a.SteamClient._internal &&
+            a.SteamClient._internal.Paste &&
+            i.push(
+              p.createElement(
                 y,
                 {
                   key: "paste",
                   onSelected: function () {
-                    i.focus(), n.SteamClient._internal.Paste();
+                    l.focus(), a.SteamClient._internal.Paste();
                   },
+                  className: f.a.NoSeparation,
                 },
-                Object(m.f)("#ContextMenu_Paste")
+                Object(d.f)("#ContextMenu_Paste")
               )
             ),
-          t.length)
+          i.length)
         )
-          Object(s.a)(u.createElement(_, null, t), e);
+          Object(m.a)(p.createElement(_, null, i), e);
         else {
           if (e.shiftKey) return;
           e.preventDefault(), e.stopPropagation();
