@@ -7065,7 +7065,9 @@
  T CMsgJSValue::SetCachedSize(int) const
  T CMsgJSValue::SharedCtor()
  T CMsgJSValue::SharedDtor()
+ T CMsgJSValue::mutable_bytes_value()
  T CMsgJSValue::mutable_string_value()
+ T CMsgJSValue::set_bytes_value(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgJSValue::set_string_value(char const*)
  T CMsgJSValue::set_string_value(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgJSValue::~CMsgJSValue()

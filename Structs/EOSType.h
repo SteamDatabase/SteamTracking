@@ -52,6 +52,7 @@ typedef enum EOSType
     k_EOSTypeMacos1015, // macos1015
     k_EOSTypeMacos1016, // macos1016
     k_EOSTypeMacos11, // macos11
+    k_EOSTypeMacos111, // macos11.1
     k_EOSTypeUnknown = -1, // unknown
     k_EOSTypeWindows, // windows
     k_EOSTypeWin311, // win311

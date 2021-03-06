@@ -743,6 +743,7 @@ message CRemotePlayTogetherGroupUpdateMsg {
 	repeated .CRemotePlayTogetherGroupUpdateMsg.Player players = 1;
 	optional int32 player_index = 2;
 	optional string miniprofile_location = 3;
+	optional string game_name = 4;
 }
 
 message CStreamDataLostMsg {

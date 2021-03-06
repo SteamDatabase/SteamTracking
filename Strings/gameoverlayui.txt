@@ -2,7 +2,9 @@
 __TEXT
 __text
 __TEXT
-4\$
+@q
+t^$
+@q
 __stubs
 __TEXT
 __stub_helper
@@ -14,20 +16,22 @@ __const
 __TEXT
 __objc_methname
 __TEXT
-Ci,
-Ci,
+sh,
+sh,
 __objc_classname__TEXT
+>o,
+>o,
 __objc_methtype
 __TEXT
+Io,
 (
+Io,
 __unwind_info
 __TEXT
-Dp,
-Dp,
+to,
+to,
 __eh_frame
 __TEXT
--
--
 __DATA
 __nl_symbol_ptr
 __DATA
@@ -568,6 +572,7 @@ N6google8protobuf2io20ZeroCopyOutputStreamE
 N6google8protobuf2io16ArrayInputStreamE
 N6google8protobuf2io17ArrayOutputStreamE
 N6google8protobuf2io18StringOutputStreamE
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 !
 !
 !
@@ -7168,13 +7173,14 @@ $
 <
 @
 $
-h
+p
 (
 0
-i
 8
-j
-P
+q
+@
+r
+X
 8
 8
 (
@@ -8586,7 +8592,7 @@ https://cdn.beta.steampowered.com/steamcommunity/beta/
 https://steamcdn-a.akamaihd.net/steamcommunity/public/
 https://steamcommunity-a.akamaihd.net/
 https://cdn.beta.steampowered.com/store
-https://media.st.dl.pinyuncloud.com/store
+https://cdn.steamchina.pinyuncloud.com/store
 https://steamcdn-a.akamaihd.net/store
 ://
 steam://
@@ -9660,8 +9666,8 @@ developer
 Steam pid that launched us
 VGUI_Application_001
 OK
-Mar  2 2021
-12:35:50
+Mar  5 2021
+16:18:53
 crashhandler003
 gameoverlayui
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/overlay/gameoverlayui/main.cpp
@@ -10390,6 +10396,9 @@ No field named "uninterpreted_option" in the Options proto.
 CHECK failed: original_uninterpreted_options_field != NULL:
 CHECK failed: options->ParseFromString(buf):
 Protocol message serialized itself in invalid fashion.
+down_cast
+./google/protobuf/stubs/common.h
+f == NULL || dynamic_cast<To>(f) != NULL
 length_delimited
 ./google/protobuf/unknown_field_set.h
 type() == TYPE_LENGTH_DELIMITED
@@ -10430,6 +10439,7 @@ Extension conflicts with extension already in database: extend
 }
 google/protobuf/dynamic_message.cc
 CHECK failed: is_prototype():
+Can't get here.
 operator[]
 i >= 0
 array_ != NULL
@@ -10460,7 +10470,6 @@ Field does not match message type.
 Field is repeated; the method requires a singular field.
 FieldSize
 Field is singular; the method requires a repeated field.
-Can't get here.
 ClearField
 RemoveLast
 ReleaseLast
@@ -10560,9 +10569,6 @@ File is already registered:
 CHECK failed: (descriptor->file()->pool()) == (DescriptorPool::generated_pool()):
 Tried to register a non-generated type with the generated type registry.
 Type is already registered:
-down_cast
-./google/protobuf/stubs/common.h
-f == NULL || dynamic_cast<To>(f) != NULL
 google/protobuf/reflection_ops.cc
 CHECK failed: (&from) != (to):
 CHECK failed: (to->GetDescriptor()) == (descriptor):
@@ -10607,6 +10613,11 @@ Unknown enumeration value of "
 Reached an unintended state: CPPTYPE_MESSAGE
 Error parsing text-format
 Outdent() without matching Indent().
+varint
+type() == TYPE_VARINT
+type() == TYPE_FIXED32
+type() == TYPE_FIXED64
+type() == TYPE_GROUP
 google/protobuf/unknown_field_set.cc
 CHECK failed: fields_ != NULL:
 CHECK failed: (TYPE_LENGTH_DELIMITED) == (type()):
@@ -10622,11 +10633,6 @@ UTF-8 data when
 a protocol
 buffer. Use the 'bytes' type if you intend to send raw
 bytes.
-varint
-type() == TYPE_VARINT
-type() == TYPE_FIXED32
-type() == TYPE_FIXED64
-type() == TYPE_GROUP
 %.1f
 google/protobuf/io/strtod.cc
 CHECK failed: (temp[0]) == ('1'):
@@ -13324,58 +13330,53 @@ Nov
 Dec
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
-L$
-0
-p
-p
-0
+G$
+P$
 $
+0
+p
+p
+0
+aA
+A5
 6
-A
-/#
+6
+6
 #
-#
-#
-"
 "
 0
 p
-?!
-4
+##
+#
+#
+#
 !
 !
-!
-8"
+0"
+"
+"
+"
 @
 "
-@
-@
-"
-"
-"
-I"
+m
++H
 "
 "
 "
 "
-k!
+x
 I
 k
-!
 d
 !
-!
+_?
 
 
 
 
 
-f
 
-[
-[
-5
-5
+o
 p
 0
 0
@@ -13402,7 +13403,6 @@ p
 0
 p
 0
-w
 p
 p
 p
@@ -13412,34 +13412,25 @@ p
 @
 =
 0
-%
-%
-%
-WA
+b>
+?
+?
+?
+?
+?
+?
+?
+?
+@
+@
 Hi
-eE
-4
-E
-E
-E
-E
-E
-E
-E
-E
-E
-E
-34
 
-<
-<
-Y@
 0
 p
 I
 I
-5
-D
+!@
+PD
 $
 @
 @
@@ -13450,8 +13441,9 @@ $
 ?
 A
 Hc
+C-
 =
-A
+@,
 A
 A
 A
@@ -13592,7 +13584,6 @@ G
 @
 >
 0
-F9
 p
 =
 0
@@ -13652,58 +13643,68 @@ P
 "
 3
 D
-{7
-u7
+7
+A7
 @
-46
-8'
-r&
-L&
-T4
-(%
-%
-$
-d
-2
-2
-2
-
-
-R
-T
-
-
-0
-10
-
-
 '
+6
+6
+6
+J5
+\&
+G4
+5%
+n%
+%
+4
+4
+4
+
+L95|v3
+f3
+$
+E#
+d
+
+
+
+2
+2
+
+R-
+5-
+1
+1
+1
+_-
 -
--
+
+
+
+%#
+a-
 d
 &
 &
 d
-/-
+#
 t=
 =
 =
 @
-:,
-T.
 uV%
-"
+
 "
 "
 
-"
-
++
++
+3+
 E
-e+
+;!
 >
 
-,
-,
+
 
 
 @
@@ -13723,7 +13724,7 @@ e+
 @
 @
 =
-@*
+A*
 
 
 @
@@ -13755,9 +13756,9 @@ e+
 d
 d
 d
-d(
+e(
 =
-HcKS(
+HcKT(
 
 =
 @
@@ -13772,10 +13773,23 @@ HcKS(
 @
 @
 @
-n'
+o'
 0
 E
 }
-Hc5+`'
+Hc5+a'
 $
+'
+'
+'
+'
+'
+'
+'
+'
+'
+'
+'
+'
+'
 p

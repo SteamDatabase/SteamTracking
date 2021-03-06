@@ -748,7 +748,7 @@ html.contextmenu_ContextMenuPopup_14wqd .contextmenu_contextMenuItem_1n7Wl {
 
 .contextmenu_contextMenuItem_1n7Wl {
   padding: 4px 6px;
-  line-height: 20px;
+  line-height: 17px;
   color: #9ca4a7;
   border-top: 0.5px solid rgba(80, 87, 94, 0.5);
   border-bottom: 0.5px solid rgba(80, 87, 94, 0);
@@ -756,7 +756,8 @@ html.contextmenu_ContextMenuPopup_14wqd .contextmenu_contextMenuItem_1n7Wl {
   position: relative;
   min-width: 120px;
   /* Separate menu sections with extra space and different header text style. */
-  /* Visually separate from items above it */ }
+  /* Visually separate from items above it */
+  /* Show no item separators (but keep spacing provided by borders) */ }
   .contextmenu_contextMenuItem_1n7Wl:first-child {
     border-top: 0.5px solid rgba(80, 87, 94, 0); }
   .contextmenu_contextMenuItem_1n7Wl:hover, .contextmenu_contextMenuItem_1n7Wl.contextmenu_active_18z-3 {
@@ -781,6 +782,9 @@ html.contextmenu_ContextMenuPopup_14wqd .contextmenu_contextMenuItem_1n7Wl {
     text-transform: uppercase; }
   .contextmenu_contextMenuItem_1n7Wl.contextmenu_StrongerSeparation_1BNck {
     border-top-color: dimgray; }
+  .contextmenu_contextMenuItem_1n7Wl.contextmenu_NoSeparation_3hRb6 {
+    border-top-color: transparent;
+    border-bottom-color: transparent; }
   .contextmenu_contextMenuItem_1n7Wl.contextmenu_UpperCase_uz1Xm {
     text-transform: uppercase; }
   .contextmenu_contextMenuItem_1n7Wl .SVGIcon_Button {
