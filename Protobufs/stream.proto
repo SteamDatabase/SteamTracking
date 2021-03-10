@@ -100,6 +100,7 @@ enum EStreamControlMessage {
 	k_EStreamControlTouchActionSetLayerAdded = 130;
 	k_EStreamControlTouchActionSetLayerRemoved = 131;
 	k_EStreamControlRemotePlayTogetherGroupUpdate = 132;
+	k_EStreamControlSetInputTemporarilyDisabled = 133;
 }
 
 enum EStreamVersion {
@@ -744,6 +745,10 @@ message CRemotePlayTogetherGroupUpdateMsg {
 	optional int32 player_index = 2;
 	optional string miniprofile_location = 3;
 	optional string game_name = 4;
+}
+
+message CSetInputTemporarilyDisabledMsg {
+	optional bool disabled = 1;
 }
 
 message CStreamDataLostMsg {

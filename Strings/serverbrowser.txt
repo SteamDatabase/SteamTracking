@@ -3,8 +3,8 @@ __TEXT
 "
 __text
 __TEXT
-PE
-PE
+@E
+@E
 __stubs
 __TEXT
 __stub_helper
@@ -3338,7 +3338,7 @@ Assertion Failed: s_bAllowStaticSymbolTable
 s_pSymbolTable
 ,
 ,
-,
+(
 (
 (
 0
@@ -3358,9 +3358,10 @@ p
 0
 p
 !
+2'
 0
 p
-.'
+<'
 $
 @
 @
@@ -3388,10 +3389,9 @@ Hc
 (
 (
 (
-C'
-L95u['
 '
 Hc
+U%
 ?
 ?
 ?
@@ -3407,16 +3407,14 @@ Hc
 ?
 ?
 ?
-M$
-t$
+J$
 "
-3$
 3
+0$
 D
-K$
-7$
-2$
-&$
+8$
+3$
+#$
 $
 $
 $
@@ -3434,15 +3432,12 @@ $
 $
 $
 @
-g#
-b#
-/#
-O"
+$#
 "
 "
 
 !
-t
+H
 
 
 

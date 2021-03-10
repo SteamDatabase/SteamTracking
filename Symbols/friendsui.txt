@@ -214,6 +214,7 @@
  B CSetFlashStateMsg::default_instance_
  B CSetGammaRampMsg::default_instance_
  B CSetIconMsg::default_instance_
+ B CSetInputTemporarilyDisabledMsg::default_instance_
  B CSetKeymapMsg::default_instance_
  B CSetQoSMsg::default_instance_
  B CSetSpectatorModeMsg::default_instance_
@@ -2514,6 +2515,7 @@
  D typeinfo for CSetFlashStateMsg
  D typeinfo for CSetGammaRampMsg
  D typeinfo for CSetIconMsg
+ D typeinfo for CSetInputTemporarilyDisabledMsg
  D typeinfo for CSetKeymapMsg
  D typeinfo for CSetNicknameDialog
  D typeinfo for CSetQoSMsg
@@ -3990,6 +3992,7 @@
  D vtable for CSetFlashStateMsg
  D vtable for CSetGammaRampMsg
  D vtable for CSetIconMsg
+ D vtable for CSetInputTemporarilyDisabledMsg
  D vtable for CSetKeymapMsg
  D vtable for CSetNicknameDialog
  D vtable for CSetQoSMsg
@@ -4863,6 +4866,7 @@
  R typeinfo name for CSetFlashStateMsg
  R typeinfo name for CSetGammaRampMsg
  R typeinfo name for CSetIconMsg
+ R typeinfo name for CSetInputTemporarilyDisabledMsg
  R typeinfo name for CSetKeymapMsg
  R typeinfo name for CSetNicknameDialog
  R typeinfo name for CSetQoSMsg
@@ -11046,6 +11050,17 @@
  T CSetIconMsg::mutable_image()
  T CSetIconMsg::set_image(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CSetIconMsg::~CSetIconMsg()
+ T CSetInputTemporarilyDisabledMsg::ByteSize() const
+ T CSetInputTemporarilyDisabledMsg::CSetInputTemporarilyDisabledMsg()
+ T CSetInputTemporarilyDisabledMsg::Clear()
+ T CSetInputTemporarilyDisabledMsg::GetCachedSize() const
+ T CSetInputTemporarilyDisabledMsg::GetMetadata() const
+ T CSetInputTemporarilyDisabledMsg::IsInitialized() const
+ T CSetInputTemporarilyDisabledMsg::MergeFrom(CSetInputTemporarilyDisabledMsg const&)
+ T CSetInputTemporarilyDisabledMsg::New() const
+ T CSetInputTemporarilyDisabledMsg::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CSetInputTemporarilyDisabledMsg::SetCachedSize(int) const
+ T CSetInputTemporarilyDisabledMsg::~CSetInputTemporarilyDisabledMsg()
  T CSetKeymapMsg::ByteSize() const
  T CSetKeymapMsg::CSetKeymapMsg()
  T CSetKeymapMsg::Clear()
@@ -18838,6 +18853,8 @@
  b (anonymous namespace)::CSetGammaRampMsg_reflection_
  b (anonymous namespace)::CSetIconMsg_descriptor_
  b (anonymous namespace)::CSetIconMsg_reflection_
+ b (anonymous namespace)::CSetInputTemporarilyDisabledMsg_descriptor_
+ b (anonymous namespace)::CSetInputTemporarilyDisabledMsg_reflection_
  b (anonymous namespace)::CSetKeymapMsg_descriptor_
  b (anonymous namespace)::CSetKeymapMsg_reflection_
  b (anonymous namespace)::CSetQoSMsg_descriptor_
@@ -20187,6 +20204,7 @@
  r protobuf_AssignDesc_stream_2eproto()::CSetFlashStateMsg_offsets_
  r protobuf_AssignDesc_stream_2eproto()::CSetGammaRampMsg_offsets_
  r protobuf_AssignDesc_stream_2eproto()::CSetIconMsg_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CSetInputTemporarilyDisabledMsg_offsets_
  r protobuf_AssignDesc_stream_2eproto()::CSetKeymapMsg_offsets_
  r protobuf_AssignDesc_stream_2eproto()::CSetQoSMsg_offsets_
  r protobuf_AssignDesc_stream_2eproto()::CSetSpectatorModeMsg_offsets_

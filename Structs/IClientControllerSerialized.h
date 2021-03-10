@@ -105,7 +105,7 @@ public:
     virtual unknown_ret SetDonglePairingMode(bool, int) = 0;
     virtual unknown_ret ReserveSteamController() = 0;
     virtual unknown_ret CancelSteamControllerReservations() = 0;
-    virtual unknown_ret OpenStreamingSession(unsigned int) = 0;
+    virtual unknown_ret OpenStreamingSession(unsigned int, unsigned int) = 0;
     virtual unknown_ret CloseStreamingSession(unsigned int) = 0;
     virtual unknown_ret InitiateISPFirmwareUpdate(unsigned int) = 0;
     virtual unknown_ret InitiateBootloaderFirmwareUpdate(unsigned int) = 0;

@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6407524";
+var CLSTAMP = "6408373";
 !(function (t) {
   var e = {};
   function n(r) {
