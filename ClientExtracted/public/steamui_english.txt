@@ -836,6 +836,7 @@ This should take less than a minute."
 "SteamUI_ValveSurvey_Summary_VideoCard"						"Video Card:"
 "SteamUI_ValveSurvey_Summary_Memory"						"Memory:"
 "SteamUI_ValveSurvey_Summary_Audio"							"Sound card:"
+"SteamUI_ValveSurvey_Summary_Storage"						"Storage:"
 
 "SteamUI_ValveSurvey_ResultsLabel"							"This survey is complete. Thank you again for participating.\n\nIf you'd like to see how your computer compares to those of other Steam subscribers, you can view the compiled results of the survey by clicking on the link below.\n\n (Otherwise, you can just click 'Finish' to close this window.)"
 "SteamUI_ValveSurvey_ResultsButton"							"Visit survey results page."
@@ -847,6 +848,11 @@ This should take less than a minute."
 
 "SteamUI_ValveSurvey_Summary_MACAddressHash"				"MAC Address hash: %s1"
 "SteamUI_ValveSurvey_Summary_DiskSerialHash"				"Disk serial number hash: %s1"
+
+"SteamUI_ValveSurvey_Summary_SSDCount"						"Number of SSDs: %s1"
+"SteamUI_ValveSurvey_Summary_SSDSizes"						"SSD sizes: %s1"
+"SteamUI_ValveSurvey_Summary_HDDCount"						"Number of HDDs: %s1"
+"SteamUI_ValveSurvey_Summary_HDDSizes"						"HDD sizes: %s1"
 
 "SteamUI_ValveSurvey_Summary_DesktopSystem"					"Form Factor: Desktop"
 "SteamUI_ValveSurvey_Summary_LaptopSystem"					"Form Factor: Laptop"

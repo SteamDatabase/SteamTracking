@@ -1,45 +1,41 @@
-
-
-
-
-
-
-
-
-
-
-
 .bundle_Discount_3f4n8 {
   font-size: 14px;
   padding: 4px 6px;
-  background-color: #4C6B22;
+  background-color: #4c6b22;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #A4D007; }
+  color: #a4d007;
+}
 
 /* stylelint-disable selector-class-pattern */
 body.v6.rewards {
-  background-color: #161A1F;
+  background-color: #161a1f;
   height: 100%;
   overflow: hidden;
-  -webkit-overflow-scrolling: touch; }
-  body.v6.rewards .ModalPosition {
-    overflow-y: auto; }
-  body.v6.rewards .ModalPosition_Content {
-    min-height: none; }
+  -webkit-overflow-scrolling: touch;
+}
+body.v6.rewards .ModalPosition {
+  overflow-y: auto;
+}
+body.v6.rewards .ModalPosition_Content {
+  min-height: none;
+}
 
 .responsive_page_frame {
-  height: 100%; }
+  height: 100%;
+}
 
 .responsive_page_content {
   max-height: 100%;
   height: 100%;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+}
 
 .responsive_page_template_content {
-  padding-bottom: 0 !important; }
+  padding-bottom: 0 !important;
+}
 
 .responsive_page_template_content,
 .page_content_ctn,
@@ -49,143 +45,185 @@ body.v6.rewards {
   flex: 1;
   min-height: 0;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+}
 
 .placeHolder_summerSale2020_promotionDetailsBar {
-  overflow-x: hidden; }
+  overflow-x: hidden;
+}
 
 /* stylelint-enable selector-class-pattern */
 .bundle_ShellHeader_kOC36 {
-  background-color: #1E232E;
+  background-color: #1e232e;
   width: 100%;
   z-index: 12;
   box-sizing: border-box;
   height: 51px;
-  user-select: none; }
-  .bundle_ShellHeader_kOC36 .bundle_ShellHeaderBrandLink_O1wfr {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    min-width: 200px; }
-  .bundle_ShellHeader_kOC36 .bundle_PointsContainer_3fuIW {
-    margin-right: 25px;
-    margin-left: auto;
-    display: flex;
-    flex-direction: row;
-    align-items: center; }
-  .bundle_ShellHeader_kOC36 .bundle_AppFilterContainer_2h5QB {
-    margin-top: 2px;
-    margin-left: 25px;
-    flex: 1;
-    align-items: center; }
-    .bundle_ShellHeader_kOC36 .bundle_AppFilterContainer_2h5QB .bundle_HeaderVerticalDivider_1FaU7 {
-      height: 30px;
-      margin-right: 14px; }
-    .bundle_ShellHeader_kOC36 .bundle_AppFilterContainer_2h5QB .bundle_AppFilterLabel_14xpP {
-      font-family: "Motiva Sans", Helvetica, sans-serif;
-      text-transform: uppercase;
-      color: #D0D0D0; }
-    .bundle_ShellHeader_kOC36 .bundle_AppFilterContainer_2h5QB .bundle_AppFilterIconContainer_3Krp- {
-      position: relative;
-      display: flex; }
-    .bundle_ShellHeader_kOC36 .bundle_AppFilterContainer_2h5QB .bundle_AppFilterIcon_HCNAj {
-      height: 24px;
-      width: 24px;
-      margin-left: 20px;
-      cursor: pointer;
-      color: #C5CBD8;
-      stroke: currentColor;
-      fill: currentColor;
-      transition-property: color;
-      transition-duration: .15s;
-      transition-timing-function: ease-in;
-      position: relative; }
-    .bundle_ShellHeader_kOC36 .bundle_AppFilterContainer_2h5QB .bundle_FilterInUse_20mcP {
-      width: 11px;
-      height: 11px;
-      border-radius: 6px;
-      background-color: #4A9CE7;
-      position: absolute;
-      top: -5px;
-      right: -5px; }
-    .bundle_ShellHeader_kOC36 .bundle_AppFilterContainer_2h5QB .bundle_AppFilterIcon_HCNAj:hover {
-      color: #ffffff;
-      stroke: currentColor;
-      fill: currentColor; }
-  .bundle_ShellHeader_kOC36 .bundle_RewardsPointsIcon_2fLKs {
-    width: 24px;
-    height: 24px; }
-  .bundle_ShellHeader_kOC36 .bundle_YourBalanceLabel_3Lsyi {
-    white-space: nowrap;
-    color: #78A9E2;
-    font-size: 0.8em;
-    text-transform: uppercase;
-    letter-spacing: 0.1em; }
-  .bundle_ShellHeader_kOC36 .bundle_RewardsPointsCount_1XPtb {
-    letter-spacing: 0.1em; }
+  user-select: none;
+}
+.bundle_ShellHeader_kOC36 .bundle_ShellHeaderBrandLink_O1wfr {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  min-width: 200px;
+}
+.bundle_ShellHeader_kOC36 .bundle_PointsContainer_3fuIW {
+  margin-right: 25px;
+  margin-left: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.bundle_ShellHeader_kOC36 .bundle_AppFilterContainer_2h5QB {
+  margin-top: 2px;
+  margin-left: 25px;
+  flex: 1;
+  align-items: center;
+}
+.bundle_ShellHeader_kOC36
+  .bundle_AppFilterContainer_2h5QB
+  .bundle_HeaderVerticalDivider_1FaU7 {
+  height: 30px;
+  margin-right: 14px;
+}
+.bundle_ShellHeader_kOC36
+  .bundle_AppFilterContainer_2h5QB
+  .bundle_AppFilterLabel_14xpP {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  text-transform: uppercase;
+  color: #d0d0d0;
+}
+.bundle_ShellHeader_kOC36
+  .bundle_AppFilterContainer_2h5QB
+  .bundle_AppFilterIconContainer_3Krp- {
+  position: relative;
+  display: flex;
+}
+.bundle_ShellHeader_kOC36
+  .bundle_AppFilterContainer_2h5QB
+  .bundle_AppFilterIcon_HCNAj {
+  height: 24px;
+  width: 24px;
+  margin-left: 20px;
+  cursor: pointer;
+  color: #c5cbd8;
+  stroke: currentColor;
+  fill: currentColor;
+  transition-property: color;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-in;
+  position: relative;
+}
+.bundle_ShellHeader_kOC36
+  .bundle_AppFilterContainer_2h5QB
+  .bundle_FilterInUse_20mcP {
+  width: 11px;
+  height: 11px;
+  border-radius: 6px;
+  background-color: #4a9ce7;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+}
+.bundle_ShellHeader_kOC36
+  .bundle_AppFilterContainer_2h5QB
+  .bundle_AppFilterIcon_HCNAj:hover {
+  color: #ffffff;
+  stroke: currentColor;
+  fill: currentColor;
+}
+.bundle_ShellHeader_kOC36 .bundle_RewardsPointsIcon_2fLKs {
+  width: 24px;
+  height: 24px;
+}
+.bundle_ShellHeader_kOC36 .bundle_YourBalanceLabel_3Lsyi {
+  white-space: nowrap;
+  color: #78a9e2;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.bundle_ShellHeader_kOC36 .bundle_RewardsPointsCount_1XPtb {
+  letter-spacing: 0.1em;
+}
 
 .bundle_ShellHeaderBrandName_2fDre {
   font-size: 1.6em;
   text-transform: uppercase;
-  color: #78A9E2; }
+  color: #78a9e2;
+}
 
 .bundle_Shell_2Zfec {
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
-  color: #C5CBD8;
-  letter-spacing: 0.0em; }
-  .bundle_Shell_2Zfec a {
-    color: #C5CBD8; }
-  .bundle_Shell_2Zfec a:hover {
-    color: inherit; }
-  .bundle_Shell_2Zfec .bundle_ShellScrollParent_1Qkju {
-    align-items: stretch; }
+  color: #c5cbd8;
+  letter-spacing: 0em;
+}
+.bundle_Shell_2Zfec a {
+  color: #c5cbd8;
+}
+.bundle_Shell_2Zfec a:hover {
+  color: inherit;
+}
+.bundle_Shell_2Zfec .bundle_ShellScrollParent_1Qkju {
+  align-items: stretch;
+}
 
 .bundle_SvgOverrideColor_29EuR path {
-  fill: #78A9E2; }
+  fill: #78a9e2;
+}
 
 .bundle_ItemHoverZIndex_3gUO3 {
-  z-index: 1; }
-  .bundle_ItemHoverZIndex_3gUO3:hover {
-    z-index: 20; }
+  z-index: 1;
+}
+.bundle_ItemHoverZIndex_3gUO3:hover {
+  z-index: 20;
+}
 
 .bundle_ActionButton_1YLE2 {
   border-radius: 3px;
-  background-color: #474E58;
-  color: #C5CBD8;
+  background-color: #474e58;
+  color: #c5cbd8;
   font-size: 0.75rem;
   font-weight: 100;
-  letter-spacing: .0625rem;
+  letter-spacing: 0.0625rem;
   line-height: 1.125rem;
   padding: 2px 8px;
   margin-left: 8px;
-  transition: all .2s ease-in-out; }
-  .bundle_ActionButton_1YLE2:hover {
-    color: white; }
-  .bundle_ActionButton_1YLE2:focus {
-    color: white; }
+  transition: all 0.2s ease-in-out;
+}
+.bundle_ActionButton_1YLE2:hover {
+  color: white;
+}
+.bundle_ActionButton_1YLE2:focus {
+  color: white;
+}
 
 .bundle_Icon_1QoZD {
   width: 32px;
-  height: 32px; }
+  height: 32px;
+}
 
 .bundle_PrimaryRedeemButton_2nL0c {
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+}
 
 .bundle_CheckmarkCircle_2UpnB {
   width: 20px;
   height: 20px;
-  color: #5b7e0f; }
+  color: #5b7e0f;
+}
 
 .bundle_AlreadyOwned_3KGvD {
   display: flex;
   flex-direction: row;
   align-items: center;
   color: #5b7e0f;
-  user-select: none; }
-  .bundle_AlreadyOwned_3KGvD .bundle_AlreadyOwnedText_1E4uc {
-    font-size: 18px;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 0.1rem;
-    margin-left: 8px; }
-
+  user-select: none;
+}
+.bundle_AlreadyOwned_3KGvD .bundle_AlreadyOwnedText_1E4uc {
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  margin-left: 8px;
+}

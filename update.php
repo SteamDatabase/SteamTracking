@@ -322,11 +322,11 @@
 				mkdir( $Folder, 0755, true );
 			}
 
-			if( str_ends_with( $File, '.js' ) && (
+			if(
 				$OriginalFile === 'Scripts/WebUI/steammobile_android.js' ||
 				str_contains( $OriginalFile, '/webui/' ) ||
 				str_contains( $OriginalFile, '/applications/' )
-			) )
+			)
 			{
 				$HashPath = $OriginalFile . '.unmodified';
 				$Hash = hash( 'sha256', $Data );
