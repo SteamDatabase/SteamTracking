@@ -37,8 +37,8 @@
 }
 
 #tabcontent_inventory {
-	border: 1px solid #303030;
-	background-color: #1F1F1F;
+	border: 1px solid #2c3235;
+	background-color: #1c1f21;
 }
 
 #mainContents {
@@ -67,14 +67,14 @@
 }
 
 .games_list_tabs {
-	border: 1px solid #535353;
-	border-bottom-color: #303030;
+	border: 1px solid #4f595f;
+	border-bottom-color: #2c3235;
 	border-top-left-radius: 3px;
 	border-top-right-radius: 3px;
 	-moz-border-radius-topleft: 3px;
 	-moz-border-radius-topright: 3px;
 
-	background-color: #3A3A3A;
+	background-color: #272c2f;
 	padding-top: 1px;
 }
 
@@ -82,14 +82,18 @@
 	display: block;
 	float: left;
 	color: #ffffff;
-	background-color: #3a3a3a;
+	background-color: #353a40;
 	line-height: 54px;
 	padding: 0px 12px;
 	outline: none;
 	font-size: 11px;
 
-	border-top: 1px solid #565656;
+	border-top: 1px solid #4f595f;
 	width: 205px;
+}
+
+.games_list_tab:hover, a.games_list_tab:hover {
+    background-color: #434c51;
 }
 
 .games_list_tab.first_tab, a.games_list_tab.first_tab {
@@ -129,7 +133,7 @@
 }
 
 .games_list_tab_number {
-	max-width: 36px;
+	max-width: fit-content;
 	padding-left: 4px;
 	overflow: hidden;
 	white-space: nowrap;
@@ -232,7 +236,7 @@ a.games_list_tab:hover {
 
 .view_inventory_page {
 	position: relative;
-	background-color: #1f1f1f;
+	background-color: #1c1e21;
 	padding: 11px;
 	width: 884px;
 	margin-left: 6px;

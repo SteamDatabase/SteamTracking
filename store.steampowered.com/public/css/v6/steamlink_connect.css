@@ -45,6 +45,10 @@
     font-weight: 500;
 }
 
+.inviteintro.expired {
+    text-align: center;
+}
+
 .ssablurb {
     font-size: 14px;
     margin-bottom: 30px;

@@ -35446,7 +35446,10 @@
           return (
             Object(I.d)(t, e),
             (t.prototype.render = function () {
-              var e = this.props.appid;
+              var e = this.props.appid,
+                t = oe.a.GetTimeNowWithOverrideAsDate(),
+                n = new Date(t.setUTCHours(0, 0, 0, 0) - 15552e6),
+                a = Math.floor(n.getTime() / 1e3);
               return Ze.a.createElement(
                 "div",
                 {
@@ -35456,7 +35459,10 @@
                 Ze.a.createElement(Xs, {
                   appid: e,
                   partnerEventStore: so,
-                  event_customization: { require_tags: ["workshop"] },
+                  event_customization: {
+                    require_tags: ["workshop"],
+                    rtime_oldestevent: a,
+                  },
                   strClassName: Ks.Container,
                   trackingLocation: 6,
                   bViewAllShowInfiniteScroll: !0,

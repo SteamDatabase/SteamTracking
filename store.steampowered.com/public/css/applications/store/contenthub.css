@@ -52,3 +52,36 @@
   padding-left: 10px;
   padding-right: 10px; }
 
+.maincapsule_FeatureCtn_IIjzc {
+  display: flex;
+  flex-direction: row;
+  min-height: 500px; }
+
+.maincapsule_BGImage_1Wb3- {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+  padding: 0;
+  position: relative;
+  width: 100%;
+  height: 100%; }
+
+.maincapsule_CapsuleDecorators_2SkJz {
+  position: absolute;
+  left: 0px;
+  top: 14px;
+  display: grid;
+  row-gap: 5px; }
+
+.maincapsule_Artwork_1BjaZ {
+  padding: 0;
+  position: relative;
+  height: 500px;
+  width: 200px; }
+
+.maincapsule_Info_30Ff- {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; }
+

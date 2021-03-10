@@ -3,6 +3,15 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [6],
   {
+    RNU2: function (e, t, a) {
+      e.exports = {
+        FeatureCtn: "maincapsule_FeatureCtn_IIjzc",
+        BGImage: "maincapsule_BGImage_1Wb3-",
+        CapsuleDecorators: "maincapsule_CapsuleDecorators_2SkJz",
+        Artwork: "maincapsule_Artwork_1BjaZ",
+        Info: "maincapsule_Info_30Ff-",
+      };
+    },
     j6A3: function (e, t, a) {
       "use strict";
       a.r(t);
@@ -49,6 +58,7 @@
             (e.prototype.GetDefinition = function () {
               return this.m_definition;
             }),
+            (e.prototype.ApplyUserAndHomeViewFilters = function () {}),
             (e.Get = function () {
               return (
                 e.s_globalSingletonStore ||
@@ -88,17 +98,18 @@
         })(),
         c = a("q1tI"),
         d = a.n(c),
-        r = a("ee7K"),
-        o = a("IjL/"),
-        s = a("0OaU"),
+        i = a("VQ2A"),
+        o = a("ee7K"),
+        s = a("IjL/"),
+        l = a("0OaU"),
         b = a("TLQK"),
-        l = a("xVl9"),
-        u = a("5L1o"),
-        i = a("MnIK"),
-        p = a("dfs5"),
-        f = a("5eAM"),
-        h = a("R+8l"),
-        _ = a("oVVc");
+        u = a("xVl9"),
+        p = a("5L1o"),
+        r = a("MnIK"),
+        f = a("dfs5"),
+        h = a("5eAM"),
+        _ = a("R+8l"),
+        v = a("oVVc");
       function y(e, a) {
         var n = new Array();
         return (
@@ -106,12 +117,12 @@
             var t;
             (!a || n.length < a) &&
               (e.appid
-                ? (t = f.a.GetAppLinkInfo(e.appid)) &&
+                ? (t = h.a.GetAppLinkInfo(e.appid)) &&
                   n.push({ id: e.appid, type: t.type })
-                : e.bundleid && h.a.BHasBundleInfoLoaded(e.bundleid)
+                : e.bundleid && _.a.BHasBundleInfoLoaded(e.bundleid)
                 ? n.push({ id: e.bundleid, type: "bundle" })
                 : e.packageid &&
-                  _.b.BHasPackageInfoLoaded(e.packageid) &&
+                  v.b.BHasPackageInfoLoaded(e.packageid) &&
                   n.push({ id: e.packageid, type: "sub" }));
           }),
           n
@@ -124,21 +135,21 @@
         var n = null;
         switch (t.type) {
           case "4wide":
-            n = d.a.createElement(P, { appList: a });
+            n = d.a.createElement(S, { appList: a });
             break;
           case "creator4wide":
-            n = d.a.createElement(S, { appList: a });
+            n = d.a.createElement(P, { appList: a });
             break;
           default:
             n = d.a.createElement("div", null, "Unknown: ", t.type);
         }
         return d.a.createElement(
-          p.b,
+          f.b,
           { feature: t.id },
           d.a.createElement(
-            i.a,
+            r.a,
             { placeholderHeight: 250, rootMargin: "0px 0px 100% 0px" },
-            d.a.createElement(v, {
+            d.a.createElement(E, {
               title: t.title,
               description: t.description,
             }),
@@ -146,7 +157,7 @@
           )
         );
       }
-      var v = function (e) {
+      var E = function (e) {
           var t = e.title,
             a = e.description;
           return d.a.createElement(
@@ -156,13 +167,13 @@
             Boolean(a) && d.a.createElement("span", null, a)
           );
         },
-        P = function (e) {
+        S = function (e) {
           var t = y(e.appList.apps, 40);
           return d.a.createElement(
-            l.a,
+            u.a,
             { visibleElements: 4 },
             t.map(function (e) {
-              return d.a.createElement(u.i, {
+              return d.a.createElement(p.l, {
                 key: e.type + "_" + e.id,
                 capsule: e,
                 imageType: "header",
@@ -170,23 +181,23 @@
             })
           );
         },
-        S = function (e) {
+        P = function (e) {
           var t = e.appList,
-            a = Object(r.b)(),
+            a = Object(o.b)(),
             n = a[0];
           a[1];
           if (n)
-            return d.a.createElement(s.a, {
+            return d.a.createElement(l.a, {
               string: Object(b.f)("#Loading"),
               size: "medium",
               position: "center",
             });
-          var i = y(t.apps, 40);
+          var r = y(t.apps, 40);
           return d.a.createElement(
-            l.a,
+            u.a,
             { visibleElements: 4 },
-            i.map(function (e) {
-              return d.a.createElement(u.i, {
+            r.map(function (e) {
+              return d.a.createElement(p.l, {
                 key: e.type + "_" + e.id,
                 capsule: e,
                 imageType: "header",
@@ -195,10 +206,10 @@
           );
         },
         n = a("vDqi"),
-        E = a.n(n),
-        G = a("mrSG"),
+        G = a.n(n),
+        A = a("mrSG"),
         L = a("2vnA"),
-        A = a("bDQf"),
+        j = a("bDQf"),
         C = (function () {
           function e() {
             var a = this;
@@ -268,9 +279,9 @@
               return this.m_mapTabToPageList.get(e.name)[t];
             }),
             (e.prototype.HintLoadTabPage = function (a, n) {
-              return Object(G.b)(this, void 0, void 0, function () {
+              return Object(A.b)(this, void 0, void 0, function () {
                 var t;
-                return Object(G.e)(this, function (e) {
+                return Object(A.e)(this, function (e) {
                   return this.BHasTabPageLoaded(a, n)
                     ? [2, this.GetTabPageApps(a, n)]
                     : ((t = this.m_mapTabToPageListPromises.get(a.name)),
@@ -282,9 +293,9 @@
             }),
             (e.prototype.InternalLoadTabPage = function (c, s) {
               var l, u, p, d;
-              return Object(G.b)(this, void 0, void 0, function () {
-                var t, a, n, i, r, o;
-                return Object(G.e)(this, function (e) {
+              return Object(A.b)(this, void 0, void 0, function () {
+                var t, a, n, r, i, o;
+                return Object(A.e)(this, function (e) {
                   switch (e.label) {
                     case 0:
                       (t = this.m_mapTabToPagingData.get(c.name)),
@@ -314,7 +325,7 @@
                               : p.facet,
                           send_app_data: 1,
                         }),
-                        [4, E.a.get(t.url, { params: a, withCredentials: !1 })]
+                        [4, G.a.get(t.url, { params: a, withCredentials: !1 })]
                       );
                     case 2:
                       return (
@@ -324,18 +335,18 @@
                         void 0 === d
                           ? void 0
                           : d.success)
-                          ? (((i = this.m_mapTabToPageList.get(c.name))[s] =
+                          ? (((r = this.m_mapTabToPageList.get(c.name))[s] =
                               n.data.tab_capsules),
-                            f.a.AddAppLinks(n.data.applinkinfo),
-                            _.b.AddPackages(n.data.packages),
-                            h.a.AddBundles(n.data.bundles),
-                            [2, i[s]])
+                            h.a.AddAppLinks(n.data.applinkinfo),
+                            v.b.AddPackages(n.data.packages),
+                            _.a.AddBundles(n.data.bundles),
+                            [2, r[s]])
                           : [3, 4]
                       );
                     case 3:
                       return (
-                        (r = e.sent()),
-                        (o = Object(A.a)(r)),
+                        (i = e.sent()),
+                        (o = Object(j.a)(i)),
                         console.error(
                           "CContentHubTabStore.InternalLoadTabPage: failed with " +
                             o.strErrorMsg,
@@ -384,62 +395,62 @@
                 "number" == typeof t[0].total_count
               );
             }),
-            Object(G.c)([L.C], e.prototype, "m_SelectedTab", void 0),
-            Object(G.c)([L.C], e.prototype, "m_nCurrentPage", void 0),
-            Object(G.c)([L.k], e.prototype, "SetSelectedTab", null),
+            Object(A.c)([L.C], e.prototype, "m_SelectedTab", void 0),
+            Object(A.c)([L.C], e.prototype, "m_nCurrentPage", void 0),
+            Object(A.c)([L.k], e.prototype, "SetSelectedTab", null),
             e
           );
         })(),
-        j = a("TyAF"),
+        O = a("TyAF"),
         w = a("Mgs7"),
-        O = a("7G5R"),
-        k = a("NKJh"),
-        N = a.n(k),
+        k = a("7G5R"),
+        N = a("NKJh"),
+        I = a.n(N),
         D = a("exH9"),
-        H = a("lhLD"),
-        B = Object(j.a)(function (e) {
+        B = a("lhLD"),
+        H = Object(O.a)(function (e) {
           var t = C.Get().GetVisibleTabs(),
             a = C.Get().GetSelectedTab();
           if (!t || 0 == t.length) return null;
           var n = C.Get().GetSelectedPage();
           return d.a.createElement(
             "div",
-            { className: Object(D.a)(H.TabCtn) },
+            { className: Object(D.a)(B.TabCtn) },
+            d.a.createElement(R, null),
             d.a.createElement(V, null),
-            d.a.createElement(M, null),
             d.a.createElement(
-              p.b,
+              f.b,
               { feature: "tab-" + a.name },
-              d.a.createElement(I, { selectedTab: a, nCurPage: n })
+              d.a.createElement(M, { selectedTab: a, nCurPage: n })
             ),
-            d.a.createElement(M, null)
+            d.a.createElement(V, null)
           );
         }),
-        I = Object(j.a)(function (e) {
+        M = Object(O.a)(function (e) {
           var t = e.selectedTab,
             a = e.nCurPage,
             n = C.Get().BHasTabPageLoaded(t, a),
-            i = Object(c.useState)(!n),
-            r = i[0],
-            o = i[1];
+            r = Object(c.useState)(!n),
+            i = r[0],
+            o = r[1];
           return (
             Object(c.useEffect)(
               function () {
-                var e = E.a.CancelToken.source();
+                var e = G.a.CancelToken.source();
                 return (
-                  r == n && o(!n),
+                  i == n && o(!n),
                   n ||
                     C.Get()
                       .HintLoadTabPage(t, a)
                       .then(function () {
-                        r && !e.token.reason && o(!1);
+                        i && !e.token.reason && o(!1);
                       }),
                   function () {
                     return e.cancel("unmounting TabDisplayPage");
                   }
                 );
               },
-              [t, a, n, r]
+              [t, a, n, i]
             ),
             n
               ? d.a.createElement(
@@ -453,7 +464,7 @@
                         a =
                           "bundle" == e.type_desc || "sub" == e.type_desc
                             ? e.type_desc
-                            : (null === (t = f.a.GetAppLinkInfo(e.id)) ||
+                            : (null === (t = h.a.GetAppLinkInfo(e.id)) ||
                               void 0 === t
                                 ? void 0
                                 : t.type) || "game";
@@ -461,9 +472,9 @@
                         "div",
                         {
                           key: "" + e.type_desc + e.id,
-                          className: N.a.SaleItemBrowserRow,
+                          className: I.a.SaleItemBrowserRow,
                         },
-                        d.a.createElement(u.j, {
+                        d.a.createElement(p.n, {
                           id: e.id,
                           type: a,
                           bShowDemoButton: !1,
@@ -472,36 +483,36 @@
                       );
                     })
                 )
-              : d.a.createElement(s.a, {
+              : d.a.createElement(l.a, {
                   string: Object(b.f)("#Loading"),
                   size: "medium",
                   position: "center",
                 })
           );
         }),
-        M = Object(j.a)(function (e) {
+        V = Object(O.a)(function (e) {
           var t,
             n = C.Get(),
             a = n.GetSelectedTab(),
-            i = n.GetSelectedPage(),
-            r = n.GetRowsPerPage(a),
+            r = n.GetSelectedPage(),
+            i = n.GetRowsPerPage(a),
             o = n.GetTotalMatchingResults(a),
-            c = r * i + 1,
-            s = Math.min(r * (i + 1), o),
-            l = Math.floor(o / r) + 1;
+            c = i * r + 1,
+            s = Math.min(i * (r + 1), o),
+            l = Math.floor(o / i) + 1;
           if (1 < l) {
             var u = new Set();
             u.add(1), u.add(l);
             for (var p = 0; u.size < 7 && p < 7; ++p)
-              0 < i + 1 - p && u.add(i + 1 - p),
-                u.size < 7 && i + 1 + p < l && u.add(i + 1 + p);
+              0 < r + 1 - p && u.add(r + 1 - p),
+                u.size < 7 && r + 1 + p < l && u.add(r + 1 + p);
             t = Array.from(u).sort(function (e, t) {
               return e - t;
             });
           }
           return d.a.createElement(
             "div",
-            { className: Object(D.a)(H.PagingCtn) },
+            { className: Object(D.a)(B.PagingCtn) },
             d.a.createElement(
               "div",
               null,
@@ -510,13 +521,13 @@
             Boolean(1 < l) &&
               d.a.createElement(
                 "div",
-                { className: Object(D.a)(H.PagingNumCtn) },
-                Boolean(0 < i) &&
+                { className: Object(D.a)(B.PagingNumCtn) },
+                Boolean(0 < r) &&
                   d.a.createElement(
                     w.d,
                     {
                       onClick: function () {
-                        return n.SetSelectedPage(i - 1);
+                        return n.SetSelectedPage(r - 1);
                       },
                     },
                     "<"
@@ -525,7 +536,7 @@
                   var a;
                   return d.a.createElement(
                     "div",
-                    { className: H.PageNumCtn, key: "" + e },
+                    { className: B.PageNumCtn, key: "" + e },
                     Boolean(1 === t && 2 !== e) &&
                       d.a.createElement("span", null, "..."),
                     d.a.createElement(
@@ -535,8 +546,8 @@
                           return n.SetSelectedPage(e - 1);
                         },
                         className: Object(D.a)(
-                          (((a = {})[H.PageNumber] = !0),
-                          (a[H.PageSelectedNumber] = e === i + 1),
+                          (((a = {})[B.PageNumber] = !0),
+                          (a[B.PageSelectedNumber] = e === r + 1),
                           a)
                         ),
                       },
@@ -546,12 +557,12 @@
                       d.a.createElement("span", null, "...")
                   );
                 }),
-                Boolean(i + 1 < l) &&
+                Boolean(r + 1 < l) &&
                   d.a.createElement(
                     w.d,
                     {
                       onClick: function () {
-                        return n.SetSelectedPage(i + 1);
+                        return n.SetSelectedPage(r + 1);
                       },
                     },
                     ">"
@@ -559,12 +570,12 @@
               )
           );
         }),
-        V = Object(j.a)(function (e) {
+        R = Object(O.a)(function (e) {
           var t = C.Get().GetVisibleTabs(),
             a = C.Get().GetSelectedTab();
           return d.a.createElement(
-            O.a,
-            { className: H.TabHeaderCtn },
+            k.a,
+            { className: B.TabHeaderCtn },
             t.map(function (e) {
               var t;
               return d.a.createElement(
@@ -572,8 +583,8 @@
                 {
                   key: e.displaylistname,
                   className: Object(D.a)(
-                    (((t = {})[H.TabHeader] = !0),
-                    (t[H.TabHeaderSelected] =
+                    (((t = {})[B.TabHeader] = !0),
+                    (t[B.TabHeaderSelected] =
                       (null == e ? void 0 : e.name) ==
                       (null == a ? void 0 : a.name)),
                     t)
@@ -586,48 +597,54 @@
               );
             })
           );
-        });
-      function z(e) {
+        }),
+        z = a("RNU2");
+      function U(e) {
         var t = (function (t) {
-            var e = Object(r.b)(),
+            var e = Object(o.b)(),
               a = e[0],
               n = e[1];
             if (a) return [a, null];
-            var i = new Array();
+            var r = new Array();
             return (
               g
                 .Get()
                 .GetMainCapsuleLists()
                 .forEach(function (e) {
                   e.apps.forEach(function (e) {
-                    i.length < t &&
+                    r.length < t &&
                       e.appid &&
                       (n.BIsGameOwned(e.appid) ||
                         n.BIsGameIgnored(e.appid) ||
-                        !f.a.BHasAppLinkLoaded(e.appid) ||
-                        i.push(e));
+                        !h.a.BHasAppLinkLoaded(e.appid) ||
+                        r.push(e));
                   });
                 }),
-              [!1, i]
+              [!1, r]
             );
           })(10),
           a = t[0],
           n = t[1];
         return a
-          ? d.a.createElement(s.a, {
+          ? d.a.createElement(l.a, {
               string: Object(b.f)("#Loading"),
               position: "center",
               size: "medium",
             })
           : d.a.createElement(
-              l.a,
+              u.a,
               { visibleElements: 1 },
               n.map(function (e) {
-                return d.a.createElement(x, { key: e.appid, capsule: e });
+                return d.a.createElement(x, {
+                  key: e.appid,
+                  item: { id: e.appid, type: "app" },
+                  strReason:
+                    e.status_string || "Test Reason: Because its selling well",
+                });
               })
             );
       }
-      var x = Object(j.a)(function (e) {
+      Object(O.a)(function (e) {
         var t = e.capsule,
           a = t.appid,
           n = "game";
@@ -636,35 +653,78 @@
             ? ((n = "bundle"), (a = t.bundleid))
             : t.packageid
             ? ((n = "sub"), (a = t.packageid))
-            : (n = f.a.GetAppLinkInfo(a).type),
+            : (n = h.a.GetAppLinkInfo(a).type),
           d.a.createElement(
             "div",
             null,
-            d.a.createElement(u.h, { id: a, type: n })
+            d.a.createElement(p.k, { id: a, type: n })
           )
         );
       });
+      var x = function (e) {
+        var t = e.item,
+          a = e.strReason,
+          n = h.a.GetAppLinkInfo(t.id);
+        if (!n) return null;
+        var r =
+          0 < n.screenshot_list.length
+            ? n.screenshot_list[0]
+            : n.header_image_url;
+        return d.a.createElement(
+          p.e,
+          { appInfo: n },
+          d.a.createElement(
+            "div",
+            {
+              className: Object(D.a)(z.BGImage),
+              style: { backgroundImage: 'url("' + r + '")' },
+            },
+            d.a.createElement(
+              "div",
+              { className: Object(D.a)(z.FeatureCtn) },
+              d.a.createElement(
+                "div",
+                { className: Object(D.a)(z.Artwork) },
+                Object(p.b)(n) &&
+                  d.a.createElement(
+                    "div",
+                    { className: z.CapsuleDecorators },
+                    d.a.createElement(p.h, null)
+                  ),
+                d.a.createElement(p.f, { info: n, appInfo: n }),
+                d.a.createElement(p.c, { info: n })
+              ),
+              d.a.createElement(
+                "div",
+                { className: Object(D.a)(z.Info) },
+                d.a.createElement("div", null, a),
+                d.a.createElement(p.m, { appInfo: n, instanceNum: t.id })
+              )
+            )
+          )
+        );
+      };
       t.default = function (e) {
         var t = d.a.useState(!0),
           a = t[0],
           n = t[1];
         if (
           (d.a.useEffect(function () {
-            r.a
+            o.a
               .Get()
               .HintLoad()
               .then(function () {
-                return n(!1);
+                g.Get().ApplyUserAndHomeViewFilters(), n(!1);
               });
           }, []),
           a)
         )
-          return d.a.createElement(s.a, {
+          return d.a.createElement(l.a, {
             string: Object(b.f)("#Loading"),
             size: "medium",
             position: "center",
           });
-        var i = g
+        var r = g
           .Get()
           .GetSections()
           .map(function (e) {
@@ -673,9 +733,18 @@
         return d.a.createElement(
           "div",
           null,
-          d.a.createElement(o.a, null, d.a.createElement(z, null)),
-          d.a.createElement(o.a, null, i),
-          d.a.createElement(o.a, null, d.a.createElement(B, null))
+          d.a.createElement(s.a, null, d.a.createElement(U, null)),
+          d.a.createElement(s.a, null, r),
+          d.a.createElement(s.a, null, d.a.createElement(H, null)),
+          d.a.createElement(
+            "a",
+            {
+              href: Object(i.a)(
+                m.d.STORE_BASE_URL + "labs/contenthub?optout=1"
+              ),
+            },
+            Object(b.f)("#ContentHub_OptOut")
+          )
         );
       };
     },

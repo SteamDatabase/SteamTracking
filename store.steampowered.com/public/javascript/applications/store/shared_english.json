@@ -587,6 +587,7 @@
     "ContextMenu_OpenLinkInNewWindow": "Open Link in New Window",
     "ContextMenu_CopyImageURL": "Copy Image URL",
     "ContextMenu_OpenImageInNewWindow": "Open Image in New Window",
+    "ContextMenu_AddToDictionary": "Add \"%1$s\" To Dictionary",
     "Tooltip_Settings": "Manage friends list settings",
     "Tooltip_VoiceSettings": "Manage voice settings",
     "Tooltip_CopyRemotePlayTogetherInviteURL": "Copy Remote Play Together invite URL",

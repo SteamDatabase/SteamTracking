@@ -915,6 +915,62 @@ CDelayedAJAXData.prototype.Show = function( $HoverContent )
 	$HoverContent.append( this.m_$Data );
 };
 
+// time the cookie preferences popup waits before appearing
+var	COOKIE_PREFERENCES_POPUP_DELAY = 4000;
+
+function InitCookiePreferencesPopup()
+{
+	
+	var $popupDialog = $J( '#cookiePrefPopup' );
+	if ( $popupDialog.length == 0 )
+	{
+		$AllowURL = encodeURI( 'https://store.steampowered.com/' + 'account/ajaxsetcookiepreferences');
+
+		var $CPopupContent = $J( "<style>\r\n.replyButton {\r\n\tcursor: pointer; \r\n\tmargin-bottom: 10px; \r\n\tpadding-top:5px; \r\n\tpadding-bottom: 5px; \r\n\tcolor: #F1F1F1;\r\n\tborder-radius: 5px;\r\n\tfont-family: Motiva Sans;\r\n\tfont-size: 14px;\r\n\tline-height: 16px;\r\n\ttext-align: center;\r\n\tletter-spacing: 0.05em;\r\n\ttext-transform: uppercase;\r\n}\r\n.acceptButton {\r\n\tbackground: linear-gradient(90deg, #3999EC 0%, #2460D0 100%); \r\n}\r\n.rejectButton {\r\n\tbackground: linear-gradient(90deg, #5C6166 0%, #737780 100%);\r\n}\r\n.buttonGroup {\r\n\tflex: 15%; \r\n\tpadding-top:10px;\r\n\tmargin: auto; \r\n\tmargin-left: 20px;\r\n\tmargin-right: 20px;\r\n}\r\n.cookieMessage {\r\n\tflex: 85%; \r\n\tmargin: auto;\r\n}\r\n.popupTextTitle {\r\n\tpadding-bottom: 10px;\r\n}\r\n.cookiepreferences_popup {\r\n\tdisplay: none;\r\n\tposition: fixed;\r\n\tbottom: 0;\r\n\twidth: 100%;\r\n\tz-index: 2000;\r\n\tpadding-top: 10px;\r\n}\r\n.cookiepreferences_popup_content {\r\n\tdisplay: flex;\r\n\twidth: 90%;\r\n\tmargin: auto;\r\n\tmargin-bottom: 20px;\r\n\tmargin-top: 20px;\r\n\tpadding: 10px;\r\n\tmax-width: 900px; \/* our page width *\/\r\n\tmin-width: 500px;\r\n\tbackground: linear-gradient(90.85deg, #333840 0.58%, #25282E 74.92%);\r\n\tbox-shadow: 0px 0px 10px #000000;\r\n}\r\n<\/style>\r\n\r\n<div id=\"cookiePrefPopup\" class=\"cookiepreferences_popup\">\r\n\t<div class=\"cookiepreferences_popup_content\">\r\n\t\t<div class=\"cookieMessage\">\r\n\t\t\t<div class=\"popupTextTitle\">Do you mind if we use optional cookies to provide you personalized content and to analyze site traffic (including Google Analytics)?<\/div>\r\n\t\t\t<div>We don't use a lot of cookies; you can see and manage them at any time on our <a href=\"https:\/\/store.steampowered.com\/account\/cookiepreferences\">Cookie Settings page<\/a>. If you click 'Accept All,' you consent to the use of cookies on Steam websites. Learn more about cookies in our <a href=\"https:\/\/store.steampowered.com\/privacy_agreement\">Privacy Policy<\/a>.<\/div>\r\n\t\t<\/div>\r\n\t\t<div class=\"buttonGroup\">\r\n\t\t\t<div id=\"acceptAllButton\" class=\"replyButton acceptButton\">Accept All<\/div>\r\n\t\t\t<div id=\"rejectAllButton\" class=\"replyButton rejectButton\">Reject All<\/div>\r\n\t\t<\/div>\r\n\t<\/div>\r\n<\/div>\r\n" );
+
+		var $onAcceptButton = $CPopupContent.find( '#acceptAllButton' );
+		var $onRejectButton = $CPopupContent.find( '#rejectAllButton' );
+
+		if ( $onAcceptButton.length == 0 || $onRejectButton.length == 0 )
+		{
+			// template appears broken
+			console.error("unable to display preferences popup");
+			return;
+		}
+
+		var fnPostPreference = function ( bAllow )
+		{
+			$J.ajax( { type: "POST", url: $AllowURL, data: { bAllow: bAllow, sessionid: g_sessionID } } ).done( function ( data )
+			{
+				if ( data && data.transfer_urls && data.transfer_params )
+				{
+					for ( var i = 0; i < data.transfer_urls.length; i++ )
+					{
+						$J.post( data.transfer_urls[i], { transfer_params: data.transfer_params } );
+					}
+				}
+			});
+			$J( '#cookiePrefPopup' ).hide();
+
+		}
+
+		$onAcceptButton.on('click', '', function() {
+			fnPostPreference( 1 );
+		} );
+
+		$onRejectButton.on('click', '', function ()
+		{
+			fnPostPreference( 0 );
+		} );
+
+		$J('body').append( $CPopupContent );
+	}
+
+	timerCookiePopup = window.setTimeout( function() {
+		$J("#cookiePrefPopup").show();
+		}, COOKIE_PREFERENCES_POPUP_DELAY );
+}
+
 function InitMiniprofileHovers()
 {
 	var $Hover = $J('<div/>', {'class': 'miniprofile_hover'} );
