@@ -1379,7 +1379,8 @@
       "geo": [ 117.1, 39.8 ],
       "partners": 2,
       "service_address_ranges": [
-        "125.39.181.0-125.39.181.127"
+        "125.39.181.0-125.39.181.127",
+        "60.28.165.128/25"
       ]
     },
     "tsnm": {
@@ -1665,7 +1666,7 @@
     }
   },
   "relay_public_key": "5AC884C1045BA0FF44142AC8DCA51B8A98C8F1CB4FEE36284AFBE92FCF594932",
-  "revision": 312,
+  "revision": 314,
   "revoked_keys": [
     "123456789"
   ]
