@@ -1042,6 +1042,363 @@ body.modals_BodyNoScrollDialog_105OB {
     max-height: 90px;
     overflow-y: auto; }
 
+.savecollectiondialog_CollectionSummary_1M6bF {
+  padding: 12px 20px 0px;
+  color: dodgerblue;
+  margin-bottom: 12px; }
+
+.savecollectiondialog_DynamicOption_3MlTP {
+  padding: 0;
+  margin-bottom: 0;
+  margin-top: 8px; }
+
+.savecollectiondialog_InputContainer_38Qbh {
+  display: flex; }
+
+.DialogLabel.savecollectiondialog_Required_w_ZWy {
+  color: rgba(185, 99, 99, 0.6);
+  margin-left: 10px;
+  transition: all .21s ease-in-out;
+  opacity: 0;
+  font-weight: 400; }
+  .DialogLabel.savecollectiondialog_Required_w_ZWy.savecollectiondialog_Visible_2B-bI {
+    opacity: 1; }
+  .DialogLabel.savecollectiondialog_Required_w_ZWy.savecollectiondialog_Pulse_1WxEF {
+    animation-name: savecollectiondialog_Pulse_1WxEF;
+    animation-duration: .3s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 1; }
+
+@keyframes savecollectiondialog_Pulse_1WxEF {
+  0% {
+    transform: scale(1);
+    color: rgba(185, 99, 99, 0.9); }
+  30% {
+    transform: scale(1.18);
+    color: #ff2626; }
+  100% {
+    transform: scale(1);
+    color: rgba(185, 99, 99, 0.6); } }
+
+.savecollectiondialog_SaveCollectionContainer_z-cTL {
+  display: flex;
+  flex-direction: column; }
+  .savecollectiondialog_SaveCollectionContainer_z-cTL .DialogBodyText {
+    margin-bottom: 0; }
+  .savecollectiondialog_SaveCollectionContainer_z-cTL .DialogTextInputBase {
+    font-size: 16px;
+    text-transform: uppercase; }
+  .savecollectiondialog_SaveCollectionContainer_z-cTL .SVGIcon_DynamicCollection {
+    margin-bottom: -5px;
+    margin-right: 4px; }
+
+.savecollectiondialog_TwoOptionsContainer_33bWW {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff1;
+  border-radius: 4px;
+  align-self: stretch; }
+  .savecollectiondialog_TwoOptionsContainer_33bWW .savecollectiondialog_Option_3vDq3:last-child {
+    margin-left: 0; }
+  .savecollectiondialog_TwoOptionsContainer_33bWW .savecollectiondialog_Option_3vDq3.savecollectiondialog_Disabled_3Jmn3 {
+    cursor: default;
+    pointer-events: none; }
+    .savecollectiondialog_TwoOptionsContainer_33bWW .savecollectiondialog_Option_3vDq3.savecollectiondialog_Disabled_3Jmn3 .savecollectiondialog_ActionLabel_25n_z {
+      color: #b5d1fd;
+      filter: saturate(0.2);
+      cursor: default; }
+  .savecollectiondialog_TwoOptionsContainer_33bWW .savecollectiondialog_Option_3vDq3.savecollectiondialog_Disabled_3Jmn3:hover {
+    pointer-events: none; }
+  .savecollectiondialog_TwoOptionsContainer_33bWW .savecollectiondialog_Option_3vDq3 .savecollectiondialog_ActionLabel_25n_z {
+    background: linear-gradient(to right, #47bfff 0%, #1a44c2 60%);
+    background-position: 25%;
+    background-size: 330% 100%;
+    text-transform: uppercase;
+    color: #dfe3e6;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 2px;
+    align-self: stretch;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border: 1px solid #0000; }
+    .savecollectiondialog_TwoOptionsContainer_33bWW .savecollectiondialog_Option_3vDq3 .savecollectiondialog_ActionLabel_25n_z:focus {
+      border: 1px solid #47bfff; }
+    .savecollectiondialog_TwoOptionsContainer_33bWW .savecollectiondialog_Option_3vDq3 .savecollectiondialog_ActionLabel_25n_z:hover {
+      cursor: pointer; }
+    .savecollectiondialog_TwoOptionsContainer_33bWW .savecollectiondialog_Option_3vDq3 .savecollectiondialog_ActionLabel_25n_z svg {
+      width: 20px;
+      height: 20px;
+      margin-bottom: -6px;
+      margin-right: 4px; }
+
+.savecollectiondialog_Option_3vDq3 {
+  flex: 1;
+  margin: 8px;
+  pointer-events: initial;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px; }
+
+.savecollectiondialog_Description_3uOEr {
+  align-self: stretch;
+  padding: 8px;
+  flex: 1;
+  background: linear-gradient(to bottom, rgba(85, 85, 85, 0.644), rgba(94, 94, 94, 0.4));
+  color: #a2acbb; }
+
+.savecollectiondialog_SelectedFilters_1R9cY {
+  margin-top: 16px; }
+
+.savecollectiondialog_SaveSearchDescription_1MTcG {
+  margin-top: 10px;
+  font-size: 15px; }
+
+.savecollectiondialog_DynamicDescContainer_Kv-av {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff1;
+  border-radius: 4px;
+  align-self: stretch;
+  margin-top: 16px; }
+
+/* *:focus {
+	border: 1px solid red !important;
+	z-index: 1000000;
+}*/
+
+.gamelistsearchbar_Container_20QAC {
+  display: flex;
+  flex-grow: 0;
+  user-select: none;
+  color: white;
+  font-size: 12px;
+  outline: none;
+  position: relative;
+  padding: 6px;
+  padding-bottom: 10px; }
+  .gamelistsearchbar_Container_20QAC .gamelistsearchbar_SearchInput_12vo5 {
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    cursor: text;
+    position: relative;
+    flex: 1;
+    color: #888;
+    font-style: normal;
+    box-sizing: border-box;
+    min-height: 32px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px; }
+    .gamelistsearchbar_Container_20QAC .gamelistsearchbar_SearchInput_12vo5 .DialogTextInputBase {
+      padding-left: 32px;
+      border-radius: 0;
+      background-color: rgba(33, 33, 36, 0.6);
+      background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACfUlEQVRYhcXWSYhUVxTG8V+LiDYOYAytiwYJRIwSsaMbJ1A0QsABk6AQ0IULF4K9cFg4LAqkRUFF0YAiSCKiiAsVXZgEYnBAIWAgKI0SFXuldkLi0M7SLu7pVCNdVa9emcoHj3Mu7957/u+8Oxz+ZzVAoVCo1G8yWjAGg/AP2vErbuYNXigU9K/QZzxWYAFG9/H+Ko5hPx7mgehX5l0brqG1V/AnuIeX0f4M26RsLH1fAANxDhuifQPrIlgTmsPOwk48wygcwvb3AfATZobfhk9i4t/wFK+lNfAL1mAsTkb/NdhSC0Abpoe/ApvQXWGODizC3mivx5w8AKMV074VB7JOElqFi+EfzAOwOmyH9BV5tCxsM76sBmAiFoe/K2dwuIPT4S+pBmCatLLhhxoAKC7IKdUAfBS2C7drBPgjbDM+zAowMOwjPK8R4Fkvf0hWgMdhP8gyqIKGhX2Dv7ICtIcdgHE1AkwIe0OG+6EH4HwMgK9rBPgm7IUsnXsA7igeHisxOGfw2ZgU/nfVAMC30gJsxJEcwRtxOPxLuFItQBeWhz8fu6sIPlw6hkfiFuZmHfjuZXQUO8JvxY+KKS2leVJl1BLtJsWdUFF9VURr8UK6mD6P55R0TbdLmRqOT7EQU2PcAwyV1s956XR9kAcANuIyNkv3xMJ4SumsVBE14QQ+xs9S0dJZDqBcSXZGSutifC/tlB69wu/YE0G+wJ+4jhlhx0uVVdnjuFJRCsfjaYjJBklH9t8l+t8PqHO9IEpmolwG3lW39E/vlgneo84IWjET1QBUq1IQDfUCKAUxop4ApSD+/R31ACgLUS+AviCWkG0b/hcQX2FfnWP3rbdXsIgAtEnQ2wAAAABJRU5ErkJggg==);
+      background-size: 18px 18px;
+      background-repeat: no-repeat;
+      background-position: 8px 8px;
+      padding-right: 24px; }
+      .gamelistsearchbar_Container_20QAC .gamelistsearchbar_SearchInput_12vo5 .DialogTextInputBase:focus {
+        padding-left: 34px; }
+      .gamelistsearchbar_Container_20QAC .gamelistsearchbar_SearchInput_12vo5 .DialogTextInputBase:hover {
+        background-color: rgba(33, 33, 36, 0.6);
+        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACfUlEQVRYhcXWSYhUVxTG8V+LiDYOYAytiwYJRIwSsaMbJ1A0QsABk6AQ0IULF4K9cFg4LAqkRUFF0YAiSCKiiAsVXZgEYnBAIWAgKI0SFXuldkLi0M7SLu7pVCNdVa9emcoHj3Mu7957/u+8Oxz+ZzVAoVCo1G8yWjAGg/AP2vErbuYNXigU9K/QZzxWYAFG9/H+Ko5hPx7mgehX5l0brqG1V/AnuIeX0f4M26RsLH1fAANxDhuifQPrIlgTmsPOwk48wygcwvb3AfATZobfhk9i4t/wFK+lNfAL1mAsTkb/NdhSC0Abpoe/ApvQXWGODizC3mivx5w8AKMV074VB7JOElqFi+EfzAOwOmyH9BV5tCxsM76sBmAiFoe/K2dwuIPT4S+pBmCatLLhhxoAKC7IKdUAfBS2C7drBPgjbDM+zAowMOwjPK8R4Fkvf0hWgMdhP8gyqIKGhX2Dv7ICtIcdgHE1AkwIe0OG+6EH4HwMgK9rBPgm7IUsnXsA7igeHisxOGfw2ZgU/nfVAMC30gJsxJEcwRtxOPxLuFItQBeWhz8fu6sIPlw6hkfiFuZmHfjuZXQUO8JvxY+KKS2leVJl1BLtJsWdUFF9VURr8UK6mD6P55R0TbdLmRqOT7EQU2PcAwyV1s956XR9kAcANuIyNkv3xMJ4SumsVBE14QQ+xs9S0dJZDqBcSXZGSutifC/tlB69wu/YE0G+wJ+4jhlhx0uVVdnjuFJRCsfjaYjJBklH9t8l+t8PqHO9IEpmolwG3lW39E/vlgneo84IWjET1QBUq1IQDfUCKAUxop4ApSD+/R31ACgLUS+AviCWkG0b/hcQX2FfnWP3rbdXsIgAtEnQ2wAAAABJRU5ErkJggg==);
+        background-size: 18px 18px;
+        background-repeat: no-repeat;
+        background-position: 8px 8px; }
+    .gamelistsearchbar_Container_20QAC .gamelistsearchbar_SearchInput_12vo5 .DialogInput_Wrapper {
+      opacity: 1;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 2;
+      outline: none;
+      transition: background-position .21s ease-in-out;
+      background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACfUlEQVRYhcXWSYhUVxTG8V+LiDYOYAytiwYJRIwSsaMbJ1A0QsABk6AQ0IULF4K9cFg4LAqkRUFF0YAiSCKiiAsVXZgEYnBAIWAgKI0SFXuldkLi0M7SLu7pVCNdVa9emcoHj3Mu7957/u+8Oxz+ZzVAoVCo1G8yWjAGg/AP2vErbuYNXigU9K/QZzxWYAFG9/H+Ko5hPx7mgehX5l0brqG1V/AnuIeX0f4M26RsLH1fAANxDhuifQPrIlgTmsPOwk48wygcwvb3AfATZobfhk9i4t/wFK+lNfAL1mAsTkb/NdhSC0Abpoe/ApvQXWGODizC3mivx5w8AKMV074VB7JOElqFi+EfzAOwOmyH9BV5tCxsM76sBmAiFoe/K2dwuIPT4S+pBmCatLLhhxoAKC7IKdUAfBS2C7drBPgjbDM+zAowMOwjPK8R4Fkvf0hWgMdhP8gyqIKGhX2Dv7ICtIcdgHE1AkwIe0OG+6EH4HwMgK9rBPgm7IUsnXsA7igeHisxOGfw2ZgU/nfVAMC30gJsxJEcwRtxOPxLuFItQBeWhz8fu6sIPlw6hkfiFuZmHfjuZXQUO8JvxY+KKS2leVJl1BLtJsWdUFF9VURr8UK6mD6P55R0TbdLmRqOT7EQU2PcAwyV1s956XR9kAcANuIyNkv3xMJ4SumsVBE14QQ+xs9S0dJZDqBcSXZGSutifC/tlB69wu/YE0G+wJ+4jhlhx0uVVdnjuFJRCsfjaYjJBklH9t8l+t8PqHO9IEpmolwG3lW39E/vlgneo84IWjET1QBUq1IQDfUCKAUxop4ApSD+/R31ACgLUS+AviCWkG0b/hcQX2FfnWP3rbdXsIgAtEnQ2wAAAABJRU5ErkJggg==);
+      background-size: 18px 18px;
+      background-repeat: no-repeat;
+      background-position: 8px 8px; }
+      .gamelistsearchbar_Container_20QAC .gamelistsearchbar_SearchInput_12vo5 .DialogInput_Wrapper .DialogInputPlaceholder::placeholder,
+      .gamelistsearchbar_Container_20QAC .gamelistsearchbar_SearchInput_12vo5 .DialogInput_Wrapper .DialogInputPlaceholder::-webkit-input-placeholder {
+        color: transparent;
+        transition: color .21s ease-in-out, transform .21s ease-in-out; }
+      .gamelistsearchbar_Container_20QAC .gamelistsearchbar_SearchInput_12vo5 .DialogInput_Wrapper:hover .DialogInputPlaceholder::placeholder,
+      .gamelistsearchbar_Container_20QAC .gamelistsearchbar_SearchInput_12vo5 .DialogInput_Wrapper:hover .DialogInputPlaceholder::-webkit-input-placeholder {
+        color: rgba(255, 255, 255, 0.15); }
+      .gamelistsearchbar_Container_20QAC .gamelistsearchbar_SearchInput_12vo5 .DialogInput_Wrapper:hover .DialogInputPlaceholder::-ms-input-placeholder,
+      .gamelistsearchbar_Container_20QAC .gamelistsearchbar_SearchInput_12vo5 .DialogInput_Wrapper:hover .DialogInputPlaceholder:-ms-input-placeholder {
+        color: rgba(255, 255, 255, 0.15); }
+      .gamelistsearchbar_Container_20QAC .gamelistsearchbar_SearchInput_12vo5 .DialogInput_Wrapper:focus-within {
+        opacity: 1;
+        background-position: 10px 8px;
+        /* for some reason, mixing these with ::placeholder confuses chrome */ }
+        .gamelistsearchbar_Container_20QAC .gamelistsearchbar_SearchInput_12vo5 .DialogInput_Wrapper:focus-within .DialogInputPlaceholder::placeholder,
+        .gamelistsearchbar_Container_20QAC .gamelistsearchbar_SearchInput_12vo5 .DialogInput_Wrapper:focus-within .DialogInputPlaceholder::-webkit-input-placeholder {
+          color: rgba(255, 255, 255, 0.35); }
+        .gamelistsearchbar_Container_20QAC .gamelistsearchbar_SearchInput_12vo5 .DialogInput_Wrapper:focus-within .DialogInputPlaceholder::-ms-input-placeholder,
+        .gamelistsearchbar_Container_20QAC .gamelistsearchbar_SearchInput_12vo5 .DialogInput_Wrapper:focus-within .DialogInputPlaceholder:-ms-input-placeholder {
+          color: rgba(255, 255, 255, 0.35); }
+  .gamelistsearchbar_Container_20QAC .DialogInput_ClearAction, .gamelistsearchbar_Container_20QAC .gamelistsearchbar_SearchFilterInputClear_38tIM {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    right: 6px;
+    top: 8px;
+    cursor: pointer; }
+    .gamelistsearchbar_Container_20QAC .DialogInput_ClearAction svg line, .gamelistsearchbar_Container_20QAC .gamelistsearchbar_SearchFilterInputClear_38tIM svg line {
+      stroke-width: 16px; }
+  .gamelistsearchbar_Container_20QAC .gamelistsearchbar_AdvancedSearchContainer_vCCmY {
+    box-sizing: border-box;
+    position: relative;
+    background-color: rgba(33, 33, 36, 0.6);
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 100;
+    border-radius: 4px;
+    height: 32px;
+    display: flex; }
+    .gamelistsearchbar_Container_20QAC .gamelistsearchbar_AdvancedSearchContainer_vCCmY .gamelistsearchbar_AdvancedSearchPaneContainer_1dgAM {
+      pointer-events: none; }
+      .gamelistsearchbar_Container_20QAC .gamelistsearchbar_AdvancedSearchContainer_vCCmY .gamelistsearchbar_AdvancedSearchPaneContainer_1dgAM.gamelistsearchbar_Visible_1v65x {
+        pointer-events: initial; }
+        .gamelistsearchbar_Container_20QAC .gamelistsearchbar_AdvancedSearchContainer_vCCmY .gamelistsearchbar_AdvancedSearchPaneContainer_1dgAM.gamelistsearchbar_Visible_1v65x .gamelistsearchbar_AdvancedSearchPane_Woh0k {
+          opacity: 1;
+          transform: scale(1); }
+      .gamelistsearchbar_Container_20QAC .gamelistsearchbar_AdvancedSearchContainer_vCCmY .gamelistsearchbar_AdvancedSearchPaneContainer_1dgAM .gamelistsearchbar_AdvancedSearchPane_Woh0k {
+        background-color: #4c515a;
+        z-index: 20;
+        position: absolute;
+        left: 42px;
+        border-radius: 4px;
+        box-shadow: 0px 2px 8px 1px black;
+        opacity: 0;
+        transform: scale(0.1);
+        transition: transform .21s ease-in-out, opacity .21s ease-in-out;
+        transform-origin: 0 0; }
+        .gamelistsearchbar_Container_20QAC .gamelistsearchbar_AdvancedSearchContainer_vCCmY .gamelistsearchbar_AdvancedSearchPaneContainer_1dgAM .gamelistsearchbar_AdvancedSearchPane_Woh0k:before {
+          content: '';
+          width: 16px;
+          height: 32px;
+          background-color: #4c515a;
+          position: absolute;
+          left: -12px; }
+      .gamelistsearchbar_Container_20QAC .gamelistsearchbar_AdvancedSearchContainer_vCCmY .gamelistsearchbar_AdvancedSearchPaneContainer_1dgAM .gamelistsearchbar_AdvancedSearchDismissalOverlay_1kYo6 {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 19; }
+    .gamelistsearchbar_Container_20QAC .gamelistsearchbar_AdvancedSearchContainer_vCCmY.gamelistsearchbar_Extended_31r1_ {
+      border-top-right-radius: 0px;
+      border-bottom-right-radius: 0px; }
+    .gamelistsearchbar_Container_20QAC .gamelistsearchbar_AdvancedSearchContainer_vCCmY .gamelistsearchbar_AdvancedSearchButton_1TxHd {
+      min-width: 32px;
+      height: 100%;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .gamelistsearchbar_Container_20QAC .gamelistsearchbar_AdvancedSearchContainer_vCCmY .gamelistsearchbar_AdvancedSearchButton_1TxHd svg {
+        width: 22px;
+        height: 22px;
+        margin-top: 4px;
+        transition: all .21s ease-in-out; }
+        .gamelistsearchbar_Container_20QAC .gamelistsearchbar_AdvancedSearchContainer_vCCmY .gamelistsearchbar_AdvancedSearchButton_1TxHd svg path {
+          fill: gray; }
+    .gamelistsearchbar_Container_20QAC .gamelistsearchbar_AdvancedSearchContainer_vCCmY.gamelistsearchbar_Disabled_1Gjk2 {
+      background-color: #2d2f36; }
+      .gamelistsearchbar_Container_20QAC .gamelistsearchbar_AdvancedSearchContainer_vCCmY.gamelistsearchbar_Disabled_1Gjk2 .gamelistsearchbar_AdvancedSearchButton_1TxHd {
+        cursor: default; }
+        .gamelistsearchbar_Container_20QAC .gamelistsearchbar_AdvancedSearchContainer_vCCmY.gamelistsearchbar_Disabled_1Gjk2 .gamelistsearchbar_AdvancedSearchButton_1TxHd svg path {
+          fill: #424242; }
+    .gamelistsearchbar_Container_20QAC .gamelistsearchbar_AdvancedSearchContainer_vCCmY.gamelistsearchbar_Extended_31r1_, .gamelistsearchbar_Container_20QAC .gamelistsearchbar_AdvancedSearchContainer_vCCmY:not(.gamelistsearchbar_Disabled_1Gjk2):hover {
+      background-color: #3e4047; }
+      .gamelistsearchbar_Container_20QAC .gamelistsearchbar_AdvancedSearchContainer_vCCmY.gamelistsearchbar_Extended_31r1_ .gamelistsearchbar_AdvancedSearchButton_1TxHd svg path, .gamelistsearchbar_Container_20QAC .gamelistsearchbar_AdvancedSearchContainer_vCCmY:not(.gamelistsearchbar_Disabled_1Gjk2):hover .gamelistsearchbar_AdvancedSearchButton_1TxHd svg path {
+        fill: lightgray; }
+  .gamelistsearchbar_Container_20QAC .gamelistsearchbar_HeaderListFadeTop_2_ts8 {
+    position: absolute;
+    bottom: -6px;
+    height: 6px;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to bottom, #24282f, transparent);
+    z-index: 5; }
+
+.gamelistsearchbar_SearchFilterInput_172OF {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  align-self: stretch;
+  padding: 2px;
+  box-sizing: border-box;
+  font-size: 13px;
+  font-style: normal;
+  color: white;
+  padding-right: 24px; }
+  .gamelistsearchbar_SearchFilterInput_172OF .gamelistsearchbar_SearchByTypePrompt_2zPn_ {
+    font-size: 14px;
+    padding: 4px 18px; }
+  .gamelistsearchbar_SearchFilterInput_172OF .gamelistsearchbar_FilterTag_3gzh_ {
+    background-color: dodgerblue;
+    margin: 2px 2px;
+    padding: 2px 6px 6px;
+    border-radius: 3px;
+    height: 14px;
+    cursor: default;
+    display: flex; }
+    .gamelistsearchbar_SearchFilterInput_172OF .gamelistsearchbar_FilterTag_3gzh_ .gamelistsearchbar_FiltertagSpacer_bAVLo {
+      width: 0px;
+      height: 10px; }
+    .gamelistsearchbar_SearchFilterInput_172OF .gamelistsearchbar_FilterTag_3gzh_ svg {
+      width: 10px;
+      height: 10px;
+      opacity: .3;
+      margin-left: 4px;
+      cursor: pointer; }
+      .gamelistsearchbar_SearchFilterInput_172OF .gamelistsearchbar_FilterTag_3gzh_ svg:hover {
+        opacity: 1; }
+    .gamelistsearchbar_SearchFilterInput_172OF .gamelistsearchbar_FilterTag_3gzh_.gamelistsearchbar_RemovedAppTag_14AvU {
+      color: #8f3636;
+      background-color: rgba(85, 6, 6, 0.4);
+      text-decoration: line-through;
+      text-decoration-color: rgba(197, 75, 75, 0.7); }
+      .gamelistsearchbar_SearchFilterInput_172OF .gamelistsearchbar_FilterTag_3gzh_.gamelistsearchbar_RemovedAppTag_14AvU .gamelistsearchbar_GameIcon_2uTOQ {
+        filter: saturate(2); }
+        .gamelistsearchbar_SearchFilterInput_172OF .gamelistsearchbar_FilterTag_3gzh_.gamelistsearchbar_RemovedAppTag_14AvU .gamelistsearchbar_GameIcon_2uTOQ:before {
+          content: "";
+          display: block;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background: rgba(131, 0, 0, 0.5);
+          transition: all .3s linear; }
+    .gamelistsearchbar_SearchFilterInput_172OF .gamelistsearchbar_FilterTag_3gzh_ .gamelistsearchbar_GameIcon_2uTOQ {
+      width: 18px;
+      height: 18px;
+      margin-left: -4px;
+      margin-right: 4px;
+      border-radius: 3px;
+      overflow: hidden; }
+  .gamelistsearchbar_SearchFilterInput_172OF.gamelistsearchbar_Disabled_1Gjk2 .gamelistsearchbar_FilterTag_3gzh_ {
+    opacity: 0.75; }
+    .gamelistsearchbar_SearchFilterInput_172OF.gamelistsearchbar_Disabled_1Gjk2 .gamelistsearchbar_FilterTag_3gzh_.gamelistsearchbar_RemovedAppTag_14AvU {
+      opacity: .75; }
+    .gamelistsearchbar_SearchFilterInput_172OF.gamelistsearchbar_Disabled_1Gjk2 .gamelistsearchbar_FilterTag_3gzh_ .gamelistsearchbar_FiltertagSpacer_bAVLo {
+      width: 7px;
+      height: 10px; }
+    .gamelistsearchbar_SearchFilterInput_172OF.gamelistsearchbar_Disabled_1Gjk2 .gamelistsearchbar_FilterTag_3gzh_ svg {
+      cursor: default; }
+      .gamelistsearchbar_SearchFilterInput_172OF.gamelistsearchbar_Disabled_1Gjk2 .gamelistsearchbar_FilterTag_3gzh_ svg:hover {
+        opacity: .3; }
+
 .cloudconflict_CloudConflictModalContent_3Ps1l {
   width: 53.33333vw; }
 
@@ -1589,363 +1946,6 @@ body.modals_BodyNoScrollDialog_105OB {
     margin: auto auto 0; }
     .eaaccessdialog_DialogContainer_24vXJ .eaaccessdialog_ButtonRow_8Bd3f .eaaccessdialog_Button_3F9ki {
       margin: 0 4px; }
-
-.savecollectiondialog_CollectionSummary_1M6bF {
-  padding: 12px 20px 0px;
-  color: dodgerblue;
-  margin-bottom: 12px; }
-
-.savecollectiondialog_DynamicOption_3MlTP {
-  padding: 0;
-  margin-bottom: 0;
-  margin-top: 8px; }
-
-.savecollectiondialog_InputContainer_38Qbh {
-  display: flex; }
-
-.DialogLabel.savecollectiondialog_Required_w_ZWy {
-  color: rgba(185, 99, 99, 0.6);
-  margin-left: 10px;
-  transition: all .21s ease-in-out;
-  opacity: 0;
-  font-weight: 400; }
-  .DialogLabel.savecollectiondialog_Required_w_ZWy.savecollectiondialog_Visible_2B-bI {
-    opacity: 1; }
-  .DialogLabel.savecollectiondialog_Required_w_ZWy.savecollectiondialog_Pulse_1WxEF {
-    animation-name: savecollectiondialog_Pulse_1WxEF;
-    animation-duration: .3s;
-    animation-timing-function: ease-out;
-    animation-iteration-count: 1; }
-
-@keyframes savecollectiondialog_Pulse_1WxEF {
-  0% {
-    transform: scale(1);
-    color: rgba(185, 99, 99, 0.9); }
-  30% {
-    transform: scale(1.18);
-    color: #ff2626; }
-  100% {
-    transform: scale(1);
-    color: rgba(185, 99, 99, 0.6); } }
-
-.savecollectiondialog_SaveCollectionContainer_z-cTL {
-  display: flex;
-  flex-direction: column; }
-  .savecollectiondialog_SaveCollectionContainer_z-cTL .DialogBodyText {
-    margin-bottom: 0; }
-  .savecollectiondialog_SaveCollectionContainer_z-cTL .DialogTextInputBase {
-    font-size: 16px;
-    text-transform: uppercase; }
-  .savecollectiondialog_SaveCollectionContainer_z-cTL .SVGIcon_DynamicCollection {
-    margin-bottom: -5px;
-    margin-right: 4px; }
-
-.savecollectiondialog_TwoOptionsContainer_33bWW {
-  display: flex;
-  justify-content: space-between;
-  background-color: #fff1;
-  border-radius: 4px;
-  align-self: stretch; }
-  .savecollectiondialog_TwoOptionsContainer_33bWW .savecollectiondialog_Option_3vDq3:last-child {
-    margin-left: 0; }
-  .savecollectiondialog_TwoOptionsContainer_33bWW .savecollectiondialog_Option_3vDq3.savecollectiondialog_Disabled_3Jmn3 {
-    cursor: default;
-    pointer-events: none; }
-    .savecollectiondialog_TwoOptionsContainer_33bWW .savecollectiondialog_Option_3vDq3.savecollectiondialog_Disabled_3Jmn3 .savecollectiondialog_ActionLabel_25n_z {
-      color: #b5d1fd;
-      filter: saturate(0.2);
-      cursor: default; }
-  .savecollectiondialog_TwoOptionsContainer_33bWW .savecollectiondialog_Option_3vDq3.savecollectiondialog_Disabled_3Jmn3:hover {
-    pointer-events: none; }
-  .savecollectiondialog_TwoOptionsContainer_33bWW .savecollectiondialog_Option_3vDq3 .savecollectiondialog_ActionLabel_25n_z {
-    background: linear-gradient(to right, #47bfff 0%, #1a44c2 60%);
-    background-position: 25%;
-    background-size: 330% 100%;
-    text-transform: uppercase;
-    color: #dfe3e6;
-    font-size: 14px;
-    text-align: center;
-    border-radius: 2px;
-    align-self: stretch;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    border: 1px solid #0000; }
-    .savecollectiondialog_TwoOptionsContainer_33bWW .savecollectiondialog_Option_3vDq3 .savecollectiondialog_ActionLabel_25n_z:focus {
-      border: 1px solid #47bfff; }
-    .savecollectiondialog_TwoOptionsContainer_33bWW .savecollectiondialog_Option_3vDq3 .savecollectiondialog_ActionLabel_25n_z:hover {
-      cursor: pointer; }
-    .savecollectiondialog_TwoOptionsContainer_33bWW .savecollectiondialog_Option_3vDq3 .savecollectiondialog_ActionLabel_25n_z svg {
-      width: 20px;
-      height: 20px;
-      margin-bottom: -6px;
-      margin-right: 4px; }
-
-.savecollectiondialog_Option_3vDq3 {
-  flex: 1;
-  margin: 8px;
-  pointer-events: initial;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 13px; }
-
-.savecollectiondialog_Description_3uOEr {
-  align-self: stretch;
-  padding: 8px;
-  flex: 1;
-  background: linear-gradient(to bottom, rgba(85, 85, 85, 0.644), rgba(94, 94, 94, 0.4));
-  color: #a2acbb; }
-
-.savecollectiondialog_SelectedFilters_1R9cY {
-  margin-top: 16px; }
-
-.savecollectiondialog_SaveSearchDescription_1MTcG {
-  margin-top: 10px;
-  font-size: 15px; }
-
-.savecollectiondialog_DynamicDescContainer_Kv-av {
-  display: flex;
-  justify-content: space-between;
-  background-color: #fff1;
-  border-radius: 4px;
-  align-self: stretch;
-  margin-top: 16px; }
-
-/* *:focus {
-	border: 1px solid red !important;
-	z-index: 1000000;
-}*/
-
-.gamelistsearchbar_Container_20QAC {
-  display: flex;
-  flex-grow: 0;
-  user-select: none;
-  color: white;
-  font-size: 12px;
-  outline: none;
-  position: relative;
-  padding: 6px;
-  padding-bottom: 10px; }
-  .gamelistsearchbar_Container_20QAC .gamelistsearchbar_SearchInput_12vo5 {
-    display: flex;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    cursor: text;
-    position: relative;
-    flex: 1;
-    color: #888;
-    font-style: normal;
-    box-sizing: border-box;
-    min-height: 32px;
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px; }
-    .gamelistsearchbar_Container_20QAC .gamelistsearchbar_SearchInput_12vo5 .DialogTextInputBase {
-      padding-left: 32px;
-      border-radius: 0;
-      background-color: rgba(33, 33, 36, 0.6);
-      background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACfUlEQVRYhcXWSYhUVxTG8V+LiDYOYAytiwYJRIwSsaMbJ1A0QsABk6AQ0IULF4K9cFg4LAqkRUFF0YAiSCKiiAsVXZgEYnBAIWAgKI0SFXuldkLi0M7SLu7pVCNdVa9emcoHj3Mu7957/u+8Oxz+ZzVAoVCo1G8yWjAGg/AP2vErbuYNXigU9K/QZzxWYAFG9/H+Ko5hPx7mgehX5l0brqG1V/AnuIeX0f4M26RsLH1fAANxDhuifQPrIlgTmsPOwk48wygcwvb3AfATZobfhk9i4t/wFK+lNfAL1mAsTkb/NdhSC0Abpoe/ApvQXWGODizC3mivx5w8AKMV074VB7JOElqFi+EfzAOwOmyH9BV5tCxsM76sBmAiFoe/K2dwuIPT4S+pBmCatLLhhxoAKC7IKdUAfBS2C7drBPgjbDM+zAowMOwjPK8R4Fkvf0hWgMdhP8gyqIKGhX2Dv7ICtIcdgHE1AkwIe0OG+6EH4HwMgK9rBPgm7IUsnXsA7igeHisxOGfw2ZgU/nfVAMC30gJsxJEcwRtxOPxLuFItQBeWhz8fu6sIPlw6hkfiFuZmHfjuZXQUO8JvxY+KKS2leVJl1BLtJsWdUFF9VURr8UK6mD6P55R0TbdLmRqOT7EQU2PcAwyV1s956XR9kAcANuIyNkv3xMJ4SumsVBE14QQ+xs9S0dJZDqBcSXZGSutifC/tlB69wu/YE0G+wJ+4jhlhx0uVVdnjuFJRCsfjaYjJBklH9t8l+t8PqHO9IEpmolwG3lW39E/vlgneo84IWjET1QBUq1IQDfUCKAUxop4ApSD+/R31ACgLUS+AviCWkG0b/hcQX2FfnWP3rbdXsIgAtEnQ2wAAAABJRU5ErkJggg==);
-      background-size: 18px 18px;
-      background-repeat: no-repeat;
-      background-position: 8px 8px;
-      padding-right: 24px; }
-      .gamelistsearchbar_Container_20QAC .gamelistsearchbar_SearchInput_12vo5 .DialogTextInputBase:focus {
-        padding-left: 34px; }
-      .gamelistsearchbar_Container_20QAC .gamelistsearchbar_SearchInput_12vo5 .DialogTextInputBase:hover {
-        background-color: rgba(33, 33, 36, 0.6);
-        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACfUlEQVRYhcXWSYhUVxTG8V+LiDYOYAytiwYJRIwSsaMbJ1A0QsABk6AQ0IULF4K9cFg4LAqkRUFF0YAiSCKiiAsVXZgEYnBAIWAgKI0SFXuldkLi0M7SLu7pVCNdVa9emcoHj3Mu7957/u+8Oxz+ZzVAoVCo1G8yWjAGg/AP2vErbuYNXigU9K/QZzxWYAFG9/H+Ko5hPx7mgehX5l0brqG1V/AnuIeX0f4M26RsLH1fAANxDhuifQPrIlgTmsPOwk48wygcwvb3AfATZobfhk9i4t/wFK+lNfAL1mAsTkb/NdhSC0Abpoe/ApvQXWGODizC3mivx5w8AKMV074VB7JOElqFi+EfzAOwOmyH9BV5tCxsM76sBmAiFoe/K2dwuIPT4S+pBmCatLLhhxoAKC7IKdUAfBS2C7drBPgjbDM+zAowMOwjPK8R4Fkvf0hWgMdhP8gyqIKGhX2Dv7ICtIcdgHE1AkwIe0OG+6EH4HwMgK9rBPgm7IUsnXsA7igeHisxOGfw2ZgU/nfVAMC30gJsxJEcwRtxOPxLuFItQBeWhz8fu6sIPlw6hkfiFuZmHfjuZXQUO8JvxY+KKS2leVJl1BLtJsWdUFF9VURr8UK6mD6P55R0TbdLmRqOT7EQU2PcAwyV1s956XR9kAcANuIyNkv3xMJ4SumsVBE14QQ+xs9S0dJZDqBcSXZGSutifC/tlB69wu/YE0G+wJ+4jhlhx0uVVdnjuFJRCsfjaYjJBklH9t8l+t8PqHO9IEpmolwG3lW39E/vlgneo84IWjET1QBUq1IQDfUCKAUxop4ApSD+/R31ACgLUS+AviCWkG0b/hcQX2FfnWP3rbdXsIgAtEnQ2wAAAABJRU5ErkJggg==);
-        background-size: 18px 18px;
-        background-repeat: no-repeat;
-        background-position: 8px 8px; }
-    .gamelistsearchbar_Container_20QAC .gamelistsearchbar_SearchInput_12vo5 .DialogInput_Wrapper {
-      opacity: 1;
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      z-index: 2;
-      outline: none;
-      transition: background-position .21s ease-in-out;
-      background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACfUlEQVRYhcXWSYhUVxTG8V+LiDYOYAytiwYJRIwSsaMbJ1A0QsABk6AQ0IULF4K9cFg4LAqkRUFF0YAiSCKiiAsVXZgEYnBAIWAgKI0SFXuldkLi0M7SLu7pVCNdVa9emcoHj3Mu7957/u+8Oxz+ZzVAoVCo1G8yWjAGg/AP2vErbuYNXigU9K/QZzxWYAFG9/H+Ko5hPx7mgehX5l0brqG1V/AnuIeX0f4M26RsLH1fAANxDhuifQPrIlgTmsPOwk48wygcwvb3AfATZobfhk9i4t/wFK+lNfAL1mAsTkb/NdhSC0Abpoe/ApvQXWGODizC3mivx5w8AKMV074VB7JOElqFi+EfzAOwOmyH9BV5tCxsM76sBmAiFoe/K2dwuIPT4S+pBmCatLLhhxoAKC7IKdUAfBS2C7drBPgjbDM+zAowMOwjPK8R4Fkvf0hWgMdhP8gyqIKGhX2Dv7ICtIcdgHE1AkwIe0OG+6EH4HwMgK9rBPgm7IUsnXsA7igeHisxOGfw2ZgU/nfVAMC30gJsxJEcwRtxOPxLuFItQBeWhz8fu6sIPlw6hkfiFuZmHfjuZXQUO8JvxY+KKS2leVJl1BLtJsWdUFF9VURr8UK6mD6P55R0TbdLmRqOT7EQU2PcAwyV1s956XR9kAcANuIyNkv3xMJ4SumsVBE14QQ+xs9S0dJZDqBcSXZGSutifC/tlB69wu/YE0G+wJ+4jhlhx0uVVdnjuFJRCsfjaYjJBklH9t8l+t8PqHO9IEpmolwG3lW39E/vlgneo84IWjET1QBUq1IQDfUCKAUxop4ApSD+/R31ACgLUS+AviCWkG0b/hcQX2FfnWP3rbdXsIgAtEnQ2wAAAABJRU5ErkJggg==);
-      background-size: 18px 18px;
-      background-repeat: no-repeat;
-      background-position: 8px 8px; }
-      .gamelistsearchbar_Container_20QAC .gamelistsearchbar_SearchInput_12vo5 .DialogInput_Wrapper .DialogInputPlaceholder::placeholder,
-      .gamelistsearchbar_Container_20QAC .gamelistsearchbar_SearchInput_12vo5 .DialogInput_Wrapper .DialogInputPlaceholder::-webkit-input-placeholder {
-        color: transparent;
-        transition: color .21s ease-in-out, transform .21s ease-in-out; }
-      .gamelistsearchbar_Container_20QAC .gamelistsearchbar_SearchInput_12vo5 .DialogInput_Wrapper:hover .DialogInputPlaceholder::placeholder,
-      .gamelistsearchbar_Container_20QAC .gamelistsearchbar_SearchInput_12vo5 .DialogInput_Wrapper:hover .DialogInputPlaceholder::-webkit-input-placeholder {
-        color: rgba(255, 255, 255, 0.15); }
-      .gamelistsearchbar_Container_20QAC .gamelistsearchbar_SearchInput_12vo5 .DialogInput_Wrapper:hover .DialogInputPlaceholder::-ms-input-placeholder,
-      .gamelistsearchbar_Container_20QAC .gamelistsearchbar_SearchInput_12vo5 .DialogInput_Wrapper:hover .DialogInputPlaceholder:-ms-input-placeholder {
-        color: rgba(255, 255, 255, 0.15); }
-      .gamelistsearchbar_Container_20QAC .gamelistsearchbar_SearchInput_12vo5 .DialogInput_Wrapper:focus-within {
-        opacity: 1;
-        background-position: 10px 8px;
-        /* for some reason, mixing these with ::placeholder confuses chrome */ }
-        .gamelistsearchbar_Container_20QAC .gamelistsearchbar_SearchInput_12vo5 .DialogInput_Wrapper:focus-within .DialogInputPlaceholder::placeholder,
-        .gamelistsearchbar_Container_20QAC .gamelistsearchbar_SearchInput_12vo5 .DialogInput_Wrapper:focus-within .DialogInputPlaceholder::-webkit-input-placeholder {
-          color: rgba(255, 255, 255, 0.35); }
-        .gamelistsearchbar_Container_20QAC .gamelistsearchbar_SearchInput_12vo5 .DialogInput_Wrapper:focus-within .DialogInputPlaceholder::-ms-input-placeholder,
-        .gamelistsearchbar_Container_20QAC .gamelistsearchbar_SearchInput_12vo5 .DialogInput_Wrapper:focus-within .DialogInputPlaceholder:-ms-input-placeholder {
-          color: rgba(255, 255, 255, 0.35); }
-  .gamelistsearchbar_Container_20QAC .DialogInput_ClearAction, .gamelistsearchbar_Container_20QAC .gamelistsearchbar_SearchFilterInputClear_38tIM {
-    width: 16px;
-    height: 16px;
-    position: absolute;
-    right: 6px;
-    top: 8px;
-    cursor: pointer; }
-    .gamelistsearchbar_Container_20QAC .DialogInput_ClearAction svg line, .gamelistsearchbar_Container_20QAC .gamelistsearchbar_SearchFilterInputClear_38tIM svg line {
-      stroke-width: 16px; }
-  .gamelistsearchbar_Container_20QAC .gamelistsearchbar_AdvancedSearchContainer_vCCmY {
-    box-sizing: border-box;
-    position: relative;
-    background-color: rgba(33, 33, 36, 0.6);
-    color: rgba(255, 255, 255, 0.8);
-    font-weight: 100;
-    border-radius: 4px;
-    height: 32px;
-    display: flex; }
-    .gamelistsearchbar_Container_20QAC .gamelistsearchbar_AdvancedSearchContainer_vCCmY .gamelistsearchbar_AdvancedSearchPaneContainer_1dgAM {
-      pointer-events: none; }
-      .gamelistsearchbar_Container_20QAC .gamelistsearchbar_AdvancedSearchContainer_vCCmY .gamelistsearchbar_AdvancedSearchPaneContainer_1dgAM.gamelistsearchbar_Visible_1v65x {
-        pointer-events: initial; }
-        .gamelistsearchbar_Container_20QAC .gamelistsearchbar_AdvancedSearchContainer_vCCmY .gamelistsearchbar_AdvancedSearchPaneContainer_1dgAM.gamelistsearchbar_Visible_1v65x .gamelistsearchbar_AdvancedSearchPane_Woh0k {
-          opacity: 1;
-          transform: scale(1); }
-      .gamelistsearchbar_Container_20QAC .gamelistsearchbar_AdvancedSearchContainer_vCCmY .gamelistsearchbar_AdvancedSearchPaneContainer_1dgAM .gamelistsearchbar_AdvancedSearchPane_Woh0k {
-        background-color: #4c515a;
-        z-index: 20;
-        position: absolute;
-        left: 42px;
-        border-radius: 4px;
-        box-shadow: 0px 2px 8px 1px black;
-        opacity: 0;
-        transform: scale(0.1);
-        transition: transform .21s ease-in-out, opacity .21s ease-in-out;
-        transform-origin: 0 0; }
-        .gamelistsearchbar_Container_20QAC .gamelistsearchbar_AdvancedSearchContainer_vCCmY .gamelistsearchbar_AdvancedSearchPaneContainer_1dgAM .gamelistsearchbar_AdvancedSearchPane_Woh0k:before {
-          content: '';
-          width: 16px;
-          height: 32px;
-          background-color: #4c515a;
-          position: absolute;
-          left: -12px; }
-      .gamelistsearchbar_Container_20QAC .gamelistsearchbar_AdvancedSearchContainer_vCCmY .gamelistsearchbar_AdvancedSearchPaneContainer_1dgAM .gamelistsearchbar_AdvancedSearchDismissalOverlay_1kYo6 {
-        position: fixed;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        z-index: 19; }
-    .gamelistsearchbar_Container_20QAC .gamelistsearchbar_AdvancedSearchContainer_vCCmY.gamelistsearchbar_Extended_31r1_ {
-      border-top-right-radius: 0px;
-      border-bottom-right-radius: 0px; }
-    .gamelistsearchbar_Container_20QAC .gamelistsearchbar_AdvancedSearchContainer_vCCmY .gamelistsearchbar_AdvancedSearchButton_1TxHd {
-      min-width: 32px;
-      height: 100%;
-      cursor: pointer;
-      display: flex;
-      justify-content: center;
-      align-items: center; }
-      .gamelistsearchbar_Container_20QAC .gamelistsearchbar_AdvancedSearchContainer_vCCmY .gamelistsearchbar_AdvancedSearchButton_1TxHd svg {
-        width: 22px;
-        height: 22px;
-        margin-top: 4px;
-        transition: all .21s ease-in-out; }
-        .gamelistsearchbar_Container_20QAC .gamelistsearchbar_AdvancedSearchContainer_vCCmY .gamelistsearchbar_AdvancedSearchButton_1TxHd svg path {
-          fill: gray; }
-    .gamelistsearchbar_Container_20QAC .gamelistsearchbar_AdvancedSearchContainer_vCCmY.gamelistsearchbar_Disabled_1Gjk2 {
-      background-color: #2d2f36; }
-      .gamelistsearchbar_Container_20QAC .gamelistsearchbar_AdvancedSearchContainer_vCCmY.gamelistsearchbar_Disabled_1Gjk2 .gamelistsearchbar_AdvancedSearchButton_1TxHd {
-        cursor: default; }
-        .gamelistsearchbar_Container_20QAC .gamelistsearchbar_AdvancedSearchContainer_vCCmY.gamelistsearchbar_Disabled_1Gjk2 .gamelistsearchbar_AdvancedSearchButton_1TxHd svg path {
-          fill: #424242; }
-    .gamelistsearchbar_Container_20QAC .gamelistsearchbar_AdvancedSearchContainer_vCCmY.gamelistsearchbar_Extended_31r1_, .gamelistsearchbar_Container_20QAC .gamelistsearchbar_AdvancedSearchContainer_vCCmY:not(.gamelistsearchbar_Disabled_1Gjk2):hover {
-      background-color: #3e4047; }
-      .gamelistsearchbar_Container_20QAC .gamelistsearchbar_AdvancedSearchContainer_vCCmY.gamelistsearchbar_Extended_31r1_ .gamelistsearchbar_AdvancedSearchButton_1TxHd svg path, .gamelistsearchbar_Container_20QAC .gamelistsearchbar_AdvancedSearchContainer_vCCmY:not(.gamelistsearchbar_Disabled_1Gjk2):hover .gamelistsearchbar_AdvancedSearchButton_1TxHd svg path {
-        fill: lightgray; }
-  .gamelistsearchbar_Container_20QAC .gamelistsearchbar_HeaderListFadeTop_2_ts8 {
-    position: absolute;
-    bottom: -6px;
-    height: 6px;
-    left: 0;
-    right: 0;
-    background: linear-gradient(to bottom, #24282f, transparent);
-    z-index: 5; }
-
-.gamelistsearchbar_SearchFilterInput_172OF {
-  display: flex;
-  flex-wrap: wrap;
-  flex: 1;
-  align-self: stretch;
-  padding: 2px;
-  box-sizing: border-box;
-  font-size: 13px;
-  font-style: normal;
-  color: white;
-  padding-right: 24px; }
-  .gamelistsearchbar_SearchFilterInput_172OF .gamelistsearchbar_SearchByTypePrompt_2zPn_ {
-    font-size: 14px;
-    padding: 4px 18px; }
-  .gamelistsearchbar_SearchFilterInput_172OF .gamelistsearchbar_FilterTag_3gzh_ {
-    background-color: dodgerblue;
-    margin: 2px 2px;
-    padding: 2px 6px 6px;
-    border-radius: 3px;
-    height: 14px;
-    cursor: default;
-    display: flex; }
-    .gamelistsearchbar_SearchFilterInput_172OF .gamelistsearchbar_FilterTag_3gzh_ .gamelistsearchbar_FiltertagSpacer_bAVLo {
-      width: 0px;
-      height: 10px; }
-    .gamelistsearchbar_SearchFilterInput_172OF .gamelistsearchbar_FilterTag_3gzh_ svg {
-      width: 10px;
-      height: 10px;
-      opacity: .3;
-      margin-left: 4px;
-      cursor: pointer; }
-      .gamelistsearchbar_SearchFilterInput_172OF .gamelistsearchbar_FilterTag_3gzh_ svg:hover {
-        opacity: 1; }
-    .gamelistsearchbar_SearchFilterInput_172OF .gamelistsearchbar_FilterTag_3gzh_.gamelistsearchbar_RemovedAppTag_14AvU {
-      color: #8f3636;
-      background-color: rgba(85, 6, 6, 0.4);
-      text-decoration: line-through;
-      text-decoration-color: rgba(197, 75, 75, 0.7); }
-      .gamelistsearchbar_SearchFilterInput_172OF .gamelistsearchbar_FilterTag_3gzh_.gamelistsearchbar_RemovedAppTag_14AvU .gamelistsearchbar_GameIcon_2uTOQ {
-        filter: saturate(2); }
-        .gamelistsearchbar_SearchFilterInput_172OF .gamelistsearchbar_FilterTag_3gzh_.gamelistsearchbar_RemovedAppTag_14AvU .gamelistsearchbar_GameIcon_2uTOQ:before {
-          content: "";
-          display: block;
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          background: rgba(131, 0, 0, 0.5);
-          transition: all .3s linear; }
-    .gamelistsearchbar_SearchFilterInput_172OF .gamelistsearchbar_FilterTag_3gzh_ .gamelistsearchbar_GameIcon_2uTOQ {
-      width: 18px;
-      height: 18px;
-      margin-left: -4px;
-      margin-right: 4px;
-      border-radius: 3px;
-      overflow: hidden; }
-  .gamelistsearchbar_SearchFilterInput_172OF.gamelistsearchbar_Disabled_1Gjk2 .gamelistsearchbar_FilterTag_3gzh_ {
-    opacity: 0.75; }
-    .gamelistsearchbar_SearchFilterInput_172OF.gamelistsearchbar_Disabled_1Gjk2 .gamelistsearchbar_FilterTag_3gzh_.gamelistsearchbar_RemovedAppTag_14AvU {
-      opacity: .75; }
-    .gamelistsearchbar_SearchFilterInput_172OF.gamelistsearchbar_Disabled_1Gjk2 .gamelistsearchbar_FilterTag_3gzh_ .gamelistsearchbar_FiltertagSpacer_bAVLo {
-      width: 7px;
-      height: 10px; }
-    .gamelistsearchbar_SearchFilterInput_172OF.gamelistsearchbar_Disabled_1Gjk2 .gamelistsearchbar_FilterTag_3gzh_ svg {
-      cursor: default; }
-      .gamelistsearchbar_SearchFilterInput_172OF.gamelistsearchbar_Disabled_1Gjk2 .gamelistsearchbar_FilterTag_3gzh_ svg:hover {
-        opacity: .3; }
 
 .draganddrop_GhostContainer_Luubb {
   opacity: 1.0;

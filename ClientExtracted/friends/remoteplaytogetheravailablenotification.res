@@ -1,10 +1,10 @@
-"resource/remotenplaytogetheravailableotification.res"
+"friends/remoteplaytogetheravailablenotification.res"
 {
 		
-	"BroadcastPublicStateNotification"
+	"RemotePlayTogetherAvailableNotification"
 	{
-		"ControlName"		"BroadcastPublicStateNotification"
-		"fieldName"		"BroadcastPublicStateNotification"
+		"ControlName"		"RemotePlayTogetherAvailableNotification"
+		"fieldName"		"RemotePlayTogetherAvailableNotification"
 		"xpos"		"0"
 		"ypos"		"0"
 		"wide"		"240"
@@ -75,7 +75,7 @@
 		"enabled"			"1"
 		"tabPosition"		"0"
 		"paintbackground"	"1"
-		"labelText"			"Test"
+		"labelText"			"#RemotePlayTogether_Notification_AvailableToInvite"
 		"textAlignment"		"north-west"
 		"wrap"				"1"
 	}	

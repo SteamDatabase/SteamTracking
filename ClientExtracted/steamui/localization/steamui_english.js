@@ -647,6 +647,7 @@
 	"AppDetails_Feature_PartialController": "Partial Controller Support",
 	"AppDetails_Feature_SteamWorkshop": "Steam Workshop",
 	"AppDetails_Feature_VRSupport": "VR Support",
+	"AppDetails_Feature_RemotePlayTogether": "Remote Play Together",
 
 	"AppDetails_ViewAllUpdates": "View All Updates",
 	"AppDetails_ViewAllAchievements": "View My Achievements",

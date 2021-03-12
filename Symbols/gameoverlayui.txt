@@ -9150,7 +9150,7 @@
  T CRefreshLoginDialog::SetUser(char const*, bool)
  T CRefreshLoginDialog::~CRefreshLoginDialog()
  T CReliableTimer::CReliableTimer()
- T CRemotePlayTogetherAvailableToInvite::CRemotePlayTogetherAvailableToInvite(vgui::Panel*, char const*, char const*)
+ T CRemotePlayTogetherAvailableToInvite::CRemotePlayTogetherAvailableToInvite(vgui::Panel*, char const*)
  T CRemotePlayTogetherAvailableToInvite::ChainToAnimationMap()
  T CRemotePlayTogetherAvailableToInvite::ChainToMap()
  T CRemotePlayTogetherAvailableToInvite::GetAnimMap()
