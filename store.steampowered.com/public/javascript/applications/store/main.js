@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6407521";
+var CLSTAMP = "6417881";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [11],
   {
@@ -26864,9 +26864,10 @@ var CLSTAMP = "6407521";
         ListItem: "bbcodes_ListItem_3FrNm",
         HR: "bbcodes_HR_3M2PS",
         Table: "bbcodes_Table_1iK3C",
-        TableHeader: "bbcodes_TableHeader_3rbaO",
+        NoBorder: "bbcodes_NoBorder_3Gpas",
         TableRow: "bbcodes_TableRow_qVi0G",
         TableData: "bbcodes_TableData_1vHUl",
+        TableHeader: "bbcodes_TableHeader_3rbaO",
       };
     },
     I2Hi: function (e, t, n) {
@@ -49805,6 +49806,10 @@ var CLSTAMP = "6407521";
         ExpandSectionHeader: "eventbbcodeparser_ExpandSectionHeader_2L3U_",
         EmbedArrow: "eventbbcodeparser_EmbedArrow_3IjdP",
         ExpandSectionBody: "eventbbcodeparser_ExpandSectionBody_1QuZQ",
+        SaleSectionCtn: "eventbbcodeparser_SaleSectionCtn_39HWX",
+        ReminderCtn: "eventbbcodeparser_ReminderCtn_25AZk",
+        BlockQuote: "eventbbcodeparser_BlockQuote_2cY7b",
+        Table: "eventbbcodeparser_Table_3sT80",
         SocialLink: "eventbbcodeparser_SocialLink_2LAnc",
         SocialIcon: "eventbbcodeparser_SocialIcon_dDjYN",
       };
@@ -70531,9 +70536,10 @@ var CLSTAMP = "6407521";
             "table",
             {
               Constructor: function (e) {
+                var t = f(e.args, "noborder");
                 return a.createElement(
                   "div",
-                  { className: d.a.Table },
+                  { className: Object(s.a)(d.a.Table, t && d.a.NoBorder) },
                   e.children
                 );
               },
@@ -70546,7 +70552,7 @@ var CLSTAMP = "6407521";
               Constructor: function (e) {
                 return a.createElement(
                   "div",
-                  { className: d.a.TableRow },
+                  { className: Object(s.a)(d.a.TableRow, "BB_TableRow") },
                   e.children
                 );
               },
@@ -70572,7 +70578,7 @@ var CLSTAMP = "6407521";
               Constructor: function (e) {
                 return a.createElement(
                   "div",
-                  { className: d.a.TableData },
+                  { className: Object(s.a)(d.a.TableData, "BB_TableData") },
                   e.children
                 );
               },
@@ -70626,7 +70632,7 @@ var CLSTAMP = "6407521";
         );
       }
       function v(e) {
-        return _(e, d.a.Header1);
+        return _(e, Object(s.a)(d.a.Header1, "BB_Header1"));
       }
       function g(e) {
         return _(e, d.a.Header2);

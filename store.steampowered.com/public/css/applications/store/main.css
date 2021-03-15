@@ -872,6 +872,13 @@ html.contextmenu_ContextMenuPopup_14wqd .contextmenu_contextMenuItem_1n7Wl {
   border-collapse: collapse;
   font-size: 12px;
 }
+.bbcodes_Table_1iK3C.bbcodes_NoBorder_3Gpas {
+  position: relative;
+}
+.bbcodes_Table_1iK3C.bbcodes_NoBorder_3Gpas .bbcodes_TableRow_qVi0G,
+.bbcodes_Table_1iK3C.bbcodes_NoBorder_3Gpas .bbcodes_TableData_1vHUl {
+  border: none;
+}
 
 .bbcodes_TableHeader_3rbaO {
   display: table-cell;
@@ -4122,6 +4129,46 @@ iframe.eventbbcodeparser_MedalTVWidget_1j2vi {
 .DetailPageExample .eventbbcodeparser_Header1_SPYFj {
   font-size: 11px;
   line-height: 11px;
+}
+
+.eventbbcodeparser_SaleSectionCtn_39HWX {
+  color: #c3c4d9;
+  font-size: 14px;
+}
+.eventbbcodeparser_SaleSectionCtn_39HWX .eventbbcodeparser_ReminderCtn_25AZk {
+  width: 300px;
+  margin: 6px 0;
+}
+.eventbbcodeparser_SaleSectionCtn_39HWX .eventbbcodeparser_BlockQuote_2cY7b {
+  border: none;
+  width: 60%;
+  max-width: 640px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 800px) {
+  .eventbbcodeparser_SaleSectionCtn_39HWX .eventbbcodeparser_BlockQuote_2cY7b {
+    width: 100%;
+  }
+}
+.eventbbcodeparser_SaleSectionCtn_39HWX .eventbbcodeparser_Table_3sT80 {
+  font-size: 18px;
+}
+@media screen and (max-width: 800px) {
+  .eventbbcodeparser_SaleSectionCtn_39HWX .eventbbcodeparser_Table_3sT80 {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .eventbbcodeparser_SaleSectionCtn_39HWX .eventbbcodeparser_Table_3sT80 {
+    font-size: 13px;
+  }
+}
+.eventbbcodeparser_SaleSectionCtn_39HWX img {
+  max-width: 100%;
+  height: auto;
+}
+.eventbbcodeparser_SaleSectionCtn_39HWX .eventbbcodeparser_Link_29bMZ {
+  color: white;
 }
 
 .eventbbcodeparser_SocialLink_2LAnc {
