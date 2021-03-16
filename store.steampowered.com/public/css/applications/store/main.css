@@ -4150,16 +4150,16 @@ iframe.eventbbcodeparser_MedalTVWidget_1j2vi {
     width: 100%;
   }
 }
-.eventbbcodeparser_SaleSectionCtn_39HWX .eventbbcodeparser_Table_3sT80 {
+.eventbbcodeparser_SaleSectionCtn_39HWX .BB_TableData {
   font-size: 18px;
 }
 @media screen and (max-width: 800px) {
-  .eventbbcodeparser_SaleSectionCtn_39HWX .eventbbcodeparser_Table_3sT80 {
+  .eventbbcodeparser_SaleSectionCtn_39HWX .BB_TableData {
     font-size: 16px;
   }
 }
 @media screen and (max-width: 600px) {
-  .eventbbcodeparser_SaleSectionCtn_39HWX .eventbbcodeparser_Table_3sT80 {
+  .eventbbcodeparser_SaleSectionCtn_39HWX .BB_TableData {
     font-size: 13px;
   }
 }

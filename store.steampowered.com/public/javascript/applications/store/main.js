@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6417881";
+var CLSTAMP = "6420077";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [11],
   {
@@ -37891,6 +37891,10 @@ var CLSTAMP = "6417881";
                 },
               ],
               [
+                "quote",
+                { Constructor: l.a(l.k, ae.BlockQuote), autocloses: !1 },
+              ],
+              [
                 "list",
                 {
                   Constructor: l.a(l.h, ae.UnorderedList),
@@ -38023,7 +38027,10 @@ var CLSTAMP = "6417881";
             o),
           Object(l.b)(o) && (t = "noopener nofollow");
         var i =
-          "string" == typeof e.children && 0 < e.children.length && n
+          "string" == typeof e.children &&
+          0 < e.children.length &&
+          n &&
+          !n.startsWith("steam://")
             ? Object(m.e)(n)
             : void 0;
         return h.createElement(
@@ -49809,7 +49816,6 @@ var CLSTAMP = "6417881";
         SaleSectionCtn: "eventbbcodeparser_SaleSectionCtn_39HWX",
         ReminderCtn: "eventbbcodeparser_ReminderCtn_25AZk",
         BlockQuote: "eventbbcodeparser_BlockQuote_2cY7b",
-        Table: "eventbbcodeparser_Table_3sT80",
         SocialLink: "eventbbcodeparser_SocialLink_2LAnc",
         SocialIcon: "eventbbcodeparser_SocialIcon_dDjYN",
       };
@@ -70352,14 +70358,17 @@ var CLSTAMP = "6417881";
         n.d(t, "g", function () {
           return y;
         }),
-        n.d(t, "h", function () {
+        n.d(t, "k", function () {
           return M;
         }),
-        n.d(t, "j", function () {
+        n.d(t, "h", function () {
           return S;
         }),
-        n.d(t, "i", function () {
+        n.d(t, "j", function () {
           return E;
+        }),
+        n.d(t, "i", function () {
+          return O;
         });
       var r = n("mrSG"),
         a = n("q1tI"),
@@ -70481,28 +70490,7 @@ var CLSTAMP = "6417881";
               autocloses: !1,
             },
           ],
-          [
-            "quote",
-            {
-              Constructor: function (e) {
-                var t = f(e.args, "author");
-                return a.createElement(
-                  "blockquote",
-                  { className: d.a.BlockQuote },
-                  !!t &&
-                    a.createElement(
-                      "div",
-                      { className: d.a.QuoteAuthor },
-                      Object(c.f)("#Bbcode_Originally_Posted_By") + " ",
-                      " ",
-                      a.createElement("b", null, t + ":")
-                    ),
-                  e.children
-                );
-              },
-              autocloses: !1,
-            },
-          ],
+          ["quote", { Constructor: M, autocloses: !1 }],
           [
             "pullquote",
             {
@@ -70529,9 +70517,9 @@ var CLSTAMP = "6417881";
               autocloses: !1,
             },
           ],
-          ["list", { Constructor: M, autocloses: !1 }],
-          ["olist", { Constructor: S, autocloses: !1 }],
-          ["*", { Constructor: E, autocloses: !0 }],
+          ["list", { Constructor: S, autocloses: !1 }],
+          ["olist", { Constructor: E, autocloses: !1 }],
+          ["*", { Constructor: O, autocloses: !0 }],
           [
             "table",
             {
@@ -70587,6 +70575,7 @@ var CLSTAMP = "6417881";
           ],
         ]);
       function h(e, t) {
+        if (e.startsWith("steam://")) return !1;
         var n = Object(l.d)(e).toLowerCase(),
           r = Object(l.d)(u.d.COMMUNITY_BASE_URL).toLowerCase(),
           a = Object(l.d)(u.d.STORE_BASE_URL).toLowerCase(),
@@ -70641,16 +70630,32 @@ var CLSTAMP = "6417881";
         return _(e, d.a.Header3);
       }
       function M(e) {
-        return a.createElement("ul", { className: d.a.List }, e.children);
+        var t = f(e.args, "author");
+        return a.createElement(
+          "blockquote",
+          { className: Object(s.a)(d.a.BlockQuote, e.className) },
+          !!t &&
+            a.createElement(
+              "div",
+              { className: d.a.QuoteAuthor },
+              Object(c.f)("#Bbcode_Originally_Posted_By") + " ",
+              " ",
+              a.createElement("b", null, t + ":")
+            ),
+          e.children
+        );
       }
       function S(e) {
+        return a.createElement("ul", { className: d.a.List }, e.children);
+      }
+      function E(e) {
         return a.createElement(
           "ol",
           { className: d.a.OrderedList },
           e.children
         );
       }
-      function E(e) {
+      function O(e) {
         return a.createElement("li", { className: d.a.ListItem }, e.children);
       }
     },
