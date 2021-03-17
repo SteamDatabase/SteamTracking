@@ -17,7 +17,7 @@ __TEXT
 7
 __unwind_info
 __TEXT
-Lu
+|u
 __eh_frame
 __TEXT
 __DATA
@@ -33,19 +33,19 @@ __DATA
 __const
 __DATA
 __objc_imageinfo__DATA
-(8/
-(8/
+(H/
+(H/
 __objc_selrefs
 __DATA
-08/
-08/
+0H/
+0H/
 __objc_classrefs__DATA
-H8/
-H8/
+HH/
+HH/
 __data
 __DATA
-P8/
-P8/
+PH/
+PH/
 __thread_vars
 __DATA
 __thread_bss
@@ -54,7 +54,7 @@ __common
 __DATA
 __bss
 __DATA
-<0
+L0
 H
 __LINKEDIT
 
@@ -62,11 +62,12 @@ __LINKEDIT
 @loader_path/steamservice.dylib
 "
 H
-[&
-i2
+^&
+Xy2
 P
 {
-R%
+U%
+Hq2
 
 `
 h
@@ -90,16 +91,15 @@ h
 8
 /usr/lib/libobjc.A.dylib
 &
-0$
+8$
 )
-0
 Hi
 H=
-/
+v!
 ?
-W!
-,
-9!
+j!
+#
+!
 !
 10CUtlString
 10CIPCServer
@@ -7899,8 +7899,8 @@ crashhandler.dylib
 CreateInterface
 %u
 1.0
-Mar 11 2021
-20:33:52
+Mar 16 2021
+17:38:45
 Jan
 Feb
 Mar
@@ -8348,6 +8348,9 @@ ECONNRESET
 commonName
 sha256
 DES
+VALVE_CRYPTO_dbg_malloc
+VALVE_CRYPTO_dbg_realloc
+VALVE_CRYPTO_dbg_free
 COpenSSLContext
 COpenSSLConnection
 OpenSSL random number system reports not enough entropy
@@ -8475,15 +8478,15 @@ Work thread '%s' is marked exited, but we could not immediately join prior to de
 CWorkItem::DispatchCompletedWorkItem: got a work item with no job ID
 Assertion Failed: m_cCurrentDepth > 0
 %s%s%s
-0
 Hi
 H=
-/
+v!
 ?
-W!
-,
-9!
+j!
+#
 !
+!
+#
 @
 @
 =
@@ -8492,15 +8495,15 @@ W!
 ?
 ?
 A
--
 Hc
 =
 N
-+,
-L+
-+
-L95V
-+
+)
+)
+)
+;,
+\+
+(
 Hc
 ?
 ?
@@ -8529,7 +8532,6 @@ ARj
 j
 0
 0
-#
 =
 =
 @
@@ -8862,7 +8864,6 @@ H
 
 *
 Hc
-P
 AES-NI GCM module for x86_64, CRYPTOGAMS by <appro@openssl.org>
 %
 @
@@ -8918,10 +8919,6 @@ H=
 @
 Hi
 E
-
-
-
-
 $
 (
 0
@@ -8956,6 +8953,7 @@ i
 @
 @
 @
+
 @
 @
 @

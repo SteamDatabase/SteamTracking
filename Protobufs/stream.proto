@@ -739,12 +739,14 @@ message CRemotePlayTogetherGroupUpdateMsg {
 		optional bool mouse_enabled = 4;
 		optional bool controller_enabled = 5;
 		repeated uint32 controller_slots = 6;
+		optional bytes avatar_hash = 7;
 	}
 
 	repeated .CRemotePlayTogetherGroupUpdateMsg.Player players = 1;
 	optional int32 player_index = 2;
 	optional string miniprofile_location = 3;
 	optional string game_name = 4;
+	optional string avatar_location = 5;
 }
 
 message CSetInputTemporarilyDisabledMsg {

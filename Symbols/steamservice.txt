@@ -4556,7 +4556,7 @@
  b OPENSSL_init_ssl.stoperrset
  b OSXHelpers::s_bUseLibDispatch
  b OSXHelpers::s_pPollingHelperSingleton
- b OneTimeCryptoInitOpenSSL()::threadonce_324_36
+ b OneTimeCryptoInitOpenSSL()::threadonce_327_36
  b PchGetRegPath(ERegKeyRoot, char const*, StringView)::szRegLocation
  b RTANoteAlloc(void*, unsigned long, bool, char const*, int, int, int)::g_FilenamesCache
  b RegistryEmulatorManager()::s_PosixRegMgr

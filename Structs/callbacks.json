@@ -1966,12 +1966,12 @@
     },
     {
         "id": 3311,
-        "size": 544,
+        "size": 564,
         "posted_in": "void CSteamEngine::PostCallbackToAllUsers<RemoteClientStartStreamSession_t>(RemoteClientStartStreamSession_t*)"
     },
     {
         "id": 3312,
-        "size": 20,
+        "size": 40,
         "posted_in": "void CSteamEngine::PostCallbackToAllUsers<RemoteClientStopStreamSession_t>(RemoteClientStopStreamSession_t*)"
     },
     {
@@ -1991,7 +1991,7 @@
     },
     {
         "id": 3317,
-        "size": 144,
+        "size": 164,
         "posted_in": "void CSteamEngine::PostCallbackToAllUsers<StreamingClientConnected_t>(StreamingClientConnected_t*)"
     },
     {
@@ -2046,17 +2046,17 @@
     },
     {
         "id": 3328,
-        "size": 1052,
+        "size": 1072,
         "posted_in": "CRemoteClientJobRemotePlayInvite::SendInviteResult(ERemoteClientLaunchResult)"
     },
     {
         "id": 3329,
-        "size": 20,
+        "size": 40,
         "posted_in": "void CSteamEngine::PostCallbackToAllUsers<RemoteClientInputSettingsChange_t>(RemoteClientInputSettingsChange_t*)"
     },
     {
         "id": 3330,
-        "size": 20,
+        "size": 40,
         "posted_in": "void CSteamEngine::PostCallbackToAllUsers<StreamingClientUsedInput_t>(StreamingClientUsedInput_t*)"
     },
     {
@@ -2071,12 +2071,12 @@
     },
     {
         "id": 3333,
-        "size": 24,
+        "size": 44,
         "posted_in": "void CSteamEngine::PostCallbackToAllUI<RemoteClientRemotePlayTogetherPlayerJoined_t>(RemoteClientRemotePlayTogetherPlayerJoined_t*)"
     },
     {
         "id": 3334,
-        "size": 24,
+        "size": 44,
         "posted_in": "void CSteamEngine::PostCallbackToAllUI<RemoteClientRemotePlayTogetherPlayerLeft_t>(RemoteClientRemotePlayTogetherPlayerLeft_t*)"
     },
     {
@@ -2086,7 +2086,7 @@
     },
     {
         "id": 3336,
-        "size": 20,
+        "size": 40,
         "posted_in": "void CSteamEngine::PostCallbackToAllUsers<RemoteClientRemotePlayControllerIndexSet_t>(RemoteClientRemotePlayControllerIndexSet_t*)"
     },
     {
@@ -2098,6 +2098,11 @@
         "id": 3338,
         "size": 1,
         "posted_in": "void CSteamEngine::PostCallbackToAllUsers<RemoteClientRemotePlayUpdateComplete_t>(RemoteClientRemotePlayUpdateComplete_t*)"
+    },
+    {
+        "id": 3339,
+        "size": 4,
+        "posted_in": "SteamClientJobLambda<CRemoteClientManager::JoinRemotePlaySession(CSteamID, char const*)::$_2>::BYieldingRunJob(void*)"
     },
     {
         "id": 3401,
