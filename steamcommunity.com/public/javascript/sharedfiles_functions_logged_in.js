@@ -605,6 +605,38 @@ function SubscribeItem()
 	}
 }
 
+
+function SubscribeInlineItem( id, appID )
+{
+	$J('#action_wait_' + id).show();
+
+	var params = {
+		id: id,
+		appid: appID,
+		sessionid: g_sessionID
+	};
+
+	if ( !$J('#SubscribeItemBtn' + id ).hasClass( "toggled" ) )
+	{
+		$J.post( "https://steamcommunity.com/sharedfiles/subscribe", params )
+		.done( function( data ) {
+			$J('#SubscribeItemBtn' + id).addClass( "toggled" );
+			$J('#user_action_history_icon_subscribed' + id ).show();
+			$J('#action_wait_' + id).hide();
+		} );
+	}
+	else
+	{
+		$J.post( "https://steamcommunity.com/sharedfiles/unsubscribe", params )
+		.done( function( data ) {
+			$J('#SubscribeItemBtn' + id).removeClass( "toggled" );
+			$J('#user_action_history_icon_subscribed' + id ).hide();
+			$J('#action_wait_' + id).hide();
+		} );
+	}
+}
+
+
 function FavoriteItem()
 {
 	$('action_wait').show();

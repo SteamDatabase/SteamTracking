@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6412327";
+var CLSTAMP = "6420968";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [68],
   {
@@ -555,10 +555,10 @@ var CLSTAMP = "6412327";
           return A;
         }),
         n.d(t, "p", function () {
-          return j;
+          return k;
         }),
         n.d(t, "G", function () {
-          return k;
+          return j;
         }),
         n.d(t, "J", function () {
           return T;
@@ -618,10 +618,10 @@ var CLSTAMP = "6412327";
           return J;
         }),
         n.d(t, "w", function () {
-          return Z;
+          return Q;
         }),
         n.d(t, "r", function () {
-          return Q;
+          return Z;
         }),
         n.d(t, "A", function () {
           return $;
@@ -1568,7 +1568,7 @@ var CLSTAMP = "6412327";
           })
         );
       }
-      function j(e) {
+      function k(e) {
         return o.createElement(
           "svg",
           {
@@ -1604,7 +1604,7 @@ var CLSTAMP = "6412327";
             })
         );
       }
-      function k() {
+      function j() {
         return o.createElement(
           "svg",
           {
@@ -2175,7 +2175,7 @@ var CLSTAMP = "6412327";
           })
         );
       }
-      function Z() {
+      function Q() {
         return o.createElement(
           "svg",
           {
@@ -2195,7 +2195,7 @@ var CLSTAMP = "6412327";
           })
         );
       }
-      function Q() {
+      function Z() {
         return o.createElement(
           "svg",
           {
@@ -4468,10 +4468,10 @@ var CLSTAMP = "6412327";
           );
         })();
       function A(e) {
-        var t = j.get(e);
-        return t || ((t = new M()), j.set(e, t)), t;
+        var t = k.get(e);
+        return t || ((t = new M()), k.set(e, t)), t;
       }
-      var j = new WeakMap();
+      var k = new WeakMap();
     },
     Kw0F: function (e, t, n) {
       "use strict";
@@ -4710,14 +4710,14 @@ var CLSTAMP = "6412327";
           g.createElement(M, Object(h.a)({}, r))
         );
       }
-      function j(e) {
+      function k(e) {
         var t = s();
         return g.createElement(
           _.f,
-          Object(h.a)({ component: t.BaseButton, fallback: k }, e)
+          Object(h.a)({ component: t.BaseButton, fallback: j }, e)
         );
       }
-      function k(e) {
+      function j(e) {
         var t = e.svgicon,
           n = (e.primary, e.renderButtonElement),
           r = Object(h.f)(e, ["svgicon", "primary", "renderButtonElement"]),
@@ -4733,7 +4733,7 @@ var CLSTAMP = "6412327";
       }
       function T(e) {
         return g.createElement(
-          j,
+          k,
           Object(h.a)(
             { primary: !0, type: e.onClick ? "button" : "submit" },
             e,
@@ -4750,7 +4750,7 @@ var CLSTAMP = "6412327";
       }
       function I(e) {
         return g.createElement(
-          j,
+          k,
           Object(h.a)({ type: "button" }, e, {
             className: Object(b.a)(
               e.className,
@@ -4763,7 +4763,7 @@ var CLSTAMP = "6412327";
       }
       function N(e) {
         return g.createElement(
-          j,
+          k,
           Object(h.a)({ type: "button" }, e, {
             className: Object(b.a)(
               e.className,
@@ -5595,8 +5595,8 @@ var CLSTAMP = "6412327";
           );
         })(g.Component),
         J = n("TtDX"),
-        Z = n("P++D"),
-        Q = n.n(Z),
+        Q = n("P++D"),
+        Z = n.n(Q),
         $ = n("5E+2"),
         ee = n("6+2x"),
         te = n.n(ee),
@@ -5849,7 +5849,7 @@ var CLSTAMP = "6412327";
             n.fnOnItemSelected(t, n.rgOptions[t]);
         }
         var o = Object(b.a)(
-            Q.a.DialogDropDownMenu_Item,
+            Z.a.DialogDropDownMenu_Item,
             n.strDropDownItemClassName
           ),
           e = n.rgOptions.map(function (e, t) {
@@ -5881,7 +5881,7 @@ var CLSTAMP = "6412327";
             component: n.renderMenuContainer,
             fallback: "div",
             className: Object(b.a)(
-              Q.a.DialogDropDownMenu,
+              Z.a.DialogDropDownMenu,
               "_DialogInputContainer"
             ),
           },
@@ -8715,15 +8715,15 @@ var CLSTAMP = "6412327";
     },
     UPxs: function (e, t, n) {
       "use strict";
-      var u = n("mrSG"),
-        p = n("q1tI"),
-        m = n("exH9"),
+      var m = n("mrSG"),
+        d = n("q1tI"),
+        h = n("exH9"),
         r = n("bxiW"),
         Y = { x: "y", y: "x" };
       function K() {
         return { x: 0, y: 0 };
       }
-      function F(e, t) {
+      function P(e, t) {
         return e.x * t.x + e.y * t.y;
       }
       function X(e, t) {
@@ -8738,12 +8738,12 @@ var CLSTAMP = "6412327";
       function o(e) {
         return (e.min + e.max) / 2;
       }
-      function Z(e, t) {
+      function Q(e, t) {
         return !(e.max < t.min || t.max < e.min);
       }
-      var P = n("Kw0F"),
+      var G = n("Kw0F"),
         f = n("r64O"),
-        Q = n("X3Ds");
+        Z = n("X3Ds");
       var $,
         i,
         a = (function () {
@@ -8809,14 +8809,14 @@ var CLSTAMP = "6412327";
         (i.ScrollSnapMarginX = "data-nav-scroll-snap-margin-x"),
         (i.ScrollSnapMarginY = "data-nav-scroll-snap-margin-y"),
         (i.Focus = "data-nav-focus");
-      var d,
+      var v,
         s,
-        h,
+        b,
         c,
         ee,
         l,
-        v = "Focusable",
-        b = "FocusGroup",
+        u = "Focusable",
+        p = "FocusGroup",
         _ = "NavArea",
         y = (function () {
           function t() {}
@@ -8833,7 +8833,7 @@ var CLSTAMP = "6412327";
             }),
             Object.defineProperty(t, "IsLoggingToConsole", {
               get: function () {
-                return !1;
+                return !0;
               },
               enumerable: !1,
               configurable: !0,
@@ -8891,7 +8891,7 @@ var CLSTAMP = "6412327";
         y.IsLoggingToConsole &&
           (0 < t.length && "string" == typeof t[0]
             ? ((e = t.shift()),
-              console.log.apply(console, Object(u.g)(["\t".repeat(E) + e], t)))
+              console.log.apply(console, Object(m.g)(["\t".repeat(E) + e], t)))
             : console.log.apply(console, t));
       }
       function w(e, t, n) {
@@ -8955,7 +8955,7 @@ var CLSTAMP = "6412327";
         var r = e,
           o = null != r.getAttribute($.Type),
           i = o ? r.getAttribute($.ScrollAxes) : void 0;
-        if (o && i !== h.XY && i !== t) return d.None;
+        if (o && i !== b.XY && i !== t) return v.None;
         var a =
             "x" === t
               ? [r.scrollLeft, r.scrollWidth, r.clientWidth]
@@ -8964,45 +8964,45 @@ var CLSTAMP = "6412327";
           c = a[1],
           l = a[2],
           u = -1 === n ? Math.abs(s) < 1 : Math.abs(s + l - c) <= 1;
-        if (o) return u ? d.AtEnd : d.Scrollable;
-        if (!u && c <= l) return d.None;
+        if (o) return u ? v.AtEnd : v.Scrollable;
+        if (!u && c <= l) return v.None;
         var p = r.ownerDocument.defaultView.getComputedStyle(r),
           m = "x" === t ? p.overflowX : p.overflowY;
         return "auto" === m || "scroll" === m
           ? u
-            ? d.AtEnd
-            : d.Scrollable
-          : d.None;
+            ? v.AtEnd
+            : v.Scrollable
+          : v.None;
       }
-      ((s = d = d || {})[(s.None = 2)] = "None"),
+      ((s = v = v || {})[(s.None = 2)] = "None"),
         (s[(s.Scrollable = 1)] = "Scrollable"),
         (s[(s.AtEnd = 3)] = "AtEnd"),
-        ((c = h = h || {}).X = "x"),
+        ((c = b = b || {}).X = "x"),
         (c.Y = "y"),
         (c.XY = "xy"),
         ((l = ee = ee || {}).Area = "area"),
         (l.Group = "group"),
         (l.Target = "target");
-      var C = p.createContext(null);
+      var C = d.createContext(null);
       function D(e) {
         for (var t = [], n = e; null != n; n = n.parent) t.push(n.key);
         return t.reverse(), JSON.stringify(t);
       }
       var x,
         M,
-        A = p.createContext(void 0),
-        j = p.createContext(void 0),
-        k = p.createContext(void 0);
+        A = d.createContext(void 0),
+        k = d.createContext(void 0),
+        j = d.createContext(void 0);
       function T(e, o, i) {
         var a = null != e.navKey ? e.navKey : void 0;
         return null != a && y.IsNavEnabled
-          ? p.createElement(j.Consumer, null, function (r) {
-              return p.createElement(k.Consumer, null, function (n) {
-                return p.createElement(A.Consumer, null, function (e) {
+          ? d.createElement(k.Consumer, null, function (r) {
+              return d.createElement(j.Consumer, null, function (n) {
+                return d.createElement(A.Consumer, null, function (e) {
                   var t = { parent: e, key: a };
                   return (
                     "function" == typeof i && i(t, r, n),
-                    p.createElement(A.Provider, { value: t }, o)
+                    d.createElement(A.Provider, { value: t }, o)
                   );
                 });
               });
@@ -9017,10 +9017,10 @@ var CLSTAMP = "6412327";
       var I = (function (t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
-            return (e.m_containerRef = p.createRef()), e;
+            return (e.m_containerRef = d.createRef()), e;
           }
           return (
-            Object(u.d)(e, t),
+            Object(m.d)(e, t),
             (e.prototype.IsEventSource = function (e) {
               var t = this.m_containerRef.current;
               return null != t && t.contains(e.target);
@@ -9051,13 +9051,13 @@ var CLSTAMP = "6412327";
               var e = this.props,
                 t = e.children,
                 n = e.style,
-                r = Object(u.f)(e, ["children", "style"]);
-              return p.createElement(
+                r = Object(m.f)(e, ["children", "style"]);
+              return d.createElement(
                 "div",
-                Object(u.a)(
+                Object(m.a)(
                   {
                     ref: this.m_containerRef,
-                    style: Object(u.a)(Object(u.a)({}, n), {
+                    style: Object(m.a)(Object(m.a)({}, n), {
                       position: "absolute",
                       willChange: "left, top",
                     }),
@@ -9067,10 +9067,10 @@ var CLSTAMP = "6412327";
                 t
               );
             }),
-            Object(u.c)([w], e.prototype, "HandleOnFocusChanged", null),
+            Object(m.c)([w], e.prototype, "HandleOnFocusChanged", null),
             e
           );
-        })(p.Component),
+        })(d.Component),
         N = (function () {
           function e(e, t) {
             (this.m_bNeedsUpdate = !1),
@@ -9132,8 +9132,8 @@ var CLSTAMP = "6412327";
                     (r.style.height =
                       (e.y.max - e.y.min) / t + 2 * this.m_nPaddingPx + "px"));
             }),
-            Object(u.c)([w], e.prototype, "HandleOnFocusChanged", null),
-            Object(u.c)([r.a], e.prototype, "HandleOnAnimationFrame", null),
+            Object(m.c)([w], e.prototype, "HandleOnFocusChanged", null),
+            Object(m.c)([r.a], e.prototype, "HandleOnAnimationFrame", null),
             e
           );
         })(),
@@ -9163,7 +9163,7 @@ var CLSTAMP = "6412327";
             return n ? (t.m_win = n) : te("- No window!"), t;
           }
           return (
-            Object(u.d)(e, r),
+            Object(m.d)(e, r),
             (e.prototype.GetFocus = function () {
               return void 0 !== this.m_doc && oe(this.m_doc.activeElement)
                 ? this.m_doc.activeElement
@@ -9202,7 +9202,9 @@ var CLSTAMP = "6412327";
               te("CHtmlDomFocusController AddBlurListener");
               function e(e) {
                 oe(e.target) &&
-                  (te("HDFC blur listener {"), t(e.target), te("+ }"));
+                  (te("HDFC blur listener {"),
+                  t(e.target, e.relatedTarget),
+                  te("+ }"));
               }
               this.m_blurListeners.set(t, e),
                 this.m_win.addEventListener("blur", e, !0);
@@ -9213,12 +9215,12 @@ var CLSTAMP = "6412327";
               this.m_doc.removeEventListener("blur", t, !0),
                 this.m_blurListeners.delete(e);
             }),
-            Object(u.c)([w], e.prototype, "Focus", null),
-            Object(u.c)([w], e.prototype, "Click", null),
-            Object(u.c)([w], e.prototype, "AddFocusListener", null),
-            Object(u.c)([w], e.prototype, "RemoveFocusListener", null),
-            Object(u.c)([w], e.prototype, "AddBlurListener", null),
-            Object(u.c)([w], e.prototype, "RemoveBlurListener", null),
+            Object(m.c)([w], e.prototype, "Focus", null),
+            Object(m.c)([w], e.prototype, "Click", null),
+            Object(m.c)([w], e.prototype, "AddFocusListener", null),
+            Object(m.c)([w], e.prototype, "RemoveFocusListener", null),
+            Object(m.c)([w], e.prototype, "AddBlurListener", null),
+            Object(m.c)([w], e.prototype, "RemoveBlurListener", null),
             e
           );
         })(L);
@@ -9228,15 +9230,15 @@ var CLSTAMP = "6412327";
           e.navScrollMarginX && (t[$.ScrollSnapMarginX] = e.navScrollMarginX),
           e.navScrollMarginY && (t[$.ScrollSnapMarginY] = e.navScrollMarginY);
       }
-      var G = new Map();
+      var F = new Map();
       function H(e, t) {
-        G.set(e, t);
+        F.set(e, t);
       }
       function U(e) {
-        G.delete(e);
+        F.delete(e);
       }
       function W(e) {
-        return G.get(e);
+        return F.get(e);
       }
       var se,
         z,
@@ -9264,11 +9266,11 @@ var CLSTAMP = "6412327";
               )
                 return a;
               var s = t.FocusableElementAttributes(e);
-              return s ? Object(u.a)(Object(u.a)({}, a), s) : a;
+              return s ? Object(m.a)(Object(m.a)({}, a), s) : a;
             }),
             Object.defineProperty(e, "targetClass", {
               get: function () {
-                return y.IsNavEnabled ? v : void 0;
+                return y.IsNavEnabled ? u : void 0;
               },
               enumerable: !1,
               configurable: !0,
@@ -9281,7 +9283,7 @@ var CLSTAMP = "6412327";
             return (null !== e && e.apply(this, arguments)) || this;
           }
           return (
-            Object(u.d)(t, e),
+            Object(m.d)(t, e),
             (t.prototype.NeedsComponentFromElement = function () {
               return !0;
             }),
@@ -9310,7 +9312,7 @@ var CLSTAMP = "6412327";
                 r = e.className,
                 o =
                   (e.children,
-                  Object(u.f)(e, [
+                  Object(m.f)(e, [
                     "navKey",
                     "navStop",
                     "noPrimaryAction",
@@ -9328,9 +9330,9 @@ var CLSTAMP = "6412327";
                     "children",
                   ]));
               return null != this.context && y.IsNavEnabled
-                ? Object(u.a)(
-                    Object(u.a)(
-                      Object(u.a)(
+                ? Object(m.a)(
+                    Object(m.a)(
+                      Object(m.a)(
                         {},
                         V.Attributes(
                           e,
@@ -9338,14 +9340,14 @@ var CLSTAMP = "6412327";
                         )
                       ),
                       {
-                        className: Object(m.a)(V.targetClass, r),
+                        className: Object(h.a)(V.targetClass, r),
                         ref:
                           t || this.NeedsComponentFromElement ? this.SetRef : n,
                       }
                     ),
                     o
                   )
-                : Object(u.a)({ className: r, ref: n }, o);
+                : Object(m.a)({ className: r, ref: n }, o);
             }),
             (t.prototype.GotFocus = function () {
               null != this.m_navAddress &&
@@ -9363,7 +9365,7 @@ var CLSTAMP = "6412327";
               );
             }),
             (t.prototype.componentDidMount = function () {
-              var e, t, n;
+              var e, t, n, r;
               y.IsDebuggingNavAddresses &&
                 null != this.m_htmlElement &&
                 null != this.m_navAddress &&
@@ -9371,16 +9373,20 @@ var CLSTAMP = "6412327";
                   $.Address,
                   D(this.m_navAddress)
                 ),
-                null !=
-                  (null === (e = this.m_currentNavEpoch) || void 0 === e
-                    ? void 0
-                    : e.GetFocusAddress()) ||
-                  ((null !=
-                  (n =
-                    null === (t = this.m_recalledNavEpoch) || void 0 === t
+                this.m_htmlElement &&
+                  this.context &&
+                  ((n = pe.Available),
+                  this.props.startFocused && (n = pe.StartFocused),
+                  null !=
+                    (null === (e = this.m_currentNavEpoch) || void 0 === e
                       ? void 0
-                      : t.GetFocusAddress())
-                    ? (function (e, t) {
+                      : e.GetFocusAddress()) ||
+                    (null !=
+                      (r =
+                        null === (t = this.m_recalledNavEpoch) || void 0 === t
+                          ? void 0
+                          : t.GetFocusAddress()) &&
+                      (function (e, t) {
                         for (
                           var n = [e, t], r = n[0], o = n[1];
                           ;
@@ -9389,11 +9395,9 @@ var CLSTAMP = "6412327";
                           if (null == r && null == o) return 1;
                           if (null == r || null == o || r.key !== o.key) return;
                         }
-                      })(n, this.m_navAddress)
-                    : this.props.startFocused &&
-                      this.m_htmlElement &&
-                      this.context) &&
-                    this.context.ClaimFocus(this.m_htmlElement));
+                      })(r, this.m_navAddress) &&
+                      (n = pe.RestoredEpoch)),
+                  this.context.ClaimFocus(this.m_htmlElement, n));
             }),
             (t.prototype.componentDidUpdate = function () {
               var e;
@@ -9406,12 +9410,12 @@ var CLSTAMP = "6412327";
             }),
             (t.prototype.render = function () {
               var r = this;
-              return p.createElement(g.a.Consumer, null, function (e) {
+              return d.createElement(g.a.Consumer, null, function (e) {
                 return (
                   (r.m_actionDescriptionContext = e),
                   T(
                     r.props,
-                    p.createElement(
+                    d.createElement(
                       r.m_elementType,
                       r.assembleAttributes(r.props),
                       r.props.children
@@ -9427,16 +9431,16 @@ var CLSTAMP = "6412327";
             }),
             (t.contextType = C),
             (t.defaultProps = { navStop: !1, tabStop: !1 }),
-            Object(u.c)([r.a], t.prototype, "SetRef", null),
+            Object(m.c)([r.a], t.prototype, "SetRef", null),
             t
           );
-        })(p.Component),
+        })(d.Component),
         le = (function (t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (e.m_elementType = "div"), e;
           }
-          return Object(u.d)(e, t), e;
+          return Object(m.d)(e, t), e;
         })(ce);
       ((z = se = se || {}).Geometry = "Geometry"),
         (z.DomOrder = "DomOrder"),
@@ -9446,7 +9450,7 @@ var CLSTAMP = "6412327";
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          Object(u.d)(a, e),
+          Object(m.d)(a, e),
           (a.GetOnNavOut = function (e) {
             var t = W(e);
             if (t && t instanceof a) return t.props.onNavOut;
@@ -9492,10 +9496,10 @@ var CLSTAMP = "6412327";
             );
           }),
           (a.prototype.FocusWithin = function () {
-            this.m_htmlElement && me.FocusWithin(this.m_htmlElement);
+            this.m_htmlElement && he.FocusWithin(this.m_htmlElement);
           }),
           (a.prototype.BlurWithin = function (e) {
-            this.m_htmlElement && me.BlurWithin(this.m_htmlElement, e);
+            this.m_htmlElement && he.BlurWithin(this.m_htmlElement, e);
           }),
           (a.prototype.UpdateScrollPos = function () {
             var e,
@@ -9552,7 +9556,7 @@ var CLSTAMP = "6412327";
                 e.htmlElementRef),
               n = e.className,
               o = e.children,
-              i = Object(u.f)(e, [
+              i = Object(m.f)(e, [
                 "navKey",
                 "xOrder",
                 "yOrder",
@@ -9572,12 +9576,12 @@ var CLSTAMP = "6412327";
             return null != this.context && y.IsNavEnabled
               ? T(
                   this.props,
-                  p.createElement(
+                  d.createElement(
                     "div",
-                    Object(u.a)(
+                    Object(m.a)(
                       { ref: this.SetRef },
                       a.Attributes(this.props),
-                      { className: Object(m.a)(b, n) },
+                      { className: Object(h.a)(p, n) },
                       i
                     ),
                     o
@@ -9588,19 +9592,21 @@ var CLSTAMP = "6412327";
                       (r.m_currentNavEpoch = n);
                   }
                 )
-              : p.createElement(
+              : d.createElement(
                   "div",
-                  Object(u.a)({ ref: t, className: n }, i),
+                  Object(m.a)({ ref: t, className: n }, i),
                   o
                 );
           }),
           (a.contextType = C),
-          Object(u.c)([r.a], a.prototype, "SetRef", null),
-          Object(u.c)([w], a, "GetOnNavOut", null),
+          Object(m.c)([r.a], a.prototype, "SetRef", null),
+          Object(m.c)([w], a, "GetOnNavOut", null),
           a
         );
-      })(p.Component);
-      var pe = (function () {
+      })(d.Component);
+      var pe,
+        me,
+        de = (function () {
           function e(e) {
             (this.m_navAreaStack = []),
               (this.m_elementNavAreaMap = new Map()),
@@ -9623,1463 +9629,1551 @@ var CLSTAMP = "6412327";
             }),
             e
           );
-        })(),
-        me = (function (n) {
-          function V(e) {
-            var t = n.call(this, e) || this;
-            return (
-              (t.m_navAreaDivRef = p.createRef()),
-              (t.m_inFocusCallType = null),
-              (t.m_focusClaimElement = void 0),
-              (t.m_focusedHtmlElement = null),
-              (t.m_focusPos = null),
-              (t.m_focusPosOffsetFromAnchorElement = null),
-              (t.m_lastFocusedHtmlElement = null),
-              (t.m_lastFocusPosOffsetFromAnchorElement = null),
-              (t.m_pointerFocusMarkerRef = p.createRef()),
-              (t.m_boxFocusMarkerDivRef = p.createRef()),
-              void 0 !== e &&
-                void 0 === V.sm_htmlDomFocusControllerDomIntegrator &&
-                (V.sm_htmlDomFocusControllerDomIntegrator = new L()),
-              t
-            );
-          }
+        })();
+      ((me = pe = pe || {})[(me.Available = 0)] = "Available"),
+        (me[(me.StartFocused = 1)] = "StartFocused"),
+        (me[(me.RestoredEpoch = 2)] = "RestoredEpoch");
+      var he = (function (n) {
+        function V(e) {
+          var t = n.call(this, e) || this;
           return (
-            Object(u.d)(V, n),
-            (V.DocumentElementHasFocus = function (e) {
-              return e && null != e.activeElement && e.activeElement !== e.body;
-            }),
-            (V.FocusWithin = function (e) {
-              var t,
-                n = V.GetNavAreaObjects(e, "NavArea.FocusWithin", {
-                  target: !0,
-                  navArea: !0,
-                  activeNavArea: !1,
-                }),
-                r = n.navArea,
-                o = n.navAreaElement,
-                i = n.activeNavAreaElement;
-              n.dn;
-              null != r &&
-                (te("NavArea.FocusWithin", e),
-                (null != i && i == o) ||
-                  (te(
-                    "+ (" +
-                      i.id +
-                      ") is active, but FG in (" +
-                      r.props.id +
-                      "); activating."
-                  ),
-                  r.Activate()),
-                null != (t = r.FindBestFocusableTarget(e)) &&
-                  (te("+ focusing:", t.htmlElement, t.pos),
-                  r.NavigateTo(t.htmlElement, t.pos, !1)));
-            }),
-            (V.BlurWithin = function (e, t) {
-              var n,
-                r = V.GetNavAreaObjects(e, "NavArea.FocusWithin", {
-                  target: !0,
-                  navArea: !0,
-                }).navArea;
-              null != r &&
-                (te("NavArea.BlurWithin", e),
-                (n = r.GetFocusController().GetFocus()),
-                e.contains(n) && r.Blur(t));
-            }),
-            (V.HandleKeyDown = function (t) {
-              var e,
-                n = "NavArea.HandleKeyDown",
-                r = this.GetNavAreaObjects(t.target, n, {
-                  target: !1,
-                  navArea: !1,
-                  activeNavArea: !1,
-                }),
-                o = r.navArea,
-                i = r.activeNavArea,
-                a = (r.doc, r.dn);
-              if (null != i) {
-                (i.m_focusClaimElement = void 0),
-                  te(
-                    n +
-                      " '" +
-                      t.key +
-                      "' target in:" +
-                      (o ? o.props.id : "-") +
-                      " active:(" +
-                      (i ? i.props.id : "-") +
-                      ")"
-                  ),
-                  this.SetIsDoingKeyNav(a, !0);
-                var s = function () {
-                    null != t.preventDefault && t.preventDefault(),
-                      null != t.stopPropagation && t.stopPropagation();
-                  },
-                  c = i.GetFocusedElement(),
-                  l = c && W(c),
-                  u = null == l ? void 0 : l.m_actionDescriptionContext,
-                  p =
-                    null === (e = null == u ? void 0 : u.currentActions) ||
-                    void 0 === e
-                      ? void 0
-                      : e.find(function (e) {
-                          return (
-                            e.button ===
-                            (function (e) {
-                              if ((console.info("pressed " + e.key), e.ctrlKey))
-                                switch (e.key) {
-                                  case "1":
-                                    return g.c.Menu;
-                                  default:
-                                    return;
-                                }
+            (t.m_navAreaDivRef = d.createRef()),
+            (t.m_intentionalBlurElement = null),
+            (t.m_inFocusCallType = null),
+            (t.m_focusClaimElement = void 0),
+            (t.m_focusedHtmlElement = null),
+            (t.m_focusPos = null),
+            (t.m_focusPosOffsetFromAnchorElement = null),
+            (t.m_lastFocusedHtmlElement = null),
+            (t.m_lastFocusPosOffsetFromAnchorElement = null),
+            (t.m_pointerFocusMarkerRef = d.createRef()),
+            (t.m_boxFocusMarkerDivRef = d.createRef()),
+            void 0 !== e &&
+              void 0 === V.sm_htmlDomFocusControllerDomIntegrator &&
+              (V.sm_htmlDomFocusControllerDomIntegrator = new L()),
+            t
+          );
+        }
+        return (
+          Object(m.d)(V, n),
+          (V.DocumentElementHasFocus = function (e) {
+            return e && null != e.activeElement && e.activeElement !== e.body;
+          }),
+          (V.FocusWithin = function (e) {
+            var t,
+              n = V.GetNavAreaObjects(e, "NavArea.FocusWithin", {
+                target: !0,
+                navArea: !0,
+                activeNavArea: !1,
+              }),
+              r = n.navArea,
+              o = n.navAreaElement,
+              i = n.activeNavAreaElement;
+            n.dn;
+            null != r &&
+              (te("NavArea.FocusWithin", e),
+              (null != i && i == o) ||
+                (te(
+                  "+ (" +
+                    i.id +
+                    ") is active, but FG in (" +
+                    r.props.id +
+                    "); activating."
+                ),
+                r.Activate()),
+              null != (t = r.FindBestFocusableTarget(e)) &&
+                (te("+ focusing:", t.htmlElement, t.pos),
+                r.NavigateTo(t.htmlElement, t.pos, !1)));
+          }),
+          (V.BlurWithin = function (e, t) {
+            var n,
+              r = V.GetNavAreaObjects(e, "NavArea.FocusWithin", {
+                target: !0,
+                navArea: !0,
+              }).navArea;
+            null != r &&
+              (te("NavArea.BlurWithin", e),
+              (n = r.GetFocusController().GetFocus()),
+              e.contains(n) && r.Blur(t));
+          }),
+          (V.HandleKeyDown = function (t) {
+            var e,
+              n = "NavArea.HandleKeyDown",
+              r = this.GetNavAreaObjects(t.target, n, {
+                target: !1,
+                navArea: !1,
+                activeNavArea: !1,
+              }),
+              o = r.navArea,
+              i = r.activeNavArea,
+              a = (r.doc, r.dn);
+            if (null != i) {
+              (i.m_focusClaimElement = void 0),
+                (i.m_focusClaimPriority = void 0),
+                te(
+                  n +
+                    " '" +
+                    t.key +
+                    "' target in:" +
+                    (o ? o.props.id : "-") +
+                    " active:(" +
+                    (i ? i.props.id : "-") +
+                    ")"
+                ),
+                this.SetIsDoingKeyNav(a, !0);
+              var s = function () {
+                  null != t.preventDefault && t.preventDefault(),
+                    null != t.stopPropagation && t.stopPropagation();
+                },
+                c = i.GetFocusedElement(),
+                l = c && W(c),
+                u = null == l ? void 0 : l.m_actionDescriptionContext,
+                p =
+                  null === (e = null == u ? void 0 : u.currentActions) ||
+                  void 0 === e
+                    ? void 0
+                    : e.find(function (e) {
+                        return (
+                          e.button ===
+                          (function (e) {
+                            if ((console.info("pressed " + e.key), e.ctrlKey))
                               switch (e.key) {
-                                case "Enter":
-                                  return g.c.A;
-                                case "Escape":
-                                  return g.c.B;
-                                case "Backspace":
-                                  return g.c.X;
-                                case " ":
-                                  return g.c.Y;
-                                case "ArrowLeft":
-                                  return g.c.Left;
-                                case "ArrowRight":
-                                  return g.c.Right;
-                                case "ArrowUp":
-                                  return g.c.Up;
-                                case "ArrowDown":
-                                  return g.c.Down;
+                                case "1":
+                                  return g.c.HomeMenu;
+                                case "2":
+                                  return g.c.QuickMenu;
                                 default:
                                   return;
                               }
-                            })(t)
-                          );
-                        });
-                if (null != p && p.action)
-                  return (
-                    te("+ actionDescription {"), p.action(), s(), void te("+ }")
-                  );
-                var m,
-                  d = V.k_KeyNavigationDirections[t.key];
-                if (!d)
-                  return (
-                    te("+ Non-Arrow Key."),
-                    void ("Enter" === t.key
-                      ? (null != (m = i.GetFocusedElement()) &&
-                          "true" == m.getAttribute($.NoPrimaryAction)) ||
-                        !i.ClickFocusedElement() ||
-                        s()
-                      : "Escape" === t.key
-                      ? i.props.onGoBack &&
-                        (te("+ onGoBack {"), i.props.onGoBack(), s(), te("+ }"))
-                      : "1" === t.key &&
-                        t.ctrlKey &&
-                        i.props.onHome &&
-                        (te("+ onHome {"), i.props.onHome(), s(), te("+ }")))
-                  );
-                te("+ Arrow Key.");
-                var h = d[0],
-                  f = d[1],
-                  v = i.FindNextNavTarget(h, f);
-                v &&
-                  this.IsElementTarget(v.htmlElement) &&
-                  (i.NavigateTo(v.htmlElement, v.pos, !1), s());
-              } else te(n + ": no active nav area.");
-            }),
-            (V.SetDefaultFocusMarker = function (e) {
-              V.sm_defaultFocusMarker = e;
-            }),
-            (V.GetDocumentNavState = function (e) {
-              return V.sm_documentStates.get(e);
-            }),
-            (V.GetActiveNavArea = function (e) {
-              var t = e.m_navAreaStack;
-              if (0 !== t.length) return t[t.length - 1];
-            }),
-            (V.SetIsDoingKeyNav = function (e, t) {
-              V.sm_bIsDoingKeyNav = t;
-            }),
-            (V.GetIsDoingKeyNav = function (e) {
-              return V.sm_bIsDoingKeyNav;
-            }),
-            (V.GetNavAreaObjects = function (r, o, i) {
-              if (!y.IsNavEnabled) return {};
-              if (!oe(r))
+                            switch (e.key) {
+                              case "Enter":
+                                return g.c.A;
+                              case "Escape":
+                                return g.c.B;
+                              case "Backspace":
+                                return g.c.X;
+                              case " ":
+                                return g.c.Y;
+                              case "ArrowLeft":
+                                return g.c.Left;
+                              case "ArrowRight":
+                                return g.c.Right;
+                              case "ArrowUp":
+                                return g.c.Up;
+                              case "ArrowDown":
+                                return g.c.Down;
+                              default:
+                                return;
+                            }
+                          })(t)
+                        );
+                      });
+              if (null != p && p.action)
                 return (
-                  Object(f.a)(
-                    !0 !== i.target,
-                    o + " expects target is HTML element."
-                  ),
-                  {}
+                  te("+ actionDescription {"), p.action(), s(), void te("+ }")
                 );
-              var e = r,
-                a = e.ownerDocument;
-              if (null == a)
+              var m,
+                d = V.k_KeyNavigationDirections[t.key];
+              if (!d)
                 return (
-                  Object(f.a)(
-                    !0 !== i.target,
-                    o + " expects target has ownerDocument.",
-                    e
-                  ),
-                  {}
+                  te("+ Non-Arrow Key."),
+                  void ("Enter" === t.key
+                    ? (null != (m = i.GetFocusedElement()) &&
+                        "true" == m.getAttribute($.NoPrimaryAction)) ||
+                      !i.ClickFocusedElement() ||
+                      s()
+                    : "Escape" === t.key
+                    ? i.props.onGoBack &&
+                      (te("+ onGoBack {"), i.props.onGoBack(), s(), te("+ }"))
+                    : "1" === t.key && t.ctrlKey
+                    ? i.props.onHome &&
+                      (te("+ onHome {"), i.props.onHome(), s(), te("+ }"))
+                    : "2" === t.key &&
+                      t.ctrlKey &&
+                      i.props.onMenu &&
+                      (te("+ onMenu {"), i.props.onMenu(), s(), te("+ }")))
                 );
-              if (!a.contains(r))
-                return (
-                  Object(f.a)(
-                    !0 !== i.target,
-                    o + " expects target is in document."
-                  ),
-                  {}
-                );
-              var s = V.GetDocumentNavState(a);
-              if (null == s)
-                return (
-                  Object(f.a)(!1, o + " expects target document nav state"), {}
-                );
-              var t =
-                  null == i.navArea
-                    ? {}
-                    : (function () {
-                        var e = V.FindAncestorNavAreaElement(r);
-                        if (null == e)
-                          return (
-                            Object(f.a)(
-                              !0 !== i.navArea,
-                              o + " expects target has nav area ancestor."
-                            ),
-                            {}
-                          );
-                        var t = e.ownerDocument;
-                        if (null == t)
-                          return (
-                            Object(f.a)(
-                              !0 !== i.navArea,
-                              o + " expects target nav area has ownerDocument."
-                            ),
-                            {}
-                          );
-                        if (!t.contains(e))
-                          return (
-                            Object(f.a)(
-                              !0 !== i.navArea,
-                              o + " expects target nav area is in document."
-                            ),
-                            {}
-                          );
-                        if (!(t === a))
-                          return (
-                            Object(f.a)(
+              te("+ Arrow Key.");
+              var h = d[0],
+                f = d[1],
+                v = i.FindNextNavTarget(h, f);
+              v &&
+                this.IsElementTarget(v.htmlElement) &&
+                (i.NavigateTo(v.htmlElement, v.pos, !1), s());
+            } else te(n + ": no active nav area.");
+          }),
+          (V.SetDefaultFocusMarker = function (e) {
+            V.sm_defaultFocusMarker = e;
+          }),
+          (V.GetDocumentNavState = function (e) {
+            return V.sm_documentStates.get(e);
+          }),
+          (V.GetActiveNavArea = function (e) {
+            var t = e.m_navAreaStack;
+            if (0 !== t.length) return t[t.length - 1];
+          }),
+          (V.SetIsDoingKeyNav = function (e, t) {
+            V.sm_bIsDoingKeyNav = t;
+          }),
+          (V.GetIsDoingKeyNav = function (e) {
+            return V.sm_bIsDoingKeyNav;
+          }),
+          (V.GetNavAreaObjects = function (r, o, i) {
+            if (!y.IsNavEnabled) return {};
+            if (!oe(r))
+              return (
+                Object(f.a)(
+                  !0 !== i.target,
+                  o + " expects target is HTML element."
+                ),
+                {}
+              );
+            var e = r,
+              a = e.ownerDocument;
+            if (null == a)
+              return (
+                Object(f.a)(
+                  !0 !== i.target,
+                  o + " expects target has ownerDocument.",
+                  e
+                ),
+                {}
+              );
+            if (!a.contains(r))
+              return (
+                Object(f.a)(
+                  !0 !== i.target,
+                  o + " expects target is in document."
+                ),
+                {}
+              );
+            var s = V.GetDocumentNavState(a);
+            if (null == s)
+              return (
+                Object(f.a)(!1, o + " expects target document nav state"), {}
+              );
+            var t =
+                null == i.navArea
+                  ? {}
+                  : (function () {
+                      var e = V.FindAncestorNavAreaElement(r);
+                      if (null == e)
+                        return (
+                          Object(f.a)(
+                            !0 !== i.navArea,
+                            o + " expects target has nav area ancestor."
+                          ),
+                          {}
+                        );
+                      var t = e.ownerDocument;
+                      if (null == t)
+                        return (
+                          Object(f.a)(
+                            !0 !== i.navArea,
+                            o + " expects target nav area has ownerDocument."
+                          ),
+                          {}
+                        );
+                      if (!t.contains(e))
+                        return (
+                          Object(f.a)(
+                            !0 !== i.navArea,
+                            o + " expects target nav area is in document."
+                          ),
+                          {}
+                        );
+                      if (!(t === a))
+                        return (
+                          Object(f.a)(
+                            !0 !== i.navArea,
+                            o +
+                              " expects target and target nav area are in same document."
+                          ),
+                          {}
+                        );
+                      var n = s.m_elementNavAreaMap.get(e);
+                      return null == n
+                        ? (Object(f.a)(
+                            !0 !== i.navArea,
+                            o + " expects target nav area is registered."
+                          ),
+                          {})
+                        : { navArea: n, navAreaElement: e };
+                    })(),
+              n = t.navArea,
+              c = void 0 === n ? void 0 : n,
+              l = t.navAreaElement,
+              u = void 0 === l ? void 0 : l,
+              p =
+                null == i.activeNavArea
+                  ? {}
+                  : (function () {
+                      var e = V.GetActiveNavArea(s);
+                      if (null == e)
+                        return (
+                          Object(f.a)(
+                            !0 !== i.activeNavArea,
+                            o + " expects nav area is registered."
+                          ),
+                          {}
+                        );
+                      var t = e.m_navAreaDivRef.current,
+                        n = t.ownerDocument;
+                      return null == n
+                        ? (Object(f.a)(
+                            !0 !== i.activeNavArea,
+                            o + " expects nav area has ownerDocument."
+                          ),
+                          {})
+                        : n.contains(t)
+                        ? n === a
+                          ? { activeNavArea: e, activeNavAreaElement: t }
+                          : (Object(f.a)(
                               !0 !== i.navArea,
                               o +
-                                " expects target and target nav area are in same document."
-                            ),
-                            {}
-                          );
-                        var n = s.m_elementNavAreaMap.get(e);
-                        return null == n
-                          ? (Object(f.a)(
-                              !0 !== i.navArea,
-                              o + " expects target nav area is registered."
+                                " expects target and active nav area are in same document."
                             ),
                             {})
-                          : { navArea: n, navAreaElement: e };
-                      })(),
-                n = t.navArea,
-                c = void 0 === n ? void 0 : n,
-                l = t.navAreaElement,
-                u = void 0 === l ? void 0 : l,
-                p =
-                  null == i.activeNavArea
-                    ? {}
-                    : (function () {
-                        var e = V.GetActiveNavArea(s);
-                        if (null == e)
-                          return (
-                            Object(f.a)(
-                              !0 !== i.activeNavArea,
-                              o + " expects nav area is registered."
-                            ),
-                            {}
-                          );
-                        var t = e.m_navAreaDivRef.current,
-                          n = t.ownerDocument;
-                        return null == n
-                          ? (Object(f.a)(
-                              !0 !== i.activeNavArea,
-                              o + " expects nav area has ownerDocument."
-                            ),
-                            {})
-                          : n.contains(t)
-                          ? n === a
-                            ? { activeNavArea: e, activeNavAreaElement: t }
-                            : (Object(f.a)(
-                                !0 !== i.navArea,
-                                o +
-                                  " expects target and active nav area are in same document."
-                              ),
-                              {})
-                          : (Object(f.a)(
-                              !0 !== i.activeNavArea,
-                              o + " expects nav area is in document."
-                            ),
-                            {});
-                      })(),
-                m = p.activeNavArea,
-                d = void 0 === m ? void 0 : m,
-                h = p.activeNavAreaElement;
-              return {
-                navArea: c,
-                navAreaElement: u,
-                activeNavArea: d,
-                activeNavAreaElement: void 0 === h ? void 0 : h,
-                doc: a,
-                dn: s,
-              };
-            }),
-            (V.FindAncestorNavAreaElement = function (e) {
-              return Object(Q.j)(e, function (e) {
-                return e.getAttribute($.Type) === ee.Area;
-              });
-            }),
-            (V.IsElementTarget = function (e) {
-              return (null == e ? void 0 : e.getAttribute($.Type)) == ee.Target;
-            }),
-            (V.IsElementTargetThatFocuses = function (e) {
-              return (
-                this.IsElementTarget(e) &&
-                "true" == (null == e ? void 0 : e.getAttribute($.TargetFocuses))
-              );
-            }),
-            (V.IsElementTargetThatClicks = function (e) {
-              return (
-                this.IsElementTarget(e) &&
-                "true" == (null == e ? void 0 : e.getAttribute($.TargetClicks))
-              );
-            }),
-            (V.FindAnchorElement = function (e) {
-              return e;
-            }),
-            (V.GetScrollOffset = function (e, t, n) {
-              var r = e,
-                o = r.getAttribute($.EnterAsScrolledAxes);
-              if (o === h.XY || o === t) return null;
-              var i = null != r.getAttribute($.Type),
-                a = i ? r.getAttribute($.ScrollAxes) : void 0;
-              return i && a !== h.XY && a !== t
-                ? null
-                : "x" === t
-                ? { x: r.scrollLeft, y: 0 }
-                : { x: 0, y: r.scrollTop };
-            }),
-            (V.UpdateFocusPosAfterLayoutChange = function (e, t) {
-              for (
-                var n = e;
-                null != n;
-                n = V.FindAncestorNavAreaElement(n.parentElement)
-              ) {
-                var r = t.m_elementNavAreaMap.get(n),
-                  o = r.m_focusPos,
-                  i = r.GetFocusPos();
-                o !== i && ((r.m_focusPos = i), r.UpdateFocusMarker(!0));
-              }
-            }),
-            (V.FindNextNavTargetInContainer = function (s, e, c, l, u, t, n) {
-              var r,
-                o = "x" === l ? $.XOrder : "y" === l ? $.YOrder : void 0,
-                i =
-                  null !== (r = s.getAttribute(o)) && void 0 !== r
-                    ? r
-                    : se.Geometry;
-              te(
-                "NavArea.FindNextTargetInContainer container:" +
-                  ne(s) +
-                  " order:" +
-                  i +
-                  " directional:" +
-                  t +
-                  " entering:" +
-                  n +
-                  " focus-on/wi:" +
-                  ne(e) +
-                  " " +
-                  re(c),
-                s
-              );
-              var a = i === se.Geometry,
-                p = i === se.ReverseDomOrder,
-                m = "true" === s.getAttribute($.PreferFirstNavStop),
-                d = n ? V.GetScrollOffset(s, l, u) : null,
-                h = d ? J(d, -1) : null,
-                f = h ? q(c, h) : c;
-              te("+ curPos:" + re(f));
-              var v,
-                g,
-                b = Y[l],
-                _ = -1 === (K()[l] = u) ? "max" : "min",
-                y = { min: f[b], max: f[b] },
-                E =
-                  t && oe(e)
-                    ? ((v = y),
-                      (g = ie(e)[b]),
-                      {
-                        min: v.min < g.min ? v.min : g.min,
-                        max: v.max > g.max ? v.max : g.max,
-                      })
-                    : y,
-                w = null,
-                O = null,
-                S = 1 / 0,
-                C = Object(Q.k)(s, $.Type);
-              p != (-1 === u) && C.reverse();
-              for (
-                var D = [], x = null == e ? 0 : null, M = 0, A = C;
-                M < A.length;
-                M++
-              ) {
-                if ((U = A[M]) !== e) {
-                  if (U.getAttribute($.Type) !== ee.Area) {
-                    n &&
-                      null === w &&
-                      ("true" === U.getAttribute($.Preferred) ||
-                        (m && 0 == x)) &&
-                      (w = U),
-                      null !== x && ++x;
-                    var j = 0;
-                    if (a) {
-                      var k = ie(U),
-                        T = f[l],
-                        I = u * (k[l][_] - T);
-                      if (I < 0) continue;
-                      var N = f[b],
-                        L = k[b].min,
-                        R = k[b].max,
-                        B = N < L ? N - L : R < N ? N - R : 0;
-                      if (t) if (!Z(E, { min: L, max: R })) continue;
-                      var F = { x: 0, y: 0 };
-                      (F[l] = k[l][_]), (F[b] = N + B);
-                      var P = X(f, F),
-                        j = (I * I + B * B) / Math.abs(P[l]);
-                    } else {
-                      if (null == x) continue;
-                      j = x;
-                    }
-                    j < S && ((S = j), (O = U)),
-                      D.push({ score: j, element: U });
+                        : (Object(f.a)(
+                            !0 !== i.activeNavArea,
+                            o + " expects nav area is in document."
+                          ),
+                          {});
+                    })(),
+              m = p.activeNavArea,
+              d = void 0 === m ? void 0 : m,
+              h = p.activeNavAreaElement;
+            return {
+              navArea: c,
+              navAreaElement: u,
+              activeNavArea: d,
+              activeNavAreaElement: void 0 === h ? void 0 : h,
+              doc: a,
+              dn: s,
+            };
+          }),
+          (V.FindAncestorNavAreaElement = function (e) {
+            return Object(Z.j)(e, function (e) {
+              return e.getAttribute($.Type) === ee.Area;
+            });
+          }),
+          (V.IsElementTarget = function (e) {
+            return (null == e ? void 0 : e.getAttribute($.Type)) == ee.Target;
+          }),
+          (V.IsElementTargetThatFocuses = function (e) {
+            return (
+              this.IsElementTarget(e) &&
+              "true" == (null == e ? void 0 : e.getAttribute($.TargetFocuses))
+            );
+          }),
+          (V.IsElementTargetThatClicks = function (e) {
+            return (
+              this.IsElementTarget(e) &&
+              "true" == (null == e ? void 0 : e.getAttribute($.TargetClicks))
+            );
+          }),
+          (V.FindAnchorElement = function (e) {
+            return e;
+          }),
+          (V.GetScrollOffset = function (e, t, n) {
+            var r = e,
+              o = r.getAttribute($.EnterAsScrolledAxes);
+            if (o === b.XY || o === t) return null;
+            var i = null != r.getAttribute($.Type),
+              a = i ? r.getAttribute($.ScrollAxes) : void 0;
+            return i && a !== b.XY && a !== t
+              ? null
+              : "x" === t
+              ? { x: r.scrollLeft, y: 0 }
+              : { x: 0, y: r.scrollTop };
+          }),
+          (V.UpdateFocusPosAfterLayoutChange = function (e, t) {
+            for (
+              var n = e;
+              null != n;
+              n = V.FindAncestorNavAreaElement(n.parentElement)
+            ) {
+              var r = t.m_elementNavAreaMap.get(n),
+                o = r.m_focusPos,
+                i = r.GetFocusPos();
+              o !== i && ((r.m_focusPos = i), r.UpdateFocusMarker(!0));
+            }
+          }),
+          (V.FindNextNavTargetInContainer = function (s, e, c, l, u, t, n) {
+            var r,
+              o = "x" === l ? $.XOrder : "y" === l ? $.YOrder : void 0,
+              i =
+                null !== (r = s.getAttribute(o)) && void 0 !== r
+                  ? r
+                  : se.Geometry;
+            te(
+              "NavArea.FindNextNavTargetInContainer container:" +
+                ne(s) +
+                " order:" +
+                i +
+                " directional:" +
+                t +
+                " entering:" +
+                n +
+                " focus-on/wi:" +
+                ne(e) +
+                " " +
+                re(c),
+              s
+            );
+            var a = i === se.Geometry,
+              p = i === se.ReverseDomOrder,
+              m = "true" === s.getAttribute($.PreferFirstNavStop),
+              d = n ? V.GetScrollOffset(s, l, u) : null,
+              h = d ? J(d, -1) : null,
+              f = h ? q(c, h) : c;
+            te("+ curPos:" + re(f));
+            var v,
+              g,
+              b = Y[l],
+              _ = -1 === (K()[l] = u) ? "max" : "min",
+              y = { min: f[b], max: f[b] },
+              E =
+                t && oe(e)
+                  ? ((v = y),
+                    (g = ie(e)[b]),
+                    {
+                      min: v.min < g.min ? v.min : g.min,
+                      max: v.max > g.max ? v.max : g.max,
+                    })
+                  : y,
+              w = null,
+              O = null,
+              S = 1 / 0,
+              C = Object(Z.k)(s, $.Type);
+            p != (-1 === u) && C.reverse();
+            for (
+              var D = [], x = null == e ? 0 : null, M = 0, A = C;
+              M < A.length;
+              M++
+            ) {
+              if ((U = A[M]) !== e) {
+                if (U.getAttribute($.Type) !== ee.Area) {
+                  n &&
+                    null === w &&
+                    ("true" === U.getAttribute($.Preferred) || (m && 0 == x)) &&
+                    (w = U),
+                    null !== x && ++x;
+                  var k = 0;
+                  if (a) {
+                    var j = ie(U),
+                      T = f[l],
+                      I = u * (j[l][_] - T);
+                    if (I < 0) continue;
+                    var N = f[b],
+                      L = j[b].min,
+                      R = j[b].max,
+                      B = N < L ? N - L : R < N ? N - R : 0;
+                    if (t) if (!Q(E, { min: L, max: R })) continue;
+                    var F = { x: 0, y: 0 };
+                    (F[l] = j[l][_]), (F[b] = N + B);
+                    var P = X(f, F),
+                      k = (I * I + B * B) / Math.abs(P[l]);
+                  } else {
+                    if (null == x) continue;
+                    k = x;
                   }
-                } else x = 0;
-              }
-              function G(e, t) {
-                if ((void 0 === t && (t = !1), V.IsElementTarget(e))) {
-                  if (oe(e)) {
-                    var n = e,
-                      r = ae(n),
-                      o = !c || t ? r : { x: c.x, y: c.y };
-                    o[l] = r[l];
-                    var i = { htmlElement: n, pos: o };
-                    return d && (i.onscreenTestElement = s), i;
-                  }
-                  return null;
+                  k < S && ((S = k), (O = U)), D.push({ score: k, element: U });
                 }
-                if (e.getAttribute($.Type) === ee.Group) {
-                  var a = V.FindNextNavTargetInContainer(
-                    e,
-                    null,
-                    f,
-                    l,
-                    u,
-                    !1,
-                    !0
-                  );
-                  if (a) return a;
+              } else x = 0;
+            }
+            function G(e, t) {
+              if ((void 0 === t && (t = !1), V.IsElementTarget(e))) {
+                if (oe(e)) {
+                  var n = e,
+                    r = ae(n),
+                    o = !c || t ? r : { x: c.x, y: c.y };
+                  o[l] = r[l];
+                  var i = { htmlElement: n, pos: o };
+                  return d && (i.onscreenTestElement = s), i;
                 }
                 return null;
               }
-              var H;
-              if (
-                (te("+ Searching " + C.length + " elements:", C, D, w, O), w) &&
-                (H = G(w, !0))
-              )
-                return H;
-              if (O) {
-                if ((H = G(O))) return H;
-                D.sort(function (e, t) {
-                  return e.score - t.score;
-                });
-                for (var U, W = 0; W < D.length; ++W) {
-                  if ((U = D[W].element) !== O) {
-                    var z = G(U);
-                    if (z) return z;
-                  }
-                }
+              if (e.getAttribute($.Type) === ee.Group) {
+                var a = V.FindNextNavTargetInContainer(
+                  e,
+                  null,
+                  f,
+                  l,
+                  u,
+                  !1,
+                  !0
+                );
+                if (a) return a;
               }
               return null;
-            }),
-            (V.FindNextNavTargetWithinAndAcrossContainers = function (
-              e,
-              t,
-              n,
-              r,
-              o
-            ) {
-              te(
-                "NavArea.FindNextTargetWithinAndAcrossContainers root:#" +
-                  e.id +
-                  ".'" +
-                  e.className +
-                  "' focus:#" +
-                  t.id +
-                  ".'" +
-                  t.className +
-                  "'"
-              );
-              for (var i = t; ; ) {
-                var a = Object(Q.i)(e, i, $.Type),
-                  s = V.FindNextNavTargetInContainer(a, i, n, r, o, !0, !1);
-                if (null !== s) return s;
-                if (a === e) return null;
-                for (var c = i.parentElement; c && c !== a; ) {
-                  if (S(c, r, o) === d.Scrollable) return null;
-                  c = c.parentElement;
+            }
+            var H;
+            if (
+              (te("+ Searching " + C.length + " elements:", C, D, w, O), w) &&
+              (H = G(w, !0))
+            )
+              return H;
+            if (O) {
+              if ((H = G(O))) return H;
+              D.sort(function (e, t) {
+                return e.score - t.score;
+              });
+              for (var U, W = 0; W < D.length; ++W) {
+                if ((U = D[W].element) !== O) {
+                  var z = G(U);
+                  if (z) return z;
                 }
-                if (!c) return null;
-                if (c === a && S(c, r, o) === d.Scrollable) return null;
-                var l = ue.GetOnNavOut(a);
-                if (l) {
-                  te("+ onNavOut {");
-                  var u = K();
-                  u[r] = o;
-                  var p = l(u);
-                  if ((te("+ } => " + p), !1 === p)) return null;
-                }
-                i = a;
               }
-            }),
-            (V.AddEventListeners = function (e) {
-              for (var t = 0, n = V.k_EventListeners; t < n.length; t++) {
-                var r = n[t],
-                  o = r[0],
-                  i = r[1];
-                e.addEventListener(o, i, !0);
+            }
+            return null;
+          }),
+          (V.FindNextNavTargetWithinAndAcrossContainers = function (
+            e,
+            t,
+            n,
+            r,
+            o
+          ) {
+            te(
+              "NavArea.FindNextTargetWithinAndAcrossContainers root:#" +
+                e.id +
+                ".'" +
+                e.className +
+                "' focus:#" +
+                t.id +
+                ".'" +
+                t.className +
+                "'"
+            );
+            for (var i = t; ; ) {
+              var a = Object(Z.i)(e, i, $.Type),
+                s = V.FindNextNavTargetInContainer(a, i, n, r, o, !0, !1);
+              if (null !== s) return s;
+              if (a === e) return null;
+              for (var c = i.parentElement; c && c !== a; ) {
+                if (S(c, r, o) === v.Scrollable) return null;
+                c = c.parentElement;
               }
-            }),
-            (V.RemoveEventListeners = function (e) {
-              for (var t = 0, n = this.k_EventListeners; t < n.length; t++) {
-                var r = n[t],
-                  o = r[0],
-                  i = r[1];
-                e.removeEventListener(o, i, !0);
+              if (!c) return null;
+              if (c === a && S(c, r, o) === v.Scrollable) return null;
+              var l = ue.GetOnNavOut(a);
+              if (l) {
+                te("+ onNavOut {");
+                var u = K();
+                u[r] = o;
+                var p = l(u);
+                if ((te("+ } => " + p), !1 === p)) return null;
               }
-            }),
-            (V.HandleAllOnKeyDown = function (e) {
-              te("NavArea.HandleAllOnKeyDown " + e.key),
-                V.HandleKeyDown({
-                  target: e.target,
-                  key: e.key,
-                  ctrlKey: e.ctrlKey,
-                  stopPropagation: function () {
-                    return e.stopImmediatePropagation();
-                  },
-                  preventDefault: function () {
-                    return e.preventDefault();
-                  },
-                });
-            }),
-            (V.HandleAllOnScroll = function (e) {
-              var t,
-                n = "NavArea.HandleAllOnScroll",
-                r = V.GetNavAreaObjects(e.target, n, {
-                  target: !0,
-                  navArea: !1,
-                }),
-                o = r.navArea,
-                i = r.navAreaElement,
-                a = r.dn;
-              null != o &&
-                (te(n + " (" + o.props.id + ") " + ne(e.target)),
-                null != (t = W(e.target)) &&
-                  t instanceof ue &&
-                  t.UpdateScrollPos(),
-                V.UpdateFocusPosAfterLayoutChange(i, a));
-            }),
-            (V.HandleAllOnAnimationStart = function (e) {}),
-            (V.HandleAllOnAnimationEnd = function (e) {
-              var t = V.GetNavAreaObjects(
-                  e.target,
-                  "NavArea.HandleAllOnAnimationEnd",
-                  { target: !0, navArea: !1 }
-                ),
-                n = t.navArea,
-                r = t.navAreaElement,
-                o = t.dn;
-              null != n && V.UpdateFocusPosAfterLayoutChange(r, o);
-            }),
-            (V.HandleAllOnTransitionStart = function (e) {}),
-            (V.HandleAllOnTransitionEnd = function (e) {
-              var t,
-                n = V.GetNavAreaObjects(
-                  e.target,
-                  "NavArea.HandleAllOnTransitionEnd",
-                  { target: !0, navArea: !1 }
-                ),
-                r = n.navArea,
-                o = n.navAreaElement,
-                i = n.dn;
-              null != r &&
-                ((null !== (t = r.m_focusMarker) &&
-                  void 0 !== t &&
-                  t.IsEventSource(e)) ||
-                  V.UpdateFocusPosAfterLayoutChange(o, i));
-            }),
-            (V.HandleAllOnMouseDown = function (e) {
-              var t,
-                n = "NavArea.HandleAllOnMouseDown",
-                r = V.GetNavAreaObjects(e.target, n, {
-                  target: !0,
-                  navArea: !1,
-                }),
-                o = r.navArea,
-                i = r.dn;
-              null != o &&
-                (te(n + " (" + o.props.id + "):", e.target),
-                V.SetIsDoingKeyNav(i, !1),
-                null !=
-                  (null == (t = o.GetFocusController())
-                    ? void 0
-                    : t.HandleNavStopClick) &&
-                  (te("+ preventDefault"), e.preventDefault()));
-            }),
-            (V.HandleAllOnClick = function (e) {
-              var t,
-                n,
-                r,
-                o = "NavArea.HandleAllOnClick",
-                i = V.GetNavAreaObjects(e.target, o, {
-                  target: !0,
-                  navArea: !1,
-                }).navArea;
-              null != i &&
-                (te(o + " (" + i.props.id + "):", e.target),
-                null !=
-                (n =
-                  null == (t = i.GetFocusController())
-                    ? void 0
-                    : t.HandleNavStopClick)
-                  ? ((r = e.target),
-                    V.IsElementTargetThatFocuses(r) &&
-                      (te("+ handleNavStopClick {"), n(e, r), te("+ }")))
-                  : te("+ nop."));
-            }),
-            (V.HandleFocusControllerOnFocus = function (e) {
-              var t,
-                n,
-                r,
-                o = "NavArea.HandleFocusControllerOnFocus",
-                i = W(e),
-                a = null == i ? void 0 : i.m_actionDescriptionContext;
-              a && a.setCurrentActions(a.focusActions),
-                null != e.ownerDocument &&
-                  ((n = (t = V.GetNavAreaObjects(e, o, {
-                    target: !0,
-                    navArea: !1,
-                    activeNavArea: !1,
-                  })).navArea),
-                  (r = t.activeNavArea),
-                  t.dn,
-                  null != n &&
-                    (te(o + " (" + n.props.id + ")", e),
-                    n !== r &&
-                      (te(
-                        "+ Activating Nav Area with element as initial focus."
-                      ),
-                      n.Activate(e)),
-                    n.UpdateFocus(e)));
-            }),
-            (V.HandleFocusControllerOnBlur = function (e) {
-              var t,
-                n = "NavArea.HandleFocusControllerOnBlur",
-                r = W(e),
-                o = null == r ? void 0 : r.m_actionDescriptionContext;
-              o && o.setCurrentActions(void 0),
-                null == e.ownerDocument ||
-                  (null !=
-                    (t = V.GetNavAreaObjects(e, n, { target: !0, navArea: !1 })
-                      .navArea) &&
-                    (te(n + " (" + t.props.id + ")", e), t.UpdateFocus(null)));
-            }),
-            (V.prototype.HandleKeyDown = function (e) {
+              i = a;
+            }
+          }),
+          (V.AddEventListeners = function (e) {
+            for (var t = 0, n = V.k_EventListeners; t < n.length; t++) {
+              var r = n[t],
+                o = r[0],
+                i = r[1];
+              e.addEventListener(o, i, !0);
+            }
+          }),
+          (V.RemoveEventListeners = function (e) {
+            for (var t = 0, n = this.k_EventListeners; t < n.length; t++) {
+              var r = n[t],
+                o = r[0],
+                i = r[1];
+              e.removeEventListener(o, i, !0);
+            }
+          }),
+          (V.HandleAllOnKeyDown = function (e) {
+            te("NavArea.HandleAllOnKeyDown " + e.key),
               V.HandleKeyDown({
-                target: this.m_navAreaDivRef.current,
+                target: e.target,
                 key: e.key,
                 ctrlKey: e.ctrlKey,
                 stopPropagation: function () {
-                  return e.stopPropagation();
+                  return e.stopImmediatePropagation();
                 },
                 preventDefault: function () {
                   return e.preventDefault();
                 },
               });
-            }),
-            (V.prototype.GetFocusedElement = function () {
-              var e = "NavArea.GetFocusedElement";
-              if (
-                (te(e + " (" + this.props.id + ")"),
-                null != this.GetElementDocState(e).dn)
-              )
-                return this.GetFocusController().GetFocus();
-            }),
-            (V.prototype.ClickFocusedElement = function () {
-              te("NavArea.ClickFocusedElement (" + this.props.id + ")");
-              var e = this.GetFocusedElement();
-              return null != e && (this.GetFocusController().Click(e), !0);
-            }),
-            (V.prototype.Blur = function (e) {
-              var t = "NavArea.Blur";
-              te(t + " (" + this.props.id + ")");
-              var n,
-                r = this.GetElementDocState(t).dn;
-              null != r &&
-                ((n = this.m_inFocusCallType),
-                (this.m_inFocusCallType = "blur"),
-                (this.m_focusClaimElement = void 0),
-                (this.m_lastFocusedHtmlElement = null),
-                (this.m_lastFocusPosOffsetFromAnchorElement = null),
-                (this.m_focusedHtmlElement = null),
-                (this.m_focusPos = null),
-                (this.m_focusPosOffsetFromAnchorElement = null),
-                this === V.GetActiveNavArea(r) &&
-                  (te("+ setting focus to null"),
-                  this.GetFocusController().Focus(null)),
-                (this.m_inFocusCallType = n));
-            }),
-            (V.prototype.Activate = function (e) {
-              var t = "NavArea.Activate";
+          }),
+          (V.HandleAllOnScroll = function (e) {
+            var t,
+              n = "NavArea.HandleAllOnScroll",
+              r = V.GetNavAreaObjects(e.target, n, { target: !0, navArea: !1 }),
+              o = r.navArea,
+              i = r.navAreaElement,
+              a = r.dn;
+            null != o &&
+              (te(n + " (" + o.props.id + ") " + ne(e.target)),
+              null != (t = W(e.target)) &&
+                t instanceof ue &&
+                t.UpdateScrollPos(),
+              V.UpdateFocusPosAfterLayoutChange(i, a));
+          }),
+          (V.HandleAllOnAnimationStart = function (e) {}),
+          (V.HandleAllOnAnimationEnd = function (e) {
+            var t = V.GetNavAreaObjects(
+                e.target,
+                "NavArea.HandleAllOnAnimationEnd",
+                { target: !0, navArea: !1 }
+              ),
+              n = t.navArea,
+              r = t.navAreaElement,
+              o = t.dn;
+            null != n && V.UpdateFocusPosAfterLayoutChange(r, o);
+          }),
+          (V.HandleAllOnTransitionStart = function (e) {}),
+          (V.HandleAllOnTransitionEnd = function (e) {
+            var t,
+              n = V.GetNavAreaObjects(
+                e.target,
+                "NavArea.HandleAllOnTransitionEnd",
+                { target: !0, navArea: !1 }
+              ),
+              r = n.navArea,
+              o = n.navAreaElement,
+              i = n.dn;
+            null != r &&
+              ((null !== (t = r.m_focusMarker) &&
+                void 0 !== t &&
+                t.IsEventSource(e)) ||
+                V.UpdateFocusPosAfterLayoutChange(o, i));
+          }),
+          (V.HandleAllOnMouseDown = function (e) {
+            var t,
+              n = "NavArea.HandleAllOnMouseDown",
+              r = V.GetNavAreaObjects(e.target, n, { target: !0, navArea: !1 }),
+              o = r.navArea,
+              i = r.dn;
+            null != o &&
+              (te(n + " (" + o.props.id + "):", e.target),
+              V.SetIsDoingKeyNav(i, !1),
+              null !=
+                (null == (t = o.GetFocusController())
+                  ? void 0
+                  : t.HandleNavStopClick) &&
+                (te("+ preventDefault"), e.preventDefault()));
+          }),
+          (V.HandleAllOnClick = function (e) {
+            var t,
+              n,
+              r,
+              o = "NavArea.HandleAllOnClick",
+              i = V.GetNavAreaObjects(e.target, o, { target: !0, navArea: !1 })
+                .navArea;
+            null != i &&
+              (te(o + " (" + i.props.id + "):", e.target),
+              (i.m_focusClaimPriority = void 0),
+              null !=
+              (n =
+                null == (t = i.GetFocusController())
+                  ? void 0
+                  : t.HandleNavStopClick)
+                ? ((r = e.target),
+                  V.IsElementTargetThatFocuses(r) &&
+                    (te("+ handleNavStopClick {"), n(e, r), te("+ }")))
+                : te("+ nop."));
+          }),
+          (V.HandleFocusControllerOnFocus = function (e) {
+            var t,
+              n,
+              r,
+              o = "NavArea.HandleFocusControllerOnFocus",
+              i = W(e),
+              a = null == i ? void 0 : i.m_actionDescriptionContext;
+            a && a.setCurrentActions(a.focusActions),
+              null != e.ownerDocument &&
+                ((n = (t = V.GetNavAreaObjects(e, o, {
+                  target: !0,
+                  navArea: !1,
+                  activeNavArea: !1,
+                })).navArea),
+                (r = t.activeNavArea),
+                t.dn,
+                null != n &&
+                  (te(o + " (" + n.props.id + ")", e),
+                  n !== r &&
+                    (te("+ Activating Nav Area with element as initial focus."),
+                    n.Activate(e)),
+                  n.UpdateFocus(e)));
+          }),
+          (V.HandleFocusControllerOnBlur = function (e, t) {
+            var n,
+              r,
+              o,
+              i = "NavArea.HandleFocusControllerOnBlur",
+              a = W(e),
+              s = null == a ? void 0 : a.m_actionDescriptionContext;
+            s && s.setCurrentActions(void 0),
+              null != e.ownerDocument &&
+                ((r = (n = V.GetNavAreaObjects(e, i, {
+                  target: !0,
+                  navArea: !1,
+                  activeNavArea: !1,
+                })).navArea),
+                (o = n.activeNavArea),
+                null != r &&
+                  (te(i + " (" + r.props.id + ")", e),
+                  (r.m_focusClaimElement = void 0),
+                  (r.m_focusClaimPriority = void 0),
+                  null === t && r === o && r.props.alwaysFocusWithin
+                    ? e !== r.m_intentionalBlurElement
+                      ? (te("+ alwaysFocusWithin!"), r.Activate())
+                      : (te(
+                          "+ alwaysFocusWithin, except when NA.Deactivate blurs."
+                        ),
+                        (r.m_intentionalBlurElement = null),
+                        r.UpdateFocus(null))
+                    : r.UpdateFocus(null)));
+          }),
+          (V.prototype.HandleKeyDown = function (e) {
+            V.HandleKeyDown({
+              target: this.m_navAreaDivRef.current,
+              key: e.key,
+              ctrlKey: e.ctrlKey,
+              stopPropagation: function () {
+                return e.stopPropagation();
+              },
+              preventDefault: function () {
+                return e.preventDefault();
+              },
+            });
+          }),
+          (V.prototype.GetFocusedElement = function () {
+            var e = "NavArea.GetFocusedElement";
+            if (
+              (te(e + " (" + this.props.id + ")"),
+              null != this.GetElementDocState(e).dn)
+            )
+              return this.GetFocusController().GetFocus();
+          }),
+          (V.prototype.ClickFocusedElement = function () {
+            te("NavArea.ClickFocusedElement (" + this.props.id + ")");
+            var e = this.GetFocusedElement();
+            return null != e && (this.GetFocusController().Click(e), !0);
+          }),
+          (V.prototype.Blur = function (e) {
+            var t = "NavArea.Blur";
+            te(t + " (" + this.props.id + ")");
+            var n,
+              r = this.GetElementDocState(t).dn;
+            null != r &&
+              ((n = this.m_inFocusCallType),
+              (this.m_inFocusCallType = "blur"),
+              (this.m_focusClaimElement = void 0),
+              (this.m_focusClaimPriority = void 0),
               te(
-                t +
-                  " (" +
-                  this.props.id +
-                  ") " +
-                  (this.props.startInactive ? "startInactive" : "")
-              );
-              var n,
-                r,
-                o,
-                i,
-                a,
-                s,
-                c = this.GetElementDocState(t),
-                l = c.thisElement,
-                u = c.dn;
-              null != u &&
-                (null != (n = V.GetActiveNavArea(u)) &&
-                  n != this &&
-                  (te(
-                    "+ saving last focused element:",
-                    n.m_focusedHtmlElement,
-                    n.m_focusPos
-                  ),
-                  (n.m_lastFocusedHtmlElement = n.m_focusedHtmlElement),
-                  (n.m_lastFocusPosOffsetFromAnchorElement =
-                    n.m_focusPosOffsetFromAnchorElement),
-                  (n.m_focusedHtmlElement = null),
-                  (n.m_focusPosOffsetFromAnchorElement = null)),
-                (u.m_navAreaStack = Object(P.b)(u.m_navAreaStack, this)),
+                "+ forgetting last focused element",
+                this.m_lastFocusedHtmlElement
+              ),
+              (this.m_lastFocusedHtmlElement = null),
+              (this.m_lastFocusPosOffsetFromAnchorElement = null),
+              (this.m_focusedHtmlElement = null),
+              (this.m_focusPos = null),
+              (this.m_focusPosOffsetFromAnchorElement = null),
+              this === V.GetActiveNavArea(r) &&
+                (te("+ setting focus to null"),
+                this.GetFocusController().Focus(null)),
+              (this.m_inFocusCallType = n));
+          }),
+          (V.prototype.Activate = function (e) {
+            var t = "NavArea.Activate";
+            te(
+              t +
+                " (" +
+                this.props.id +
+                ") " +
+                (this.props.startInactive ? "startInactive" : "")
+            );
+            var n,
+              r,
+              o,
+              i,
+              a,
+              s,
+              c = this.GetElementDocState(t),
+              l = c.thisElement,
+              u = c.dn;
+            null != u &&
+              (null != (n = V.GetActiveNavArea(u)) &&
+                n !== this &&
+                (te(
+                  "+ saving last focused element:",
+                  n.m_focusedHtmlElement,
+                  n.m_focusPos
+                ),
+                (n.m_lastFocusedHtmlElement = n.m_focusedHtmlElement),
+                (n.m_lastFocusPosOffsetFromAnchorElement =
+                  n.m_focusPosOffsetFromAnchorElement),
+                (n.m_focusedHtmlElement = null),
+                (n.m_focusPosOffsetFromAnchorElement = null)),
+              n !== this &&
+                ((u.m_navAreaStack = Object(G.b)(u.m_navAreaStack, this)),
                 l.setAttribute($.AreaActive, "true"),
-                u.m_navAreaStack.push(this),
-                (r = this.m_lastFocusedHtmlElement),
-                null != e && V.IsElementTargetThatFocuses(r)
-                  ? (te("+ focusing new:", e), this.NavigateTo(e, void 0, !1))
-                  : null != r && V.IsElementTargetThatFocuses(r)
-                  ? (te("+ focusing last:", r, this.m_focusPos),
-                    (o = V.FindAnchorElement(r))
-                      ? ((i = ae(o)),
-                        this.NavigateTo(
-                          r,
-                          q(i, this.m_lastFocusPosOffsetFromAnchorElement),
-                          !0
-                        ))
-                      : this.NavigateTo(r, void 0, !0))
-                  : null !==
-                      (a = this.FindBestFocusableTarget(
-                        this.m_navAreaDivRef.current,
-                        void 0,
-                        void 0
-                      )) && V.IsElementTargetThatFocuses(a.htmlElement)
-                  ? (te("+ focusing found:", a.htmlElement, a.pos),
-                    this.NavigateTo(a.htmlElement, a.pos, !1))
-                  : te("+ no focus found."),
-                null != (s = this.props.onActivate) &&
-                  (te("+ onActivate {"), s(), te("+ }")));
-            }),
-            (V.prototype.Deactivate = function () {
-              var e = "NavArea.Deactivate";
-              te(
-                e +
-                  " (" +
-                  this.props.id +
-                  ") " +
-                  (this.props.startInactive ? "startInactive" : "")
-              );
-              var t,
-                n,
-                r,
-                o = this.GetElementDocState(e),
-                i = o.thisElement,
-                a = o.dn;
-              null != a &&
-                (a.m_navAreaStack.includes(this)
-                  ? (this.Blur(),
-                    (t = V.GetActiveNavArea(a) === this),
-                    i.setAttribute($.AreaActive, "false"),
-                    (a.m_navAreaStack = Object(P.b)(a.m_navAreaStack, this)),
-                    t &&
-                      (null != (n = V.GetActiveNavArea(a)) && n.Activate(),
-                      te("+ now active: " + (null != n ? n.props.id : "-"))),
-                    null != (r = this.props.onDeactivate) &&
-                      (te("+ onDeactivate {"), r(), te("+ }")))
-                  : te("+ nop; not actually active."));
-            }),
-            (V.prototype.GetFocusControllerDomIntegrator = function () {
-              return null != this.props.focusController
-                ? this.props.focusController
-                : V.sm_htmlDomFocusControllerDomIntegrator;
-            }),
-            (V.prototype.GetFocusController = function () {
-              return this.m_focusController;
-            }),
-            (V.prototype.ClaimFocus = function (e) {
-              var t = "NavArea.ClaimFocus";
-              y.IsNotSettingFocus
-                ? te(t + " NOT claiming focus.", e)
-                : null != this.m_navAreaDivRef.current
-                ? null !== this.m_focusClaimElement
-                  ? (te(t + " first claim now."),
-                    this.NavigateTo(e, void 0, !1),
-                    (this.m_focusClaimElement = null))
-                  : te(t + " already claimed now, ignored.")
-                : null == this.m_focusClaimElement
-                ? (te(t + " first claim delay."),
-                  (this.m_focusClaimElement = e))
-                : te(t + " already claimed delay, ignored.");
-            }),
-            (V.prototype.GetElementDoc = function (e) {
-              if (!y.IsNavEnabled) return {};
-              var t = this.m_navAreaDivRef.current;
-              if (null == t)
-                return Object(f.a)(!1, e + " expects nav area ref."), {};
-              var n = t.ownerDocument;
-              return null == n
-                ? (Object(f.a)(!1, e + " expects nav area ownerDocument."), {})
-                : n.contains(t)
-                ? { thisElement: t, doc: n }
-                : (Object(f.a)(!1, e + " expects nav area to be in document."),
-                  {});
-            }),
-            (V.prototype.GetElementDocState = function (e) {
-              var t = this.GetElementDoc(e),
-                n = t.thisElement,
-                r = t.doc;
-              if (null == r) return {};
-              var o = V.GetDocumentNavState(r);
-              return null == o
-                ? (Object(f.a)(!1, e + " expects document nav state."), {})
-                : { thisElement: n, doc: r, dn: o };
-            }),
-            (V.prototype.NavigateTo = function (r, e, t) {
-              var n, o, i, a, s, c, l, u, p, m, d, g, h;
-              y.IsNotSettingFocus
-                ? te(
-                    "NavArea.SetTarget NOT setting target (" +
+                u.m_navAreaStack.push(this)),
+              (r = this.m_lastFocusedHtmlElement),
+              null != e && V.IsElementTargetThatFocuses(r)
+                ? (te("+ focusing new:", e), this.NavigateTo(e, void 0, !1))
+                : null != r &&
+                  r.ownerDocument.contains(r) &&
+                  V.IsElementTargetThatFocuses(r)
+                ? (te("+ focusing last:", r, this.m_focusPos),
+                  (o = V.FindAnchorElement(r))
+                    ? ((i = ae(o)),
+                      this.NavigateTo(
+                        r,
+                        q(i, this.m_lastFocusPosOffsetFromAnchorElement),
+                        !0
+                      ))
+                    : this.NavigateTo(r, void 0, !0))
+                : null !==
+                    (a = this.FindBestFocusableTarget(
+                      this.m_navAreaDivRef.current,
+                      void 0,
+                      void 0
+                    )) && V.IsElementTargetThatFocuses(a.htmlElement)
+                ? (te(
+                    "+ focusing found, reason: " + a.logReason,
+                    a.htmlElement,
+                    a.pos
+                  ),
+                  this.NavigateTo(a.htmlElement, a.pos, !1))
+                : this.props.alwaysFocusWithin
+                ? (te(
+                    "+ no focus found, alwaysFocusWithin, so focusing nav area instead!"
+                  ),
+                  this.GetFocusController().Focus(this.m_navAreaDivRef.current))
+                : null != this.GetFocusController().GetFocus() &&
+                  (te("+ no focus found, focusing null."),
+                  this.IntentionalBlur()),
+              n == this ||
+                (null != (s = this.props.onActivate) &&
+                  (te("+ onActivate {"), s(), te("+ }"))));
+          }),
+          (V.prototype.Deactivate = function () {
+            var e = "NavArea.Deactivate";
+            te(
+              e +
+                " (" +
+                this.props.id +
+                ") " +
+                (this.props.startInactive ? "startInactive" : "")
+            );
+            var t,
+              n,
+              r,
+              o = this.GetElementDocState(e),
+              i = o.thisElement,
+              a = o.dn;
+            null != a &&
+              (a.m_navAreaStack.includes(this)
+                ? (this.IntentionalBlur(),
+                  (t = V.GetActiveNavArea(a) === this),
+                  i.setAttribute($.AreaActive, "false"),
+                  (a.m_navAreaStack = Object(G.b)(a.m_navAreaStack, this)),
+                  t &&
+                    (null != (n = V.GetActiveNavArea(a)) && n.Activate(),
+                    te("+ now active: " + (null != n ? n.props.id : "-"))),
+                  null != (r = this.props.onDeactivate) &&
+                    (te("+ onDeactivate {"), r(), te("+ }")))
+                : te("+ nop; not actually active."));
+          }),
+          (V.prototype.GetFocusControllerDomIntegrator = function () {
+            return null != this.props.focusController
+              ? this.props.focusController
+              : V.sm_htmlDomFocusControllerDomIntegrator;
+          }),
+          (V.prototype.GetFocusController = function () {
+            return this.m_focusController;
+          }),
+          (V.prototype.ClaimFocus = function (e, t) {
+            var n,
+              r = "NavArea.ClaimFocus";
+            y.IsNotSettingFocus
+              ? te(r + " NOT claiming focus.", e)
+              : ((n = V.GetNavAreaObjects(e, r, {
+                  target: !0,
+                  activeNavArea: !1,
+                }).activeNavAreaElement),
+                V.FindAncestorNavAreaElement(e) == n
+                  ? (null == document.activeElement ||
+                      document.activeElement === document.body ||
+                      document.activeElement === this.m_navAreaDivRef.current ||
+                      (null != this.m_focusClaimPriority &&
+                        t > this.m_focusClaimPriority) ||
+                      (null == this.m_focusClaimPriority &&
+                        t >= pe.StartFocused)) &&
+                    (null != this.m_navAreaDivRef.current
+                      ? (te(r + " first pri-" + t + " claim, now."),
+                        this.NavigateTo(e, void 0, !1))
+                      : (te(r + " first pri-" + t + " claim, later."),
+                        (this.m_focusClaimElement = e)),
+                    (this.m_focusClaimPriority = t))
+                  : te(
+                      r + " NOT claiming focus, outside active nav area.",
+                      e,
+                      n
+                    ));
+          }),
+          (V.prototype.GetElementDoc = function (e) {
+            if (!y.IsNavEnabled) return {};
+            var t = this.m_navAreaDivRef.current;
+            if (null == t)
+              return Object(f.a)(!1, e + " expects nav area ref."), {};
+            var n = t.ownerDocument;
+            return null == n
+              ? (Object(f.a)(!1, e + " expects nav area ownerDocument."), {})
+              : n.contains(t)
+              ? { thisElement: t, doc: n }
+              : (Object(f.a)(!1, e + " expects nav area to be in document."),
+                {});
+          }),
+          (V.prototype.GetElementDocState = function (e) {
+            var t = this.GetElementDoc(e),
+              n = t.thisElement,
+              r = t.doc;
+            if (null == r) return {};
+            var o = V.GetDocumentNavState(r);
+            return null == o
+              ? (Object(f.a)(!1, e + " expects document nav state."), {})
+              : { thisElement: n, doc: r, dn: o };
+          }),
+          (V.prototype.IntentionalBlur = function () {
+            te(
+              "NavArea.IntentionalBlur, current focus:",
+              this.GetFocusController().GetFocus()
+            ),
+              (this.m_intentionalBlurElement = this.GetFocusController().GetFocus()),
+              this.Blur(),
+              (this.m_intentionalBlurElement = null);
+          }),
+          (V.prototype.NavigateTo = function (r, e, t) {
+            var n, o, i, a, s, c, l, u, p, m, d, g, h;
+            y.IsNotSettingFocus
+              ? te(
+                  "NavArea.SetTarget NOT setting target (" +
+                    this.m_navAreaDivRef.current.id +
+                    ") " +
+                    re(e),
+                  r
+                )
+              : r.ownerDocument.contains(r)
+              ? ((n = this.GetFocusController()),
+                V.IsElementTargetThatFocuses(r) &&
+                  ((o = this.m_inFocusCallType),
+                  (this.m_inFocusCallType = "focus"),
+                  te(
+                    "NavArea.SetTarget (" +
                       this.m_navAreaDivRef.current.id +
                       ") " +
                       re(e),
                     r
-                  )
-                : r.ownerDocument.contains(r)
-                ? ((n = this.GetFocusController()),
-                  V.IsElementTargetThatFocuses(r) &&
-                    ((o = this.m_inFocusCallType),
-                    (this.m_inFocusCallType = "focus"),
-                    te(
-                      "NavArea.SetTarget (" +
-                        this.m_navAreaDivRef.current.id +
-                        ") " +
-                        re(e),
-                      r
-                    ),
-                    this.UpdateFocus(r, e),
-                    (s = (a = (i = function (t, e) {
-                      var n = Object(Q.j)(r, function (e) {
-                        return null != e.getAttribute(t);
-                      });
-                      return null == n
-                        ? [void 0, void 0, void 0]
-                        : [
-                            n,
-                            n.getAttribute(t),
-                            parseFloat(n.getAttribute(e) || "0"),
-                          ];
-                    })($.ScrollSnapTypeX, $.ScrollSnapMarginX))[0]),
-                    (c = a[1]),
-                    (l = a[2]),
-                    (p = (u = i($.ScrollSnapTypeY, $.ScrollSnapMarginY))[0]),
-                    (m = u[1]),
-                    (d = u[2]),
-                    c || m
-                      ? (te("+ scroll-snapping (" + c + ", " + m + ")"),
-                        n.Focus(r, { preventScroll: !0 }),
-                        (g = r.ownerDocument.defaultView),
-                        (h = function (e, t, n, r) {
-                          if (null != t)
-                            for (
-                              var o = ie(t),
-                                i = O(t),
-                                a = o[e].min - r * i,
-                                s = o[e].max + r * i,
-                                c = t.parentElement;
-                              null != c;
-                              c = c.parentElement
-                            ) {
-                              var l =
-                                "x" === e
-                                  ? [c.scrollLeft, c.scrollWidth, c.clientWidth]
-                                  : [
-                                      c.scrollTop,
-                                      c.scrollHeight,
-                                      c.clientHeight,
-                                    ];
-                              if (!(l[1] <= l[2])) {
-                                var u = g.getComputedStyle(c),
-                                  p = "x" === e ? u.overflowX : u.overflowY;
-                                if ("auto" === p || "scroll" === p) {
-                                  var m = ie(c);
-                                  if (
-                                    n === x.Lazy &&
-                                    m[e].min <= a &&
-                                    m[e].max >= s
-                                  )
-                                    return;
-                                  var d = {
-                                      min: a - m[e].min,
-                                      max: s - m[e].max,
-                                    },
-                                    h =
-                                      n === x.Start
-                                        ? 0
-                                        : n === x.Center
-                                        ? 0.5
-                                        : n !== x.End &&
-                                          Math.abs(d.min) <= Math.abs(d.max)
-                                        ? 0
-                                        : 1,
-                                    f = O(c),
-                                    v = ((1 - h) * d.min + h * d.max) / f;
-                                  return (
-                                    te(
-                                      "+ snap " +
-                                        e +
-                                        ": " +
-                                        n +
-                                        " [ " +
-                                        d.min +
-                                        " -- " +
-                                        h +
-                                        " -- " +
-                                        d.max +
-                                        " ]"
-                                    ),
-                                    void ("x" === e
-                                      ? (c.scrollLeft += v)
-                                      : (c.scrollTop += v))
-                                  );
-                                }
+                  ),
+                  this.UpdateFocus(r, e),
+                  (s = (a = (i = function (t, e) {
+                    var n = Object(Z.j)(r, function (e) {
+                      return null != e.getAttribute(t);
+                    });
+                    return null == n
+                      ? [void 0, void 0, void 0]
+                      : [
+                          n,
+                          n.getAttribute(t),
+                          parseFloat(n.getAttribute(e) || "0"),
+                        ];
+                  })($.ScrollSnapTypeX, $.ScrollSnapMarginX))[0]),
+                  (c = a[1]),
+                  (l = a[2]),
+                  (p = (u = i($.ScrollSnapTypeY, $.ScrollSnapMarginY))[0]),
+                  (m = u[1]),
+                  (d = u[2]),
+                  c || m
+                    ? (te("+ scroll-snapping (" + c + ", " + m + ")"),
+                      n.Focus(r, { preventScroll: !0 }),
+                      (g = r.ownerDocument.defaultView),
+                      (h = function (e, t, n, r) {
+                        if (null != t)
+                          for (
+                            var o = ie(t),
+                              i = O(t),
+                              a = o[e].min - r * i,
+                              s = o[e].max + r * i,
+                              c = t.parentElement;
+                            null != c;
+                            c = c.parentElement
+                          ) {
+                            var l =
+                              "x" === e
+                                ? [c.scrollLeft, c.scrollWidth, c.clientWidth]
+                                : [c.scrollTop, c.scrollHeight, c.clientHeight];
+                            if (!(l[1] <= l[2])) {
+                              var u = g.getComputedStyle(c),
+                                p = "x" === e ? u.overflowX : u.overflowY;
+                              if ("auto" === p || "scroll" === p) {
+                                var m = ie(c);
+                                if (
+                                  n === x.Lazy &&
+                                  m[e].min <= a &&
+                                  m[e].max >= s
+                                )
+                                  return;
+                                var d = {
+                                    min: a - m[e].min,
+                                    max: s - m[e].max,
+                                  },
+                                  h =
+                                    n === x.Start
+                                      ? 0
+                                      : n === x.Center
+                                      ? 0.5
+                                      : n !== x.End &&
+                                        Math.abs(d.min) <= Math.abs(d.max)
+                                      ? 0
+                                      : 1,
+                                  f = O(c),
+                                  v = ((1 - h) * d.min + h * d.max) / f;
+                                return (
+                                  te(
+                                    "+ snap " +
+                                      e +
+                                      ": " +
+                                      n +
+                                      " [ " +
+                                      d.min +
+                                      " -- " +
+                                      h +
+                                      " -- " +
+                                      d.max +
+                                      " ]"
+                                  ),
+                                  void ("x" === e
+                                    ? (c.scrollLeft += v)
+                                    : (c.scrollTop += v))
+                                );
                               }
                             }
-                        })("x", s, c, l),
-                        h("y", p, m, d))
-                      : n.Focus(r),
-                    (this.m_inFocusCallType = o)),
-                  !t &&
-                    V.IsElementTargetThatClicks(r) &&
-                    (te(
-                      "NavArea.SetFocus " +
-                        ne(this.m_navAreaDivRef.current) +
-                        " CLICK",
-                      r
-                    ),
-                    n.Click(r)))
-                : te(
-                    "NavArea.SetTarget ** LOST ELEMENT ** (" +
-                      this.m_navAreaDivRef.current.id +
-                      ") " +
-                      re(e),
+                          }
+                      })("x", s, c, l),
+                      h("y", p, m, d))
+                    : n.Focus(r),
+                  (this.m_inFocusCallType = o)),
+                !t &&
+                  V.IsElementTargetThatClicks(r) &&
+                  (te(
+                    "NavArea.SetFocus " +
+                      ne(this.m_navAreaDivRef.current) +
+                      " CLICK",
                     r
-                  );
-            }),
-            (V.prototype.UpdateFocus = function (e, t) {
-              var n, r;
-              null == t &&
-                null != e &&
-                e != this.m_focusedHtmlElement &&
-                (t = ae(e)),
-                te("NavArea.UpdateFocus (" + this.props.id + ") " + re(t), e),
-                e != this.m_focusedHtmlElement &&
-                  (te("+ updating last focus element"),
-                  null != (n = V.FindAnchorElement(e))
-                    ? ((r = ae(n)),
-                      (this.m_focusPosOffsetFromAnchorElement = X(r, t)))
-                    : (this.m_focusPosOffsetFromAnchorElement = null),
-                  (this.m_focusedHtmlElement = e),
-                  (this.m_focusPos = null != t ? t : null));
-              var o = W(e);
-              o instanceof ce && o.GotFocus(), this.UpdateFocusMarker(!1);
-            }),
-            (V.prototype.UpdateFocusMarker = function (e) {
-              var t, n;
-              te(
-                "NavArea.UpdateFocusMarker " + ne(this.m_navAreaDivRef.current)
-              ),
-                null != this.m_focusMarker &&
-                  ((n =
-                    V.GetIsDoingKeyNav(this.m_docNavState) &&
-                    "true" !==
-                      (null === (t = this.m_focusedHtmlElement) || void 0 === t
-                        ? void 0
-                        : t.getAttribute($.NoFocusMarker))),
-                  this.m_focusMarker.HandleOnFocusChanged(
-                    e,
-                    this.m_focusedHtmlElement,
-                    n,
-                    this.GetFocusPos()
                   ),
-                  null != this.m_pointerFocusMarkerRef.current &&
-                    this.m_pointerFocusMarkerRef.current.HandleOnFocusChanged(
-                      e,
-                      this.m_focusedHtmlElement,
-                      n,
-                      this.GetFocusPos()
-                    ));
-            }),
-            (V.prototype.GetFocusPos = function () {
-              var e = this.m_navAreaDivRef.current,
-                t = this.m_focusedHtmlElement,
-                n = this.m_focusPosOffsetFromAnchorElement;
-              if (e && t && e.contains(t) && n) {
-                var r = V.FindAnchorElement(t);
-                if (r) return q(ae(r), n);
-              }
-              return this.m_focusPos;
-            }),
-            (V.prototype.FindBestFocusableTarget = function (e, t, n) {
-              var r = "NavArea.FindBestNavStopFocus";
-              if (!e) return null;
-              var o = e.ownerDocument;
-              if (!o) return null;
-              te(r + " #" + e.id + ".'" + e.className + "'");
-              var i = this.m_focusClaimElement;
-              if (
-                ((this.m_focusClaimElement = void 0),
-                null != i &&
-                  o.contains(i) &&
-                  e.contains(i) &&
-                  V.IsElementTargetThatFocuses(i))
-              )
-                return { htmlElement: i, pos: ae(i) };
-              var a = this.m_focusedHtmlElement,
-                s = this.GetFocusPos();
-              if (
-                a &&
-                o.contains(a) &&
-                e.contains(a) &&
-                V.IsElementTargetThatFocuses(a)
-              )
-                return { htmlElement: a, pos: s || ae(a) };
-              var c = Object(Q.k)(e, $.Type).filter(function (e) {
-                return (
-                  oe(e) &&
-                  "true" === e.getAttribute($.Preferred) &&
-                  (e.getAttribute($.Type) === ee.Group ||
-                    V.IsElementTargetThatFocuses(e))
+                  n.Click(r)))
+              : te(
+                  "NavArea.SetTarget ** LOST ELEMENT ** (" +
+                    this.m_navAreaDivRef.current.id +
+                    ") " +
+                    re(e),
+                  r
                 );
+          }),
+          (V.prototype.UpdateFocus = function (e, t) {
+            var n, r;
+            null == t &&
+              null != e &&
+              e != this.m_focusedHtmlElement &&
+              (t = ae(e)),
+              te("NavArea.UpdateFocus (" + this.props.id + ") " + re(t), e),
+              e != this.m_focusedHtmlElement &&
+                (te("+ updating last focus element"),
+                null != (n = V.FindAnchorElement(e))
+                  ? ((r = ae(n)),
+                    (this.m_focusPosOffsetFromAnchorElement = X(r, t)))
+                  : (this.m_focusPosOffsetFromAnchorElement = null),
+                (this.m_focusedHtmlElement = e),
+                (this.m_focusPos = null != t ? t : null));
+            var o = W(e);
+            o instanceof ce && o.GotFocus(), this.UpdateFocusMarker(!1);
+          }),
+          (V.prototype.UpdateFocusMarker = function (e) {
+            var t, n;
+            null != this.m_focusMarker &&
+              ((n =
+                V.GetIsDoingKeyNav(this.m_docNavState) &&
+                "true" !==
+                  (null === (t = this.m_focusedHtmlElement) || void 0 === t
+                    ? void 0
+                    : t.getAttribute($.NoFocusMarker))),
+              this.m_focusMarker.HandleOnFocusChanged(
+                e,
+                this.m_focusedHtmlElement,
+                n,
+                this.GetFocusPos()
+              ),
+              null != this.m_pointerFocusMarkerRef.current &&
+                this.m_pointerFocusMarkerRef.current.HandleOnFocusChanged(
+                  e,
+                  this.m_focusedHtmlElement,
+                  n,
+                  this.GetFocusPos()
+                ));
+          }),
+          (V.prototype.GetFocusPos = function () {
+            var e = this.m_navAreaDivRef.current,
+              t = this.m_focusedHtmlElement,
+              n = this.m_focusPosOffsetFromAnchorElement;
+            if (e && t && e.contains(t) && n) {
+              var r = V.FindAnchorElement(t);
+              if (r) return q(ae(r), n);
+            }
+            return this.m_focusPos;
+          }),
+          (V.prototype.FindBestFocusableTarget = function (e, t, n) {
+            var r = "NavArea.FindBestFocusableTarget";
+            if (!e) return null;
+            var o = e.ownerDocument;
+            if (!o) return null;
+            te(r + " #" + e.id + ".'" + e.className + "'");
+            var i = V.GetNavAreaObjects(e, r, {
+                target: !0,
+                activeNavArea: !0,
+              }),
+              a = i.activeNavArea,
+              s = i.activeNavAreaElement,
+              c = i.dn,
+              l = this.m_focusClaimElement;
+            if (
+              ((this.m_focusClaimElement = void 0),
+              (this.m_focusClaimPriority = void 0),
+              null != l &&
+                o.contains(l) &&
+                V.IsElementTargetThatFocuses(l) &&
+                e.contains(l) &&
+                V.FindAncestorNavAreaElement(l) === s)
+            )
+              return {
+                htmlElement: l,
+                pos: ae(l),
+                logReason: "focus claim element",
+              };
+            var u = this.m_focusedHtmlElement,
+              p = this.GetFocusPos();
+            if (
+              u &&
+              o.contains(u) &&
+              e.contains(u) &&
+              V.IsElementTargetThatFocuses(u) &&
+              V.FindAncestorNavAreaElement(u) === s
+            )
+              return {
+                htmlElement: u,
+                pos: p || ae(u),
+                logReason: "last focused element",
+              };
+            var m = Object(Z.k)(e, $.Type).filter(function (e) {
+              return (
+                oe(e) &&
+                "true" === e.getAttribute($.Preferred) &&
+                (e.getAttribute($.Type) === ee.Group ||
+                  V.IsElementTargetThatFocuses(e))
+              );
+            });
+            if (0 < m.length) {
+              var d = m[0],
+                h = d.getAttribute($.Type);
+              if (V.IsElementTargetThatFocuses(d))
+                return {
+                  htmlElement: d,
+                  pos: ae(d),
+                  logReason: "preferred element",
+                };
+              if (h === ee.Group) {
+                var f = this.FindBestFocusableTarget(d, t, n);
+                if (f) return f;
+              }
+            }
+            var v = Array.from(
+              e.querySelectorAll(
+                "[" +
+                  $.Type +
+                  "=" +
+                  ee.Target +
+                  "][" +
+                  $.TargetFocuses +
+                  "=" +
+                  !0 +
+                  "]"
+              )
+            ).filter(function (e) {
+              return oe(e) && V.FindAncestorNavAreaElement(e) === s;
+            });
+            if (!v || 0 === v.length) return null;
+            if (void 0 === c) return null;
+            if (a.props.initFromBoundary && void 0 !== t && void 0 !== n) {
+              var g = "x" === t ? $.XOrder : "y" === t ? $.YOrder : void 0,
+                b = e.getAttribute(g);
+              if (!(b === se.Geometry || null == b)) {
+                var _ =
+                  (b === se.ReverseDomOrder) != (-1 === n)
+                    ? v[v.length - 1]
+                    : v[0];
+                return { htmlElement: _, pos: ae(_), logReason: "DOM order" };
+              }
+              for (
+                var y = -1 === n ? "max" : "min",
+                  E = null,
+                  w = 1 / 0,
+                  O = 0,
+                  S = v;
+                O < S.length;
+                O++
+              ) {
+                var C = S[O],
+                  D = n * ie(C)[t][y];
+                D < w && ((w = D), (E = C));
+              }
+              if (null !== E)
+                return {
+                  htmlElement: E,
+                  pos: ae(E),
+                  logReason: "geometric best score",
+                };
+            }
+            var x,
+              M = c.m_navAreaStack,
+              A = Object(G.e)(M, function (e) {
+                return null !== e.m_focusPos;
               });
-              if (0 < c.length) {
-                var l = c[0],
-                  u = l.getAttribute($.Type);
-                if (V.IsElementTargetThatFocuses(l))
-                  return { htmlElement: l, pos: ae(l) };
-                if (u === ee.Group) {
-                  var p = this.FindBestFocusableTarget(l, t, n);
-                  if (p) return p;
-                }
+            if (A) {
+              for (
+                var k = A.GetFocusPos(),
+                  j = Number.POSITIVE_INFINITY,
+                  T = null,
+                  I = 0,
+                  N = v;
+                I < N.length;
+                I++
+              ) {
+                var L = N[I],
+                  R = ae(L),
+                  B = ((x = X(k, R)), Math.sqrt(P(x, x)));
+                B < j && ((j = B), (T = L));
               }
-              var m = Array.from(
-                e.querySelectorAll(
-                  "[" +
-                    $.Type +
-                    "=" +
-                    ee.Target +
-                    "][" +
-                    $.TargetFocuses +
-                    "=" +
-                    !0 +
-                    "]"
-                )
-              ).filter(oe);
-              if (!m || 0 === m.length) return null;
-              var d = V.GetNavAreaObjects(e, r, {
-                  target: !0,
-                  activeNavArea: !0,
-                }),
-                h = d.activeNavArea,
-                f = (d.activeNavAreaElement, d.dn);
-              if (void 0 === f) return null;
-              if (h.props.initFromBoundary && void 0 !== t && void 0 !== n) {
-                var v = "x" === t ? $.XOrder : "y" === t ? $.YOrder : void 0,
-                  g = e.getAttribute(v);
-                if (!(g === se.Geometry || null == g)) {
-                  var b =
-                    (g === se.ReverseDomOrder) != (-1 === n)
-                      ? m[m.length - 1]
-                      : m[0];
-                  return { htmlElement: b, pos: ae(b) };
-                }
-                for (
-                  var _ = -1 === n ? "max" : "min",
-                    y = null,
-                    E = 1 / 0,
-                    w = 0,
-                    O = m;
-                  w < O.length;
-                  w++
-                ) {
-                  var S = O[w],
-                    C = n * ie(S)[t][_];
-                  C < E && ((E = C), (y = S));
-                }
-                if (null !== y) return { htmlElement: y, pos: ae(y) };
-              }
-              var D,
-                x = f.m_navAreaStack,
-                M = Object(P.e)(x, function (e) {
-                  return null !== e.m_focusPos;
-                });
-              if (M) {
-                for (
-                  var A = M.GetFocusPos(),
-                    j = Number.POSITIVE_INFINITY,
-                    k = null,
-                    T = 0,
-                    I = m;
-                  T < I.length;
-                  T++
-                ) {
-                  var N = I[T],
-                    L = ae(N),
-                    R = ((D = X(A, L)), Math.sqrt(F(D, D)));
-                  R < j && ((j = R), (k = N));
-                }
-                if (k) return { htmlElement: k, pos: ae(k) };
-              }
-              var B = m[0];
-              return B
-                ? { htmlElement: B, pos: ae(B) }
-                : (te("+ found no nav target."), null);
-            }),
-            (V.prototype.FindNextNavTarget = function (e, t) {
-              var n = "NavArea.FindNextNavStop";
-              te(n + " (" + this.props.id + ")");
-              var r = this.m_navAreaDivRef.current;
-              if (!r) return null;
-              var o = r.ownerDocument;
-              if (!o || o !== this.m_document || !o.contains(r)) return null;
-              var i,
-                a,
-                s,
-                c,
-                l,
-                u = null,
-                p = this.GetFocusController().GetFocus();
-              if (
-                (oe(p) && o.contains(p) && p !== r && r.contains(p)
-                  ? ((i =
-                      (null !== this.m_focusPos &&
-                        this.m_focusedHtmlElement === p &&
-                        this.GetFocusPos()) ||
-                      ae(p)),
+              if (T)
+                return {
+                  htmlElement: T,
+                  pos: ae(T),
+                  logReason: "nearest stack top focus pos",
+                };
+            }
+            var F = v[0];
+            return F
+              ? { htmlElement: F, pos: ae(F), logReason: "first focusable" }
+              : (te("+ found no nav target."), null);
+          }),
+          (V.prototype.FindNextNavTarget = function (e, t) {
+            var n = "NavArea.FindNextNavTarget";
+            te(n + " (" + this.props.id + ")");
+            var r = this.m_navAreaDivRef.current;
+            if (!r) return null;
+            var o = r.ownerDocument;
+            if (!o || o !== this.m_document || !o.contains(r)) return null;
+            var i,
+              a,
+              s,
+              c,
+              l,
+              u = null,
+              p = this.GetFocusController().GetFocus();
+            if (
+              (oe(p) &&
+              o.contains(p) &&
+              p !== r &&
+              V.FindAncestorNavAreaElement(p) === r
+                ? ((i =
+                    (null !== this.m_focusPos &&
+                      this.m_focusedHtmlElement === p &&
+                      this.GetFocusPos()) ||
+                    ae(p)),
+                  (s = V.FindNextNavTargetWithinAndAcrossContainers(
+                    r,
+                    p,
+                    i,
+                    e,
+                    t
+                  )) ||
+                    (te(
+                      n + ": Navigated to self (shouldn't happen!); retrying"
+                    ),
+                    (a = ae(p)),
                     (s = V.FindNextNavTargetWithinAndAcrossContainers(
                       r,
                       p,
-                      i,
+                      a,
                       e,
                       t
-                    )) ||
-                      (te(
-                        n + ": Navigated to self (shouldn't happen!); retrying"
-                      ),
-                      (a = ae(p)),
-                      (s = V.FindNextNavTargetWithinAndAcrossContainers(
-                        r,
-                        p,
-                        a,
-                        e,
-                        t
-                      ))),
-                    s && (u = s))
-                  : (u = this.FindBestFocusableTarget(
-                      this.m_navAreaDivRef.current,
-                      e,
-                      t
-                    )),
-                null !== u)
-              ) {
-                var m = o.defaultView;
-                if (!m) return null;
-                var d =
-                    parseFloat(m.getComputedStyle(o.firstElementChild).zoom) ||
-                    1,
-                  h = {
-                    x: { min: -40 * d, max: (m.innerWidth + 40) * d },
-                    y: { min: -40 * d, max: (m.innerHeight + 40) * d },
-                  },
-                  f = ie(u.onscreenTestElement || u.htmlElement);
-                if (Z((c = h).x, (l = f).x) && Z(c.y, l.y)) return u;
-              }
-              return null;
-            }),
-            (V.prototype.Register = function () {
-              var e,
-                t,
-                n,
-                r = "NavArea.Register";
-              te(r + " (" + this.props.id + ")");
-              var o,
-                i,
-                a,
-                s = this.GetElementDoc(r),
-                c = s.thisElement,
-                l = s.doc;
-              null != l &&
-                ((o = (function () {
-                  var e = V.GetDocumentNavState(l);
-                  if (null != e) return e;
-                  te("+ creating new DocumentNavState");
-                  var t = new pe(l);
-                  return (
-                    V.AddEventListeners(l), V.sm_documentStates.set(l, t), t
-                  );
-                })()),
-                (this.m_document = l),
-                (this.m_docNavState = o),
-                null !=
-                  (i =
-                    this.props.focusController || o.m_defaultFocusController) &&
-                  (o.m_focusControllers.has(i) ||
-                    (i.AddFocusListener(V.HandleFocusControllerOnFocus),
-                    i.AddBlurListener(V.HandleFocusControllerOnBlur)),
-                  o.m_focusControllers.add(i)),
-                (this.m_focusController = i),
-                null !=
-                  (a =
-                    null === this.props.focusMarker
-                      ? void 0
-                      : null !==
-                          (n =
-                            null !==
-                              (t =
-                                null !== (e = this.props.focusMarker) &&
-                                void 0 !== e
-                                  ? e
-                                  : V.sm_defaultFocusMarker) && void 0 !== t
-                              ? t
-                              : this.m_boxFocusMarker) && void 0 !== n
-                      ? n
-                      : (this.m_boxFocusMarker = new N(
-                          this.m_boxFocusMarkerDivRef
-                        ))) && o.m_focusMarkers.add(a),
-                (this.m_focusMarker = a),
-                o.m_elementNavAreaMap.set(c, this),
-                this.props.startInactive || this.Activate());
-            }),
-            (V.prototype.Unregister = function () {
-              var e = "NavArea.Unregister";
-              te(e + " (" + this.props.id + ")");
-              var t,
-                n,
-                r = this.GetElementDocState(e),
-                o = r.thisElement,
-                i = r.doc,
-                a = r.dn;
-              null != a &&
-                (this.Deactivate(),
-                a.m_elementNavAreaMap.delete(o),
-                null != (t = this.m_focusMarker) && a.m_focusMarkers.delete(t),
-                null != (n = this.m_focusController) &&
-                  (a.m_focusControllers.delete(n),
-                  a.m_focusControllers.has(n) ||
-                    (n.RemoveFocusListener(V.HandleFocusControllerOnFocus),
-                    n.RemoveBlurListener(V.HandleFocusControllerOnBlur))),
-                a.isEmpty &&
-                  (V.RemoveEventListeners(i), V.sm_documentStates.delete(i)));
-            }),
-            (V.prototype.componentDidMount = function () {
-              te("NavArea.componentDidMount (" + this.props.id + ")"),
-                this.Register();
-            }),
-            (V.prototype.componentDidUpdate = function () {
-              te("NavArea.componentDidUpdate (" + this.props.id + ")");
-            }),
-            (V.prototype.componentWillUnmount = function () {
-              te("NavArea.componentWillUnmount (" + this.props.id + ")"),
-                this.Unregister();
-            }),
-            (V.prototype.render = function () {
-              var e,
-                t = this.props,
-                n = t.className,
-                r = t.children,
-                o =
-                  (t.initFromBoundary,
-                  t.onActivate,
-                  t.onDeactivate,
-                  t.onGoBack,
-                  t.onHome,
-                  t.focusController,
-                  t.focusMarker,
-                  t.startInactive),
-                i = Object(u.f)(t, [
-                  "className",
-                  "children",
-                  "initFromBoundary",
-                  "onActivate",
-                  "onDeactivate",
-                  "onGoBack",
-                  "onHome",
-                  "focusController",
-                  "focusMarker",
-                  "startInactive",
-                ]),
-                a = y.IsNavEnabled;
-              if (!a)
-                return p.createElement(
-                  "div",
-                  Object(u.a)({ ref: this.m_navAreaDivRef, className: n }, i),
-                  r
-                );
-              var s = y.IsPointerVisible,
-                c = y.IsDefaultFocusMarkerVisible,
-                l =
-                  (((e = {})[$.Type] = ee.Area),
-                  (e[$.AreaActive] = "false"),
-                  (e[$.AreaPass] = o ? "true" : void 0),
-                  e);
-              return p.createElement(
-                C.Provider,
-                { value: this },
-                p.createElement(
-                  "div",
-                  Object(u.a)(
-                    { ref: this.m_navAreaDivRef, className: Object(m.a)(_, n) },
-                    l,
-                    i
-                  ),
-                  a &&
-                    s &&
-                    p.createElement(I, {
-                      ref: this.m_pointerFocusMarkerRef,
-                      className: "nav-area-pointer-fm",
-                      style: {
-                        margin: 0,
-                        padding: 0,
-                        background:
-                          "linear-gradient( -45deg, rgba( 0, 0, 0, 0 ) 0%, rgba( 0, 0, 0, 0 ) 50%, rgba( 255, 0, 0, 0.95 ) 75% )",
-                        borderTop: "3px solid black",
-                        borderLeft: "3px solid black",
-                        width: "30px",
-                        height: "30px",
-                        zIndex: 1e6,
-                      },
-                    }),
-                  a &&
-                    c &&
-                    p.createElement("div", {
-                      ref: this.m_boxFocusMarkerDivRef,
-                      className: "nav-area-box-fm",
-                      style: {
-                        position: "absolute",
-                        boxSizing: "border-box",
-                        pointerEvents: "none",
-                        margin: "0",
-                        border: "4px solid magenta",
-                        padding: "4px",
-                        width: "10px",
-                        height: "10px",
-                        zIndex: 1e5,
-                        willChange: "left, top, width, height",
-                      },
-                    }),
-                  r
-                )
+                    ))),
+                  s && (u = s))
+                : (u = this.FindBestFocusableTarget(
+                    this.m_navAreaDivRef.current,
+                    e,
+                    t
+                  )),
+              null !== u)
+            ) {
+              var m = o.defaultView;
+              if (!m) return null;
+              var d =
+                  parseFloat(m.getComputedStyle(o.firstElementChild).zoom) || 1,
+                h = {
+                  x: { min: -40 * d, max: (m.innerWidth + 40) * d },
+                  y: { min: -40 * d, max: (m.innerHeight + 40) * d },
+                },
+                f = ie(u.onscreenTestElement || u.htmlElement);
+              if (Q((c = h).x, (l = f).x) && Q(c.y, l.y)) return u;
+            }
+            return null;
+          }),
+          (V.prototype.Register = function () {
+            var e,
+              t,
+              n,
+              r = "NavArea.Register";
+            te(r + " (" + this.props.id + ")");
+            var o,
+              i,
+              a,
+              s = this.GetElementDoc(r),
+              c = s.thisElement,
+              l = s.doc;
+            null != l &&
+              ((o = (function () {
+                var e = V.GetDocumentNavState(l);
+                if (null != e) return e;
+                te("+ creating new DocumentNavState");
+                var t = new de(l);
+                return V.AddEventListeners(l), V.sm_documentStates.set(l, t), t;
+              })()),
+              (this.m_document = l),
+              (this.m_docNavState = o),
+              null !=
+                (i =
+                  this.props.focusController || o.m_defaultFocusController) &&
+                (o.m_focusControllers.has(i) ||
+                  (i.AddFocusListener(V.HandleFocusControllerOnFocus),
+                  i.AddBlurListener(V.HandleFocusControllerOnBlur)),
+                o.m_focusControllers.add(i)),
+              (this.m_focusController = i),
+              null !=
+                (a =
+                  null === this.props.focusMarker
+                    ? void 0
+                    : null !==
+                        (n =
+                          null !==
+                            (t =
+                              null !== (e = this.props.focusMarker) &&
+                              void 0 !== e
+                                ? e
+                                : V.sm_defaultFocusMarker) && void 0 !== t
+                            ? t
+                            : this.m_boxFocusMarker) && void 0 !== n
+                    ? n
+                    : (this.m_boxFocusMarker = new N(
+                        this.m_boxFocusMarkerDivRef
+                      ))) && o.m_focusMarkers.add(a),
+              (this.m_focusMarker = a),
+              o.m_elementNavAreaMap.set(c, this),
+              this.props.startInactive || this.Activate());
+          }),
+          (V.prototype.Unregister = function () {
+            var e = "NavArea.Unregister";
+            te(e + " (" + this.props.id + ")");
+            var t,
+              n,
+              r = this.GetElementDocState(e),
+              o = r.thisElement,
+              i = r.doc,
+              a = r.dn;
+            null != a &&
+              (this.Deactivate(),
+              a.m_elementNavAreaMap.delete(o),
+              null != (t = this.m_focusMarker) && a.m_focusMarkers.delete(t),
+              null != (n = this.m_focusController) &&
+                (a.m_focusControllers.delete(n),
+                a.m_focusControllers.has(n) ||
+                  (n.RemoveFocusListener(V.HandleFocusControllerOnFocus),
+                  n.RemoveBlurListener(V.HandleFocusControllerOnBlur))),
+              a.isEmpty &&
+                (V.RemoveEventListeners(i), V.sm_documentStates.delete(i)));
+          }),
+          (V.prototype.componentDidMount = function () {
+            te("NavArea.componentDidMount (" + this.props.id + ")"),
+              this.Register();
+          }),
+          (V.prototype.componentDidUpdate = function () {
+            te("NavArea.componentDidUpdate (" + this.props.id + ")");
+          }),
+          (V.prototype.componentWillUnmount = function () {
+            te("NavArea.componentWillUnmount (" + this.props.id + ")"),
+              this.Unregister();
+          }),
+          (V.prototype.render = function () {
+            var e,
+              t = this.props,
+              n = t.className,
+              r = t.children,
+              o = t.alwaysFocusWithin,
+              i =
+                (t.initFromBoundary,
+                t.onActivate,
+                t.onDeactivate,
+                t.onGoBack,
+                t.onHome,
+                t.onMenu,
+                t.focusController,
+                t.focusMarker,
+                t.startInactive),
+              a = Object(m.f)(t, [
+                "className",
+                "children",
+                "alwaysFocusWithin",
+                "initFromBoundary",
+                "onActivate",
+                "onDeactivate",
+                "onGoBack",
+                "onHome",
+                "onMenu",
+                "focusController",
+                "focusMarker",
+                "startInactive",
+              ]),
+              s = y.IsNavEnabled;
+            if (!s)
+              return d.createElement(
+                "div",
+                Object(m.a)({ ref: this.m_navAreaDivRef, className: n }, a),
+                r
               );
-            }),
-            (V.sm_documentStates = new Map()),
-            (V.sm_bIsDoingKeyNav = !0),
-            (V.k_EventListeners = [
-              ["keydown", V.HandleAllOnKeyDown],
-              ["scroll", V.HandleAllOnScroll],
-              ["mousedown", V.HandleAllOnMouseDown],
-              ["click", V.HandleAllOnClick],
-              ["animationstart", V.HandleAllOnAnimationStart],
-              ["animationend", V.HandleAllOnAnimationEnd],
-              ["transitionstart", V.HandleAllOnTransitionStart],
-              ["transitionend", V.HandleAllOnTransitionEnd],
-            ]),
-            (V.k_KeyNavigationDirections = {
-              ArrowLeft: ["x", -1],
-              ArrowRight: ["x", 1],
-              ArrowUp: ["y", -1],
-              ArrowDown: ["y", 1],
-            }),
-            Object(u.c)([w], V.prototype, "HandleKeyDown", null),
-            Object(u.c)([w], V.prototype, "GetFocusedElement", null),
-            Object(u.c)([w], V.prototype, "ClickFocusedElement", null),
-            Object(u.c)([w], V.prototype, "Blur", null),
-            Object(u.c)([w], V.prototype, "Activate", null),
-            Object(u.c)([w], V.prototype, "Deactivate", null),
-            Object(u.c)([w], V.prototype, "ClaimFocus", null),
-            Object(u.c)([w], V.prototype, "NavigateTo", null),
-            Object(u.c)([w], V.prototype, "UpdateFocus", null),
-            Object(u.c)([w], V.prototype, "UpdateFocusMarker", null),
-            Object(u.c)([w], V.prototype, "FindBestFocusableTarget", null),
-            Object(u.c)([w], V.prototype, "FindNextNavTarget", null),
-            Object(u.c)([w], V.prototype, "Register", null),
-            Object(u.c)([w], V.prototype, "Unregister", null),
-            Object(u.c)([w], V.prototype, "componentDidMount", null),
-            Object(u.c)([w], V.prototype, "componentDidUpdate", null),
-            Object(u.c)([w], V.prototype, "componentWillUnmount", null),
-            Object(u.c)([w], V, "FocusWithin", null),
-            Object(u.c)([w], V, "BlurWithin", null),
-            Object(u.c)([w], V, "HandleKeyDown", null),
-            Object(u.c)([w], V, "GetScrollOffset", null),
-            Object(u.c)([w], V, "UpdateFocusPosAfterLayoutChange", null),
-            Object(u.c)([w], V, "FindNextNavTargetInContainer", null),
-            Object(u.c)(
-              [w],
-              V,
-              "FindNextNavTargetWithinAndAcrossContainers",
-              null
-            ),
-            Object(u.c)([w], V, "HandleAllOnKeyDown", null),
-            Object(u.c)([w], V, "HandleAllOnScroll", null),
-            Object(u.c)([w], V, "HandleAllOnAnimationStart", null),
-            Object(u.c)([w], V, "HandleAllOnAnimationEnd", null),
-            Object(u.c)([w], V, "HandleAllOnTransitionStart", null),
-            Object(u.c)([w], V, "HandleAllOnTransitionEnd", null),
-            Object(u.c)([w], V, "HandleAllOnMouseDown", null),
-            Object(u.c)([w], V, "HandleAllOnClick", null),
-            Object(u.c)([w], V, "HandleFocusControllerOnFocus", null),
-            Object(u.c)([w], V, "HandleFocusControllerOnBlur", null),
-            V
-          );
-        })(p.Component);
+            var c = y.IsPointerVisible,
+              l = y.IsDefaultFocusMarkerVisible,
+              u =
+                (((e = {})[$.Type] = ee.Area),
+                (e[$.AreaActive] = "false"),
+                (e[$.AreaPass] = i ? "true" : void 0),
+                e),
+              p = o ? { tabIndex: -2 } : {};
+            return d.createElement(
+              C.Provider,
+              { value: this },
+              d.createElement(
+                "div",
+                Object(m.a)(
+                  { ref: this.m_navAreaDivRef, className: Object(h.a)(_, n) },
+                  p,
+                  u,
+                  a
+                ),
+                s &&
+                  c &&
+                  d.createElement(I, {
+                    ref: this.m_pointerFocusMarkerRef,
+                    className: "nav-area-pointer-fm",
+                    style: {
+                      margin: 0,
+                      padding: 0,
+                      background:
+                        "linear-gradient( -45deg, rgba( 0, 0, 0, 0 ) 0%, rgba( 0, 0, 0, 0 ) 50%, rgba( 255, 0, 0, 0.95 ) 75% )",
+                      borderTop: "3px solid black",
+                      borderLeft: "3px solid black",
+                      width: "30px",
+                      height: "30px",
+                      zIndex: 1e6,
+                    },
+                  }),
+                s &&
+                  l &&
+                  d.createElement("div", {
+                    ref: this.m_boxFocusMarkerDivRef,
+                    className: "nav-area-box-fm",
+                    style: {
+                      position: "absolute",
+                      boxSizing: "border-box",
+                      pointerEvents: "none",
+                      margin: "0",
+                      border: "4px solid magenta",
+                      padding: "4px",
+                      width: "10px",
+                      height: "10px",
+                      zIndex: 1e5,
+                      willChange: "left, top, width, height",
+                    },
+                  }),
+                r
+              )
+            );
+          }),
+          (V.sm_documentStates = new Map()),
+          (V.sm_bIsDoingKeyNav = !0),
+          (V.k_EventListeners = [
+            ["keydown", V.HandleAllOnKeyDown],
+            ["scroll", V.HandleAllOnScroll],
+            ["mousedown", V.HandleAllOnMouseDown],
+            ["click", V.HandleAllOnClick],
+            ["animationstart", V.HandleAllOnAnimationStart],
+            ["animationend", V.HandleAllOnAnimationEnd],
+            ["transitionstart", V.HandleAllOnTransitionStart],
+            ["transitionend", V.HandleAllOnTransitionEnd],
+          ]),
+          (V.k_KeyNavigationDirections = {
+            ArrowLeft: ["x", -1],
+            ArrowRight: ["x", 1],
+            ArrowUp: ["y", -1],
+            ArrowDown: ["y", 1],
+          }),
+          Object(m.c)([w], V.prototype, "HandleKeyDown", null),
+          Object(m.c)([w], V.prototype, "GetFocusedElement", null),
+          Object(m.c)([w], V.prototype, "ClickFocusedElement", null),
+          Object(m.c)([w], V.prototype, "Blur", null),
+          Object(m.c)([w], V.prototype, "Activate", null),
+          Object(m.c)([w], V.prototype, "Deactivate", null),
+          Object(m.c)([w], V.prototype, "ClaimFocus", null),
+          Object(m.c)([w], V.prototype, "IntentionalBlur", null),
+          Object(m.c)([w], V.prototype, "NavigateTo", null),
+          Object(m.c)([w], V.prototype, "UpdateFocus", null),
+          Object(m.c)([w], V.prototype, "UpdateFocusMarker", null),
+          Object(m.c)([w], V.prototype, "FindBestFocusableTarget", null),
+          Object(m.c)([w], V.prototype, "FindNextNavTarget", null),
+          Object(m.c)([w], V.prototype, "Register", null),
+          Object(m.c)([w], V.prototype, "Unregister", null),
+          Object(m.c)([w], V.prototype, "componentDidMount", null),
+          Object(m.c)([w], V.prototype, "componentDidUpdate", null),
+          Object(m.c)([w], V.prototype, "componentWillUnmount", null),
+          Object(m.c)([w], V, "FocusWithin", null),
+          Object(m.c)([w], V, "BlurWithin", null),
+          Object(m.c)([w], V, "HandleKeyDown", null),
+          Object(m.c)([w], V, "GetScrollOffset", null),
+          Object(m.c)([w], V, "UpdateFocusPosAfterLayoutChange", null),
+          Object(m.c)([w], V, "FindNextNavTargetInContainer", null),
+          Object(m.c)(
+            [w],
+            V,
+            "FindNextNavTargetWithinAndAcrossContainers",
+            null
+          ),
+          Object(m.c)([w], V, "HandleAllOnKeyDown", null),
+          Object(m.c)([w], V, "HandleAllOnScroll", null),
+          Object(m.c)([w], V, "HandleAllOnAnimationStart", null),
+          Object(m.c)([w], V, "HandleAllOnAnimationEnd", null),
+          Object(m.c)([w], V, "HandleAllOnTransitionStart", null),
+          Object(m.c)([w], V, "HandleAllOnTransitionEnd", null),
+          Object(m.c)([w], V, "HandleAllOnMouseDown", null),
+          Object(m.c)([w], V, "HandleAllOnClick", null),
+          Object(m.c)([w], V, "HandleFocusControllerOnFocus", null),
+          Object(m.c)([w], V, "HandleFocusControllerOnBlur", null),
+          V
+        );
+      })(d.Component);
+      window.keyFocusNavArea = he;
     },
     WBba: function (e, t, n) {
       "use strict";
@@ -12548,19 +12642,19 @@ var CLSTAMP = "6412327";
     kyHq: function (e, t, n) {
       "use strict";
       n.d(t, "c", function () {
-        return o;
+        return c;
       }),
         n.d(t, "f", function () {
-          return m;
+          return v;
         }),
         n.d(t, "b", function () {
-          return d;
+          return g;
         }),
         n.d(t, "d", function () {
-          return b;
+          return w;
         }),
         n.d(t, "a", function () {
-          return y;
+          return S;
         });
       n("mrSG");
       var r = n("mgoM");
@@ -12569,50 +12663,63 @@ var CLSTAMP = "6412327";
       });
       n("2vnA");
       var o, i;
-      ((i = o = o || {})[(i.EBrowserType_OffScreen = 0)] =
-        "EBrowserType_OffScreen"),
-        (i[(i.EBrowserType_OpenVROverlay = 1)] = "EBrowserType_OpenVROverlay"),
-        (i[(i.EBrowserType_OpenVROverlay_Dashboard = 2)] =
-          "EBrowserType_OpenVROverlay_Dashboard"),
-        (i[(i.EBrowserType_DirectHWND = 3)] = "EBrowserType_DirectHWND"),
-        (i[(i.EBrowserType_DirectHWND_Borderless = 4)] =
-          "EBrowserType_DirectHWND_Borderless"),
-        (i[(i.EBrowserType_DirectHWND_Hidden = 5)] =
-          "EBrowserType_DirectHWND_Hidden"),
-        (i[(i.EBrowserType_ChildHWNDNative = 6)] =
-          "EBrowserType_ChildHWNDNative"),
-        (i[(i.EBrowserType_Transparent_Toplevel = 7)] =
-          "EBrowserType_Transparent_Toplevel"),
-        (i[(i.EBrowserType_OffScreen_SharedTexture = 8)] =
-          "EBrowserType_OffScreen_SharedTexture"),
-        (i[(i.EBrowserType_OffScreen_GameOverlay = 9)] =
-          "EBrowserType_OffScreen_GameOverlay"),
-        (i[(i.EBrowserType_OffScreen_GameOverlay_SharedTexture = 10)] =
-          "EBrowserType_OffScreen_GameOverlay_SharedTexture"),
-        (i[(i.EBrowserType_Offscreen_FriendsUI = 11)] =
-          "EBrowserType_Offscreen_FriendsUI"),
-        (i[(i.EBrowserType_MAX = 12)] = "EBrowserType_MAX");
+      ((i = o = o || {})[(i.Input = 0)] = "Input"),
+        (i[(i.AllOutput = 1)] = "AllOutput"),
+        (i[(i.Left = 2)] = "Left"),
+        (i[(i.Right = 3)] = "Right"),
+        (i[(i.Sub = 4)] = "Sub"),
+        (i[(i.BackLeft = 5)] = "BackLeft"),
+        (i[(i.BackRight = 6)] = "BackRight");
       var a, s, c, l;
-      ((s = a = a || {})[(s.k_EClientUINotificationGroupChatMessage = 1)] =
+      ((s = a = a || {})[(s.Invalid = -1)] = "Invalid"),
+        (s[(s.Hidden = 1)] = "Hidden"),
+        (s[(s.Overlay = 2)] = "Overlay"),
+        (s[(s.Opaque = 3)] = "Opaque"),
+        (s[(s.Notification = 4)] = "Notification"),
+        ((l = c = c || {})[(l.EBrowserType_OffScreen = 0)] =
+          "EBrowserType_OffScreen"),
+        (l[(l.EBrowserType_OpenVROverlay = 1)] = "EBrowserType_OpenVROverlay"),
+        (l[(l.EBrowserType_OpenVROverlay_Dashboard = 2)] =
+          "EBrowserType_OpenVROverlay_Dashboard"),
+        (l[(l.EBrowserType_DirectHWND = 3)] = "EBrowserType_DirectHWND"),
+        (l[(l.EBrowserType_DirectHWND_Borderless = 4)] =
+          "EBrowserType_DirectHWND_Borderless"),
+        (l[(l.EBrowserType_DirectHWND_Hidden = 5)] =
+          "EBrowserType_DirectHWND_Hidden"),
+        (l[(l.EBrowserType_ChildHWNDNative = 6)] =
+          "EBrowserType_ChildHWNDNative"),
+        (l[(l.EBrowserType_Transparent_Toplevel = 7)] =
+          "EBrowserType_Transparent_Toplevel"),
+        (l[(l.EBrowserType_OffScreen_SharedTexture = 8)] =
+          "EBrowserType_OffScreen_SharedTexture"),
+        (l[(l.EBrowserType_OffScreen_GameOverlay = 9)] =
+          "EBrowserType_OffScreen_GameOverlay"),
+        (l[(l.EBrowserType_OffScreen_GameOverlay_SharedTexture = 10)] =
+          "EBrowserType_OffScreen_GameOverlay_SharedTexture"),
+        (l[(l.EBrowserType_Offscreen_FriendsUI = 11)] =
+          "EBrowserType_Offscreen_FriendsUI"),
+        (l[(l.EBrowserType_MAX = 12)] = "EBrowserType_MAX");
+      var u, p, m, d;
+      ((p = u = u || {})[(p.k_EClientUINotificationGroupChatMessage = 1)] =
         "k_EClientUINotificationGroupChatMessage"),
-        (s[(s.k_EClientUINotificationFriendChatMessage = 2)] =
+        (p[(p.k_EClientUINotificationFriendChatMessage = 2)] =
           "k_EClientUINotificationFriendChatMessage"),
-        (s[(s.k_EClientUINotificationFriendPersonaState = 3)] =
+        (p[(p.k_EClientUINotificationFriendPersonaState = 3)] =
           "k_EClientUINotificationFriendPersonaState"),
-        ((l = c = c || {})[(l.k_EComputerActiveStateInvalid = 0)] =
+        ((d = m = m || {})[(d.k_EComputerActiveStateInvalid = 0)] =
           "k_EComputerActiveStateInvalid"),
-        (l[(l.k_EComputerActiveStateActive = 1)] =
+        (d[(d.k_EComputerActiveStateActive = 1)] =
           "k_EComputerActiveStateActive"),
-        (l[(l.k_EComputerActiveStateIdle = 2)] = "k_EComputerActiveStateIdle");
-      var u,
-        p,
-        m = (function () {
+        (d[(d.k_EComputerActiveStateIdle = 2)] = "k_EComputerActiveStateIdle");
+      var h,
+        f,
+        v = (function () {
           return function () {};
         })();
-      ((p = u = u || {})[(p.k_EPending = 0)] = "k_EPending"),
-        (p[(p.k_EAccepted = 1)] = "k_EAccepted"),
-        (p[(p.k_ERejected = 2)] = "k_ERejected");
-      function d(e) {
+      ((f = h = h || {})[(f.k_EPending = 0)] = "k_EPending"),
+        (f[(f.k_EAccepted = 1)] = "k_EAccepted"),
+        (f[(f.k_ERejected = 2)] = "k_ERejected");
+      function g(e) {
         return (
           "game" === e ||
           "dlc" === e ||
@@ -12623,106 +12730,106 @@ var CLSTAMP = "6412327";
           "hardware" === e
         );
       }
-      var h, f, v, g;
-      ((f = h = h || {})[(f.k_EClientUsedInputTypeKeyboard = 0)] =
+      var b, _, y, E;
+      ((_ = b = b || {})[(_.k_EClientUsedInputTypeKeyboard = 0)] =
         "k_EClientUsedInputTypeKeyboard"),
-        (f[(f.k_EClientUsedInputTypeMouse = 1)] =
+        (_[(_.k_EClientUsedInputTypeMouse = 1)] =
           "k_EClientUsedInputTypeMouse"),
-        (f[(f.k_EClientUsedInputTypeController = 2)] =
+        (_[(_.k_EClientUsedInputTypeController = 2)] =
           "k_EClientUsedInputTypeController"),
-        (f[(f.k_EClientUsedInputTypeMax = 3)] = "k_EClientUsedInputTypeMax"),
-        ((g = v = v || {})[(g.k_ERemoteClientLaunchOK = 1)] =
+        (_[(_.k_EClientUsedInputTypeMax = 3)] = "k_EClientUsedInputTypeMax"),
+        ((E = y = y || {})[(E.k_ERemoteClientLaunchOK = 1)] =
           "k_ERemoteClientLaunchOK"),
-        (g[(g.k_ERemoteClientLaunchFail = 2)] = "k_ERemoteClientLaunchFail"),
-        (g[(g.k_ERemoteClientLaunchRequiresUI = 3)] =
+        (E[(E.k_ERemoteClientLaunchFail = 2)] = "k_ERemoteClientLaunchFail"),
+        (E[(E.k_ERemoteClientLaunchRequiresUI = 3)] =
           "k_ERemoteClientLaunchRequiresUI"),
-        (g[(g.k_ERemoteClientLaunchRequiresLaunchOption = 4)] =
+        (E[(E.k_ERemoteClientLaunchRequiresLaunchOption = 4)] =
           "k_ERemoteClientLaunchRequiresLaunchOption"),
-        (g[(g.k_ERemoteClientLaunchRequiresEULA = 5)] =
+        (E[(E.k_ERemoteClientLaunchRequiresEULA = 5)] =
           "k_ERemoteClientLaunchRequiresEULA"),
-        (g[(g.k_ERemoteClientLaunchTimeout = 6)] =
+        (E[(E.k_ERemoteClientLaunchTimeout = 6)] =
           "k_ERemoteClientLaunchTimeout"),
-        (g[(g.k_ERemoteClientLaunchStreamTimeout = 7)] =
+        (E[(E.k_ERemoteClientLaunchStreamTimeout = 7)] =
           "k_ERemoteClientLaunchStreamTimeout"),
-        (g[(g.k_ERemoteClientLaunchStreamClientFail = 8)] =
+        (E[(E.k_ERemoteClientLaunchStreamClientFail = 8)] =
           "k_ERemoteClientLaunchStreamClientFail"),
-        (g[(g.k_ERemoteClientLaunchOtherGameRunning = 9)] =
+        (E[(E.k_ERemoteClientLaunchOtherGameRunning = 9)] =
           "k_ERemoteClientLaunchOtherGameRunning"),
-        (g[(g.k_ERemoteClientLaunchDownloadStarted = 10)] =
+        (E[(E.k_ERemoteClientLaunchDownloadStarted = 10)] =
           "k_ERemoteClientLaunchDownloadStarted"),
-        (g[(g.k_ERemoteClientLaunchDownloadNoSpace = 11)] =
+        (E[(E.k_ERemoteClientLaunchDownloadNoSpace = 11)] =
           "k_ERemoteClientLaunchDownloadNoSpace"),
-        (g[(g.k_ERemoteClientLaunchDownloadFiltered = 12)] =
+        (E[(E.k_ERemoteClientLaunchDownloadFiltered = 12)] =
           "k_ERemoteClientLaunchDownloadFiltered"),
-        (g[(g.k_ERemoteClientLaunchDownloadRequiresUI = 13)] =
+        (E[(E.k_ERemoteClientLaunchDownloadRequiresUI = 13)] =
           "k_ERemoteClientLaunchDownloadRequiresUI"),
-        (g[(g.k_ERemoteClientLaunchAccessDenied = 14)] =
+        (E[(E.k_ERemoteClientLaunchAccessDenied = 14)] =
           "k_ERemoteClientLaunchAccessDenied"),
-        (g[(g.k_ERemoteClientLaunchNetworkError = 15)] =
+        (E[(E.k_ERemoteClientLaunchNetworkError = 15)] =
           "k_ERemoteClientLaunchNetworkError"),
-        (g[(g.k_ERemoteClientLaunchProgress = 16)] =
+        (E[(E.k_ERemoteClientLaunchProgress = 16)] =
           "k_ERemoteClientLaunchProgress"),
-        (g[(g.k_ERemoteClientLaunchParentalUnlockFailed = 17)] =
+        (E[(E.k_ERemoteClientLaunchParentalUnlockFailed = 17)] =
           "k_ERemoteClientLaunchParentalUnlockFailed"),
-        (g[(g.k_ERemoteClientLaunchScreenLocked = 18)] =
+        (E[(E.k_ERemoteClientLaunchScreenLocked = 18)] =
           "k_ERemoteClientLaunchScreenLocked"),
-        (g[(g.k_ERemoteClientLaunchUnsupported = 19)] =
+        (E[(E.k_ERemoteClientLaunchUnsupported = 19)] =
           "k_ERemoteClientLaunchUnsupported"),
-        (g[(g.k_ERemoteClientLaunchDisabledLocal = 20)] =
+        (E[(E.k_ERemoteClientLaunchDisabledLocal = 20)] =
           "k_ERemoteClientLaunchDisabledLocal"),
-        (g[(g.k_ERemoteClientLaunchDisabledRemote = 21)] =
+        (E[(E.k_ERemoteClientLaunchDisabledRemote = 21)] =
           "k_ERemoteClientLaunchDisabledRemote"),
-        (g[(g.k_ERemoteClientLaunchBroadcasting = 22)] =
+        (E[(E.k_ERemoteClientLaunchBroadcasting = 22)] =
           "k_ERemoteClientLaunchBroadcasting"),
-        (g[(g.k_ERemoteClientLaunchBusy = 23)] = "k_ERemoteClientLaunchBusy"),
-        (g[(g.k_ERemoteClientLaunchDriversNotInstalled = 24)] =
+        (E[(E.k_ERemoteClientLaunchBusy = 23)] = "k_ERemoteClientLaunchBusy"),
+        (E[(E.k_ERemoteClientLaunchDriversNotInstalled = 24)] =
           "k_ERemoteClientLaunchDriversNotInstalled"),
-        (g[(g.k_ERemoteClientLaunchTransportUnavailable = 25)] =
+        (E[(E.k_ERemoteClientLaunchTransportUnavailable = 25)] =
           "k_ERemoteClientLaunchTransportUnavailable"),
-        (g[(g.k_ERemoteClientLaunchCanceled = 26)] =
+        (E[(E.k_ERemoteClientLaunchCanceled = 26)] =
           "k_ERemoteClientLaunchCanceled"),
-        (g[(g.k_ERemoteClientLaunchInvisible = 27)] =
+        (E[(E.k_ERemoteClientLaunchInvisible = 27)] =
           "k_ERemoteClientLaunchInvisible"),
-        (g[(g.k_ERemoteClientLaunchRestrictedCountry = 28)] =
+        (E[(E.k_ERemoteClientLaunchRestrictedCountry = 28)] =
           "k_ERemoteClientLaunchRestrictedCountry");
-      var b, _;
-      function y(e) {
-        return e === b.k_ESteamRealmChina;
+      var w, O;
+      function S(e) {
+        return e === w.k_ESteamRealmChina;
       }
-      ((_ = b = b || {})[(_.k_ESteamRealmUnknown = 0)] =
+      ((O = w = w || {})[(O.k_ESteamRealmUnknown = 0)] =
         "k_ESteamRealmUnknown"),
-        (_[(_.k_ESteamRealmGlobal = 1)] = "k_ESteamRealmGlobal"),
-        (_[(_.k_ESteamRealmChina = 2)] = "k_ESteamRealmChina");
-      var E, w, O, S, C, D, x, M, A, j, k, T;
-      ((w = E = E || {})[(w.Unknown = 0)] = "Unknown"),
-        (w[(w.Wired = 1)] = "Wired"),
-        (w[(w.Wireless = 2)] = "Wireless"),
-        ((S = O = O || {})[(S.NotPresent = 0)] = "NotPresent"),
-        (S[(S.Failed = 1)] = "Failed"),
-        (S[(S.Disconnected = 2)] = "Disconnected"),
-        (S[(S.Disconnecting = 3)] = "Disconnecting"),
-        (S[(S.Connecting = 4)] = "Connecting"),
-        (S[(S.Connected = 5)] = "Connected"),
-        (S[(S.Retrying = 6)] = "Retrying"),
-        ((D = C = C || {})[(D.None = 0)] = "None"),
-        (D[(D.Weak = 1)] = "Weak"),
-        (D[(D.Ok = 2)] = "Ok"),
-        (D[(D.Good = 3)] = "Good"),
-        (D[(D.Excellent = 4)] = "Excellent"),
-        ((M = x = x || {})[(M.None = 0)] = "None"),
-        (M[(M.StaticWep = 1)] = "StaticWep"),
-        (M[(M.DynamicWep = 2)] = "DynamicWep"),
-        (M[(M.Wpa = 4)] = "Wpa"),
-        (M[(M.WpaEnterprise = 8)] = "WpaEnterprise"),
-        (M[(M.Wpa2 = 16)] = "Wpa2"),
-        (M[(M.Wpa2Enterprise = 32)] = "Wpa2Enterprise"),
-        (M[(M.Unsupported = 32768)] = "Unsupported"),
-        ((j = A = A || {})[(j.SystemKey0 = 0)] = "SystemKey0"),
-        (j[(j.SystemKey1 = 1)] = "SystemKey1"),
-        ((T = k = k || {})[(T.Hidden = 0)] = "Hidden"),
-        (T[(T.Notification = 1)] = "Notification"),
-        (T[(T.Overlay = 2)] = "Overlay"),
-        (T[(T.Opaque = 3)] = "Opaque");
+        (O[(O.k_ESteamRealmGlobal = 1)] = "k_ESteamRealmGlobal"),
+        (O[(O.k_ESteamRealmChina = 2)] = "k_ESteamRealmChina");
+      var C, D, x, M, A, k, j, T, I, N, L, R;
+      ((D = C = C || {})[(D.Unknown = 0)] = "Unknown"),
+        (D[(D.Wired = 1)] = "Wired"),
+        (D[(D.Wireless = 2)] = "Wireless"),
+        ((M = x = x || {})[(M.NotPresent = 0)] = "NotPresent"),
+        (M[(M.Failed = 1)] = "Failed"),
+        (M[(M.Disconnected = 2)] = "Disconnected"),
+        (M[(M.Disconnecting = 3)] = "Disconnecting"),
+        (M[(M.Connecting = 4)] = "Connecting"),
+        (M[(M.Connected = 5)] = "Connected"),
+        (M[(M.Retrying = 6)] = "Retrying"),
+        ((k = A = A || {})[(k.None = 0)] = "None"),
+        (k[(k.Weak = 1)] = "Weak"),
+        (k[(k.Ok = 2)] = "Ok"),
+        (k[(k.Good = 3)] = "Good"),
+        (k[(k.Excellent = 4)] = "Excellent"),
+        ((T = j = j || {})[(T.None = 0)] = "None"),
+        (T[(T.StaticWep = 1)] = "StaticWep"),
+        (T[(T.DynamicWep = 2)] = "DynamicWep"),
+        (T[(T.Wpa = 4)] = "Wpa"),
+        (T[(T.WpaEnterprise = 8)] = "WpaEnterprise"),
+        (T[(T.Wpa2 = 16)] = "Wpa2"),
+        (T[(T.Wpa2Enterprise = 32)] = "Wpa2Enterprise"),
+        (T[(T.Unsupported = 32768)] = "Unsupported"),
+        ((N = I = I || {})[(N.SystemKey0 = 0)] = "SystemKey0"),
+        (N[(N.SystemKey1 = 1)] = "SystemKey1"),
+        ((R = L = L || {})[(R.Hidden = 0)] = "Hidden"),
+        (R[(R.Notification = 1)] = "Notification"),
+        (R[(R.Overlay = 2)] = "Overlay"),
+        (R[(R.Opaque = 3)] = "Opaque");
     },
     lkRc: function (e, t, n) {
       "use strict";
@@ -12804,7 +12911,6 @@ var CLSTAMP = "6412327";
           FRIENDSUI_BETA: !1,
           STEAM_TV: !1,
           DEV_MODE: !1,
-          OFFLINE_MODE: !1,
           IN_LIBRARY: !1,
           IN_SP: !1,
         },
@@ -13315,10 +13421,10 @@ var CLSTAMP = "6412327";
         A = function () {
           return "/profiles/:steamid/recommended/:appid/";
         },
-        j = function () {
+        k = function () {
           return "/profiles/:steamid/recommended";
         },
-        k = function () {
+        j = function () {
           return "/id/:vanity_url/recommended";
         },
         T = function () {
@@ -13437,13 +13543,13 @@ var CLSTAMP = "6412327";
                       },
                     }),
                     s.a.createElement(l.c, {
-                      path: k(),
+                      path: j(),
                       render: function (e) {
                         return s.a.createElement(g, Object(i.a)({}, e));
                       },
                     }),
                     s.a.createElement(l.c, {
-                      path: j(),
+                      path: k(),
                       render: function (e) {
                         return s.a.createElement(g, Object(i.a)({}, e));
                       },
@@ -13529,34 +13635,36 @@ var CLSTAMP = "6412327";
       var a = n("mrSG"),
         r = n("Kw0F"),
         o = n("bxiW"),
-        i = (function () {
-          function e() {
-            this.m_vecCallbacks = [];
-          }
-          return (
-            (e.prototype.Register = function (e) {
-              var t = this;
-              this.m_vecCallbacks.push(e);
-              return {
-                Unregister: function () {
-                  r.c(t.m_vecCallbacks, e);
-                },
-              };
-            }),
-            (e.prototype.Dispatch = function () {
-              for (var e = [], t = 0; t < arguments.length; t++)
-                e[t] = arguments[t];
-              for (var n = 0, r = this.m_vecCallbacks; n < r.length; n++) {
-                r[n].apply(void 0, e);
-              }
-            }),
-            (e.prototype.ClearAllCallbacks = function () {
+        i =
+          (n("q1tI"),
+          (function () {
+            function e() {
               this.m_vecCallbacks = [];
-            }),
-            e
-          );
-        })(),
-        s = (function () {
+            }
+            return (
+              (e.prototype.Register = function (e) {
+                var t = this;
+                this.m_vecCallbacks.push(e);
+                return {
+                  Unregister: function () {
+                    r.c(t.m_vecCallbacks, e);
+                  },
+                };
+              }),
+              (e.prototype.Dispatch = function () {
+                for (var e = [], t = 0; t < arguments.length; t++)
+                  e[t] = arguments[t];
+                for (var n = 0, r = this.m_vecCallbacks; n < r.length; n++) {
+                  r[n].apply(void 0, e);
+                }
+              }),
+              (e.prototype.ClearAllCallbacks = function () {
+                this.m_vecCallbacks = [];
+              }),
+              e
+            );
+          })());
+      var s = (function () {
           function e() {}
           return (
             (e.prototype.Schedule = function (e, t) {
@@ -14278,11 +14386,12 @@ var CLSTAMP = "6412327";
         (o[(o.B = 1)] = "B"),
         (o[(o.X = 2)] = "X"),
         (o[(o.Y = 3)] = "Y"),
-        (o[(o.Menu = 4)] = "Menu"),
-        (o[(o.Left = 5)] = "Left"),
-        (o[(o.Right = 6)] = "Right"),
-        (o[(o.Up = 7)] = "Up"),
-        (o[(o.Down = 8)] = "Down");
+        (o[(o.Left = 4)] = "Left"),
+        (o[(o.Right = 5)] = "Right"),
+        (o[(o.Up = 6)] = "Up"),
+        (o[(o.Down = 7)] = "Down"),
+        (o[(o.HomeMenu = 8)] = "HomeMenu"),
+        (o[(o.QuickMenu = 9)] = "QuickMenu");
       var s = a.a.createContext(void 0);
       function c(e) {
         var t = Object(i.useContext)(s);
@@ -14678,15 +14787,15 @@ var CLSTAMP = "6412327";
                   x,
                   M,
                   A,
-                  j = this.m_elMenu,
-                  k = this.props.element;
-                j &&
-                  k &&
+                  k = this.m_elMenu,
+                  j = this.props.element;
+                k &&
+                  j &&
                   "none" !==
-                    (e = k.ownerDocument.defaultView).getComputedStyle(k)
+                    (e = j.ownerDocument.defaultView).getComputedStyle(j)
                       .display &&
-                  ((t = k.getBoundingClientRect()),
-                  (n = j.getBoundingClientRect()),
+                  ((t = j.getBoundingClientRect()),
+                  (n = k.getBoundingClientRect()),
                   (r = null != this.props.popup),
                   (o = this.props.options),
                   (i = {
@@ -14729,7 +14838,7 @@ var CLSTAMP = "6412327";
                     : (i.menuRight = c - (o.bOverlapHorizontal ? h : d)),
                   (E = s || t.top),
                   (w = s || t.bottom),
-                  (O = j.scrollHeight),
+                  (O = k.scrollHeight),
                   o.bMatchHeight && ((O = w - E), (i.menuHeight = O)),
                   (C = 0 < (S = (o.bOverlapVertical ? w : E) - O)),
                   (x = 0 < (D = l - (o.bOverlapVertical ? E : w) - O)),

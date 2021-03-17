@@ -294,6 +294,11 @@ function RecordAppImpression( appid, snr )
 	if ( appid == 0 || !snr )
 		return;
 
+	if ( typeof g_bAllowAppImpressions == 'undefined' || !g_bAllowAppImpressions )
+	{
+				return;
+	}
+	
 	var strImpressions = V_GetCookie( "app_impressions" );
 	var rgImpressions = strImpressions && strImpressions.length != 0 ? strImpressions.split( "|" ) : [];
 

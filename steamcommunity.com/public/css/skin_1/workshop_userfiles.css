@@ -1373,7 +1373,10 @@ textarea {
 	min-height: 200px;
 	margin-bottom: 10px;
 	width: 100%;
+}
 
+.workshopItem > a {
+	display: block;
 }
 
 .workshopItem.right
@@ -1429,13 +1432,12 @@ textarea {
 {
 	visibility:hidden;
 	position: absolute;
-	top: 170px;
-	right: 0px;
+	bottom: 3px;
+	right: 3px;
 }
 
 .workshopItemSubscriptionControls.aspectratio_16x9, .workshopItemSubscriptionControls.aspectratio_4x3
 {
-	top: 83px;
 }
 
 .workshopItem:hover .workshopItemSubscriptionControls
@@ -1483,9 +1485,10 @@ textarea {
 	background-position: 0px -75px;
 }
 
-.workshopItemSubscriptionControls .action_wait
+.workshopItemSubscriptionControls .action_wait > img
 {
-	float: left;
+	margin-right: 5px;
+	width: 22px;
 }
 
 .workshopItemDetailsHeader
@@ -1702,6 +1705,7 @@ textarea {
 
 .workshopItemPreviewHolder
 {
+	position: relative;
 	display: table-cell;
 	vertical-align: middle;
 	width:200px;

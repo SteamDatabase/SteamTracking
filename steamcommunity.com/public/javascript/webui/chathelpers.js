@@ -2,19 +2,19 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6412327";
+var CLSTAMP = "6420968";
 !(function (e) {
   function t(t) {
     for (
-      var r, a, s = t[0], c = t[1], u = t[2], f = 0, d = [];
-      f < s.length;
-      f++
+      var r, a, s = t[0], c = t[1], u = t[2], d = 0, f = [];
+      d < s.length;
+      d++
     )
-      (a = s[f]),
-        Object.prototype.hasOwnProperty.call(i, a) && i[a] && d.push(i[a][0]),
+      (a = s[d]),
+        Object.prototype.hasOwnProperty.call(i, a) && i[a] && f.push(i[a][0]),
         (i[a] = 0);
     for (r in c) Object.prototype.hasOwnProperty.call(c, r) && (e[r] = c[r]);
-    for (l && l(t); d.length; ) d.shift()();
+    for (l && l(t); f.length; ) f.shift()();
     return o.push.apply(o, u || []), n();
   }
   function n() {
@@ -119,37 +119,37 @@ var CLSTAMP = "6412327";
               ".js?contenthash=" +
               {
                 9: "abd716bb6bb7cebbe238",
-                10: "aa4e15d170b5a89a1cfc",
-                11: "134f18f9dbc924373d59",
-                12: "4a685b8539955ecd6577",
-                13: "66142deb2f64b15c492a",
-                14: "fa61a57e7f9786b564e4",
-                15: "4dbfd375247b785611cf",
-                16: "7afd82b69655e5169809",
-                17: "36f2058af9aee45a9c9f",
-                18: "0a858da7fbf6bf054ea6",
-                19: "a336a1156a82ec308c28",
-                20: "bb7b51fb7ce1b8abde35",
-                21: "a55537eb5c5dd62692fc",
-                22: "4089202ab1f9696b7567",
-                23: "6aa239fa8962a0bb020f",
-                24: "fd53d0ca2ac5136bb557",
-                25: "5bbb86945ba75508509e",
-                26: "217cb22703f71baa478a",
-                27: "2de5e724a19ef63419c9",
-                28: "b40966cee199f6f21831",
-                29: "537c862dc930f57c6cc6",
+                10: "8dcdf3ee4148fa0bec74",
+                11: "c9cef7c8fdfe75925eb1",
+                12: "73b46fa92948992be0c7",
+                13: "d721cc587158ceb1a1e1",
+                14: "039a3cb28443c35c8a76",
+                15: "040ee3867e4142771cf4",
+                16: "76a1fd73d959c4b69512",
+                17: "5befb249a86d52a212b0",
+                18: "1a5c3b77b551f3beca25",
+                19: "cfcd8e28d5fe16e886b6",
+                20: "df5ea9e20920d7d8802b",
+                21: "700a066e8ee2500a26c9",
+                22: "bdc4a2699e8e3adbace1",
+                23: "1f9af709bd5f35e74668",
+                24: "44f6bb1dd35fef371471",
+                25: "98ffdd333b955b4abc07",
+                26: "e1d55c2aadfe6a307bd0",
+                27: "53713d1cbfa4448d052d",
+                28: "da2def377f4660bb125a",
+                29: "858f3629e4b97674be81",
                 30: "463059d9001862988cbb",
-                31: "54bdcc9030396df59fe1",
-                32: "deef621f9f5869414886",
-                33: "dd6e995f52e4b1a75c70",
-                34: "b8ec0b8b2ec985272747",
-                35: "0a8441fa19ad15d5666a",
-                36: "7b6f1b66b5a52688b8fa",
-                37: "1c25750af75536ceb7f4",
-                38: "d07b0db4578023b8ec37",
+                31: "68dbc0b1a3d70fb83dd5",
+                32: "22ca5a306f45a93eaa5b",
+                33: "7757a13b245a89ce42d2",
+                34: "3b05337a1861a2dacf0d",
+                35: "21a0805883cb7d803d24",
+                36: "ca4bbdd27684acba1bfc",
+                37: "d5d65a2ff143d7fc6d3b",
+                38: "e8cb0fdcd3b7b8128653",
                 39: "dd555942eeebcf691e37",
-                40: "cf96e1e3aa01bddd9510",
+                40: "9c46cbe75cd370f94e0d",
                 41: "02b4c3e771f5d0609311",
                 42: "84eb759822cf6012087d",
                 43: "ceaa95052bc11a7cdd0d",
@@ -157,17 +157,17 @@ var CLSTAMP = "6412327";
                 45: "d25665d22c72a9560215",
                 46: "06fef314eaab382c385c",
                 47: "9dbe538b4ef41f9b3f78",
-                48: "5fbf0da3eb735d9c77e7",
+                48: "0309786430abcf41408d",
                 49: "b2b38025c82dd2f701e2",
                 50: "33f5146f1c0b288d8c18",
                 51: "1a772552b6a45612b2d4",
                 52: "d09583d16b6453bf44cb",
                 53: "8dead49c330e19445d15",
                 54: "d16150255984510a07d3",
-                55: "80dd6fd40307d8eb88c0",
+                55: "fdf3f934b70bc85225d0",
                 56: "60dfc3dad0c891297dd0",
-                57: "de92cc9605b64d331bf9",
-                58: "049f8d88a06b4bf459b1",
+                57: "815c705c0761eed3b3d2",
+                58: "6e5f314c48052e3f7aaf",
                 59: "20de12bffe2c8b2463f5",
                 60: "af887dfdca6cad098c67",
                 61: "a0b717931561dd30b5c4",
@@ -175,7 +175,7 @@ var CLSTAMP = "6412327";
                 63: "9866c08193d2003e0f46",
                 64: "ba17887f2715c47beb5e",
                 65: "a646b3589aed6ec3491e",
-                66: "97992991530cb06b60ae",
+                66: "f055ba4851be2f4f22db",
                 67: "1656b8c50e3cfa016763",
                 68: "4252f2fffbe6ad4e245f",
               }[e]
@@ -319,10 +319,10 @@ var CLSTAMP = "6412327";
         return l;
       }),
       n.d(t, "m", function () {
-        return f;
+        return d;
       }),
       n.d(t, "o", function () {
-        return d;
+        return f;
       }),
       n.d(t, "n", function () {
         return h;
@@ -354,8 +354,8 @@ var CLSTAMP = "6412327";
       c = 750,
       u = 799,
       l = 250820,
-      f = 330050,
-      d = 358510,
+      d = 330050,
+      f = 358510,
       h = 366490,
       p = "18446744073709551615",
       _ = 0,
@@ -624,10 +624,10 @@ var CLSTAMP = "6412327";
         return l;
       }),
       n.d(t, "h", function () {
-        return f;
+        return d;
       }),
       n.d(t, "a", function () {
-        return d;
+        return f;
       }),
       n.d(t, "j", function () {
         return h;
@@ -683,16 +683,15 @@ var CLSTAMP = "6412327";
         PAGE_TIMESTAMP: 0,
         get SESSIONID() {
           return (function () {
-            if (!Object(o.a)()) return r || (r = f()), r;
+            if (!Object(o.a)()) return r || (r = d()), r;
             var e = Object(o.b)("sessionid");
-            e || (e = f());
+            e || (e = d());
             return e;
           })();
         },
         FRIENDSUI_BETA: !1,
         STEAM_TV: !1,
         DEV_MODE: !1,
-        OFFLINE_MODE: !1,
         IN_LIBRARY: !1,
         IN_SP: !1,
       },
@@ -729,7 +728,7 @@ var CLSTAMP = "6412327";
         IS_ALLOWED_SC: !1,
       },
       l = { ANNOUNCEMENT_GID: "" };
-    function f() {
+    function d() {
       var e = (function () {
         for (var e = "", t = 0; t < 24; t++)
           e += Object(i.b)(0, 35).toString(36);
@@ -737,7 +736,7 @@ var CLSTAMP = "6412327";
       })();
       return Object(o.c)("sessionid", e, 0), e;
     }
-    function d() {
+    function f() {
       var e = null;
       return (
         Object(o.a)() && (e = Object(o.b)("presentation_mode")),
@@ -753,13 +752,13 @@ var CLSTAMP = "6412327";
       r &&
         (Object.assign(s, r),
         (t.userConfig = !0),
-        s.is_support && d() && (s.is_support = !1));
+        s.is_support && f() && (s.is_support = !1));
       var i = p("broadcast", e);
       i && (Object.assign(c, i), (t.broadcastConfig = !0));
       var o = p("community", e);
       o && (Object.assign(u, o), (t.communityConfig = !0));
-      var f = p("event", e);
-      return f && (Object.assign(l, f), (t.eventConfig = !0)), t;
+      var d = p("event", e);
+      return d && (Object.assign(l, d), (t.eventConfig = !0)), t;
     }
     function p(e, t) {
       var n;
@@ -1272,7 +1271,7 @@ var CLSTAMP = "6412327";
         return l;
       }),
       n.d(t, "g", function () {
-        return d;
+        return f;
       }),
       n.d(t, "i", function () {
         return _;
@@ -1385,12 +1384,12 @@ var CLSTAMP = "6412327";
         minute: "numeric",
       });
     }
-    var f = new Map();
-    function d(e) {
+    var d = new Map();
+    function f(e) {
       var t = new Date(1e3 * e),
         n = i.e.GetPreferredLocales(),
         r = (function (e) {
-          var t = f.get(e);
+          var t = d.get(e);
           if (!0 === t || !1 === t) return t;
           var n = new Date();
           return (
@@ -1398,7 +1397,7 @@ var CLSTAMP = "6412327";
             (t =
               n.toLocaleTimeString(e, { hour: "numeric" }) ==
               n.toLocaleTimeString(e, { hour: "numeric", hour12: !1 })),
-            f.set(e, t),
+            d.set(e, t),
             t
           );
         })(n[0]);
@@ -1453,25 +1452,25 @@ var CLSTAMP = "6412327";
             n.getFullYear() == s.getFullYear() ? I(n) : O(n)
           );
         a.c(new Date().setHours(24, 0, 0, 0) - s.getTime());
-        var f = new Date();
+        var d = new Date();
         return (
-          f.setHours(0, 0, 0, 0),
-          f.setDate(f.getDate() + 1),
-          n < f
+          d.setHours(0, 0, 0, 0),
+          d.setDate(d.getDate() + 1),
+          n < d
             ? Object(i.f)("#Time_Today")
-            : (f.setDate(f.getDate() + 1),
-              n < f
+            : (d.setDate(d.getDate() + 1),
+              n < d
                 ? Object(i.f)("#Time_Tomorrow")
-                : (f.setDate(f.getDate() + 5), n < f ? C(n) : y(n, !0)))
+                : (d.setDate(d.getDate() + 5), n < d ? C(n) : y(n, !0)))
         );
       }
       a.c(new Date().setHours(24, 0, 0, 0) - s.getTime());
-      var d = new Date();
-      if ((d.setHours(0, 0, 0, 0), n >= d))
+      var f = new Date();
+      if ((f.setHours(0, 0, 0, 0), n >= f))
         return u.bGranularToday
           ? Object(i.f)("#Time_Today_At", l(e))
           : Object(i.f)("#Time_Today");
-      if ((d.setDate(d.getDate() - 1), n >= d))
+      if ((f.setDate(f.getDate() - 1), n >= f))
         return u.bGranularYesterday
           ? Object(i.f)("#Time_Yesterday_At", l(e))
           : Object(i.f)("#Time_Yesterday");
@@ -1481,12 +1480,12 @@ var CLSTAMP = "6412327";
           c(e, n.getFullYear() == s.getFullYear()),
           l(e)
         );
-      if ((d.setDate(d.getDate() - 5), n >= d))
+      if ((f.setDate(f.getDate() - 5), n >= f))
         return Object(i.f)("#TimeSince_ThisWeek");
-      var h = new Date(d);
+      var h = new Date(f);
       if (
-        (d.setDate(d.getDate() - 21),
-        n >= d ||
+        (f.setDate(f.getDate() - 21),
+        n >= f ||
           (n.getMonth() == s.getMonth() && n.getFullYear() == s.getFullYear()))
       ) {
         var p =
@@ -1603,10 +1602,10 @@ var CLSTAMP = "6412327";
         return l;
       }),
       n.d(t, "k", function () {
-        return f;
+        return d;
       }),
       n.d(t, "h", function () {
-        return d;
+        return f;
       }),
       n.d(t, "f", function () {
         return h;
@@ -1665,11 +1664,11 @@ var CLSTAMP = "6412327";
       }
       return i;
     }
-    function f(e, t, n) {
+    function d(e, t, n) {
       var r = l(e, t, n);
       e.splice(r + 1, 0, t);
     }
-    function d(e, t, n) {
+    function f(e, t, n) {
       return (
         e ||
           console.error(
@@ -1756,40 +1755,40 @@ var CLSTAMP = "6412327";
         return c;
       }),
       n.d(t, "h", function () {
-        return u;
-      }),
-      n.d(t, "c", function () {
-        return l;
-      }),
-      n.d(t, "i", function () {
-        return f;
-      }),
-      n.d(t, "k", function () {
         return d;
       }),
-      n.d(t, "e", function () {
-        return p;
+      n.d(t, "c", function () {
+        return f;
       }),
-      n.d(t, "p", function () {
-        return _;
-      }),
-      n.d(t, "g", function () {
+      n.d(t, "i", function () {
         return h;
       }),
-      n.d(t, "b", function () {
+      n.d(t, "k", function () {
+        return p;
+      }),
+      n.d(t, "e", function () {
         return m;
       }),
-      n.d(t, "j", function () {
+      n.d(t, "p", function () {
         return b;
       }),
-      n.d(t, "l", function () {
+      n.d(t, "g", function () {
+        return _;
+      }),
+      n.d(t, "b", function () {
         return g;
       }),
-      n.d(t, "m", function () {
+      n.d(t, "j", function () {
         return v;
       }),
-      n.d(t, "a", function () {
+      n.d(t, "l", function () {
         return E;
+      }),
+      n.d(t, "m", function () {
+        return S;
+      }),
+      n.d(t, "a", function () {
+        return y;
       });
     var r = n("mrSG"),
       i = n("0N1H");
@@ -1859,37 +1858,55 @@ var CLSTAMP = "6412327";
       };
     }
     var u;
-    function l(e) {
+    !(function (e) {
+      (e[(e.Input = 0)] = "Input"),
+        (e[(e.AllOutput = 1)] = "AllOutput"),
+        (e[(e.Left = 2)] = "Left"),
+        (e[(e.Right = 3)] = "Right"),
+        (e[(e.Sub = 4)] = "Sub"),
+        (e[(e.BackLeft = 5)] = "BackLeft"),
+        (e[(e.BackRight = 6)] = "BackRight");
+    })(u || (u = {}));
+    var l, d;
+    function f(e) {
       return (
-        e == u.EBrowserType_OpenVROverlay ||
-        e == u.EBrowserType_OpenVROverlay_Dashboard
+        e == d.EBrowserType_OpenVROverlay ||
+        e == d.EBrowserType_OpenVROverlay_Dashboard
       );
     }
     !(function (e) {
-      (e[(e.EBrowserType_OffScreen = 0)] = "EBrowserType_OffScreen"),
-        (e[(e.EBrowserType_OpenVROverlay = 1)] = "EBrowserType_OpenVROverlay"),
-        (e[(e.EBrowserType_OpenVROverlay_Dashboard = 2)] =
-          "EBrowserType_OpenVROverlay_Dashboard"),
-        (e[(e.EBrowserType_DirectHWND = 3)] = "EBrowserType_DirectHWND"),
-        (e[(e.EBrowserType_DirectHWND_Borderless = 4)] =
-          "EBrowserType_DirectHWND_Borderless"),
-        (e[(e.EBrowserType_DirectHWND_Hidden = 5)] =
-          "EBrowserType_DirectHWND_Hidden"),
-        (e[(e.EBrowserType_ChildHWNDNative = 6)] =
-          "EBrowserType_ChildHWNDNative"),
-        (e[(e.EBrowserType_Transparent_Toplevel = 7)] =
-          "EBrowserType_Transparent_Toplevel"),
-        (e[(e.EBrowserType_OffScreen_SharedTexture = 8)] =
-          "EBrowserType_OffScreen_SharedTexture"),
-        (e[(e.EBrowserType_OffScreen_GameOverlay = 9)] =
-          "EBrowserType_OffScreen_GameOverlay"),
-        (e[(e.EBrowserType_OffScreen_GameOverlay_SharedTexture = 10)] =
-          "EBrowserType_OffScreen_GameOverlay_SharedTexture"),
-        (e[(e.EBrowserType_Offscreen_FriendsUI = 11)] =
-          "EBrowserType_Offscreen_FriendsUI"),
-        (e[(e.EBrowserType_MAX = 12)] = "EBrowserType_MAX");
-    })(u || (u = {}));
-    var f, d;
+      (e[(e.Invalid = -1)] = "Invalid"),
+        (e[(e.Hidden = 1)] = "Hidden"),
+        (e[(e.Overlay = 2)] = "Overlay"),
+        (e[(e.Opaque = 3)] = "Opaque"),
+        (e[(e.Notification = 4)] = "Notification");
+    })(l || (l = {})),
+      (function (e) {
+        (e[(e.EBrowserType_OffScreen = 0)] = "EBrowserType_OffScreen"),
+          (e[(e.EBrowserType_OpenVROverlay = 1)] =
+            "EBrowserType_OpenVROverlay"),
+          (e[(e.EBrowserType_OpenVROverlay_Dashboard = 2)] =
+            "EBrowserType_OpenVROverlay_Dashboard"),
+          (e[(e.EBrowserType_DirectHWND = 3)] = "EBrowserType_DirectHWND"),
+          (e[(e.EBrowserType_DirectHWND_Borderless = 4)] =
+            "EBrowserType_DirectHWND_Borderless"),
+          (e[(e.EBrowserType_DirectHWND_Hidden = 5)] =
+            "EBrowserType_DirectHWND_Hidden"),
+          (e[(e.EBrowserType_ChildHWNDNative = 6)] =
+            "EBrowserType_ChildHWNDNative"),
+          (e[(e.EBrowserType_Transparent_Toplevel = 7)] =
+            "EBrowserType_Transparent_Toplevel"),
+          (e[(e.EBrowserType_OffScreen_SharedTexture = 8)] =
+            "EBrowserType_OffScreen_SharedTexture"),
+          (e[(e.EBrowserType_OffScreen_GameOverlay = 9)] =
+            "EBrowserType_OffScreen_GameOverlay"),
+          (e[(e.EBrowserType_OffScreen_GameOverlay_SharedTexture = 10)] =
+            "EBrowserType_OffScreen_GameOverlay_SharedTexture"),
+          (e[(e.EBrowserType_Offscreen_FriendsUI = 11)] =
+            "EBrowserType_Offscreen_FriendsUI"),
+          (e[(e.EBrowserType_MAX = 12)] = "EBrowserType_MAX");
+      })(d || (d = {}));
+    var h, p;
     !(function (e) {
       (e[(e.k_EClientUINotificationGroupChatMessage = 1)] =
         "k_EClientUINotificationGroupChatMessage"),
@@ -1897,7 +1914,7 @@ var CLSTAMP = "6412327";
           "k_EClientUINotificationFriendChatMessage"),
         (e[(e.k_EClientUINotificationFriendPersonaState = 3)] =
           "k_EClientUINotificationFriendPersonaState");
-    })(f || (f = {})),
+    })(h || (h = {})),
       (function (e) {
         (e[(e.k_EComputerActiveStateInvalid = 0)] =
           "k_EComputerActiveStateInvalid"),
@@ -1905,20 +1922,20 @@ var CLSTAMP = "6412327";
             "k_EComputerActiveStateActive"),
           (e[(e.k_EComputerActiveStateIdle = 2)] =
             "k_EComputerActiveStateIdle");
-      })(d || (d = {}));
-    var h,
-      p = (function () {
+      })(p || (p = {}));
+    var _,
+      m = (function () {
         return function () {};
       })(),
-      _ = (function () {
+      b = (function () {
         return function () {};
       })();
     !(function (e) {
       (e[(e.k_EPending = 0)] = "k_EPending"),
         (e[(e.k_EAccepted = 1)] = "k_EAccepted"),
         (e[(e.k_ERejected = 2)] = "k_ERejected");
-    })(h || (h = {}));
-    function m(e) {
+    })(_ || (_ = {}));
+    function g(e) {
       return (
         "game" === e ||
         "dlc" === e ||
@@ -1929,7 +1946,7 @@ var CLSTAMP = "6412327";
         "hardware" === e
       );
     }
-    var b, g;
+    var v, E;
     !(function (e) {
       (e[(e.k_EClientUsedInputTypeKeyboard = 0)] =
         "k_EClientUsedInputTypeKeyboard"),
@@ -1938,7 +1955,7 @@ var CLSTAMP = "6412327";
         (e[(e.k_EClientUsedInputTypeController = 2)] =
           "k_EClientUsedInputTypeController"),
         (e[(e.k_EClientUsedInputTypeMax = 3)] = "k_EClientUsedInputTypeMax");
-    })(b || (b = {})),
+    })(v || (v = {})),
       (function (e) {
         (e[(e.k_ERemoteClientLaunchOK = 1)] = "k_ERemoteClientLaunchOK"),
           (e[(e.k_ERemoteClientLaunchFail = 2)] = "k_ERemoteClientLaunchFail"),
@@ -1993,22 +2010,22 @@ var CLSTAMP = "6412327";
             "k_ERemoteClientLaunchInvisible"),
           (e[(e.k_ERemoteClientLaunchRestrictedCountry = 28)] =
             "k_ERemoteClientLaunchRestrictedCountry");
-      })(g || (g = {}));
-    var v;
-    function E(e) {
-      return e === v.k_ESteamRealmChina;
+      })(E || (E = {}));
+    var S;
+    function y(e) {
+      return e === S.k_ESteamRealmChina;
     }
     !(function (e) {
       (e[(e.k_ESteamRealmUnknown = 0)] = "k_ESteamRealmUnknown"),
         (e[(e.k_ESteamRealmGlobal = 1)] = "k_ESteamRealmGlobal"),
         (e[(e.k_ESteamRealmChina = 2)] = "k_ESteamRealmChina");
-    })(v || (v = {}));
-    var S, y, C, I, j, O;
+    })(S || (S = {}));
+    var C, I, j, O, k, L;
     !(function (e) {
       (e[(e.Unknown = 0)] = "Unknown"),
         (e[(e.Wired = 1)] = "Wired"),
         (e[(e.Wireless = 2)] = "Wireless");
-    })(S || (S = {})),
+    })(C || (C = {})),
       (function (e) {
         (e[(e.NotPresent = 0)] = "NotPresent"),
           (e[(e.Failed = 1)] = "Failed"),
@@ -2017,14 +2034,14 @@ var CLSTAMP = "6412327";
           (e[(e.Connecting = 4)] = "Connecting"),
           (e[(e.Connected = 5)] = "Connected"),
           (e[(e.Retrying = 6)] = "Retrying");
-      })(y || (y = {})),
+      })(I || (I = {})),
       (function (e) {
         (e[(e.None = 0)] = "None"),
           (e[(e.Weak = 1)] = "Weak"),
           (e[(e.Ok = 2)] = "Ok"),
           (e[(e.Good = 3)] = "Good"),
           (e[(e.Excellent = 4)] = "Excellent");
-      })(C || (C = {})),
+      })(j || (j = {})),
       (function (e) {
         (e[(e.None = 0)] = "None"),
           (e[(e.StaticWep = 1)] = "StaticWep"),
@@ -2034,17 +2051,17 @@ var CLSTAMP = "6412327";
           (e[(e.Wpa2 = 16)] = "Wpa2"),
           (e[(e.Wpa2Enterprise = 32)] = "Wpa2Enterprise"),
           (e[(e.Unsupported = 32768)] = "Unsupported");
-      })(I || (I = {})),
+      })(O || (O = {})),
       (function (e) {
         (e[(e.SystemKey0 = 0)] = "SystemKey0"),
           (e[(e.SystemKey1 = 1)] = "SystemKey1");
-      })(j || (j = {})),
+      })(k || (k = {})),
       (function (e) {
         (e[(e.Hidden = 0)] = "Hidden"),
           (e[(e.Notification = 1)] = "Notification"),
           (e[(e.Overlay = 2)] = "Overlay"),
           (e[(e.Opaque = 3)] = "Opaque");
-      })(O || (O = {}));
+      })(L || (L = {}));
   },
   mrSG: function (e, t, n) {
     "use strict";
@@ -2282,10 +2299,10 @@ PERFORMANCE OF THIS SOFTWARE.
       return l;
     }),
       n.d(t, "f", function () {
-        return f;
+        return d;
       }),
       n.d(t, "n", function () {
-        return d;
+        return f;
       }),
       n.d(t, "l", function () {
         return h;
@@ -2437,7 +2454,7 @@ PERFORMANCE OF THIS SOFTWARE.
         e
       );
     })();
-    function f(e) {
+    function d(e) {
       for (var t = [], n = 1; n < arguments.length; n++)
         t[n - 1] = arguments[n];
       var r = g.LocalizeString(e);
@@ -2453,7 +2470,7 @@ PERFORMANCE OF THIS SOFTWARE.
             })),
           r);
     }
-    function d(e) {
+    function f(e) {
       for (var t = [], n = 1; n < arguments.length; n++)
         t[n - 1] = arguments[n];
       var o = g.LocalizeString(e);
@@ -2472,8 +2489,8 @@ PERFORMANCE OF THIS SOFTWARE.
       for (var n = [], i = 2; i < arguments.length; i++)
         n[i - 2] = arguments[i];
       return 1 === t || "1" === t
-        ? f.apply(void 0, Object(r.g)([e, t], n))
-        : f.apply(void 0, Object(r.g)([e + "_Plural", t], n));
+        ? d.apply(void 0, Object(r.g)([e, t], n))
+        : d.apply(void 0, Object(r.g)([e + "_Plural", t], n));
     }
     var p = (function () {
         function e() {}
@@ -2575,8 +2592,8 @@ PERFORMANCE OF THIS SOFTWARE.
       c = (n("Y3TG"), n("oh5H")),
       u = n("XaMz"),
       l = n("2vnA"),
-      f = n("TyAF"),
-      d = n("J0bI"),
+      d = n("TyAF"),
+      f = n("J0bI"),
       h = n("s+DT");
     var p = n("1VtQ"),
       _ = n("K4CH"),
@@ -2605,7 +2622,7 @@ PERFORMANCE OF THIS SOFTWARE.
           Object(r.c)([l.k], t.prototype, "InitFromPHPInviteLinkInfo", null),
           t
         );
-      })(d.b),
+      })(f.b),
       b = (function () {
         function e(e) {
           (this.m_bConnectingToClient = !1),
@@ -2709,7 +2726,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 : i.createElement(E, { controller: this.props.controller })
             );
           }),
-          (t = Object(r.c)([f.a], t))
+          (t = Object(r.c)([d.a], t))
         );
       })(i.Component),
       v = (function (e) {
@@ -2883,7 +2900,7 @@ PERFORMANCE OF THIS SOFTWARE.
           Object(r.c)([p.a], t.prototype, "LaunchWebChat", null),
           Object(r.c)([p.a], t.prototype, "OpenInSteamIgnoreAccount", null),
           Object(r.c)([p.a], t.prototype, "LaunchSteamClient", null),
-          (t = Object(r.c)([f.a], t))
+          (t = Object(r.c)([d.a], t))
         );
       })(i.Component),
       E = (function (e) {
@@ -2952,8 +2969,8 @@ PERFORMANCE OF THIS SOFTWARE.
     function I(e) {
       return Object(r.b)(this, void 0, void 0, function () {
         var t, i, o, a, s, u, l;
-        return Object(r.e)(this, function (f) {
-          switch (f.label) {
+        return Object(r.e)(this, function (d) {
+          switch (d.label) {
             case 0:
               return (
                 (t = c.b.GetLanguageFallback(e)),
@@ -2970,7 +2987,7 @@ PERFORMANCE OF THIS SOFTWARE.
               );
             case 1:
               return (
-                (o = f.sent()),
+                (o = d.sent()),
                 (a = o[0]),
                 (s = o[1]),
                 (u = o[2]),

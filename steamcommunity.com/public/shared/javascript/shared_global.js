@@ -938,15 +938,25 @@ function InitCookiePreferencesPopup()
 			return;
 		}
 
-		var fnPostPreference = function ( bAllow )
+		var fnPostPreference = function ( bAllowChoice )
 		{
-			$J.ajax( { type: "POST", url: $AllowURL, data: { bAllow: bAllow, sessionid: g_sessionID } } ).done( function ( data )
+			$J.ajax( { type: "POST", 
+						url: $AllowURL, 
+						data: { bAllow: bAllowChoice, sessionid: g_sessionID },
+						crossDomain: true,
+						xhrFields: { withCredentials: true } 
+			} ).done( function ( data )
 			{
 				if ( data && data.transfer_urls && data.transfer_params )
 				{
 					for ( var i = 0; i < data.transfer_urls.length; i++ )
 					{
-						$J.post( data.transfer_urls[i], { transfer_params: data.transfer_params } );
+						$J.ajax( { type: "POST", 
+									url: data.transfer_urls[i], 
+									data: { transfer_params: data.transfer_params },
+									crossDomain: true,
+									xhrFields: { withCredentials: true } 
+						} );
 					}
 				}
 			});
@@ -964,11 +974,11 @@ function InitCookiePreferencesPopup()
 		} );
 
 		$J('body').append( $CPopupContent );
-	}
 
-	timerCookiePopup = window.setTimeout( function() {
-		$J("#cookiePrefPopup").show();
+		timerCookiePopup = window.setTimeout( function() {
+			$J("#cookiePrefPopup").show();
 		}, COOKIE_PREFERENCES_POPUP_DELAY );
+	}
 }
 
 function InitMiniprofileHovers()

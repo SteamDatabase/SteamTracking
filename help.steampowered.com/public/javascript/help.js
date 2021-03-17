@@ -982,7 +982,7 @@ HelpWizard = {
 		var strEmail = $J( '#email_reset' ).val();
 		elError.hide();
 
-		$J( '#change_password_form' ).addClass( 'loading' );
+		$J( '#change_email_form' ).addClass( 'loading' );
 		$J( "#email_reset" ).prop("readonly", true);
 
 		try
@@ -1025,7 +1025,7 @@ HelpWizard = {
 				$J( "#email_reset" ).prop("readonly", false);
 			}
 		}).always( function() {
-			$J( '#change_password_form' ).removeClass( 'loading' );
+			$J( '#change_email_form' ).removeClass( 'loading' );
 		});
 	},
 
@@ -1035,7 +1035,7 @@ HelpWizard = {
 		var strEmailChangeCode = v_trim( $J( '#email_change_code' ).val() );
 		elError.hide();
 
-		$J( '#change_password_form' ).addClass( 'loading' );
+		$J( '#confirm_email_form' ).addClass( 'loading' );
 
 		try
 		{
@@ -1071,7 +1071,7 @@ HelpWizard = {
 				elError.text( data.errorMsg ).show();
 			}
 		}).always( function() {
-			$J( '#change_password_form' ).removeClass( 'loading' );
+			$J( '#confirm_email_form' ).removeClass( 'loading' );
 		});
 	},
 
@@ -1115,6 +1115,104 @@ HelpWizard = {
 			}
 		}).always( function() {
 			$J( '#reset_phonenumber_form' ).removeClass( 'loading' );
+		});
+	},
+	
+	SubmitPhoneChange: function( strSessionID, nAccountID ) {
+		var elError = $J( '#form_submit_error' );
+		var strPhoneNumber = $J( '#phone_number_input' ).val();
+		elError.hide();
+
+		$J( '#change_phone_form' ).addClass( 'loading' );
+		$J( "#phone_number_input" ).prop("readonly", true);
+
+		try
+		{
+			ga( 'send', 'pageview', '/wizard/AjaxAccountRecoveryChangePhone/' );
+		}
+		catch ( e )
+		{
+		}
+
+		$J.ajax({
+			type: "POST",
+			url: "https://help.steampowered.com/wizard/AjaxAccountRecoveryChangePhone/",
+			data: $J.extend( {}, g_rgDefaultWizardPageParams, {
+				s: strSessionID,
+				account: nAccountID,
+				phone_number: strPhoneNumber
+			} )
+		}).fail( function( xhr ) {
+			elError.text( 'An error occurred trying to handle that request. Please give us a few minutes and try again.' ).slideDown();
+			$J( "#phone_change_number" ).prop("readonly", false);
+		}).done( function( data ) {
+			if ( data.show_confirmation )
+			{
+				$J('#change_phone_area').hide();
+				$J('#confirm_phone_form').show();
+			}
+			else if ( data.hash )
+			{
+				window.location = 'https://help.steampowered.com/' + data.hash;
+			}
+			else if ( data.html )
+			{
+				HelpWizard.SetPageContent( data.html );
+				return;
+			}
+			else
+			{
+				elError.text( data.errorMsg ).show();
+				$J( "#phone_number_input" ).prop("readonly", false);
+			}
+		}).always( function() {
+			$J( '#change_phone_form' ).removeClass( 'loading' );
+		});
+	},
+
+	ConfirmPhoneChange: function( strSessionID, nAccountID ) {
+		var elError = $J( '#form_submit_error' );
+		var strPhoneNumber = $J( '#phone_number_input' ).val();
+		var strPhoneChangeCode = v_trim( $J( '#phone_change_code' ).val() );
+		elError.hide();
+
+		$J( '#confirm_phone_form' ).addClass( 'loading' );
+
+		try
+		{
+			ga( 'send', 'pageview', '/wizard/AjaxAccountRecoveryConfirmChangePhone/' );
+		}
+		catch ( e )
+		{
+		}
+
+		$J.ajax({
+			type: "POST",
+			url: "https://help.steampowered.com/wizard/AjaxAccountRecoveryConfirmChangePhone/",
+			data: $J.extend( {}, g_rgDefaultWizardPageParams, {
+				s: strSessionID,
+				account: nAccountID,
+				phone_number: strPhoneNumber,
+				phone_change_code: strPhoneChangeCode
+			} )
+		}).fail( function( xhr ) {
+			elError.text( 'An error occurred trying to handle that request. Please give us a few minutes and try again.' ).slideDown();
+		}).done( function( data ) {
+			if ( data.hash )
+			{
+				window.location = 'https://help.steampowered.com/' + data.hash;
+			}
+			else if ( data.html )
+			{
+				HelpWizard.SetPageContent( data.html );
+				return;
+			}
+			else
+			{
+				elError.text( data.errorMsg ).show();
+			}
+		}).always( function() {
+			$J( '#confirm_phone_form' ).removeClass( 'loading' );
 		});
 	},
 

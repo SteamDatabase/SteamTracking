@@ -91,6 +91,7 @@ GDynamicStore = {
 
 
 	s_ImpressionTracker: false,
+	s_bAllowAppImpressions: false,
 
 	Init: function( accountid, bForceRefresh, strOS, preferences, strCC )
 	{
@@ -218,6 +219,7 @@ GDynamicStore = {
 				GDynamicStore.s_rgCurations = data.rgCurations || {};
 				GDynamicStore.s_rgCreatorsFollowed = fnConvertToMap( data.rgCreatorsFollowed );
 				GDynamicStore.s_rgCreatorsIgnored = fnConvertToMap( data.rgCreatorsIgnored );
+				GDynamicStore.s_bAllowAppImpressions = data.bAllowAppImpressions || false;
 
 				if ( data.rgExcludedTags && data.rgExcludedTags.length > 0 )
 				{
@@ -257,6 +259,7 @@ GDynamicStore = {
 				GDynamicStore.s_nPromotionalDiscount = data.nPromotionalDiscount ? data.nPromotionalDiscount : 0;
 				GDynamicStore.s_nPromotionalDiscountMinCartAmount = data.nPromotionalDiscountMinCartAmount ? data.nPromotionalDiscountMinCartAmount : 0;
 				GDynamicStore.s_nPromotionalDiscountAvailableUseCount = data.nPromotionalDiscountAvailableUseCount ? data.nPromotionalDiscountAvailableUseCount : 0;
+				GDynamicStore.s_bAllowAppImpressions = data.bAllowAppImpressions || false;
 
 			}).always( function() { $J(fnRunOnLoadCallbacks); } );
 		}
@@ -394,7 +397,13 @@ GDynamicStore = {
 
 	s_oImpressionsTracked: {},
 	AddImpressionFromDynamicItem: function( $Elem )
-	{
+	{		
+		if ( !GDynamicStore.s_bAllowAppImpressions )
+		{
+						return;
+		}
+
+		
 		if ( $Elem.hasClass( 'app_impression_tracked' ) )
 		{
 			return;

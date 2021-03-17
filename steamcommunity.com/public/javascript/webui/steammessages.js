@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6412327";
+var CLSTAMP = "6420968";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [2],
   {
@@ -10366,6 +10366,423 @@ var CLSTAMP = "6412327";
               request: b,
             });
         })(i || (i = {}));
+    },
+    "7vSG": function (e, r, t) {
+      "use strict";
+      t.d(r, "b", function () {
+        return m;
+      }),
+        t.d(r, "a", function () {
+          return u;
+        });
+      var n = t("mrSG"),
+        i = t("hRO2"),
+        o = t("sQq0"),
+        a = i.Message;
+      var u,
+        s = (function (e) {
+          function r(t) {
+            void 0 === t && (t = null);
+            var n = e.call(this) || this;
+            return (
+              r.prototype.version || o.a(r.M()),
+              a.initialize(n, t, 0, -1, void 0, null),
+              n
+            );
+          }
+          return (
+            Object(n.d)(r, e),
+            (r.M = function () {
+              return (
+                r.sm_m ||
+                  (r.sm_m = {
+                    proto: r,
+                    fields: {
+                      version: { n: 1, br: o.d.readEnum, bw: o.h.writeEnum },
+                      preference_state: {
+                        n: 2,
+                        br: o.d.readEnum,
+                        bw: o.h.writeEnum,
+                      },
+                      content_customization: { n: 3, c: c },
+                      valve_analytics: { n: 4, c: d },
+                      third_party_analytics: { n: 5, c: f },
+                      third_party_content: { n: 6, c: l },
+                    },
+                  }),
+                r.sm_m
+              );
+            }),
+            (r.MBF = function () {
+              return r.sm_mbf || (r.sm_mbf = o.e(r.M())), r.sm_mbf;
+            }),
+            (r.prototype.toObject = function (e) {
+              return void 0 === e && (e = !1), r.toObject(e, this);
+            }),
+            (r.toObject = function (e, t) {
+              return o.g(r.M(), e, t);
+            }),
+            (r.fromObject = function (e) {
+              return o.c(r.M(), e);
+            }),
+            (r.deserializeBinary = function (e) {
+              var t = new i.BinaryReader(e),
+                n = new r();
+              return r.deserializeBinaryFromReader(n, t);
+            }),
+            (r.deserializeBinaryFromReader = function (e, t) {
+              return o.b(r.MBF(), e, t);
+            }),
+            (r.prototype.serializeBinary = function () {
+              var e = new i.BinaryWriter();
+              return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            }),
+            (r.serializeBinaryToWriter = function (e, t) {
+              o.f(r.M(), e, t);
+            }),
+            (r.prototype.getClassName = function () {
+              return "CAccountPrivacyCookiePreferences";
+            }),
+            r
+          );
+        })(a),
+        c = (function (e) {
+          function r(t) {
+            void 0 === t && (t = null);
+            var n = e.call(this) || this;
+            return (
+              r.prototype.recentapps || o.a(r.M()),
+              a.initialize(n, t, 0, -1, void 0, null),
+              n
+            );
+          }
+          return (
+            Object(n.d)(r, e),
+            (r.M = function () {
+              return (
+                r.sm_m ||
+                  (r.sm_m = {
+                    proto: r,
+                    fields: {
+                      recentapps: { n: 1, br: o.d.readBool, bw: o.h.writeBool },
+                    },
+                  }),
+                r.sm_m
+              );
+            }),
+            (r.MBF = function () {
+              return r.sm_mbf || (r.sm_mbf = o.e(r.M())), r.sm_mbf;
+            }),
+            (r.prototype.toObject = function (e) {
+              return void 0 === e && (e = !1), r.toObject(e, this);
+            }),
+            (r.toObject = function (e, t) {
+              return o.g(r.M(), e, t);
+            }),
+            (r.fromObject = function (e) {
+              return o.c(r.M(), e);
+            }),
+            (r.deserializeBinary = function (e) {
+              var t = new i.BinaryReader(e),
+                n = new r();
+              return r.deserializeBinaryFromReader(n, t);
+            }),
+            (r.deserializeBinaryFromReader = function (e, t) {
+              return o.b(r.MBF(), e, t);
+            }),
+            (r.prototype.serializeBinary = function () {
+              var e = new i.BinaryWriter();
+              return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            }),
+            (r.serializeBinaryToWriter = function (e, t) {
+              o.f(r.M(), e, t);
+            }),
+            (r.prototype.getClassName = function () {
+              return "CAccountPrivacyCookiePreferences_ContentCustomization";
+            }),
+            r
+          );
+        })(a),
+        d = (function (e) {
+          function r(t) {
+            void 0 === t && (t = null);
+            var n = e.call(this) || this;
+            return (
+              r.prototype.product_impressions_tracking || o.a(r.M()),
+              a.initialize(n, t, 0, -1, void 0, null),
+              n
+            );
+          }
+          return (
+            Object(n.d)(r, e),
+            (r.M = function () {
+              return (
+                r.sm_m ||
+                  (r.sm_m = {
+                    proto: r,
+                    fields: {
+                      product_impressions_tracking: {
+                        n: 1,
+                        br: o.d.readBool,
+                        bw: o.h.writeBool,
+                      },
+                    },
+                  }),
+                r.sm_m
+              );
+            }),
+            (r.MBF = function () {
+              return r.sm_mbf || (r.sm_mbf = o.e(r.M())), r.sm_mbf;
+            }),
+            (r.prototype.toObject = function (e) {
+              return void 0 === e && (e = !1), r.toObject(e, this);
+            }),
+            (r.toObject = function (e, t) {
+              return o.g(r.M(), e, t);
+            }),
+            (r.fromObject = function (e) {
+              return o.c(r.M(), e);
+            }),
+            (r.deserializeBinary = function (e) {
+              var t = new i.BinaryReader(e),
+                n = new r();
+              return r.deserializeBinaryFromReader(n, t);
+            }),
+            (r.deserializeBinaryFromReader = function (e, t) {
+              return o.b(r.MBF(), e, t);
+            }),
+            (r.prototype.serializeBinary = function () {
+              var e = new i.BinaryWriter();
+              return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            }),
+            (r.serializeBinaryToWriter = function (e, t) {
+              o.f(r.M(), e, t);
+            }),
+            (r.prototype.getClassName = function () {
+              return "CAccountPrivacyCookiePreferences_ValveAnalytics";
+            }),
+            r
+          );
+        })(a),
+        f = (function (e) {
+          function r(t) {
+            void 0 === t && (t = null);
+            var n = e.call(this) || this;
+            return (
+              r.prototype.google_analytics || o.a(r.M()),
+              a.initialize(n, t, 0, -1, void 0, null),
+              n
+            );
+          }
+          return (
+            Object(n.d)(r, e),
+            (r.M = function () {
+              return (
+                r.sm_m ||
+                  (r.sm_m = {
+                    proto: r,
+                    fields: {
+                      google_analytics: {
+                        n: 1,
+                        br: o.d.readBool,
+                        bw: o.h.writeBool,
+                      },
+                    },
+                  }),
+                r.sm_m
+              );
+            }),
+            (r.MBF = function () {
+              return r.sm_mbf || (r.sm_mbf = o.e(r.M())), r.sm_mbf;
+            }),
+            (r.prototype.toObject = function (e) {
+              return void 0 === e && (e = !1), r.toObject(e, this);
+            }),
+            (r.toObject = function (e, t) {
+              return o.g(r.M(), e, t);
+            }),
+            (r.fromObject = function (e) {
+              return o.c(r.M(), e);
+            }),
+            (r.deserializeBinary = function (e) {
+              var t = new i.BinaryReader(e),
+                n = new r();
+              return r.deserializeBinaryFromReader(n, t);
+            }),
+            (r.deserializeBinaryFromReader = function (e, t) {
+              return o.b(r.MBF(), e, t);
+            }),
+            (r.prototype.serializeBinary = function () {
+              var e = new i.BinaryWriter();
+              return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            }),
+            (r.serializeBinaryToWriter = function (e, t) {
+              o.f(r.M(), e, t);
+            }),
+            (r.prototype.getClassName = function () {
+              return "CAccountPrivacyCookiePreferences_ThirdPartyAnalytics";
+            }),
+            r
+          );
+        })(a),
+        l = (function (e) {
+          function r(t) {
+            void 0 === t && (t = null);
+            var n = e.call(this) || this;
+            return (
+              r.prototype.youtube || o.a(r.M()),
+              a.initialize(n, t, 0, -1, void 0, null),
+              n
+            );
+          }
+          return (
+            Object(n.d)(r, e),
+            (r.M = function () {
+              return (
+                r.sm_m ||
+                  (r.sm_m = {
+                    proto: r,
+                    fields: {
+                      youtube: { n: 1, br: o.d.readBool, bw: o.h.writeBool },
+                      vimeo: { n: 2, br: o.d.readBool, bw: o.h.writeBool },
+                      sketchfab: { n: 3, br: o.d.readBool, bw: o.h.writeBool },
+                      twitter: { n: 4, br: o.d.readBool, bw: o.h.writeBool },
+                    },
+                  }),
+                r.sm_m
+              );
+            }),
+            (r.MBF = function () {
+              return r.sm_mbf || (r.sm_mbf = o.e(r.M())), r.sm_mbf;
+            }),
+            (r.prototype.toObject = function (e) {
+              return void 0 === e && (e = !1), r.toObject(e, this);
+            }),
+            (r.toObject = function (e, t) {
+              return o.g(r.M(), e, t);
+            }),
+            (r.fromObject = function (e) {
+              return o.c(r.M(), e);
+            }),
+            (r.deserializeBinary = function (e) {
+              var t = new i.BinaryReader(e),
+                n = new r();
+              return r.deserializeBinaryFromReader(n, t);
+            }),
+            (r.deserializeBinaryFromReader = function (e, t) {
+              return o.b(r.MBF(), e, t);
+            }),
+            (r.prototype.serializeBinary = function () {
+              var e = new i.BinaryWriter();
+              return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            }),
+            (r.serializeBinaryToWriter = function (e, t) {
+              o.f(r.M(), e, t);
+            }),
+            (r.prototype.getClassName = function () {
+              return "CAccountPrivacyCookiePreferences_ThirdPartyContent";
+            }),
+            r
+          );
+        })(a),
+        m = (function (e) {
+          function r(r) {
+            void 0 === r && (r = null);
+            var t = e.call(this) || this;
+            return a.initialize(t, r, 0, -1, void 0, null), t;
+          }
+          return (
+            Object(n.d)(r, e),
+            (r.prototype.toObject = function (e) {
+              return void 0 === e && (e = !1), r.toObject(e, this);
+            }),
+            (r.toObject = function (e, r) {
+              return e ? { $jspbMessageInstance: r } : {};
+            }),
+            (r.fromObject = function (e) {
+              return new r();
+            }),
+            (r.deserializeBinary = function (e) {
+              var t = new i.BinaryReader(e),
+                n = new r();
+              return r.deserializeBinaryFromReader(n, t);
+            }),
+            (r.deserializeBinaryFromReader = function (e, r) {
+              return e;
+            }),
+            (r.prototype.serializeBinary = function () {
+              var e = new i.BinaryWriter();
+              return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            }),
+            (r.serializeBinaryToWriter = function (e, r) {}),
+            (r.prototype.getClassName = function () {
+              return "CAccountPrivacy_GetCookiePreferences_Request";
+            }),
+            r
+          );
+        })(a),
+        b = (function (e) {
+          function r(t) {
+            void 0 === t && (t = null);
+            var n = e.call(this) || this;
+            return (
+              r.prototype.preferences || o.a(r.M()),
+              a.initialize(n, t, 0, -1, void 0, null),
+              n
+            );
+          }
+          return (
+            Object(n.d)(r, e),
+            (r.M = function () {
+              return (
+                r.sm_m ||
+                  (r.sm_m = {
+                    proto: r,
+                    fields: { preferences: { n: 1, c: s } },
+                  }),
+                r.sm_m
+              );
+            }),
+            (r.MBF = function () {
+              return r.sm_mbf || (r.sm_mbf = o.e(r.M())), r.sm_mbf;
+            }),
+            (r.prototype.toObject = function (e) {
+              return void 0 === e && (e = !1), r.toObject(e, this);
+            }),
+            (r.toObject = function (e, t) {
+              return o.g(r.M(), e, t);
+            }),
+            (r.fromObject = function (e) {
+              return o.c(r.M(), e);
+            }),
+            (r.deserializeBinary = function (e) {
+              var t = new i.BinaryReader(e),
+                n = new r();
+              return r.deserializeBinaryFromReader(n, t);
+            }),
+            (r.deserializeBinaryFromReader = function (e, t) {
+              return o.b(r.MBF(), e, t);
+            }),
+            (r.prototype.serializeBinary = function () {
+              var e = new i.BinaryWriter();
+              return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            }),
+            (r.serializeBinaryToWriter = function (e, t) {
+              o.f(r.M(), e, t);
+            }),
+            (r.prototype.getClassName = function () {
+              return "CAccountPrivacy_GetCookiePreferences_Response";
+            }),
+            r
+          );
+        })(a);
+      !(function (e) {
+        e.GetCookiePreferences = function (e, r) {
+          return e.SendMsg("AccountPrivacy.GetCookiePreferences#1", r, b, {
+            ePrivilege: 1,
+          });
+        };
+      })(u || (u = {}));
     },
     BpBa: function (e, r, t) {
       "use strict";

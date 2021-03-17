@@ -49,8 +49,8 @@
         f = t("t0PL"),
         p = t("ehaW"),
         O = t("3xXb"),
-        h = t("exH9"),
-        w = t("cOvF");
+        w = t("exH9"),
+        h = t("cOvF");
       n.default = Object(a.a)(function (e) {
         var n = e.match.params.bundleid,
           t = parseInt(n),
@@ -108,8 +108,8 @@
           var n = e.className;
           return l.a.createElement(
             "div",
-            { className: Object(h.a)(n, O.AlreadyOwned) },
-            l.a.createElement(w.h, { className: O.CheckmarkCircle }),
+            { className: Object(w.a)(n, O.AlreadyOwned) },
+            l.a.createElement(h.i, { className: O.CheckmarkCircle }),
             l.a.createElement(
               "span",
               { className: O.AlreadyOwnedText },

@@ -24,6 +24,11 @@ function SubscribeItem()
 	showModal( 'NotLoggedInWarning', true );
 }
 
+function SubscribeInlineItem( id, appID )
+{
+	showModal( 'NotLoggedInWarning', true );
+}
+
 function FavoriteItem()
 {
 	showModal( 'NotLoggedInWarning', true );

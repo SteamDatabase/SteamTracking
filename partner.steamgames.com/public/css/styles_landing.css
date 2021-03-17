@@ -3249,3 +3249,6 @@ div .cdkey_request_details_row
     font-size: 12px;
     color: #FFFF44
 }
+.contactsList tr a {
+    text-decoration: underline;
+}

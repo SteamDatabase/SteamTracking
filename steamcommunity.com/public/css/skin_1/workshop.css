@@ -1865,16 +1865,14 @@ textarea {
 {
 	visibility:hidden;
 	position: absolute;
-	top: 170px;
+	bottom: 4px;
 	right: 0px;
 }
 .workshopItemSubscriptionControls.aspectratio_16x9
 {
-    top: 83px;
 }
 .workshopItemSubscriptionControls.aspectratio_4x3
 {
-	top: 120px;
 }
 .workshopItem:hover .workshopItemSubscriptionControls
 {
@@ -1914,9 +1912,10 @@ textarea {
 {
 	background-position: 0px -75px;
 }
-.workshopItemSubscriptionControls .action_wait
+.workshopItemSubscriptionControls .action_wait > img
 {
-	float: left;
+	margin-right: 5px;
+	width: 22px;
 }
 .workshopItemDetailsHeader
 {
@@ -2123,6 +2122,7 @@ textarea {
 
 .workshopItemPreviewHolder
 {
+	position: relative;
 	display: table-cell;
 	vertical-align: middle;
 	width:200px;
@@ -5057,8 +5057,11 @@ a.readmore_link
 	}
 
 	html.responsive .workshopItem .workshopItemTitle {
-		max-width: 100px;
+		max-width: 110px;
 		font-size: 12px;
+	}
+	html.responsive .workshopItem .workshopItemAuthorName  {
+		max-width: 110px;
 	}
 
 	html.responsive .fileRating {
