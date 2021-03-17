@@ -1335,7 +1335,7 @@
             o = re.EventModerateClearReview,
             i = !1;
           return (
-            (n.BHasTag("mod_reviewed") && !n.BHasTag("mod_require_rereview")) ||
+            Object(g.k)(n) ||
               ((r = Object(U.f)("#EventModTile_Moderate_MarkReviewed")),
               (o = re.EventModerateMarkReview),
               (i = !0)),
@@ -1453,9 +1453,7 @@
               this.state.bSavingModeration ||
                 ((t = this.props.solrData.unique_id),
                 (n = L.c.GetClanEventModel(t)) &&
-                  e !==
-                    (n.BHasTag("mod_reviewed") &&
-                      !n.BHasTag("mod_require_rereview")) &&
+                  e !== Object(g.k)(n) &&
                   ((a = new Array()),
                   (r = new Array()),
                   (o = new k().SetReviewAction(e)),
@@ -2029,7 +2027,7 @@
                     case 2:
                       return (
                         e.sent(),
-                        (i = g.o),
+                        (i = g.q),
                         (l = []),
                         r.value.tags &&
                           r.value.tags.forEach(function (e) {
@@ -2966,7 +2964,7 @@
                                 : [3, 9];
                             case 1:
                               return 1 == (o = e.sent()).success &&
-                                Object(g.i)(o.width, o.height, v)
+                                Object(g.j)(o.width, o.height, v)
                                 ? [
                                     4,
                                     s.GetImageInfo(r, n, h).catch(function (e) {

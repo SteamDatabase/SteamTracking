@@ -601,7 +601,7 @@
                 name: ["Action"],
                 filter: null,
                 rgStoreTagFilter: {
-                  type: H.n.k_EStoreFilterClauseTypeStoreTag,
+                  type: H.p.k_EStoreFilterClauseTypeStoreTag,
                   value: 19,
                 },
                 nAtomicStoreTagID: 19,
@@ -611,7 +611,7 @@
                 name: ["RPG"],
                 filter: null,
                 rgStoreTagFilter: {
-                  type: H.n.k_EStoreFilterClauseTypeStoreTag,
+                  type: H.p.k_EStoreFilterClauseTypeStoreTag,
                   value: 122,
                 },
                 nAtomicStoreTagID: 122,
@@ -621,7 +621,7 @@
                 name: ["Adventure"],
                 filter: null,
                 rgStoreTagFilter: {
-                  type: H.n.k_EStoreFilterClauseTypeStoreTag,
+                  type: H.p.k_EStoreFilterClauseTypeStoreTag,
                   value: 21,
                 },
                 nAtomicStoreTagID: 21,
@@ -632,7 +632,7 @@
                 name: ["macOS"],
                 filter: null,
                 rgStoreTagFilter: {
-                  type: H.n.k_EStoreFilterClauseTypeFeatureTag,
+                  type: H.p.k_EStoreFilterClauseTypeFeatureTag,
                   value: "mac",
                 },
                 matchingCapsules: [],
@@ -641,7 +641,7 @@
                 name: ["Linux"],
                 filter: null,
                 rgStoreTagFilter: {
-                  type: H.n.k_EStoreFilterClauseTypeFeatureTag,
+                  type: H.p.k_EStoreFilterClauseTypeFeatureTag,
                   value: "linux",
                 },
                 matchingCapsules: [],
@@ -657,7 +657,7 @@
               this.m_facetFilter.SortFacetValues(
                 [],
                 Object(g.f)(f.d.LANGUAGE),
-                H.m.k_ESortFacetsByMatchCount,
+                H.o.k_ESortFacetsByMatchCount,
                 5
               );
           }
@@ -679,7 +679,7 @@
                 this.m_facetFilter.SortFacetValues(
                   [],
                   Object(g.f)(f.d.LANGUAGE),
-                  H.m.k_ESortFacetsByMatchCount,
+                  H.o.k_ESortFacetsByMatchCount,
                   5
                 ),
                 (this.m_nCurrentPage = 0);
@@ -814,7 +814,7 @@
                             this.m_facetFilter.SortFacetValues(
                               [],
                               Object(g.f)(f.d.LANGUAGE),
-                              H.m.k_ESortFacetsByMatchCount,
+                              H.o.k_ESortFacetsByMatchCount,
                               5
                             ),
                             [2, o[p]])
