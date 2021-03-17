@@ -2901,45 +2901,6 @@ hr {
   flex: none;
   padding-left: 5px;
 }
-.saledashboard_TileContainer_2WBCB .saledashboard_Featuring_3KFqI {
-  width: 160px;
-  flex: none;
-  padding-left: 5px;
-}
-.saledashboard_TileContainer_2WBCB
-  .saledashboard_Featuring_3KFqI
-  .saledashboard_FeaturingMissing_mx6YB {
-  color: lightcoral;
-}
-.saledashboard_TileContainer_2WBCB
-  .saledashboard_Featuring_3KFqI
-  .saledashboard_FeaturingActive_35tHc {
-  font-weight: bold;
-  color: green;
-}
-.saledashboard_TileContainer_2WBCB
-  .saledashboard_Featuring_3KFqI
-  .saledashboard_FeaturingMainCapsule_VuIHV {
-  color: lightslategray;
-}
-.saledashboard_TileContainer_2WBCB
-  .saledashboard_Featuring_3KFqI
-  .saledashboard_FeaturingSpotlight_26BJR {
-  font-weight: bold;
-  color: lightgoldenrodyellow;
-}
-.saledashboard_TileContainer_2WBCB
-  .saledashboard_Featuring_3KFqI
-  .saledashboard_FeaturingIM_2YBML {
-  font-weight: bold;
-  color: pink;
-}
-.saledashboard_TileContainer_2WBCB
-  .saledashboard_Featuring_3KFqI
-  .saledashboard_FeaturingDailyDeal_3WvSg {
-  font-weight: bold;
-  color: lightskyblue;
-}
 .saledashboard_TileContainer_2WBCB .saledashboard_AccessLog_2rJdy {
   width: 250px;
   flex: none;
@@ -18527,6 +18488,44 @@ img.broadcastplayer_BroadcastPlaceholderImg_1LIEZ {
   width: fit-content;
   min-width: 50%;
   max-width: 100%;
+}
+
+.featuring_Featuring_3T5cu {
+  width: 160px;
+  flex: none;
+  padding-left: 5px;
+}
+.featuring_Featuring_3T5cu .featuring_FeaturingMissing_22uFY {
+  color: lightcoral;
+}
+.featuring_Featuring_3T5cu .featuring_FeaturingActive_EZKx4 {
+  font-weight: bold;
+  color: green;
+}
+.featuring_Featuring_3T5cu .featuring_FeaturingMainCapsule_30k7G {
+  color: lightslategray;
+}
+.featuring_Featuring_3T5cu .featuring_FeaturingSpotlight_3VVXb {
+  font-weight: bold;
+  color: lightgoldenrodyellow;
+}
+.featuring_Featuring_3T5cu .featuring_FeaturingIM_3CobV {
+  font-weight: bold;
+  color: pink;
+}
+.featuring_Featuring_3T5cu .featuring_FeaturingDailyDeal_1aulI {
+  font-weight: bold;
+  color: lightskyblue;
+}
+.featuring_Featuring_3T5cu .featuring_FeaturingProductBanner_17oCe {
+  color: peru;
+}
+.featuring_BannerCtn_2dqTs {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  background-color: pink;
+  color: black;
 }
 
 .newsaledialog_SearchResults_3j5hs {
