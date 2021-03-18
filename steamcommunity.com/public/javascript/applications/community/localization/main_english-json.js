@@ -237,6 +237,8 @@
         EventEditor_Status_Public: "Publicly visible",
         EventEditor_Status_Public_ttip:
           "Steam users can see this event. The visibility of the event cannot be reverted, you can only delete the event if you need to hide it.",
+        EventEditor_Status_PendingModeration:
+          "Library visibility pending moderation",
         EventEditor_Status_Staged: "Hidden until %1$s",
         EventEditor_Status_Staged_EventStart:
           "Staged, Hidden until event start on %1$s",
@@ -1024,6 +1026,7 @@
         EventReach_LibraryHome: "Library: On Steam Library Home (potentially)",
         EventReach_LibraryHome_ttip:
           "Your players can see this event at the top of their library home page, depending on how many other games a particular player has and relative priority of each announcement or update.",
+        EventReach_LibraryVisibilityPendingModeration: "(pending moderation)",
         EventReach_LibraySpotLight:
           "Library: Spotlight banner on your game's library page",
         EventReach_LibraySpotLight_ttip:

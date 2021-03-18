@@ -3160,6 +3160,11 @@ p a:hover {
   padding: 6px;
 }
 
+.partnereventshared_PendingVisibilityText_1G3Ia {
+  margin-left: 12px;
+  color: orange;
+}
+
 .partnereventassociatedbuild_AssociatedBuildBody_1rnVU {
   margin-top: 10px;
   width: 100%;
@@ -5191,6 +5196,10 @@ input.partnereventemails_HeadlineInput_2lHX9::placeholder {
   margin-right: 101px;
 }
 
+.partnereventpublishingcontrols_PublishContainer_2tCY6 {
+  max-width: 30%;
+}
+
 .partnereventpublishingtab_SummaryItems_12a_L,
 .partnereventpublishingtab_ReachItems_H_jRC {
   padding: 10px;
@@ -5278,8 +5287,8 @@ input.partnereventemails_HeadlineInput_2lHX9::placeholder {
   padding-left: 10px;
 }
 
-.partnereventpublishingcontrols_PublishContainer_2tCY6 {
-  max-width: 30%;
+.partnereventpublishingtab_ReachPendingVisibilityText_n1wAj {
+  color: orange;
 }
 
 .communityagegate_adult_content_age_gate_2PyPU {

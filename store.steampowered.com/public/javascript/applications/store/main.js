@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6423854";
+var CLSTAMP = "6424054";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [11],
   {
@@ -63008,7 +63008,7 @@ var CLSTAMP = "6423854";
             _.createElement(
               "div",
               { className: $.a.mainmenu_legal_pwlegal },
-              "© 完美世界 版权所有。",
+              "© 完美世界征奇(上海)多媒体科技有限公司 版权所有。",
               _.createElement("br", null),
               "增值电信业务经营许可证沪B2-20180406"
             )

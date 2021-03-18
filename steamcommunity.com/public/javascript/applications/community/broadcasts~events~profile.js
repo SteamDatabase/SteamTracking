@@ -1983,151 +1983,168 @@
         b = n("N0Ye"),
         g = n("62WR"),
         y = n("bS9Q"),
-        S = n("lkRc");
+        S = n("CdLH"),
+        E = n("lkRc");
       n("bxiW");
       n.d(t, "d", function () {
-        return C;
+        return O;
       }),
         n.d(t, "c", function () {
-          return w;
+          return I;
         }),
         n.d(t, "f", function () {
-          return D;
-        }),
-        n.d(t, "C", function () {
-          return j;
-        }),
-        n.d(t, "y", function () {
-          return A;
-        }),
-        n.d(t, "e", function () {
-          return k;
-        }),
-        n.d(t, "m", function () {
           return B;
         }),
-        n.d(t, "E", function () {
-          return M;
-        }),
-        n.d(t, "h", function () {
-          return G;
-        }),
         n.d(t, "D", function () {
-          return R;
-        }),
-        n.d(t, "u", function () {
-          return N;
-        }),
-        n.d(t, "x", function () {
-          return V;
-        }),
-        n.d(t, "o", function () {
-          return F;
-        }),
-        n.d(t, "n", function () {
-          return x;
-        }),
-        n.d(t, "s", function () {
-          return H;
-        }),
-        n.d(t, "t", function () {
-          return z;
-        }),
-        n.d(t, "r", function () {
-          return W;
-        }),
-        n.d(t, "k", function () {
-          return q;
-        }),
-        n.d(t, "l", function () {
-          return Y;
-        }),
-        n.d(t, "v", function () {
-          return Q;
-        }),
-        n.d(t, "j", function () {
-          return K;
-        }),
-        n.d(t, "F", function () {
-          return Z;
-        }),
-        n.d(t, "B", function () {
-          return J;
+          return A;
         }),
         n.d(t, "z", function () {
-          return X;
+          return L;
         }),
-        n.d(t, "A", function () {
-          return $;
-        }),
-        n.d(t, "a", function () {
-          return ee;
-        }),
-        n.d(t, "p", function () {
-          return te;
-        }),
-        n.d(t, "b", function () {
-          return ne;
+        n.d(t, "e", function () {
+          return M;
         }),
         n.d(t, "g", function () {
-          return ae;
+          return G;
+        }),
+        n.d(t, "n", function () {
+          return T;
+        }),
+        n.d(t, "F", function () {
+          return R;
         }),
         n.d(t, "i", function () {
-          return re;
+          return N;
         }),
-        n.d(t, "q", function () {
-          return oe;
+        n.d(t, "E", function () {
+          return F;
         }),
-        n.d(t, "G", function () {
-          return ie;
+        n.d(t, "v", function () {
+          return P;
+        }),
+        n.d(t, "y", function () {
+          return z;
+        }),
+        n.d(t, "p", function () {
+          return x;
+        }),
+        n.d(t, "o", function () {
+          return V;
+        }),
+        n.d(t, "t", function () {
+          return W;
+        }),
+        n.d(t, "u", function () {
+          return q;
+        }),
+        n.d(t, "s", function () {
+          return Y;
+        }),
+        n.d(t, "l", function () {
+          return Q;
+        }),
+        n.d(t, "m", function () {
+          return K;
         }),
         n.d(t, "w", function () {
+          return Z;
+        }),
+        n.d(t, "k", function () {
+          return J;
+        }),
+        n.d(t, "G", function () {
+          return X;
+        }),
+        n.d(t, "C", function () {
+          return $;
+        }),
+        n.d(t, "A", function () {
+          return ee;
+        }),
+        n.d(t, "B", function () {
+          return te;
+        }),
+        n.d(t, "a", function () {
+          return ne;
+        }),
+        n.d(t, "q", function () {
+          return ae;
+        }),
+        n.d(t, "b", function () {
+          return re;
+        }),
+        n.d(t, "h", function () {
+          return oe;
+        }),
+        n.d(t, "j", function () {
+          return ie;
+        }),
+        n.d(t, "r", function () {
           return se;
+        }),
+        n.d(t, "H", function () {
+          return ce;
+        }),
+        n.d(t, "x", function () {
+          return le;
         });
-      var E = [13, 14, 17, 18, 19, 22, 23, 24, 35, 25, 26, 28, 15, 32, 10];
-      function C(t) {
+      var C = [13, 14, 17, 18, 19, 22, 23, 24, 35, 25, 26, 28, 15, 32, 10];
+      function O(t) {
         return (
-          E.some(function (e) {
+          C.some(function (e) {
             return e == t.GetEventType();
           }) &&
           !t.BHasTag("steam_award_nomination_request") &&
           !t.BHasTag("curator")
         );
       }
-      var O = [20, 31, 34];
-      function w(t) {
+      var w = [20, 31, 34];
+      function I(t) {
         return (
-          !O.some(function (e) {
+          !w.some(function (e) {
             return e == t.GetEventType();
           }) && !t.BHasTag("curator")
         );
       }
-      var I = [12, 34];
-      function D(t) {
+      var D = [12, 34];
+      function B(t) {
         return (
-          !I.some(function (e) {
+          !D.some(function (e) {
             return e == t.GetEventType();
           }) && !t.BHasTag("curator")
         );
       }
       new Set([9, 11, 20, 21, 22, 23, 24, 25, 26, 27, 31, 35]);
-      var B,
-        T,
-        j = 593110,
-        A = [j, 766, 221410],
-        L = [12, 34];
-      function k(t) {
+      var T,
+        j,
+        A = 593110,
+        L = [A, 766, 221410],
+        k = [12, 34];
+      function M(t) {
         return (
-          !L.some(function (e) {
+          !k.some(function (e) {
             return e == t.GetEventType();
           }) && !t.BHasTag("curator")
         );
       }
-      ((T = B = B || {})[(T.k_EEventStateUnpublished = 0)] =
+      function G(e) {
+        var t,
+          n = 60 * S.f.PerDay;
+        return (
+          e.BIsVisibleEvent() &&
+          e.BIsOGGEvent() &&
+          e.rtime32_last_modified > d.a.GetTimeNowWithOverride() - n &&
+          !(
+            (t = e).BHasTag("mod_reviewed") &&
+            !t.BHasTag("mod_require_rereview")
+          )
+        );
+      }
+      ((j = T = T || {})[(j.k_EEventStateUnpublished = 0)] =
         "k_EEventStateUnpublished"),
-        (T[(T.k_EEventStateStaged = 1)] = "k_EEventStateStaged"),
-        (T[(T.k_EEventStateVisible = 2)] = "k_EEventStateVisible");
-      var M = [
+        (j[(j.k_EEventStateStaged = 1)] = "k_EEventStateStaged"),
+        (j[(j.k_EEventStateVisible = 2)] = "k_EEventStateVisible");
+      var R = [
         "topwishlisted",
         "trendingwishlisted",
         "popularcomingsoon",
@@ -2140,10 +2157,10 @@
         "discounted",
         "price",
       ];
-      function G(e) {
-        return 0 <= M.indexOf(e);
+      function N(e) {
+        return 0 <= R.indexOf(e);
       }
-      var R = [
+      var F = [
         {
           label: "#Sale_BrowserSortOption_NewAndTrending",
           flavor: "newandtrending",
@@ -2205,7 +2222,7 @@
           tooltip: "#Sale_BrowserSortOption_Price_ttip",
         },
       ];
-      function N(e) {
+      function P(e) {
         switch (e) {
           case "links":
             return { nMaxItemsPerRow: 5, nItemMinimumWidth: 200 };
@@ -2213,37 +2230,37 @@
             return { nMaxItemsPerRow: 4, nItemMinimumWidth: 300 };
         }
       }
-      var F,
-        P,
-        x,
+      var x,
         U,
-        V = "bordered";
-      function H(e) {
+        V,
+        H,
+        z = "bordered";
+      function W(e) {
         return e.carousel_rows || 1;
       }
-      function z(e) {
+      function q(e) {
         return e.cap_item_count || 0;
       }
-      function W(e) {
+      function Y(e) {
         return e.cap_section_content
           ? e.cap_section_row_count && 0 < e.cap_section_row_count
             ? e.cap_section_row_count
             : 4
           : 0;
       }
-      ((P = F = F || {})[(P.k_EStoreFilterClauseTypeOr = 0)] =
+      ((U = x = x || {})[(U.k_EStoreFilterClauseTypeOr = 0)] =
         "k_EStoreFilterClauseTypeOr"),
-        (P[(P.k_EStoreFilterClauseTypeAnd = 1)] =
+        (U[(U.k_EStoreFilterClauseTypeAnd = 1)] =
           "k_EStoreFilterClauseTypeAnd"),
-        (P[(P.k_EStoreFilterClauseTypeStoreTag = 2)] =
+        (U[(U.k_EStoreFilterClauseTypeStoreTag = 2)] =
           "k_EStoreFilterClauseTypeStoreTag"),
-        (P[(P.k_EStoreFilterClauseTypeFeatureTag = 3)] =
+        (U[(U.k_EStoreFilterClauseTypeFeatureTag = 3)] =
           "k_EStoreFilterClauseTypeFeatureTag"),
-        ((U = x = x || {})[(U.k_ESortFacetsByName = 0)] =
+        ((H = V = V || {})[(H.k_ESortFacetsByName = 0)] =
           "k_ESortFacetsByName"),
-        (U[(U.k_ESortFacetsByMatchCount = 1)] = "k_ESortFacetsByMatchCount"),
-        (U[(U.k_ESortFacetsManually = 2)] = "k_ESortFacetsManually");
-      var q = {
+        (H[(H.k_ESortFacetsByMatchCount = 1)] = "k_ESortFacetsByMatchCount"),
+        (H[(H.k_ESortFacetsManually = 2)] = "k_ESortFacetsManually");
+      var Q = {
           capsules: [],
           events: [],
           links: [],
@@ -2252,8 +2269,8 @@
           default_label: "#Sale_default_label",
           section_type: "items",
         },
-        Y = { internal_type: "subscription_pricing" };
-      function Q(e) {
+        K = { internal_type: "subscription_pricing" };
+      function Z(e) {
         (e.library_spotlight = void 0),
           e.email_setting &&
             ((e.email_setting.locked = void 0),
@@ -2268,7 +2285,7 @@
           (e.bInvisibleGameOptIn = void 0),
           (e.rt_migrated_time = void 0);
       }
-      var K = Object(a.a)(
+      var J = Object(a.a)(
           Object(a.a)(
             {
               localized_subtitle: new Array(30),
@@ -2296,11 +2313,11 @@
           ),
           { bScheduleEnabled: !1, scheduleEntries: [] }
         ),
-        Z = "old_announce_",
-        J = 80,
-        X = 120,
-        $ = 180,
-        ee = [
+        X = "old_announce_",
+        $ = 80,
+        ee = 120,
+        te = 180,
+        ne = [
           "steam_blog_featured",
           "workshop",
           "steam_blog",
@@ -2336,7 +2353,7 @@
           "enable_steam_china",
           "disable_steam_global",
         ],
-        te = [
+        ae = [
           "patchnotes",
           "steam_award_nomination_request",
           "steam_award_vote_request",
@@ -2349,7 +2366,7 @@
           "curator_group_members",
           "curator_public",
         ],
-        ne = {
+        re = {
           capsule: { width: 800, height: 450 },
           spotlight: { width: 2108, height: 460 },
           background: { width: 1920, height: 622 },
@@ -2382,28 +2399,28 @@
           product_mobile_banner_override: { width: 500, height: 160 },
           schedule_track_art: { width: 196, height: 92 },
         };
-      function ae(e, t, n) {
-        var a = ne[n];
+      function oe(e, t, n) {
+        var a = re[n];
         return (
           !!a && !a.bDisableEnforceDimensions && e === a.width && t === a.height
         );
       }
-      function re(e, t, n) {
-        var a = ne[n];
+      function ie(e, t, n) {
+        var a = re[n];
         return (
           !!a &&
           (!!a.bDisableEnforceDimensions || !(e < a.width || t < a.height))
         );
       }
-      var oe = (function () {
+      var se = (function () {
           function i() {
             (this.type = 1),
               (this.appid = 0),
               (this.name = new Map()),
               (this.description = new Map()),
               (this.timestamp_loc_updated = new Map()),
-              (this.visibility_state = B.k_EEventStateUnpublished),
-              (this.jsondata = K),
+              (this.visibility_state = T.k_EEventStateUnpublished),
+              (this.jsondata = J),
               (this.nCommentCount = 0),
               (this.nVotesUp = 0),
               (this.nVotesDown = 0),
@@ -2675,7 +2692,7 @@
               if (!this.BHasForumTopicGID()) return "";
               if (this.appid)
                 return (
-                  S.c.COMMUNITY_BASE_URL +
+                  E.c.COMMUNITY_BASE_URL +
                   "app/" +
                   this.appid +
                   "/eventcomments/" +
@@ -2685,12 +2702,12 @@
                 this.clanSteamID.GetAccountID()
               );
               return e && e.vanity_url
-                ? S.c.COMMUNITY_BASE_URL +
+                ? E.c.COMMUNITY_BASE_URL +
                     "groups/" +
                     e.vanity_url +
                     "/eventcomments/" +
                     this.forumTopicGID
-                : S.c.COMMUNITY_BASE_URL +
+                : E.c.COMMUNITY_BASE_URL +
                     "gid/" +
                     this.clanSteamID.ConvertTo64BitString() +
                     "/eventcomments/" +
@@ -2728,7 +2745,7 @@
                     if (0 != o.length)
                       return (o = o.replace(
                         c.d,
-                        S.c.MEDIA_CDN_COMMUNITY_URL + "images/clans/"
+                        E.c.MEDIA_CDN_COMMUNITY_URL + "images/clans/"
                       )).replace("http://", "https://");
                   }
                 }
@@ -2776,7 +2793,7 @@
               var d = p.a.GetStoreCapsuleInfo(u);
               return d.BIsLoaded()
                 ? d.GetAppStoreData().capsule
-                : S.c.MEDIA_CDN_URL + "steam/apps/" + u + "/header.jpg";
+                : E.c.MEDIA_CDN_URL + "steam/apps/" + u + "/header.jpg";
             }),
             (i.prototype.GetFallbackArtworkScreenshot = function () {
               if (this.appid) {
@@ -2848,13 +2865,13 @@
             (i.prototype.BIsVisibleEvent = function () {
               var e = Math.floor(d.a.GetTimeNowWithOverride());
               return (
-                this.visibility_state == B.k_EEventStateVisible &&
+                this.visibility_state == T.k_EEventStateVisible &&
                 e > this.visibilityStartTime &&
                 (this.visibilityEndTime < 10 || e < this.visibilityEndTime)
               );
             }),
             (i.prototype.BIsStagedEvent = function () {
-              return this.visibility_state == B.k_EEventStateStaged;
+              return this.visibility_state == T.k_EEventStateStaged;
             }),
             (i.prototype.GetStartTimeAndDateUnixSeconds = function () {
               return this.startTime;
@@ -2953,7 +2970,7 @@
                   ])),
                   (e = Object(o.c)(e)),
                   (e = Object(y.c)(e)),
-                  Object(y.d)(e, $))
+                  Object(y.d)(e, te))
                 : "";
             }),
             (i.prototype.BHasTag = function (e) {
@@ -3052,19 +3069,19 @@
             (i.prototype.GetSaleURL = function () {
               return Boolean(this.jsondata.sale_vanity_id)
                 ? this.jsondata.sale_vanity_id_valve_approved_for_sale_subpath
-                  ? S.c.STORE_BASE_URL + "sale/" + this.jsondata.sale_vanity_id
+                  ? E.c.STORE_BASE_URL + "sale/" + this.jsondata.sale_vanity_id
                   : u.a.BHasCreatorHomeLoaded(this.clanSteamID)
                   ? u.a
                       .GetCreatorHome(this.clanSteamID)
                       .GetCreatorHomeURL("developer") +
                     "sale/" +
                     this.jsondata.sale_vanity_id
-                  : S.c.STORE_BASE_URL +
+                  : E.c.STORE_BASE_URL +
                     "curator/" +
                     this.clanSteamID.GetAccountID() +
                     "/sale/" +
                     this.jsondata.sale_vanity_id
-                : S.c.STORE_BASE_URL +
+                : E.c.STORE_BASE_URL +
                     "newshub/" +
                     (this.appid
                       ? "app/" + this.appid
@@ -3272,11 +3289,11 @@
             i
           );
         })(),
-        ie = function (e) {
+        ce = function (e) {
           var t = Object(g.a)(e.appid);
-          return e.appid ? t : S.b.IS_ALLOWED_SC;
+          return e.appid ? t : E.b.IS_ALLOWED_SC;
         };
-      function se(e) {
+      function le(e) {
         return e.replace("(", "\\(").replace(")", "\\)");
       }
     },
@@ -11047,7 +11064,7 @@
                 S = t.GetSubTitleWithLanguageFallback(s),
                 E = t.GetSummaryWithFallback(s);
               S === E && (E = void 0), S === y && (S = void 0);
-              var C = Object(z.w)(m),
+              var C = Object(z.x)(m),
                 O = k.createElement(
                   "div",
                   { className: st.a.CoverImageCtn },
@@ -13436,7 +13453,7 @@
             k.createElement(
               "div",
               { className: an.a.mainmenu_legal_pwlegal },
-              "© 完美世界 版权所有。",
+              "© 完美世界征奇(上海)多媒体科技有限公司 版权所有。",
               k.createElement("br", null),
               "增值电信业务经营许可证沪B2-20180406"
             )
@@ -14397,11 +14414,11 @@
                     );
             }),
             (r.DoesCapsuleMatchStoreFilter = function (t, n) {
-              if (n.type === z.o.k_EStoreFilterClauseTypeStoreTag)
+              if (n.type === z.p.k_EStoreFilterClauseTypeStoreTag)
                 return t.tags.some(function (e) {
                   return e.tagid === n.value;
                 });
-              if (n.type === z.o.k_EStoreFilterClauseTypeFeatureTag)
+              if (n.type === z.p.k_EStoreFilterClauseTypeFeatureTag)
                 return "linux" === n.value
                   ? t.available_linux
                   : "mac" === n.value
@@ -14414,13 +14431,13 @@
                       "remote play" === n.value ||
                       n.value,
                     !1);
-              if (n.type === z.o.k_EStoreFilterClauseTypeOr) {
+              if (n.type === z.p.k_EStoreFilterClauseTypeOr) {
                 var e = n.rgSubexpressions.some(function (e) {
                   return r.DoesCapsuleMatchStoreFilter(t, e);
                 });
                 return n.bNegated ? !e : e;
               }
-              if (n.type !== z.o.k_EStoreFilterClauseTypeAnd) return !1;
+              if (n.type !== z.p.k_EStoreFilterClauseTypeAnd) return !1;
               var a = n.rgSubexpressions.every(function (e) {
                 return r.DoesCapsuleMatchStoreFilter(t, e);
               });
@@ -14722,7 +14739,7 @@
                     )
                       return e.rgFacetValue.bDeactivated ? 1 : -1;
                     if (
-                      o !== z.n.k_ESortFacetsByMatchCount ||
+                      o !== z.o.k_ESortFacetsByMatchCount ||
                       e.rgFacetValue.bEnabled ||
                       e.rgFacetValue.bDeactivated ||
                       e.rgFacetValue.nMatchingVisibleCapsules ===
@@ -14744,7 +14761,7 @@
               get: function () {
                 for (
                   var e = {
-                      type: z.o.k_EStoreFilterClauseTypeAnd,
+                      type: z.p.k_EStoreFilterClauseTypeAnd,
                       rgSubexpressions: new Array(),
                     },
                     t = 0,
@@ -14755,7 +14772,7 @@
                   for (
                     var a = n[t],
                       r = {
-                        type: z.o.k_EStoreFilterClauseTypeOr,
+                        type: z.p.k_EStoreFilterClauseTypeOr,
                         rgSubexpressions: new Array(),
                       },
                       o = 0,
@@ -15693,7 +15710,7 @@
                 (null != e &&
                   e.tabs &&
                   e.tabs.find(function (t) {
-                    return z.D.find(function (e) {
+                    return z.E.find(function (e) {
                       return e.flavor === t;
                     });
                   })) ||
@@ -15710,7 +15727,7 @@
               var o = Boolean(a) ? "search" : n;
               return r.tabs
                 .map(function (t) {
-                  return z.D.find(function (e) {
+                  return z.E.find(function (e) {
                     return e.flavor === t;
                   });
                 })
@@ -16243,7 +16260,7 @@
                 var t,
                   n = Boolean(this.props.bIsPreview);
                 n ||
-                  e.visibility_state === z.m.k_EEventStateVisible ||
+                  e.visibility_state === z.n.k_EEventStateVisible ||
                   "store" != Object(q.f)() ||
                   ((t = G.a.GetTimeNowWithOverride()),
                   (!e.startTime || e.startTime - 1209600 - 3600 < t) &&
@@ -16398,7 +16415,7 @@
                         ) &&
                           k.createElement(Hn, {
                             bPreviewMode: n,
-                            saleSection: Object(H.a)(Object(H.a)({}, z.k), {
+                            saleSection: Object(H.a)(Object(H.a)({}, z.l), {
                               section_type: "curator_recommendation",
                             }),
                             event: e,
@@ -17149,7 +17166,7 @@
               window.removeEventListener("resize", this.OnResize);
             }),
             (e.prototype.GetMaxCapsulesPerRow = function () {
-              var e = Object(z.u)(this.props.section.section_type);
+              var e = Object(z.v)(this.props.section.section_type);
               return Ea()
                 ? e.nMaxItemsPerRow
                 : Math.min(
@@ -17508,7 +17525,7 @@
                                               },
                                             ];
                                           case 8:
-                                            if (!Object(z.h)(n)) return [3, 13];
+                                            if (!Object(z.i)(n)) return [3, 13];
                                             e.label = 9;
                                           case 9:
                                             return (
@@ -17875,7 +17892,7 @@
                             I &&
                             (D = La(n, E) + 4) + 4 < O &&
                             ((O = D), (S = !0)),
-                          0 < (k = Object(z.t)(n)) &&
+                          0 < (k = Object(z.u)(n)) &&
                             ((B = Math.max(k + 5, Math.floor(1.1 * k))),
                             (O = Math.min(O, B))),
                           l.length > O && (l = l.slice(0, O)),
@@ -17892,7 +17909,7 @@
                         return (
                           (A = e.sent()),
                           (L = j.length),
-                          0 < (k = Object(z.t)(n)) &&
+                          0 < (k = Object(z.u)(n)) &&
                             k < A.length &&
                             (A = A.slice(0, k)),
                           (M = n.enable_faceted_browsing && A.length <= C && u),
@@ -18037,7 +18054,7 @@
             (e.prototype.GetRowsToShow = function (e) {
               var t = this.props.section;
               if (t.show_as_carousel) return 0;
-              var n = Object(z.r)(t);
+              var n = Object(z.s)(t);
               return n <= 0 ? 0 : n + e;
             }),
             (e.prototype.GetSNRData = function () {
@@ -18568,10 +18585,10 @@
         w = n("lkRc"),
         u = n("TLQK");
       n.d(t, "b", function () {
-        return s.m;
+        return s.n;
       }),
         n.d(t, "c", function () {
-          return s.q;
+          return s.r;
         });
       var d = (function () {
         return function (e) {
@@ -18623,7 +18640,7 @@
                         n = a.InsertEventModelFromClanEventData(t, e);
                       e.announcement_body &&
                         a.m_mapExistingEvents.set(
-                          s.F + e.announcement_body.gid,
+                          s.G + e.announcement_body.gid,
                           n
                         );
                     }),
@@ -18634,10 +18651,10 @@
                         n = a.InsertEventModelFromClanEventData(t, e);
                       e.announcement_body &&
                         !a.m_mapExistingEvents.has(
-                          s.F + e.announcement_body.gid
+                          s.G + e.announcement_body.gid
                         ) &&
                         a.m_mapExistingEvents.set(
-                          s.F + e.announcement_body.gid,
+                          s.G + e.announcement_body.gid,
                           n
                         );
                     }),
@@ -18763,12 +18780,12 @@
             }),
             (e.prototype.GetEventLookupKey = function (e) {
               return this.BIsOldAnnouncement(e)
-                ? s.F + e.announcement_body.gid
+                ? s.G + e.announcement_body.gid
                 : e.gid;
             }),
             (e.prototype.InsertEventModelFromClanEventData = function (e, t) {
               var n,
-                r = new s.q();
+                r = new s.r();
               (r.clanSteamID = e),
                 Object(f.a)(
                   r.clanSteamID && r.clanSteamID.BIsValid(),
@@ -18837,7 +18854,7 @@
                     r.description.set(0, t.event_notes)),
                 t.broadcaster_accountid &&
                   (r.broadcaster = new C.a(t.broadcaster_accountid));
-              var a = s.j;
+              var a = s.k;
               try {
                 r.jsondata = Object(g.a)(
                   Object(g.a)({}, a),
@@ -18933,7 +18950,7 @@
                         null
                       )),
                       (r.jsondata.sale_sections[t] = Object(g.a)(
-                        Object(g.a)({}, s.k),
+                        Object(g.a)({}, s.l),
                         e
                       ));
                   }),
@@ -18972,9 +18989,9 @@
                 }),
                 t.published
                   ? t.hidden
-                    ? (r.visibility_state = s.m.k_EEventStateStaged)
-                    : (r.visibility_state = s.m.k_EEventStateVisible)
-                  : (r.visibility_state = s.m.k_EEventStateUnpublished),
+                    ? (r.visibility_state = s.n.k_EEventStateStaged)
+                    : (r.visibility_state = s.n.k_EEventStateVisible)
+                  : (r.visibility_state = s.n.k_EEventStateUnpublished),
                 this.InsertUniqueEventGID(e.GetAccountID(), r.appid, r.GID),
                 this.m_mapExistingEvents.set(r.GID, r),
                 r.AnnouncementGID &&
@@ -19587,8 +19604,8 @@
                 ((t = t || this.m_mapExistingEvents.get(e).AnnouncementGID),
                 this.m_mapExistingEvents.delete(e)),
                 t &&
-                  (this.m_mapExistingEvents.has(s.F + t) &&
-                    this.m_mapExistingEvents.delete(s.F + t),
+                  (this.m_mapExistingEvents.has(s.G + t) &&
+                    this.m_mapExistingEvents.delete(s.G + t),
                   this.m_mapAnnouncementBodyToEvent.has(t) &&
                     ((n = this.m_mapAnnouncementBodyToEvent.get(t)),
                     this.m_mapExistingEvents.has(n) &&
@@ -19674,8 +19691,8 @@
                   if (r && this.m_mapExistingEvents.has(r))
                     return [2, this.m_mapExistingEvents.get(r)];
                   if (o) {
-                    if (this.m_mapExistingEvents.has(s.F + o))
-                      return [2, this.m_mapExistingEvents.get(s.F + o)];
+                    if (this.m_mapExistingEvents.has(s.G + o))
+                      return [2, this.m_mapExistingEvents.get(s.G + o)];
                     if (
                       this.m_mapAnnouncementBodyToEvent.has(o) &&
                       ((t = this.m_mapAnnouncementBodyToEvent.get(o)),
@@ -22560,7 +22577,7 @@
                       );
                     case 1:
                       if (1 != (a = e.sent()).data.success) throw a.data;
-                      return this.RemoveGIDFromList(r, l.F + o), [2, a.data];
+                      return this.RemoveGIDFromList(r, l.G + o), [2, a.data];
                   }
                 });
               });
@@ -31644,7 +31661,7 @@
             u = t.GetCategoryAsString(),
             d = t.GetSummaryWithFallback(s),
             p = t.GetSubTitleWithLanguageFallback(s) || "",
-            m = Object(R.w)(c);
+            m = Object(R.x)(c);
           return (
             p && (30 < p.length || 30 < l.length) && (p = void 0),
             S.a.createElement(
@@ -34542,7 +34559,7 @@
         if ((void 0 === a && (a = !1), n))
           for (var r = 0, o = n; r < o.length; r++) {
             var i = o[r];
-            if ((a ? Object(f.i) : Object(f.g))(e, t, i)) return i;
+            if ((a ? Object(f.j) : Object(f.h))(e, t, i)) return i;
           }
       }
       ((a = l = l || {}).full = ""),
@@ -35258,7 +35275,7 @@
               );
             }),
             (h.prototype.BIsOriginalMinimumDimensions = function (e) {
-              return Object(f.i)(this.img.width, this.img.height, e);
+              return Object(f.j)(this.img.width, this.img.height, e);
             }),
             (h.prototype.GetResizeDimension = function () {
               return h.GetResizeDimension(this.type);
@@ -39371,7 +39388,7 @@
                 C.createElement(
                   "div",
                   { className: Y.a.RightSideTitles },
-                  s.y.some(function (e) {
+                  s.z.some(function (e) {
                     return t === e;
                   })
                     ? Object(j.f)("#EventDisplay_RightColumnTitle_Blog")
@@ -39473,12 +39490,9 @@
                 )
                   return null;
                 var a =
-                    t.BIsPartnerEvent() &&
-                    t.BIsVisibleEvent() &&
-                    u.a.GetStatsFor(t.clanSteamID, t.GID),
-                  r =
-                    !t.BHasTag("mod_reviewed") ||
-                    t.BHasTag("mod_require_rereview");
+                  t.BIsPartnerEvent() &&
+                  t.BIsVisibleEvent() &&
+                  u.a.GetStatsFor(t.clanSteamID, t.GID);
                 return C.createElement(
                   G.a,
                   null,
@@ -39544,7 +39558,7 @@
                       C.createElement(v.a, {
                         summary: a.m_stats,
                         bIsAllowedInLibrary: n,
-                        bEventIsInModerationQueue: r,
+                        bEventIsInModerationQueue: Object(s.g)(t),
                       })
                     )
                 );
@@ -50469,7 +50483,7 @@
                         index: a,
                       });
                     }
-                    var d = r.single_item_style ? r.single_item_style : M.x;
+                    var d = r.single_item_style ? r.single_item_style : M.y;
                     return k.createElement(
                       "div",
                       {
@@ -50529,7 +50543,7 @@
           c = 1 === r.length,
           p = c ? [1] : P(u),
           m = c && 1 < t ? ["fullrow"] : x(u),
-          h = Object(M.s)(u),
+          h = Object(M.t)(u),
           _ = u.show_as_carousel && h <= 1,
           f = V(0, m),
           v = Math.min(p[0], H(f, t));
@@ -50551,7 +50565,7 @@
         else {
           var b = (function (e, t) {
               if (e.show_as_carousel) return 0;
-              var n = Object(M.r)(e);
+              var n = Object(M.s)(e);
               return n <= 0 ? 0 : n + t;
             })(u, a),
             g = !0;
@@ -52094,7 +52108,7 @@
           var t = e.event,
             n = Object(m.d)(N.c.LANGUAGE),
             a = t.GetImageURLWithFallback("capsule", n),
-            r = Object(c.w)(a);
+            r = Object(c.x)(a);
           return p.createElement("div", {
             className: X.a.ClanEventDetailBackground,
             style: { backgroundImage: "url(" + r + ")" },
@@ -61165,7 +61179,7 @@
             u = null,
             d = null,
             p = null,
-            m = Boolean(t !== I.C),
+            m = Boolean(t !== I.D),
             h = null;
           if (t) {
             var _ = B.a.GetStoreCapsuleInfo(t);
