@@ -2,8 +2,8 @@
 __TEXT
 __text
 __TEXT
-@q
-@q
+q
+q
 __stubs
 __TEXT
 __stub_helper
@@ -352,6 +352,7 @@ N3IPC10ISharedMemE
 10IMemStream
 16CSharedMemStream
 aE
+zC
 https://www.google.com
 O
 v
@@ -9664,8 +9665,8 @@ developer
 Steam pid that launched us
 VGUI_Application_001
 OK
-Mar 16 2021
-17:42:27
+Mar 17 2021
+20:31:41
 crashhandler003
 gameoverlayui
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/overlay/gameoverlayui/main.cpp
@@ -13329,9 +13330,9 @@ Dec
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 1p&
-a$
-T$
-@$
+H$
+[$
+O$
 #
 $
 $
@@ -13340,15 +13341,19 @@ $
 p
 p
 0
-+
+UA
+6
 5
-2#
 A
 A
 6
 6
+6
 #
 #
+#
+#
+}I
 0
 p
 (
@@ -13365,26 +13370,19 @@ p
 #
 #
 #
-#
-#
-#
-u@
-K"
 !
 !
+"
+"
 "
 "
 @
+m
+;"
 "
-"
-8"
-n!
+y
 I
 d
-!?
-6!
-|
-!
 
 
 !
@@ -13424,11 +13422,12 @@ p
 p
 p
 0
+#
 @
 =
 q
 0
-(
+6
 ?
 ?
 ?

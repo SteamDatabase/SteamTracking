@@ -161,7 +161,7 @@ public:
     virtual unknown_ret ReserveSteamController() = 0;
     virtual unknown_ret CancelSteamControllerReservations() = 0;
     virtual unknown_ret OpenStreamingSession(unsigned int, unsigned int) = 0;
-    virtual unknown_ret CloseStreamingSession(unsigned int) = 0;
+    virtual unknown_ret CloseStreamingSession(unsigned int, unsigned int) = 0;
     virtual unknown_ret InitiateBootloaderFirmwareUpdate(unsigned int) = 0;
     virtual unknown_ret InitiateISPFirmwareUpdate(unsigned int) = 0;
     virtual unknown_ret FlashControllerFirmware(unsigned int, CUtlBuffer*, unsigned int, char const*) = 0;
