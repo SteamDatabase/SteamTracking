@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6422375";
+var CLSTAMP = "6423854";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [11],
   {
@@ -9944,7 +9944,7 @@ var CLSTAMP = "6422375";
                           return [3, 2];
                         for (u in ((l = new FormData()), c))
                           l.append("" + u, "" + c[u]);
-                        return [4, I.a.post(i, c)];
+                        return [4, I.a.post(i, l)];
                       case 1:
                         return (s = e.sent()), [3, 4];
                       case 2:
@@ -58301,19 +58301,16 @@ var CLSTAMP = "6422375";
                 this.m_rgFacets.forEach(function (e) {
                   var n = new Array();
                   e.rgFacetValues.forEach(function (e) {
-                    var t;
-                    (!a.bSaleScope ||
-                      (null !== (t = e.matchingCapsules) &&
-                        void 0 !== t &&
-                        t.some(function (e) {
-                          return o.has(e.id);
-                        }))) &&
+                    var t = e.matchingCapsules.filter(function (e) {
+                      return o.has(e.id);
+                    });
+                    (!a.bSaleScope || 0 < t.length) &&
                       ((e.rgMatchingCapsulesSet = new Set(
-                        e.matchingCapsules.map(function (e) {
+                        t.map(function (e) {
                           return e.id;
                         })
                       )),
-                      (e.nMatchingCapsules = e.matchingCapsules.length),
+                      (e.nMatchingCapsules = t.length),
                       n.push({ rgFacetValue: e }));
                   }),
                     a.bSaleScope &&
@@ -58839,12 +58836,12 @@ var CLSTAMP = "6422375";
             u = { borderBottom: "0px solid " + (a || "white") },
             p = Object(v.f)(v.a.GetWithFallback(t.rgFacet.rgName, n)),
             d = e.nMaxFacetValues,
-            m = t.rgFacet.rgFacetValues.reduce(function (e, t) {
-              return e + (t.bDeactivated ? 1 : 0);
+            m = t.rgFacetValues.reduce(function (e, t) {
+              return e + (t.rgFacetValue.bDeactivated ? 1 : 0);
             }, 0);
-          d = Math.min(d, t.rgFacet.rgFacetValues.length - m);
-          var h = t.rgFacet.rgFacetValues.reduce(function (e, t) {
-            return e + (t.bEnabled ? 1 : 0);
+          d = Math.min(d, t.rgFacetValues.length - m);
+          var h = t.rgFacetValues.reduce(function (e, t) {
+            return e + (t.rgFacetValue.bEnabled ? 1 : 0);
           }, 0);
           d <= h &&
             (d =
