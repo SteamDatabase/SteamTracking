@@ -41,6 +41,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/vgui_controls/DialogManager.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/vgui_controls/Image.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/vgui_controls/MenuItem.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/remoteplaycontroller.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/sharedconnectioncontroller.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/sharedconnectioncontroller.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/streaming/proto/stream.pb.cc

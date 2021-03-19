@@ -2017,8 +2017,8 @@
  D typeinfo for CCallbackImpl<32>
  D typeinfo for CCallbackImpl<40>
  D typeinfo for CCallbackImpl<4288>
- D typeinfo for CCallbackImpl<44>
  D typeinfo for CCallbackImpl<4>
+ D typeinfo for CCallbackImpl<52>
  D typeinfo for CCallbackImpl<72>
  D typeinfo for CCallbackImpl<76>
  D typeinfo for CCallbackImpl<7>
@@ -2501,6 +2501,8 @@
  D typeinfo for CRemotePlayController::CCallbackInternal_OnRemoteClientStreamLifetime
  D typeinfo for CRemotePlayController::CCallbackInternal_OnRemotePlayInviteResult
  D typeinfo for CRemotePlayController::CCallbackInternal_OnRemotePlaySessionStopped
+ D typeinfo for CRemotePlayController::CCallbackInternal_OnRemotePlayTogetherGroupCreated
+ D typeinfo for CRemotePlayController::CCallbackInternal_OnRemotePlayTogetherGroupDisbanded
  D typeinfo for CRemotePlayController::CCallbackInternal_OnRemotePlayTogetherPlayerJoined
  D typeinfo for CRemotePlayController::CCallbackInternal_OnRemotePlayTogetherPlayerLeft
  D typeinfo for CRemotePlayController::CCallbackInternal_OnStreamingClientConnected
@@ -3502,8 +3504,8 @@
  D vtable for CCallbackImpl<32>
  D vtable for CCallbackImpl<40>
  D vtable for CCallbackImpl<4288>
- D vtable for CCallbackImpl<44>
  D vtable for CCallbackImpl<4>
+ D vtable for CCallbackImpl<52>
  D vtable for CCallbackImpl<72>
  D vtable for CCallbackImpl<76>
  D vtable for CCallbackImpl<7>
@@ -3981,6 +3983,8 @@
  D vtable for CRemotePlayController::CCallbackInternal_OnRemoteClientStreamLifetime
  D vtable for CRemotePlayController::CCallbackInternal_OnRemotePlayInviteResult
  D vtable for CRemotePlayController::CCallbackInternal_OnRemotePlaySessionStopped
+ D vtable for CRemotePlayController::CCallbackInternal_OnRemotePlayTogetherGroupCreated
+ D vtable for CRemotePlayController::CCallbackInternal_OnRemotePlayTogetherGroupDisbanded
  D vtable for CRemotePlayController::CCallbackInternal_OnRemotePlayTogetherPlayerJoined
  D vtable for CRemotePlayController::CCallbackInternal_OnRemotePlayTogetherPlayerLeft
  D vtable for CRemotePlayController::CCallbackInternal_OnStreamingClientConnected
@@ -4372,8 +4376,8 @@
  R typeinfo name for CCallbackImpl<32>
  R typeinfo name for CCallbackImpl<40>
  R typeinfo name for CCallbackImpl<4288>
- R typeinfo name for CCallbackImpl<44>
  R typeinfo name for CCallbackImpl<4>
+ R typeinfo name for CCallbackImpl<52>
  R typeinfo name for CCallbackImpl<72>
  R typeinfo name for CCallbackImpl<76>
  R typeinfo name for CCallbackImpl<7>
@@ -4858,6 +4862,8 @@
  R typeinfo name for CRemotePlayController::CCallbackInternal_OnRemoteClientStreamLifetime
  R typeinfo name for CRemotePlayController::CCallbackInternal_OnRemotePlayInviteResult
  R typeinfo name for CRemotePlayController::CCallbackInternal_OnRemotePlaySessionStopped
+ R typeinfo name for CRemotePlayController::CCallbackInternal_OnRemotePlayTogetherGroupCreated
+ R typeinfo name for CRemotePlayController::CCallbackInternal_OnRemotePlayTogetherGroupDisbanded
  R typeinfo name for CRemotePlayController::CCallbackInternal_OnRemotePlayTogetherPlayerJoined
  R typeinfo name for CRemotePlayController::CCallbackInternal_OnRemotePlayTogetherPlayerLeft
  R typeinfo name for CRemotePlayController::CCallbackInternal_OnStreamingClientConnected
@@ -6172,12 +6178,12 @@
  T CCallbackImpl<4288>::GetCallbackSizeBytes()
  T CCallbackImpl<4288>::Run(void*, bool, unsigned long long)
  T CCallbackImpl<4288>::~CCallbackImpl()
- T CCallbackImpl<44>::GetCallbackSizeBytes()
- T CCallbackImpl<44>::Run(void*, bool, unsigned long long)
- T CCallbackImpl<44>::~CCallbackImpl()
  T CCallbackImpl<4>::GetCallbackSizeBytes()
  T CCallbackImpl<4>::Run(void*, bool, unsigned long long)
  T CCallbackImpl<4>::~CCallbackImpl()
+ T CCallbackImpl<52>::GetCallbackSizeBytes()
+ T CCallbackImpl<52>::Run(void*, bool, unsigned long long)
+ T CCallbackImpl<52>::~CCallbackImpl()
  T CCallbackImpl<72>::GetCallbackSizeBytes()
  T CCallbackImpl<72>::Run(void*, bool, unsigned long long)
  T CCallbackImpl<72>::~CCallbackImpl()
@@ -10832,6 +10838,12 @@
  T CRemotePlayController::CCallbackInternal_OnRemotePlaySessionStopped::CCallbackInternal_OnRemotePlaySessionStopped()
  T CRemotePlayController::CCallbackInternal_OnRemotePlaySessionStopped::Run(void*)
  T CRemotePlayController::CCallbackInternal_OnRemotePlaySessionStopped::~CCallbackInternal_OnRemotePlaySessionStopped()
+ T CRemotePlayController::CCallbackInternal_OnRemotePlayTogetherGroupCreated::CCallbackInternal_OnRemotePlayTogetherGroupCreated()
+ T CRemotePlayController::CCallbackInternal_OnRemotePlayTogetherGroupCreated::Run(void*)
+ T CRemotePlayController::CCallbackInternal_OnRemotePlayTogetherGroupCreated::~CCallbackInternal_OnRemotePlayTogetherGroupCreated()
+ T CRemotePlayController::CCallbackInternal_OnRemotePlayTogetherGroupDisbanded::CCallbackInternal_OnRemotePlayTogetherGroupDisbanded()
+ T CRemotePlayController::CCallbackInternal_OnRemotePlayTogetherGroupDisbanded::Run(void*)
+ T CRemotePlayController::CCallbackInternal_OnRemotePlayTogetherGroupDisbanded::~CCallbackInternal_OnRemotePlayTogetherGroupDisbanded()
  T CRemotePlayController::CCallbackInternal_OnRemotePlayTogetherPlayerJoined::CCallbackInternal_OnRemotePlayTogetherPlayerJoined()
  T CRemotePlayController::CCallbackInternal_OnRemotePlayTogetherPlayerJoined::Run(void*)
  T CRemotePlayController::CCallbackInternal_OnRemotePlayTogetherPlayerJoined::~CCallbackInternal_OnRemotePlayTogetherPlayerJoined()
@@ -10847,6 +10859,7 @@
  T CRemotePlayController::CRemotePlayController()
  T CRemotePlayController::CancelInviteAndSession(char const*, unsigned int, CSmartPtr<CJSCallbackPromise>)
  T CRemotePlayController::CancelInviteAndSessionWithGuestID(char const*, unsigned int, CSmartPtr<CJSCallbackPromise>)
+ T CRemotePlayController::CloseGroup(CSmartPtr<CJSCallbackPromise>)
  T CRemotePlayController::CreateInviteAndSession(char const*, char const*, CSmartPtr<CJSCallbackPromise>)
  T CRemotePlayController::CreateInviteAndSessionWithGuestID(char const*, unsigned int, char const*, CSmartPtr<CJSCallbackPromise>)
  T CRemotePlayController::GetClientStreamingQuality(CSmartPtr<CJSCallbackPromise>)
@@ -10865,12 +10878,16 @@
  T CRemotePlayController::OnRemoteClientStreamLifetime(RemoteClientStreamLifetime_t*)
  T CRemotePlayController::OnRemotePlayInviteResult(RemotePlayInviteResult_t*)
  T CRemotePlayController::OnRemotePlaySessionStopped(RemoteClientStopStreamSession_t*)
+ T CRemotePlayController::OnRemotePlayTogetherGroupCreated(RemoteClientRemotePlayTogetherGroupCreated_t*)
+ T CRemotePlayController::OnRemotePlayTogetherGroupDisbanded(RemoteClientRemotePlayTogetherGroupDisbanded_t*)
  T CRemotePlayController::OnRemotePlayTogetherPlayerJoined(RemoteClientRemotePlayTogetherPlayerJoined_t*)
  T CRemotePlayController::OnRemotePlayTogetherPlayerLeft(RemoteClientRemotePlayTogetherPlayerLeft_t*)
  T CRemotePlayController::OnStreamingClientConnected(StreamingClientConnected_t*)
  T CRemotePlayController::OnStreamingClientUsedInput(StreamingClientUsedInput_t*)
  T CRemotePlayController::RegisterForClearControllers(CSmartPtr<CJSCallbackFunc>)
  T CRemotePlayController::RegisterForControllerIndexSet(CSmartPtr<CJSCallbackFunc>)
+ T CRemotePlayController::RegisterForGroupCreated(CSmartPtr<CJSCallbackFunc>)
+ T CRemotePlayController::RegisterForGroupDisbanded(CSmartPtr<CJSCallbackFunc>)
  T CRemotePlayController::RegisterForInputUsed(CSmartPtr<CJSCallbackFunc>)
  T CRemotePlayController::RegisterForInviteResult(CSmartPtr<CJSCallbackFunc>)
  T CRemotePlayController::RegisterForPlaceholderStateChanged(CSmartPtr<CJSCallbackFunc>)
@@ -12340,6 +12357,7 @@
  T CUtlVector<RemotePlayPlayer_t, CUtlMemory<RemotePlayPlayer_t> >::FindAndFastRemove(RemotePlayPlayer_t const&)
  T CUtlVector<RemotePlayPlayer_t, CUtlMemory<RemotePlayPlayer_t> >::GrowVector(int)
  T CUtlVector<RemotePlayPlayer_t, CUtlMemory<RemotePlayPlayer_t> >::RecursiveValidate(CValidator&, char const*)
+ T CUtlVector<RemotePlayPlayer_t, CUtlMemory<RemotePlayPlayer_t> >::SetCount(int)
  T CUtlVector<RemotePlayPlayer_t, CUtlMemory<RemotePlayPlayer_t> >::~CUtlVector()
  T CUtlVector<char const*, CUtlMemory<char const*> >::AddToTail(char const* const&)
  T CUtlVector<char const*, CUtlMemory<char const*> >::AddToTail(char const*&&)

@@ -78,11 +78,13 @@ public:
     virtual unknown_ret SetPerUserMouseInputEnabled(RemotePlayPlayer_t, bool) = 0;
     virtual unknown_ret SetPerUserControllerInputEnabled(RemotePlayPlayer_t, bool) = 0;
     virtual unknown_ret GetPerUserInputSettings(RemotePlayPlayer_t, RemoteClientInputSettings_t*) = 0;
+    virtual unknown_ret GetClientInputSettings(RemotePlayPlayer_t, RemoteClientInputSettings_t*) = 0;
     virtual unknown_ret OnClientUsedInput(RemotePlayPlayer_t, EClientUsedInputType) = 0;
     virtual unknown_ret OnPlaceholderStateChanged(bool) = 0;
     virtual unknown_ret OnRemoteClientRemotePlayClearControllers() = 0;
     virtual unknown_ret OnRemoteClientRemotePlayControllerIndexSet(RemotePlayPlayer_t, unsigned int) = 0;
-    virtual unknown_ret UpdateRemotePlayTogetherSession() = 0;
+    virtual unknown_ret UpdateRemotePlayTogetherGroup() = 0;
+    virtual unknown_ret DisbandRemotePlayTogetherGroup() = 0;
     virtual unknown_ret OnRemotePlayUIMovedController() = 0;
     virtual unknown_ret OnSendRemotePlayTogetherInvite(CSteamID, unsigned int) = 0;
     virtual unknown_ret GetCloudGameTimeRemaining(CGameID, unsigned long long) = 0;

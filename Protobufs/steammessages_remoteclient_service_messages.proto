@@ -138,6 +138,9 @@ message CRemotePlayTogether_Notification {
 		optional fixed64 steamid = 1;
 		optional uint32 guestid = 2;
 		optional bytes avatar_hash = 3;
+		optional bool keyboard_enabled = 4;
+		optional bool mouse_enabled = 5;
+		optional bool controller_enabled = 6;
 	}
 
 	message ControllerSlot_obsolete {

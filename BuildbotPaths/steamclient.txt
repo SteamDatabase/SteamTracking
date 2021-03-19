@@ -348,6 +348,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steammessages_econ.steamclient.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steammessages_friendmessages.steamclient.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steammessages_gamenetworking.steamclient.pb.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steammessages_gamenetworkingui.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steammessages_gamenotifications.steamclient.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steammessages_gameservers.steamclient.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steammessages_hiddevices.pb.o
@@ -653,6 +654,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steammessages_econ.steamclient.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steammessages_friendmessages.steamclient.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steammessages_gamenetworking.steamclient.pb.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steammessages_gamenetworkingui.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steammessages_gamenotifications.steamclient.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steammessages_gameservers.steamclient.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steammessages_hiddevices.pb.o
@@ -1197,6 +1199,8 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_friendmessages.steamclient.pb.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_gamenetworking.steamclient.pb.cc
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_gamenetworking.steamclient.pb.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_gamenetworkingui.pb.cc
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_gamenetworkingui.pb.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_gamenotifications.steamclient.pb.cc
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_gamenotifications.steamclient.pb.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_gameservers.steamclient.pb.cc
@@ -1990,6 +1994,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamnetworkingsockets/
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamnetworkingsockets/clientlib/
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamnetworkingsockets/clientlib/../../clientdll/internalcallbacks.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamnetworkingsockets/clientlib/../../common/steammessages_gamenetworkingui.pb.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamnetworkingsockets/clientlib/../../external/steamwebrtc/ice_session.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamnetworkingsockets/clientlib/../steamdatagram_internal.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamnetworkingsockets/clientlib/../steamdatagram_network_config.h

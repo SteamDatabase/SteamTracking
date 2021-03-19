@@ -360,16 +360,6 @@
         "posted_in": "CSteamEngine::SetVRHeadsetStreamingEnabled(unsigned int, bool)"
     },
     {
-        "id": 721,
-        "size": 1,
-        "posted_in": "void CSteamEngine::PostCallbackToAllUI<HIDDeviceChanged_t>(HIDDeviceChanged_t*)"
-    },
-    {
-        "id": 722,
-        "size": 1,
-        "posted_in": "void CSteamEngine::PostCallbackToAllUI<OverlayChatBrowserInfoChanged_t>(OverlayChatBrowserInfoChanged_t*)"
-    },
-    {
         "id": 723,
         "size": 24584,
         "posted_in": "CSteamEngine::DispatchClientUINotification(EClientUINotificationType, char const*, unsigned int)"
@@ -385,19 +375,9 @@
         "posted_in": "CSteamEngine::DispatchClientUICommand(char const*, unsigned int)"
     },
     {
-        "id": 726,
-        "size": 8,
-        "posted_in": "void CSteamEngine::PostCallbackToAllUI<ComputerActiveStateChange_t>(ComputerActiveStateChange_t*)"
-    },
-    {
         "id": 727,
         "size": 4,
         "posted_in": "CUserFriends::SetPersonaStateInternal(EPersonaState, bool)"
-    },
-    {
-        "id": 728,
-        "size": 1032,
-        "posted_in": "void CSteamEngine::PostCallbackToAllUI<OpenURLInClient_t>(OpenURLInClient_t*)"
     },
     {
         "id": 729,
@@ -408,21 +388,6 @@
         "id": 730,
         "size": 1,
         "posted_in": "void CBaseAPIJob::PostAPIResult<WideVineDownloadCompleted_t>(WideVineDownloadCompleted_t*)"
-    },
-    {
-        "id": 731,
-        "size": 1,
-        "posted_in": "void CSteamEngine::PostCallbackToAllUI<ClearAllBrowsingData_t>(ClearAllBrowsingData_t*)"
-    },
-    {
-        "id": 732,
-        "size": 1,
-        "posted_in": "void CSteamEngine::PostCallbackToAllUI<ClientSettingsChanged_t>(ClientSettingsChanged_t*)"
-    },
-    {
-        "id": 733,
-        "size": 4288,
-        "posted_in": "void CSteamEngine::PostCallbackToAllUI<ClientPostMessage_t>(ClientPostMessage_t*)"
     },
     {
         "id": 801,
@@ -882,12 +847,12 @@
     {
         "id": 968,
         "size": 1,
-        "posted_in": "void CSteamEngine::PostCallbackToAllUI<StartStreamingUI_t>(StartStreamingUI_t*)"
+        "posted_in": "CUser::StartNVStreaming(unsigned int, int, char const*)"
     },
     {
         "id": 969,
         "size": 1,
-        "posted_in": "void CSteamEngine::PostCallbackToAllUI<StopStreamingUI_t>(StopStreamingUI_t*)"
+        "posted_in": "CUser::StopNVStreaming(int)"
     },
     {
         "id": 970,
@@ -935,11 +900,6 @@
         "posted_in": "CClientJobGetTwoFactorDetails::BYieldingRunAPIJob()"
     },
     {
-        "id": 985,
-        "size": 388,
-        "posted_in": "void CSteamEngine::PostCallbackToAllUI<VRHMDHardwareDetected_t>(VRHMDHardwareDetected_t*)"
-    },
-    {
         "id": 986,
         "size": 8,
         "posted_in": "CSiteLicenseClientJob_SiteManagerClient_SeatCheckoutNotification::YieldingRunMethod(CUser*, CSiteLicense_ClientSeatCheckout_Notification const&)"
@@ -972,27 +932,17 @@
     {
         "id": 992,
         "size": 1,
-        "posted_in": "void CSteamEngine::PostCallbackToAllUI<StartBigPictureForStreaming_t>(StartBigPictureForStreaming_t*)"
+        "posted_in": "CUser::StartNVStreaming(unsigned int, int, char const*)"
     },
     {
         "id": 993,
         "size": 1,
-        "posted_in": "void CSteamEngine::PostCallbackToAllUI<StopBigPictureForStreaming_t>(StopBigPictureForStreaming_t*)"
+        "posted_in": "CUser::StopNVStreaming(int)"
     },
     {
         "id": 994,
         "size": 264,
         "posted_in": "CUser::SendAppLicenseUpdates()"
-    },
-    {
-        "id": 996,
-        "size": 1,
-        "posted_in": "void CSteamEngine::PostCallbackToAllUI<ShowRecentGamesOptimizedForRemotePlay_t>(ShowRecentGamesOptimizedForRemotePlay_t*)"
-    },
-    {
-        "id": 997,
-        "size": 1,
-        "posted_in": "void CSteamEngine::PostCallbackToAllUI<HideRecentGamesOptimizedForRemotePlay_t>(HideRecentGamesOptimizedForRemotePlay_t*)"
     },
     {
         "id": 998,
@@ -1090,11 +1040,6 @@
         "posted_in": "CUser::PostLegacyCDKeyResponseToApp(int, unsigned int, EResult, unsigned int, char const*, unsigned int)"
     },
     {
-        "id": 1022,
-        "size": 1,
-        "posted_in": "void CSteamEngine::PostCallbackToAllUI<AppConfigInitialized_t>(AppConfigInitialized_t*)"
-    },
-    {
         "id": 1023,
         "size": 36,
         "posted_in": "void CBaseAPIJob::PostAPIResult<FileDetailsResult_t>(FileDetailsResult_t*)"
@@ -1122,7 +1067,7 @@
     {
         "id": 1028,
         "size": 1,
-        "posted_in": "void CSteamEngine::PostCallbackToAllUsers<AppStoreTagLocalizationChanged_t>(AppStoreTagLocalizationChanged_t*)"
+        "posted_in": "CGameID::IsValid() const"
     },
     {
         "id": 1029,
@@ -1530,144 +1475,14 @@
         "posted_in": "CUser::OnBigPictureForStreamingRestarting()"
     },
     {
-        "id": 2701,
-        "size": 4,
-        "posted_in": "void CSteamEngine::PostCallbackToAllUI<ControllerConnected_t>(ControllerConnected_t*)"
-    },
-    {
-        "id": 2702,
-        "size": 4,
-        "posted_in": "void CSteamEngine::PostCallbackToAllUI<ControllerDisconnected_t>(ControllerDisconnected_t*)"
-    },
-    {
-        "id": 2703,
-        "size": 24,
-        "posted_in": "void CSteamEngine::PostCallbackToAllUI<LoadControllerConfigResult_t>(LoadControllerConfigResult_t*)"
-    },
-    {
         "id": 2707,
         "size": 92,
         "posted_in": "CGetControllerInfoWorkItem::DispatchCompletion()"
     },
     {
-        "id": 2710,
-        "size": 524,
-        "posted_in": "void CSteamEngine::PostCallbackToAllUI<SetControllerOverrideModeForApp_t>(SetControllerOverrideModeForApp_t*)"
-    },
-    {
         "id": 2711,
         "size": 8,
         "posted_in": "CSteamController::FlashControllerFirmware(unsigned int, CUtlBuffer*, unsigned int, char const*)"
-    },
-    {
-        "id": 2712,
-        "size": 2,
-        "posted_in": "void CSteamEngine::PostCallbackToAllUI<ControllerWirelessPresence_t>(ControllerWirelessPresence_t*)"
-    },
-    {
-        "id": 2714,
-        "size": 4,
-        "posted_in": "void CSteamEngine::PostCallbackToAllUI<ControllerPaired_t>(ControllerPaired_t*)"
-    },
-    {
-        "id": 2715,
-        "size": 40,
-        "posted_in": "void CSteamEngine::PostCallbackToAllUI<ControllerTouchMenuCreate_t>(ControllerTouchMenuCreate_t*)"
-    },
-    {
-        "id": 2716,
-        "size": 8,
-        "posted_in": "void CSteamEngine::PostCallbackToAllUI<ControllerTouchMenuDestroy_t>(ControllerTouchMenuDestroy_t*)"
-    },
-    {
-        "id": 2717,
-        "size": 1,
-        "posted_in": "void CSteamEngine::PostCallbackToAllUI<ControllerPacketLossUI_t>(ControllerPacketLossUI_t*)"
-    },
-    {
-        "id": 2718,
-        "size": 12,
-        "posted_in": "void CSteamEngine::PostCallbackToAllUI<ControllerShowBindingPanel_t>(ControllerShowBindingPanel_t*)"
-    },
-    {
-        "id": 2720,
-        "size": 4096,
-        "posted_in": "void CSteamEngine::PostCallbackToAllUI<ControllerConfigLoadError_t>(ControllerConfigLoadError_t*)"
-    },
-    {
-        "id": 2722,
-        "size": 4,
-        "posted_in": "void CSteamEngine::PostCallbackToAllUI<ControllerDisplayKeyboard_t>(ControllerDisplayKeyboard_t*)"
-    },
-    {
-        "id": 2723,
-        "size": 8,
-        "posted_in": "void CSteamEngine::PostCallbackToAllUI<ReceivedControllerConfigSets_t>(ReceivedControllerConfigSets_t*)"
-    },
-    {
-        "id": 2724,
-        "size": 80,
-        "posted_in": "void CSteamEngine::PostCallbackToAllUI<ControllerPersonalizationUpdated_t>(ControllerPersonalizationUpdated_t*)"
-    },
-    {
-        "id": 2725,
-        "size": 4,
-        "posted_in": "void CSteamEngine::PostCallbackToAllUI<ControllerAccountsUpdated_t>(ControllerAccountsUpdated_t*)"
-    },
-    {
-        "id": 2726,
-        "size": 4,
-        "posted_in": "void CSteamEngine::PostCallbackToAllUI<ControllerDongleUpdateStatus_t>(ControllerDongleUpdateStatus_t*)"
-    },
-    {
-        "id": 2727,
-        "size": 4,
-        "posted_in": "void CSteamEngine::PostCallbackToAllUI<ReceivedControllerPersonalizationCfg_t>(ReceivedControllerPersonalizationCfg_t*)"
-    },
-    {
-        "id": 2728,
-        "size": 16,
-        "posted_in": "void CSteamEngine::PostCallbackToAllUI<ControllerActionSetChanged_t>(ControllerActionSetChanged_t*)"
-    },
-    {
-        "id": 2729,
-        "size": 16,
-        "posted_in": "void CSteamEngine::PostCallbackToAllUI<ControllerActionTriggered_t>(ControllerActionTriggered_t*)"
-    },
-    {
-        "id": 2731,
-        "size": 1052,
-        "posted_in": "void CSteamEngine::PostCallbackToAllUI<SavePersonalizationFile_t>(SavePersonalizationFile_t*)"
-    },
-    {
-        "id": 2732,
-        "size": 12,
-        "posted_in": "void CSteamEngine::PostCallbackToAllUI<ControllerAutosaveBinding_t>(ControllerAutosaveBinding_t*)"
-    },
-    {
-        "id": 2733,
-        "size": 1,
-        "posted_in": "void CSteamEngine::PostCallbackToAllUI<ControllerEnableCacheReset_t>(ControllerEnableCacheReset_t*)"
-    },
-    {
-        "id": 2734,
-        "size": 12,
-        "posted_in": "void CSteamEngine::PostCallbackToAllUI<ControllerConfigVersionMismatch_t>(ControllerConfigVersionMismatch_t*)"
-    },
-    {
-        "id": 2735,
-        "size": 72,
-        "posted_in": "void CSteamEngine::PostCallbackToAllUI<ControllerPlayerNumberChanged_t>(ControllerPlayerNumberChanged_t*)"
-    },
-    {
-        "id": 2736,
-        "size": 20,
-        "posted_in": "void CSteamEngine::PostCallbackToAllUI<ControllerActionSetLayerChanged_t>(ControllerActionSetLayerChanged_t*)"
-    },
-    {
-        "id": 2737,
-        "size": 4,
-        "posted_in": "void CSteamEngine::PostCallbackToAllUI<GuideButtonsPressedChange_t>(GuideButtonsPressedChange_t*)"
     },
     {
         "id": 2901,
@@ -1723,11 +1538,6 @@
         "id": 3006,
         "size": 4,
         "posted_in": "void CBaseAPIJob::PostAPIResult<UpdateAuthorizedBorrowerResult_t>(UpdateAuthorizedBorrowerResult_t*)"
-    },
-    {
-        "id": 3100,
-        "size": 272,
-        "posted_in": "void CSteamEngine::PostCallbackToAllUI<NetworkDeviceStateChange_t>(NetworkDeviceStateChange_t*)"
     },
     {
         "id": 3200,
@@ -2010,11 +1820,6 @@
         "posted_in": "CRemoteDeviceJobAuthorizeDevice::BYieldingRunClientJob()"
     },
     {
-        "id": 3321,
-        "size": 2,
-        "posted_in": "void CSteamEngine::PostCallbackToAllUI<CheckStreamingDriverSupport_t>(CheckStreamingDriverSupport_t*)"
-    },
-    {
         "id": 3322,
         "size": 16,
         "posted_in": "void CSteamEngine::PostCallbackToAllUsers<RemoteClientSessionAppIDChange_t>(RemoteClientSessionAppIDChange_t*)"
@@ -2040,11 +1845,6 @@
         "posted_in": "void CSteamEngine::PostCallbackToAllUsers<RemoteClientStreamTransportSignal_t>(RemoteClientStreamTransportSignal_t*)"
     },
     {
-        "id": 3327,
-        "size": 1,
-        "posted_in": "void CSteamEngine::PostCallbackToAllUI<RemoteDevicesChanged_t>(RemoteDevicesChanged_t*)"
-    },
-    {
         "id": 3328,
         "size": 1072,
         "posted_in": "CRemoteClientJobRemotePlayInvite::SendInviteResult(ERemoteClientLaunchResult)"
@@ -2068,16 +1868,6 @@
         "id": 3332,
         "size": 1,
         "posted_in": "void CSteamEngine::PostCallbackToAllUsers<PlaceholderStateChanged_t>(PlaceholderStateChanged_t*)"
-    },
-    {
-        "id": 3333,
-        "size": 44,
-        "posted_in": "void CSteamEngine::PostCallbackToAllUI<RemoteClientRemotePlayTogetherPlayerJoined_t>(RemoteClientRemotePlayTogetherPlayerJoined_t*)"
-    },
-    {
-        "id": 3334,
-        "size": 44,
-        "posted_in": "void CSteamEngine::PostCallbackToAllUI<RemoteClientRemotePlayTogetherPlayerLeft_t>(RemoteClientRemotePlayTogetherPlayerLeft_t*)"
     },
     {
         "id": 3335,
@@ -2293,36 +2083,6 @@
         "id": 4114,
         "size": 4,
         "posted_in": "CClientMusic::SetPlayingRepeatStatus(PlayingRepeat_Status)"
-    },
-    {
-        "id": 4200,
-        "size": 1,
-        "posted_in": "void CSteamEngine::PostCallbackToAllUI<VRRuntimeUpdated_t>(VRRuntimeUpdated_t*)"
-    },
-    {
-        "id": 4201,
-        "size": 1,
-        "posted_in": "void CSteamEngine::PostCallbackToAllUI<VRModeChanged_t>(VRModeChanged_t*)"
-    },
-    {
-        "id": 4202,
-        "size": 1,
-        "posted_in": "void CSteamEngine::PostCallbackToAllUI<VRModeExitRequest_t>(VRModeExitRequest_t*)"
-    },
-    {
-        "id": 4203,
-        "size": 4,
-        "posted_in": "void CSteamEngine::PostCallbackToAllUI<VRPathChanged_t>(VRPathChanged_t*)"
-    },
-    {
-        "id": 4207,
-        "size": 4,
-        "posted_in": "void CSteamEngine::PostCallbackToAllUI<VRProcessQuit_t>(VRProcessQuit_t*)"
-    },
-    {
-        "id": 4208,
-        "size": 4,
-        "posted_in": "void CSteamEngine::PostCallbackToAllUI<VR2DOverlayGameLaunched_t>(VR2DOverlayGameLaunched_t*)"
     },
     {
         "id": 4301,

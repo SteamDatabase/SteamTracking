@@ -479,6 +479,7 @@ message CMsgSteamDatagramSetSecondaryAddressRequest {
 	optional fixed32 client_main_port = 2;
 	optional fixed32 client_connection_id = 3;
 	optional string client_identity = 4;
+	optional bool request_send_duplication = 5;
 	optional bytes kludge_pad = 99;
 }
 

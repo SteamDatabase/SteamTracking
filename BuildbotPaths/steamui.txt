@@ -238,6 +238,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/parental/parentalunlockdialog.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/refreshloginpanel.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/refreshloginpanel.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/remoteplaycontroller.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/remotesteamapp.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/retailinstaller.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/screenshotmanager.cpp

@@ -54,6 +54,9 @@ message CMsgSteamDatagramLinkLifetimeStats {
 	optional uint64 packets_recv_out_of_order = 9;
 	optional uint64 packets_recv_duplicate = 10;
 	optional uint64 packets_recv_lurch = 11;
+	repeated uint64 multipath_packets_recv_sequenced = 12;
+	repeated uint64 multipath_packets_recv_later = 13;
+	optional uint32 multipath_send_enabled = 14;
 	optional uint32 quality_histogram_100 = 21;
 	optional uint32 quality_histogram_99 = 22;
 	optional uint32 quality_histogram_97 = 23;
