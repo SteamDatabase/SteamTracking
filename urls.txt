@@ -428,6 +428,7 @@ https://store.steampowered.com/public/javascript/applications/store/curator_admi
 https://store.steampowered.com/public/javascript/applications/store/curator_admin~eventcomponents.js?__TIME__&l=english
 https://store.steampowered.com/public/javascript/applications/store/eventcomponents.js?__TIME__&l=english
 https://store.steampowered.com/public/javascript/applications/store/interactiverecommender.js?__TIME__&l=english
+https://store.steampowered.com/public/javascript/applications/store/loyalty_english-json.js?__TIME__&l=english
 https://store.steampowered.com/public/javascript/applications/store/loyaltystore.js?__TIME__&l=english
 https://store.steampowered.com/public/javascript/applications/store/loyaltystore~reviewaward.js?__TIME__&l=english
 https://store.steampowered.com/public/javascript/applications/store/main.js?__TIME__&l=english
