@@ -98,7 +98,7 @@
                   "(VO) Load Debug Info"
                 )
               ),
-              h.a.createElement(M.a, null, h.a.createElement(z, { info: r }))
+              h.a.createElement(M.a, null, h.a.createElement(R, { info: r }))
             )
           )
         );
@@ -507,10 +507,10 @@
         O = r("exH9"),
         s = r("eDP5"),
         j = r("Mgs7"),
-        R = r("5L1o"),
+        z = r("5L1o"),
         c = r("YLyR"),
         u = r("V9dL"),
-        z = function (e) {
+        R = function (e) {
           var t = e.info,
             r = Object(p.useState)(!1),
             n = r[0],
@@ -710,7 +710,7 @@
                     h.a.createElement(
                       "div",
                       { className: u.AppSummaryWidgetCtn },
-                      h.a.createElement(R.h, { id: t.app_id, type: "game" })
+                      h.a.createElement(z.h, { id: t.app_id, type: "game" })
                     )
                 ),
                 h.a.createElement(
@@ -1442,7 +1442,7 @@
                     h.a.createElement(
                       "div",
                       { className: F.GameInfo },
-                      h.a.createElement(R.h, {
+                      h.a.createElement(z.h, {
                         id: Number.parseInt(o.m_strAppId),
                         type: "game",
                       })
@@ -2554,7 +2554,7 @@
             n
           );
         })(_),
-        R = (function (r) {
+        z = (function (r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -2616,7 +2616,7 @@
             n
           );
         })(_);
-      var z,
+      var R,
         F,
         T,
         I,
@@ -5183,7 +5183,7 @@
             n
           );
         })(_);
-      ((F = z = z || {}).BeginBroadcastSession = function (e, t) {
+      ((F = R = R || {}).BeginBroadcastSession = function (e, t) {
         return e.SendMsg("Broadcast.BeginBroadcastSession#1", t, p, {
           ePrivilege: 1,
         });
@@ -5370,7 +5370,7 @@
         }),
         ((I = T = T || {}).NotifyBroadcastViewerStateHandler = {
           name: "BroadcastClient.NotifyBroadcastViewerState#1",
-          request: R,
+          request: z,
         }),
         (I.NotifyWaitingBroadcastViewerHandler = {
           name: "BroadcastClient.NotifyWaitingBroadcastViewer#1",
@@ -5746,7 +5746,7 @@
             n
           );
         })(ge),
-        Re = (function (r) {
+        ze = (function (r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -5763,7 +5763,7 @@
                 n.sm_m ||
                   (n.sm_m = {
                     proto: n,
-                    fields: { images: { n: 1, c: ze, r: !0, q: !0 } },
+                    fields: { images: { n: 1, c: Re, r: !0, q: !0 } },
                   }),
                 n.sm_m
               );
@@ -5801,7 +5801,7 @@
             n
           );
         })(ge),
-        ze = (function (r) {
+        Re = (function (r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -8724,7 +8724,7 @@
           });
         }),
         (we.GetBroadcastChannelImages = function (e, t) {
-          return e.SendMsg("SteamTV.GetBroadcastChannelImages#1", t, Re, {
+          return e.SendMsg("SteamTV.GetBroadcastChannelImages#1", t, ze, {
             bConstMethod: !0,
             ePrivilege: 0,
           });
@@ -8896,14 +8896,14 @@
         Ct = r("TLQK"),
         Ot = r("bxiW"),
         jt = r("lkRc"),
-        Rt = f.Message,
-        zt = (function (r) {
+        zt = f.Message,
+        Rt = (function (r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
             return (
               n.prototype.bincremental || b.a(n.M()),
-              Rt.initialize(t, e, 0, -1, [2], null),
+              zt.initialize(t, e, 0, -1, [2], null),
               t
             );
           }
@@ -8973,14 +8973,14 @@
             }),
             n
           );
-        })(Rt),
+        })(zt),
         Ft = (function (r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
             return (
               n.prototype.ulfriendid || b.a(n.M()),
-              Rt.initialize(t, e, 0, -1, void 0, null),
+              zt.initialize(t, e, 0, -1, void 0, null),
               t
             );
           }
@@ -9039,7 +9039,7 @@
             }),
             n
           );
-        })(Rt),
+        })(zt),
         Tt = f.Message,
         It = (function (r) {
           function n(e) {
@@ -9431,7 +9431,7 @@
                 n.sm_m ||
                   (n.sm_m = {
                     proto: n,
-                    fields: { friendslist: { n: 1, c: zt } },
+                    fields: { friendslist: { n: 1, c: Rt } },
                   }),
                 n.sm_m
               );
@@ -9785,7 +9785,7 @@
                 return Object(h.e)(this, function (e) {
                   switch (e.label) {
                     case 0:
-                      if (((t = new zt()), 0 === this.m_unAccountID))
+                      if (((t = new Rt()), 0 === this.m_unAccountID))
                         return [3, 7];
                       e.label = 1;
                     case 1:
@@ -9814,7 +9814,7 @@
                       );
                     case 4:
                       (a = e.sent()),
-                        (t = zt.fromObject(a.data.friendslist)),
+                        (t = Rt.fromObject(a.data.friendslist)),
                         (e.label = 5);
                     case 5:
                       return [3, 7];
@@ -10188,7 +10188,7 @@
                         }),
                         [
                           4,
-                          z.PostChatMessage(
+                          R.PostChatMessage(
                             this.m_webAPIInterface.GetServiceTransport(),
                             o
                           ),
@@ -10838,7 +10838,7 @@
                         }),
                         [
                           4,
-                          z.MuteBroadcastChatUser(
+                          R.MuteBroadcastChatUser(
                             this.m_webAPIInterface.GetServiceTransport(),
                             n
                           ),
@@ -10931,7 +10931,7 @@
                         }),
                         [
                           4,
-                          z.MuteBroadcastChatUser(
+                          R.MuteBroadcastChatUser(
                             this.m_webAPIInterface.GetServiceTransport(),
                             r
                           ),
@@ -11033,7 +11033,7 @@
                         }),
                         [
                           4,
-                          z.RemoveUserChatText(
+                          R.RemoveUserChatText(
                             this.m_webAPIInterface.GetServiceTransport(),
                             r
                           ),
@@ -11101,7 +11101,7 @@
                         }),
                         [
                           4,
-                          z.UpdateChatMessageFlair(
+                          R.UpdateChatMessageFlair(
                             this.m_webAPIInterface.GetServiceTransport(),
                             r
                           ),
@@ -12217,6 +12217,7 @@
         bordered_container: "broadcast_embeddable_bordered_container_3zXpF",
         video_placeholder: "broadcast_embeddable_video_placeholder_1KU95",
         embedded_player: "broadcast_embeddable_embedded_player_12fBJ",
+        WidePlayer: "broadcast_embeddable_WidePlayer_3zjvr",
         store_chat_ctn: "broadcast_embeddable_store_chat_ctn_21N-V",
         Event: "broadcast_embeddable_Event_1A0NY",
         item_drop_ctn: "broadcast_embeddable_item_drop_ctn_ifxDf",

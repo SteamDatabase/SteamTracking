@@ -1124,6 +1124,10 @@
           "Optional: Provides a steam event that describe the details of the drops; useful for sale events that don't render their event body.",
         Broadcast_Drops_Details_Account: "Clan Account ID",
         Broadcast_Drops_Details_GID: "Clan Event GID",
+        Broadcast_WidePlayer: "Display wider players",
+        Broadcast_WidePlayer_ttip:
+          "When set, this will remove the side left and right column from the player. Only useful when there is a single stream for the event and columns distract from the experience.",
+        Broadcast_WidePlayer_Use: "Enable Wide Player Mode",
         Broadcast_title_title: "Broadcast title",
         Broadcast_title_desc:
           "Select from a list of default titles to show above your broadcast on your store page, or enter a custom title.",

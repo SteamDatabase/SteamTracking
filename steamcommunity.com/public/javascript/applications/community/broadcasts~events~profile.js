@@ -16134,38 +16134,47 @@
                 1 <= e.length && (e[0].style.backgroundImage = null);
             }),
             (e.prototype.render = function () {
-              var e = this.GetEventModel();
-              if (e && void 0 !== this.state.nSaleDayIndex) {
-                var t,
-                  n = Boolean(this.props.bIsPreview);
-                n ||
-                  e.visibility_state === x.n.k_EEventStateVisible ||
+              var e,
+                t,
+                n,
+                a = this.GetEventModel();
+              if (a && void 0 !== this.state.nSaleDayIndex) {
+                var r,
+                  o = Boolean(this.props.bIsPreview);
+                o ||
+                  a.visibility_state === x.n.k_EEventStateVisible ||
                   "store" != Object(V.f)() ||
-                  ((t = G.a.GetTimeNowWithOverride()),
-                  (!e.startTime || e.startTime - 1209600 - 3600 < t) &&
-                    (n = R.a.Get().GetPartnerEventPermissions(e.clanSteamID)
+                  ((r = G.a.GetTimeNowWithOverride()),
+                  (!a.startTime || a.startTime - 1209600 - 3600 < r) &&
+                    (o = R.a.Get().GetPartnerEventPermissions(a.clanSteamID)
                       .can_edit));
-                var a = e.GetImageURLWithFallback(
+                var i = a.GetImageURLWithFallback(
                     "sale_header",
                     this.props.language
                   ),
-                  r = null,
-                  o = null;
+                  s = null,
+                  c = null;
                 m.a.BHasSalePageBackgroundOverride() &&
-                  ((a = m.a.GetSalePageBackgroundOverride()),
-                  (r = m.a.GetSalePageBackgroundWEBM()),
-                  (o = m.a.GetSalePageBackgroundMP4()));
-                var i = {
+                  ((i = m.a.GetSalePageBackgroundOverride()),
+                  (s = m.a.GetSalePageBackgroundWEBM()),
+                  (c = m.a.GetSalePageBackgroundMP4()));
+                var l = {
                     promotionName: this.props.promotionName,
                     clanid: Number(V.b.CLANACCOUNTID),
-                    event: e,
+                    event: a,
                     bIsPreview: this.props.bIsPreview,
                     language: this.props.language,
                     accountIDs: this.props.bIsPreview
-                      ? e.jsondata.broadcast_whitelist
+                      ? a.jsondata.broadcast_whitelist
                       : void 0,
                   },
-                  s = R.a.Get().GetPartnerEventPermissions(e.clanSteamID);
+                  u = Boolean(
+                    null === (n = this.props.eventModel.jsondata) ||
+                      void 0 === n
+                      ? void 0
+                      : n.broadcast_display_wide_player
+                  ),
+                  d = R.a.Get().GetPartnerEventPermissions(a.clanSteamID);
                 return k.createElement(
                   b.a,
                   null,
@@ -16176,13 +16185,13 @@
                       ha,
                       {
                         className: Object(N.a)(
-                          Pn.a["CustomStyle_" + e.jsondata.sale_vanity_id],
+                          Pn.a["CustomStyle_" + a.jsondata.sale_vanity_id],
                           "SaleCustomCSS"
                         ),
-                        backgroundImage: a,
-                        backgroundColor: e.jsondata.sale_background_color,
+                        backgroundImage: i,
+                        backgroundColor: a.jsondata.sale_background_color,
                       },
-                      Boolean(o || r) &&
+                      Boolean(c || s) &&
                         k.createElement(
                           "div",
                           { className: Pn.a.fullscreen_bg },
@@ -16199,7 +16208,7 @@
                               className: Object(N.a)(
                                 Pn.a.SaleBackground,
                                 Pn.a[
-                                  "CustomStyle_" + e.jsondata.sale_vanity_id
+                                  "CustomStyle_" + a.jsondata.sale_vanity_id
                                 ],
                                 "SaleBackground",
                                 Pn.a.fullscreen_bg__video
@@ -16208,18 +16217,18 @@
                                 display: "flex",
                                 position: "relative",
                                 flexDirection: "column",
-                                backgroundColor: n
-                                  ? e.jsondata.sale_background_color
+                                backgroundColor: o
+                                  ? a.jsondata.sale_background_color
                                   : void 0,
                               },
                             },
                             k.createElement("source", {
-                              src: r,
+                              src: s,
                               type: "video/webm",
                             }),
                             !V.c.IN_CLIENT &&
                               k.createElement("source", {
-                                src: o,
+                                src: c,
                                 type: "video/mp4",
                               })
                           )
@@ -16227,19 +16236,22 @@
                       k.createElement(
                         "div",
                         {
-                          className:
-                            Pn.a.SaleOuterContainer +
-                            " " +
-                            Pn.a["CustomStyle_" + e.jsondata.sale_vanity_id] +
-                            " SaleOuterContainer",
+                          className: Object(N.a)(
+                            (((e = {})[Pn.a.SaleOuterContainer] = !0),
+                            (e[
+                              Pn.a["CustomStyle_" + a.jsondata.sale_vanity_id]
+                            ] = !0),
+                            (e.SaleOuterContainer = !0),
+                            e)
+                          ),
                           style: {
                             marginTop:
-                              (e.jsondata.sale_header_offset || 0) + "px",
+                              (a.jsondata.sale_header_offset || 0) + "px",
                           },
                         },
                         Boolean(
-                          e.BEventCanShowBroadcastWidget() &&
-                            e.BSaleShowBroadcastAtTopOfPage()
+                          a.BEventCanShowBroadcastWidget() &&
+                            a.BSaleShowBroadcastAtTopOfPage()
                         ) &&
                           k.createElement(
                             b.a,
@@ -16248,8 +16260,10 @@
                               "div",
                               {
                                 className: Object(N.a)(
-                                  Pn.a.SaleBroadcastCtn,
-                                  "SaleBroadcastCtn_Trgt"
+                                  (((t = {})[Pn.a.SaleBroadcastCtn] = !u),
+                                  (t[Pn.a.SaleWideBroadcastCtn] = u),
+                                  (t.SaleBroadcastCtn_Trgt = !0),
+                                  t)
                                 ),
                               },
                               k.createElement(
@@ -16257,12 +16271,15 @@
                                 { fallback: k.createElement("div", null) },
                                 k.createElement(
                                   pa,
-                                  Object(P.a)({}, i, { bShowCapsuleArt: !0 })
+                                  Object(P.a)({}, l, {
+                                    bShowCapsuleArt: !0,
+                                    bWidePlayer: u,
+                                  })
                                 )
                               )
                             )
                           ),
-                        e.jsondata.sale_show_creator &&
+                        a.jsondata.sale_show_creator &&
                           k.createElement(
                             b.a,
                             null,
@@ -16278,7 +16295,7 @@
                               k.createElement($.a, {
                                 creatorID: {
                                   name: null,
-                                  clan_account_id: e.clanSteamID.GetAccountID(),
+                                  clan_account_id: a.clanSteamID.GetAccountID(),
                                   type: "developer",
                                 },
                                 bShowTagline: !0,
@@ -16287,24 +16304,24 @@
                             )
                           ),
                         k.createElement(va, {
-                          bIsPreview: n,
-                          event: e,
+                          bIsPreview: o,
+                          event: a,
                           language: this.props.language,
                           promotionName: this.props.promotionName,
                           nSaleDayIndex: this.state.nSaleDayIndex,
-                          broadcastEmbedContext: i,
+                          broadcastEmbedContext: l,
                         }),
                         Boolean(
-                          e.BSaleShowCuratorRecommendationAtBottomOfPage()
+                          a.BSaleShowCuratorRecommendationAtBottomOfPage()
                         ) &&
                           k.createElement(Wn, {
-                            bPreviewMode: n,
+                            bPreviewMode: o,
                             saleSection: Object(P.a)(Object(P.a)({}, x.l), {
                               section_type: "curator_recommendation",
                             }),
-                            event: e,
+                            event: a,
                           }),
-                        e.jsondata.sale_browse_more_button &&
+                        a.jsondata.sale_browse_more_button &&
                           k.createElement(
                             "div",
                             {
@@ -16316,14 +16333,14 @@
                             },
                             k.createElement(ja, {
                               text: Object(F.f)("#Sale_SeeAllSpecials"),
-                              url: e.jsondata.sale_browsemore_url,
-                              color: e.jsondata.sale_browsemore_color,
-                              bgcolor: e.jsondata.sale_browsemore_bgcolor,
+                              url: a.jsondata.sale_browsemore_url,
+                              color: a.jsondata.sale_browsemore_color,
+                              bgcolor: a.jsondata.sale_browsemore_bgcolor,
                             })
                           ),
-                        s.can_edit &&
+                        d.can_edit &&
                           k.createElement(g.a, {
-                            eventModel: e,
+                            eventModel: a,
                             bPreviewMode: this.props.bIsPreview,
                             useAnchors: !this.props.bIsPreview,
                             fnOnUpdateSaleDayIndex: this.OnChangeDayIndex,
@@ -16518,113 +16535,118 @@
                 Object(jt.c)(this.props.history, r));
             }),
             (e.prototype.render = function () {
-              var c = this,
+              var l = this,
                 e = this.props,
-                l = e.event,
-                u = e.language,
-                d = (e.promotionName, e.bIsPreview),
-                p = (e.nSaleDayIndex, this.GetTabSelectionsFromURL()),
-                m = !1,
+                u = e.event,
+                d = e.language,
+                p = (e.promotionName, e.bIsPreview),
+                m = (e.nSaleDayIndex, this.GetTabSelectionsFromURL()),
                 h = !1,
-                _ = new _a(null, this.props.nSaleDayIndex),
-                f = [{ elements: [], activeTab: _ }];
-              l.GetSaleSections().forEach(function (e, t) {
-                var n = f[f.length - 1].activeTab;
-                if (n.ShouldShowSection(e)) {
-                  var a,
-                    r = e.diable_tab_id_filtering ? _ : n,
-                    o = !0,
-                    i = null;
+                _ = !1,
+                f = new _a(null, this.props.nSaleDayIndex),
+                v = [{ elements: [], activeTab: f }];
+              u.GetSaleSections().forEach(function (e, t) {
+                var n,
+                  a = v[v.length - 1].activeTab;
+                if (a.ShouldShowSection(e)) {
+                  var r,
+                    o = e.diable_tab_id_filtering ? f : a,
+                    i = !0,
+                    s = null;
                   if (
-                    "items" == (a = e).section_type &&
-                    a.smart_section &&
-                    ("wishlist" == a.smart_section_type ||
-                      "interactive_recommender" == a.smart_section_type ||
-                      "dlc_music_onsale" == a.smart_section_type ||
-                      "ir_subscription" == a.smart_section_type ||
-                      ("wishlist_onsale" == a.smart_section_type &&
+                    "items" == (r = e).section_type &&
+                    r.smart_section &&
+                    ("wishlist" == r.smart_section_type ||
+                      "interactive_recommender" == r.smart_section_type ||
+                      "dlc_music_onsale" == r.smart_section_type ||
+                      "ir_subscription" == r.smart_section_type ||
+                      ("wishlist_onsale" == r.smart_section_type &&
                         !Y.GetHideWishlist()) ||
-                      ("dlc_onsale" == a.smart_section_type &&
+                      ("dlc_onsale" == r.smart_section_type &&
                         !Y.GetHideDLC()) ||
                       ("interactive_recommender_onsale" ==
-                        a.smart_section_type &&
+                        r.smart_section_type &&
                         !Y.GetHideIRList())) &&
                     !V.i.logged_in
                   )
-                    m ||
-                      ((i = k.createElement(ga, {
+                    h ||
+                      ((s = k.createElement(ga, {
                         section: e,
-                        event: l,
-                        language: u,
+                        event: u,
+                        language: d,
                       })),
-                      (m = !0));
+                      (h = !0));
                   else
                     switch (e.section_type) {
                       case "items":
                       case "events":
                       case "links":
-                        i = k.createElement(
+                        s = k.createElement(
                           wa,
-                          Object(P.a)({ section: e, activeTab: r }, c.props)
+                          Object(P.a)({ section: e, activeTab: o }, l.props)
                         );
                         break;
                       case "broadcast":
-                        l.BEventCanShowBroadcastWidget() &&
-                          !h &&
-                          ((i = k.createElement(Na, {
+                        u.BEventCanShowBroadcastWidget() &&
+                          !_ &&
+                          ((s = k.createElement(Na, {
                             broadcastEmbedContext:
-                              c.props.broadcastEmbedContext,
-                            activeTab: r,
+                              l.props.broadcastEmbedContext,
+                            activeTab: o,
+                            bWideBroadcastDisplay:
+                              null === (n = u.jsondata) || void 0 === n
+                                ? void 0
+                                : n.broadcast_display_wide_player,
                           })),
-                          (h = !0));
+                          (_ = !0));
                         break;
                       case "event_description":
-                        i = k.createElement(
+                        s = k.createElement(
                           ya,
-                          Object(P.a)({ section: e }, c.props)
+                          Object(P.a)({ section: e }, l.props)
                         );
                         break;
                       case "doors":
-                        i = k.createElement(Nn.b, {
-                          strFontFamily: Ra(l.jsondata.sale_font, u),
+                        s = k.createElement(Nn.b, {
+                          strFontFamily: Ra(u.jsondata.sale_font, d),
                         });
                         break;
                       case "text_section":
-                        i = k.createElement(
+                        s = k.createElement(
                           Sa,
-                          Object(P.a)({ section: e }, c.props)
+                          Object(P.a)({ section: e }, l.props)
                         );
                         break;
                       case "tabs":
-                        var s = p.get(e);
-                        f.push({ activeTab: s, elements: [] }),
-                          (i = k.createElement(
+                        var c = m.get(e);
+                        v.push({ activeTab: c, elements: [] }),
+                          (s = k.createElement(
                             k.Fragment,
                             null,
-                            k.createElement("div", { ref: c.m_refTabSection }),
+                            k.createElement("div", { ref: l.m_refTabSection }),
                             k.createElement(
                               da.d,
-                              Object(P.a)({ section: e }, c.props, {
-                                activeTab: s.GetTab(),
-                                onTabSelected: c.OnTabSelected,
+                              Object(P.a)({ section: e }, l.props, {
+                                activeTab: c.GetTab(),
+                                onTabSelected: l.OnTabSelected,
                               })
                             )
                           )),
-                          (o = !1);
+                          (i = !1);
                         break;
                       case "tab_buttons":
-                        i = k.createElement(
+                        s = k.createElement(
                           da.b,
-                          Object(P.a)({ section: e }, c.props, {
-                            activeTab: r,
-                            onTabSelected: c.OnTabSelected,
+                          Object(P.a)({ section: e }, l.props, {
+                            activeTab: o,
+                            onTabSelected: l.OnTabSelected,
                             hideActiveTab: !0,
                           })
                         );
                         break;
                       case "curator":
                         e.curator_clan_id &&
-                          (i = k.createElement(
+                          (s = k.createElement(
                             "div",
                             {
                               style: {
@@ -16645,57 +16667,57 @@
                           ));
                         break;
                       case "curator_recommendation":
-                        i = k.createElement(Wn, {
-                          bPreviewMode: d,
+                        s = k.createElement(Wn, {
+                          bPreviewMode: p,
                           saleSection: e,
-                          event: l,
+                          event: u,
                         });
                         break;
                       case "event_schedule":
-                        i = k.createElement(
+                        s = k.createElement(
                           ta.c,
-                          Object(P.a)({ section: e }, c.props, { activeTab: r })
+                          Object(P.a)({ section: e }, l.props, { activeTab: o })
                         );
                         break;
                       case "vo_internal":
                         if (e.internal_section_data)
                           switch (e.internal_section_data.internal_type) {
                             case "subscription_pricing":
-                              i = k.createElement(
+                              s = k.createElement(
                                 ua,
-                                Object(P.a)({ section: e }, c.props)
+                                Object(P.a)({ section: e }, l.props)
                               );
                               break;
                             case "tab_contents":
-                              i = k.createElement(
+                              s = k.createElement(
                                 da.c,
-                                Object(P.a)({ section: e }, c.props, {
-                                  tab: n.GetTab(),
+                                Object(P.a)({ section: e }, l.props, {
+                                  tab: a.GetTab(),
                                   showReferences: !1,
                                 })
                               );
                               break;
                             case "tab_references":
-                              i = k.createElement(
+                              s = k.createElement(
                                 da.c,
-                                Object(P.a)({ section: e }, c.props, {
-                                  tab: n.GetTab(),
+                                Object(P.a)({ section: e }, l.props, {
+                                  tab: a.GetTab(),
                                   showReferences: !0,
                                 })
                               );
                           }
                         break;
                       case "sale_item_browser":
-                        i = k.createElement(
+                        s = k.createElement(
                           Ca,
-                          Object(P.a)({ section: e }, c.props, { activeTab: r })
+                          Object(P.a)({ section: e }, l.props, { activeTab: o })
                         );
                     }
-                  f[f.length - 1].elements.push(
+                  v[v.length - 1].elements.push(
                     k.createElement(
                       b.a,
                       { key: "SaleSectionIndex_" + e.unique_id + "_" + t },
-                      o
+                      i
                         ? k.createElement(
                             "div",
                             {
@@ -16705,14 +16727,14 @@
                                 e.section_type
                               ),
                             },
-                            i
+                            s
                           )
-                        : i
+                        : s
                     )
                   );
                 }
               });
-              var t = f.map(function (e, t) {
+              var t = v.map(function (e, t) {
                 return k.createElement(
                   "div",
                   {
@@ -18308,7 +18330,10 @@
             this.state.bOnceVisible || this.setState({ bOnceVisible: !0 });
           }),
           (e.prototype.render = function () {
-            var n = this.props.activeTab;
+            var e,
+              t = this.props,
+              n = t.activeTab,
+              a = t.bWideBroadcastDisplay;
             return k.createElement(
               b.a,
               null,
@@ -18325,8 +18350,10 @@
                       "div",
                       {
                         className: Object(N.a)(
-                          Pn.a.SaleBroadcastSection,
-                          "SaleBroadcastSection_trgt"
+                          (((e = {})[Pn.a.SaleWideBroadcastSection] = a),
+                          (e[Pn.a.SaleBroadcastSection] = !a),
+                          (e.SaleBroadcastSection_trgt = !0),
+                          e)
                         ),
                       },
                       Boolean(this.state.bOnceVisible) &&
@@ -18339,6 +18366,7 @@
                                 .m_nAppID;
                               return n.ShouldShowOnTab(t);
                             },
+                            bWidePlayer: a,
                           })
                         ),
                       Boolean(!this.state.bOnceVisible) &&
@@ -40788,6 +40816,7 @@
         SaleOverlay: "partnersaledisplay_SaleOverlay_1sZo8",
         AppSummaryWidgetCtn: "partnersaledisplay_AppSummaryWidgetCtn_2H8Bm",
         SaleBroadcastCtn: "partnersaledisplay_SaleBroadcastCtn_1SFMh",
+        SaleWideBroadcastCtn: "partnersaledisplay_SaleWideBroadcastCtn_i3zxC",
         SaleOuterContainer: "partnersaledisplay_SaleOuterContainer_150kd",
         CustomStyle_together: "partnersaledisplay_CustomStyle_together_1lAyg",
         SaleBackground: "partnersaledisplay_SaleBackground_2N8Se",
@@ -40822,6 +40851,8 @@
         HorizontalScrollInDragForceCursor:
           "partnersaledisplay_HorizontalScrollInDragForceCursor_nemO6",
         SaleBroadcastSection: "partnersaledisplay_SaleBroadcastSection_1u0IZ",
+        SaleWideBroadcastSection:
+          "partnersaledisplay_SaleWideBroadcastSection_2Ky32",
         CarouselPage: "partnersaledisplay_CarouselPage_Hlkuk",
         TabButtonsCtn: "partnersaledisplay_TabButtonsCtn_21-6t",
         TabButton: "partnersaledisplay_TabButton_1Gz4s",

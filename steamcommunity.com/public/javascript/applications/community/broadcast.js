@@ -427,12 +427,13 @@
               });
             }),
             (e.prototype.ConstructSidePanels = function (e, t) {
-              var r,
-                n = {
-                  leftPanel: null,
-                  rightPanel: null,
-                  bRightPanelArtworkOrEmpty: !0,
-                },
+              var r = {
+                leftPanel: null,
+                rightPanel: null,
+                bRightPanelArtworkOrEmpty: !0,
+              };
+              if (this.props.bWidePlayer) return r;
+              var n,
                 i = 1 < j.a.Get().GetConcurrentStreams(this.props),
                 a = O.a.GetOrCreateBroadcastInfo(e.steamid).m_nAppID,
                 o = f.createElement(
@@ -449,9 +450,9 @@
                 });
               return (
                 a < 11 &&
-                  (r = d.b.GetAppIDListForBroadcasterSteamID(e.steamid)) &&
-                  1 === r.length &&
-                  (a = r[0]),
+                  (n = d.b.GetAppIDListForBroadcasterSteamID(e.steamid)) &&
+                  1 === n.length &&
+                  (a = n[0]),
                 !(
                   (this.props.promotionName ||
                     this.props.bIsPreview ||
@@ -465,9 +466,9 @@
                     key: "mini" + e.accountid,
                     appid: a,
                   })),
-                  (n.bRightPanelArtworkOrEmpty = !1)),
+                  (r.bRightPanelArtworkOrEmpty = !1)),
                 i && !t
-                  ? ((n.leftPanel = f.createElement(q, {
+                  ? ((r.leftPanel = f.createElement(q, {
                       broadcastEmbedContext: this.props,
                       key: "selector" + a,
                       curStream: e,
@@ -475,16 +476,16 @@
                       fnFilterStreams: this.props.fnFilterStreams,
                       bShowCapsuleArt: this.props.bShowCapsuleArt,
                     })),
-                    (n.rightPanel = o))
+                    (r.rightPanel = o))
                   : t
-                  ? ((n.leftPanel = f.createElement("div", null)),
-                    (n.rightPanel = f.createElement(K, {
+                  ? ((r.leftPanel = f.createElement("div", null)),
+                    (r.rightPanel = f.createElement(K, {
                       stream: e,
                       orientation: "rightside",
                     })),
-                    (n.bRightPanelArtworkOrEmpty = !1))
-                  : ((n.leftPanel = s), (n.rightPanel = o)),
-                n
+                    (r.bRightPanelArtworkOrEmpty = !1))
+                  : ((r.leftPanel = s), (r.rightPanel = o)),
+                r
               );
             }),
             (e.prototype.render = function () {
@@ -607,6 +608,7 @@
                             stream: r,
                             bStartMuted: this.state.bStartMuted,
                             fnRenderBroadcastContext: s,
+                            bWidePlayer: this.props.bWidePlayer,
                           }),
                           c.rightPanel,
                           this.state.bExpanded &&
@@ -674,6 +676,7 @@
                   this.setState({ bPopout: !0 });
               }),
               (e.prototype.render = function () {
+                var e;
                 return f.createElement(
                   "div",
                   { className: E.a.wrapper },
@@ -684,8 +687,10 @@
                       "div",
                       {
                         className: Object(v.a)(
-                          E.a.video_placeholder,
-                          "video_placeholder_trgt"
+                          (((e = {})[E.a.video_placeholder] = !0),
+                          (e.video_placeholder_trgt = !0),
+                          (e[E.a.WidePlayer] = this.props.bWidePlayer),
+                          e)
                         ),
                         ref: this.m_iVideoContainerRef,
                       },
@@ -11132,6 +11137,7 @@
         bordered_container: "broadcast_embeddable_bordered_container_3zXpF",
         video_placeholder: "broadcast_embeddable_video_placeholder_1KU95",
         embedded_player: "broadcast_embeddable_embedded_player_12fBJ",
+        WidePlayer: "broadcast_embeddable_WidePlayer_3zjvr",
         store_chat_ctn: "broadcast_embeddable_store_chat_ctn_21N-V",
         Event: "broadcast_embeddable_Event_1A0NY",
         item_drop_ctn: "broadcast_embeddable_item_drop_ctn_ifxDf",

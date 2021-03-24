@@ -27862,6 +27862,11 @@
                 (this.GetJSONData().broadcast_item_drops_details_clan_accountid = e),
                 this.m_editModel.SetDirty(H.jsondata_broadcast));
             }),
+            (e.prototype.SetWidePlayerLayout = function (e) {
+              this.GetJSONData().broadcast_display_wide_player != e &&
+                ((this.GetJSONData().broadcast_display_wide_player = e),
+                this.m_editModel.SetDirty(H.jsondata_broadcast));
+            }),
             Object(I.c)([G.k], e.prototype, "SetBroadcastEnabled", null),
             Object(I.c)([G.k], e.prototype, "SetBroadcastForceBanner", null),
             Object(I.c)([G.k], e.prototype, "SetChangeSetting", null),
@@ -27887,6 +27892,7 @@
             Object(I.c)([G.k], e.prototype, "SetItemDropManual", null),
             Object(I.c)([G.k], e.prototype, "SetItemDropMinutes", null),
             Object(I.c)([G.k], e.prototype, "SetItemDropDetailEvents", null),
+            Object(I.c)([G.k], e.prototype, "SetWidePlayerLayout", null),
             e
           );
         })(),
@@ -28060,23 +28066,24 @@
                   ].map(function (e) {
                     return { label: Object(L.f)(e), data: e };
                   }),
-                  i = bt.a.Get().GetPartnerEventPermissions(t.GetClanSteamID()),
-                  r = [],
-                  o = 0,
-                  l = L.b.GetLanguageListForRealms([te.d.k_ESteamRealmGlobal]);
-                o < l.length;
-                o++
+                  i =
+                    (bt.a.Get().GetPartnerEventPermissions(t.GetClanSteamID()),
+                    []),
+                  r = 0,
+                  o = L.b.GetLanguageListForRealms([te.d.k_ESteamRealmGlobal]);
+                r < o.length;
+                r++
               ) {
-                var s = l[o],
-                  c = {
+                var l = o[r],
+                  s = {
                     label: Object(L.f)(
-                      "#language_selection_" + Object(ee.a)(s)
+                      "#language_selection_" + Object(ee.a)(l)
                     ),
-                    data: s,
+                    data: l,
                   };
-                r.push(c);
+                i.push(s);
               }
-              var d = Ze.createElement(
+              var c = Ze.createElement(
                   "div",
                   { className: ft.a.DropDownScroll },
                   (this.state.friends || []).map(function (e) {
@@ -28100,7 +28107,7 @@
                     );
                   })
                 ),
-                p = ml.a.map(function (e) {
+                d = ml.a.map(function (e) {
                   return Ze.createElement(
                     "div",
                     {
@@ -28224,7 +28231,7 @@
                             Ze.createElement(Ke.h, {
                               bDisableMouseOverlay: !0,
                               strDropDownClassName: ft.a.DropDownScroll,
-                              rgOptions: r,
+                              rgOptions: i,
                               selectedOption: this.state.customTitleLanguage,
                               onChange: this.OnCustomTitleLanguageChange,
                             })
@@ -28368,7 +28375,7 @@
                           "a",
                           {
                             onClick: function (e) {
-                              return Object(Je.a)(d, e);
+                              return Object(Je.a)(c, e);
                             },
                             className: ft.a.EditPreviewButton,
                           },
@@ -28416,103 +28423,128 @@
                           ft.a.EventDefaultRowContainer
                         ),
                       },
-                      p
+                      d
                     ),
-                    i.valve_admin &&
+                    Ze.createElement(
+                      Ln,
+                      {
+                        requireAdmin: !0,
+                        clanSteamID: t.GetClanSteamID(),
+                        className: Object(pt.a)(ft.a.ValveOnlyBackground),
+                      },
                       Ze.createElement(
                         "div",
-                        { className: Object(pt.a)(ft.a.ValveOnlyBackground) },
+                        { className: ft.a.EventEditorTextTitle },
+                        "(VO) " + Object(L.f)("#Broadcast_DropsTitle")
+                      ),
+                      Ze.createElement(Ke.e, {
+                        onChange: function (e) {
+                          return n.GetBroadcastEditModel().SetDropsEnabled(e);
+                        },
+                        label: Object(L.f)("#Broadcast_Drops_Enable"),
+                        checked: Boolean(a.broadcast_item_drops_enabled),
+                      }),
+                      Boolean(a.broadcast_item_drops_enabled) &&
+                        Ze.createElement(
+                          Ze.Fragment,
+                          null,
+                          Ze.createElement(Ke.e, {
+                            onChange: function (e) {
+                              return n
+                                .GetBroadcastEditModel()
+                                .SetItemDropManual(e);
+                            },
+                            label: Object(L.f)(
+                              "#Broadcast_Drops_IsManualDrops"
+                            ),
+                            checked: Boolean(a.broadcast_item_drops_manual),
+                          }),
+                          Ze.createElement(
+                            "label",
+                            { htmlFor: "broadcast_min_mintes" },
+                            Object(L.f)("#Broadcast_Drops_Minute")
+                          ),
+                          Ze.createElement("input", {
+                            id: "broadcast_min_mintes",
+                            type: "number",
+                            min: "5",
+                            value:
+                              a.broadcast_item_drops_min_watch_time_minutes,
+                            onChange: function (e) {
+                              return n
+                                .GetBroadcastEditModel()
+                                .SetItemDropMinutes(
+                                  Number.parseInt(e.target.value)
+                                );
+                            },
+                          }),
+                          Ze.createElement(
+                            "div",
+                            { className: ft.a.EventEditorTextSubTitle },
+                            Object(L.f)("#Broadcast_Drops_Details")
+                          ),
+                          Ze.createElement(
+                            "label",
+                            { htmlFor: "broadcast_detail_clan_account" },
+                            Object(L.f)("#Broadcast_Drops_Details_Account")
+                          ),
+                          Ze.createElement("input", {
+                            id: "broadcast_detail_clan_account",
+                            type: "number",
+                            min: "0",
+                            value:
+                              a.broadcast_item_drops_details_clan_accountid,
+                            onChange: function (e) {
+                              return n
+                                .GetBroadcastEditModel()
+                                .SetItemDropDetailEvents(
+                                  Number.parseInt(e.target.value),
+                                  a.broadcast_item_drops_details_event_gid
+                                );
+                            },
+                          }),
+                          Ze.createElement(
+                            "label",
+                            { htmlFor: "broadcast_detail_clan_event_gid" },
+                            Object(L.f)("#Broadcast_Drops_Details_GID")
+                          ),
+                          Ze.createElement("input", {
+                            id: "broadcast_detail_clan_event_gid",
+                            type: "text",
+                            value: a.broadcast_item_drops_details_event_gid,
+                            onChange: function (e) {
+                              return n
+                                .GetBroadcastEditModel()
+                                .SetItemDropDetailEvents(
+                                  a.broadcast_item_drops_details_clan_accountid,
+                                  e.target.value
+                                );
+                            },
+                          })
+                        ),
+                      Ze.createElement(
+                        Kn.a,
+                        {
+                          toolTipContent: Object(L.f)(
+                            "#Broadcast_WidePlayer_ttip"
+                          ),
+                        },
                         Ze.createElement(
                           "div",
                           { className: ft.a.EventEditorTextTitle },
-                          "(VO) " + Object(L.f)("#Broadcast_DropsTitle")
-                        ),
-                        Ze.createElement(Ke.e, {
-                          onChange: function (e) {
-                            return n.GetBroadcastEditModel().SetDropsEnabled(e);
-                          },
-                          label: Object(L.f)("#Broadcast_Drops_Enable"),
-                          checked: Boolean(a.broadcast_item_drops_enabled),
-                        }),
-                        Boolean(a.broadcast_item_drops_enabled) &&
-                          Ze.createElement(
-                            Ze.Fragment,
-                            null,
-                            Ze.createElement(Ke.e, {
-                              onChange: function (e) {
-                                return n
-                                  .GetBroadcastEditModel()
-                                  .SetItemDropManual(e);
-                              },
-                              label: Object(L.f)(
-                                "#Broadcast_Drops_IsManualDrops"
-                              ),
-                              checked: Boolean(a.broadcast_item_drops_manual),
-                            }),
-                            Ze.createElement(
-                              "label",
-                              { htmlFor: "broadcast_min_mintes" },
-                              Object(L.f)("#Broadcast_Drops_Minute")
-                            ),
-                            Ze.createElement("input", {
-                              id: "broadcast_min_mintes",
-                              type: "number",
-                              min: "5",
-                              value:
-                                a.broadcast_item_drops_min_watch_time_minutes,
-                              onChange: function (e) {
-                                return n
-                                  .GetBroadcastEditModel()
-                                  .SetItemDropMinutes(
-                                    Number.parseInt(e.target.value)
-                                  );
-                              },
-                            }),
-                            Ze.createElement(
-                              "div",
-                              { className: ft.a.EventEditorTextSubTitle },
-                              Object(L.f)("#Broadcast_Drops_Details")
-                            ),
-                            Ze.createElement(
-                              "label",
-                              { htmlFor: "broadcast_detail_clan_account" },
-                              Object(L.f)("#Broadcast_Drops_Details_Account")
-                            ),
-                            Ze.createElement("input", {
-                              id: "broadcast_detail_clan_account",
-                              type: "number",
-                              min: "0",
-                              value:
-                                a.broadcast_item_drops_details_clan_accountid,
-                              onChange: function (e) {
-                                return n
-                                  .GetBroadcastEditModel()
-                                  .SetItemDropDetailEvents(
-                                    Number.parseInt(e.target.value),
-                                    a.broadcast_item_drops_details_event_gid
-                                  );
-                              },
-                            }),
-                            Ze.createElement(
-                              "label",
-                              { htmlFor: "broadcast_detail_clan_event_gid" },
-                              Object(L.f)("#Broadcast_Drops_Details_GID")
-                            ),
-                            Ze.createElement("input", {
-                              id: "broadcast_detail_clan_event_gid",
-                              type: "text",
-                              value: a.broadcast_item_drops_details_event_gid,
-                              onChange: function (e) {
-                                return n
-                                  .GetBroadcastEditModel()
-                                  .SetItemDropDetailEvents(
-                                    a.broadcast_item_drops_details_clan_accountid,
-                                    e.target.value
-                                  );
-                              },
-                            })
-                          )
+                          "(VO) " + Object(L.f)("#Broadcast_WidePlayer")
+                        )
                       ),
+                      Ze.createElement(Ke.e, {
+                        onChange: function (e) {
+                          return n
+                            .GetBroadcastEditModel()
+                            .SetWidePlayerLayout(e);
+                        },
+                        label: Object(L.f)("#Broadcast_WidePlayer_Use"),
+                        checked: Boolean(a.broadcast_display_wide_player),
+                      })
+                    ),
                     Ze.createElement(
                       "div",
                       { className: ft.a.EventEditorTextTitle },
