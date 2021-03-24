@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6432754";
+var CLSTAMP = "6436238";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [2],
   {
@@ -28160,35 +28160,56 @@ var CLSTAMP = "6432754";
         a = t("/511"),
         u = i.Message,
         s = (function (e) {
-          function r(r) {
-            void 0 === r && (r = null);
-            var t = e.call(this) || this;
-            return u.initialize(t, r, 0, -1, void 0, null), t;
+          function r(t) {
+            void 0 === t && (t = null);
+            var n = e.call(this) || this;
+            return (
+              r.prototype.send_reply || o.a(r.M()),
+              u.initialize(n, t, 0, -1, void 0, null),
+              n
+            );
           }
           return (
             Object(n.d)(r, e),
+            (r.M = function () {
+              return (
+                r.sm_m ||
+                  (r.sm_m = {
+                    proto: r,
+                    fields: {
+                      send_reply: { n: 1, br: o.d.readBool, bw: o.h.writeBool },
+                    },
+                  }),
+                r.sm_m
+              );
+            }),
+            (r.MBF = function () {
+              return r.sm_mbf || (r.sm_mbf = o.e(r.M())), r.sm_mbf;
+            }),
             (r.prototype.toObject = function (e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
-            (r.toObject = function (e, r) {
-              return e ? { $jspbMessageInstance: r } : {};
+            (r.toObject = function (e, t) {
+              return o.g(r.M(), e, t);
             }),
             (r.fromObject = function (e) {
-              return new r();
+              return o.c(r.M(), e);
             }),
             (r.deserializeBinary = function (e) {
               var t = new i.BinaryReader(e),
                 n = new r();
               return r.deserializeBinaryFromReader(n, t);
             }),
-            (r.deserializeBinaryFromReader = function (e, r) {
-              return e;
+            (r.deserializeBinaryFromReader = function (e, t) {
+              return o.b(r.MBF(), e, t);
             }),
             (r.prototype.serializeBinary = function () {
               var e = new i.BinaryWriter();
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
-            (r.serializeBinaryToWriter = function (e, r) {}),
+            (r.serializeBinaryToWriter = function (e, t) {
+              o.f(r.M(), e, t);
+            }),
             (r.prototype.getClassName = function () {
               return "CMsgClientHeartBeat";
             }),
@@ -30656,7 +30677,7 @@ var CLSTAMP = "6432754";
             var n = e.call(this) || this;
             return (
               r.prototype.short_description || o.a(r.M()),
-              a.initialize(n, t, 0, -1, [2, 3], null),
+              a.initialize(n, t, 0, -1, [2, 3, 4], null),
               n
             );
           }
@@ -30682,6 +30703,13 @@ var CLSTAMP = "6432754";
                       },
                       developers: {
                         n: 3,
+                        r: !0,
+                        q: !0,
+                        br: o.d.readString,
+                        bw: o.h.writeRepeatedString,
+                      },
+                      franchises: {
+                        n: 4,
                         r: !0,
                         q: !0,
                         br: o.d.readString,

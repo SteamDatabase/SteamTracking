@@ -120,7 +120,7 @@ body {
   cursor: default;
 }
 
-body {
+body.partner_events {
   background: #24282e;
 }
 
@@ -4109,6 +4109,10 @@ p a:hover {
   );
 }
 
+.partnereventtile_ShowEventMetaDataSizes_EU0bQ {
+  height: unset;
+}
+
 .partnereventtile_EventStateUpcoming_qfpNt {
   background: rgba(0, 0, 0, 0.5);
 }
@@ -4286,6 +4290,10 @@ p a:hover {
   flex-direction: row;
   flex-wrap: nowrap;
   width: 250px;
+}
+
+.partnereventtile_MetaDataCtn_3EXNJ {
+  padding-bottom: 50px;
 }
 
 .partnereventpreview_PreviewBarContainer_2OUix {

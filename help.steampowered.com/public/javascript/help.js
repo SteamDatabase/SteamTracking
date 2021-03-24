@@ -1216,6 +1216,49 @@ HelpWizard = {
 		});
 	},
 
+	UpdatePhoneChina: function( strSessionID, nAccountID, strUpdateToken ) {
+		var elError = $J( '#form_submit_error' );
+		elError.hide();
+
+		$J( '#confirm_phone_form' ).addClass( 'loading' );
+
+		try
+		{
+			ga( 'send', 'pageview', '/wizard/AjaxAccountRecoveryUpdatedPhoneChina/' );
+		}
+		catch ( e )
+		{
+		}
+
+		$J.ajax({
+			type: "POST",
+			url: "https://help.steampowered.com/wizard/AjaxAccountRecoveryUpdatedPhoneChina/",
+			data: $J.extend( {}, g_rgDefaultWizardPageParams, {
+				s: strSessionID,
+				account: nAccountID,
+				token: strUpdateToken
+			} )
+		}).fail( function( xhr ) {
+			elError.text( 'An error occurred trying to handle that request. Please give us a few minutes and try again.' ).slideDown();
+		}).done( function( data ) {
+			if ( data.hash )
+			{
+				window.location = 'https://help.steampowered.com/' + data.hash;
+			}
+			else if ( data.html )
+			{
+				HelpWizard.SetPageContent( data.html );
+				return;
+			}
+			else
+			{
+				elError.text( data.errorMsg ).show();
+			}
+		}).always( function() {
+			$J( '#confirm_phone_form' ).removeClass( 'loading' );
+		});
+	},
+
 	ResetTwoFactor: function( strSessionID, nAccountID, nLost )
 	{
 		$J( '#reset_twofactor_submit' ).addClass( 'loading' );

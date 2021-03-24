@@ -3382,12 +3382,10 @@ function UpdatePaymentInfoForm()
 				if ( bShowCVV  )
 		{
 			$('security_code_section' ).show();
-			$('expiration_date_cvv_label').innerHTML = 'Expiration date and security code';
 		}
 		else
 		{
 			$('security_code_section' ).hide();
-			$('expiration_date_cvv_label').innerHTML = 'Expiration date';
 		}
 
 		var $AddressFields = $J('#payment_row_address, #payment_header_title');

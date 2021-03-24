@@ -351,10 +351,16 @@ body.v6 #footer.small_footer {
 	position: relative;
 	top: auto;
 	bottom: auto;
+	padding: 0px 0px 30px 0px;
+	margin-top: 90px;
 }
 
 body.v6 #footer_spacer.small_footer {
 	height: 50px;
+}
+
+body.v6 #footer_spacer.china_spacer.small_footer {
+	height: 0px;
 }
 
 body.v6 #footer .footer_content {
@@ -366,9 +372,14 @@ body.v6 #footer #footer_logo {
 	float: left;
 	padding-top: 2px;
 }
+body.v6 #footer #footer_logo img {
+	height: 25px;
+}
 body.v6 #footer #footer_text {
 	float: left;
 	margin-left: 12px;
+	font-size: 12px;
+	line-height: 16px;
 	color: #8F98A0;
 }
 body.v6 #footer #footer_text a {
@@ -379,6 +390,7 @@ body.v6 #footer #footer_text a:hover {
 }
 body.v6 #footer .rule{
 	height: 8px;
+	border-top: 1px solid #363c44;
 }
 body.v6 #footer .valve_links {
 	margin-top: 8px;
@@ -4558,4 +4570,11 @@ table {
 .help_itembug_currency
 {
 	color: #5eafde;
+}
+
+.help_phone_edit_china_iframe
+{
+	border: none;
+	width: 100%;
+	min-height: 800px;
 }

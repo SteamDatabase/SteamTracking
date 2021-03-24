@@ -1902,10 +1902,16 @@ label.send_choice_txt {
 	vertical-align: middle;
 }
 
+#expiration_date_section
+{
+	display: inline-block;
+	float: left;
+}
+
 #security_code_section
 {
 	display: inline-block;
-	vertical-align: middle;
+	float: left;
 }
 
 #security_code

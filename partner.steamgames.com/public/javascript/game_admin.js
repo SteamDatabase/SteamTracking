@@ -613,7 +613,14 @@ function UploadImages( previews, itemID, type, altAssetIndex, replaceAssetKeyPos
 
 		if ( isAlbumImageType )
 		{
-		    strKey = type + '_' + i;
+			strKey = type + '_' + i;
+
+			// if we have a language selected, route it through as additional data through the 'params' blob of the form
+			var strSelectedLanguage = $J( preview.find( 'select.image_language_select :selected' )[0] ).val();
+			if ( strSelectedLanguage && strSelectedLanguage != 'default' )
+            {
+				fd.append( 'params[' + filename + '][language]', strSelectedLanguage );
+            }
 		}
 		else
 		{

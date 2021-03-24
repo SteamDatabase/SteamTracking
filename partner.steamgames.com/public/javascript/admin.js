@@ -1118,6 +1118,7 @@ function LocLanguageSelect( id, language )
 
 		// hint the language to the browser, which fixes rendering of some chinese characters among chinese/japanese
 		textArea.setAttribute( "lang", hiddenInput.getAttribute( "lang" ) );
+		textArea.dispatchEvent( new Event( 'input' ) );
 	}
 }
 

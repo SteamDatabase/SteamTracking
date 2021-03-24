@@ -137,7 +137,7 @@ body.v6.remote_play_together .page_content {
 
 .sale_callout .remoteplay_section_header span {
 	font-size: 18px;
-	color: #ed6393;
+	color: #75af39;
 }
 
 
@@ -236,7 +236,7 @@ body.v6.remote_play_together .page_content {
 
 .remoteplay_howto_section {
 	position: relative;
-	background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/remote_play_together/rpt_towerfall_bg.png?v=2' );
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/remote_play_together/rpt_unrailed_bg.png?v=1' );
 	background-position: top right;
 	background-repeat: no-repeat;
 	padding: 150px 0;
@@ -306,7 +306,7 @@ body.v6.remote_play_together .page_content {
 
 		}
 
-.rpt_towerfall_ctn {
+.rpt_unrailed_ctn {
 	display: flex;
 	align-items: flex-end;
 	position: relative;
@@ -315,7 +315,7 @@ body.v6.remote_play_together .page_content {
 	flex-wrap: wrap;
 }
 
-.rpt_towerfall_content {
+.rpt_unrailed_content {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-end;
@@ -323,19 +323,19 @@ body.v6.remote_play_together .page_content {
 	margin-top: 20px;
 }
 
-.rpt_towerfall_content div {
+.rpt_unrailed_content div {
 	margin: 3px 0 3px  auto;
 	text-align: right;
 }
 
-.rpt_towerfall_gif {
+.rpt_unrailed_gif {
 	position: absolute;
 	top: 0;
 	right: -10%;
 }
 
-.rpt_towerfall_capsule {
-	background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/remote_play_together/towerfall.png?v=2' );
+.rpt_unrailed_capsule {
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/remote_play_together/unrailed.png?v=1' );
 	background-position: right;
 	background-repeat: no-repeat;
 	background-size: contain;
@@ -395,8 +395,8 @@ body.v6.remote_play_together .page_content {
 	text-align: left;
 }
 
-.towerfall_logo_ctn {
-	background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/remote_play_together/towerfall.png?v=2' );
+.unrailed_logo_ctn {
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/remote_play_together/unrailed.png?v=2' );
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
@@ -404,8 +404,8 @@ body.v6.remote_play_together .page_content {
 	width: 138px;
 }
 
-.towerfall_gif {
-	background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/remote_play_together/towerfall_invite2.gif?v=2' );
+.unrailed_gif {
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/remote_play_together/unrailed_invite2.gif?v=2' );
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
@@ -422,7 +422,7 @@ body.v6.remote_play_together .page_content {
 	background-repeat: no-repeat;
 	background-size: contain;
 	width: 450px;
-	height: 579px;
+	height: 671px;
 	margin: 0 auto;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -878,7 +878,7 @@ body.v6.remote_play_together .page_content {
 		flex-wrap: wrap;
 	}
 
-	html.responsive .rpt_towerfall_gif {
+	html.responsive .rpt_unrailed_gif {
 		right: unset;
 		height: auto;
 	}
