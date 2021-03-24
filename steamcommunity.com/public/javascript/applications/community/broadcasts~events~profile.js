@@ -16246,7 +16246,12 @@
                             null,
                             k.createElement(
                               "div",
-                              { className: Pn.a.SaleBroadcastCtn },
+                              {
+                                className: Object(N.a)(
+                                  Pn.a.SaleBroadcastCtn,
+                                  "SaleBroadcastCtn_Trgt"
+                                ),
+                              },
                               k.createElement(
                                 k.Suspense,
                                 { fallback: k.createElement("div", null) },
@@ -18318,7 +18323,12 @@
                     { onEnter: this.OnEnter },
                     k.createElement(
                       "div",
-                      { className: Pn.a.SaleBroadcastSection },
+                      {
+                        className: Object(N.a)(
+                          Pn.a.SaleBroadcastSection,
+                          "SaleBroadcastSection_trgt"
+                        ),
+                      },
                       Boolean(this.state.bOnceVisible) &&
                         k.createElement(
                           pa,
@@ -22249,7 +22259,7 @@
                             f.a,
                             { href: Object(v.e)(i), className: T.AvatarLink },
                             l.createElement("img", {
-                              className: T.Avatar,
+                              className: Object(m.a)(T.Avatar, "Avatar_Trgt"),
                               src: a.GetAvatarURLFullSize(),
                             })
                           ),
@@ -29717,7 +29727,8 @@
                       {
                         className: Object(u.a)(
                           c.a.SaleSectionContainer,
-                          v.a.SaleSectionTabsRow
+                          v.a.SaleSectionTabsRow,
+                          "SaleSectionCtn_Trgt"
                         ),
                       },
                       s
@@ -50581,7 +50592,8 @@
           {
             className: Object(R.a)(
               c.a.SaleSectionContainer,
-              F.a.SaleSectionContainer
+              F.a.SaleSectionContainer,
+              "center_row_trgt"
             ),
             style: { gridTemplateColumns: 1 < t ? a : null },
           },

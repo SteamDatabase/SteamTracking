@@ -1360,7 +1360,12 @@
                       { className: Object(O.a)(W.a.wrapper) },
                       h.a.createElement(
                         "div",
-                        { className: Object(O.a)(W.a.video_placeholder) },
+                        {
+                          className: Object(O.a)(
+                            W.a.video_placeholder,
+                            "video_placeholder_trgt"
+                          ),
+                        },
                         h.a.createElement(
                           "div",
                           { className: W.a.BroadcastPlayerContainer },
