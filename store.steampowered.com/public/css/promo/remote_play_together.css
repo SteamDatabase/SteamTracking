@@ -612,16 +612,17 @@ body.v6.remote_play_together .page_content {
 	flex-direction: column;
 	margin: 0 auto;
 	justify-content: center;
-	align-items: center;
+	align-items: left;
 }
 
 .rpt_anywhere_apps_header {
-	font-size: 18px;
+	font-size: 25px;
 	text-transform: uppercase;
 	letter-spacing: 0.03em;
 	color: #FFFFFF;
 	text-align: left;
 	min-height: 80px;
+	margin-bottom: 10px;
 }
 
 .rpt_anywhere_apps_header.steamlink {
@@ -631,9 +632,19 @@ body.v6.remote_play_together .page_content {
 	padding-left: 100px;
 }
 
-.rpt_appstore_logo_ctn {
-	margin: 15px 0;
-	display: block;
+
+.small_blue_circle {
+	background: linear-gradient(270deg, #3B9FEF 1.05%, #3CA2F0 100%);
+	border-radius: 50%;
+	height: 10px;
+	width: 10px;
+	margin-right: 8px;
+	margin-top: 5px;
+}
+
+.rpt_appstore_row_ctn {
+	margin: 10px 0px 10px 8px;
+	display: flex;
 }
 
 .rpt_appstore_logo {
@@ -644,10 +655,14 @@ body.v6.remote_play_together .page_content {
 	height: 70px;
 }
 
+
+
 .rpt_appstore_desc {
-	font-size: 14px;
-	line-height: 20px;
+	font-size: 16px;
+	font-weight: bold;
+	line-height:20px;
 	text-align: left;
+	//color: #3CA2F0;
 }
 
 .rpt_appstore_logo.google {
