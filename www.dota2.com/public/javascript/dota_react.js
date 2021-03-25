@@ -12963,6 +12963,7 @@ object-assign
       ButtonText: "blogentrypage_ButtonText_2kUH4",
       SteamLogo: "blogentrypage_SteamLogo_-z4m9",
       BlogEntryPage: "blogentrypage_BlogEntryPage_3PVZq",
+      CommunityLink: "blogentrypage_CommunityLink_-1Ftw",
       TitleContainer: "blogentrypage_TitleContainer_24V3X",
       TitleBackground: "blogentrypage_TitleBackground_2Jkng",
       BackToOverview: "blogentrypage_BackToOverview_3yBA_",
@@ -25945,6 +25946,17 @@ PERFORMANCE OF THIS SOFTWARE.
           m.a.createElement(Dn.a, null, m.a.createElement("title", null, h)),
           m.a.createElement(Ka, null),
           m.a.createElement(ja, null),
+          Gt.VALVE_INTERNAL &&
+            m.a.createElement(
+              "a",
+              {
+                className: Ja.a.CommunityLink,
+                href:
+                  "https://steamcommunity.com/games/dota2/announcements/detail/" +
+                  i.AnnouncementGID,
+              },
+              "Admin Community Link"
+            ),
           m.a.createElement(
             "div",
             { className: Ja.a.TitleContainer },

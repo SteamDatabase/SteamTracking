@@ -4361,6 +4361,20 @@ a {
   color: white;
   background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/outlanders/patch-notes/bg_repeater.jpg");
   background-color: #15171b;
+  position: relative;
+}
+.blogentrypage_BlogEntryPage_3PVZq .blogentrypage_CommunityLink_-1Ftw {
+  position: absolute;
+  top: 100px;
+  left: 20px;
+  padding: 5px 20px;
+  background-color: #2a2e36;
+  border: 1px solid #565e6e;
+  color: white;
+  z-index: 10000;
+}
+.blogentrypage_BlogEntryPage_3PVZq .blogentrypage_CommunityLink_-1Ftw:hover {
+  filter: brightness(1.2);
 }
 .blogentrypage_BlogEntryPage_3PVZq .blogentrypage_TitleContainer_24V3X {
   width: 100%;
