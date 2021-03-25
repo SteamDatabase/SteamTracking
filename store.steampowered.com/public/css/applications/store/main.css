@@ -2613,6 +2613,8 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   padding: 10px;
 }
 
+/* stylelint-disable */
+
 /* Other events, shown at the bottom of event page */
 .eventrow_OtherEventsCtn_9H6b5 {
   margin-top: 8vw;
@@ -12376,8 +12378,6 @@ html:not(.touch)
   display: block;
 }
 
-/* stylelint-disable */
-
 .eventcalendartile_GameTitleContainer_WHJ_W {
   cursor: pointer;
   display: flex;
@@ -15240,7 +15240,7 @@ html.responsive.touch .partnersaledisplay_SaleSectionTabs_1FPIV {
 }
 .salepreviewwidgets_StoreSaleWidgetContents_Agwfe
   .salepreviewwidgets_StoreMetaDataCtn_2W2g3 {
-  margin-bottom: 6%;
+  flex: 1;
 }
 .salepreviewwidgets_StoreSaleWidgetContents_Agwfe
   .salepreviewwidgets_StoreMetaDataCtn_2W2g3
@@ -15414,7 +15414,7 @@ html.responsive.touch .partnersaledisplay_SaleSectionTabs_1FPIV {
 .salepreviewwidgets_SaleItemFullCapsuleDisplay_2sVvR
   .salepreviewwidgets_SaleTagBlockCtn_1ZqQL {
   margin-top: 4px;
-  margin-bottom: 8%;
+  margin-bottom: 8px;
 }
 @media screen and (max-width: 940px) {
   .salepreviewwidgets_LibraryAssetExpandedDisplay_PZY_7
@@ -15438,7 +15438,8 @@ html.responsive.touch .partnersaledisplay_SaleSectionTabs_1FPIV {
 .salepreviewwidgets_SaleItemFullCapsuleDisplay_2sVvR
   .salepreviewwidgets_StoreSaleWidgetCenter_2asUT {
   padding-left: 0px;
-  margin-bottom: -8%;
+  height: 100%;
+  justify-content: space-between;
 }
 
 .salepreviewwidgets_LibraryAssetExpandedDisplay_PZY_7
@@ -15524,7 +15525,7 @@ html.responsive.touch .partnersaledisplay_SaleSectionTabs_1FPIV {
 }
 .salepreviewwidgets_LibraryAssetExpandedDisplay_PZY_7
   .salepreviewwidgets_StoreSaleWidgetShortDesc_3AsE5 {
-  margin-bottom: 6%;
+  margin-bottom: 6px;
 }
 .salepreviewwidgets_SaleItemFullCapsuleDisplay_2sVvR
   .salepreviewwidgets_StoreSaleWidgetShortDesc_3AsE5 {
@@ -16694,7 +16695,7 @@ html.touch
 }
 .salepreviewwidgets_StoreSaleWidgetCrossCenterRight_oW0H1
   .salepreviewwidgets_TitleCtn_3rrH9 {
-  padding-top: 30px;
+  padding: 10px 40px 10px 0px;
 }
 @media screen and (max-width: 620px) {
   .salepreviewwidgets_StoreSaleWidgetCrossCenterRight_oW0H1

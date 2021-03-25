@@ -4668,6 +4668,8 @@ body.v6.infinite_scrolling #footer_spacer.small_footer {
 .home_ctn.top_new_releases
 {
 	overflow: visible;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 /* 1080 x 350 */
