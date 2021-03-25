@@ -13016,7 +13016,7 @@ a {
   animation-iteration-count: 1;
   animation-name: heropage_PortraitIn_3wy5B;
 }
-@media (max-width: 900px) {
+@media (max-width: 1200px) {
   .heropage_UpperSection_l2rxD .heropage_HeroPortraitContainer_3oI3C {
     max-width: 100%;
     max-height: 70%;
@@ -13056,6 +13056,8 @@ a {
 .heropage_UpperSection_l2rxD .heropage_HeroPortraitContainer_3oI3C.huskar,
 .heropage_UpperSection_l2rxD .heropage_HeroPortraitContainer_3oI3C.invoker,
 .heropage_UpperSection_l2rxD .heropage_HeroPortraitContainer_3oI3C.juggernaut,
+.heropage_UpperSection_l2rxD
+  .heropage_HeroPortraitContainer_3oI3C.keeper_of_the_light,
 .heropage_UpperSection_l2rxD .heropage_HeroPortraitContainer_3oI3C.kunkka,
 .heropage_UpperSection_l2rxD .heropage_HeroPortraitContainer_3oI3C.lich,
 .heropage_UpperSection_l2rxD .heropage_HeroPortraitContainer_3oI3C.lina,
@@ -13078,6 +13080,7 @@ a {
 .heropage_UpperSection_l2rxD
   .heropage_HeroPortraitContainer_3oI3C.phantom_lancer,
 .heropage_UpperSection_l2rxD .heropage_HeroPortraitContainer_3oI3C.phoenix,
+.heropage_UpperSection_l2rxD .heropage_HeroPortraitContainer_3oI3C.queenofpain,
 .heropage_UpperSection_l2rxD .heropage_HeroPortraitContainer_3oI3C.razor,
 .heropage_UpperSection_l2rxD .heropage_HeroPortraitContainer_3oI3C.shadow_demon,
 .heropage_UpperSection_l2rxD .heropage_HeroPortraitContainer_3oI3C.silencer,
@@ -13103,6 +13106,8 @@ a {
 .heropage_UpperSection_l2rxD .heropage_HeroPortraitContainer_3oI3C.ember_spirit,
 .heropage_UpperSection_l2rxD .heropage_HeroPortraitContainer_3oI3C.gyrocopter,
 .heropage_UpperSection_l2rxD .heropage_HeroPortraitContainer_3oI3C.invoker,
+.heropage_UpperSection_l2rxD
+  .heropage_HeroPortraitContainer_3oI3C.keeper_of_the_light,
 .heropage_UpperSection_l2rxD .heropage_HeroPortraitContainer_3oI3C.kunkka,
 .heropage_UpperSection_l2rxD .heropage_HeroPortraitContainer_3oI3C.lifestaler,
 .heropage_UpperSection_l2rxD .heropage_HeroPortraitContainer_3oI3C.lone_druid,
@@ -13123,19 +13128,6 @@ a {
 .heropage_UpperSection_l2rxD .heropage_HeroPortraitContainer_3oI3C.broodmother {
   width: 100%;
   right: -20%;
-}
-.heropage_UpperSection_l2rxD .heropage_HeroPortraitContainer_3oI3C.queenofpain,
-.heropage_UpperSection_l2rxD
-  .heropage_HeroPortraitContainer_3oI3C.obsidian_destroyer {
-  top: 15%;
-}
-@media (max-width: 1200px) {
-  .heropage_UpperSection_l2rxD
-    .heropage_HeroPortraitContainer_3oI3C.queenofpain,
-  .heropage_UpperSection_l2rxD
-    .heropage_HeroPortraitContainer_3oI3C.obsidian_destroyer {
-    top: 0px;
-  }
 }
 .heropage_UpperSection_l2rxD .heropage_HeroPortraitContainer_3oI3C.kunkka,
 .heropage_UpperSection_l2rxD
@@ -13171,6 +13163,9 @@ a {
   .heropage_UpperSection_l2rxD .heropage_HeroPortraitContainer_3oI3C.hoodwink {
     height: 70%;
   }
+}
+.heropage_UpperSection_l2rxD .heropage_HeroPortraitContainer_3oI3C.meepo {
+  top: -10%;
 }
 .heropage_UpperSection_l2rxD
   .heropage_HeroPortraitContainer_3oI3C
@@ -13298,7 +13293,7 @@ a {
     font-size: 70px;
   }
 }
-@media (max-width: 900px) {
+@media (max-width: 1200px) {
   .heropage_HeroSummary_2jP25 .heropage_HeroName_2IcIu {
     font-size: 60px;
     line-height: 62px;
