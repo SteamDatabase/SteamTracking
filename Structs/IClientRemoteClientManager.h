@@ -71,6 +71,8 @@ public:
     virtual unknown_ret UsedVideoX264() = 0;
     virtual unknown_ret UsedVideoH264() = 0;
     virtual unknown_ret UsedVideoHEVC() = 0;
+    virtual unknown_ret SetRemotePlayTogetherQualityOverride(int) = 0;
+    virtual unknown_ret SetRemotePlayTogetherBitrateOverride(int) = 0;
     virtual unknown_ret BHasRemotePlayInviteAndSession(RemotePlayPlayer_t) = 0;
     virtual unknown_ret CreateRemotePlayInviteAndSession(RemotePlayPlayer_t, unsigned int) = 0;
     virtual unknown_ret CancelRemotePlayInviteAndSession(RemotePlayPlayer_t) = 0;

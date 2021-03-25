@@ -101,6 +101,8 @@ enum EStreamControlMessage {
 	k_EStreamControlTouchActionSetLayerRemoved = 131;
 	k_EStreamControlRemotePlayTogetherGroupUpdate = 132;
 	k_EStreamControlSetInputTemporarilyDisabled = 133;
+	k_EStreamControlSetQualityOverride = 134;
+	k_EStreamControlSetBitrateOverride = 135;
 }
 
 enum EStreamVersion {
@@ -129,6 +131,7 @@ enum EStreamVideoCodec {
 }
 
 enum EStreamQualityPreference {
+	k_EStreamQualityAutomatic = -1;
 	k_EStreamQualityFast = 1;
 	k_EStreamQualityBalanced = 2;
 	k_EStreamQualityBeautiful = 3;
@@ -751,6 +754,14 @@ message CRemotePlayTogetherGroupUpdateMsg {
 
 message CSetInputTemporarilyDisabledMsg {
 	optional bool disabled = 1;
+}
+
+message CSetQualityOverrideMsg {
+	optional int32 value = 1;
+}
+
+message CSetBitrateOverrideMsg {
+	optional int32 value = 1;
 }
 
 message CStreamDataLostMsg {

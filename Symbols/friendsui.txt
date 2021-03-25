@@ -207,6 +207,7 @@
  B CSaveTouchConfigLayoutMsg::default_instance_
  B CServerHandshakeMsg::default_instance_
  B CSetActivityMsg::default_instance_
+ B CSetBitrateOverrideMsg::default_instance_
  B CSetCapslockMsg::default_instance_
  B CSetCaptureSizeMsg::default_instance_
  B CSetCursorImageMsg::default_instance_
@@ -217,6 +218,7 @@
  B CSetInputTemporarilyDisabledMsg::default_instance_
  B CSetKeymapMsg::default_instance_
  B CSetQoSMsg::default_instance_
+ B CSetQualityOverrideMsg::default_instance_
  B CSetSpectatorModeMsg::default_instance_
  B CSetStreamingClientConfig::default_instance_
  B CSetTargetBitrateMsg::default_instance_
@@ -2497,8 +2499,10 @@
  D typeinfo for CRemotePlayController::CCallbackInternal_OnPlaceholderStateChange
  D typeinfo for CRemotePlayController::CCallbackInternal_OnRemoteClientInputSettingsChange
  D typeinfo for CRemotePlayController::CCallbackInternal_OnRemoteClientLaunchFailed
+ D typeinfo for CRemotePlayController::CCallbackInternal_OnRemoteClientRemotePlayBitrateOverride
  D typeinfo for CRemotePlayController::CCallbackInternal_OnRemoteClientRemotePlayClearControllers
  D typeinfo for CRemotePlayController::CCallbackInternal_OnRemoteClientRemotePlayControllerIndexSet
+ D typeinfo for CRemotePlayController::CCallbackInternal_OnRemoteClientRemotePlayQualityOverride
  D typeinfo for CRemotePlayController::CCallbackInternal_OnRemoteClientStreamLifetime
  D typeinfo for CRemotePlayController::CCallbackInternal_OnRemoteClientStreamSessionUpdateNetworkUtilization
  D typeinfo for CRemotePlayController::CCallbackInternal_OnRemotePlayInviteResult
@@ -2515,6 +2519,7 @@
  D typeinfo for CSaveTouchConfigLayoutMsg
  D typeinfo for CServerHandshakeMsg
  D typeinfo for CSetActivityMsg
+ D typeinfo for CSetBitrateOverrideMsg
  D typeinfo for CSetCapslockMsg
  D typeinfo for CSetCaptureSizeMsg
  D typeinfo for CSetCursorImageMsg
@@ -2526,6 +2531,7 @@
  D typeinfo for CSetKeymapMsg
  D typeinfo for CSetNicknameDialog
  D typeinfo for CSetQoSMsg
+ D typeinfo for CSetQualityOverrideMsg
  D typeinfo for CSetSpectatorModeMsg
  D typeinfo for CSetStreamingClientConfig
  D typeinfo for CSetTargetBitrateMsg
@@ -3981,8 +3987,10 @@
  D vtable for CRemotePlayController::CCallbackInternal_OnPlaceholderStateChange
  D vtable for CRemotePlayController::CCallbackInternal_OnRemoteClientInputSettingsChange
  D vtable for CRemotePlayController::CCallbackInternal_OnRemoteClientLaunchFailed
+ D vtable for CRemotePlayController::CCallbackInternal_OnRemoteClientRemotePlayBitrateOverride
  D vtable for CRemotePlayController::CCallbackInternal_OnRemoteClientRemotePlayClearControllers
  D vtable for CRemotePlayController::CCallbackInternal_OnRemoteClientRemotePlayControllerIndexSet
+ D vtable for CRemotePlayController::CCallbackInternal_OnRemoteClientRemotePlayQualityOverride
  D vtable for CRemotePlayController::CCallbackInternal_OnRemoteClientStreamLifetime
  D vtable for CRemotePlayController::CCallbackInternal_OnRemoteClientStreamSessionUpdateNetworkUtilization
  D vtable for CRemotePlayController::CCallbackInternal_OnRemotePlayInviteResult
@@ -3999,6 +4007,7 @@
  D vtable for CSaveTouchConfigLayoutMsg
  D vtable for CServerHandshakeMsg
  D vtable for CSetActivityMsg
+ D vtable for CSetBitrateOverrideMsg
  D vtable for CSetCapslockMsg
  D vtable for CSetCaptureSizeMsg
  D vtable for CSetCursorImageMsg
@@ -4010,6 +4019,7 @@
  D vtable for CSetKeymapMsg
  D vtable for CSetNicknameDialog
  D vtable for CSetQoSMsg
+ D vtable for CSetQualityOverrideMsg
  D vtable for CSetSpectatorModeMsg
  D vtable for CSetStreamingClientConfig
  D vtable for CSetTargetBitrateMsg
@@ -4862,8 +4872,10 @@
  R typeinfo name for CRemotePlayController::CCallbackInternal_OnPlaceholderStateChange
  R typeinfo name for CRemotePlayController::CCallbackInternal_OnRemoteClientInputSettingsChange
  R typeinfo name for CRemotePlayController::CCallbackInternal_OnRemoteClientLaunchFailed
+ R typeinfo name for CRemotePlayController::CCallbackInternal_OnRemoteClientRemotePlayBitrateOverride
  R typeinfo name for CRemotePlayController::CCallbackInternal_OnRemoteClientRemotePlayClearControllers
  R typeinfo name for CRemotePlayController::CCallbackInternal_OnRemoteClientRemotePlayControllerIndexSet
+ R typeinfo name for CRemotePlayController::CCallbackInternal_OnRemoteClientRemotePlayQualityOverride
  R typeinfo name for CRemotePlayController::CCallbackInternal_OnRemoteClientStreamLifetime
  R typeinfo name for CRemotePlayController::CCallbackInternal_OnRemoteClientStreamSessionUpdateNetworkUtilization
  R typeinfo name for CRemotePlayController::CCallbackInternal_OnRemotePlayInviteResult
@@ -4880,6 +4892,7 @@
  R typeinfo name for CSaveTouchConfigLayoutMsg
  R typeinfo name for CServerHandshakeMsg
  R typeinfo name for CSetActivityMsg
+ R typeinfo name for CSetBitrateOverrideMsg
  R typeinfo name for CSetCapslockMsg
  R typeinfo name for CSetCaptureSizeMsg
  R typeinfo name for CSetCursorImageMsg
@@ -4891,6 +4904,7 @@
  R typeinfo name for CSetKeymapMsg
  R typeinfo name for CSetNicknameDialog
  R typeinfo name for CSetQoSMsg
+ R typeinfo name for CSetQualityOverrideMsg
  R typeinfo name for CSetSpectatorModeMsg
  R typeinfo name for CSetStreamingClientConfig
  R typeinfo name for CSetTargetBitrateMsg
@@ -10834,12 +10848,18 @@
  T CRemotePlayController::CCallbackInternal_OnRemoteClientLaunchFailed::CCallbackInternal_OnRemoteClientLaunchFailed()
  T CRemotePlayController::CCallbackInternal_OnRemoteClientLaunchFailed::Run(void*)
  T CRemotePlayController::CCallbackInternal_OnRemoteClientLaunchFailed::~CCallbackInternal_OnRemoteClientLaunchFailed()
+ T CRemotePlayController::CCallbackInternal_OnRemoteClientRemotePlayBitrateOverride::CCallbackInternal_OnRemoteClientRemotePlayBitrateOverride()
+ T CRemotePlayController::CCallbackInternal_OnRemoteClientRemotePlayBitrateOverride::Run(void*)
+ T CRemotePlayController::CCallbackInternal_OnRemoteClientRemotePlayBitrateOverride::~CCallbackInternal_OnRemoteClientRemotePlayBitrateOverride()
  T CRemotePlayController::CCallbackInternal_OnRemoteClientRemotePlayClearControllers::CCallbackInternal_OnRemoteClientRemotePlayClearControllers()
  T CRemotePlayController::CCallbackInternal_OnRemoteClientRemotePlayClearControllers::Run(void*)
  T CRemotePlayController::CCallbackInternal_OnRemoteClientRemotePlayClearControllers::~CCallbackInternal_OnRemoteClientRemotePlayClearControllers()
  T CRemotePlayController::CCallbackInternal_OnRemoteClientRemotePlayControllerIndexSet::CCallbackInternal_OnRemoteClientRemotePlayControllerIndexSet()
  T CRemotePlayController::CCallbackInternal_OnRemoteClientRemotePlayControllerIndexSet::Run(void*)
  T CRemotePlayController::CCallbackInternal_OnRemoteClientRemotePlayControllerIndexSet::~CCallbackInternal_OnRemoteClientRemotePlayControllerIndexSet()
+ T CRemotePlayController::CCallbackInternal_OnRemoteClientRemotePlayQualityOverride::CCallbackInternal_OnRemoteClientRemotePlayQualityOverride()
+ T CRemotePlayController::CCallbackInternal_OnRemoteClientRemotePlayQualityOverride::Run(void*)
+ T CRemotePlayController::CCallbackInternal_OnRemoteClientRemotePlayQualityOverride::~CCallbackInternal_OnRemoteClientRemotePlayQualityOverride()
  T CRemotePlayController::CCallbackInternal_OnRemoteClientStreamLifetime::CCallbackInternal_OnRemoteClientStreamLifetime()
  T CRemotePlayController::CCallbackInternal_OnRemoteClientStreamLifetime::Run(void*)
  T CRemotePlayController::CCallbackInternal_OnRemoteClientStreamLifetime::~CCallbackInternal_OnRemoteClientStreamLifetime()
@@ -10876,6 +10896,7 @@
  T CRemotePlayController::CloseGroup(CSmartPtr<CJSCallbackPromise>)
  T CRemotePlayController::CreateInviteAndSession(char const*, char const*, CSmartPtr<CJSCallbackPromise>)
  T CRemotePlayController::CreateInviteAndSessionWithGuestID(char const*, unsigned int, char const*, CSmartPtr<CJSCallbackPromise>)
+ T CRemotePlayController::GetClientStreamingBitrate(CSmartPtr<CJSCallbackPromise>)
  T CRemotePlayController::GetClientStreamingQuality(CSmartPtr<CJSCallbackPromise>)
  T CRemotePlayController::GetGameSystemVolume(CSmartPtr<CJSCallbackPromise>)
  T CRemotePlayController::GetPerUserInputSettings(char const*, CSmartPtr<CJSCallbackPromise>)
@@ -10887,8 +10908,10 @@
  T CRemotePlayController::OnPlaceholderStateChange(PlaceholderStateChanged_t*)
  T CRemotePlayController::OnRemoteClientInputSettingsChange(RemoteClientInputSettingsChange_t*)
  T CRemotePlayController::OnRemoteClientLaunchFailed(RemoteClientLaunchFailed_t*)
+ T CRemotePlayController::OnRemoteClientRemotePlayBitrateOverride(RemoteClientRemotePlayBitrateOverride_t*)
  T CRemotePlayController::OnRemoteClientRemotePlayClearControllers(RemoteClientRemotePlayClearControllers_t*)
  T CRemotePlayController::OnRemoteClientRemotePlayControllerIndexSet(RemoteClientRemotePlayControllerIndexSet_t*)
+ T CRemotePlayController::OnRemoteClientRemotePlayQualityOverride(RemoteClientRemotePlayQualityOverride_t*)
  T CRemotePlayController::OnRemoteClientStreamLifetime(RemoteClientStreamLifetime_t*)
  T CRemotePlayController::OnRemoteClientStreamSessionUpdateNetworkUtilization(RemoteClientStreamSessionUpdateNetworkUtilization_t*)
  T CRemotePlayController::OnRemotePlayInviteResult(RemotePlayInviteResult_t*)
@@ -10899,6 +10922,7 @@
  T CRemotePlayController::OnRemotePlayTogetherPlayerLeft(RemoteClientRemotePlayTogetherPlayerLeft_t*)
  T CRemotePlayController::OnStreamingClientConnected(StreamingClientConnected_t*)
  T CRemotePlayController::OnStreamingClientUsedInput(StreamingClientUsedInput_t*)
+ T CRemotePlayController::RegisterForBitrateOverride(CSmartPtr<CJSCallbackFunc>)
  T CRemotePlayController::RegisterForClearControllers(CSmartPtr<CJSCallbackFunc>)
  T CRemotePlayController::RegisterForControllerIndexSet(CSmartPtr<CJSCallbackFunc>)
  T CRemotePlayController::RegisterForGroupCreated(CSmartPtr<CJSCallbackFunc>)
@@ -10908,6 +10932,7 @@
  T CRemotePlayController::RegisterForNetworkUtilizationUpdate(CSmartPtr<CJSCallbackFunc>)
  T CRemotePlayController::RegisterForPlaceholderStateChanged(CSmartPtr<CJSCallbackFunc>)
  T CRemotePlayController::RegisterForPlayerInputSettingsChanged(CSmartPtr<CJSCallbackFunc>)
+ T CRemotePlayController::RegisterForQualityOverride(CSmartPtr<CJSCallbackFunc>)
  T CRemotePlayController::RegisterForRemoteClientLaunchFailed(CSmartPtr<CJSCallbackFunc>)
  T CRemotePlayController::RegisterForRemoteClientStarted(CSmartPtr<CJSCallbackFunc>)
  T CRemotePlayController::RegisterForRemoteClientStopped(CSmartPtr<CJSCallbackFunc>)
@@ -10918,6 +10943,8 @@
  T CRemotePlayController::RegisterJSMethods(vgui::HTML*)
  T CRemotePlayController::RunFrame()
  T CRemotePlayController::SaveStreamingClientConfig(CStreamingClientConfig const&)
+ T CRemotePlayController::SetActiveSession(CSteamID, CGameID)
+ T CRemotePlayController::SetClientStreamingBitrate(int)
  T CRemotePlayController::SetClientStreamingQuality(int)
  T CRemotePlayController::SetGameSystemVolume(int)
  T CRemotePlayController::SetPerUserControllerInputEnabled(char const*, bool, CSmartPtr<CJSCallbackPromise>)
@@ -11021,6 +11048,17 @@
  T CSetActivityMsg::mutable_game_name()
  T CSetActivityMsg::set_game_name(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CSetActivityMsg::~CSetActivityMsg()
+ T CSetBitrateOverrideMsg::ByteSize() const
+ T CSetBitrateOverrideMsg::CSetBitrateOverrideMsg()
+ T CSetBitrateOverrideMsg::Clear()
+ T CSetBitrateOverrideMsg::GetCachedSize() const
+ T CSetBitrateOverrideMsg::GetMetadata() const
+ T CSetBitrateOverrideMsg::IsInitialized() const
+ T CSetBitrateOverrideMsg::MergeFrom(CSetBitrateOverrideMsg const&)
+ T CSetBitrateOverrideMsg::New() const
+ T CSetBitrateOverrideMsg::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CSetBitrateOverrideMsg::SetCachedSize(int) const
+ T CSetBitrateOverrideMsg::~CSetBitrateOverrideMsg()
  T CSetCapslockMsg::ByteSize() const
  T CSetCapslockMsg::CSetCapslockMsg()
  T CSetCapslockMsg::Clear()
@@ -11159,6 +11197,17 @@
  T CSetQoSMsg::SerializeWithCachedSizesToArray(unsigned char*) const
  T CSetQoSMsg::SetCachedSize(int) const
  T CSetQoSMsg::~CSetQoSMsg()
+ T CSetQualityOverrideMsg::ByteSize() const
+ T CSetQualityOverrideMsg::CSetQualityOverrideMsg()
+ T CSetQualityOverrideMsg::Clear()
+ T CSetQualityOverrideMsg::GetCachedSize() const
+ T CSetQualityOverrideMsg::GetMetadata() const
+ T CSetQualityOverrideMsg::IsInitialized() const
+ T CSetQualityOverrideMsg::MergeFrom(CSetQualityOverrideMsg const&)
+ T CSetQualityOverrideMsg::New() const
+ T CSetQualityOverrideMsg::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CSetQualityOverrideMsg::SetCachedSize(int) const
+ T CSetQualityOverrideMsg::~CSetQualityOverrideMsg()
  T CSetSpectatorModeMsg::ByteSize() const
  T CSetSpectatorModeMsg::CSetSpectatorModeMsg()
  T CSetSpectatorModeMsg::Clear()
@@ -18900,6 +18949,8 @@
  b (anonymous namespace)::CServerHandshakeMsg_reflection_
  b (anonymous namespace)::CSetActivityMsg_descriptor_
  b (anonymous namespace)::CSetActivityMsg_reflection_
+ b (anonymous namespace)::CSetBitrateOverrideMsg_descriptor_
+ b (anonymous namespace)::CSetBitrateOverrideMsg_reflection_
  b (anonymous namespace)::CSetCapslockMsg_descriptor_
  b (anonymous namespace)::CSetCapslockMsg_reflection_
  b (anonymous namespace)::CSetCaptureSizeMsg_descriptor_
@@ -18920,6 +18971,8 @@
  b (anonymous namespace)::CSetKeymapMsg_reflection_
  b (anonymous namespace)::CSetQoSMsg_descriptor_
  b (anonymous namespace)::CSetQoSMsg_reflection_
+ b (anonymous namespace)::CSetQualityOverrideMsg_descriptor_
+ b (anonymous namespace)::CSetQualityOverrideMsg_reflection_
  b (anonymous namespace)::CSetSpectatorModeMsg_descriptor_
  b (anonymous namespace)::CSetSpectatorModeMsg_reflection_
  b (anonymous namespace)::CSetStreamingClientConfig_descriptor_
@@ -20258,6 +20311,7 @@
  r protobuf_AssignDesc_stream_2eproto()::CSaveTouchConfigLayoutMsg_offsets_
  r protobuf_AssignDesc_stream_2eproto()::CServerHandshakeMsg_offsets_
  r protobuf_AssignDesc_stream_2eproto()::CSetActivityMsg_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CSetBitrateOverrideMsg_offsets_
  r protobuf_AssignDesc_stream_2eproto()::CSetCapslockMsg_offsets_
  r protobuf_AssignDesc_stream_2eproto()::CSetCaptureSizeMsg_offsets_
  r protobuf_AssignDesc_stream_2eproto()::CSetCursorImageMsg_offsets_
@@ -20268,6 +20322,7 @@
  r protobuf_AssignDesc_stream_2eproto()::CSetInputTemporarilyDisabledMsg_offsets_
  r protobuf_AssignDesc_stream_2eproto()::CSetKeymapMsg_offsets_
  r protobuf_AssignDesc_stream_2eproto()::CSetQoSMsg_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CSetQualityOverrideMsg_offsets_
  r protobuf_AssignDesc_stream_2eproto()::CSetSpectatorModeMsg_offsets_
  r protobuf_AssignDesc_stream_2eproto()::CSetStreamingClientConfig_offsets_
  r protobuf_AssignDesc_stream_2eproto()::CSetTargetBitrateMsg_offsets_

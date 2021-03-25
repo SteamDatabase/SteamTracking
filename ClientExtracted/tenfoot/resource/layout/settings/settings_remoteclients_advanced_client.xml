@@ -31,7 +31,9 @@
 							  <Label id="20000" text="#Settings_RemoteClients_Bandwidth20000" />
 							  <Label id="25000" text="#Settings_RemoteClients_Bandwidth25000" />
 							  <Label id="30000" text="#Settings_RemoteClients_Bandwidth30000" />
+							  <Label id="40000" text="#Settings_RemoteClients_Bandwidth40000" />
 							  <Label id="50000" text="#Settings_RemoteClients_Bandwidth50000" />
+							  <Label id="75000" text="#Settings_RemoteClients_Bandwidth75000" />
 							  <Label id="0" text="#Settings_RemoteClients_BandwidthUnlimited" />
 						  </DropDown>
 					  </Panel>	
@@ -40,13 +42,13 @@
 						  <Label class="SettingsLabel" text="#Settings_RemoteClients_Resolution" />
 						  <DropDown id="ResolutionLimit" class="Filter" tabindex="auto">
 							  <Label id="0x0" text="#Settings_RemoteClients_ResolutionDesktop" />
-							  <Label id="7680x4320" text="#Settings_RemoteClients_Resolution8K" />
-							  <Label id="3840x2160" text="#Settings_RemoteClients_Resolution2160p" />
-							  <Label id="2560x1440" text="#Settings_RemoteClients_Resolution1440p" />
-							  <Label id="1920x1080" text="#Settings_RemoteClients_Resolution1080p" />
-							  <Label id="1600x900" text="#Settings_RemoteClients_Resolution900p" />
-							  <Label id="1280x720" text="#Settings_RemoteClients_Resolution720p" />
 							  <Label id="852x480" text="#Settings_RemoteClients_Resolution480p" />
+							  <Label id="1280x720" text="#Settings_RemoteClients_Resolution720p" />
+							  <Label id="1600x900" text="#Settings_RemoteClients_Resolution900p" />
+							  <Label id="1920x1080" text="#Settings_RemoteClients_Resolution1080p" />
+							  <Label id="2560x1440" text="#Settings_RemoteClients_Resolution1440p" />
+							  <Label id="3840x2160" text="#Settings_RemoteClients_Resolution2160p" />
+							  <Label id="7680x4320" text="#Settings_RemoteClients_Resolution8K" />
 						  </DropDown>
 					  </Panel>
 					  <Panel class="Spacer" />
