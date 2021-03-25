@@ -20187,7 +20187,7 @@
               this.m_descBBCodeEditor.current &&
                 mi(this.m_descBBCodeEditor.current, e, t);
             }),
-            (e.prototype.OnRelatedToBroadcsat = function (e) {
+            (e.prototype.OnRelatedToBroadcast = function (e) {
               this.props.saleSection.hide_section_if_broadcast_is_hidden !==
                 e &&
                 ((this.props.saleSection.hide_section_if_broadcast_is_hidden = e),
@@ -20234,7 +20234,7 @@
                   ),
                   Ze.createElement(Ke.e, {
                     onChange: function (e) {
-                      return t.OnRelatedToBroadcsat(e);
+                      return t.OnRelatedToBroadcast(e);
                     },
                     label: Object(B.f)(
                       "#EventEditor_RelatedToBroadcast_action"
@@ -20264,7 +20264,7 @@
             Object(I.c)([L.a], e.prototype, "SetText", null),
             Object(I.c)([L.a], e.prototype, "OnTextChange", null),
             Object(I.c)([L.a], e.prototype, "OnImageInsert", null),
-            Object(I.c)([L.a], e.prototype, "OnRelatedToBroadcsat", null),
+            Object(I.c)([L.a], e.prototype, "OnRelatedToBroadcast", null),
             (e = Object(I.c)([qe.a], e))
           );
         })(Ze.Component);
