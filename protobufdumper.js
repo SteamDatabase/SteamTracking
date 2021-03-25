@@ -166,15 +166,14 @@ function extractDependencies(allProtos, protoName, knownMessages) {
 	if (file) {
 		imports.add(file);
 	} else {
-		let index = allProtos.findIndex((proto) => proto.name === protoName);
-		if (index === -1) {
-			// FixMe!!
-			//console.error('Could not find dependency:', protoName);
+		let proto = allProtos.find((proto) => proto.name === protoName);
+		if (!proto) {
+			console.error('Could not find dependency:', protoName);
 		} else {
-			let proto = allProtos.splice(index, 1)[0];
 			protos.push(proto);
 			if (proto.dependencies) {
 				proto.dependencies.forEach((depName) => {
+					if (protoName === depName) return; // recursive msg (e.g. CEconItem_Description)
 					let deps = extractDependencies(allProtos, depName, knownMessages);
 					protos.push(...deps.protos);
 					deps.imports.forEach((file) => imports.add(file));
@@ -417,6 +416,8 @@ function decodeProtobuf(proto, minVarName) {
 }
 
 function Dump(outputFullPath, filteredProtos, filteredServices, knownMessages) {
+	let AllToDump = new Set();
+
 	// dump services
 	while (filteredServices.length) {
 		let servicesToDump = [];
@@ -456,30 +457,57 @@ function Dump(outputFullPath, filteredProtos, filteredServices, knownMessages) {
 		}
 
 		let svcName = nonClientName || servicesToDump[0].service;
-		
+
 		if (CONFIG.ProtoFilterEnabled) {
 			// if/when filtering is enabled, find orphaned messages "CSvcname_*" and add them to dump
-			index = filteredProtos.findIndex((proto) => proto.name.startsWith('C' + svcName + '_'));
-			if (index !== -1) {
-				let proto = filteredProtos.splice(index, 1)[0];
-				protosToDump.push(proto);
-				if (proto.dependencies) {
-					proto.dependencies.forEach((depName) => {
-						let deps = extractDependencies(filteredProtos, depName, knownMessages);
-						protosToDump.push(...deps.protos);
-						deps.imports.forEach((file) => importsToDump.add(file));
-					});
-				}
+			let proto = filteredProtos.find((proto) => proto.name.startsWith('C' + svcName + '_'));
+			if (proto) {
+				let deps = extractDependencies(filteredProtos, proto.name, knownMessages);
+				protosToDump.push(...deps.protos);
+				deps.imports.forEach((file) => importsToDump.add(file));
 			}
 		}
 
+		protosToDump.forEach((proto) => {
+			if (!proto.dependentServices) {
+				proto.dependentServices = new Set();
+			}
+			proto.dependentServices.add(svcName);
+		});
+
 		let fileName = CONFIG.ServiceProtoFileNameTemplate.replace('%svcname%', svcName.toLowerCase());
+		AllToDump.add({fileName, importsToDump, protosToDump, servicesToDump});
+	}
+
+	for (let {fileName, importsToDump, protosToDump, servicesToDump} of AllToDump) {
 		fileName = path.join(outputFullPath, fileName);
+		protosToDump = protosToDump.filter((proto, idx) => {
+			if (protosToDump.indexOf(proto) !== idx) {
+				// remove duplicates
+				return false;
+			}
+			if (!proto.dependentServices || proto.dependentServices.size > 1 ||
+			  filteredProtos.some((commonProto) => (!commonProto.dependentServices || commonProto.bCommon) && commonProto.dependencies && commonProto.dependencies.has(proto.name))
+			) {
+				// several services depend on this proto, move it to "common.proto"
+				importsToDump.add(CONFIG.CommonProtoFileName);
+				proto.bCommon = true;
+				return false;
+			}
+			return true;
+		});
 		outputToFile(fileName, importsToDump, protosToDump, servicesToDump);
 	}
 
+	filteredProtos = filteredProtos.filter((proto) => {
+		if (!proto.dependentServices || proto.bCommon) {
+			return true;
+		}
+		return false;
+	});
+
 	// dump remaining common protos
-	const imports = new Set();
+	const imports = new Set(['steammessages_unified_base.steamclient.proto']); // "unified_base" is required for `description` option
 
 	if (CONFIG.ProtoFilterEnabled) {
 		filteredProtos.forEach((proto) => {
@@ -523,6 +551,9 @@ function outputServices(services, stream = process.stdout) {
 
 function outputProtos(protos, stream = process.stdout) {
 	protos.forEach((proto) => {
+		if (proto.bCommon && proto.dependentServices) {
+			stream.write(`// Used by: ${[...proto.dependentServices]}\n`);
+		}
 		stream.write(`message ${proto.name} {\n`);
 		proto.fields.forEach((field) => {
 			stream.write(`\t${field.flag} ${field.type} ${field.name} = ${field.id}`);
