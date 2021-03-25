@@ -14018,6 +14018,7 @@ html:not(.touch)
   display: flex;
   padding: 4px 16px;
   width: fit-content;
+  flex-wrap: wrap;
 }
 .saleitembrowser_SaleItemBrowserContainer_18byE
   .saleitembrowser_SaleItemBrowserHeaderContainer_1edLK

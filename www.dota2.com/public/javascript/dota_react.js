@@ -25566,7 +25566,7 @@ PERFORMANCE OF THIS SOFTWARE.
               ),
               m.a.createElement(
                 "a",
-                { href: "http://www.dota2.com/store/" },
+                { href: "https://www.dota2.com/store/" },
                 m.a.createElement(
                   "div",
                   { className: Ma(Ia.a.NavLink, Ia.a.StoreLink) },
@@ -38001,9 +38001,15 @@ PERFORMANCE OF THIS SOFTWARE.
             e.values_float.length > 0
               ? e.values_float[0].toFixed(1)
               : e.values_int[0].toFixed(0);
-          (y = y.replace("%" + e.name.toLowerCase() + "%", t)),
-            (v = v.replace("%" + e.name.toLowerCase() + "%", t)),
-            (b = b.replace("%" + e.name.toLowerCase() + "%", t));
+          (y = y.replace(new RegExp("%" + e.name.toLowerCase() + "%", "g"), t)),
+            (v = v.replace(
+              new RegExp("%" + e.name.toLowerCase() + "%", "g"),
+              t
+            )),
+            (b = b.replace(
+              new RegExp("%" + e.name.toLowerCase() + "%", "g"),
+              t
+            ));
         }),
           (y = y.replace(/\%\%/g, "%"));
         var L = t.name.replace("npc_dota_hero_", ""),
@@ -38015,373 +38021,351 @@ PERFORMANCE OF THIS SOFTWARE.
         var E = function (e) {
           ml.setSelectedAbilityIndex(e), r(!0);
         };
-        return (
-          console.log(a),
+        return m.a.createElement(
+          "div",
+          { className: hs.a.HeroAbilities },
           m.a.createElement(
             "div",
-            { className: hs.a.HeroAbilities },
+            { className: hs.a.AbilityLeft },
             m.a.createElement(
               "div",
-              { className: hs.a.AbilityLeft },
+              { className: hs.a.VideoContainer },
+              m.a.createElement("div", {
+                className: Ma(hs.a.FadeUp, a && hs.a.DoFadeAnim),
+                onAnimationEnd: function () {
+                  return r(!1);
+                },
+              }),
               m.a.createElement(
-                "div",
-                { className: hs.a.VideoContainer },
-                m.a.createElement("div", {
-                  className: Ma(hs.a.FadeUp, a && hs.a.DoFadeAnim),
-                  onAnimationEnd: function () {
-                    return r(!1);
-                  },
+                "video",
+                {
+                  key: w,
+                  className: hs.a.HeroPortrait,
+                  autoPlay: !0,
+                  preload: "auto",
+                  muted: !0,
+                  loop: !0,
+                  playsInline: !0,
+                  poster: Gt.VIDEO_URL + "abilities/" + L + "/" + w + ".jpg",
+                },
+                m.a.createElement("source", {
+                  type: "video/webm",
+                  src: Gt.VIDEO_URL + "abilities/" + L + "/" + w + ".webm",
                 }),
-                m.a.createElement(
-                  "video",
-                  {
-                    key: w,
-                    className: hs.a.HeroPortrait,
-                    autoPlay: !0,
-                    preload: "auto",
-                    muted: !0,
-                    loop: !0,
-                    playsInline: !0,
-                    poster: Gt.VIDEO_URL + "abilities/" + L + "/" + w + ".jpg",
-                  },
-                  m.a.createElement("source", {
-                    type: "video/webm",
-                    src: Gt.VIDEO_URL + "abilities/" + L + "/" + w + ".webm",
-                  }),
-                  m.a.createElement("source", {
-                    type: "video/mp4",
-                    src: Gt.VIDEO_URL + "abilities/" + L + "/" + w + ".mp4",
-                  })
-                )
-              ),
-              m.a.createElement(
-                "div",
-                { className: hs.a.AbilitySelector },
-                t.abilities.map(function (e, t) {
-                  return e.ability_is_granted_by_scepter ||
-                    e.ability_is_granted_by_shard ||
-                    602 == e.id ||
-                    322 == e.id ||
-                    641 == e.id
-                    ? null
-                    : m.a.createElement("div", {
-                        key: e.name,
-                        className: Ma(
-                          hs.a.AbilitySelectable,
-                          t != i && hs.a.NotSelected
-                        ),
-                        style: {
-                          backgroundImage:
-                            "url( " +
-                            Gt.IMG_URL +
-                            "abilities/" +
-                            e.name +
-                            ".png )",
-                        },
-                        onClick: function () {
-                          return E(t);
-                        },
-                      });
-                }),
-                o &&
-                  m.a.createElement(
-                    "div",
-                    {
-                      key: o.name + "_shard",
-                      className: Ma(
-                        hs.a.AbilitySelectable,
-                        hs.a.Shard,
-                        -1 != i && hs.a.NotSelected
-                      ),
-                      style: {
-                        backgroundImage:
-                          "url( " +
-                          Gt.IMG_URL +
-                          "abilities/" +
-                          o.name +
-                          ".png )",
-                      },
-                      onClick: function () {
-                        return E(-1);
-                      },
-                    },
-                    m.a.createElement("div", {
-                      className: hs.a.SubIcon,
-                      style: {
-                        backgroundImage:
-                          "url( " +
-                          Gt.IMG_URL +
-                          "heroes/stats/aghs_shard.png )",
-                      },
-                    })
-                  ),
-                s &&
-                  m.a.createElement(
-                    "div",
-                    {
-                      key: s.name + "_scepter",
-                      className: Ma(
-                        hs.a.AbilitySelectable,
-                        hs.a.Scepter,
-                        -2 != i && hs.a.NotSelected
-                      ),
-                      style: {
-                        backgroundImage:
-                          "url( " +
-                          Gt.IMG_URL +
-                          "abilities/" +
-                          s.name +
-                          ".png )",
-                      },
-                      onClick: function () {
-                        return E(-2);
-                      },
-                    },
-                    m.a.createElement("div", {
-                      className: hs.a.SubIcon,
-                      style: {
-                        backgroundImage:
-                          "url( " +
-                          Gt.IMG_URL +
-                          "heroes/stats/aghs_scepter.png )",
-                      },
-                    })
-                  )
+                m.a.createElement("source", {
+                  type: "video/mp4",
+                  src: Gt.VIDEO_URL + "abilities/" + L + "/" + w + ".mp4",
+                })
               )
             ),
             m.a.createElement(
               "div",
-              { className: hs.a.AbilityRight },
-              m.a.createElement(
-                "div",
-                { className: hs.a.AbilityInfoContainer },
+              { className: hs.a.AbilitySelector },
+              t.abilities.map(function (e, t) {
+                return e.ability_is_granted_by_scepter ||
+                  e.ability_is_granted_by_shard ||
+                  602 == e.id ||
+                  322 == e.id ||
+                  641 == e.id
+                  ? null
+                  : m.a.createElement("div", {
+                      key: e.name,
+                      className: Ma(
+                        hs.a.AbilitySelectable,
+                        t != i && hs.a.NotSelected
+                      ),
+                      style: {
+                        backgroundImage:
+                          "url( " +
+                          Gt.IMG_URL +
+                          "abilities/" +
+                          e.name +
+                          ".png )",
+                      },
+                      onClick: function () {
+                        return E(t);
+                      },
+                    });
+              }),
+              o &&
                 m.a.createElement(
                   "div",
-                  { className: hs.a.AbilityMain },
-                  m.a.createElement("img", {
-                    className: hs.a.AbilityImage,
-                    src: Gt.IMG_URL + "abilities/" + l.name + ".png",
-                  }),
+                  {
+                    key: o.name + "_shard",
+                    className: Ma(
+                      hs.a.AbilitySelectable,
+                      hs.a.Shard,
+                      -1 != i && hs.a.NotSelected
+                    ),
+                    style: {
+                      backgroundImage:
+                        "url( " + Gt.IMG_URL + "abilities/" + o.name + ".png )",
+                    },
+                    onClick: function () {
+                      return E(-1);
+                    },
+                  },
+                  m.a.createElement("div", {
+                    className: hs.a.SubIcon,
+                    style: {
+                      backgroundImage:
+                        "url( " + Gt.IMG_URL + "heroes/stats/aghs_shard.png )",
+                    },
+                  })
+                ),
+              s &&
+                m.a.createElement(
+                  "div",
+                  {
+                    key: s.name + "_scepter",
+                    className: Ma(
+                      hs.a.AbilitySelectable,
+                      hs.a.Scepter,
+                      -2 != i && hs.a.NotSelected
+                    ),
+                    style: {
+                      backgroundImage:
+                        "url( " + Gt.IMG_URL + "abilities/" + s.name + ".png )",
+                    },
+                    onClick: function () {
+                      return E(-2);
+                    },
+                  },
+                  m.a.createElement("div", {
+                    className: hs.a.SubIcon,
+                    style: {
+                      backgroundImage:
+                        "url( " +
+                        Gt.IMG_URL +
+                        "heroes/stats/aghs_scepter.png )",
+                    },
+                  })
+                )
+            )
+          ),
+          m.a.createElement(
+            "div",
+            { className: hs.a.AbilityRight },
+            m.a.createElement(
+              "div",
+              { className: hs.a.AbilityInfoContainer },
+              m.a.createElement(
+                "div",
+                { className: hs.a.AbilityMain },
+                m.a.createElement("img", {
+                  className: hs.a.AbilityImage,
+                  src: Gt.IMG_URL + "abilities/" + l.name + ".png",
+                }),
+                m.a.createElement(
+                  "div",
+                  { className: hs.a.AbilityInfo },
                   m.a.createElement(
                     "div",
-                    { className: hs.a.AbilityInfo },
+                    { className: hs.a.AbilityName },
+                    l.name_loc
+                  ),
+                  c &&
+                    l.ability_has_scepter &&
+                    !l.ability_is_granted_by_scepter &&
                     m.a.createElement(
                       "div",
-                      { className: hs.a.AbilityName },
-                      l.name_loc
+                      { className: hs.a.AghType },
+                      kn("#ability_upgrade_scepter")
                     ),
-                    c &&
-                      l.ability_has_scepter &&
-                      !l.ability_is_granted_by_scepter &&
-                      m.a.createElement(
-                        "div",
-                        { className: hs.a.AghType },
-                        kn("#ability_upgrade_scepter")
-                      ),
-                    u &&
-                      l.ability_has_shard &&
-                      !l.ability_is_granted_by_shard &&
-                      m.a.createElement(
-                        "div",
-                        { className: hs.a.AghType },
-                        kn("#ability_upgrade_shard")
-                      ),
-                    u &&
-                      l.ability_is_granted_by_shard &&
-                      m.a.createElement(
-                        "div",
-                        { className: hs.a.AghType },
-                        kn("#ability_new_shard")
-                      ),
-                    c &&
-                      l.ability_is_granted_by_scepter &&
-                      m.a.createElement(
-                        "div",
-                        { className: hs.a.AghType },
-                        kn("#ability_new_scepter")
-                      ),
+                  u &&
+                    l.ability_has_shard &&
+                    !l.ability_is_granted_by_shard &&
                     m.a.createElement(
                       "div",
-                      { className: hs.a.AbilityDesc },
-                      kn(M)
+                      { className: hs.a.AghType },
+                      kn("#ability_upgrade_shard")
+                    ),
+                  u &&
+                    l.ability_is_granted_by_shard &&
+                    m.a.createElement(
+                      "div",
+                      { className: hs.a.AghType },
+                      kn("#ability_new_shard")
+                    ),
+                  c &&
+                    l.ability_is_granted_by_scepter &&
+                    m.a.createElement(
+                      "div",
+                      { className: hs.a.AghType },
+                      kn("#ability_new_scepter")
+                    ),
+                  m.a.createElement(
+                    "div",
+                    { className: hs.a.AbilityDesc },
+                    kn(M)
+                  )
+                )
+              ),
+              m.a.createElement(
+                "div",
+                { className: hs.a.AbilityDetails },
+                m.a.createElement(
+                  "div",
+                  {
+                    className: Ma(hs.a.GenericValues, (c || u) && hs.a.Hidden),
+                  },
+                  m.a.createElement(
+                    "div",
+                    { className: hs.a.Column },
+                    m.a.createElement(
+                      "div",
+                      { className: hs.a.DetailsValues },
+                      p &&
+                        m.a.createElement(
+                          "div",
+                          { className: hs.a.ValueElement },
+                          kn("#hero_ability"),
+                          ":",
+                          m.a.createElement(
+                            "div",
+                            { className: hs.a.ValueValue },
+                            kn(p)
+                          )
+                        ),
+                      h &&
+                        m.a.createElement(
+                          "div",
+                          { className: hs.a.ValueElement },
+                          kn("#hero_affects"),
+                          ":",
+                          m.a.createElement(
+                            "div",
+                            { className: hs.a.ValueValue },
+                            kn(h)
+                          )
+                        ),
+                      f &&
+                        m.a.createElement(
+                          "div",
+                          { className: hs.a.ValueElement },
+                          kn("#ability_damage"),
+                          ":",
+                          m.a.createElement(
+                            "div",
+                            { className: hs.a.ValueValue },
+                            kn(f)
+                          )
+                        )
+                    )
+                  ),
+                  m.a.createElement(
+                    "div",
+                    { className: hs.a.Column },
+                    m.a.createElement(
+                      "div",
+                      { className: hs.a.DetailsValues },
+                      _ &&
+                        m.a.createElement(
+                          "div",
+                          { className: hs.a.ValueElement },
+                          kn("#hero_spell_immunity"),
+                          ":",
+                          m.a.createElement(
+                            "div",
+                            { className: hs.a.ValueValue },
+                            kn(_)
+                          )
+                        ),
+                      g &&
+                        m.a.createElement(
+                          "div",
+                          { className: hs.a.ValueElement },
+                          kn("#hero_dispellable"),
+                          ":",
+                          m.a.createElement(
+                            "div",
+                            { className: hs.a.ValueValue },
+                            kn(g)
+                          )
+                        )
                     )
                   )
                 ),
                 m.a.createElement(
                   "div",
-                  { className: hs.a.AbilityDetails },
+                  {
+                    className: Ma(hs.a.SpecificValues, (c || u) && hs.a.Hidden),
+                  },
+                  l.special_values.map(function (e) {
+                    return 0 == e.heading_loc.length
+                      ? null
+                      : m.a.createElement(
+                          "div",
+                          { key: e.name, className: hs.a.SpecialElement },
+                          kn(e.heading_loc),
+                          m.a.createElement(
+                            "div",
+                            { className: hs.a.SpecialValue },
+                            e.values_float.length > 0
+                              ? e.values_float.map(function (t, n) {
+                                  return (
+                                    (n > 0 ? " / " : "") +
+                                    t.toFixed(1) +
+                                    (e.is_percentage ? "%" : "")
+                                  );
+                                })
+                              : e.values_int.map(function (t, n) {
+                                  return (
+                                    (n > 0 ? " / " : "") +
+                                    t.toFixed(0) +
+                                    (e.is_percentage ? "%" : "")
+                                  );
+                                })
+                          )
+                        );
+                  })
+                ),
+                (l.cooldowns.reduce(function (e, t) {
+                  return e + t;
+                }) > 0 ||
+                  l.mana_costs.reduce(function (e, t) {
+                    return e + t;
+                  }) > 0) &&
                   m.a.createElement(
                     "div",
                     {
-                      className: Ma(
-                        hs.a.GenericValues,
-                        (c || u) && hs.a.Hidden
-                      ),
+                      className: Ma(hs.a.BottomValues, (c || u) && hs.a.Hidden),
                     },
                     m.a.createElement(
                       "div",
-                      { className: hs.a.Column },
+                      { className: hs.a.CooldownContainer },
+                      m.a.createElement("div", {
+                        className: hs.a.CooldownIcon,
+                        style: {
+                          backgroundImage:
+                            "url( " + Gt.IMG_URL + "icons/cooldown.png )",
+                        },
+                      }),
                       m.a.createElement(
                         "div",
-                        { className: hs.a.DetailsValues },
-                        p &&
-                          m.a.createElement(
-                            "div",
-                            { className: hs.a.ValueElement },
-                            kn("#hero_ability"),
-                            ":",
-                            m.a.createElement(
-                              "div",
-                              { className: hs.a.ValueValue },
-                              kn(p)
-                            )
-                          ),
-                        h &&
-                          m.a.createElement(
-                            "div",
-                            { className: hs.a.ValueElement },
-                            kn("#hero_affects"),
-                            ":",
-                            m.a.createElement(
-                              "div",
-                              { className: hs.a.ValueValue },
-                              kn(h)
-                            )
-                          ),
-                        f &&
-                          m.a.createElement(
-                            "div",
-                            { className: hs.a.ValueElement },
-                            kn("#ability_damage"),
-                            ":",
-                            m.a.createElement(
-                              "div",
-                              { className: hs.a.ValueValue },
-                              kn(f)
-                            )
-                          )
+                        { className: hs.a.CooldownText },
+                        l.cooldowns.map(function (e, t) {
+                          return (t > 0 ? " / " : "") + e.toFixed(1);
+                        })
                       )
                     ),
                     m.a.createElement(
                       "div",
-                      { className: hs.a.Column },
+                      { className: hs.a.ManaContainer },
+                      m.a.createElement("div", { className: hs.a.ManaIcon }),
                       m.a.createElement(
                         "div",
-                        { className: hs.a.DetailsValues },
-                        _ &&
-                          m.a.createElement(
-                            "div",
-                            { className: hs.a.ValueElement },
-                            kn("#hero_spell_immunity"),
-                            ":",
-                            m.a.createElement(
-                              "div",
-                              { className: hs.a.ValueValue },
-                              kn(_)
-                            )
-                          ),
-                        g &&
-                          m.a.createElement(
-                            "div",
-                            { className: hs.a.ValueElement },
-                            kn("#hero_dispellable"),
-                            ":",
-                            m.a.createElement(
-                              "div",
-                              { className: hs.a.ValueValue },
-                              kn(g)
-                            )
-                          )
+                        { className: hs.a.ManaText },
+                        l.mana_costs.map(function (e, t) {
+                          return (t > 0 ? " / " : "") + e.toFixed(0);
+                        })
                       )
                     )
                   ),
-                  m.a.createElement(
-                    "div",
-                    {
-                      className: Ma(
-                        hs.a.SpecificValues,
-                        (c || u) && hs.a.Hidden
-                      ),
-                    },
-                    l.special_values.map(function (e) {
-                      return 0 == e.heading_loc.length
-                        ? null
-                        : m.a.createElement(
-                            "div",
-                            { key: e.name, className: hs.a.SpecialElement },
-                            kn(e.heading_loc),
-                            m.a.createElement(
-                              "div",
-                              { className: hs.a.SpecialValue },
-                              e.values_float.length > 0
-                                ? e.values_float.map(function (t, n) {
-                                    return (
-                                      (n > 0 ? " / " : "") +
-                                      t.toFixed(1) +
-                                      (e.is_percentage ? "%" : "")
-                                    );
-                                  })
-                                : e.values_int.map(function (t, n) {
-                                    return (
-                                      (n > 0 ? " / " : "") +
-                                      t.toFixed(0) +
-                                      (e.is_percentage ? "%" : "")
-                                    );
-                                  })
-                            )
-                          );
-                    })
-                  ),
-                  (l.cooldowns.reduce(function (e, t) {
-                    return e + t;
-                  }) > 0 ||
-                    l.mana_costs.reduce(function (e, t) {
-                      return e + t;
-                    }) > 0) &&
-                    m.a.createElement(
-                      "div",
-                      {
-                        className: Ma(
-                          hs.a.BottomValues,
-                          (c || u) && hs.a.Hidden
-                        ),
-                      },
-                      m.a.createElement(
-                        "div",
-                        { className: hs.a.CooldownContainer },
-                        m.a.createElement("div", {
-                          className: hs.a.CooldownIcon,
-                          style: {
-                            backgroundImage:
-                              "url( " + Gt.IMG_URL + "icons/cooldown.png )",
-                          },
-                        }),
-                        m.a.createElement(
-                          "div",
-                          { className: hs.a.CooldownText },
-                          l.cooldowns.map(function (e, t) {
-                            return (t > 0 ? " / " : "") + e.toFixed(1);
-                          })
-                        )
-                      ),
-                      m.a.createElement(
-                        "div",
-                        { className: hs.a.ManaContainer },
-                        m.a.createElement("div", { className: hs.a.ManaIcon }),
-                        m.a.createElement(
-                          "div",
-                          { className: hs.a.ManaText },
-                          l.mana_costs.map(function (e, t) {
-                            return (t > 0 ? " / " : "") + e.toFixed(0);
-                          })
-                        )
-                      )
-                    ),
-                  m.a.createElement(
-                    "div",
-                    { className: Ma(hs.a.Lore, (c || u) && hs.a.Hidden) },
-                    l.lore_loc
-                  )
+                m.a.createElement(
+                  "div",
+                  { className: Ma(hs.a.Lore, (c || u) && hs.a.Hidden) },
+                  l.lore_loc
                 )
               )
             )

@@ -1849,6 +1849,8 @@
         FacetedBrowse_NoMatches: "No matches found.",
         FacetedBrowse_MatchCount: "%1$s match",
         FacetedBrowse_MatchCount_Plural: "%1$s matches",
+        FacetedBrowse_MatchCountPartial: "%1$s+ match",
+        FacetedBrowse_MatchCountPartial_Plural: "%1$s+ matches",
         FacetedBrowse_Reset: "Reset",
         FacetedBrowse_ReturnToTop: "Return to Top",
         App_Taxonomy_Survey_QSuperGenreTitle: "Top-Level Genres",
