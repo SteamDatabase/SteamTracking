@@ -325,7 +325,7 @@
 			if(
 				$OriginalFile === 'Scripts/WebUI/steammobile_android.js' ||
 				str_contains( $OriginalFile, '/webui/' ) ||
-				str_contains( $OriginalFile, '/dota_react/' ) ||
+				str_contains( $OriginalFile, '/dota_react' ) ||
 				str_contains( $OriginalFile, '/applications/' )
 			)
 			{
