@@ -431,8 +431,8 @@
         G = n("2vnA"),
         k = n("+VX6"),
         N = n("U+Q5"),
-        L = n("TLQK"),
-        B = n("bxiW");
+        B = n("TLQK"),
+        L = n("bxiW");
       ((w = j = j || {})[(w.k_EStorePage = 0)] = "k_EStorePage"),
         (w[(w.k_EEventPage = 1)] = "k_EEventPage"),
         (w[(w.k_ESalesPage = 2)] = "k_ESalesPage");
@@ -639,7 +639,7 @@
               );
             }),
             Object(I.c)([G.C], e.prototype, "m_setting", void 0),
-            Object(I.c)([B.a], e.prototype, "BHasSomeLanguage", null),
+            Object(I.c)([L.a], e.prototype, "BHasSomeLanguage", null),
             e
           );
         })(),
@@ -686,11 +686,11 @@
               );
             }),
             (e.prototype.GetHeadline = function (e) {
-              return L.a.Get(this.m_section.localized_headline, e);
+              return B.a.Get(this.m_section.localized_headline, e);
             }),
             (e.prototype.GetHeadlineWithFallback = function (e) {
               var t = this.GetHeadline(e),
-                n = L.b.GetELanguageFallback(e);
+                n = B.b.GetELanguageFallback(e);
               return 0 == t.length && e != n && (t = this.GetHeadline(n)), t;
             }),
             (e.prototype.GetBody = function (e) {
@@ -702,7 +702,7 @@
             }),
             (e.prototype.GetBodyWithFallback = function (e) {
               var t = this.GetBody(e),
-                n = L.b.GetELanguageFallback(e);
+                n = B.b.GetELanguageFallback(e);
               return 0 == t.length && e != n && (t = this.GetBody(n)), t;
             }),
             (e.prototype.GetImageHashAndExtRaw = function (e) {
@@ -718,7 +718,7 @@
             }),
             (e.prototype.GetImageHashAndExtWithFallback = function (e) {
               var t = this.GetImageHashAndExtRaw(e),
-                n = L.b.GetELanguageFallback(e);
+                n = B.b.GetELanguageFallback(e);
               return (
                 void 0 === t && e != n && (t = this.GetImageHashAndExtRaw(n)), t
               );
@@ -1210,7 +1210,7 @@
       }
       function ke(d) {
         Object(G.G)(function () {
-          var e = Be(d);
+          var e = Le(d);
           if (d.GetEventModel().jsondata.sorting_tiers)
             for (
               var t = 0, n = d.GetEventModel().jsondata.sorting_tiers;
@@ -1249,11 +1249,11 @@
           }
         return Me(t, n, R.Auto);
       }
-      function Le(e) {
+      function Be(e) {
         return e.GetEventModel().jsondata.tagged_item_filter || { clauses: [] };
       }
-      function Be(e) {
-        var t = Le(e);
+      function Le(e) {
+        var t = Be(e);
         return Ce(e.GetEventModel().GetTaggedItems(), t);
       }
       function Re(e, t) {
@@ -1398,7 +1398,7 @@
                 }),
                 a = n.length >= e.length;
               return {
-                text: Object(L.f)(
+                text: Object(B.f)(
                   a
                     ? "#EventEditor_CompleteStatus"
                     : "#EventEditor_IncompleteStatus",
@@ -1440,7 +1440,7 @@
                 e.length
                   ? this.GetCompletionState(
                       e,
-                      Object(L.f)("#EventEditor_SaleNotReady_ttip")
+                      Object(B.f)("#EventEditor_SaleNotReady_ttip")
                     )
                   : null
               );
@@ -1656,13 +1656,13 @@
             }),
             (n.prototype.BHasSaleSectionLabelLocalization = function (e, t) {
               var n = this.GetSaleSections()[t];
-              return Boolean(L.a.Get(n.localized_label, e));
+              return Boolean(B.a.Get(n.localized_label, e));
             }),
             (n.prototype.SetSaleSectionLabelLocalization = function (e, t, n) {
               var a = this.GetSaleSections()[t];
               return (
-                L.a.Get(a.localized_label, e) != n &&
-                ((a.localized_label = L.a.Set(a.localized_label || [], e, n)),
+                B.a.Get(a.localized_label, e) != n &&
+                ((a.localized_label = B.a.Set(a.localized_label || [], e, n)),
                 this.SetDirty(H.jsondata_sales),
                 !0)
               );
@@ -1686,8 +1686,8 @@
               var a = this.GetSaleSections()[t];
               return (
                 "text_section" === a.section_type &&
-                L.a.Get(a.text_section_contents, e) != n &&
-                ((a.text_section_contents = L.a.Set(
+                B.a.Get(a.text_section_contents, e) != n &&
+                ((a.text_section_contents = B.a.Set(
                   a.text_section_contents || [],
                   e,
                   n
@@ -1697,12 +1697,12 @@
               );
             }),
             (n.prototype.BHasSaleSectionTabName = function (e, t) {
-              return Boolean(t && L.a.Get(t.localized_label, e));
+              return Boolean(t && B.a.Get(t.localized_label, e));
             }),
             (n.prototype.SetSaleSectionTabName = function (e, t, n) {
               return (
-                L.a.Get(t.localized_label, e) != n &&
-                ((t.localized_label = L.a.Set(t.localized_label || [], e, n)),
+                B.a.Get(t.localized_label, e) != n &&
+                ((t.localized_label = B.a.Set(t.localized_label || [], e, n)),
                 this.SetDirty(H.jsondata_sales),
                 !0)
               );
@@ -2141,16 +2141,16 @@
                 ? ((l.localized_sale_overlay[n] = o),
                   this.SetDirty(H.jsondata_image))
                 : "product_banner" === e &&
-                  L.a.Get(l.localized_sale_product_banner, n) !== o
-                ? ((l.localized_sale_product_banner = L.a.Set(
+                  B.a.Get(l.localized_sale_product_banner, n) !== o
+                ? ((l.localized_sale_product_banner = B.a.Set(
                     l.localized_sale_product_banner || [],
                     n,
                     o
                   )),
                   this.SetDirty(H.jsondata_image))
                 : "product_mobile_banner" === e &&
-                  L.a.Get(l.localized_sale_product_mobile_banner, n) !== o
-                ? ((l.localized_sale_product_mobile_banner = L.a.Set(
+                  B.a.Get(l.localized_sale_product_mobile_banner, n) !== o
+                ? ((l.localized_sale_product_mobile_banner = B.a.Set(
                     l.localized_sale_product_mobile_banner || [],
                     n,
                     o
@@ -2266,7 +2266,7 @@
             }),
             (n.prototype.GetFallbackLanguageIfNeeded = function () {
               var e = this.GetCurEditLanguage(),
-                t = L.b.GetELanguageFallback(e);
+                t = B.b.GetELanguageFallback(e);
               if (e != t) {
                 var n = this.GetDescription(e);
                 if (!n || 0 == n.length) return t;
@@ -2585,20 +2585,20 @@
             Object(I.c)([G.C], n.prototype, "m_endTimeEditChoice", void 0),
             Object(I.c)([G.C], n.prototype, "m_editDurationType", void 0),
             Object(I.c)([G.C], n.prototype, "m_editDurationValue", void 0),
-            Object(I.c)([B.a], n.prototype, "GetEventStartTime", null),
-            Object(I.c)([B.a], n.prototype, "GetEventEndTime", null),
+            Object(I.c)([L.a], n.prototype, "GetEventStartTime", null),
+            Object(I.c)([L.a], n.prototype, "GetEventEndTime", null),
             Object(I.c)(
-              [B.a],
+              [L.a],
               n.prototype,
               "GetEventVisibilityStartTime",
               null
             ),
-            Object(I.c)([B.a], n.prototype, "GetEventVisibilityEndTime", null),
-            Object(I.c)([B.a], n.prototype, "GetOriginalEventStartTime", null),
-            Object(I.c)([B.a], n.prototype, "GetOriginalEventEndTime", null),
-            Object(I.c)([B.a], n.prototype, "BIsValidStartTimeForEdit", null),
-            Object(I.c)([B.a], n.prototype, "BIsValidEndTimeForEdit", null),
-            Object(I.c)([B.a], n.prototype, "BHasLanguage", null),
+            Object(I.c)([L.a], n.prototype, "GetEventVisibilityEndTime", null),
+            Object(I.c)([L.a], n.prototype, "GetOriginalEventStartTime", null),
+            Object(I.c)([L.a], n.prototype, "GetOriginalEventEndTime", null),
+            Object(I.c)([L.a], n.prototype, "BIsValidStartTimeForEdit", null),
+            Object(I.c)([L.a], n.prototype, "BIsValidEndTimeForEdit", null),
+            Object(I.c)([L.a], n.prototype, "BHasLanguage", null),
             Object(I.c)([G.k], n.prototype, "SetSteamStoreSpotlight", null),
             Object(I.c)([G.k], n.prototype, "SetLibraryHomeSpotlight", null),
             Object(I.c)([G.k], n.prototype, "UpdateVisibilityState", null),
@@ -2650,30 +2650,30 @@
             Object(I.c)([G.k], n.prototype, "DeriveVisibilitySetting", null),
             Object(I.c)([G.k], n.prototype, "OnPreSave", null),
             Object(I.c)([G.k], n.prototype, "Refresh", null),
-            Object(I.c)([B.a], n.prototype, "BIsBeginTimeBeforeEnd", null),
+            Object(I.c)([L.a], n.prototype, "BIsBeginTimeBeforeEnd", null),
             Object(I.c)(
-              [B.a],
+              [L.a],
               n.prototype,
               "BIsValidVisibilityStartTime",
               null
             ),
             Object(I.c)(
-              [B.a],
+              [L.a],
               n.prototype,
               "GetEarliestStartTimeForEdit",
               null
             ),
-            Object(I.c)([B.a], n.prototype, "GetLatestEndTimeForEdit", null),
-            Object(I.c)([B.a], n.prototype, "GetEarliestEndTimeForEdit", null),
+            Object(I.c)([L.a], n.prototype, "GetLatestEndTimeForEdit", null),
+            Object(I.c)([L.a], n.prototype, "GetEarliestEndTimeForEdit", null),
             Object(I.c)(
-              [B.a],
+              [L.a],
               n.prototype,
               "GetEarliestVisibilityStartTimeForEdit",
               null
             ),
             Object(I.c)([G.k], n.prototype, "SetImageURL", null),
-            Object(I.c)([B.a], n.prototype, "BHasTitleImage", null),
-            Object(I.c)([B.a], n.prototype, "LastTimeLanguageUpdate", null),
+            Object(I.c)([L.a], n.prototype, "BHasTitleImage", null),
+            Object(I.c)([L.a], n.prototype, "LastTimeLanguageUpdate", null),
             Object(I.c)([G.k], n.prototype, "SetLibrarySpotlight", null),
             Object(I.c)([G.k], n.prototype, "SetLibrarySpotlightText", null),
             Object(I.c)([G.k], n.prototype, "ToggleTag", null),
@@ -2686,7 +2686,7 @@
               "SetSteamAwardNomineeVoteIDs",
               null
             ),
-            Object(I.c)([B.a], n.prototype, "BDoesSupportLanguage", null),
+            Object(I.c)([L.a], n.prototype, "BDoesSupportLanguage", null),
             Object(I.c)(
               [G.k],
               n.prototype,
@@ -3647,9 +3647,9 @@
                 })
               );
             }),
-            Object(I.c)([B.a], e.prototype, "OnWhitelistGrab", null),
-            Object(I.c)([B.a], e.prototype, "OnWhitelistRelease", null),
-            Object(I.c)([B.a], e.prototype, "OnWhitelistMove", null),
+            Object(I.c)([L.a], e.prototype, "OnWhitelistGrab", null),
+            Object(I.c)([L.a], e.prototype, "OnWhitelistRelease", null),
+            Object(I.c)([L.a], e.prototype, "OnWhitelistMove", null),
             (e = Object(I.c)([qe.a], e))
           );
         })(Ze.Component),
@@ -3688,7 +3688,7 @@
                 color: this.state.color,
               });
             }),
-            Object(I.c)([B.a], n.prototype, "OnColorChange", null),
+            Object(I.c)([L.a], n.prototype, "OnColorChange", null),
             n
           );
         })(Ze.Component),
@@ -3720,11 +3720,11 @@
               if (!n || 0 === n.length) return e;
               for (var a = 0, i = n; a < i.length; a++) {
                 var r = i[a];
-                if (L.b.IsELanguageValidInRealm(e, r)) return e;
+                if (B.b.IsELanguageValidInRealm(e, r)) return e;
               }
               for (var o = 0, l = n; o < l.length; o++) {
                 r = l[o];
-                if (L.b.IsELanguageValidInRealm(t.GetCurEditLanguage(), r))
+                if (B.b.IsELanguageValidInRealm(t.GetCurEditLanguage(), r))
                   return t.GetCurEditLanguage();
               }
               return n.includes(te.d.k_ESteamRealmGlobal) ? 0 : 29;
@@ -3769,7 +3769,7 @@
                         ),
                         Object(et.d)(
                           Ze.createElement($e.e, {
-                            strDescription: Object(L.f)(
+                            strDescription: Object(B.f)(
                               "#ImagePicker_Error",
                               s.name
                             ),
@@ -3884,7 +3884,7 @@
                                     ),
                                     Object(et.d)(
                                       Ze.createElement($e.e, {
-                                        strDescription: Object(L.f)(
+                                        strDescription: Object(B.f)(
                                           "#EventError_Code",
                                           r.strErrorMsg
                                         ),
@@ -3941,7 +3941,7 @@
                     Ze.createElement(dt.a, {
                       position: "center",
                       size: "medium",
-                      string: Object(L.f)("#Loading"),
+                      string: Object(B.f)("#Loading"),
                     }),
                   Ze.createElement(
                     "div",
@@ -3955,9 +3955,9 @@
                 })
               );
             }),
-            Object(I.c)([B.a], e.prototype, "OnDropFiles", null),
-            Object(I.c)([B.a], e.prototype, "OnUploadImages", null),
-            Object(I.c)([B.a], e.prototype, "OnPreviousImageSelected", null),
+            Object(I.c)([L.a], e.prototype, "OnDropFiles", null),
+            Object(I.c)([L.a], e.prototype, "OnUploadImages", null),
+            Object(I.c)([L.a], e.prototype, "OnPreviousImageSelected", null),
             (e = Object(I.c)([qe.a], e))
           );
         })(Ze.Component),
@@ -3981,13 +3981,13 @@
                   Ze.createElement(
                     Ke.d,
                     { style: { margin: "8px" }, onClick: n },
-                    Object(L.f)("#ImageUpload_Upload")
+                    Object(B.f)("#ImageUpload_Upload")
                   ),
                 Boolean(t.m_filesToUpload.length) &&
                   Ze.createElement(
                     Ke.d,
                     { style: { margin: "8px" }, onClick: t.ClearImages },
-                    Object(L.f)("#ImageUpload_Clear")
+                    Object(B.f)("#ImageUpload_Clear")
                   )
               );
             }),
@@ -4017,7 +4017,7 @@
                   fileType: this.props.forceFileType || 3,
                 });
               Object(et.c)(n, t, "CropModal", {
-                strTitle: Object(L.f)("#ImageUpload_CropModalTitle"),
+                strTitle: Object(B.f)("#ImageUpload_CropModalTitle"),
               });
             }),
             (t.ConstructImageUploadDialogs = function (t, n, a, i, r, o) {
@@ -4050,7 +4050,7 @@
                   a = e.supported,
                   r = e.languageRealms,
                   o = a.map(function (e) {
-                    var t = Object(L.f)("#EventEditor_ArtworkType_" + e),
+                    var t = Object(B.f)("#EventEditor_ArtworkType_" + e),
                       n = ne.b[e];
                     n &&
                       !n.bDisableEnforceDimensions &&
@@ -4063,21 +4063,21 @@
                     );
                   }),
                   l = {
-                    pending: Object(L.f)("#ImageUpload_Pending"),
-                    uploading: Object(L.f)("#ImageUpload_Uploading"),
-                    success: Object(L.f)("#ImageUpload_SuccessCard"),
-                    failed: Object(L.f)("#ImageUpload_Failed"),
+                    pending: Object(B.f)("#ImageUpload_Pending"),
+                    uploading: Object(B.f)("#ImageUpload_Uploading"),
+                    success: Object(B.f)("#ImageUpload_SuccessCard"),
+                    failed: Object(B.f)("#ImageUpload_Failed"),
                   },
                   s = new Array(),
                   c = 0,
-                  d = L.b.GetLanguageListForRealms(
+                  d = B.b.GetLanguageListForRealms(
                     r || [te.d.k_ESteamRealmGlobal]
                   );
                 c < d.length;
                 c++
               ) {
                 var p = d[c],
-                  u = Object(L.f)("#Language_" + Object(ee.a)(p));
+                  u = Object(B.f)("#Language_" + Object(ee.a)(p));
                 s.push({ label: u, data: p });
               }
               s.sort(function (e, t) {
@@ -4093,9 +4093,9 @@
                   this.props.forceFileType
                 ),
                 g = _.needsCrop
-                  ? Object(L.f)("#ImageUpload_NeedsCrop")
+                  ? Object(B.f)("#ImageUpload_NeedsCrop")
                   : _.error
-                  ? Object(L.f)("#ImageUpload_Invalid")
+                  ? Object(B.f)("#ImageUpload_Invalid")
                   : l[i.status];
               return Ze.createElement(
                 "div",
@@ -4176,13 +4176,13 @@
                           return t.ShowCropModal(i);
                         },
                       },
-                      Object(L.f)("#ImageUpload_OpenEditor")
+                      Object(B.f)("#ImageUpload_OpenEditor")
                     )
                   )
               );
             }),
-            Object(I.c)([B.a], t.prototype, "OnChangeImageLanguage", null),
-            Object(I.c)([B.a], t.prototype, "OnChangeImageType", null),
+            Object(I.c)([L.a], t.prototype, "OnChangeImageLanguage", null),
+            Object(I.c)([L.a], t.prototype, "OnChangeImageType", null),
             (t = s = Object(I.c)([qe.a], t))
           );
         })(Ze.Component),
@@ -4193,8 +4193,8 @@
         Gt = n("qP7j"),
         kt = n.n(Gt),
         Nt = n("yJqL"),
-        Lt = n("TOXn"),
-        Bt = n("SdTr"),
+        Bt = n("TOXn"),
+        Lt = n("SdTr"),
         Rt = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
@@ -4214,14 +4214,14 @@
                   Ze.createElement(
                     "option",
                     { key: "langpicker_unset", value: -1 },
-                    Object(L.f)("#EventEditor_NoneLanguage")
+                    Object(B.f)("#EventEditor_NoneLanguage")
                   )
                 );
               for (
                 var l = new Array(),
                   s = this.props.realms || [te.d.k_ESteamRealmGlobal],
                   c = 0,
-                  d = L.b.GetLanguageListForRealms(s);
+                  d = B.b.GetLanguageListForRealms(s);
                 c < d.length;
                 c++
               ) {
@@ -4231,7 +4231,7 @@
                   _ = d[c];
                 (a && !a(_)) ||
                   ((p = Object(ee.a)(_)),
-                  (u = Object(L.f)("#Language_" + p)),
+                  (u = Object(B.f)("#Language_" + p)),
                   (m = Boolean(o) && o(_)),
                   l.push({ eLang: _, sLocName: u, bSupported: m }));
               }
@@ -4254,7 +4254,7 @@
                         className: ft.a.SupportedGroupLabel,
                         disabled: !0,
                       },
-                      Object(L.f)(
+                      Object(B.f)(
                         _.bSupported
                           ? "#LanguageGroup_Supported"
                           : "#LanguageGroup_Unsupported"
@@ -4268,9 +4268,9 @@
                 v &&
                   0 !== v &&
                   ((f += " "),
-                  (f += Object(L.f)(
+                  (f += Object(B.f)(
                     "#Language_Last_Update",
-                    Object(L.o)(v) + " @ " + Object(L.m)(v)
+                    Object(B.o)(v) + " @ " + Object(B.m)(v)
                   ))),
                   t.push(
                     Ze.createElement(
@@ -4307,7 +4307,7 @@
                 t
               );
             }),
-            Object(I.c)([B.a], t.prototype, "OnLanguageChange", null),
+            Object(I.c)([L.a], t.prototype, "OnLanguageChange", null),
             (t = Object(I.c)([qe.a], t))
           );
         })(Ze.Component),
@@ -4440,7 +4440,7 @@
                 )
               );
             }),
-            Object(I.c)([B.a], t.prototype, "OnClick", null),
+            Object(I.c)([L.a], t.prototype, "OnClick", null),
             (t = Object(I.c)([qe.a], t))
           );
         })(Ze.Component),
@@ -4460,21 +4460,21 @@
           i = n.GetDescriptionWithFallback(t),
           r = n.GetSubTitleWithLanguageFallback(t),
           o = i
-            ? Ze.createElement(Lt.b, {
+            ? Ze.createElement(Bt.b, {
                 text: i || "",
                 partnerEventStore: so,
                 showErrorInfo: !1,
                 event: n,
                 languageOverride: so.GetEditModel().GetCurEditLanguage(),
               })
-            : Object(L.f)("#selectimage_display_event_body");
+            : Object(B.f)("#selectimage_display_event_body");
         return Ze.createElement(
           "div",
           { className: qt.a.MultipleExampleContainer },
           Ze.createElement(
             "div",
             { className: qt.a.ExampleSectionTitle },
-            Object(L.f)("#selectimage_preview_title_1")
+            Object(B.f)("#selectimage_preview_title_1")
           ),
           Ze.createElement(
             "div",
@@ -4501,12 +4501,12 @@
                   Ze.createElement(
                     "div",
                     { className: qt.a.TextTitle },
-                    a || Object(L.f)("#selectimage_display_event_title")
+                    a || Object(B.f)("#selectimage_display_event_title")
                   ),
                   Ze.createElement(
                     "div",
                     { className: qt.a.TextSubTitle },
-                    r || Object(L.f)("#selectimage_display_event_subtitle")
+                    r || Object(B.f)("#selectimage_display_event_subtitle")
                   ),
                   Ze.createElement("div", { className: qt.a.TextBody }, o)
                 )
@@ -4521,7 +4521,7 @@
               Ze.createElement(
                 "div",
                 { className: qt.a.ExampleSectionTitle },
-                Object(L.f)("#selectimage_preview_title_2")
+                Object(B.f)("#selectimage_preview_title_2")
               ),
               Ze.createElement(
                 "div",
@@ -4626,7 +4626,7 @@
                       Ze.createElement(
                         "p",
                         null,
-                        Object(L.f)("#selectimage_tip_capsule_1")
+                        Object(B.f)("#selectimage_tip_capsule_1")
                       ),
                       Ze.createElement(
                         "div",
@@ -4660,7 +4660,7 @@
                       Ze.createElement(
                         "p",
                         null,
-                        Object(L.f)("#selectimage_tip_background_1")
+                        Object(B.f)("#selectimage_tip_background_1")
                       ),
                       Ze.createElement("img", {
                         style: { width: "100%" },
@@ -4688,12 +4688,12 @@
                         Ze.createElement(
                           "p",
                           null,
-                          Object(L.f)("#selectimage_tip_spotlight_3")
+                          Object(B.f)("#selectimage_tip_spotlight_3")
                         ),
                         Ze.createElement(
                           "p",
                           null,
-                          Object(L.f)("#selectimage_tip_spotlight_4")
+                          Object(B.f)("#selectimage_tip_spotlight_4")
                         ),
                         Ze.createElement("img", {
                           style: { width: "100%" },
@@ -4708,7 +4708,7 @@
                         Ze.createElement(
                           "p",
                           null,
-                          Object(L.f)("#selectimage_tip_spotlight_5")
+                          Object(B.f)("#selectimage_tip_spotlight_5")
                         ),
                         Ze.createElement("img", {
                           style: { width: "100%" },
@@ -4733,10 +4733,10 @@
                     onOK: function () {},
                     onCancel: function () {},
                     bAlertDialog: !0,
-                    strTitle: Object(L.f)(
+                    strTitle: Object(B.f)(
                       "#EventEditor_ExampleTitle_" + this.props.artworkType
                     ),
-                    strDescription: Object(L.f)(
+                    strDescription: Object(B.f)(
                       "#EventEditor_ExampleDescription"
                     ),
                   },
@@ -4775,8 +4775,8 @@
               n.GetEventModel().jsondata.sale_num_headers !== e.data &&
                 Object(et.d)(
                   Ze.createElement($e.c, {
-                    strTitle: Object(L.f)("#Button_Confirm"),
-                    strDescription: Object(L.f)("#Sale_HeaderArtwork_Warning"),
+                    strTitle: Object(B.f)("#Button_Confirm"),
+                    strDescription: Object(B.f)("#Sale_HeaderArtwork_Warning"),
                     onOK: function () {
                       return t.OnChangeSaleHeaderArtworkCountForRealz(e.data);
                     },
@@ -4799,14 +4799,14 @@
             }),
             (e.prototype.GenerateSalesHeaderVisibilityOptions = function () {
               var e = [
-                  { label: Object(L.f)("#Sale_HeaderArtwork_Single"), data: 1 },
+                  { label: Object(B.f)("#Sale_HeaderArtwork_Single"), data: 1 },
                 ],
                 t = so.GetEditModel(),
                 n = Math.min(t.GetNumberOfDays(), 5);
               if (1 < n)
                 for (var a = 2; a <= n; a++)
                   e.push({
-                    label: Object(L.f)("#Sale_HeaderArtwork_Multi_Amount", a),
+                    label: Object(B.f)("#Sale_HeaderArtwork_Multi_Amount", a),
                     data: a,
                   });
               return e;
@@ -4822,7 +4822,7 @@
               ) {
                 var i = t.GetEventStartTime() + 86400 * a,
                   r = {
-                    label: Object(L.n)(
+                    label: Object(B.n)(
                       a + 1 == n
                         ? "#Sale_HeaderArtwork_DayTimeOnward"
                         : "#Sale_HeaderArtwork_DayTime",
@@ -4861,13 +4861,13 @@
                 ? (r = Ze.createElement(
                     "span",
                     { style: { color: "#C6512B" } },
-                    Object(L.f)("#EventEditor_Required")
+                    Object(B.f)("#EventEditor_Required")
                   ))
                 : a === Pe.k_Suggested &&
                   (r = Ze.createElement(
                     "span",
                     { style: { color: "#D7BC86" } },
-                    Object(L.f)("#EventEditor_Suggested")
+                    Object(B.f)("#EventEditor_Suggested")
                   ));
               var o,
                 l = null;
@@ -4881,10 +4881,10 @@
                       Ze.createElement(
                         "strong",
                         null,
-                        Object(L.f)("#selectimage_tip_design_title")
+                        Object(B.f)("#selectimage_tip_design_title")
                       ),
                       ": ",
-                      Object(L.f)("#selectimage_tip_capsule_1")
+                      Object(B.f)("#selectimage_tip_capsule_1")
                     ),
                     Ze.createElement(
                       "p",
@@ -4892,10 +4892,10 @@
                       Ze.createElement(
                         "strong",
                         null,
-                        Object(L.f)("#selectimage_tip_usage_title")
+                        Object(B.f)("#selectimage_tip_usage_title")
                       ),
                       ": ",
-                      Object(L.f)("#selectimage_tip_capsule_2")
+                      Object(B.f)("#selectimage_tip_capsule_2")
                     )
                   ))
                 : "background" === n
@@ -4908,10 +4908,10 @@
                       Ze.createElement(
                         "strong",
                         null,
-                        Object(L.f)("#selectimage_tip_design_title")
+                        Object(B.f)("#selectimage_tip_design_title")
                       ),
                       ": ",
-                      Object(L.f)("#selectimage_tip_background_1")
+                      Object(B.f)("#selectimage_tip_background_1")
                     )
                   ))
                 : "spotlight" === n
@@ -4924,10 +4924,10 @@
                       Ze.createElement(
                         "strong",
                         null,
-                        Object(L.f)("#selectimage_tip_usage_title")
+                        Object(B.f)("#selectimage_tip_usage_title")
                       ),
                       ": ",
-                      Object(L.f)("#selectimage_tip_spotlight_1")
+                      Object(B.f)("#selectimage_tip_spotlight_1")
                     ),
                     Ze.createElement(
                       "p",
@@ -4935,10 +4935,10 @@
                       Ze.createElement(
                         "strong",
                         null,
-                        Object(L.f)("#selectimage_tip_design_title")
+                        Object(B.f)("#selectimage_tip_design_title")
                       ),
                       ": ",
-                      Object(L.f)("#selectimage_tip_spotlight_2")
+                      Object(B.f)("#selectimage_tip_spotlight_2")
                     )
                   ))
                 : "broadcast_left" === n || "broadcast_right" === n
@@ -4948,7 +4948,7 @@
                     Ze.createElement(
                       "p",
                       null,
-                      Object(L.f)("#selectimage_tip_broadcast_1")
+                      Object(B.f)("#selectimage_tip_broadcast_1")
                     )
                   ))
                 : "sale_header" === n
@@ -4958,7 +4958,7 @@
                     Ze.createElement(
                       "div",
                       { className: ft.a.EventElementRequired },
-                      Object(L.f)("#selectimage_tip_required_title")
+                      Object(B.f)("#selectimage_tip_required_title")
                     ),
                     Ze.createElement(
                       "p",
@@ -4966,10 +4966,10 @@
                       Ze.createElement(
                         "b",
                         null,
-                        Object(L.f)("#selectimage_tip_usage_title")
+                        Object(B.f)("#selectimage_tip_usage_title")
                       ),
                       ": ",
-                      Object(L.f)("#selectimage_tip_sale_header_1")
+                      Object(B.f)("#selectimage_tip_sale_header_1")
                     ),
                     Ze.createElement(
                       "p",
@@ -4977,10 +4977,10 @@
                       Ze.createElement(
                         "b",
                         null,
-                        Object(L.f)("#selectimage_tip_design_title")
+                        Object(B.f)("#selectimage_tip_design_title")
                       ),
                       ": ",
-                      Object(L.f)("#selectimage_tip_sale_header_2")
+                      Object(B.f)("#selectimage_tip_sale_header_2")
                     ),
                     Ze.createElement(
                       "p",
@@ -4988,7 +4988,7 @@
                       Ze.createElement(
                         "b",
                         null,
-                        Object(L.f)("#selectimage_tip_template_title")
+                        Object(B.f)("#selectimage_tip_template_title")
                       ),
                       ": ",
                       Ze.createElement(
@@ -4997,13 +4997,13 @@
                           href:
                             "https://cdn.cloudflare.steamstatic.com/appmgmt/storeadmin/SalePageTemplate_min.zip",
                         },
-                        Object(L.f)("#selectimage_tip_sale_header_3")
+                        Object(B.f)("#selectimage_tip_sale_header_3")
                       )
                     ),
                     Ze.createElement("br", null),
                     Ze.createElement(Ke.l, {
                       onChange: this.OnHeaderOffsetChange,
-                      label: Object(L.f)("#Sale_HeaderOffset"),
+                      label: Object(B.f)("#Sale_HeaderOffset"),
                       value: e.GetEventModel().jsondata.sale_header_offset,
                     }),
                     Ze.createElement(
@@ -5016,13 +5016,13 @@
                             .sale_background_color,
                         },
                       },
-                      Object(L.f)("#Sale_BackgroundColor")
+                      Object(B.f)("#Sale_BackgroundColor")
                     ),
                     Ze.createElement(Ke.h, {
                       dropDownControlRef: this.m_refNumSalesHeadersDropDown,
                       strDropDownClassName: ft.a.DropDownScroll,
-                      label: Object(L.f)("#Sale_HeaderArtwork_Multi"),
-                      tooltip: Object(L.f)("#Sale_HeaderArtwork_Multi_hint"),
+                      label: Object(B.f)("#Sale_HeaderArtwork_Multi"),
+                      tooltip: Object(B.f)("#Sale_HeaderArtwork_Multi_hint"),
                       rgOptions: this.GenerateSalesHeaderVisibilityOptions(),
                       selectedOption: e.GetNumSalesBackgroundHeader(),
                       onChange: this.OnChangeSaleHeaderArtworkCountsRequest,
@@ -5037,8 +5037,8 @@
                     Boolean(1 < e.GetNumSalesBackgroundHeader()) &&
                       Ze.createElement(Ke.h, {
                         strDropDownClassName: ft.a.DropDownScroll,
-                        label: Object(L.f)("#Sale_HeaderArtwork_EditDay"),
-                        tooltip: Object(L.f)(
+                        label: Object(B.f)("#Sale_HeaderArtwork_EditDay"),
+                        tooltip: Object(B.f)(
                           "#Sale_HeaderArtwork_EditDay_hint"
                         ),
                         rgOptions: this.GenerateSalesHeaderDayTarget(),
@@ -5062,13 +5062,13 @@
                     Ze.createElement(
                       "p",
                       null,
-                      Object(L.f)("#selectimage_tip_hero_1")
+                      Object(B.f)("#selectimage_tip_hero_1")
                     ),
                     !o.GetAppStoreData().library_asset_setup_complete &&
                       Ze.createElement(
                         "p",
                         { className: Gt.ErrorStylesBackground },
-                        Object(L.f)("#EventEdtior_ArtworkType_hero_warning")
+                        Object(B.f)("#EventEdtior_ArtworkType_hero_warning")
                       )
                   )))
                 : "localized_image_group" === n ||
@@ -5081,12 +5081,12 @@
                     Ze.createElement(
                       "p",
                       null,
-                      Object(L.f)("#ImagePickerLoc_Desc")
+                      Object(B.f)("#ImagePickerLoc_Desc")
                     ),
                     Ze.createElement(
                       "p",
                       null,
-                      Object(L.n)(
+                      Object(B.n)(
                         "#ImagePickerLoc_Files",
                         Ze.createElement(
                           "a",
@@ -5095,7 +5095,7 @@
                               "https://partner.steamgames.com/doc/store/localization#supported_languages",
                             target: D.c.IN_CLIENT ? void 0 : "_blank",
                           },
-                          Object(L.f)("#ImagePickerLoc_URL")
+                          Object(B.f)("#ImagePickerLoc_URL")
                         )
                       )
                     )
@@ -5110,7 +5110,7 @@
                     Ze.createElement(
                       "div",
                       { className: ft.a.EventElementOptional },
-                      Object(L.f)("#selectimage_tip_optional_title")
+                      Object(B.f)("#selectimage_tip_optional_title")
                     ),
                     Ze.createElement(
                       "p",
@@ -5118,16 +5118,16 @@
                       Ze.createElement(
                         "b",
                         null,
-                        Object(L.f)("#selectimage_tip_usage_title")
+                        Object(B.f)("#selectimage_tip_usage_title")
                       ),
                       ": ",
-                      Object(L.f)("#selectimage_tip_sale_product_banner"),
+                      Object(B.f)("#selectimage_tip_sale_product_banner"),
                       "product_mobile_banner" === n &&
                         Ze.createElement(
                           "span",
                           null,
                           "  ",
-                          Object(L.f)(
+                          Object(B.f)(
                             "#selectimage_tip_sale_product_banner_mobile"
                           )
                         )
@@ -5151,7 +5151,7 @@
                     Ze.createElement(
                       Ke.d,
                       {
-                        "data-tooltip-text": Object(L.f)(
+                        "data-tooltip-text": Object(B.f)(
                           this.props.bIsMinimized
                             ? "#Sale_Section_Maximize_Tooltip"
                             : "#Sale_Section_Minimize_Tooltip"
@@ -5178,10 +5178,10 @@
                         Ze.createElement(
                           "b",
                           null,
-                          Object(L.f)("#selectimage_tip_dimensions_title")
+                          Object(B.f)("#selectimage_tip_dimensions_title")
                         ),
                         ": ",
-                        Object(L.n)("#selectimage_tip1", s, c)
+                        Object(B.n)("#selectimage_tip1", s, c)
                       ),
                     Boolean(this.props.strWarning) &&
                       Ze.createElement(
@@ -5206,7 +5206,7 @@
                             },
                             onClick: this.OnExampleClick,
                           },
-                          Object(L.f)("#EventEditor_ViewExamples")
+                          Object(B.f)("#EventEditor_ViewExamples")
                         ),
                       this.GetExampleContents() &&
                         Ze.createElement(
@@ -5223,7 +5223,7 @@
                               );
                             },
                           },
-                          Object(L.f)("#EventEditor_Learn_More")
+                          Object(B.f)("#EventEditor_Learn_More")
                         )
                     ),
                     " ",
@@ -5239,24 +5239,24 @@
                   })
               );
             }),
-            Object(I.c)([B.a], e.prototype, "OnExampleClick", null),
-            Object(I.c)([B.a], e.prototype, "OnHeaderOffsetChange", null),
-            Object(I.c)([B.a], e.prototype, "OnSaleColorChange", null),
-            Object(I.c)([B.a], e.prototype, "OnOpenBackgroundColor", null),
+            Object(I.c)([L.a], e.prototype, "OnExampleClick", null),
+            Object(I.c)([L.a], e.prototype, "OnHeaderOffsetChange", null),
+            Object(I.c)([L.a], e.prototype, "OnSaleColorChange", null),
+            Object(I.c)([L.a], e.prototype, "OnOpenBackgroundColor", null),
             Object(I.c)(
-              [B.a],
+              [L.a],
               e.prototype,
               "OnChangeSaleHeaderArtworkCountsRequest",
               null
             ),
             Object(I.c)(
-              [B.a],
+              [L.a],
               e.prototype,
               "OnChangeSaleHeaderArtworkCountForRealz",
               null
             ),
             Object(I.c)(
-              [B.a],
+              [L.a],
               e.prototype,
               "OnChangeSaleHaderOverrideDay",
               null
@@ -5319,10 +5319,10 @@
                 ? (console.error("EventArtworkSelector: OnSpotlightChange"),
                   Object(et.d)(
                     Ze.createElement($e.e, {
-                      strTitle: Object(L.f)("#Error_FailureNotice"),
-                      strDescription: Object(L.f)(
+                      strTitle: Object(B.f)("#Error_FailureNotice"),
+                      strDescription: Object(B.f)(
                         "#EventEditor_Options_Spotlight_Error",
-                        Object(L.f)("#EventEditor_Artwork")
+                        Object(B.f)("#EventEditor_Artwork")
                       ),
                     }),
                     window
@@ -5353,7 +5353,7 @@
                           );
                         },
                       },
-                      Object(L.f)("#ImageUpload_EditHeroImage")
+                      Object(B.f)("#ImageUpload_EditHeroImage")
                     )
                   )
                 : Ze.createElement(
@@ -5373,14 +5373,14 @@
                           { className: qt.a.SpotlightOptions },
                           Ze.createElement(Ke.p, {
                             onChange: this.OnSpotlightChange,
-                            label: Object(L.f)(
+                            label: Object(B.f)(
                               "#EventEditor_Options_Spotlight_Label"
                             ),
                             checked: e.GetEventModel().BShowLibrarySpotlight(),
                             disabled: !t,
-                            description: Object(L.f)(
+                            description: Object(B.f)(
                               "#EventEditor_Options_Spotlight_Desc",
-                              Object(L.f)("#EventEditor_Artwork")
+                              Object(B.f)("#EventEditor_Artwork")
                             ),
                           })
                         ),
@@ -5390,16 +5390,16 @@
                           { className: qt.a.SpotlightOptions },
                           Ze.createElement(Ke.p, {
                             onChange: this.OnSpotlightTextChange,
-                            label: Object(L.f)(
+                            label: Object(B.f)(
                               "#EventEditor_Options_SpotlightText_Label"
                             ),
                             checked: e
                               .GetEventModel()
                               .BShowLibrarySpotlightText(),
                             disabled: !t,
-                            description: Object(L.f)(
+                            description: Object(B.f)(
                               "#EventEditor_Options_SpotlightText_Desc",
-                              Object(L.f)("#EventEditor_Artwork")
+                              Object(B.f)("#EventEditor_Artwork")
                             ),
                           })
                         ),
@@ -5426,21 +5426,21 @@
                   );
             }),
             Object(I.c)(
-              [B.a],
+              [L.a],
               e.prototype,
               "OnUpdateAndMoveClanImageLang",
               null
             ),
-            Object(I.c)([B.a], e.prototype, "OnRemoveImage", null),
+            Object(I.c)([L.a], e.prototype, "OnRemoveImage", null),
             Object(I.c)(
-              [B.a],
+              [L.a],
               e.prototype,
               "InsertOrUpdateClanImageAndLangMapping",
               null
             ),
-            Object(I.c)([B.a], e.prototype, "OnLanguageChange", null),
-            Object(I.c)([B.a], e.prototype, "OnSpotlightChange", null),
-            Object(I.c)([B.a], e.prototype, "OnSpotlightTextChange", null),
+            Object(I.c)([L.a], e.prototype, "OnLanguageChange", null),
+            Object(I.c)([L.a], e.prototype, "OnSpotlightChange", null),
+            Object(I.c)([L.a], e.prototype, "OnSpotlightTextChange", null),
             (e = Object(I.c)([qe.a], e))
           );
         })(Ze.Component),
@@ -5468,7 +5468,7 @@
                 this.props.list.forEach(function (e) {
                   var t = e.clanImage,
                     n = e.lang,
-                    a = Object(L.f)("#Language_" + Object(ee.a)(n));
+                    a = Object(B.f)("#Language_" + Object(ee.a)(n));
                   r.push(
                     Ze.createElement(
                       "div",
@@ -5479,7 +5479,7 @@
                       Ze.createElement(
                         "span",
                         null,
-                        Object(L.f)(
+                        Object(B.f)(
                           "#ImageUpload_Success_Mapping",
                           t.file_name,
                           a
@@ -5492,7 +5492,7 @@
                             return i.ShowLangChangeDialog(t, n);
                           },
                         },
-                        Object(L.f)("#ImageUpload_Success_Mapping_Change")
+                        Object(B.f)("#ImageUpload_Success_Mapping_Change")
                       )
                     )
                   );
@@ -5510,7 +5510,7 @@
                 t
               );
             }),
-            Object(I.c)([B.a], t.prototype, "ShowLangChangeDialog", null),
+            Object(I.c)([L.a], t.prototype, "ShowLangChangeDialog", null),
             (t = Object(I.c)([qe.a], t))
           );
         })(Ze.Component),
@@ -5545,10 +5545,10 @@
               return Ze.createElement(
                 $e.c,
                 {
-                  strTitle: Object(L.f)(
+                  strTitle: Object(B.f)(
                     "#selectimage_change_artwork_lang_title"
                   ),
-                  strDescription: Object(L.f)(
+                  strDescription: Object(B.f)(
                     "#selectimage_change_artworl_lang_desc"
                   ),
                   onOK: this.OnOK,
@@ -5580,8 +5580,8 @@
                 )
               );
             }),
-            Object(I.c)([B.a], e.prototype, "OnOK", null),
-            Object(I.c)([B.a], e.prototype, "OnLanguageChange", null),
+            Object(I.c)([L.a], e.prototype, "OnOK", null),
+            Object(I.c)([L.a], e.prototype, "OnLanguageChange", null),
             e
           );
         })(Ze.Component),
@@ -5592,7 +5592,7 @@
           return Ze.createElement(
             "div",
             { style: { display: "flex", width: "304px" } },
-            Ze.createElement(Bt.b, {
+            Ze.createElement(Lt.b, {
               event: n.GetEventModel(),
               imageURLOverride: t,
               langOverride: a,
@@ -5698,7 +5698,7 @@
                     Ze.createElement(
                       "div",
                       null,
-                      Object(L.f)("#EventEditor_ArtworkMissing")
+                      Object(B.f)("#EventEditor_ArtworkMissing")
                     )
                   );
             }),
@@ -5740,10 +5740,10 @@
               var n = +e.currentTarget.dataset.lang;
               Object(et.d)(
                 Ze.createElement($e.c, {
-                  strTitle: Object(L.f)("#selectimage_remove_image"),
-                  strDescription: Object(L.f)(
+                  strTitle: Object(B.f)("#selectimage_remove_image"),
+                  strDescription: Object(B.f)(
                     "#selectimage_remove_details",
-                    Object(L.f)("#Language_" + Object(ee.a)(n))
+                    Object(B.f)("#Language_" + Object(ee.a)(n))
                   ),
                   closeModal: this.OnCloseDeleteDialog,
                   onOK: function () {
@@ -5764,7 +5764,7 @@
                   r = a.GetAccountID(),
                   o = Array(),
                   l = 0,
-                  s = L.b.GetLanguageListForRealms([
+                  s = B.b.GetLanguageListForRealms([
                     te.d.k_ESteamRealmGlobal,
                     te.d.k_ESteamRealmChina,
                   ]);
@@ -5777,7 +5777,7 @@
                   u = n(p);
                 u &&
                   ((c = Object(ee.a)(p)),
-                  (d = Object(L.f)("#Language_" + c)),
+                  (d = Object(B.f)("#Language_" + c)),
                   o.push({ lang: p, strLang: c, locLang: d, imgHash: u }));
               }
               for (
@@ -5827,7 +5827,7 @@
                           {
                             href: E,
                             target: "_blank",
-                            "data-tooltip-text": Object(L.f)(
+                            "data-tooltip-text": Object(B.f)(
                               "#selectimage_viewimage_ttip"
                             ),
                           },
@@ -5838,7 +5838,7 @@
                           "data-lang": g.lang,
                           src: Wt.a,
                           onClick: this.OnChangeLanguage,
-                          "data-tooltip-text": Object(L.f)(
+                          "data-tooltip-text": Object(B.f)(
                             "#selectimage_reassign_image_ttip"
                           ),
                         }),
@@ -5847,7 +5847,7 @@
                           "data-lang": g.lang,
                           src: it.a,
                           onClick: this.OnDeleteClick,
-                          "data-tooltip-text": Object(L.f)(
+                          "data-tooltip-text": Object(B.f)(
                             "#selectimage_delete_image_ttip"
                           ),
                         })
@@ -5865,7 +5865,7 @@
                 Ze.createElement(
                   "div",
                   { className: qt.a.SelectImageTitle },
-                  Object(L.f)("#selectimage_uploaded_languages")
+                  Object(B.f)("#selectimage_uploaded_languages")
                 ),
                 Ze.createElement(
                   "div",
@@ -5874,10 +5874,10 @@
                 )
               );
             }),
-            Object(I.c)([B.a], t.prototype, "OnCloseDeleteDialog", null),
-            Object(I.c)([B.a], t.prototype, "OnChangeImageLanguage", null),
-            Object(I.c)([B.a], t.prototype, "OnChangeLanguage", null),
-            Object(I.c)([B.a], t.prototype, "OnDeleteClick", null),
+            Object(I.c)([L.a], t.prototype, "OnCloseDeleteDialog", null),
+            Object(I.c)([L.a], t.prototype, "OnChangeImageLanguage", null),
+            Object(I.c)([L.a], t.prototype, "OnChangeLanguage", null),
+            Object(I.c)([L.a], t.prototype, "OnDeleteClick", null),
             (t = Object(I.c)([qe.a], t))
           );
         })(Ze.Component),
@@ -6013,7 +6013,7 @@
                 Ze.createElement(
                   Ke.k,
                   null,
-                  Object(L.f)("#ImagePickerLoc_Title")
+                  Object(B.f)("#ImagePickerLoc_Title")
                 ),
                 Ze.createElement(
                   Ke.b,
@@ -6030,12 +6030,12 @@
                         Ze.createElement(
                           "div",
                           null,
-                          Object(L.f)("#ImagePickerLoc_Default"),
+                          Object(B.f)("#ImagePickerLoc_Default"),
                           " ",
                           Ze.createElement(
                             "span",
                             {
-                              "data-tooltip-text": Object(L.f)(
+                              "data-tooltip-text": Object(B.f)(
                                 "#ImagePickerLoc_Default_Hint"
                               ),
                             },
@@ -6056,7 +6056,7 @@
                     !l &&
                       Ze.createElement(dt.a, {
                         position: "center",
-                        string: Object(L.f)("#Loading"),
+                        string: Object(B.f)("#Loading"),
                       }),
                     l &&
                       Ze.createElement(
@@ -6074,7 +6074,7 @@
                           Ze.createElement(nn, {
                             clanSteamID: a,
                             artworkType: "localized_image_group",
-                            title: Object(L.f)("#ImagePickerLoc_Title"),
+                            title: Object(B.f)("#ImagePickerLoc_Title"),
                           })
                         )
                       )
@@ -6082,7 +6082,7 @@
                 )
               );
             }),
-            Object(I.c)([B.a], e.prototype, "OnCommitGroup", null),
+            Object(I.c)([L.a], e.prototype, "OnCommitGroup", null),
             (e = Object(I.c)([qe.a], e))
           );
         })(Ze.Component),
@@ -6174,8 +6174,8 @@
                             className: yt.a.ResultNotification,
                           },
                           0 < n.length
-                            ? Object(L.f)("#ImagePicker_EmptySearch")
-                            : Object(L.f)("#ImagePicker_Empty")
+                            ? Object(B.f)("#ImagePicker_EmptySearch")
+                            : Object(B.f)("#ImagePicker_Empty")
                         )
                       )
                     : e && e.errMsg
@@ -6186,7 +6186,7 @@
                             key: "ImagePicker_Result",
                             className: yt.a.errorcode,
                           },
-                          Object(L.f)("#ImagePicker_Error", e.errMsg)
+                          Object(B.f)("#ImagePicker_Error", e.errMsg)
                         )
                       )
                     : t.push(
@@ -6196,7 +6196,7 @@
                             key: "ImagePicker_Result",
                             className: yt.a.ResultNotification,
                           },
-                          Object(L.f)("#Loading")
+                          Object(B.f)("#Loading")
                         )
                       )),
                 t
@@ -6241,7 +6241,7 @@
                         ),
                         Object(et.d)(
                           Ze.createElement($e.e, {
-                            strDescription: Object(L.f)(
+                            strDescription: Object(B.f)(
                               "#ImagePicker_Error",
                               a.name
                             ),
@@ -6330,7 +6330,7 @@
                 return Ze.createElement(
                   "div",
                   null,
-                  Ze.createElement("div", null, Object(L.f)("#Error_Message")),
+                  Ze.createElement("div", null, Object(B.f)("#Error_Message")),
                   Ze.createElement("div", null, this.state.strErrMsg),
                   Ze.createElement(
                     "div",
@@ -6338,13 +6338,13 @@
                       className: Object(pt.a)(ft.a.Button),
                       onClick: this.HandleLoadClanImages,
                     },
-                    Object(L.f)("#Button_Retry")
+                    Object(B.f)("#Button_Retry")
                   )
                 );
               if (this.state.bLoading)
                 return Ze.createElement(dt.a, {
                   position: "center",
-                  string: Object(L.f)("#Loading"),
+                  string: Object(B.f)("#Loading"),
                 });
               var e = this.CreateImageWrappers(),
                 n = this.state.filteredClanImages,
@@ -6362,7 +6362,7 @@
                     },
                     className: yt.a.SearchInput,
                     type: "text",
-                    placeholder: Object(L.f)("#ImagePicker_Search"),
+                    placeholder: Object(B.f)("#ImagePicker_Search"),
                     onChange: this.onSearchTextChangeHandler,
                     onKeyDown: this.onSearchTextKeyPress,
                   })
@@ -6387,12 +6387,12 @@
                     nextSrc: a < n.length - 1 ? n[a + 1].url : void 0,
                     nextSrcThumbnail:
                       a < n.length - 1 ? n[a + 1].thumb_url : void 0,
-                    nextLabel: Object(L.f)("#ClanImage_Next"),
-                    prevLabel: Object(L.f)("#ClanImage_Prev"),
-                    closeLabel: Object(L.f)("#ClanImage_Close"),
-                    zoomInLabel: Object(L.f)("#ClanImage_ZoomIn"),
-                    zoomOutLabel: Object(L.f)("#ClanImage_ZoomOut"),
-                    imageLoadErrorMessage: Object(L.f)(
+                    nextLabel: Object(B.f)("#ClanImage_Next"),
+                    prevLabel: Object(B.f)("#ClanImage_Prev"),
+                    closeLabel: Object(B.f)("#ClanImage_Close"),
+                    zoomInLabel: Object(B.f)("#ClanImage_ZoomIn"),
+                    zoomOutLabel: Object(B.f)("#ClanImage_ZoomOut"),
+                    imageLoadErrorMessage: Object(B.f)(
                       "#ClanImage_ImageLoadFailure"
                     ),
                     prevSrc: 0 < a ? n[a - 1].url : void 0,
@@ -6412,7 +6412,7 @@
                           className: yt.a.Full,
                           onClick: this.OnHandleExpandedFullSize,
                         },
-                        Object(L.f)("#ImagePicker_FullSize")
+                        Object(B.f)("#ImagePicker_FullSize")
                       ),
                       Ze.createElement(
                         "button",
@@ -6421,36 +6421,36 @@
                           className: yt.a.Full,
                           onClick: this.OnHandleExpandedThumbnail,
                         },
-                        Object(L.f)("#ImagePicker_Thumbnail")
+                        Object(B.f)("#ImagePicker_Thumbnail")
                       ),
                     ],
                   })
               );
             }),
             (e.m_uploaderCounter = 1),
-            Object(I.c)([B.a], e.prototype, "HandleLoadClanImages", null),
-            Object(I.c)([B.a], e.prototype, "onSearchTextChangeHandler", null),
-            Object(I.c)([B.a], e.prototype, "onSearchTextKeyPress", null),
-            Object(I.c)([B.a], e.prototype, "onUploaderDismiss", null),
-            Object(I.c)([B.a], e.prototype, "OnDropFiles", null),
-            Object(I.c)([B.a], e.prototype, "OnExpandImage", null),
-            Object(I.c)([B.a], e.prototype, "OnExpandExitImage", null),
-            Object(I.c)([B.a], e.prototype, "OnHandleExpandedFullSize", null),
-            Object(I.c)([B.a], e.prototype, "OnHandleExpandedThumbnail", null),
+            Object(I.c)([L.a], e.prototype, "HandleLoadClanImages", null),
+            Object(I.c)([L.a], e.prototype, "onSearchTextChangeHandler", null),
+            Object(I.c)([L.a], e.prototype, "onSearchTextKeyPress", null),
+            Object(I.c)([L.a], e.prototype, "onUploaderDismiss", null),
+            Object(I.c)([L.a], e.prototype, "OnDropFiles", null),
+            Object(I.c)([L.a], e.prototype, "OnExpandImage", null),
+            Object(I.c)([L.a], e.prototype, "OnExpandExitImage", null),
+            Object(I.c)([L.a], e.prototype, "OnHandleExpandedFullSize", null),
+            Object(I.c)([L.a], e.prototype, "OnHandleExpandedThumbnail", null),
             Object(I.c)(
-              [B.a],
+              [L.a],
               e.prototype,
               "OnHandleOpenLocalizedImageGroup",
               null
             ),
             Object(I.c)(
-              [B.a],
+              [L.a],
               e.prototype,
               "InternalHandleExpandedAction",
               null
             ),
             Object(I.c)(
-              [B.a],
+              [L.a],
               e.prototype,
               "InternalOpenLocalizeImageGroup",
               null
@@ -6477,8 +6477,8 @@
               return Ze.createElement(
                 $e.c,
                 {
-                  strTitle: Object(L.f)("#ImagePicker_Images"),
-                  strDescription: Object(L.f)(
+                  strTitle: Object(B.f)("#ImagePicker_Images"),
+                  strDescription: Object(B.f)(
                     "#ImagePicker_DoubleClickToSelect"
                   ),
                   bAlertDialog: !0,
@@ -6494,7 +6494,7 @@
                 })
               );
             }),
-            Object(I.c)([B.a], t.prototype, "OnClanImageSelected", null),
+            Object(I.c)([L.a], t.prototype, "OnClanImageSelected", null),
             t
           );
         })(Ze.Component),
@@ -6577,7 +6577,7 @@
                 Ze.createElement(
                   "div",
                   null,
-                  Object(L.f)("#ImagePicker_DragAndDrop")
+                  Object(B.f)("#ImagePicker_DragAndDrop")
                 ),
                 Ze.createElement(
                   "div",
@@ -6588,13 +6588,13 @@
                     Ze.createElement(
                       "span",
                       null,
-                      Object(L.f)("#ImagePicker_OrBrowse"),
+                      Object(B.f)("#ImagePicker_OrBrowse"),
                       " "
                     ),
                     Ze.createElement(
                       "span",
                       { className: yt.a.SelectImageButton },
-                      Object(L.f)("#selectimage_select_file")
+                      Object(B.f)("#selectimage_select_file")
                     )
                   ),
                   Ze.createElement("input", {
@@ -6618,13 +6618,13 @@
                       Ze.createElement(
                         "span",
                         null,
-                        Object(L.f)("#ImagePicker_PreviousImages"),
+                        Object(B.f)("#ImagePicker_PreviousImages"),
                         " "
                       ),
                       Ze.createElement(
                         "span",
                         { className: yt.a.SelectImageButton },
-                        Object(L.f)("#ImagePicker_PreviousImages2")
+                        Object(B.f)("#ImagePicker_PreviousImages2")
                       )
                     ),
                     Ze.createElement("input", {
@@ -6638,13 +6638,13 @@
               );
             }),
             (e.m_instanceID = 0),
-            Object(I.c)([B.a], e.prototype, "OverrideEventDefaults", null),
-            Object(I.c)([B.a], e.prototype, "DragEnterListener", null),
-            Object(I.c)([B.a], e.prototype, "DragLeaveListener", null),
-            Object(I.c)([B.a], e.prototype, "DropListener", null),
-            Object(I.c)([B.a], e.prototype, "onFileChoice", null),
-            Object(I.c)([B.a], e.prototype, "OnNoOp", null),
-            Object(I.c)([B.a], e.prototype, "OnClanImageDialog", null),
+            Object(I.c)([L.a], e.prototype, "OverrideEventDefaults", null),
+            Object(I.c)([L.a], e.prototype, "DragEnterListener", null),
+            Object(I.c)([L.a], e.prototype, "DragLeaveListener", null),
+            Object(I.c)([L.a], e.prototype, "DropListener", null),
+            Object(I.c)([L.a], e.prototype, "onFileChoice", null),
+            Object(I.c)([L.a], e.prototype, "OnNoOp", null),
+            Object(I.c)([L.a], e.prototype, "OnClanImageDialog", null),
             (e = n = Object(I.c)([qe.a], e))
           );
         })(Ze.Component);
@@ -6717,7 +6717,7 @@
                 Qe.a.createElement(
                   Ke.k,
                   null,
-                  Object(L.f)("#Sale_Debug_Title")
+                  Object(B.f)("#Sale_Debug_Title")
                 ),
                 Qe.a.createElement(
                   Ke.b,
@@ -6732,7 +6732,7 @@
                           Qe.a.createElement(
                             "div",
                             null,
-                            Object(L.f)("#Sale_Debug_Desc")
+                            Object(B.f)("#Sale_Debug_Desc")
                           ),
                           Qe.a.createElement(yn, {
                             fnSetSaleItem: function (e, t, n) {
@@ -6748,11 +6748,11 @@
                             : Qe.a.createElement(
                                 "div",
                                 null,
-                                Object(L.f)("#Sale_Debug_NoMatchingItem")
+                                Object(B.f)("#Sale_Debug_NoMatchingItem")
                               )
                         )
                       : Qe.a.createElement(dt.a, {
-                          string: Object(L.f)("#Sale_Debug_Loading"),
+                          string: Object(B.f)("#Sale_Debug_Loading"),
                           size: "medium",
                         })
                   )
@@ -6763,12 +6763,12 @@
                   Qe.a.createElement(Ke.n, {
                     onCancel: t,
                     bOKDisabled: !l,
-                    strOKText: Object(L.f)("#Button_Delete"),
+                    strOKText: Object(B.f)("#Button_Delete"),
                     onOK: function () {
                       Object(et.d)(
                         Qe.a.createElement($e.c, {
-                          title: Object(L.f)("#EventEditor_GenericAreYouSure"),
-                          strDescription: Object(L.f)("#Sale_Debug_Delete"),
+                          title: Object(B.f)("#EventEditor_GenericAreYouSure"),
+                          strDescription: Object(B.f)("#Sale_Debug_Delete"),
                           onOK: function () {
                             !(function (a) {
                               if (!a) return;
@@ -6860,7 +6860,7 @@
                 Ze.createElement(
                   $e.c,
                   {
-                    strTitle: Object(L.f)("#ImagePicker_DeleteImageTitle"),
+                    strTitle: Object(B.f)("#ImagePicker_DeleteImageTitle"),
                     strDescription: "",
                     onOK: this.onDelete,
                     onCancel: this.OnCloseDialog,
@@ -6872,7 +6872,7 @@
                     Ze.createElement(
                       "div",
                       null,
-                      Object(L.f)(
+                      Object(B.f)(
                         "#ImagePicker_DeleteAreYouSure",
                         this.props.clanImage.file_name
                       )
@@ -6882,7 +6882,7 @@
                     Ze.createElement(
                       "div",
                       null,
-                      Object(L.f)("#ImagePicker_DeleteWarning")
+                      Object(B.f)("#ImagePicker_DeleteWarning")
                     )
                   )
                 ),
@@ -6895,8 +6895,8 @@
                   Ze.createElement(
                     $e.e,
                     {
-                      strTitle: Object(L.f)("#Error_FailureNotice"),
-                      strDescription: Object(L.f)(
+                      strTitle: Object(B.f)("#Error_FailureNotice"),
+                      strDescription: Object(B.f)(
                         "#EventDisplay_DeleteEvent_Error"
                       ),
                     },
@@ -6973,7 +6973,7 @@
                     Ze.createElement(
                       "span",
                       { className: yt.a.Full, onClick: this.onHandleFullSize },
-                      Object(L.f)("#ImagePicker_FullSize")
+                      Object(B.f)("#ImagePicker_FullSize")
                     ),
                   r &&
                     Ze.createElement(dt.a, {
@@ -6987,7 +6987,7 @@
                         className: yt.a.Thumb,
                         onClick: this.onHandleThumbnail,
                       },
-                      Object(L.f)("#ImagePicker_Thumbnail")
+                      Object(B.f)("#ImagePicker_Thumbnail")
                     ),
                   s &&
                     Ze.createElement(
@@ -6999,7 +6999,7 @@
                         ),
                         onClick: this.onHandleLocalizedImageGroup,
                       },
-                      "(VO) " + Object(L.f)("#ImagePicker_Localized")
+                      "(VO) " + Object(B.f)("#ImagePicker_Localized")
                     ),
                   !r &&
                     Ze.createElement(
@@ -7015,20 +7015,20 @@
                 )
               );
             }),
-            Object(I.c)([B.a], e.prototype, "onHandleFullSize", null),
-            Object(I.c)([B.a], e.prototype, "onHandleThumbnail", null),
+            Object(I.c)([L.a], e.prototype, "onHandleFullSize", null),
+            Object(I.c)([L.a], e.prototype, "onHandleThumbnail", null),
             Object(I.c)(
-              [B.a],
+              [L.a],
               e.prototype,
               "onHandleLocalizedImageGroup",
               null
             ),
-            Object(I.c)([B.a], e.prototype, "OnDragStartSource", null),
-            Object(I.c)([B.a], e.prototype, "OnDragEndSource", null),
-            Object(I.c)([B.a], e.prototype, "OnDeleteClick", null),
-            Object(I.c)([B.a], e.prototype, "onDelete", null),
-            Object(I.c)([B.a], e.prototype, "OnCloseDialog", null),
-            Object(I.c)([B.a], e.prototype, "OnImageClick", null),
+            Object(I.c)([L.a], e.prototype, "OnDragStartSource", null),
+            Object(I.c)([L.a], e.prototype, "OnDragEndSource", null),
+            Object(I.c)([L.a], e.prototype, "OnDeleteClick", null),
+            Object(I.c)([L.a], e.prototype, "onDelete", null),
+            Object(I.c)([L.a], e.prototype, "OnCloseDialog", null),
+            Object(I.c)([L.a], e.prototype, "OnImageClick", null),
             e
           );
         })(Ze.Component),
@@ -7058,7 +7058,7 @@
                     Ze.createElement(
                       "div",
                       { className: yt.a.UploaderDesc },
-                      Object(L.f)(
+                      Object(B.f)(
                         "#ImageUpload_Desc",
                         e.GetCompletedFiles(),
                         e.GetTotalFiles()
@@ -7070,7 +7070,7 @@
                         className: "DialogButton",
                         onClick: this.onCancelUploads,
                       },
-                      Object(L.f)("#Button_Cancel")
+                      Object(B.f)("#Button_Cancel")
                     )
                   ),
                 e.BHasError() &&
@@ -7080,7 +7080,7 @@
                     Ze.createElement(
                       "div",
                       { className: yt.a.UploadError },
-                      Object(L.f)(
+                      Object(B.f)(
                         "#ImageUpload_Error",
                         e.GetLastErrorFile().file.name,
                         e.GetLastErrorFile().status,
@@ -7093,7 +7093,7 @@
                         className: yt.a.UploadButtonCancel,
                         onClick: this.props.onDismiss,
                       },
-                      Object(L.f)("#Button_Cancel")
+                      Object(B.f)("#Button_Cancel")
                     ),
                     Ze.createElement(
                       "button",
@@ -7101,7 +7101,7 @@
                         className: yt.a.UploadButtonRetry,
                         onClick: this.onRetry,
                       },
-                      Object(L.f)("#Button_Retry")
+                      Object(B.f)("#Button_Retry")
                     )
                   ),
                 t &&
@@ -7111,13 +7111,13 @@
                     Ze.createElement(
                       "div",
                       { className: yt.a.UploadSuccess },
-                      Object(L.f)("#ImageUpload_Success")
+                      Object(B.f)("#ImageUpload_Success")
                     )
                   )
               );
             }),
-            Object(I.c)([B.a], t.prototype, "onRetry", null),
-            Object(I.c)([B.a], t.prototype, "onCancelUploads", null),
+            Object(I.c)([L.a], t.prototype, "onRetry", null),
+            Object(I.c)([L.a], t.prototype, "onCancelUploads", null),
             (t = Object(I.c)([qe.a], t))
           );
         })(Ze.Component),
@@ -7234,8 +7234,8 @@
           );
           return Qe.a.createElement(Ke.l, {
             type: "text",
-            placeholder: Object(L.f)("#Sale_Debug_Placeholder"),
-            tooltip: Object(L.f)("#Sale_Debug_InputToolTip"),
+            placeholder: Object(B.f)("#Sale_Debug_Placeholder"),
+            tooltip: Object(B.f)("#Sale_Debug_InputToolTip"),
             onChange: t,
             onBlur: function () {
               setTimeout(function () {
@@ -7263,9 +7263,9 @@
                 Qe.a.createElement(
                   "div",
                   null,
-                  Object(L.f)(
+                  Object(B.f)(
                     "#Sale_Debug_ContextItem",
-                    On(e, Object(L.f)("#Sale_Debug_Unknown")),
+                    On(e, Object(B.f)("#Sale_Debug_Unknown")),
                     e.type
                   )
                 )
@@ -7285,16 +7285,16 @@
             Qe.a.createElement(
               "div",
               null,
-              Object(L.f)(
+              Object(B.f)(
                 "#Sale_Debug_MatchItem",
-                On(t, Object(L.f)("#Sale_Debug_Unknown")),
+                On(t, Object(B.f)("#Sale_Debug_Unknown")),
                 t.type
               )
             ),
             Qe.a.createElement(
               "div",
               null,
-              Object(L.f)("#Sale_Debug_AppearsIn")
+              Object(B.f)("#Sale_Debug_AppearsIn")
             ),
             Qe.a.createElement(
               "ol",
@@ -7307,12 +7307,12 @@
                       Sr(e, r, i, i.GetSaleSectionIndexByID(e.unique_id), !0)
                     );
                   })
-                : Object(L.f)("#Sale_Debug_NoMatchingItem")
+                : Object(B.f)("#Sale_Debug_NoMatchingItem")
             ),
             Qe.a.createElement(
               "div",
               null,
-              Object(L.f)("#Sale_Debug_Tab_AppearsIn")
+              Object(B.f)("#Sale_Debug_Tab_AppearsIn")
             ),
             Qe.a.createElement(
               "ol",
@@ -7325,7 +7325,7 @@
                       Gr(e, r)
                     );
                   })
-                : Object(L.f)("#Sale_Debug_NoMatchingItem")
+                : Object(B.f)("#Sale_Debug_NoMatchingItem")
             )
           );
         };
@@ -7473,7 +7473,7 @@
                 Qe.a.createElement(
                   Ke.k,
                   null,
-                  Object(L.f)("#Sale_DiscountEvent_Add")
+                  Object(B.f)("#Sale_DiscountEvent_Add")
                 ),
                 Qe.a.createElement(
                   Ke.b,
@@ -7495,7 +7495,7 @@
                   Qe.a.createElement(Ke.n, {
                     onCancel: t,
                     bOKDisabled: !o,
-                    strOKText: Object(L.f)("#Sale_New_CreateEvent"),
+                    strOKText: Object(B.f)("#Sale_New_CreateEvent"),
                     onOK: function () {
                       An.Get().UpdateSaleSection(n), t();
                     },
@@ -7560,7 +7560,7 @@
             return Qe.a.createElement(dt.a, {
               key: "loading",
               size: "medium",
-              string: Object(L.f)("#Sale_DiscountEvent_Loading"),
+              string: Object(B.f)("#Sale_DiscountEvent_Loading"),
             });
           var o = jn
               .Get()
@@ -7579,9 +7579,9 @@
             Qe.a.createElement(
               "div",
               null,
-              Object(L.f)("#Sale_DiscountEvent_Choose"),
+              Object(B.f)("#Sale_DiscountEvent_Choose"),
               Qe.a.createElement(pr, {
-                tooltip: Object(L.f)("#Sale_DiscountEvent_Choose_ttip"),
+                tooltip: Object(B.f)("#Sale_DiscountEvent_Choose_ttip"),
               })
             ),
             Qe.a.createElement(In.a, {
@@ -7691,13 +7691,13 @@
             return Qe.a.createElement(
               "div",
               null,
-              Object(L.f)("#Sale_DiscountEvent_NoneChosen")
+              Object(B.f)("#Sale_DiscountEvent_NoneChosen")
             );
           if (n || !jn.Get().BHasDiscountEventDetails(l))
             return Qe.a.createElement(dt.a, {
               key: "loading",
               size: "medium",
-              string: Object(L.f)("#Sale_DiscountEvent_LoadingDetails"),
+              string: Object(B.f)("#Sale_DiscountEvent_LoadingDetails"),
             });
           var o = jn.Get().GetSingleDiscountEvent(l),
             d = jn.Get().GetDiscountEventDetails(l);
@@ -7707,7 +7707,7 @@
             Qe.a.createElement(
               "p",
               null,
-              Object(L.f)("#Sale_DiscountEvent_Select", o.name, o.id)
+              Object(B.f)("#Sale_DiscountEvent_Select", o.name, o.id)
             ),
             Qe.a.createElement(Vt.b, {
               startDateAndTime: o.start_date,
@@ -7716,7 +7716,7 @@
             Qe.a.createElement(
               "p",
               null,
-              Object(L.f)(
+              Object(B.f)(
                 "#Sale_DiscountEvent_Contains",
                 d.apps.length.toLocaleString(),
                 d.packages.length.toLocaleString()
@@ -7725,7 +7725,7 @@
             Qe.a.createElement(
               "p",
               null,
-              Object(L.f)(
+              Object(B.f)(
                 "#Sale_New_Selected",
                 An.Get().GetTotalSelectedCount(),
                 An.Get().AppCount().toLocaleString(),
@@ -7737,7 +7737,7 @@
               null,
               Qe.a.createElement(Ke.l, {
                 type: "text",
-                label: Object(L.f)("#EventCalendar_UniversalSearch"),
+                label: Object(B.f)("#EventCalendar_UniversalSearch"),
                 value: i || "",
                 onChange: function (e) {
                   return r(e.target.value);
@@ -7773,7 +7773,7 @@
                 : Qe.a.createElement(
                     "p",
                     null,
-                    Object(L.f)("#Sale_DiscountEvent_NoApps")
+                    Object(B.f)("#Sale_DiscountEvent_NoApps")
                   ),
               Qe.a.createElement("h2", null, "Packages:"),
               Boolean(d.packages)
@@ -7787,7 +7787,7 @@
                 : Qe.a.createElement(
                     "p",
                     null,
-                    Object(L.f)("#Sale_DiscountEvent_NoSubs")
+                    Object(B.f)("#Sale_DiscountEvent_NoSubs")
                   )
             )
           );
@@ -7889,7 +7889,7 @@
               a.appid +
               ")" +
               ("application" != a.type && "game" != a.type ? " DLC" : "")
-            : Object(L.f)("#Sale_DiscountEvent_AppMissing", t);
+            : Object(B.f)("#Sale_DiscountEvent_AppMissing", t);
           return Qe.a.createElement(Ke.e, {
             label: i,
             checked: An.Get().BIsAppSelected(t),
@@ -7913,8 +7913,8 @@
               "(" +
               a.id +
               ") : " +
-              Object(L.f)("#Sale_DiscountEvent_SubContains", a.appids.length)
-            : Object(L.f)("#Sale_DiscountEvent_SubMissing", t);
+              Object(B.f)("#Sale_DiscountEvent_SubContains", a.appids.length)
+            : Object(B.f)("#Sale_DiscountEvent_SubMissing", t);
           return Qe.a.createElement(Ke.e, {
             label: i,
             checked: An.Get().BIsAppSelected(t),
@@ -7928,7 +7928,7 @@
         var n = bt.a.Get().GetPartnerEventPermissions(e);
         return !!n && (t ? n.valve_admin : n.valve_admin || n.support_user);
       }
-      function Ln(e) {
+      function Bn(e) {
         return Nn(e.clanSteamID, e.requireAdmin)
           ? Ze.createElement(
               "div",
@@ -7944,7 +7944,7 @@
             )
           : null;
       }
-      var Bn = n("uIWk"),
+      var Ln = n("uIWk"),
         Rn = (function () {
           function e() {
             (this.m_mapEventGIDToSolrData = new Map()),
@@ -8416,7 +8416,7 @@
                       "span",
                       null,
                       Ze.createElement("img", { src: it.a }),
-                      Object(L.f)(d)
+                      Object(B.f)(d)
                     )
                 ),
                 Ze.createElement(
@@ -8436,7 +8436,7 @@
                       isValidDate: this.IsValidDate,
                       defaultValue: m,
                       inputProps: {
-                        placeholder: Object(L.f)("#EventEditor_Enter_Date"),
+                        placeholder: Object(B.f)("#EventEditor_Enter_Date"),
                         className: $n.a.TimeWidth,
                       },
                     })
@@ -8459,7 +8459,7 @@
                         ? this.state.timeAsString
                         : o,
                       inputProps: {
-                        placeholder: Object(L.f)("#EventEditor_Enter_Time"),
+                        placeholder: Object(B.f)("#EventEditor_Enter_Time"),
                         className: $n.a.TimeWidth,
                       },
                     })
@@ -8471,14 +8471,14 @@
                   Ze.createElement(
                     "div",
                     null,
-                    Object(L.f)("#EventEditor_DateTime_Fixed")
+                    Object(B.f)("#EventEditor_DateTime_Fixed")
                   )
               );
             }),
-            Object(I.c)([B.a], e.prototype, "OnTimeChange", null),
-            Object(I.c)([B.a], e.prototype, "OnDateChange", null),
-            Object(I.c)([B.a], e.prototype, "IsValidDate", null),
-            Object(I.c)([B.a], e.prototype, "SetToNow", null),
+            Object(I.c)([L.a], e.prototype, "OnTimeChange", null),
+            Object(I.c)([L.a], e.prototype, "OnDateChange", null),
+            Object(I.c)([L.a], e.prototype, "IsValidDate", null),
+            Object(I.c)([L.a], e.prototype, "SetToNow", null),
             (e = Object(I.c)([qe.a], e))
           );
         })(Ze.Component),
@@ -8533,7 +8533,7 @@
                 Ze.createElement(
                   Ke.k,
                   null,
-                  Object(L.f)("#ImagePickerLoc_Title")
+                  Object(B.f)("#ImagePickerLoc_Title")
                 ),
                 Ze.createElement(
                   Ke.b,
@@ -8552,7 +8552,7 @@
                       Ze.createElement(nn, {
                         clanSteamID: i,
                         artworkType: a,
-                        title: Object(L.f)("#ImagePickerLoc_Title"),
+                        title: Object(B.f)("#ImagePickerLoc_Title"),
                       })
                     )
                   ),
@@ -8562,19 +8562,19 @@
                     Ze.createElement(
                       Ke.q,
                       { onClick: this.OnSaveToEditModel, disabled: !1 },
-                      Object(L.f)("#Button_Confirm"),
+                      Object(B.f)("#Button_Confirm"),
                       " "
                     ),
                     Ze.createElement(
                       Ke.d,
                       { onClick: this.props.closeModal, disabled: !1 },
-                      Object(L.f)("#Button_Cancel")
+                      Object(B.f)("#Button_Cancel")
                     )
                   )
                 )
               );
             }),
-            Object(I.c)([B.a], t.prototype, "OnSaveToEditModel", null),
+            Object(I.c)([L.a], t.prototype, "OnSaveToEditModel", null),
             (t = Object(I.c)([qe.a], t))
           );
         })(Ze.Component),
@@ -8665,12 +8665,12 @@
                 Ze.createElement(
                   "p",
                   null,
-                  Object(L.f)("#EventEditor_SaleEventSchedule")
+                  Object(B.f)("#EventEditor_SaleEventSchedule")
                 ),
                 Ze.createElement(
                   "p",
                   null,
-                  Object(L.n)(
+                  Object(B.n)(
                     "#EventEditor_SaleEventSchedule_NewsHub",
                     Ze.createElement(
                       "a",
@@ -8678,7 +8678,7 @@
                         href: D.c.STORE_BASE_URL + "newshub/sale/" + n.GetGID(),
                         target: D.c.IN_CLIENT ? void 0 : "_blank",
                       },
-                      Object(L.f)("#EventEditor_SaleEventSchedule_NewsHubToken")
+                      Object(B.f)("#EventEditor_SaleEventSchedule_NewsHubToken")
                     )
                   )
                 ),
@@ -8692,7 +8692,7 @@
                 Ze.createElement(
                   "p",
                   null,
-                  Object(L.f)("#EventEditor_SaleEventSchedule_Range")
+                  Object(B.f)("#EventEditor_SaleEventSchedule_Range")
                 ),
                 Ze.createElement(ga, {
                   saleSection: a,
@@ -8717,7 +8717,7 @@
                 Ze.createElement(
                   "p",
                   null,
-                  Object(L.f)("#EventEditor_SaleEventSchedule_Desc")
+                  Object(B.f)("#EventEditor_SaleEventSchedule_Desc")
                 ),
                 Boolean(D.i.is_support) &&
                   Ze.createElement(
@@ -8733,9 +8733,9 @@
                 Ze.createElement("div", { className: na.EventCategoryCtn }, i)
               );
             }),
-            Object(I.c)([B.a], e.prototype, "OnCategoryCheck", null),
-            Object(I.c)([B.a], e.prototype, "GetCategoryIndex", null),
-            Object(I.c)([B.a], e.prototype, "BContainsCategory", null),
+            Object(I.c)([L.a], e.prototype, "OnCategoryCheck", null),
+            Object(I.c)([L.a], e.prototype, "GetCategoryIndex", null),
+            Object(I.c)([L.a], e.prototype, "BContainsCategory", null),
             (e = Object(I.c)([qe.a], e))
           );
         })(Ze.Component),
@@ -8748,10 +8748,10 @@
             {
               direction: "top",
               className: Object(pt.a)(na.EventCategoryWidth),
-              toolTipContent: Object(L.f)(t.description),
+              toolTipContent: Object(B.f)(t.description),
             },
             Ze.createElement(Ke.e, {
-              label: Object(L.f)(t.name),
+              label: Object(B.f)(t.name),
               checked: a(t),
               onChange: function (e) {
                 return n(e, t);
@@ -8768,9 +8768,9 @@
             Ze.createElement(
               "div",
               { className: vt.EventEditorTextTitle },
-              Object(L.f)("#EventSchedule_Track_Current"),
+              Object(B.f)("#EventSchedule_Track_Current"),
               Ze.createElement(pr, {
-                tooltip: Object(L.f)("#EventSchedule_Track_Current_ttip"),
+                tooltip: Object(B.f)("#EventSchedule_Track_Current_ttip"),
               })
             ),
             Boolean(a.event_schedule_tracks)
@@ -8779,10 +8779,10 @@
                   onDelete: function (e) {
                     Object(et.d)(
                       Ze.createElement($e.c, {
-                        strTitle: Object(L.f)(
+                        strTitle: Object(B.f)(
                           "#EventSchedule_DeletePrompt_Title"
                         ),
-                        strDescription: Object(L.f)(
+                        strDescription: Object(B.f)(
                           "#EventSchedule_DeletePrompt_Body"
                         ),
                         onOK: function () {
@@ -8808,11 +8808,11 @@
               : Ze.createElement(
                   "div",
                   null,
-                  Object(L.f)("#EventSchedule_NoTracks")
+                  Object(B.f)("#EventSchedule_NoTracks")
                 ),
             Ze.createElement(
               Kn.a,
-              { toolTipContent: Object(L.f)("#EventSchedule_AddTrack_ttip") },
+              { toolTipContent: Object(B.f)("#EventSchedule_AddTrack_ttip") },
               Ze.createElement(
                 Ke.q,
                 {
@@ -8829,7 +8829,7 @@
                       n.SetDirty(H.jsondata_sales);
                   },
                 },
-                Object(L.f)("#EventSchedule_AddTrack")
+                Object(B.f)("#EventSchedule_AddTrack")
               )
             )
           );
@@ -8846,7 +8846,7 @@
                 return e.fnOnSelect(e.track);
               },
             },
-            Object(L.f)(
+            Object(B.f)(
               "#EventSchedule_Unlabled_Track",
               e.index ? e.index + 1 : 1
             )
@@ -8897,7 +8897,7 @@
                     Ze.createElement(aa, {
                       loc_images: n.localized_track_image,
                       fnSetImage: function (e, t) {
-                        n.localized_track_image = L.a.Set(
+                        n.localized_track_image = B.a.Set(
                           n.localized_track_image || [],
                           e,
                           t
@@ -8911,8 +8911,8 @@
                 },
               },
               Boolean(0 < a)
-                ? Object(L.l)("#selectimage_managing_n_existing_title", a)
-                : Object(L.f)("#selectimage_uploading_title")
+                ? Object(B.l)("#selectimage_managing_n_existing_title", a)
+                : Object(B.f)("#selectimage_uploading_title")
             ),
             Ze.createElement(
               "div",
@@ -8926,7 +8926,7 @@
                   className: vt.EventEditorTextTitle,
                   style: { color: n.label_color },
                 },
-                Object(L.f)("#Sale_Section_Label_Color")
+                Object(B.f)("#Sale_Section_Label_Color")
               ),
               Ze.createElement(
                 Ke.d,
@@ -8937,7 +8937,7 @@
                   className: vt.EventEditorTextTitle,
                   style: { color: n.label_color, background: i },
                 },
-                Object(L.f)("#Sale_Section_Background_Left")
+                Object(B.f)("#Sale_Section_Background_Left")
               ),
               Ze.createElement(
                 Ke.d,
@@ -8948,7 +8948,7 @@
                   className: vt.EventEditorTextTitle,
                   style: { color: n.label_color, background: i },
                 },
-                Object(L.f)("#Sale_Section_Background_Right")
+                Object(B.f)("#Sale_Section_Background_Right")
               )
             ),
             Ze.createElement(ha, { editModel: t, saleSection: n })
@@ -8984,7 +8984,7 @@
               Ze.Fragment,
               null,
               Ze.createElement(ta, {
-                strDescription: Object(L.f)("#EventEditor_Starts"),
+                strDescription: Object(B.f)("#EventEditor_Starts"),
                 nEarliestTime: 0,
                 fnGetTimeToUpdate: function () {
                   return t.event_schedule_rtime_start;
@@ -9003,7 +9003,7 @@
                 bShowTimeZone: !0,
               }),
               Ze.createElement(ta, {
-                strDescription: Object(L.f)("#EventEditor_Ends"),
+                strDescription: Object(B.f)("#EventEditor_Ends"),
                 nEarliestTime: 0,
                 fnGetTimeToUpdate: function () {
                   return t.event_schedule_rtime_end;
@@ -9060,8 +9060,8 @@
                 })
                   ? Object(et.d)(
                       Ze.createElement($e.c, {
-                        strTitle: Object(L.f)("#Sale_DuplicateCapsule"),
-                        strDescription: Object(L.f)(
+                        strTitle: Object(B.f)("#Sale_DuplicateCapsule"),
+                        strDescription: Object(B.f)(
                           "#Sale_DuplicateEVent_Desc"
                         ),
                         onOK: function () {
@@ -9275,7 +9275,7 @@
                               switch (e.label) {
                                 case 0:
                                   return (
-                                    (t = Bn.a.GetCreatorHome(
+                                    (t = Ln.a.GetCreatorHome(
                                       new ae.a(D.b.CLANSTEAMID)
                                     )),
                                     [
@@ -9368,21 +9368,21 @@
                     return (t.m_refInput = e);
                   },
                   type: "text",
-                  label: Object(L.f)("#Sale_EnterEventsURL"),
+                  label: Object(B.f)("#Sale_EnterEventsURL"),
                   onChange: this.UpdateEventSuggestions,
-                  tooltip: Object(L.f)("#Sale_EnterEventsURL_Tooltip"),
+                  tooltip: Object(B.f)("#Sale_EnterEventsURL_Tooltip"),
                 })
               );
             }),
             Object(I.c)(
-              [B.a],
+              [L.a],
               e.prototype,
               "AddEventWithDuplicatePrompt",
               null
             ),
-            Object(I.c)([B.a], e.prototype, "AddEvent", null),
-            Object(I.c)([B.a], e.prototype, "RemoveEvent", null),
-            Object(I.c)([B.a], e.prototype, "UpdateEventSuggestions", null),
+            Object(I.c)([L.a], e.prototype, "AddEvent", null),
+            Object(I.c)([L.a], e.prototype, "RemoveEvent", null),
+            Object(I.c)([L.a], e.prototype, "UpdateEventSuggestions", null),
             (e = Object(I.c)([qe.a], e))
           );
         })(Ze.Component),
@@ -9395,7 +9395,7 @@
             Ze.createElement(
               "div",
               null,
-              Object(L.f)(
+              Object(B.f)(
                 n.smart_section_event_tags
                   ? "#Sele_Event_SmartSection_RecentEvent_allgame"
                   : "#Sele_Event_SmartSection_RecentEvents"
@@ -9405,9 +9405,9 @@
               type: "number",
               min: "4",
               max: "90",
-              label: Object(L.f)("#Sale_EventMaxEventsToShow"),
+              label: Object(B.f)("#Sale_EventMaxEventsToShow"),
               value: n.smart_section_max_apps,
-              placeholder: Object(L.f)("#Sale_EventMaxEventDefault", 15),
+              placeholder: Object(B.f)("#Sale_EventMaxEventDefault", 15),
               onChange: function (e) {
                 var t = Number.parseInt(e.currentTarget.value);
                 t &&
@@ -9420,9 +9420,9 @@
             Ze.createElement(
               "div",
               { className: vt.EventEditorTextTitle },
-              Object(L.f)("#Sale_EventDateRange"),
+              Object(B.f)("#Sale_EventDateRange"),
               Ze.createElement(pr, {
-                tooltip: Object(L.f)("#Sale_EventDateRange_ttip"),
+                tooltip: Object(B.f)("#Sale_EventDateRange_ttip"),
               })
             ),
             Ze.createElement(
@@ -9430,12 +9430,12 @@
               Object(I.a)({}, e, { bSetDefaultIfMissing: !1 })
             ),
             Ze.createElement(
-              Ln,
+              Bn,
               { clanSteamID: a.GetClanSteamID() },
               Ze.createElement(Ke.h, {
-                label: Object(L.f)("#Sale_EventTagsToSearch"),
+                label: Object(B.f)("#Sale_EventTagsToSearch"),
                 strDropDownClassName: vt.DropDownScroll,
-                tooltip: Object(L.f)("#Sale_EventTagsToSearch_ttip"),
+                tooltip: Object(B.f)("#Sale_EventTagsToSearch_ttip"),
                 rgOptions: Object(I.g)(
                   [{ label: "--", data: "" }],
                   ne.a.sort().map(function (e) {
@@ -9600,7 +9600,7 @@
                       route: Fn.a.k_eCommunityEditBroadcast,
                       className: Pn.CrossTabLink,
                     },
-                    Object(L.f)("#Sale_Broadcast_TabLink")
+                    Object(B.f)("#Sale_Broadcast_TabLink")
                   ));
               return t.GetEventModel().BHasBroadcastEnabled()
                 ? this.BIsFirstBroadcastSaleSection()
@@ -9612,10 +9612,10 @@
                         { className: vt.InputBorder },
                         Ze.createElement(Ke.p, {
                           onChange: this.OnShowOnlySaleWhiteListedBroadcasts,
-                          label: Object(L.f)(
+                          label: Object(B.f)(
                             "#Sale_BroadcastOnlyWhiteListedInSale"
                           ),
-                          tooltip: Object(L.f)(
+                          tooltip: Object(B.f)(
                             "#Sale_BroadcastOnlyWhiteListedInSale_ttip"
                           ),
                           checked: t.GetEventModel().jsondata
@@ -9627,7 +9627,7 @@
                   : Ze.createElement(
                       "div",
                       { className: Pn.CrossTabWarning },
-                      Object(L.f)("#Sale_ShowingBroadcastElsewhere")
+                      Object(B.f)("#Sale_ShowingBroadcastElsewhere")
                     )
                 : Ze.createElement(
                     Ze.Fragment,
@@ -9636,15 +9636,15 @@
                     Ze.createElement(
                       "div",
                       { className: Pn.CrossTabWarning },
-                      Object(L.f)("#Sale_Broadcast_Disabled"),
+                      Object(B.f)("#Sale_Broadcast_Disabled"),
                       Ze.createElement(pr, {
-                        tooltip: Object(L.f)("#Sale_Broadcast_Disabled_hint"),
+                        tooltip: Object(B.f)("#Sale_Broadcast_Disabled_hint"),
                       })
                     )
                   );
             }),
             Object(I.c)(
-              [B.a],
+              [L.a],
               t.prototype,
               "OnShowOnlySaleWhiteListedBroadcasts",
               null
@@ -9692,7 +9692,7 @@
                               case 0:
                                 return [
                                   4,
-                                  Bn.a.SearchCreatorHomeStore(
+                                  Ln.a.SearchCreatorHomeStore(
                                     a,
                                     !1,
                                     this.m_cancelSignal
@@ -9770,7 +9770,7 @@
                   { className: Pn.SaleImportURL },
                   Ze.createElement(Ke.l, {
                     type: "text",
-                    label: Object(L.f)("#Sale_SearchCurator"),
+                    label: Object(B.f)("#Sale_SearchCurator"),
                     onChange: this.UpdateCuratorSuggestions,
                     onBlur: function () {
                       setTimeout(function () {
@@ -9782,7 +9782,7 @@
                     ref: function (e) {
                       return (t.m_refInput = e);
                     },
-                    tooltip: Object(L.f)("#Sale_SearchCurator_ttip"),
+                    tooltip: Object(B.f)("#Sale_SearchCurator_ttip"),
                   })
                 ),
                 Boolean(e.curator_clan_id) &&
@@ -9797,8 +9797,8 @@
                   })
               );
             }),
-            Object(I.c)([B.a], e.prototype, "SetCurator", null),
-            Object(I.c)([B.a], e.prototype, "UpdateCuratorSuggestions", null),
+            Object(I.c)([L.a], e.prototype, "SetCurator", null),
+            Object(I.c)([L.a], e.prototype, "UpdateCuratorSuggestions", null),
             (e = Object(I.c)([qe.a], e))
           );
         })(Ze.Component),
@@ -9812,7 +9812,7 @@
               return Ze.createElement(
                 "div",
                 { className: Pn.CrossTabWarning },
-                Object(L.f)("#Sale_UsingEventBodyElsewhere")
+                Object(B.f)("#Sale_UsingEventBodyElsewhere")
               );
           return Ze.createElement(
             Fn.c,
@@ -9821,7 +9821,7 @@
               route: Fn.a.k_eCommunityEdit,
               className: Pn.CrossTabLink,
             },
-            Object(L.f)("#Sale_EventDescriptionTabLink")
+            Object(B.f)("#Sale_EventDescriptionTabLink")
           );
         }),
         Na = Object(qe.a)(function (t) {
@@ -9866,7 +9866,7 @@
           )
             return Ze.createElement(dt.a, {
               size: "medium",
-              string: Object(L.f)("#Loading"),
+              string: Object(B.f)("#Loading"),
             });
           for (var c = !1, d = 0; d < a; d++)
             if (
@@ -9881,14 +9881,14 @@
             Ze.createElement(
               "div",
               null,
-              Object(L.f)("#Sale_CuratorRecommendation_desc")
+              Object(B.f)("#Sale_CuratorRecommendation_desc")
             ),
             Ze.createElement("br", null),
             Ze.createElement(ta, {
-              strDescription: Object(L.f)(
+              strDescription: Object(B.f)(
                 "#Sale_CuratorRecommendation_StartTime"
               ),
-              strDescToolTip: Object(L.f)(
+              strDescToolTip: Object(B.f)(
                 "#Sale_CuratorRecommendation_StartTime_ttip"
               ),
               nEarliestTime: n.GetEventStartTime(),
@@ -9912,9 +9912,9 @@
             Ze.createElement(
               "div",
               { className: vt.EventEditorTextTitle },
-              Object(L.f)("#Sale_CuratorRecommendation_FeaturedList"),
+              Object(B.f)("#Sale_CuratorRecommendation_FeaturedList"),
               Ze.createElement(pr, {
-                tooltip: Object(L.f)(
+                tooltip: Object(B.f)(
                   "#Sale_CuratorRecommendation_FeaturedList_ttip"
                 ),
               })
@@ -9945,7 +9945,7 @@
                   );
                 },
               },
-              Object(L.f)("#Sale_CuratorRecommendation_ChooseList")
+              Object(B.f)("#Sale_CuratorRecommendation_ChooseList")
             ),
             Boolean(
               2 <=
@@ -9964,11 +9964,11 @@
               Ze.createElement(
                 "div",
                 { className: Pn.CrossTabWarning },
-                Object(L.f)("#Sale_UsingCuratorRecommendationElsewhere")
+                Object(B.f)("#Sale_UsingCuratorRecommendationElsewhere")
               )
           );
         });
-      function La(c) {
+      function Ba(c) {
         function t(e, t) {
           e.preventDefault();
           var n = c.fnGetLocData,
@@ -10014,7 +10014,7 @@
                     return t(e, "csv_row");
                   },
                 },
-                Object(L.f)("#Localization_Export_Btn_RowLanguages")
+                Object(B.f)("#Localization_Export_Btn_RowLanguages")
               ),
               Qe.a.createElement(
                 Ke.q,
@@ -10023,7 +10023,7 @@
                     return t(e, "csv_column");
                   },
                 },
-                Object(L.f)("#Localization_Export_Btn_ColumnLanguages")
+                Object(B.f)("#Localization_Export_Btn_ColumnLanguages")
               ),
               Qe.a.createElement(
                 Ke.q,
@@ -10032,7 +10032,7 @@
                     return t(e, "csv_token");
                   },
                 },
-                Object(L.f)("#Localization_Export_Btn_TokenLanguages")
+                Object(B.f)("#Localization_Export_Btn_TokenLanguages")
               )
             ),
           Boolean(c.bShowXML) &&
@@ -10043,11 +10043,11 @@
                   return t(e, "xml");
                 },
               },
-              Object(L.f)("#Localization_Export_Btn_XML")
+              Object(B.f)("#Localization_Export_Btn_XML")
             )
         );
       }
-      function Ba(d) {
+      function La(d) {
         function p(e, t) {
           m(!1),
             console.log(
@@ -10064,7 +10064,7 @@
                   Qe.a.createElement(
                     "p",
                     null,
-                    Object(L.f)("#Localization_Error_Input")
+                    Object(B.f)("#Localization_Error_Input")
                   ),
                   Qe.a.createElement("p", null, e.message)
                 )
@@ -10077,23 +10077,23 @@
           var t = "";
           e.forEach(function (e) {
             0 < t.length && (t += ", "),
-              (t += Object(L.f)("#Language_" + Object(ee.a)(e)));
+              (t += Object(B.f)("#Language_" + Object(ee.a)(e)));
           }),
             Object(et.d)(
               Qe.a.createElement(
                 $e.c,
                 {
-                  strTitle: Object(L.f)("#EventDisplay_Share_Success"),
+                  strTitle: Object(B.f)("#EventDisplay_Share_Success"),
                   bAlertDialog: !0,
                 },
                 Qe.a.createElement(
                   "div",
                   null,
                   0 == t.length
-                    ? Object(L.f)(
+                    ? Object(B.f)(
                         "#Localization_Success_ImportComplete_NoChange"
                       )
-                    : Object(L.f)("#Localization_Success_ImportComplete", t)
+                    : Object(B.f)("#Localization_Success_ImportComplete", t)
                 )
               ),
               window
@@ -10122,7 +10122,7 @@
                                 n,
                                 a = new Va().DetectAndFormatCSV(e);
                               a
-                                ? ((t = L.b.GetLanguageListForRealms([
+                                ? ((t = B.b.GetLanguageListForRealms([
                                     te.d.k_ESteamRealmGlobal,
                                   ])),
                                   (n = d.fnOnImportLocData(a, t)),
@@ -10150,7 +10150,7 @@
                     return (
                       p({
                         code: "",
-                        message: Object(L.f)(
+                        message: Object(B.f)(
                           "#Localization_Error_FileLangauage",
                           t[i].name
                         ),
@@ -10179,7 +10179,7 @@
                     (s = Object(ce.a)(l)),
                     p({
                       code: "",
-                      message: Object(L.f)(
+                      message: Object(B.f)(
                         "#Localization_Error_XMLParseError",
                         s.strErrorMsg
                       ),
@@ -10193,7 +10193,7 @@
                 case 7:
                   p({
                     code: "",
-                    message: Object(L.f)(
+                    message: Object(B.f)(
                       "#Localization_Error_FileExtention",
                       t[i].name
                     ),
@@ -10229,7 +10229,7 @@
             Qe.a.createElement(
               "div",
               { className: Ha.Label },
-              Object(L.f)(d.strLabel ? d.strLabel : "#Localization_Import_Btn")
+              Object(B.f)(d.strLabel ? d.strLabel : "#Localization_Import_Btn")
             ),
             Qe.a.createElement("input", {
               id: "importlocalization",
@@ -10249,14 +10249,14 @@
             "number" != typeof t.clanAccountID ||
             "string" != typeof t.listID
           )
-            return Ze.createElement("div", null, Object(L.f)("#Error"));
+            return Ze.createElement("div", null, Object(B.f)("#Error"));
           var t,
             n = Da.a.Get().GetListDetails(e.tuple.listID);
           return n
             ? Ze.createElement("div", null, n.title)
             : Ze.createElement(dt.a, {
                 size: "small",
-                string: Object(L.f)("#Loading"),
+                string: Object(B.f)("#Loading"),
               });
         }),
         Fa = Object(qe.a)(function (e) {
@@ -10345,7 +10345,7 @@
                 Ze.createElement(
                   Ke.k,
                   null,
-                  Object(L.f)("#Sale_CuratorRecommendation_ChooseList")
+                  Object(B.f)("#Sale_CuratorRecommendation_ChooseList")
                 ),
                 Ze.createElement(
                   Ke.b,
@@ -10356,7 +10356,7 @@
                     Ze.createElement(
                       "div",
                       null,
-                      Object(L.f)("#Sale_CuratorRecommendation_ChooseDesc")
+                      Object(B.f)("#Sale_CuratorRecommendation_ChooseDesc")
                     ),
                     u
                       ? Ze.createElement(
@@ -10365,7 +10365,7 @@
                           l
                             ? Ze.createElement(dt.a, {
                                 size: "medium",
-                                string: Object(L.f)("#Loading"),
+                                string: Object(B.f)("#Loading"),
                               })
                             : Ze.createElement(ba.a, {
                                 styles: m,
@@ -10383,7 +10383,7 @@
                       : Ze.createElement(
                           "div",
                           { className: Ma.DisplayWarning },
-                          Object(L.f)(
+                          Object(B.f)(
                             "#Sale_CuratorRecommendation_ChooseInvalid"
                           )
                         )
@@ -10645,7 +10645,7 @@
               );
             }),
             (r.prototype.GetExportLanguages = function () {
-              return L.b.GetLanguageListForRealms([te.d.k_ESteamRealmGlobal]);
+              return B.b.GetLanguageListForRealms([te.d.k_ESteamRealmGlobal]);
             }),
             (r.prototype.WriteLocalizationData_CSV_TokenAndLanguageColumns = function (
               r,
@@ -11001,25 +11001,25 @@
                   "a",
                   {
                     className: vt.EditPreviewButton,
-                    "data-tooltip-text": Object(L.f)(
+                    "data-tooltip-text": Object(B.f)(
                       "#EventEditor_Loc_Export_Desc0"
                     ),
                     onClick: this.OnExportCSVRequest,
                   },
-                  Object(L.f)("#EventEditor_Loc_Export")
+                  Object(B.f)("#EventEditor_Loc_Export")
                 ),
-                Ze.createElement(Ba, {
-                  strToolTip: Object(L.f)("#EventEditor_Loc_Import_ttip"),
-                  strLabel: Object(L.f)("#EventEditor_Loc_Import"),
+                Ze.createElement(La, {
+                  strToolTip: Object(B.f)("#EventEditor_Loc_Import_ttip"),
+                  strLabel: Object(B.f)("#EventEditor_Loc_Import"),
                   fnOnImportLocData: function (e, t) {
                     return Ka(n.props.editModel, e, t);
                   },
                 })
               );
             }),
-            Object(I.c)([B.a], e.prototype, "OnExportCSVRequest", null),
-            Object(I.c)([B.a], e.prototype, "OnRequestTranslations", null),
-            Object(I.c)([B.a], e.prototype, "RequestTranslation", null),
+            Object(I.c)([L.a], e.prototype, "OnExportCSVRequest", null),
+            Object(I.c)([L.a], e.prototype, "OnRequestTranslations", null),
+            Object(I.c)([L.a], e.prototype, "RequestTranslation", null),
             (e = Object(I.c)([qe.a], e))
           );
         })(Ze.Component),
@@ -11065,7 +11065,7 @@
                 Ze.createElement(
                   Ke.k,
                   null,
-                  Object(L.f)("#EventEditor_Loc_Export")
+                  Object(B.f)("#EventEditor_Loc_Export")
                 ),
                 Ze.createElement(
                   Ke.b,
@@ -11079,7 +11079,7 @@
                       Ze.createElement(
                         "p",
                         null,
-                        Object(L.f)("#EventEditor_Loc_Export_Desc0")
+                        Object(B.f)("#EventEditor_Loc_Export_Desc0")
                       ),
                       Ze.createElement(
                         "div",
@@ -11105,7 +11105,7 @@
                           Ze.createElement(
                             "span",
                             null,
-                            Object(L.f)("#EventEditor_Loc_Export_CSV")
+                            Object(B.f)("#EventEditor_Loc_Export_CSV")
                           )
                         )
                       ),
@@ -11133,7 +11133,7 @@
                           Ze.createElement(
                             "span",
                             null,
-                            Object(L.f)("#EventEditor_Loc_Export_XML")
+                            Object(B.f)("#EventEditor_Loc_Export_XML")
                           )
                         )
                       ),
@@ -11180,17 +11180,17 @@
                             Ze.createElement(
                               "p",
                               null,
-                              Object(L.f)("#EventEditor_Loc_Export_Desc")
+                              Object(B.f)("#EventEditor_Loc_Export_Desc")
                             ),
                             Ze.createElement(
                               "p",
                               null,
-                              Object(L.f)("#EventEditor_Loc_Export_Desc2")
+                              Object(B.f)("#EventEditor_Loc_Export_Desc2")
                             ),
                             Ze.createElement(
                               "p",
                               null,
-                              Object(L.f)("#EventEditor_Loc_Export_Desc3")
+                              Object(B.f)("#EventEditor_Loc_Export_Desc3")
                             )
                           )
                         : Ze.createElement(
@@ -11199,12 +11199,12 @@
                             Ze.createElement(
                               "p",
                               null,
-                              Object(L.f)("#EventEditor_Loc_Export_XMLDesc")
+                              Object(B.f)("#EventEditor_Loc_Export_XMLDesc")
                             ),
                             Ze.createElement(
                               "p",
                               null,
-                              Object(L.f)("#EventEditor_Loc_Export_XMLDesc2")
+                              Object(B.f)("#EventEditor_Loc_Export_XMLDesc2")
                             )
                           )
                     )
@@ -11212,7 +11212,7 @@
                   Ze.createElement(
                     Ke.j,
                     null,
-                    Ze.createElement(La, {
+                    Ze.createElement(Ba, {
                       fnGetLocData: this.GetLocalizationModel,
                       bShowCSV: this.state.bShowCSV,
                       bShowXML: !this.state.bShowCSV,
@@ -11223,14 +11223,14 @@
                     Ze.createElement(
                       Ke.d,
                       { onClick: n },
-                      Object(L.f)("#Button_Cancel")
+                      Object(B.f)("#Button_Cancel")
                     )
                   )
                 )
               );
             }),
-            Object(I.c)([B.a], e.prototype, "GetLocalizationModel", null),
-            Object(I.c)([B.a], e.prototype, "OnExportTypeChange", null),
+            Object(I.c)([L.a], e.prototype, "GetLocalizationModel", null),
+            Object(I.c)([L.a], e.prototype, "OnExportTypeChange", null),
             (e = Object(I.c)([qe.a], e))
           );
         })(Ze.Component),
@@ -11255,7 +11255,7 @@
                 ) {
                   var n = t.GetStrVanityOrAppID();
                   return e.pathname == m(n) || e.pathname == p(n)
-                    ? Object(L.f)("#EventEditor_UnsavedChanges")
+                    ? Object(B.f)("#EventEditor_UnsavedChanges")
                     : !0;
                 }
               }
@@ -11264,7 +11264,7 @@
             (t.prototype.render = function () {
               return Ze.createElement(wt.a, { message: this.CanTransition });
             }),
-            Object(I.c)([B.a], t.prototype, "CanTransition", null),
+            Object(I.c)([L.a], t.prototype, "CanTransition", null),
             t
           );
         })(Ze.Component),
@@ -11291,7 +11291,7 @@
                 realms: e.GetIncludedRealmList(),
               });
             }),
-            Object(I.c)([B.a], t.prototype, "OnLanguageChanged", null),
+            Object(I.c)([L.a], t.prototype, "OnLanguageChanged", null),
             (t = Object(I.c)([qe.a], t))
           );
         })(Ze.Component),
@@ -11321,29 +11321,29 @@
                   Ze.createElement(
                     "span",
                     { className: ft.a.FlexRowContainer },
-                    Object(L.f)("#EventEditor_Status"),
+                    Object(B.f)("#EventEditor_Status"),
                     ":  ",
                     Ze.createElement(
                       "span",
                       { className: "StatusVisibleText" },
                       "  ",
-                      Object(L.f)("#EventEditor_Status_Public")
+                      Object(B.f)("#EventEditor_Status_Public")
                     ),
                     n &&
                       Ze.createElement(pr, {
-                        tooltip: Object(L.f)("#EventEditor_Status_Public_ttip"),
+                        tooltip: Object(B.f)("#EventEditor_Status_Public_ttip"),
                       }),
                     a &&
                       Ze.createElement(
                         "span",
                         { className: ai.a.PendingVisibilityText },
                         "  ",
-                        Object(L.f)("#EventEditor_Status_PendingModeration")
+                        Object(B.f)("#EventEditor_Status_PendingModeration")
                       ),
                     n &&
                       a &&
                       Ze.createElement(pr, {
-                        tooltip: Object(L.f)(
+                        tooltip: Object(B.f)(
                           "#EventDashBoard_ModerationQueueWarning"
                         ),
                       })
@@ -11356,11 +11356,11 @@
                   Ze.createElement(
                     "span",
                     { className: ft.a.FlexRowContainer },
-                    Object(L.f)("#EventEditor_Status") +
+                    Object(B.f)("#EventEditor_Status") +
                       ": " +
-                      Object(L.f)("#EventEditor_Status_Draft"),
+                      Object(B.f)("#EventEditor_Status_Draft"),
                     Ze.createElement(pr, {
-                      tooltip: Object(L.f)("#EventEditor_Status_Draft_ttip"),
+                      tooltip: Object(B.f)("#EventEditor_Status_Draft_ttip"),
                     })
                   )
                 );
@@ -11369,8 +11369,8 @@
               return Ze.createElement(
                 "div",
                 { className: ft.a.FlexColumnContainer },
-                Object(L.f)("#EventEditor_Status") + ": ",
-                Object(L.n)(
+                Object(B.f)("#EventEditor_Status") + ": ",
+                Object(B.n)(
                   r
                     ? "#EventEditor_Status_Staged_EventStart"
                     : "#EventEditor_Status_Staged",
@@ -11379,7 +11379,7 @@
                     { className: ft.a.FlexRowContainer },
                     Ze.createElement(Vt.a, { bSingleLine: !0, dateAndTime: i }),
                     Ze.createElement(pr, {
-                      tooltip: Object(L.f)("#EventEditor_Status_Staged_ttip"),
+                      tooltip: Object(B.f)("#EventEditor_Status_Staged_ttip"),
                     })
                   )
                 )
@@ -11407,13 +11407,13 @@
                 Ze.createElement(
                   "div",
                   { className: ft.a.EventBetaTextTitle },
-                  Object(L.f)("#PartnerEvent_Beta_Title")
+                  Object(B.f)("#PartnerEvent_Beta_Title")
                 ),
                 Ze.createElement("br", null),
                 Ze.createElement(
                   "div",
                   null,
-                  Object(L.n)(
+                  Object(B.n)(
                     "#PartnerEvent_Beta_Feedback",
                     Ze.createElement(
                       "a",
@@ -11422,7 +11422,7 @@
                         href:
                           "https://steamcommunity.com/groups/steamworks/discussions/24/",
                       },
-                      Object(L.f)("#PartnerEvent_Beta_SteamWorks")
+                      Object(B.f)("#PartnerEvent_Beta_SteamWorks")
                     )
                   )
                 )
@@ -11452,14 +11452,14 @@
                   Ze.createElement(
                     "div",
                     { className: ft.a.maintitle },
-                    Object(L.f)("#EventError_Title")
+                    Object(B.f)("#EventError_Title")
                   ),
                   this.props.errorCode &&
                     Ze.createElement(
                       "div",
                       { className: ai.a.ErrorCode },
                       " ",
-                      Object(L.f)("#EventError_Code", this.props.errorCode),
+                      Object(B.f)("#EventError_Code", this.props.errorCode),
                       " "
                     ),
                   this.props.strErrorMsg &&
@@ -11497,7 +11497,7 @@
           r = Ze.createElement(
             "span",
             { className: Object(pt.a)(di.a.BuildDisplay, di.a.BuildUnlinked) },
-            Object(L.f)("#EventEditor_AssociateBuildBlank")
+            Object(B.f)("#EventEditor_AssociateBuildBlank")
           );
         return (
           a &&
@@ -11510,7 +11510,7 @@
                       di.a.BuildLinkedBranch
                     ),
                   },
-                  Object(L.f)("#EventEditor_AssociatedBuild", a, i)
+                  Object(B.f)("#EventEditor_AssociatedBuild", a, i)
                 )
               : Ze.createElement(
                   "span",
@@ -11520,7 +11520,7 @@
                       di.a.BuildLinkedDefault
                     ),
                   },
-                  Object(L.f)("#EventEditor_AssociatedBuild_Default", a)
+                  Object(B.f)("#EventEditor_AssociatedBuild_Default", a)
                 )),
           Ze.createElement(
             "div",
@@ -11529,7 +11529,7 @@
             Ze.createElement(
               "span",
               {
-                "data-tooltip-text": Object(L.f)(
+                "data-tooltip-text": Object(B.f)(
                   "#EventEditor_AssociateBuild_ttip"
                 ),
                 className: ft.a.tooltip_Ctn,
@@ -11546,7 +11546,7 @@
                   );
                 },
               },
-              Object(L.f)("#EventEditor_AssociateBuild")
+              Object(B.f)("#EventEditor_AssociateBuild")
             )
           )
         );
@@ -11616,7 +11616,7 @@
           m = new Array();
         return (
           m.push({
-            label: Object(L.f)("#EventEditor_AssociateBuildClear"),
+            label: Object(B.f)("#EventEditor_AssociateBuildClear"),
             data: null,
           }),
           null != s &&
@@ -11627,13 +11627,13 @@
                   ((t = e),
                   (n = new Date(1e3 * t.date).toLocaleDateString()),
                   t.branch
-                    ? Object(L.f)(
+                    ? Object(B.f)(
                         "#EventEditor_AssociateBuildBranch",
                         t.branch,
                         t.build_id,
                         n
                       )
-                    : Object(L.f)(
+                    : Object(B.f)(
                         "#EventEditor_AssociateBuildDefaultBranch",
                         t.build_id,
                         n
@@ -11653,7 +11653,7 @@
                 Ze.createElement(
                   Ke.k,
                   null,
-                  Object(L.f)("#EventEditor_AssociateBuildDialog")
+                  Object(B.f)("#EventEditor_AssociateBuildDialog")
                 ),
                 Ze.createElement(
                   Ke.b,
@@ -11661,7 +11661,7 @@
                   Ze.createElement(
                     Ke.c,
                     null,
-                    Object(L.f)("#EventEditor_AssociateBuildDialogDesc")
+                    Object(B.f)("#EventEditor_AssociateBuildDialogDesc")
                   ),
                   u &&
                     Ze.createElement(Ke.h, {
@@ -11776,8 +11776,8 @@
             0 == o.trim().length &&
               (l =
                 0 == r.length
-                  ? Object(L.f)("#EventEditor_Summary_Placeholder", ne.B)
-                  : Object(L.f)("#EventEditor_Summary_Autogenerated") +
+                  ? Object(B.f)("#EventEditor_Summary_Placeholder", ne.B)
+                  : Object(B.f)("#EventEditor_Summary_Autogenerated") +
                     ne.r.GenerateSummaryFromText(r));
             var s = Boolean(a.length >= ne.C),
               c = Boolean(i.length >= ne.A),
@@ -11794,7 +11794,7 @@
                   Ze.createElement(
                     "div",
                     { className: ti.LanguageControlsCtn },
-                    Object(L.f)("#EventEditor_LangaugeDesc"),
+                    Object(B.f)("#EventEditor_LangaugeDesc"),
                     Ze.createElement(
                       "div",
                       {
@@ -11813,13 +11813,13 @@
                 "div",
                 { className: ft.a.EventEditorTextTitle },
                 28 == e
-                  ? Object(L.f)("#EventEditor_AnnouncementTitle")
-                  : Object(L.f)("#EventEditor_EventTitle"),
+                  ? Object(B.f)("#EventEditor_AnnouncementTitle")
+                  : Object(B.f)("#EventEditor_EventTitle"),
                 s &&
                   Ze.createElement(
                     "span",
                     { className: ft.a.EventEditorTextTitleLengthInfo },
-                    Object(L.f)(
+                    Object(B.f)(
                       "#EventEditor_EventTitle_Max_Characters_Reached",
                       ne.C
                     )
@@ -11827,7 +11827,7 @@
                 Ze.createElement(
                   "span",
                   {
-                    "data-tooltip-text": Object(L.f)(
+                    "data-tooltip-text": Object(B.f)(
                       "#EventEditor_Title_General_ttip",
                       ne.C
                     ),
@@ -11843,7 +11843,7 @@
                       s ? gt.CharactorExhausted : ""
                     ),
                   },
-                  Object(L.f)(
+                  Object(B.f)(
                     "#EventEditor_Input_Characters_Left",
                     ne.C - a.length
                   )
@@ -11859,7 +11859,7 @@
                     s ? gt.EventEditorInputMaxLength : ""
                   ),
                   value: a,
-                  placeholder: Object(L.f)("#EventEditor_Name_Placeholder"),
+                  placeholder: Object(B.f)("#EventEditor_Name_Placeholder"),
                   onFocus: this.onFocus,
                   onChange: this.OnTitleChange,
                   maxLength: ne.C,
@@ -11871,12 +11871,12 @@
                 Ze.createElement(
                   "span",
                   { className: ft.a.EventEditorTextTitle },
-                  Object(L.f)("#EventEditor_Event_SubTitle")
+                  Object(B.f)("#EventEditor_Event_SubTitle")
                 ),
                 Ze.createElement(
                   "span",
                   { className: ft.a.EventEditorTextTitleLengthInfo },
-                  Object(L.f)(
+                  Object(B.f)(
                     c
                       ? "#EventEditor_Event_SubTitle_Details_Reached"
                       : "#EventEditor_Event_SubTitle_Details",
@@ -11886,7 +11886,7 @@
                 Ze.createElement(
                   "span",
                   {
-                    "data-tooltip-text": Object(L.f)(
+                    "data-tooltip-text": Object(B.f)(
                       "#EventEditor_SubTitle_General_ttip",
                       ne.A
                     ),
@@ -11902,7 +11902,7 @@
                       c ? gt.CharactorExhausted : ""
                     ),
                   },
-                  Object(L.f)(
+                  Object(B.f)(
                     "#EventEditor_Input_Characters_Left",
                     ne.A - i.length
                   )
@@ -11919,7 +11919,7 @@
                     c ? gt.EventEditorInputMaxLength : ""
                   ),
                   value: i,
-                  placeholder: Object(L.f)(
+                  placeholder: Object(B.f)(
                     "#EventEditor_Name_SubTitle_Placeholder"
                   ),
                   onFocus: this.onFocus,
@@ -11939,12 +11939,12 @@
                     Ze.createElement(
                       "span",
                       { className: ft.a.EventEditorTextTitle },
-                      Object(L.f)("#EventEditor_Summary_Title")
+                      Object(B.f)("#EventEditor_Summary_Title")
                     ),
                     Ze.createElement(
                       "span",
                       { className: ft.a.EventEditorTextTitleLengthInfo },
-                      Object(L.f)(
+                      Object(B.f)(
                         d
                           ? "#EventEditor_Summary_Title_Length_Reached"
                           : "#EventEditor_Summary_Title_Length",
@@ -11954,7 +11954,7 @@
                     Ze.createElement(
                       "span",
                       {
-                        "data-tooltip-text": Object(L.f)(
+                        "data-tooltip-text": Object(B.f)(
                           "#EventEditor_Summary_Ttip",
                           ne.B
                         ),
@@ -11970,7 +11970,7 @@
                           d ? gt.CharactorExhausted : ""
                         ),
                       },
-                      Object(L.f)(
+                      Object(B.f)(
                         "#EventEditor_Input_Characters_Left",
                         ne.B - o.length
                       )
@@ -12003,12 +12003,12 @@
                     Ze.createElement(
                       "span",
                       { className: ft.a.EventEditorTextTitle },
-                      Object(L.f)("#EventEditor_ReferencedAppIDs_Header")
+                      Object(B.f)("#EventEditor_ReferencedAppIDs_Header")
                     ),
                     Ze.createElement(
                       "span",
                       {
-                        "data-tooltip-text": Object(L.f)(
+                        "data-tooltip-text": Object(B.f)(
                           "#EventEditor_ReferencedAppIDs_Tooltip"
                         ),
                         className: ft.a.tooltip_Ctn,
@@ -12020,7 +12020,7 @@
                     "div",
                     { className: gt.SaleImportURL },
                     Ze.createElement(ei.a, {
-                      strLabel: Object(L.f)(
+                      strLabel: Object(B.f)(
                         "#EventEditor_ReferencedAppIDs_SearchLabel"
                       ),
                       fnFilterSuggestion: function (e) {
@@ -12072,14 +12072,14 @@
                     "div",
                     { className: ft.a.EventEditorTextTitle },
                     28 == e
-                      ? Object(L.f)("#EventEditor_DescriptionNews")
-                      : Object(L.f)("#EventEditor_Description")
+                      ? Object(B.f)("#EventEditor_DescriptionNews")
+                      : Object(B.f)("#EventEditor_Description")
                   ),
                   Ze.createElement(Sa.a, {
                     fnGetCurText: this.GetCurrentDescription,
                     fnOnTextChange: this.OnDescriptionChange,
                     fnSetText: this.SetDescription,
-                    strPlaceholder: Object(L.f)(
+                    strPlaceholder: Object(B.f)(
                       "#EventEditor_Description_PlaceHolder"
                     ),
                     ref: this.descBBCodeEditor,
@@ -12103,11 +12103,11 @@
                     Ze.createElement(
                       "div",
                       { className: ft.a.EventEditorTextTitle },
-                      Object(L.f)("#ImagePicker_PreviousImages2"),
+                      Object(B.f)("#ImagePicker_PreviousImages2"),
                       Ze.createElement(
                         "span",
                         {
-                          "data-tooltip-text": Object(L.f)(
+                          "data-tooltip-text": Object(B.f)(
                             "#ImagePicker_Images_ttip"
                           ),
                           className: ft.a.tooltip_Ctn,
@@ -12124,16 +12124,16 @@
               )
             );
           }),
-          Object(I.c)([B.a], e.prototype, "onImageInsert", null),
-          Object(I.c)([B.a], e.prototype, "OnTitleChange", null),
-          Object(I.c)([B.a], e.prototype, "OnSubTitleChange", null),
-          Object(I.c)([B.a], e.prototype, "OnDescriptionChange", null),
-          Object(I.c)([B.a], e.prototype, "SetDescription", null),
-          Object(I.c)([B.a], e.prototype, "GetCurrentDescription", null),
-          Object(I.c)([B.a], e.prototype, "onFocus", null),
-          Object(I.c)([B.a], e.prototype, "onTextAreaFocus", null),
-          Object(I.c)([B.a], e.prototype, "OnSummaryChange", null),
-          Object(I.c)([B.a], e.prototype, "OnNewReferencedAppID", null),
+          Object(I.c)([L.a], e.prototype, "onImageInsert", null),
+          Object(I.c)([L.a], e.prototype, "OnTitleChange", null),
+          Object(I.c)([L.a], e.prototype, "OnSubTitleChange", null),
+          Object(I.c)([L.a], e.prototype, "OnDescriptionChange", null),
+          Object(I.c)([L.a], e.prototype, "SetDescription", null),
+          Object(I.c)([L.a], e.prototype, "GetCurrentDescription", null),
+          Object(I.c)([L.a], e.prototype, "onFocus", null),
+          Object(I.c)([L.a], e.prototype, "onTextAreaFocus", null),
+          Object(I.c)([L.a], e.prototype, "OnSummaryChange", null),
+          Object(I.c)([L.a], e.prototype, "OnNewReferencedAppID", null),
           (e = Object(I.c)([qe.a], e))
         );
       })(Ze.Component);
@@ -12158,7 +12158,7 @@
               Ze.createElement(
                 "div",
                 { className: kt.a.ErrorStyles },
-                Object(L.f)("#EventEdit_Error_StartTimeNotSet")
+                Object(B.f)("#EventEdit_Error_StartTimeNotSet")
               )
             )
           ),
@@ -12172,7 +12172,7 @@
                 Ze.createElement(
                   "div",
                   { className: kt.a.ErrorStyles },
-                  Object(L.f)("#EventEdit_Error_VisibilityAfterStart")
+                  Object(B.f)("#EventEdit_Error_VisibilityAfterStart")
                 )
               )
             ),
@@ -12185,7 +12185,7 @@
                     Ze.createElement(
                       "div",
                       { className: kt.a.ErrorStyles },
-                      Object(L.n)(
+                      Object(B.n)(
                         "#EventEdit_Error_StartTimeTooEarly",
                         Ze.createElement(Vt.a, {
                           dateAndTime: e.GetEventStartTime(),
@@ -12206,7 +12206,7 @@
                     Ze.createElement(
                       "div",
                       { className: kt.a.ErrorStyles },
-                      Object(L.n)(
+                      Object(B.n)(
                         "#EventEdit_Error_StartTimeInPast",
                         Ze.createElement(Vt.a, {
                           dateAndTime: e.GetEventStartTime(),
@@ -12228,7 +12228,7 @@
               Ze.createElement(
                 "div",
                 { className: kt.a.ErrorStyles },
-                Object(L.f)("#EventEdit_Error_EndTimeNeededNotSet")
+                Object(B.f)("#EventEdit_Error_EndTimeNeededNotSet")
               )
             )
           ),
@@ -12242,14 +12242,14 @@
                 Ze.createElement(
                   "div",
                   { className: kt.a.ErrorStyles },
-                  Object(L.f)("#EventEdit_Error_EndTimeBeforeStart")
+                  Object(B.f)("#EventEdit_Error_EndTimeBeforeStart")
                 )
               )
             );
         for (var p, u, m = 0, _ = 0; _ < 30; ++_) {
           var g,
             h = e.BIsLanguageValidForRealms(_),
-            E = Object(L.f)("#Language_" + Object(ee.a)(_));
+            E = Object(B.f)("#Language_" + Object(ee.a)(_));
           h &&
             e.BHasLanguage(_) &&
             !e.BHasLanguageRequired(_) &&
@@ -12263,7 +12263,7 @@
                 Ze.createElement(
                   "div",
                   { className: kt.a.ErrorStyles },
-                  Object(L.f)("#" + g, E)
+                  Object(B.f)("#" + g, E)
                 )
               )
             )),
@@ -12276,11 +12276,11 @@
                   Ze.createElement(
                     "div",
                     { className: kt.a.ErrorStyles },
-                    Object(L.f)("#EventEdit_Error_DescriptionTooLong", E)
+                    Object(B.f)("#EventEdit_Error_DescriptionTooLong", E)
                   )
                 )
               ),
-            L.b.IsELanguageValidInRealm(_, te.d.k_ESteamRealmGlobal) &&
+            B.b.IsELanguageValidInRealm(_, te.d.k_ESteamRealmGlobal) &&
               e.BHasLanguageRequired(_) &&
               ++m;
         }
@@ -12294,7 +12294,7 @@
                 Ze.createElement(
                   "div",
                   { className: kt.a.ErrorStyles },
-                  Object(L.f)("#EventEdit_Error_MissingTitleAndDesc")
+                  Object(B.f)("#EventEdit_Error_MissingTitleAndDesc")
                 )
               )
             ),
@@ -12302,14 +12302,14 @@
         )
           for (
             var b = 0,
-              v = L.b.GetLanguageListForRealms([te.d.k_ESteamRealmChina]);
+              v = B.b.GetLanguageListForRealms([te.d.k_ESteamRealmChina]);
             b < v.length;
             b++
           ) {
             var f = v[b],
-              S = L.b.GetELanguageFallback(f);
+              S = B.b.GetELanguageFallback(f);
             e.BHasLanguageRequiredOrFallback(f, S) ||
-              ((E = Object(L.f)("#Language_" + Object(ee.a)(f))),
+              ((E = Object(B.f)("#Language_" + Object(ee.a)(f))),
               n.push(
                 Ze.createElement(
                   "li",
@@ -12317,7 +12317,7 @@
                   Ze.createElement(
                     "div",
                     { className: kt.a.ErrorStyles },
-                    Object(L.f)("#EventEdit_Error_MissingChinaTitleAndDesc", E)
+                    Object(B.f)("#EventEdit_Error_MissingChinaTitleAndDesc", E)
                   )
                 )
               ));
@@ -12330,12 +12330,12 @@
               !(function (e, t) {
                 for (
                   var n = 0,
-                    a = L.b.GetLanguageListForRealms([te.d.k_ESteamRealmChina]);
+                    a = B.b.GetLanguageListForRealms([te.d.k_ESteamRealmChina]);
                   n < a.length;
                   n++
                 ) {
                   var i = a[n],
-                    r = L.b.GetELanguageFallback(i);
+                    r = B.b.GetELanguageFallback(i);
                   if (!hi(e, t, i, r)) return !1;
                 }
                 return !0;
@@ -12348,9 +12348,9 @@
                   Ze.createElement(
                     "div",
                     { className: kt.a.ErrorStyles },
-                    Object(L.f)(
+                    Object(B.f)(
                       "#EventEdit_Error_MissingCapsule",
-                      Object(L.f)("#PartnerEvent_" + e.GetEventType())
+                      Object(B.f)("#PartnerEvent_" + e.GetEventType())
                     )
                   )
                 )
@@ -12363,9 +12363,9 @@
                   Ze.createElement(
                     "div",
                     { className: kt.a.ErrorStyles },
-                    Object(L.f)(
+                    Object(B.f)(
                       "#EventEdit_Error_MissingCapsuleChina",
-                      Object(L.f)("#PartnerEvent_" + e.GetEventType())
+                      Object(B.f)("#PartnerEvent_" + e.GetEventType())
                     )
                   )
                 )
@@ -12381,7 +12381,7 @@
                 Ze.createElement(
                   "div",
                   { className: kt.a.ErrorStyles },
-                  Object(L.f)("#EventEdit_Error_TooManyTabsSections")
+                  Object(B.f)("#EventEdit_Error_TooManyTabsSections")
                 )
               )
             ),
@@ -12394,7 +12394,7 @@
                 Ze.createElement(
                   "div",
                   { className: kt.a.ErrorStyles },
-                  Object(L.f)("#EventEdit_Error_PublishingForHiddenGame")
+                  Object(B.f)("#EventEdit_Error_PublishingForHiddenGame")
                 )
               )
             ),
@@ -12407,7 +12407,7 @@
                 Ze.createElement(
                   "div",
                   { className: kt.a.ErrorStyles },
-                  Object(L.f)("#EventEditor_SaleNotReady_ttip")
+                  Object(B.f)("#EventEditor_SaleNotReady_ttip")
                 )
               )
             ),
@@ -12435,7 +12435,7 @@
               Ze.createElement(
                 "div",
                 { className: kt.a.WarningStyles },
-                Object(L.f)("#EventEdit_Warning_EnglishMissing")
+                Object(B.f)("#EventEdit_Warning_EnglishMissing")
               )
             )
           ),
@@ -12447,16 +12447,16 @@
                 Ze.createElement(
                   "div",
                   { className: kt.a.WarningStyles },
-                  Object(L.f)("#EventEdit_Warning_Other")
+                  Object(B.f)("#EventEdit_Warning_Other")
                 )
               )
             );
         for (var i = 0, r = 0, o = 0, l = 0, s = 0; s < 30; ++s) {
           var c,
-            d = L.b.IsELanguageValidInRealm(s, te.d.k_ESteamRealmGlobal),
-            p = L.b.IsELanguageValidInRealm(s, te.d.k_ESteamRealmChina);
+            d = B.b.IsELanguageValidInRealm(s, te.d.k_ESteamRealmGlobal),
+            p = B.b.IsELanguageValidInRealm(s, te.d.k_ESteamRealmChina);
           ((d && e.BInRealmGlobal()) || (p && e.BInRealmChina())) &&
-            (hi(e, "capsule", s, (c = p ? L.b.GetELanguageFallback(s) : s)) &&
+            (hi(e, "capsule", s, (c = p ? B.b.GetELanguageFallback(s) : s)) &&
               i++,
             hi(e, "spotlight", s, c) && l++,
             e.BHasLanguageRequiredOrFallback(s, c) &&
@@ -12471,7 +12471,7 @@
               Ze.createElement(
                 "div",
                 { className: kt.a.WarningStyles },
-                Object(L.f)(
+                Object(B.f)(
                   e.GetAppID()
                     ? "#EventEdit_Warning_ArtworkMissing"
                     : "#EventEdit_Warning_ArtworkMissing_clan"
@@ -12488,7 +12488,7 @@
                 Ze.createElement(
                   "div",
                   { className: kt.a.WarningStyles },
-                  Object(L.f)("#EventEdit_Warnign_SubTitle", o, r)
+                  Object(B.f)("#EventEdit_Warnign_SubTitle", o, r)
                 )
               )
             ),
@@ -12501,7 +12501,7 @@
                 Ze.createElement(
                   "div",
                   { className: kt.a.WarningStyles },
-                  Object(L.f)("#EventEdit_Warnign_Artwork", i, r)
+                  Object(B.f)("#EventEdit_Warnign_Artwork", i, r)
                 )
               )
             );
@@ -12518,7 +12518,7 @@
                 Ze.createElement(
                   "div",
                   { className: kt.a.WarningStyles },
-                  Object(L.f)("#EventEdit_Warning_VisibilityTimeChange")
+                  Object(B.f)("#EventEdit_Warning_VisibilityTimeChange")
                 )
               )
             ),
@@ -12531,7 +12531,7 @@
                 Ze.createElement(
                   "div",
                   { className: kt.a.WarningStyles },
-                  Object(L.f)("#EventEdit_Warning_SpotlightImageWithFlag")
+                  Object(B.f)("#EventEdit_Warning_SpotlightImageWithFlag")
                 )
               )
             ),
@@ -12631,8 +12631,8 @@
                   return Ze.createElement(
                     $e.e,
                     {
-                      strTitle: Object(L.f)("#EventEditor_Publish_Failed"),
-                      strDescription: Object(L.f)(
+                      strTitle: Object(B.f)("#EventEditor_Publish_Failed"),
+                      strDescription: Object(B.f)(
                         "#EventEdit_Error_PublishingDesc"
                       ),
                       closeModal: this.props.closeModal,
@@ -12646,7 +12646,7 @@
                         Ze.createElement(
                           "div",
                           null,
-                          Object(L.f)("#EventEdit_Warning_PublishingDesc")
+                          Object(B.f)("#EventEdit_Warning_PublishingDesc")
                         ),
                         Ze.createElement("ol", null, r)
                       )
@@ -12655,13 +12655,13 @@
                   return Ze.createElement(
                     $e.c,
                     {
-                      strTitle: Object(L.f)("#EventEditor_Publish_Warning"),
-                      strDescription: Object(L.f)(
+                      strTitle: Object(B.f)("#EventEditor_Publish_Warning"),
+                      strDescription: Object(B.f)(
                         "#EventEdit_Warning_PublishingDesc"
                       ),
                       onOK: this.OnByPassWarnings,
                       onCancel: this.props.closeModal,
-                      strOKButtonText: Object(L.f)(
+                      strOKButtonText: Object(B.f)(
                         "#EventEditor_ByPassWarnings"
                       ),
                     },
@@ -12682,31 +12682,31 @@
                     Ze.createElement(
                       $e.c,
                       {
-                        strTitle: Object(L.f)("#Button_Publish"),
+                        strTitle: Object(B.f)("#Button_Publish"),
                         strDescription: "",
                         onOK: this.OnPublish,
                         onCancel: this.props.closeModal,
-                        strOKButtonText: Object(L.f)("#Button_Publish"),
+                        strOKButtonText: Object(B.f)("#Button_Publish"),
                       },
                       Ze.createElement(
                         Ze.Fragment,
                         null,
-                        Object(L.f)("#EventEditor_Publish_Notice"),
+                        Object(B.f)("#EventEditor_Publish_Notice"),
                         Ze.createElement("br", null),
                         Ze.createElement("br", null),
                         p
-                          ? Object(L.f)("#EventEditor_Publish_Immediate")
-                          : Object(L.n)(
+                          ? Object(B.f)("#EventEditor_Publish_Immediate")
+                          : Object(B.n)(
                               "#EventEditor_Publish_Staged",
                               Ze.createElement(Vt.a, {
                                 dateAndTime: a,
                                 bSingleLine: !0,
                               })
                             ),
-                        Object(L.f)("#EventEditor_Publish_ContinueEdits"),
+                        Object(B.f)("#EventEditor_Publish_ContinueEdits"),
                         Ze.createElement("br", null),
                         Ze.createElement("br", null),
-                        Object(L.f)("#EventEditor_Publish_Notice_Note"),
+                        Object(B.f)("#EventEditor_Publish_Notice_Note"),
                         Boolean(l.valve_admin) &&
                           Ze.createElement(
                             "div",
@@ -12736,8 +12736,8 @@
                   return Ze.createElement(
                     $e.e,
                     {
-                      strTitle: Object(L.f)("#EventEditor_Publish_Failed"),
-                      strDescription: Object(L.f)(
+                      strTitle: Object(B.f)("#EventEditor_Publish_Failed"),
+                      strDescription: Object(B.f)(
                         "#EventEdit_Publishing_Failure"
                       ),
                       closeModal: this.props.closeModal,
@@ -12750,14 +12750,14 @@
                   return Ze.createElement(
                     $e.c,
                     {
-                      strTitle: Object(L.f)("#Button_Publish"),
-                      strDescription: Object(L.f)(
+                      strTitle: Object(B.f)("#Button_Publish"),
+                      strDescription: Object(B.f)(
                         "#EventEditor_Publishing_PleaseWait"
                       ),
                       bAlertDialog: !0,
                       onOK: this.props.closeModal,
                       onCancel: this.props.closeModal,
-                      strOKButtonText: Object(L.f)("#Button_Cancel"),
+                      strOKButtonText: Object(B.f)("#Button_Cancel"),
                       bOKDisabled: !0,
                     },
                     Ze.createElement(
@@ -12768,21 +12768,21 @@
                   );
                 case "showsuccess":
                   return Ze.createElement($e.c, {
-                    strTitle: Object(L.f)("#Button_Publish"),
-                    strDescription: Object(L.f)(
+                    strTitle: Object(B.f)("#Button_Publish"),
+                    strDescription: Object(B.f)(
                       "#EventEdit_Publishing_Success"
                     ),
                     bAlertDialog: !0,
                     onOK: this.props.OnPublishSuccess,
                     onCancel: this.props.OnPublishSuccess,
                     closeModal: this.props.closeModal,
-                    strOKButtonText: Object(L.f)("#Button_Close"),
+                    strOKButtonText: Object(B.f)("#Button_Close"),
                   });
               }
             }),
-            Object(I.c)([B.a], e.prototype, "OnByPassWarnings", null),
-            Object(I.c)([B.a], e.prototype, "OnPublish", null),
-            Object(I.c)([B.a], e.prototype, "OnFakeErrorChange", null),
+            Object(I.c)([L.a], e.prototype, "OnByPassWarnings", null),
+            Object(I.c)([L.a], e.prototype, "OnPublish", null),
+            Object(I.c)([L.a], e.prototype, "OnFakeErrorChange", null),
             (e = Object(I.c)([qe.a], e))
           );
         })(Ze.Component),
@@ -12848,8 +12848,8 @@
                       Object(ce.a)(e)
                     );
                     !t.strErrorMsg &&
-                      Object(L.f)("#EventEditor_Error_" + t.errorCode) &&
-                      (t.strErrorMsg = Object(L.f)(
+                      Object(B.f)("#EventEditor_Error_" + t.errorCode) &&
+                      (t.strErrorMsg = Object(B.f)(
                         "#EventEditor_Error_" + t.errorCode
                       )),
                       27 == t.errorCode && (t.dialogState = "overwrite"),
@@ -12866,8 +12866,8 @@
                   return Ze.createElement(
                     $e.e,
                     {
-                      strTitle: Object(L.f)("#EventEdit_Saving_Error_Title"),
-                      strDescription: Object(L.f)(
+                      strTitle: Object(B.f)("#EventEdit_Saving_Error_Title"),
+                      strDescription: Object(B.f)(
                         "#EventEdit_Saving_ErrorDesc"
                       ),
                       closeModal: this.props.closeModal,
@@ -12881,7 +12881,7 @@
                         Ze.createElement(
                           "div",
                           null,
-                          Object(L.f)("#EventEdit_Saving_WarningDesc")
+                          Object(B.f)("#EventEdit_Saving_WarningDesc")
                         ),
                         Ze.createElement("ol", null, a)
                       )
@@ -12890,13 +12890,13 @@
                   return Ze.createElement(
                     $e.c,
                     {
-                      strTitle: Object(L.f)("#EventEdit_Saving_Warning_Title"),
-                      strDescription: Object(L.f)(
+                      strTitle: Object(B.f)("#EventEdit_Saving_Warning_Title"),
+                      strDescription: Object(B.f)(
                         "#EventEdit_Saving_WarningDesc"
                       ),
                       onOK: this.OnByPassWarnings,
                       onCancel: this.props.closeModal,
-                      strOKButtonText: Object(L.f)(
+                      strOKButtonText: Object(B.f)(
                         "#EventEdit_Saving_ByPassWarnings"
                       ),
                     },
@@ -12914,7 +12914,7 @@
                     Ze.createElement(
                       Ke.k,
                       null,
-                      Object(L.f)("#EventEdit_Saving_Title")
+                      Object(B.f)("#EventEdit_Saving_Title")
                     ),
                     Ze.createElement(
                       Ke.b,
@@ -12922,7 +12922,7 @@
                       Ze.createElement(
                         "div",
                         null,
-                        Object(L.f)("#EventEdit_Saving_Description")
+                        Object(B.f)("#EventEdit_Saving_Description")
                       ),
                       Ze.createElement(
                         "div",
@@ -12932,15 +12932,15 @@
                     )
                   );
                 case "success":
-                  var i = Object(L.f)("#EventEdit_Saving_Successful");
+                  var i = Object(B.f)("#EventEdit_Saving_Successful");
                   return (
                     e.BPublished() &&
                       e.BVisible() &&
                       (i +=
                         " " +
-                        Object(L.f)("#EventEdit_Saving_Successful_Visible")),
+                        Object(B.f)("#EventEdit_Saving_Successful_Visible")),
                     Ze.createElement($e.c, {
-                      strTitle: Object(L.f)("#EventEdit_Saving_Success_Title"),
+                      strTitle: Object(B.f)("#EventEdit_Saving_Success_Title"),
                       strDescription: i,
                       onOK: this.props.OnSuccess,
                       onCancel: this.props.closeModal,
@@ -12952,8 +12952,8 @@
                   return Ze.createElement(
                     $e.e,
                     {
-                      strTitle: Object(L.f)("#EventEdit_Saving_Error_Title"),
-                      strDescription: Object(L.f)(
+                      strTitle: Object(B.f)("#EventEdit_Saving_Error_Title"),
+                      strDescription: Object(B.f)(
                         "#EventEdit_Saving_Failure_Desc"
                       ),
                       closeModal: this.props.closeModal,
@@ -12966,15 +12966,15 @@
                   return Ze.createElement(
                     $e.c,
                     {
-                      strTitle: Object(L.f)(
+                      strTitle: Object(B.f)(
                         "#EventEditor_SaveOrPublish_ClobberTitle"
                       ),
-                      strDescription: Object(L.f)(
+                      strDescription: Object(B.f)(
                         "#EventEdit_Saving_Failure_Desc"
                       ),
                       onCancel: this.props.closeModal,
                       onOK: this.OnByPassOverwriteWarnings,
-                      strOKButtonText: Object(L.f)("#Button_Overwrite"),
+                      strOKButtonText: Object(B.f)("#Button_Overwrite"),
                       bDestructiveWarning: !0,
                     },
                     Ze.createElement("br", null),
@@ -12983,9 +12983,9 @@
                   );
               }
             }),
-            Object(I.c)([B.a], e.prototype, "OnByPassWarnings", null),
-            Object(I.c)([B.a], e.prototype, "OnByPassOverwriteWarnings", null),
-            Object(I.c)([B.a], e.prototype, "InternalSave", null),
+            Object(I.c)([L.a], e.prototype, "OnByPassWarnings", null),
+            Object(I.c)([L.a], e.prototype, "OnByPassOverwriteWarnings", null),
+            Object(I.c)([L.a], e.prototype, "InternalSave", null),
             (e = Object(I.c)([qe.a], e))
           );
         })(Ze.Component),
@@ -13035,13 +13035,13 @@
                         n.SetDirty(H.jsondata_sales);
                     },
                   },
-                  Object(L.f)("#Sale_SortTier_Add")
+                  Object(B.f)("#Sale_SortTier_Add")
                 )
               )
             : Ze.createElement(
                 "div",
                 null,
-                Object(L.f)("#Sale_SortTier_EnableInfo"),
+                Object(B.f)("#Sale_SortTier_EnableInfo"),
                 Ze.createElement(
                   Ke.d,
                   {
@@ -13049,7 +13049,7 @@
                       return r(!0);
                     },
                   },
-                  Object(L.f)("#Sale_SortTier_Enable")
+                  Object(B.f)("#Sale_SortTier_Enable")
                 )
               );
         }),
@@ -13097,10 +13097,10 @@
         if (null === (t = n.or_tags) || void 0 === t || !t.length) return null;
         var a =
             ("Must have" === n.type
-              ? Object(L.f)("#Sale_TagFilter_MustHave")
-              : Object(L.f)("#Sale_TagFilter_MustNotHave")) +
+              ? Object(B.f)("#Sale_TagFilter_MustHave")
+              : Object(B.f)("#Sale_TagFilter_MustNotHave")) +
             " '" +
-            n.or_tags.join("' " + Object(L.f)("#Sale_TagFilter_Or") + " '") +
+            n.or_tags.join("' " + Object(B.f)("#Sale_TagFilter_Or") + " '") +
             "'",
           i = "Must have" === n.type ? Ci.MustHaveClause : Ci.MustNotHaveClause;
         return Ze.createElement(
@@ -13115,9 +13115,9 @@
           ? Ze.createElement(
               "div",
               { className: Ci.FilterDisplayNoFilter },
-              Object(L.f)("#Sale_TagFilter_NoFilter"),
+              Object(B.f)("#Sale_TagFilter_NoFilter"),
               Ze.createElement(pr, {
-                tooltip: Object(L.f)("#Sale_TagFilter_NoFilter_ttip"),
+                tooltip: Object(B.f)("#Sale_TagFilter_NoFilter_ttip"),
               })
             )
           : Ze.createElement(
@@ -13322,9 +13322,9 @@
                 { className: Pn.SaleImportURL },
                 Ze.createElement(Ke.l, {
                   type: "text",
-                  label: Object(L.f)("#Sale_SelectApps"),
+                  label: Object(B.f)("#Sale_SelectApps"),
                   onChange: this.UpdateAppSuggestions,
-                  placeholder: Object(L.f)("#Sale_SelectApps_Placeholder"),
+                  placeholder: Object(B.f)("#Sale_SelectApps_Placeholder"),
                   onBlur: function () {
                     setTimeout(function () {
                       return (
@@ -13333,12 +13333,12 @@
                     }, 200);
                   },
                   ref: this.m_refInput,
-                  tooltip: Object(L.f)("#Sale_SelectApps_Tooltip"),
+                  tooltip: Object(B.f)("#Sale_SelectApps_Tooltip"),
                 })
               );
             }),
-            Object(I.c)([B.a], e.prototype, "OnAddItem", null),
-            Object(I.c)([B.a], e.prototype, "UpdateAppSuggestions", null),
+            Object(I.c)([L.a], e.prototype, "OnAddItem", null),
+            Object(I.c)([L.a], e.prototype, "UpdateAppSuggestions", null),
             e
           );
         })(Ze.Component),
@@ -13352,7 +13352,7 @@
               var t = this.props,
                 n = t.editModel,
                 a = t.capsuleContainer,
-                i = Be(n);
+                i = Le(n);
               (a.sale_tag_filter = e), (a.capsules = Ge(i, e, a.capsules));
             }),
             (t.prototype.OnEditFilter = function () {
@@ -13361,7 +13361,7 @@
                 Ze.createElement(Ui, {
                   editModel: this.props.editModel,
                   filter: e.sale_tag_filter,
-                  title: Object(L.f)("#Sale_TagFilter_EditFilter"),
+                  title: Object(B.f)("#Sale_TagFilter_EditFilter"),
                   onApplyFilter: this.OnApplyFilter,
                   ignoreStartingReferences: e,
                 }),
@@ -13376,9 +13376,9 @@
                 Ze.createElement(
                   "div",
                   { className: Ci.FilterTitle },
-                  Object(L.f)("#Sale_TagFilter_CurrentFilter"),
+                  Object(B.f)("#Sale_TagFilter_CurrentFilter"),
                   Ze.createElement(pr, {
-                    tooltip: Object(L.f)("#Sale_TagFilter_EditFilter_ttip"),
+                    tooltip: Object(B.f)("#Sale_TagFilter_EditFilter_ttip"),
                   })
                 ),
                 Ze.createElement(
@@ -13388,13 +13388,13 @@
                   Ze.createElement(
                     Ke.d,
                     { onClick: this.OnEditFilter },
-                    Object(L.f)("#Sale_TagFilter_EditFilter")
+                    Object(B.f)("#Sale_TagFilter_EditFilter")
                   )
                 )
               );
             }),
-            Object(I.c)([B.a], t.prototype, "OnApplyFilter", null),
-            Object(I.c)([B.a], t.prototype, "OnEditFilter", null),
+            Object(I.c)([L.a], t.prototype, "OnApplyFilter", null),
+            Object(I.c)([L.a], t.prototype, "OnEditFilter", null),
             (t = Object(I.c)([qe.a], t))
           );
         })(Ze.Component),
@@ -13461,7 +13461,7 @@
                 Ze.createElement(Ui, {
                   editModel: this.props.editModel,
                   filter: e,
-                  title: Object(L.f)("#Sale_TagFilter_Explore"),
+                  title: Object(B.f)("#Sale_TagFilter_Explore"),
                 }),
                 window
               );
@@ -13489,8 +13489,8 @@
               Object(et.d)(
                 Ze.createElement(Ui, {
                   editModel: e,
-                  filter: Le(e),
-                  title: Object(L.f)("#Sale_TagFilter_EditFilter"),
+                  filter: Be(e),
+                  title: Object(B.f)("#Sale_TagFilter_EditFilter"),
                   onApplyFilter: this.OnApplyFilter,
                   ignoreEventFilter: !0,
                 }),
@@ -13525,7 +13525,7 @@
             (e.prototype.OnDeleteFiltered = function () {
               var e = this.props.editModel;
               !(function (e) {
-                var t = Le(e);
+                var t = Be(e);
                 if (!Ae(t)) {
                   var n = e.GetEventModel().jsondata.tagged_items.length;
                   return (
@@ -13613,12 +13613,12 @@
                 Ze.createElement(
                   "div",
                   { className: Ci.ItemEditDescription },
-                  Object(L.f)("#Sale_EditTags_EnableItemEditingDesc")
+                  Object(B.f)("#Sale_EditTags_EnableItemEditingDesc")
                 ),
                 Ze.createElement(
                   Ke.q,
                   { onClick: this.OnShowItemEditor },
-                  Object(L.f)("#Sale_EditTags_EnableItemEditing")
+                  Object(B.f)("#Sale_EditTags_EnableItemEditing")
                 )
               );
             }),
@@ -13628,7 +13628,7 @@
                 i = e.strSearch,
                 r = e.bShowFiltered,
                 o = this.props.editModel,
-                l = Le(o),
+                l = Be(o),
                 s = 0,
                 c = 0,
                 t = o.GetEventModel().GetTaggedItems();
@@ -13642,7 +13642,7 @@
                   return (
                     n ? s++ : c++,
                     n || r
-                      ? Ze.createElement(Li, {
+                      ? Ze.createElement(Bi, {
                           key: e.capsule.type + e.capsule.id,
                           item: e,
                           strSearchFilter: i,
@@ -13669,38 +13669,38 @@
                     Ze.createElement(
                       Ke.d,
                       { onClick: this.OnExploreTags },
-                      Object(L.f)("#Sale_Explore"),
+                      Object(B.f)("#Sale_Explore"),
                       Ze.createElement(pr, {
-                        tooltip: Object(L.f)("#Sale_ExploreTaggedItems_ttip"),
+                        tooltip: Object(B.f)("#Sale_ExploreTaggedItems_ttip"),
                       })
                     ),
                     Ze.createElement(
                       Ke.d,
                       { onClick: this.OnEditRaw },
-                      Object(L.f)("#Sale_EditRaw"),
+                      Object(B.f)("#Sale_EditRaw"),
                       Ze.createElement(pr, {
-                        tooltip: Object(L.f)("#Sale_EditRawTaggedItems_ttip"),
+                        tooltip: Object(B.f)("#Sale_EditRawTaggedItems_ttip"),
                       })
                     ),
                     Ze.createElement(
                       Ke.d,
                       { onClick: this.OnBatchEditTags },
-                      Object(L.f)("#Sale_BatchEditTaggedItems"),
+                      Object(B.f)("#Sale_BatchEditTaggedItems"),
                       Ze.createElement(pr, {
-                        tooltip: Object(L.f)("#Sale_BatchEditTaggedItems_ttip"),
+                        tooltip: Object(B.f)("#Sale_BatchEditTaggedItems_ttip"),
                       })
                     ),
                     Ze.createElement(
                       Ke.d,
                       { onClick: this.OnEditAutoTags },
-                      Object(L.f)("#Sale_EditAutoTags"),
+                      Object(B.f)("#Sale_EditAutoTags"),
                       Ze.createElement(pr, {
-                        tooltip: Object(L.f)("#Sale_EditAutoTags_ttip"),
+                        tooltip: Object(B.f)("#Sale_EditAutoTags_ttip"),
                       })
                     )
                   ),
                   Ze.createElement(
-                    Ln,
+                    Bn,
                     { clanSteamID: o.GetClanSteamID() },
                     Ze.createElement(
                       "div",
@@ -13708,9 +13708,9 @@
                       Ze.createElement(
                         Ke.d,
                         { onClick: this.OnEditFilter },
-                        Object(L.f)("#Sale_EditTaggedItemFilter"),
+                        Object(B.f)("#Sale_EditTaggedItemFilter"),
                         Ze.createElement(pr, {
-                          tooltip: Object(L.f)(
+                          tooltip: Object(B.f)(
                             "#Sale_EditTaggedItemFilter_ttip"
                           ),
                         })
@@ -13718,25 +13718,25 @@
                       Ze.createElement(
                         Ke.d,
                         { onClick: this.OnSync },
-                        Object(L.f)("#Sale_SyncTaggedItems"),
+                        Object(B.f)("#Sale_SyncTaggedItems"),
                         Ze.createElement(pr, {
-                          tooltip: Object(L.f)("#Sale_SyncTaggedItems_ttip"),
+                          tooltip: Object(B.f)("#Sale_SyncTaggedItems_ttip"),
                         })
                       ),
                       Ze.createElement(
                         Ke.d,
                         { onClick: this.OnImportDiscountEvent },
-                        Object(L.f)("#Sale_DiscountEvent_Add"),
+                        Object(B.f)("#Sale_DiscountEvent_Add"),
                         Ze.createElement(pr, {
-                          tooltip: Object(L.f)("#Sale_DiscountEvent_ttip"),
+                          tooltip: Object(B.f)("#Sale_DiscountEvent_ttip"),
                         })
                       ),
                       Ze.createElement(
                         Ke.d,
                         { onClick: this.OnEditRawCustom },
-                        Object(L.f)("#Sale_EditRawCustom"),
+                        Object(B.f)("#Sale_EditRawCustom"),
                         Ze.createElement(pr, {
-                          tooltip: Object(L.f)(
+                          tooltip: Object(B.f)(
                             "#Sale_EditRawCustomTaggedItems_ttip"
                           ),
                         })
@@ -13745,9 +13745,9 @@
                         Ze.createElement(
                           Ke.d,
                           { onClick: this.OnDeleteFiltered },
-                          Object(L.f)("#Sale_DeleteFilteredItems"),
+                          Object(B.f)("#Sale_DeleteFilteredItems"),
                           Ze.createElement(pr, {
-                            tooltip: Object(L.f)(
+                            tooltip: Object(B.f)(
                               "#Sale_DeleteFilteredItems_ttip"
                             ),
                           })
@@ -13765,10 +13765,10 @@
                       "div",
                       { className: vt.EventEditorTextTitle },
                       0 < c
-                        ? Object(L.f)("#Sale_TaggedItemsCountFiltered", s, c)
-                        : Object(L.f)("#Sale_TaggedItemsCount", s),
+                        ? Object(B.f)("#Sale_TaggedItemsCountFiltered", s, c)
+                        : Object(B.f)("#Sale_TaggedItemsCount", s),
                       Ze.createElement(pr, {
-                        tooltip: Object(L.f)("#Sale_TaggedItemsCount_ttip"),
+                        tooltip: Object(B.f)("#Sale_TaggedItemsCount_ttip"),
                       })
                     ),
                     Ze.createElement(Qr, {
@@ -13785,8 +13785,8 @@
                     { className: Ci.ItemList },
                     0 < c &&
                       Ze.createElement(Ke.e, {
-                        label: Object(L.f)("#Sale_ShowFilteredTaggedItems"),
-                        tooltip: Object(L.f)(
+                        label: Object(B.f)("#Sale_ShowFilteredTaggedItems"),
+                        tooltip: Object(B.f)(
                           "#Sale_ShowFilteredTaggedItems_ttip"
                         ),
                         checked: this.state.bShowFiltered,
@@ -13794,10 +13794,10 @@
                       }),
                     Ze.createElement(Ke.l, {
                       type: "text",
-                      label: Object(L.f)("#Sale_TaggedItemsFilter"),
-                      placeholder: Object(L.f)("#Sale_TaggedItemsFilter"),
+                      label: Object(B.f)("#Sale_TaggedItemsFilter"),
+                      placeholder: Object(B.f)("#Sale_TaggedItemsFilter"),
                       onChange: this.UpdateSearchText,
-                      tooltip: Object(L.f)("#Sale_TaggedItemsFilter_ttip"),
+                      tooltip: Object(B.f)("#Sale_TaggedItemsFilter_ttip"),
                     }),
                     n
                   )
@@ -13815,25 +13815,25 @@
                   )
                 : this.RenderEditPrompt();
             }),
-            Object(I.c)([B.a], e.prototype, "RemoveTagItem", null),
-            Object(I.c)([B.a], e.prototype, "AddTagItem", null),
-            Object(I.c)([B.a], e.prototype, "UpdateSearchText", null),
-            Object(I.c)([B.a], e.prototype, "OnExploreTags", null),
-            Object(I.c)([B.a], e.prototype, "OnBatchEditTags", null),
-            Object(I.c)([B.a], e.prototype, "OnEditAutoTags", null),
-            Object(I.c)([B.a], e.prototype, "OnApplyFilter", null),
-            Object(I.c)([B.a], e.prototype, "OnEditFilter", null),
-            Object(I.c)([B.a], e.prototype, "OnShowFiltered", null),
-            Object(I.c)([B.a], e.prototype, "OnShowItemEditor", null),
-            Object(I.c)([B.a], e.prototype, "OnEditRaw", null),
-            Object(I.c)([B.a], e.prototype, "OnEditRawCustom", null),
-            Object(I.c)([B.a], e.prototype, "OnDeleteFiltered", null),
-            Object(I.c)([B.a], e.prototype, "OnSync", null),
-            Object(I.c)([B.a], e.prototype, "OnImportDiscountEvent", null),
+            Object(I.c)([L.a], e.prototype, "RemoveTagItem", null),
+            Object(I.c)([L.a], e.prototype, "AddTagItem", null),
+            Object(I.c)([L.a], e.prototype, "UpdateSearchText", null),
+            Object(I.c)([L.a], e.prototype, "OnExploreTags", null),
+            Object(I.c)([L.a], e.prototype, "OnBatchEditTags", null),
+            Object(I.c)([L.a], e.prototype, "OnEditAutoTags", null),
+            Object(I.c)([L.a], e.prototype, "OnApplyFilter", null),
+            Object(I.c)([L.a], e.prototype, "OnEditFilter", null),
+            Object(I.c)([L.a], e.prototype, "OnShowFiltered", null),
+            Object(I.c)([L.a], e.prototype, "OnShowItemEditor", null),
+            Object(I.c)([L.a], e.prototype, "OnEditRaw", null),
+            Object(I.c)([L.a], e.prototype, "OnEditRawCustom", null),
+            Object(I.c)([L.a], e.prototype, "OnDeleteFiltered", null),
+            Object(I.c)([L.a], e.prototype, "OnSync", null),
+            Object(I.c)([L.a], e.prototype, "OnImportDiscountEvent", null),
             (e = Object(I.c)([qe.a], e))
           );
         })(Ze.Component),
-        Li = (function (t) {
+        Bi = (function (t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (e.state = { expanded: !1 }), e;
@@ -13866,7 +13866,7 @@
                 c = s.appData,
                 d = s.linkURL,
                 p = s.bInvalidID,
-                u = Object(L.f)("#AppType_" + l.type),
+                u = Object(B.f)("#AppType_" + l.type),
                 m = c ? c.appid || c.bundleid || c.packageid : l.id,
                 _ = c ? c.name : null;
               if (
@@ -13915,9 +13915,9 @@
                       Ze.createElement(
                         "div",
                         { className: Pn.SaleCapsuleConflict },
-                        Object(L.f)("#Sale_NotFoundCapsule"),
+                        Object(B.f)("#Sale_NotFoundCapsule"),
                         Ze.createElement(pr, {
-                          tooltip: Object(L.f)(
+                          tooltip: Object(B.f)(
                             "#Sale_NotFoundCapsule_Tooltip",
                             u,
                             l.id
@@ -13931,7 +13931,7 @@
                     Ze.createElement(
                       "span",
                       { className: Ci.TagSummary, onClick: this.OnEditTags },
-                      Object(L.f)(
+                      Object(B.f)(
                         "#Sale_EditTags_TagCount",
                         (null === (e = n.tags) || void 0 === e
                           ? void 0
@@ -13944,7 +13944,7 @@
                         className: Ci.TagShowToggle,
                         onClick: this.OnToggleTags,
                       },
-                      Object(L.f)(
+                      Object(B.f)(
                         this.state.expanded
                           ? "#Sale_EditTags_Hide"
                           : "#Sale_EditTags_Show"
@@ -13955,7 +13955,7 @@
                     Ze.createElement(
                       "div",
                       { onClick: this.OnEditTags },
-                      Ze.createElement(Bi, {
+                      Ze.createElement(Li, {
                         item: n,
                         lowerTagHighlight: g,
                         filter: o,
@@ -13965,12 +13965,12 @@
                 a && Ze.createElement(Ii, { onClick: a })
               );
             }),
-            Object(I.c)([B.a], e.prototype, "OnEditTags", null),
-            Object(I.c)([B.a], e.prototype, "OnToggleTags", null),
+            Object(I.c)([L.a], e.prototype, "OnEditTags", null),
+            Object(I.c)([L.a], e.prototype, "OnToggleTags", null),
             (e = Object(I.c)([qe.a], e))
           );
         })(Ze.Component);
-      var Bi = Object(qe.a)(function (t) {
+      var Li = Object(qe.a)(function (t) {
           var e = t.item,
             n = Array.from(e.tags),
             a = (function (e, t) {
@@ -14007,9 +14007,9 @@
                   0 < s &&
                     !l &&
                     (a = a || []).push(
-                      Object(L.f)("#Sale_TagFilter_Missing") +
+                      Object(B.f)("#Sale_TagFilter_Missing") +
                         o.or_tags.join(
-                          " " + Object(L.f)("#Sale_TagFilter_Or") + " "
+                          " " + Object(B.f)("#Sale_TagFilter_Or") + " "
                         )
                     );
                 }
@@ -14061,7 +14061,7 @@
             : Ze.createElement(
                 "div",
                 { className: Ci.TagListCtn },
-                Object(L.f)("#Sale_TagFilter_AddTags")
+                Object(B.f)("#Sale_TagFilter_AddTags")
               );
         }),
         Ri = function (e) {
@@ -14361,9 +14361,9 @@
                         Ze.createElement(
                           "div",
                           { className: Ci.TagColumnTitle },
-                          Object(L.f)("#Sale_EditTags_Applied", r.length),
+                          Object(B.f)("#Sale_EditTags_Applied", r.length),
                           Ze.createElement(pr, {
-                            tooltip: Object(L.f)("#Sale_EditTags_Applied_ttip"),
+                            tooltip: Object(B.f)("#Sale_EditTags_Applied_ttip"),
                           })
                         ),
                         Ze.createElement(
@@ -14382,9 +14382,9 @@
                             Ze.createElement(
                               "div",
                               { className: Ci.TagColumnTitle },
-                              Object(L.f)("#Sale_EditTags_Store", u.length),
+                              Object(B.f)("#Sale_EditTags_Store", u.length),
                               Ze.createElement(pr, {
-                                tooltip: Object(L.f)(
+                                tooltip: Object(B.f)(
                                   "#Sale_EditTags_Store_ttip"
                                 ),
                               })
@@ -14401,9 +14401,9 @@
                           Ze.createElement(
                             "div",
                             { className: Ci.TagColumnTitle },
-                            Object(L.f)("#Sale_EditTags_RecentTags"),
+                            Object(B.f)("#Sale_EditTags_RecentTags"),
                             Ze.createElement(pr, {
-                              tooltip: Object(L.f)(
+                              tooltip: Object(B.f)(
                                 "#Sale_EditTags_RecentTags_ttip"
                               ),
                             })
@@ -14421,9 +14421,9 @@
                         Ze.createElement(
                           "div",
                           { className: Ci.TagColumnTitle },
-                          Object(L.f)("#Sale_EditTags_Sections", _.length),
+                          Object(B.f)("#Sale_EditTags_Sections", _.length),
                           Ze.createElement(pr, {
-                            tooltip: Object(L.f)(
+                            tooltip: Object(B.f)(
                               "#Sale_EditTags_Sections_ttip"
                             ),
                           })
@@ -14441,9 +14441,9 @@
                       Ze.createElement(
                         "div",
                         { className: Ci.TagColumnTitle },
-                        Object(L.f)("#Sale_EditTags_NewTagName"),
+                        Object(B.f)("#Sale_EditTags_NewTagName"),
                         Ze.createElement(pr, {
-                          tooltip: Object(L.f)(
+                          tooltip: Object(B.f)(
                             "#Sale_EditTags_NewTagName_ttip"
                           ),
                         })
@@ -14467,16 +14467,16 @@
                       Ze.createElement(
                         Ke.q,
                         { onClick: this.OnOK },
-                        Object(L.f)("#Sale_TagFilter_OK")
+                        Object(B.f)("#Sale_TagFilter_OK")
                       )
                     )
                   )
                 )
               );
             }),
-            Object(I.c)([B.a], e.prototype, "RemoveTag", null),
-            Object(I.c)([B.a], e.prototype, "AddTag", null),
-            Object(I.c)([B.a], e.prototype, "OnOK", null),
+            Object(I.c)([L.a], e.prototype, "RemoveTag", null),
+            Object(I.c)([L.a], e.prototype, "AddTag", null),
+            Object(I.c)([L.a], e.prototype, "OnOK", null),
             (e = Object(I.c)([qe.a], e))
           );
         })(Ze.Component),
@@ -14533,7 +14533,7 @@
                   editModel: this.props.editModel,
                   filter: this.state.filter,
                   onApplyFilter: this.OnApplyFilter,
-                  title: Object(L.f)("#Sale_TagFilter_EditFilter"),
+                  title: Object(B.f)("#Sale_TagFilter_EditFilter"),
                 }),
                 window
               );
@@ -14741,9 +14741,9 @@
                         Ze.createElement(
                           "div",
                           { className: Ci.TagColumnTitle },
-                          Object(L.f)("#Sale_EditTags_BatchItemText", d.length),
+                          Object(B.f)("#Sale_EditTags_BatchItemText", d.length),
                           Ze.createElement(pr, {
-                            tooltip: Object(L.f)(
+                            tooltip: Object(B.f)(
                               "#Sale_EditTags_BatchItemText_ttip"
                             ),
                           })
@@ -14761,9 +14761,9 @@
                             className: Ci.PopulateByFilter,
                             onClick: this.OnPopulateFromFilter,
                           },
-                          Object(L.f)("#Sale_EditTags_BatchFilter"),
+                          Object(B.f)("#Sale_EditTags_BatchFilter"),
                           Ze.createElement(pr, {
-                            tooltip: Object(L.f)(
+                            tooltip: Object(B.f)(
                               "#Sale_EditTags_BatchFilter_ttip"
                             ),
                           })
@@ -14775,9 +14775,9 @@
                         Ze.createElement(
                           "div",
                           { className: Ci.TagColumnTitle },
-                          Object(L.f)("#Sale_EditTags_BatchItems", d.length),
+                          Object(B.f)("#Sale_EditTags_BatchItems", d.length),
                           Ze.createElement(pr, {
-                            tooltip: Object(L.f)(
+                            tooltip: Object(B.f)(
                               "#Sale_EditTags_BatchItems_ttip"
                             ),
                           })
@@ -14794,9 +14794,9 @@
                         Ze.createElement(
                           "div",
                           { className: Ci.TagColumnTitle },
-                          Object(L.f)("#Sale_EditTags_Applied", i.size),
+                          Object(B.f)("#Sale_EditTags_Applied", i.size),
                           Ze.createElement(pr, {
-                            tooltip: Object(L.f)("#Sale_EditTags_Applied_ttip"),
+                            tooltip: Object(B.f)("#Sale_EditTags_Applied_ttip"),
                           })
                         ),
                         Ze.createElement(
@@ -14814,9 +14814,9 @@
                           Ze.createElement(
                             "div",
                             { className: Ci.TagColumnTitle },
-                            Object(L.f)("#Sale_EditTags_RecentTags"),
+                            Object(B.f)("#Sale_EditTags_RecentTags"),
                             Ze.createElement(pr, {
-                              tooltip: Object(L.f)(
+                              tooltip: Object(B.f)(
                                 "#Sale_EditTags_RecentTags_ttip"
                               ),
                             })
@@ -14835,9 +14835,9 @@
                       Ze.createElement(
                         "div",
                         { className: Ci.TagColumnTitle },
-                        Object(L.f)("#Sale_EditTags_NewTagName"),
+                        Object(B.f)("#Sale_EditTags_NewTagName"),
                         Ze.createElement(pr, {
-                          tooltip: Object(L.f)(
+                          tooltip: Object(B.f)(
                             "#Sale_EditTags_NewTagName_ttip"
                           ),
                         })
@@ -14857,9 +14857,9 @@
                       Ze.createElement(
                         "div",
                         { className: Ci.TagColumnTitle },
-                        Object(L.f)("#Sale_EditTags_RemoveTagName"),
+                        Object(B.f)("#Sale_EditTags_RemoveTagName"),
                         Ze.createElement(pr, {
-                          tooltip: Object(L.f)(
+                          tooltip: Object(B.f)(
                             "#Sale_EditTags_RemoveTagName_ttip"
                           ),
                         })
@@ -14883,20 +14883,20 @@
                       Ze.createElement(
                         Ke.q,
                         { onClick: this.OnOK },
-                        Object(L.f)("#Sale_TagFilter_OK")
+                        Object(B.f)("#Sale_TagFilter_OK")
                       )
                     )
                   )
                 )
               );
             }),
-            Object(I.c)([B.a], e.prototype, "OnApplyFilter", null),
-            Object(I.c)([B.a], e.prototype, "OnPopulateFromFilter", null),
-            Object(I.c)([B.a], e.prototype, "RemoveTag", null),
-            Object(I.c)([B.a], e.prototype, "AddTag", null),
-            Object(I.c)([B.a], e.prototype, "OnOK", null),
-            Object(I.c)([B.a], e.prototype, "OnUpdateItemListFromText", null),
-            Object(I.c)([B.a], e.prototype, "OnTextChanged", null),
+            Object(I.c)([L.a], e.prototype, "OnApplyFilter", null),
+            Object(I.c)([L.a], e.prototype, "OnPopulateFromFilter", null),
+            Object(I.c)([L.a], e.prototype, "RemoveTag", null),
+            Object(I.c)([L.a], e.prototype, "AddTag", null),
+            Object(I.c)([L.a], e.prototype, "OnOK", null),
+            Object(I.c)([L.a], e.prototype, "OnUpdateItemListFromText", null),
+            Object(I.c)([L.a], e.prototype, "OnTextChanged", null),
             (e = Object(I.c)([qe.a], e))
           );
         })(Ze.Component);
@@ -14910,7 +14910,7 @@
           i = Ze.useState(new Array()),
           r = i[0],
           p = i[1],
-          u = { label: Object(L.f)("#Sale_TagFilter_SelectTag"), value: "" },
+          u = { label: Object(B.f)("#Sale_TagFilter_SelectTag"), value: "" },
           o = n ? { label: n, value: n } : u,
           l = {
             option: function (e) {
@@ -14998,7 +14998,7 @@
             (e.prototype.GetFilteredItems = function () {
               return this.props.ignoreEventFilter
                 ? this.props.editModel.GetEventModel().GetTaggedItems()
-                : Be(this.props.editModel);
+                : Le(this.props.editModel);
             }),
             (e.prototype.GenerateStartingUnreferencedItems = function () {
               for (
@@ -15053,7 +15053,7 @@
               var e = fe(this.GetFilteredItems()),
                 t = [
                   {
-                    label: Object(L.f)("#Sale_TagFilter_SelectTag"),
+                    label: Object(B.f)("#Sale_TagFilter_SelectTag"),
                     value: "",
                   },
                 ];
@@ -15104,11 +15104,11 @@
               var a = this,
                 t = [
                   {
-                    label: Object(L.f)("#Sale_TagFilter_MustHave"),
+                    label: Object(B.f)("#Sale_TagFilter_MustHave"),
                     data: "Must have",
                   },
                   {
-                    label: Object(L.f)("#Sale_TagFilter_MustNotHave"),
+                    label: Object(B.f)("#Sale_TagFilter_MustNotHave"),
                     data: "Must not have",
                   },
                 ],
@@ -15124,7 +15124,7 @@
                       Ze.createElement(
                         "div",
                         { className: Ci.OrLabel },
-                        Object(L.f)("#Sale_TagFilter_Or")
+                        Object(B.f)("#Sale_TagFilter_Or")
                       ),
                     Ze.createElement(
                       "div",
@@ -15174,7 +15174,7 @@
                     Ze.createElement(
                       "div",
                       { className: Ci.AndLabel },
-                      Object(L.f)("#Sale_TagFilter_And")
+                      Object(B.f)("#Sale_TagFilter_And")
                     )
                   ),
                 Ze.createElement(
@@ -15198,9 +15198,9 @@
                       },
                     },
                     "+",
-                    Object(L.f)("#Sale_TagFilter_Or"),
+                    Object(B.f)("#Sale_TagFilter_Or"),
                     Ze.createElement(pr, {
-                      tooltip: Object(L.f)("#Sale_TagFilter_Or_ttip"),
+                      tooltip: Object(B.f)("#Sale_TagFilter_Or_ttip"),
                     })
                   )
               );
@@ -15217,9 +15217,9 @@
                 Ze.createElement(
                   "div",
                   { className: Ci.SectionTitle },
-                  Object(L.f)("#Sale_TagFilter_Filter"),
+                  Object(B.f)("#Sale_TagFilter_Filter"),
                   Ze.createElement(pr, {
-                    tooltip: Object(L.f)("#Sale_TagFilter_Filter_ttip"),
+                    tooltip: Object(B.f)("#Sale_TagFilter_Filter_ttip"),
                   })
                 ),
                 Ze.createElement(
@@ -15231,9 +15231,9 @@
                       Ke.d,
                       { onClick: this.OnAddClause },
                       "+",
-                      Object(L.f)("#Sale_TagFilter_And"),
+                      Object(B.f)("#Sale_TagFilter_And"),
                       Ze.createElement(pr, {
-                        tooltip: Object(L.f)("#Sale_TagFilter_And_ttip"),
+                        tooltip: Object(B.f)("#Sale_TagFilter_And_ttip"),
                       })
                     )
                 )
@@ -15417,9 +15417,9 @@
                     label: Ze.createElement(
                       Ze.Fragment,
                       null,
-                      Object(L.f)("#Sale_TagFilter_MatchingItems", p.length),
+                      Object(B.f)("#Sale_TagFilter_MatchingItems", p.length),
                       Ze.createElement(pr, {
-                        tooltip: Object(L.f)(
+                        tooltip: Object(B.f)(
                           "#Sale_TagFilter_MatchingItems_ttip"
                         ),
                       })
@@ -15430,9 +15430,9 @@
                     label: Ze.createElement(
                       Ze.Fragment,
                       null,
-                      Object(L.f)("#Sale_TagFilter_FilteredItems", m.length),
+                      Object(B.f)("#Sale_TagFilter_FilteredItems", m.length),
                       Ze.createElement(pr, {
-                        tooltip: Object(L.f)(
+                        tooltip: Object(B.f)(
                           "#Sale_TagFilter_FilteredItems_ttip"
                         ),
                       })
@@ -15443,9 +15443,9 @@
                     label: Ze.createElement(
                       Ze.Fragment,
                       null,
-                      Object(L.f)("#Sale_TagFilter_UnusedItems", g.length),
+                      Object(B.f)("#Sale_TagFilter_UnusedItems", g.length),
                       Ze.createElement(pr, {
-                        tooltip: Object(L.f)(
+                        tooltip: Object(B.f)(
                           "#Sale_TagFilter_UnusedItems_ttip"
                         ),
                       })
@@ -15455,7 +15455,7 @@
                 ],
                 S = v.map(function (e) {
                   var t = e.item;
-                  return Ze.createElement(Li, {
+                  return Ze.createElement(Bi, {
                     key: t.capsule.type + t.capsule.id,
                     editModel: a,
                     item: t,
@@ -15506,13 +15506,13 @@
                           ),
                           onClick: this.OnToggleTagBreakdown,
                         },
-                        Object(L.f)(
+                        Object(B.f)(
                           this.state.showTagBreakdown
                             ? "#Sale_TagFilter_HideTagBreakdown"
                             : "#Sale_TagFilter_ShowTagBreakdown"
                         ),
                         Ze.createElement(pr, {
-                          tooltip: Object(L.f)(
+                          tooltip: Object(B.f)(
                             "#Sale_TagFilter_TagBreakdown_ttip"
                           ),
                         })
@@ -15530,10 +15530,10 @@
                     ),
                     Ze.createElement(Ke.l, {
                       type: "text",
-                      label: Object(L.f)("#Sale_TaggedItemsFilter"),
+                      label: Object(B.f)("#Sale_TaggedItemsFilter"),
                       onChange: this.UpdateSearchText,
                       focusOnMount: !0,
-                      tooltip: Object(L.f)("#Sale_TaggedItemsFilter_ttip"),
+                      tooltip: Object(B.f)("#Sale_TaggedItemsFilter_ttip"),
                     }),
                     Ze.createElement(
                       "div",
@@ -15541,25 +15541,25 @@
                       Ze.createElement(
                         Ke.q,
                         { onClick: this.OnOK },
-                        Object(L.f)("#Sale_TagFilter_OK")
+                        Object(B.f)("#Sale_TagFilter_OK")
                       )
                     )
                   )
                 )
               );
             }),
-            Object(I.c)([B.a], e.prototype, "OnChangeClauseType", null),
-            Object(I.c)([B.a], e.prototype, "OnChangeClauseTag", null),
-            Object(I.c)([B.a], e.prototype, "OnAddClause", null),
-            Object(I.c)([B.a], e.prototype, "OnRemoveClause", null),
-            Object(I.c)([B.a], e.prototype, "OnAddClauseTagSlot", null),
-            Object(I.c)([B.a], e.prototype, "OnRemoveClauseTagSlot", null),
-            Object(I.c)([B.a], e.prototype, "OnHighlightTag", null),
-            Object(I.c)([B.a], e.prototype, "OnToggleTagBreakdown", null),
-            Object(I.c)([B.a], e.prototype, "OnSetViewMode", null),
-            Object(I.c)([B.a], e.prototype, "OnTagsModified", null),
-            Object(I.c)([B.a], e.prototype, "UpdateSearchText", null),
-            Object(I.c)([B.a], e.prototype, "OnOK", null),
+            Object(I.c)([L.a], e.prototype, "OnChangeClauseType", null),
+            Object(I.c)([L.a], e.prototype, "OnChangeClauseTag", null),
+            Object(I.c)([L.a], e.prototype, "OnAddClause", null),
+            Object(I.c)([L.a], e.prototype, "OnRemoveClause", null),
+            Object(I.c)([L.a], e.prototype, "OnAddClauseTagSlot", null),
+            Object(I.c)([L.a], e.prototype, "OnRemoveClauseTagSlot", null),
+            Object(I.c)([L.a], e.prototype, "OnHighlightTag", null),
+            Object(I.c)([L.a], e.prototype, "OnToggleTagBreakdown", null),
+            Object(I.c)([L.a], e.prototype, "OnSetViewMode", null),
+            Object(I.c)([L.a], e.prototype, "OnTagsModified", null),
+            Object(I.c)([L.a], e.prototype, "UpdateSearchText", null),
+            Object(I.c)([L.a], e.prototype, "OnOK", null),
             e
           );
         })(Ze.Component),
@@ -15761,7 +15761,7 @@
                 Ze.createElement(
                   Ke.k,
                   null,
-                  Object(L.f)("#Sale_EditRaw_Title")
+                  Object(B.f)("#Sale_EditRaw_Title")
                 ),
                 Ze.createElement(
                   Ke.b,
@@ -15769,32 +15769,32 @@
                   Ze.createElement(
                     "div",
                     null,
-                    Object(L.f)("#Sale_EditRaw_Desc_1")
+                    Object(B.f)("#Sale_EditRaw_Desc_1")
                   ),
                   Ze.createElement(
                     "div",
                     null,
-                    Object(L.f)("#Sale_EditRaw_Desc_2")
+                    Object(B.f)("#Sale_EditRaw_Desc_2")
                   ),
                   Ze.createElement(
                     "div",
                     { className: gt.EditRawExample },
-                    Object(L.f)("#Sale_EditRaw_Example_Title")
+                    Object(B.f)("#Sale_EditRaw_Example_Title")
                   ),
                   Ze.createElement(
                     "div",
                     { className: gt.EditRawExample },
-                    Object(L.f)("#Sale_EditTagItems_Example_1")
+                    Object(B.f)("#Sale_EditTagItems_Example_1")
                   ),
                   Ze.createElement(
                     "div",
                     { className: gt.EditRawExample },
-                    Object(L.f)("#Sale_EditTagItems_Example_2")
+                    Object(B.f)("#Sale_EditTagItems_Example_2")
                   ),
                   Ze.createElement(
                     "div",
                     { className: gt.EditRawExample },
-                    Object(L.f)("#Sale_EditTagItems_Example_3")
+                    Object(B.f)("#Sale_EditTagItems_Example_3")
                   ),
                   Boolean(this.state.errMsg) &&
                     Ze.createElement(
@@ -15826,20 +15826,20 @@
                     Ze.createElement(
                       Ke.q,
                       { onClick: this.OnCompleteEdit, disabled: !1 },
-                      Object(L.f)("#Button_Confirm"),
+                      Object(B.f)("#Button_Confirm"),
                       " "
                     ),
                     Ze.createElement(
                       Ke.d,
                       { onClick: e, disabled: !1 },
-                      Object(L.f)("#Button_Cancel")
+                      Object(B.f)("#Button_Cancel")
                     )
                   )
               );
             }),
-            Object(I.c)([B.a], e.prototype, "OnCompleteEdit", null),
-            Object(I.c)([B.a], e.prototype, "DoImport", null),
-            Object(I.c)([B.a], e.prototype, "OnTextChange", null),
+            Object(I.c)([L.a], e.prototype, "OnCompleteEdit", null),
+            Object(I.c)([L.a], e.prototype, "DoImport", null),
+            Object(I.c)([L.a], e.prototype, "OnTextChange", null),
             (e = Object(I.c)([qe.a], e))
           );
         })(Ze.Component),
@@ -15868,7 +15868,7 @@
                       return ((t = this.props.editModel),
                       (n = t.GetEventModel().jsondata.sale_opt_in_page_name))
                         ? (this.setState({
-                            statusMsg: Object(L.f)(
+                            statusMsg: Object(B.f)(
                               "#Sale_ImportOptIn_Progress_LoadOptIn"
                             ),
                           }),
@@ -15992,7 +15992,7 @@
                 {
                   bImporting: !0,
                   errMsg: void 0,
-                  statusMsg: Object(L.f)(
+                  statusMsg: Object(B.f)(
                     "#Sale_ImportOptIn_Progress_LoadOptIn"
                   ),
                 },
@@ -16025,7 +16025,7 @@
                 Ze.createElement(
                   Ke.k,
                   null,
-                  Object(L.f)("#Sale_SyncTaggedItems_Title")
+                  Object(B.f)("#Sale_SyncTaggedItems_Title")
                 ),
                 Ze.createElement(
                   Ke.b,
@@ -16053,8 +16053,8 @@
                       null,
                       i &&
                         Ze.createElement(Ke.e, {
-                          label: Object(L.f)("#Sale_SyncTag_OptInItems"),
-                          tooltip: Object(L.f)("#Sale_SyncTag_OptInItems_ttip"),
+                          label: Object(B.f)("#Sale_SyncTag_OptInItems"),
+                          tooltip: Object(B.f)("#Sale_SyncTag_OptInItems_ttip"),
                           checked: this.state.sync_opt_in_items,
                           onChange: function (e) {
                             return t.setState({ sync_opt_in_items: e });
@@ -16062,24 +16062,24 @@
                         }),
                       i &&
                         Ze.createElement(Ke.e, {
-                          label: Object(L.f)("#Sale_SyncTag_OptInTags"),
-                          tooltip: Object(L.f)("#Sale_SyncTag_OptInTags_ttip"),
+                          label: Object(B.f)("#Sale_SyncTag_OptInTags"),
+                          tooltip: Object(B.f)("#Sale_SyncTag_OptInTags_ttip"),
                           checked: this.state.sync_opt_in_tags,
                           onChange: function (e) {
                             return t.setState({ sync_opt_in_tags: e });
                           },
                         }),
                       Ze.createElement(Ke.e, {
-                        label: Object(L.f)("#Sale_SyncTag_StoreTags"),
-                        tooltip: Object(L.f)("#Sale_SyncTag_StoreTags_ttip"),
+                        label: Object(B.f)("#Sale_SyncTag_StoreTags"),
+                        tooltip: Object(B.f)("#Sale_SyncTag_StoreTags_ttip"),
                         checked: this.state.sync_store_tags,
                         onChange: function (e) {
                           return t.setState({ sync_store_tags: e });
                         },
                       }),
                       Ze.createElement(Ke.e, {
-                        label: Object(L.f)("#Sale_SyncTag_Features"),
-                        tooltip: Object(L.f)("#Sale_SyncTag_Features"),
+                        label: Object(B.f)("#Sale_SyncTag_Features"),
+                        tooltip: Object(B.f)("#Sale_SyncTag_Features"),
                         checked: this.state.sync_feature_tags,
                         onChange: function (e) {
                           return t.setState({ sync_feature_tags: e });
@@ -16097,18 +16097,18 @@
                         onClick: this.OnPerformSync,
                         disabled: !this.CanPerformSync(),
                       },
-                      Object(L.f)("#Button_Confirm")
+                      Object(B.f)("#Button_Confirm")
                     ),
                     Ze.createElement(
                       Ke.d,
                       { onClick: n, disabled: !1 },
-                      Object(L.f)("#Button_Cancel")
+                      Object(B.f)("#Button_Cancel")
                     )
                   )
               );
             }),
-            Object(I.c)([B.a], e.prototype, "ImportOptInPage", null),
-            Object(I.c)([B.a], e.prototype, "OnPerformSync", null),
+            Object(I.c)([L.a], e.prototype, "ImportOptInPage", null),
+            Object(I.c)([L.a], e.prototype, "OnPerformSync", null),
             (e = Object(I.c)([qe.a], e))
           );
         })(Ze.Component);
@@ -16214,7 +16214,7 @@
             Ze.createElement(
               Ke.k,
               null,
-              Object(L.f)("#Sale_EditAutoTags_Title")
+              Object(B.f)("#Sale_EditAutoTags_Title")
             ),
             Ze.createElement(
               Ke.b,
@@ -16238,7 +16238,7 @@
                           l(!1);
                       },
                     },
-                    Object(L.f)("#Sale_EditTags_NewTagButton")
+                    Object(B.f)("#Sale_EditTags_NewTagButton")
                   )
                 )
               )
@@ -16268,7 +16268,7 @@
                   },
                   disabled: !o,
                 },
-                Object(L.f)("#Button_OK")
+                Object(B.f)("#Button_OK")
               )
             )
           );
@@ -16296,8 +16296,8 @@
                     (t.autoTag.tag_name = e.target.value.trim()),
                     t.fnOnEdited();
                 },
-                placeholder: Object(L.f)("#Sale_EditAutoTags_Placeholder"),
-                tooltip: Object(L.f)("#Sale_EditAutoTags_Tooltip"),
+                placeholder: Object(B.f)("#Sale_EditAutoTags_Placeholder"),
+                tooltip: Object(B.f)("#Sale_EditAutoTags_Tooltip"),
                 value: a,
               }),
               Ze.createElement(Ii, {
@@ -16318,14 +16318,14 @@
                       Ze.createElement(Ui, {
                         editModel: t.editModel,
                         filter: o,
-                        title: Object(L.f)("#Sale_TagFilter_EditFilter"),
+                        title: Object(B.f)("#Sale_TagFilter_EditFilter"),
                         onApplyFilter: e,
                       }),
                       window
                     );
                   },
                 },
-                Object(L.f)("#Sale_TagFilter_EditFilter")
+                Object(B.f)("#Sale_TagFilter_EditFilter")
               )
             )
           );
@@ -16343,7 +16343,7 @@
           "k_ModRemoveAdultOnlyContent");
       function Ki(e) {
         var t = e.modAction,
-          n = Object(L.k)(t.m_rtWhen) + " @ " + Object(L.m)(t.m_rtWhen),
+          n = Object(B.k)(t.m_rtWhen) + " @ " + Object(B.m)(t.m_rtWhen),
           a = Ze.createElement(ar, {
             locToken: "#EventModTile_Moderator",
             accountID: t.m_moderator,
@@ -16353,7 +16353,7 @@
             return Ze.createElement(
               "div",
               { className: nr.ModeratorAuditActionCtn },
-              Object(L.n)(
+              Object(B.n)(
                 "#EventModTile_Action_Reviewed",
                 Ze.createElement("span", null, n),
                 a
@@ -16363,7 +16363,7 @@
             return Ze.createElement(
               "div",
               { className: nr.ModeratorAuditActionCtn },
-              Object(L.n)(
+              Object(B.n)(
                 "#EventModTile_Action_UnReviewed",
                 Ze.createElement("span", null, n),
                 a
@@ -16373,7 +16373,7 @@
             return Ze.createElement(
               "div",
               { className: nr.ModeratorAuditActionCtn },
-              Object(L.n)(
+              Object(B.n)(
                 "#EventModTile_Action_NewEventType",
                 Ze.createElement("span", null, n),
                 a,
@@ -16384,7 +16384,7 @@
             return Ze.createElement(
               "div",
               { className: nr.ModeratorAuditActionCtn },
-              Object(L.n)(
+              Object(B.n)(
                 "#EventModTile_Action_SeasonTagUpdate",
                 Ze.createElement("span", null, n),
                 a,
@@ -16395,7 +16395,7 @@
             return Ze.createElement(
               "div",
               { className: nr.ModeratorAuditActionCtn },
-              Object(L.n)(
+              Object(B.n)(
                 "#EventModTile_Action_ReReviewed",
                 Ze.createElement("span", null, n),
                 a
@@ -16405,7 +16405,7 @@
             return Ze.createElement(
               "div",
               { className: nr.ModeratorAuditActionCtn },
-              Object(L.n)(
+              Object(B.n)(
                 "#EventModTile_Action_RemoveFromSC",
                 Ze.createElement("span", null, n),
                 a
@@ -16415,7 +16415,7 @@
             return Ze.createElement(
               "div",
               { className: nr.ModeratorAuditActionCtn },
-              Object(L.n)(
+              Object(B.n)(
                 "#EventModTile_Action_FlagAdultContent",
                 Ze.createElement("span", null, n),
                 a
@@ -16425,7 +16425,7 @@
             return Ze.createElement(
               "div",
               { className: nr.ModeratorAuditActionCtn },
-              Object(L.n)(
+              Object(B.n)(
                 "#EventModTile_Action_RemoveAdultContent",
                 Ze.createElement("span", null, n),
                 a
@@ -16462,7 +16462,7 @@
               Ze.createElement(
                 "h4",
                 null,
-                Object(L.f)("#EventModTile_Action_Title")
+                Object(B.f)("#EventModTile_Action_Title")
               ),
               ((t = o),
               (n = e.eventModel),
@@ -16482,7 +16482,7 @@
                     },
                     className: nr.ExpandModActions,
                   },
-                  Object(L.f)("#EventModTile_Action_More", l - 3)
+                  Object(B.f)("#EventModTile_Action_More", l - 3)
                 ),
               Boolean(!s && 3 < l) &&
                 Ze.createElement(
@@ -16493,7 +16493,7 @@
                     },
                     className: nr.ExpandModActions,
                   },
-                  Object(L.f)("#EventModTile_Action_Hide")
+                  Object(B.f)("#EventModTile_Action_Hide")
                 )
             ));
       }
@@ -16644,7 +16644,7 @@
           return Ze.createElement(
             "div",
             null,
-            Object(L.n)(
+            Object(B.n)(
               n,
               Ze.createElement(
                 "a",
@@ -16678,7 +16678,7 @@
                       );
                     },
                   },
-                  Object(L.f)("#EventEditor_Versions_View")
+                  Object(B.f)("#EventEditor_Versions_View")
                 )
               )
             : null;
@@ -16687,8 +16687,8 @@
           function a(n) {
             Object(et.d)(
               Ze.createElement($e.c, {
-                strTitle: Object(L.f)("#EventEditor_VersionsPrompt_Title"),
-                strDescription: Object(L.f)("#EventEditor_VersionsPrompt_Body"),
+                strTitle: Object(B.f)("#EventEditor_VersionsPrompt_Title"),
+                strDescription: Object(B.f)("#EventEditor_VersionsPrompt_Body"),
                 onOK: function () {
                   return (
                     (e = s),
@@ -16800,7 +16800,7 @@
                             return a(e);
                           },
                         },
-                        Object(L.f)("#EventEditor_RollbackToVersion")
+                        Object(B.f)("#EventEditor_RollbackToVersion")
                       )
                     );
                   });
@@ -16816,7 +16816,7 @@
                 Ze.createElement(
                   Ke.k,
                   null,
-                  Object(L.f)("#EventEditor_VersionsDialog_Title")
+                  Object(B.f)("#EventEditor_VersionsDialog_Title")
                 ),
                 Ze.createElement(
                   Ke.b,
@@ -16824,7 +16824,7 @@
                   Ze.createElement(
                     Ke.c,
                     null,
-                    Object(L.f)("#EventEditor_VersionsDialog_Body")
+                    Object(B.f)("#EventEditor_VersionsDialog_Body")
                   ),
                   p &&
                     Ze.createElement(
@@ -16835,7 +16835,7 @@
                         Ze.createElement(
                           "div",
                           { className: rr.a.VersionListEmpty },
-                          Object(L.f)("#EventEditor_Versions_NoVersions")
+                          Object(B.f)("#EventEditor_Versions_NoVersions")
                         )
                     ),
                   !p && Ze.createElement(dt.a, null)
@@ -16846,7 +16846,7 @@
                   Ze.createElement(
                     Ke.q,
                     { onClick: c },
-                    Object(L.f)("#Button_Close")
+                    Object(B.f)("#Button_Close")
                   )
                 )
               )
@@ -16894,7 +16894,7 @@
                     Ze.createElement(
                       Ke.k,
                       null,
-                      Object(L.f)("#EventEditor_VersionsDialog_RollingBack")
+                      Object(B.f)("#EventEditor_VersionsDialog_RollingBack")
                     ),
                     Ze.createElement(Ke.b, null, Ze.createElement(dt.a, null))
                   )
@@ -16904,7 +16904,7 @@
                     Ze.createElement(
                       Ke.k,
                       null,
-                      Object(L.f)(
+                      Object(B.f)(
                         "#EventEditor_VersionsDialog_RollingBackFailed"
                       )
                     ),
@@ -16914,7 +16914,7 @@
                       Ze.createElement(
                         Ke.q,
                         { onClick: t },
-                        Object(L.f)("#Button_Close")
+                        Object(B.f)("#Button_Close")
                       )
                     )
                   );
@@ -17008,7 +17008,7 @@
                     case 0:
                       return [
                         4,
-                        Bn.a.LoadCreatorHome(
+                        Ln.a.LoadCreatorHome(
                           this.props.editModel.GetClanSteamID(),
                           this.m_cancelSignal
                         ),
@@ -17523,7 +17523,7 @@
                   Ze.createElement(
                     "span",
                     { className: vt.EventEditorTextTitle },
-                    Object(L.f)("#Sale_title")
+                    Object(B.f)("#Sale_title")
                   ),
                   Ze.createElement(
                     Ht.b,
@@ -17536,7 +17536,7 @@
                     Ze.createElement(
                       "span",
                       null,
-                      Object(L.f)("#Broadcast_documentation")
+                      Object(B.f)("#Broadcast_documentation")
                     )
                   )
                 ),
@@ -17545,7 +17545,7 @@
                   { className: vt.InputBorder },
                   Ze.createElement(Ke.p, {
                     onChange: this.OnSaleOptionChange,
-                    label: Object(L.f)("#Sale_option"),
+                    label: Object(B.f)("#Sale_option"),
                     checked: this.props.editModel
                       .GetEventModel()
                       .BHasSaleEnabled(),
@@ -17554,7 +17554,7 @@
                     Ze.createElement(
                       "div",
                       { className: Gt.WarningStyles },
-                      Object(L.f)("#Sale_Enable_Warning")
+                      Object(B.f)("#Sale_Enable_Warning")
                     )
                 ),
                 this.props.editModel.GetEventModel().BHasSaleEnabled() &&
@@ -17570,7 +17570,7 @@
                         Ze.createElement(
                           Kn.a,
                           {
-                            toolTipContent: Object(L.f)("#Sale_Debug_Tooltip"),
+                            toolTipContent: Object(B.f)("#Sale_Debug_Tooltip"),
                           },
                           Ze.createElement(
                             Ke.d,
@@ -17582,7 +17582,7 @@
                                 );
                               },
                             },
-                            Object(L.f)("#Sale_Debug_Title")
+                            Object(B.f)("#Sale_Debug_Title")
                           )
                         )
                       ),
@@ -17592,14 +17592,14 @@
                         Ze.createElement(
                           Kn.a,
                           {
-                            toolTipContent: Object(L.f)(
+                            toolTipContent: Object(B.f)(
                               "#Sale_ReorderSections_ttip"
                             ),
                           },
                           Ze.createElement(
                             Ke.d,
                             { onClick: this.ReorderSaleSections },
-                            Object(L.f)("#Sale_ReorderSections")
+                            Object(B.f)("#Sale_ReorderSections")
                           )
                         )
                       ),
@@ -17609,14 +17609,14 @@
                         Ze.createElement(
                           Kn.a,
                           {
-                            toolTipContent: Object(L.f)(
+                            toolTipContent: Object(B.f)(
                               "#Sale_Section_MinimizeAll_Tooltip"
                             ),
                           },
                           Ze.createElement(
                             Ke.d,
                             { onClick: this.MinimizeAllSaleSections },
-                            Object(L.f)("#Sale_Section_MinimizeAll")
+                            Object(B.f)("#Sale_Section_MinimizeAll")
                           )
                         )
                       )
@@ -17633,7 +17633,7 @@
                         Ze.createElement(
                           "div",
                           { className: ti.LanguageControlsCtn },
-                          Object(L.f)("#EventEditor_LangaugeDesc"),
+                          Object(B.f)("#EventEditor_LangaugeDesc"),
                           Ze.createElement(
                             "div",
                             {
@@ -17663,7 +17663,7 @@
                               );
                             },
                           },
-                          Object(L.f)("#Sale_PageConfigOptions"),
+                          Object(B.f)("#Sale_PageConfigOptions"),
                           Ze.createElement(Qr, {
                             bIsMinimized: this.GetMinimized(
                               "SalePageEdit_Config"
@@ -17684,8 +17684,8 @@
                               { className: Pn.LeftCol },
                               Ze.createElement(Ke.l, {
                                 type: "text",
-                                label: Object(L.f)("#Sale_VanityID"),
-                                tooltip: Object(L.f)("#Sale_VanityID_ttip"),
+                                label: Object(B.f)("#Sale_VanityID"),
+                                tooltip: Object(B.f)("#Sale_VanityID_ttip"),
                                 onChange: this.OnVanityIDChange,
                                 value: r,
                               }),
@@ -17696,7 +17696,7 @@
                                   Ze.createElement(
                                     "span",
                                     { className: "DialogLabel" },
-                                    Object(L.f)("#Sale_VanityID_Link")
+                                    Object(B.f)("#Sale_VanityID_Link")
                                   ),
                                   Ze.createElement("br", null),
                                   Ze.createElement(
@@ -17725,7 +17725,7 @@
                                   Ze.createElement(
                                     "span",
                                     { className: "DialogLabel" },
-                                    Object(L.f)("#Sale_VanityID_Link")
+                                    Object(B.f)("#Sale_VanityID_Link")
                                   ),
                                   Ze.createElement("br", null),
                                   Ze.createElement(
@@ -17738,14 +17738,14 @@
                                   )
                                 ),
                               Ze.createElement(
-                                Ln,
+                                Bn,
                                 {
                                   requireAdmin: !0,
                                   clanSteamID: n.GetClanSteamID(),
                                 },
                                 Ze.createElement(Ke.e, {
-                                  label: Object(L.f)("#Sale_ValveTopSalePath"),
-                                  tooltip: Object(L.f)(
+                                  label: Object(B.f)("#Sale_ValveTopSalePath"),
+                                  tooltip: Object(B.f)(
                                     "#Sale_ValveTopSalePath_ttip"
                                   ),
                                   onChange: this
@@ -17754,8 +17754,8 @@
                                 })
                               ),
                               Ze.createElement(Ke.h, {
-                                label: Object(L.f)("#Sale_SaleFont"),
-                                tooltip: Object(L.f)("#Sale_SaleFont_ttip"),
+                                label: Object(B.f)("#Sale_SaleFont"),
+                                tooltip: Object(B.f)("#Sale_SaleFont_ttip"),
                                 strDropDownClassName: vt.DropDownScroll,
                                 rgOptions: g,
                                 selectedOption: E,
@@ -17766,20 +17766,20 @@
                               }),
                               Ze.createElement(Ke.l, {
                                 type: "text",
-                                label: Object(L.f)(
+                                label: Object(B.f)(
                                   "#Sale_SectionTitleFontSize"
                                 ),
-                                tooltip: Object(L.f)(
+                                tooltip: Object(B.f)(
                                   "#Sale_SectionTitleFontSize_ttip"
                                 ),
                                 onChange: this.OnSectionTitleFontSizeChange,
                                 value: m,
                               }),
                               Ze.createElement(Ke.e, {
-                                label: Object(L.f)(
+                                label: Object(B.f)(
                                   "#Sale_DontCapitalizeSectionTitles"
                                 ),
-                                tooltip: Object(L.f)(
+                                tooltip: Object(B.f)(
                                   "#Sale_DontCapitalizeSectionTitles_ttip"
                                 ),
                                 onChange: this.OnCapitalizeSectionChange,
@@ -17790,26 +17790,26 @@
                               "div",
                               { className: Pn.RightCol },
                               Ze.createElement(
-                                Ln,
+                                Bn,
                                 {
                                   clanSteamID: n.GetClanSteamID(),
                                   className: vt.EditPreviewButton,
                                 },
                                 Ze.createElement(Ke.l, {
                                   type: "text",
-                                  label: Object(L.f)("#Sale_ImportSale"),
-                                  tooltip: Object(L.f)("#Sale_ImportSale_ttip"),
+                                  label: Object(B.f)("#Sale_ImportSale"),
+                                  tooltip: Object(B.f)("#Sale_ImportSale_ttip"),
                                   value: this.state.saleImportUrl,
                                   onChange: this.OnImportSaleChange,
                                 }),
                                 Ze.createElement(
                                   Ke.q,
                                   { onClick: this.OnImportSaleSubmit },
-                                  Object(L.f)("#Sale_ImportButton")
+                                  Object(B.f)("#Sale_ImportButton")
                                 )
                               ),
                               Ze.createElement(
-                                Ln,
+                                Bn,
                                 {
                                   requireAdmin: !0,
                                   clanSteamID: n.GetClanSteamID(),
@@ -17818,11 +17818,11 @@
                                 Ze.createElement(
                                   "div",
                                   { className: vt.EventEditorTextTitle },
-                                  Object(L.f)(
+                                  Object(B.f)(
                                     "#Sale_CreateUpdateDiscountEventTitle"
                                   ),
                                   Ze.createElement(pr, {
-                                    tooltip: Object(L.f)(
+                                    tooltip: Object(B.f)(
                                       "#Sale_CreateUpdateDiscountEventTitle_ttip"
                                     ),
                                   })
@@ -17832,24 +17832,24 @@
                                   { onClick: this.OnCreateUpdateDiscountEvent },
                                   this.props.editModel.GetEventModel().jsondata
                                     .sale_discount_event_id
-                                    ? Object(L.f)(
+                                    ? Object(B.f)(
                                         "#Sale_UpdateDiscountEvent",
                                         this.props.editModel.GetEventModel()
                                           .jsondata.sale_discount_event_id
                                       )
-                                    : Object(L.f)("#Sale_CreateDiscountEvent")
+                                    : Object(B.f)("#Sale_CreateDiscountEvent")
                                 )
                               ),
                               Ze.createElement(
-                                Ln,
+                                Bn,
                                 {
                                   clanSteamID: n.GetClanSteamID(),
                                   className: vt.EditPreviewButton,
                                 },
                                 Ze.createElement(Ke.l, {
                                   type: "text",
-                                  label: Object(L.f)("#Sale_OptInPageName"),
-                                  tooltip: Object(L.f)(
+                                  label: Object(B.f)("#Sale_OptInPageName"),
+                                  tooltip: Object(B.f)(
                                     "#Sale_OptInPageName_ttip"
                                   ),
                                   value: u,
@@ -17867,14 +17867,14 @@
                                   { className: vt.InputBorder },
                                   Ze.createElement(Ke.p, {
                                     onChange: this.OnShowCreatorChange,
-                                    label: Object(L.f)("#Sale_ShowCreatorHome"),
+                                    label: Object(B.f)("#Sale_ShowCreatorHome"),
                                     checked: n.GetEventModel().jsondata
                                       .sale_show_creator,
                                   })
                                 )
                               ),
                               Ze.createElement(
-                                Ln,
+                                Bn,
                                 { clanSteamID: n.GetClanSteamID() },
                                 Ze.createElement(
                                   Kn.a,
@@ -17889,7 +17889,7 @@
                                     Ze.createElement(Ke.p, {
                                       onChange: this
                                         .OnOwnershipRestrictionChange,
-                                      label: Object(L.f)(
+                                      label: Object(B.f)(
                                         "#Sale_OwnershipRestrictions"
                                       ),
                                       checked: n
@@ -17904,8 +17904,8 @@
                                     null,
                                     Ze.createElement(Ke.l, {
                                       type: "text",
-                                      label: Object(L.f)("#Sale_RequiredApps"),
-                                      tooltip: Object(L.f)(
+                                      label: Object(B.f)("#Sale_RequiredApps"),
+                                      tooltip: Object(B.f)(
                                         "#Sale_RequiredApps_ttip"
                                       ),
                                       onChange: this.OnRequiredAppIdChange,
@@ -17913,10 +17913,10 @@
                                     }),
                                     Ze.createElement(Ke.l, {
                                       type: "text",
-                                      label: Object(L.f)(
+                                      label: Object(B.f)(
                                         "#Sale_OwnershipLockRedirect"
                                       ),
-                                      tooltip: Object(L.f)(
+                                      tooltip: Object(B.f)(
                                         "#Sale_OwnershipLockRedirect_ttip"
                                       ),
                                       onChange: this.OnNonOwnerRedirectChange,
@@ -17937,7 +17937,7 @@
                                     { className: vt.InputBorder },
                                     Ze.createElement(Ke.p, {
                                       onChange: this.OnPartnerAppRightsChange,
-                                      label: Object(L.f)(
+                                      label: Object(B.f)(
                                         "#Sale_PartnerAppEditRestrictions"
                                       ),
                                       checked: n
@@ -17971,12 +17971,12 @@
                                 );
                               },
                             },
-                            Object(L.f)(
+                            Object(B.f)(
                               "#Sale_TaggedItemsSection",
                               n.GetEventModel().GetTaggedItems().length
                             ),
                             Ze.createElement(pr, {
-                              tooltip: Object(L.f)(
+                              tooltip: Object(B.f)(
                                 "#Sale_TagFilter_SectionTooltip"
                               ),
                             }),
@@ -18013,7 +18013,7 @@
                               );
                             },
                           },
-                          Object(L.f)(
+                          Object(B.f)(
                             "#Sale_SortingTiersSection",
                             (null ===
                               (t = n.GetEventModel().jsondata.sorting_tiers) ||
@@ -18022,7 +18022,7 @@
                               : t.length) || 0
                           ),
                           Ze.createElement(pr, {
-                            tooltip: Object(L.f)(
+                            tooltip: Object(B.f)(
                               "#Sale_SortingTiers_SectionTooltip"
                             ),
                           }),
@@ -18050,7 +18050,7 @@
                           Pn.CustomSectionsTitle
                         ),
                       },
-                      Object(L.f)("#Sale_Artwork_Sections")
+                      Object(B.f)("#Sale_Artwork_Sections")
                     ),
                     Ze.createElement(Tt, {
                       clanSteamID: this.props.editModel.GetClanSteamID(),
@@ -18065,7 +18065,7 @@
                       Ze.createElement(nn, {
                         id: "SalePageEdit_SaleBgImg",
                         clanSteamID: this.props.editModel.GetClanSteamID(),
-                        title: Object(L.f)(
+                        title: Object(B.f)(
                           "#EventEditor_ArtworkType_sale_header"
                         ),
                         artworkType: "sale_header",
@@ -18080,7 +18080,7 @@
                       Ze.createElement(nn, {
                         id: "SalePageEdit_SaleBanner",
                         clanSteamID: this.props.editModel.GetClanSteamID(),
-                        title: Object(L.f)(
+                        title: Object(B.f)(
                           "#EventEditor_ArtworkType_sale_product_banner"
                         ),
                         artworkType: "product_banner",
@@ -18092,7 +18092,7 @@
                           n.BHasSomeImage("product_banner") &&
                             n.GetEventModel().BHasTag("hide_store")
                         )
-                          ? Object(L.f)("#Sale_BannerVisibility_Warning")
+                          ? Object(B.f)("#Sale_BannerVisibility_Warning")
                           : void 0,
                       })
                     ),
@@ -18101,7 +18101,7 @@
                       Ze.createElement(nn, {
                         id: "SalePageEdit_SaleMobileBanner",
                         clanSteamID: this.props.editModel.GetClanSteamID(),
-                        title: Object(L.f)(
+                        title: Object(B.f)(
                           "#EventEditor_ArtworkType_sale_product_mobile_banner"
                         ),
                         artworkType: "product_mobile_banner",
@@ -18117,7 +18117,7 @@
                           n.BHasSomeImage("product_mobile_banner") &&
                             n.GetEventModel().BHasTag("hide_store")
                         )
-                          ? Object(L.f)("#Sale_BannerVisibility_Warning")
+                          ? Object(B.f)("#Sale_BannerVisibility_Warning")
                           : void 0,
                       })
                     ),
@@ -18129,7 +18129,7 @@
                           Pn.CustomSectionsTitle
                         ),
                       },
-                      Object(L.f)("#Sale_Sections_Title")
+                      Object(B.f)("#Sale_Sections_Title")
                     ),
                     0 ==
                       this.props.editModel.GetEventModel().GetSaleSections()
@@ -18162,12 +18162,12 @@
                       Ze.createElement(
                         "div",
                         { className: vt.SaleSectionHeader },
-                        Object(L.f)("#Sale_AddNewSection_Title")
+                        Object(B.f)("#Sale_AddNewSection_Title")
                       ),
                       Ze.createElement(
                         "p",
                         null,
-                        Object(L.f)("#Sale_AddNewSection_Desc")
+                        Object(B.f)("#Sale_AddNewSection_Desc")
                       ),
                       Ze.createElement(
                         Ke.q,
@@ -18177,7 +18177,7 @@
                           },
                           className: vt.AddSectionButton,
                         },
-                        Object(L.f)("#Sale_AddNewSection")
+                        Object(B.f)("#Sale_AddNewSection")
                       )
                     ),
                     Ze.createElement(
@@ -18186,11 +18186,11 @@
                       Ze.createElement(
                         "div",
                         { className: Pn.Title },
-                        Object(L.f)("#Sale_BrowseMore")
+                        Object(B.f)("#Sale_BrowseMore")
                       ),
                       Ze.createElement(Ke.p, {
                         onChange: this.OnBrowseMoreButtonChange,
-                        label: Object(L.f)("#Sale_BrowseMore_Desc"),
+                        label: Object(B.f)("#Sale_BrowseMore_Desc"),
                         checked: this.props.editModel.GetEventModel().jsondata
                           .sale_browse_more_button,
                       }),
@@ -18201,9 +18201,9 @@
                           null,
                           Ze.createElement(Ke.l, {
                             type: "text",
-                            label: Object(L.f)("#Sale_BrowseMore_URL"),
+                            label: Object(B.f)("#Sale_BrowseMore_URL"),
                             name: "sale_browsemore_url",
-                            placeholder: Object(L.f)("#Sale_BrowseMore_URL"),
+                            placeholder: Object(B.f)("#Sale_BrowseMore_URL"),
                             value: o,
                             onChange: this.OnSaleChange,
                           }),
@@ -18214,7 +18214,7 @@
                               className: vt.EventEditorTextTitle,
                               style: { color: l, backgroundColor: s },
                             },
-                            Object(L.f)("#Sale_Section_Label_Color")
+                            Object(B.f)("#Sale_Section_Label_Color")
                           ),
                           Ze.createElement(
                             Ke.d,
@@ -18223,10 +18223,10 @@
                               className: vt.EventEditorTextTitle,
                               style: { color: l, backgroundColor: s },
                             },
-                            Object(L.f)("#Sale_Section_Background_Color")
+                            Object(B.f)("#Sale_Section_Background_Color")
                           ),
                           Ze.createElement(Oa.b, {
-                            text: Object(L.f)("#Sale_SeeAllSpecials"),
+                            text: Object(B.f)("#Sale_SeeAllSpecials"),
                             url: "",
                             color: l,
                             bgcolor: s,
@@ -18234,7 +18234,7 @@
                         )
                     ),
                     Ze.createElement(
-                      Ln,
+                      Bn,
                       { clanSteamID: n.GetClanSteamID() },
                       Boolean(
                         n.GetEventModel().jsondata
@@ -18246,7 +18246,7 @@
                             Ze.createElement(
                               "p",
                               null,
-                              "(VO) Add custom CSS which is only added to the store's sale page header. Please include nocache=1 in url when viewing your latest changes on the store."
+                              "(VO) Add custom CSS which is only added to the store's sale page header. Please include nocache=1 in url when viewing your latest changes on the store. Avoid targeting the generated class names like 'broadcast_embeddable_Event_1A0NY' as the 1A0NY is programmatically generated and can be changed by the compiler with future props."
                             ),
                             Ze.createElement("textarea", {
                               value: n.GetEventModel().jsondata.sale_custom_css
@@ -18270,58 +18270,58 @@
                   )
               );
             }),
-            Object(I.c)([B.a], e.prototype, "AddSection", null),
-            Object(I.c)([B.a], e.prototype, "ToggleMinimizeSection", null),
-            Object(I.c)([B.a], e.prototype, "MinimizeAllSaleSections", null),
-            Object(I.c)([B.a], e.prototype, "ReorderSaleSections", null),
-            Object(I.c)([B.a], e.prototype, "OnSaleChange", null),
-            Object(I.c)([B.a], e.prototype, "OnSaleColorChange", null),
-            Object(I.c)([B.a], e.prototype, "OnOpenButtonTextColor", null),
+            Object(I.c)([L.a], e.prototype, "AddSection", null),
+            Object(I.c)([L.a], e.prototype, "ToggleMinimizeSection", null),
+            Object(I.c)([L.a], e.prototype, "MinimizeAllSaleSections", null),
+            Object(I.c)([L.a], e.prototype, "ReorderSaleSections", null),
+            Object(I.c)([L.a], e.prototype, "OnSaleChange", null),
+            Object(I.c)([L.a], e.prototype, "OnSaleColorChange", null),
+            Object(I.c)([L.a], e.prototype, "OnOpenButtonTextColor", null),
             Object(I.c)(
-              [B.a],
+              [L.a],
               e.prototype,
               "OnOpenButtonBackgroundColor",
               null
             ),
-            Object(I.c)([B.a], e.prototype, "OnSaleOptionChange", null),
-            Object(I.c)([B.a], e.prototype, "OnShowCreatorChange", null),
-            Object(I.c)([B.a], e.prototype, "OnBrowseMoreButtonChange", null),
-            Object(I.c)([B.a], e.prototype, "OnImportSaleChange", null),
+            Object(I.c)([L.a], e.prototype, "OnSaleOptionChange", null),
+            Object(I.c)([L.a], e.prototype, "OnShowCreatorChange", null),
+            Object(I.c)([L.a], e.prototype, "OnBrowseMoreButtonChange", null),
+            Object(I.c)([L.a], e.prototype, "OnImportSaleChange", null),
             Object(I.c)([G.k.bound], e.prototype, "OnSaleFontChange", null),
-            Object(I.c)([B.a], e.prototype, "OnCapitalizeSectionChange", null),
-            Object(I.c)([B.a], e.prototype, "OnOptInPageChange", null),
+            Object(I.c)([L.a], e.prototype, "OnCapitalizeSectionChange", null),
+            Object(I.c)([L.a], e.prototype, "OnOptInPageChange", null),
             Object(I.c)(
-              [B.a],
+              [L.a],
               e.prototype,
               "OnValveHostOnTopSalesPathChange",
               null
             ),
             Object(I.c)(
-              [B.a],
+              [L.a],
               e.prototype,
               "OnSectionTitleFontSizeChange",
               null
             ),
-            Object(I.c)([B.a], e.prototype, "OnImportSaleSubmit", null),
+            Object(I.c)([L.a], e.prototype, "OnImportSaleSubmit", null),
             Object(I.c)(
-              [B.a],
+              [L.a],
               e.prototype,
               "OnCreateUpdateDiscountEvent",
               null
             ),
-            Object(I.c)([B.a], e.prototype, "OnVanityIDChange", null),
-            Object(I.c)([B.a], e.prototype, "OnCustomCSSChange", null),
+            Object(I.c)([L.a], e.prototype, "OnVanityIDChange", null),
+            Object(I.c)([L.a], e.prototype, "OnCustomCSSChange", null),
             Object(I.c)(
-              [B.a],
+              [L.a],
               e.prototype,
               "OnOwnershipRestrictionChange",
               null
             ),
-            Object(I.c)([B.a], e.prototype, "OnPartnerAppRightsChange", null),
-            Object(I.c)([B.a], e.prototype, "OnRequiredAppIdChange", null),
-            Object(I.c)([B.a], e.prototype, "OnNonOwnerRedirectChange", null),
-            Object(I.c)([B.a], e.prototype, "GetMinimized", null),
-            Object(I.c)([B.a], e.prototype, "ExpandSectionFromTOC", null),
+            Object(I.c)([L.a], e.prototype, "OnPartnerAppRightsChange", null),
+            Object(I.c)([L.a], e.prototype, "OnRequiredAppIdChange", null),
+            Object(I.c)([L.a], e.prototype, "OnNonOwnerRedirectChange", null),
+            Object(I.c)([L.a], e.prototype, "GetMinimized", null),
+            Object(I.c)([L.a], e.prototype, "ExpandSectionFromTOC", null),
             (e = Object(I.c)([qe.a], e))
           );
         })(Ze.Component),
@@ -18337,14 +18337,14 @@
             Object(I.d)(e, t),
             ((n = e).prototype.componentDidMount = function () {
               this.setState({
-                strCustomTitle: L.a.Get(
+                strCustomTitle: B.a.Get(
                   this.props.localized_label,
                   this.props.editLanguage
                 ),
               });
             }),
             (e.prototype.componentDidUpdate = function (e, t) {
-              var n = L.a.Get(
+              var n = B.a.Get(
                 this.props.localized_label,
                 this.props.editLanguage
               );
@@ -18355,16 +18355,16 @@
             (e.prototype.GetTitleOptions = function (e) {
               var t = {
                   value: "#Sale_default_label",
-                  label: Object(L.f)("#Sale_default_label"),
+                  label: Object(B.f)("#Sale_default_label"),
                 },
                 n = {
                   value: "#Sale_default_label_custom",
-                  label: Object(L.f)("#Sale_default_label_custom"),
+                  label: Object(B.f)("#Sale_default_label_custom"),
                 };
               if (e) return [n];
               for (var a = [], i = 0, r = 1; i < 5; r++) {
                 var o = "#Sale_default_label_" + r,
-                  l = Object(L.f)(o);
+                  l = Object(B.f)(o);
                 o === l ? i++ : ((i = 0), a.push({ value: o, label: l }));
               }
               return (
@@ -18398,12 +18398,12 @@
             }),
             (e.prototype.render = function () {
               var e = this,
-                t = L.a.Get(
+                t = B.a.Get(
                   this.props.localized_label,
                   this.props.editLanguage
                 ),
                 n = Boolean(
-                  L.a.GetWithFallback(
+                  B.a.GetWithFallback(
                     this.props.localized_label,
                     this.props.editLanguage
                   )
@@ -18411,7 +18411,7 @@
                 a = this.GetTitleOptions(n),
                 i = this.props.default_label
                   ? {
-                      label: Object(L.f)(this.props.default_label),
+                      label: Object(B.f)(this.props.default_label),
                       value: this.props.default_label,
                     }
                   : a[0],
@@ -18465,7 +18465,7 @@
                           "div",
                           { className: Pn.LanguageInput },
                           Ze.createElement(Ke.l, {
-                            placeholder: Object(L.f)("#Broadcast_use_custom"),
+                            placeholder: Object(B.f)("#Broadcast_use_custom"),
                             onChange: this.OnCustomTitleChange,
                             value: this.state.strCustomTitle,
                           })
@@ -18476,7 +18476,7 @@
                           Ze.createElement(
                             Kn.a,
                             {
-                              toolTipContent: Object(L.f)(
+                              toolTipContent: Object(B.f)(
                                 "#Broadcast_save_title_ttip"
                               ),
                             },
@@ -18490,7 +18490,7 @@
                                 },
                                 disabled: t == this.state.strCustomTitle,
                               },
-                              Object(L.f)("#Broadcast_save_title")
+                              Object(B.f)("#Broadcast_save_title")
                             )
                           )
                         ),
@@ -18500,7 +18500,7 @@
                           Ze.createElement(
                             Kn.a,
                             {
-                              toolTipContent: Object(L.f)(
+                              toolTipContent: Object(B.f)(
                                 "#Broadcast_remove_title_ttip"
                               ),
                             },
@@ -18510,7 +18510,7 @@
                                 onClick: this.OnClearCustomTitle,
                                 disabled: !t,
                               },
-                              Object(L.f)("#Broadcast_remove_title")
+                              Object(B.f)("#Broadcast_remove_title")
                             )
                           )
                         )
@@ -18519,9 +18519,9 @@
                   )
               );
             }),
-            Object(I.c)([B.a], e.prototype, "OnTitleChange", null),
-            Object(I.c)([B.a], e.prototype, "OnCustomTitleChange", null),
-            Object(I.c)([B.a], e.prototype, "OnClearCustomTitle", null),
+            Object(I.c)([L.a], e.prototype, "OnTitleChange", null),
+            Object(I.c)([L.a], e.prototype, "OnCustomTitleChange", null),
+            Object(I.c)([L.a], e.prototype, "OnClearCustomTitle", null),
             (e = n = Object(I.c)([qe.a], e))
           );
         })(Ze.Component);
@@ -18571,8 +18571,8 @@
             Ze.createElement(
               $e.c,
               {
-                strTitle: Object(L.f)("#Sale_Section_ShowOnTabs_DialogTitle"),
-                strDescription: Object(L.f)(
+                strTitle: Object(B.f)("#Sale_Section_ShowOnTabs_DialogTitle"),
+                strDescription: Object(B.f)(
                   "#Sale_Section_ShowOnTabs_DialogDesc"
                 ),
                 onOK: function () {
@@ -18617,7 +18617,7 @@
                 t = e.saleSection,
                 a = e.editLanguage;
               if (!n || !t.show_on_tabs || 0 === t.show_on_tabs.length)
-                return Object(L.f)("#Sale_Section_ShowOnTabs_All");
+                return Object(B.f)("#Sale_Section_ShowOnTabs_All");
               for (var i = [], r = 0, o = t.show_on_tabs; r < o.length; r++) {
                 !(function (t) {
                   var e = n.tabs
@@ -18629,7 +18629,7 @@
                 })(o[r]);
               }
               return 0 === i.length
-                ? Object(L.f)("#Sale_Section_ShowOnTabs_All")
+                ? Object(B.f)("#Sale_Section_ShowOnTabs_All")
                 : i.join(", ");
             }),
             (t.prototype.OnEditTabSections = function () {
@@ -18643,8 +18643,8 @@
                 ? Ze.createElement(
                     Er,
                     {
-                      title: Object(L.f)("#Sale_Section_TabSettings_Title"),
-                      tooltip: Object(L.f)(
+                      title: Object(B.f)("#Sale_Section_TabSettings_Title"),
+                      tooltip: Object(B.f)(
                         "#Sale_Section_TabSettings_Title_ttip"
                       ),
                       getMinimized: this.props.getMinimized,
@@ -18669,7 +18669,7 @@
                             gt.ShowOnTabsLabel
                           ),
                         },
-                        Object(L.f)("#Sale_Section_ShowOnTabs"),
+                        Object(B.f)("#Sale_Section_ShowOnTabs"),
                         this.GetShowOnTabsList(e)
                       ),
                       Ze.createElement(
@@ -18678,14 +18678,14 @@
                         Ze.createElement(
                           Ke.q,
                           { onClick: this.OnEditTabSections },
-                          Object(L.f)("#Sale_Section_ShowOnTabs_Edit")
+                          Object(B.f)("#Sale_Section_ShowOnTabs_Edit")
                         )
                       )
                     )
                   )
                 : null;
             }),
-            Object(I.c)([B.a], t.prototype, "OnEditTabSections", null),
+            Object(I.c)([L.a], t.prototype, "OnEditTabSections", null),
             (t = Object(I.c)([qe.a], t))
           );
         })(Ze.Component),
@@ -18694,15 +18694,15 @@
             n = e.editModel;
           if (!t.label_link) return null;
           return Ze.createElement(
-            Ln,
+            Bn,
             { clanSteamID: n.GetClanSteamID() },
             Ze.createElement(Ke.p, {
               onChange: function (e) {
                 (t.label_link_style = e ? "browseall" : void 0),
                   n.SetDirty(H.jsondata_sales);
               },
-              label: "(VO) " + Object(L.f)("#Sale_Section_TitleLink_BrowseAll"),
-              tooltip: Object(L.f)("#Sale_Section_TitleLink_BrowseAll_ttip"),
+              label: "(VO) " + Object(B.f)("#Sale_Section_TitleLink_BrowseAll"),
+              tooltip: Object(B.f)("#Sale_Section_TitleLink_BrowseAll_ttip"),
               checked: "browseall" === t.label_link_style,
             })
           );
@@ -18717,21 +18717,21 @@
             Ze.createElement(
               "div",
               { className: vt.SaleSectionHeader },
-              Object(L.f)("#Sale_SectionListPlaceholder_Header")
+              Object(B.f)("#Sale_SectionListPlaceholder_Header")
             ),
             Ze.createElement(
               "div",
               null,
-              Object(L.f)("#Sale_SectionListPlaceholder_Content")
+              Object(B.f)("#Sale_SectionListPlaceholder_Content")
             )
           );
         };
       function Sr(e, t, n, a, i) {
         var r = Object(Oa.e)(e, t, n.GetClanSteamID().GetAccountID(), i);
         if (r) return r;
-        var o = Object(L.f)("#Sale_Section_Header", a + 1),
+        var o = Object(B.f)("#Sale_Section_Header", a + 1),
           l = "#Sale_Section_Type_" + e.section_type,
-          s = Object(L.f)(l);
+          s = Object(B.f)(l);
         return s !== l && (o = o + " (" + s + ")"), o;
       }
       var Or = (function (t) {
@@ -18773,8 +18773,8 @@
             var t = this;
             Object(et.d)(
               Ze.createElement($e.c, {
-                strTitle: Object(L.f)("#Button_Remove"),
-                strDescription: Object(L.f)("#Sale_RemoveSectionConfirmation"),
+                strTitle: Object(B.f)("#Button_Remove"),
+                strDescription: Object(B.f)("#Sale_RemoveSectionConfirmation"),
                 onOK: function () {
                   return t.DoRemoveSection(e);
                 },
@@ -18805,7 +18805,7 @@
               n = t.saleSection,
               a = t.editLanguage,
               i = t.editModel;
-            (n.localized_label = L.a.Set(n.localized_label || [], a, e)),
+            (n.localized_label = B.a.Set(n.localized_label || [], a, e)),
               i.SetDirty(H.jsondata_sales);
           }),
           (e.prototype.OnClearCustomTitle = function () {
@@ -18813,7 +18813,7 @@
               t = e.saleSection,
               n = e.editLanguage,
               a = e.editModel;
-            (t.localized_label = L.a.Set(t.localized_label || [], n, null)),
+            (t.localized_label = B.a.Set(t.localized_label || [], n, null)),
               a.SetDirty(H.jsondata_sales);
           }),
           (e.prototype.OnShowTitleImageUpload = function (e, n) {
@@ -18823,7 +18823,7 @@
                 Ze.createElement(aa, {
                   loc_images: n.localized_label_image,
                   fnSetImage: function (e, t) {
-                    n.localized_label_image = L.a.Set(
+                    n.localized_label_image = B.a.Set(
                       n.localized_label_image || [],
                       e,
                       t
@@ -18935,7 +18935,7 @@
                         ),
                         Object(et.d)(
                           Ze.createElement($e.e, {
-                            strDescription: Object(L.f)(
+                            strDescription: Object(B.f)(
                               "#ImagePicker_Error",
                               o[0].name
                             ),
@@ -19001,12 +19001,12 @@
                   : a.localized_sale_product_banner_override,
                 fnSetImage: function (e, t) {
                   n
-                    ? (a.localized_sale_product_mobile_banner_override = L.a.Set(
+                    ? (a.localized_sale_product_mobile_banner_override = B.a.Set(
                         a.localized_sale_product_mobile_banner_override,
                         e,
                         t
                       ))
-                    : (a.localized_sale_product_banner_override = L.a.Set(
+                    : (a.localized_sale_product_banner_override = B.a.Set(
                         a.localized_sale_product_banner_override,
                         e,
                         t
@@ -19028,72 +19028,72 @@
               i = e.editLanguage,
               r = [
                 {
-                  label: Object(L.f)("#Sale_Items"),
+                  label: Object(B.f)("#Sale_Items"),
                   data: "items",
-                  tooltip: Object(L.f)("#Sale_Items_ttip"),
+                  tooltip: Object(B.f)("#Sale_Items_ttip"),
                 },
                 {
-                  label: Object(L.f)("#Sale_Events"),
+                  label: Object(B.f)("#Sale_Events"),
                   data: "events",
-                  tooltip: Object(L.f)("#Sale_Events_ttip"),
+                  tooltip: Object(B.f)("#Sale_Events_ttip"),
                 },
                 {
-                  label: Object(L.f)("#Sale_Links"),
+                  label: Object(B.f)("#Sale_Links"),
                   data: "links",
-                  tooltip: Object(L.f)("#Sale_Links_ttip"),
+                  tooltip: Object(B.f)("#Sale_Links_ttip"),
                 },
                 {
-                  label: Object(L.f)("#Sale_BroadcastPlayerSection"),
+                  label: Object(B.f)("#Sale_BroadcastPlayerSection"),
                   data: "broadcast",
-                  tooltip: Object(L.f)("#Sale_BroadcastPlayerSection_ttip"),
+                  tooltip: Object(B.f)("#Sale_BroadcastPlayerSection_ttip"),
                 },
                 {
-                  label: Object(L.f)("#Sale_EventDescriptionSection"),
+                  label: Object(B.f)("#Sale_EventDescriptionSection"),
                   data: "event_description",
-                  tooltip: Object(L.f)("#Sale_EventDescriptionSection_ttip"),
+                  tooltip: Object(B.f)("#Sale_EventDescriptionSection_ttip"),
                 },
                 {
-                  label: Object(L.f)("#Sale_TextSection"),
+                  label: Object(B.f)("#Sale_TextSection"),
                   data: "text_section",
-                  tooltip: Object(L.f)("#Sale_TextSection_ttip"),
+                  tooltip: Object(B.f)("#Sale_TextSection_ttip"),
                 },
                 {
-                  label: Object(L.f)("#Sale_CuratorSection"),
+                  label: Object(B.f)("#Sale_CuratorSection"),
                   data: "curator",
-                  tooltip: Object(L.f)("#Sale_CuratorSection_ttip"),
+                  tooltip: Object(B.f)("#Sale_CuratorSection_ttip"),
                 },
                 {
-                  label: Object(L.f)("#Sale_CuratorRecommendation"),
+                  label: Object(B.f)("#Sale_CuratorRecommendation"),
                   data: "curator_recommendation",
-                  tooltip: Object(L.f)("#Sale_CuratorRecommendation_ttip"),
+                  tooltip: Object(B.f)("#Sale_CuratorRecommendation_ttip"),
                 },
                 {
-                  label: Object(L.f)("#Sale_SectionType_EventSchedule"),
+                  label: Object(B.f)("#Sale_SectionType_EventSchedule"),
                   data: "event_schedule",
-                  tooltip: Object(L.f)("#Sale_SectionType_EventSchedule_ttip"),
+                  tooltip: Object(B.f)("#Sale_SectionType_EventSchedule_ttip"),
                 },
               ];
             Nn(n.GetClanSteamID()) &&
               (r.push({
-                label: "(VO) " + Object(L.f)("#Sale_Tabs"),
+                label: "(VO) " + Object(B.f)("#Sale_Tabs"),
                 data: "tabs",
               }),
               r.push({
-                label: "(VO) " + Object(L.f)("#Sale_AdventCalendarDoorSection"),
+                label: "(VO) " + Object(B.f)("#Sale_AdventCalendarDoorSection"),
                 data: "doors",
               }),
               r.push({
-                label: "(VO) " + Object(L.f)("#Sale_VOInternalSection"),
+                label: "(VO) " + Object(B.f)("#Sale_VOInternalSection"),
                 data: "vo_internal",
               }),
               r.push({
                 label:
                   "(VO) " +
-                  Object(L.f)("#Sale_VOInternalSection_SaleItemBrowser"),
+                  Object(B.f)("#Sale_VOInternalSection_SaleItemBrowser"),
                 data: "sale_item_browser",
               }),
               r.push({
-                label: "(VO) " + Object(L.f)("#Sale_TabButtons"),
+                label: "(VO) " + Object(B.f)("#Sale_TabButtons"),
                 data: "tab_buttons",
               }));
             var o = n.GetEventModel().jsondata,
@@ -19102,7 +19102,7 @@
               c = o.sale_section_disable_capitalize,
               d = Object(Oa.d)(a),
               p = this.props.saleSection.section_type || r[0].data,
-              u = Boolean(L.a.GetWithFallback(a.localized_label, i)),
+              u = Boolean(B.a.GetWithFallback(a.localized_label, i)),
               m =
                 u ||
                 _r.IsValidTitleOption(this.props.saleSection.default_label),
@@ -19146,7 +19146,7 @@
                     Ze.createElement(
                       Ke.d,
                       {
-                        "data-tooltip-text": Object(L.f)(
+                        "data-tooltip-text": Object(B.f)(
                           "#Sale_Section_ReorderUp_Title"
                         ),
                         disabled: 0 == this.props.index,
@@ -19159,7 +19159,7 @@
                     Ze.createElement(
                       Ke.d,
                       {
-                        "data-tooltip-text": Object(L.f)(
+                        "data-tooltip-text": Object(B.f)(
                           "#Sale_Section_ReorderDown_Title"
                         ),
                         disabled:
@@ -19179,7 +19179,7 @@
                     Ze.createElement(
                       Ke.d,
                       {
-                        "data-tooltip-text": Object(L.f)("#Button_Remove"),
+                        "data-tooltip-text": Object(B.f)("#Button_Remove"),
                         onClick: function () {
                           return t.RemoveSection(t.props.index);
                         },
@@ -19211,9 +19211,9 @@
                             Ze.createElement(
                               "div",
                               { className: vt.EventEditorTextTitle },
-                              Object(L.f)("#Sale_Section_SectionTitle_Title"),
+                              Object(B.f)("#Sale_Section_SectionTitle_Title"),
                               Ze.createElement(pr, {
-                                tooltip: Object(L.f)(
+                                tooltip: Object(B.f)(
                                   "#Sale_Section_SectionTitle_Title_ttip"
                                 ),
                               })
@@ -19244,7 +19244,7 @@
                               }),
                               u &&
                                 Ze.createElement(
-                                  Ln,
+                                  Bn,
                                   {
                                     clanSteamID: n.GetClanSteamID(),
                                     className: Pn.CustomImageTitle,
@@ -19252,7 +19252,7 @@
                                   Ze.createElement(
                                     "span",
                                     { className: Pn.PromptText },
-                                    Object(L.f)("#Sale_option_title_image")
+                                    Object(B.f)("#Sale_option_title_image")
                                   ),
                                   Ze.createElement(
                                     "div",
@@ -19265,11 +19265,11 @@
                                         },
                                       },
                                       0 < _
-                                        ? Object(L.l)(
+                                        ? Object(B.l)(
                                             "#selectimage_managing_n_existing_title",
                                             _
                                           )
-                                        : Object(L.f)(
+                                        : Object(B.f)(
                                             "#selectimage_uploading_title"
                                           )
                                     )
@@ -19280,11 +19280,11 @@
                                   Ze.Fragment,
                                   null,
                                   Ze.createElement(Ke.l, {
-                                    label: Object(L.f)("#Sale_LinkURL"),
-                                    tooltip: Object(L.f)(
+                                    label: Object(B.f)("#Sale_LinkURL"),
+                                    tooltip: Object(B.f)(
                                       "#Sale_LinkURL_title_hint"
                                     ),
-                                    placeholder: Object(L.f)("#Sale_LinkURL"),
+                                    placeholder: Object(B.f)("#Sale_LinkURL"),
                                     onChange: this.OnTitleLinkChange,
                                     value: this.props.saleSection.label_link,
                                   }),
@@ -19298,8 +19298,8 @@
                       Ze.createElement(
                         Er,
                         {
-                          title: Object(L.f)("#Sale_Section_Background_Title"),
-                          tooltip: Object(L.f)(
+                          title: Object(B.f)("#Sale_Section_Background_Title"),
+                          tooltip: Object(B.f)(
                             "#Sale_Section_Background_Title_ttip"
                           ),
                           getMinimized: function () {
@@ -19324,7 +19324,7 @@
                                   color: this.props.saleSection.label_color,
                                 },
                               },
-                              Object(L.f)("#Sale_Section_Label_Color")
+                              Object(B.f)("#Sale_Section_Label_Color")
                             ),
                             !a.disable_background &&
                               Ze.createElement(
@@ -19349,7 +19349,7 @@
                                         " 100%)",
                                     },
                                   },
-                                  Object(L.f)("#Sale_Section_Background_Top")
+                                  Object(B.f)("#Sale_Section_Background_Top")
                                 ),
                                 Ze.createElement(
                                   Ke.d,
@@ -19370,7 +19370,7 @@
                                         " 100%)",
                                     },
                                   },
-                                  Object(L.f)("#Sale_Section_Background_Bottom")
+                                  Object(B.f)("#Sale_Section_Background_Bottom")
                                 )
                               ),
                             Ze.createElement(Mr, {
@@ -19396,12 +19396,12 @@
                                 Ke.d,
                                 {
                                   onClick: this.OnSectionOverrideBanner,
-                                  "data-tooltip-text": Object(L.f)(
+                                  "data-tooltip-text": Object(B.f)(
                                     "#Sale_Seciton_BannerImage_Override_ttip"
                                   ),
                                   className: vt.EventEditorTextTitle,
                                 },
-                                Object(L.f)(
+                                Object(B.f)(
                                   "#Sale_Seciton_BannerImage_Override"
                                 )
                               ),
@@ -19409,12 +19409,12 @@
                                 Ke.d,
                                 {
                                   onClick: this.OnSectionOverrideMobileBanner,
-                                  "data-tooltip-text": Object(L.f)(
+                                  "data-tooltip-text": Object(B.f)(
                                     "#Sale_Seciton_BannerImage_Override_ttip"
                                   ),
                                   className: vt.EventEditorTextTitle,
                                 },
-                                Object(L.f)(
+                                Object(B.f)(
                                   "#Sale_Seciton_MobileBannerImage_Override"
                                 )
                               ),
@@ -19430,7 +19430,7 @@
                                     onClick: this.OnSectionBannerOverrideClear,
                                     className: vt.EventEditorTextTitle,
                                   },
-                                  Object(L.f)("#Sale_Section_BannerImage_Clear")
+                                  Object(B.f)("#Sale_Section_BannerImage_Clear")
                                 ),
                               Ze.createElement(
                                 Ke.d,
@@ -19438,7 +19438,7 @@
                                   onClick: this.OnSectionBackgroundClear,
                                   className: vt.EventEditorTextTitle,
                                 },
-                                Object(L.f)("#Sale_Section_Background_Clear")
+                                Object(B.f)("#Sale_Section_Background_Clear")
                               )
                             )
                         )
@@ -19469,7 +19469,7 @@
                           "div",
                           { className: Pn.SectionTypePrompt },
                           " ",
-                          Object(L.f)("#Sale_SectionContents"),
+                          Object(B.f)("#Sale_SectionContents"),
                           " "
                         ),
                         Ze.createElement(Ke.h, {
@@ -19480,7 +19480,7 @@
                           contextMenuPositionOptions: { bDisablePopTop: !0 },
                         }),
                         Ze.createElement(pr, {
-                          tooltip: Object(L.f)("#Sale_SectionTypeTTip_" + p),
+                          tooltip: Object(B.f)("#Sale_SectionTypeTTip_" + p),
                         })
                       ),
                       Ze.createElement(Vr, Object(I.a)({}, this.props))
@@ -19488,32 +19488,32 @@
                   )
             );
           }),
-          Object(I.c)([B.a], e.prototype, "RemoveSection", null),
-          Object(I.c)([B.a], e.prototype, "DoRemoveSection", null),
-          Object(I.c)([B.a], e.prototype, "OnTitleChange", null),
-          Object(I.c)([B.a], e.prototype, "OnTitleLinkChange", null),
-          Object(I.c)([B.a], e.prototype, "OnSetCustomTitle", null),
-          Object(I.c)([B.a], e.prototype, "OnClearCustomTitle", null),
-          Object(I.c)([B.a], e.prototype, "OnShowTitleImageUpload", null),
-          Object(I.c)([B.a], e.prototype, "OnSaleSectionColorChange", null),
-          Object(I.c)([B.a], e.prototype, "OnSaleSectionTypeChange", null),
-          Object(I.c)([B.a], e.prototype, "MoveSection", null),
-          Object(I.c)([B.a], e.prototype, "OpenLabelColorSelector", null),
-          Object(I.c)([B.a], e.prototype, "OpenBackgroundTopSelector", null),
-          Object(I.c)([B.a], e.prototype, "OpenBackgroundBottomSelector", null),
-          Object(I.c)([B.a], e.prototype, "GetMinimized", null),
-          Object(I.c)([B.a], e.prototype, "ToggleMinimized", null),
-          Object(I.c)([B.a], e.prototype, "OnDropFiles", null),
-          Object(I.c)([B.a], e.prototype, "OnSectionBackgroundClear", null),
-          Object(I.c)([B.a], e.prototype, "OnSectionBannerOverrideClear", null),
-          Object(I.c)([B.a], e.prototype, "OnSectionOverrideBanner", null),
+          Object(I.c)([L.a], e.prototype, "RemoveSection", null),
+          Object(I.c)([L.a], e.prototype, "DoRemoveSection", null),
+          Object(I.c)([L.a], e.prototype, "OnTitleChange", null),
+          Object(I.c)([L.a], e.prototype, "OnTitleLinkChange", null),
+          Object(I.c)([L.a], e.prototype, "OnSetCustomTitle", null),
+          Object(I.c)([L.a], e.prototype, "OnClearCustomTitle", null),
+          Object(I.c)([L.a], e.prototype, "OnShowTitleImageUpload", null),
+          Object(I.c)([L.a], e.prototype, "OnSaleSectionColorChange", null),
+          Object(I.c)([L.a], e.prototype, "OnSaleSectionTypeChange", null),
+          Object(I.c)([L.a], e.prototype, "MoveSection", null),
+          Object(I.c)([L.a], e.prototype, "OpenLabelColorSelector", null),
+          Object(I.c)([L.a], e.prototype, "OpenBackgroundTopSelector", null),
+          Object(I.c)([L.a], e.prototype, "OpenBackgroundBottomSelector", null),
+          Object(I.c)([L.a], e.prototype, "GetMinimized", null),
+          Object(I.c)([L.a], e.prototype, "ToggleMinimized", null),
+          Object(I.c)([L.a], e.prototype, "OnDropFiles", null),
+          Object(I.c)([L.a], e.prototype, "OnSectionBackgroundClear", null),
+          Object(I.c)([L.a], e.prototype, "OnSectionBannerOverrideClear", null),
+          Object(I.c)([L.a], e.prototype, "OnSectionOverrideBanner", null),
           Object(I.c)(
-            [B.a],
+            [L.a],
             e.prototype,
             "OnSectionOverrideMobileBanner",
             null
           ),
-          Object(I.c)([B.a], e.prototype, "OnPreviousImageSelected", null),
+          Object(I.c)([L.a], e.prototype, "OnPreviousImageSelected", null),
           (e = Object(I.c)([qe.a], e))
         );
       })(Ze.Component);
@@ -19533,7 +19533,7 @@
                       return hr(i, r);
                     },
                   },
-                  Object(L.f)(
+                  Object(B.f)(
                     "#Sale_SectionDesc_Tabs",
                     ((t = r.show_on_tabs),
                     (n = o),
@@ -19546,9 +19546,9 @@
                           });
                           a += e
                             ? Object(Oa.g)(e, Object(te.e)(D.c.LANGUAGE))
-                            : Object(L.f)("#EventCalendar_MuteApp_Unknown");
+                            : Object(B.f)("#EventCalendar_MuteApp_Unknown");
                         })
-                      : (a = Object(L.f)("#Sale_Section_ShowOnTabs_All")),
+                      : (a = Object(B.f)("#Sale_Section_ShowOnTabs_All")),
                     a)
                   )
                 )
@@ -19559,16 +19559,16 @@
                 "div",
                 null,
                 Boolean("items" === r.section_type)
-                  ? Object(L.f)(
+                  ? Object(B.f)(
                       "#Sale_SectionDesc_Items",
                       r.capsules ? r.capsules.length : 0
                     )
-                  : Object(L.f)(
+                  : Object(B.f)(
                       "#Sale_SectionDesc_Events",
                       r.events ? r.events.length : 0
                     ),
                 Boolean(r.show_as_carousel) &&
-                  Object(L.f)("#Sale_SectionDesc_Carousel"),
+                  Object(B.f)("#Sale_SectionDesc_Carousel"),
                 l && " - ",
                 l
               )
@@ -19576,11 +19576,11 @@
             ? Ze.createElement(
                 "div",
                 null,
-                Object(L.l)(
+                Object(B.l)(
                   "#EventEditor_SaleEventSchedule_MinView",
                   r.event_schedule_categories
                     ? r.event_schedule_categories.length
-                    : Object(L.f)("#Dialog_Off")
+                    : Object(B.f)("#Dialog_Off")
                 ),
                 l && " - ",
                 l
@@ -19606,8 +19606,8 @@
                 null,
                 Ze.createElement(Ke.p, {
                   onChange: this.OnSmartSectionChange,
-                  label: Object(L.f)("#Sale_SmartSection"),
-                  description: Object(L.f)("#Sale_SmartSectionDescription"),
+                  label: Object(B.f)("#Sale_SmartSection"),
+                  description: Object(B.f)("#Sale_SmartSectionDescription"),
                   checked: this.props.saleSection.smart_section,
                 }),
                 this.props.saleSection.smart_section &&
@@ -19657,8 +19657,8 @@
                     a.SetDirty(H.jsondata_sales);
                 });
               },
-              label: Object(L.f)("#Sale_SmartSection"),
-              description: Object(L.f)("#Sale_SmartSectionDescription"),
+              label: Object(B.f)("#Sale_SmartSection"),
+              description: Object(B.f)("#Sale_SmartSectionDescription"),
               checked: n.smart_section,
             }),
             n.smart_section
@@ -19748,11 +19748,11 @@
                             },
                           },
                           0 < n
-                            ? Object(L.l)(
+                            ? Object(B.l)(
                                 "#selectimage_managing_n_existing_title",
                                 n
                               )
-                            : Object(L.f)("#selectimage_uploading_title")
+                            : Object(B.f)("#selectimage_uploading_title")
                         )
                       )
                     );
@@ -19763,20 +19763,20 @@
                     return (a.m_refInput = e);
                   },
                   type: "text",
-                  label: Object(L.f)("#Sale_LinkURL"),
+                  label: Object(B.f)("#Sale_LinkURL"),
                   onChange: this.OnLinkChange,
                 }),
                 Ze.createElement(
                   Ke.q,
                   { onClick: this.AddLink },
-                  Object(L.f)("#Sale_AddLink")
+                  Object(B.f)("#Sale_AddLink")
                 )
               );
             }),
-            Object(I.c)([B.a], e.prototype, "AddLink", null),
-            Object(I.c)([B.a], e.prototype, "RemoveLink", null),
-            Object(I.c)([B.a], e.prototype, "OnLinkChange", null),
-            Object(I.c)([B.a], e.prototype, "OnShowLinkCapsuleUpload", null),
+            Object(I.c)([L.a], e.prototype, "AddLink", null),
+            Object(I.c)([L.a], e.prototype, "RemoveLink", null),
+            Object(I.c)([L.a], e.prototype, "OnLinkChange", null),
+            Object(I.c)([L.a], e.prototype, "OnShowLinkCapsuleUpload", null),
             (e = Object(I.c)([qe.a], e))
           );
         })(Ze.Component),
@@ -19847,29 +19847,29 @@
                 a = e.editModel,
                 i = [
                   {
-                    label: Object(L.f)("#Sale_CapsulesPerRow_1"),
+                    label: Object(B.f)("#Sale_CapsulesPerRow_1"),
                     data: this.ConvertRowConfigToString([1]),
                   },
                   {
-                    label: Object(L.f)("#Sale_CapsulesPerRow_2"),
+                    label: Object(B.f)("#Sale_CapsulesPerRow_2"),
                     data: this.ConvertRowConfigToString([2]),
                   },
                   {
-                    label: Object(L.f)("#Sale_CapsulesPerRow_3"),
+                    label: Object(B.f)("#Sale_CapsulesPerRow_3"),
                     data: this.ConvertRowConfigToString([3]),
                   },
                   {
-                    label: Object(L.f)("#Sale_CapsulesPerRow_4"),
+                    label: Object(B.f)("#Sale_CapsulesPerRow_4"),
                     data: this.ConvertRowConfigToString([4]),
                   },
                   {
-                    label: Object(L.f)("#Sale_CapsulesPerRow_Pattern_2343"),
+                    label: Object(B.f)("#Sale_CapsulesPerRow_Pattern_2343"),
                     data: this.ConvertRowConfigToString([2, 3, 4, 3]),
                   },
                 ];
               "links" === n.section_type
                 ? i.push({
-                    label: Object(L.f)("#Sale_CapsulesPerRow_5"),
+                    label: Object(B.f)("#Sale_CapsulesPerRow_5"),
                     data: this.ConvertRowConfigToString([5]),
                   })
                 : "items" === n.section_type &&
@@ -19878,7 +19878,7 @@
                     {
                       label:
                         "(VO) " +
-                        Object(L.f)("#Sale_CapsulesPerRow_Pattern_3t23"),
+                        Object(B.f)("#Sale_CapsulesPerRow_Pattern_3t23"),
                       data: this.ConvertRowConfigToString(
                         [3, 2, 3],
                         ["tall", "grid", "grid"]
@@ -19887,13 +19887,13 @@
                     {
                       label:
                         "(VO) " +
-                        Object(L.f)("#Sale_CapsulesPerRow_Pattern_5t"),
+                        Object(B.f)("#Sale_CapsulesPerRow_Pattern_5t"),
                       data: this.ConvertRowConfigToString([5], ["tall"]),
                     },
                     {
                       label:
                         "(VO) " +
-                        Object(L.f)("#Sale_CapsulesPerRow_Pattern_3t"),
+                        Object(B.f)("#Sale_CapsulesPerRow_Pattern_3t"),
                       data: this.ConvertRowConfigToString([3], ["tall"]),
                     }
                   );
@@ -19905,8 +19905,8 @@
               Object(ne.v)(n.section_type);
               return Ze.createElement(Ke.h, {
                 rgOptions: i,
-                label: Object(L.f)("#Sale_Section_CapsulesPerRow"),
-                tooltip: Object(L.f)("#Sale_Section_CapsulesPerRow_Tooltip"),
+                label: Object(B.f)("#Sale_Section_CapsulesPerRow"),
+                tooltip: Object(B.f)("#Sale_Section_CapsulesPerRow_Tooltip"),
                 strDropDownClassName: vt.DropDownScroll,
                 selectedOption: o,
                 onChange: function (e) {
@@ -19943,7 +19943,7 @@
                 Ze.createElement(
                   "div",
                   { className: vt.EventEditorTextTitle },
-                  Object(L.f)("#Sale_Section_GridSettings_Title")
+                  Object(B.f)("#Sale_Section_GridSettings_Title")
                 ),
                 Ze.createElement(
                   "div",
@@ -19956,7 +19956,7 @@
                     { className: vt.HalfColumn },
                     a.show_as_carousel &&
                       Ze.createElement(Ke.s, {
-                        label: Object(L.f)("#Sale_Section_CarouselRows"),
+                        label: Object(B.f)("#Sale_Section_CarouselRows"),
                         showValue: !0,
                         min: 1,
                         max: 3,
@@ -19964,7 +19964,7 @@
                         onChange: function (e) {
                           return t.OnCarouselRowsChange(a, e);
                         },
-                        tooltip: Object(L.f)(
+                        tooltip: Object(B.f)(
                           "#Sale_Section_CarouselRows_Tooltip"
                         ),
                       }),
@@ -19993,15 +19993,15 @@
                       }),
                     a.use_random_order &&
                       Ze.createElement(
-                        Ln,
+                        Bn,
                         { clanSteamID: r.GetClanSteamID() },
                         Ze.createElement(Ke.l, {
                           mustBeNumeric: !0,
                           rangeMin: 0,
                           label:
                             "(VO) " +
-                            Object(L.f)("#Sale_Section_CapSectionItemCount"),
-                          tooltip: Object(L.f)(
+                            Object(B.f)("#Sale_Section_CapSectionItemCount"),
+                          tooltip: Object(B.f)(
                             "#Sale_Section_CapSectionItemCount_hint"
                           ),
                           onChange: function (e) {
@@ -20033,10 +20033,10 @@
                           Ze.createElement(Ke.l, {
                             mustBeNumeric: !0,
                             rangeMin: 1,
-                            label: Object(L.f)(
+                            label: Object(B.f)(
                               "#Sale_Section_CapSectionContentCount"
                             ),
-                            tooltip: Object(L.f)(
+                            tooltip: Object(B.f)(
                               "#Sale_Section_CapSectionContentCount_hint"
                             ),
                             onChange: function (e) {
@@ -20063,13 +20063,13 @@
                 )
               );
             }),
-            Object(I.c)([B.a], e.prototype, "OnRandomChange", null),
-            Object(I.c)([B.a], e.prototype, "OnCapSectionChange", null),
-            Object(I.c)([B.a], e.prototype, "OnCapItemCountChange", null),
-            Object(I.c)([B.a], e.prototype, "OnCarouselRowsChange", null),
-            Object(I.c)([B.a], e.prototype, "OnCapSectionRowCountChange", null),
+            Object(I.c)([L.a], e.prototype, "OnRandomChange", null),
+            Object(I.c)([L.a], e.prototype, "OnCapSectionChange", null),
+            Object(I.c)([L.a], e.prototype, "OnCapItemCountChange", null),
+            Object(I.c)([L.a], e.prototype, "OnCarouselRowsChange", null),
+            Object(I.c)([L.a], e.prototype, "OnCapSectionRowCountChange", null),
             Object(I.c)(
-              [B.a],
+              [L.a],
               e.prototype,
               "OnCapsulesPerRowArrayChange",
               null
@@ -20092,22 +20092,22 @@
             n = e.section,
             a = [
               {
-                label: Object(L.f)("#Sale_Section_SingleItemDisplay_bordered"),
-                tooltip: Object(L.f)(
+                label: Object(B.f)("#Sale_Section_SingleItemDisplay_bordered"),
+                tooltip: Object(B.f)(
                   "#Sale_Section_SingleItemDisplay_bordered_ttip"
                 ),
                 data: "bordered",
               },
               {
-                label: Object(L.f)("#Sale_Section_SingleItemDisplay_full"),
-                tooltip: Object(L.f)(
+                label: Object(B.f)("#Sale_Section_SingleItemDisplay_full"),
+                tooltip: Object(B.f)(
                   "#Sale_Section_SingleItemDisplay_full_ttip"
                 ),
                 data: "full",
               },
               {
-                label: Object(L.f)("#Sale_Section_SingleItemDisplay_library"),
-                tooltip: Object(L.f)(
+                label: Object(B.f)("#Sale_Section_SingleItemDisplay_library"),
+                tooltip: Object(B.f)(
                   "#Sale_Section_SingleItemDisplay_library_ttip"
                 ),
                 data: "library",
@@ -20115,8 +20115,8 @@
             ];
           return Ze.createElement(Ke.h, {
             rgOptions: a,
-            label: Object(L.f)("#Sale_Section_SingleItemDisplay"),
-            tooltip: Object(L.f)("#Sale_Section_SingleItemDisplay_ttip"),
+            label: Object(B.f)("#Sale_Section_SingleItemDisplay"),
+            tooltip: Object(B.f)("#Sale_Section_SingleItemDisplay_ttip"),
             strDropDownClassName: vt.DropDownScroll,
             selectedOption: n.single_item_style || ne.y,
             onChange: function (e) {
@@ -20138,19 +20138,19 @@
             s = e.onChange;
           return r
             ? Ze.createElement(
-                Ln,
+                Bn,
                 { clanSteamID: n.GetClanSteamID() },
                 Ze.createElement(Ke.e, {
                   onChange: t,
-                  label: "(VO) " + Object(L.f)(o),
-                  tooltip: Object(L.f)(l),
+                  label: "(VO) " + Object(B.f)(o),
+                  tooltip: Object(B.f)(l),
                   checked: a[i],
                 })
               )
             : Ze.createElement(Ke.e, {
                 onChange: t,
-                label: Object(L.f)(o),
-                tooltip: Object(L.f)(l),
+                label: Object(B.f)(o),
+                tooltip: Object(B.f)(l),
                 checked: a[i],
               });
         }),
@@ -20187,8 +20187,17 @@
               this.m_descBBCodeEditor.current &&
                 mi(this.m_descBBCodeEditor.current, e, t);
             }),
+            (e.prototype.OnRelatedToBroadcsat = function (e) {
+              this.props.saleSection.hide_section_if_broadcast_is_hidden !==
+                e &&
+                ((this.props.saleSection.hide_section_if_broadcast_is_hidden = e),
+                this.props.editModel.SetDirty(H.jsondata_sales));
+            }),
             (e.prototype.render = function () {
-              var e = this.props.editModel;
+              var t = this,
+                e = this.props,
+                n = e.editModel,
+                a = e.saleSection;
               return Ze.createElement(
                 "div",
                 { className: Pn.TextSectionGroup },
@@ -20200,7 +20209,7 @@
                     fnOnTextChange: this.OnTextChange,
                     fnSetText: this.SetText,
                     ref: this.m_descBBCodeEditor,
-                    strPlaceholder: Object(L.f)(
+                    strPlaceholder: Object(B.f)(
                       "#EventEditor_SaleTextSection_PlaceHolder"
                     ),
                     emoticonStore: At.b,
@@ -20208,7 +20217,29 @@
                     showFormatHelp: "PartnerEvents",
                     classNameForTextArea: gt.EventEditorDescription,
                     limitBBCode: D.b.CAN_UPLOAD_IMAGES ? void 0 : va.d,
-                    clanSteamID: e.GetClanSteamID(),
+                    clanSteamID: n.GetClanSteamID(),
+                  }),
+                  Ze.createElement(
+                    Kn.a,
+                    {
+                      toolTipContent: Object(B.f)(
+                        "#EventEditor_RelatedToBroadcast_ttip"
+                      ),
+                    },
+                    Ze.createElement(
+                      "div",
+                      { className: vt.EventEditorTextTitle },
+                      Object(B.f)("#EventEditor_RelatedToBroadcast")
+                    )
+                  ),
+                  Ze.createElement(Ke.e, {
+                    onChange: function (e) {
+                      return t.OnRelatedToBroadcsat(e);
+                    },
+                    label: Object(B.f)(
+                      "#EventEditor_RelatedToBroadcast_action"
+                    ),
+                    checked: Boolean(a.hide_section_if_broadcast_is_hidden),
                   })
                 ),
                 D.b.CAN_UPLOAD_IMAGES &&
@@ -20223,35 +20254,36 @@
                     },
                     Ze.createElement(un, {
                       bShowLightBox: !0,
-                      clanSteamID: e.GetClanSteamID(),
+                      clanSteamID: n.GetClanSteamID(),
                       imageInsertCallBack: this.OnImageInsert,
                     })
                   )
               );
             }),
-            Object(I.c)([B.a], e.prototype, "GetCurText", null),
-            Object(I.c)([B.a], e.prototype, "SetText", null),
-            Object(I.c)([B.a], e.prototype, "OnTextChange", null),
-            Object(I.c)([B.a], e.prototype, "OnImageInsert", null),
+            Object(I.c)([L.a], e.prototype, "GetCurText", null),
+            Object(I.c)([L.a], e.prototype, "SetText", null),
+            Object(I.c)([L.a], e.prototype, "OnTextChange", null),
+            Object(I.c)([L.a], e.prototype, "OnImageInsert", null),
+            Object(I.c)([L.a], e.prototype, "OnRelatedToBroadcsat", null),
             (e = Object(I.c)([qe.a], e))
           );
         })(Ze.Component);
       function Gr(e, t) {
         return (
           Object(Oa.g)(e, t) ||
-          Object(L.f)("#Sale_Tabs_UnnamedTab", e.unique_id)
+          Object(B.f)("#Sale_Tabs_UnnamedTab", e.unique_id)
         );
       }
       var kr = Object(qe.a)(function (e) {
           var t = Gr(e.tab, e.language),
             n =
               0 < e.tab.capsules.length
-                ? Object(L.f)(
+                ? Object(B.f)(
                     "#Sale_Tabs_TitleItemCount",
                     t,
                     e.tab.capsules.length
                   )
-                : Object(L.f)("#Sale_Tabs_TitleShowAllItems", t),
+                : Object(B.f)("#Sale_Tabs_TitleShowAllItems", t),
             a = Object(Ca.a)(e.selected, e.section);
           return Ze.createElement(
             "div",
@@ -20300,8 +20332,8 @@
                 n = this.props.saleSection.tabs[e];
               Object(et.d)(
                 Ze.createElement($e.c, {
-                  strTitle: Object(L.f)("#Sale_Tabs_DeletePrompt_Title"),
-                  strDescription: Object(L.f)(
+                  strTitle: Object(B.f)("#Sale_Tabs_DeletePrompt_Title"),
+                  strDescription: Object(B.f)(
                     "#Sale_Tabs_DeletePrompt_Body",
                     Gr(n, this.props.editModel.GetCurEditLanguage())
                   ),
@@ -20358,15 +20390,15 @@
                 Ze.createElement(
                   "div",
                   { className: vt.EventEditorTextTitle },
-                  Object(L.f)("#Sale_Tabs_Current"),
+                  Object(B.f)("#Sale_Tabs_Current"),
                   Ze.createElement(pr, {
-                    tooltip: Object(L.f)("#Sale_Tabs_Current_ttip"),
+                    tooltip: Object(B.f)("#Sale_Tabs_Current_ttip"),
                   })
                 ),
                 this.RenderTabs(),
                 Ze.createElement(
                   Kn.a,
-                  { toolTipContent: Object(L.f)("#Sale_Tabs_AddTab_ttip") },
+                  { toolTipContent: Object(B.f)("#Sale_Tabs_AddTab_ttip") },
                   Ze.createElement(
                     Ke.q,
                     {
@@ -20374,19 +20406,19 @@
                         return e.OnAddTab();
                       },
                     },
-                    Object(L.f)("#Sale_Tabs_AddTab")
+                    Object(B.f)("#Sale_Tabs_AddTab")
                   )
                 )
               );
             }),
-            Object(I.c)([B.a], t.prototype, "OnAddTab", null),
-            Object(I.c)([B.a], t.prototype, "OnDeleteTabPrompt", null),
-            Object(I.c)([B.a], t.prototype, "OnSelectTab", null),
-            Object(I.c)([B.a], t.prototype, "RenderTab", null),
+            Object(I.c)([L.a], t.prototype, "OnAddTab", null),
+            Object(I.c)([L.a], t.prototype, "OnDeleteTabPrompt", null),
+            Object(I.c)([L.a], t.prototype, "OnSelectTab", null),
+            Object(I.c)([L.a], t.prototype, "RenderTab", null),
             (t = Object(I.c)([qe.a], t))
           );
         })(Ze.Component),
-        Lr = (function (t) {
+        Br = (function (t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (e.state = { bShowItemListing: !1 }), e;
@@ -20420,11 +20452,11 @@
               return Ze.createElement(
                 "div",
                 { className: gt.TabHideItemFilterCtn },
-                Object(L.f)("#Sale_Tabs_ShowItems"),
+                Object(B.f)("#Sale_Tabs_ShowItems"),
                 Ze.createElement(
                   Ke.d,
                   { onClick: this.OnShowTabItems },
-                  Object(L.f)("#Sale_Tabs_ShowItems_Button")
+                  Object(B.f)("#Sale_Tabs_ShowItems_Button")
                 )
               );
             }),
@@ -20441,9 +20473,9 @@
                 Ze.createElement(
                   "div",
                   { className: vt.EventEditorTextTitle },
-                  Object(L.f)("#Sale_Tabs_Title"),
+                  Object(B.f)("#Sale_Tabs_Title"),
                   Ze.createElement(pr, {
-                    tooltip: Object(L.f)("#Sale_Tabs_Title_ttip"),
+                    tooltip: Object(B.f)("#Sale_Tabs_Title_ttip"),
                   })
                 ),
                 Ze.createElement(_r, {
@@ -20468,14 +20500,14 @@
                   })
               );
             }),
-            Object(I.c)([B.a], e.prototype, "OnTitleChange", null),
-            Object(I.c)([B.a], e.prototype, "OnSetCustomTitle", null),
-            Object(I.c)([B.a], e.prototype, "OnClearCustomTitle", null),
-            Object(I.c)([B.a], e.prototype, "OnShowTabItems", null),
+            Object(I.c)([L.a], e.prototype, "OnTitleChange", null),
+            Object(I.c)([L.a], e.prototype, "OnSetCustomTitle", null),
+            Object(I.c)([L.a], e.prototype, "OnClearCustomTitle", null),
+            Object(I.c)([L.a], e.prototype, "OnShowTabItems", null),
             (e = Object(I.c)([qe.a], e))
           );
         })(Ze.Component);
-      function Br(e, t, n, a) {
+      function Lr(e, t, n, a) {
         Object(Je.a)(
           Ze.createElement(mt, {
             onChange: function (e) {
@@ -20509,18 +20541,18 @@
                     Ke.d,
                     {
                       onClick: function (e) {
-                        return Br(e, t, n, "tab_inactive_label_color");
+                        return Lr(e, t, n, "tab_inactive_label_color");
                       },
                       className: vt.EventEditorTextTitle,
                       style: a,
                     },
-                    Object(L.f)("#Sale_Section_TabInactive_Label_Color")
+                    Object(B.f)("#Sale_Section_TabInactive_Label_Color")
                   ),
                   Ze.createElement(
                     Ke.d,
                     {
                       onClick: function (e) {
-                        return Br(
+                        return Lr(
                           e,
                           t,
                           n,
@@ -20530,13 +20562,13 @@
                       className: vt.EventEditorTextTitle,
                       style: a,
                     },
-                    Object(L.f)("#Sale_Section_TabInactive_Background_Top")
+                    Object(B.f)("#Sale_Section_TabInactive_Background_Top")
                   ),
                   Ze.createElement(
                     Ke.d,
                     {
                       onClick: function (e) {
-                        return Br(
+                        return Lr(
                           e,
                           t,
                           n,
@@ -20546,7 +20578,7 @@
                       className: vt.EventEditorTextTitle,
                       style: a,
                     },
-                    Object(L.f)("#Sale_Section_TabInactive_Background_Bottom")
+                    Object(B.f)("#Sale_Section_TabInactive_Background_Bottom")
                   )
                 ),
                 Ze.createElement(
@@ -20556,18 +20588,18 @@
                     Ke.d,
                     {
                       onClick: function (e) {
-                        return Br(e, t, n, "tab_active_label_color");
+                        return Lr(e, t, n, "tab_active_label_color");
                       },
                       className: vt.EventEditorTextTitle,
                       style: i,
                     },
-                    Object(L.f)("#Sale_Section_TabActive_Label_Color")
+                    Object(B.f)("#Sale_Section_TabActive_Label_Color")
                   ),
                   Ze.createElement(
                     Ke.d,
                     {
                       onClick: function (e) {
-                        return Br(
+                        return Lr(
                           e,
                           t,
                           n,
@@ -20577,13 +20609,13 @@
                       className: vt.EventEditorTextTitle,
                       style: i,
                     },
-                    Object(L.f)("#Sale_Section_TabActive_Background_Top")
+                    Object(B.f)("#Sale_Section_TabActive_Background_Top")
                   ),
                   Ze.createElement(
                     Ke.d,
                     {
                       onClick: function (e) {
-                        return Br(
+                        return Lr(
                           e,
                           t,
                           n,
@@ -20593,7 +20625,7 @@
                       className: vt.EventEditorTextTitle,
                       style: i,
                     },
-                    Object(L.f)("#Sale_Section_TabActive_Background_Bottom")
+                    Object(B.f)("#Sale_Section_TabActive_Background_Bottom")
                   )
                 )
               );
@@ -20629,7 +20661,7 @@
                 ? Ze.createElement(
                     "div",
                     { className: gt.TabsMultipleError },
-                    Object(L.f)("#Sale_Tabs_MultipleTabSections")
+                    Object(B.f)("#Sale_Tabs_MultipleTabSections")
                   )
                 : Ze.createElement(
                     "div",
@@ -20644,17 +20676,17 @@
                       Ze.createElement(
                         "div",
                         { className: gt.TabsSelectToEdit },
-                        Object(L.f)("#Sale_Tabs_SelectTab")
+                        Object(B.f)("#Sale_Tabs_SelectTab")
                       ),
                     a &&
-                      Ze.createElement(Lr, {
+                      Ze.createElement(Br, {
                         tab: a,
                         editModel: n,
                         editLanguage: n.GetCurEditLanguage(),
                       })
                   );
             }),
-            Object(I.c)([B.a], e.prototype, "OnTabSelected", null),
+            Object(I.c)([L.a], e.prototype, "OnTabSelected", null),
             (e = Object(I.c)([qe.a], e))
           );
         })(Ze.Component),
@@ -20714,8 +20746,8 @@
               return Ze.createElement(
                 Ze.Fragment,
                 null,
-                e ? Object(L.f)(e.label) : t,
-                Ze.createElement(pr, { tooltip: Object(L.f)(e.tooltip) })
+                e ? Object(B.f)(e.label) : t,
+                Ze.createElement(pr, { tooltip: Object(B.f)(e.tooltip) })
               );
             }),
             (e.prototype.render = function () {
@@ -20751,21 +20783,21 @@
                 "div",
                 null,
                 Ze.createElement(Ke.e, {
-                  label: Object(L.f)("#Sale_Section_EnableSearch"),
-                  tooltip: Object(L.f)("#Sale_Section_EnableSearch_ttip"),
+                  label: Object(B.f)("#Sale_Section_EnableSearch"),
+                  tooltip: Object(B.f)("#Sale_Section_EnableSearch_ttip"),
                   onChange: this.OnEnableSearch,
                   checked: e.enable_search,
                 }),
                 Ze.createElement(Ke.e, {
-                  label: Object(L.f)("#Sale_Section_UseDemoLayout"),
-                  tooltip: Object(L.f)("#Sale_Section_UseDemoLayout_ttip"),
+                  label: Object(B.f)("#Sale_Section_UseDemoLayout"),
+                  tooltip: Object(B.f)("#Sale_Section_UseDemoLayout_ttip"),
                   onChange: this.OnShowAsDemos,
                   checked: e.show_as_demos,
                 }),
                 Ze.createElement(Ke.l, {
                   type: "text",
-                  label: Object(L.f)("#Sale_BrowseSection_SubscriptionID"),
-                  tooltip: Object(L.f)(
+                  label: Object(B.f)("#Sale_BrowseSection_SubscriptionID"),
+                  tooltip: Object(B.f)(
                     "#Sale_BrowseSection_SubscriptionID_ttip"
                   ),
                   onChange: this.OnSubscriptionIDChange,
@@ -20774,9 +20806,9 @@
                 Ze.createElement(
                   "div",
                   { className: vt.EventEditorTextTitle },
-                  Object(L.f)("#Sale_BrowseSection_TabList"),
+                  Object(B.f)("#Sale_BrowseSection_TabList"),
                   Ze.createElement(pr, {
-                    tooltip: Object(L.f)("#Sale_BrowseSection_TabList_ttip"),
+                    tooltip: Object(B.f)("#Sale_BrowseSection_TabList_ttip"),
                   })
                 ),
                 Ze.createElement(ct, {
@@ -20796,9 +20828,9 @@
                 Ze.createElement(
                   "div",
                   { className: vt.EventEditorTextTitle },
-                  Object(L.f)("#Sale_BrowseSection_AdditionalTabList"),
+                  Object(B.f)("#Sale_BrowseSection_AdditionalTabList"),
                   Ze.createElement(pr, {
-                    tooltip: Object(L.f)(
+                    tooltip: Object(B.f)(
                       "#Sale_BrowseSection_AdditionalTabList_ttip"
                     ),
                   })
@@ -20810,11 +20842,11 @@
                 })
               );
             }),
-            Object(I.c)([B.a], e.prototype, "OnSubscriptionIDChange", null),
-            Object(I.c)([B.a], e.prototype, "OnRemoveTab", null),
-            Object(I.c)([B.a], e.prototype, "OnAddTab", null),
-            Object(I.c)([B.a], e.prototype, "OnShowAsDemos", null),
-            Object(I.c)([B.a], e.prototype, "OnEnableSearch", null),
+            Object(I.c)([L.a], e.prototype, "OnSubscriptionIDChange", null),
+            Object(I.c)([L.a], e.prototype, "OnRemoveTab", null),
+            Object(I.c)([L.a], e.prototype, "OnAddTab", null),
+            Object(I.c)([L.a], e.prototype, "OnShowAsDemos", null),
+            Object(I.c)([L.a], e.prototype, "OnEnableSearch", null),
             (e = Object(I.c)([qe.a], e))
           );
         })(Ze.Component),
@@ -20840,17 +20872,17 @@
                 n = null == t ? void 0 : t.internal_type,
                 a = [
                   {
-                    label: Object(L.f)(
+                    label: Object(B.f)(
                       "#Sale_VOInternalSection_SubscriptionPricing"
                     ),
                     data: "subscription_pricing",
                   },
                   {
-                    label: Object(L.f)("#Sale_VOInternalSection_TabContents"),
+                    label: Object(B.f)("#Sale_VOInternalSection_TabContents"),
                     data: "tab_contents",
                   },
                   {
-                    label: Object(L.f)("#Sale_VOInternalSection_TabReferences"),
+                    label: Object(B.f)("#Sale_VOInternalSection_TabReferences"),
                     data: "tab_references",
                   },
                 ];
@@ -20873,16 +20905,16 @@
                 "subscription_pricing" === n &&
                   Ze.createElement(Ke.l, {
                     type: "text",
-                    label: Object(L.f)("#Sale_SubscriptionLogo"),
-                    tooltip: Object(L.f)("#Sale_SubscriptionLogo_ttip"),
+                    label: Object(B.f)("#Sale_SubscriptionLogo"),
+                    tooltip: Object(B.f)("#Sale_SubscriptionLogo_ttip"),
                     onChange: this.OnSubscriptionLogoChanged,
                     value:
                       (null == t ? void 0 : t.subscription_logo_image) || "",
                   })
               );
             }),
-            Object(I.c)([B.a], t.prototype, "OnTypeChanged", null),
-            Object(I.c)([B.a], t.prototype, "OnSubscriptionLogoChanged", null),
+            Object(I.c)([L.a], t.prototype, "OnTypeChanged", null),
+            Object(I.c)([L.a], t.prototype, "OnSubscriptionLogoChanged", null),
             (t = Object(I.c)([qe.a], t))
           );
         })(Ze.Component),
@@ -21091,15 +21123,15 @@
                   return { label: e.name, data: e.categoryid };
                 }),
                 i = [
-                  { label: Object(L.f)("#Sale_Wishlist"), data: "wishlist" },
+                  { label: Object(B.f)("#Sale_Wishlist"), data: "wishlist" },
                   {
-                    label: Object(L.f)("#Sale_InteractiveRecommender"),
+                    label: Object(B.f)("#Sale_InteractiveRecommender"),
                     data: "interactive_recommender",
                   },
-                  { label: Object(L.f)("#Sale_Tag"), data: "tag" },
-                  { label: Object(L.f)("#Sale_Category"), data: "category" },
+                  { label: Object(B.f)("#Sale_Tag"), data: "tag" },
+                  { label: Object(B.f)("#Sale_Category"), data: "category" },
                   {
-                    label: Object(L.f)("#Sale_BrowserSortOption_Discounted"),
+                    label: Object(B.f)("#Sale_BrowserSortOption_Discounted"),
                     data: "discounted",
                   },
                 ];
@@ -21114,7 +21146,7 @@
                 i.push({
                   label:
                     "(VO) " +
-                    Object(L.f)("#Sale_BrowserSortOption_TopWishlisted") +
+                    Object(B.f)("#Sale_BrowserSortOption_TopWishlisted") +
                     " (?)",
                   tooltip:
                     "Orders games featured on this sales page by all time wishlist data.",
@@ -21124,7 +21156,7 @@
                 i.push({
                   label:
                     "(VO) " +
-                    Object(L.f)("#Sale_BrowserSortOption_TrendingWishlisted") +
+                    Object(B.f)("#Sale_BrowserSortOption_TrendingWishlisted") +
                     " (?)",
                   tooltip:
                     "Orders games featured on this sales page by using trending wishlist data from last 2 weeks as a sliding window.",
@@ -21134,7 +21166,7 @@
                 i.push({
                   label:
                     "(VO) " +
-                    Object(L.f)("#Sale_BrowserSortOption_PopularPurchased") +
+                    Object(B.f)("#Sale_BrowserSortOption_PopularPurchased") +
                     " (?)",
                   tooltip:
                     "Show games featured on this sale page, ordered by their recent trending sales data",
@@ -21144,7 +21176,7 @@
                 i.push({
                   label:
                     "(VO) " +
-                    Object(L.f)(
+                    Object(B.f)(
                       "#Sale_BrowserSortOption_PopularPurchasedDiscounted"
                     ) +
                     " (?)",
@@ -21156,7 +21188,7 @@
                 i.push({
                   label:
                     "(VO) " +
-                    Object(L.f)("#Sale_BrowserSortOption_NewAndTrending") +
+                    Object(B.f)("#Sale_BrowserSortOption_NewAndTrending") +
                     " (?)",
                   tooltip:
                     "Shows games in a similar fashion to the front pages New and Trending tab. Mix of recency of release, review score and play count",
@@ -21166,7 +21198,7 @@
                 i.push({
                   label:
                     "(VO) " +
-                    Object(L.f)("#Sale_BrowserSortOption_PopularComingSoon") +
+                    Object(B.f)("#Sale_BrowserSortOption_PopularComingSoon") +
                     " (?)",
                   tooltip:
                     "Orders not released games featured on this sales page by their all time wishlists data.",
@@ -21176,7 +21208,7 @@
                 i.push({
                   label:
                     "(VO) " +
-                    Object(L.f)("#Sale_BrowserSortOption_MostPlayedDemo") +
+                    Object(B.f)("#Sale_BrowserSortOption_MostPlayedDemo") +
                     " (?)",
                   tooltip:
                     "Orders games featured on this sales page by total demo player count (all-time).",
@@ -21186,7 +21218,7 @@
                 i.push({
                   label:
                     "(VO) " +
-                    Object(L.f)("#Sale_BrowserSortOption_DailyActiveUserDemo") +
+                    Object(B.f)("#Sale_BrowserSortOption_DailyActiveUserDemo") +
                     " (?)",
                   tooltip:
                     "Orders games featured on this sales page by yesterdays peak player count.",
@@ -21196,7 +21228,7 @@
                 i.push({
                   label:
                     "(VO) " +
-                    Object(L.f)("#Sale_BrowserSortOption_PlayedNowDemo") +
+                    Object(B.f)("#Sale_BrowserSortOption_PlayedNowDemo") +
                     " (?)",
                   tooltip:
                     "This is limited to Demo AppIDs. Using only featured games from this sale page. Will sort games using live server player count data with a 5 minute.",
@@ -21274,7 +21306,7 @@
                   { className: Object(pt.a)(vt.FlexRowContainer) },
                   Ze.createElement(Ke.h, {
                     strClassName: Pn.SmartSelType,
-                    label: Object(L.f)("#Sale_SmartSectionType"),
+                    label: Object(B.f)("#Sale_SmartSectionType"),
                     rgOptions: i,
                     selectedOption:
                       this.props.saleSection.smart_section_type || "wishlist",
@@ -21292,7 +21324,7 @@
                           Pn.SmartSelLabel
                         ),
                       },
-                      Object(L.f)("#Sale_SmartSection_MaxApps")
+                      Object(B.f)("#Sale_SmartSection_MaxApps")
                     ),
                     Ze.createElement(
                       "div",
@@ -21324,7 +21356,7 @@
                         return (t.m_refInput = e);
                       },
                       type: "text",
-                      label: Object(L.f)("#Sale_SelectTag"),
+                      label: Object(B.f)("#Sale_SelectTag"),
                       onChange: this.UpdateTagSuggestions,
                     }),
                     Ze.createElement(
@@ -21344,7 +21376,7 @@
                 "category" === o &&
                   Ze.createElement(Ke.h, {
                     key: a.length,
-                    label: Object(L.f)("#Sale_SelectCategory"),
+                    label: Object(B.f)("#Sale_SelectCategory"),
                     strDropDownClassName: vt.DropDownScroll,
                     rgOptions: a,
                     selectedOption:
@@ -21384,14 +21416,14 @@
                 })
               );
             }),
-            Object(I.c)([B.a], e.prototype, "OnSmartSectionTypeChange", null),
-            Object(I.c)([B.a], e.prototype, "OnSmartSectionMaxAppChange", null),
-            Object(I.c)([B.a], e.prototype, "SetSmartSectionCategory", null),
-            Object(I.c)([B.a], e.prototype, "SetSmartSectionTag", null),
-            Object(I.c)([B.a], e.prototype, "UpdateTagSuggestions", null),
-            Object(I.c)([B.a], e.prototype, "SetMasterAppID", null),
+            Object(I.c)([L.a], e.prototype, "OnSmartSectionTypeChange", null),
+            Object(I.c)([L.a], e.prototype, "OnSmartSectionMaxAppChange", null),
+            Object(I.c)([L.a], e.prototype, "SetSmartSectionCategory", null),
+            Object(I.c)([L.a], e.prototype, "SetSmartSectionTag", null),
+            Object(I.c)([L.a], e.prototype, "UpdateTagSuggestions", null),
+            Object(I.c)([L.a], e.prototype, "SetMasterAppID", null),
             Object(I.c)(
-              [B.a],
+              [L.a],
               e.prototype,
               "OnChooseMasterSubscriptionID",
               null
@@ -21475,8 +21507,8 @@
             (e.prototype.OnRemoveAllPrompt = function () {
               Object(et.d)(
                 Ze.createElement($e.c, {
-                  strTitle: Object(L.f)("#Sale_RemoveAllConfirm_Title"),
-                  strDescription: Object(L.f)("#Sale_RemoveAllConfirm_Body"),
+                  strTitle: Object(B.f)("#Sale_RemoveAllConfirm_Title"),
+                  strDescription: Object(B.f)("#Sale_RemoveAllConfirm_Body"),
                   onOK: this.OnRemoveAllConfirmed,
                 }),
                 window
@@ -21503,7 +21535,7 @@
                 r = i.capsuleContainer,
                 o = i.editModel;
               e
-                ? ((a = Be(o)),
+                ? ((a = Le(o)),
                   (r.sale_tag_filter = { clauses: new Array() }),
                   (r.capsules = Ge(a, r.sale_tag_filter, r.capsules)))
                 : ((null !==
@@ -21528,10 +21560,10 @@
                 i.capsules.length
                   ? Object(et.d)(
                       Ze.createElement($e.c, {
-                        strTitle: Object(L.f)(
+                        strTitle: Object(B.f)(
                           "#Sale_TaggedItemFilter_EnableTitle"
                         ),
-                        strDescription: Object(L.f)(
+                        strDescription: Object(B.f)(
                           "#Sale_TaggedItemFilter_EnableDescription"
                         ),
                         onOK: function () {
@@ -21548,10 +21580,10 @@
                 t.length
                   ? Object(et.d)(
                       Ze.createElement($e.c, {
-                        strTitle: Object(L.f)(
+                        strTitle: Object(B.f)(
                           "#Sale_TaggedItemFilter_DisableTitle"
                         ),
-                        strDescription: Object(L.f)(
+                        strDescription: Object(B.f)(
                           "#Sale_TaggedItemFilter_DisableDescription"
                         ),
                         onOK: function () {
@@ -21568,13 +21600,13 @@
                 t = e.editModel,
                 n = e.capsuleContainer,
                 a =
-                  Object(L.f)(
+                  Object(B.f)(
                     this.props.titleLocToken ||
                       "#Sale_Section_FilteredProducts_Title"
                   ) +
                   " - " +
                   n.capsules.length,
-                i = Object(L.f)(
+                i = Object(B.f)(
                   this.props.ttipLocToken ||
                     "#Sale_Section_FilteredProducts_Tooltip"
                 ),
@@ -21673,7 +21705,7 @@
                 n = e.capsuleContainer,
                 i = [
                   {
-                    label: Object(L.f)("#Sale_VisibilityIndex_Default"),
+                    label: Object(B.f)("#Sale_VisibilityIndex_Default"),
                     data: -1,
                   },
                 ],
@@ -21684,7 +21716,7 @@
                 for (var s = 0; s < r; s++) {
                   var c = t.GetEventStartTime() + 86400 * s,
                     d = {
-                      label: Object(L.n)(
+                      label: Object(B.n)(
                         s + 1 == r
                           ? "#Sale_VisibilityIndex_DayTimeOnward"
                           : "#Sale_VisibilityIndex_DayTime",
@@ -21735,7 +21767,7 @@
                       Ze.createElement(
                         "span",
                         null,
-                        Object(L.f)("#Sale_VisibilityIndex_ShowAll")
+                        Object(B.f)("#Sale_VisibilityIndex_ShowAll")
                       )
                     )
                   )
@@ -21768,20 +21800,20 @@
                         Ze.createElement(
                           "span",
                           null,
-                          Object(L.f)("#Sale_VisibilityIndex_ShowDay", t + 1, e)
+                          Object(B.f)("#Sale_VisibilityIndex_ShowDay", t + 1, e)
                         )
                       )
                     )
                   );
                 }));
               var g =
-                  Object(L.f)(
+                  Object(B.f)(
                     this.props.titleLocToken ||
                       "#Sale_Section_ReferencedProducts_Title"
                   ) +
                   " - " +
                   n.capsules.length,
-                h = Object(L.f)(
+                h = Object(B.f)(
                   this.props.ttipLocToken ||
                     "#Sale_Section_ReferencedProducts_Tooltip"
                 );
@@ -21820,7 +21852,7 @@
                         Ze.createElement(
                           "span",
                           null,
-                          Object(L.f)("#Sale_VisibilityIndex_ShowFilter")
+                          Object(B.f)("#Sale_VisibilityIndex_ShowFilter")
                         ),
                         _
                       ),
@@ -21832,7 +21864,7 @@
                         Kn.a,
                         {
                           className: Pn.SaleImportBarTooltip,
-                          toolTipContent: Object(L.f)(
+                          toolTipContent: Object(B.f)(
                             "#Sale_RemoveAll_Tooltip"
                           ),
                         },
@@ -21842,14 +21874,14 @@
                             className: Pn.SaleImportBarButton,
                             onClick: this.OnRemoveAllPrompt,
                           },
-                          Object(L.f)("#Sale_RemoveAll")
+                          Object(B.f)("#Sale_RemoveAll")
                         )
                       ),
                       Ze.createElement(
                         Kn.a,
                         {
                           className: Pn.SaleImportBarTooltip,
-                          toolTipContent: Object(L.f)(
+                          toolTipContent: Object(B.f)(
                             "#Sale_ImportItems_Tooltip"
                           ),
                         },
@@ -21859,14 +21891,14 @@
                             className: Pn.SaleImportBarButton,
                             onClick: this.ImportSaleItems,
                           },
-                          Object(L.f)("#Sale_ImportItems")
+                          Object(B.f)("#Sale_ImportItems")
                         )
                       ),
                       Ze.createElement(
                         Kn.a,
                         {
                           className: Pn.SaleImportBarTooltip,
-                          toolTipContent: Object(L.f)("#Sale_EditRaw_Tooltip"),
+                          toolTipContent: Object(B.f)("#Sale_EditRaw_Tooltip"),
                         },
                         Ze.createElement(
                           Ke.d,
@@ -21874,17 +21906,17 @@
                             className: Pn.SaleImportBarButton,
                             onClick: this.OnEditRaw,
                           },
-                          Object(L.f)("#Sale_EditRaw")
+                          Object(B.f)("#Sale_EditRaw")
                         )
                       ),
                       Ze.createElement(
-                        Ln,
+                        Bn,
                         { requireAdmin: !0, clanSteamID: t.GetClanSteamID() },
                         Ze.createElement(
                           Kn.a,
                           {
                             className: Pn.SaleImportBarTooltip,
-                            toolTipContent: Object(L.f)(
+                            toolTipContent: Object(B.f)(
                               "#Sale_DiscountEvent_ttip"
                             ),
                           },
@@ -21894,7 +21926,7 @@
                               className: Pn.SaleImportBarButton,
                               onClick: this.OnSelectDiscountEvent,
                             },
-                            Object(L.f)("#Sale_DiscountEvent_Add")
+                            Object(B.f)("#Sale_DiscountEvent_Add")
                           )
                         )
                       )
@@ -21925,7 +21957,7 @@
                     1 < i.length &&
                       Ze.createElement(Ke.h, {
                         strDropDownClassName: vt.DropDownScroll,
-                        label: Object(L.f)("#Sale_VisibilityIndex_Label"),
+                        label: Object(B.f)("#Sale_VisibilityIndex_Label"),
                         rgOptions: i,
                         selectedOption: this.state.nImportCapsuleVisibiltyIndex,
                         onChange: function (e) {
@@ -21938,7 +21970,7 @@
                         },
                         disabled: 1 == i.length,
                         strClassName: Pn.SaleDaySelection,
-                        tooltip: Object(L.f)("#Sale_VisibilityIndex_Tooltip"),
+                        tooltip: Object(B.f)("#Sale_VisibilityIndex_Tooltip"),
                       })
                   )
               );
@@ -21955,37 +21987,37 @@
                 i &&
                   Ze.createElement(Ke.p, {
                     onChange: this.OnUseTagFilterChange,
-                    label: Object(L.f)("#Sale_TaggedItemFilter"),
+                    label: Object(B.f)("#Sale_TaggedItemFilter"),
                     description: n.sale_tag_filter
                       ? ""
-                      : Object(L.f)("#Sale_TaggedItemFilterDescription"),
+                      : Object(B.f)("#Sale_TaggedItemFilterDescription"),
                     checked: Boolean(n.sale_tag_filter),
                   }),
                 a && this.renderFilterView(),
                 !a && this.renderItemView()
               );
             }),
-            Object(I.c)([B.a], e.prototype, "RemoveCapsule", null),
-            Object(I.c)([B.a], e.prototype, "AddCapsule", null),
-            Object(I.c)([B.a], e.prototype, "ImportSaleItems", null),
-            Object(I.c)([B.a], e.prototype, "OnChangeVisibilityDate", null),
+            Object(I.c)([L.a], e.prototype, "RemoveCapsule", null),
+            Object(I.c)([L.a], e.prototype, "AddCapsule", null),
+            Object(I.c)([L.a], e.prototype, "ImportSaleItems", null),
+            Object(I.c)([L.a], e.prototype, "OnChangeVisibilityDate", null),
             Object(I.c)(
-              [B.a],
+              [L.a],
               e.prototype,
               "OnVisibilityIndexFilterChange",
               null
             ),
-            Object(I.c)([B.a], e.prototype, "OnRemoveAllPrompt", null),
-            Object(I.c)([B.a], e.prototype, "OnRemoveAllConfirmed", null),
-            Object(I.c)([B.a], e.prototype, "OnEditRaw", null),
+            Object(I.c)([L.a], e.prototype, "OnRemoveAllPrompt", null),
+            Object(I.c)([L.a], e.prototype, "OnRemoveAllConfirmed", null),
+            Object(I.c)([L.a], e.prototype, "OnEditRaw", null),
             Object(I.c)(
-              [B.a],
+              [L.a],
               e.prototype,
               "OnUseTagFilterChangeConfirmed",
               null
             ),
-            Object(I.c)([B.a], e.prototype, "OnUseTagFilterChange", null),
-            Object(I.c)([B.a], e.prototype, "OnSelectDiscountEvent", null),
+            Object(I.c)([L.a], e.prototype, "OnUseTagFilterChange", null),
+            Object(I.c)([L.a], e.prototype, "OnSelectDiscountEvent", null),
             (e = Object(I.c)([qe.a], e))
           );
         })(Ze.Component),
@@ -22021,14 +22053,14 @@
                 return Ze.createElement(
                   "div",
                   null,
-                  Object(L.f)("#EventEditor_InvalidCapsuleItem")
+                  Object(B.f)("#EventEditor_InvalidCapsuleItem")
                 );
               var t = this.DoesCapsuleConflict(),
                 n = ji(e),
                 a = n.appData,
                 i = n.linkURL,
                 r = n.bInvalidID,
-                o = Object(L.f)("#AppType_" + e.type);
+                o = Object(B.f)("#AppType_" + e.type);
               return Ze.createElement(
                 Oa.i,
                 { className: h.a.FlexCenter, url: i },
@@ -22054,9 +22086,9 @@
                   Ze.createElement(
                     "div",
                     { className: Pn.SaleCapsuleConflict },
-                    Object(L.f)("#Sale_NotFoundCapsule"),
+                    Object(B.f)("#Sale_NotFoundCapsule"),
                     Ze.createElement(pr, {
-                      tooltip: Object(L.f)(
+                      tooltip: Object(B.f)(
                         "#Sale_NotFoundCapsule_Tooltip",
                         o,
                         e.id
@@ -22067,16 +22099,16 @@
                   Ze.createElement(
                     "div",
                     { className: Pn.SaleCapsuleConflict },
-                    Object(L.f)("#Sale_DuplicateCapsule"),
+                    Object(B.f)("#Sale_DuplicateCapsule"),
                     Ze.createElement(pr, {
-                      tooltip: Object(L.f)("#Sale_DuplicateCapsule_Tooltip"),
+                      tooltip: Object(B.f)("#Sale_DuplicateCapsule_Tooltip"),
                     })
                   ),
                 Boolean(void 0 !== e.visibility_index) &&
                   Ze.createElement(
                     "span",
                     { className: Pn.SaleVisibilityDate },
-                    Object(L.f)(
+                    Object(B.f)(
                       "#Sale_VisibilityIndex_Day",
                       e.visibility_index + 1
                     )
@@ -22174,7 +22206,7 @@
                           void 0 !== (_ = m[u]).visibility_index &&
                           _.visibility_index >= p
                         ) {
-                          d = Object(L.f)(
+                          d = Object(B.f)(
                             "#Sale_EditRaw_Error_InvalidDay",
                             _.id,
                             _.visibility_index
@@ -22210,7 +22242,7 @@
                 Ze.createElement(
                   Ke.k,
                   null,
-                  Object(L.f)("#Sale_EditRaw_Title")
+                  Object(B.f)("#Sale_EditRaw_Title")
                 ),
                 Ze.createElement(
                   Ke.b,
@@ -22218,32 +22250,32 @@
                   Ze.createElement(
                     "div",
                     null,
-                    Object(L.f)("#Sale_EditRaw_Desc_1")
+                    Object(B.f)("#Sale_EditRaw_Desc_1")
                   ),
                   Ze.createElement(
                     "div",
                     null,
-                    Object(L.f)("#Sale_EditRaw_Desc_2")
+                    Object(B.f)("#Sale_EditRaw_Desc_2")
                   ),
                   Ze.createElement(
                     "div",
                     { className: gt.EditRawExample },
-                    Object(L.f)("#Sale_EditRaw_Example_Title")
+                    Object(B.f)("#Sale_EditRaw_Example_Title")
                   ),
                   Ze.createElement(
                     "div",
                     { className: gt.EditRawExample },
-                    Object(L.f)("#Sale_EditRaw_Example_1")
+                    Object(B.f)("#Sale_EditRaw_Example_1")
                   ),
                   Ze.createElement(
                     "div",
                     { className: gt.EditRawExample },
-                    Object(L.f)("#Sale_EditRaw_Example_2")
+                    Object(B.f)("#Sale_EditRaw_Example_2")
                   ),
                   Ze.createElement(
                     "div",
                     { className: gt.EditRawExample },
-                    Object(L.f)("#Sale_EditRaw_Example_3")
+                    Object(B.f)("#Sale_EditRaw_Example_3")
                   ),
                   Boolean(this.state.errMsg) &&
                     Ze.createElement(
@@ -22272,20 +22304,20 @@
                     Ze.createElement(
                       Ke.q,
                       { onClick: this.OnCompleteEdit, disabled: !1 },
-                      Object(L.f)("#Button_Confirm"),
+                      Object(B.f)("#Button_Confirm"),
                       " "
                     ),
                     Ze.createElement(
                       Ke.d,
                       { onClick: e, disabled: !1 },
-                      Object(L.f)("#Button_Cancel")
+                      Object(B.f)("#Button_Cancel")
                     )
                   )
               );
             }),
-            Object(I.c)([B.a], e.prototype, "OnCompleteEdit", null),
-            Object(I.c)([B.a], e.prototype, "DoImport", null),
-            Object(I.c)([B.a], e.prototype, "OnTextChange", null),
+            Object(I.c)([L.a], e.prototype, "OnCompleteEdit", null),
+            Object(I.c)([L.a], e.prototype, "DoImport", null),
+            Object(I.c)([L.a], e.prototype, "OnTextChange", null),
             (e = Object(I.c)([qe.a], e))
           );
         })(Ze.Component),
@@ -22339,7 +22371,7 @@
                 Ze.createElement(
                   Ke.k,
                   null,
-                  Object(L.f)("#Sale_ReorderSections")
+                  Object(B.f)("#Sale_ReorderSections")
                 ),
                 Ze.createElement(
                   Ke.b,
@@ -22361,15 +22393,15 @@
                       Ze.createElement(
                         Ke.q,
                         { onClick: this.OnOK },
-                        Object(L.f)("#Sale_TagFilter_OK")
+                        Object(B.f)("#Sale_TagFilter_OK")
                       )
                     )
                   )
                 )
               );
             }),
-            Object(I.c)([B.a], e.prototype, "RenderSection", null),
-            Object(I.c)([B.a], e.prototype, "OnOK", null),
+            Object(I.c)([L.a], e.prototype, "RenderSection", null),
+            Object(I.c)([L.a], e.prototype, "OnOK", null),
             e
           );
         })(Ze.Component),
@@ -22407,7 +22439,7 @@
                             2,
                             this.setState({
                               bImporting: !1,
-                              errMsg: Object(L.f)(
+                              errMsg: Object(B.f)(
                                 "#Sale_ImportItems_ConvertNumberFailed",
                                 n[0]
                               ),
@@ -22476,7 +22508,7 @@
                         Ze.createElement(
                           "span",
                           null,
-                          Object(L.f)("#Sale_ImportItems_Type_" + e)
+                          Object(B.f)("#Sale_ImportItems_Type_" + e)
                         )
                       )
                     )
@@ -22494,7 +22526,7 @@
                   Ze.createElement(
                     Ke.k,
                     null,
-                    Object(L.f)("#Sale_ImportItems")
+                    Object(B.f)("#Sale_ImportItems")
                   ),
                   Ze.createElement(
                     Ke.b,
@@ -22502,7 +22534,7 @@
                     Ze.createElement(
                       "div",
                       null,
-                      Object(L.f)("#Sale_ImportItems_Desc")
+                      Object(B.f)("#Sale_ImportItems_Desc")
                     ),
                     Boolean(this.state.errMsg) &&
                       Ze.createElement(
@@ -22531,22 +22563,22 @@
                       Ze.createElement(
                         Ke.q,
                         { onClick: this.OnImportAction, disabled: !1 },
-                        Object(L.f)("#Button_Confirm"),
+                        Object(B.f)("#Button_Confirm"),
                         " "
                       ),
                       Ze.createElement(
                         Ke.d,
                         { onClick: this.props.closeModal, disabled: !1 },
-                        Object(L.f)("#Button_Cancel")
+                        Object(B.f)("#Button_Cancel")
                       )
                     )
                 )
               );
             }),
-            Object(I.c)([B.a], e.prototype, "OnImportAction", null),
-            Object(I.c)([B.a], e.prototype, "DoImport", null),
-            Object(I.c)([B.a], e.prototype, "OnTypeChange", null),
-            Object(I.c)([B.a], e.prototype, "OnImportChange", null),
+            Object(I.c)([L.a], e.prototype, "OnImportAction", null),
+            Object(I.c)([L.a], e.prototype, "DoImport", null),
+            Object(I.c)([L.a], e.prototype, "OnTypeChange", null),
+            Object(I.c)([L.a], e.prototype, "OnImportChange", null),
             (e = Object(I.c)([qe.a], e))
           );
         })(Ze.Component),
@@ -22554,7 +22586,7 @@
           return Ze.createElement(
             Ke.d,
             {
-              "data-tooltip-text": Object(L.f)(
+              "data-tooltip-text": Object(B.f)(
                 e.bIsMinimized
                   ? "#Sale_Section_Maximize_Tooltip"
                   : "#Sale_Section_Minimize_Tooltip"
@@ -22593,13 +22625,13 @@
                 s = new Array();
               this.AddEntry(
                 s,
-                Object(L.f)("#Sale_PageConfigOptions"),
+                Object(B.f)("#Sale_PageConfigOptions"),
                 "SalePageEdit_Config"
               ),
                 (Nn(o.GetClanSteamID(), !1) || 0 < l.GetTaggedItems().length) &&
                   this.AddEntry(
                     s,
-                    Object(L.f)(
+                    Object(B.f)(
                       "#Sale_TaggedItemsSection",
                       l.GetTaggedItems().length
                     ),
@@ -22607,17 +22639,17 @@
                   ),
                 this.AddEntry(
                   s,
-                  Object(L.f)("#EventEditor_ArtworkType_sale_header"),
+                  Object(B.f)("#EventEditor_ArtworkType_sale_header"),
                   "SalePageEdit_SaleBgImg"
                 ),
                 this.AddEntry(
                   s,
-                  Object(L.f)("#EventEditor_ArtworkType_sale_product_banner"),
+                  Object(B.f)("#EventEditor_ArtworkType_sale_product_banner"),
                   "SalePageEdit_SaleBanner"
                 ),
                 this.AddEntry(
                   s,
-                  Object(L.f)(
+                  Object(B.f)(
                     "#EventEditor_ArtworkType_sale_product_mobile_banner"
                   ),
                   "SalePageEdit_SaleMobileBanner"
@@ -22637,14 +22669,14 @@
                   Xe.a,
                   null,
                   Ze.createElement(Wi, {
-                    strHeader: Object(L.f)("#Sale_TOC"),
+                    strHeader: Object(B.f)("#Sale_TOC"),
                     rows: s,
                     onSelected: this.OnSelected,
                   })
                 )
               );
             }),
-            Object(I.c)([B.a], t.prototype, "OnSelected", null),
+            Object(I.c)([L.a], t.prototype, "OnSelected", null),
             (t = Object(I.c)([qe.a], t))
           );
         })(Ze.Component),
@@ -22653,11 +22685,11 @@
             var t, n, a, i;
             "name" === e.target.name
               ? ((t = o.name),
-                (n = L.a.Set(t || [], r, e.target.value)),
+                (n = B.a.Set(t || [], r, e.target.value)),
                 (o.name = n))
               : "subtitle" === e.target.name &&
                 ((a = o.subtitle),
-                (i = L.a.Set(a || [], r, e.target.value)),
+                (i = B.a.Set(a || [], r, e.target.value)),
                 (o.subtitle = i)),
               l();
           }
@@ -22682,20 +22714,20 @@
               { className: _t.FacetValueCtn },
               Ze.createElement(Ke.l, {
                 name: "name",
-                label: Object(L.f)("#FacetedBrowseEditor_Name"),
-                tooltip: Object(L.f)(
+                label: Object(B.f)("#FacetedBrowseEditor_Name"),
+                tooltip: Object(B.f)(
                   "#FacetedBrowseEditor_Tooltip_FacetValue_Name"
                 ),
-                value: L.a.Get(o.name, r),
+                value: B.a.Get(o.name, r),
                 onChange: t,
               }),
               Ze.createElement(Ke.l, {
                 name: "subtitle",
-                label: Object(L.f)("#FacetedBrowseEditor_Subtitle"),
-                tooltip: Object(L.f)(
+                label: Object(B.f)("#FacetedBrowseEditor_Subtitle"),
+                tooltip: Object(B.f)(
                   "#FacetedBrowseEditor_Tooltip_FacetValue_Subtitle"
                 ),
-                value: L.a.Get(o.subtitle, r),
+                value: B.a.Get(o.subtitle, r),
                 onChange: t,
               }),
               Ze.createElement(
@@ -22706,7 +22738,7 @@
                       Ze.createElement(Ui, {
                         editModel: a,
                         filter: o.filter,
-                        title: Object(L.f)("#Sale_TagFilter_EditFilter"),
+                        title: Object(B.f)("#Sale_TagFilter_EditFilter"),
                         onApplyFilter: n,
                         ignoreStartingReferences: i,
                       }),
@@ -22714,7 +22746,7 @@
                     );
                   },
                 },
-                Object(L.f)("#Sale_TagFilter_EditFilter")
+                Object(B.f)("#Sale_TagFilter_EditFilter")
               )
             )
           );
@@ -22738,7 +22770,7 @@
               Ze.createElement(
                 "div",
                 { className: gt.EventEditorTextTitle },
-                Object(L.f)(
+                Object(B.f)(
                   "#FacetedBrowseEditor_NumFacetValues",
                   n.length.toString()
                 )
@@ -22786,7 +22818,7 @@
                         r();
                     },
                   },
-                  Object(L.f)("#FacetedBrowseEditor_AddFacetValue")
+                  Object(B.f)("#FacetedBrowseEditor_AddFacetValue")
                 )
               )
           );
@@ -22808,14 +22840,14 @@
             },
             Ze.createElement(Ke.l, {
               name: "name",
-              label: Object(L.f)("#FacetedBrowseEditor_Name"),
-              tooltip: Object(L.f)("#FacetedBrowseEditor_Tooltip_Facet_Name"),
-              value: L.a.Get(i.name, a),
+              label: Object(B.f)("#FacetedBrowseEditor_Name"),
+              tooltip: Object(B.f)("#FacetedBrowseEditor_Tooltip_Facet_Name"),
+              value: B.a.Get(i.name, a),
               onChange: function (e) {
                 var t, n;
                 "name" === e.target.name &&
                   ((t = i.name),
-                  (n = L.a.Set(t || [], a, e.target.value)),
+                  (n = B.a.Set(t || [], a, e.target.value)),
                   (i.name = n)),
                   r();
               },
@@ -22854,7 +22886,7 @@
               Ze.createElement(
                 "div",
                 { className: gt.EventEditorTextTitle },
-                Object(L.f)(
+                Object(B.f)(
                   "#FacetedBrowseEditor_NumFacets",
                   a.length.toString()
                 )
@@ -22897,7 +22929,7 @@
                       a.push({ name: [], facetValues: [] }), o();
                     },
                   },
-                  Object(L.f)("#FacetedBrowseEditor_AddFacet")
+                  Object(B.f)("#FacetedBrowseEditor_AddFacet")
                 )
               )
           );
@@ -22915,26 +22947,26 @@
             s = a[1],
             c = [
               {
-                label: Object(L.f)("#FacetedBrowseEditor_SortFacetValues_Name"),
-                tooltip: Object(L.f)(
+                label: Object(B.f)("#FacetedBrowseEditor_SortFacetValues_Name"),
+                tooltip: Object(B.f)(
                   "#FacetedBrowseEditor_Tooltip_SortFacetValues_ByName"
                 ),
                 data: ne.o.k_ESortFacetsByName,
               },
               {
-                label: Object(L.f)(
+                label: Object(B.f)(
                   "#FacetedBrowseEditor_SortFacetValues_MatchCount"
                 ),
-                tooltip: Object(L.f)(
+                tooltip: Object(B.f)(
                   "#FacetedBrowseEditor_Tooltip_SortFacetValues_ByCount"
                 ),
                 data: ne.o.k_ESortFacetsByMatchCount,
               },
               {
-                label: Object(L.f)(
+                label: Object(B.f)(
                   "#FacetedBrowseEditor_SortFacetValues_Manual"
                 ),
-                tooltip: Object(L.f)(
+                tooltip: Object(B.f)(
                   "#FacetedBrowseEditor_Tooltip_SortFacetValues_Manual"
                 ),
                 data: ne.o.k_ESortFacetsManually,
@@ -22963,11 +22995,11 @@
             Xe.a,
             null,
             Ze.createElement(
-              Ln,
+              Bn,
               { clanSteamID: r.GetClanSteamID(), requireAdmin: !0 },
               Ze.createElement(Ke.p, {
-                label: Object(L.f)("#FacetedBrowseEditor_FacetsCheckbox"),
-                description: Object(L.f)(
+                label: Object(B.f)("#FacetedBrowseEditor_FacetsCheckbox"),
+                description: Object(B.f)(
                   "#FacetedBrowseEditor_FacetsCheckboxHelp"
                 ),
                 checked: i.enable_faceted_browsing,
@@ -22988,7 +23020,7 @@
                     Ze.createElement(
                       "div",
                       { className: Ci.FilterTitle },
-                      Object(L.f)("#FacetedBrowseEditor_FacetsSection")
+                      Object(B.f)("#FacetedBrowseEditor_FacetsSection")
                     )
                   ),
                   Ze.createElement(
@@ -23015,7 +23047,7 @@
                           },
                           style: { color: i.highlighted_facet_color },
                         },
-                        Object(L.f)(
+                        Object(B.f)(
                           "#FacetedBrowseEditor_HighlightedFacetColor"
                         )
                       )
@@ -23026,9 +23058,9 @@
                       Ze.createElement(
                         "span",
                         null,
-                        Object(L.f)("#FacetedBrowseEditor_AutoGenerate"),
+                        Object(B.f)("#FacetedBrowseEditor_AutoGenerate"),
                         Ze.createElement(pr, {
-                          tooltip: Object(L.f)(
+                          tooltip: Object(B.f)(
                             "#FacetedBrowseEditor_Tooltip_AutoGenerate"
                           ),
                         })
@@ -23152,10 +23184,10 @@
                               : n.length)
                               ? Object(et.c)(
                                   Ze.createElement($e.c, {
-                                    strTitle: Object(L.f)(
+                                    strTitle: Object(B.f)(
                                       "#FacetedBrowseEditor_AutoGenerateDialogTitle"
                                     ),
-                                    strDescription: Object(L.f)(
+                                    strDescription: Object(B.f)(
                                       "#FacetedBrowseEditor_AutoGenerateDialogText"
                                     ),
                                     onOK: t,
@@ -23165,7 +23197,7 @@
                               : t();
                           },
                         },
-                        Object(L.f)("#FacetedBrowseEditor_AutoGenerateButton")
+                        Object(B.f)("#FacetedBrowseEditor_AutoGenerateButton")
                       )
                     ),
                     o &&
@@ -23175,9 +23207,9 @@
                         Ze.createElement(
                           "span",
                           null,
-                          Object(L.f)("#FacetedBrowseEditor_PruneUnused"),
+                          Object(B.f)("#FacetedBrowseEditor_PruneUnused"),
                           Ze.createElement(pr, {
-                            tooltip: Object(L.f)(
+                            tooltip: Object(B.f)(
                               "#FacetedBrowseEditor_Tooltip_PruneUnused"
                             ),
                           })
@@ -23185,7 +23217,7 @@
                         Ze.createElement(
                           Ke.d,
                           { onClick: d },
-                          Object(L.f)("#FacetedBrowseEditor_PruneUnusedButton")
+                          Object(B.f)("#FacetedBrowseEditor_PruneUnusedButton")
                         )
                       ),
                     Ze.createElement(
@@ -23194,9 +23226,9 @@
                       Ze.createElement(
                         "span",
                         null,
-                        Object(L.f)("#FacetedBrowseEditor_MinMatchesText"),
+                        Object(B.f)("#FacetedBrowseEditor_MinMatchesText"),
                         Ze.createElement(pr, {
-                          tooltip: Object(L.f)(
+                          tooltip: Object(B.f)(
                             "#FacetedBrowseEditor_Tooltip_MinMatches"
                           ),
                         })
@@ -23223,9 +23255,9 @@
                       Ze.createElement(
                         "span",
                         null,
-                        Object(L.f)("#FacetedBrowseEditor_MaxFacetValuesText"),
+                        Object(B.f)("#FacetedBrowseEditor_MaxFacetValuesText"),
                         Ze.createElement(pr, {
-                          tooltip: Object(L.f)(
+                          tooltip: Object(B.f)(
                             "#FacetedBrowseEditor_Tooltip_MaxFacetValues"
                           ),
                         })
@@ -23252,9 +23284,9 @@
                       Ze.createElement(
                         "span",
                         null,
-                        Object(L.f)("#FacetedBrowseEditor_SortFacetValuesText"),
+                        Object(B.f)("#FacetedBrowseEditor_SortFacetValuesText"),
                         Ze.createElement(pr, {
-                          tooltip: Object(L.f)(
+                          tooltip: Object(B.f)(
                             "#FacetedBrowseEditor_Tooltip_SortFacetValues"
                           ),
                         })
@@ -23297,13 +23329,13 @@
           Ze.createElement(
             Ke.k,
             null,
-            Object(L.f)("#FacetedBrowseEditor_AutoGenerate")
+            Object(B.f)("#FacetedBrowseEditor_AutoGenerate")
           ),
           Ze.createElement(
             Ke.b,
             null,
             Ze.createElement(Ke.e, {
-              label: Object(L.f)(
+              label: Object(B.f)(
                 "#FacetedBrowseEditor_AutoGenerateOptions_FeatureTagForController"
               ),
               checked: i,
@@ -23322,12 +23354,12 @@
                   n({ bForceFeatureTagForFullController: i }), t();
                 },
               },
-              Object(L.f)("#Button_OK")
+              Object(B.f)("#Button_OK")
             ),
             Ze.createElement(
               Ke.d,
               { onClick: t },
-              Object(L.f)("#Button_Cancel")
+              Object(B.f)("#Button_Cancel")
             )
           )
         );
@@ -23736,7 +23768,7 @@
                       (30 == this.m_editModel.GetFirstLanguageWithTitle() &&
                         this.m_editModel.SetName(
                           this.m_editModel.GetCurEditLanguage(),
-                          Object(L.f)("#EventEditor_Placeholder_Title")
+                          Object(B.f)("#EventEditor_Placeholder_Title")
                         ),
                       !this.m_editModel.BHasEmailEnabled())
                     )
@@ -23851,7 +23883,7 @@
                             2,
                             {
                               success: 11,
-                              msg: Object(L.f)(
+                              msg: Object(B.f)(
                                 "#EventEditor_Publish_CannotPublishWithoutSaveFirst"
                               ),
                             },
@@ -23872,7 +23904,7 @@
                             2,
                             {
                               success: 11,
-                              msg: Object(L.f)(
+                              msg: Object(B.f)(
                                 "#EventEditor_SaveOrPublish_MissingLocalizationInternalError"
                               ),
                             },
@@ -23898,11 +23930,11 @@
                           2,
                           {
                             success: 27,
-                            msg: Object(L.f)(
+                            msg: Object(B.f)(
                               "#EventEditor_SaveOrPublish_ClobberWarning",
-                              Object(L.m)(n.last_update_rtime),
+                              Object(B.m)(n.last_update_rtime),
                               n.persona_name,
-                              Object(L.m)(this.m_editModel.GetLastUpdateTime())
+                              Object(B.m)(this.m_editModel.GetLastUpdateTime())
                             ),
                           },
                         ]
@@ -24587,7 +24619,7 @@
                           : this.setState({
                               bLoading: !1,
                               bIsError: !1,
-                              strErrorMsg: Object(L.f)(
+                              strErrorMsg: Object(B.f)(
                                 "#EventError_PermissionDenied"
                               ),
                             }),
@@ -24650,7 +24682,7 @@
               return Ze.createElement(
                 "div",
                 { className: e ? vt.OnIndicator : vt.OffIndicator },
-                Object(L.f)(e ? "#Dialog_On" : "#Dialog_Off")
+                Object(B.f)(e ? "#Dialog_On" : "#Dialog_Off")
               );
             }),
             t
@@ -24668,7 +24700,7 @@
                   return (
                     ie.a.EnsureStoreCapsuleInfoLoaded(D.b.APPID),
                     D.b.IS_CREATOR_HOME
-                      ? Bn.a.LoadCreatorHome(new ae.a(D.b.CLANSTEAMID), null)
+                      ? Ln.a.LoadCreatorHome(new ae.a(D.b.CLANSTEAMID), null)
                       : D.b.IS_CURATOR &&
                         D.b.VANITY_ID &&
                         re.a.LoadOGGClanInfoForIdentifier(D.b.VANITY_ID),
@@ -24687,7 +24719,7 @@
                 o = null;
               return (
                 D.b.IS_CREATOR_HOME
-                  ? (e = Bn.a.GetCreatorHome(new ae.a(D.b.CLANSTEAMID))) &&
+                  ? (e = Ln.a.GetCreatorHome(new ae.a(D.b.CLANSTEAMID))) &&
                     e.BIsLoaded() &&
                     ((i = Object(Ia.e)(e.GetCreatorHomeURL("developer"))),
                     (r = e.GetAvatarURLFullSize()),
@@ -24874,18 +24906,18 @@
                         className: ht.a.CategoryImage,
                         src: Eo.a,
                       }),
-                    Object(L.f)(this.props.name)
+                    Object(B.f)(this.props.name)
                   ),
                   Ze.createElement(
                     "div",
                     { className: ht.a.EventSubCategory_Desc },
-                    Object(L.f)(this.props.description)
+                    Object(B.f)(this.props.description)
                   )
                 )
               );
             }),
-            Object(I.c)([B.a], e.prototype, "onCategoryChoice", null),
-            Object(I.c)([B.a], e.prototype, "OnMouseEnter", null),
+            Object(I.c)([L.a], e.prototype, "onCategoryChoice", null),
+            Object(I.c)([L.a], e.prototype, "OnMouseEnter", null),
             (e = Object(I.c)([qe.a], e))
           );
         })(Ze.Component),
@@ -25008,12 +25040,12 @@
                           className: ht.a.CategoryImage,
                           src: Eo.a,
                         }),
-                      Object(L.f)(this.props.name)
+                      Object(B.f)(this.props.name)
                     ),
                     Ze.createElement(
                       "div",
                       { className: ht.a.EventCategory_Desc },
-                      Object(L.f)(this.props.description)
+                      Object(B.f)(this.props.description)
                     )
                   )
                 ),
@@ -25025,14 +25057,14 @@
                     Ze.createElement(
                       "div",
                       { className: ht.a.EventSubCategory_Section_Desc },
-                      Object(L.f)(this.props.subCategoryDesc)
+                      Object(B.f)(this.props.subCategoryDesc)
                     ),
                   this.state.expanded &&
                     this.props.subCategoryTitle &&
                     Ze.createElement(
                       "div",
                       { className: ht.a.EventSubCategory_Section_Title },
-                      Object(L.f)(this.props.subCategoryTitle)
+                      Object(B.f)(this.props.subCategoryTitle)
                     ),
                   this.state.expanded &&
                     this.props.subCategories &&
@@ -25040,8 +25072,8 @@
                 )
               );
             }),
-            Object(I.c)([B.a], e.prototype, "OnMouseEnter", null),
-            Object(I.c)([B.a], e.prototype, "ToggleExpand", null),
+            Object(I.c)([L.a], e.prototype, "OnMouseEnter", null),
+            Object(I.c)([L.a], e.prototype, "ToggleExpand", null),
             (e = Object(I.c)([qe.a], e))
           );
         })(Ze.Component),
@@ -25062,7 +25094,7 @@
                 o = so.GetCurHoverCategory();
               return (
                 o && o.type
-                  ? ((e = Object(L.f)("#PartnerEvent_" + o.type)),
+                  ? ((e = Object(B.f)("#PartnerEvent_" + o.type)),
                     Co.some(function (e) {
                       return e == o.type;
                     })
@@ -25073,7 +25105,7 @@
                               key:
                                 "EventCategory_Visibility_GeneralWithException",
                             },
-                            Object(L.f)(
+                            Object(B.f)(
                               "#EventCategory_Visibility_GeneralWithException",
                               e
                             )
@@ -25088,7 +25120,7 @@
                                     "EventCategory_Visibility_SmallEventException",
                                   className: ht.a.ExceptionNote,
                                 },
-                                Object(L.f)(
+                                Object(B.f)(
                                   "#EventCategory_Visibility_SmallEventException"
                                 )
                               )
@@ -25102,7 +25134,7 @@
                                     "EventCategory_Visibility_CrosspostException",
                                   className: ht.a.ExceptionNote,
                                 },
-                                Object(L.f)(
+                                Object(B.f)(
                                   "#EventCategory_Visibility_CrosspostException"
                                 )
                               )
@@ -25116,7 +25148,7 @@
                                     "EventCategory_Visibility_UpcomingReleaseException",
                                   className: ht.a.ExceptionNote,
                                 },
-                                Object(L.f)(
+                                Object(B.f)(
                                   "#EventCategory_Visibility_UpcomingReleaseException"
                                 )
                               )
@@ -25130,7 +25162,7 @@
                                     "EventCategory_Visibility_DiscountException",
                                   className: ht.a.ExceptionNote,
                                 },
-                                Object(L.f)(
+                                Object(B.f)(
                                   "#EventCategory_Visibility_DiscountException"
                                 )
                               )
@@ -25144,7 +25176,7 @@
                                     "EventCategory_Visibility_InGameDiscountException",
                                   className: ht.a.ExceptionNote,
                                 },
-                                Object(L.f)(
+                                Object(B.f)(
                                   "#EventCategory_Visibility_InGameDiscountException"
                                 )
                               )
@@ -25157,14 +25189,14 @@
                                     "EventCategory_Visibility_LibraryHomeException",
                                   className: ht.a.ExceptionNote,
                                 },
-                                Object(L.f)(
+                                Object(B.f)(
                                   "#EventCategory_Visibility_LibraryHomeException"
                                 )
                               )
                             ))
                       : o.tags &&
                         -1 != o.tags.indexOf("steam_award_vote_request")
-                      ? ((t = Object(L.f)(
+                      ? ((t = Object(B.f)(
                           "#PartnerEvent_SteamAwardVoteRequest"
                         )),
                         r.push(
@@ -25174,7 +25206,7 @@
                               key:
                                 "EventCategory_Visibility_GeneralWithException",
                             },
-                            Object(L.f)(
+                            Object(B.f)(
                               "#EventCategory_Visibility_GeneralWithException",
                               t
                             )
@@ -25188,7 +25220,7 @@
                                 "EventCategory_Visibility_SteamAwardsVoteRequest_Exception",
                               className: ht.a.ExceptionNote,
                             },
-                            Object(L.f)(
+                            Object(B.f)(
                               "#EventCategory_Visibility_SteamAwardsVoteRequest_Exception"
                             )
                           )
@@ -25202,7 +25234,7 @@
                                 "EventCategory_Visibility_Curator_Group_Members_Exception",
                               className: ht.a.ExceptionNote,
                             },
-                            Object(L.f)(
+                            Object(B.f)(
                               "#EventCategory_Visibility_Curator_Group_Members"
                             )
                           )
@@ -25216,7 +25248,7 @@
                                 "EventCategory_Visibility_Curator_Public_Exception",
                               className: ht.a.ExceptionNote,
                             },
-                            Object(L.f)(
+                            Object(B.f)(
                               "#EventCategory_Visibility_Curator_Public"
                             )
                           )
@@ -25225,7 +25257,7 @@
                           Ze.createElement(
                             "span",
                             { key: "EventCategory_Visibility_General" },
-                            Object(L.f)("#EventCategory_Visibility_General", e)
+                            Object(B.f)("#EventCategory_Visibility_General", e)
                           )
                         ),
                     r.push(
@@ -25242,7 +25274,7 @@
                               "https://partner.steamgames.com/doc/marketing/event_tools/visibility",
                             target: "_blank",
                           },
-                          Object(L.f)("#EventCategory_Visibility_Docs")
+                          Object(B.f)("#EventCategory_Visibility_Docs")
                         )
                       )
                     ),
@@ -25254,7 +25286,7 @@
                         Ze.createElement(
                           "p",
                           { key: "EventCategory_Visibility_AdditonalNotes" },
-                          Object(L.f)(
+                          Object(B.f)(
                             "#EventCategory_Visibility_AdditonalNotes"
                           )
                         )
@@ -25267,7 +25299,7 @@
                                 key: "EventCategory_Visibility_EventEnd",
                                 className: ht.a.ExceptionNote,
                               },
-                              Object(L.f)("#EventCategory_Visibility_EventEnd")
+                              Object(B.f)("#EventCategory_Visibility_EventEnd")
                             )
                           )
                         : a &&
@@ -25278,7 +25310,7 @@
                                 key: "EventCategory_Visibility_NoCapsule",
                                 className: ht.a.ExceptionNote,
                               },
-                              Object(L.f)("#EventCategory_Visibility_NoCapsule")
+                              Object(B.f)("#EventCategory_Visibility_NoCapsule")
                             )
                           ),
                       i &&
@@ -25290,7 +25322,7 @@
                                 "EventCategory_Visibility_SpotlightRecommended",
                               className: ht.a.ExceptionNote,
                             },
-                            Object(L.f)(
+                            Object(B.f)(
                               "#EventCategory_Visibility_SpotlightRecommended"
                             )
                           )
@@ -25299,7 +25331,7 @@
                       Ze.createElement(
                         "span",
                         { key: "EventCategory_Visibility_PlaceHolder" },
-                        Object(L.f)("#EventCategory_Visibility_PlaceHolder")
+                        Object(B.f)("#EventCategory_Visibility_PlaceHolder")
                       )
                     ),
                 r
@@ -25316,7 +25348,7 @@
                   Ze.createElement(
                     "div",
                     { className: ht.a.EventVisibility_Title },
-                    Object(L.f)("#EventReach_Title")
+                    Object(B.f)("#EventReach_Title")
                   ),
                   e
                 )
@@ -25350,12 +25382,12 @@
             Ze.createElement(
               "div",
               { className: Object(pt.a)(jo.EventTitle) },
-              Object(L.f)("#EventEditor_Category_Halloween")
+              Object(B.f)("#EventEditor_Category_Halloween")
             ),
             Ze.createElement(
               "div",
               { className: Object(pt.a)(jo.EventDesc) },
-              Object(L.n)(
+              Object(B.n)(
                 "#EventEditor_Category_Halloween_Desc",
                 Ze.createElement(
                   "a",
@@ -25364,7 +25396,7 @@
                       "https://partner.steamgames.com/doc/marketing/event_tools/halloween",
                     target: "_blank",
                   },
-                  Object(L.f)("#EventEditor_Category_Halloween_Docs")
+                  Object(B.f)("#EventEditor_Category_Halloween_Docs")
                 )
               )
             ),
@@ -25470,13 +25502,13 @@
                       Ze.createElement(
                         "span",
                         { className: jo.CategoryTitle },
-                        Object(L.f)("#promo_steamawards2020_cat" + e)
+                        Object(B.f)("#promo_steamawards2020_cat" + e)
                       ),
                       Ze.createElement(
                         "span",
                         null,
                         " - ",
-                        Object(L.f)("#promo_steamawards2020_cat" + e + "_desc"),
+                        Object(B.f)("#promo_steamawards2020_cat" + e + "_desc"),
                         " "
                       )
                     )
@@ -25488,13 +25520,13 @@
                 Ze.createElement(
                   "div",
                   { className: ft.a.EventEditorTextTitle },
-                  Object(L.f)(
+                  Object(B.f)(
                     "#EventEditor_Options_SteamAwardNominations_Title"
                   ),
                   Ze.createElement(
                     "span",
                     { className: ht.a.RequiredFieldLabel },
-                    Object(L.f)("#EventEditor_Required")
+                    Object(B.f)("#EventEditor_Required")
                   )
                 ),
                 Ze.createElement(
@@ -25519,13 +25551,13 @@
                       "div",
                       { className: jo.event_nomination_banner_text },
                       a
-                        ? Object(L.f)(
+                        ? Object(B.f)(
                             "#EventEditor_Options_SteamAwardNominations_Description"
                           )
-                        : Object(L.f)(
+                        : Object(B.f)(
                             "#EventEditor_Options_SteamAwardNominations_OldGame_Description",
                             "2020",
-                            Object(L.k)(t)
+                            Object(B.k)(t)
                           )
                     )
                   ),
@@ -25680,12 +25712,12 @@
                     Ze.createElement(
                       "div",
                       { className: ht.a.Title },
-                      Object(L.f)("#EventCategory_SteamGameFestival_Title")
+                      Object(B.f)("#EventCategory_SteamGameFestival_Title")
                     ),
                     Ze.createElement(
                       "div",
                       { className: ht.a.Summary },
-                      Object(L.f)("#EventCategory_SteamGameFestival_Summary")
+                      Object(B.f)("#EventCategory_SteamGameFestival_Summary")
                     ),
                     Ze.createElement(
                       "a",
@@ -25695,7 +25727,7 @@
                         target: "_blank",
                         className: Object(pt.a)(ft.a.Button, ht.a.Link),
                       },
-                      Object(L.f)("#EventCategory_SteamGameFestival_Link")
+                      Object(B.f)("#EventCategory_SteamGameFestival_Link")
                     )
                   ),
                   Ze.createElement(
@@ -25829,7 +25861,7 @@
                       Ze.createElement(
                         "div",
                         { className: ft.a.maintitle },
-                        Object(L.f)("#EventDisplay_EventCreateTitle")
+                        Object(B.f)("#EventDisplay_EventCreateTitle")
                       ),
                       Ze.createElement(
                         "div",
@@ -25840,14 +25872,14 @@
                             className: Object(pt.a)(ft.a.Button),
                             to: m(this.props.match.params.appid_or_vanity_str),
                           },
-                          Object(L.f)("#EventDisplay_Events")
+                          Object(B.f)("#EventDisplay_Events")
                         )
                       )
                     ),
                     Ze.createElement(
                       "div",
                       { className: ft.a.subtitle },
-                      Object(L.f)("#EventCategory_Communicate")
+                      Object(B.f)("#EventCategory_Communicate")
                     )
                   ),
                   Ze.createElement(
@@ -25859,13 +25891,13 @@
                       Ze.createElement(
                         "div",
                         { className: ht.a.EventCategory_Top_Title },
-                        Object(L.f)("#EventCategory_SelectCategory")
+                        Object(B.f)("#EventCategory_SelectCategory")
                       ),
                       this.state.clanInfo
                         ? u
                         : Ze.createElement(dt.a, {
                             position: "center",
-                            string: Object(L.f)("#Loading"),
+                            string: Object(B.f)("#Loading"),
                           })
                     ),
                     Ze.createElement(To, null)
@@ -25873,7 +25905,7 @@
                 )
               );
             }),
-            Object(I.c)([B.a], e.prototype, "onCategoryChosen", null),
+            Object(I.c)([L.a], e.prototype, "onCategoryChosen", null),
             (e = Object(I.c)([qe.a], e))
           );
         })(Ze.Component),
@@ -25896,8 +25928,8 @@
         ),
         ko = n("WFIl"),
         No = n("KzMr"),
-        Lo = n("EOKZ"),
-        Bo = n.n(Lo),
+        Bo = n("EOKZ"),
+        Lo = n.n(Bo),
         Ro = n("Z7M3"),
         Fo = n("02Wr"),
         xo = n("0XOM"),
@@ -25983,14 +26015,14 @@
                       ? Ze.createElement(
                           "div",
                           { className: xo.TileTextStartsIn },
-                          Object(L.f)(
+                          Object(B.f)(
                             "#EventEditor_Status_WillBeVisible_EventStart"
                           )
                         )
                       : Ze.createElement(
                           "div",
                           { className: xo.TileTextStartsIn },
-                          Object(L.n)(
+                          Object(B.n)(
                             "#EventEditor_Status_WillBeVisible_At",
                             Ze.createElement(Vt.a, {
                               dateAndTime: a.GetVisibilityStartTimeAndDateUnixSeconds(),
@@ -26007,20 +26039,20 @@
                     ? (E = Ze.createElement(
                         "span",
                         { className: xo.EventStateUpcoming },
-                        Object(L.f)("#EventDisplay_Upcoming")
+                        Object(B.f)("#EventDisplay_Upcoming")
                       ))
                     : Object(se.a)(a.type) &&
                       a.GetEndTimeAndDateUnixSeconds() > h
                     ? (E = Ze.createElement(
                         "span",
                         { className: xo.EventStateActive },
-                        Object(L.f)("#EventDisplay_Active")
+                        Object(B.f)("#EventDisplay_Active")
                       ))
                     : a.GetStartTimeAndDateUnixSeconds() > h + 3600 &&
                       (E = Ze.createElement(
                         "span",
                         { className: xo.EventStateRecent },
-                        Object(L.f)("#EventDisplay_RecentlyActive")
+                        Object(B.f)("#EventDisplay_RecentlyActive")
                       ))),
                   r &&
                     (p =
@@ -26119,7 +26151,7 @@
                                       "/admin/manage_rss/",
                                   },
                                   " " +
-                                    Object(L.f)(
+                                    Object(B.f)(
                                       "#EventEditor_Status_FromRSSFeed"
                                     )
                                 )
@@ -26129,7 +26161,7 @@
                             Ze.createElement(
                               "div",
                               { className: xo.TileStats },
-                              Object(L.n)(
+                              Object(B.n)(
                                 "#EventDashBoard_Summary_Tile_Impressions",
                                 Ze.createElement(
                                   "span",
@@ -26138,7 +26170,7 @@
                                 )
                               ),
                               Ze.createElement("br", null),
-                              Object(L.n)(
+                              Object(B.n)(
                                 "#EventDashBoard_Summary_Tile_Read",
                                 Ze.createElement(
                                   "span",
@@ -26161,7 +26193,7 @@
                               Ze.createElement(
                                 "div",
                                 null,
-                                Object(L.f)(
+                                Object(B.f)(
                                   "#EventEditor_DataFromConnectAnnouncement"
                                 )
                               ),
@@ -26176,7 +26208,7 @@
                                   route: Fn.a.k_eView,
                                   openNewWindow: !0,
                                 },
-                                Object(L.f)("#Button_ViewPage")
+                                Object(B.f)("#Button_ViewPage")
                               )
                             )
                           : Ze.createElement(
@@ -26188,7 +26220,7 @@
                             ),
                         o &&
                           Ze.createElement(
-                            Ln,
+                            Bn,
                             { requireAdmin: !0, clanSteamID: a.clanSteamID },
                             Ze.createElement(zo, { eventModel: a })
                           )
@@ -26197,9 +26229,9 @@
                   )
                 );
               }),
-              Object(I.c)([B.a], e.prototype, "OnFallbackClick", null),
-              Object(I.c)([B.a], e.prototype, "OnGotoPage", null),
-              Object(I.c)([B.a], e.prototype, "OnIgnoreFallbackClick", null),
+              Object(I.c)([L.a], e.prototype, "OnFallbackClick", null),
+              Object(I.c)([L.a], e.prototype, "OnGotoPage", null),
+              Object(I.c)([L.a], e.prototype, "OnIgnoreFallbackClick", null),
               (e = Object(I.c)([qe.a], e))
             );
           })(Ze.Component)),
@@ -26224,10 +26256,10 @@
                     i = t.GetLanguagesWithTokens();
                   1 < i.length
                     ? (i.sort(function (e, t) {
-                        return Object(L.f)(
+                        return Object(B.f)(
                           "#Language_" + Object(ee.a)(e)
                         ).localeCompare(
-                          Object(L.f)("#Language_" + Object(ee.a)(t))
+                          Object(B.f)("#Language_" + Object(ee.a)(t))
                         );
                       }),
                       (n = new Array()),
@@ -26240,7 +26272,7 @@
                             onChange: function (e) {
                               e ? a.splice(i.indexOf(t), 1) : a.push(t);
                             },
-                            label: Object(L.f)("#Language_" + Object(ee.a)(t)),
+                            label: Object(B.f)("#Language_" + Object(ee.a)(t)),
                             checked: !0,
                           })
                         );
@@ -26249,11 +26281,11 @@
                         Ze.createElement(
                           $e.c,
                           {
-                            strTitle: Object(L.f)("#Button_Clone"),
+                            strTitle: Object(B.f)("#Button_Clone"),
                             onOK: function () {
                               return r.DoCloneAction(t, a);
                             },
-                            strDescription: Object(L.f)(
+                            strDescription: Object(B.f)(
                               "#EventEditor_Clone_MultiLanguages"
                             ),
                           },
@@ -26271,16 +26303,16 @@
                   var t = Object(ce.a)(e);
                   Object(et.d)(
                     Ze.createElement($e.e, {
-                      strTitle: Object(L.f)("#EventEditor_CloneError"),
+                      strTitle: Object(B.f)("#EventEditor_CloneError"),
                       bAlertDialog: !0,
                       bDestructiveWarning: !0,
-                      strDescription: Object(L.f)(
+                      strDescription: Object(B.f)(
                         "#EventEditor_CloneError_Desc",
                         t.strErrorMsg
                       ),
                     }),
                     window,
-                    { strTitle: Object(L.f)("#EventEditor_CloneError") }
+                    { strTitle: Object(B.f)("#EventEditor_CloneError") }
                   );
                 });
             }),
@@ -26292,7 +26324,7 @@
                 Ka(
                   n,
                   e,
-                  L.b.GetLanguageListForRealms([te.d.k_ESteamRealmGlobal])
+                  B.b.GetLanguageListForRealms([te.d.k_ESteamRealmGlobal])
                 )),
                 this.props.fnOnGotoPage(null, "clone");
             }),
@@ -26314,16 +26346,16 @@
                   var t = Object(ce.a)(e);
                   Object(et.d)(
                     Ze.createElement($e.e, {
-                      strTitle: Object(L.f)("#EventEditor_PublishingError"),
+                      strTitle: Object(B.f)("#EventEditor_PublishingError"),
                       bAlertDialog: !0,
                       bDestructiveWarning: !0,
-                      strDescription: Object(L.f)(
+                      strDescription: Object(B.f)(
                         "#EventEditor_PublishingError_Desc",
                         t.strErrorMsg
                       ),
                     }),
                     window,
-                    { strTitle: Object(L.f)("#EventEditor_PublishingError") }
+                    { strTitle: Object(B.f)("#EventEditor_PublishingError") }
                   );
                 });
             }),
@@ -26369,14 +26401,14 @@
                       onClick: this.StopPropagation,
                       vanityID: a,
                     },
-                    Object(L.f)("#Button_Edit")
+                    Object(B.f)("#Button_Edit")
                   ),
                 i &&
                   Ze.createElement(
                     Fn.c,
                     {
                       className: Object(pt.a)(xo.ManageButton, xo.Edit),
-                      "data-tooltip-text": Object(L.f)(
+                      "data-tooltip-text": Object(B.f)(
                         "#EventEditor_Button_MigrateAndEdit_Announcement_ttip"
                       ),
                       eventModel: n,
@@ -26384,14 +26416,14 @@
                       onClick: this.StopPropagation,
                       vanityID: a,
                     },
-                    Object(L.f)("#EventEditor_Button_MigrateAndEdit")
+                    Object(B.f)("#EventEditor_Button_MigrateAndEdit")
                   ),
                 r &&
                   Ze.createElement(
                     Fn.c,
                     {
                       className: Object(pt.a)(xo.ManageButton, xo.View),
-                      "data-tooltip-text": Object(L.f)(
+                      "data-tooltip-text": Object(B.f)(
                         "#EventEditor_Button_PreviewButton_ttip"
                       ),
                       eventModel: n,
@@ -26399,7 +26431,7 @@
                       onClick: this.StopPropagation,
                       vanityID: a,
                     },
-                    Object(L.f)("#EventDisplay_Preview")
+                    Object(B.f)("#EventDisplay_Preview")
                   ),
                 !r &&
                   Ze.createElement(
@@ -26411,7 +26443,7 @@
                       onClick: this.StopPropagation,
                       vanityID: a,
                     },
-                    Object(L.f)("#EventDisplay_View")
+                    Object(B.f)("#EventDisplay_View")
                   ),
                 !o &&
                   !i &&
@@ -26421,7 +26453,7 @@
                       className: Object(pt.a)(xo.ManageButton, xo.Publish),
                       onClick: this.OnPublishEvent,
                     },
-                    Object(L.f)("#EventDisplay_Publish")
+                    Object(B.f)("#EventDisplay_Publish")
                   ),
                 Ze.createElement("div", { className: xo.Spacer }, " "),
                 !i &&
@@ -26431,28 +26463,28 @@
                       className: Object(pt.a)(xo.ManageButton, xo.Clone),
                       onClick: this.OnClone,
                     },
-                    Object(L.f)("#Button_Clone")
+                    Object(B.f)("#Button_Clone")
                   ),
                 Ze.createElement(
                   "div",
                   {
                     className: Object(pt.a)(xo.ManageButton, xo.Delete),
-                    "data-tooltip-text": Object(L.f)(
+                    "data-tooltip-text": Object(B.f)(
                       "#EventEditor_Button_DeleteButton_ttip"
                     ),
                     onClick: this.OnDeleteClickAndVerify,
                   },
-                  Object(L.f)("#Button_Delete")
+                  Object(B.f)("#Button_Delete")
                 )
               );
             }),
-            Object(I.c)([B.a], t.prototype, "OnIgnoreFallbackClick", null),
-            Object(I.c)([B.a], t.prototype, "OnClone", null),
-            Object(I.c)([B.a], t.prototype, "DoCloneAction", null),
-            Object(I.c)([B.a], t.prototype, "OnPublishEvent", null),
-            Object(I.c)([B.a], t.prototype, "OnPublishSuccess", null),
-            Object(I.c)([B.a], t.prototype, "StopPropagation", null),
-            Object(I.c)([B.a], t.prototype, "OnDeleteClickAndVerify", null),
+            Object(I.c)([L.a], t.prototype, "OnIgnoreFallbackClick", null),
+            Object(I.c)([L.a], t.prototype, "OnClone", null),
+            Object(I.c)([L.a], t.prototype, "DoCloneAction", null),
+            Object(I.c)([L.a], t.prototype, "OnPublishEvent", null),
+            Object(I.c)([L.a], t.prototype, "OnPublishSuccess", null),
+            Object(I.c)([L.a], t.prototype, "StopPropagation", null),
+            Object(I.c)([L.a], t.prototype, "OnDeleteClickAndVerify", null),
             (t = Object(I.c)([qe.a], t))
           );
         })(Ze.Component);
@@ -26519,7 +26551,7 @@
             [r, l, s]
           ),
           r
-            ? Ze.createElement(dt.a, { string: Object(L.f)("#Loading") })
+            ? Ze.createElement(dt.a, { string: Object(B.f)("#Loading") })
             : a
             ? Ze.createElement(
                 "div",
@@ -26543,7 +26575,7 @@
                   a <= i
                     ? "#EventEditor_EventStartedAndPublished"
                     : "#EventEditor_EventStartedAndPublishedFuture"),
-                Object(L.n)(
+                Object(B.n)(
                   t,
                   Ze.createElement(Vt.a, { dateAndTime: a, bSingleLine: !0 })
                 ))
@@ -26552,7 +26584,7 @@
                   ? (t = "#EventEditor_EventPublishedThenStartedBothFuture")
                   : i < a &&
                     (t = "#EventEditor_EventPublishedThenStartedStartFuture"),
-                Object(L.n)(
+                Object(B.n)(
                   t,
                   Ze.createElement(Vt.a, { dateAndTime: n, bSingleLine: !0 }),
                   Ze.createElement(Vt.a, { dateAndTime: a, bSingleLine: !0 })
@@ -26569,7 +26601,7 @@
             Ze.createElement(
               "span",
               {
-                "data-tooltip-text": Object(L.f)(
+                "data-tooltip-text": Object(B.f)(
                   "#EventEditor_EventStartedAndPublished_ttip"
                 ),
               },
@@ -26700,7 +26732,7 @@
                 Ze.createElement(
                   $e.e,
                   null,
-                  Object(L.f)("#Error_Description", t.errorCode, t.strErrorMsg)
+                  Object(B.f)("#Error_Description", t.errorCode, t.strErrorMsg)
                 ),
                 window
               );
@@ -26910,7 +26942,7 @@
                   {
                     className: Object(pt.a)(
                       "maincontent",
-                      Bo.a.EventDashboardCtn
+                      Lo.a.EventDashboardCtn
                     ),
                   },
                   Ze.createElement(Yo, {
@@ -26919,14 +26951,14 @@
                   })
                 ),
                 Ze.createElement(
-                  Ln,
+                  Bn,
                   { requireAdmin: !0, clanSteamID: e },
                   Ze.createElement(
                     "div",
                     {
                       className: Object(pt.a)(
                         "maincontent",
-                        Bo.a.EventDashboardCtn
+                        Lo.a.EventDashboardCtn
                       ),
                     },
                     Ze.createElement(Ke.e, {
@@ -26940,12 +26972,12 @@
                 ),
                 Ze.createElement(
                   "div",
-                  { className: Bo.a.MainLists },
+                  { className: Lo.a.MainLists },
                   0 < t.length &&
                     Ze.createElement(
                       "div",
                       {
-                        className: Object(pt.a)(Bo.a.Section, Bo.a.Unpublished),
+                        className: Object(pt.a)(Lo.a.Section, Lo.a.Unpublished),
                       },
                       Ze.createElement(
                         "div",
@@ -26953,18 +26985,18 @@
                           className: Object(pt.a)(
                             "maincontent",
                             "eventlist",
-                            Bo.a.EventDashboardCtn
+                            Lo.a.EventDashboardCtn
                           ),
                         },
                         Ze.createElement(
                           "div",
-                          { className: Bo.a.DisplaySectionHeader },
-                          Object(L.f)("#EventDisplay_Unpublished_Title"),
+                          { className: Lo.a.DisplaySectionHeader },
+                          Object(B.f)("#EventDisplay_Unpublished_Title"),
                           " ",
                           Ze.createElement(
                             "span",
                             {
-                              "data-tooltip-text": Object(L.f)(
+                              "data-tooltip-text": Object(B.f)(
                                 "#EventDisplay_Unpublished_SubTitle"
                               ),
                             },
@@ -26977,25 +27009,25 @@
                   0 < n.length &&
                     Ze.createElement(
                       "div",
-                      { className: Object(pt.a)(Bo.a.Section, Bo.a.Staged) },
+                      { className: Object(pt.a)(Lo.a.Section, Lo.a.Staged) },
                       Ze.createElement(
                         "div",
                         {
                           className: Object(pt.a)(
                             "maincontent",
                             "eventlist",
-                            Bo.a.EventDashboardCtn
+                            Lo.a.EventDashboardCtn
                           ),
                         },
                         Ze.createElement(
                           "div",
-                          { className: Bo.a.DisplaySectionHeader },
-                          Object(L.f)("#EventDisplay_Stage_Title"),
+                          { className: Lo.a.DisplaySectionHeader },
+                          Object(B.f)("#EventDisplay_Stage_Title"),
                           " ",
                           Ze.createElement(
                             "span",
                             {
-                              "data-tooltip-text": Object(L.f)(
+                              "data-tooltip-text": Object(B.f)(
                                 "#EventDisplay_Stage_SubTitle"
                               ),
                             },
@@ -27009,9 +27041,9 @@
                     "div",
                     {
                       className: Object(pt.a)(
-                        Bo.a.Section,
-                        Bo.a.DisplaySectionHeaderContainer,
-                        Bo.a.Visible
+                        Lo.a.Section,
+                        Lo.a.DisplaySectionHeaderContainer,
+                        Lo.a.Visible
                       ),
                     },
                     Ze.createElement(
@@ -27020,18 +27052,18 @@
                         className: Object(pt.a)(
                           "maincontent",
                           "eventlist",
-                          Bo.a.EventDashboardCtn
+                          Lo.a.EventDashboardCtn
                         ),
                       },
                       Ze.createElement(
                         "div",
-                        { className: Bo.a.DisplaySectionHeader },
-                        Object(L.f)("#EventDisplay_Visible_Title")
+                        { className: Lo.a.DisplaySectionHeader },
+                        Object(B.f)("#EventDisplay_Visible_Title")
                       ),
                       Ze.createElement(
                         "div",
-                        { className: Bo.a.DisplaySectionSubHeader },
-                        Object(L.f)("#EventDisplay_Visible_Title_WithRange")
+                        { className: Lo.a.DisplaySectionSubHeader },
+                        Object(B.f)("#EventDisplay_Visible_Title_WithRange")
                       ),
                       a && a,
                       !i &&
@@ -27039,40 +27071,40 @@
                         Ze.createElement(
                           "div",
                           null,
-                          Object(L.f)("#EventDisplay_NoPublic")
+                          Object(B.f)("#EventDisplay_NoPublic")
                         ),
                       i &&
                         Ze.createElement(dt.a, {
                           position: "center",
-                          string: Object(L.f)("#Loading"),
+                          string: Object(B.f)("#Loading"),
                         }),
                       this.state.bExhaustedEventList &&
                         Ze.createElement(
                           "div",
                           null,
-                          Object(L.f)("#EventDisplay_AllPublicShown")
+                          Object(B.f)("#EventDisplay_AllPublicShown")
                         ),
                       this.state.bErrorOnInfiniteScrollRequest &&
                         Ze.createElement(
                           "div",
                           null,
-                          Object(L.f)("#EventDisplay_HitErrorInfiniteScroll")
+                          Object(B.f)("#EventDisplay_HitErrorInfiniteScroll")
                         )
                     )
                   )
                 )
               );
             }),
-            Object(I.c)([B.a], e.prototype, "OnScroll", null),
+            Object(I.c)([L.a], e.prototype, "OnScroll", null),
             Object(I.c)(
-              [B.a],
+              [L.a],
               e.prototype,
               "LoadMorePublicEventWithDelay",
               null
             ),
-            Object(I.c)([B.a], e.prototype, "LoadMorePublicEvents", null),
+            Object(I.c)([L.a], e.prototype, "LoadMorePublicEvents", null),
             Object(I.c)(
-              [B.a],
+              [L.a],
               e.prototype,
               "UpdateShowEventMetaDataSizes",
               null
@@ -27095,11 +27127,11 @@
               Ze.createElement(
                 "div",
                 { className: ft.a.maintitle },
-                Object(L.f)("#EventDisplay_Events"),
+                Object(B.f)("#EventDisplay_Events"),
                 Ze.createElement(
                   "div",
                   { className: ft.a.subtitle },
-                  Object(L.f)("#EventDisplay_Edit_Desc")
+                  Object(B.f)("#EventDisplay_Edit_Desc")
                 )
               ),
               Ze.createElement(
@@ -27114,7 +27146,7 @@
                       return so.ResetModel();
                     },
                   },
-                  Object(L.f)("#EventDisplay_CreateNewEvent")
+                  Object(B.f)("#EventDisplay_CreateNewEvent")
                 )
               )
             ),
@@ -27187,15 +27219,15 @@
                       className: el.SavedImage,
                       src: Eo.a,
                     }),
-                  Object(L.f)(r ? "#Button_Save" : "#Button_Saved"),
+                  Object(B.f)(r ? "#Button_Save" : "#Button_Saved"),
                   r &&
                     Ze.createElement(
                       "span",
                       {
                         "data-tooltip-text": a
-                          ? Object(L.f)("#EventEditor_Create_ttip")
+                          ? Object(B.f)("#EventEditor_Create_ttip")
                           : i
-                          ? Object(L.f)("#EventEditor_SaveLive_ttip")
+                          ? Object(B.f)("#EventEditor_SaveLive_ttip")
                           : "",
                       },
                       a || i ? " (?)" : ""
@@ -27203,7 +27235,7 @@
                 )
               );
             }),
-            Object(I.c)([B.a], e.prototype, "OnSave", null),
+            Object(I.c)([L.a], e.prototype, "OnSave", null),
             (e = Object(I.c)([qe.a], e))
           );
         })(Ze.Component),
@@ -27237,8 +27269,8 @@
                     className: ft.a.EventBarBack,
                   },
                   28 == t
-                    ? Object(L.f)("#EventEditor_TitleActionNews")
-                    : Object(L.f)("#EventEditor_TitleAction")
+                    ? Object(B.f)("#EventEditor_TitleActionNews")
+                    : Object(B.f)("#EventEditor_TitleAction")
                 ),
                 Ze.createElement(
                   "div",
@@ -27246,7 +27278,7 @@
                   Ze.createElement(
                     "div",
                     { className: ft.a.EventBarTitle },
-                    Object(L.f)("#EventEditor_TitleState_Previewing")
+                    Object(B.f)("#EventEditor_TitleState_Previewing")
                   ),
                   Ze.createElement(oi, { editModel: e })
                 ),
@@ -27257,18 +27289,18 @@
                     Ze.createElement(
                       "span",
                       { className: $o.a.FallBackWarning },
-                      Object(L.f)(
+                      Object(B.f)(
                         "#EventPreview_UsingFallBack",
-                        Object(L.f)("#Language_" + Object(ee.a)(a))
+                        Object(B.f)("#Language_" + Object(ee.a)(a))
                       ),
                       Ze.createElement(
                         "span",
                         {
                           className: "ttip",
-                          "data-tooltip-text": Object(L.f)(
+                          "data-tooltip-text": Object(B.f)(
                             "#EventPreview_UsingFallBack_ttip",
-                            Object(L.f)("#Language_" + Object(ee.a)(a)),
-                            Object(L.f)("#Language_" + Object(ee.a)(n))
+                            Object(B.f)("#Language_" + Object(ee.a)(a)),
+                            Object(B.f)("#Language_" + Object(ee.a)(n))
                           ),
                         },
                         " (?)"
@@ -27284,7 +27316,7 @@
                         eventModel: e.GetEventModel(),
                         vanityID: o,
                       },
-                      Object(L.f)("#EventEditor_Preview")
+                      Object(B.f)("#EventEditor_Preview")
                     ),
                   s &&
                     Ze.createElement(
@@ -27295,7 +27327,7 @@
                         eventModel: e.GetEventModel(),
                         vanityID: o,
                       },
-                      Object(L.f)("#EventEditor_PreviewSale")
+                      Object(B.f)("#EventEditor_PreviewSale")
                     ),
                   Ze.createElement(
                     po.b,
@@ -27308,8 +27340,8 @@
                             ""),
                     },
                     28 == t
-                      ? Object(L.f)("#EventEditor_TitleActionNews")
-                      : Object(L.f)("#EventEditor_TitleAction")
+                      ? Object(B.f)("#EventEditor_TitleActionNews")
+                      : Object(B.f)("#EventEditor_TitleAction")
                   )
                 )
               );
@@ -27343,7 +27375,7 @@
                       Ze.createElement(
                         "div",
                         { className: $o.a.StoreNavigationPlaceholder },
-                        Object(L.f)("#Sale_ReservedStoreNavigation")
+                        Object(B.f)("#Sale_ReservedStoreNavigation")
                       ),
                       Ze.createElement(Oa.c, {
                         eventModel: a,
@@ -27376,7 +27408,7 @@
                       ],
                     }),
                     previewMode: !0,
-                    otherEventRow: Ze.createElement(Bt.a, {
+                    otherEventRow: Ze.createElement(Lt.a, {
                       clanAccountID: a.clanSteamID.GetAccountID(),
                       gidAnnouncement: a.AnnouncementGID,
                       partnerEventStore: so,
@@ -27696,7 +27728,7 @@
                               Ze.createElement(
                                 "div",
                                 { className: cl.a.VOWarning },
-                                Object(L.f)("#EventEditor_VOWarning")
+                                Object(B.f)("#EventEditor_VOWarning")
                               )
                             ),
                           Boolean(t.status) &&
@@ -28064,19 +28096,19 @@
                     "#Broadcast_default_title_dev_chat",
                     "#Broadcast_default_title_ama",
                   ].map(function (e) {
-                    return { label: Object(L.f)(e), data: e };
+                    return { label: Object(B.f)(e), data: e };
                   }),
                   i =
                     (bt.a.Get().GetPartnerEventPermissions(t.GetClanSteamID()),
                     []),
                   r = 0,
-                  o = L.b.GetLanguageListForRealms([te.d.k_ESteamRealmGlobal]);
+                  o = B.b.GetLanguageListForRealms([te.d.k_ESteamRealmGlobal]);
                 r < o.length;
                 r++
               ) {
                 var l = o[r],
                   s = {
-                    label: Object(L.f)(
+                    label: Object(B.f)(
                       "#language_selection_" + Object(ee.a)(l)
                     ),
                     data: l,
@@ -28134,7 +28166,7 @@
                       Ze.createElement(
                         "span",
                         null,
-                        Object(L.f)("#Broadcast_chat_" + e)
+                        Object(B.f)("#Broadcast_chat_" + e)
                       )
                     )
                   );
@@ -28148,7 +28180,7 @@
                   Ze.createElement(
                     "span",
                     { className: ft.a.EventEditorTextTitle },
-                    Object(L.f)("#Broadcast_title")
+                    Object(B.f)("#Broadcast_title")
                   ),
                   Ze.createElement(
                     "a",
@@ -28160,7 +28192,7 @@
                     Ze.createElement(
                       "span",
                       null,
-                      Object(L.f)("#Broadcast_documentation")
+                      Object(B.f)("#Broadcast_documentation")
                     )
                   )
                 ),
@@ -28169,7 +28201,7 @@
                   { className: ft.a.InputBorder },
                   Ze.createElement(Ke.p, {
                     onChange: this.OnBroadcastOptionChange,
-                    label: Object(L.f)("#Broadcast_option"),
+                    label: Object(B.f)("#Broadcast_option"),
                     checked: t.GetEventModel().BHasBroadcastEnabled(),
                   })
                 ),
@@ -28180,7 +28212,7 @@
                     Ze.createElement(
                       "div",
                       { className: ft.a.EventEditorTextTitle },
-                      Object(L.f)("#Broadcast_title_title")
+                      Object(B.f)("#Broadcast_title_title")
                     ),
                     Ze.createElement(
                       "div",
@@ -28193,7 +28225,7 @@
                       Ze.createElement(
                         "p",
                         null,
-                        Object(L.f)("#Broadcast_title_desc")
+                        Object(B.f)("#Broadcast_title_desc")
                       ),
                       Ze.createElement(Ke.h, {
                         rgOptions: e,
@@ -28203,7 +28235,7 @@
                       Ze.createElement(
                         "div",
                         null,
-                        Object(L.f)("#Broadcast_option_customtitle")
+                        Object(B.f)("#Broadcast_option_customtitle")
                       ),
                       Ze.createElement(
                         "div",
@@ -28220,7 +28252,7 @@
                             "div",
                             { style: { width: "400px" } },
                             Ze.createElement(Ke.l, {
-                              placeholder: Object(L.f)("#Broadcast_use_custom"),
+                              placeholder: Object(B.f)("#Broadcast_use_custom"),
                               onChange: this.OnCustomTitleChange,
                               value: this.state.strCustomTitle,
                             })
@@ -28246,14 +28278,14 @@
                                   return n.AddTitle();
                                 },
                               },
-                              Object(L.f)("#Broadcast_add_title")
+                              Object(B.f)("#Broadcast_add_title")
                             )
                           )
                         ),
                         Ze.createElement(
                           "p",
                           null,
-                          Object(L.f)("#Sale_option_customtitle_entered")
+                          Object(B.f)("#Sale_option_customtitle_entered")
                         ),
                         Ze.createElement(
                           "div",
@@ -28271,7 +28303,7 @@
                                   },
                                   e,
                                   " (",
-                                  Object(L.f)(
+                                  Object(B.f)(
                                     "#language_selection_" + Object(ee.a)(t)
                                   ),
                                   ")",
@@ -28295,7 +28327,7 @@
                     Ze.createElement(
                       "div",
                       { className: ft.a.EventEditorTextTitle },
-                      Object(L.f)("#Broadcast_background")
+                      Object(B.f)("#Broadcast_background")
                     ),
                     Ze.createElement(
                       Ke.d,
@@ -28307,7 +28339,7 @@
                             .jsondata.broadcast_gradient_outer_color,
                         },
                       },
-                      Object(L.f)("#Broadcast_GradientOuterColor")
+                      Object(B.f)("#Broadcast_GradientOuterColor")
                     ),
                     Ze.createElement(
                       Ke.d,
@@ -28319,12 +28351,12 @@
                             .jsondata.broadcast_gradient_inner_color,
                         },
                       },
-                      Object(L.f)("#Broadcast_GradientInnerColor")
+                      Object(B.f)("#Broadcast_GradientInnerColor")
                     ),
                     Ze.createElement(
                       "div",
                       { className: ft.a.EventEditorTextTitle },
-                      Object(L.f)("#Broadcast_whitelist")
+                      Object(B.f)("#Broadcast_whitelist")
                     ),
                     Ze.createElement(
                       "div",
@@ -28337,12 +28369,12 @@
                       Ze.createElement(
                         "div",
                         null,
-                        Object(L.f)("#Broadcast_whitelist_desc")
+                        Object(B.f)("#Broadcast_whitelist_desc")
                       ),
                       Ze.createElement(
                         "div",
                         null,
-                        Object(L.f)("#Broadcast_option_drag_ttip")
+                        Object(B.f)("#Broadcast_option_drag_ttip")
                       ),
                       Ze.createElement(
                         "div",
@@ -28369,7 +28401,7 @@
                             },
                             className: ft.a.EditPreviewButton,
                           },
-                          Object(L.f)("#Broadcast_whitelist_addme")
+                          Object(B.f)("#Broadcast_whitelist_addme")
                         ),
                         Ze.createElement(
                           "a",
@@ -28379,7 +28411,7 @@
                             },
                             className: ft.a.EditPreviewButton,
                           },
-                          Object(L.f)("#Broadcast_whitelist_addfriend")
+                          Object(B.f)("#Broadcast_whitelist_addfriend")
                         ),
                         Ze.createElement(
                           "a",
@@ -28387,17 +28419,17 @@
                             onClick: this.ClearWhitelist,
                             className: ft.a.EditPreviewButton,
                           },
-                          Object(L.f)("#Broadcast_whitelist_clear")
+                          Object(B.f)("#Broadcast_whitelist_clear")
                         )
                       ),
                       Ze.createElement(_l.a, {
                         onButtonClick: this.AddSteamIDToWhitelist,
-                        buttonText: Object(L.f)("#Broadcast_whitelist_adduser"),
+                        buttonText: Object(B.f)("#Broadcast_whitelist_adduser"),
                       }),
                       Ze.createElement(
                         "div",
                         null,
-                        Object(L.n)(
+                        Object(B.n)(
                           "#Broadcast_whitelist_friendcode",
                           Ze.createElement(
                             "a",
@@ -28413,7 +28445,7 @@
                     Ze.createElement(
                       "div",
                       { className: ft.a.EventEditorTextTitle },
-                      Object(L.f)("#Broadcast_chat_title")
+                      Object(B.f)("#Broadcast_chat_title")
                     ),
                     Ze.createElement(
                       "div",
@@ -28426,7 +28458,7 @@
                       d
                     ),
                     Ze.createElement(
-                      Ln,
+                      Bn,
                       {
                         requireAdmin: !0,
                         clanSteamID: t.GetClanSteamID(),
@@ -28435,13 +28467,13 @@
                       Ze.createElement(
                         "div",
                         { className: ft.a.EventEditorTextTitle },
-                        "(VO) " + Object(L.f)("#Broadcast_DropsTitle")
+                        "(VO) " + Object(B.f)("#Broadcast_DropsTitle")
                       ),
                       Ze.createElement(Ke.e, {
                         onChange: function (e) {
                           return n.GetBroadcastEditModel().SetDropsEnabled(e);
                         },
-                        label: Object(L.f)("#Broadcast_Drops_Enable"),
+                        label: Object(B.f)("#Broadcast_Drops_Enable"),
                         checked: Boolean(a.broadcast_item_drops_enabled),
                       }),
                       Boolean(a.broadcast_item_drops_enabled) &&
@@ -28454,7 +28486,7 @@
                                 .GetBroadcastEditModel()
                                 .SetItemDropManual(e);
                             },
-                            label: Object(L.f)(
+                            label: Object(B.f)(
                               "#Broadcast_Drops_IsManualDrops"
                             ),
                             checked: Boolean(a.broadcast_item_drops_manual),
@@ -28462,7 +28494,7 @@
                           Ze.createElement(
                             "label",
                             { htmlFor: "broadcast_min_mintes" },
-                            Object(L.f)("#Broadcast_Drops_Minute")
+                            Object(B.f)("#Broadcast_Drops_Minute")
                           ),
                           Ze.createElement("input", {
                             id: "broadcast_min_mintes",
@@ -28481,12 +28513,12 @@
                           Ze.createElement(
                             "div",
                             { className: ft.a.EventEditorTextSubTitle },
-                            Object(L.f)("#Broadcast_Drops_Details")
+                            Object(B.f)("#Broadcast_Drops_Details")
                           ),
                           Ze.createElement(
                             "label",
                             { htmlFor: "broadcast_detail_clan_account" },
-                            Object(L.f)("#Broadcast_Drops_Details_Account")
+                            Object(B.f)("#Broadcast_Drops_Details_Account")
                           ),
                           Ze.createElement("input", {
                             id: "broadcast_detail_clan_account",
@@ -28506,7 +28538,7 @@
                           Ze.createElement(
                             "label",
                             { htmlFor: "broadcast_detail_clan_event_gid" },
-                            Object(L.f)("#Broadcast_Drops_Details_GID")
+                            Object(B.f)("#Broadcast_Drops_Details_GID")
                           ),
                           Ze.createElement("input", {
                             id: "broadcast_detail_clan_event_gid",
@@ -28525,14 +28557,14 @@
                       Ze.createElement(
                         Kn.a,
                         {
-                          toolTipContent: Object(L.f)(
+                          toolTipContent: Object(B.f)(
                             "#Broadcast_WidePlayer_ttip"
                           ),
                         },
                         Ze.createElement(
                           "div",
                           { className: ft.a.EventEditorTextTitle },
-                          "(VO) " + Object(L.f)("#Broadcast_WidePlayer")
+                          "(VO) " + Object(B.f)("#Broadcast_WidePlayer")
                         )
                       ),
                       Ze.createElement(Ke.e, {
@@ -28541,14 +28573,14 @@
                             .GetBroadcastEditModel()
                             .SetWidePlayerLayout(e);
                         },
-                        label: Object(L.f)("#Broadcast_WidePlayer_Use"),
+                        label: Object(B.f)("#Broadcast_WidePlayer_Use"),
                         checked: Boolean(a.broadcast_display_wide_player),
                       })
                     ),
                     Ze.createElement(
                       "div",
                       { className: ft.a.EventEditorTextTitle },
-                      Object(L.f)("#Broadcast_artwork")
+                      Object(B.f)("#Broadcast_artwork")
                     ),
                     Ze.createElement(Tt, {
                       clanSteamID: t.GetClanSteamID(),
@@ -28557,28 +28589,28 @@
                     Ze.createElement(
                       "div",
                       { className: ft.a.EventEditorTextTitle },
-                      Object(L.f)("#Broadcast_artwork_options")
+                      Object(B.f)("#Broadcast_artwork_options")
                     ),
                     Ze.createElement(
                       "div",
                       { className: ft.a.InputBorder },
                       Ze.createElement(Ke.p, {
                         onChange: this.OnBroadcastForceBanner,
-                        label: Object(L.f)("#Broadcast_artwork_banner"),
-                        tooltip: Object(L.f)("#Broadcast_artwork_banner_hint"),
+                        label: Object(B.f)("#Broadcast_artwork_banner"),
+                        tooltip: Object(B.f)("#Broadcast_artwork_banner_hint"),
                         checked: t.GetEventModel().BHasBroadcastForceBanner(),
                       })
                     ),
                     Ze.createElement(nn, {
                       clanSteamID: t.GetClanSteamID(),
-                      title: Object(L.f)(
+                      title: Object(B.f)(
                         "#EventEditor_ArtworkType_broadcast_left"
                       ),
                       artworkType: "broadcast_left",
                     }),
                     Ze.createElement(nn, {
                       clanSteamID: t.GetClanSteamID(),
-                      title: Object(L.f)(
+                      title: Object(B.f)(
                         "#EventEditor_ArtworkType_broadcast_right"
                       ),
                       artworkType: "broadcast_right",
@@ -28586,26 +28618,26 @@
                   )
               );
             }),
-            Object(I.c)([B.a], e.prototype, "OnBroadcastOptionChange", null),
-            Object(I.c)([B.a], e.prototype, "OnBroadcastForceBanner", null),
-            Object(I.c)([B.a], e.prototype, "OnChatChange", null),
-            Object(I.c)([B.a], e.prototype, "OnTitleChange", null),
-            Object(I.c)([B.a], e.prototype, "OnCustomTitleChange", null),
+            Object(I.c)([L.a], e.prototype, "OnBroadcastOptionChange", null),
+            Object(I.c)([L.a], e.prototype, "OnBroadcastForceBanner", null),
+            Object(I.c)([L.a], e.prototype, "OnChatChange", null),
+            Object(I.c)([L.a], e.prototype, "OnTitleChange", null),
+            Object(I.c)([L.a], e.prototype, "OnCustomTitleChange", null),
             Object(I.c)(
-              [B.a],
+              [L.a],
               e.prototype,
               "OnCustomTitleLanguageChange",
               null
             ),
-            Object(I.c)([B.a], e.prototype, "AddTitle", null),
-            Object(I.c)([B.a], e.prototype, "RemoveTitle", null),
-            Object(I.c)([B.a], e.prototype, "AddSteamIDToWhitelist", null),
-            Object(I.c)([B.a], e.prototype, "AddWhitelist", null),
-            Object(I.c)([B.a], e.prototype, "RemoveWhitelist", null),
-            Object(I.c)([B.a], e.prototype, "ClearWhitelist", null),
-            Object(I.c)([B.a], e.prototype, "OnSaleColorChange", null),
-            Object(I.c)([B.a], e.prototype, "OnOpenGradientInnerColor", null),
-            Object(I.c)([B.a], e.prototype, "OnOpenGradientOuterColor", null),
+            Object(I.c)([L.a], e.prototype, "AddTitle", null),
+            Object(I.c)([L.a], e.prototype, "RemoveTitle", null),
+            Object(I.c)([L.a], e.prototype, "AddSteamIDToWhitelist", null),
+            Object(I.c)([L.a], e.prototype, "AddWhitelist", null),
+            Object(I.c)([L.a], e.prototype, "RemoveWhitelist", null),
+            Object(I.c)([L.a], e.prototype, "ClearWhitelist", null),
+            Object(I.c)([L.a], e.prototype, "OnSaleColorChange", null),
+            Object(I.c)([L.a], e.prototype, "OnOpenGradientInnerColor", null),
+            Object(I.c)([L.a], e.prototype, "OnOpenGradientOuterColor", null),
             (e = Object(I.c)([qe.a], e))
           );
         })(Ze.Component),
@@ -28668,13 +28700,13 @@
               if (this.state.bLoading)
                 return Ze.createElement(dt.a, {
                   size: "small",
-                  string: Object(L.f)("#Loading"),
+                  string: Object(B.f)("#Loading"),
                 });
               if (!this.state.friendData)
                 return Ze.createElement(
                   "div",
                   null,
-                  Object(L.f)("#Broadcast_FailedToLoadUser")
+                  Object(B.f)("#Broadcast_FailedToLoadUser")
                 );
               var e = so.GetEditModel().GetEventModel(),
                 t = e.jsondata.broadcast_whitelist.indexOf(
@@ -28707,11 +28739,11 @@
                 ),
                 Ze.createElement(
                   Kn.a,
-                  { toolTipContent: Object(L.f)("#Broadcast_Language_hint") },
+                  { toolTipContent: Object(B.f)("#Broadcast_Language_hint") },
                   Ze.createElement(
                     "span",
                     null,
-                    Object(L.f)("#EventEditor_Langauge"),
+                    Object(B.f)("#EventEditor_Langauge"),
                     ": "
                   ),
                   Ze.createElement(Rt, {
@@ -28728,8 +28760,8 @@
                 })
               );
             }),
-            Object(I.c)([B.a], e.prototype, "OnLanguageChange", null),
-            Object(I.c)([B.a], e.prototype, "OnDeleteBroadcaster", null),
+            Object(I.c)([L.a], e.prototype, "OnLanguageChange", null),
+            Object(I.c)([L.a], e.prototype, "OnDeleteBroadcaster", null),
             (e = Object(I.c)([qe.a], e))
           );
         })(Ze.Component),
@@ -28738,19 +28770,19 @@
             n = new ul(e),
             a = [
               {
-                label: Object(L.f)("#Broadcast_Priority_Primary"),
+                label: Object(B.f)("#Broadcast_Priority_Primary"),
                 data: "primary",
               },
               {
-                label: Object(L.f)("#Broadcast_Priority_Featured"),
+                label: Object(B.f)("#Broadcast_Priority_Featured"),
                 data: "featured",
               },
               {
-                label: Object(L.f)("#Broadcast_Priority_DefaultFeatured"),
+                label: Object(B.f)("#Broadcast_Priority_DefaultFeatured"),
                 data: "default_featured",
               },
               {
-                label: Object(L.f)("#Broadcast_Priority_General"),
+                label: Object(B.f)("#Broadcast_Priority_General"),
                 data: "general",
               },
             ],
@@ -28758,13 +28790,13 @@
           return Ze.createElement(
             Kn.a,
             {
-              toolTipContent: Object(L.f)("#Broadcast_Priority_hint"),
+              toolTipContent: Object(B.f)("#Broadcast_Priority_hint"),
               className: ht.a.PrioritySelector,
             },
             Ze.createElement(
               "span",
               null,
-              Object(L.f)("#Broadcast_Priority_label"),
+              Object(B.f)("#Broadcast_Priority_label"),
               ": "
             ),
             Ze.createElement(Ke.h, {
@@ -28803,7 +28835,7 @@
                     route: Fn.a.k_eCommunityAdminPage,
                     className: ft.a.EventBarBack,
                   },
-                  Object(L.f)("#EventDisplay_EventsDashBtn")
+                  Object(B.f)("#EventDisplay_EventsDashBtn")
                 ),
                 Ze.createElement(
                   "div",
@@ -28822,8 +28854,8 @@
                       className: ft.a.EditPreviewButton,
                     },
                     28 == t
-                      ? Object(L.f)("#EventEditor_Preview_News")
-                      : Object(L.f)("#EventEditor_Preview")
+                      ? Object(B.f)("#EventEditor_Preview_News")
+                      : Object(B.f)("#EventEditor_Preview")
                   ),
                   e.BHasSaleEnabled() &&
                     Ze.createElement(
@@ -28833,7 +28865,7 @@
                         route: Fn.a.k_eCommunityPreviewSale,
                         className: ft.a.EditPreviewButton,
                       },
-                      Object(L.f)("#EventEditor_PreviewSale")
+                      Object(B.f)("#EventEditor_PreviewSale")
                     )
                 )
               );
@@ -28871,7 +28903,7 @@
                     route: Fn.a.k_eCommunityPreview,
                     className: ft.a.EditPreviewButton,
                   },
-                  Object(L.f)("#EventEditor_Preview")
+                  Object(B.f)("#EventEditor_Preview")
                 ),
                 t.BHasSaleEnabled() &&
                   Ze.createElement(
@@ -28881,7 +28913,7 @@
                       route: Fn.a.k_eCommunityPreviewSale,
                       className: ft.a.EditPreviewButton,
                     },
-                    Object(L.f)("#EventEditor_PreviewSale")
+                    Object(B.f)("#EventEditor_PreviewSale")
                   ),
                 n &&
                   Ze.createElement(
@@ -28899,7 +28931,7 @@
                         eventModel: t,
                         route: Fn.a.k_eStoreView,
                       },
-                      Object(L.f)("#EventEditor_ViewLive")
+                      Object(B.f)("#EventEditor_ViewLive")
                     ),
                     Ze.createElement(
                       "span",
@@ -28909,8 +28941,8 @@
                   )
               );
             }),
-            Object(I.c)([B.a], e.prototype, "OnInlinePreview", null),
-            Object(I.c)([B.a], e.prototype, "OnAutoRefreshChange", null),
+            Object(I.c)([L.a], e.prototype, "OnInlinePreview", null),
+            Object(I.c)([L.a], e.prototype, "OnAutoRefreshChange", null),
             (e = Object(I.c)([qe.a], e))
           );
         })(Ze.Component),
@@ -28926,8 +28958,8 @@
         Gl = n.n(Al),
         kl = n("Ig8m"),
         Nl = n("62WR"),
-        Ll = n("U6Vi"),
-        Bl = n("BVhQ"),
+        Bl = n("U6Vi"),
+        Ll = n("BVhQ"),
         Rl = Object(qe.a)(function (a) {
           var e = a.editModel;
           if (
@@ -28943,14 +28975,14 @@
             null,
             Ze.createElement(
               "div",
-              { className: Ll.EmailTabCtn },
+              { className: Bl.EmailTabCtn },
               Ze.createElement(
                 "div",
                 { className: Object(pt.a)(ft.a.EventEditorTextTitleCtn) },
                 Ze.createElement(
                   "span",
                   { className: ft.a.EventEditorTextTitle },
-                  Object(L.f)("#EventEmail_FeatureTitle")
+                  Object(B.f)("#EventEmail_FeatureTitle")
                 ),
                 Ze.createElement(
                   "a",
@@ -28958,7 +28990,7 @@
                   Ze.createElement(
                     "span",
                     null,
-                    Object(L.f)("#selectimage_see_documentation")
+                    Object(B.f)("#selectimage_see_documentation")
                   )
                 )
               ),
@@ -28966,7 +28998,7 @@
                 "div",
                 { className: Object(pt.a)(ft.a.FlexColumnContainer) },
                 Ze.createElement(Ke.p, {
-                  label: Object(L.f)("#EventEmail_EnableEmailOption"),
+                  label: Object(B.f)("#EventEmail_EnableEmailOption"),
                   onChange: function (e) {
                     var t = a.editModel,
                       n = t.GetClanSteamID().GetAccountID();
@@ -29019,7 +29051,7 @@
             ? Ze.createElement(
                 "div",
                 { className: Gt.WarningStylesBackground },
-                Object(L.f)("#EventEmail_SteamChina_Warning")
+                Object(B.f)("#EventEmail_SteamChina_Warning")
               )
             : null;
         },
@@ -29050,12 +29082,12 @@
                     Ze.createElement(
                       $e.c,
                       {
-                        strTitle: Object(L.f)("#EventDisplay_Share_Success"),
+                        strTitle: Object(B.f)("#EventDisplay_Share_Success"),
                         onOK: function () {},
                         onCancel: function () {},
                         bAlertDialog: !0,
                       },
-                      Object(L.f)("#EventEmail_TestEmailQueue")
+                      Object(B.f)("#EventEmail_TestEmailQueue")
                     ),
                     window
                   );
@@ -29075,11 +29107,11 @@
                       Ze.createElement(
                         $e.c,
                         {
-                          strTitle: Object(L.f)("#EventEmail_Test_Email"),
+                          strTitle: Object(B.f)("#EventEmail_Test_Email"),
                           onOK: this.FireTestEmail,
                           onCancel: function () {},
                         },
-                        Object(L.n)(
+                        Object(B.n)(
                           "#EventEmail_Send_TestEmail_Desc",
                           Ze.createElement(
                             "a",
@@ -29098,7 +29130,7 @@
                       Ze.createElement(
                         $e.e,
                         null,
-                        Object(L.f)("#EventEmail_Test_Dirty")
+                        Object(B.f)("#EventEmail_Test_Dirty")
                       ),
                       window
                     )
@@ -29106,7 +29138,7 @@
                       Ze.createElement(
                         $e.e,
                         null,
-                        Object(L.n)(
+                        Object(B.n)(
                           "#EventEmail_Test_Email_Fail",
                           Ze.createElement(
                             "a",
@@ -29193,7 +29225,7 @@
                           Ze.createElement(
                             $e.c,
                             {
-                              strTitle: Object(L.f)(
+                              strTitle: Object(B.f)(
                                 "#EventDisplay_Share_Success"
                               ),
                               onOK: function () {},
@@ -29224,7 +29256,7 @@
                           Ze.createElement(
                             $e.c,
                             {
-                              strTitle: Object(L.f)("#Error_Message"),
+                              strTitle: Object(B.f)("#Error_Message"),
                               onOK: function () {},
                               onCancel: function () {},
                               bAlertDialog: !0,
@@ -29258,7 +29290,7 @@
                 n = bt.a.Get().GetPartnerEventPermissions(e.GetClanSteamID());
               return Ze.createElement(
                 "div",
-                { className: Ll.ControlBarCtn },
+                { className: Bl.ControlBarCtn },
                 Ze.createElement(
                   "a",
                   {
@@ -29267,7 +29299,7 @@
                   },
                   this.state.bSettingUp &&
                     Ze.createElement(dt.a, { size: "small" }),
-                  Object(L.f)("#EventEmail_Control_TestEmail")
+                  Object(B.f)("#EventEmail_Control_TestEmail")
                 ),
                 t &&
                   n.valve_admin &&
@@ -29284,7 +29316,7 @@
                   Ze.createElement(
                     "div",
                     null,
-                    Object(L.f)("#EventEmail_Ready_ValveRequiredToSend")
+                    Object(B.f)("#EventEmail_Ready_ValveRequiredToSend")
                   ),
                 !t &&
                   Ze.createElement(
@@ -29293,15 +29325,15 @@
                       onClick: this.OnPrepareEmail,
                       className: ft.a.EditPreviewButton,
                     },
-                    Object(L.f)("#EventEmail_Control_Prepare")
+                    Object(B.f)("#EventEmail_Control_Prepare")
                   )
               );
             }),
-            Object(I.c)([B.a], e.prototype, "FireTestEmail", null),
-            Object(I.c)([B.a], e.prototype, "OnTestEmail", null),
-            Object(I.c)([B.a], e.prototype, "OnPrepareEmail", null),
-            Object(I.c)([B.a], e.prototype, "OnSetupAndFireEmailConfirm", null),
-            Object(I.c)([B.a], e.prototype, "OnSetupAndFireEmail", null),
+            Object(I.c)([L.a], e.prototype, "FireTestEmail", null),
+            Object(I.c)([L.a], e.prototype, "OnTestEmail", null),
+            Object(I.c)([L.a], e.prototype, "OnPrepareEmail", null),
+            Object(I.c)([L.a], e.prototype, "OnSetupAndFireEmailConfirm", null),
+            Object(I.c)([L.a], e.prototype, "OnSetupAndFireEmail", null),
             (e = Object(I.c)([qe.a], e))
           );
         })(Ze.Component),
@@ -29320,7 +29352,7 @@
                     Ze.createElement(
                       "option",
                       { key: e, value: e },
-                      Object(L.f)("#" + e, n)
+                      Object(B.f)("#" + e, n)
                     )
                   );
                 }),
@@ -29374,29 +29406,29 @@
                         .creator_list.find(function (e) {
                           return e.clan_account_id == t;
                         })) ||
-                        ((n = Bn.a.GetCreatorHomeByID(e)) &&
+                        ((n = Ln.a.GetCreatorHomeByID(e)) &&
                           ((m = n.GetCreatorHomeURL(e.type)),
                           (_ = n.GetName()))))),
                 Ze.createElement(
                   "div",
-                  { className: Ll.EmailEditorContent },
+                  { className: Bl.EmailEditorContent },
                   Ze.createElement(
                     "div",
                     {
                       className: Object(pt.a)(
                         ft.a.FlexRowContainer,
-                        Ll.EmailSubjectCtn
+                        Bl.EmailSubjectCtn
                       ),
                     },
                     Ze.createElement(
                       "span",
-                      { className: Ll.EmailOptionTitle },
-                      Object(L.f)("#EventEmail_Subject")
+                      { className: Bl.EmailOptionTitle },
+                      Object(B.f)("#EventEmail_Subject")
                     ),
                     Ze.createElement(
                       "select",
                       {
-                        className: Ll.EmailSubjectSelect,
+                        className: Bl.EmailSubjectSelect,
                         value: i.GetSubjectTextLoc(),
                         onChange: this.OnSubjectChange,
                       },
@@ -29405,11 +29437,11 @@
                   ),
                   Ze.createElement(
                     "div",
-                    { className: Ll.RightAlign },
+                    { className: Bl.RightAlign },
                     Ze.createElement(
                       "span",
-                      { className: Ll.EmailOptionTitle },
-                      Object(L.f)("#LanguageTitle"),
+                      { className: Bl.EmailOptionTitle },
+                      Object(B.f)("#LanguageTitle"),
                       ": "
                     ),
                     Ze.createElement(Rt, {
@@ -29420,13 +29452,13 @@
                   ),
                   Ze.createElement(
                     "div",
-                    { className: Ll.EmailTemplate },
+                    { className: Bl.EmailTemplate },
                     Ze.createElement(
                       "div",
                       {
                         className: Object(pt.a)(
-                          Ll.EmailIconHeader,
-                          Ll.CenterAlign
+                          Bl.EmailIconHeader,
+                          Bl.CenterAlign
                         ),
                       },
                       Ze.createElement("img", { src: Cl.a })
@@ -29435,28 +29467,28 @@
                       "div",
                       {
                         className: Object(pt.a)(
-                          Ll.EmailBackground,
-                          Ll.EmailReasonHeader,
-                          Ll.EmailTextCtn
+                          Bl.EmailBackground,
+                          Bl.EmailReasonHeader,
+                          Bl.EmailTextCtn
                         ),
                       },
                       Ze.createElement(
                         "div",
-                        { className: Ll.Hello },
-                        Object(L.f)(
+                        { className: Bl.Hello },
+                        Object(B.f)(
                           "#EventEmail_Hello",
-                          Object(L.f)("#EventEmail_UserName")
+                          Object(B.f)("#EventEmail_UserName")
                         )
                       ),
                       Ze.createElement(
                         "div",
-                        { className: Ll.Reason },
-                        Object(L.f)(d, _)
+                        { className: Bl.Reason },
+                        Object(B.f)(d, _)
                       ),
                       !p &&
                         Ze.createElement(
                           "a",
-                          { className: Ll.GameLink, href: m },
+                          { className: Bl.GameLink, href: m },
                           _
                         )
                     ),
@@ -29466,7 +29498,7 @@
                       bEditor: a.BIsEmailEditable(),
                       appid: a.GetAppID(),
                       section: s,
-                      additionalClassName: Ll.HeaderSection,
+                      additionalClassName: Bl.HeaderSection,
                     }),
                     Ze.createElement(Ul, {
                       lang: o,
@@ -29474,22 +29506,22 @@
                       bEditor: a.BIsEmailEditable(),
                       appid: a.GetAppID(),
                       section: c,
-                      additionalClassName: Ll.HeaderSection,
+                      additionalClassName: Bl.HeaderSection,
                     }),
                     Ze.createElement("hr", null),
                     Ze.createElement(
                       "div",
-                      { className: Ll.Footer },
-                      Ze.createElement("div", null, Object(L.f)(u)),
+                      { className: Bl.Footer },
+                      Ze.createElement("div", null, Object(B.f)(u)),
                       Ze.createElement(
                         "span",
                         null,
-                        Object(L.f)("#EventEmail_Footer_Game", _)
+                        Object(B.f)("#EventEmail_Footer_Game", _)
                       ),
                       Ze.createElement(
                         "div",
                         null,
-                        Object(L.f)("#EventEmail_Footer_OptOut_Desc_Game")
+                        Object(B.f)("#EventEmail_Footer_OptOut_Desc_Game")
                       ),
                       Ze.createElement(
                         "span",
@@ -29497,13 +29529,13 @@
                         Ze.createElement(
                           "a",
                           { href: "#" },
-                          Object(L.f)("#EventEmail_Footer_OptOut_Target", _)
+                          Object(B.f)("#EventEmail_Footer_OptOut_Target", _)
                         ),
-                        " " + Object(L.f)("#EventEmail_Footer_OptOut_Or") + " ",
+                        " " + Object(B.f)("#EventEmail_Footer_OptOut_Or") + " ",
                         Ze.createElement(
                           "a",
                           { href: "#" },
-                          Object(L.f)("#EventEmail_Footer_Optout_All")
+                          Object(B.f)("#EventEmail_Footer_Optout_All")
                         )
                       )
                     ),
@@ -29511,7 +29543,7 @@
                       "div",
                       {
                         className: Object(pt.a)(
-                          Ll.FooterLegal,
+                          Bl.FooterLegal,
                           ft.a.FlexRowContainer
                         ),
                       },
@@ -29522,14 +29554,14 @@
                         Ze.createElement(
                           "div",
                           null,
-                          Object(L.f)(
+                          Object(B.f)(
                             "#EventEmail_Footer_LegalWithAddress_Line1"
                           )
                         ),
                         Ze.createElement(
                           "div",
                           null,
-                          Object(L.f)(
+                          Object(B.f)(
                             "#EventEmail_Footer_LegalWithAddress_Line2"
                           )
                         )
@@ -29539,8 +29571,8 @@
                 )
               );
             }),
-            Object(I.c)([B.a], t.prototype, "OnLanguageChanged", null),
-            Object(I.c)([B.a], t.prototype, "OnSubjectChange", null),
+            Object(I.c)([L.a], t.prototype, "OnLanguageChanged", null),
+            Object(I.c)([L.a], t.prototype, "OnSubjectChange", null),
             (t = Object(I.c)([qe.a], t))
           );
         })(Ze.Component),
@@ -29571,10 +29603,10 @@
                 a = t.fnRemoveSection;
               Object(et.d)(
                 Ze.createElement($e.c, {
-                  strTitle: Object(L.f)("#EventEmail_Template_EditTitle"),
-                  strDescription: Object(L.f)(
+                  strTitle: Object(B.f)("#EventEmail_Template_EditTitle"),
+                  strDescription: Object(B.f)(
                     "#EventEmail_Template_RemoveSubSection",
-                    Object(L.f)("#EventEmail_Template_Sub_" + e)
+                    Object(B.f)("#EventEmail_Template_Sub_" + e)
                   ),
                   onOK: function () {
                     n.RemoveSubSection(e), !n.BHasSomeSubSection() && a && a();
@@ -29585,16 +29617,16 @@
             }),
             (t.prototype.GenerateTemplateRemove = function (e) {
               var t = this,
-                n = Object(L.f)("#EventEmail_Template_Sub_" + e);
+                n = Object(B.f)("#EventEmail_Template_Sub_" + e);
               return Ze.createElement(
                 "div",
-                { className: Ll.ImgCrossCtn },
+                { className: Bl.ImgCrossCtn },
                 Ze.createElement("img", {
-                  "data-tooltip-text": Object(L.f)(
+                  "data-tooltip-text": Object(B.f)(
                     "#EventEmail_Template_Remove",
                     n
                   ),
-                  className: Ll.ImgCross,
+                  className: Bl.ImgCross,
                   src: it.a,
                   onClick: function () {
                     return t.OnRemoveSubSection(e);
@@ -29616,8 +29648,8 @@
                 {
                   className: Object(pt.a)(
                     n,
-                    Ll.DevEmailEmailBackground,
-                    Ll.EmailSection
+                    Bl.DevEmailEmailBackground,
+                    Bl.EmailSection
                   ),
                 },
                 t.BHasHeadline() &&
@@ -29627,8 +29659,8 @@
                     l && this.GenerateTemplateRemove("headline"),
                     Ze.createElement("input", {
                       type: "text",
-                      className: Ll.HeadlineInput,
-                      placeholder: Object(L.f)("#EventEmail_EnterHeadline"),
+                      className: Bl.HeadlineInput,
+                      placeholder: Object(B.f)("#EventEmail_EnterHeadline"),
                       value: t.GetHeadline(a),
                       onChange: this.OnHeadlineChange,
                     })
@@ -29639,8 +29671,8 @@
                     null,
                     l && this.GenerateTemplateRemove("body"),
                     Ze.createElement("textarea", {
-                      className: Ll.BodyInput,
-                      placeholder: Object(L.f)("#EventEmail_EnterBodyCopy"),
+                      className: Bl.BodyInput,
+                      placeholder: Object(B.f)("#EventEmail_EnterBodyCopy"),
                       value: t.GetBody(a),
                       rows: 8,
                       onChange: this.OnBodyChange,
@@ -29673,16 +29705,16 @@
                     l && this.GenerateTemplateRemove("youtube"),
                     Ze.createElement(
                       "div",
-                      { className: Ll.VideoCtn },
+                      { className: Bl.VideoCtn },
                       Ze.createElement("img", { src: t.GetYouTubeImageURL() }),
                       Boolean(i) &&
                         Ze.createElement(
                           "div",
-                          { className: Ll.VideoInputCtn },
+                          { className: Bl.VideoInputCtn },
                           Ze.createElement(
                             "div",
                             null,
-                            Object(L.f)("#EventEditor_InsertYouTube_Placholder")
+                            Object(B.f)("#EventEditor_InsertYouTube_Placholder")
                           ),
                           Ze.createElement("input", {
                             type: "text",
@@ -29692,7 +29724,7 @@
                           Ze.createElement(
                             "div",
                             null,
-                            Object(L.f)(
+                            Object(B.f)(
                               "#EventEditor_InsertYouTube_UpdateThumbnail"
                             ),
                             Ze.createElement(
@@ -29702,7 +29734,7 @@
                                   "https://support.google.com/youtube/answer/72431",
                                 target: "_blank",
                               },
-                              Object(L.f)("#EventEditor_InsertYouTube_LearnHow")
+                              Object(B.f)("#EventEditor_InsertYouTube_LearnHow")
                             )
                           )
                         )
@@ -29710,10 +29742,10 @@
                   )
               );
             }),
-            Object(I.c)([B.a], t.prototype, "OnHeadlineChange", null),
-            Object(I.c)([B.a], t.prototype, "OnBodyChange", null),
-            Object(I.c)([B.a], t.prototype, "OnVideoChange", null),
-            Object(I.c)([B.a], t.prototype, "OnRemoveSubSection", null),
+            Object(I.c)([L.a], t.prototype, "OnHeadlineChange", null),
+            Object(I.c)([L.a], t.prototype, "OnBodyChange", null),
+            Object(I.c)([L.a], t.prototype, "OnVideoChange", null),
+            Object(I.c)([L.a], t.prototype, "OnRemoveSubSection", null),
             (t = Object(I.c)([qe.a], t))
           );
         })(Ze.Component),
@@ -29765,7 +29797,7 @@
                     Ze.createElement(
                       "option",
                       { key: e, value: e },
-                      Object(L.f)("#" + e)
+                      Object(B.f)("#" + e)
                     )
                   );
                 }),
@@ -29782,7 +29814,7 @@
                     Ze.createElement(
                       "option",
                       { key: e, value: n },
-                      Object(L.f)("#" + e)
+                      Object(B.f)("#" + e)
                     )
                   ));
               }
@@ -29795,7 +29827,7 @@
                         Ze.createElement(
                           dt.a,
                           {
-                            string: Object(L.f)("#EventEmail_LoadingDLC"),
+                            string: Object(B.f)("#EventEmail_LoadingDLC"),
                             size: "small",
                           },
                           " "
@@ -29807,7 +29839,7 @@
                         Ze.createElement(
                           "option",
                           { key: "dlc" + e.appid, value: e.appid },
-                          Object(L.f)(
+                          Object(B.f)(
                             "#EventEmail_Destination_DLCPage",
                             e.name,
                             e.appid
@@ -29854,14 +29886,14 @@
                   : e.GetDestination();
               return Ze.createElement(
                 "div",
-                { className: Ll.ButtonSettingContainer },
+                { className: Bl.ButtonSettingContainer },
                 Ze.createElement(
                   "div",
-                  { className: Ll.ButtonSettingRow },
+                  { className: Bl.ButtonSettingRow },
                   Ze.createElement(
                     "span",
                     null,
-                    Object(L.f)("#EventEmail_Section_ButtonText")
+                    Object(B.f)("#EventEmail_Section_ButtonText")
                   ),
                   Ze.createElement(
                     "select",
@@ -29878,7 +29910,7 @@
                   Ze.createElement(
                     "span",
                     null,
-                    Object(L.f)("#EventEmail_Section_Destination")
+                    Object(B.f)("#EventEmail_Section_Destination")
                   ),
                   Ze.createElement(
                     "select",
@@ -29893,12 +29925,12 @@
                     Ze.createElement(
                       "span",
                       null,
-                      Object(L.f)("#EventEmail_Section_EnterSalesPage"),
+                      Object(B.f)("#EventEmail_Section_EnterSalesPage"),
                       " ",
                       Ze.createElement(
                         "span",
                         {
-                          "data-tooltip-text": Object(L.f)(
+                          "data-tooltip-text": Object(B.f)(
                             "#EventEmail_Section_EnterSalesPage_ttip"
                           ),
                         },
@@ -29913,14 +29945,14 @@
                     Ze.createElement(
                       Ke.q,
                       { onClick: this.OnChangeStorePageURL },
-                      Object(L.f)("#EventEmail_Section_UpdateURL")
+                      Object(B.f)("#EventEmail_Section_UpdateURL")
                     )
                   )
               );
             }),
-            Object(I.c)([B.a], e.prototype, "OnButtonLocChange", null),
-            Object(I.c)([B.a], e.prototype, "OnDestinationChange", null),
-            Object(I.c)([B.a], e.prototype, "OnChangeStorePageURL", null),
+            Object(I.c)([L.a], e.prototype, "OnButtonLocChange", null),
+            Object(I.c)([L.a], e.prototype, "OnDestinationChange", null),
+            Object(I.c)([L.a], e.prototype, "OnChangeStorePageURL", null),
             (e = Object(I.c)([qe.a], e))
           );
         })(Ze.Component),
@@ -29949,10 +29981,10 @@
               return Ze.createElement(
                 $e.c,
                 {
-                  strDescription: Object(L.f)(
+                  strDescription: Object(B.f)(
                     "#EventEmail_Section_EnterSalesPage_ttip"
                   ),
-                  strTitle: Object(L.f)("#EventEmail_Section_UpdateURL"),
+                  strTitle: Object(B.f)("#EventEmail_Section_UpdateURL"),
                   onOK: function () {
                     n(e.state.strURL), a();
                   },
@@ -29964,14 +29996,14 @@
                   null,
                   Ze.createElement("input", {
                     type: "test",
-                    className: Ll.ButtonDestInputSaleURL,
+                    className: Bl.ButtonDestInputSaleURL,
                     value: this.state.strURL,
                     onChange: this.OnURLUpdate,
                   })
                 )
               );
             }),
-            Object(I.c)([B.a], e.prototype, "OnURLUpdate", null),
+            Object(I.c)([L.a], e.prototype, "OnURLUpdate", null),
             (e = Object(I.c)([qe.a], e))
           );
         })(Ze.Component),
@@ -30003,10 +30035,10 @@
                 c = ne.b[o];
               return Ze.createElement(
                 "div",
-                { className: Ll.ImagePreview },
+                { className: Bl.ImagePreview },
                 Ze.createElement(
                   "div",
-                  { className: Ll.FullImageCtn },
+                  { className: Bl.FullImageCtn },
                   Ze.createElement("img", {
                     width: l ? c.width : void 0,
                     height: l ? c.height : void 0,
@@ -30037,7 +30069,7 @@
                   })
               );
             }),
-            Object(I.c)([B.a], e.prototype, "OnArtworkLangChange", null),
+            Object(I.c)([L.a], e.prototype, "OnArtworkLangChange", null),
             (e = Object(I.c)([qe.a], e))
           );
         })(Ze.Component),
@@ -30135,7 +30167,7 @@
                         ),
                         Object(et.d)(
                           Ze.createElement($e.e, {
-                            strDescription: Object(L.f)(
+                            strDescription: Object(B.f)(
                               "#ImagePicker_Error",
                               r.name
                             ),
@@ -30161,13 +30193,13 @@
                 null,
                 Ze.createElement(
                   "span",
-                  { className: Ll.EmailInputText },
-                  Object(L.f)("#EventEmail_SelectBrandingImage")
+                  { className: Bl.EmailInputText },
+                  Object(B.f)("#EventEmail_SelectBrandingImage")
                 ),
                 Ze.createElement(
                   "span",
                   null,
-                  Object(L.f)("#EventEmail_ImageDimension", t.width, t.height)
+                  Object(B.f)("#EventEmail_ImageDimension", t.width, t.height)
                 )
               );
             }),
@@ -30212,7 +30244,7 @@
                                     ),
                                     Object(et.d)(
                                       Ze.createElement($e.e, {
-                                        strDescription: Object(L.f)(
+                                        strDescription: Object(B.f)(
                                           "#EventError_Code",
                                           i.strErrorMsg
                                         ),
@@ -30242,11 +30274,11 @@
               if (this.state.bDownloadFromClanImageStore)
                 return Ze.createElement(
                   "div",
-                  { className: Ll.EditImageInputCtn },
+                  { className: Bl.EditImageInputCtn },
                   Ze.createElement(dt.a, {
                     position: "center",
                     size: "medium",
-                    string: Object(L.f)("#Loading"),
+                    string: Object(B.f)("#Loading"),
                   })
                 );
               var e = this.props.clanSteamID,
@@ -30258,7 +30290,7 @@
                 );
               return Ze.createElement(
                 "div",
-                { className: Ll.EditImageInputCtn },
+                { className: Bl.EditImageInputCtn },
                 Ze.createElement(
                   _n,
                   {
@@ -30280,10 +30312,10 @@
                 )
               );
             }),
-            Object(I.c)([B.a], e.prototype, "DoUpload", null),
-            Object(I.c)([B.a], e.prototype, "OnDropFiles", null),
-            Object(I.c)([B.a], e.prototype, "RenderInstructions", null),
-            Object(I.c)([B.a], e.prototype, "OnPreviousImageSelected", null),
+            Object(I.c)([L.a], e.prototype, "DoUpload", null),
+            Object(I.c)([L.a], e.prototype, "OnDropFiles", null),
+            Object(I.c)([L.a], e.prototype, "RenderInstructions", null),
+            Object(I.c)([L.a], e.prototype, "OnPreviousImageSelected", null),
             (e = Object(I.c)([qe.a], e))
           );
         })(Ze.Component),
@@ -30331,7 +30363,7 @@
                 return null;
               if (!Boolean(this.state.clanInfo))
                 return Ze.createElement(dt.a, {
-                  string: Object(L.f)("#Loading"),
+                  string: Object(B.f)("#Loading"),
                   size: "medium",
                 });
               var n = this.GetEmailEditModel();
@@ -30340,7 +30372,7 @@
                 {
                   className: Object(pt.a)(
                     ft.a.ValveOnlyBackground,
-                    Ll.RecipientCtn
+                    Bl.RecipientCtn
                   ),
                 },
                 Ze.createElement(
@@ -30349,7 +30381,7 @@
                   Ze.createElement(
                     "span",
                     { className: ft.a.EventEditorTextTitle },
-                    Object(L.f)("#EventEmail_Filter")
+                    Object(B.f)("#EventEmail_Filter")
                   )
                 ),
                 Ze.createElement(
@@ -30363,14 +30395,14 @@
                   Ze.createElement(
                     "div",
                     null,
-                    Object(L.f)("#EventEmail_Filter_Desc")
+                    Object(B.f)("#EventEmail_Filter_Desc")
                   ),
                   Boolean(this.state.clanInfo.is_ogg) &&
                     Ze.createElement(Ke.p, {
                       onChange: function (e) {
                         return t.GetEmailEditModel().SetFilterIRTopN(e);
                       },
-                      label: Object(L.f)("#EventEmail_Filter_IR"),
+                      label: Object(B.f)("#EventEmail_Filter_IR"),
                       checked: n.BIsIRTopNFiltering(),
                     }),
                   Boolean(this.state.clanInfo.is_ogg) &&
@@ -30378,14 +30410,14 @@
                       onChange: function (e) {
                         return t.GetEmailEditModel().SetFilterWishlist(e);
                       },
-                      label: Object(L.f)("#EventEmail_Filter_Wishlist"),
+                      label: Object(B.f)("#EventEmail_Filter_Wishlist"),
                       checked: n.BIsWishListFiltering(),
                     }),
                   Ze.createElement(Ke.l, {
                     type: "number",
                     min: "0",
                     max: "99",
-                    label: Object(L.f)("#EventEmail_Filter_ControlGroup"),
+                    label: Object(B.f)("#EventEmail_Filter_ControlGroup"),
                     value: n.GetControlGroupPercent(),
                     onChange: this.OnControlGroupSpinnerChange,
                   })
@@ -30393,7 +30425,7 @@
               );
             }),
             Object(I.c)(
-              [B.a],
+              [L.a],
               e.prototype,
               "OnControlGroupSpinnerChange",
               null
@@ -30428,7 +30460,7 @@
                         (n = new Array()),
                         [
                           4,
-                          Bn.a.LoadCreatorHomeListForAppIncludeHiddden(
+                          Ln.a.LoadCreatorHomeListForAppIncludeHiddden(
                             t.GetAppID(),
                             this.m_cancelSignal
                           ),
@@ -30438,7 +30470,7 @@
                       return (
                         e.sent().forEach(function (e) {
                           var t = ae.a.InitFromClanID(e.clan_account_id);
-                          n.push(Bn.a.LoadCreatorHome(t, a.m_cancelSignal));
+                          n.push(Ln.a.LoadCreatorHome(t, a.m_cancelSignal));
                         }),
                         Promise.all(n).then(function (e) {
                           a.m_cancelSignal.token.reason ||
@@ -30475,12 +30507,12 @@
                     )
                   : ((e = this.props.editModel),
                     (r = new ze(e)),
-                    Bn.a
+                    Ln.a
                       .GetCreatorHomeListForAppIncludeHidden(e.GetAppID())
                       .forEach(function (t) {
                         var e,
                           n,
-                          a = Bn.a.GetCreatorHomeByID(t);
+                          a = Ln.a.GetCreatorHomeByID(t);
                         a &&
                           !s.some(function (e) {
                             return e.clan_account_id === a.GetClanAccountID();
@@ -30492,13 +30524,13 @@
                               href: a.GetCreatorHomeURL(t.type),
                             },
                             a.BIsHidden()
-                              ? Object(L.f)("#EventEmail_CreatorHidden") + " "
+                              ? Object(B.f)("#EventEmail_CreatorHidden") + " "
                               : "",
                             a.GetName()
                           )),
                           (n = Ze.createElement(Zl, {
                             audience: a.GetNumFollowers(),
-                            label: Object(L.n)(
+                            label: Object(B.n)(
                               "#EventEmail_Recipients_follower_creator",
                               e
                             ),
@@ -30520,7 +30552,7 @@
                           i.support_user &&
                             ((n = Ze.createElement(Zl, {
                               valveOnly: !0,
-                              label: Object(L.n)(
+                              label: Object(B.n)(
                                 "#EventEmail_Recipients_player_creator",
                                 e
                               ),
@@ -30559,7 +30591,7 @@
                         Ze.createElement(
                           "div",
                           { key: "creatorhome_plug" },
-                          Object(L.n)(
+                          Object(B.n)(
                             "#EventEmail_Recipients_NoCreatorHome",
                             Ze.createElement(
                               "a",
@@ -30582,14 +30614,14 @@
                 a = bt.a.Get().GetPartnerEventPermissions(e.GetClanSteamID());
               return Ze.createElement(
                 "div",
-                { className: Ll.RecipientCtn },
+                { className: Bl.RecipientCtn },
                 Ze.createElement(
                   "div",
                   { className: Object(pt.a)(ft.a.EventEditorTextTitle) },
                   Ze.createElement(
                     "span",
                     { className: ft.a.EventEditorTextTitle },
-                    Object(L.f)("#EventEmail_Recipients")
+                    Object(B.f)("#EventEmail_Recipients")
                   )
                 ),
                 Ze.createElement(
@@ -30603,7 +30635,7 @@
                   Ze.createElement(
                     "div",
                     null,
-                    Object(L.f)("#EventEmail_Recipients_desc")
+                    Object(B.f)("#EventEmail_Recipients_desc")
                   ),
                   Ze.createElement(Ke.p, {
                     onChange: function (e) {
@@ -30611,14 +30643,14 @@
                         .GetEmailEditModel()
                         .SetTargetingExistingPlayer(e);
                     },
-                    label: Object(L.f)("#EventEmail_Recipients_players"),
+                    label: Object(B.f)("#EventEmail_Recipients_players"),
                     checked: n.BIsTargetingGamePlayers(),
                   }),
                   Ze.createElement(Ke.p, {
                     onChange: function (e) {
                       return t.GetEmailEditModel().SetTargetingGameWishlist(e);
                     },
-                    label: Object(L.f)("#EventEmail_Recipients_wishlist"),
+                    label: Object(B.f)("#EventEmail_Recipients_wishlist"),
                     checked: n.BIsTargetingGameWishlisters(),
                   }),
                   Ze.createElement(Ke.p, {
@@ -30626,7 +30658,7 @@
                       return t.GetEmailEditModel().SetTargetingGameFollower(e);
                     },
                     label: Ze.createElement(Zl, {
-                      label: Object(L.f)("#EventEmail_Recipients_follower"),
+                      label: Object(B.f)("#EventEmail_Recipients_follower"),
                       audience: re.a.GetClanMemberCount(e.GetAppID()),
                     }),
                     checked: n.BIsTargetingGameFollowers(),
@@ -30636,7 +30668,7 @@
                       return t.GetEmailEditModel().SetExcludeGameOwners(e);
                     },
                     label: Ze.createElement(Zl, {
-                      label: Object(L.f)(
+                      label: Object(B.f)(
                         "#EventEmail_Recipients_exclude_owners"
                       ),
                     }),
@@ -30647,7 +30679,7 @@
                       return t.GetEmailEditModel().SetOwnersWithNoPlaytime(e);
                     },
                     label: Ze.createElement(Zl, {
-                      label: Object(L.f)("#EventEmail_Recipients_no_playtime"),
+                      label: Object(B.f)("#EventEmail_Recipients_no_playtime"),
                     }),
                     checked: n.BIsTargetingGameOwnersWithoutPlaytime(),
                   }),
@@ -30670,7 +30702,7 @@
                 n = e.label;
               return Ze.createElement(
                 "div",
-                { className: Ll.TargetAndAudience },
+                { className: Bl.TargetAndAudience },
                 Ze.createElement(
                   "span",
                   null,
@@ -30731,9 +30763,9 @@
                             Ze.createElement(
                               "div",
                               { className: kt.a.ErrorStyles },
-                              Object(L.f)(
+                              Object(B.f)(
                                 "#EventEmail_Error_LanguageIncomplete",
-                                Object(L.f)("#Language_" + Object(ee.a)(r)),
+                                Object(B.f)("#Language_" + Object(ee.a)(r)),
                                 o,
                                 2
                               )
@@ -30757,7 +30789,7 @@
                               Ze.createElement(
                                 "div",
                                 { className: kt.a.ErrorStyles },
-                                Object(L.f)("#EventEmail_Error_NoText")
+                                Object(B.f)("#EventEmail_Error_NoText")
                               )
                             )
                           ),
@@ -30770,7 +30802,7 @@
                               Ze.createElement(
                                 "div",
                                 { className: kt.a.ErrorStyles },
-                                Object(L.f)("#EventEmail_Error_InternalTarget")
+                                Object(B.f)("#EventEmail_Error_InternalTarget")
                               )
                             )
                           ))
@@ -30782,7 +30814,7 @@
                               Ze.createElement(
                                 "div",
                                 { className: kt.a.ErrorStyles },
-                                Object(L.f)(
+                                Object(B.f)(
                                   "#EventEmail_Error_EnglishArtworkMissing"
                                 )
                               )
@@ -30796,7 +30828,7 @@
                               Ze.createElement(
                                 "div",
                                 { className: kt.a.ErrorStyles },
-                                Object(L.f)("#EventEmail_Error_TargetSelection")
+                                Object(B.f)("#EventEmail_Error_TargetSelection")
                               )
                             )
                           ),
@@ -30811,7 +30843,7 @@
                               Ze.createElement(
                                 "div",
                                 { className: kt.a.ErrorStyles },
-                                Object(L.f)("#EventEmail_Error_InvalidVideo")
+                                Object(B.f)("#EventEmail_Error_InvalidVideo")
                               )
                             )
                           )),
@@ -30823,7 +30855,7 @@
                           Ze.createElement(
                             "div",
                             { className: kt.a.ErrorStyles },
-                            Object(L.f)("#EventEmail_Error_EventNotLive")
+                            Object(B.f)("#EventEmail_Error_EventNotLive")
                           )
                         )
                       ),
@@ -30867,9 +30899,9 @@
                               Ze.createElement(
                                 "div",
                                 { className: kt.a.WarningStyles },
-                                Object(L.f)(
+                                Object(B.f)(
                                   "#EventEmail_Warning_ImageLanguage_1",
-                                  Object(L.f)("#Language_" + Object(ee.a)(i[0]))
+                                  Object(B.f)("#Language_" + Object(ee.a)(i[0]))
                                 )
                               )
                             )
@@ -30885,12 +30917,12 @@
                               Ze.createElement(
                                 "div",
                                 { className: kt.a.WarningStyles },
-                                Object(L.f)(
+                                Object(B.f)(
                                   "#EventEmail_Warning_ImageLanguage_2",
-                                  Object(L.f)(
+                                  Object(B.f)(
                                     "#Language_" + Object(ee.a)(i[0])
                                   ),
-                                  Object(L.f)("#Language_" + Object(ee.a)(i[1]))
+                                  Object(B.f)("#Language_" + Object(ee.a)(i[1]))
                                 )
                               )
                             )
@@ -30905,12 +30937,12 @@
                               Ze.createElement(
                                 "div",
                                 { className: kt.a.WarningStyles },
-                                Object(L.f)(
+                                Object(B.f)(
                                   "#EventEmail_Warning_ImageLanguage_n",
-                                  Object(L.f)(
+                                  Object(B.f)(
                                     "#Language_" + Object(ee.a)(i[0])
                                   ),
-                                  Object(L.f)(
+                                  Object(B.f)(
                                     "#Language_" + Object(ee.a)(i[1])
                                   ),
                                   i.length - 2
@@ -30948,7 +30980,7 @@
                   return Ze.createElement(
                     $e.c,
                     {
-                      strTitle: Object(L.f)("#EventEmail_Preparation_Title"),
+                      strTitle: Object(B.f)("#EventEmail_Preparation_Title"),
                       onOK: this.props.closeModal,
                       onCancel: this.props.closeModal,
                       closeModal: this.props.closeModal,
@@ -30957,8 +30989,8 @@
                   );
                 case "ready":
                   return Ze.createElement($e.c, {
-                    strTitle: Object(L.f)("#EventEmail_Preparation_Title"),
-                    strDescription: Object(L.f)("#EventEmail_Preparation_Desc"),
+                    strTitle: Object(B.f)("#EventEmail_Preparation_Title"),
+                    strDescription: Object(B.f)("#EventEmail_Preparation_Desc"),
                     onOK: this.OnLockEmail,
                     onCancel: this.props.closeModal,
                   });
@@ -30966,8 +30998,8 @@
                   return Ze.createElement(
                     $e.c,
                     {
-                      strTitle: Object(L.f)("#EventEmail_Preparation_Title"),
-                      strDescription: Object(L.f)(
+                      strTitle: Object(B.f)("#EventEmail_Preparation_Title"),
+                      strDescription: Object(B.f)(
                         "#EventEmail_Preparation_Desc"
                       ),
                       onOK: this.OnLockEmail,
@@ -30980,15 +31012,15 @@
                       Ze.createElement(
                         "p",
                         null,
-                        Object(L.f)("#EventEmail_Preparation_DescWarning")
+                        Object(B.f)("#EventEmail_Preparation_DescWarning")
                       ),
                       Ze.createElement("ol", null, this.state.warning)
                     )
                   );
                 case "unsaved":
                   return Ze.createElement($e.e, {
-                    strTitle: Object(L.f)("#EventEmail_Preparation_Title"),
-                    strDescription: Object(L.f)(
+                    strTitle: Object(B.f)("#EventEmail_Preparation_Title"),
+                    strDescription: Object(B.f)(
                       "#EventEmail_Preparation_Unsaved"
                     ),
                     closeModal: this.props.closeModal,
@@ -30997,8 +31029,8 @@
                   return Ze.createElement(
                     $e.c,
                     {
-                      strTitle: Object(L.f)("#EventEmail_Preparation_Title"),
-                      strDescription: Object(L.f)(
+                      strTitle: Object(B.f)("#EventEmail_Preparation_Title"),
+                      strDescription: Object(B.f)(
                         "#EventEmail_Preparation_InProcess"
                       ),
                       onOK: this.props.closeModal,
@@ -31008,8 +31040,8 @@
                   );
                 case "done":
                   return Ze.createElement($e.c, {
-                    strTitle: Object(L.f)("#EventEmail_Preparation_Title"),
-                    strDescription: Object(L.f)("#EventEmail_Preparation_Done"),
+                    strTitle: Object(B.f)("#EventEmail_Preparation_Title"),
+                    strDescription: Object(B.f)("#EventEmail_Preparation_Done"),
                     onOK: this.props.closeModal,
                     onCancel: this.props.closeModal,
                   });
@@ -31018,8 +31050,8 @@
                   return Ze.createElement(
                     $e.e,
                     {
-                      strTitle: Object(L.f)("#EventEmail_Preparation_Title"),
-                      strDescription: Object(L.f)(
+                      strTitle: Object(B.f)("#EventEmail_Preparation_Title"),
+                      strDescription: Object(B.f)(
                         "#EventEmail_Preparation_Error"
                       ),
                       closeModal: this.props.closeModal,
@@ -31035,7 +31067,7 @@
                           Ze.createElement(
                             "p",
                             null,
-                            Object(L.f)("#EventEmail_Preparation_DescWarning")
+                            Object(B.f)("#EventEmail_Preparation_DescWarning")
                           ),
                           Ze.createElement("ol", null, this.state.warning)
                         )
@@ -31043,7 +31075,7 @@
                   );
               }
             }),
-            Object(I.c)([B.a], e.prototype, "OnLockEmail", null),
+            Object(I.c)([L.a], e.prototype, "OnLockEmail", null),
             (e = Object(I.c)([qe.a], e))
           );
         })(Ze.Component),
@@ -31137,7 +31169,7 @@
                   Ze.createElement(
                     "div",
                     { className: ft.a.EventEditorTextTitle },
-                    Object(L.f)("#EventEmail_Stats_Title")
+                    Object(B.f)("#EventEmail_Stats_Title")
                   ),
                   Ze.createElement(
                     "div",
@@ -31149,7 +31181,7 @@
                     },
                     Ze.createElement(
                       "span",
-                      { className: Bl.ErrorMessaage },
+                      { className: Ll.ErrorMessaage },
                       this.state.err_msg
                     )
                   )
@@ -31161,7 +31193,7 @@
                   Ze.createElement(
                     "div",
                     { className: ft.a.EventEditorTextTitle },
-                    Object(L.f)("#EventEmail_Stats_Title")
+                    Object(B.f)("#EventEmail_Stats_Title")
                   ),
                   Ze.createElement(
                     "div",
@@ -31181,7 +31213,7 @@
                 Ze.createElement(
                   "div",
                   { className: ft.a.EventEditorTextTitle },
-                  Object(L.f)("#EventEmail_Stats_Title"),
+                  Object(B.f)("#EventEmail_Stats_Title"),
                   this.state.bRefreshing &&
                     Ze.createElement(dt.a, { size: "small" })
                 ),
@@ -31196,28 +31228,28 @@
                   Ze.createElement(
                     "div",
                     { className: ft.a.EventEditorTextSubTitle },
-                    Object(L.f)(
+                    Object(B.f)(
                       "#EventEmail_Stats_State",
-                      Object(L.f)("#EventEmail_Stats_State_" + e.state)
+                      Object(B.f)("#EventEmail_Stats_State_" + e.state)
                     )
                   ),
                   "sending" == e.state &&
                     Ze.createElement(
                       "div",
                       null,
-                      Object(L.f)(
+                      Object(B.f)(
                         "#EventEmail_Stats_Started",
-                        Object(L.k)(e.rtime_start_firing)
+                        Object(B.k)(e.rtime_start_firing)
                       )
                     ),
                   ("complete" == e.state || "aborted" == e.state) &&
                     Ze.createElement(
                       "div",
                       null,
-                      Object(L.f)(
+                      Object(B.f)(
                         "#EventEmail_Stats_Completed",
-                        Object(L.k)(e.rtime_start_firing),
-                        Object(L.k)(e.rtime_stop_firing)
+                        Object(B.k)(e.rtime_start_firing),
+                        Object(B.k)(e.rtime_stop_firing)
                       )
                     ),
                   "queued" != e.state &&
@@ -31227,7 +31259,7 @@
                       Ze.createElement(
                         "div",
                         null,
-                        Object(L.f)(
+                        Object(B.f)(
                           "#EventEmail_Stats_Examined",
                           e.accounts_examined
                             ? e.accounts_examined.toLocaleString()
@@ -31237,7 +31269,7 @@
                       Ze.createElement(
                         "div",
                         null,
-                        Object(L.f)(
+                        Object(B.f)(
                           "#EventEmail_Stats_Duplicates",
                           e.accounts_duplicates
                             ? e.accounts_duplicates.toLocaleString()
@@ -31247,7 +31279,7 @@
                       Ze.createElement(
                         "div",
                         null,
-                        Object(L.f)(
+                        Object(B.f)(
                           "#EventEmail_Stats_Emailed",
                           e.accounts_emailed
                             ? e.accounts_emailed.toLocaleString()
@@ -31257,7 +31289,7 @@
                       Ze.createElement(
                         "div",
                         null,
-                        Object(L.f)(
+                        Object(B.f)(
                           "#EventEmail_Stats_Skipped",
                           e.accounts_not_emailed
                             ? e.accounts_not_emailed.toLocaleString()
@@ -31267,7 +31299,7 @@
                       Ze.createElement(
                         "div",
                         null,
-                        Object(L.f)(
+                        Object(B.f)(
                           "#EventEmail_Stats_Failed",
                           e.accounts_email_failed
                             ? e.accounts_email_failed.toLocaleString()
@@ -31278,16 +31310,16 @@
                   Ze.createElement(
                     "div",
                     null,
-                    Object(L.f)(
+                    Object(B.f)(
                       "#EventEmail_Stats_Last_Refresh_Time",
-                      Object(L.q)(this.state.rtimeLastRefresh)
+                      Object(B.q)(this.state.rtimeLastRefresh)
                     )
                   )
                 )
               );
             }),
-            Object(I.c)([B.a], e.prototype, "RefreshIfNeeded", null),
-            Object(I.c)([B.a], e.prototype, "RefreshStats", null),
+            Object(I.c)([L.a], e.prototype, "RefreshIfNeeded", null),
+            Object(I.c)([L.a], e.prototype, "RefreshStats", null),
             (e = Object(I.c)([qe.a], e))
           );
         })(Ze.Component),
@@ -31323,7 +31355,7 @@
                     bEditor: n.BIsEmailEditable(),
                     appid: n.GetAppID(),
                     section: e,
-                    additionalClassName: Ll.HeaderSection,
+                    additionalClassName: Bl.HeaderSection,
                     bTemplateEditable: !0,
                     fnRemoveSection: function () {
                       return i.RemoveSection(t);
@@ -31334,14 +31366,14 @@
               var e = i.GetLocalizedSubject(a);
               return Ze.createElement(
                 "div",
-                { className: Ll.EmailEditorContent },
+                { className: Bl.EmailEditorContent },
                 Ze.createElement(
                   "div",
-                  { className: Ll.RightAlign },
+                  { className: Bl.RightAlign },
                   Ze.createElement(
                     "span",
-                    { className: Ll.EmailOptionTitle },
-                    Object(L.f)("#LanguageTitle"),
+                    { className: Bl.EmailOptionTitle },
+                    Object(B.f)("#LanguageTitle"),
                     ": "
                   ),
                   Ze.createElement(Rt, {
@@ -31357,13 +31389,13 @@
                   {
                     className: Object(pt.a)(
                       ft.a.FlexRowContainer,
-                      Ll.EmailSubjectCtn
+                      Bl.EmailSubjectCtn
                     ),
                   },
                   Ze.createElement(
                     "span",
-                    { className: Ll.EmailOptionTitle },
-                    Object(L.f)("#EventEmail_Subject")
+                    { className: Bl.EmailOptionTitle },
+                    Object(B.f)("#EventEmail_Subject")
                   ),
                   Ze.createElement("input", {
                     type: "text",
@@ -31384,16 +31416,16 @@
                   "div",
                   {
                     className: Object(pt.a)(
-                      Ll.EmailTemplate,
-                      Ll.DevEmailTemplate
+                      Bl.EmailTemplate,
+                      Bl.DevEmailTemplate
                     ),
                   },
                   Ze.createElement(
                     "div",
                     {
                       className: Object(pt.a)(
-                        Ll.CenterAlign,
-                        Ll.DevEmail_TopHeader
+                        Bl.CenterAlign,
+                        Bl.DevEmail_TopHeader
                       ),
                     },
                     Ze.createElement(
@@ -31401,59 +31433,59 @@
                       { href: D.c.PARTNER_BASE_URL },
                       Ze.createElement("img", {
                         src: jl.a,
-                        className: Ll.DevEmail_TopLogo,
+                        className: Bl.DevEmail_TopLogo,
                       })
                     )
                   ),
                   Ze.createElement(
                     "div",
-                    { className: Object(pt.a)(Ll.DevEmail_Content) },
+                    { className: Object(pt.a)(Bl.DevEmail_Content) },
                     Ze.createElement(
                       "div",
-                      { className: Ll.DevEmail_HearComes },
-                      Object(L.f)("#EventEmail_Developer_Top3")
+                      { className: Bl.DevEmail_HearComes },
+                      Object(B.f)("#EventEmail_Developer_Top3")
                     ),
                     Ze.createElement(
                       "div",
-                      { className: Ll.DevEmail_Subject },
+                      { className: Bl.DevEmail_Subject },
                       e
                     )
                   ),
                   r,
                   Ze.createElement(
                     "div",
-                    { className: Object(pt.a)(Ll.DevEmail_Content) },
+                    { className: Object(pt.a)(Bl.DevEmail_Content) },
                     Ze.createElement("img", {
                       src: Dl.a,
-                      className: Ll.DevEmail_SignOff_Img,
+                      className: Bl.DevEmail_SignOff_Img,
                     }),
                     Ze.createElement(
                       "div",
-                      { className: Ll.DevEmail_Signoff },
+                      { className: Bl.DevEmail_Signoff },
                       Ze.createElement(
                         "div",
                         null,
-                        Object(L.f)("#EventEmail_Developer_SignOff")
+                        Object(B.f)("#EventEmail_Developer_SignOff")
                       ),
                       Ze.createElement(
                         "div",
                         null,
-                        Object(L.f)("#EventEmail_Developer_SignOff2")
+                        Object(B.f)("#EventEmail_Developer_SignOff2")
                       )
                     )
                   )
                 ),
                 Ze.createElement(
                   "div",
-                  { className: Object(pt.a)(Ll.DevEmail_Footer_Ctn) },
+                  { className: Object(pt.a)(Bl.DevEmail_Footer_Ctn) },
                   Ze.createElement(
                     "span",
-                    { className: Ll.DevEmail_Footer_Reason },
-                    Object(L.f)("#EventEmail_Developer_Footer_Reason")
+                    { className: Bl.DevEmail_Footer_Reason },
+                    Object(B.f)("#EventEmail_Developer_Footer_Reason")
                   ),
                   Ze.createElement(
                     "div",
-                    { className: Ll.DevEmail_Footer_SubSection },
+                    { className: Bl.DevEmail_Footer_SubSection },
                     Ze.createElement("img", {
                       src: Ml.a,
                       width: 103,
@@ -31464,19 +31496,19 @@
                       null,
                       Ze.createElement(
                         "div",
-                        { className: Ll.DevEmail_Footer_Bold },
+                        { className: Bl.DevEmail_Footer_Bold },
                         Ze.createElement(
                           "strong",
                           null,
-                          Object(L.f)("#EventEmail_Developer_Footer_Valve"),
+                          Object(B.f)("#EventEmail_Developer_Footer_Valve"),
                           Ze.createElement("br", null),
-                          Object(L.f)("#EventEmail_Developer_Footer_Valve2")
+                          Object(B.f)("#EventEmail_Developer_Footer_Valve2")
                         )
                       ),
                       Ze.createElement(
                         "div",
-                        { className: Ll.DevEmail_Footer_Regular },
-                        Object(L.f)("#EventEmail_Developer_Footer_Valve3")
+                        { className: Bl.DevEmail_Footer_Regular },
+                        Object(B.f)("#EventEmail_Developer_Footer_Valve3")
                       ),
                       Ze.createElement(
                         "div",
@@ -31497,8 +31529,8 @@
                           }),
                           Ze.createElement(
                             "div",
-                            { className: Ll.DevEmail_Follow },
-                            Object(L.f)("#EventEmail_Developer_Footer_Follow")
+                            { className: Bl.DevEmail_Follow },
+                            Object(B.f)("#EventEmail_Developer_Footer_Follow")
                           )
                         )
                       )
@@ -31508,12 +31540,12 @@
                 Ze.createElement(
                   "button",
                   {
-                    className: Object(pt.a)(ft.a.Button, Ll.CenterAlign),
+                    className: Object(pt.a)(ft.a.Button, Bl.CenterAlign),
                     onClick: function () {
                       i.AddSection(Kl);
                     },
                   },
-                  Object(L.f)("#EventEmail_Template_AddSection")
+                  Object(B.f)("#EventEmail_Template_AddSection")
                 )
               );
             }),
@@ -31620,7 +31652,7 @@
                 Ze.createElement(
                   $e.c,
                   {
-                    strTitle: Object(L.f)(
+                    strTitle: Object(B.f)(
                       "app" == t
                         ? "#EventEmail_Developer_ShowApps"
                         : "#EventEmail_Developer_ShowPublisher",
@@ -31641,7 +31673,7 @@
               var t = this;
               if (!this.state.capabilities)
                 return Ze.createElement(dt.a, {
-                  string: Object(L.f)("#Loading"),
+                  string: Object(B.f)("#Loading"),
                 });
               var n = this.GetEmailEditModel(),
                 e = this.state.capabilities.map(function (e) {
@@ -31653,8 +31685,8 @@
                     onChange: function (e) {
                       return n.UpdateInternalTargetPublisherRights(t.flag, e);
                     },
-                    label: Object(L.f)("#PubRight_" + t.token),
-                    tooltip: Object(L.f)("#PubRight_" + t.token + "_Tooltip"),
+                    label: Object(B.f)("#PubRight_" + t.token),
+                    tooltip: Object(B.f)("#PubRight_" + t.token + "_Tooltip"),
                     checked: n.BHasInternalTargetingPublisherRight(t.flag),
                   });
                 }),
@@ -31664,21 +31696,21 @@
                     onChange: function (e) {
                       return n.UpdateInternalTargetAppRights(t.flag, e);
                     },
-                    label: Object(L.f)("#AppRight_" + t.token),
-                    tooltip: Object(L.f)("#AppRight_" + t.token + "_Tooltip"),
+                    label: Object(B.f)("#AppRight_" + t.token),
+                    tooltip: Object(B.f)("#AppRight_" + t.token + "_Tooltip"),
                     checked: n.BHasInternalTargetingAppRight(t.flag),
                   });
                 });
               return Ze.createElement(
                 "div",
-                { className: Ll.RecipientCtn },
+                { className: Bl.RecipientCtn },
                 Ze.createElement(
                   "div",
                   { className: Object(pt.a)(ft.a.EventEditorTextTitle) },
                   Ze.createElement(
                     "span",
                     { className: ft.a.EventEditorTextTitle },
-                    Object(L.f)("#EventEmail_Recipients")
+                    Object(B.f)("#EventEmail_Recipients")
                   )
                 ),
                 Ze.createElement(
@@ -31692,11 +31724,11 @@
                   Ze.createElement(
                     "div",
                     null,
-                    Object(L.f)("#EventEmail_Recipients_desc")
+                    Object(B.f)("#EventEmail_Recipients_desc")
                   ),
                   Ze.createElement(
                     "table",
-                    { className: Ll.DevEmail_RecipientTable },
+                    { className: Bl.DevEmail_RecipientTable },
                     Ze.createElement(
                       "tbody",
                       null,
@@ -31706,7 +31738,7 @@
                         Ze.createElement(
                           "th",
                           null,
-                          Object(L.f)("#EventEmail_Developer_IsUrgent")
+                          Object(B.f)("#EventEmail_Developer_IsUrgent")
                         ),
                         Ze.createElement(
                           "td",
@@ -31715,7 +31747,7 @@
                             onChange: function (e) {
                               return n.SetInternalTargetPriority(e);
                             },
-                            label: Object(L.f)(
+                            label: Object(B.f)(
                               "#EventEmail_Developer_IsUrgent_Desc"
                             ),
                             checked: n.BHasInternalTargetingPriority(),
@@ -31728,7 +31760,7 @@
                         Ze.createElement(
                           "th",
                           null,
-                          Object(L.f)("#EventEmail_Developer_PartnerCapability")
+                          Object(B.f)("#EventEmail_Developer_PartnerCapability")
                         ),
                         Ze.createElement(
                           "td",
@@ -31759,7 +31791,7 @@
                         Ze.createElement(
                           "th",
                           { colSpan: 2 },
-                          Object(L.f)("#EventEmail_Developer_RightDesc")
+                          Object(B.f)("#EventEmail_Developer_RightDesc")
                         )
                       ),
                       Ze.createElement(
@@ -31768,7 +31800,7 @@
                         Ze.createElement(
                           "th",
                           null,
-                          Object(L.f)("#EventEmail_Developer_PublisherRights")
+                          Object(B.f)("#EventEmail_Developer_PublisherRights")
                         ),
                         Ze.createElement("td", null, a)
                       ),
@@ -31778,7 +31810,7 @@
                         Ze.createElement(
                           "th",
                           null,
-                          Object(L.f)("#EventEmail_Developer_AppRights")
+                          Object(B.f)("#EventEmail_Developer_AppRights")
                         ),
                         Ze.createElement("td", null, i)
                       )
@@ -31792,24 +31824,24 @@
                     Ze.createElement(
                       "b",
                       null,
-                      Object(L.f)("#EventEmail_Developer_FilterOptional")
+                      Object(B.f)("#EventEmail_Developer_FilterOptional")
                     )
                   ),
                   Ze.createElement(
                     "div",
-                    { className: Ll.TargetCtn },
+                    { className: Bl.TargetCtn },
                     Ze.createElement(
                       "div",
-                      { className: Ll.TargetTypeTitle },
+                      { className: Bl.TargetTypeTitle },
                       Ze.createElement("b", null, "App Targeting")
                     ),
                     Ze.createElement(
                       "div",
-                      { className: Ll.TargetTypeCtn },
+                      { className: Bl.TargetTypeCtn },
                       n.GetInternalTargetAppCount() &&
                         Ze.createElement(
                           "div",
-                          { className: Ll.TargetedListCtn },
+                          { className: Bl.TargetedListCtn },
                           Ze.createElement(
                             "div",
                             null,
@@ -31827,7 +31859,7 @@
                             Ze.createElement(
                               "span",
                               null,
-                              Object(L.f)(
+                              Object(B.f)(
                                 "#EventEmail_Developer_ShowApps",
                                 n.GetInternalTargetAppCount()
                               )
@@ -31836,15 +31868,15 @@
                         ),
                       Ze.createElement(
                         "div",
-                        { className: Ll.SelectListCtn },
-                        Object(L.f)("#EventEmail_Developer_AddApps"),
+                        { className: Bl.SelectListCtn },
+                        Object(B.f)("#EventEmail_Developer_AddApps"),
                         Ze.createElement(
                           "label",
                           {
                             className: yt.a.SelectImageButton,
                             htmlFor: "internal_loadappid",
                           },
-                          Object(L.f)("#EventEmail_Developer_SelectFile")
+                          Object(B.f)("#EventEmail_Developer_SelectFile")
                         ),
                         Ze.createElement("input", {
                           ref: this.m_appFileInput,
@@ -31864,19 +31896,19 @@
                   ),
                   Ze.createElement(
                     "div",
-                    { className: Ll.TargetCtn },
+                    { className: Bl.TargetCtn },
                     Ze.createElement(
                       "div",
-                      { className: Ll.TargetTypeTitle },
+                      { className: Bl.TargetTypeTitle },
                       Ze.createElement("b", null, "Publisher Targeting")
                     ),
                     Ze.createElement(
                       "div",
-                      { className: Ll.TargetTypeCtn },
+                      { className: Bl.TargetTypeCtn },
                       n.GetInternalTargetPublisherCount() &&
                         Ze.createElement(
                           "div",
-                          { className: Ll.TargetedListCtn },
+                          { className: Bl.TargetedListCtn },
                           Ze.createElement(
                             "div",
                             null,
@@ -31894,7 +31926,7 @@
                             Ze.createElement(
                               "span",
                               null,
-                              Object(L.f)(
+                              Object(B.f)(
                                 "#EventEmail_Developer_ShowPublisher",
                                 n.GetInternalTargetPublisherCount()
                               )
@@ -31903,15 +31935,15 @@
                         ),
                       Ze.createElement(
                         "div",
-                        { className: Ll.SelectListCtn },
-                        Object(L.f)("#EventEmail_Developer_AddPublisher"),
+                        { className: Bl.SelectListCtn },
+                        Object(B.f)("#EventEmail_Developer_AddPublisher"),
                         Ze.createElement(
                           "label",
                           {
                             className: yt.a.SelectImageButton,
                             htmlFor: "internal_loadpubid",
                           },
-                          Object(L.f)("#EventEmail_Developer_SelectFile")
+                          Object(B.f)("#EventEmail_Developer_SelectFile")
                         ),
                         Ze.createElement("input", {
                           ref: this.m_appFileInput,
@@ -31932,8 +31964,8 @@
                 )
               );
             }),
-            Object(I.c)([B.a], e.prototype, "OnFileChoice", null),
-            Object(I.c)([B.a], e.prototype, "ShowTargets", null),
+            Object(I.c)([L.a], e.prototype, "OnFileChoice", null),
+            Object(I.c)([L.a], e.prototype, "ShowTargets", null),
             (e = Object(I.c)([qe.a], e))
           );
         })(Ze.Component),
@@ -31959,7 +31991,7 @@
                 Ze.createElement(
                   "div",
                   { className: ft.a.EventEditorTextTitle },
-                  Object(L.f)("#EventEditor_EndEvent_Title")
+                  Object(B.f)("#EventEditor_EndEvent_Title")
                 ),
                 Boolean(a)
                   ? Ze.createElement(rs, { editModel: t })
@@ -31975,7 +32007,7 @@
             label: Ze.createElement(
               "div",
               { key: "durtypehour" },
-              Object(L.f)("#EventEditor_Hour")
+              Object(B.f)("#EventEditor_Hour")
             ),
             data: W.k_EHour,
           }),
@@ -31983,7 +32015,7 @@
               label: Ze.createElement(
                 "div",
                 { key: "durtypeday" },
-                Object(L.f)("#EventEditor_Day")
+                Object(B.f)("#EventEditor_Day")
               ),
               data: W.k_EDay,
             }),
@@ -31991,7 +32023,7 @@
               label: Ze.createElement(
                 "div",
                 { key: "durtypeweek" },
-                Object(L.f)("#EventEditor_Week")
+                Object(B.f)("#EventEditor_Week")
               ),
               data: W.k_EWeek,
             }),
@@ -31999,7 +32031,7 @@
               label: Ze.createElement(
                 "div",
                 { key: "durtypehours" },
-                Object(L.f)("#EventEditor_Hours")
+                Object(B.f)("#EventEditor_Hours")
               ),
               data: W.k_EHour,
             }),
@@ -32007,7 +32039,7 @@
               label: Ze.createElement(
                 "div",
                 { key: "durtypedays" },
-                Object(L.f)("#EventEditor_Days")
+                Object(B.f)("#EventEditor_Days")
               ),
               data: W.k_EDay,
             }),
@@ -32015,7 +32047,7 @@
               label: Ze.createElement(
                 "div",
                 { key: "durtypeweeks" },
-                Object(L.f)("#EventEditor_Weeks")
+                Object(B.f)("#EventEditor_Weeks")
               ),
               data: W.k_EWeek,
             });
@@ -32034,7 +32066,7 @@
             Ze.createElement(
               "div",
               { className: ft.a.EventEditorTextSubTitle },
-              Object(L.f)("#EventEditor_EndEvent_Subtitle2")
+              Object(B.f)("#EventEditor_EndEvent_Subtitle2")
             ),
             Ze.createElement(
               "div",
@@ -32057,7 +32089,7 @@
               Ze.createElement(
                 "label",
                 { htmlFor: "EventEditor_EndEvent_EndDropDown" },
-                Object(L.f)("#EventEditor_EndEvent_EndDropDown")
+                Object(B.f)("#EventEditor_EndEvent_EndDropDown")
               )
             ),
             i &&
@@ -32103,7 +32135,7 @@
                   Ze.createElement(
                     "div",
                     { className: ns.a.EndRound },
-                    Object(L.n)(
+                    Object(B.n)(
                       "#EventEditor_EndEvent_EndDropDown_Round",
                       Ze.createElement(Vt.a, {
                         bSingleLine: !0,
@@ -32137,7 +32169,7 @@
                 Ze.createElement(
                   "span",
                   null,
-                  Object(L.f)("#EventEditor_EndEvent_Specified")
+                  Object(B.f)("#EventEditor_EndEvent_Specified")
                 )
               )
             ),
@@ -32154,11 +32186,11 @@
                 Ze.createElement(
                   "div",
                   { className: ft.a.EventEditorTextSubTitle },
-                  Object(L.f)("#EventEditor_EndDate"),
+                  Object(B.f)("#EventEditor_EndDate"),
                   Ze.createElement(
                     "span",
                     {
-                      "data-tooltip-text": Object(L.f)(
+                      "data-tooltip-text": Object(B.f)(
                         "#EventEditor_EndDate_ttip"
                       ),
                     },
@@ -32194,7 +32226,7 @@
             Ze.createElement(
               "div",
               null,
-              Object(L.n)(
+              Object(B.n)(
                 "#EventEditor_EventOver",
                 Ze.createElement(Vt.a, {
                   dateAndTime: t.GetEventModel().GetEndTimeAndDateUnixSeconds(),
@@ -32237,12 +32269,12 @@
                   "div",
                   { className: ft.a.EventEditorTextTitle },
                   28 == t
-                    ? Object(L.f)("#EventEditor_StartNewsTitle")
-                    : Object(L.f)("#EventEditor_StartEvemtTitle"),
+                    ? Object(B.f)("#EventEditor_StartNewsTitle")
+                    : Object(B.f)("#EventEditor_StartEvemtTitle"),
                   Ze.createElement(
                     "span",
                     {
-                      "data-tooltip-text": Object(L.f)(
+                      "data-tooltip-text": Object(B.f)(
                         "#EventEditor_Time_ttip"
                       ),
                     },
@@ -32259,7 +32291,7 @@
                       "span",
                       { className: ft.a.FloatRight },
                       "(",
-                      Object(L.f)("#EventDisplay_CallToAction_LearnMore"),
+                      Object(B.f)("#EventDisplay_CallToAction_LearnMore"),
                       ")"
                     )
                   )
@@ -32281,7 +32313,7 @@
                     Ze.createElement(
                       "div",
                       { className: ft.a.EventEditorTextSubTitle },
-                      Object(L.f)("#EventEditor_Timezone_ttip")
+                      Object(B.f)("#EventEditor_Timezone_ttip")
                     ),
                     !l &&
                       Ze.createElement(
@@ -32311,8 +32343,8 @@
                               "span",
                               null,
                               28 == t
-                                ? Object(L.f)("#EventEditor_StartNews_Now")
-                                : Object(L.f)("#EventEditor_StartEvent_Now")
+                                ? Object(B.f)("#EventEditor_StartNews_Now")
+                                : Object(B.f)("#EventEditor_StartEvent_Now")
                             )
                           )
                         ),
@@ -32339,10 +32371,10 @@
                               "span",
                               null,
                               28 == t
-                                ? Object(L.f)(
+                                ? Object(B.f)(
                                     "#EventEditor_StartNews_Specified"
                                   )
-                                : Object(L.f)(
+                                : Object(B.f)(
                                     "#EventEditor_StartEvent_Specified"
                                   )
                             )
@@ -32360,7 +32392,7 @@
               );
             }),
             Object(I.c)([G.k.bound], t.prototype, "OnStartDateNowChosen", null),
-            Object(I.c)([B.a], t.prototype, "OnStartDateSpecifiedChosen", null),
+            Object(I.c)([L.a], t.prototype, "OnStartDateSpecifiedChosen", null),
             (t = Object(I.c)([qe.a], t))
           );
         })(Ze.Component),
@@ -32388,7 +32420,7 @@
                 Ze.createElement(
                   "div",
                   { className: ft.a.EventEditorTextSubTitle },
-                  Object(L.f)(
+                  Object(B.f)(
                     i
                       ? "#EventEditor_StartEvent_Scheduled"
                       : "#EventEditor_StartEvent_Post_Scheduled"
@@ -32403,7 +32435,7 @@
                     ),
                   },
                   Ze.createElement(ta, {
-                    strDescription: Object(L.f)("#EventEditor_Starts"),
+                    strDescription: Object(B.f)("#EventEditor_Starts"),
                     nEarliestTime: r,
                     nLatestTime: a,
                     fnGetTimeToUpdate: t.GetEventStartTime,
@@ -32459,13 +32491,13 @@
                           Ze.createElement(
                             "label",
                             { htmlFor: "visibility_radio_" + e },
-                            Object(L.f)("#EventEditor_Visibility_" + e)
+                            Object(B.f)("#EventEditor_Visibility_" + e)
                           ),
                           Ze.createElement(
                             "span",
                             {
                               className: ft.a.FloatRight,
-                              "data-tooltip-text": Object(L.f)(
+                              "data-tooltip-text": Object(B.f)(
                                 "#EventEditor_Visibility_ttip_" + e
                               ),
                             },
@@ -32488,7 +32520,7 @@
                 Ze.createElement(
                   "div",
                   { className: ft.a.EventEditorTextSubTitle },
-                  Object(L.f)("#EventEditor_Visibility_Subtitle")
+                  Object(B.f)("#EventEditor_Visibility_Subtitle")
                 ),
                 Ze.createElement(
                   "div",
@@ -32502,7 +32534,7 @@
                           "div",
                           { className: ns.a.EventPublishTimeCtn },
                           Ze.createElement(ta, {
-                            strDescription: Object(L.f)(
+                            strDescription: Object(B.f)(
                               "#EventEditor_Publish_CustomTimeTitle"
                             ),
                             nEarliestTime: e.GetEarliestVisibilityStartTimeForEdit(),
@@ -32515,7 +32547,7 @@
                       : Ze.createElement("input", {
                           type: "text",
                           disabled: !0,
-                          placeholder: Object(L.f)(
+                          placeholder: Object(B.f)(
                             "#EventEditor_Publish_ForCustomPublishTime"
                           ),
                         })
@@ -32523,7 +32555,7 @@
                 )
               );
             }),
-            Object(I.c)([B.a], t.prototype, "OnVisibilityChange", null),
+            Object(I.c)([L.a], t.prototype, "OnVisibilityChange", null),
             (t = Object(I.c)([qe.a], t))
           );
         })(Ze.Component),
@@ -32551,7 +32583,7 @@
             Ze.createElement(
               "div",
               { className: Object(pt.a)(ht.a.OptionsNotes, ft.a.RightCol) },
-              Object(L.f)("#EventEditor_Time_ttip")
+              Object(B.f)("#EventEditor_Time_ttip")
             )
           );
         }),
@@ -32571,7 +32603,7 @@
               Ze.createElement(
                 "div",
                 { className: ft.a.EventEditorTextTitle },
-                Object(L.f)("#EventEditor_Options_Title")
+                Object(B.f)("#EventEditor_Options_Title")
               ),
               Ze.createElement(
                 "div",
@@ -32584,7 +32616,7 @@
                 Ze.createElement(
                   "div",
                   { className: ft.a.EventEditorTextSubTitle },
-                  Object(L.n)(
+                  Object(B.n)(
                     "#EventEditor_Options_Show_Warning",
                     Ze.createElement(
                       "a",
@@ -32593,7 +32625,7 @@
                           "https://support.steampowered.com/kb_article.php?ref=4045-USHJ-3810",
                         target: D.c.IN_CLIENT ? void 0 : "_blank",
                       },
-                      Object(L.f)("#EventEditor_Options_Show_WarningLink")
+                      Object(B.f)("#EventEditor_Options_Show_WarningLink")
                     )
                   )
                 ),
@@ -32602,7 +32634,7 @@
                     t.GetAppID() == ne.D && t.BHasTag("hide_library_overview")
                       ? Object(et.d)(
                           Ze.createElement($e.c, {
-                            strTitle: Object(L.f)(
+                            strTitle: Object(B.f)(
                               "#EventEditor_GenericAreYouSure"
                             ),
                             strDescription:
@@ -32615,51 +32647,51 @@
                         )
                       : t.ToggleTag("hide_library_overview");
                   },
-                  label: Object(L.f)(
+                  label: Object(B.f)(
                     "#EventEditor_Options_Show_Library_Overview"
                   ),
                   checked: !t.GetEventModel().BHasTag("hide_library_overview"),
                   description: a
-                    ? Object(L.f)(
+                    ? Object(B.f)(
                         "#EventEditor_Options_Show_Library_Overview_Desc"
                       )
-                    : Object(L.f)("#EventEditor_Options_WontDisplayHere", o),
+                    : Object(B.f)("#EventEditor_Options_WontDisplayHere", o),
                   disabled: !a,
                 }),
                 Ze.createElement(Ke.p, {
                   onChange: function () {
                     return t.ToggleTag("hide_library_detail");
                   },
-                  label: Object(L.f)(
+                  label: Object(B.f)(
                     "#EventEditor_Options_Show_Library_Detail"
                   ),
                   checked: !t.GetEventModel().BHasTag("hide_library_detail"),
                   description: i
                     ? void 0
-                    : Object(L.f)("#EventEditor_Options_WontDisplayHere", o),
+                    : Object(B.f)("#EventEditor_Options_WontDisplayHere", o),
                   disabled: !i,
                 }),
                 Ze.createElement(Ke.p, {
                   onChange: function () {
                     return t.ToggleTag("hide_store");
                   },
-                  label: Object(L.f)("#EventEditor_Options_Show_Store"),
+                  label: Object(B.f)("#EventEditor_Options_Show_Store"),
                   checked: !t.GetEventModel().BHasTag("hide_store"),
                   description: r
                     ? void 0
-                    : Object(L.f)("#EventEditor_Options_WontDisplayHere", o),
+                    : Object(B.f)("#EventEditor_Options_WontDisplayHere", o),
                   disabled: !r,
                 }),
                 Ze.createElement(
                   "div",
                   { className: ft.a.EventEditorTextSubTitle },
-                  Object(L.f)("#EventEditor_Options_Desc")
+                  Object(B.f)("#EventEditor_Options_Desc")
                 ),
                 Ze.createElement(Ke.p, {
                   onChange: function () {
                     return t.ToggleTag("workshop");
                   },
-                  label: Object(L.f)("#EventEditor_Options_Workshop_Label"),
+                  label: Object(B.f)("#EventEditor_Options_Workshop_Label"),
                   checked: t.GetEventModel().BHasTag("workshop"),
                 }),
                 Ze.createElement(Ke.p, {
@@ -32667,25 +32699,25 @@
                     e && !t.BHasImage("spotlight", 0)
                       ? Object(et.d)(
                           Ze.createElement($e.e, {
-                            strTitle: Object(L.f)("#Error_FailureNotice"),
-                            strDescription: Object(L.f)(
+                            strTitle: Object(B.f)("#Error_FailureNotice"),
+                            strDescription: Object(B.f)(
                               "#EventEditor_Options_Spotlight_Error",
-                              Object(L.f)("#EventEditor_Artwork")
+                              Object(B.f)("#EventEditor_Artwork")
                             ),
                           }),
                           window
                         )
                       : t.SetLibrarySpotlight(e);
                   },
-                  label: Object(L.f)("#EventEditor_Options_Spotlight_Label"),
+                  label: Object(B.f)("#EventEditor_Options_Spotlight_Label"),
                   checked: t.GetEventModel().BShowLibrarySpotlight(),
                   disabled: !n || !i,
                   description: i
-                    ? Object(L.f)(
+                    ? Object(B.f)(
                         "#EventEditor_Options_Spotlight_Desc",
-                        Object(L.f)("#EventEditor_Artwork")
+                        Object(B.f)("#EventEditor_Artwork")
                       )
-                    : Object(L.f)("#EventEditor_Options_WontDisplayHere", o),
+                    : Object(B.f)("#EventEditor_Options_WontDisplayHere", o),
                 }),
                 Ze.createElement(fs, { editModel: t }),
                 Ze.createElement(vs, { editModel: t }),
@@ -32704,13 +32736,13 @@
                 Ze.createElement(
                   "div",
                   { className: ft.a.EventEditorTextSubTitle },
-                  Object(L.f)("#EventEditor_Options_Moderation")
+                  Object(B.f)("#EventEditor_Options_Moderation")
                 ),
                 Ze.createElement(Ke.p, {
                   onChange: function () {
                     return t.ToggleTag("mod_hide_library_overview");
                   },
-                  label: Object(L.f)(
+                  label: Object(B.f)(
                     "#EventEditor_Options_Hide_Library_Overview"
                   ),
                   checked: t
@@ -32721,7 +32753,7 @@
                   onChange: function () {
                     return t.ToggleTag("mod_hide_library_detail");
                   },
-                  label: Object(L.f)(
+                  label: Object(B.f)(
                     "#EventEditor_Options_Hide_Library_Detail"
                   ),
                   checked: t.GetEventModel().BHasTag("mod_hide_library_detail"),
@@ -32730,7 +32762,7 @@
                   onChange: function () {
                     return t.ToggleTag("mod_hide_store");
                   },
-                  label: Object(L.f)("#EventEditor_Options_Hide_Store"),
+                  label: Object(B.f)("#EventEditor_Options_Hide_Store"),
                   checked: t.GetEventModel().BHasTag("mod_hide_store"),
                 }),
                 Ze.createElement(Ke.p, {
@@ -32837,7 +32869,7 @@
                   Ze.createElement(
                     "div",
                     { className: ft.a.EventEditorTextTitle },
-                    Object(L.f)("#EventEditor_Reminder_title")
+                    Object(B.f)("#EventEditor_Reminder_title")
                   ),
                   Ze.createElement(
                     "div",
@@ -32850,12 +32882,12 @@
                     Ze.createElement(
                       "div",
                       { className: ft.a.EventEditorTextSubTitle },
-                      Object(L.f)("#EventEditor_Reminder_desc")
+                      Object(B.f)("#EventEditor_Reminder_desc")
                     ),
                     Ze.createElement(
                       "div",
                       { className: ft.a.EventEditorTextSubTitle },
-                      Object(L.n)(
+                      Object(B.n)(
                         "#EventEditor_Reminder_desc2",
                         Ze.createElement(
                           "a",
@@ -32863,7 +32895,7 @@
                             href: D.c.STORE_BASE_URL + "mobile?show=steamapp",
                             target: D.c.IN_CLIENT ? void 0 : "_blank",
                           },
-                          Object(L.f)("#EventEditor_Reminder_mobileapp")
+                          Object(B.f)("#EventEditor_Reminder_mobileapp")
                         )
                       )
                     ),
@@ -32879,19 +32911,19 @@
                         onClick: this.TestFireEvent,
                         disabled: r,
                       },
-                      Object(L.f)("#EventEditor_Reminder_testfire")
+                      Object(B.f)("#EventEditor_Reminder_testfire")
                     ),
                     r &&
                       Ze.createElement(
                         "span",
                         null,
-                        Object(L.f)("#EventEditor_Reminder_disable")
+                        Object(B.f)("#EventEditor_Reminder_disable")
                       )
                   )
                 )
               );
             }),
-            Object(I.c)([B.a], e.prototype, "TestFireEvent", null),
+            Object(I.c)([L.a], e.prototype, "TestFireEvent", null),
             (e = Object(I.c)([qe.a], e))
           );
         })(Ze.Component),
@@ -32907,11 +32939,11 @@
               Ze.createElement(
                 "div",
                 { className: ft.a.EventEditorTextTitle },
-                Object(L.f)("#EventEditor_Options_VisibilityOptIn_Title"),
+                Object(B.f)("#EventEditor_Options_VisibilityOptIn_Title"),
                 Ze.createElement(
                   "span",
                   { className: ht.a.RequiredFieldLabel },
-                  Object(L.f)("#EventEditor_Required")
+                  Object(B.f)("#EventEditor_Required")
                 )
               ),
               Ze.createElement(
@@ -32925,7 +32957,7 @@
                 Ze.createElement(
                   "div",
                   { className: ft.a.EventEditorTextSubTitle },
-                  Object(L.f)(
+                  Object(B.f)(
                     "#EventEditor_Options_VisibilityOptIn_Description",
                     t.GetAppName()
                   )
@@ -32934,7 +32966,7 @@
                   onChange: function (e) {
                     return t.SetOptedInForOGGWithoutVisibleStorePage(e);
                   },
-                  label: Object(L.f)(
+                  label: Object(B.f)(
                     "#EventEditor_Options_VisibilityOptIn_Label"
                   ),
                   checked: t.BOptedInForOGGWithoutVisibleStorePage(),
@@ -32946,13 +32978,13 @@
       function hs(e) {
         var t =
             e.BInRealmChina() &&
-            L.b.IsELanguageValidInRealm(
+            B.b.IsELanguageValidInRealm(
               e.GetCurEditLanguage(),
               te.d.k_ESteamRealmChina
             ),
           n =
             e.BInRealmGlobal() &&
-            L.b.IsELanguageValidInRealm(
+            B.b.IsELanguageValidInRealm(
               e.GetCurEditLanguage(),
               te.d.k_ESteamRealmGlobal
             );
@@ -32968,8 +33000,8 @@
                 : t.ClearTags(["enable_steam_china", "disable_steam_global"]),
                 hs(t);
             },
-            label: Object(L.f)("#EventEditor_Options_ShowInSteamChina"),
-            description: Object(L.f)(
+            label: Object(B.f)("#EventEditor_Options_ShowInSteamChina"),
+            description: Object(B.f)(
               "#EventEditor_Options_ShowInSteamChina_Desc"
             ),
             checked: t.BInRealmChina(),
@@ -32985,8 +33017,8 @@
                 : t.ClearTags(["disable_steam_global"]),
                 hs(t);
             },
-            label: Object(L.f)("#EventEditor_Options_ShowInSteamGlobal"),
-            description: Object(L.f)(
+            label: Object(B.f)("#EventEditor_Options_ShowInSteamGlobal"),
+            description: Object(B.f)(
               "#EventEditor_Options_ShowInSteamGlobal_Desc"
             ),
             checked: !t.BInRealmGlobal(),
@@ -33014,11 +33046,11 @@
                   onChange: function () {
                     return a.ToggleTag("adult_only_content");
                   },
-                  label: Object(L.f)(
+                  label: Object(B.f)(
                     "#EventEditor_Options_Has_Adult_Only_Content"
                   ),
                   checked: a.GetEventModel().BHasTag("adult_only_content"),
-                  description: Object(L.f)(
+                  description: Object(B.f)(
                     "#EventEditor_Options_Has_Adult_Only_Content_Desc"
                   ),
                 })
@@ -33086,7 +33118,7 @@
                 Ze.createElement(
                   "div",
                   { className: ft.a.EventEditorTextTitle },
-                  Object(L.f)("#Button_Publish")
+                  Object(B.f)("#Button_Publish")
                 ),
                 Ze.createElement(
                   "div",
@@ -33101,7 +33133,7 @@
                       "button",
                       {
                         onClick: this.OnCreatePublishDialog,
-                        "data-tooltip-text": Object(L.f)(
+                        "data-tooltip-text": Object(B.f)(
                           "#EventEditor_Publish_ttip"
                         ),
                         className: Object(pt.a)(
@@ -33110,7 +33142,7 @@
                         ),
                         ref: this.refActionButton,
                       },
-                      Object(L.f)("#Button_Publish"),
+                      Object(B.f)("#Button_Publish"),
                       " (?)"
                     ),
                   Boolean(n && t) &&
@@ -33122,7 +33154,7 @@
                           return Ze.createElement(
                             Kn.a,
                             {
-                              toolTipContent: Object(L.f)(
+                              toolTipContent: Object(B.f)(
                                 "#EventEditor_Publish_Disable_ttip"
                               ),
                             },
@@ -33138,22 +33170,22 @@
                             ft.a.EventPublishButton,
                             "DialogButton Primary"
                           ),
-                          "data-tooltip-text": Object(L.f)(
+                          "data-tooltip-text": Object(B.f)(
                             "#EventEditor_Publish_VisibleNow_ttip"
                           ),
                           ref: this.refActionButton,
                           disabled: !a,
                         },
-                        Object(L.f)("#EventEditor_Publish_VisibleNow"),
+                        Object(B.f)("#EventEditor_Publish_VisibleNow"),
                         " (?)"
                       )
                     )
                 )
               );
             }),
-            Object(I.c)([B.a], e.prototype, "OnCreatePublishDialog", null),
-            Object(I.c)([B.a], e.prototype, "OnPublishSuccess", null),
-            Object(I.c)([B.a], e.prototype, "OnMakeVisibleNow", null),
+            Object(I.c)([L.a], e.prototype, "OnCreatePublishDialog", null),
+            Object(I.c)([L.a], e.prototype, "OnPublishSuccess", null),
+            Object(I.c)([L.a], e.prototype, "OnMakeVisibleNow", null),
             (e = Object(I.c)([qe.a], e))
           );
         })(Ze.Component),
@@ -33255,7 +33287,7 @@
                 Ze.createElement(
                   "div",
                   { className: vt.EventEditorTextTitle },
-                  Object(L.f)("#EventReach_Title")
+                  Object(B.f)("#EventReach_Title")
                 ),
                 Ze.createElement(
                   "div",
@@ -33263,7 +33295,7 @@
                   Ze.createElement(
                     "div",
                     { className: vt.EventEditorTextSubTitle },
-                    Object(L.f)("#EventReach_SubTitle")
+                    Object(B.f)("#EventReach_SubTitle")
                   ),
                   Ze.createElement(
                     "div",
@@ -33271,7 +33303,7 @@
                     Ze.createElement(
                       "div",
                       { className: Ts.ReachColumnName },
-                      Object(L.f)("#EventReach_Location")
+                      Object(B.f)("#EventReach_Location")
                     )
                   ),
                   Ze.createElement(
@@ -33281,11 +33313,11 @@
                       Ze.createElement(
                         "div",
                         { className: Ts.ReachSubject },
-                        Object(L.f)("#EventReach_GamePage"),
+                        Object(B.f)("#EventReach_GamePage"),
                         Ze.createElement(
                           "span",
                           {
-                            "data-tooltip-text": Object(L.f)(
+                            "data-tooltip-text": Object(B.f)(
                               "#EventReach_GamePage_ttip"
                             ),
                           },
@@ -33299,11 +33331,11 @@
                     Ze.createElement(
                       "div",
                       { className: Ts.ReachSubject },
-                      Object(L.f)("#EventReach_GameNewsPg"),
+                      Object(B.f)("#EventReach_GameNewsPg"),
                       Ze.createElement(
                         "span",
                         {
-                          "data-tooltip-text": Object(L.f)(
+                          "data-tooltip-text": Object(B.f)(
                             "#EventReach_GameNewsPg_ttip"
                           ),
                         },
@@ -33315,11 +33347,11 @@
                     Ze.createElement(
                       "div",
                       { className: Object(pt.a)(Ts.ReachSubject) },
-                      Object(L.f)("#EventReach_PersonalizedCalendar"),
+                      Object(B.f)("#EventReach_PersonalizedCalendar"),
                       Ze.createElement(
                         "span",
                         {
-                          "data-tooltip-text": Object(L.f)(
+                          "data-tooltip-text": Object(B.f)(
                             "#EventReach_PersonalizedCalendar_ttip"
                           ),
                         },
@@ -33331,11 +33363,11 @@
                     Ze.createElement(
                       "div",
                       { className: Ts.ReachSubject },
-                      Object(L.f)("#EventReach_Community"),
+                      Object(B.f)("#EventReach_Community"),
                       Ze.createElement(
                         "span",
                         {
-                          "data-tooltip-text": Object(L.f)(
+                          "data-tooltip-text": Object(B.f)(
                             "#EventReach_Community_ttip"
                           ),
                         },
@@ -33347,11 +33379,11 @@
                     Ze.createElement(
                       "div",
                       { className: Ts.ReachSubject },
-                      Object(L.f)("#EventReach_FriendActivity"),
+                      Object(B.f)("#EventReach_FriendActivity"),
                       Ze.createElement(
                         "span",
                         {
-                          "data-tooltip-text": Object(L.f)(
+                          "data-tooltip-text": Object(B.f)(
                             "#EventReach_FriendActivity_ttip"
                           ),
                         },
@@ -33364,20 +33396,20 @@
                       Ze.createElement(
                         "div",
                         { className: Object(pt.a)(Ts.ReachSubject) },
-                        Object(L.f)("#EventReach_LibraryHome"),
+                        Object(B.f)("#EventReach_LibraryHome"),
                         r &&
                           Ze.createElement(
                             "span",
                             { className: Ts.ReachPendingVisibilityText },
                             "  ",
-                            Object(L.f)(
+                            Object(B.f)(
                               "#EventReach_LibraryVisibilityPendingModeration"
                             )
                           ),
                         Ze.createElement(
                           "span",
                           {
-                            "data-tooltip-text": Object(L.f)(
+                            "data-tooltip-text": Object(B.f)(
                               "#EventReach_LibraryHome_ttip"
                             ),
                           },
@@ -33392,20 +33424,20 @@
                       Ze.createElement(
                         "div",
                         { className: Object(pt.a)(Ts.ReachSubject) },
-                        Object(L.f)("#EventReach_LibraryDetail"),
+                        Object(B.f)("#EventReach_LibraryDetail"),
                         r &&
                           Ze.createElement(
                             "span",
                             { className: Ts.ReachPendingVisibilityText },
                             "  ",
-                            Object(L.f)(
+                            Object(B.f)(
                               "#EventReach_LibraryVisibilityPendingModeration"
                             )
                           ),
                         Ze.createElement(
                           "span",
                           {
-                            "data-tooltip-text": Object(L.f)(
+                            "data-tooltip-text": Object(B.f)(
                               "#EventReach_LibraryDetail_ttip"
                             ),
                           },
@@ -33422,13 +33454,13 @@
                       Ze.createElement(
                         "div",
                         { className: Object(pt.a)(Ts.ReachSubject, Ts.Future) },
-                        Object(L.f)("#EventReach_Future"),
+                        Object(B.f)("#EventReach_Future"),
                         " ",
-                        Object(L.f)("#EventReach_Reminder"),
+                        Object(B.f)("#EventReach_Reminder"),
                         Ze.createElement(
                           "span",
                           {
-                            "data-tooltip-text": Object(L.f)(
+                            "data-tooltip-text": Object(B.f)(
                               "#EventReach_Reminder_ttip"
                             ),
                           },
@@ -33443,13 +33475,13 @@
                       Ze.createElement(
                         "div",
                         { className: Object(pt.a)(Ts.ReachSubject, Ts.Future) },
-                        Object(L.f)("#EventReach_Future"),
+                        Object(B.f)("#EventReach_Future"),
                         " ",
-                        Object(L.f)("#EventReach_EmailRollUp"),
+                        Object(B.f)("#EventReach_EmailRollUp"),
                         Ze.createElement(
                           "span",
                           {
-                            "data-tooltip-text": Object(L.f)(
+                            "data-tooltip-text": Object(B.f)(
                               "#EventReach_EmailRollUp_ttip"
                             ),
                           },
@@ -33471,7 +33503,7 @@
                         Ze.createElement(
                           "div",
                           { className: Ts.ReachColumnName },
-                          Object(L.f)("#EventReach_OptionalLocation")
+                          Object(B.f)("#EventReach_OptionalLocation")
                         )
                       ),
                       a.is_ogg &&
@@ -33490,13 +33522,13 @@
                               Ze.createElement(
                                 "span",
                                 { className: Ts.ReactSubjectOptionalText },
-                                Object(L.f)("#EventReach_Workshop")
+                                Object(B.f)("#EventReach_Workshop")
                               )
                             ),
                             Ze.createElement(
                               "span",
                               {
-                                "data-tooltip-text": Object(L.f)(
+                                "data-tooltip-text": Object(B.f)(
                                   "#EventReach_Workshop_ttip"
                                 ),
                               },
@@ -33522,13 +33554,13 @@
                                 Ze.createElement(
                                   "span",
                                   { className: Ts.ReactSubjectOptionalText },
-                                  Object(L.f)("#EventReach_RecentlyUpdatedPg")
+                                  Object(B.f)("#EventReach_RecentlyUpdatedPg")
                                 )
                               ),
                               Ze.createElement(
                                 "span",
                                 {
-                                  "data-tooltip-text": Object(L.f)(
+                                  "data-tooltip-text": Object(B.f)(
                                     "#EventReach_RecentlyUpdatedPg_ttip"
                                   ),
                                 },
@@ -33555,13 +33587,13 @@
                               Ze.createElement(
                                 "span",
                                 { className: Ts.ReactSubjectOptionalText },
-                                Object(L.f)("#EventReach_LibraySpotLight")
+                                Object(B.f)("#EventReach_LibraySpotLight")
                               )
                             ),
                             Ze.createElement(
                               "span",
                               {
-                                "data-tooltip-text": Object(L.f)(
+                                "data-tooltip-text": Object(B.f)(
                                   "#EventReach_LibraySpotLight_ttip"
                                 ),
                               },
@@ -33593,13 +33625,13 @@
                               Ze.createElement(
                                 "span",
                                 { className: Ts.ReactSubjectOptionalText },
-                                Object(L.f)("#EventReach_SaleBanner")
+                                Object(B.f)("#EventReach_SaleBanner")
                               )
                             ),
                             Ze.createElement(
                               "span",
                               {
-                                "data-tooltip-text": Object(L.f)(
+                                "data-tooltip-text": Object(B.f)(
                                   "#EventReach_SaleBanner_ttip"
                                 ),
                               },
@@ -33626,7 +33658,7 @@
                               Ze.createElement(
                                 "div",
                                 null,
-                                Object(L.n)(
+                                Object(B.n)(
                                   "#EventReact_SaleBannerDuration",
                                   Ze.createElement(Vt.a, {
                                     dateAndTime: e.GetEventStartTime(),
@@ -33672,7 +33704,7 @@
                       o = Ze.createElement(
                         "span",
                         null,
-                        Object(L.f)(
+                        Object(B.f)(
                           "#EventEditor_Status_WillBeVisible_EventStart"
                         )
                       );
@@ -33681,7 +33713,7 @@
                       o = Ze.createElement(
                         "span",
                         null,
-                        Object(L.n)(
+                        Object(B.n)(
                           "#EventEditor_Status_WillBeVisible_At",
                           Ze.createElement(Vt.a, {
                             dateAndTime: t.GetVisibilityStartTimeAndDateUnixSeconds(),
@@ -33695,18 +33727,18 @@
                       o = Ze.createElement(
                         "div",
                         null,
-                        Object(L.f)("#EventPublishing_Summary_Immediate"),
+                        Object(B.f)("#EventPublishing_Summary_Immediate"),
                         Ze.createElement("br", null),
-                        Object(L.f)("#EventPublishing_Summary_ModerationNote")
+                        Object(B.f)("#EventPublishing_Summary_ModerationNote")
                       );
                   }
                 else
                   o = Ze.createElement(
                     "div",
                     null,
-                    Object(L.f)("#EventPublishing_Summary_Immediate"),
+                    Object(B.f)("#EventPublishing_Summary_Immediate"),
                     Ze.createElement("br", null),
-                    Object(L.f)("#EventPublishing_Summary_ModerationNote")
+                    Object(B.f)("#EventPublishing_Summary_ModerationNote")
                   );
               }
               return Ze.createElement(
@@ -33715,7 +33747,7 @@
                 Ze.createElement(
                   "div",
                   { className: vt.EventEditorTextTitle },
-                  Object(L.f)("#EventPublishing_Summary")
+                  Object(B.f)("#EventPublishing_Summary")
                 ),
                 Ze.createElement(
                   "div",
@@ -33740,7 +33772,7 @@
                             eventModel: t,
                             route: Fn.a.k_eStoreView,
                           },
-                          Object(L.f)("#EventEditor_ViewLive")
+                          Object(B.f)("#EventEditor_ViewLive")
                         )
                       )
                   ),
@@ -33753,7 +33785,7 @@
                       Ze.createElement(
                         "b",
                         null,
-                        Object(L.f)("#EventDisplay_TimeUpcoming"),
+                        Object(B.f)("#EventDisplay_TimeUpcoming"),
                         ":"
                       ),
                       " "
@@ -33772,7 +33804,7 @@
                       Ze.createElement(
                         "b",
                         null,
-                        Object(L.f)("#EventPublishing_Summary_VisibilityStart"),
+                        Object(B.f)("#EventPublishing_Summary_VisibilityStart"),
                         ":"
                       ),
                       " "
@@ -33782,7 +33814,7 @@
                       Ze.createElement(
                         "span",
                         null,
-                        Object(L.n)(
+                        Object(B.n)(
                           "#EventEditor_Visibility_AutoVisible",
                           Ze.createElement(Vt.a, {
                             dateAndTime: r,
@@ -33790,7 +33822,7 @@
                           })
                         ),
                         " ",
-                        Object(L.f)("#EventEditor_Visibility_NoAction")
+                        Object(B.f)("#EventEditor_Visibility_NoAction")
                       ),
                     o
                   ),
@@ -33818,7 +33850,7 @@
             Object(I.d)(e, t),
             (e.prototype.componentDidMount = function () {
               D.b.IS_CURATOR &&
-                Bn.a.LoadCreatorHome(
+                Ln.a.LoadCreatorHome(
                   this.props.clanSteamID,
                   this.m_cancelSignal
                 );
@@ -33829,7 +33861,7 @@
               );
             }),
             (e.prototype.BCanOnlyUploadBecauseSupportUser = function () {
-              var e = Bn.a.GetCreatorHome(this.props.clanSteamID);
+              var e = Ln.a.GetCreatorHome(this.props.clanSteamID);
               return (
                 !!(
                   D.i.is_support &&
@@ -33874,7 +33906,7 @@
                 ),
                 m = [
                   {
-                    name: Object(L.f)("#EventEditor_Description_tab"),
+                    name: Object(B.f)("#EventEditor_Description_tab"),
                     key: "description",
                     status: o.text,
                     statusType: o.complete >= o.total ? "success" : "danger",
@@ -33891,7 +33923,7 @@
                     onClick: p,
                   },
                   {
-                    name: Object(L.f)("#EventEditor_Options_Title"),
+                    name: Object(B.f)("#EventEditor_Options_Title"),
                     key: "options",
                     status: l ? l.text : "",
                     statusType:
@@ -33905,7 +33937,7 @@
                     onClick: p,
                   },
                   {
-                    name: Object(L.f)("#EventEditor_Artwork"),
+                    name: Object(B.f)("#EventEditor_Artwork"),
                     key: "artwork",
                     status: s ? s.text : "",
                     statusType:
@@ -33913,19 +33945,19 @@
                     hidden: !D.b.CAN_UPLOAD_IMAGES,
                     vo_warning:
                       this.BCanOnlyUploadBecauseSupportUser() &&
-                      Object(L.f)("#EventEditor_CuratorImageWarning"),
+                      Object(B.f)("#EventEditor_CuratorImageWarning"),
                     contents: Ze.createElement(ks, { editModel: t }),
                     onClick: p,
                   },
                   {
-                    name: Object(L.f)("#Broadcast_tab"),
+                    name: Object(B.f)("#Broadcast_tab"),
                     key: "broadcast",
                     status: "",
                     statusType: "success",
                     hidden: !D.b.CAN_UPLOAD_IMAGES,
                     vo_warning:
                       this.BCanOnlyUploadBecauseSupportUser() &&
-                      Object(L.f)("#EventEditor_CuratorImageWarning"),
+                      Object(B.f)("#EventEditor_CuratorImageWarning"),
                     contents: Ze.createElement(
                       Xe.a,
                       null,
@@ -33936,7 +33968,7 @@
                   {
                     name:
                       (n.BHasEmailEnabled() ? "" : "(VO) ") +
-                      Object(L.f)("#EventEmail_TabTitle"),
+                      Object(B.f)("#EventEmail_TabTitle"),
                     key: "email",
                     status: "",
                     statusType: "success",
@@ -33951,7 +33983,7 @@
                   {
                     name:
                       (n.BHasSaleEnabled() ? "" : "(VO) ") +
-                      Object(L.f)("#Sale_TabTitle"),
+                      Object(B.f)("#Sale_TabTitle"),
                     key: "sale",
                     status: c ? c.text : "",
                     statusType:
@@ -33960,7 +33992,7 @@
                     hidden: i,
                     vo_warning:
                       this.BCanOnlyUploadBecauseSupportUser() &&
-                      Object(L.f)("#EventEditor_CuratorImageWarning"),
+                      Object(B.f)("#EventEditor_CuratorImageWarning"),
                     contents: Ze.createElement(
                       Xe.a,
                       null,
@@ -33969,7 +34001,7 @@
                     onClick: p,
                   },
                   {
-                    name: Object(L.f)("#Button_Publish"),
+                    name: Object(B.f)("#Button_Publish"),
                     key: "publishing",
                     status: "",
                     statusType: "success",
@@ -34042,7 +34074,7 @@
                         return (
                           (window.onbeforeunload = function () {
                             return so.GetEditModel().BIsDirty()
-                              ? Object(L.f)("#EventEditor_UnsavedChanges")
+                              ? Object(B.f)("#EventEditor_UnsavedChanges")
                               : null;
                           }),
                           [
@@ -34106,7 +34138,7 @@
                       Ze.createElement(
                         "span",
                         null,
-                        Object(L.f)("#EventEditor_TypeTitle"),
+                        Object(B.f)("#EventEditor_TypeTitle"),
                         " "
                       ),
                       l.GetCategoryAsString(),
@@ -34200,10 +34232,10 @@
                       Ze.createElement(
                         "strong",
                         null,
-                        Object(L.f)("#selectimage_tip3_title")
+                        Object(B.f)("#selectimage_tip3_title")
                       ),
                       ": ",
-                      Object(L.n)(
+                      Object(B.n)(
                         "#selectimage_tip3",
                         Ze.createElement(
                           "span",
@@ -34216,7 +34248,7 @@
                               href:
                                 "https://partner.steamgames.com/doc/store/localization#supported_languages",
                             },
-                            Object(L.f)("#selectimage_see_documentation")
+                            Object(B.f)("#selectimage_see_documentation")
                           )
                         )
                       )
@@ -34232,7 +34264,7 @@
                             "events/event_header_template.zip?t=14",
                           download: !0,
                         },
-                        Object(L.f)("#selectimage_downloadtemplate")
+                        Object(B.f)("#selectimage_downloadtemplate")
                       )
                     )
                   ),
@@ -34255,7 +34287,7 @@
                     Ze.createElement(
                       "div",
                       { className: ht.a.ArtworkExampleTitle },
-                      Object(L.f)("#selectimage_viewExamples")
+                      Object(B.f)("#selectimage_viewExamples")
                     )
                   )
                 ),
@@ -34265,7 +34297,7 @@
                 }),
                 Ze.createElement(nn, {
                   clanSteamID: e.GetClanSteamID(),
-                  title: Object(L.f)("#EventEditor_ArtworkType_capsule"),
+                  title: Object(B.f)("#EventEditor_ArtworkType_capsule"),
                   artworkType: "capsule",
                   headerHint: Object(se.c)(
                     e.GetEventType(),
@@ -34276,7 +34308,7 @@
                 }),
                 Ze.createElement(nn, {
                   clanSteamID: e.GetClanSteamID(),
-                  title: Object(L.f)("#EventEditor_ArtworkType_background"),
+                  title: Object(B.f)("#EventEditor_ArtworkType_background"),
                   artworkType: "background",
                   headerHint: Pe.k_Suggested,
                 }),
@@ -34287,7 +34319,7 @@
                       Ze.createElement(
                         "div",
                         { className: qt.a.Title },
-                        Object(L.f)("#EventEditor_ArtworkType_spotlight")
+                        Object(B.f)("#EventEditor_ArtworkType_spotlight")
                       ),
                       Ze.createElement(
                         "div",
@@ -34297,7 +34329,7 @@
                             qt.a.Tips
                           ),
                         },
-                        Object(L.f)(
+                        Object(B.f)(
                           "#EventEditor_ArtworkType_SpotlightNotSupport",
                           e.GetCategoryAsString()
                         )
@@ -34307,7 +34339,7 @@
                   : Boolean(D.b.IS_OGG) &&
                       Ze.createElement(nn, {
                         clanSteamID: e.GetClanSteamID(),
-                        title: Object(L.f)(
+                        title: Object(B.f)(
                           "#EventEditor_ArtworkType_spotlight"
                         ),
                         artworkType: "spotlight",
@@ -34318,7 +34350,7 @@
                 Boolean(D.b.IS_OGG) &&
                   Ze.createElement(nn, {
                     clanSteamID: e.GetClanSteamID(),
-                    title: Object(L.f)("#EventEditor_ArtworkType_hero"),
+                    title: Object(B.f)("#EventEditor_ArtworkType_hero"),
                     artworkType: "hero",
                   })
               );
@@ -34327,8 +34359,8 @@
           );
         })(Ze.Component),
         Ns = n("CdLH"),
-        Ls = "age_gate_",
-        Bs = new ((function () {
+        Bs = "age_gate_",
+        Ls = new ((function () {
           function e() {
             (this.m_promiseMap = new Map()),
               (this.m_mapAppIDAgeGateByPass = new Map());
@@ -34338,7 +34370,7 @@
               var t;
               return (
                 this.m_mapAppIDAgeGateByPass.has(e) ||
-                  ((t = sessionStorage.getItem(Ls + e)),
+                  ((t = sessionStorage.getItem(Bs + e)),
                   this.m_mapAppIDAgeGateByPass.set(e, Boolean(t))),
                 this.m_mapAppIDAgeGateByPass.get(e)
               );
@@ -34350,7 +34382,7 @@
                   switch (e.label) {
                     case 0:
                       return (
-                        sessionStorage.setItem(Ls + a, "" + i),
+                        sessionStorage.setItem(Bs + a, "" + i),
                         (t =
                           D.c.COMMUNITY_BASE_URL +
                           "actions/ajaxsetappagegatebypass/"),
@@ -34418,7 +34450,7 @@
                             a.data.apps.forEach(function (e) {
                               var t = Boolean(e.bypassed);
                               i.m_mapAppIDAgeGateByPass.set(e.appid, t),
-                                sessionStorage.setItem(Ls + r, "" + t);
+                                sessionStorage.setItem(Bs + r, "" + t);
                             });
                           }),
                         [2, Boolean(this.m_mapAppIDAgeGateByPass.get(r))]
@@ -34429,7 +34461,7 @@
             }),
             (e.prototype.SessionByPassCheck = function (e) {
               this.m_mapAppIDAgeGateByPass.set(e, !0),
-                sessionStorage.setItem(Ls + e, "" + !0);
+                sessionStorage.setItem(Bs + e, "" + !0);
             }),
             e
           );
@@ -34549,7 +34581,7 @@
           return (
             Object(I.d)(c, t),
             (c.BIsAgeGateNeeded = function (e) {
-              if (Bs.GetAppIDBypassed(e)) return !1;
+              if (Ls.GetAppIDBypassed(e)) return !1;
               if (D.b.HAS_ADULT_CONTENT_SEX || D.b.HAS_ADULT_CONTENT_VIOLENCE) {
                 var t = Fs.GetCommunityPreference();
                 return (
@@ -34585,7 +34617,7 @@
                         (a = t.appid),
                         (i = t.fnOnDismissAgeGate),
                         (r = Fs.LoadMyCommunityPreferences(n)),
-                        (o = Bs.LoadAgeGatesBypassedForApp(a, n)),
+                        (o = Ls.LoadAgeGatesBypassedForApp(a, n)),
                         [4, Promise.all([r, o])]
                       );
                     case 1:
@@ -34642,7 +34674,7 @@
                     case 1:
                       return (
                         e.trys.push([1, 3, 4, 5]),
-                        [4, Bs.SetAgeGateAppBypass(n, l, a)]
+                        [4, Ls.SetAgeGateAppBypass(n, l, a)]
                       );
                     case 2:
                       return (
@@ -34673,7 +34705,7 @@
             }),
             (c.prototype.OnDismiss = function () {
               var e = this.props.appid;
-              Bs.SessionByPassCheck(e), this.props.fnOnDismissAgeGate();
+              Ls.SessionByPassCheck(e), this.props.fnOnDismissAgeGate();
             }),
             (c.prototype.render = function () {
               var e = this.props,
@@ -34694,68 +34726,68 @@
                   Qe.a.createElement(
                     "p",
                     { className: xs.descriptor },
-                    Object(L.f)("#AgeGate_Content"),
+                    Object(B.f)("#AgeGate_Content"),
                     Qe.a.createElement("br", null),
                     n &&
                       a &&
-                      Object(L.n)(
+                      Object(B.n)(
                         "#AgeGate_MayContain_4",
                         Qe.a.createElement(
                           "span",
                           { className: xs.strong },
-                          Object(L.f)("#AgeGate_Sex")
+                          Object(B.f)("#AgeGate_Sex")
                         ),
                         Qe.a.createElement(
                           "span",
                           { className: xs.strong },
-                          Object(L.f)("#AgeGate_Nudity")
+                          Object(B.f)("#AgeGate_Nudity")
                         ),
                         Qe.a.createElement(
                           "span",
                           { className: xs.strong },
-                          Object(L.f)("#AgeGate_Violence")
+                          Object(B.f)("#AgeGate_Violence")
                         ),
                         Qe.a.createElement(
                           "span",
                           { className: xs.strong },
-                          Object(L.f)("#AgeGate_Gore")
+                          Object(B.f)("#AgeGate_Gore")
                         )
                       ),
                     Boolean(!n && a) &&
-                      Object(L.n)(
+                      Object(B.n)(
                         "#AgeGate_MayContain_2",
                         Qe.a.createElement(
                           "span",
                           { className: xs.strong },
-                          Object(L.f)("#AgeGate_Sex")
+                          Object(B.f)("#AgeGate_Sex")
                         ),
                         Qe.a.createElement(
                           "span",
                           { className: xs.strong },
-                          Object(L.f)("#AgeGate_Nudity")
+                          Object(B.f)("#AgeGate_Nudity")
                         )
                       ),
                     Boolean(n && !a) &&
-                      Object(L.n)(
+                      Object(B.n)(
                         "#AgeGate_MayContain_2",
                         Qe.a.createElement(
                           "span",
                           { className: xs.strong },
-                          Object(L.f)("#AgeGate_Violence")
+                          Object(B.f)("#AgeGate_Violence")
                         ),
                         Qe.a.createElement(
                           "span",
                           { className: xs.strong },
-                          Object(L.f)("#AgeGate_Gore")
+                          Object(B.f)("#AgeGate_Gore")
                         )
                       ),
                     Boolean(t && !a && !n) &&
                       Qe.a.createElement(
                         Qe.a.Fragment,
                         null,
-                        Object(L.f)("#AgeGate_Generic1"),
+                        Object(B.f)("#AgeGate_Generic1"),
                         Qe.a.createElement("br", null),
-                        Object(L.f)("#AgeGate_Generic2")
+                        Object(B.f)("#AgeGate_Generic2")
                       )
                   ),
                   Qe.a.createElement("input", {
@@ -34773,7 +34805,7 @@
                     Qe.a.createElement(
                       "span",
                       null,
-                      Object(L.f)("#AgeGate_DontWarnMe", D.b.APP_NAME)
+                      Object(B.f)("#AgeGate_DontWarnMe", D.b.APP_NAME)
                     )
                   ),
                   Qe.a.createElement(
@@ -34787,12 +34819,12 @@
                     Qe.a.createElement(
                       "div",
                       { className: vt.Button, onClick: this.OnDismiss },
-                      Object(L.f)("#Button_ViewPage")
+                      Object(B.f)("#Button_ViewPage")
                     ),
                     Qe.a.createElement(
                       "a",
                       { className: vt.Button, href: D.c.COMMUNITY_BASE_URL },
-                      Object(L.f)("#Button_Cancel")
+                      Object(B.f)("#Button_Cancel")
                     )
                   ),
                   Qe.a.createElement(
@@ -34801,7 +34833,7 @@
                     Qe.a.createElement(
                       "div",
                       null,
-                      Object(L.f)("#AgeGate_Reason")
+                      Object(B.f)("#AgeGate_Reason")
                     ),
                     Qe.a.createElement(
                       "a",
@@ -34812,18 +34844,18 @@
                           "account/preferences#CommunityContentPreferences",
                         target: D.c.IN_CLIENT ? void 0 : "_blank",
                       },
-                      Object(L.f)("#AgeGate_Edit")
+                      Object(B.f)("#AgeGate_Edit")
                     )
                   ),
                   this.state.bLoadingUserSettings &&
                     Qe.a.createElement(dt.a, {
                       position: "center",
-                      string: Object(L.f)("#AgeGate_LoadingPreferences"),
+                      string: Object(B.f)("#AgeGate_LoadingPreferences"),
                     })
                 );
             }),
-            Object(I.c)([B.a], c.prototype, "OnWarnChange", null),
-            Object(I.c)([B.a], c.prototype, "OnDismiss", null),
+            Object(I.c)([L.a], c.prototype, "OnWarnChange", null),
+            Object(I.c)([L.a], c.prototype, "OnDismiss", null),
             c
           );
         })(Qe.a.Component);
@@ -34992,7 +35024,7 @@
                     Ze.createElement(dt.a, {
                       position: "center",
                       size: "medium",
-                      string: Object(L.f)("#Loading"),
+                      string: Object(B.f)("#Loading"),
                     })
                   )
                 : null != this.state.strErrorMsg
@@ -35006,7 +35038,7 @@
                 ? this.GetRedirectRender()
                 : void 0;
             }),
-            Object(I.c)([B.a], e.prototype, "DismissAgeGate", null),
+            Object(I.c)([L.a], e.prototype, "DismissAgeGate", null),
             e
           );
         })(Ze.Component),
@@ -35096,7 +35128,7 @@
                   eventModel: t,
                   partnerEventStore: so,
                 }),
-                otherEventRow: Ze.createElement(Bt.a, {
+                otherEventRow: Ze.createElement(Lt.a, {
                   clanAccountID: t.clanSteamID.GetAccountID(),
                   gidAnnouncement: t.GetAnnouncementGID(),
                   trackingLocation: 6,
@@ -35188,7 +35220,7 @@
                           eventModel: t,
                           partnerEventStore: so,
                         }),
-                        otherEventRow: Ze.createElement(Bt.a, {
+                        otherEventRow: Ze.createElement(Lt.a, {
                           clanAccountID: t.clanSteamID.GetAccountID(),
                           trackingLocation: 6,
                           gidAnnouncement: t.AnnouncementGID,
@@ -35300,10 +35332,10 @@
                     bPrimaryPageFeature: e,
                   })
                 : this.state.bLoadedLandingState
-                ? Ze.createElement(dt.a, { string: Object(L.f)("#Loading") })
+                ? Ze.createElement(dt.a, { string: Object(B.f)("#Loading") })
                 : Ze.createElement("div", null);
             }),
-            Object(I.c)([B.a], e.prototype, "HideModal", null),
+            Object(I.c)([L.a], e.prototype, "HideModal", null),
             (e = Object(I.c)([qe.a], e))
           );
         })(Ze.Component),
@@ -35515,7 +35547,7 @@
                     Qe.a.createElement(
                       "h2",
                       null,
-                      Object(L.f)("#EventBrowse_RecentEvents")
+                      Object(B.f)("#EventBrowse_RecentEvents")
                     ),
                     Qe.a.createElement(
                       "div",
@@ -35529,7 +35561,7 @@
                                 return n.ShowModal(a[0]);
                               },
                             },
-                            Object(L.f)("#EventBrowse_MoreEventsBtn")
+                            Object(B.f)("#EventBrowse_MoreEventsBtn")
                           )
                         : Qe.a.createElement(
                             Fn.c,
@@ -35539,7 +35571,7 @@
                               forceAnchor: !0,
                               className: Xs.SectionButton,
                             },
-                            Object(L.f)("#EventBrowse_MoreEventsBtn")
+                            Object(B.f)("#EventBrowse_MoreEventsBtn")
                           )
                     ),
                     Qe.a.createElement(
@@ -35548,8 +35580,8 @@
                       a.slice(0, t).map(function (t) {
                         var e =
                           1 === a.length && 500 < window.screen.width
-                            ? Bt.c
-                            : Bt.b;
+                            ? Lt.c
+                            : Lt.b;
                         return Qe.a.createElement(e, {
                           key: t.GID,
                           event: t,
@@ -35575,9 +35607,9 @@
                   })
               );
             }),
-            Object(I.c)([B.a], e.prototype, "ShowModal", null),
-            Object(I.c)([B.a], e.prototype, "ShowLatestUpdateModal", null),
-            Object(I.c)([B.a], e.prototype, "CloseModal", null),
+            Object(I.c)([L.a], e.prototype, "ShowModal", null),
+            Object(I.c)([L.a], e.prototype, "ShowLatestUpdateModal", null),
+            Object(I.c)([L.a], e.prototype, "CloseModal", null),
             e
           );
         })(Qe.a.Component),
@@ -35593,9 +35625,9 @@
             Qe.a.createElement(
               "div",
               { className: Xs.LatestUpdateButton, onClick: e.onClick },
-              Object(L.f)(
+              Object(B.f)(
                 "#EventBrowse_LatestUpdateTime_Button",
-                Object(L.p)(e.nUpdateTime)
+                Object(B.p)(e.nUpdateTime)
               )
             )
           );
@@ -35614,7 +35646,7 @@
             Qe.a.createElement(
               "h2",
               null,
-              Object(L.f)("#EventBrowse_LastUpdateDate", Object(L.p)(n))
+              Object(B.f)("#EventBrowse_LastUpdateDate", Object(B.p)(n))
             ),
             Qe.a.createElement(
               "div",
@@ -35622,14 +35654,14 @@
               Qe.a.createElement(
                 "div",
                 { className: Xs.SectionButton, onClick: t },
-                Object(L.f)("#EventBrowse_ViewLatestUpdate")
+                Object(B.f)("#EventBrowse_ViewLatestUpdate")
               )
             ),
             Boolean(r) &&
               Qe.a.createElement(
                 "div",
                 { className: Xs.EventsSummariesCtn },
-                Qe.a.createElement(Bt.c, { event: r, onClick: t })
+                Qe.a.createElement(Lt.c, { event: r, onClick: t })
               )
           );
         },

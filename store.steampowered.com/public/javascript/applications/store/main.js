@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6438175";
+var CLSTAMP = "6441250";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [11],
   {
@@ -10712,7 +10712,8 @@ var CLSTAMP = "6438175";
           {
             className: Object(k.a)(
               O.a.SaleSectionContainer,
-              ae.a.SaleSectionContainer
+              ae.a.SaleSectionContainer,
+              "center_row_trgt"
             ),
             style: { gridTemplateColumns: 1 < t ? r : null },
           },
@@ -11900,7 +11901,8 @@ var CLSTAMP = "6438175";
                       {
                         className: Object(k.a)(
                           O.a.SaleSectionContainer,
-                          ae.a.SaleSectionTabsRow
+                          ae.a.SaleSectionTabsRow,
+                          "SaleSectionCtn_Trgt"
                         ),
                       },
                       s
@@ -12044,38 +12046,51 @@ var CLSTAMP = "6438175";
                 1 <= e.length && (e[0].style.backgroundImage = null);
             }),
             (e.prototype.render = function () {
-              var e = this.GetEventModel();
-              if (e && void 0 !== this.state.nSaleDayIndex) {
-                var t,
-                  n = Boolean(this.props.bIsPreview);
-                n ||
-                  e.visibility_state === F.n.k_EEventStateVisible ||
+              var e,
+                t,
+                n,
+                r,
+                a = this.GetEventModel();
+              if (a && void 0 !== this.state.nSaleDayIndex) {
+                var o,
+                  i = Boolean(this.props.bIsPreview);
+                i ||
+                  a.visibility_state === F.n.k_EEventStateVisible ||
                   "store" != Object(W.g)() ||
-                  ((t = y.a.GetTimeNowWithOverride()),
-                  (!e.startTime || e.startTime - 1209600 - 3600 < t) &&
-                    (n = _.a.Get().GetPartnerEventPermissions(e.clanSteamID)
+                  ((o = y.a.GetTimeNowWithOverride()),
+                  (!a.startTime || a.startTime - 1209600 - 3600 < o) &&
+                    (i = _.a.Get().GetPartnerEventPermissions(a.clanSteamID)
                       .can_edit));
-                var r = e.GetImageURLWithFallback(
+                var s = a.GetImageURLWithFallback(
                     "sale_header",
                     this.props.language
                   ),
-                  a = null,
-                  o = null;
+                  c = null,
+                  l = null;
                 m.a.BHasSalePageBackgroundOverride() &&
-                  ((r = m.a.GetSalePageBackgroundOverride()),
-                  (a = m.a.GetSalePageBackgroundWEBM()),
-                  (o = m.a.GetSalePageBackgroundMP4()));
-                var i = {
+                  ((s = m.a.GetSalePageBackgroundOverride()),
+                  (c = m.a.GetSalePageBackgroundWEBM()),
+                  (l = m.a.GetSalePageBackgroundMP4()));
+                var u = {
                     promotionName: this.props.promotionName,
                     clanid: Number(W.c.CLANACCOUNTID),
-                    event: e,
+                    event: a,
                     bIsPreview: this.props.bIsPreview,
                     language: this.props.language,
                     accountIDs: this.props.bIsPreview
-                      ? e.jsondata.broadcast_whitelist
+                      ? a.jsondata.broadcast_whitelist
                       : void 0,
                   },
-                  s = _.a.Get().GetPartnerEventPermissions(e.clanSteamID);
+                  p = Boolean(
+                    null ===
+                      (r =
+                        null === (n = this.props.eventModel) || void 0 === n
+                          ? void 0
+                          : n.jsondata) || void 0 === r
+                      ? void 0
+                      : r.broadcast_display_wide_player
+                  ),
+                  d = _.a.Get().GetPartnerEventPermissions(a.clanSteamID);
                 return N.createElement(
                   v.a,
                   null,
@@ -12086,13 +12101,13 @@ var CLSTAMP = "6438175";
                       it,
                       {
                         className: Object(k.a)(
-                          ae.a["CustomStyle_" + e.jsondata.sale_vanity_id],
+                          ae.a["CustomStyle_" + a.jsondata.sale_vanity_id],
                           "SaleCustomCSS"
                         ),
-                        backgroundImage: r,
-                        backgroundColor: e.jsondata.sale_background_color,
+                        backgroundImage: s,
+                        backgroundColor: a.jsondata.sale_background_color,
                       },
-                      Boolean(o || a) &&
+                      Boolean(l || c) &&
                         N.createElement(
                           "div",
                           { className: ae.a.fullscreen_bg },
@@ -12109,7 +12124,7 @@ var CLSTAMP = "6438175";
                               className: Object(k.a)(
                                 ae.a.SaleBackground,
                                 ae.a[
-                                  "CustomStyle_" + e.jsondata.sale_vanity_id
+                                  "CustomStyle_" + a.jsondata.sale_vanity_id
                                 ],
                                 "SaleBackground",
                                 ae.a.fullscreen_bg__video
@@ -12118,18 +12133,18 @@ var CLSTAMP = "6438175";
                                 display: "flex",
                                 position: "relative",
                                 flexDirection: "column",
-                                backgroundColor: n
-                                  ? e.jsondata.sale_background_color
+                                backgroundColor: i
+                                  ? a.jsondata.sale_background_color
                                   : void 0,
                               },
                             },
                             N.createElement("source", {
-                              src: a,
+                              src: c,
                               type: "video/webm",
                             }),
                             !W.d.IN_CLIENT &&
                               N.createElement("source", {
-                                src: o,
+                                src: l,
                                 type: "video/mp4",
                               })
                           )
@@ -12137,37 +12152,50 @@ var CLSTAMP = "6438175";
                       N.createElement(
                         "div",
                         {
-                          className:
-                            ae.a.SaleOuterContainer +
-                            " " +
-                            ae.a["CustomStyle_" + e.jsondata.sale_vanity_id] +
-                            " SaleOuterContainer",
+                          className: Object(k.a)(
+                            (((e = {})[ae.a.SaleOuterContainer] = !0),
+                            (e[
+                              ae.a["CustomStyle_" + a.jsondata.sale_vanity_id]
+                            ] = !0),
+                            (e.SaleOuterContainer = !0),
+                            e)
+                          ),
                           style: {
                             marginTop:
-                              (e.jsondata.sale_header_offset || 0) + "px",
+                              (a.jsondata.sale_header_offset || 0) + "px",
                           },
                         },
                         Boolean(
-                          e.BEventCanShowBroadcastWidget() &&
-                            e.BSaleShowBroadcastAtTopOfPage()
+                          a.BEventCanShowBroadcastWidget() &&
+                            a.BSaleShowBroadcastAtTopOfPage()
                         ) &&
                           N.createElement(
                             v.a,
                             null,
                             N.createElement(
                               "div",
-                              { className: ae.a.SaleBroadcastCtn },
+                              {
+                                className: Object(k.a)(
+                                  (((t = {})[ae.a.SaleBroadcastCtn] = !p),
+                                  (t[ae.a.SaleWideBroadcastCtn] = p),
+                                  (t.SaleBroadcastCtn_Trgt = !0),
+                                  t)
+                                ),
+                              },
                               N.createElement(
                                 N.Suspense,
                                 { fallback: N.createElement("div", null) },
                                 N.createElement(
                                   at,
-                                  Object(P.a)({}, i, { bShowCapsuleArt: !0 })
+                                  Object(P.a)({}, u, {
+                                    bShowCapsuleArt: !0,
+                                    bWidePlayer: p,
+                                  })
                                 )
                               )
                             )
                           ),
-                        e.jsondata.sale_show_creator &&
+                        a.jsondata.sale_show_creator &&
                           N.createElement(
                             v.a,
                             null,
@@ -12183,7 +12211,7 @@ var CLSTAMP = "6438175";
                               N.createElement(J.a, {
                                 creatorID: {
                                   name: null,
-                                  clan_account_id: e.clanSteamID.GetAccountID(),
+                                  clan_account_id: a.clanSteamID.GetAccountID(),
                                   type: "developer",
                                 },
                                 bShowTagline: !0,
@@ -12192,24 +12220,24 @@ var CLSTAMP = "6438175";
                             )
                           ),
                         N.createElement(lt, {
-                          bIsPreview: n,
-                          event: e,
+                          bIsPreview: i,
+                          event: a,
                           language: this.props.language,
                           promotionName: this.props.promotionName,
                           nSaleDayIndex: this.state.nSaleDayIndex,
-                          broadcastEmbedContext: i,
+                          broadcastEmbedContext: u,
                         }),
                         Boolean(
-                          e.BSaleShowCuratorRecommendationAtBottomOfPage()
+                          a.BSaleShowCuratorRecommendationAtBottomOfPage()
                         ) &&
                           N.createElement(Ie, {
-                            bPreviewMode: n,
+                            bPreviewMode: i,
                             saleSection: Object(P.a)(Object(P.a)({}, F.m), {
                               section_type: "curator_recommendation",
                             }),
-                            event: e,
+                            event: a,
                           }),
-                        e.jsondata.sale_browse_more_button &&
+                        a.jsondata.sale_browse_more_button &&
                           N.createElement(
                             "div",
                             {
@@ -12221,14 +12249,14 @@ var CLSTAMP = "6438175";
                             },
                             N.createElement(Mt, {
                               text: Object(z.f)("#Sale_SeeAllSpecials"),
-                              url: e.jsondata.sale_browsemore_url,
-                              color: e.jsondata.sale_browsemore_color,
-                              bgcolor: e.jsondata.sale_browsemore_bgcolor,
+                              url: a.jsondata.sale_browsemore_url,
+                              color: a.jsondata.sale_browsemore_color,
+                              bgcolor: a.jsondata.sale_browsemore_bgcolor,
                             })
                           ),
-                        s.can_edit &&
+                        d.can_edit &&
                           N.createElement(g.a, {
-                            eventModel: e,
+                            eventModel: a,
                             bPreviewMode: this.props.bIsPreview,
                             useAnchors: !this.props.bIsPreview,
                             fnOnUpdateSaleDayIndex: this.OnChangeDayIndex,
@@ -12423,113 +12451,118 @@ var CLSTAMP = "6438175";
                 Object(ee.c)(this.props.history, a));
             }),
             (e.prototype.render = function () {
-              var c = this,
+              var l = this,
                 e = this.props,
-                l = e.event,
-                u = e.language,
-                p = (e.promotionName, e.bIsPreview),
-                d = (e.nSaleDayIndex, this.GetTabSelectionsFromURL()),
-                m = !1,
+                u = e.event,
+                p = e.language,
+                d = (e.promotionName, e.bIsPreview),
+                m = (e.nSaleDayIndex, this.GetTabSelectionsFromURL()),
                 h = !1,
-                f = new st(null, this.props.nSaleDayIndex),
-                b = [{ elements: [], activeTab: f }];
-              l.GetSaleSections().forEach(function (e, t) {
-                var n = b[b.length - 1].activeTab;
-                if (n.ShouldShowSection(e)) {
-                  var r,
-                    a = e.diable_tab_id_filtering ? f : n,
-                    o = !0,
-                    i = null;
+                f = !1,
+                b = new st(null, this.props.nSaleDayIndex),
+                _ = [{ elements: [], activeTab: b }];
+              u.GetSaleSections().forEach(function (e, t) {
+                var n,
+                  r = _[_.length - 1].activeTab;
+                if (r.ShouldShowSection(e)) {
+                  var a,
+                    o = e.diable_tab_id_filtering ? b : r,
+                    i = !0,
+                    s = null;
                   if (
-                    "items" == (r = e).section_type &&
-                    r.smart_section &&
-                    ("wishlist" == r.smart_section_type ||
-                      "interactive_recommender" == r.smart_section_type ||
-                      "dlc_music_onsale" == r.smart_section_type ||
-                      "ir_subscription" == r.smart_section_type ||
-                      ("wishlist_onsale" == r.smart_section_type &&
+                    "items" == (a = e).section_type &&
+                    a.smart_section &&
+                    ("wishlist" == a.smart_section_type ||
+                      "interactive_recommender" == a.smart_section_type ||
+                      "dlc_music_onsale" == a.smart_section_type ||
+                      "ir_subscription" == a.smart_section_type ||
+                      ("wishlist_onsale" == a.smart_section_type &&
                         !X.GetHideWishlist()) ||
-                      ("dlc_onsale" == r.smart_section_type &&
+                      ("dlc_onsale" == a.smart_section_type &&
                         !X.GetHideDLC()) ||
                       ("interactive_recommender_onsale" ==
-                        r.smart_section_type &&
+                        a.smart_section_type &&
                         !X.GetHideIRList())) &&
                     !W.k.logged_in
                   )
-                    m ||
-                      ((i = N.createElement(pt, {
+                    h ||
+                      ((s = N.createElement(pt, {
                         section: e,
-                        event: l,
-                        language: u,
+                        event: u,
+                        language: p,
                       })),
-                      (m = !0));
+                      (h = !0));
                   else
                     switch (e.section_type) {
                       case "items":
                       case "events":
                       case "links":
-                        i = N.createElement(
+                        s = N.createElement(
                           _t,
-                          Object(P.a)({ section: e, activeTab: a }, c.props)
+                          Object(P.a)({ section: e, activeTab: o }, l.props)
                         );
                         break;
                       case "broadcast":
-                        l.BEventCanShowBroadcastWidget() &&
-                          !h &&
-                          ((i = N.createElement(Lt, {
+                        u.BEventCanShowBroadcastWidget() &&
+                          !f &&
+                          ((s = N.createElement(Lt, {
                             broadcastEmbedContext:
-                              c.props.broadcastEmbedContext,
-                            activeTab: a,
+                              l.props.broadcastEmbedContext,
+                            activeTab: o,
+                            bWideBroadcastDisplay:
+                              null === (n = u.jsondata) || void 0 === n
+                                ? void 0
+                                : n.broadcast_display_wide_player,
                           })),
-                          (h = !0));
+                          (f = !0));
                         break;
                       case "event_description":
-                        i = N.createElement(
+                        s = N.createElement(
                           dt,
-                          Object(P.a)({ section: e }, c.props)
+                          Object(P.a)({ section: e }, l.props)
                         );
                         break;
                       case "doors":
-                        i = N.createElement(te.d, {
-                          strFontFamily: wt(l.jsondata.sale_font, u),
+                        s = N.createElement(te.d, {
+                          strFontFamily: wt(u.jsondata.sale_font, p),
                         });
                         break;
                       case "text_section":
-                        i = N.createElement(
+                        s = N.createElement(
                           mt,
-                          Object(P.a)({ section: e }, c.props)
+                          Object(P.a)({ section: e }, l.props)
                         );
                         break;
                       case "tabs":
-                        var s = d.get(e);
-                        b.push({ activeTab: s, elements: [] }),
-                          (i = N.createElement(
+                        var c = m.get(e);
+                        _.push({ activeTab: c, elements: [] }),
+                          (s = N.createElement(
                             N.Fragment,
                             null,
-                            N.createElement("div", { ref: c.m_refTabSection }),
+                            N.createElement("div", { ref: l.m_refTabSection }),
                             N.createElement(
                               rt,
-                              Object(P.a)({ section: e }, c.props, {
-                                activeTab: s.GetTab(),
-                                onTabSelected: c.OnTabSelected,
+                              Object(P.a)({ section: e }, l.props, {
+                                activeTab: c.GetTab(),
+                                onTabSelected: l.OnTabSelected,
                               })
                             )
                           )),
-                          (o = !1);
+                          (i = !1);
                         break;
                       case "tab_buttons":
-                        i = N.createElement(
+                        s = N.createElement(
                           tt,
-                          Object(P.a)({ section: e }, c.props, {
-                            activeTab: a,
-                            onTabSelected: c.OnTabSelected,
+                          Object(P.a)({ section: e }, l.props, {
+                            activeTab: o,
+                            onTabSelected: l.OnTabSelected,
                             hideActiveTab: !0,
                           })
                         );
                         break;
                       case "curator":
                         e.curator_clan_id &&
-                          (i = N.createElement(
+                          (s = N.createElement(
                             "div",
                             {
                               style: {
@@ -12550,57 +12583,57 @@ var CLSTAMP = "6438175";
                           ));
                         break;
                       case "curator_recommendation":
-                        i = N.createElement(Ie, {
-                          bPreviewMode: p,
+                        s = N.createElement(Ie, {
+                          bPreviewMode: d,
                           saleSection: e,
-                          event: l,
+                          event: u,
                         });
                         break;
                       case "event_schedule":
-                        i = N.createElement(
+                        s = N.createElement(
                           xe.c,
-                          Object(P.a)({ section: e }, c.props, { activeTab: a })
+                          Object(P.a)({ section: e }, l.props, { activeTab: o })
                         );
                         break;
                       case "vo_internal":
                         if (e.internal_section_data)
                           switch (e.internal_section_data.internal_type) {
                             case "subscription_pricing":
-                              i = N.createElement(
+                              s = N.createElement(
                                 Qe,
-                                Object(P.a)({ section: e }, c.props)
+                                Object(P.a)({ section: e }, l.props)
                               );
                               break;
                             case "tab_contents":
-                              i = N.createElement(
+                              s = N.createElement(
                                 nt,
-                                Object(P.a)({ section: e }, c.props, {
-                                  tab: n.GetTab(),
+                                Object(P.a)({ section: e }, l.props, {
+                                  tab: r.GetTab(),
                                   showReferences: !1,
                                 })
                               );
                               break;
                             case "tab_references":
-                              i = N.createElement(
+                              s = N.createElement(
                                 nt,
-                                Object(P.a)({ section: e }, c.props, {
-                                  tab: n.GetTab(),
+                                Object(P.a)({ section: e }, l.props, {
+                                  tab: r.GetTab(),
                                   showReferences: !0,
                                 })
                               );
                           }
                         break;
                       case "sale_item_browser":
-                        i = N.createElement(
+                        s = N.createElement(
                           ft,
-                          Object(P.a)({ section: e }, c.props, { activeTab: a })
+                          Object(P.a)({ section: e }, l.props, { activeTab: o })
                         );
                     }
-                  b[b.length - 1].elements.push(
+                  _[_.length - 1].elements.push(
                     N.createElement(
                       v.a,
                       { key: "SaleSectionIndex_" + e.unique_id + "_" + t },
-                      o
+                      i
                         ? N.createElement(
                             "div",
                             {
@@ -12610,14 +12643,14 @@ var CLSTAMP = "6438175";
                                 e.section_type
                               ),
                             },
-                            i
+                            s
                           )
-                        : i
+                        : s
                     )
                   );
                 }
               });
-              var t = b.map(function (e, t) {
+              var t = _.map(function (e, t) {
                 return N.createElement(
                   "div",
                   {
@@ -12777,12 +12810,18 @@ var CLSTAMP = "6438175";
             )
           );
         },
-        mt = function (e) {
+        mt = Object(r.a)(function (e) {
           var t = e.section,
             n = e.event,
             r = e.language,
-            a = e.bIsPreview,
-            o = z.a.GetWithFallback(t.text_section_contents, r);
+            a = e.bIsPreview;
+          if (
+            t.hide_section_if_broadcast_is_hidden &&
+            (!n.BHasBroadcastEnabled() ||
+              s.a.Get().BIsEmbeddedStreamCollapsed())
+          )
+            return null;
+          var o = z.a.GetWithFallback(t.text_section_contents, r);
           return N.createElement(
             "div",
             {
@@ -12808,7 +12847,7 @@ var CLSTAMP = "6438175";
               })
             )
           );
-        },
+        }),
         ht = (function () {
           function e(e) {
             (this.m_nMaxTiers = 0),
@@ -14185,7 +14224,10 @@ var CLSTAMP = "6438175";
             this.state.bOnceVisible || this.setState({ bOnceVisible: !0 });
           }),
           (e.prototype.render = function () {
-            var n = this.props.activeTab;
+            var e,
+              t = this.props,
+              n = t.activeTab,
+              r = t.bWideBroadcastDisplay;
             return N.createElement(
               v.a,
               null,
@@ -14200,7 +14242,14 @@ var CLSTAMP = "6438175";
                     { onEnter: this.OnEnter },
                     N.createElement(
                       "div",
-                      { className: ae.a.SaleBroadcastSection },
+                      {
+                        className: Object(k.a)(
+                          (((e = {})[ae.a.SaleWideBroadcastSection] = r),
+                          (e[ae.a.SaleBroadcastSection] = !r),
+                          (e.SaleBroadcastSection_trgt = !0),
+                          e)
+                        ),
+                      },
                       Boolean(this.state.bOnceVisible) &&
                         N.createElement(
                           at,
@@ -14211,6 +14260,7 @@ var CLSTAMP = "6438175";
                                 .m_nAppID;
                               return n.ShouldShowOnTab(t);
                             },
+                            bWidePlayer: r,
                           })
                         ),
                       Boolean(!this.state.bOnceVisible) &&
@@ -20884,7 +20934,7 @@ var CLSTAMP = "6438175";
                             b.a,
                             { href: Object(_.f)(i), className: I.AvatarLink },
                             l.createElement("img", {
-                              className: I.Avatar,
+                              className: Object(m.a)(I.Avatar, "Avatar_Trgt"),
                               src: r.GetAvatarURLFullSize(),
                             })
                           ),
@@ -48883,6 +48933,7 @@ var CLSTAMP = "6438175";
         SaleOverlay: "partnersaledisplay_SaleOverlay_1sZo8",
         AppSummaryWidgetCtn: "partnersaledisplay_AppSummaryWidgetCtn_2H8Bm",
         SaleBroadcastCtn: "partnersaledisplay_SaleBroadcastCtn_1SFMh",
+        SaleWideBroadcastCtn: "partnersaledisplay_SaleWideBroadcastCtn_i3zxC",
         SaleOuterContainer: "partnersaledisplay_SaleOuterContainer_150kd",
         CustomStyle_together: "partnersaledisplay_CustomStyle_together_1lAyg",
         SaleBackground: "partnersaledisplay_SaleBackground_2N8Se",
@@ -48917,6 +48968,8 @@ var CLSTAMP = "6438175";
         HorizontalScrollInDragForceCursor:
           "partnersaledisplay_HorizontalScrollInDragForceCursor_nemO6",
         SaleBroadcastSection: "partnersaledisplay_SaleBroadcastSection_1u0IZ",
+        SaleWideBroadcastSection:
+          "partnersaledisplay_SaleWideBroadcastSection_2Ky32",
         CarouselPage: "partnersaledisplay_CarouselPage_Hlkuk",
         TabButtonsCtn: "partnersaledisplay_TabButtonsCtn_21-6t",
         TabButton: "partnersaledisplay_TabButton_1Gz4s",
@@ -65650,13 +65703,13 @@ var CLSTAMP = "6438175";
       var c = n("mrSG"),
         r = n("vDqi"),
         s = n.n(r),
-        o = n("2vnA"),
-        i = n("kLLr"),
-        l = n("boaH"),
+        l = n("2vnA"),
+        o = n("kLLr"),
+        u = n("boaH"),
         a = n("UWWC"),
-        u = n("bDQf"),
-        p = n("lkRc"),
-        d = n("5izx"),
+        p = n("bDQf"),
+        d = n("lkRc"),
+        i = n("5izx"),
         m = n("5eAM");
       function h(e) {
         return Boolean(e && e.thumbnail_http_address);
@@ -65674,7 +65727,8 @@ var CLSTAMP = "6438175";
               (this.m_pageChatStatus = "hide"),
               (this.m_streamChatStatus = "hide"),
               (this.m_bUserChatExpanded = void 0),
-              (this.m_bHideBroadcast = void 0),
+              (this.m_bUserPreferenceHideBroadcastByDefault = void 0),
+              (this.m_bCollapsed = void 0),
               (this.m_setStreamsLoadedListeners = new Set()),
               (this.m_setStreamChangedListeners = new Set()),
               (this.m_bUseFakeData = !1),
@@ -65700,8 +65754,14 @@ var CLSTAMP = "6438175";
               var t = this.GetStreamsLookupKeyFromDef(e);
               return this.m_playReadyStream.get(t);
             }),
-            (e.prototype.BIsEmbeddedBroadcastHidden = function () {
-              return Boolean(this.m_bHideBroadcast);
+            (e.prototype.BIsEmbeddedBroadcastHiddenByDefaultUserSettings = function () {
+              return Boolean(this.m_bUserPreferenceHideBroadcastByDefault);
+            }),
+            (e.prototype.BIsEmbeddedStreamCollapsed = function () {
+              return Boolean(this.m_bCollapsed);
+            }),
+            (e.prototype.SetEmbeddedStreamCollapsed = function (e) {
+              this.m_bCollapsed != e && (this.m_bCollapsed = e);
             }),
             (e.prototype.GetConcurrentStreams = function (e) {
               var t = this.GetStreams(e);
@@ -65739,10 +65799,10 @@ var CLSTAMP = "6438175";
             (e.prototype.GetBroadcastURL = function (e) {
               var t = null,
                 t = e.steamid
-                  ? new i.a(e.steamid)
-                  : i.a.InitFromAccountID(e.accountid);
+                  ? new o.a(e.steamid)
+                  : o.a.InitFromAccountID(e.accountid);
               return (
-                p.d.COMMUNITY_BASE_URL +
+                d.d.COMMUNITY_BASE_URL +
                 "broadcast/watch/" +
                 t.ConvertTo64BitString()
               );
@@ -65756,7 +65816,7 @@ var CLSTAMP = "6438175";
                     (Boolean(e) &&
                       e.some(function (e) {
                         return (
-                          l.a.GetOrCreateBroadcastInfo(e.steamid).m_nAppID === t
+                          u.a.GetOrCreateBroadcastInfo(e.steamid).m_nAppID === t
                         );
                       }));
                 }),
@@ -65769,7 +65829,7 @@ var CLSTAMP = "6438175";
                 this.m_lookupStreams.forEach(function (e) {
                   null != e &&
                     e.forEach(function (e) {
-                      l.a.GetOrCreateBroadcastInfo(e.steamid).m_nAppID === t &&
+                      u.a.GetOrCreateBroadcastInfo(e.steamid).m_nAppID === t &&
                         n.push(e);
                     });
                 }),
@@ -65782,15 +65842,22 @@ var CLSTAMP = "6438175";
             (e.prototype.RemoveStreamChangedListener = function (e) {
               this.m_setStreamChangedListeners.delete(e);
             }),
-            (e.prototype.LoadBIsEmbeddedBroadcastHidden = function (o) {
+            (e.prototype.LoadBIsEmbeddedBroadcastHidden = function (i) {
               return Object(c.b)(this, void 0, void 0, function () {
-                var t, n, r, a;
+                var t,
+                  n,
+                  r,
+                  a,
+                  o = this;
                 return Object(c.e)(this, function (e) {
                   switch (e.label) {
                     case 0:
-                      if (void 0 !== this.m_bHideBroadcast) return [3, 5];
                       if (
-                        (t = Object(p.h)("broadcastuser", "application_config"))
+                        void 0 !== this.m_bUserPreferenceHideBroadcastByDefault
+                      )
+                        return [3, 5];
+                      if (
+                        (t = Object(d.h)("broadcastuser", "application_config"))
                       )
                         return [3, 4];
                       e.label = 1;
@@ -65798,9 +65865,9 @@ var CLSTAMP = "6438175";
                       return (
                         e.trys.push([1, 3, , 4]),
                         (n =
-                          p.d.STORE_BASE_URL +
+                          d.d.STORE_BASE_URL +
                           "broadcast/ajaxgetuserbroadcastpreferences"),
-                        [4, s.a.get(n, { params: {}, cancelToken: o.token })]
+                        [4, s.a.get(n, { params: {}, cancelToken: i.token })]
                       );
                     case 2:
                       return (r = e.sent()), (t = r.data), [3, 4];
@@ -65809,16 +65876,20 @@ var CLSTAMP = "6438175";
                         (a = e.sent()),
                         console.log(
                           "LoadBIsEmbeddedBroadcastHidden: " +
-                            Object(u.a)(a).strErrorMsg
+                            Object(p.a)(a).strErrorMsg
                         ),
                         (t = { bHideStoreBroadcast: !1 }),
                         [3, 4]
                       );
                     case 4:
-                      (this.m_bHideBroadcast = t.bHideStoreBroadcast),
+                      Object(l.G)(function () {
+                        (o.m_bUserPreferenceHideBroadcastByDefault =
+                          t.bHideStoreBroadcast),
+                          (o.m_bCollapsed = t.bHideStoreBroadcast);
+                      }),
                         (e.label = 5);
                     case 5:
-                      return [2, this.m_bHideBroadcast];
+                      return [2, this.m_bUserPreferenceHideBroadcastByDefault];
                   }
                 });
               });
@@ -65857,7 +65928,7 @@ var CLSTAMP = "6438175";
                         [
                           4,
                           s.a.get(
-                            p.d.STORE_BASE_URL +
+                            d.d.STORE_BASE_URL +
                               "broadcast/ajaxgetstreamersforpreview",
                             { params: n }
                           ),
@@ -65871,7 +65942,7 @@ var CLSTAMP = "6438175";
                     case 3:
                       return (
                         (r = e.sent()),
-                        (a = Object(u.a)(r)),
+                        (a = Object(p.a)(r)),
                         console.error(
                           "HintLoadEmbeddablePreviewStreams hit error loading: " +
                             a.strErrorMsg,
@@ -65913,7 +65984,7 @@ var CLSTAMP = "6438175";
                         [
                           4,
                           s.a.get(
-                            p.d.STORE_BASE_URL +
+                            d.d.STORE_BASE_URL +
                               "broadcast/ajaxgetstreamersforpage",
                             { params: o }
                           ),
@@ -65927,7 +65998,7 @@ var CLSTAMP = "6438175";
                     case 2:
                       return (
                         (n = e.sent()),
-                        (r = Object(u.a)(n)),
+                        (r = Object(p.a)(n)),
                         console.error(
                           "HintLoadEmbeddableStreams hit error loading: " +
                             r.strErrorMsg,
@@ -65962,17 +66033,17 @@ var CLSTAMP = "6438175";
                         n.broadcast_chat_visibility &&
                           (this.m_pageChatStatus = n.broadcast_chat_visibility),
                         (a = new Array()),
-                        Object(o.G)(function () {
+                        Object(l.G)(function () {
                           n.filtered.forEach(function (e) {
                             var t;
                             e.steamid ||
-                              ((t = i.a.InitFromAccountID(e.accountid)),
+                              ((t = o.a.InitFromAccountID(e.accountid)),
                               (e.steamid = t.ConvertTo64BitString()));
-                            var n = l.a.GetOrCreateBroadcastInfo(e.steamid),
-                              r = e.appid ? Number(e.appid) : l.d;
+                            var n = u.a.GetOrCreateBroadcastInfo(e.steamid),
+                              r = e.appid ? Number(e.appid) : u.d;
                             (n.m_nAppID = r),
                               (n.m_strAppId = "" + r),
-                              r != l.d && a.push(r);
+                              r != u.d && a.push(r);
                           });
                         }),
                         0 < a.length && m.a.LoadAppLinkInfo(a),
@@ -66064,7 +66135,7 @@ var CLSTAMP = "6438175";
                             return e(a);
                           }),
                           y(
-                            l.a.GetOrCreateBroadcastInfo(a.steamid).m_nAppID,
+                            u.a.GetOrCreateBroadcastInfo(a.steamid).m_nAppID,
                             1,
                             a.snr
                           ),
@@ -66085,10 +66156,10 @@ var CLSTAMP = "6438175";
                       return (
                         e.trys.push([1, 3, , 4]),
                         (t =
-                          p.d.STORE_BASE_URL + "broadcast/ajaxcheckbroadcast"),
+                          d.d.STORE_BASE_URL + "broadcast/ajaxcheckbroadcast"),
                         (n = {
                           broadcastaccountid: i.accountid,
-                          viewer_token: l.a.GetViewerToken(),
+                          viewer_token: u.a.GetViewerToken(),
                           origin: self.origin,
                         }),
                         [4, s.a.get(t, { params: n })]
@@ -66098,7 +66169,7 @@ var CLSTAMP = "6438175";
                     case 3:
                       return (
                         (r = e.sent()),
-                        (a = Object(u.a)(r)),
+                        (a = Object(p.a)(r)),
                         console.error(
                           "Broadcast.AttemptToPlayStream: " + a.strErrorMsg,
                           a
@@ -66141,10 +66212,10 @@ var CLSTAMP = "6438175";
                   ? e.accountIDs.slice().sort().join(",")
                   : void 0,
                 test: !1,
-                cc: p.d.COUNTRY,
-                l: p.d.LANGUAGE,
-                rt_now_override_test: d.a.BHasTimeOverride()
-                  ? d.a.GetTimeNowWithOverride()
+                cc: d.d.COUNTRY,
+                l: d.d.LANGUAGE,
+                rt_now_override_test: i.a.BHasTimeOverride()
+                  ? i.a.GetTimeNowWithOverride()
                   : void 0,
               };
             }),
@@ -66160,26 +66231,32 @@ var CLSTAMP = "6438175";
               return (
                 e.s_GlobalStore ||
                   ((e.s_GlobalStore = new e()),
-                  "dev" == p.d.WEB_UNIVERSE &&
+                  "dev" == d.d.WEB_UNIVERSE &&
                     (window.g_BroadcastEmbeddableStore = e.s_GlobalStore),
                   e.s_GlobalStore.Init()),
                 e.s_GlobalStore
               );
             }),
             (e.prototype.Init = function () {}),
-            Object(c.c)([o.C], e.prototype, "m_lookupStreams", void 0),
-            Object(c.c)([o.C], e.prototype, "m_playReadyStream", void 0),
-            Object(c.c)([o.C], e.prototype, "m_pageChatStatus", void 0),
-            Object(c.c)([o.C], e.prototype, "m_streamChatStatus", void 0),
-            Object(c.c)([o.C], e.prototype, "m_bUserChatExpanded", void 0),
-            Object(c.c)([o.C], e.prototype, "m_bHideBroadcast", void 0),
+            Object(c.c)([l.C], e.prototype, "m_lookupStreams", void 0),
+            Object(c.c)([l.C], e.prototype, "m_playReadyStream", void 0),
+            Object(c.c)([l.C], e.prototype, "m_pageChatStatus", void 0),
+            Object(c.c)([l.C], e.prototype, "m_streamChatStatus", void 0),
+            Object(c.c)([l.C], e.prototype, "m_bUserChatExpanded", void 0),
             Object(c.c)(
-              [o.k],
+              [l.C],
+              e.prototype,
+              "m_bUserPreferenceHideBroadcastByDefault",
+              void 0
+            ),
+            Object(c.c)([l.C], e.prototype, "m_bCollapsed", void 0),
+            Object(c.c)(
+              [l.k],
               e.prototype,
               "HintLoadEmbeddablePreviewStreams",
               null
             ),
-            Object(c.c)([o.k], e.prototype, "AttemptToPlayStream", null),
+            Object(c.c)([l.k], e.prototype, "AttemptToPlayStream", null),
             e
           );
         })();
@@ -66193,10 +66270,10 @@ var CLSTAMP = "6438175";
             (this.current_selection_priority = f.k_eGeneral);
         }
         return (
-          Object(c.c)([o.C], e.prototype, "title", void 0),
-          Object(c.c)([o.C], e.prototype, "viewer_count", void 0),
-          Object(c.c)([o.C], e.prototype, "gamedata_subtitle", void 0),
-          Object(c.c)([o.C], e.prototype, "current_selection_priority", void 0),
+          Object(c.c)([l.C], e.prototype, "title", void 0),
+          Object(c.c)([l.C], e.prototype, "viewer_count", void 0),
+          Object(c.c)([l.C], e.prototype, "gamedata_subtitle", void 0),
+          Object(c.c)([l.C], e.prototype, "current_selection_priority", void 0),
           e
         );
       })();
@@ -66214,7 +66291,7 @@ var CLSTAMP = "6438175";
                 ((t = new URLSearchParams()).append("page_action", "" + r),
                 t.append("snr", a),
                 s.a.post(
-                  p.d.STORE_BASE_URL + "ajaxreportproductaction/" + n + "/",
+                  d.d.STORE_BASE_URL + "ajaxreportproductaction/" + n + "/",
                   t
                 )),
               [2]

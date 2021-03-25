@@ -341,11 +341,15 @@
                       this.m_cancelSignal.token.reason ||
                         this.setState({
                           bLoadingPreference: !1,
-                          bExpanded: !j.a.Get().BIsEmbeddedBroadcastHidden(),
+                          bExpanded: !j.a
+                            .Get()
+                            .BIsEmbeddedBroadcastHiddenByDefaultUserSettings(),
                           innerStyle: Object(m.a)(
                             Object(m.a)({}, this.state.innerStyle),
                             {
-                              maxHeight: j.a.Get().BIsEmbeddedBroadcastHidden()
+                              maxHeight: j.a
+                                .Get()
+                                .BIsEmbeddedBroadcastHiddenByDefaultUserSettings()
                                 ? "0vh"
                                 : "100vh",
                             }
@@ -400,11 +404,21 @@
                   }),
                 });
               }, 10),
-                n || this.setState({ bExpanded: !this.state.bExpanded });
+                n ||
+                  this.setState(
+                    { bExpanded: !this.state.bExpanded },
+                    function () {
+                      return j.a
+                        .Get()
+                        .SetEmbeddedStreamCollapsed(!e.state.bExpanded);
+                    }
+                  );
             }),
             (e.prototype.OnShrinkTransitionEnd = function () {
               "0vh" === this.state.innerStyle.maxHeight &&
-                this.setState({ bExpanded: !1 });
+                this.setState({ bExpanded: !1 }, function () {
+                  return j.a.Get().SetEmbeddedStreamCollapsed(!0);
+                });
             }),
             (e.prototype.onStreamSelect = function (t) {
               return Object(m.b)(this, void 0, void 0, function () {

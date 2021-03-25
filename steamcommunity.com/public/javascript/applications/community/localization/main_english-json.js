@@ -380,6 +380,10 @@
           "Enter Event Subtitle (Optional)",
         EventEditor_Description_PlaceHolder: "Enter Event Description here",
         EventEditor_SaleTextSection_PlaceHolder: "Enter Section Text Here",
+        EventEditor_RelatedToBroadcast: "Related to Broadcast",
+        EventEditor_RelatedToBroadcast_ttip:
+          "If the Steam customer via their account preferences hides Broadcast on the Store, then hide this section too, as its rendering is specific to the content being broadcasted.",
+        EventEditor_RelatedToBroadcast_action: "Hide if Broadcast Disabled",
         EventEditor_FormattingHelp_GetHelpLink: "Formatting help",
         EventEditor_LinkDescription: "Text To Display",
         EventEditor_LinkURL: "URL",

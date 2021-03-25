@@ -16137,44 +16137,48 @@
               var e,
                 t,
                 n,
-                a = this.GetEventModel();
-              if (a && void 0 !== this.state.nSaleDayIndex) {
-                var r,
-                  o = Boolean(this.props.bIsPreview);
-                o ||
-                  a.visibility_state === x.n.k_EEventStateVisible ||
+                a,
+                r = this.GetEventModel();
+              if (r && void 0 !== this.state.nSaleDayIndex) {
+                var o,
+                  i = Boolean(this.props.bIsPreview);
+                i ||
+                  r.visibility_state === x.n.k_EEventStateVisible ||
                   "store" != Object(V.f)() ||
-                  ((r = G.a.GetTimeNowWithOverride()),
-                  (!a.startTime || a.startTime - 1209600 - 3600 < r) &&
-                    (o = R.a.Get().GetPartnerEventPermissions(a.clanSteamID)
+                  ((o = G.a.GetTimeNowWithOverride()),
+                  (!r.startTime || r.startTime - 1209600 - 3600 < o) &&
+                    (i = R.a.Get().GetPartnerEventPermissions(r.clanSteamID)
                       .can_edit));
-                var i = a.GetImageURLWithFallback(
+                var s = r.GetImageURLWithFallback(
                     "sale_header",
                     this.props.language
                   ),
-                  s = null,
-                  c = null;
+                  c = null,
+                  l = null;
                 m.a.BHasSalePageBackgroundOverride() &&
-                  ((i = m.a.GetSalePageBackgroundOverride()),
-                  (s = m.a.GetSalePageBackgroundWEBM()),
-                  (c = m.a.GetSalePageBackgroundMP4()));
-                var l = {
+                  ((s = m.a.GetSalePageBackgroundOverride()),
+                  (c = m.a.GetSalePageBackgroundWEBM()),
+                  (l = m.a.GetSalePageBackgroundMP4()));
+                var u = {
                     promotionName: this.props.promotionName,
                     clanid: Number(V.b.CLANACCOUNTID),
-                    event: a,
+                    event: r,
                     bIsPreview: this.props.bIsPreview,
                     language: this.props.language,
                     accountIDs: this.props.bIsPreview
-                      ? a.jsondata.broadcast_whitelist
+                      ? r.jsondata.broadcast_whitelist
                       : void 0,
                   },
-                  u = Boolean(
-                    null === (n = this.props.eventModel.jsondata) ||
-                      void 0 === n
+                  d = Boolean(
+                    null ===
+                      (a =
+                        null === (n = this.props.eventModel) || void 0 === n
+                          ? void 0
+                          : n.jsondata) || void 0 === a
                       ? void 0
-                      : n.broadcast_display_wide_player
+                      : a.broadcast_display_wide_player
                   ),
-                  d = R.a.Get().GetPartnerEventPermissions(a.clanSteamID);
+                  p = R.a.Get().GetPartnerEventPermissions(r.clanSteamID);
                 return k.createElement(
                   b.a,
                   null,
@@ -16185,13 +16189,13 @@
                       ha,
                       {
                         className: Object(N.a)(
-                          Pn.a["CustomStyle_" + a.jsondata.sale_vanity_id],
+                          Pn.a["CustomStyle_" + r.jsondata.sale_vanity_id],
                           "SaleCustomCSS"
                         ),
-                        backgroundImage: i,
-                        backgroundColor: a.jsondata.sale_background_color,
+                        backgroundImage: s,
+                        backgroundColor: r.jsondata.sale_background_color,
                       },
-                      Boolean(c || s) &&
+                      Boolean(l || c) &&
                         k.createElement(
                           "div",
                           { className: Pn.a.fullscreen_bg },
@@ -16208,7 +16212,7 @@
                               className: Object(N.a)(
                                 Pn.a.SaleBackground,
                                 Pn.a[
-                                  "CustomStyle_" + a.jsondata.sale_vanity_id
+                                  "CustomStyle_" + r.jsondata.sale_vanity_id
                                 ],
                                 "SaleBackground",
                                 Pn.a.fullscreen_bg__video
@@ -16217,18 +16221,18 @@
                                 display: "flex",
                                 position: "relative",
                                 flexDirection: "column",
-                                backgroundColor: o
-                                  ? a.jsondata.sale_background_color
+                                backgroundColor: i
+                                  ? r.jsondata.sale_background_color
                                   : void 0,
                               },
                             },
                             k.createElement("source", {
-                              src: s,
+                              src: c,
                               type: "video/webm",
                             }),
                             !V.c.IN_CLIENT &&
                               k.createElement("source", {
-                                src: c,
+                                src: l,
                                 type: "video/mp4",
                               })
                           )
@@ -16239,19 +16243,19 @@
                           className: Object(N.a)(
                             (((e = {})[Pn.a.SaleOuterContainer] = !0),
                             (e[
-                              Pn.a["CustomStyle_" + a.jsondata.sale_vanity_id]
+                              Pn.a["CustomStyle_" + r.jsondata.sale_vanity_id]
                             ] = !0),
                             (e.SaleOuterContainer = !0),
                             e)
                           ),
                           style: {
                             marginTop:
-                              (a.jsondata.sale_header_offset || 0) + "px",
+                              (r.jsondata.sale_header_offset || 0) + "px",
                           },
                         },
                         Boolean(
-                          a.BEventCanShowBroadcastWidget() &&
-                            a.BSaleShowBroadcastAtTopOfPage()
+                          r.BEventCanShowBroadcastWidget() &&
+                            r.BSaleShowBroadcastAtTopOfPage()
                         ) &&
                           k.createElement(
                             b.a,
@@ -16260,8 +16264,8 @@
                               "div",
                               {
                                 className: Object(N.a)(
-                                  (((t = {})[Pn.a.SaleBroadcastCtn] = !u),
-                                  (t[Pn.a.SaleWideBroadcastCtn] = u),
+                                  (((t = {})[Pn.a.SaleBroadcastCtn] = !d),
+                                  (t[Pn.a.SaleWideBroadcastCtn] = d),
                                   (t.SaleBroadcastCtn_Trgt = !0),
                                   t)
                                 ),
@@ -16271,15 +16275,15 @@
                                 { fallback: k.createElement("div", null) },
                                 k.createElement(
                                   pa,
-                                  Object(P.a)({}, l, {
+                                  Object(P.a)({}, u, {
                                     bShowCapsuleArt: !0,
-                                    bWidePlayer: u,
+                                    bWidePlayer: d,
                                   })
                                 )
                               )
                             )
                           ),
-                        a.jsondata.sale_show_creator &&
+                        r.jsondata.sale_show_creator &&
                           k.createElement(
                             b.a,
                             null,
@@ -16295,7 +16299,7 @@
                               k.createElement($.a, {
                                 creatorID: {
                                   name: null,
-                                  clan_account_id: a.clanSteamID.GetAccountID(),
+                                  clan_account_id: r.clanSteamID.GetAccountID(),
                                   type: "developer",
                                 },
                                 bShowTagline: !0,
@@ -16304,24 +16308,24 @@
                             )
                           ),
                         k.createElement(va, {
-                          bIsPreview: o,
-                          event: a,
+                          bIsPreview: i,
+                          event: r,
                           language: this.props.language,
                           promotionName: this.props.promotionName,
                           nSaleDayIndex: this.state.nSaleDayIndex,
-                          broadcastEmbedContext: l,
+                          broadcastEmbedContext: u,
                         }),
                         Boolean(
-                          a.BSaleShowCuratorRecommendationAtBottomOfPage()
+                          r.BSaleShowCuratorRecommendationAtBottomOfPage()
                         ) &&
                           k.createElement(Wn, {
-                            bPreviewMode: o,
+                            bPreviewMode: i,
                             saleSection: Object(P.a)(Object(P.a)({}, x.l), {
                               section_type: "curator_recommendation",
                             }),
-                            event: a,
+                            event: r,
                           }),
-                        a.jsondata.sale_browse_more_button &&
+                        r.jsondata.sale_browse_more_button &&
                           k.createElement(
                             "div",
                             {
@@ -16333,14 +16337,14 @@
                             },
                             k.createElement(ja, {
                               text: Object(F.f)("#Sale_SeeAllSpecials"),
-                              url: a.jsondata.sale_browsemore_url,
-                              color: a.jsondata.sale_browsemore_color,
-                              bgcolor: a.jsondata.sale_browsemore_bgcolor,
+                              url: r.jsondata.sale_browsemore_url,
+                              color: r.jsondata.sale_browsemore_color,
+                              bgcolor: r.jsondata.sale_browsemore_bgcolor,
                             })
                           ),
-                        d.can_edit &&
+                        p.can_edit &&
                           k.createElement(g.a, {
-                            eventModel: a,
+                            eventModel: r,
                             bPreviewMode: this.props.bIsPreview,
                             useAnchors: !this.props.bIsPreview,
                             fnOnUpdateSaleDayIndex: this.OnChangeDayIndex,
@@ -16894,12 +16898,18 @@
             )
           );
         },
-        Sa = function (e) {
+        Sa = Object(r.a)(function (e) {
           var t = e.section,
             n = e.event,
             a = e.language,
-            r = e.bIsPreview,
-            o = F.a.GetWithFallback(t.text_section_contents, a);
+            r = e.bIsPreview;
+          if (
+            t.hide_section_if_broadcast_is_hidden &&
+            (!n.BHasBroadcastEnabled() ||
+              c.a.Get().BIsEmbeddedStreamCollapsed())
+          )
+            return null;
+          var o = F.a.GetWithFallback(t.text_section_contents, a);
           return k.createElement(
             "div",
             {
@@ -16925,7 +16935,7 @@
               })
             )
           );
-        },
+        }),
         Ea = (function () {
           function e(e) {
             (this.m_nMaxTiers = 0),
@@ -49638,13 +49648,13 @@
       var c = n("mrSG"),
         a = n("vDqi"),
         s = n.n(a),
-        o = n("2vnA"),
-        i = n("kLLr"),
-        l = n("boaH"),
+        l = n("2vnA"),
+        o = n("kLLr"),
+        u = n("boaH"),
         r = n("UWWC"),
-        u = n("bDQf"),
-        d = n("lkRc"),
-        p = n("5izx"),
+        d = n("bDQf"),
+        p = n("lkRc"),
+        i = n("5izx"),
         m = n("5eAM");
       function h(e) {
         return Boolean(e && e.thumbnail_http_address);
@@ -49662,7 +49672,8 @@
               (this.m_pageChatStatus = "hide"),
               (this.m_streamChatStatus = "hide"),
               (this.m_bUserChatExpanded = void 0),
-              (this.m_bHideBroadcast = void 0),
+              (this.m_bUserPreferenceHideBroadcastByDefault = void 0),
+              (this.m_bCollapsed = void 0),
               (this.m_setStreamsLoadedListeners = new Set()),
               (this.m_setStreamChangedListeners = new Set()),
               (this.m_bUseFakeData = !1),
@@ -49688,8 +49699,14 @@
               var t = this.GetStreamsLookupKeyFromDef(e);
               return this.m_playReadyStream.get(t);
             }),
-            (e.prototype.BIsEmbeddedBroadcastHidden = function () {
-              return Boolean(this.m_bHideBroadcast);
+            (e.prototype.BIsEmbeddedBroadcastHiddenByDefaultUserSettings = function () {
+              return Boolean(this.m_bUserPreferenceHideBroadcastByDefault);
+            }),
+            (e.prototype.BIsEmbeddedStreamCollapsed = function () {
+              return Boolean(this.m_bCollapsed);
+            }),
+            (e.prototype.SetEmbeddedStreamCollapsed = function (e) {
+              this.m_bCollapsed != e && (this.m_bCollapsed = e);
             }),
             (e.prototype.GetConcurrentStreams = function (e) {
               var t = this.GetStreams(e);
@@ -49727,10 +49744,10 @@
             (e.prototype.GetBroadcastURL = function (e) {
               var t = null,
                 t = e.steamid
-                  ? new i.a(e.steamid)
-                  : i.a.InitFromAccountID(e.accountid);
+                  ? new o.a(e.steamid)
+                  : o.a.InitFromAccountID(e.accountid);
               return (
-                d.c.COMMUNITY_BASE_URL +
+                p.c.COMMUNITY_BASE_URL +
                 "broadcast/watch/" +
                 t.ConvertTo64BitString()
               );
@@ -49744,7 +49761,7 @@
                     (Boolean(e) &&
                       e.some(function (e) {
                         return (
-                          l.a.GetOrCreateBroadcastInfo(e.steamid).m_nAppID === t
+                          u.a.GetOrCreateBroadcastInfo(e.steamid).m_nAppID === t
                         );
                       }));
                 }),
@@ -49757,7 +49774,7 @@
                 this.m_lookupStreams.forEach(function (e) {
                   null != e &&
                     e.forEach(function (e) {
-                      l.a.GetOrCreateBroadcastInfo(e.steamid).m_nAppID === t &&
+                      u.a.GetOrCreateBroadcastInfo(e.steamid).m_nAppID === t &&
                         n.push(e);
                     });
                 }),
@@ -49770,15 +49787,22 @@
             (e.prototype.RemoveStreamChangedListener = function (e) {
               this.m_setStreamChangedListeners.delete(e);
             }),
-            (e.prototype.LoadBIsEmbeddedBroadcastHidden = function (o) {
+            (e.prototype.LoadBIsEmbeddedBroadcastHidden = function (i) {
               return Object(c.b)(this, void 0, void 0, function () {
-                var t, n, a, r;
+                var t,
+                  n,
+                  a,
+                  r,
+                  o = this;
                 return Object(c.e)(this, function (e) {
                   switch (e.label) {
                     case 0:
-                      if (void 0 !== this.m_bHideBroadcast) return [3, 5];
                       if (
-                        (t = Object(d.g)("broadcastuser", "application_config"))
+                        void 0 !== this.m_bUserPreferenceHideBroadcastByDefault
+                      )
+                        return [3, 5];
+                      if (
+                        (t = Object(p.g)("broadcastuser", "application_config"))
                       )
                         return [3, 4];
                       e.label = 1;
@@ -49786,9 +49810,9 @@
                       return (
                         e.trys.push([1, 3, , 4]),
                         (n =
-                          d.c.STORE_BASE_URL +
+                          p.c.STORE_BASE_URL +
                           "broadcast/ajaxgetuserbroadcastpreferences"),
-                        [4, s.a.get(n, { params: {}, cancelToken: o.token })]
+                        [4, s.a.get(n, { params: {}, cancelToken: i.token })]
                       );
                     case 2:
                       return (a = e.sent()), (t = a.data), [3, 4];
@@ -49797,16 +49821,20 @@
                         (r = e.sent()),
                         console.log(
                           "LoadBIsEmbeddedBroadcastHidden: " +
-                            Object(u.a)(r).strErrorMsg
+                            Object(d.a)(r).strErrorMsg
                         ),
                         (t = { bHideStoreBroadcast: !1 }),
                         [3, 4]
                       );
                     case 4:
-                      (this.m_bHideBroadcast = t.bHideStoreBroadcast),
+                      Object(l.G)(function () {
+                        (o.m_bUserPreferenceHideBroadcastByDefault =
+                          t.bHideStoreBroadcast),
+                          (o.m_bCollapsed = t.bHideStoreBroadcast);
+                      }),
                         (e.label = 5);
                     case 5:
-                      return [2, this.m_bHideBroadcast];
+                      return [2, this.m_bUserPreferenceHideBroadcastByDefault];
                   }
                 });
               });
@@ -49845,7 +49873,7 @@
                         [
                           4,
                           s.a.get(
-                            d.c.STORE_BASE_URL +
+                            p.c.STORE_BASE_URL +
                               "broadcast/ajaxgetstreamersforpreview",
                             { params: n }
                           ),
@@ -49859,7 +49887,7 @@
                     case 3:
                       return (
                         (a = e.sent()),
-                        (r = Object(u.a)(a)),
+                        (r = Object(d.a)(a)),
                         console.error(
                           "HintLoadEmbeddablePreviewStreams hit error loading: " +
                             r.strErrorMsg,
@@ -49901,7 +49929,7 @@
                         [
                           4,
                           s.a.get(
-                            d.c.STORE_BASE_URL +
+                            p.c.STORE_BASE_URL +
                               "broadcast/ajaxgetstreamersforpage",
                             { params: o }
                           ),
@@ -49915,7 +49943,7 @@
                     case 2:
                       return (
                         (n = e.sent()),
-                        (a = Object(u.a)(n)),
+                        (a = Object(d.a)(n)),
                         console.error(
                           "HintLoadEmbeddableStreams hit error loading: " +
                             a.strErrorMsg,
@@ -49950,17 +49978,17 @@
                         n.broadcast_chat_visibility &&
                           (this.m_pageChatStatus = n.broadcast_chat_visibility),
                         (r = new Array()),
-                        Object(o.G)(function () {
+                        Object(l.G)(function () {
                           n.filtered.forEach(function (e) {
                             var t;
                             e.steamid ||
-                              ((t = i.a.InitFromAccountID(e.accountid)),
+                              ((t = o.a.InitFromAccountID(e.accountid)),
                               (e.steamid = t.ConvertTo64BitString()));
-                            var n = l.a.GetOrCreateBroadcastInfo(e.steamid),
-                              a = e.appid ? Number(e.appid) : l.d;
+                            var n = u.a.GetOrCreateBroadcastInfo(e.steamid),
+                              a = e.appid ? Number(e.appid) : u.d;
                             (n.m_nAppID = a),
                               (n.m_strAppId = "" + a),
-                              a != l.d && r.push(a);
+                              a != u.d && r.push(a);
                           });
                         }),
                         0 < r.length && m.a.LoadAppLinkInfo(r),
@@ -50052,7 +50080,7 @@
                             return e(r);
                           }),
                           y(
-                            l.a.GetOrCreateBroadcastInfo(r.steamid).m_nAppID,
+                            u.a.GetOrCreateBroadcastInfo(r.steamid).m_nAppID,
                             1,
                             r.snr
                           ),
@@ -50073,10 +50101,10 @@
                       return (
                         e.trys.push([1, 3, , 4]),
                         (t =
-                          d.c.STORE_BASE_URL + "broadcast/ajaxcheckbroadcast"),
+                          p.c.STORE_BASE_URL + "broadcast/ajaxcheckbroadcast"),
                         (n = {
                           broadcastaccountid: i.accountid,
-                          viewer_token: l.a.GetViewerToken(),
+                          viewer_token: u.a.GetViewerToken(),
                           origin: self.origin,
                         }),
                         [4, s.a.get(t, { params: n })]
@@ -50086,7 +50114,7 @@
                     case 3:
                       return (
                         (a = e.sent()),
-                        (r = Object(u.a)(a)),
+                        (r = Object(d.a)(a)),
                         console.error(
                           "Broadcast.AttemptToPlayStream: " + r.strErrorMsg,
                           r
@@ -50129,10 +50157,10 @@
                   ? e.accountIDs.slice().sort().join(",")
                   : void 0,
                 test: !1,
-                cc: d.c.COUNTRY,
-                l: d.c.LANGUAGE,
-                rt_now_override_test: p.a.BHasTimeOverride()
-                  ? p.a.GetTimeNowWithOverride()
+                cc: p.c.COUNTRY,
+                l: p.c.LANGUAGE,
+                rt_now_override_test: i.a.BHasTimeOverride()
+                  ? i.a.GetTimeNowWithOverride()
                   : void 0,
               };
             }),
@@ -50148,26 +50176,32 @@
               return (
                 e.s_GlobalStore ||
                   ((e.s_GlobalStore = new e()),
-                  "dev" == d.c.WEB_UNIVERSE &&
+                  "dev" == p.c.WEB_UNIVERSE &&
                     (window.g_BroadcastEmbeddableStore = e.s_GlobalStore),
                   e.s_GlobalStore.Init()),
                 e.s_GlobalStore
               );
             }),
             (e.prototype.Init = function () {}),
-            Object(c.c)([o.C], e.prototype, "m_lookupStreams", void 0),
-            Object(c.c)([o.C], e.prototype, "m_playReadyStream", void 0),
-            Object(c.c)([o.C], e.prototype, "m_pageChatStatus", void 0),
-            Object(c.c)([o.C], e.prototype, "m_streamChatStatus", void 0),
-            Object(c.c)([o.C], e.prototype, "m_bUserChatExpanded", void 0),
-            Object(c.c)([o.C], e.prototype, "m_bHideBroadcast", void 0),
+            Object(c.c)([l.C], e.prototype, "m_lookupStreams", void 0),
+            Object(c.c)([l.C], e.prototype, "m_playReadyStream", void 0),
+            Object(c.c)([l.C], e.prototype, "m_pageChatStatus", void 0),
+            Object(c.c)([l.C], e.prototype, "m_streamChatStatus", void 0),
+            Object(c.c)([l.C], e.prototype, "m_bUserChatExpanded", void 0),
             Object(c.c)(
-              [o.k],
+              [l.C],
+              e.prototype,
+              "m_bUserPreferenceHideBroadcastByDefault",
+              void 0
+            ),
+            Object(c.c)([l.C], e.prototype, "m_bCollapsed", void 0),
+            Object(c.c)(
+              [l.k],
               e.prototype,
               "HintLoadEmbeddablePreviewStreams",
               null
             ),
-            Object(c.c)([o.k], e.prototype, "AttemptToPlayStream", null),
+            Object(c.c)([l.k], e.prototype, "AttemptToPlayStream", null),
             e
           );
         })();
@@ -50181,10 +50215,10 @@
             (this.current_selection_priority = _.k_eGeneral);
         }
         return (
-          Object(c.c)([o.C], e.prototype, "title", void 0),
-          Object(c.c)([o.C], e.prototype, "viewer_count", void 0),
-          Object(c.c)([o.C], e.prototype, "gamedata_subtitle", void 0),
-          Object(c.c)([o.C], e.prototype, "current_selection_priority", void 0),
+          Object(c.c)([l.C], e.prototype, "title", void 0),
+          Object(c.c)([l.C], e.prototype, "viewer_count", void 0),
+          Object(c.c)([l.C], e.prototype, "gamedata_subtitle", void 0),
+          Object(c.c)([l.C], e.prototype, "current_selection_priority", void 0),
           e
         );
       })();
@@ -50202,7 +50236,7 @@
                 ((t = new URLSearchParams()).append("page_action", "" + a),
                 t.append("snr", r),
                 s.a.post(
-                  d.c.STORE_BASE_URL + "ajaxreportproductaction/" + n + "/",
+                  p.c.STORE_BASE_URL + "ajaxreportproductaction/" + n + "/",
                   t
                 )),
               [2]
