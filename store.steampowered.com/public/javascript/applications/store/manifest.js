@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6441250";
-!(function (b) {
+var CLSTAMP = "6441588";
+!(function (f) {
   function e(e) {
     for (
       var a, c, d = e[0], n = e[1], s = e[2], r = 0, o = [];
@@ -11,11 +11,11 @@ var CLSTAMP = "6441250";
       (c = d[r]),
         Object.prototype.hasOwnProperty.call(h, c) && h[c] && o.push(h[c][0]),
         (h[c] = 0);
-    for (a in n) Object.prototype.hasOwnProperty.call(n, a) && (b[a] = n[a]);
+    for (a in n) Object.prototype.hasOwnProperty.call(n, a) && (f[a] = n[a]);
     for (j && j(e); o.length; ) o.shift()();
-    return i.push.apply(i, s || []), f();
+    return i.push.apply(i, s || []), b();
   }
-  function f() {
+  function b() {
     for (var e, a = 0; a < i.length; a++) {
       for (var c = i[a], d = !0, n = 1; n < c.length; n++) {
         var s = c[n];
@@ -32,7 +32,7 @@ var CLSTAMP = "6441250";
   function _(e) {
     if (c[e]) return c[e].exports;
     var a = (c[e] = { i: e, l: !1, exports: {} });
-    return b[e].call(a.exports, a, a.exports, _), (a.l = !0), a.exports;
+    return f[e].call(a.exports, a, a.exports, _), (a.l = !0), a.exports;
   }
   (_.e = function (i) {
     var e = [];
@@ -142,7 +142,7 @@ var CLSTAMP = "6441250";
                     7: "31d6cfe0d16ae931b73c",
                     8: "d6a9d3b12318fbecd766",
                     9: "ec433dd8cfb12ab117d0",
-                    10: "26056c83bd0a0e47e860",
+                    10: "f8ca220edf6ef2ba8945",
                     12: "31d6cfe0d16ae931b73c",
                     13: "31d6cfe0d16ae931b73c",
                     14: "31d6cfe0d16ae931b73c",
@@ -246,18 +246,18 @@ var CLSTAMP = "6441250";
               if ("stylesheet" === o.rel && (r === a || r === n)) return e();
             }
             for (
-              var o, b = document.getElementsByTagName("style"), s = 0;
-              s < b.length;
+              var o, f = document.getElementsByTagName("style"), s = 0;
+              s < f.length;
               s++
             ) {
-              if ((r = (o = b[s]).getAttribute("data-href")) === a || r === n)
+              if ((r = (o = f[s]).getAttribute("data-href")) === a || r === n)
                 return e();
             }
-            var f = document.createElement("link");
-            (f.rel = "stylesheet"),
-              (f.type = "text/css"),
-              (f.onload = e),
-              (f.onerror = function (e) {
+            var b = document.createElement("link");
+            (b.rel = "stylesheet"),
+              (b.type = "text/css"),
+              (b.onload = e),
+              (b.onerror = function (e) {
                 var a = (e && e.target && e.target.src) || n,
                   c = new Error(
                     "Loading CSS chunk " + i + " failed.\n(" + a + ")"
@@ -265,11 +265,11 @@ var CLSTAMP = "6441250";
                 (c.code = "CSS_CHUNK_LOAD_FAILED"),
                   (c.request = a),
                   delete t[i],
-                  f.parentNode.removeChild(f),
+                  b.parentNode.removeChild(b),
                   d(c);
               }),
-              (f.href = n),
-              document.getElementsByTagName("head")[0].appendChild(f);
+              (b.href = n),
+              document.getElementsByTagName("head")[0].appendChild(b);
           }).then(function () {
             t[i] = 0;
           }))
@@ -375,7 +375,7 @@ var CLSTAMP = "6441250";
                 2: "960259a9742a8eae446a",
                 3: "d2b7c63adaabbf7b54c6",
                 4: "fc725c8fd68b36f7b96f",
-                5: "0e65c18c64875d8546fb",
+                5: "5910ccbbe9438a736010",
                 6: "7e8dd3844fb9388148e2",
                 7: "b0b3ee1ae39903e3b906",
                 8: "358a725e871d40657813",
@@ -499,7 +499,7 @@ var CLSTAMP = "6441250";
       Promise.all(e)
     );
   }),
-    (_.m = b),
+    (_.m = f),
     (_.c = c),
     (_.d = function (e, a, c) {
       _.o(e, a) || Object.defineProperty(e, a, { enumerable: !0, get: c });
@@ -552,5 +552,5 @@ var CLSTAMP = "6441250";
   (a.push = e), (a = a.slice());
   for (var n = 0; n < a.length; n++) e(a[n]);
   var j = d;
-  f();
+  b();
 })([]);

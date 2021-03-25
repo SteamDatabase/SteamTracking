@@ -547,7 +547,10 @@
                   null,
                   f.createElement(
                     "div",
-                    { style: this.state.style },
+                    {
+                      className: "broadcast_embed_top_ctn_trgt",
+                      style: this.state.style,
+                    },
                     f.createElement(
                       "div",
                       {

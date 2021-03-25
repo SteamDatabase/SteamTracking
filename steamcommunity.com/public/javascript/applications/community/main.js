@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6441195";
+var CLSTAMP = "6441851";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [68],
   {
@@ -1952,14 +1952,15 @@ var CLSTAMP = "6441195";
           })
         );
       }
-      function W() {
+      function W(e) {
+        var t = e.className;
         return o.createElement(
           "svg",
           {
             version: "1.1",
             id: "Layer_2",
             xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button SVGIcon_MobilePhone",
+            className: Object(s.a)("SVGIcon_Button", "SVGIcon_MobilePhone", t),
             x: "0px",
             y: "0px",
             width: "256px",

@@ -14802,6 +14802,14 @@ html:not(.touch)
   max-width: 940px;
 }
 
+.partnersaledisplay_SaleWideBroadcastCtn_i3zxC {
+  z-index: 3;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  max-width: unset;
+}
+
 .partnersaledisplay_SaleOuterContainer_150kd {
   display: flex;
   flex-direction: column;
@@ -15031,6 +15039,12 @@ html.responsive.touch .partnersaledisplay_SaleSectionTabs_1FPIV {
   width: 100%;
   margin: 0px auto;
   max-width: 940px;
+}
+
+.partnersaledisplay_SaleWideBroadcastSection_2Ky32 {
+  width: 100%;
+  margin: 0px auto;
+  max-width: unset;
 }
 
 .partnersaledisplay_CarouselPage_Hlkuk {
