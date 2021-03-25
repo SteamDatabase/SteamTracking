@@ -139,6 +139,7 @@ https://steamcommunity.com/public/shared/css/skin_1/broadcast_watch.css?__TIME__
 https://steamcommunity.com/public/shared/css/store_game_shared.css?__TIME__
 https://steamcommunity.com/public/shared/css/user_reviews.css?__TIME__
 https://store.steampowered.com/public/css/applications/interactive_recommender/main.css?__TIME__
+https://store.steampowered.com/public/css/applications/store/accountpreferences.css?__TIME__
 https://store.steampowered.com/public/css/applications/store/broadcast.css?__TIME__
 https://store.steampowered.com/public/css/applications/store/contenthub.css?__TIME__
 https://store.steampowered.com/public/css/applications/store/curator_admin~eventcomponents.css?__TIME__
@@ -423,6 +424,7 @@ https://steamcommunity.com/public/shared/javascript/vatidcheck.js?__TIME__&l=eng
 https://store.steampowered.com/public/javascript/about.js?__TIME__&l=english
 https://store.steampowered.com/public/javascript/app_tagging.js?__TIME__&l=english
 https://store.steampowered.com/public/javascript/applications/interactive_recommender/main.js?__TIME__&l=english
+https://store.steampowered.com/public/javascript/applications/store/accountpreferences.js?__TIME__&l=english
 https://store.steampowered.com/public/javascript/applications/store/broadcast~loyaltystore.js?__TIME__&l=english
 https://store.steampowered.com/public/javascript/applications/store/contenthub.js?__TIME__&l=english
 https://store.steampowered.com/public/javascript/applications/store/curator_admin.js?__TIME__&l=english
