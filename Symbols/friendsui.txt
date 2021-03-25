@@ -2017,6 +2017,7 @@
  D typeinfo for CCallbackImpl<32>
  D typeinfo for CCallbackImpl<40>
  D typeinfo for CCallbackImpl<4288>
+ D typeinfo for CCallbackImpl<44>
  D typeinfo for CCallbackImpl<4>
  D typeinfo for CCallbackImpl<52>
  D typeinfo for CCallbackImpl<72>
@@ -2499,6 +2500,7 @@
  D typeinfo for CRemotePlayController::CCallbackInternal_OnRemoteClientRemotePlayClearControllers
  D typeinfo for CRemotePlayController::CCallbackInternal_OnRemoteClientRemotePlayControllerIndexSet
  D typeinfo for CRemotePlayController::CCallbackInternal_OnRemoteClientStreamLifetime
+ D typeinfo for CRemotePlayController::CCallbackInternal_OnRemoteClientStreamSessionUpdateNetworkUtilization
  D typeinfo for CRemotePlayController::CCallbackInternal_OnRemotePlayInviteResult
  D typeinfo for CRemotePlayController::CCallbackInternal_OnRemotePlaySessionStopped
  D typeinfo for CRemotePlayController::CCallbackInternal_OnRemotePlayTogetherGroupCreated
@@ -3504,6 +3506,7 @@
  D vtable for CCallbackImpl<32>
  D vtable for CCallbackImpl<40>
  D vtable for CCallbackImpl<4288>
+ D vtable for CCallbackImpl<44>
  D vtable for CCallbackImpl<4>
  D vtable for CCallbackImpl<52>
  D vtable for CCallbackImpl<72>
@@ -3981,6 +3984,7 @@
  D vtable for CRemotePlayController::CCallbackInternal_OnRemoteClientRemotePlayClearControllers
  D vtable for CRemotePlayController::CCallbackInternal_OnRemoteClientRemotePlayControllerIndexSet
  D vtable for CRemotePlayController::CCallbackInternal_OnRemoteClientStreamLifetime
+ D vtable for CRemotePlayController::CCallbackInternal_OnRemoteClientStreamSessionUpdateNetworkUtilization
  D vtable for CRemotePlayController::CCallbackInternal_OnRemotePlayInviteResult
  D vtable for CRemotePlayController::CCallbackInternal_OnRemotePlaySessionStopped
  D vtable for CRemotePlayController::CCallbackInternal_OnRemotePlayTogetherGroupCreated
@@ -4376,6 +4380,7 @@
  R typeinfo name for CCallbackImpl<32>
  R typeinfo name for CCallbackImpl<40>
  R typeinfo name for CCallbackImpl<4288>
+ R typeinfo name for CCallbackImpl<44>
  R typeinfo name for CCallbackImpl<4>
  R typeinfo name for CCallbackImpl<52>
  R typeinfo name for CCallbackImpl<72>
@@ -4860,6 +4865,7 @@
  R typeinfo name for CRemotePlayController::CCallbackInternal_OnRemoteClientRemotePlayClearControllers
  R typeinfo name for CRemotePlayController::CCallbackInternal_OnRemoteClientRemotePlayControllerIndexSet
  R typeinfo name for CRemotePlayController::CCallbackInternal_OnRemoteClientStreamLifetime
+ R typeinfo name for CRemotePlayController::CCallbackInternal_OnRemoteClientStreamSessionUpdateNetworkUtilization
  R typeinfo name for CRemotePlayController::CCallbackInternal_OnRemotePlayInviteResult
  R typeinfo name for CRemotePlayController::CCallbackInternal_OnRemotePlaySessionStopped
  R typeinfo name for CRemotePlayController::CCallbackInternal_OnRemotePlayTogetherGroupCreated
@@ -6178,6 +6184,9 @@
  T CCallbackImpl<4288>::GetCallbackSizeBytes()
  T CCallbackImpl<4288>::Run(void*, bool, unsigned long long)
  T CCallbackImpl<4288>::~CCallbackImpl()
+ T CCallbackImpl<44>::GetCallbackSizeBytes()
+ T CCallbackImpl<44>::Run(void*, bool, unsigned long long)
+ T CCallbackImpl<44>::~CCallbackImpl()
  T CCallbackImpl<4>::GetCallbackSizeBytes()
  T CCallbackImpl<4>::Run(void*, bool, unsigned long long)
  T CCallbackImpl<4>::~CCallbackImpl()
@@ -8367,6 +8376,7 @@
  T CJSMethodArgs::AddArray()
  T CJSMethodArgs::AddBoolean(bool)
  T CJSMethodArgs::AddBytes(void const*, int)
+ T CJSMethodArgs::AddNumber(float)
  T CJSMethodArgs::AddNumber(int)
  T CJSMethodArgs::AddNumber(unsigned int)
  T CJSMethodArgs::AddObject()
@@ -10813,6 +10823,7 @@
  T CRemotePlayController::BCanCreateInviteForGame(char const*, CSmartPtr<CJSCallbackPromise>)
  T CRemotePlayController::BCanHostIsolatedGameAudio(CSmartPtr<CJSCallbackPromise>)
  T CRemotePlayController::BEnabled(CSmartPtr<CJSCallbackPromise>)
+ T CRemotePlayController::BRemotePlayTogetherGuestOnPhoneOrTablet(char const*, unsigned int, CSmartPtr<CJSCallbackPromise>)
  T CRemotePlayController::BRemotePlayTogetherGuestSupported(CSmartPtr<CJSCallbackPromise>)
  T CRemotePlayController::CCallbackInternal_OnPlaceholderStateChange::CCallbackInternal_OnPlaceholderStateChange()
  T CRemotePlayController::CCallbackInternal_OnPlaceholderStateChange::Run(void*)
@@ -10832,6 +10843,9 @@
  T CRemotePlayController::CCallbackInternal_OnRemoteClientStreamLifetime::CCallbackInternal_OnRemoteClientStreamLifetime()
  T CRemotePlayController::CCallbackInternal_OnRemoteClientStreamLifetime::Run(void*)
  T CRemotePlayController::CCallbackInternal_OnRemoteClientStreamLifetime::~CCallbackInternal_OnRemoteClientStreamLifetime()
+ T CRemotePlayController::CCallbackInternal_OnRemoteClientStreamSessionUpdateNetworkUtilization::CCallbackInternal_OnRemoteClientStreamSessionUpdateNetworkUtilization()
+ T CRemotePlayController::CCallbackInternal_OnRemoteClientStreamSessionUpdateNetworkUtilization::Run(void*)
+ T CRemotePlayController::CCallbackInternal_OnRemoteClientStreamSessionUpdateNetworkUtilization::~CCallbackInternal_OnRemoteClientStreamSessionUpdateNetworkUtilization()
  T CRemotePlayController::CCallbackInternal_OnRemotePlayInviteResult::CCallbackInternal_OnRemotePlayInviteResult()
  T CRemotePlayController::CCallbackInternal_OnRemotePlayInviteResult::Run(void*)
  T CRemotePlayController::CCallbackInternal_OnRemotePlayInviteResult::~CCallbackInternal_OnRemotePlayInviteResult()
@@ -10876,6 +10890,7 @@
  T CRemotePlayController::OnRemoteClientRemotePlayClearControllers(RemoteClientRemotePlayClearControllers_t*)
  T CRemotePlayController::OnRemoteClientRemotePlayControllerIndexSet(RemoteClientRemotePlayControllerIndexSet_t*)
  T CRemotePlayController::OnRemoteClientStreamLifetime(RemoteClientStreamLifetime_t*)
+ T CRemotePlayController::OnRemoteClientStreamSessionUpdateNetworkUtilization(RemoteClientStreamSessionUpdateNetworkUtilization_t*)
  T CRemotePlayController::OnRemotePlayInviteResult(RemotePlayInviteResult_t*)
  T CRemotePlayController::OnRemotePlaySessionStopped(RemoteClientStopStreamSession_t*)
  T CRemotePlayController::OnRemotePlayTogetherGroupCreated(RemoteClientRemotePlayTogetherGroupCreated_t*)
@@ -10890,6 +10905,7 @@
  T CRemotePlayController::RegisterForGroupDisbanded(CSmartPtr<CJSCallbackFunc>)
  T CRemotePlayController::RegisterForInputUsed(CSmartPtr<CJSCallbackFunc>)
  T CRemotePlayController::RegisterForInviteResult(CSmartPtr<CJSCallbackFunc>)
+ T CRemotePlayController::RegisterForNetworkUtilizationUpdate(CSmartPtr<CJSCallbackFunc>)
  T CRemotePlayController::RegisterForPlaceholderStateChanged(CSmartPtr<CJSCallbackFunc>)
  T CRemotePlayController::RegisterForPlayerInputSettingsChanged(CSmartPtr<CJSCallbackFunc>)
  T CRemotePlayController::RegisterForRemoteClientLaunchFailed(CSmartPtr<CJSCallbackFunc>)
@@ -10913,6 +10929,7 @@
  T CRemotePlayController::SetStreamingDesktopToRemotePlayTogetherEnabled(bool, CSmartPtr<CJSCallbackPromise>)
  T CRemotePlayController::StopStreamingClient(CSmartPtr<CJSCallbackPromise>)
  T CRemotePlayController::Validate(CValidator&, char const*)
+ T CRemotePlayController::~CRemotePlayController()
  T CRemotePlayTogetherGroupUpdateMsg::ByteSize() const
  T CRemotePlayTogetherGroupUpdateMsg::CRemotePlayTogetherGroupUpdateMsg()
  T CRemotePlayTogetherGroupUpdateMsg::Clear()

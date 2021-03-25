@@ -8,6 +8,9 @@ public:
     virtual unknown_ret ProcessStreamShutdown(unsigned int) = 0;
     virtual unknown_ret UpdateStreamClientResolution(unsigned int, int, int) = 0;
     virtual unknown_ret ProcessStreamClientConnected(unsigned int, RemotePlayPlayer_t, ESteamDeviceFormFactor) = 0;
+    virtual unknown_ret GetStreamClientPlayer(unsigned int) = 0;
+    virtual unknown_ret GetStreamClientFormFactor(unsigned int) = 0;
+    virtual unknown_ret UpdateStreamClientNetworkUtilization(unsigned int, float, float) = 0;
     virtual unknown_ret ProcessStreamClientDisconnected(unsigned int) = 0;
     virtual unknown_ret BGetStreamTransportSignal(unsigned int, CUtlBuffer*) = 0;
     virtual unknown_ret SendStreamTransportSignal(unsigned int, CUtlBuffer const*) = 0;
@@ -74,6 +77,7 @@ public:
     virtual unknown_ret JoinRemotePlaySession(CSteamID, char const*) = 0;
     virtual unknown_ret BStreamingDesktopToRemotePlayTogetherEnabled() = 0;
     virtual unknown_ret SetStreamingDesktopToRemotePlayTogetherEnabled(bool) = 0;
+    virtual unknown_ret GetStreamingSessionForRemotePlayer(RemotePlayPlayer_t) = 0;
     virtual unknown_ret SetPerUserKeyboardInputEnabled(RemotePlayPlayer_t, bool) = 0;
     virtual unknown_ret SetPerUserMouseInputEnabled(RemotePlayPlayer_t, bool) = 0;
     virtual unknown_ret SetPerUserControllerInputEnabled(RemotePlayPlayer_t, bool) = 0;
