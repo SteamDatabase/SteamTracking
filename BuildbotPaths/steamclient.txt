@@ -308,6 +308,8 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/remoteclientjobs.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/remoteclientmanager.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/remoteclientstream.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/remotestoragefilesynccontext.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/remotestoragesynchelper.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/richpresence.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/shadercacheimplamd.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/shadercacheimplfossilize.o
@@ -614,6 +616,8 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/remoteclientjobs.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/remoteclientmanager.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/remoteclientstream.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/remotestoragefilesynccontext.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/remotestoragesynchelper.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/richpresence.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/shadercacheimplamd.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/shadercacheimplfossilize.o
@@ -893,6 +897,9 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/remoteclientmanager.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/remoteclientstream.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/remoteclientstream.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/remotestoragefilesynccontext.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/remotestoragefilesynccontext.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/remotestoragesynchelper.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/shadercachemanager/
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/shadercachemanager/../clientjob.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/shadercachemanager/../contentupdatecontext.h
