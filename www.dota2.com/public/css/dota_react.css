@@ -11619,12 +11619,12 @@ a {
   border-radius: 1px;
 }
 .homepage_PlayButton_2yA33 {
-  width: 288px;
+  min-width: 288px;
   height: 78px;
   border-radius: 6px;
   border: 3px solid #ffffff90;
   box-shadow: 0px 0px 5px black;
-  display: flex;
+  display: inline-flex;
   flex-direction: row;
   align-items: center;
   margin-top: 30px;
@@ -11650,6 +11650,7 @@ a {
   min-height: 0;
   display: flex;
   flex-direction: column;
+  margin-right: 12px;
 }
 .homepage_PlayButton_2yA33
   .homepage_RightSide_1oC4f
@@ -14737,6 +14738,7 @@ a {
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-top: 8px;
+  text-align: center;
 }
 .heropage_BottomSectionHero_1mdsq {
   width: 45%;

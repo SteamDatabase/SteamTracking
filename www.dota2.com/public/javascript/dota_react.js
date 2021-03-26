@@ -25681,7 +25681,15 @@ PERFORMANCE OF THIS SOFTWARE.
           o = i[0],
           s = i[1],
           l = !!t.updates;
-        if (!a)
+        if (
+          (Object(d.useEffect)(
+            function () {
+              return s(0);
+            },
+            [t]
+          ),
+          !a)
+        )
           return (
             wa
               .LoadPartnerEventsPageable(An.InitFromClanID(0), 570, 0, 100)
@@ -38023,7 +38031,9 @@ PERFORMANCE OF THIS SOFTWARE.
               t
             ));
         }),
-          (y = y.replace(/\%\%/g, "%"));
+          (y = y.replace(/\%\%/g, "%")),
+          (v = v.replace(/\%\%/g, "%")),
+          (b = b.replace(/\%\%/g, "%"));
         var L = t.name.replace("npc_dota_hero_", ""),
           w = l.name;
         u && (w = L + "_aghanims_shard"), c && (w = L + "_aghanims_scepter");
