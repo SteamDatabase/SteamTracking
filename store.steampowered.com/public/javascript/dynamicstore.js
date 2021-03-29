@@ -713,7 +713,12 @@ GDynamicStore = {
 					$El.append( '<div class="ds_flag ds_incart_flag">IN CART&nbsp;&nbsp;</div>');
 				}
 
-				if ( rgExcludedContentDescriptorIDs.length != 0 )
+				if ( $El.hasClass( 'ds_excluded_blur' ) )
+				{
+					$El.addClass( 'ds_flagged' );
+                	$El.append( '<div class="ds_flag ds_excluded_by_preferences_flag">EXCLUDED BY PREFERENCES&nbsp;&nbsp;</div>' );
+				}
+				else if ( rgExcludedContentDescriptorIDs.length != 0 )
 				{
 					$El.addClass( 'ds_flagged ds_excluded_by_preferences' );
 					$El.append( '<div class="ds_flag ds_excluded_by_preferences_flag">EXCLUDED BY PREFERENCES&nbsp;&nbsp;</div>' );

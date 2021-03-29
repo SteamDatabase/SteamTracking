@@ -263,7 +263,13 @@
 
 .search_results_filtered_warning {
 	display: flex;
+	margin-bottom: 5px;
 }
+
+.search_results_filtered_warning_second {
+	margin-top: 30px;
+}
+
 .search_results_filtered_warning > div {
 	padding: 10px;
 	background-color: rgba( 0, 0, 0, 0.2 );
@@ -359,6 +365,10 @@
 }
 .search_result_row.ds_flagged.ds_excluded_by_preferences .responsive_search_name_combined {
 	opacity: 0.0;
+}
+
+.search_result_row.ds_flagged.ds_excluded_blur .col.search_capsule {
+	filter: blur( 10px );
 }
 
 .search_result_row .col.search_released {
