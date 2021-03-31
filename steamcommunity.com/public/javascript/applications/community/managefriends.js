@@ -206,7 +206,7 @@
                   setTimeout(function () {
                     return n.setState({ invite_copied: !1 });
                   }, 1e3)),
-                Object(p.g)(t);
+                Object(p.h)(t);
             }),
             (e.prototype.OnAddFriend = function (a) {
               return Object(i.b)(this, void 0, void 0, function () {

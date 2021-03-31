@@ -14801,12 +14801,7 @@ html:not(.touch)
   margin: 0 auto;
   max-width: 940px;
 }
-
-.partnersaledisplay_SaleWideBroadcastCtn_i3zxC {
-  z-index: 3;
-  position: relative;
-  width: 100%;
-  margin: 0 auto;
+.partnersaledisplay_SaleBroadcastCtn_1SFMh.partnersaledisplay_WideBroadcastCtn_RGsXp {
   max-width: unset;
 }
 
@@ -15040,10 +15035,7 @@ html.responsive.touch .partnersaledisplay_SaleSectionTabs_1FPIV {
   margin: 0px auto;
   max-width: 940px;
 }
-
-.partnersaledisplay_SaleWideBroadcastSection_2Ky32 {
-  width: 100%;
-  margin: 0px auto;
+.partnersaledisplay_SaleBroadcastSection_1u0IZ.partnersaledisplay_WideBroadcastCtn_RGsXp {
   max-width: unset;
 }
 
@@ -17196,6 +17188,7 @@ html.touch
   display: flex;
   padding: 4px 16px;
   width: fit-content;
+  flex-wrap: wrap;
 }
 .saleitembrowser_SaleItemBrowserContainer_18byE
   .saleitembrowser_SaleItemBrowserHeaderContainer_1edLK

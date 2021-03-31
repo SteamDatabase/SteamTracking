@@ -905,6 +905,14 @@ function GoToExistingAccount( bIsInClient )
 	}
 }
 
+function OnCountryChange( elCountry )
+{
+	if ( g_rgEUCountries && g_rgEUCountries.indexOf( $J( elCountry ).val() ) >= 0 )
+	{
+		$J( '#eu_ssa_box' ).slideDown();
+	}
+}
+
 
 
 

@@ -111,7 +111,7 @@
               broadcastSteamID: r.broadcastSteamID,
               strAction: t,
             }),
-            Object(P.m)(e)
+            Object(P.n)(e)
           );
         }
         var n =
@@ -145,7 +145,7 @@
               onClick: function (e) {
                 Object(N.d)(
                   h.a.createElement(q, { steamid: r.broadcastSteamID }),
-                  Object(P.m)(e)
+                  Object(P.n)(e)
                 );
               },
             },
@@ -1238,7 +1238,7 @@
                     _.i.logged_in
                       ? Object(N.d)(
                           h.a.createElement(ae, { broadcasterSteamID: t }),
-                          Object(P.m)(e)
+                          Object(P.n)(e)
                         )
                       : Object(N.d)(
                           h.a.createElement(E.c, {
@@ -1253,7 +1253,7 @@
                               return Object(Q.a)();
                             },
                           }),
-                          Object(P.m)(e)
+                          Object(P.n)(e)
                         );
                   },
                 },
@@ -1610,7 +1610,7 @@
                             );
                           },
                         }),
-                        Object(P.m)(e)
+                        Object(P.n)(e)
                       );
                     },
                   },

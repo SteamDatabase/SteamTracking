@@ -247,8 +247,7 @@ p .csgoheadline{
 }
 
 .joinsteam .form_area {
-	max-width: 320px;
-	flex: 1 1 100%;
+	width: 292px;
 	float: none;
 }
 
@@ -312,8 +311,17 @@ p .csgoheadline{
 	max-width: 300px;
 }
 
+.joinsteam .join_form select#country {
+    width: 304px;
+}
+
 .joinsteam #ssa_agree {
 	margin-top: 30px;
+}
+
+.joinsteam #eu_ssa_box {
+    margin-bottom: 40px;
+    padding: 20px;
 }
 
 .joinsteam #ssa_agree label {
@@ -360,10 +368,6 @@ p .csgoheadline{
 
 .joinsteam #privacy_link {
 	margin-top: 15px;
-}
-
-.joinsteam #ssa_box {
-	padding: 10px;
 }
 
 .joinsteam_content_container {

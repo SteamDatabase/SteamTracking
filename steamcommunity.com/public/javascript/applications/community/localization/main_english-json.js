@@ -1450,7 +1450,7 @@
         PubRight_pubrightmanagelicensedsites: "Manage Licensed Sites",
         PubRight_pubrightmanagelicensedsites_Tooltip:
           "These users can view and manage Licensed Site location information, licenses, and activity",
-        Sale_option: "Create a Steam Sale for this event?",
+        Sale_option: "Enable the Sale Page Editor for this event?",
         Sale_option_title: "Select from a list of default titles:",
         Sale_option_title_disabled_tooltip:
           "Default title is unused due to custom title in current language or English",
@@ -1495,96 +1495,96 @@
         Sale_SortingTiersSection: "Sorting Tiers - %1$s",
         Sale_SortingTiers_SectionTooltip:
           "This allows for configuring sorting priorities of items within the sale when randomizing sections. Higher tiers will be appear before lower tiers. An empty tier will denote where the default items should appear if not found in any other tier",
-        Sale_TaggedItemsSection: "Tagged Items - %1$s",
-        Sale_TaggedItemsCount: "Items - %1$s",
-        Sale_TaggedItemsCountFiltered: "Items - %1$s (%2$s filtered)",
+        Sale_TaggedItemsSection: "Linked App List - %1$s",
+        Sale_TaggedItemsCount: "Linked Apps - %1$s",
+        Sale_TaggedItemsCountFiltered: "Linked Apps - %1$s (%2$s filtered)",
         Sale_TaggedItemsCount_ttip:
-          "This is the number of items that have been setup with tags for this sale. These tags can be used to determine which items should appear in various sections.",
-        Sale_TaggedItemsFilter: "Search",
+          "This is the number of items that have been setup with labels for this sale. These labels can be used to determine which items should appear in various sections.",
+        Sale_TaggedItemsFilter: "Search Within List",
         Sale_TaggedItemsFilter_Placeholder: "Search by name",
         Sale_TaggedItemsFilter_ttip:
-          "Limits the list of tagged items below to only items that match this string",
+          "Limits the list of labeled items below to only items that match this string",
         Sale_SortTier_Add: "Add Sorting Tier",
         Sale_SortTier_Enable: "Enable Sorting Tiers",
         Sale_SortTier_EnableInfo:
           "This section can be used to configure the random sorting order of capsules across the sale. This is done by configuring sorting tiers populated with items, where items in higher tiers will be shown before items within lower tiers.",
         Sale_EditTags_BatchItemText: "Enter Items to Edit",
         Sale_EditTags_BatchItemText_ttip:
-          "Here a listing of IDs can be provided to control which items will be edited when adding and removing tags. This is generally designed for copy/paste of item lists.",
+          "Here a listing of IDs can be provided to control which items will be edited when adding and removing labels. This is generally designed for copy/paste of item lists.",
         Sale_EditTags_BatchItems: "Items to Edit - %1$s",
         Sale_EditTags_BatchItems_ttip:
-          "The currently selected set of items that will be edited to add and remove tags from",
-        Sale_EditTags_Applied: "Existing Tags - %1$s",
+          "The currently selected set of items that will be edited to add and remove labels from",
+        Sale_EditTags_Applied: "Existing Labels - %1$s",
         Sale_EditTags_Applied_ttip:
-          "These are the tags that are currently assigned to this item and will be used to determine which sections the item should appear in",
+          "These are the labels that are currently assigned to this item and will be used to determine which sections the item should appear in",
         Sale_EditTags_BatchFilter: "Populate from filter",
         Sale_EditTags_BatchFilter_ttip:
           "Allows for populating the list of items to edit from a filter",
         Sale_EditTags_Store: "Store Tags - %1$s",
         Sale_EditTags_Store_ttip:
           "This lists any tags that exist on this item in the store but are not currently applied to this item for the sale",
-        Sale_EditTags_Other: "Other Tags",
+        Sale_EditTags_Other: "Other Labels",
         Sale_EditTags_Other_ttip:
-          "These are tags that have been applied to other items within the sale or are applied to the store item but are not currently applied to this item for this sale",
-        Sale_EditTags_RecentTags: "Recent Tags",
+          "These are labels that have been applied to other items within the sale or are applied to the store item but are not currently applied to this item for this sale",
+        Sale_EditTags_RecentTags: "Recent Labels",
         Sale_EditTags_RecentTags_ttip:
-          "These are tags that have been recently applied by you to items within this sale, used for quickly accessing common tags",
+          "These are labels that have been recently applied by you to items within this sale, used for quickly accessing common labels",
         Sale_EditTags_Sections: "Sections - %1$s",
         Sale_EditTags_Sections_ttip:
-          "This is a listing of all the sections that this item will appear within based upon the tags associated with it",
-        Sale_EditTags_NewTagName: "Add Tag",
+          "This is a listing of all the sections that this item will appear within based upon the labels associated with it",
+        Sale_EditTags_NewTagName: "Add Label",
         Sale_EditTags_NewTagName_ttip:
-          "Allows for searching for existing tags or creating new tags. Alternatively tags can be selected from the Other Tags column to the right",
-        Sale_EditTags_RemoveTagName: "Remove Tag",
+          "Allows for searching for existing labels or creating new labels. Alternatively labels can be selected from the Other Labels column to the right",
+        Sale_EditTags_RemoveTagName: "Remove Label",
         Sale_EditTags_RemoveTagName_ttip:
-          "Removes this tag from all the currently selected items",
+          "Removes this label from all the currently selected items",
         Sale_EditTags_NewTagButton: "Add",
         Sale_EditTags_EnableItemEditingDesc:
-          "Tagged items are an alternate way to setup a sale. This allows you to import a list of items to feature on the sale page, apply tags to each item, and then configure sections to populate their contents by setting up filters to apply to those tags. This is generally intended for larger sales with hundreds of items and may be unecessary complexity for smaller sales",
-        Sale_EditTags_EnableItemEditing: "Edit Tagged Items",
+          "This allows you to add or import a list of apps to feature on the sale page, apply labels to each item, and then configure sections to populate their contents by setting up filters to apply to those labels. This is generally intended for larger sales with hundreds of items and may be unecessary complexity for smaller sales",
+        Sale_EditTags_EnableItemEditing: "Edit Linked Items",
         Sale_EditTags_Hide: "Hide",
         Sale_EditTags_Show: "Show",
-        Sale_EditTags_TagCount: "Tags: %1$s",
+        Sale_EditTags_TagCount: "Labels: %1$s",
         Sale_TagFilter_MustHave: "Must Have",
         Sale_TagFilter_MustNotHave: "Must Not Have",
         Sale_TagFilter_And: "And",
         Sale_TagFilter_And_ttip:
-          "Clicking on this will add an additional line to the filter, which can then be configured with tags and whether or not they are required or not",
+          "Clicking on this will add an additional line to the filter, which can then be configured with labels and whether or not they are required or not",
         Sale_TagFilter_Missing: "Missing: ",
-        Sale_TagFilter_AddTags: "Add Tags...",
+        Sale_TagFilter_AddTags: "Add Labels...",
         Sale_TagFilter_Or: "Or",
         Sale_TagFilter_Or_ttip:
-          "Clicking this will add an additional tag onto the current line, allowing for such setups as Must have Tag1 OR Tag2",
-        Sale_TagFilter_SelectTag: "<Select Tag>",
+          "Clicking this will add an additional label onto the current line, allowing for such setups as Must have Label1 OR Label2",
+        Sale_TagFilter_SelectTag: "<Select Label>",
         Sale_TagFilter_Filter: "Filter",
         Sale_TagFilter_Filter_ttip:
-          "These are the rules that will determine which apps should be included based upon the tags they have specified and which tags are required or blocked by these rules",
+          "These are the rules that will determine which apps should be included based upon the labels they have specified and which labels are required or blocked by these rules",
         Sale_TagFilter_MatchingItems: "Matching Items - %1$s",
         Sale_TagFilter_MatchingItems_ttip:
-          "This is a list of all the tagged items associated with the sale that currently match the filter that is setup below",
+          "This is a list of all the linked items associated with the sale that currently match the filter that is setup below",
         Sale_TagFilter_FilteredItems: "Filtered Items - %1$s",
         Sale_TagFilter_FilteredItems_ttip:
           "This is a list of all the items that did NOT match the filter and therefore will not be displayed. Useful for debugging why a specific item isn't shown in a section.",
         Sale_TagFilter_UnusedItems: "Unused Items - %1$s",
         Sale_TagFilter_UnusedItems_ttip:
-          "This is a list of all the sale tagged items that are currently not placed within ANY section, either explicitly or included through a filter. This is useful for making sure every element is visible on a sale and exploring groupings of unused items.",
-        Sale_TagFilter_ShowTagBreakdown: "Show Tag Breakdown",
-        Sale_TagFilter_HideTagBreakdown: "Hide Tag Breakdown",
+          "This is a list of all the sale linked items that are currently not placed within ANY section, either explicitly or included through a filter. This is useful for making sure every element is visible on a sale and exploring groupings of unused items.",
+        Sale_TagFilter_ShowTagBreakdown: "Show Label Breakdown",
+        Sale_TagFilter_HideTagBreakdown: "Hide Label Breakdown",
         Sale_TagFilter_SectionTooltip:
-          "Tagged items provide a pool of items along with associated attributes that can be added to the sale via filters that can select which items match based upon a defined criteria. It is important to note that these items aren't actually part of the sale or visible to users until they are included in either a tab or a sale section through a filter.",
+          "Linked items provide a pool of items along with associated attributes that can be added to the sale via filters that can select which items match based upon a defined criteria. It is important to note that these items aren't actually part of the sale or visible to users until they are included in either a tab or a sale section through a filter.",
         Sale_TagFilter_TagBreakdown_ttip:
-          "This provides a listing of all the tags contained by the matching items and how many of each there are. This is useful for determining if there may be other breakdowns of tags available. Each tag can be selected to see which items in the list have the associated tag.",
+          "This provides a listing of all the labels contained by the matching items and how many of each there are. This is useful for determining if there may be other breakdowns of labels available. Each label can be selected to see which items in the list have the associated label.",
         Sale_TagFilter_NoFilter:
-          "No filter has been setup - Including all tagged items",
+          "No filter has been setup - Including all linked items",
         Sale_TagFilter_NoFilter_ttip:
-          "This section has been configured to display items based upon a filter that will be applied against all tagged items in the sale. However, this filter has not been configured. Click the button below to set up this filter.",
+          "This section has been configured to display items based upon a filter that will be applied against all linked items in the sale. However, this filter has not been configured. Click the button below to set up this filter.",
         Sale_TagFilter_EditFilter: "Edit Filter",
         Sale_TagFilter_EditFilter_ttip:
-          "This will allow for editing the filter associated with this section. This filter is used to determine which tagged items in the sale will be displayed within this section",
-        Sale_TagFilter_Explore: "Explore Tagged Items",
+          "This will allow for editing the filter associated with this section. This filter is used to determine which linked items in the sale will be displayed within this section",
+        Sale_TagFilter_Explore: "Explore Linked Items",
         Sale_TagFilter_CurrentFilter: "Section Filter",
         Sale_TagFilter_CurrentFilter_ttip:
-          "Below is the current filter that will determine which tagged items are shown within this section. To update this filter, press the button below",
+          "Below is the current filter that will determine which linked items are shown within this section. To update this filter, press the button below",
         Sale_TagFilter_OK: "OK",
         Sale_ReorderSections: "Reorder Sections",
         Sale_ReorderSections_ttip:
@@ -1679,7 +1679,8 @@
           "A collection of valve only sections that are unlikely to be useful for non-Valve users",
         Sale_SectionTypeTTip_sale_item_browser:
           "A tabbed browsing control that allows for showing top sellers, recently released, etc for the items on the sale",
-        Sale_Items: "Items",
+        Sale_NoChoiceMade: "Please choose a type",
+        Sale_Items: "Apps and Bundles",
         Sale_Items_ttip:
           "This is the primary sale section which allows insert of games, packages and bundles onto the sale page. Create as many as needed.",
         Sale_Events: "Events",
@@ -1721,7 +1722,11 @@
         Sale_CuratorRecommendation_ChooseInvalid:
           "Cannot choose curator, sale is required to be visible and have started.",
         Sale_Tabs: "Tabs",
+        Sale_Tabs_ttip:
+          "A row of buttons that can control the display of content below it on the page",
         Sale_TabButtons: "Tab Buttons",
+        Sale_TabButtons_ttip:
+          "Optional section only useful if there is an existing tab. Useful to place at the end of the page, which places the tabs as button for easy navigation for a user who might have missed seeing the tabs on the page.",
         Sale_VOInternalSection:
           "Internal Sale Section (multiple options available)",
         Sale_Tabs_DeletePrompt_Title: "Delete Tab",
@@ -1782,10 +1787,10 @@
         Sale_VOInternalSection_TabReferences: "Tab References",
         Sale_VOInternalSection_SaleItemBrowser: "Sale Item Browser",
         Sale_TOC: "Sale Page Contents",
-        Sale_SelectApps: "Add Items",
-        Sale_SelectApps_Placeholder: "Enter item name or page URL",
+        Sale_SelectApps: "Add Individual Apps",
+        Sale_SelectApps_Placeholder: "Enter app name or page URL",
         Sale_SelectApps_Tooltip:
-          "Allows for searching for products by name or pasting links to apps, packages, or bundles that will then be added to the list of dependencies above",
+          "Allows for searching for products by name or pasting links to apps, packages, or bundles that will then be added to this list.",
         Sale_SelectEvents: "Select Events to feature",
         Sale_EnterEvents: "Enter Event ID to Select",
         Sale_EnterEventsURL: "Enter Event URL to Select",
@@ -1819,22 +1824,22 @@
           "Used to import a sale from the old sale system into this new sale system given the URL to the old sale system",
         Sale_DeleteFilteredItems: "Delete Filtered",
         Sale_DeleteFilteredItems_ttip:
-          "This will delete all tagged items that are currently filtered out. This can help reduce the sale size and make the sale page more efficient and easier to work with",
+          "This will delete all linked items that are currently filtered out. This can help reduce the sale size and make the sale page more efficient and easier to work with",
         Sale_OptInPageName: "Opt In Page Name",
         Sale_OptInPageName_ttip:
-          "The name of an opt in page that when provided will allow for importing of tag items from the opt in page. An example might be 'sale_fighting'",
+          "The name of an opt in page that when provided will allow for importing of items from the opt in page. An example might be 'sale_fighting'",
         Sale_SyncTag_OptInItems: "Sync Opt In Items",
         Sale_SyncTag_OptInItems_ttip:
-          "This will add new opt-in items, and remove items that are no longer in the opt-in page from the list of tagged items. New items will get default store and opt in tags.",
-        Sale_SyncTag_OptInTags: "Sync Opt In Tags",
+          "This will add new opt-in items, and remove items that are no longer in the opt-in page from the list of linked items. New items will get default store and opt in labels.",
+        Sale_SyncTag_OptInTags: "Sync Opt In Labels",
         Sale_SyncTag_OptInTags_ttip:
-          "This will resynchronize all of the opt in tags for the tagged items in the sale that already exist",
+          "This will resynchronize all of the opt in labels for the linked items in the sale that already exist",
         Sale_SyncTag_StoreTags: "Sync Store Tags",
         Sale_SyncTag_StoreTags_ttip:
-          "This will resynchronize all of the store tags for the tagged items listed in this sale, such as Action or First Person",
-        Sale_SyncTag_Features: "Sync Feature Tags",
+          "This will resynchronize all of the store tags for the linked items listed in this sale, such as Action or First Person",
+        Sale_SyncTag_Features: "Sync Feature Labels",
         Sale_SyncTag_Features_ttip:
-          "This will resynchronize all of the feature tags for the tagged items listed in the sale, such as Has Demo",
+          "This will resynchronize all of the feature labels for the linked items listed in the sale, such as Has Demo",
         Sale_ReservedStoreNavigation: "Reserved for Store Navigation",
         Sale_ImportButton: "Import",
         Sale_CreateUpdateDiscountEventTitle:
@@ -1847,7 +1852,7 @@
         Sale_Wishlist: "Show Featured items from user's wishlist",
         Sale_InteractiveRecommender:
           "Show Featured items suggested by Interactive Recommender",
-        Sale_Tag: "Show discounted items with this tag",
+        Sale_Tag: "Show discounted items with this label",
         Sale_SearchCurator: "Search Curator/Creator Home by name or account id",
         Sale_SearchCurator_ttip:
           "The account id is on the 'Edit Group Profile' page in SteamCommunity.",
@@ -1858,7 +1863,7 @@
           "Populate this section automatically using an algorithm",
         Sale_TaggedItemFilter: "Populate Items by Filter",
         Sale_TaggedItemFilterDescription:
-          "When set, instead of populating items explicitly, a filter can be setup to determine the tagged items that should be used",
+          "When set, instead of populating items explicitly, a filter can be setup to determine the linked items that should be used",
         Sale_TaggedItemFilter_EnableTitle: "Enable Filter Section",
         Sale_TaggedItemFilter_EnableDescription:
           "This will remove all current items associated with this section and replace it with capsules that match the new filter",
@@ -1985,37 +1990,37 @@
         Sale_RemoveAll_Tooltip: "Removes all items from the list above",
         Sale_EditRaw: "Edit Raw",
         Sale_EditRawTaggedItems_ttip:
-          "Allows for directly editing the list of tagged items for this sale. This can be used to import or export from tools such as Excel, or quickly make large changes to the list of items",
-        Sale_EditRawCustom: "Custom Tags",
+          "Allows for directly editing the list of linked items for this sale. This can be used to import or export from tools such as Excel, or quickly make large changes to the list of items",
+        Sale_EditRawCustom: "Custom Labels",
         Sale_EditRawCustomTaggedItems_ttip:
-          "Allows for directly editing the list of tagged items for this sale and importing and exporting just the custom colleciton of tags on the sale items. This is primarily used for importing a selection of custom tags managed by an external spreadsheet without modifying the other tags on the items. In addition, a subset can be imported via this dialog as it will not remove items not listed",
+          "Allows for directly editing the list of linked items for this sale and importing and exporting just the custom colleciton of labels on the sale items. This is primarily used for importing a selection of custom tags managed by an external spreadsheet without modifying the other tags on the items. In addition, a subset can be imported via this dialog as it will not remove items not listed",
         Sale_ImportOptIn: "Import From Opt In Page",
         Sale_ImportOptIn_ttip:
-          "Opens a dialog that will allow for all apps to be imported from an opt in page and pulled into the tagged items list",
-        Sale_SyncTaggedItems_Title: "Sync Tagged Items",
-        Sale_SyncDemoTags: "Sync Demo Tags",
+          "Opens a dialog that will allow for all apps to be imported from an opt in page and pulled into the linked items list",
+        Sale_SyncTaggedItems_Title: "Sync Items",
+        Sale_SyncDemoTags: "Sync Demo Labels",
         Sale_SyncDemoTags_ttip:
-          "This will go through all tagged items and add HasDemo tags to all apps with demos, and remove it from any apps that do not",
+          "This will go through all linked items and add HasDemo labels to all apps with demos, and remove it from any apps that do not",
         Sale_SyncTaggedItems: "Sync",
         Sale_SyncTaggedItems_ttip:
-          "This will allow for synchronizing various tags and other information between the tagged items and other sources",
-        Sale_SyncDemoTags_Title: "Syncing Demo Tags",
-        Sale_EditAutoTags_Title: "Edit Auto Tags",
-        Sale_EditAutoTags_Placeholder: "Enter tag name",
+          "This will allow for synchronizing various labels and other information between the linked items and other sources",
+        Sale_SyncDemoTags_Title: "Syncing Demo Labels",
+        Sale_EditAutoTags_Title: "Edit Auto Labels",
+        Sale_EditAutoTags_Placeholder: "Enter label name",
         Sale_EditAutoTags_Tooltip:
-          "This is the name of the tag that will be applied to any tagged items that match the associated filter",
+          "This is the name of the labels that will be applied to any linked items that match the associated filter",
         Sale_EditTaggedItemFilter: "Item Filter",
         Sale_EditTaggedItemFilter_ttip:
-          "This allows for setting up a filter that will be applied to all tagged items prior to considering for sections. You can use this to filter out say all games that don't have demos, or that have a tag that you choose.",
+          "This allows for setting up a filter that will be applied to all linked items prior to considering for sections. You can use this to filter out say all games that don't have demos, or that have a tag that you choose.",
         Sale_Explore: "Explore",
         Sale_ExploreTaggedItems_ttip:
-          "Allows for using the filter tool to explore the currently configured tagged items to see how many items meet different filters or have which tags associated with them",
+          "Allows for using the filter tool to explore the currently configured linked items to see how many items meet different filters or have which labels associated with them",
         Sale_BatchEditTaggedItems: "Batch Edit",
         Sale_BatchEditTaggedItems_ttip:
-          "Allows for the editing of tagged items in batches. A list of items can be provided and then tags added or removed from them as a group",
-        Sale_EditAutoTags: "Auto Tags",
+          "Allows for the editing of linked items in batches. A list of items can be provided and then labels added or removed from them as a group",
+        Sale_EditAutoTags: "Auto Labels",
         Sale_EditAutoTags_ttip:
-          "Allows creating auto tags, which is a filter that will apply the named tag to any tagged item that matches",
+          "Allows creating auto labels, which is a filter that will apply the named label to any linked item that matches",
         Sale_ShowFilteredTaggedItems: "Show Filtered",
         Sale_ShowFilteredTaggedItems_ttip:
           "When checked, this will display all items, including those that have been filtered out",
@@ -2023,9 +2028,9 @@
         Sale_ImportOptIn_Name: "Opt in name",
         Sale_ImportOptIn_Name_ttip:
           "This is the name of the sale referenced by the opt in page so that it knows which sale to import data from",
-        Sale_ImportOptIn_Prefix: "Tag Prefix",
+        Sale_ImportOptIn_Prefix: "Label Prefix",
         Sale_ImportOptIn_Prefix_ttip:
-          "A prefix to attach onto tags provided by the opt in page. This lets say Action specified from the opt in page be separate from Action from the store page",
+          "A prefix to attach onto labels provided by the opt in page. This lets say Action specified from the opt in page be separate from Action from the store page",
         Sale_ImportOptIn_RequireDemos: "Require Demos",
         Sale_ImportOptIn_RequireDemos_ttip:
           "When checked, this will only allow through apps that have a demo associated with it",
@@ -2158,7 +2163,7 @@
         FacetedBrowseEditor_AutoGenerateDialogText:
           "Auto-generating facets will overwrite all the existing facets in this section. Continue?",
         FacetedBrowseEditor_AutoGenerateOptions_FeatureTagForController:
-          'Use feature tag for apps with the "Controller" store tag.',
+          'Use feature label for apps with the "Controller" store tag.',
         FacetedBrowseEditor_PruneUnused: "Prune Unused Facets",
         FacetedBrowseEditor_PruneUnusedButton: "Prune",
         FacetedBrowseEditor_MinMatchesText:

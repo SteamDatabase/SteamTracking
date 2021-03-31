@@ -1514,7 +1514,7 @@
                 n = L.c.GetClanEventModel(t.unique_id);
               Object(J.d)(
                 E.a.createElement(Ee, { eventModel: n }),
-                Object(te.m)(e)
+                Object(te.n)(e)
               );
             }),
             (e.prototype.OnUpdateSeasonalTag = function (e) {
@@ -1522,7 +1522,7 @@
                 n = L.c.GetClanEventModel(t.unique_id);
               Object(J.d)(
                 E.a.createElement(be, { eventModel: n }),
-                Object(te.m)(e)
+                Object(te.n)(e)
               );
             }),
             (e.prototype.render = function () {
@@ -3292,11 +3292,7 @@
                           { key: e },
                           h.createElement(
                             Oe.c,
-                            {
-                              eventModel: t,
-                              route: Oe.a.k_eView,
-                              openNewWindow: !0,
-                            },
+                            { eventModel: t, route: Oe.a.k_eView },
                             t.GetNameWithFallback(0)
                           ),
                           h.createElement(
@@ -3738,7 +3734,7 @@
                         position: "center",
                       })
                   ),
-                  Object(te.m)(e)
+                  Object(te.n)(e)
                 );
               },
             },
@@ -4142,7 +4138,6 @@
                             {
                               eventModel: a[0],
                               route: Oe.a.k_eViewWebSiteHub,
-                              forceAnchor: !0,
                               className: Je.SectionButton,
                             },
                             Object(U.f)("#EventBrowse_MoreEventsBtn")
@@ -4776,7 +4771,7 @@
                 onClick: function (e) {
                   Object(J.d)(
                     E.a.createElement(Et, Object(b.a)({}, t)),
-                    Object(te.m)(e)
+                    Object(te.n)(e)
                   );
                 },
               },

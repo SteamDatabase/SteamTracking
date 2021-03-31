@@ -3970,7 +3970,7 @@ html.touch .gamehover_WishlistButton_3notz .gamehover_WishlistButtonText_VI5mZ,
 }
 .salepreviewwidgets_StoreSaleWidgetContents_Agwfe
   .salepreviewwidgets_StoreMetaDataCtn_2W2g3 {
-  margin-bottom: 6%;
+  flex: 1;
 }
 .salepreviewwidgets_StoreSaleWidgetContents_Agwfe
   .salepreviewwidgets_StoreMetaDataCtn_2W2g3
@@ -4144,7 +4144,7 @@ html.touch .gamehover_WishlistButton_3notz .gamehover_WishlistButtonText_VI5mZ,
 .salepreviewwidgets_SaleItemFullCapsuleDisplay_2sVvR
   .salepreviewwidgets_SaleTagBlockCtn_1ZqQL {
   margin-top: 4px;
-  margin-bottom: 8%;
+  margin-bottom: 8px;
 }
 @media screen and (max-width: 940px) {
   .salepreviewwidgets_LibraryAssetExpandedDisplay_PZY_7
@@ -4168,7 +4168,8 @@ html.touch .gamehover_WishlistButton_3notz .gamehover_WishlistButtonText_VI5mZ,
 .salepreviewwidgets_SaleItemFullCapsuleDisplay_2sVvR
   .salepreviewwidgets_StoreSaleWidgetCenter_2asUT {
   padding-left: 0px;
-  margin-bottom: -8%;
+  height: 100%;
+  justify-content: space-between;
 }
 
 .salepreviewwidgets_LibraryAssetExpandedDisplay_PZY_7
@@ -4254,7 +4255,7 @@ html.touch .gamehover_WishlistButton_3notz .gamehover_WishlistButtonText_VI5mZ,
 }
 .salepreviewwidgets_LibraryAssetExpandedDisplay_PZY_7
   .salepreviewwidgets_StoreSaleWidgetShortDesc_3AsE5 {
-  margin-bottom: 6%;
+  margin-bottom: 6px;
 }
 .salepreviewwidgets_SaleItemFullCapsuleDisplay_2sVvR
   .salepreviewwidgets_StoreSaleWidgetShortDesc_3AsE5 {
@@ -5424,7 +5425,7 @@ html.touch
 }
 .salepreviewwidgets_StoreSaleWidgetCrossCenterRight_oW0H1
   .salepreviewwidgets_TitleCtn_3rrH9 {
-  padding-top: 30px;
+  padding: 10px 40px 10px 0px;
 }
 @media screen and (max-width: 620px) {
   .salepreviewwidgets_StoreSaleWidgetCrossCenterRight_oW0H1
@@ -6224,12 +6225,7 @@ html:not(.touch)
   margin: 0 auto;
   max-width: 940px;
 }
-
-.partnersaledisplay_SaleWideBroadcastCtn_i3zxC {
-  z-index: 3;
-  position: relative;
-  width: 100%;
-  margin: 0 auto;
+.partnersaledisplay_SaleBroadcastCtn_1SFMh.partnersaledisplay_WideBroadcastCtn_RGsXp {
   max-width: unset;
 }
 
@@ -6463,10 +6459,7 @@ html.responsive.touch .partnersaledisplay_SaleSectionTabs_1FPIV {
   margin: 0px auto;
   max-width: 940px;
 }
-
-.partnersaledisplay_SaleWideBroadcastSection_2Ky32 {
-  width: 100%;
-  margin: 0px auto;
+.partnersaledisplay_SaleBroadcastSection_1u0IZ.partnersaledisplay_WideBroadcastCtn_RGsXp {
   max-width: unset;
 }
 

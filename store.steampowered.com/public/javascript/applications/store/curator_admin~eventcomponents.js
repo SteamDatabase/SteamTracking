@@ -1648,7 +1648,7 @@
                     strRSSUrl: this.state.strRssURL,
                     admin: this.m_Admin,
                   }),
-                  Object(y.m)(e)
+                  Object(y.n)(e)
                 );
             }),
             (e.prototype.OnRevert = function (e) {
@@ -2159,7 +2159,7 @@
                               "#CuratorAdmin_RSSFeed_queued"
                             ),
                           }),
-                          Object(y.m)(n)
+                          Object(y.n)(n)
                         );
                       })
                       .catch(function (e) {
@@ -2170,7 +2170,7 @@
                             ),
                             strDescription: Object(j.a)(e),
                           }),
-                          Object(y.m)(n)
+                          Object(y.n)(n)
                         );
                       })
                       .finally(function () {
@@ -2358,7 +2358,7 @@
                   strRSSUrl: r(),
                   fnClanEventGID: this.OnClanEventCreateSuccess,
                 }),
-                Object(y.m)(e)
+                Object(y.n)(e)
               );
             }),
             (e.prototype.OnUpdateNewsEvent = function (e) {
@@ -2373,7 +2373,7 @@
                   fnClanEventGID: this.OnClanEventCreateSuccess,
                   bUpdatePost: !0,
                 }),
-                Object(y.m)(e)
+                Object(y.n)(e)
               );
             }),
             (e.prototype.HideModalEvent = function () {
@@ -2406,7 +2406,7 @@
                     disabled: !0,
                   })
                 ),
-                Object(y.m)(e)
+                Object(y.n)(e)
               );
             }),
             (e.prototype.render = function () {

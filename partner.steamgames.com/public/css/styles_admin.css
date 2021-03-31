@@ -2439,6 +2439,9 @@ html, body { height:100%; }
 	line-height: 22px;
 	margin: 0px 10px 20px 0px;
 }
+.preview_in_store_link:hover {
+    cursor: pointer;
+}
 
 .valveContact
 {
@@ -3767,4 +3770,31 @@ img.category_icon {
 .msglist .optionRow input {
     flex-grow: 1;
     margin-left: 10px;
+}
+
+.DeveloperWarningSection {
+	background-color: #661111;
+	margin-top: 12px;
+}
+
+.DeveloperWarningTitle {
+	padding-left: 8px;
+	color: #d02020;
+	font-family: "Motiva Sans", Sans-serif;
+	font-weight: normal;
+	font-weight: normal;
+	font-size: 20px;
+}
+
+.DeveloperWarningSingleWarningSection {
+	background-color: #440808;
+	margin: 2px;
+	padding: 6px;
+}
+
+.DeveloperWarningSingleWarningTitle {
+	color: #d8d8d8;
+}
+
+.DeveloperWarningSingleWarningBody {
 }

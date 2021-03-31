@@ -254,11 +254,6 @@
               { className: "account_settings_container" },
               o.a.createElement(
                 "div",
-                null,
-                Object(m.f)("#CookiePref_OptionalCookies_Desc")
-              ),
-              o.a.createElement(
-                "div",
                 { className: y.ButtonGroup },
                 o.a.createElement(
                   "div",

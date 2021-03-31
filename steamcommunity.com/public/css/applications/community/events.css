@@ -3190,6 +3190,40 @@ p a:hover {
   color: white;
 }
 
+.eventmoderationaudit_ModeratorAuditActionCtn_f6z__ {
+  margin-bottom: 10px;
+}
+.eventmoderationaudit_ModeratorAuditActionCtn_f6z__ > div {
+  display: inline;
+}
+.eventmoderationaudit_ModeratorAuditActionCtn_f6z__ > span {
+  display: block;
+}
+
+.eventmoderationaudit_ExpandModActions_3nNMe {
+  cursor: pointer;
+}
+
+.partnereventrevisionhistory_VersionListCtn_32hnY {
+  max-height: 500px;
+  overflow-y: scroll;
+}
+
+.partnereventrevisionhistory_VersionCtn_3vUSX {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  border-bottom: 1px solid black;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+}
+.partnereventrevisionhistory_VersionCtn_3vUSX
+  .partnereventrevisionhistory_VersionInfoCtn_1sI79 {
+  display: flex;
+  flex-direction: column;
+  min-width: 80%;
+}
+
 .partnereventsalesorttiers_SortTierControls_1_f_6 {
   display: flex;
   flex-direction: column;
@@ -3387,6 +3421,10 @@ p a:hover {
 
 .partnereventsaletagitems_TagItemEditorCtn_BCZuV {
   margin-bottom: 10px;
+}
+.partnereventsaletagitems_TagItemEditorCtn_BCZuV
+  .partnereventsaletagitems_ItemListTitle_1Qb2C {
+  margin-bottom: 16px;
 }
 .partnereventsaletagitems_TagItemEditorCtn_BCZuV
   .partnereventsaletagitems_ItemListControls_3d5Ah {
@@ -3892,40 +3930,6 @@ p a:hover {
   .tableofcontents_TableOfContents_3-gNE
   .tableofcontents_TOCEntry_2fked.tableofcontents_TOCIndent_mtCjw.tableofcontents_SectionOnScreen_1ZlX0 {
   margin-left: calc($indentWidth - $selectedWidth);
-}
-
-.eventmoderationaudit_ModeratorAuditActionCtn_f6z__ {
-  margin-bottom: 10px;
-}
-.eventmoderationaudit_ModeratorAuditActionCtn_f6z__ > div {
-  display: inline;
-}
-.eventmoderationaudit_ModeratorAuditActionCtn_f6z__ > span {
-  display: block;
-}
-
-.eventmoderationaudit_ExpandModActions_3nNMe {
-  cursor: pointer;
-}
-
-.partnereventrevisionhistory_VersionListCtn_32hnY {
-  max-height: 500px;
-  overflow-y: scroll;
-}
-
-.partnereventrevisionhistory_VersionCtn_3vUSX {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  border-bottom: 1px solid black;
-  padding-bottom: 5px;
-  margin-bottom: 5px;
-}
-.partnereventrevisionhistory_VersionCtn_3vUSX
-  .partnereventrevisionhistory_VersionInfoCtn_1sI79 {
-  display: flex;
-  flex-direction: column;
-  min-width: 80%;
 }
 
 .partnereventspecialcategories_EventCategory_SteamAwardsNomination_3QxOk {
