@@ -17465,6 +17465,7 @@
  b g_pClientNetworkingSockets
  b g_pClientNetworkingSocketsSerialized
  b g_pClientNetworkingUtils
+ b g_pClientNetworkingUtilsSerialized
  b g_pClientParentalSettings
  b g_pClientParties
  b g_pClientRemoteClientManager

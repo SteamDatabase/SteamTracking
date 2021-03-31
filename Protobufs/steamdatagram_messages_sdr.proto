@@ -216,6 +216,13 @@ message CMsgSteamNetworkingP2PSDRRoutingSummary {
 	optional uint32 initial_score = 4;
 	optional fixed32 initial_pop_local = 5;
 	optional fixed32 initial_pop_remote = 6;
+	optional uint32 best_ping = 11;
+	optional uint32 best_ping_front_local = 12;
+	optional uint32 best_ping_front_remote = 13;
+	optional uint32 best_score = 14;
+	optional fixed32 best_pop_local = 15;
+	optional fixed32 best_pop_remote = 16;
+	optional uint32 best_time = 17;
 	optional uint32 negotiation_ms = 7;
 	optional uint32 selected_seconds = 8;
 }

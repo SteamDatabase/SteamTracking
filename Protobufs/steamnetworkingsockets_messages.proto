@@ -184,6 +184,10 @@ message CMsgSteamNetworkingICESessionSummary {
 	optional uint32 initial_ping = 4;
 	optional uint32 initial_score = 6;
 	optional uint32 negotiation_ms = 5;
+	optional uint32 best_route_kind = 16;
+	optional uint32 best_ping = 17;
+	optional uint32 best_score = 18;
+	optional uint32 best_time = 19;
 	optional uint32 selected_seconds = 12;
 	optional uint32 user_settings = 13;
 	optional uint32 ice_enable_var = 14;

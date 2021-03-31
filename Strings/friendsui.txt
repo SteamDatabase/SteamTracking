@@ -50,10 +50,10 @@ __LINKEDIT
 @loader_path/friendsui.dylib
 "
 \g
-Vt
+Wt
 P
-Nr
-Nr
+Or
+Or
 w
 
 8
@@ -87,7 +87,6 @@ h
 )
 <
 <
-Ic
 25CFriendSettingsController
 13IUIController
 N25CFriendSettingsController41CCallbackInternal_OnClientSettingsChangedE
@@ -12741,13 +12740,14 @@ FL?
 <
 8
 h[
-0-
 p
 0
 p
 p
 0
 7
+E7
+uO
 ;
 ;
 ;
@@ -12758,7 +12758,6 @@ p
 p
 0
 p
-EO
 0
 p
 0
@@ -12775,16 +12774,17 @@ p
 0
 0
 
-Q:
-x:
-6
+):
 :
 :
+D6
 H=
+gd
 6
 6
 6
 6
+S=
 
 
 (
@@ -12809,9 +12809,9 @@ d
 5
 5
 5
-wM
 x
 .
+P
 
 
 c
@@ -12824,18 +12824,20 @@ c
 4
 b
 b
-_7
+b7
 L
+&7
+/3
 7
 7
-UN
+O6
 2
-Y2
 0
 p
 6
 0
 p
+<6
 @
 @
 @
@@ -12845,11 +12847,9 @@ p
 @
 @
 
-6
-6
+0J
 2
 2
-2
 0
 0
 0
@@ -12863,7 +12863,6 @@ p
 p
 p
 0
-J
 0
 p
 0
@@ -12882,7 +12881,6 @@ I#E
 p
 0
 p
-u'
 `
 p
 0
@@ -12890,14 +12888,15 @@ p
 p
 0
 0
-B'
-,,
-}1
-],
 V
-i1
-51
-*1
+o1
+g1
+_1
+V1
+*U
+O5
+V5
+5
 U
 U
 U
@@ -12910,21 +12909,16 @@ U
 5
 5
 5
-5
-5
-]V
+5V
 p
-k4
 '
-YT
+Q4
 +
-W4
 G
 0
 p
 &
 p
-4
 p
 0
 0
@@ -12945,12 +12939,12 @@ p
 0
 0
 p
+5,
 0
 0
 0
 4
 0
-;,
 0
 0
 /
@@ -12976,23 +12970,19 @@ p
 p
 4
 4
-lV
-~3
+ZV
+^V
+0
+p
+n/
+0
+p
+p
 0
 p
 0
+i3
 p
-e/
-M3
-I/
-p
-0
-p
-0
-W
-f*
-p
-/
 p
 p
 p
@@ -13040,12 +13030,9 @@ p
 .
 .
 p
-P2
 )
 )
-W
-WW
-2
+OW
 2
 2
 2
@@ -13055,6 +13042,8 @@ WW
 2
 0
 p
+M2
+>#
 0
 p
 0
@@ -13062,20 +13051,27 @@ p
 p
 0
 p
+`W
 p
 p
 )
 )
+UW
 -
+-
+`-
 0
 p
+3-
 5
 -
-F1
+K1
+61
 1
 1
 1
-1
+u,
+e,
 @
 @
 =
@@ -13083,14 +13079,15 @@ F1
 @
 ?
 ?
+,
 ,
 ,
 ,
 A
 Hc
 0
-Z+
 =
+7+
 Z
 Z
 Z
@@ -13100,30 +13097,27 @@ N
 +
 C
 /
-F
 /
--*
 *
-s.
-e.
-BE
+*E
 E
 .
 .
 .
 .
-@)
+.
 Hc
-|-
--
+p-
+&-
 -
 -
 -
 0
 (
-'
+B,
+@,
+w.
 ,
-V'
 ?
 ?
 ?
@@ -13147,17 +13141,18 @@ AESNI-CBC+SHA256 stitch for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
 AES for Intel AES-NI, CRYPTOGAMS by <appro@openssl.org>
 
+n*
 Pj
 ARj
 j
-J*
 0
 0
-A
+=%
 =
 =
 @
 =
+)
 )
 )
 )
@@ -13463,9 +13458,7 @@ ChaCha20 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
 @
 0
-$
 H=
-1:
 '
 Ic]
 j
@@ -13474,22 +13467,27 @@ j
 j
 j
 j
+U9
 !
+*
+*
 *
 
 *
-%
+*
+<%
 %
 %
 %
 %
 t$I;M
+J#
 e
 W
 ,7~5d
-#MRJ
-#mHJ
-#M.J
+#]RJ
+#}HJ
+#].J
 H
 0
 
@@ -13504,8 +13502,11 @@ H
 
 *
 Hc
-L)5[KG
-L95PGG
+TG
+L)5kKG
+L95`GG
+GG
+FG
 AES-NI GCM module for x86_64, CRYPTOGAMS by <appro@openssl.org>
 %
 @
@@ -13520,6 +13521,7 @@ AES-NI GCM module for x86_64, CRYPTOGAMS by <appro@openssl.org>
 Poly1305 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 0
 0
+F
 F
 F
 F
@@ -13652,18 +13654,18 @@ P
 |
 |
 )
-{?
 "
 3
+P?
 D
 ?
 ?
 ?
 ?
 ?
-6?
-1?
-%?
+7?
+2?
+"?
 ?
 ?
 ?
@@ -13681,13 +13683,14 @@ D
 ?
 ?
 ?
+i>
 @
-,>
->
 >
 +
+,>
+W=
 -*
-L95^M=
+L95nM=
 ,
 ,
 #)
@@ -13700,11 +13703,10 @@ L95^M=
 
 
 
-[;
 ;
 ;
-~:
-:
+;
+;
 :
 '
 z)
@@ -13744,6 +13746,7 @@ J
 
 
 
+j3
 @
 N1
 A1

@@ -18,11 +18,15 @@ message CGameNetworkingUI_ConnectionState {
 	optional uint32 close_time = 13;
 	optional uint32 close_reason = 14;
 	optional string close_message = 15;
+	optional string status_loc_token = 16;
 	optional uint32 transport_kind = 20;
 	optional string sdrpopid_local = 21;
 	optional string sdrpopid_remote = 22;
 	optional string address_remote = 23;
 	optional .CMsgSteamDatagramP2PRoutingSummary p2p_routing = 24;
+	optional uint32 ping_interior = 25;
+	optional uint32 ping_remote_front = 26;
+	optional uint32 ping_default_internet_route = 27;
 	optional .CMsgSteamDatagramConnectionQuality e2e_quality_local = 30;
 	optional .CMsgSteamDatagramConnectionQuality e2e_quality_remote = 31;
 	optional uint64 e2e_quality_remote_instantaneous_time = 32;
