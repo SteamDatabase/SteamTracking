@@ -2777,7 +2777,7 @@
               "GetEarliestVisibilityStartTimeForEdit",
               null
             ),
-            Object(I.c)([G.k], n.prototype, "SetImageURL", null),
+            Object(I.c)([G.k.bound], n.prototype, "SetImageURL", null),
             Object(I.c)([B.a], n.prototype, "BHasTitleImage", null),
             Object(I.c)([B.a], n.prototype, "LastTimeLanguageUpdate", null),
             Object(I.c)([G.k], n.prototype, "SetLibrarySpotlight", null),
