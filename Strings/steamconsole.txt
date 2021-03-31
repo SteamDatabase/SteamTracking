@@ -38,7 +38,6 @@ __thread_bss
 __DATA
 __bss
 __DATA
-q3
 __common
 __DATA
 (D
