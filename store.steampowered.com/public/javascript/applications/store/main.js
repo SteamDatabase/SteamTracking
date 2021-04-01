@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6455240";
+var CLSTAMP = "6459595";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [11],
   {
@@ -65392,17 +65392,12 @@ var CLSTAMP = "6455240";
         return v(e, u.k_eStoreView, "absolute");
       }
       function b(e, t, n) {
-        var r = n ? "/" : d.d.COMMUNITY_BASE_URL;
         if (n)
           return (
             (e ? "/games/" + d.c.VANITY_ID : "/groups/" + d.c.VANITY_ID) + "/"
           );
-        var a =
-            t.GetAccountID() === d.c.CLANACCOUNTID
-              ? "groups/" + d.c.VANITY_ID
-              : "gid/" + t.ConvertTo64BitString(),
-          o = e && e == d.c.APPID ? "games/" + d.c.VANITY_ID : "ogg/" + e;
-        return r + (e ? o : a) + "/";
+        var r = e ? "ogg/" + e : "gid/" + t.ConvertTo64BitString();
+        return d.d.COMMUNITY_BASE_URL + r + "/";
       }
       function _() {
         return "news";
