@@ -106,7 +106,7 @@
       function l(r) {
         if (!_.i.is_support) return null;
         function t(e, t) {
-          Object(N.d)(
+          Object(E.d)(
             h.a.createElement(k, {
               broadcastSteamID: r.broadcastSteamID,
               strAction: t,
@@ -143,7 +143,7 @@
             j.d,
             {
               onClick: function (e) {
-                Object(N.d)(
+                Object(E.d)(
                   h.a.createElement(q, { steamid: r.broadcastSteamID }),
                   Object(P.n)(e)
                 );
@@ -515,229 +515,233 @@
             r = Object(p.useState)(!1),
             n = r[0],
             i = r[1];
-          return t
-            ? h.a.createElement(
+          if (!t) return null;
+          var a = g.Get().GetBroadcasterSteamID().ConvertTo64BitString(),
+            o = f.a.GetBroadcast(a);
+          return h.a.createElement(
+            "div",
+            { className: u.DisplaySection },
+            Boolean(t.last_error_result && 1 != t.last_error_result) &&
+              h.a.createElement(
                 "div",
-                { className: u.DisplaySection },
-                Boolean(t.last_error_result && 1 != t.last_error_result) &&
-                  h.a.createElement(
-                    "div",
-                    { className: u.SubSection },
-                    h.a.createElement("div", { className: u.Header }, "Error"),
-                    h.a.createElement(
-                      "div",
-                      null,
-                      "EResult: ",
-                      t.last_error_result,
-                      ", occurred ",
-                      t.last_error_time,
-                      " - ",
-                      h.a.createElement(c.a, {
-                        dateAndTime: t.last_error_time,
-                        bSingleLine: !0,
-                      })
-                    )
-                  ),
+                { className: u.SubSection },
+                h.a.createElement("div", { className: u.Header }, "Error"),
                 h.a.createElement(
                   "div",
-                  { className: u.SubSection },
-                  h.a.createElement(
-                    "div",
-                    { className: u.Header },
-                    "Broadcast Setup"
-                  ),
-                  h.a.createElement(
-                    "div",
-                    null,
-                    "Broadcaster: ",
-                    t.steam_id,
-                    ", SteamID: ",
-                    g.Get().GetBroadcasterSteamID().ConvertTo64BitString()
-                  ),
-                  h.a.createElement(
-                    "div",
-                    null,
-                    "Broadcast Directory: ",
-                    t.directory_server,
-                    ", SessionID: ",
-                    t.broadcast_id
-                  ),
-                  h.a.createElement(
-                    "div",
-                    null,
-                    "Broadcast Ingestor: ",
-                    t.relay_server,
-                    ", UploadID: ",
-                    t.upload_id
-                  ),
-                  h.a.createElement(
-                    "div",
-                    null,
-                    "Broadcast Origin: ",
-                    t.origin_server
-                  ),
-                  h.a.createElement(
-                    "div",
-                    null,
-                    "Broadcast Chat: ",
-                    t.chat_server
-                  )
-                ),
-                h.a.createElement(
-                  "div",
-                  { className: u.SubSection },
-                  h.a.createElement(
-                    "div",
-                    { className: u.Header },
-                    "Upload Info"
-                  ),
-                  h.a.createElement(
-                    "div",
-                    null,
-                    "Upload Client: ",
-                    t.remote_address,
-                    " ",
-                    Boolean(t.is_rtmp) ? "(RTMP)" : "(STEAM CLIENT)"
-                  ),
-                  h.a.createElement(
-                    "div",
-                    null,
-                    "Avg Upload: ",
-                    t.upload_avg_fps,
-                    " FPS, ",
-                    t.upload_avg_bandwidth,
-                    " KBPS, ",
-                    t.upload_avg_key_interval,
-                    " MSEC key frame interval"
-                  )
-                ),
-                h.a.createElement(
-                  "div",
-                  { className: u.SubSection },
-                  h.a.createElement(
-                    "div",
-                    { className: u.Header },
-                    "Viewer Info"
-                  ),
-                  h.a.createElement(
-                    "div",
-                    null,
-                    "Viewers: ",
-                    t.current_viewers,
-                    " current (",
-                    t.current_anon_viewers,
-                    " anonymous), ",
-                    t.total_unique_viewers,
-                    " total unique, ",
-                    t.max_concurrent_viewers,
-                    " max concurrent"
-                  ),
-                  h.a.createElement(
-                    "div",
-                    null,
-                    "Average time watched: ",
-                    t.average_watch_duration,
-                    " seconds"
-                  ),
-                  h.a.createElement(
-                    "div",
-                    null,
-                    "Last Minute: ",
-                    t.added_viewers_last_minute,
-                    " watch requests, ",
-                    t.rejected_viewers_last_minute,
-                    " rejected"
-                  ),
-                  h.a.createElement(
-                    "div",
-                    null,
-                    "Restrictions: ",
-                    t.restriction
-                  )
-                ),
-                h.a.createElement(
-                  "div",
-                  { className: u.SubSection },
-                  h.a.createElement("div", { className: u.Header }, "Settings"),
-                  h.a.createElement("div", null, "is replay? ", t.is_replay),
-                  h.a.createElement(
-                    "div",
-                    null,
-                    "is replay local file? ",
-                    t.is_replay_local_file
-                  ),
-                  h.a.createElement(
-                    "div",
-                    null,
-                    "is replay clip? ",
-                    t.is_replay_local_file
-                  ),
-                  h.a.createElement(
-                    "div",
-                    null,
-                    "is replay clip? ",
-                    t.is_replay_clip
-                  ),
-                  h.a.createElement(
-                    "div",
-                    null,
-                    "is capturing VOD? ",
-                    t.is_capturing_vod
-                  ),
-                  h.a.createElement(
-                    "div",
-                    null,
-                    "is white listed for store streaming? ",
-                    t.is_whitelisted
-                  )
-                ),
-                h.a.createElement(
-                  "div",
-                  { className: u.SubSection },
-                  h.a.createElement("div", { className: u.Header }, "App Info"),
-                  h.a.createElement("div", null, "appid: ", t.app_id),
-                  h.a.createElement("div", null, "app name: ", t.app_name),
-                  h.a.createElement("div", null, "broadcast title: ", t.title),
-                  h.a.createElement(
-                    "div",
-                    null,
-                    "thumbnail: ",
-                    t.thumbnail_url
-                  ),
-                  Boolean(t.thumbnail_url) &&
-                    h.a.createElement("img", { src: t.thumbnail_url }),
-                  Boolean(t.app_id && 0 < t.app_id) &&
-                    h.a.createElement(
-                      "div",
-                      { className: u.AppSummaryWidgetCtn },
-                      h.a.createElement(z.h, { id: t.app_id, type: "game" })
-                    )
-                ),
-                h.a.createElement(
-                  j.d,
-                  {
-                    onClick: function () {
-                      return i(!n);
-                    },
-                  },
-                  "Toggle Raw Data"
-                ),
-                Boolean(n) &&
-                  h.a.createElement(
-                    "div",
-                    { className: u.SubSection },
-                    h.a.createElement(s.b, { data: t })
-                  )
+                  null,
+                  "EResult: ",
+                  t.last_error_result,
+                  ", occurred ",
+                  t.last_error_time,
+                  " - ",
+                  h.a.createElement(c.a, {
+                    dateAndTime: t.last_error_time,
+                    bSingleLine: !0,
+                  })
+                )
+              ),
+            h.a.createElement(
+              "div",
+              { className: u.SubSection },
+              h.a.createElement(
+                "div",
+                { className: u.Header },
+                "Broadcast Setup"
+              ),
+              h.a.createElement(
+                "div",
+                null,
+                "Broadcaster: ",
+                t.steam_id,
+                ", SteamID: ",
+                a
+              ),
+              h.a.createElement(
+                "div",
+                null,
+                "Broadcast Directory: ",
+                t.directory_server,
+                ", SessionID: ",
+                t.broadcast_id
+              ),
+              h.a.createElement(
+                "div",
+                null,
+                "Broadcast Ingestor: ",
+                t.relay_server,
+                ", UploadID: ",
+                t.upload_id
+              ),
+              h.a.createElement(
+                "div",
+                null,
+                "Broadcast Origin: ",
+                t.origin_server
+              ),
+              h.a.createElement("div", null, "Broadcast Chat: ", t.chat_server)
+            ),
+            h.a.createElement(
+              "div",
+              { className: u.SubSection },
+              h.a.createElement("div", { className: u.Header }, "Upload Info"),
+              h.a.createElement(
+                "div",
+                null,
+                "Upload Client: ",
+                t.remote_address,
+                " ",
+                Boolean(t.is_rtmp) ? "(RTMP)" : "(STEAM CLIENT)"
+              ),
+              h.a.createElement(
+                "div",
+                null,
+                "Avg Upload: ",
+                t.upload_avg_fps,
+                " FPS, ",
+                t.upload_avg_bandwidth,
+                " KBPS, ",
+                t.upload_avg_key_interval,
+                " MSEC key frame interval"
               )
-            : null;
+            ),
+            h.a.createElement(
+              "div",
+              { className: u.SubSection },
+              h.a.createElement("div", { className: u.Header }, "Viewer Info"),
+              h.a.createElement(
+                "div",
+                null,
+                "Viewers: ",
+                t.current_viewers,
+                " current (",
+                t.current_anon_viewers,
+                " anonymous), ",
+                t.total_unique_viewers,
+                " total unique, ",
+                t.max_concurrent_viewers,
+                " max concurrent"
+              ),
+              h.a.createElement(
+                "div",
+                null,
+                "Average time watched: ",
+                t.average_watch_duration,
+                " seconds"
+              ),
+              h.a.createElement(
+                "div",
+                null,
+                "Last Minute: ",
+                t.added_viewers_last_minute,
+                " watch requests, ",
+                t.rejected_viewers_last_minute,
+                " rejected"
+              ),
+              h.a.createElement("div", null, "Restrictions: ", t.restriction)
+            ),
+            h.a.createElement(
+              "div",
+              { className: u.SubSection },
+              h.a.createElement("div", { className: u.Header }, "Settings"),
+              h.a.createElement("div", null, "is replay? ", t.is_replay),
+              h.a.createElement(
+                "div",
+                null,
+                "is replay local file? ",
+                t.is_replay_local_file
+              ),
+              h.a.createElement(
+                "div",
+                null,
+                "is replay clip? ",
+                t.is_replay_local_file
+              ),
+              h.a.createElement(
+                "div",
+                null,
+                "is replay clip? ",
+                t.is_replay_clip
+              ),
+              h.a.createElement(
+                "div",
+                null,
+                "is capturing VOD? ",
+                t.is_capturing_vod
+              ),
+              h.a.createElement(
+                "div",
+                null,
+                "is white listed for store streaming? ",
+                t.is_whitelisted
+              )
+            ),
+            h.a.createElement(
+              "div",
+              { className: u.SubSection },
+              h.a.createElement("div", { className: u.Header }, "App Info"),
+              h.a.createElement("div", null, "appid: ", t.app_id),
+              h.a.createElement("div", null, "app name: ", t.app_name),
+              h.a.createElement("div", null, "broadcast title: ", t.title),
+              h.a.createElement("div", null, "thumbnail: ", t.thumbnail_url),
+              Boolean(t.thumbnail_url) &&
+                h.a.createElement("img", { src: t.thumbnail_url }),
+              Boolean(t.app_id && 0 < t.app_id) &&
+                h.a.createElement(
+                  "div",
+                  { className: u.AppSummaryWidgetCtn },
+                  h.a.createElement(z.h, { id: t.app_id, type: "game" })
+                )
+            ),
+            h.a.createElement(
+              "div",
+              { className: u.SubSection },
+              h.a.createElement(
+                "div",
+                { className: u.Header },
+                "Manifest Information"
+              ),
+              h.a.createElement(
+                "div",
+                null,
+                "Heartbeat Interval: ",
+                o.m_data.heartbeat_interval
+              ),
+              h.a.createElement("div", null, "DASH MPEG Url: ", o.m_data.url),
+              h.a.createElement("div", null, "HLS Url: ", o.m_data.hls_url)
+            ),
+            h.a.createElement(
+              j.d,
+              {
+                onClick: function () {
+                  return i(!n);
+                },
+              },
+              "Toggle Raw Data"
+            ),
+            Boolean(n) &&
+              h.a.createElement(
+                h.a.Fragment,
+                null,
+                h.a.createElement(
+                  "div",
+                  { className: u.SubSection },
+                  h.a.createElement(s.b, { data: t })
+                ),
+                h.a.createElement(
+                  "div",
+                  { className: u.SubSection },
+                  h.a.createElement(s.b, { data: o })
+                )
+              )
+          );
         },
         F = r("m0l2"),
         T = r("TyAF"),
         I = r("rKv1"),
         W = r.n(I),
         U = r("TLQK"),
-        N = r("ka0M"),
-        E = r("Jqb/"),
+        E = r("ka0M"),
+        N = r("Jqb/"),
         P = r("X3Ds"),
         x = r("Pa9b"),
         G = r("fpVW"),
@@ -772,7 +776,7 @@
             M.a,
             null,
             h.a.createElement(
-              E.g,
+              N.g,
               { onEscKeypress: _ },
               h.a.createElement(
                 j.f,
@@ -916,7 +920,7 @@
             M.a,
             null,
             h.a.createElement(
-              E.g,
+              N.g,
               { onEscKeypress: l },
               h.a.createElement(
                 j.f,
@@ -1236,12 +1240,12 @@
                   ),
                   onClick: function (e) {
                     _.i.logged_in
-                      ? Object(N.d)(
+                      ? Object(E.d)(
                           h.a.createElement(ae, { broadcasterSteamID: t }),
                           Object(P.n)(e)
                         )
-                      : Object(N.d)(
-                          h.a.createElement(E.c, {
+                      : Object(E.d)(
+                          h.a.createElement(N.c, {
                             strTitle: Object(U.f)(
                               "#EventDisplay_Share_NotLoggedIn"
                             ),
@@ -1279,7 +1283,7 @@
             r = e[0],
             n = e[1];
           return h.a.createElement(
-            E.c,
+            N.c,
             {
               strTitle: Object(U.f)("#Broadcast_ReportItem_Title"),
               strDescription: Object(U.f)("#Broadcast_ReportItem_Description"),
@@ -1567,8 +1571,8 @@
                   j.d,
                   {
                     onClick: function (e) {
-                      Object(N.d)(
-                        h.a.createElement(E.c, {
+                      Object(E.d)(
+                        h.a.createElement(N.c, {
                           strTitle: Object(U.f)(
                             "#Broadcast_Control_StopBroadcast"
                           ),
@@ -2757,7 +2761,7 @@
             n
           );
         })(_),
-        N = (function (r) {
+        E = (function (r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -2818,7 +2822,7 @@
             n
           );
         })(_),
-        E = (function (r) {
+        N = (function (r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -5386,7 +5390,7 @@
         }),
         (I.NotifySessionClosedHandler = {
           name: "BroadcastClient.NotifySessionClosed#1",
-          request: N,
+          request: E,
         }),
         (I.NotifyViewerBroadcastInviteHandler = {
           name: "BroadcastClient.NotifyViewerBroadcastInvite#1",
@@ -5394,7 +5398,7 @@
         }),
         (I.NotifyBroadcastStatusHandler = {
           name: "BroadcastClient.NotifyBroadcastStatus#1",
-          request: E,
+          request: N,
         }),
         (I.NotifyBroadcastChannelLiveHandler = {
           name: "BroadcastClient.NotifyBroadcastChannelLive#1",
@@ -6272,7 +6276,7 @@
             n
           );
         })(ge),
-        Ne = (function (r) {
+        Ee = (function (r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -6327,7 +6331,7 @@
             n
           );
         })(ge),
-        Ee = (function (r) {
+        Ne = (function (r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -8749,14 +8753,14 @@
           });
         }),
         (we.GetFollowedChannels = function (e, t) {
-          return e.SendMsg("SteamTV.GetFollowedChannels#1", t, Ne, {
+          return e.SendMsg("SteamTV.GetFollowedChannels#1", t, Ee, {
             bConstMethod: !0,
             ePrivilege: 1,
             eWebAPIKeyRequirement: 2,
           });
         }),
         (we.GetSubscribedChannels = function (e, t) {
-          return e.SendMsg("SteamTV.GetSubscribedChannels#1", t, Ee, {
+          return e.SendMsg("SteamTV.GetSubscribedChannels#1", t, Ne, {
             bConstMethod: !0,
             ePrivilege: 1,
             eWebAPIKeyRequirement: 2,
@@ -9232,7 +9236,7 @@
             n
           );
         })(Tt),
-        Nt = (function (r) {
+        Et = (function (r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -9287,7 +9291,7 @@
             n
           );
         })(Tt),
-        Et = (function (r) {
+        Nt = (function (r) {
           function n(e) {
             void 0 === e && (e = null);
             var t = r.call(this) || this;
@@ -9482,13 +9486,13 @@
           });
         }),
         (St.GetFavorites = function (e, t) {
-          return e.SendMsg("FriendsList.GetFavorites#1", t, Nt, {
+          return e.SendMsg("FriendsList.GetFavorites#1", t, Et, {
             bConstMethod: !0,
             ePrivilege: 1,
           });
         }),
         (St.SetFavorites = function (e, t) {
-          return e.SendMsg("FriendsList.SetFavorites#1", t, Et, {
+          return e.SendMsg("FriendsList.SetFavorites#1", t, Nt, {
             ePrivilege: 1,
           });
         });
