@@ -8519,6 +8519,36 @@ div.creatorhomeembed_SocialContainer_1o1Ds {
   display: none;
 }
 
+.debugmatchesdialog_DiscrepancyDialogRow_202Wr {
+  width: 100%;
+  display: flex;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.debugmatchesdialog_DiscrepancyDialogRow_202Wr:nth-child(even) {
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.debugmatchesdialog_DiscrepancyDialogHeaderRow_3titm {
+  width: 100%;
+  display: flex;
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.debugmatchesdialog_DiscrepancyDialogCell_1Xq1K {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 50%;
+  text-align: left;
+  padding: 4px;
+}
+
+.debugmatchesdialog_DiscrepancyDialogTooltip_2z-Ll {
+  z-index: 2000;
+}
+
 /* stylelint-disable */
 .storesuggest_SuggestContainer_2gBFq ._DialogLayout {
   margin-bottom: 2px;
