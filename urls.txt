@@ -5,6 +5,9 @@ https://help.steampowered.com/public/css/help.css?__TIME__
 https://partner.steamgames.com/public/css/doc.css?__TIME__
 https://partner.steamgames.com/public/css/styles_admin.css?__TIME__
 https://partner.steamgames.com/public/css/styles_apps.css?__TIME__
+https://partner.steamgames.com/public/css/styles_apps_marketing_admin.css?__TIME__
+https://partner.steamgames.com/public/css/styles_apps_marketing_store_stats.css?__TIME__
+https://partner.steamgames.com/public/css/styles_apps_marketing_utm_stats.css?__TIME__
 https://partner.steamgames.com/public/css/styles_global.css?__TIME__
 https://partner.steamgames.com/public/css/styles_global_new.css?__TIME__
 https://partner.steamgames.com/public/css/styles_landing.css?__TIME__
@@ -251,6 +254,7 @@ https://partner.steamgames.com/public/javascript/admin.js?__TIME__&l=english
 https://partner.steamgames.com/public/javascript/admin_monitor.js?__TIME__&l=english
 https://partner.steamgames.com/public/javascript/admin_publisher.js?__TIME__&l=english
 https://partner.steamgames.com/public/javascript/apps.js?__TIME__&l=english
+https://partner.steamgames.com/public/javascript/apps_mstats.js?__TIME__&l=english
 https://partner.steamgames.com/public/javascript/apps_workshop.js?__TIME__&l=english
 https://partner.steamgames.com/public/javascript/appsharing.js?__TIME__&l=english
 https://partner.steamgames.com/public/javascript/contentdescriptors.js?__TIME__&l=english
