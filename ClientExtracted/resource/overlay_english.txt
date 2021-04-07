@@ -254,7 +254,7 @@
 "Overlay_Broadcast_Chat_Title" "Broadcast - Chat ( %numviewers%)"
 "Overlay_Broadcast_Live_Debug" "%videosendkbps% kbps, %videosendfps% FPS"
 
-"SteamChina_Overlay_DurationControl_Init"		"Healthy Gaming Advisory\nBoycott harmful games; reject game piracy.\nExercise self-protection; avoid deception.\nModeration promotes brain health; excess play is harmful to the body.\nWell-planned use of your time will lead to a healthy lifestyle."
+"SteamChina_Overlay_DurationControl_Init"		"The anti-addiction system is working on your account.\nPlease arrange your gaming time reasonably.\nFor all applicable accounts:\nOutside of statutory holidays, the daily cumulative game time\nshould not exceed 1.5 hours.\nOn statutory holidays, the daily cumulative game time\nshould not exceed 3 hours."
 "SteamChina_Overlay_DurationControl_MessageA"		"You've been playing for one hour."
 "SteamChina_Overlay_DurationControl_MessageB"		"You've been playing for three hours.\nConsider taking a break."
 "SteamChina_Overlay_DurationControl_MessageC"		"You've been playing for over three hours.\nYour XP / progress has been reduced by half."
