@@ -20,9 +20,6 @@
 		/** @var array<int, array{URL: string, File: string}> */
 		private array $URLsToFetch = [];
 
-		/** @var array<string, bool> */
-		private array $URLsToProtoDump = [];
-
 		/** @var array<int, mixed> */
 		private array $Options =
 		[
@@ -66,7 +63,6 @@
 			$this->CurrentTime = time( );
 
 			$this->URLsToFetch = $this->ParseUrls( );
-			$this->URLsToProtoDump = $this->GetUrlsToProtoDump( );
 
 			$Tries = 5;
 
@@ -354,12 +350,6 @@
 
 				file_put_contents( $File, $Data );
 
-				if( isset( $this->URLsToProtoDump[ $OriginalFile ] ) )
-				{
-					file_put_contents( __DIR__ . '/.support/original_js/' . md5( $OriginalFile ) . '.js', $Data );
-					$this->DumpWebProtobufs = true;
-				}
-
 				if( $OriginalFile === 'Scripts/WebUI/steammobile_android.js' )
 				{
 					$this->SyncProtobufs = true;
@@ -369,6 +359,11 @@
 						' --Oenum=Structs/enums.steamd --Oproto=../ValveProtobufs/webui/friends_mobile.proto' .
 						' --filter-known-protos'
 					);
+				}
+				else
+				{
+					file_put_contents( __DIR__ . '/.support/original_js/' . md5( $OriginalFile ) . '.js', $Data );
+					$this->DumpWebProtobufs = true;
 				}
 
 				system( 'npm run prettier ' . escapeshellarg( $File ) );
@@ -605,46 +600,6 @@
 					'URL' => $Url,
 					'File' => $File,
 				];
-			}
-
-			return $Urls;
-		}
-
-		/** @return array<string, bool> */
-		private function GetUrlsToProtoDump() : array
-		{
-			$UrlsPath = __DIR__ . '/urls_protobufdumper.txt';
-
-			if( !file_exists( $UrlsPath ) )
-			{
-				$this->Log( '{lightred}Missing ' . $UrlsPath );
-
-				Exit;
-			}
-
-			$Folder = __DIR__ . '/.support/original_js/';
-
-			if( !is_dir( $Folder ) )
-			{
-				$this->Log( '{lightblue}Creating ' . $Folder );
-
-				mkdir( $Folder, 0755, true );
-			}
-
-			$Data = file_get_contents( $UrlsPath );
-			$Data = explode( "\n", $Data );
-			$Urls = [];
-
-			foreach( $Data as $Line )
-			{
-				$Line = trim( $Line );
-
-				if( empty( $Line ) || $Line[ 0 ] === '/' )
-				{
-					continue;
-				}
-
-				$Urls[ trim( $Line ) ] = true;
 			}
 
 			return $Urls;
