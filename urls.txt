@@ -282,7 +282,7 @@ https://steamcommunity.com/public/javascript/applications/community/broadcasts.j
 https://steamcommunity.com/public/javascript/applications/community/broadcasts~communityfaqs~events~profile.js?__TIME__&l=english
 https://steamcommunity.com/public/javascript/applications/community/communityawardsapp.js?__TIME__&l=english
 https://steamcommunity.com/public/javascript/applications/community/communityawardsapp~profile.js?__TIME__&l=english
-https://steamcommunity.com/public/javascript/applications/community/communityfaqs~events.js?__TIME__&l=english
+https://steamcommunity.com/public/javascript/applications/community/communityfaqs.js?__TIME__&l=english
 https://steamcommunity.com/public/javascript/applications/community/communityfaqs~events.js?__TIME__&l=english
 https://steamcommunity.com/public/javascript/applications/community/events.js?__TIME__&l=english
 https://steamcommunity.com/public/javascript/applications/community/localization/main_english-json.js?__TIME__&l=english
