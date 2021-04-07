@@ -1,0 +1,84 @@
+
+
+#utmdetails_table {
+	width: 100%;
+}
+
+/* Clear out standard datatable sorting style for the UTM Details table */
+#utmdetails_table tr.odd td.sorting_1 {
+	background-color: inherit;
+}
+
+#utmdetails_table tr.odd td.sorting_2 {
+	background-color: inherit;
+}
+
+#utmdetails_table tr.odd td.sorting_3 {
+	background-color: inherit;
+}
+
+#utmdetails_table tr.even td.sorting_1 {
+	background-color: inherit;
+}
+
+#utmdetails_table tr.even td.sorting_2 {
+	background-color: inherit;
+}
+
+#utmdetails_table tr.even td.sorting_3 {
+	background-color: inherit;
+}
+
+#utmdetails_table th {
+	background-color: #383838;
+	padding-right: 10px;
+	vertical-align: top;
+}
+
+#utmdetails_table th select {
+	max-width: 160px;
+}
+
+#utmdetails_table tr.odd {
+	background-color: #303030;
+}
+
+#utmdetails_table tr td {
+	cursor: pointer;
+}
+
+#utmdetails_table td.group {
+	background-color: #d1cfd0;
+	border-bottom: 2px solid #A19B9E;
+	border-top: 2px solid #A19B9E;
+}
+
+#utmdetails_table div.filterTerm {
+	padding: 5px 14px 0px 3px;
+	color: #93979a;
+	font-weight: normal;
+	text-transform: none;
+	vertical-align: middle;
+}
+
+.stats_header_section:nth-of-type(4) {
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+/* override sort icon position on the DataTable */
+.sorting_asc {
+	background-position: bottom 5px right 0px;
+}
+
+.sorting_desc {
+	background-position: bottom 5px right 0px;
+}
+
+.sorting {
+	background-position: bottom 5px right 0px;
+}
+
+.sorting_asc_disabled {
+	background-position: bottom 5px right 0px;
+}

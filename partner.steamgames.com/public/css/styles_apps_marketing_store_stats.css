@@ -1,0 +1,246 @@
+
+.graph_ctn {
+	background: #000;
+	padding: 12px;
+	margin-bottom: 10px;
+}
+#views_graph
+{
+	height: 400px;
+}
+
+#filter_form {
+	margin-bottom: 20px;
+}
+
+.filter_controls_container
+{
+	margin-top: 1px;
+	font-size: 10px;
+	display: flex;
+	justify-content: space-between;
+}
+
+#filter_form input,
+#filter_form select {
+	background-color: #000;
+}
+
+.date_range_current_title
+{
+	font-size: 10px;
+	text-transform: uppercase;
+	color: #cccccc;
+}
+
+.date_range_current
+{
+	padding-top: 3px;
+	font-size: 16px;
+	color: #989898;
+}
+
+.date_range_current span {
+	color: #CCCCCC;
+}
+
+.filter_selector_title
+{
+	font-size: 12px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #69bff3;
+	padding-bottom: 5px;
+}
+
+#FilterButton > span {
+	width: 100px;
+	text-align: center;
+}
+
+input.datepicker
+{
+	width: 100px;
+	background-color: #000000;
+	margin-top: 4px;
+	position: relative;
+	z-index: 10;
+}
+
+.filtered_header {
+	font-size: 16px;
+	margin-bottom: 25px;
+}
+
+.filtered_header > span, .filtered_header > span > a {
+	color: #69bff3;
+	font-weight: bold;
+}
+
+
+.landingTable .tr.page_stats
+{
+	cursor: pointer;
+	border-spacing: 0 5px;
+}
+.landingTable .tr.page_stats .td {
+    font-size: 13px;
+    		font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		}
+
+.landingTable .tr.page_stats .td.page_type {
+    max-width: 330px;
+    overflow: hidden;
+    overflow-wrap: anywhere;
+}
+
+.landingTable .tr.page_stats .td:hover {
+    background-color: rgba(107, 203, 228, 0.6);
+    color: black;
+    cursor: pointer;
+}
+
+.landingTable .tr.page_stats .td.expander {
+	text-align: right;
+	width: 18px;
+}
+.landingTable .tr.feature_stats
+{
+	margin-left: 20px;
+	color: #777777;
+}
+.landingTable .tr.feature_stats .td
+{
+	background-color: rgba( 0, 0, 0, 0.6);
+    		font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		}
+.landingTable .tr.feature_stats:hover .td {
+    background-color: rgba( 0, 0, 0, 0.2);
+}
+.landingTable .tr.feature_stats .td:hover {
+    background-color: rgba(107, 203, 228, 0.6);
+    color: black;
+    cursor: default;
+}
+
+.landingTable .tr.totals_row .td
+{
+	border-top: 1px solid #7F8184;
+}
+
+.jqplot-highlighter-tooltip {
+	color: #fff;
+	border: none;
+	padding: 2px 4px;
+	z-index: 2;
+	font-size: 12px;
+}
+table.jqplot-table-legend {
+	background-color: transparent;
+	border: none;
+}
+div.jqplot-table-legend-swatch-outline {
+	border: none;
+}
+
+.steamworks_traffic_disclaimer {
+	margin-bottom: 20px;
+    border: 1px solid #bd8a43;
+    padding: 12px;
+    border-radius: 4px;
+    margin-top: 8px;
+}
+.steamworks_traffic_disclaimer h3 {
+    color: #bd8a43;
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.steamworks_traffic_disclaimer ul li {
+	list-style-type: disc;
+}
+
+/** stats */
+.stats_header {
+	margin-top: 10px;
+	margin-bottom: 30px;
+	display: flex;
+}
+.stats_header_section {
+	width: 100%;
+	text-align: center;
+	padding: 10px;
+	min-height: 86px;
+	background-color: #000;
+}
+.stats_header_section:nth-of-type(2) {
+	margin-left: 5px;
+	margin-right: 5px;
+}
+.stats_header_section .title {
+	text-transform: uppercase;
+	color: #bdbdbd;
+	padding-bottom: 10px;
+	letter-spacing: 1px;
+}
+.stat {
+	font-size: 32px;
+	font-weight: bold;
+	color: #69bff3;
+}
+.stat_tracked {
+    color: #91b807;
+}
+.stat_wishlist {
+    color: #c1bc20;
+}
+.stat_purchase {
+    color: #7a5eea;
+}
+.stat_activation {
+    color: #c135b0;
+}
+.stat_change {
+	padding-bottom: 10px;
+}
+.stat_sub_category {
+	color: #797979;
+}
+.stat_desc {
+	font-size: 11px;
+	text-transform: uppercase;
+	font-weight: 400;
+	letter-spacing: 1px;
+	vertical-align: text-top;
+	padding-left: 10px;
+	padding-top: 6px;
+	display: inline-block;
+}
+.stat_subtitle {
+	font-size: 11px;
+	margin-top: 4px;
+}
+.stat_percentage_change.decrease {
+	color: orangered;
+}
+.stat_percentage_change.increase {
+	color: lightgreen;
+}
+
+.landingTable .page_type strong {
+    color: #ececec;
+}
+.landingTable .feature_stats strong {
+    color: #cccccc;
+}
+.traffic_summary_line {
+    background: black;
+    padding: 4px 8px;
+    box-sizing: border-box;
+    margin-right: 4px;
+    font-size: 17px;
+}

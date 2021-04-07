@@ -1,0 +1,253 @@
+
+.app_marketing_visibility_round_table {
+	margin-top: 20px;
+}
+
+.app_marketing_visibility_round_table .header
+{
+	text-transform: uppercase;
+	font-size: 10px;
+	color: #808285;
+}
+
+.app_marketing_visibility_round_body
+{
+	border: 1px solid #666666;
+}
+
+.app_marketing_visibility_round_round
+{
+	width: 125px;
+	float: left;
+	font-size: 12px;
+}
+
+.app_marketing_visibility_round_date
+{
+	width: 175px;
+	padding-right: 10px;
+	float: left;
+	font-size: 11px;
+}
+
+.app_marketing_visibility_round_views
+{
+	width: 200px;
+	padding-rigth: 10px;
+	float: left;
+}
+
+.app_marketing_visibility_round_conversion_rate
+{
+	float: left;
+}
+
+.app_marketing_visibility_round_click_conversion_bar
+{
+	height: 5px;
+	background-color: #ff9933;
+}
+
+.app_marketing_visibility_round_big_number
+{
+	font-size: 23px;
+	float: left;
+}
+
+.app_marketing_visibility_round_superscript
+{
+	text-transform: uppercase;
+	padding-left: 5px;
+	font-size: 10px;
+	float: left;
+	line-height: 10px;
+	margin-top: 3px;
+}
+
+.app_marketing_visibility_round
+{
+	padding: 5px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-top: 1px solid #333333;
+	color: #B3B3B3;
+	font-size: 12px;
+}
+
+.app_marketing_visibility_round.global
+{
+	color: #666666;
+}
+
+.rounds_updated {
+	background: rgba(241, 236, 78, 0.28);
+	padding: 4px;
+	border-radius: 3px;
+}
+
+.rounds_updated span {
+	color: #f1ec4e;
+}
+
+.app_marketing_visibility_not_run {
+	color: #666666;
+	font-size: 10px;
+}
+
+.app_marketing_visibility_round.current
+{
+	border: 1px solid #627B7D;
+	background-color: #4D4D4D;
+	color: #c8fbff;
+}
+
+.app_marketing_subTitle {
+	font-size: 11px;
+	color: #666666;
+}
+
+.app_marketing_beta_section {
+	border: 1px solid #FBB963;
+	background-color: #4D4D4D;
+	font-size: 14px;
+	color: #FBB963;
+}
+	.app_marketing_beta_section p {
+		font-size: 14px;
+		color: #FBB963;
+	}
+	.app_marketing_beta_section img {
+		padding: 5px;
+	}
+	
+.darknote {
+	font-size: 12px;
+	color: #666666;
+}
+
+.small_cap
+{
+	display: block;
+	width: 184px;
+	height: 106px;
+	padding-left: 9px;
+	padding-right: 9px;
+	padding-bottom: 12px;
+	padding-top: 16px;
+	border: 1px solid #262626;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.small_cap:hover {
+	border: 1px solid #8bb9e0;
+	text-decoration: none;
+}
+
+.small_cap h4 {
+	font-size: 14px;
+	color: #FFFFFF;
+	font-weight: normal;
+	margin: 0px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-bottom: 2px;
+}
+
+.small_cap h5 {
+	font-family:tahoma, helvetica, arial, trebuchet ms, sans-serif;
+	font-size: 11px;
+	color: #b0aeac;
+	font-weight: normal;
+	margin: 0px;
+}
+
+.small_cap_desc
+{
+	width: 184px;
+	padding-left: 10px;
+	font-size: 12px;
+	font-family: Arial;
+	color: #939598;
+	word-wrap: break-word;
+	height: 45px;
+	overflow: hidden;
+}
+
+/* Recently updated games Preview ======================== */
+
+.update_preview {
+	width: 229px;
+
+	background-image: url( 'https://partner.steamgames.com/public/images/preview/background_spotlight.jpg' );
+	background-position-y: 98px;
+	box-shadow: 0 0 5px #000;
+}
+.header_cap_img {
+	width: 229px;
+	height: 107px;
+}
+
+.update_preview h5 {
+	height: 19px;
+	margin: 0;
+	text-align: right;
+	padding: 5px;
+	display: block;
+}
+
+.update_preview .small_cap_desc {
+	color: #acdbf5;
+	line-height: 15px;
+	font-size: 12px;
+	height: 60px;
+	border-top: 1px solid #2a3e59;
+	padding: 8px;
+}
+.update_preview .small_cap_announcement_link {
+	text-transform: uppercase;
+
+	color: #67c1f5;
+	font-size: 10px;
+
+	white-space: normal;
+	padding: 5px;
+}
+
+.update_preview .small_cap_announcement_link a {
+	text-decoration: none;
+}
+
+.visibility_round_description {
+    width: 100%;
+}
+
+
+/* Tables ========================  */
+
+.landingTable.forcefeature_table {
+	max-width: 950px;
+}
+
+.forcefeature_options_ctn {
+	text-align: right;
+	white-space: nowrap;
+}
+
+.forcefeature_options_ctn .forcefeature_options {
+	visibility: hidden;
+}
+
+.tr.forcefeature_row:hover .forcefeature_options_ctn .forcefeature_options {
+	visibility: visible;
+}
+
+.feature_option {
+	color: #b6c5ca;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.feature_option:hover {
+	color: #6f9fc8;
+}
