@@ -2863,7 +2863,7 @@ function ShowItemInventory( appid, contextid, assetid, bLoadCompleted )
 			g_ActiveUser.SetActiveAppId( appid );
 
 			var elTab = $('inventory_link_' + appid );
-			elTab.siblings().invoke( 'removeClassName', 'active');
+			$J( '.games_list_tab.active' ).removeClass( 'active' );
 
 			var $ResponsiveSelect = $J('#responsive_inventory_select');
 			var $Opt = $ResponsiveSelect.children('[data-appid=' + parseInt(appid) + ']');

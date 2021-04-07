@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [14],
+  [17],
   {
     "/rNK": function (e) {
       e.exports = {
@@ -653,6 +653,8 @@
         EventEditor_ExampleTitle_capsule: "Cover Image Examples",
         EventEditor_ExampleTitle_background: "Header Examples",
         EventEditor_ExampleTitle_spotlight: "Spotlight Examples",
+        EventEditor_ExampleTitle_sale_header: "Sale Page Background Examples",
+        EventEditor_ExampleTitle_product_banner: "Product Page Banner Examples",
         EventEditor_ExampleDescription:
           "Here are a few examples of this artwork type to help you choose your own.",
         EventEditor_Error_2:
@@ -670,7 +672,11 @@
         EventEditor_ReferencedAppIDs_Tooltip:
           "If your news content is about or related to specific app IDs, you can link those app IDs here. You can search by name or app ID.",
         EventEditor_ReferencedAppIDs_SearchLabel: "Search by app name or ID",
+        EventEditor_Loc_Title: "Manage Localization",
+        EventEditor_Loc_Overview:
+          "Export and import localization files to manage translation of strings for your whole event.",
         EventEditor_Loc_Export: "Export Localization File(s)...",
+        EventEditor_Loc_Export_Short: "Export...",
         EventEditor_Loc_Export_Desc0:
           "We support exporting the events content in an CSV or an XML format.",
         EventEditor_Loc_Export_CSV: "Comma Separated File (CSV)",
@@ -694,6 +700,7 @@
         EventEditor_Loc_Export_Btn_ColumnLanguages: "Language per column",
         EventEditor_Loc_Export_Btn_TokenLanguage: "Token, Language list",
         EventEditor_Loc_Import: "Import Localization File(s)...",
+        EventEditor_Loc_Import_Short: "Import...",
         EventEditor_Loc_Import_ttip:
           "Select one or more files to upload to import localized text for your title, subtitle, summary, and description. We use the file extension to determine whether the file is an XML or an CSV import; for XML we use API language code at the end of the filename before the extention to determine the language of the contents of the XML file. You should start by exporting the CSV or XML to ensure you are using the correct format.",
         EventEditor_Loc_ImportComplete:
@@ -1341,7 +1348,7 @@
         selectimage_tip_sale_overlay_1:
           "This image will be overlaid on the background at the top of your page. If you would like to have images localized, please email a .psd file to your Valve contact.",
         selectimage_tip_sale_product_banner:
-          "If provided then games that are part of this sale will have this appear at the top of their Steam product page for the duration of the sales event.",
+          "If provided then games that are part of this sale will have this appear at the top of their Steam product page for the duration of the sales event. Note that this banner must be approved by Valve prior to use.",
         selectimage_tip_sale_product_banner_mobile:
           "This version only appears when the page resolution shrink for a mobile display.",
         selectimage_tip_hero_1:
@@ -1450,6 +1457,15 @@
         PubRight_pubrightmanagelicensedsites: "Manage Licensed Sites",
         PubRight_pubrightmanagelicensedsites_Tooltip:
           "These users can view and manage Licensed Site location information, licenses, and activity",
+        Sale_EnableTitle: "Enable Sale Page",
+        Sale_EanbleDesc:
+          "Sale Page's require you to provide the two following items:.",
+        Sale_EnableDesc_1:
+          "Need to provide a vanity name that will appear at the end of the URL. Without this your sale page will not be accessible by Steam customers",
+        Sale_EnableDesc_2:
+          "Need to specify the start and end date & time. Without setting these correctly, both stats tracking and product page artwork will not work correctly.",
+        Sale_New_Start: "Sale Start Time",
+        Sale_New_End: "Sale End Time",
         Sale_option: "Enable the Sale Page Editor for this event?",
         Sale_option_title: "Select from a list of default titles:",
         Sale_option_title_disabled_tooltip:
@@ -1540,7 +1556,7 @@
           "Removes this label from all the currently selected items",
         Sale_EditTags_NewTagButton: "Add",
         Sale_EditTags_EnableItemEditingDesc:
-          "This allows you to add or import a list of apps to feature on the sale page, apply labels to each item, and then configure sections to populate their contents by setting up filters to apply to those labels. This is generally intended for larger sales with hundreds of items and may be unecessary complexity for smaller sales",
+          "This allows you to add or import a list of apps to feature on the sale page, apply labels to each item, and then configure sections to populate their contents by setting up filters to apply to those labels. This is generally intended for larger sales with hundreds of items and unnecessarily complex for smaller sales",
         Sale_EditTags_EnableItemEditing: "Edit Linked Items",
         Sale_EditTags_Hide: "Hide",
         Sale_EditTags_Show: "Show",
@@ -1571,7 +1587,7 @@
         Sale_TagFilter_ShowTagBreakdown: "Show Label Breakdown",
         Sale_TagFilter_HideTagBreakdown: "Hide Label Breakdown",
         Sale_TagFilter_SectionTooltip:
-          "Linked items provide a pool of items along with associated attributes that can be added to the sale via filters that can select which items match based upon a defined criteria. It is important to note that these items aren't actually part of the sale or visible to users until they are included in either a tab or a sale section through a filter.",
+          "Linked items provide a pool of items along with associated attributes that can be added to the sale via filters that can select which items match based upon a defined criterion. It is important to note that these items aren't actually part of the sale or visible to users until they are included in either a tab or a sale section through a filter.",
         Sale_TagFilter_TagBreakdown_ttip:
           "This provides a listing of all the labels contained by the matching items and how many of each there are. This is useful for determining if there may be other breakdowns of labels available. Each label can be selected to see which items in the list have the associated label.",
         Sale_TagFilter_NoFilter:
@@ -1603,7 +1619,7 @@
           "A URL that is the same as what would be inserted into BB code that will be used for the logo on the subscription boxes",
         Sale_VanityID: "Sale Page Vanity ID/URL",
         Sale_VanityID_ttip:
-          "This will be used at the end of the URL for your sales page when access by your customers from your creator home page.  Do not include spaces as URL encoding make the URL harder to read, prefer that you use _ instead.  Only accepts characters, numbers, _ and - in this field. Example: Halloween2019, Valentines, BestSaleEver",
+          "This will be used at the end of the URL for your sales page when accessed by your customers from your creator home page.  Do not include spaces as URL encoding make the URL harder to read, prefer that you use _ instead.  Only accepts characters, numbers, _ and - in this field. Example: Halloween2019, Valentines, BestSaleEver",
         Sale_VanityID_Link: "Link when Event is Live",
         Sale_VanityID_ValveLink: "Featured on Steam Store when Event is Live",
         Sale_DontCapitalizeSectionTitles: "Don't capitalize section titles",
@@ -1660,6 +1676,8 @@
         Sale_BrowseSection_AdditionalTabList_ttip:
           "Additional tabs that can be added for display, but will otherwise not be used for this component",
         Sale_SectionDesc_Events: "Events - %1$s",
+        Sale_SectionTypeTTip_unselected_empty:
+          "Please choose a type for this section. This type does not appear to user.",
         Sale_SectionTypeTTip_items:
           "Shows a collection of various games, apps, DLC, etc. This can be configured to be displayed as a grid that can be heavily customized",
         Sale_SectionTypeTTip_events:
@@ -1671,22 +1689,29 @@
           "Embeds the event description text block into the sale at this location",
         Sale_SectionTypeTTip_text_section:
           "Allows for entering of text/images/videos into this section",
-        Sale_SectionTypeTTip_curator: "",
+        Sale_SectionTypeTTip_curator:
+          "Lets you add curator or creator home (aka developer/publisher/franchise page) as a widget; which allows customers to easily follow them directly from the sale page.",
         Sale_SectionTypeTTip_tabs:
           "Allows for creating tabs, which can then filter the apps and sections that are shown based upon which tab the user has selected",
+        Sale_SectionTypeTTip_tab_buttons:
+          "Displays the other tabs as a group of buttons. Usually best to put at the end of a sale that has been setup with tab. Helps reminds users that there is more content organized by the tabs. Clicking the button is equivalent of selecting a tab and scrolling to the top of the page.",
         Sale_SectionTypeTTip_doors: "Deprecated",
         Sale_SectionTypeTTip_vo_internal:
           "A collection of valve only sections that are unlikely to be useful for non-Valve users",
         Sale_SectionTypeTTip_sale_item_browser:
           "A tabbed browsing control that allows for showing top sellers, recently released, etc for the items on the sale",
-        Sale_NoChoiceMade: "Please choose a type",
+        Sale_SectionTypeTTip_event_schedule:
+          "This section will surface any featured games events that is the correct type and in the schedule time range. This is intended to help surface upcoming events related to your sale, such as broadcasts and in-game content",
+        Sale_SectionTypeTTip_curator_recommendation:
+          "Allow specific placement of the curator recommendation section. This surfaces recommendation on the games featured on the sales based on curators that the user already follow. This section also permits featuring specific curator lists.",
+        Sale_NoChoiceMade: "< Please choose a type >",
         Sale_Items: "Apps and Bundles",
         Sale_Items_ttip:
           "This is the primary sale section which allows insert of games, packages and bundles onto the sale page. Create as many as needed.",
-        Sale_Events: "Events",
+        Sale_Events: "News and Events",
         Sale_Events_ttip:
           "Allows insertion of specifically chosen Steam Events and Announcements onto the page. The users can click to open the content inline on top of the sale page.",
-        Sale_Links: "Links",
+        Sale_Links: "Links to other store pages",
         Sale_Links_ttip: "Allows linking to other parts of the Steam store.",
         Sale_BroadcastPlayerSection: "Broadcast Player",
         Sale_BroadcastPlayerSection_ttip:
@@ -1700,13 +1725,14 @@
         Sale_TextSection: "Text Section",
         Sale_TextSection_ttip:
           "Creates a bbcode widget that allows any text, images or video to appear at this point of the sale page.",
-        Sale_CuratorSection: "Curator or Creator Home Section",
+        Sale_CuratorSection:
+          "Dev/Publisher Home Page or Community Group Widget",
         Sale_CuratorSection_ttip:
-          "Allows inclusion of a Curator or Creator Home widget. The widget will lets Steam users easily follow the list creator home or curator. There can be more than one of these sections.",
+          "Displays a widget with the name, description, and a follow button for the specified Steam Community group or developer/publisher homepage.",
         Sale_CuratorSection_Name: "Curator: %1$s",
         Sale_CuratorRecommendation: "Curator Recommendations and Lists",
         Sale_CuratorRecommendation_ttip:
-          "Controls where the curator recommendations or feature list appear on the sale page. By defaults, users following Steam curators will see the followed curator's recommendation about games featured in the sale at the bottom of the sale page. This lets you control where this section may appear.",
+          "Controls where the curator recommendations or feature list appear on the sale page. By default, users following Steam curators will see the followed curator's recommendation about games featured in the sale at the bottom of the sale page. This lets you control where this section may appear.",
         Sale_CuratorRecommendation_desc:
           "Displays Curator Recommendations and Curator Lists. Automatically pulling lists from Steam user's followed curators and your featured curator list in the Steam users language that the Steam users follow.",
         Sale_CuratorRecommendation_StartTime: "Optional: Display start time",
@@ -1715,7 +1741,7 @@
         Sale_CuratorRecommendation_FeaturedList:
           "Feature Curator Recommendation List:",
         Sale_CuratorRecommendation_FeaturedList_ttip:
-          "Optionally choose curator's lists that have been created for this sale. Curators can only create these list after the sale as has started.",
+          "Optionally choose curator's lists that have been created for this sale. Curators can only create these lists after the sale has started.",
         Sale_CuratorRecommendation_ChooseList: "Select Curator List to Feature",
         Sale_CuratorRecommendation_ChooseDesc:
           "Curators can create a list of games featured on this sale. This dialog lets you optionally choose one or more list to feature on the sale page. Featured list will be presented to all Steam users visiting the page.",
@@ -1732,26 +1758,28 @@
         Sale_Tabs_DeletePrompt_Title: "Delete Tab",
         Sale_Tabs_DeletePrompt_Body:
           "Are you sure that you want to delete the tab %1$s?",
-        Sale_Tabs_AddTab: "Add Tab",
+        Sale_Tabs_AddTab: "Add A Tab",
         Sale_Tabs_AddTab_ttip:
           "This will add a new tab that can then be given a name and provided with a list of titles to filter the sale sections below to",
         Sale_Tabs_UnnamedTab: "Unnamed tab (%1$s)",
         Sale_Tabs_SelectTab: "Select a tab above to edit",
         Sale_Tabs_MultipleTabSections:
           "Only a single tabs section may be used within a sale",
-        Sale_Tabs_Title: "Tab Title",
+        Sale_Tabs_Title: "Selected Tab Title",
         Sale_Tabs_Title_ttip:
           "Select from a list of already translated titles for this tab, or choose a custom title and enter your own name for each language",
         Sale_Tabs_Current: "Current Tabs",
         Sale_Tabs_Current_ttip:
           "Each tab defines a named collection of items that will filter the following sections to just show those items.",
+        Sale_Tabs_Colors: "Tab Colors",
+        Sale_Tabs_Colors_ttip: "Adjust the selected and default tab colors",
         Sale_Tabs_ItemTitle: "Tab Filtered Item List",
         Sale_Tabs_ItemTitle_ttip:
           "The following items are used as a filter, and for sections that follow, only items that are found within this list can be displayed when this tab is selected",
         Sale_Tabs_TitleItemCount: "%1$s - Items: %2$s",
         Sale_Tabs_TitleShowAllItems: "%1$s - Show All Items",
         Sale_Tabs_ShowItems:
-          "This tab is set up to show all items in the sections that follow. However, by clicking below you can create a list of items and then  only the items that are contained within this list will appear in the following sections when this tab is active.",
+          "This tab is set up to show all items in the sections that follow. However, by clicking below you can create a list of items and then only the items that are contained within this list will appear in the following sections when this tab is active.",
         Sale_Tabs_ShowItems_Button: "Edit Filtered Items",
         Sale_Debug_Title: "Find in Sale",
         Sale_Debug_Tooltip:
@@ -1782,7 +1810,7 @@
         Sale_VOInternalSection_SubscriptionPricing: "Subscription - Pricing",
         Sale_SectionType_EventSchedule: "Event Schedule",
         Sale_SectionType_EventSchedule_ttip:
-          "Event Schedule automatically pulls and displays events from featured games to appear on the sales page order by their event start time. Useful for showing broadcasts that occur during the sale.",
+          "Event Schedule automatically pulls and displays events from featured games to appear on the sales page ordered by their event start time. Useful for showing broadcasts that occur during the sale.",
         Sale_VOInternalSection_TabContents: "Tab Contents",
         Sale_VOInternalSection_TabReferences: "Tab References",
         Sale_VOInternalSection_SaleItemBrowser: "Sale Item Browser",
@@ -1805,6 +1833,8 @@
         Sale_EventTagsToSearch_ttip:
           "If this is set, then all games (even those not featured explicitly on this sale) will be included on the carousel. We prefer events from games the user has interest in (own, wishlist, follow) and then fallback to top sellers as a proxy.",
         Sale_EventMaxEventsToShow: "Max Events to Show",
+        Sale_EventMaxEventsToShow_ttip:
+          "At maximum how many events to pull from the server. We can always pull less than this amount.",
         Sale_EventMaxEventDefault: "Defaults events to show is %1$s",
         Sale_EventDateRange: "Events Date/time Range",
         Sale_EventDateRange_ttip:
@@ -1830,7 +1860,7 @@
           "The name of an opt in page that when provided will allow for importing of items from the opt in page. An example might be 'sale_fighting'",
         Sale_SyncTag_OptInItems: "Sync Opt In Items",
         Sale_SyncTag_OptInItems_ttip:
-          "This will add new opt-in items, and remove items that are no longer in the opt-in page from the list of linked items. New items will get default store and opt in labels.",
+          "This will add new opt-in items, and remove items that are no longer in the opt-in page from the list of linked items. New items will get default store tags and opt in labels.",
         Sale_SyncTag_OptInTags: "Sync Opt In Labels",
         Sale_SyncTag_OptInTags_ttip:
           "This will resynchronize all of the opt in labels for the linked items in the sale that already exist",
@@ -1845,7 +1875,7 @@
         Sale_CreateUpdateDiscountEventTitle:
           "(VO) Create or Update a Discount Event",
         Sale_CreateUpdateDiscountEventTitle_ttip:
-          "Allows for creating a discount event which entails configuring a date range and setting parnter supplied discounts within that range",
+          "Allows for creating a discount event which entails configuring a date range and setting partner supplied discounts within that range",
         Sale_CreateDiscountEvent: "Save and Create Discount Event",
         Sale_UpdateDiscountEvent: "Save and Update Discount Event: %1$s",
         Sale_SmartSectionType: "Smart Section Type",
@@ -1874,7 +1904,7 @@
         Sele_Event_SmartSection_RecentEvents:
           "Show recent events and announcements from featured games.",
         Sele_Event_SmartSection_RecentEvent_allgame:
-          "Show recent events and announcements from all games, prefering games owned/followed/wishlister then falling back to top sellers.",
+          "Show recent events and announcements from all games, prefering games owned/followed/wishlisted then falling back to top sellers.",
         Sale_Section_Header: "Section %1$s",
         Sale_SectionListPlaceholder_Header: "No sale sections defined",
         Sale_SectionListPlaceholder_Content:
@@ -1896,6 +1926,10 @@
           "Active Tab Background Gradient (Top)",
         Sale_Section_TabActive_Background_Bottom:
           "Active Tab Background Gradient (Bottom)",
+        Sale_Section_BackgroundImage_Title: "Section background image",
+        Sale_Section_BackgroundImage_ttip:
+          "Upload an image to display in the background of this section instead of the background color. It will tile if too small to fill the space.",
+        Sale_Section_BackgroundColors_Title: "Section background colors",
         Sale_Section_Background_Clear: "Clear background image",
         Sale_Section_BannerImage_Clear: "Clean Product Page Banner override",
         Sale_Seciton_BannerImage_Override: "Override Product Page Banner",
@@ -1954,19 +1988,22 @@
         Sale_Section_HidePrices: "Hide Prices",
         Sale_Section_HidePrices_ttip:
           "When checked, this will not show the prices on item capsules within this section",
-        Sale_Section_SingleItemDisplay:
-          "How should we display the single item?",
+        Sale_Section_SingleItemDisplay: "Item layout options",
+        Sale_Section_SingleItemDisplay_disabled:
+          "Item layout options (only available for single item rows)",
         Sale_Section_SingleItemDisplay_ttip:
           "Choose the single item display style which will change the height of the item, the content it displays and possible interactivity directly in the capsule.",
+        Sale_Section_SingleItemDisplay_disabled_ttip:
+          "These options are only available when the items per row setting is set to one.",
         Sale_Section_SingleItemDisplay_bordered: "Bordered Capsule display",
         Sale_Section_SingleItemDisplay_bordered_ttip:
-          "Shows the capsule item bordered with additional information release date, platforms, upto 5 few tags and short description of the of the game. This will use the pop-out hover for additional information and interactivity",
+          "Shows the capsule item bordered with additional information release date, platforms, up to 5 few tags and short description of the game. This will use the pop-out hover for additional information and interactivity",
         Sale_Section_SingleItemDisplay_full: "Full Capsule Display",
         Sale_Section_SingleItemDisplay_full_ttip:
           "Shows the capsule item expanded fully providing Border content plus review, and direct wishlist actions",
         Sale_Section_SingleItemDisplay_library: "Library Art display",
         Sale_Section_SingleItemDisplay_library_ttip:
-          "A taller display per item, we uses the library asset instead of the store capsule. This has all of the information as the Full and additional interactiving to watch trailer and choose between screenshots. Not bundles will not be able to use this display and will fallback to Full, and subscriptions will fallback to use the primary app's library asset.",
+          "A taller display per item, we use the library asset instead of the store capsule. This has all of the information as the Full and additional interactivity to watch trailer and choose between screenshots. Bundles will not be able to use this display and will fall back to Full, and subscriptions will fall back to use the primary app's library asset.",
         Sale_Section_Type_items: "Items",
         Sale_Section_Type_events: "Events",
         Sale_Section_Type_links: "Links",
@@ -1993,7 +2030,7 @@
           "Allows for directly editing the list of linked items for this sale. This can be used to import or export from tools such as Excel, or quickly make large changes to the list of items",
         Sale_EditRawCustom: "Custom Labels",
         Sale_EditRawCustomTaggedItems_ttip:
-          "Allows for directly editing the list of linked items for this sale and importing and exporting just the custom colleciton of labels on the sale items. This is primarily used for importing a selection of custom tags managed by an external spreadsheet without modifying the other tags on the items. In addition, a subset can be imported via this dialog as it will not remove items not listed",
+          "Allows for directly editing the list of linked items for this sale and importing and exporting just the custom collection of labels on the sale items. This is primarily used for importing a selection of custom labels managed by an external spreadsheet without modifying the other labels on the items. In addition, a subset can be imported via this dialog as it will not remove items not listed",
         Sale_ImportOptIn: "Import From Opt In Page",
         Sale_ImportOptIn_ttip:
           "Opens a dialog that will allow for all apps to be imported from an opt in page and pulled into the linked items list",
@@ -2008,10 +2045,10 @@
         Sale_EditAutoTags_Title: "Edit Auto Labels",
         Sale_EditAutoTags_Placeholder: "Enter label name",
         Sale_EditAutoTags_Tooltip:
-          "This is the name of the labels that will be applied to any linked items that match the associated filter",
+          "This is the name of the label that will be applied to any linked items that match the associated filter",
         Sale_EditTaggedItemFilter: "Item Filter",
         Sale_EditTaggedItemFilter_ttip:
-          "This allows for setting up a filter that will be applied to all linked items prior to considering for sections. You can use this to filter out say all games that don't have demos, or that have a tag that you choose.",
+          "This allows for setting up a filter that will be applied to all linked items prior to considering for sections. You can use this to filter out say all games that don't have demos, or that have a label that you choose.",
         Sale_Explore: "Explore",
         Sale_ExploreTaggedItems_ttip:
           "Allows for using the filter tool to explore the currently configured linked items to see how many items meet different filters or have which labels associated with them",
@@ -2197,6 +2234,48 @@
         FacetedBrowseEditor_Tooltip_SortFacetValues_Manual:
           "Don't sort facet values. They will be shown in the order defined in the lists below.",
         FacetedBrowseEditor_HighlightedFacetColor: "Highlighted Facet Color",
+        FAQViewer_NoFAQFound: "Sorry, we could not find that page.",
+        FAQViewer_GoToHomepage: "Return to community homepage",
+        FAQEditor_TitleLabel: "Page title",
+        FAQEditor_TitlePlaceHolder: "Enter FAQ title here",
+        FAQEditor_ContentLabel: "FAQ content",
+        FAQEditor_ContentPlaceHolder: "Enter FAQ BBCode here",
+        FAQEditor_InternalName: "Editing FAQ:",
+        FAQEditor_InternalName_Preview: "Previewing FAQ:",
+        FAQEditor_NoFAQFound: "Sorry, we could not find that page.",
+        FAQEditor_GoToDashboard: "Go to the Dashboard",
+        FAQEditor_Loc_Import_ttip:
+          "Select one or more files to upload to import localized text for your title and body. We use the file extension to determine whether the file is an XML or an CSV import; for XML we use API language code at the end of the filename before the extention to determine the language of the contents of the XML file. You should start by exporting the CSV or XML to ensure you are using the correct format.",
+        FAQEditor_Loc_Export_ttip:
+          "Exports the current language to a single file of the type selected. XML always produces a single file with the current editor langage. CSV will export all available languages into a single file.",
+        FAQEditor_ImageTitle: "Images",
+        FAQEditor_EditFAQ: "Edit FAQ",
+        FAQEditor_DeleteAction: "Delete FAQ",
+        FAQEditor_DeleteAction_ttip: "Permanently delete this FAQ entry.",
+        FAQEditor_DeleteDesc:
+          "Deleting the FAQ Entry is immediate and cannot be undone.  Are you sure you want to delete this article and all of its languaged content?",
+        FAQEditor_DeletingInProgress: "Deleting FAQ, please wait",
+        FAQEditor_DeleteSuccess:
+          "Delete is completed. You can close the dialog to return to the dashboard.",
+        FAQStatus_LiveVersionHeader: "Live Versions:",
+        FAQStatus_NotVisible: "No Live Versions",
+        FAQStatus_Editor: "Last Editor",
+        FAQDashboard_Header: "FAQ Admin Dashboard",
+        FAQDashboard_Empty: "No FAQS found.",
+        FAQDashboard_CreateFAQButton: "Add a new FAQ",
+        FAQDashboard_CreateFAQInstructions:
+          "Provide a name for the new FAQ. We will use this name only on the internal dashboard listing.",
+        FAQDashboard_NamePlaceHolder: "Enter internal name here",
+        FAQDashboard_NameColumn: "Internal Name",
+        FAQDashboard_DatesColumn: "Timestamps",
+        FAQDashboard_VisibilityColumn: "Visibility",
+        FAQDashboard_UpdateTimestampLabel: "Last Updated:",
+        FAQDashboard_PublishTimestampLabel: "Last Published:",
+        FAQDashboard_TimeNever: "Never",
+        FAQDashboard_VisibleInGlobalRealmLabel: "Global:",
+        FAQDashboard_VisibleInChinaRealmLabel: "Steam China:",
+        FAQDashboard_Visible: "visible",
+        FAQDashboard_Invisible: "hidden",
       };
     },
   },

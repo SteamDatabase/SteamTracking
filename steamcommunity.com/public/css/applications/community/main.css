@@ -920,6 +920,15 @@ body.modals_BodyNoScrollDialog_105OB {
   z-index: 1500;
 }
 
+body.clan_faqs {
+  /* stylelint-disable-line selector-class-pattern */
+  background: #222222;
+}
+
+.app_Error_2yM3d {
+  color: red;
+}
+
 body,
 body.shared_common_v6_2Lxgd {
   color: #969696;
@@ -1990,10 +1999,15 @@ button.TextButton:focus {
 
 .DialogDropDown.Disabled {
   cursor: initial;
+  opacity: 0.5;
 }
 
 .DialogDropDown:hover {
   box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.16);
+}
+
+.DialogDropDown.Disabled:hover {
+  box-shadow: unset;
 }
 
 .DialogDropDown._DialogInputContainer {

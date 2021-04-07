@@ -2311,6 +2311,7 @@ b {
 .partnereventshared_EventEditorTextTitle_KxUwI span {
   text-transform: none;
   color: #868f98;
+  vertical-align: middle;
 }
 .partnereventshared_EventEditorTextTitleLengthInfo_RI6jm {
   font-size: 11px;
@@ -7861,11 +7862,15 @@ body.v6.partner_events {
 }
 .partnereventdisplay_NoTitleArtwork_PKC9M
   .partnereventdisplay_EventCoverImageCtn_8rzw2 {
-  height: 12vw;
+  height: 16vw;
+}
+.partnereventdisplay_ScreenshotInsteadOfCover_xwuCI
+  .partnereventdisplay_EventCoverImageCtn_8rzw2 {
+  height: 20vw;
 }
 .partnereventdisplay_EventCoverImage_3Es9h,
 .partnereventdisplay_EventCoverImageBackground_38E5Z {
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   height: 622px;
   width: 100%;
@@ -11248,6 +11253,32 @@ img {
   cursor: pointer;
   width: 16px;
   height: 16px;
+}
+
+.debugmatchesdialog_DiscrepancyDialogRow_TDPfu {
+  width: 100%;
+  display: flex;
+  background: rgba(0, 0, 0, 0.5);
+}
+.debugmatchesdialog_DiscrepancyDialogRow_TDPfu:nth-child(even) {
+  background: rgba(0, 0, 0, 0.25);
+}
+.debugmatchesdialog_DiscrepancyDialogHeaderRow_1862u {
+  width: 100%;
+  display: flex;
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+.debugmatchesdialog_DiscrepancyDialogCell_2qHMu {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 50%;
+  text-align: left;
+  padding: 4px;
+}
+.debugmatchesdialog_DiscrepancyDialogTooltip_1-9nG {
+  z-index: 2000;
 }
 
 .storesuggest_SuggestContainer_2cC_r ._DialogLayout {
@@ -19571,9 +19602,13 @@ button.TextButton:focus {
 }
 .DialogDropDown.Disabled {
   cursor: initial;
+  opacity: 0.5;
 }
 .DialogDropDown:hover {
   box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.16);
+}
+.DialogDropDown.Disabled:hover {
+  box-shadow: unset;
 }
 .DialogDropDown._DialogInputContainer {
   margin-bottom: 0;

@@ -2126,6 +2126,7 @@ b {
 .partnereventshared_EventEditorTextTitle_18fHx span {
   text-transform: none;
   color: #868f98;
+  vertical-align: middle;
 }
 
 .partnereventshared_EventEditorTextTitleLengthInfo_2nHJ1 {
@@ -3055,12 +3056,16 @@ body.v6.partner_events {
 }
 .partnereventdisplay_NoTitleArtwork_3Y40J
   .partnereventdisplay_EventCoverImageCtn_FZiaq {
-  height: 12vw;
+  height: 16vw;
+}
+.partnereventdisplay_ScreenshotInsteadOfCover_2r6un
+  .partnereventdisplay_EventCoverImageCtn_FZiaq {
+  height: 20vw;
 }
 
 .partnereventdisplay_EventCoverImage_17G2y,
 .partnereventdisplay_EventCoverImageBackground_2-Iyg {
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   height: 622px;
   width: 100%;
@@ -4592,6 +4597,36 @@ div.creatorhomeembed_SocialContainer_1o1Ds {
 
 .creatorhomeembed_CuratorHoverCtn_30j_R .creatorhomeembed_AvatarLink_1N0rY {
   display: none;
+}
+
+.debugmatchesdialog_DiscrepancyDialogRow_202Wr {
+  width: 100%;
+  display: flex;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.debugmatchesdialog_DiscrepancyDialogRow_202Wr:nth-child(even) {
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.debugmatchesdialog_DiscrepancyDialogHeaderRow_3titm {
+  width: 100%;
+  display: flex;
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.debugmatchesdialog_DiscrepancyDialogCell_1Xq1K {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 50%;
+  text-align: left;
+  padding: 4px;
+}
+
+.debugmatchesdialog_DiscrepancyDialogTooltip_2z-Ll {
+  z-index: 2000;
 }
 
 .emoticon_NewEmoticonIndicator_3O2gR {
@@ -19689,10 +19724,15 @@ button.TextButton:focus {
 
 .DialogDropDown.Disabled {
   cursor: initial;
+  opacity: 0.5;
 }
 
 .DialogDropDown:hover {
   box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.16);
+}
+
+.DialogDropDown.Disabled:hover {
+  box-shadow: unset;
 }
 
 .DialogDropDown._DialogInputContainer {

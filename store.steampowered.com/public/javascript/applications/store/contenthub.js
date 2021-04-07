@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [6],
+  [5],
   {
     RNU2: function (e, t, a) {
       e.exports = {
@@ -891,22 +891,22 @@
                           name: l.get(i),
                           subtitle: new Array(),
                           rgStoreTagFilter: {
-                            type: H.p.k_EStoreFilterClauseTypeAnd,
+                            type: H.l.k_EStoreFilterClauseTypeAnd,
                             rgSubexpressions: [
                               {
-                                type: H.p.k_EStoreFilterClauseTypeOr,
+                                type: H.l.k_EStoreFilterClauseTypeOr,
                                 rgSubexpressions: s.has(i)
                                   ? s.get(i).map(function (e) {
                                       return {
                                         type:
-                                          H.p.k_EStoreFilterClauseTypeStoreTag,
+                                          H.l.k_EStoreFilterClauseTypeStoreTag,
                                         value: e,
                                       };
                                     })
                                   : [
                                       {
                                         type:
-                                          H.p.k_EStoreFilterClauseTypeStoreTag,
+                                          H.l.k_EStoreFilterClauseTypeStoreTag,
                                         value: i,
                                       },
                                     ],
@@ -973,7 +973,7 @@
                   this.m_facets,
                   !1,
                   1,
-                  H.o.k_ESortFacetsByMatchCount,
+                  H.k.k_ESortFacetsByMatchCount,
                   Object(i.f)(_.d.LANGUAGE)
                 )),
                 this.m_facetFilterState.SetFacetCounts(

@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [10],
+  [9],
   {
     "++az": function (e, t, n) {
       e.exports =
@@ -4181,35 +4181,35 @@
     },
     Aqke: function (e, t, r) {
       var a = {
-        "./loyalty_brazilian.json": ["jJTi", 75],
-        "./loyalty_bulgarian.json": ["YXmX", 76],
-        "./loyalty_czech.json": ["Yw6T", 77],
-        "./loyalty_danish.json": ["LeJ7", 78],
-        "./loyalty_dutch.json": ["3s9e", 79],
-        "./loyalty_english.json": ["nz6u", 80],
-        "./loyalty_finnish.json": ["cCRj", 81],
-        "./loyalty_french.json": ["WjZg", 82],
-        "./loyalty_german.json": ["2HFY", 83],
-        "./loyalty_greek.json": ["puzw", 84],
-        "./loyalty_hungarian.json": ["h+vV", 85],
-        "./loyalty_italian.json": ["1xjJ", 86],
-        "./loyalty_japanese.json": ["KhFN", 87],
-        "./loyalty_koreana.json": ["0T2E", 88],
-        "./loyalty_latam.json": ["SFVQ", 89],
-        "./loyalty_norwegian.json": ["6qpk", 90],
-        "./loyalty_polish.json": ["c9AW", 91],
-        "./loyalty_portuguese.json": ["H3eu", 92],
-        "./loyalty_romanian.json": ["gt0D", 93],
-        "./loyalty_russian.json": ["4nQk", 94],
-        "./loyalty_sc_schinese.json": ["0Z0/", 95],
-        "./loyalty_schinese.json": ["svug", 96],
-        "./loyalty_spanish.json": ["x/nm", 97],
-        "./loyalty_swedish.json": ["d/hP", 98],
-        "./loyalty_tchinese.json": ["EWje", 99],
-        "./loyalty_thai.json": ["SnkP", 100],
-        "./loyalty_turkish.json": ["cD82", 101],
-        "./loyalty_ukrainian.json": ["jV8j", 102],
-        "./loyalty_vietnamese.json": ["TxFk", 103],
+        "./loyalty_brazilian.json": ["jJTi", 74],
+        "./loyalty_bulgarian.json": ["YXmX", 75],
+        "./loyalty_czech.json": ["Yw6T", 76],
+        "./loyalty_danish.json": ["LeJ7", 77],
+        "./loyalty_dutch.json": ["3s9e", 78],
+        "./loyalty_english.json": ["nz6u", 79],
+        "./loyalty_finnish.json": ["cCRj", 80],
+        "./loyalty_french.json": ["WjZg", 81],
+        "./loyalty_german.json": ["2HFY", 82],
+        "./loyalty_greek.json": ["puzw", 83],
+        "./loyalty_hungarian.json": ["h+vV", 84],
+        "./loyalty_italian.json": ["1xjJ", 85],
+        "./loyalty_japanese.json": ["KhFN", 86],
+        "./loyalty_koreana.json": ["0T2E", 87],
+        "./loyalty_latam.json": ["SFVQ", 88],
+        "./loyalty_norwegian.json": ["6qpk", 89],
+        "./loyalty_polish.json": ["c9AW", 90],
+        "./loyalty_portuguese.json": ["H3eu", 91],
+        "./loyalty_romanian.json": ["gt0D", 92],
+        "./loyalty_russian.json": ["4nQk", 93],
+        "./loyalty_sc_schinese.json": ["0Z0/", 94],
+        "./loyalty_schinese.json": ["svug", 95],
+        "./loyalty_spanish.json": ["x/nm", 96],
+        "./loyalty_swedish.json": ["d/hP", 97],
+        "./loyalty_tchinese.json": ["EWje", 98],
+        "./loyalty_thai.json": ["SnkP", 99],
+        "./loyalty_turkish.json": ["cD82", 100],
+        "./loyalty_ukrainian.json": ["jV8j", 101],
+        "./loyalty_vietnamese.json": ["TxFk", 102],
       };
       function n(t) {
         if (!r.o(a, t))
@@ -5685,10 +5685,10 @@
           return e.toString().padStart(2, "0");
         },
         Te = v.a.lazy(function () {
-          return s.e(43).then(s.bind(null, "yDev"));
+          return s.e(42).then(s.bind(null, "yDev"));
         }),
         ze = v.a.lazy(function () {
-          return s.e(42).then(s.bind(null, "f4w8"));
+          return s.e(41).then(s.bind(null, "f4w8"));
         }),
         Ge = (function (e) {
           function t() {
@@ -15425,12 +15425,12 @@
                     case 0:
                       return ((t = { eResult: 2, strMessage: "" }),
                       this.BIsLoggedIn())
-                        ? ((n = c.b.Init(M.k))
+                        ? ((n = c.b.Init(M.l))
                             .Body()
                             .set_communityitemid(
                               this.GetOwnedCommunityItemID(a)
                             ),
-                          [4, M.m.SetProfileBackground(this.m_transport, n)])
+                          [4, M.n.SetProfileBackground(this.m_transport, n)])
                         : [
                             2,
                             (t = { eResult: 21, strMessage: "Not logged on" }),
@@ -15458,12 +15458,12 @@
                     case 0:
                       return ((t = { eResult: 2, strMessage: "" }),
                       this.BIsLoggedIn())
-                        ? ((n = c.b.Init(M.i))
+                        ? ((n = c.b.Init(M.j))
                             .Body()
                             .set_communityitemid(
                               this.GetOwnedCommunityItemID(a)
                             ),
-                          [4, M.m.SetAvatarFrame(this.m_transport, n)])
+                          [4, M.n.SetAvatarFrame(this.m_transport, n)])
                         : [
                             2,
                             (t = { eResult: 21, strMessage: "Not logged on" }),
@@ -15492,12 +15492,12 @@
                     case 0:
                       return ((t = { eResult: 2, strMessage: "" }),
                       this.BIsLoggedIn())
-                        ? ((n = c.b.Init(M.h))
+                        ? ((n = c.b.Init(M.i))
                             .Body()
                             .set_communityitemid(
                               this.GetOwnedCommunityItemID(a)
                             ),
-                          [4, M.m.SetAnimatedAvatar(this.m_transport, n)])
+                          [4, M.n.SetAnimatedAvatar(this.m_transport, n)])
                         : [
                             2,
                             (t = { eResult: 21, strMessage: "Not logged on" }),
@@ -15526,14 +15526,14 @@
                     case 0:
                       return ((t = { eResult: 2, strMessage: "" }),
                       this.BIsLoggedIn())
-                        ? ((n = c.b.Init(M.j))
+                        ? ((n = c.b.Init(M.k))
                             .Body()
                             .set_communityitemid(
                               this.GetOwnedCommunityItemID(a)
                             ),
                           [
                             4,
-                            M.m.SetMiniProfileBackground(this.m_transport, n),
+                            M.n.SetMiniProfileBackground(this.m_transport, n),
                           ])
                         : [
                             2,
@@ -16007,7 +16007,7 @@
                         ? ((t = c.b.Init(M.c)).Body().set_min_last_played(0),
                           [
                             4,
-                            M.m.ClientGetLastPlayedTimes(this.m_transport, t),
+                            M.n.ClientGetLastPlayedTimes(this.m_transport, t),
                           ])
                         : [2, []];
                     case 1:
@@ -16052,7 +16052,7 @@
                             include_played_free_games: !0,
                             include_free_sub: !0,
                           }),
-                          [4, M.m.GetOwnedGames(this.m_transport, t)])
+                          [4, M.n.GetOwnedGames(this.m_transport, t)])
                         : [2, []];
                     case 1:
                       return 1 == (n = e.sent()).GetEResult()
@@ -16109,7 +16109,7 @@
                         ? ((t = c.b.Init(M.e)).SetBodyFields({
                             steamid: O.k.steamid,
                           }),
-                          [4, M.m.GetProfileItemsEquipped(this.m_transport, t)])
+                          [4, M.n.GetProfileItemsEquipped(this.m_transport, t)])
                         : [2];
                     case 1:
                       return (
@@ -16137,7 +16137,7 @@
                           }),
                           [
                             4,
-                            M.m.GetPurchasedAndUpgradedProfileCustomizations(
+                            M.n.GetPurchasedAndUpgradedProfileCustomizations(
                               this.m_transport,
                               t
                             ),

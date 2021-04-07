@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [2],
+  [1],
   {
     "2l+k": function (e, t, n) {
       "use strict";
@@ -2292,7 +2292,7 @@
               var t = this.props,
                 n = t.newsData,
                 r = t.clanSteamID,
-                a = new u.r();
+                a = new u.n();
               (a.GID = "PreviewPartnerEventRow_0"),
                 (a.clanSteamID = r),
                 (a.postTime = Date.now() / 1e3),

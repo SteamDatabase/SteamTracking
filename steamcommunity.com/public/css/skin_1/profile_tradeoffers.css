@@ -441,6 +441,11 @@ div.gray_bevel.newurl_updated {
 	line-height: 30px;
 }
 
+.tradeoffers_view_more {
+	text-align: center;
+	padding: 20px;
+}
+
 .responsive_createtradeoffer {
 	margin: 16px 0;
 }
