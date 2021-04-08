@@ -5266,7 +5266,17 @@
  r CONF_type_default
  r HMAC.dummy_key
  r Hex
+ r IClientInstallUtilsDispatchMsg(IClientInstallUtils*, CUtlBuffer&, CUtlBuffer&, IInterfaceStats*)::fname
+ r IClientInstallUtilsDispatchMsg(IClientInstallUtils*, CUtlBuffer&, CUtlBuffer&, IInterfaceStats*)::k_pszInterface
+ r IClientModuleManagerDispatchMsg(IClientModuleManager*, CUtlBuffer&, CUtlBuffer&, IInterfaceStats*)::fname
+ r IClientModuleManagerDispatchMsg(IClientModuleManager*, CUtlBuffer&, CUtlBuffer&, IInterfaceStats*)::k_pszInterface
+ r IClientProcessMonitorDispatchMsg(IClientProcessMonitor*, CUtlBuffer&, CUtlBuffer&, IInterfaceStats*)::fname
+ r IClientProcessMonitorDispatchMsg(IClientProcessMonitor*, CUtlBuffer&, CUtlBuffer&, IInterfaceStats*)::k_pszInterface
+ r IClientSecureDesktopDispatchMsg(IClientSecureDesktop*, CUtlBuffer&, CUtlBuffer&, IInterfaceStats*)::fname
+ r IClientSecureDesktopDispatchMsg(IClientSecureDesktop*, CUtlBuffer&, CUtlBuffer&, IInterfaceStats*)::k_pszInterface
  r IPv6IPToString.hexdigits
+ r IRegistryInterfaceDispatchMsg(IRegistryInterface*, CUtlBuffer&, CUtlBuffer&, IInterfaceStats*)::fname
+ r IRegistryInterfaceDispatchMsg(IRegistryInterface*, CUtlBuffer&, CUtlBuffer&, IInterfaceStats*)::k_pszInterface
  r Key_RC
  r MODULUS
  r ONE
@@ -5365,6 +5375,9 @@
  r _EC_brainpoolP512r1
  r _EC_brainpoolP512t1
  r _EC_sm2p256v1
+ r _ZZ29IRegistryInterfaceDispatchMsgP18IRegistryInterfaceR10CUtlBufferS2_P15IInterfaceStatsE5fname__10_
+ r _ZZ29IRegistryInterfaceDispatchMsgP18IRegistryInterfaceR10CUtlBufferS2_P15IInterfaceStatsE5fname__11_
+ r _ZZ30IClientInstallUtilsDispatchMsgP19IClientInstallUtilsR10CUtlBufferS2_P15IInterfaceStatsE5fname__10_
  r _nist_p_224
  r _nist_p_224_sqr
  r _nist_p_521

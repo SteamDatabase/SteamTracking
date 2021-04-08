@@ -68,6 +68,8 @@ message CMsgSteamDatagramRouterPingReply {
 	optional fixed32 client_timestamp = 1;
 	repeated fixed32 latency_datacenter_ids = 2 [packed = true];
 	repeated uint32 latency_ping_ms = 3 [packed = true];
+	repeated fixed32 latency_datacenter_ids_p2p = 14 [packed = true];
+	repeated uint32 latency_ping_ms_p2p = 15 [packed = true];
 	optional fixed32 your_public_ip = 4;
 	optional fixed32 your_public_port = 11;
 	optional fixed32 server_time = 5;

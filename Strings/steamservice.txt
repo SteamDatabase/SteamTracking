@@ -62,12 +62,9 @@ __LINKEDIT
 @loader_path/steamservice.dylib
 "
 H
-^&
-Xy2
 P
 {
-U%
-Hq2
+~%
 
 `
 h
@@ -95,12 +92,7 @@ h
 )
 Hi
 H=
-v!
 ?
-j!
-#
-!
-!
 10CUtlString
 10CIPCServer
 11CPipeWaiter
@@ -116,6 +108,47 @@ j!
 12IProcessPipe
 24CPipeEventCallbackHelper
 N10OSXHelpers16CIOPollingHelper15IHelperCallbackE
+IClientInstallUtils
+SetUniverse
+AddShortcut
+RemoveShortcut
+AddUninstallEntry
+RemoveUninstallEntry
+AddToFirewall
+RemoveFromFirewall
+RegisterSteamProtocolHandler
+AddInstallScriptToWhiteList
+RunInstallScript
+GetInstallScriptExitCode
+ConfigureNetworDeviceIPAddresses
+IClientModuleManager
+LoadModule
+UnloadModule
+CallFunction
+CallFunctionAsync
+PollResponseAsync
+IRegistryInterface
+BGetValueStr
+BGetValueUint
+BGetValueBin
+BSetValueStr
+BSetValueUint
+BSetValueBin
+BDeleteValue
+BDeleteKey
+BKeyExists
+BGetSubKeys
+BGetValues
+BEnumerateKey
+BEnumerateValue
+IClientProcessMonitor
+RegisterProcess
+UnregisterProcess
+TerminateProcess
+IClientSecureDesktop
+BStartStreaming
+StopStreaming
+SendSAS
 14CServiceEngine
 25CClientModuleManagerAsync
 21CWorkItemFunctionCall
@@ -1462,51 +1495,11 @@ Unknown
 Assertion Failed: hSteamUser == 0
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/SteamServiceClient/serviceengine.cpp
 Assertion Failed: !"Interface type not found"
-IClientInstallUtils
-SetUniverse
-Fencepost deserialize mismatch (%u vs %u)
+Fencepost deserialize mismatch in %s::%s
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/interfacemap_service.h
 )
-AddShortcut
 ) =
-RemoveShortcut
-AddUninstallEntry
-RemoveUninstallEntry
-AddToFirewall
-RemoveFromFirewall
-RegisterSteamProtocolHandler
-AddInstallScriptToWhiteList
-RunInstallScript
-GetInstallScriptExitCode
-ConfigureNetworDeviceIPAddresses
-IClientModuleManager
-LoadModule
-UnloadModule
-CallFunction
-CallFunctionAsync
-PollResponseAsync
-IRegistryInterface
-BGetValueStr
-BGetValueUint
-BGetValueBin
-BSetValueStr
-BSetValueUint
-BSetValueBin
-BDeleteValue
-BDeleteKey
-BKeyExists
-BGetSubKeys
-BGetValues
-BEnumerateKey
-BEnumerateValue
-IClientProcessMonitor
-RegisterProcess
-UnregisterProcess
-TerminateProcess
-IClientSecureDesktop
-BStartStreaming
-StopStreaming
-SendSAS
+Unknown IPC call %s::0x%x
 %u,
 0x%llX,
 ClientModuleManagerPool
@@ -7899,8 +7892,8 @@ crashhandler.dylib
 CreateInterface
 %u
 1.0
-Apr  6 2021
-14:49:35
+Apr  7 2021
+18:33:46
 Jan
 Feb
 Mar
@@ -8480,12 +8473,7 @@ Assertion Failed: m_cCurrentDepth > 0
 %s%s%s
 Hi
 H=
-v!
 ?
-j!
-#
-!
-!
 #
 @
 @
@@ -8498,12 +8486,12 @@ A
 Hc
 =
 N
-)
-)
-)
-;,
-\+
+4,
+L95v+
 (
+(
+(
+++
 Hc
 ?
 ?
@@ -8526,7 +8514,7 @@ AESNI-CBC+SHA256 stitch for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
 @
 AES for Intel AES-NI, CRYPTOGAMS by <appro@openssl.org>
-
+L$
 Pj
 ARj
 j
@@ -8535,6 +8523,7 @@ j
 =
 =
 @
+#
 =
 9
 =
@@ -8832,18 +8821,20 @@ ChaCha20 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
 =
 @
+!
 
+b$
 @
 @
 @
 0
+!
 H=
 Ic]
 j
 j
 j
 j
-
 j
 j
 
@@ -8893,6 +8884,12 @@ $
 
 SHA1 multi-block transform for x86_64, CRYPTOGAMS by <appro@openssl.org>
 SHA1 block transform for x86_64, CRYPTOGAMS by <appro@openssl.org>
+
+
+
+
+
+
 0
 @
 @
