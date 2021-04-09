@@ -1,0 +1,417 @@
+/* CSS Document */
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+.newsPostBody
+{
+	background-color: #1b2838;
+	background-image: none;
+}
+
+#BG_bottom {
+	background-color: #1b2838;
+	width:958px;
+	text-align:left;
+	margin: 0px auto;
+}
+
+h1
+{
+	font-size: 26px;
+	font-weight: normal;
+	color: white;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		}
+
+h2
+{
+	padding-top: 10px;
+}
+
+#main {
+	min-height: 300px;
+	text-align: left;
+	padding-left: 17px;
+	padding-right: 17px;
+	width: 648px;
+}
+
+a.linkbar_active, a.linkbar_active:hover, a.linkbar_active:active, a.linkbar_active:visited {
+	color: #000000;
+	background-color: #aeadab;
+	background-image: none;
+	margin-left: 0px;
+	width: 204px;
+}
+
+
+div#main_content {
+	padding-top: 6px;
+}
+
+#main_header {
+	float: left;
+	margin-bottom: 12px;
+	margin-top: 6px;
+}
+
+#main_header_expanded {
+	float: left;
+	margin-bottom: 12px;
+}
+
+#main_pre_header {
+	color: #D4D4D4;
+	font-weight: bold;
+	margin-bottom: 5px;
+	margin-top: 0px;
+}
+
+#main_post_header {
+	margin-top: 5px;
+}
+
+
+#main_post_header a {
+	color: #D4D4D4;
+}
+
+#viewmodelinks {
+	float: right;
+	margin-top: 8px;
+	margin-left: 50px;
+	font-size: 10px;
+	text-transform: uppercase; 
+}
+
+
+.view_inactive {
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+a.view_inactive, a.view_inactive:hover, a.view_inactive:active, a.view_inactive:visited {
+	color: #cbcac5;
+}
+
+.view_active {
+	background-color: #5178a4;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+.newshr {
+	height: 1px;
+	width: 100%;
+	background-color: #363f4c;
+	clear: left;
+}
+
+.newsHeadlineBlock {
+	margin-top: 6px;
+}
+
+.newsHeadlineBlock .feed { 
+	text-align: right;
+	float: right;
+	color: #666465;
+	width: 140px;
+	overflow: hidden;
+}
+
+.newsHeadlineBlock .title a, .newsHeadlineBlock .title a:active, .newsHeadlineBlock .title a:visited {
+	color: #d4d4d4;
+	text-decoration: none;
+	outline: none;
+}
+
+.newsHeadlineBlock .title {
+	float: left;
+	clear: left;
+	margin-left: 0px;
+	width: 440px;
+	overflow: hidden;
+	margin-bottom: 6px;
+	font-weight: normal;
+	font-size: 13px;
+}
+
+.newsHeadlineBlock .title:hover {
+	color: #ffffff;
+	text-decoration: underline;
+}
+
+.newsHeadlineBlock .date {
+	float: left;
+	margin-left: 15px;
+	color: #666465;
+}
+
+.newsPostBlock {
+	margin-top: 12px;
+	margin-bottom: 12px;
+	clear: left;
+	vertical-align: top;
+	font-size: 14px;
+	color: #8c8b8a;
+}
+
+.newsPostBlock .feed {
+	margin-top: 2px;
+	color: #61696d;
+	height: 14px;
+}
+
+.newsPostBlock .headline {
+	margin-bottom: 1px;
+}
+
+.newsPostBlock .headline .date {
+	padding-top: 5px;
+	color: #61696d;
+}
+
+.newsPostBlock .headline .posttitle {
+	float: left;
+	font-weight: normal;
+	font-size: 24px;
+	width: 562px;
+}
+
+.newsPostBlock .headline .posttitle a, .newsPostBlock .headline .posttitle a:active, .newsPostBlock .headline .posttitle a:visited {
+	color: #d4d4d4;
+	text-decoration: none;
+}
+
+.newsPostBlock .headline .posttitle a:hover {
+	text-decoration: underline;
+}
+
+
+.newsPostBlock .body {
+	color: #acb2b8;
+	margin-top: 10px;
+	line-height: 20px;
+	clear: left;
+	margin-bottom: 10px;
+}
+
+.body img {
+	float: left;
+	clear: left;
+	margin-right: 12px;
+	margin-bottom: 12px;
+	border-style: none;
+}
+
+.newsControlContainer
+{
+	position: relative;
+	float: left;
+	padding: 6px;
+	padding-top: 0px;
+	margin-right: 10px;
+	height: 30px;
+	line-height: 30px;
+	top: -2px;
+}
+
+.rateUpCount
+{
+	color: #7CC5FB;
+	padding-right: 10px;
+	line-height: 30px;
+}
+
+.rateUpCount img
+{
+	vertical-align: middle;
+	padding-right: 5px;
+}
+
+.newsShare
+{
+	float: right;
+}
+
+
+.shareItemTitle
+{
+	float: left;
+}
+
+.shareItemLink
+{
+	float: left;
+	padding-left: 10px;
+}
+
+.newsPostBlock .body li {
+	margin-left: 32px;
+	margin-top:8px;
+	color: #999999;
+}
+
+
+div.autocomplete {
+	margin-top: 6px; 
+	margin-left: -5px; 
+	width: 202px;
+}
+
+
+.shacknews div.focalbox {
+	background-color:none;
+	border:1px solid #BBBBBB;
+	margin:12px;
+	margin-left:64px;
+	margin-right:64px;
+	padding:8px;
+	text-align:center;
+}
+
+.shacknews .body p {
+	margin-top: 17px;
+} 
+
+.shacknews div.focalbox img {
+	background-color:red;
+	border:none;
+	float:none;
+	line-height:0;
+	margin:0 12px 0;
+	padding:0;
+}
+
+.shacknews div.focalbox a {
+	float:none;
+	margin:0;
+	padding:0;
+}
+
+.pcgamer .body img {
+	float: none;
+	width: auto;
+	clear: both;	
+}
+.newsPostBody p
+{
+	padding-bottom: 10px;
+}
+
+body.clientNews {
+    		font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			font-size: 11px;
+	color: #FFFFFF;
+    background: linear-gradient(
+            180deg
+            , rgba(111, 134, 214, 0.1) 0%, rgba(37, 41, 49, 0) 28.69%), #242930;
+	margin: 0;
+	padding: 0;
+
+	min-width: 0;
+}
+body.clientNews h1 {
+    		font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			font-size: 14px;
+	font-weight: 500;
+	text-transform: uppercase;
+    letter-spacing: 1px;
+	color: #FFFFFF;
+	margin: 0px;
+	padding: 6px 0px 0px 8px;
+}
+body.clientNews h2 {
+	font-size: 10px;
+	color: #aab1b6;
+	font-weight: normal;
+	margin: 0px 0px 0px 8px;
+	padding: 0px;
+}
+body.clientNews .header {
+	height: 46px;
+    background: linear-gradient(90deg, #485260, #425166);
+	margin: 0px;
+	padding: 0px;
+}
+body.clientNews .header h1,
+body.clientNews .header h2,
+body.clientNews .post_header {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+body.clientNews .content {
+	margin: 0px;
+	padding: 8px;
+	padding-right: 20px;
+}
+body.clientNews .extImg {
+	float: right;
+	margin:10px;
+	background-image: url('https://community.cloudflare.steamstatic.com/public/images/skin_1/extImg_1.png');
+    background-repeat: no-repeat;
+}
+body.clientNews .linky {
+	font-size: 11px;
+	color: #FFFFFF;
+	cursor: hand;
+}
+body.clientNews ul {
+	margin: 0px 0px 10px 16px;
+	padding: 0px;
+	list-style-type: square;
+	color: #c5cace;
+}
+body.clientNews .details {
+	padding: 0px;
+	margin-top: 5px;
+	margin-right: 8px;
+	margin-bottom: 10px;
+	margin-left: 20px;
+}
+
+body.clientNews .post_title {
+    color: #9099a0;
+    font-weight: 500;
+}
+
+
+body.clientNews .post_header {
+	cursor: pointer;
+}
+body.clientNews .post_pmbutton {
+	color:#81B3DA;
+	font-size: 12px;
+	margin-right:4px;
+}
+
+body.clientNews .post_date {
+	font-size: 13px;
+}
+body.clientNews .post_content {
+	font-size: 12px;
+	padding: 12px 0px 12px 21px;
+}
+
+body.clientNews a {
+	text-decoration: underline;
+	color: #dbdbdb;
+}
+
+body.clientNews a:hover {
+	color: #ffffff;
+}

@@ -90,6 +90,7 @@ https://steamcommunity.com/public/css/skin_1/holidayprofile.css?__TIME__
 https://steamcommunity.com/public/css/skin_1/home.css?__TIME__
 https://steamcommunity.com/public/css/skin_1/login.css?__TIME__
 https://steamcommunity.com/public/css/skin_1/modalContent.css?__TIME__
+https://steamcommunity.com/public/css/skin_1/news.css?__TIME__
 https://steamcommunity.com/public/css/skin_1/openid.css?__TIME__
 https://steamcommunity.com/public/css/skin_1/parental.css?__TIME__
 https://steamcommunity.com/public/css/skin_1/playerstats_generic.css?__TIME__
