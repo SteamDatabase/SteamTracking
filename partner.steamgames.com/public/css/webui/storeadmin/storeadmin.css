@@ -3114,161 +3114,6 @@ hr {
   color: #e76e34;
 }
 
-.optin_admin_editor_MainBody_3Qmgl {
-  display: flex;
-  flex-direction: row;
-}
-.optin_admin_editor_MainBody_3Qmgl .optin_admin_editor_MainCol_1Plts {
-  width: 800px;
-}
-.optin_admin_editor_MainBody_3Qmgl .optin_admin_editor_RightCol_1hPMJ {
-  width: 376px;
-  margin-left: 24px;
-}
-.optin_admin_editor_FlexRowWrapFlexStartContainer_2DAMJ {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-}
-.optin_admin_editor_TopBarContainer_aeUyk {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  color: var(--main-text-on-light-blue);
-  box-shadow: 0 0 10px #000000;
-  background: #242424;
-  padding: 15px;
-  height: 60px;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0px;
-  z-index: 2;
-}
-.optin_admin_editor_BottomBar_1JwCy {
-  position: fixed;
-  bottom: 0;
-  width: 100vw;
-  z-index: 1;
-  background: #a2a7b1;
-  padding: 16px;
-}
-.optin_admin_editor_BottomBar_1JwCy button.DialogButton {
-  margin-right: 8px;
-}
-.optin_admin_editor_EligibleGames_1rysV {
-  padding: 12px;
-  padding-left: 30px;
-  font-size: 14px;
-  color: white;
-  text-align: left;
-  width: 500px;
-}
-.optin_admin_editor_BasicButtonSize_29w-Z {
-  max-width: 200px;
-}
-.optin_admin_editor_EditorInputPaneContents_1EuN8 {
-  width: 1200px;
-  margin: 0 auto;
-  flex-grow: 2;
-  padding-top: 20px;
-}
-.optin_admin_editor_Section_2yL7J {
-  background: #2c2e35;
-  padding: 12px;
-  margin-bottom: 30px;
-}
-.optin_admin_editor_Section_2yL7J .optin_admin_editor_SectionDesc_33_oC {
-  font-size: 14px;
-  margin-bottom: 8px;
-}
-.optin_admin_editor_RightSection_3NiRT {
-  padding: 16px;
-  background: #2c2e35;
-}
-.optin_admin_editor_EventBBCodeEditor_3UtWX {
-  resize: vertical;
-  width: calc(100% - 20px);
-  border: none;
-  outline-width: 0;
-  padding: 10px;
-  background-color: var(--main-editor-input-bg-color);
-  box-shadow: 0 0 5px #000000 inset;
-  color: var(--main-editor-text-color);
-  font-size: 14px;
-  overflow-x: hidden;
-}
-
-.partnereventshareddates_EventTimeSection_3A42j:first-child {
-  margin-bottom: 12px;
-}
-.partnereventshareddates_EventTimeSection_3A42j:last-child {
-  margin-bottom: 0px;
-}
-.partnereventshareddates_EventTimeTitle_1DbkL {
-  font-size: 11px;
-  color: #ffffff;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 3px;
-}
-.partnereventshareddates_EventVisibilityItem_2Hw5B {
-  line-height: 24px;
-}
-.partnereventshareddates_EventEditorInputPaneContainer_1a5Om
-  input.partnereventshareddates_TimeWidth_1BeX4 {
-  font-size: 15px;
-}
-.partnereventshareddates_EventPublishTimeCtn_3g1dV {
-  margin-left: 20px;
-  margin-top: 8px;
-}
-.partnereventshareddates_TimeWidth_1BeX4 {
-  max-width: 200px;
-}
-.partnereventshareddates_InputBorder_3Ph8k.partnereventshareddates_TimeBlock_2sWlU {
-  margin-right: 8px;
-}
-.partnereventshareddates_TimeRowContainer_3lMHw {
-  justify-content: flex-start;
-  padding: 10px;
-  border-radius: 3px;
-  background-color: rgba(57, 61, 71, 0.5);
-}
-.partnereventshareddates_TimeRowDropDown_3rN0R {
-  margin-top: 5px;
-  padding-top: 10px;
-  margin-bottom: 15px;
-  margin-left: 10px;
-  padding-left: 20px;
-  border-left: #399aec 1px solid;
-}
-.partnereventshareddates_TimeRowDropDown_3rN0R
-  > .partnereventshareddates_EndDateAmountCtn_3v-zR {
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 8px;
-  width: 50%;
-}
-.partnereventshareddates_TimeRowDropDown_3rN0R
-  > .partnereventshareddates_EndRound_2cYS6
-  > span {
-  margin-bottom: 0px;
-}
-.partnereventshareddates_VisibilityItemList_R6HIV {
-  display: flex;
-  flex-direction: column;
-}
-.partnereventshareddates_VisibilityItems_2p3xl {
-  padding: 10px;
-  border-radius: 3px;
-  background: rgba(57, 61, 71, 0.5);
-}
-.partnereventshareddates_EventEditorVisibilityCtn_w83r8 {
-  margin-top: 12px;
-}
-
 .emoticon_NewEmoticonIndicator_1C57N {
   background: radial-gradient(
     ellipse farthest-corner at 50% 50%,
@@ -18445,6 +18290,161 @@ img.broadcastplayer_BroadcastPlaceholderImg_1LIEZ {
   margin-bottom: 30px;
   background: #1c1d21;
   padding: 12px;
+}
+
+.optin_admin_editor_MainBody_3Qmgl {
+  display: flex;
+  flex-direction: row;
+}
+.optin_admin_editor_MainBody_3Qmgl .optin_admin_editor_MainCol_1Plts {
+  width: 800px;
+}
+.optin_admin_editor_MainBody_3Qmgl .optin_admin_editor_RightCol_1hPMJ {
+  width: 376px;
+  margin-left: 24px;
+}
+.optin_admin_editor_FlexRowWrapFlexStartContainer_2DAMJ {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.optin_admin_editor_TopBarContainer_aeUyk {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--main-text-on-light-blue);
+  box-shadow: 0 0 10px #000000;
+  background: #242424;
+  padding: 15px;
+  height: 60px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  z-index: 2;
+}
+.optin_admin_editor_BottomBar_1JwCy {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  z-index: 1;
+  background: #a2a7b1;
+  padding: 16px;
+}
+.optin_admin_editor_BottomBar_1JwCy button.DialogButton {
+  margin-right: 8px;
+}
+.optin_admin_editor_EligibleGames_1rysV {
+  padding: 12px;
+  padding-left: 30px;
+  font-size: 14px;
+  color: white;
+  text-align: left;
+  width: 500px;
+}
+.optin_admin_editor_BasicButtonSize_29w-Z {
+  max-width: 200px;
+}
+.optin_admin_editor_EditorInputPaneContents_1EuN8 {
+  width: 1200px;
+  margin: 0 auto;
+  flex-grow: 2;
+  padding-top: 20px;
+}
+.optin_admin_editor_Section_2yL7J {
+  background: #2c2e35;
+  padding: 12px;
+  margin-bottom: 30px;
+}
+.optin_admin_editor_Section_2yL7J .optin_admin_editor_SectionDesc_33_oC {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+.optin_admin_editor_RightSection_3NiRT {
+  padding: 16px;
+  background: #2c2e35;
+}
+.optin_admin_editor_EventBBCodeEditor_3UtWX {
+  resize: vertical;
+  width: calc(100% - 20px);
+  border: none;
+  outline-width: 0;
+  padding: 10px;
+  background-color: var(--main-editor-input-bg-color);
+  box-shadow: 0 0 5px #000000 inset;
+  color: var(--main-editor-text-color);
+  font-size: 14px;
+  overflow-x: hidden;
+}
+
+.partnereventshareddates_EventTimeSection_3A42j:first-child {
+  margin-bottom: 12px;
+}
+.partnereventshareddates_EventTimeSection_3A42j:last-child {
+  margin-bottom: 0px;
+}
+.partnereventshareddates_EventTimeTitle_1DbkL {
+  font-size: 11px;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 3px;
+}
+.partnereventshareddates_EventVisibilityItem_2Hw5B {
+  line-height: 24px;
+}
+.partnereventshareddates_EventEditorInputPaneContainer_1a5Om
+  input.partnereventshareddates_TimeWidth_1BeX4 {
+  font-size: 15px;
+}
+.partnereventshareddates_EventPublishTimeCtn_3g1dV {
+  margin-left: 20px;
+  margin-top: 8px;
+}
+.partnereventshareddates_TimeWidth_1BeX4 {
+  max-width: 200px;
+}
+.partnereventshareddates_InputBorder_3Ph8k.partnereventshareddates_TimeBlock_2sWlU {
+  margin-right: 8px;
+}
+.partnereventshareddates_TimeRowContainer_3lMHw {
+  justify-content: flex-start;
+  padding: 10px;
+  border-radius: 3px;
+  background-color: rgba(57, 61, 71, 0.5);
+}
+.partnereventshareddates_TimeRowDropDown_3rN0R {
+  margin-top: 5px;
+  padding-top: 10px;
+  margin-bottom: 15px;
+  margin-left: 10px;
+  padding-left: 20px;
+  border-left: #399aec 1px solid;
+}
+.partnereventshareddates_TimeRowDropDown_3rN0R
+  > .partnereventshareddates_EndDateAmountCtn_3v-zR {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 8px;
+  width: 50%;
+}
+.partnereventshareddates_TimeRowDropDown_3rN0R
+  > .partnereventshareddates_EndRound_2cYS6
+  > span {
+  margin-bottom: 0px;
+}
+.partnereventshareddates_VisibilityItemList_R6HIV {
+  display: flex;
+  flex-direction: column;
+}
+.partnereventshareddates_VisibilityItems_2p3xl {
+  padding: 10px;
+  border-radius: 3px;
+  background: rgba(57, 61, 71, 0.5);
+}
+.partnereventshareddates_EventEditorVisibilityCtn_w83r8 {
+  margin-top: 12px;
 }
 
 .optin_admin_editor_stats_DownloadRow_3h3SU {
