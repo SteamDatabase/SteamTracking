@@ -52,10 +52,14 @@ __data
 __DATA
 __thread_vars
 __DATA
+%M
+%M
 __thread_bss
 __DATA
+%M
 __common
 __DATA
+)M
 __bss
 __DATA
 H
@@ -66,10 +70,9 @@ __LINKEDIT
 @loader_path/panorama.dylib
 "
 0M
-8?M
+@?M
 `]
 9n
-xU
 P
 
 8
@@ -141,7 +144,7 @@ h
 /usr/lib/libobjc.A.dylib
 &
 )
-@N
+HN
 3
 3
 
@@ -158,7 +161,6 @@ U2
 3
 D
 (2
-%"
 #2
 @
 8
@@ -2806,6 +2808,7 @@ PDP MK X Fight Stick
 PDP Xbox 360 Marvel Controller
 PDP Xbox 360 Controller
 SteelSeries Stratus Duo
+Amazon Luna Gamepad
 Xbox One Controller
 Xbox One S Controller
 Xbox One Series X Controller
@@ -5104,8 +5107,8 @@ linux
 Linux;tenfoot
 X-ValveUserAgent
 panorama %s %s
-Apr  7 2021
-18:39:06
+Apr  9 2021
+16:23:02
 X-SteamClientVersion
 Assertion Failed: hostName
 Assertion Failed: pchRemoteHost
@@ -7682,22 +7685,22 @@ U2
 3
 D
 (2
-%"
 #2
-OL
+S'
+oL
+K
 2
 2
-gK
 @
+l"
 J
-l!
-?"
 *1
-'"
+"
 "
 "
 mH
 '
+"
 1
 1
 1
@@ -7707,39 +7710,43 @@ mH
 !
 !
 '
-hK
 &
 &
 b0
+'J
+1
+!
 !
 &
 %
+X%
 %
+%$
 VF
-@I
+kG
 $
 $
+\H
 .
 $
 #
 #
-f#
-#
+C#
 #
 -
 5-
-QG
+uG
 O
 2
 2
 ,
 t1Mcu
-D,
 ?
 ,
+/
 .
 %
-N+
+X&
 r
 @
 @
@@ -7747,13 +7754,13 @@ r
 @
 @
 @
-k-
+s*
 A
 A
 A
 ,
 %
-E)
+~)
 H
 @
 @
@@ -7770,24 +7777,22 @@ H
 *
 @
 @
-0)
-n(
 )
 )
 )
-V(
 H=
-,(
-I?
+V?
+(
 ?
-C#
 *
 *
 P
 +
 +
 +
-/(
+2(
+n'
++"
 "
 "
 *
@@ -7821,7 +7826,6 @@ $
 >
 >
 ?
-%%
 @
 @
 @
@@ -7833,7 +7837,6 @@ $
 $
 ?
 $
-|#
 @
 @
 @
@@ -7852,18 +7855,16 @@ $
 u;
 @
 P
-D"
 (
 (
 P
-Z!
-L!
+N!
+S!
 A
 A
 A
 A
 (
-d$
 :
 @
 @
@@ -7875,19 +7876,18 @@ A
 A
 A
 A
-8#
+:
 !
 !
+C
 0
 p
 8
-+!
-!
+*!
 !
 !
 ]
 @
-c3
 @
 0
 p
@@ -7897,12 +7897,12 @@ p
 5
 2
 =
+1
 P2
 Hi
 2
 1
 x1
-/
 @
 @
 
@@ -7959,7 +7959,6 @@ x1
 @
 @
 @
-7+
 @
 @
 @
@@ -7982,7 +7981,6 @@ x1
 @
 @
 @
-)+
 @
 @
 @
@@ -8257,6 +8255,7 @@ s.
 E
 @
 @
+(
 @
 @
 =
@@ -8266,6 +8265,7 @@ E
 @
 @
 @
+W'
 @
 @
 @
@@ -8296,6 +8296,7 @@ E
 @
 @
 @
+J'
 @
 @
 @
@@ -8339,8 +8340,8 @@ E
 A
 P(
 Hc
-C%
 =
+}
 f(
 
 
@@ -8355,12 +8356,13 @@ L95&Z&
 L95
 M&
 Hc
-}
+z
+b
+P
+=
+.
 
 
-g
-
-B
 
 
 
@@ -8413,13 +8415,13 @@ i[
 ~
 B
 ?
+Z
 E
 I;E
 I;E
 B
 ?
 `
-G
 `
 !
 A
