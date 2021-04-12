@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6466492";
+var CLSTAMP = "6485367";
 !(function (e) {
   function t(t) {
     for (
@@ -119,8 +119,8 @@ var CLSTAMP = "6466492";
               ".js?contenthash=" +
               {
                 9: "abd716bb6bb7cebbe238",
-                10: "ceff6effe1609283f99c",
-                11: "ca15ccdedf43bef144e3",
+                10: "e58c8467fe35f316eaa0",
+                11: "6d193daa461486fc1340",
                 12: "b8d6d93f224090794a9e",
                 13: "1097496cace1b964cd8c",
                 14: "f3de9df81f0cecbe9385",
@@ -131,7 +131,7 @@ var CLSTAMP = "6466492";
                 19: "1d22e1c85189a7bf2f98",
                 20: "68ed1bcdbe36edb5a871",
                 21: "28e2f33a17ec9205d67a",
-                22: "766d7db1987dd7c778ef",
+                22: "b56e1916a5bc4340b2d4",
                 23: "3267374cd7485ae8e90b",
                 24: "ede78306707e4d6f826c",
                 25: "0c6329820c7fc3621ef0",
@@ -140,43 +140,43 @@ var CLSTAMP = "6466492";
                 28: "e9457449677d3f39289e",
                 29: "f77c0185fc9f074b644f",
                 30: "463059d9001862988cbb",
-                31: "fa3a24f5bf60915e2981",
+                31: "3f99ac99e154dbe45a63",
                 32: "51482d30f9fffe042289",
                 33: "9da43b10d468662a968d",
                 34: "a082c6e02d47d1e7c679",
                 35: "fb3ad354f4108afbfe84",
-                36: "bb4d5bb34a6d6887b32e",
+                36: "cc6c55fdeeb6dbf682c8",
                 37: "9f9bedba116aceef6c7c",
                 38: "da7e6c633725ba8f9063",
                 39: "dd555942eeebcf691e37",
-                40: "ac18c86b6388f70c25a9",
-                41: "b1751f9d42a92330b20d",
+                40: "8d6eb86d91b9a2304633",
+                41: "a28490273a0296664e9b",
                 42: "9057de6ee48dd83a16b4",
                 43: "932062ca165ab8eef4f6",
                 44: "f53cad71e6556c69ed3e",
                 45: "0786c2e1ea073d7bbfa8",
                 46: "ffdd76b6182030dac01f",
-                47: "5d796f842a2bcc1a17b2",
+                47: "8223dec588e2a7db6076",
                 48: "2561789e0b7233cc3cbb",
-                49: "26893413deb69e3b783d",
-                50: "db9999eb6b10536e2a94",
+                49: "7af7515a084944921ab3",
+                50: "96d2ee7747f8f2f4a872",
                 51: "873d35ee81c2d216e067",
                 52: "e775af45654db6768eb8",
                 53: "4d0ced6c5e0fa15c8cbf",
                 54: "68553d8b79de48fb1218",
                 55: "282da5ea7d106ee7cda8",
-                56: "31eb1e841c29303b7095",
+                56: "137894649d359321caf0",
                 57: "43f09a3ea59ed83d7789",
                 58: "d539553f8a41e637245c",
-                59: "5c08ac1125339af65f28",
+                59: "b623255ed4c89728dfe9",
                 60: "af887dfdca6cad098c67",
-                61: "a1e7ae90fb474ffab5a9",
+                61: "5675d4abc756d5a55ccb",
                 62: "4802a4285a5071259ce0",
                 63: "5d8b673515e46edcd6fe",
                 64: "a3346bef76cccb0eb02d",
                 65: "8e5034b31b783d1e6f02",
                 66: "5c5ddb6d38aaf74e5242",
-                67: "b07137e291d20d88ae78",
+                67: "53dd8e0737870ae315f6",
                 68: "8035765c14d6bc4db593",
               }[e]
             );
@@ -1870,7 +1870,8 @@ var CLSTAMP = "6466492";
     })(u || (u = {}));
     var l;
     !(function (e) {
-      (e[(e.Invalid = -1)] = "Invalid"),
+      (e[(e.Error = -2)] = "Error"),
+        (e[(e.Invalid = -1)] = "Invalid"),
         (e[(e.UpToDate = 0)] = "UpToDate"),
         (e[(e.Checking = 1)] = "Checking"),
         (e[(e.Available = 2)] = "Available"),

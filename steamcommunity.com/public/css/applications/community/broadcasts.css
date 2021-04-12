@@ -137,21 +137,6 @@
   margin: 0px 24px;
 }
 
-.broadcastsupport_AdminControls_3KL0b {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin: 24px;
-  padding: 4px;
-  align-items: center;
-}
-.broadcastsupport_AdminControls_3KL0b > button {
-  width: fit-content;
-  padding: 0px 8px;
-  white-space: nowrap;
-  margin-left: 4px;
-}
-
 .steamavatar_avatarHolder_nibod {
   height: 36px;
   width: 36px;
@@ -356,4 +341,19 @@
   .broadcastprofile_StreamDetailsCtn_11FAt {
     margin-left: 0px;
   }
+}
+
+.broadcastsupport_AdminControls_3KL0b {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 24px;
+  padding: 4px;
+  align-items: center;
+}
+.broadcastsupport_AdminControls_3KL0b > button {
+  width: fit-content;
+  padding: 0px 8px;
+  white-space: nowrap;
+  margin-left: 4px;
 }

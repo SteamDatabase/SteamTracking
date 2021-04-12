@@ -249,6 +249,11 @@
   height: calc((100vw - 340px) * (9 / 16));
   padding-right: 340px;
 }
+.broadcast_embeddable_video_placeholder_1SEbs.broadcast_embeddable_NoChat_39rGG,
+.broadcast_embeddable_embedded_player_18GxZ.broadcast_embeddable_NoChat_39rGG {
+  height: calc((100vw) * (9 / 16));
+  padding-right: unset;
+}
 
 .broadcast_embeddable_video_container_LI8xJ {
   height: 100%;

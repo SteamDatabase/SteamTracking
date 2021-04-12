@@ -10069,6 +10069,7 @@
         side_panels: "broadcast_embeddable_side_panels_T_zpR",
         multistream: "broadcast_embeddable_multistream_1DS-W",
         wrapper: "broadcast_embeddable_wrapper_1mH-v",
+        NoChat: "broadcast_embeddable_NoChat_2QQm1",
         video_container: "broadcast_embeddable_video_container_1gbNx",
         viewer_links: "broadcast_embeddable_viewer_links_2EQpO",
         chat_link: "broadcast_embeddable_chat_link_3a0zX",
