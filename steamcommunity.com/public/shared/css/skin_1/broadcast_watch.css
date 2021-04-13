@@ -1685,6 +1685,10 @@ body.v6 .store_broadcast_title .broadcast_live_stream_icon {
 html.responsive body.broadcast_watch_page .responsive_page_template_content {
 	padding-bottom: 0;
 }
+html.responsive body.broadcast_watch_iframe_page .responsive_page_template_content {
+    padding-bottom: 0;
+    min-height:unset;
+}
 
 @media screen and (max-aspect-ratio: 10/9),
 	screen and (max-width: 910px)
