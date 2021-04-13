@@ -1688,6 +1688,7 @@ html.responsive body.broadcast_watch_page .responsive_page_template_content {
 html.responsive body.broadcast_watch_iframe_page .responsive_page_template_content {
     padding-bottom: 0;
     min-height:unset;
+    overflow:hidden;
 }
 
 @media screen and (max-aspect-ratio: 10/9),
