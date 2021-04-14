@@ -10,7 +10,7 @@ SellOrderPopup = {
 						<include src="https://community.cloudflare.steamstatic.com/public/css/bigpicture/market_selldialog.css?v=valveisgoodatcaching&amp;_cdn=cloudflare" /> \
 					</styles> \
 					<scripts> \
-						<include src="" /> \
+						<include src="https://community.cloudflare.steamstatic.com/public/shared/javascript/bigpicture/base.js?v=valveisgoodatcaching&amp;l=english&amp;_cdn=cloudflare" /> \
 						<include src="https://community.cloudflare.steamstatic.com/public/javascript/bigpicture/market_buyorderdialog.js?v=valveisgoodatcaching&amp;l=english&amp;_cdn=cloudflare" /> \
 					</scripts> \
 					<Panel class="MarketPopupWrapper Complete"> \
