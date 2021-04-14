@@ -1090,6 +1090,7 @@ span.partnereventeditor_RequiredFieldLabel_11TnL {
 
 .facetedbrowseeditor_FacetValueCtn_btRSv div {
   flex-grow: 1;
+  flex-basis: 100%;
   margin-left: 4px;
   margin-right: 4px;
 }
@@ -2683,6 +2684,7 @@ p a:hover {
 .partnereventartwork_SelectImageLanguagesCtn_2vu5Q {
   margin-left: 8px;
   width: 400px;
+  background-color: #25282e;
 }
 
 .partnereventartwork_SelectImageTitle_1m6cv {
@@ -3206,4 +3208,11 @@ p a:hover {
 
 .partnereventdescriptiontab_DescEditorPadding_3mLVV {
   padding-top: 15px;
+}
+
+.partnereventsavebutton_SavedImage_1y3QV {
+  height: 12px;
+  width: 12px;
+  padding-top: 3px;
+  padding-right: 5px;
 }

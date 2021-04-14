@@ -6,11 +6,11 @@
     "3WEt": function (e, t, a) {
       "use strict";
       a.r(t);
-      var o,
-        n,
+      var r,
+        i,
         u = a("mrSG"),
-        r = a("lkRc"),
-        i = a("TyAF"),
+        o = a("lkRc"),
+        n = a("TyAF"),
         s = a("2vnA"),
         c = a("q1tI"),
         P = a.n(c),
@@ -24,58 +24,57 @@
         m = a.n(d),
         p = a("vDqi"),
         _ = a.n(p);
-      ((n = o = o || {})[(n.Unrequested = 0)] = "Unrequested"),
-        (n[(n.Pending = 1)] = "Pending"),
-        (n[(n.Valid = 2)] = "Valid"),
-        (n[(n.Failed = 3)] = "Failed"),
-        (n[(n.Rerequest = 4)] = "Rerequest");
+      ((i = r = r || {})[(i.Unrequested = 0)] = "Unrequested"),
+        (i[(i.Pending = 1)] = "Pending"),
+        (i[(i.Valid = 2)] = "Valid"),
+        (i[(i.Failed = 3)] = "Failed"),
+        (i[(i.Rerequest = 4)] = "Rerequest");
       var h,
         g,
         v = (function () {
           function e() {
-            (this.eState = o.Unrequested), (this.nExpirationTime = 0);
+            (this.eState = r.Unrequested), (this.nExpirationTime = 0);
           }
           return (
-            (e.prototype.getData = function (t, a, n) {
-              var i = this,
-                r = Date.now() / 1e3,
-                e = this.eState == o.Pending || this.eState == o.Rerequest;
+            (e.prototype.getData = function (t, a, i) {
+              var n = this,
+                e = this.eState == r.Pending || this.eState == r.Rerequest;
               return (
-                r >= this.nExpirationTime &&
+                this.isExpired() &&
                   !e &&
-                  ((this.eState = o.Pending),
+                  ((this.eState = r.Pending),
                   a().then(function (e) {
-                    return i.eState == o.Rerequest
-                      ? (i.expireData(), void i.getData(t, a, n))
+                    return n.eState == r.Rerequest
+                      ? (n.expireData(), void n.getData(t, a, i))
                       : void (e
-                          ? ((i.data = n ? n(e) : e),
-                            (i.nExpirationTime = r + t),
-                            (i.eState = o.Valid))
-                          : (i.eState = o.Failed));
+                          ? ((n.data = i ? i(e) : e),
+                            n.delayNewData(t),
+                            (n.eState = r.Valid))
+                          : (n.eState = r.Failed));
                   })),
                 this.data
               );
             }),
             (e.prototype.clearData = function () {
-              var e = Date.now() / 1e3;
-              (this.eState = o.Unrequested),
+              (this.eState = r.Unrequested),
                 (this.data = null),
-                (this.nExpirationTime = e);
+                (this.nExpirationTime = 0);
             }),
             (e.prototype.expireData = function () {
-              var e = Date.now() / 1e3;
-              this.nExpirationTime = e;
+              this.nExpirationTime = 0;
             }),
             (e.prototype.isExpired = function () {
               var e = Date.now() / 1e3;
               return this.nExpirationTime < e;
             }),
             (e.prototype.delayNewData = function (e) {
-              var t = Date.now() / 1e3;
-              this.nExpirationTime = t + e;
+              var t;
+              e <= 0
+                ? (this.nExpirationTime = Number.MAX_SAFE_INTEGER)
+                : ((t = Date.now() / 1e3), (this.nExpirationTime = t + e));
             }),
             (e.prototype.rerequestDataIfPending = function () {
-              this.eState == o.Pending && (this.eState = o.Rerequest);
+              this.eState == r.Pending && (this.eState = r.Rerequest);
             }),
             Object(u.c)([s.C], e.prototype, "data", void 0),
             Object(u.c)([s.C], e.prototype, "nExpirationTime", void 0),
@@ -221,12 +220,12 @@
               )
             );
           }),
-          (e.prototype.getResults = function (e, t, a, n) {
-            var i = this,
+          (e.prototype.getResults = function (e, t, a, i) {
+            var n = this,
               r = e ? "1" : "0",
               o = t ? "" + t : "0",
               s = a ? "1" : "0",
-              c = n ? "" + n : "0",
+              c = i ? "" + i : "0",
               l = "",
               d = this.getInputApps();
             if (d) {
@@ -239,7 +238,7 @@
                 this.m_ResultDataCache.getData(
                   9999999,
                   function () {
-                    return Object(u.b)(i, void 0, void 0, function () {
+                    return Object(u.b)(n, void 0, void 0, function () {
                       return Object(u.e)(this, function (e) {
                         switch (e.label) {
                           case 0:
@@ -331,11 +330,11 @@
             return e ? e.app_info : void 0;
           }),
           (e.prototype.getTags = function () {
-            var i = this;
+            var n = this;
             return this.m_TagsCache.getData(
               9999999,
               function () {
-                return Object(u.b)(i, void 0, void 0, function () {
+                return Object(u.b)(n, void 0, void 0, function () {
                   return Object(u.e)(this, function (e) {
                     switch (e.label) {
                       case 0:
@@ -356,10 +355,10 @@
                 });
               },
               function (e) {
-                i.m_TagNameMap.clear();
+                n.m_TagNameMap.clear();
                 for (var t = 0, a = e.data; t < a.length; t++) {
-                  var n = a[t];
-                  i.m_TagNameMap.set(n.tagid, n.name);
+                  var i = a[t];
+                  n.m_TagNameMap.set(i.tagid, i.name);
                 }
                 return e.data;
               }
@@ -404,15 +403,15 @@
           }),
           (e.prototype.doTagsPassFilter = function (e) {
             for (var t = 0, a = this.m_rgFilterTags; t < a.length; t++) {
-              var n = a[t];
-              if (-1 == e.indexOf(n)) return !1;
+              var i = a[t];
+              if (-1 == e.indexOf(i)) return !1;
             }
             return !0;
           }),
           (e.prototype.doTagsFailExclusion = function (e) {
             for (var t = 0, a = this.m_rgExcludeTags; t < a.length; t++) {
-              var n = a[t];
-              if (-1 != e.indexOf(n)) return !0;
+              var i = a[t];
+              if (-1 != e.indexOf(i)) return !0;
             }
             return !1;
           }),
@@ -422,16 +421,16 @@
           }),
           (e.prototype.onSaveUserSettings = function (e) {
             return Object(u.b)(this, void 0, void 0, function () {
-              var t, a, n, i, r, o;
+              var t, a, i, n, r, o;
               return Object(u.e)(this, function (e) {
                 switch (e.label) {
                   case 0:
                     for (
-                      t = [], a = this.getInputApps(), n = 0, i = a;
-                      n < i.length;
-                      n++
+                      t = [], a = this.getInputApps(), i = 0, n = a;
+                      i < n.length;
+                      i++
                     )
-                      ((r = i[n]).i || r.ip) && t.push(r.a);
+                      ((r = n[i]).i || r.ip) && t.push(r.a);
                     return this.m_fRecencyValue != k.DEFAULT_RECENCY_SLIDER ||
                       this.m_fPopularityValue != k.DEFAULT_POPULARITY_SLIDER ||
                       this.m_rgFilterTags.slice().sort().join(",") !==
@@ -491,11 +490,11 @@
           }),
           (e.prototype.onToggleIgnore = function (r) {
             return Object(u.b)(this, void 0, void 0, function () {
-              var t, a, n, i;
+              var t, a, i, n;
               return Object(u.e)(this, function (e) {
-                for (t = this.getInputApps(), a = 0, n = t; a < n.length; a++)
-                  if ((i = n[a]).a == r) {
-                    i.i || i.ip ? ((i.i = !1), (i.ip = !1)) : (i.ip = !0);
+                for (t = this.getInputApps(), a = 0, i = t; a < i.length; a++)
+                  if ((n = i[a]).a == r) {
+                    n.i || n.ip ? ((n.i = !1), (n.ip = !1)) : (n.ip = !0);
                     break;
                   }
                 return (
@@ -509,7 +508,7 @@
           (e.prototype.onUpdateWithIgnored = function () {
             this.m_ResultDataCache.expireData(), (this.m_bIgnoredEdited = !1);
           }),
-          (e.prototype.onAppClicked = function (a, n) {
+          (e.prototype.onAppClicked = function (a, i) {
             return Object(u.b)(this, void 0, void 0, function () {
               var t;
               return Object(u.e)(this, function (e) {
@@ -520,7 +519,7 @@
                         account_id: k.ACCOUNT_ID,
                         session_id: k.SESSION_ID,
                         app_id: a,
-                        app_rank: n,
+                        app_rank: i,
                         action: h.ClickThrough,
                         algorithm: 1,
                         setting_1: 100 * this.m_fPopularityValue,
@@ -540,15 +539,15 @@
               });
             });
           }),
-          (e.prototype.onAddToWishlist = function (i, r) {
+          (e.prototype.onAddToWishlist = function (n, r) {
             return Object(u.b)(this, void 0, void 0, function () {
-              var t, a, n;
+              var t, a, i;
               return Object(u.e)(this, function (e) {
                 switch (e.label) {
                   case 0:
                     return (
-                      (V.getAppInfo()[i].w = !0),
-                      (t = { sessionid: k.SESSION_ID, appid: i }),
+                      (V.getAppInfo()[n].w = !0),
+                      (t = { sessionid: k.SESSION_ID, appid: n }),
                       [
                         4,
                         _.a.post(
@@ -564,10 +563,10 @@
                   case 1:
                     return (
                       (a = e.sent()),
-                      (n = {
+                      (i = {
                         account_id: k.ACCOUNT_ID,
                         session_id: k.SESSION_ID,
-                        app_id: i,
+                        app_id: n,
                         app_rank: r,
                         action: h.AddToWishlist,
                         algorithm: 1,
@@ -578,7 +577,7 @@
                         4,
                         _.a.post(
                           k.BASE_URL + "recommender/" + k.STEAM_ID + "/stats",
-                          n
+                          i
                         ),
                       ]
                     );
@@ -592,14 +591,14 @@
             window.location.href =
               k.COMMUNITY_BASE_URL + "profiles/" + k.STEAM_ID + "/wishlist";
           }),
-          (e.prototype.onAddToCart = function (n, i) {
+          (e.prototype.onAddToCart = function (i, n) {
             return Object(u.b)(this, void 0, void 0, function () {
               var t, a;
               return Object(u.e)(this, function (e) {
                 switch (e.label) {
                   case 0:
                     return (
-                      (t = { sessionid: k.SESSION_ID, appid: n }),
+                      (t = { sessionid: k.SESSION_ID, appid: i }),
                       [
                         4,
                         _.a.post(
@@ -618,8 +617,8 @@
                       (a = {
                         account_id: k.ACCOUNT_ID,
                         session_id: k.SESSION_ID,
-                        app_id: n,
-                        app_rank: i,
+                        app_id: i,
+                        app_rank: n,
                         action: h.AddToCart,
                         algorithm: 1,
                         setting_1: 100 * this.m_fPopularityValue,
@@ -636,7 +635,7 @@
                   case 2:
                     return (
                       e.sent(),
-                      (window.location.href = r.d.STORE_BASE_URL + "cart"),
+                      (window.location.href = o.d.STORE_BASE_URL + "cart"),
                       [2]
                     );
                 }
@@ -692,16 +691,16 @@
       window.g_InteractiveRecommender = V;
       var E,
         f = a("BFsE");
-      (E = Object(r.h)("ir_config", "application_config")) &&
+      (E = Object(o.h)("ir_config", "application_config")) &&
         (Object.assign(k, E), V.Init());
       function b(e) {
         e.accountID;
         var t = V.getInputApps(),
           a = Object.keys(t).length,
-          n = 0;
+          i = 0;
         return (
           Object.keys(t).map(function (e) {
-            n += t[e].p;
+            i += t[e].p;
           }),
           P.a.createElement(
             "div",
@@ -726,7 +725,7 @@
               P.a.createElement(
                 "div",
                 { className: F.TotalTime },
-                Object(x.f)("#PlaytimeList_HoursTotal", n)
+                Object(x.f)("#PlaytimeList_HoursTotal", i)
               )
             )
           )
@@ -735,17 +734,17 @@
       function S(e) {
         var t = e.appID,
           a = e.name,
-          n = e.hours,
-          i = e.lastPlayed,
+          i = e.hours,
+          n = e.lastPlayed,
           r = e.ignored,
           o = k.CDN_URL + "apps/" + t + "/header.jpg",
-          s = Date.now() / 1e3 - i,
+          s = Date.now() / 1e3 - n,
           c = "",
           l = "",
           l =
-            i <= 86400
+            n <= 86400
               ? Object(x.f)("#PlaytimeList_LastPlayedMax")
-              : ((c = 31449600 < s ? Object(x.o)(i) : Object(x.q)(s)),
+              : ((c = 31449600 < s ? Object(x.o)(n) : Object(x.q)(s)),
                 Object(x.f)("#PlaytimeList_LastPlayed", c));
         return P.a.createElement(
           "div",
@@ -761,7 +760,7 @@
             P.a.createElement(
               "div",
               { className: F.HoursPlayed },
-              Object(x.f)("#PlaytimeList_Hours", n)
+              Object(x.f)("#PlaytimeList_Hours", i)
             ),
             P.a.createElement("div", { className: F.Title }, a),
             P.a.createElement("div", { className: F.LastPlayed }, l),
@@ -781,13 +780,13 @@
       function y(e) {
         var t = e.titleLabel,
           a = e.minLabel,
-          n = e.maxLabel,
-          i = e.minValue,
+          i = e.maxLabel,
+          n = e.minValue,
           r = e.maxValue,
           o = e.value,
           s = e.onChange,
           c = e.sliderLabels,
-          l = c ? Math.round((c.length - 1) * ((o - i) / (r - i))) : void 0,
+          l = c ? Math.round((c.length - 1) * ((o - n) / (r - n))) : void 0,
           d = c ? c[l] : "";
         return P.a.createElement(
           "div",
@@ -797,13 +796,13 @@
             "div",
             { className: F.Labels },
             P.a.createElement("div", { className: F.Min }, a),
-            P.a.createElement("div", { className: F.Max }, n)
+            P.a.createElement("div", { className: F.Max }, i)
           ),
           P.a.createElement("input", {
             type: "range",
-            min: i,
+            min: n,
             max: r,
-            step: (r - i) / 100,
+            step: (r - n) / 100,
             value: o,
             onChange: s,
           }),
@@ -813,16 +812,16 @@
       function T(e) {
         var t = e.className,
           a = e.titleLabel,
-          n = e.checked,
-          i = e.onChange;
+          i = e.checked,
+          n = e.onChange;
         return P.a.createElement(
           "label",
           { className: Object(M.a)(F.OptionCheckbox, t && t) },
           P.a.createElement("input", {
             type: "checkbox",
             className: F.Checkbox,
-            checked: n,
-            onChange: i,
+            checked: i,
+            onChange: n,
           }),
           a
         );
@@ -849,12 +848,12 @@
                   P.a.createElement("div", { className: F.Loading })
                 );
               V.getAppInfo();
-              var n = e.slice().sort(function (e, t) {
+              var i = e.slice().sort(function (e, t) {
                 return t.l - e.l;
               });
               return (
-                Object.keys(n).map(function (e) {
-                  var t = n[e];
+                Object.keys(i).map(function (e) {
+                  var t = i[e];
                   a.push(
                     P.a.createElement(S, {
                       key: "PlayedGame_" + t.a,
@@ -879,7 +878,7 @@
                 )
               );
             }),
-            (e = Object(u.c)([i.a], e))
+            (e = Object(u.c)([n.a], e))
           );
         })(P.a.Component),
         R = (function (a) {
@@ -899,20 +898,20 @@
               var e = V.getTags();
               if (e)
                 for (var t = 0, a = e; t < a.length; t++) {
-                  var n = a[t];
-                  this.rgTags.push({ id: parseInt(n.tagid), name: n.name });
+                  var i = a[t];
+                  this.rgTags.push({ id: parseInt(i.tagid), name: i.name });
                 }
             }),
             (e.prototype.onFetchRequested = function (e) {
               var t = e.value.trim().toLowerCase(),
                 a = t.length,
-                n =
+                i =
                   0 === a
                     ? this.props.tagoptions.slice(0, 10)
                     : this.props.tagoptions.filter(function (e) {
                         return e.name.toLowerCase().slice(0, a) === t;
                       });
-              this.setState({ suggestions: n });
+              this.setState({ suggestions: i });
             }),
             (e.prototype.onClearRequested = function () {}),
             (e.prototype.onChange = function (e, t) {
@@ -921,16 +920,16 @@
             (e.prototype.onKeyDown = function (e) {
               if (13 == e.keyCode)
                 for (var t = 0, a = this.props.tagoptions; t < a.length; t++) {
-                  var n = a[t];
-                  if (n.name.toLowerCase() == this.state.value.toLowerCase()) {
-                    var i = {
-                      suggestion: { id: n.id, name: n.name },
-                      suggestionValue: n.name,
+                  var i = a[t];
+                  if (i.name.toLowerCase() == this.state.value.toLowerCase()) {
+                    var n = {
+                      suggestion: { id: i.id, name: i.name },
+                      suggestionValue: i.name,
                       suggestionIndex: 0,
                       sectionIndex: 0,
                       method: "enter",
                     };
-                    this.onSuggestionSelected(e, i);
+                    this.onSuggestionSelected(e, n);
                     break;
                   }
                 }
@@ -939,8 +938,8 @@
               return !0;
             }),
             (e.prototype.onSuggestionSelected = function (e, t) {
-              for (var a = 0, n = this.selectedtags; a < n.length; a++) {
-                if (n[a] == t.suggestion.id) return;
+              for (var a = 0, i = this.selectedtags; a < i.length; a++) {
+                if (i[a] == t.suggestion.id) return;
               }
               this.selectedtags.push(t.suggestion.id),
                 this.props.onAddTag(t.suggestion.id);
@@ -962,15 +961,15 @@
                     onChange: this.onChange,
                     onKeyDown: this.onKeyDown,
                   },
-                  n = [],
+                  i = [],
                   t = 0,
-                  i = this.selectedtags;
-                t < i.length;
+                  n = this.selectedtags;
+                t < n.length;
                 t++
               ) {
                 !(function (t) {
                   var e = V.m_TagNameMap.get(t);
-                  n.push(
+                  i.push(
                     P.a.createElement(
                       "div",
                       {
@@ -984,7 +983,7 @@
                       P.a.createElement("div", { className: F.Close }, "X")
                     )
                   );
-                })(i[t]);
+                })(n[t]);
               }
               return P.a.createElement(
                 "div",
@@ -1014,7 +1013,7 @@
                     suggestionsContainerOpen: F.SuggestionContainerOpen,
                   },
                 }),
-                n
+                i
               );
             }),
             Object(u.c)([s.C], e.prototype, "selectedtags", void 0),
@@ -1025,16 +1024,16 @@
             Object(u.c)([l.a], e.prototype, "shouldRenderSuggestions", null),
             Object(u.c)([l.a], e.prototype, "onSuggestionSelected", null),
             Object(u.c)([l.a], e.prototype, "onRemoveSelectedTag", null),
-            (e = Object(u.c)([i.a], e))
+            (e = Object(u.c)([n.a], e))
           );
         })(P.a.Component),
-        j = Object(i.a)(function () {
+        j = Object(n.a)(function () {
           var e = V.getTags(),
             t = [];
           if (e)
-            for (var a = 0, n = e; a < n.length; a++) {
-              var i = n[a];
-              t.push({ id: parseInt(i.tagid), name: i.name });
+            for (var a = 0, i = e; a < i.length; a++) {
+              var n = i[a];
+              t.push({ id: parseInt(n.tagid), name: n.name });
             }
           var r = [
               Object(x.f)("#FilterAge_120"),
@@ -1179,8 +1178,8 @@
               var t = this,
                 e = this.props,
                 a = e.appID,
-                n = e.score,
-                i = e.rank,
+                i = e.score,
+                n = e.rank,
                 r = e.width,
                 o =
                   "https://steamcdn-a.akamaihd.net/steam/apps/" +
@@ -1219,15 +1218,15 @@
               r < h ? (E = !(v = 66)) : r < g && (E = !(v = 87));
               var f,
                 b = E && this.state.hovered,
-                S = Math.min(Number(n) / 10, 1e3),
-                y = (Math.max(1, n), !1),
+                S = Math.min(Number(i) / 10, 1e3),
+                y = (Math.max(1, i), !1),
                 T = !1,
                 O = !0,
                 R = "",
                 N = "",
+                I = "",
                 L = "",
                 C = "",
-                I = "",
                 A = !1,
                 j = !0;
               !b ||
@@ -1240,16 +1239,16 @@
                     .createElement("video")
                     .canPlayType('video/webm; codecs="vp8, vorbis"')
                     ? V.shouldUseMicrotrailers() && f.microtrailer_webm
-                      ? ((I = f.microtrailer_webm), (j = !(A = !0)))
-                      : (I = f.video_webm)
+                      ? ((C = f.microtrailer_webm), (j = !(A = !0)))
+                      : (C = f.video_webm)
                     : V.shouldUseMicrotrailers() && f.microtrailer_mp4
-                    ? ((I = f.microtrailer_mp4), (j = !(A = !0)))
-                    : (I = f.video_mp4),
+                    ? ((C = f.microtrailer_mp4), (j = !(A = !0)))
+                    : (C = f.video_mp4),
                   (R = "-" + f.discount_pct + "%"),
                   (N = f.base_price),
-                  (L = O ? Object(x.f)("#FreeToPlay") : f.discount_price),
-                  (C = f.description)));
-              var D = I && 0 < I.length;
+                  (I = O ? Object(x.f)("#FreeToPlay") : f.discount_price),
+                  (L = f.description)));
+              var D = C && 0 < C.length;
               return P.a.createElement(
                 U.a,
                 { appID: a, snr: k.LINK_PARAM },
@@ -1258,16 +1257,16 @@
                   {
                     href: k.BASE_URL + "app/" + a + "?snr=" + k.LINK_PARAM,
                     onClick: function () {
-                      return V.onAppClicked(a, i);
+                      return V.onAppClicked(a, n);
                     },
                     className: Object(M.a)(
                       F.RecommendationEntry,
                       "ds_flagged",
                       "ds_wishlist",
-                      30 < i && F.Hidden,
+                      30 < n && F.Hidden,
                       b && F.Hovered
                     ),
-                    style: { top: Math.min(31, i) * v },
+                    style: { top: Math.min(31, n) * v },
                     onMouseEnter: this.OnHover,
                     onMouseLeave: this.OnUnHover,
                   },
@@ -1295,7 +1294,7 @@
                         playsInline: !0,
                         autoPlay: !0,
                         muted: j && V.shouldMute(),
-                        src: I,
+                        src: C,
                         loop: A,
                       }),
                       j &&
@@ -1362,7 +1361,7 @@
                               !b && F.Hidden
                             ),
                           },
-                          C
+                          L
                         )
                       ),
                       y &&
@@ -1408,7 +1407,7 @@
                                     P.a.createElement(
                                       "div",
                                       { className: "discount_final_price" },
-                                      L
+                                      I
                                     )
                                   )
                                 ),
@@ -1422,7 +1421,7 @@
                                       F.Price
                                     ),
                                   },
-                                  L
+                                  I
                                 ),
                               !O &&
                                 P.a.createElement(
@@ -1511,7 +1510,7 @@
             Object(u.c)([l.a], e.prototype, "onAddToWishlist", null),
             Object(u.c)([l.a], e.prototype, "onGoToWishlist", null),
             Object(u.c)([l.a], e.prototype, "onAddToCart", null),
-            (e = Object(u.c)([i.a], e))
+            (e = Object(u.c)([n.a], e))
           );
         })(P.a.Component),
         N = (function (a) {
@@ -1525,18 +1524,18 @@
               var e = V.m_fRecencyValue * (k.NUM_RECENCY_STEPS - 1 - 0.001),
                 t = Math.floor(e),
                 a = t + 1,
-                n = 1 - (e - t),
-                i = 1 - n,
+                i = 1 - (e - t),
+                n = 1 - i,
                 r = V.m_fPopularityValue * (k.NUM_POPULARITY_STEPS - 1 - 0.001),
                 o = Math.floor(r),
                 s = o + 1,
                 c = 1 - (r - o),
                 l = 1 - c,
                 d = [];
-              d.push({ index: o * k.NUM_RECENCY_STEPS + t, weight: c * n }),
-                d.push({ index: s * k.NUM_RECENCY_STEPS + t, weight: l * n }),
-                d.push({ index: o * k.NUM_RECENCY_STEPS + a, weight: c * i }),
-                d.push({ index: s * k.NUM_RECENCY_STEPS + a, weight: l * i });
+              d.push({ index: o * k.NUM_RECENCY_STEPS + t, weight: c * i }),
+                d.push({ index: s * k.NUM_RECENCY_STEPS + t, weight: l * i }),
+                d.push({ index: o * k.NUM_RECENCY_STEPS + a, weight: c * n }),
+                d.push({ index: s * k.NUM_RECENCY_STEPS + a, weight: l * n });
               var m = new Map(),
                 u = 0,
                 p = V.getRecommendations(),
@@ -1580,14 +1579,14 @@
                 });
                 if (0 < O.length) {
                   for (
-                    var R = 0, N = 0, L = (O = O.slice(0, 30));
-                    N < L.length;
+                    var R = 0, N = 0, I = (O = O.slice(0, 30));
+                    N < I.length;
                     N++
                   ) {
-                    (L[N].rank = R), R++;
+                    (I[N].rank = R), R++;
                   }
-                  for (var C = 0, I = O; C < I.length; C++) {
-                    var A = I[C];
+                  for (var L = 0, C = O; L < C.length; L++) {
+                    var A = C[L];
                     h.push(
                       P.a.createElement(D, {
                         key: A.appid,
@@ -1637,10 +1636,10 @@
                 )
               );
             }),
-            (e = Object(u.c)([i.a], e))
+            (e = Object(u.c)([n.a], e))
           );
         })(P.a.Component),
-        L = (function (t) {
+        I = (function (t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (e.state = { width: window.innerWidth }), e;
@@ -1657,7 +1656,7 @@
               Object(f.a)();
             }),
             (e.prototype.render = function () {
-              return r.k.logged_in
+              return o.k.logged_in
                 ? P.a.createElement(
                     "div",
                     {
@@ -1684,7 +1683,7 @@
                       P.a.createElement(
                         "div",
                         { className: F.BottomSection },
-                        P.a.createElement(O, { accountID: r.k.accountid }),
+                        P.a.createElement(O, { accountID: o.k.accountid }),
                         P.a.createElement("div", { className: F.VerticalBar }),
                         P.a.createElement(N, { width: this.state.width })
                       )
@@ -1721,10 +1720,10 @@
             }),
             Object(u.c)([l.a], e.prototype, "updateDimensions", null),
             Object(u.c)([l.a], e.prototype, "ShowLoginDialog", null),
-            (e = Object(u.c)([i.a], e))
+            (e = Object(u.c)([n.a], e))
           );
         })(P.a.Component);
-      t.default = L;
+      t.default = I;
     },
     Asqs: function (e, t, a) {
       e.exports = {

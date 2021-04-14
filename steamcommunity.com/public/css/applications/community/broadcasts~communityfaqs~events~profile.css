@@ -13399,6 +13399,19 @@ html:not(.touch)
   margin-top: 32px;
 }
 
+.partnereventstats_TotalsCtn_FQKvU {
+  background: black;
+  padding: 8px;
+  border-radius: 3px;
+}
+.partnereventstats_TotalsCtn_FQKvU.partnereventstats_SmallStatsMode_2A2-p {
+  margin-bottom: 12px;
+}
+.partnereventstats_TotalsCtn_FQKvU .partnereventstats_StatsTitle_3YLaB {
+  margin-left: 0px;
+  font-size: 12px;
+}
+
 .partnereventstats_StatsTitle_3YLaB {
   display: flex;
   flex-direction: row;
@@ -13430,6 +13443,26 @@ html:not(.touch)
   background-color: transparent;
   padding: 0px;
   border: none;
+}
+
+.partnereventstats_TotalsCtn_FQKvU.partnereventstats_NormalStatsMode_281bv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 12px 12px;
+}
+.partnereventstats_TotalsCtn_FQKvU.partnereventstats_NormalStatsMode_281bv
+  .partnereventstats_StatsTitle_3YLaB {
+  flex-direction: column;
+  text-align: center;
+}
+.partnereventstats_TotalsCtn_FQKvU.partnereventstats_NormalStatsMode_281bv
+  .partnereventstats_StatsTitle_3YLaB
+  .partnereventstats_StatFigure_30CaM {
+  font-size: 30px;
+  font-weight: 600;
+  color: white;
+  line-height: 36px;
 }
 
 .partnereventstats_StatsCtn_hWCs4 {

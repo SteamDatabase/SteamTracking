@@ -33,13 +33,14 @@
 .broadcastwidgets_StoreSaleWidgetImage_mini_yvW2h {
   cursor: pointer;
   max-width: 155px;
+  position: relative;
+  box-sizing: border-box;
+  padding: 5px;
 }
 
 .broadcastwidgets_StoreSaleImage_mini_1zSsm {
   cursor: pointer;
-  width: 148px;
-  margin-top: 5px;
-  margin-left: 5px;
+  width: 100%;
   display: block;
 }
 

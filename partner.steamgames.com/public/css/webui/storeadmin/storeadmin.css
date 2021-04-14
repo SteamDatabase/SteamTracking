@@ -247,7 +247,6 @@ div.HighPerfMode .sharedappdetailsheader_HeaderBackgroundImage_ca6pA {
   left: 0;
   bottom: 0;
   right: 0;
-  z-index: 30;
   -webkit-app-region: no-drag;
   display: flex;
   flex-direction: column;
@@ -1750,6 +1749,37 @@ html.contextmenu_ContextMenuPopup_152-v .contextmenu_contextMenuItem_3hJA5 {
   word-wrap: break-word;
 }
 
+body.modals_BodyNoScroll_1JTaq {
+  overflow-y: hidden;
+  height: 100vh;
+}
+body.modals_BodyNoScrollDialog_t0EzL {
+  overflow-y: hidden;
+  height: 100vh;
+}
+.modals_OverlayModal_1GJbF {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1500;
+}
+
+.focusring_FocusRingRoot_2BQL2 {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.focusring_FocusRing_3ARGF {
+  position: absolute;
+  pointer-events: none;
+  border: 4px solid lightblue;
+}
+
 .toggle_Toggle_1rqtP {
   width: 40px;
   height: 16px;
@@ -1947,24 +1977,6 @@ html.contextmenu_ContextMenuPopup_152-v .contextmenu_contextMenuItem_3hJA5 {
 
 .apps_App_1zK68.apps_App_1zK68.apps_App_1zK68 {
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
-}
-
-body.modals_BodyNoScroll_1JTaq {
-  overflow-y: hidden;
-  height: 100vh;
-}
-body.modals_BodyNoScrollDialog_t0EzL {
-  overflow-y: hidden;
-  height: 100vh;
-}
-.modals_OverlayModal_1GJbF {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.8);
-  z-index: 1500;
 }
 
 .managefriends_Heading_N0Bd3 {
@@ -15095,6 +15107,18 @@ html:not(.touch)
   margin-top: 32px;
 }
 
+.partnereventstats_TotalsCtn_3DPX2 {
+  background: black;
+  padding: 8px;
+  border-radius: 3px;
+}
+.partnereventstats_TotalsCtn_3DPX2.partnereventstats_SmallStatsMode_S37po {
+  margin-bottom: 12px;
+}
+.partnereventstats_TotalsCtn_3DPX2 .partnereventstats_StatsTitle_2A__v {
+  margin-left: 0px;
+  font-size: 12px;
+}
 .partnereventstats_StatsTitle_2A__v {
   display: flex;
   flex-direction: row;
@@ -15124,6 +15148,25 @@ html:not(.touch)
   background-color: transparent;
   padding: 0px;
   border: none;
+}
+.partnereventstats_TotalsCtn_3DPX2.partnereventstats_NormalStatsMode_3JjPA {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 12px 12px;
+}
+.partnereventstats_TotalsCtn_3DPX2.partnereventstats_NormalStatsMode_3JjPA
+  .partnereventstats_StatsTitle_2A__v {
+  flex-direction: column;
+  text-align: center;
+}
+.partnereventstats_TotalsCtn_3DPX2.partnereventstats_NormalStatsMode_3JjPA
+  .partnereventstats_StatsTitle_2A__v
+  .partnereventstats_StatFigure_1RWnR {
+  font-size: 30px;
+  font-weight: 600;
+  color: white;
+  line-height: 36px;
 }
 .partnereventstats_StatsCtn_lTGdN {
   display: flex;
@@ -18602,6 +18645,13 @@ img.broadcastplayer_BroadcastPlaceholderImg_1LIEZ {
   overflow: scroll;
   max-height: 300px;
 }
+.newsaledialog_VerifyCtn_14bU7 {
+  background: #202328;
+  border-radius: 3px;
+  padding: 12px;
+  margin-top: 6px;
+  margin-bottom: 18px;
+}
 .newsaledialog_VerifyCheck_QK3cD,
 .newsaledialog_FailCheck_3ZDrm {
   width: 26px;
@@ -18615,6 +18665,21 @@ img.broadcastplayer_BroadcastPlaceholderImg_1LIEZ {
 }
 .newsaledialog_FailCheck_3ZDrm {
   color: red;
+}
+.newsaledialog_MinWidthCtn_3VgMx {
+  min-width: 600px;
+}
+.newsaledialog_DateCtn_HCvNc {
+  min-height: 400px;
+}
+.newsaledialog_BasicInfoCtn_1_-Y4 {
+  background: #202328;
+  border-radius: 3px;
+  padding: 12px;
+  margin-top: 6px;
+}
+.newsaledialog_StepOneTitle_21SRB {
+  margin-bottom: 8px;
 }
 
 .buildpatchnotes_BuildNoteCtn_cZP-5 {

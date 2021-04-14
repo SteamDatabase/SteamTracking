@@ -96,7 +96,7 @@
     "Sale_New_ClearCreator_ttip": "Clear Creator and Search again for another creator home",
     "Sale_New_Verify_PE_Enabled": "2. Verify that creator home has Partner Events Enabled:",
     "Sale_New_Enable_PartnerEventBeta": "This creator home needs to join the Partner Events beta to use the sales feature. This action is not reversable. This will change the editor they post announcements and will prevent them from creating linked announcements. %1$s",
-    "Sale_New_SetupEvent": "3. Setup the sales event basic information to allow us to create it.",
+    "Sale_New_SetupEvent": "3. Enter the minimum required info:",
     "Sale_New_EnterEventName": "Descriptive Event Name",
     "Sale_New_EnterEventName_ttip": "This is the user facing long event name. Can include the partner and event dates",
     "Sale_New_EnterVanity": "URL Vanity",

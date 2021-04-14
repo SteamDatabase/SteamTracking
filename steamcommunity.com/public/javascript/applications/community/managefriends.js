@@ -345,7 +345,7 @@
                     )
                   ),
                   r.a.createElement(
-                    l.q,
+                    l.r,
                     {
                       style: {
                         width: "fit-content",
@@ -378,7 +378,7 @@
                     r.a.createElement(
                       "div",
                       { style: { width: "100%" } },
-                      r.a.createElement(l.l, {
+                      r.a.createElement(l.m, {
                         className: f.a.Input,
                         onKeyDown: this.OnSearchKeyDown,
                         value: this.state.input_search,
@@ -521,7 +521,7 @@
               return r.a.createElement(
                 "div",
                 null,
-                r.a.createElement(l.l, {
+                r.a.createElement(l.m, {
                   className: f.a.Input,
                   value: this.state.input_friend_code,
                   onChange: this.OnFriendCodeChange,
@@ -583,7 +583,7 @@
                         )
                       ),
                       r.a.createElement(
-                        l.q,
+                        l.r,
                         {
                           onClick: function () {
                             return e.OnActionClick(

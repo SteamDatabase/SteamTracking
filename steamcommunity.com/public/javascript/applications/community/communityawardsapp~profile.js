@@ -3031,7 +3031,7 @@
                     var B = 0 === c || b.get(c),
                       R = !p || p.greaterThanOrEqual(_),
                       M = j.createElement(
-                        Me.q,
+                        Me.r,
                         {
                           onClick: function () {
                             return t.setState({ ePhase: Be.CONFIRM });
@@ -3203,7 +3203,7 @@
                           Object(S.f)("#GrantAward_Back")
                         ),
                         j.createElement(
-                          Me.q,
+                          Me.r,
                           {
                             onClick: this.GrantAward,
                             title: Object(S.f)("#GrantAward_SubmitTooltip"),
@@ -3272,7 +3272,7 @@
                     );
                 }
                 return j.createElement(
-                  z.a,
+                  z.b,
                   { className: E.GrantAwardModal, active: r, onDismiss: o },
                   u && j.createElement(me, { eType: oe.Default }),
                   C

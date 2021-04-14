@@ -3303,11 +3303,7 @@ function BindAutoFlyoutEvents()
 				}
 			});
 
-			$Content.on('focusout', function( e ) {
-				if ( !e.relatedTarget || !$J.contains( e.currentTarget, e.relatedTarget ) )
-					HideFlyoutMenu( null, $Tab, $Content );
-			});
-
+			
 			$Content.data('flyout-events-bound', true );
 		}
 

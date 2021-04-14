@@ -421,7 +421,7 @@
                 { className: y.SectionDescription },
                 Object(m.f)("#CookiePref_Content_Desc")
               ),
-              o.a.createElement(h.o, {
+              o.a.createElement(h.p, {
                 onChange: r,
                 label: Object(m.f)("#CookiePref_Content_ToggleTitle"),
                 checked: t.GetRecentApps(),
@@ -454,7 +454,7 @@
                 { className: y.SectionDescription },
                 Object(m.f)("#CookiePref_ValveAnalytics_Desc")
               ),
-              o.a.createElement(h.o, {
+              o.a.createElement(h.p, {
                 onChange: r,
                 label: Object(m.f)("#CookiePref_ValveAnalytics_ToggleTitle"),
                 checked: t.GetImpressions(),
@@ -489,7 +489,7 @@
                 { className: y.SectionDescription },
                 Object(m.f)("#CookiePref_GoogleAnalytics_Desc")
               ),
-              o.a.createElement(h.o, {
+              o.a.createElement(h.p, {
                 onChange: r,
                 label: Object(m.f)("#CookiePref_GoogleAnalytics_ToggleLabel"),
                 checked: t.GetGoogleAnalytics(),
@@ -536,19 +536,19 @@
                 { className: y.SectionDescription },
                 Object(m.f)("#CookiePref_ThirdParty_Desc")
               ),
-              o.a.createElement(h.o, {
+              o.a.createElement(h.p, {
                 onChange: r,
                 label: Object(m.f)("#CookiePref_YouTube_Title"),
                 checked: t.GetYouTube(),
                 description: Object(m.f)("#CookiePref_YouTube_Desc"),
               }),
-              o.a.createElement(h.o, {
+              o.a.createElement(h.p, {
                 onChange: n,
                 label: Object(m.f)("#CookiePref_Vimeo_Title"),
                 checked: t.GetVimeo(),
                 description: Object(m.f)("#CookiePref_Vimeo_Desc"),
               }),
-              o.a.createElement(h.o, {
+              o.a.createElement(h.p, {
                 onChange: c,
                 label: Object(m.f)("#CookiePref_Sketchfab_Title"),
                 checked: t.GetSketchfab(),

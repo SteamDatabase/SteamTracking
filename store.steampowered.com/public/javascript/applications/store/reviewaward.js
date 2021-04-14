@@ -508,7 +508,7 @@
                   var v = 0 === c || _.get(c),
                     O = !f || f.greaterThanOrEqual(w),
                     A = S.createElement(
-                      k.p,
+                      k.q,
                       {
                         onClick: function () {
                           return t.setState({ ePhase: B.CONFIRM });
@@ -608,7 +608,7 @@
                           { className: G.ConfirmText },
                           Object(N.n)(
                             "#GrantAward_Confirm",
-                            S.createElement(V, null, w.toLocaleString()),
+                            S.createElement(q, null, w.toLocaleString()),
                             S.createElement(
                               "span",
                               { className: G.AwardName },
@@ -621,7 +621,7 @@
                           { className: G.ConfirmText },
                           Object(N.n)(
                             "#GrantAward_Confirm_Details",
-                            S.createElement(V, null, g.toLocaleString()),
+                            S.createElement(q, null, g.toLocaleString()),
                             S.createElement(
                               "span",
                               { className: G.TimePeriod },
@@ -676,7 +676,7 @@
                         Object(N.f)("#GrantAward_Back")
                       ),
                       S.createElement(
-                        k.p,
+                        k.q,
                         {
                           onClick: this.GrantAward,
                           title: Object(N.f)("#GrantAward_SubmitTooltip"),
@@ -745,7 +745,7 @@
                   );
               }
               return S.createElement(
-                T.a,
+                T.b,
                 { className: G.GrantAwardModal, active: a, onDismiss: i },
                 d && S.createElement(M.a, { eType: M.b.Default }),
                 R
@@ -890,7 +890,7 @@
                   })
                 ),
                 S.createElement("div", { className: G.Label }, I(t)),
-                S.createElement(V, { className: G.Points }, r.toLocaleString()),
+                S.createElement(q, { className: G.Points }, r.toLocaleString()),
                 n && S.createElement(h, { className: G.IconCheckMark })
               );
             }),
@@ -902,7 +902,7 @@
         H = function () {
           return S.createElement(_.a, { size: "large", className: G.Loading });
         },
-        V = function (e) {
+        q = function (e) {
           var t = e.children,
             a = e.className,
             n = Object(s.f)(e, ["children", "className"]);

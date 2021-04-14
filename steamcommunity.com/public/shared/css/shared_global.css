@@ -538,8 +538,11 @@ body.v6 .popup_block_new .popup_body.popup_menu {
 	padding: 6px 0px;
 }
 
-.popup_menu .popup_menu_item {
+.popup_menu a.popup_menu_item {
 	display: block;
+}
+
+.popup_menu .popup_menu_item {
 	padding: 5px 12px;
 	color: #b8b6b4;
 	text-transform: none;

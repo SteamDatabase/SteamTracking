@@ -1648,7 +1648,7 @@
                     strRSSUrl: this.state.strRssURL,
                     admin: this.m_Admin,
                   }),
-                  Object(y.n)(e)
+                  Object(y.l)(e)
                 );
             }),
             (e.prototype.OnRevert = function (e) {
@@ -1773,7 +1773,7 @@
                         M.UrlSettingCtn
                       ),
                     },
-                    _.a.createElement(b.k, {
+                    _.a.createElement(b.l, {
                       className: M.RssInpu,
                       type: "text",
                       name: "link_url",
@@ -2030,7 +2030,7 @@
                       _.a.createElement(
                         b.d,
                         {
-                          disabled: !b.k.validateUrl(this.props.strRssURL),
+                          disabled: !b.l.validateUrl(this.props.strRssURL),
                           onClick: this.OnLoadPreview,
                         },
                         Object(B.f)("#CuratorAdmin_RSSFeed_preview")
@@ -2151,7 +2151,7 @@
                       .CheckForNewUpdate()
                       .then(function () {
                         return Object(R.d)(
-                          _.a.createElement(w.c, {
+                          _.a.createElement(w.d, {
                             strTitle: Object(B.f)(
                               "#CuratorAdmin_RSSFeed_scannow"
                             ),
@@ -2159,18 +2159,18 @@
                               "#CuratorAdmin_RSSFeed_queued"
                             ),
                           }),
-                          Object(y.n)(n)
+                          Object(y.l)(n)
                         );
                       })
                       .catch(function (e) {
                         return Object(R.d)(
-                          _.a.createElement(w.e, {
+                          _.a.createElement(w.f, {
                             strTitle: Object(B.f)(
                               "#CuratorAdmin_RSSFeed_scannow"
                             ),
                             strDescription: Object(j.a)(e),
                           }),
-                          Object(y.n)(n)
+                          Object(y.l)(n)
                         );
                       })
                       .finally(function () {
@@ -2197,7 +2197,7 @@
                         { className: M.Error },
                         this.state.strErrorMessage
                       ),
-                    _.a.createElement(b.o, {
+                    _.a.createElement(b.p, {
                       onChange: this.OnToggleChannelAutomation,
                       label: Object(B.f)("#RSSManager_Status_Automation_Desc"),
                       checked: this.props.admin.BIsAutomationEnabled(),
@@ -2292,7 +2292,7 @@
               var t = this.props,
                 n = t.newsData,
                 r = t.clanSteamID,
-                a = new u.n();
+                a = new u.o();
               (a.GID = "PreviewPartnerEventRow_0"),
                 (a.clanSteamID = r),
                 (a.postTime = Date.now() / 1e3),
@@ -2310,7 +2310,7 @@
               var i = this.props.admin.GetFeedLanguageHandleUnset();
               !a.jsondata.localized_summary &&
                 n.post.event_summary &&
-                ((a.jsondata.localized_summary = Object(F.f)(
+                ((a.jsondata.localized_summary = Object(F.d)(
                   a.jsondata.localized_summary,
                   30,
                   null
@@ -2320,7 +2320,7 @@
                   (a.jsondata.localized_summary[i] = n.post.event_summary)),
                 !a.jsondata.localized_subtitle &&
                   n.post.event_subtitle &&
-                  ((a.jsondata.localized_subtitle = Object(F.f)(
+                  ((a.jsondata.localized_subtitle = Object(F.d)(
                     a.jsondata.localized_subtitle,
                     30,
                     null
@@ -2358,7 +2358,7 @@
                   strRSSUrl: r(),
                   fnClanEventGID: this.OnClanEventCreateSuccess,
                 }),
-                Object(y.n)(e)
+                Object(y.l)(e)
               );
             }),
             (e.prototype.OnUpdateNewsEvent = function (e) {
@@ -2373,7 +2373,7 @@
                   fnClanEventGID: this.OnClanEventCreateSuccess,
                   bUpdatePost: !0,
                 }),
-                Object(y.n)(e)
+                Object(y.l)(e)
               );
             }),
             (e.prototype.HideModalEvent = function () {
@@ -2395,7 +2395,7 @@
                 })();
               Object(R.d)(
                 _.a.createElement(
-                  w.c,
+                  w.d,
                   {
                     bAlertDialog: !0,
                     strTitle: Object(B.f)("#RSSManager_PostEvent_ViewRaw"),
@@ -2406,7 +2406,7 @@
                     disabled: !0,
                   })
                 ),
-                Object(y.n)(e)
+                Object(y.l)(e)
               );
             }),
             (e.prototype.render = function () {
@@ -2580,7 +2580,7 @@
                       ),
                     Boolean(this.state.eventModelForPreviewNow) &&
                       _.a.createElement(
-                        w.h,
+                        w.j,
                         { className: g.StoreHeaderAdjust },
                         _.a.createElement(
                           "div",
@@ -2748,9 +2748,9 @@
                 case "update_feed":
                 default:
                   return _.a.createElement(
-                    w.d,
+                    w.e,
                     null,
-                    _.a.createElement(b.j, null, " ", this.GetStrTitle(), " "),
+                    _.a.createElement(b.k, null, " ", this.GetStrTitle(), " "),
                     _.a.createElement(
                       b.b,
                       null,
@@ -2808,9 +2808,9 @@
                         )
                       ),
                       _.a.createElement(
-                        b.i,
+                        b.j,
                         null,
-                        _.a.createElement(b.m, {
+                        _.a.createElement(b.n, {
                           bOKDisabled: !Boolean(
                             this.state.bPermissions && this.state.bConduct
                           ),
@@ -2822,7 +2822,7 @@
                   );
                 case "failure":
                   return _.a.createElement(
-                    w.e,
+                    w.f,
                     {
                       strDescription: Object(B.f)(
                         "#RSSManager_PostEvent_Failure"
@@ -2842,7 +2842,7 @@
                 case "creating_feed":
                 case "waiting_post":
                   return _.a.createElement(
-                    w.c,
+                    w.d,
                     {
                       strTitle: this.GetStrTitle(),
                       strDescription: Object(B.f)(
@@ -2854,9 +2854,9 @@
                   );
                 case "create_post":
                   return _.a.createElement(
-                    w.d,
+                    w.e,
                     null,
-                    _.a.createElement(b.j, null, " ", this.GetStrTitle(), " "),
+                    _.a.createElement(b.k, null, " ", this.GetStrTitle(), " "),
                     _.a.createElement(
                       b.b,
                       null,
@@ -2891,9 +2891,9 @@
                         )
                       ),
                       _.a.createElement(
-                        b.i,
+                        b.j,
                         null,
-                        _.a.createElement(b.m, {
+                        _.a.createElement(b.n, {
                           onOK: this.OnCreatePost,
                           onCancel: this.props.closeModal,
                         })
@@ -2902,9 +2902,9 @@
                   );
                 case "update_post":
                   return _.a.createElement(
-                    w.d,
+                    w.e,
                     null,
-                    _.a.createElement(b.j, null, " ", this.GetStrTitle(), " "),
+                    _.a.createElement(b.k, null, " ", this.GetStrTitle(), " "),
                     _.a.createElement(
                       b.b,
                       null,
@@ -2929,9 +2929,9 @@
                         )
                       ),
                       _.a.createElement(
-                        b.i,
+                        b.j,
                         null,
-                        _.a.createElement(b.m, {
+                        _.a.createElement(b.n, {
                           onOK: this.OnCreatePost,
                           onCancel: this.props.closeModal,
                         })
@@ -2940,7 +2940,7 @@
                   );
                 case "success":
                   return _.a.createElement(
-                    w.c,
+                    w.d,
                     {
                       strTitle: this.GetStrTitle(),
                       strDescription: Object(B.f)(

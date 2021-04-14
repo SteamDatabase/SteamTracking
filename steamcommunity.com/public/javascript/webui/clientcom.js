@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6487584";
+var CLSTAMP = "6487882";
 !(function (t) {
   var e = {};
   function n(r) {
@@ -112,10 +112,10 @@ var CLSTAMP = "6487584";
         return d;
       }),
       n.d(e, "f", function () {
-        return S;
+        return m;
       }),
       n.d(e, "g", function () {
-        return m;
+        return S;
       });
     n("mrSG");
     var r,
@@ -169,7 +169,6 @@ var CLSTAMP = "6487584";
         STEAM_TV: !1,
         DEV_MODE: !1,
         IN_LIBRARY: !1,
-        NO_RAISE_ON_REFRESH: !1,
         IN_SP: !1,
       },
       u = {
@@ -252,7 +251,7 @@ var CLSTAMP = "6487584";
         }
       else console.error("Missing config element #", e);
     }
-    function S() {
+    function m() {
       if (!window || !window.location || !window.location.href)
         return console.warn("Unable to determine base url!"), "unknown";
       var t = window.location.href;
@@ -274,7 +273,7 @@ var CLSTAMP = "6487584";
         ? c.INTERNAL_STATS_BASE_URL
         : "";
     }
-    function m() {
+    function S() {
       var t = window.location.href;
       return t.startsWith(c.STORE_BASE_URL)
         ? "store"

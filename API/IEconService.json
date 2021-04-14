@@ -216,6 +216,12 @@
                     "type": "uint32",
                     "optional": false,
                     "description": "When active_only is set, offers updated since this time will also be returned"
+                },
+                {
+                    "name": "cursor",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": "Cursor aka start index"
                 }
             ]
         },

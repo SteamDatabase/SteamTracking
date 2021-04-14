@@ -33,13 +33,14 @@
 .broadcastwidgets_StoreSaleWidgetImage_mini_2q0vP {
   cursor: pointer;
   max-width: 155px;
+  position: relative;
+  box-sizing: border-box;
+  padding: 5px;
 }
 
 .broadcastwidgets_StoreSaleImage_mini_4Y7Cy {
   cursor: pointer;
-  width: 148px;
-  margin-top: 5px;
-  margin-left: 5px;
+  width: 100%;
   display: block;
 }
 
@@ -221,7 +222,7 @@
 }
 
 .broadcast_embeddable_side_panels_uTHiO.broadcast_embeddable_multistream_3WfHi {
-  max-width: 158px;
+  max-width: 155px;
 }
 
 .broadcast_embeddable_side_panels_uTHiO::-webkit-scrollbar {
@@ -293,6 +294,13 @@
   width: 16px;
   height: 16px;
   margin-right: 4px;
+}
+@media screen and (max-width: 768px) {
+  .broadcast_embeddable_viewer_bar_26kGm
+    .broadcast_embeddable_viewer_links_24Hms
+    .broadcast_embeddable_chat_link_iS2tl {
+    display: none;
+  }
 }
 .broadcast_embeddable_viewer_bar_26kGm
   .broadcast_embeddable_viewer_links_24Hms
@@ -609,12 +617,6 @@
   min-width: 32px;
 }
 
-@media screen and (max-width: 768px) {
-  .broadcast_embeddable_ChatToggle_Ww-UN {
-    display: none;
-  }
-}
-
 .broadcast_embeddable_BroadcastAndChat_1dcRK {
   display: flex;
   flex-direction: column;
@@ -695,29 +697,36 @@
 .broadcast_embeddable_bordered_container_2W1jH.broadcast_embeddable_Event_3dSbs
   .broadcast_embeddable_container_22S3K {
   display: grid;
-  grid-template-columns: 158px calc(100% - 316px) 158px;
+  grid-template-columns: 155px calc(100% - 310px) 155px;
   grid-template-rows: auto 30px;
   grid-template-areas:
     "left-panel livestream right-panel"
     "left-panel viewbar viewbar";
 }
 .broadcast_embeddable_bordered_container_2W1jH.broadcast_embeddable_Event_3dSbs
+  .broadcast_embeddable_container_22S3K.broadcast_right_panel_simple {
+  grid-template-areas:
+    "left-panel livestream right-panel"
+    "left-panel viewbar viewbar";
+}
+.broadcast_embeddable_bordered_container_2W1jH.broadcast_embeddable_Event_3dSbs
+  .broadcast_embeddable_container_22S3K:not(.multistream) {
+  grid-template-rows: 337px 30px;
+  grid-template-areas:
+    "left-panel livestream right-panel"
+    "viewbar viewbar viewbar";
+}
+.broadcast_embeddable_bordered_container_2W1jH.broadcast_embeddable_Event_3dSbs
   .broadcast_embeddable_container_22S3K.broadcast_chat_expanded {
-  grid-template-columns: calc(100% - 316px) 316px;
+  grid-template-columns: calc(100% - 312px) 312px;
   grid-template-rows: auto 30px;
   grid-template-areas:
     "livestream store-chat"
     "viewbar viewbar";
 }
 .broadcast_embeddable_bordered_container_2W1jH.broadcast_embeddable_Event_3dSbs
-  .broadcast_embeddable_container_22S3K.broadcast_right_panel_simple {
-  grid-template-areas:
-    "left-panel livestream right-panel"
-    "left-panel viewbar right-panel";
-}
-.broadcast_embeddable_bordered_container_2W1jH.broadcast_embeddable_Event_3dSbs
   .broadcast_embeddable_container_22S3K
-  .broadcast_embeddable_side_panels_uTHiO {
+  .broadcast_embeddable_side_panels_uTHiO:not(img) {
   /*left panel*/
   grid-area: left-panel;
   max-height: 367px;

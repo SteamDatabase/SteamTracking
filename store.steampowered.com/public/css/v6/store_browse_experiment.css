@@ -622,7 +622,7 @@ a#store_search_link img {
 
 
 #genre_flyout .popup_body {
-	padding-top: 0px;
+	padding-top: 0;
 	padding-bottom: 20px;
 	width: 930px;
 }
@@ -637,8 +637,12 @@ a#store_search_link img {
 	{
 		max-width: 930px;
 		width: auto;
-		overflow-x: scroll;
+        flex-direction: column;
+		padding-top: 8px;
+		padding-bottom: 8px;
 	}
+
+
 }
 
 .store_nav .tab {
@@ -4370,9 +4374,7 @@ body.v6 .store_nav #genre_flyout .popup_menu_subheader {
 	letter-spacing: 0.06em;
 	font-weight: 800;
 	font-size: 11px;
-
 }
-
 body.v6 .store_nav .popup_menu_subheader {
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: normal; /* normal */
@@ -4491,12 +4493,11 @@ body.v6 .store_nav #genre_flyout .popup_menu_subheader.players {
 	background-size: 26px 26px;
 }
 
-.popup_menu_twocol > .popup_menu:not(:first-child):not(:nth-child(3)):not(:nth-child(4))
+.popup_menu_twocol > .popup_menu:not(:first-child)
 {
 	margin-left: 5px;
 	border-left: 1px solid#5c5d64;
 	padding-left: 5px;
-
 }
 
 .popup_menu_twocol > .popup_menu_browse

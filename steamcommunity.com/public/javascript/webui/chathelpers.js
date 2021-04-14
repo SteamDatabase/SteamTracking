@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "6487584";
+var CLSTAMP = "6487882";
 !(function (e) {
   function t(t) {
     for (
@@ -123,10 +123,10 @@ var CLSTAMP = "6487584";
                 11: "6d193daa461486fc1340",
                 12: "b8d6d93f224090794a9e",
                 13: "1097496cace1b964cd8c",
-                14: "f3de9df81f0cecbe9385",
+                14: "6e4ac9daeb66131d81ef",
                 15: "3bf9a6e8d60ff85a5585",
                 16: "223f08a42daed722e356",
-                17: "9c786489025fd0d1b78a",
+                17: "196174ea5480aca8fd9a",
                 18: "2a134fac026ff77c6569",
                 19: "1d22e1c85189a7bf2f98",
                 20: "68ed1bcdbe36edb5a871",
@@ -140,7 +140,7 @@ var CLSTAMP = "6487584";
                 28: "e9457449677d3f39289e",
                 29: "f77c0185fc9f074b644f",
                 30: "463059d9001862988cbb",
-                31: "3f99ac99e154dbe45a63",
+                31: "267330685299a4e3b1ac",
                 32: "51482d30f9fffe042289",
                 33: "9da43b10d468662a968d",
                 34: "a082c6e02d47d1e7c679",
@@ -149,34 +149,34 @@ var CLSTAMP = "6487584";
                 37: "9f9bedba116aceef6c7c",
                 38: "da7e6c633725ba8f9063",
                 39: "dd555942eeebcf691e37",
-                40: "8d6eb86d91b9a2304633",
+                40: "605e78cb7209ea1d9d98",
                 41: "a28490273a0296664e9b",
                 42: "9057de6ee48dd83a16b4",
-                43: "932062ca165ab8eef4f6",
+                43: "0a9f166b7af132bb5bd5",
                 44: "f53cad71e6556c69ed3e",
-                45: "0786c2e1ea073d7bbfa8",
+                45: "aa3250ea50a9fe116370",
                 46: "ffdd76b6182030dac01f",
-                47: "8223dec588e2a7db6076",
-                48: "2561789e0b7233cc3cbb",
-                49: "7af7515a084944921ab3",
+                47: "89ccab975b31075e8ec2",
+                48: "231ba14d3b577b844251",
+                49: "a48c9d3c60e99d0003ab",
                 50: "96d2ee7747f8f2f4a872",
-                51: "873d35ee81c2d216e067",
+                51: "e33dd25d3a08d6e15a9d",
                 52: "e775af45654db6768eb8",
                 53: "4d0ced6c5e0fa15c8cbf",
-                54: "68553d8b79de48fb1218",
-                55: "282da5ea7d106ee7cda8",
+                54: "9d9c3b1e4156bdaf0fe2",
+                55: "84422c929608293208cd",
                 56: "137894649d359321caf0",
                 57: "43f09a3ea59ed83d7789",
                 58: "d539553f8a41e637245c",
-                59: "b623255ed4c89728dfe9",
+                59: "25466114775ed315bb8e",
                 60: "af887dfdca6cad098c67",
-                61: "5675d4abc756d5a55ccb",
-                62: "4802a4285a5071259ce0",
+                61: "10f16a6ddf2896fad0b3",
+                62: "485609da11f0cc4996ec",
                 63: "5d8b673515e46edcd6fe",
                 64: "a3346bef76cccb0eb02d",
-                65: "8e5034b31b783d1e6f02",
-                66: "5c5ddb6d38aaf74e5242",
-                67: "53dd8e0737870ae315f6",
+                65: "a5d0686313e134b4e814",
+                66: "52189c09e5308d1b805b",
+                67: "6dfa893e8ea4cc460539",
                 68: "8035765c14d6bc4db593",
               }[e]
             );
@@ -574,8 +574,11 @@ var CLSTAMP = "6487584";
       n.d(t, "c", function () {
         return a;
       }),
-      n.d(t, "d", function () {
+      n.d(t, "e", function () {
         return s;
+      }),
+      n.d(t, "d", function () {
+        return c;
       });
     n("mrSG"), n("Gp1o");
     var r = n("q1tI");
@@ -598,6 +601,14 @@ var CLSTAMP = "6487584";
       null != e && ("function" == typeof e ? e(t) : (e.current = t));
     }
     function s() {
+      for (var e = [], t = 0; t < arguments.length; t++) e[t] = arguments[t];
+      return r.useCallback(function (t) {
+        for (var n = 0, r = e; n < r.length; n++) {
+          a(r[n], t);
+        }
+      }, e);
+    }
+    function c() {
       var e = r.useState(0),
         t = e[0],
         n = e[1];
@@ -693,7 +704,6 @@ var CLSTAMP = "6487584";
         STEAM_TV: !1,
         DEV_MODE: !1,
         IN_LIBRARY: !1,
-        NO_RAISE_ON_REFRESH: !1,
         IN_SP: !1,
       },
       s = {
@@ -1578,10 +1588,10 @@ var CLSTAMP = "6487584";
   },
   UqDm: function (e, t, n) {
     "use strict";
-    n.d(t, "i", function () {
+    n.d(t, "h", function () {
       return r;
     }),
-      n.d(t, "g", function () {
+      n.d(t, "f", function () {
         return i;
       }),
       n.d(t, "a", function () {
@@ -1599,17 +1609,14 @@ var CLSTAMP = "6487584";
       n.d(t, "b", function () {
         return u;
       }),
-      n.d(t, "j", function () {
+      n.d(t, "i", function () {
         return l;
       }),
-      n.d(t, "k", function () {
+      n.d(t, "j", function () {
         return d;
       }),
-      n.d(t, "h", function () {
+      n.d(t, "g", function () {
         return f;
-      }),
-      n.d(t, "f", function () {
-        return h;
       });
     n("XaMz");
     function r(e) {
@@ -1677,13 +1684,6 @@ var CLSTAMP = "6487584";
           ),
         e.length < t ? e.concat(Array(t - e.length).fill(n)) : e
       );
-    }
-    function h(e, t) {
-      if (t)
-        for (var n = e.length - 1; n >= 0; --n) {
-          var r = e[n];
-          if (t(r, n, e)) return r;
-        }
     }
   },
   XaMz: function (e, t, n) {
@@ -2035,7 +2035,7 @@ var CLSTAMP = "6487584";
         (e[(e.k_ESteamRealmGlobal = 1)] = "k_ESteamRealmGlobal"),
         (e[(e.k_ESteamRealmChina = 2)] = "k_ESteamRealmChina");
     })(y || (y = {}));
-    var I, j, O, k, R, L;
+    var I, j, O, k, L, R;
     !(function (e) {
       (e[(e.Unknown = 0)] = "Unknown"),
         (e[(e.Wired = 1)] = "Wired"),
@@ -2070,13 +2070,13 @@ var CLSTAMP = "6487584";
       (function (e) {
         (e[(e.SystemKey0 = 0)] = "SystemKey0"),
           (e[(e.SystemKey1 = 1)] = "SystemKey1");
-      })(R || (R = {})),
+      })(L || (L = {})),
       (function (e) {
         (e[(e.Hidden = 0)] = "Hidden"),
           (e[(e.Notification = 1)] = "Notification"),
           (e[(e.Overlay = 2)] = "Overlay"),
           (e[(e.Opaque = 3)] = "Opaque");
-      })(L || (L = {}));
+      })(R || (R = {}));
   },
   mrSG: function (e, t, n) {
     "use strict";
@@ -2454,7 +2454,9 @@ PERFORMANCE OF THIS SOFTWARE.
                     t +
                     "' for language '" +
                     s.d.LANGUAGE +
-                    "'"
+                    "', " +
+                    this.m_mapTokens.size +
+                    " tokens in map"
                 ),
                 { bIncludeMessageInIdentifier: !0 }
               );
@@ -2513,7 +2515,7 @@ PERFORMANCE OF THIS SOFTWARE.
           (e.Set = function (e, t, n) {
             if (e.length <= t) {
               if (t >= 30) return e;
-              e = Object(c.h)(e, t + 1, null);
+              e = Object(c.g)(e, t + 1, null);
             }
             return (e[t] = n), e;
           }),

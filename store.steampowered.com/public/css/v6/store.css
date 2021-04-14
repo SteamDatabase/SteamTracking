@@ -4516,7 +4516,7 @@ body.v6 .store_nav .popup_menu_subheader, body.v6 #footer_nav .popup_menu_subhea
 }
 
 
-.popup_menu_twocol_new > .popup_menu:not(:first-child):not(:nth-child(3)):not(:nth-child(4))
+.popup_menu_twocol_new > .popup_menu.leftborder
 {
 	margin-left: 5px;
 	border-left: 1px solid #333333;
@@ -4533,12 +4533,53 @@ body.v6 .store_nav .popup_menu_subheader, body.v6 #footer_nav .popup_menu_subhea
 	min-width: 0;
 }
 
+
+body.v6 .store_nav #genre_flyout .popup_menu_item.popup_genre_expand_header
+{
+	border-bottom: none;
+	transition: none;
+	font-weight: bold;
+	color: #ffffff;
+	width: auto;
+	line-height: 20px;
+}
+
+body.v6 .store_nav #genre_flyout .popup_menu_item.popup_genre_expand_header:hover
+{
+	border-bottom: none;
+}
+
 @media screen and ( max-width: 910px )
 {
 	html.responsive .popup_menu_twocol > .popup_menu
 	{
 		flex: 1;
 	}
+
+    html.responsive .popup_menu_twocol_new > .popup_menu.leftborder
+    {
+        margin-left: 0;
+        border-left: none;
+        padding-left: 0;
+    }
+
+    html.responsive .store_nav #genre_flyout .popup_menu_subheader.popup_genre_expand_header
+    {
+        margin-top: 5px;
+        padding-bottom: 5px;
+    }
+
+	html.responsive body.v6 .store_nav #genre_flyout .popup_menu_subheader.reduced_vspace
+	{
+		margin-bottom: 0;
+	}
+	
+	.popup_genre_expand_header,
+	.popup_genre_expand_content
+	{
+		margin-left: 12px;
+	}
+
 }
 
 @media screen and ( max-width: 420px )

@@ -985,6 +985,8 @@
         EventEmail_Developer_IsUrgent: "Urgent",
         EventEmail_Developer_IsUrgent_Desc:
           'Will mark the message as "Urgent" or "Important" in the email client',
+        EventEmail_Developer_DuplicateRemoved:
+          "Pruned %1$s duplicate ID(s) from the list.",
         EventEmail_Developer_AddAppIDs: "Add AppIDs",
         EventEmail_Developer_AddPublishersIDs: "Add Publishers",
         EventEmail_Developer_RightDesc:
@@ -1401,7 +1403,7 @@
           "Artwork must be at least 1920x800 (height x width). It can be larger in any or both dimensions.",
         AppRight_apprighteditinfo: "Edit App Metadata",
         AppRight_apprighteditinfo_Tooltip:
-          'Grants permission to upload depots, test Steamworks features, define achievements, leaderboards, post trading cards, etc. Also grants "Officer" access and designation for the Steam Community for any Applications in the group.',
+          "Grants permission to upload depots, test Steamworks features, define packages, achievements, leaderboards, post trading cards, etc.  Also grants administrative access and designation for the Steam Community for any Application in the group.",
         AppRight_apprightpublish: "Publish App Changes To Steam",
         AppRight_apprightpublish_Tooltip:
           "Grants permission to publish changes made in the Technical Tools > Edit Steamworks Settings section of the Steamworks Developer site for your title.",
@@ -1423,9 +1425,13 @@
         AppRight_apprightmanagesigning_Tooltip:
           "Can manage digital signing for your title. This will enable management of Anti-Cheat and SDK Auth settings for an Application.",
         AppRight_apprightmanagecdkeys: "Manage CD Keys",
-        AppRight_apprighteditmarketing: "Edit Store Localization Data",
+        AppRight_apprighteditmarketing: "Edit App Marketing Data",
         AppRight_apprighteditmarketing_Tooltip:
-          'Grants permission to edit and publish store page data such as game description, branding images, and videos. Also includes access to marketing tools like visibility rounds. Note: This is a subset of the "Edit App Marketing Data" functionality.',
+          "Grants permission to edit and publish store page data such as game description, branding images, and videos. Also includes access to marketing tools like visibility rounds.",
+        AppRight_apprighteditstoredisplaycontent:
+          "Edit Store Localization Data",
+        AppRight_apprighteditstoredisplaycontent_Tooltip:
+          'Grants permission to edit any data on store setting tabs that include one or more localizable fields, such as product description and graphical assets. Does not grant permission to publish, or to marketing tools like visibility rounds. Note: This is a subset of the "Edit App Marketing Data" functionality.',
         AppRight_apprighteconomysupport: "Economy/Workshop Support",
         AppRight_apprighteconomysupport_Tooltip:
           "Allows the user to view/grant economy items in the partner site economy support tool.",
@@ -1457,6 +1463,12 @@
         PubRight_pubrightmanagelicensedsites: "Manage Licensed Sites",
         PubRight_pubrightmanagelicensedsites_Tooltip:
           "These users can view and manage Licensed Site location information, licenses, and activity",
+        PubRight_pubrightreceivecommunication:
+          "Receive Steamworks Communication",
+        PubRight_pubrightreceivecommunication_Tooltip:
+          "These users will be emailed about upcoming promotions, targeted events and new feature announcements on Steam.",
+        PubRight_pubrightpendingreceivecommunication_Tooltip:
+          "This user has been sent an invitation to receive the Steamworks Communication Permission, but has yet to accept it.",
         Sale_EnableTitle: "Enable Sale Page",
         Sale_EanbleDesc:
           "Sale Page's require you to provide the two following items:.",
@@ -2201,6 +2213,8 @@
           "Auto-generating facets will overwrite all the existing facets in this section. Continue?",
         FacetedBrowseEditor_AutoGenerateOptions_FeatureTagForController:
           'Use feature label for apps with the "Controller" store tag.',
+        FacetedBrowseEditor_AutoGenerateOptions_GenerateLanguageFacet:
+          'Include a "Language" facet.',
         FacetedBrowseEditor_PruneUnused: "Prune Unused Facets",
         FacetedBrowseEditor_PruneUnusedButton: "Prune",
         FacetedBrowseEditor_MinMatchesText:
@@ -2234,8 +2248,24 @@
         FacetedBrowseEditor_Tooltip_SortFacetValues_Manual:
           "Don't sort facet values. They will be shown in the order defined in the lists below.",
         FacetedBrowseEditor_HighlightedFacetColor: "Highlighted Facet Color",
+        ContentDescriptor: "Content Descriptor",
+        ContentDescriptor_GeneralMatureContent: "General Mature Content",
+        ContentDescriptor_FrequentViolenceOrGore: "Frequent Violence or Gore",
+        ContentDescriptor_NudityOrSexualContent: "Nudity or Sexual Content",
+        ContentDescriptor_AdultOnlySexualContent: "Adult Only Sexual Content",
         FAQViewer_NoFAQFound: "Sorry, we could not find that page.",
         FAQViewer_GoToHomepage: "Return to community homepage",
+        FAQViewer_AdminLinks: "Admin Links",
+        FAQViewer_Admin_LastUpdate: "Last Updated by: %1$s on %2$s",
+        FAQViewer_GotoEditor: "Edit FAQ",
+        FAQViewer_DraftNewer:
+          "Draft edited by: %1$s has newer changes, last save %2$s",
+        FAQViewer_SideBar_ProblemWithSteam_Title: "Problem with Steam?",
+        FAQViewer_SideBar_ProblemWithSteam_Desc: "Help Me With My Issue",
+        FAQViewer_SideBar_CommunityHelp_Title: "Community Help",
+        FAQViewer_SideBar_CommunityHelp_Desc:
+          "Post or search in Steam Discussions for an answer to your question.",
+        FAQViewer_SideBar_CommunityHelp_Link: "Viset Steam Discussions",
         FAQEditor_TitleLabel: "Page title",
         FAQEditor_TitlePlaceHolder: "Enter FAQ title here",
         FAQEditor_ContentLabel: "FAQ content",
@@ -2257,9 +2287,47 @@
         FAQEditor_DeletingInProgress: "Deleting FAQ, please wait",
         FAQEditor_DeleteSuccess:
           "Delete is completed. You can close the dialog to return to the dashboard.",
+        FAQEditor_ChangeVisible: "Change Visibility",
+        FAQEditor_ChangeVisible_Desc:
+          "This dialog lets you change the realm visibility for this FAQ. If no realm is selectec, then this document is hidden from the public. Even if the document is visible in the Realm it requires to have published localization in the Realm appropriate language for it be visible",
+        FAQEditor_ChangeVisible_ttip:
+          "The FAQ Realm visibility can be changed via this dialog. If the document is not visible, then even if published it will not be accessible.",
+        FAQEditor_ChangeVisible_InProgress:
+          "Updating the visibility setting for the FAQ.",
+        FAQEditor_ChangeVisible_Success:
+          "Visibilty Settings updated successfully.",
+        FAQEditor_VisibleInGlobal: "Visible In Steam Global",
+        FAQEditor_VisibleInChina: "Visible In Steam China",
+        FAQEditor_VisibleInChina_ttip:
+          "Note: Requires that the content is localized and published in Simplified Chinese or Simplified Chinese for Steam China for the content to be actually visible in Steam China",
+        FAQEditir_ViewLiveFAQ: "View Live FAQ",
+        FAQPublish_Publish: "Publish FAQ",
+        FAQPublish_Publish_ttip:
+          "Publish one or more language drafts to a public version. Note, visibility is controlled separately from the published versions",
+        FAQPublish_SaveRequire_ttip:
+          "You are required to save before you can begin the publishing process",
+        FAQPublish_Publishing: "Publishing FAQ In Progress. Please wait...",
+        FAQPublish_Success: "Publishing has completed successfully.",
+        FAQPublish_Desc:
+          "Publishing is the process that takes the draft version and makes it the most current live version. You can choose below which langauges with changes in the draft you want to publish at this time.",
+        FAQPublish_Desc2:
+          "Note: Publishing is independant to visibility. You need to set the Steam Realm visibility seperately.",
+        FAQPublish_LoadError:
+          "Loading error, we are missing previous publishing information required to publish doc. Reload page",
+        FAQPublish_None:
+          "All drafts are already published. No action required.",
+        FAQPublish_DraftInfo:
+          "Draft in Language %1$s last saved at time %2$s by author %3$s",
+        FAQPublish_PublishWait: "Loading Current Publish State",
+        FAQSave_Saving: "Saving FAQ Drafts",
+        FAQSave_SaveSuccess: "Saving FAQ Successful",
+        FAQSave_SaveSuccess_desc: "All Drafts have been saved succesfully",
+        FAQSave_Error: "Saving FAQ Failed",
         FAQStatus_LiveVersionHeader: "Live Versions:",
         FAQStatus_NotVisible: "No Live Versions",
         FAQStatus_Editor: "Last Editor",
+        FAQStatus_DraftVersions: "Draft Versions",
+        FAQStatus_LastUpdated: "Last Updated",
         FAQDashboard_Header: "FAQ Admin Dashboard",
         FAQDashboard_Empty: "No FAQS found.",
         FAQDashboard_CreateFAQButton: "Add a new FAQ",

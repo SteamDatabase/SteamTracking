@@ -828,7 +828,7 @@
                   "balloon_yellow",
                 ];
             }
-            return W.g(t.m_rgImages), t.GenerateBalloons(), t;
+            return W.e(t.m_rgImages), t.GenerateBalloons(), t;
           }
           return (
             Object(d.d)(e, n),
@@ -857,7 +857,7 @@
                 this.m_rgBalloons.push(this.GenerateSingleBalloon(n, r));
               }
               var a = [70, 20];
-              W.g(a);
+              W.e(a);
               for (
                 var i = 20 == a[1],
                   o = 0,
@@ -1213,7 +1213,7 @@
         };
         Object(c.b)(
           p.createElement(Oe, { definition: a, saleitem: r }),
-          e ? Object(m.n)(e) : window
+          e ? Object(m.l)(e) : window
         );
       }
       function Ce(e, t, n, r) {
@@ -1226,7 +1226,7 @@
         };
         Object(c.b)(
           p.createElement(Oe, { definition: a }),
-          e ? Object(m.n)(e) : window
+          e ? Object(m.l)(e) : window
         );
       }
       function Ie(e, t, n, r) {
@@ -1238,14 +1238,14 @@
         };
         Object(c.b)(
           p.createElement(Oe, { definition: a }),
-          e ? Object(m.n)(e) : window
+          e ? Object(m.l)(e) : window
         );
       }
       function we(e, t) {
         var n = { type: 1, rewardDefinition: t };
         Object(c.b)(
           p.createElement(Ae, { definition: n }),
-          e ? Object(m.n)(e) : window
+          e ? Object(m.l)(e) : window
         );
       }
       function Me(e) {
@@ -1721,7 +1721,7 @@
                     this.props.definition.rewardDefinition.defid
                   : null;
               return p.createElement(
-                l.g,
+                l.h,
                 {
                   onEscKeypress: this.CloseModal,
                   bHideCloseIcon: !0,
@@ -1789,7 +1789,7 @@
               ? oe.a.GetAppInfo(n.rewardDefinition.appid)
               : null;
           return p.createElement(
-            l.g,
+            l.h,
             { onEscKeypress: r, bHideCloseIcon: !0, hideTopBar: !1 },
             p.createElement(
               "div",

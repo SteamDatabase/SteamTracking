@@ -98,12 +98,12 @@
           p < g.length;
           p++
         ) {
-          var d = g[p],
-            m = d.id,
+          var m = g[p],
+            d = m.id,
             _ = h.k_NotRejected;
-          switch (d.item_type) {
+          switch (m.item_type) {
             case "sub":
-              var f = v.b.GetPackageInfo(m);
+              var f = v.b.GetPackageInfo(d);
               if (
                 1 !==
                 (null === (o = null == f ? void 0 : f.appids) || void 0 === o
@@ -126,10 +126,10 @@
                       ? h.k_RejectAlreadyDisplayed
                       : C(n, t)
                     : h.k_NotRejected;
-                })(m, t, a, !0);
+                })(d, t, a, !0);
                 break;
               }
-              m = f.appids[0];
+              d = f.appids[0];
             case "app":
               _ = (function (e, t, a, r) {
                 var n = y.a.GetAppLinkInfo(e);
@@ -174,7 +174,7 @@
                     ? h.k_RejectAlreadyDisplayed
                     : C(n, t)
                   : h.k_NotRejected;
-              })(m, t, a, !0);
+              })(d, t, a, !0);
               break;
             case "bundle":
               _ = (function (e, t, a, r) {
@@ -189,17 +189,17 @@
                     ? h.k_RejectAlreadyDisplayed
                     : C(n, t)
                   : h.k_NotRejected;
-              })(m, t, a, !0);
+              })(d, t, a, !0);
           }
           if (
             (_ == h.k_NotRejected
-              ? ((d.rejected = h.k_NotRejected),
-                i.push(Object(b.a)(Object(b.a)({}, d), { priority: 1 })))
+              ? ((m.rejected = h.k_NotRejected),
+                i.push(Object(b.a)(Object(b.a)({}, m), { priority: 1 })))
               : u.includes(_)
-              ? ((d.rejected = h.k_NotRejected), s.push(d))
-              : (d.rejected = _) == h.k_RejectIgnoredGame
-              ? c.push(d)
-              : l.push(d),
+              ? ((m.rejected = h.k_NotRejected), s.push(m))
+              : (m.rejected = _) == h.k_RejectIgnoredGame
+              ? c.push(m)
+              : l.push(m),
             i.length > r)
           )
             break;
@@ -265,7 +265,7 @@
           ? h.k_NotRejected
           : h.k_RejectNotInLibrary;
       }
-      var d = (function () {
+      var m = (function () {
           function e() {
             (this.m_HomeView = {}),
               "dev" === _.d.WEB_UNIVERSE && (window.g_HomeViewStore = this);
@@ -353,7 +353,7 @@
             }),
             (e.prototype.ApplyUserAndHomeViewFilters = function () {
               var e = new p(),
-                t = Object(b.a)(Object(b.a)({}, d.Get().GetHomeView()), {
+                t = Object(b.a)(Object(b.a)({}, m.Get().GetHomeView()), {
                   enforce_minimum: !0,
                 });
               this.BuildFeaturedCarouselContent(e, t),
@@ -437,8 +437,8 @@
             e
           );
         })(),
-        m = a("q1tI"),
-        I = a.n(m),
+        d = a("q1tI"),
+        I = a.n(d),
         o = a("VQ2A"),
         s = a("IjL/"),
         G = a("0OaU"),
@@ -891,22 +891,22 @@
                           name: l.get(i),
                           subtitle: new Array(),
                           rgStoreTagFilter: {
-                            type: H.l.k_EStoreFilterClauseTypeAnd,
+                            type: H.m.k_EStoreFilterClauseTypeAnd,
                             rgSubexpressions: [
                               {
-                                type: H.l.k_EStoreFilterClauseTypeOr,
+                                type: H.m.k_EStoreFilterClauseTypeOr,
                                 rgSubexpressions: s.has(i)
                                   ? s.get(i).map(function (e) {
                                       return {
                                         type:
-                                          H.l.k_EStoreFilterClauseTypeStoreTag,
+                                          H.m.k_EStoreFilterClauseTypeStoreTag,
                                         value: e,
                                       };
                                     })
                                   : [
                                       {
                                         type:
-                                          H.l.k_EStoreFilterClauseTypeStoreTag,
+                                          H.m.k_EStoreFilterClauseTypeStoreTag,
                                         value: i,
                                       },
                                     ],
@@ -1080,7 +1080,7 @@
                 });
               }),
               (e.prototype.InternalLoadTabPage = function (l, u, p) {
-                var g, d, m;
+                var g, m, d;
                 return Object(b.b)(this, void 0, void 0, function () {
                   var t,
                     a,
@@ -1114,9 +1114,9 @@
                                 ? void 0
                                 : g.tagid,
                             category:
-                              null === (d = a.params) || void 0 === d
+                              null === (m = a.params) || void 0 === m
                                 ? void 0
-                                : d.category,
+                                : m.category,
                             facet: u,
                             send_app_data: 1,
                           }),
@@ -1129,10 +1129,10 @@
                         return (
                           (n = e.sent()),
                           1 ==
-                          (null === (m = null == n ? void 0 : n.data) ||
-                          void 0 === m
+                          (null === (d = null == n ? void 0 : n.data) ||
+                          void 0 === d
                             ? void 0
-                            : m.success)
+                            : d.success)
                             ? ((a.total_count = n.data.total_count),
                               (a.pagesize = n.data.pagesize),
                               ((o = this.m_mapTabToPageList.get(t) || [])[p] = {
@@ -1274,11 +1274,11 @@
             a = e.facetQuery,
             r = e.nCurPage,
             n = x.Get().BHasTabPageLoaded(t, a, r),
-            o = Object(m.useState)(!n),
+            o = Object(d.useState)(!n),
             i = o[0],
             s = o[1];
           if (
-            (Object(m.useEffect)(
+            (Object(d.useEffect)(
               function () {
                 var e = D.a.CancelToken.source();
                 return (
@@ -1305,7 +1305,7 @@
               position: "center",
             });
           var c = x.Get().GetTabPageApps(t, a, r).capsules,
-            l = g(c, d.Get().GetHomeView(), new p(), c.length, c.length),
+            l = g(c, m.Get().GetHomeView(), new p(), c.length, c.length),
             u = c.length - l.length;
           return I.a.createElement(
             I.a.Fragment,
