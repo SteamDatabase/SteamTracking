@@ -217,6 +217,10 @@ button.faqeditor_EditorSaveButton_22iwd.faqeditor_EditorSaveButton_22iwd:disable
   text-decoration: underline;
 }
 
+.faqstatus_StatusRow_272D2 {
+  display: flex;
+}
+
 .faqtoolbar_TopBarContainer_1EG8X {
   display: flex;
   flex-direction: row;
@@ -267,8 +271,13 @@ button.faqeditor_EditorSaveButton_22iwd.faqeditor_EditorSaveButton_22iwd:disable
   background-color: #000000;
 }
 
-.faqstatus_StatusRow_272D2 {
-  display: flex;
+.faqviewadmin_SmallAvatar_1FpSi {
+  max-width: 32px;
+  max-height: 32px;
+  float: left;
+  margin-right: 10px;
+  margin-top: 2px;
+  border-radius: 3px;
 }
 
 .faqviewpage_FAQViewPage_36eUb {
