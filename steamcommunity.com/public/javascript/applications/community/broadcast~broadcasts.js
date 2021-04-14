@@ -10099,6 +10099,7 @@
         BroadcastPlayerContainer:
           "broadcast_embeddable_BroadcastPlayerContainer_3VvcX",
         ChatContainer: "broadcast_embeddable_ChatContainer_3kqwu",
+        ChatToggle: "broadcast_embeddable_ChatToggle_1tVam",
         BroadcastAndChat: "broadcast_embeddable_BroadcastAndChat_1aJ9y",
         detail_chat_ctn: "broadcast_embeddable_detail_chat_ctn_IaFns",
         ChatEntry: "broadcast_embeddable_ChatEntry_Rs7El",
