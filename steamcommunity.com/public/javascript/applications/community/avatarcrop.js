@@ -69,7 +69,7 @@
                           case 0:
                             return (
                               (t = new Image()),
-                              (r = Object(b.p)(t, "load")),
+                              (r = Object(b.r)(t, "load")),
                               (t.src = URL.createObjectURL(l)),
                               [4, r]
                             );
@@ -89,7 +89,7 @@
                               n.fill(),
                               n.drawImage(t, 0, 0),
                               URL.revokeObjectURL(t.src),
-                              (c = Object(b.p)(s, "load")),
+                              (c = Object(b.r)(s, "load")),
                               (i = s),
                               (u = (o = URL).createObjectURL),
                               [4, j(a)]
