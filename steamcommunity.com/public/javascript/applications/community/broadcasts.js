@@ -751,7 +751,7 @@
               broadcastSteamID: a.broadcastSteamID,
               strAction: t,
             }),
-            Object(R.l)(e)
+            Object(R.n)(e)
           );
         }
         var r =
@@ -785,7 +785,7 @@
               onClick: function (e) {
                 Object(w.d)(
                   v.a.createElement(se, { steamid: a.broadcastSteamID }),
-                  Object(R.l)(e)
+                  Object(R.n)(e)
                 );
               },
             },
@@ -948,10 +948,10 @@
                     p.i.logged_in
                       ? Object(w.d)(
                           v.a.createElement(ne, { broadcasterSteamID: t }),
-                          Object(R.l)(e)
+                          Object(R.n)(e)
                         )
                       : Object(w.d)(
-                          v.a.createElement(N.d, {
+                          v.a.createElement(N.c, {
                             strTitle: Object(L.f)(
                               "#EventDisplay_Share_NotLoggedIn"
                             ),
@@ -963,7 +963,7 @@
                               return Object(Q.a)();
                             },
                           }),
-                          Object(R.l)(e)
+                          Object(R.n)(e)
                         );
                   },
                 },
@@ -989,7 +989,7 @@
             a = e[0],
             r = e[1];
           return v.a.createElement(
-            N.d,
+            N.c,
             {
               strTitle: Object(L.f)("#Broadcast_ReportItem_Title"),
               strDescription: Object(L.f)("#Broadcast_ReportItem_Description"),
@@ -1048,13 +1048,13 @@
             C.a,
             null,
             v.a.createElement(
-              N.h,
+              N.g,
               { onEscKeypress: _ },
               v.a.createElement(
                 I.f,
                 null,
                 v.a.createElement(
-                  I.l,
+                  I.k,
                   null,
                   "Remove Broadcast From Front Page"
                 ),
@@ -1074,7 +1074,7 @@
                     v.a.createElement(
                       "div",
                       null,
-                      v.a.createElement(I.i, {
+                      v.a.createElement(I.h, {
                         rgOptions: [
                           { label: "1 Day", data: 1 },
                           { label: "1 Week", data: 7 },
@@ -1100,16 +1100,16 @@
                   )
                 ),
                 v.a.createElement(
-                  I.k,
+                  I.j,
                   null,
                   l
                     ? v.a.createElement(
-                        I.r,
+                        I.q,
                         { onClick: _ },
                         Object(L.f)("#Button_Dismiss")
                       )
                     : v.a.createElement(
-                        I.w,
+                        I.v,
                         null,
                         v.a.createElement(
                           I.d,
@@ -1117,7 +1117,7 @@
                           Object(L.f)("#Button_Cancel")
                         ),
                         v.a.createElement(
-                          I.r,
+                          I.q,
                           {
                             onClick: function () {
                               return Object(h.b)(
@@ -1190,12 +1190,12 @@
             C.a,
             null,
             v.a.createElement(
-              N.h,
+              N.g,
               { onEscKeypress: m },
               v.a.createElement(
                 I.f,
                 null,
-                v.a.createElement(I.l, null, "Make Broadcast Unbannable"),
+                v.a.createElement(I.k, null, "Make Broadcast Unbannable"),
                 v.a.createElement(
                   I.b,
                   null,
@@ -1223,16 +1223,16 @@
                   )
                 ),
                 v.a.createElement(
-                  I.k,
+                  I.j,
                   null,
                   o
                     ? v.a.createElement(
-                        I.r,
+                        I.q,
                         { onClick: m },
                         Object(L.f)("#Button_Dismiss")
                       )
                     : v.a.createElement(
-                        I.w,
+                        I.v,
                         null,
                         v.a.createElement(
                           I.d,
@@ -1240,7 +1240,7 @@
                           Object(L.f)("#Button_Cancel")
                         ),
                         v.a.createElement(
-                          I.r,
+                          I.q,
                           {
                             onClick: function () {
                               return Object(h.b)(
@@ -1492,7 +1492,7 @@
               v.a.createElement(
                 "div",
                 { className: z.Options },
-                v.a.createElement(I.m, {
+                v.a.createElement(I.l, {
                   type: "text",
                   label: Object(L.f)("#Broadcast_title_title"),
                   onChange: function (e) {
@@ -1501,7 +1501,7 @@
                   placeholder: Object(L.f)("#Broadcast_title_placeholder"),
                   value: n,
                 }),
-                v.a.createElement(I.m, {
+                v.a.createElement(I.l, {
                   type: "text",
                   label: Object(L.f)("#Broadcast_Control_matchid"),
                   onChange: function (e) {
@@ -1556,7 +1556,7 @@
                   {
                     onClick: function (e) {
                       Object(w.d)(
-                        v.a.createElement(N.d, {
+                        v.a.createElement(N.c, {
                           strTitle: Object(L.f)(
                             "#Broadcast_Control_StopBroadcast"
                           ),
@@ -1598,7 +1598,7 @@
                             );
                           },
                         }),
-                        Object(R.l)(e)
+                        Object(R.n)(e)
                       );
                     },
                   },
