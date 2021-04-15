@@ -11,7 +11,7 @@ function DisplayYouTubeVideo( videoURL, panelid )
 						<include src="https://community.cloudflare.steamstatic.com/public/css/bigpicture/apphub.css?v=valveisgoodatcaching&amp;_cdn=cloudflare" /> \
 					</styles> \
 					<scripts> \
-						<include src="https://community.cloudflare.steamstatic.com/public/shared/javascript/bigpicture/base.js?v=valveisgoodatcaching&amp;l=english&amp;_cdn=cloudflare" /> \
+						<include src="" /> \
 					</scripts> \
 					<Panel oncancel="CloseBigPicturePopup();" class="CommunityAppHubPopup CommunityAppHubScreenshotPopup"> \
 						<Button id="CommunityAppHubPopupButton" > \
