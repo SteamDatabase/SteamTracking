@@ -5233,7 +5233,9 @@ PERFORMANCE OF THIS SOFTWARE.
                   e +
                   "' for language '" +
                   j.LANGUAGE +
-                  "'"
+                  "', " +
+                  this.m_mapTokens.size +
+                  " tokens in map"
               ),
               { bIncludeMessageInIdentifier: !0 }
             );

@@ -5406,6 +5406,27 @@ a.appdetailsbroadcastsection_ViewBroadcastOnWeb_1Z3B4 {
   .appdetailsachievementssection_GlobalStatLabel_1LNAL:hover {
     color: #ccc; }
 
+.appdetailsachievementssection_SingleAchievementProgressContainer_3dGOJ {
+  align-self: stretch;
+  margin-top: 6px;
+  padding: 0px 0px; }
+  .appdetailsachievementssection_SingleAchievementProgressContainer_3dGOJ .appdetailsachievementssection_ProgressLabel_zpBMR {
+    font-size: 10px;
+    color: #808eaa;
+    margin-left: auto;
+    margin-right: 0;
+    width: fit-content; }
+
+.appdetailsachievementssection_SingleAchievementProgressBar_1OIat {
+  height: 4px;
+  align-self: stretch;
+  background-color: black;
+  border-radius: 0px;
+  box-shadow: 0 0 3px #0005; }
+  .appdetailsachievementssection_SingleAchievementProgressBar_1OIat .appdetailsachievementssection_AchievementProgress_3Rm36 {
+    background-color: #808eaa;
+    height: 100%; }
+
 .appdetailsachievementssection_AchievementProgressContainer_3ns91 {
   height: 8px;
   align-self: stretch;

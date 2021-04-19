@@ -11,8 +11,8 @@ __TEXT
 __gcc_except_tab__TEXT
 __const
 __TEXT
-@+*
-@+*
+P+*
+P+*
 __objc_methname
 __TEXT
 __objc_classname__TEXT
@@ -127,7 +127,7 @@ h
 8
 /usr/lib/libobjc.A.dylib
 &
-XE
+`E
 )
 C
 14CParentalCache
@@ -372,8 +372,8 @@ u
 23CScreenshotNotification
 10CBasePanel
 39CSteamInputControllerConfigNotification
-NSt3__110__function6__funcIZN10CBasePanel19ShowDurationControlEfE3$_0NS_9allocatorIS3_EEFvP17DurationControl_tbEEE
-ZN10CBasePanel19ShowDurationControlEfE3$_0
+NSt3__110__function6__funcIZN10CBasePanel26ShowInitialDurationControlEfE3$_0NS_9allocatorIS3_EEFvP17DurationControl_tbEEE
+ZN10CBasePanel26ShowInitialDurationControlEfE3$_0
 NSt3__110__function6__funcIZN10CBasePanel30OnGameOverlayActivateRequestedEPK30GameOverlayActivateRequested_tE3$_1NS_9allocatorIS6_EEFvvEEE
 ZN10CBasePanel30OnGameOverlayActivateRequestedEPK30GameOverlayActivateRequested_tE3$_1
 NSt3__110__function6__funcIZN10CBasePanel21OnMicroTxnAuthRequestEPK29MicroTxnAuthRequestCallback_tE3$_2NS_9allocatorIS6_EEFvvEEE
@@ -9425,6 +9425,7 @@ SteamInputControllerConnectedNotification
 OverlaySplashScreen
 #SteamChina_Overlay_DurationControl_ExitSoon_3h
 #SteamChina_Overlay_DurationControl_ExitSoon_Night
+steam/cached/durationcontrolnotification.layout
 BResizeImageRGB failed
 BConvertRGBToRGBA failed
 resource/camera1.wav
@@ -9600,7 +9601,6 @@ tenfoot/resource/images/controller_icon_%s
 public/SteamInputControllerConfigNotification.res
 CSteamInputControllerConfigNotification
 DurationControlNotification
-steam/cached/durationcontrolnotification.layout
 CDurationControlNotification
 #Overlay_Publish_NeedWorkshopLegalAgreementAcceptance_Desc
 EasyNotification
@@ -9656,13 +9656,14 @@ URLLabel
 m_sURL
 m_pkvCommand
 #SteamChina_Overlay_DurationControl_Init
+steam/cached/durationcontrolinitial.layout
 developer
 -steampid
 Steam pid that launched us
 VGUI_Application_001
 OK
-Apr 12 2021
-11:55:23
+Apr 19 2021
+12:57:36
 crashhandler003
 gameoverlayui
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/overlay/gameoverlayui/main.cpp
@@ -12920,7 +12921,7 @@ $U
 Unknown currency code %d
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/amount.cpp
 %s%s
-stream::imbue() failed with locale: '%s', exception: %s
+stream::imbue() failed with locale: '%s'
 C
 Unimplemented rounding method %d. Rounding half up!
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/amount.h
@@ -13325,17 +13326,14 @@ Nov
 Dec
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
-8x&
-t&
-%t&
-Qx&
-c$
-f$
+Xx&
+-t&
+Et&
+qx&
+n$
 6
-F#
-Z$
-W$
-*$
+V$
+V$
 0
 p
 $
@@ -13344,22 +13342,14 @@ $
 $
 p
 0
-$
-qA
-!A
 =
-i#
+&#
 #
 #
 #
+C#
 0
 p
-+#
-#
-#
-#
-#
-#
 #
 #
 #
@@ -13369,18 +13359,12 @@ p
 #
 !
 !
-7"
-3@
-"
-"
-"
+%"
 "
 "
 "
 @
 @
-E"
-t
 @
 @
 @
@@ -13396,32 +13380,33 @@ t
 @
 @
 @
-;H
-G
+@
 "
 "
 "
 "
 "
-"
-"
-&3
+3
+)!
 I
+k
 !
 !
 d
 !
-b!
-w?
+!
+!
+!
+n?
+G
+G
+G
 
 
 
 
 
 
-^
-U
-2
 p
 0
 0
@@ -13458,17 +13443,31 @@ p
 =
 
 0
-6
+?
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+GE
 Hi
-m@
 0
 p
-fD
 I
 I
-@
-@
-@
 $
 @
 @
@@ -13480,19 +13479,10 @@ $
 ?
 A
 Hc
-L-
 =
-B
-B
-B
-B
-I,
-KA
-KA
-9A
-L95['A
-1
-1
+6A
+L95K&A
+L95
 Hc
 ?
 ?
@@ -13534,6 +13524,8 @@ HcU
 #
 i[
 ~
+'
+'
 B
 ?
 U
@@ -13683,32 +13675,23 @@ P
 @
 |
 |
-8
-8
+#
 "
 3
 D
-7
+~7
 @
 7
 7
-75
-5
-5
-&
-14
-/%
-4
-h
+7
+6
+6
+65
+04
+.%
 4
 4
 d
-&
-4
-
-
-
-
 
 
 
@@ -13722,24 +13705,20 @@ d
 -
 -
 -
--
--
--
+_0
 
 
 d
 &
 &
 d
--
--
 -
 -
 t=
 =
 =
 @
-F,
+G,
 ,
 ,
 ,
@@ -13750,8 +13729,13 @@ uV%
 "
 "
 E
-E!
+'!
 >
++
++
++
++
++
 +
 +
 +
@@ -13763,6 +13747,7 @@ E!
 
 
 @
+*
 @
 @
 &
@@ -13801,6 +13786,7 @@ E!
 @
 @
 @
+)
 .
 .
 .
@@ -13810,9 +13796,7 @@ E!
 d
 d
 d
-o(
 =
-Hc+](
 
 =
 @
@@ -13827,10 +13811,10 @@ Hc+](
 @
 @
 @
+='
 0
 E
 }
-q'
-k'
+l'
 $
 p

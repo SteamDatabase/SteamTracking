@@ -254,7 +254,7 @@
 "Overlay_Broadcast_Chat_Title" "Broadcast - Chat ( %numviewers%)"
 "Overlay_Broadcast_Live_Debug" "%videosendkbps% kbps, %videosendfps% FPS"
 
-"SteamChina_Overlay_DurationControl_Init"		"The anti-addiction system is working on your account.\nPlease arrange your gaming time reasonably.\nFor all applicable accounts:\nOutside of statutory holidays, the daily cumulative game time\nshould not exceed 1.5 hours.\nOn statutory holidays, the daily cumulative game time\nshould not exceed 3 hours."
+"SteamChina_Overlay_DurationControl_Init"		"[Health Tips] To protect the healthy growth of minors, this platform is connected to the youth anti-addiction system.\nThe anti-addiction system is working on your account.\nAccording to the youth anti-addiction rules, you cannot play games from 22:00 at night until 8:00 the next day.\nOutside of statutory holidays, the cumulative game time per day should not exceed 1.5 hours.\nOn statutory holidays, the accumulated game time per day should not exceed 3 hours.\nWhen that time has passed, you will need to wait until 8:00 the next day to continue playing."
 "SteamChina_Overlay_DurationControl_MessageA"		"You've been playing for one hour."
 "SteamChina_Overlay_DurationControl_MessageB"		"You've been playing for three hours.\nConsider taking a break."
 "SteamChina_Overlay_DurationControl_MessageC"		"You've been playing for over three hours.\nYour XP / progress has been reduced by half."

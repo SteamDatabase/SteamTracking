@@ -15,6 +15,7 @@ public:
     virtual unknown_ret GetAchievement(CGameID, char const*, bool*, unsigned int*) = 0;
     virtual unknown_ret SetAchievement(CGameID, char const*) = 0;
     virtual unknown_ret ClearAchievement(CGameID, char const*) = 0;
+    virtual unknown_ret GetAchievementProgress(CGameID, char const*, float*, float*, float*) = 0;
     virtual unknown_ret StoreStats(CGameID) = 0;
     virtual unknown_ret GetAchievementIcon(CGameID, char const*, EGetAchievementIcon) = 0;
     virtual unknown_ret BGetAchievementIconURL(CGameID, char const*, EGetAchievementIcon, char*, unsigned int) = 0;

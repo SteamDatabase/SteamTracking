@@ -1,0 +1,64 @@
+"steam/cached/durationcontrolnotification.layout"
+{
+	controls
+	{
+		DurationControlNotification
+		{
+			ControlName		EditablePanel
+			wide			1000
+			tall			198
+		}
+
+		MainPanel
+		{
+			ControlName		EditablePanel
+			style			durationcontrol_main
+		}
+
+		Label1
+		{
+			controlname		Label
+			labeltext		%text%
+			style			go_outside
+			textalignment	center
+		}
+	}
+
+	colors
+	{
+	}
+
+	styles
+	{
+		durationcontrol_main
+		{
+			render_bg
+			{
+				0="gradient( x0, y0, x1, y1, DialogBG, ClientBG )"
+	
+				1="gradient_horizontal( x0, y1-1, x1, y1, ClientBG, Highlight5 )"    // bottom
+				2="gradient( x1-1, y0, x1, y1 , ClientBG, Highlight5 )" // right
+				3="fill( x0, y0, x1, y0+1, ClientBG )"  // top
+				4="fill( x0, y0, x0+1, y1, ClientBG )" // left
+			}
+
+			alpha	218
+		}
+
+		go_outside
+		{
+			font-size		22
+			textcolor		Text2
+		}
+	}
+
+	layout
+	{
+		region { name=bigregion margin=3 width=max height=max }
+
+		place { control=MainPanel region=bigregion height=max width=max align=center }
+
+		place { control=Label1 region=bigregion align=top-center height=max width=max }
+	}
+
+}

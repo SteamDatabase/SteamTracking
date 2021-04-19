@@ -5075,7 +5075,7 @@
  T CBasePanel::ShellExecuteHook(char const*, char const*)
  T CBasePanel::ShowBroadcastAvailableNotification()
  T CBasePanel::ShowControllerConfigNotification()
- T CBasePanel::ShowDurationControl(float)
+ T CBasePanel::ShowInitialDurationControl(float)
  T CBasePanel::ShowLegacyCDKey()
  T CBasePanel::ShowLegacyCDKeyIfNotIgnored()
  T CBasePanel::ShowMinimalModePanel(vgui::Panel*)
@@ -5776,7 +5776,7 @@
  T CDirWatcher::SetDirToWatch(char const*)
  T CDirWatcher::Validate(CValidator&, char const*)
  T CDirWatcher::~CDirWatcher()
- T CDurationControlNotification::CDurationControlNotification(vgui::Panel*, char const*, float)
+ T CDurationControlNotification::CDurationControlNotification(vgui::Panel*, char const*, float, char const*)
  T CDurationControlNotification::ChainToAnimationMap()
  T CDurationControlNotification::ChainToMap()
  T CDurationControlNotification::GetAnimMap()
@@ -15623,11 +15623,11 @@
  d typeinfo for CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_1
  d typeinfo for CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_2
  d typeinfo for CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_3
- d typeinfo for CBasePanel::ShowDurationControl(float)::$_0
+ d typeinfo for CBasePanel::ShowInitialDurationControl(float)::$_0
  d typeinfo for std::__1::__function::__func<CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_1, std::__1::allocator<CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_1>, void ()>
  d typeinfo for std::__1::__function::__func<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_2, std::__1::allocator<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_2>, void ()>
  d typeinfo for std::__1::__function::__func<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_3, std::__1::allocator<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_3>, void ()>
- d typeinfo for std::__1::__function::__func<CBasePanel::ShowDurationControl(float)::$_0, std::__1::allocator<CBasePanel::ShowDurationControl(float)::$_0>, void (DurationControl_t*, bool)>
+ d typeinfo for std::__1::__function::__func<CBasePanel::ShowInitialDurationControl(float)::$_0, std::__1::allocator<CBasePanel::ShowInitialDurationControl(float)::$_0>, void (DurationControl_t*, bool)>
  d vgui::Panel::OnOldMessage(KeyValues*, unsigned long long)::s_bDebugMessages
  d vgui::RichText::GetAppearanceForLocalStyle(int, int)::styleNameList3
  d vgui::RichText::InsertStringWithHTML(wchar_t const*)::rgTagToStyles
@@ -15636,7 +15636,7 @@
  d vtable for std::__1::__function::__func<CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_1, std::__1::allocator<CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_1>, void ()>
  d vtable for std::__1::__function::__func<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_2, std::__1::allocator<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_2>, void ()>
  d vtable for std::__1::__function::__func<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_3, std::__1::allocator<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_3>, void ()>
- d vtable for std::__1::__function::__func<CBasePanel::ShowDurationControl(float)::$_0, std::__1::allocator<CBasePanel::ShowDurationControl(float)::$_0>, void (DurationControl_t*, bool)>
+ d vtable for std::__1::__function::__func<CBasePanel::ShowInitialDurationControl(float)::$_0, std::__1::allocator<CBasePanel::ShowInitialDurationControl(float)::$_0>, void (DurationControl_t*, bool)>
  dlclose
  dlopen
  dlsym
@@ -15980,11 +15980,11 @@
  r typeinfo name for CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_1
  r typeinfo name for CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_2
  r typeinfo name for CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_3
- r typeinfo name for CBasePanel::ShowDurationControl(float)::$_0
+ r typeinfo name for CBasePanel::ShowInitialDurationControl(float)::$_0
  r typeinfo name for std::__1::__function::__func<CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_1, std::__1::allocator<CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_1>, void ()>
  r typeinfo name for std::__1::__function::__func<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_2, std::__1::allocator<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_2>, void ()>
  r typeinfo name for std::__1::__function::__func<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_3, std::__1::allocator<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_3>, void ()>
- r typeinfo name for std::__1::__function::__func<CBasePanel::ShowDurationControl(float)::$_0, std::__1::allocator<CBasePanel::ShowDurationControl(float)::$_0>, void (DurationControl_t*, bool)>
+ r typeinfo name for std::__1::__function::__func<CBasePanel::ShowInitialDurationControl(float)::$_0, std::__1::allocator<CBasePanel::ShowInitialDurationControl(float)::$_0>, void (DurationControl_t*, bool)>
  r utf8_lead_bits
  r verbnames
  r verbs
@@ -16464,14 +16464,14 @@
  t std::__1::__function::__func<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_3, std::__1::allocator<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_3>, void ()>::target(std::type_info const&) const
  t std::__1::__function::__func<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_3, std::__1::allocator<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_3>, void ()>::target_type() const
  t std::__1::__function::__func<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_3, std::__1::allocator<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_3>, void ()>::~__func()
- t std::__1::__function::__func<CBasePanel::ShowDurationControl(float)::$_0, std::__1::allocator<CBasePanel::ShowDurationControl(float)::$_0>, void (DurationControl_t*, bool)>::__clone() const
- t std::__1::__function::__func<CBasePanel::ShowDurationControl(float)::$_0, std::__1::allocator<CBasePanel::ShowDurationControl(float)::$_0>, void (DurationControl_t*, bool)>::__clone(std::__1::__function::__base<void (DurationControl_t*, bool)>*) const
- t std::__1::__function::__func<CBasePanel::ShowDurationControl(float)::$_0, std::__1::allocator<CBasePanel::ShowDurationControl(float)::$_0>, void (DurationControl_t*, bool)>::destroy()
- t std::__1::__function::__func<CBasePanel::ShowDurationControl(float)::$_0, std::__1::allocator<CBasePanel::ShowDurationControl(float)::$_0>, void (DurationControl_t*, bool)>::destroy_deallocate()
- t std::__1::__function::__func<CBasePanel::ShowDurationControl(float)::$_0, std::__1::allocator<CBasePanel::ShowDurationControl(float)::$_0>, void (DurationControl_t*, bool)>::operator()(DurationControl_t*&&, bool&&)
- t std::__1::__function::__func<CBasePanel::ShowDurationControl(float)::$_0, std::__1::allocator<CBasePanel::ShowDurationControl(float)::$_0>, void (DurationControl_t*, bool)>::target(std::type_info const&) const
- t std::__1::__function::__func<CBasePanel::ShowDurationControl(float)::$_0, std::__1::allocator<CBasePanel::ShowDurationControl(float)::$_0>, void (DurationControl_t*, bool)>::target_type() const
- t std::__1::__function::__func<CBasePanel::ShowDurationControl(float)::$_0, std::__1::allocator<CBasePanel::ShowDurationControl(float)::$_0>, void (DurationControl_t*, bool)>::~__func()
+ t std::__1::__function::__func<CBasePanel::ShowInitialDurationControl(float)::$_0, std::__1::allocator<CBasePanel::ShowInitialDurationControl(float)::$_0>, void (DurationControl_t*, bool)>::__clone() const
+ t std::__1::__function::__func<CBasePanel::ShowInitialDurationControl(float)::$_0, std::__1::allocator<CBasePanel::ShowInitialDurationControl(float)::$_0>, void (DurationControl_t*, bool)>::__clone(std::__1::__function::__base<void (DurationControl_t*, bool)>*) const
+ t std::__1::__function::__func<CBasePanel::ShowInitialDurationControl(float)::$_0, std::__1::allocator<CBasePanel::ShowInitialDurationControl(float)::$_0>, void (DurationControl_t*, bool)>::destroy()
+ t std::__1::__function::__func<CBasePanel::ShowInitialDurationControl(float)::$_0, std::__1::allocator<CBasePanel::ShowInitialDurationControl(float)::$_0>, void (DurationControl_t*, bool)>::destroy_deallocate()
+ t std::__1::__function::__func<CBasePanel::ShowInitialDurationControl(float)::$_0, std::__1::allocator<CBasePanel::ShowInitialDurationControl(float)::$_0>, void (DurationControl_t*, bool)>::operator()(DurationControl_t*&&, bool&&)
+ t std::__1::__function::__func<CBasePanel::ShowInitialDurationControl(float)::$_0, std::__1::allocator<CBasePanel::ShowInitialDurationControl(float)::$_0>, void (DurationControl_t*, bool)>::target(std::type_info const&) const
+ t std::__1::__function::__func<CBasePanel::ShowInitialDurationControl(float)::$_0, std::__1::allocator<CBasePanel::ShowInitialDurationControl(float)::$_0>, void (DurationControl_t*, bool)>::target_type() const
+ t std::__1::__function::__func<CBasePanel::ShowInitialDurationControl(float)::$_0, std::__1::allocator<CBasePanel::ShowInitialDurationControl(float)::$_0>, void (DurationControl_t*, bool)>::~__func()
  t update_box
  t use_merged_upsample
  t vgui::GetDroppingSheet(CUtlVector<KeyValues*, CUtlMemory<KeyValues*> >&)
