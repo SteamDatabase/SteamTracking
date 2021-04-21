@@ -1196,7 +1196,7 @@ GDynamicStore = {
 
 		$Element.empty();
 		$Element.css( 'min-height', '' );
-		for( var i = 0; i < GDynamicStore.s_rgRecommendedTags.length && i < 5; i++ )
+		for( var i = 0; i < GDynamicStore.s_rgRecommendedTags.length && i < 4; i++ )
 		{
 			var tag = GDynamicStore.s_rgRecommendedTags[i];
 			var url = 'https://store.steampowered.com/tags/en/' + encodeURIComponent( tag.name );
